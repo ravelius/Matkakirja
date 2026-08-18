@@ -248,6 +248,126 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    'Galleria dell\'Accademia': {
+      aika: '1784',
+      teksti: 'Museo perustettiin vuonna 1784, kun Toscanan suurherttua Pietro '
+          + 'Leopoldo kokosi viereisen taideakatemian oppilaille '
+          + 'opetuskokoelman: heidän piti päästä katsomaan mestariteoksia, '
+          + 'joiden mukaan piirtää. Kokoelma on Uffizia pienempi ja '
+          + 'kapeampi — firenzeläistä maalaustaidetta 1300-luvulta '
+          + '1600-luvulle — ja nykyään museo on itse akatemiasta erillinen '
+          + 'laitos, vaikka nimi on sama.'
+        + '\n\n'
+        + 'Sinne tullaan silti yhden veistoksen takia. Michelangelon Daavid '
+          + 'seisoi Palazzo Vecchion edessä vuodesta 1504, kunnes 1800-luvun '
+          + 'puolivälissä sen vasemmasta jalasta löytyi halkeamia. Patsas '
+          + 'pantiin pyörillä kulkevaan puulaatikkoon ja vedettiin kaupungin '
+          + 'halki 30. heinäkuuta ja 10. elokuuta 1873 välisenä aikana. '
+          + 'Lopulliselle paikalleen se nostettiin vasta 1882, kun arkkitehti '
+          + 'Emilio De Fabris oli rakentanut sille kupolisalin, johon valo '
+          + 'tulee ylhäältä.'
+        + '\n\n'
+        + 'Daavid on 5,17 metriä korkea ja veistetty vuosina 1501–1504 '
+          + 'yhdestä Carraran marmorilohkareesta, jota kaksi muuta '
+          + 'kuvanveistäjää oli jo ennen Michelangeloa yrittänyt ja '
+          + 'jättänyt kesken. Samassa museossa ovat myös hänen neljä '
+          + 'keskeneräistä Vankiaan, jotka oli tarkoitettu paavi Julius '
+          + 'II:n hautaan: hahmot ovat puoliksi kiinni kivessä, ja juuri '
+          + 'siitä näkee, miten hän hakkasi patsaan esiin kerros kerrallaan.',
+      kuvat: [
+        {
+          tiedosto: 'Firenze, galleria dell\'accademia, tribuna del david 01.jpg',
+          selite: 'Daavid De Fabrisin rakentamassa salissa. Patsas seisoo '
+            + 'matalalla jalustalla puoliympyrän muotoisen syvennyksen '
+            + 'edessä, ja sen yllä avautuu lasitettu kupoli, josta valo '
+            + 'putoaa suoraan alas. Lattia on punaruskeaa kuviolaattaa.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Santa Maria Novella': {
+      aika: '1279–1470',
+      teksti: 'Dominikaanimunkit saivat vuonna 1221 haltuunsa pienen kirkon '
+          + 'kaupungin laidalla peltojen keskellä. Se kävi nopeasti ahtaaksi, '
+          + 'ja uuden kirkon rakentaminen alkoi 1279. Paavi Eugenius IV vihki '
+          + 'sen 1420. Nimi Novella eli "uusi" jäi kirkkoon kiinni, ja se on '
+          + 'kantanut sitä nyt seitsemänsataa vuotta.'
+        + '\n\n'
+        + 'Julkisivu tehtiin kahdessa erässä sadan vuoden välein. Alaosa on '
+          + '1300-luvulta: valkoista marmoria ja Praton vihreää '
+          + 'serpentiinikiveä. Yläosan suunnitteli Leon Battista Alberti, ja '
+          + 'sen maksoi villakauppias Giovanni Rucellai, jonka nimi on '
+          + 'latinaksi keskellä seinää yhdessä vuosiluvun 1470 kanssa. '
+          + 'Albertin ratkaisu leveän alaosan ja kapean yläosan '
+          + 'yhdistämiseen olivat kaksi suurta S-kiehkuraa reunoilla — '
+          + 'niitä kopioitiin sen jälkeen kirkkoihin ympäri Italiaa.'
+        + '\n\n'
+        + 'Sisällä on Masaccion Kolminaisuus noin vuodelta 1427, ensimmäinen '
+          + 'suuri maalaus, jossa on käytetty keskeisperspektiiviä. '
+          + 'Julkisivuun kiinnitti vuonna 1572 tähtitieteilijä Ignazio Danti '
+          + 'armillaaripallon ja kvadrantin, joilla hän mittasi '
+          + 'kevätpäiväntasauksen ja osoitti, kuinka paljon juliaaninen '
+          + 'kalenteri oli jäänyt auringosta jälkeen. Kymmenen vuotta '
+          + 'myöhemmin siirryttiin gregoriaaniseen kalenteriin. Kojeet '
+          + 'ovat yhä paikoillaan kirkon oven molemmin puolin.',
+      kuvat: [
+        {
+          tiedosto: 'Santa Maria Novella Florence façade.jpg',
+          selite: 'Julkisivu koko leveydeltään. Alaosassa on kolme '
+            + 'kaariportaalia ja rivi hautakaaria valkoisen ja vihreän '
+            + 'marmorin ruuduissa; keskellä on pyöreä ikkuna, ja yläosan '
+            + 'kolmion reunoilla kaartuvat Albertin kaksi kiehkuraa.',
+          lahde: 'Jebulon, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bargello': {
+      aika: '1255',
+      teksti: 'Bargello on Firenzen vanhin julkinen rakennus: se aloitettiin '
+          + 'vuonna 1255, ja siihen muutti ensin kansankapteeni ja vuodesta '
+          + '1261 podestà, kaupungin ylin tuomari. Talo on ankara hammastettu '
+          + 'kivikuutio, ja juuri se otettiin malliksi, kun Palazzo Vecchio '
+          + 'myöhemmin nousi. Sisäpihaa kiertäviin seiniin on muurattu '
+          + 'kivisiä vaakunoita — jokainen podestà jätti taloon omansa.'
+        + '\n\n'
+        + 'Nimi tulee myöhemmästä asukkaasta. Vuonna 1574 Medicit '
+          + 'lakkauttivat podestàn viran ja panivat taloon bargellon eli '
+          + 'kaupungin poliisipäällikön. Talosta tuli vankila, ja pihalla '
+          + 'teloitettiin. Suurherttua Pietro Leopoldo lopetti teloitukset '
+          + 'vuonna 1786, ja poliisin päämajana talo oli vuoteen 1859.'
+        + '\n\n'
+        + 'Vuonna 1840 talon kappelista löytyi fresko, jossa on Danten '
+          + 'muotokuva ja jota on pidetty Giotton työnä. Löytö herätti '
+          + 'kiinnostuksen rakennukseen, se entisöitiin ja avattiin '
+          + 'kansallismuseoksi 1865. Kokoelma on Italian tärkein '
+          + 'renessanssiveistosten kokoelma: Donatellon pronssinen Daavid '
+          + '1440-luvulta, antiikin jälkeen ensimmäinen vapaasti seisova '
+          + 'alaston pronssiveistos, sekä Lorenzo Ghibertin ja Filippo '
+          + 'Brunelleschin kilpailutyöt vuodelta 1401 — kaksi pronssireliefiä '
+          + 'samasta aiheesta samassa huoneessa, siinä järjestyksessä kuin '
+          + 'kastekappelin ovista käyty kilpailu ne ratkaisi.',
+      kuvat: [
+        {
+          tiedosto: 'Bargello Museum Garden, Florence, Italy.jpg',
+          selite: 'Sisäpiha alhaalta: kivikaarien kannattama holvikäytävä ja '
+            + 'sen päällä avoin loggia, oikealla seinässä rivi kivisiä '
+            + 'vaakunoita ja niiden alla ulkoportaat, jotka nousevat '
+            + 'suoraan pihan seinustaa pitkin toiseen kerrokseen.',
+          lahde: 'Lorenzofaoro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Bronze David by Donatello-Bargello.jpg',
+          selite: 'Donatellon pronssinen Daavid museosalissa: alaston nuori '
+            + 'mies seisoo hattu päässä, miekka oikeassa kädessä ja toinen '
+            + 'jalka Goljatin irti hakatun pään päällä. Pinta on '
+            + 'tummanruskeaa, kiiltäväksi hiottua pronssia.',
+          lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
 
   berliini: {
@@ -13712,6 +13832,89 @@ export const NAHTAVYYSJUTUT = {
             + 'Juurella on kahvilarakennus, pöytiä ja jonottavia ihmisiä, '
             + 'vasemmalla nousee valkopunainen radiomasto.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tallipiha': {
+      aika: '1800-luvun loppu',
+      teksti: 'Finlaysonin tehdasalueen pohjoisreunassa on kortteli, joka ei '
+          + 'kuulunut tehtaan omistajille vaan heidän hevosilleen ja '
+          + 'palvelusväelleen. Tallipihalla olivat Nottbeckin suvun '
+          + 'ratsutallit, vaunuvajat ja talousrakennukset sekä hevosenhoitajien '
+          + 'ja kuskien asunnot. Puutalot on koristeltu runsaasti: 1800-luvun '
+          + 'lopun kansallisromantiikkaa ja venäläis-karjalaista '
+          + 'puusepäntyötä, kaiverrettuja räystäslautoja ja nurkkatolppia.'
+        + '\n\n'
+        + 'Kun Nottbeckit eivät enää 1900-luvun alussa asuneet viereisessä '
+          + 'Finlaysonin palatsissa, korttelista tuli tehtaan kuorma-ajureiden '
+          + 'tukikohta, ja sitä alettiin kutsua Ajurikortteliksi. Rakennuksissa '
+          + 'asuttiin 1960-luvulle asti, ja sen jälkeen piha rappeutui pahasti.'
+        + '\n\n'
+        + 'Tampereen kaupunki lunasti alueen vuonna 1995 ja kunnosti sen '
+          + '1990-luvun lopussa. Nykyään talleissa ja vaunuvajoissa on pieniä '
+          + 'puoteja ja kahvila, ja piha on auki ympäri vuoden. Tehdasalueen '
+          + 'punatiilen keskellä se on ainoa kohta, jossa näkee, miltä sama '
+          + 'kortteli näytti puusta rakennettuna.',
+      kuvat: [
+        {
+          tiedosto: 'Tampere - Tallipiha 2.jpg',
+          selite: 'Tallipihan päärakennus syksyisenä päivänä: keltaruskeaksi '
+            + 'petsattu hirsitalo, jonka päädyssä on sahalaidalla koristeltu '
+            + 'parveke ja kaarevat kannatinpuut. Perustus on punatiiltä, '
+            + 'katolla peltiä ja piippuja, ja edessä kulkee mukulakiveys.',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Tampere - Tallipiha.jpg',
+          selite: 'Portti Kuninkaankadulta: puuaidan yläpuolella on kaartuva '
+            + 'kyltti, jossa lukee Tallipiha koristeellisin kirjaimin. '
+            + 'Vasemmalla on alueen kartta lasin takana ja oikealla '
+            + 'kadulle asetettu kahvilan kyltti.',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Amurin työläismuseokortteli': {
+      aika: '1882–1973',
+      teksti: 'Amuri rakennettiin 1860-luvulta alkaen työväen asuinalueeksi '
+          + 'tehtaiden länsipuolelle. Nimi on aikalaisten vertaus: samaan '
+          + 'aikaan suomalaisia lähti siirtolaisiksi kaukaiselle Amurinmaalle '
+          + 'Venäjän itälaidalle, ja uusi kaupunginosa tuntui yhtä kaukaiselta '
+          + 'keskustasta katsottuna. Talot olivat yksikerroksisia puutaloja ja '
+          + 'asunnot yhteiskeittiöasuntoja: kahdella tai neljällä huoneella oli '
+          + 'yksi yhteinen keittiö, ja jokaisessa huoneessa asui oma perheensä.'
+        + '\n\n'
+        + '1960-luvulla Amurin puutalot purettiin ja tilalle nousivat '
+          + 'kerrostalot. Yksi kortteli säästettiin ja siitä tehtiin museo: '
+          + 'viisi asuintaloa ja neljä piharakennusta, joiden huoneet on '
+          + 'sisustettu eri vuosikymmenten näköisiksi vuodesta 1882 vuoteen '
+          + '1973. Museo ei esittele vain huonekaluja vaan kertoo jokaisesta '
+          + 'huoneesta myös sen, kuka siinä kuvitellusti asui ja millä eli.'
+        + '\n\n'
+        + 'Amurin tunnetuimpia asukkaita ovat kirjailijat Väinö Linna ja '
+          + 'F. E. Sillanpää, joka asui täällä 1900-luvun alussa käydessään '
+          + 'Tampereen reaalilyseota. Kortteli suojeltiin asemakaavalla '
+          + 'vuonna 2024, ja suojelu koskee myös sisätiloja. Museo on auki '
+          + 'toukokuun puolivälistä syyskuun alkuun, mutta pihan kahvila '
+          + 'Amurin Helmi palvelee ympäri vuoden.',
+      kuvat: [
+        {
+          tiedosto: 'Amuri Museum - Saarikuja - Makasiinikatu C IMG 0173.JPG',
+          selite: 'Museokortteli kadulta: matala vaaleanharmaa puutalorivi, '
+            + 'jonka mustalla peltikatolla seisoo kaksi punatiilistä piippua. '
+            + 'Katu on mukulakiveä ja täynnä pysäköityjä autoja, ja talon '
+            + 'takaa nousee sumuun Näsinneula.',
+          lahde: 'Anneli Salo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Room at Amuri Workers\' Museum in June 2025 picture 1.jpg',
+          selite: 'Yksi museon huoneista: lautaseinät, tumma lankkulattia ja '
+            + 'kuusiruutuinen ikkuna. Nurkassa on kaappisänky, jonka päällä on '
+            + 'raidallinen patja, ja ikkunan edessä istuu suutariksi puettu '
+            + 'nukke työpenkkinsä ääressä.',
+          lahde: 'JIP, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',

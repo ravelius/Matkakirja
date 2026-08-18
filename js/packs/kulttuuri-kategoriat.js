@@ -9326,7 +9326,11 @@ export const KULTTUURI_KATEGORIAT = {
         artikkeli: {
           nimi: 'Matkailijan Firenze',
           teksti: 'Firenze on kaupunki, jonka läpi kävellään — ei ohitse.',
-          nosto: 'Kaikki kuusi kohdetta ovat kartalla kahden kilometrin '
+          // Luku päivitetty 18.8.2026 (kuusi → yhdeksän). Väite
+          // etäisyydestä tarkistettiin uudelleen: pisin väli uudessa
+          // joukossa on Bobolista Accademiaan noin 1,55 km, eli
+          // kahden kilometrin raja pitää yhä.
+          nosto: 'Kaikki yhdeksän kohdetta ovat kartalla kahden kilometrin '
             + 'sisällä toisistaan.',
           taitto: 'opas',
           jaksot: [
