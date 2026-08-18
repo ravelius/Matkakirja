@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 878, teksti: '15 uutta nähtävyyskohdetta kuuteen kaupunkiin' },
   { v: 877, teksti: 'Miniatyyrit sävytetty kartan pohjaväriin' },
   { v: 876, teksti: 'Oppaan vuosisää avaa saman sääkortin kuin lehti' },
   { v: 875, teksti: 'E00-lehdet: aihesivut ja avauskuvat' },
