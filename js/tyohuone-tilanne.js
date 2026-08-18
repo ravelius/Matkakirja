@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v850 — Raamatun Lukijoiden ehdotukset -osioon palkkiolinjaus: läpäissyt ehdotus palkitaan pelirahalla lunastuskoodilla, omistaja päättää summan',
   'v849 — Raamatussa uusi Lukijoiden ehdotukset -osio (kehittäjän liitteet): pelaajien kuva- ja juttuideakanavan linjaus',
   'v848 — iPad: lehden kansikarusellin napautus ei jätä enää vaaleaa harsoa kuvan laitaan (nuolinapin hover-tausta) — testaa Pariisin kansi: napauta oikeaa laitaa ja katso jääkö kuvan päälle vaalea kaista',
   'v847 — neljä uusittua miniatyyriä kartalla: Tampereen tuomiokirkko, Tripolin riemukaari ja Punainen linna, Tokion Shitamachi-museo — kaikilla kohteilla on nyt piirros',
