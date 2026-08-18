@@ -590,6 +590,238 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'The Erica Chang, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (18.8.2026, Kairon lehden viimeistely): etusivun
+       * iso kuvapaikka selaa kolmea yleisnäkymää, ja kansikuvista jää
+       * pikkuriville kaksi ensimmäistä. Kairoa katsotaan kolmesta
+       * suunnasta: joelta etelästä, keskustan rannasta ja
+       * vanhankaupungin kattojen yli. Sitadellinäkymää EI valittu,
+       * koska toinen kansikuva on jo näkymä linnoitukselta — sama
+       * vinkkeli olisi ollut kannessa kahdesti. Lisenssit ja tekijät
+       * todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Cairo skyline, Panoramic view, Egypt.jpg',
+          selite: 'Niili virtaa leveänä kohti keskustaa: vasemmalla '
+            + 'rannalla kasvaa kaislikkoa ja palmuja, oikea ranta on '
+            + 'kerrostalojen reunustama, ja utuisesta kaupungista '
+            + 'erottuu Kairon tornin hoikka siluetti.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Flickr - Bakar 88 - Cairo, Egypt (HDR).jpg',
+          selite: 'Keskustan ranta iltapäivällä: joella on valkoisia '
+            + 'jokilaivoja laitureissa ja veneitä poijuissa, vasemmalla '
+            + 'kohoaa pyöreäkulmainen hotellitorni palmujen takaa ja '
+            + 'vastarannalla jatkuu keskustan talorivistö.',
+          lahde: 'Andrew A. Shenouda, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Egypt, Cairo, Panorama of Islamic Cairo, also Medieval Cairo.jpg',
+          selite: 'Vanhankaupungin katot: tasakattojen, '
+            + 'lautasantennien ja pyykkinarujen merestä nousee '
+            + 'minareetteja ja kupoleita, ja talojen välistä pilkottaa '
+            + 'kapea markkinakatu aurinkovarjoineen.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      /*
+       * MATKAILIJAN KAIRO (18.8.2026, viimeistely nykystandardiin).
+       * Rakenne on Bagdadin ja Tokion mallista: pystykuva, kappale ja
+       * opastaitto neljällä jaksolla, joista ensimmäisessä on kolmen
+       * kuvan karuselli.
+       *
+       * FAKTAPOHJA: en-Wikipedia "Cairo Metro" (1987 Afrikan
+       * ensimmäinen, kolme linjaa, naisten vaunut 4. ja 5., aukiolo
+       * 05–01 ja ramadanina 05–02, tunnelit Niilin ali, hinnat 2026),
+       * "Al-Mu'izz Street" (Bab al-Futuh → Bab Zuweila ~1 km, qasaba,
+       * suljettu kalifikaupunki, monumenttilista), "Cairo" (ilmasto:
+       * Saharan pöly maalis–toukokuussa, talven päivälämpö 14–22 °C,
+       * kesällä yli 31 °C, sade harvinaista) ja "Felucca" — kaikki
+       * haettu 18.8.2026. Aleksandrian-rata 1856 on Egyptin
+       * rautateiden vakiintunut perustieto (Egyptian National
+       * Railways). Kuvien lisenssit ja tekijät todennettu Commonsin
+       * API:sta (Restrictions tyhjä kaikilla), jokainen katsottu
+       * silmin.
+       *
+       * PÄÄLLEKKÄISYYS VÄLTETTY TIETOISESTI: EGY-maalehti kertoo jo
+       * felukoista (Niili teki koko maan), kosharista ja ahwasta
+       * (Ruoka) — opas ei toista niitä; Kairon tornin tarina on
+       * kohteen omassa nähtävyysjutussa, joten jakso 3 katsoo
+       * tornista ULOS eikä kerro tornista.
+       */
+      matkailijalle: {
+        /*
+         * Etusivukuvan kaava: yksi aihe joka täyttää ruudun, paikan
+         * oma erikoisuus, pystykuva. Kairon torni nousee yksinään
+         * tyhjää taivasta vasten, ja yläosa on pelkkää taivasta —
+         * Matkaopas-nauha ei peitä aihetta.
+         */
+        kuva: {
+          tiedosto: 'Cairo Tower, al-Qāhirah, CG, EGY (47119632244).jpg',
+          selite: 'Kairon torni Geziran saarella: betonitornin '
+            + 'ristikkokuori avautuu huipulla lootuskukan '
+            + 'terälehdiksi.',
+          lahde: 'Warren LeMay, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Kairo on arabimaailman suurin kaupunki, mutta '
+          + 'matkailijan Kairo on kaksi kävelyä ja yksi joki. '
+          + 'Vanhassakaupungissa idässä tuhatvuotinen pääkatu vie '
+          + 'portilta portille moskeijoiden ja basaarien ohi; '
+          + 'lännessä ovat joki, sillat ja saari, jonka tornista koko '
+          + 'kaupungin näkee kerralla. Välimatkat taittuvat metrolla, '
+          + 'joka oli Afrikan ensimmäinen. Kuumimmat tunnit istutaan '
+          + 'varjossa niin kuin kairolaiset istuvat — kaupunki herää '
+          + 'toden teolla vasta illalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Kairo',
+          taitto: 'opas',
+          teksti: 'Matkailijan Kairo on tuhatvuotinen kävelykatu, joki '
+            + 'ja torni saarella.',
+          nosto: 'Metro vie faaraoiden museolta keskiaikaiselle '
+            + 'portille muutamalla punnalla.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Junat ovat tuoneet matkustajia Kairoon vuodesta '
+                + '1856, jolloin rata Aleksandriasta valmistui — se oli '
+                + 'Afrikan ensimmäinen rautatie. Kaupungin sisällä '
+                + 'kulkee toinen ensimmäinen: Kairon metro avattiin '
+                + '1987 koko maanosan ensimmäisenä, ja nykyään sen '
+                + 'kolme linjaa alittavat Niilinkin. Metro on '
+                + 'ruuhkaisen jättikaupungin nopein ja halvin väline: '
+                + 'lyhyt matka maksaa kymmenen Egyptin puntaa eli '
+                + 'parikymmentä senttiä, ja junat kulkevat viidestä '
+                + 'aamulla yhteen yöhön. Jokaisen junan keskellä on '
+                + 'kaksi naisille varattua vaunua, joiden kohta on '
+                + 'merkitty laituriin. Kaupungin hahmottaa joesta: '
+                + 'Niili virtaa etelästä pohjoiseen, museot ja keskusta '
+                + 'ovat sen itärannalla, vanhakaupunki niistä itään ja '
+                + 'pyramidit kaukana lännessä. Vanhassakaupungissa '
+                + 'liikutaan jalan — kujat ovat kapeita eikä autolla '
+                + 'ole niille asiaa.',
+              /*
+               * KARUSELLI: kolme kuvaa seuraavat jakson tekstiä —
+               * asema johon juna tuo, metro joka vie vanhimpaan
+               * kaupunginosaan, ja silta jolla ruuhka ylittää joen.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Ramses Station.JPG',
+                  selite: 'Ramsesin rautatieaseman halli: pylväät '
+                    + 'avautuvat kattoon papyrusviuhkoina ja keskellä '
+                    + 'riippuu kerroksittainen valaisin. Junat ovat '
+                    + 'pysähtyneet tällä paikalla 1850-luvulta asti.',
+                  lahde: 'Faris El-Gwely, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Passengers get off a train at El Mar Girgis station in Cairo.jpg',
+                  selite: 'Metrojunia Mar Girgisin asemalla '
+                    + 'mustavalkokuvassa: laiturin yllä kohoaa Pyhän '
+                    + 'Yrjön kirkon pyöreä torni. Asema on Vanhan '
+                    + 'Kairon koptilaiskortteleiden pysäkki.',
+                  lahde: 'Jim Joel, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Cairo street scenes, Dec 2008.jpg',
+                  selite: 'Aamuaurinko värjää joen: autojono ylittää '
+                    + 'Niilin siltaa, laitureissa on jokilaivoja ja '
+                    + 'vasemmalla joen takana erottuu Kairon torni.',
+                  lahde: 'Ed Yourdon, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kilometri, jolla kaupunki alkoi',
+              teksti: 'Al-Muizz-katu kulkee vanhan muurikaupungin läpi '
+                + 'portilta portille, Bab al-Futuhilta Bab Zuweilalle, '
+                + 'ja matkaa kertyy noin kilometri. Katu on ollut '
+                + 'paikallaan kaupungin perustamisesta eli vuodesta '
+                + '970 asti: kalifien aikana se oli suljetun '
+                + 'palatsikaupungin juhlakatu, jolle tavallisella '
+                + 'väellä ei ollut asiaa, ja Saladinin avattua portit '
+                + 'siitä tuli kaupungin pääkauppakatu. Arvokkainta '
+                + 'katuosuutta rakennettiin kilpaa: sulttaanit '
+                + 'pystyttivät moskeijansa, koulunsa ja hautansa juuri '
+                + 'tänne, joten kilometrille mahtuu monumentteja '
+                + 'tuhannen vuoden ajalta. Kävelyn voi aloittaa '
+                + 'kummasta päästä vain. Matkalla kadun itäpuolelle '
+                + 'jää Khan el-Khalilin basaari, ja perillä '
+                + 'eteläpäässä voi kiivetä Bab Zuweilan minareetteihin '
+                + 'katsomaan kulkemansa kadun yli.',
+              kuva: [
+                {
+                  tiedosto: 'Muizz Street and minaret of Sulayman Agha al-Silahdar Mosque Cairo.jpg',
+                  selite: 'Al-Muizz-katu pohjoispäästään: kadun ylle '
+                    + 'kohoaa Sulayman Aghan moskeijan hoikka '
+                    + 'minareetti, ja taloissa on puisia '
+                    + 'ristikkoerkkereitä.',
+                  lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+                },
+                {
+                  tiedosto: 'Islamic-cairo-street.jpg',
+                  selite: 'Mashrabiya-erkkerit varjostavat katua: '
+                    + 'puuristikko päästää tuulen sisään mutta pitää '
+                    + 'katseet ulkona. Kadun päässä on Katkhudan '
+                    + 'sabil, vesitarjoilupaviljonki vuodelta 1744.',
+                  lahde: 'Joonas Plaan, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Saari joen keskellä',
+              teksti: 'Keskustan kohdalla Niilissä on Geziran saari, '
+                + 'ja se on kaupungin vehreä puoli: puistoja, '
+                + 'urheilukenttiä, oopperatalo ja suurlähetystöjen '
+                + 'Zamalekin kaupunginosa. Saarelle kävellään Qasr '
+                + 'al-Nilin siltaa, jonka päitä vartioivat '
+                + 'pronssileijonat — ne ovat perua jo 1800-luvun '
+                + 'alkuperäissillalta. Saaren eteläkärjessä kohoaa '
+                + 'Kairon torni, jonka näköalatasanteelta kaupungin '
+                + 'mittakaavan käsittää kerralla: talomeri jatkuu '
+                + 'horisonttiin joka suuntaan, ja kirkkaalla säällä '
+                + 'lännessä erottuvat pyramidit. Paras hetki on juuri '
+                + 'ennen auringonlaskua, kun valot syttyvät ja '
+                + 'rantakadut täyttyvät kävelijöistä — ilta '
+                + 'rantabulevardilla on kairolaisten oma tapa päättää '
+                + 'päivä.',
+              kuva: {
+                tiedosto: 'View of the Qasr al-Nil Bridge (Zamalek) from the Cairo Tower (14819978313).jpg',
+                selite: 'Ilta Kairon tornista: alhaalla Geziran '
+                  + 'urheilukentät ja uima-allas, oikealla autojen '
+                  + 'valojono ylittää Niilin siltaa, ja vastarannalla '
+                  + 'syttyvät keskustan valot.',
+                lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Helle määrää päivän',
+              teksti: 'Kairossa sataa niin harvoin, ettei sadetta '
+                + 'kannata suunnitelmissa muistaa — aavikkokaupungin '
+                + 'sää on aurinkoa. Paras matka-aika on lokakuusta '
+                + 'huhtikuuhun: talvella päivälämpö on leudot 14–22 '
+                + 'astetta. Keväällä maalis–toukokuussa tuulet '
+                + 'kantavat kaupunkiin Saharan pölyä, ja kesällä '
+                + 'päivät ovat pitkiä ja kuumia, yli 31 asteen. '
+                + 'Kaupunki elää helteen ehdoilla: keskipäivällä '
+                + 'kujat vetäytyvät varjoon markiisien ja '
+                + 'aurinkovarjojen alle, ja vilkkaimmillaan kadut ovat '
+                + 'vasta pimeän tultua — kaupat palvelevat myöhään '
+                + 'iltaan. Ramadan-kuukautena rytmi kääntyy vielä '
+                + 'jyrkemmin iltaan, ja silloin metrokin kulkee tuntia '
+                + 'pidempään, kello kahteen yöhön.',
+              kuva: {
+                tiedosto: 'Egypt, Cairo, Muizz Market Street, Islamic Cairo.jpg',
+                selite: 'Keskipäivä basaarikadulla: aurinkovarjot ja '
+                  + 'markiisit varjostavat kujan, ja väki kulkee '
+                  + 'niiden alla.',
+                lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+          ],
+        },
+      },
       nostot: [
         {
           otsikko: 'Roberts piirsi Kairon',

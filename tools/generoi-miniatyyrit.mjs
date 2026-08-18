@@ -810,6 +810,63 @@ const KUVAT = [
     + 'pale stone carrying a wide flat round drum, and from the rim of '
     + 'the drum two curved arch-like handles rising into the air. Lawn '
     + 'in front, NO people'],
+
+  /*
+   * ── Kairo, kymmenen kohdetta (lehden viimeistely 18.8.2026) ──────
+   * VAIN JONOSSA, ei generoitu: piirrokset vaativat API-avaimen,
+   * jota työsessiossa ei ole. Kartalla kohteet näkyvät siihen asti
+   * numeroympyröinä. Kuvaukset on kirjoitettu nähtävyysjuttujen
+   * todennettujen valokuvien mukaan (js/packs/nahtavyysjutut.js:
+   * kairo) — arkkitehtuurin tosiasioita, ei mielikuvia. Yksi otto
+   * per kohde.
+   */
+  ['kairo-kairon-torni', 'a very tall slender cylindrical concrete '
+    + 'tower wrapped in an open lattice shell that flares out at the '
+    + 'top into pointed petals like a lotus flower, a small round '
+    + 'observation deck above the petals and a thin antenna at the '
+    + 'summit', 'halpa'],
+  ['kairo-egyptin-museo', 'a grand neoclassical museum facade of '
+    + 'reddish stone: a tall rounded central arch entrance flanked by '
+    + 'two columns and two arched niches, symmetrical wings with '
+    + 'pilasters, and a small dome over the central bay'],
+  ['kairo-tahririn-aukio', 'a wide city square with a round grassy '
+    + 'traffic island at its center, a single ancient Egyptian '
+    + 'obelisk standing on the island, lamp posts around the circle '
+    + 'and a long curved early-20th-century building facade behind', 'halpa'],
+  ['kairo-abdeenin-palatsi', 'a long low 19th-century royal palace '
+    + 'facade in European neoclassical style: rows of tall windows in '
+    + 'two storeys, a slightly projecting central bay with a '
+    + 'triangular pediment and flagpole, and a tall wrought-iron '
+    + 'gate with lantern posts in front'],
+  ['kairo-ibn-tulunin-moskeija', 'a vast early Islamic mosque: a '
+    + 'wide walled courtyard surrounded by arcades of pointed '
+    + 'arches, a domed ablution pavilion in the middle, and behind '
+    + 'the arcade a stone minaret with an external spiral staircase '
+    + 'winding around its shaft'],
+  ['kairo-sulttaani-hassanin-moskeija', 'a monumental Mamluk stone '
+    + 'mosque: a massive cubic building with tall vertical strips of '
+    + 'stacked windows, a deep carved cornice at the top edge, one '
+    + 'large rounded dome at the near end and two tall minarets with '
+    + 'pointed caps flanking it'],
+  ['kairo-bab-zuweila', 'a medieval stone city gate: two massive '
+    + 'semicircular towers with a tall pointed-arch passage between '
+    + 'them, and rising from the top of each tower a slender '
+    + 'octagonal minaret with two carved balconies and a bulb-shaped '
+    + 'finial'],
+  ['kairo-saladinin-linnoitus', 'a hilltop citadel: long crenellated '
+    + 'stone walls with round towers climbing a rocky slope, and '
+    + 'above them a great Ottoman-style mosque with a high central '
+    + 'dome, cascading half-domes and two very slender '
+    + 'pencil-pointed minarets'],
+  ['kairo-khan-el-khalili', 'a narrow old bazaar lane: a pointed '
+    + 'stone arch spanning the alley, shopfronts on both sides '
+    + 'crowded with dozens of ornate metal lanterns hanging from '
+    + 'hooks, and a strip of sky above between the buildings'],
+  ['kairo-al-azhar-puisto', 'a terraced formal garden on a hill: a '
+    + 'straight water channel with small fountains running down the '
+    + 'middle of a palm-lined promenade, low flower beds and lawns '
+    + 'stepping down on both sides, and a small domed pavilion at '
+    + 'the far end', 'halpa'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
