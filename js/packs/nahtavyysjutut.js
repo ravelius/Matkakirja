@@ -3623,6 +3623,204 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * Neljä uutta juttua 18.8.2026 (Istanbulin lehden viimeistely,
+     * kartta 6 → 10 kohteeseen). Lähde en-Wikipedia (Süleymaniye
+     * Mosque, Sirkeci railway station, Maiden's Tower, Galata Bridge,
+     * Tünel), tiivistetty omin sanoin. Kuvien lisenssit, tekijät ja
+     * koot todennettu Commonsin API:sta (Restrictions tyhjä kaikilla)
+     * ja jokainen kuva katsottu silmin 18.8.2026 — hylättyjä oli
+     * kuusi, kaikki tunnistettavien etualan ihmisten takia.
+     *
+     * Neitsyttorni on kirjoitettu eri kulmasta kuin Üsküdarin juttu,
+     * joka mainitsee tornin yhdellä lauseella majakkana ja
+     * tullitalona; tämä kertoo ketjusta, tulipaloista ja nimen
+     * legendoista. Galatan silta ei toista kannen hippodromijuttua
+     * eikä kartan esittelyä, joka kuvaa sillan vain maamerkkinä.
+     */
+    'Süleymaniyen moskeija': {
+      aika: '1550–1557',
+      teksti: 'Sulttaani Suleiman Suuri tilasi itselleen moskeijan, '
+          + 'joka ylittäisi kaikki edeltäjiensä rakennuttamat. Työ '
+          + 'annettiin hovin pääarkkitehdille Mimar Sinanille, ja '
+          + 'paikaksi valittiin kaupungin kolmas kukkula, jolla '
+          + 'seisoi vanha sulttaanin palatsi Eski Saray — se '
+          + 'purettiin tieltä. Sisäänkäynnin yläpuolinen '
+          + 'arabiankielinen piirtokirjoitus antaa perustamisvuodeksi '
+          + '1550 ja vihkimisvuodeksi 1557.'
+        + '\n\n'
+        + 'Rukoussali on lähes neliö, 58,5 kertaa 57,5 metriä, ja sen '
+          + 'yllä on yksi valtava kupoli: korkeutta 53 metriä ja '
+          + 'halkaisijaa 26,5 metriä eli tasan puolet korkeudesta. '
+          + 'Pihan kulmissa on neljä minareettia. Niiden parvekkeita '
+          + 'on yhteensä kymmenen, minkä on sanottu viittaavan '
+          + 'siihen, että Suleiman oli järjestyksessä kymmenes '
+          + 'osmanisulttaani. Ulommat minareetit ovat sisempiä '
+          + 'matalampia, jolloin koko rakennus näyttää nousevan kohti '
+          + 'keskuskupolia.'
+        + '\n\n'
+        + 'Moskeija on osa külliyeä eli säätiökokonaisuutta, johon '
+          + 'kuului koraanikouluja, keittiö köyhille ja sairaala. '
+          + 'Qibla-seinän takana on aidattu hautausmaa, jossa '
+          + 'Suleiman ja hänen puolisonsa Hürrem Sultan lepäävät omissa '
+          + 'kahdeksankulmaisissa mausoleumeissaan. Talo on myös '
+          + 'ensimmäinen rakennus, jonka İznikin kaakeleissa käytettiin '
+          + 'lasitteen alla tomaatinpunaista savea.',
+      kuvat: [
+        {
+          tiedosto: 'Süleymaniye Mosque exterior view.JPG',
+          selite: 'Moskeija puutarhan puolelta: keskuskupoli laskeutuu '
+            + 'puolikupoleina alaspäin, kaksi minareettia kohoaa '
+            + 'sivuilla, ja oikealla etualalla on toinen '
+            + 'kahdeksankulmaisista mausoleumeista.',
+          lahde: 'İhsan Deniz Kılıçoğlu, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Süleymaniye Mosque February 2013 01.jpg',
+          selite: 'Kupoli sisältä: keskiötä kiertää kalligrafiakehä, '
+            + 'kupolin juurella on ikkunarivi, ja kaaria korostavat '
+            + 'punavalkoiset kiviraidat.',
+          lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sirkecin asema': {
+      aika: '1890',
+      teksti: 'Rata Euroopasta Istanbuliin valmistui vaiheittain: '
+          + 'ensimmäiset viisitoista kilometriä Halkalıin rakennettiin '
+          + '1870–1871, ja jatke Sirkeciin valmistui heinäkuussa 1872. '
+          + 'Sulttaani Abdülaziz oli itse päättänyt linjauksen — rata '
+          + 'kiertää Marmaranmeren rantaa Topkapın palatsin alapuutarhan '
+          + 'muurien vierestä. Vuonna 1873 päätepysäkiksi tehtiin '
+          + '"väliaikainen" asema.'
+        + '\n\n'
+        + 'Lopullisen asemarakennuksen työt alkoivat helmikuussa 1888, '
+          + 'ja talo avattiin 3. marraskuuta 1890. Piirtäjä oli '
+          + 'preussilainen August Jasmund, jonka Saksan hallitus oli '
+          + 'lähettänyt Istanbuliin tutkimaan osmanilaista '
+          + 'arkkitehtuuria. Tulos on tunnetuimpia esimerkkejä '
+          + 'eurooppalaisesta orientalismista: 1 200 neliömetriä, '
+          + 'kaasuvalaistus ja talvilämmitys itävaltalaisilla '
+          + 'kaakeliuuneilla.'
+        + '\n\n'
+        + 'Sirkeci oli Orient-pikajunan itäinen pääteasema. Ensimmäinen '
+          + 'lähtö Pariisista ajettiin 4. lokakuuta 1883, ja liikenne '
+          + 'jatkui nimellä vuoteen 2009. Vuonna 2013 asema suljettiin '
+          + 'Marmaray-työmaan takia, ja saman vuoden lokakuussa sen alle '
+          + 'avattiin uusi maanalainen asema, jolta junat kulkevat '
+          + 'Bosporin ali. Vanhassa talossa on vuodesta 2005 ollut '
+          + 'rautatiemuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Istanbul - Estació de Sirkeci.JPG',
+          selite: 'Aseman laiturihalli: valurautapylväät kannattavat '
+            + 'aaltopeltikatosta, seinässä on kello ja "1. PERON" '
+            + '-kyltti, ja raiteilla seisoo kaksi lähijunaa.',
+          lahde: 'Josep Renalias, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: '2007-03-11 03-17 Istanbul 291 Bahnhof Sirkeci (2718969707).jpg',
+          selite: 'Aseman ravintolakaari: kolme pyöreää lasi-ikkunaa '
+            + 'kivikehyksissä, punatiiliset raidat ja messinkikyltti, '
+            + 'jossa lukee ORIENT EXPRESS. Pöydät odottavat katetuiksi.',
+          lahde: 'Allie_Caulfield, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Neitsyttorni: {
+      aika: '1110',
+      teksti: 'Torni seisoo pienellä luodolla Bosporin eteläsuulla, '
+          + 'kahdensadan metrin päässä Üsküdarin rannasta. Ateenalainen '
+          + 'sotapäällikkö Alkibiades rakensi kalliolle luultavasti jo '
+          + 'vuonna 408 eaa. tarkastusaseman Mustaltamereltä tuleville '
+          + 'laivoille. Keisari Aleksios Komnenos pystytti paikalle '
+          + 'puutornin vuonna 1110, ja siitä vedettiin rautaketju '
+          + 'salmen yli toiseen torniin Euroopan puolella — ketjulla '
+          + 'suljettiin väylä.'
+        + '\n\n'
+        + 'Rakennus on tuhoutunut ja noussut yhä uudelleen: '
+          + 'maanjäristys kaatoi sen 1509, tulipalo tuhosi sen 1721, ja '
+          + 'suurvisiiri Damad İbrahim Pasha rakennutti tilalle '
+          + 'majakan. Muureja korjattiin 1731 ja 1734, ja vuonna 1763 '
+          + 'torni muurattiin kestävämmästä kivestä. Vuodesta 1829 se '
+          + 'toimi karanteeniasemana. Viimeisin peruskorjaus valmistui '
+          + '2023.'
+        + '\n\n'
+        + 'Nimestä kerrotaan kaksi tarinaa. Ensimmäisen mukaan keisari '
+          + 'sulki tyttärensä torniin, koska ennustaja oli luvannut '
+          + 'käärmeen tappavan hänet kahdeksantoistavuotiaana — käärme '
+          + 'tuli lopulta isän tuomassa hedelmäkorissa. Toinen nimi, '
+          + 'Leandroksen torni, on lainattu kreikkalaisesta tarusta '
+          + 'Herosta ja Leandroksesta, joka ui joka yö salmen yli '
+          + 'lampun valon ohjaamana. Torni oli myös Turkin '
+          + 'kymmenen liiran setelin kääntöpuolella vuosina 1966–1981.',
+      kuvat: [
+        {
+          tiedosto: 'Kız Kulesi February 2013 01.jpg',
+          selite: 'Torni luodollaan harmaana päivänä: valkoinen '
+            + 'kivijalusta, kahdeksankulmainen torni ja lyijykupoli, '
+            + 'jonka päässä liehuu lippu. Takana kohoaa vanhankaupungin '
+            + 'harjanne Hagia Sofian kupoleineen.',
+          lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: "Kız Kulesi, Maiden's Tower (52396632086).jpg",
+          selite: 'Sama torni iltavalossa: vesi on tyyni ja sininen, '
+            + 'ympärillä kulkee pieniä veneitä, ja horisontissa häämöttää '
+            + 'Marmaranmeren saaria.',
+          lahde: 'Sonse, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Galatan silta': {
+      aika: '1845',
+      teksti: 'Kultaisen sarven yli on suunniteltu siltaa kauan. Vuosina '
+          + '1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja '
+          + 'Leonardo da Vinci piirsi 280 metrin yhtenäisen jännevälin '
+          + '— aikansa pisimmän. Sulttaani ei hyväksynyt sitä, ja myös '
+          + 'Michelangelo kieltäytyi tehtävästä. Ajatus jäi lepäämään '
+          + 'kolmeksi ja puoleksi vuosisadaksi.'
+        + '\n\n'
+        + 'Ensimmäinen silta nykyiselle paikalle rakennettiin puusta '
+          + 'vuonna 1845 sulttaanin äidin pyynnöstä. Kolme ensimmäistä '
+          + 'päivää ylitys oli ilmainen, sitten alkoi tulli: jalankulkija '
+          + 'maksoi viisi paraa, selkäreppuinen kymmenen ja hevosvaunut '
+          + 'sata. Maksua keräsivät valkopukuiset virkailijat sillan '
+          + 'molemmissa päissä aina vuoteen 1930. Puusilta korvattiin '
+          + '1863, ja 1875 valmistui brittiläisen G. Wellsin rakentama '
+          + '480-metrinen ponttonisilta, joka lepäsi 24 kellukkeen '
+          + 'varassa.'
+        + '\n\n'
+        + 'Neljäs silta, saksalainen ponttonisilta vuodelta 1912, paloi '
+          + 'pahoin 1992 ja hinattiin viikon kuluttua pois. Nykyinen '
+          + 'silta on järjestyksessä viides ja valmistui 1994: 490 '
+          + 'metriä pitkä läppäsilta, jonka 42 metriä leveällä kannella '
+          + 'kulkee kaksi ajokaistaa ja jalkakäytävä kumpaankin suuntaan '
+          + 'sekä keskellä raitiovaunun kiskot. Alatasolle lisättiin '
+          + '2003 kalaravintolat, jollaisia edeltäjänkin alla oli.',
+      kuvat: [
+        {
+          tiedosto: 'Galata Bridge, Istanbul (50407236522).jpg',
+          selite: 'Nykyinen silta Kultaisen sarven suulla: yläkannen '
+            + 'kaiteella on onkijoita vieri vieressä, alatasolla '
+            + 'ravintolarivistö, ja vastarannalla kohoaa Uusi moskeija '
+            + 'kupoleineen.',
+          lahde: 'Mike McBey, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Galata Bridge tif.jpg',
+          selite: 'Vuonna 1875 valmistunut ponttonisilta väritetyssä '
+            + 'valokuvassa noin 1905: kansi on täynnä jalankulkijoita ja '
+            + 'aasikärryjä, oikealla lahdessa on soutuveneitä ja '
+            + 'purjealuksia, vasemmalla kohoaa Uusi moskeija.',
+          lahde: 'Detroit Publishing Company, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   marseille: {
     MuCEM: {

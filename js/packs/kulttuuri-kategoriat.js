@@ -4085,6 +4085,265 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       ],
+      /*
+       * AVAUSKUVAT (18.8.2026, Istanbulin lehden viimeistely): etusivun
+       * iso kuvapaikka selaa kolmea yleisnäkymää, ja kansikuvista jää
+       * pikkuriville kaksi ensimmäistä. Kaupunkia katsotaan kolmesta
+       * suunnasta: Kultaiselta sarvelta iltahämärässä, salmelta kohti
+       * vanhankaupungin harjannetta ja ylhäältä Eminönün rantatorille.
+       * Bosporinsalmen siltanäkymää EI valittu, koska toinen kansikuva
+       * on jo Ortaköystä sillan juurelta. Lisenssit, tekijät ja koot
+       * todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Cuerno de Oro, Estambul, Turquía, 2024-09-28, DD 141-143 HDR.jpg',
+          selite: 'Kultainen sarvi auringonlaskun jälkeen: lahden '
+            + 'takana kohoaa kukkula, jonka laella Süleymaniyen '
+            + 'moskeija on valaistu keltaiseksi, rannassa on '
+            + 'jokilaivoja laitureissa, ja taivas hehkuu vielä '
+            + 'oranssina länsihorisontissa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Sultanahmet ferry on the Bosphorus in Istanbul, Turkey 001.jpg',
+          selite: 'Lauttoja rantalaiturissa vanhankaupungin kupeessa. '
+            + 'Puiden yllä erottuu harjanteella Hagia Sofian matala '
+            + 'kupoli ja neljä minareettia, ja etualan lautan kyljessä '
+            + 'lukee SULTANAHMET.',
+          lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Panoramic view of Istanbul- Yeni Cami (The New Mosque), Galata Bridge. Turkey, Southeastern Europe.jpg',
+          selite: 'Eminönün rantatori ylhäältä: oikealla kohoaa Uusi '
+            + 'moskeija kahtena minareettina ja kupolikasana, keskellä '
+            + 'kaartuu markkinakojujen katos, ja vasemmalla Galatan '
+            + 'silta vie lahden yli Galatan tornin kukkulalle.',
+          lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * MATKAILIJAN ISTANBUL (18.8.2026, viimeistely nykystandardiin).
+       * Rakenne on Kairon ja Tokion mallista: pystykuva, kappale ja
+       * opastaitto, jonka ensimmäisessä jaksossa on kolmen kuvan
+       * karuselli.
+       *
+       * FAKTAPOHJA: en-Wikipedia "Tünel" (vihkiminen 17.1.1875, 573 m,
+       * maailman toiseksi vanhin maanalainen kaupunkirata Lontoon
+       * 10.1.1863 jälkeen; Abdülazizin toimilupa Gavandille 1869,
+       * työt alkoivat 1871), "Marmaray" (tunneli Bosporin ali, avattiin
+       * 29.10.2013), "Sirkeci railway station" (Orient-pika 4.10.1883
+       * alkaen), "Galata Bridge" (nykysilta 1994, alatason ravintolat
+       * 2003, T1:n kiskot keskellä), "Grand Bazaar, Istanbul"
+       * (61 katettua katua, noin 4 000 kauppaa — sama luku kuin lehden
+       * omassa nähtävyysjutussa), "Balık ekmek" (makrilli tai muu
+       * rasvainen kala leivässä, Eminönün torilla suoraan veneestä),
+       * "Istanbul" (ilmasto: kesäpäivä noin 28 °C ja alle seitsemän
+       * sadepäivää kuussa, talvipäivä 5–10 °C, aurinkoa talvella noin
+       * 20 % ja kesällä 60–70 % päivistä, merilumimyrskyt yli 30 cm
+       * lähes vuosittain, viimeksi 2022) ja "Emirgan Park"
+       * (tulppaanitarha 1960-luvulta, kansainvälinen tulppaanijuhla
+       * joka huhtikuu vuodesta 2005; tulppaanikausi 1718–1730) —
+       * kaikki haettu 18.8.2026.
+       *
+       * PÄÄLLEKKÄISYYS VÄLTETTY TIETOISESTI: TUR-maalehti kertoo jo
+       * teestä, bozasta, matoista ja mevlevi-dervisseistä, joten opas
+       * ei toista niitä; simit ja lokit ovat europe-valokuvat.js:n
+       * Istanbul-lisissä. Sirkecin asemarakennus, Galatan silta,
+       * Süleymaniye ja Neitsyttorni ovat omina nähtävyysjuttuinaan,
+       * joten opas käyttää niitä vain reittipisteinä eikä kerro niiden
+       * historiaa uudelleen.
+       */
+      matkailijalle: {
+        /*
+         * Etusivukuvan kaava: yksi aihe joka täyttää ruudun, paikan oma
+         * erikoisuus, pystykuva. Neitsyttorni seisoo yksin salmessa,
+         * yläosa on pelkkää taivasta — Matkaopas-nauha ei peitä aihetta
+         * — ja horisontissa erottuu vanhankaupungin siluetti, joka
+         * kertoo yhdellä silmäyksellä missä ollaan.
+         */
+        kuva: {
+          tiedosto: "Maiden's Tower (Istanbul) - May 22, 2023.jpg",
+          selite: 'Neitsyttorni omalla luodollaan Bosporinsalmessa: '
+            + 'kivitorni, lyijykupoli ja lipputanko, ja takana '
+            + 'vanhankaupungin harjanne.',
+          lahde: 'HuseynAZE99, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Istanbul on kaupunki kahdella mantereella, ja juuri '
+          + 'siitä matkailijan päivät rakentuvat. Vanhakaupunki on '
+          + 'niemellä lännessä: siellä kaikki tärkein on kävelymatkan '
+          + 'päässä, ja kilometrin matkalle mahtuu kaksi vuosituhatta. '
+          + 'Kultaisen sarven yli sillan pohjoispuolella alkaa toinen '
+          + 'kaupunki, jyrkkä ja eurooppalainen, ja salmen takana '
+          + 'kolmas, arkinen ja aasialainen. Lautta on siksi yhtä '
+          + 'tavallinen kulkuneuvo kuin raitiovaunu — ja halvin '
+          + 'näköalapaikka mitä kaupungilla on tarjota.',
+        artikkeli: {
+          nimi: 'Matkailijan Istanbul',
+          taitto: 'opas',
+          teksti: 'Matkailijan Istanbul on yksi kävelykatu, kaksi '
+            + 'mannerta ja kolme lauttalaituria.',
+          nosto: 'Salmen ali kulkee juna, sen yli lautta ja mäen '
+            + 'sisällä vuoden 1875 köysirata.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Junat ovat tuoneet matkustajia Sirkeciin '
+                + '1870-luvulta asti, ja nykyinen asemarakennus avattiin '
+                + '1890. Orient-pika lähti Pariisista tänne ensimmäisen '
+                + 'kerran 1883. Aseman alla kulkee nykyään '
+                + 'Marmaray, joka avattiin lokakuussa 2013 ja vie junat '
+                + 'Bosporin ali Aasian puolelle. Kaupungin oma '
+                + 'erikoisuus on Tünel: Karaköystä Beyoğluun nouseva '
+                + '573 metrin köysirata vihittiin 17. tammikuuta 1875, '
+                + 'ja se on maailman toiseksi vanhin maanalainen '
+                + 'kaupunkirata — vain Lontoon metro on vanhempi. '
+                + 'Sulttaani Abdülaziz oli myöntänyt luvan 1869 ja työt '
+                + 'alkoivat 1871, eli isoisän matkan aikaan mäen sisällä '
+                + 'louhittiin. Maan päällä kulkee raitiovaunulinja, joka '
+                + 'ylittää Galatan sillan ja pysähtyy Sultanahmetissa. '
+                + 'Suunnan löytää vedestä: vanhakaupunki on niemellä '
+                + 'lännessä, Galata Kultaisen sarven pohjoispuolella ja '
+                + 'Aasia salmen takana idässä.',
+              /*
+               * KARUSELLI: kolme kuvaa seuraavat jakson tekstiä —
+               * raitiovaunu vanhankaupungin kulmalla, lauttalaituri
+               * jolta salmen yli lähdetään, ja Tünelin tiiliholvi.
+               */
+              kuva: [
+                {
+                  tiedosto: 'T1 Istanbul Tram with Hagia Sophia in the background, March 2024.jpg',
+                  selite: 'Puna-valkoinen nivelraitiovaunu kaartaa '
+                    + 'Sultanahmetin pysäkille. Taustalla kohoaa Hagia '
+                    + 'Sofia kupoleineen ja kahtena minareettina, ja '
+                    + 'kadun yllä risteilee ajolankaverkko.',
+                  lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Karaköy Mars 2013 02.jpg',
+                  selite: 'Kaupunkilautta kiinni Karaköyn laiturissa, '
+                    + 'kyltissä lukee KARAKÖY İSKELESİ. Vasemmalla '
+                    + 'nousee rantakadun talorivi ja vastarannalla '
+                    + 'häämöttää Aasian puoli.',
+                  lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Karaköy Taksim Tüneli.jpg',
+                  selite: 'Tünelin tiiliholvinen tunneli sisältä: '
+                    + 'kaksi kiskoparia nousee mäkeä ylös, seinillä '
+                    + 'palaa loisteputkirivi ja tunneli katoaa '
+                    + 'pisteeksi kaukaisuuteen.',
+                  lahde: 'Hamdigumus, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kilometri, jolla kaikki on',
+              teksti: 'Vanhankaupungin niemellä matkailijan kohteet ovat '
+                + 'niin lähekkäin, ettei niiden väliin tarvita kulkuneuvoa. '
+                + 'Sultanahmetin aukion laidalla ovat Hagia Sofia ja '
+                + 'Sininen moskeija vastakkain, aukion keskellä seisoo '
+                + 'faaraon obeliski entisellä hevoskilparadalla, ja '
+                + 'parinsadan metrin päässä laskeudutaan portaita maan '
+                + 'alle vesisäiliöön. Pohjoisen puolella nousee Topkapın '
+                + 'palatsin muuri. Sieltä lähtee länteen kaupungin vanha '
+                + 'pääkatu, ja sen pohjoispuolella on Suuri basaari: '
+                + '61 katettua katua ja lähes neljätuhatta kauppaa saman '
+                + 'holvikaton alla. Matkan jatkaminen vie kolmannelle '
+                + 'kukkulalle, jonka laella Süleymaniyen moskeija katsoo '
+                + 'yli Kultaisen sarven. Koko reitti on reilun kilometrin '
+                + 'mittainen, mutta siihen kuluu päivä.',
+              kuva: [
+                {
+                  tiedosto: "21 Gran Basar d'Istanbul (Kapalıçarşı), botiga de llums.jpg",
+                  selite: 'Lampukauppa Suuren basaarin holvikäytävässä: '
+                    + 'kymmeniä lasi- ja metallilyhtyjä riippuu '
+                    + 'ketjuissa palamassa, ja niiden yllä näkyy '
+                    + 'holvin maalattu kuviointi.',
+                  lahde: 'Enric, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Toiselle mantereelle lautalla',
+              teksti: 'Aasian puolelle ei tarvitse varata retkipäivää: '
+                + 'lauttoja lähtee pitkin päivää Eminönüstä ja '
+                + 'Karaköystä, ja vastaranta näkyy koko matkan ajan. '
+                + 'Kadıköy ja Üsküdar ovat tavallisia kaupunginosia, '
+                + 'joissa asutaan ja käydään töissä — ei monumentteja '
+                + 'vaan toreja, kalakauppoja, kirjakauppoja ja '
+                + 'ravintolakatuja. Juuri siksi kannattaa mennä: '
+                + 'vanhankaupungin jälkeen Kadıköyn kadut näyttävät, '
+                + 'millaista Istanbulissa on ilman matkailijoita. '
+                + 'Kannelta katsoen kaupunki asettuu kerralla '
+                + 'järjestykseen: takana jää niemi kupoleineen, '
+                + 'vasemmalla aukeaa Kultainen sarvi ja edessä nousee '
+                + 'toinen manner. Paluulautan voi ottaa hämärissä, '
+                + 'jolloin vanhankaupungin siluetti syttyy valoihin.',
+              kuva: {
+                tiedosto: 'Kadikoey, Istanbul (P1100156).jpg',
+                selite: 'Kadıköyn lauttalaituri Aasian puolella: matala '
+                  + 'vaaleanpunertava terminaali, jonka kyljessä on '
+                  + 'kaari-ikkunarivi ja kyltti KADIKÖY İSKELESİ; '
+                  + 'laiturin reunassa roikkuu autonrenkaita '
+                  + 'lepuuttajina.',
+                lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kalaa leivän välissä',
+              teksti: 'Istanbulin tunnetuin katuruoka on balık ekmek eli '
+                + '"kala leipä": paistettu tai grillattu makrillifilee '
+                + 'leivän välissä, mukana salaattia ja sipulia. Sitä '
+                + 'myydään Eminönün rantatorilla suoraan veneestä: kala '
+                + 'kypsennetään samassa aluksessa, joka keinuu laiturin '
+                + 'kupeessa, ja annos ojennetaan kannelta rantaan. '
+                + 'Galatan sillalla ruokaa on kahdessa '
+                + 'kerroksessa: yläkannella onkijat nostavat pieniä '
+                + 'kaloja suoraan lahdesta, ja alatasolla on '
+                + 'kalaravintoloiden rivi, joka lisättiin siltaan 2003 '
+                + 'vanhan sillan ravintoloiden malliin. Sillan alta '
+                + 'katsottuna kaupunki näyttäytyy vielä kolmannella '
+                + 'tavalla: veden pinnan tasalta.',
+              kuva: {
+                tiedosto: 'Balik ekmek Galata Bridge.JPG',
+                selite: 'Balık ekmek kädessä paperin päällä: puolikas '
+                  + 'patonki auki, sisällä grillattu kalafilee ruotoineen, '
+                  + 'suikaloitua salaattia ja valkosipulirenkaita.',
+                lahde: 'Benreis, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Neljä vuodenaikaa ja tulppaanikuukausi',
+              teksti: 'Istanbulissa on oikeat vuodenajat, ja ne '
+                + 'kannattaa ottaa huomioon. Kesäpäivä on lämmin, noin '
+                + 'kahdeksankolmatta astetta, ja sadepäiviä on alle '
+                + 'seitsemän kuussa — mutta ilma on kostea, ja '
+                + 'keskipäivä tuntuu raskaalta. Talvella päivälämpö '
+                + 'jää viiden ja kymmenen asteen välille ja sataa '
+                + 'usein: aurinko paistaa vain noin joka viidentenä '
+                + 'päivänä, kun kesällä osuus on 60–70 prosenttia. '
+                + 'Lunta tulee harvoin mutta rajusti — mereltä nouseva '
+                + 'lumipyry tuo yli 30 senttiä lähes joka talvi, '
+                + 'viimeksi 2022. Paras aika on siksi kevät tai syksy, '
+                + 'ja huhtikuulla on oma syynsä: kaupunki kukkii '
+                + 'tulppaanein. Kukka antoi nimensä koko aikakaudelle '
+                + '1718–1730, ja perinne herätettiin henkiin '
+                + '1960-luvulla Emirganin puistoon istutetulla '
+                + 'tulppaanitarhalla. Vuodesta 2005 siellä on pidetty '
+                + 'joka huhtikuu kansainvälinen tulppaanijuhla.',
+              kuva: {
+                tiedosto: 'Tulips from 8th Istanbul tulip festival,Emirgan.JPG',
+                selite: 'Pinkkejä tulppaaneja puunrungon vierellä '
+                  + 'Emirganin puistossa. Kukat ovat vielä tiukassa '
+                  + 'nupussa, ja taustalla erottuu toinen, vaaleampi '
+                  + 'penkki.',
+                lahde: 'MustafaAslanbay, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
