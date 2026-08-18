@@ -13966,13 +13966,15 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
  * pöllönapin päälle (js/pollo.js asetaVihjeenPaikka), koska nappi
  * vaihtaa paikkaa rivin, kartan ja lehden välillä.
  *
- * pointer-events: none — kupla ei saa varastaa kartalta yhtään
- * napautusta, sillä juuri napautusta se pyytää.
+ * Kupla OTTAA napautuksen ja sulkeutuu siitä (omistaja 18.8.2026:
+ * "Pöllön puhekuplia pitää häipyä jos sitä koskettaa") — aiempi
+ * pointer-events: none päästi kosketuksen kartalle, mutta silloin
+ * kuplaa ei saanut pois tieltä.
  */
 .pollo-vihje {
   position: fixed;
   z-index: 40;
-  pointer-events: none;
+  cursor: pointer;
   max-width: min(17rem, calc(100vw - 1.6rem));
   padding: 0.5rem 0.7rem;
   border-radius: 0.6rem;
