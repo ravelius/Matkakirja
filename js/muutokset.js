@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 895, teksti: 'Pöllön juttu aukeaa chatin päälle, sulku palaa chattiin' },
   { v: 894, teksti: 'Paljastuskortti vaalealle sumealle pohjalle' },
   { v: 893, teksti: 'Pöllön kuvan suurennos ei enää katkaise puhetta' },
   { v: 892, teksti: 'Schönbrunnille oma juttu; nähtävyysikkuna leveämpi iPadilla' },

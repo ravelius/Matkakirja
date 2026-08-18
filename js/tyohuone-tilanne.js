@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v895 — pöllön linkistä avattu nähtävyysjuttu (esim. Duomo) avautuu nyt chatin päälle ja jutun sulkeminen palauttaa pöllö-chattiin, ei kartalle; lehtilinkit väistävät chatin kuten ennen',
   'v894 — paljastuskortin kokeilu: tausta on nyt vaalea ja sumennettu (pelinäkymä kuultaa blurin läpi) ja kaikki tekstit tummaa mustetta — katso aarre- ja pöllökortti',
   'v893 — pöllön vastauksen kuvan avaaminen isoksi ei enää pysäytä pöllön puhetta: kertoja jatkaa taustalla, kun kuva on auki (muut ikkunat pysäyttävät kuten ennen)',
   'v892 — Wienin kartta: Schönbrunn (kohde 7) avaa nyt oman lyhyen jutun Wikipedia-artikkelin sijaan; nähtävyys- ja Lue lisää -ikkunat leveämmät ≥700 px ruuduilla (iPad ~92 %, toimii myös jumiutuneen viewportin jälkeen), iPhone ennallaan — kokeile myös esim. Belvedere',

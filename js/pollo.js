@@ -1763,10 +1763,10 @@ class Pollo {
   avaaKohde(reitti) {
     const ui = this.haeUi?.();
     if (!ui || !reitti) return false;
-    // Chat väistyy, mutta nappi jää: paluu keskusteluun on yksi
-    // napautus, ja historia säilyy.
-    this.sulje();
     if (reitti.tyyppi === 'maalehti') {
+      // Lehti on kokoruudun tila: chat väistyy, mutta nappi jää —
+      // paluu keskusteluun on yksi napautus, ja historia säilyy.
+      this.sulje();
       ui.avaaMaalehti?.(reitti.tunniste);
       this.siirraSivulle(ui, reitti.sivu);
       return true;
@@ -1774,6 +1774,7 @@ class Pollo {
     if (reitti.tyyppi === 'kaupunkilehti') {
       const city = ui.game?.board?.cityById?.get(reitti.tunniste);
       if (!city) return false;
+      this.sulje();
       ui.openArrival?.(city);
       this.siirraSivulle(ui, reitti.sivu);
       return true;
@@ -1781,6 +1782,10 @@ class Pollo {
     if (reitti.tyyppi === 'nahtavyys') {
       const juttu = NAHTAVYYSJUTUT[reitti.tunniste]?.[reitti.kohde];
       if (!juttu) return false;
+      // Juttu avautuu dialogina chatin PÄÄLLE ja chat jää alle auki:
+      // jutun sulkeva pelaaja palaa keskusteluun, jonka kautta hän
+      // tuli (omistajan tilaus 18.8.2026 — sulku ei saa pudottaa
+      // kartalle).
       // Tyhjä henkilölinkkilista: juttu ei linkitä itseensä.
       ui.avaaNahtavyys?.({ nimi: reitti.kohde, ...juttu }, null, { henkilolinkit: [] });
       return true;
