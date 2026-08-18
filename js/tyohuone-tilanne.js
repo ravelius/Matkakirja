@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v896 — heitä noppaa: valittavat kohteet nyt vaalea kultalevy + punainen katkoviivarengas + pehmeästi laajeneva kultahalo — erottuvatko yhdellä silmäyksellä merellä ja maalla?',
   'v895 — pöllön linkistä avattu nähtävyysjuttu (esim. Duomo) avautuu nyt chatin päälle ja jutun sulkeminen palauttaa pöllö-chattiin, ei kartalle; lehtilinkit väistävät chatin kuten ennen',
   'v894 — paljastuskortin kokeilu: tausta on nyt vaalea ja sumennettu (pelinäkymä kuultaa blurin läpi) ja kaikki tekstit tummaa mustetta — katso aarre- ja pöllökortti',
   'v893 — pöllön vastauksen kuvan avaaminen isoksi ei enää pysäytä pöllön puhetta: kertoja jatkaa taustalla, kun kuva on auki (muut ikkunat pysäyttävät kuten ennen)',

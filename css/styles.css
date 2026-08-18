@@ -1020,6 +1020,7 @@ body.manner-odottaa .rail {
 /* Raahauksen ajaksi kartan sykähdykset vaikenevat (omistajan toive):
    liikkuva kartta on jo tarpeeksi työtä ruudunpäivitykselle. */
 body.kartta-raahaus .target-ring,
+body.kartta-raahaus .target-halo,
 body.kartta-raahaus .pawn-pulse { animation: none; }
 
 /*
@@ -5211,31 +5212,72 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 .target-ring.picked { stroke: #e8b23c; }
 
 /*
- * Siirtorenkaat olivat punaisia, paksuja ja pyöriviä — jalan liikuttaessa
- * niitä on monta kerralla ja kartta muuttui levottomaksi. Sama kullanruskea
- * sävy kuin lähtöpisteen renkaissa riittää kertomaan, mihin voi napauttaa.
+ * Siirtorenkaat: nopanheiton jälkeen valittavat kohteet. Kullanruskea
+ * katkoviiva hukkui pergamenttiin (omistajan havainto 18.8.2026:
+ * "valittava siirtymäruutu ei erotu tarpeeksi"), joten kehotus toimia
+ * palasi punamerkille: vaalea kultalevy pohjaksi ja punamullanvärinen
+ * katkoviivarengas päälle — sama pari, jolla vanhat atlakset merkitsivät
+ * reitin ja rajan. Kohteita on kerralla korkeintaan kourallinen, joten
+ * vahva merkki ei tee karttaa levottomaksi niin kuin vanha joka
+ * suunnan punarengas teki.
  */
 .target-ring {
-  fill: rgba(217, 144, 36, 0.28);
-  stroke: #8f5c1d;
-  stroke-width: 3.4;
-  stroke-dasharray: 7 5;
+  fill: rgba(246, 210, 122, 0.68);
+  stroke: var(--mark);
+  stroke-width: 4;
+  stroke-dasharray: 8 5;
   transform-box: fill-box;
   transform-origin: center;
   /* Vaalea hehku irrottaa renkaan maastosta ilman animaatiota. */
-  filter: drop-shadow(0 0 3px rgba(255, 248, 230, 0.95));
+  filter: drop-shadow(0 0 4px rgba(255, 248, 230, 0.95));
 }
 
-/* Suunta, jolla ei ole kaupunkia nopan päässä: pelkkä hillitty piste. */
+/* Suunta, jolla ei ole kaupunkia nopan päässä: pienempi mutta samaa
+   punamerkkiä — kaikki valittavat löytyvät yhdellä silmäyksellä. */
 .target-ring.far {
-  fill: rgba(217, 144, 36, 0.12);
-  stroke-width: 2.2;
-  stroke-dasharray: 3 4;
-  opacity: 0.85;
+  fill: rgba(246, 210, 122, 0.5);
+  stroke-width: 2.8;
+  stroke-dasharray: 4 4;
+  opacity: 0.95;
 }
 
-.target:hover .target-ring { fill: rgba(176, 138, 60, 0.34); }
-.target:hover .target-ring.far { fill: rgba(176, 138, 60, 0.22); opacity: 1; }
+.target:hover .target-ring { fill: rgba(238, 196, 105, 0.8); }
+.target:hover .target-ring.far { fill: rgba(238, 196, 105, 0.65); opacity: 1; }
+
+/*
+ * Hengittävä kultahalo siirtorenkaan alla (--accent): rengas laajenee
+ * pehmeästi ja palaa, himmenemättä koskaan pois — kohde erottuu joka
+ * hetki, myös liikkeen ääriasennoissa, sekä vaalealta mereltä että
+ * tummalta maalta. Pelkkä muunnos ja peitto — ei suodinta, joten
+ * selain ei laske viivoja uusiksi. Raahauksen aikana halo pysähtyy
+ * (ks. body.kartta-raahaus).
+ */
+.target-halo {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 5;
+  transform-box: fill-box;
+  transform-origin: center;
+  pointer-events: none;
+  transform: scale(1.14);
+  opacity: 0.85;
+  animation: kohde-halo 2.4s ease-in-out infinite;
+}
+
+@keyframes kohde-halo {
+  0%, 100% { transform: scale(1.14); opacity: 0.85; }
+  50% { transform: scale(1.42); opacity: 0.4; }
+}
+
+/* Liikeherkkyys: halo ei hengitä, vaan jää leveäksi kultakehäksi
+   renkaan ympärille — vahva staattinen korostus säilyy. */
+@media (prefers-reduced-motion: reduce) {
+  .target-halo {
+    animation: none;
+    transform: scale(1.25);
+    opacity: 0.7;
+  }
+}
 
 /* Lentokohde kartalla: rengas ja pieni kone kaupungin yllä. */
 .target-ring.lento {
