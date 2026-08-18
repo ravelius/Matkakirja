@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v864 — tilastolehti iPadilla: vieritä Mantereet-taulua vaakaan — kaikkien sarakkeiden otsikot (Lehti…Kieli, Maalehti…Radio) pysyvät näkyvissä (aiemmin osa katosi vierityksessä)',
   'v863 — tietäjäavatarit: avaa matkalaukku — tietäjärivin edessä on nykyisen tason PYÖREÄ MUOTOKUVA (pöllökuvake pois), rivin alla ohut kultainen edistymispalkki seuraavaan rajaan ja rivin perässä i-nappi, joka avaa Tietäjän tie -minipopupin (selitys + kaikki 10 tasoa kuvineen; saavuttamattomat himmeinä, nykyinen kehystettynä; sulkeutuu ruksista, taustasta ja Escistä). Tasonnousussa pöllön kupla on uusi: iso avatar, kalevalainen värssy kursiivilla kahdella rivillä ja onnittelu (40 tp tulee vastaan nopeasti). Ylin taso on nyt "Tietäjä iänikuinen" (ei Suurtietäjä)',
   'v862 — kohdekartat (esim. Firenze, Helsinki): karttatekstin lopusta poistui ohjevirke "Kohteet ovat kartalla…" kaikista 12 kaupungista, ja tilalle tuli kartan oikeaan yläkulmaan pieni opaste "Napauta nähtävyyttä, saat lisätietoja."; nimikyltin kirjasin isompi (0,74 → 0,95 rem) — katso tiheä kartta (Firenze, Pariisi) puhelimella',
   'v861 — palautedialogi pelkistyi: alkuteksti ja GitHub-linkki pois, Ehdota lehteen -kentät näkyvät suoraan ilman otsikkoa ja vipua — vain pro-osio on vivun takana',
