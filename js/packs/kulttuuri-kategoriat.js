@@ -1628,6 +1628,46 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Espanjalainen ratsastuskoulu',
         },
       ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kolme korkeutta ja kolme vuorokauden-
+       * aikaa. Aamu Stephansdomin tornista alas kattoihin, päivä
+       * Belvederen puutarhan yli kohti ydintä ja ilta Donaukanalin
+       * vesirajassa. Hofburg, Schönbrunn ja Riesenrad ovat jo muualla
+       * lehdessä, joten ne eivät toistu. Lisenssit, tekijät ja koot
+       * todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Wien, Stephansdom, Blick vom Südturm -- 2018 -- 3268.jpg',
+          selite: 'Stephansdomin eteläisestä tornista pohjoiseen: '
+            + 'alalaidassa on katedraalin oma katto, jonka lasitetut '
+            + 'tiilet muodostavat vihreän, valkoisen ja keltaisen '
+            + 'siksakin, ja sen takana kohoaa vihreäksi patinoitunut '
+            + 'kupariturretti. Takana alkaa Sisäkaupungin punatiilinen '
+            + 'kattomeri.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Wien-vom Oberen Belvedere-108-2009-gje.jpg',
+          selite: 'Ylemmän Belvederen terassilta: etualalla barokki-'
+            + 'puutarhan käytävät, leikatut pensaat ja kaksi '
+            + 'suihkulähdeallasta, keskellä Alemman Belvederen pitkä '
+            + 'keltavalkoinen palatsi. Sen takaa nousevat Stephansdomin '
+            + 'terävä torni ja kaksi vihreää kupolia, ja horisontin '
+            + 'täyttävät Wieninmetsän kukkulat.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Wien Ringturm Panorama.jpg',
+          selite: 'Donaukanal iltahämärässä: katulamppujen oranssit '
+            + 'heijastukset värähtelevät vedessä, oikealta kaartaa '
+            + 'alhaalta valaistu silta kanavan yli, ja rantakadun '
+            + 'takaa kohoaa valaistuna Ringturm. Rantamuurit on '
+            + 'maalattu graffiteilla, ja taivaalla on vielä '
+            + 'ruusunpunaista pilveä.',
+          lahde: 'Koalabaer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'musiikki',
@@ -3920,6 +3960,43 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       ],
+          /*
+       * AVAUSKUVAT (18.8.2026): vesikaupunki kolmesta korkeudesta.
+       * Tornista lännestä katot ja yksi kanava, katutasolta illalla
+       * kanaalin oma mittakaava, ja ilmasta pohjoisesta koko ydin
+       * kanavakehineen. Damrak, Brouwersgracht ja Begijnhof ovat jo
+       * kansikuvina eivätkä toistu. Lisenssit, tekijät ja koot
+       * todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Amsterdam Westerkerk Blick vom Turm auf die Prinsengracht 2.jpg',
+          selite: 'Westerkerkin tornista Jordaanin yli: punaisia '
+            + 'tiilikattoja, kapeita porras- ja kellopäätyjä ja '
+            + 'ullakkoikkunoita rivi rivin perään. Oikealla mutkittelee '
+            + 'Prinsengracht puurivien välissä, ja sen rantaan on '
+            + 'kiinnitetty asuntolaivoja ja veneitä.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'KeizersgrachtReguliersgrachtAmsterdam.jpg',
+          selite: 'Sininen hetki kanaalien kulmassa: kahden sillan '
+            + 'tiilikaaret on reunustettu pienillä lampuilla, ja tyyni '
+            + 'musta vesi kahdentaa jokaisen kaaren täydeksi ympyräksi. '
+            + 'Takana seisoo rivi kanaalitaloja porraspäätyineen, '
+            + 'ikkunoissa palaa valo.',
+          lahde: 'Massimo Catarinella, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Aerial photograph of Amsterdam Central Station and the surrounding area.jpg',
+          selite: 'Ilmakuva ytimestä: keskellä ovat keskusaseman pitkät '
+            + 'lasikattoiset laiturihallit omalla tekosaarellaan, ja '
+            + 'niistä leviää raiteiden viuhka. Yläreunassa aukeaa IJ-vesi '
+            + 'lauttoineen, alaosassa alkaa vanhankaupungin tiivis '
+            + 'ruudukko kanavineen.',
+          lahde: 'RubenVanKuik, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'taide',
@@ -5834,6 +5911,44 @@ export const KULTTUURI_KATEGORIAT = {
               lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
             },
           ],
+        },
+      ],
+          /*
+       * AVAUSKUVAT (18.8.2026): etusivun iso kuvapaikka selaa kolmea
+       * yleisnäkymää. Rooma katsottuna kolmelta etäisyydeltä: ylhäältä
+       * Castel Sant'Angelon katolta koko ydin kupoleina, vesirajasta
+       * Tiberin sillalta ja katutasolta yhdeltä aukiolta. Lisenssit,
+       * tekijät ja koot todennettu Commonsin API:sta, kuvat katsottu
+       * silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: "Roma da Castel Sant'Angelo.jpg",
+          selite: 'Vanhankaupungin katot aamun autereessa: vasemmalla '
+            + 'erottuu Pantheonin matala kupoli, keskellä Vittorianon '
+            + 'valkoinen marmorijulkisivu nelivaljakkoineen ja oikealla '
+            + 'kaksi barokkikirkon kupolia. Horisontissa Rooman '
+            + 'ympärysvuoret nousevat päällekkäisinä siluetteina.',
+          lahde: 'Stefano Vigorelli, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Rome (IT), Ponte Palatino -- 2013 -- 3482.jpg',
+          selite: 'Tiber virtaa vihertävänä Ponte Palatinon ali: kolme '
+            + 'järeää harkkokivipilaria kannattaa matalaa siltakantta, '
+            + 'jonka kaide on valkoista valurautaristikkoa. '
+            + 'Vastarannalla ovat okranväriset talot, pinjat ja tiilinen '
+            + 'keskiaikainen kellotorni.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Piazza Navona 1.jpg',
+          selite: 'Piazza Navona keskipäivällä: etualalla on Mauri-'
+            + 'suihkulähteen matala allas, aukion keskellä nousee '
+            + 'Neljän virran suihkulähteen obeliski, ja vasemmalla '
+            + 'kaartuu Sant’Agnese in Agonen barokkijulkisivu. Aukio on '
+            + 'soikea, koska se seuraa allaan olevan antiikin stadionin '
+            + 'muotoa.',
+          lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
