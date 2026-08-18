@@ -1778,6 +1778,9 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   border-radius: 6px;
   background: transparent;
   box-shadow: none;
+  /* Kosketuslaitteen oma napautusvälähdys pois: nuolialue on kolmannes
+     kuvasta, joten välähdys näkyisi laajana laattana kuvan päällä. */
+  -webkit-tap-highlight-color: transparent;
   color: rgba(255, 250, 240, 0.98);
   text-shadow:
     0 0 2px rgba(20, 14, 6, 0.95),
@@ -1788,6 +1791,40 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   cursor: pointer;
   padding: 0;
   margin: 0;
+}
+
+/*
+ * TAUSTA ON LÄPINÄKYVÄ MYÖS TILOISSA (omistajan kuvakaappaus 18.8.2026
+ * iPadilla, Pariisin lehden kansikuva: kuvan oikea kolmannes vaalean
+ * harson peitossa, harson vasen reuna terävä pystyviiva).
+ *
+ * MITATTU JUURISYY on erottelutarkkuus, ei uusi maali. Dialogin yleinen
+ * nappisääntö `.dialog button:hover:not(:disabled)` maalaa taustaksi
+ * rgba(255, 255, 255, 0.6), ja sen tarkkuus on (0,3,1) — KORKEAMPI kuin
+ * perussäännön `.dialog button.arrival-kuva-nuoli` (0,2,1). Ennen v842
+ * nuolella oli omat `…nuoli.seuraava:hover`-säännöt (0,4,1), joiden
+ * tumma liukuväri voitti tuon vaalean taustan; kun liukuvärit poistettiin,
+ * nuolen hover-tausta putosi dialogin yleissäännölle. Mitattuna
+ * iPad-emuloinnissa (834x1112, Pariisin kansikaruselli) napautuksen
+ * jälkeen `.arrival-kuva-nuoli.seuraava`:n laskettu backgroundColor oli
+ * rgba(255, 255, 255, 0.6), leveys 213/666 px (= 32 %) ja korkeus koko
+ * kuvan 430 px — juuri omistajan näkemä harso. iPadilla hover jää
+ * napautuksen jälkeen päälle, joten harso oli pysyvä.
+ *
+ * Korjaus on yksi tarkkuudeltaan riittävä sääntö, joka pitää taustan
+ * läpinäkyvänä KAIKISSA tiloissa. `:not(:disabled)` ei ole tässä ehto
+ * vaan PAINO: sen kanssa valitsin on (0,4,1) ja voittaa yleissäännön
+ * (0,3,1) riippumatta siitä, kummassa kohtaa tiedostoa se on. Ilman
+ * sitä tarkkuudet olisivat tasan, ja tiedostossa myöhemmin tuleva
+ * yleissääntö voittaisi — se mitattiin ensimmäisessä korjausyrityksessä.
+ * Osuma-alue, ele ja glyyfin halo säilyvät ennallaan — vain maali
+ * pysyy poissa.
+ */
+.dialog button.arrival-kuva-nuoli:hover:not(:disabled),
+.dialog button.arrival-kuva-nuoli:focus:not(:disabled),
+.dialog button.arrival-kuva-nuoli:focus-visible:not(:disabled),
+.dialog button.arrival-kuva-nuoli:active:not(:disabled) {
+  background: transparent;
 }
 
 /* Hiiren alla vain merkki kirkastuu ja sen halo tiivistyy — tausta
