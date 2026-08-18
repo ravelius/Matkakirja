@@ -80,7 +80,17 @@ const TYYLI = (aihe) => `Vintage adventure book illustration of ${aihe}, `
   + 'surface — no torn or curled paper edges, no paper outline, no '
   + 'drop shadow, no white surround, and no rectangular painted panel. '
   + 'The painting itself dissolves softly into the bare parchment on '
-  + 'every side, with no hard edge anywhere.';
+  + 'every side, with no hard edge anywhere. '
+  /*
+   * Uusinnan lisä (omistaja 18.8.2026: "ei ihan niin ilmiselvästi näy
+   * ... mitä ne tekevät"): kuva näkyy laukussa alle sadan pikselin
+   * ympyränä, joten sen on luettava KUVAKKEENA — yksi iso aihe,
+   * paksut muodot, vahva kontrasti, ei pikkuruista sälää.
+   */
+  + 'This image is used as a SMALL GAME ICON, so it must read clearly '
+  + 'even at thumbnail size: one single bold motif filling the frame, '
+  + 'large simple shapes, strong color contrast between the motif and '
+  + 'the parchment, and no fine detail that would vanish when small.';
 
 /*
  * Yhteinen alku niille varusteille, jotka ovat oikeasti linssejä.
@@ -98,8 +108,15 @@ const KARTTA = 'a plain unlabeled old map of coastlines drawn in pale '
   + 'thinning out and fading away toward the edges — the map is not a '
   + 'sheet of paper and has no edge, outline, straight boundary or '
   + 'corner of its own anywhere';
-const LASI = 'a round brass-rimmed magnifying glass with a turned '
-  + `wooden handle, lying on ${KARTTA}`;
+/*
+ * Uusinnassa lasi kasvoi: ensimmäisen sarjan lasit jäivät pieniksi ja
+ * lasin sisältö — se ainoa asia, joka erottaa varusteet toisistaan —
+ * hukkui laukun pikkukuvassa. Nyt lasi täyttää valtaosan ruudusta ja
+ * varsi jää lyhyeksi kulmaan.
+ */
+const LASI = 'a LARGE round brass-rimmed magnifying glass whose round '
+  + 'glass fills most of the picture, with only a short turned wooden '
+  + `handle reaching toward one corner, lying on ${KARTTA}`;
 
 const KUVAT = [
   /*
