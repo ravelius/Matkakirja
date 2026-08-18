@@ -9046,6 +9046,20 @@ button.lukija-nappi.lukee,
   from { transform: scaleY(0); }
 }
 
+/*
+ * VAIHTELUVYÖHYKE (omistajan toive 18.8.2026): kuukauden tyypillinen
+ * ylin ja alin päivälämpö yhtenä nauhana keskilämpökäyrän takana.
+ * Sävy on sama ruskea kuin käyrässä ja kultaliu'ussa, vain hyvin
+ * ohuena — kaista on pergamentin varjo, ei uusi väri. Se ilmestyy
+ * ennen käyrän piirtoa, jotta viiva näyttää nousevan omalta
+ * alustaltaan eikä tyhjästä.
+ */
+.vuosisaa .saa-kaista {
+  fill: rgba(164, 105, 28, 0.13);
+  opacity: 0;
+  animation: saa-ilmesty 800ms ease-out 200ms forwards;
+}
+
 /* Haalea kultaliuku käyrän alla (liukuväri SVG:n defsissä). */
 .vuosisaa .saa-alue {
   fill: url(#vuosisaa-liuku);
@@ -9104,6 +9118,7 @@ button.lukija-nappi.lukee,
 
 @media (prefers-reduced-motion: reduce) {
   .vuosisaa .saa-palkki,
+  .vuosisaa .saa-kaista,
   .vuosisaa .saa-alue,
   .vuosisaa .saa-viiva,
   .vuosisaa .saa-piste,
@@ -9111,6 +9126,7 @@ button.lukija-nappi.lukee,
 
   .vuosisaa .saa-viiva { stroke-dashoffset: 0; }
 
+  .vuosisaa .saa-kaista,
   .vuosisaa .saa-alue,
   .vuosisaa .saa-piste,
   .vuosisaa .saa-arvo { opacity: 1; }

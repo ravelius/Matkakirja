@@ -38,7 +38,7 @@ import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
 import {
-  haeSaaTanaan, kuukausiSsa, piirraVuosiSaa, saaKuvaus, SAA_IKONIT,
+  haeSaaTanaan, kuukausiSsa, piirraVuosiSaa, saaKuvaus, vuosiSaaSelite, SAA_IKONIT,
 } from './saa.js';
 import { ARTIKKELIT, KULTTUURIT } from './sisaltotaulut.js';
 import { sfx } from './sound.js';
@@ -1598,8 +1598,7 @@ export function naytaVuosiSaa(ui) {
   if (tiedot.luonnehdinta) {
     kortti.appendChild(html('p', 'vuosisaa-luonnehdinta', tiedot.luonnehdinta));
   }
-  kortti.appendChild(html('p', 'kuvalahde',
-    'Käyrä keskilämpö °C · palkit sademäärä mm · Open-Meteo (ERA5), 1991–2020'));
+  kortti.appendChild(html('p', 'kuvalahde', vuosiSaaSelite(tiedot)));
   kortti.addEventListener('click', () => ui.suljeKulttuuriKuva());
   ui.arrivalDialog.appendChild(kortti);
   ui.lehtitila.kulttuuriKuvaEl = kortti;

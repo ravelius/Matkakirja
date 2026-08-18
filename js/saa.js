@@ -96,6 +96,53 @@ export async function haeSaaTanaan(lat, lon) {
 }
 
 /**
+ * Kelpaako vaihteluvyöhyke piirrettäväksi?
+ *
+ * Kaista on VALINNAINEN: paketissa voi olla kaupunki, jolta ylin/alin
+ * puuttuu, ja silloin graafi piirtyy täsmälleen kuten ennenkin. Siksi
+ * tässä ei luoteta siihen, että rivi on olemassa — kaksitoista
+ * äärellistä lukua kummassakin, eikä ylin saa jäädä alimman alle.
+ */
+function kelpaaKaista(ylin, alin) {
+  if (!Array.isArray(ylin) || !Array.isArray(alin)) return false;
+  if (ylin.length !== 12 || alin.length !== 12) return false;
+  return ylin.every((v, i) => Number.isFinite(v) && Number.isFinite(alin[i]) && v >= alin[i]);
+}
+
+/**
+ * Graafin lähderivi. Kaistallinen ja kaistaton kortti selitetään eri
+ * lauseella, ja koska sama rivi näkyy sekä lehdessä (naytaVuosiSaa)
+ * että matkailijan oppaassa (avaaSaagraafi), se asuu täällä yhtenä
+ * totuutena eikä kahtena kopiona.
+ */
+export function vuosiSaaSelite(tiedot) {
+  const kaista = kelpaaKaista(tiedot?.ylin, tiedot?.alin);
+  return kaista
+    ? 'Käyrä keskilämpö, kaista tyypillinen vaihteluväli °C · palkit sademäärä mm '
+      + '· Open-Meteo (ERA5), 1991–2020'
+    : 'Käyrä keskilämpö °C · palkit sademäärä mm · Open-Meteo (ERA5), 1991–2020';
+}
+
+/**
+ * Catmull–Rom-pisteistä pehmeä bezier-polku. Sama kaari kulkee sekä
+ * keskilämpökäyrässä että vaihteluvyöhykkeen reunoissa, joten kaista
+ * ja käyrä kaartuvat samalla kädellä eivätkä eri tavoin.
+ */
+function pehmeaSaakayra(pts) {
+  let polku = `M ${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+  for (let i = 0; i < pts.length - 1; i += 1) {
+    const p0 = pts[Math.max(0, i - 1)];
+    const p1 = pts[i];
+    const p2 = pts[i + 1];
+    const p3 = pts[Math.min(pts.length - 1, i + 2)];
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    polku += ` C ${c1[0].toFixed(1)} ${c1[1].toFixed(1)}, ${c2[0].toFixed(1)} ${c2[1].toFixed(1)}, ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+  }
+  return polku;
+}
+
+/**
  * Koko vuoden graafi: sadepalkit (sateensininen) ja keskilämpökäyrä
  * (kulta, pehmeästi kaartuva) päällekkäin. Asteikot molemmin puolin,
  * kuukausien alkukirjaimet alhaalla. Mitoitus on kiinteä viewBox —
@@ -108,16 +155,26 @@ export async function haeSaaTanaan(lat, lon) {
  * korostuu haalealla kaistalla ja lihavoidulla kirjaimella — ja
  * avautuessaan palkit kasvavat ja käyrä piirtyy (CSS-animaatiot,
  * liikeherkkyys sammuttaa ne tyylin puolella).
+ *
+ * VAIHTELUVYÖHYKE (omistajan toive 18.8.2026): keskilämpö yksin
+ * kertoo vain puolet. Kuukauden tyypillinen ylin ja alin päivälämpö
+ * piirtyvät käyrän taakse samansävyisenä läpikuultavana kaistana,
+ * jolloin näkee kerralla myös sen, onko vuorokausi tasainen (Dublin)
+ * vai repivä (Bagdad) — ja missä kuussa mennään pakkasen puolelle.
+ * Kaista on valinnainen: ilman ylin/alin-rivejä graafi on ennallaan.
  */
-export function piirraVuosiSaa({ keskilampo, sade }) {
+export function piirraVuosiSaa({ keskilampo, sade, ylin, alin }) {
   const NS = 'http://www.w3.org/2000/svg';
   const L = 300; const K = 176;
   const vasen = 30; const oikea = 268; const yla = 20; const ala = 146;
+  const kaista = kelpaaKaista(ylin, alin);
   const svg = document.createElementNS(NS, 'svg');
   svg.setAttribute('viewBox', `0 0 ${L} ${K}`);
   svg.setAttribute('class', 'vuosisaa');
   svg.setAttribute('role', 'img');
-  svg.setAttribute('aria-label', 'Keskilämpötila ja sademäärä kuukausittain');
+  svg.setAttribute('aria-label', kaista
+    ? 'Keskilämpötila, tyypillinen vaihteluväli ja sademäärä kuukausittain'
+    : 'Keskilämpötila ja sademäärä kuukausittain');
   const el = (nimi, attrs, teksti = null) => {
     const e = document.createElementNS(NS, nimi);
     for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
@@ -126,9 +183,15 @@ export function piirraVuosiSaa({ keskilampo, sade }) {
     return e;
   };
 
-  // Asteikot: lämpö pyöristetään viiden, sade viidenkymmenen tarkkuuteen.
-  const lampoYla = Math.max(10, Math.ceil(Math.max(...keskilampo) / 5) * 5);
-  const lampoAla = Math.min(0, Math.floor(Math.min(...keskilampo) / 5) * 5);
+  /*
+   * Asteikot: lämpö pyöristetään viiden, sade viidenkymmenen
+   * tarkkuuteen. Kaista otetaan mukaan rajoihin — muuten Bagdadin
+   * ylin karkaisi kuvan yläreunan yli ja Jakutskin alin sen alle.
+   * Ilman kaistaa rajat ovat täsmälleen samat kuin ennen.
+   */
+  const lampoLuvut = kaista ? [...keskilampo, ...ylin, ...alin] : keskilampo;
+  const lampoYla = Math.max(10, Math.ceil(Math.max(...lampoLuvut) / 5) * 5);
+  const lampoAla = Math.min(0, Math.floor(Math.min(...lampoLuvut) / 5) * 5);
   const sadeYla = Math.max(50, Math.ceil(Math.max(...sade) / 50) * 50);
   const lampoY = (aste) => ala - ((aste - lampoAla) / (lampoYla - lampoAla)) * (ala - yla);
   const sadeY = (mm) => ala - (mm / sadeYla) * (ala - yla);
@@ -179,8 +242,32 @@ export function piirraVuosiSaa({ keskilampo, sade }) {
     palkki.style.animationDelay = `${i * 45}ms`;
   });
 
-  // Apuviivat ja lämpöasteikko vasemmalle.
-  for (let aste = lampoAla; aste <= lampoYla; aste += 10) {
+  /*
+   * VAIHTELUVYÖHYKE palkkien päälle mutta käyrän alle. Palkkien alle
+   * jätettynä kaista katkeaisi joka sateisen kuukauden kohdalta;
+   * näin se pysyy yhtenäisenä nauhana ja jättää palkit silti
+   * luettaviksi, koska sävy on hyvin läpikuultava. Sama ruskea kuin
+   * käyrässä ja kultaliu'ussa — kaista ei tuo kuvaan uutta väriä
+   * vaan saman musteen ohuemman kerroksen.
+   */
+  if (kaista) {
+    const ylaReuna = ylin.map((aste, i) => [keskiX(i), lampoY(aste)]);
+    const alaReuna = alin.map((aste, i) => [keskiX(i), lampoY(aste)]).reverse();
+    // pehmeaSaakayra aloittaa M-käskyllä; alareuna liitetään yläreunan
+    // päähän L-käskynä, jolloin renkaasta tulee yksi suljettu muoto.
+    el('path', {
+      class: 'saa-kaista',
+      d: `${pehmeaSaakayra(ylaReuna)} L ${pehmeaSaakayra(alaReuna).slice(2)} Z`,
+    });
+  }
+
+  /*
+   * Apuviivat ja lämpöasteikko vasemmalle. Askellus alkaa
+   * kymmenellä jaollisesta luvusta eikä asteikon alareunasta, jotta
+   * nollaviiva on aina mukana silloin kun kuva ylittää nollan —
+   * pakkasrajan pitää näkyä Jakutskin ja Lapin graafissa.
+   */
+  for (let aste = Math.ceil(lampoAla / 10) * 10; aste <= lampoYla; aste += 10) {
     el('line', {
       class: 'saa-apuviiva', x1: vasen, y1: lampoY(aste), x2: oikea, y2: lampoY(aste),
     });
@@ -200,16 +287,7 @@ export function piirraVuosiSaa({ keskilampo, sade }) {
    * piirtoanimaatiota.
    */
   const pts = keskilampo.map((aste, i) => [keskiX(i), lampoY(aste)]);
-  let polku = `M ${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
-  for (let i = 0; i < pts.length - 1; i += 1) {
-    const p0 = pts[Math.max(0, i - 1)];
-    const p1 = pts[i];
-    const p2 = pts[i + 1];
-    const p3 = pts[Math.min(pts.length - 1, i + 2)];
-    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
-    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
-    polku += ` C ${c1[0].toFixed(1)} ${c1[1].toFixed(1)}, ${c2[0].toFixed(1)} ${c2[1].toFixed(1)}, ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
-  }
+  const polku = pehmeaSaakayra(pts);
   el('path', {
     class: 'saa-alue',
     d: `${polku} L ${pts[11][0].toFixed(1)} ${ala} L ${pts[0][0].toFixed(1)} ${ala} Z`,
