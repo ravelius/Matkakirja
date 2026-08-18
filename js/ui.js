@@ -1813,12 +1813,44 @@ export class UI {
     };
     document.addEventListener('visibilitychange', this.paluuVahti);
     window.addEventListener('pageshow', this.paluuVahti);
+    /*
+     * PEITON POISTUMINEN JOHTAA GEOMETRIAN UUDELLEEN (18.8.2026,
+     * saman perheen toinen kierros — omistajan kuvakaappaus v884:stä:
+     * vika toistui KESKEN PELIN ilman taustapaluuta).
+     *
+     * Modaalin (lehti, laukku, tapahtumaikkuna) ollessa auki kartta
+     * on top layer -kerroksen alla, ja WKWebView voi sinä aikana
+     * muuttaa asettelua toimittamatta yhtään resize-tapahtumaa —
+     * sama mekanismi, jonka taustapaluu jo tunnisti. Paneelin
+     * ResizeObserver (mount) hoitaa moottorit, jotka tapahtumansa
+     * toimittavat; tämä hoitaa paluut, joista tapahtumaa ei tule.
+     *
+     * Dialogin close-tapahtuma ei kupli mutta kulkee kaappausvaiheen
+     * läpi, joten yksi dokumenttitason kuuntelija kattaa kaikki
+     * dialogit — myös tulevat — eikä sovitusta voi unohtaa uudesta
+     * ikkunasta. Sovitus on sama idempotentti uudelleenjohto kuin
+     * taustapaluussa: ei erovertailua, turha ajo on halpa (pienen
+     * popupin sulku ajaa saman ketjun eikä se haittaa — pan säilyy,
+     * kun paneelin koko ei ole muuttunut).
+     */
+    this.peiteVahti = (e) => {
+      if (this.dead || e.target?.tagName !== 'DIALOG') return;
+      this.sovitaTaustapaluu();
+    };
+    document.addEventListener('close', this.peiteVahti, true);
   }
 
-  /** Johda näkyvä geometria uudelleen nykymitoista (ks. paluuVahti). */
+  /**
+   * Johda näkyvä geometria uudelleen nykymitoista (ks. paluuVahti ja
+   * peiteVahti — sama sovitus ajaa taustapaluun ja peiton poistumisen).
+   */
   sovitaTaustapaluu() {
     const sovita = () => {
       if (this.dead || document.hidden) return;
+      // Kesken jäänyt nipistys hylätään ennen sovitusta: sen
+      // välivaiheen muunnos (scale + siirto) ei saa jäädä svg:hen
+      // (ks. kartta.js hylkaaNipistys; 18.8.2026, v884:n kaappaus).
+      this.kartta.hylkaaNipistys?.();
       // Pakotettu asettelun luku + viewport-metan uudelleenkirjoitus:
       // sama herätyspari kuin elvytaNakymassa — WKWebView pitää vanhan
       // mitan voimassa, kunnes joku sitä kysyy.
@@ -2118,8 +2150,16 @@ export class UI {
       window.removeEventListener('pageshow', this.paluuVahti);
       this.paluuVahti = null;
     }
+    // Peitevahti (dialogien close) on niin ikään dokumentin kuuntelija.
+    if (this.peiteVahti) {
+      document.removeEventListener('close', this.peiteVahti, true);
+      this.peiteVahti = null;
+    }
     clearTimeout(this.paluuAjastin);
     clearTimeout(this.paluuJalkiajastin);
+    // Nipistyksen oma jumivahti (kartta.js ajastaNipistysVahti) ei saa
+    // laueta kuolleessa pelissä.
+    clearTimeout(this.nipistysVahtiAjastin);
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
     clearTimeout(this.lehtitila.lehtiMittaAjastin);
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
@@ -2551,6 +2591,15 @@ export class UI {
      */
     if ((this.osoitinKartalla || this.kartanRaahaus)
         && performance.now() - (this.kartanEleHetki ?? 0) > TARKKUUS_JUMI_MS) {
+      /*
+       * Jumiin jäänyt NIPISTYS puretaan samalla (18.8.2026, v884:n
+       * kuvakaappaus): pelkkä lippujen lasku ei riitä, koska kesken
+       * jääneen nipistyksen scale-muunnos jää svg:hen ja panorointi
+       * nipistystilan taakse — kartta näyttää pienennetyltä ja
+       * siirtyneeltä lopun istuntoa. Hylkäys palauttaa eleen
+       * edeltävän geometrian (ks. kartta.js hylkaaNipistys).
+       */
+      this.kartta?.hylkaaNipistys?.();
       this.osoitinKartalla = false;
       if (this.kartanRaahaus) {
         this.kartanRaahaus = false;

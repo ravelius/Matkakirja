@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 891, teksti: 'Kartta ei jää pieneksi: nipistysjumi ja lehden sulku' },
   { v: 890, teksti: 'Pöllön kysymykset yhteen vierityspintaan; vanhat pois' },
   { v: 889, teksti: 'Tietäjätasot vaativat nyt paljon enemmän pelaamista' },
   { v: 888, teksti: 'Pöllö korvaa 1. aarteen; aarretekstit lyhyiksi; kertoja pois' },
