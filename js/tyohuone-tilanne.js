@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v884 — kaksi hiontaa: 1) pöllön valmiskysymysten väkänen on kysymysten ALLA (kärki ylös), jakoviiva pois, ja piilotetut kysymykset löytyvät vierittämällä ylös (tärkeimmät alimpana); 2) palautelomakkeen pohjalla on aina näkyvä "Olen jo pro-tuottaja — kirjaudu" -väkänen (sähköposti+koodi), ja hakurasti kulkee ehdotuksen mukana ([Pro-hakemus]-merkintä; vaatii sähköpostin)',
   'v883 — palautelappu: kortti keskitetty ruudulle (istui ennen dialogin vasemmassa reunassa) ja pro-rasti i-nappeineen on nyt ENNEN Lähetä ehdotus -nappia',
   'v882 — laukun tietäjärivi: vasemmalla avatar + tasonimike (esim. Maailmanmatkaaja) ja i heti sen perässä, oikeassa reunassa vain pisteet ("210 tp") — Tietäjä-sana pois',
   'v881 — pöllön valmiskysymykset ja ehdota-nappi: avaa pöllö Firenzessä (laatta tai lehti) — syöterivin yllä 2 valmista kysymystä + väkänen (väkänen/vieritys näyttää kaikki 5), napautus kysyy ja sen jälkeen palataan normaaleihin jatkokysymyksiin; pilottikaupungit Firenze, Tampere, Kairo, Tokio, Pariisi, Helsinki (muilla alue ei näy); paneelin oikeassa yläkulmassa pieni "Ehdota sisältöä" -nappi, joka avaa saman lomakkeen kuin hampurilainen — myös lehden päältä',

@@ -108,7 +108,7 @@ import {
   POLLO_AARRE, polloAnkkuri, polloOnnittelu, polloPaivitaNakyvyys, polloSulje, polloVihje,
   polloVihjePois,
 } from './pollo.js';
-import { ajastaEhdotusKupla, ehdotusOsio, proOsio } from './ehdotukset.js';
+import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
 import { taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import {
@@ -8439,15 +8439,15 @@ export class UI {
   lisaaEhdotusOsio(lohko, tilanne = '') {
     const osio = ehdotusOsio(this.ehdotusSivu(tilanne));
     if (osio) lohko.appendChild(osio);
-    // PRO-SISÄLLÖNTUOTTAJAT: rasti ENNEN Lähetä ehdotus -nappia
-    // (omistajan tarkennus 18.8.2026) — kutsuttu ammattilainen
-    // kirjautuu koodillaan ja rakentaa oman tekijäsivunsa. Rasti on
-    // kiinni eikä näy sille, joka ei etsi.
-    const pro = proOsio();
-    if (!pro) return;
+    // PRO-SISÄLLÖNTUOTTAJAT kahdessa osassa (omistajan tarkennukset
+    // 18.8.2026): HAKURASTI i-selitteineen ennen Lähetä ehdotus
+    // -nappia (hakemus kulkee ehdotuksen mukana), ja KIRJAUTUMINEN
+    // lomakkeen pohjalla aina näkyvän väkäsen takana.
+    const rasti = proHakuRasti();
     const laheta = osio?.querySelector('.periaate-laheta');
-    if (laheta) laheta.before(pro);
-    else lohko.appendChild(pro);
+    if (rasti && laheta) laheta.before(rasti);
+    const pro = proOsio();
+    if (pro) lohko.appendChild(pro);
   }
 
   /**

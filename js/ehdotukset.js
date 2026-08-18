@@ -462,6 +462,15 @@ export function ehdotusOsio(sivu = '') {
       teksti.focus();
       return;
     }
+    // Pro-hakurasti (proHakuRasti) liitetään tähän lomakkeeseen
+    // js/ui.js:ssä; hakemus kulkee ehdotuksen tekstin etuliitteenä,
+    // ja siihen tarvitaan sähköposti, jotta hakijalle voi vastata.
+    const proHaku = lohko.querySelector('.pro-rasti')?.checked ?? false;
+    if (proHaku && !sahkoposti.value.trim()) {
+      huomio.textContent = 'Jätä sähköpostisi, jotta pro-hakemukseesi voi vastata.';
+      sahkoposti.focus();
+      return;
+    }
     if (valitut.length && !lisenssiRasti.checked) {
       huomio.textContent = 'Vahvista vielä, että kuvan saa julkaista.';
       return;
@@ -470,7 +479,7 @@ export function ehdotusOsio(sivu = '') {
     huomio.textContent = 'Lähetetään…';
     try {
       await lahetaEhdotus({
-        teksti: teksti.value.trim(),
+        teksti: (proHaku ? '[Pro-hakemus] ' : '') + teksti.value.trim(),
         sivu,
         tarkenne: tarkenne.value.trim(),
         nimimerkki: nimimerkki.value.trim(),
@@ -720,18 +729,18 @@ function proNakyma(tunnus, tiedot) {
  *
  * @returns {HTMLElement|null} osio tai null, jos kanavaa ei ole
  */
-export function proOsio() {
+/**
+ * "Haluan hakea pro-sisällöntuottajaksi" -rasti + i-selite.
+ *
+ * Rasti asuu ehdotuslomakkeessa ENNEN lähetysnappia (omistaja
+ * 18.8.2026), ja se kulkee ehdotuksen mukana: lähetys merkitsee
+ * tekstin pro-hakemukseksi ja vaatii sähköpostin, jotta omistaja voi
+ * vastata hakijalle. i avaa minipopup-selitteen siitä, mikä pro on.
+ *
+ * @returns {HTMLElement|null} rivi tai null, jos kanavaa ei ole
+ */
+export function proHakuRasti() {
   if (!ehdotusKaytossa()) return null;
-
-  /*
-   * Vivun tilalla on RASTI + i (omistaja 18.8.2026): "sivulla voisi
-   * olla checkbox 'Haluan hakea pro-sisällöntuottajaksi' ja sen
-   * perässä pieni i joka avaisi pop-up selitteen, mikä pro on".
-   * Rasti paljastaa kirjautumisen; selitysteksti muutti minipopupiin,
-   * jottei lomake kasva ennen kuin pelaaja on kiinnostunut.
-   */
-  const lohko = html('div', 'periaate-ehdotus periaate-pro');
-
   const rivi = html('div', 'pro-rasti-rivi');
   const nimio = html('label', 'pro-rasti-nimio');
   const rasti = html('input');
@@ -756,14 +765,24 @@ export function proOsio() {
     });
   });
   rivi.appendChild(seloste);
-  lohko.appendChild(rivi);
+  return rivi;
+}
 
-  const avattava = html('div', 'pro-avattava');
-  avattava.hidden = true;
-  lohko.appendChild(avattava);
+export function proOsio() {
+  if (!ehdotusKaytossa()) return null;
+
+  /*
+   * Kirjautuminen asuu lomakkeen POHJALLA aina näkyvän väkäsen takana
+   * (omistajan tarkennus 18.8.2026: "alhaalla pitäisi olla koko ajan
+   * näkyvissä se kirjautumisvaihtoehto väkäsen takana") — hakurasti
+   * on eri asia ja eri paikassa (proHakuRasti, ennen lähetysnappia).
+   */
+  const lohko = html('details', 'periaate-ehdotus periaate-pro');
+  lohko.appendChild(html('summary', 'periaate-valiotsikko',
+    'Olen jo pro-tuottaja — kirjaudu'));
 
   const sisus = html('div', 'pro-sisus');
-  avattava.appendChild(sisus);
+  lohko.appendChild(sisus);
 
   const kirjautuminen = html('div', 'pro-kirjautuminen');
   const posti = html('input', 'periaate-kentta');
@@ -817,12 +836,11 @@ export function proOsio() {
     if (!ok) nappi.disabled = false;
   });
 
-  // Muistissa oleva pari avaa näkymän suoraan, kun rasti pannaan
+  // Muistissa oleva pari avaa näkymän suoraan, kun osio avataan
   // ensimmäisen kerran — ei turhaa verkkopyyntöä ennen sitä.
   let kokeiltu = false;
-  rasti.addEventListener('change', () => {
-    avattava.hidden = !rasti.checked;
-    if (!rasti.checked || kokeiltu) return;
+  lohko.addEventListener('toggle', () => {
+    if (!lohko.open || kokeiltu) return;
     kokeiltu = true;
     const muistissa = proTunnus();
     if (muistissa) avaa(muistissa, { hiljaa: true });

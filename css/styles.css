@@ -14428,12 +14428,17 @@ button.pollo-ehdota:hover { border-color: var(--pollo-korostus); }
  * js/pollo.js rajaaValmiit) ja loput saa esiin vierittämällä tai
  * väkäsestä; avattuna katto on remeissä ja ylitys vierii.
  */
+/*
+ * Väkänen on kysymysten ALAPUOLELLA eikä vieressä, eikä alueen yllä
+ * ole jakoviivaa (omistajan tarkennus 18.8.2026). Piilotetut
+ * kysymykset ovat näkyvien yläpuolella, joten väkänen osoittaa ylös.
+ */
 .pollo-valmiit {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: stretch;
   gap: 0.3rem;
   padding: 0.4rem 0.6rem 0.45rem;
-  border-top: 1px solid var(--pollo-viiva);
 }
 
 .pollo-valmiit-lista {
@@ -14459,6 +14464,7 @@ button.pollo-valmiit-lisaa {
   flex: none;
   display: grid;
   place-items: center;
+  margin-inline: auto;
   width: 1.7rem;
   height: 1.7rem;
   min-height: 0;
@@ -14470,7 +14476,12 @@ button.pollo-valmiit-lisaa {
   cursor: pointer;
 }
 
-button.pollo-valmiit-lisaa .viiva-ikoni svg { width: 1.05rem; height: 1.05rem; }
+/* Kätketyt kysymykset ovat yläpuolella → kärki ylös. */
+button.pollo-valmiit-lisaa .viiva-ikoni svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  transform: rotate(180deg);
+}
 button.pollo-valmiit-lisaa:hover { border-color: var(--pollo-korostus); }
 
 a.pollo-tekstilinkki:hover { background: rgba(122, 85, 20, 0.12); }

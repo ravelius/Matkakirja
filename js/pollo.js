@@ -1022,7 +1022,14 @@ class Pollo {
     // tyhjä laatikko olisi pahempi kuin puuttuva.
     if (!kysymykset.length) return this.piilotaValmiit();
     this.valmiitLista.replaceChildren();
-    for (const teksti of kysymykset.slice(0, VALMIITA_ENINTAAN)) {
+    /*
+     * KÄÄNTEINEN JÄRJESTYS (omistaja 18.8.2026: "riittäisi, kun vain
+     * scrollaisi ylöspäin"): piilotetut kysymykset ovat näkyvien
+     * YLÄPUOLELLA, joten lista täytetään lopusta alkuun — kaksi
+     * tärkeintä istuvat alimpana näkyvässä ikkunassa, lähinnä
+     * syöteriviä, ja loput löytyvät vierittämällä ylös.
+     */
+    for (const teksti of kysymykset.slice(0, VALMIITA_ENINTAAN).reverse()) {
       const nappi = polloElementti('button', 'pollo-ehdotus pollo-valmis', teksti);
       nappi.type = 'button';
       // Sama polku kuin kirjoitetulla kysymyksellä.
@@ -1030,7 +1037,6 @@ class Pollo {
       this.valmiitLista.appendChild(nappi);
     }
     this.valmiit.classList.remove('auki');
-    this.valmiitLista.scrollTop = 0;
     this.valmiitNappi.hidden = false;
     this.valmiitNappi.setAttribute('aria-expanded', 'false');
     this.valmiit.hidden = false;
@@ -1039,20 +1045,26 @@ class Pollo {
   }
 
   /**
-   * Suljetun alueen korkeus: täsmälleen kaksi ensimmäistä kysymystä.
+   * Suljetun alueen korkeus: täsmälleen kaksi ALINTA kysymystä
+   * (lista on käännetty — tärkeimmät alimpana, ks. naytaValmiit).
    *
    * Mitta luetaan napeista eikä kirjoiteta remeinä, koska kysymys voi
    * rivittyä kahdelle riville — kiinteä luku näyttäisi silloin
-   * puolikkaan napin. Loput näkyvät vierittämällä tai väkäsestä.
+   * puolikkaan napin. Loput löytyvät vierittämällä ylös tai
+   * väkäsestä; lista vieritetään valmiiksi pohjaan.
    */
   rajaaValmiit() {
     const lista = this.valmiitLista;
     if (!lista?.style) return;
     lista.style.maxHeight = '';
-    const toinen = lista.children?.[1];
-    if (!toinen || typeof toinen.offsetTop !== 'number') return;
-    const raja = toinen.offsetTop + toinen.offsetHeight;
-    if (raja > 0) lista.style.maxHeight = `${raja}px`;
+    const lapset = lista.children ?? [];
+    const toiseksiViimeinen = lapset[lapset.length - 2];
+    if (!toiseksiViimeinen || typeof toiseksiViimeinen.offsetTop !== 'number') return;
+    const raja = lista.scrollHeight - toiseksiViimeinen.offsetTop;
+    if (raja > 0) {
+      lista.style.maxHeight = `${raja}px`;
+      lista.scrollTop = lista.scrollHeight;
+    }
   }
 
   /** Väkäsen napautus: koko lista esiin, väkänen pois. */
