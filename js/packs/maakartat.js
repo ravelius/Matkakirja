@@ -5477,6 +5477,28 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Abra-laiturit', lat: 25.265, lon: 55.2953 },
       { nimi: 'Bastakian kaupunginosa', lat: 25.2639, lon: 55.3 },
       { nimi: 'Al Fahidin linnoitus', lat: 25.2632, lon: 55.2972, wiki: 'Dubain museo' },
+      /*
+       * Neljä lisäkohdetta 18.8.2026 (6 → 10, lehden viimeistely).
+       * Koordinaatit Nominatimista. Kaksi ehdokasta putosi lähdepohjan
+       * takia (Naifin linnoituksesta ei ole Wikipedia-artikkelia, Al
+       * Seefin artikkeli on pääosin kritiikkiä), joten tilalle tulivat
+       * kaksi suukia.
+       *
+       * TEKSTIILISUUKIN PISTE ON SUUKIN LÄNTINEN PÄÄ eikä Nominatimin
+       * rekisteröity POI: POI olisi jäänyt 5,4 prosenttiyksikön päähän
+       * abra-laitureista ja numeroympyrät olisivat menneet päällekkäin.
+       * Länsipää on yhä Ali Bin Abi Talib -kadulla suukin sisällä ja
+       * 8,8 pp päässä lähimmästä naapurista.
+       *
+       * SUURI MOSKEIJA jää 6,1 pp päähän abra-laitureista. Se on
+       * oikeasti noin 150 metriä linnoituksesta, joten pistettä ei voi
+       * siirtää kauemmas rehellisesti — pieni tiheys tällä kohtaa on
+       * karttatosiasia, ei virhe.
+       */
+      { nimi: 'Al Ahmadiyan koulu', lat: 25.2684, lon: 55.2949 },
+      { nimi: 'Maustesuuk', lat: 25.2676, lon: 55.2971 },
+      { nimi: 'Suuri moskeija', lat: 25.2644, lon: 55.2968 },
+      { nimi: 'Tekstiilisuuk', lat: 25.2635, lon: 55.294 },
     ],
   },
 };

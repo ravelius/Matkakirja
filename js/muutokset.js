@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 902, teksti: 'Dubain lehti: 4 uutta kohdetta, opas, avauskuvat' },
   { v: 901, teksti: 'Nähtävyyskuva isoksi puhelimessa; pöllökortti selkeäksi' },
   { v: 900, teksti: 'Istanbulin lehti: 4 uutta kohdetta, opas, avauskuvat' },
   { v: 899, teksti: 'Kartan tilabugi 3: paluun vakiintumisvahti + näppäimistö' },

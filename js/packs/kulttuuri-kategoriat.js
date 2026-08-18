@@ -8143,6 +8143,218 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Saaremees, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+          /*
+       * AVAUSKUVAT (18.8.2026, Dubain lehden viimeistely): etusivun iso
+       * kuvapaikka selaa kolmea yleisnäkymää VANHASTA Dubaista, koska
+       * kohdekartta rajautuu Creekin vanhaankaupunkiin. Pilvenpiirtäjät
+       * jäävät tarkoituksella pois: ne ovat jo kansikuvassa ja
+       * Rakennukset-aihesivulla. Lisenssit, tekijät ja koot todennettu
+       * Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Dubai Creek with Abras by Vincent Eisfeld.jpg',
+          selite: 'Creek vedenpinnan tasolta: kaksi abraa lipuu poikki '
+            + 'lahden, vastarannalla on Bur Dubain matala talorivistö, '
+            + 'ja siitä kohoaa Suuren moskeijan minareetti sekä '
+            + 'oikeammalla kupoli ja toinen minareetti.',
+          lahde: 'Vincent Eisfeld, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Dhows on Dubai Creek (8722991951).jpg',
+          selite: 'Iltapäivän valo lahdella: etualalla dhow-veneitä '
+            + 'laiturissa pressukatoksineen ja keltainen pelastusrengas, '
+            + 'vastarannalla vanhan Dubain talot ja minareetti.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Al Fahidi Historical Neighbourhood, Dubai.jpg',
+          selite: 'Vanhankaupungin kattojen yllä: kaksi tuulitornia '
+            + 'hiekanvärisinä utuisessa iltavalossa, ja niiden ylitse '
+            + 'nousee juuri lähtenyt matkustajakone.',
+          lahde: 'Delta.jpg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bastakia Windtower.JPG',
+          selite: 'Tuulitorni Al Fahidin korttelissa: nelisivuinen '
+            + 'torni nousee korallikivimuurin päältä, ja sen jokainen '
+            + 'sivu on auki tuulelle.',
+          lahde: 'Jpatokal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Dubaista puhutaan tornien kaupunkina, mutta '
+          + 'matkailijan vanha Dubai on kapea suolavesilahti ja sen '
+          + 'kaksi rantaa. Deirassa ovat suukit, Bur Dubaissa '
+          + 'tuulitornikorttelit ja linnoitus, ja väliä kulkee puuvene, '
+          + 'jonka lippu maksaa yhden dirhamin. Metro vie tornien '
+          + 'juurelle, mutta vanhassa kaupungissa liikutaan jalan ja '
+          + 'vedessä. Kesäpäivä on liian '
+          + 'kuuma kävelyyn — kaupunki kannattaa nähdä talvella tai '
+          + 'illalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Dubai',
+          taitto: 'opas',
+          teksti: 'Matkailijan Dubai on lahti, kaksi rantaa ja kolme '
+            + 'suukia.',
+          nosto: 'Yhden dirhamin lippu vie puuveneellä vuosisadan '
+            + 'taakse.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Dubain metro avattiin 9. syyskuuta 2009, ja se '
+                + 'oli koko Arabian niemimaan ensimmäinen raskasraidejuna. '
+                + 'Linjoja on kaksi ja asemia 55, ja rataa on kertynyt '
+                + 'lähes 90 kilometriä. Matkailijalle tärkeä on vihreä '
+                + 'linja: se kulkee vanhan Dubain läpi ja pysähtyy '
+                + 'museon, kultasuukin ja maustesuukin kohdalla. Sen '
+                + 'asemat on rakennettu mukailemaan ympäröivää vanhaa '
+                + 'arkkitehtuuria, ja seinillä on 1960-luvun ja '
+                + 'vanhempia valokuvia emiraateista. Lippu ostetaan '
+                + 'Nol-kortille, joka käy metrossa, busseissa, '
+                + 'raitiovaunussa ja vesibusseissa. Vanhaa kaupunkia ei '
+                + 'kuitenkaan nähdä raiteilta vaan vedestä: abra eli '
+                + 'perinteinen puuvene ylittää lahden muutaman minuutin '
+                + 'välein, ja matka maksaa yhden dirhamin, joka '
+                + 'ojennetaan kuljettajalle veneessä. Abrat olivat '
+                + 'Dubain ensimmäinen julkinen liikenne, ja ne kulkevat '
+                + 'yhä samaa reittiä.',
+              kuva: [
+                {
+                  tiedosto: 'Dubai Metro Al Ras station.JPG',
+                  selite: 'Al Rasin metroaseman lippuhalli aivan '
+                    + 'kultasuukin vieressä: seinäpaneeleissa toistuvat '
+                    + 'kaari- ja ristikkoaiheet, ja lippuporttien '
+                    + 'takana on suuri seinäkuva dhow-purjeesta.',
+                  lahde: 'Adbar, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'A boat on the Dubai Creek 20240605.jpg',
+                  selite: 'Abra ponttonilaiturissa: puinen avovene, '
+                    + 'jonka keskellä kulkee penkki litteän '
+                    + 'varjokaton alla, kyljessä rekisterikilpi ja '
+                    + 'katoksessa pelastusrengas.',
+                  lahde: 'Steven Sun, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Lahti, josta kaupunki alkoi',
+              teksti: 'Dubai Creek ei ole joki vaan Persianlahden '
+                + 'suolavesilahti, joka työntyy noin neljätoista '
+                + 'kilometriä sisämaahan. Leveyttä on kahdestasadasta '
+                + 'metristä reiluun kilometriin ja syvyyttä keskimäärin '
+                + 'kuutisen metriä — juuri sopivasti luonnonsatamaksi. '
+                + 'Lahti jakoi kaupungin kahtia: pohjoispuolella Deira, '
+                + 'eteläpuolella Bur Dubai. Bani Yas -heimo asettui '
+                + '1800-luvulla eteläiselle rannalle, ja siitä alkoi '
+                + 'Al Maktoumin suvun valta. Vielä 1900-luvun alussa '
+                + 'tämä oli kaupungin ainoa satama: dhow-purjealukset '
+                + 'tulivat tänne Intiasta ja Itä-Afrikasta asti, '
+                + 'rannalla rakennettiin veneitä, ja helmiretkikunnat '
+                + 'lähtivät samasta vedestä. Kun lahti 1960-luvulla '
+                + 'ruopattiin syvemmäksi, isommat laivat pääsivät '
+                + 'sisään ympäri vuoden — ja Dubaista tuli '
+                + 'jälleenvientisatama. Nykyään lahden kautta kulkee yli '
+                + '13 000 alusta vuodessa.',
+              kuva: {
+                tiedosto: 'Well-laden dhow (3981420270).jpg',
+                selite: 'Täyteen lastattu puinen dhow lahdella: lasti '
+                  + 'on peitetty pressuilla keulasta perään, ja perässä '
+                  + 'kohoaa sinivalkoinen ohjaamo. Takana näkyy Deiran '
+                  + 'rantarivistö.',
+                lahde: 'Peter Dowley from Dubai, United Arab Emirates, '
+                  + 'Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kolme suukia, kaksi rantaa',
+              teksti: 'Suukit ovat vanhan Dubain sydän, ja ne jakautuvat '
+                + 'lahden molemmille puolille. Deiran puolella ovat '
+                + 'kultasuuk, jossa on yli kolmesataa kauppiasta, ja '
+                + 'sen kyljessä maustesuuk, jossa suitsuke, '
+                + 'shishatupakka ja yrtit ovat esillä kujalle asti. '
+                + 'Bur Dubain puolella on tekstiilisuuk, jonka '
+                + 'katetuissa kujissa kaartuu korkea puukaarikäytävä — '
+                + 'se ei ole koriste vaan ilmastointi, sillä kuuma ilma '
+                + 'nousee kaarien raoista ulos ja veto pääsee kujalle. '
+                + 'Rantojen välillä ei kannata etsiä siltaa: abra vie '
+                + 'suukilta suukille muutamassa minuutissa, ja se on '
+                + 'kaupungin halvin risteily. Hinnat eivät ole '
+                + 'kylteissä; valtaosa kaupasta käydään yhä tinkimällä, '
+                + 'myös silloin kun ostaja on matkailija.',
+              kuva: [
+                {
+                  tiedosto: 'Dubai gold market.jpg',
+                  selite: 'Kultasuukin näyteikkuna läheltä: telineillä '
+                    + 'on rivi rivin perään kultarannekkeita, ja '
+                    + 'taustalla riippuu ketjuja.',
+                  lahde: 'Joi, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Colourful spices in Dubai Spice Souk 2018.jpg',
+                  selite: 'Maustesuukin tiski: kekoja kuivattuja '
+                    + 'ruusunnuppuja, minttua, hibiskusta, kamomillaa ja '
+                    + 'saflorin oransseja kukkia vieri vieressä.',
+                  lahde: 'Frodlekis, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Shindagha ja hallitsijan talo',
+              teksti: 'Lahden suulla, Bur Dubain länsikärjessä, on '
+                + 'Al Shindagha. Maktoumin suku asettui juuri tänne '
+                + 'vuonna 1833, koska paikalta pääsi helposti käsiksi '
+                + 'kaupungin silloiseen rikkauteen: helmiin ja '
+                + 'kalastukseen. 1800-luvun puolivälissä Shindaghassa '
+                + 'laskettiin olleen 250 arabitaloa, Bur Dubaissa sata '
+                + 'intialaista kauppahuonetta ja Deirassa 1 600 taloa. '
+                + 'Kaupungin hallitsija Sheikh Saeed bin Maktoum asui '
+                + 'täällä vuodesta 1912 vuoteen 1958, ja hänen talonsa '
+                + 'on kunnostettu museoksi. Se kannattaa kiertää myös '
+                + 'ulkoa: talon nurkissa kohoavat tuulitornit, jotka '
+                + 'ovat aavikon oma ilmastointi. Nykyään korttelin ali '
+                + 'kulkee Al Shindaghan tunneli, pohjoisin yhteys '
+                + 'Deiraan.',
+              kuva: {
+                tiedosto: 'Windtower Dubai.jpg',
+                selite: 'Tuulitornin yläosa lähikuvassa: kaariaukot '
+                  + 'ottavat tuulen sisään joka suunnasta, ja seinien '
+                  + 'läpi työntyvät puiset poikkipuut, jotka toimivat '
+                  + 'rakennustelineinä korjaustöissä.',
+                lahde: 'Thomas Schoch, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Helle määrää päivän',
+              teksti: 'Dubaissa on kaksi vuodenaikaa. Kesä alkaa '
+                + 'huhtikuun viimeisellä viikolla ja päättyy vasta '
+                + 'lokakuun alussa: päivällä on säännöllisesti yli '
+                + '38 astetta ja yölläkin noin 26. Heinä- ja elokuussa '
+                + 'ylin lämpötila on keskimäärin yli 43 astetta, ja '
+                + 'heinäkuussa 2023 mitattiin 50,1 astetta. Nämä kaksi '
+                + 'kuukautta ovat vuoden hankalin aika saapua. '
+                + 'Kosteus nousee kesällä '
+                + 'rannikolla yli yhdeksäänkymmeneen prosenttiin ja '
+                + 'merikin lämpenee 37 asteeseen. Talvi on toinen '
+                + 'kaupunki: tammikuussa päivä on 24–25 astetta ja yö '
+                + 'noin 16. Sadetta tulee vain noin 25 päivänä vuodessa, '
+                + 'lähes kokonaan marras–maaliskuussa lyhyinä kuuroina, '
+                + 'ja helmikuu on sateisin. Vanhan kaupungin kävely '
+                + 'kannattaa siis ajoittaa talveen — tai kesällä '
+                + 'aamuun ja iltaan, niin kuin dubailaiset tekevät.',
+              kuva: {
+                tiedosto: 'Al Bastakiya-Dubai8888.JPG',
+                selite: 'Kapea kuja Al Fahidissa keskipäivällä: korkeat '
+                  + 'savenväriset muurit varjostavat käytävän lähes '
+                  + 'kokonaan, ja kujan päässä kohoaa tuulitorni '
+                  + 'sinistä taivasta vasten.',
+                lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'rakennukset',

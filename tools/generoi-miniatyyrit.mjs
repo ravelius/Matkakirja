@@ -1056,6 +1056,63 @@ const KUVAT = [
     + 'with a red tiled roof at the base, an octagonal tower rising '
     + 'from it with a railed gallery, a dark lead cupola and a very '
     + 'tall thin flagpole at the top', 'halpa'],
+
+  /*
+   * ── Dubai, kymmenen kohdetta (lehden viimeistely 18.8.2026) ──────
+   * VAIN JONOSSA, ei generoitu: piirrokset vaativat API-avaimen, jota
+   * työsessiossa ei ole. Kartalla kohteet näkyvät siihen asti
+   * numeroympyröinä — Dubailla ei ole ollut yhtään miniatyyriä.
+   * Kuvaukset on kirjoitettu nähtävyysjuttujen todennettujen
+   * valokuvien mukaan (js/packs/nahtavyysjutut.js: dubai) —
+   * arkkitehtuurin tosiasioita, ei mielikuvia. Yksi otto per kohde.
+   */
+  ['dubai-kultasuuk', 'a covered market arcade: a long straight lane '
+    + 'roofed with a carved wooden lattice canopy on slender posts, '
+    + 'shopfronts with wide plate-glass windows on both sides, and '
+    + 'ornate hanging lamps along the middle of the roof. NO people'],
+  ['dubai-dhow-satama', 'a working wharf on a creek: two heavy wooden '
+    + 'cargo sailing boats with high curved prows moored side by side '
+    + 'along a stone quay, their decks stacked with crates and bundles '
+    + 'under canvas, and coiled ropes on the quay. NO people'],
+  ['dubai-al-shindagha', 'a low sand-coloured coral-stone house around '
+    + 'a courtyard: flat roofs edged with stepped crenellations, and '
+    + 'four square wind towers rising at the corners, each open on all '
+    + 'four sides with slatted vents near the top'],
+  ['dubai-abra-laiturit', 'a small wooden ferry boat on calm water: an '
+    + 'open low hull with a long bench running down the middle under a '
+    + 'flat shade roof on thin posts, a tiny engine box at the stern, '
+    + 'moored at a simple floating pontoon jetty. NO people', 'halpa'],
+  ['dubai-bastakian-kaupunginosa', 'a narrow alley between plain '
+    + 'sand-coloured plastered houses: blank walls with small carved '
+    + 'wooden doors and shuttered windows, the lane turning out of '
+    + 'sight, and square wind towers with pointed corner finials '
+    + 'rising above the rooftops'],
+  ['dubai-al-fahidin-linnoitus', 'a square desert fort of pale coral '
+    + 'stone: thick battered walls topped with stepped crenellations, '
+    + 'a round tower at one corner and a square tower at another, one '
+    + 'arched gateway in the middle of the near wall and two old '
+    + 'cannons standing in front of it'],
+  ['dubai-al-ahmadiyan-koulu', 'a two-storey traditional Gulf '
+    + 'courtyard building in pale coral stone: an arcade of pointed '
+    + 'arches running along both floors around an open sandy '
+    + 'courtyard, carved plaster panels above the arches, and one '
+    + 'square wind tower rising at the far corner'],
+  ['dubai-suuri-moskeija', 'a large sand-grey mosque with an entrance '
+    + 'facade of five plain columns above a flight of six steps, a '
+    + 'band of Arabic inscription over the columns, a roof crowded '
+    + 'with many small white domes around nine larger ones, and one '
+    + 'very tall slender minaret shaped like a lighthouse standing '
+    + 'beside it'],
+  ['dubai-maustesuuk', 'a narrow market lane under a simple corrugated '
+    + 'shade roof: open sacks of coloured spices, dried herbs and '
+    + 'lumps of pale incense resin standing in rows on both sides, '
+    + 'metal scoops in the sacks and bundles of dried goods hanging '
+    + 'above them. NO people'],
+  ['dubai-tekstiilisuuk', 'a covered market street: a high arcade of '
+    + 'carved wooden arches spanning the lane, daylight falling '
+    + 'through the gaps between them onto the paving, traditional '
+    + 'arabesque lanterns hanging from the arches, and shopfronts '
+    + 'stacked with bolts of folded cloth on both sides. NO people'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
