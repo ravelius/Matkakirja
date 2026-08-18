@@ -507,16 +507,19 @@ menuBtn.addEventListener('click', () => {
  * Valinta sulkee valikon. Kuuntelija on valikossa itsessään, joten
  * nappien omat toiminnot pysyvät siellä missä ne on määritelty.
  *
- * POIKKEUS: varusteet ja äänet ovat säätimiä eivätkä komentoja. Niitä
- * napautetaan usein peräkkäin — linssin vaihto ja kuuntelu, äänitilan
- * kokeilu — ja jos valikko sulkeutuisi joka kerta, se pitäisi avata
- * uudelleen jokaista säätöä varten. Säännöt ja uusi peli sen sijaan
- * vievät pois valikosta, joten ne sulkevat sen.
+ * POIKKEUS: äänet ovat säätimiä eivätkä komentoja. Niitä napautetaan
+ * usein peräkkäin — äänitilan kokeilu — ja jos valikko sulkeutuisi joka
+ * kerta, se pitäisi avata uudelleen jokaista säätöä varten. Uusi peli
+ * ja ehdotuskanava sen sijaan vievät pois valikosta, joten ne sulkevat
+ * sen.
+ *
+ * Varusteet olivat tässä samasta syystä, mutta linssivalitsin muutti
+ * matkalaukkuun 18.8.2026 — se ei ole enää valikossa lainkaan.
  */
 paavalikko.addEventListener('click', (event) => {
   const nappi = event.target.closest('button');
   if (!nappi) return;
-  if (nappi.closest('.linssi-kotelo, .kertoja-kotelo')) return;
+  if (nappi.closest('.kertoja-kotelo')) return;
   suljeValikko();
 });
 

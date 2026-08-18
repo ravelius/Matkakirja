@@ -30,7 +30,7 @@ export const PELIT = [
   { nimi: 'Tietoportti', tila: 'kaytossa',
     kuvaus: 'Vaikea kysymys avaa maan laudan (esim. Helsinki → Suomi) ilmaiseksi.' },
   { nimi: 'Tutkiminen', tila: 'kaytossa',
-    kuvaus: 'Laatattomatkin kaupungit voi tutkia kerran: palkintona tietoa ja kokemuspisteitä.' },
+    kuvaus: 'Laatattomatkin kaupungit voi tutkia kerran: palkintona tietoa ja tietäjäpisteitä.' },
   { nimi: 'Aineistotutkimus', tila: 'ideoitava',
     kuvaus: 'Omistajan idea: pelaaja saa ensin tutkia aineistoa (esim. museon kuvakokoelman poiminta, vanha kartta tai päiväkirjan aukeama) niin kauan kuin haluaa. Kun hän on valmis, alkaa kysymys- tai pulmasarja aineiston pohjalta. Lisämaksusta pääsee kurkkaamaan aineistoa kesken pelin, ja aikaraja on tavallista pidempi.',
     huomiot: 'Sopii museo-API-lähteisiin (Met, Smithsonian) — aineisto voi olla aidosti eri joka kerralla. Palkinnoksi sopisi matkamuisto.' },
@@ -138,7 +138,7 @@ export const VARUSTEET = [
       + 'kunnianosoitus: kaupungit ovat antaneet avaimensa '
       + 'arvovieraille.' },
   { nimi: 'Valokuvauskamera', tila: 'idea',
-    vaikutus: 'Kuva kaupungissa: passiin leima kuvan kanssa ja kokemuspisteitä.',
+    vaikutus: 'Kuva kaupungissa: passiin leima kuvan kanssa ja tietäjäpisteitä.',
     huomiot: 'Kauimpana lautapelin logiikasta: ei auta voittamaan lainkaan, '
       + 'vaan palkitsee uteliaisuudesta. Istuu suoraan siihen, että '
       + 'suurin palkinto on ymmärrys.' },

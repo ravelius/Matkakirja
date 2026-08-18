@@ -5,6 +5,7 @@ import { createTokenPile } from './tokens.js';
 import { packById, sourceList } from './pack.js';
 import { TARINAKAARI, KAARI_LAUDAT } from './packs/tarinakaari.js';
 import { laattamantereet, linssiKaupungista, myonna, tarkistaKynnys } from './linssit/omistus.js';
+import { tietajatasonNousut } from './tietajatasot.js';
 
 export const START_MONEY = 300;
 export const SEA_FARE = 100; // laivamatkan hinta vuorolta
@@ -113,7 +114,7 @@ export function timeOfDayName(hour) {
   return 'yö';
 }
 
-// Kokemuspisteet kertyvät matkasta, eivät onnesta: uusista paikoista,
+// Tietäjäpisteet (koodissa xp) kertyvät matkasta, eivät onnesta: uusista paikoista,
 // uusista laudoista ja vaikeista kysymyksistä.
 export const XP_NEW_CITY = 10;
 export const XP_NEW_BOARD = 50;
@@ -270,6 +271,14 @@ export class Game {
     this.turnCount = 1;
     this.log = [];
     this.events = []; // näytölle animoitavat tapahtumat
+    /*
+     * Tietäjätason nousut odottamassa pöllön onnittelukuplaa
+     * (js/tietajatasot.js). OMA jononsa eikä events-lista, koska
+     * events piirtyy kartan päälle kuplina ja tason onnittelun sanoo
+     * pöllö — ja nimenomaan VASTA kuplien jälkeen, jottei sama
+     * pisteiden lisäys näytä kahta ilmoitusta päällekkäin.
+     */
+    this.tietajaNousut = [];
     // Avaus on pelkkää kerrontaa: sääntöasiat ovat Säännöt-dialogissa eivätkä
     // lokirivejä. Laudan intro-teksti jää pakkoihin muuta käyttöä varten.
     // Vaellus alkaa lähtöpisteen valinnalla, jos sitä ei ole annettu valmiiksi.
@@ -330,7 +339,7 @@ export class Game {
       board: buildBoard(pack.cities, pack.edges, pack.map),
       tokens: this.jaaLaatat(pack, tokenCities, pile),
       revealed: new Map(), // kaupunki -> laattatyyppi
-      visited: new Set(), // kaupungit, joissa on jo käyty (kokemuspisteitä varten)
+      visited: new Set(), // kaupungit, joissa on jo käyty (tietäjäpisteitä varten)
       // Löytyneet unohdetut aarteet: manner -> kaupunki, jossa aarre oli.
       // Jokaisella mantereella on oma aarteensa (omistajan päätös
       // 11.8.2026), joten yksi lippu ei enää riitä.
@@ -551,6 +560,13 @@ export class Game {
     return events;
   }
 
+  /** Poimii tietäjätason nousut pöllön kuplia varten ja tyhjentää jonon. */
+  takeTietajaNousut() {
+    const nousut = this.tietajaNousut ?? [];
+    this.tietajaNousut = [];
+    return nousut;
+  }
+
   say(playerId, text) {
     this.log.unshift({ playerId, text, turn: this.turnCount });
     if (this.log.length > 200) this.log.pop();
@@ -705,19 +721,23 @@ export class Game {
   }
 
   /**
-   * Kokemuspisteet kertyvät matkasta: uusi kaupunki, uusi lauta, oikea
+   * Tietäjäpisteet kertyvät matkasta: uusi kaupunki, uusi lauta, oikea
    * vastaus vaikeaan kysymykseen ja laudan pääaarre. Rahalla niitä ei saa.
+   *
+   * Kenttä on yhä player.xp ja funktio awardXp: pelaajalle näkyvä nimi
+   * vaihtui tietäjäpisteeksi 18.8.2026, koodin sisäiset nimet eivät.
    */
   awardXp(player, amount) {
     const ennen = player.xp ?? 0;
     player.xp = ennen + amount;
     this.tarkistaLinssikynnys(player, ennen, player.xp);
+    this.tarkistaTietajataso(player, ennen, player.xp);
     return amount;
   }
 
   /**
-   * Linssien toinen löytöreitti: kokemuspisteet. Tarkistus on tässä,
-   * koska awardXp on ainoa portti, jonka läpi jokainen kokemuspiste
+   * Linssien toinen löytöreitti: tietäjäpisteet. Tarkistus on tässä,
+   * koska awardXp on ainoa portti, jonka läpi jokainen tietäjäpiste
    * kulkee — kahdeksan kutsupaikkaa, yksi kynnystarkistus.
    *
    * Tapahtumalaji on 'aid' eikä 'treasure': käyttöliittymä suodattaa
@@ -727,8 +747,28 @@ export class Game {
    */
   tarkistaLinssikynnys(player, ennen, jalkeen) {
     for (const tunnus of tarkistaKynnys(this, player, ennen, jalkeen)) {
-      this.say(player.id, `${player.name} on nähnyt maailmaa niin paljon, että sai uuden linssin (${jalkeen} kp).`);
+      this.say(player.id, `${player.name} on nähnyt maailmaa niin paljon, että sai uuden linssin (${jalkeen} tp).`);
       this.emit('aid', 'Uusi linssi', { icon: 'suurennuslasi', linssi: tunnus, sub: 'Kokemus avasi uuden katselutavan' });
+    }
+  }
+
+  /**
+   * Tietäjätason nousu (js/tietajatasot.js). Sama portti ja sama malli
+   * kuin linssikynnyksellä — awardXp on ainoa paikka, jonka läpi
+   * pisteet kulkevat.
+   *
+   * Nousu EI anna mitään muuta kuin uuden nimikkeen (päätoimittajan
+   * päätös 18.8.2026): ei rahaa, ei laattaa, ei linssiä. Onnittelun
+   * sanoo pöllö, ja se jää jonoon, koska sama pisteiden lisäys on
+   * voinut juuri avata linssin — kaksi ilmoitusta yhtä aikaa peittäisi
+   * toisensa.
+   *
+   * Botit jäävät ulos: pöllö puhuu pelaajalle, ei tekoälylle.
+   */
+  tarkistaTietajataso(player, ennen, jalkeen) {
+    for (const taso of tietajatasonNousut(ennen, jalkeen)) {
+      this.say(player.id, `${player.name} nousi tietäjätasolle ${taso.taso}: ${taso.nimi} (${jalkeen} tp).`);
+      if (!player.isBot) this.tietajaNousut.push(taso);
     }
   }
 
@@ -748,7 +788,7 @@ export class Game {
     let gained = 0;
     if (world.visited.size === 0) {
       gained += this.awardXp(player, XP_NEW_BOARD);
-      this.say(player.id, `${player.name} astui uudelle laudalle: ${world.pack.boardLabel} (+${XP_NEW_BOARD} kp).`);
+      this.say(player.id, `${player.name} astui uudelle laudalle: ${world.pack.boardLabel} (+${XP_NEW_BOARD} tp).`);
     }
     world.visited.add(player.pos.city);
     gained += this.awardXp(player, XP_NEW_CITY);
@@ -1159,7 +1199,7 @@ export class Game {
    * Voiko kaupunkia tutkia ilman laattaa: kerran pelissä, jos kysyttävää
    * on. Näin myös lähtökaupungit (Tanger, Kairo) ja jo tyhjennetyt
    * kaupungit tarjoavat tutkimista — palkintona on tietoa ja
-   * kokemuspisteitä, ei laattaa.
+   * tietäjäpisteitä, ei laattaa.
    */
   canExplore(city) {
     if (!city || this.tokens.has(city.id)) return false;
@@ -1318,7 +1358,7 @@ export class Game {
     // (omistajan linjaus 10.8.2026: "Aina on siis vain yksi tehtävä,
     // joko visa, pulma, tai joku muu"). Laatallisessa kaupungissa
     // pulma kääntää laatan kuten visa; laatattomassa se on entiseen
-    // tapaan pelkkä kokemuspistepysähdys. Nimetty muoto tai vaikea
+    // tapaan pelkkä tietäjäpistepysähdys. Nimetty muoto tai vaikea
     // kysymys ohittaa pulman.
     if (!kaari && !hard && form === null && this.pendingPuzzle()) return this.openPuzzle();
 
@@ -1363,7 +1403,7 @@ export class Game {
       hard,
       kaari: Boolean(kaari),
       // Laatattomassa kaupungissa kohtaaminen palkitsee kuten
-      // tutkiminen: löytöpalkkio ja kokemuspisteet, laattaa ei ole.
+      // tutkiminen: löytöpalkkio ja tietäjäpisteet, laattaa ei ole.
       // Lippu ohjaa answerQuizin explore-haaraan; kertatutkimista
       // (canExplore) kohtaaminen ei kuluta.
       explore: Boolean(kaari && !city),
@@ -1709,7 +1749,7 @@ export class Game {
    * on pysähdyksen ainoa tehtävä: oikea ratkaisu kääntää laatan ja
    * sulkeminen päättää vuoron kuten visassa (omistajan linjaus
    * 10.8.2026). Laatattomassa kaupungissa (esim. aloituskaupunki) pulma
-   * on entiseen tapaan kevyt välipysähdys: kokemuspisteet oikeasta,
+   * on entiseen tapaan kevyt välipysähdys: tietäjäpisteet oikeasta,
    * vuoro jatkuu saapumiskortista.
    */
   openPuzzle() {
@@ -1785,7 +1825,7 @@ export class Game {
       this.kaariYritykset.set(avain, tila);
     }
 
-    // Pulma: oikeasta kokemuspisteitä, väärästä ei rangaistusta.
+    // Pulma: oikeasta tietäjäpisteitä, väärästä ei rangaistusta.
     // Laatallisessa kaupungissa pulma on pysähdyksen ainoa tehtävä,
     // joten oikea ratkaisu kääntää laatan kuten visassa (omistajan
     // linjaus 10.8.2026); laatattomassa oikea ratkaisu vain näytetään.
@@ -1793,10 +1833,10 @@ export class Game {
       if (this.quiz.right) {
         this.awardXp(p, XP_PUZZLE);
         if (this.quiz.laatta) {
-          this.say(p.id, `${p.name} ratkaisi isoisän pulman (+${XP_PUZZLE} kp) ja saa kääntää laatan.`);
+          this.say(p.id, `${p.name} ratkaisi isoisän pulman (+${XP_PUZZLE} tp) ja saa kääntää laatan.`);
           this.quiz.found = this.revealToken(this.quiz.cityId);
         } else {
-          this.say(p.id, `${p.name} ratkaisi isoisän pulman (+${XP_PUZZLE} kp).`);
+          this.say(p.id, `${p.name} ratkaisi isoisän pulman (+${XP_PUZZLE} tp).`);
         }
       } else {
         this.say(p.id, `${p.name} ei ratkaissut isoisän pulmaa — isoisä olisi ollut armollinen.`);
@@ -1804,13 +1844,13 @@ export class Game {
       return { ok: true, right: this.quiz.right };
     }
 
-    // Tutkiminen ilman laattaa: oikeasta löytöpalkkio ja kokemuspisteitä,
+    // Tutkiminen ilman laattaa: oikeasta löytöpalkkio ja tietäjäpisteitä,
     // väärästä ei rangaistusta. Laattaa ei ole eikä tule.
     if (this.quiz.explore) {
       if (this.quiz.right) {
         this.awardXp(p, XP_EXPLORE);
         p.money += EXPLORE_REWARD;
-        this.say(p.id, `◈ ${p.name} tutki paikkaa kaupungissa ${city.name} ja vastasi oikein (+${EXPLORE_REWARD} puntaa, +${XP_EXPLORE} kp).`);
+        this.say(p.id, `◈ ${p.name} tutki paikkaa kaupungissa ${city.name} ja vastasi oikein (+${EXPLORE_REWARD} puntaa, +${XP_EXPLORE} tp).`);
         this.emit('aid', `Löytöpalkkio +${EXPLORE_REWARD} puntaa`, { icon: 'kukkaro' });
       } else {
         const oikea = this.quiz.options[this.quiz.correct];
@@ -1823,9 +1863,9 @@ export class Game {
     if (this.quiz.gate) {
       if (this.quiz.right) {
         // Tietoportin kysymys on aina vaikea, joten siitä saa samat
-        // kokemuspisteet kuin muustakin oikein vastatusta vaikeasta.
+        // tietäjäpisteet kuin muustakin oikein vastatusta vaikeasta.
         this.awardXp(p, XP_HARD_ANSWER);
-        this.say(p.id, `◈ ${p.name} vastasi oikein — portti aukeaa: ${this.quiz.gate.label}! (+${XP_HARD_ANSWER} kp)`);
+        this.say(p.id, `◈ ${p.name} vastasi oikein — portti aukeaa: ${this.quiz.gate.label}! (+${XP_HARD_ANSWER} tp)`);
       } else {
         const oikea = this.quiz.options[this.quiz.correct];
         this.say(p.id, `${p.name} vastasi väärin — portti ei auennut. Oikea vastaus oli "${oikea}".`);
@@ -1840,7 +1880,7 @@ export class Game {
       if (this.quiz.hard) {
         p.money += HARD_BONUS;
         this.awardXp(p, XP_HARD_ANSWER);
-        this.say(p.id, `Vaikeasta kysymyksestä ${p.name} saa ${HARD_BONUS} punnan palkkion ja ${XP_HARD_ANSWER} kokemuspistettä.`);
+        this.say(p.id, `Vaikeasta kysymyksestä ${p.name} saa ${HARD_BONUS} punnan palkkion ja ${XP_HARD_ANSWER} tietäjäpistettä.`);
       }
       this.quiz.found = this.revealToken(this.quiz.cityId);
     } else {
@@ -2399,7 +2439,7 @@ export class Game {
         tokens: new Map(w.tokens ?? []),
         revealed: new Map(w.revealed ?? []),
         // Vanhoissa tallennuksissa käyntejä ei kirjattu: jo käännetyt laatat
-        // kertovat, missä on käyty, joten kokemuspisteet eivät kerry uudelleen.
+        // kertovat, missä on käyty, joten tietäjäpisteet eivät kerry uudelleen.
         visited: new Set(w.visited ?? (w.revealed ?? []).map(([city]) => city)),
         starsFound: new Map(w.starsFound ?? mannerkohtaisetTahdet(pack, w)),
       });
@@ -2465,6 +2505,9 @@ export class Game {
     game.turnCount = data.turnCount ?? 1;
     game.log = data.log ?? [];
     game.events = [];
+    // Tietäjätason nousut eivät kulje tallennuksessa: kupla kuuluu sille
+    // hetkelle, jona taso nousi, eikä sitä esitetä uudestaan latauksessa.
+    game.tietajaNousut = [];
     game.moves = null;
 
     // Kesken jäänyt siirtovalinta lasketaan uudelleen nopan silmäluvusta.

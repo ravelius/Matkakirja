@@ -181,6 +181,9 @@ const MODULES = [
   'js/ambience-stream.js',
   'js/die.js',
   'js/rules.js',
+  // Tietäjätasot ennen peliä: game.js tuo tietajatasonNousut staattisesti
+  // (nousu tarkistetaan awardXp-portissa) ja ui.js nimikkeen laukkuun.
+  'js/tietajatasot.js',
   'js/game.js',
   'js/ai.js',
   /*

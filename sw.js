@@ -27,6 +27,7 @@ const SHELL = [
   './js/puhe-oletukset.js',
   './js/pollo-haku.js',
   './js/game.js',
+  './js/tietajatasot.js',
   './js/ai.js',
   './js/rules.js',
   './js/pack.js',

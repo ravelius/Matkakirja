@@ -6,7 +6,7 @@
 // yhden rivin muutos yhteen tiedostoon, eivätkä kaksi samaan aikaan
 // tehtyä linssiä osu samoihin riveihin.
 //
-// manner: null tarkoittaa, että linssi ansaitaan kokemuspisteillä eikä
+// manner: null tarkoittaa, että linssi ansaitaan tietäjäpisteillä eikä
 // laatan alta (ks. docs/moduulit/linssit.md luku 4).
 
 /*

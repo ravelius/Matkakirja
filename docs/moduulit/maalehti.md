@@ -241,7 +241,7 @@ Omistaja ei löytänyt maalehteä pelistä (8.8.2026: *"En pääse Saksan
 lehteen mistään?"* ja *"Kartalta pitäisi päästä myös"*). Maalehden
 ainoa normaalireitti oli kaupunkilehden etusivun pieni kulmalinkki
 "Saksa-osio ›", ja kartalta se aukesi vain Maiden tiedot -varusteella,
-joka ansaitaan kokemuspisteillä.
+joka ansaitaan tietäjäpisteillä.
 
 v382:ssa löydettävyys korjattiin kolmella reitillä: kartan oma
 "Maiden lehdet" -nappi, maaosion rivi kaupunkilehden

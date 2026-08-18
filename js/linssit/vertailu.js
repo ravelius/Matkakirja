@@ -24,7 +24,7 @@
  * sivu, jolla Suomi on himmeä vertailuviiva.
  *
  * Löytyminen noudattaa varusteiden yleistä mallia: manner: null
- * rekisterissä tarkoittaa, että linssi ansaitaan kokemuspisteillä
+ * rekisterissä tarkoittaa, että linssi ansaitaan tietäjäpisteillä
  * (js/linssit/omistus.js, LINSSIKYNNYKSET) — tämä suunnitelman
  * mukaisesti, joka ei lukitse löytymistä eikä hintaa erikseen.
  */
