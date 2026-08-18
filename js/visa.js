@@ -24,7 +24,8 @@ import {
   lippuUrl, lippuVara, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
-import { kaariLuentaSoi, TARINAKAARI } from './packs/tarinakaari.js';
+import { POLLO_AARRE } from './pollo.js';
+import { TARINAKAARI } from './packs/tarinakaari.js';
 import { KOHTAAMISLUENNAT } from './sisaltotaulut.js';
 import { sfx } from './sound.js';
 import { aarreIkoni, html } from './ui-apurit.js';
@@ -206,29 +207,16 @@ export function renderQuiz(ui) {
         return;
       }
       ui.kohtaamisetNahty.add(tervehdysAvain);
-      // Tervehdys luetaan ääneen kirjoituskoneen rinnalla (omistajan
-      // rajaus 7.8.2026: "riittää vain alkutarinan luenta"). Kertoja
-      // lukee kehyksen ja hahmo repliikkinsä omalla äänellään.
-      // Lukijaääni ensin (14.8.2026) — se kattaa myös kohtaamiset,
-      // joille äänitettä ei ole; äänite on varapolku.
-      if (kertojaTila() !== 'ei'
-        && !lueKertojana(ui, tervehdys, { viive: 300 })) {
-        if (kaariTarina && kaariLuentaSoi(kaariTarina, 'kohtaaminen')) {
-          playDiaryVoice(ui, 
-            `assets/audio/puhe-kaari-kohtaaminen-${quiz.cityId}.mp3`,
-            { viive: 300 },
-          );
-        } else if (!kaariTarina && KOHTAAMISLUENNAT.has(quiz.cityId)) {
-          playDiaryVoice(ui, 
-            `assets/audio/puhe-kohtaaminen-${quiz.cityId}-tervehdys.mp3`,
-            { viive: 300 },
-          );
-        }
-      }
+      /*
+       * KERTOJA EI ENÄÄ LUE TERVEHDYSTÄ (omistajan tilaus 18.8.2026:
+       * "Ota kertojan ääni pois ... siitä hetkestä, kun pelaaja menee
+       * tapaamaan henkilöä"). Tervehdys kirjoittuu kirjoituskoneella
+       * luettavaksi; vastausrepliikkien luennat alempana säilyvät.
+       */
       ui.typeText(ui.quizKohtaaminen, tervehdys, 'quiz', () => {
         /*
          * Peli alkaa vasta Aloita peli -napista (omistajan toive
-         * 10.8.2026): kertojan luenta saa loppua rauhassa, kysymys
+         * 10.8.2026): tervehdys saa tulla luetuksi rauhassa, kysymys
          * ja vaihtoehdot tulevat esiin painalluksesta, ja tiimalasi
          * käynnistyy vasta niiden myötä (esilla-ehto alla). Botille
          * porttia ei jätetä — se vastaa suoraan pelitilaan.
@@ -305,6 +293,17 @@ export function renderQuiz(ui) {
       if (quiz.gate && quiz.right) {
         body.appendChild(html('strong', '', `◈ Portti aukeaa — ${quiz.gate.label}!`));
         body.appendChild(html('span', 'muted', 'Tieto avasi tien: matka jatkuu ilmaiseksi.'));
+      } else if (quiz.right && quiz.found === 'pollo') {
+        /*
+         * PÖLLÖ KORVASI ENSIMMÄISEN LAATAN AARTEEN (omistaja
+         * 18.8.2026): revealToken palautti pöllön eikä laattatyyppiä,
+         * joten tuloskortti kertoo löydöksi pöllön — aarrekuvaa tai
+         * puntia ei ole, koska laatan sisältöä ei annettu.
+         */
+        ui.quizResult.appendChild(aarreIkoni(
+          { kuva: POLLO_AARRE.kuva, name: POLLO_AARRE.nimi }, 'empty', 56,
+        ));
+        body.appendChild(html('strong', '', `Löysit: ${POLLO_AARRE.nimi}`));
       } else if (quiz.right && found) {
         // Iso kuva (omistajan toive 10.8.2026: "kuva saisi olla
         // isommalla") — aarre on rivin pääasia, ei kuvake.
@@ -333,18 +332,10 @@ export function renderQuiz(ui) {
           katko.alt = 'Kätkö';
           katko.onerror = () => katko.remove();
           body.appendChild(katko);
+          // KERTOJA EI ENÄÄ LUE AARRETEKSTIÄ (omistajan tilaus
+          // 18.8.2026: kertojan ääni pois aarteen tapaamisista) —
+          // teksti jää tuloskortille luettavaksi.
           body.appendChild(html('span', 'kohtaaminen-repliikki', kaariAarre));
-          if (ui.aarreLuentaFor !== quiz && kertojaTila() !== 'ei') {
-            ui.aarreLuentaFor = quiz;
-            // Lukijaääni ensin (14.8.2026); äänite varapolkuna.
-            if (!lueKertojana(ui, kaariAarre, { viive: 600 })
-              && kaariLuentaSoi(TARINAKAARI[quiz.cityId], 'aarre')) {
-              playDiaryVoice(ui, 
-                `assets/audio/puhe-kaari-aarre-${quiz.cityId}.mp3`,
-                { viive: 600 },
-              );
-            }
-          }
         }
       } else if (quiz.right) {
         body.appendChild(html('strong', '', 'Oikein!'));

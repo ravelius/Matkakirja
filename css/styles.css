@@ -5832,9 +5832,11 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 }
 
 .reveal-caption span {
-  color: #d8c4a2;
+  /* Kirkastettu ja varjo tuplattu (omistajan kaappaus 18.8.2026:
+   * selite ja kaariteksti jäivät himmeiksi mustaa vasten). */
+  color: #f0e2c2;
   font-size: 0.98rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 2px 12px rgba(0, 0, 0, 0.9);
 }
 
 .quiz-verdict {
@@ -8650,11 +8652,14 @@ button.lukija-nappi.lukee,
   /*
    * Oma vaalea väri: teksti elää mustan paljastuskalvon päällä, ja
    * perityllä musteella se jäi hämäräksi (omistajan havainto
-   * 10.8.2026: "teksti näkyy huonosti"). Sama sävyperhe kuin
-   * arvorivillä mutta vaaleampi, koska tämä on pitkä luettava.
+   * 10.8.2026: "teksti näkyy huonosti"). Kirkastettu vielä kerran ja
+   * varjoon lisätty tiukka tumma reunus (omistajan kaappaus
+   * 18.8.2026: kaariteksti yhä himmeä mustaa vasten) — pergamentin-
+   * vaalea kuin aarteen nimi, jotta pitkä luettava erottuu myös
+   * kuvan hehkun päältä.
    */
-  color: #eedeba;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+  color: #f7ecd2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 2px 14px rgba(0, 0, 0, 0.9);
 }
 
 .reveal-isoisa-nimio {

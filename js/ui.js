@@ -45,7 +45,7 @@ import {
 } from './maalehti.js';
 // Remontin M6: luenta ja visa.
 import {
-  haivytaJaSiivoa, haivytaLuenta, lueKertojana, lueMerkinta,
+  haivytaJaSiivoa, haivytaLuenta, lueMerkinta,
   merkitsePuhuja, playDiaryVoice, playIntroVoice, stopDiaryVoice,
   stopIntroVoice, vapautaPuhuja,
 } from './luenta.js';
@@ -9784,6 +9784,18 @@ export class UI {
    * aina visan voitosta).
    */
   async playTokenReveal(type) {
+    /*
+     * PÖLLÖ KORVAA ENSIMMÄISEN LAATAN AARTEEN KOKONAAN (omistajan
+     * tilaus 18.8.2026). Kun revealToken palautti pöllön, laatan omaa
+     * aarrekorttia ei näytetä lainkaan — pelaaja saa siitä laatasta
+     * vain pöllön paljastuskortin. Lippu poimitaan tässä, joten
+     * animaatio ajetaan täsmälleen kerran.
+     */
+    const polloOdottaa = this.game.takePolloPaljastus?.() === true;
+    if (type === 'pollo' || polloOdottaa) {
+      await this.naytaPolloAarre();
+      return;
+    }
     const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
     /*
      * Aarre tuntuu kädessä (iOS-kuori). Juhla on pelin voimakkain
@@ -9820,35 +9832,16 @@ export class UI {
      */
     const kaari = (type !== 'empty' && KAARI_LAUDAT.has(this.game.pack.id))
       ? TARINAKAARI[this.game.quiz?.cityId] : null;
-    // Hihkaisu on kortin huudahdus ääneen — sama repliikki luettuna
-    // ja kirjoitettuna. Kertojan aarreteksti alkaa vasta sen jälkeen,
-    // etteivät äänet puuroudu päällekkäin.
+    /*
+     * Hihkaisu on kortin huudahdus ääneen — sama repliikki luettuna
+     * ja kirjoitettuna. KERTOJA EI ENÄÄ LUE AARRETEKSTIÄ (omistajan
+     * tilaus 18.8.2026: "Ota kertojan ääni pois kaikista aarteen
+     * tapaamisista") — kaariteksti on kortilla vain luettavana, ja
+     * hihkaisu on ainoa ääni kuvan nousun päälle.
+     */
     const hihkaisu = (huudahdus && sfx.enabled && kertojaTila() !== 'ei')
       ? huudahdus.tiedosto : null;
-    let luenta = null;
-    let lukijaValmis = null;
-    let ttsPysayta = null;
-    if (kaari?.aarre) {
-      caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
-      if (kertojaTila() !== 'ei') {
-        // Viive hihkaisun jälkeen: 2600 ms alkoi hieman ennen kuin
-        // hihkaisu ehti laskeutua (omistajan havainto 10.8.2026) —
-        // 3400 ms antaa huudahduksen soida loppuun ja hengähtää.
-        // Lukijaääni ensin (14.8.2026); sen loppu välittyy kortin
-        // odotukseen onLoppu-koukusta. Äänite on varapolku.
-        let luentaPaattyi = null;
-        const tts = lueKertojana(this, kaari.aarre, {
-          viive: hihkaisu ? 3400 : 900,
-          onLoppu: () => luentaPaattyi?.(),
-        });
-        if (tts) {
-          ttsPysayta = tts;
-          lukijaValmis = new Promise((resolve) => { luentaPaattyi = resolve; });
-        } else if (kaariLuentaSoi(kaari, 'aarre')) {
-          luenta = playDiaryVoice(this, `assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 3400 : 900 }) ?? null;
-        }
-      }
-    }
+    if (kaari?.aarre) caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
     /*
      * Taikalasin kohdalla "Taikalasi" ei kerro vielä mitään: pelaajan
      * pitää nähdä KUMPI lasi löytyi ja mitä sillä näkee. Nimi ja kuvaus
@@ -9865,25 +9858,11 @@ export class UI {
     // mutta pitkä selite (esim. tyhjän laatan "merkintä oli vanhentunut")
     // pitää ehtiä lukea. Napautus tai ruksi ohittaa odotuksen.
     const seliteMs = ((REVEAL_SUB[type] ?? '').length + (kaari?.aarre?.length ?? 0)) * 45;
-    /*
-     * Kortti odottaa sekä vähimmäislukuajan ETTÄ luennan lopun; ruksi
-     * tai napautus sulkee heti, ja silloin kertoja feidataan pois —
-     * muuten ääni jatkuisi tyhjän kartan päällä. Varmuusraja pitää
-     * huolen, ettei jumittunut äänen lataus jätä korttia ikuiseksi
-     * ruudulle.
-     */
+    // Kortti odottaa vähimmäislukuajan; ruksi tai napautus sulkee heti.
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });
-    const luentaValmis = luenta ? Promise.race([
-      new Promise((resolve) => {
-        // pause kelpaa lopuksi siinä missä ended: se tarkoittaa, että
-        // jokin muu pysäytti luennan, eikä korttia kannata pitää auki.
-        for (const nimi of ['ended', 'error', 'pause']) luenta.addEventListener(nimi, resolve, { once: true });
-      }),
-      this.wait(30000),
-    ]) : (lukijaValmis ? Promise.race([lukijaValmis, this.wait(30000)]) : Promise.resolve());
-    const odota = (min) => Promise.race([Promise.all([this.wait(min), luentaValmis]), napautus]);
+    const odota = (min) => Promise.race([this.wait(min), napautus]);
 
     if (this.reducedMotion) {
       kuvaEl?.classList.add('shown');
@@ -9903,34 +9882,10 @@ export class UI {
       overlay.classList.add('leaving');
       await this.wait(300);
     }
-    /*
-     * Suljettaessa kesken luennan kertoja feidataan pois — kortti ja
-     * ääni päättyvät yhdessä. Käynnistystä odottava luenta (viive)
-     * perutaan nollaamalla diaryVoice, ja puhujan rooli vapautetaan,
-     * ettei tausta jää väistöön.
-     */
-    if (luenta) {
-      if (this.diaryVoice === luenta) this.diaryVoice = null;
-      if (!luenta.ended && !luenta.paused) haivytaJaSiivoa(this, luenta);
-      else vapautaPuhuja(this, luenta);
-    }
-    // Striimattu kertoja samaan sulkuun: kortti ja ääni päättyvät
-    // yhdessä, myös viivettä odottava luenta perutaan (omistaja
-    // 18.8.2026: "puheen tulee lakata samaan aikaan eikä jäädä
-    // taustalle jatkamaan. aarre osioissa ainakin käy vielä näin").
-    ttsPysayta?.();
     overlay.remove();
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
     // eloisasti merkiksi (omistajan toive). Tyhjä laatta ei tuo mitään.
     if (type !== 'empty') this.elavoitaLaukku();
-    /*
-     * ENSIMMÄISEN LAATAN ALTA LÖYTYY MYÖS PÖLLÖ (omistajan tilaus
-     * 18.8.2026). Laatan oma sisältö on juuri nähty kokonaan, ja
-     * pöllö tulee sen PERÄÄN omana korttinaan — ei tilalle. Portti on
-     * tässä eikä kutsupaikoissa, koska jokainen käännetty laatta
-     * kulkee tämän metodin läpi.
-     */
-    if (this.game.takePolloPaljastus?.()) await this.naytaPolloAarre();
   }
 
   /**
@@ -9960,30 +9915,14 @@ export class UI {
     this.quizDialog.appendChild(overlay);
 
     /*
-     * Esittely luetaan kertojan äänellä kuten tarinakaaren
-     * aarretekstit, ja kortti odottaa luennan loppuun asti — teksti on
-     * pitkä, eikä pöllön ensiesiintyminen saa katketa kesken lauseen.
-     * Napautus tai ruksi ohittaa odotuksen.
+     * KERTOJA EI LUE ESITTELYÄ (omistajan tilaus 18.8.2026: kertojan
+     * ääni pois kaikista aarteen tapaamisista) — kortti odottaa vain
+     * lukuajan verran, ja napautus tai ruksi ohittaa odotuksen.
      */
-    let lukijaValmis = null;
-    let ttsPysayta = null;
-    if (kertojaTila() !== 'ei') {
-      let luentaPaattyi = null;
-      const tts = lueKertojana(this, POLLO_AARRE.esittely, {
-        viive: 900,
-        onLoppu: () => luentaPaattyi?.(),
-      });
-      if (tts) {
-        ttsPysayta = tts;
-        lukijaValmis = new Promise((resolve) => { luentaPaattyi = resolve; });
-      }
-    }
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });
-    const luentaValmis = lukijaValmis
-      ? Promise.race([lukijaValmis, this.wait(30000)]) : Promise.resolve();
-    const odota = (min) => Promise.race([Promise.all([this.wait(min), luentaValmis]), napautus]);
+    const odota = (min) => Promise.race([this.wait(min), napautus]);
     const seliteMs = (POLLO_AARRE.selite.length + POLLO_AARRE.esittely.length) * 45;
 
     if (this.reducedMotion) {
@@ -10001,10 +9940,6 @@ export class UI {
       overlay.classList.add('leaving');
       await this.wait(300);
     }
-    // Pysäytin kattaa myös viivettä odottavan luennan; ilman
-    // pysäytintä pudotaan vanhaan yleiskatkaisuun.
-    if (ttsPysayta) ttsPysayta();
-    else pysaytaLukija();
     overlay.remove();
     /*
      * Nappi riviin pienen nytkäyksen kera. Löytymistä odottaneet

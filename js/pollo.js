@@ -503,18 +503,19 @@ export const POLLO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
  * PÖLLÖ ON AARRE (omistajan tilaus 18.8.2026).
  *
  * Peli alkaa ilman pöllöä, ja se löytyy ensimmäisen käännetyn laatan
- * alta omana aarteenaan — laatan oma sisältö säilyy koskemattomana,
- * pöllö tulee sen lisäksi. Kortin tekstit ovat samassa muodossa kuin
- * muidenkin aarteiden: nuoren herran huudahdus, aarteen nimi, lyhyt
- * selite ja kerronnallinen jatko (js/ui.js naytaPolloAarre).
+ * alta omana aarteenaan — ja KORVAA sen laatan aarteen kokonaan
+ * (omistaja 18.8.2026): laatan omaa sisältöä ei näytetä eikä anneta,
+ * pelaaja saa ensimmäisestä laatasta vain pöllön. Kortin tekstit ovat
+ * samassa muodossa kuin muidenkin aarteiden: nuoren herran huudahdus,
+ * aarteen nimi, lyhyt selite ja esittely (js/ui.js naytaPolloAarre).
  *
- * Sävy on tarinakaaren aarretekstien sävy: minämuotoista kerrontaa,
- * jonka sisällä puhutaan suoraan. Kohderyhmä on 13 vuotta täyttäneet
- * ja aikuiset, joten pöllö on kohtelias matkakumppani eikä maskotti.
+ * Kohderyhmä on 13 vuotta täyttäneet ja aikuiset, joten pöllö on
+ * kohtelias matkakumppani eikä maskotti.
  *
  * KALEVALAINEN KEHYS (päätoimittajan kaanonteksti, omistaja hyväksyi
- * 18.8.2026): Viisas Pöllö on tietäjien ikivanha matkakumppani, ja
- * isoisä oli hänen oppilaistaan viimeisin. Tekstiä ei muuteta ilman
+ * 18.8.2026): Viisas Pöllö on tietäjien ikivanha matkakumppani.
+ * Esittely on päätoimittajan kaanonteksti (18.8.2026, enintään kaksi
+ * lausetta omistajan tekstilinjan mukaan) — ei muuteta ilman
  * päätoimittajaa.
  */
 export const POLLO_AARRE = {
@@ -530,14 +531,9 @@ export const POLLO_AARRE = {
   huudahdus: 'Se liikkui — kätkössä oli jotain elävää!',
   nimi: 'Viisas Pöllö',
   selite: 'Tietäjien ikivanha matkakumppani liittyy seuraan',
-  esittely: 'Kätkön reunalta nousi pölyä, ja pölyn keskeltä katsoi suuri '
-    + 'huuhkaja. "Minä olen Viisas Pöllö", se sanoi ja kumarsi hitaasti. '
-    + '"Olen kulkenut tietäjien matkassa niin kauan kuin sanoja on etsitty '
-    + '— isoisänne oli oppilaistani viimeisin. Nyt otan teidät siipieni '
-    + 'suojaan tiedon tielle. Kysykää minulta kaupungeista, kartoista ja '
-    + 'Aarnin luettelosta: jokaisella asialla on syntynsä, ja joka synnyn '
-    + 'tuntee, se asian hallitsee. Visan vastauksia en anna — ne teidän on '
-    + 'löydettävä itse."',
+  esittely: 'Laatan alta löytyy Viisas Pöllö — tietäjien ikivanha '
+    + 'matkakumppani, joka kulkee nyt mukanasi ja kasvattaa sinua tiedon '
+    + 'tiellä. Napauta pöllöä, kun haluat kysyä jotakin maailmasta.',
 };
 
 /** Mikrofoni samalla viivakynällä. */

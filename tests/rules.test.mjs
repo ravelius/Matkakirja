@@ -61,6 +61,10 @@ function newGame(seed = 5) {
     seed,
   });
   for (const p of AFRICA.puzzles ?? []) game.puzzlesSeen.add(`africa:${p.city}`);
+  // Pöllö on jo löytynyt: laattatestit testaavat laatan omaa sisältöä,
+  // ja ilman tätä ensimmäinen käännös antaisi vain pöllön (omistaja
+  // 18.8.2026). Pöllön löytö testataan omissa testeissään.
+  game.polloLoydetty = true;
   return game;
 }
 
@@ -640,6 +644,7 @@ test('laattojen vaikutukset: jalokivi, ryöstäjä ja tähti', () => {
     ],
     rng: mulberry32(3),
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   const p = game.player;
   p.pos = { type: 'city', city: 'timbuktu' };
 
@@ -730,6 +735,7 @@ test('oikea vastaus kääntää laatan, väärä ei', () => {
       ],
       rng: mulberry32(42),
     });
+    game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
     game.player.pos = { type: 'city', city: 'timbuktu' };
     game.tokens.set('timbuktu', 'ruby');
     return game;
@@ -801,6 +807,7 @@ test('vaikea kysymys antaa bonuksen oikeasta vastauksesta', () => {
     ],
     rng: mulberry32(23),
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   const levelByText = new Map(allQuestions(AFRICA).map((q) => [q.q, questionLevel(q)]));
   game.player.pos = { type: 'city', city: 'timbuktu' };
   game.tokens.set('timbuktu', 'topaz');
@@ -981,6 +988,7 @@ test('vaellus: yksin pelattaessa peli ei pääty ja tähti on arvokas löytö', 
     players: [{ name: 'Yksin', color: '#f00', start: 'tanger' }],
     rng: mulberry32(41),
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   assert.ok(game.roaming, 'yksinpeli on vaellus');
 
   const p = game.player;
@@ -1176,6 +1184,7 @@ test('aarteen löytyminen kirjataan mantereelle ja palkitsee vaelluksessa', () =
     pack,
     seed: 9,
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   assert.ok(game.roaming);
   const p = game.player;
   p.pos = { type: 'city', city: 'lima' };
@@ -1311,6 +1320,7 @@ test('tallennus kirjoitetaan versiona 2 ja palautuu mannerkohtaisena', () => {
     pack,
     seed: 31,
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.player.pos = { type: 'city', city: 'lima' };
   game.world.tokens.set('lima', 'star');
   game.revealToken('lima');
@@ -1366,7 +1376,7 @@ test('version 1 tallennus kääntyy mannerkohtaiseksi', () => {
 
 // --- Viisas Pöllö on löydettävä aarre (omistajan tilaus 18.8.2026) --------
 
-test('pöllö löytyy ensimmäisestä laatasta eikä laatan sisältö muutu', () => {
+test('pöllö korvaa ensimmäisen laatan aarteen kokonaan', () => {
   const pack = packById('maailmankartta');
   const game = new Game({
     players: [{ name: 'Yksin', color: '#f00', start: null }],
@@ -1382,23 +1392,53 @@ test('pöllö löytyy ensimmäisestä laatasta eikä laatan sisältö muutu', ()
   const pisteetEnnen = game.player.xp;
   const loydot = game.player.finds.length;
 
-  assert.equal(game.revealToken('lima'), 'ruby', 'laatan oma tyyppi muuttui');
+  // Laatan oma sisältö EI tule pelaajalle (omistaja 18.8.2026):
+  // paljastus on pöllö, jalokivi katoaa laatan mukana.
+  assert.equal(game.revealToken('lima'), 'pollo', 'ensimmäinen laatta antoi muuta kuin pöllön');
   assert.equal(game.polloLoydetty, true, 'pöllöä ei löytynyt ensimmäisestä laatasta');
-  // Laatan oma sisältö säilyy täysin: pöllö on lisä, ei tilalle.
-  assert.equal(game.player.finds.length, loydot + 1, 'löytö ei kirjautunut');
-  assert.equal(game.player.finds.at(-1), 'ruby');
-  assert.ok(game.player.money > rahaEnnen, 'jalokivi ei tuonut rahaa');
+  assert.equal(game.player.money, rahaEnnen, 'korvattu jalokivi toi silti rahaa');
   assert.equal(game.player.xp, pisteetEnnen, 'pöllö antoi tietäjäpisteitä');
+  // Laatta on silti käännetty: kartalla tyhjä laatta, laukussa tyhjä
+  // kirjaus, eikä kaupunkiin jää kääntämätöntä laattaa.
+  assert.equal(game.world.revealed.get('lima'), 'empty', 'laatta ei näy käännettynä');
+  assert.equal(game.world.tokens.has('lima'), false, 'laatta jäi kääntämättä');
+  assert.equal(game.player.finds.length, loydot + 1, 'käännös ei kirjautunut');
+  assert.equal(game.player.finds.at(-1), 'empty', 'laatan sisältö kirjautui pelaajalle');
 
   // Paljastus poimitaan täsmälleen kerran.
   assert.equal(game.takePolloPaljastus(), true);
   assert.equal(game.takePolloPaljastus(), false, 'paljastus toistui');
 
-  // Toinen laatta ei enää löydä pöllöä uudelleen.
+  // Toinen laatta paljastuu normaalisti eikä löydä pöllöä uudelleen.
   game.player.pos = { type: 'city', city: 'kairo' };
   game.world.tokens.set('kairo', 'emerald');
-  game.revealToken('kairo');
+  assert.equal(game.revealToken('kairo'), 'emerald', 'toinen laatta ei paljastunut normaalisti');
+  assert.ok(game.player.money > rahaEnnen, 'toinen laatta ei tuonut rahaa');
   assert.equal(game.takePolloPaljastus(), false, 'pöllö löytyi kahdesti');
+});
+
+test('ensimmäisen laatan tähti siirtyy toisen laatan alle eikä katoa', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 31,
+  });
+  game.player.pos = { type: 'city', city: 'lima' };
+  game.world.tokens.set('lima', 'star');
+
+  const manner = game.mannerOf('lima');
+  const tahdet = (world) => [...world.tokens.entries()]
+    .filter(([id, t]) => t === 'star' && game.mannerOf(id) === manner)
+    .map(([id]) => id);
+  const ennen = tahdet(game.world);
+
+  assert.equal(game.revealToken('lima'), 'pollo', 'tähtilaatta ohitti pöllön');
+  assert.equal(game.player.stars, 0, 'korvattu tähti kirjautui pelaajalle');
+  assert.equal(game.world.starsFound.size, 0, 'korvattu tähti merkittiin löytyneeksi');
+  const jalkeen = tahdet(game.world);
+  assert.equal(jalkeen.length, ennen.length, 'mantereen tähtien määrä muuttui');
+  assert.ok(!jalkeen.includes('lima'), 'tähti jäi käännettyyn laattaan');
 });
 
 test('pöllön löytö kulkee tallennuksen läpi ja vanha tallennus saa pöllön', () => {
@@ -1507,6 +1547,7 @@ test('peli tallentuu ja palautuu samaan tilanteeseen', () => {
     ],
     seed: 1234,
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.players[0].pos = { type: 'city', city: 'timbuktu' };
   game.tokens.set('timbuktu', 'emerald');
   game.actionTravel('stay', { form: 'quiz' });
@@ -1571,6 +1612,7 @@ test('50:50 poistaa kaksi väärää vaihtoehtoa ja maksaa 80', () => {
     ],
     seed: 77,
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.player.pos = { type: 'city', city: 'timbuktu' };
   game.tokens.set('timbuktu', 'topaz');
   game.actionTravel('stay', { form: 'quiz' });
@@ -1688,6 +1730,7 @@ test('väärä vastaus päättää vuoron ja seuraavalla vuorolla saa uuden kysy
     ],
     seed: 99,
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.player.pos = { type: 'city', city: 'kano' };
   game.tokens.set('kano', 'ruby');
 
@@ -2652,6 +2695,7 @@ function puzzleGame(seed, city) {
     players: [{ name: 'Yksin', color: '#f00', start: 'tanger' }],
     seed,
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.player.pos = { type: 'city', city };
   return game;
 }
@@ -2897,6 +2941,7 @@ test('kohtaaminen on ensimmäinen tehtävä myös pulmakaupungissa; pulma vasta 
     pack,
     seed: 412,
   });
+  game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.player.pos = { type: 'city', city: pulmakaupunki };
   game.tokens.set(pulmakaupunki, 'ruby');
   game.phase = 'action';

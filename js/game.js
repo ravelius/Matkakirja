@@ -284,9 +284,9 @@ export class Game {
      *
      * Pelin alussa pöllöä ei ole: nappi on piilossa eikä pöllö puhu
      * mitään. Se löytyy OMANA AARTEENAAN ensimmäisen käännetyn laatan
-     * alta (revealToken) — laatan oma sisältö säilyy koskemattomana,
-     * pöllö tulee sen LISÄKSI eikä maksa mitään: ei pisteitä, ei
-     * rahaa, ei tasapainomuutosta.
+     * alta (revealToken) ja KORVAA sen laatan aarteen kokonaan
+     * (omistaja 18.8.2026): laatan omaa sisältöä ei näytetä eikä
+     * anneta, eikä pöllö tuo pisteitä, rahaa eikä tavaraa.
      *
      * Lippu tallennetaan (toJSON), koska se on pelaajan etenemistä.
      * `polloPaljastus` sen sijaan on istunnon hetkellinen viesti
@@ -2247,23 +2247,59 @@ export class Game {
     const type = this.tokens.get(cityId);
     if (!type) return null;
     this.tokens.delete(cityId);
-    this.revealed.set(cityId, type);
 
     const p = this.player;
     /*
-     * PÖLLÖ LÖYTYY ENSIMMÄISEN LAATAN ALTA (omistajan tilaus
-     * 18.8.2026). Mikä tahansa laatta kelpaa — myös tyhjä, rosvo tai
-     * hevosenkenkä: löytö ei ole palkinto oikeasta laatasta vaan
-     * matkakumppanin ensitapaaminen. Laatan oma sisältö kulkee alla
-     * ennallaan, eikä pöllö tuo pisteitä, rahaa eikä tavaraa.
+     * PÖLLÖ KORVAA ENSIMMÄISEN LAATAN AARTEEN KOKONAAN (omistajan
+     * tilaus 18.8.2026 — korvasi saman päivän aiemman "pöllö tulee
+     * lisänä" -linjan). Ensimmäisen käännetyn laatan alta löytyy VAIN
+     * Viisas Pöllö: laatan omaa sisältöä ei näytetä eikä anneta —
+     * ei rahaa, ei tavaraa, ei rosvoa, ei pisteitä. Laatta merkitään
+     * silti käännetyksi (revealed + finds saavat tyhjän laatan
+     * kirjauksen), joten kartta ja matkalaukku pysyvät ehjinä, ja
+     * visavoiton omat palkkiot (tietäjäpisteet, vaikean kysymyksen
+     * bonus) on jo maksettu ennen tätä metodia kuten muillakin
+     * laatoilla.
+     *
+     * UNOHDETTU AARRE EI SAA KADOTA: jos ensimmäinen laatta sattuu
+     * olemaan mantereen tähti, se siirretään toisen saman mantereen
+     * kääntämättömän laatan alle — muuten peli voisi muuttua
+     * voittamattomaksi. Jos siirtopaikkaa ei ole (teoreettinen
+     * tilanne), pöllö odottaa seuraavaa laattaa ja tähti paljastuu
+     * normaalisti.
      *
      * Vain ihmispelaajalle: pöllö puhuu pelaajalle, ei botille, joten
-     * botin kääntämä laatta ei vie löytöhetkeä pelaajalta.
+     * botin kääntämä laatta ei vie löytöhetkeä pelaajalta. Vanhoissa
+     * tallennuksissa polloLoydetty on jo tosi, joten tämä haara ei
+     * kosketa niitä.
      */
     if (!this.polloLoydetty && !p.isBot) {
-      this.polloLoydetty = true;
-      this.polloPaljastus = true;
+      let korvaa = true;
+      if (type === 'star') {
+        const manner = this.mannerOf(cityId);
+        const vapaat = [...this.tokens.entries()]
+          .filter(([id, t]) => t !== 'star' && t !== 'linssi'
+            && this.mannerOf(id) === manner)
+          .map(([id]) => id);
+        if (vapaat.length) {
+          this.tokens.set(vapaat[Math.floor(this.rng() * vapaat.length)], 'star');
+        } else {
+          korvaa = false;
+        }
+      }
+      if (korvaa) {
+        this.polloLoydetty = true;
+        this.polloPaljastus = true;
+        this.revealed.set(cityId, 'empty');
+        p.finds.push('empty');
+        (p.findManner ??= []).push(this.pack.map?.cityManner?.[cityId] ?? null);
+        const city = this.board.cityById.get(cityId);
+        this.say(p.id, `${p.name} käänsi ensimmäisen laatan kaupungissa ${city.name} — kätköstä löytyi Viisas Pöllö!`);
+        this.checkWin();
+        return 'pollo';
+      }
     }
+    this.revealed.set(cityId, type);
     const token = this.aarreTyyppi(type, cityId);
     p.finds.push(type);
     // Mistä mantereelta laatta löytyi — passi näyttää maailmankartan
