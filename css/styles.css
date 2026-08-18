@@ -10668,10 +10668,13 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   vertical-align: top;
 }
 
+/*
+ * Otsikkorivi EI ole sticky. tk-vieri vierii vain vaakaan, joten
+ * top: 0 ei koskaan tarttunut pystyssä — mutta se nosti solut omalle
+ * WebKit-kerrokselle, jonka piirto jäi iPadilla kesken vaaka-
+ * vierityksessä (osa otsikoista katosi, omistajan kaappaus 18.8.2026).
+ */
 .tk-taulu thead th {
-  position: sticky;
-  top: 0;
-  z-index: 1;
   background: #f0e6cd;
   border-bottom: 1px solid rgba(70, 51, 31, 0.4);
   font-size: 0.64rem;
