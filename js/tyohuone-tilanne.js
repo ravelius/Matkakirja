@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v881 — pöllön valmiskysymykset ja ehdota-nappi: avaa pöllö Firenzessä (laatta tai lehti) — syöterivin yllä 2 valmista kysymystä + väkänen (väkänen/vieritys näyttää kaikki 5), napautus kysyy ja sen jälkeen palataan normaaleihin jatkokysymyksiin; pilottikaupungit Firenze, Tampere, Kairo, Tokio, Pariisi, Helsinki (muilla alue ei näy); paneelin oikeassa yläkulmassa pieni "Ehdota sisältöä" -nappi, joka avaa saman lomakkeen kuin hampurilainen — myös lehden päältä',
   'v880 — 30 uutta miniatyyriä: Kairon kaikki 10 kohdetta sekä Tampereen, Firenzen ja E00-kuusikon uudet kohteet piirroksina (numeroympyrät pois) — avaa esim. Kairon ja Tokion kartat; sävy istuu pohjaan (v877)',
   'v879 — ehdotuslomake: uusi saateteksti ("Näitkö matkallasi kuvan tai aiheen…"), ja pro-osio on nyt rasti "Haluan hakea pro-sisällöntuottajaksi" + pieni i, joka avaa selitteen minipopupissa; rasti paljastaa kirjautumisen',
   'v878 — kohdekartoille 15 uutta nähtävyyttä: Tokio 6→10 (Ueno Tōshō-gū, Uenon asema, Hanayashiki, Kyū-Iwasaki-tei), Soul 6→9 (Gwanghwamun, Insadong, Jogyesa), Shanghai 6→9 (Kaupunginjumalan temppeli, Fuyoun moskeija, Dajingin pavilonki), Bagdad 6→8 (Haydarkhanan ja al-Wazirin moskeijat), Teheran 6→8 (Toopkhanen aukio, Bagh-e Mellin portti), Tripoli 6→7 (Gurgin moskeija) — avaa kartat ja parit uudet jutut; uusilla kohteilla ei ole vielä miniatyyripiirrosta, joten ne näkyvät numeroympyröinä',

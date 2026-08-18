@@ -49,6 +49,7 @@
  */
 
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
+import { haeValmiskysymykset } from './packs/pollo-kysymykset.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
@@ -571,6 +572,16 @@ const NAPPAIMISTO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
   + '</svg>';
 
 /**
+ * Väkänen alaspäin: valmiskysymysten "näytä loput" -nappi.
+ */
+const VAKANEN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<path d="M6.5 9.7 12 15.2l5.5-5.5"/>'
+  + '</svg>';
+
+/** Valmiskysymyksiä per tilanne (js/packs/pollo-kysymykset.js). */
+const VALMIITA_ENINTAAN = 5;
+
+/**
  * Kaiutin samalla viivakynällä kuin muutkin pöllön kuvakkeet.
  *
  * Piirto on sama kuin lukijan napissa (js/lukija.js KAIUTIN_PIIRTO),
@@ -880,6 +891,37 @@ class Pollo {
      * sisällä ja siirtyy aina viimeisen viestin perään — mikään
      * paneelin osa ei enää kiinnity keskustelun päälle.
      */
+    /*
+     * "EHDOTA SISÄLTÖÄ" OIKEASSA YLÄKULMASSA (omistajan tilaus
+     * 18.8.2026). Hampurilaisen ehdotusnappi näkyy vain karttavalikossa;
+     * pöllö taas on läsnä myös lehden päällä, joten sama lomake avataan
+     * tästä — pelaaja voi ehdottaa sisältöä juuri siltä sivulta, jota
+     * hän lukee. Nappi kutsuu SAMAA polkua kuin hampurilainen
+     * (js/ui.js naytaPalauteKulmasta): lomake on <dialog>, joka
+     * avataan showModalilla bodyyn, joten se nousee top-layerissa
+     * auki olevan lehtidialogin PÄÄLLE. Chat väistyy ensin samalla
+     * säännöllä kuin linkkiä avattaessa (avaaKohde): paluu
+     * keskusteluun on yksi napautus ja historia säilyy.
+     *
+     * Rivi on oma kapea lohkonsa eikä virran päälle asemoitu nappi:
+     * paneelissa ei ole yläpalkkia (linjaus 12.8.2026), mutta virran
+     * päällä kelluva nappi peittäisi vieritettävää tekstiä.
+     */
+    const ylarivi = polloElementti('div', 'pollo-ylarivi');
+    const ehdota = polloElementti('button', 'pollo-ehdota', 'Ehdota sisältöä');
+    ehdota.type = 'button';
+    ehdota.title = 'Ehdota sisältöä tähän kohtaan peliä';
+    ehdota.setAttribute('aria-label', 'Ehdota sisältöä — avaa ehdotuslomake');
+    ehdota.addEventListener('click', () => {
+      const ui = this.haeUi?.();
+      if (typeof ui?.naytaPalauteKulmasta !== 'function') return;
+      this.sulje();
+      ui.naytaPalauteKulmasta();
+    });
+    this.ehdotaNappi = ehdota;
+    ylarivi.appendChild(ehdota);
+    paneeli.appendChild(ylarivi);
+
     this.virta = polloElementti('div', 'pollo-virta');
     paneeli.appendChild(this.virta);
 
@@ -897,9 +939,135 @@ class Pollo {
     this.tyhja.style.height = '0px';
     this.virta.appendChild(this.tyhja);
 
+    paneeli.appendChild(this.rakennaValmiit());
     paneeli.appendChild(this.rakennaSyote());
     this.paneeli = paneeli;
     this.kiinnita();
+  }
+
+  /**
+   * VALMISKYSYMYSTEN ALUE paneelin alaosaan, syöterivin yläpuolelle
+   * (omistajan tilaus 18.8.2026).
+   *
+   * Käsin kirjoitetut avauskysymykset (js/packs/pollo-kysymykset.js)
+   * näkyvät vain keskustelun ALUSSA: kaksi kysymystä kerrallaan ja
+   * pieni väkänen, josta — tai aluetta vierittämällä — loput tulevat
+   * esiin. Napautus lähettää kysymyksen täsmälleen samaa polkua kuin
+   * kirjoitettu (kysy). Ensimmäisen oman tai valitun kysymyksen
+   * jälkeen alue katoaa ja tilalle tulevat pöllön dynaamiset
+   * jatkokysymykset, kuten ennenkin.
+   */
+  rakennaValmiit() {
+    const alue = polloElementti('div', 'pollo-valmiit');
+    alue.hidden = true;
+    // Lista on oma vieritettävä lohkonsa: suljettuna sen korkeus
+    // rajataan kahteen kysymykseen (rajaaValmiit).
+    this.valmiitLista = polloElementti('div', 'pollo-valmiit-lista');
+    alue.appendChild(this.valmiitLista);
+    const lisaa = polloElementti('button', 'pollo-valmiit-lisaa');
+    lisaa.type = 'button';
+    lisaa.title = 'Näytä kaikki kysymykset';
+    lisaa.setAttribute('aria-label', 'Näytä kaikki valmiit kysymykset');
+    lisaa.setAttribute('aria-expanded', 'false');
+    lisaa.innerHTML = `<span class="icon-glyph viiva-ikoni">${VAKANEN_IKONI}</span>`;
+    lisaa.addEventListener('click', () => this.avaaValmiit());
+    this.valmiitNappi = lisaa;
+    alue.appendChild(lisaa);
+    this.valmiit = alue;
+    return alue;
+  }
+
+  /**
+   * Mihin tilanteeseen valmiskysymykset valitaan?
+   *
+   * Avain on kaupunki-id + konteksti ('laatta' | 'lehti'), sama muoto
+   * kuin pakassa. Lehtikonteksti katsotaan auki olevasta lehdestä
+   * (lehtitila.arrivalShownFor — sen kaupungin lehteä pelaaja lukee),
+   * laattakonteksti pelaajan sijainnista. Maalehti on eri julkaisu:
+   * sille ei ole valmiskysymyksiä, ja väärän kaupungin kysymykset
+   * olisivat pahempia kuin ei mitään.
+   */
+  valmiskysymysTilanne() {
+    const ui = this.haeUi?.() ?? null;
+    const game = ui?.game ?? null;
+    const lehti = this.doc.getElementById?.('arrival-dialog') ?? null;
+    if (lehti?.open) {
+      if (ui?.lehtitila?.tutkiMaaLehti) return null;
+      const kaupunki = ui?.lehtitila?.arrivalShownFor
+        ?? game?.player?.pos?.city ?? null;
+      return kaupunki ? { kaupunki, konteksti: 'lehti' } : null;
+    }
+    const kaupunki = game?.player?.pos?.city ?? null;
+    return kaupunki ? { kaupunki, konteksti: 'laatta' } : null;
+  }
+
+  /**
+   * Näyttää valmiskysymykset, jos tilanteeseen on kirjoitettu ne.
+   *
+   * @returns {boolean} tuliko alue näkyviin
+   */
+  naytaValmiit() {
+    if (!this.valmiit) return false;
+    // Vain keskustelun alkuun: ensimmäisen oman kysymyksen jälkeen
+    // ehdotukset tulevat dynaamisesta jatkokysymyslogiikasta.
+    if (this.historia.some((viesti) => viesti.rooli === 'kayttaja')) {
+      return this.piilotaValmiit();
+    }
+    const tilanne = this.valmiskysymysTilanne();
+    // Yksi hakufunktio pakan edessä: vaihe 2 voi vaihtaa sen taakse
+    // palvelimelta haetun listan kutsujaan koskematta.
+    const kysymykset = tilanne
+      ? haeValmiskysymykset(tilanne.kaupunki, tilanne.konteksti) : [];
+    // Kaupunki ilman kysymyksiä: aluetta ei näytetä lainkaan —
+    // tyhjä laatikko olisi pahempi kuin puuttuva.
+    if (!kysymykset.length) return this.piilotaValmiit();
+    this.valmiitLista.replaceChildren();
+    for (const teksti of kysymykset.slice(0, VALMIITA_ENINTAAN)) {
+      const nappi = polloElementti('button', 'pollo-ehdotus pollo-valmis', teksti);
+      nappi.type = 'button';
+      // Sama polku kuin kirjoitetulla kysymyksellä.
+      nappi.addEventListener('click', () => this.kysy(teksti));
+      this.valmiitLista.appendChild(nappi);
+    }
+    this.valmiit.classList.remove('auki');
+    this.valmiitLista.scrollTop = 0;
+    this.valmiitNappi.hidden = false;
+    this.valmiitNappi.setAttribute('aria-expanded', 'false');
+    this.valmiit.hidden = false;
+    this.rajaaValmiit();
+    return true;
+  }
+
+  /**
+   * Suljetun alueen korkeus: täsmälleen kaksi ensimmäistä kysymystä.
+   *
+   * Mitta luetaan napeista eikä kirjoiteta remeinä, koska kysymys voi
+   * rivittyä kahdelle riville — kiinteä luku näyttäisi silloin
+   * puolikkaan napin. Loput näkyvät vierittämällä tai väkäsestä.
+   */
+  rajaaValmiit() {
+    const lista = this.valmiitLista;
+    if (!lista?.style) return;
+    lista.style.maxHeight = '';
+    const toinen = lista.children?.[1];
+    if (!toinen || typeof toinen.offsetTop !== 'number') return;
+    const raja = toinen.offsetTop + toinen.offsetHeight;
+    if (raja > 0) lista.style.maxHeight = `${raja}px`;
+  }
+
+  /** Väkäsen napautus: koko lista esiin, väkänen pois. */
+  avaaValmiit() {
+    if (!this.valmiit) return;
+    this.valmiit.classList.add('auki');
+    if (this.valmiitLista?.style) this.valmiitLista.style.maxHeight = '';
+    this.valmiitNappi.hidden = true;
+    this.valmiitNappi.setAttribute('aria-expanded', 'true');
+  }
+
+  /** @returns {boolean} aina false, jotta kutsuja voi palauttaa tämän */
+  piilotaValmiit() {
+    if (this.valmiit) this.valmiit.hidden = true;
+    return false;
   }
 
   /**
@@ -1448,7 +1616,15 @@ class Pollo {
     // Indeksi rakennetaan laiskasti ensimmäisellä avauksella, ei pelin
     // käynnistyksessä. Ehdotushaku odottaa sen valmistumista.
     this.varmistaIndeksi();
-    this.haeEhdotukset();
+    /*
+     * VALMISKYSYMYKSET KESKUSTELUN ALKUUN (omistajan tilaus 18.8.2026):
+     * ennen ensimmäistä omaa kysymystä syöterivin yllä on käsin
+     * kirjoitettu kysymysvalikko (js/packs/pollo-kysymykset.js), eikä
+     * palvelimelta haeta avausehdotuksia — kaksi kilpailevaa
+     * ehdotuslistaa olisi yksi liikaa. Kaupungeissa, joille valmiita
+     * ei vielä ole kirjoitettu, kaikki toimii täsmälleen kuten ennen.
+     */
+    if (!this.naytaValmiit()) this.haeEhdotukset();
   }
 
   sulje() {
@@ -1492,6 +1668,7 @@ class Pollo {
   /** Tila, jossa omistaja ei ole vielä ottanut välityspalvelinta käyttöön. */
   naytaNukkuva() {
     this.ehdotukset.hidden = true;
+    this.piilotaValmiit();
     this.syote.hidden = true;
     if (this.virta.querySelector('.pollo-nukkuu')) return;
     this.virta.replaceChildren();
@@ -2284,6 +2461,11 @@ class Pollo {
     for (const nappi of this.virta.querySelectorAll('.pollo-jatko')) {
       nappi.disabled = kesken;
     }
+    // Samoin valmiskysymysten alue — se on yleensä jo piilossa, kun
+    // pyyntö on käynnissä, mutta jarru ei nojaa siihen.
+    for (const nappi of this.valmiit?.querySelectorAll('button') ?? []) {
+      nappi.disabled = kesken;
+    }
   }
 
   konteksti(kysymys = '') {
@@ -2600,6 +2782,10 @@ class Pollo {
     this.saneluTila.textContent = '';
     this.ehdotukset.replaceChildren();
     this.ehdotukset.hidden = true;
+    // Valmiskysymykset koskevat vain keskustelun alkua: ensimmäinen
+    // kysymys — oma tai valittu — vie ne pois, ja vastauksen alle
+    // tulevat dynaamiset jatkokysymykset (naytaJatkot).
+    this.piilotaValmiit();
     // Vanhat jatkokysymykset pois virrasta: ehdotuksia näkyy vain
     // tuoreimman vastauksen alla, muuten ne kasautuvat pinoksi
     // (omistajan huomio 13.8.2026).
