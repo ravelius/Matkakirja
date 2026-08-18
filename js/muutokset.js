@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 884, teksti: 'Pöllön väkänen alas; pro-kirjautuminen pohjalle' },
   { v: 883, teksti: 'Palautelappu keskelle; pro-rasti ennen lähetystä' },
   { v: 882, teksti: 'Tietäjärivillä nimike, i ja oikealla vain pisteet' },
   { v: 881, teksti: 'Pöllölle valmiskysymykset ja ehdota-nappi' },
