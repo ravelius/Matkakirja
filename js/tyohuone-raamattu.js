@@ -246,6 +246,18 @@ export const RAAMATTU = {
           + 'Ennen löytöä syntyneet tasonnousuonnittelut puretaan '
           + 'jonosta löydön jälkeen. Vanhassa tallennuksessa pöllö on '
           + 'valmiiksi löydetty.',
+        'KALEVALAINEN KEHYS (omistaja 18.8.2026, "toteuta '
+          + 'pöllöidea"): Viisas Pöllö on muuttumaton EMO — huuhkaja, '
+          + 'jolla on karjalainen kirjontanauha harteillaan — tietäjien '
+          + 'ikivanha matkakumppani, joka kasvattaa pelaajaa tiedon '
+          + 'tiellä. Pelaajan oma avatar on lehtopöllö, joka varttuu '
+          + 'untuvikosta tasojen myötä (10 kuvaa, assets/tietaja/). '
+          + 'Jokaisella tasolla on kaksisäkeinen kalevalamittainen '
+          + 'värssy, joka lausutaan tasonnousun juhlakuplassa; nimet, '
+          + 'rajat ja värssyt ovat päätoimittajan kaanontekstiä '
+          + '(js/tietajatasot.js). Ylin taso on "Tietäjä iänikuinen". '
+          + 'Tasonnousu ei tuo pelietuja — vain nimikkeen, värssyn ja '
+          + 'emon onnittelun.',
         'Ruudulla aina pieni pöllö → chat. Vastaa näkyvästä '
           + 'sisällöstä (saa kontekstin) + vapaa kenttä + '
           + 'kysymysehdotukset.',
@@ -472,7 +484,8 @@ export const RAAMATTU = {
           + '~1000 p · visavihje ja 50:50.',
         'Kokemuspisteet ovat pelaajalle TIETÄJÄPISTEITÄ (tp; '
           + 'omistaja 18.8.2026). Ne nostavat kymmentä tietäjätasoa '
-          + '(Untuvikko 0 tp → Suurtietäjä 2400 tp, js/tietajatasot.js) '
+          + '(Untuvikko 0 tp → Tietäjä iänikuinen 2400 tp, '
+          + 'js/tietajatasot.js) '
           + 'ja kysymysten vaikeutta. Tasonnousu ei anna muuta kuin '
           + 'nimikkeen; pöllö onnittelee minipuhekuplalla. Nimikkeet '
           + 'ja rajat ovat päätoimittajan sisältöpäätös.',
