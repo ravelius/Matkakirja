@@ -1,0 +1,43 @@
+# Tietäjätasojen pöllöavatarien generointi (omistajan tilaus 18.8.2026).
+# Sama malli kuin generoi-miniatyyrit.yml: avain on repon salaisuuksissa,
+# joten generointi ajetaan täällä ja tulos noudetaan artefaktina.
+# JOKAINEN kuva katsotaan silmin ennen peliin kytkemistä.
+
+name: Generoi tietäjäavatarit
+
+on:
+  workflow_dispatch:
+    inputs:
+      avaimet:
+        description: 'Tasoavaimet välilyönnein (esim. taso-01 taso-06); lisää --uusiksi uusintaan'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Asenna riippuvuudet ja Chromium
+        run: |
+          npm ci --no-audit --no-fund
+          npx playwright install --with-deps chromium
+          echo "CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' -type f | head -1)" >> "$GITHUB_ENV"
+      - name: Generoi avatarit
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          NODE_USE_ENV_PROXY: '1'
+        run: node tools/generoi-tietaja-avatarit.mjs ${{ inputs.avaimet }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tietaja-avatarit
+          path: assets/tietaja/
+          retention-days: 3
+          if-no-files-found: warn
