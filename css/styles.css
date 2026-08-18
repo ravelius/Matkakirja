@@ -7273,8 +7273,14 @@ body.katselu #newgame-btn { display: none; }
  * riippumatta.
  *
  * 390 pikselin ulkoasu ei muutu: koko lohko elää media queryn sisällä.
+ *
+ * Raja 700 eikä 768 (omistajan palaute 18.8.2026 iPad-kaappauksesta:
+ * "nähtävyysikkuna pitäisi olla iPadilla leveämpi"): 768 jätti
+ * kapeimmat tabletit (esim. iPad mini pystyssä, 744 px) puhelimen
+ * 620 pikselin palstaan. 700 on sama raja, jolla arkki ja palstat
+ * vaihtavat leveään taittoon.
  */
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   #wiki-dialog { max-width: min(860px, 92vw); }
   .wiki-card { max-width: min(860px, 92vw); }
 
@@ -7287,8 +7293,11 @@ body.katselu #newgame-btn { display: none; }
     max-width: 38em;
     margin-inline: auto;
   }
+}
 
-  /* Lehden yksipalstaiset kappaleet: ingressi ja esittelyt. */
+/* Lehden yksipalstaiset kappaleet: ingressi ja esittelyt. Lehden oma
+ * raja pysyy 768:ssa — sen taitto ei ollut osa 18.8.2026 levennystä. */
+@media (min-width: 768px) {
   .dialog.lehti #arrival-intro,
   .dialog.lehti .wiki-kategoria .johdanto,
   .dialog.lehti .nahtavyys-kappale { max-width: 38em; }
@@ -12169,12 +12178,23 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 /* Isolla ruudulla (iPad, työpöytä) nähtävyyskortti saa olla leveämpi
- * (omistajan palaute 15.8.2026: "liian kapea") — teksti ja kuvat
- * hengittävät, mutta palsta pysyy luettavana. JS asettaa saman mitan
- * myös pikseleinä (mitoitaNahtavyysDialogi), koska WKWebView'n
- * jämähtänyt viewportti voi valehdella tälle media querylle. */
+ * (omistajan palaute 15.8.2026: "liian kapea"; uudelleen 18.8.2026
+ * iPad-kaappauksesta: yhä liian kapea) — teksti ja kuvat hengittävät,
+ * mutta palsta pysyy luettavana: kirjoituskonekirjasin on niin leveää,
+ * että rivi jää 860 pikselin kortissakin alle ~70 merkin. Sama mitta
+ * ja raja kuin Lue lisää -arkilla (#wiki-dialog), jotta kartan kaksi
+ * juttuikkunaa ovat samaa kokoa. JS asettaa saman mitan myös
+ * pikseleinä (mitoitaNahtavyysDialogi), koska WKWebView'n jämähtänyt
+ * viewportti voi valehdella tälle media querylle. Opas pitää oman
+ * julistemittansa — sen taitto on viritetty 84 vw:lle. */
+@media (min-width: 700px) {
+  .dialog.nahtavyys-arkki:not(.opas-arkki) {
+    width: min(92vw, 860px);
+  }
+}
+
 @media (min-width: 760px) {
-  .dialog.nahtavyys-arkki {
+  .dialog.nahtavyys-arkki.opas-arkki {
     width: min(84vw, 840px);
   }
 }

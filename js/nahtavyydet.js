@@ -1144,8 +1144,16 @@ export function mitoitaNahtavyysDialogi(ui) {
   // Sulje-nappi, joka jää ruudun ali jos katto on vanhentunut.
   ui.mitoitaArkinKorkeus();
   const mitta = ui.mittaaNakyma() || 0;
-  dialogi.style.width = mitta >= 760
-    ? `${Math.min(Math.round(mitta * 0.84), 840)}px`
+  // Sama jako kuin CSS:ssä (styles.css, .dialog.nahtavyys-arkki):
+  // nähtävyysjuttu levenee 92 vw:hen 700 pikselistä alkaen
+  // (omistajan palaute 18.8.2026: "iPadilla leveämpi"), opas pitää
+  // 84 vw:n julistemittansa 760:stä alkaen.
+  const opas = dialogi.classList.contains('opas-arkki');
+  const raja = opas ? 760 : 700;
+  const osuus = opas ? 0.84 : 0.92;
+  const katto = opas ? 840 : 860;
+  dialogi.style.width = mitta >= raja
+    ? `${Math.min(Math.round(mitta * osuus), katto)}px`
     : '';
 }
 
