@@ -2226,9 +2226,13 @@ export const NAHTAVYYSJUTUT = {
      * tiivistetty omin sanoin; kuvien lisenssit ja tekijät todennettu
      * Commonsin API:sta ja kuvat katsottu silmin.
      *
-     * PYLVÄÄN KORKEUTTA EI MAINITA: lehden kansikuvan selite sanoo
-     * "36 metriä korkea pylväs", mutta lukua ei löydy en-Wikipedian
-     * artikkeleista. Se on jätetty tästä jutusta pois eikä toistettu.
+     * PYLVÄÄN MITAT hu-Wikipediasta ("Millenniumi emlékmű", haettu
+     * 18.8.2026): pylväs 36 metriä, Gabriel lähes 5 metriä, pylväiköt
+     * 85 metriä leveät ja 13 metriä korkeat, niiden väli 20 metriä.
+     * en-Wikipedia EI anna näitä lukuja — lehden kansikuvan selitteen
+     * "36 metriä korkea pylväs" on siis oikein, ja lähde on nyt
+     * kirjattu. Älä poista lukua sillä perusteella, ettei se löydy
+     * en-artikkelista.
      */
     'Sankarien aukio': {
       aika: '1896–1906',
@@ -2242,15 +2246,19 @@ export const NAHTAVYYSJUTUT = {
           + '1906. Suunnittelija oli arkkitehti Albert Schickedanz, '
           + 'joka piirsi myös aukion molemmat museot.'
         + '\n\n'
-        + 'Keskellä kohoaa pylväs, jonka huipulla arkkienkeli Gabriel '
-          + 'kantaa oikeassa kädessään Unkarin pyhää kruunua ja '
-          + 'vasemmassa kaksivartista ristiä. Pylvään juurella ratsastaa '
+        + 'Keskellä kohoaa 36 metriä korkea pylväs, jonka huipulla '
+          + 'lähes viisimetrinen arkkienkeli Gabriel kantaa oikeassa '
+          + 'kädessään Unkarin pyhää kruunua ja vasemmassa '
+          + 'kaksivartista ristiä. Pylvään juurella ratsastaa '
           + 'seitsemän magyaripäällikköä Árpád etunenässä — heistä '
           + 'tiedetään historiallisesti hyvin vähän, ja sekä puvut että '
           + 'hevoset ovat kuvanveistäjän mielikuvitusta. Kaarevissa '
           + 'pylväiköissä seisoo neljätoista Unkarin hallitsijaa ja '
           + 'vapaustaistelijaa, ja pylväiköiden päällä on neljä '
-          + 'allegoriaa: työ ja vauraus, sota, rauha sekä tieto ja kunnia.'
+          + 'allegoriaa: työ ja vauraus, sota, rauha sekä tieto ja '
+          + 'kunnia. Pylväikköjä on kaksi, kumpikin 85 metriä leveä ja '
+          + '13 metriä korkea, ja niiden väliin jää kaksikymmentä '
+          + 'metriä avointa kivetystä.'
         + '\n\n'
         + 'Kaikki eivät ole seisoneet siellä alusta asti. Kun aukio '
           + 'rakennettiin, Unkari oli osa Itävalta-Unkaria ja vasemman '

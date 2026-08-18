@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 904, teksti: 'Sankarien aukion mitat lahteineen hu-Wikipediasta' },
   { v: 903, teksti: 'Sankarien aukiolle oma juttu; Helsingin opas nykymalliin' },
   { v: 902, teksti: 'Dubain lehti: 4 uutta kohdetta, opas, avauskuvat' },
   { v: 901, teksti: 'Nähtävyyskuva isoksi puhelimessa; pöllökortti selkeäksi' },
