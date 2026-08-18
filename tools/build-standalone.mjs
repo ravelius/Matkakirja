@@ -231,6 +231,15 @@ const MODULES = [
   'js/opas.js',
   // M6: luenta ennen visaa (visa tuo kertojafunktiot).
   'js/luenta.js',
+  /*
+   * Viisas Pöllö ENNEN visaa: visa.js tuo POLLO_AARREn (pöllö korvaa
+   * ensimmäisen laatan aarteen, 18.8.2026) ja ui.js tuo polloAnkkurin
+   * ja polloSuljen staattisesti. Pöllön omat riippuvuudet (wiki,
+   * media, pakat, lukija, äänet) ovat kaikki yllä; pollo-haku ei tuo
+   * mitään.
+   */
+  'js/pollo-haku.js',
+  'js/pollo.js',
   'js/visa.js',
   // Tilastot-lehti ennen lehteä (lehti.js tuo sen staattisesti). Se
   // lukee pack.js:n, sisältötaulut ja ui-apurit, jotka ovat yllä —
@@ -240,8 +249,6 @@ const MODULES = [
   'js/maalehti.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
   'js/lehti.js',
-  'js/pollo-haku.js',
-  'js/pollo.js',
   // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
   // luennan, jotka ovat yllä).
   'js/kartta.js',
