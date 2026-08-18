@@ -27,6 +27,7 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-lehtiotsikko | Lehden tarttuva nimiö, ylähampurilainen (sijainti + tasaus), sisällyslevy (ylös/ulkosulku/Etusivu-rivi), iPadin paperikaista |
 | savuke-esilataus | Kuvakarusellien esilataus (nähtävyys, nostogalleria, katselin, lightboxin pikselimitoitus) |
 | savuke-matkakirjakulma | MATKAKIRJASTA-kortti aina vasemmassa yläkulmassa |
+| savuke-kartta-tila | Kartan geometria ei jää vanhaksi: lehden sulun sovitus, kesken jääneen nipistyksen hylkäys (jumivahti + yhden sormen kosketus) |
 | savuke-maapilleri | Maapillerin siivous (yksi pilleri, destroy, orpo) |
 | savuke-maaselain | Maatiedot-tila: kirjanappi, pilleri, valinnan purku |
 | savuke-katselin-pollo | Kuvakatselimen napautukset + pöllön kiinnitys |

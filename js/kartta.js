@@ -1275,7 +1275,16 @@ export class Kartta {
      * pointercancel tyhjentäisi joukon ja vahti luulisi kartan olevan
      * rauhassa — vaikka kaksi sormea on yhä ruudulla.
      */
-    pane.addEventListener('touchstart', () => {
+    pane.addEventListener('touchstart', (e) => {
+      /*
+       * Yksi sormi + muistissa oleva nipistys = edellinen ele on
+       * jäänyt kesken: elävä nipistys päättyy aina touchend/canceliin
+       * ennen kuin uusi yhden sormen kosketus voi alkaa. Hylkäys heti
+       * tässä, jotta kartta palaa käyttökuntoon ensimmäisestä
+       * kosketuksesta eikä vasta jumivahdin viiden sekunnin rajasta
+       * (ks. hylkaaNipistys alempana; sama juttu 18.8.2026).
+       */
+      if (e.touches.length === 1) this.hylkaaNipistys?.();
       this.ui.osoitinKartalla = true;
       this.ui.merkitseKartanEle();
       // iOS voi perua osoitintapahtumat (ks. yllä), joten liuku
@@ -1428,6 +1437,9 @@ export class Kartta {
       liikkui = false;
       this.ui.kartanRaahaus = true;
       document.body.classList.add('kartta-raahaus');
+      // Ele vahtii itse itseään: jos kosketusvirta katkeaa ilman
+      // päätöstapahtumaa, ele hylätään (ks. ajastaNipistysVahti).
+      ajastaNipistysVahti();
       // Kartta lähtee kahden sormen alla liikkeelle: päiväkirja riviksi.
       this.ui.asetaPaivakirjanKoko(true);
       this.ui.svg.style.transition = '';
@@ -1460,6 +1472,7 @@ export class Kartta {
       const kohde = nipistys.kohde;
       const keski = nipistys.keski;
       nipistys = null;
+      clearTimeout(this.ui.nipistysVahtiAjastin);
       this.ui.kartanRaahaus = false;
       document.body.classList.remove('kartta-raahaus');
       this.ui.svg.style.transform = '';
@@ -1513,6 +1526,70 @@ export class Kartta {
       }
       this.paivitaZoomiNapit();
       this.ui.taydennaTaide({ heti: true });
+    };
+
+    /*
+     * KESKEN JÄÄNYT NIPISTYS HYLÄTÄÄN (omistajan kuvakaappaus iPadilta
+     * 18.8.2026, v884: kartta pienentyneenä ja työntyneenä oikealle
+     * alas kesken pelin, pergamenttikaista vasemmassa reunassa,
+     * MATKAKIRJASTA-kyltti kaupunkinimen päällä ja noppa irrallaan
+     * kaistalla).
+     *
+     * Nipistys päättyy VAIN touchend/touchcancel-tapahtumaan, eikä
+     * iOS toimita kumpaakaan, kun järjestelmä ottaa eleen itselleen
+     * (sovellusvaihto, reunapyyhkäisy, ilmoitus) tai modaalinen
+     * ikkuna avautuu sormien alla. Silloin svg:hen jää eleen
+     * välivaiheen muunnos — scale + siirto — eikä mikään kirjoita
+     * sitä yli: jumivahti (ui.js eleKesken) laski vain liput,
+     * fitViewBox ei laukea ilman koon muutosta, ja panorointi on
+     * nipistys-tilan takia kuollut. Mitattu Chromiumissa 18.8.2026
+     * (nipistys ilman päätöstapahtumaa): scale(0.4)-muunnos jäi
+     * voimaan pysyvästi ja yhden sormen panorointi lakkasi.
+     *
+     * Hylkäys EI vie elettä loppuun — kesken jääneen eleen
+     * lopputulosta ei tiedetä — vaan palaa eleen edeltävään tilaan:
+     * paivitaNipistys muuttaa vain style.transformia, joten pan- ja
+     * zoomitila ovat koskemattomat, ja fitViewBox johtaa näkyvän
+     * geometrian niistä uudelleen (sama ankkurioppi kuin
+     * taustapaluussa: ei erovertailua, turha ajo on halpa).
+     */
+    const hylkaaNipistys = () => {
+      if (!nipistys) return;
+      nipistys = null;
+      clearTimeout(this.ui.nipistysVahtiAjastin);
+      this.ui.kartanRaahaus = false;
+      document.body.classList.remove('kartta-raahaus');
+      // Yleiskuvan haara ei kirjoita muunnosta (asetaPan ajetaan vain
+      // lähikuvissa), joten eleen jälki pyyhitään ensin käsin.
+      this.ui.svg.style.transform = '';
+      this.fitViewBox();
+    };
+    // Kentäksi asti: ui.js:n jumivahti (eleKesken) ja taustapaluun
+    // sovitus kutsuvat tätä, kun ele ei enää voi olla elossa.
+    this.hylkaaNipistys = hylkaaNipistys;
+
+    /*
+     * NIPISTYKSEN OMA JUMIVAHTI. ui.js:n jumivahti (eleKesken) elää
+     * tarkkuussilmukan varassa, ja silmukka sammuu kun kartta on
+     * levossa — juuri silloin, kun jumiutunut ele tarvitsisi sitä
+     * (mitattu 18.8.2026: levossa alkanut kesken jäänyt nipistys ei
+     * purkautunut koskaan ilman uutta kosketusta). Siksi elävä
+     * nipistys ajastaa oman tarkistuksensa: jos kosketusvirta on
+     * ollut hiljaa yli jumirajan eikä elettä ole päätetty, ele on
+     * orpo ja hylätään. Sama viiden sekunnin oppi kuin eleKeskenissä:
+     * sormet eivät lepää ruudulla viittä sekuntia liikkumatta.
+     * paataNipistys ja hylkaaNipistys sammuttavat vahdin; ui.destroy
+     * siivoaa ajastimen kuolleesta pelistä.
+     */
+    const NIPISTYS_JUMI_MS = 5000;
+    const ajastaNipistysVahti = () => {
+      clearTimeout(this.ui.nipistysVahtiAjastin);
+      this.ui.nipistysVahtiAjastin = setTimeout(() => {
+        if (!nipistys || this.ui.dead) return;
+        const hiljaa = performance.now() - (this.ui.kartanEleHetki ?? 0);
+        if (hiljaa > NIPISTYS_JUMI_MS) hylkaaNipistys();
+        else ajastaNipistysVahti();
+      }, NIPISTYS_JUMI_MS + 200);
     };
 
     this.ui.nipistysKuuntelijat = [
@@ -1825,6 +1902,10 @@ export class Kartta {
      */
     this.ui.eleVahti = () => {
       if (!document.hidden) return;
+      // Sama kohtalo nipistykselle: kesken jäänyt kahden sormen ele ei
+      // saa jättää muunnostaan svg:hen (ks. hylkaaNipistys — sormia ei
+      // voi nipistää kartalla, joka ei ole ruudulla).
+      hylkaaNipistys();
       pysaytaLiuku(true);
       paata(null, { salliLiuku: false });
     };
