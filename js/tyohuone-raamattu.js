@@ -513,8 +513,10 @@ export const RAAMATTU = {
           + '~1000 p · visavihje ja 50:50.',
         'Kokemuspisteet ovat pelaajalle TIETÄJÄPISTEITÄ (tp; '
           + 'omistaja 18.8.2026). Ne nostavat kymmentä tietäjätasoa '
-          + '(Untuvikko 0 tp → Tietäjä iänikuinen 2400 tp, '
-          + 'js/tietajatasot.js) '
+          + '(Untuvikko 0 tp → Tietäjä iänikuinen 8000 tp, '
+          + 'js/tietajatasot.js; rajat korotettu 18.8.2026 — '
+          + 'omistaja: tasot tulivat aivan liian helposti, ylimmän '
+          + 'tason kuuluu vaatia kymmeniä pelipäiviä) '
           + 'ja kysymysten vaikeutta. Tasonnousu ei anna muuta kuin '
           + 'nimikkeen; pöllö onnittelee minipuhekuplalla. Nimikkeet '
           + 'ja rajat ovat päätoimittajan sisältöpäätös.',
