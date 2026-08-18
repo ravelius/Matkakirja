@@ -59,6 +59,8 @@ const MODULES = [
   'js/uutiset.js',
   // Viisaan Pöllön rajapinta-asetus. Pelkkä vakio, jonka js/pollo.js lukee.
   'js/packs/pollo-asetukset.js',
+  // Pöllön valmiskysymykset. js/pollo.js tuo tämän staattisesti.
+  'js/packs/pollo-kysymykset.js',
   'js/packs/europe-valokuvat.js',
   'js/packs/europe-kielet.js',
   'js/packs/europe-maatiedot.js',

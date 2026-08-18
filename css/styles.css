@@ -14381,6 +14381,94 @@ a.pollo-tekstilinkki {
   cursor: pointer;
 }
 
+/*
+ * ── "EHDOTA SISÄLTÖÄ" PANEELIN OIKEASSA YLÄKULMASSA (omistajan tilaus
+ * 18.8.2026) ──────────────────────────────────────────────────────────
+ *
+ * Kapea rivi paneelin yläreunassa, sisältönä vain pieni tekstinappi
+ * oikealla. Rivi on flow'ssa eikä virran päälle asemoitu, jottei nappi
+ * peitä vieritettävää keskustelua; paneelissa ei silti ole yläpalkkia
+ * — rivi on paljasta paperia ilman otsikkoa tai viivaa. Nappi avaa
+ * saman ehdotuslomakkeen kuin hampurilaisvalikon "ehdota sisältöä"
+ * (js/ui.js naytaPalauteKulmasta), ks. js/pollo.js rakenna().
+ */
+.pollo-ylarivi {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.4rem 0.55rem 0;
+}
+
+button.pollo-ehdota {
+  padding: 0.12rem 0.55rem;
+  min-height: 0;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: 999px;
+  background: var(--pollo-paperi-2);
+  color: var(--pollo-korostus);
+  font-family: inherit;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+button.pollo-ehdota:hover { border-color: var(--pollo-korostus); }
+
+/*
+ * ── VALMISKYSYMYKSET SYÖTERIVIN YLLÄ (omistajan tilaus 18.8.2026) ────
+ *
+ * Käsin kirjoitetut avauskysymykset (js/packs/pollo-kysymykset.js)
+ * keskustelun alkuun: napit ovat samaa muotoa kuin ehdotukset
+ * (.pollo-ehdotus), mutta alue on paneelin kiinteä alaosa eikä osa
+ * virtaa — se katoaa kokonaan ensimmäisen kysymyksen jälkeen.
+ * Suljettuna listasta näkyy kaksi kysymystä (korkeus mitataan
+ * js/pollo.js rajaaValmiit) ja loput saa esiin vierittämällä tai
+ * väkäsestä; avattuna katto on remeissä ja ylitys vierii.
+ */
+.pollo-valmiit {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+  padding: 0.4rem 0.6rem 0.45rem;
+  border-top: 1px solid var(--pollo-viiva);
+}
+
+.pollo-valmiit-lista {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.pollo-valmiit.auki .pollo-valmiit-lista { max-height: 12rem; }
+
+/*
+ * Napit eivät kutistu: rajattu korkeus + flex-sarake painaisi muuten
+ * kaikki viisi nappia näkyviin litistettyinä (flex-shrink), ja teksti
+ * leikkautuisi. Ylitys kuuluu vieritykseen, ei nappien litistykseen.
+ */
+.pollo-valmiit-lista button.pollo-ehdotus { flex: none; }
+
+button.pollo-valmiit-lisaa {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  min-height: 0;
+  padding: 0;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: 50%;
+  background: var(--pollo-paperi);
+  color: var(--pollo-korostus);
+  cursor: pointer;
+}
+
+button.pollo-valmiit-lisaa .viiva-ikoni svg { width: 1.05rem; height: 1.05rem; }
+button.pollo-valmiit-lisaa:hover { border-color: var(--pollo-korostus); }
+
 a.pollo-tekstilinkki:hover { background: rgba(122, 85, 20, 0.12); }
 
 /*

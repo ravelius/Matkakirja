@@ -272,6 +272,19 @@ export const RAAMATTU = {
         'PUHEKUPLA (idea): esiohjelmoidut proaktiiviset vihjeet (80 '
           + 'päivän muistutus, alkuohjeet). Vihjaa, ei keskeytä — ei '
           + 'modaalia, ei ääntä, harvoin.',
+        'VALMISKYSYMYKSET (omistaja 18.8.2026, "kannatan"): '
+          + 'jokaiselle laatalle ja lehden etusivulle viisi valmista '
+          + 'kysymystä PAKETTISISÄLTÖNÄ (js/packs/pollo-kysymykset.js; '
+          + '≤70 mrk, pelaajan äänellä, aiheet pelin aineistosta, ei '
+          + 'visavastauksia eikä juonispoilereita). Chatin alussa kaksi '
+          + 'näkyvissä + väkänen; ensimmäisen kysymyksen jälkeen '
+          + 'dynaamiset jatkot kuten ennenkin. AJANTASAISUUS HOIDETAAN '
+          + 'JULKAISUPUTKESSA sisältötunnisteella (vaihe 2) — ei '
+          + 'pelinaikaista generointia eikä pelinaikaista tallennusta; '
+          + 'lennossa generoidaan vain jatkokysymykset.',
+        'Ehdota sisältöä -nappi on myös pöllön chatissa (lehdillä '
+          + 'hampurilaista ei näy) — sama lomake, sivukonteksti '
+          + 'mukana.',
       ],
     },
     {
