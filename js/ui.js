@@ -851,7 +851,10 @@ export class UI {
     });
     // Seloste elää laukun sisällä, joten se sulkeutuu laukun mukana —
     // muuten se jäisi leijumaan kartan päälle ilman ankkuriaan.
-    this.passportDialog?.addEventListener('close', () => this.suljePikkuseloste());
+    this.passportDialog?.addEventListener('close', () => {
+      this.suljePikkuseloste();
+      document.body.classList.remove('laukku-auki');
+    });
 
     this.turnCard = document.getElementById('actions').closest('.turn-card');
     this.introEl = document.getElementById('intro');
@@ -8692,6 +8695,9 @@ export class UI {
     this.renderFinds();
     void this.paivitaLinssit();
     if (!this.passportDialog.open) this.passportDialog.showModal();
+    // Kapealla ruudulla alanappirivi väistyy laukun alta, jotta
+    // linssin vaikutus karttaan näkyy (css: body.laukku-auki).
+    document.body.classList.add('laukku-auki');
     this.nollaaDialoginVieritys(this.passportDialog);
     this.asemoiLaukku();
   }

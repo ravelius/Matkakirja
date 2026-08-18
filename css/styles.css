@@ -3345,6 +3345,22 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 }
 
 /*
+ * Leveä ruutu (omistaja 18.8.2026): "isoisän matkalaukku voisi olla
+ * iPadille hieman kapeampi. Ja varusteet voisi latoa neljä per rivi.
+ * nyt vähän tyhjäkäyntiä visuaalisesti" — ja tarkennus: "iphonella
+ * kolme per rivi on hyvä". Kapea ruutu pitää siis 520 px:n katon ja
+ * kolme saraketta; leveällä laukku kapenee ja varusteet tiivistyvät
+ * neljään.
+ */
+@media (min-width: 700px) {
+  .dialog-card.passport-card { max-width: 470px; }
+
+  .passport-card .linssi-valikko .linssi-liuskat {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/*
  * Nappi on pyöreä ja kuvansa kokoinen: neliön reunat ja paneelitausta
  * pois, jotta ruudukossa on vain esineitä eikä laatikoita. 64 px on
  * reilusti kosketuskohteen minimin yli ja mahtuu kolmen sarakkeeseen
@@ -5309,6 +5325,13 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
   margin: 0;
   max-height: calc(100dvh - 5.5rem);
 }
+
+/*
+ * Kapean ruudun laukkusäännöt asuvat lehtiarkin kapea-lohkossa
+ * (@media max-width: 699px alempana) — rules.test.mjs:n
+ * ankkurivartija lukee tiedoston ENSIMMÄISEN kapea-lohkon ja olettaa
+ * sen olevan arkin, joten uutta lohkoa ei perusteta tätä ennen.
+ */
 
 /*
  * LAUKKU EI TUMMENNA KARTTAA (omistaja 5.8.2026: "älä tummenna taustaa
@@ -8221,6 +8244,18 @@ body.katselu #newgame-btn { display: none; }
   /* Pohjaan vievä väkänen poistui v666:ssa (omistaja 14.8.2026:
    * "Nuoli alas ja ala navigointi pois kokonaan") — ruudun ylä- ja
    * alareunan napautus vierittää päähän (ui.js kytkeTutkiSelaus). */
+
+  /*
+   * Laukku kapealla ruudulla (omistaja 18.8.2026): "iphonella
+   * matkalaukku voisi olla hieman matalampi jotta karttaa näkyisi
+   * enemmän. piilota myös karttanapit iphonella siksi aikaa kun
+   * matkalaukku on auki jotta pelaaja näkee paremmin miten linssi
+   * muuttaa karttaa." Sisältö vierii dialogissa kuten ennenkin;
+   * body.laukku-auki kytketään js/ui.js openPassportissa ja puretaan
+   * close-käsittelijässä.
+   */
+  .dialog.pillerin-alla { max-height: 72dvh; }
+  body.laukku-auki .actions { display: none; }
 }
 
 /*
