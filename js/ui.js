@@ -339,6 +339,23 @@ const NAKYMAN_ELVYTYSVIIVE = 120;
  * 300 px, joten sitä pienempi luku on mittausvirhe eikä laite.
  */
 const NAKYMAN_VAHIMMAISKORKEUS = 300;
+/*
+ * Visuaaliviewportin oikaisun harvennus (ks. vahdiNakymanKokoa,
+ * oikaisuVahti): näppäimistön ja sanelupalkin animaatio laukoo
+ * resize/scroll-tapahtumia kymmeniä sekunnissa, ja sovitus ajetaan
+ * vasta kun virta on ollut hetken hiljaa — asettunut mitta on se,
+ * josta geometria kannattaa johtaa.
+ */
+const OIKAISUN_HILJAISUUS_MS = 250;
+/*
+ * Paluun vakiintumissilmukka (ks. sovitaTaustapaluu): mitat luetaan
+ * tähän tahtiin niin kauan kuin kesto sallii. Kesto on pitkä, koska
+ * omistajan laitteella mitat ovat palautuneet vasta sekunteja paluun
+ * jälkeen (jäädytetty prosessi + sanelunäppäimistö) — askel on halpa
+ * (pelkkä mittojen luku), joten pitkä silmukka ei maksa mitään.
+ */
+const PALUU_TAHTI_MS = 300;
+const PALUU_KESTO_MS = 8000;
 // Kirjoituskoneen tahti: avaus saa naksua rauhassa, muut tekstit ripeästi.
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
@@ -1838,6 +1855,65 @@ export class UI {
       this.sovitaTaustapaluu();
     };
     document.addEventListener('close', this.peiteVahti, true);
+    /*
+     * VISUAALIVIEWPORTIN OIKAISU (18.8.2026, saman perheen kolmas
+     * kierros — omistajan kuvakaappaus v895-illalta: KOKO
+     * SOVELLUSKEHYS kutistuneena ylävasemmalle, ruudun oikea alakulma
+     * paljasta taustaa, MATKAKIRJASTA-kyltin tekstit sisäkkäin — ja
+     * yläpalkissa iOS:n mikrofonimerkki eli pöllön SANELU oli käytössä).
+     *
+     * iOS:n näppäimistö ja sanelupalkki muuttavat visualViewportia,
+     * ja WKWebView voi samalla siirtää tai kutistaa ASETTELUVIEWPORTIN
+     * toimittamatta window-tason resize-tapahtumaa. Kokovahti
+     * (nakymaVahti) kuuntelee kyllä visualViewportin resizea, mutta se
+     * on EROVERTAILU: kun palkki katoaa ja mitat palaavat lähtöarvoon,
+     * vahti näkee "ei muutosta" — vaikka kehys jäi väärän kokoiseksi
+     * (mitattu Chromiumissa 18.8.2026: vanhentunut geometria + vv-
+     * resize samoilla mitoilla → ei yhtään sovitusta ennen tätä).
+     *
+     * Siksi visualViewportin resize JA scroll johtavat geometrian
+     * uudelleen samalla ankkuriopilla kuin taustapaluu — ei
+     * erovertailua. Harvennus: sovitus ajetaan vasta kun tapahtumat
+     * ovat olleet OIKAISUN_HILJAISUUS_MS hiljaa, joten näppäimistö-
+     * animaation kymmenet tapahtumat maksavat yhden sovituksen.
+     * Kesken kartaneleen (raahaus/nipistys) oikaisu siirtyy
+     * tuonnemmas: sovitus hylkäisi elävän eleen (hylkaaNipistys),
+     * ja eleen oma päätös ajaa fitViewBoxin joka tapauksessa.
+     */
+    this.oikaisuVahti = () => {
+      clearTimeout(this.oikaisuAjastin);
+      this.oikaisuAjastin = setTimeout(() => {
+        if (this.dead || document.hidden) return;
+        if (this.kartanRaahaus) { this.oikaisuVahti(); return; }
+        this.sovitaTaustapaluu();
+      }, OIKAISUN_HILJAISUUS_MS);
+    };
+    window.visualViewport?.addEventListener('resize', this.oikaisuVahti);
+    window.visualViewport?.addEventListener('scroll', this.oikaisuVahti);
+    /*
+     * TEKSTIKENTÄN JÄTTÖ JOHTAA GEOMETRIAN UUDELLEEN (18.8.2026,
+     * omistajan täsmennys: iPadissa on kolmannen osapuolen
+     * SANELUNÄPPÄIMISTÖ, joka avautuu AINA kun MIKÄ TAHANSA pelin
+     * tekstikenttä saa fokuksen — pöllön kysymysrivi, ehdotuslomake,
+     * pro-kirjautuminen — ja jonka koko ja palkit poikkeavat
+     * vakionäppäimistöstä; sen sulkeutuminen voi jättää viewportin
+     * vääräksi ilman yhtään tapahtumaa).
+     *
+     * Siksi vahti on DOKUMENTTITASOLLA eikä yhdessäkään kentässä:
+     * focusout kuplii (toisin kuin blur), joten yksi kuuntelija
+     * kattaa kaikki kentät — myös tulevat — samalla opilla kuin
+     * peiteVahti kattaa kaikki dialogit. Sovitus on idempotentti ja
+     * turha ajo halpa; kenttien välillä liikkuva fokus maksaa vain
+     * ylimääräisen sovituksen.
+     */
+    this.kenttaVahti = (e) => {
+      if (this.dead || document.hidden) return;
+      const el = e.target;
+      const kentta = el && (el.tagName === 'INPUT'
+        || el.tagName === 'TEXTAREA' || el.isContentEditable);
+      if (kentta) this.sovitaTaustapaluu();
+    };
+    document.addEventListener('focusout', this.kenttaVahti, true);
   }
 
   /**
@@ -1851,6 +1927,22 @@ export class UI {
       // välivaiheen muunnos (scale + siirto) ei saa jäädä svg:hen
       // (ks. kartta.js hylkaaNipistys; 18.8.2026, v884:n kaappaus).
       this.kartta.hylkaaNipistys?.();
+      /*
+       * SIVUN VIERITYS NOLLAAN (18.8.2026, kolmas kierros). Sovellus
+       * on kiinteä koko ruudun kehys (css .app: fixed + inset 0) eikä
+       * sivu vieritä koskaan — mutta iOS vierittää asetteluviewporttia
+       * itse, kun näppäimistö tai sanelupalkki avautuu fokusoidulle
+       * kentälle (pöllön kysymysrivi), overflow: hiddenistä
+       * piittaamatta. Jos palautus jää tulematta, kiinteä kehys jää
+       * siirtyneeksi ja ruudun vastakkaiseen laitaan jää paljas
+       * tausta. Oikea vieritys on siis AINA 0,0 — paitsi juuri
+       * silloin, kun tekstikenttä on fokusissa ja iOS tarvitsee
+       * siirtoa näppäimistön tieltä; silloin ei kosketa.
+       */
+      const aktiivinen = document.activeElement;
+      const kentassa = aktiivinen && (aktiivinen.tagName === 'INPUT'
+        || aktiivinen.tagName === 'TEXTAREA' || aktiivinen.isContentEditable);
+      if (!kentassa && (window.scrollX || window.scrollY)) window.scrollTo(0, 0);
       // Pakotettu asettelun luku + viewport-metan uudelleenkirjoitus:
       // sama herätyspari kuin elvytaNakymassa — WKWebView pitää vanhan
       // mitan voimassa, kunnes joku sitä kysyy.
@@ -1863,10 +1955,75 @@ export class UI {
       this.mitoitaArkinKorkeus();
     };
     sovita();
+    /*
+     * VAKIINTUMISSILMUKKA KIINTEIDEN JÄLKIAJOJEN TILALLE (18.8.2026,
+     * kolmas kierros — omistaja: vika tulee AINA sovellusvaihdosta ja
+     * paluusta, vaikka v871:n 400/1600 ms jälkiajot piti kattaa juuri
+     * sen). Kiinteät jälkiajot ovat mittaushetkensä vankeja: iOS voi
+     * jäädyttää taustalle jääneen prosessin, jolloin ajastimet
+     * laukeavat paluussa HETI peräkkäin ennen kuin WKWebView on
+     * palauttanut oikeat mitat — ja sanelunäppäimistö voi muuttaa
+     * palautuvia mittoja vielä sekunteja myöhemmin.
+     *
+     * Siksi paluun jälkeen EI luoteta yhteenkään kiinteään hetkeen
+     * vaan JATKETAAN tarkistamista: silmukka lukee mitat
+     * (visualViewport, ikkuna, dokumentti, vieritys) PALUU_TAHTI_MS
+     * välein PALUU_KESTO_MS ajan ja ajaa sovituksen aina, kun mitat
+     * muuttuivat edellisestä lukemasta TAI dokumentti ei peitä
+     * ruutua (paluunMitat — juuri se jättää mustan kulman). Askel on
+     * halpa: pelkkä mittojen luku, sovitus vain tarpeesta;
+     * ensimmäinen askel ajaa sovituksen aina (v871:n 400 ms:n perua).
+     * Piiloon menevä dokumentti pysäyttää silmukan — paluuVahti
+     * käynnistää uuden esiintulossa.
+     */
     clearTimeout(this.paluuAjastin);
-    clearTimeout(this.paluuJalkiajastin);
-    this.paluuAjastin = setTimeout(sovita, 400);
-    this.paluuJalkiajastin = setTimeout(sovita, 1600);
+    const alku = performance.now();
+    let edellinen = null;
+    const askel = () => {
+      if (this.dead || document.hidden) return;
+      const tila = this.paluunMitat();
+      const muuttui = edellinen !== null && tila.tunniste !== edellinen;
+      if (edellinen === null || muuttui || !tila.kattaa) sovita();
+      edellinen = tila.tunniste;
+      if (performance.now() - alku < PALUU_KESTO_MS) {
+        this.paluuAjastin = setTimeout(askel, PALUU_TAHTI_MS);
+      }
+    };
+    this.paluuAjastin = setTimeout(askel, PALUU_TAHTI_MS);
+  }
+
+  /**
+   * Paluun vakiintumissilmukan mittalukema: yksi tunniste kaikista
+   * näkymän mitoista sekä tieto siitä, peittääkö dokumentti ruudun.
+   *
+   * Kattavuus mitataan DOKUMENTISTA eikä svg:stä (omistajan kaappaus
+   * 18.8.2026: ruudun oikea alakulma oli paljasta taustaa eli
+   * html/body oli ruutua pienempi): zoomaamattomana visuaalinen
+   * viewportti kertoo ruudun todelliset mitat, ja asetteluviewportin
+   * (documentElement) on peitettävä ne — muuten kiinteä sovelluskehys
+   * (css .app: inset 0) jää vajaaksi. Myös vieritysjäämä lasketaan
+   * peittovirheeksi, paitsi tekstikentän fokuksessa, jolloin iOS
+   * vierittää tarkoituksella näppäimistön tieltä.
+   */
+  paluunMitat() {
+    const vv = window.visualViewport;
+    const zoomaton = !vv || Math.abs((vv.scale ?? 1) - 1) < 0.05;
+    const vvW = Math.round(vv?.width ?? 0);
+    const vvH = Math.round(vv?.height ?? 0);
+    const docW = Math.round(document.documentElement?.clientWidth || 0);
+    const docH = Math.round(document.documentElement?.clientHeight || 0);
+    const aktiivinen = document.activeElement;
+    const kentassa = aktiivinen && (aktiivinen.tagName === 'INPUT'
+      || aktiivinen.tagName === 'TEXTAREA' || aktiivinen.isContentEditable);
+    const vieritys = !kentassa && (Math.round(window.scrollX) || Math.round(window.scrollY));
+    // Näppäimistön ollessa auki visuaalinen KORKEUS on asettelua
+    // pienempi — se on kunnossa; virhe on dokumentti ruutua pienempänä.
+    const kattaa = !zoomaton || !vvW
+      || (docW >= vvW - 2 && docH >= vvH - 2 && !vieritys);
+    const tunniste = [vvW, vvH, Math.round(window.innerWidth || 0),
+      Math.round(window.innerHeight || 0), docW, docH,
+      Math.round(window.scrollX), Math.round(window.scrollY)].join('x');
+    return { tunniste, kattaa };
   }
 
   tarkistaNakyma() {
@@ -2180,8 +2337,20 @@ export class UI {
       document.removeEventListener('close', this.peiteVahti, true);
       this.peiteVahti = null;
     }
+    // Visuaaliviewportin oikaisu kuuntelee visualViewporttia.
+    if (this.oikaisuVahti) {
+      window.visualViewport?.removeEventListener('resize', this.oikaisuVahti);
+      window.visualViewport?.removeEventListener('scroll', this.oikaisuVahti);
+      this.oikaisuVahti = null;
+    }
+    clearTimeout(this.oikaisuAjastin);
+    // Tekstikenttävahti (focusout) on dokumentin kuuntelija.
+    if (this.kenttaVahti) {
+      document.removeEventListener('focusout', this.kenttaVahti, true);
+      this.kenttaVahti = null;
+    }
+    // Paluun vakiintumissilmukka ei saa jatkua kuolleessa pelissä.
     clearTimeout(this.paluuAjastin);
-    clearTimeout(this.paluuJalkiajastin);
     // Nipistyksen oma jumivahti (kartta.js ajastaNipistysVahti) ei saa
     // laueta kuolleessa pelissä.
     clearTimeout(this.nipistysVahtiAjastin);

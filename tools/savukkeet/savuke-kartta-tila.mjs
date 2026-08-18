@@ -16,6 +16,17 @@
  *     levossa sammuksissa).
  *  3. Yhden sormen kosketus purkaa jumiutuneen nipistyksen heti, ja
  *     panorointi toimii taas.
+ *  4. Viewport kutistuu ja palautuu ILMAN resize-tapahtumaa pöllön
+ *     ollessa auki (iOS:n sanelupalkki/näppäimistö; omistajan
+ *     kaappaus 18.8.2026 v895-illalta: koko sovelluskehys kutistui
+ *     ylävasemmalle ja MATKAKIRJASTA-kyltin tekstit sisäkkäin, iOS:n
+ *     mikrofonimerkki paloi) → kehys ja kyltti ehjät kolmea reittiä:
+ *     4a kentän blur, 4b visualViewportin tapahtuma SAMOILLA
+ *     mitoilla (erovertailu ei näe sitä), 4c sanelun loppu.
+ *  5. Mitat palautuvat VASTA ~2,5 s taustapaluun jälkeen ilman yhtään
+ *     tapahtumaa (jäädytetty prosessi + sanelunäppäimistö; omistaja:
+ *     "ongelma tulee aina" sovellusvaihdosta ja paluusta) → paluun
+ *     vakiintumissilmukka huomaa myöhäisen muutoksen ja kehys on ehjä.
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
@@ -218,6 +229,118 @@ const panoroinnin = await geometria();
 vaadi('panorointi toimii jumin purun jälkeen',
   panoroinnin.panX !== kosketuksenJalkeen.panX,
   `panX ${kosketuksenJalkeen.panX} -> ${panoroinnin.panX}`);
+
+// --- 4. Viewport kutistuu ja palautuu ilman resize-tapahtumaa ---------
+// pöllön ollessa auki. Chromium toimittaa resize-tapahtumat aina,
+// joten WKWebView-aukko simuloidaan kuten tapauksessa 1: geometriaan
+// kirjoitetaan käsin jälki, jonka tapahtumitta ohi mennyt kutistus ja
+// palautus jättäisi — ja puretaan vain korjauksen omilla laukaisimilla.
+await sivu.evaluate(() => {
+  window.matkakirja.game.polloLoydetty = true;
+  window.matkakirjaPollo.paivitaNakyvyys();
+  window.matkakirjaPollo.avaa();
+  window.matkakirjaPollo.vaihdaTilaan('kirjoitus', { kohdista: true });
+});
+await sivu.waitForTimeout(300);
+/** WKWebView-aukon jälki: vanhentunut muunnos svg:ssä. */
+const vanhenna = () => sivu.evaluate(() => {
+  window.matkakirja.ui.svg.style.transform = 'translate3d(140px, 90px, 0) scale(0.62)';
+});
+/** Kyltti (matkakirjakortti) ei ole pelaajan kaupungin päällä. */
+const kylttiEhja = () => sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const p = ui.svg.parentElement.getBoundingClientRect();
+  const oma = ui.game.cityOf?.();
+  const kohta = oma ? ui.kartta.mapToPane({ x: oma.x, y: oma.y }) : null;
+  const kyltti = ui.factCard?.getBoundingClientRect();
+  if (!kohta || !kyltti) return true;
+  return !(p.left + kohta.x >= kyltti.left && p.left + kohta.x <= kyltti.right
+    && p.top + kohta.y >= kyltti.top && p.top + kohta.y <= kyltti.bottom);
+});
+
+// 4a: kentän blur (näppäimistö/sanelupalkki sulkeutuu) johtaa
+// geometrian uudelleen.
+await vanhenna();
+await sivu.evaluate(() => { window.matkakirjaPollo.kentta.blur(); });
+await sivu.waitForTimeout(600);
+const blurJalkeen = await geometria();
+vaadi('4a: pöllön kentän blur johtaa kehyksen geometrian uudelleen',
+  kunnossa(blurJalkeen), JSON.stringify(blurJalkeen));
+vaadi('4a: kyltti ei ole kaupunkinimen päällä blurin jälkeen',
+  await kylttiEhja());
+
+// 4b: visualViewportin tapahtuma SAMOILLA mitoilla (kutistus ja
+// palautus päättyivät lähtömittaan — kokovahdin erovertailu näkee
+// "ei muutosta") puretaan silti oikaisuvahdilla.
+await vanhenna();
+await sivu.evaluate(() => {
+  window.visualViewport?.dispatchEvent(new Event('resize'));
+  window.visualViewport?.dispatchEvent(new Event('scroll'));
+});
+// Yli oikaisun harvennuksen (250 ms) ja sovituksen 400 ms jälkiajon.
+await sivu.waitForTimeout(900);
+const vvJalkeen = await geometria();
+vaadi('4b: visualViewport-tapahtuma samoilla mitoilla purkaa jäljen',
+  kunnossa(vvJalkeen), JSON.stringify(vvJalkeen));
+
+// 4c: sanelun loppu (merkitseMikki pois-siirtymä — kaikki sanelun
+// loppupolut kulkevat sen kautta) johtaa geometrian uudelleen.
+await vanhenna();
+await sivu.evaluate(() => {
+  const pollo = window.matkakirjaPollo;
+  pollo.merkitseMikki(true);
+  pollo.merkitseMikki(false);
+});
+await sivu.waitForTimeout(600);
+const sanelunJalkeen = await geometria();
+vaadi('4c: sanelun loppu johtaa kehyksen geometrian uudelleen',
+  kunnossa(sanelunJalkeen), JSON.stringify(sanelunJalkeen));
+vaadi('4c: kyltti ei ole kaupunkinimen päällä sanelun jälkeen',
+  await kylttiEhja());
+await sivu.evaluate(() => { window.matkakirjaPollo.sulje(); });
+
+// --- 5. Mitat palautuvat vasta ~2,5 s taustapaluun jälkeen ------------
+// Chromiumissa visualViewportin mittoja ei voi muuttaa toimittamatta
+// tapahtumia, joten WKWebView:n myöhäinen palautus simuloidaan
+// korvaamalla visualViewport kaksoisolennolla, jonka mittoja voi
+// siirtää hiljaa. Pelin kuuntelijat jäävät aitoon olioon — juuri
+// siksi tapaus mittaa vakiintumissilmukkaa eikä tapahtumapolkuja.
+await sivu.evaluate(() => {
+  const aito = window.visualViewport;
+  window.__vvAito = aito;
+  window.__vvFake = {
+    scale: 1,
+    width: aito?.width ?? window.innerWidth,
+    height: aito?.height ?? window.innerHeight,
+    offsetTop: 0, offsetLeft: 0, pageTop: 0, pageLeft: 0,
+    addEventListener: () => {}, removeEventListener: () => {},
+    dispatchEvent: () => true,
+  };
+  Object.defineProperty(window, 'visualViewport', {
+    get: () => window.__vvFake, configurable: true,
+  });
+  // Taustapaluu: paluuVahti käynnistää sovituksen ja vakiintumissilmukan.
+  document.dispatchEvent(new Event('visibilitychange'));
+});
+// Silmukka on ehtinyt asettua: mitat eivät ole muuttuneet kertaakaan.
+await sivu.waitForTimeout(1500);
+// ~2,5 s paluun jälkeen WKWebView oikaisee mitat ilman yhtään
+// tapahtumaa ja jättää svg:hen vanhentuneen jäljen.
+await sivu.waitForTimeout(1000);
+await sivu.evaluate(() => {
+  window.__vvFake.height += 60;
+  window.matkakirja.ui.svg.style.transform = 'translate3d(140px, 90px, 0) scale(0.62)';
+});
+// Seuraava silmukan askel (300 ms välein) huomaa muutoksen ja sovittaa.
+await sivu.waitForTimeout(1200);
+const myohainen = await geometria();
+vaadi('5: vakiintumissilmukka purkaa myöhäisen mittamuutoksen (ei tapahtumia)',
+  kunnossa(myohainen), JSON.stringify(myohainen));
+await sivu.evaluate(() => {
+  Object.defineProperty(window, 'visualViewport', {
+    get: () => window.__vvAito, configurable: true,
+  });
+});
 
 await selain.close();
 palvelin.close();
