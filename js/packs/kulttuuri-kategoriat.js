@@ -6274,56 +6274,81 @@ export const KULTTUURI_KATEGORIAT = {
           + 'keskellä kaupunkia. Illan kruunaa sauna: julkisia saunoja '
           + 'on rannoilla jokaiselle avoinna.',
         artikkeli: {
+          /*
+           * OPASTAITTO (18.8.2026): artikkeli oli vielä vanhaa mallia
+           * (yksi pitkä teksti + kuvalista) eikä nykystandardin
+           * opastaittoa. Sisältö on TÄYSIN ENNALLAAN — samat viisi
+           * kappaletta samoin sanoin ja samat kaksi kuvaa — ne on vain
+           * jaettu jaksoiksi väliotsikoineen, jotta lehti taittuu kuten
+           * Kairon ja Istanbulin oppaat. Ei uusia faktoja, ei uusia
+           * kuvia.
+           */
           nimi: 'Matkailijan Helsinki',
-          teksti: 'Helsinkiä ei tarvitse suunnitella pitkälle. Keskusta '
-            + 'on niin tiivis, että tärkeimmät paikat kiertää jalan, ja '
-            + 'loput matkat hoitaa raitiovaunu — vihreät vaunut ovat '
-            + 'kulkeneet kaduilla vuodesta 1891, ja keskustan ympyrää '
-            + 'kulkevaa linjaa käytetään kiertoajeluna, jolla '
-            + 'nähtävyydet vilistävät ohi tavallisen lipun hinnalla.'
-            + '\n\n'
-            + 'Meri on helsinkiläisten toinen katu. Kauppatorin '
-            + 'laiturilta lähtee lautta Suomenlinnaan, kahdeksalle '
-            + 'saarelle rakennettuun merilinnoitukseen, jota alettiin '
-            + 'muurata 1748 ja joka on nykyään Unescon '
-            + 'maailmanperintökohde. Matka kestää vartin ja kuuluu '
-            + 'tavalliseen joukkoliikennelippuun; kesäisin saarten '
-            + 'nurmilla istutaan eväiden kanssa iltaan asti.'
-            + '\n\n'
-            + 'Uiminen ei lopu kesään eikä rantaan. Keskustan satamassa '
-            + 'voi pulahtaa merikylpylän altaisiin, ja julkiset saunat '
-            + 'ovat palanneet rannoille — löylyn jälkeen mennään '
-            + 'mereen, talvellakin. Sauna on täällä arkinen paikka, '
-            + 'jonne poiketaan yhtä luontevasti kuin kahville.'
-            + '\n\n'
-            + 'Kävelijän reitti kulkee Esplanadin puiston läpi: sen '
-            + 'nurmella on istuttu 1800-luvun alusta asti, ja kesäisin '
-            + 'lavalta soi ilmaiskonsertteja. Toisessa päässä odottavat '
-            + 'Kauppatori ja satama, toisessa design-liikkeiden '
-            + 'korttelit. Oodin kirjastoon kannattaa poiketa, vaikkei '
-            + 'lainaisi mitään — vuonna 2018 avattu puinen talo on '
-            + 'olohuone koko kaupungille.'
-            + '\n\n'
-            + 'Nälkään Helsinki tarjoaa kauppahallin: Vanhassa '
-            + 'kauppahallissa on myyty kalaa, juustoa ja leipää '
-            + 'vuodesta 1889. Torilta ostetaan kesällä herneitä ja '
-            + 'mansikoita, lokakuussa silakkaa suoraan veneistä — ja '
-            + 'kahvia juodaan joka väliin, sillä suomalaiset juovat '
-            + 'sitä henkeä kohti enemmän kuin juuri kukaan muu.',
-          kuvat: [
+          taitto: 'opas',
+          teksti: 'Matkailijan Helsinki on tiivis keskusta, meri ja '
+            + 'sauna.',
+          nosto: 'Lautta merilinnoitukseen kuuluu tavalliseen '
+            + 'joukkoliikennelippuun.',
+          jaksot: [
             {
-              tiedosto: 'Kings-gate-A12.jpg',
-              selite: 'Suomenlinnan Kuninkaanportti ja Kustaanmiekan '
-                + 'kivimuurit. Portti rakennettiin 1750-luvulla '
-                + 'linnoituksen juhlasisäänkäynniksi.',
-              lahde: 'Jisis, Wikimedia Commons (CC BY-SA 4.0)',
+              otsikko: 'Vihreä vaunu hoitaa loput',
+              teksti: 'Helsinkiä ei tarvitse suunnitella pitkälle. Keskusta '
+                + 'on niin tiivis, että tärkeimmät paikat kiertää jalan, ja '
+                + 'loput matkat hoitaa raitiovaunu — vihreät vaunut ovat '
+                + 'kulkeneet kaduilla vuodesta 1891, ja keskustan ympyrää '
+                + 'kulkevaa linjaa käytetään kiertoajeluna, jolla '
+                + 'nähtävyydet vilistävät ohi tavallisen lipun hinnalla.',
             },
             {
-              tiedosto: 'Allas Sea Pool in September 2019.jpg',
-              selite: 'Merikylpylän kannet ja altaat sataman laidalla; '
-                + 'taustalla pyörii maailmanpyörä ja laituriin on '
-                + 'kiinnittynyt matkustajalaiva.',
-              lahde: 'WanderingTrad, Wikimedia Commons (CC BY-SA 4.0)',
+              otsikko: 'Lautta merilinnoitukseen',
+              teksti: 'Meri on helsinkiläisten toinen katu. Kauppatorin '
+                + 'laiturilta lähtee lautta Suomenlinnaan, kahdeksalle '
+                + 'saarelle rakennettuun merilinnoitukseen, jota alettiin '
+                + 'muurata 1748 ja joka on nykyään Unescon '
+                + 'maailmanperintökohde. Matka kestää vartin ja kuuluu '
+                + 'tavalliseen joukkoliikennelippuun; kesäisin saarten '
+                + 'nurmilla istutaan eväiden kanssa iltaan asti.',
+              kuva: {
+                tiedosto: 'Kings-gate-A12.jpg',
+                selite: 'Suomenlinnan Kuninkaanportti ja Kustaanmiekan '
+                  + 'kivimuurit. Portti rakennettiin 1750-luvulla '
+                  + 'linnoituksen juhlasisäänkäynniksi.',
+                lahde: 'Jisis, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Löylyn jälkeen mereen',
+              teksti: 'Uiminen ei lopu kesään eikä rantaan. Keskustan satamassa '
+                + 'voi pulahtaa merikylpylän altaisiin, ja julkiset saunat '
+                + 'ovat palanneet rannoille — löylyn jälkeen mennään '
+                + 'mereen, talvellakin. Sauna on täällä arkinen paikka, '
+                + 'jonne poiketaan yhtä luontevasti kuin kahville.',
+              kuva: {
+                tiedosto: 'Allas Sea Pool in September 2019.jpg',
+                selite: 'Merikylpylän kannet ja altaat sataman laidalla; '
+                  + 'taustalla pyörii maailmanpyörä ja laituriin on '
+                  + 'kiinnittynyt matkustajalaiva.',
+                lahde: 'WanderingTrad, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Esplanadilta Oodiin',
+              teksti: 'Kävelijän reitti kulkee Esplanadin puiston läpi: sen '
+                + 'nurmella on istuttu 1800-luvun alusta asti, ja kesäisin '
+                + 'lavalta soi ilmaiskonsertteja. Toisessa päässä odottavat '
+                + 'Kauppatori ja satama, toisessa design-liikkeiden '
+                + 'korttelit. Oodin kirjastoon kannattaa poiketa, vaikkei '
+                + 'lainaisi mitään — vuonna 2018 avattu puinen talo on '
+                + 'olohuone koko kaupungille.',
+            },
+            {
+              otsikko: 'Kauppahalli ja tori',
+              teksti: 'Nälkään Helsinki tarjoaa kauppahallin: Vanhassa '
+                + 'kauppahallissa on myyty kalaa, juustoa ja leipää '
+                + 'vuodesta 1889. Torilta ostetaan kesällä herneitä ja '
+                + 'mansikoita, lokakuussa silakkaa suoraan veneistä — ja '
+                + 'kahvia juodaan joka väliin, sillä suomalaiset juovat '
+                + 'sitä henkeä kohti enemmän kuin juuri kukaan muu.',
             },
           ],
           lahde: 'Wikipedia',
@@ -10481,6 +10506,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'satama-altaalla. Vastarannalla on vanhoja tiilisiä makasiineja '
             + 'ja kirkontorni.',
           lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          /*
+           * KOLMAS KANSIKUVA (18.8.2026): Kööpenhamina oli ainoa
+           * kategoriallinen kaupunki, jolla oli vain kaksi kansikuvaa.
+           * Kaksi ensimmäistä ovat tiilitorni ja kanaalivene, joten
+           * kolmanneksi valittiin selvästi eri aihe — pronssiveistos —
+           * jonka Pyhän Albanin kirkon torni ankkuroi tunnistettavasti
+           * Kööpenhaminaan. Lisenssi ja tekijä todennettu Commonsin
+           * API:sta, kuva katsottu silmin.
+           */
+          tiedosto: "The Gefion Fountain against background of St. Alban's Church. Copenhagen, Denmark, Northern Europe.jpg",
+          selite: 'Gefionin lähde alaviistosta: valtava pronssihärkä '
+            + 'painaa päänsä alas, takana Gefjon ohjaa valjakkoa huppu '
+            + 'päässä, ja vesi ryöppyää valkoisena patsaan takaa. '
+            + 'Vasemmalla kohoaa Pyhän Albanin kirkon kivinen torni.',
+          lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       /*
