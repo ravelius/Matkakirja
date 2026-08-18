@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v872 — lukija lukee kappaleen kerralla: ei enää uutta lähtöä (intonaatiohyppyä) kesken kappaleen — koko kappale on yksi generointi ja korostuu kerralla, korostusväri puolet aiempaa vaaleampi; aloitus ja kappalehyppy voivat viipyä hetken pidempään (koko kappale generoituu ennen soittoa, ensimmäinen kappale on esipuskuroitu)',
   'v871 — lehden alareuna + kartan taustapaluu (iPad): 1) avaa Firenzen lehti pystyasennossa — paperin alle jää vain kapea (~13 px + kotipalkki) sumea rako, alanapit näkyvät; 2) käy toisessa sovelluksessa ja palaa — alareunan pitää pysyä samana, ei leveää sumeaa kaistaa eikä nappeja piiloon; 3) kierrä vaakaan ja takaisin lehti auki — sama tulos; 4) sama koe lehti kiinni Afrikka-näkymässä: taustapaluun jälkeen kartassa ei vaaleaa pystykaistaa, kartta ei ole työntynyt sivuun eivätkä vasemman ylänurkan tekstit mene päällekkäin (jos tekstit menevät yhä päällekkäin, ota kuvakaappaus — se on eri juurisyy)',
   'v870 — laukun varusteet kerran: Tavaroissa ei enää linssirivejä; Varusteet on pyöreiden varustekuvien ruudukko (3 riviin, ei nimilappuja) + Ei linssiä -kiekko; napautus kytkee kuten ennen, valittu saa messinkirenkaan ja nimi+kuvaus näkyvät alla; pelkillä linsseillä Tavarat sanoo "Ei vielä matkalöytöjä."',
   'v869 — varustekuvat uusittu selkeämmiksi (laukun Tavarat/Varusteet): lasi täyttää ruudun ja sisältö kertoo toiminnan — vuoristo, jokiverkko, kolme värimaata + käyrät, kultainen maa + kirja, radio aaltoineen',

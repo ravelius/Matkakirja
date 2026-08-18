@@ -101,8 +101,13 @@ function kehittajaKoodi() {
  * Yhden pyynnön merkkikatto. Workerin kova raja on 1000
  * (tools/pollo/rajat.js PUHE_TEKSTIN_KATTO); tämä pysyy sen alla,
  * jotta siivousten pyöristykset eivät koskaan leikkaa lausetta kesken.
+ *
+ * 700 → 950 (omistaja 18.8.2026): luenta kulkee nyt kokonaisina
+ * kappaleina (ks. kappaleenPalat), ja katon on siksi katettava
+ * mahdollisimman moni kappale yhdellä pyynnöllä — raja on enää
+ * workerin kovan rajan vartija, ei palakoon säädin.
  */
-export const PUHE_PALA_KATTO = 700;
+export const PUHE_PALA_KATTO = 950;
 
 /*
  * Istunnon estolippu: asetusvirhe (503/403) tarkoittaa, ettei puhe ole
@@ -205,6 +210,48 @@ export function niputaRampilla(virkkeet, portaat = [240, 480], katto = PUHE_PALA
     kertyma = kertyma ? `${kertyma} ${virke}` : virke;
   }
   if (kertyma) palat.push(kertyma);
+  return palat;
+}
+
+/**
+ * Yhden kappaleen palat merkkikohtineen ({ teksti, alku }).
+ *
+ * KOKO KAPPALE ON YKSI PALA aina kun se mahtuu kattoon (omistaja
+ * 18.8.2026: "siinä tulee outo intonaation hyppy, kun lukija lukee
+ * vain osan kappaleesta ja sitten jatkaa seuraavaan lauseeseen
+ * uudella lähdöllä"). Jokainen pala on oma generointinsa ja alkaa
+ * uudella intonaatiolla, joten palaraja kesken kappaleen kuuluu —
+ * virkerajalla pilkkominen ja porrastettu palakoko poistettiin.
+ * Katto pilkkoo virkerajalta vain kappaleen, joka ei mahdu workerin
+ * rajaan; kattoa pidempi yksittäinen virke lähtee omanaan.
+ *
+ * Sama funktio johtaa palat sekä soittimessa (pilkoPaloiksi) että
+ * esipuskurissa (js/lukija.js esipuskuroiLuenta) — puskuri osuu
+ * välimuistiavaimeen vain, jos teksti on täsmälleen sama.
+ */
+export function kappaleenPalat(rivi, katto = PUHE_PALA_KATTO) {
+  const palat = [];
+  let kohta = 0;
+  let kertyma = '';
+  let alku = 0;
+  const tyonna = () => {
+    if (!kertyma) return;
+    palat.push({ teksti: kertyma, alku });
+    kertyma = '';
+  };
+  for (const virke of paloitteleVirkkeiksi(rivi)) {
+    const virkkeenAlku = kohta;
+    kohta += virke.length + 1;
+    if (kertyma && kertyma.length + virke.length + 1 > katto) {
+      tyonna();
+      kertyma = virke;
+      alku = virkkeenAlku;
+      continue;
+    }
+    if (!kertyma) alku = virkkeenAlku;
+    kertyma = kertyma ? `${kertyma} ${virke}` : virke;
+  }
+  tyonna();
   return palat;
 }
 
@@ -873,12 +920,15 @@ export function luoPuheSoitin({
   /**
    * Pilkkoo lisätyn tekstin kappaleiksi ja paloiksi kappaletiedolla.
    *
-   * Porrastus on KAPPALEKOHTAINEN: kappaleen alkupää kulkee kevyinä
-   * paloina (ensimmäinen porras 240 mrk) ja koko kasvaa siitä, jotta
-   * kappalehyppy ja keskeltä sivua aloittaminen eivät odotuta ison
-   * palan generointia. Koko jonon ensimmäinen virke kulkee YKSIN,
-   * jotta luenta alkaa heti. Jokainen pala muistaa merkkikohtansa
-   * kappaleessa (alku) — lukija maalaa sillä kuuluvat virkkeet.
+   * KAPPALE = PALA (omistaja 18.8.2026). Aiempi porrastus (eka virke
+   * yksin, sitten 240/480 mrk:n palat) sai luennan alkuun nopeasti,
+   * mutta jokainen pala on oma generointinsa ja alkaa uudella
+   * intonaatiolla — kesken kappaleen se kuulosti oudolta hypyltä.
+   * Nyt kappale kulkee yhtenä palana (kappaleenPalat pilkkoo vain
+   * workerin rajan ylittävän kappaleen), aloitusviive katetaan
+   * esipuskurilla (js/lukija.js esipuskuroiLuenta). Jokainen pala
+   * muistaa merkkikohtansa kappaleessa (alku) — lukija maalaa sillä
+   * kuuluvan alueen, nyt siis koko kappaleen.
    */
   const pilkoPaloiksi = (teksti) => {
     const uudet = [];
@@ -886,37 +936,9 @@ export function luoPuheSoitin({
       if (!rivi.trim()) continue;
       const kappale = tila.kappaleita;
       tila.kappaleita += 1;
-      const portaat = [240, 480];
-      let kappaleessa = 0; // valmiita paloja tässä kappaleessa
-      let kohta = 0; // seuraavan virkkeen merkkikohta kappaleessa
-      let kertyma = '';
-      let kertymanAlku = 0;
-      const tyonna = () => {
-        if (!kertyma) return;
-        uudet.push({ teksti: kertyma, kappale, alku: kertymanAlku });
-        kappaleessa += 1;
-        kertyma = '';
-      };
-      for (const virke of paloitteleVirkkeiksi(rivi)) {
-        const virkkeenAlku = kohta;
-        kohta += virke.length + 1;
-        // Koko jonon ensimmäinen virke yksin — luenta käyntiin heti.
-        if (!(palat.length + uudet.length) && !kertyma) {
-          uudet.push({ teksti: virke, kappale, alku: virkkeenAlku });
-          kappaleessa += 1;
-          continue;
-        }
-        const raja = portaat[kappaleessa] ?? PUHE_PALA_KATTO;
-        if (kertyma && kertyma.length + virke.length + 1 > raja) {
-          tyonna();
-          kertyma = virke;
-          kertymanAlku = virkkeenAlku;
-          continue;
-        }
-        if (!kertyma) kertymanAlku = virkkeenAlku;
-        kertyma = kertyma ? `${kertyma} ${virke}` : virke;
+      for (const pala of kappaleenPalat(rivi)) {
+        uudet.push({ ...pala, kappale });
       }
-      tyonna();
     }
     return uudet;
   };

@@ -8361,13 +8361,17 @@ button.lukija-nappi.lukee,
  * rytmissä?"). Ilman rajapintaa koko kohta saa kevyen korostuksen
  * (.lukija-korostus). Meripihka on sama sävy kuin kaiuttimen
  * luentatilassa — yksi väri kertoo kaikkialla "tätä luetaan".
+ *
+ * Voimakkuus puolitettiin 18.8.2026 (omistaja): kun luenta kulkee
+ * kokonaisina kappaleina, maalattu alue on virkkeen sijaan koko
+ * kappale — täydellä voimalla se olisi keltainen laatta.
  */
 ::highlight(lukija-luenta) {
-  background-color: rgba(234, 184, 78, 0.32);
+  background-color: rgba(234, 184, 78, 0.16);
 }
 
 .lukija-korostus {
-  background: rgba(234, 184, 78, 0.16);
+  background: rgba(234, 184, 78, 0.08);
   border-radius: 2px;
 }
 
@@ -8377,7 +8381,7 @@ button.lukija-nappi.lukee,
  * maalataan siksi omalla säännöllään, kun soiva pala kattaa kohdan
  * alun. Tavallisessa kappaleessa sama väri kahdesti ei erotu. */
 .lukija-eka-kirjain::first-letter {
-  background-color: rgba(234, 184, 78, 0.32);
+  background-color: rgba(234, 184, 78, 0.16);
 }
 
 /* Sivu vierii luennan perässä kohdan alkuun; tarttuva otsikkorivi ei
