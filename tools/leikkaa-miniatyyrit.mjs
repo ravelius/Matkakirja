@@ -104,6 +104,25 @@ for (const nimi of tiedostot) {
         || (y > 0 && tausta[p - L]) || (y < K - 1 && tausta[p + L]);
       if (rajalla) d[p * 4 + 3] = 140;
     }
+
+    /*
+     * SÄVYTYS KARTAN POHJAAN (omistaja 18.8.2026: "piirustusten
+     * värisävy aivan samaksi kuin karttasivun pohja"). Generoitu
+     * paperi on kylmempi ja vaaleampi (~#fbf4dc) kuin värikartan
+     * maapohja #f3e8ce, ja ero näkyy varsinkin suurennoksessa.
+     * Valkotasapaino kanavittain: mitattu paperinsävy (tr/tg/tb)
+     * kuvautuu täsmälleen pohjaväriin, ja tummat musteviivat
+     * lämpenevät samassa suhteessa huomaamattomasti. Sama kuvaus on
+     * tools/savyta-miniatyyrit.mjs:ssä jo leikatuille kuville.
+     */
+    const KOHDE = [243, 232, 206];
+    const kerroin = [KOHDE[0] / (tr || 1), KOHDE[1] / (tg || 1), KOHDE[2] / (tb || 1)];
+    for (let p = 0; p < L * K; p++) {
+      if (!d[p * 4 + 3]) continue;
+      for (let k = 0; k < 3; k++) {
+        d[p * 4 + k] = Math.min(255, Math.round(d[p * 4 + k] * kerroin[k]));
+      }
+    }
     piirto.putImageData(kuvadata, 0, 0);
     return kanvaasi.toDataURL('image/webp', 0.9).split(',')[1];
   }, { b64: data });

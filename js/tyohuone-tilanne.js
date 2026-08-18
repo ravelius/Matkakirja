@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v877 — miniatyyrit sävytetty kartan pohjaväriin (kaikki 120): piirroksen paperi ei enää hohda vaaleampana kartan päällä — katso esim. Firenzen tai Helsingin kartta ja suurennos; uudet kuvat saavat sävyn automaattisesti leikkurista',
   'v876 — oppaan vuosisää samalle pohjalle kuin lehden: avaa Firenzen Matkailijan opas ja napauta Milloin matkaan -laatikon kuvaajaa — aukeaa sama sääkortti kuin lehden vuosiennusteesta (otsikko, luonnehdinta ja lähderivi graafin alla), napautus/Esc sulkee kortin muttei opasta; oppaan oma pelkistetty suurennos poistui',
   'v875 — E00-lehtien täydennys: Soulissa uusi aihesivu Arki ja ilta (telttakojut, kylpylä, PC bang), Shanghaissa Arki (avioliittotori, cifantuan-aamiainen, shanghainkieli), Tripolissa Kauppa ja karavaanit (Sahara, Ghadames, Philadelphia-fregatti) — jokaisessa minitehtävä sivun lopussa; Bagdadin, Teheranin ja Tripolin etusivuille avauskuvakaruselli (3 kuvaa/kaupunki, Commons) — avaa kaikki viisi lehteä',
   'v874 — laukun hionta: iPadilla laukku kapeampi (520 → 470 px) ja varusteet neljässä sarakkeessa (iPhonella kolme); iPhonella laukku matalampi (72 dvh) ja alanappirivi piiloutuu laukun ollessa auki, jotta linssin vaikutus karttaan näkyy; pöllöesittelyn lopusta poistui virke "Tasonnousu ei tuo etuja…" (i-napin galleria)',
