@@ -10,7 +10,7 @@
  * Chromiumin kanvaasilla samassa ajossa. Tyyli on varustekuvien
  * perhettä (lämmin guassi + musteviivat pergamentilla), mutta aihe on
  * HAHMOMUOTOKUVA: sama pöllö vanhenee ja saa rekvisiittaa tasolta
- * toiselle. Untuvikosta Suurtietäjäksi.
+ * toiselle. Untuvikosta Tietäjäksi iänikuiseksi.
  *
  * Käyttö:  NODE_USE_ENV_PROXY=1 node tools/generoi-tietaja-avatarit.mjs [avain …]
  *          Avain on muotoa taso-01 (ja viisas-pollo); ilman

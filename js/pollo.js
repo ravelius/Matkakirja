@@ -1219,6 +1219,15 @@ class Pollo {
      * paikalleen itsestään (polloAnkkuri).
      */
     this.kiinnita();
+    const kupla = this.varmistaKupla();
+    kupla.classList.remove('pollo-vihje-juhla');
+    kupla.textContent = teksti;
+    kupla.hidden = false;
+    this.asetaVihjeenPaikka();
+  }
+
+  /** Kupla bodyyn kerran; sama elementti palvelee vihjettä ja juhlaa. */
+  varmistaKupla() {
     if (!this.vihje) {
       this.vihje = polloElementti('div', 'pollo-vihje');
       // role="status": ruudunlukija kertoo vihjeen ilman että se
@@ -1226,8 +1235,51 @@ class Pollo {
       this.vihje.setAttribute('role', 'status');
       this.doc.body.appendChild(this.vihje);
     }
-    this.vihje.textContent = teksti;
-    this.vihje.hidden = false;
+    return this.vihje;
+  }
+
+  /**
+   * JUHLAKUPLA: iso avatar, kalevalainen värssy ja onnittelulause
+   * (omistajan tilaus 18.8.2026). Tietäjätason nousu ei anna mitään
+   * muuta kuin nimikkeen, joten ilmoitus on koko palkinto — ja emo
+   * lausuu sen. Sama kuplaperhe kuin vihjeellä: sama paperi, sama
+   * kärki, sama paikannus. Vain sisältö on juhlava.
+   *
+   * @param {object} p
+   * @param {string} p.teksti onnittelulause (pakollinen; ilman sitä ei kuplaa).
+   * @param {string} [p.kuva] tason avatarin polku.
+   * @param {string[]} [p.sakeet] värssyn säkeet omille riveilleen.
+   */
+  naytaOnnittelu({ teksti = '', kuva = '', sakeet = [] } = {}) {
+    if (!teksti || this.auki || this.nappi.hidden) return;
+    this.kiinnita();
+    const kupla = this.varmistaKupla();
+    kupla.classList.add('pollo-vihje-juhla');
+    kupla.replaceChildren();
+    if (kuva) {
+      const kuvake = document.createElement('img');
+      kuvake.className = 'pollo-vihje-avatar';
+      kuvake.src = kuva;
+      kuvake.alt = '';
+      kuvake.decoding = 'async';
+      kuvake.draggable = false;
+      /*
+       * Kuva muuttaa kuplan korkeutta latautuessaan, ja kupla on
+       * asemoitu alareunastaan napin yläpuolelle — ilman uutta
+       * mittausta se hyppäisi paikaltaan juuri kun pelaaja katsoo sitä.
+       */
+      kuvake.addEventListener('load', () => this.asetaVihjeenPaikka(), { once: true });
+      kupla.appendChild(kuvake);
+    }
+    if (sakeet.length) {
+      const varssy = polloElementti('p', 'pollo-vihje-varssy');
+      for (const sae of sakeet) {
+        varssy.appendChild(polloElementti('span', 'pollo-vihje-sae', sae));
+      }
+      kupla.appendChild(varssy);
+    }
+    kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', teksti));
+    kupla.hidden = false;
     this.asetaVihjeenPaikka();
   }
 
@@ -3120,6 +3172,15 @@ export function polloSulje() {
  */
 export function polloVihje(teksti) {
   nykyinenPollo?.naytaVihje(teksti);
+}
+
+/**
+ * Emon onnittelukupla tietäjätason noususta (js/ui.js
+ * naytaTietajaNousut): iso avatar, värssy ja onnittelulause samassa
+ * kuplassa. Sama kupla kuin vihjeellä, juhlavassa asussa.
+ */
+export function polloOnnittelu(sisalto) {
+  nykyinenPollo?.naytaOnnittelu(sisalto);
 }
 
 /** Vihjekupla pois. */

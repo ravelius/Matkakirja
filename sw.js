@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.862';
+const CACHE = 'matkakirja-2026-08-09.863';
 const SHELL = [
   './',
   './index.html',
@@ -29,6 +29,8 @@ const SHELL = [
   './js/pollo-haku.js',
   './js/game.js',
   './js/tietajatasot.js',
+  './js/tietajagalleria.js',
+  './js/minipopup.js',
   './js/ai.js',
   './js/rules.js',
   './js/pack.js',
@@ -368,6 +370,21 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tokio-uenon-puisto.webp',
   './assets/kartat/miniatyyrit/tokio-shitamachi-museo.webp',
   './assets/tietaja/viisas-pollo.jpg',
+  /*
+   * Tietäjätasojen muotokuvat (18.8.2026): matkalaukun rivin kuvake,
+   * tasonnousun juhlakupla ja tasogallerian ruudukko. Kymmenen pientä
+   * jpg:tä — offline-pelissä laukku ei saa avautua tyhjine kehyksineen.
+   */
+  './assets/tietaja/taso-01.jpg',
+  './assets/tietaja/taso-02.jpg',
+  './assets/tietaja/taso-03.jpg',
+  './assets/tietaja/taso-04.jpg',
+  './assets/tietaja/taso-05.jpg',
+  './assets/tietaja/taso-06.jpg',
+  './assets/tietaja/taso-07.jpg',
+  './assets/tietaja/taso-08.jpg',
+  './assets/tietaja/taso-09.jpg',
+  './assets/tietaja/taso-10.jpg',
   './assets/kartat/miniatyyrit/soul-gyeongbokgung.webp',
   './assets/kartat/miniatyyrit/soul-bukchonin-hanok-kyla.webp',
   './assets/kartat/miniatyyrit/soul-changdeokgung.webp',

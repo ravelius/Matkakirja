@@ -86,8 +86,10 @@ päiväkirjamerkinnät. Matka jatkuu, kun astut ulos koneesta.
 - **Tietäjäpisteet ja tietäjätasot:** uusi kaupunki 10, uusi lauta 50,
   vaikea kysymys 25, pulma 25 ja unohdettu aarre 100 pistettä; tietoprosentti
   kertoo osumatarkkuuden. Pisteet nostavat nimikettä Untuvikosta (0 tp)
-  Suurtietäjään (2400 tp) — nousu ei anna muuta kuin nimikkeen, ja pöllö
-  onnittelee jokaisesta. Passi saa leiman jokaisesta laudasta, ja leimat
+  Tietäjäksi iänikuiseksi (2400 tp) — nousu ei anna muuta kuin nimikkeen, ja
+  pöllö onnittelee jokaisesta omalla muotokuvallaan ja kalevalaisella
+  värssyllä. Matkalaukun tietäjärivi näyttää nykyisen tason avatarin ja
+  edistymispalkin, ja rivin i-nappi avaa kaikki kymmenen tasoa gallerian. Passi saa leiman jokaisesta laudasta, ja leimat
   säilyvät pelikertojen yli.
 - **Käsin piirretyn aarrekartan ulkoasu:** pergamentti, mustepiirretty
   rannikko, kompassiruusu, maamerkit ja filmivinjetti; tekstit naksuvat

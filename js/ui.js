@@ -105,12 +105,17 @@ import {
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import {
-  POLLO_AARRE, polloAnkkuri, polloPaivitaNakyvyys, polloSulje, polloVihje, polloVihjePois,
+  POLLO_AARRE, polloAnkkuri, polloOnnittelu, polloPaivitaNakyvyys, polloSulje, polloVihje,
+  polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proOsio } from './ehdotukset.js';
 import { taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
-import { seuraavaTietajataso, tietajataso } from './tietajatasot.js';
+import {
+  seuraavaTietajataso, tietajaAvatar, tietajataso, tietajatasonOsuus, varssynSakeet,
+} from './tietajatasot.js';
+// Matkalaukun i-napin tasogalleria (minipopup-palikan ensimmäinen käyttäjä).
+import { avaaTietajagalleria } from './tietajagalleria.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 
@@ -1527,9 +1532,13 @@ export class UI {
      * 60 tietäjäpistettä (uusi lauta 50 + uusi kaupunki 10), mikä
      * ylittää tason 2 rajan (40 tp) jo ennen kuin yhtään laattaa on
      * käännetty. Siksi jono eikä pelkkä vaikeneminen: ennen löytymistä
-     * kuplan teksti pannaan talteen ja puretaan paljastuksen jälkeen
-     * (puraPolloJono) — muuten pelaaja menettäisi ensimmäisen
+     * kuplan sisältö pannaan talteen ja puretaan paljastuksen jälkeen
+     * (naytaTietajaNousut) — muuten pelaaja menettäisi ensimmäisen
      * tietäjätasonsa onnittelun kokonaan.
+     *
+     * Jonon alkiot ovat olioita ({ teksti, kuva, sakeet }), koska
+     * jonossa on kahdenlaisia kuplia: tavallinen vihje (pelkkä teksti)
+     * ja tason nousun juhlakupla (avatar + värssy + onnittelu).
      */
     this.polloJono = [];
 
@@ -1581,10 +1590,20 @@ export class UI {
   polloKupla(teksti) {
     if (!teksti || this.dead) return;
     if (this.game?.polloLoydetty === false) {
-      this.polloJono.push(teksti);
+      this.polloJono.push({ teksti });
       return;
     }
     polloVihje(teksti);
+  }
+
+  /**
+   * Yksi jonosta purettu kupla oikeaan asuunsa: juhlakupla, jos
+   * mukana on avatar tai värssy, muuten tavallinen vihjekupla.
+   */
+  naytaPolloKupla(kupla) {
+    if (!kupla?.teksti) return;
+    if (kupla.kuva || kupla.sakeet?.length) polloOnnittelu(kupla);
+    else polloVihje(kupla.teksti);
   }
 
   /* --- näkymän koko ja sen elpyminen taustalta ---------------------- */
@@ -4534,15 +4553,14 @@ export class UI {
     const p = game.player;
     this.passportProgress.textContent = '';
 
-    const rivi = (label, value, ikoni = null) => {
+    /*
+     * Rivi palauttaa itsensä, jotta kutsuja voi ripustaa siihen omansa
+     * (tietäjärivin avatar ja i-nappi). Kuvakeparametria ei ole:
+     * matkalohkon ainoa kuva on tietäjän muotokuva, ja se on kuva eikä
+     * viivakuvake — yhden käyttäjän parametri olisi vain kiertotie.
+     */
+    const rivi = (label, value) => {
       const row = html('div', 'find');
-      if (ikoni) {
-        const kuva = viivaIkoni(ikoni);
-        if (kuva) {
-          kuva.classList.add('find-ikoni');
-          row.appendChild(kuva);
-        }
-      }
       row.appendChild(html('span', 'find-text', label));
       row.appendChild(html('span', 'find-value', value));
       this.passportProgress.appendChild(row);
@@ -4555,20 +4573,58 @@ export class UI {
 
     /*
      * TIETÄJÄRIVI: nimike ja pisteet samassa arvossa ("Kartanlukija ·
-     * 145 tp"), pöllön kuvake rivin edessä. Pöllö on se, joka onnittelee
-     * tason noususta, joten sen kuva kuuluu juuri tälle riville.
+     * 145 tp"), ja rivin edessä NYKYISEN TASON AVATAR pyöreänä
+     * kuvakkeena (omistajan tilaus 18.8.2026). Ennen tässä oli pöllön
+     * viivakuvake; muotokuva kertoo saman asian ja lisäksi sen, kuinka
+     * pitkällä matka on — kuva vaihtuu joka nousussa.
      */
     const pisteet = p.xp ?? 0;
     const taso = tietajataso(pisteet);
-    rivi('Tietäjä', `${taso.nimi} · ${pisteet} tp`, 'pollo');
+    const tietajaRivi = rivi('Tietäjä', `${taso.nimi} · ${pisteet} tp`);
+    const avatar = document.createElement('img');
+    avatar.className = 'find-avatar';
+    avatar.src = tietajaAvatar(taso);
+    avatar.alt = '';
+    avatar.decoding = 'async';
+    avatar.draggable = false;
+    tietajaRivi.prepend(avatar);
     /*
-     * Seuraava raja hienovaraisesti oman rivinsä alle: se on vihje eikä
-     * mittari, joten se on pienemmällä ja himmeämmällä. Ylimmällä
-     * tasolla riviä ei ole lainkaan — "seuraava: ei mitään" on huonompi
-     * kuin hiljaisuus.
+     * i-NAPPI RIVIN PERÄÄN (omistajan tilaus 18.8.2026): mistä pisteet
+     * tulevat ja mitä tasoja on olemassa. Selitys ei mahdu laukkuun,
+     * joten se on minipopupissa (js/tietajagalleria.js) — pikkuseloste
+     * ei riitä, koska mukana on kymmenen kuvan ruudukko.
+     *
+     * Nappi lainaa pikkuselosteen `seloste-nappi`-asun: samassa
+     * laukussa on jo Aarnin luettelon i-nappi, eivätkä kaksi i-nappia
+     * saa näyttää kahdelta eri napilta.
+     */
+    const info = html('button', 'seloste-nappi tietaja-info', 'i');
+    info.type = 'button';
+    info.title = 'Tietäjän tie';
+    info.setAttribute('aria-label', 'Mikä tietäjätaso on?');
+    info.addEventListener('click', () => avaaTietajagalleria(pisteet));
+    tietajaRivi.appendChild(info);
+
+    /*
+     * EDISTYMISPALKKI rivin alle: täyttyy nykyisen tason alusta
+     * seuraavan rajaan ja nollautuu noustessa. Palkki on ohut ja
+     * kullanvärinen — mittari, ei hälytin. Ylimmällä tasolla sitä ei
+     * piirretä lainkaan, koska täysi palkki ilman seuraavaa rajaa
+     * lupaisi jotain mitä ei ole.
      */
     const seuraava = seuraavaTietajataso(pisteet);
     if (seuraava) {
+      const palkki = html('div', 'tietaja-palkki');
+      const tayte = html('div', 'tietaja-palkki-tayte');
+      tayte.style.width = `${Math.round(tietajatasonOsuus(pisteet) * 100)}%`;
+      palkki.appendChild(tayte);
+      this.passportProgress.appendChild(palkki);
+      /*
+       * Seuraava raja hienovaraisesti palkin alle: se on vihje eikä
+       * mittari, joten se on pienemmällä ja himmeämmällä. Ylimmällä
+       * tasolla riviä ei ole lainkaan — "seuraava: ei mitään" on
+       * huonompi kuin hiljaisuus.
+       */
       this.passportProgress.appendChild(html(
         'p',
         'tietaja-seuraava',
@@ -10724,16 +10780,27 @@ export class UI {
      * (uusi lauta 50 + uusi kaupunki 10) eli jo tason 2 (40 tp).
      * Jono puretaan seuraavassa tapahtumaerässä löydön jälkeen.
      */
+    /*
+     * KUPLAN SISÄLTÖ: uuden tason avatar, sen kalevalainen värssy ja
+     * onnittelulause (omistajan tilaus 18.8.2026). Kolme osaa samassa
+     * kuplassa — kuva kertoo, kuka puhuu, värssy antaa hetkelle juhlan
+     * ja lause sen, mistä on kyse.
+     */
+    const juhla = (taso) => ({
+      teksti: taso.onnittelu,
+      kuva: tietajaAvatar(taso),
+      sakeet: varssynSakeet(taso.varssy),
+    });
     if (this.game.polloLoydetty === false) {
-      for (const taso of nousut) this.polloJono.push(taso.onnittelu);
+      for (const taso of nousut) this.polloJono.push(juhla(taso));
       return;
     }
     // Odottaneet kuplat ensin, sitten tämän hetken nousut.
     const jono = this.polloJono;
     this.polloJono = [];
-    for (const teksti of [...jono, ...nousut.map((t) => t.onnittelu)]) {
+    for (const kupla of [...jono, ...nousut.map(juhla)]) {
       if (this.dead) return;
-      polloVihje(teksti);
+      this.naytaPolloKupla(kupla);
       await this.wait(this.reducedMotion ? 0 : TIETAJAKUPLA_MS);
     }
   }

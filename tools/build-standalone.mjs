@@ -211,6 +211,13 @@ const MODULES = [
   // ja maalehti tuovat sen; moduuli tuo ehdotukset ja ui-apurit, jotka
   // ovat yllä).
   'js/tekijakortti.js',
+  /*
+   * Minipopup ennen tasogalleriaa ja tasogalleria ennen ui.js:ää:
+   * galleria tuo minipopupin, ui.js gallerian. Molemmat tuovat lisäksi
+   * ui-apurit ja tietajatasot, jotka ovat jo yllä.
+   */
+  'js/minipopup.js',
+  'js/tietajagalleria.js',
   // Mallin B pilotit ennen ui.js:ää (ui tuo ne).
   'js/liput.js',
   'js/karttazoom.js',
