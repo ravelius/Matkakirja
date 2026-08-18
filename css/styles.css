@@ -5773,8 +5773,15 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
   /* Vaalea harso + sumennettu pelinäkymä mustan kalvon sijaan
    * (omistajan kokeilutilaus 18.8.2026); tekstit tummalla musteella.
    * Harso on tiheähkö, jotta blurin puuttuessakin (vanha selain)
-   * tumma teksti erottuu. */
-  background: rgba(243, 232, 206, 0.62);
+   * tumma teksti erottuu.
+   *
+   * TIHEYS 0,62 → 0,90 (omistaja 18.8.2026: pöllön paljastuskortin
+   * "selitysteksti on vähän epäselvän näköinen"). Alla oleva
+   * .dialog::backdrop on 72 % mustaa, joten 38 % läpikuultoa sekoitti
+   * pergamentin mudansävyyn ja pitkän luettavan kontrasti putosi
+   * paikoin alle 4:1. Sumennus säilyy tunnelmana, mutta väri ei enää
+   * vaihtele sen mukaan, mitä kartalla sattuu olemaan takana. */
+  background: rgba(243, 232, 206, 0.9);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   z-index: 20;
@@ -5847,8 +5854,10 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 .reveal-caption .reveal-huudahdus {
   font-style: italic;
   font-size: 1.08rem;
-  color: #5a3c14;
-  text-shadow: 0 1px 6px rgba(255, 250, 236, 0.8);
+  color: #4a3009;
+  /* Vaalea hohde poistettu 18.8.2026: mustaa korttia vasten se
+     irrotti tekstin taustasta, mutta v894:n vaalealla harsolla se
+     vaalensi juuri kirjaimen rajapikselit ja teki reunoista sumeat. */
 }
 
 /* AI-piirretty aarre nousee mustasta kortin keskelle ilman kehyksiä
@@ -5876,13 +5885,11 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
   font-size: clamp(1.4rem, 4.5vmin, 2rem);
   letter-spacing: 0.05em;
   color: #2f2008;
-  text-shadow: 0 1px 8px rgba(255, 250, 236, 0.85);
 }
 
 .reveal-caption span {
-  color: #46331f;
+  color: #3a2915;
   font-size: 0.98rem;
-  text-shadow: 0 1px 5px rgba(255, 250, 236, 0.8);
 }
 
 .quiz-verdict {
@@ -8622,17 +8629,26 @@ button.lukija-nappi.lukee,
   color: rgba(40, 30, 18, 0.92);
 }
 
-.reveal-isoisa {
+/*
+ * TARKKUUS: valitsimessa on OLTAVA kaksi luokkaa. Yleissääntö
+ * `.dialog p` (styles.css:5477, väri #5a4326) on tarkempi kuin paljas
+ * `.reveal-isoisa`, joten tämän lohkon oma väri ei ole koskaan
+ * purrut — pöllökortin pisin luettava piirtyi vaalealla
+ * yleismusteella vaalean harson päälle, ja juuri se näytti
+ * omistajasta epäselvältä (18.8.2026).
+ */
+.reveal-caption .reveal-isoisa {
   margin: 0.5rem 0 0.1rem;
   font-style: italic;
   font-size: 1rem;
   line-height: 1.5;
   max-width: 26rem;
   /* Paljastuskalvo on vaalea ja sumennettu (18.8.2026), joten pitkä
-   * luettava on tummaa mustetta; vaalea hohde irrottaa sen sumeasta
-   * taustasta myös kuvan hehkun vierellä. */
-  color: #46331f;
-  text-shadow: 0 1px 5px rgba(255, 250, 236, 0.8);
+   * luettava on tummaa mustetta. HOHDE POISTETTU ja muste tummennettu
+   * (omistaja 18.8.2026, pöllökortti): 5 px sumea vaalea varjo söi
+   * kursiivin ohuet vedot, ja juuri tämä kappale on kortin pisin
+   * luettava — se kärsi siitä eniten. */
+  color: #2b1d0c;
 }
 
 .reveal-isoisa-nimio {
@@ -12328,6 +12344,25 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 .nahtavyys-ensikuva.kuva-pysty { max-width: min(46%, 420px); }
 
 /*
+ * KAPEA RUUTU (omistajan iPhone-kaappaus 18.8.2026 Firenzen Galleria
+ * dell'Accademiasta: "kuva näkyy tässä liian pienellä"). 46 % oli
+ * mitoitettu leveän kortin rytmiin, mutta 390 px:n puhelimessa kortin
+ * sisäleveys on ~340 px — pystykuvaksi jää 155 px eli postimerkki, ja
+ * selite katkeaa kahden sanan riveiksi sen alle. Puhelimessa avauskuva
+ * saa siis koko palstan kuten vaakakuvakin; sääntö osuu kaikkien
+ * kaupunkien nähtävyysjuttuihin kerralla, koska ensikuvaluokan lisää
+ * nahtavyydet.js jokaisen jutun ensimmäiseen kuvaan.
+ *
+ * TEKSTIN LOMASSA OLEVAT KUVAT EIVÄT MUUTU: .nahtavyys-kuvakehyksen
+ * oma min(58%, 300px) ja kelluvat .nahtavyys-taittokuvat pysyvät
+ * pieninä, koska omistaja tilasi ne nimenomaan pieniksi 8.8.2026
+ * ("pieni kuva tekstin lomassa, ei koko palstan levyinen").
+ */
+@media (max-width: 699px) {
+  .nahtavyys-ensikuva.kuva-pysty { max-width: 100%; }
+}
+
+/*
  * Tekstin lomaan taitetut kelluvat pikkukuvat (omistajan tilaus
  * 16.8.2026 opasartikkeliin: "Kuvia pitää lisätä näkymään
  * taitettuna sivulle eri kohtiin"). Kuvat kelluvat vuorotellen
@@ -15342,13 +15377,20 @@ dialog.minipopup:focus-visible { outline: none; }
   align-items: center;
   gap: 0.9rem;
   margin: 0 0 0.7rem;
+  /* Turvaventtiili kaikkein kapeimmille ruuduille: isompi avatar
+     (18.8.2026) putoaa mieluummin tekstin alle keskitettynä kuin
+     puristaa selityksen kahden sanan levyiseksi palstaksi. */
+  flex-wrap: wrap;
 }
 
 .tietaja-galleria-selitys {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.55;
-  flex: 1;
+  /* Perusleveys, jonka alle selitys ei kutistu ennen rivitystä.
+     8,5 rem pitää selityksen kuvan rinnalla 360 px:n puhelimessa; sitä
+     kapeammilla flex-wrap pudottaa kuvan tekstin alle keskitettynä. */
+  flex: 1 1 8.5rem;
 }
 
 .tietaja-nykyinen {
@@ -15359,9 +15401,16 @@ dialog.minipopup:focus-visible { outline: none; }
   flex: none;
 }
 
+/*
+ * Nykyisen tason avatar (omistaja 18.8.2026: "Iso kuva voisi olla
+ * vielä isompi"). 6,4 rem → min(9rem, 40vw): 360 px:n puhelimessa
+ * 9 rem = 144 px, jolloin selitykselle jää yhä yli 9,5 rem eikä rivi
+ * katkea, ja sitä kapeammilla vw-katto pienentää kuvaa ennen kuin
+ * flex-wrap ehtii pudottaa sen omalle rivilleen.
+ */
 .tietaja-nykyinen-kuva {
-  width: 6.4rem;
-  height: 6.4rem;
+  width: min(9rem, 40vw);
+  height: min(9rem, 40vw);
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(122, 85, 20, 0.6);
