@@ -636,14 +636,16 @@ function piirraLuvut(kohde) {
     + 'Rivit ovat suurin puute ensin: mitä pidempi matka täyteen, sitä '
     + 'ylempänä. Luvut lasketaan samoista paketeista kuin taulu.'));
   kohde.appendChild(html('p', 'tk-selite',
-    'Kaikista-sarake laskee mannerrivit, joten porttikaupungit '
-    + '(Istanbul, Kairo, Teheran) ovat siinä kahdesti — ne kuuluvat '
-    + 'kahdelle laudalle. Kohdesarakkeet (Jutut, Miniat.) laskevat '
+    'Luvut laskevat mannerrivit, joten porttikaupungit (Istanbul, '
+    + 'Kairo, Teheran) ovat kokonaismäärissä kahdesti — ne kuuluvat '
+    + 'kahdelle laudalle. Kohderivit (Jutut, Miniat.) laskevat '
     + 'kohdekarttojen kohteita, eivät kaupunkeja.'));
   const kotelo = html('div', 'tk-vieri');
   const taulu = html('table', 'tk-taulu tk-luvut');
   const otsikko = html('tr');
-  for (const t of ['Osa', 'Tehty', 'Kaikista', 'Puuttuu']) {
+  // Kaikista-sarake poistui (omistaja 18.8.2026: "Onko se turha?"
+  // — oli: Tehty näyttää saman nimittäjän jo muodossa x/y).
+  for (const t of ['Osa', 'Tehty', 'Puuttuu']) {
     otsikko.appendChild(html('th', t === 'Osa' ? 'tk-nimi' : 'tk-num', t));
   }
   const paa = html('thead');
@@ -658,7 +660,6 @@ function piirraLuvut(kohde) {
     nimi.appendChild(html('div', 'tk-lisa', rivi.selite));
     tr.appendChild(nimi);
     tr.appendChild(solu([rivi.tehty, rivi.kaikki], { koonti: true }));
-    tr.appendChild(html('td', 'tk-num', String(rivi.kaikki)));
     tr.appendChild(html('td', 'tk-num', String(rivi.kaikki - rivi.tehty)));
     runko.appendChild(tr);
   }

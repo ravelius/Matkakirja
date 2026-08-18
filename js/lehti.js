@@ -763,6 +763,11 @@ export function avaaKehittajaLehti(ui, otsikko, sivut) {
   ui.varmistaLehtiMitta();
   ui.lehtitila.tutkiTila = 'kehittaja';
   ui.lehtitila.tutkiMaaLehti = null;
+  // Maaliite-nappi ei kuulu kehittäjän liitteisiin: edellisen
+  // kaupunkilehden maa jäi muuten voimaan ja viimeiselle sivulle
+  // ilmestyi esim. "Kreikka-liite" (omistajan havainto 18.8.2026).
+  ui.lehtitila.tutkiMaaIso = null;
+  ui.lehtitila.tutkiMaaNimi = null;
   ui.lehtitila.tutkiSivut = sivut;
   ui.lehtitila.tutkiKansi = null;
   ui.lehtitila.tutkiLehti = true;

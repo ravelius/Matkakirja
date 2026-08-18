@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v887 — kehittäjän Luvut-sivu: turha Kaikista-sarake pois (Tehty näyttää jo x/y) ja alalaidan harhautunut maaliite-nappi (esim. Kreikka-liite) poistui kehittäjän liitteistä',
   'v886 — pöllön kuplat: tasonnousun juhlakupla ilmestyy nyt MATKALAUKUN pillerin alle ylös (kärki ylös kohti laukkua), ja jokainen puhekupla häipyy napauttamalla sitä',
   'v885 — kolme korjausta: 1) hampurilaisen ääninapit — valittu nappi korostuu nyt heti (TypeError katkaisi valinnan piirron; mykistys pysäyttää nyt myös lukijan); 2) aarre-/pöllökortin luenta LAKKAA kun kortti suljetaan (myös viivettä odottava luenta perutaan) — ei enää puhetta taustalle; 3) lehden leipäteksti isompi iPadilla (1.08 rem ≥700 px:n ruuduilla, iPhone ennallaan)',
   'v884 — kaksi hiontaa: 1) pöllön valmiskysymysten väkänen on kysymysten ALLA (kärki ylös), jakoviiva pois, ja piilotetut kysymykset löytyvät vierittämällä ylös (tärkeimmät alimpana); 2) palautelomakkeen pohjalla on aina näkyvä "Olen jo pro-tuottaja — kirjaudu" -väkänen (sähköposti+koodi), ja hakurasti kulkee ehdotuksen mukana ([Pro-hakemus]-merkintä; vaatii sähköpostin)',
