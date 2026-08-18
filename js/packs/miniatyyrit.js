@@ -116,16 +116,14 @@ export const MINIATYYRIT = {
     Skansen: 'assets/kartat/miniatyyrit/tukholma-skansen.webp',
   },
   /*
-   * Erät 1–2 Euroopan ulkopuolelle ja Suomeen (17.8.2026). Neljä
-   * kohdetta jäi pois katselmoinnissa hylättyinä — niiden promptit on
-   * korjattu tools/generoi-miniatyyrit.mjs:ään ja ne generoidaan
-   * uudelleen erässä 3: Tampereen tuomiokirkko (ei muistuttanut
-   * kohdetta), Marcus Aureliuksen riemukaari (paperikehys ja väärä
-   * muoto), Punainen linna (värillinen tyylirikko) ja Shitamachi-museo
-   * (isometrinen leikkauskuva valkopohjalla). Kohde ilman miniatyyriä
-   * toimii entiseen tapaan, joten aukot eivät riko karttaa.
+   * Erät 1–2 Euroopan ulkopuolelle ja Suomeen (17.8.2026); neljä
+   * katselmoinnissa hylättyä generoitiin uudelleen korjatuin
+   * promptein erässä 3 (18.8.2026) ja ovat nyt mukana. Kohde ilman
+   * miniatyyriä toimii entiseen tapaan, joten aukot eivät riko
+   * karttaa.
    */
   tampere: {
+    'Tampereen tuomiokirkko': 'assets/kartat/miniatyyrit/tampere-tampereen-tuomiokirkko.webp',
     Näsinneula: 'assets/kartat/miniatyyrit/tampere-nasinneula.webp',
     'Finlaysonin tehdasalue': 'assets/kartat/miniatyyrit/tampere-finlaysonin-tehdasalue.webp',
     'Museokeskus Vapriikki': 'assets/kartat/miniatyyrit/tampere-museokeskus-vapriikki.webp',
@@ -161,6 +159,8 @@ export const MINIATYYRIT = {
     'Vanhankaupungin kellotorni': 'assets/kartat/miniatyyrit/tripoli-vanhankaupungin-kellotorni.webp',
     'Karamanlin moskeija': 'assets/kartat/miniatyyrit/tripoli-karamanlin-moskeija.webp',
     'an-Naqan moskeija': 'assets/kartat/miniatyyrit/tripoli-an-naqan-moskeija.webp',
+    'Marcus Aureliuksen riemukaari': 'assets/kartat/miniatyyrit/tripoli-marcus-aureliuksen-riemukaari.webp',
+    'Punainen linna': 'assets/kartat/miniatyyrit/tripoli-punainen-linna.webp',
   },
   tokio: {
     Kaminarimon: 'assets/kartat/miniatyyrit/tokio-kaminarimon.webp',
@@ -168,6 +168,7 @@ export const MINIATYYRIT = {
     "Kan'ei-ji": 'assets/kartat/miniatyyrit/tokio-kanei-ji.webp',
     'Tokion kansallismuseo': 'assets/kartat/miniatyyrit/tokio-tokion-kansallismuseo.webp',
     'Uenon puisto': 'assets/kartat/miniatyyrit/tokio-uenon-puisto.webp',
+    'Shitamachi-museo': 'assets/kartat/miniatyyrit/tokio-shitamachi-museo.webp',
   },
   soul: {
     Gyeongbokgung: 'assets/kartat/miniatyyrit/soul-gyeongbokgung.webp',
