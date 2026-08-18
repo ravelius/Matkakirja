@@ -20,6 +20,12 @@
  * jottei se osu päällekkäin samasta pisteiden lisäyksestä syntyneen
  * linssilöydön kuplan kanssa.
  *
+ * AVATARIT: tools/generoi-tietaja-avatarit.mjs tuottaa jokaiselle
+ * tasolle pöllömuotokuvan nimellä `assets/tietaja/taso-NN.jpg`, jossa
+ * NN on tämän taulukon `taso` kaksinumeroisena. Kuvia ei vielä käytetä
+ * missään; kun ne otetaan käyttöön, polku johdetaan tasonumerosta eikä
+ * uutta kenttää tarvita.
+ *
  * OMA MODUULI: taulukko on sisältöä (päätoimittajan päätös
  * 18.8.2026), ja sekä js/game.js (nousun tunnistus) että js/ui.js
  * (matkalaukun nimikerivi) lukevat sitä. Ei riippuvuuksia — moduuli on
