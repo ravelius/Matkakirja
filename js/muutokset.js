@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 845, teksti: 'Raamattuun: kaikki sisältö ämpäristä (R2-peili)' },
   { v: 844, teksti: 'Miniatyyripiirrokset kahdeksaan uuteen kaupunkiin' },
   { v: 843, teksti: 'Lippuikkunan lippu terävänä ja laatta kortin sisään' },
   { v: 842, teksti: 'Karusellinuolten tummennus pois kuvien laidoista' },
