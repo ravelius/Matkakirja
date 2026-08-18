@@ -4970,14 +4970,20 @@ export const KAUPUNKIKARTAT = {
       + 'työntyy Särkänniemen niemi, jonka kärjessä on Näsinneula.',
     kohteet: [
       /*
-       * Kuusi kohdetta, kaikki tarkistettu fi-Wikipedian rajapinnasta
-       * 17.8.2026 (action=query&redirects) — yksikään otsikko ei ole
-       * täsmennyssivu eikä kaima:
+       * Kahdeksan kohdetta, kaikki tarkistettu fi-Wikipedian
+       * rajapinnasta (action=query&redirects) — yksikään otsikko ei
+       * ole täsmennyssivu eikä kaima:
        *   Näsinneula · Finlaysonin tehdasalue · Hämeensilta ·
        *   Tampereen tuomiokirkko · Museokeskus Vapriikki ·
-       *   Pyynikin näkötorni
+       *   Pyynikin näkötorni (17.8.2026) · Tallipiha ·
+       *   Amurin työläismuseokortteli (18.8.2026)
        * Hämeensillan piste on SILLALLA eli veden päällä; se on
        * sallittua (tarkista-karttapisteet.mjs: sillat ja majakat).
+       *
+       * YKSI ANSA 18.8.2026 lisätyistä:
+       *  - `Amurin työläismuseokortteli` OHJAA artikkeliin
+       *    `Amurin museokortteli`; wiki-kenttään kirjataan
+       *    ohjauksen kohde, kuten muillakin kartoilla.
        */
       // Torni seisoo niemen kärjessä: piste on siirretty muutaman
       // kymmenen metriä sisämaahan, jottei numeroympyrä istu vedessä.
@@ -4987,6 +4993,12 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hämeensilta', lat: 61.4979, lon: 23.7626, wiki: 'Hämeensilta' },
       { nimi: 'Tampereen tuomiokirkko', lat: 61.4966, lon: 23.7744, wiki: 'Tampereen tuomiokirkko' },
       { nimi: 'Pyynikin näkötorni', lat: 61.4936, lon: 23.7208, wiki: 'Pyynikin näkötorni' },
+      // Kuninkaankatu 4, Finlaysonin tehdasalueen pohjoisreunassa
+      // (OSM: tourism=attraction).
+      { nimi: 'Tallipiha', lat: 61.5034, lon: 23.7546, wiki: 'Tallipiha' },
+      // Satakunnankatu 49; sama piste kuin fi-Wikipedian
+      // koordinaatti (61,4993 / 23,7434) kymmenen metrin sisällä.
+      { nimi: 'Amurin työläismuseokortteli', lat: 61.4993, lon: 23.7434, wiki: 'Amurin museokortteli' },
     ],
   },
   firenze: {
@@ -5016,13 +5028,20 @@ export const KAUPUNKIKARTAT = {
       + 'se erottuu siitä, että sen päällä on taloja.',
     kohteet: [
       /*
-       * KAKSI ANSAA fi.wikipediassa, molemmat tarkistettu
-       * rajapinnasta 17.8.2026:
+       * NELJÄ ANSAA fi.wikipediassa, kaikki tarkistettu
+       * rajapinnasta (17.8.2026, täydennys 18.8.2026):
        *  - `Boboli` ja `Bobolin puutarha` EIVÄT ole artikkeleita;
        *    puutarhasta ei ole fi-artikkelia lainkaan, joten kohde jää
        *    ilman wiki-linkkiä ja nojaa omaan juttuunsa.
        *  - `Santa Croce` yksinään on täsmennyssivu; Firenzen kirkosta
        *    kertoo `Basilica di Santa Croce`.
+       *  - `Galleria dell'Accademia` ja `Accademia (museo)` eivät ole
+       *    artikkeleita. `Accademia di belle arti di Firenze` kertoo
+       *    TAIDEAKATEMIASTA eli oppilaitoksesta, ei museosta, joten
+       *    sitä ei linkitetä väärän kohteen nimissä: museo jää ilman
+       *    wiki-linkkiä kuten Boboli.
+       *  - `Bargello` yksinään puuttuu; rakennuksesta ja museosta
+       *    kertoo `Bargellon palatsi`.
        */
       { nimi: 'Duomo', lat: 43.7731, lon: 11.256, wiki: 'Santa Maria del Fiore' },
       { nimi: 'Palazzo Vecchio', lat: 43.7694, lon: 11.2558, wiki: 'Palazzo Vecchio' },
@@ -5035,6 +5054,11 @@ export const KAUPUNKIKARTAT = {
       // takana, jotta se ei osu kartan vasempaan alanurkkaan
       // mittakaavajanan päälle.
       { nimi: 'Bobolin puutarha', lat: 43.7645, lon: 11.25 },
+      // Via Ricasoli 58–60. Piste on rajauksen pohjoisreunan
+      // tuntumassa (43,778) mutta reilut sata metriä sen sisällä.
+      { nimi: 'Galleria dell\'Accademia', lat: 43.7769, lon: 11.2589 },
+      { nimi: 'Santa Maria Novella', lat: 43.7746, lon: 11.2494, wiki: 'Santa Maria Novella' },
+      { nimi: 'Bargello', lat: 43.7704, lon: 11.2583, wiki: 'Bargellon palatsi' },
     ],
   },
   dubrovnik: {

@@ -414,7 +414,7 @@ const KUVAT = [
     + 'bastion'],
 
   /*
-   * ── Tampere, kuusi kohdetta (17.8.2026) ──────────────────────────
+   * ── Tampere, kahdeksan kohdetta (17.8.2026, +2 18.8.2026) ────────
    * Vain jonossa: näitä EI ole vielä generoitu, joten
    * js/packs/miniatyyrit.js:ssä ei ole tamperetta eikä sw.js:n
    * SHELLissä .webp-polkuja. Ajo tehdään Actionsissa, ja vasta sen
@@ -460,7 +460,23 @@ const KUVAT = [
     + 'gravel ridge: a railed open viewing platform at the top and a '
     + 'small café building at its foot'],
   /*
-   * ── Firenze, kuusi kohdetta (17.8.2026) ─────────────────────────
+   * Kaksi kohdetta lisää 18.8.2026 (kaupungin mittaiseksi, 6 → 8).
+   * Kumpikin on PUUTALO ja tehtaiden vastapari, joten kuvauksissa
+   * korostetaan sitä, mikä ne erottaa Tampereen muusta tiilestä:
+   * hirsi- ja lautaseinä, koristeltu räystäs, matala rivi.
+   */
+  ['tampere-tallipiha', 'a low 19th-century wooden stable building '
+    + 'of ochre-brown stained logs on a red-brick base: a steep '
+    + 'metal-sheet roof with two chimneys, a wide double door for '
+    + 'carriages, and a small ornate gable balcony with sawn '
+    + 'decorative brackets and fretwork at the near end'],
+  ['tampere-amurin-tyolaismuseokortteli', 'a row of single-storey '
+    + 'pale grey wooden workers\' houses along a cobbled street: '
+    + 'horizontal board cladding, white window frames with '
+    + 'six-paned windows, a black sheet-metal roof and two red-brick '
+    + 'chimneys. NO tall buildings'],
+  /*
+   * ── Firenze, yhdeksän kohdetta (17.8.2026, +3 18.8.2026) ────────
    * EI VIELÄ GENEROITU: piirrokset vaativat API-avaimen, jota
    * työsessiossa ei ole. Kartalla kohteet näkyvät siihen asti
    * numeroympyröinä, kuten koodi tekee kohteelle ilman piirrosta.
@@ -498,6 +514,30 @@ const KUVAT = [
     + 'leading to an oval pond with a stone fountain on an islet, '
     + 'marble statues along the path and lemon trees in terracotta '
     + 'pots'],
+  /*
+   * Kolme kohdetta lisää 18.8.2026 (6 → 9). Firenzen muut kohteet on
+   * kuvattu ULKOA, joten Accademia kuvataan siitä, mikä siitä näkyy
+   * kadulle asti: kupolisali ja sen alla seisova patsas. Bargellosta
+   * piirretään sisäpiha eikä julkisivu — juuri piha on se, mistä
+   * talon tunnistaa, ja julkisivu on pelkkä kivimuuri kadun varressa.
+   */
+  ['firenze-galleria-dellaccademia', 'the interior of a museum '
+    + 'rotunda: one white marble statue of a standing nude young man '
+    + 'on a low pedestal in a semicircular apse, directly beneath a '
+    + 'round glazed dome that lets daylight fall straight down on '
+    + 'him. Only ONE statue, nothing else in the room'],
+  ['firenze-santa-maria-novella', 'a renaissance church facade of '
+    + 'white and dark green marble laid in squares and stripes: '
+    + 'three round-arched portals below, a large ROUND window in the '
+    + 'centre, a triangular pediment at the top and two big S-shaped '
+    + 'scrolls curling outward on either side of it. No bell tower '
+    + 'in front'],
+  ['firenze-bargello', 'the inner courtyard of a medieval italian '
+    + 'stone palace: rough sandstone walls covered with rows of '
+    + 'carved stone coats of arms, a ground-floor arcade of pointed '
+    + 'arches on one side, an open loggia above it, and a long '
+    + 'external stone staircase running up the opposite wall to the '
+    + 'first floor'],
 
   /*
    * ── Bagdad, kuusi kohdetta (E00-viimeistely 17.8.2026) ───────────
