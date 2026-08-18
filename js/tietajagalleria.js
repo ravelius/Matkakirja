@@ -25,14 +25,14 @@ import { html } from './ui-apurit.js';
 /*
  * SELITYS ON PÄÄTOIMITTAJAN KAANONTEKSTI (omistaja hyväksyi
  * 18.8.2026). Se sitoo kalevalaisen kehyksen yhteen kappaleeseen:
- * pöllö on tietäjien matkakumppani, pisteet kasvattavat tietäjätasoa,
- * eikä nousu tuo etuja. Tekstiä ei muuteta ilman päätoimittajaa.
+ * pöllö on tietäjien matkakumppani ja pisteet kasvattavat
+ * tietäjätasoa (etulause poistettu omistajan pyynnöstä 18.8.2026).
+ * Tekstiä ei muuteta ilman päätoimittajaa.
  */
 export const TIETAJASELITYS = 'Viisas Pöllö — tietäjien ikivanha matkakumppani — kulkee '
   + 'mukanasi ja kasvattaa sinua tiedon tiellä. Jokainen uusi kaupunki, lauta ja oikea '
   + 'vastaus kartuttaa tietäjäpisteitä, ja pisteet nostavat tietäjätasoa: untuvikosta aina '
-  + 'Tietäjäksi iänikuiseksi asti. Tasonnousu ei tuo etuja — vain nimikkeen, ja emon '
-  + 'onnittelut.';
+  + 'Tietäjäksi iänikuiseksi asti.';
 
 /**
  * Avaa tasogallerian.
