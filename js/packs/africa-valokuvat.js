@@ -1349,6 +1349,7 @@ export const AFRICA_VALOKUVAT = {
 };
 
 import { VALOKUVAT_PAIKALLISET } from './valokuvat-paikalliset.js';
+import { VALOKUVAT_FLICKR, flickrOsoite } from './valokuvat-flickr.js';
 import { LIPUT_PAIKALLISET } from './liput-paikalliset.js';
 import { PEILI_JUURI, peiliKuvaPolku, peiliKaytossa } from '../media.js';
 
@@ -1371,17 +1372,23 @@ const omaKansio = () => typeof location !== 'undefined' && location.protocol !==
  *
  * Standalone-tiedosto (file:) ohittaa assets-kansion, koska sen vieressä
  * ei ole sellaista — peili ja Commons toimivat silti.
+ *
+ * FLICKR-KUVAT (18.8.2026) kulkevat oman taulunsa kautta: niitä ei ole
+ * Commonsissa eikä peilissä, joten sekä peilipolku että Commons-osoite
+ * osuisivat 404:ään. Niiden portaat ovat repon kopio ja Flickrin oma
+ * kokoversio — perustelu js/packs/valokuvat-flickr.js:n alussa.
  */
 export function valokuvaUrl(tiedosto, leveys) {
   const paikallinen = VALOKUVAT_PAIKALLISET.get(tiedosto);
   if (paikallinen && omaKansio()) return `assets/valokuvat/${paikallinen}`;
+  if (VALOKUVAT_FLICKR.has(tiedosto)) return flickrOsoite(tiedosto, leveys > 1024 ? 'h' : 'b');
   if (peiliKaytossa('kuvat')) return `${PEILI_JUURI}${peiliKuvaPolku(tiedosto, 'kuvat')}`;
   return commonsUrl(tiedosto, leveys);
 }
 
 /** Valokuvan varareitti, kun ensisijainen osoite ei vastaa. */
 export function valokuvaVara(tiedosto, leveys) {
-  return commonsUrl(tiedosto, leveys);
+  return flickrOsoite(tiedosto, leveys > 1024 ? 'h' : 'b') ?? commonsUrl(tiedosto, leveys);
 }
 
 /**
@@ -1396,9 +1403,13 @@ export function valokuvaVara(tiedosto, leveys) {
  * Suurennos hakee siksi ison version suoraan Commonsista; kutsuja
  * antaa varaksi valokuvaUrl:n, jotta kuva näkyy myös yhteydettä —
  * pienempänä, mutta näkyy.
+ *
+ * Flickr-kuvalla iso versio on Flickrissä (`_h`, 1600 px). Sitä ei
+ * haeta alkuperäisenä (`_o`), joka on usein 6000 px ja monta
+ * megatavua — puhelinverkossa se olisi hitaampi kuin hyödyllinen.
  */
 export function valokuvaSuurennos(tiedosto, leveys) {
-  return commonsUrl(tiedosto, leveys);
+  return flickrOsoite(tiedosto, 'h') ?? commonsUrl(tiedosto, leveys);
 }
 
 /**

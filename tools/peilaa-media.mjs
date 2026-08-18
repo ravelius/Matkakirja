@@ -38,6 +38,12 @@ import { leikkaaMp3 } from './leikkaa-mp3.mjs';
 // koskaan. js/media.js ei tuo mitään eikä koske selaimen rajapintoihin
 // latautuessaan, joten se latautuu myös nodessa.
 import { turvanimi, peiliKuvaPolku, peiliAaniPolku } from '../js/media.js';
+// Flickr-kuvat eivät kulje peilin kautta lainkaan: niistä on repossa
+// oma kopio (assets/valokuvat), joten peilin tehtävä — pitää aineisto
+// saatavilla vaikka lähde kaatuisi — on jo hoidettu. Commonsista niitä
+// ei löydy, joten ilman tätä suodatusta jokainen ajo hakisi niitä
+// turhaan ja jättäisi manifestiin rivin tiedostosta, jota ei ole.
+import { VALOKUVAT_FLICKR } from '../js/packs/valokuvat-flickr.js';
 
 /*
  * Taustaäänen enimmäispituus (omistajan linjaus 1.8.2026). Kenttä-
@@ -219,7 +225,9 @@ function kohteet() {
   // (js/packs/viritysaanet.js). Niitä ei ole Commonsissa: haku palautti
   // joka ajolla saman viiden 404:n rivistön ja manifestiin jäi rivi
   // kuvasta, jota ei ole olemassa. Äänipääte kertoo eron varmasti.
-  const kuvat = [...poimi('tiedosto')].filter((n) => !/\.(mp3|ogg|wav|m4a|opus|flac)$/i.test(n));
+  const kuvat = [...poimi('tiedosto')]
+    .filter((n) => !/\.(mp3|ogg|wav|m4a|opus|flac)$/i.test(n))
+    .filter((n) => !VALOKUVAT_FLICKR.has(n));
   const liput = poimi('lippu');
   // Hakukuvio löytää kaikki arkisto-osoitteet, myös ne jotka eivät ole
   // äänitiedostoja: kirjaskannien ja viritysäänten lähdeviitteet ovat

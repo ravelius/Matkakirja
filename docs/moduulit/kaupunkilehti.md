@@ -151,6 +151,34 @@ erikseen `flickr.photos.getInfo`-kutsulla ennen latausta. Tekijä
 poimitaan `owner.realname`:sta (tai `username`, jos realname puuttuu) —
 EI tiedostonimestä. Alle 1200 px kuvat hylätään kuten Commonsissakin.
 
+**Miten Flickr-kuva liitetään lehteen** (18.8.2026, ensimmäinen erä:
+Tampere 6 + Firenze 13). Commons-kuvasta poiketen Flickr-kuvalla ei ole
+peiliä: pelin kuvamalli laskee sekä peilipolun että alkuperäisen
+osoitteen `tiedosto:`-nimestä olettaen sen Commonsin nimeksi, eikä
+Flickr-kuva ole kummassakaan. Siksi reitti on toinen — ja se on
+saatavuuden kannalta yhtä vahva, koska ensimmäinen porras on repo:
+
+1. **Repokopio on ENSISIJAINEN.** Kuva ladataan Flickrin `_b`-koossa
+   (1024 px pitkä sivu) kansioon `assets/valokuvat` nimellä
+   `flickr-<id>.jpg`, ja sama nimi kirjataan
+   `js/packs/valokuvat-paikalliset.js`:ään. Alkuperäistä `_o`-osoitetta
+   EI käytetä missään: se on usein 6000 px ja monta megatavua.
+2. **Lähdetaulu** `js/packs/valokuvat-flickr.js`: tiedostonimi →
+   `{ osoite, sivu, tekija, lisenssi }`. Taulu antaa varareitin ja
+   suurennoksen (`_h`, 1600 px) ja säilyttää lähdemaininnan repossa
+   samaan tapaan kuin peilin manifesti.
+3. **Työkalut ohittavat nämä nimet**: `tools/peilaa-media.mjs`,
+   `tools/fetch-photos.mjs` ja `tools/tarkista-tekijat.mjs` suodattavat
+   taulun nimet pois — muuten jokainen ajo hakisi niitä Commonsista ja
+   tulostaisi saman 404-rivistön.
+4. **Lähdemerkintä** on `Tekijä, Flickr (LISENSSI)` — sama muoto kuin
+   Commons-kuvilla, sama tekijänimi kuin `flickr.photos.getInfo`
+   antaa. Flickr-sivun osoite jää lähdetauluun.
+
+Vartija on `tests/media.test.mjs`: jokaisella paketeissa käytetyllä
+`flickr-*.jpg`-nimellä on oltava taulurivi JA repokopio levyllä, eikä
+varareitti saa osoittaa Commonsiin.
+
 **Etusija instituutioille ja vakiintuneille kuvaajille.** Flickrissä
 lisenssin merkitsee lataaja itse, ei mikään yhteisövalvottu
 mekanismi — toisin kuin Commonsissa. Siksi käyttäjän ilmoittamaan

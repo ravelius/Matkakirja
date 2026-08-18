@@ -3,6 +3,10 @@
 // toimivat offline eivätkä hajoa jos Commonsista poistetaan tiedosto. Lähde ja
 // lisenssi näkyvät selitteissä, ja alkuperäinen tiedostonimi toimii yhä avaimena
 // ja Commons-linkkinä. Älä muokkaa käsin.
+//
+// flickr-*.jpg -rivit ovat poikkeus: ne osoittavat Flickristä ladattuun
+// kopioon (js/packs/valokuvat-flickr.js), eikä tämä työkalu hae niitä
+// Commonsista. Ajo säilyttää ne sellaisenaan.
 export const VALOKUVAT_PAIKALLISET = new Map([
   ["006 Dune 45 in Sossusvlei at sunrise Photo by Giles Laurent.jpg", '006-dune-45-in-sossusvlei-at-sunrise-photo-by-giles-laurent.jpg'],
   ["01996 01434 Ruins of Antonine Baths at Carthage.jpg", 'uusi-karthago.jpg'],
@@ -151,4 +155,23 @@ export const VALOKUVAT_PAIKALLISET = new Map([
   ["View-Kano city-1911.jpg", 'vanha-kano.jpg'],
   ["Waving fisherman on Lake Chad (detilt).jpg", 'uusi-tshadjarvi.jpg'],
   ["Zanzibar Taarab Kidumbak Ensemble.jpg", 'zanzibar-taarab-kidumbak-ensemble.jpg'],
+  ["flickr-16744724023.jpg", 'flickr-16744724023.jpg'],
+  ["flickr-17157572177.jpg", 'flickr-17157572177.jpg'],
+  ["flickr-17339041906.jpg", 'flickr-17339041906.jpg'],
+  ["flickr-25581301577.jpg", 'flickr-25581301577.jpg'],
+  ["flickr-27155711546.jpg", 'flickr-27155711546.jpg'],
+  ["flickr-27407894606.jpg", 'flickr-27407894606.jpg'],
+  ["flickr-27613279050.jpg", 'flickr-27613279050.jpg'],
+  ["flickr-28331684403.jpg", 'flickr-28331684403.jpg'],
+  ["flickr-31789483887.jpg", 'flickr-31789483887.jpg'],
+  ["flickr-34464102352.jpg", 'flickr-34464102352.jpg'],
+  ["flickr-45822744735.jpg", 'flickr-45822744735.jpg'],
+  ["flickr-51418890656.jpg", 'flickr-51418890656.jpg'],
+  ["flickr-51960599162.jpg", 'flickr-51960599162.jpg'],
+  ["flickr-52034728756.jpg", 'flickr-52034728756.jpg'],
+  ["flickr-52090914588.jpg", 'flickr-52090914588.jpg'],
+  ["flickr-52104490496.jpg", 'flickr-52104490496.jpg'],
+  ["flickr-52302493222.jpg", 'flickr-52302493222.jpg'],
+  ["flickr-52303472931.jpg", 'flickr-52303472931.jpg'],
+  ["flickr-53403719824.jpg", 'flickr-53403719824.jpg'],
 ]);

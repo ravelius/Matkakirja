@@ -23,6 +23,11 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+// Flickr-kuvat eivät ole Commonsissa: niiden repokopio ladataan
+// Flickristä (ks. js/packs/valokuvat-flickr.js) eikä tällä työkalulla.
+// Ilman tätä listaa jokainen ajo yrittäisi hakea niitä Commonsista ja
+// tulostaisi saman 19 virheen rivistön.
+import { VALOKUVAT_FLICKR } from '../js/packs/valokuvat-flickr.js';
 
 const LEVEYS = 1000;             // sama kuin aiemmin haetuilla valokuvilla
 const KANSIO = 'assets/valokuvat';
@@ -48,7 +53,7 @@ function kaikkiViittaukset() {
   }
   poimi(fs.readFileSync('js/ui.js', 'utf8'));
   poimi(fs.readFileSync('js/sisaltotaulut.js', 'utf8'));
-  return [...nimet].sort();
+  return [...nimet].filter((n) => !VALOKUVAT_FLICKR.has(n)).sort();
 }
 
 /** Nykyinen kartta luetaan sellaisenaan, jotta jo haetut nimet säilyvät. */
@@ -124,6 +129,10 @@ fs.writeFileSync(KARTTA, `// Matkakirjan valokuvien paikalliset kopiot (generoit
 // toimivat offline eivätkä hajoa jos Commonsista poistetaan tiedosto. Lähde ja
 // lisenssi näkyvät selitteissä, ja alkuperäinen tiedostonimi toimii yhä avaimena
 // ja Commons-linkkinä. Älä muokkaa käsin.
+//
+// flickr-*.jpg -rivit ovat poikkeus: ne osoittavat Flickristä ladattuun
+// kopioon (js/packs/valokuvat-flickr.js), eikä tämä työkalu hae niitä
+// Commonsista. Ajo säilyttää ne sellaisenaan.
 export const VALOKUVAT_PAIKALLISET = new Map([
 ${rivit}
 ]);

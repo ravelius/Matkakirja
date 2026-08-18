@@ -5979,13 +5979,41 @@ export const KULTTUURI_KATEGORIAT = {
             + 'niiden takana Näsijärvi saarineen.',
           lahde: 'Mikkoau, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        /*
+         * Kolmas kansikuva näkyy pikkurivin sijaan suurennoksen
+         * selattavassa sarjassa (avauskuvat vievät ison paikan, ja
+         * pikkuriville mahtuu kaksi). Särkänniemi on tarkoituksella
+         * täällä eikä avauskuvissa: kaupungin nostoissa on jo yksi
+         * ilmakuva samasta niemestä, eikä niitä haluta karusellin ja
+         * nostosivun välille kahtena samanlaisena.
+         */
+        {
+          tiedosto: 'flickr-17157572177.jpg',
+          selite: 'Huvipuiston niemi ylhäältä alkukevään iltavalossa: '
+            + 'vuoristoradan kiskot kiemurtelevat rantapuiden lomassa, '
+            + 'keskellä on karusellien ja pelitalojen ruutukuvioitu aukio, '
+            + 'ja niemen kärkeä kiertää tummansininen järvi.',
+          lahde: 'Jorge Franganillo, Flickr (CC BY 2.0)',
+        },
       ],
       /*
        * Avauskuvat: etusivun iso kuvapaikka selaa näitä yleisnäkymiä,
        * kansikuvat siirtyvät pikkuriville (sama sopimus kuin
        * Kööpenhaminassa).
+       *
+       * Karusellin avaa Flickr-valokuva järveltä (18.8.2026): se on
+       * erän ainoa kuva, jossa kaupunki näkyy kokonaisena vesirajasta
+       * — juuri sitä avauskuvalta pyydetään.
        */
       avauskuvat: [
+        {
+          tiedosto: 'flickr-52302493222.jpg',
+          selite: 'Kaupunki järven puolelta katsottuna: aallokon takana '
+            + 'kulkee matala ranta, jolla seisoo vierekkäin punatiilisiä '
+            + 'tehdas- ja asuintaloja, veneitä on kiinni laitureissa, ja '
+            + 'oikealla nousee vanha tehtaanpiippu pilvettömälle taivaalle.',
+          lahde: 'Ninara, Flickr (CC BY 2.0)',
+        },
         {
           tiedosto: 'Tammerkoski view.jpg',
           selite: 'Tammerkosken uoma tehtaiden välissä: vasemmalla Frenckellin '
@@ -6008,6 +6036,14 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yksin puurajan yli, vasemmalla erottuu Särkänniemen '
             + 'vuoristoradan punainen kaari, ja edessä kiitää moottorivene.',
           lahde: 'Eemyoha, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'flickr-16744724023.jpg',
+          selite: 'Tammerkoski keväisenä päivänä: vasemmalla nousee kaksi '
+            + 'tiilipiippua vihertävän puistonurmen takaa, keskellä vesi '
+            + 'laskee vaahtoavana padon yli, ja oikealla seisoo Tampellan '
+            + 'pitkä punatiilinen halli.',
+          lahde: 'Jorge Franganillo, Flickr (CC BY 2.0)',
         },
       ],
       matkailijalle: {
@@ -6067,14 +6103,24 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'läpi kulkee kävelyreitti, jonka varrella on museoita, '
                 + 'elokuvateatteri, panimo ja työhuoneita. Kosken voi ylittää '
                 + 'monesta kohtaa, ja jokainen silta antaa eri näkymän.',
-              kuva: {
-                tiedosto: 'Finlayson 2018.jpg',
-                selite: 'Finlaysonin viisikerroksinen punatiilinen '
-                  + 'tehdasrakennus Frenckellinaukion laidalla, takana '
-                  + 'yksinäinen tiilipiippu ja katolla Suomen lippu. Alhaalla '
-                  + 'on ravintolan punainen markiisi.',
-                lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Finlayson 2018.jpg',
+                  selite: 'Finlaysonin viisikerroksinen punatiilinen '
+                    + 'tehdasrakennus Frenckellinaukion laidalla, takana '
+                    + 'yksinäinen tiilipiippu ja katolla Suomen lippu. Alhaalla '
+                    + 'on ravintolan punainen markiisi.',
+                  lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-17339041906.jpg',
+                  selite: 'Kosken yli vievä kapea kävelysilta pilvisenä '
+                    + 'päivänä. Molemmin puolin nousevat punatiiliset '
+                    + 'tehdassalit kaari-ikkunoineen, ja vasemmalla vesi on '
+                    + 'laskenut niin alas, että uoman kalliot ovat paljaina.',
+                  lahde: 'Jorge Franganillo, Flickr (CC BY 2.0)',
+                },
+              ],
             },
             {
               otsikko: 'Harju, torni ja munkki',
@@ -6103,13 +6149,23 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lautaselle vaan pahvivadille. Laukontorilta lähtevät myös '
                 + 'Pyhäjärven laivat, ja Tammelantori on aamuisin kaupungin '
                 + 'vilkkain paikka.',
-              kuva: {
-                tiedosto: 'Mustamakkara2019.jpg',
-                selite: 'Kaksi paksua, lähes mustaa makkaraa pahvivadilla ja '
-                  + 'niiden vieressä kirkkaanpunainen puolukkahillo. '
-                  + 'Makkaran leikatusta päästä näkyy karkea ohrainen sisus.',
-                lahde: 'Onsilla / Wikimedia Commons, Wikimedia Commons (CC BY 4.0)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Mustamakkara2019.jpg',
+                  selite: 'Kaksi paksua, lähes mustaa makkaraa pahvivadilla ja '
+                    + 'niiden vieressä kirkkaanpunainen puolukkahillo. '
+                    + 'Makkaran leikatusta päästä näkyy karkea ohrainen sisus.',
+                  lahde: 'Onsilla / Wikimedia Commons, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-52303472931.jpg',
+                  selite: 'Laukontorin satama kesäiltana: puulaituriin on '
+                    + 'kiinnittynyt valkoinen matkustajalaiva, jonka kyljessä '
+                    + 'lukee HOPEALINJAT, taustalla kohoaa Laukonsillan '
+                    + 'vinoköysipylväs, ja laiturilla taluttaa mies pyörää.',
+                  lahde: 'Ninara, Flickr (CC BY 2.0)',
+                },
+              ],
             },
             {
               otsikko: 'Ilta',
@@ -6121,14 +6177,24 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'akselinsa ympäri niin, että näyttämö vaihtuu keskellä '
                 + 'esitystä. Kaupungin yllä pyörii sekin: Näsinneulan '
                 + 'ravintola tekee kierroksensa tunnissa.',
-              kuva: {
-                tiedosto: 'Finlaysonin kulmilta.jpg',
-                selite: 'Finlaysonin sisäpiha yöllä: valaistu vaalea '
-                  + 'tehdasrakennus kaari-ikkunoineen, vasemmalla '
-                  + 'punatiilinen siipi ja niiden välistä nousee tiilipiippu '
-                  + 'tummansinistä taivasta vasten.',
-                lahde: 'Laura Jokisalo, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Finlaysonin kulmilta.jpg',
+                  selite: 'Finlaysonin sisäpiha yöllä: valaistu vaalea '
+                    + 'tehdasrakennus kaari-ikkunoineen, vasemmalla '
+                    + 'punatiilinen siipi ja niiden välistä nousee tiilipiippu '
+                    + 'tummansinistä taivasta vasten.',
+                  lahde: 'Laura Jokisalo, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-53403719824.jpg',
+                  selite: 'Talvi-ilta järven rannalla: voimalaitoksen seinä '
+                    + 'hehkuu violettina, piipusta nousee höyry vaaleaan '
+                    + 'iltataivaaseen, ja edessä lepää jäätynyt venesatama '
+                    + 'lumen peittämine laitureineen.',
+                  lahde: 'Vicky Brock, Flickr (CC BY-SA 2.0)',
+                },
+              ],
             },
           ],
           matkailu: {
@@ -9164,13 +9230,38 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kadun päässä näkyy Giotton kellotorni.',
           lahde: 'Dora Dragoni, Wikimedia Commons (CC BY 3.0)',
         },
+        /*
+         * Kolmas kansikuva näkyy pikkurivin sijaan suurennoksen
+         * selattavassa sarjassa: avauskuvat vievät ison paikan ja
+         * pikkuriville mahtuu kaksi. Santa Croce on lehden ainoa kuva
+         * siitä basilikasta, joten se on tässä eikä jää pois.
+         */
+        {
+          tiedosto: 'flickr-51418890656.jpg',
+          selite: 'Santa Crocen basilika aukion laidalla: julkisivu on '
+            + 'kuvioitu valkoisella, vihreällä ja vaaleanpunaisella '
+            + 'marmorilla, päädyssä on sininen kuusisakarainen tähti, ja '
+            + 'oikealla nousee kellotornin harmaa kärki.',
+          lahde: "Pom', Flickr (CC BY-SA 2.0)",
+        },
       ],
       /*
-       * Avauskuvat: kolme vaakayleisnäkymää karusellissa (omistajan
-       * tilaus 15.8.2026). Firenzen kolme klassista katselusuuntaa —
-       * etelän kukkulalta, kellotornista alas ja joelta.
+       * Avauskuvat: vaakayleisnäkymiä karusellissa (omistajan tilaus
+       * 15.8.2026). Firenzen klassiset katselusuunnat — joelta, etelän
+       * kukkulalta, kellotornista alas ja kattojen yli. Kolmen
+       * Commons-kuvan sarjaan liitettiin 18.8.2026 kolme Flickr-kuvaa;
+       * Piazzale Michelangelon näkymä pysyy entisenä, koska sama
+       * suunta ei tarvitse karusellissa kahta kuvaa.
        */
       avauskuvat: [
+        {
+          tiedosto: 'flickr-27613279050.jpg',
+          selite: 'Arno keskikaupungin kohdalla tyynenä aamuna: molempien '
+            + 'rantojen okrankeltaiset talorivit heijastuvat vedestä '
+            + 'kokonaisina, ja keskellä kaartuu Santa Trinitàn '
+            + 'kolmiholvinen kivisilta.',
+          lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
+        },
         {
           tiedosto: 'Panorama di Firenze centro visto dal Piazzale Michelangelo.jpg',
           selite: 'Koko vanhakaupunki Piazzale Michelangelolta katsottuna: '
@@ -9193,6 +9284,22 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sen molemmin puolin nousevat rantamuurit ja talorivit; '
             + 'keskellä kuvaa kaartuu Ponte Vecchio kauppoineen.',
           lahde: 'hozinja, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'flickr-27155711546.jpg',
+          selite: 'Ponte Vecchio ylhäältä iltapäivän valossa: sillan päällä '
+            + 'kulkee yhtenäinen kauppojen rivi ja niiden yläpuolella '
+            + 'pienten neliöikkunoiden nauha eli Vasarin käytävä. '
+            + 'Alavirrassa erottuu kolme muuta siltaa peräkkäin.',
+          lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'flickr-27407894606.jpg',
+          selite: 'Kattojen yli tuomiokirkolle: tiilikattojen keskeltä nousee '
+            + 'Brunelleschin punainen kupoli ja sen vasemmalla puolella '
+            + 'Giotton vaalea kellotorni, oikealla kohoaa Badia Fiorentinan '
+            + 'kapea kärkitorni, ja taustalla siintävät kukkulat.',
+          lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
         },
       ],
       matkailijalle: {
@@ -9255,6 +9362,30 @@ export const KULTTUURI_KATEGORIAT = {
                     + 'oikealla Palazzo Vecchion kivijulkisivu.',
                   lahde: 'Cezar Suceveanu, Wikimedia Commons (CC BY-SA 4.0)',
                 },
+                {
+                  tiedosto: 'flickr-25581301577.jpg',
+                  selite: 'Kävelykatu keskipäivällä: kiveys kaartuu kadun '
+                    + 'keskeltä reunoja kohti, seinustalla nojaa rivi '
+                    + 'polkupyöriä, ja vasemmalla on elokuvateatterin '
+                    + 'sininen kyltti ja kahvilan värikkäät pikkutuolit.',
+                  lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-52090914588.jpg',
+                  selite: 'Kapea katu, jonka parvekkeilta roikkuu '
+                    + 'ruukkukasveja ja kukkivaa sinipunaista köynnöstä. '
+                    + 'Ikkunaluukut ovat vihreät, ja vasemman talon '
+                    + 'kaiteella kuivuu pyykkiä.',
+                  lahde: 'Jocelyn Erskine-Kellie, Flickr (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-34464102352.jpg',
+                  selite: 'Mukulakivinen kuja Ponte Vecchion pohjoispäästä '
+                    + 'kaupunkiin päin. Vasemman talon seinässä lukee PIAZZA '
+                    + 'DEL PESCE, kadun yli kaartuu holvi, ja kaukana kadun '
+                    + 'päässä näkyy torikojujen väriä.',
+                  lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
+                },
               ],
             },
             {
@@ -9284,14 +9415,40 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Accademiassa Michelangelon David. Kolmas ja hiljaisin on '
                 + 'joen eteläpuolella Palazzo Pitti, jonka lipulla pääsee '
                 + 'myös Bobolin puutarhaan. Maanantaisin Uffizi on kiinni.',
-              kuva: {
-                tiedosto: 'Ceiling of Uffizi Gallery.jpg',
-                asettelu: 'kapea',
-                selite: 'Uffizin käytävän maalattu katto. Koko holvi on '
-                  + 'peitetty groteskikuvioilla: kiehkuroita, lintuja, '
-                  + 'pieniä maisemia ja vaakunoita kultakehysten välissä.',
-                lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Ceiling of Uffizi Gallery.jpg',
+                  asettelu: 'kapea',
+                  selite: 'Uffizin käytävän maalattu katto. Koko holvi on '
+                    + 'peitetty groteskikuvioilla: kiehkuroita, lintuja, '
+                    + 'pieniä maisemia ja vaakunoita kultakehysten välissä.',
+                  lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-51960599162.jpg',
+                  selite: 'Uffizi joen puolelta: maan tasalla avautuu kolme '
+                    + 'kaarta, niiden yllä kulkee kaiteellinen parveke ja '
+                    + 'ylimpänä koko rakennuksen mittainen ikkunarivi. '
+                    + 'Julkisivu heijastuu Arnon vihertävästä vedestä.',
+                  lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-45822744735.jpg',
+                  selite: 'Bobolin puutarhan iso soikea allas ylärinteestä '
+                    + 'katsottuna: keskellä allasta seisoo patsas, rantaa '
+                    + 'kiertää hiekkakäytävä, ja alempana näkyy '
+                    + 'Pitti-palatsin julkisivu ja sen takana koko kaupunki.',
+                  lahde: "Pom', Flickr (CC BY-SA 2.0)",
+                },
+                {
+                  tiedosto: 'flickr-31789483887.jpg',
+                  selite: 'Sypressien yli kukkulalle: puiden takaa kohoaa San '
+                    + 'Miniato al Monten marmorikuvioitu julkisivu ja sen '
+                    + 'vieressä neliskulmainen kellotorni, ja oikealla kulkee '
+                    + 'vanhan varustusmuurin hammastettu harja.',
+                  lahde: "Pom', Flickr (CC BY-SA 2.0)",
+                },
+              ],
             },
             {
               otsikko: 'Torilla ja pöydässä',
@@ -9303,13 +9460,23 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Ravintolassa tilataan bistecca alla fiorentina, joka '
                 + 'punnitaan ennen paistamista ja tuodaan pöytään '
                 + 'sisältä punaisena — kypsyysastetta ei kysytä.',
-              kuva: {
-                tiedosto: 'Mercato Centrale near the San Lorenzo Market (Florence) (3867491803).jpg',
-                selite: 'Kauppahallin koju: koreissa kuivattuja tomaatteja, '
-                  + 'pastapusseja ja mausteita, ja jokaisen edessä '
-                  + 'käsinkirjoitettu hintalappu.',
-                lahde: 'bongo vongo, Wikimedia Commons (CC BY-SA 2.0)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Mercato Centrale near the San Lorenzo Market (Florence) (3867491803).jpg',
+                  selite: 'Kauppahallin koju: koreissa kuivattuja tomaatteja, '
+                    + 'pastapusseja ja mausteita, ja jokaisen edessä '
+                    + 'käsinkirjoitettu hintalappu.',
+                  lahde: 'bongo vongo, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-52104490496.jpg',
+                  selite: 'Kaupustelijan teline täynnä nahkalaukkuja aukion '
+                    + 'laidalla. Takana nousee Badia Fiorentinan kapea '
+                    + 'kuusikulmainen kellotorni ja oikealla Bargellon '
+                    + 'hammastettu tornitalo.',
+                  lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
+                },
+              ],
             },
             {
               otsikko: 'Ilta',
@@ -9321,14 +9488,33 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaupungin valot syttyvät. Signorian aukio ja Palazzo '
                 + 'Vecchio ovat auki myös pimeällä, ja aukion patsaat on '
                 + 'valaistu.',
-              kuva: {
-                tiedosto: 'Firenze Palazzo Vecchio 02.jpg',
-                asettelu: 'kapea',
-                selite: 'Palazzo Vecchio hämärissä kadun päässä. Torni ja '
-                  + 'vaakunarivi on valaistu lämpimäksi, ja alhaalla '
-                  + 'kadulla kävellään vielä.',
-                lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Firenze Palazzo Vecchio 02.jpg',
+                  asettelu: 'kapea',
+                  selite: 'Palazzo Vecchio hämärissä kadun päässä. Torni ja '
+                    + 'vaakunarivi on valaistu lämpimäksi, ja alhaalla '
+                    + 'kadulla kävellään vielä.',
+                  lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-52034728756.jpg',
+                  selite: 'Ponte Vecchio hämärissä alavirran sillalta '
+                    + 'katsottuna: kaupparivi piirtyy vaaleana raskaita '
+                    + 'iltapilviä vasten, ja tyhjällä joella soutaa yksi '
+                    + 'vene.',
+                  lahde: 'Sorin Popovich, Flickr (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-28331684403.jpg',
+                  selite: 'Koko kaupunki Piazzale Michelangelolta iltapäivän '
+                    + 'usvassa: vasemmalla ylittää Ponte Vecchio Arnon, '
+                    + 'keskellä nousevat Palazzo Vecchion torni ja '
+                    + 'tuomiokirkon kupoli, oikealla Santa Crocen kellotorni, '
+                    + 'ja takana kaartuvat Toscanan kukkulat.',
+                  lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
+                },
+              ],
             },
           ],
           matkailu: {

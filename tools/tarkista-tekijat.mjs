@@ -29,6 +29,7 @@ import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { VALOKUVAT_FLICKR } from '../js/packs/valokuvat-flickr.js';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const AGENTTI = 'Matkakirja/1.0 (https://github.com/ravelius/Matkakirja)';
@@ -108,6 +109,12 @@ const rivit = [];
 for (const f of tiedostot) {
   const s = readFileSync(join(JUURI, 'js/packs', f), 'utf8');
   for (const p of parit(s)) {
+    // Flickr-kuvia ei ole Commonsissa, joten vertailukohtaa ei ole:
+    // niiden tekijä tulee flickr.photos.getInfo-kutsusta ja on kirjattu
+    // js/packs/valokuvat-flickr.js:ään. Ilman tätä ohitusta jokainen ajo
+    // päättyisi samaan riviin "ei Commonsissa", ja pysyvä valheellinen
+    // rivi opettaa ohittamaan koko listan.
+    if (VALOKUVAT_FLICKR.has(p.tiedosto)) continue;
     const nimi = nimiosa(p.lahde);
     if (nimi) rivit.push({ paketti: f, ...p, nimi });
   }
