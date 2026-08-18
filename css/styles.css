@@ -7446,6 +7446,14 @@ body.katselu #newgame-btn { display: none; }
 /* Koko artikkelin väliotsikot (renderArticle muotoilee tekstistä). */
 .wiki-p { margin: 0 0 0.65rem; }
 
+/* Omistaja 18.8.2026: "suurenna etusivun tekstin kokoa ipadilla.
+   iphonella koko on sopiva." Lehden leipäteksti kasvaa leveällä
+   ruudulla; otsikot, nimilaput ja kuvatekstit pysyvät ennallaan
+   (niiden koot ovat omissa rem-säännöissään). */
+@media (min-width: 700px) {
+  .dialog.lehti .wiki-p { font-size: 1.08rem; }
+}
+
 .wiki-h2 {
   margin: 1.1rem 0 0.4rem;
   font-family: var(--font-type);

@@ -216,7 +216,11 @@ export function lueKertojana(ui, teksti, { viive = 0, onLoppu = null } = {}) {
   if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return false;
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava || !puheTuettu()) return false;
+  let peruttu = false;
+  let alkoi = false;
   const aloita = () => {
+    if (peruttu) return;
+    alkoi = true;
     puheAlkoi();
     const lahti = lueAaneen(puhuttava, null, {
       persoona: 'kertoja',
@@ -231,9 +235,23 @@ export function lueKertojana(ui, teksti, { viive = 0, onLoppu = null } = {}) {
       onLoppu?.();
     }
   };
-  if (viive > 0) setTimeout(aloita, viive);
+  let ajastin = null;
+  if (viive > 0) ajastin = setTimeout(aloita, viive);
   else aloita();
-  return true;
+  /*
+   * Paluuarvo on PYSÄYTIN — funktiona totuusarvoltaan tosi, joten
+   * vanhat `if (tts)` / `!lueKertojana(...)` -tarkistukset toimivat
+   * ennallaan. Kutsuja pysäyttää luennan, kun sen isäntänäkymä
+   * suljetaan (omistaja 18.8.2026: "puheen tulee lakata samaan
+   * aikaan eikä jäädä taustalle jatkamaan") — viiveellä odottava
+   * luenta perutaan ennen alkuaan, käynnissä oleva pysäytetään
+   * (pysaytaLukija laukoo loppukoukut, joten taustan väistö purkautuu).
+   */
+  return () => {
+    peruttu = true;
+    if (ajastin) clearTimeout(ajastin);
+    if (alkoi) pysaytaLukija();
+  };
 }
 
 export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, viive = 0 } = {}) {

@@ -8,6 +8,7 @@ import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
 import { kertojaTila, asetaKertojaTila } from './aani-ehdokkaat.js';
+import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
 import { asennaPollo } from './pollo.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
@@ -45,7 +46,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.884';
+const APP_VERSION = '2026-08-09.885';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -446,12 +447,16 @@ const naytaKertoja = () => {
 const valitseKertoja = (tila) => {
   if (tila === 'mykistys') {
     sfx.setEnabled(false);
-    // Kaikki soiva hiljenee heti: striimit, luennat ja lentomoottori.
+    // Kaikki soiva hiljenee heti: striimit, luennat, lukija ja lentomoottori.
     stopPlaceStream();
     stopQuizMusic();
     sfx.stopFlight();
-    ui?.stopDiaryVoice();
-    ui?.stopIntroVoice();
+    // Luennan pysäytys on luenta.js:n funktio, joka ottaa ui:n
+    // parametrina — metodikutsu ui:lle heitti TypeErrorin ja
+    // katkaisi valinnan ennen naytaKertojaa (omistajan havainto
+    // 18.8.2026: "valittu nappi ei päivity visuaalisesti").
+    if (ui) { stopDiaryVoice(ui); stopIntroVoice(ui); }
+    pysaytaLukija();
   } else {
     const oliMykistys = !sfx.enabled;
     sfx.setEnabled(true); // palatessa kuuluu kuittausklikki
@@ -462,7 +467,7 @@ const valitseKertoja = (tila) => {
     }
     // Kertojan vaihto hiljentää käynnissä olevan luennan; seuraava
     // saapuminen luetaan uuden tilan mukaan.
-    if (tila === 'ei') ui?.stopDiaryVoice();
+    if (tila === 'ei' && ui) stopDiaryVoice(ui);
   }
   naytaKertoja();
 };

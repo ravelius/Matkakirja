@@ -9827,6 +9827,7 @@ export class UI {
       ? huudahdus.tiedosto : null;
     let luenta = null;
     let lukijaValmis = null;
+    let ttsPysayta = null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
       if (kertojaTila() !== 'ei') {
@@ -9841,6 +9842,7 @@ export class UI {
           onLoppu: () => luentaPaattyi?.(),
         });
         if (tts) {
+          ttsPysayta = tts;
           lukijaValmis = new Promise((resolve) => { luentaPaattyi = resolve; });
         } else if (kaariLuentaSoi(kaari, 'aarre')) {
           luenta = playDiaryVoice(this, `assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 3400 : 900 }) ?? null;
@@ -9912,6 +9914,11 @@ export class UI {
       if (!luenta.ended && !luenta.paused) haivytaJaSiivoa(this, luenta);
       else vapautaPuhuja(this, luenta);
     }
+    // Striimattu kertoja samaan sulkuun: kortti ja ääni päättyvät
+    // yhdessä, myös viivettä odottava luenta perutaan (omistaja
+    // 18.8.2026: "puheen tulee lakata samaan aikaan eikä jäädä
+    // taustalle jatkamaan. aarre osioissa ainakin käy vielä näin").
+    ttsPysayta?.();
     overlay.remove();
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
     // eloisasti merkiksi (omistajan toive). Tyhjä laatta ei tuo mitään.
@@ -9959,13 +9966,17 @@ export class UI {
      * Napautus tai ruksi ohittaa odotuksen.
      */
     let lukijaValmis = null;
+    let ttsPysayta = null;
     if (kertojaTila() !== 'ei') {
       let luentaPaattyi = null;
       const tts = lueKertojana(this, POLLO_AARRE.esittely, {
         viive: 900,
         onLoppu: () => luentaPaattyi?.(),
       });
-      if (tts) lukijaValmis = new Promise((resolve) => { luentaPaattyi = resolve; });
+      if (tts) {
+        ttsPysayta = tts;
+        lukijaValmis = new Promise((resolve) => { luentaPaattyi = resolve; });
+      }
     }
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
@@ -9990,7 +10001,10 @@ export class UI {
       overlay.classList.add('leaving');
       await this.wait(300);
     }
-    pysaytaLukija();
+    // Pysäytin kattaa myös viivettä odottavan luennan; ilman
+    // pysäytintä pudotaan vanhaan yleiskatkaisuun.
+    if (ttsPysayta) ttsPysayta();
+    else pysaytaLukija();
     overlay.remove();
     /*
      * Nappi riviin pienen nytkäyksen kera. Löytymistä odottaneet
