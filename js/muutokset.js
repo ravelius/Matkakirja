@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 851, teksti: 'Lippukortin leikkaus kuntoon iPadilla (kehysremontti)' },
   { v: 850, teksti: 'Raamattuun: ehdotuspalkkio pelirahana (lunastuskoodi)' },
   { v: 849, teksti: 'Raamattuun: lukijoiden ehdotukset -kanavan linjaus' },
   { v: 848, teksti: 'Karusellinuolen vaalea harso pois napautuksen jälkeen' },
