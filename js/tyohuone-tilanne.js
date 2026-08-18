@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v848 — iPad: lehden kansikarusellin napautus ei jätä enää vaaleaa harsoa kuvan laitaan (nuolinapin hover-tausta) — testaa Pariisin kansi: napauta oikeaa laitaa ja katso jääkö kuvan päälle vaalea kaista',
   'v847 — neljä uusittua miniatyyriä kartalla: Tampereen tuomiokirkko, Tripolin riemukaari ja Punainen linna, Tokion Shitamachi-museo — kaikilla kohteilla on nyt piirros',
   'v846 — Flickr-valokuvat Tampereen ja Firenzen lehtiin (19 kpl): avaa molemmat lehdet — avauskuvakaruselli, kansikuvien suurennos ja Matkailijan oppaan jaksot (Koski ja punatiili, Mustamakkara ja torit, Ilta / Perille ja jalkapatikkaan, Museot yhtenä päivänä, Torilla ja pöydässä, Ilta); tarkista että kuvat latautuvat ja tekijä + lisenssi näkyvät joka kuvatekstissä',
   'v845 — Raamatun Kuvat ja lähteet -osiossa uusi linjaus: kaikki sisältö ämpäristä (R2-peili), uusi lähde vasta kun peilausputki kattaa sen; kuvalähdelista päivitetty (Commons, Finna, LoC, Flickr)',
