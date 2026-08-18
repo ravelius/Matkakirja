@@ -4644,6 +4644,44 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Hurling',
         },
       ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kolme korkeutta ja kolme kohtaa jokea.
+       * Panimon tornista koko kaupunki merelle asti, Liffeyn ranta
+       * keskustassa keväällä ja sama joki alavirrasta illan valossa.
+       * Ha’penny-silta ja Samuel Beckett -silta ovat jo lehdessä.
+       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta, kuvat
+       * katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Dublin, városkép a Guinness-toronyból.jpg',
+          selite: 'Panimon tornista yli kaupungin: etualalla ovat '
+            + 'teräksiset käymissäiliöt ja hallien katot, niiden takana '
+            + 'matalat tiilitalot, kirkontornit ja torninhuiput. '
+            + 'Horisontissa siintää meri, sataman nosturit ja '
+            + 'raidalliset voimalan piiput.',
+          lahde: 'Kiss Tamás ( Kit36a at Hungarian Wikipedia ), '
+            + 'Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'The Four Courts and River Liffey, Dublin - geograph.org.uk - 2776535.jpg',
+          selite: 'Liffey virtaa graniittisten rantamuurien välissä: '
+            + 'vasemmalla rannalla kohoaa Four Courtsin oikeustalo '
+            + 'pylväikköineen ja vihreäksi hapettuneine kupoleineen, ja '
+            + 'sen editse ajaa busseja. Alavirtaan näkyy kivinen '
+            + 'kaarisilta.',
+          lahde: 'Richard Humphrey, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'The sunset - Dublin, Ireland - Cityscape photography.jpg',
+          selite: 'Auringonlasku Liffeyn yllä satama-altaan rannalta: '
+            + 'pilvien takaa levittäytyy säteikkö ja vedessä väreilee '
+            + 'oranssi heijastus. Oikealla ovat satamakortteleiden '
+            + 'talot, kaukana erottuvat tullitalon kupoli ja '
+            + 'purjelaivan mastot.',
+          lahde: 'Giuseppe Milo, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -4788,6 +4826,49 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puita, ja etualalla riippuu pihlajanmarjoja.',
           lahde: 'Scglossop1, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Edinburghin linna',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kolme suuntaa ja kolme kaupunginosaa.
+       * Idästä vanhankaupungin harjanne talviaamussa, linnan muurilta
+       * pohjoiseen uudenkaupungin yli merelle, ja Dean Village eli
+       * jokilaakso myllyineen kaupungin sisällä. Victoria Street,
+       * St Giles ja Calton Hill ovat jo kansikuvina.
+       *
+       * TOINEN KUVA VAIHDETTIIN valmisteluvaiheessa: ehdotettu
+       * uudenkaupungin katunäkymä oli kuvattu ajoradan pinnasta, ja
+       * pysäköidyt autot täyttivät molemmat reunat. Tilalle etsittiin
+       * sama kaupunginosa ylhäältä nähtynä. Lisenssit, tekijät ja koot
+       * todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Edinburgh Auld Toun (138362373).jpeg',
+          selite: 'Talviaamun matala aurinko osuu vanhankaupungin '
+            + 'harjanteeseen: oikealla kohoaa hotellin kellotorni, '
+            + 'keskellä linna kalliollaan ja vasemmalla vihreä kupoli '
+            + 'sekä tumma kirkontorni. Katoilla on ohut lumikerros.',
+          lahde: 'Paul Vallis, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Edinburgh (29285918903).jpg',
+          selite: 'Linnan muurilta pohjoiseen: etualalla ovat '
+            + 'linnoituksen karkea kivimuuri ja liuskekatot, niiden '
+            + 'takana levittäytyy uudenkaupungin yhtenäinen '
+            + 'harmaakivikorttelisto vihreine kupoleineen, ja '
+            + 'kauimpana avautuvat merenlahti ja sinertävät kukkulat.',
+          lahde: 'mandoft from El Campello (Alicante), Spain, '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Dean Village, Edinburgh (37952869852).jpg',
+          selite: 'Water of Leith virtaa matalana kivien yli Dean '
+            + 'Villagen läpi: vasemmalla kohoaa punertava rakennus '
+            + 'erkkeri-ikkunoineen, keskellä monikerroksinen '
+            + 'harmaakivinen myllyrakennus ja oikealla puukaiteinen '
+            + 'kävelytie. Rantoja reunustaa rehevä kesäkasvillisuus.',
+          lahde: 'Gary Campbell-Hall from Edinburgh, UK, '
+            + 'Wikimedia Commons (CC BY 2.0)',
         },
       ],
     },
@@ -5059,6 +5140,44 @@ export const KULTTUURI_KATEGORIAT = {
             + 'suuremman kuvion — siksi ladonnan on osuttava kohdalleen.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Azulejo',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kaukaa lähelle ja päivästä iltaan.
+       * Graçan kukkulalta koko kaupunki, kattojen tasalta katutasoa
+       * lähempää ja linnan muurilta sama maisema pimeän tullen.
+       * Alfama ja Rua Augusta ovat jo lehdessä eivätkä toistu.
+       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta, kuvat
+       * katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Castelo de São Jorge and 25 de Abril Bridge Over Lisbon Rooftops (54739478432).jpg',
+          selite: 'Kukkulan rinteeltä yli kattojen: vasemmalla kohoaa '
+            + 'São Jorgen linnan puistoinen kukkula muureineen, edessä '
+            + 'laskeutuvat tiilikatot kohti keskustaa, ja takana Tejo '
+            + 'levittäytyy leveänä. Horisontissa erottuu punainen '
+            + '25. huhtikuuta -silta.',
+          lahde: 'Dale Cruse - 10M views from San Francisco, CA, USA, '
+            + 'Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Lisbon Cityscape with 25 de Abril Bridge (55260752373).jpg',
+          selite: 'Kattojen tasalta alas kadulle: alhaalla kulkevat '
+            + 'raitiotiekiskot ja ajorata, puiden takana seisoo '
+            + 'valkoinen tiilikattoinen talo ja oikealla suuri '
+            + 'klassistinen rakennus. Vasemmalla kaukana näkyy Tejo ja '
+            + 'sen yli kaartuva silta.',
+          lahde: 'Michael Gaylard from Horsham, UK, Wikimedia Commons '
+            + '(CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Blue Hour over Lisbon (43257906392).jpg',
+          selite: 'Sininen hetki São Jorgen linnan muurilta: etualalla '
+            + 'on karkea kivimuuri ja oliivipuun oksia, alhaalla Baixan '
+            + 'suorat katulinjat ja valaistu Rossion aukio. Taivaalla on '
+            + 'jäljellä auringonlaskun viimeinen oranssi juova.',
+          lahde: 'Vicuna R from Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
