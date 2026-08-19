@@ -3428,6 +3428,215 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * MATKAILIJALLE (19.8.2026). Malli on Pariisin osio
+       * (docs/tyolista-opukselle.md). Jaksot eivät toista lehden
+       * nostoja: metron taide, Vasa-laiva, Polhemin sulut ja Mårten
+       * Trotzigs gränd ovat jo sivuilla, ja Kaupungintalo,
+       * Riddarholmenin kirkko, Sergelin tori, Kuninkaanlinna,
+       * Vasa-museo ja Skansen ovat kartan kohteita. Opas kertoo
+       * saaret, vanhankaupungin rajat, saariston, veden suolaisuuden
+       * ja sään. Säätiedot on johdettu repon omista normaaleista
+       * (js/packs/saatiedot.js: tukholma).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: '00 5279 Stockholm, Riddarholmskyrkan.jpg',
+          selite: 'Riddarholmenin kirkko: tiilitornin päällä nousee läpimurrettu valurautainen huippu kuin pitsi, ja sen ympärillä on rivi pieniä tornihuippuja. Vasemmalla erottuu hautakappelin kupoli ja oikealla toinen, kullatulla tähdellä koristeltu.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Tukholma on rakennettu neljälletoista saarelle siihen '
+          + 'kohtaan, jossa Mälaren laskee Itämereen. Kaupungin itäpuolella '
+          + 'alkaa saaristo, jossa on yli 24 000 saarta ja luotoa — ja '
+          + 'sen vesi on niin vähäsuolaista, ettei se maistu merivedeltä.',
+        artikkeli: {
+          nimi: 'Matkailijan Tukholma',
+          taitto: 'opas',
+          teksti: 'Neljätoista saarta, 24 000 luotoa ja vesi, joka ei '
+            + 'maistu suolalta.',
+          nosto: 'Ulkosaaristossa suolaa on 0,7 prosenttia — makua alkaa '
+            + 'tuntua vasta 1,5 prosentista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunki levittäytyy neljälletoista saarelle, '
+                + 'joten liikkuminen tarkoittaa siltoja ja veneitä. '
+                + 'Metro avattiin vuonna 1950, ja se on yhä rungon '
+                + 'muodostava yhteys. Saaristoon mennään laivalla: '
+                + 'lähisaarille pääsee siltoja ja lauttoja pitkin, mutta '
+                + 'ulompiin saariin kuten Ingmarsöhön, Möjaan, '
+                + 'Runmaröhön, Nämdöhön, Ornöhön ja Utöhön kuljetaan '
+                + 'aikataulun mukaan kulkevilla matkustajalaivoilla. '
+                + 'Lähisaarilla kuten Vaxholmissa, Värmdössä ja '
+                + 'Ljusterössä asutaan ympäri vuoden.',
+              kuva: { tiedosto: 'Af chapman (16187233384).jpg', selite: 'Täystakiloitu purjelaiva laiturissa sinisellä hetkellä: kolme mastoa ja niiden raakapuut piirtyvät vaaleaa iltataivasta vasten. Vastarannalla palaa valaistu kaupunki, ja tyyni vesi heijastaa valot pitkinä juovina.', lahde: 'Magnus Johansson, Wikimedia Commons (CC BY-SA 2.0)' },
+            },
+            {
+              otsikko: 'Kaupunki, jolla on kaksi vettä',
+              teksti: 'Tukholma sijaitsee kohdassa, jossa makea Mälaren '
+                + 'purkautuu suolaiseen Itämereen. Vanhakaupunki Gamla '
+                + 'stan on pääosin yksi saari, Stadsholmen, ja siihen '
+                + 'luetaan lisäksi Riddarholmen, Helgeandsholmen ja '
+                + 'Strömsborg. Vuoteen 1980 asti sen virallinen nimi oli '
+                + 'Staden mellan broarna eli kaupunki siltojen välissä. '
+                + 'Asukkaita vanhassakaupungissa on noin kolmetuhatta, '
+                + 'kun koko kunnassa heitä on noin miljoona ja '
+                + 'kaupunkiseudulla 1,6 miljoonaa. Kaupunki '
+                + 'perustettiin vuonna 1252.',
+              kuva: { tiedosto: 'Gamla stan i Stockholm, sommarkväll..JPG', selite: 'Vanhakaupunki kesäiltana ylhäältä: rantakadun edessä on laivalaituri, ja sen takana nousee kirjava talorivi keltaisena, punaisena ja okrana. Kattojen yli kohoavat Saksalaisen kirkon vihertävä torninhuippu ja kauempana kaksi muuta tornia.', lahde: 'Loxdalen, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Saaristo alkaa heti keskustan takaa',
+              teksti: 'Tukholman saaristo on Ruotsin suurin ja Itämeren '
+                + 'toiseksi suurin — suurempi on vain Saaristomeri '
+                + 'Suomen puolella. Saaria, luotoja ja kareja on hieman '
+                + 'yli 24 000, ja ne levittäytyvät noin 1 700 '
+                + 'neliökilometrin alueelle, josta maata on vain noin '
+                + '530. Vakituisia asuntoja on kymmenisentuhatta ja '
+                + 'kesämökkejä viisikymmentätuhatta. Osa alueesta on '
+                + 'ollut Ramsar-kosteikkokohde vuodesta 1989. Saaristo '
+                + 'alkaa heti kaupungin itäpuolelta.',
+              kuva: { tiedosto: '20130202 Stockholm Skärgård (38).jpg', selite: 'Saaristo ilmasta helmikuussa: kymmenet metsäiset saaret kohoavat jäätyneestä merestä, ja niiden välissä kiemurtelee vaalea rikottu laivaväylä. Rannoilla näkyy yksittäisiä taloja ja lumisia peltotilkkuja.', lahde: 'Belola80, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Meri, joka ei maistu suolalta',
+              teksti: 'Saariston vesi on murtovettä, ja sen suolapitoisuus '
+                + 'on hämmästyttävän pieni. Ulkosaaristossakin suolaa on '
+                + 'vain 0,6–0,7 painoprosenttia, kun makua alkaa tuntua '
+                + 'vasta noin 1,5 prosentista ja valtameressä suolaa on '
+                + 'kolme prosenttia tai enemmän. Vesi on usein '
+                + 'ruskehtavaa humuksen takia, etenkin sisäsaaristossa, '
+                + 'ja sen happamuus on lähellä neutraalia: pH on 7,0 '
+                + 'tai hieman alle, kun merivedessä se on noin 8,0. '
+                + 'Sisemmät osat jäätyvät joka talvi.',
+            },
+            {
+              otsikko: 'Kesä on lämmin ja sateisin',
+              teksti: 'Tukholman vuosi on selkeästi neljä vuodenaikaa. '
+                + 'Talvi on pakkasen puolella: tammi- ja helmikuun ylin '
+                + 'on keskimäärin yksi aste ja yön alin neljä pakkasta. '
+                + 'Kesä on lämmin mutta ei kuuma, heinäkuussa '
+                + 'kaksikymmentäkaksi astetta. Sade jakautuu päinvastoin '
+                + 'kuin moni odottaa: kuivinta on helmikuussa, noin '
+                + 'kolme senttiä, ja märintä elokuussa, lähes '
+                + 'seitsemän. Kevät on siis sekä lämpenevä että '
+                + 'kuiva, ja lomakausi osuu vuoden sateisimpaan '
+                + 'jaksoon.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Saaristo',
+                tahdet: 3,
+                selite: 'Yli 24 000 saarta alkaa heti keskustan takaa, '
+                  + 'ja laivat lähtevät kaupungin laitureista.',
+              },
+              {
+                mita: 'Vanhakaupunki',
+                tahdet: 3,
+                selite: 'Gamla stan on oma saarensa, ja sen kadut ovat '
+                  + 'keskiaikaista mittakaavaa.',
+              },
+              {
+                mita: 'Museot',
+                tahdet: 3,
+                selite: 'Vasa-museo on Pohjoismaiden vierailluin, ja '
+                  + 'Skansen on maailman vanhin ulkoilmamuseo.',
+              },
+              {
+                mita: 'Uiminen',
+                tahdet: 2,
+                selite: 'Vesi on murtovettä ja puhdasta, mutta lämpimiä '
+                  + 'viikkoja on vähän.',
+              },
+              {
+                mita: 'Talven valo',
+                tahdet: 1,
+                selite: 'Joulukuussa päivä on lyhyt ja aurinkoa niukasti.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Vesi on murtovettä',
+                teksti: 'Saariston suola on 0,6–0,7 prosenttia, eli vesi '
+                  + 'ei maistu suolaiselta eikä kellu kuten meressä. '
+                  + 'Ruskehtava sävy tulee humuksesta, ei liasta.',
+              },
+              {
+                otsikko: 'Elokuu on sateisin',
+                teksti: 'Elokuussa sataa lähes 70 millimetriä ja '
+                  + 'helmikuussa vain 31 — vuoden märin jakso osuu juuri '
+                  + 'lomakauteen.',
+              },
+              {
+                otsikko: 'Saaristolaivat kulkevat aikataululla',
+                teksti: 'Ulompiin saariin ei pääse maanteitse. Laivat '
+                  + 'kulkevat aikataulun mukaan, ja talvella vuoroja on '
+                  + 'selvästi vähemmän kuin kesällä.',
+              },
+              {
+                otsikko: 'Sisäsaaristo jäätyy',
+                teksti: 'Sisemmät osat saaristosta jäätyvät joka talvi, '
+                  + 'mikä muuttaa sekä maiseman että laivareitit.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–elokuu: päivät ovat pitkiä, '
+              + 'saaristolaivat kulkevat täydellä aikataululla ja '
+              + 'lämpötila nousee kahdenkymmenen tienoille. Elokuu on '
+              + 'lämpimin mutta myös sateisin. Syyskuu on ruskan aikaa '
+              + 'ja hiljaisempi. Talvella kaupunki on kaunis mutta '
+              + 'pimeä, ja osa saaristoliikenteestä on tauolla.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-2–14 °C',
+                kuvaus: 'Jäät lähtevät ja päivä pitenee nopeasti. '
+                  + 'Maaliskuu on vielä pakkasen puolella öisin, mutta '
+                  + 'toukokuussa päivä on jo neljäntoista asteen '
+                  + 'tienoilla ja sadetta vähän.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '10–22 °C',
+                kuvaus: 'Lämmin muttei kuuma. Yöt ovat vaaleita, ja '
+                  + 'saaristo on täydessä käytössä. Samalla vuoden '
+                  + 'sateisin jakso: kussakin kuukaudessa yli kuusi '
+                  + 'senttiä vettä.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '1–16 °C',
+                kuvaus: 'Syyskuu on vielä leuto ja väriltään kaunis, '
+                  + 'marraskuu jo pimeä ja kostea. Sadetta noin viisi '
+                  + 'senttiä kuukaudessa.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-4–1 °C',
+                kuvaus: 'Pakkasen puolella mutta harvoin ankara. '
+                  + 'Helmikuu on vuoden kuivin kuukausi, ja '
+                  + 'sisäsaaristo jäätyy.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'SL — metro, bussit ja lähijunat',
+                url: 'https://sl.se/en',
+              },
+              {
+                nimi: 'Wikivoyage: Tukholma',
+                url: 'https://fi.wikivoyage.org/wiki/Tukholma',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Martin piirsi Tukholman ennen valokuvaa',
