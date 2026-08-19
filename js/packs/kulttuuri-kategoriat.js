@@ -20178,6 +20178,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+          avauskuvat: [
+        {
+          tiedosto: 'Izmir Kadifekale view from wall 5677.jpg',
+          selite: 'Näkymä linnoituksen muurinaukosta alas kaupunkiin: etualalla on karkeaa kivimuuria ja tumma mänty, alhaalla levittäytyy tiivis matalien talojen meri, ja sen takana kaartuu leveä sininen lahti vuorten reunustamana.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'flickr-45404137562.jpg',
+          selite: 'Auringonlasku lahden yllä mereltä kuvattuna: aurinko painuu utuisten vuorten taakse ja väriää taivaan oranssiksi. Vasemmalla kaartuu rannan talorivistö tummana siluettina, ja etualalla vesi liikkuu pienissä aalloissa.',
+          lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'flickr-44541665545.jpg',
+          selite: 'Laituri mereltä nähtynä: vaaleassa terminaalirakennuksessa on kuparinvihreä katto, ja sen kylkeen on kiinnitetty rivi mustia auton renkaita lepuuttajiksi. Vasemmalla lähtee valkoinen matkustajalautta, ja tuulinen vesi kuohuu etualalla.',
+          lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'arki',

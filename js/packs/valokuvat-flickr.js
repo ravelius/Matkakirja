@@ -103,6 +103,11 @@ export const VALOKUVAT_FLICKR = new Map([
   // Commonsin Amsterdam-katukuvissa on lähes aina tunnistettavia ihmisiä.
   ['flickr-12620536334.jpg', { osoite: 'https://live.staticflickr.com/7447/12620536334_151903393c', sivu: 'https://www.flickr.com/photos/spillokr/12620536334', tekija: 'Mario Oreste', lisenssi: 'CC BY-SA 2.0' }],
   ['flickr-3864446500.jpg', { osoite: 'https://live.staticflickr.com/3442/3864446500_819afa0423', sivu: 'https://www.flickr.com/photos/joiseyshowaa/3864446500', tekija: 'joiseyshowaa', lisenssi: 'CC BY-SA 2.0' }],
+  // İzmir (19.8.2026): lahden auringonlasku ja Konakin laituri Flickristä,
+  // koska Commonsin İzmir-kuvissa on joko poltettu päivämääräleima tai
+  // aihe osuu lehden jo käyttämiin nostoihin (agora, Asansör).
+  ['flickr-45404137562.jpg', { osoite: 'https://live.staticflickr.com/1908/45404137562_01f789d81d', sivu: 'https://www.flickr.com/photos/fran001/45404137562', tekija: 'Francisco Anzola', lisenssi: 'CC BY 2.0' }],
+  ['flickr-44541665545.jpg', { osoite: 'https://live.staticflickr.com/1910/44541665545_a050812893', sivu: 'https://www.flickr.com/photos/fran001/44541665545', tekija: 'Francisco Anzola', lisenssi: 'CC BY 2.0' }],
 ]);
 
 /**
