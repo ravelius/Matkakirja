@@ -14843,6 +14843,367 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  persepolis: [
+    {
+      id: 'kaupunki',
+      nimi: 'Persepolis',
+      johdanto: 'Kivinen terassi vuoren kupeessa, jonne neljä kuningasta '
+        + 'rakensi pylvässaleja. Portaiden reliefeissä koko valtakunnan '
+        + 'kansat kantavat lahjoja, kukin omissa vaatteissaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Persepolis – Gate of All Nations 01.jpg',
+          selite: 'Kaikkien kansojen portti alaviistosta: kaksi siivekästä '
+            + 'härkä-ihmishahmoa vartioi oviaukkoa, ja niiden välistä nousee '
+            + 'yksinäinen pylväs uurteineen.',
+          lahde: 'Skot, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Hall of Hundred Columns (Throne Hall), Persepolis.jpg',
+          selite: 'Sadan pylvään salin pohja: pylväänjalustat riveissä '
+            + 'ruohikossa, taustalla pystyssä olevia oviaukkoja ja '
+            + 'kalliorinne, johon on louhittu hauta.',
+          lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Persepolis - Tachara 03.jpg',
+          selite: 'Tachara, Dareios I:n oma palatsi: kaksoisportaikko, jonka '
+            + 'kylkeen on veistetty reliefirivistö, ja sen takana ovenpielet '
+            + 'pystyssä ilman kattoa.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: '2009-11-24 Persepolis 03.jpg',
+          selite: 'Terassi sivulta koko leveydeltään: reliefein koristeltu '
+            + 'muuri etualalla, sen päällä ovenpieliä ja pylväitä, ja '
+            + 'kaukana vasemmalla tasanko ja vuoret.',
+          lahde: 'Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Approach to Persepolis The Great Double Staircase (4670082050).jpg',
+          selite: 'Näkymä tasangolta terassille: leveä kivimuuri kohoaa '
+            + 'maasta, sen päällä siintää Kaikkien kansojen portti, ja '
+            + 'takana nousee paljas vuori.',
+          lahde: 'A.Davey from Portland, Oregon, EE UU, Wikimedia Commons '
+            + '(CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Persépolis, Irán, 2016-09-24, DD 53.jpg',
+          selite: 'Pylvässalin porrasreliefi viistosti: rivi hahmoja '
+            + 'katoaa perspektiivissä kauas, jokainen kädet samassa '
+            + 'asennossa, ja ylhäällä kulkee kukkanauha.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Neljän kuninkaan terassi',
+          tiedosto: 'Persépolis, Irán, 2016-09-24, DD 56.jpg',
+          teksti: 'Persepolis ei ole yhden hallitsijan työ vaan neljän. '
+            + 'Vanhimmat jäänteet ajoittuvat vuoteen 515 eKr., ja Dareios I '
+            + 'rakennutti terassin ja sen ensimmäiset palatsit. Poika Xerxes '
+            + 'viimeisteli pylvässalin, aloitti valtaistuinsalin ja rakensi '
+            + 'oman palatsinsa Hadishin. Artakserkses I sai valtaistuinsalin '
+            + 'valmiiksi, ja Artakserkses III jätti oman porttinsa kesken. '
+            + 'Terassi on 125 000 neliömetriä: osa siitä on louhittu suoraan '
+            + 'Rahmat-vuoren kylkeen, osa muurattu tasangolle päin.',
+          selite: 'Tachara-palatsi sivusta: pystyssä olevat ovenpielet ja '
+            + 'ikkuna-aukot seisovat rivissä terassin päällä, katto ja '
+            + 'seinät ovat kadonneet kokonaan.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Persepolis',
+        },
+        {
+          otsikko: 'Portti, jonka läpi kaikki kulkivat',
+          tiedosto: 'Persepolis Lamassus 1.jpg',
+          teksti: 'Ensimmäinen rakennus, johon terassille noussut käveli, '
+            + 'oli Xerxes I:n rakennuttama portti. Se on nelikulmainen sali, '
+            + 'sivultaan noin kaksikymmentäviisi metriä, ja sen kivipylväät '
+            + 'kohoavat noin kuudentoista ja puolen metrin korkeuteen '
+            + 'kaksoishärkäpääkoristeisiin pylväänpäihin. Oviaukkoja '
+            + 'vartioivat lamassut, siivekkäät härkä-ihmishahmot. Portin '
+            + 'oma piirtokirjoitus antaa sille nimen kaikkien kansojen '
+            + 'portti, ja teksti on kaiverrettu kolmella kielellä.',
+          selite: 'Lamassu läheltä: parrakas ihmispää, kiharat hiukset ja '
+            + 'sulkakuvioinen siipi kiven kyljessä. Takana kohoavat kaksi '
+            + 'pylvästä härkäpääkoristeineen.',
+          lahde: 'dynamosquito, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Jokainen ryhmä omissa vaatteissaan',
+          tiedosto: 'Bas-Relief on Apadana Staircase - Persepolis - Central Iran - 05 (7427791490) (2).jpg',
+          teksti: 'Pylvässalin portaiden kylkeen on veistetty kulkue, jossa '
+            + 'valtakunnan eri kansat tuovat lahjoja kuninkaalle. Reliefit '
+            + 'eivät ole samanlaista massaa: jokainen ryhmä on veistetty '
+            + 'omassa asussaan, omine päähineineen ja omine tuomisineen — '
+            + 'maljoja, kankaita, astioita ja eläimiä. Ryhmät on erotettu '
+            + 'toisistaan tyylitellyllä sypressillä, joka toistuu koko '
+            + 'kulkueen matkan samanlaisena. Kivi on paikoin kulunut '
+            + 'sileäksi kosketuksesta, mutta partojen kiharat ja kankaan '
+            + 'poimut erottuvat yhä terävinä.',
+          selite: 'Kaksi parrakasta hahmoa lähikuvassa, toinen ojentaa '
+            + 'kaksikorvaista amforaa. Parrat ja hiukset on veistetty '
+            + 'tiukoiksi kiharoiksi ja kaavun laskokset suoriksi viivoiksi.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons '
+            + '(CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Sali, joka on hajonnut kolmelle mantereelle',
+          tiedosto: 'Persepolis, Iran 12.jpg',
+          teksti: 'Valtaistuinsali eli Sadan pylvään sali on seitsemänkymmentä '
+            + 'metriä kumpaankin suuntaan. Sen kahdeksassa kivisessä '
+            + 'ovenpielessä on reliefejä valtaistuinkohtauksista ja '
+            + 'kuninkaasta taistelemassa hirviötä vastaan. Pohjoista '
+            + 'pylväikköä vartioi kaksi jättimäistä kivihärkää. Toisen '
+            + 'härän pää on nykyään Chicagossa ja yksi salin '
+            + 'pylväänjalusta British Museumissa Lontoossa — sali on siis '
+            + 'kaivausten ja keräilyn myötä jakautunut kolmelle '
+            + 'mantereelle.',
+          selite: 'Pystyssä oleva ovenpieli valtaistuinsalissa: aukon '
+            + 'sisällä näkyy reliefi, jossa kuningas istuu valtaistuimella '
+            + 'ja alla kantaa rivi pieniä hahmoja koko rakennelmaa.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tribute Bearers on the Apadana Staircase 22 (Best Viewed Size "Large") (4688831503).jpg',
+          selite: 'Porrasreliefi läheltä: hahmo taluttaa hevosta, toinen '
+            + 'seisoo sauva kädessä, ja oikeassa laidassa kasvaa '
+            + 'tyylitelty sypressi, joka erottaa kulkueen ryhmät '
+            + 'toisistaan.',
+          lahde: 'A.Davey from Portland, Oregon, EE UU, Wikimedia Commons '
+            + '(CC BY 2.0)',
+        },
+        kappale: 'Persepolis on yksi rajattu kohde eikä kaupunki: kivinen '
+          + 'terassi, jolle noustaan portaita ja jolta kävellään ulos '
+          + 'samaa tietä. Kaikki mahtuu muutaman sadan metrin alueelle, '
+          + 'joten aikaa kuluu enemmän katsomiseen kuin kulkemiseen. '
+          + 'Ympäristössä on kuitenkin toinen kohde, jota ilman käynti jää '
+          + 'vajaaksi: Naqsh-e Rustamin kallioseinä kolmentoista kilometrin '
+          + 'päässä.',
+        artikkeli: {
+          nimi: 'Matkailijan Persepolis',
+          taitto: 'opas',
+          teksti: 'Terassi, jolle noustaan portaita ja jolta koko tasanko '
+            + 'näkyy.',
+          nosto: 'Persepolis on ollut matkailukohde ainakin 1600-luvulta: '
+            + 'kävijät kaiversivat nimensä kiveen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Persepolis on Iranin Fars-maakunnassa, ja lähin '
+                + 'kaupunki on Marvdasht. Etäisyydestä Shiraziin annetaan '
+                + 'lähteissä eri lukuja sen mukaan, mistä mitataan: '
+                + 'Marvdashtin kohdalla puhutaan noin neljästäkymmenestä '
+                + 'viidestä kilometristä ja itse raunioalueen kohdalla '
+                + 'noin seitsemästäkymmenestä. Alue on avoinna yleisölle, '
+                + 'ja sitä hallinnoi Iranin kulttuuriperintöjärjestö. '
+                + 'Unescon maailmanperintöluetteloon Persepolis '
+                + 'hyväksyttiin vuonna 1979. Noin kolmentoista kilometrin '
+                + 'päässä luoteeseen on Naqsh-e Rustam, kallioseinä johon '
+                + 'on louhittu neljä kuninkaanhautaa — se käydään '
+                + 'tavallisesti samalla matkalla.',
+              kuva: {
+                tiedosto: 'Naqsh-e Rustam 02.jpg',
+                selite: 'Naqsh-e Rustamin kallioseinä: kaksi '
+                  + 'ristinmuotoista hautajulkisivua louhittuna jyrkkään '
+                  + 'kallioon, ja niiden alapuolella myöhempiä reliefejä '
+                  + 'kiven pinnassa.',
+                lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Miten terassi on jaettu',
+              teksti: 'Terassille noustaan leveää kaksoisportaikkoa, ja '
+                + 'ylhäällä odottaa Kaikkien kansojen portti. Sen takana '
+                + 'aukeaa alue, jossa rakennukset ovat omilla tasoillaan: '
+                + 'pylvässali eli Apadana, valtaistuinsali, Dareioksen '
+                + 'oma palatsi Tachara ja Xerxesin Hadish, joka kattaa '
+                + 'terassin ylimmällä tasolla noin kaksi ja puoli tuhatta '
+                + 'neliömetriä. Tachara on säilynyt näistä parhaiten. '
+                + 'Vesihuolto oli osa suunnitelmaa: terassin alle '
+                + 'louhittiin viemärikanavia, jotka kulkivat pylväiden '
+                + 'välistä, ja alueella oli kalliosäiliö veden '
+                + 'keräämiseen.',
+              kuva: {
+                tiedosto: 'General view of the ruins of Persepolis.jpg',
+                selite: '1800-luvun kaiverrus koko terassista ylhäältä: '
+                  + 'suorakaiteen muotoinen alusta vuoren juurella, sen '
+                  + 'päällä pylväsrivistöjä ja perustuksia, ja ympärillä '
+                  + 'tyhjä tasanko.',
+                lahde: 'Maspero, G. (Gaston), 1846-1916; Sayce, A. H. '
+                  + '(Archibald Henry), 1845-1933, Wikimedia Commons '
+                  + '(public domain)',
+              },
+            },
+            {
+              otsikko: 'Nimet kiveen kaiverrettuina',
+              teksti: 'Persepolis on ollut matkailukohde kauan ennen '
+                + 'valokuvaa. Kaikkien kansojen portin ja pylvässalin '
+                + 'kivipinnoissa on yli kaksisataa ulkomaisen kävijän '
+                + 'kaivertamaa nimeä; kun persialaiset, heprealaiset ja '
+                + 'armenialaiset kaiverrukset jätetään laskuista, nimiä on '
+                + 'kirjattu 222. Ensimmäiset on kaiverrettu 1600-luvulla. '
+                + 'Suurin osa kaivertajista oli brittejä, toisinaan '
+                + 'vaimoineen; loput ovat hollantilaisia, ranskalaisia, '
+                + 'saksalaisia, venäläisiä, amerikkalaisia ja '
+                + 'intialaisia, ja mukana on yksi unkarilainen nimi.',
+              kuva: {
+                tiedosto: 'Troisième Vue de Persepolis - Quatrième Vue de Persepolis - Bruyn Cornelis De - 1725.jpg',
+                selite: 'Kaksi kaiverrettua näkymää Persepoliksesta '
+                  + 'vuoden 1725 matkakirjasta: terassi kaukaa tasangon '
+                  + 'yli, pystyssä olevat pylväät riveinä ja etualalla '
+                  + 'matkalaisia lepäämässä kivillä.',
+                lahde: 'Cornelis de Bruijn, Wikimedia Commons '
+                  + '(public domain)',
+              },
+            },
+            {
+              otsikko: 'Mitä reliefeistä kannattaa katsoa',
+              teksti: 'Reliefit ovat Persepoliksen varsinainen sisältö, ja '
+                + 'niitä kannattaa katsoa lähietäisyydeltä. Kulkueessa '
+                + 'toistuu sama rakenne: ryhmä kerrallaan, jokaisen edessä '
+                + 'opas ja jokaisen välissä sypressi. Yksityiskohdat '
+                + 'kertovat enemmän kuin kokonaisuus — millainen päähine '
+                + 'kenelläkin on, kannetaanko malja vai kangas, taluttaako '
+                + 'joku eläintä. Kivi on tummunut ja paikoin kiillottunut '
+                + 'kosketuksesta, mutta hiusten kiharat ja kankaan '
+                + 'laskokset ovat yhä teräviä. Portaiden yläpäässä '
+                + 'reliefit jatkuvat vartijoiden riveinä, joiden vieressä '
+                + 'kulkee nuolenpääkirjoitusta.',
+              kuva: {
+                tiedosto: 'Persepolis stairs of the Apadana relief.jpg',
+                selite: 'Kolme hahmoa porrasreliefissä: ensimmäinen '
+                  + 'ojentaa matalaa maljaa, toinen kantaa amforaa '
+                  + 'molemmin käsin, ja kolmas seisoo kädet kaavun '
+                  + 'sisällä.',
+                lahde: 'Phillip Maiwald (Nikopol), Wikimedia Commons '
+                  + '(CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Persepolis on Iranin ylängöllä puolentoista '
+                + 'kilometrin korkeudessa, ja vuosi jakautuu jyrkästi '
+                + 'kahtia. Touko–lokakuussa sadetta ei käytännössä tule '
+                + 'lainkaan, ja koko vuoden vajaat '
+                + 'kaksisataaseitsemänkymmentä millimetriä kertyy '
+                + 'marras–huhtikuussa. Heinäkuun keskilämpö on lähes '
+                + 'kolmekymmentä astetta, ja koska terassilla ei ole '
+                + 'varjoa, keskikesän keskipäivä on hankalin hetki tulla. '
+                + 'Tammikuussa keskilämpö on runsaat neljä astetta ja '
+                + 'öisin raunioilla on pakkasta. Kevät ja syksy ovat siis '
+                + 'kävelyn kannalta selvästi helpoimmat.',
+              kuva: {
+                tiedosto: 'Persepolis east side at spring.jpg',
+                selite: 'Terassin itäsivu keväällä: massiivinen kivimuuri '
+                  + 'kohoaa kirkkaanvihreältä nurmelta, ja muurin päältä '
+                  + 'näkyy pylväitä ja ovenpieliä.',
+                lahde: 'Masoudkhalife, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Savitaulut kertovat, mitä työstä maksettiin. Aleksanterin '
+        + 'joukot polttivat palatsit 330 eKr., ja sama sortuma säilytti '
+        + 'taulut maan alla yli kahdeksi vuosituhanneksi.',
+      tehtava: {
+        kysymys: 'Millä kielellä suurin osa Persepoliksen savitauluista on '
+          + 'kirjoitettu?',
+        vaihtoehdot: [
+          'Kreikaksi',
+          'Elamiksi',
+          'Latinaksi',
+          'Arabiaksi',
+        ],
+        oikea: 1,
+        fakta: 'Osa on arameaksi, ja joukossa on harvinaisia kreikan- ja '
+          + 'babylonankielisiä tauluja.',
+      },
+      nostot: [
+        {
+          otsikko: 'Annoslistat savitauluilla',
+          tiedosto: 'Tablilla con inscripción cuneiforme en lengua elamita. Período aqueménida (559-331 a. C.) - MARQ.jpg',
+          teksti: 'Maaliskuussa 1933 linnoitusmuurin nurkkahuoneesta löytyi '
+            + 'kymmeniätuhansia savitauluja ja niiden palasia — '
+            + 'kaivausjohtaja arvioi määräksi noin kolmekymmentätuhatta. '
+            + 'Ne ovat Persepoliksen hallinnon kirjanpitoa vuosilta '
+            + '509–493 eKr. eli Dareios I:n hallitusvuosilta 13–28. '
+            + 'Suurin osa on elamiksi. Taulut eivät kerro palkasta rahana '
+            + 'vaan annoksina: työläisille jaettiin viljaa, hedelmiä ja '
+            + 'karjaa. Tauluihin on kirjattu yhtä paljon naisia kuin '
+            + 'miehiä, ja osa naisista sai suuremman annoksen kuin kukaan '
+            + 'saman työryhmän mies.',
+          selite: 'Elaminkielinen savitaulu akhaimenidiajalta museon '
+            + 'vitriinissä: kämmenen kokoinen tiili, jonka pintaan on '
+            + 'painettu tiheää nuolenpääkirjoitusta.',
+          lahde: 'Dorieo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kolme kieltä samassa seinässä',
+          tiedosto: 'Persépolis, Irán, 2016-09-24, DD 15.jpg',
+          teksti: 'Persepoliksen piirtokirjoitukset on tavallisesti '
+            + 'kaiverrettu kolmella kielellä samaan seinään, ja juuri se '
+            + 'teki niistä avaimen: kun yksi kieli osattiin lukea, muut '
+            + 'aukesivat vertaamalla. Kaikkien kansojen portin oma '
+            + 'kirjoitus on tällainen kolmikielinen teksti. Seinissä '
+            + 'kulkevat myös vartijoiden rivit, joissa jokainen hahmo '
+            + 'seisoo keihäs kädessä samassa asennossa kuin edellinen — '
+            + 'ja kirjoitus alkaa suoraan rivin vierestä, ilman kehystä '
+            + 'tai erillistä taulua.',
+          selite: 'Vartijoiden reliefirivi: viisi keihäsmiestä '
+            + 'poimutetuissa kaavuissa peräkkäin, ja vasemmassa laidassa '
+            + 'näkyy pystysuora palsta nuolenpääkirjoitusta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tulipalo, joka jätti kiven pystyyn',
+          tiedosto: 'Persepolis - Apadana 01.jpg',
+          teksti: 'Vuonna 330 eKr. Aleksanteri Suuren joukot valtasivat '
+            + 'Persepoliksen, ja pian sen jälkeen tuli tuhosi rakennusten '
+            + 'puuosat. Syystä ei ole yksimielisyyttä. Yhden tulkinnan '
+            + 'mukaan palo oli kosto siitä, että persialaiset olivat '
+            + 'aiemmin polttaneet Ateenan; toisen mukaan se sytytettiin '
+            + 'humalaisissa juhlissa, joissa ateenalainen Thaïs yllytti '
+            + 'siihen; kolmannen mukaan kyse oli harkitusta poliittisesta '
+            + 'teosta. Lähteet eivät edes kerro varmasti, oliko palo '
+            + 'vahinko vai tahallinen. Sen jälki näkyy yhä: puu paloi, '
+            + 'kivi jäi.',
+          selite: 'Pylvässalin pystyssä olevat pylväät: yksi kohoaa '
+            + 'täyteen korkeuteensa koristeltuine pylväänpäineen, '
+            + 'kauempana kaksi katkennutta. Ympärillä on tyhjä '
+            + 'sorapohja.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Unohdettu, sitten tunnistettu uudelleen',
+          tiedosto: 'Première Vue de Persepolis- Deuxième Vue de Persepolis - Bruyn Cornelis De - 1725.jpg',
+          teksti: 'Kun kaupunki hiljeni, myös sen nimi katosi. Keskiajalla '
+            + 'raunioita kutsuttiin nimillä Tahti Jamshid eli Jamshidin '
+            + 'valtaistuin ja Tšehel Minar eli neljäkymmentä minareettia. '
+            + 'Venetsialainen Giosafat Barbaro kävi paikalla 1474 ja '
+            + 'arveli virheellisesti raunioita juutalaisiksi. Espanjan '
+            + 'lähettiläs García de Silva Figueroa tunnisti vuonna 1618 '
+            + 'ensimmäisenä länsimaalaisena, että kyseessä oli antiikin '
+            + 'kirjoittajien Persepolis. Italialainen Pietro Della Valle '
+            + 'laski 1621, että alkuperäisestä 72 pylväästä oli pystyssä '
+            + 'enää 25.',
+          selite: 'Kaksi kaiverrettua näkymää vuoden 1725 matkakirjasta: '
+            + 'terassi tasangon takana, pylväitä pystyssä rivissä, ja '
+            + 'etualalla matkalaisia kameleineen.',
+          lahde: 'Cornelis de Bruijn, Wikimedia Commons (public domain)',
+        },
+      ],
+    },
+  ],
   tromssa: [
     {
       id: 'kaupunki',

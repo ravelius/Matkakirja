@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 932, teksti: 'Persepoliksen lehti: 8 nostoa ja matkaopas' },
   { v: 931, teksti: 'Kappadokian aluelehti: 8 nostoa ja matkaopas' },
   { v: 930, teksti: 'Petran lehti alusta: kartta, 9 juttua, opas' },
   { v: 929, teksti: 'Izmirin avauskuvat — Lähi-idän lehtityö alkaa' },
