@@ -10028,6 +10028,42 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Björk',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme maisematyyppiä. Rannikkovuori
+       * talvella, sisämaan riolliittikentät kesällä ja itärannikon
+       * huiput auringonnousun jälkeen. Kansikuvissa ovat jo Gullfoss,
+       * Reykjavík ja Reynisfjara, joten nämä katsovat muualle.
+       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
+       * jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Kirkjufell in winter.jpg',
+          selite: 'Kirkjufell talvella: kerroksellinen vuori nousee '
+            + 'yksinään vuonon takaa, ja sen rinteitä juovittavat '
+            + 'vaakasuorat tummat kalliokerrokset lumen alla. Etualalla '
+            + 'on lumen peittämä laavakivimuuri ja sen takana tumma '
+            + 'meri.',
+          lahde: 'Beardhatcode, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Colorful mountain slope in Landmannalaugar.jpg',
+          selite: 'Landmannalaugarin rinteet kesällä: riolliitti värjää '
+            + 'maan keltaiseksi, oranssiksi ja tummanharmaaksi, ja '
+            + 'sammal tuo laikkuja kirkasta vihreää. Laaksossa alempana '
+            + 'kiemurtelee palmikoituva jokiuoma harmaalla '
+            + 'hiekkatasangolla.',
+          lahde: 'Syony, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Vestrahorn After Sunrise - Iceland.jpg',
+          selite: 'Vestrahorn pian auringonnousun jälkeen: sahalaitainen '
+            + 'vuorijono hehkuu ruskeana matalassa valossa, ja sen '
+            + 'edessä kaartuu musta hiekkaranta. Etualalla kasvaa '
+            + 'kuivunutta rantaheinää tuppaissa mustassa hiekassa.',
+          lahde: 'Eric Kilby, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
     },
     {
       id: 'kirjat',
@@ -10174,6 +10210,40 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Inarinsaame',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme vuodenaikaa. Saana jäätyneen
+       * järven takaa maaliskuussa, Kevon kanjoni kesällä ja
+       * Pallastunturit ruskan aikaan. Kansikuvissa ovat jo revontulet,
+       * Sallatunturi ja porotila. Lisenssit, tekijät ja koot todennettu
+       * Commonsin API:sta, jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Saana at Kilpisjärvi, 2012 March.jpg',
+          selite: 'Saana maaliskuussa: laakeahuippuinen tunturi kohoaa '
+            + 'kokonaan lumen peitossa, ja sen laella erottuu ohut '
+            + 'masto. Etualalla levittäytyy jäätynyt ja luminen '
+            + 'Kilpisjärvi, rannassa on tummaa koivikkoa.',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Kevo canyon from Bođosroadjá.JPG',
+          selite: 'Kevon kanjoni kesällä: jyrkät rinteet laskeutuvat '
+            + 'kapeaan uomaan, ja niitä peittää vuorotellen '
+            + 'harmaa lohkarekivikko ja matala tunturikoivikko. Pohjalla '
+            + 'kasvaa tiheä vihreä puusto, ja taivas on '
+            + 'pilvenharmaa.',
+          lahde: 'Antti Leppänen, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Pallastunturi peaks in september 2021.jpg',
+          selite: 'Pallastunturit syyskuussa: etualan suolla ja '
+            + 'kangasmetsässä palaa ruska punaisena, oranssina ja '
+            + 'keltaisena kuusten välissä. Taustalla kohoaa loivakaarinen '
+            + 'tunturiselänne, jonka lakea peittää jo ohut lumi.',
+          lahde: 'Htm, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tunturi',
@@ -10314,6 +10384,44 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Oliivi',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): saaren sisämaa kolmena maisemana —
+       * Valkoiset vuoret, kanjoni ja korkea viljelytasanko.
+       * Kansikuvissa ovat jo Chanian satama, Knossos ja Elafonisin
+       * ranta, joten rannikko ja arkeologia on jo katettu. Lisenssit,
+       * tekijät ja koot todennettu Commonsin API:sta, jokainen kuva
+       * katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Lefka Ori 01.jpg',
+          selite: 'Lefka Ori eli Valkoiset vuoret kesäpäivänä: '
+            + 'paljaat kalkkikivihuiput nousevat vaaleina syvänsinistä '
+            + 'taivasta vasten. Etualan rinteillä kasvaa hajanaista '
+            + 'pensaikkoa ja yksittäisiä puita, ja alhaalla vasemmalla '
+            + 'näkyy kylän valkoisia taloja.',
+          lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Kourtaliotiko Gorge 01.JPG',
+          selite: 'Kourtaliotikon rotko: kaksi jyrkkää kalkkikiviseinämää '
+            + 'sulkeutuu kapeaksi kuruksi, jonka pohjalla kasvaa tummaa '
+            + 'vihreää. Vasemmalla rinteellä kiemurtelee kapea tie, ja '
+            + 'etualan sorapenkereellä on keltaisenaan kukkivia '
+            + 'pensaita.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Omalos Plateau.jpg',
+          selite: 'Omalosin tasanko ylhäältä: vuorten ympäröimä laakea '
+            + 'ylänkö on jaettu vaaleiksi peltokuvioiksi, joiden välissä '
+            + 'kasvaa yksittäisiä puita. Tasangon poikki kulkee mutkitteleva '
+            + 'tie, ja taustalla harjanteet nousevat tummina '
+            + 'hattarapilvien alle.',
+          lahde: 'Emmanuel Eragne from Tokyo, Japan, Wikimedia Commons '
+            + '(CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'maasto',
@@ -10451,6 +10559,40 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jatkuu iltaan.',
           lahde: 'Benjamín Núñez González, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Palermo',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme eri Sisiliaa — tulivuorisaari
+       * ilmasta, vihreä sisämaan vuoristo ja kalkkikivinen rannikko
+       * mereltä. Kansikuvissa ovat jo Taormina, Etna ja Palermon
+       * katedraali. Lisenssit, tekijät ja koot todennettu Commonsin
+       * API:sta, jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Aerial image of Stromboli (view from the northeast).jpg',
+          selite: 'Stromboli ilmasta: tulivuorisaari kohoaa merestä '
+            + 'lähes säännöllisenä kartiona, ja huipulta nousee ohut '
+            + 'valkoinen höyrysuihku. Rinteet ovat ylhäältä tummaa '
+            + 'tuhkaa ja alempaa vihreitä, ja rannassa on valkoisten '
+            + 'talojen rivi.',
+          lahde: 'Carsten Steger, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Madonie montagna.jpg',
+          selite: 'Madonien vuoristo alkukesästä: rinteet ovat vihreitä '
+            + 'ja niiden seasta työntyy paljaita kalliopaljastumia. '
+            + 'Etualalla kukkii keltainen ginsti tiheänä pensaana, ja '
+            + 'taivaalla kelluu valkoisia kumpupilviä.',
+          lahde: 'Martin Teetz, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Capo Zafferano ottobre 2025 3.jpg',
+          selite: 'Capo Zafferano mereltä lokakuussa: kalkkikivinen '
+            + 'niemi kohoaa jyrkkänä vedestä, ja sen laella seisoo '
+            + 'valkoinen majakka. Rantaviiva on lohkeillutta kalliota, '
+            + 'ja edessä on syvänsininen ja aaltoileva meri.',
+          lahde: 'Auregann, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -10593,6 +10735,41 @@ export const KULTTUURI_KATEGORIAT = {
             + 'liikkeelle — kylän yläpuoliseen rinteeseen.',
           lahde: 'Paebi, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lumivyöry',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme alppimaisemaa — jäätikkö
+       * ylhäältä, Dolomiittien tornit pilvimeren yllä ja laakso
+       * talvella. Kansikuvissa ovat jo Matterhorn, alppiniitty ja
+       * Wetterhorn. Lisenssit, tekijät ja koot todennettu Commonsin
+       * API:sta, jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Aletsch Glacier from Jungfraujoch (1).jpg',
+          selite: 'Aletschin jäätikkö Jungfraujochilta: leveä jäävirta '
+            + 'kaartuu laaksoa alas, ja sen pintaa juovittavat tummat '
+            + 'moreeniraidat pitkinä viivoina. Molemmin puolin nousevat '
+            + 'lumiset huiput ja paljaat kalliokielekkeet.',
+          lahde: 'Gzzz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Drei Zinnen Tre Cime di Lavaredo Dolomites.jpg',
+          selite: 'Tre Cime di Lavaredon kolme tornia pilvimeren yllä: '
+            + 'vaaleat kalkkikivipaadet nousevat pystysuorina, ja niiden '
+            + 'railoissa on tuoretta lunta. Huippujen juuret katoavat '
+            + 'valkoiseen pilveen, ja ylhäällä taivas on kirkkaan '
+            + 'sininen.',
+          lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Lauterbrunnen-valley.jpg',
+          selite: 'Lauterbrunnenin laakso talvella: kapea laakso '
+            + 'laskeutuu jyrkkien kallioseinämien väliin, ja pohjalla '
+            + 'näkyy lumisia peltoja ja kylän taloja. Pilvenriekaleita '
+            + 'ajelehtii rinteitä pitkin, ja taustalla kohoaa luminen '
+            + 'huippujono.',
+          lahde: 'Keith Halstead, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
