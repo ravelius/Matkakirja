@@ -11529,6 +11529,186 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Godot13, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Saint Petersburg Kunstkamera from Neva.jpg',
+          selite: 'Vaaleanvihreä barokkirakennus joen rannalla: pitkän kaksikerroksisen julkisivun keskeltä nousee valkoinen torni kupolein ja parvekkein. Rantaa reunustaa graniittimuuri, jonka edessä on laituri ja pieni valkoinen jokialus.',
+          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Pietari on rakennettu Nevan suiston saarille. Saaria '
+          + 'oli 1800-luvun lopulla 101, nykyään 42 — osa on '
+          + 'yhdistynyt toisiinsa täytemaalla. Kaupunki on siis '
+          + 'muuttanut muotoaan sen jälkeen, kun isoisä siellä kävi.',
+        artikkeli: {
+          nimi: 'Matkailijan Pietari',
+          taitto: 'opas',
+          teksti: 'Saaria oli sata, nyt niitä on neljäkymmentäkaksi — '
+            + 'ja kaupunki menetti pääkaupunkiasemansa vuonna 1918.',
+          nosto: 'Vuoden 1824 tulvassa vesi nousi yli neljä metriä '
+            + 'normaalin yläpuolelle.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Metro avattiin 15. marraskuuta 1955, ja sen '
+                + 'asemat kuuluvat maailman syvimpiin: syvin niistä on '
+                + 'noin 86 metriä maanpinnan alapuolella. Linjoja on '
+                + 'viisi. Lentokenttä on nimetty läheisen '
+                + 'tähtitieteellisen observatorion mukaan. Jokien ja '
+                + 'kanavien yli kulkee yli 340 isompaa siltaa, ja '
+                + 'pienemmät mukaan laskien niitä on toista tuhatta. '
+                + 'Kesäisin liikkuu myös kantosiipialuksia.',
+              kuva: { tiedosto: 'Metro SPB Line5 Admiralteyskaya Platform.jpg', selite: 'Tyhjä metrolaituri holvikaton alla: molemmin puolin nousee rivi mustia pylväitä kullattuine tyvineen, ja seinät ovat vaaleaa marmoria. Kiiltävä lattia heijastaa valot, ja perällä näkyy värikäs seinämosaiikki.', lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Sata saarta, sitten neljäkymmentä',
+              teksti: 'Kaupunki on rakennettu Nevan suiston saarille. '
+                + '1800-luvun lopulla saaria laskettiin 101, mutta '
+                + 'vuoden 1975 laskennassa niitä oli enää 42 — osa on '
+                + 'yhdistynyt toisiinsa täytemaalla. Suurin niistä on '
+                + 'Vasilinsaari. Kaupungin historiallinen keskusta on '
+                + 'ollut Unescon maailmanperintökohde vuodesta 1990. '
+                + 'Tarkka saarimäärä riippuu yhä laskutavasta.',
+            },
+            {
+              otsikko: 'Vesi, joka nousee',
+              teksti: 'Matala suistoalue on altis tulville. Suurin '
+                + 'niistä oli marraskuussa 1824, jolloin vesi nousi yli '
+                + 'neljä metriä normaalin yläpuolelle. Tulvia vastaan '
+                + 'rakennettiin lopulta noin 25 kilometrin pituinen '
+                + 'suojapato, joka valmistui kokonaisuudessaan vasta '
+                + 'vuonna 2011. Sitä ennen kaupunki eli tulvien varassa '
+                + 'lähes kolmesataa vuotta.',
+            },
+            {
+              otsikko: 'Kun pääkaupunki muutti pois',
+              teksti: 'Pietari oli valtakunnan pääkaupunki kahden '
+                + 'vuosisadan ajan, mutta vuonna 1918 asema siirtyi '
+                + 'Moskovaan. Muutos näkyi heti väkiluvussa: vuonna '
+                + '1916 kaupungissa asui noin 2,4 miljoonaa ihmistä, '
+                + 'mutta vuoteen 1920 mennessä määrä oli romahtanut '
+                + 'runsaaseen seitsemäänsataantuhanteen. Väestö palasi '
+                + 'vasta vuosikymmenten kuluessa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Talvi on pitkä ja pakkasen puolella koko '
+                + 'kolmen kuukauden ajan, kylmimmillään kahdeksan '
+                + 'pakkasastetta. Kesä on lämmin muttei kuuma, '
+                + 'kahdessakymmenessäkahdessa asteessa. Sade painottuu '
+                + 'loppukesään: elokuu on sateisin kuukausi 73 '
+                + 'millimetrillä ja helmikuu kuivin, 33. Vuosisade on '
+                + '630 millimetriä eli kohtalainen.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kanavat',
+                tahdet: 3,
+                selite: 'Jokia ja kanavia on kymmeniä, ja niiden yli '
+                  + 'kulkee yli 340 isompaa siltaa.',
+              },
+              {
+                mita: 'Metro',
+                tahdet: 3,
+                selite: 'Viisi linjaa ja maailman syvimpiä asemia — '
+                  + 'syvin on 86 metriä maan alla.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Keskusta on tasainen ja tiivis, ja '
+                  + 'kanavarannat ohjaavat reittiä itsestään.',
+              },
+              {
+                mita: 'Kesän valo',
+                tahdet: 3,
+                selite: 'Kesäkuussa yö ei pimene kunnolla lainkaan.',
+              },
+              {
+                mita: 'Talven lämpö',
+                tahdet: 1,
+                selite: 'Joulu–helmikuussa ollaan koko ajan pakkasen '
+                  + 'puolella ja päivä on hyvin lyhyt.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu loppukesään',
+                teksti: 'Elokuu on vuoden sateisin kuukausi, 73 '
+                  + 'millimetriä, ja helmikuu kuivin, 33. Vuosisade on '
+                  + '630 millimetriä.',
+              },
+              {
+                otsikko: 'Metro on syvällä',
+                teksti: 'Liukuportaat ovat pitkiä ja asemat syviä. '
+                  + 'Siirtymiin kannattaa varata ylimääräisiä '
+                  + 'minuutteja.',
+              },
+              {
+                otsikko: 'Sillat aukeavat öisin',
+                teksti: 'Nevan ylittävät sillat nostetaan öisin '
+                  + 'laivaliikennettä varten. Väärälle rannalle jäänyt '
+                  + 'odottaa aamuun.',
+              },
+              {
+                otsikko: 'Kaupunki on matalalla',
+                teksti: 'Suistoalue on tasainen ja matala. Tulvasuojapato '
+                  + 'valmistui vasta 2011, ja sitä ennen tulvat olivat '
+                  + 'toistuvia.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–elokuu: lämpötila on '
+              + 'kahdenkymmenen tienoilla ja valoa riittää pitkälle '
+              + 'yöhön. Elokuu on lämmin mutta vuoden sateisin '
+              + 'kuukausi. Syyskuu on vielä leuto ja hiljaisempi. '
+              + 'Talvi on kylmä ja pimeä mutta vuoden kuivin jakso.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-5–15 °C',
+                kuvaus: 'Alkaa pakkasesta ja lämpenee hitaasti. '
+                  + 'Jäänlähtö ajoittuu huhtikuulle, ja sade pysyy '
+                  + 'vähäisenä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '11–22 °C',
+                kuvaus: 'Lämmin ja hyvin valoisa. Elokuussa vettä tulee '
+                  + '73 millimetriä eli koko vuoden eniten.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '-2–14 °C',
+                kuvaus: 'Syyskuu on vielä leuto, marraskuussa ollaan jo '
+                  + 'nollan tuntumassa ja päivä lyhenee nopeasti.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-8–-2 °C',
+                kuvaus: 'Pakkasen puolella koko jakson ajan ja vuoden '
+                  + 'kuivin: helmikuussa vettä tulee 33 millimetriä '
+                  + 'lumena.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Wikivoyage: Pietari (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Saint_Petersburg',
+              },
+              {
+                nimi: 'Wikipedia: Pietari',
+                url: 'https://fi.wikipedia.org/wiki/Pietari',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Kaupunki rakennettiin suolle',
@@ -11705,6 +11885,190 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dmitry Ivanov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Boulevard Ring, Yauzsky Boulevard - Moscow, Russia - panoramio.jpg',
+          selite: 'Leveä katu, jonka keskellä kulkee puistokaistale isoine lehtipuineen ja mustine valurautalyhtyineen. Vasemmalla kaartaa sinivalkoinen raitiovaunu ja oikealla nousee vaaleanharmaa kerrostalorivi koristeellisine julkisivuineen.',
+          lahde: 'Sergey Ashmarin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Moskovan kartta on kehä kehän sisällä. Puistokadut '
+          + 'eivät ole sattumaa: bulevardirengas ja puutarharengas '
+          + 'kulkevat siellä, missä kaupunginmuurit ennen olivat. '
+          + 'Uloimpana kiertää 109 kilometrin moottoritie.',
+        artikkeli: {
+          nimi: 'Matkailijan Moskova',
+          taitto: 'opas',
+          teksti: 'Kaupunki kehinä — ja joki, joka virtaa kokonaan '
+            + 'katujen alla putkessa.',
+          nosto: 'Neglinnaja-joki katettiin 1817–1819, ja se virtaa yhä '
+            + 'seitsemän kilometriä maan alla.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Metroverkossa on kuusitoista linjaa, 304 asemaa '
+                + 'ja 535 kilometriä rataa. Kaupunkia kiertää '
+                + 'moottoritie MKAD, joka on 108,9 kilometriä pitkä ja '
+                + 'valmistui 1962. Šeremetjevon lentokenttä avattiin '
+                + '1959 ja on 29 kilometriä keskustasta. Vuonna 1908 '
+                + 'rakennettu tavararata kiertää yhä kaupunkia, mutta '
+                + 'se muutettiin matkustajaliikenteen kehäradaksi '
+                + 'vuonna 2016.',
+              kuva: { tiedosto: 'Moscow, unusually easy traffic on the north arc of the MKAD (April 2013).jpg', selite: 'Monikaistainen moottoritie kuvattuna sillalta: vasemmalla ajaa tiivis rivi autoja ja rekkoja kohti kameraa, oikealla poispäin. Keskikaistalla nousee korkea valaisinpylväsrivi, ja reunoilla on mainostauluja ja havumetsää.', lahde: 'Konstantin E, Wikimedia Commons (CC BY 3.0)' },
+            },
+            {
+              otsikko: 'Kehä kehän sisällä',
+              teksti: 'Moskovan puistokadut seuraavat vanhoja '
+                + 'kaupunginmuureja. Bulevardirengas kulkee siellä, '
+                + 'missä Valkoisen kaupungin muuri seisoi vuosina '
+                + '1585–1593, ja puutarharengas siellä, missä oli '
+                + 'Maavallin varustus vuosilta 1630–1638. Muurit '
+                + 'purettiin, mutta niiden linja jäi kaupungin '
+                + 'muotoon. Hallinnollisia piirejä on kaksitoista, ja '
+                + 'kaupunki laajeni tuntuvasti etelään vuonna 2012.',
+            },
+            {
+              otsikko: 'Joki katujen alla',
+              teksti: 'Moskovan halki virtaa joki, jota kukaan ei näe. '
+                + 'Neglinnaja katettiin vuosina 1817–1819, ja se kulkee '
+                + 'nykyään kokonaan putkessa noin seitsemän ja puolen '
+                + 'kilometrin matkan keskustan alitse. Ratkaisu ei ole '
+                + 'ollut ongelmaton: putki on tulvinut toistuvasti, '
+                + 'muun muassa vuosina 1965 ja 1973. Kadunnimet '
+                + 'muistuttavat yhä joesta, jota ei enää ole näkyvissä.',
+            },
+            {
+              otsikko: 'Kaupunki, joka piirrettiin uusiksi',
+              teksti: 'Vuonna 1935 hyväksyttiin yleiskaava, joka muutti '
+                + 'kaupungin mittakaavan. Pääkatuja levennettiin, ja '
+                + 'osa taloista siirrettiin kirjaimellisesti pois '
+                + 'tieltä: rakennuksia nostettiin kiskoille ja '
+                + 'vedettiin uuteen paikkaan pystyssä, asukkaiden yhä '
+                + 'asuessa niissä. Samaan aikaan rakennettiin Moskovan '
+                + 'kanava vuosina 1932–1937, joka toi jokeen lisää '
+                + 'vettä Volgasta.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Talvi on pitkä: se kestää noin sata'
+                + 'kymmenen päivää, ja lunta sataa keskimäärin 116 '
+                + 'päivänä vuodessa. Kylmimmillään ollaan kymmenen '
+                + 'pakkasasteen tuntumassa, ja kylmin mitattu lukema on '
+                + '42 pakkasastetta. Kesä on lämmin, '
+                + 'kahdessakymmenessäneljässä asteessa, ja samalla '
+                + 'sateisin: heinäkuussa vettä tulee 76 millimetriä. '
+                + 'Helmikuu on kuivin, 32.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Metro',
+                tahdet: 3,
+                selite: 'Kuusitoista linjaa ja yli kolmesataa asemaa '
+                  + 'kattavat koko kaupungin.',
+              },
+              {
+                mita: 'Puistokadut',
+                tahdet: 3,
+                selite: 'Bulevardirengas on kokonainen kävelyreitti '
+                  + 'vanhan muurin linjaa pitkin.',
+              },
+              {
+                mita: 'Museot',
+                tahdet: 3,
+                selite: 'Kokoelmia on poikkeuksellisen paljon ja monet '
+                  + 'niistä ovat isoja.',
+              },
+              {
+                mita: 'Talven lumi',
+                tahdet: 2,
+                selite: 'Lunta on keskimäärin 116 päivänä vuodessa, '
+                  + 'mutta pakkanen voi olla kova.',
+              },
+              {
+                mita: 'Kävelyetäisyydet',
+                tahdet: 1,
+                selite: 'Kaupunki on valtava ja kadut leveitä; metro on '
+                  + 'lähes aina nopeampi kuin kävely.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu kesään',
+                teksti: 'Heinäkuu on vuoden sateisin kuukausi, 76 '
+                  + 'millimetriä, ja helmikuu kuivin, 32. Vuosisade on '
+                  + '605 millimetriä.',
+              },
+              {
+                otsikko: 'Talvi on pitkä',
+                teksti: 'Talvi kestää noin satakymmenen päivää ja lunta '
+                  + 'sataa 116 päivänä vuodessa. Kylmin mitattu lukema '
+                  + 'on 42 pakkasastetta.',
+              },
+              {
+                otsikko: 'Kehät kertovat etäisyyden',
+                teksti: 'Osoitteen sijainti kannattaa katsoa suhteessa '
+                  + 'kehiin: bulevardirengas on ydinkeskusta, '
+                  + 'puutarharengas sen ympärillä ja MKAD kaupungin '
+                  + 'reunalla.',
+              },
+              {
+                otsikko: 'Etäisyydet ovat pitkiä',
+                teksti: 'Kehätie yksin on 109 kilometriä. Yhden päivän '
+                  + 'ohjelmaa ei kannata hajauttaa eri puolille '
+                  + 'kaupunkia.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenen tienoilla ja päivät ovat '
+              + 'pitkiä. Heinäkuu on lämpimin mutta vuoden sateisin '
+              + 'kuukausi. Talvi on pitkä ja kylmä, mutta luminen '
+              + 'kaupunki on omanlaisensa näky.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-6–18 °C',
+                kuvaus: 'Alkaa pakkasesta ja lämpenee nopeasti. Lumi '
+                  + 'sulaa huhtikuussa, ja toukokuussa päivä on jo '
+                  + 'kahdeksassatoista asteessa.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '12–24 °C',
+                kuvaus: 'Lämmin ja vuoden sateisin jakso: heinäkuussa '
+                  + 'vettä tulee 76 millimetriä, usein ukkoskuuroina.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '-3–15 °C',
+                kuvaus: 'Syyskuu on vielä leuto, mutta marraskuussa '
+                  + 'ollaan jo pakkasen puolella ja ensilumi tulee.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-10–-4 °C',
+                kuvaus: 'Pitkä ja kylmä mutta vuoden kuivin jakso: '
+                  + 'helmikuussa vettä tulee 32 millimetriä lumena.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Wikivoyage: Moskova (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Moscow',
+              },
+              {
+                nimi: 'Wikipedia: Moskova',
+                url: 'https://fi.wikipedia.org/wiki/Moskova',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Suurin kello ei ole koskaan soinut',
@@ -13730,6 +14094,193 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sentrum - Downtown Tromsø (4147084546).jpg',
+          selite: 'Näkymä katolta yli pienen kaupungin: etualalla seisoo keltainen puurakennus jyrkkine harmaine kattoineen, ja sen takana levittäytyy matalaa keskustaa kohti sinistä salmea. Vastarannalla nousee jyrkkä paljas vuori, ja oikealla kaartaa pitkä silta veden yli.',
+          lahde: 'Mark Ledingham, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Tromssa on pieni kaupunki kaukana pohjoisessa: '
+          + 'ydinalue on vain vajaat neljätoista neliökilometriä ja '
+          + 'asukkaita alle kahdeksankymmentätuhatta. Silti se sijaitsee '
+          + 'yli kolmesataa kilometriä napapiiristä pohjoiseen — ja '
+          + 'sen puutarhassa kukkivat rododendronit.',
+        artikkeli: {
+          nimi: 'Matkailijan Tromssa',
+          taitto: 'opas',
+          teksti: 'Kaupunki 69. leveysasteella, jossa kasvitieteellinen '
+            + 'puutarha on auki ympäri vuorokauden eikä siinä ole '
+            + 'porttia.',
+          nosto: 'Keskustan puutalot ovat vuosilta 1789–1904; sen '
+            + 'jälkeen puurakentaminen kiellettiin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä avattiin virallisesti 14. syyskuuta '
+                + '1964, ja se korvasi aiemman vesilentoaseman. Kenttä '
+                + 'on vain noin viiden kilometrin päässä keskustasta, '
+                + 'ja kiitorataa on 2 447 metriä. Matkustajia oli '
+                + 'vuonna 2025 lähes kolme miljoonaa, kun kymmenen '
+                + 'vuotta aiemmin luku oli kaksi miljoonaa. Saarelta '
+                + 'pääsee mantereelle myös tunnelia pitkin ja '
+                + 'naapurisaarelle omaa siltaansa.',
+            },
+            {
+              otsikko: 'Pieni kaupunki kaukana pohjoisessa',
+              teksti: 'Tromssa sai kaupunkioikeudet vuonna 1794. Se '
+                + 'sijaitsee yli kolmesataa kilometriä napapiiristä '
+                + 'pohjoiseen, noin 69. leveysasteella. Ydinalue on '
+                + 'vain 13,8 neliökilometriä, ja asukkaita oli vuonna '
+                + '2024 yhteensä 78 745. Keskustassa on Trondheimista '
+                + 'pohjoiseen suurin yhtenäinen vanhojen puutalojen '
+                + 'keskittymä: talot ovat vuosilta 1789–1904, minkä '
+                + 'jälkeen puurakentaminen kiellettiin.',
+            },
+            {
+              otsikko: 'Puutarha ilman porttia',
+              teksti: 'Arktis-alpiininen kasvitieteellinen puutarha '
+                + 'avattiin 1994. Siinä ei ole porttia eikä '
+                + 'pääsymaksua: se on auki ympäri vuorokauden ja ympäri '
+                + 'vuoden. Kasvukausi on silti lyhyt, touko–lokakuun '
+                + 'väli. Golfvirran haara lämmittää rannikkoa niin '
+                + 'paljon, että puutarhassa kasvaa rododendroneja 69. '
+                + 'leveysasteella — tammikuun keskilämpötila jää '
+                + 'vain neljään pakkasasteeseen.',
+              kuva: { tiedosto: 'Arctic-Alpine Botanical Garden Tromsø 2022-09-06 09.jpg', selite: 'Kapea sorapolku mutkittelee tiheän tunturikoivikon läpi sateisena päivänä. Koivujen rungot ovat harmaita ja kallellaan, lehdet vielä vihreitä, ja polun reunoilla kasvaa saniaisia ja heinää.', lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)' },
+            },
+            {
+              otsikko: 'Kevät 1940 ja marraskuu 1944',
+              teksti: 'Kun Saksa hyökkäsi Norjaan huhtikuussa 1940, '
+                + 'Tromssasta tuli lyhyeksi aikaa maan hallituksen '
+                + 'väliaikainen sijaintipaikka; kenraali Carl Gustav '
+                + 'Fleischer saapui kaupunkiin 10. huhtikuuta ja antoi '
+                + 'liikekannallepanokäskyn. Marraskuun 12. päivänä 1944 '
+                + 'kaupungin lähellä upotettiin saksalainen '
+                + 'taistelulaiva Tirpitz: 32 pommikonetta pudotti 29 '
+                + 'raskasta pommia, joista kaksi osui suoraan.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Tromssa on hyvin sateinen: vettä tulee vuodessa '
+                + '1 222 millimetriä, eikä yksikään kuukausi jää alle '
+                + 'kahdeksankymmenen. Sateisin on lokakuu, 129 '
+                + 'millimetriä, ja kuivin huhtikuu, 86. Lämpötila pysyy '
+                + 'kapealla välillä: kesällä enintään kuusitoista '
+                + 'astetta ja talvella yhdentoista pakkasasteen '
+                + 'tienoilla. Merivirta pitää sään leudompana kuin '
+                + 'leveysaste antaisi olettaa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Puutalokorttelit',
+                tahdet: 3,
+                selite: 'Suurin yhtenäinen vanhojen puutalojen alue '
+                  + 'Trondheimista pohjoiseen.',
+              },
+              {
+                mita: 'Kasvitieteellinen puutarha',
+                tahdet: 3,
+                selite: 'Auki ympäri vuorokauden, maksuton, eikä siinä '
+                  + 'ole porttia lainkaan.',
+              },
+              {
+                mita: 'Vuoret ja vuono',
+                tahdet: 3,
+                selite: 'Jyrkkä maasto alkaa suoraan kaupungin '
+                  + 'vastarannalta.',
+              },
+              {
+                mita: 'Lyhyet etäisyydet',
+                tahdet: 3,
+                selite: 'Lentokentältä keskustaan on viisi kilometriä '
+                  + 'ja ydinalue on kävelymatkan kokoinen.',
+              },
+              {
+                mita: 'Poutasää',
+                tahdet: 1,
+                selite: 'Yksikään kuukausi ei jää alle kahdeksan '
+                  + 'sentin sateeseen.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadetta tulee joka kuukausi',
+                teksti: 'Lokakuu on sateisin, 129 millimetriä, ja '
+                  + 'huhtikuu kuivin, 86. Vuosisade on 1 222 '
+                  + 'millimetriä, joten sadevaatteet ovat aina '
+                  + 'tarpeen.',
+              },
+              {
+                otsikko: 'Meri lämmittää',
+                teksti: 'Merivirta pitää sään selvästi leudompana kuin '
+                  + 'leveysasteella odottaisi. Tammikuun keskilämpötila '
+                  + 'on vain noin neljä pakkasastetta.',
+              },
+              {
+                otsikko: 'Kaupunki on saarella',
+                teksti: 'Mantereelle pääsee sillan lisäksi tunnelia '
+                  + 'pitkin, ja naapurisaarelle on oma siltansa.',
+              },
+              {
+                otsikko: 'Kasvukausi on lyhyt',
+                teksti: 'Kasvit ehtivät kukkia vasta touko–lokakuussa. '
+                  + 'Muina aikoina puutarha on auki mutta lepotilassa.',
+              },
+            ],
+            parasAika: 'Paras aika riippuu siitä, mitä hakee: kesä–elokuu '
+              + 'on valoisinta ja lämpimintä, mutta kasvukausi ja '
+              + 'puutarha ovat parhaimmillaan heinä–elokuussa. Lokakuu '
+              + 'on vuoden sateisin kuukausi. Talvi on pimeä ja '
+              + 'leudompi kuin luulisi, ja silloin nähdään revontulia.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-7–7 °C',
+                kuvaus: 'Vuoden kuivin jakso: huhtikuussa vettä tulee '
+                  + '86 millimetriä. Lumi sulaa rannikolta vasta '
+                  + 'toukokuussa.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '6–16 °C',
+                kuvaus: 'Viileä mutta hyvin valoisa. Sade pysyy noin '
+                  + 'yhdeksässä sentissä kuukaudessa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '-7–11 °C',
+                kuvaus: 'Vuoden sateisin jakso: lokakuussa vettä tulee '
+                  + '129 millimetriä. Marraskuussa ollaan jo pakkasen '
+                  + 'puolella.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-11–-4 °C',
+                kuvaus: 'Leudompi kuin leveysaste antaisi olettaa, '
+                  + 'mutta pimeä ja sateinen: kuukaudessa vettä tulee '
+                  + 'yli kymmenen senttiä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Wikivoyage: Tromssa (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Troms%C3%B8',
+              },
+              {
+                nimi: 'Wikipedia: Tromssa',
+                url: 'https://fi.wikipedia.org/wiki/Tromssa',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Syntikat soivat kaamoksen läpi',
@@ -14290,6 +14841,193 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Manfred Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Landscape from Kultakero, Pyhätunturi, Pelkosenniemi, Lapland, Finland, 2021 September.jpg',
+          selite: 'Tunturin laelta avautuva ruskamaisema: etualalla on matalaa varpukasvillisuutta punaisena ja vihreänä, seassa kitukasvuisia mäntyjä ja kuolleita kuusia. Keskellä laskeutuu vaalea kivikkorinne, ja horisontissa kohoaa loiva tunturinselkä pilvisen taivaan alla.',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Lappi on Suomen suurin maakunta, sata tuhatta '
+          + 'neliökilometriä, mutta siellä asuu alle kaksi ihmistä '
+          + 'neliökilometrillä. Isoisän matkan aikoihin alue oli '
+          + 'uutisissa aivan muusta syystä: Ivalojoelta oli löytynyt '
+          + 'kultaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Lappi',
+          taitto: 'opas',
+          teksti: 'Sata tuhatta neliökilometriä ja 1,9 asukasta '
+            + 'neliökilometrillä — ja kultaryntäys, joka alkoi kolme '
+            + 'vuotta ennen isoisän matkaa.',
+          nosto: 'Ivalojoen kultaryntäys alkoi 1870; parhaimmillaan '
+            + 'alueella liikkui noin viisisataa kullankaivajaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lappiin lennetään viideltä lentokentältä: '
+                + 'Kemi-Tornio, Rovaniemi, Kittilä, Ivalo ja '
+                + 'Enontekiö. Lentoaika Helsingistä on noin puolitoista '
+                + 'tuntia. Rautateitä on kaksi: läntinen rata kulkee '
+                + 'Torniosta Kolariin ja itäinen Keminmaalta Rovaniemen '
+                + 'kautta Sallaan. Matkailu painottuu yhä talveen, '
+                + 'mutta lumettoman ajan matkailu kasvoi vuonna 2019 '
+                + 'talvimatkailua nopeammin.',
+            },
+            {
+              otsikko: 'Sata tuhatta neliökilometriä',
+              teksti: 'Lappi on Suomen suurin ja pohjoisin maakunta: '
+                + 'pinta-alaa on 100 366 neliökilometriä. Asukkaita on '
+                + 'kuitenkin vain 176 215, eli noin kolme prosenttia '
+                + 'koko maan väestöstä, ja väestöntiheys on 1,9 '
+                + 'asukasta neliökilometrillä. Kuntia on 21, ja niistä '
+                + 'neljällä on kaupunkioikeudet: Rovaniemi, Kemi, '
+                + 'Kemijärvi ja Tornio. Seutukuntia on kuusi.',
+            },
+            {
+              otsikko: 'Kultaa Ivalojoelta',
+              teksti: 'Kultaa löytyi Ivalojoelta vuonna 1868, ja '
+                + 'varsinainen ryntäys alkoi 1870, kun kaivoslaki '
+                + 'hyväksyttiin. Parhaimmillaan alueella liikkui saman '
+                + 'kesän aikana noin viisisataa kullankaivajaa — '
+                + 'valtavasti seudulle, jossa asui muutenkin vain '
+                + 'harvakseltaan väkeä. Kruunu perusti joen varteen '
+                + 'oman valvonta-asemansa. Isoisän matkan aikaan 1873 '
+                + 'ryntäys oli vielä käynnissä.',
+              kuva: { tiedosto: 'Kultala 1874.jpg', selite: 'Käsin väritetty kartta vuodelta 1874: mutkitteleva joki kulkee vaaleansinisenä kuvan halki, ja sen rannoille on merkitty rakennuksia, teitä ja työmaita. Yläkulmassa on ruotsinkielinen otsikko ja oikeassa laidassa merkkien selitykset.', lahde: 'Geologian tutkimuskeskus, Wikimedia Commons (PD)' },
+            },
+            {
+              otsikko: 'Kaupunki poronpään muotoon',
+              teksti: 'Lokakuussa 1944 vetäytyvät saksalaisjoukot saivat '
+                + 'käskyn tuhota rakennukset. Rovaniemen rakennuksista '
+                + 'tuhoutui yhdeksänkymmentä prosenttia, ja koko '
+                + 'Lapissa menetettiin 40–47 prosenttia asunnoista, '
+                + '417 kilometriä rautatietä ja 675 siltaa. '
+                + 'Jälleenrakennuksessa arkkitehti Alvar Aalto '
+                + 'suunnitteli Rovaniemen katuverkon poronpään muotoon: '
+                + 'kadut muodostavat sarvet ja urheilustadion on silmä.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Säätiedot on mitattu Rovaniemellä, maakunnan '
+                + 'eteläosassa — pohjoisempana ja tuntureilla on '
+                + 'kylmempää. Talvi on pitkä ja pakkasen puolella koko '
+                + 'kolmen kuukauden ajan, kylmimmillään kolmentoista '
+                + 'asteen pakkasessa. Kesä on yllättävän lämmin, '
+                + 'heinäkuussa kaksikymmentä astetta, ja samalla vuoden '
+                + 'sateisin. Hiihtokausi kestää lokakuusta toukokuun '
+                + 'puoliväliin.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Tunturit',
+                tahdet: 3,
+                selite: 'Merkittyjä reittejä on satoja kilometrejä, ja '
+                  + 'ruska värittää maiseman syyskuussa.',
+              },
+              {
+                mita: 'Hiljaisuus',
+                tahdet: 3,
+                selite: 'Väestöntiheys on 1,9 asukasta '
+                  + 'neliökilometrillä — tilaa riittää.',
+              },
+              {
+                mita: 'Hiihtokausi',
+                tahdet: 3,
+                selite: 'Lunta on lokakuusta toukokuun puoliväliin, '
+                  + 'pisimpiä kausia Euroopassa.',
+              },
+              {
+                mita: 'Kesän valo',
+                tahdet: 3,
+                selite: 'Keskikesällä aurinko ei laske lainkaan '
+                  + 'pohjoisimmassa Lapissa.',
+              },
+              {
+                mita: 'Julkinen liikenne',
+                tahdet: 1,
+                selite: 'Rautateitä on kaksi ja bussivuorot harvassa; '
+                  + 'oma auto on käytännössä tarpeen.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu kesään',
+                teksti: 'Heinäkuu on vuoden sateisin kuukausi, 81 '
+                  + 'millimetriä, ja helmikuu kuivin, 30. Vuosisade on '
+                  + '603 millimetriä.',
+              },
+              {
+                otsikko: 'Luvut ovat Rovaniemeltä',
+                teksti: 'Säätiedot on mitattu maakunnan eteläosassa. '
+                  + 'Pohjoisessa ja tuntureilla on kylmempää ja lumi '
+                  + 'pysyy pidempään.',
+              },
+              {
+                otsikko: 'Etäisyydet ovat pitkiä',
+                teksti: 'Maakunta on sata tuhatta neliökilometriä. '
+                  + 'Kahden kohteen väli voi olla useita satoja '
+                  + 'kilometrejä ilman palveluita.',
+              },
+              {
+                otsikko: 'Hyttyskausi on lyhyt mutta tiivis',
+                teksti: 'Kesä–heinäkuu on hyttysten aikaa. Elokuussa '
+                  + 'tilanne helpottuu ja syyskuussa ruska korvaa '
+                  + 'kaiken.',
+              },
+            ],
+            parasAika: 'Paras aika riippuu siitä, mitä hakee: ruskaan '
+              + 'syyskuu, hiihtoon helmi–huhtikuu, jolloin on jo valoa '
+              + 'ja lunta, ja keskiyön aurinkoon kesä–heinäkuu. '
+              + 'Heinäkuu on lämpimin mutta sateisin. Joulukuu on '
+              + 'pimein kuukausi.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-8–11 °C',
+                kuvaus: 'Maaliskuussa on vielä pakkasta ja hyvä '
+                  + 'hiihtokeli, toukokuussa lumi sulaa. Sade on '
+                  + 'vähäistä, alle 35 millimetriä kuussa.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '8–20 °C',
+                kuvaus: 'Yllättävän lämmin ja vuoden sateisin jakso: '
+                  + 'heinäkuussa vettä tulee 81 millimetriä. Valoa on '
+                  + 'lähes vuorokauden ympäri.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '-6–11 °C',
+                kuvaus: 'Syyskuu on ruskan aikaa ja vielä leuto. '
+                  + 'Marraskuussa ollaan pakkasella ja ensilumi on '
+                  + 'yleensä tullut.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-13–-6 °C',
+                kuvaus: 'Kylmä ja pimeä mutta vuoden kuivin jakso: '
+                  + 'helmikuussa vettä tulee 30 millimetriä lumena.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Wikivoyage: Lappi (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Lapland_(Finland)',
+              },
+              {
+                nimi: 'Wikipedia: Lappi',
+                url: 'https://fi.wikipedia.org/wiki/Lappi_(maakunta)',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Joikua ei lauleta jostakusta',
