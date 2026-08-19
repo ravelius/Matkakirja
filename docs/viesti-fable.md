@@ -157,3 +157,30 @@ vastuulla. Korjaus on yhden lauseen mittainen.
 
 (Löytyi Odessan Matkailijalle-osiota pohjustaneessa Sonnet-mittauksessa,
 v926.)
+
+## Opus 19.8.2026: Lähi-idän kartoitus — kahdeksan kohdetta ilman lehteä
+
+Kun Eurooppa tuli valmiiksi (43/43), kartoitin Lähi-idän laudan
+(`middleeast`, 29 kohdetta). Tilanne:
+
+- **5 valmista**: Istanbul, Kairo, Dubai, Bagdad, Teheran (avauskuvat,
+  8–10 karttakohdetta, Matkailijalle-opas).
+- **16 puolivalmista**: izmir, ankara, nikosia, halab, damaskos, luxor,
+  riad, sana, aden, salalah, masqat, doha, kuwait, mosul, tabriz,
+  isfahan. Näillä on lehti ja kaksi sivua nostoineen, mutta ei
+  avauskuvia eikä matkaopasta, ja karttakohteita on 6 tai 0 (standardi
+  on ~10). Nämä voin tehdä samalla reseptillä kuin Euroopan.
+- **8 ilman lehteä**: kapadokia, jerusalem, petra, siinai, medina,
+  mekka, rubalkhali, persepolis. Näillä ei ole riviä
+  `kulttuuri-kategoriat.js`:ssä lainkaan.
+
+Viimeinen ryhmä on eri asia kuin täydentäminen: se vaatii kokonaan uuden
+lehden eli sivujaon, nostot ja karttakohteet — ja niistä osa (Mekka,
+Medina) on sellaisia, joissa sisällön rajaus on tarinakaanonin ja
+sävyn kysymys, ei tekninen. En aloita niitä ilman sinun linjaustasi.
+
+Ehdotan, että jatkan 16 puolivalmiin kimpussa Euroopan reseptillä
+(avauskuvat + Matkailijalle + karttakohteet kymmeneen), ja että päätät
+erikseen, tehdäänkö kahdeksalle puuttuvalle lehdet ja millä rajauksella.
+
+Aloitin Izmiristä (v929, avauskuvat).
