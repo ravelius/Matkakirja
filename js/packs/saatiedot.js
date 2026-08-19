@@ -1297,4 +1297,66 @@ export const SAATIEDOT = {
       + 'kahdensadan millimetrin, ja siitä valtaosa tulee '
       + 'loka–maaliskuussa.',
   },
+
+  /*
+   * PAKETIN O7 KOHTEET (Opus 19.8.2026). Kolme uutta lehteä, joilla ei
+   * ollut säärivin lisäksi mitään muutakaan pakettia — rivit tehtiin
+   * ennen lehtiä, jotta vuosigraafi on valmiina heti ensimmäisessä
+   * julkaisussa. Menetelmä on paketin oma: Open-Meteon arkisto (ERA5),
+   * jakso 1991–2020, keskilämpö kuukauden päiväkeskiarvojen
+   * keskiarvona ja sade kuukausisumman vuosikeskiarvona. Ylin ja alin
+   * on laskettu tools/hae-saanormaalit.mjs:n kaavalla mutta koko
+   * jaksolta eikä otoksesta: kuukauden päivittäisten ylimpien ja
+   * alimpien keskiarvojen puoliväli asetettiin keskilämmön ympärille.
+   *
+   * Koordinaatit ovat kohteiden omista en-Wikipedian artikkeleista
+   * (Petra, Göreme, Persepolis; haettu 19.8.2026). Kapadokia on niin
+   * laaja alue, ettei sillä ole yhtä keskustaa — rivi on laskettu
+   * Göremen kohdalta, koska matkailijan yöpaikat ja tuffikartio-
+   * laakso ovat siinä.
+   */
+  petra: {
+    lat: 30.33,
+    lon: 35.44,
+    keskilampo: [8.8, 10.2, 13.7, 18.1, 22.4, 25, 26.5, 26.6, 24.6, 21.1, 15.3, 10.7],
+    ylin: [13, 15, 19, 24, 29, 31, 33, 33, 30, 26, 20, 15],
+    alin: [4, 5, 8, 12, 16, 19, 20, 21, 19, 16, 10, 6],
+    sade: [28, 22, 16, 5, 4, 0, 0, 0, 1, 5, 9, 12],
+    luonnehdinta: 'Petran koko vuoden sade on runsaat sata millimetriä, '
+      + 'ja kesäkuusta syyskuuhun normaali on nolla — silti juuri vesi '
+      + 'teki paikasta kaupungin. Talvi on vuoristossa viileä, '
+      + 'tammikuussa vajaat yhdeksän astetta, ja heinä–elokuun '
+      + 'kahdenkymmenenkuuden asteen keskilämpö tarkoittaa päivällä yli '
+      + 'kolmeakymmentä. Vuorokauden vaihtelu on kuivan ilman takia '
+      + 'suuri: aamu on kymmenen astetta iltapäivää viileämpi.',
+  },
+  kapadokia: {
+    lat: 38.64,
+    lon: 34.83,
+    keskilampo: [-0.5, 0.6, 5, 10.1, 15.1, 19.6, 23.2, 23.2, 18.8, 12.9, 5.9, 1.3],
+    ylin: [4, 6, 11, 17, 22, 27, 31, 31, 26, 20, 12, 6],
+    alin: [-5, -5, -1, 3, 8, 13, 16, 16, 11, 6, 0, -4],
+    sade: [44, 38, 52, 54, 52, 27, 5, 4, 12, 26, 35, 44],
+    luonnehdinta: 'Kapadokia on tuhannen metrin ylätasankoa, ja se '
+      + 'näkyy: tammi- ja helmikuussa keskilämpö on pakkasen puolella '
+      + 'tai nollassa, kun heinä- ja elokuussa se on yli kahdenkymmenen '
+      + 'kolmen asteen. Sadetta tulee vajaat neljäsataa millimetriä, '
+      + 'eniten huhti–toukokuussa ja tuskin lainkaan keskikesällä. '
+      + 'Talvella tuffikartioiden päällä on usein lunta.',
+  },
+  persepolis: {
+    lat: 29.94,
+    lon: 52.89,
+    keskilampo: [4.4, 6.8, 10.8, 16.1, 22.1, 27.3, 29.8, 28.7, 24.6, 18.7, 11.7, 6.7],
+    ylin: [11, 13, 18, 24, 31, 36, 38, 37, 33, 27, 19, 13],
+    alin: [-2, 0, 4, 8, 14, 18, 21, 20, 16, 10, 5, 0],
+    sade: [59, 51, 55, 27, 6, 0, 0, 0, 0, 2, 24, 45],
+    luonnehdinta: 'Persepolis on Iranin ylängöllä puolentoista '
+      + 'kilometrin korkeudessa, ja vuosi jakautuu kahtia: touko–'
+      + 'lokakuussa vettä ei käytännössä tule lainkaan, ja koko '
+      + 'vuoden vajaat kaksisataaseitsemänkymmentä millimetriä sataa '
+      + 'marras–huhtikuussa. Heinäkuun kolmenkymmenen asteen '
+      + 'keskilämmöstä laskeudutaan tammikuun neljään, ja talviöinä '
+      + 'raunioilla on pakkasta.',
+  },
 };

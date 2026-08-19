@@ -1178,6 +1178,33 @@ const KAUPUNGIT = {
     // kulkevia katuja. Pienempi ruutu nostaa tiheyden ilman lippuja.
     rajat: { pohjoinen: 39.948, etela: 39.936, lansi: 32.851, ita: 32.868 },
   },
+  petra: {
+    /*
+     * Petra ei ole kaupunki vaan raunioalue vuoristolaaksossa.
+     * Rajaus kattaa muinaiskaupungin kokonaan: idässä Siqin suu,
+     * lännessä Ad Deir, ja niiden välissä laakso, jossa ovat teatteri,
+     * kuninkaanhaudat, pylväskatu ja temppelit.
+     *
+     * ENSIMMÄINEN RAJAUS OTTI MUKAAN MYÖS WADI MUSAN, ja se katsottiin
+     * silmin: porttikaupungin tiheä katuverkko täytti kuvan oikean
+     * kolmanneksen ja muinaiskaupunki jäi tyhjäksi paperiksi sen
+     * vieressä, vaikka kaikki kohteet ovat juuri siellä. Wadi Musa
+     * kerrotaan siksi matkailijan oppaassa eikä kartalla.
+     *
+     * ITÄREUNA ON 35,4665 eikä 35,464, ja ero on kohteen mittainen:
+     * Bab as-Siqin obeliskihauta osui tiukemmassa rajauksessa 1,8
+     * prosenttiyksikön päähän reunasta, eli sen numeroympyrä olisi
+     * mennyt kuvan laidan yli. Nyt se on 92 prosentissa.
+     *
+     * Jalkakäytävät ja polut ovat päällä, koska ne OVAT tämän kartan
+     * kadut: Siq, hautojen katu ja Ad Deirin portaat ovat OSM:ssä
+     * highway=path. Ilman lippua kuvassa olisi pelkkä maantie.
+     */
+    rajat: { pohjoinen: 30.341, etela: 30.3175, lansi: 35.427, ita: 35.4665 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    rauniokaupunki: true,
+  },
   izmir: {
     // Konakin aukio, Kemeraltin basaari ja antiikin agora mahtuvat
     // samaan runsaan puolentoista kilometrin ruutuun, ja niiden väli on
@@ -2160,10 +2187,32 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
  * on pienempi mittakaava, joten samat pikselileveydet tekisivät siitä
  * mustan mötkön.
  */
-function kerrosKuvaus(kerrokset, mitta = 1) {
+function kerrosKuvaus(kerrokset, mitta = 1, rauniokaupunki = false) {
   const v = (n) => (n * mitta).toFixed(2);
-  const katuryhmat = KADUT.map((k, i) => `<g fill="none" stroke="${PALETTI.kadut?.[i] ?? k.vari}" stroke-width="${v(k.leveys)}"
-    stroke-linecap="round" stroke-linejoin="round">${kerrokset.kadut[i].join('')}</g>`).join('\n');
+  /*
+   * RAUNIOKAUPUNKI kääntää kartan painotuksen (Petra 19.8.2026).
+   * Tavallisessa kaupungissa polku on suojatie tai puistokäytävä ja
+   * piirtyy siksi kaikkein haaleimpana. Raunioalueella se on itse
+   * kaupunki: Petrassa Siq, hautojen katu ja Ad Deirin portaat ovat
+   * OSM:ssä highway=path, eikä kartalla ole yhtään muuta katua. Sama
+   * koskee raunioalueiden reunaviivaa — kaivausalue ei ole tausta
+   * vaan kartan aihe.
+   *
+   * MITTA EI OLE ARVAUS. Ensimmäinen ajo tehtiin oletusarvoilla ja
+   * KATSOTTIIN: 175 elementtiä piirtyi niin haaleana, että kuva oli
+   * käytännössä tyhjä paperi. Leveydet ja sävyt nostettiin tässä
+   * asuinkadun tasolle, joka on julisteen oma sävyperhe eikä uusi väri.
+   */
+  const polkuLuokka = KADUT.findIndex((k) => k.luokat.includes('footway'));
+  const katuryhmat = KADUT.map((k, i) => {
+    const polku = rauniokaupunki && i === polkuLuokka;
+    const vari = polku ? '#bfae8b' : (PALETTI.kadut?.[i] ?? k.vari);
+    const leveys = polku ? 1.8 : k.leveys;
+    return `<g fill="none" stroke="${vari}" stroke-width="${v(leveys)}"
+    stroke-linecap="round" stroke-linejoin="round">${kerrokset.kadut[i].join('')}</g>`;
+  }).join('\n');
+  const raunioReuna = rauniokaupunki ? '#a89164' : RAUNIOREUNA;
+  const raunioViiva = rauniokaupunki ? 2.4 : 1.2;
   return `
   <!-- Meri pohjimmaiseksi, saaret sen päälle: saaren ranta on
        rantaviivan sisärengas, ja ilman tätä järjestystä luodot
@@ -2171,8 +2220,8 @@ function kerrosKuvaus(kerrokset, mitta = 1) {
   <g fill="${VESI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.meri.join('')}</g>
   <g fill="${PAPERI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.saaret.join('')}</g>
   <g fill="${PUISTO}" stroke="none">${kerrokset.puistot.join('')}</g>
-  <g fill="${RAUNIO}" stroke="${RAUNIOREUNA}" stroke-width="${v(1.2)}">${kerrokset.rauniot.join('')}</g>
-  <g fill="none" stroke="${RAUNIOREUNA}" stroke-width="${v(1.6)}"
+  <g fill="${RAUNIO}" stroke="${raunioReuna}" stroke-width="${v(raunioViiva)}">${kerrokset.rauniot.join('')}</g>
+  <g fill="none" stroke="${raunioReuna}" stroke-width="${v(raunioViiva + 0.4)}"
      stroke-linecap="round" stroke-linejoin="round">${kerrokset.raunioviivat.join('')}</g>
   <!-- Joen reunaviiva: leveämpi tumma veto alle, vesi päälle — jokeen
        tulee sama ohut ranta kuin vesialtaiden stroke-reunaan. -->
@@ -2209,7 +2258,7 @@ function kerrosKuvaus(kerrokset, mitta = 1) {
  * EI ANNETA vaan se lasketaan kainalon omasta kuvasuhteesta — muuten
  * minikartta venyisi ja sen kadut valehtelisivat.
  */
-function piirraKainalo(kainalo, elementit, W, H, ydinW) {
+function piirraKainalo(kainalo, elementit, W, H, ydinW, rauniokaupunki = false) {
   const x0 = (kainalo.x / 100) * W;
   const y0 = (kainalo.y / 100) * H;
   const w = (kainalo.leveys / 100) * W;
@@ -2262,14 +2311,16 @@ function piirraKainalo(kainalo, elementit, W, H, ydinW) {
     width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="6"/></clipPath>
   <rect x="${x0.toFixed(1)}" y="${y0.toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}"
     rx="6" fill="${PAPERI}"/>
-  <g clip-path="url(#${tunnus})">${kerrosKuvaus(kerrokset, mitta)}</g>
+  <g clip-path="url(#${tunnus})">${kerrosKuvaus(kerrokset, mitta, rauniokaupunki)}</g>
   <rect x="${x0.toFixed(1)}" y="${y0.toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}"
     rx="6" fill="none" stroke="${VESIREUNA}" stroke-width="2.5"/>
   ${teksti}`;
 }
 
 function piirra(kaupunki, elementit, kainaloAineistot = []) {
-  const { kainalot = [], meri = false, laajennus = 1 } = KAUPUNGIT[kaupunki];
+  const {
+    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false,
+  } = KAUPUNGIT[kaupunki];
   const rajat = piirretytRajat(KAUPUNGIT[kaupunki]);
   // Ydinrajaus pysyy 1600 pikselinä myös laajennetussa kuvassa, ks.
   // tiedoston alun kommentti.
@@ -2279,10 +2330,11 @@ function piirra(kaupunki, elementit, kainaloAineistot = []) {
   const y = (lat) => (((rajat.pohjoinen - lat) / (rajat.pohjoinen - rajat.etela)) * H).toFixed(1);
   const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri);
   const kainaloKuvat = kainalot
-    .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H, W / laajennus)).join('\n');
+    .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H, W / laajennus, rauniokaupunki))
+    .join('\n');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
   <rect width="${W}" height="${H}" fill="${PAPERI}"/>
-  ${kerrosKuvaus(kerrokset)}
+  ${kerrosKuvaus(kerrokset, 1, rauniokaupunki)}
   ${kainaloKuvat}
 </svg>`;
 }
