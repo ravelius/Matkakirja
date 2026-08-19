@@ -447,10 +447,19 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
    */
   const karttaEtusivulla = etusivu && ui.lehtitila.tutkiTila !== 'maa'
     && KAUPUNKIKARTAT[ui.lehtitila.arrivalShownFor];
-  ui.arrivalKaupunkiKartta.hidden = !karttaEtusivulla;
+  /*
+   * Aluelehdillä (Islanti, Lappi, Kreeta, Sisilia, Alpit) ei ole
+   * kohdekarttaa lainkaan, mutta Matkailijalle-osio kuuluu silti
+   * etusivulle. Ennen v926 osio piirrettiin vain kartan mukana, joten
+   * aluelehden matkailijalle-kenttä jäi näkymättömiin kokonaan.
+   */
+  const matkailijalleEtusivulla = Boolean(etusivu
+    && ui.lehtitila.tutkiTila !== 'maa'
+    && ui.lehtitila.tutkiKansi?.matkailijalle?.kappale);
+  ui.arrivalKaupunkiKartta.hidden = !(karttaEtusivulla || matkailijalleEtusivulla);
   ui.arrivalKaupunkiKartta.replaceChildren();
-  if (karttaEtusivulla) {
-    piirraKaupunkiKartta(ui, ui.arrivalKaupunkiKartta);
+  if (karttaEtusivulla) piirraKaupunkiKartta(ui, ui.arrivalKaupunkiKartta);
+  if (karttaEtusivulla || matkailijalleEtusivulla) {
     // Matkailijalle-osio kartan JÄLKEEN (omistajan sijoituspäätös
     // 15.8.2026: "se voisi olla itseasissa kartan jälkeen").
     piirraMatkailijalle(ui, ui.arrivalKaupunkiKartta);
