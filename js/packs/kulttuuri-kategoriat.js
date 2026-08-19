@@ -5769,6 +5769,215 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * MATKAILIJALLE (19.8.2026). Malli on Pariisin osio
+       * (docs/tyolista-opukselle.md). Jaksot on kirjoitettu niin,
+       * etteivät ne toista lehden nostoja: vuoden 1755 maanjäristys,
+       * Belémin torni, azulejot, pastel de nata ja sardiinit ovat jo
+       * sivuilla, ja Glórian köysirata, Rossio, São Jorge, tuomiokirkko,
+       * Kauppatori ja Kansallispanteoni ovat kartan kohteita. Opas
+       * kertoo siksi käytännön asiat: raiteet, hissin, ruudukon
+       * rakennustavan, Alfaman ja sillan. Säätiedot on johdettu repon
+       * omista normaaleista (js/packs/saatiedot.js: lissabon).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Lisbon (Lisboa) historic elevator Santa Justa Luca Galuzzi 2006.jpg',
+          selite: 'Santa Justan hissi illalla alhaalta katsottuna: valurautainen torni nousee kapean kadun päässä valaistuna, ja sen jokaisessa kerroksessa toistuvat uusgoottilaiset kaariaiheet. Ylimpänä kulkee silta yläkaupungin puolelle.',
+          lahde: 'Luca Galuzzi (Lucag), Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        kappale: 'Lissabon on rakennettu kukkuloille, ja se näkyy '
+          + 'liikenteessä: kaupungissa on metro, raitiovaunuja vuodelta '
+          + '1873, köysiratoja rinteissä ja yksi pystysuora hissi kadun '
+          + 'päässä. Alakaupunki on ruudukko, joka rakennettiin '
+          + 'tahallaan joustamaan, ja sen yläpuolella kiemurtelee '
+          + 'kaupungin vanhin kortteli.',
+        artikkeli: {
+          nimi: 'Matkailijan Lissabon',
+          taitto: 'opas',
+          teksti: 'Seitsemän kukkulaa, kuusi raitiolinjaa ja yksi hissi.',
+          nosto: 'Baixan talot on rakennettu puuhäkin varaan, joka '
+            + 'tärisee muttei kaadu.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Metro avattiin joulukuussa 1959 Portugalin '
+                + 'ensimmäisenä. Linjoja on neljä, rataa 44,5 kilometriä '
+                + 'ja asemia 56. Raitiotie on paljon vanhempi: se on '
+                + 'ollut käytössä vuodesta 1873, ja nykyään linjoja on '
+                + 'kuusi ja rataa 31 kilometriä. Vaunuja on 63, ja niistä '
+                + '45 on vanhoja Remodelado-vaunuja — juuri ne keltaiset, '
+                + 'jotka kiipeävät jyrkimmät kadut. Lisäksi liikenteessä '
+                + 'on kahdeksan Ligeiro-vaunua ja kymmenen nivelvaunua. '
+                + 'Varikko on Santo Amarossa Alcântarassa.',
+              kuva: { tiedosto: 'flickr-45028823084.jpg', selite: 'Keltainen raitiovaunu ylittää Baixan suoran kadun liike-epäterävänä. Kadun päässä kaartuu Rua Augustan riemukaari kelloineen ja veistosryhmineen, ja sen läpi näkyy Kauppatorin ratsastajapatsas.', lahde: 'Michael Kuhn, Flickr (CC BY 2.0)' },
+            },
+            {
+              otsikko: 'Hissi, joka ei ole köysirata',
+              teksti: 'Santa Justan hissi seisoo Rua de Santa Justan '
+                + 'päässä ja yhdistää alakaupungin kadut ylempänä '
+                + 'olevaan Largo do Carmoon. Se on kaupungin '
+                + 'hisseistä ainoa jäljellä oleva pystysuora — Glórian ja '
+                + 'Bican elevadorit ovat oikeasti köysiratoja, ja São '
+                + 'Juliãon hissi on purettu. Rakentamisluvan sai '
+                + 'insinööri Raoul Mesnier du Ponsard kesäkuussa 1882, ja '
+                + 'vuonna 1899 perustettiin yhtiö, joka sai '
+                + 'yhdeksänkymmenenyhdeksän vuoden käyttöoikeuden.',
+              kuva: { tiedosto: 'Santa Justa Lift (14921007025).jpg', selite: 'Hissin rautarakenne alhaalta: niitatut pilarit, kaariaiheiset koristepaneelit ja ylimmällä tasolla ulos työntyvä kävelysilta. Kuva on mustavalkoinen, ja kadun molemmin puolin nousevat talot rajaavat tornin kapeaan kuiluun.', lahde: 'Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)' },
+            },
+            {
+              otsikko: 'Ruudukko, joka rakennettiin tärisemään',
+              teksti: 'Alakaupunki Baixa suunniteltiin uudelleen '
+                + 'ruudukoksi, jossa kadut ja jalkakäytävät ovat '
+                + 'kahdentoista metrin levyisiä. Piirustukset tekivät '
+                + 'sotilasinsinöörit Manuel da Maia, Eugénio dos Santos '
+                + 'ja Elias Sebastião Pope. Taloihin rakennettiin '
+                + 'seiniin, lattioihin ja kattoihin joustava puuhäkki, '
+                + 'joka tärisee muttei kaadu, ja epävakaan maan alle '
+                + 'lyötiin metsällinen paaluja. Suolavedessä paalut '
+                + 'säilyttävät kimmoisuutensa eivätkä lahoa.',
+              kuva: { tiedosto: 'Baixa Pombalina (Lisboa).jpg', selite: 'Baixan ruudukko ylhäältä: suorat kadut laskeutuvat punatiilikattojen välissä kohti jokea, ja korttelit ovat samankokoisia suorakaiteita. Oikealla erottuu aukio, ja kaukana vasemmalla häämöttää riippusilta.', lahde: 'Miguel Torres, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Alfama, kaupungin vanhin kortteli',
+              teksti: 'Alfama on Lissabonin vanhin kaupunginosa, ja se '
+                + 'leviää rinteelle São Jorgen linnan ja Tejo-joen '
+                + 'väliin. Nimi tulee arabian sanasta al-hamma, kuumat '
+                + 'lähteet; sama sanajuuri tarkoittaa lämmittämistä, ja '
+                + 'siitä tulee myös sana hammam eli kylpylä. Kortteliin '
+                + 'kuuluvat São Miguelin, Santo Estêvãon ja São Vicente '
+                + 'de Foran seurakunnat sekä osa tuomiokirkon '
+                + 'seurakunnasta, ja sen kujilla on poikkeuksellisen '
+                + 'tiheässä fado-baareja ja ravintoloita.',
+              kuva: { tiedosto: 'Alfama (3903814530).jpg', selite: 'Alfaman katot rinteeltä kohti Tejoa: tiheä terrakottakattojen meri laskeutuu portaittain alas, ja niiden takana levittäytyy leveä joki. Rannassa näkyy satamanostureita ja kauempana vastarannan matala rantaviiva.', lahde: 'Bernt Rostad from Oslo, Norway, Wikimedia Commons (CC BY 2.0)' },
+            },
+            {
+              otsikko: 'Silta joen yli',
+              teksti: 'Tejon ylittää riippusilta, joka yhdistää '
+                + 'Lissabonin Almadaan eteläisellä rannalla. Pääjänne on '
+                + '1 013 metriä, mikä tekee siitä maailman '
+                + 'neljänneksikymmenenneksikahdeksanneksi pisimmän '
+                + 'riippusillan. Silta vihittiin vuonna 1966, ja se sai '
+                + 'nykyisen nimensä huhtikuun 25. päivän mukaan vuoden '
+                + '1974 jälkeen. Yhdeksänkymmentäluvulla lisättiin viides '
+                + 'kaista ja vuonna 1999 alempi taso rautatielle. Nykyään '
+                + 'ylätaso kantaa kuutta ajokaistaa ja alataso '
+                + 'kaksiraiteista rautatietä.',
+              kuva: { tiedosto: '"25 de Abril" bridge (Tagus River) (6710786181).jpg', selite: 'Riippusilta iltahämärässä: punaiset pylonit ja kaartuva kannatinvaijeri piirtyvät oranssia auringonlaskua vasten. Etualalla on venesatama, jossa purjeveneiden mastot seisovat rivissä, ja sillan alta näkyy vastarannan valoja.', lahde: 'Pedro Ribeiro Simões from Lisboa, Portugal, Wikimedia Commons (CC BY 2.0)' },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Näköalat',
+                tahdet: 3,
+                selite: 'Kaupunki on rakennettu kukkuloille, joten '
+                  + 'näköalatasanteita riittää joka kaupunginosassa.',
+              },
+              {
+                mita: 'Vanha raideliikenne',
+                tahdet: 3,
+                selite: 'Raitiotie on ollut käytössä vuodesta 1873, ja '
+                  + '45 vaunua 63:sta on yhä vanhoja Remodelado-vaunuja.',
+              },
+              {
+                mita: 'Sää',
+                tahdet: 3,
+                selite: 'Heinäkuussa sataa keskimäärin kaksi '
+                  + 'millimetriä ja talvikin on lauhkea.',
+              },
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 2,
+                selite: 'Baixan ruudukko on tasainen ja helppo, mutta '
+                  + 'Alfamaan noustaan portaita.',
+              },
+              {
+                mita: 'Ruuhkattomuus',
+                tahdet: 1,
+                selite: 'Linjan 28 vaunuihin ja Santa Justan hissiin '
+                  + 'jonotetaan päiväsaikaan pitkään.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä on käytännössä sateeton',
+                teksti: 'Heinäkuussa sataa keskimäärin 2 millimetriä ja '
+                  + 'elokuussa 4. Marraskuussa vastaava luku on 84 — '
+                  + 'sateet tulevat syksyllä ja talvella.',
+              },
+              {
+                otsikko: 'Kukkulat maksavat jaloissa',
+                teksti: 'Alakaupungin ja yläkaupungin väliä ei kävellä '
+                  + 'huomaamatta. Siksi kaupungissa on hissi ja kolme '
+                  + 'köysirataa, ja ne kannattaa laskea osaksi reittiä.',
+              },
+              {
+                otsikko: 'Ruudukko on nuorempi kuin kaupunki',
+                teksti: 'Baixan suorat kadut ovat 1700-luvulta, kun taas '
+                  + 'niiden yläpuolella oleva Alfama on kaupungin vanhin '
+                  + 'kortteli — ero näkyy heti kartalla.',
+              },
+              {
+                otsikko: 'Talvi on lauhkea muttei kuiva',
+                teksti: 'Tammikuun ylin on keskimäärin 14 astetta, mutta '
+                  + 'sadetta tulee lokakuusta joulukuuhun kuukausittain '
+                  + 'lähes yhtä paljon kuin Helsingissä koko syksynä.',
+              },
+            ],
+            parasAika: 'Paras aika on huhti–kesäkuu ja syyskuu: päivät '
+              + 'ovat lämpimiä muttei helteisiä, ja sade on vähissä. '
+              + 'Heinä- ja elokuu ovat kuivimmat kuukaudet mutta myös '
+              + 'kuumimmat ja täysimmät. Loka–joulukuu on vuoden '
+              + 'sateisin jakso, vaikka lämpötila pysyy lauhkeana.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '10–21 °C',
+                kuvaus: 'Lämpötila nousee tasaisesti ja sateet vähenevät '
+                  + 'kuukausi kuukaudelta. Toukokuussa päivä on jo yli '
+                  + 'kahdenkymmenen asteen ja sadetta noin neljä senttiä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '17–26 °C',
+                kuvaus: 'Käytännössä sateeton: heinäkuussa kaksi '
+                  + 'millimetriä ja elokuussa neljä. Meri viilentää, '
+                  + 'joten helle jää loivemmaksi kuin sisämaassa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '12–25 °C',
+                kuvaus: 'Syyskuu on yhä lämmin ja lähes kuiva, mutta '
+                  + 'lokakuussa sade alkaa ja marraskuu on vuoden märin '
+                  + 'kuukausi.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '8–15 °C',
+                kuvaus: 'Lauhkea mutta sateinen. Pakkanen on harvinaista '
+                  + 'ja päivällä on tavallisesti neljäntoista asteen '
+                  + 'tienoilla.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Carris — raitiovaunut, bussit ja hissit',
+                url: 'https://www.carris.pt/en/',
+              },
+              {
+                nimi: 'Wikivoyage: Lissabon',
+                url: 'https://fi.wikivoyage.org/wiki/Lissabon',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Kaupunki kaatui pyhäinpäivänä 1755',
