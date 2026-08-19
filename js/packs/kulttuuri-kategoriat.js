@@ -8416,6 +8416,46 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNayteNimi: 'Šostakovitš: 5. sinfonia — Leopold Stokowski, CC BY-NC-SA',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme vuodenaikaa saman kaupungin
+       * ytimestä. Iisakinkirkon kolonnadilta kattojen yli keväällä,
+       * Nevan rannalta Vasilinsaaren kärkeen kesällä ja jäätyneeltä
+       * joelta Palatsisillan valoihin talviyönä. Lisenssit, tekijät ja
+       * koot todennettu Commonsin API:sta, jokainen kuva katsottu
+       * silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Spb Views from Isaac Cathedral May2012 05.jpg',
+          selite: 'Vanha ydin Iisakinkirkon kolonnadilta toukokuussa: '
+            + 'etualalla vihertyviä puita ja pelti- ja ruostepintaisia '
+            + 'kattoja, keskellä vaaleankeltainen klassistinen julkisivu '
+            + 'pylväsportiikkeineen ja harmaa kupoli. Oikealla erottuu '
+            + 'mintunvihreä pylväsjulkisivu, ja katot jatkuvat '
+            + 'horisonttiin asti.',
+          lahde: 'A.Savin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Petersburg Vasilievsky Island-20070703-RM-124551.jpg',
+          selite: 'Vasilinsaaren kärki Nevan yli kesäpäivänä: etualalla '
+            + 'on punatiilinen laiturikiveys ja valurautainen pollari '
+            + 'raskaine ketjuineen. Vastarannalla seisovat vanhan '
+            + 'pörssitalon valkoinen pylväsrivi ja punainen '
+            + 'rostraalipylväs, ja niiden oikealla puolella jatkuu pitkä '
+            + 'keltainen makasiinirakennus graniittirantaa myöten.',
+          lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Санкт-Петербург. Дворцовый мост и Зимний дворец.jpg',
+          selite: 'Jäätynyt Neva talviyönä: etuala on kokonaan lumen '
+            + 'peittämää ahtojäätä, jonka röykkiöt piirtyvät '
+            + 'sinivalkoisina pimeydessä. Sen takana Palatsisilta on '
+            + 'reunustettu valkoisilla valonauhoilla ja lyhtypylväissä '
+            + 'hehkuvat siniset valokoristeet. Sillan takaa erottuu '
+            + 'Talvipalatsin valaistu julkisivu.',
+          lahde: 'Igor Abramov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -8551,6 +8591,45 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pienempää, ja portaita ylös kulkee jono ihmisiä.',
           lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
           wiki: 'Kristus Vapahtajan katedraali (Moskova)',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme korkeutta. Varpusvuorten
+       * näköalapaikalta talvi-illassa, jokimutka ylhäältä lokakuussa
+       * ja kaupunki pilvenpiirtäjien tasalta auringonlaskun jälkeen.
+       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
+       * jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Moscow skyline.jpg',
+          selite: 'Varpusvuorilta talvi-iltahämärässä: etualalla '
+            + 'huurteisia lehdettömiä puunlatvoja, ja niiden takaa '
+            + 'avautuu jokilaakso valonauhoineen. Vasemmalla kohoaa '
+            + 'lasitornirivistö, oikealla savuavat voimalan '
+            + 'punavalkoiset piiput. Taivas on syvänsininen ja '
+            + 'pilvivyöhykkeiden juovittama.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Moscow panoramic October 2008.jpg',
+          selite: 'Moskvajoen mutka ylhäältä lokakuisena päivänä: '
+            + 'alareunassa kulkee lasitettu kävelysilta joen yli, ja '
+            + 'rannoissa on laitureita ja kiinnitettyjä jokilaivoja. '
+            + 'Keskellä joki kaartuu kohti ydintä, oikealla nousee '
+            + 'pyöreä sinilasinen torni ja sen takana Stalinin ajan '
+            + 'tornitalo piikkeineen.',
+          lahde: 'Антон Денисов, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'High Night Moscow City (195406651).jpeg',
+          selite: 'Kaupunki pilvenpiirtäjän korkeudelta auringonlaskun '
+            + 'jälkeen: oikeaa reunaa hallitsevat kahden naapuritornin '
+            + 'lasijulkisivut valaistuine ikkunariveineen. Vasemmalla '
+            + 'kaupunki leviää alas oranssien katuvalojen mattona, jota '
+            + 'moottoritiet halkovat valojuovina. Taivas hehkuu '
+            + 'vaaleanpunaisena ja tummenee ylöspäin siniseksi.',
+          lahde: 'Igor Gorshkov, Wikimedia Commons (CC BY 3.0)',
         },
       ],
     },
@@ -9761,6 +9840,47 @@ export const KULTTUURI_KATEGORIAT = {
             + 'juuri näin sininen — se on päivän valoisin hetki.',
           lahde: 'Harald Groven, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Kaamos',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): sama arktinen kaupunki kolmena
+       * vuodenaikana. Ilmasta keskustan yli keskiyön auringossa,
+       * vuorelta salmen yli kaamosyönä ja asuinkorttelissa
+       * tammikuussa. Lisenssit, tekijät ja koot todennettu Commonsin
+       * API:sta, jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Tromso-Drone-20160721-092 (28276376613).jpg',
+          selite: 'Keskusta ilmasta heinäkuussa: etualalla ovat '
+            + 'keskustan tasakatot ja väritetyt puutalot, ja niiden '
+            + 'takana kohoaa puinen tuomiokirkko vihreine tornihuippuineen. '
+            + 'Sen takaa aukeaa satama-allas venelaitureineen ja '
+            + 'Tromssan salmi, jonka yli kaartaa hoikkapilarinen silta. '
+            + 'Vastarannalla talot nousevat rinnettä ylös kesävihreän '
+            + 'tunturiselänteen juurelle.',
+          lahde: 'CucombreLibre from New York, NY, USA, Wikimedia '
+            + 'Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Tromsø from Fjellheisen in Winter.JPG',
+          selite: 'Kaupunki kaamosyönä vuorenrinteeltä: alareunassa '
+            + 'levittäytyy salmen musta vesi, jossa laiturivalot '
+            + 'piirtyvät pitkinä juovina. Keskellä koko saari palaa '
+            + 'tiheänä keltaisten katuvalojen mattona, ja vastarannan '
+            + 'valot kiipeävät rinteeseen. Niiden yläpuolella tunturit '
+            + 'ja taivas ovat täysin mustat.',
+          lahde: 'Smitra0, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Hamna Tromsø.jpg',
+          selite: 'Asuinkortteli tammikuussa: valkoisia, siniharmaita '
+            + 'ja punaisia puutaloja nousee rinnettä ylös rivi rivin '
+            + 'takaa, ja jokaisen harjakaton päällä lepää paksu '
+            + 'lumipatja. Talojen välissä on hankia ikkunoiden '
+            + 'korkeudelle ja paljaita koivuja. Taustalla kohoaa matala '
+            + 'lumen peittämä vaara vaaleanpunertavaa taivasta vasten.',
+          lahde: 'Harald Groven, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
