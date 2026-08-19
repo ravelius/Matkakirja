@@ -36,3 +36,60 @@ Tämä rivi on ainoa punainen portti haarassa
 `claude/fable-pro-palikka`: dokumentit-testi vaatii jokaiselle
 docs/-tiedostolle rivin Raamatun kartalla. Kaikki muut portit ovat
 vihreitä.
+
+---
+
+## Kulttuurivisat: neljä kaupunkia korjattu, yksi päällekkäisyys jää Fablelle
+
+*(Opus-rooli, 19.8.2026, v913. Omistaja huomasi Pariisin lehdessä, ettei
+patonkikilpailun visakysymykseen ole lehdessä vastausta.)*
+
+### Mitä mitattiin
+
+Kaikki 43 Euroopan kaupunkia, joilla on sekä kulttuurivisa
+(`js/packs/europe-kulttuuri.js`) että kategoriat
+(`js/packs/kulttuuri-kategoriat.js`). **39 oli kunnossa, neljä ei.**
+
+`docs/moduulit/kaupunkilehti.md` vaatii, että visan opettava nosto on
+kategorioissa näkyvillä, ja julkaisun tarkistuslistan kohta 4 sanoo
+suoraan: *"Kulttuurivisa aukeaa saapumiskortilta ja sen aihe löytyy
+aiheista."* Näissä neljässä aihe oli vain maalehden puolella:
+
+| Kaupunki | Mitä puuttui |
+| --- | --- |
+| Pariisi | patonkikilpailu vain Matkaoppaan popupissa, ei lehden sivuilla |
+| Lontoo | sanaa "höyry" ei ollut kaupunkilehdessä kertaakaan |
+| Dublin | uilleann, säkkipilli, palje — ei yhtään osumaa |
+| Budapest | ei ruoka-aihetta eikä sanaa gulyás lainkaan |
+
+Jokainen sai v913:ssa kaupunki-sivulleen neljännen noston, joka kantaa
+visan opettavan tiedon. **Visakysymysten tekstiin ei koskettu** —
+se on Fablen kaanonia (docs/roolitus.md).
+
+Tarkistettiin myös, ettei tämä riko Raamatun SPOILERISÄÄNTÖÄ. Ei riko:
+sääntö on osiossa "Kirjoittajan säännöt (matkakirjatekstit)" ja koskee
+päiväkirjatekstejä ja aarrevisaa, ei kaupunkilehteä.
+
+### Mikä jää Fablelle: Dublin ↔ Irlanti -päällekkäisyys
+
+Irlannin maalehden minitehtävä (`js/packs/maa-kategoriat.js`, IRL,
+Musiikki-aiheen `tehtava`) kysyy **"Miten uilleann-pilliin saadaan
+ilma?"** — käytännössä saman kuin Dublinin kulttuurivisa
+(`js/packs/europe-kulttuuri.js`, `dublin.kysymys`): *"Miten
+irlantilaiseen uilleann-säkkipilliin saadaan ilmaa?"*
+
+`docs/moduulit/kaupunkilehti.md` rivit 319–324 kieltävät nimenomaan
+tämän: *"Minitehtävä osuu kaupungin omaan kulttuurivisaan… Tarkista
+aina kaupungin kysymys-kenttä ennen kuin hyväksyt tehtävän."*
+
+Molemmat ovat tarinatekstiä, joten Opus ei koskenut kumpaankaan.
+Korjaus on joko minitehtävän vaihtaminen toiseen Irlanti-aiheeseen tai
+Dublinin visan vaihtaminen — kumpi tahansa on Fablen päätös.
+
+### Sivuhavainto: rajatapaus Kreeta
+
+Kreetan visan oikea vastaus on *"noin 4 000 vuotta"*, ja se on
+pääteltävissä kategorian johdannosta ("neljätuhatta vuotta sitten").
+Vastauksen jälkiosaa "Euroopan vanhin kaupunkikulttuuri" ei kuitenkaan
+sanota lehdessä missään. Ei korjattu — riittääkö tämä, on
+kaanonikysymys.
