@@ -99,6 +99,10 @@ export const VALOKUVAT_FLICKR = new Map([
   // tunnistettavia ihmisiä, joten kuva on haettu Flickristä
   // (docs/tuotantosuunnitelma.md 11.3: Flickr = nykykatukuvat).
   ['flickr-45028823084.jpg', { osoite: 'https://live.staticflickr.com/1950/45028823084_1a7f979d51', sivu: 'https://www.flickr.com/photos/31176607@N05/45028823084', tekija: 'Michael Kuhn', lisenssi: 'CC BY 2.0' }],
+  // Amsterdam (19.8.2026): pyöräkuva ja kanavasilta Flickristä, koska
+  // Commonsin Amsterdam-katukuvissa on lähes aina tunnistettavia ihmisiä.
+  ['flickr-12620536334.jpg', { osoite: 'https://live.staticflickr.com/7447/12620536334_151903393c', sivu: 'https://www.flickr.com/photos/spillokr/12620536334', tekija: 'Mario Oreste', lisenssi: 'CC BY-SA 2.0' }],
+  ['flickr-3864446500.jpg', { osoite: 'https://live.staticflickr.com/3442/3864446500_819afa0423', sivu: 'https://www.flickr.com/photos/joiseyshowaa/3864446500', tekija: 'joiseyshowaa', lisenssi: 'CC BY-SA 2.0' }],
 ]);
 
 /**

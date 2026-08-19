@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 918, teksti: 'Matkailijan Amsterdam -opas' },
   { v: 917, teksti: 'Matkailijan Lissabon -opas, ensimmainen Flickr-kuva' },
   { v: 916, teksti: 'Matkailijan Venetsia -opas' },
   { v: 915, teksti: 'Avauskuvat viidelle Euroopan aluelehdelle' },

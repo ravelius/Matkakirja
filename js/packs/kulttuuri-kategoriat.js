@@ -4578,6 +4578,218 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Keeshu, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * MATKAILIJALLE (19.8.2026). Malli on Pariisin osio
+       * (docs/tyolista-opukselle.md). Jaksot eivät toista lehden
+       * nostoja: julkisivuvero, puutukkien päällä seisova kaupunki ja
+       * kanavien asuntolaivat ovat jo sivuilla, ja Keskusrautatieasema,
+       * Anne Frankin talo, Kuninkaanpalatsi, Rembrandtin talo, Artis ja
+       * Rijksmuseum ovat kartan kohteita. Opas kertoo pyörän,
+       * kanavakaavan, rakennusjärjestyksen, polderit ja sään.
+       * Säätiedot on johdettu repon omista normaaleista
+       * (js/packs/saatiedot.js: amsterdam).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Munttoren Amsterdam.jpg',
+          selite: 'Munttoren sinisellä hetkellä: tiilinen torni kohoaa kanavan päässä, ja sen yllä nousee valkoinen kellotorni kaksine kelloineen, kupolilyhty ja kullattu tuuliviiri. Lämmin valaistus heijastuu vedestä.',
+          lahde: 'Massimo Catarinella, Wikimedia Commons (CC BY 3.0)',
+        },
+        kappale: 'Amsterdamissa polkupyörä ei ole harrastus vaan '
+          + 'liikennemuoto: kaupungin matkoista lähes neljä kymmenestä '
+          + 'tehdään pyörällä. Kanavat taas eivät ole kasvaneet vaan '
+          + 'ne on piirretty — 1600-luvun kaava määräsi neljä '
+          + 'puoliympyrää, ja ne kaivettiin lännestä itään.',
+        artikkeli: {
+          nimi: 'Matkailijan Amsterdam',
+          taitto: 'opas',
+          teksti: 'Neljä puoliympyrää, 1 500 siltaa ja pyörä joka '
+            + 'kolmannella matkalla.',
+          nosto: 'Kanavat kaivettiin lännestä itään kuin '
+            + 'tuulilasinpyyhkimellä — ei keskeltä ulospäin, niin kuin '
+            + 'usein luullaan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Alankomaissa polkupyörä on toiseksi yleisin '
+                + 'liikkumistapa: 36 prosenttia hollantilaisista sanoo '
+                + 'sen tavallisimmaksi kulkuneuvokseen, kun auton '
+                + 'valitsee 45 ja joukkoliikenteen 11 prosenttia. Koko '
+                + 'maassa pyörällä tehdään 27 prosenttia matkoista, '
+                + 'mutta Amsterdamissa osuus on 38. Perinne on vanha — '
+                + 'jo vuonna 1911 hollantilaisilla oli enemmän pyöriä '
+                + 'asukasta kohti kuin missään muualla Euroopassa. '
+                + 'Kanavia sen sijaan käytetään nykyään lähinnä '
+                + 'matkailuun ja asuntolaivoihin.',
+              kuva: { tiedosto: 'flickr-12620536334.jpg', selite: 'Oranssi polkupyörä lukittuna sillan kaiteeseen: kaiteessa lukee valkoisin kirjaimin PAULUSBROEDERSLUIS, ja sen takana kaartuu kanava. Vastarannalla nousee rivi kapeita tummia kanavataloja valkoisine ikkunapuitteineen.', lahde: 'Mario Oreste, Flickr (CC BY-SA 2.0)' },
+            },
+            {
+              otsikko: 'Kanavaverkko piirrettiin kerralla',
+              teksti: '1600-luvun alussa muuttoliike kasvoi, ja '
+                + 'kaupungille laadittiin kokonaissuunnitelma: neljä '
+                + 'samankeskistä puoliympyrää, joiden päät nojaavat '
+                + 'IJ-lahteen. Kolme niistä oli asumista varten — '
+                + 'Herengracht eli patriisien kanava, Keizersgracht eli '
+                + 'keisarin ja Prinsengracht eli prinssin — ja uloin, '
+                + 'Singelgracht, puolustusta ja vedenhallintaa varten. '
+                + 'Jordaanin kortteliin kaivettiin lisäksi rinnakkaiset '
+                + 'kanavat tavarankuljetusta, esimerkiksi oluen, varten.',
+              kuva: { tiedosto: 'Swans in a canal, Oudezijds Voorburgwal, with Bridge 105 (5822070926).jpg', selite: 'Kanava talvisena iltapäivänä: vesi täyttää kuvan keskiosan ja molemmin puolin nousee yhtenäinen kanavatalojen rivi porrastettuine päätyineen. Vedessä ui joutsenia, ja rannoissa on kiinnitettyjä veneitä ja lehdettömiä puita.', lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)' },
+            },
+            {
+              otsikko: 'Lännestä itään, ei keskeltä ulos',
+              teksti: 'Yleinen luulo on, että kanavarenkaat kasvoivat '
+                + 'keskustasta ulospäin. Näin ei käynyt. Rakentaminen '
+                + 'eteni koko kaavan leveydeltä lännestä itään — '
+                + 'historioitsija Geert Mak vertaa sitä jättimäiseen '
+                + 'tuulilasinpyyhkimeen. Luoteinen lohko aloitettiin '
+                + 'vuonna 1613 ja saatiin valmiiksi noin 1625. Eteläistä '
+                + 'osaa alettiin rakentaa vasta vuoden 1664 jälkeen, ja '
+                + 'hitaasti, koska talous oli lamassa. Itäisin osa jäi '
+                + 'pitkäksi aikaa toteuttamatta.',
+            },
+            {
+              otsikko: 'Järviä, joita ei enää ole',
+              teksti: 'Osa kaupungista ja sen ympäristöstä on poldereita '
+                + 'eli kuivatettua järvenpohjaa. Ne tunnistaa nimen '
+                + 'päätteestä -meer, joka tarkoittaa järveä: Aalsmeer, '
+                + 'Bijlmermeer, Haarlemmermeer ja Watergraafsmeer olivat '
+                + 'kaikki aikanaan vettä. Kanavia kaupungissa on yli '
+                + 'sata kilometriä, saaria noin yhdeksänkymmentä ja '
+                + 'siltoja 1 500 — enemmän kuin Venetsian vanhassa '
+                + 'keskustassa. Kanavarengas on ollut Unescon '
+                + 'maailmanperintöä vuodesta 2010.',
+              kuva: { tiedosto: 'flickr-3864446500.jpg', selite: 'Kanavasilta auringonlaskun jälkeen: sillan kaiteeseen on lukittu tiivis rivi polkupyöriä, ja katulyhdyt palavat oranssina. Taivas hehkuu vaaleanpunaisena ja koko näkymä toistuu tyynen veden peilikuvana.', lahde: 'joiseyshowaa, Flickr (CC BY-SA 2.0)' },
+            },
+            {
+              otsikko: 'Sade ei ole vuodenaika',
+              teksti: 'Amsterdamissa sataa joka kuukausi, eikä kuivaa '
+                + 'kautta ole. Vähiten vettä tulee huhtikuussa, noin '
+                + 'viisi senttiä, ja eniten heinä- ja elokuussa, reilut '
+                + 'kahdeksan — eli juuri silloin kun matkailijoita on '
+                + 'eniten. Lämpötila on merellinen ja tasainen: '
+                + 'heinäkuun ylin on keskimäärin 21 astetta ja '
+                + 'tammikuun 6. Yön alin painuu talvella kahteen '
+                + 'asteeseen mutta pakkaselle asti harvoin, joten '
+                + 'kanavien jäätyminen on nykyään poikkeus. '
+                + 'Sateenvarjo kuuluu matkatavaroihin ympäri vuoden.',
+              kuva: { tiedosto: 'Street and canal at dusk, Oudezijds Voorburgwal \'blue hour\', 7 januari 2011 (5821492447).jpg', selite: 'Sateen jälkeen sinisellä hetkellä: mukulakivetys kiiltää märkänä ja heijastaa katulyhtyjen valot pitkinä juovina. Vasemmalla kulkee kanava rautakaiteineen ja penkkeineen, oikealla nousee talorivi.', lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)' },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Pyöräily',
+                tahdet: 3,
+                selite: 'Kaupungin matkoista 38 prosenttia tehdään '
+                  + 'pyörällä, ja väylät on rakennettu sen mukaan.',
+              },
+              {
+                mita: 'Kanavat',
+                tahdet: 3,
+                selite: 'Yli sata kilometriä kanavia ja 1 500 siltaa; '
+                  + 'kanavarengas on Unescon maailmanperintöä.',
+              },
+              {
+                mita: 'Museot',
+                tahdet: 3,
+                selite: 'Rijksmuseum, Rembrandtin talo ja Anne Frankin '
+                  + 'talo ovat kaikki kävelyetäisyydellä toisistaan.',
+              },
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 2,
+                selite: 'Kaupunki on tasainen ja pieni, mutta kapeilla '
+                  + 'kaduilla jalankulkija väistää pyöriä.',
+              },
+              {
+                mita: 'Sää',
+                tahdet: 1,
+                selite: 'Sadetta tulee joka kuukausi, ja eniten juuri '
+                  + 'kesällä.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Pyörätie ei ole jalkakäytävä',
+                teksti: 'Punaiset kaistat ovat pyörille, ja niillä '
+                  + 'ajetaan lujaa. Kaupungissa pyörä on liikennemuoto '
+                  + 'eikä vapaa-ajan väline, joten jalankulkijan '
+                  + 'kannattaa katsoa molempiin suuntiin.',
+              },
+              {
+                otsikko: 'Kesä on sateisin',
+                teksti: 'Heinä- ja elokuussa sataa kussakin noin 84 '
+                  + 'millimetriä, huhtikuussa vain 51. Kuivaa kautta ei '
+                  + 'ole lainkaan.',
+              },
+              {
+                otsikko: 'Kanavat eivät ole liikennettä',
+                teksti: 'Vesillä kulkee nykyään lähinnä risteilyveneitä '
+                  + 'ja asuntolaivoja. Kaupungissa liikutaan kävellen, '
+                  + 'pyörällä, raitiovaunulla ja metrolla.',
+              },
+              {
+                otsikko: 'Nimi kertoo maaperän',
+                teksti: 'Jos paikannimi päättyy -meer, siellä on ollut '
+                  + 'järvi. Haarlemmermeer ja Bijlmermeer ovat kuivattua '
+                  + 'pohjaa, eivät kukkuloita.',
+              },
+            ],
+            parasAika: 'Paras aika on huhti–kesäkuu ja syyskuu: '
+              + 'huhtikuu on vuoden kuivin kuukausi, ja touko–kesäkuussa '
+              + 'päivät ovat pitkiä ja lämpötila kahdenkymmenen '
+              + 'tienoilla. Heinä- ja elokuu ovat lämpimimmät mutta myös '
+              + 'sateisimmat ja täysimmät. Talvi on harmaa ja kostea, '
+              + 'mutta pakkanen on harvinaista.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '4–17 °C',
+                kuvaus: 'Vuoden kuivin jakso: huhtikuussa sataa vain '
+                  + 'noin viisi senttiä. Päivät pitenevät nopeasti ja '
+                  + 'kanavien varret vihertyvät.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '12–21 °C',
+                kuvaus: 'Lämmin muttei kuuma — heinäkuun ylin on '
+                  + 'keskimäärin 21 astetta. Samalla vuoden sateisin '
+                  + 'jakso, noin kahdeksan senttiä kuukaudessa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '5–18 °C',
+                kuvaus: 'Syyskuu on vielä leuto, marraskuu jo harmaa. '
+                  + 'Sadetta tulee tasaisesti seitsemisen senttiä '
+                  + 'kuukaudessa.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '2–6 °C',
+                kuvaus: 'Kostea ja pimeä mutta harvoin kylmä: yön alin '
+                  + 'on keskimäärin kahden asteen tienoilla. Kanavien '
+                  + 'jäätyminen on nykyään harvinaista.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'GVB — raitiovaunut, metro ja bussit',
+                url: 'https://en.gvb.nl/',
+              },
+              {
+                nimi: 'Wikivoyage: Amsterdam',
+                url: 'https://fi.wikivoyage.org/wiki/Amsterdam',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Verotettiin julkisivun leveydestä',
