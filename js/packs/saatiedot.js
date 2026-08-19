@@ -1310,7 +1310,7 @@ export const SAATIEDOT = {
    * alimpien keskiarvojen puoliväli asetettiin keskilämmön ympärille.
    *
    * Koordinaatit ovat kohteiden omista en-Wikipedian artikkeleista
-   * (Petra, Göreme, Persepolis; haettu 19.8.2026). Kapadokia on niin
+   * (Petra, Göreme, Persepolis; haettu 19.8.2026). Kappadokia on niin
    * laaja alue, ettei sillä ole yhtä keskustaa — rivi on laskettu
    * Göremen kohdalta, koska matkailijan yöpaikat ja tuffikartio-
    * laakso ovat siinä.
@@ -1337,7 +1337,7 @@ export const SAATIEDOT = {
     ylin: [4, 6, 11, 17, 22, 27, 31, 31, 26, 20, 12, 6],
     alin: [-5, -5, -1, 3, 8, 13, 16, 16, 11, 6, 0, -4],
     sade: [44, 38, 52, 54, 52, 27, 5, 4, 12, 26, 35, 44],
-    luonnehdinta: 'Kapadokia on tuhannen metrin ylätasankoa, ja se '
+    luonnehdinta: 'Kappadokia on tuhannen metrin ylätasankoa, ja se '
       + 'näkyy: tammi- ja helmikuussa keskilämpö on pakkasen puolella '
       + 'tai nollassa, kun heinä- ja elokuussa se on yli kahdenkymmenen '
       + 'kolmen asteen. Sadetta tulee vajaat neljäsataa millimetriä, '

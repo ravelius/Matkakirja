@@ -14483,6 +14483,366 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  kapadokia: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kappadokia',
+      johdanto: 'Tuhkasta tuli kiveä ja kivestä taloja. Tuuli ja vesi ovat '
+        + 'veistäneet Keski-Anatolian tuffista satoja piikkejä, ja niiden '
+        + 'sisään on kaivettu kirkkoja, kyyhkyslakkoja ja kokonaisia '
+        + 'maanalaisia kaupunkeja.',
+      kansikuvat: [
+        {
+          tiedosto: 'Light in Goreme Valley.jpg',
+          selite: 'Rivi tuffikartioita vastavalossa: etualan piiput ovat '
+            + 'lähes mustia, ja niiden takana laakson seinämä hohtaa '
+            + 'vaaleana. Muoto toistuu laaksosta toiseen.',
+          lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Uçhisar Castle 02.jpg',
+          selite: 'Uçhisarin kalliolinnake: kuusikymmentä metriä korkea '
+            + 'kallio, jonka kylkeen on louhittu ikkuna-aukkoja ja '
+            + 'huoneita. Edessä kohoaa kartio, johon on kaiverrettu ovia '
+            + 'kolmeen kerrokseen.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Sultanhani Caravanserai, Turkey (23944555856).jpg',
+          selite: 'Sultanhanın karavaaniseraalin piha: keskellä kohoaa '
+            + 'kaarien päälle rakennettu rukoushuone, oikealla holvikaarten '
+            + 'rivi ja edessä kulunut kivilaatoitus.',
+          lahde: 'Robert Cutts from Bristol, England, UK, Wikimedia Commons '
+            + '(CC BY-SA 2.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Cappadocia Aktepe Panorama.JPG',
+          selite: 'Laaja panoraama Aktepen laaksosta: ylhäällä vaaleiden '
+            + 'kerrosten reunustama tasanko, alempana ruusunpunaista '
+            + 'tuffia terävinä harjanteina, ja pohjalla vihreitä pensaita.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Sunset at GoremeValley with View of Uchisar.jpg',
+          selite: 'Iltavalo laakson yllä: etualalla kymmeniä tuffikartioita '
+            + 'peräkkäin usvassa, ja harjanteen päällä siintää Uçhisarin '
+            + 'kylä linnakallioineen.',
+          lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Sunset at Goreme Valley.jpg',
+          selite: 'Göremen laakso kultaisessa vastavalossa: teräviä '
+            + 'kivipiikkejä rinne rinteeltä, syksyn ruskeat pensaat '
+            + 'etualalla ja kylän talot sumun takana.',
+          lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Maisema on kovettunutta tuhkaa',
+          tiedosto: 'Erciyes From Aktepe Goreme.JPG',
+          teksti: 'Kappadokian muodot ovat tulivuorten työtä. Erciyes, '
+            + 'Hasan ja Göllüdağ purkautuivat toistuvasti noin yhdeksän ja '
+            + 'kolmen miljoonan vuoden välillä ja peittivät ylätasangon '
+            + 'paksuilla tuhkakerroksilla. Niistä kovettui ignimbriittiä ja '
+            + 'tuffia, jota tuuli ja vesi ovat sittemmin syöneet piikeiksi '
+            + 'ja pilareiksi. Turkiksi ne ovat peribacalar, keijupiiput. '
+            + 'Kansainvälinen geologian liitto valitsi Kappadokian '
+            + 'mioseenikautisen ignimbriittisarjan lokakuussa 2022 sadan '
+            + 'geologisen perintökohteen joukkoon.',
+          selite: 'Erciyes-vuori siintää ylätasangon takana. Sammunut '
+            + 'tulivuori on alueen korkein kohta, ja sen purkaukset '
+            + 'kerrostivat tuhkan, josta koko maisema on veistetty.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kappadokia',
+        },
+        {
+          otsikko: 'Kyyhkysten lanta maalasi kirkot',
+          tiedosto: 'UçhisarDovecoteValley2.jpg',
+          teksti: 'Uçhisarin ja Göremen väliin jäävän laakson seiniin on '
+            + 'louhittu satoja kyyhkyslakkoja: pieniä kammioita, joiden '
+            + 'sisällä on orsia ja koloja pesiä varten. Ne eivät ole '
+            + 'koristeita vaan maataloutta. Kyyhkysten lantaa käytettiin '
+            + 'peltojen lannoitteena aina 1970-luvulle asti, ja samaa '
+            + 'ainetta sekoitettiin luolakirkkojen maaleihin kirkastamaan '
+            + 'värejä. Laakson yllä kohoaa Uçhisarin kuusikymmenmetrinen '
+            + 'kalliolinnake, jonka sisään louhittuihin huoneisiin arvellaan '
+            + 'mahtuneen tuhatkunta ihmistä.',
+          selite: 'Kyyhkyslaakso Uçhisarin alapuolella: pehmeän tuffin '
+            + 'seinämiin on louhittu aukkoja rivi rivin päälle, ja '
+            + 'harjanteella näkyy kylän taloja.',
+          lahde: 'Claude Valette, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Punaisen joen savi',
+          tiedosto: 'A ceramics workshop at Cappadocia.jpg',
+          teksti: 'Avanos on rakennettu Kızılırmakin eli Punaisen joen '
+            + 'mutkaan. Se on Turkin pisin kokonaan maan sisällä virtaava '
+            + 'joki, 1 355 kilometriä, ja antiikissa se tunnettiin Halyksena. '
+            + 'Joen punainen siltti on kaupungin savenvalajien raaka-aine, ja '
+            + 'perinteen arvellaan ulottuvan heettiläisaikaan asti. '
+            + 'Maantieteilijä Strabon mukaan Avanos oli tuolloin nimeltään '
+            + 'Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein '
+            + 'kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, '
+            + 'joita savipajat käyttävät yhä varastoinaan.',
+          selite: 'Keramiikkasali kallioon louhitussa huoneessa: kattoon '
+            + 'ripustettuja maalattuja astioita ja pöydillä satoja kulhoja '
+            + 'riveissä.',
+          lahde: 'Slyronit, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kahdeksantoista taloa, sitten Uusi kaupunki',
+          tiedosto: 'Nevşehir Kurşunlu Mosque in 2019 1630.jpg',
+          teksti: 'Nevşehir oli 1700-luvun alussa kahdeksantoista talon kylä '
+            + 'nimeltä Muşkara. Kylässä syntynyt Nevşehirli Damad İbrahim '
+            + 'Paşa nousi suurvisiiriksi ja sulttaani Ahmed III:n vävyksi, ja '
+            + 'hän rakennutti kotiseudulleen moskeijoita, suihkulähteitä, '
+            + 'kouluja, keittiöitä, majataloja ja kylpylöitä. Nimi vaihtui '
+            + 'Nevşehiriksi, Uudeksi kaupungiksi. Suurvisiiri surmattiin '
+            + 'kapinallisten käsiin Istanbulissa vuonna 1730, mutta kaupunki '
+            + 'oli silloin jo vakiintunut. Vuonna 2015 keskustan alta '
+            + 'paljastui purkutöissä tuntematon maanalainen kaupunki.',
+          selite: 'Kurşunlu-moskeija Nevşehirin keskustassa ylhäältä '
+            + 'nähtynä: lyijykupoli ja kaksi minareettia nykyisten '
+            + 'kerrostalojen keskellä.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Göreme town and valley 2015.JPG',
+          selite: 'Göremen kylä laakson pohjalla: talojen lomassa kohoaa '
+            + 'tuffikartioita, joiden kylkiin on louhittu ovia ja ikkunoita, '
+            + 'ja takana levittäytyy laakso vaaleine kallioseinineen.',
+          lahde: 'MusikAnimal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kappadokia ei ole kaupunki eikä maakunta vaan '
+          + 'historiallinen alue, joka leviää kuuden maakunnan päälle. '
+          + 'Matkailijan Kappadokia on kuitenkin pieni: Göremen, Uçhisarin, '
+          + 'Avanosin ja Ürgüpin väliin jäävä muutaman kymmenen kilometrin '
+          + 'kolmio, jonka sisään mahtuvat laaksot, luolakirkot ja '
+          + 'maanalaiset kaupungit. Ylätasanko on yli tuhannen metrin '
+          + 'korkeudessa, ja se näkyy sekä kesän kuivuudessa että talven '
+          + 'lumessa.',
+        artikkeli: {
+          nimi: 'Matkailijan Kappadokia',
+          taitto: 'opas',
+          teksti: 'Ylätasanko, jonka kaupungit on kaivettu alaspäin.',
+          nosto: 'Sama pehmeä kivi teki sekä maiseman että asunnot: '
+            + 'tuffia jaksaa kaivaa lapiolla.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kappadokia on keskellä Anatoliaa, kaukana '
+                + 'rannikoista: Nevşehiristä on Ankaraan 290 kilometriä. '
+                + 'Alue ei ole hallinnollinen yksikkö vaan historiallinen '
+                + 'nimi, ja se ulottuu kuuden maakunnan alueelle — '
+                + 'Nevşehirin, Kayserin, Aksarayn, Kırşehirin, Sivasin ja '
+                + 'Niğden. Matkailijan kannalta tärkeät kylät ovat kuitenkin '
+                + 'lähellä toisiaan: Göreme, Uçhisar, Ortahisar, Avanos, '
+                + 'Ürgüp ja Zelve mahtuvat kaikki muutaman kymmenen '
+                + 'kilometrin säteelle. Kaymaklın maanalaiseen kaupunkiin on '
+                + 'Nevşehiristä yhdeksäntoista kilometriä, ja siitä matka '
+                + 'jatkuu Derinkuyuun. Nevşehir itse on tasangolla 1 224 '
+                + 'metrin korkeudessa, eikä se ole matkailukeskus vaan '
+                + 'maakunnan hallintokaupunki.',
+              kuva: {
+                tiedosto: 'The Roads to Cappadocia.jpg',
+                selite: 'Ylätasangon reunaa: etualalla viljelysaukeaa ja '
+                  + 'puurivejä, keskellä vaaleita kalliomuodostumia ja '
+                  + 'taustalla loivia vuoria.',
+                lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Laaksot ja niiden kirkot',
+              teksti: 'Alueen sydän on Göremen kansallispuisto, joka '
+                + 'hyväksyttiin Unescon maailmanperintöluetteloon vuonna '
+                + '1985. Göremen ympäristössä arvioidaan olevan noin '
+                + 'neljäsataa kallioon louhittua kirkkoa. Ne eivät ole '
+                + 'yhdessä paikassa vaan hajallaan laaksoissa: Zelvessä, '
+                + 'Çavuşinissa, Mustafapaşassa, Ortahisarissa ja Uçhisarissa. '
+                + 'Kappadokia oli kristinuskon merkittävimpiä keskuksia '
+                + '500-luvulta 800-luvulle, ja seiniin maalatut freskot '
+                + 'ajoittuvat 500-luvulta 1100-luvulle. Kauempana lounaassa '
+                + 'aukeaa Ihlaran laakso, jonka pohjalla virtaa joki '
+                + 'jyrkkien tuffiseinien välissä — se on alueen vihrein '
+                + 'kohta ja aivan toisen näköinen kuin kuivat laaksot.',
+              kuva: {
+                tiedosto: 'Ihlara Valley in summer.jpg',
+                selite: 'Ihlaran laakson reuna: pystysuora tuffiseinä, jonka '
+                  + 'kylkeen on louhittu aukkoja, ja edessä irtolohkareita '
+                  + 'kuivassa rinteessä.',
+                lahde: 'Andrada Boldis, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Elämä kiven sisällä',
+              teksti: 'Tuffi on niin pehmeää, että sitä voi kaivaa käsityönä, '
+                + 'ja se kovettuu ilmassa. Siksi Kappadokiassa ei ole '
+                + 'rakennettu vaan louhittu: talot, tallit, kirkot ja '
+                + 'varastot on kaiverrettu kallioon, ja monessa kylässä '
+                + 'asuttiin luolissa vielä 1900-luvulla. Kiven sisällä on '
+                + 'tasainen lämpötila, mikä sopii sekä ihmiselle että '
+                + 'ruoan säilytykselle — Avanosin savipajat käyttävät vanhoja '
+                + 'maanalaisia tiloja yhä varastoinaan. Uçhisarin '
+                + 'linnakalliosta on kaivettu tunneli, joka johti kallion '
+                + 'ulkopuolelle ja suojasi vedensaantia. Sama ajatus toistuu '
+                + 'koko alueella: mitä tarvitaan, se kaivetaan.',
+              kuva: {
+                tiedosto: 'The Rock formations.jpg',
+                selite: 'Kalliokukkula, jonka kylkeen on louhittu huoneita ja '
+                  + 'ikkuna-aukkoja useaan kerrokseen. Ympärillä laaksoa ja '
+                  + 'kaukana minareetti.',
+                lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kaksi kertaa vaihtunut kieli',
+              teksti: 'Kappadokian nimi on peräisin antiikista, ja se on '
+                + 'kulkenut kristillisissä lähteissä läpi koko historian. '
+                + 'Alueen varhaisin kirjallinen maininta Göremestä on '
+                + 'Khalkedonin kirkolliskokouksen pöytäkirjoissa vuodelta '
+                + '451, jonne lähetettiin edustajat kahdesta paikallisesta '
+                + 'asutuksesta. Kristinusko oli juurtunut alueelle viimeistään '
+                + '200-luvulla, ja 300-luvun kappadokialaiset kirkkoisät '
+                + 'vaikuttivat varhaiseen kristilliseen ajatteluun laajasti. '
+                + 'Keskiajalla valta vaihtui: seldžukkien jälkeen alue kuului '
+                + 'Karamanidien beylikkiin vuodesta 1328 ja osmaneille noin '
+                + 'vuodesta 1487. Kirkot jäivät kallioon, mutta arjen kieli '
+                + 'vaihtui.',
+              kuva: {
+                // Nimi on yhdellä rivillä, vaikka rivi venyy: katkaistuna
+                // peilaustyökalu poimisi vain ensimmäisen palan
+                // (tests/media.test.mjs valvoo tätä).
+                tiedosto: 'Medieval Fresco in Cave Church - Open-Air Museum - Goreme - Cappadocia - Turkey (5761507026).jpg',
+                selite: 'Luolakirkon holviin punamullalla maalattuja '
+                  + 'pyhimyshahmoja: ristit käsissä, kaavut '
+                  + 'ruutukuvioituina, ja tausta jaettu ohuilla viivoilla '
+                  + 'ruutuihin.',
+                lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia '
+                  + 'Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Tuhannen metrin ylätasanko tekee ilmastosta '
+                + 'mannermaisen, eikä meri lievennä mitään. Tammi- ja '
+                + 'helmikuun keskilämpö on nollan tuntumassa tai sen alla, ja '
+                + 'lunta tulee: talvikuvissa tuffikartiot ovat valkoisia. '
+                + 'Heinä- ja elokuussa keskilämpö nousee yli kahdenkymmenen '
+                + 'kolmen asteen, ja päivällä on selvästi kuumempi. Sadetta '
+                + 'kertyy vuodessa vajaat neljäsataa millimetriä, ja se '
+                + 'painottuu kevääseen — huhti- ja toukokuussa runsaat '
+                + 'viisikymmentä millimetriä kuukaudessa, elokuussa neljä. '
+                + 'Kevät ja alkusyksy ovat siis kävelyn kannalta helpoimmat, '
+                + 'ja korkeuden takia yöt viilenevät myös keskikesällä.',
+              kuva: {
+                tiedosto: 'Winter at Cappadocia.jpg',
+                selite: 'Lumipeitteinen laakso talvella: valkoiset rinteet ja '
+                  + 'niiden lomassa paljaita ruskeita kallioita, ja '
+                  + 'harjanteella Uçhisarin kylä iltavalossa.',
+                lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kappadokiassa historia on kaivettu näkyviin. Maan alle '
+        + 'mahtui kaupunkeja, joiden ovet suljettiin sisältä päin, ja maan '
+        + 'päälle karavaaniseraaleja, joiden muurien sisään mahtui koko '
+        + 'karavaani.',
+      tehtava: {
+        kysymys: 'Kuinka syvälle Derinkuyun maanalainen kaupunki ulottuu?',
+        vaihtoehdot: [
+          'Noin 8 metriä',
+          'Noin 25 metriä',
+          'Noin 85 metriä',
+          'Noin 300 metriä',
+        ],
+        oikea: 2,
+        fakta: 'Kerroksia on viisi, ja alimmalle vievät portaat päättyvät '
+          + 'kirkkoon.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kahdeksankymmentäviisi metriä alaspäin',
+          tiedosto: 'Derinkuyu Underground City.JPG',
+          teksti: 'Derinkuyun maanalainen kaupunki ulottuu noin '
+            + 'kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen. '
+            + 'Tilaa oli arvioiden mukaan jopa kahdellekymmenelletuhannelle '
+            + 'ihmiselle karjoineen ja ruokavarastoineen — luku on '
+            + 'lähteissä yläraja-arvio eikä laskettu määrä. Kolmannen ja '
+            + 'neljännen kerroksen välistä lähtevät portaat vievät alimman '
+            + 'kerroksen kirkkoon. Ilmanvaihto oli suunniteltu: pystykuiluja '
+            + 'on runsaasti, ja pääkuilun aukot on porrastettu niin, etteivät '
+            + 'kahden kerroksen aukot ole koskaan päällekkäin.',
+          selite: 'Kallioon louhittu käytävä Derinkuyussa: holvikatto, '
+            + 'kulunut lattia ja perällä matala oviaukko, jonka takaa näkyy '
+            + 'valoa seuraavaan huoneeseen.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ovi, jonka sai kiinni vain sisältä',
+          tiedosto: 'Kaymaklı Underground City large room.JPG',
+          teksti: 'Kaymaklın maanalainen kaupunki avattiin matkailijoille '
+            + 'vuonna 1964, ja se on yhdeksäntoista kilometriä Nevşehiristä. '
+            + 'Käytävien välissä on pyöreitä kivilaattoja, jotka vieritettiin '
+            + 'oviaukon eteen — ja jotka aukesivat vain sisäpuolelta, koska '
+            + 'kahvaa ei ollut ulkopuolella. Jokainen kerros voitiin siis '
+            + 'sulkea erikseen. Rakentamisen ajankohdasta ollaan eri mieltä: '
+            + 'Turkin kulttuuriministeriön mukaan ensimmäiset luolat '
+            + 'kaivoivat fryygialaiset 700–600-luvulla eKr., kun taas '
+            + 'artikkelin toinen lähde katsoo kristittyjen aloittaneen työn '
+            + 'vasta 700-luvulla jKr.',
+          selite: 'Suuri louhittu sali Kaymaklıssa: matala holvikatto, '
+            + 'seinissä syvennyksiä ja oviaukkoja, ja lattiassa metallinen '
+            + 'ritilä portaiden päällä.',
+          lahde: 'MusikAnimal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Neljäsataa kirkkoa kalliossa',
+          tiedosto: 'Dark church - Karanlık Kilise - Göreme open air museum.jpg',
+          teksti: 'Göremen ympäristössä arvioidaan olevan noin neljäsataa '
+            + 'kallioon louhittua kirkkoa. Osa on kokonaisia luolia, osa on '
+            + 'paljastunut, kun ulompi kallio on rapautunut pois: silloin '
+            + 'näkyvät holvit, apsidit ja pylväät kuin poikkileikkauksena. '
+            + 'Freskot ajoittuvat 500-luvulta 1100-luvulle. Göremen '
+            + 'kansallispuisto ja Kappadokian kalliokohteet hyväksyttiin '
+            + 'Unescon maailmanperintöluetteloon vuonna 1985. Ensimmäinen '
+            + 'kirjallinen maininta paikasta on Khalkedonin kirkolliskokouksen '
+            + 'pöytäkirjoissa vuodelta 451.',
+          selite: 'Rapautunut kalliokirkko Göremessä: ulkoseinä on pudonnut '
+            + 'pois, ja sisään louhitut holvit, kaaret ja apsidit ovat '
+            + 'paljaana taivasta vasten.',
+          lahde: 'prilfish, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Yösija koko karavaanille',
+          tiedosto: 'SultanhanıCaravanseraiAksaray.jpg',
+          teksti: 'Aksarayn lähellä sijaitseva Sultanhanı on seldžukkien '
+            + 'karavaaniseraali, ja sen rakennusvuosi 1229 lukee '
+            + 'piirtokirjoituksessa. Rakennuttaja oli sulttaani Kayqubad I. '
+            + 'Tulipalo tuhosi osan rakennuksesta, ja kuvernööri Seraceddin '
+            + 'Ahmed Kerimeddin korjautti ja laajensi sen vuonna 1278 '
+            + 'sulttaani Kaykhusraw III:n aikana. Muurien sisään jää 4 900 '
+            + 'neliömetriä, mikä tekee siitä Turkin suurimman keskiaikaisen '
+            + 'karavaaniseraalin: kauppiaat, eläimet ja tavarat yöpyivät '
+            + 'saman portin takana.',
+          selite: 'Sultanhanın portti ja piha: paksut kivimuurit, terävä '
+            + 'kaariportti ja pihan keskellä holvien päälle nostettu '
+            + 'rukoushuone.',
+          lahde: 'zolakoma, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+  ],
   tromssa: [
     {
       id: 'kaupunki',
