@@ -5341,6 +5341,48 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNimi: 'La Marseillaise Apple Musicissa',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme suuntaa. Notre-Dame de la Garden
+       * mäeltä alas vanhaansatamaan, Endoumen kattojen yli merelle ja
+       * saarille, ja pystysuoraan alas Vallon des Auffesin poukamaan.
+       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
+       * jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Vue Ville depuis Basilique Notre Dame Garde - Marseille (FR13) - 2023-07-22 - 4.jpg',
+          selite: 'Kaupunki Notre-Dame de la Garden mäeltä heinäkuun '
+            + 'keskipäivällä: keskellä kuvaa on vanhansataman pitkä '
+            + 'allas, jonka molemmat laiturit ovat täynnä valkoisia '
+            + 'veneitä vieri vieressä. Altaan ympärillä levittäytyy '
+            + 'tiivis oranssien tiilikattojen meri, vasemmalla kohoaa '
+            + 'tummia lasitorneja ja horisontin sulkevat vaaleat '
+            + 'kalkkikivikukkulat.',
+          lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Frioul et toits marseillais. Vue au dessus d\'Endoume (9401141357).jpg',
+          selite: 'Endoumen kattojen yli merelle vastavalossa: etualalla '
+            + 'porrastuvat vaaleat talot ja tiilikatot, ja keskellä '
+            + 'kohoaa tiilinen huvila tornimaisine päätyineen. Kattojen '
+            + 'takana kimaltaa lahti, ja sen keskellä seisoo Ifin linna '
+            + 'matalalla kalliosaarellaan. Kauimpana levittäytyvät '
+            + 'Frioulin saaret patoineen.',
+          lahde: 'Jeanne Menjoulet from Paris, France, Wikimedia Commons '
+            + '(CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Marseille Vallon des Auffes 10.jpg',
+          selite: 'Vallon des Auffesin poukama suoraan ylhäältä: kapean '
+            + 'lahden reunaan on nostettu tiivis kaari valkoisia '
+            + 'moottoriveneitä, ja niiden takana nousevat kalastajien '
+            + 'matalat talot vaaleanpunaisina, keltaisina ja '
+            + 'oransseina. Oikealla kohoaa paksu kivimuuri ja ylhäällä '
+            + 'kalkkikivijyrkänne; matala aurinko kimaltaa vedessä ja '
+            + 'jättää talojen välit varjoon.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'ruoka',
@@ -5832,6 +5874,49 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Sierra Nevada (Espanja)',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme suuntaa ja kolme hetkeä.
+       * Albaicínin katoilta kaakkoon Alhambraan ja Sierra Nevadaan,
+       * Alhambran puolelta luoteeseen valkoiseen rinteeseen, ja
+       * Alhambran muureilta länteen auringonlaskun jälkeen. Lisenssit,
+       * tekijät ja koot todennettu Commonsin API:sta, jokainen kuva
+       * katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Calles Granada 02.jpg',
+          selite: 'Albaicínin kattojen tasalta kaakkoon kesäpäivänä: '
+            + 'etualalla kaartuvat vanhat kattotiilet ja savupiippu, ja '
+            + 'niiden takana laskeutuu Darron laakson tiheä puusto. '
+            + 'Vastapäisellä harjanteella levittäytyy Alhambra '
+            + 'torneineen ja palatsien mataline kattoineen, ja '
+            + 'kauimpana kohoavat Sierra Nevadan harjat, joiden laella '
+            + 'on vielä lumilaikkuja.',
+          lahde: 'Felvalen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Blick auf Granada.jpg',
+          selite: 'Albaicínin rinne täyttää koko kuvan kevätpäivänä: '
+            + 'valkoisia taloja ja vaaleita tiilikattoja porrastuu '
+            + 'ylöspäin, ja niiden väleissä kasvaa tummia sypressejä ja '
+            + 'yksittäisiä palmuja. Rinteen laella erottuvat kaksi '
+            + 'kirkontornia, joista vasemmanpuoleinen on San Nicolásin '
+            + 'valkoinen kellotorni.',
+          lahde: 'Chrisi1964, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Night view from Alhambra de Granada, Andalousia Spain - Image Picture Photography (14691952077).jpg',
+          selite: 'Alhambran muurien sisältä länteen auringonlaskun '
+            + 'jälkeen: vasemmalla seisoo pyöreä vallitorni ja kaksi '
+            + 'sypressiä siluettina, oikealla iso nelikulmainen torni, '
+            + 'jonka valaisin värjää lämpimän keltaiseksi. Niiden '
+            + 'välissä laskeutuvat linnoituksen terassit ja kiviportaat, '
+            + 'ja alempana palavat Albaicínin katuvalot. Horisontissa '
+            + 'hehkuu vielä oranssi juova.',
+          lahde: 'Grand Parc - Bordeaux, France from France, Wikimedia '
+            + 'Commons (CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'musiikki',
@@ -5986,6 +6071,49 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on hakattu latinaksi ANONYMVS ja "kunniakkaimman '
             + 'Béla-kuninkaan notaari".',
           lahde: 'Miklós Ligeti, kuva Aisano, Wikimedia Commons (PD)',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme suuntaa ja kolme vuodenaikaa.
+       * Budan linnavuorelta itään joen yli Pestiin, Pestin rannalta
+       * länteen valaistuun linnaan, ja kattojen tasalta länteen Budan
+       * kukkuloille. Lisenssit, tekijät ja koot todennettu Commonsin
+       * API:sta, jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Budapest Panorama R01.jpg',
+          selite: 'Tonava Budan linnavuorelta kesäpäivänä: joki halkoo '
+            + 'kuvan poikittain, ja vastarannalla jatkuu Pestin '
+            + 'yhtenäinen kivijulkisivurivi. Vasemmalla kohoavat '
+            + 'parlamenttitalon punainen kupoli ja terävät tornit, '
+            + 'oikealla Pyhän Tapanin basilikan vihertävä kupoli, ja '
+            + 'oikeassa reunassa Ketjusilta ylittää veden. Etualalla '
+            + 'ovat Budan puiden latvat.',
+          lahde: 'Marc Ryckaert ( MJJR ), Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Budapest at dusk (31516129065).jpg',
+          selite: 'Pestin rantakatu sinisellä hetkellä marraskuussa: '
+            + 'vastarannalla loistaa valaistu Budan kuninkaanlinna '
+            + 'kupoleineen, ja sen oikealla puolella nousevat '
+            + 'Matiaskirkon terävä torni ja Kalastajanlinnakkeen vaaleat '
+            + 'tornit. Keskellä hehkuu Ketjusilta vihreänä. Etualalla '
+            + 'kaartuvat raitiotiekiskot ja rantatie, ja rannassa on '
+            + 'kiinni rivi retkilaivoja.',
+          lahde: 'Jorge Franganillo from Barcelona, Spain, Wikimedia '
+            + 'Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Rooftop view toward St. Stephen\'s Basilica and the Buda hills, Budapest (2025).jpg',
+          selite: 'Pestin kattojen yli länteen talvi-iltapäivänä: '
+            + 'etualalla on kattoterassi kaiteineen, ja sen takana '
+            + 'jatkuu korttelien sekalainen kattomaisema piippuineen. '
+            + 'Keskellä kohoavat Pyhän Tapanin basilikan kupoli ja '
+            + 'kellotorni matalan auringon kullassa, ja taustalla '
+            + 'siintävät Budan metsäiset kukkulat.',
+          lahde: 'Paul Colin Hennig firstdorsal.eu, Wikimedia Commons '
+            + '(CC BY-SA 4.0)',
         },
       ],
     },
@@ -8793,6 +8921,48 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Haggada',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme etäisyyttä samasta laaksosta.
+       * Itärinteeltä koko kaupunkiin, jokitasolta Miljackan rannalle
+       * ja katutasolta Vratnikin porttimuurille. Kuvat on valittu
+       * niin, ettei niissä ole sodan jälkiä, raunioita eikä
+       * hautausmaakenttiä — peli ei käsittele nykysotaa. Lisenssit,
+       * tekijät ja koot todennettu Commonsin API:sta, jokainen kuva
+       * katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Bosnia IMG 9302 sarajevo from east.JPG',
+          selite: 'Kaupunki idänpuoleiselta rinteeltä kesäpäivänä: '
+            + 'punakattoiset talot kiipeävät laakson rinteitä ylös niin '
+            + 'tiheästi, että katot peittävät koko etualan. Vasemmassa '
+            + 'reunassa nousee moskeijan kapea minareetti, keskellä '
+            + 'kohoaa uuden keskustan lasitorneja, ja laakso päättyy '
+            + 'metsäiseen vuorenharjanteeseen, joka häipyy utuun.',
+          lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Sarajevo Reflections.jpg',
+          selite: 'Miljacka-joki kaupungin itälaidalla toukokuussa: '
+            + 'vasemmalla seisoo vanha pelti- ja lautaverhoiltu talo '
+            + 'pylväiden varassa veden yllä, ja sen edestä kaartuu suuri '
+            + 'lehtipuu joen päälle. Vastarannan jyrkkä rinne on '
+            + 'vihreän peitossa, ja metsän seasta pilkottavat vaaleat '
+            + 'talot punaisine kattoineen.',
+          lahde: 'Jocelyn777 Love Europe, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Clouds over Vratnik Fortress, Sarajevo.jpg',
+          selite: 'Vratnikin vanha kaupunginmuuri katutasolta: oikealla '
+            + 'seisoo porttitorni, jonka jyrkkä paanukatto lepää '
+            + 'kivimuurin päällä ja jonka alta johtaa holvattu '
+            + 'porttiaukko. Muuri kaartuu vasemmalle nurmirinteen poikki, '
+            + 'etualalla laskeutuvat leveät kiviportaat, ja rinteen '
+            + 'yläpuolella nousevat talot ja minareetti tumman '
+            + 'ukkospilven alla.',
+          lahde: 'Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'urheilu',
@@ -8926,6 +9096,48 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valkoista patsasta ja edessä rivi vanhanmallisia katulyhtyjä.',
           lahde: 'Assedo, Wikimedia Commons (PD)',
           wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme kohtaa kaupunkia ilmasta —
+       * katedraali auringonlaskussa, keskustan ruutukaava aamulla ja
+       * rantaviiva merelle päin. Katutason kuvat jäivät pois, koska
+       * niissä kaikissa oli tunnistettavia ihmisiä. Kaikki kolme ovat
+       * rauhallisia kaupunkikuvia; peli ei käsittele nykysotaa eikä
+       * -politiikkaa. Lisenssit, tekijät ja koot todennettu Commonsin
+       * API:sta, jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Спасо-Преображенський кафедральний собор (Одеса) DJI 0084.jpg',
+          selite: 'Vanha keskusta ilmasta auringon laskiessa: keskellä '
+            + 'kohoaa Kristuksen kirkastumisen katedraali — korkea '
+            + 'vaalea kellotorni tummine teräväkärkisine kattoineen ja '
+            + 'kirkkosalin päällä rivi tummia kupoleita kultaisine '
+            + 'risteineen. Katedraalia ympäröi kivetty aukio ja tuuhea '
+            + 'puistokehä, ja sen takana matala ruutukaavainen kaupunki '
+            + 'jatkuu horisonttiin.',
+          lahde: 'Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Deribasivska-Street-aerial-1.jpg',
+          selite: 'Keskustan ruutukaava ilmasta aamulla: alareunasta '
+            + 'lähtee suora katu, jonka molemmin puolin on kolmi- ja '
+            + 'nelikerroksisia kivitaloja, ja sen vieressä levittäytyy '
+            + 'puistokadun tuuhea puukatos. Keskietäisyydellä erottuvat '
+            + 'puoliympyrän muotoinen aukio ja vaaleita klassistisia '
+            + 'julkisivuja; kauimpana kaupunki hämärtyy aamu-usvaan.',
+          lahde: 'Alexey M., Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mys-Fontan-aerial-2.jpg',
+          selite: 'Rantaviiva ilmasta kohti keskustaa kesäaamuna: '
+            + 'vasemmalla on turkoosinsininen meri, johon työntyy '
+            + 'peräkkäin kivisiä aallonmurtajia, ja rannassa on kapeita '
+            + 'hiekkakaistoja ja laitureita. Rinteessä nousevat huvilat '
+            + 'ja punakattoiset matalat talot, ja niiden takana alkaa '
+            + 'esikaupungin puutarhakortteleiden meri.',
+          lahde: 'Alexey M., Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -10291,6 +10503,45 @@ export const KULTTUURI_KATEGORIAT = {
             + 'haihdutetaan auringossa; jäljelle jää suola.',
           lahde: 'Tony Hisgett, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Ston',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme etäisyyttä. Srđ-vuorelta koko
+       * vanhaankaupunkiin ja Lokrumiin, kaupunginmuurilta kattojen
+       * tasalle, ja mereltä Gružin nykysatamaan — sama kaupunki
+       * kaukaa, läheltä ja työn puolelta. Lisenssit, tekijät ja koot
+       * todennettu Commonsin API:sta, jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Dubrovnik and Lokrum.jpg',
+          selite: 'Vanhakaupunki Srđ-vuorelta: etualalla on paljasta '
+            + 'valkoista karstikalliota ja kuivaa pensaikkoa, ja sen '
+            + 'takaa aukeaa muurien ympäröimä niemi punaisine '
+            + 'tiilikattoineen. Vanhankaupungin edustalla kelluu '
+            + 'metsäinen Lokrumin saari, ja sen takana levittäytyy avoin '
+            + 'Adrianmeri. Oikeassa reunassa erottuu köysiradan pylväs.',
+          lahde: 'Hibasi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '29.12.16 Dubrovnik Old City Walls 106 (31122279274).jpg',
+          selite: 'Kattojen tasalta kaupunginmuurilta katsottuna: '
+            + 'etualalla laskeutuu vinoja tiilikattoja savupiippuineen '
+            + 'ja kuivuneine köynnöspergoloineen, keskellä nousevat '
+            + 'kellotorni ja pyöreä kupoli ja oikealla suuri harmaa '
+            + 'kivikirkko. Kattojen takaa avautuu meri ja metsäinen '
+            + 'Lokrum matalassa joulukuun auringossa.',
+          lahde: 'donald judge, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: '2011 Dubrownik, port (09).jpg',
+          selite: 'Gružin satama muurien ulkopuolella: laiturissa on '
+            + 'valkoinen matkustajalautta ja sen takana toinen alus, '
+            + 'rannassa terminaalin matalat rakennukset. Takana kohoaa '
+            + 'paljas kivinen rinne, jota pitkin kulkee moottoritien '
+            + 'silta, ja oikealla nousee riippusillan valkoinen pyloni '
+            + 'vaijereineen. Etualan tyynellä vedellä ui lokkeja.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
