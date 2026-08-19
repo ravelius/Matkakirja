@@ -15559,6 +15559,356 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  siinai: [
+    {
+      id: 'kaupunki',
+      nimi: 'Siinai',
+      johdanto: 'Kolmion muotoinen niemimaa Afrikan ja Aasian välissä: '
+        + 'pohjoisessa aavikkoa, etelässä punaista graniittia. Vuoren '
+        + 'juurella on toiminut luostari 1500 vuotta, ja sen kirjasto ei '
+        + 'ole sulkenut oviaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Katharinenkloster Sinai BW 2.jpg',
+          selite: 'Pyhän Katariinan luostari graniittirinteen juurella: '
+            + 'paksut muurit ympäröivät tiivistä rakennusryhmää, jonka '
+            + 'keskeltä nousevat kirkon kellotorni ja moskeijan '
+            + 'minareetti.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Arrecife de coral, parque nacional Ras Muhammad, Egipto, 2022-03-26, DD 170.jpg',
+          selite: 'Koralliriutta Ras Muhammadin kansallispuistossa: '
+            + 'haarautuvia ja pallomaisia koralleja rinnakkain, ja niiden '
+            + 'yllä ui parvi sinisiä ja keltaisia kaloja.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Saint Catherine Monastery , Saint Catherine , south Sinai, Egypt.jpg',
+          selite: 'Luostari ylhäältä nähtynä: muuri kiertää koko '
+            + 'rakennusryhmän, sypressit nousevat pihalta, ja ympärillä on '
+            + 'pelkkää louhikkoa ja graniittirinnettä.',
+          lahde: 'Ibrahimelbatout, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Mount Moses.jpg',
+          selite: 'Auringonnousu Siinainvuoren huipulta: graniittiharjanteet '
+            + 'jatkuvat kerros kerrokselta horisonttiin asti, ja aamun valo '
+            + 'värjää ne punaisiksi ja violeteiksi.',
+          lahde: 'Mohammed Moussa, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Katharinenkloster Sinai BW 4.jpg',
+          selite: 'Luostari laakson pohjalla koko leveydeltään: muurattu '
+            + 'kortteli, sen vieressä puutarha ja sypressit, ja takana '
+            + 'nousee paljas vuorenrinne.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Sinai Coloured Canyon - panoramio.jpg',
+          selite: 'Kanjonin pohja ylhäältä: kapea hiekkauoma kiemurtelee '
+            + 'kerroksellisten hiekkakiviseinien välissä, ja rinteillä '
+            + 'näkyy irronnutta kiveä.',
+          lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kirjasto, joka ei ole sulkenut oviaan',
+          tiedosto: 'Codex Sinaiticus.jpg',
+          teksti: 'Pyhän Katariinan luostari rakennettiin vuosina 548–565, '
+            + 'ja se on maailman vanhin yhtäjaksoisesti asuttu kristillinen '
+            + 'luostari. Sen kirjasto perustettiin samoihin aikoihin, ja '
+            + 'Guinnessin ennätyskirja tunnustaa sen maailman vanhimmaksi '
+            + 'yhä toimivaksi kirjastoksi. Varhaisten koodeksien ja '
+            + 'käsikirjoitusten määrässä kokoelma on maailman toiseksi '
+            + 'suurin — vain Vatikaanin kirjastossa on enemmän. Kuuluisin '
+            + 'löytö on 300-luvulla kirjoitettu Codex Sinaiticus, jonka '
+            + 'lehdet ovat nykyään hajallaan neljässä maassa.',
+          selite: 'Codex Sinaiticus avattuna vitriinissä: kaksi '
+            + 'pergamenttisivua, joilla teksti on ladottu neljään kapeaan '
+            + 'palstaan kreikkalaisin suuraakkosin ilman sanavälejä.',
+          lahde: 'PotatoCow25, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kolmetuhatta seitsemänsataaviisikymmentä askelmaa',
+          tiedosto: 'Stone pathway to the summit of Mount Sinai. Coloured lithogr Wellcome V0049448.jpg',
+          teksti: 'Siinainvuoren huipulle vie kaksi reittiä. Loivempi on '
+            + 'kamelipolku, jyrkempi kulkee luostarin takana olevassa '
+            + 'rotkossa: se on hakattu kiveen 3 750 askelmaksi, joita '
+            + 'kutsutaan katumuksen portaiksi. Huipulla on kreikkalais- '
+            + 'ortodoksinen kappeli, joka rakennettiin vuonna 1934 '
+            + '1500-luvulta peräisin olevan kirkon raunioille, sekä '
+            + 'moskeija, joka on yhä käytössä. Vuori itse on '
+            + 'kaksituhatta kaksisataakahdeksankymmentäviisi metriä korkea '
+            + 'ja koostuu emäksisestä graniitista.',
+          selite: 'Vuoden 1839 litografia nousureitistä: kiveen hakatut '
+            + 'portaat kiemurtelevat rotkossa ylöspäin, ja portaiden '
+            + 'päässä näkyy kiviholvin muotoinen portti.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Aakkosten syntysija',
+          tiedosto: 'Dry Country of Turquoise.jpeg',
+          teksti: 'Talvella 1904–1905 arkeologipariskunta Hilda ja Flinders '
+            + 'Petrie löysi Serabit el-Khadimin turkoosikaivosten läheltä '
+            + 'joukon lyhyitä kirjoituksia, jotka eivät olleet hieroglyfejä '
+            + 'eivätkä mitään tunnettua kirjoitusjärjestelmää. Merkkejä '
+            + 'tunnetaan nykyään kolmisenkymmentä tai neljäkymmentä. Ne on '
+            + 'lainattu hieroglyfeistä, mutta niillä merkitään äänteitä '
+            + 'eikä sanoja — juuri se on aakkoskirjoituksen periaate. '
+            + 'Ajoituksesta kiistellään: varhainen arvio on noin 1850 eKr. '
+            + 'ja myöhäinen noin 1550 eKr.',
+          selite: 'Satelliittikuva turkoosin louhinta-alueesta: tummat '
+            + 'vuoret ja niiden uomaverkosto erottuvat vaaleasta '
+            + 'hiekkatasangosta, joka reunustaa niitä pohjoisessa.',
+          lahde: 'NASA Earth Observatory, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kanava, joka teki niemimaasta Aasiaa',
+          tiedosto: 'Greek Orthodox Chapel at top of Mt Sinai.jpg',
+          teksti: 'Vuonna 1859 alkoi työ, joka muutti Siinain aseman '
+            + 'kartalla. Ranskalaisen Ferdinand de Lessepsin yhtiö alkoi '
+            + 'kaivaa kanavaa Välimereltä Punaisellemerelle, ja urakka '
+            + 'kesti kymmenen vuotta. Osa työstä tehtiin pakkotyönä, kunnes '
+            + 'se lopetettiin kesken hankkeen. Kanava avattiin '
+            + '17. marraskuuta 1869 — neljä vuotta ennen isoisän matkaa — '
+            + 'ja se on 193 kilometriä pitkä. Sen jälkeen Siinai on ollut '
+            + 'käytännössä oma saarensa: kanava vetää rajan Afrikan ja '
+            + 'Aasian väliin, ja Siinai jää Aasian puolelle.',
+          selite: 'Huipun kivikappeli, joka rakennettiin vuonna 1934: '
+            + 'karkeaa punertavaa graniittia, jyrkkä katto ja yksi ovi. '
+            + 'Takana avautuu vuoristo horisonttiin.',
+          lahde: 'Mcstafford, Wikimedia Commons (public domain)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Formación de coral, parque nacional Ras Muhammad, Egipto, 2022-03-26, DD 02.jpg',
+          selite: 'Korallimuodostelma Ras Muhammadissa: pystysuora '
+            + 'koralliseinämä nousee hiekkapohjalta, ja sen ympärillä '
+            + 'vesi vaihtuu vaaleasta syvään siniseen.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Siinai on kahta maata samassa kolmiossa. Etelässä on '
+          + 'graniittivuoristoa, jonka huipuilla sataa talvella lunta ja '
+          + 'jossa yöt ovat kylmiä ympäri vuoden; rannikolla vesi on '
+          + 'lämmintä ja täynnä koralliriuttoja. Näiden väliin mahtuu '
+          + 'aavikkoa, keidaslaaksoja ja kanjoneita. Matkailijan kannalta '
+          + 'se tarkoittaa, että sama päivä voi sisältää sekä '
+          + 'sukelluspuvun että villapaidan.',
+        artikkeli: {
+          nimi: 'Matkailijan Siinai',
+          taitto: 'opas',
+          teksti: 'Niemimaa, jolla vuoren huipulla palellaan ja '
+            + 'rannikolla sukelletaan samana päivänä.',
+          nosto: 'Luostarin kirjasto on toiminut yhtäjaksoisesti '
+            + '1500 vuotta — pidempään kuin mikään muu kirjasto '
+            + 'maailmassa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Siinai on kolmion muotoinen niemimaa, jonka '
+                + 'pohjoisreuna on Välimerellä ja kärki Punaisenmeren '
+                + 'suulla. Sitä reunustaa lännessä Suezinlahti ja idässä '
+                + 'Aqabanlahti, ja Suezin kanava erottaa sen muusta '
+                + 'Egyptistä. Etäisyydet ovat pitkiä ja maasto karua: '
+                + 'etelän vuoristoon noustaan rannikolta, ja Pyhän '
+                + 'Katariinan kylä on lähes puolentoista kilometrin '
+                + 'korkeudessa. Matkailijan reitti kulkee tavallisesti '
+                + 'rannikkokaupunkien kautta sisämaahan, ja luostari on '
+                + 'niemimaan tunnetuin yksittäinen kohde.',
+              kuva: {
+                tiedosto: 'A full view of Saint Catherine\'s Monastery.jpg',
+                selite: 'Luostari koko laajuudessaan laakson pohjalla: '
+                  + 'muurit, kirkon katto, puutarha ja sypressit, ja '
+                  + 'ympärillä pelkkää kiveä.',
+                lahde: 'Dr. Ondřej Havelka (cestovatel), Wikimedia Commons '
+                  + '(CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Turkoosin portaat',
+              teksti: 'Egyptiläiset tunsivat Siinain vuoriston '
+                + 'kaivosmaana, ja turkoosia sekä kuparia louhittiin '
+                + 'täällä kausiluontoisesti tuhansien vuosien ajan. '
+                + 'Päälouhoksia oli kaksi, ja niistä Serabit el-Khadimin '
+                + 'ylängöllä kohoaa Hathor-jumalattaren temppeli. Se '
+                + 'perustettiin keskimmäisellä kuningaskunnalla faarao '
+                + 'Senusret I:n aikana ja rakennettiin osin uudelleen '
+                + 'uuden kuningaskunnan kaudella. Hathoria palvottiin '
+                + 'siellä autiomaan suojelijana, ja paikallisesti häntä '
+                + 'kutsuttiin turkoosin valtiattareksi. Samoilta '
+                + 'kallioilta löytyivät myös varhaisimmat '
+                + 'aakkoskirjoituksen jäljet.',
+              kuva: {
+                tiedosto: 'Serabit el-Khadim, Egypt (ASTER).jpg',
+                selite: 'Satelliittikuva Serabit el-Khadimin seudulta. '
+                  + 'Punainen nuoli on kuvan julkaisijan lisäämä ja '
+                  + 'osoittaa kaivosalueen paikan tummien vuorten ja '
+                  + 'vaalean hiekkatasangon rajalla.',
+                lahde: 'NASA/METI/AIST/Japan Space Systems, Wikimedia '
+                  + 'Commons (public domain)',
+              },
+            },
+            {
+              otsikko: 'Keidas graniitin keskellä',
+              teksti: 'Siinain sisämaa ei ole pelkkää kiveä. '
+                + 'Vuoristolaaksojen pohjalla kulkee uomia, joihin vesi '
+                + 'kerääntyy, ja niihin on syntynyt keitaita: '
+                + 'palmumetsiköitä ja ruovikoita keskellä paljasta '
+                + 'vuoristoa. Suurin ja tunnetuin niistä on Wadi Feiran, '
+                + 'joka on ollut matkalaisten pysähdyspaikka niin kauan '
+                + 'kuin reitti on ollut olemassa. Laakson yllä kohoaa '
+                + 'Jebel Serbal, ja sen sahalaitainen harjanne on '
+                + '1800-luvun matkakuvituksissa yhtä usein toistuva aihe '
+                + 'kuin itse Siinainvuori.',
+              kuva: {
+                tiedosto: 'WEBSTER(1830) 2.210 WADY FARAN.jpg',
+                selite: 'Vuoden 1830 kaiverrus Wadi Feiranista: '
+                  + 'palmumetsikkö laakson pohjalla, ratsastajia '
+                  + 'kameleineen keskellä, ja taustalla sahalaitainen '
+                  + 'vuoristo.',
+                lahde: 'W. H. Newnham (piirros), J. Clark (kaiverrus), '
+                  + 'Wikimedia Commons (public domain)',
+              },
+            },
+            {
+              otsikko: 'Kanjoni, jonka seinät ovat värillisiä',
+              teksti: 'Siinain hiekkakivialueilla vesi on leikannut '
+                + 'kapeita rotkoja, joiden seinämissä kivikerrokset '
+                + 'näkyvät raitoina. Värit vaihtelevat keltaisesta ja '
+                + 'valkoisesta punaiseen ja violettiin sen mukaan, mitä '
+                + 'mineraaleja kussakin kerroksessa on. Rotkot ovat '
+                + 'kuivia lähes koko vuoden, mutta ne ovat vesiuomia: '
+                + 'harvinaisen sadekuuron jälkeen niissä voi virrata '
+                + 'vettä nopeasti ja vaarallisesti. Pohjalla kasvaa '
+                + 'yksittäisiä pensaita, jotka pärjäävät sillä vedellä, '
+                + 'joka jää hiekkaan.',
+              kuva: {
+                tiedosto: 'Sinai Coloured Canyon - panoramio (7).jpg',
+                selite: 'Kanjonin seinämä läheltä: hiekkakivi on '
+                  + 'kerroksittain punaista, oranssia ja vaaleaa, ja '
+                  + 'kalliosta kasvaa yksi vihreä pensas.',
+                lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Siinailla ei ole yhtä säätä vaan kaksi. Etelän '
+                + 'vuoristossa ollaan yli tuhannen viidensadan metrin '
+                + 'korkeudessa, ja siellä talvi on kylmä: huipuilla sataa '
+                + 'lunta, ja yöt ovat viileitä myös kesällä. Rannikolla '
+                + 'sen sijaan on lämmintä ympäri vuoden, ja Punaisenmeren '
+                + 'vesi pysyy sukelluskelpoisena talvellakin. Sama päivä '
+                + 'voi siis sisältää molemmat. Kesän keskipäivä on '
+                + 'aavikolla ja rannikolla raskas, joten vuoristonousut '
+                + 'tehdään perinteisesti yöllä — huipulla ollaan '
+                + 'auringonnousun aikaan.',
+              kuva: {
+                tiedosto: 'Ras mohammed coral reef landscape.jpg',
+                selite: 'Ras Muhammadin rannikko: karu kalkkikiviniemi '
+                  + 'työntyy mereen, ja riutta näkyy vaaleana vyöhykkeenä '
+                  + 'ennen kuin pohja putoaa tummansiniseen syvyyteen.',
+                lahde: 'Sovernigo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'maasto',
+      nimi: 'Maasto',
+      johdanto: 'Punaista graniittia, kallioon louhittuja kaivoksia ja '
+        + 'koralliriuttoja saman niemimaan sisällä: Siinain maasto vaihtuu '
+        + 'kahdessakymmenessä kilometrissä vuorilta meren pohjaan.',
+      tehtava: {
+        kysymys: 'Mikä on Egyptin korkein kohta?',
+        vaihtoehdot: [
+          'Siinainvuori',
+          'Katariinanvuori',
+          'Jebel Serbal',
+          'Kheopsin pyramidi',
+        ],
+        oikea: 1,
+        fakta: 'Se on aivan Siinainvuoren vieressä, ja sen korkeudeksi '
+          + 'annetaan lähteestä riippuen 2 629 tai 2 653 metriä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaksi vuorta vierekkäin, eri korkuisina',
+          tiedosto: 'Panorama Mount Sinai Northeast to South.jpg',
+          teksti: 'Siinainvuori on 2 285 metriä korkea, ja se koostuu '
+            + 'emäksisestä graniitista, joka on työntynyt vanhempien '
+            + 'kivilajien läpi. Se ei kuitenkaan ole niemimaan korkein '
+            + 'kohta: aivan vieressä nousee Katariinanvuori, joka on koko '
+            + 'Egyptin korkein. Sen korkeudesta lähteet ovat eri mieltä — '
+            + 'Siinainvuoren artikkeli antaa 2 629 metriä ja '
+            + 'Katariinanvuoren oma tietolaatikko 2 653 metriä. Ero on '
+            + 'pieni mutta todellinen, ja se on hyvä muistutus siitä, '
+            + 'ettei korkeuslukema ole aina yksiselitteinen.',
+          selite: 'Vuoristo Siinainvuoren huipulta katsottuna: harjanteet '
+            + 'jatkuvat kerroksittain horisonttiin, ja etualalla on '
+            + 'huipun kappelin kivijalka.',
+          lahde: 'Florian Prischl, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Riutta alkaa siitä mihin aavikko loppuu',
+          tiedosto: 'Ras Mohammed coral reefs.jpg',
+          teksti: 'Siinain eteläkärjessä autiomaa ja koralliriutta ovat '
+            + 'muutaman metrin päässä toisistaan. Ras Muhammadin '
+            + 'kansallispuistossa kalkkikiviniemi päättyy jyrkkään '
+            + 'reunaan, ja sen alta alkaa riutta, joka laskeutuu nopeasti '
+            + 'syvyyteen. Punaisenmeren riutat ovat poikkeuksellisen '
+            + 'lajirikkaita, koska vesi on lämmintä ja kirkasta eikä '
+            + 'jokia tuo siihen sameutta — samasta syystä, josta rannikko '
+            + 'on autiomaata. Riutan vieressä ei siis ole viljelysmaata '
+            + 'vaan kalliota ja hiekkaa.',
+          selite: 'Matala riutta ylhäältä: kymmeniä eri korallilajeja '
+            + 'vieri vieressä haarukka-, pallo- ja pöytämuodoissa, ja '
+            + 'niiden yllä ui pieniä kaloja.',
+          lahde: 'Sovernigo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kalat, jotka näkyvät kauas',
+          tiedosto: 'Pez ángel real (Pygoplites diacanthus), parque nacional Ras Muhammad, Egipto, 2022-03-26, DD 155.jpg',
+          teksti: 'Riutan kalat ovat värikkäitä syystä. Kirkkaassa ja '
+            + 'matalassa vedessä valo kantaa pitkälle, ja voimakkaat '
+            + 'kuviot toimivat sekä tunnistusmerkkinä lajitovereille että '
+            + 'varoituksena. Keisarikala on yksi Punaisenmeren '
+            + 'tunnetuimmista: sillä on keltainen pohjaväri, pystysuorat '
+            + 'siniraidat ja tummansininen selkäevä. Riutalla eläminen '
+            + 'vaatii myös suojaa, ja korallien haarojen väliin mahtuu '
+            + 'piiloon — siksi kalat pysyttelevät lähellä pohjaa eivätkä '
+            + 'avoveden puolella.',
+          selite: 'Keisarikala sivulta: keltainen ruumis, jossa kulkee '
+            + 'kymmenkunta sinireunaista pystyraitaa, tummansininen '
+            + 'selkäevä ja kirkkaankeltainen pyrstö.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Rotko, joka on kuiva mutta ei aina',
+          tiedosto: 'Sinai Coloured Canyon - panoramio (3).jpg',
+          teksti: 'Siinain kanjonit ovat vesiuomia ilman vettä. Ne ovat '
+            + 'syntyneet hiekkakiveen vuosituhansien aikana, kun '
+            + 'harvinaiset mutta rajut sadekuurot ovat huuhtoneet '
+            + 'pehmeämmät kerrokset pois. Seinämien raidat kertovat '
+            + 'kerrostumien järjestyksen, ja värit tulevat rautayhdisteistä '
+            + 'ja muista mineraaleista. Pohjalla oleva hiekka on sitä, mitä '
+            + 'seinistä on irronnut. Kuivuus on kuitenkin vain tavallinen '
+            + 'tila eikä pysyvä: kuuron aikana kapea rotko täyttyy '
+            + 'nopeasti, ja juuri se tekee niistä yhä syvempiä.',
+          selite: 'Kanjonin pohja: hiekkainen käytävä kaartuu kahden '
+            + 'korkean hiekkakiviseinämän välissä, ja pohjalla kasvaa '
+            + 'yksinäinen pensas.',
+          lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+    },
+  ],
   tromssa: [
     {
       id: 'kaupunki',

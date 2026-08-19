@@ -1384,4 +1384,31 @@ export const SAATIEDOT = {
       + 'kolmeensataan millimetriin, ja talviöinä lämpötila laskee neljään '
       + 'asteeseen.',
   },
+  /*
+   * SIINAI (Opus 19.8.2026). Mittauspiste on Pyhän Katariinan kylä
+   * luostarin vieressä (28,5644 / 33,9525, korkeus n. 1 586 m), koska
+   * se on ALUEEN SISÄMAAN ilmasto — ja se on aluelehden aihe. Rannikko
+   * on aivan toisenlainen: Punaisenmeren rannalla on lämmintä ympäri
+   * vuoden eikä pakkasta tule. Tämä ero on kerrottu myös lehden
+   * matkaoppaassa, jottei lukija oleta rivin kuvaavan koko niemimaata.
+   *
+   * Menetelmä on paketin oma: Open-Meteon arkisto (ERA5), jakso
+   * 1991–2020. Vuosisade on vain 46 millimetriä, mikä on paketin
+   * kuivin rivi.
+   */
+  siinai: {
+    lat: 28.5644,
+    lon: 33.9525,
+    keskilampo: [7.5, 9, 12.5, 17.1, 21.2, 23.9, 25.2, 25.2, 23.3, 19.3, 13.5, 9.3],
+    ylin: [12, 14, 18, 23, 27, 30, 31, 32, 30, 25, 19, 14],
+    alin: [3, 4, 7, 11, 15, 17, 19, 19, 17, 14, 8, 4],
+    sade: [8, 6, 9, 4, 5, 0, 0, 0, 0, 7, 4, 3],
+    luonnehdinta: 'Siinain vuoristossa sataa vuodessa neljäkymmentäkuusi '
+      + 'millimetriä — vähemmän kuin missään muualla tässä paketissa. '
+      + 'Kesäkuusta lokakuuhun normaali on nolla. Korkeus pitää lämmöt '
+      + 'kurissa: heinä- ja elokuussa keskilämpö on kaksikymmentäviisi '
+      + 'astetta, eli vähemmän kuin rannikolla, ja tammikuussa vajaat '
+      + 'kahdeksan. Yöt ovat kylmiä ympäri vuoden, ja talvella huipuilla '
+      + 'sataa lunta.',
+  },
 };
