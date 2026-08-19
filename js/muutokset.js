@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 928, teksti: 'Moskova, Pietari, Tromssa ja Lappi — Eurooppa valmis' },
   { v: 927, teksti: 'Alpit, Kreeta ja Sisilia: Matkailijalle-osiot' },
   { v: 926, teksti: 'Odessa, Kiova ja Islanti: Matkailijalle-osiot' },
   { v: 925, teksti: 'Bukarest, Dubrovnik ja Sarajevo: Matkailijalle' },
