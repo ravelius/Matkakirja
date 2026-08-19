@@ -14064,6 +14064,425 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * PETRA (Opus 19.8.2026). Ensimmäinen alusta asti tehty lehti:
+   * kohteella ei ollut säätietoja, kohdekarttaa, juttuja eikä
+   * kategorioita ennen tätä. Kaikki faktat on tarkistettu suoraan
+   * en-Wikipedian artikkeleista Petra, Siq, Al-Khazneh, Great Temple
+   * (Petra), Petra papyri, Byzantine Church (Petra), Little Petra,
+   * Qasr al-Bint ja Wadi Musa (haettu 19.8.2026).
+   *
+   * Sään luvut ovat paketin omalta riviltä (saatiedot.js: petra), ja
+   * ne poikkeavat Wikipedian mainitsemasta 193 millimetristä. Ero on
+   * mittapisteen ero eikä ristiriita: Wikipedian luku on Wadi Musan
+   * kylän lukema tuhannen metrin korkeudelta, paketin rivi on
+   * ERA5-ruutu itse raunioalueen kohdalta. Oppaassa puhutaan siksi
+   * paketin luvuista eikä kummastakaan tarkkana totuutena.
+   */
+  petra: [
+    {
+      id: 'kaupunki',
+      nimi: 'Petra',
+      johdanto: 'Kaupunkia ei rakennettu vaan veistettiin. Nabatealaiset '
+        + 'louhivat hautansa ja temppelinsä suoraan hiekkakiveen, keräsivät '
+        + 'jokaisen sadekuuron talteen — ja katosivat sitten lännen '
+        + 'kartoilta kuudeksitoista vuosisadaksi.',
+      kansikuvat: [
+        {
+          tiedosto: 'Al-Khazneh (Treasury) Petra.JPG',
+          selite: 'Al-Khazneh eli Aarrekammio alhaalta katsottuna. '
+            + 'Kaksikerroksinen julkisivu pylväineen ja päätykolmioineen '
+            + 'on louhittu suoraan kallioseinään, ja ylätasolla seisoo '
+            + 'pyöreä pylvästemppeli uurna huipullaan.',
+          lahde: 'Kfoulk, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'The Monastery, Petra, Jordan8.jpg',
+          selite: 'Ad Deir, Petran suurin monumentti, kohoaa vuoren '
+            + 'kylkeen louhittuna. Oviaukon kokoon nähden julkisivu on '
+            + 'valtava, ja sen yläosassa toistuu sama pyöreä '
+            + 'pylvästemppeli kuin Aarrekammiossa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'THE ROYAL TOMBS by Strzelecki.JPG',
+          selite: 'Kuninkaanhautojen rivistö laakson pohjoisreunassa. '
+            + 'Julkisivut on hakattu yhtenäiseen kalliojyrkänteeseen '
+            + 'vierekkäin, ja etualan aavikossa kukkii keväinen '
+            + 'punainen kasvusto.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kaksi Siqiä ja yksi laakso. Järjestys on
+       * matkailijan oma järjestys — rotkoon sisään, ulos laaksoon ja
+       * takaisin rotkon varjoon — eikä sattuma.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Petra Siq, entrance to the ancient Nabatean city of Petra, Jordan.jpg',
+          selite: 'Siqin viimeinen mutka: kapean raon takaa näkyy pala '
+            + 'Aarrekammion julkisivua auringossa, kun rotko itse on '
+            + 'varjossa.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'City center and the so called colonnaded street, upper view. Petra.jpg',
+          selite: 'Laakson pohja ylhäältä: pylväskatu kulkee kuvan halki '
+            + 'suorana viivana, sen vasemmalla puolella näkyy '
+            + 'kaivausalueiden pylväsrivi ja ympärillä polkuja, jotka '
+            + 'haarautuvat joka suuntaan kallioihin.',
+          lahde: 'Qais Tweissi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Petra, Siq, Canyon, Jordan.jpg',
+          selite: 'Rotko vastavalossa. Etualan seinämät ovat lähes '
+            + 'mustia, ja kaukana hehkuu valaistu kalliopinta, jonka '
+            + 'edessä kulkijat näkyvät pieninä siluetteina.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kapea rotko on ainoa portti kaupunkiin',
+          tiedosto: 'Petra Siq 06.JPG',
+          teksti: 'Siq on runsaan kilometrin mittainen rotko, joka on '
+            + 'kapeimmillaan vain noin kolme metriä leveä, kun seinät '
+            + 'kohoavat yhdeksästäkymmenestä lähes kahteensataan '
+            + 'metriin. Toisin kuin useimmat kanjonit se ei ole veden '
+            + 'kaivama vaan luonnollinen murros, jonka maankuoren liike '
+            + 'halkaisi ja jonka vesi vasta myöhemmin hioi sileäksi. '
+            + 'Seinissä on votiivikoloja pyhille kivikuville, ja kun '
+            + 'tietä madallettiin vuonna 1998, esiin tuli kaksi lähes '
+            + 'kaksinkertaisessa koossa veistettyä kauppiasta, kumpikin '
+            + 'taluttamassa kahta kamelia. Rotkon suulla ollut '
+            + 'holvikaari romahti maanjäristyksessä 1896.',
+          selite: 'Siqin korkein kohta: pystysuorat seinämät kaartuvat '
+            + 'molemmin puolin ja jättävät väliinsä kapean käytävän, '
+            + 'jonka pohjalla kulkijat ovat pieniä.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Petra',
+        },
+        {
+          otsikko: 'Aarrekammion uurna on umpinaista kiveä',
+          tiedosto: 'Al-Khazneh 2, Petra, Jordan.jpg',
+          teksti: 'Al-Khazneh louhittiin 100-luvun alussa jKr. kuningas '
+            + 'Aretas IV:n aikana hautamonumentiksi ja kryptaksi. '
+            + 'Julkisivu on 37 metriä korkea ja 24 leveä, ja se lainaa '
+            + 'muotonsa Aleksandrian hellenistiseltä arkkitehtuurilta: '
+            + 'huipulla on neljä kotkaa, ylätasolla tanssivia '
+            + 'amatsoneja kaksoiskirvein ja oviaukon vieressä '
+            + 'Kastorin ja Polluksin patsaat. Nimi tarkoittaa '
+            + 'aarrekammiota, ja se syntyi tarinasta, jonka mukaan '
+            + 'toisen kerroksen koristeuurnassa olisi faaraon aarre. '
+            + 'Uurna on täyttä hiekkakiveä, mutta siinä näkyy yhä '
+            + 'luodinjälkiä niiltä, jotka uskoivat tarinan.',
+          selite: 'Aarrekammion yläosa lähikuvassa: keskellä pyöreä '
+            + 'pylvästemppeli uurnineen, sen molemmin puolin '
+            + 'katkaistut päätykolmiot ja seinäsyvennyksissä kuluneita '
+            + 'ihmishahmoja.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Petra',
+        },
+        {
+          otsikko: 'Länsi löysi kaupungin vasta 1812',
+          tiedosto: 'Petra March 8th 1839 - David Roberts. LCCN2002717542.jpg',
+          teksti: 'Petran sijainti oli lännessä tuntematon keskiajalta '
+            + 'aina vuoteen 1812, jolloin sveitsiläinen Johann Ludwig '
+            + 'Burckhardt tuli katsomaan, mitä beduiinit tarkoittivat '
+            + 'kuolleella kaupungilla. Hän puhui sujuvaa arabiaa ja oli '
+            + 'matkalla tutkimaan Niger-jokea, kun kuuli tarinat '
+            + 'raunioista, joiden lähellä on profeetta Aaronin hauta. '
+            + 'Kaksikymmentäseitsemän vuotta myöhemmin skotlantilainen '
+            + 'David Roberts piirsi paikan, ja hänen litografiansa '
+            + 'veivät Petran eurooppalaisiin olohuoneisiin. Vuonna 1845 '
+            + 'John William Burgon voitti runollaan Oxfordin '
+            + 'Newdigate-palkinnon ja antoi kaupungille nimen, joka on '
+            + 'jäänyt: ruusunpunainen kaupunki, puoliksi yhtä vanha '
+            + 'kuin aika.',
+          selite: 'David Robertsin litografia 8. maaliskuuta 1839. '
+            + 'Kuninkaanhautojen julkisivut kohoavat kallioseinässä, ja '
+            + 'niiden edessä laaksossa kulkee kamelisaattue.',
+          lahde: 'David Roberts ja Louis Haghe, Wikimedia Commons (PD)',
+          wiki: 'Petra',
+        },
+        {
+          otsikko: 'Kaksikymmentätuhatta asukasta keskellä aavikkoa',
+          tiedosto: 'Roman Theatre Petra.jpg',
+          teksti: 'Nabatealaiset olivat arabialainen kansa, joka '
+            + 'asettui näille vuorille ja teki Petrasta '
+            + 'kuningaskuntansa pääkaupungin. Rikkaus tuli siitä, että '
+            + 'he hallitsivat suitsuke- ja mausteteitä eteläisestä '
+            + 'Arabiasta Välimerelle. Kukoistuskaudellaan 100-luvulla '
+            + 'jKr. kaupungissa arvioidaan asuneen noin '
+            + 'kaksikymmentätuhatta ihmistä, ja samalta ajalta on myös '
+            + 'Al-Khazneh. Kokoluokan näkee teatterista: se louhittiin '
+            + 'rinteeseen niin, että katsomosta näkyi mahdollisimman '
+            + 'monta hautaa, ja siihen mahtui arviolta 8 500 katsojaa. '
+            + 'Rakennustyössä leikattiin useiden vanhempien hautojen '
+            + 'läpi. Rooma liitti kuningaskunnan valtakuntaansa vuonna '
+            + '106 jKr.',
+          selite: 'Teatterin katsomo kokonaan kalliosta louhittuna. '
+            + 'Istuinrivit kaartuvat puoliympyräksi, ja niiden '
+            + 'yläpuolella seinässä ammottavat aiempien hautakammioiden '
+            + 'suuaukot.',
+          lahde: 'Pieter van Eekeren, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Petra',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Petra View from High Place of Sacrifice 1935.jpg',
+          selite: 'Näkymä uhripaikalta laaksoon: kalliorinteessä on '
+            + 'hautajulkisivuja päällekkäisinä kerroksina, ja alhaalla '
+            + 'kiemurtelee vaalea polku kaupungin keskustaan.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Petraan ei ajeta vaan kävellään. Portti on Wadi Musan '
+          + 'kaupunki, ja sieltä matka jatkuu rotkoa pitkin laaksoon, '
+          + 'jonka läpi kertyy helposti kymmenen kilometriä päivässä. '
+          + 'Alue on laaja — muinaisjäännösalueen pinta-alaksi '
+          + 'ilmoitetaan 264 neliökilometriä — mutta tunnetut kohteet '
+          + 'ovat yhden reitin varrella. Kesällä kannattaa lähteä '
+          + 'aikaisin: heinäkuun keskilämpö on yli kaksikymmentäkuusi '
+          + 'astetta, ja varjoa on vain rotkossa.',
+        artikkeli: {
+          nimi: 'Matkailijan Petra',
+          taitto: 'opas',
+          teksti: 'Rotkosta laaksoon ja portaita ylös: Petra on kävelyä '
+            + 'aamusta iltaan.',
+          nosto: 'Mooseksen lähde on kolme kilometriä raunioista — ja '
+            + 'nabatealaiset johtivat sen vedet kanavia myöten '
+            + 'kaupunkiin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Petran porttikaupunki on Wadi Musa, joka on vain '
+                + '3,5 kilometrin päässä muinaisjäännöksestä Maʿanin '
+                + 'maakunnassa Etelä-Jordaniassa. Nimi tarkoittaa '
+                + 'arabiaksi Mooseksen laaksoa, ja perimätiedon mukaan '
+                + 'Mooses löi täällä kalliosta vettä seuralaisilleen '
+                + 'paikassa, jota kutsutaan Ain Musaksi eli Mooseksen '
+                + 'lähteeksi. Lähde ei ole pelkkä tarina vaan myös '
+                + 'kaupungin selitys: nabatealaiset rakensivat kanavat, '
+                + 'jotka kuljettivat sen veden Petraan asti. Vuoden '
+                + '2009 laskennassa Wadi Musassa oli 17 085 asukasta, '
+                + 'ja kaupunki elää nykyään matkailusta — hotelleja ja '
+                + 'ravintoloita on paljon. Sen kupeessa on Umm Seyhounin '
+                + 'kylä noin kahden kilometrin päässä. Lähistöllä '
+                + 'kohoaa Jebel Harun, jota pidetään Aaronin '
+                + 'hautapaikkana ja vahvana ehdokkaana Raamatun Hor-vuoreksi.',
+              kuva: {
+                tiedosto: 'Wadi Musa, Jordan.jpg',
+                selite: 'Wadi Musan kaupunki nousee rinnettä ylös: '
+                  + 'vaaleita betonitaloja terasseittain, ja ylimpänä '
+                  + 'paljas kalliokumpare ilman puita.',
+                lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Laakson rakenne',
+              teksti: 'Reitti on koko päivän mittainen ja kulkee lähes '
+                + 'aina samassa järjestyksessä. Ensin Siq, sitten '
+                + 'Aarrekammio, sen jälkeen hautojen katu ja teatteri, '
+                + 'ja niiden jälkeen laakso levenee. Laakson pohjaa '
+                + 'seuraa pylväskatu, jonka roomalaiset kavensivat '
+                + 'jalkakäytävää varten ja jonka molemmille puolille '
+                + 'lisättiin 72 pylvästä. Kadun päässä on Qasr al-Bint, '
+                + 'ja pohjoisrinteessä kohoavat kuninkaanhaudat. '
+                + 'Kaikkein ylimmäksi pääsee kahdesta suunnasta: '
+                + 'etelään noustaan uhripaikalle Jebel Madbahin laelle '
+                + 'ja luoteeseen Ad Deirille, jonne johtavat kallioon '
+                + 'hakatut portaat. Kumpikin nousu vie tunnin suuntaansa '
+                + 'ja on jyrkkä, mutta molempien päässä on näkymä, jota '
+                + 'laaksosta ei näe.',
+              kuva: {
+                tiedosto: 'The Royal Tombs in Petra.jpg',
+                selite: 'Kuninkaanhaudat laakson yli katsottuna. '
+                  + 'Etualalla seisoo kuollut puu paljaana, ja '
+                  + 'vastarinteen yläpuolella kaukana näkyy Wadi Musan '
+                  + 'kaupunkia.',
+                lahde: 'Dudva, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kuka asui luolissa',
+              teksti: 'Petran hautakammiot eivät ole olleet tyhjiä '
+                + 'kahtatuhatta vuotta. Bdul-beduiinit asuivat alueen '
+                + 'luolissa aina 1980-luvulle asti, ja vuonna 1985 '
+                + 'Jordanian valtio siirsi heidät vastoin tahtoaan Umm '
+                + 'Seyhounin kylään ennen Unescon '
+                + 'maailmanperintöluettelon valmistelua. Yhteisö on '
+                + 'yhä alueella, ja se elää nykyään matkailusta muiden '
+                + 'töidensä ohella — samoin kuin alueella '
+                + 'näkyvämpi Liyathnah-heimo. Se, mitä matkailija '
+                + 'kohtaa, on siis kolme päällekkäistä kerrosta samassa '
+                + 'kalliossa: nabatealainen hautakaupunki, siihen '
+                + 'asettunut paimentolaisyhteisö ja nykyinen '
+                + 'maailmanperintökohde. Kaikki kolme näkyvät samassa '
+                + 'kuvassa, jos katsoo tarkkaan.',
+              kuva: {
+                tiedosto: 'Jordan 2021 P186 Petra Theater Necropolis.jpg',
+                selite: 'Hautojen katua teatterin lähellä: '
+                  + 'kalliojyrkänteessä on rivi julkisivuja ja niiden '
+                  + 'takana kammioita, joiden mustat oviaukot avautuvat '
+                  + 'suoraan rinteeseen.',
+                lahde: 'Fallaner, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunki hiljenee',
+              teksti: 'Petra ei tuhoutunut kerralla vaan jäi syrjään. '
+                + 'Kun Rooma liitti nabatealaisten kuningaskunnan '
+                + 'valtakuntaansa vuonna 106 jKr., kaupungista tuli osa '
+                + 'Arabia Petraean provinssia eikä oman valtakunnan '
+                + 'pääkaupunki. Kauppa siirtyi vähitellen merireiteille, '
+                + 'ja vuoden 363 maanjäristys rikkoi sekä rakennuksia '
+                + 'että kaupungin vesijärjestelmän. Bysanttilaisella '
+                + 'ajalla täällä oli yhä väkeä: kirkko rakennettiin '
+                + '400-luvun jälkipuoliskolla, ja sen papyrukset '
+                + 'kertovat vauraasta 500-luvusta. Ristiretkeläiset '
+                + 'rakensivat 1100-luvulla linnoituksia mutta hylkäsivät '
+                + 'ne pian. Kun muslimivalloituksen aikalaiset '
+                + 'kirjoittivat alueesta, Petraa ei enää mainittu.',
+              kuva: {
+                tiedosto: 'Qasr al-Bint (Petra) 01.jpg',
+                selite: 'Qasr al-Bintin temppeli laakson päässä. Massiivinen '
+                  + 'muuri seisoo yhä pystyssä holvikaarineen, ja sen '
+                  + 'edessä maassa on rivi katkenneita pylväitä.',
+                lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Petra on 810 metrin korkeudessa, ja vuosi '
+                + 'jakautuu kahtia. Tammikuun keskilämpö on vajaat '
+                + 'yhdeksän astetta ja heinä–elokuun runsaat '
+                + 'kaksikymmentäkuusi, mikä tarkoittaa iltapäivällä yli '
+                + 'kolmeakymmentä astetta paljailla kallioilla. Sadetta '
+                + 'kertyy koko vuonna vain runsaat sata millimetriä, ja '
+                + 'kesäkuusta syyskuuhun normaali on nolla. Kevät ja '
+                + 'syksy ovat siis kävelijän kuukaudet. Talvisade on '
+                + 'toinen asia kuin määrä antaa ymmärtää: alue on '
+                + 'altis äkkitulville, ja juuri siksi Siqin suulla on '
+                + 'pato. Väkeä riittää ympäri vuoden — kävijöitä on '
+                + 'lähellä miljoonaa vuodessa, ja vuonna 2019 heitä oli '
+                + 'yli 1,2 miljoonaa.',
+              kuva: {
+                tiedosto: 'Ad Deir, Petra.jpg',
+                selite: 'Ad Deir ylhäältä katsottuna. Monumentti on '
+                  + 'kallion kyljessä aukion laidalla, ja ympärillä '
+                  + 'aukeaa paljasta vuoristoa niin kauas kuin näkyy.',
+                lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede ja kivi',
+      johdanto: 'Aavikkokaupunki eli vedestä, jota ei ollut: padot ja '
+        + 'kourut keräsivät kuurot talteen. Kaivaukset ovat nostaneet '
+        + 'samasta kivestä esiin norsunpäitä ja kirjaston, jonka '
+        + 'tulipalo säilytti.',
+      tehtava: {
+        kysymys: 'Mistä Petran nabatealaiset saivat vetensä?',
+        vaihtoehdot: [
+          'Kaivamalla syviä kaivoja pohjaveteen',
+          'Keräämällä sadeveden patoihin, kouruihin ja säiliöihin',
+          'Kuljettamalla vettä kameleilla Kuolleeltamereltä',
+          'Sulattamalla lunta vuorilta',
+        ],
+        oikea: 1,
+        fakta: 'Sadetta tulee runsaat sata millimetriä vuodessa, ja koko '
+          + 'kaupunki rakennettiin sen talteenoton varaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jokainen sadekuuro otettiin talteen',
+          tiedosto: 'Near Al-Siq, Petra.jpg',
+          teksti: 'Petran nousu perustui veden hallintaan. Padot, '
+            + 'kallioon louhitut kourut ja huolellisesti naamioidut '
+            + 'sadevesisäiliöt keräsivät kuurot talteen, ja keraamiset '
+            + 'putket johtivat veden kanjonin reunalta kaupunkiin. '
+            + 'Siqin suulla on yhä valtava pato, joka ohjaa Wadi Musan '
+            + 'tulvavedet pois rotkosta; se on rakennettu uudelleen '
+            + 'vuosina 1963 ja 1991 ja jäljittelee sitä, mitä '
+            + 'nabatealaiset tekivät ajanlaskun taitteessa. Kaupungin '
+            + 'keskellä ollutta aluetta pidettiin pitkään torina, mutta '
+            + 'kaivaukset paljastivat sen puutarhaksi, jossa oli suuri '
+            + 'uima-allas ja keskellä saaripaviljonki.',
+          selite: 'Siqin suu ulkoapäin: aukko kallioseinässä on kapea, '
+            + 'ja sen edessä kulkee poikittain matala patomuuri, joka '
+            + 'kääntää uoman vedet sivuun.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Petra',
+        },
+        {
+          otsikko: 'Suuresta temppelistä löytyi 328 norsunpään palaa',
+          tiedosto: 'Great Temple of Petra - Upper Temenos.jpg',
+          teksti: 'Suuren temppelin kompleksi kattaa noin 7 560 '
+            + 'neliömetriä, ja Brownin yliopiston arkeologi Martha '
+            + 'Sharp Joukowsky aloitti sen järjestelmälliset kaivaukset '
+            + 'vuonna 1993. Pylväskadulta noustaan noin kahdeksan '
+            + 'metriä ylös portaita, jotka ovat seitsemäntoista metriä '
+            + 'leveät. Sisällä on teatterimainen tila noin '
+            + 'kuudellesadalle hengelle, ja seinissä on jäljellä '
+            + 'kultalehteä ja väritettyä stukkoa. Vuonna 2000 löytyi '
+            + 'kaksi lähes ehjää kapiteelia, joissa ionialaisen '
+            + 'kierukan tilalla on neljä norsunpäätä — kaikkiaan '
+            + 'norsunpääosien katkenneita paloja on kertynyt 328. '
+            + 'Rakennuksen käyttötarkoituksesta kiistellään yhä.',
+          selite: 'Suuren temppelin ylätaso: leveä porrasnousu keskellä, '
+            + 'ja sen vasemmalla puolella rivi kaatuneita pylväiden '
+            + 'kiekkoja siinä järjestyksessä, jossa ne vierivät maahan.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tulipalo tuhosi kirjaston ja säilytti sen',
+          tiedosto: 'Mosaic Petra Church 5.JPG',
+          teksti: 'Vuonna 1993 Petran bysanttilaisesta kirkosta löytyi '
+            + 'noin 140 papyruskääröä, Jordanian suurin muinaisten '
+            + 'asiakirjojen kokoelma. Kääröt ovat kreikankielisiä ja '
+            + '500-luvulta, ja ne säilyivät samasta syystä kuin '
+            + 'Herculaneumin papyrukset: ne hiiltyivät tulipalossa. '
+            + 'Suurin osa vaurioitui lukukelvottomaksi, mutta '
+            + 'muutamista kymmenistä saa yhä selvää. Ne kertovat '
+            + 'kirkon diakonin Theodoroksen varakkaan suvun arjesta — '
+            + 'avioliitoista, perinnöistä ja maakaupoista. Kirkko '
+            + 'rakennettiin 400-luvun jälkipuoliskolla, ja se paloi '
+            + '600-luvun alussa. Sivulaivojen mosaiikeissa on '
+            + 'vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.',
+          selite: 'Kirkon mosaiikkilattiaa: pyöreässä kehyksessä ui '
+            + 'harmaa kala, ja sen ympärillä kulkee vaaleista ja '
+            + 'tummista kuutioista ladottu punos.',
+          lahde: 'Odilia, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Pieni Petra oli karavaanien majatalo',
+          tiedosto: 'Siq al-Berid 02.jpg',
+          teksti: 'Noin kahdeksan kilometriä Petran keskustasta '
+            + 'pohjoiseen on Siq al-Barid, jonka nimi tarkoittaa kylmää '
+            + 'rotkoa ja jota kutsutaan myös Pieneksi Petraksi. Se on '
+            + 'kolme avointa tilaa, jotka yhdistää 450 metrin '
+            + 'kanjoni — sama arkkitehtuuri pienoiskoossa. Yhden '
+            + 'kalliohuoneen takaseinässä on säilynyt maalauksia, ja ne '
+            + 'ovat harvinaisuus: nabatealaista maalaustaidetta ei ole '
+            + 'juuri muualla jäljellä. Huone on ruokailuhuone eli '
+            + 'biclinium, ja sen freskoissa on runsaimmin koko '
+            + 'nabatealaisajalta tunnettua hahmomaalausta. Kasvien ja '
+            + 'lintujen kuvista on myös luettu, mitä alueella '
+            + 'siihen aikaan viljeltiin.',
+          selite: 'Siq al-Baridin suu: kapean kanjonin edessä kohoaa '
+            + 'pyöreitä hiekkakivikumpuja, ja rotkon seinään on '
+            + 'louhittu pieni pylväsjulkisivu.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
   tromssa: [
     {
       id: 'kaupunki',

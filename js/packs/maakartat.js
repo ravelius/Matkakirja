@@ -5501,6 +5501,85 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tekstiilisuuk', lat: 25.2635, lon: 55.294 },
     ],
   },
+
+  /*
+   * PETRA (Opus 19.8.2026). Ensimmäinen kohdekartta, joka ei ole
+   * kaupunki vaan raunioalue. Rajaus, sen perustelu ja piirtotyökalun
+   * rauniokaupunki-lippu ovat tools/piirra-kaupunkikartta.mjs:ssä.
+   *
+   * KOHTEIDEN KOORDINAATIT ovat OpenStreetMapin nimetyistä
+   * historic-kohteista (haettu Overpassista 19.8.2026), paitsi
+   * Al-Khazneh ja Ad Deir, joiden luvut ovat en-Wikipedian
+   * artikkeleista — ne täsmäävät OSM:n kanssa neljännen desimaalin
+   * tarkkuudella.
+   *
+   * PYLVÄSKATU JÄI POIS, vaikka se on Petran tunnetuin katu. Syy on
+   * mitattu: sen piste olisi ollut 2,8 prosenttiyksikön päässä Suuren
+   * temppelin pisteestä eli numeroympyrät olisivat menneet
+   * päällekkäin. Sama koskee Temenos-porttia (2,1 pp) ja puutarha- ja
+   * allaskompleksia (2,4 pp): laakson keskusta on niin tiivis, ettei
+   * siihen mahdu enempää ympyröitä. Kaikki kolme kerrotaan silti —
+   * pylväskatu ja portti Suuren temppelin ja Qasr al-Bintin jutuissa,
+   * puutarhakompleksi Tiede ja kivi -sivun vesinostossa.
+   *
+   * KOHTEITA ON YHDEKSÄN EIKÄ KYMMENTÄ, ja se on lähdepohjan päätös.
+   * Kymmenenneksi oli valittu Bab as-Siqin obeliskihauta, joka on
+   * kartalla hyvässä paikassa ja josta on tarkistettu kuva — mutta
+   * siitä EI ole omaa Wikipedia-artikkelia (haettu 19.8.2026:
+   * Obelisk Tomb, Bab as-Siq Triclinium ja Obelisk Tomb (Petra)
+   * vastasivat kaikki 404). Ilman lähdettä juttua ei kirjoiteta.
+   */
+  petra: {
+    polku: 'assets/kartat/petra-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 30.341, etela: 30.3175, lansi: 35.427, ita: 35.4665 },
+    esittely: 'Petra ei ole rakennettu vaan veistetty. Nabatealaiset, '
+      + 'arabialainen kansa, asettuivat näille vuorille 300-luvulla '
+      + 'eKr., ja kaupungista tuli heidän kuningaskuntansa pääkaupunki '
+      + '100-luvulla eKr. Nimi oli heidän omalla kielellään Raqmu. '
+      + 'Rikkaus tuli kaupasta: suitsuke ja mausteet kulkivat '
+      + 'eteläisestä Arabiasta Välimerelle, ja reitti kulki tästä '
+      + 'laaksosta. Kukoistuskaudellaan 100-luvulla jKr. kaupungissa '
+      + 'arvioidaan asuneen noin kaksikymmentätuhatta ihmistä keskellä '
+      + 'puoliaavikkoa, jossa sataa runsaat sata millimetriä vuodessa. '
+      + 'Se onnistui, koska vesi otettiin talteen: padot, kallioon '
+      + 'louhitut vesikourut ja naamioidut sadevesisäiliöt keräsivät '
+      + 'jokaisen kuuron. Rooma liitti kuningaskunnan valtakuntaansa '
+      + 'vuonna 106 jKr., ja vuoden 363 maanjäristys rikkoi sekä '
+      + 'rakennuksia että vesijärjestelmän. Kauppa siirtyi merille, ja '
+      + 'kaupunki hiljeni. Länsimaat unohtivat sen sijainnin kokonaan, '
+      + 'kunnes sveitsiläinen Johann Ludwig Burckhardt tuli vuonna 1812 '
+      + 'paikalliseksi pukeutuneena katsomaan, mitä beduiinit '
+      + 'tarkoittivat puhuessaan raunioista vuorten takana. Unescon '
+      + 'maailmanperintöluetteloon Petra hyväksyttiin 6. joulukuuta '
+      + '1985.\n\nKartalla on muinaiskaupunki kokonaan, runsaan neljän '
+      + 'kilometrin levyinen pala vuoristoa. Katuja ei ole: kaikki '
+      + 'kartan viivat ovat polkuja, ja ne ovat tämän kaupungin kadut. '
+      + 'Oikeasta laidasta tulee sisään Siq, kapea rotko, jota pitkin '
+      + 'jokainen saapuu — se mutkittelee kohti keskustaa ja päättyy '
+      + 'Al-Khaznehin eteen. Sieltä polku kääntyy luoteeseen ja '
+      + 'levenee laaksoksi, jonka pohjalla erottuvat suorakaiteina '
+      + 'Suuren temppelin ja Qasr al-Bintin kaivausalueet. Laakson '
+      + 'pohjoisreunaa seuraa kuninkaanhautojen rivi ja eteläreunaa '
+      + 'teatteri, joka on kokonaan louhittu kallioon. Vasemmassa '
+      + 'ylälaidassa, kilometrin päässä ylämäkeä, on Ad Deir; sinne '
+      + 'noustaan portaita, jotka näkyvät kartalla mutkittelevana '
+      + 'polkuna. Alalaidan haarova viivasto on kuivien uomien verkko '
+      + '— vettä niissä on vain sadekuuron jälkeen, ja silloin paljon. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Dubaissa ja Odessassa. */
+      { nimi: 'Ad Deir', lat: 30.3382, lon: 35.431 },
+      { nimi: 'Bysanttilainen kirkko', lat: 30.3306, lon: 35.4444 },
+      { nimi: 'Kuninkaanhaudat', lat: 30.3295, lon: 35.451 },
+      { nimi: 'Qasr al-Bint', lat: 30.3295, lon: 35.4401 },
+      { nimi: 'Suuri temppeli', lat: 30.3288, lon: 35.4423 },
+      { nimi: 'Teatteri', lat: 30.3248, lon: 35.447 },
+      { nimi: 'Siq', lat: 30.3232, lon: 35.4567 },
+      { nimi: 'Al-Khazneh', lat: 30.3221, lon: 35.4515 },
+      { nimi: 'Uhripaikka', lat: 30.3215, lon: 35.447 },
+    ],
+  },
 };
 
 /*

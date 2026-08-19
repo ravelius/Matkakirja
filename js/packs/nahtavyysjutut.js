@@ -10009,6 +10009,321 @@ export const NAHTAVYYSJUTUT = {
     },
   },
   /*
+   * PETRAN KOHDEKARTAN JUTUT (Opus 19.8.2026). Yhdeksän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään.
+   *
+   * WIKI-KENTTÄÄ EI OLE YHDELLÄKÄÄN, ja se on tarkistettu tulos eikä
+   * laiskuutta: fi.wikipediassa ei ole omaa artikkelia Ad Deiristä,
+   * Siqistä, Qasr al-Bintistä, Petran teatterista, uhripaikasta,
+   * kuninkaanhaudoista, Suuresta temppelistä eikä bysanttilaisesta
+   * kirkosta. Ainoa lähin on `Petra`, joka on jo lehden nostojen
+   * wiki-linkkinä — sama linkki jokaisen kohteen alla veisi lukijan
+   * yhdeksän kertaa samaan artikkeliin eikä kertoisi paikasta mitään.
+   */
+  petra: {
+    'Ad Deir': {
+      aika: '100-luku eKr.',
+      teksti: 'Ad Deir on Petran suurin monumentti: julkisivu on 45 '
+          + 'metriä korkea ja 50 metriä leveä, ja se on louhittu '
+          + 'kalliopintaan samalla tavalla kuin Aarrekammio. Ajoitus '
+          + 'vie 100-luvulle eKr., eli se on kaupungin tunnetuista '
+          + 'monumenteista vanhimpia. Muoto on hellenistinen, mutta '
+          + 'toteutus on selvästi nabatealainen: koristelu on '
+          + 'pelkistetympää ja mittasuhteet raskaammat kuin '
+          + 'kreikkalaisessa esikuvassaan.'
+          + '\n\n'
+          + 'Nimi on arabiaa ja tarkoittaa luostaria. Se ei ole '
+          + 'alkuperäinen vaan myöhempi: rakennuksen seinistä on '
+          + 'löytynyt ristejä, ja niistä päätellen tilaa on käytetty '
+          + 'kristillisenä kappelina. Julkisivun edessä on suuri '
+          + 'tasattu aukio, joka on tehty tarkoituksella — se on '
+          + 'kokoontumispaikka, ei luonnon muovaama terassi.'
+          + '\n\n'
+          + 'Ylös noustaan kallioon hakattuja portaita, ja nousu on '
+          + 'laakson pohjalta pitkä. Palkkio on kaksi asiaa kerralla: '
+          + 'itse monumentti ja aukion reunalta avautuva näkymä yli '
+          + 'Arabahin laakson suuntaan.',
+      kuvat: [
+        {
+          tiedosto: 'Petra Deir 44.jpg',
+          selite: 'Ad Deir kalliokummun kyljessä ja sen edessä laaja '
+            + 'tasattu aukio. Taustalla aukeaa paljasta vuoristoa '
+            + 'horisonttiin asti.',
+          lahde: 'Teo Gomez, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bysanttilainen kirkko': {
+      aika: '400-luvun jälkipuolisko',
+      teksti: 'Kirkko rakennettiin 400-luvun jälkipuoliskolla, ja se '
+          + 'oli käytössä uskonnollisena rakennuksena 600-luvun alkuun '
+          + 'asti, jolloin se tuhoutui tulipalossa. Rakennuksessa '
+          + 'yhdistyvät nabatealainen kallioon hakattu rakentaminen ja '
+          + 'roomalais-hellenistinen mosaiikkiperinne. Keskilaivan '
+          + 'lattia on opus sectile -työtä eli kuvioitu leikatuista '
+          + 'kivilaatoista, ja kapeammissa sivulaivoissa on värikkäät '
+          + 'kuviomosaiikit.'
+          + '\n\n'
+          + 'Mosaiikkien aiheina ovat vuodenajat, eläimet, ihmiset, '
+          + 'saviastiat ja kasvit. Tyyli muistuttaa läheisesti Gazan '
+          + 'koulukuntaa ja lainaa myös hellenistisestä ja '
+          + 'roomalaisesta kuvastosta. Kuudennella vuosisadalla '
+          + 'kirkkoon rakennettiin atrium, joka yhdisti kirkkosalin ja '
+          + 'kastetilat yhdeksi rakennukseksi. Pohjoispuolella on '
+          + 'Sininen kappeli, 400–500-luvulta, ja nimensä se on saanut '
+          + 'siitä, että siinä on käytetty sinistä egyptiläistä '
+          + 'graniittia.'
+          + '\n\n'
+          + 'Kirkon tärkein löytö ei kuitenkaan ole mosaiikki vaan '
+          + 'paperi. Sen varastohuoneesta löytyi vuonna 1993 noin 140 '
+          + 'papyruskääröä, jotka kertovat Petran elämästä 500-luvulla. '
+          + 'Tulipalo, joka tuhosi rakennuksen, myös säilytti ne.',
+      kuvat: [
+        {
+          tiedosto: 'Mosaic of a wild boar, Petra Church.jpg',
+          selite: 'Sivulaivan mosaiikki läheltä: pyöreässä kehyksessä '
+            + 'kulkee villisika harjaksineen, ja tausta on ladottu '
+            + 'vaaleista kivikuutioista.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuninkaanhaudat': {
+      teksti: 'Laakson pohjoisreunan jyrkänteessä on rivi Petran '
+          + 'suurimpia hautajulkisivuja, joita kutsutaan yhteisnimellä '
+          + 'kuninkaanhaudat. Ne edustavat hellenistisen '
+          + 'arkkitehtuurin nabatealaista versiota, mutta julkisivut '
+          + 'ovat kuluneet pahoin — hiekkakivi rapautuu, ja moni '
+          + 'yksityiskohta on kadonnut kokonaan.'
+          + '\n\n'
+          + 'Ryhmään luetaan neljä hautaa. Palatsihaudan arvellaan '
+          + 'olleen Petran kuninkaiden hauta. Sen vieressä on '
+          + 'Korinttilainen hauta, jonka arkkitehtuuri on samaa '
+          + 'hellenististä sukua kuin Aarrekammion. Kaksi muuta ovat '
+          + 'Silkkihauta ja Uurnahauta, joista Silkkihauta jää '
+          + 'vaatimattomammaksi.'
+          + '\n\n'
+          + 'Uurnahauta on ryhmän näyttävin. Sen edessä on suuri piha, '
+          + 'jota kannattelevat holvikaaret, ja rakennus sai '
+          + 'myöhemmin kokonaan uuden tehtävän: se muutettiin kirkoksi '
+          + 'vuonna 446 jKr., kun kristinusko levisi alueelle. Sama '
+          + 'kallio on siis ollut ensin hauta ja sitten kirkko.',
+      kuvat: [
+        {
+          tiedosto: 'Royal Tombs from Street of Facades at Petra (3).jpg',
+          selite: 'Uurnahauta jyrkänteessä: julkisivun alla on rivi '
+            + 'holvikaaria, jotka kannattavat sen edessä olevaa pihaa, '
+            + 'ja ympärillä kalliossa on pienempiä kammioita.',
+          lahde: 'Ankur P, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Qasr al-Bint': {
+      teksti: 'Qasr al-Bint on Petran temppeli ja samalla poikkeus '
+          + 'kaikkeen muuhun: se on rakennettu kivestä pystyyn eikä '
+          + 'louhittu kallioon. Rakennus seisoo podiumilla, jonka '
+          + 'ydin on kivimursketta ja pinta huoliteltua '
+          + 'harkkomuurausta. Ajoituksesta on kiistelty vuosikymmeniä, '
+          + 'mutta nykyinen rakennus näyttää nousseen jonkin vanhemman '
+          + 'ja huonosti tunnetun rakennuksen päälle. Ajoitusta tukee '
+          + 'se, että sen koristeaiheet muistuttavat Aarrekammion '
+          + 'vastaavia, ja Aarrekammion ajoitus tunnetaan hyvin.'
+          + '\n\n'
+          + 'Nimi ei ole antiikista. Kokonaisuudessaan se kuuluu Qasr '
+          + 'al-Bint Firʿaun eli faaraon tyttären palatsi, ja se tulee '
+          + 'paikallisesta tarinasta: pahan faaraon hyveellinen tytär '
+          + 'päätti valita kosijoidensa väliltä sen, joka saisi '
+          + 'palatsiin veden.'
+          + '\n\n'
+          + 'Temppeli avautuu pohjoiseen kohti uhrialttaria, joka oli '
+          + 'omistettu Dusharalle, nabatealaisten päajumalalle. Juuri '
+          + 'tämän sijainnin takia osa tutkijoista arvelee, että myös '
+          + 'temppelissä itsessään palvottiin Dusharaa. Rakennus on '
+          + 'pylväskadun länsipäässä, ja sen ja kadun välissä on '
+          + 'Temenos-portti.',
+      kuvat: [
+        {
+          tiedosto: 'Qasr al-Bint 01.jpg',
+          selite: 'Qasr al-Bint sivulta: korkea harkkomuuri seisoo '
+            + 'pystyssä ilman kattoa, ja sen edustalla maassa on '
+            + 'rivissä katkenneita pylväänpaloja.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri temppeli': {
+      aika: 'kaivettu 1993 alkaen',
+      teksti: 'Suuri temppeli on laakson eteläpuolella pylväskadun '
+          + 'kupeessa, ja sen kompleksi kattaa noin 7 560 '
+          + 'neliömetriä. Brownin yliopiston arkeologi Martha Sharp '
+          + 'Joukowsky aloitti alueen järjestelmälliset kaivaukset '
+          + 'vuonna 1993, ja suurin osa siitä, mitä rakennuksesta '
+          + 'tiedetään, on hänen ryhmänsä työtä.'
+          + '\n\n'
+          + 'Pylväskadulta noustaan noin kahdeksan metriä ylös '
+          + 'portaita, jotka ovat seitsemäntoista metriä leveät. '
+          + 'Ylätasanteen takana on sisätila, jota hallitsee '
+          + 'teatterimainen istuinalue noin kuudellesadalle hengelle. '
+          + 'Seinissä on yhä jäljellä kultalehteä ja väritettyä '
+          + 'stukkoa. Vuonna 2000 kaivauksista nousi esiin kaksi lähes '
+          + 'ehjää kapiteelia, joissa ionialaisen kierukan tilalla on '
+          + 'neljä norsunpäätä; katkenneita norsunpääosia on löytynyt '
+          + 'kaikkiaan 328.'
+          + '\n\n'
+          + 'Nimi lupaa enemmän kuin tutkimus pystyy vahvistamaan. '
+          + 'Koska rakennuksen keskellä on teatteri eikä varsinaista '
+          + 'cellaa, Joukowsky on esittänyt, ettei tilaa ole voitu '
+          + 'muuttaa uskonnolliseen käyttöön — ja että kyse voisi olla '
+          + 'niin sanotusta rituaaliteatterista. Kiista jatkuu.',
+      kuvat: [
+        {
+          tiedosto: 'Great Temple of Petra 01.jpg',
+          selite: 'Suuri temppeli laaksosta katsottuna: keskellä '
+            + 'kohoaa leveä porrasnousu, sen ympärillä on '
+            + 'kaivausalueen muureja ja taustalla paljas rinne.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Teatteri': {
+      teksti: 'Vähän matkaa Aarrekammiosta, en-Nejr-nimisen vuoren '
+          + 'juurella, on massiivinen teatteri. Se on louhittu '
+          + 'rinteeseen niin, että katsomosta näkyisi mahdollisimman '
+          + 'monta hautaa — sijainti valittiin siis näkymän eikä '
+          + 'maaston mukaan. Rakentaminen leikkasi useiden vanhempien '
+          + 'hautojen läpi, ja katsomon yläreunassa niiden kammiot '
+          + 'ovat yhä auki kuin ikkunat.'
+          + '\n\n'
+          + 'Katsomoon mahtui arviolta 8 500 katsojaa. Esityksinä '
+          + 'kuultiin runonlausuntaa ja nähtiin näytelmiä. Koko '
+          + 'rakennus on samaa kalliota kuin ympäröivä vuori: '
+          + 'istuinrivejä ei ladottu vaan hakattiin.'
+          + '\n\n'
+          + 'Teatteri oli yksi niistä Petran rakennuksista, jotka '
+          + 'kärsivät pahoin vuoden 363 maanjäristyksessä. Sen '
+          + 'lähistöltä alkaa myös uhripaikalle vievä nousu.',
+      kuvat: [
+        {
+          tiedosto: 'Jordan-18A-094 - Theatre (view large).jpg',
+          selite: 'Teatteri ylhäältä: istuinrivit kaartuvat '
+            + 'puoliympyräksi punaisessa kalliossa, ja katsomon '
+            + 'yläpuolella seinässä ammottavat hautakammioiden '
+            + 'suuaukot.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Siq': {
+      teksti: 'Siq on kaupungin sisäänkäynti ja samalla sen '
+          + 'vaikuttavin rakenne, vaikka kukaan ei rakentanut sitä. '
+          + 'Rotko on runsaan kilometrin mittainen ja kapeimmillaan '
+          + 'noin kolmen metrin levyinen, ja sen seinät kohoavat '
+          + '91–182 metrin korkeuteen. Se päättyy Aarrekammion eteen.'
+          + '\n\n'
+          + 'Toisin kuin esimerkiksi Antelope Canyonin kaltaiset '
+          + 'rakokanjonit Siq ei ole veden kaivama. Se on '
+          + 'luonnollinen siirros, jonka maankuoren liike halkaisi '
+          + 'kahtia; vesi on vasta sen jälkeen hionut seinät sileiksi. '
+          + 'Ero näkyy muodossa: seinät sopivat yhteen kuin murtuneen '
+          + 'astian palat.'
+          + '\n\n'
+          + 'Rotko oli nabatealaisille pyhä. Sen molemmilla seinillä '
+          + 'on votiivikoloja, joissa on ollut baetyleiksi kutsuttuja '
+          + 'kivikuvia. Kun tietä madallettiin vuonna 1998 runsaalla '
+          + 'puolella metrillä, esiin tuli patsasryhmä: kaksi lähes '
+          + 'kaksinkertaisessa koossa veistettyä kauppiasta, kumpikin '
+          + 'kahta kamelia taluttamassa. Yläosat ovat kuluneet, mutta '
+          + 'hahmot erottuvat yhä. Rotkon varrella on myös kammioita, '
+          + 'joissa arkeologien arvion mukaan majoittui '
+          + 'pääsisäänkäyntiä vartioineita sotilaita.',
+      kuvat: [
+        {
+          tiedosto: 'Petra-Siq-38-Zoomorph-2010-gje.jpg',
+          selite: 'Rotkon seinämää läheltä: vesi on kuluttanut '
+            + 'hiekkakiveen pyöreän lohkareen, jonka juovainen pinta '
+            + 'näyttää eläimen selältä, ja taustalla kalliossa on '
+            + 'kammioiden aukkoja.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Khazneh': {
+      aika: '100-luvun alku jKr.',
+      teksti: 'Al-Khazneh rakennettiin 100-luvun alussa jKr. kuningas '
+          + 'Aretas IV Philopatriksen aikana, ja sitä pidetään '
+          + 'mausoleumina ja kryptana. Julkisivu on 37 metriä korkea '
+          + 'ja 24 metriä leveä, ja se on Petran paras esimerkki '
+          + 'hellenistisestä tyylistä — muodot viittaavat suoraan '
+          + 'Aleksandrian arkkitehtuuriin. Keskellä ylätasoa on '
+          + 'katkaistun päätykolmion sisään sijoitettu pyöreä tholos, '
+          + 'ja huipulla näyttää kasvavan kaksi obeliskia suoraan '
+          + 'kalliosta.'
+          + '\n\n'
+          + 'Kuvaohjelma on tuonpuoleisuuden ohjelma. Ylimpänä on '
+          + 'neljä kotkaa, joiden tehtävä oli kantaa sielut pois. '
+          + 'Ylätason hahmot ovat tanssivia amatsoneja '
+          + 'kaksoiskirveineen, ja sisäänkäyntiä vartioivat kaksoset '
+          + 'Kastor ja Polluks, jotka elivät osan ajasta Olympoksella '
+          + 'ja osan manalassa.'
+          + '\n\n'
+          + 'Nimi tarkoittaa arabiaksi aarrekammiota. Se syntyi '
+          + 'tarinasta, jonka mukaan toisen tason koristeuurnaan olisi '
+          + 'kätketty aarre — vaikka uurna on umpinaista hiekkakiveä. '
+          + 'Uurnassa näkyy silti selvät luodinjäljet, jotka Jordanian '
+          + 'viranomaiset lukevat beduiinien tiliin: joku uskoi '
+          + 'tarinan ja yritti ampua uurnan auki. Rakennus tuli '
+          + 'laajalti tunnetuksi vuoden 1989 elokuvasta Indiana Jones '
+          + 'ja viimeinen ristiretki, jossa sen julkisivu esittää '
+          + 'Graalin maljan viimeistä lepopaikkaa.',
+      kuvat: [
+        {
+          tiedosto: 'Al-Khazneh, Petra, Jordan.jpg',
+          selite: 'Aarrekammio koko korkeudeltaan. Alarivin pylväiden '
+            + 'juurella kulkevat ihmiset näkyvät pieninä, ja niistä '
+            + 'näkee, kuinka korkea julkisivu on.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Uhripaikka': {
+      teksti: 'Uhripaikka on Jebel Madbahin laella, ja sinne noustaan '
+          + 'teatterin läheltä noin kahdeksansataa askelmaa. Nousu on '
+          + 'jyrkkä, mutta laelta näkee koko laakson kerralla — '
+          + 'kaupungin muodon ymmärtää parhaiten juuri täältä.'
+          + '\n\n'
+          + 'Laella on kallioon tasoitettu alue, altaita ja alttari. '
+          + 'Yleisesti uskotaan, että täällä vietettiin juomauhreja eli '
+          + 'libaatioita. Toinen tunnettu uhraamisen muoto oli '
+          + 'eläinuhri. Sen taustalla on käsitys, että profeetta '
+          + 'Aaronin hauta sijaitsee Petrassa — muslimeille pyhä '
+          + 'paikka — ja sen kunniaksi uhrattiin vuosittain vuohi.'
+          + '\n\n'
+          + 'Nabatealaisten uskonnosta tiedetään muutenkin, että kivi '
+          + 'oli sen keskiössä: jumalia kuvattiin usein pelkkinä '
+          + 'pystykivinä eikä ihmishahmoina. Uhripaikka on tästä '
+          + 'suurin säilynyt esimerkki koko kaupungissa.',
+      kuvat: [
+        {
+          tiedosto: 'Petra High Place of Sacrifice 1954.jpg',
+          selite: 'Uhripaikan taso vuoren laella: kalliosta on '
+            + 'tasoitettu suorakulmainen kenttä, jonka laidalla on '
+            + 'portaat ja matala alttarikoroke, ja ympärillä aukeaa '
+            + 'utuinen vuoristo.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
    * Dohan nähtävyysjutut (nippu 2, 12.8.2026). Kolme kohdetta — Souq
    * Waqif, Islamilaisen taiteen museo ja kansallismuseo — on jo QAT-
    * maalehdessä omina juttuinaan, koska maalehti kirjoitettiin ennen
