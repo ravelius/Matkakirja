@@ -184,3 +184,67 @@ Ehdotan, että jatkan 16 puolivalmiin kimpussa Euroopan reseptillä
 erikseen, tehdäänkö kahdeksalle puuttuvalle lehdet ja millä rajauksella.
 
 Aloitin Izmiristä (v929, avauskuvat).
+
+---
+
+## Opus 19.8.2026 — omistajan kysymys: pitäisikö kuvien mennä ämpäriin eikä repoon?
+
+Omistaja kysyi tänään suoraan: "Onko kuvat pakko mennä repoon? Pitäisi
+mennä pelkästään ämpäriin." Tämä on arkkitehtuurilinjaus, joten en tee
+mitään siirtoa vaan tuon numerot ja vaihtoehdot sinulle.
+
+### Mikä on tilanne mitattuna
+
+- Commons-kuvat EIVÄT ole repossa. Lehdessä on vain tiedostonimi, ja
+  peli hakee kuvan ajossa Special:FilePathista, joka skaalaa sen.
+- Petran (v930) ja Kappadokian (v931) yhteensä 50 kuvaa ovat kaikki
+  tällaisia. Näiden kahden version ainoa uusi binääri koko repossa on
+  Petran kohdekartta, 138 kt.
+- Repoon menee kuvia vain kahta reittiä:
+  1. tools/fetch-photos.mjs peilaa Commons-kuvia kansioon
+     assets/valokuvat/ — 60 Mt, 200 tiedostoa.
+  2. Flickr-reitti vaatii paikallisen kopion, koska Flickrillä ei ole
+     pysyvää skaalausosoitetta.
+- PAINAVIN EI OLE VALOKUVAT vaan assets/kartat, 120 Mt. Ne ovat pelin
+  itse generoimia kaupunkikarttoja, eivät haettua aineistoa.
+- .git on 439 Mt.
+
+### Miksi paikalliset kopiot alun perin tehtiin
+
+valokuvat-paikalliset.js:n oma otsikko kertoo syyn: nopea lataus,
+OFFLINE-KÄYTTÖ ja immuniteetti sille että kuva poistetaan Commonsista.
+Nämä kolme ovat se hinta, joka ämpärisiirrossa maksetaan.
+
+### Mitä siirto koskisi
+
+1. Offline ja service worker. Peli on PWA, ja paikalliset kopiot ovat
+   se mikä tekee siitä offline-kelpoisen. Ämpäri toimisi, mutta
+   ensimmäinen lataus vaatisi verkon ja sw.js:n välimuistisäännöt
+   pitäisi kirjoittaa uusiksi.
+2. Yhden tiedoston versio. dist/matkakirja.html sisältää kuvapaketit
+   eli viittaukset, ei kuvatavuja — se säilyisi mutta riippuisi
+   verkosta.
+3. Pages-julkaisu ja CORS: ämpärille tarvitaan osoite, CORS-säännöt ja
+   välimuistipolitiikka.
+
+### Kysymykset, joihin tarvitsen päätöksesi
+
+1. Siirretäänkö assets/valokuvat ämpäriin, ja jos siirretään, mikä on
+   offline-linjaus — luovutaanko siitä vai tehdäänkö SW:hen
+   verkkovälimuisti?
+2. Koskeeko sama assets/kartat-kansiota? Se on kaksi kertaa painavampi
+   kuin valokuvat, mutta se on itse generoitua eikä sitä voi hakea
+   uudelleen mistään ulkoisesta lähteestä ilman koko piirtoajoa.
+3. Puretaanko historia (60 + 120 Mt on jo .git:ssä), vai koskeeko
+   linjaus vain uutta aineistoa? Historian purku on kertaluontoinen ja
+   rikkoo kaikkien kloonit.
+
+### Mitä teen sillä välin ilman päätöstä
+
+Pidän loput Lähi-idän ja Aasian lehdet pelkästään Commonsissa, jolloin
+repoon ei tule yhtään uutta valokuvaa. Mittasin Commonsin katteen
+kaikille jäljellä oleville Lähi-idän kohteille: kelvollisia osumia on
+26–48 per haku (Persepolis 47, Mekka 48, Jerusalem 42, Ruba al-Khali
+42, Salalah 42, Medina 41, Sana 37, Aden 37, Siinai 26). Flickriä ei
+siis todennäköisesti tarvita lainkaan, eli uusia paikallisia kopioita
+ei synny.
