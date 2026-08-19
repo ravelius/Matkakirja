@@ -6022,6 +6022,198 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Marek Śliwecki, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Georgian Dublin. Merrion Square - panoramio.jpg',
+          selite: 'Georgiaaninen tiilitalorivi, jonka julkisivut ovat lähes kokonaan villiviinin peitossa: lehdet ovat vihreitä ja paikoin punertavia, ja niiden alta pilkottavat valkoiset ikkunanpielet ja mustat rautakaiteet. Kadun reunassa seisoo valkoinen valurautainen katulyhty.',
+          lahde: 'Pastor Sam, Wikimedia Commons (CC BY 3.0)',
+        },
+        kappale: 'Dublin on pieni pääkaupunki: kaupungin oman kunnan '
+          + 'alueella asuu alle kuusisataatuhatta ihmistä, ja keskustan '
+          + 'kävelee ristiin puolessa tunnissa. Silti sen sisällä on '
+          + 'seitsemänsadan hehtaarin puisto, jossa laiduntaa neljä–'
+          + 'viisisataa villiä kuusipeuraa.',
+        artikkeli: {
+          nimi: 'Matkailijan Dublin',
+          taitto: 'opas',
+          teksti: 'Pääkaupunki, jonka puistossa on oma peuralauma — ja '
+            + 'joka jakautuu joen mukaan kahtia.',
+          nosto: 'Phoenix Parkin peurat polveutuvat 1660-luvulla '
+            + 'tuodusta laumasta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä avattiin 19. tammikuuta 1940, ja '
+                + 'ensimmäinen lento lähti samana päivänä Liverpooliin. '
+                + 'Se on seitsemän kilometrin päässä keskustasta '
+                + 'pohjoiseen, ja vuonna 2025 sen kautta kulki yli 36 '
+                + 'miljoonaa matkustajaa. Kaupungissa liikutaan '
+                + 'raitiotiellä, joka avattiin 2004 ja jolla on nyt '
+                + 'kaksi linjaa, 67 pysäkkiä ja 42 kilometriä kiskoa. '
+                + 'Liput ostetaan Leap-kortille, joka laskee itse '
+                + 'päiväkaton.',
+              kuva: { tiedosto: 'Luas tram 4008 at The Point.jpg', selite: 'Hopeanharmaa nivelraitiovaunu pysäkillä, kylkiraidassa keltainen viiva ja numero 4008. Laituri on tyhjä, ja sen katoksen takana näkyy kivinen vanha varastorakennus ja iso valkoinen peltiseinäinen halli.', lahde: 'Grendelkhan, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Joki jakaa kaupungin kahtia',
+              teksti: 'Liffey jakaa Dublinin perinteisesti pohjois- ja '
+                + 'eteläpuoleen. Eteläpuolta on pidetty varakkaampana, '
+                + 'mutta ero on nykyään häilyvä. Keskustassa erotetaan '
+                + 'epävirallisia neljänneksiä: keskiaikainen kortteli, '
+                + 'georgiaaninen aukioiden alue ja satama-alue, jota '
+                + 'ohjelmistoyritysten takia sanotaan piidokeiksi. '
+                + 'Postinumerot ovat osa puhekieltä: kaupunginosaan '
+                + 'viitataan usein pelkällä numerolla.',
+            },
+            {
+              otsikko: 'Puisto, jossa on oma peuralauma',
+              teksti: 'Phoenix Park on 707 hehtaaria ja sen ympärysmuuri '
+                + 'yksitoista kilometriä — yksi Euroopan suurimmista '
+                + 'aidatuista kaupunkipuistoista. Se perustettiin 1662 '
+                + 'metsästyspuistoksi ja avattiin yleisölle 1745. '
+                + 'Puistossa elää neljästä viiteensataan villiä '
+                + 'kuusipeuraa, jotka polveutuvat 1660-luvulla tuodusta '
+                + 'laumasta. Saman aidan sisällä ovat presidentin '
+                + 'virka-asunto ja eläintarha, joka avattiin 1831.',
+              kuva: { tiedosto: 'Phoenix Park Dublin Daims.JPG', selite: 'Laaja nurmikenttä, jolla laiduntaa parikymmentä kuusipeuraa hajallaan. Kentän poikki nousee valkoinen rugbymaali, ja taustalla on tumma havumetsän reuna ja lehdettömiä puita. Taivaalla on hajanaisia pilviä.', lahde: 'Cqui, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Kuusi päivää huhtikuussa 1916',
+              teksti: 'Pääsiäiskapina alkoi 24. huhtikuuta 1916 ja kesti '
+                + 'kuusi päivää. Kapinallisten päämaja oli pääpostitalo '
+                + 'O\'Connell Streetillä, jonka portailta luettiin '
+                + 'tasavallan julistus. Mukana oli noin 1 250 ihmistä. '
+                + 'Kapinassa kuoli 485 ihmistä, joista 260 oli '
+                + 'siviilejä. Kuusitoista johtajaa teloitettiin '
+                + 'jälkeenpäin, ja se käänsi mielipiteen: vuoden 1918 '
+                + 'vaaleissa Sinn Féin voitti 73 paikkaa 105:stä.',
+              kuva: { tiedosto: 'Dublin General Post Office clock facade.jpg', selite: 'Pääpostitalon pylväskäytävä alhaalta kuvattuna: kaksi paksua uurrettua pylvästä kohoaa kohti koristeltua kattoholvia, ja niiden välissä näkyy julkisivun sininen kello ja kaarevat ikkunat. Seinillä palaa kaksi vanhanaikaista lyhtyä.', lahde: 'William Murphy, Wikimedia Commons (CC BY-SA 2.0)' },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Dublin on Irlannin kuivin paikka: itärannikon '
+                + 'suojassa sadetta tulee noin puolet siitä mitä '
+                + 'länsirannikolla. Silti vettä saadaan joka kuukausi '
+                + 'kuudesta yhdeksään senttiä, ja sateisin kuukausi on '
+                + 'marraskuu. Lämpötila pysyy koko vuoden kapealla '
+                + 'välillä: kylmimmilläänkin päivä on kahdeksan astetta '
+                + 'ja lämpimimmilläänkin yhdeksäntoista. Kesäkuussa on '
+                + 'valoisaa lähes seitsemäntoista tuntia.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Puistot',
+                tahdet: 3,
+                selite: 'Phoenix Park on kävelymatkan päässä keskustasta '
+                  + 'ja siellä laiduntaa villejä peuroja.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Keskusta on pieni: sen kävelee ristiin noin '
+                  + 'puolessa tunnissa.',
+              },
+              {
+                mita: 'Georgiaaniset aukiot',
+                tahdet: 3,
+                selite: 'Kokonaisia tiilitalorivejä 1700-luvulta, '
+                  + 'ovet maalattuina eri väreillä.',
+              },
+              {
+                mita: 'Musiikki',
+                tahdet: 2,
+                selite: 'Kansanmusiikkia soitetaan pubeissa ympäri '
+                  + 'vuoden, mutta parhaat illat ovat sattumaa.',
+              },
+              {
+                mita: 'Kuiva sää',
+                tahdet: 1,
+                selite: 'Sadetta tulee joka kuukausi, eikä yksikään '
+                  + 'kuukausi jää alle kuuden sentin.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade on tasaista',
+                teksti: 'Kuivin kuukausi on helmikuu, 59 millimetriä, ja '
+                  + 'sateisin marraskuu, 86. Vuodessa vettä tulee noin '
+                  + '865 millimetriä — sadetakki kannattaa aina.',
+              },
+              {
+                otsikko: 'Leap-kortti kannattaa',
+                teksti: 'Kortti kattaa raitiotien, bussit ja lähijunat '
+                  + 'ja laskee itse päivä- ja viikkokaton. Kertaliput '
+                  + 'ovat selvästi kalliimpia.',
+              },
+              {
+                otsikko: 'Postinumero on osoite',
+                teksti: 'Paikalliset viittaavat kaupunginosaan pelkällä '
+                  + 'numerolla. Parilliset numerot ovat pääosin '
+                  + 'eteläpuolella, parittomat pohjoisessa.',
+              },
+              {
+                otsikko: 'Peuroja ei saa ruokkia',
+                teksti: 'Phoenix Parkin peurat ovat villejä, vaikka ne '
+                  + 'päästävät lähelle. Kiima-aikana syksyllä uroksiin '
+                  + 'pidetään reilu välimatka.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–syyskuu: päivät ovat pitkiä, '
+              + 'lämpötila kuudentoista ja yhdeksäntoista välillä ja '
+              + 'puistot vehreimmillään. Kesäkuussa on valoisaa lähes '
+              + 'seitsemäntoista tuntia. Marraskuu on vuoden sateisin '
+              + 'kuukausi, ja talvella päivä on lyhyt mutta harvoin '
+              + 'pakkasella.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '4–15 °C',
+                kuvaus: 'Lämpenee hitaasti mutta tasaisesti. Huhtikuu '
+                  + 'on vuoden kuivimpia kuukausia, ja toukokuussa '
+                  + 'päivä on jo viidentoista asteen tienoilla.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '11–19 °C',
+                kuvaus: 'Viileä mutta valoisa: kesäkuussa on valoa '
+                  + 'lähes seitsemäntoista tuntia. Elokuu on kesän '
+                  + 'sateisin kuukausi, noin kahdeksan senttiä.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '6–17 °C',
+                kuvaus: 'Syyskuu on vielä leuto, marraskuu vuoden '
+                  + 'sateisin kuukausi. Phoenix Parkin peurojen '
+                  + 'kiima-aika osuu loka–marraskuulle.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '3–8 °C',
+                kuvaus: 'Merellinen ja leuto: pakkasta on harvoin ja '
+                  + 'lumi on poikkeus. Helmikuu on vuoden kuivin '
+                  + 'kuukausi, ja päivä kestää vajaat kahdeksan tuntia.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Transport for Ireland',
+                url: 'https://www.transportforireland.ie/',
+              },
+              {
+                nimi: 'Wikivoyage: Dublin',
+                url: 'https://fi.wikivoyage.org/wiki/Dublin',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Romaani, joka kestää yhden päivän',
@@ -6230,6 +6422,203 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'The Shore, Leith - geograph.org.uk - 5638471.jpg',
+          selite: 'Satamakanavan ranta aurinkoisena talvipäivänä: vastarannalla on rivi kivisiä varasto- ja asuintaloja, joiden joukossa erottuu valkoinen porrasfrontonillinen talo ja punatiilisiä kattoja. Etualalla seisoo ruosteenpunainen vanha kääntösillan koneisto ja yllä lehdettömiä oksia.',
+          lahde: 'Graeme Yuill, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Edinburgh on kaksi kaupunkia vierekkäin: ahdas '
+          + 'keskiaikainen vanhakaupunki kallioharjanteella ja sen '
+          + 'pohjoispuolella suoraviivainen uusikaupunki, joka '
+          + 'suunniteltiin kerralla valmiiksi 1760-luvulla. Molemmat '
+          + 'ovat yhdessä Unescon maailmanperintökohde. Ja kolmas '
+          + 'kaupunki on Leith, joka liitettiin vastentahtoisesti '
+          + 'vuonna 1920.',
+        artikkeli: {
+          nimi: 'Matkailijan Edinburgh',
+          taitto: 'opas',
+          teksti: 'Vanhakaupunki kasvoi itsestään, uusikaupunki '
+            + 'piirrettiin kilpailulla — ja Leith vastusti liitosta '
+            + 'kuudella äänellä yhtä vastaan.',
+          nosto: 'Uudenkaupungin suunnitelmakilpailun voitti 1766 '
+            + '26-vuotias James Craig.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä on Inglistonissa noin kymmenen '
+                + 'kilometriä keskustasta luoteeseen. Se avattiin '
+                + 'siviililiikenteelle 19. toukokuuta 1947, ja nykyään '
+                + 'se on Skotlannin vilkkain: vuonna 2025 matkustajia '
+                + 'oli lähes seitsemäntoista miljoonaa. Kentältä '
+                + 'keskustaan pääsee raitiotiellä noin puolessa '
+                + 'tunnissa. Linja avattiin 31. toukokuuta 2014, ja '
+                + 'sitä jatkettiin satamaan asti kesäkuussa 2023. '
+                + 'Pysäkkejä on 23.',
+              kuva: { tiedosto: 'Edinburgh Park Central tram stop.jpg', selite: 'Valko-musta nivelraitiovaunu saapuu tyhjälle pysäkille; kyljessä lukee Edinburgh Trams. Laiturilla on lipunmyyntiautomaatti ja kaksi lasista katosta, ja taivaalla on kirkkaita kumpupilviä.', lahde: 'Brian Turner, Wikimedia Commons (CC BY-SA 2.0)' },
+            },
+            {
+              otsikko: 'Kaupunki, joka piirrettiin kerralla',
+              teksti: 'Uudenkaupungin suunnitelmakilpailun voitti '
+                + 'tammikuussa 1766 vasta 26-vuotias arkkitehti James '
+                + 'Craig. Hänen ruutukaavansa perustuu yhteen '
+                + 'pääkatuun harjanteella kahden aukion välissä, ja '
+                + 'siitä risteävät poikkikadut pohjoiseen ja etelään. '
+                + 'Rakentaminen kesti 1767 alkaen noin 1850-luvulle. '
+                + 'Vanhassakaupungissa kujat ovat paikoin vain '
+                + 'muutaman jalan levyisiä, koska tilaa oli kapealla '
+                + 'kalliolla vähän.',
+              kuva: { tiedosto: '1768 James Craig Map of New Town, Edinburgh, Scotland (First Plan of New Town) - Geographicus - Edinburgh-craig-1768.jpg', selite: 'Kuparipiirroskartta vuodelta 1768: uudenkaupungin ruutukaava kolmine pitkine katuineen, päissä kaksi neliömäistä aukiota kirkkoineen. Reunoilla on koristeellisia allegoriakuvia ja tekstikilpiä, oikealla vanhan kaupungin kortteleita.', lahde: 'James Craig 1768, Wikimedia Commons (PD)' },
+            },
+            {
+              otsikko: 'Satamakaupunki, joka ei halunnut liittyä',
+              teksti: 'Leith oli oma kaupunkinsa aivan Edinburghin '
+                + 'kyljessä. Se liitettiin Edinburghiin 1. marraskuuta '
+                + '1920, vaikka asukkaat vastustivat sitä: '
+                + 'kansanäänestyksessä liitosta vastusti 26 810 ja '
+                + 'kannatti 4 340 asukasta. Leithissä asui tuolloin '
+                + 'noin kahdeksankymmentätuhatta ihmistä eli noin '
+                + 'viidesosa koko Edinburghin väestöstä, mutta vain '
+                + 'viidellä prosentilla kaupungin pinta-alasta.',
+            },
+            {
+              otsikko: 'Kuja, joka jäi rakennuksen alle',
+              teksti: 'Mary Kingin kuja oli tavallinen vanhankaupungin '
+                + 'katu, kunnes sen päälle rakennettiin vuonna 1753 '
+                + 'pörssitalo, nykyinen kaupungintalo. Kuja jäi '
+                + 'osittain maan alle, mutta sitä asuttiin vielä '
+                + 'pitkään: viimeinen asukas Andrew Chesney sai '
+                + 'pakkolunastuksesta neljäsataa puntaa vuonna 1897 ja '
+                + 'muutti pois 1902. Kujan kummitusmaine on selitetty '
+                + 'maasta vuotavalla biokaasulla.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kesä on viileä: heinäkuun keskilämpö jää alle '
+                + 'viidentoista asteen, vaikka päivä nousee '
+                + 'kahdeksaantoista. Talvi on leuto, kahden ja kuuden '
+                + 'asteen välissä, eikä lunta ole juuri koskaan '
+                + 'pitkään. Sadetta tulee joka kuukausi viidestä '
+                + 'kahdeksaan senttiä, yhteensä runsaat kahdeksansataa '
+                + 'millimetriä. Kuivinta on huhtikuussa ja märintä '
+                + 'lokakuussa. Elokuu on vuoden ruuhkaisin kuukausi.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Vanha- ja uusikaupunki ovat vieretysten, ja '
+                  + 'molemmat kävelee läpi samana päivänä.',
+              },
+              {
+                mita: 'Arkkitehtuuri',
+                tahdet: 3,
+                selite: 'Kaksi täysin erilaista kaupunkia rinnakkain, '
+                  + 'yhdessä maailmanperintökohteena vuodesta 1995.',
+              },
+              {
+                mita: 'Näköalat',
+                tahdet: 3,
+                selite: 'Kaupunki on rakennettu kukkuloille, joten '
+                  + 'näköalapaikalle pääsee ilman hissiä.',
+              },
+              {
+                mita: 'Satama',
+                tahdet: 2,
+                selite: 'Leith on raitiotien päässä ja tuntuu yhä '
+                  + 'omalta kaupungiltaan.',
+              },
+              {
+                mita: 'Lämpö',
+                tahdet: 1,
+                selite: 'Heinäkuun keskilämpö jää alle viidentoista '
+                  + 'asteen, ja tuuli tulee mereltä.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade jakautuu tasaisesti',
+                teksti: 'Kuivin kuukausi on huhtikuu, 54 millimetriä, '
+                  + 'ja märin lokakuu, 81. Yksikään kuukausi ei jää '
+                  + 'kuivaksi, joten takki kannattaa aina.',
+              },
+              {
+                otsikko: 'Elokuu on ruuhkaisin',
+                teksti: 'Elokuussa kaupunki on täynnä ja majoitus '
+                  + 'kalleimmillaan. Kesäkuu ja syyskuu ovat sama sää '
+                  + 'ilman ruuhkaa.',
+              },
+              {
+                otsikko: 'Mäkiä on paljon',
+                teksti: 'Vanhakaupunki on rakennettu harjanteelle, ja '
+                  + 'kujat nousevat portaina. Hyvät kengät ovat '
+                  + 'tarpeen.',
+              },
+              {
+                otsikko: 'Raitiotie vie kentältä satamaan',
+                teksti: 'Yksi linja yhdistää lentokentän, keskustan ja '
+                  + 'Leithin sataman. Matka kentältä keskustaan kestää '
+                  + 'noin puoli tuntia.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–syyskuu: päivät ovat pitkiä '
+              + 'ja lämpötila viidentoista ja kahdeksantoista välillä. '
+              + 'Elokuu on ruuhkaisin ja kallein kuukausi, joten '
+              + 'kesäkuu ja syyskuu ovat rauhallisempia vaihtoehtoja '
+              + 'samalla säällä. Lokakuu on vuoden sateisin kuukausi, '
+              + 'ja talvella päivä on lyhyt mutta harvoin pakkasella.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '3–14 °C',
+                kuvaus: 'Lämpenee hitaasti mutta on vuoden kuivin '
+                  + 'jakso: huhtikuussa vettä tulee vain viisi ja '
+                  + 'puoli senttiä. Toukokuussa päivä yltää '
+                  + 'neljääntoista asteeseen.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '9–18 °C',
+                kuvaus: 'Viileä kesä: heinäkuun keskilämpö on alle '
+                  + 'viisitoista astetta. Elokuu on kesän sateisin '
+                  + 'kuukausi ja samalla se, jolloin kaupunki on '
+                  + 'täysimmillään.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '4–15 °C',
+                kuvaus: 'Syyskuu on vielä leuto ja verrattain kuiva. '
+                  + 'Lokakuu on vuoden sateisin kuukausi, yli kahdeksan '
+                  + 'senttiä, ja marraskuussa päivä lyhenee nopeasti.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '2–6 °C',
+                kuvaus: 'Merellinen ja leuto: pakkasta on harvoin ja '
+                  + 'lumi sulaa yleensä nopeasti. Sadetta tulee noin '
+                  + 'seitsemän senttiä kuukaudessa.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Edinburgh Trams',
+                url: 'https://edinburghtrams.com/',
+              },
+              {
+                nimi: 'Wikivoyage: Edinburgh',
+                url: 'https://fi.wikivoyage.org/wiki/Edinburgh',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Kutsumattomat perustivat festivaalin',
@@ -7535,6 +7924,198 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Paul Mannix, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kilátás a Gellérthegyről Pest és az épülő Déli összekötő vasúti híd felé, 1876 körül - Budapest, Fortepan 82207.jpg',
+          selite: 'Valokuva noin vuodelta 1876: Gellértinvuoren rinteeltä avautuu näkymä Tonavalle ja sen takana levittäytyvälle matalalle kaupungille. Kalliolla seisoo silinterihattuinen mies selin kameraan. Kuva on liimattu koristereunuksiselle kartongille.',
+          lahde: 'Budapest Főváros Levéltára / Fortepan, Wikimedia Commons (PD)',
+        },
+        kappale: 'Budapest on nuorempi kuin miltä näyttää. Buda, Óbuda ja '
+          + 'Pest olivat kolme eri kaupunkia, jotka yhdistettiin '
+          + 'Budapestiksi vasta 17. marraskuuta 1873 — samana vuonna, '
+          + 'jolta isoisän matkapäiväkirja on. Tonavan länsipuoli nousee '
+          + 'kukkuloille, itäpuoli leviää tasangolle.',
+        artikkeli: {
+          nimi: 'Matkailijan Budapest',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka syntyi kolmesta kaupungista vuonna '
+            + '1873 — ja jonka korkeusero on yli neljäsataa metriä.',
+          nosto: 'Ensimmäinen raunioravintola avattiin 2002 '
+            + 'purku-uhan alla olleeseen pihapiiriin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä on noin kuudentoista kilometrin '
+                + 'päässä keskustasta kaakkoon, ja se nimettiin '
+                + 'säveltäjä Ferenc Lisztin mukaan vuonna 2011. Vuonna '
+                + '2024 sen kautta kulki 17,6 miljoonaa matkustajaa. '
+                + 'Metrossa on neljä linjaa, 52 asemaa ja 39 kilometriä '
+                + 'raidetta, ja matkoja tehtiin 2023 yhteensä 383 '
+                + 'miljoonaa. Saman lipun alla kulkee yli kaksisataa '
+                + 'bussilinjaa ja 33 raitiolinjaa.',
+              kuva: { tiedosto: 'Budapest, M4 metró, Fővám tér, 10.jpg', selite: 'Tyhjä metrolaituri holvikaton alla: vasemmalla nousee liukuporras punatiilisen kaarevan seinän vierestä, ja katosta riippuu iso valkoinen kello. Oikealla on tunnelin suu ja vihreä näyttö, joka kertoo seuraavaan junaan olevan neljä ja puoli minuuttia.', lahde: 'Random photos 1989, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Kaksi puolta ja 23 piiriä',
+              teksti: 'Buda on rakennettu joenrantaterasseille ja '
+                + 'kukkuloille, Pest levittäytyy tasaiselle '
+                + 'hiekkatasangolle. Korkeusero on iso: János-vuori on '
+                + '527 metrissä ja Tonavan pinta 96:ssa. Kaupungin '
+                + 'pinta-ala on 525 neliökilometriä ja asukkaita noin '
+                + '1,7 miljoonaa. Piirejä on 23, ja ne numeroidaan '
+                + 'roomalaisin numeroin — järjestelmä on peräisin '
+                + 'vuodelta 1873, jolloin piirejä oli kymmenen.',
+            },
+            {
+              otsikko: 'Raunioravintola on oma keksintönsä',
+              teksti: 'Ensimmäinen raunioravintola avattiin vuonna 2002 '
+                + 'vanhaan pihapiiriin, ja kaksi vuotta myöhemmin se '
+                + 'muutti nykyiselle paikalleen, kun neljä omistajaa '
+                + 'pelasti purku-uhan alla olleen talon. Sisustus on '
+                + 'kerätty siitä, mitä tiloissa oli valmiina tai mitä '
+                + 'muualta löytyi. Virallinen kapasiteetti on '
+                + 'kuusisataa henkeä, mutta illan aikana kävijöitä voi '
+                + 'olla tuhansia.',
+              kuva: { tiedosto: 'Budapest Szimpla Kert (54176243453).jpg', selite: 'Raunioravintolan sisätila punaisessa ja sinisessä valossa: seinät ja katto ovat täynnä metalliromua, johtoja, vanhoja televisioita ja kylttejä. Etualalla on rivi korkeita baarijakkaroita ja pyöreitä pöytiä, ja vasemmalla istuu kaksi asiakasta selin kameraan.', lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)' },
+            },
+            {
+              otsikko: 'Kolmesta kaupungista yksi vuonna 1873',
+              teksti: 'Yhdistyminen 17. marraskuuta 1873 seurasi vuoden '
+                + '1867 sopimusta, joka teki Budapestista '
+                + 'kaksoismonarkian toisen pääkaupungin. Jo 1870 oli '
+                + 'perustettu erillinen rakennusneuvosto suunnittelemaan '
+                + 'uutta kaupunkia, ja mallia otettiin Pariisista: '
+                + 'tuolta ajalta on esimerkiksi Iso kehätie. Kasvu oli '
+                + 'nopeaa — unkarinkielisten osuus väestöstä nousi '
+                + 'vuosien 1851 ja 1910 välillä 36 prosentista 86:een.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Vuodenajat erottuvat jyrkästi. Talvi on kylmä: '
+                + 'tammikuun yö on kolme astetta pakkasella ja päivä '
+                + 'kolme lämpimällä. Kesä on lämmin, heinäkuussa '
+                + 'kaksikymmentäseitsemän astetta, ja samalla vuoden '
+                + 'sateisin jakso — kesä- ja heinäkuussa vettä tulee '
+                + 'runsaat seitsemän senttiä kuussa, usein äkillisinä '
+                + 'kuuroina. Aurinkoa paistaa lähes kaksituhatta tuntia '
+                + 'vuodessa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kylpylät',
+                tahdet: 3,
+                selite: 'Lämpimiä lähteitä on kaupungin alla, ja '
+                  + 'kylpylät ovat auki ympäri vuoden.',
+              },
+              {
+                mita: 'Näköalat',
+                tahdet: 3,
+                selite: 'Budan puoli nousee yli neljäsataa metriä joen '
+                  + 'pinnan yläpuolelle.',
+              },
+              {
+                mita: 'Yöelämä',
+                tahdet: 3,
+                selite: 'Raunioravintolat ovat oma budapestilainen '
+                  + 'keksintönsä eivätkä muistuta muiden kaupunkien '
+                  + 'baareja.',
+              },
+              {
+                mita: 'Julkinen liikenne',
+                tahdet: 3,
+                selite: 'Neljä metrolinjaa, 33 raitiolinjaa ja yli '
+                  + 'kaksisataa bussilinjaa samalla lipulla.',
+              },
+              {
+                mita: 'Talvisää',
+                tahdet: 1,
+                selite: 'Tammi- ja helmikuussa yöt ovat pakkasella ja '
+                  + 'päivä jää muutamaan asteeseen.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu kesään',
+                teksti: 'Kesä- ja heinäkuu ovat vuoden sateisimmat '
+                  + 'kuukaudet, kumpikin 72 millimetriä. Kuivinta on '
+                  + 'tammi- ja helmikuussa, 36 millimetriä.',
+              },
+              {
+                otsikko: 'Mäkeä on vain toisella puolella',
+                teksti: 'Pestin puoli on tasaista ja helppoa kävellä, '
+                  + 'Budan puoli nousee jyrkästi. Kukkuloille pääsee '
+                  + 'myös vaunulla ja bussilla.',
+              },
+              {
+                otsikko: 'Piirin numero kertoo paikan',
+                teksti: 'Osoitteissa käytetään roomalaisia numeroita '
+                  + 'I–XXIII. Numero kertoo heti, kummalla puolella '
+                  + 'jokea ollaan ja kuinka kaukana keskustasta.',
+              },
+              {
+                otsikko: 'Kesällä ukkostaa',
+                teksti: 'Kesäsateet tulevat usein äkillisinä ja '
+                  + 'rankkoina kuuroina. Ne menevät yleensä yhtä '
+                  + 'nopeasti ohi kuin tulevatkin.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syys–lokakuu: '
+              + 'lämpötila on kahdenkymmenen ja kahdenkymmenenviiden '
+              + 'välillä, ja syksy on vähäsateisempi kuin kesä. Heinä- '
+              + 'ja elokuu ovat kuumimmat ja sateisimmat. Talvi on '
+              + 'kylmä ja luminen, mutta kylpylät ovat silloin '
+              + 'parhaimmillaan.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '1–22 °C',
+                kuvaus: 'Lämpenee nopeasti ja vaihtelevasti: '
+                  + 'maaliskuussa yöt ovat vielä nollan tuntumassa, '
+                  + 'toukokuussa päivä on jo kahdenkymmenenkahden '
+                  + 'asteen tienoilla.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '16–27 °C',
+                kuvaus: 'Lämmin ja vuoden sateisin jakso. Kesä- ja '
+                  + 'heinäkuussa vettä tulee 72 millimetriä, usein '
+                  + 'äkillisinä ukkoskuuroina.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '3–22 °C',
+                kuvaus: 'Syyskuu on lämmin ja jo selvästi kuivempi '
+                  + 'kuin kesä. Marraskuussa päivälämpötila laskee '
+                  + 'yhdeksään asteeseen.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-3–5 °C',
+                kuvaus: 'Kylmä ja vuoden kuivin jakso: tammi- ja '
+                  + 'helmikuussa vettä tulee vain 36 millimetriä. '
+                  + 'Lunta sataa usein.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'BKK — Budapestin joukkoliikenne',
+                url: 'https://bkk.hu/en/',
+              },
+              {
+                nimi: 'Wikivoyage: Budapest',
+                url: 'https://fi.wikivoyage.org/wiki/Budapest',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Shakkia lämpimässä altaassa',
