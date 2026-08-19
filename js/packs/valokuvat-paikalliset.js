@@ -203,4 +203,5 @@ export const VALOKUVAT_PAIKALLISET = new Map([
   ["flickr-51334303085.jpg", 'flickr-51334303085.jpg'],
   ["flickr-54125112487.jpg", 'flickr-54125112487.jpg'],
   ["flickr-54184684642.jpg", 'flickr-54184684642.jpg'],
+  ["flickr-45028823084.jpg", 'flickr-45028823084.jpg'],
 ]);

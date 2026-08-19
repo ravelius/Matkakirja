@@ -95,6 +95,10 @@ export const VALOKUVAT_FLICKR = new Map([
   ['flickr-44774108052.jpg', { osoite: 'https://live.staticflickr.com/1855/44774108052_269059b34c', sivu: 'https://www.flickr.com/photos/franckmichel/44774108052', tekija: 'Franck Michel', lisenssi: 'CC BY 2.0' }],
   ['flickr-45493688424.jpg', { osoite: 'https://live.staticflickr.com/4867/45493688424_42f5547742', sivu: 'https://www.flickr.com/photos/franckmichel/45493688424', tekija: 'Franck Michel', lisenssi: 'CC BY 2.0' }],
   ['flickr-50101388983.jpg', { osoite: 'https://live.staticflickr.com/65535/50101388983_82b6d65c5f', sivu: 'https://www.flickr.com/photos/stevehfung/50101388983', tekija: 'Steve FUNG', lisenssi: 'CC BY-SA 2.0' }],
+  // Lissabon (19.8.2026): Commonsissa ei ole yhtään ratikkakuvaa ilman
+  // tunnistettavia ihmisiä, joten kuva on haettu Flickristä
+  // (docs/tuotantosuunnitelma.md 11.3: Flickr = nykykatukuvat).
+  ['flickr-45028823084.jpg', { osoite: 'https://live.staticflickr.com/1950/45028823084_1a7f979d51', sivu: 'https://www.flickr.com/photos/31176607@N05/45028823084', tekija: 'Michael Kuhn', lisenssi: 'CC BY 2.0' }],
 ]);
 
 /**
