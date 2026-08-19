@@ -241,10 +241,23 @@ Nämä kolme ovat se hinta, joka ämpärisiirrossa maksetaan.
 
 ### Mitä teen sillä välin ilman päätöstä
 
-Pidän loput Lähi-idän ja Aasian lehdet pelkästään Commonsissa, jolloin
-repoon ei tule yhtään uutta valokuvaa. Mittasin Commonsin katteen
-kaikille jäljellä oleville Lähi-idän kohteille: kelvollisia osumia on
-26–48 per haku (Persepolis 47, Mekka 48, Jerusalem 42, Ruba al-Khali
-42, Salalah 42, Medina 41, Sana 37, Aden 37, Siinai 26). Flickriä ei
-siis todennäköisesti tarvita lainkaan, eli uusia paikallisia kopioita
-ei synny.
+TÄMÄ KOHTA ON KORJATTU 19.8.2026. Kirjasin ensin, että pitäisin loput
+lehdet pelkästään Commonsissa, jotta repoon ei tulisi uusia kuvia.
+Omistaja linjasi heti perään toisin: "Käytä vain flickeriä jos siellä
+on parempia kuvia." Laatu ratkaisee siis kuvavalinnan, ei repon paino.
+Noudatan sitä.
+
+Käytännön sääntö on nyt: Commons ensin, koska se ei vie repoon mitään,
+mutta jos jollekin kuvapaikalle löytyy Flickristä AIDOSTI parempi kuva,
+se otetaan — ja silloin syntyy paikallinen kopio. Repon paino ei ole
+peruste hylätä parempaa kuvaa.
+
+Mittasin Commonsin katteen kaikille jäljellä oleville Lähi-idän
+kohteille: kelvollisia osumia on 26–48 per haku (Persepolis 47, Mekka
+48, Jerusalem 42, Ruba al-Khali 42, Salalah 42, Medina 41, Sana 37,
+Aden 37, Siinai 26). Kate riittää, mutta se on määrä eikä laatu — jos
+Commonsin osumat ovat esimerkiksi täynnä ihmisiä tai vesileimoja niin
+kuin İzmirissä kävi, Flickr on yhä oikea vastaus.
+
+Ämpärikysymys on siis edelleen sinun päätettäväsi, ja siitä tulee
+sitäkin ajankohtaisempi, koska Flickr-reitti pysyy käytössä.
