@@ -6798,6 +6798,200 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Visions of Domino, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Marseille (France) former hospital La Vielle Charité, church and arcades.JPG',
+          selite: 'Vaaleasta kivestä muurattu kappeli kupoleineen seisoo keskellä laattapihaa. Sitä kiertää kolmikerroksinen kaariholvikäytävä, ja pihalla on rivi oliivipuita isoissa saviruukuissa. Taivaalla on repaleisia valkoisia pilviä.',
+          lahde: 'Philippe Alès, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Marseille on Ranskan vanhin kaupunki mutta ei sen '
+          + 'siistein: se on kasvanut kerroksittain, ja sen 16 '
+          + 'kaupunginosaa ovat kuin eri kaupunkeja. Yhteen niistä '
+          + 'kuuluu kansallispuisto. Ja kaupungin tunnetuin vientituote '
+          + 'ei ole ruokaa vaan saippuaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Marseille',
+          taitto: 'opas',
+          teksti: 'Saippuakaupunki, joka menetti puolet väestöstään '
+            + 'yhdessä kesässä — ja jonka tuuli puhaltaa sadan '
+            + 'kilometrin tuntinopeudella.',
+          nosto: 'Vuonna 1913 kaupungissa keitettiin 180 000 tonnia '
+            + 'saippuaa; vuonna 2023 alkuperäisiä valmistajia oli '
+            + 'jäljellä neljä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä on Marignanessa 27 kilometriä '
+                + 'keskustasta luoteeseen, ja se avattiin 22. '
+                + 'lokakuuta 1922. Vuonna 2023 sen kautta kulki 10,8 '
+                + 'miljoonaa matkustajaa — Ranskan viidenneksi eniten. '
+                + 'Kentän vieressä on oma juna-asemansa. Kaupungin '
+                + 'metron ensimmäinen linja avattiin 26. marraskuuta '
+                + '1977 ja toinen 1984. Linjoja on kaksi, rataa 22,7 '
+                + 'kilometriä ja asemia 31.',
+              kuva: { tiedosto: 'Marseille-Metro-ligne-1-La-Fourragere-station-vue-vers-tunnel.jpg', selite: 'Metroaseman laituri ja raiteet vielä tyhjinä: betonipalkkikatto, keltaiset valonauhat ja raiteiden reunassa punaisia muoviaitoja. Perällä näkyy tunnelin suu, oikealla liukuportaat ja vihreä opastekyltti.', lahde: 'Revolutionjoyeuse, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Kuudessatoista osassa',
+              teksti: 'Marseille jakautuu kuuteentoista kunnalliseen '
+                + 'kaupunginosaan, jotka on ryhmitelty kahdeksaksi '
+                + 'sektoriksi; epävirallisia kortteleita tunnistetaan '
+                + '111. Väkirikkain on kolmastoista ja pinta-alaltaan '
+                + 'suurin yhdeksäs, johon kuuluu kokonainen '
+                + 'kansallispuisto. Vanhimmassa kaupunginosassa seisoo '
+                + 'entinen köyhäintalo, jonka peruskivi laskettiin 1641 '
+                + 'ja joka rakennettiin pääosin 1671–1749. Se on ollut '
+                + 'suojeltu monumentti vuodesta 1951.',
+            },
+            {
+              otsikko: 'Saippuaa kuudensadan vuoden ajan',
+              teksti: 'Marseillessa on keitetty saippuaa noin '
+                + 'kuudensadan vuoden ajan; vanhin tunnettu valmistaja '
+                + 'on 1370-luvulta. Vuonna 1688 annettu asetus rajasi '
+                + 'nimen koskemaan vain oliiviöljypohjaista saippuaa. '
+                + 'Perinteinen resepti on merivettä, oliiviöljyä ja '
+                + 'merikasveista saatua tuhkaa, keitettynä isoissa '
+                + 'padoissa. Valmistus kestää kahdesta viikosta '
+                + 'kuukauteen: massa keitetään, leikataan, leimataan ja '
+                + 'kovetetaan.',
+              kuva: { tiedosto: 'Marseiller Seife.jpg', selite: 'Kaksi kuutionmuotoista oliivinvihreää saippuapalaa valkoisella pinnalla. Vasemmanpuoleiseen on painettu pyöreitä leimoja tekstein, oikeanpuoleinen on kääritty kalvoon ja siinä on sinivalkoinen etiketti.', lahde: 'Simon A. Eugster, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Kesä 1720',
+              teksti: 'Toukokuussa 1720 satamaan saapui kauppa-alus, '
+                + 'joka oli käynyt ruttoisella Kyproksella. Seuraavien '
+                + 'kahden vuoden aikana kaupungissa kuoli '
+                + 'kolmestakymmenestä neljäänkymmeneen tuhatta ihmistä '
+                + 'ja ympäröivällä alueella vielä enemmän. Kaupunki '
+                + 'perusti terveyslautakunnan ja karanteeniasemia, '
+                + 'joissa eristys kesti 18–60 vuorokautta, ja koko '
+                + 'Provencen halki pystytettiin vartioitu ruttomuuri. '
+                + 'Väkiluku palautui vasta 1765.',
+            },
+            {
+              otsikko: 'Tuuli, jolla on oma nimi',
+              teksti: 'Mistraali on kylmä ja kuiva luoteistuuli, joka '
+                + 'syntyy Rhônen laaksossa. Se puhaltaa useimmin '
+                + 'talvella ja keväällä, tyypillisesti '
+                + 'viidenkymmenen kilometrin tuntinopeudella ja '
+                + 'puuskissa jopa sadan. Se voi kestää parista päivästä '
+                + 'yli viikkoon. Sade painottuu syksyyn: syys–marraskuu '
+                + 'tuo kaksi viidesosaa vuoden vedestä, kun heinäkuussa '
+                + 'sitä tulee vain neljätoista millimetriä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Meri ja kalliot',
+                tahdet: 3,
+                selite: 'Kansallispuiston kalliolahdet alkavat '
+                  + 'kaupungin rajojen sisältä.',
+              },
+              {
+                mita: 'Kesän kuivuus',
+                tahdet: 3,
+                selite: 'Heinäkuussa sataa neljätoista millimetriä — '
+                  + 'käytännössä ei lainkaan.',
+              },
+              {
+                mita: 'Kaupunginosat',
+                tahdet: 3,
+                selite: 'Kuusitoista kaupunginosaa ovat keskenään hyvin '
+                  + 'erilaisia, eikä yksi päivä riitä.',
+              },
+              {
+                mita: 'Julkinen liikenne',
+                tahdet: 2,
+                selite: 'Metrolinjoja on vain kaksi, joten osa matkoista '
+                  + 'kulkee bussilla.',
+              },
+              {
+                mita: 'Tyyni sää',
+                tahdet: 1,
+                selite: 'Mistraali voi puhaltaa päiväkausia sadan '
+                  + 'kilometrin puuskissa.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu syksyyn',
+                teksti: 'Marraskuu on vuoden sateisin kuukausi, 91 '
+                  + 'millimetriä, ja heinäkuu kuivin, 14. Syys–marraskuu '
+                  + 'tuo kaksi viidesosaa koko vuoden sateesta.',
+              },
+              {
+                otsikko: 'Mistraali muuttaa lämpötilan',
+                teksti: 'Tuulisena päivänä lämpötila tuntuu selvästi '
+                  + 'mitattua kylmemmältä. Tuulitakki kannattaa myös '
+                  + 'keväällä.',
+              },
+              {
+                otsikko: 'Lentokentältä juna',
+                teksti: 'Kentän vieressä on oma juna-asemansa, jolta '
+                  + 'pääsee keskustaan. Bussi yhdistää terminaalin '
+                  + 'asemaan.',
+              },
+              {
+                otsikko: 'Kaupunginosa kertoo hinnan',
+                teksti: 'Kaupunginosien välillä on isoja eroja. '
+                  + 'Majoitusta kannattaa etsiä kaupunginosan eikä '
+                  + 'pelkän etäisyyden perusteella.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenenviiden tienoilla, meri on '
+              + 'lämmin eikä sadetta juuri ole. Heinä- ja elokuu ovat '
+              + 'kuumimmat ja täysimmät. Loka- ja marraskuu ovat vuoden '
+              + 'sateisimmat. Talvi on leuto mutta mistraalin aikaa.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '8–21 °C',
+                kuvaus: 'Lämpenee nopeasti, mutta mistraali puhaltaa '
+                  + 'yhä. Huhtikuu on kevään sateisin kuukausi, noin '
+                  + 'kuusi ja puoli senttiä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '18–28 °C',
+                kuvaus: 'Kuuma ja lähes sateeton: heinäkuussa vettä '
+                  + 'tulee neljätoista millimetriä ja elokuussa '
+                  + 'kaksikymmentäkaksi.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '9–24 °C',
+                kuvaus: 'Vuoden sateisin jakso: kolme kuukautta tuo '
+                  + 'kaksi viidesosaa koko vuoden vedestä. Syyskuu on '
+                  + 'silti vielä lämmin.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '5–11 °C',
+                kuvaus: 'Leuto eikä pakkasta ole normaaleissa. '
+                  + 'Mistraali puhaltaa useimmin juuri talvella ja '
+                  + 'kevään alussa.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'RTM — Marseillen joukkoliikenne',
+                url: 'https://www.rtm.fr/',
+              },
+              {
+                nimi: 'Wikivoyage: Marseille',
+                url: 'https://fi.wikivoyage.org/wiki/Marseille',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Vesimalja perusti kaupungin',
@@ -7736,6 +7930,196 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Alberto-g-rovi, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Gran Vía de Colón (2973320148).jpg',
+          selite: 'Leveä suora bulevardi hämärissä: molemmin puolin nousee viisikerroksisia koristeellisia julkisivuja parvekkeineen, ja katua reunustavat korkeat lyhtypylväät ja nuoret puut. Kadun päässä taivas on vielä vaalea.',
+          lahde: 'monicat81, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Granadan pääkatu ei ole vanha. Se murrettiin vanhan '
+          + 'kaupungin läpi vuosina 1895–1934, ja työ vaati '
+          + 'viidesosan silloisen vanhankaupungin purkamista. '
+          + 'Kaupunki on 738 metrin korkeudessa noin viidenkymmenen '
+          + 'kilometrin päässä merestä, ja se on ennen kaikkea '
+          + 'opiskelijakaupunki.',
+        artikkeli: {
+          nimi: 'Matkailijan Granada',
+          taitto: 'opas',
+          teksti: 'Pääkatu maksoi viidesosan vanhastakaupungista — ja '
+            + 'yliopistossa on yli 60 000 opiskelijaa.',
+          nosto: 'Nopea junayhteys Madridiin avattiin vasta kesäkuussa '
+            + '2019.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Raitiotie avattiin 21. syyskuuta 2017. Linja on '
+                + 'lähes kuusitoista kilometriä pitkä, siinä on 26 '
+                + 'asemaa ja kolme keskustan asemaa on maan alla. '
+                + 'Vuonna 2025 matkoja tehtiin noin 17 miljoonaa. '
+                + 'Lentokenttä on viidentoista kilometrin päässä '
+                + 'lännessä, kaukana kaupungista, ja se nimettiin '
+                + 'runoilija Federico García Lorcan mukaan 2006. Nopea '
+                + 'junayhteys Madridiin avattiin vasta kesäkuussa 2019.',
+              kuva: { tiedosto: 'Metro de Granada por Maracena.jpg', selite: 'Vihreävalkoinen matalalattiaraitiovaunu ajaa katua pitkin aurinkoisena talvipäivänä. Vasemmalla on punatiilisiä kerrostaloja parvekkeineen, oikealla kiskot jatkuvat kadun keskellä ja taustalla näkyy havupuita.', lahde: 'Lopezsuarez, Wikimedia Commons (CC0)' },
+            },
+            {
+              otsikko: 'Katu, joka murrettiin läpi',
+              teksti: 'Granadan pääkatu Gran Vía de Colón rakennettiin '
+                + 'vuosina 1895–1934 kauppakamarin tilauksesta. Työ '
+                + 'vaati viidesosan silloisen vanhankaupungin '
+                + 'pinta-alasta purkamista, ja kadun varrelle nousi 52 '
+                + 'uutta rakennusta. Vastapainoksi kaupungin '
+                + 'väkirikkain kaupunginosa Zaidín syntyi vasta 1953 '
+                + 'alkaen noin kolme kilometriä keskustasta etelään. '
+                + 'Sen nimi juontuu arabiasta.',
+            },
+            {
+              otsikko: 'Yliopisto vuodelta 1531',
+              teksti: 'Granadan yliopisto perustettiin 1531 Kaarle '
+                + 'V:n toimesta entisen koraanikoulun paikalle. '
+                + 'Opiskelijoita on yli kuusikymmentätuhatta, mikä '
+                + 'tekee siitä Espanjan neljänneksi suurimman. '
+                + 'Kielikeskuksen kautta saapuu vuosittain yli '
+                + 'kymmenentuhatta ulkomaista opiskelijaa. Kampuksia on '
+                + 'seitsemän: viisi Granadassa sekä Ceutassa ja '
+                + 'Melillassa Pohjois-Afrikan puolella.',
+            },
+            {
+              otsikko: 'Elokuu 1936',
+              teksti: 'Runoilija Federico García Lorca syntyi 5. '
+                + 'kesäkuuta 1898 Fuente Vaquerosissa, noin '
+                + 'seitsemäntoista kilometriä Granadasta länteen. '
+                + 'Sisällissodan alettua hänet pidätettiin ja '
+                + 'surmattiin elokuussa 1936; lähteet ilmoittavat '
+                + 'päivämääräksi 16., 18. tai 19. elokuuta. Ruumista on '
+                + 'etsitty tuloksetta kolmesti 2000-luvulla. Perheen '
+                + 'kesähuvila avattiin museoksi 1995, ja sen ympärillä '
+                + 'oleva puisto on nimetty hänen mukaansa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Korkeus ja sisämaan sijainti tekevät ilmastosta '
+                + 'mannermaisemman kuin rannikolla: heinä- ja '
+                + 'elokuussa päivä nousee 33 asteeseen, tammikuussa '
+                + 'yöt käyvät nollassa. Ennätykset ovat 46 astetta '
+                + 'elokuussa ja 14 pakkasastetta tammikuussa. Kesä on '
+                + 'lähes sateeton, heinäkuussa vain seitsemän '
+                + 'millimetriä, ja sade painottuu talveen ja kevääseen.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Keskusta on tiivis, ja mäet palkitsevat '
+                  + 'näköaloilla.',
+              },
+              {
+                mita: 'Hinnat',
+                tahdet: 3,
+                selite: 'Opiskelijakaupungin hintataso on selvästi '
+                  + 'matalampi kuin rannikon lomakohteissa.',
+              },
+              {
+                mita: 'Kevät ja syksy',
+                tahdet: 3,
+                selite: 'Huhtikuu ja lokakuu ovat lämpimiä mutta eivät '
+                  + 'polttavia.',
+              },
+              {
+                mita: 'Raitiotie',
+                tahdet: 2,
+                selite: 'Yksi linja kattaa pohjois–eteläsuunnan, mutta '
+                  + 'ei kaikkia kaupunginosia.',
+              },
+              {
+                mita: 'Kesähelle',
+                tahdet: 1,
+                selite: 'Heinä- ja elokuussa päivä nousee 33 asteeseen '
+                  + 'eikä sadetta tule käytännössä lainkaan.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kaupunki on korkealla',
+                teksti: '738 metrin korkeus tekee öistä viileitä myös '
+                  + 'kesällä ja talvista kylmempiä kuin rannikolla. '
+                  + 'Kerroksellinen vaatetus toimii.',
+              },
+              {
+                otsikko: 'Sade osuu talveen',
+                teksti: 'Maaliskuu on vuoden sateisin kuukausi, 66 '
+                  + 'millimetriä, ja heinäkuu kuivin, seitsemän. '
+                  + 'Vuodessa vettä tulee noin 530 millimetriä.',
+              },
+              {
+                otsikko: 'Lentokenttä on kaukana',
+                teksti: 'Kenttä on viidentoista kilometrin päässä '
+                  + 'lännessä. Moni tulee Granadaan mieluummin junalla '
+                  + 'tai bussilla Málagasta tai Madridista.',
+              },
+              {
+                otsikko: 'Opiskelijakausi näkyy',
+                teksti: 'Lukukausien aikana kaupunki on täynnä ja '
+                  + 'vilkas; heinä- ja elokuussa moni paikallinen on '
+                  + 'poissa ja osa palveluista kiinni.',
+              },
+            ],
+            parasAika: 'Paras aika on huhti–toukokuu tai loka–marraskuu: '
+              + 'lämpötila on kahdenkymmenen tienoilla eikä helle pakota '
+              + 'varjoon. Pääsiäisen kulkueet ovat kevään suurin '
+              + 'tapahtuma. Heinä- ja elokuu ovat kuumimmat ja '
+              + 'kuivimmat. Talvi on viileä, ja vuorilla on lunta '
+              + 'näköetäisyydellä.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '5–23 °C',
+                kuvaus: 'Maaliskuu on vuoden sateisin kuukausi, 66 '
+                  + 'millimetriä, mutta lämpenee nopeasti. '
+                  + 'Toukokuussa päivä on jo kahdessakymmenessä'
+                  + 'kolmessa asteessa.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '17–33 °C',
+                kuvaus: 'Kuuma ja lähes sateeton: heinäkuussa vettä '
+                  + 'tulee seitsemän millimetriä. Yöt viilenevät '
+                  + 'korkeuden takia.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '5–28 °C',
+                kuvaus: 'Syyskuu on vielä kesää, marraskuussa sade '
+                  + 'palaa ja päivä laskee viiteentoista asteeseen.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '1–14 °C',
+                kuvaus: 'Yöt ovat nollan tuntumassa ja päivät '
+                  + 'kymmenen paikkeilla. Joulukuu on maaliskuun '
+                  + 'ohella vuoden sateisimpia kuukausia.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Metropolitano de Granada',
+                url: 'https://metropolitanogranada.es/',
+              },
+              {
+                nimi: 'Wikivoyage: Granada (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Granada',
+              },
+            ],
+          },
+          lahde: 'Wikipedia (myös espanjankielinen)',
+        },
+      },
       nostot: [
         {
           otsikko: 'Palatsi, jota ei purettu',
@@ -11309,6 +11693,195 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Stone River in Vitosha 47.jpg',
+          selite: 'Leveä kivivirta kaartuu metsän halki: harmaita, pyöristyneitä lohkareita on maassa kymmenien metrien matkalla kuin jäätynyt joki. Molemmin puolin nousee syksyinen lehtimetsä keltaisena ja ruosteenruskeana.',
+          lahde: 'Gligan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Sofia on pääkaupunki, jonka kyljessä on 2 292 metriin '
+          + 'nouseva vuori. Sen rinteillä virtaa kivivirtoja: '
+          + 'jääkauden jättämiä lohkarejonoja, jotka näyttävät joilta '
+          + 'mutta ovat kiveä. Kaupunki itse oli vielä vuonna 1878 '
+          + 'noin 11 600 asukkaan maakuntakaupunki.',
+        artikkeli: {
+          nimi: 'Matkailijan Sofia',
+          taitto: 'opas',
+          teksti: 'Pääkaupunki, jossa oli 11 649 asukasta silloin kun '
+            + 'siitä tehtiin pääkaupunki.',
+          nosto: 'Vuonna 1878 Sofiassa asui 11 649 ihmistä; nyt heitä '
+            + 'on lähes 1,3 miljoonaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Metro avattiin 28. tammikuuta 1998, ja siinä on '
+                + 'nyt neljä linjaa, 50 asemaa ja 55 kilometriä rataa. '
+                + 'Vuonna 2024 matkoja tehtiin 123 miljoonaa eli noin '
+                + '516 000 päivässä. Lentokentän oma metroasema '
+                + 'avattiin 2. huhtikuuta 2015, ja keskustaan on sieltä '
+                + 'noin kaksikymmentä minuuttia. Lentokenttä on '
+                + 'kymmenen kilometriä itään, ja se vihittiin käyttöön '
+                + 'jo syyskuussa 1937.',
+              kuva: { tiedosto: 'Vitosha metro station, terminus platform.jpg', selite: 'Metron pääteaseman laituri: vaalean vihreä juna seisoo oikealla, ja laiturin lattiassa on kaksi isoa pyöreää mosaiikkikuviota vihreänä ja keltaisena. Katosta riippuu rivi leveitä kartionmuotoisia valaisimia.', lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Vuori kuuluu kaupunkiin',
+              teksti: 'Sofian kunta jakautuu 24 piiriin, ja siihen '
+                + 'kuuluu lisäksi kolme pikkukaupunkia ja 34 kylää. '
+                + 'Kaupungin eteläpuolella kohoava vuori rauhoitettiin '
+                + 'luonnonpuistoksi jo vuonna 1934 — se oli '
+                + 'ensimmäinen laatuaan koko Balkanilla. Puisto on '
+                + 'nykyään noin 266 neliökilometriä, ja sen korkein '
+                + 'huippu yltää 2 292 metriin. Ylös pääsee köysiradalla '
+                + 'ja tuolihissillä.',
+            },
+            {
+              otsikko: 'Keltaiset katukivet',
+              teksti: 'Keskustan pääväylillä katu on kellertävää '
+                + 'keraamista kiveä. Kivet laskettiin vuosina '
+                + '1907–1908, eikä niitä osattu silloin valmistaa '
+                + 'Bulgariassa: ne tuotiin Itävalta-Unkarista, '
+                + 'Budapestin lähellä sijainneesta tehtaasta. Raaka-'
+                + 'aineena oli kalkkipitoinen savi, joka poltettiin '
+                + 'noin 1 300 asteessa. Suurin osa jäljellä olevista '
+                + 'kivistä on parlamentin ja presidentinlinnan '
+                + 'välisellä bulevardilla.',
+            },
+            {
+              otsikko: 'Maakuntakaupungista pääkaupungiksi',
+              teksti: 'Sofiasta tuli Bulgarian pääkaupunki 1879, kun '
+                + 'historioitsija Marin Drinov ehdotti sitä Veliko '
+                + 'Tarnovon sijaan. Kaupunki oli tuolloin pieni: '
+                + 'vuonna 1878 asukkaita oli 11 649, kun heitä oli '
+                + '1700-luvun lopulla ollut noin 70 000 ja vuonna 1870 '
+                + 'enää 19 000. Kasvu alkoi vasta pääkaupungiksi '
+                + 'tulon jälkeen. Toisessa maailmansodassa '
+                + 'pommituksissa tuhoutui täysin 2 670 rakennusta.',
+              kuva: { tiedosto: 'Sofia sv Sophia 1878.jpg', selite: 'Puupiirros vuodelta 1878: vanha tiilikirkko seisoo puoliksi raunioituneena aukion laidalla, ja sen vieressä kohoaa kapea minareetti. Ympärillä on matalia puutaloja ja mukulakivinen aukio; etualalla kulkee lennätinlanka pylväineen.', lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)' },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Sofian sade painottuu kevääseen: toukokuu on '
+                + 'vuoden sateisin kuukausi 71 millimetrillä, ja '
+                + 'kuivimpia ovat elo- ja syyskuu, kumpikin 36. Kesä '
+                + 'on lämmin, elokuussa 27 astetta, ja talvi selvästi '
+                + 'pakkasen puolella. Korkea sijainti laaksossa näkyy '
+                + 'siinä, että vuorella on lunta pitkälle keväälle, '
+                + 'vaikka kaupungissa olisi jo lämmintä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vuori',
+                tahdet: 3,
+                selite: 'Luonnonpuisto alkaa kaupungin rajalta, ja '
+                  + 'ylös pääsee köysiradalla.',
+              },
+              {
+                mita: 'Metro',
+                tahdet: 3,
+                selite: 'Neljä linjaa ja 50 asemaa, ja lentokentälle '
+                  + 'pääsee suoraan keskustasta.',
+              },
+              {
+                mita: 'Hinnat',
+                tahdet: 3,
+                selite: 'Ruoka ja majoitus ovat Euroopan unionin '
+                  + 'edullisimpia.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 2,
+                selite: 'Keskusta on tiivis, mutta osa kaduista on '
+                  + 'liikenteen täyttämiä.',
+              },
+              {
+                mita: 'Talvisää',
+                tahdet: 1,
+                selite: 'Tammi- ja helmikuussa yöt ovat pakkasella ja '
+                  + 'päivä jää muutamaan asteeseen.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu kevääseen',
+                teksti: 'Toukokuu on vuoden sateisin kuukausi, 71 '
+                  + 'millimetriä. Kuivimpia ovat elo- ja syyskuu, '
+                  + 'kumpikin 36 — loppukesä on siis varma valinta.',
+              },
+              {
+                otsikko: 'Vuorella on oma säänsä',
+                teksti: 'Huipulla on yli 2 200 metriä korkeutta, joten '
+                  + 'lämpötila voi olla kymmenen astetta kaupunkia '
+                  + 'kylmempi. Lunta on pitkälle kevääseen.',
+              },
+              {
+                otsikko: 'Lentokentältä metrolla',
+                teksti: 'Metroasema on terminaalin vieressä, ja '
+                  + 'keskustaan on noin kaksikymmentä minuuttia. Se on '
+                  + 'halvin ja nopein tapa.',
+              },
+              {
+                otsikko: 'Katukivi kertoo iän',
+                teksti: 'Kellertävä keraaminen katukivi on '
+                  + '1900-luvun alusta. Se on liukas sateella, joten '
+                  + 'kengät kannattaa valita sen mukaan.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu, mutta '
+              + 'toukokuu on vuoden sateisin kuukausi — syyskuu on '
+              + 'varmempi valinta samalla lämmöllä. Heinä- ja elokuu '
+              + 'ovat kuumimmat mutta myös kuivimpia. Talvi on kylmä, '
+              + 'ja silloin vuori on hiihtokunnossa.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '0–21 °C',
+                kuvaus: 'Lämpenee nopeasti mutta on vuoden sateisin '
+                  + 'jakso: toukokuussa vettä tulee 71 millimetriä. '
+                  + 'Vuorella on vielä lunta.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '15–27 °C',
+                kuvaus: 'Lämmin ja kuivenee kohti loppukesää: '
+                  + 'kesäkuussa vettä tulee 62 millimetriä ja '
+                  + 'elokuussa enää 36.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '2–23 °C',
+                kuvaus: 'Syyskuu on lämmin ja vuoden kuivimpia. '
+                  + 'Marraskuussa päivä laskee kymmeneen asteeseen ja '
+                  + 'yöt lähelle nollaa.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-4–6 °C',
+                kuvaus: 'Pakkasen puolella ja verrattain kuiva. Vuori '
+                  + 'on hiihtokunnossa, ja kaupungissa lumi sulaa '
+                  + 'nopeammin kuin rinteillä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Sofian joukkoliikenne',
+                url: 'https://www.sofiatraffic.bg/en',
+              },
+              {
+                nimi: 'Wikivoyage: Sofia',
+                url: 'https://fi.wikivoyage.org/wiki/Sofia',
+              },
+            ],
+          },
+          lahde: 'Wikipedia; keltaisten katukivien tiedot Sofian kaupungin sivustolta',
+        },
+      },
       nostot: [
         {
           otsikko: 'Serdica on minun Roomani',
