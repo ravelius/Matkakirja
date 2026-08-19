@@ -12054,6 +12054,197 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Mihai Petre, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bucharest - Gara de Nord (2023) - img 04.jpg',
+          selite: 'Rautatieaseman edusta iltapäivällä: vaalea asemarakennus kellotorneineen levittäytyy taustalle, ja sen edessä suihkuaa matala suihkulähderivi. Etualalla odottaa jono keltaisia takseja, ja oikealla on metron sisäänkäynnin katos.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Bukarest on iso kaupunki, jonka nykyinen muoto on '
+          + 'nuori. Kaupunki '
+          + 'jaettiin kuuteen sektoriin vasta 1979, ja vuoden 1977 '
+          + 'maanjäristys muutti sekä rakennuskannan että '
+          + 'rakennusmääräykset pysyvästi.',
+        artikkeli: {
+          nimi: 'Matkailijan Bukarest',
+          taitto: 'opas',
+          teksti: 'Kaupunki kuudessa sektorissa — ja maanjäristys, '
+            + 'joka muutti rakennuskannan ja rakennusmääräykset.',
+          nosto: 'Vuoden 1977 järistyksessä Bukarestissa romahti noin '
+            + 'kolmekymmentäkolme suurta kerrostaloa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä on Otopenissa noin 16 kilometriä '
+                + 'keskustasta pohjoiseen, ja se on nimetty '
+                + 'ilmailupioneeri Henri Coandăn mukaan vuodesta 2004. '
+                + 'Vuonna 2025 sen kautta kulki 17 miljoonaa '
+                + 'matkustajaa. Metro avattiin 16. marraskuuta 1979; '
+                + 'siinä on viisi linjaa, 64 asemaa ja 80 kilometriä '
+                + 'rataa. Päärautatieaseman peruskivi laskettiin '
+                + 'syyskuussa 1868 ja asema avattiin 1872.',
+              kuva: { tiedosto: 'Grivița Metro Station, Bucharest, Romania - 1.jpg', selite: 'Täysin tyhjä metrolaituri suoraan päädystä kuvattuna: tummanpunaiset seinät kaartuvat molemmin puolin, katossa on musta ripakatto ja loisteputkirivit. Keskellä laituria on yksi punainen penkkirivi, ja perällä nousevat portaat ja liukuportaat.', lahde: 'Mihnea L, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Kuusi sektoria',
+              teksti: 'Bukarest jakautuu kuuteen hallinnolliseen '
+                + 'sektoriin, ja nykyinen jako syntyi 1979, kun '
+                + 'aiempi kahdeksan sektorin järjestelmä yhdistettiin. '
+                + 'Kullakin sektorilla on oma pormestari ja valtuusto, '
+                + 'jotka vastaavat muun muassa sivukaduista, puistoista '
+                + 'ja kouluista. Kaupungin pinta-ala on 270 '
+                + 'neliökilometriä. Asukastiheys vaihtelee jyrkästi: '
+                + 'tiheimmässä sektorissa se on yli kolminkertainen '
+                + 'väljimpään verrattuna.',
+            },
+            {
+              otsikko: 'Kaupungin kulkukoirat',
+              teksti: 'Kulkukoirien juuret ovat kommunistiajan '
+                + 'kaupunkiuudistuksessa: kun ihmisiä siirrettiin '
+                + 'omakotitaloista kerrostaloihin, lemmikkejä jäi '
+                + 'kaduille. Ongelma paheni 2004, kun aiempi laki '
+                + 'kumottiin. Uusi laki säädettiin syyskuussa 2013 '
+                + 'laajasti uutisoidun onnettomuuden jälkeen. Loka'
+                + 'kuun 2013 ja tammikuun 2015 välillä kaupungista '
+                + 'pyydystettiin yli 51 000 koiraa, ja niitä on sen '
+                + 'jälkeen välitetty adoptoitaviksi ulkomaille.',
+            },
+            {
+              otsikko: 'Maanjäristys maaliskuussa 1977',
+              teksti: 'Vrancean alueella tapahtui 4. maaliskuuta 1977 '
+                + 'illalla maanjäristys, jonka voimakkuudeksi eri '
+                + 'lähteet antavat 7,2:n ja 7,5:n väliltä. Romaniassa '
+                + 'kuoli 1 578 ihmistä, joista noin yhdeksänkymmentä '
+                + 'prosenttia Bukarestissa. Kaupungissa romahti noin '
+                + '33 suurta kerrostaloa, ja 35 000 perhettä jäi '
+                + 'välittömästi kodittomaksi. Järistyksen jälkeen '
+                + 'rakennusmääräyksiä tiukennettiin tuntuvasti.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Vuodenajat erottuvat jyrkästi: kesällä päivä '
+                + 'nousee 29 asteeseen ja talvella yöt käyvät viidessä '
+                + 'pakkasasteessa. Sade painottuu alkukesään — kesäkuu '
+                + 'on vuoden sateisin kuukausi 89 millimetrillä, kun '
+                + 'helmikuussa vettä tulee vain 34. Syyskuussa '
+                + 'järjestetään George Enescu -festivaali, joka '
+                + 'perustettiin 1958 ja on yksi Itä-Euroopan '
+                + 'suurimmista klassisen musiikin tapahtumista.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Hinnat',
+                tahdet: 3,
+                selite: 'Ruoka ja majoitus ovat Euroopan unionin '
+                  + 'edullisimpia.',
+              },
+              {
+                mita: 'Metro',
+                tahdet: 3,
+                selite: 'Viisi linjaa ja 64 asemaa kattavat keskustan '
+                  + 'ja lentokentän.',
+              },
+              {
+                mita: 'Puistot',
+                tahdet: 3,
+                selite: 'Kaupungissa on poikkeuksellisen paljon isoja '
+                  + 'puistoja, ja ne ovat maksuttomia.',
+              },
+              {
+                mita: 'Arkkitehtuuri',
+                tahdet: 2,
+                selite: 'Kerrostumia 1800-luvulta 1980-luvulle, mutta '
+                  + 'kokonaisuus on rikkonainen.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 1,
+                selite: 'Etäisyydet ovat pitkiä ja liikennettä paljon; '
+                  + 'metro on useimmiten parempi valinta.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu alkukesään',
+                teksti: 'Kesäkuu on vuoden sateisin kuukausi, 89 '
+                  + 'millimetriä, ja helmikuu kuivin, 34. Kesäsateet '
+                  + 'ovat usein ukkoskuuroja.',
+              },
+              {
+                otsikko: 'Lentokentältä keskustaan',
+                teksti: 'Kenttä on 16 kilometrin päässä pohjoisessa. '
+                  + 'Metro ja juna vievät keskustaan; taksissa '
+                  + 'kannattaa käyttää sovellusta.',
+              },
+              {
+                otsikko: 'Sektori on osoitteen osa',
+                teksti: 'Osoitteissa mainitaan lähes aina sektorin '
+                  + 'numero. Se kertoo heti, missä päin kaupunkia '
+                  + 'ollaan.',
+              },
+              {
+                otsikko: 'Koirat ovat osa katukuvaa',
+                teksti: 'Kulkukoiria on yhä, vaikka määrä on '
+                  + 'pienentynyt. Niitä ei kannata ruokkia eikä '
+                  + 'lähestyä.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenenviiden tienoilla. Kesäkuu '
+              + 'on lämmin mutta vuoden sateisin kuukausi, joten '
+              + 'syyskuu on varmempi — silloin on myös Enescu-'
+              + 'festivaali. Heinä- ja elokuu ovat kuumimmat. Talvi on '
+              + 'kylmä ja kuiva.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '1–23 °C',
+                kuvaus: 'Lämpenee nopeasti ja sade lisääntyy: '
+                  + 'maaliskuussa vettä tulee 47 millimetriä ja '
+                  + 'toukokuussa jo 71.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '17–29 °C',
+                kuvaus: 'Kuuma. Kesäkuu on vuoden sateisin kuukausi, '
+                  + '89 millimetriä, mutta elokuussa vettä tulee enää '
+                  + '49.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '2–24 °C',
+                kuvaus: 'Syyskuu on lämmin ja kohtalaisen kuiva. '
+                  + 'Marraskuussa päivälämpötila laskee kymmeneen '
+                  + 'asteeseen.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-5–6 °C',
+                kuvaus: 'Kylmä ja vuoden kuivin jakso: helmikuussa '
+                  + 'vettä tulee 34 millimetriä. Lunta sataa '
+                  + 'säännöllisesti.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Metrorex — Bukarestin metro',
+                url: 'https://metrorex.ro/en/',
+              },
+              {
+                nimi: 'Wikivoyage: Bukarest (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Bucharest',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Maailman painavin rakennus',
@@ -12228,6 +12419,203 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'sundeviljeff, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Vrelo Bosne, Sarajevo park.JPG',
+          selite: 'Kirkasvetinen lähdealtaan pinta hohtaa smaragdinvihreänä, ja pohjan kivet näkyvät läpi. Rantoja reunustaa tiheä kesäinen lehtimetsä, ja taustalla kaartuu pieni puinen kaarisilta veden yli.',
+          lahde: 'BiHVolim, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Sarajevo on rakennettu kapeaan jokilaaksoon 518 metrin '
+          + 'korkeuteen, ja sitä ympäröi viisi vuorta. Kaupungin '
+          + 'pääkadulla on jalkakäytävään upotettu viiva, joka merkitsee '
+          + 'kohdan, jossa ottomaaniajan kaupunki vaihtuu '
+          + 'itävaltalaiseen — kaksi kaupunkia yhden askeleen päässä '
+          + 'toisistaan.',
+        artikkeli: {
+          nimi: 'Matkailijan Sarajevo',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa kaksi arkkitehtuuria kohtaa yhdellä '
+            + 'kadunkulmalla — ja jonka kello näyttää yhä '
+            + 'auringonlaskun aikaa.',
+          nosto: 'Sahat-kulan kello asetetaan niin, että auringonlasku '
+            + 'on kaksitoista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Hevosvetoinen raitiotie avattiin '
+                + 'uudenvuodenpäivänä 1885, ja se toimi koekäytössä '
+                + 'ennen kuin vastaava otettiin käyttöön Wienissä. '
+                + 'Sähköistetty liikenne alkoi 1895. Alkuperäinen '
+                + 'raideleveys oli 760 millimetriä, ja se muutettiin '
+                + 'normaaliraiteeksi vasta 1960. Nykyään verkossa on '
+                + 'seitsemän linjaa ja 28 pysäkkiä. Vuonna 2021 '
+                + 'tilattiin viisitoista uutta vaunua, ja toimitukset '
+                + 'valmistuivat kesällä 2024.',
+            },
+            {
+              otsikko: 'Kaksi kaupunkia yhden viivan päässä',
+              teksti: 'Sarajevo on 518 metrin korkeudessa kapeassa '
+                + 'Miljacka-joen laaksossa, ja joki virtaa idästä '
+                + 'länteen kaupungin läpi. Ympärillä kohoaa viisi '
+                + 'vuorta, korkeimmillaan yli kahden kilometrin '
+                + 'korkeuteen. Ferhadija-kadulla jalkakäytävään on '
+                + 'upotettu messinkiviiva ja teksti Sarajevo Meeting of '
+                + 'Cultures: sen toisella puolella on matala '
+                + 'ottomaaniajan kaupunki, toisella suoraviivainen '
+                + 'itävaltalainen ruutukaava.',
+              kuva: { tiedosto: 'Buiobuione-Sarajevo-Meeting-of-Cultures-23-04-2018.jpg', selite: 'Jalkakäytävään upotettu vaalea kivinauha, jossa lukee suurin kirjaimin Sarajevo Meeting of Cultures. Viivan yli kulkee jalankulkijoita, joista näkyvät vain jalat ja pitkät varjot kirkkaassa auringossa.', lahde: 'Buiobuione, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Kello, joka seuraa aurinkoa',
+              teksti: 'Kaupungin vanha kellotorni Sahat-kula '
+                + 'rakennettiin 1500-luvun puolivälissä, ja se on 28 '
+                + 'metrin korkeudellaan Bosnia ja Hertsegovinan '
+                + 'korkein kellotorni. Se näyttää yhä vanhaa '
+                + 'ottomaanista aikaa: kello asetetaan niin, että '
+                + 'auringonlasku on kaksitoista. Koska päivän pituus '
+                + 'vaihtelee, mekanismia on säädettävä jatkuvasti. '
+                + 'Torni on maan kellotorneista ainoa, jota ei ole '
+                + 'muutettu eurooppalaiseen aikaan.',
+              kuva: { tiedosto: 'Sahat kula in Sarajevo 02.jpg', selite: 'Nelikulmainen harmaakivinen kellotorni kuvattuna alhaalta ylöspäin sinistä ja pilvistä taivasta vasten. Tornin yläosassa on kaksi kaari-ikkunaa ja niiden yllä pyöreä kellotaulu.', lahde: 'Adam Harangozó, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Tuhat neljäsataa kaksikymmentäviisi päivää',
+              teksti: 'Kaupunkia piiritettiin 5. huhtikuuta 1992 alkaen '
+                + '1 425 päivän ajan. Daytonin rauhansopimus '
+                + 'allekirjoitettiin 14. joulukuuta 1995, mutta '
+                + 'piiritys päättyi virallisesti vasta 29. helmikuuta '
+                + '1996. Lentokentän kiitotien alle kaivettiin keväällä '
+                + '1993 820 metrin tunneli, jota käytti päivittäin '
+                + 'tuhansia ihmisiä; se on nykyään museo. '
+                + 'Elokuvafestivaali perustettiin lokakuussa 1995 '
+                + 'kesken piirityksen.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Sarajevossa sataa paljon: vuodessa 1 100 '
+                + 'millimetriä, ja kuivinkin kuukausi ylittää '
+                + 'seitsemänkymmentä millimetriä. Toukokuu on märin, '
+                + '111 millimetriä. Vuodessa on keskimäärin 32 päivää '
+                + 'yli kolmenkymmenen asteen ja 83 päivää pakkasen '
+                + 'puolella. Aurinkoa paistaa lähes 1 900 tuntia. '
+                + 'Elokuussa on elokuvafestivaali, ja silloin on myös '
+                + 'vuoden kuivimpia jaksoja.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Kaksi eri aikakauden kaupunkia ovat '
+                  + 'vieretysten, ja rajan yli astuu yhdellä '
+                  + 'askeleella.',
+              },
+              {
+                mita: 'Vuoret',
+                tahdet: 3,
+                selite: 'Viisi vuorta ympäröi laaksoa, ja korkeimmat '
+                  + 'yltävät yli kahteen kilometriin.',
+              },
+              {
+                mita: 'Raitiovaunut',
+                tahdet: 3,
+                selite: 'Linja on Euroopan vanhimpia, avattu 1885, ja '
+                  + 'kulkee yhä laakson suuntaisesti.',
+              },
+              {
+                mita: 'Hinnat',
+                tahdet: 3,
+                selite: 'Ruoka ja majoitus ovat selvästi edullisempia '
+                  + 'kuin EU-maissa.',
+              },
+              {
+                mita: 'Kuiva sää',
+                tahdet: 1,
+                selite: 'Yksikään kuukausi ei jää alle seitsemänkymmenen '
+                  + 'millimetrin sateeseen.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadetta tulee joka kuukausi',
+                teksti: 'Toukokuu on märin, 111 millimetriä, ja '
+                  + 'kuivimmatkin kuukaudet tammi- ja elokuu saavat 74. '
+                  + 'Vuosisade on 1 100 millimetriä.',
+              },
+              {
+                otsikko: 'Laakso kerää ilmaa',
+                teksti: 'Kapea laakso pidättää talvella kylmää ilmaa ja '
+                  + 'savua. Kirkkaina pakkaspäivinä ilmanlaatu voi olla '
+                  + 'huono.',
+              },
+              {
+                otsikko: 'Kaupunki on kapea',
+                teksti: 'Sarajevo kulkee laakson suunnassa idästä '
+                  + 'länteen. Yksi raitiolinja vie käytännössä koko '
+                  + 'kaupungin läpi.',
+              },
+              {
+                otsikko: 'Lämpötila vaihtelee jyrkästi',
+                teksti: 'Vuodessa on keskimäärin 32 päivää yli '
+                  + 'kolmenkymmenen asteen ja 83 päivää pakkasella. '
+                  + 'Kerroksellinen vaatetus kannattaa.',
+              },
+            ],
+            parasAika: 'Paras aika on kesä–syyskuu: lämpötila on '
+              + 'kahdenkymmenenviiden tienoilla ja sade on vähäisimmillään '
+              + 'elokuussa. Toukokuu on kaunis mutta vuoden sateisin '
+              + 'kuukausi. Talvi on kylmä ja luminen, ja lähivuorilla '
+              + 'hiihdetään. Elokuun elokuvafestivaali täyttää kaupungin '
+              + 'viikoksi.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '0–20 °C',
+                kuvaus: 'Lämpenee tasaisesti mutta on sateinen: '
+                  + 'toukokuu on vuoden märin kuukausi, 111 '
+                  + 'millimetriä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '14–25 °C',
+                kuvaus: 'Lämmin ja kuivenee kohti elokuuta, jolloin '
+                  + 'vettä tulee 74 millimetriä — vuoden vähiten '
+                  + 'tammikuun ohella.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '2–22 °C',
+                kuvaus: 'Syyskuu on vielä lämmin ja verrattain kuiva. '
+                  + 'Marraskuussa sataa jo yli yhdeksän senttiä ja '
+                  + 'päivä laskee kymmeneen asteeseen.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-4–5 °C',
+                kuvaus: 'Kylmä ja luminen. Laaksoon kertyy kylmää '
+                  + 'ilmaa, ja pakkaspäiviä on vuodessa keskimäärin '
+                  + '83.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'GRAS — Sarajevon joukkoliikenne',
+                url: 'https://gras.ba/',
+              },
+              {
+                nimi: 'Wikivoyage: Sarajevo (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Sarajevo',
+              },
+            ],
+          },
+          lahde: 'Wikipedia; Ferhadijan messinkiviivan tiedot matkailulähteistä',
+        },
+      },
       nostot: [
         {
           otsikko: 'Silta, jolta maailma muuttui',
@@ -14043,6 +14431,196 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Dubrovnik Port Gruž (50247624561).jpg',
+          selite: 'Suojaisa lahti täynnä veneitä: laiturissa on rivi puisia retkialuksia punaisin ja sinisin kansirakentein, ja edessä keinuu purjeveneitä ankkurissa. Rinnettä nousee tiiviisti taloja, joiden katot ovat oranssinpunaista tiiltä.',
+          lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Muurien sisäpuolinen vanhakaupunki on vain pieni osa '
+          + 'Dubrovnikia. Koko kunnan pinta-ala on 142 neliökilometriä '
+          + 'ja asukkaita vajaat 42 000; taajama-aluetta on vain '
+          + 'kaksitoista neliökilometriä. Suurin osa kaupunkilaisista '
+          + 'asuu aivan muualla kuin siellä, minne matkailijat menevät.',
+        artikkeli: {
+          nimi: 'Matkailijan Dubrovnik',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jonka muureilla kävelee 1,2 miljoonaa '
+            + 'ihmistä vuodessa — ja jossa asuu 42 000.',
+          nosto: 'Vuonna 2023 vanhassakaupungissa kiellettiin pyörillä '
+            + 'varustetut matkalaukut.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Dubrovnikiin ei tule rautatietä lainkaan. '
+                + 'Lentokenttä on Čilipissä noin viidentoista ja puolen '
+                + 'kilometrin päässä keskustasta; nykyinen kenttä '
+                + 'avattiin 1962, ja sitä ennen käytössä oli Grudan '
+                + 'kenttä vuodesta 1936. Vuonna 2025 matkustajia oli '
+                + '3,1 miljoonaa, mikä on Kroatiassa kolmanneksi '
+                + 'eniten. Gružin satamasta lähtevät lautat saarille ja '
+                + 'Italiaan.',
+            },
+            {
+              otsikko: 'Muurien ulkopuolella',
+              teksti: 'Kunnan pinta-ala on 142,6 neliökilometriä ja '
+                + 'asukkaita oli vuoden 2021 laskennassa 41 562. '
+                + 'Taajama-aluetta on vain 12,1 neliökilometriä, ja '
+                + 'siellä asuu vajaat 27 000 ihmistä. Vanhankaupungin '
+                + 'länsipuolella on Lapadin niemi, jossa on rantoja, '
+                + 'asuintaloja ja hotelleja mutta ei suuria '
+                + 'nähtävyyksiä. Mokošicassa aatelisneuvosto kokoontui '
+                + 'viimeisen kerran vuonna 1815.',
+              kuva: { tiedosto: 'Aerial view West Dubrovnik Lapad.jpg', selite: 'Ilmakuva niemestä ja lahdesta: metsäisen niemen selkää pitkin kulkee mutkitteleva tie, ja rinteillä on tiivistä punakattoista asutusta. Taustalla kaartuu vaijerisilta lahden yli, ja laiturissa on kaksi valkoista risteilyalusta.', lahde: 'Chris93, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Kun matkailijoita on liikaa',
+              teksti: 'Vanhakaupunki liitettiin Unescon '
+                + 'maailmanperintöluetteloon 1979. Pelkästään '
+                + 'kaupunginmuureilla kävelee vuosittain 1,2 miljoonaa '
+                + 'ihmistä — kaupungissa, jossa asuu noin 42 000. '
+                + 'Vuoteen 2018 mennessä kaupunki alkoi porrastaa '
+                + 'risteilyalusten saapumis- ja lähtöaikoja, ja vuonna '
+                + '2023 tuli lisää rajoituksia: vanhassakaupungissa '
+                + 'kiellettiin muun muassa pyörillä varustetut '
+                + 'matkalaukut.',
+              kuva: { tiedosto: 'Costa Diadema docked at Dubrovnik.jpg', selite: 'Valtava valkoinen risteilyalus laiturissa alaviistosta kuvattuna: kymmenen kansirivin parvekkeet nousevat päällekkäin ja keulassa liehuu lippu. Laiturilla näkyy pieninä hahmoina matkustajia ja yksi linja-auto.', lahde: 'Luca Mauri, Wikimedia Commons (CC BY 4.0)' },
+            },
+            {
+              otsikko: 'Seitsemän kuukautta 1991–1992',
+              teksti: 'Kaupunkia piiritettiin 1. lokakuuta 1991 alkaen '
+                + 'seitsemän kuukauden ajan, ja piiritys päättyi 31. '
+                + 'toukokuuta 1992. Pahin pommitus oli 6. joulukuuta '
+                + '1991. Vanhankaupungin rakennuksista vaurioitui noin '
+                + '56 prosenttia. Siviiliuhrien määrästä lähteet '
+                + 'antavat eri lukuja, 82:sta 114:ään. Meritse '
+                + 'evakuoitiin noin 16 000 ihmistä. Sata neljä '
+                + 'Nobel-palkittua vetosi julkisesti piirityksen '
+                + 'lopettamiseksi tammikuussa 1992.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Dubrovnik on paljon sateisempi kuin moni odottaa: '
+                + 'vettä tulee vuodessa noin 1 580 millimetriä. Sade '
+                + 'painottuu jyrkästi syksyyn ja talveen — marraskuussa '
+                + 'sitä tulee 240 millimetriä, kun heinäkuussa vain 40. '
+                + 'Kesä on lämmin ja kuiva, ja meri lämpenee elokuuhun '
+                + 'mennessä. Talvi on leuto: kylmimmilläänkin päivä on '
+                + 'yksitoista astetta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Meri',
+                tahdet: 3,
+                selite: 'Uimarantoja on niemillä kävelymatkan päässä, '
+                  + 'ja vesi on lämmin heinäkuusta lokakuulle.',
+              },
+              {
+                mita: 'Saaret',
+                tahdet: 3,
+                selite: 'Gružista lähtee lauttoja lähisaarille päivän '
+                  + 'retkelle.',
+              },
+              {
+                mita: 'Kevät ja syksy',
+                tahdet: 3,
+                selite: 'Touko- ja kesäkuu sekä syyskuu ovat lämpimiä '
+                  + 'ja selvästi rauhallisempia.',
+              },
+              {
+                mita: 'Rauha',
+                tahdet: 1,
+                selite: 'Kesällä risteilyalusten päivinä vanhakaupunki '
+                  + 'on ruuhkainen aamusta iltaan.',
+              },
+              {
+                mita: 'Talven sää',
+                tahdet: 1,
+                selite: 'Loka–joulukuu ovat hyvin sateisia: kuukaudessa '
+                  + 'voi tulla yli kaksisataa millimetriä vettä.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade tulee syksyllä',
+                teksti: 'Marraskuu on vuoden sateisin kuukausi, 240 '
+                  + 'millimetriä, ja heinäkuu kuivin, 40. Vuodessa '
+                  + 'vettä tulee noin 1 580 millimetriä.',
+              },
+              {
+                otsikko: 'Risteilypäivät kannattaa tarkistaa',
+                teksti: 'Vanhankaupungin ruuhka riippuu siitä, monta '
+                  + 'risteilyalusta on satamassa. Aamu ennen kymmentä '
+                  + 'ja ilta kuuden jälkeen ovat rauhallisimmat.',
+              },
+              {
+                otsikko: 'Rautatietä ei ole',
+                teksti: 'Dubrovnikiin ei kulje junaa. Perille pääsee '
+                  + 'lentäen, bussilla tai laivalla.',
+              },
+              {
+                otsikko: 'Matkatavarat kannattaa kantaa',
+                teksti: 'Vanhassakaupungissa on rajoitettu pyörillä '
+                  + 'varustettujen matkalaukkujen vetämistä. Portaita '
+                  + 'on paljon.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenenviiden tienoilla, meri on '
+              + 'lämmin eikä sadetta juuri tule. Heinä- ja elokuu ovat '
+              + 'kuumimmat, kuivimmat ja ruuhkaisimmat. Loka–joulukuu '
+              + 'ovat vuoden sateisimmat kuukaudet, mutta kaupunki on '
+              + 'silloin rauhallinen.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '7–22 °C',
+                kuvaus: 'Sade vähenee kuukausi kuukaudelta: '
+                  + 'maaliskuussa vettä tulee 135 millimetriä ja '
+                  + 'toukokuussa enää 89. Meri on vielä viileä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '19–28 °C',
+                kuvaus: 'Lämmin ja vuoden kuivin jakso: heinäkuussa '
+                  + 'vettä tulee 40 millimetriä. Meri on lämpimimmillään '
+                  + 'elokuussa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '10–25 °C',
+                kuvaus: 'Syyskuu on vielä kesää, mutta loka- ja '
+                  + 'marraskuussa sataa 198 ja 240 millimetriä — vuoden '
+                  + 'märin jakso selvästi.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '4–11 °C',
+                kuvaus: 'Leuto mutta hyvin sateinen: joulukuussa vettä '
+                  + 'tulee 200 millimetriä. Pakkasta ei ole '
+                  + 'normaaleissa lainkaan.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Libertas Dubrovnik — bussit',
+                url: 'https://www.libertasdubrovnik.hr/en/',
+              },
+              {
+                nimi: 'Wikivoyage: Dubrovnik (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Dubrovnik',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           tyyppi: 'kuva',
