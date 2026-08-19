@@ -9605,6 +9605,194 @@ export const NAHTAVYYSJUTUT = {
    * juttua — auditin löydös 12.8.2026. Kuusi kohdetta samassa
    * järjestyksessä kuin kartalla, pohjoisesta etelään.
    */
+  /*
+   * JERUSALEM (Opus 19.8.2026). Kuusi juttua kartan järjestyksessä
+   * pohjoisesta etelään. Kohteita on kuusi eikä kymmentä, ja syy on
+   * maakartat.js:n kommentissa: neljästä muusta ehdokkaasta ei
+   * löytynyt yhtään vapaasti lisensoitua kuvaa ilman tunnistettavia
+   * ihmisiä.
+   */
+  jerusalem: {
+    'Damaskoksen portti': {
+      aika: '1537',
+      teksti: 'Damaskoksen portti on vanhankaupungin komein sisäänkäynti, '
+          + 'ja nykyinen rakennus on vuodelta 1537 eli Suleiman Suuren '
+          + 'muurityön ajalta. Portti ei kuitenkaan ole uusi paikkana: '
+          + 'samassa kohdassa on ollut portti roomalaisajasta asti, ja '
+          + 'nykyisen alta on kaivettu esiin vanhempi portti keisari '
+          + 'Hadrianuksen ajalta.'
+          + '\n\n'
+          + 'Arabiankielinen nimi Bab al-Amud tarkoittaa pylvään porttia, '
+          + 'ja se on ollut käytössä ainakin 900-luvulta. Nimi säilyttää '
+          + 'muiston roomalaisesta voitonpylväästä, joka kohosi portin '
+          + 'takana olevalla aukiolla ja jonka päällä seisoi keisari '
+          + 'Hadrianuksen patsas. Pylvästä ei ole enää olemassa, mutta se '
+          + 'näkyy 500-luvulla tehdyssä Madaban mosaiikkikartassa — eli '
+          + 'nimi on vanhempi kuin mikään portin nykyisistä kivistä.'
+          + '\n\n'
+          + 'Toinen historiallinen arabiankielinen nimi on Bab al-Nasr, '
+          + 'voiton portti.',
+      kuvat: [
+        {
+          tiedosto: 'DAMASCUS GATE AND PART OF THE CITY WALL AROUND JERUSALEM. שער דמשק בעיר העתיקה בירושלים..jpg',
+          selite: 'Vanha valokuva Damaskoksen portista ylhäältä: '
+            + 'hammastettu portinpää työntyy ulos muurilinjasta, ja '
+            + 'takana levittäytyy vanhankaupungin kattomeri kupoleineen '
+            + 'ja kellotorneineen.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän haudan kirkko': {
+      teksti: 'Pyhän haudan kirkko ei ole yksi rakennus vaan monta '
+          + 'päällekkäistä: kirkkoa on rakennettu, poltettu, korjattu ja '
+          + 'laajennettu vuosisatojen ajan, ja lopputulos on sokkelo, '
+          + 'jossa eri kristilliset yhteisöt hallitsevat kukin omaa '
+          + 'osaansa. Rakennuksen kohdalla oli roomalaisaikana Venuksen '
+          + 'temppeli, jonka keisari Hadrianus rakennutti perustaessaan '
+          + 'kaupungin uudelleen nimellä Aelia Capitolina.'
+          + '\n\n'
+          + 'Kirkon sisällä on kaksi erillistä pyhää paikkaa saman katon '
+          + 'alla. Golgatan kappeli on yläkerrassa, kallion päällä johon '
+          + 'noustaan portaita; alakerrassa on itse hauta pienessä '
+          + 'kappelissa keskellä pyöreää salia. Päälaivan yllä kaartuu '
+          + 'katolikonin kupoli, jonka keskellä on kultapohjainen '
+          + 'Kristus-mosaiikki ja reunoilla evankelistat.'
+          + '\n\n'
+          + 'Kirkon ovi on kujan puolella eikä aukiolla, ja aukiolle '
+          + 'avautuu vain sen kaksoiskaari.',
+      kuvat: [
+        {
+          tiedosto: 'Jerusalem Holy Sepulchre BW 18.JPG',
+          selite: 'Golgatan kappeli: kullattu alttarikaari, sen keskellä '
+            + 'ristiinnaulittu ja molemmin puolin hopeiset hahmot, ja '
+            + 'edessä lasin alta näkyy paljas kallio.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kalliomoskeija': {
+      aika: '691–692',
+      teksti: 'Kalliomoskeija on kahdeksankulmainen rakennus '
+          + 'temppelivuoren keskellä, ja sen rakennutti umaijadikalifi '
+          + 'Abd al-Malik vuosina 691–692. Se ei ole moskeija siinä '
+          + 'mielessä kuin viereinen Al-Aqsa, vaan pyhäkkö, joka on '
+          + 'rakennettu kallion ympärille: kahdeksankulmainen kehä '
+          + 'kiertää paljasta kalliopaljastumaa, joka jää kupolin alle.'
+          + '\n\n'
+          + 'Kahdeksankulmainen pohjakaava ei ole islamilaisen '
+          + 'arkkitehtuurin vakiomuoto, ja sen esikuvaksi on esitetty '
+          + 'bysanttilaista kirkkoa, joka rakennettiin 400-luvulla '
+          + 'Jerusalemin ja Betlehemin väliselle tielle. Alkuperäinen '
+          + 'kupoli romahti vuonna 1015, ja se rakennettiin uudelleen '
+          + 'vuosina 1022–1023.'
+          + '\n\n'
+          + 'Ulkoseinien siniset ja vihreät laatat ovat myöhempää '
+          + 'ottomaaniaikaa; kullattu kupoli on kaupungin tunnetuin '
+          + 'maamerkki ja näkyy jokaisesta ilmakuvasta ensimmäisenä.',
+      kuvat: [
+        {
+          tiedosto: 'Jerusalem Dome of the rock BW 14.JPG',
+          selite: 'Kalliomoskeija Öljymäeltä nähtynä: kullattu kupoli '
+            + 'kohoaa kahdeksankulmaisen laattapinnan päältä, ja '
+            + 'etualalla kulkee temppelivuoren itämuuri.',
+          lahde: 'Berthold Werner, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Läntinen muuri': {
+      teksti: 'Läntinen muuri ei ole temppelin seinä vaan tukimuuri: se '
+          + 'kannattelee temppelivuoren tekoalustaa, joka rakennettiin '
+          + 'kukkulan päälle. Koko tukimuurin pituus on 488 metriä, ja '
+          + 'siitä vain osa on näkyvissä — loppu on kätkeytynyt '
+          + 'myöhempien rakennusten taakse.'
+          + '\n\n'
+          + 'Muurissa näkyy kolme rakennuskautta päällekkäin, ja ne '
+          + 'erottaa kivikoosta. Alimmat kerrokset ovat valtavia '
+          + 'lohkareita toisen temppelin ajalta, ja niiden rakentaminen '
+          + 'aloitettiin Herodes Suuren aikana. Rukouspaikalla näistä '
+          + 'kerroksista seitsemäntoista on nykyisen katutason '
+          + 'alapuolella. Keskikokoiset kivet niiden yllä ovat '
+          + 'umaijadiajalta, ja aivan ylimmät pienet kivet ovat '
+          + 'ottomaaniajalta.'
+          + '\n\n'
+          + 'Kivien saumoihin on työnnetty paperilappuja, ja tapa on '
+          + 'muuttanut muurin pinnan omanlaisekseen.',
+      kuvat: [
+        {
+          tiedosto: 'Western Wall stones, closeup.jpg',
+          selite: 'Läntisen muurin kiviä läheltä: valtavia '
+            + 'reunahakattuja lohkareita, joiden pinta on kulunut '
+            + 'aalloiksi, ja pystysaumaan on työnnetty tiheästi '
+            + 'paperilappuja.',
+          lahde: 'Danielrosehill, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jaffan portti': {
+      aika: '1538',
+      teksti: 'Jaffan portti on vanhankaupungin läntinen sisäänkäynti ja '
+          + 'ottomaanien rakennuttama vuonna 1538. Nimi tulee siitä, että '
+          + 'täältä lähti tie rannikolle Jaffaan — se oli 1800-luvulla '
+          + 'ainoa reitti, jota pitkin matkalainen ylipäätään saapui '
+          + 'kaupunkiin, ja vuonna 1861 se päällystettiin ajokelpoiseksi.'
+          + '\n\n'
+          + 'Arabiaksi portti on Bab el-Khalil, ystävän portti. Nimi '
+          + 'viittaa Abrahamiin, ja koska hänen hautapaikkanaan pidetään '
+          + 'Hebronia, jonka arabiankielinen nimi on juuri el-Khalil, '
+          + 'sama nimi tarkoittaa myös Hebronin porttia.'
+          + '\n\n'
+          + 'Nykyään nimi tarkoittaa kahta asiaa. Varsinainen porttitorni '
+          + 'vuodelta 1538 on kapea ja vain jalankulkijoille. Sen vieressä '
+          + 'muurissa on leveä aukko, jonka ottomaanihallinto teetti '
+          + 'vuonna 1898, jotta Saksan keisari Wilhelm II pääsisi '
+          + 'saapumaan kaupunkiin juhlasaatossa. Autot kulkevat yhä '
+          + 'siitä aukosta.',
+      kuvat: [
+        {
+          tiedosto: 'Jerusalem Jaffa Gate BW 1.JPG',
+          selite: 'Jaffan portin torni iltavalossa: hammastettu '
+            + 'kivimassa työntyy ulos muurilinjasta, ja kaariovi on '
+            + 'varjossa. Edessä on nuoria puita istutuskuopissaan.',
+          lahde: 'Berthold Werner, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Aqsa-moskeija': {
+      teksti: 'Al-Aqsa on temppelivuoren pääasiallinen rukoushuone, ja se '
+          + 'seisoo alueen eteläreunassa samalla akselilla kuin '
+          + 'Kalliomoskeija. Rakennukset ovat siis pari: toinen on '
+          + 'pyhäkkö kallion ympärillä, toinen sali rukoilijoille.'
+          + '\n\n'
+          + 'Nykyisen moskeijan rakennutti joko umaijadikalifi Abd '
+          + 'al-Malik tai hänen seuraajansa al-Walid I — lähteet eivät '
+          + 'ole yksimielisiä, ja on esitetty myös että työ jakautui '
+          + 'molempien ajalle. Alueella oli joka tapauksessa jo aiemmin '
+          + 'rukoushuone: kalifi Muawijan aikana 600-luvulla siellä '
+          + 'kerrotaan olleen nelikulmainen moskeija, johon mahtui '
+          + 'kolmetuhatta ihmistä.'
+          + '\n\n'
+          + 'Julkisivun kaaririvistö ja lyijykupoli ovat rakennuksen '
+          + 'tunnusmerkit. Aukio sen edessä on temppelivuoren avointa '
+          + 'kivipintaa, ja siltä näkee koko alueen laidasta laitaan.',
+      kuvat: [
+        {
+          tiedosto: 'Jerusalem Al-Aqsa Mosque BW 2010-09-21 06-38-12.JPG',
+          selite: 'Al-Aqsan julkisivu koko leveydeltään: vasemmalla '
+            + 'tumma lyijykupoli, keskellä kaari-ikkunoiden rivi ja '
+            + 'oikealla korkeampi kaarikäytävä. Edessä on tyhjä '
+            + 'kiveysaukio.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
   dubai: {
     'Kultasuuk': {
       aika: '1900-luvun alku',

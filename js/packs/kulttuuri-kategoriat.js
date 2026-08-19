@@ -15204,6 +15204,361 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  jerusalem: [
+    {
+      id: 'kaupunki',
+      nimi: 'Jerusalem',
+      johdanto: 'Vuoristokaupunki kolmen laakson välissä, ilman omaa jokea. '
+        + 'Muurit ovat ottomaanien työtä 1500-luvulta, ja vielä isoisän '
+        + 'matkan aikaan koko kaupunki mahtui niiden sisään.',
+      kansikuvat: [
+        {
+          tiedosto: 'Jerusalem Dome of the rock BW 2010-09-21 07-01-06.JPG',
+          selite: 'Kalliomoskeija kaariholvien takaa: kullattu kupoli '
+            + 'kohoaa sinisen laattapinnan päältä, ja edessä nousevat '
+            + 'portaat aukiolle oliivipuiden lomassa.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'JERUSALEM OLD CITY WALLS.JPG',
+          selite: 'Vanhakaupunki ilmasta: muuri kiertää koko alueen '
+            + 'yhtenäisenä nauhana, ja sen sisällä katot ovat niin '
+            + 'tiheässä, ettei katuja erota. Oikealla erottuu '
+            + 'temppelivuoren aukea.',
+          lahde: 'AVRAHAM GRAICER, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Catholicon, Church of the Holy Sepulchre, Jerusalem1.jpg',
+          selite: 'Pyhän haudan kirkon pääkupoli alhaalta kuvattuna: '
+            + 'keskellä kultapohjainen Kristus-mosaiikki, ja kaarien '
+            + 'väleissä evankelistat omissa ruuduissaan.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'JERUSALEM THE OLD CITY & THE TEMPLE MOUNT.JPG',
+          selite: 'Laaja ilmakuva: vanhakaupunki keskellä, sen ympärillä '
+            + 'laaksot vihreinä juovina, ja oikealla Öljymäen rinne '
+            + 'nousee kuivana ja vaaleana.',
+          lahde: 'AVRAHAM GRAICER, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Jerusalem-2013(2)-View of the Dome of the Rock & Temple Mount 02.jpg',
+          selite: 'Näkymä Öljymäeltä: etualalla itämuuri kulkee kuvan '
+            + 'poikki, sen takana temppelivuoren puut ja kullattu kupoli, '
+            + 'ja kaukana modernin kaupungin tornit.',
+          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'East Jerusalem, Old City, East.jpg',
+          selite: 'Panoraama kattojen yli: etualalla Pyhän haudan kirkon '
+            + 'tumma kupoli, keskellä vanhankaupungin katot ja kaukana '
+            + 'Öljymäen harjanne.',
+          lahde: 'Papierdrache, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Muurit ovat nuoremmat kuin luulisi',
+          tiedosto: 'WikiAir IL-13-06 035 - Old City (Jerusalem).JPG',
+          teksti: 'Jerusalemin muurit näyttävät ikivanhoilta, mutta ne ovat '
+            + 'ottomaanien työtä. Sulttaani Suleiman Suuri määräsi vuonna '
+            + '1535 rauniona olleet muurit rakennettavaksi uudelleen, ja työ '
+            + 'tehtiin vuosina 1537–1541. Kiveä on 4 018 metrin matkalla, '
+            + 'keskikorkeus on noin kaksitoista metriä ja paksuus kaksi ja '
+            + 'puoli metriä. Muuria kiertää 34 tornia, ja liikennöityjä '
+            + 'portteja on seitsemän; arkeologit ovat lisäksi avanneet kaksi '
+            + 'pientä porttia. Muurit ja vanhakaupunki hyväksyttiin Unescon '
+            + 'maailmanperintöluetteloon vuonna 1981.',
+          selite: 'Vanhakaupunki läheltä ylhäältä: temppelivuoren aukea '
+            + 'erottuu suurena suorakaiteena, jota tiheä kattomeri ympäröi '
+            + 'joka suunnalta.',
+          lahde: 'Neukoln, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Jerusalem',
+        },
+        {
+          otsikko: 'Kolmetuhatta vuotta hautoja yhdellä rinteellä',
+          tiedosto: 'Jerusalem-Mount-of-Olives-KTM-1164.jpg',
+          teksti: 'Vanhankaupungin itäpuolella kohoaa Öljymäki, noin kolmen '
+            + 'ja puolen kilometrin pituinen kolmihuippuinen harjanne. Nimi '
+            + 'tulee oliivitarhoista, jotka peittivät rinteet aikoinaan. '
+            + 'Läntisellä huipulla 818 metrin korkeudessa on pieni kappeli. '
+            + 'Mäen länsirinne on ollut hautausmaana yli kolmetuhatta vuotta, '
+            + 'ja hautoja arvioidaan olevan noin satviisikymmentätuhatta. '
+            + 'Näköala teki mäestä myös tähystyspaikan: toisen temppelin '
+            + 'aikana täältä tarkkailtiin, milloin uusi kuu nousi.',
+          selite: 'Öljymäen rinne täynnä vaaleita hautakiviä riveittäin, ja '
+            + 'alarinteessä kallioon louhittuja hautamonumentteja '
+            + 'pyramidikattoineen.',
+          lahde: 'Bukvoed, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Talo ja sen vesisäiliö samasta kuopasta',
+          tiedosto: 'Rooftops of the Old City of Jerusalem.jpg',
+          teksti: 'Jerusalem on rakennettu omasta kivestään. Arvostetuin '
+            + 'laatu on meleke, joka on tuoreena pehmeää ja helppo veistää '
+            + 'mutta kovettuu ilmassa kestäväksi — siitä on tehty myös '
+            + 'Läntisen muurin suuret lohkareet. Kovempaa kalkkikiveä oli '
+            + 'esiteollisin menetelmin vaikea ja kallis louhia, joten '
+            + 'pehmeämpää suosittiin aina kun sitä oli saatavilla. Talot '
+            + 'rakennettiin usein omalta tontilta louhitusta kivestä, ja '
+            + 'kuoppa, joka louhinnasta jäi, muurattiin talon alle '
+            + 'sadevesisäiliöksi.',
+          selite: 'Vanhankaupungin kattoja: kivikupoleita, mustia '
+            + 'vesisäiliöitä, antenneja ja pyykkinaru, ja taustalla '
+            + 'kullattu kupoli usvassa.',
+          lahde: 'Askii, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ensimmäinen kortteli muurien ulkopuolella',
+          tiedosto: 'Montefiore Windmill 139.jpg',
+          teksti: 'Vuosisatoja koko Jerusalem mahtui muurien sisään. Vuonna '
+            + '1860 hyväntekijä Moses Montefiore rakennutti Judah Touron '
+            + 'testamenttivaroilla ensimmäisen korttelin niiden ulkopuolelle, '
+            + 'Mishkenot Shaananimin. Seutu oli avointa ja turvatonta, joten '
+            + 'asukkaita houkuteltiin rahaeduin ja pihan ympäri muurattiin '
+            + 'matala aita yöksi lukittavine portteineen. Vieressä oli jo '
+            + 'vuonna 1857 valmistunut tuulimylly, jonka piti antaa '
+            + 'asukkaille leipä — mutta tuulta riittää seudulla enintään '
+            + 'parinakymmenenä päivänä vuodessa.',
+          selite: 'Montefioren tuulimylly kivitalojen keskellä hämärtyvässä '
+            + 'illassa: valkoinen torni ja neljä siipeä kohoavat '
+            + 'tiilikattojen ja sypressien yli.',
+          lahde: 'Gabrielw.tour, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Jerusalem Mount of Olives BW 2010-09-20 07-57-31.JPG',
+          selite: 'Näkymä Öljymäeltä vanhaankaupunkiin: etualalla '
+            + 'hautakivien rivistöt, keskellä laakso ja vastapäätä '
+            + 'kaupungin muuri temppelivuoren aukeineen.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Matkailijan Jerusalem on pieni: muurien sisäinen '
+          + 'vanhakaupunki on vain 0,9 neliökilometriä, eli sen kävelee '
+          + 'laidasta laitaan vartissa. Kadut ovat kuitenkin kujia, '
+          + 'portaita ja katettuja käytäviä, joten matka kestää aina '
+          + 'pidempään kuin kartta lupaa. Kaupunki on lähes kahdeksansadan '
+          + 'metrin korkeudessa, ja se tuntuu: rannikolta noustaan tänne, '
+          + 'ja ilma on kuivempi ja viileämpi.',
+        artikkeli: {
+          nimi: 'Matkailijan Jerusalem',
+          taitto: 'opas',
+          teksti: 'Vuoristokaupunki, jonka vanhakaupunki mahtuu neliöön '
+            + 'vajaan kilometrin sivulla.',
+          nosto: 'Vuonna 1873 tänne ei päässyt junalla — rata Jaffasta '
+            + 'valmistui vasta 1892.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Isoisän matkan aikaan Jerusalemiin ei päässyt '
+                + 'junalla: rautatie Jaffasta valmistui vasta vuonna 1892. '
+                + 'Matkalaiset kulkivat Jaffan tietä, joka päällystettiin '
+                + 'ajokelpoiseksi vuonna 1861. Sitä ennen reitillä '
+                + 'liikkuivat vain kamelit ja muulit; päällystyksen jälkeen '
+                + 'saksalaiset uudisasukkaat aloittivat säännöllisen '
+                + 'hevosvaunuliikenteen rannikolle. Uusi tie oli samalla '
+                + 'kaupungin kasvun moottori: sen varrelle nousivat '
+                + '1860- ja 1870-luvulla ensimmäiset uudet kaupunginosat, '
+                + 'ja vasta tien ansiosta oli ylipäätään järkevää asua '
+                + 'muurien ulkopuolella.',
+              kuva: {
+                tiedosto: 'Raffaele Mainella. Äusere mauern von Jerusalem. 1895. P.164.jpg',
+                selite: 'Vuoden 1895 kuvitus Jerusalemin ulkomuureista: '
+                  + 'korkea muurirakennelma rinteen päällä, alla rinnettä '
+                  + 'ja polku, ja kaukana kaupungin taloja.',
+                lahde: 'Raffaele Mainella, Wikimedia Commons (public domain)',
+              },
+            },
+            {
+              otsikko: 'Neljä korttelia, jotka eivät ole muinaisia',
+              teksti: 'Vanhakaupunki jaetaan neljään kortteliin, mutta jako '
+                + 'ei ole ikivanha: perinne juontuu 1840-luvun '
+                + 'brittiläisistä sotilaskartoista, ja sitä ennen kaupunki '
+                + 'jakautui kymmeniin pienempiin, nimettyihin naapurustoihin. '
+                + 'Suurin kortteleista on koillisessa, pienin kaakossa. '
+                + 'Katuverkko nojaa yhä paikoin roomalaiseen ruutukaavaan: '
+                + 'pääkatu cardo kulki pohjoisesta etelään, ja '
+                + 'pylväskäytävineen se oli parikymmentä metriä leveä. '
+                + 'Osa siitä on kaivettu esiin, ja kaivauskohta on '
+                + 'nykyään kadun tasolla nähtävissä.',
+              kuva: {
+                tiedosto: '1650 Fuller Map of Jerusalem ( Israel, Palestine, Holy Land) - Geographicus - jerusalem-fuller-1650.jpg',
+                selite: 'Vuoden 1650 käsinväritetty kartta Jerusalemista. '
+                  + 'Se ei kuvaa kaupunkia sellaisena kuin se oli vaan '
+                  + 'sellaisena kuin eurooppalainen kuvitteli sen olleen '
+                  + 'Salomon aikaan: suora ruutukaava, nimetyt portit ja '
+                  + 'temppeli keskellä.',
+                lahde: 'Geographicus Rare Antique Maps, Wikimedia Commons '
+                  + '(public domain)',
+              },
+            },
+            {
+              otsikko: 'Katot ovat oma kaupunkinsa',
+              teksti: 'Vanhankaupungin kadut ovat kapeita ja usein '
+                + 'katettuja, joten valo ja tila haetaan ylhäältä. Katot '
+                + 'muodostavat oman tasonsa: niillä kulkee polkuja, niillä '
+                + 'kuivataan pyykkiä, ja niillä seisovat mustat '
+                + 'vesisäiliöt, joita ilman kaupunki ei tulisi toimeen. '
+                + 'Kivikupolit kertovat rakennustavasta, joka on vanhempi '
+                + 'kuin teräsbetoni: holvattu katto kantaa itsensä ilman '
+                + 'palkkeja ja pysyy viileänä. Katolta näkee myös sen, '
+                + 'mitä kujalta ei näe — kuinka lähellä kaikki on toisiaan.',
+              kuva: {
+                tiedosto: 'Rooftops of the Old City of Jerusalem 3.jpg',
+                selite: 'Kattojen meri: valkoisia kupoleita, mustia '
+                  + 'vesisäiliöitä, antenneja ja lautasantenneja vieri '
+                  + 'vieressä, ja keskellä minareetti.',
+                lahde: 'Askii, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kun kaupunki sai uuden nimen',
+              teksti: 'Jerusalemin historian suurin käännekohta ei ole '
+                + 'keskiajalla vaan antiikin Roomassa. Keisari Hadrianus '
+                + 'perusti kaupungin uudelleen roomalaisena siirtokuntana '
+                + 'vuosina 129–130 ja antoi sille uuden nimen Aelia '
+                + 'Capitolina: Aelia hänen omasta sukunimestään ja '
+                + 'Capitolina Jupiter Capitolinuksen mukaan. Kaupunki '
+                + 'rakennettiin roomalaiseen ruutukaavaan leveine '
+                + 'pylväskatuineen, ja vanhalle temppelipaikalle nousi '
+                + 'Jupiterin temppeli. Uudessa siirtokunnassa asui vain '
+                + 'nelisentuhatta ihmistä, pääosin legioonalaisia ja '
+                + 'veteraaneja. Nimi Aelia säilyi virallisena '
+                + 'bysanttilaiselle ajalle asti.',
+              kuva: {
+                tiedosto: 'Jerusalem Kidron Valley Tombs.JPG',
+                selite: 'Vanha painokuva Kidronin laaksosta: kallioon '
+                  + 'louhittuja hautamonumentteja pyramidikattoineen, ja '
+                  + 'rinteessä ylempänä muuri ja sypressirivi.',
+                lahde: 'Lehnert and Landrock, Cairo, Wikimedia Commons '
+                  + '(public domain)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Korkeus tekee Jerusalemista toisenlaisen kuin '
+                + 'rannikko. Kesä on pitkä ja täysin kuiva: heinä- ja '
+                + 'elokuussa sadetta ei tule lainkaan, ja keskilämpö on '
+                + 'kaksikymmentäviisi astetta — kuuma mutta ei rannikon '
+                + 'tavoin kostea. Sade tulee talvella kuin veitsellä '
+                + 'leikaten: tammikuussa vettä kertyy runsaat '
+                + 'seitsemänkymmentä millimetriä ja koko vuoden sade jää '
+                + 'runsaaseen kolmeensataan. Tammikuun keskilämpö on '
+                + 'kahdeksan astetta ja yöllä laskee neljään, ja joskus '
+                + 'sataa lyhyeksi aikaa lunta. Kevät ja syksy ovat '
+                + 'kävelijälle helpoimmat.',
+              kuva: {
+                tiedosto: 'Kidron Valley and Surrounding Landscape East of Jerusalem.jpg',
+                selite: 'Kidronin laakson pohja kesällä: sorapolku kulkee '
+                  + 'kuivan rinteen välissä, ruoho on kellastunut, ja '
+                  + 'rinteen päällä näkyy kylän taloja.',
+                lahde: 'Ywpark2003 Prof. Yong Woo Park, Wikimedia Commons '
+                  + '(CC0)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Vesi',
+      johdanto: 'Kukkulakaupungilla ei ole omaa jokea. Jokainen pisara on '
+        + 'pitänyt hakea lähteestä, ohjata kallioon louhitulla tunnelilla '
+        + 'tai tuoda kaukaa — ja se työ on kolmen vuosituhannen mittainen.',
+      tehtava: {
+        kysymys: 'Miten Hiskian tunnelin kaivajat etenivät?',
+        vaihtoehdot: [
+          'Yhdestä päästä suoraan toiseen',
+          'Kahdesta päästä yhtä aikaa, ja he kohtasivat keskellä',
+          'Ylhäältä alaspäin kuiluja pitkin',
+          'Vanhaa luolakäytävää laajentamalla',
+        ],
+        oikea: 1,
+        fakta: 'Koko 533 metrin matkalla korkeusero on vain '
+          + 'kolmekymmentä senttiä, eli kaltevuus on 0,06 prosenttia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lähde, joka ratkaisi kaupungin paikan',
+          tiedosto: '635 - Jerusalem - Valley of Kidron, Siloam and City Wall.JPG',
+          teksti: 'Jerusalemilla ei ole omaa jokea, ja koko kaupungin '
+            + 'sijainti selittyy yhdellä lähteellä. Gihon pulppuaa Kidronin '
+            + 'laakson kalliossa, ja sen ympärille syntyi vanhin asutus. '
+            + 'Lähde on epäsäännöllinen: ennen nykyaikaista pumppausta se '
+            + 'purkautui talvella kolmesta viiteen kertaan vuorokaudessa, '
+            + 'kesällä kahdesti ja syksyllä kerran. Vuosituotanto on noin '
+            + '600 000 kuutiometriä, lähes viisi kertaa enemmän kuin '
+            + 'seudun toisen lähteen. Juuri epäsäännöllisyys pakotti '
+            + 'rakentamaan altaan, johon vesi varastoitiin niiksi ajoiksi '
+            + 'kun lähde ei virrannut.',
+          selite: 'Vanha valokuva Kidronin laaksosta: vasemmalla rinteen '
+            + 'päällä kaupungin muuri, oikealla kylä rinteessä, ja '
+            + 'pohjalla oliivipuita ja terasseja.',
+          lahde: 'Lehnert and Landrock, Cairo, Wikimedia Commons '
+            + '(public domain)',
+        },
+        {
+          otsikko: 'Viisisataakolmekymmentäkolme metriä kahdesta suunnasta',
+          tiedosto: 'City of David, Southern Wall Temple Mount Kidron Valley Ophel and Siloam.jpg',
+          teksti: 'Kun assyrialaiset uhkasivat kaupunkia 700-luvulla eKr., '
+            + 'kuningas Hiskia halusi saada ainoan vesilähteen muurien '
+            + 'suojaan. Kallioon louhittiin mutkitteleva tunneli, jota on '
+            + '533 metriä. Se kaivettiin käsityönä kahdesta päästä yhtä '
+            + 'aikaa, ja ryhmät kohtasivat keskellä, vaikka reitti '
+            + 'mutkittelee. Koko matkalla korkeusero on vain '
+            + 'kolmekymmentä senttiä eli kaltevuus 0,06 prosenttia — juuri '
+            + 'sen verran että vesi virtaa. Tunnelin seinästä löytyi '
+            + '1800-luvun lopulla Siiloan kirjoitus, joka kertoo '
+            + 'louhinnasta ja kaivajien kohtaamisesta.',
+          selite: 'Vanha valokuva: vasemmalla vanhankaupungin muuri '
+            + 'temppelivuoren eteläseinineen, keskellä Kidronin laakso ja '
+            + 'oikealla rinteessä Daavidin kaupungin harjanne.',
+          lahde: 'Matson Collection, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Allas, johon pysähdyttiin ennen temppeliä',
+          tiedosto: 'KidronValleyFromOldCity.JPG',
+          teksti: 'Tunnelin vesi laskee Siiloan altaaseen, joka oli toisen '
+            + 'temppelin aikana pyhiinvaeltajien ensimmäinen pysähdyspaikka: '
+            + 'siellä peseydyttiin ennen nousua temppelialueelle. Allas ei '
+            + 'ole suorakulmainen vaan loivan puolisuunnikkaan muotoinen, ja '
+            + 'kaivaukset ovat paljastaneet sen leveydeksi noin '
+            + 'kuusikymmentäyhdeksän metriä. Portaita on ainakin kolmella '
+            + 'sivulla ja eri syvyyksillä, joten veteen pääsi omalle '
+            + 'tasolleen riippumatta siitä, kuinka korkealla vedenpinta '
+            + 'sillä hetkellä oli.',
+          selite: 'Näkymä vanhastakaupungista alas Kidronin laaksoon: '
+            + 'oikeassa alalaidassa Daavidin kaupungin kaivausalue '
+            + 'kivimuureineen, ja rinne laskee sieltä laaksoon, jonka '
+            + 'pohjalla allas sijaitsee.',
+          lahde: 'Wilson44691, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Vettä Betlehemin altailta',
+          tiedosto: 'Roman aqueduct from Pools of Solomon to Jerusalem.jpg',
+          teksti: 'Lähde ja sadevesisäiliöt eivät riittäneet kasvavalle '
+            + 'kaupungille. Roomalaisajalla rakennettiin Betlehemin lähelle '
+            + 'kolme suurta allasta, joita kutsutaan Salomon altaiksi, ja '
+            + 'niistä vesi johdettiin Jerusalemiin kahta linjaa pitkin. '
+            + 'Putket seurasivat maaston korkeuskäyriä niin loivasti, '
+            + 'ettei pumppuja tarvittu. Prefekti Pontius Pilatus laajensi '
+            + 'järjestelmää rakennuttamalla 39 kilometrin lisäputken '
+            + 'etelämpää Arrubin altailta. Altaista alin on paljon '
+            + 'nuorempi kuin kaksi muuta: se rakennettiin vasta vuonna '
+            + '1483.',
+          selite: 'Kallioon louhittu vesitunneli sisältä kuvattuna: '
+            + 'pyöreä käytävä jatkuu kaarena pimeään, ja pohjalla on '
+            + 'irronneita kivenlohkareita.',
+          lahde: 'American Colony Photo Department / Matson Photo Service, '
+            + 'Wikimedia Commons (public domain)',
+        },
+      ],
+    },
+  ],
   tromssa: [
     {
       id: 'kaupunki',

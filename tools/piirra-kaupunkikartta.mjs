@@ -1178,6 +1178,30 @@ const KAUPUNGIT = {
     // kulkevia katuja. Pienempi ruutu nostaa tiheyden ilman lippuja.
     rajat: { pohjoinen: 39.948, etela: 39.936, lansi: 32.851, ita: 32.868 },
   },
+  jerusalem: {
+    /*
+     * Muurien sisäinen vanhakaupunki kokonaan: Jaffan portti lännessä,
+     * Damaskoksen portti pohjoisessa, ja itäreunalla temppelivuoren
+     * laaja aukio. Ruutu on tiukka (n. 1,4 x 1,6 km), koska
+     * vanhakaupunki on tiivis kujaverkko — laajempi rajaus hukuttaisi
+     * sen ympäröiviin kaupunginosiin.
+     *
+     * Palvelutiet ja jalkakäytävät ovat päällä, koska vanhankaupungin
+     * kujat ovat OSM:ssä pääosin footway- ja service-teitä; ilman
+     * lippuja kortteleiden väliin jäisi tyhjää paperia.
+     */
+    rajat: { pohjoinen: 31.7865, etela: 31.772, lansi: 35.221, ita: 35.244 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    /*
+     * RAUNIOKAUPUNKI-LIPPU EI OLE TÄSSÄ RAUNIOISTA vaan piirtotavasta:
+     * se nostaa polut asuinkadun vahvuuteen. Vanhankaupungin kujat ovat
+     * OSM:ssä footway- ja service-teitä aivan kuten Petran polut, ja
+     * ilman lippua muurien sisäpuoli piirtyi lähes tyhjänä — kokeiltu
+     * ja katsottu ensin ilman.
+     */
+    rauniokaupunki: true,
+  },
   petra: {
     /*
      * Petra ei ole kaupunki vaan raunioalue vuoristolaaksossa.

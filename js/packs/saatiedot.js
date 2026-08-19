@@ -1359,4 +1359,29 @@ export const SAATIEDOT = {
       + 'keskilämmöstä laskeudutaan tammikuun neljään, ja talviöinä '
       + 'raunioilla on pakkasta.',
   },
+  /*
+   * JERUSALEM (Opus 19.8.2026). Sama menetelmä kuin paketin muillakin
+   * riveillä: Open-Meteon arkisto (ERA5), jakso 1991–2020, keskilämpö
+   * kuukauden päiväkeskiarvojen keskiarvona ja sade kuukausisumman
+   * vuosikeskiarvona; ylin ja alin koko jakson päivittäisten ylimpien
+   * ja alimpien keskiarvojen puolivälinä keskilämmön ympärillä.
+   * Koordinaatit ovat en-Wikipedian Jerusalem-artikkelin tietolaatikosta
+   * (haettu 19.8.2026), korkeus siellä 754 m.
+   */
+  jerusalem: {
+    lat: 31.7789,
+    lon: 35.2256,
+    keskilampo: [8.2, 9, 11.7, 15.8, 20.1, 23, 24.9, 25, 23.3, 20.1, 14.5, 10.1],
+    ylin: [12, 13, 17, 22, 27, 30, 32, 32, 30, 25, 19, 14],
+    alin: [4, 5, 6, 10, 13, 16, 18, 18, 17, 15, 10, 6],
+    sade: [74, 66, 45, 18, 9, 1, 0, 0, 2, 19, 36, 53],
+    luonnehdinta: 'Jerusalem on lähes kahdeksansadan metrin korkeudessa, '
+      + 'ja se erottaa sen rannikosta: kesä on kuiva mutta ei helteinen, '
+      + 'heinä- ja elokuussa keskilämpö on kaksikymmentäviisi astetta. '
+      + 'Sade tulee talvella ja loppuu kuin veitsellä leikaten — '
+      + 'tammikuussa vettä kertyy runsaat seitsemänkymmentä millimetriä, '
+      + 'heinä- ja elokuussa ei lainkaan. Koko vuoden sade jää runsaaseen '
+      + 'kolmeensataan millimetriin, ja talviöinä lämpötila laskee neljään '
+      + 'asteeseen.',
+  },
 };
