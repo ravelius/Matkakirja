@@ -7772,6 +7772,42 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Світлана 743, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme hetkeä saman joen äärellä.
+       * Podil ja Dnepri ylhäältä syysaamuna, jokiranta auringon
+       * noustessa, ja Hreshtshatyk yöllä sumussa. Lisenssit, tekijät
+       * ja koot todennettu Commonsin API:sta, jokainen kuva katsottu
+       * silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Aerial view kyiv.jpg',
+          selite: 'Podilin kaupunginosa ja Dnepri ylhäältä '
+            + 'syysaamuna: etualan rinne on ruskan värinen, ja sen '
+            + 'takaa avautuu matalien kortteleiden ruudukko. Oikealla '
+            + 'levittäytyy leveä joki, jonka yli kulkee kaksi siltaa.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 DE)',
+        },
+        {
+          tiedosto: '2017 - Київ - Світанок над Дніпром.jpg',
+          selite: 'Jokiranta auringon noustessa: etualalla on '
+            + 'kivetty terassi ja rivi valurautaisia katulyhtyjä '
+            + 'monine kupuineen, ja niiden takana kaartuu joen yli '
+            + 'jalankulkusilta riippuvine köysineen. Aurinko nousee '
+            + 'vastarannan puiden takaa.',
+          lahde: 'Moahim, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Khreshchatyk Street, Kiev. Ukraine (45935065521).jpg',
+          selite: 'Hreshtshatykin bulevardi yöllä sumussa: leveä '
+            + 'kiveys jatkuu suoraan pimeään, katulyhdyt hehkuvat '
+            + 'oransseina utuisina palloina ja katujen ylle on '
+            + 'ripustettu valokaaria. Molemmin puolin nousevat '
+            + 'valaistut julkisivut.',
+          lahde: 'Juan Antonio Segal from Madrid, Spain, Wikimedia '
+            + 'Commons (CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'musiikki',
@@ -8193,6 +8229,43 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNimi: 'Bulgarialaista kansanmusiikkia Apple Musicissa',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme etäisyyttä. Ilmasta auringon
+       * laskiessa koko ruutukaava ja vuoret takana, katutasolta
+       * Largon aukio aamuauringossa, ja lopuksi kaupunki Vitosan
+       * metsänrajasta katsottuna — vuori, jonka juurella Sofia on.
+       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
+       * jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Sofia (37139621884).jpg',
+          selite: 'Keskusta ilmasta auringonlaskun aikaan: suora '
+            + 'puistokatu halkoo tiilikattoisten kortteleiden meren '
+            + 'ja katkeaa horisontissa vuorijonoon. Taivas palaa '
+            + 'oranssina pilvien raoista, ja kadunvalot ovat jo '
+            + 'syttyneet.',
+          lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Άποψη του Largo από τα δυτικά.jpg',
+          selite: 'Largon aukio lännestä aamuauringossa: keskellä '
+            + 'kohoaa entinen puoluetalo tornimaisine huippuineen ja '
+            + 'sitä reunustavat molemmin puolin raskaat pylväikköiset '
+            + 'siivet. Aukion pintana on Sofian tunnettu keltainen '
+            + 'mukulakivi, joka kiiltää kosteana.',
+          lahde: 'PLAKLE, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Sofia seen from Vitosha 1.jpg',
+          selite: 'Kaupunki Vitosan rinteeltä kesäpäivänä: etualalla '
+            + 'aukeaa aukko tummanvihreään metsään, ja sen takaa '
+            + 'levittäytyy koko Sofia tasangolle. Horisontissa nousee '
+            + 'toinen vuorijono, ja pilvet kelluvat kaupungin '
+            + 'yläpuolella.',
+          lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -8326,6 +8399,42 @@ export const KULTTUURI_KATEGORIAT = {
             + 'minuutin ajan. Lisukkeeksi tulee sinappia ja leipää.',
           lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Mititei',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme suuntaa. Dâmbovița-joen kanava
+       * illansuussa, Yliopiston aukio ylhäältä keskellä päivää, ja
+       * matalien kattojen yli katsottu siluetti iltaruskossa.
+       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
+       * jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Bucharest - Dambovita view 01.jpg',
+          selite: 'Dâmbovița sillalta katsottuna auringonlaskun '
+            + 'aikaan: joki kulkee suorassa betonisessa uomassa, ja '
+            + 'sen tyyni pinta heijastaa oranssin taivaan ja rannan '
+            + 'lehdettömät puut. Vasemmalla on matala klassistinen '
+            + 'julkisivu, oikealla kerrostalorivi.',
+          lahde: 'Joe Mabel, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Bucharest-Skyline-01.jpg',
+          selite: 'Yliopiston aukio ylhäältä: keskellä kaartuu '
+            + 'vaaleaharmaa 1900-luvun alun palatsi mansardikattoineen '
+            + 'ja tornipäätyineen, ja sen editse kulkee leveä '
+            + 'bulevardi. Kaukana horisontissa kohoaa parlamentin '
+            + 'palatsin valtava massa.',
+          lahde: 'seisdeagosto, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Bucharest Skyline.jpg',
+          selite: 'Kaupunki matalien kattojen yli iltaruskossa: '
+            + 'etualalla on tiilikattoisten omakotitalojen ja pihapuiden '
+            + 'sekava meri, ja niiden takana nousee rivi vaaleita '
+            + 'kerrostaloja. Oikealla erottuu vinoköysisillan valkoinen '
+            + 'pyloni.',
+          lahde: 'Dan Mihai Pitea, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -10126,6 +10235,42 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Riian keskustori',
         },
       ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme etäisyyttä ja kaksi
+       * vuorokaudenaikaa. Vanhakaupunki ylhäältä hämärissä,
+       * torniviiva joen takaa kirkkaana kesäpäivänä ja lopuksi
+       * jugendkortteli katutasolta. Lisenssit, tekijät ja koot
+       * todennettu Commonsin API:sta, jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Riga From 26th Floor of Radisson Blu, Latvia.jpg',
+          selite: 'Kaupunki tornihotellin ikkunasta illan hämärtyessä: '
+            + 'alhaalla kulkee valaistu puistokatu ja sen päässä '
+            + 'kohoaa Vapaudenpatsaan vaalea pylväs. Kauempana '
+            + 'erottuvat Pietarinkirkon terävä huippu ja '
+            + 'Kansalliskirjaston vino lasikatto joen rannassa.',
+          lahde: 'Ken Eckert, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '20070630-IMG 1662. Rīgas Doms, panorāma.jpg',
+          selite: 'Vanhankaupungin torniviiva Daugavan toiselta '
+            + 'rannalta kesäpäivänä: rantaa reunustaa yhtenäinen '
+            + 'puurivi, jonka yli nousevat tuomiokirkon punatiilinen '
+            + 'torni mustine kupuineen ja kaksi kapeampaa kirkontornia. '
+            + 'Taivaalla ajelehtii poutapilviä.',
+          lahde: 'Karlis Ustups, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Art Nouveau Riga 09.jpg',
+          selite: 'Jugendkortteli katutasolta kirkkaassa auringossa: '
+            + 'kadun molemmin puolin nousee koristeellisia julkisivuja '
+            + 'keltaisena, vaaleanpunaisena ja vihreänä, ja niiden '
+            + 'parvekkeita kannattavat veistetyt konsolit ja '
+            + 'kasvomaiset koristeet. Katu kaartuu varjoon kauempana.',
+          lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'vanhakaupunki',
@@ -10277,6 +10422,43 @@ export const KULTTUURI_KATEGORIAT = {
             + '"Jokaisella on oikeus olla onnellinen."',
           lahde: 'AwOiSoAk KaOsIoWa, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Užupis',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme suuntaa. Vanhakaupunki
+       * kattojen yli näkötornista, Neris-joki ja uusi keskusta
+       * auringonlaskussa, ja Didžioji-katu sinisellä hetkellä.
+       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
+       * jokainen kuva katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'View of the Vilnius Old Town from the Observation Tower of the Palace of the Grand Dukes of Lithuania.jpg',
+          selite: 'Vanhakaupunki näkötornista kesäaamuna: etualalla '
+            + 'aaltoilee tiheä lehtipuiden latvusto, ja sen takaa '
+            + 'levittäytyy punatiilikattojen meri. Kattojen seasta '
+            + 'nousee kirkontorneja, joista oikeanpuoleisin on '
+            + 'yliopiston valkoinen kellotorni.',
+          lahde: 'Pofka, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Baltasis tiltas by Augustas Didzgalvis.jpg',
+          selite: 'Neris ja Valkoinen silta ylhäältä auringonlaskussa: '
+            + 'silta kaartuu kevyenä yhtenä kaarena rannalta toiselle, '
+            + 'ja joen pinta hehkuu oranssina. Vasemmalla ovat vanhan '
+            + 'puolen matalat korttelit, oikealla nurmikenttä ja '
+            + 'kaukana lasitorneja.',
+          lahde: 'BigHead (Augustas Didžgalvis), Wikimedia Commons '
+            + '(CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Didžioji Street at dusk, Vilnius, Lithuania - Diliff.jpg',
+          selite: 'Didžioji-kadun aukio sinisellä hetkellä: taivas on '
+            + 'syvän sininen ja katulyhdyt palavat lämpiminä. Vasemmalla '
+            + 'jatkuu vaaleiden talojen rivi ravintolakatoksineen, '
+            + 'keskellä kohoaa kirkontorni ja etualalla levittäytyy '
+            + 'laaja mukulakivetys.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -10434,6 +10616,42 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siirsivät sen kiveen.',
           lahde: 'The original uploader was DIMSFIKAS at Greek Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Vigelandin puisto',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (19.8.2026): kolme suuntaa. Keskusta ja
+       * oopperatalo Ekebergin rinteeltä, puutalokuja Damstredetissä
+       * kesällä ja koko vuono ilmasta syksyllä. Lisenssit, tekijät ja
+       * koot todennettu Commonsin API:sta, jokainen kuva katsottu
+       * silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Barcode and Oslo Opera house seen from Ekeberg.JPG',
+          selite: 'Keskusta Ekebergin rinteeltä iltapäivän '
+            + 'auringossa: vasemmalla laskeutuu oopperatalon valkoinen '
+            + 'vino katto suoraan veteen, ja sen oikealla puolella '
+            + 'seisoo rivi eri korkuisia lasitorneja tiukassa jonossa. '
+            + 'Taustalla nousevat metsäiset kukkulat.',
+          lahde: 'Helge Høifødt, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Oslo - Damstredet.jpg',
+          selite: 'Damstredetin puutalokuja kesäpäivänä: mukulakivinen '
+            + 'katu nousee mäkeä, ja sen varrella on pieniä '
+            + 'puutaloja — musta lautaseinä, keltainen rapattu '
+            + 'julkisivu ja punatiilikattoja. Ovien vieressä palavat '
+            + 'lyhdyt ja pihoilla kukkii.',
+          lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: '2010-10-25 Oslo.jpg',
+          selite: 'Oslo ja vuono ilmasta syksyllä: etualalla peittää '
+            + 'rinteet matala asutus ruskan keskellä, keskellä '
+            + 'levittäytyy tummansininen vuono saarineen ja niemineen, '
+            + 'ja kaukana pohjukassa erottuu keskustan tiivis '
+            + 'rakennusmassa.',
+          lahde: 'Chell Hill, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
