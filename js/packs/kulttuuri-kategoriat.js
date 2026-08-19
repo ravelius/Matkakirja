@@ -8880,6 +8880,196 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Planty Park, autumn, Old Town, Krakow, Poland.jpg',
+          selite: 'Leveä lehtipuukujanne syksyllä: paksut rungot reunustavat hiekkakäytävää, ja latvat kaartuvat holviksi keltaisena ja ruosteenruskeana. Käytävän molemmin puolin on rivi vihreitä valurautapenkkejä ja mustia lyhtypylväitä, maassa lehtimatto.',
+          lahde: 'Zygmunt Put Zetpe0202, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Krakovan vanhaakaupunkia ei ympäröi muuri vaan puisto. '
+          + 'Kun keskiaikaiset muurit purettiin, niiden paikalle '
+          + 'istutettiin neljä kilometriä pitkä puistokehä, joka on yhä '
+          + 'kaupungin kävelyreitti. Kehän ulkopuolella odottaa toinen '
+          + 'Krakova: 1949 rakennettu terästehtaan kaupunki.',
+        artikkeli: {
+          nimi: 'Matkailijan Krakova',
+          taitto: 'opas',
+          teksti: 'Muurin tilalle istutettiin puisto — ja kaupungin '
+            + 'reunalle rakennettiin kokonainen sosialistinen '
+            + 'mallikaupunki.',
+          nosto: 'Raitiotietunnelin rakentaminen kesti 34 vuotta; se '
+            + 'avattiin joulukuussa 2008.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentoasema on Balicessa noin yhdentoista '
+                + 'kilometrin päässä keskustasta länteen. Se avattiin '
+                + 'siviili-ilmailulle 1967, ja vuonna 2025 matkustajia '
+                + 'oli yli kolmetoista miljoonaa — Puolan toiseksi '
+                + 'eniten. Kentältä päärautatieasemalle menee lähijuna '
+                + 'noin seitsemässätoista minuutissa. Raitiovaunut '
+                + 'aloittivat 1882 hevosvetoisina, ja verkko '
+                + 'sähköistettiin maaliskuussa 1901. Linjoja on nyt 27.',
+              kuva: { tiedosto: 'Kraków - tram Bombardier NGT6 twisting from Nowosądecka street to Wielicka street.JPG', selite: 'Keltavalkoinen nivelraitiovaunu kaartaa risteyksessä omalla radallaan. Ympärillä on leveä tyhjä katu, kiskot kaartuvat oikealle, ja taustalla on tiheä puurivi kesäisessä lehdessä.', lahde: 'Wuhazet (Henryk Żychowski), Wikimedia Commons (CC BY 3.0)' },
+            },
+            {
+              otsikko: 'Puisto muurin paikalla',
+              teksti: 'Planty-puisto kiertää vanhankaupungin siellä, '
+                + 'missä kaupunginmuurit ennen olivat. Se perustettiin '
+                + '1822–1830, on neljä kilometriä pitkä ja 21 hehtaaria, '
+                + 'ja koostuu ketjusta erityylisiä puutarhoja. '
+                + 'Historiallinen keskusta oli yksi ensimmäisistä '
+                + 'kohteista Unescon maailmanperintöluettelossa vuonna '
+                + '1978. Kaupungissa on 18 hallinnollista '
+                + 'kaupunginosaa ja runsaat 800 000 asukasta.',
+            },
+            {
+              otsikko: 'Talven savusumu',
+              teksti: 'Krakova sijaitsee laaksossa, ja talvella '
+                + 'kivihiilen poltto lämmityksessä on tehnyt ilmasta '
+                + 'ajoittain Euroopan huonointa. Kaupungista tuli 2019 '
+                + 'ensimmäinen Puolassa, joka kielsi kivihiilen ja puun '
+                + 'polton kotitalouksien lämmityksessä. Ero näkyi '
+                + 'mittauksissa: raja-arvon ylittäviä vuorokausia oli '
+                + 'lämmityskaudella 2012–13 yhteensä 125 ja kaudella '
+                + '2019–20 enää 64.',
+            },
+            {
+              otsikko: 'Kaupunki, joka rakennettiin aatteesta',
+              teksti: 'Nowa Huta perustettiin 1949 omaksi kaupungikseen '
+                + 'Krakovan viereen ja liitettiin siihen 1951. Tarkoitus '
+                + 'oli poliittinen: yliopistokaupungin kylkeen haluttiin '
+                + 'työväenluokkaa ja ihanteellinen sosialistinen '
+                + 'kaupunki. Terästehdas avattiin 22. heinäkuuta 1954 ja '
+                + 'kasvoi maan suurimmaksi. 1980-luvulla alueesta tuli '
+                + 'Solidaarisuus-liikkeen keskus: tehtaan 38 000 '
+                + 'työntekijästä lähes 29 000 kuului liittoon.',
+              kuva: { tiedosto: 'Plac Centralny - Nowa Huta.jpg', selite: 'Ilmakuva säteittäisestä aukiosta: keskellä on suorakaiteen muotoinen nurmikenttä käytävineen, ja sen ympäriltä lähtee viisi leveää puistokatua eri suuntiin. Aukiota reunustavat matalat vaaleat kerrostalot yhtenäisenä rivinä.', lahde: 'TomRollauer, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Krakova on selvästi sateisempi kuin Varsova: '
+                + 'vettä tulee vuodessa 782 millimetriä. Sade painottuu '
+                + 'kesään, ja heinäkuu on sateisin kuukausi 105 '
+                + 'millimetrillä. Kuivinta on joulukuussa, 42 '
+                + 'millimetriä, mutta silloin ollaan jo pakkasen '
+                + 'puolella. Kesä on lämmin muttei kuuma, '
+                + 'kaksikymmentäneljä astetta. Talvella savusumu on yhä '
+                + 'mahdollinen kylminä ja tyyninä päivinä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Vanhakaupunki on tiivis ja sen ympäri pääsee '
+                  + 'puistokehää pitkin.',
+              },
+              {
+                mita: 'Raitiovaunut',
+                tahdet: 3,
+                selite: '27 linjaa kattaa koko kaupungin, myös Nowa '
+                  + 'Hutan.',
+              },
+              {
+                mita: 'Arkkitehtuuri',
+                tahdet: 3,
+                selite: 'Keskiaikainen ydin ja 1950-luvun sosialistinen '
+                  + 'mallikaupunki saman lipun päässä.',
+              },
+              {
+                mita: 'Puistot',
+                tahdet: 2,
+                selite: 'Planty on kaunis mutta kapea; isot puistot '
+                  + 'ovat kauempana keskustasta.',
+              },
+              {
+                mita: 'Talvi-ilma',
+                tahdet: 1,
+                selite: 'Kylminä ja tyyninä päivinä laakso kerää yhä '
+                  + 'savusumua.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu kesään',
+                teksti: 'Heinäkuussa vettä tulee 105 millimetriä ja '
+                  + 'joulukuussa 42. Vuoden sademäärä on 782 '
+                  + 'millimetriä eli selvästi enemmän kuin Varsovassa.',
+              },
+              {
+                otsikko: 'Lentokentältä juna',
+                teksti: 'Lähijuna vie kentältä päärautatieasemalle noin '
+                  + 'seitsemässätoista minuutissa. Se on nopein tapa '
+                  + 'keskustaan.',
+              },
+              {
+                otsikko: 'Nowa Huta on oma matkansa',
+                teksti: 'Raitiovaunu vie keskustasta suoraan '
+                  + '1950-luvun kaupunkiin. Matkaan kannattaa varata '
+                  + 'puoli päivää.',
+              },
+              {
+                otsikko: 'Ilmanlaatu vaihtelee',
+                teksti: 'Kivihiilen poltto kotitalouksissa kiellettiin '
+                  + '2019, ja ilma on siitä selvästi parantunut. Talven '
+                  + 'tyyninä päivinä laakso kerää silti sumua.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenen tienoilla ja päivät ovat '
+              + 'pitkiä. Heinäkuu on lämpimin mutta samalla vuoden '
+              + 'sateisin kuukausi. Syksy on kaunis ja Planty on '
+              + 'silloin parhaimmillaan. Talvi on kylmä ja kuivin, '
+              + 'mutta ilmanlaatu voi olla huono.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-1–19 °C',
+                kuvaus: 'Lämpenee nopeasti, mutta sade lisääntyy: '
+                  + 'toukokuussa vettä tulee jo yli yhdeksän senttiä. '
+                  + 'Maaliskuun yöt ovat vielä pakkasella.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '13–24 °C',
+                kuvaus: 'Lämmin ja vuoden sateisin jakso. Heinäkuussa '
+                  + 'vettä tulee 105 millimetriä, usein ukkoskuuroina.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '1–19 °C',
+                kuvaus: 'Syyskuu on lämmin ja jo kuivempi kuin kesä. '
+                  + 'Marraskuussa päivälämpötila laskee viiteen '
+                  + 'asteeseen ja sumu yleistyy.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-5–3 °C',
+                kuvaus: 'Vuoden kuivin jakso: joulukuussa vettä tulee '
+                  + 'vain 42 millimetriä. Pakkasta on säännöllisesti, '
+                  + 'ja tyyninä päivinä ilma seisoo laaksossa.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'MPK Kraków — raitiovaunut ja bussit',
+                url: 'https://mpk.krakow.pl/en/',
+              },
+              {
+                nimi: 'Wikivoyage: Krakova',
+                url: 'https://fi.wikivoyage.org/wiki/Krakova',
+              },
+            ],
+          },
+          lahde: 'Wikipedia; ilmanlaadun luvut Notes from Poland',
+        },
+      },
       nostot: [
         {
           otsikko: 'Lohikäärme puhaltaa yhä tulta',
@@ -9052,6 +9242,199 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'A.Osytek, Wikimedia Commons (CC BY-SA 3.0 pl)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Presidential Palace in Warsaw (by Pudelek).jpg',
+          selite: 'Valkoinen pylväsjulkisivuinen palatsi sinisellä hetkellä: ikkunoista lankeaa lämmin valo ja katolla liehuu kolme lippua. Etualalla kohoaa graniittijalustalla ratsastajapatsas, jonka miekka osoittaa eteenpäin.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Varsova ei ole se kaupunki, jonka moni odottaa. '
+          + 'Joen länsipuoli rakennettiin uudelleen tyhjästä, itäpuolen '
+          + 'Praga säilyi lähes ehjänä, ja kaupungin vilkkaimman '
+          + 'liittymän keskellä kasvaa keinotekoinen palmu. Sadetta '
+          + 'tulee vähemmän kuin missään muualla Keski-Euroopassa.',
+        artikkeli: {
+          nimi: 'Matkailijan Varsova',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jonka kaksi rantaa kertovat eri tarinan — '
+            + 'ja jonka kiertoliittymässä kasvaa palmu.',
+          nosto: 'Rondo de Gaullen tekopalmu pystytettiin joulukuussa '
+            + '2002 ja siirtyi 2012 taidemuseon kokoelmiin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä avattiin 29. huhtikuuta 1934, ja se '
+                + 'on Puolan vilkkain: vuonna 2025 matkustajia oli 24 '
+                + 'miljoonaa. Kentän alle avattiin juna-asema kesäkuussa '
+                + '2012. Metron ensimmäinen linja avattiin 7. huhtikuuta '
+                + '1995, vaikka rakentaminen oli aloitettu jo 1983; '
+                + 'toinen linja avattiin 2015. Asemia on 39. '
+                + 'Raitiovaunut aloittivat hevosvetoisina 1866, ja '
+                + 'verkko sähköistettiin vuoteen 1908 mennessä.',
+              kuva: { tiedosto: 'Bemowo metro station, 3.jpg', selite: 'Pitkä metrolaituri lähes tyhjänä: kattoa jäsentää ruskea ruutukasetointi, ja keskellä seisoo vaaleanvihreä pyöreä pilari. Seinät ovat tummat, laiturin reunassa kulkee valonauha, ja kaukana näkyy yksittäinen odottaja.', lahde: 'Oliwier Brzeziński, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Kaksi rantaa, kaksi kaupunkia',
+              teksti: 'Varsova jakautuu 18 kaupunginosaan, ja nykyinen '
+                + 'jako vahvistettiin 2002. Veikselin itäpuolella oleva '
+                + 'Praga oli oma kaupunkinsa: se sai kaupunkioikeudet '
+                + '1648 ja liitettiin Varsovaan vasta 1700-luvun '
+                + 'lopulla. Praga säästyi vuoden 1944 tuholta '
+                + 'poikkeuksellisen hyvin, joten siellä on yhä '
+                + 'sotaa edeltäviä kadunvarsitaloja — joen länsipuolella '
+                + 'niitä ei juuri ole.',
+              kuva: { tiedosto: 'Warszawa targowa 43 45.jpg', selite: 'Sotaa edeltäviä kerrostaloja kadun varressa talvella: keskellä kellertävä talo, jonka ikkunoiden yllä on kolmiopäätyjä ja katossa rivi kattoikkunoita. Katukiveyksen reunassa on harmaita lumikasoja ja kadulla pysäköityjä autoja.', lahde: 'Panek, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Palmu keskellä kiertoliittymää',
+              teksti: 'Kaupungin vilkkaimman liittymän keskellä kasvaa '
+                + 'toistakymmentä metriä korkea keinotekoinen palmu. '
+                + 'Taideteos pystytettiin 12. joulukuuta 2002. Runko on '
+                + 'verhoiltu aidolla palmunkuorella, lehdet ovat '
+                + 'lasikuitua. Teos muistuttaa siitä, että kadun nimi '
+                + 'juontuu 1770-luvun juutalaisasutuksesta. Vuodesta '
+                + '2012 palmu on kuulunut nykytaiteen museon '
+                + 'kokoelmiin, ja liittymästä on tullut '
+                + 'kokoontumispaikka.',
+              kuva: { tiedosto: 'Warszawa - Pozdrowienia z Alej Jerozolimskich.jpg', selite: 'Keinotekoinen palmu kohoaa katutason yläpuolelle: karkea ruskea runko ja tummanvihreä lehtikruunu piirtyvät pilvetöntä taivasta vasten. Alla kulkee puna-keltainen raitiovaunu ja taustalla on matalia vaaleita taloja.', lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)' },
+            },
+            {
+              otsikko: 'Sopimus, joka nimettiin kaupungin mukaan',
+              teksti: 'Varsovan liitto allekirjoitettiin kaupungissa 14. '
+                + 'toukokuuta 1955. Perustajajäseniä oli kahdeksan, ja '
+                + 'sopimus solmittiin vastauksena Länsi-Saksan '
+                + 'liittymiselle Natoon. Sotilasliitto oli voimassa 36 '
+                + 'vuotta: sen purkamisesta ilmoitettiin helmikuussa '
+                + '1991, ja se lakkautettiin virallisesti heinäkuun '
+                + 'ensimmäisenä päivänä samana vuonna. Kaupungin nimi '
+                + 'jäi silti historiankirjoihin koko aikakauden '
+                + 'nimikkeeksi.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Varsova on Keski-Euroopan vähäsateisin '
+                + 'suurkaupunki, mutta sade osuu kesään: heinäkuu on '
+                + 'sekä lämpimin että sateisin kuukausi, 84 '
+                + 'millimetriä. Kuivinta on helmikuussa, 38 '
+                + 'millimetriä. Talvi on pakkasen puolella ja lunta on '
+                + 'maassa keskimäärin 68 päivänä vuodessa. Aurinkoa '
+                + 'paistaa lähes kaksituhatta tuntia. Kylmin mitattu '
+                + 'lukema on 31 pakkasastetta vuodelta 1940.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Puistot',
+                tahdet: 3,
+                selite: 'Kaupungissa on poikkeuksellisen paljon '
+                  + 'vihreää, ja isot puistot ovat maksuttomia.',
+              },
+              {
+                mita: 'Julkinen liikenne',
+                tahdet: 3,
+                selite: 'Metro, raitiovaunut ja bussit kulkevat samalla '
+                  + 'lipulla, ja verkko kattaa koko kaupungin.',
+              },
+              {
+                mita: 'Museot',
+                tahdet: 3,
+                selite: 'Kaupungin historiaa käsitteleviä museoita on '
+                  + 'useita, ja monet niistä ovat uusia.',
+              },
+              {
+                mita: 'Praga',
+                tahdet: 2,
+                selite: 'Joen itäpuoli näyttää siltä, miltä Varsova '
+                  + 'näytti ennen sotaa — mutta se on hajallaan.',
+              },
+              {
+                mita: 'Talvi',
+                tahdet: 1,
+                selite: 'Tammi- ja helmikuussa päivä jää pariin '
+                  + 'asteeseen ja lumi on harmaata.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu kesään',
+                teksti: 'Heinäkuu on vuoden sateisin kuukausi, 84 '
+                  + 'millimetriä, ja helmikuu kuivin, 38. Kesäsateet '
+                  + 'tulevat usein ukkoskuuroina.',
+              },
+              {
+                otsikko: 'Yksi lippu kaikkeen',
+                teksti: 'Sama lippu kelpaa metroon, raitiovaunuun ja '
+                  + 'bussiin. Aikaperusteinen lippu on lyhyillä '
+                  + 'matkoilla halvin.',
+              },
+              {
+                otsikko: 'Joki jakaa kaupungin',
+                teksti: 'Veikselin länsipuoli on rakennettu uudelleen, '
+                  + 'itäpuoli säilyi. Ero näkyy katukuvassa heti, kun '
+                  + 'ylittää sillan.',
+              },
+              {
+                otsikko: 'Lunta on kaksi kuukautta',
+                teksti: 'Lumipeitettä on keskimäärin 68 päivänä '
+                  + 'vuodessa. Talvikengät ovat tarpeen joulukuusta '
+                  + 'maaliskuuhun.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenen tienoilla eikä sadetta ole '
+              + 'yhtä paljon kuin heinäkuussa. Heinä- ja elokuu ovat '
+              + 'lämpimimmät mutta myös sateisimmat. Talvi on kylmä ja '
+              + 'luminen, mutta samalla vuoden kuivin jakso.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-1–19 °C',
+                kuvaus: 'Lämpenee nopeasti: maaliskuussa yöt ovat '
+                  + 'vielä pakkasella, toukokuussa päivä on jo '
+                  + 'yhdeksäntoista astetta. Sade lisääntyy kevään '
+                  + 'mittaan.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '13–25 °C',
+                kuvaus: 'Lämmin ja vuoden sateisin jakso. Heinäkuussa '
+                  + 'vettä tulee 84 millimetriä, usein lyhyinä '
+                  + 'ukkoskuuroina.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '2–18 °C',
+                kuvaus: 'Syyskuu on vielä lämmin ja selvästi kesää '
+                  + 'kuivempi. Marraskuussa päivälämpötila laskee '
+                  + 'kuuteen asteeseen.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-4–2 °C',
+                kuvaus: 'Pakkasen puolella ja luminen, mutta samalla '
+                  + 'vuoden kuivin jakso: helmikuussa vettä tulee vain '
+                  + '38 millimetriä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'WTP — Varsovan joukkoliikenne',
+                url: 'https://www.wtp.waw.pl/en/',
+              },
+              {
+                nimi: 'Wikivoyage: Varsova',
+                url: 'https://fi.wikivoyage.org/wiki/Varsova',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Sydän palasi ilman omistajaansa',
@@ -10014,6 +10397,196 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Architectural Detail - Kalamaja District - Tallinn - Estonia - 01 (36045920535).jpg',
+          selite: 'Rivi vanhoja puutaloja vinosti kuvattuna: lähinnä on okrankeltainen kaksikerroksinen talo, sen takana vaaleanpunainen ja kauimpana harmaaksi patinoitunut. Katot ovat ruosteenpunaista peltiä, ja seiniä kiertävät vaakalaudat ja peltiset syöksytorvet.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Suomalaiselle Tallinna on tuttu vanhastakaupungista ja '
+          + 'laivasta, mutta kaupunki on paljon isompi kuin muurien '
+          + 'sisäpuoli. Puutalokaupunginosat alkavat heti rautatieaseman '
+          + 'takaa, ja neljäsosa kaupunkilaisista asuu yhdessä ainoassa '
+          + 'lähiössä idässä.',
+        artikkeli: {
+          nimi: 'Matkailijan Tallinna',
+          taitto: 'opas',
+          teksti: 'Puutalokortteli, betonilähiö ja digitaalinen valtio '
+            + '— kaikki saman raitiovaunulipun päässä.',
+          nosto: 'Joukkoliikenne on ollut kaupunkiin kirjatuille '
+            + 'asukkaille maksutonta vuoden 2013 alusta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä on noin viiden kilometrin päässä '
+                + 'keskustasta järven rannalla — yksi Euroopan '
+                + 'lähimmistä. Se avattiin 20. syyskuuta 1936, ja '
+                + 'vuonna 2024 matkustajia oli lähes kolme ja puoli '
+                + 'miljoonaa. Raitiotietä on 19,7 kilometriä ja viisi '
+                + 'linjaa. Joukkoliikenne on maksutonta, mutta vain '
+                + 'kaupunkiin kirjatuille asukkaille: muualta tulevat '
+                + 'ostavat lipun normaalisti.',
+              kuva: { tiedosto: 'Empty tram near Tallinn airport.JPG', selite: 'Raitiovaunun tyhjä sisätila päästä päähän kuvattuna: kuvioidut punasiniset istuimet riveissä, hopeanväriset kaiteet ja katossa pitkittäiset valolistat. Kattonäytöllä lukee linjan numero ja kellonaika, ja ikkunoista tulvii kirkas päivänvalo.', lahde: 'Dmitry G, Wikimedia Commons (PD)' },
+            },
+            {
+              otsikko: 'Puutaloja ja betonia',
+              teksti: 'Kalamaja on Tallinnan parhaiten säilyneitä '
+                + 'puutaloalueita, ja siellä asuu vajaat kolmetoista '
+                + 'tuhatta ihmistä. Alue oli 1300-luvulta lähtien '
+                + 'kalastajien ja veneenrakentajien kortteli, ja se '
+                + 'teollistui vuodesta 1870, kun rata Pietariin '
+                + 'valmistui. Idässä on toisenlainen kaupunki: '
+                + 'Lasnamäen betonilähiössä asuu 119 695 ihmistä eli '
+                + 'runsas neljäsosa koko kaupungista. Rakentaminen '
+                + 'alkoi 1973.',
+              kuva: { tiedosto: 'Soviet-era apartment building in Lasnamäe, Tallinn, Estonia.jpg', selite: 'Erittäin pitkä kahdeksankerroksinen elementtitalo kaartuu tien vartta pitkin niin kauas, ettei sen päätä näy. Julkisivussa vuorottelevat valkoiset parvekelevyt ja vaalea rappaus. Etualalla on tyhjä tie ja harmaa kevättalven nurmi.', lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)' },
+            },
+            {
+              otsikko: 'Valtio, johon voi liittyä verkosta',
+              teksti: 'Viron e-residenssi ei ole sama asia kuin '
+                + 'sähköinen äänestäminen. Ohjelma alkoi 1. joulukuuta '
+                + '2014, ja se antaa kenelle tahansa digitaalisen '
+                + 'henkilöllisyyden — ei kansalaisuutta eikä oikeutta '
+                + 'asua maassa. Vuoden 2023 loppuun mennessä '
+                + 'e-residenttejä oli yli satatuhatta 181 maasta, ja he '
+                + 'olivat perustaneet yli 27 000 yritystä. Kortti on '
+                + 'voimassa viisi vuotta ja noudetaan henkilökohtaisesti.',
+            },
+            {
+              otsikko: 'Kaksi yötä maaliskuussa 1944',
+              teksti: 'Tallinnaa pommitettiin 9. ja 10. maaliskuuta '
+                + '1944. Ensimmäisessä hyökkäyksessä pudotettiin '
+                + 'kolmestasadasta koneesta yli kolmetuhatta pommia, ja '
+                + 'toinen aalto tuli yöllä kahden aikaan. Kuolonuhreja '
+                + 'oli virallisesti 757, joista 586 siviilejä. Noin '
+                + 'viidesosa kaupungin rakennuksista paloi ja yli 20 '
+                + '000 ihmistä jäi vaille kotia. Eniten tuhoutui juuri '
+                + 'puisia esikaupunkeja.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kevät on vuoden kuivin jakso: maaliskuussa vettä '
+                + 'tulee vain 33 millimetriä. Sade painottuu loppukesään '
+                + 'ja syksyyn, ja elokuu on sateisin kuukausi 78 '
+                + 'millimetrillä. Kesä on lämmin muttei kuuma, '
+                + 'heinäkuussa kaksikymmentäkaksi astetta. Talvi on '
+                + 'pakkasen puolella koko kolme kuukautta, ja helmikuu '
+                + 'on kylmin. Vuoden sademäärä on 633 millimetriä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Puutalokaupunginosat',
+                tahdet: 3,
+                selite: 'Kalamaja alkaa heti rautatieaseman takaa eikä '
+                  + 'muistuta lainkaan vanhaakaupunkia.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Keskusta, satama ja puutaloalueet ovat kaikki '
+                  + 'kävelymatkan päässä toisistaan.',
+              },
+              {
+                mita: 'Raitiovaunut',
+                tahdet: 3,
+                selite: 'Viisi linjaa kattaa keskustan ja vie myös '
+                  + 'lentokentälle.',
+              },
+              {
+                mita: 'Meri',
+                tahdet: 2,
+                selite: 'Rantaviivaa on paljon, mutta uimakausi on '
+                  + 'lyhyt ja vesi viileää.',
+              },
+              {
+                mita: 'Talven valo',
+                tahdet: 1,
+                selite: 'Joulukuussa päivä on lyhyt ja sää usein '
+                  + 'harmaa.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Maksuttomuus koskee asukkaita',
+                teksti: 'Ilmainen joukkoliikenne on vain kaupunkiin '
+                  + 'kirjatuille asukkaille. Matkailija ostaa lipun '
+                  + 'kuten ennenkin.',
+              },
+              {
+                otsikko: 'Kevät on kuivin',
+                teksti: 'Maaliskuussa vettä tulee 33 millimetriä ja '
+                  + 'elokuussa 78. Loppukesä on sateisin jakso, ei '
+                  + 'syksy eikä talvi.',
+              },
+              {
+                otsikko: 'Kaupunki jatkuu muurien takana',
+                teksti: 'Vanhakaupunki on pieni osa Tallinnaa. '
+                  + 'Kalamajaan pääsee kävellen ja Lasnamäelle '
+                  + 'bussilla.',
+              },
+              {
+                otsikko: 'Lentokenttä on lähellä',
+                teksti: 'Kentältä keskustaan on viisi kilometriä, ja '
+                  + 'raitiovaunu ajaa terminaalin viereen.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–elokuu: päivät ovat pitkiä '
+              + 'ja lämpötila viidentoista ja kahdenkymmenenkahden '
+              + 'välillä. Toukokuu on lämpimistä kuukausista kuivin, '
+              + 'elokuu sateisin. Syyskuu on vielä leuto ja hiljaisempi. '
+              + 'Talvi on kylmä ja pimeä, mutta vanhakaupunki on '
+              + 'silloin tyhjimmillään.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-3–15 °C',
+                kuvaus: 'Vuoden kuivin jakso: maaliskuussa vettä tulee '
+                  + 'vain 33 millimetriä. Lämpeneminen on nopeaa, ja '
+                  + 'toukokuussa päivä on jo viidentoista asteen '
+                  + 'tienoilla.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '11–22 °C',
+                kuvaus: 'Lämmin muttei kuuma. Sade lisääntyy kesän '
+                  + 'mittaan: elokuussa vettä tulee 78 millimetriä, '
+                  + 'koko vuoden eniten.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '0–15 °C',
+                kuvaus: 'Syyskuu on vielä leuto, marraskuussa päivä '
+                  + 'jää neljään asteeseen. Sadetta tulee noin kuusi '
+                  + 'senttiä kuukaudessa.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-6–0 °C',
+                kuvaus: 'Pakkasen puolella koko jakson ajan, ja '
+                  + 'helmikuu on vuoden kylmin kuukausi. Sadetta tulee '
+                  + 'lumena noin neljä senttiä kuukaudessa.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Tallinnan joukkoliikenne',
+                url: 'https://transport.tallinn.ee/#/en',
+              },
+              {
+                nimi: 'Wikivoyage: Tallinna',
+                url: 'https://fi.wikivoyage.org/wiki/Tallinna',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Laulukaari täyttyy viiden vuoden välein',
