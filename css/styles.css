@@ -14736,7 +14736,10 @@ a.pollo-kuvalahde {
 }
 
 /* Vastauksen pikkukuva kuplan oikeassa yläkulmassa (omistajan tilaus
-   15.8.2026): teksti kiertää kuvan, napautus avaa ison version. */
+   15.8.2026): teksti kiertää kuvan, napautus avaa ison version. Kiinteä
+   koko on valmiin kuvan rajauskehys, ei etukäteen varattu paikka — nappi
+   lisätään kuplaan vasta img:n load-tapahtumassa (js/pollo.js
+   naytaVastausKuva), joten kehys ei koskaan ole tyhjä. */
 .pollo-viesti .pollo-vastauskuva {
   float: right;
   width: 5.2rem;
@@ -14756,34 +14759,6 @@ a.pollo-kuvalahde {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Kuvan paikanpitäjä haun ajaksi (omistaja 15.8.2026: "place holder
- * sen aikaa ja animaatio"): sama kelluva laatta, sisällä hiljalleen
- * pyörivä rengas. Liikettä karttava asetus pysäyttää pyörinnän. */
-.pollo-viesti .pollo-vastauskuva.pollo-kuvapidike {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(70, 51, 31, 0.07);
-  cursor: default;
-}
-
-.pollo-kuvapidike-sykli {
-  width: 1.3rem;
-  height: 1.3rem;
-  border-radius: 50%;
-  border: 2px solid rgba(70, 51, 31, 0.35);
-  border-top-color: transparent;
-  animation: pollo-kuvapidike-pyorii 0.9s linear infinite;
-}
-
-@keyframes pollo-kuvapidike-pyorii {
-  to { transform: rotate(360deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pollo-kuvapidike-sykli { animation: none; border-top-color: rgba(70, 51, 31, 0.35); }
 }
 
 /* Jatkokysymykset vastauksen alla. Samaa muotoa kuin avausruudun

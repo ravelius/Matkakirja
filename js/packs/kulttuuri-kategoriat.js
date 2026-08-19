@@ -448,6 +448,35 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNimi: 'The Beatles Apple Musicissa',
           esikuuntelu: 'The Beatles Come Together',
         },
+        {
+          /*
+           * VISAN OPETTAVA NOSTO (19.8.2026). Lontoon kulttuurivisa
+           * kysyy, mikä veti ensimmäisiä metrojunia 1863 — mutta sanaa
+           * "höyry" ei ollut Lontoon kaupunkilehdessä kertaakaan, vain
+           * Britannian maalehdessä. docs/moduulit/kaupunkilehti.md
+           * vaatii visan opettavan noston kategorioihin (tarkistuslista
+           * kohta 4). Faktat samat kuin maalehdessä (GBR/Historia),
+           * mutta kirjoitettuna kadulla näkyvän laatan näkökulmasta.
+           */
+          otsikko: 'Metron tunnelissa savusi höyryveturi',
+          tiedosto: 'World\'s First Underground (5025945153).jpg',
+          teksti: 'Lontoon metro avattiin 10. tammikuuta 1863 maailman '
+            + 'ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta '
+            + 'ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti '
+            + 'höyryveturi — savu johdettiin ulos tunneliin jätetyistä '
+            + 'aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa '
+            + 'matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun '
+            + 'pinnassa muistuttaa yhä pronssilaatta, jonka London Transport '
+            + 'pystytti sadan vuoden kunniaksi vuonna 1963.',
+          selite: 'Pronssilaatta jalkakäytävän kiveyksessä. Tekstissä lukee, '
+            + 'että sen alla kulkee maailman ensimmäinen maanalainen '
+            + 'matkustajarata, jonka Metropolitan Railway Company avasi '
+            + 'yleisölle 10. tammikuuta 1863. Ylä- ja alareunassa on metron '
+            + 'ympyrätunnus.',
+          lahde: 'Simon Harriyott from Uckfield, England, Wikimedia Commons '
+            + '(CC BY 2.0)',
+          wiki: 'Lontoon metro',
+        },
       ],
     },
     {
@@ -3984,6 +4013,38 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Siren-Com, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Notre-Damen katedraali',
         },
+        {
+          /*
+           * VISAN OPETTAVA NOSTO (19.8.2026). Pariisin kulttuurivisa
+           * kysyy patonkikilpailun palkintoa, mutta aihetta ei ollut
+           * lehden sivuilla lainkaan — vain Matkaoppaan popupissa, jota
+           * lehteä selaava ei avaa. docs/moduulit/kaupunkilehti.md
+           * vaatii, että visan opettava nosto on kategorioissa
+           * näkyvillä ja että visan aihe löytyy aiheista
+           * (tarkistuslista kohta 4). Faktat samat kuin Ranskan
+           * maalehdessä (maa-kategoriat.js FRA/tavat), mutta
+           * kirjoitettuna kilpailun näkökulmasta.
+           */
+          otsikko: 'Paras patonki valitaan sokkona',
+          tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
+          teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
+            + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää '
+            + 'olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä '
+            + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
+            + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa '
+            + 'missään vaiheessa pakastaa. Leivät numeroidaan ennen '
+            + 'maistamista, jottei raati tiedä kenen leipää se arvostelee, ja '
+            + 'raadissa istuu kuusi arvottua tavallista pariisilaista. '
+            + 'Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän '
+            + 'toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
+          selite: 'Leipomon julkisivu Boulevard de Port-Royalilla: syvänsininen '
+            + 'puukehys, kullatut kirjaimet "Artisan Boulanger Pâtissier" ja '
+            + 'sinivalkoraidallinen markiisi. Ikkunan takana näkyy myyntitiski '
+            + 'leivonnaisineen, ja talon kulmassa on emaloitu sininen '
+            + 'kadunnimikilpi.',
+          lahde: 'Lionel Allorge, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Patonki',
+        },
       ],
     },
     {
@@ -4975,6 +5036,32 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ennen aloitusta.',
           lahde: 'Sheila1988, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Hurling',
+        },
+        {
+          /*
+           * VISAN OPETTAVA NOSTO (19.8.2026). Dublinin kulttuurivisa
+           * kysyy, miten uilleann-pilliin saadaan ilmaa, mutta sanoja
+           * uilleann, säkkipilli tai palje ei ollut Dublinin
+           * kaupunkilehdessä lainkaan — vain Irlannin maalehdessä.
+           * docs/moduulit/kaupunkilehti.md vaatii visan opettavan
+           * noston kategorioihin (tarkistuslista kohta 4).
+           */
+          otsikko: 'Säkkipilli, johon ei puhalleta',
+          tiedosto: 'Uilleann pipes-practice set.jpg',
+          teksti: 'Uilleann-pilli on Irlannin oma säkkipilli, eikä siihen '
+            + 'puhalleta lainkaan: ilma pumpataan palkeella, joka on hihnoilla '
+            + 'kiinni vyötäröllä ja oikeassa käsivarressa. Nimi tulee irlannin '
+            + 'sanasta uillinn eli kyynärpää, sillä juuri kyynärpää painaa '
+            + 'paljetta kokoon. Soittaja istuu ja painaa melodiapillin pään '
+            + 'reittään vasten: kun kaikki sormireiät ovat peitettyinä, ääni '
+            + 'vaikenee kokonaan. Unesco otti uilleann-pillin '
+            + 'perinneluetteloonsa vuonna 2017.',
+          selite: 'Harjoitussetti lattialla: ylhäällä nastoitettu nahkapalje '
+            + 'hihnoineen, keskellä viininpunaiseen samettiin verhoiltu '
+            + 'ilmasäkki ja oikealla musta melodiapilli, jossa on '
+            + 'messinkiheloja ja rivi sormireikiä.',
+          lahde: 'Pmcd90 at English Wikipedia, Wikimedia Commons (PD)',
+          wiki: 'Irlantilainen kansanmusiikki',
         },
       ],
           /*
@@ -6071,6 +6158,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on hakattu latinaksi ANONYMVS ja "kunniakkaimman '
             + 'Béla-kuninkaan notaari".',
           lahde: 'Miklós Ligeti, kuva Aisano, Wikimedia Commons (PD)',
+        },
+        {
+          /*
+           * VISAN OPETTAVA NOSTO (19.8.2026). Budapestin kulttuurivisa
+           * kysyy, mitä gulyás tarkoittaa, mutta lehdessä ei ollut
+           * ruoka-aihetta eikä sanaa gulyás lainkaan — vain Unkarin
+           * maalehdessä. docs/moduulit/kaupunkilehti.md vaatii visan
+           * opettavan noston kategorioihin (tarkistuslista kohta 4).
+           */
+          otsikko: 'Gulyás on keitto, ei pata',
+          tiedosto: 'Budapest Stall, Central Market (6003843356).jpg',
+          teksti: 'Se, mitä muualla Euroopassa kutsutaan gulassiksi, on '
+            + 'Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: '
+            + 'lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään '
+            + 'lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin '
+            + 'alun perin padassa laitumella. Paprika saapui maahan '
+            + 'ottomaanien mukana 1500-luvulla, ja suuressa kauppahallissa '
+            + 'sitä myydään makeasta tuliseen. Halli vihittiin 15. helmikuuta '
+            + '1897, sen suunnitteli Samu Pecz, ja katto katettiin Pécsin '
+            + 'Zsolnay-laatoilla. Pinta-alaa on 10 000 neliötä kolmessa '
+            + 'kerroksessa: alimmasta löytyvät kalakauppiaat ja suolakurkut, '
+            + 'kadun tasalta liha, leipä ja mausteet.',
+          selite: 'Vihanneskoju suuressa kauppahallissa. Tiskillä on kekoja '
+            + 'vaaleita paprikoita, tomaatteja, porkkanoita ja juuriselleriä, '
+            + 'oikealla halkaistuja vesimeloneja ja vasemmalla kennoja '
+            + 'kananmunia. Hintakyltit on kirjoitettu liidulla mustille '
+            + 'tauluille.',
+          lahde: 'Alex Proimos from Sydney, Australia, Wikimedia Commons '
+            + '(CC BY 2.0)',
+          wiki: 'Gulassi',
         },
       ],
           /*

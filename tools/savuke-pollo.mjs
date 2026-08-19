@@ -1950,9 +1950,17 @@ await sivu.evaluate(async () => {
  * Kaksi polkua: paikallinen nähtävyyskuva (Tower-vastaus yllä sai
  * sellaisen) ja Wikipedian pääkuva, jonka summary-rajapinta mockataan.
  */
-const pikkukuvaOma = await sivu.evaluate(() => {
-  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
-  const nappi = vastaus?.querySelector('.pollo-vastauskuva');
+const pikkukuvaOma = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  // Nappi lisätään kuplaan vasta img:n load-tapahtumassa (omistaja
+  // 19.8.2026), joten sitä odotetaan kyselysilmukalla eikä kiinteällä
+  // viiveellä.
+  let vastaus = null; let nappi = null;
+  for (let kierros = 0; kierros < 30 && !nappi; kierros += 1) {
+    vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+    nappi = vastaus?.querySelector('.pollo-vastauskuva');
+    if (!nappi) await odota(150);
+  }
   if (!nappi) return { loytyi: false };
   const kuva = nappi.getBoundingClientRect();
   const kupla = vastaus.getBoundingClientRect();
@@ -1980,6 +1988,17 @@ await sivu.route('**wikipedia.org/api/rest_v1/page/summary/**', (route) => route
     content_urls: { desktop: { page: 'https://fi.wikipedia.org/wiki/Koekuva' } },
   }),
 }));
+/*
+ * KUVA MATKALLA -IKKUNA (omistaja 19.8.2026: "älä piirrä sille
+ * etukäteen paikkaa"). Viivästetään koekuvan tavut kahdella
+ * sekunnilla, jotta vastausteksti ehtii valmistua kuvan ollessa
+ * vielä matkalla. Juuri siinä ikkunassa kuplassa EI saa olla
+ * .pollo-vastauskuva-elementtiä — ei tyhjää kehystä, ei paikanpitäjää.
+ */
+await sivu.route('**/assets/kohtaamiset/kohtaaminen-ateena.jpg', async (route) => {
+  await new Promise((r) => setTimeout(r, 2000));
+  await route.continue();
+});
 const pikkukuvaWiki = await sivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
   if (document.querySelector('.pollo-paneeli').hidden) {
@@ -1990,16 +2009,43 @@ const pikkukuvaWiki = await sivu.evaluate(async () => {
   await odota(150);
   // "varapolku": vastauksessa ei ole pelin indeksin sanoja eikä kuvaa.
   document.querySelector('.pollo-kentta').value = 'Kerro varapolku höpöhöpö kummallisuudesta';
+  const kuplia = document.querySelectorAll('.pollo-pollo').length;
   document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
-  await odota(1400);
-  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
-  const nappi = vastaus?.querySelector('.pollo-vastauskuva');
-  if (!nappi) return { loytyi: false };
+  /*
+   * KUVALLE EI SAA VARATA PAIKKAA ETUKÄTEEN (omistaja 19.8.2026).
+   * Odotetaan uusi vastauskupla ja seurataan sitä koko sen ajan, kun
+   * koekuva on viivästettynä matkalla: siinä ikkunassa kuplassa ei saa
+   * olla yhtään .pollo-vastauskuva-elementtiä. Vanhoja kuplia ei
+   * lasketa — niillä on jo omat kuvansa.
+   */
+  let vastaus = null;
+  for (let kierros = 0; kierros < 40 && !vastaus; kierros += 1) {
+    const kaikki = document.querySelectorAll('.pollo-pollo');
+    if (kaikki.length > kuplia) vastaus = kaikki[kaikki.length - 1];
+    else await odota(100);
+  }
+  if (!vastaus) return { loytyi: false, varattuKesken: null };
+  // Teksti valmistuu ~1 s:ssä, kuva vasta 2 s:n kuluttua: mitataan
+  // väliltä, ettei kupla varaa kuvalle tilaa etukäteen.
+  let varattuKesken = 0;
+  for (let kierros = 0; kierros < 12; kierros += 1) {
+    await odota(120);
+    varattuKesken = Math.max(varattuKesken,
+      vastaus.querySelectorAll('.pollo-vastauskuva').length);
+    if (vastaus.querySelector('img')) break;
+  }
+  let nappi = null;
+  for (let kierros = 0; kierros < 40 && !nappi; kierros += 1) {
+    nappi = vastaus.querySelector('.pollo-vastauskuva');
+    if (!nappi) await odota(150);
+  }
+  if (!nappi) return { loytyi: false, varattuKesken };
   nappi.click();
   await odota(500);
   const popup = document.querySelector('.pollo-kuvatausta');
   const tulos = {
     loytyi: true,
+    varattuKesken,
     isoAuki: Boolean(popup),
     lahde: popup?.querySelector('.pollo-kuvalahde')?.textContent ?? '',
     linkki: popup?.querySelector('.pollo-kuvalahde')?.getAttribute('href') ?? '',
@@ -2013,6 +2059,8 @@ const pikkukuvaWiki = await sivu.evaluate(async () => {
 });
 vaadi('Wikipedian pikkukuva ilmestyy kuvattomaan vastaukseen',
   pikkukuvaWiki.loytyi === true, JSON.stringify(pikkukuvaWiki));
+vaadi('kuvalle ei varata paikkaa etukäteen (omistaja 19.8.2026)',
+  pikkukuvaWiki.varattuKesken === 0, JSON.stringify(pikkukuvaWiki));
 vaadi('napautus avaa ison kuvan Wikipedia-lähdelinkillä',
   pikkukuvaWiki.isoAuki === true && /Wikipedia/.test(pikkukuvaWiki.lahde)
   && /wikipedia\.org/.test(pikkukuvaWiki.linkki), JSON.stringify(pikkukuvaWiki));
