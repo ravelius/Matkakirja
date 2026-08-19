@@ -1947,23 +1947,17 @@ class Pollo {
     const aihe = vastauskuvanAihe(teksti, kysymys);
     if (!aihe) return;
     /*
-     * PAIKANPITÄJÄ HAUN AJAKSI (omistaja 15.8.2026: "Kuvan voi hakea
-     * vaikka sitten vasta kun teksti valmis. Voi olla joku place
-     * holder sen aikaa ja animaatio"). Kuvan paikka varautuu heti
-     * tekstin valmistuttua sykkivänä laattana; kuva liukuu tilalle
-     * saapuessaan, ja tulokseton haku vie laatan hiljaa pois.
-     * Aikavahti siivoaa laatan myös jos haku jää roikkumaan.
+     * KUVALLE EI VARATA PAIKKAA ETUKÄTEEN (omistaja 19.8.2026: "Kun
+     * pöllö hakee kuvaa niin älä piirrä sille etukäteen paikkaa.
+     * Lisää kuva tekstiin vasta sitten kun se on haettu.")
+     *
+     * Tämä kumoaa 15.8.2026 tilatun sykkivän paikanpitäjän: sitä ei
+     * enää ole, eikä sitä pidä lisätä takaisin, vaikka kupla
+     * nytkähtäisi kuvan saapuessa. Tulokseton haku ei jätä jälkeä.
      */
-    const pidike = this.naytaVastausKuvanPidike(viesti);
-    const vahti = setTimeout(() => pidike?.remove(), 12000);
-    const pois = () => {
-      clearTimeout(vahti);
-      pidike?.remove();
-    };
     // Suora nimi ensin, haku varalle (js/wiki.js): kysymyslause tai
     // taivutettu käsite löytää silti kuvallisen artikkelin.
     haeKuvallinenArtikkeli(aihe).then((summary) => {
-      pois();
       if (poletti !== this.vastausKuvaPoletti) return;
       if (!viesti?.isConnected) return;
       if (!summary?.image) return;
@@ -1974,7 +1968,6 @@ class Pollo {
       });
     }).catch(() => {
       // Ei yhteyttä — kuvaton vastaus on kelvollinen.
-      pois();
     });
   }
 
@@ -1994,25 +1987,8 @@ class Pollo {
    * vastauksen renderöintiin, koska striimi kirjoittaa kuplan
    * textContentin yli palasta toiseen.
    */
-  /**
-   * Sykkivä paikanpitäjä kuvan paikalle haun ajaksi. Sama kelluva
-   * paikka kuin valmiilla kuvalla, joten teksti ei nytkähdä kuvan
-   * saapuessa. Palauttaa elementin, jonka kutsuja poistaa.
-   */
-  naytaVastausKuvanPidike(viesti) {
-    if (!viesti) return null;
-    viesti.querySelector('.pollo-kuvapidike')?.remove();
-    const pidike = polloElementti('span', 'pollo-vastauskuva pollo-kuvapidike');
-    pidike.setAttribute('aria-hidden', 'true');
-    pidike.appendChild(polloElementti('span', 'pollo-kuvapidike-sykli'));
-    viesti.insertBefore(pidike, viesti.firstChild);
-    this.paivitaTyhjaTila();
-    return pidike;
-  }
-
   naytaVastausKuva(viesti, { esikatselu, vara = null, seloste = '', avaa }) {
-    if (!viesti || viesti.querySelector('.pollo-vastauskuva:not(.pollo-kuvapidike)')) return;
-    viesti.querySelector('.pollo-kuvapidike')?.remove();
+    if (!viesti || viesti.querySelector('.pollo-vastauskuva')) return;
     const nappi = polloElementti('button', 'pollo-vastauskuva');
     nappi.type = 'button';
     nappi.title = 'Näytä kuva isompana';
@@ -2022,9 +1998,22 @@ class Pollo {
     el.alt = seloste;
     el.decoding = 'async';
     el.draggable = false;
-    // Kuvan latautuminen kasvattaa kuplaa: varattu tyhjä elää mukana,
-    // ettei ankkuroitu näkymä nytkähdä.
-    el.addEventListener('load', () => this.paivitaTyhjaTila());
+    /*
+     * NAPPI KUPLAAN VASTA KUN KUVA ON LADATTU (omistaja 19.8.2026).
+     * Irrallinen <img> latautuu selaimessa ilman DOM-kiinnitystä, joten
+     * peilin varareitti ja asetaKuva-uusinnat toimivat ennallaan — vain
+     * lisäys siirtyy. Jos kuvaa ei koskaan saada, kuplaan ei ilmesty
+     * tyhjää kehystä. asetaKuva voi laukaista loadin useammin kuin
+     * kerran (peili → varareitti → yritys=2), siksi isConnected-vartija.
+     */
+    const liita = () => {
+      if (nappi.isConnected || !viesti.isConnected) return;
+      viesti.insertBefore(nappi, viesti.firstChild);
+      // Kuva kasvattaa kuplaa: varattu tyhjä elää mukana, ettei
+      // ankkuroitu näkymä nytkähdä.
+      this.paivitaTyhjaTila();
+    };
+    el.addEventListener('load', liita);
     if (vara) asetaKuva(el, esikatselu, vara);
     else el.src = esikatselu;
     nappi.appendChild(el);
@@ -2032,8 +2021,6 @@ class Pollo {
       e.stopPropagation();
       avaa?.();
     });
-    viesti.insertBefore(nappi, viesti.firstChild);
-    this.paivitaTyhjaTila();
   }
 
   /**
@@ -2958,8 +2945,8 @@ class Pollo {
           this.naytaJatkot(tulos?.jatkot);
         }
         // Kuva vastauksen oikeaan yläkulmaan (omistajan tilaus
-        // 15.8.2026). Paikallinen kuva tulee heti; Wikipedian haku
-        // valmistuu omaan tahtiinsa eikä koske näkymän ankkuriin.
+        // 15.8.2026). Kumpikin kuva — paikallinen ja Wikipedian —
+        // ilmestyy vasta latauduttuaan eikä koske näkymän ankkuriin.
         this.liitaVastausKuva(viesti, teksti, kysymys);
         /*
          * Näkymään ei kosketa: ankkuri asetettiin kysymyksen kohdalla.
