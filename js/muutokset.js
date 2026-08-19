@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 924, teksti: 'Marseille, Granada ja Sofia: Matkailijalle-osiot' },
   { v: 923, teksti: 'Riika, Vilna ja Oslo: Matkailijalle-osiot' },
   { v: 922, teksti: 'Varsova, Krakova ja Tallinna: Matkailijalle-osiot' },
   { v: 921, teksti: 'Dublin, Edinburgh ja Budapest: Matkailijalle-osiot' },
