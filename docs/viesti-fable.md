@@ -93,3 +93,51 @@ pääteltävissä kategorian johdannosta ("neljätuhatta vuotta sitten").
 Vastauksen jälkiosaa "Euroopan vanhin kaupunkikulttuuri" ei kuitenkaan
 sanota lehdessä missään. Ei korjattu — riittääkö tämä, on
 kaanonikysymys.
+
+---
+
+## Venetsian Matkailijalle-osio — VALMIS (v916)
+
+*(Opus-rooli, 19.8.2026.)*
+
+Venetsia sai Matkailijalle-osion Pariisin mallin mukaan: pystykuva
+etusivulle, `taitto: 'opas'`, viisi jaksoa, `matkailu`-lohko ja
+`lahde`. Jaksot 424–454 merkkiä (Pariisissa 416–473).
+
+Jaksot on kirjoitettu niin, etteivät ne toista lehden nostoja —
+puupaalut, acqua altan sireenit ja MOSE, Muranon lasi, gondolin
+vinous, Canaletto, cicchetit ja Vivaldi ovat jo sivuilla. Opas kertoo
+sen sijaan käytännön asiat: Ponte della Libertàn (Miozzi 1932, avattu
+1933, ainoa autoyhteys), sestieri-osoitejärjestelmän (numerot
+juoksevat kaupunginosittain, Castellossa lähelle 7 000), laguunin
+(126 saarta, 472 siltaa), tasavallan (810–1797) ja väestön
+(centro storico 50 434 vuonna 2021, kun 1980 oli ~120 000).
+
+`matkailu`-lohkon vuodenaikojen lämpötilat on johdettu repon omista
+normaaleista (js/packs/saatiedot.js: venetsia).
+
+### Etusivukuvasta: kaava on tiukka, ja se näkyi
+
+Omistajan kaava (docs/tyolista-opukselle.md 16.8.2026) hylkäsi
+kuusi ehdokasta ennen kuin oikea löytyi:
+
+- `20110722 Venice Santa Maria della Salute 4459.jpg` — pystysuora
+  Quality image, mutta etualalla gondolieeri kasvot kameraan
+- `Bridge of Sighs (50427150483).jpg` — kanavanäkymä eikä yksi aihe,
+  kaukosillalla ihmisjoukko, taivas litteän harmaa
+- `Venice, Rialto Bridge (SW) 6.jpg` ja `… (NE).jpg` — tunnistettavia
+  ihmisiä etualalla
+- `Campanile di San Marco con Loggia.jpg` ja
+  `Campanile di San Marco (3499947209).jpg` — tornin juurella
+  ihmisjoukko
+
+Valituksi tuli `Santa Maria della Salute from Hotel Monaco.jpg`
+(Wolfgang Moroder, CC BY-SA 3.0, 3973×5965): yksi aihe täyttää ruudun,
+laituri on tyhjä, valo kirkas ja oikea yläkulma vapaa
+Matkaopas-nauhalle.
+
+**Yksi poikkeama mallista:** jakson 1 karusellissa on kaksi kuvaa
+kolmen sijaan. Piazzale Roman kuvat ovat väistämättä täynnä busseja,
+autoja ja ihmisiä (`Piazzale Roma.JPG` hylättiin: poliiseja kasvot
+kameraan), enkä halunnut täyttää paikkaa heikolla kuvalla. Kaksi kuvaa
+renderöityy karusellina normaalisti.

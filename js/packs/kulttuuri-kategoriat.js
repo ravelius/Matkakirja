@@ -2896,6 +2896,224 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Saffron Blaze, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * MATKAILIJALLE (19.8.2026). Malli on Pariisin osio
+       * (docs/tyolista-opukselle.md: pystykuva etusivulla,
+       * taitto 'opas', viisi jaksoa, ensimmäisessä kolmen kuvan
+       * karuselli ja matkailu-lohko). Jaksot on kirjoitettu niin,
+       * etteivät ne toista lehden nostoja: puupaalut, acqua altan
+       * sireenit ja MOSE, Muranon lasi, gondolin vinous, Canaletto,
+       * cicchetit ja Vivaldi ovat jo sivuilla, joten opas kertoo
+       * käytännön asiat — sillan, osoitejärjestelmän, laguunin,
+       * tasavallan ja asukasluvun. Säätiedot on johdettu repon omista
+       * normaaleista (js/packs/saatiedot.js: venetsia).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Santa Maria della Salute from Hotel Monaco.jpg',
+          selite: 'Santa Maria della Salute Canal Granden suulta: suuri lyijynharmaa kupoli lepää valkoisen marmorikehän päällä, ja sen huipulla seisoo veistos. Vasemmalla kohoavat pienempi kupoli ja kellotorni, ja portaat laskeutuvat suoraan veteen.',
+          lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Venetsiaan pääsee autolla vain yhtä siltaa pitkin, ja '
+          + 'se päättyy parkkihalliin. Siitä eteenpäin liikutaan jalan '
+          + 'tai vedessä. Osoitetta ei kannata etsiä kadun varrelta: '
+          + 'talot on numeroitu kaupunginosittain eikä kaduittain, joten '
+          + 'numero ei kerro sitä, millä kadulla ollaan.',
+        artikkeli: {
+          nimi: 'Matkailijan Venetsia',
+          taitto: 'opas',
+          teksti: 'Yksi silta sisään, 472 siltaa sisällä.',
+          nosto: 'Castellon talonumerot yltävät lähes seitsemääntuhanteen '
+            + '— eivätkä ne ole minkään kadun varrella.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Keskustaan johtaa yksi ainoa autotie. Ponte della '
+                + 'Libertà on Eugenio Miozzin 1932 suunnittelema ja 1933 '
+                + 'avattu silta: 3,85 kilometriä, kaksi kaistaa '
+                + 'suuntaansa ja raitiotiekiskot, ei pientareita. '
+                + 'Rinnalla kulkee rautatieviadukti vuodelta 1846. Auto '
+                + 'pääsee sillan päähän Piazzale Romaan ja siihen se '
+                + 'jää — siitä eteenpäin ajoteitä ei ole. Loppumatka '
+                + 'tehdään jalan tai vesibussilla: vaporettoon mahtuu '
+                + '210–220 matkustajaa, kapeampaan motoscafoon 154.',
+              kuva: [
+                { tiedosto: 'Ponte della Libertà 10-19 1767.jpg', selite: 'Ponte della Libertà laguunilta: matala tiilikaarisilta jatkuu horisonttiin asti, ja kaarten päällä kulkee tie. Sen vieressä nousee rivi rautatien ajolankapylväitä, ja sillalla ajaa oranssi linja-auto.', lahde: 'Chris Light, Wikimedia Commons (CC BY-SA 4.0)' },
+                { tiedosto: 'Vaporetti Venice Lagoon.jpg', selite: 'Kaksi vaporettoa iltapäivän valossa: kummankin kyljessä on rekisterinumero ja katoksen alla matkustajia. Taustalla kohoaa Santa Maria della Saluten kupoli, ja rannassa on raidallisia kiinnityspaaluja.', lahde: 'Peter K Burian, Wikimedia Commons (CC BY-SA 4.0)' },
+              ],
+            },
+            {
+              otsikko: 'Osoite, jota ei löydä kadulta',
+              teksti: 'Kaupunki jakautuu kuuteen sestieriin: Cannaregio, '
+                + 'Castello, Dorsoduro, Santa Croce, San Marco ja San '
+                + 'Polo. Talonumerot juoksevat kaupunginosittain '
+                + 'eivätkä kaduittain, ja ne yltävät nelinumeroisiksi — '
+                + 'Castellossa lähelle seitsemäätuhatta. Siksi kaksi '
+                + 'hyvin erilaista numeroa voi olla muutaman metrin '
+                + 'päässä toisistaan. Santa Croceen kuuluvat Piazzale '
+                + 'Roma ja matkustajasatama, joten saapuja astuu maihin '
+                + 'juuri siellä; San Polo on kaupungin keskellä.',
+              kuva: { tiedosto: 'Calle dei albanesi a san polo plaquette.JPG', selite: 'Nizioleto eli venetsialainen kadunnimi: valkoiseksi maalattuun laattaan on mustattu teksti CALLE DEI ALBANESI. Laatta on kiinni rapautuneessa tiiliseinässä, ja sen yllä kulkevat vanhat puiset kattopalkit.', lahde: 'Abxbay, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Laguuni on isompi kuin kaupunki',
+              teksti: 'Venetsia on rakennettu 126 saarelle, ja niitä '
+                + 'yhdistää 472 siltaa. Laguuni jää Pon ja Piaven '
+                + 'suistojen väliin ja on paljon laajempi kuin se, mitä '
+                + 'matkailija kävelee. Tutut saaret kuuluvat '
+                + 'hallinnollisesti sestiereihin: Giudecca on osa '
+                + 'Dorsoduroa, San Giorgio Maggiore San Marcoa ja '
+                + 'hautausmaasaari San Michele Castelloa. Kauempana on '
+                + 'omia yhteisöjä, joilla on oma kaupunginosajakonsa — '
+                + 'Buranolla viisi, Pellestrinalla neljä.',
+              kuva: { tiedosto: 'San Giorgio Island (187816497).jpeg', selite: 'San Giorgio Maggiore laguunin yli pilvisenä päivänä: saaren kirkko erottuu kellotorneineen ja kupoleineen veden takana. Etualalla nousee vedestä kaksi kallellaan olevaa puupaalua ja rivi katkaistuja paalunkantoja; pitkä valotus on silottanut veden peiliksi.', lahde: 'Matteo Slanzi, Wikimedia Commons (CC BY 3.0)' },
+            },
+            {
+              otsikko: 'Tuhat vuotta tasavaltaa',
+              teksti: 'Venetsia oli tasavallan pääkaupunki vuodesta 810 '
+                + 'vuoteen 1797, lähes vuosituhannen. Sitä kutsuttiin '
+                + 'nimillä La Dominante ja La Serenissima, ja sitä '
+                + 'pidetään ensimmäisenä varsinaisena kansainvälisenä '
+                + 'finanssikeskuksena: syntyi 800-luvulla, oli '
+                + 'huipussaan 1300-luvulla. Kaupunginosajako näkyi '
+                + 'hallinnossakin — dogen neuvostoon valittiin kuusi '
+                + 'miestä, yksi kutakin sestieriä kohti. Itsenäisyys '
+                + 'päättyi Napoleoniin 1797, ja 1866 kaupungista tuli '
+                + 'osa Italiaa.',
+              kuva: { tiedosto: 'View across the lagoon to St Mark\'s Square, Venice (2024).jpg', selite: 'Laguunin yli Pyhän Markuksen aukiolle: keskellä kohoaa tiilinen kellotorni vihreine huippuineen, ja sen oikealla puolella erottuu dogen palatsin vaalea kaarikäytävärivi. Oikeassa reunassa seisoo vedessä paalupari, jonka päällä on lyhty.', lahde: 'Paul Colin Hennig firstdorsal.eu, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Kuka täällä asuu',
+              teksti: 'Venetsian kunnassa asui vuonna 2021 noin 254 800 '
+                + 'ihmistä, mutta itse saarikaupungissa vain 50 434. '
+                + 'Mantereella Mestressä ja Margherassa asuu 177 621 ja '
+                + 'laguunin muilla saarilla 26 795. Ero on kasvanut '
+                + 'nopeasti: vanhassa keskustassa oli noin 120 000 '
+                + 'asukasta vuonna 1980 ja 60 000 vuonna 2009. '
+                + 'Matkailija liikkuu siis kaupungissa, jossa asuu '
+                + 'vähemmän väkeä kuin monessa suomalaisessa '
+                + 'pikkukaupungissa, ja asukkaiden keski-ikä on '
+                + '48,6 vuotta.',
+              kuva: { tiedosto: 'Courtyard and colourful houses in Burano (50415863808).jpg', selite: 'Buranon asuinpiha ukkospilven alla: matalia taloja punaisena, keltaisena, vaaleanpunaisena ja sinisenä, ja niiden välissä kulkee pyykkinaruja. Pihalla on saviruukkuja kasveineen, ja kujan päässä siintää laguuni.', lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)' },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 3,
+                selite: 'Autoja ei ole lainkaan: koko keskusta kuljetaan '
+                  + 'jalan ja 472 sillan yli.',
+              },
+              {
+                mita: 'Arkkitehtuuri',
+                tahdet: 3,
+                selite: 'Laguuni ja kaupunki ovat Unescon '
+                  + 'maailmanperintöä vuodesta 1987.',
+              },
+              {
+                mita: 'Vesiliikenne',
+                tahdet: 3,
+                selite: 'Vesibussi on julkista liikennettä, ja samalla '
+                  + 'lipulla pääsee myös laguunin saarille.',
+              },
+              {
+                mita: 'Ruoka',
+                tahdet: 2,
+                selite: 'Cicchetti-baarit ovat halpoja ja hyviä, mutta '
+                  + 'kärkikohteiden ympärillä hinta nousee jyrkästi.',
+              },
+              {
+                mita: 'Rauha',
+                tahdet: 1,
+                selite: 'Ruuhka-aikaan Pyhän Markuksen ja Rialton '
+                  + 'välinen reitti on käytännössä jonoa.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kaupunki tyhjenee asukkaista',
+                teksti: 'Vanhassa keskustassa asui noin 120 000 ihmistä '
+                  + 'vuonna 1980, 60 000 vuonna 2009 ja 50 434 vuonna '
+                  + '2021. Vuokrien nousu ajaa venetsialaisia '
+                  + 'mantereelle.',
+              },
+              {
+                otsikko: 'Syksy on vuoden märin',
+                teksti: 'Syys-, loka- ja marraskuussa sataa kussakin '
+                  + '118–125 millimetriä — kaksi kertaa niin paljon '
+                  + 'kuin heinäkuussa.',
+              },
+              {
+                otsikko: 'Korkea vesi on kausi-ilmiö',
+                teksti: 'Acqua alta painottuu syksystä kevääseen, kun '
+                  + 'sirocco työntää vettä pohjoiseen pitkin '
+                  + 'Adrianmerta. Vesi mitataan Santa Maria della '
+                  + 'Saluten asemalla.',
+              },
+              {
+                otsikko: 'Osoite ei riitä',
+                teksti: 'Talonumero kertoo kaupunginosan muttei katua, '
+                  + 'joten perille löytää varmimmin lähimmän aukion '
+                  + 'tai sillan nimellä.',
+              },
+            ],
+            parasAika: 'Paras aika on huhti–kesäkuu: päivät ovat pitkiä, '
+              + 'lämpötila nousee kahdenkymmenen tienoille eikä kosteus '
+              + 'ole vielä painostava. Heinä- ja elokuu ovat lämpimiä ja '
+              + 'kosteita, ja syyskuussa alkaa vuoden sateisin jakso. '
+              + 'Talvi on lauhkea — tammikuun keskilämpö on runsaat '
+              + 'neljä astetta — mutta samalla korkean veden kautta.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '5–21 °C',
+                kuvaus: 'Lämpötila nousee nopeasti ja sadetta on vielä '
+                  + 'vähän. Toukokuussa päivä yltää jo yli '
+                  + 'kahdenkymmenen asteen, mutta aamut ovat laguunin '
+                  + 'yllä usein sumuisia.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '18–28 °C',
+                kuvaus: 'Heinä- ja elokuussa keskilämpö on lähes '
+                  + 'kaksikymmentäneljä astetta ja ilma kostea. Sadetta '
+                  + 'tulee vähiten heinäkuussa, noin kuusi senttiä.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '7–23 °C',
+                kuvaus: 'Vuoden märin jakso: kussakin kolmessa '
+                  + 'kuukaudessa sataa toistakymmentä senttimetriä. '
+                  + 'Syyskuu on vielä lämmin, marraskuu jo kolea ja '
+                  + 'korkean veden aikaa.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '1–9 °C',
+                kuvaus: 'Lauhkea mutta kostea. Lunta sataa toisinaan '
+                  + 'marraskuun lopun ja maaliskuun alun välillä, ja '
+                  + 'ankarimpina talvina laguuni on paikoin jäätynyt.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'ACTV — vaporetot ja liput',
+                url: 'https://actv.avmspa.it/en',
+              },
+              {
+                nimi: 'Wikivoyage: Venetsia',
+                url: 'https://fi.wikivoyage.org/wiki/Venetsia',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Canaletto maalasi kaupunkinsa',
