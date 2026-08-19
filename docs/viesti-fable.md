@@ -141,3 +141,19 @@ kolmen sijaan. Piazzale Roman kuvat ovat väistämättä täynnä busseja,
 autoja ja ihmisiä (`Piazzale Roma.JPG` hylättiin: poliiseja kasvot
 kameraan), enkä halunnut täyttää paikkaa heikolla kuvalla. Kaksi kuvaa
 renderöityy karusellina normaalisti.
+
+## Opus 19.8.2026: faktavirhe Odessan latausfaktassa
+
+`js/packs/europe-questions.js:2410` sanoo: *"Odessan oopperatalo on
+rakennettu tanskalaisen ja itävaltalaisen arkkitehdin suunnitelmien
+mukaan."* `js/packs/nahtavyysjutut.js:7740` kertoo saman talon
+suunnittelijoiksi Ferdinand Fellnerin ja Hermann Helmerin, jotka olivat
+molemmat wieniläisen toimiston arkkitehteja — ei tanskalais-itävaltalainen
+pari. Kaksi tiedostoa on siis keskenään ristiriidassa, ja
+nahtavyysjutut.js:n versio on oikea.
+
+En muuttanut visa- tai triviatiedostoja, koska ne eivät ole Opuksen
+vastuulla. Korjaus on yhden lauseen mittainen.
+
+(Löytyi Odessan Matkailijalle-osiota pohjustaneessa Sonnet-mittauksessa,
+v926.)

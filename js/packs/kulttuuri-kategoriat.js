@@ -11161,6 +11161,195 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kiev-WalkingBridge.JPG',
+          selite: 'Näkymä korkealta rantatörmältä leveän joen yli syksyllä: etualalla on lehdettömiä oksia ja keltaista vaahteraa, joen keskellä kulkee valkoinen matkustaja-alus, ja oikealla kaartuu kevyen liikenteen riippusilta metsäiselle saarelle.',
+          lahde: 'Vincent de Groot, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kiova on rakennettu Dneprin molemmille rannoille, ja '
+          + 'rannat ovat toistensa vastakohdat: läntinen oikea ranta '
+          + 'nousee jyrkille kukkuloille, itäinen vasen ranta on '
+          + 'matalaa tasankoa. Kaupungin pinta-alasta iso osa on vettä '
+          + 'ja metsää — vesialueita on 448.',
+        artikkeli: {
+          nimi: 'Matkailijan Kiova',
+          taitto: 'opas',
+          teksti: 'Kaksi rantaa, 448 vesialuetta — ja kaupungin '
+            + 'tunnuspuu, joka ei ole kotoisin Ukrainasta.',
+          nosto: 'Funikulaarin alkuperäinen nimi oli Pyhän Mikaelin '
+            + 'mekaaninen hissi.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Metro avattiin 6. marraskuuta 1960; ensimmäinen '
+                + 'osuus oli 5,2 kilometriä ja viisi asemaa. Nyt '
+                + 'linjoja on kolme, asemia 52 ja rataa lähes 68 '
+                + 'kilometriä; vuonna 2016 matkoja tehtiin 1,3 '
+                + 'miljoonaa päivässä. Rinnekaupunginosaan nousee '
+                + 'funikulaari, joka rakennettiin 1902–1905 insinööri '
+                + 'Arthur Abrahamsonin johdolla. Sen alkuperäinen nimi '
+                + 'oli Pyhän Mikaelin mekaaninen hissi.',
+            },
+            {
+              otsikko: 'Kaksi rantaa ja saari',
+              teksti: 'Läntinen oikea ranta on jyrkkä ja kukkulainen, '
+                + 'itäinen vasen ranta matala; vanhimmat kaupunginosat '
+                + 'ovat oikealla rannalla. Kaupungin pinta-ala on 839 '
+                + 'neliökilometriä, ja sen sisällä on 448 vesialuetta '
+                + 'yhteensä lähes kahdeksantuhannen hehtaarin alalla. '
+                + 'Joessa on 4,5 neliökilometrin Truhaniv-saari, jonne '
+                + 'pääsi ennen vain veneellä tai talvella jäätä pitkin '
+                + '— kävelysilta valmistui vasta 1957.',
+            },
+            {
+              otsikko: 'Puu, joka ei ole täältä',
+              teksti: 'Hevoskastanja on Kiovan tunnetuimpia '
+                + 'epävirallisia symboleja, ja se kukkii toukokuussa '
+                + 'valkoisin, punatäpläisin kukkatertuin. Puu ei '
+                + 'kuitenkaan ole kotoisin Ukrainasta lainkaan: lajin '
+                + 'luontainen levinneisyys rajoittuu Balkanille — '
+                + 'Albaniaan, Bulgariaan, Kreikan mantereelle ja '
+                + 'Pohjois-Makedoniaan. Kiovan päivää vietetään '
+                + 'toukokuun lopulla, juuri kukinnan aikaan.',
+              kuva: { tiedosto: '2010.05.09 Horse chestnut blossom, Kyiv, Ukraine 001c.jpg', selite: 'Lähikuva hevoskastanjan kukista: valkoiset, poimureunaiset terälehdet on täplitetty kirkkaanpunaisella ja keltaisella, ja kukista työntyy pitkiä kaarevia heteitä. Taustalla erottuu vihreä oksa ja lisää kukkatertuja.', lahde: 'William N. Beckon, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Pääkatu, joka rakennettiin uudelleen',
+              teksti: 'Kaupungin pääkatu Hreshtshatyk on 1,2 kilometriä '
+                + 'pitkä. Katu tuhoutui vuonna 1941, ja sodan jälkeen '
+                + 'se rakennettiin uudelleen aivan toisenlaisena: '
+                + 'leveys kasvoi 75:stä sataan metriin, ja julkisivut '
+                + 'nousivat yhtenäisenä rivinä. Siksi Kiovan pääkatu '
+                + 'on iältään paljon nuorempi kuin sitä ympäröivä '
+                + 'kaupunki, jonka historia ulottuu tuhannen vuoden '
+                + 'taakse.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Vuodenajat erottuvat jyrkästi: kesällä päivä '
+                + 'nousee kahteenkymmeneenviiteen asteeseen ja talvella '
+                + 'yöt käyvät kuudessa pakkasasteessa. Sade painottuu '
+                + 'kesään — heinäkuu on vuoden sateisin kuukausi 83 '
+                + 'millimetrillä, kun tammi- ja helmikuussa vettä tulee '
+                + 'vain 34. Vuosisade on 610 millimetriä. Toukokuu on '
+                + 'kastanjoiden kukinta-aikaa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Joki ja rannat',
+                tahdet: 3,
+                selite: 'Dnepr on leveä, ja saarilla on kaupungin '
+                  + 'suurimmat uimarannat.',
+              },
+              {
+                mita: 'Metro',
+                tahdet: 3,
+                selite: 'Kolme linjaa ja 52 asemaa; osa asemista on '
+                  + 'poikkeuksellisen syvällä.',
+              },
+              {
+                mita: 'Kukkulat',
+                tahdet: 3,
+                selite: 'Oikean rannan törmiltä avautuu näkymiä koko '
+                  + 'joen yli, ja funikulaari säästää kiipeämiseltä.',
+              },
+              {
+                mita: 'Toukokuu',
+                tahdet: 3,
+                selite: 'Kastanjat kukkivat, ja lämpötila on jo '
+                  + 'kahdessakymmenessä asteessa.',
+              },
+              {
+                mita: 'Talvi',
+                tahdet: 1,
+                selite: 'Joulu–helmikuussa ollaan pakkasen puolella ja '
+                  + 'päivä on lyhyt.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Tiedot ovat rauhan ajalta',
+                teksti: 'Tämän oppaan luvut kuvaavat kaupunkia '
+                  + 'sellaisena kuin se on rakentunut. Ukrainan '
+                  + 'matkustustiedot ja liikenneyhteydet kannattaa '
+                  + 'tarkistaa erikseen ajantasaisesta lähteestä.',
+              },
+              {
+                otsikko: 'Sade osuu kesään',
+                teksti: 'Heinäkuu on vuoden sateisin kuukausi, 83 '
+                  + 'millimetriä, ja tammi–helmikuu kuivin, 34. '
+                  + 'Kesäsateet tulevat usein ukkoskuuroina.',
+              },
+              {
+                otsikko: 'Ranta ratkaisee',
+                teksti: 'Oikea ranta on mäkinen ja vanha, vasen matala '
+                  + 'ja pääosin 1900-luvulta. Siltojen ylitys vie '
+                  + 'aikaa, joten majoitus kannattaa valita rannan '
+                  + 'mukaan.',
+              },
+              {
+                otsikko: 'Metro on syvällä',
+                teksti: 'Osa asemista on hyvin syvällä, ja liukuportaat '
+                  + 'ovat pitkiä. Siirtymiin kannattaa varata '
+                  + 'ylimääräisiä minuutteja.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenen tienoilla ja päivät ovat '
+              + 'pitkiä. Toukokuussa kastanjat kukkivat. Heinäkuu on '
+              + 'lämpimin mutta samalla vuoden sateisin kuukausi. Talvi '
+              + 'on kylmä ja luminen mutta vuoden kuivin jakso.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-2–20 °C',
+                kuvaus: 'Alkaa pakkasesta ja lämpenee nopeasti. '
+                  + 'Toukokuussa päivä on jo kahdessakymmenessä '
+                  + 'asteessa ja kastanjat kukkivat.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '15–25 °C',
+                kuvaus: 'Lämmin ja vuoden sateisin jakso: heinäkuussa '
+                  + 'vettä tulee 83 millimetriä. Elokuussa sade '
+                  + 'vähenee jo selvästi.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '0–19 °C',
+                kuvaus: 'Syyskuu on vielä leuto, ja jokitörmien '
+                  + 'ruska on näyttävä. Marraskuussa päivä laskee '
+                  + 'viiteen asteeseen.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-6–0 °C',
+                kuvaus: 'Pakkasen puolella ja vuoden kuivin jakso: '
+                  + 'tammi- ja helmikuussa vettä tulee 34 millimetriä '
+                  + 'lumena.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Wikivoyage: Kiova (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Kyiv',
+              },
+              {
+                nimi: 'Wikipedia: Kiova',
+                url: 'https://fi.wikipedia.org/wiki/Kiova',
+              },
+            ],
+          },
+          lahde: 'Wikipedia; kastanjan kaupunkisymboliikka muista lähteistä',
+        },
+      },
       nostot: [
         {
           otsikko: 'Sata metriä alas ja takaisin',
@@ -12798,6 +12987,196 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'HOBOPOCC, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '51-101-1013 Odesa Dworzec DSC 3087.jpg',
+          selite: 'Vaaleankeltainen rautatieasema iltavalossa: keskellä kohoaa matala kupoli, jonka päällä liehuu lippu, ja julkisivussa on rivi korkeita kaari-ikkunoita pylväineen. Etualalla kaartuu tyhjä katu ja vasemmalla on tummia puita.',
+          lahde: 'Haidamac, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Odessa on suunniteltu kaupunki: sen ruutukaavan piirsi '
+          + 'ranskalainen insinööri 1700-luvun lopulla, ja katujen '
+          + 'nimissä näkyy yhä ranska, italia ja kreikka. Kaupunki '
+          + 'kasvoi 1800-luvulla keisarikunnan neljänneksi suurimmaksi '
+          + 'Moskovan, Pietarin ja Varsovan jälkeen.',
+        artikkeli: {
+          nimi: 'Matkailijan Odessa',
+          taitto: 'opas',
+          teksti: 'Vapaasatama neljänkymmenen vuoden ajan — ja '
+            + 'ruutukaava, jonka piirsi ranskalainen insinööri.',
+          nosto: 'Odessa oli vapaasatama vuosina 1819–1858, ja se '
+            + 'muutti koko kaupungin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupungin pääasema valmistui 1883 arkkitehti '
+                + 'Viktor Schröterin piirustusten mukaan. Rakennus '
+                + 'tuhoutui vuonna 1944, ja jälleenrakennettu asema '
+                + 'avattiin uudelleen 12. heinäkuuta 1952; radat '
+                + 'sähköistettiin 1972. Vuonna 2018 asema oli Ukrainan '
+                + 'kymmenen vilkkaimman joukossa, ja kaukoliikenteen '
+                + 'matkustajia oli noin viisi ja puoli miljoonaa. '
+                + 'Lentokenttä on seitsemän kilometriä lounaaseen ja '
+                + 'rakennettiin 1961.',
+            },
+            {
+              otsikko: 'Ruutukaava ja Moldavanka',
+              teksti: 'Kaupungin ruutukaavan suunnitteli ranskalainen '
+                + 'insinööri F. de Volan 1700-luvun lopulla, ja '
+                + 'bulevardien nimissä näkyy yhä kaupungin '
+                + 'monikansallinen alku. Moldavanka oli alun perin oma '
+                + 'siirtokuntansa — mahdollisesti Odessaa vanhempi — '
+                + 'ja se säilytti liitoksen jälkeenkin oman '
+                + 'katuverkkonsa. Ennen vuotta 1917 se oli kaupungin '
+                + 'juutalaisen väestön ja työväen kortteli.',
+              kuva: { tiedosto: 'Staroportofrankivska Street - panoramio.jpg', selite: 'Leveä katu kesäiltana: vasemmalla on matala rapistunut kivitalo, jonka seinässä on kauppojen kylttejä, ja sen ympärillä kasvaa suuria lehtipuita. Kadun keskellä kulkevat raitiokiskot ja perällä ajaa keltainen pikkubussi.', lahde: 'Дмитрий Ванькевич, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Kaupunki, jolla on oma puheenparsi',
+              teksti: 'Odessaan muutti väkeä kymmenistä maista jo '
+                + 'ensimmäisinä vuosikymmeninä, ja siitä syntyi '
+                + 'omaleimainen kaupungin puhetapa — venäjän murre, '
+                + 'joka tunnistetaan heti muualla. Vuoteen 1897 '
+                + 'mennessä juutalaiset muodostivat arviolta '
+                + 'kolmisenkymmentäseitsemän prosenttia väestöstä. '
+                + 'Moldavankan korttelit tulivat tunnetuiksi kirjailija '
+                + 'Isaak Babelin novelleista, jotka sijoittuvat juuri '
+                + 'sinne.',
+            },
+            {
+              otsikko: 'Neljäkymmentä vuotta vapaasatamana',
+              teksti: 'Herttua Armand de Richelieu toimi kaupungin '
+                + 'kuvernöörinä 1803–1814 ja muotoili sen ratkaisevasti. '
+                + 'Odessa oli vapaasatama vuosina 1819–1858, ja '
+                + 'tullittomuus veti kauppaa ja väkeä: 1800-luvun '
+                + 'kuluessa siitä kasvoi keisarikunnan neljänneksi '
+                + 'suurin kaupunki. Samalla vuosisadan puolivälissä '
+                + 'siitä tuli kylpyläkaupunki, joka oli suosittu '
+                + 'yläluokan keskuudessa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Odessa on poikkeuksellisen vähäsateinen: vettä '
+                + 'tulee vuodessa vain noin 415 millimetriä, eikä '
+                + 'yksikään kuukausi nouse yli 45 millimetrin. Kuivinta '
+                + 'on helmikuussa, 29 millimetriä, ja sateisinta '
+                + 'kesäkuussa, 43. Kesä on lämmin: heinä- ja elokuussa '
+                + 'päivä nousee kahteenkymmeneenkahdeksaan asteeseen. '
+                + 'Talvi on Mustanmeren rannikolle tyypillisesti leuto.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Meri',
+                tahdet: 3,
+                selite: 'Rantoja on kaupungin laidalla, ja '
+                  + 'kylpyläperinne alkoi jo 1800-luvun puolivälissä.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Ruutukaava on selkeä, ja bulevardit ovat '
+                  + 'leveitä ja puurivien reunustamia.',
+              },
+              {
+                mita: 'Kuiva sää',
+                tahdet: 3,
+                selite: 'Vuodessa sataa vain noin 415 millimetriä — '
+                  + 'vähemmän kuin missään muualla tässä lehdessä.',
+              },
+              {
+                mita: 'Arkkitehtuuri',
+                tahdet: 2,
+                selite: '1800-luvun kerrostumaa on paljon, mutta osa '
+                  + 'rakennuksista on huonossa kunnossa.',
+              },
+              {
+                mita: 'Talvi',
+                tahdet: 1,
+                selite: 'Tammi- ja helmikuussa päivä jää muutamaan '
+                  + 'asteeseen ja meri on kolea.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Tiedot ovat rauhan ajalta',
+                teksti: 'Tämän oppaan luvut kuvaavat kaupunkia '
+                  + 'sellaisena kuin se on rakentunut. Ukrainan '
+                  + 'matkustustiedot ja liikenneyhteydet kannattaa '
+                  + 'tarkistaa erikseen ajantasaisesta lähteestä.',
+              },
+              {
+                otsikko: 'Sade on vähäistä',
+                teksti: 'Kesäkuu on vuoden sateisin kuukausi, 43 '
+                  + 'millimetriä, ja helmikuu kuivin, 29. Kuukausisade '
+                  + 'ei nouse missään vaiheessa yli 45 millimetrin.',
+              },
+              {
+                otsikko: 'Katujen nimet kertovat historian',
+                teksti: 'Bulevardien ja katujen nimissä näkyy '
+                  + 'ranskalainen, italialainen ja kreikkalainen '
+                  + 'perintö — merkki kaupungin monikansallisesta '
+                  + 'alusta.',
+              },
+              {
+                otsikko: 'Satama on jäätymätön',
+                teksti: 'Mustanmeren lämmin ja jäätymätön satama oli '
+                  + 'alun perin yksi syy kaupungin sijainnille.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenenviiden tienoilla ja meri '
+              + 'lämpenee. Heinä- ja elokuu ovat kuumimmat. Sade on '
+              + 'vähäistä ympäri vuoden, joten sää harvoin estää '
+              + 'mitään. Talvi on leuto mutta tuulinen ja pimeä.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '1–21 °C',
+                kuvaus: 'Lämpenee tasaisesti ja sade pysyy vähäisenä: '
+                  + 'kuukaudessa vettä tulee kolmisenkymmentä '
+                  + 'millimetriä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '18–28 °C',
+                kuvaus: 'Lämmin ja aurinkoinen. Kesäkuu on vuoden '
+                  + 'sateisin kuukausi, mutta senkin sade on vain 43 '
+                  + 'millimetriä.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '4–22 °C',
+                kuvaus: 'Syyskuu on vielä lämmin ja meri lämpimimmillään. '
+                  + 'Marraskuussa päivälämpötila laskee kymmeneen '
+                  + 'asteeseen.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-2–4 °C',
+                kuvaus: 'Leuto rannikkotalvi, jossa pakkanen on lievää. '
+                  + 'Helmikuu on vuoden kuivin kuukausi, 29 '
+                  + 'millimetriä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Wikivoyage: Odessa (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Odesa',
+              },
+              {
+                nimi: 'Wikipedia: Odessa',
+                url: 'https://fi.wikipedia.org/wiki/Odessa',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Kaupunki seisoo oman louhoksensa päällä',
@@ -13541,6 +13920,197 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Fjallsárlón Glacier Lagoon.jpg',
+          selite: 'Sinivalkoinen jäävuori kelluu harmaassa, sameassa lagunissa. Sen pinta on uurteinen ja paikoin syvän turkoosi, ja taustalla erottuu sumun takaa jäätikön reuna ja tumma vuorenrinne.',
+          lahde: 'Bernd Thaller, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Islannin sisämaa on lähes asumaton. Ylänkö on lumen '
+          + 'peitossa lokakuusta kesäkuun alkuun, ja sen halki pääsee '
+          + 'vain kesällä. Jäätiköt peittävät noin yhdestoistaosan koko '
+          + 'maasta. Asutus ja tiestö kiertävät saarta rannikkoa '
+          + 'pitkin — yhtä ainoaa tietä.',
+        artikkeli: {
+          nimi: 'Matkailijan Islanti',
+          taitto: 'opas',
+          teksti: 'Yksi tie kiertää koko saaren: 1 309 kilometriä, ja '
+            + 'siinä on yhä 31 yksikaistaista siltaa.',
+          nosto: 'Uinnista tuli pakollinen oppiaine islantilaisille '
+            + 'koululaisille jo vuonna 1927.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Keflavíkin lentokenttä on noin viidenkymmenen '
+                + 'kilometrin päässä Reykjavíkista lounaaseen, ja '
+                + 'käytännössä kaikki kansainvälinen matkustus kulkee '
+                + 'sen kautta: vuonna 2024 matkustajia oli 8,3 '
+                + 'miljoonaa. Kentän rakensi Yhdysvaltain armeija '
+                + 'toisessa maailmansodassa, ja se avattiin 23. '
+                + 'maaliskuuta 1943. Saarta kiertää yksi tie, '
+                + 'rengastie, joka on 1 309 kilometriä pitkä ja '
+                + 'valmistui kokonaan vuonna 1974.',
+            },
+            {
+              otsikko: 'Maa, jonka keskusta on tyhjä',
+              teksti: 'Islannin ylänkö eli sisämaa on lähes asumaton. '
+                + 'Se on lumen peitossa lokakuusta kesäkuun alkuun, ja '
+                + 'sen halki pääsee vain kesäkuukausina; muina aikoina '
+                + 'tiet ovat kiinni. Kasvillisuutta on vain '
+                + 'jäätiköiden reunoilla ja jokien varsilla. Jäätiköt '
+                + 'peittävät noin yksitoista prosenttia maasta, '
+                + 'suurimpana Vatnajökull. Saari nousi merestä 16–18 '
+                + 'miljoonaa vuotta sitten kuumapisteen päällä.',
+            },
+            {
+              otsikko: 'Uimahalli on yhteinen olohuone',
+              teksti: 'Uinnista tuli pakollinen oppiaine islantilaisille '
+                + 'koululaisille jo vuonna 1927. Kymmenen vuotta '
+                + 'myöhemmin, 1937, valmistui Reykjavíkin vanhin varta '
+                + 'vasten rakennettu sisäallas, jonka suunnitteli '
+                + 'arkkitehti Guðjón Samúelsson. Altaiden reunoilla '
+                + 'olevat kuumat padot ovat epävirallisia '
+                + 'keskustelupaikkoja kaikenikäisille. Suurimmassa '
+                + 'allaskompleksissa kävi vuonna 2010 noin 800 000 '
+                + 'ihmistä. Unesco lisäsi allaskulttuurin aineettoman '
+                + 'kulttuuriperinnön luetteloon 2025.',
+              kuva: { tiedosto: 'Sundhöll Reykjavíkur 1.jpg', selite: 'Valkoinen funktionalistinen uimahallirakennus kadunkulmassa: seinässä on rivi kapeita pystyikkunoita ja pyöreitä ikkunoita, ja pääsisäänkäynnin ruskean oven yllä lukee talon nimi. Edessä on kukkalaatikoita ja suojatien merkkejä.', lahde: 'Akigka, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Kolme sotaa kalasta',
+              teksti: 'Islannin ja Ison-Britannian välillä käytiin '
+                + 'kolme niin sanottua torskisotaa: 1958–1961, '
+                + '1972–1973 ja 1975–1976. Kiista koski kalastusrajoja: '
+                + 'Islanti laajensi omaa aluettaan vaiheittain, ja '
+                + 'britit vastustivat sitä sotalaivoin. Lopulta '
+                + 'laajennukset hyväksyttiin. Kalastus on pienelle '
+                + 'saarivaltiolle niin keskeinen elinkeino, että sen '
+                + 'takia oltiin valmiita riitelemään suurvallan kanssa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Islanti on sateinen: vettä tulee vuodessa noin '
+                + '1 355 millimetriä, ja kuivinkin kuukausi kesäkuu '
+                + 'saa 80 millimetriä. Sateisin on syyskuu, 134 '
+                + 'millimetriä. Lämpötila pysyy koko vuoden kapealla '
+                + 'välillä: kesällä 8–14 astetta, talvella neljästä '
+                + 'pakkasasteesta kahteen lämpöasteeseen. Ylängön tiet '
+                + 'ovat auki vain kesällä, joten sisämaahan pääsee '
+                + 'kesä–elokuussa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Maisemat',
+                tahdet: 3,
+                selite: 'Jäätiköt, laavakentät ja tyhjä ylänkö ovat '
+                  + 'toistensa vieressä.',
+              },
+              {
+                mita: 'Uimahallit',
+                tahdet: 3,
+                selite: 'Altaita on joka kylässä, ja ne ovat auki '
+                  + 'ympäri vuoden.',
+              },
+              {
+                mita: 'Rengastie',
+                tahdet: 3,
+                selite: 'Yksi päällystetty tie kiertää koko saaren — '
+                  + 'reittiä ei tarvitse suunnitella.',
+              },
+              {
+                mita: 'Kesäyön valo',
+                tahdet: 3,
+                selite: 'Kesäkuussa pimeää ei käytännössä tule '
+                  + 'lainkaan.',
+              },
+              {
+                mita: 'Lämpö',
+                tahdet: 1,
+                selite: 'Lämpimimmilläänkin päivä on vain neljätoista '
+                  + 'astetta, ja tuuli tuntuu aina.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadetta tulee joka kuukausi',
+                teksti: 'Kuivinkin kuukausi kesäkuu saa 80 millimetriä '
+                  + 'ja sateisin syyskuu 134. Vuodessa vettä tulee '
+                  + '1 355 millimetriä.',
+              },
+              {
+                otsikko: 'Sisämaa on kiinni talvella',
+                teksti: 'Ylänkö on lumen peitossa lokakuusta kesäkuun '
+                  + 'alkuun. Sisämaan tiet aukeavat vasta kesäksi, ja '
+                  + 'niillä tarvitaan yleensä neliveto.',
+              },
+              {
+                otsikko: 'Maastoajo on kielletty',
+                teksti: 'Autolla ei saa poiketa tieltä lainkaan. '
+                  + 'Kasvillisuus toipuu hitaasti, ja jäljet näkyvät '
+                  + 'vuosikymmeniä.',
+              },
+              {
+                otsikko: 'Yksikaistaisia siltoja on yhä',
+                teksti: 'Rengastiellä on 31 yksikaistaista siltaa. '
+                  + 'Vastaantulijalle annetaan tietä ennen siltaa, ei '
+                  + 'sen päällä.',
+              },
+            ],
+            parasAika: 'Paras aika on kesä–elokuu: silloin ylängön tiet '
+              + 'ovat auki, lämpötila nousee neljääntoista asteeseen ja '
+              + 'valoa riittää lähes vuorokauden ympäri. Kesäkuu on '
+              + 'vuoden kuivin kuukausi. Syyskuu on sateisin. Talvella '
+              + 'rannikkoa pääsee kiertämään, mutta sisämaa on suljettu '
+              + 'ja päivä lyhyt.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-2–10 °C',
+                kuvaus: 'Sade vähenee kuukausi kuukaudelta: '
+                  + 'maaliskuussa 118 millimetriä ja toukokuussa 92. '
+                  + 'Ylängöllä on vielä lunta.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '8–14 °C',
+                kuvaus: 'Vuoden kuivin ja valoisin jakso. Kesäkuussa '
+                  + 'vettä tulee 80 millimetriä — vähemmän kuin '
+                  + 'minään muuna kuukautena.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '-1–10 °C',
+                kuvaus: 'Syyskuu on vuoden sateisin kuukausi, 134 '
+                  + 'millimetriä. Ylängön tiet sulkeutuvat lokakuussa.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-4–2 °C',
+                kuvaus: 'Leudompi kuin sijainti antaisi olettaa, mutta '
+                  + 'sateinen ja tuulinen: kuukaudessa vettä tulee yli '
+                  + 'kolmetoista senttiä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Vegagerðin — tie- ja keliolot',
+                url: 'https://www.road.is/',
+              },
+              {
+                nimi: 'Wikivoyage: Islanti (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Iceland',
+              },
+            ],
+          },
+          lahde: 'Wikipedia; allaskulttuurin Unesco-merkintä Unescon luettelosta',
+        },
+      },
       nostot: [
         {
           otsikko: 'Käräjät kahden mantereen välissä',
