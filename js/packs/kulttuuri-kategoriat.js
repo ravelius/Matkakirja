@@ -13661,6 +13661,199 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'TomasEE, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Riga tram 57051 2020-03 Skoda 15T.jpg',
+          selite: 'Sinivalkoinen matalalattiaraitiovaunu ajaa leveää katua pitkin talvipäivänä. Vasemmalla on vaaleanharmaa koulumainen rakennus ja sen takana punatiilinen kerrostalo; kiskot kaartuvat kadun keskellä kohti keskustaa.',
+          lahde: 'Svetlov Artem, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Riika on Baltian suurin kaupunki, mutta se on myös '
+          + 'kutistuva: asukkaita oli yli yhdeksänsataatuhatta vuonna '
+          + '1991 ja alle kuusisataatuhatta nyt. Vanhankaupungin '
+          + 'ulkopuolella odottaa kokonaan toinen Riika — puutaloja, '
+          + 'satama-alueita ja viisitoista kilometriä jokirantaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Riika',
+          taitto: 'opas',
+          teksti: 'Hansakaupunki, joka menetti kaksi kolmasosaa '
+            + 'väestöstään ensimmäisessä maailmansodassa — ja rakensi '
+            + 'itsensä uudelleen.',
+          nosto: 'Sähköraitiovaunut aloittivat 1901, hevosraitiotie jo '
+            + '1882.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä on noin kymmenen kilometriä '
+                + 'keskustasta länteen. Se rakennettiin 1973 '
+                + 'korvaamaan vanhentunut Spilven kenttä, ja vuonna '
+                + '2024 sen kautta kulki 7,1 miljoonaa matkustajaa. '
+                + 'Suoria yhteyksiä on yli sataan kohteeseen. '
+                + 'Kaupungissa ajavat raitiovaunut ja johdinautot: '
+                + 'sähköraitiovaunut aloittivat 1901 ja johdinautot '
+                + '1947. Linjoja on kahdeksan ja kaksikymmentäneljä.',
+              kuva: { tiedosto: 'Riga Airport 2016.jpg', selite: 'Lentoaseman terminaali sinisellä hetkellä: katolla loistavat siniset kirjaimet, ja lasiseinän takana näkyy valaistu lähtöaula. Oikealla häämöttää lennonjohtotorni ja etualalla tyhjä ajotie suojatiemerkintöineen.', lahde: 'Avio2016, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Joen toinen puoli',
+              teksti: 'Riiassa on kuusi hallinnollista piiriä, joista '
+                + 'keskuspiiri on vain kolme neliökilometriä. '
+                + 'Epävirallisesti kaupunginosia tunnistetaan 58. '
+                + 'Väinäjoen länsiranta Pārdaugava liitettiin '
+                + 'kaupunkiin vaiheittain: ensimmäiset maat 1786, '
+                + 'niin sanotut numerokorttelit 1877 ja koko alue '
+                + 'virallisesti helmikuussa 1924. Vuonna 1812 kaikki '
+                + 'alueen rakennukset poltettiin ennen Napoleonin '
+                + 'joukkojen tuloa, joten talot ovat sitä nuorempia.',
+              kuva: { tiedosto: 'Kalnciema iela 16, Rīga, Latvia - panoramio.jpg', selite: 'Pitkä vaaleanvihreä puutalo kadun varressa lumisessa säässä: kaksi kerrosta, tiheä ikkunarivi ja keskellä pieni parveke kaiteineen. Talon edessä kasvaa kaksi lehdetöntä puuta ja tien reunassa on lumivalleja.', lahde: 'M.Strīķis, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Apteekkarin resepti vuodelta 1752',
+              teksti: 'Riian musta balsami on apteekkari Abraham Kunzen '
+                + 'kehittämä yrttiuute vuodelta 1752, ja sitä '
+                + 'mainostettiin lehdessä ensi kerran joulukuussa 1762. '
+                + 'Kertomus siitä, että Katariina Suuri olisi parantunut '
+                + 'siitä Riian-vierailullaan, on legenda eikä '
+                + 'todennettu tapahtuma. Nykyresepti sisältää 24 '
+                + 'ainesosaa, joista seitsemäntoista on kasviperäisiä. '
+                + 'Tumma keraaminen pullo suunniteltiin vasta 1969.',
+            },
+            {
+              otsikko: 'Kaupunki, joka menetti kaksi kolmasosaa',
+              teksti: 'Piispa Albert perusti Riian 1201, ja kaupunki '
+                + 'liittyi Hansaliittoon 1282. Pietari Suuri valtasi sen '
+                + 'pitkän piirityksen jälkeen kesällä 1710. Vuoteen '
+                + '1900 mennessä Riika oli Venäjän kolmanneksi suurin '
+                + 'teollisuuskaupunki Moskovan ja Pietarin jälkeen. '
+                + 'Ensimmäinen maailmansota katkaisi kasvun: väkiluku '
+                + 'romahti 517 500:sta vuonna 1913 alle 190 000:een '
+                + 'vuoteen 1920 mennessä, kun tehtaat ja väki '
+                + 'evakuoitiin itään.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kuivinta on helmi- ja maaliskuussa, molemmissa '
+                + '39 millimetriä, mutta silloin ollaan pakkasen '
+                + 'puolella ja lumipeite voi kestää yhtäjaksoisesti '
+                + 'jopa kahdeksankymmentä päivää. Sade painottuu elo- '
+                + 'ja lokakuuhun, kumpaankin 80 millimetriä. Kesä on '
+                + 'lämmin, heinäkuussa yli kaksikymmentä astetta. '
+                + 'Juhannusta vietetään 23. ja 24. kesäkuuta, ja '
+                + 'molemmat ovat vapaapäiviä — kaupunki tyhjenee.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Puuarkkitehtuuri',
+                tahdet: 3,
+                selite: 'Joen länsirannalla on kokonaisia puutalokatuja, '
+                  + 'joita harva matkailija näkee.',
+              },
+              {
+                mita: 'Raitiovaunut',
+                tahdet: 3,
+                selite: 'Kahdeksan raitiolinjaa ja 24 johdinautolinjaa '
+                  + 'kattavat koko kaupungin.',
+              },
+              {
+                mita: 'Hinnat',
+                tahdet: 3,
+                selite: 'Ruoka ja majoitus ovat selvästi halvempia kuin '
+                  + 'Pohjoismaissa.',
+              },
+              {
+                mita: 'Jokiranta',
+                tahdet: 2,
+                selite: 'Väinäjoki on leveä ja näyttävä, mutta rannat '
+                  + 'ovat paikoin satama-aluetta.',
+              },
+              {
+                mita: 'Talven valo',
+                tahdet: 1,
+                selite: 'Joulukuussa päivä on lyhyt ja sää usein '
+                  + 'harmaa ja kostea.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu loppukesään',
+                teksti: 'Elo- ja lokakuu ovat vuoden sateisimmat, '
+                  + 'kumpikin 80 millimetriä. Helmi- ja maaliskuu ovat '
+                  + 'kuivimmat, 39.',
+              },
+              {
+                otsikko: 'Lumi viipyy',
+                teksti: 'Lumipeite voi kestää yhtäjaksoisesti jopa '
+                  + 'kahdeksankymmentä päivää. Talvikengät ovat '
+                  + 'tarpeen joulukuusta maaliskuuhun.',
+              },
+              {
+                otsikko: 'Juhannuksena kaupunki tyhjenee',
+                teksti: '23. ja 24. kesäkuuta ovat molemmat '
+                  + 'vapaapäiviä, ja moni riikalainen lähtee maalle. '
+                  + 'Osa palveluista on kiinni.',
+              },
+              {
+                otsikko: 'Kaupunki jatkuu joen yli',
+                teksti: 'Vanhakaupunki on pieni osa Riikaa. Länsirannan '
+                  + 'Pārdaugavaan pääsee raitiovaunulla muutamassa '
+                  + 'minuutissa.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenen tienoilla eikä sadetta ole '
+              + 'yhtä paljon kuin elokuussa. Kesä on matkailun '
+              + 'sesonkihuippu. Loka- ja marraskuu ovat märimmät ja '
+              + 'pimeimmät. Talvi on kylmä mutta kuivin, ja lumi tekee '
+              + 'kaupungista kauniin.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-2–16 °C',
+                kuvaus: 'Alkaa vuoden kuivimmasta kuukaudesta ja '
+                  + 'lämpenee tasaisesti. Toukokuussa päivä on jo '
+                  + 'kuudentoista asteen tienoilla.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '12–23 °C',
+                kuvaus: 'Lämmin ja valoisa. Elokuussa vettä tulee 80 '
+                  + 'millimetriä eli selvästi enemmän kuin kesä- ja '
+                  + 'heinäkuussa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '1–16 °C',
+                kuvaus: 'Lokakuu on elokuun rinnalla vuoden sateisin '
+                  + 'kuukausi, 80 millimetriä. Marraskuussa päivä jää '
+                  + 'viiteen asteeseen.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-5–1 °C',
+                kuvaus: 'Pakkasen puolella ja vuoden kuivin jakso. '
+                  + 'Lumipeite voi kestää yhtäjaksoisesti jopa '
+                  + 'kahdeksankymmentä päivää.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Rīgas Satiksme — raitiovaunut ja bussit',
+                url: 'https://www.rigassatiksme.lv/en/',
+              },
+              {
+                nimi: 'Wikivoyage: Riika',
+                url: 'https://fi.wikivoyage.org/wiki/Riika',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           tyyppi: 'kuva',
@@ -13847,6 +14040,199 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Vilnius river.jpg',
+          selite: 'Näkymä joen mutkalle ylhäältä kesällä: vihreiden penkereiden välissä virtaa leveä joki, ja sen yli kaartuu vaalea kaarisilta. Etualalla on puistoa ja matalia taloja, taustalla nousee rivi lasisia tornitaloja.',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Vilna on kahden joen yhtymäkohdassa, ja sen kaksi '
+          + 'kaupunkia ovat vastarannoilla: eteläpuolella keskiaikainen '
+          + 'ydin, pohjoisessa lasitornien kortteli, joka oli sata '
+          + 'vuotta sitten puutalokylä. Kaupungin pinta-alasta lähes '
+          + 'seitsemänkymmentä prosenttia on viheraluetta.',
+        artikkeli: {
+          nimi: 'Matkailijan Vilna',
+          taitto: 'opas',
+          teksti: 'Kylä, josta kasvoi Baltian pilvenpiirtäjäkortteli — '
+            + 'ja pääkaupunki, joka oli 19 vuotta toisen maan puolella.',
+          nosto: 'Kaupungin pinta-alasta 68,8 prosenttia on '
+            + 'viheraluetta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä on vain kuutisen kilometriä '
+                + 'keskustasta etelään, ja rautatieasemalle menee '
+                + 'suora junayhteys, joka avattiin lokakuussa 2008: '
+                + 'matka on 4,3 kilometriä ja kestää kahdeksan '
+                + 'minuuttia. Matkustajia oli vuonna 2024 vajaat viisi '
+                + 'miljoonaa. Uusi lähtöterminaali avattiin 4. '
+                + 'helmikuuta 2025; sen tarkoitus on kaksinkertaistaa '
+                + 'kapasiteetti. Kentältä lähtee myös suoria busseja '
+                + 'muihin Baltian kaupunkeihin.',
+              kuva: { tiedosto: 'Vilnius International Airport Departure Terminal, June 2026.jpg', selite: 'Lentoaseman uusi lähtöhalli sisältä: kattoa jäsentävät vaaleat ripalamellit ja teräsristikko, ja lattia on vaaleaa kiveä. Oikealla on rivi valkoisia itsepalveluautomaatteja ja vasemmalla lähtöselvityksen jonoaidat.', lahde: 'Bdx, Wikimedia Commons (CC0)' },
+            },
+            {
+              otsikko: 'Kylä, josta kasvoi tornikortteli',
+              teksti: 'Vilna jakautuu 21 kaupunginosaan. Šnipiškės oli '
+                + '1900-luvun alkuun asti pieni esikaupunkikylä, jonka '
+                + 'puutaloaluetta sanottiin kansanomaisesti '
+                + 'Shanghaiksi. Nyt siellä on Baltian korkein '
+                + 'rakennus: 153 metriä ja 33 kerrosta, valmistunut '
+                + 'toukokuussa 2004. Joen toisella puolella Žvėrynas oli '
+                + 'alun perin suurruhtinaan metsästysmaata; se '
+                + 'liitettiin kaupunkiin 1901, ja siellä on yhä yli sata '
+                + 'puuhuvilaa.',
+              kuva: { tiedosto: '3bures by Augustas Didzgalvis.jpg', selite: 'Ilmakuva kolmesta lasitornista, joiden julkisivut heijastavat taivasta. Tornien takana ja sivuilla näkyy matalia vanhoja puu- ja tiilitaloja pihoineen, ja oikealla on rakennustyömaan keltaisia nostureita.', lahde: 'Augustas Didžgalvis, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Patsaat, jotka puhuvat',
+              teksti: 'Kaupungissa on kahdeksantoista patsasta, jotka '
+                + 'kertovat tarinansa puhelimeen usealla kielellä; '
+                + 'hanke alkoi vuonna 2015. Vilnassa on myös maailman '
+                + 'ensimmäinen Frank Zappalle pystytetty '
+                + 'pronssimuistomerkki vuodelta 1995. Kaupungin '
+                + 'ensimmäinen julkinen elokuvanäytös pidettiin '
+                + 'kasvitieteellisessä puutarhassa heinäkuussa 1896, '
+                + 'hyvin varhain eurooppalaisittain. Itä-Euroopan '
+                + 'ensimmäinen kirjapaino aloitti täällä 1520-luvulla.',
+            },
+            {
+              otsikko: 'Pääkaupunki toisen maan puolella',
+              teksti: 'Lokakuussa 1920 puolalaisjoukot valtasivat Vilnan '
+                + 'lavastetun kapinan turvin, ja alue liitettiin Puolaan '
+                + '1922. Liettuan hallitus siirtyi Kaunasiin, josta tuli '
+                + 'väliaikainen pääkaupunki yhdeksäksitoista vuodeksi — '
+                + 'perustuslaissa Vilna oli silti koko ajan virallinen '
+                + 'pääkaupunki. Kaupunki palautui Liettualle 28. '
+                + 'lokakuuta 1939. Kaunas kasvoi näinä vuosina '
+                + 'poikkeuksellisen nopeasti.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Talvi on kylmä ja kuivin: helmikuussa vettä tulee '
+                + '41 millimetriä ja ympäröivät järvet ovat jäässä '
+                + 'joulukuusta maalis–huhtikuuhun. Kesä on lämmin mutta '
+                + 'sateisin, heinäkuussa 89 millimetriä. Maaliskuun '
+                + 'neljättä lähinnä olevana viikonloppuna kaupungissa '
+                + 'ovat Kasimirin markkinat, joilla oli vuonna 2013 noin '
+                + 'kaksituhatta käsityöläistä ja puoli miljoonaa '
+                + 'kävijää.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vihreys',
+                tahdet: 3,
+                selite: 'Lähes seitsemänkymmentä prosenttia kaupungin '
+                  + 'pinta-alasta on viheraluetta.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Keskusta on tiivis, ja jokirannat yhdistävät '
+                  + 'vanhan ja uuden kaupungin.',
+              },
+              {
+                mita: 'Hinnat',
+                tahdet: 3,
+                selite: 'Ruoka ja majoitus ovat selvästi halvempia kuin '
+                  + 'Pohjoismaissa.',
+              },
+              {
+                mita: 'Markkinat',
+                tahdet: 2,
+                selite: 'Kasimirin markkinat maaliskuussa täyttävät '
+                  + 'kadut, mutta ne kestävät vain yhden viikonlopun.',
+              },
+              {
+                mita: 'Talven lämpö',
+                tahdet: 1,
+                selite: 'Tammi- ja helmikuussa päivä jää nollan '
+                  + 'tuntumaan ja järvet ovat jäässä.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Lentokenttä on lähellä',
+                teksti: 'Kentältä on keskustaan vain kuutisen '
+                  + 'kilometriä, ja juna vie rautatieasemalle '
+                  + 'kahdeksassa minuutissa.',
+              },
+              {
+                otsikko: 'Sade osuu kesään',
+                teksti: 'Heinäkuussa vettä tulee 89 millimetriä ja '
+                  + 'helmikuussa 41. Vuoden sademäärä on 693 '
+                  + 'millimetriä.',
+              },
+              {
+                otsikko: 'Kaksi jokea',
+                teksti: 'Kaupunki on Vilnia- ja Neris-jokien '
+                  + 'yhtymäkohdassa. Rantareitit ovat helpoin tapa '
+                  + 'siirtyä kaupunginosasta toiseen.',
+              },
+              {
+                otsikko: 'Järvet jäätyvät',
+                teksti: 'Ympäröivät järvet ovat jäässä joulukuusta '
+                  + 'maalis–huhtikuuhun, ja kylmimpinä talvina myös '
+                  + 'joet.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: '
+              + 'lämpötila on kahdenkymmenen tienoilla ja päivät ovat '
+              + 'pitkiä. Heinäkuu on lämpimin mutta samalla vuoden '
+              + 'sateisin kuukausi. Maaliskuussa kannattaa tulla vain '
+              + 'markkinoiden takia — muuten kevät on vielä kylmä. '
+              + 'Talvi on pakkasen puolella mutta vuoden kuivin jakso.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-2–18 °C',
+                kuvaus: 'Alkaa kylmänä ja lämpenee nopeasti. '
+                  + 'Maaliskuussa järvet ovat vielä jäässä, '
+                  + 'toukokuussa päivä yltää jo kahdeksaantoista '
+                  + 'asteeseen.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '12–23 °C',
+                kuvaus: 'Lämmin ja vuoden sateisin jakso: heinäkuussa '
+                  + 'vettä tulee 89 millimetriä ja elokuussa 82.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '0–16 °C',
+                kuvaus: 'Syyskuu on vielä leuto, marraskuussa päivä '
+                  + 'jää neljään asteeseen. Sade vähenee kesästä '
+                  + 'selvästi.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-6–0 °C',
+                kuvaus: 'Pakkasen puolella ja vuoden kuivin jakso: '
+                  + 'helmikuussa vettä tulee 41 millimetriä. Järvet '
+                  + 'ovat jäässä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Judu — Vilnan joukkoliikenne',
+                url: 'https://www.judu.lt/en',
+              },
+              {
+                nimi: 'Wikivoyage: Vilna',
+                url: 'https://fi.wikivoyage.org/wiki/Vilna',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           tyyppi: 'kuva',
@@ -14037,6 +14423,198 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Road in Maridalen protected Landscape in Oslo.jpg',
+          selite: 'Kapea soratie kaartuu havumetsän läpi kesäaamuna: vasemmalla nousee kuusia ja mäntyjä rinteessä, oikealla vaaleampaa koivikkoa. Tien päässä metsä sulkeutuu, ja puiden yllä näkyy kaistale kirkasta taivasta.',
+          lahde: 'Frankemann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Oslo on Euroopan metsäisin pääkaupunki. Kaupungin '
+          + 'omien rajojen sisällä on yli kolmesataa neliökilometriä '
+          + 'metsää, jossa asuu vain noin 1 600 ihmistä — sekä 343 '
+          + 'järveä ja 40 saarta. Metroasemalta pääsee suoraan '
+          + 'hiihtoladulle.',
+        artikkeli: {
+          nimi: 'Matkailijan Oslo',
+          taitto: 'opas',
+          teksti: 'Pääkaupunki, jonka rajojen sisällä on 343 järveä ja '
+            + '40 saarta — ja jonka autoista 41 prosenttia on '
+            + 'sähkökäyttöisiä.',
+          nosto: 'Metsäalueella asuu 1 610 ihmistä 301 neliökilometrin '
+            + 'alalla.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Gardermoenin lentoasema avattiin 8. lokakuuta '
+                + '1998 noin 35 kilometrin päähän keskustasta '
+                + 'koilliseen. Lentokenttäjuna kulkee 210 kilometrin '
+                + 'tuntinopeudella ja vie päärautatieasemalle '
+                + 'yhdeksässätoista minuutissa. Lähes seitsemänkymmentä '
+                + 'prosenttia matkustajista tulee kentälle julkisella '
+                + 'liikenteellä. Metrossa on viisi linjaa ja 101 '
+                + 'asemaa, joista seitsemäntoista maan alla.',
+              kuva: { tiedosto: 'Flytoget Gardermoen.jpg', selite: 'Hopeanharmaa lentokenttäjuna seisoo laiturissa lasikatteisen aseman alla: keulan punaiset takavalot palavat, ja kattoa kannattavat vaaleat puukaaret. Laiturilla kävelee kaksi matkustajaa selin, ja vasemmalla näkyy toinen juna.', lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Metsä alkaa metroaseman päästä',
+              teksti: 'Oslo jakautuu viiteentoista kaupunginosaan, ja '
+                + 'niissä asuu yhteensä runsaat 717 000 ihmistä. '
+                + 'Kaupungin rajojen sisällä on kuitenkin myös 301 '
+                + 'neliökilometriä metsää, ja siellä asuu vain 1 610 '
+                + 'ihmistä — noin viisi asukasta neliökilometrillä. '
+                + 'Saaria on 40 ja järviä 343; suurin niistä on lähes '
+                + 'neljä neliökilometriä. Metsä ja vesi ovat siis '
+                + 'kaupunkia, eivät sen ulkopuolta.',
+            },
+            {
+              otsikko: 'Kaupunki, joka laski päästönsä budjettiin',
+              teksti: 'Oslo otti käyttöön maailman ensimmäisen kaupungin '
+                + 'ilmastobudjetin vuonna 2017, ja sitä seurataan kolme '
+                + 'kertaa vuodessa tavallisen budjetin rinnalla. '
+                + 'Tavoitteena on vähentää päästöjä 95 prosenttia '
+                + 'vuoden 1990 tasosta vuoteen 2030 mennessä. '
+                + 'Syyskuussa 2021 tulliporttien läpi ajoi enemmän '
+                + 'sähköautoja kuin polttomoottoriautoja, ja kunnassa '
+                + 'rekisteröidyistä autoista 41 prosenttia on '
+                + 'täyssähköisiä.',
+            },
+            {
+              otsikko: 'Satamasta kaupunginosaksi',
+              teksti: 'Vanha satama-alue on muutettu asuinkaupungiksi '
+                + 'vaiheittain. Aker Bryggen rakentaminen alkoi '
+                + '1980-luvulla, ja rantaa vapautti kaksi tunnelia: '
+                + 'ensimmäinen avattiin 1990 ja toinen 2010. Työ '
+                + 'jatkuu yhä: Filipstadin 32 hehtaarin konttisatama '
+                + 'muuttuu 450 000 neliömetriksi rakennuksia, joista '
+                + 'puolet on asuntoja — noin 2 200 kappaletta. '
+                + 'Rannassa nousi samalla rivi kapeita tornitaloja.',
+              kuva: { tiedosto: 'Oslo, Bjørvika Barcode (2).jpg', selite: 'Rivi kapeita, eri korkuisia ja eri värisiä toimistotaloja seisoo vieretysten kuin viivakoodi. Etualalla on laaja vaalea kivipinta ja matalia betoniseiniä, oikealla kohoaa keltainen nostokurki. Taivaalla on repaleisia pilviä.', lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Keskikesällä valoisaa on yli kahdeksantoista '
+                + 'tuntia eikä yö pimene kokonaan; keskitalvella valoa '
+                + 'on noin kuusi tuntia. Sade on runsasta ja painottuu '
+                + 'loppukesään: elokuussa vettä tulee 108 millimetriä '
+                + 'ja vuodessa lähes tuhat. Kuivinta on helmikuussa, '
+                + '52 millimetriä, mutta silloin ollaan pakkasen '
+                + 'puolella. Kesä on lämmin muttei kuuma, heinäkuussa '
+                + 'kaksikymmentäkaksi astetta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Metsä ja järvet',
+                tahdet: 3,
+                selite: 'Metroasemalta pääsee suoraan metsään, ja '
+                  + 'järviä on kaupungin rajojen sisällä 343.',
+              },
+              {
+                mita: 'Vuono ja saaret',
+                tahdet: 3,
+                selite: 'Kaupungin rajojen sisällä on 40 saarta, ja '
+                  + 'lautat lähtevät keskustasta.',
+              },
+              {
+                mita: 'Julkinen liikenne',
+                tahdet: 3,
+                selite: 'Metro, raitiovaunut, bussit ja lautat samalla '
+                  + 'lipulla — ja lähes kaikki sähköllä.',
+              },
+              {
+                mita: 'Arkkitehtuuri',
+                tahdet: 2,
+                selite: 'Uusi rantakaupunki on rakennettu 2000-luvulla '
+                  + 'ja jakaa mielipiteitä.',
+              },
+              {
+                mita: 'Hinnat',
+                tahdet: 1,
+                selite: 'Ruoka, majoitus ja liput ovat Euroopan '
+                  + 'kalleimpia.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Loppukesä on sateisin',
+                teksti: 'Elokuussa vettä tulee 108 millimetriä ja '
+                  + 'helmikuussa 52. Vuodessa sadetta kertyy lähes '
+                  + 'tuhat millimetriä, joten sadetakki on tarpeen '
+                  + 'ympäri vuoden.',
+              },
+              {
+                otsikko: 'Metsä on lähempänä kuin luulet',
+                teksti: 'Marka-metsä alkaa metrolinjojen päätepysäkeiltä. '
+                  + 'Ladut ja polut ovat maksuttomia ja merkittyjä.',
+              },
+              {
+                otsikko: 'Valo vaihtelee jyrkästi',
+                teksti: 'Keskikesällä valoisaa on yli kahdeksantoista '
+                  + 'tuntia, keskitalvella noin kuusi. Marraskuu ja '
+                  + 'joulukuu ovat pimeitä ja märkiä.',
+              },
+              {
+                otsikko: 'Sähkö on oletus',
+                teksti: 'Suurin osa joukkoliikenteestä ja lautoista '
+                  + 'kulkee sähköllä. Latauspisteitä on runsaasti myös '
+                  + 'kadunvarsilla.',
+              },
+            ],
+            parasAika: 'Paras aika on kesä–heinäkuu: valoa riittää yli '
+              + 'kahdeksantoista tuntia ja lämpötila nousee '
+              + 'kahteenkymmeneen. Elokuu on lämmin mutta vuoden '
+              + 'sateisin kuukausi. Talvi on kylmä ja pimeä, mutta '
+              + 'silloin metsä on hiihtokunnossa ja helmikuu on vuoden '
+              + 'kuivin kuukausi.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '-3–16 °C',
+                kuvaus: 'Alkaa pakkasesta ja lämpenee nopeasti. '
+                  + 'Maalis- ja huhtikuu ovat vuoden kuivimpia, '
+                  + 'toukokuussa sade lisääntyy jo selvästi.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '10–22 °C',
+                kuvaus: 'Lämmin ja hyvin valoisa, mutta myös vuoden '
+                  + 'sateisin jakso: elokuussa vettä tulee 108 '
+                  + 'millimetriä.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '0–16 °C',
+                kuvaus: 'Syyskuu on vielä leuto, mutta loka- ja '
+                  + 'marraskuussa sataa yli yhdeksän senttiä '
+                  + 'kuukaudessa ja päivä lyhenee nopeasti.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-6–-1 °C',
+                kuvaus: 'Pakkasen puolella koko jakson ajan. Helmikuu '
+                  + 'on vuoden kuivin kuukausi, ja metsässä on lunta '
+                  + 'yleensä maaliskuulle asti.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Ruter — Oslon joukkoliikenne',
+                url: 'https://ruter.no/en/',
+              },
+              {
+                nimi: 'Wikivoyage: Oslo',
+                url: 'https://fi.wikivoyage.org/wiki/Oslo',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           tyyppi: 'kuva',
