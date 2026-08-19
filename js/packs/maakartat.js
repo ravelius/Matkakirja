@@ -5529,6 +5529,80 @@ export const KAUPUNKIKARTAT = {
    * Obelisk Tomb, Bab as-Siq Triclinium ja Obelisk Tomb (Petra)
    * vastasivat kaikki 404). Ilman lähdettä juttua ei kirjoiteta.
    */
+  /*
+   * JERUSALEM (Opus 19.8.2026). Muurien sisäinen vanhakaupunki.
+   * Rajaus ja piirtotyökalun lippujen perustelut ovat
+   * tools/piirra-kaupunkikartta.mjs:ssä.
+   *
+   * KOHTEITA ON KUUSI, ja se on kuvavalinnan sanelema raja eikä
+   * kartoituksen. Leijonaportista, Siionin portista, Lantaportista ja
+   * Gihonin lähteestä EI löytynyt yhtään vapaasti lisensoitua kuvaa
+   * ilman tunnistettavia ihmisiä — ei nykykuvista eikä 1900-luvun
+   * alun PD-kokoelmista, jotka käytiin läpi erikseen juuri tästä
+   * syystä. Koska jokainen kohde tarvitsee jutun ja jokainen juttu
+   * kuvan, nämä jätettiin pois sen sijaan että olisi julkaistu
+   * kuvaton juttu tai rikottu kuvasääntöä. Ne voidaan lisätä myöhemmin,
+   * jos kelvollinen kuva löytyy.
+   *
+   * Daavidin torni jäi pois eri syystä,
+   * vaikka se on vanhankaupungin tunnetuimpia rakennuksia: sen piste
+   * on noin viidenkymmenen metrin päässä Jaffan portista, eli 3,5
+   * prosenttiyksikköä, ja numeroympyrät olisivat menneet päällekkäin.
+   * Linnoitus kerrotaan Jaffan portin jutussa.
+   *
+   * SIILOAN ALLAS JA DAAVIDIN KAUPUNKI jäivät myös pois, koska ne ovat
+   * muurien eteläpuolella rajauksen ulkopuolella. Ne kerrotaan lehden
+   * Vesi-sivulla, jonne ne kuuluvatkin.
+   *
+   * Koordinaatit ovat kohteiden omista en-Wikipedian artikkeleista
+   * (haettu 19.8.2026). Damaskoksen portin luku on artikkelin
+   * wikitekstin coord-mallista, koska rajapinta ei palauttanut sille
+   * koordinaattia.
+   */
+  jerusalem: {
+    polku: 'assets/kartat/jerusalem-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 31.7865, etela: 31.772, lansi: 35.221, ita: 35.244 },
+    esittely: 'Jerusalem on vuoristokaupunki. Se kohoaa lähes '
+      + 'kahdeksansadan metrin korkeuteen Juudean vuorilla, ja sitä '
+      + 'ympäröi kolme laaksoa — siksi kaupunki on aina ollut helppo '
+      + 'puolustaa ja vaikea kastella. Omaa jokea ei ole, joten koko '
+      + 'asutuksen paikan ratkaisi yksi lähde: Gihon, joka pulppuaa '
+      + 'Kidronin laakson kalliossa. Nykyiset muurit eivät ole '
+      + 'muinaiset vaan ottomaanien työtä: sulttaani Suleiman määräsi '
+      + 'rauniona olleet muurit rakennettavaksi uudelleen vuonna 1535, '
+      + 'ja työ tehtiin vuosina 1537–1541. Kiveä on 4 018 metrin '
+      + 'matkalla, keskikorkeus on noin kaksitoista metriä ja paksuus '
+      + 'kaksi ja puoli metriä, ja muuria kiertää 34 tornia. '
+      + 'Liikennöityjä portteja on seitsemän. Muurit ja vanhakaupunki '
+      + 'hyväksyttiin Unescon maailmanperintöluetteloon vuonna 1981. '
+      + 'Vielä 1800-luvun puoliväliin asti koko kaupunki mahtui '
+      + 'muurien sisään; ensimmäinen kortteli niiden ulkopuolelle '
+      + 'rakennettiin vasta vuonna 1860.\n\nKartalla on vain '
+      + 'vanhakaupunki, runsaan kahden kilometrin levyinen pala. '
+      + 'Muuri erottuu kuvassa tummana yhtenäisenä viivana, joka '
+      + 'kiertää koko alueen — se on kartan selkäranka. Sen sisällä ei '
+      + 'ole juuri katuja vaan kujia, ja siksi verkko näyttää '
+      + 'tiheämmältä kuin muissa kaupungeissa: leveys riittää '
+      + 'jalankulkijalle ja aasille, ei vaunulle. Oikeassa laidassa '
+      + 'erottuu suuri suorakaide, jota kujat eivät halkaise: se on '
+      + 'temppelivuoren aitaus, vanhankaupungin pinta-alasta noin '
+      + 'kuudesosa. Länsilaidassa muuri kaartaa ulos ja sisään — '
+      + 'siellä on Jaffan portti, josta lähti 1800-luvulla ainoa '
+      + 'ajokelpoinen tie rannikolle. Kartan ulkopuolelle jäävät '
+      + 'etelään Daavidin kaupungin kaivausalue ja Siiloan allas. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään. */
+      { nimi: 'Damaskoksen portti', lat: 31.7816, lon: 35.2305 },
+      { nimi: 'Pyhän haudan kirkko', lat: 31.7783, lon: 35.2297 },
+      { nimi: 'Kalliomoskeija', lat: 31.778, lon: 35.2354 },
+      { nimi: 'Läntinen muuri', lat: 31.7767, lon: 35.2345 },
+      { nimi: 'Jaffan portti', lat: 31.7766, lon: 35.2276 },
+      { nimi: 'Al-Aqsa-moskeija', lat: 31.7761, lon: 35.2358 },
+    ],
+  },
+
   petra: {
     polku: 'assets/kartat/petra-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
