@@ -1158,6 +1158,220 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Szilas, Wikimedia Commons (CC BY 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Prague Near Kampa Island (51619700297).jpg',
+          selite: 'Čertovkan myllypuro Kampan saaren kupeessa syksyllä: '
+            + 'kapea kanava kulkee talojen välissä, vasemmalla seinässä '
+            + 'on vanha myllynratas, ja tyyni vesi heijastaa keltaisen '
+            + 'julkisivun ikkunarivin.',
+          lahde: 'Bradley Weber, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Praha ei ole yksi kaupunki vaan neljä, jotka '
+          + 'liitettiin yhteen vasta vuonna 1784: linnanmäki, sen alla '
+          + 'oleva Malá Strana, joen toisella puolen vanhakaupunki ja '
+          + 'sen ympärillä Kaarle IV:n suunnittelema uusikaupunki. '
+          + 'Väliä kulkee Vltava, jonka yli on Prahan kohdalla '
+          + 'kaksikymmentäyksi siltaa. Metro vie nopeasti pitkän matkan '
+          + 'ja raitiovaunu hitaasti lyhyen — vanhassa ytimessä '
+          + 'liikutaan jalan ja mäkeä ylös.',
+        artikkeli: {
+          nimi: 'Matkailijan Praha',
+          taitto: 'opas',
+          teksti: 'Neljä kaupunkia, yksi joki ja kaksikymmentäyksi siltaa.',
+          nosto: 'Metron kolme linjaa eivät kohtaa yhdessä asemassa vaan '
+            + 'piirtävät keskustaan kolmion.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Prahan metro avattiin vuonna 1974, ja siinä on '
+                + 'kolme linjaa: A vihreä, B keltainen ja C punainen. '
+                + 'Asemia on runsaat kuusikymmentä ja rataa noin 65 '
+                + 'kilometriä. Linjat eivät kohtaa yhdessä keskusasemassa, '
+                + 'vaan ne piirtävät keskustaan kolmion, jonka kärjissä '
+                + 'ovat vaihtoasemat Florenc, Můstek ja Muzeum. Syvyys '
+                + 'vaihtelee rajusti: keskustan tunnelit on porattu '
+                + 'syvälle ja syvin asema Náměstí Míru on 52 metriä maan '
+                + 'alla, kun taas laita-alueilla asemat ovat vain '
+                + 'muutaman metrin syvyydessä. Liikenne alkaa neljän ja '
+                + 'viiden välillä aamulla ja jatkuu keskiyöhön; ruuhkassa '
+                + 'juna kulkee kahden tai kolmen minuutin välein, muulloin '
+                + 'neljän ja kymmenen välein.'
+                + '\n\n'
+                + 'Sama yhtiö ajaa myös raitiovaunut, bussit, viisi '
+                + 'lauttaa, Petřínin vaijeriradan ja eläintarhan '
+                + 'tuolihissin. Kaikki kuuluvat samaan '
+                + 'lippujärjestelmään, joka on hinnoiteltu vyöhykkeittäin '
+                + '— metro on kokonaan keskusvyöhykkeellä. Raitiotieverkko '
+                + 'on maan suurin: rataa on 144 kilometriä, päivälinjoja '
+                + '26, yölinjoja yhdeksän ja lisäksi kaksi museolinjaa. '
+                + 'Ensimmäinen hevosraitiovaunu lähti liikkeelle 1875 ja '
+                + 'ensimmäinen sähkövaunu 1891; vuoteen 1905 mennessä koko '
+                + 'verkko oli sähköistetty.'
+                + '\n\n'
+                + 'Petřínin vaijerirata on oma tapauksensa. Se avattiin '
+                + '1891 vesipainolla toimivana, rakennettiin uudelleen '
+                + '1932 ja seisoi maanvyöryn takia paikoillaan vuodesta '
+                + '1965 vuoteen 1985. Syyskuussa 2024 se suljettiin '
+                + 'jälleen — rankkasateet uhkasivat sortaa rinteen — ja '
+                + 'perusteellinen kunnostus alkoi maaliskuussa 2025. '
+                + 'Liikenteen oli määrä palata kesällä 2026. Huomaa '
+                + 'lippusääntö: 30 ja 90 minuutin liput eivät kelpaa '
+                + 'radalla, vaan tarvitaan vähintään vuorokauden lippu '
+                + 'tai erikseen ostettu menolippu.',
+              kuva: {
+                tiedosto: 'Tram on Most Legií with the National Theatre Prague 2026.JPG',
+                selite: 'Puna-valkoinen raitiovaunu ylittää Legioonien '
+                  + 'sillan kesäpäivänä. Taustalla kohoaa Kansallisteatteri '
+                  + 'kullanvihreine kattoineen, ja sillan kaiteen yllä '
+                  + 'risteilevät ajolangat.',
+                lahde: 'Mike is Michi, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vltava ja kaksikymmentäyksi siltaa',
+              teksti: 'Vltava on Tšekin pisin joki ja sitä kutsutaan '
+                + 'maan kansallisjoeksi. Nimi tulee vanhoista '
+                + 'germaanisista sanoista, jotka merkitsevät villiä '
+                + 'vettä; kirjoitusasu Wultha tunnetaan vuodelta 1113 ja '
+                + 'böömiläinen Wlitaua vuodelta 1125. Joki saa alkunsa '
+                + 'Böömin metsästä lähes 1 200 metrin korkeudelta, '
+                + 'kulkee Český Krumlovin ja České Budějovicen kautta '
+                + 'pohjoiseen ja yhtyy Elbeen Mělníkissä. Matkaa kertyy '
+                + 'yli 430 kilometriä ja pudotusta runsaat tuhat metriä.'
+                + '\n\n'
+                + 'Prahan kohdalla joen yli kulkee kaksikymmentäyksi '
+                + 'siltaa. Valuma-alue on 28 090 neliökilometriä eli yli '
+                + 'puolet Böömistä ja noin kolmannes koko maasta. '
+                + 'Hydrologisesti kyse on kummallisuudesta: yhtymäkohdassa '
+                + 'Vltava on selvästi pidempi, sen virtaama on suurempi ja '
+                + 'valuma-alue laajempi, joten Elbe olisi oikeastaan '
+                + 'Vltavan sivujoki eikä toisin päin. Nimi meni historian '
+                + 'takia toisin, koska Elbe tulee laaksoa suoraan ja '
+                + 'Vltava liittyy siihen suorassa kulmassa.'
+                + '\n\n'
+                + 'Joesta juotiin vielä 1900-luvun alussa: Vinohradyn '
+                + 'vesitorni lopetti pumppaamisen vasta 1912, ja Podolín '
+                + 'vedenpuhdistamo on yhä varalla, jos muu vesihuolto '
+                + 'pettää. Prahan eteläpuolelle on 1930-luvulta lähtien '
+                + 'rakennettu yhdeksän vesivoimapatoa, jotka tasaavat '
+                + 'virtausta.',
+              kuva: {
+                tiedosto: 'Prag Moldau Aug-2012 DSC 0136.JPG',
+                selite: 'Neljä siltaa peräkkäin Letnán rinteeltä '
+                  + 'kesäpäivänä: alimpana kulkee Mánesin silta, sen '
+                  + 'takana Kaarlensillan kaaririvi ja kauimpana '
+                  + 'rautatiesilta. Etualalla ovat kattojen savupiiput ja '
+                  + 'kaksi vihertynyttä kuparikupolia.',
+                lahde: 'C. Löser, Wikimedia Commons (CC BY 3.0 DE)',
+              },
+            },
+            {
+              otsikko: 'Neljä kaupunkia, yksi Praha',
+              teksti: 'Praha kukoisti Kaarle IV:n aikana 1346–1378. Hän '
+                + 'oli sekä Böömin kuningas että keisari, ja hän teki '
+                + 'Prahasta valtakunnan pääkaupungin. Hän määräsi '
+                + 'rakennettavaksi uudenkaupungin vanhankaupungin '
+                + 'kylkeen ja piirsi sen kaavan itse, perusti vuonna 1347 '
+                + 'Kaarlen yliopiston — Keski-Euroopan vanhimman — ja '
+                + 'rakennutti Kaarlensillan tulvan tuhoaman Juditin '
+                + 'sillan tilalle. 1470-luvulla kaupungissa asui noin '
+                + '70 000 ihmistä ja se oli pinta-alaltaan 360 hehtaaria: '
+                + 'valtakunnan kolmanneksi suurin.'
+                + '\n\n'
+                + '1360-luvun nälkävuosina rakennettiin Malá Stranan ja '
+                + 'linnanmäen eteläpuolelle raskas puolustusmuuri, jota '
+                + 'kutsutaan Nälkämuuriksi. Kerrotaan, että Kaarle '
+                + 'määräsi työn juuri siksi, että köyhät saisivat '
+                + 'palkkaa ja leipää.'
+                + '\n\n'
+                + 'Kaupunki pysyi neljänä erillisenä kuntana pitkään. '
+                + 'Vasta vuonna 1784 keisari Joosef II yhdisti Malá '
+                + 'Stranan, uudenkaupungin, vanhankaupungin ja Hradčanyn '
+                + 'yhdeksi Prahaksi. Maasto pitää yhä huolen siitä, että '
+                + 'osat tuntuvat erillisiltä: Petřín kohoaa 327 metriin '
+                + 'ja Vítkov 270 metriin, kun joki matalimmillaan on 172 '
+                + 'metrissä. Ero kävellään portaissa.',
+              kuva: {
+                tiedosto: 'Mala Strana in Praha (1).jpg',
+                selite: 'Malá Stranan kattoja ylhäältä: etualalla '
+                  + 'levittäytyy laaja punatiilinen kattopinta valkoisine '
+                  + 'savupiippuineen, ja sen takana näkyy Pyhän Nikolauksen '
+                  + 'kirkon vihertynyt kupoli. Horisontissa jatkuu '
+                  + 'kaupunki harmaan pilvitaivaan alla.',
+                lahde: 'MOs810, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Josefov liitettiin viimeisenä',
+              teksti: 'Juutalaiskortteli Josefov jäi neljän kaupungin '
+                + 'yhdistämisen ulkopuolelle. Se liitettiin Prahaan '
+                + 'vasta vuonna 1850, 66 vuotta muita myöhemmin. Korttelin '
+                + 'vaiheet olivat siihen mennessä olleet rajut: '
+                + 'keisarinna Maria Teresia karkotti juutalaiset Prahasta '
+                + 'vuonna 1745 ja perui karkotuksen 1748, mutta väkiluku '
+                + 'ei enää palannut entiselleen.'
+                + '\n\n'
+                + 'Korttelin keskellä seisoo juutalainen raatihuone. Se '
+                + 'rakennettiin vuonna 1586 renessanssityyliin '
+                + 'Vanhauuden synagogan viereen pormestari Mordechai '
+                + 'Maiselin kustannuksella, ja 1700-luvulla se sai '
+                + 'rokokoojulkisivun. Talo tunnetaan kahdesta '
+                + 'kellostaan: tornissa on tavallinen roomalaisin '
+                + 'numeroin varustettu kello, ja sen alapuolella toinen, '
+                + 'jonka numerot ovat heprean kirjaimia. Ne alkavat '
+                + 'alefista ja kiertävät taulua vastapäivään — sama '
+                + 'suunta kuin hepreaa luetaan.',
+              kuva: {
+                tiedosto: 'Praha, Josefov, 2021 (04).jpg',
+                selite: 'Juutalaisen raatihuoneen heprealainen kello '
+                  + 'lumisen katon yllä: mustalla taululla on kultaiset '
+                  + 'heprean kirjaimet, ja viisarit osoittavat '
+                  + 'vastapäiseen suuntaan. Yläpuolella näkyy tornin '
+                  + 'takorautainen parveke.',
+                lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin tulla',
+              teksti: 'Prahan ilmasto on merellisen ja mannerilmaston '
+                + 'rajalla. Talvella keskilämpötila on lähellä nollaa ja '
+                + 'aurinkoa on hyvin vähän. Lumipeite on tavallinen '
+                + 'marraskuun puolivälistä maaliskuun loppuun, mutta yli '
+                + 'kahdenkymmenen sentin kinoksia tulee harvoin, ja '
+                + 'talveen mahtuu myös leutoja jaksoja.'
+                + '\n\n'
+                + 'Kesällä aurinkoa riittää ja lämpötila asettuu noin 25 '
+                + 'asteeseen; yli kolmenkymmenen asteen päiviä on tullut '
+                + 'viime vuosina selvästi enemmän. Yöt jäähtyvät kesälläkin '
+                + 'viileiksi. Sadetta tulee tšekkiläisittäin vähän, noin '
+                + '500 millimetriä vuodessa, koska kaupunki on '
+                + 'Sudeettien sadevarjossa. Kuivin vuodenaika on talvi, ja '
+                + 'rankimmat sateet tulevat loppukeväällä ja kesällä '
+                + 'ukkoskuuroina.'
+                + '\n\n'
+                + 'Hankalin sää ei ole kylmyys vaan lämpötilan '
+                + 'kääntyminen. Lokakuun puolivälistä maaliskuun '
+                + 'puoliväliin on tavallista, että kylmä ilma jää '
+                + 'laaksoon lämpimän alle: päivä on sumuinen ja harmaa ja '
+                + 'ilmanlaatu heikkenee. Praha on kuitenkin tuulinen '
+                + 'kaupunki — keskituuli on 16 kilometriä tunnissa ja '
+                + 'lännenpuoleiset tuulet purkavat käänteen usein '
+                + 'itsestään.',
+              kuva: {
+                tiedosto: '20190204 OldTownView 3853 (46548200625).jpg',
+                selite: 'Vanhankaupungin katot lumen alla helmikuussa: '
+                  + 'tiilikatot ovat valkoisen peitossa ja lumi rajaa '
+                  + 'jokaisen harjan ja kattoikkunan. Kattomeren takana '
+                  + 'kohoaa kirkon tumma torni, ja horisontissa siintävät '
+                  + 'kaupungin reunan kukkulat.',
+                lahde: 'Ray Swi-hymn from Sijhih-Taipei, Taiwan, Wikimedia '
+                  + 'Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'musiikki',

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 911, teksti: 'Matkailijan Praha: uusi opas viidellä jaksolla' },
   { v: 910, teksti: 'Avauskuvat kuudelle Euroopan lehdelle' },
   { v: 909, teksti: 'Avauskuvat Varsovaan, Krakovaan ja Tallinnaan' },
   { v: 908, teksti: 'Avauskuvat Prahaan, Tukholmaan ja Venetsiaan' },
