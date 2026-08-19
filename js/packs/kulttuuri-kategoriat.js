@@ -14472,6 +14472,195 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'trolvag, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Psiloritis view from Thronos 01.JPG',
+          selite: 'Saaren korkein vuori kohoaa loivana harmaana kupuna kirkkaan sinisen taivaan alle. Sen edessä on matalampia kallioharjanteita ja tummanvihreä metsäinen kumpu, ja etualalla rehottaa kuivan kesän jälkeen vielä vihreä pensaikko ja lehtipuita.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kreeta on 260 kilometriä pitkä mutta kapea, ja sen '
+          + 'selkärankana kulkee kuusi vuoristoryhmää. Rantaviivaa on '
+          + 'yli tuhat kilometriä. Saarella asuu runsaat 620 000 '
+          + 'ihmistä — enemmän kuin millään muulla Kreikan saarella.',
+        artikkeli: {
+          nimi: 'Matkailijan Kreeta',
+          taitto: 'opas',
+          teksti: 'Saari, jonka ruokatavoista tehtiin 1950-luvulla '
+            + 'tiedettä — ja josta tuli koko Välimeren ruokavalion '
+            + 'malli.',
+          nosto: 'Heinäkuussa Kreetalle sataa kolme millimetriä. Koko '
+            + 'kuukaudessa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Saarella on kaksi isoa lentokenttää. Heraklionin '
+                + 'kenttä on Kreikan toiseksi vilkkain — vuonna 2024 '
+                + 'matkustajia oli 9,4 miljoonaa — ja se korvataan '
+                + 'uudella Kastellin kentällä, jonka on määrä avautua '
+                + '2027. Chanian kenttä on yhteiskäytössä siviili- ja '
+                + 'sotilasilmailun kesken. Pireuksesta kulkee lauttoja '
+                + 'Heraklioniin. Pohjoisrannikon moottoritiestä on '
+                + 'valmiina vasta noin 310 kilometriä suunnitellusta '
+                + '557:stä.',
+              kuva: { tiedosto: 'Minoan Lines, Ariadne Palace 1.jpg', selite: 'Iso puna-valkoinen matkustaja-autolautta liukuu tyynellä merellä iltahämärässä. Kyljessä lukee varustamon nimi ja keulassa aluksen nimi; ikkunariveistä loistaa valo ja savupiipusta nousee ohut savu.', lahde: 'Dnalor 01, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Pitkä ja kapea',
+              teksti: 'Kreeta on 8 450 neliökilometriä ja ulottuu 260 '
+                + 'kilometriä idästä länteen, mutta pohjois–'
+                + 'eteläsuunnassa se on kapea. Rantaviivaa on 1 046 '
+                + 'kilometriä. Saari sijaitsee noin sadan kilometrin '
+                + 'päässä Peloponnesoksesta etelään, ja se jakautuu '
+                + 'neljään hallintoalueeseen. Vuoristoryhmiä on kuusi: '
+                + 'korkein huippu yltää 2 456 metriin ja toiseksi '
+                + 'korkein jää siitä vain kolme metriä.',
+            },
+            {
+              otsikko: 'Kun ruokavaliosta tehtiin tiedettä',
+              teksti: 'Vuonna 1958 alkoi tutkimus, joka seurasi '
+                + 'kuuttatoista väestöryhmää seitsemässä maassa; yksi '
+                + 'niistä oli Kreetalla. Perustutkimukset tehtiin '
+                + 'vuosina 1958–1964. Tulos oli hätkähdyttävä: '
+                + '1960-luvun alussa kreetalaisten aikuisten '
+                + 'elinajanodote oli maailman korkeimpia ja '
+                + 'sepelvaltimotaudin esiintyvyys matalimpia. Saaren '
+                + 'silloisista ruokatavoista tuli koko Välimeren '
+                + 'ruokavalion käsitteen pohja.',
+            },
+            {
+              otsikko: 'Toukokuu 1941',
+              teksti: 'Kreetalle hyökättiin 20. toukokuuta 1941, ja '
+                + 'taistelu kesti kesäkuun ensimmäiseen päivään. Se oli '
+                + 'historian ensimmäinen pääosin ilmateitse toteutettu '
+                + 'maihinnousu: laskuvarjojoukkoja käytettiin '
+                + 'ensimmäistä kertaa näin suuressa mitassa. '
+                + 'Puolustajat käyttivät samalla ensi kerran '
+                + 'merkittävästi Enigma-salauksen murtamisesta saatua '
+                + 'tietoa. Tappiot olivat molemmin puolin raskaat, ja '
+                + 'siviiliväestö kärsi kostotoimista.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kreetan kesä on käytännössä sateeton: '
+                + 'heinäkuussa vettä tulee kolme millimetriä ja '
+                + 'elokuussa viisi. Sade osuu talveen, ja tammikuu on '
+                + 'sateisin kuukausi 72 millimetrillä. Vuosisade on '
+                + 'vain 463 millimetriä. Talvikaan ei ole kylmä: '
+                + 'kylmimmilläänkin päivä on kuudentoista asteen '
+                + 'tienoilla. Kesällä puhaltaa meltemi-tuuli.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Meri',
+                tahdet: 3,
+                selite: 'Rantaviivaa on yli tuhat kilometriä, ja vesi '
+                  + 'on lämmin kesäkuusta lokakuulle.',
+              },
+              {
+                mita: 'Vuoristo',
+                tahdet: 3,
+                selite: 'Kuusi vuoristoryhmää nousee yli kahteen '
+                  + 'kilometriin aivan rannikon takaa.',
+              },
+              {
+                mita: 'Kuiva kesä',
+                tahdet: 3,
+                selite: 'Heinäkuussa sataa kolme millimetriä — sää ei '
+                  + 'käytännössä estä mitään.',
+              },
+              {
+                mita: 'Ruoka',
+                tahdet: 3,
+                selite: 'Saaren ruokatavoista tehtiin 1950-luvulla '
+                  + 'tiedettä, eikä perinne ole kadonnut.',
+              },
+              {
+                mita: 'Julkinen liikenne',
+                tahdet: 1,
+                selite: 'Junia ei ole lainkaan, ja moottoritiestä on '
+                  + 'valmiina vasta runsas puolet.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu talveen',
+                teksti: 'Tammikuu on vuoden sateisin kuukausi, 72 '
+                  + 'millimetriä, ja heinäkuu kuivin, kolme. Vuodessa '
+                  + 'vettä tulee 463 millimetriä.',
+              },
+              {
+                otsikko: 'Meltemi puhaltaa kesällä',
+                teksti: 'Touko–syyskuussa puhaltaa pohjoistuuli '
+                  + 'meltemi. Se viilentää mutta voi myös peruuttaa '
+                  + 'pienempien lauttojen vuoroja.',
+              },
+              {
+                otsikko: 'Auto on käytännössä pakollinen',
+                teksti: 'Junia ei ole, ja bussit kulkevat pääosin '
+                  + 'pohjoisrannikkoa pitkin. Vuoristokylät ja '
+                  + 'eteläranta vaativat oman kulkuneuvon.',
+              },
+              {
+                otsikko: 'Saari on pitkä',
+                teksti: 'Idästä länteen on 260 kilometriä mutkaista '
+                  + 'tietä. Yhtä majapaikkaa ei kannata valita koko '
+                  + 'saaren kiertämiseen.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syys–lokakuu: '
+              + 'lämpötila on kahdenkymmenenviiden tienoilla, meri on '
+              + 'lämmin eikä sadetta juuri tule. Heinä- ja elokuu ovat '
+              + 'kuumimmat ja täysimmät. Talvi on leuto mutta sateinen, '
+              + 'ja vuoristossa on lunta.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '9–25 °C',
+                kuvaus: 'Sade vähenee nopeasti: maaliskuussa 57 '
+                  + 'millimetriä, toukokuussa enää 29. Vuoristossa on '
+                  + 'vielä lunta.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '20–31 °C',
+                kuvaus: 'Kuuma ja käytännössä sateeton: heinäkuussa '
+                  + 'vettä tulee kolme millimetriä. Meltemi-tuuli '
+                  + 'viilentää rannikkoa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '13–27 °C',
+                kuvaus: 'Syyskuu on vielä kesää ja meri lämpimimmillään. '
+                  + 'Marraskuussa sade palaa, 50 millimetriä.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '8–16 °C',
+                kuvaus: 'Leuto mutta vuoden sateisin jakso: tammikuussa '
+                  + 'vettä tulee 72 millimetriä. Pakkasta ei rannikolla '
+                  + 'ole.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Wikivoyage: Kreeta (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Crete',
+              },
+              {
+                nimi: 'Wikipedia: Kreeta',
+                url: 'https://fi.wikipedia.org/wiki/Kreeta',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Härän yli hypättiin',
@@ -14646,6 +14835,191 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Carretto siciliano (3101352500).jpg',
+          selite: 'Lähikuva koristellun hevoskärryn kyljestä: puupintaan on veistetty ja maalattu kokonainen taistelukohtaus haarniskoituine ratsastajineen, ja sen ympärillä kiertää tiheä punaisen, sinisen ja vihreän kiehkuroista tehty koristelu. Alanurkassa kaartuu keltainen puupyörä kuvioituine puolineen.',
+          lahde: 'Rino Porrovecchio, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Sisilia on kolmion muotoinen — siitä juontuu sen '
+          + 'antiikin nimi Trinacria. Saari on lähes 26 000 '
+          + 'neliökilometriä ja sen rantaviiva on noin 1 500 '
+          + 'kilometriä. Mantereelle on kapeimmillaan vain kolme '
+          + 'kilometriä, mutta siltaa ei ole vieläkään.',
+        artikkeli: {
+          nimi: 'Matkailijan Sisilia',
+          taitto: 'opas',
+          teksti: 'Kolme kilometriä mannermaahan — ja junat ajetaan yhä '
+            + 'lautan kannelle.',
+          nosto: 'Messinansalmen sillan lopullinen hyväksyntä tuli '
+            + 'elokuussa 2025; valmista pitäisi tulla 2032.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Saarella on kaksi isoa lentokenttää. Catanian '
+                + 'kenttä on Sisilian vilkkain ja Italian neljänneksi '
+                + 'vilkkain, 12,3 miljoonaa matkustajaa vuonna 2024; '
+                + 'sen kiitorata joudutaan ajoittain sulkemaan Etnan '
+                + 'tuhkasateen takia, yleensä enintään vuorokaudeksi. '
+                + 'Palermon kenttä on nimetty vuonna 1992 murhattujen '
+                + 'tuomareiden Giovanni Falconen ja Paolo Borsellinon '
+                + 'mukaan.',
+              kuva: { tiedosto: '16.11.95 Between Messina & Villa San Giovanni mv "Scilla" (12788799193).jpg', selite: 'Valkoinen junalautta ylittää kapeaa salmea; kyljessä lukee valtion rautateiden nimi. Taustalla nousee rinteille rakennettu kaupunki ja sen takana korkeat, kuivat vuoret. Meri on syvänsininen ja tyyni.', lahde: 'Phil Richards, Wikimedia Commons (CC BY-SA 2.0)' },
+            },
+            {
+              otsikko: 'Kolme kilometriä mannermaahan',
+              teksti: 'Messinansalmi on kapeimmillaan vain 3,1 '
+                + 'kilometriä leveä, mutta siltaa ei ole. Sen sijaan '
+                + 'lautta hoitaa yhteyden — ja mannermaalta tulevan '
+                + 'junan vaunut ajetaan sellaisenaan lautan kannelle, '
+                + 'junaa purkamatta. Siltaa on suunniteltu '
+                + 'vuosikymmeniä; lopullinen hyväksyntä tuli elokuussa '
+                + '2025. Suunnitelman mukaan silta on noin 3,3 '
+                + 'kilometriä pitkä ja valmistuu 2032.',
+            },
+            {
+              otsikko: 'Kärry, josta tuli tunnus',
+              teksti: 'Sisilialainen carretto on kaksipyöräinen puinen '
+                + 'hevos- tai aasikärry, joka on koristeltu veistoksin '
+                + 'ja maalauksin. Kylkiin maalataan kohtauksia saaren '
+                + 'historiasta ja kansantaruista, ja väreinä käytetään '
+                + 'kirkasta punaista, sinistä ja keltaista. Alun perin '
+                + 'kyseessä oli tavallinen työväline, mutta koristelusta '
+                + 'kasvoi oma käsityöperinteensä ja lopulta koko saaren '
+                + 'tunnus.',
+            },
+            {
+              otsikko: 'Pääsiäinen 1282',
+              teksti: 'Sisilian ehtoopalvelukset alkoivat pääsiäisenä '
+                + '1282 Palermossa ja johtivat siihen, että ranskalainen '
+                + 'Anjoun suku menetti saaren. Kapina levisi nopeasti, '
+                + 'ja sen seurauksena Sisilia siirtyi Aragonian '
+                + 'hallintaan. Kertomus siitä, mikä tarkalleen sytytti '
+                + 'kapinan, on osin legendaa eikä kiistatonta '
+                + 'historiaa — mutta lopputulos muutti Välimeren '
+                + 'valtasuhteet vuosisadoiksi.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Tämän lehden säätiedot on mitattu Palermossa. '
+                + 'Kesä on käytännössä sateeton: heinäkuussa vettä tulee '
+                + 'seitsemän millimetriä. Sade osuu syksyyn ja talveen, '
+                + 'ja lokakuu on sateisin kuukausi 81 millimetrillä. '
+                + 'Vuosisade on 626 millimetriä. Talvi on leuto, '
+                + 'kahdeksan ja viidentoista asteen välillä, joten '
+                + 'saarelle voi tulla ympäri vuoden.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kuiva kesä',
+                tahdet: 3,
+                selite: 'Heinäkuussa sataa seitsemän millimetriä — sää '
+                  + 'ei estä mitään.',
+              },
+              {
+                mita: 'Leuto talvi',
+                tahdet: 3,
+                selite: 'Kylmimmilläänkin päivä on neljäntoista asteen '
+                  + 'tienoilla, joten kausi kestää koko vuoden.',
+              },
+              {
+                mita: 'Vuoristo',
+                tahdet: 3,
+                selite: 'Madonien ja Nebrodien huiput nousevat lähes '
+                  + 'kahteen kilometriin metsäisiltä rinteiltä.',
+              },
+              {
+                mita: 'Käsityö',
+                tahdet: 2,
+                selite: 'Koristekärryperinne elää, mutta parhaat '
+                  + 'kappaleet ovat museoissa eivätkä kaduilla.',
+              },
+              {
+                mita: 'Junayhteydet',
+                tahdet: 1,
+                selite: 'Mantereelle mennään yhä lautalla, ja saaren '
+                  + 'sisäiset junayhteydet ovat hitaita.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu syksyyn',
+                teksti: 'Lokakuu on vuoden sateisin kuukausi, 81 '
+                  + 'millimetriä, ja heinäkuu kuivin, seitsemän. '
+                  + 'Vuodessa vettä tulee 626 millimetriä.',
+              },
+              {
+                otsikko: 'Tuhka voi sulkea kentän',
+                teksti: 'Catanian kiitorata suljetaan ajoittain Etnan '
+                  + 'tuhkan takia. Häiriö kestää yleensä enintään '
+                  + 'vuorokauden, mutta lennot kannattaa tarkistaa.',
+              },
+              {
+                otsikko: 'Luvut ovat Palermosta',
+                teksti: 'Säätiedot on mitattu Palermossa rannikolla. '
+                  + 'Sisämaassa ja vuoristossa on kesällä kuumempaa ja '
+                  + 'talvella selvästi kylmempää.',
+              },
+              {
+                otsikko: 'Saari on iso',
+                teksti: 'Pinta-alaa on lähes 26 000 neliökilometriä ja '
+                  + 'rantaviivaa 1 500 kilometriä. Yhdestä tukikohdasta '
+                  + 'ei ehdi kaikkialle.',
+              },
+            ],
+            parasAika: 'Paras aika on huhti–kesäkuu tai syys–lokakuu: '
+              + 'lämpötila on kahdenkymmenenviiden tienoilla eikä helle '
+              + 'pakota varjoon. Heinä- ja elokuu ovat kuumimmat ja '
+              + 'kuivimmat. Lokakuu on vuoden sateisin kuukausi. Talvi '
+              + 'on leuto, ja saari on silloin rauhallisimmillaan.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '10–23 °C',
+                kuvaus: 'Sade vähenee nopeasti: maaliskuussa 67 '
+                  + 'millimetriä, toukokuussa enää 36. Maasto on '
+                  + 'vihreimmillään.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '20–30 °C',
+                kuvaus: 'Kuuma ja lähes sateeton: heinäkuussa vettä '
+                  + 'tulee seitsemän millimetriä. Rannikolla on '
+                  + 'viileämpää kuin sisämaassa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '13–27 °C',
+                kuvaus: 'Syyskuu on vielä kesää, mutta lokakuussa sade '
+                  + 'palaa voimalla — 81 millimetriä, vuoden eniten.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '8–15 °C',
+                kuvaus: 'Leuto ja sateinen. Pakkasta ei rannikolla ole, '
+                  + 'mutta Etnan rinteillä hiihdetään.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Wikivoyage: Sisilia (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Sicily',
+              },
+              {
+                nimi: 'Wikipedia: Sisilia',
+                url: 'https://fi.wikipedia.org/wiki/Sisilia',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Ritarit narujen varassa',
@@ -14818,6 +15192,195 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Einaz80, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Semmering Railway, Breitenstein, Styria, Austro-Hungary-LCCN2002710981.jpg',
+          selite: 'Värjätty valokuva 1800-luvun lopulta: vuoristolaakson yli kaartuu kivinen holvisilta, jonka takana kohoaa kallioinen huippu. Rinteillä on niittyjä, heinäseipäitä ja muutama punakattoinen talo, ja alalaidassa lukee radan ja paikan nimi.',
+          lahde: 'Photochrom Print Collection, Wikimedia Commons (PD)',
+        },
+        kappale: 'Alppien läpi pääsi junalla jo isoisän matkan aikaan. '
+          + 'Semmeringrata valmistui 1854 ja Fréjus-tunneli Mont '
+          + 'Cenisin alla avattiin syyskuussa 1871 — vain kaksi vuotta '
+          + 'ennen vuotta 1873. Vuoristo, joka oli aina ollut este, '
+          + 'muuttui alle sukupolvessa reitiksi.',
+        artikkeli: {
+          nimi: 'Matkailijan Alpit',
+          taitto: 'opas',
+          teksti: 'Kaksi tunnelinlouhintaryhmää kohtasi vuoren sisällä '
+            + '40 sentin tarkkuudella — vuonna 1870.',
+          nosto: 'Fréjus-tunneli avattiin 17.9.1871, kaksi vuotta ennen '
+            + 'isoisän matkaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Semmeringrata rakennettiin 1848–1854, ja sitä '
+                + 'pidetään Euroopan ensimmäisenä varsinaisena '
+                + 'vuoristoratana. Se on 41 kilometriä pitkä, nousee '
+                + '460 metriä ja sisältää neljätoista tunnelia, '
+                + 'kuusitoista viaduktia ja yli sata kivikaarisiltaa. '
+                + 'Pääinsinöörinä toimi Carl von Ghega, ja rata on '
+                + 'ollut Unescon maailmanperintökohde vuodesta 1998. '
+                + 'Fréjus-tunneli rakennettiin 1857–1871.',
+            },
+            {
+              otsikko: 'Vuori vastaan louhijat',
+              teksti: 'Fréjus-tunnelia louhittiin neljätoista vuotta. '
+                + 'Työssä käytettiin paineilmaporia ja dynamiittia, ja '
+                + 'kaksi eri suunnista tullutta ryhmää kohtasi vuoren '
+                + 'sisällä 26. joulukuuta 1870. Poikkeama oli '
+                + 'vaakasuunnassa noin neljäkymmentä senttiä ja '
+                + 'pystysuunnassa kuusikymmentä. Tunneli avattiin 17. '
+                + 'syyskuuta 1871, ja se oli maailman pisin tunneli '
+                + 'seuraavat yksitoista vuotta.',
+            },
+            {
+              otsikko: 'Karja muuttaa kesäksi ylös',
+              teksti: 'Vuoristolaidunnus tarkoittaa karjan siirtämistä '
+                + 'vuodenaikojen mukaan: keväällä keskikorkeuden '
+                + 'laitumille, kesäksi ylälaitumille, syyskuun lopulla '
+                + 'takaisin alas ja loppuvuodeksi navettaan. Tapa on '
+                + 'peräisin jo kivikauden lopulta, ja vuodelta 1204 on '
+                + 'säilynyt asiakirja, jossa kesälaitumet mainitaan. '
+                + 'Suurin osa laitumista on alle 2 400 metrin '
+                + 'korkeudessa, kaikki alle 2 800:n.',
+              kuva: { tiedosto: 'Rattener alm 3 kuehe.jpg', selite: 'Kolme lehmää avoimella ylängön laitumella: yksi seisoo ruskeana, kaksi makaa nurmella valkoruskeina. Taustalla nurmi jatkuu horisonttiin, jossa erottuu kuusia ja kaukainen vuorenharjanne, ja taivas on tummien sadepilvien peitossa.', lahde: 'Thomas Macht, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Heinäkuu 1865',
+              teksti: 'Matterhorn kiivettiin ensi kertaa 14. heinäkuuta '
+                + '1865. Seitsemän hengen ryhmä nousi Sveitsin puolelta '
+                + 'harjannetta pitkin, ja huipulle päästiin puoli '
+                + 'kahdelta iltapäivällä. Laskeutuessa köysi katkesi ja '
+                + 'neljä ryhmän jäsentä putosi kuolemaansa. Nousua '
+                + 'pidetään alpinismin kultakauden viimeisenä, ja '
+                + 'onnettomuus muutti pysyvästi sitä, miten '
+                + 'vuorikiipeilyn vaaroihin suhtauduttiin.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Tämän lehden säätiedot on mitattu Innsbruckissa, '
+                + 'laaksossa — huipuilla on selvästi kylmempää. Sade '
+                + 'osuu Alpeilla kesään eikä talveen: elokuussa vettä '
+                + 'tulee 201 millimetriä ja helmikuussa vain 77. '
+                + 'Vuosisade on lähes 1 600 millimetriä. Lunta kertyy '
+                + 'marraskuusta huhti–toukokuuhun, ja jokien vedenpinta '
+                + 'on korkeimmillaan kesä–heinäkuussa sulamisvesien '
+                + 'takia.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Junamatkat',
+                tahdet: 3,
+                selite: 'Vuoristoradat ovat itsessään nähtävyyksiä, ja '
+                  + 'osa niistä on maailmanperintökohteita.',
+              },
+              {
+                mita: 'Vaellus',
+                tahdet: 3,
+                selite: 'Merkittyjä reittejä ja majoja on tuhansia '
+                  + 'kilometrejä, ja laitumet ovat kesällä auki.',
+              },
+              {
+                mita: 'Talviurheilu',
+                tahdet: 3,
+                selite: 'Lumi pysyy marraskuusta huhti–toukokuuhun '
+                  + 'korkeuden mukaan.',
+              },
+              {
+                mita: 'Maisemat',
+                tahdet: 3,
+                selite: '82 huippua nousee yli neljään kilometriin, ja '
+                  + 'laaksot ovat jyrkkiä.',
+              },
+              {
+                mita: 'Kuiva kesä',
+                tahdet: 1,
+                selite: 'Kesä on vuoden sateisin jakso: elokuussa vettä '
+                  + 'tulee yli kaksikymmentä senttiä.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade osuu kesään',
+                teksti: 'Elokuu on vuoden sateisin kuukausi, 201 '
+                  + 'millimetriä, ja helmikuu kuivin, 77. Vuoristo '
+                  + 'tekee märäksi kesän eikä talven.',
+              },
+              {
+                otsikko: 'Luvut ovat laaksosta',
+                teksti: 'Säätiedot on mitattu Innsbruckissa. Jokaista '
+                  + 'tuhatta korkeusmetriä kohti lämpötila laskee '
+                  + 'selvästi, joten huipuilla on aina kylmempää.',
+              },
+              {
+                otsikko: 'Laidunkausi näkyy',
+                teksti: 'Karja on ylälaitumilla kesällä ja tulee alas '
+                  + 'syyskuun lopulla. Silloin monessa kylässä on '
+                  + 'karjanlaskujuhla.',
+              },
+              {
+                otsikko: 'Solat voivat olla kiinni',
+                teksti: 'Korkeat tiesolat aukeavat vasta alkukesästä ja '
+                  + 'sulkeutuvat syksyllä. Reitti kannattaa tarkistaa '
+                  + 'ennen lähtöä.',
+              },
+            ],
+            parasAika: 'Paras aika riippuu siitä, mitä hakee: '
+              + 'vaellukseen kesä–syyskuu, jolloin laitumet ja solat '
+              + 'ovat auki, ja hiihtoon joulu–maaliskuu. Kesä on '
+              + 'lämpimin mutta myös sateisin. Syyskuu on usein paras '
+              + 'yhdistelmä: lämmintä, vähemmän sadetta kuin '
+              + 'keskikesällä ja laitumet vielä käytössä.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '0–18 °C',
+                kuvaus: 'Lumi sulaa laaksoista mutta pysyy ylhäällä. '
+                  + 'Sade lisääntyy nopeasti: toukokuussa vettä tulee '
+                  + 'jo 172 millimetriä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '12–24 °C',
+                kuvaus: 'Lämmin ja vuoden sateisin jakso — jokainen '
+                  + 'kuukausi yli 190 millimetriä. Ukkoskuurot ovat '
+                  + 'iltapäivisin tavallisia.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '0–20 °C',
+                kuvaus: 'Syyskuu on lämmin ja jo selvästi kesää '
+                  + 'kuivempi. Marraskuussa lumi palaa korkeille '
+                  + 'rinteille.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '-6–6 °C',
+                kuvaus: 'Kylmä mutta vuoden kuivin jakso: helmikuussa '
+                  + 'vettä tulee 77 millimetriä. Lumi pysyy rinteillä '
+                  + 'huhti–toukokuulle.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Wikivoyage: Alpit (englanniksi)',
+                url: 'https://en.wikivoyage.org/wiki/Alps',
+              },
+              {
+                nimi: 'Wikipedia: Alpit',
+                url: 'https://fi.wikipedia.org/wiki/Alpit',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Torvi, joka puhuu laaksosta toiseen',
