@@ -2032,7 +2032,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Madrid',
-      johdanto: 'Euroopan korkeimmalla sijaitseva pääkaupunki, jonka kuninkaat '
+      johdanto: 'Euroopan unionin korkeimmalla sijaitseva pääkaupunki, jonka kuninkaat '
         + 'perustivat keskelle tyhjää ylätasankoa ja jonka asukkaat päättivät '
         + 'valvoa myöhempään kuin kukaan muu.',
       kansikuvat: [
@@ -2056,6 +2056,207 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Madrid Río - 50546089063.jpg',
+          selite: 'Madrid Río sinisellä hetkellä: valaistut puut ja vaaleat hiekkakäytävät jakavat istutukset kaistoiksi, ja taustalla kaartuu pitkä valkoinen ristikkosilta joen yli. Sillan takana palavat asuintalojen ikkunat.',
+          lahde: 'Marian, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Madrid on rakennettu keskelle Kastilian ylätasankoa, '
+          + 'noin 650 metrin korkeuteen. Se on Euroopan unionin '
+          + 'korkeimmalla sijaitseva pääkaupunki, eikä meri ole '
+          + 'neljäänsataan kilometriin. Korkeus näkyy kaikessa: kesä on '
+          + 'kuuma ja kuiva, talviyöt kylmiä ja sadetta tulee vuodessa '
+          + 'vain nelisensataa millimetriä.',
+        artikkeli: {
+          nimi: 'Matkailijan Madrid',
+          taitto: 'opas',
+          teksti: 'Kaupunki kuudessasadassaviidessäkymmenessä metrissä: '
+            + 'metro ajaa vasemmalla ja joki kaivettiin takaisin esiin.',
+          nosto: 'Chamberín asema suljettiin 1966, ja sen mainokset '
+            + 'jäivät seinille neljäksikymmeneksi vuodeksi.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Metro avattiin 17. lokakuuta 1919, ja ensimmäinen '
+                + 'linja oli kolme ja puoli kilometriä pitkä. Nyt '
+                + 'raiteita on lähes kolmesataa kilometriä '
+                + 'kolmellatoista linjalla, ja lisäksi kulkee kolme '
+                + 'kevytraidelinjaa. Vuonna 2024 matkoja tehtiin 715 '
+                + 'miljoonaa. Junat ajavat vasemmanpuoleista raidetta, '
+                + 'toisin kuin maan tiet ja useimmat rautatiet. '
+                + 'Lentokenttä avattiin 1931 ja nimettiin 2014 Adolfo '
+                + 'Suárezin mukaan. Lähijunat eivät kulje yöllä.',
+              kuva: { tiedosto: 'Madrid - Metro Ligero (línea 3) - Colonia Jardín - 20070804a.jpg', selite: 'Punasininen nivelraitiovaunu seisoo omalla radallaan kirkkaassa auringossa. Vaunun kyljessä lukee metro ligero, ja sen yllä kulkee ajolanka. Vasemmalla nousee kuiva ruohorinne, oikealla on tyhjä laituri ja toinen raidepari.', lahde: 'Barcex, Wikimedia Commons (CC BY-SA 3.0)' },
+            },
+            {
+              otsikko: 'Madrid on monta kaupunkia',
+              teksti: 'Malasaña oli 1970- ja 1980-luvun vastakulttuurin '
+                + 'keskus, Chueca on homokulttuurin kaupunginosa ja '
+                + 'Lavapiés vanha köyhä kortteli, jossa asuu paljon '
+                + 'maahanmuuttajia. La Latinasta alkaa sunnuntaisin '
+                + 'Rastro-kirpputori, joka jatkuu useiden korttelien '
+                + 'läpi. Pohjoisessa on toinen Madrid: rahoituskorttelit '
+                + 'ja neljän tornin ryhmä, joka valmistui 2008 ja jonka '
+                + 'korkein torni yltää lähes kahteensataanviiteenkymmeneen '
+                + 'metriin.',
+              kuva: { tiedosto: 'Madrid - Cuatro Torres Business Area (CTBA) 01.JPG', selite: 'Neljä lasista pilvenpiirtäjää nousee pilvettömälle taivaalle: vasemmalla kulmikas hopeanharmaa torni, sen vieressä musta pyöreä torni ja oikealla kaksi sinertävää, viistoin katoin päättyvää tornia. Niiden edessä on matala punatiilinen kerrostalo parvekkeineen.', lahde: 'Zarateman, Wikimedia Commons (CC0)' },
+            },
+            {
+              otsikko: 'Asema, joka jäi ajan alle',
+              teksti: 'Chamberí oli yksi metron kahdeksasta ensimmäisestä '
+                + 'asemasta. Arkkitehti Antonio Palacios koristeli sen '
+                + 'valkoisin ja koboltinsinisin laatoin pariisilaisten '
+                + 'asemien tapaan. Asema suljettiin 22. toukokuuta 1966, '
+                + 'koska laiturit piti pidentää kuudestakymmenestä '
+                + 'yhdeksäänkymmeneen metriin eikä siihen ollut tilaa. '
+                + 'Uloskäynnit muurattiin umpeen. Museona asema avattiin '
+                + 'uudelleen 2008, ja junat kulkevat yhä ohi '
+                + 'pysähtymättä.',
+              kuva: { tiedosto: 'Estacion de Metro de Chamberi - Madrid 16.jpg', selite: 'Vanha emalikilpi metroaseman seinässä: sinisellä pohjalla lukee valkoisin kirjaimin Chamberí, ja kilven takana on punainen vinoneliö. Ympärillä on valkoista laattaa ja pystyjä koristenauhoja vihreänä, sinisenä ja keltaisena.', lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Joki nostettiin moottoritien alta',
+              teksti: 'Manzanares virtasi vuosikymmeniä kehätien vieressä, '
+                + 'ja moottoritie halkaisi kaupungin kahtia. Tie '
+                + 'haudattiin maan alle, ja sen päälle rakennettiin '
+                + 'Madrid Río -puisto; suunnitelma valittiin '
+                + 'kansainvälisessä kilpailussa vuonna 2005. Jokea '
+                + 'patoaa seitsemän patoa, ja asukkaiden vaatimuksesta '
+                + 'niiden portit avattiin, jotta vesi virtaisi '
+                + 'vapaammin. Haikarat ja kuningaskalastajat palasivat '
+                + 'rannoille. Puisto palkittiin Harvardissa 2015.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Sadetta tulee vuodessa noin nelisensataa '
+                + 'millimetriä, vähemmän kuin useimmissa Euroopan '
+                + 'pääkaupungeissa. Heinäkuussa vettä saadaan kuusi '
+                + 'millimetriä ja lokakuussa 58. Kesä on kuuma: '
+                + 'heinäkuun ylin on kolmekymmentäkolme astetta, ja '
+                + 'lämpöennätys 40,7 astetta mitattiin Retirossa 14. '
+                + 'elokuuta 2021. Talvi on lyhyt mutta voi yllättää — '
+                + 'tammikuussa 2021 myrsky Filomena toi kaupunkiin puoli '
+                + 'metriä lunta.',
+              kuva: { tiedosto: '8 enero 2021, inicio de la gran nevada en Madrid por la tormerta Filomena en Madrid Río.jpg', selite: 'Lumisade harmaan joen yllä: betonipenkereiden välissä virtaa vesi, ja keskellä uomaa on hiekkasärkkä ruskeine kasveineen. Kahdella sillalla kävelee ihmisiä sateenvarjojen alla, ja rannat ovat jo valkoiset.', lahde: 'Malopez 21, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Taidemuseot',
+                tahdet: 3,
+                selite: 'Kolme suurta museota on kävelymatkan päässä '
+                  + 'toisistaan saman puistokadun varrella.',
+              },
+              {
+                mita: 'Illat',
+                tahdet: 3,
+                selite: 'Madridissa syödään myöhään, ja kadut ovat '
+                  + 'täynnä väkeä vielä puolenyön jälkeen.',
+              },
+              {
+                mita: 'Puistot',
+                tahdet: 3,
+                selite: 'Retiro ja Madrid Río ovat kumpikin kaupungin '
+                  + 'sisällä ja maksuttomia.',
+              },
+              {
+                mita: 'Metro',
+                tahdet: 3,
+                selite: 'Verkko on Euroopan kolmanneksi pisin, ja '
+                  + 'asemia on tiheässä myös keskustan ulkopuolella.',
+              },
+              {
+                mita: 'Uiminen',
+                tahdet: 1,
+                selite: 'Meri on neljänsadan kilometrin päässä; '
+                  + 'kesähelteellä jäljelle jäävät kaupungin altaat.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesähelle on tosiasia',
+                teksti: 'Heinä- ja elokuussa päivälämpötila on yli '
+                  + 'kolmekymmentä astetta. Keskipäivä kannattaa '
+                  + 'suunnitella sisätiloihin tai varjoon.',
+              },
+              {
+                otsikko: 'Päivä alkaa myöhään',
+                teksti: 'Lounas syödään kahden ja neljän välillä ja '
+                  + 'illallinen usein vasta yhdeksän jälkeen. Museot '
+                  + 'ja kaupat noudattavat samaa rytmiä.',
+              },
+              {
+                otsikko: 'Kaupunki on korkealla',
+                teksti: 'Kuudensadanviidenkymmenen metrin korkeus '
+                  + 'viilentää yöt kesälläkin ja tuo talvella '
+                  + 'pakkasta kirkkaalla säällä.',
+              },
+              {
+                otsikko: 'Lähijunat eivät aja yöllä',
+                teksti: 'Cercanías-lähijunat lopettavat puolenyön '
+                  + 'tienoilla ja aloittavat vasta viiden jälkeen. '
+                  + 'Yöllä liikutaan bussilla tai taksilla.',
+              },
+            ],
+            parasAika: 'Paras aika on huhti–toukokuu tai syys–lokakuu: '
+              + 'lämpötila on kahdenkymmenen tienoilla eikä helle pakota '
+              + 'sisätiloihin. Kesä on kuuma ja kuiva, ja moni '
+              + 'madridilainen poistuu kaupungista elokuuksi. Talvi on '
+              + 'kirkas mutta viileä, ja lokakuu on vuoden sateisin '
+              + 'kuukausi.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '3–23 °C',
+                kuvaus: 'Lämpenee nopeasti. Maaliskuun yöt ovat vielä '
+                  + 'kylmiä, mutta toukokuussa päivä on jo yli '
+                  + 'kahdenkymmenen. Huhtikuu on kevään sateisin '
+                  + 'kuukausi, noin neljä ja puoli senttiä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '16–33 °C',
+                kuvaus: 'Kuuma ja lähes sateeton: heinäkuussa vettä '
+                  + 'tulee kuusi millimetriä. Yöt viilenevät korkeuden '
+                  + 'takia, mikä erottaa Madridin rannikon '
+                  + 'kaupungeista.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '4–27 °C',
+                kuvaus: 'Syyskuu on vielä lämmin, lokakuu vuoden '
+                  + 'sateisin kuukausi lähes kuudella sentillä. '
+                  + 'Marraskuussa päivälämpötila laskee kolmentoista '
+                  + 'asteen tienoille.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '0–12 °C',
+                kuvaus: 'Yöt ovat nollan tuntumassa ja päivät '
+                  + 'kymmenen paikkeilla. Lunta tulee harvoin, mutta '
+                  + 'kun tulee, se voi pysäyttää koko kaupungin.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Metro de Madrid',
+                url: 'https://www.metromadrid.es/en',
+              },
+              {
+                nimi: 'Wikivoyage: Madrid',
+                url: 'https://fi.wikivoyage.org/wiki/Madrid',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Goya maalasi madridilaisten vapaapäivät',
@@ -4569,6 +4770,202 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'The entrance to the harbour of Mikrolimano (Munichia) in Piraeus on July 3, 2021.jpg',
+          selite: 'Pieni luonnonsatama merestä katsottuna: aallonmurtajan kivien takana nousee rinne täynnä valkoisia ja vaaleita taloja, ja rantaviivan tuntumassa on veneiden mastoja rivissä. Vesi on turkoosia ja taivaalla on kumpupilviä.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ateena ei lopu kaupungin rajaan. Sen satamakaupunki '
+          + 'Pireus on oma kuntansa, jossa asuu yli 168 000 ihmistä, ja '
+          + 'sen kolme luonnonsatamaa olivat käytössä jo antiikissa. '
+          + 'Suuri osa matkailijoista näkee Ateenasta ensimmäisenä juuri '
+          + 'sataman — tai metroaseman, jonka seinällä on kaivauslöytöjä.',
+        artikkeli: {
+          nimi: 'Matkailijan Ateena',
+          taitto: 'opas',
+          teksti: 'Metroa kaivettaessa arkeologit työskentelivät kuusi '
+            + 'vuotta insinöörien rinnalla.',
+          nosto: 'Vuonna 1834 pääkaupungiksi valitussa Ateenassa oli '
+            + 'noin neljäsataa taloa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Ensimmäinen linja avattiin höyryjunana Pireuksen '
+                + 'ja Thiseionin välille jo 27. helmikuuta 1869, ja se '
+                + 'sähköistettiin 1904. Linjat kaksi ja kolme '
+                + 'kaivettiin maan alle vuodesta 1992 ja avattiin '
+                + 'tammikuussa 2000. Kaivuun aikana arkeologit '
+                + 'työskentelivät kuusi vuotta insinöörien rinnalla, ja '
+                + 'löydöistä tehtiin pysyviä näyttelyitä asemille. '
+                + 'Verkossa on nyt kolme linjaa ja 66 asemaa. '
+                + 'Lentokenttä avattiin 2001, parikymmentä kilometriä '
+                + 'keskustasta.',
+              kuva: { tiedosto: 'Terracotta Pipes from an Aqueduct - Syntagma Metro Station Archaeological Collection by Joy of Museum.jpg', selite: 'Metroaseman vitriinissä on savesta poltettuja vesijohtoputkia: paksu putkiketju on koottu kolmesta osasta, ja kussakin on soikea tarkastusaukko. Takana on tasolla litteitä savilaattoja ja kivinen kouru.', lahde: 'Joyofmuseums, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Kaupunginosat ja oma satamakaupunki',
+              teksti: 'Plaka on Ateenan vanhin asuttu alue, ja se on '
+                + 'ollut asuttuna keskeytyksettä kivikaudesta asti. '
+                + 'Kolonaki sai nimensä aukiolla seisseestä kahden '
+                + 'metrin pylväästä, ja Exarcheia syntyi 1870-luvulla '
+                + 'silloiselle kaupungin reunalle kauppias Exarchoksen '
+                + 'mukaan nimettynä. Pireus taas ei ole kaupunginosa '
+                + 'lainkaan vaan oma kuntansa, Kreikan neljänneksi '
+                + 'suurin, ja sen satamista lähtevät lautat saarille.',
+              kuva: { tiedosto: 'The house of the first prime minister of Greece Ioannis Kolettis at 13 Polygnotou Street in Plaka on 13 January 2019.jpg', selite: 'Rapistunut kaksikerroksinen uusklassinen talo aamuauringossa: kolmiopäätyn alla on kaareva syvennys ja siinä pyhimyksen kuva, ikkunoissa harmaat luukut ja alakerrassa valurautainen parvekekaide. Edessä kasvaa hoitamaton puutarha ja appelsiinipuu.', lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Frappé keksittiin vahingossa',
+              teksti: 'Kreikkalainen jääkahvi syntyi messuilla vuonna '
+                + '1957, kun pikakahvin esittelijä Dimitris Vakondios '
+                + 'ei löytänyt kuumaa vettä ja ravisti kahvin jään '
+                + 'kanssa. Frappé tilataan aina makeuden mukaan: '
+                + 'glykós on makea, métrios keskimakea ja skétos '
+                + 'sokeriton. Maito lisätään vain pyydettäessä. Vaahto '
+                + 'pysyy koossa muutaman minuutin. Freddo espresso '
+                + 'keksittiin Ateenassa 1991. Kahvin kanssa tuodaan '
+                + 'aina lasi vettä.',
+              kuva: { tiedosto: 'Greek Frappe.jpg', selite: 'Korkea lasi vaaleanruskeaa jääkahvia paksun vaahtokerroksen alla, mustan pillin kanssa, pyöreällä metallipöydällä. Vieressä on lasi kirkasta vettä ja metallinen tuhkakuppi; taustalla näkyy punaisia muovituoleja terassilla.', lahde: 'Elwiki74, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Kylä, josta tehtiin pääkaupunki',
+              teksti: 'Kun Ateenasta tuli Kreikan pääkaupunki vuonna '
+                + '1834, se oli noin neljänsadan talon kylä Akropoliin '
+                + 'juurella; asukkaita oli neljästä viiteen tuhatta. '
+                + 'Valinta tehtiin historian eikä koon perusteella. '
+                + 'Arkkitehdit Stamatios Kleanthis ja Eduard Schaubert '
+                + 'kartoittivat alueen, ja sen pohjalta piirrettiin uusi '
+                + 'kaupunkisuunnitelma. Yliopisto valmistui 1837, '
+                + 'kansallispuutarha 1840 ja kansalliskirjasto 1842.',
+              kuva: { tiedosto: 'Tzistarakis mosque in Athens.jpg', selite: 'Vesivärimaalaus vuodelta 1839: kupolimoskeija seisoo hiekkaisen aukion laidalla, ja sen ympärillä on matalia tiilikattoisia taloja ja markiiseja. Aukiolla kulkee aasi ja muutama ihminen; kaukana oikealla kohoaa kallioinen mäki.', lahde: 'James Skene, Wikimedia Commons (PD)' },
+            },
+            {
+              otsikko: 'Kesä on eurooppalaisittain poikkeuksellinen',
+              teksti: 'Ateenaa on sanottu Manner-Euroopan kuumimmaksi '
+                + 'kaupungiksi, ja se nimitti ensimmäisenä '
+                + 'eurooppalaisena kaupunkina erillisen virkamiehen '
+                + 'hoitamaan hellejaksoja. Kaupunkialueella on mitattu '
+                + 'yli 47 asteen lukemia, ja lännessä sijaitseva '
+                + 'Elefsina piti Euroopan lämpöennätystä, 48 astetta, '
+                + 'vuodesta 1977 vuoteen 2021. Elokuussa sataa viisi '
+                + 'millimetriä ja joulukuussa 64 — sade osuu talveen.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Muinaisjäännökset',
+                tahdet: 3,
+                selite: 'Kaivauksia on kirjaimellisesti metroasemien '
+                  + 'seinissä, ei vain museoissa.',
+              },
+              {
+                mita: 'Meri ja saaret',
+                tahdet: 3,
+                selite: 'Pireuksesta lähtee lauttoja saarille, ja '
+                  + 'satamaan pääsee metrolla keskustasta.',
+              },
+              {
+                mita: 'Kahvilat',
+                tahdet: 3,
+                selite: 'Terassilla istuminen on oma taiteenlajinsa, ja '
+                  + 'yhdellä frappélla saa istua tunnin.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 2,
+                selite: 'Vanhat korttelit ovat kävelyetäisyydellä, mutta '
+                  + 'mäkiä ja kuumuutta riittää.',
+              },
+              {
+                mita: 'Kesähelle',
+                tahdet: 1,
+                selite: 'Heinä- ja elokuussa päivälämpötila on '
+                  + 'kolmenkymmenen yläpuolella eikä sadetta tule.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Vesilasi kuuluu kahviin',
+                teksti: 'Kahvilassa tuodaan aina lasi vettä kahvin '
+                  + 'kanssa, eikä siitä veloiteta. Frappé tilataan '
+                  + 'makeusasteen mukaan, ei koon.',
+              },
+              {
+                otsikko: 'Sade tulee talvella',
+                teksti: 'Elokuussa vettä tulee viisi millimetriä ja '
+                  + 'joulukuussa 64. Kesäkuukaudet ovat käytännössä '
+                  + 'sateettomia.',
+              },
+              {
+                otsikko: 'Pireus on oma kuntansa',
+                teksti: 'Satamakaupunki ei ole Ateenan kaupunginosa '
+                  + 'vaan erillinen kunta, jossa asuu yli 168 000 '
+                  + 'ihmistä. Sinne pääsee metron ensimmäisellä '
+                  + 'linjalla.',
+              },
+              {
+                otsikko: 'Helle on suunniteltava',
+                teksti: 'Keskipäivällä kaupunki hidastuu. Kaivaukset ja '
+                  + 'kukkulat kannattaa käydä aamulla ja kaupunginosat '
+                  + 'illalla.',
+              },
+            ],
+            parasAika: 'Paras aika on huhti–toukokuu tai loka–marraskuu: '
+              + 'päivälämpötila on kahdenkymmenen ja kahdenkymmenenviiden '
+              + 'välillä eikä helle pakota varjoon. Heinä- ja elokuu '
+              + 'ovat kuumimmat ja kuivimmat. Talvi on leuto mutta '
+              + 'kostea, ja joulukuu on vuoden sateisin kuukausi.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '8–25 °C',
+                kuvaus: 'Lämpenee nopeasti ja sade vähenee kuukausi '
+                  + 'kuukaudelta: maaliskuussa viisi senttiä, '
+                  + 'toukokuussa enää kaksi. Toukokuussa päivä on jo '
+                  + 'kahdenkymmenenviiden asteen tienoilla.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '20–33 °C',
+                kuvaus: 'Kuuma ja käytännössä sateeton: heinäkuussa '
+                  + 'vettä tulee seitsemän millimetriä ja elokuussa '
+                  + 'viisi. Yötkään eivät juuri viilene.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '10–28 °C',
+                kuvaus: 'Syyskuu on vielä kesää, lokakuussa lämpötila '
+                  + 'laskee ja sateet palaavat. Marraskuussa vettä '
+                  + 'tulee jo viisi senttiä.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '5–13 °C',
+                kuvaus: 'Leuto mutta kostea. Joulukuu on vuoden sateisin '
+                  + 'kuukausi, yli kuusi senttiä. Pakkasta on harvoin, '
+                  + 'ja lumi on poikkeus.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'STASY — Ateenan metro',
+                url: 'https://www.stasy.gr/index.php?id=1&L=1',
+              },
+              {
+                nimi: 'Wikivoyage: Ateena',
+                url: 'https://fi.wikivoyage.org/wiki/Ateena',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Viisi siskoa museossa, kuudes Lontoossa',
@@ -6569,6 +6966,203 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Promenade and beach, Platja de la Barceloneta, Barcelona, 2015.jpg',
+          selite: 'Barcelonetan rantabulevardi aamu-usvassa: oikealla kulkee pitkä palmurivi kivetyn kävelytien vartta, vasemmalla aukeaa tyhjä hiekkaranta ja tyrskyävä meri. Kaukana rannan päässä häämöttää purjeenmuotoinen korkea hotelli.',
+          lahde: 'DimiTalen, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Barcelona kääntyi merta kohti vasta 1990-luvulla. Sitä '
+          + 'ennen rannan ja kaupungin välissä olivat tehtaat, radat ja '
+          + 'satama — ja vielä sitä ennen kaupunkia ympäröi muuri, jonka '
+          + 'sisään mahtui vain nykyinen Ciutat Vella eli vanhakaupunki.',
+        artikkeli: {
+          nimi: 'Matkailijan Barcelona',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka purki tehtaansa saadakseen rannan — ja '
+            + 'jonka metro käyttää kolmea eri raideleveyttä.',
+          nosto: 'Sant Jordin päivänä 23. huhtikuuta kaduilta myytiin '
+            + 'yhtenä vuonna puolitoista miljoonaa kirjaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'El Pratin lentokenttä on viidentoista kilometrin '
+                + 'päässä keskustasta lounaaseen. Vuonna 2025 sen kautta '
+                + 'kulki yli 57 miljoonaa matkustajaa, mikä on Espanjan '
+                + 'toiseksi eniten. Kentälle pääsee metron linjalla '
+                + 'yhdeksän, joka avattiin sinne helmikuussa 2016; se on '
+                + 'Euroopan pisin kokonaan kuljettajaton metrolinja, '
+                + 'lähes 48 kilometriä. Kentälle tarvitaan oma lippunsa, '
+                + 'eivätkä tavalliset kertaliput kelpaa siellä.',
+              kuva: { tiedosto: 'Barcelona metro Aeroport T1 L9.jpg', selite: 'Metroaseman laituri lentoterminaalin alla: laiturin reunassa on rivi lasisia turvaovia, ja niiden yläpuolella kulkee oranssi linjakaavio. Lattiassa on siniset odotusmerkinnät ja oranssi nuoli, ja katto jatkuu pitkälle kaarena.', lahde: 'Mariusmm, Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Vanha kaupunki ja suunnitelma, joka jäi kesken',
+              teksti: 'Ciutat Vella on kaupungin ensimmäinen piiri, ja '
+                + 'siihen kuuluu neljä kaupunginosaa: Barceloneta, '
+                + 'Goottilaiskortteli, Raval sekä Sant Pere ja la '
+                + 'Ribera. Sen halki kulkee La Rambla Plaça '
+                + 'Catalunyalta merelle. Ympärille rakennettu Eixample '
+                + 'ei koskaan valmistunut sellaisena kuin se '
+                + 'suunniteltiin: kortteleihin piti tulla vain kaksi tai '
+                + 'kolme rakennettua sivua puutarhan ympärille, mutta '
+                + 'lopulta rakennettiin kaikki neljä ja sisäpihatkin '
+                + 'täyteen.',
+              kuva: { tiedosto: 'Gothic Quarter, Barcelona, Spain - panoramio (21).jpg', selite: 'Vanhankaupungin kulmaus lähikuvassa: karkeaa hiekkakivimuuria, siihen kiinnitetty musta lyhty rautavarressa ja alapuolella kaareva holvin yläreuna. Oikealla on vanha valkoinen katukilpi mustin kirjaimin.', lahde: 'Tevfik Teker, Wikimedia Commons (CC BY 3.0)' },
+            },
+            {
+              otsikko: 'Huhtikuun 23. päivä: kirja ja ruusu',
+              teksti: 'Sant Jordi on Katalonian suojeluspyhimys, ja hänen '
+                + 'päivänään 23. huhtikuuta kaupungissa vaihdetaan '
+                + 'kirjoja ja punaisia ruusuja. Perinne juontaa '
+                + 'myöhäiskeskiajalle: aiemmin kirja annettiin miehelle '
+                + 'ja ruusu naiselle, nykyään lahjoja vaihdetaan '
+                + 'kummin päin tahansa. Päivä ei ole virallinen '
+                + 'vapaapäivä, mutta kadut täyttyvät myyntipöydistä. '
+                + 'Yhtenä vuonna niiltä myytiin puolitoista miljoonaa '
+                + 'kirjaa yhden päivän aikana.',
+            },
+            {
+              otsikko: 'Vuosi 1992 käänsi kaupungin merelle',
+              teksti: 'Barcelona valittiin olympiakaupungiksi lokakuussa '
+                + '1986, ja kisat pidettiin heinä–elokuussa 1992. '
+                + 'Barceloneta oli siihen asti kalastajien ja '
+                + 'satamatyöläisten kortteli, ja rannan ja kaupungin '
+                + 'välissä seisoivat tehtaat. Ne purettiin kisoja '
+                + 'varten, ja tilalle rakennettiin julkiset uimarannat '
+                + 'ja rantabulevardi. Samalta ajalta on Port '
+                + 'Olímpicin kalaveistos, jonka teräsverkkoa on '
+                + 'yli kolmenkymmenen metrin matkalla.',
+              kuva: { tiedosto: 'Escultura de Frank O. Gehry con forma de peixe. Porto olímpico de Barcelona B18.jpg', selite: 'Valtava kalanmuotoinen veistos kohoaa satamarakennusten yllä: pronssinvärinen teräsverkko kaartuu pyrstöksi, ja sitä kannattaa vaalea teräsristikko. Etualalla on palmu ja pensasaita, taustalla pilvetön sininen taivas.', lahde: 'Luis Miguel Bugallo Sánchez (Lmbuga), Wikimedia Commons (CC BY-SA 4.0)' },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Talvessa ei ole pakkasia: tammikuun ylin on '
+                + 'kaksitoista astetta. Kesä on lämmin ja verrattain '
+                + 'kuiva, heinäkuussa vettä tulee vain '
+                + 'kaksikymmentäneljä millimetriä. Sateisin kuukausi ei '
+                + 'ole talvella vaan lokakuussa, jolloin vettä saadaan '
+                + 'yli yhdeksänkymmentä millimetriä. Syyskuun lopussa '
+                + 'vietetään Mercè-juhlaa, joka on ollut kaupungin '
+                + 'virallinen vapaapäivä vuodesta 1871; ohjelmaa on '
+                + 'satoja tapahtumia ja kaikki on maksutonta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Rannat',
+                tahdet: 3,
+                selite: 'Uimarannat alkavat metropysäkin vierestä, ja '
+                  + 'vesi on lämmintä kesäkuusta lokakuulle.',
+              },
+              {
+                mita: 'Arkkitehtuuri',
+                tahdet: 3,
+                selite: 'Kokonaisia kortteleita 1900-luvun alun '
+                  + 'katalonialaista rakennustaidetta kävelymatkan '
+                  + 'päässä.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 3,
+                selite: 'Vanhankaupungin kujat ovat autottomia, ja '
+                  + 'Eixamplen ruudukossa ei voi eksyä.',
+              },
+              {
+                mita: 'Juhlat',
+                tahdet: 2,
+                selite: 'Mercè syyskuussa ja Sant Jordi huhtikuussa '
+                  + 'muuttavat koko kaupungin — muina aikoina ei '
+                  + 'vastaavaa.',
+              },
+              {
+                mita: 'Rauha',
+                tahdet: 1,
+                selite: 'Keskusta on Euroopan tiheimmin asuttuja, ja '
+                  + 'kesällä matkailijoita on paljon.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Lentokentälle oma lippu',
+                teksti: 'Metron kertaliput eivät kelpaa lentokentän '
+                  + 'asemille. Sinne tarvitaan erillinen lentokenttä'
+                  + 'lippu tai lippu, johon se sisältyy.',
+              },
+              {
+                otsikko: 'Lokakuu on sateisin',
+                teksti: 'Lokakuussa vettä tulee yli yhdeksänkymmentä '
+                  + 'millimetriä ja heinäkuussa vain kaksikymmentäneljä. '
+                  + 'Syksyn sateet tulevat usein rankkoina.',
+              },
+              {
+                otsikko: 'Kaksi kieltä',
+                teksti: 'Katalaani ja espanja ovat molemmat virallisia. '
+                  + 'Kylttien ja ruokalistojen kieli on usein '
+                  + 'katalaani.',
+              },
+              {
+                otsikko: 'Metro kulkee juhlaöinä',
+                teksti: 'Mercè-viikolla metro on auki koko yön. Muina '
+                  + 'aikoina yöliikenne on bussien varassa.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu tai syyskuu: meri on '
+              + 'jo tai vielä lämmin, päivälämpötila on '
+              + 'kahdenkymmenenviiden tienoilla eikä sadetta ole paljon. '
+              + 'Heinä- ja elokuu ovat kuumimmat ja täysimmät. Lokakuu '
+              + 'on vuoden sateisin kuukausi, ja talvi on leuto mutta '
+              + 'uimiseen liian viileä.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '7–21 °C',
+                kuvaus: 'Lämpenee tasaisesti eikä pakkasta ole. '
+                  + 'Huhtikuu on kevään sateisin kuukausi, noin viisi '
+                  + 'senttiä, ja toukokuussa päivä yltää jo '
+                  + 'kahteenkymmeneenyhteen asteeseen.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '18–27 °C',
+                kuvaus: 'Lämmin ja kostea, mutta ei yhtä kuuma kuin '
+                  + 'sisämaassa. Heinäkuu on vuoden kuivin kuukausi, '
+                  + 'elokuussa sateita on jo enemmän.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '9–24 °C',
+                kuvaus: 'Syyskuu on lämmin ja meri lämpimimmillään. '
+                  + 'Lokakuussa sataa yli yhdeksänkymmentä millimetriä '
+                  + '— vuoden sateisin kuukausi.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '5–13 °C',
+                kuvaus: 'Leuto: pakkasta ei ole normaaleissa lainkaan. '
+                  + 'Päivät ovat kahdentoista asteen tienoilla ja '
+                  + 'sadetta noin neljä senttiä kuukaudessa.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'TMB — metro ja bussit',
+                url: 'https://www.tmb.cat/en',
+              },
+              {
+                nimi: 'Wikivoyage: Barcelona',
+                url: 'https://fi.wikivoyage.org/wiki/Barcelona',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Sardanassa askeleet lasketaan',
