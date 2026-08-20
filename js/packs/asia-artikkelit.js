@@ -60,6 +60,16 @@
 // ja Tabriz, erässä R5 Riad, Doha, Kuwait ja Salalah ja erässä R9b
 // Jakutsk, Magadan, Kamtšatka ja Sahalin. Kappaleet ja boldit
 // vaativat leipätekstin renderöijän — ks. erän loppuraportti.
+// ja Tabriz, erässä R5 Riad, Doha, Kuwait ja Salalah ja erässä R9a
+// Jekaterinburg, Novosibirsk, Irkutsk ja Vladivostok. Kappaleet ja
+// boldit vaativat leipätekstin renderöijän — ks. erän loppuraportti.
+// ERÄ R9a (20.8.2026) EI TUONUT UUSIA VÄITTEITÄ: neljän Siperian ja
+// Uralin kaupungin introt on koottu kaupunkien omista, jo
+// tarkistetuista lehtiteksteistä (kulttuuri-kategoriat.js: nostot,
+// matkaoppaat ja niiden kappale-kentät; maakartat.js: kohdekarttojen
+// esittelyt; oma teksti-kenttä). Venäjä-linjaus: ei nykysotaa eikä
+// nykypolitiikkaa, ja Jekaterinburgin introssa ei ole vuoden 1918
+// aihepiiriä.
 //
 // ERÄ R4 (20.8.2026) SAI UUDET LUVUT en-Wikipedian raakateksteistä
 // (Sanaa, Aden, Muscat, Tabriz; haettu 20.8.2026): Sanaan asukasluku
@@ -1176,10 +1186,38 @@ export const ASIA_ARTIKKELIT = {
       + 'Unescon maailmanperintökohde ja Iranin tunnetuin '
       + 'muinaisjäännös.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on nyt lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkettä kolmessa
+   * kappaleessa ('\n\n') ja kaksi maltillista **lihavointia**. Faktat
+   * ovat kaupungin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Jekaterinburg;
+   * maakartat.js: kohdekartan esittely), ei uusista lähteistä.
+   * teksti-kenttä on ennallaan. Venäjä-linjaus: vuoden 1918
+   * aihepiiriä ei ole introssa.
+   */
   Jekaterinburg: {
-    intro: 'Jekaterinburg on Venäjän neljänneksi suurin kaupunki ja '
-      + 'Uralin pääkaupunki. Sen laidalla seisoo obeliski, jonka '
-      + 'toisella kyljellä lukee Eurooppa ja toisella Aasia.',
+    intro: 'Jekaterinburg on Uralin pääkaupunki ja Venäjän neljänneksi '
+      + 'väkirikkain kaupunki: vuoden 2021 väenlaskussa asukkaita oli '
+      + '1 544 376. Se on vuoriston itärinteellä 1 667 kilometriä '
+      + 'Moskovasta itään, kaksi tuntia pääkaupungin aikaa edellä. '
+      + 'Uralvuoret ovat tässä matalia ja loivia, ja juuri siksi tiet ja '
+      + 'radat Euroopan ja Aasian välillä vedettiin tästä; länsipuolella '
+      + 'seisoo obeliski maanosien rajalla.'
+      + '\n\n'
+      + 'Kaupunki alkoi padosta. Vasili Tatištšev valitsi vuonna 1721 '
+      + 'Iset-joen rannan, jossa oli sekä malmia että metsää, ja padon '
+      + 'voimalla käyvän rautaruukin vasarapaja koeajettiin '
+      + '**18. marraskuuta 1723** — siitä päivästä lasketaan kaupungin '
+      + 'ikä. Nimi tuli keisarinna Katariina I:ltä, ja ruukissa alettiin '
+      + '1725 lyödä kuparirahaa. Siperian valtatie avautui 1763 ja teki '
+      + 'kaupungista idän ja lännen kaupan solmukohdan — ikkunan Aasiaan.'
+      + '\n\n'
+      + 'Uralin malmit näkyvät yhä: museoissa on korukiviä ja Kaslin '
+      + 'ruukin valurautaa, ja **malakiitti** on se kivi, josta Pavel '
+      + 'Bažovin tarinat kertovat. Keskustassa on kolme aikaa '
+      + 'päällekkäin: klassismia, 1900-luvun alun eklektiikkaa ja '
+      + '1920–1930-luvun konstruktivismia.',
     teksti: 'Jekaterinburg on Uralvuorten itärinteellä, siinä missä '
       + 'Euroopan ja Aasian raja tavallisesti vedetään. Uralvuoret '
       + 'eivät ole korkeita — enimmäkseen metsäisiä kumpuja, joiden '
@@ -1200,10 +1238,36 @@ export const ASIA_ARTIKKELIT = {
       + 'tunnetuimman luona käydään ottamassa kuva jalat kahdessa '
       + 'maanosassa.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9a: sama linjaus kuin
+   * Jekaterinburgissa. Faktat ovat kaupungin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot, Historia-sivu ja
+   * Matkailijan Novosibirsk; maakartat.js).
+   */
   Novosibirsk: {
-    intro: 'Novosibirsk on Siperian suurin kaupunki, ja se on nuorempi '
-      + 'kuin useimmat siellä käyneet matkalaiset. Se syntyi vuonna '
-      + '1893, kun Siperian radan silta piti rakentaa Obin yli.',
+    intro: 'Novosibirsk on Siperian suurin kaupunki ja Moskovan ja '
+      + 'Pietarin jälkeen Venäjän kolmanneksi väkirikkain: vuoden 2021 '
+      + 'väenlaskussa asukkaita oli 1 633 595. Se on Länsi-Siperian '
+      + 'tasangolla Obin molemmin puolin, ja ilmasto on jyrkkä '
+      + 'mannerilmasto: tammikuun keskilämpö on seitsemäntoista '
+      + 'pakkasastetta, heinäkuun lähes kaksikymmentä lämpöastetta.'
+      + '\n\n'
+      + 'Suurten kaupunkien joukossa se on nuorin. Se syntyi **vuonna '
+      + '1893 rautatiesillan työmaalle**: Transsiperian radan piti '
+      + 'ylittää Ob, ja Nikolai Garin-Mihailovski valitsi kohdan, jossa '
+      + 'molemmat rannat ja uoma ovat kalliota. '
+      + 'Silta valmistui 1897. Nimi oli vuodesta 1895 '
+      + 'Novonikolajevsk ja nykyinen vuodesta 1926; miljoona asukasta '
+      + 'täyttyi 2. syyskuuta 1962, alle seitsemässäkymmenessä vuodessa '
+      + 'perustamisesta.'
+      + '\n\n'
+      + 'Vanhaa keskustaa ei ole: ydin on 1900-luvun alun ja '
+      + '1930-luvun rakentama, ja sen selkäranka on Punainen valtakatu. '
+      + 'Tunnetuin talo on **oopperatalo**, Venäjän suurin, jonka kupoli '
+      + 'on kuusikymmentä metriä leveä. Kaupungin eteläpuolen metsään '
+      + 'perustettiin 1957 '
+      + 'Akademgorodok, oma tiedekaupunkinsa, jossa asui parhaimmillaan '
+      + '65 000 tutkijaa perheineen.',
     teksti: 'Novosibirsk on Länsi-Siperian tasangolla Obin varrella. '
       + 'Ilmasto on jyrkkä mannerilmasto: talvella pakkanen käy '
       + 'kolmessakymmenessä asteessa, kesällä lämpötila voi nousta '
@@ -1222,10 +1286,36 @@ export const ASIA_ARTIKKELIT = {
       + 'sodan aikana vuonna 1945. Kaupunki on Siperian liikenteen ja '
       + 'kaupan keskus, ja Siperian rata kulkee yhä sen läpi.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9a: sama linjaus kuin
+   * Jekaterinburgissa. Faktat ovat kaupungin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: johdannot, nostot ja
+   * Matkailijan Irkutsk; maakartat.js).
+   */
   Irkutsk: {
-    intro: 'Irkutsk on Itä-Siperian vanha kauppakaupunki Baikalin '
-      + 'lähellä. Baikal on maailman syvin järvi, ja siinä on noin '
-      + 'viidesosa maailman jäätymättömästä pintamakeasta vedestä.',
+    intro: 'Irkutsk on Itä-Siperian vanha kauppakaupunki Angaran '
+      + 'mutkassa: vuoden 2010 väenlaskussa asukkaita oli 587 891. '
+      + 'Kaupunki alkoi verotusasemasta: Ivan Pohabov rakensi 1652 '
+      + 'talvimajan turkiskauppaa ja jasak-veroa varten, ja Jakov '
+      + 'Pohabov pystytti 1661 lähelle paalulinnoituksen. '
+      + 'Kaupunkioikeudet tulivat 1686.'
+      + '\n\n'
+      + 'Vaurauden toi kauppa. Siperian valtatie Moskovasta valmistui '
+      + '1760, ja Kjahtan rajakaupan myötä Kiinan tee ja silkki tulivat '
+      + 'täällä laajalti saataville; vuonna 1821 Irkutskista tuli '
+      + 'Itä-Siperian kenraalikuvernöörin istuin. **Dekabristikapinan** '
+      + 'jälkeen kaupunkiin karkotettiin upseereita ja aatelisia, ja '
+      + 'vuosisadan loppuun mennessä joka kolmas asukas oli karkotettu — '
+      + 'heidän jälkeensä jäivät koulut, kirjastot ja koristeelliset '
+      + 'puutalot.'
+      + '\n\n'
+      + 'Heinäkuussa 1879 kaksi tulipaloa tuhosi puolet kaupungista, ja '
+      + 'sen jälkeen puusta rakentaminen kiellettiin joen '
+      + 'puolella: rannassa on kivitaloja ja palorajan takana puinen '
+      + 'Irkutsk. Kaupunkia alettiin kutsua Siperian Pariisiksi, ja '
+      + 'ensimmäinen juna saapui elokuussa 1898. Kaupungista 72 '
+      + 'kilometriä ylävirtaan on **Baikal**, maailman syvin ja vanhin '
+      + 'järvi.',
     teksti: 'Irkutsk on Angara-joen varrella noin 70 kilometrin päässä '
       + 'Baikaljärvestä. Kaupunki perustettiin 1661 turkiskaupan '
       + 'tukikohdaksi, ja siitä tuli Itä-Siperian hallinnollinen '
@@ -1434,10 +1524,37 @@ export const ASIA_ARTIKKELIT = {
       + 'ja niiden hyödyntäminen on saaren tärkein elinkeino '
       + 'kalastuksen ohella.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9a: sama linjaus kuin
+   * Jekaterinburgissa. Faktat ovat kaupungin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Vladivostok; maakartat.js; nahtavyysjutut.js). Suljetun kaupungin
+   * vuodet 1952–1992 kerrotaan neutraalina historiana.
+   */
   Vladivostok: {
     intro: 'Vladivostok on Venäjän tärkein Tyynenmeren satama ja '
-      + 'Siperian radan itäinen pääteasema. Asemalla oleva '
-      + 'kilometripylväs kertoo matkan Moskovaan: 9 288 kilometriä.',
+      + 'Transsiperian radan itäinen pääteasema: laiturin päässä seisoo '
+      + 'kilometripylväs, jossa lukee 9288. Kaupunki on '
+      + 'Muravjov-Amurskin niemimaan eteläkärjessä kahden veden välissä — '
+      + 'lännessä Amurinlahti, idässä Kultaisen sarven satamalahti — ja '
+      + 'muuten se kiipeää kukkuloille. Se on Kaukoidän liittopiirin '
+      + 'pääkaupunki.'
+      + '\n\n'
+      + 'Kenraalikuvernööri Nikolai Muravjov-Amurski nimesi poukaman '
+      + 'vuonna 1859 Kultaiseksi sarveksi Konstantinopolin mukaan, ja '
+      + 'nimeksi vakiintui **Vladivostok, idän '
+      + 'hallitsija**. Sotilasosasto jätettiin rantaan kesäkuussa 1860, '
+      + 'ja 1871 tänne siirrettiin Siperian laivasto-osaston '
+      + 'tukikohta. Kiinalaiset olivat kutsuneet poukamaa '
+      + 'merimakkaralahdeksi, ja vuosisadan alussa jopa puolet '
+      + 'asukkaista oli aasialaisia.'
+      + '\n\n'
+      + 'Neuvostoaika käänsi oven kiinni: vuodesta 1952 vuoteen 1992 '
+      + 'kaupunki oli suljettu, eikä ulkomaalaisilla ollut sinne asiaa. '
+      + 'Vuonna 2012 valmistui kaksi jättisiltaa, joista **Russkin '
+      + 'sillan** 1 104 metrin jänneväli on vinoköysisiltojen '
+      + 'maailmanlistan kärkeä. Katukuvassa eurooppalainen kivikaupunki '
+      + 'ja Aasian naapurit sekoittuvat.',
     teksti: 'Vladivostok on kukkuloilla Kultaisen sarven lahden '
       + 'ympärillä, lähellä Kiinan ja Korean rajaa. Lahti on syvä ja '
       + 'suojaisa, ja se jäätyy talvella vain lyhyeksi aikaa. '

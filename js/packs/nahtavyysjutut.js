@@ -20621,6 +20621,12 @@ export const NAHTAVYYSJUTUT = {
    * museokohteita, ja niistä kerrotaan kuten muiden lautojen
    * linnoituksista ja sotamuseoista — ilman nykyaikaa. Kuvissa ei
    * ole nykysotilaskohteita.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Fablen eräohje R9a, Raamattu "TEKSTIEN
+   * PAINOPISTE"): kohteiden kuvatekstit tiivistettiin yhteen
+   * virkkeeseen. Juttutekstit, kuvatiedostot ja lähderivit ovat
+   * ennallaan. Sama remontti tehtiin tässä erässä myös
+   * Jekaterinburgin, Novosibirskin ja Irkutskin kohdejutuille.
    */
   vladivostok: {
     'Pokrovskin puisto': {
@@ -20649,10 +20655,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Владивосток, Покровский парк.jpg',
-          selite: 'Pokrovskin puiston pääkäytävä marraskuussa. '
-            + 'Lehdettömien puiden välissä on lyhtyrivi ja kivipenkkejä, '
-            + 'käytävällä kävelee kaksi ihmistä kaukana, ja puiden takaa '
-            + 'häämöttää katedraalin siluetti.',
+          selite: 'Pokrovskin puiston pääkäytävä marraskuussa: '
+            + 'lehdettömien puiden välissä on lyhtyrivi ja kivipenkkejä, '
+            + 'ja puiden takaa häämöttää katedraalin siluetti.',
           lahde: 'A. C. Tatarinov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20686,10 +20691,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Безымянная береговая батарея.jpg',
-          selite: 'Bezymjannajan patterin valli museon pihalla. Vanha '
-            + 'rannikkotykki seisoo pyöreällä betonikorokkeella, kaartuvan '
-            + 'rintavarustuksen kyljessä on holvattu teräsovi, ja taustalla '
-            + 'näkyvät Amurinlahti ja keskustan tornitalot.',
+          selite: 'Bezymjannajan patterin valli museon pihalla: vanha '
+            + 'rannikkotykki seisoo pyöreällä betonikorokkeella, ja '
+            + 'taustalla näkyvät Amurinlahti ja keskustan tornitalot.',
           lahde: 'Rost.galis, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20717,10 +20721,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "A view from Eagle's Nest (21466232344).jpg",
-          selite: 'Kotkanpesän paljas kallioinen laki. Rinteen '
+          selite: 'Kotkanpesän paljas kallioinen laki, jonne rinteen '
             + 'kerrostalot nousevat lähes huipulle asti, vasemmalla '
-            + 'näkyvät Kultaisen sarven sillan pylonit ja takana '
-            + 'Amurinlahti vuorineen.',
+            + 'Kultaisen sarven sillan pylonit ja takana Amurinlahti '
+            + 'vuorineen.',
           lahde: 'Raita Futo from Tokyo, Japan, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
@@ -20752,9 +20756,9 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Vladivostok Funicular (October 2024)-0 5.jpg',
           selite: 'Funikulaarin molemmat vaunut rinteessä ala-asemalta '
-            + 'nähtynä: sininen vaunu laskeutuu yläaseman kaariportista, '
-            + 'punainen odottaa kohtauspaikan alapuolella. Kukkulan '
-            + 'huipulla kohoaa televisiomasto.',
+            + 'nähtynä: sininen laskeutuu yläaseman kaariportista ja '
+            + 'punainen odottaa kohtauspaikan alapuolella televisiomastoa '
+            + 'kantavan kukkulan juurella.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20784,9 +20788,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vladivostok September Night. 2022. Slava Ivanov 02.jpg',
-          selite: 'Museon kulmatalo iltavalossa. Vaaleanpunaiseksi '
+          selite: 'Museon kulmatalo iltavalossa: vaaleanpunaiseksi '
             + 'rapattu jugendtalo kaartuu kadunkulman ympäri, kulmassa '
-            + 'on pyöreä kupolitorni ja katutasossa valaistut '
+            + 'pyöreä kupolitorni ja katutasossa valaistut '
             + 'näyteikkunat.',
           lahde: 'Slavagallery, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -20820,9 +20824,9 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Vladivostok. GUM Department Store P8070703 2200.jpg',
           selite: 'Kunst & Albersin vuoden 1907 tavaratalo '
-            + 'Svetlanskajalla. Vaalean jugendjulkisivun katolla on '
-            + 'vihreä torni ja koristepäätyjä, katutasossa kauppojen '
-            + 'ovia — talossa toimii yhä tavaratalo GUM.',
+            + 'Svetlanskajalla, jonka vaalean jugendjulkisivun katolla on '
+            + 'vihreä torni ja koristepäätyjä — talossa toimii yhä '
+            + 'tavaratalo GUM.',
           lahde: 'Alexxx1979, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20854,10 +20858,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '053 - Wladiwostok 2015 (24130179580).jpg',
-          selite: 'S-56 kuivalla maalla Korabelnajan rantakadulla. '
-            + 'Vihreäpohjainen, harmaakylkinen vene lepää koko '
-            + 'pituudeltaan jalustalla, kannella on tykki ja tornissa '
-            + 'tunnus C-56. Takana kohoaa muistomerkkiseinä.',
+          selite: 'S-56 kuivalla maalla Korabelnajan rantakadulla: '
+            + 'vihreäpohjainen, harmaakylkinen vene lepää koko '
+            + 'pituudeltaan jalustalla, kannella tykki ja tornissa '
+            + 'tunnus C-56.',
           lahde: 'Uwe Brodrecht, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -20890,8 +20894,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vladivostok railway station (October 2024)-0 6.jpg',
-          selite: 'Rautatieasema aukiolta nähtynä lokakuussa. '
-            + 'Vanhavenäläinen asematalo koristeharjoineen on kuvan '
+          selite: 'Rautatieasema aukiolta nähtynä lokakuussa: '
+            + 'vanhavenäläinen asematalo koristeharjoineen on kuvan '
             + 'keskellä, ja sen takana kohoavat Kultaisen sarven sillan '
             + 'valkoiset pylonit ja satamanosturi.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
@@ -20924,10 +20928,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Золотой мост, июль 2013.jpg',
-          selite: 'Kultaisen sarven silta ylhäältä nähtynä. '
+          selite: 'Kultaisen sarven silta ylhäältä nähtynä: '
             + 'V-muotoiset pylonit kannattavat viuhkoina leviäviä '
-            + 'vaijereita, kuusikaistainen ajorata kaartaa rantaan, ja '
-            + 'lahden takana on Tšurkinin ranta laitureineen.',
+            + 'vaijereita, ja kuusikaistainen ajorata kaartaa rantaan '
+            + 'vastapäätä Tšurkinin laitureita.',
           lahde: 'Даниил Рыжков (Daniil Ryzhkov), Wikimedia Commons '
             + '(CC BY-SA 3.0)',
         },
@@ -20954,6 +20958,9 @@ export const NAHTAVYYSJUTUT = {
    * puhdasta nykypolitiikkaa. Kharitonovin oma tuomio vuodelta 1837
    * on mukana yhtenä lauseena ilman yksityiskohtia, koska ilman sitä
    * talon autioituminen jäisi selittämättä.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (eräohje R9a): kuvatekstit tiivistettiin
+   * yhteen virkkeeseen; juttutekstit ja lähderivit ennallaan.
    */
   jekaterinburg: {
     'Vanha rautatieasema': {
@@ -20986,12 +20993,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old Train Station in Yekaterinburg (September 2022) - 1.jpg',
-          selite: 'Vanha asema ilmasta. Valkoinen kaariaukkojen '
-            + 'rivittämä rakennus on katettu puna-valkoruudullisella '
-            + 'peltikatolla, jonka harjalla on koristeellisia päätyjä. '
-            + 'Edustalla on kivetty aukio veistoksineen ja '
-            + 'lyhtypylväineen, ja takana levittäytyy ratapiha, jolla '
-            + 'seisoo rivi punaisia ja harmaita matkustajavaunuja.',
+          selite: 'Vanha asema ilmasta: valkoista kaariaukkojen rivittämää '
+            + 'rakennusta kattaa puna-valkoruudullinen peltikatto '
+            + 'koristepäätyineen, ja edustan kivetyllä aukiolla on '
+            + 'veistoksia ja lyhtypylväitä ratapihan reunalla.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21026,13 +21031,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '1910Усадьба Расторгуевых-Харитоновых.jpg',
-          selite: 'Kartano Sergei Prokudin-Gorskin värivalokuvassa noin '
-            + 'vuodelta 1910. Valkoinen päärakennus kohoaa aukion '
-            + 'laidalla, sen keskellä on korinttilainen pylväikkö '
-            + 'kolmiopäätyineen ja alla kaariholvinen käytävä. Oikealla '
-            + 'jatkuvat matalammat siivet, joiden päällä on kaksi tummaa '
-            + 'kupolia. Kolmesta erillisestä otoksesta koottu kuva '
-            + 'reunustaa esineet ohuilla väriviiruilla.',
+          selite: 'Kartano Sergei Prokudin-Gorskin noin vuoden 1910 '
+            + 'värivalokuvassa, jossa valkoinen päärakennus korinttilaisine '
+            + 'pylväikköineen kohoaa aukion laidalla ja kolmen otoksen '
+            + 'yhdistäminen jättää esineiden reunoihin ohuita väriviiruja.',
           lahde: 'Прокудин-Горский, Wikimedia Commons (PD)',
         },
       ],
@@ -21069,12 +21071,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ural State University (September 2022) - 2.jpg',
-          selite: 'Yliopiston päärakennus ilmasta. Pitkän vaalean talon '
+          selite: 'Yliopiston päärakennus ilmasta: pitkän vaalean talon '
             + 'katto on kirkkaan vihreä, ja keskellä nousee pylväikkö, '
             + 'jonka otsalautaan on kirjoitettu yliopiston nimi '
-            + 'kyrillisin kirjaimin. Julkisivun edessä on rivi kuusia ja '
-            + 'kivetty aukio; takana kohoaa nykykaupunki '
-            + 'lasitornitaloineen.',
+            + 'kyrillisin kirjaimin.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21112,11 +21112,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Monetki Works complex (May 2026).jpg',
-          selite: 'Rahapajan portit historiallisen aukion laidalla. '
-            + 'Kaksi valkoista porttipaviljonkia, joissa on pylväät ja '
-            + 'vihreä kolmiopääty, ja niiden välissä musta '
-            + 'valurauta-aita kaksoisportteineen. Takana kohoaa '
-            + 'myöhemmän ajan kerrostalo.',
+          selite: 'Rahapajan portit historiallisen aukion laidalla: kaksi '
+            + 'valkoista porttipaviljonkia pylväineen ja vihreine '
+            + 'kolmiopäätyineen ja niiden välissä musta valurauta-aita '
+            + 'kaksoisportteineen.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21153,10 +21152,10 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Николай Чудотворец Первая половина XVIII века Невьянск ЕМИИ.jpg',
           selite: 'Nevjanskilainen Nikolaos-ikoni 1700-luvun '
-            + 'alkupuolelta. Kultapohjalle on maalattu piispa, jolla on '
-            + 'harmaa parta ja ristikuvioinen viitta; kädessä on avattu '
-            + 'kirja kirkkoslaavinkielistä tekstiä. Ylänurkissa leijuvat '
-            + 'pilvien päällä pienet Kristuksen ja Jumalanäidin hahmot.',
+            + 'alkupuolelta: kultapohjalle on maalattu harmaapartainen '
+            + 'piispa ristikuvioisessa viitassa avattu kirja kädessään, '
+            + 'ja ylänurkissa leijuvat pienet Kristuksen ja Jumalanäidin '
+            + 'hahmot.',
           lahde: 'IvanA, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21189,12 +21188,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Храм Большой Златоуст. Екатеринбург, июнь 2013 г..jpg',
-          selite: 'Suuri Zlatoust myrskypilvien alla. Valkoinen '
+          selite: 'Suuri Zlatoust myrskypilvien alla: valkoinen '
             + 'kellotorni nousee kolmessa kerroksessa kaariaukkoineen ja '
             + 'kaartuvine räystäineen, ja sen huipulla on kullattu '
-            + 'sipulikupoli; alempana kohoaa neljä pienempää kullattua '
-            + 'kupolia. Kadun yllä risteilevät sähkölangat, ja edessä '
-            + 'ajaa autoja.',
+            + 'sipulikupoli neljän pienemmän ympäröimänä.',
           lahde: 'Tyyytty, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -21227,12 +21224,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Trinity Cathedral (Yekaterinburg) 25-4-10.jpg',
-          selite: 'Kolminaisuuden katedraali ylhäältä keväällä. '
-            + 'Vaaleankeltaisen kirkon keskellä on suuri kullattu '
+          selite: 'Kolminaisuuden katedraali ylhäältä keväällä: '
+            + 'vaaleankeltaisen kirkon keskellä on suuri kullattu '
             + 'kupoli, edessä valkopylväinen portiikki ja sivulla '
-            + 'erillinen kellotorni omine kullattuine kupoleineen. '
-            + 'Ympärillä on aukio ja aita, ja kauempana kohoaa '
-            + 'kerrostaloja ja nostureita.',
+            + 'erillinen kellotorni omine kullattuine kupoleineen.',
           lahde: 'Const st, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -21257,6 +21252,9 @@ export const NAHTAVYYSJUTUT = {
    * laajasti, sekä NKVD:n tutkintavankila. Kaupungin kauppatalon
    * kohdalla se tarkoittaa, että talon 1917 jälkeinen käyttö
    * mainitaan neutraalisti hallintorakennuksena ilman kannanottoa.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (eräohje R9a): kuvatekstit tiivistettiin
+   * yhteen virkkeeseen; juttutekstit ja lähderivit ennallaan.
    */
   novosibirsk: {
     'Novosibirsk-Glavnyi': {
@@ -21287,12 +21285,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Novosibirsk railway station and square.jpg',
-          selite: 'Asema ja sen aukio talvella ylhäältä. Vaaleanvihreän '
+          selite: 'Asema ja sen aukio talvella ylhäältä: vaaleanvihreän '
             + 'asemarakennuksen keskellä on korkea kaariaukko ja '
-            + 'molemmin puolin pylväiköin jäsennetyt siivet; vasemmalla '
-            + 'on matalampi asemahalli kellotorneineen. Lumen peittämällä '
-            + 'aukiolla seisoo rivi keltaisia pikkubusseja, ja ihmiset '
-            + 'näkyvät pieninä pisteinä.',
+            + 'molemmin puolin pylväiköin jäsennetyt siivet, ja lumen '
+            + 'peittämällä aukiolla seisoo rivi keltaisia pikkubusseja.',
           lahde: 'Андрей Романенко, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -21326,12 +21322,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'City Trade House in Novosibirsk (May 2025) - 0.jpg',
-          selite: 'Kauppatalo Punaisen valtakadun varrella. Pitkän '
+          selite: 'Kauppatalo Punaisen valtakadun varrella: pitkän '
             + 'julkisivun punatiiliset pinnat vuorottelevat valkoisen '
             + 'rappauksen kanssa, alakerrassa on leveitä kaari-ikkunoita, '
             + 'ja katolla on rivi vihreitä kupoleita ja kaartuvia '
-            + 'päätykolmioita. Kadun toisella puolella kulkee leveä '
-            + 'ajorata.',
+            + 'päätykolmioita.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21363,12 +21358,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Novosibirsk KrasnyPr5 012 7309.jpg',
-          selite: 'Taidemuseon talo suoraan edestä. Harmaaksi rapatun '
+          selite: 'Taidemuseon talo suoraan edestä: harmaaksi rapatun '
             + 'julkisivun keskellä on korkea ikkunarivi ja sen alla '
             + 'kaksipylväinen portaali, jonka yllä lukee kyrillisin '
-            + 'kirjaimin taidemuseo. Katon reunalla seisoo kaksi '
-            + 'valkoista veistosta ja niiden välissä on matala kupoli. '
-            + 'Oikeassa reunassa on iso lehtipuu.',
+            + 'kirjaimin taidemuseo, ja katon reunalla kaksi valkoista '
+            + 'veistosta matalan kupolin kummallakin puolen.',
           lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21401,11 +21395,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Стоквартирный дом и памятник его автору - архитектору Крячкову.jpg',
-          selite: 'Satohuoneiston talo talvella. Kahdeksankerroksisen '
-            + 'rakennuksen keskiosa on vaalea ja pystyjuovainen, '
-            + 'sivusiivet tummanpunaiset parvekkeineen. Edustan aukiolla '
-            + 'seisoo tumma pronssipatsas punaisella graniittijalustalla, '
-            + 'ja ympärillä on korkeita lumivalleja.',
+          selite: 'Satohuoneiston talo talvella: kahdeksankerroksisen '
+            + 'rakennuksen keskiosa on vaalea ja pystyjuovainen ja '
+            + 'sivusiivet tummanpunaiset parvekkeineen, ja edustan '
+            + 'aukiolla seisoo arkkitehdin tumma pronssipatsas '
+            + 'punaisella graniittijalustalla.',
           lahde: 'Елена Горланова, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21436,11 +21430,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Saint Alexander Nevsky Church in Novosibirsk (May 2025) - 0.jpg',
-          selite: 'Aleksanteri Nevskin katedraali keväisenä päivänä. '
-            + 'Punatiilisen kirkon päällä lepää suuri kullattu kupoli, '
-            + 'jota kiertää kaari-ikkunoiden rivi. Etualalla on '
-            + 'matalampi sivukappeli omine kullattuine kupoleineen ja '
-            + 'tiilinen kaarikatos. Taivas on syvänsininen.',
+          selite: 'Aleksanteri Nevskin katedraali keväisenä päivänä: '
+            + 'punatiilisen kirkon päällä lepää suuri kullattu kupoli '
+            + 'kaari-ikkunoiden rivin ympäröimänä, ja etualalla on '
+            + 'matalampi sivukappeli omine kullattuine kupoleineen.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21472,6 +21465,9 @@ export const NAHTAVYYSJUTUT = {
    * joita kaupungin artikkeli käsittelee. Vuoden 1866 puolalaisten
    * kapinallisten teloitus on jätetty pois yksityiskohtana; Puolan
    * karkotettujen läsnäolo kerrotaan kirkon kautta.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (eräohje R9a): kuvatekstit tiivistettiin
+   * yhteen virkkeeseen; juttutekstit ja lähderivit ennallaan.
    */
   irkutsk: {
     'Znamenskin luostari': {
@@ -21505,12 +21501,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'RU Irkutsk Convent of the Theotokos of the Sign 0001.jpg',
-          selite: 'Luostarin portti. Valkoisen porttirakennuksen katto '
-            + 'on vihreä teltta, jonka huipulla on sininen sipulikupoli, '
-            + 'ja holvikaaren yläpuolella on soikea ikoni. Takana kohoaa '
-            + 'kellotorni vihreine kupoleineen ja kullattuine '
-            + 'huippuineen, oikealla kirkon siniset kupolit. Portin '
-            + 'edessä on kuusia.',
+          selite: 'Luostarin portti: valkoisen porttirakennuksen vihreän '
+            + 'telttakaton huipulla on sininen sipulikupoli ja '
+            + 'holvikaaren yläpuolella soikea ikoni, ja takana kohoavat '
+            + 'kellotorni kullattuine huippuineen ja kirkon siniset '
+            + 'kupolit.',
           lahde: 'Alexander Klink, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -21544,12 +21539,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Irkutsk - church LCCN2004707528.jpg',
-          selite: 'Kirovin aukio talvella vanhassa valokuvassa. Lumisen aukion '
-            + 'takana seisoo valkoinen kirkko kellotorneineen, joiden '
-            + 'huipuilla on tummat kupolit, ja vasemmalla kohoaa '
-            + 'telttakattoinen holvikaariportti kaiverrettuine '
-            + 'kirjoituksineen. Aukion poikki ajaa hevonen reen kanssa, '
-            + 'ja oikealla kulkee koristeellinen valurauta-aita.',
+          selite: 'Kirovin aukio talvella vanhassa valokuvassa: lumisen '
+            + 'aukion takana seisoo valkoinen kirkko tummakupolisine '
+            + 'kellotorneineen, vasemmalla kohoaa telttakattoinen '
+            + 'holvikaariportti, ja aukion poikki ajaa hevonen reen '
+            + 'kanssa.',
           lahde: 'William Henry Jackson, Wikimedia Commons (PD)',
         },
       ],
@@ -21584,12 +21578,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kościół Wniebowzięcia Najświętszej Maryi Panny w Irkucku.JPG',
-          selite: 'Puolalainen kirkko kesällä. Oranssinpunaisesta '
-            + 'tiilestä muurattu kirkko kohoaa yhtenä tornina, jonka '
-            + 'huipussa on tummanpunainen jyrkkä katto ja risti. '
-            + 'Julkisivun keskellä on pyöreä ruusuikkuna ja sen alla '
-            + 'suippokaarinen valkoinen portaali. Molemmin puolin '
-            + 'kasvaa korkeita lehtipuita.',
+          selite: 'Puolalainen kirkko kesällä: oranssinpunaisesta '
+            + 'tiilestä muurattu kirkko kohoaa yhtenä jyrkkäkattoisena '
+            + 'tornina, ja julkisivun keskellä on pyöreä ruusuikkuna ja '
+            + 'sen alla suippokaarinen valkoinen portaali.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21621,11 +21613,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Иркутский железнодорожный вокзал.jpg',
-          selite: 'Irkutskin asema kadun puolelta. Vaaleankeltaisen ja '
+          selite: 'Irkutskin asema kadun puolelta: vaaleankeltaisen ja '
             + 'vihreän julkisivun alaosassa on tiheä rivi kaari-ikkunoita, '
-            + 'ja katolla seisovat suurin kyrillisin kirjaimin kaupungin '
-            + 'nimi ja kulmassa kupolinen torni. Aukiolla on autoja ja '
-            + 'penkkejä, ja edustalla ajaa pyöräilijä.',
+            + 'ja katolla seisovat kaupungin nimi suurin kyrillisin '
+            + 'kirjaimin ja kulmassa kupolinen torni.',
           lahde: 'Valentina Dyptan, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21665,11 +21656,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Cerkiew Podwyższenia Krzyża Pańskiego w Irkucku 01.JPG',
-          selite: 'Kirkko kesäisen puuston yli. Valkoisia seiniä kiertää '
-            + 'tiheä punaruskea koristelistoitus, katot ovat '
-            + 'tummanvihreitä telttoja, ja niiden huipuilla on sinisiä '
-            + 'sipulikupoleita kultatähdin ja kullatuin ristein. Taivas '
-            + 'on kirkkaan sininen.',
+          selite: 'Kirkko kesäisen puuston yli: valkoisia seiniä kiertää '
+            + 'tiheä punaruskea koristelistoitus, ja tummanvihreiden '
+            + 'telttakattojen huipuilla on sinisiä sipulikupoleita '
+            + 'kultatähdin ja kullatuin ristein.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21704,11 +21694,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '130-й квартал.jpg',
-          selite: '130. kortteli kadun toiselta puolelta. Rivissä '
-            + 'seisoo kaksikerroksisia puu- ja rappaustaloja, joiden '
-            + 'ikkunanpielet on maalattu vaaleiksi ja katot punaisiksi '
-            + 'ja vihreiksi. Keskellä on tummanruskea hirsitalo '
-            + 'valkoisin listoin. Etualalla kulkee leveä katu.',
+          selite: '130. kortteli kadun toiselta puolelta: rivissä seisoo '
+            + 'kaksikerroksisia puu- ja rappaustaloja vaalein '
+            + 'ikkunanpielin ja punaisin ja vihrein katoin, keskellä '
+            + 'tummanruskea hirsitalo valkoisin listoin.',
           lahde: 'Putnik.m54, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -21746,12 +21735,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Angara Museum ship in Irkutsk (September 2025) - 0.jpg',
-          selite: 'Jäänmurtaja Angara laiturissaan. Mustan rungon '
-            + 'vesirajassa kulkee punainen juova, ja keulassa lukee '
-            + 'kyrillisin kirjaimin laivan nimi. Valkoisen '
-            + 'kansirakennuksen takaa nousee kaksi vaaleaa savupiippua '
-            + 'punavalkoisin renkain. Laituria reunustaa musta '
-            + 'valurauta-aita.',
+          selite: 'Jäänmurtaja Angara laiturissaan: mustan rungon '
+            + 'vesirajassa kulkee punainen juova, keulassa lukee '
+            + 'kyrillisin kirjaimin laivan nimi, ja valkoisen '
+            + 'kansirakennuksen takaa nousee kaksi punavalkorenkaista '
+            + 'savupiippua.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],

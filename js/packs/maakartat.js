@@ -6474,36 +6474,32 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/vladivostok-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.13, etela: 43.1035, lansi: 131.864, ita: 131.912 },
-    esittely: 'Vladivostok perustettiin 1860 sotilasvartioksi lahdelle, '
-      + 'jonka kenraalikuvernööri Muravjov-Amurski oli nimennyt '
-      + 'Kultaiseksi sarveksi Konstantinopolin mukaan, ja nimi lupasi '
-      + 'suoraan mihin satama tähtäsi: se tarkoittaa idän hallitsijaa. '
-      + 'Vuonna 1871 tänne siirrettiin Siperian laivasto-osaston '
-      + 'tukikohta Nikolajevsk-na-Amuresta, ja kun Transsiperian radan '
-      + 'itäpää valmistui, kaupungista tuli Venäjän tärkein '
-      + 'Tyynenmeren satama. Kiinalaiset olivat kutsuneet poukamaa '
-      + 'merimakkaralahdeksi, Haishenwaiksi, ja vuosisadan alussa jopa '
-      + 'puolet asukkaista oli aasialaisia. Neuvostoaika käänsi oven '
-      + 'kiinni: vuodesta 1952 vuoteen 1992 Vladivostok oli suljettu '
-      + 'kaupunki, johon ulkomaalaisilla ei ollut asiaa. Nykyään se on '
-      + 'Kaukoidän liittopiirin pääkaupunki ja Habarovskin jälkeen '
-      + 'alueen toiseksi suurin kaupunki, jonka katukuvassa Aasian '
-      + 'naapurit ja eurooppalainen kivikaupunki sekoittuvat.'
-      + '\n\n'
-      + 'Kartalla kaupunki on niemi kahden veden välissä: vasemmalla '
-      + 'aukeaa Amurinlahti ja oikeasta alakulmasta työntyy Kultaisen '
-      + 'sarven kapea satamalahti laitureineen. Niiden välissä on '
-      + 'ruutukaava, jonka kaksi pääkatua erottuvat heti — '
-      + 'Svetlanskaja seuraa Kultaisen sarven rantaa ja Aleutskaja '
-      + 'laskee kohtisuoraan sitä vastaan, ja rautatieasema on niiden '
-      + 'risteyksessä sataman vieressä. Lahden yli hyppää vuoden 2012 '
-      + 'vinoköysisilta, ja sen vasemmalla puolen rinne nousee '
-      + 'Kotkanpesän kukkulalle, jonka kylkeen funikulaari on '
-      + 'piirretty lyhyenä suorana viivana. Luoteessa katuverkko '
-      + 'harvenee Sportivnajan rannan ja linnoitusmuseon ympärillä. '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan rantaviivojen, ruutukaavan ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Vladivostokin niemenkärki Pokrovskin '
+      + 'puistosta Kultaisen sarven sillalle. Kaupunki perustettiin 1860 '
+      + 'sotilasvartioksi lahdelle, jonka kenraalikuvernööri '
+      + 'Muravjov-Amurski oli nimennyt Kultaiseksi sarveksi '
+      + 'Konstantinopolin mukaan, ja nimi lupasi suoraan mihin satama '
+      + 'tähtäsi: se tarkoittaa idän hallitsijaa. Vuonna 1871 tänne '
+      + 'siirrettiin Siperian laivasto-osaston tukikohta '
+      + 'Nikolajevsk-na-Amuresta, ja kun Transsiperian radan itäpää '
+      + 'valmistui, kaupungista tuli Venäjän tärkein Tyynenmeren satama; '
+      + 'vuodesta 1952 vuoteen 1992 se oli suljettu kaupunki, johon '
+      + 'ulkomaalaisilla ei ollut asiaa. Kartan kohteita ovat '
+      + 'rautatieasema ja sen naapurissa oleva matkustajasatama, Kunst & '
+      + 'Albersin talossa toimiva GUM-tavaratalo ja Arsenjevin museo '
+      + 'Svetlanskajan varrella, museosukellusvene S-56, Kotkanpesän '
+      + 'kukkula ja sen rinnettä nouseva funikulaari, linnoitusmuseo '
+      + 'Sportivnajan yläpuolella, entiselle hautausmaalle tehty '
+      + 'Pokrovskin puisto ja vuoden 2012 vinoköysisilta lahden yli. '
       + 'Kartalta jää etelään Russkin saari siltoineen ja lounaaseen '
-      + 'Tokarevin majakka niemen kärjessä. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+      + 'Tokarevin majakka. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Pokrovskin puisto', lat: 43.1258, lon: 131.8914 },
@@ -6562,32 +6558,30 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 56.8635, etela: 56.8545, lansi: 60.5955, ita: 60.6065 },
         x: 2.5, y: 2, leveys: 20, korkeus: 29.66, suunta: '2,3 km pohjoiseen' },
     ],
-    esittely: 'Jekaterinburg alkoi padosta. Vasili Tatištšev etsi vuonna '
-      + '1721 Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan uomien, ruudukon ja ilmansuuntien
+     * kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Isetin ydinkeskusta, ja sen keskellä on yhä '
+      + 'se pato, josta kaupunki alkoi. Vasili Tatištšev etsi vuonna 1721 '
+      + 'Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja '
       + 'valitsi Iset-joen rannan; Georg Wilhelm de Genninin johdolla '
       + 'joki padottiin ja padon voimalla käyvä rautaruukki koeajettiin '
-      + '18. marraskuuta 1723. Kaksi vuotta myöhemmin ruukissa alettiin '
-      + 'lyödä ruplaa. Siperian valtatie avautui 1763 ja kulki kaupungin '
-      + 'läpi, ja siitä tuli idän ja lännen kaupan solmukohta — ikkuna '
-      + 'Aasiaan. Katariina Suuri antoi kaupunkioikeudet 1781, ja vuonna '
-      + '1807 Jekaterinburg sai Venäjän ainoana nimityksen vuorikaupunki: '
-      + 'se oli vuoriruukkien päällikön ja keisarin alainen ja pitkälti '
-      + 'vapaa kuvernööristä. Rautatie tuli Permistä 1878.\n\nKartalla '
-      + 'pato on yhä keskellä. Sen yläpuolella levittäytyy '
-      + 'kaupunginlampi, alapuolella Iset jatkaa kapeana kanavana etelään '
-      + 'ja kaartaa lopulta kaakkoon. Padon ympärillä on Historiallinen '
-      + 'aukio, ruukin vanha alue, jonka portit ja muurit ovat yhä '
-      + 'paikoillaan; kuvataidemuseo on sen laidalla entisessä vuoden '
-      + '1730 sairaalarakennuksessa. Ruudukko ympärillä on 1700-luvun '
-      + 'kaavaa, jonka pääsuunnat noudattavat jokea, ja sen halki '
-      + 'kulkee lännestä itään Leninin valtakatu. Koilliskulmassa maasto '
-      + 'nousee Nousemuksen kukkulalle, jossa on Kharitonovin kartano '
-      + 'puistoineen; kaakkoisnurkassa on Kolminaisuuden katedraali. '
-      + 'Vasemman ylänurkan kainalossa on vanha rautatieasema '
-      + 'ratapihoineen, 2,3 kilometriä pohjoiseen. Kartalta jää '
-      + 'länteen Verh-Isetskin allas ja pohjoiseen Uralmašin '
-      + 'tehdaskaupunginosa. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+      + '18. marraskuuta 1723, ja kaksi vuotta myöhemmin ruukissa '
+      + 'alettiin lyödä ruplaa. Siperian valtatie avautui 1763 ja kulki '
+      + 'kaupungin läpi, ja siitä tuli idän ja lännen kaupan solmukohta '
+      + '— ikkuna Aasiaan; vuonna 1807 Jekaterinburg sai Venäjän ainoana '
+      + 'nimityksen vuorikaupunki. Ruukin vanha alue on nykyään '
+      + 'Historiallinen aukio, ja sen laidalla on kuvataidemuseo '
+      + 'entisessä vuoden 1730 sairaalarakennuksessa. Muut kohteet ovat '
+      + 'Kharitonovin kartano puistoineen, Uralin valtionyliopisto, '
+      + 'kellotorni Suuri Zlatoust ja Kolminaisuuden katedraali; '
+      + 'kainalossa on vuonna 1878 valmistunut vanha rautatieasema, 2,3 '
+      + 'kilometriä pohjoiseen. Kartalta jää länteen Verh-Isetskin allas '
+      + 'ja pohjoiseen Uralmašin tehdaskaupunginosa. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mosulissa. */
       { nimi: 'Vanha rautatieasema', lat: 56.85879, lon: 60.60074 },
@@ -6633,28 +6627,29 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/novosibirsk-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.04, etela: 55.005, lansi: 82.885, ita: 82.942 },
-    esittely: 'Novosibirsk on Venäjän suurten kaupunkien nuorin. Se '
-      + 'syntyi 30. huhtikuuta 1893 rautatiesillan työmaalle: '
-      + 'Transsiperian radan piti ylittää Ob, ja retkikuntaa johtanut '
-      + 'Nikolai Garin-Mihailovski valitsi kohdan, jossa molemmat '
-      + 'rannat ja uoma ovat kalliota. Silta valmistui keväällä 1897, '
-      + 'ja työmaan kupeessa asui silloin 7 800 ihmistä. Nimi oli '
-      + 'vuodesta 1895 Novonikolajevsk; kaupunkioikeudet tulivat 1903, '
-      + 'nykyinen nimi 12. syyskuuta 1926. Miljoona asukasta täyttyi 2. '
-      + 'syyskuuta 1962, alle seitsemässäkymmenessä vuodessa '
-      + 'perustamisesta.\n\nKartalla se näkyy suoraan. Vanhaa '
-      + 'mutkittelevaa kujastoa ei ole lainkaan, vaan korttelit ovat '
-      + 'säännöllisiä ja kadut leveitä, ja niiden keskellä kulkee '
-      + 'luoteesta kaakkoon Punainen valtakatu. Luoteisnurkassa on '
-      + 'Novosibirsk-Glavnyin asema, ja siitä lähtevät ratapihat '
-      + 'levittäytyvät viuhkana kartan yli — rata on kuvassa yhtä '
-      + 'näkyvä kuin kadut, koska se oli täällä ensin. Etelässä ja '
-      + 'lounaassa virtaa Ob leveänä ja hitaana; sen yli kulkee kartan '
-      + 'alalaidassa maantiesilta, ja oikean rannan puistossa seisoo '
-      + 'ensimmäisen rautatiesillan säästetty jänne. Kartalta jää '
-      + 'etelään Obin tekojärvi ja Akademgorodok, pohjoiseen '
-      + 'eläintarhan männikkö. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kortteleiden, ratapihaviuhkan ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Novosibirskin keskusta radan ja Obin '
+      + 'välissä. Kaupunki on Venäjän suurten kaupunkien nuorin: se '
+      + 'syntyi 30. huhtikuuta 1893 rautatiesillan työmaalle, kun '
+      + 'Transsiperian radan piti ylittää Ob ja retkikuntaa johtanut '
+      + 'Nikolai Garin-Mihailovski valitsi kohdan, jossa molemmat rannat '
+      + 'ja uoma ovat kalliota. Nimi oli vuodesta 1895 Novonikolajevsk, '
+      + 'kaupunkioikeudet tulivat 1903 ja nykyinen nimi 12. syyskuuta '
+      + '1926; miljoona asukasta täyttyi 2. syyskuuta 1962. '
+      + 'Kartan pohjoispäässä on Novosibirsk-Glavnyin asema '
+      + 'ratapihoineen. Keskustan kohteet ovat vuosien 1910–1911 '
+      + 'kaupungin kauppatalo ja taidemuseo Punaisen valtakadun '
+      + 'varrella, Satohuoneiston talo vuodelta 1937 ja Aleksanteri '
+      + 'Nevskin katedraali, kaupungin ensimmäisiä kivirakennuksia. '
+      + 'Obin rantapuistossa seisoo ensimmäisen '
+      + 'rautatiesillan säästetty jänne. Kartalta jää etelään Obin '
+      + 'tekojärvi ja Akademgorodok, pohjoiseen eläintarhan männikkö. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mosulissa. */
       { nimi: 'Novosibirsk-Glavnyi', lat: 55.0358, lon: 82.9 },
@@ -6708,33 +6703,31 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 52.2555, etela: 52.245, lansi: 104.338, ita: 104.35 },
         x: 78, y: 76.8, leveys: 20, korkeus: 28.66, suunta: '6 km kaakkoon' },
     ],
-    esittely: 'Irkutsk alkoi verotusasemasta. Ivan Pohabov rakensi '
-      + 'vuonna 1652 talvimajan turkiskauppaa ja burjaateilta '
-      + 'kerättävää jasak-veroa varten, ja Jakov Pohabov pystytti '
-      + 'vuonna 1661 lähelle pienen paalulinnoituksen. Kaupunkioikeudet '
-      + 'tulivat 1686. Ensimmäinen maantie Moskovasta, Siperian '
-      + 'valtatie, valmistui 1760, ja Kjahtan rajakaupan myötä '
-      + 'Kiinan tee ja silkki tulivat kaupunkiin; vuonna 1821 '
-      + 'Irkutskista tuli Itä-Siperian kenraalikuvernöörin istuin. '
-      + 'Dekabristikapinan jälkeen kaupunkiin karkotettiin upseereita '
-      + 'ja aatelisia, ja vuosisadan loppuun mennessä joka kolmas '
-      + 'asukas oli karkotettu; heidän jälkeensä jäivät koulut, '
-      + 'kirjastot ja koristeelliset puutalot. Rautatie saapui 16. '
-      + 'elokuuta 1898.\n\nKartalla kaupunki on Angaran mutkassa. Joki '
-      + 'tulee kuvaan luoteesta, kaartaa etelään ja jättää oikealle '
-      + 'rannalle sen niemekkeen, jolla vanha kaupunki on; pohjoisessa '
-      + 'siihen laskee Ušakovka, ja sen takana on Znamenskin luostari. '
-      + 'Vasemmalla rannalla on Glaskovon puoli ratapihoineen ja '
-      + 'asemineen. Katuverkko oikealla rannalla on tiheä ja kaareva, '
-      + 'koska ensimmäiset asukkaat käänsivät talonsa ikkunat etelään '
-      + 'eivätkä välittäneet naapureista; ainoa suora katu on '
-      + 'entinen Bolšaja Prešpektnaja, joka syntyi vuonna 1790 puretun '
-      + 'paaluvarustuksen paikalle ja erottuu kartalla pitkänä '
-      + 'kaarena rannan suuntaisesti. Sen ja joen välissä on '
-      + 'kivikaupunki, sen takana puukaupunki — jako on vuoden 1879 '
-      + 'palon jäljiltä. Oikean alakulman kainalossa on jäänmurtaja '
-      + 'Angaran laituri tekoaltaalla, kuusi kilometriä kaakkoon. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; joen kulun, katuverkon ja ilmansuuntien
+     * kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Irkutskin keskusta Angaran mutkassa. '
+      + 'Kaupunki alkoi verotusasemasta: Ivan Pohabov rakensi vuonna '
+      + '1652 talvimajan turkiskauppaa ja burjaateilta kerättävää '
+      + 'jasak-veroa varten, ja Jakov Pohabov pystytti vuonna 1661 '
+      + 'lähelle pienen paalulinnoituksen, jonka paikalla on nyt Kirovin '
+      + 'aukio kahtine vanhoine kirkkoineen. Kjahtan rajakaupan myötä '
+      + 'Kiinan tee ja silkki toivat vaurautta, ja vuonna 1821 '
+      + 'Irkutskista tuli Itä-Siperian kenraalikuvernöörin istuin; '
+      + 'dekabristikapinan jälkeen karkotetut jättivät jälkeensä koulut, '
+      + 'kirjastot ja koristeelliset puutalot, joita 130. kortteli '
+      + 'esittelee kokonaisena ryhmänä. Vuoden 1879 palon jälkeen puusta '
+      + 'rakentaminen kiellettiin joen puolella, ja siitä syntyi '
+      + 'kaupungin jako kivikaupunkiin ja puukaupunkiin. Muut kohteet '
+      + 'ovat Znamenskin luostari Ušakovkan takana, puolalainen '
+      + 'Taivaaseenastumisen kirkko, Siperian barokin Ristin ylentämisen '
+      + 'kirkko ja vuonna 1899 avattu rautatieasema joen vasemmalla '
+      + 'rannalla; kainalossa on jäänmurtaja Angaran laituri '
+      + 'tekoaltaalla, kuusi kilometriä kaakkoon. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mosulissa. */
       { nimi: 'Znamenskin luostari', lat: 52.30108, lon: 104.29475 },
