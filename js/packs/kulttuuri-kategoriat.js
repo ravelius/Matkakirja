@@ -25007,11 +25007,12 @@ export const KULTTUURI_KATEGORIAT = {
        */
       matkailijalle: {
         kuva: {
-          tiedosto: 'Aleppo citadel 2026.jpg',
-          selite: 'Aleppon linnoitus kesäkuussa 2026: kummun harjalla '
-            + 'jatkuu muurilinja torneineen, ja keskellä kohoaa korkea '
-            + 'porttitorni, jonka salossa liehuu lippu.',
-          lahde: 'Wassim Faour, Wikimedia Commons (CC BY 4.0)',
+          tiedosto: 'Part of Aleppo Citadel.jpg',
+          selite: 'Aleppon linnoituskummun rinne toukokuussa 2026: '
+            + 'ruohottuneen ja vaaleaksi paljastuneen töyrään päällä '
+            + 'jatkuu hammastettu muuri, ja vasemmalla nousee telineiden '
+            + 'peittämä korjattava torni.',
+          lahde: 'Shahdddddddd, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Aleppo on Syyrian pohjoinen suurkaupunki 380 metrin '
           + 'ylängöllä, 120 kilometriä Välimereltä sisämaahan ja 45 '
@@ -25423,11 +25424,12 @@ export const KULTTUURI_KATEGORIAT = {
        */
       matkailijalle: {
         kuva: {
-          tiedosto: 'Traditional courtyard café surrounded by olive trees in Old Damascus, Syria.jpg',
-          selite: 'Vanhankaupungin kahvilapiha syyskuussa 2021: kivetyllä '
-            + 'aukiolla kasvaa oliivipuita, joiden alle on aseteltu rivi '
-            + 'metallisia jakkaroita ja pieniä pöytiä.',
-          lahde: 'Abd Alsattar Ardati, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Sayyida Ruqayya\'s shrine in Damascus 01.jpg',
+          selite: 'Sayyida Ruqayyan pyhäkön kupoli Damaskoksessa huhtikuussa '
+            + '2023: kupolin sisäpinta on peitetty tuhansilla peilinsiruilla, '
+            + 'ja sen alla riippuu vihreä ja kullanvärinen kruunukynttilä '
+            + 'kaiverretun hautakehikon yllä.',
+          lahde: 'Emir Ghazi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Damaskos on 680 metrin tasangolla, 80 kilometriä '
           + 'Välimereltä sisämaahan, Anti-Libanonin vuoriston itäisillä '
@@ -27935,12 +27937,13 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Old City Of Sanaa (95129511).jpeg',
-          selite: 'Sana hämärtyvässä illassa vuonna 2012: etualalla '
-            + 'vanhankaupungin tornitaloja ja kapea minareetti, kauempana '
-            + 'uuden kaupungin valkoiset kerrostalot ja laakson reunan paljas '
-            + 'vuorenrinne.',
-          lahde: 'Hamza Shiban, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'تناغم المباني البرجية في صنعاء القديمة، اليمن oHarmony of traditional tower houses in Old Sana\'a, Yemen.jpg',
+          selite: 'Vanhan Sanan tornitaloja tammikuussa 2024: '
+            + 'ruskeatiilisten julkisivujen kuviot on vedetty valkoisella '
+            + 'kipsillä, ylimmissä kerroksissa hohtavat puoliympyräiset '
+            + 'värilasi-ikkunat, ja talojen alla kulkee Saylan '
+            + 'kivireunainen uoma.',
+          lahde: 'Ayah Alakwaa, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Sana on vuoristokaupunki, jonka vanhakaupunki on vain '
           + 'pieni osa kokonaisuutta: muurien sisään mahtuu noin '
@@ -28362,11 +28365,11 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'The Yemeni cities of Little Aden and Aden (iss069e004371).jpg',
-          selite: 'Adenin rannikko avaruusasemalta: merestä työntyy kaksi '
-            + 'tummaa vuoriniemeä, vasemmalla Little Aden ja oikealla Aden, '
-            + 'ja niiden välissä on matala turkoosi lahti.',
-          lahde: 'NASA Johnson Space Center, Wikimedia Commons (PD)',
+          tiedosto: 'Cisterns of Aden.jpg',
+          selite: 'Adenin Tawilan vesisäiliöt marraskuussa 2022: kahden '
+            + 'tumman laavaseinämän välissä kaartaa kivinen silta, ja sen '
+            + 'alla levittäytyy vaaleaksi rapattu tyhjä säiliöallas.',
+          lahde: 'Enas 1st, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Aden ei ole yksi kaupunki vaan ketju kaupunginosia '
           + 'kahdella niemellä: idässä on Crater eli Seera sammuneen '
@@ -29048,6 +29051,18 @@ export const KULTTUURI_KATEGORIAT = {
         + 'merenpinnasta, ja osmanivallan alussa sitä kehuttiin '
         + 'seitsemästä portistaan, sairaalastaan, katetusta basaaristaan '
         + 'ja kankaistaan.',
+      /*
+       * KANSIKUVAT (kuvaremontti 20.8.2026): kolmesta vuoden 1932
+       * Matson-kuvasta jäi jäljelle vain kelekkikuva, koska siihen
+       * viitataan suoraan oppaan jaksossa 1. Kaksi muuta (sisäpiha
+       * matpc.16205 ja vihannestori matpc.16215) korvattiin
+       * 2020-luvun kuvilla: al-Nurin moskeijan jälleenrakennustyömaa
+       * 2024 kertoo mistä kaupungin nykyilme johtuu, ja
+       * kupariastiakauppa 2025 näyttää saman metallikäsityön elävänä,
+       * jota teemasivu käsittelee museoesineinä. Molemmat kuvatekstit
+       * sanovat ajankohdan, ja historiallisen kuvan tekstiin jäi
+       * vuosiluku 1932.
+       */
       kansikuvat: [
         {
           tiedosto: 'Iraq. Mosul. Mosul bazaars and river scenes on the Tigris. The Tigris. Construction of river rafts on inflated goatskins. Mosul bridge seen in distance LOC matpc.16216.jpg',
@@ -29058,18 +29073,20 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matson Collection, Wikimedia Commons (PD)',
         },
         {
-          tiedosto: 'Iraq. Mosul. A native courtyard LOC matpc.16205.jpg',
-          selite: 'Mosulilaisen talon sisäpiha vuonna 1932: seinässä on '
-            + 'kaksi suurta teräväkärkistä holvikaarta, ja yläkerran '
-            + 'parven aukot on peitetty tiheillä puuristikoilla.',
-          lahde: 'Matson Collection, Wikimedia Commons (PD)',
+          tiedosto: 'Great Mosque of al-Nuri Reconstruction.jpg',
+          selite: 'Al-Nurin suurmoskeijan jälleenrakennustyömaa helmikuussa '
+            + '2024: vihreäkupolisen rukoushuoneen ympärille on valettu '
+            + 'uudet betonipilarit ja -palkit, ja edustalla on hiekkakasoja '
+            + 'ja raudoitusteräksiä.',
+          lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Iraq. Mosul. Mosul bazaars and river scenes on the Tigris. The vegetable market. Selling \'fakus,\' huge native cucumbers LOC matpc.16215.jpg',
-          selite: 'Vihannestori Mosulissa vuonna 1932: maassa on '
-            + 'kasoittain pitkiä uurteisia fakus-kurkkuja, ja päähuiviin '
-            + 'pukeutunut mies leikkaa niistä yhtä veitsellä.',
-          lahde: 'Matson Collection, Wikimedia Commons (PD)',
+          tiedosto: 'Traditional Copperware Shop-Mosul 01.jpg',
+          selite: 'Kupariastiakauppa Mosulissa tammikuussa 2025: hyllyt ja '
+            + 'lattia ovat täynnä tinattuja kuparivateja, -pannuja ja '
+            + 'pitkänokkaisia kahvikannuja, ja keskellä hohtaa pieni '
+            + 'kullankeltainen kuppitarjotin.',
+          lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
@@ -29152,26 +29169,35 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
-       * AVAUSKUVAT: kaupunki, tasanko ja se mitä tasangolla oli.
-       * Kaksi ensimmäistä ovat vuodelta 1932 ja 1840-luvulta, kolmas
-       * on Layardin oma väritetty kuvitelma Ninivestä Tigriin
-       * rannalla — se on tahallaan mielikuva eikä valokuva, ja
-       * kuvateksti sanoo sen.
+       * AVAUSKUVAT (kuvaremontti 20.8.2026): omistajan huomautus oli,
+       * että Mosulin etusivulla kaikki muut kuvat olivat vanhoja.
+       * Kaksi ensimmäistä ovat nyt 2020-luvulta ja näyttävät suoraan
+       * mistä nykyilme johtuu — vanhankaupungin rauniokortteli ja
+       * korjattu holvikuja. Kolmas on Layardin oma väritetty
+       * kuvitelma Ninivestä Tigriin rannalla; se on tahallaan
+       * mielikuva eikä valokuva, ja kuvateksti sanoo sen. Vuoden
+       * 1932 kattopanoraama (Hadba-16200v) ja jesidipyhäkön kuva
+       * jäivät pois, samoin kaksi 1932 kansikuvaa; niistä jäi
+       * jäljelle kelekki-kuva, joka liittyy suoraan oppaan
+       * jakso 1:n lauttakertomukseen.
        */
       avauskuvat: [
         {
-          tiedosto: 'Hadba-16200v.jpg',
-          selite: 'Yleisnäkymä Mosulin vanhankaupungin katoille vuonna '
-            + '1932: satojen tasakattojen keskeltä nousee yksinään korkea '
-            + 'lieriömäinen tiiliminareetti.',
-          lahde: 'American colony photographers., Wikimedia Commons (PD)',
+          tiedosto: 'Ruins Maydan Mosul.jpg',
+          selite: 'Vanhankaupungin Maydanin kortteli Mosulissa huhtikuussa '
+            + '2025: katottomien kivitalojen rivit ja soraläjät jatkuvat '
+            + 'näköpiirin päähän, ja horisontissa kohoaa kaksi '
+            + 'rakennusnosturia uuden kaupungin talojen yllä.',
+          lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Ancient Mosul, a Yezidi shrine to the left and the Nouri Mosque minaret to the right.jpg',
-          selite: 'Aukio vanhassa Mosulissa vuonna 1932: vasemmalla kohoaa '
-            + 'kartiokattoinen pyhäkkö, oikealla kalteva minareetti, ja '
-            + 'etualalla kävelee kaksi taakkaa kantavaa ihmistä.',
-          lahde: 'American colony photographers., Wikimedia Commons (PD)',
+          tiedosto: 'Qantarat al-jowmard.jpg',
+          selite: 'Al-Jowmardin holvikuja Mosulin vanhassakaupungissa '
+            + 'tammikuussa 2024: valkoiseksi rapatun talon alitse johtaa '
+            + 'harmaakivinen kaksoiskaari, jonka yläpuolella on '
+            + 'arabiankielinen kivitaulu, ja käytävän päässä on vielä '
+            + 'soraa ja purettua muuria.',
+          lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Artist’s impression of Assyrian palaces from The Monuments of Nineveh by Sir Austen Henry Layard, 1853.jpg',
@@ -29184,11 +29210,12 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Mosul Corniche.jpg',
-          selite: 'Mosulin rantabulevardi tammikuussa 2025: aukio on '
-            + 'laatoitettu punaisin ja keltaisin kuviolaatoin, ja '
-            + 'istutettujen puiden taimet ovat vielä ohuita.',
-          lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Fatima Khatun Mosque Entrance Mosul.jpg',
+          selite: 'Fatima Khatunin moskeijan portti Mosulissa joulukuussa '
+            + '2025: harmaaseen marmoriin veistetyn teräväkärkisen kaaren '
+            + 'reunoja kiertää kullattu köynnöskuvio, ja avoimesta ovesta '
+            + 'näkyy pikkukivillä laskettu sisäpiha.',
+          lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Mosul on Irakin toiseksi suurin kaupunki, ja se on '
           + 'oikeastaan kaksi kaupunkia yhden nimen alla. Tigriin '
@@ -29610,12 +29637,12 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: '201902 Qianmen Street in snow.jpg',
-          selite: 'Qianmenin katu lumisateessa: Zhengyangmenin '
-            + 'jousiampujatorni häämöttää kadun päässä, kiskoilla '
-            + 'seisoo vanhanmallinen raitiovaunu ja kulkijat '
-            + 'kääntyvät lumessa selin kameraan.',
-          lahde: 'Zheng sun, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Beijing Swiatynia Harmonii i Pokoju 30.jpg',
+          selite: 'Rukousmylly Yonghen lamatemppelissä Pekingissä '
+            + 'syyskuussa 2023: punaiseksi maalatun katoksen alla lepää '
+            + 'vihertävä pronssirumpu, jonka kylkeen on valettu suuria '
+            + 'tiibetiläisiä kirjaimia.',
+          lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Peking on Kiinan pääkaupunki ja lähes 22 miljoonan '
           + 'asukkaan jättiläinen, mutta sen ydin on yhä sama kuin '
@@ -30051,12 +30078,12 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: '20191205 Grobowiec Humajuna w Delhi 1055 6794.jpg',
-          selite: 'Humayunin mausoleumi puutarhansa keskellä: punaista '
-            + 'hiekkakiveä ja valkoista marmoria oleva rakennus peilautuu '
-            + 'suihkulähteen altaaseen, ja kävijät näkyvät pieninä '
-            + 'käytävillä.',
-          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Agrasen Ki Baoli 1.jpg',
+          selite: 'Agrasen ki Baolin porraskaivo Delhissä lokakuussa 2023: '
+            + 'kapean kuilun molemmilla seinillä on kolme kerrosta '
+            + 'holvikaaria, ja puiden yli näkyy Connaught Placen '
+            + 'valkoinen tornitalo.',
+          lahde: 'Astari28, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Delhi on yksi maailman suurimmista kaupunkialueista: '
           + 'pelkällä pääkaupunkialueella asui vuoden 2011 laskennassa '
@@ -33717,12 +33744,12 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Yakutsk - 190228 DSC 5393.jpg',
-          selite: 'Jakutsk ilmasta helmikuussa: ruutukaavan '
-            + 'kerrostalorivit erottuvat lumen keskeltä vaaleina paloina, '
-            + 'ja kaupungin ympärillä on tasaista valkoista lakeutta niin '
-            + 'kauas kuin kuva ulottuu.',
-          lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Museum - Permafrost Kingdom (Yakutsk) 09.jpg',
+          selite: 'Jääveistos Ikiroudan valtakunnan käytävässä Jakutskissa '
+            + 'joulukuussa 2020: turkiskauluksinen lapsihahmo kannattelee '
+            + 'sylissään suurta kalaa, ja takaseinän jäähän on kaiverrettu '
+            + 'toinen kala.',
+          lahde: 'JukoFF, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Jakutsk on Sahan tasavallan pääkaupunki noin '
           + 'neljänsadanviidenkymmenen kilometrin päässä napapiiristä '
@@ -34116,11 +34143,12 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Magadan viewed from the Staritski peninsula.jpg',
-          selite: 'Magadan Staritskin niemimaalta katsottuna keväällä: '
-            + 'kaupungin matalien kerrostalojen nauha kulkee kuivuneen '
-            + 'heinikon takana, ja sen takana ovat lumiset loivat vaarat.',
-          lahde: 'Johannes Rohr, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Магадан, Ленина, 19 20240901 01.jpg',
+          selite: 'Gorniak-elokuvateatteri Magadanissa syyskuussa 2024: '
+            + 'vaaleanvihreän pylväsjulkisivun katolla lukee '
+            + 'vaaleanpunaisin kaarikirjaimin teatterin nimi, ja etualalla '
+            + 'pihlaja notkuu punaisia marjaterttuja.',
+          lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Magadan on Magadanin alueen hallinnollinen keskus ja '
           + 'Kolyman portti. Kaupunki istuu Staritskin niemimaan '
@@ -34509,10 +34537,11 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Вид на морской порт.jpg',
-          selite: 'Kalastusaluksia ja laitureita Petropavlovskin satamassa '
-            + 'Nikolskajan kukkulalta nähtynä, kaupunki nousee vihreille '
-            + 'rinteille lahden ympärillä.',
+          tiedosto: 'Никольская сопка.jpg',
+          selite: 'Näkymä Nikolskajan kukkulalta Avatšanlahdelle elokuussa '
+            + '2017: kivikoivujen runkojen välistä avautuu tyyni lahti, '
+            + 'jolla pikavene vetää valkoista vanaa, ja taustalla siintää '
+            + 'vastarannan vuorijono.',
           lahde: 'Stasich116, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Petropavlovsk-Kamtšatski on 6 766 kilometrin päässä '
@@ -34864,12 +34893,12 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Yuzhno-Sakhalinsk, Sakhalinskaya street 2022-09.jpg',
-          selite: 'Sateinen risteys Sahalinskajan kadulla '
-            + 'Južno-Sahalinskissa: japanilainen kuorma-auto kääntyy '
-            + 'kadulle, ja taustalla on kauppakeskuksia ja matalia '
-            + 'liiketaloja.',
-          lahde: 'Svetlov Artem, Wikimedia Commons (CC0)',
+          tiedosto: '2025-06-07-ys-mosaic-komm-avenue.jpg',
+          selite: 'Seinämosaiikki Južno-Sahalinskin keskustassa kesäkuussa '
+            + '2025: haalaripukuinen mies kohottaa kädessään porankruunua, '
+            + 'ja hänen ympärillään aaltoilevat meri, kalaparvi ja '
+            + 'auringonsäteet.',
+          lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Sahalinin portti on Južno-Sahalinsk, saaren ainoa '
           + 'suuri kaupunki, joka alkoi 1882 pakkotyöläisten '
@@ -35241,11 +35270,12 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Admirala Fokina Street in Vladivostok.jpg',
-          selite: 'Amiraali Fokinin katu on keskustan kävelykatu, joka '
-            + 'laskeutuu kohti Sportivnajan rantaa valoköynnösten, '
-            + 'suihkulähteen ja 1900-luvun alun talojen välissä.',
-          lahde: 'Quick and my, Wikimedia Commons (CC0)',
+          tiedosto: 'Nikcas.jpg',
+          selite: 'Nikolain riemuportti Vladivostokissa elokuussa 2011: '
+            + 'kaksiaukkoinen portti kantaa punavalkoruudullista '
+            + 'telttakattoa, jonka huipulla on kaksipäinen kotka, ja '
+            + 'pilarien jalustat ovat punaista graniittia.',
+          lahde: 'Dudergofer, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Vladivostok istuu Muravjov-Amurskin niemimaan '
           + 'eteläkärjessä kahden veden välissä: lännessä on Amurinlahti, '
@@ -35680,10 +35710,12 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Lunch at Rongros, Bangkok (Jan 2021) - img 05.jpg',
-          selite: 'Jokibussi kaartaa Chao Phrayalla matkustajineen, ja '
-            + 'Wat Arunin torni kohoaa vastarannalla.',
-          lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: '(2023) วัดพระเชตุพนวิมลมังคลารามราชวรมหาวิหาร เขตพระนคร กรุงเทพมหานคร (11).jpg',
+          selite: 'Kullattu istuva Buddha Wat Pho -temppelissä Bangkokissa '
+            + 'heinäkuussa 2023: oikea käsi laskeutuu polven yli maata '
+            + 'koskettamaan, ja jalusta on koristeltu vihrein ja punaisin '
+            + 'peililasikuvioin.',
+          lahde: 'กสิณธร ราชโอรส, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Bangkok on Thaimaan pääkaupunki ja selvästi maan suurin '
           + 'kaupunki: asukkaita on runsaat yhdeksän miljoonaa, ja yli '
