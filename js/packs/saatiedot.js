@@ -1525,4 +1525,48 @@ export const SAATIEDOT = {
       + 'heinä- ja elokuussa vuorokauden alin on keskimäärin '
       + 'kaksikymmentäseitsemän astetta.',
   },
+  /*
+   * BANGKOK (20.8.2026). Sama menetelmä kuin paketin muillakin
+   * riveillä: Open-Meteon arkisto (ERA5), jakso 1991–2020, keskilämpö
+   * kuukauden päiväkeskiarvojen keskiarvona ja sade kuukausisumman
+   * vuosikeskiarvona; ylin ja alin koko jakson päivittäisten ylimpien
+   * ja alimpien keskiarvojen puolivälinä keskilämmön ympärillä.
+   * Kiintiösyistä jakso haettiin kuutena viiden vuoden palana ja
+   * yhdistettiin samalla kaavalla — lopputulos on koko jakson
+   * keskiarvo kuten muillakin riveillä.
+   *
+   * MITTAUSPISTE on keskusta 13,7525 / 100,4942 eli sama piste, jonka
+   * en-Wikipedian Bangkok-artikkelin infobox antaa kaupungin
+   * koordinaateiksi (haettu 20.8.2026). ERA5-ruudun korkeus siinä on
+   * 4 metriä; kaupungin oma keskikorkeus on noin 1,5 metriä.
+   *
+   * ERA5-RUUTU ON VIILEÄMPI JA KUIVEMPI KUIN KAUPUNGIN OMA
+   * MITTAUSASEMA: en-Wikipedian ilmastotaulukon (1991–2020)
+   * vuosikeskilämpö on 28,9 astetta ja syyskuun sade 335,9 mm, kun
+   * ERA5-ruutu antaa 27,8 astetta ja 241 mm. Ero on mittauspisteen
+   * ero eikä ristiriita faktoissa (Siinain ja Mekan ennakkotapaus):
+   * ruutu keskiarvoistaa suistotasankoa kaupunkiaseman ympäriltä. Ero
+   * on kerrottu myös lehden matkaoppaan sääjaksossa. Kuukausien
+   * järjestys on molemmissa sama: syyskuu sateisin, huhtikuu kuumin.
+   *
+   * Vuosisade on 1 176 millimetriä — paketin Aasian-rivien märimmästä
+   * päästä, ja siitä yli kolmannes tulee syys–lokakuussa.
+   */
+  bangkok: {
+    lat: 13.7525,
+    lon: 100.4942,
+    keskilampo: [26.2, 27.6, 29, 30.1, 29.4, 28.6, 28.1, 27.8, 27.4, 26.9, 26.7, 26],
+    ylin: [31, 32, 33, 34, 33, 32, 31, 31, 30, 30, 31, 31],
+    alin: [21, 23, 25, 26, 26, 25, 25, 25, 24, 24, 23, 21],
+    sade: [15, 14, 40, 71, 135, 131, 138, 147, 241, 194, 41, 9],
+    luonnehdinta: 'Bangkokissa keskilämpö pysyy koko vuoden '
+      + 'kahdenkymmenenkuuden ja kolmenkymmenen asteen välissä — '
+      + 'viileintä ja kuuminta kuukautta erottaa vain neljä astetta. '
+      + 'Sade jakaa vuoden: touko–lokakuussa sataa yli sata millimetriä '
+      + 'kuussa ja syyskuussa 241, kun joulu–helmikuun kuukaudet '
+      + 'jäävät yhteensä alle neljänkymmenen. Vuodessa sataa 1 176 '
+      + 'millimetriä. Kuumin kuukausi on huhtikuu: keskilämpö on '
+      + 'kolmekymmentä astetta ja päivät nousevat '
+      + 'kolmeenkymmeneenneljään.',
+  },
 };

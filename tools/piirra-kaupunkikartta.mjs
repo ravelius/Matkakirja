@@ -1492,6 +1492,30 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  bangkok: {
+    /*
+     * RATTANAKOSININ SAARI JA SEN ITÄPUOLI (20.8.2026). Ruutu on noin
+     * 4,8 × 3,4 km: lännessä Wat Arun Thonburin rannalla, keskellä
+     * Rattanakosinin keinosaari (Suurpalatsi, Wat Phra Kaew, Wat Pho,
+     * Sanam Luang), idässä Wat Saketin Kultainen vuori, Yaowarat-katu
+     * ja kaakossa Hua Lamphongin rautatieasema. Chao Phraya kaartaa
+     * kuvan halki S-kirjaimena, ja Rattanakosinin itäpuolella erottuu
+     * kanavarengas (Khlong Rop Krung), joka teki saaresta saaren.
+     *
+     * Damnoen Saduakin kelluva tori EI ole kartalla: se on noin 63 km
+     * lounaaseen (laskettu koordinaateista 13,5193/99,9592, ja
+     * tarkistusraportti vahvisti luvun; Floating market -artikkelin
+     * oma sanallinen arvio on "noin 100 km"). Se kerrotaan oppaassa
+     * päiväretkenä — sama ratkaisu kuin Medinan Uhud-vuorella.
+     *
+     * Jalkakäytävät ja palvelutiet päällä samasta syystä kuin
+     * Medinassa ja Mekassa: temppelien ja palatsin ympäristöt ovat
+     * OSM:ssä jalankulkualueita ja huoltoteitä.
+     */
+    rajat: { pohjoinen: 13.7625, etela: 13.7315, lansi: 100.4805, ita: 100.5245 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
   izmir: {
     // Konakin aukio, Kemeraltin basaari ja antiikin agora mahtuvat
     // samaan runsaan puolentoista kilometrin ruutuun, ja niiden väli on

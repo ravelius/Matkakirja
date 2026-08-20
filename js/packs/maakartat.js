@@ -6213,6 +6213,76 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Al-Nurin moskeija', lat: 36.3431, lon: 43.1267 },
     ],
   },
+  /*
+   * BANGKOK (20.8.2026). Rajaus on Rattanakosinin saari ja sen
+   * itäpuoli, noin 4,8 × 3,4 km: lännessä Wat Arun Thonburin
+   * rannalla, keskellä keinosaari palatseineen, idässä Wat Saketin
+   * Kultainen vuori ja Yaowarat ja kaakossa Hua Lamphongin
+   * rautatieasema. Kaikki yhdeksän kohdetta mahtuvat samaan ruutuun,
+   * joten kainaloa ei tarvita.
+   *
+   * DAMNOEN SADUAKIN KELLUVA TORI JÄI POIS TARKOITUKSELLA: se on
+   * koordinaateista laskettuna noin 63 kilometriä lounaaseen (Floating
+   * market -artikkelin sanallinen arvio on "noin 100 km"; koordinaatit
+   * voittavat leipätekstin, v925/v932/v937) eikä sovi mihinkään
+   * kaupunkikartan rajaukseen. Se kerrotaan matkaoppaassa päiväretkenä
+   * — sama ratkaisu kuin Medinan Uhud-vuorella.
+   *
+   * WAT PHRA KAEW JA SUURPALATSI OVAT MOLEMMAT KARTALLA, vaikka
+   * temppeli on palatsin muurien sisällä: pisteiden väli on noin 150
+   * metriä eli numeroympyrät mahtuvat vierekkäin (tarkistettu
+   * tools/tarkista-karttapisteet.mjs:llä). Ne ovat lehden kannalta
+   * kaksi eri nähtävyyttä, toisin kuin Mekan moskeijan sisäkohteet,
+   * jotka olivat kymmenien metrien päässä toisistaan.
+   *
+   * Koordinaatit ovat kohteiden omista en-Wikipedian artikkeleista ja
+   * ne on tarkistettu erikseen (haettu 20.8.2026).
+   */
+  bangkok: {
+    polku: 'assets/kartat/bangkok-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 13.7625, etela: 13.7315, lansi: 100.4805, ita: 100.5245 },
+    esittely: 'Bangkok on nuori pääkaupunki vanhalla paikalla. Kylä '
+      + 'nimeltä Bangkok oli Chao Phrayan varrella jo Ayutthayan '
+      + 'kaudella, ja kun Ayutthaya tuhoutui 1767, kuningas Taksin '
+      + 'perusti uuden pääkaupungin Thonburiin joen länsirannalle. '
+      + 'Rama I siirsi sen 1782 itärannalle ja kaivatti kanavat, jotka '
+      + 'tekivät Rattanakosinista keinotekoisen saaren; tiilet uusiin '
+      + 'muureihin haettiin proomuilla Ayutthayan raunioista. Kaupunki '
+      + 'eli veden varassa: kanavat eli khlongit olivat sen katuja, ja '
+      + 'ulkomaalaiset kutsuivat sitä idän Venetsiaksi. Ensimmäinen '
+      + 'länsimaiseen tapaan rakennettu katu Charoen Krung valmistui '
+      + 'vasta 1864, ja Rama V:n kaudella katuverkko kasvoi kanavien '
+      + 'rinnalle — silloin syntyi myös kiinalaiskorttelin pääkatu '
+      + 'Yaowarat.\n\n'
+      + 'Kartalla joki on pääosassa: Chao Phraya tulee kuvaan '
+      + 'vasemmasta ylänurkasta, kaartaa suuren S-mutkan kuvan '
+      + 'vasemmassa puoliskossa ja poistuu alalaidasta. Mutkan sisään '
+      + 'jää Rattanakosinin saari, jonka erottaa mantereesta '
+      + 'kanavarengas — vanha vallihauta piirtyy kapeana vesiuomana '
+      + 'katujen lomassa. Saaren kärjessä ovat '
+      + 'Sanam Luangin avoin kenttä sekä Suurpalatsin ja Wat Phra '
+      + 'Kaew\'n suuri kortteli, ja heti niiden alapuolella Wat Pho. '
+      + 'Joen toisella puolella lounaassa on Wat Arun ja sen ympärillä '
+      + 'Thonburin kanavien verkko. Itään mentäessä katuverkko '
+      + 'tihenee: keskellä ovat Jättiläiskeinun aukio ja Kultaisen '
+      + 'vuoren kukkula, kaakossa Yaowaratin vino katu kiinalais'
+      + 'kortteleineen ja sen takana Hua Lamphongin asema '
+      + 'ratapihoineen. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
+      { nimi: 'Sanam Luang', lat: 13.755, lon: 100.4931 },
+      { nimi: 'Wat Saket ja Kultainen vuori', lat: 13.7539, lon: 100.5083 },
+      { nimi: 'Sao Ching Cha', lat: 13.7519, lon: 100.5014 },
+      { nimi: 'Wat Phra Kaew', lat: 13.7514, lon: 100.4925 },
+      { nimi: 'Suurpalatsi', lat: 13.7501, lon: 100.492 },
+      { nimi: 'Wat Pho', lat: 13.7464, lon: 100.4936 },
+      { nimi: 'Wat Arun', lat: 13.7436, lon: 100.4889 },
+      { nimi: 'Yaowarat', lat: 13.7411, lon: 100.5083 },
+      { nimi: 'Hua Lamphong', lat: 13.7389, lon: 100.5167 },
+    ],
+  },
 };
 
 /*
