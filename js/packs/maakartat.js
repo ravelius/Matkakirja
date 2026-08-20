@@ -5579,35 +5579,25 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/jerusalem-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 31.7865, etela: 31.772, lansi: 35.221, ita: 35.244 },
-    esittely: 'Jerusalem on vuoristokaupunki. Se kohoaa lähes '
-      + 'kahdeksansadan metrin korkeuteen Juudean vuorilla, ja sitä '
-      + 'ympäröi kolme laaksoa — siksi kaupunki on aina ollut helppo '
-      + 'puolustaa ja vaikea kastella. Omaa jokea ei ole, joten koko '
-      + 'asutuksen paikan ratkaisi yksi lähde: Gihon, joka pulppuaa '
-      + 'Kidronin laakson kalliossa. Nykyiset muurit eivät ole '
-      + 'muinaiset vaan ottomaanien työtä: sulttaani Suleiman määräsi '
-      + 'rauniona olleet muurit rakennettavaksi uudelleen vuonna 1535, '
-      + 'ja työ tehtiin vuosina 1537–1541. Kiveä on 4 018 metrin '
-      + 'matkalla, keskikorkeus on noin kaksitoista metriä ja paksuus '
-      + 'kaksi ja puoli metriä, ja muuria kiertää 34 tornia. '
-      + 'Liikennöityjä portteja on seitsemän. Muurit ja vanhakaupunki '
-      + 'hyväksyttiin Unescon maailmanperintöluetteloon vuonna 1981. '
-      + 'Vielä 1800-luvun puoliväliin asti koko kaupunki mahtui '
-      + 'muurien sisään; ensimmäinen kortteli niiden ulkopuolelle '
-      + 'rakennettiin vasta vuonna 1860.\n\nKartalla on vain '
-      + 'vanhakaupunki, runsaan kahden kilometrin levyinen pala. '
-      + 'Muuri erottuu kuvassa tummana yhtenäisenä viivana, joka '
-      + 'kiertää koko alueen — se on kartan selkäranka. Sen sisällä ei '
-      + 'ole juuri katuja vaan kujia, ja siksi verkko näyttää '
-      + 'tiheämmältä kuin muissa kaupungeissa: leveys riittää '
-      + 'jalankulkijalle ja aasille, ei vaunulle. Oikeassa laidassa '
-      + 'erottuu suuri suorakaide, jota kujat eivät halkaise: se on '
-      + 'temppelivuoren aitaus, vanhankaupungin pinta-alasta noin '
-      + 'kuudesosa. Länsilaidassa muuri kaartaa ulos ja sisään — '
-      + 'siellä on Jaffan portti, josta lähti 1800-luvulla ainoa '
-      + 'ajokelpoinen tie rannikolle. Kartan ulkopuolelle jäävät '
-      + 'etelään Daavidin kaupungin kaivausalue ja Siiloan allas. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * kohdekartan esittely lyhennettiin oleelliseen. Kartan
+     * visuaalinen kuvailu (muuriviiva, kujaverkon tiheys, suorakaide
+     * oikeassa laidassa) on poistettu; jäljelle jäi se, mitä alueella
+     * on ja miksi. Kaupungin korkeus, Gihonin lähde ja muurien
+     * mitat kerrotaan etusivun leipätekstissä ja lehden nostoissa.
+     */
+    esittely: 'Kartalla on vain vanhakaupunki: 0,9 neliökilometrin pala, '
+      + 'jota kiertää ottomaanien muuri ja jonka kävelee laidasta laitaan '
+      + 'vartissa. Sen sisällä ovat kolmen uskonnon keskeisimmät paikat '
+      + 'kävelymatkan päässä toisistaan: Läntinen muuri, temppelivuorella '
+      + 'seisovat Kalliomoskeija ja Al-Aqsa sekä Pyhän haudan kirkko. '
+      + 'Pohjoisessa on Damaskoksen portti, jonka paikalla on ollut portti '
+      + 'roomalaisajasta asti, ja lännessä Jaffan portti, josta lähti '
+      + '1800-luvulla ainoa ajokelpoinen tie rannikolle. Daavidin '
+      + 'kaupungin kaivausalue ja Siiloan allas jäävät rajauksen '
+      + 'eteläpuolelle; ne kerrotaan lehden Vesi-sivulla. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään. */
       { nimi: 'Damaskoksen portti', lat: 31.7816, lon: 35.2305 },
@@ -5699,42 +5689,26 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/persepolis-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 29.9372, etela: 29.9325, lansi: 52.8858, ita: 52.8938 },
-    esittely: 'Persepolis ei ole kaupunki vaan yksi rakennusryhmä. '
-      + 'Kreikkalaiset antoivat sille nimen Persepolis eli persialaisten '
-      + 'kaupunki; persialaisten omalla kielellä paikka oli Pārsa, sama '
-      + 'sana kuin koko maakunnan nimi. Vanhimmat jäänteet ovat vuodelta '
-      + '515 eKr. Dareios I rakennutti terassin ja sen ensimmäiset '
-      + 'palatsit, ja rakentaminen jatkui valtakunnan loppuun asti. '
-      + 'Terassi on 125 000 neliömetriä: osa siitä on muurattu tasangolle '
-      + 'ja osa louhittu Rahmat-vuoren kylkeen, ja päämateriaali oli '
-      + 'harmaa kalkkikivi. Hallinnon todelliset pääkaupungit olivat '
-      + 'muualla — Susa, Babylon ja Ekbatana — ja se selittää, miksi '
-      + 'kreikkalaiset eivät tunteneet paikkaa ennen kuin Aleksanteri '
-      + 'valtasi sen vuonna 330 eKr. Sen jälkeen katosi nimikin: '
-      + 'sasanidiruhtinas Shapur Sakanshah kutsui raunioita vuonna 311 '
-      + 'nimellä Sad-stūn eli sata pylvästä, ja keskiajalla ne olivat '
-      + 'Tahti Jamshid, Jamshidin valtaistuin, ja Tšehel Minar, '
-      + 'neljäkymmentä minareettia. Vieressä virtaa pieni Pulvar-joki, '
-      + 'joka laskee Kur-jokeen.\n\nKartalla on koko kohde: vajaan '
-      + 'kahdeksansadan metrin levyinen pala tasankoa vuoren juurella. '
-      + 'Keskellä on terassi, ja sen reuna piirtyy sahalaitaisena. '
-      + 'Porrastus ei ole koriste vaan puolustusta: kulmikas tukimuuri '
-      + 'antoi puolustajille näkymän ulkosivun jokaiseen kohtaan, kuten '
-      + 'linnassa. Terassin sisällä ei ole katuja vaan ohuita viivoja, '
-      + 'jotka erottavat palatsit toisistaan — nämä viivat ovat '
-      + 'perustuksia eivätkä kujia. Luoteisnurkassa on kaksoisportaikko '
-      + 'ja sen päässä Kaikkien kansojen portti, josta jokainen astui '
-      + 'sisään. Idässä kartta nousee vuorelle: polut kiipeävät '
-      + 'rinnettä, ja niiden yläpäässä on Artakserkses III:n kallioon '
-      + 'louhittu hauta. Lännestä tullaan nykyistä tuloreittiä, jonka '
-      + 'varrella ovat lipunmyynti ja pysäköintialueet. Vasemmassa '
-      + 'alakulmassa erottuu tähtimäinen kaava pienen altaan ympärillä: '
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely lyhennettiin oleelliseen. Kartan viivastojen kuvailu
+     * (sahalaitainen reuna, perustusviivat, tuloreitin pysäköinti)
+     * on poistettu; nimihistoria ja terassin mitat kerrotaan etusivun
+     * leipätekstissä ja lehden nostoissa. Vuoden 1971 telttakaupunki
+     * jäi, koska se on ainoa selitys kartalla yhä näkyvälle tiestölle.
+     */
+    esittely: 'Kartalla on koko kohde: vajaan kahdeksansadan metrin '
+      + 'levyinen pala tasankoa Rahmat-vuoren juurella. Terassille '
+      + 'noustaan luoteisnurkan kaksoisportaikkoa Kaikkien kansojen '
+      + 'portille, ja sen takana ovat palatsit ja salit: Apadana, Sadan '
+      + 'pylvään sali, Kolmen oven sali, aarrekammio sekä Dareios I:n '
+      + 'Tachara ja Xerxesin Hadish. Idässä polut nousevat vuoren '
+      + 'rinteeseen, johon on louhittu Artakserkses III:n hauta. Terassin '
+      + 'lounaispuolella erottuu tähtikuvioinen tiestö altaan ympärillä: '
       + 'sinne pystytettiin vuonna 1971 telttakaupunki valtakunnan '
-      + 'kaksituhatviisisataavuotisjuhliin — viisikymmentä telttaa '
-      + 'tähtikuvioon suihkulähteen ympärille. Teltat ovat poissa, '
-      + 'mutta tiet ja allas ovat kartalla yhä. Alalaidassa kaivausalue '
-      + 'jatkuu terassin eteläpuolelle. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+      + 'kaksituhatviisisataavuotisjuhliin, ja teltat ovat poissa mutta '
+      + 'tiet jäivät. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Petrassa ja Medinassa. */
       { nimi: 'Kaikkien kansojen portti', lat: 29.93618, lon: 52.889078 },

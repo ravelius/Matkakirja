@@ -9611,6 +9611,10 @@ export const NAHTAVYYSJUTUT = {
    * maakartat.js:n kommentissa: neljästä muusta ehdokkaasta ei
    * löytynyt yhtään vapaasti lisensoitua kuvaa ilman tunnistettavia
    * ihmisiä.
+   *
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R2: kuuden jutun selite-kentät on
+   * tiivistetty yhteen virkkeeseen. Juttujen leipätekstit, kuvat ja
+   * lähderivit ovat ennallaan.
    */
   jerusalem: {
     'Damaskoksen portti': {
@@ -9635,10 +9639,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'DAMASCUS GATE AND PART OF THE CITY WALL AROUND JERUSALEM. שער דמשק בעיר העתיקה בירושלים..jpg',
-          selite: 'Vanha valokuva Damaskoksen portista ylhäältä: '
-            + 'hammastettu portinpää työntyy ulos muurilinjasta, ja '
-            + 'takana levittäytyy vanhankaupungin kattomeri kupoleineen '
-            + 'ja kellotorneineen.',
+          selite: 'Vanha valokuva Damaskoksen portista ylhäältä: hammastettu '
+            + 'portinpää työntyy ulos muurilinjasta kattomeren edessä.',
           lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },
       ],
@@ -9665,9 +9667,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Holy Sepulchre BW 18.JPG',
-          selite: 'Golgatan kappeli: kullattu alttarikaari, sen keskellä '
-            + 'ristiinnaulittu ja molemmin puolin hopeiset hahmot, ja '
-            + 'edessä lasin alta näkyy paljas kallio.',
+          selite: 'Golgatan kappeli: kullattu alttarikaari hopeisine '
+            + 'hahmoineen, ja edessä lasin alta näkyy paljas kallio.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -9695,9 +9696,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Dome of the rock BW 14.JPG',
-          selite: 'Kalliomoskeija Öljymäeltä nähtynä: kullattu kupoli '
-            + 'kohoaa kahdeksankulmaisen laattapinnan päältä, ja '
-            + 'etualalla kulkee temppelivuoren itämuuri.',
+          selite: 'Kalliomoskeija Öljymäeltä: kullattu kupoli '
+            + 'kahdeksankulmaisen laattapinnan päällä ja etualalla '
+            + 'temppelivuoren itämuuri.',
           lahde: 'Berthold Werner, Wikimedia Commons (public domain)',
         },
       ],
@@ -9724,9 +9725,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Western Wall stones, closeup.jpg',
-          selite: 'Läntisen muurin kiviä läheltä: valtavia '
-            + 'reunahakattuja lohkareita, joiden pinta on kulunut '
-            + 'aalloiksi, ja pystysaumaan on työnnetty tiheästi '
+          selite: 'Läntisen muurin kiviä läheltä: valtavia reunahakattuja '
+            + 'lohkareita, joiden pystysaumaan on työnnetty tiheästi '
             + 'paperilappuja.',
           lahde: 'Danielrosehill, Wikimedia Commons (CC BY 4.0)',
         },
@@ -9755,9 +9755,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Jaffa Gate BW 1.JPG',
-          selite: 'Jaffan portin torni iltavalossa: hammastettu '
-            + 'kivimassa työntyy ulos muurilinjasta, ja kaariovi on '
-            + 'varjossa. Edessä on nuoria puita istutuskuopissaan.',
+          selite: 'Jaffan portin torni iltavalossa: hammastettu kivimassa '
+            + 'työntyy ulos muurilinjasta, ja kaariovi jää varjoon.',
           lahde: 'Berthold Werner, Wikimedia Commons (public domain)',
         },
       ],
@@ -9783,10 +9782,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Al-Aqsa Mosque BW 2010-09-21 06-38-12.JPG',
-          selite: 'Al-Aqsan julkisivu koko leveydeltään: vasemmalla '
-            + 'tumma lyijykupoli, keskellä kaari-ikkunoiden rivi ja '
-            + 'oikealla korkeampi kaarikäytävä. Edessä on tyhjä '
-            + 'kiveysaukio.',
+          selite: 'Al-Aqsan julkisivu: vasemmalla tumma lyijykupoli, '
+            + 'keskellä kaari-ikkunoiden rivi ja edessä tyhjä kiveysaukio.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17625,6 +17622,10 @@ export const NAHTAVYYSJUTUT = {
    * kuvaan kuulumaton merkintä — toisessa käsin kirjoitettu signeeraus
    * vasemmassa alanurkassa, toisessa albumin paspartuu ja musta palkki
    * alareunassa.
+   *
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R2: kaikkien kahdeksan jutun
+   * selite-kentät on tiivistetty yhteen virkkeeseen. Leipätekstit,
+   * kuvatiedostot ja lähderivit ovat ennallaan.
    */
   persepolis: {
     'Kaikkien kansojen portti': {
@@ -17652,11 +17653,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Persepolis – Gate of All Nations 02.jpg',
-          selite: 'Portti alaviistosta: etualalla lamassu, jolla on '
-            + 'kiharaksi veistetty parta ja sulkakuvioinen siipi, sen '
-            + 'takana portin korkea kivimuuri ja keskellä yksi pystyssä '
-            + 'oleva uurrettu pylväs pylväänpäineen. Oikealla häämöttää '
-            + 'toinen ovenpieli ja takana paljas vuorenrinne.',
+          selite: 'Portti alaviistosta: etualalla lamassu partoineen ja '
+            + 'siipineen, takana portin kivimuuri ja yksi pystyssä oleva '
+            + 'uurrettu pylväs.',
           lahde: 'Skot, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17692,11 +17691,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Persepolis - Tomb of Artaxerxes III 03.jpg',
-          selite: 'Haudan yläreliefi läheltä: kuningas seisoo korokkeella '
-            + 'kädet koholla, edessään on tulialttari ja yläpuolella '
-            + 'siivekäs kiekko ja kuunsirppi. Korokkeen alla on kaksi '
-            + 'riviä pieniä hahmoja kädet ylhäällä, ja koko kuva-ala on '
-            + 'kehystetty kallioon louhittuun syvennykseen.',
+          selite: 'Haudan yläreliefi: kuningas seisoo korokkeella '
+            + 'tulialttarin ääressä, ja korokkeen kantaa kaksi riviä pieniä '
+            + 'hahmoja.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17728,11 +17725,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bull statue in the northern facade, Hall of hundred columns Persepolis 2014.jpg',
-          selite: 'Salin pohjoissivu: oikealla kohoaa jättimäinen '
-            + 'kivihärkä, jonka pää, harja ja etujalat erottuvat '
-            + 'muurista, ja vasemmalla seisoo yksi kokonainen uurrettu '
-            + 'pylväs. Välissä on ovenpieliä ja katkenneita '
-            + 'pylväänjalustoja sorakentällä.',
+          selite: 'Salin pohjoissivu: oikealla jättimäinen kivihärkä '
+            + 'muurissa ja vasemmalla yksi kokonainen uurrettu pylväs.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -17769,11 +17763,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Apadana, Persepolis, Iran (47727273482).jpg',
-          selite: 'Apadanan pystyssä olevat pylväät pilvistä taivasta '
-            + 'vasten. Etummaisen huipulla on murtunut pylväänpää, ja '
-            + 'takana rivissä viisi muuta. Alhaalla kulkee kolme kävijää '
-            + 'selin kameraan — heidän kokonsa kertoo, kuinka korkeita '
-            + 'pylväät ovat.',
+          selite: 'Apadanan pylväät pilvistä taivasta vasten, ja alhaalla '
+            + 'kulkevat kolme kävijää kertovat, kuinka korkeita ne ovat.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -17805,11 +17796,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The ruins of the Tripylon (or Council Hall), Persepolis, Iran (47727258352).jpg',
-          selite: 'Salin rauniot: oikealla seisoo kokonainen kiveen '
-            + 'veistetty ovenpieli, jota tukee nykyaikainen '
-            + 'metalliteline, ja vasemmalla on katkenneita pylväitä ja '
-            + 'matalia perustuksia ruohikossa. Taustalla aukeaa tasanko '
-            + 'ja sen takana vuorijono.',
+          selite: 'Salin rauniot: oikealla kokonainen ovenpieli '
+            + 'metallitelineen varassa ja vasemmalla katkenneita pylväitä '
+            + 'ruohikossa.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -17846,11 +17835,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Treasury, Persepolis, Iran (33902500738).jpg',
-          selite: 'Aarrekammion perustukset ylhäältä: matalat muurit '
-            + 'jakavat alueen huoneiksi ja käytäviksi, ja yhdessä salissa '
-            + 'on rivissä pyöreitä pylväänjalustoja. Muurien välissä '
-            + 'kasvaa ruohoa, vasemmalla ylhäällä näkyy pystyssä olevia '
-            + 'ovenpieliä ja takana kohoaa vuoren kivinen rinne.',
+          selite: 'Aarrekammion perustukset ylhäältä: matalat muurit jakavat '
+            + 'alueen huoneiksi, ja yhdessä salissa on rivi pyöreitä '
+            + 'pylväänjalustoja.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -17891,11 +17878,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2018-09-21 Iran, Persepolis, Tachara (from the southeast).jpg',
-          selite: 'Tachara kaakosta: alhaalla kulkee terassin muuri, '
-            + 'jonka kylkeen on veistetty rivi hahmoja astiat käsissään, '
-            + 'ja muurin päällä seisovat pystyssä olevat ovenpielet ja '
-            + 'ikkuna-aukot suorina riveinä. Katto ja seinät puuttuvat, '
-            + 'joten aukoista näkyy pelkkä taivas.',
+          selite: 'Tachara kaakosta: terassin muurin kyljessä on rivi '
+            + 'hahmoja astiat käsissään, ja muurin päällä ovenpielet '
+            + 'seisovat suorina riveinä.',
           lahde: 'Laurens R. Krol, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -17924,10 +17909,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palace of Xerxes, Persepolis.jpg',
-          selite: 'Hadishin pystyssä olevat ovenpielet ja ikkuna-aukot '
-            + 'rivissä pilvistä taivasta vasten. Aukkojen läpi näkyy '
-            + 'tasanko ja kaukana vuorijono, ja etualalla on kivilaattaa '
-            + 'ja ruohoa.',
+          selite: 'Hadishin ovenpielet ja ikkuna-aukot rivissä, ja aukkojen '
+            + 'läpi näkyy tasanko ja kaukana vuorijono.',
           lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
