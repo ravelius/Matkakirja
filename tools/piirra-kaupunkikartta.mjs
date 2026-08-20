@@ -1247,10 +1247,41 @@ const KAUPUNGIT = {
      * lehden teksteissä.
      */
     rajat: { pohjoinen: 24.499, etela: 24.456, lansi: 39.571, ita: 39.624 },
+    /*
+     * Jalkakäytävät ja palvelutiet päällä samasta syystä kuin
+     * Jerusalemissa: Profeetan moskeijan ympäristö ja Quban aukio
+     * ovat OSM:ssä jalankulkualueita ja huoltoteitä, ja ilman lippuja
+     * juuri kartan pääkohteen ympärys piirtyi tyhjänä paperina —
+     * kokeiltu ensin ilman ja katsottu.
+     */
+    jalkakaydat: true,
+    palvelutiet: true,
     kainalot: [
       {
         rajat: { pohjoinen: 24.4455, etela: 24.433, lansi: 39.61, ita: 39.6245 },
         x: 78, y: 76.8, leveys: 20, suunta: '3,5 km kaakkoon',
+      },
+    ],
+  },
+  mekka: {
+    /*
+     * Ydin Suuren moskeijan ympärillä: Kaaba lännessä, kellotorni
+     * etelässä, Jannat al-Mu'allan hautausmaa pohjoisessa ja Al-Adlin
+     * hautausmaa itäreunalla. Ruutu on 3,8 × 3,1 km. Kaaba, Maqam
+     * Ibrahim, Zamzamin kaivo ja Safa–Marwa ovat kaikki saman
+     * moskeijan sisällä muutaman kymmenen metrin säteellä — ne ovat
+     * YKSI kartan kohde (numeroympyrät menisivät täysin päällekkäin,
+     * Petran oppi), ja loput kerrotaan sen jutussa.
+     *
+     * Jabal al-Nour (Hiran luola) on 5,3 km koilliseen eikä mahdu
+     * ruutuun — se on KAINALOKARTTANA oikeassa ylänurkassa, joka on
+     * suuntana oikea ja jossa on vain vuorenrinnettä.
+     */
+    rajat: { pohjoinen: 21.4425, etela: 21.4145, lansi: 39.82, ita: 39.857 },
+    kainalot: [
+      {
+        rajat: { pohjoinen: 21.4645, etela: 21.4515, lansi: 39.8545, ita: 39.8685 },
+        x: 78, y: 2, leveys: 20, suunta: '5,3 km koilliseen',
       },
     ],
   },
