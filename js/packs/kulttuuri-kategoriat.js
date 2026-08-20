@@ -27920,6 +27920,31 @@ export const KULTTUURI_KATEGORIAT = {
    * kirjattu maakartat.js:n sana-lohkoon.
    *
    * AVAUSKUVAT JA MATKAOPAS lisättiin samalla kertaa (vaihe B).
+   *
+   * NYKYTIETOPÄIVITYS 20.8.2026 (linjaus "matkaopas on nykytietoa").
+   * Matkailijalle-kuvaksi vaihdettiin vaakakuva: entinen
+   * Sanaa Yemen 2013 old city 001.jpg on 4016 x 6016 pikseliä eli
+   * pystykuva suhteessa 1:1,5, joka venytti palstan. Tilalle tuli
+   * Hamza Shibanin kuva vuodelta 2012 (2048 x 1349). Se toistaa
+   * kattomeri-aiheen kansi- ja avauskuvien kanssa, mutta perustellusti:
+   * Matkailijalle-kappale kertoo vanhankaupungin olevan vain
+   * kymmenesosa kaupungista, ja tässä kuvassa näkyvät samalla kertaa
+   * vanha kaupunki, uuden kaupungin kerrostalot ja laakson reunavuori
+   * — juuri se, mitä kappale sanoo. Oppaan jaksokuvat olivat jo
+   * ennestään nykykuvia (2008), joten niihin ei koskettu.
+   *
+   * OPAS SANOO TURVALLISUUDEN SUORAAN. Jakso "Perille ja liikkeelle"
+   * alkaa nyt toteamuksella, ettei matkailu Jemeniin ole tällä
+   * hetkellä turvallista, ja kertoo lyhyesti mitä kaupungille on
+   * tapahtunut. Faktat en-Wikipedian artikkeleista Sanaa ja Yemeni
+   * civil war (2014–present) (haettu 20.8.2026): sisällissota alkoi
+   * 2014, kaupunki siirtyi pois hallituksen hallinnasta 21.9.2014,
+   * hallinnon istuin siirtyi Adeniin ja Aden julistettiin
+   * väliaikaiseksi pääkaupungiksi maaliskuussa 2015, 12.6.2015
+   * ilmaiskut tuhosivat vanhankaupungin historiallisia taloja, Unesco
+   * teettää korjaustöitä, ja ensimmäinen matkustajalento kuuteen
+   * vuoteen lähti Sanaan kentältä 17.5.2022. Osapuolet on jätetty
+   * nimeämättä linjauksen mukaisesti.
    */
   sana: [
     {
@@ -28047,11 +28072,14 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Sanaa Yemen 2013 old city 001.jpg',
-          selite: 'Tornitalojen julkisivuja vierekkäin ja päällekkäin. '
-            + 'Jokaisen kerroksen ikkunarivi on kehystetty valkoisella '
-            + 'kipsillä, ja seinien yläreunoja kiertää siksakkinauha.',
-          lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: 'Old City Of Sanaa (95129511).jpeg',
+          selite: 'Sana ylhäältä hämärtyvässä illassa vuonna 2012. '
+            + 'Etualalla on vanhankaupungin ruskeatiilisiä tornitaloja '
+            + 'valkoisine kipsikuvioineen ja niiden keskellä kapea '
+            + 'minareetti; kauempana erottuvat uuden kaupungin '
+            + 'valkoiset kerrostalot ja oikealla laakson reunan paljas '
+            + 'vuorenrinne. Taivaalla näkyy kuu.',
+          lahde: 'Hamza Shiban, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Sana on vuoristokaupunki, jonka vanhakaupunki on vain '
           + 'pieni osa kokonaisuutta: muurien sisään mahtuu noin '
@@ -28071,7 +28099,19 @@ export const KULTTUURI_KATEGORIAT = {
           jaksot: [
             {
               otsikko: 'Perille ja liikkeelle',
-              teksti: 'Sanaan lentoasema on Jemenin tärkein: vuonna 2007 '
+              teksti: 'Jemenissä on ollut sisällissota vuodesta 2014, '
+                + 'eikä matkailu maahan ole tällä hetkellä turvallista. '
+                + 'Sana siirtyi syyskuussa 2014 pois hallituksen '
+                + 'hallinnasta, ja maan hallinnon istuin siirtyi '
+                + 'Adeniin, joka julistettiin maaliskuussa 2015 '
+                + 'väliaikaiseksi pääkaupungiksi. Kesäkuussa 2015 '
+                + 'ilmaiskut tuhosivat vanhastakaupungista historiallisia '
+                + 'taloja, ja Unesco on sen jälkeen teettänyt '
+                + 'korjaustöitä. Lentoliikenne katkesi vuosiksi: '
+                + 'ensimmäinen matkustajalento kuuteen vuoteen lähti '
+                + 'Sanaan kentältä toukokuussa 2022. Seuraava kuvaa '
+                + 'kaupunkia sellaisena kuin se toimii tavallisina '
+                + 'aikoina. Sanaan lentoasema on Jemenin tärkein: vuonna 2007 '
                 + 'sen kautta kulki 80 prosenttia koko maan '
                 + 'lentomatkustajista, ja Jemenin kansallisen '
                 + 'lentoyhtiön Yemenian pääkonttori on kaupungissa. '
@@ -28292,8 +28332,46 @@ export const KULTTUURI_KATEGORIAT = {
    * kartan esittelyssä.
    *
    * AVAUSKUVAT JA MATKAOPAS lisättiin samalla kertaa (vaihe B).
-   * Kuvavalinnassa painotettiin historiallista aineistoa (1930-luvun
-   * Esplanade Road, Baedekerin 1914 kartta) eikä nykytilaa.
+   * Kuvavalinnassa painotettiin ensin historiallista aineistoa
+   * (Baedekerin 1914 kartta, mustavalkoinen kenttäkuva 1994).
+   *
+   * NYKYTIETOPÄIVITYS 20.8.2026 (linjaus "matkaopas on nykytietoa").
+   * Oppaasta poistettiin molemmat historialliset kuvat: Baedekerin
+   * kartta 1914 ja Aden Crater & airport 1994.jpg. Kummallekaan ei
+   * löytynyt luontevaa paikkaa nostoista (kansisivun nostot ovat
+   * kraatteri, altaat ja moskeija, merisivun nostot vapaasatama,
+   * sataman siirto ja kellotorni — kaikilla on jo oma kuvansa), joten
+   * ne jäivät kokonaan pois. Tilalle tuli kaksi nykykuvaa:
+   * lentoaseman terminaali 2007 jaksoon "Perille ja liikkeelle" ja
+   * Gold Mohurin norsukallio 2004 sääjaksoon. Historiajakso jäi
+   * kuvattomaksi: sen luonteva nykykuva olisi ollut kansallismuseo
+   * eli entinen Lahejin sulttaanin palatsi, mutta se kuva on jo
+   * käytössä Adenin nähtävyysjutussa (nahtavyysjutut.js), eikä sama
+   * tiedostonimi saa esiintyä kaupungissa kahdesti. Kuvattomia
+   * jaksoja on nyt kaksi viidestä (arjen ilmiö ja historia), mikä on
+   * talon yläraja.
+   *
+   * ADENIN 2015 JÄLKEISIÄ KUVIA EI OLE. Commonsin ainoat vapaat
+   * kuvat sodan jäljistä ovat IOM:n kaksi otosta lentoasemalta
+   * heinäkuulta 2017, ja molempiin on poltettu tekstipalkki "Aden
+   * International Airport" — lisätty merkintä hylkää kuvan. Adenin
+   * ja Adenin maakunnan Commons-luokkien 2007-2010 panoramio-sarjoissa
+   * taas on päivämääräleima kuvan alalaidassa (ja usein tunnistettavia
+   * ihmisiä), joten nekin karsiutuivat. Siksi tuoreimmat kelpaavat
+   * kuvat ovat 2004-2013. Myös Maala Straightin katukuva elokuulta
+   * 2013 hylättiin: etualalla on tunnistettava henkilö lähikuvassa.
+   *
+   * OPAS SANOO TURVALLISUUDEN SUORAAN. Jakso "Perille ja liikkeelle"
+   * alkaa toteamuksella, ettei matkailu Jemeniin ole tällä hetkellä
+   * turvallista. Faktat en-Wikipedian artikkeleista Aden ja Yemeni
+   * civil war (2014–present) (haettu 20.8.2026): sisällissota alkoi
+   * 2014; Aden julistettiin väliaikaiseksi pääkaupungiksi 21.3.2015;
+   * kevään ja kesän 2015 taistelut jättivät suuria osia kaupungista
+   * raunioiksi; lentoasema oli poissa käytöstä ja julistettiin taas
+   * toimintakuntoiseksi 22.7.2015; Tawahin laivalaituri vaurioitui
+   * ilmaiskussa 2015 ja oli kunnostettavana 2019; sähköpulaa on
+   * paikattu heinäkuussa 2024 avatulla 120 megawatin aurinkovoimalalla.
+   * Osapuolet on jätetty nimeämättä linjauksen mukaisesti.
    *
    * KAKSI SATELLIITTIKUVAA, JA SE ON HYVÄKSYTTY AIHETOISTO. Oppaan
    * avauskuva on ISS:n laaja otos, jossa näkyvät molemmat niemet ja
@@ -28454,7 +28532,21 @@ export const KULTTUURI_KATEGORIAT = {
           jaksot: [
             {
               otsikko: 'Perille ja liikkeelle',
-              teksti: 'Adenin kansainvälinen lentoasema on noin kymmenen '
+              teksti: 'Jemenissä on ollut sisällissota vuodesta 2014, '
+                + 'eikä matkailu maahan ole tällä hetkellä turvallista. '
+                + 'Aden julistettiin maaliskuussa 2015 maan '
+                + 'väliaikaiseksi pääkaupungiksi, ja saman vuoden '
+                + 'taistelut jättivät suuria osia kaupungista '
+                + 'raunioiksi. Lentoasema oli kuukausia poissa '
+                + 'käytöstä ja julistettiin taas toimintakuntoiseksi '
+                + 'heinäkuussa 2015. Tawahin vanha laivalaituri '
+                + 'vaurioitui ilmaiskussa, ja sitä kunnostettiin vielä '
+                + 'vuonna 2019. Sähköä on ollut niukasti: kaupungin '
+                + 'ensimmäinen suuri aurinkovoimala, teholtaan 120 '
+                + 'megawattia, avattiin heinäkuussa 2024. Seuraava '
+                + 'kuvaa kaupunkia sellaisena kuin se toimii '
+                + 'tavallisina aikoina. '
+                + 'Adenin kansainvälinen lentoasema on noin kymmenen '
                 + 'kilometrin päässä keskustasta, ja se on Jemenin '
                 + 'toiseksi suurin Sanaan jälkeen. Alku oli sotilaallinen: '
                 + 'britit perustivat Khormaksarin kaupunginosaan '
@@ -28471,12 +28563,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muu Etelä-Jemen siirtyivät oikeanpuoleiseen '
                 + 'liikenteeseen naapurimaiden tavoin.',
               kuva: {
-                tiedosto: 'Aden Crater & airport 1994.jpg',
-                selite: 'Mustavalkoinen kuva lentokentän kenttäalueelta. '
-                  + 'Etualalla on tyhjä hiekkakenttä ja kiitotien reuna, '
-                  + 'takana matala rakennusrivi ja sen yllä pitkä '
-                  + 'sahalaitainen vuorenharjanne.',
-                lahde: 'loose_grip_99, Wikimedia Commons (PD)',
+                tiedosto: 'مطار عدن الدولي (محمدناصر مهدي القميشي - panoramio.jpg',
+                selite: 'Adenin kansainvälisen lentoaseman terminaali '
+                  + 'vuonna 2007, kuvattuna laskeutuvan koneen siiven '
+                  + 'yli. Vaalean rakennuksen julkisivussa on rivi '
+                  + 'korkeita kaariaukkoisia ikkunoita, ja sen edessä '
+                  + 'odottaa kaksi valkoista matkustajabussia.',
+                lahde: 'محمد ناصر مهدي القمي…, Wikimedia Commons (CC BY 3.0)',
               },
             },
             {
@@ -28546,15 +28639,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaupungista. Ensimmäinen sopimus oli tehty jo vuonna '
                 + '1802, kun amiraali Sir Home Popham sopi Lahejin '
                 + 'sulttaanin kanssa kauppapaikasta Craterissa.',
-              kuva: {
-                tiedosto: 'Map of Aden (Baedeker 1914).jpg',
-                selite: 'Baedekerin matkaoppaan kartta Adenin niemestä '
-                  + 'vuodelta 1914. Keskellä on Jebel Shamshamin '
-                  + 'vuoristo korkeuslukuineen, oikeassa laidassa Crater '
-                  + 'ja Sira, ja vasemmassa yläkulmassa kainalokartta '
-                  + 'Steamer Pointista.',
-                lahde: 'Karl Baedeker jr (Life time: 1837-1911), Wikimedia Commons (PD)',
-              },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -28574,6 +28658,14 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'on joka tapauksessa "vähän ja lähes kokonaan '
                 + 'elokuussa". Joulu–helmikuu on selvästi mukavin aika: '
                 + 'keskilämpö 24–25 astetta ja sade muutama millimetri.',
+              kuva: {
+                tiedosto: 'Yémen-209.JPG',
+                selite: 'Gold Mohurin lahden norsukallio vuonna 2004. '
+                  + 'Tummasta laavakivestä kulunut kaari työntyy mereen '
+                  + 'kuin norsun kärsä, ja takana rannan yläpuolella on '
+                  + 'vaaleita kerrostaloja rinteessä.',
+                lahde: 'BluesyPete, Wikimedia Commons (CC BY-SA 3.0)',
+              },
             },
           ],
         },
@@ -28602,7 +28694,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Bombayhin menevä laiva saattoi jättää Adeniin sen postin, '
             + 'joka oli menossa Mombasaan. Suezin kanavan avaaminen 1869 '
             + 'moninkertaisti liikenteen.',
-          selite: 'Käsin väritetty postikortti Adenin Steamer Pointista. '
+          selite: 'Käsin väritetty postikortti Adenin Steamer Pointista '
+            + 'noin vuodelta 1910. '
             + 'Ulapalla on ankkurissa suuri kaksisavupiippuinen '
             + 'matkustajahöyrylaiva, jonka runko on punainen; yläreunan '
             + 'teksti nimeää sen Persiaksi ja paikan laivalaituriksi. '
