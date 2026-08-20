@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v960 — Tekstiremontti E1–E3: Lontoo, Pariisi, Rooma, Berliini, Wien, Madrid, Barcelona, Granada, Lissabon, Ateena, Praha, Budapest, Krakova, Varsova, Amsterdam (240 kuvatekstia yhteen virkkeeseen). Tarkista pari etusivua',
   'v959 — Kehittajakartta erottaa nyt tekstiremontin: remontoimaton lehti hohtaa oranssinruskeana, tehty palaa taustaan (tunniste: intron mitta). Tekstiremontti R6+R7+R9b: Teheran, Bagdad, Istanbul, Kairo, Tokio, Soul, Shanghai, Peking, Delhi, Bangkok, Jakutsk, Magadan, Kamtsatka, Sahalin (291 kuvatekstia yhteen virkkeeseen). Tarkista: kartan varit kehittajatilassa, pari etusivua',
   'v958 — KARTTAKORJAUS: kohdekartat nakyvat taas kaupungeissa, joiden kartta on piirretty ilman piirtoRajat-lohkoa (koko Lahi-ita v937+, Kioto, Vladivostok ym. — kehys jai 0-korkuiseksi v892:n kokokontin takia). Lisaksi tekstiremontti R4+R5: Sanaa, Aden, Masqat, Tabriz, Riad, Doha, Kuwait, Salalah uuteen tekstiasuun (182 kuvatekstia yhteen virkkeeseen). Tarkista: Medinan/Mekan/Persepoliksen kartta nakyy, pari R4/R5-etusivua',
   'v957 — Tekstiremontti R2+R3: Jerusalem, Siinai, Persepolis, Rub al-Khali, Mosul, Halab, Damaskos, Luxor — introt 7–10 virkkeen johdatuksiksi kappalein ja boldauksin, 204 kuvatekstia yhteen virkkeeseen, karttaesittelyt lyhyiksi. Tarkista muutaman lehden etusivu',
