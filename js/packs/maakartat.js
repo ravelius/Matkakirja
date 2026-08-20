@@ -6896,6 +6896,68 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Jäänmurtaja Angara', lat: 52.25017, lon: 104.34397 },
     ],
   },
+  /*
+   * KIOTON KOHDEKARTTA (Opus 20.8.2026).
+   *
+   * RAJAUS 8,0 × 9,3 km, ja se on laaja tarkoituksella. Kioton
+   * kuuluisimmat kohteet ovat hajallaan: Kinkaku-ji pohjoisessa ja
+   * Fushimi Inari etelässä ovat 8,99 kilometrin päässä toisistaan
+   * (oma haversine-laskenta koordinaateista), joten kaupunkilehden
+   * 2–4 km:n ohjenuora ei riitä. Vaihtoehtona olisi ollut tiivis
+   * keskustaruutu ja KAKSI kainaloa (Kinkaku-ji luoteeseen, Fushimi
+   * Inari etelään); se hylättiin, koska yksikään paketin kartta ei
+   * tee niin ja koska Kioton pääpiirre on juuri ruutukaava, joka
+   * näkyy vasta kokonaisena. Perustelut ruudun mitoituksesta ovat
+   * tools/piirra-kaupunkikartta.mjs:n kioto-lohkossa.
+   *
+   * KOORDINAATIT ovat kohteiden omista en-Wikipedian artikkeleista
+   * (haettu 20.8.2026). Kinkaku-jin artikkeli antaa koordinaatin
+   * desimaalimuodossa 35,0395 / 135,7285, ja se on tässä käytetty
+   * arvo: faktapohjan asteet–minuutit–sekunnit-muunnos oli 13
+   * kaarisekuntia eli n. 330 metriä pielessä pituusasteessa, minkä
+   * riippumaton tarkistus löysi. Maailmanperintöluettelon oma
+   * taulukko antaa Kinkaku-jille 35°2′21,85″N 135°43′45,71″E eli
+   * 135,72936 — ero omaan artikkeliin on kahdeksan metriä, ja talon
+   * tavan mukaan kohteen oma artikkeli voittaa.
+   *
+   * ETÄISYYDET JA SUUNNAT ON LASKETTU ITSE (haversine + bearing)
+   * eikä otettu faktapohjasta: sen taulukossa Nijō-linna oli 1,7 km
+   * (todellinen 3,33 km Kioto-asemalta) ja Ginkaku-ji merkitty
+   * pohjoiseen, vaikka se on koilliseen. Tekstissä käytetyt luvut
+   * ovat omasta laskennasta.
+   *
+   * RYŌAN-JI JA ARASHIYAMA JÄIVÄT POIS. Ryōan-jin kivipuutarha osuu
+   * ruudun länsireunan yli (x −0,3 %), ja Arashiyama on 8,41 km
+   * länteen keisarillisesta palatsista. Molemmat kerrotaan lehden
+   * teksteissä — kivipuutarha nostossa, bambumetsä oppaassa
+   * päiväretkenä (Medinan Uhud-vuoren ja Bangkokin kelluvan torin
+   * linja).
+   */
+  kioto: {
+    polku: 'assets/kartat/kioto-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 35.0455, etela: 34.9615, lansi: 135.7185, ita: 135.8065 },
+    esittely: 'Kioto perustettiin kerralla vuonna 794: keisari Kanmu '
+      + 'siirsi hovin Narasta Yamashiron laaksoon ja rakennutti '
+      + 'Heian-kyōn Tang-dynastian pääkaupungin Chang’anin '
+      + 'ruutukaavan mukaan. Sama ruudukko on yhä kaupungin runko, ja '
+      + 'sen halki virtaa Kamo-joki. Keisarit hallitsivat täältä '
+      + 'vuoteen 1868, ja hovi muutti Tokioon 1869. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Pekingissä. */
+      { nimi: 'Kinkaku-ji', lat: 35.0395, lon: 135.7285 },
+      { nimi: 'Ginkaku-ji', lat: 35.0267, lon: 135.7983 },
+      { nimi: 'Keisarillinen palatsi', lat: 35.0253, lon: 135.7622 },
+      { nimi: 'Nijō-linna', lat: 35.0142, lon: 135.7475 },
+      { nimi: 'Nishiki-tori', lat: 35.005, lon: 135.7661 },
+      { nimi: 'Gion', lat: 35.0035, lon: 135.7751 },
+      { nimi: 'Kiyomizu-dera', lat: 34.995, lon: 135.785 },
+      { nimi: 'Sanjūsangen-dō', lat: 34.9878, lon: 135.7717 },
+      { nimi: 'Tō-ji', lat: 34.9806, lon: 135.7478 },
+      { nimi: 'Fushimi Inari-taisha', lat: 34.9672, lon: 135.7728 },
+    ],
+  },
 };
 
 /*

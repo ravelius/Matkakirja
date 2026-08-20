@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v955 — Kioto: uusi lehti (kartta 10 kohteella, 8,0×9,3 km ruutukaava ilman kainaloa) — ensimmainen uudella tekstilinjalla alusta asti. Tarkista kartta, Matkaopas, Historian tehtava',
   'v954 — Delhi uusi lehti; Venäjä-erät V1+V3 (Jekaterinburg, Novosibirsk, Irkutsk kartat+opas; Vladivostok kartta+opas, Kamtšatka ja Sahalin opas); kartan valmiusvärit kehittäjätilaan (harmaa/keltainen); Isfahanin tekstiremontin PILOTTI (johdanto 7–10 virkettä, kuvatekstit 1–2). Tarkista: Isfahanin johdanto ja kuvatekstit, kartan värit, Delhi. Opaskuvien pystyvaihdot tulevat v955:ssä',
   'v952 — Jakutsk ja Magadan: kohdekartat (8+7), avauskuvat, opas. Tarkista molempien kartta ja Matkaopas',
   'v951 — Peking: uusi lehti, kartta 10 kohteella + kesapalatsien kainalo. Tarkista kartta, Matkaopas, Historian tehtava',
@@ -321,6 +322,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '20.8.2026',
   valmiit: [
+    { id: 'kioto', nimi: 'Kioto', versio: 'v955' },
     { id: 'isfahan', nimi: 'Isfahan', versio: 'v954' },
     { id: 'delhi', nimi: 'Delhi', versio: 'v954' },
     { id: 'jekaterinburg', nimi: 'Jekaterinburg', versio: 'v954' },
@@ -332,10 +334,8 @@ export const TUOREET = {
     { id: 'jakutsk', nimi: 'Jakutsk', versio: 'v952' },
     { id: 'magadan', nimi: 'Magadan', versio: 'v952' },
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
-    { id: 'bangkok', nimi: 'Bangkok', versio: 'v950' },
   ],
   tyossa: [
-    { id: 'kioto', nimi: 'Kioto' },
     { id: 'singapore', nimi: 'Singapore' },
   ],
 };

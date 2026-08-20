@@ -27583,25 +27583,9 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Isfahan',
-      johdanto: 'Isfahan on Iranin kolmanneksi suurin kaupunki ja '
-        + 'Isfahanin maakunnan pääkaupunki, 440 kilometriä Teheranista '
-        + 'etelään. Se on kasvanut Irania halkovien pohjois–etelä- ja '
-        + 'itä–länsireittien risteykseen, kuivalle ylätasangolle '
-        + 'Zayandeh-joen varteen. Arabit valloittivat kaupungin vuonna '
-        + '642 ja tekivät siitä al-Jibalin maakunnan pääkaupungin. '
-        + 'Kukoistus kesti 800-luvulta 1700-luvulle: buyidien ja '
-        + 'seldžukkien aikana kaupunki kasvoi suureksi, ja vasta '
-        + 'seldžukkivallan päätyttyä noin vuonna 1200 seurasi taantuma. Käänne tuli vuonna 1598, kun Abbas Suuri '
-        + 'siirsi safavidien pääkaupungin Qazvinista tänne — toisen '
-        + 'kerran kaupungin historiassa — ja rakennutti sille uuden '
-        + 'keskustan. Siltä ajalta ovat puistokadut, kaakeloidut '
-        + 'moskeijat, palatsit ja katetut sillat, joista kaupunki '
-        + 'tunnetaan. Naqsh-e Jahanin aukio on maailman '
-        + 'suurimpia kaupunkiaukioita ja Unescon maailmanperintökohde. '
-        + 'Maine tiivistyy persialaiseen sananlaskuun Esfahan nesf-e '
-        + 'jahan ast, Isfahan on puoli maailmaa. Nimi on paljon '
-        + 'vanhempi: keskipersian Spahān tarkoittaa armeijan paikkaa, ja '
-        + 'Ptolemaios kirjoitti sen muodossa Aspadana.',
+      johdanto: 'Isfahanista sanotaan persiaksi, että se on puoli maailmaa. '
+        + 'Sen keskusaukio on yli 500 metriä pitkä, ja sitä reunustavat '
+        + 'moskeija, palatsi ja basaarin portti.',
       kansikuvat: [
         {
           tiedosto: 'Isfahan to the north side by Eugène Flandin.jpg',
@@ -36324,6 +36308,504 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kruunu.',
           lahde: 'Supanut Arunoprayote, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Bangkok',
+        },
+      ],
+    },
+  ],
+  /*
+   * KIOTO (Opus 20.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian artikkeleista Kyoto,
+   * Kyoto Imperial Palace, Kyōto Station, Kyoto Tower, Kiyomizu-dera,
+   * Fushimi Inari-taisha, Kinkaku-ji, Ginkaku-ji, Nijō Castle, Gion,
+   * Yasaka Shrine, Sanjūsangen-dō, Nishiki Market, Nishijin,
+   * Nishijin-ori, Ryōan-ji, Tō-ji, Arashiyama, Lake Biwa Canal,
+   * Kamo River, Heian-kyō, Geisha ja Historic Monuments of Ancient
+   * Kyoto (Kyoto, Uji and Otsu Cities) — haettu 20.8.2026;
+   * "Historic Monuments of Ancient Kyoto" ja "To-ji" ovat
+   * uudelleenohjauksia, joten ohjaus seurattiin.
+   *
+   * UNESCO-LUVUSSA ON RISTIRIITA KAHDEN WIKIPEDIAN VÄLILLÄ, ja se on
+   * ratkaistu tarkemman lähteen hyväksi (v925:n linja). Kaupungin
+   * kulttuurivisa (asia-questions.js) nojaa fi-Wikipedian
+   * Kioto-artikkeliin, jonka mukaan "15 rakennusta Kioton kaupungin
+   * alueelta" kuuluu maailmanperintökohteeseen. En-Wikipedia ja
+   * kohteen oma artikkeli antavat 17 kohdetta kolmen kaupungin
+   * alueella: 13 buddhalaista temppeliä, 3 shintolaista pyhäkköä ja
+   * yksi linna, joista kaksi on Ujissa ja yksi Ōtsussa — eli Kioton
+   * omalla alueella neljätoista. Nosto K3 kertoo en-Wikipedian luvut
+   * ja jaon kolmeen kaupunkiin; visan vaihtoehdoista (15, 3, 40, 60)
+   * lukija tunnistaa oikean, koska muut ovat kaukana. Fi-Wikipedian
+   * lukua ei toisteta lehdessä, koska se ei kestä tarkistusta.
+   *
+   * VISAN MUUT VASTAUKSET löytyvät lehdestä: Japani ja Honshū sekä
+   * asukasluku matkailijalle-kappaleesta, pääkaupunkiaika 794–1868
+   * nostosta K1 ja tekstiiliteollisuus nostosta K2 (Nishijin-ori).
+   * Historia-sivun minitehtävä kysyy Saikyō-nimeä, jota visa ei
+   * käsittele, ja vastaus on samalla sivulla nostossa H1.
+   *
+   * SISÄLTÖLINJAUS: uskonto ja geishakulttuuri historiallis-
+   * kulttuurisena ilmiönä. Geikot ja maikot ovat ammattilaisia, eivät
+   * nähtävyys — teksti puhuu koulutuksesta, korttelista ja julkisista
+   * tansseista, ei henkilöistä, eikä yhdessäkään kuvassa ole
+   * tunnistettavaa geikoa tai maikoa. Kinkaku-jin tuhopoltto 1950,
+   * Ōnin-sota, Hamaguri-kapina 1864 ja toisen maailmansodan
+   * kohdeluettelo kerrotaan tapahtumina ilman yksityiskohtien
+   * korostusta ja ilman uhrilukuja.
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY: Kiyomizu-dera näkyy kolmessa
+   * kuvassa (kansikuvan kolmikerroksinen pagodi kaupungin yllä,
+   * avauskuvan päähallin lava ja kohdejutun Koyasu-pagodi) — kolme
+   * eri rakennusta samalla rinteellä, sama linja kuin Pekingin
+   * Kielletyssä kaupungissa. Gionin kortteli on neljässä kuvassa
+   * (Hanamikōji yöllä, hiljainen kuja oppaan etusivulla, Shirakawan
+   * puro ja Gion Kobun teatteri) — kaikki eri paikkoja, ja kortteli
+   * on lehden kantoteemoja. Pagodeja on kolme (Hōkan-ji
+   * kansikuvassa, Kiyomizun Koyasu ja Tō-jin viisikerroksinen), ja ne
+   * ovat kolme eri tornia kolmessa eri temppelissä.
+   *
+   * MITAT OVAT UUDEN TEKSTILINJAUKSEN MUKAISET (omistaja 20.8.2026):
+   * johdanto on 7–10 virkkeen johdatus kaupunkiin eikä enää parin
+   * virkkeen iskulause, kuvatekstit ovat yhden tai korkeintaan kahden
+   * virkkeen mittaisia, ja kohdekartan esittely on lyhyt eikä kuvaile
+   * karttaa. Nostot ovat entiseen tapaan 440–660 merkkiä.
+   *
+   * KOLME HYLKÄYSTÄ KUVATYÖSTÄ, JOTKA KANNATTAA MUISTAA: 1870-luvun
+   * Kioto-valokuvat ovat käytännössä kaikki studiokuvia, joiden
+   * kuvapintaan on painettu negatiivin numero ja nimi ("930 B KIOTO
+   * TOWN FROM MARUY…", "1303. KIOTO.") tai kirjoitettu arkistonumero
+   * käsin — sama hylkäysperuste kuin Pekingin Qianmen-katukuvassa.
+   * Siksi ainoa 1800-luvun valokuva tässä lehdessä on Adolfo
+   * Farsarin käsinväritetty Kinkaku-ji, jossa merkintöjä ei ole.
+   */
+  kioto: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kioto',
+      johdanto: 'Kioto oli Japanin keisarillinen pääkaupunki yli tuhat vuotta, '
+        + 'ja sen temppelit, puutarhat ja puutalokorttelit säilyivät '
+        + 'sodalta lähes koskemattomina.',
+      kansikuvat: [
+        {
+          tiedosto: 'Yasaka-dori early morning with street lanterns and the Tower of Yasaka (Hokan-ji Temple), Kyoto, Japan.jpg',
+          selite: 'Yasaka-dōri aamuhämärissä: kivetty kuja nousee '
+            + 'puutalojen välissä kohti Hōkan-jin viisikerroksista '
+            + 'pagodia, ja seinillä palavat paperilyhdyt. Katu on '
+            + 'tyhjä.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kyoto from Kiyomizu-Dera.jpg',
+          selite: 'Kiyomizu-deran kolmikerroksinen pagodi seisoo '
+            + 'kivimuurin päällä, ja sen takaa avautuu Kioto: matalaa '
+            + 'kaupunkia laakson pohjalla ja Nishiyaman harjanne '
+            + 'sinisenä horisontissa.',
+          lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Bamboo Forest, Arashiyama, Kyoto, Japan.jpg',
+          selite: 'Arashiyaman bambumetsä läheltä: harmaanvihreät '
+            + 'rungot nousevat suorina vieri vieressä, nivelet '
+            + 'renkaina, ja valo tulee ylhäältä lehvästön läpi.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kulta, portit ja lava — kolme kohdetta, joiden
+       * takia Kiotoon tullaan, ja kaikki kolme ovat lehden
+       * kohdekartalla.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Water reflection of Kinkaku-ji Temple with blue sky and white clouds, Kyoto, Japan.jpg',
+          selite: 'Kinkaku-ji Peililammen takaa: kaksi ylintä kerrosta '
+            + 'on päällystetty kultalehdellä, katonharjalla seisoo '
+            + 'kultainen feeniks, ja koko rakennus toistuu tyynessä '
+            + 'vedessä.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Fushimi Inari Taisha tunnel droit.jpg',
+          selite: 'Fushimi Inarin toriit muodostavat tunnelin: '
+            + 'oranssinpunaiset pylväät seisovat mustilla jaloilla '
+            + 'tiheässä rivissä, ja palkkeihin on maalattu '
+            + 'lahjoittajien nimet. Polku on tyhjä.',
+          lahde: 'Hyppolyte de Saint-Rambert, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kiyomizu-dera, Kyoto, November 2016 -01.jpg',
+          selite: 'Kiyomizu-deran päähalli ruskan aikaan: lava '
+            + 'työntyy rinteen yli puupilarien ristikon varassa, '
+            + 'ympärillä palavat punaiset vaahterat ja takana '
+            + 'levittäytyy kaupunki.',
+          lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Tuhat vuotta ja yksi muutto',
+          tiedosto: '東海道五十三次之内 大尾 京師 三条大橋-Kyoto, Sanjo Ohashi MET DP122235.jpg',
+          teksti: 'Keisari Kanmu siirsi hovin Narasta tänne vuonna '
+            + '794 ja rakennutti uuden pääkaupungin, Heian-kyōn. '
+            + 'Kioto pysyi keisarien kaupunkina vuoteen 1868 asti — '
+            + 'sotilashallitsijat asettuivat välillä Kamakuraan ja '
+            + 'Edoon, mutta hovi jäi. Vuonna 1869 keisarin istuin '
+            + 'siirtyi Tokioon, ja kaupunki menetti kerralla sekä '
+            + 'hallinnollisen että taloudellisen asemansa. Vastaus '
+            + 'oli yhteinen suunnitelma: Biwa-järveltä kaivettiin '
+            + '1885–1890 kahdenkymmenen kilometrin kanava, joka toi '
+            + 'juomavettä, kastelua ja vuodesta 1895 vesivoimaa, ja '
+            + 'samana vuonna Kiotossa kulki Japanin ensimmäinen '
+            + 'kaupallinen sähköraitiotie.',
+          selite: 'Hiroshigen puupiirros Tōkaidōn viimeisestä '
+            + 'pysäkistä: matkalaisia kulkee punakaiteisen Sanjōn '
+            + 'sillan yli Kamo-joen matalan uoman poikki, takana '
+            + 'kaupungin katot ja punaiseksi värjätyt Higashiyaman '
+            + 'harjat. Otsikkokartussa lukee Keishi, yksi Kioton '
+            + 'vanhoista nimistä.',
+          lahde: 'Utagawa Hiroshige, Wikimedia Commons (CC0)',
+          wiki: 'Kioto',
+        },
+        {
+          otsikko: 'Kortteli, joka sai nimensä sotaleiristä',
+          tiedosto: 'No robe (karaori).tiff',
+          teksti: 'Nishijin tarkoittaa läntistä leiripaikkaa: siihen '
+            + 'kohtaan Horikawa-kadun länsipuolelle asettui Yamana '
+            + 'Sōzenin armeija Ōnin-sodassa 1467–1477. Kun sota '
+            + 'loppui, ympäri maata paenneet kutojat palasivat ja '
+            + 'asettuivat samalle paikalle — ja kortteli sai nimensä. '
+            + 'Nishijin-ori on Nishijinin silkkikangas, jota on '
+            + 'kudottu hovin ja aatelin tarpeisiin Heian-kyōn ajoista '
+            + 'asti. Vuonna 1837 katovuodet pysäyttivät työn, ja '
+            + 'keisarin muutto Tokioon 1869 näytti lopettavan koko '
+            + 'alan. Vuonna 1872 joukko kutojia matkusti Eurooppaan '
+            + 'oppiin ja toi mukanaan jacquard-kangaspuut; vuoteen '
+            + '1898 mennessä Nishijin oli taas jaloillaan.',
+          selite: 'Yksityiskohta Nishijinissä kudotusta nō-teatterin '
+            + 'puvusta: vihreällä silkkipohjalla kulkee kullalla '
+            + 'kudottu ristikkokuvio, ja sen päälle on nostettu '
+            + 'oransseja, punaisia ja valkoisia krysanteemeja ja '
+            + 'apilankukkia.',
+          lahde: 'Freer gallery, no date, Wikimedia Commons (PD)',
+          wiki: 'Kioto',
+        },
+        {
+          otsikko: 'Kaksituhatta pyhää paikkaa',
+          tiedosto: 'Ryoan-ji-Garden-2018.jpg',
+          teksti: 'Kiotossa on noin kaksituhatta uskonnollista '
+            + 'paikkaa: 1 600 buddhalaista temppeliä ja 400 '
+            + 'shintolaista pyhäkköä. Kaupungissa on myös Japanin '
+            + 'suurin keskittymä suojeltuja kulttuurikohteita — noin '
+            + 'viidennes maan kansallisaarteista ja neljätoista '
+            + 'prosenttia tärkeistä kulttuuriomaisuuskohteista. '
+            + 'Vuonna 1994 Unesco listasi kokonaisuuden nimellä '
+            + 'muinaisen Kioton historialliset monumentit: '
+            + 'seitsemäntoista kohdetta, joista kolmetoista on '
+            + 'buddhalaisia temppeleitä, kolme shintolaisia '
+            + 'pyhäkköjä ja yksi linna. Kaikki eivät ole Kiotossa — '
+            + 'kaksi on naapurissa Ujissa ja yksi Ōtsussa Shigan '
+            + 'puolella.',
+          selite: 'Ryōan-jin kivipuutarha: valkoiseksi haravoitua '
+            + 'soraa, jonka pinnalla kiertävät suorat ja kaarevat '
+            + 'urat, ja kolme sammalsaareketta kivineen. Takana on '
+            + 'matala savimuuri tiilikatteineen.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kioto',
+        },
+        {
+          otsikko: 'Geiko, maiko ja kevään tanssit',
+          tiedosto: '170216 Gion Kobu Kaburenjo Kyoto Japan01s3.jpg',
+          teksti: 'Kiotossa geishat eivät sano itseään geishoiksi '
+            + 'vaan geikoiksi, ja oppilaita kutsutaan maikoiksi. '
+            + 'Gionin kortteli rakennettiin alun perin Yasaka-'
+            + 'pyhäkön edustalle palvelemaan matkalaisia ja '
+            + 'pyhiinvaeltajia, ja siitä kasvoi Japanin arvostetuin '
+            + 'geishakortteli; vuonna 1881 se jakautui kahtia Gion '
+            + 'Kobuksi ja Gion Higashiksi. Geikot esiintyvät '
+            + 'ochaya-teehuoneissa, jotka ovat vanhoja machiya-'
+            + 'kaupunkitaloja: ohjelmassa on laulua, tanssia, '
+            + 'soittoa ja keskustelua. Vuoden 1872 Kioton '
+            + 'näyttelystä alkoivat julkiset kevättanssit Miyako '
+            + 'Odori, joita esitetään yhä koko huhtikuun ajan.',
+          selite: 'Gion Kobun Kaburenjo-teatteri, jossa Miyako Odori '
+            + 'esitetään: vaalea rakennus, jonka vihreät tiilikatot '
+            + 'nousevat kolmessa portaassa, ja edessä pilareiden '
+            + 'kannattama sisäänkäyntikatos. Aukio on tyhjä.',
+          lahde: '663highland, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kioto',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Streets of Gion, Kyoto - Gion7712.jpg',
+          selite: 'Kapea kuja Gionissa keskellä päivää: molemmin '
+            + 'puolin machiya-taloja tummine säleikköineen, '
+            + 'bambukaihtimet ikkunoiden edessä, punainen '
+            + 'paperilyhty ja teehuoneen nimikyltti. Ei kulkijoita.',
+          lahde: 'lumoplank, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Kioto on Kioton prefektuurin pääkaupunki Japanin '
+          + 'Kansain alueella, maan suurimmalla saarella Honshūlla, '
+          + 'ja siellä asuu noin 1,46 miljoonaa ihmistä. Kaupunki '
+          + 'istuu allaslaaksossa, jota vuoret ympäröivät kolmelta '
+          + 'suunnalta, ja sen katuverkko on yhä se ruutukaava, joka '
+          + 'mitattiin vuonna 794. Vanha keskusta kävellään ja '
+          + 'ajetaan bussilla; temppelit ovat laakson reunoilla, '
+          + 'geishakortteli joen itäpuolella ja kutojien kortteli '
+          + 'luoteessa.',
+        artikkeli: {
+          nimi: 'Matkailijan Kioto',
+          taitto: 'opas',
+          teksti: 'Ruutukaava keskellä, vuoret kolmella sivulla ja '
+            + 'kolme jokea laakson läpi — Kiotossa suunnistaa '
+            + 'kadunkulmien nimillä.',
+          nosto: 'Kioton osoitteet luetaan risteyksinä: kun sanotaan '
+            + 'Shijō-Kawaramachi, tarkoitetaan kohtaa, jossa '
+            + 'itä–länsi-suuntainen Shijō ja pohjois–etelä-suuntainen '
+            + 'Kawaramachi kohtaavat.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaikki alkaa Kioto-asemalta. Nykyinen '
+                + 'asemarakennus valmistui 1997 arkkitehti Hiroshi '
+                + 'Haran suunnitelmien mukaan: se on 70 metriä korkea '
+                + 'ja 470 metriä pitkä idästä länteen, ja sen '
+                + 'keskellä nousee lasikattoinen halli portaineen ja '
+                + 'liukuportaineen. Vastapäätä seisoo Kioton torni, '
+                + 'jonka näköalatasanne on sadan metrin ja kärki 131 '
+                + 'metrin korkeudessa; se avattiin 1964 ja on yhä '
+                + 'kaupungin korkein rakennelma. Fushimi Inarille '
+                + 'pääsee asemalta viidessä minuutissa junalla, '
+                + 'muualle bussilla tai kävellen.',
+              kuva: {
+                tiedosto: 'Kyoto Station November 2016 -03.jpg',
+                selite: 'Kioto-aseman keskushalli: teräsristikkoinen '
+                  + 'lasikatto kaartuu korkealla, liukuportaat '
+                  + 'nousevat terassilta toiselle ja alhaalla '
+                  + 'matkustajat kulkevat pitkän valotusajan '
+                  + 'sumeina jälkinä.',
+                lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kioto on Yamashiron eli Kioton allaslaaksossa '
+                + 'Tanban ylängön itäreunalla. Laaksoa reunustavat '
+                + 'kolmelta suunnalta vuoret — Higashiyama idässä, '
+                + 'Kitayama pohjoisessa ja Nishiyama lännessä — ja '
+                + 'korkeimmat harjat nousevat noin tuhanteen metriin. '
+                + 'Laakson läpi virtaa kolme jokea: Uji etelässä, '
+                + 'Katsura lännessä ja Kamo idässä. Kaupungin '
+                + 'pinta-ala on 827,9 neliökilometriä eli 17,9 '
+                + 'prosenttia koko prefektuurin maasta. Kioto lepää '
+                + 'laajan pohjavesialtaan päällä, ja siitä ovat '
+                + 'kaivot saaneet vetensä — mutta rakentaminen on '
+                + 'vähentänyt veden imeytymistä ja kaivoja kuivuu '
+                + 'yhä nopeammin.',
+              kuva: {
+                tiedosto: 'Kyoto01.jpg',
+                selite: 'Kioto vuorten ympäröimässä laaksossa: matala '
+                  + 'kaupunki täyttää altaan pohjan, keskellä nousee '
+                  + 'Kioton tornin valkoinen neula, ja takana kohoaa '
+                  + 'sumuinen vuoriharjanne.',
+                lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: geikot tänään',
+              teksti: 'Gionin kaksi hanamachia ovat yhä toiminnassa, '
+                + 'ja osa korttelista on suojeltu valtakunnallisena '
+                + 'historiallisena alueena. Kaupunki on siistinyt '
+                + 'näkymiä 1980-luvulta lähtien viemällä sähkölinjat '
+                + 'maan alle muun muassa Hanamikōjilla, Nene no '
+                + 'Michillä ja Ponto-chōssa. Geikot ja maikot '
+                + 'kulkevat kujilla matkalla tunneille ja töihin, ja '
+                + 'kortteleissa toimii myös pukeutumisstudioita, '
+                + 'joissa matkailija saa maiko-asun päälleen — Kioton '
+                + 'säännöt vaativat, että puku on tarkoituksella '
+                + 'epätarkka, jottei kukaan esittäisi oikeaa maikoa.',
+              kuva: {
+                tiedosto: 'Shirakara Canal, Gion, Kyoto.jpg',
+                selite: 'Shirakawan puro Gionissa: matala vesi '
+                  + 'juoksee kiveystä pitkin, ja rantaan asti '
+                  + 'rakennetut teehuoneet kääntävät puroon päin '
+                  + 'bambukaihtimensa ja puuseinänsä. Rannalla kasvaa '
+                  + 'pajuja.',
+                lahde: 'MichaelMaggs, Wikimedia Commons (CC BY-SA 2.5)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: vesi vuoren takaa',
+              teksti: 'Kun hovi oli lähtenyt, Kioto kaivoi itselleen '
+                + 'uuden elinkeinon. Biwa-järven kanavan työt '
+                + 'alkoivat 1885 ja valmistuivat 9. huhtikuuta 1890: '
+                + 'kahdenkymmenen kilometrin vesiväylä toi Japanin '
+                + 'suurimmasta järvestä juomavettä, kasteluvettä ja '
+                + 'vuodesta 1895 vesivoimaa tehtaille ja katuvaloille. '
+                + 'Samalla sähköllä lähti liikkeelle maan '
+                + 'ensimmäinen kaupallinen sähköraitiotie. Kanava '
+                + 'kulkee Nanzen-jin temppelialueen läpi punatiilistä '
+                + 'muurattua akveduktia pitkin, ja sen haara on '
+                + 'nykyään Filosofin polun varrella.',
+              kuva: {
+                tiedosto: 'The Lake Biwa Canal Suirokaku Aqueduct.jpg',
+                selite: 'Suirokaku-akvedukti Nanzen-jin pihalla: '
+                  + 'punatiilinen kaariholvisto kannattaa vesiuomaa, '
+                  + 'yläreunassa kiertää pieni kaarikoristelu, ja '
+                  + 'kuvan reunoilla riippuvat punaiset vaahteran '
+                  + 'lehdet.',
+                lahde: '鵜飼 実幸, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Laakso tekee vuodenajoista jyrkät. Tammikuun '
+                + 'keskilämpö on kolme ja puoli astetta ja yöt '
+                + 'painuvat nollaan; elokuussa keskilämpö on lähes '
+                + 'kaksikymmentäseitsemän ja päivät nousevat '
+                + 'kolmeenkymmeneenyhteen. Sadetta tulee vuodessa '
+                + '1 638 millimetriä eikä yksikään kuukausi jää '
+                + 'kuivaksi: eniten sataa kesä- ja heinäkuussa, kun '
+                + 'tsuyu-sadekausi kestää kesäkuun puolivälistä '
+                + 'heinäkuun loppuun, ja syyskuun 192 millimetriä '
+                + 'tuovat taifuunit. Kävelijän kuukaudet ovat '
+                + 'huhti–toukokuu ja loka–marraskuu. Lehden luvut '
+                + 'ovat ERA5-hilan arvoja laaksoruudulta, johon '
+                + 'kuuluu myös ympäröiviä rinteitä, joten kaupungin '
+                + 'oma sääasema laakson pohjalla mittaa '
+                + 'kesähelteillä pari astetta korkeampia lukemia.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kioton historia alkaa yhdestä päätöksestä: vuonna '
+        + '794 keisari Kanmu jätti Naran ja rakennutti uuden '
+        + 'pääkaupungin tyhjälle paikalle Yamashiron laaksoon. '
+        + 'Heian-kyō mitattiin Tang-dynastian pääkaupungin Chang’anin '
+        + 'mukaan, ja sen ruutukaava on yhä kaupungin runko. '
+        + 'Heian-kaudella Kiotosta tuli hovikulttuurin keskus, ja '
+        + 'sen ympärille kehittyivät ne taiteen ja estetiikan muodot, '
+        + 'joita Japanissa pidetään yhä omimpina. Sitten kaupunki '
+        + 'paloi: Ōnin-sota 1467–1477 runteli sitä lähes kokonaan, '
+        + 'eikä se toipunut ennen 1500-luvun puoliväliä. Toyotomi '
+        + 'Hideyoshi rakensi keskustan uusiksi 1500-luvun lopulla — '
+        + 'hän kaksinkertaisti pohjois–etelä-katujen määrän ja '
+        + 'ympäröi kaupungin maavalleilla. Tokugawa-shōgunit '
+        + 'hallitsivat Edosta mutta pitivät Kiotossa oman linnansa, '
+        + 'ja juuri siellä valta palautettiin keisarille vuonna 1867. '
+        + 'Hamaguri-kapina poltti vielä 1864 kaupungista 28 000 '
+        + 'taloa, mutta toinen maailmansota ohitti Kioton lähes '
+        + 'kokonaan. Kaupunki on siis palanut monta kertaa, mutta '
+        + 'sen pohjapiirros ei ole muuttunut.',
+      tehtava: {
+        kysymys: 'Millä nimellä Kiotoa kutsuttiin hetken aikaa sen '
+          + 'jälkeen, kun keisarin istuin siirtyi Tokioon?',
+        vaihtoehdot: [
+          'Saikyō eli läntinen pääkaupunki',
+          'Heian-kyō eli rauhan pääkaupunki',
+          'Miyako eli pääkaupunki',
+          'Keishi eli pääkaupungin kaupunki',
+        ],
+        oikea: 0,
+        fakta: 'Tokio tarkoittaa itäistä pääkaupunkia, joten vanha '
+          + 'pääkaupunki sai hetkeksi parikseen nimen läntinen '
+          + 'pääkaupunki. Nimi ei jäänyt käyttöön.',
+      },
+      nostot: [
+        {
+          otsikko: 'Heian-kyō, Chang’anin mitalla',
+          tiedosto: 'Plan of Heiankyo.jpg',
+          teksti: 'Keisari Kanmu halusi etäisyyttä Naran '
+            + 'vaikutusvaltaiseen buddhalaiseen papistoon ja valitsi '
+            + 'uudeksi pääkaupungiksi Udan kylän Yamashiron '
+            + 'maakunnassa. Uusi kaupunki nimettiin Heian-kyōksi, '
+            + 'rauhan ja tyyneyden pääkaupungiksi, ja se mitattiin '
+            + 'Kiinan Tang-dynastian pääkaupungin Chang’anin '
+            + 'ruutukaavan mukaan. Vuodesta 794 alkoi Heian-kausi. '
+            + 'Kaupunkia on kutsuttu myös nimillä Kyō, Miyako, Kyō no '
+            + 'Miyako ja Keishi; Heian-kauden lopulla vakiintui '
+            + 'Kyōto, pääkaupunkikaupunki, ja kun istuin siirtyi '
+            + 'Tokioon, Kiotoa sanottiin hetken Saikyōksi eli '
+            + 'läntiseksi pääkaupungiksi.',
+          selite: 'Puupiirroskartta Heian-kyōsta: korttelit '
+            + 'muodostavat säännöllisen shakkiruudukon, ylälaidassa '
+            + 'on palatsialue omana suorakaiteenaan, paikannimet on '
+            + 'kehystetty punaisin laatikoin ja molemmilla reunoilla '
+            + 'on tiheät selitystekstit.',
+          lahde: 'Mori Koan, Wikimedia Commons (PD)',
+          wiki: 'Kioto',
+        },
+        {
+          otsikko: 'Sota, jota kaupunki ei unohtanut',
+          tiedosto: 'Kanō Eitoku - Rakuchū rakugai zu (Uesugi) - left screen.jpg',
+          teksti: 'Vuonna 1467 puhkesi Ōnin-sota, joka runteli '
+            + 'Kiotoa kymmenen vuoden ajan: samuraisuvut taistelivat '
+            + 'kaduilla, kartanot muutettiin linnoituksiksi, '
+            + 'kaupungin halki kaivettiin syviä juoksuhautoja ja '
+            + 'lukemattomat rakennukset paloivat. Kaupunki toipui '
+            + 'vasta 1500-luvun puolivälissä. Sen jälkeen Toyotomi '
+            + 'Hideyoshi rakensi Kioton uusiksi: hän kaksinkertaisti '
+            + 'keskustan pohjois–etelä-katujen määrän, jolloin vanhat '
+            + 'neliökorttelit muuttuivat suorakaiteiksi, ympäröi '
+            + 'kaupungin odoi-nimisillä maavalleilla ja kokosi '
+            + 'temppelit yhteen kortteliin Teramachi-kadun varrelle.',
+          selite: 'Yksityiskohta Kanō Eitokun kuusiosaisesta '
+            + 'taittoseinästä, joka esittää Kiotoa 1500-luvulla: '
+            + 'kaupunki on maalattu ylhäältä päin kultalehden päälle, '
+            + 'kultapilvet peittävät välit, ja kattojen väleissä '
+            + 'kulkee satoja pieniä ihmishahmoja.',
+          lahde: 'Kanō Eitoku, Wikimedia Commons (PD)',
+          wiki: 'Kioto',
+        },
+        {
+          otsikko: 'Palatsi, joka rakennettiin kahdeksan kertaa',
+          tiedosto: 'Kyoto-gosho Shishinden zenkei-5.jpg',
+          teksti: 'Kioton keisarillinen palatsi oli keisarien koti '
+            + 'vuodesta 1331 vuoteen 1869, mutta nykyiset '
+            + 'rakennukset ovat nuoria: pelkästään Edo-kaudella '
+            + 'palatsi rakennettiin tulipalojen jälkeen uudelleen '
+            + 'kahdeksan kertaa, viimeksi vuoden 1854 palon jälkeen. '
+            + 'Nykyinen versio valmistui 1855 keisari Kōmein '
+            + 'pyynnöstä, ja siinä pyrittiin toistamaan Heian-ajan '
+            + 'rakennustapa. Kun keisari Meiji muutti Tokioon 1869, '
+            + 'palatsi jäi tyhjilleen — ja vuonna 1877 hän valitti '
+            + 'sen rappiota ja määräsi rakennukset säilytettäviksi '
+            + 'entisellään. Sekä Taishō että Shōwa kruunattiin täällä.',
+          selite: 'Shishinden eli seremoniasali valkoisen '
+            + 'sorapihan takaa: leveä sypressintuohikatto laskeutuu '
+            + 'kaarena, maalaamattomat pilarit ja valkoiset seinät '
+            + 'kannattavat sitä, ja portaiden itäpuolella kukkii '
+            + 'kirsikkapuu.',
+          lahde: 'Saigen Jiro, Wikimedia Commons (CC0)',
+          wiki: 'Kioto',
+        },
+        {
+          otsikko: 'Kaupunki, joka säästyi',
+          tiedosto: 'Kamo Riverbank (45864682131).jpg',
+          teksti: 'Kioto on palanut monta kertaa. Viimeisin suuri '
+            + 'palo oli Hamaguri-kapina vuonna 1864, jolloin '
+            + 'kaupungista tuhoutui 28 000 taloa ja joka osoitti, '
+            + 'kuinka syvälle tyytymättömyys Tokugawa-shogunaattiin '
+            + 'oli levinnyt. Toisen maailmansodan lopulla Kioto oli '
+            + 'atomipommin kohdelistalla, koska kaupungin merkitys '
+            + 'oli suuri, mutta sotaministeri Henry L. Stimson vaati '
+            + 'sen poistamista listalta ja tilalle tuli Nagasaki. '
+            + 'Kioto säästyi myös tavanomaisilta pommituksilta '
+            + 'lähes kokonaan. Siksi täällä on yhä poikkeuksellisen '
+            + 'paljon sotaa edeltäviä puutaloja — machiya-'
+            + 'kaupunkitaloja, jollaisia muista suurkaupungeista ei '
+            + 'juuri löydy.',
+          selite: 'Kamo-joen länsiranta: kivetty penger nousee '
+            + 'vedestä, ja sen päällä seisoo rivi vanhoja puutaloja '
+            + 'parvekkeineen ja jokeen päin avautuvine terasseineen. '
+            + 'Takana kohoavat uudemmat betonitalot, ja rantapolulla '
+            + 'kulkee yksi lenkkeilijä.',
+          lahde: 'Benh LIEU SONG from Torcy, France, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Kioto',
         },
       ],
     },

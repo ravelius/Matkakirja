@@ -1643,4 +1643,51 @@ export const SAATIEDOT = {
       + 'kolmekymmentä astetta ja päivät nousevat '
       + 'kolmeenkymmeneenneljään.',
   },
+  /*
+   * KIOTO (20.8.2026). Sama menetelmä kuin paketin muillakin
+   * riveillä: Open-Meteon arkisto (ERA5), jakso 1991–2020, keskilämpö
+   * kuukauden päiväkeskiarvojen keskiarvona ja sade kuukausisumman
+   * vuosikeskiarvona; ylin ja alin koko jakson päivittäisten ylimpien
+   * ja alimpien keskiarvojen puolivälinä keskilämmön ympärillä. Haku
+   * tehtiin kuutena viiden vuoden palana ja palat yhdistettiin samalla
+   * kaavalla (Open-Meteon päiväkiintiö ei kestä 30 vuoden hakua
+   * yhtenä pyyntönä; Bangkokin ja Pekingin ennakkotapaus) — vuosia 30,
+   * päiviä 10 958.
+   *
+   * MITTAUSPISTE 35,01 / 135,77 on laakson pohja Nishiki-torin ja
+   * keisarillisen palatsin välissä, mutta ERA5:n hilaruutu on tässä
+   * selitettävä (Siinain ja Petran ennakkotapaus): Kioto on
+   * allaslaakso, jota vuoret ympäröivät kolmelta suunnalta noin
+   * tuhanteen metriin asti (en-Wikipedia "Kyoto"), ja hilaruutuun
+   * kuuluu laakson pohjan lisäksi rinteitä. Siksi rivin luvut ovat
+   * hieman viileämmät ja hieman sateisemmat kuin kaupungin oman
+   * sääaseman normaalit samalta jaksolta: en-Wikipedian sääboksi
+   * (Kyoto, 1991–2020) antaa tammikuulle 4,8 ja elokuulle 28,5
+   * astetta sekä vuosisateeksi 1 522,9 mm, kun tämä rivi antaa 3,4 /
+   * 26,7 astetta ja 1 638 mm. Ero on kerrottu myös lukijalle oppaan
+   * sääjaksossa, eikä sitä ole tasoitettu käsin — rivi on koneen
+   * kirjoittama.
+   *
+   * Luonnehdinnan luvut ovat rivin omia. Sadekauden nimi tsuyu ja sen
+   * ajoitus (kesäkuun puolivälistä heinäkuun loppuun) sekä kesän ja
+   * syksyn taifuunit ovat en-Wikipedian Kyoto-artikkelin
+   * ilmasto-osiosta.
+   */
+  kioto: {
+    lat: 35.01,
+    lon: 135.77,
+    keskilampo: [3.4, 4.1, 7.4, 12.8, 17.7, 21.7, 25.5, 26.7, 22.7, 16.8, 11.1, 5.7],
+    ylin: [7, 8, 12, 18, 22, 26, 29, 31, 26, 21, 15, 10],
+    alin: [0, 0, 3, 8, 13, 18, 22, 23, 19, 13, 7, 2],
+    sade: [64, 74, 120, 134, 154, 214, 236, 138, 192, 164, 82, 66],
+    luonnehdinta: 'Laakso pitää vuodenajat jyrkkinä: tammikuun '
+      + 'keskilämpö on kolme ja puoli astetta ja yöt painuvat nollaan, '
+      + 'kun taas elokuussa keskilämpö on lähes kaksikymmentäseitsemän '
+      + 'ja päivät nousevat kolmeenkymmeneenyhteen. Vettä tulee '
+      + 'vuodessa 1 638 millimetriä eikä yksikään kuukausi jää kuivaksi '
+      + '— vähitenkin sataa tammikuussa 64 millimetriä. Sateisimmat '
+      + 'ovat kesä- ja heinäkuu, tsuyu-sadekausi, jolloin kertyy '
+      + 'yhteensä 450 millimetriä; syyskuun 192 millimetriä tuovat '
+      + 'taifuunit.',
+  },
 };

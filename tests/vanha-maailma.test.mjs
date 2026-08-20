@@ -364,8 +364,15 @@ test('Aasian artikkelit noudattavat talon mittaa', async () => {
     assert.equal(a.teksti.split('\n\n').length, 3, `${nimi}: ei kolmea kappaletta`);
     assert.ok(a.teksti.length > 600 && a.teksti.length < 1100,
       `${nimi}: teksti ${a.teksti.length} merkkiä (600–1100)`);
-    assert.ok(a.intro.length > 100 && a.intro.length < 280,
-      `${nimi}: intro ${a.intro.length} merkkiä (100–280)`);
+    /*
+     * Intron mitta muuttui 20.8.2026 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): etusivun leipäteksti on 7–10 virkkeen johdatus
+     * (~700–1200 mrk). Vanhat lyhyet introt (100–280) sallitaan
+     * kunnes tekstiremontti on käynyt kaikki kaupungit läpi — sen
+     * jälkeen alaraja nostetaan 600:aan.
+     */
+    assert.ok(a.intro.length > 100 && a.intro.length < 1200,
+      `${nimi}: intro ${a.intro.length} merkkiä (100–1200)`);
     assert.ok(!/[!]/.test(a.teksti + a.intro), `${nimi}: huutomerkki ei kuulu artikkeliin`);
   }
 });
