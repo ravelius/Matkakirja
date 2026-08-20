@@ -94,7 +94,11 @@ kohteisiin (linjaus 17.8.) — vain lehdet.
 
 - Pääsessio orkestroi eikä kirjoita itse: aliagentit tekevät
   faktapohjat (tarkistaja AINA ERI agentti kuin kokoaja),
-  kirjoituksen ja kuvatyön. Kirjoittajat työskentelevät
+  kirjoituksen ja kuvatyön. MALLI ANNETAAN AGENTILLE AINA
+  EKSPLISIITTISESTI (kirjoittajat ja kuvatyö: opus; faktapohjat
+  ja tarkistukset: sonnet) — ilman määritystä agentti perii
+  pääsession mallin, mikä poltti Fable-krediittejä 20.8.2026
+  (omistajan havainto). Kirjoittajat työskentelevät
   git-worktreessä (YKSI commit, ei pushia), pääsessio poimii
   commitit cherry-pickillä. EI KOSKAAN git stashia.
 - Konfliktitilanteessa lohkot poimitaan aarimerkkilaskennalla
