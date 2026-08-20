@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 950, teksti: 'v950: Bangkok — ensimmäinen uusi Aasian lehti' },
   { v: 949, teksti: 'v949: Mosul, Halab ja Damaskos nykytietolinjaan' },
   { v: 948, teksti: 'v948: Tilastot-korjaus, tilanne ajan tasalle, nykytieto 1' },
   { v: 947, teksti: 'Salalah ja Mosul: kohdekartat, jutut, avauskuvat ja opas' },

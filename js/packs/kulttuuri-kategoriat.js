@@ -33481,4 +33481,445 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * BANGKOK (Opus 20.8.2026). Alusta asti tehty lehti Aasian laudalle:
+   * kohteella ei ollut säätietoja, kohdekarttaa, juttuja eikä
+   * kategorioita ennen tätä. Faktat on tarkistettu en-Wikipedian
+   * artikkeleista Bangkok, Thailand, Chulalongkorn, Khlong, Grand
+   * Palace, Wat Phra Kaew, Wat Pho, Wat Arun, Wat Saket, Rattanakosin
+   * Island, Thonburi, Yaowarat Road, Hua Lamphong railway station,
+   * Sanam Luang, Lak Mueang, Giant Swing, Damnoen Saduak Floating
+   * Market, Floating market ja Thai cuisine (haettu 20.8.2026;
+   * pohjana Sonnetin faktapohja ja ERI agentin tarkistusraportti).
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 20.8.2026: uskonto (buddhalaisuus)
+   * ja kuninkuus kerrotaan historiallis-kulttuurisena ilmiönä ja
+   * kunnioittavasti; EI nykypolitiikkaa. Bangkok-artikkeli käsittelee
+   * laajasti vuosien 1973–2020 mielenosoituksia ja poliittisia
+   * kriisejä — se aineisto on jätetty kokonaan pois. Myös vuoden
+   * 1932 vallankumous on vain taustaviite (Suurpalatsin jutussa
+   * "1782–1932"), ei oma aihe. Sanam Luangin jutusta on jätetty pois
+   * vuoden 1976 väkivalta ja vuoden 2020 protestit; Wat Saketin
+   * korppikotkahistoria on mukana lyhyesti ja neutraalisti, koska
+   * ilman koleraa 1800-luvun kaupunkia ei ymmärrä (Mekan
+   * kolera-ennakkotapaus).
+   *
+   * KAKSI KORJAUSTA FAKTAPOHJAAN tarkistusraportin mukaan:
+   * 1) Pla thu -kalasitaatti on Anna Leonowensilta (The English
+   *    Governess at the Siamese Court, 1870), EI H. Warrington
+   *    Smythiltä — Smythin sitaatti liittyy "idän Venetsia"
+   *    -lisänimeen. Oppaan jakso 3 sanoo sen oikein.
+   * 2) Damnoen Saduakin etäisyys on koordinaateista laskettuna noin
+   *    63 km, ei faktapohjan 28 km. Floating market -artikkelin oma
+   *    sanallinen arvio on "noin 100 km" — talon sääntö on, että
+   *    koordinaatit voittavat leipätekstin etäisyysarviot (v925,
+   *    v932, v937), joten opas sanoo "linnuntietä runsaat
+   *    kuusikymmentä kilometriä".
+   *
+   * VISA (asia-questions.js) kysyy Thaimaan pääkaupunkia, vallitsevaa
+   * uskontoa, jokea, kelluvien torien kauppatavaraa ja nimen
+   * pituutta — vastaukset ovat oppaan kappaleessa (pääkaupunki,
+   * buddhalaisuus), johdannossa ja jutuissa (Chao Phraya), jaksossa 4
+   * (ruokaa ja hedelmiä veneistä) ja nostossa K2 (168 kirjainta).
+   * Minitehtävä (historia-sivu) kysyy rautatien avausvuotta 1901,
+   * jota visa ei kysy, ja vastaus on saman sivun nostossa R2.
+   *
+   * KUVATOISTOT, JOTKA ON HYVÄKSYTTY PERUSTELLUSTI (Mekan kolmen
+   * Jabal al-Nourin linja, docs/moduulit/kaupunkilehti.md):
+   * - Wat Arun kolmesti eri etäisyyksiltä ja eri tiedostoina:
+   *   kansikuvan posliinilähikuva, avauskuvan jokisiluetti ja jutun
+   *   koko prangi joelta. Torni on kaupungin näkyvin maamerkki.
+   * - Hua Lamphong kahdesti: noston R2 höyryveturi asemahallissa ja
+   *   jutun asemalaituri kylttineen — eri tiedostot ja kuvakulmat.
+   * - Suurpalatsin alue esiintyy useassa kuvassa, mutta jokainen
+   *   näyttää ERI rakennuksen: kansikuvassa katot vastavalossa,
+   *   avauskuvassa Wat Phra Kaew'n kultainen chedi, R4:ssä Chakri
+   *   Maha Prasatin julkisivu, jutussa Dusit ja Chakri vierekkäin ja
+   *   Wat Phra Kaew'n jutussa Prasat Phra Thep Bidon.
+   *
+   * 1865 ILN-KAIVERRUKSEN JA NASA-KUVAN MERKINNÄT: K1-kuvassa ovat
+   * Illustrated London Newsin omat kuvatekstipalkit (julkaisijan oma
+   * litera, Mekan '273 of Mekka' -ennakkotapaus) ja J2:n
+   * NASA-kuvassa NASAn oma kuvausnumero alareunassa — molemmat
+   * selitetään kuvatekstissä.
+   */
+  bangkok: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bangkok',
+      johdanto: 'Kaupunki syntyi joen mutkaan kaivettujen kanavien varaan, '
+        + 'ja 1800-luvun matkustajat kutsuivat sitä idän Venetsiaksi. '
+        + 'Kultaiset temppelitornit kohoavat yhä Chao Phrayan rannoilla, '
+        + 'vaikka moni kanava on sittemmin täytetty kaduiksi.',
+      kansikuvat: [
+        {
+          tiedosto: 'Lascar Detail of the elaborated central prang - Wat Arun (4509142495).jpg',
+          selite: 'Wat Arunin tornin koristelua läheltä: laastiin '
+            + 'upotetuista posliininpaloista ladottuja kukkia ja '
+            + 'demonipatsaita, jotka kannattelevat tornia käsillään.',
+          lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Damnoen Saduak - Marché flottant.jpg',
+          selite: 'Kelluvan torin veneitä ylhäältä: pitkä vene on '
+            + 'lastattu täyteen banaaneja ja kookospähkinöitä, ja '
+            + 'myyjä istuu keulassa hattu päässä kasvot poispäin.',
+          lahde: 'PA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'A roof of a building at the Grand Palace, Bangkok, sunrise, 2017.jpg',
+          selite: 'Suurpalatsin katto auringonnousussa: katonharjan '
+            + 'sarvimaiset chofa-koristeet piirtyvät tummina '
+            + 'oranssinkeltaista taivasta vasten.',
+          lahde: 'Bjørn Erik Pedersen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: joki, kanava ja pyhä ydin — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Chao Phraya and Wat Arun (7997321494).jpg',
+          selite: 'Chao Phraya leveänä väylänä: veneitä kulkee joella, '
+            + 'ja länsirannalla Wat Arunin torni nousee puiden '
+            + 'ylle vaaleana siluettina.',
+          lahde: 'Fabio Achilli from Milano, Italy, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: '(2023) คลองด่าน กรุงเทพมหานคร (1).jpg',
+          selite: 'Khlong Danin kanava Thonburin puolella: vene kyntää '
+            + 'vettä kaiteen reunustamana, ja rannalla kohoavat '
+            + 'valkoinen suurchedi ja jättimäinen kullattu '
+            + 'buddhapatsas takaapäin kuvattuna.',
+          lahde: 'กสิณธร ราชโอรส, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Grand Palace Bangkok 1.jpg',
+          selite: 'Wat Phra Kaew\'n kullattu chedi hehkuu iltapäivän '
+            + 'valossa Suurpalatsin muurien sisällä, ja sen takana '
+            + 'nousevat mosaiikkitornit ja oranssivihreät katot.',
+          lahde: 'Philip Nalangan, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Idän Venetsia',
+          tiedosto: 'British Admiral George King Procession to King Mongkut in Bangkok 1865.png',
+          teksti: 'Bangkokin vesiväylät olivat 1800-luvun loppuun asti '
+            + 'kaupungin pääasiallinen kulkutapa: useimmat asukkaat '
+            + 'asuivat veden äärellä tai suoraan sen päällä. Seutu oli '
+            + 'alun perin suomaata, jota raivattiin viljelyyn kaivamalla '
+            + 'kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset '
+            + 'vierailijat antoivat kaupungille 1800-luvulla lisänimen '
+            + 'idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu '
+            + 'katu, Charoen Krung, valmistui vasta 1864. Kanavia on '
+            + 'yhä: vuonna 2019 niitä laskettiin 1 682 ja '
+            + 'yhteispituudeksi 2 604 kilometriä, vaikka moni on '
+            + 'täytetty maalla tai muutettu viemäriksi.',
+          selite: 'Illustrated London Newsin kaiverrus vuodelta 1865: '
+            + 'venekulkue soutaa jokea ylös ja rannat ovat täynnä '
+            + 'paalutaloja. Kuvien välissä olevat tekstipalkit ovat '
+            + 'lehden omia kuvatekstejä.',
+          lahde: 'Engraving of a sketch by Mr. R. Campbell Bates. From '
+            + '"Illustrated London News", 1865., Wikimedia Commons (PD)',
+          wiki: 'Bangkok',
+        },
+        {
+          otsikko: 'Nimi, joka ei mahdu kylttiin',
+          tiedosto: 'Sketch of the town of Bangkok by a native.jpg',
+          teksti: 'Thaimaalaiset kutsuvat pääkaupunkiaan nimellä Krung '
+            + 'Thep Maha Nakhon, mutta juhlallinen täysi nimi on 168 '
+            + 'kirjainta pitkä ja Guinnessin ennätyskirjan mukaan '
+            + 'maailman pisin paikannimi. Se on koottu paalin ja '
+            + 'sanskritin sanoista ja alkaa suunnilleen: enkelten '
+            + 'kaupunki, kuolemattomien suuri kaupunki. Nimi Bangkok '
+            + 'oli alun perin joen länsirannan kylän nimi, ja '
+            + 'ulkomaalaiset jäivät käyttämään sitä silloinkin, kun '
+            + 'uusi pääkaupunki oli jo perustettu ja saanut oman, '
+            + 'pidemmän nimensä.',
+          selite: 'Kaiverrettu kartta John Crawfurdin matkakirjasta '
+            + 'vuodelta 1828, otsikkonaan "Sketch of the Town of '
+            + 'Bang-Kok, by a Native": muurikaupunki kanavineen joen '
+            + 'itärannalla, ja nimet on kirjoitettu niin kuin '
+            + 'ulkomaalaiset ne kuulivat.',
+          lahde: 'John Crawfurd, Wikimedia Commons (PD)',
+          wiki: 'Bangkok',
+        },
+        {
+          otsikko: 'Kaksi kaupunkia, yksi joki',
+          tiedosto: 'Bangkok city pillar shrine 20240917.jpg',
+          teksti: 'Kun Ayutthaya kukistui burmalaisille 1767, kuningas '
+            + 'Taksin perusti uuden pääkaupungin Thonburiin, Chao '
+            + 'Phrayan länsirannalle. Vuonna 1782 hänen seuraajansa '
+            + 'Rama I siirsi vallan joen itärannalle: kanavat '
+            + 'kaivettiin muodostamaan keinotekoinen Rattanakosinin '
+            + 'saari, jota muuri ympäröi. Kaupunginpylväs pystytettiin '
+            + '21. huhtikuuta 1782 aamukuudelta, ja päivää pidetään '
+            + 'Bangkokin virallisena perustamispäivänä pääkaupunkina. '
+            + 'Thonburi jäi joen taakse omaksi kaupunginosakseen, '
+            + 'jonka ylle kohoaa Wat Arunin torni.',
+          selite: 'Kaupunginpylvään pyhäkkö: valkoinen '
+            + 'marmorirakennus, jonka katolta nousee Ayutthayan '
+            + 'tyyliin tehty huippu ja jonka harjoja koristavat '
+            + 'naga-käärmeet.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bangkok',
+        },
+        {
+          otsikko: 'Katukeittiöiden kaupunki',
+          tiedosto: 'Street food, Bangkok Bicycle Tour.jpg',
+          teksti: 'Riisi on thaimaalaisen ruoan perusta niin vahvasti, '
+            + 'että sana khao tarkoittaa sekä riisiä että ruokaa — kin '
+            + 'khao, syödä riisiä, on samalla syödä ylipäätään. '
+            + 'Bangkokin kaduilla kojut ja kärryt ovat tarjoilleet '
+            + 'riisi- ja nuudeliannoksia ohikulkijoille vuosikymmenten '
+            + 'ajan, ja katuruoka on kaupungin tunnetuimpia puolia. '
+            + 'Yaowarat-katu on kiinalaiskorttelin sydän: kiinalaiset '
+            + 'kauppiaat asettuivat alueelle jo 1780-luvulla, kun '
+            + 'Rama I siirsi yhteisön pois Suurpalatsin rakennustyön '
+            + 'tieltä.',
+          selite: 'Katukeittiön paistolevy täynnä täytettyjä '
+            + 'ohukaisia ja paistoksia. Vieressä on pinottu kulhoja, '
+            + 'ämpäreitä ja kauhoja — koko keittiö mahtuu kärryyn.',
+          lahde: 'David McKelvey from Brisbane, Australia, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Bangkok',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Lunch at Rongros, Bangkok (Jan 2021) - img 05.jpg',
+          selite: 'Jokibussi kaartaa Chao Phrayalla ja Wat Arunin '
+            + 'torni kohoaa vastarannalla. Matkustajat näkyvät '
+            + 'veneessä vain pieninä hahmoina.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bangkok on Thaimaan pääkaupunki ja selvästi maan suurin '
+          + 'kaupunki: asukkaita on runsaat yhdeksän miljoonaa, ja yli '
+          + 'yhdeksän kymmenestä on buddhalaisia. Vanha ydin on '
+          + 'Rattanakosinin saari temppeleineen ja Suurpalatseineen Chao '
+          + 'Phrayan rannassa. Isoisän aikaan tänne saavuttiin laivalla '
+          + 'jokea ylös; nykyisin tullaan lentäen, mutta kaupunkiin '
+          + 'kannattaa yhä astua sisään veneen kannelta.',
+        artikkeli: {
+          nimi: 'Matkailijan Bangkok',
+          taitto: 'opas',
+          teksti: 'Joki on yhä kaupungin valtaväylä: lautat, jokibussit '
+            + 'ja pitkähäntäveneet kulkevat Chao Phrayalla kuin bussit '
+            + 'kaduilla.',
+          nosto: 'Wat Arunin torni oli 1800-luvun matkakirjojen mukaan '
+            + 'ensimmäinen merkki pääkaupungista merestä tulevalle — ja '
+            + 'joelta katsoen se hallitsee rantaa yhä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Bangkokiin lennetään kahden kentän kautta: '
+                + 'Suvarnabhumin suurkenttä avattiin 2006 ja kuuluu '
+                + 'maailman vilkkaimpiin, ja vanhempi Don Mueang '
+                + 'palvelee nykyisin etenkin halpalentoyhtiöitä. '
+                + 'Keskustaan pääsee lentokenttäjunalla, joka on '
+                + 'kulkenut vuodesta 2010. Kaupungin sisällä nopeimmat '
+                + 'ovat ilmarata BTS, joka aloitti 1999, ja metro — '
+                + 'mutta vesi kantaa yhä: Chao Phrayan jokibussit '
+                + 'pysähtyvät kolmellakymmenelläneljällä laiturilla, '
+                + 'Saen Saepin kanavaa ajaa oma venelinja, ja lauttoja '
+                + 'kulkee joen yli kymmenistä kohdista. Thonburin '
+                + 'kanaville pääsee pitkähäntäveneellä.',
+              kuva: {
+                tiedosto: 'Bangkok skytrain sunset.jpg',
+                selite: 'BTS-ilmaradan juna kiitää betonisilloalla '
+                  + 'auringonlaskussa, ja alla katu on täynnä autoja '
+                  + 'puolittain pysähtyneessä ruuhkassa.',
+                lahde: 'User:Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Bangkok on rakennettu Chao Phrayan '
+                + 'suistotasangolle, jonka keskikorkeus on vain '
+                + 'puolitoista metriä merenpinnasta. Joki mutkittelee '
+                + 'kaupungin halki etelään ja laskee Siaminlahteen noin '
+                + 'kaksikymmentäviisi kilometriä keskustan '
+                + 'eteläpuolella. Maaperä on pehmeää merisavea, jota '
+                + 'kutsutaan Bangkokin saveksi: kerros on keskimäärin '
+                + 'viidentoista metrin paksuinen, ja juuri siihen '
+                + 'vajosi aikoinaan Rama III:n jättimäinen chedi, '
+                + 'jonka rauniosta kasvoi Kultainen vuori. Vanha ydin '
+                + 'on Rattanakosinin keinosaari, jonka joki ja kanavat '
+                + 'sulkevat renkaaseensa — ja jonka ympärille koko muu '
+                + 'suurkaupunki on kasvanut.',
+              kuva: {
+                tiedosto: 'Astronaut Photography of Earth - Bangkok-Gulf of Thailand - ISS006-E-49922.JPG',
+                selite: 'Bangkok avaruudesta: Chao Phraya kiemurtelee '
+                  + 'S-kirjaimena harmaan kaupunkimaton halki kohti '
+                  + 'Siaminlahtea. Vasemman alakulman tunnus on NASAn '
+                  + 'oma kuvausnumero.',
+                lahde: 'Image Science and Analysis Laboratory, '
+                  + 'NASA-Johnson Space Center (astronaut not stated), '
+                  + 'Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: riisi ja katuruoka',
+              teksti: 'Riisi on arjen mitta: kun thai kysyy, oletko jo '
+                + 'syönyt riisiä, hän kysyy, oletko syönyt. Havainto on '
+                + 'vanha. Anna Leonowens, Siamin hovin '
+                + 'kotiopettajatar, kirjoitti vuonna 1870, että joki '
+                + 'on täynnä erinomaista kalaa ja että halpa ja runsas '
+                + 'pla thu -kala oli tavallinen mauste työmiehen '
+                + 'riisikulhoon. Sama yhdistelmä elää kaduilla yhä: '
+                + 'kojut ja kärryt myyvät riisi- ja nuudeliannoksia, '
+                + 'ja Yaowaratin kiinalaiskortteli muuttuu iltaisin '
+                + 'yhdeksi suureksi ruokakaduksi.',
+              kuva: {
+                tiedosto: 'Mango sticy rice (3859549574).jpg',
+                selite: 'Khao niao mamuang eli mangoa ja tahmeaa '
+                  + 'riisiä banaaninlehdellä — jälkiruoka, jossa '
+                  + 'riisi on makea pääosan esittäjä.',
+                lahde: 'Dennis Wong from Hong Kong, Hong Kong, '
+                  + 'Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kelluvat torit',
+              teksti: 'Kelluvat torit syntyivät keskisen Thaimaan '
+                + 'kanavaseuduilla vuosisatojen kuluessa, ja Ayutthayan '
+                + 'kaudella 1350–1767 ne kukoistivat, koska kauppa '
+                + 'kulki vesitse. Ruokaa ja hedelmiä myydään niillä '
+                + 'suoraan veneistä. Kuuluisin on Damnoen Saduak, '
+                + 'linnuntietä runsaat kuusikymmentä kilometriä '
+                + 'Bangkokista lounaaseen. Tori syntyi kanavalle, '
+                + 'jonka Rama IV käski kaivaa vuosina 1866–1868 '
+                + 'yhdistämään Mae Klong- ja Tha Chin -joet — 32 '
+                + 'kilometrin suora uoma oli aikansa suurtyö. Nykyinen '
+                + 'tori on perustettu matkailijoita varten 1981, mutta '
+                + 'kaupankäynti veneen laidan yli on aitoa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Bangkok on kuuma ympäri vuoden: keskilämpö pysyy '
+                + 'joka kuukausi kahdenkymmenenkuuden ja kolmenkymmenen '
+                + 'asteen välissä, ja vuoteen mahtuu kolme vuodenaikaa — '
+                + 'kuuma, sateinen ja viileämpi. Sadekausi alkaa '
+                + 'lounaismonsuunin myötä toukokuussa ja kestää '
+                + 'lokakuulle; syyskuu on sateisin. Marraskuusta '
+                + 'helmikuuhun ilma on kuivimmillaan ja yöt laskevat '
+                + 'parinkymmenen asteen tuntumaan — se on kävelijän '
+                + 'aikaa. Kuumin on huhtikuu, jolloin päivät nousevat '
+                + 'kolmeenkymmeneenneljään asteeseen. Luvut ovat '
+                + 'ERA5-ruudun normaaleja suistotasangolta; kaupungin '
+                + 'oman mittausaseman normaalit ovat noin asteen '
+                + 'korkeammat.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kuningas Chulalongkorn nousi valtaistuimelle 1868, viisi '
+        + 'vuotta ennen isoisän matkaa. Hänen kaudellaan Siam sai '
+        + 'rautatiet, sähkövalon ja lennättimen — ja samalla '
+        + 'vuosisatainen orjuus lakkautettiin asteittain.',
+      tehtava: {
+        kysymys: 'Minä vuonna Siamin ensimmäinen valtion rautatielinja '
+          + 'Bangkokista Koratiin avattiin?',
+        vaihtoehdot: [
+          '1873',
+          '1888',
+          '1901',
+          '1916',
+        ],
+        oikea: 2,
+        fakta: 'Rata Koratiin avattiin 1901. Samana vuonna Siamin '
+          + 'ensimmäinen voimalaitos sytytti sähkövalot Bangkokin '
+          + 'kaduille.',
+      },
+      nostot: [
+        {
+          otsikko: 'Orjuuden loppu',
+          tiedosto: 'พระบรมรูปทรงม้า เขตดุสิต กรุงเทพมหานคร (21).jpg',
+          teksti: '1800-luvun puolivälissä jopa kolmasosa Siamin '
+            + 'väestöstä eli jonkinasteisessa orjuudessa tai '
+            + 'velkasidonnaisuudessa. Vuonna 1874 Chulalongkorn sääti '
+            + 'lain, joka alensi asteittain hänen valtaannousuvuonnaan '
+            + '1868 syntyneiden kotiorjien lunastushintaa ja vapautti '
+            + 'heidät 21-vuotiaina. Uudistus eteni vaiheittain '
+            + 'vuosikymmenten ajan, kunnes vuoden 1905 laki lakkautti '
+            + 'orjuuden Siamissa kokonaan. Sadan bahtin setelissä '
+            + 'kuningas kuvataan yhä vapauttamassa orjia. Isoisän '
+            + 'matkavuonna 1873 kuningas kielsi myös alamaisten maahan '
+            + 'heittäytymisen: kumarrus riitti vastedes.',
+          selite: 'Chulalongkornin ratsastajapatsas Kuninkaallisella '
+            + 'aukiolla. Pronssinen kuningas istuu hevosen selässä '
+            + 'univormussa; patsas valettiin Pariisissa ja '
+            + 'paljastettiin 1908 hallitsijakauden 40-vuotisjuhlaan.',
+          lahde: 'กสิณธร ราชโอรส, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bangkok',
+        },
+        {
+          otsikko: 'Rautatie ja sähkövalo',
+          tiedosto: 'Hua Lamphong Railway Station (1).jpg',
+          teksti: 'Rautatie palveli myös vallan vakauttamista: rata '
+            + 'sitoi maan osia toisiinsa ja vahvisti keskushallinnon '
+            + 'otetta. Vuonna 1901 avattiin valtionradan ensimmäinen '
+            + 'linja Bangkokista Koratiin, ja samana vuonna Siamin '
+            + 'ensimmäinen voimalaitos sytytti sähkövalot kaupungin '
+            + 'kaduille. Uutta tekniikkaa oli nähty ennenkin: '
+            + 'raitiovaunut kulkivat Bangkokissa jo 1888, ja sähköllä '
+            + 'ne kulkivat vuodesta 1894. Suuri päärautatieasema Hua '
+            + 'Lamphong rakennettiin sekin Rama V:n aikana, joskin se '
+            + 'ehti valmiiksi vasta hänen kuolemansa jälkeen, vuonna '
+            + '1916.',
+          selite: 'Vanha höyryveturi Hua Lamphongin asemahallin '
+            + 'kaarikaton alla iltavalaistuksessa. Hallin '
+            + 'lasimaalauspääty hehkuu veturin takana.',
+          lahde: 'Kriengsak Jirasirirojanakorn, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bangkok',
+        },
+        {
+          otsikko: 'Tuomioistuin länsimaistuu',
+          tiedosto: 'Ananta Samakhom (II).jpg',
+          teksti: 'Chulalongkorn lakkautti oikeuslaitoksesta '
+            + 'perinteiset Nakorn Bala -menetelmät, joita länsimaiset '
+            + 'pitivät julmina, ja otti käyttöön länsimaiseen tapaan '
+            + 'rakennetun lakikoodiston. Belgialainen neuvonantaja '
+            + 'Gustave Rolin-Jaequemyns oli keskeisessä roolissa uuden '
+            + 'oikeusjärjestelmän kehittämisessä. Uudistukset olivat '
+            + 'osa pyrkimystä osoittaa Euroopan suurvalloille, että '
+            + 'Siam kykeni hallitsemaan itseään nykyaikaisin '
+            + 'menetelmin — ja niin Siam säilyikin ainoana '
+            + 'Kaakkois-Aasian maana, jota ei koskaan alistettu '
+            + 'siirtomaaksi.',
+          selite: 'Ananta Samakhomin valtaistuinsali, jonka Rama V '
+            + 'tilasi italialaisilta arkkitehdeilta: valkoinen '
+            + 'marmoripalatsi kupoleineen näyttää enemmän Roomalta '
+            + 'kuin Siamilta — ja juuri se oli tarkoitus.',
+          lahde: 'Supanut Arunoprayote, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Bangkok',
+        },
+        {
+          otsikko: 'Palatsi, joka kasvoi kuninkaiden mukana',
+          tiedosto: 'Chakri Maha Prasat, BKK.jpg',
+          teksti: 'Suurpalatsin rakentaminen alkoi toukokuussa 1782, '
+            + 'kun Rama I perusti uuden pääkaupungin, mutta valmiiksi '
+            + 'palatsi ei tullut koskaan kerralla: jokainen hallitsija '
+            + 'lisäsi omat rakennuksensa. Chulalongkornin kaudella '
+            + 'nousi muun muassa Chakri Maha Prasat -valtaistuinsali, '
+            + 'joka valmistui 1882, kun Chakri-suku oli hallinnut '
+            + 'tasan sata vuotta. Vuoteen 1925 mennessä hovi oli '
+            + 'muuttanut uudempiin asuinpaikkoihin, mutta Suurpalatsi '
+            + 'säilyi seremonioiden näyttämönä — ja on sitä yhä.',
+          selite: 'Chakri Maha Prasat edestä: eurooppalainen '
+            + 'kivipalatsi, jonka katoksi on nostettu kolme '
+            + 'thaimaalaista kultahuippua. Yhdistelmää on verrattu '
+            + 'viktoriaaniseen rouvaan, jolle on puettu thaimaalainen '
+            + 'kruunu.',
+          lahde: 'Supanut Arunoprayote, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Bangkok',
+        },
+      ],
+    },
+  ],
 };

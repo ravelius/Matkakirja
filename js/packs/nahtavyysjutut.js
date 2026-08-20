@@ -19051,4 +19051,366 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * BANGKOKIN KOHDEKARTAN JUTUT (Opus 20.8.2026). Yhdeksän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään. Faktat
+   * on tarkistettu en-Wikipedian artikkeleista Sanam Luang, Wat Saket,
+   * Wat Phra Kaew, Grand Palace, Giant Swing, Wat Pho, Wat Arun,
+   * Yaowarat Road ja Hua Lamphong railway station (haettu 20.8.2026).
+   *
+   * PYHIEN PAIKKOJEN SÄVY on sama kuin Medinassa ja Mekassa:
+   * buddhalaisuus ja kuninkuus kerrotaan historiallis-kulttuurisina
+   * ilmiöinä, rakennuksina ja kerrostumina, kunnioittavasti ja ilman
+   * hartauskieltä. Sanam Luangin jutusta on jätetty pois vuoden 1976
+   * väkivalta ja 2020-luvun protestit (ei nykypolitiikkaa); Wat
+   * Saketin kolerahistoria on mukana lyhyesti ja neutraalisti, koska
+   * hautajaistemppelin rooli jäisi muuten selittämättä (Mekan
+   * kolera-ennakkotapaus).
+   *
+   * HUA LAMPHONGIN NYKYTILA sanotaan vain siltä osin kuin artikkeli
+   * sen vahvistaa: kaukojunien uusi pääteasema avattiin 2023 ja vanha
+   * asema nimettiin uudelleen; museohanketta on lykätty vastustuksen
+   * takia. Aukioloa tai junavuoroja ei väitetä (Medinan asemamuseon
+   * oppi: tieto vanhenee nopeammin kuin lehti).
+   */
+  bangkok: {
+    'Sanam Luang': {
+      aika: '1782 alkaen',
+      teksti: 'Suurpalatsin ja Wat Phra Kaew\'n edessä aukeaa suuri '
+          + 'nurmikenttä, jota tamarindirivit ympäröivät. Se on ollut '
+          + 'kuninkaallisten seremonioiden näyttämö Rama I:n ajoista '
+          + 'asti, ja sen vanha virallinen nimi oli Thung Phra Men, '
+          + 'kuninkaallinen polttohautauskenttä: kuninkaiden ja '
+          + 'kuningattarien roviot on pystytetty tänne kaupungin '
+          + 'perustamisesta lähtien. Rama IV vaihtoi nimen vuonna 1855 '
+          + 'nykyiseen, joka tarkoittaa kuninkaallista kenttää.'
+          + '\n\n'
+          + 'Kenttä on ollut muutakin kuin juhlallinen. Rama II '
+          + 'lennätti täällä leijoja — kuninkaalla oli tähden muotoinen '
+          + 'chula ja varakuninkaalla yksinkertainen pakpao — ja Rama '
+          + 'III:n aikana kentällä viljeltiin riisiä, jotta muut '
+          + 'valtiot näkisivät maan olevan niin viljava, että satoa '
+          + 'kasvaa palatsin edessäkin. Sadekaudella pellolle jäi '
+          + 'vesilammikoita, joista pyydettiin sammakoita, rapuja ja '
+          + 'riisipeltorottia ruoaksi.'
+          + '\n\n'
+          + 'Nykyisen muotonsa kenttä sai Rama V:n kaudella: hän '
+          + 'laajensi sitä, purki vanhat seremoniarakennelmat ja '
+          + 'istutti reunoille kaksi riviä tamarindipuita Jaavalta '
+          + 'saamansa vaikutelman mukaan. Rivejä lisättiin 1960-luvulla, '
+          + 'ja puita on nykyään 783. Kentällä lennätetään yhä leijoja, '
+          + 'ja kuninkaallinen kyntöseremonia on avannut täällä '
+          + 'riisivuoden Rama IV:n ajoista asti.',
+      kuvat: [
+        {
+          tiedosto: 'Sanam Luang Bangkok.jpg',
+          selite: 'Leijoja Sanam Luangin yllä: nurmella istuu väkeä '
+            + 'pieninä hahmoina, ja taustalla erottuvat Wat Phra '
+            + 'Kaew\'n kultaiset huiput puurivin takaa.',
+          lahde: 'Adbar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wat Saket ja Kultainen vuori': {
+      aika: 'Ayutthayan kaudelta; kukkula 1800-luvulta',
+      teksti: 'Wat Saket on Ayutthayan kaudelta periytyvä temppeli, '
+          + 'jonka Rama I kunnosti ja nimesi uudelleen: nimi viittaa '
+          + 'hiusten pesemiseen, sillä perimätiedon mukaan kuningas '
+          + 'pysähtyi tänne peseytymään palatessaan sotaretkeltä, '
+          + 'ennen kuin astui kaupunkiin. Temppeli jäi muurien '
+          + 'ulkopuolelle, ja siksi siitä tuli kaupungin '
+          + 'hautajaistemppeli — polttohautausta muurien sisällä '
+          + 'pidettiin epäonnisena. Vuoden 1820 koleraepidemiassa, '
+          + 'joka vaati pääkaupungissa yli 30 000 uhria, temppelistä '
+          + 'tuli kaupungin tärkein vainajien vastaanottopaikka.'
+          + '\n\n'
+          + 'Kultainen vuori syntyi vahingossa. Rama III rakennutti '
+          + 'temppeliin jättimäistä chediä, mutta pehmeä savimaa ei '
+          + 'kantanut sen painoa, ja rakennelma romahti kesken työn. '
+          + 'Hylätty tiili- ja mutakasa kasvoi vuosikymmenten mittaan '
+          + 'umpeen, ja kaupunkilaiset alkoivat kutsua sitä vuoreksi '
+          + 'kuin luonnonmuodostumaa — välillä se toimi myös '
+          + 'sotilaiden tähystyspaikkana.'
+          + '\n\n'
+          + 'Rama IV aloitti kukkulan laelle pienemmän chedin, joka '
+          + 'valmistui Rama V:n kauden alussa ja päällystettiin '
+          + 'kullalla; sisään sijoitettiin Sri Lankasta tuotu Buddhan '
+          + 'reliikki. Rinteen betonimuurit lisättiin 1940-luvulla '
+          + 'estämään kukkulaa valumasta. Joka marraskuussa laelle '
+          + 'nousee kynttiläkulkue, ja chedi kiedotaan punaiseen '
+          + 'kankaaseen, johon kävijät kirjoittavat toiveitaan.',
+      kuvat: [
+        {
+          tiedosto: 'Golden Mount of Wat Saket.jpg',
+          selite: 'Kultainen vuori alhaalta: valkoinen tukimuuri '
+            + 'nousee kalliomaisen kivikon ja puiden takaa, ja laella '
+            + 'kimaltaa kullattu chedi kaiteineen.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wat Phra Kaew': {
+      aika: '1783 alkaen',
+      teksti: 'Wat Phra Kaew on Thaimaan pyhin temppeli, ja se '
+          + 'rakennettiin heti kaupungin mukana: työt alkoivat 1783, '
+          + 'ja temppelin päähalli oli koko palatsialueen ensimmäinen '
+          + 'kivestä valmistunut rakennus — kuninkaan oma asunto oli '
+          + 'vielä puuta. Helmikuussa 1785 Smaragdibuddha tuotiin '
+          + 'juhlakulkueessa joen yli Wat Arunista ja asetettiin '
+          + 'paikalleen, jossa se on yhä.'
+          + '\n\n'
+          + 'Itse patsas on pieni, noin 66 senttiä, ja se on veistetty '
+          + 'vihreästä kivestä, jota yleensä kuvataan jadeksi. Se on '
+          + 'maan palladium eli suojeleva pyhäinkuva, ja kaupungin '
+          + 'juhlallinen täysi nimi mainitsee sen: nimi tarkoittaa '
+          + 'muun muassa enkelten kaupunkia ja Smaragdibuddhan '
+          + 'asuinsijaa. Patsaan kultavaatteet vaihdetaan '
+          + 'kuninkaallisessa seremoniassa kolmesti vuodessa '
+          + 'vuodenaikojen vaihtuessa.'
+          + '\n\n'
+          + 'Temppeli on kuninkaan oma kappeli: munkit eivät asu '
+          + 'siellä, vaan heidät kutsutaan toimituksiin muista '
+          + 'temppeleistä, ja rakennuksia käytetään hovin suuriin '
+          + 'seremonioihin kruunajaisista buddhalaisten juhlapäivien '
+          + 'menoihin. Muina päivinä temppeli ja osa palatsia ovat '
+          + 'avoinna kävijöille, ja ne kuuluvat koko maan '
+          + 'tunnetuimpiin käyntikohteisiin.',
+      kuvat: [
+        {
+          tiedosto: 'วัดพระศรีรัตนศาสดาราม วัดพระแก้ว กรุงเทพมหานคร - Wat Phra Kaew, Temple of Emerald Buddha, Bangkok, Thailand.jpg',
+          selite: 'Wat Phra Kaew\'n terassi tyhjänä aamulla: '
+            + 'keskellä kuninkaallinen pantheon Prasat Phra Thep '
+            + 'Bidon ja molemmin puolin kullatut chedit '
+            + 'demonikannattajineen.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suurpalatsi': {
+      aika: '1782 alkaen',
+      teksti: 'Suurpalatsin rakentaminen alkoi 6. toukokuuta 1782, ja '
+          + 'alku oli vaatimaton: rahasta ja rakennusaineesta oli '
+          + 'pulaa, joten ensimmäinen palatsi tehtiin kokonaan puusta '
+          + 'ja ympäröitiin hirsiaidalla. Rama I ylitti joen '
+          + 'Thonburista ja asettui uuteen palatsiinsa 10. kesäkuuta '
+          + '1782. Seuraavina vuosina puu vaihtui kiveen — ja tiiliä '
+          + 'haettiin proomuilla Ayutthayan rauniokaupungista, jonka '
+          + 'muureja ja palatseja purettiin rakennusaineeksi uudelle '
+          + 'pääkaupungille.'
+          + '\n\n'
+          + 'Valmiiksi palatsi ei tullut koskaan kerralla. Jokainen '
+          + 'kuningas lisäsi omat rakennuksensa, ja siksi kokonaisuus '
+          + 'on epäsymmetrinen ja tyyliltään kirjava: Rama II laajensi '
+          + 'aluetta etelään Wat Pho\'n muurille asti, ja '
+          + 'Chulalongkornin kaudella nousi muun muassa Chakri Maha '
+          + 'Prasat -valtaistuinsali. Muurien sisällä on 218 400 '
+          + 'neliömetriä neljänä aidattuna osana, joista yksi on Wat '
+          + 'Phra Kaew ja yksi oli aikoinaan pelkästään hovin naisten '
+          + 'sisäpiha.'
+          + '\n\n'
+          + 'Vuosina 1782–1932 palatsi oli koko valtakunnan hallinnon '
+          + 'ja seremonioiden keskus, kaupunki kaupungin sisällä '
+          + 'tuhansine asukkaineen. Vuoteen 1925 mennessä hovi oli '
+          + 'muuttanut uudempiin asuinpaikkoihin, mutta palatsi on yhä '
+          + 'käytössä valtiollisissa seremonioissa — ja yli kahdeksan '
+          + 'miljoonaa kävijää kiertää sitä vuosittain.',
+      kuvat: [
+        {
+          tiedosto: 'Phra Thinang Dusit Maha Prasat and Phra Thinang Chakri Maha Prasat.jpg',
+          selite: 'Kaksi valtaistuinsalia vierekkäin: vasemmalla '
+            + 'Dusit Maha Prasatin valkoinen sali porrastettuine '
+            + 'kultahuippuineen, oikealla Chakri Maha Prasatin '
+            + 'kivinen julkisivu thaimaalaisine kattoineen.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sao Ching Cha': {
+      aika: '1784 alkaen',
+      teksti: 'Jättiläiskeinu on yli 21 metriä korkea punainen '
+          + 'tiikkirakennelma keskellä vanhaa kaupunkia, Wat Suthatin '
+          + 'temppelin edessä. Rama I pystytti sen 1784 brahmiinien '
+          + 'Devasathan-pyhäkön eteen: hindulaiset papit ovat '
+          + 'kuuluneet Siamin hoviin vuosisatoja, ja keinu '
+          + 'rakennettiin heidän vuotuista seremoniaansa varten.'
+          + '\n\n'
+          + 'Seremoniassa keinujat heilautettiin korkealle ja he '
+          + 'tavoittelivat pylvääseen ripustettua kolikkopussia. '
+          + 'Riitti toisti myyttiä maailman synnystä: pylväät '
+          + 'kuvasivat vuoria ja keinun pyöreä jalusta maata ja '
+          + 'meriä. Keinuminen päättyi vuonna 1935 useiden kuolemaan '
+          + 'johtaneiden onnettomuuksien jälkeen, mutta keinu jäi '
+          + 'paikalleen kaupungin maamerkiksi.'
+          + '\n\n'
+          + 'Nykyinen rakennelma pystytettiin kuudesta '
+          + 'jättiläistiikistä vuosina 2005–2007, ja vanhan keinun '
+          + 'puut säilytetään kansallismuseossa. Kerran vuodessa, '
+          + 'tavallisesti maaliskuun alussa, laskeva aurinko osuu '
+          + 'tarkalleen keinun kehyksen keskelle, ja valokuvaajat '
+          + 'kokoontuvat kadulle odottamaan hetkeä.',
+      kuvat: [
+        {
+          tiedosto: 'Giant Swing, Bangkok.jpg',
+          selite: 'Jättiläiskeinu iltahämärässä liikenneympyränsä '
+            + 'keskellä: kaksi punaista pylvästä ja koristeellinen '
+            + 'poikkipuu piirtyvät auringonlaskun taivasta vasten.',
+          lahde: 'Preecha.MJ, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wat Pho': {
+      aika: 'uudelleenrakennus 1788 alkaen',
+      teksti: 'Wat Pho on Suurpalatsin eteläinen naapuri ja Bangkokin '
+          + 'vanhimpia temppeleitä: Rama I rakennutti sen vanhan '
+          + 'temppelin paikalle vuodesta 1788 alkaen, ja soinen '
+          + 'tontti jouduttiin ensin kuivattamaan. Työ kesti yli '
+          + 'seitsemän vuotta, ja samalla temppeliin koottiin '
+          + 'buddhakuvia hylätyistä temppeleistä Ayutthayasta ja '
+          + 'Sukhothaista — nykyään niitä on yli tuhat, enemmän kuin '
+          + 'missään muussa Thaimaan temppelissä.'
+          + '\n\n'
+          + 'Rama III laajensi temppeliä vuodesta 1832 alkaen '
+          + 'kuusitoista vuotta ja teki siitä avoimen oppilaitoksen: '
+          + 'seiniin ja paviljonkeihin kiinnitettiin kivitaulut, '
+          + 'joihin kaiverrettiin tietoa kahdeksalta alalta '
+          + 'historiasta ja lääketieteestä kirjallisuuteen. Wat '
+          + 'Pho\'ta kutsutaankin Thaimaan ensimmäiseksi yliopistoksi, '
+          + 'ja taulut on otettu Unescon Maailman muisti -ohjelmaan '
+          + 'vuonna 2008. Temppeli on myös perinteisen thaihieronnan '
+          + 'koti, ja hierontaa opetetaan täällä yhä.'
+          + '\n\n'
+          + 'Kuuluisin asukas on makaava Buddha vuodelta 1832: 46 '
+          + 'metriä pitkä ja 15 metriä korkea kullattu hahmo, joka '
+          + 'esittää Buddhan siirtymistä nirvanaan. Sen jalkapohjat '
+          + 'ovat kolme metriä korkeat, ja ne on jaettu 108 '
+          + 'helmiäiskoristeiseen ruutuun, joissa kuvataan Buddhan '
+          + 'onnenmerkit.',
+      kuvat: [
+        {
+          tiedosto: 'Wat Pho, Bangkok, Tailandia, 2013-08-22, DD 05.jpg',
+          selite: 'Makaavan Buddhan kullattu pää ja hartiat täyttävät '
+            + 'hallin: patsas nojaa käsivarteensa, ja etualalla on '
+            + 'kimppu vaaleanpunaisia lootuksennuppuja.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wat Arun': {
+      aika: '1600-luvulta; suuri prangi 1851',
+      teksti: 'Aamunkoiton temppeli seisoo Thonburin puolella, ja se '
+          + 'on kaupunkia vanhempi: paikalla oli temppeli jo '
+          + 'Ayutthayan kaudella, ja se näkyy Wat Makokin nimellä '
+          + 'ranskalaisissa kartoissa 1600-luvulta. Kuningas Taksin '
+          + 'antoi sille aamunkoittoon viittaavan nimen perustettuaan '
+          + 'pääkaupunkinsa viereen, ja Smaragdibuddhaa säilytettiin '
+          + 'täällä, kunnes se siirrettiin joen yli vuonna 1785.'
+          + '\n\n'
+          + 'Temppelin suuri prangi eli torni on 1800-luvun työ: Rama '
+          + 'II suunnitteli korotuksen, ja torni valmistui Rama III:n '
+          + 'kaudella vuonna 1851 yhdeksän vuoden rakentamisen '
+          + 'jälkeen. Sen korkeudesta lähteet ovat eri mieltä — luvut '
+          + 'vaihtelevat 67 ja 86 metrin välillä. Pinta on kokonaan '
+          + 'mosaiikkia: koristelu on tehty kiinalaislaivojen '
+          + 'painolastinaan tuomista posliininpaloista ja '
+          + 'simpukankuorista, jotka on upotettu laastiin kukiksi ja '
+          + 'kuvioiksi.'
+          + '\n\n'
+          + 'Wat Arun on Thaimaan tunnetuimpia maamerkkejä. '
+          + 'Ranskalainen tutkimusmatkailija Henri Mouhot kirjoitti '
+          + '1858, että tornin huippu on ensimmäinen merkki '
+          + 'pääkaupungista sille, joka nousee jokea merestä päin — '
+          + 'ja joelta katsottuna torni hallitsee länsirantaa yhä.',
+      kuvat: [
+        {
+          tiedosto: 'Wat Arun 03-2012-01.JPG',
+          selite: 'Wat Arunin suuri prangi ja sen neljä sivutornia '
+            + 'joelta nähtynä. Rannassa liehuu lippurivi, ja '
+            + 'pitkähäntäveneet kulkevat kuvan poikki pieninä.',
+          lahde: 'Rolf Heinrich, Köln, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Yaowarat': {
+      aika: 'katu 1892–1900',
+      teksti: 'Yaowarat on kiinalaiskorttelin pääkatu, ja sen tarina '
+          + 'alkaa kaupungin perustamisesta: kun Rama I tarvitsi '
+          + 'Suurpalatsille tontin 1782, paikalla asunut '
+          + 'kiinalaisyhteisö siirrettiin kaakkoon joen varteen. '
+          + 'Sinne kasvoi Sampheng, kaupungin vilkkain '
+          + 'kauppakortteli, jonka kautta kulki Siamin ja Kiinan '
+          + 'välinen djonkkikauppa.'
+          + '\n\n'
+          + 'Itse katu on Rama V:n työtä: hän määräsi sen '
+          + 'rakennettavaksi vuoden 1891 lopulla, ja työ kesti '
+          + 'kahdeksan vuotta. Puolentoista kilometrin katu kaartaa '
+          + 'loivin mutkin, ja sen sanotaan muistuttavan lohikäärmeen '
+          + 'ruumista — kaupanteolle onnekas muoto. Nimi tarkoittaa '
+          + 'nuorta kuningasta, ja se annettiin kruununprinssi '
+          + 'Vajirunhisin kunniaksi. Sähköraitiovaunu kulki katua '
+          + 'vuodesta 1894 aina vuoteen 1968.'
+          + '\n\n'
+          + 'Yaowarat on yhä kultakauppojen katu — 2000-luvun alussa '
+          + 'korttelissa laskettiin neljäkymmentä kultakauppaa, '
+          + 'tiheämmässä kuin missään muualla maailmassa — ja '
+          + 'iltaisin siitä tulee ruokakatu, jonka kojut vetävät '
+          + 'syöjiä koko kaupungista. Kiinalaisen uudenvuoden '
+          + 'juhlissa katu suljetaan autoilta kokonaan.',
+      kuvat: [
+        {
+          tiedosto: 'Yaowarat Road at night.jpg',
+          selite: 'Yaowarat yöllä: neonkylttien rivistö kiinan- ja '
+            + 'thainkielisine teksteineen hehkuu kadun yllä, ja '
+            + 'jalkakäytävällä liikkuu ihmisiä pieninä hahmoina '
+            + 'kauempana.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hua Lamphong': {
+      aika: '1916',
+      teksti: 'Bangkokin vanha päärautatieasema avattiin 25. kesäkuuta '
+          + '1916 kuuden rakennusvuoden jälkeen: työt alkoivat 1910 '
+          + 'Chulalongkornin viimeisenä elinvuonna, ja asema valmistui '
+          + 'hänen poikansa Vajiravudhin kaudella. Torinolaisen '
+          + 'arkkitehdin Mario Tamagnon piirtämä julkisivu on '
+          + 'italialaista uusrenessanssia kaarihalleineen ja '
+          + 'lasimaalauksineen, ja esikuvasta kiistellään yhä: toisten '
+          + 'mielestä mallina oli Frankfurtin, toisten mielestä '
+          + 'Torinon päärautatieasema.'
+          + '\n\n'
+          + 'Nimikin on lainaa. Hua Lamphong oli alun perin vastapäätä '
+          + 'sijainneen yksityisen Paknam-radan aseman nimi — se '
+          + 'avattiin 1893, kun rautatieliikenne Siamissa alkoi, ja '
+          + 'suljettiin 1960. Kansan suussa nimi tarttui valtionradan '
+          + 'suureen asemaan, vaikka virallisissa aikatauluissa asema '
+          + 'on aina ollut Bangkokin eli Krung Thepin asema.'
+          + '\n\n'
+          + 'Runsaan vuosisadan asema oli maan rautatieverkon '
+          + 'keskipiste. Kaukojunien uusi pääteasema Krung Thep '
+          + 'Aphiwat avattiin 2023, ja vanha asema nimettiin '
+          + 'virallisesti Bangkokin (Hua Lamphongin) asemaksi; '
+          + 'rakennukselle on kaavailtu museota, mutta hanke on '
+          + 'edennyt hitaasti, sillä moni haluaa pitää junat vanhalla '
+          + 'asemalla.',
+      kuvat: [
+        {
+          tiedosto: 'Hua Lamphong railway station 20240915.jpg',
+          selite: 'Asemahalli sisältä: kaarikaton alla on '
+            + 'kasvi-istutuksin ympäröity kyltti, jossa lukee '
+            + 'thaiksi Krung Thep ja alla Bangkok, ja taustalla '
+            + 'seisoo museoveturi laiturin vieressä.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

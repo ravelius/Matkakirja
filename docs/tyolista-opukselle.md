@@ -70,6 +70,88 @@ siirretään arkistoon. Uudet paketit lisää omistaja tai Fable.
 Valmiit paketit ja koko vanha historia:
 docs/arkisto/tyolista-opukselle-2026-08.md.
 
+## Paketti O8: Aasian lehtiurakka — session siirto Opukselle (tilattu 20.8.2026) 🟡 KESKEN
+
+**Tämä paketti kumoaa LEHTITAUKO-huomautuksen Aasian osalta:**
+omistaja tilasi Lähi-idän ja Aasian lehtiurakat 20.8.2026 ja ne
+ajavat vanhan tauon ohi. Lähi-itä valmistui v937–v949 (Fable).
+Aasia jatkuu tällä paketilla: sen tekee ITSENÄINEN OPUS-SESSIO
+aliagentteineen, joka myös JULKAISEE ITSE. Ei tarinakaarta uusiin
+kohteisiin (linjaus 17.8.) — vain lehdet.
+
+### Lue ennen aloitusta (järjestyksessä)
+
+1. CLAUDE.md ja docs/roolitus.md (roolit, julkaisusäännöt).
+2. Raamattu (js/tyohuone-raamattu.js), erityisesti Perustuslaki,
+   Kuvat ja lähteet (mm. 20.8. linjaukset: tuhoutuneen kaupungin
+   nykykuvat, matkaopas on nykytietoa) ja Viisas Pöllö.
+3. **docs/aasia-tyoaineisto/LUEMINUT.md** ja sen kansio: resepti
+   (lehtityo-resepti.md, SITOVA kirjoittajille), spec-asia.md
+   (putki + herkkien kohteiden SITOVAT linjaukset) sekä
+   faktapohja+tarkistus-parit.
+
+### Työmalli (sama joka tuotti Lähi-idän 13 versiota)
+
+- Pääsessio orkestroi eikä kirjoita itse: aliagentit tekevät
+  faktapohjat (tarkistaja AINA ERI agentti kuin kokoaja),
+  kirjoituksen ja kuvatyön. Kirjoittajat työskentelevät
+  git-worktreessä (YKSI commit, ei pushia), pääsessio poimii
+  commitit cherry-pickillä. EI KOSKAAN git stashia.
+- Konfliktitilanteessa lohkot poimitaan aarimerkkilaskennalla
+  (top-level-lohko avaimella + edeltävä /*-kommentti), EI
+  regex-poiminnalla. maakartat.js: KAUPUNKIKARTAT-lisäys
+  ankkuroidaan ' * Lambertin tasapinta' -kommenttia EDELTÄVÄÄN
+  };:ään — tiedoston viimeinen }; on VÄÄRÄ. Poiminnan jälkeen
+  runtime-tarkistus importilla.
+- Pääsessio pistokoetarkistaa 2 kuvaa/erä silmin (esikatselu +
+  vertaa agentin kuvaselosteeseen) ennen julkaisua.
+- Rinnakkaisia Commons-kuvajonoja korkeintaan muutama kerrallaan
+  (429-riski); faktapohja-agentit (vain Wikipedia) eivät kuormita
+  samaa rajapintaa.
+
+### Julkaisu (jokainen erä = yksi versio, pääsessio tekee itse)
+
+1. Portit: `node --test tests/*.test.mjs` (LUE # fail itse, 0
+   vaaditaan), tarkista-kaksoisavaimet, tarkista-niputus,
+   tarkista-savukkeet, kartallisille tarkista-karttapisteet.
+2. `git fetch origin main` JUURI ennen versionumeron valintaa,
+   sitten `node tools/uusi-versio.mjs "vNNN: viesti"` (max 60 mrk).
+3. TESTATTAVAA-rivi (pitkä muoto, uusin ensin) ja TUOREET-taulu
+   (valmistuneet kärkeen versioineen, työn alla ajan tasalle)
+   js/tyohuone-tilanne.js:ään — tätä tiedostoa päivittää VAIN
+   pääsessio, eivät aliagentit.
+4. `node tools/build-standalone.mjs` + `node tools/savuke-dist.mjs`
+   (6/6 vaaditaan; dist/-kansiota EI committoida).
+5. Commit + push omalle haaralle, PR mainiin, CI:n check-runs
+   -odotus, squash-merge, haaran reset origin/mainiin
+   (--force-with-lease), ja Pages-ajon (pages.yml) onnistumisen
+   varmistus + live-sivun sw.js-versiotarkistus. Jos
+   tools/pollo/** muuttui, varmista myös pollo-julkaisu.yml.
+
+### Jono (erien koko: täydennykset 2–3 kaupunkia, uudet lehdet
+    1–2 per versio)
+
+1. **Kirjoitusvalmiit parit** (faktapohja + tarkistus repossa,
+   tarkistuksen korjaukset voittavat): Kioto, Xi'an, Singapore,
+   Samarkand, Hanoi, Kathmandu.
+2. **Loput uudet lehdet** (faktapohja → tarkistus → kirjoitus,
+   3 faktapohjaa kerrallaan): varanasi mandalay kanton astana
+   ulanbator taipei hongkong manila yangon sumatra borneo jakarta
+   lhasa kolkata mumbai chennai colombo karachi kabul kashgar —
+   herkät kohteet VAIN spec-asia.md:n sitovilla linjauksilla.
+   Sumatra ja Borneo ovat alueita (aluelehtimalli, ei karttaa).
+3. Kun Aasia on valmis: kysy omistajalta ennen Afrikkaa (paketti
+   O7 odottaa, mutta kuvapooli on ohuempi — kategoriahaut).
+
+### Tila siirtohetkellä (Fable täydentää ennen session luontia)
+
+- Lähi-itä valmis v937–v949; tuoreusnäkymät v942/v948; Pöllön
+  uusi kehote julkaistu v948:ssa.
+- Venäjä-erät V1 (Jekaterinburg, Novosibirsk, Irkutsk), V2
+  (Jakutsk, Magadan), V3 (Vladivostok kartalla, Kamtšatka ja
+  Sahalin alueina) sekä kirjoittajat Peking, Delhi ja Bangkok:
+  tila kirjataan tähän siirtohetkellä.
+
 ## Paketti O6: opas kuuteen uuteen kaupunkiin (tilattu 16.8.2026) ✅ VALMIS (v816, 17.8.2026)
 
 **Kuittaus (Fable 17.8.2026):** kaikki kuusi kaupunkia mainissa —
