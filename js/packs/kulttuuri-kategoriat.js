@@ -32832,6 +32832,43 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (Opus, Siperian täydennyserä 20.8.2026): rauta, betoni
+       * ja graniitti — kaupungin kolme ainetta siinä järjestyksessä,
+       * jossa lehti ne kertoo. Kaslin paviljonki on ruukkikaupungin
+       * käyntikortti, Tšekistien kaupunki 1930-luvun kerros ja Šartašin
+       * kivipalatsit se maasto, jonka päälle koko kaupunki on rakennettu.
+       * Kansikuvat ovat lampi, Sevastjanovin talo ja Vainerin katu, joten
+       * aiheet eivät toistu.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Kasli Cast Iron Pavilion - 2.jpeg',
+          selite: 'Kaslin valurautapaviljonki kuvataidemuseon salissa. '
+            + 'Mustaksi patinoitu ja kullalla korostettu rakennelma on '
+            + 'koottu tuhansista valetuista osista, ja sen aukkoihin on '
+            + 'ripustettu punaiset samettiverhot. Otsalaudassa lukee '
+            + 'ranskaksi Kyštymin ruukin nimi.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Gorodok Chekistov (August 2022) - 1.jpg',
+          selite: 'Tšekistien kaupunki ylhäältä. Keskellä kaartuu '
+            + 'hevosenkengän muotoinen valkoinen kerrostalo, jonka katto '
+            + 'on vihreä, ja sen ympärillä levittäytyy matalampia '
+            + 'asuinsiipiä puiden lomassa. Korttelin ohi kulkee leveä '
+            + 'puistokatu.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Shartash Stone Tents Rocks-2021 - 3.jpeg',
+          selite: 'Šartašin kivipalatsit mäntymetsän keskellä. Graniitti '
+            + 'on lohkeillut vaakasuoriksi laatoiksi, jotka lepäävät '
+            + 'päällekkäin kuin pinottu kivikasa. Ylimmillä laatoilla '
+            + 'kävelee kaksi ihmistä pieninä hahmoina.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Pato tuli ensin, kaupunki vasta sen jälkeen',
@@ -32904,6 +32941,144 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Prokofiev The Stone Flower',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Исторический сквер и Музей изобразительных искусств, Плотинка, проспект Ленина, Храм-колокольня Большой Златоуст.jpg',
+          selite: 'Keskusta ylhäältä myöhäissyksyllä. Iset virtaa kivettyjen '
+            + 'rantamuurien välissä kaupungin läpi, etualalla on matalia '
+            + 'vanhoja taloja punaisine peltikattoineen, ja vasemmalla '
+            + 'kohoaa Suuren Zlatoustin valkoinen kellotorni kullattuine '
+            + 'kupoleineen.',
+          lahde: 'Moneycantbuy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Jekaterinburg on puolentoista miljoonan asukkaan '
+          + 'suurkaupunki Uralin itärinteellä, 1 667 kilometriä Moskovasta '
+          + 'itään ja kaksi tuntia sitä edellä kellossa. Vuoden 2021 '
+          + 'väenlaskussa asukkaita oli 1 544 376, ja se on Venäjän '
+          + 'neljänneksi väkirikkain kaupunki. Kaikki kiertää yhä sen '
+          + 'padon ympärillä, josta kaupunki alkoi: Iset virtaa '
+          + 'keskustan läpi, ja padon molemmin puolin ovat museot, '
+          + 'kävelykadut ja vanhat kauppiastalot.',
+        artikkeli: {
+          nimi: 'Matkailijan Jekaterinburg',
+          taitto: 'opas',
+          teksti: 'Yksi pato keskellä, malmivuoret lännessä ja rata, joka '
+            + 'vie kumpaankin suuntaan yhtä kauas.',
+          nosto: 'Kaupunki on maanosien rajalla: obeliski Euroopan ja '
+            + 'Aasian välissä seisoo Pervouralskin suunnalla lännessä, '
+            + 'ja Siperian rata ylittää Uralin niin loivasti, ettei '
+            + 'matkustaja huomaa siirtyneensä maanosasta toiseen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Jekaterinburg on Moskovan ja Pietarin jälkeen '
+                + 'Venäjän kolmanneksi suurin liikenteen solmukohta: '
+                + 'kaupungin läpi kulkee kuusi valtatietä ja seitsemän '
+                + 'päärataa. Transsiperian radan juna Moskovasta on '
+                + 'perillä vuorokaudessa, ja Vladivostokiin istutaan '
+                + 'siitä eteenpäin vielä viikko. Kaupungin oma '
+                + 'lentoasema on Koltsovo, joka kuljetti vuonna 2017 '
+                + '5,4 miljoonaa matkustajaa ja on Venäjän kuudenneksi '
+                + 'vilkkain. Kaupungin sisällä kulkevat raitiovaunut, '
+                + 'johdinautot ja metro: se avattiin vuonna 1991 Venäjän '
+                + 'kuudentena, ja siinä on yhä vain yksi linja ja '
+                + 'yhdeksän asemaa. Kellon kanssa kannattaa olla tarkkana '
+                + '— kaupunki elää kaksi tuntia Moskovan aikaa edellä.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Uralin itärinteellä, siis maantieteen '
+                + 'mukaan jo Aasian puolella, ja sitä ympäröivät '
+                + 'metsäiset kukkulat. Vuoristo on tässä kohtaa matala ja '
+                + 'loiva, ja juuri siksi kaupunki on tässä: valtatiet ja '
+                + 'radat vedettiin Euroopan ja Aasian välillä sieltä, '
+                + 'mistä pääsi helpoimmin yli. Iset halkaisee kaupungin '
+                + 'ja jatkaa Tobol-jokeen; kaupungin alueella on kaksi '
+                + 'järveä, Šuvakiš ja Šartaš, ja lännessä Verh-Isetskin '
+                + 'allas, jonka pato rakennettiin 1726 toisen ruukin '
+                + 'tarpeisiin. Alaa kaupungilla on 1 111 neliökilometriä. '
+                + 'Kaupungin länsipuolella Pervouralskin suunnalla seisoo '
+                + 'obeliski Euroopan ja Aasian rajalla.',
+              kuva: {
+                tiedosto: 'Стела Европа-Азия - panoramio.jpg',
+                selite: 'Euroopan ja Aasian raja-obeliski Pervouralskin '
+                  + 'lähellä. Punagraniittinen pylväs nousee '
+                  + 'porrastetulta jalustalta, sen huipulla on '
+                  + 'kaksipäinen kotka, ja kaartuvissa muureissa lukee '
+                  + 'kultakirjaimin ЕВРОПА ja АЗИЯ. Takana on tiheä '
+                  + 'mäntymetsä.',
+                lahde: 'Михаил Притчин, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kivi ja rauta',
+              teksti: 'Uralin malmit ovat kaupungin syy ja sen '
+                + 'matkamuisto. Rautaruukkien rinnalla kasvoi '
+                + 'kivenveiston perinne, ja kaupungin museoissa on '
+                + 'omat kokoelmansa koruja ja korukiviesineitä. '
+                + 'Tunnetuin kivi on malakiitti, jonka vihreässä '
+                + 'pinnassa kiertävät samankeskiset raidat, ja juuri '
+                + 'siitä kertovat Pavel Bažovin tarinat. Toinen '
+                + 'perinne on valurauta: '
+                + 'Kaslin ruukin verstaat valoivat 1800-luvulla '
+                + 'veistoksia ja koristeita niin ohuina, että pinta '
+                + 'näyttää kankaalta, ja Kaslin paviljonki voitti '
+                + 'Pariisin maailmannäyttelyn pääpalkinnot vuonna 1900. '
+                + 'Unesco on kirjannut sen maailman ainoaksi '
+                + 'valurautaiseksi rakennukseksi, joka on museon '
+                + 'kokoelmassa.',
+              kuva: {
+                tiedosto: '2013-03 Malachit aus Gumeschewsk, Ural anagoria.JPG',
+                selite: 'Malakiittinäyte Uralin Gumešovskista. Kivi on '
+                  + 'kyhmyinen ja tummanvihreä, ja murtopinnalta '
+                  + 'paljastuu kirkkaanvihreitä samankeskisiä raitoja '
+                  + 'kuin puun vuosirenkaita.',
+                lahde: 'Anagoria, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunki kerroksina',
+              teksti: 'Keskustassa kolme aikaa on päällekkäin. '
+                + 'Klassismin kerroksen jätti arkkitehti Mihail Malahov, '
+                + 'joka työskenteli kaupungissa 1815–1842 ja jonka '
+                + 'kädenjälki näkyy kauppiaskartanoissa pihoineen ja '
+                + 'englantilaisine puistoineen. Sen päälle tuli '
+                + '1900-luvun alun eklektiikka, jossa rakennettiin '
+                + 'muun muassa oopperatalo ja rautatieasema. Kolmas '
+                + 'kerros on konstruktivismi: 1920- ja 1930-luvulla '
+                + 'nousi yli 140 rakennusta, joissa muoto seuraa '
+                + 'käyttöä ilman koristetta. Tunnetuin niistä on '
+                + 'Uralmašin tehdaskaupunginosan Valkoinen torni, '
+                + 'kaupungin ensimmäisiä teräsbetonirakennuksia — se '
+                + 'kantoi vesisäiliötä, ei enää kanna, ja seisoo yhä.',
+              kuva: {
+                tiedosto: 'The White Tower, Yekaterinburg (4).jpg',
+                selite: 'Valkoisen tornin vesisäiliö lähikuvassa. Betonin '
+                  + 'pinta on säiden kuluttama ja laikukas, säiliön '
+                  + 'kylkeen on tehty rivi pyöreitä ikkuna-aukkoja, ja '
+                  + 'sen yläreunassa kulkee nauhamainen lasitus ja '
+                  + 'kaide.',
+                lahde: 'Смирнов Евгений, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Käyrä on jyrkkä. Tammikuun keskilämpö on '
+                + 'neljätoista pakkasastetta ja heinäkuun kahdeksantoista '
+                + 'lämpöastetta, eli vuoden vaihteluväli on '
+                + 'kolmekymmentäkaksi astetta — se on mannerilmaston '
+                + 'mitta ilman merta pehmentämässä. Sade painottuu '
+                + 'kesään: heinäkuussa kertyy lähes yhdeksänkymmentä '
+                + 'millimetriä, helmikuussa viisitoista, ja talven '
+                + 'vähäinen sade tulee lumena. Kevät ja syksy ovat '
+                + 'lyhyitä välivaiheita, sillä huhtikuu on jo plussalla '
+                + 'ja lokakuu vielä juuri ja juuri. Kävelijän kuukaudet '
+                + 'ovat kesä–elokuu; talvella kaupunki on kaunis mutta '
+                + 'vaatii varusteet.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -33030,6 +33205,44 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Stesso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (Opus, Siperian täydennyserä 20.8.2026): katu, joki
+       * ja tasanko. Kansikuvat ovat maantiesilta, asema ja hirsitalo,
+       * joten avauskuvat kertovat sen, mitä niistä puuttuu — 1930-luvun
+       * valtakadun, Obin rantapuiston siltoineen ja sen tasangon, jonka
+       * keskellä kaupunki on. Ilmakuva on talvinen tarkoituksella:
+       * lehden muut kuvat ovat sulan ajan kuvia, ja Novosibirskissä
+       * lunta on marraskuusta huhtikuuhun.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Streets in Novosibirsk (May 2025) - 0 29.jpg',
+          selite: 'Punainen valtakatu aamuauringossa. Leveä ajorata '
+            + 'kaartuu tyhjänä kuvan halki, molemmin puolin seisoo '
+            + 'okrankeltaisia 1900-luvun puolivälin kerrostaloja '
+            + 'pylväikköineen, ja oikealla erottuu pieni valkoinen '
+            + 'kappeli kullattuine kupoleineen. Ilmassa risteilevät '
+            + 'johdinautojen ajolangat.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Novosibirsk Metro Bridge (May 2025).jpg',
+          selite: 'Obin ranta keväällä. Etualalla on nurmikoita ja '
+            + 'kävelyteitä, keskellä seisoo puistoon jätetty musta '
+            + 'teräksinen siltakaari, ja joen yli kulkee kaksi pitkää '
+            + 'siltaa. Vastarannalla näkyy kerrostalojen rivi.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Novosibirsk from plane (December 2022) - 1.jpg',
+          selite: 'Kaupunki lentokoneesta joulukuussa. Lumen peittämä '
+            + 'tasanko jatkuu horisonttiin asti, Ob mutkittelee sen '
+            + 'halki tummana nauhana, ja ylävirrassa levittäytyy '
+            + 'jäätynyt tekojärvi. Kaupungin katuvalot piirtyvät '
+            + 'hämärässä vaaleina ruudukkoina.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Ainoa kohta, jossa joki on putkessa',
@@ -33097,6 +33310,133 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Vadim Repin Tchaikovsky',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Novosibirsk opera and ballet theatre (May 2025) - 0.jpg',
+          selite: 'Oopperatalo aukion puolelta. Vaalean pylväikön takana '
+            + 'kohoaa harmaa matalakaarinen kupoli, jonka juurella kiertää '
+            + 'ikkunarivi. Talon edessä on nurmikaistaleita ja kivetty '
+            + 'aukio, jonka poikki kulkee ihmisiä pieninä hahmoina.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Novosibirsk on Siperian suurin kaupunki ja Moskovan ja '
+          + 'Pietarin jälkeen Venäjän kolmanneksi väkirikkain: vuoden 2021 '
+          + 'väenlaskussa asukkaita oli 1 633 595. Se on myös Venäjän '
+          + 'suurten kaupunkien nuorin — vuonna 1893 paikalla ei ollut '
+          + 'mitään, ja miljoona asukasta täyttyi 2. syyskuuta 1962, alle '
+          + 'seitsemässäkymmenessä vuodessa. Vanhaa keskustaa ei siis ole; '
+          + 'kaupungin ydin on 1900-luvun alun ja 1930-luvun rakennettu, ja '
+          + 'sen selkäranka on Punainen valtakatu.',
+        artikkeli: {
+          nimi: 'Matkailijan Novosibirsk',
+          taitto: 'opas',
+          teksti: 'Yksi joki, kuusi siltaa ja kaupunki, joka on nuorempi '
+            + 'kuin useimpien maiden rautatieverkko.',
+          nosto: 'Metro ylittää Obin maailman pisintä katettua metrosiltaa '
+            + 'pitkin: putki on 2 145 metriä eikä sen sisällä näy jokea '
+            + 'lainkaan — se on rakennettu niin, että kiskot pääsevät '
+            + 'liikkumaan pakkasen ja helteen välillä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunki syntyi rautatiestä, ja rautatie on yhä sen '
+                + 'pääovi: Novosibirsk-Glavnyi on Transsiperian radan '
+                + 'suurimpia asemia, ja Moskovaan on 2 811 kilometriä. '
+                + 'Metro avattiin vuonna 1985 neljäntenä Venäjällä ja '
+                + 'ensimmäisenä Siperiassa; linjoja on kaksi ja asemia '
+                + 'kolmetoista. Obin ylittää kuusi siltaa: kolme '
+                + 'maantiesiltaa, kaksi rautatiesiltaa ja yksi metrosilta, '
+                + 'ja lisäksi vesivoimalan pato eteläreunalla toimii '
+                + 'tienä. Metrosilta on maailman pisin katettu metrosilta, '
+                + '2 145 metriä. Asemien lisäksi kaupungissa on '
+                + 'raitiovaunut, johdinautot ja joen yli kulkeva '
+                + 'vesibussiliikenne.',
+              kuva: {
+                tiedosto: 'Novosibirsk Metro (May 2025) - 0 5.jpg',
+                selite: 'Metroaseman laituri ja sen seinän mittainen '
+                  + 'kivimosaiikki. Kuvaan on ladottu eri sävyisistä '
+                  + 'kivilaatoista mäntymetsä, lintuja ja hevosta '
+                  + 'taluttava mies. Laiturin edessä kulkevat kiskot '
+                  + 'tunneliin.',
+                lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Novosibirsk on Länsi-Siperian tasangolla Obin '
+                + 'molemmin puolin, ja tasaisuus on tässä sanan '
+                + 'täsmällisessä merkityksessä totta: lähimmät suuret '
+                + 'kaupungit Omsk, Barnaul, Kemerovo ja Tomsk ovat kaikki '
+                + 'satojen kilometrien päässä samalla lakeudella. '
+                + 'Kaupungin eteläraja kulkee Novosibirskin tekojärvessä, '
+                + 'jonka 1950-luvulla rakennetun vesivoimalan pato synnytti '
+                + 'ja jota kutsutaan Obin mereksi. Hinta oli kova: '
+                + 'padotuksen alle jäi laajoja viljelysmaita ja vanhoja '
+                + 'mäntymetsiä, ja avoin vesi kaksinkertaisti alueen '
+                + 'keskituulen. Voimalan teho on 400 megawattia.',
+              kuva: {
+                tiedosto: 'ObskoyeSea 012 7910.jpg',
+                selite: 'Obin meri harmaana päivänä. Vesi jatkuu '
+                  + 'horisonttiin ilman vastarantaa, pinta on tasaisen '
+                  + 'väreilevä, ja etualalla ui kaksi sorsaa. Taivas on '
+                  + 'juovikkaiden pilvien peitossa.',
+                lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: eläintarha männikössä',
+              teksti: 'Novosibirskin eläintarha on Venäjän tunnetuimpia, ja '
+                + 'sen erikoisuus on maasto: tarha on rakennettu suoraan '
+                + 'mäntymetsään, joten kävijä kulkee kaupungin sisällä '
+                + 'taigassa. Kokoelmassa on yli 11 000 eläintä 738 '
+                + 'lajista, ja tarha on mukana kolmessakymmenessäkahdessa '
+                + 'uhanalaisten lajien tarhakasvatusohjelmassa. Kävijöitä '
+                + 'on vuodessa noin puolitoista miljoonaa, eli tarha on '
+                + 'kaupungin suosituin ulkoilupaikka; mäntyjen väliin on '
+                + 'sijoitettu myös betonisia dinosauruksia — ne ovat '
+                + 'lasten kanssa käyville yhtä tärkeä kohde kuin eläimet.',
+              kuva: {
+                tiedosto: 'Novosibirsk Zoo (May 2025) - 0.jpg',
+                selite: 'Eläintarhan mäntymetsässä seisoo kaksi suurta '
+                  + 'betonista dinosaurusta lammen rannalla. Etualalla '
+                  + 'kaartuu sininen, suomukylkinen käärmemäinen hahmo, '
+                  + 'ja sen takana pitkäkaulainen harmaa jättiläinen '
+                  + 'kurkottaa puiden lomasta.',
+                lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kryachkovin kaupunki',
+              teksti: 'Yhden arkkitehdin jälki näkyy keskustassa '
+                + 'poikkeuksellisen selvästi. Andrei Krjatškov piirsi '
+                + 'nuoreen Novonikolajevskiin vuosina '
+                + '1910–1911 Punaisen valtakadun kauppatalon, jossa '
+                + 'toimivat sekä puodit että kaupunginhallinto ja jossa '
+                + 'nykyään on kotiseutumuseo. Neljännesvuosisata '
+                + 'myöhemmin hän suunnitteli Vitali Maslennikovin kanssa '
+                + 'Satohuoneiston talon, kahdeksankerroksisen '
+                + 'asuinrakennuksen, joka valmistui 1937. Pariisin '
+                + 'maailmannäyttely palkitsi hankkeen 11. joulukuuta 1937 '
+                + 'kultamitalilla ja Grand Prix -palkinnolla. Talo on yhä '
+                + 'asuttu, ja sen edessä seisoo arkkitehdin oma patsas.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Talvi on kolme astetta Uralin takaista kylmempi: '
+                + 'tammikuun keskilämpö on seitsemäntoista pakkasastetta. '
+                + 'Kesä yltää silti heinäkuussa lähes kahteenkymmeneen '
+                + 'asteeseen, joten vuoden vaihteluväli on runsaat '
+                + 'kolmekymmentäkuusi astetta. Sade jakautuu tasaisemmin '
+                + 'kuin idempänä Irkutskissa, ja marras–tammikuun runsas '
+                + 'sata millimetriä tulee lumena. Käytännössä se '
+                + 'tarkoittaa, että lumi tulee marraskuussa ja lähtee '
+                + 'huhtikuussa. Kesäkuukaudet ovat kävelijän aikaa, ja '
+                + 'juuri silloin Obin meren rannat ja eläintarhan männikkö '
+                + 'ovat parhaimmillaan.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -33226,6 +33566,45 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Trasprd, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (Opus, Siperian täydennyserä 20.8.2026): kivi, hirsi
+       * ja veisto. Kansikuvat ovat ilmakuva, Kazanin kirkko ja 130.
+       * kortteli, joten avauskuvat kertovat kaupungin toisen puolen —
+       * vuoden 1879 palon jälkeisen kivikeskustan (draamateatteri),
+       * palorajan takaisen puukaupungin ja sen koristeen, josta Irkutsk
+       * tunnetaan. Puuleikkausikkunat ovat lähikuva samasta ilmiöstä
+       * kuin talvinen hirsitalo, ja se on tarkoituksellista: kaukaa ja
+       * läheltä katsottuna ne ovat eri asia.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Teatr Dramatyczny w Irkucku.JPG',
+          selite: 'Draamateatteri kadunkulmassa. Julkisivu on jaettu '
+            + 'vuorotellen tiilenpunaisiin ja vaaleankeltaisiin '
+            + 'kenttiin, kulmaa kiertää pylväsrivi, ja katolla lepää '
+            + 'vihreillä laatoilla katettu kupoli. Otsalaudan '
+            + 'kilpeen on hakattu vuosiluku 1894.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Иркутск. Усадьба Сукачёва 10.JPG',
+          selite: 'Kaksikerroksinen hirsitalo hämärtyvässä talvi-illassa. '
+            + 'Ylemmän kerroksen ympäri kiertää avoin puuparveke, jonka '
+            + 'kaiteet ja pylväät on veistetty koristeiksi, ja katolla '
+            + 'on paksu lumipeite. Edustan aukio on umpeen tallattua '
+            + 'lunta.',
+          lahde: 'Fanzuga, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Irkutsk, Wooden house, Wooden windows, Russia.jpg',
+          selite: 'Kolme ikkunaa punaiseksi maalatussa lautaseinässä. '
+            + 'Siniharmaat luukut on kehystetty veistetyillä pielillä, '
+            + 'joiden yläpuolella on valkoinen päätykolmio ja sen '
+            + 'reunassa rivi pyöreitä hammastuksia. Keskellä kutakin '
+            + 'päätyä on kaiverrettu ruusuke.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Tee ja silkki tulivat Kjahtan kautta',
@@ -33296,6 +33675,139 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Славное море священный Байкал',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Lower Embankment in Irkutsk (September 2025) - 0.jpg',
+          selite: 'Angaran alaranta iltapäivällä. Valkoinen kivikaide '
+            + 'kaartuu kuvan halki, joki levittäytyy vasemmalle vaaleana '
+            + 'ja leveänä, ja oikealla kohoavat Epifanian katedraalin '
+            + 'tumma telttatorni ja Vapahtajan kirkon valkoinen '
+            + 'kellotorni. Rantapenkillä istuu kaksi ihmistä.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Irkutsk on runsaan puolen miljoonan asukkaan kaupunki '
+          + 'Angaran mutkassa: vuoden 2010 väenlaskussa asukkaita oli '
+          + '587 891, ja se on Venäjän kahdenneskymmenesviides. Kaupunki '
+          + 'jakautuu joen mukaan vasempaan ja oikeaan rantaan, ja '
+          + 'historiallinen ydin on oikealla rannalla siinä, missä '
+          + 'Ušakovka laskee Angaraan. Sen keskusta on Unescon '
+          + 'maailmanperintöluettelon ehdokaslistalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Irkutsk',
+          taitto: 'opas',
+          teksti: 'Kivikaupunki joen rannassa, puukaupunki sen takana ja '
+            + 'maailman syvin järvi tunnin päässä.',
+          nosto: 'Vuoden 1879 palon jälkeen puusta rakentaminen '
+            + 'kiellettiin rannan puolella, ja siitä syntyi kaupungin '
+            + 'kahtiajako: Angaran rannassa kivitalot, palorajan takana '
+            + 'puutalot — se näkyy kadulla yhä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Ensimmäinen juna saapui Irkutskiin 16. elokuuta '
+                + '1898, ja rautatie on yhä pääreitti: asema on '
+                + 'vasemmalla rannalla Glaskovon puolella, ja sen ohi '
+                + 'kulkevat Moskovan, Vladivostokin ja Ulan Batorin '
+                + 'junat. Krasnojarskiin on 850 kilometriä luoteeseen ja '
+                + 'Ulan Batoriin 520 kilometriä etelään. Kaupungin läpi '
+                + 'kulkevat myös Siperian valtatiet. Angara on '
+                + 'kaupungin kohdalla 580 metriä leveä, ja sen ylittävät '
+                + 'vesivoimalan pato ja kolme siltaa alavirtaan päin. '
+                + 'Baikalin rannalle on maanteitse runsaat '
+                + 'seitsemänkymmentä kilometriä, ja tavallisin määränpää '
+                + 'on Listvjankan kylä Angaran suulla vastapäätä Port '
+                + 'Baikalia.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Itä-Siperian kumpuilevassa taigassa '
+                + 'kolmen joen kohdalla. Angara tulee Baikalista, Irkut '
+                + 'laskee siihen suoraan kaupungin kohdalla vastarannalla '
+                + '— ja siitä kaupunki on saanut nimensä — ja Ušakovka '
+                + 'erottaa keskustan luostarin, vanhan linnoituksen ja '
+                + 'sataman puolesta. Vanhaa kaupunkia ei ole kaavoitettu: '
+                + 'ensimmäisillä asukkailla ei ollut katuja lainkaan, '
+                + 'talot käännettiin ikkunat etelään, ja kadut '
+                + 'muotoutuivat rantaviivan mukaan. Ainoa suora katu '
+                + 'syntyi vuonna 1790 puretun paaluvarustuksen '
+                + 'paikalle. Kaupungin ja '
+                + 'Baikalin välissä Angaran rannalla on Taltsyn '
+                + 'ulkoilmamuseo, johon on siirretty siperialaisia '
+                + 'hirsirakennuksia.',
+              kuva: {
+                tiedosto: 'Chasovnya - Musei(TAl\'TSI).JPG',
+                selite: 'Hirsikirkko Taltsyn ulkoilmamuseossa. Tummunut '
+                  + 'salvottu runko, valkeiksi maalatut ikkunanpielet ja '
+                  + 'vihreät sipulikupolit; kellotornin katto on '
+                  + 'pärekattoinen teltta. Ympärillä on nurmikenttä ja '
+                  + 'koivuja.',
+                lahde: 'Сычугова Надежда, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: omuli',
+              teksti: 'Baikalin oma kala on omuli, siika, jota ei tavata '
+                + 'muualla. Se on järven tärkein saalislaji ja suurin osa '
+                + 'kaikesta kalastuksesta; tavallisin tapa on savustaa se '
+                + 'kokonaisena ja myydä tienvarsi- ja satamakojuista '
+                + 'lämpimänä. Matkailija törmää omuliin ennen kuin '
+                + 'ehtii järven rantaan: sitä myydään Irkutskin toreilla '
+                + 'ja jokaisella pysäkillä Listvjankan tiellä. Muita '
+                + 'kaupallisesti tärkeitä ja niin ikään vain Baikalissa '
+                + 'eläviä lajeja ovat baikalinharjus ja baikalinsampi. '
+                + 'Kalastajat pyytävät järvestä viittätoista lajia, '
+                + 'mutta omuli on niistä ylivoimaisesti suurin erä.',
+              kuva: {
+                tiedosto: 'RU Lake Baikal Olkhon Smoked Omul.jpg',
+                selite: 'Savustettuja omuleita valkoisella tarjottimella. '
+                  + 'Kalat ovat kokonaisia ja niiden nahka on savun '
+                  + 'kullanruskeaksi kiillottama; ne on ladottu '
+                  + 'ristikkäin päät kuvan etureunaa kohti.',
+                lahde: 'Alexander Klink, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Baikal on seitsemänkymmenen kilometrin päässä',
+              teksti: 'Järvi ei ole kaupungissa vaan sen yläpuolella: '
+                + 'Irkutsk on 72 kilometriä siitä kohdasta alavirtaan, '
+                + 'jossa Angara lähtee Baikalista. Yhteys on silti '
+                + 'suora, sillä kaupungin läpi virtaava vesi on juuri '
+                + 'järven vettä. Vanha reitti sinne oli rautatie: '
+                + 'Kiertobaikalin rata avattiin liikenteelle 29. '
+                + 'lokakuuta 1905, ja se oli aikanaan Transsiperian radan '
+                + 'pääsuunta. Kun Irkutskin voimalan allas täytettiin '
+                + 'vuonna 1956, rannan osuus jäi veden alle, ja jäljelle '
+                + 'jäi 89 kilometrin pussinperä Sljudjankasta Baikalin '
+                + 'kylään. Sillä on 38 tunnelia, yhteensä 9 063 metriä, '
+                + '248 siltaa ja 268 tukimuuria — Venäjässä ei ole '
+                + 'toista yhtä tiheästi rakennettua rataosuutta.',
+              kuva: {
+                tiedosto: 'Baikal Railway, Kirkirey railway tunnels, Russia.jpg',
+                selite: 'Kaksi kivistä tunnelinsuuta rinteen kyljessä. '
+                  + 'Holvit on muurattu tasatuista harmaista lohkareista, '
+                  + 'ja niiden välissä nousee sama kivi tukimuurina. Yksi '
+                  + 'raide kaartaa oikealle, ja rinteessä kasvaa '
+                  + 'syksyisiä koivuja ja mäntyjä.',
+                lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Irkutskin talvi on lähes sateeton: tammi- ja '
+                + 'helmikuussa normaali on kuusi millimetriä, kun heinä- '
+                + 'ja elokuussa se on sata. Pakkasta on marraskuusta '
+                + 'maaliskuuhun, tammikuussa yhdeksäntoista astetta. '
+                + 'Kolme neljäsosaa vuoden vedestä tulee kesäkuun ja '
+                + 'syyskuun välillä, joten talvi on sekä kylmä että '
+                + 'kuiva. Baikal tasoittaa lukuja sen verran, että '
+                + 'Irkutskin ääripäät ovat lievemmät kuin muualla samalla '
+                + 'leveydellä Siperiassa. Kesä on kävelijän aikaa, mutta '
+                + 'helmi–maaliskuu on järven aikaa: silloin jää on '
+                + 'paksuimmillaan ja kirkkaimmillaan.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',

@@ -21122,4 +21122,827 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * JEKATERINBURGIN KOHDEKARTAN JUTUT (Opus, Siperian täydennyserä
+   * 20.8.2026). Seitsemän kohdetta samassa järjestyksessä kuin
+   * kartalla, pohjoisesta etelään. Faktat on tarkistettu
+   * en-Wikipedian artikkeleista Yekaterinburg, Old Station building
+   * (Yekaterinburg), Yekaterinburg railway station, Kharitonov
+   * Palace, Ural State University, Yekaterinburg Museum of Fine Arts,
+   * Great Zlatoust Church, Trinity Cathedral (Yekaterinburg), Shigir
+   * Idol ja White Tower (Yekaterinburg) (haettu 20.8.2026).
+   *
+   * VENÄJÄ-LINJAUS (kaupunkilehti.md, omistajan linjaus 13.8.2026):
+   * ei nykysotaa eikä nykypolitiikkaa. Kaksi asiaa on siksi jätetty
+   * pois. Ensimmäinen on Ipatjevin talo ja sille rakennettu kirkko:
+   * vuoden 1918 tapahtumat ja niiden ympärille kasvanut nykyinen
+   * kultti eivät kuulu tähän lehteen kummankaan kehyksen kautta.
+   * Toinen on Kharitonovin kartanon 2000-luvun omistuskiista, joka on
+   * puhdasta nykypolitiikkaa. Kharitonovin oma tuomio vuodelta 1837
+   * on mukana yhtenä lauseena ilman yksityiskohtia, koska ilman sitä
+   * talon autioituminen jäisi selittämättä.
+   */
+  jekaterinburg: {
+    'Vanha rautatieasema': {
+      aika: '1878',
+      teksti: 'Rautatie tuli Jekaterinburgiin lännestä. Uralin '
+          + 'vuorirata Permistä oli 372 kilometriä pitkä, sen '
+          + 'rakentaminen alkoi 1874, ja pääteasema valmistui vuonna '
+          + '1878. Piirtäjä oli arkkitehti Pjotr Šreiber, ja hän '
+          + 'suunnitteli radan toiseen päähän Permiin kaksoisveljen: '
+          + 'nykyinen Perm I on samaa käsialaa. Tyyli on venäläinen '
+          + 'kansallisromantiikka, siis tarkoituksellisen vanhahtava jo '
+          + 'omana aikanaan — kaari kaaren perään, tornimaisia '
+          + 'päätyjä ja jyrkkä ruutukuvioinen katto.'
+          + '\n\n'
+          + 'Asema teki kaupungista risteyksen kahdessa vaiheessa. '
+          + 'Rata jatkettiin Tjumeniin vuonna 1886 ja Tšeljabinskiin '
+          + 'vuonna 1896, ja sen jälkeen pieni asemarakennus ei enää '
+          + 'riittänyt. Liikenneministeriö päätti vuonna 1910 rakentaa '
+          + 'uuden aseman sadan metrin päähän; se palvelee matkustajia '
+          + 'yhä. Vanha talo jäi pitkäksi aikaa sotilasjunien asemaksi.'
+          + '\n\n'
+          + 'Vuonna 2003 rakennus kunnostettiin ja siihen avattiin '
+          + 'Sverdlovskin rautatien historian, tieteen ja tekniikan '
+          + 'museo. Liikkuva kalusto on esillä Jekaterinburg-'
+          + 'Sortirovotšnyin ratapihalla, mutta kokoelman historiallinen '
+          + 'osa on täällä. Talon edustalle on asetettu pronssiveistoksia '
+          + 'kiirehtivistä matkustajista, asemapäälliköstä kelloineen ja '
+          + 'kantajasta; ne ovat Juri Krylovin ja Aleksandr Kokotejevin '
+          + 'käsialaa.',
+      kuvat: [
+        {
+          tiedosto: 'Old Train Station in Yekaterinburg (September 2022) - 1.jpg',
+          selite: 'Vanha asema ilmasta. Valkoinen kaariaukkojen '
+            + 'rivittämä rakennus on katettu puna-valkoruudullisella '
+            + 'peltikatolla, jonka harjalla on koristeellisia päätyjä. '
+            + 'Edustalla on kivetty aukio veistoksineen ja '
+            + 'lyhtypylväineen, ja takana levittäytyy ratapiha, jolla '
+            + 'seisoo rivi punaisia ja harmaita matkustajavaunuja.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kharitonovin kartano': {
+      aika: '1794–1824',
+      teksti: 'Kartanon tilasi vuonna 1794 vanhauskoinen kauppias ja '
+          + 'maanomistaja Lev Rastorgujev, ja päärakennus nousi '
+          + 'Nousemuksen kukkulalle. Samaan aikaan rakennettiin viereen '
+          + 'Nousemuksen kirkko. Tyyli on uusklassismi: pylväikkö, '
+          + 'kolmiopääty ja holvikaarinen alakerta, siis sama kieli, '
+          + 'jota Pietarissa puhuttiin — Uralin ruukinomistajat '
+          + 'rakensivat itselleen pääkaupungin mukaan.'
+          + '\n\n'
+          + 'Nykyisen nimensä talo sai vävystä. Pjotr Kharitonov peri '
+          + 'sen vuonna 1824 ja palkkasi arkkitehti Mihail Malahovin '
+          + 'yhdistämään rakennukset katetuilla käytävillä; puiston '
+          + 'hän teetti englantilaiseen tapaan vapaamuotoiseksi. Samana '
+          + 'vuonna talossa vieraili keisari Aleksanteri I. Kharitonov '
+          + 'sai maaorjiensa kohtelusta virallisen moitteen, joutui '
+          + 'oikeuteen ja tuomittiin vuonna 1837 elinkautiseen '
+          + 'vankeuteen Käkisalmen linnaan; talo jäi tyhjilleen.'
+          + '\n\n'
+          + 'Sen jälkeen rakennus on ollut lasten talo. Se kunnostettiin '
+          + '1930-luvun lopulla — suuret korjaukset tehtiin 1935–1937 — '
+          + 'ja siihen sijoitettiin pioneeripalatsi. Neuvostoliiton '
+          + 'hajottua toiminta jatkui lasten taidekouluna, ja sitä se on '
+          + 'yhä. Puistoineen kartano on yksi harvoja kaupungin '
+          + 'kohteita, joissa 1800-luvun alun mittakaava on tallella '
+          + 'kokonaisena pihapiirinä eikä yksittäisenä julkisivuna.',
+      kuvat: [
+        {
+          tiedosto: '1910Усадьба Расторгуевых-Харитоновых.jpg',
+          selite: 'Kartano Sergei Prokudin-Gorskin värivalokuvassa noin '
+            + 'vuodelta 1910. Valkoinen päärakennus kohoaa aukion '
+            + 'laidalla, sen keskellä on korinttilainen pylväikkö '
+            + 'kolmiopäätyineen ja alla kaariholvinen käytävä. Oikealla '
+            + 'jatkuvat matalammat siivet, joiden päällä on kaksi tummaa '
+            + 'kupolia. Kolmesta erillisestä otoksesta koottu kuva '
+            + 'reunustaa esineet ohuilla väriviiruilla.',
+          lahde: 'Прокудин-Горский, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Uralin valtionyliopisto': {
+      aika: '1920',
+      teksti: 'Yliopisto perustettiin 19. lokakuuta 1920, ja sen '
+          + 'perustajiin kuului kirjailija Maksim Gorki; hänen mukaansa '
+          + 'se nimettiin vuonna 1936. Se on Keski-Uralin toiseksi '
+          + 'vanhin korkeakoulu — vanhin on vuoriopisto, jonka '
+          + 'perustaminen liittyi suoraan alueen kaivoksiin. Tunnuslause '
+          + 'on latinaksi Hominem unius libri timeo, pelkään yhden '
+          + 'kirjan miestä, ja se on lainattu Tuomas Akvinolaiselta.'
+          + '\n\n'
+          + 'Talo Leninin valtakadun varrella on kaupungin toisen '
+          + 'suuren rakennuskauden jäljiltä: 1930–1950-luvulla '
+          + 'palattiin uusklassismiin, ja julkiset rakennukset saivat '
+          + 'pylväiköt ja symmetriset siivet. Yliopistossa toimii '
+          + 'nykyään neljätoista laitosta ja yhdeksänkymmentäviisi '
+          + 'oppituolia, ja opetusalat ulottuvat biologiasta '
+          + 'bysanttitutkimukseen. Tieteellisessä kirjastossa on yli '
+          + '1,2 miljoonaa nidettä, ja lisäksi on observatorio ja '
+          + 'kasvitieteellinen puutarha.'
+          + '\n\n'
+          + 'Yliopiston oma perinne ovat Demidovin luennot, joita '
+          + 'pitävät vuosittain Demidovin palkinnon saajat. Palkinnon '
+          + 'nimi vie takaisin siihen, mistä koko kaupunki alkoi: '
+          + 'Demidovit olivat Uralin ruukinomistajasuku, ja heidän '
+          + 'rahoillaan perustettu tiedepalkinto elää yhä. Vuonna 2011 '
+          + 'yliopisto yhdistettiin teknillisen korkeakoulun kanssa '
+          + 'Uralin liittovaltionyliopistoksi, joka on '
+          + 'opiskelijamäärältään Venäjän suurin.',
+      kuvat: [
+        {
+          tiedosto: 'Ural State University (September 2022) - 2.jpg',
+          selite: 'Yliopiston päärakennus ilmasta. Pitkän vaalean talon '
+            + 'katto on kirkkaan vihreä, ja keskellä nousee pylväikkö, '
+            + 'jonka otsalautaan on kirjoitettu yliopiston nimi '
+            + 'kyrillisin kirjaimin. Julkisivun edessä on rivi kuusia ja '
+            + 'kivetty aukio; takana kohoaa nykykaupunki '
+            + 'lasitornitaloineen.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Historiallinen aukio': {
+      aika: '1723 alkaen',
+      teksti: 'Tämä on se paikka, josta kaupunki alkoi. Vasili '
+          + 'Tatištšev etsi vuonna 1721 Uralilta kohtaa, jossa olisi '
+          + 'sekä malmia että metsää, ja valitsi Iset-joen rannan. Työ '
+          + 'seisahtui, kun Berg-kollegio ei hyväksynyt hanketta, ja '
+          + 'jatkui vasta 12. maaliskuuta 1723 Georg Wilhelm de '
+          + 'Genninin johdolla. Järjestys oli tarkka: ensin padottiin '
+          + 'joki, sitten rakennettiin ruukki, joka kävi padon '
+          + 'voimalla. Vasarapajaa koeajettiin 18. marraskuuta 1723, ja '
+          + 'siitä päivästä lasketaan kaupungin ikä.'
+          + '\n\n'
+          + 'Ruukista kasvoi kokonainen tehdaskortteli padon molemmin '
+          + 'puolin. Vuonna 1725 siellä alettiin lyödä kuparirahaa, ja '
+          + 'myöhemmin alue tunnettiin mekaanisena tehtaana ja '
+          + 'rahapajana. Sen muurit, portit ja osa halleista ovat yhä '
+          + 'paikoillaan: valkoiset klassistiset porttipaviljongit '
+          + 'valurauta-aitoineen ovat aukion tunnistettavin osa, ja '
+          + 'niiden mittakaava kertoo, kuinka lähellä keskustaa '
+          + 'raskas teollisuus oli.'
+          + '\n\n'
+          + '1970-luvulla suurin osa vanhan ruukin rakennuksista '
+          + 'purettiin ja niiden paikalle tehtiin Historiallinen aukio, '
+          + 'kaupungin keskuspuisto. Yksi vanhimmista taloista '
+          + 'säästettiin: vuonna 1730 ruukin sairaalaksi rakennettu '
+          + 'talo on nyt kuvataidemuseon ydin. Aukio on siis '
+          + 'kaksinkertainen muistomerkki — sen alla on kaupungin '
+          + 'perustus, ja sen päällä näkyy se, mitä 1970-luku ajatteli '
+          + 'perustuksista.',
+      kuvat: [
+        {
+          tiedosto: 'Monetki Works complex (May 2026).jpg',
+          selite: 'Rahapajan portit historiallisen aukion laidalla. '
+            + 'Kaksi valkoista porttipaviljonkia, joissa on pylväät ja '
+            + 'vihreä kolmiopääty, ja niiden välissä musta '
+            + 'valurauta-aita kaksoisportteineen. Takana kohoaa '
+            + 'myöhemmän ajan kerrostalo.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuvataidemuseo': {
+      aika: '1936, nykyisessä talossa 1986',
+      teksti: 'Museo aloitti vuonna 1936 Sverdlovskin taidegalleriana '
+          + 'Vainerin kadulla. Sota toi sinne poikkeuksellisen '
+          + 'talletuksen: Eremitaasin kokoelmat siirrettiin '
+          + 'turvasäilytykseen tänne. 1980-luvun puolivälissä kokoelma '
+          + 'muutti Vojevodinin kadun uudistettuun taloon, jonka ytimenä '
+          + 'on vuonna 1730 ruukin sairaalaksi rakennettu talo — yksi '
+          + 'kaupungin vanhimmista. Hanke valmistui 1986, ja nimi '
+          + 'muuttui kuvataidemuseoksi 1988 ja Jekaterinburgin museoksi '
+          + '1992 kaupungin nimenmuutoksen jälkeen.'
+          + '\n\n'
+          + 'Kokoelman kuuluisin esine on Kaslin valurautapaviljonki. '
+          + 'Kaslin ruukin verstaat valoivat sen 1800-luvun lopulla, ja '
+          + 'se sai Pariisin maailmannäyttelyn pääpalkinnot vuonna '
+          + '1900. Unesco on kirjannut sen maailman ainoaksi '
+          + 'valurautaiseksi rakennukseksi, joka kuuluu museon '
+          + 'kokoelmaan. Sen rinnalla on laaja kokoelma Uralin '
+          + 'kivenveistoa ja korukiviesineitä.'
+          + '\n\n'
+          + 'Toinen ainutlaatuinen kokonaisuus ovat Nevjanskin ikonit. '
+          + 'Nevjansk oli 1700-luvulla vanhauskoisten keskus, ja sen '
+          + 'muutamassa verstaassa syntyi oma maalaustapa, joka eli '
+          + 'aina 1900-luvun alkuun. Museossa on lisäksi venäläistä '
+          + 'maalausta 1700-luvulta 1900-luvun alkuun, muun muassa Ivan '
+          + 'Šiškinin, Ivan Kramskoin, Aleksei Savrasovin ja Vasili '
+          + 'Polenovin töitä, sekä 1910–1920-luvun avantgardea.',
+      kuvat: [
+        {
+          tiedosto: 'Николай Чудотворец Первая половина XVIII века Невьянск ЕМИИ.jpg',
+          selite: 'Nevjanskilainen Nikolaos-ikoni 1700-luvun '
+            + 'alkupuolelta. Kultapohjalle on maalattu piispa, jolla on '
+            + 'harmaa parta ja ristikuvioinen viitta; kädessä on avattu '
+            + 'kirja kirkkoslaavinkielistä tekstiä. Ylänurkissa leijuvat '
+            + 'pilvien päällä pienet Kristuksen ja Jumalanäidin hahmot.',
+          lahde: 'IvanA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri Zlatoust': {
+      aika: '1847–1876',
+      teksti: 'Suuri Zlatoust on kellotorni, ei kirkko sanan '
+          + 'tavallisessa mielessä — tai oikeastaan molempia: '
+          + 'seitsemänkymmentäseitsemän metriä korkean tornin alimmassa '
+          + 'kerroksessa on kirkkosali. Nimi tarkoittaa Suurta '
+          + 'Kultasuuta ja viittaa Johannes Krysostomokseen. Alakerran '
+          + 'kirkko vihittiin pyhälle Maximianukselle, joka oli '
+          + 'keisarin vävyn Maximilian de Beauharnais\'n suojeluspyhimys.'
+          + '\n\n'
+          + 'Vasili Morgan piirsi tornin vuonna 1847 venäläis-'
+          + 'bysanttilaiseen tyyliin, joka oli johdettu Konstantin '
+          + 'Thonin töistä. Rakentaminen kesti melkein kolmekymmentä '
+          + 'vuotta ja valmistui 1876 — se tarkoittaa, että isoisän '
+          + 'aikaan vuonna 1873 torni oli vielä telineissä. Valmiina se '
+          + 'oli koko Uralin alueen korkein rakennus ja hallitsi '
+          + 'kaupungin siluettia vallankumoukseen asti.'
+          + '\n\n'
+          + 'Vuonna 1930 torni purettiin ja sen paikalle pystytettiin '
+          + 'patsas. Kahdeksankymmentä vuotta myöhemmin se rakennettiin '
+          + 'uudelleen vanhojen piirustusten ja valokuvien mukaan. '
+          + 'Nykyinen rakennus on siis nuori, mutta sen mittasuhteet, '
+          + 'kaaririvistöt ja kullatut kupolit ovat alkuperäiset — ja '
+          + 'kaupunkikuvassa se palautti kadonneen kiintopisteen.',
+      kuvat: [
+        {
+          tiedosto: 'Храм Большой Златоуст. Екатеринбург, июнь 2013 г..jpg',
+          selite: 'Suuri Zlatoust myrskypilvien alla. Valkoinen '
+            + 'kellotorni nousee kolmessa kerroksessa kaariaukkoineen ja '
+            + 'kaartuvine räystäineen, ja sen huipulla on kullattu '
+            + 'sipulikupoli; alempana kohoaa neljä pienempää kullattua '
+            + 'kupolia. Kadun yllä risteilevät sähkölangat, ja edessä '
+            + 'ajaa autoja.',
+          lahde: 'Tyyytty, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kolminaisuuden katedraali': {
+      aika: '1818–1852',
+      teksti: 'Kirkon takana on vanhauskoisten historia. Hanketta '
+          + 'ajoivat 1800-luvun alussa juuri he, ja se teki '
+          + 'rakentamisesta hankalaa: vanhauskoisia pidettiin '
+          + 'valtakirkon ulkopuolisina, ja lupa-asiat takkusivat. Työt '
+          + 'alkoivat vuonna 1824, ja piirustukset teki arkkitehti '
+          + 'Mihail Malahov klassistiseen tyyliin — sama mies, joka '
+          + 'muotoili Kharitonovin kartanon pihapiirin.'
+          + '\n\n'
+          + 'Rakennuttajien joukossa oli Rjazanovien kauppias- ja '
+          + 'kaivossuku, ja heistä keskeisin oli Jakim Rjazanov. Hän '
+          + 'oli itse vanhauskoinen, mutta päätti vuonna 1838 vaihtaa '
+          + 'kirkon tunnustuksen valtakirkon puolelle — ja vasta sen '
+          + 'jälkeen työ eteni. Ensimmäinen osa valmistui ja vihittiin '
+          + 'vuonna 1839, ja koko rakennus oli valmis 1852.'
+          + '\n\n'
+          + 'Talon ulkoasu kertoo saman kaksinaisuuden. Se on '
+          + 'klassistinen kuin virastotalo: pylväikkö, kolmiopääty ja '
+          + 'sileä keltainen seinäpinta. Kupoli ja erillinen kellotorni '
+          + 'ovat kullatut ortodoksiseen tapaan. Kaupungin '
+          + 'rakennushistoriassa se on Malahovin kauden — vuodet '
+          + '1815–1842 — selvimpiä esimerkkejä siitä, miten Uralin '
+          + 'raha käänsi kivikaupungin pääkaupungin malliin.',
+      kuvat: [
+        {
+          tiedosto: 'Trinity Cathedral (Yekaterinburg) 25-4-10.jpg',
+          selite: 'Kolminaisuuden katedraali ylhäältä keväällä. '
+            + 'Vaaleankeltaisen kirkon keskellä on suuri kullattu '
+            + 'kupoli, edessä valkopylväinen portiikki ja sivulla '
+            + 'erillinen kellotorni omine kullattuine kupoleineen. '
+            + 'Ympärillä on aukio ja aita, ja kauempana kohoaa '
+            + 'kerrostaloja ja nostureita.',
+          lahde: 'Const st, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * NOVOSIBIRSKIN KOHDEKARTAN JUTUT (Opus, Siperian täydennyserä
+   * 20.8.2026). Viisi kohdetta pohjoisesta etelään. Faktat on
+   * tarkistettu en-Wikipedian artikkeleista Novosibirsk, Novosibirsk
+   * railway station, City Trade House, Novosibirsk State Art Museum,
+   * 100-Flat Building ja Alexander Nevsky Cathedral, Novosibirsk
+   * (haettu 20.8.2026).
+   *
+   * VIISI KOHDETTA EIKÄ SEITSEMÄN, ja syy on kaupungin ikä: vuonna
+   * 1893 paikalla ei ollut mitään. Perustelu ja kaksi pois jätettyä
+   * kohdetta (oopperatalo, Nikolauksen kappeli) on kirjattu
+   * maakartat.js:n novosibirsk-lohkoon.
+   *
+   * VENÄJÄ-LINJAUKSEN mukaan pois on jätetty vallankumouksen ja
+   * sisällissodan tapahtumat, joita kaupungin artikkeli käsittelee
+   * laajasti, sekä NKVD:n tutkintavankila. Kaupungin kauppatalon
+   * kohdalla se tarkoittaa, että talon 1917 jälkeinen käyttö
+   * mainitaan neutraalisti hallintorakennuksena ilman kannanottoa.
+   */
+  novosibirsk: {
+    'Novosibirsk-Glavnyi': {
+      aika: 'asema 1893, nykyinen talo 1930-luku',
+      teksti: 'Asema on kaupunkia vanhempi. Kun Transsiperian radan '
+          + 'silta Obin yli oli päätetty rakentaa, radan pysäkki sai '
+          + 'nimekseen yksinkertaisesti Ob, ja se nimi pysyi '
+          + 'aikatauluissa vuoteen 1909 asti — vaikka syntynyt taajama '
+          + 'oli jo vuodesta 1895 Novonikolajevsk. Asema nimettiin '
+          + 'kaupungin mukaan 1909 ja sai nykyisen nimensä 1926, kun '
+          + 'kaupunki itse muuttui Novosibirskiksi.'
+          + '\n\n'
+          + 'Nykyinen asemarakennus on Venäjän suurimpia: pelkkää '
+          + 'päärakennusta on 30 000 neliömetriä. Sen keskellä on '
+          + 'valtava holvikaari, jonka molemmin puolin siivet jatkuvat '
+          + 'matalampina ja pylväikköjen jäsentäminä. '
+          + 'Vieressä on erillinen lähiliikenteen asema kellotorneineen, '
+          + 'ja niiden edessä avautuu Garin-Mihailovskin aukio, joka on '
+          + 'nimetty sillan paikan valinneen retkikunnan johtajan mukaan.'
+          + '\n\n'
+          + 'Aseman kautta kulkee kaksi suurta rataa: Transsiperian '
+          + 'rata idästä länteen ja Turkestanin–Siperian rata Keski-'
+          + 'Aasiaan. Käytännössä se tarkoittaa, että samalta laiturilta '
+          + 'lähtee junia Moskovaan, Vladivostokiin, Pekingiin, Ulan '
+          + 'Batoriin ja Kazakstanin kautta Mustallemerelle. Juuri tämä '
+          + 'risteys teki kylästä Siperian suurimman kaupungin '
+          + 'seitsemässäkymmenessä vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'Novosibirsk railway station and square.jpg',
+          selite: 'Asema ja sen aukio talvella ylhäältä. Vaaleanvihreän '
+            + 'asemarakennuksen keskellä on korkea kaariaukko ja '
+            + 'molemmin puolin pylväiköin jäsennetyt siivet; vasemmalla '
+            + 'on matalampi asemahalli kellotorneineen. Lumen peittämällä '
+            + 'aukiolla seisoo rivi keltaisia pikkubusseja, ja ihmiset '
+            + 'näkyvät pieninä pisteinä.',
+          lahde: 'Андрей Романенко, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kaupungin kauppatalo': {
+      aika: '1910–1911',
+      teksti: 'Kaupungin kauppatalo on Punaisen valtakadun numero 23 ja '
+          + 'yksi harvoista taloista, jotka ehtivät valmistua ennen '
+          + 'vallankumousta. Sen suunnitteli Andrei Krjatškov, sama '
+          + 'arkkitehti, joka piirsi myöhemmin taidemuseon talon ja '
+          + 'Satohuoneiston talon, ja se '
+          + 'rakennettiin vuosina 1910–1911. Talo tehtiin kahta '
+          + 'käyttöä varten kerralla: alakerrassa oli puoteja ja '
+          + 'yläkerrassa kaupungin hallinto.'
+          + '\n\n'
+          + 'Julkisivu tekee kaksi asiaa kerralla. Punatiili ja vaalea '
+          + 'rappaus vuorottelevat, alakerran kaaret ovat leveitä ja '
+          + 'matalia kuten myymälässä kuuluu, ja katolla on rivi '
+          + 'vihreitä kupoleita ja kaartuvia päätyjä kuten '
+          + 'hallintotalossa. Kaupunki oli talon valmistuessa '
+          + 'seitsemäntoista vuoden ikäinen, ja sen väkiluku oli '
+          + 'ylittänyt neljäkymmentäseitsemäntuhatta jo vuonna 1907.'
+          + '\n\n'
+          + 'Vuodesta 1985 talossa on toiminut Novosibirskin '
+          + 'kotiseutumuseo. Se on luonteva jatko: talo on itse '
+          + 'kaupungin vanhimpia esineitä, ja sen kokoelmissa kerrotaan '
+          + 'siitä, mitä Obin rannalla oli ennen siltaa — Bolšoje '
+          + 'Krivoštšokovon kylä vuodelta 1696, jonka asukkaat '
+          + 'siirrettiin muualle 1893 sillan tieltä.',
+      kuvat: [
+        {
+          tiedosto: 'City Trade House in Novosibirsk (May 2025) - 0.jpg',
+          selite: 'Kauppatalo Punaisen valtakadun varrella. Pitkän '
+            + 'julkisivun punatiiliset pinnat vuorottelevat valkoisen '
+            + 'rappauksen kanssa, alakerrassa on leveitä kaari-ikkunoita, '
+            + 'ja katolla on rivi vihreitä kupoleita ja kaartuvia '
+            + 'päätykolmioita. Kadun toisella puolella kulkee leveä '
+            + 'ajorata.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Taidemuseo': {
+      aika: 'talo 1926, museo täällä 1982',
+      teksti: 'Museo on nuorempi kuin talonsa. Novosibirskin '
+          + 'aluetaidegalleria perustettiin vuonna 1958, ja se toimi '
+          + 'aluksi tavallisen viisikerroksisen asuintalon '
+          + 'ensimmäisessä kerroksessa Sverdlovin kadulla. Vuonna 1982 '
+          + 'se muutti Punaisen valtakadun numeroon 5, taloon, joka oli '
+          + 'valmistunut jo 1926.'
+          + '\n\n'
+          + 'Talo on sekin Andrei Krjatškovin piirtämä, ja se on '
+          + 'kiinnostava juuri siksi: sama arkkitehti teki '
+          + 'vallankumousta edeltävän kauppatalon ja tämän 1920-luvun '
+          + 'hallintorakennuksen. Muoto on muuttunut mutta käsiala ei '
+          + 'ole kadonnut — pylväsjäsennys on yhä paikallaan, mutta '
+          + 'koristeet ovat kadonneet ja pinta on karhea harmaa '
+          + 'rappaus. Rakennus on suojeltu kulttuuriperintökohteena.'
+          + '\n\n'
+          + 'Katolla seisoo kaksi valkoista veistosta ja niiden välissä '
+          + 'kohoaa matala kupoli; keskiakselin kaksipylväinen portaali '
+          + 'ja sen yllä oleva korkea ikkunarivi jäsentävät muuten '
+          + 'ankaran julkisivun. Museon nimi on ladottu portaalin '
+          + 'yläpuolelle irtokirjaimin, ja se on ainoa koriste koko '
+          + 'talossa.',
+      kuvat: [
+        {
+          tiedosto: 'Novosibirsk KrasnyPr5 012 7309.jpg',
+          selite: 'Taidemuseon talo suoraan edestä. Harmaaksi rapatun '
+            + 'julkisivun keskellä on korkea ikkunarivi ja sen alla '
+            + 'kaksipylväinen portaali, jonka yllä lukee kyrillisin '
+            + 'kirjaimin taidemuseo. Katon reunalla seisoo kaksi '
+            + 'valkoista veistosta ja niiden välissä on matala kupoli. '
+            + 'Oikeassa reunassa on iso lehtipuu.',
+          lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Satohuoneiston talo': {
+      aika: '1934–1937',
+      teksti: 'Nimi on kirjaimellinen: taloon suunniteltiin sata '
+          + 'asuntoa, ja siitä se tunnetaan. Jako oli kymmenen '
+          + 'viiden huoneen huoneistoa, kolmekymmentä neljän, '
+          + 'neljäkymmentä kolmen ja kaksikymmentä kahden huoneen '
+          + 'asuntoa; osassa oli lisäksi pieni kamari palvelijalle. '
+          + 'Pohjat ovat väljiä ja huoneet suuria — talo rakennettiin '
+          + 'hallinnon ja tieteen kärkinimille.'
+          + '\n\n'
+          + 'Rakennustyö alkoi vuonna 1934, ja talo valmistui 1937. '
+          + 'Piirtäjät olivat Andrei Krjatškov ja Vitali Maslennikov. '
+          + 'Kahdeksankerroksisen talon korkeus on 28 metriä, ja sen '
+          + 'julkisivu yhdistää art déco -jäsentelyn ja Stalinin '
+          + 'kauden monumentaalisuuden: vaalea keskiosa pilastereineen '
+          + 'ja tummanpunaiset sivusiivet parvekkeineen.'
+          + '\n\n'
+          + 'Pariisin maailmannäyttelyssä 11. joulukuuta 1937 hanke sai '
+          + 'yhdessä Krjatškovin muiden töiden kanssa ensimmäisen '
+          + 'luokan kunniakirjan, kultamitalin ja Grand Prix '
+          + '-palkinnon. Talo on liittovaltion tason historiallinen ja '
+          + 'kulttuurinen muistomerkki ja yhä asuinkäytössä. Sen '
+          + 'edustalla seisoo arkkitehdin oma patsas — harvinainen '
+          + 'kunnia rakennukselle ja sen tekijälle samassa kuvassa.',
+      kuvat: [
+        {
+          tiedosto: 'Стоквартирный дом и памятник его автору - архитектору Крячкову.jpg',
+          selite: 'Satohuoneiston talo talvella. Kahdeksankerroksisen '
+            + 'rakennuksen keskiosa on vaalea ja pystyjuovainen, '
+            + 'sivusiivet tummanpunaiset parvekkeineen. Edustan aukiolla '
+            + 'seisoo tumma pronssipatsas punaisella graniittijalustalla, '
+            + 'ja ympärillä on korkeita lumivalleja.',
+          lahde: 'Елена Горланова, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Aleksanteri Nevskin katedraali': {
+      aika: '1896–1899',
+      teksti: 'Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se '
+          + 'rakennettiin vuosina 1896–1899, siis samaan aikaan kuin '
+          + 'rautatiesilta ja sen ympärille kasvava taajama, ja '
+          + 'vihittiin käyttöön 29. joulukuuta 1899. Katedraalin '
+          + 'aseman se sai vuonna 1915.'
+          + '\n\n'
+          + 'Tyyli on uusbysanttilainen: massiivinen keskuskupoli, '
+          + 'punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina '
+          + 'oli Pietarissa muutamaa vuotta aiemmin rakennettu '
+          + 'Armollisen Jumalanäidin kirkko. Tiili on täällä '
+          + 'poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu '
+          + 'lainkaan, ja koristeaiheet on ladottu itse muurauksesta.'
+          + '\n\n'
+          + 'Kirkko on myös muistomerkki. Se pystytettiin keisari '
+          + 'Aleksanteri III:n muistolle: hän oli pannut alulle '
+          + 'Transsiperian radan, ja juuri se rata synnytti koko '
+          + 'kaupungin. Neuvostoaikana kirkko suljettiin vuonna 1937. '
+          + 'Vuonna 1988, Kiovan Rusin kristinuskoon siirtymisen '
+          + 'tuhatvuotisjuhlana, alkoi liike sen palauttamiseksi, ja '
+          + 'kirkko avattiin uudelleen 1989.',
+      kuvat: [
+        {
+          tiedosto: 'Saint Alexander Nevsky Church in Novosibirsk (May 2025) - 0.jpg',
+          selite: 'Aleksanteri Nevskin katedraali keväisenä päivänä. '
+            + 'Punatiilisen kirkon päällä lepää suuri kullattu kupoli, '
+            + 'jota kiertää kaari-ikkunoiden rivi. Etualalla on '
+            + 'matalampi sivukappeli omine kullattuine kupoleineen ja '
+            + 'tiilinen kaarikatos. Taivas on syvänsininen.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * IRKUTSKIN KOHDEKARTAN JUTUT (Opus, Siperian täydennyserä
+   * 20.8.2026). Seitsemän kohdetta pohjoisesta etelään. Faktat on
+   * tarkistettu en-Wikipedian artikkeleista Irkutsk, Innocent of
+   * Irkutsk, Church of Our Lady of the Assumption (Irkutsk),
+   * Immaculate Heart of Mary Cathedral (Irkutsk), Irkutsk railway
+   * station, Siberian Baroque, Icebreaker Angara Museum,
+   * Circum-Baikal Railway ja Lake Baikal (haettu 20.8.2026).
+   *
+   * YKSI RISTIRIITA KIRJOITETTU AUKI. Puolalaisen kirkon
+   * rakennusvuodesta on en-Wikipediassa kaksi eri tietoa: Church of
+   * Our Lady of the Assumption sanoo tiilikirkon valmistuneen
+   * 1881–1883, ja Immaculate Heart of Mary Cathedral sanoo uuden
+   * goottilaisen kirkon vihityn 1886. Molemmat on kerrottu jutussa
+   * lukijalle (v925:n ja v932:n tapa).
+   *
+   * KOLME KOHDETTA JÄTETTIIN POIS. Volkonskin talo ja Kazanin kirkko
+   * ovat jo lehden kansisivulla omilla kuvillaan, ja kohdejutut
+   * toistaisivat ne; Baikal on 72 kilometrin päässä eikä mahdu
+   * kainaloonkaan (perustelu maakartat.js:n irkutsk-lohkossa).
+   * VENÄJÄ-LINJAUKSEN mukaan pois on jätetty sisällissodan
+   * tapahtumat, vuoden 1937 vainot ja kaikki 2000-luvun uutisaiheet,
+   * joita kaupungin artikkeli käsittelee. Vuoden 1866 puolalaisten
+   * kapinallisten teloitus on jätetty pois yksityiskohtana; Puolan
+   * karkotettujen läsnäolo kerrotaan kirkon kautta.
+   */
+  irkutsk: {
+    'Znamenskin luostari': {
+      aika: 'Innokenti Irkutskilainen 1680–1731',
+      teksti: 'Luostari on Ušakovkan takana, siis vanhan kaupungin '
+          + 'ulkopuolella pohjoisessa — matkalla sinne ylitetään joki, '
+          + 'ja jo Irkutskin varhaisissa kuvauksissa luostari, '
+          + 'linnoitus ja satama luetaan sen toiselle puolelle. Nimi '
+          + 'tulee Jumalanäidin Merkin ikonista. Ulkonäöltään '
+          + 'rakennukset ovat samaa sukua kuin kaupungin muut vanhat '
+          + 'kirkot: valkoiset seinäpinnat, vihreät telttakatot ja '
+          + 'siniset kupolit.'
+          + '\n\n'
+          + 'Tärkein asia on kuitenkin se, kenen takia tänne tullaan. '
+          + 'Innokenti Irkutskilainen — syntyjään Ivan Kultšitski, '
+          + 'noin 1680 syntynyt aatelismies Tšernigovin hiippakunnasta '
+          + '— vihittiin vuonna 1721 piispaksi Kiovan luolaluostarissa '
+          + 'valmistautuakseen Kiinan-lähetystyöhön. Kiinaan häntä ei '
+          + 'päästetty, ja niin hänet nimitettiin vuonna 1727 Irkutskin '
+          + 'ensimmäiseksi piispaksi. Hän opetteli mongolia ja saarnasi '
+          + 'paikallisille; hän kuoli 27. marraskuuta 1731.'
+          + '\n\n'
+          + 'Pyhimykseksi hänet julisti Venäjän kirkolliskokous 9. '
+          + 'helmikuuta 1804, ja hänen pääpyhäkkönsä on Znamenskin '
+          + 'luostari. Reliikit takavarikoitiin vuonna 1921 ja pidettiin '
+          + 'esillä museoissa; ne palautettiin kirkolle 7. syyskuuta '
+          + '1990. Innokentiä kutsutaan Siperian apostoliksi, ja '
+          + 'kiinalaiset ortodoksit pitävät häntä Kiinan '
+          + 'suojeluspyhimyksenä — juuri sen lähetystyön takia, jota '
+          + 'hän ei koskaan päässyt tekemään.',
+      kuvat: [
+        {
+          tiedosto: 'RU Irkutsk Convent of the Theotokos of the Sign 0001.jpg',
+          selite: 'Luostarin portti. Valkoisen porttirakennuksen katto '
+            + 'on vihreä teltta, jonka huipulla on sininen sipulikupoli, '
+            + 'ja holvikaaren yläpuolella on soikea ikoni. Takana kohoaa '
+            + 'kellotorni vihreine kupoleineen ja kullattuine '
+            + 'huippuineen, oikealla kirkon siniset kupolit. Portin '
+            + 'edessä on kuusia.',
+          lahde: 'Alexander Klink, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Epifanian katedraali': {
+      aika: 'kirkot 1706 ja 1718–1746',
+      teksti: 'Tässä kohdassa kaupunki alkoi. Jakov Pohabov laski 6. '
+          + 'heinäkuuta 1661 Angaran rantaan paalulinnoituksen, jossa '
+          + 'kerättiin burjaateilta jasak-veroa turkiksina; nykyinen '
+          + 'Kirovin aukio on juuri sen paikalla. Linnoituksesta '
+          + 'kasvoi 1700-luvun alkuun mennessä puinen kaupunki, ja '
+          + 'vuoden 1716 suurpalo tuhosi varustukset lähes kokonaan. '
+          + 'Vuodessa ne rakennettiin uudelleen, nyt kivestä.'
+          + '\n\n'
+          + 'Kaksi kirkkoa on jäljellä. Vapahtajan kirkon kivijalka '
+          + 'laskettiin vuonna 1706 linnoituksen luoteisnurkkaan, ja se '
+          + 'on ainoa säilynyt rakennus vanhan linnoituksen alueelta. '
+          + 'Epifanian katedraali rakennettiin itämuurin taakse vuosina '
+          + '1718–1746. Molemmat ovat Siperian vanhimpia kivirakennuksia, '
+          + 'ja ne seisovat runsaan sadan metrin päässä toisistaan saman '
+          + 'aukion laidalla.'
+          + '\n\n'
+          + 'Kirkkojen muoto on Siperian barokkia: rungon päälle '
+          + 'kasataan kahdeksankulmaisia kerroksia, räystäät kaartuvat '
+          + 'ylöspäin, ja koristeet ovat leveitä valkoisia listoja '
+          + 'värillistä seinää vasten. Talvikuvassa aukio on umpeen '
+          + 'ajettua lunta ja liikenne hevosrekiä — se on vuosisadan '
+          + 'vaihteen Irkutsk sellaisena kuin ohikulkija sen näki: '
+          + 'kirkkoja, valurauta-aitaa ja joen valo puiden takaa.',
+      kuvat: [
+        {
+          tiedosto: 'Irkutsk - church LCCN2004707528.jpg',
+          selite: 'Kirovin aukio talvella vanhassa valokuvassa. Lumisen aukion '
+            + 'takana seisoo valkoinen kirkko kellotorneineen, joiden '
+            + 'huipuilla on tummat kupolit, ja vasemmalla kohoaa '
+            + 'telttakattoinen holvikaariportti kaiverrettuine '
+            + 'kirjoituksineen. Aukion poikki ajaa hevonen reen kanssa, '
+            + 'ja oikealla kulkee koristeellinen valurauta-aita.',
+          lahde: 'William Henry Jackson, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Taivaaseenastumisen kirkko': {
+      aika: '1825, kivikirkko 1880-luvulla',
+      teksti: 'Puolalainen kirkko on Irkutskin karkotushistorian '
+          + 'näkyvin rakennus. Katolinen seurakunta perustettiin '
+          + 'kaupunkiin vuonna 1820, ja suurin osa seurakuntalaisista '
+          + 'oli puolalaisia, liettualaisia ja valkovenäläisiä — mutta '
+          + 'joukossa oli väkeä kaikkialta keisarikunnasta. Katolinen '
+          + 'siirtokunta rakensi ensimmäisen pienen puukirkon vuonna '
+          + '1825 ja laajensi sen 1855.'
+          + '\n\n'
+          + 'Puukirkko paloi heinäkuun 1879 suurpalossa. Tilalle nousi '
+          + 'tiilikirkko, ja sen valmistumisvuodesta on kaksi eri '
+          + 'tietoa: Taivaaseenastumisen kirkon oma artikkeli ajoittaa '
+          + 'rakennustyön vuosiin 1881–1883, ja hiippakunnan '
+          + 'katedraalin artikkeli sanoo uuden goottilaisen kirkon '
+          + 'vihityn vuonna 1886. Ero on kolme vuotta, ja se on tässä '
+          + 'kirjoitettu auki, koska tarkempaa tietoa ei näistä '
+          + 'lähteistä saa.'
+          + '\n\n'
+          + 'Piirustukset teki puolalainen arkkitehti Jan Tamulewicz ja '
+          + 'sisustuksen Wojciech Koperski; alttaritaulu on vuodelta '
+          + '1868 ja harmoni tuotiin Yhdysvalloista 1896. Uusgoottilainen '
+          + 'muoto erottuu Irkutskissa jyrkästi: siinä missä '
+          + 'ortodoksisilla kirkoilla on pyöreitä kupoleita, tällä on '
+          + 'terävä torni ja ruusuikkuna. Neuvostoaikana seurakunta '
+          + 'lakkautettiin.',
+      kuvat: [
+        {
+          tiedosto: 'Kościół Wniebowzięcia Najświętszej Maryi Panny w Irkucku.JPG',
+          selite: 'Puolalainen kirkko kesällä. Oranssinpunaisesta '
+            + 'tiilestä muurattu kirkko kohoaa yhtenä tornina, jonka '
+            + 'huipussa on tummanpunainen jyrkkä katto ja risti. '
+            + 'Julkisivun keskellä on pyöreä ruusuikkuna ja sen alla '
+            + 'suippokaarinen valkoinen portaali. Molemmin puolin '
+            + 'kasvaa korkeita lehtipuita.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rautatieasema': {
+      aika: '1898',
+      teksti: 'Ensimmäinen juna saapui Irkutskiin 16. elokuuta 1898, ja '
+          + 'asema avattiin vuonna 1899. Se rakennettiin joen '
+          + 'vasemmalle rannalle Glaskovon puolelle, siis vastapäätä '
+          + 'vanhaa kaupunkia: rata tuli lännestä, ja kaupungin '
+          + 'pääosa on Angaran toisella rannalla. Asema jäi siksi '
+          + 'omaksi kaupunginosakseen, jonne mennään sillan yli.'
+          + '\n\n'
+          + 'Rautatie muutti kaiken kolmessa vuodessa. Sähköt oli '
+          + 'vedetty 1896, ensimmäinen kivinen teatteritalo valmistui '
+          + '1897, ja juna toi loput: kun vuoden 1897 väenlaskussa '
+          + 'asukkaita oli 51 473, kaupunkia alettiin 1900-luvun alkuun '
+          + 'mennessä kutsua Siperian Pariisiksi. Aiemmat lempinimet '
+          + 'olivat olleet Idän Pariisi, Siperian Pietari ja Siperian '
+          + 'Ateena — kaikki samaa lajia.'
+          + '\n\n'
+          + 'Nykyinen asema on Transsiperian radan tärkeimpiä '
+          + 'pysähdyksiä ja Itä-Siperian radan päätepiste. '
+          + 'Päärakennuksen pinta-ala on 7 590 neliömetriä, laitureita '
+          + 'on kolme ja raiteita neljätoista. Täältä lähtevät junat '
+          + 'Moskovaan, Vladivostokiin ja Ulan Batoriin, ja kesäisin '
+          + 'myös Kiertobaikalin radan päivittäinen vuoro.',
+      kuvat: [
+        {
+          tiedosto: 'Иркутский железнодорожный вокзал.jpg',
+          selite: 'Irkutskin asema kadun puolelta. Vaaleankeltaisen ja '
+            + 'vihreän julkisivun alaosassa on tiheä rivi kaari-ikkunoita, '
+            + 'ja katolla seisovat suurin kyrillisin kirjaimin kaupungin '
+            + 'nimi ja kulmassa kupolinen torni. Aukiolla on autoja ja '
+            + 'penkkejä, ja edustalla ajaa pyöräilijä.',
+          lahde: 'Valentina Dyptan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ristin ylentämisen kirkko': {
+      aika: '1747–1758',
+      teksti: 'Tämä on Siperian barokin omaperäisin rakennus. Nimitys '
+          + 'syntyi vasta 1924, kun irkutskilainen kotiseuduntutkija '
+          + 'D. A. Boldyrev-Kazarin otti sen käyttöön; tyylillä '
+          + 'tarkoitetaan 1700-luvun Siperian kivikirkkoja, joita '
+          + 'laskettiin vuonna 1803 kaikkiaan 115. Ne ovat venäläisen '
+          + 'barokin maakunnallinen muunnos, johon tuli vaikutteita '
+          + 'ukrainalaisesta barokista ja paikoin myös lamalaisesta '
+          + 'kuvastosta. Parhaiten tyyli on säilynyt Irkutskissa, '
+          + 'Tobolskissa ja Tomskissa.'
+          + '\n\n'
+          + 'Ristin ylentämisen kirkko rakennettiin vuosina 1747–1758, '
+          + 'ja sitä on kutsuttu tyylin parhaaksi esimerkiksi. Sen '
+          + 'buddhalaisvaikutteiset koristeaiheet kiinnostivat '
+          + 'tutkijoita jo ennen vallankumousta. Boldyrev-Kazarin '
+          + 'arveli burjaattityömiesten osuutta ja huomautti, että '
+          + 'Siperiassa mongolialaisen ja kiinalaisen arkkitehtuurin '
+          + 'yksityiskohdat saavat tuttuja kokoshnik-muotoja. Taidehistorioitsija '
+          + 'Igor Grabar näki kirkossa Moskovan koristetyylin myöhäisen '
+          + 'maakuntaversion, jossa Moskova ja Ukraina punoutuvat '
+          + 'yhteen ja jossa tuoksuu naapurina oleva itä.'
+          + '\n\n'
+          + 'Yksi asia tekee kirkosta ainutlaatuisen: se on ainoa '
+          + 'Siperian barokin rakennus, jonka alkuperäinen sisustus on '
+          + 'säilynyt. Ulkoa rakennus on ladottu vanhaan tapaan '
+          + 'päällekkäisistä kappaleista — raskas runko, sen päällä '
+          + 'kahdeksankulmainen kerros ja ylimpänä telttakatto '
+          + 'kupoleineen — ja koko seinäpinta on peitetty '
+          + 'kohokuvioisella tiilikoristeella, jota ei ole maalattu '
+          + 'vaan muurattu.',
+      kuvat: [
+        {
+          tiedosto: 'Cerkiew Podwyższenia Krzyża Pańskiego w Irkucku 01.JPG',
+          selite: 'Kirkko kesäisen puuston yli. Valkoisia seiniä kiertää '
+            + 'tiheä punaruskea koristelistoitus, katot ovat '
+            + 'tummanvihreitä telttoja, ja niiden huipuilla on sinisiä '
+            + 'sipulikupoleita kultatähdin ja kullatuin ristein. Taivas '
+            + 'on kirkkaan sininen.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    '130. kortteli': {
+      aika: 'talot 1800-luvulta, kortteli 2011',
+      teksti: 'Irkutskin puutalot ovat kaupungin tunnusmerkki, ja ne '
+          + 'ovat karkotettujen perintöä. 1800-luvun alussa kaupunkiin '
+          + 'lähetettiin dekabristikapinan jälkeen upseereita, '
+          + 'taiteilijoita ja aatelisia, ja vuosisadan loppuun mennessä '
+          + 'yhtä paikallista kohti oli puoli karkotettua. He '
+          + 'rakennuttivat puutaloja, joiden ikkunanpielet, räystäät ja '
+          + 'parvekkeet veistettiin koristeiksi — kaupungin katukuva on '
+          + 'suoraa jatkoa siitä.'
+          + '\n\n'
+          + 'Vuoden 1879 palon jälkeen puusta rakentaminen kiellettiin '
+          + 'joen puoleisella alueella. Raja jakoi kaupungin kahtia: '
+          + 'Angaran rannassa on kivitaloja, ja sen takana, missä '
+          + 'ennen olivat laitamat, kasvoi puinen Irkutsk. Juuri '
+          + 'siksi puutalot ovat säilyneet ryhminä eivätkä yksittäisinä '
+          + 'jäänteinä.'
+          + '\n\n'
+          + 'Yksi tällainen ryhmä on 130. kortteli. Se on kunnostettu '
+          + 'kokonaisuutena kävelyalueeksi: talot on korjattu, '
+          + 'katu on kivetty ja tiloissa toimii kauppoja ja '
+          + 'ravintoloita. Kortteli ei siis ole museo vaan käytössä '
+          + 'oleva kaupunginosa, ja se on helpoin paikka nähdä, mistä '
+          + 'Irkutskin historiallinen keskusta koostuu — juuri sen '
+          + 'takia keskusta on Unescon maailmanperintöluettelon '
+          + 'ehdokaslistalla.',
+      kuvat: [
+        {
+          tiedosto: '130-й квартал.jpg',
+          selite: '130. kortteli kadun toiselta puolelta. Rivissä '
+            + 'seisoo kaksikerroksisia puu- ja rappaustaloja, joiden '
+            + 'ikkunanpielet on maalattu vaaleiksi ja katot punaisiksi '
+            + 'ja vihreiksi. Keskellä on tummanruskea hirsitalo '
+            + 'valkoisin listoin. Etualalla kulkee leveä katu.',
+          lahde: 'Putnik.m54, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jäänmurtaja Angara': {
+      aika: '1900',
+      teksti: 'Angara tilattiin vuonna 1898 Newcastlesta, Sir W. G. '
+          + 'Armstrong, Whitworth & Co:n telakalta, ja se otettiin '
+          + 'käyttöön 1. elokuuta 1900. Laiva rakennettiin Baikalia '
+          + 'varten, ja sen tehtävä oli suora seuraus siitä, että '
+          + 'Transsiperian rata oli järven kohdalla poikki: junat '
+          + 'ajettiin lautalle, lautta ylitti järven, ja matka jatkui '
+          + 'toiselta rannalta. Työparista suurempi oli lauttamurtaja '
+          + 'Baikal, jonka kannella oli kolme rinnakkaista raidetta '
+          + 'vaunuja varten; Angara oli pienempi eikä kantanut junia '
+          + 'lainkaan vaan matkustajia ja tavaraa. Talvella 1903–1904 '
+          + 'jää kävi liian paksuksi molemmille, ja silloin jäälle '
+          + 'laskettiin kiskot ja vaunuja vedettiin hevosilla.'
+          + '\n\n'
+          + 'Lauttayhteyttä tarvittiin vain muutama vuosi. '
+          + 'Kiertobaikalin rata järven eteläpäähän avattiin '
+          + 'liikenteelle 29. lokakuuta 1905, ja sen jälkeen junat '
+          + 'kiersivät rantaa pitkin. Angara jatkoi silti töitä '
+          + 'Baikalilla, ja Neuvostoliitto käytti sitä vuoteen 1949 '
+          + 'asti.'
+          + '\n\n'
+          + 'Museona laiva on ollut maaliskuusta 1991. Se on kiinni '
+          + 'laiturissa Irkutskin tekoaltaalla kaupungin kaakkoispuolella '
+          + '— siis siinä vedessä, jonka voimalan pato synnytti '
+          + '1950-luvulla ja joka samalla peitti alleen Kiertobaikalin '
+          + 'radan alkupään. Laiva on yksi maailman vanhimpia säilyneitä '
+          + 'jäänmurtajia, ja sen kansilta näkyy suoraan se joki, joka '
+          + 'vie Baikalille.',
+      kuvat: [
+        {
+          tiedosto: 'Angara Museum ship in Irkutsk (September 2025) - 0.jpg',
+          selite: 'Jäänmurtaja Angara laiturissaan. Mustan rungon '
+            + 'vesirajassa kulkee punainen juova, ja keulassa lukee '
+            + 'kyrillisin kirjaimin laivan nimi. Valkoisen '
+            + 'kansirakennuksen takaa nousee kaksi vaaleaa savupiippua '
+            + 'punavalkoisin renkain. Laituria reunustaa musta '
+            + 'valurauta-aita.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

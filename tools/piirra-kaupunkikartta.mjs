@@ -1597,6 +1597,106 @@ const KAUPUNGIT = {
       },
     ],
   },
+  jekaterinburg: {
+    /*
+     * SIPERIAN ERÄ (20.8.2026). Rajaus on Iset-joen ydinkeskusta:
+     * pohjoisessa Kharitonovin kartano Nousemuksen kukkulalla,
+     * etelässä Kolminaisuuden katedraali, lännessä Plotinkan pato ja
+     * rahapajan portit, idässä Rosa Luxemburgin katu. Ruutu on noin
+     * 2,9 × 2,9 km eli lähes neliö, ja se on tarkoituksella tiukka:
+     * Jekaterinburgin kaupunkialue on Uralin itärinteellä kymmeniä
+     * kilometrejä pitkä, mutta kaikki 1800-luvun kohteet ovat padon
+     * ja Leninin valtakadun risteyksen ympärillä.
+     *
+     * VANHA RAUTATIEASEMA (1878) ON KAINALOSSA, koska se on 2,3 km
+     * pohjoiseen: samaan ruutuun mahtuessaan ydin olisi kutistunut
+     * niin, että Suuren Zlatoustin ja kuvataidemuseon numeroympyrät
+     * (270 metriä toisistaan) olisivat menneet päällekkäin. Sama
+     * ratkaisu kuin Medinassa ja Adenissa; kainalo on vasemmassa
+     * ylänurkassa, joka on suuntana oikea.
+     *
+     * VALKOINEN TORNI (Uralmash, 6,5 km pohjoiseen) JÄI KARTALTA
+     * KOKONAAN. Se on lehden oppaassa omalla kuvallaan: kaksi
+     * kainaloa samaan reunaan olisi tehnyt kuvasta levottoman, ja
+     * torni on tehdaskaupunginosan kohde eikä vanhan keskustan.
+     *
+     * palvelutiet: true. Historiallisen aukion ja padon ympärys on
+     * OSM:ssä valtaosin service-teitä ja jalankulkuväyliä; ilman
+     * lippua kartan länsilaita jäi lähes tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 56.849, etela: 56.8225, lansi: 60.585, ita: 60.633 },
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 56.8635, etela: 56.8545, lansi: 60.5955, ita: 60.6065 },
+        x: 2.5, y: 2, leveys: 20, suunta: '2,3 km pohjoiseen',
+      },
+    ],
+  },
+  novosibirsk: {
+    /*
+     * SIPERIAN ERÄ (20.8.2026). Rajaus alkaa siitä, mistä kaupunkikin:
+     * lounaisnurkassa on ensimmäisen Ob-sillan paikka, ja siitä
+     * koilliseen nousee Punainen valtakatu Nikolauksen kappelin ja
+     * kaupungin kauppatalon ohi Novosibirsk-Glavnyin asemalle.
+     * Ruutu on noin 3,9 × 3,6 km. Obin uoma tulee mukaan koko
+     * länsilaidalle, ja se on tarkoituksellista: joki on syy siihen,
+     * että kaupunki on olemassa.
+     *
+     * KAINALOA EI OLE. Akademgorodok on kolmenkymmenen kilometrin
+     * päässä etelässä eikä ole katuverkon kohde vaan oma kaupunkinsa
+     * metsässä — se kerrotaan lehden nostossa ja oppaassa. Yhtään
+     * kartan kohdetta ei jää ruudun ulkopuolelle.
+     *
+     * meri: true, koska Ob on OSM:ssä leveä vesimonikulmio, joka ei
+     * sulkeudu rajauksen sisällä; ilman lippua joen länsipuoli jäi
+     * paperin väriseksi.
+     *
+     * palvelutiet: true. Ensimmäinen ajo ilman lippua katsottiin:
+     * Novosibirskin korttelit ovat isoja ja niiden sisukset ovat
+     * OSM:ssä service-teitä, joten kartta jäi harvaksi verkoksi
+     * pääkatuja ja Obin molemmat rannat lähes tyhjiksi. Lipun kanssa
+     * korttelien sisus piirtyy ja kaupunki näyttää kaupungilta.
+     */
+    rajat: { pohjoinen: 55.04, etela: 55.005, lansi: 82.885, ita: 82.942 },
+    meri: true,
+    palvelutiet: true,
+  },
+  irkutsk: {
+    /*
+     * SIPERIAN ERÄ (20.8.2026). Rajaus on Angaran mutka: pohjoisessa
+     * Znamenskin luostari Ušakovkan suulla, keskellä Kirovin aukio eli
+     * vuoden 1661 linnoituksen paikka, etelässä 130. kortteli ja
+     * lännessä joen toisella rannalla Glaskovon rautatieasema. Ruutu
+     * on noin 4,0 × 3,9 km.
+     *
+     * BAIKAL EI OLE KARTALLA EIKÄ KAINALOSSA, ja se on päätös eikä
+     * unohdus. Järvi alkaa 72 kilometrin päästä ylävirtaa (en-Wikipedia,
+     * Irkutsk: "72 km below its outflow from Lake Baikal"), eli
+     * kolmekymmentä kertaa kauempana kuin yksikään tähänastinen
+     * kainalo — Medinan Quba on 3,5 km, Adenin Tawahi 6 km. Sen
+     * kokoisessa hypyssä kainalon mittakaava olisi aivan toinen kuin
+     * pääkartan, ja ruutuun mahtuisi vain nimetön pala rantaviivaa.
+     * Baikal kerrotaan oppaan omassa jaksossa, ja sillä on jo
+     * lehdessä kokonainen teemasivu. Yhteys näkyy silti kartalla:
+     * Angara tulee kuvaan järvestä.
+     *
+     * JÄÄNMURTAJA ANGARA ON KAINALOSSA (6 km kaakkoon, Irkutskin
+     * tekoaltaalla). Se on 1900-luvun alun Baikalin lauttalaiva ja
+     * siksi juuri se kohde, joka sitoo kaupungin järveen.
+     *
+     * palvelutiet: true. 130. korttelin ja Kirovin aukion väliset
+     * kujat ovat OSM:ssä service-teitä.
+     */
+    rajat: { pohjoinen: 52.306, etela: 52.27, lansi: 104.253, ita: 104.312 },
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 52.2555, etela: 52.245, lansi: 104.338, ita: 104.35 },
+        x: 78, y: 76.8, leveys: 20, suunta: '6 km kaakkoon',
+      },
+    ],
+  },
   jakutsk: {
     /*
      * RAJAUS ON KESKUSTA JA JOEN RANTA, 3,5 × 2,7 km. Jakutsk on

@@ -6647,6 +6647,251 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kultaisen sarven silta', lat: 43.1089, lon: 131.8962 },
     ],
   },
+  /*
+   * JEKATERINBURGIN KOHDEKARTTA (Opus, Siperian täydennyserä
+   * 20.8.2026). Rajaus on Isetin ydinkeskusta, noin 2,9 × 2,9 km.
+   * Kohteet on numeroitu pohjoisesta etelään kuten Medinassa.
+   *
+   * KOORDINAATIT OVAT KAHDESTA LÄHTEESTÄ, ja ero on kirjattu tähän.
+   * Suuren Zlatoustin (56,83466 / 60,60052), Kolminaisuuden
+   * katedraalin (56,82733 / 60,61437) ja kuvataidemuseon (56,83513 /
+   * 60,60324) pisteet ovat kohteiden omista en-Wikipedian
+   * coord-malleista, ja Uralin valtionyliopiston (56,8404 / 60,6168)
+   * omasta artikkelistaan. Kharitonovin kartanolla, historiallisella
+   * aukiolla ja vanhalla rautatieasemalla ei ole
+   * omaa koordinaattia en-Wikipediassa, joten ne on haettu
+   * OpenStreetMapista — sama ratkaisu ja sama peruste kuin
+   * Persepoliissa ja Tokion kansallismuseossa. Kartta itse on
+   * piirretty OSM-aineistosta, joten pisteet ja piirto ovat samasta
+   * lähteestä eivätkä voi ajautua erilleen.
+   *
+   * VANHA RAUTATIEASEMA ON KAINALOSSA vasemmassa ylänurkassa: se on
+   * 2,3 kilometriä pohjoiseen, ja samaan ruutuun mahtuessaan keskusta
+   * olisi kutistunut niin, että Zlatoustin ja kuvataidemuseon
+   * numeroympyrät (270 metriä toisistaan) olisivat menneet
+   * päällekkäin.
+   *
+   * KOLME KOHDETTA JÄI POIS TARKOITUKSELLA. Valkoinen torni on 6,5 km
+   * pohjoiseen Uralmašin tehdaskaupunginosassa; se on lehden oppaassa
+   * omalla kuvallaan. Nevjanskin ikonimuseo jäi pois, koska siitä ei
+   * ole kelvollista vapaata kuvaa (ainoa on roskapussit kadulla) —
+   * Jerusalemin ennakkotapaus: ei kuvaa, ei kohdetta. Sevastjanovin
+   * talo jäi pois toisesta syystä: siitä ei ole en-Wikipediassa omaa
+   * artikkelia eikä yhtään lausetta, jolla kohdejutun voisi
+   * kirjoittaa faktakurin mukaisesti (talo on lehden kansikuvana ja
+   * jää siihen). Ipatjevin talon
+   * paikka ja sille rakennettu kirkko on jätetty pois lehdestä
+   * kokonaan Venäjä-linjauksen mukaisesti (ei nykypolitiikkaa); vuoden
+   * 1918 tapahtumat eivät kuulu tämän lehden aiheisiin.
+   */
+  jekaterinburg: {
+    polku: 'assets/kartat/jekaterinburg-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 56.849, etela: 56.8225, lansi: 60.585, ita: 60.633 },
+    kainalot: [
+      { rajat: { pohjoinen: 56.8635, etela: 56.8545, lansi: 60.5955, ita: 60.6065 },
+        x: 2.5, y: 2, leveys: 20, korkeus: 29.66, suunta: '2,3 km pohjoiseen' },
+    ],
+    esittely: 'Jekaterinburg alkoi padosta. Vasili Tatištšev etsi vuonna '
+      + '1721 Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja '
+      + 'valitsi Iset-joen rannan; Georg Wilhelm de Genninin johdolla '
+      + 'joki padottiin ja padon voimalla käyvä rautaruukki koeajettiin '
+      + '18. marraskuuta 1723. Kaksi vuotta myöhemmin ruukissa alettiin '
+      + 'lyödä ruplaa. Siperian valtatie avautui 1763 ja kulki kaupungin '
+      + 'läpi, ja siitä tuli idän ja lännen kaupan solmukohta — ikkuna '
+      + 'Aasiaan. Katariina Suuri antoi kaupunkioikeudet 1781, ja vuonna '
+      + '1807 Jekaterinburg sai Venäjän ainoana nimityksen vuorikaupunki: '
+      + 'se oli vuoriruukkien päällikön ja keisarin alainen ja pitkälti '
+      + 'vapaa kuvernööristä. Rautatie tuli Permistä 1878.\n\nKartalla '
+      + 'pato on yhä keskellä. Sen yläpuolella levittäytyy '
+      + 'kaupunginlampi, alapuolella Iset jatkaa kapeana kanavana etelään '
+      + 'ja kaartaa lopulta kaakkoon. Padon ympärillä on Historiallinen '
+      + 'aukio, ruukin vanha alue, jonka portit ja muurit ovat yhä '
+      + 'paikoillaan; kuvataidemuseo on sen laidalla entisessä vuoden '
+      + '1730 sairaalarakennuksessa. Ruudukko ympärillä on 1700-luvun '
+      + 'kaavaa, jonka pääsuunnat noudattavat jokea, ja sen halki '
+      + 'kulkee lännestä itään Leninin valtakatu. Koilliskulmassa maasto '
+      + 'nousee Nousemuksen kukkulalle, jossa on Kharitonovin kartano '
+      + 'puistoineen; kaakkoisnurkassa on Kolminaisuuden katedraali. '
+      + 'Vasemman ylänurkan kainalossa on vanha rautatieasema '
+      + 'ratapihoineen, 2,3 kilometriä pohjoiseen. Kartalta jää '
+      + 'länteen Verh-Isetskin allas ja pohjoiseen Uralmašin '
+      + 'tehdaskaupunginosa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mosulissa. */
+      { nimi: 'Vanha rautatieasema', lat: 56.85879, lon: 60.60074 },
+      { nimi: 'Kharitonovin kartano', lat: 56.84414, lon: 60.60953 },
+      { nimi: 'Uralin valtionyliopisto', lat: 56.8404, lon: 60.6168 },
+      { nimi: 'Historiallinen aukio', lat: 56.83805, lon: 60.60453 },
+      { nimi: 'Kuvataidemuseo', lat: 56.83513, lon: 60.60324 },
+      { nimi: 'Suuri Zlatoust', lat: 56.83466, lon: 60.60052 },
+      { nimi: 'Kolminaisuuden katedraali', lat: 56.82733, lon: 60.61437 },
+    ],
+  },
+  /*
+   * NOVOSIBIRSKIN KOHDEKARTTA (Opus, Siperian täydennyserä
+   * 20.8.2026). Rajaus on noin 3,9 × 3,6 km ja se on valittu radan
+   * mukaan: luoteisnurkassa Novosibirsk-Glavnyi ratapihoineen, siitä
+   * kaakkoon Punainen valtakatu ja etelässä Ob.
+   *
+   * VAIN VIISI KOHDETTA, ja se on kaupungin ikä eikä puute. Vuonna
+   * 1893 paikalla ei ollut mitään; ennen vallankumousta ehtivät
+   * valmistua Aleksanteri Nevskin katedraali ja kaupungin kauppatalo,
+   * ja loput keskustasta on 1920- ja 1930-luvun ja sitä myöhempää.
+   * Kohteita ei siis ole enempää — Irkutskissa ja Jekaterinburgissa on
+   * kaksisataa vuotta enemmän rakennettua.
+   *
+   * KAKSI KOHDETTA JÄI POIS TARKOITUKSELLA. Oopperatalo on rajauksen
+   * sisällä ja kaupungin tunnetuin rakennus, mutta sen tarina — kupoli
+   * on kuusikymmentä metriä leveä — on jo lehden kansisivun nostossa
+   * omalla kuvallaan, ja kohdejuttu toistaisi sen; talo on tässä
+   * erässä oppaan kuvana. Nikolauksen kappeli jäi pois faktakurin
+   * takia: siitä ei ole en-Wikipediassa artikkelia eikä mainintaa,
+   * jolla jutun voisi kirjoittaa. Kappeli näkyy silti lehden
+   * avauskuvassa Punaiselta valtakadulta.
+   *
+   * KAINALOA EI OLE. Akademgorodok on kolmenkymmenen kilometrin
+   * päässä etelässä eikä ole katuverkon kohde vaan oma kaupunkinsa
+   * metsässä; se kerrotaan lehden Historia-sivun nostossa ja oppaassa.
+   *
+   * Koordinaatit: asema, taidemuseo, Satohuoneiston talo, kaupungin
+   * kauppatalo ja Aleksanteri Nevskin katedraali kaikki kohteiden
+   * omista en-Wikipedian coord-malleista.
+   */
+  novosibirsk: {
+    polku: 'assets/kartat/novosibirsk-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 55.04, etela: 55.005, lansi: 82.885, ita: 82.942 },
+    esittely: 'Novosibirsk on Venäjän suurten kaupunkien nuorin. Se '
+      + 'syntyi 30. huhtikuuta 1893 rautatiesillan työmaalle: '
+      + 'Transsiperian radan piti ylittää Ob, ja retkikuntaa johtanut '
+      + 'Nikolai Garin-Mihailovski valitsi kohdan, jossa molemmat '
+      + 'rannat ja uoma ovat kalliota. Silta valmistui keväällä 1897, '
+      + 'ja työmaan kupeessa asui silloin 7 800 ihmistä. Nimi oli '
+      + 'vuodesta 1895 Novonikolajevsk; kaupunkioikeudet tulivat 1903, '
+      + 'nykyinen nimi 12. syyskuuta 1926. Miljoona asukasta täyttyi 2. '
+      + 'syyskuuta 1962, alle seitsemässäkymmenessä vuodessa '
+      + 'perustamisesta.\n\nKartalla se näkyy suoraan. Vanhaa '
+      + 'mutkittelevaa kujastoa ei ole lainkaan, vaan korttelit ovat '
+      + 'säännöllisiä ja kadut leveitä, ja niiden keskellä kulkee '
+      + 'luoteesta kaakkoon Punainen valtakatu. Luoteisnurkassa on '
+      + 'Novosibirsk-Glavnyin asema, ja siitä lähtevät ratapihat '
+      + 'levittäytyvät viuhkana kartan yli — rata on kuvassa yhtä '
+      + 'näkyvä kuin kadut, koska se oli täällä ensin. Etelässä ja '
+      + 'lounaassa virtaa Ob leveänä ja hitaana; sen yli kulkee kartan '
+      + 'alalaidassa maantiesilta, ja oikean rannan puistossa seisoo '
+      + 'ensimmäisen rautatiesillan säästetty jänne. Kartalta jää '
+      + 'etelään Obin tekojärvi ja Akademgorodok, pohjoiseen '
+      + 'eläintarhan männikkö. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mosulissa. */
+      { nimi: 'Novosibirsk-Glavnyi', lat: 55.0358, lon: 82.9 },
+      { nimi: 'Kaupungin kauppatalo', lat: 55.02877, lon: 82.92026 },
+      { nimi: 'Taidemuseo', lat: 55.0218, lon: 82.9215 },
+      { nimi: 'Satohuoneiston talo', lat: 55.02057, lon: 82.92463 },
+      { nimi: 'Aleksanteri Nevskin katedraali', lat: 55.01937, lon: 82.92251 },
+    ],
+  },
+  /*
+   * IRKUTSKIN KOHDEKARTTA (Opus, Siperian täydennyserä 20.8.2026).
+   * Rajaus on Angaran mutka, noin 4,0 × 3,9 km. Kohteet on numeroitu
+   * pohjoisesta etelään kuten Medinassa.
+   *
+   * BAIKAL EI OLE KARTALLA EIKÄ KAINALOSSA. Järvi alkaa 72 kilometrin
+   * päästä ylävirtaa (en-Wikipedia, Irkutsk: "72 km below its outflow
+   * from Lake Baikal"), eli kaksikymmentä kertaa kauempaa kuin
+   * yksikään tähänastinen kainalo — Medinan Quba on 3,5 km, Adenin
+   * Tawahi 6 km, Mekan Jabal al-Nour 5,3 km. Sen mittaisessa hypyssä
+   * kainalon mittakaava olisi aivan toinen kuin pääkartan, ja ruutuun
+   * mahtuisi vain nimetön pala rantaviivaa ilman yhtään kohdetta.
+   * Baikal kerrotaan sen sijaan oppaan omassa jaksossa, ja sillä on jo
+   * lehdessä kokonainen teemasivu. Yhteys näkyy silti kartalla:
+   * Angara tulee kuvaan suoraan järvestä.
+   *
+   * JÄÄNMURTAJA ANGARA ON KAINALOSSA oikeassa alanurkassa, 6 km
+   * kaakkoon Irkutskin tekoaltaalla. Se on vuonna 1900 käyttöön otettu
+   * Baikalin lauttalaiva ja siksi juuri se kohde, joka sitoo kaupungin
+   * järveen — sama perustelu kuin Adenin Tawahilla.
+   *
+   * VAPAHTAJAN KIRKKO JA EPIFANIAN KATEDRAALI OVAT YKSI KOHDE. Ne
+   * ovat 120 metrin päässä toisistaan vanhan linnoituksen paikalla, ja
+   * erillisinä pisteinä numeroympyrät menisivät päällekkäin (Petran
+   * ja Mekan oppi). Sama koskee Kirovin aukiota, joka on niiden
+   * välissä; se kerrotaan samassa jutussa.
+   *
+   * VOLKONSKIN TALO EI OLE KARTALLA, vaikka se on rajauksen sisällä.
+   * Dekabristimuseo on jo lehden kansisivun nostossa omalla kuvallaan,
+   * ja kartan kohteen juttu toistaisi sen. Sama koskee Kazanin
+   * kirkkoa, joka on kansikuvana ja lisäksi rajauksen ulkopuolella.
+   *
+   * Koordinaatit: rautatieasema en-Wikipedian coord-mallista, muut
+   * OpenStreetMapista (Irkutskin kirkoilla ja kortteleilla ei ole omia
+   * en-Wikipedian artikkeleita).
+   */
+  irkutsk: {
+    polku: 'assets/kartat/irkutsk-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 52.306, etela: 52.27, lansi: 104.253, ita: 104.312 },
+    kainalot: [
+      { rajat: { pohjoinen: 52.2555, etela: 52.245, lansi: 104.338, ita: 104.35 },
+        x: 78, y: 76.8, leveys: 20, korkeus: 28.66, suunta: '6 km kaakkoon' },
+    ],
+    esittely: 'Irkutsk alkoi verotusasemasta. Ivan Pohabov rakensi '
+      + 'vuonna 1652 talvimajan turkiskauppaa ja burjaateilta '
+      + 'kerättävää jasak-veroa varten, ja Jakov Pohabov pystytti '
+      + 'vuonna 1661 lähelle pienen paalulinnoituksen. Kaupunkioikeudet '
+      + 'tulivat 1686. Ensimmäinen maantie Moskovasta, Siperian '
+      + 'valtatie, valmistui 1760, ja Kjahtan rajakaupan myötä '
+      + 'Kiinan tee ja silkki tulivat kaupunkiin; vuonna 1821 '
+      + 'Irkutskista tuli Itä-Siperian kenraalikuvernöörin istuin. '
+      + 'Dekabristikapinan jälkeen kaupunkiin karkotettiin upseereita '
+      + 'ja aatelisia, ja vuosisadan loppuun mennessä joka kolmas '
+      + 'asukas oli karkotettu; heidän jälkeensä jäivät koulut, '
+      + 'kirjastot ja koristeelliset puutalot. Rautatie saapui 16. '
+      + 'elokuuta 1898.\n\nKartalla kaupunki on Angaran mutkassa. Joki '
+      + 'tulee kuvaan luoteesta, kaartaa etelään ja jättää oikealle '
+      + 'rannalle sen niemekkeen, jolla vanha kaupunki on; pohjoisessa '
+      + 'siihen laskee Ušakovka, ja sen takana on Znamenskin luostari. '
+      + 'Vasemmalla rannalla on Glaskovon puoli ratapihoineen ja '
+      + 'asemineen. Katuverkko oikealla rannalla on tiheä ja kaareva, '
+      + 'koska ensimmäiset asukkaat käänsivät talonsa ikkunat etelään '
+      + 'eivätkä välittäneet naapureista; ainoa suora katu on '
+      + 'entinen Bolšaja Prešpektnaja, joka syntyi vuonna 1790 puretun '
+      + 'paaluvarustuksen paikalle ja erottuu kartalla pitkänä '
+      + 'kaarena rannan suuntaisesti. Sen ja joen välissä on '
+      + 'kivikaupunki, sen takana puukaupunki — jako on vuoden 1879 '
+      + 'palon jäljiltä. Oikean alakulman kainalossa on jäänmurtaja '
+      + 'Angaran laituri tekoaltaalla, kuusi kilometriä kaakkoon. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mosulissa. */
+      { nimi: 'Znamenskin luostari', lat: 52.30108, lon: 104.29475 },
+      { nimi: 'Epifanian katedraali', lat: 52.29222, lon: 104.28261 },
+      { nimi: 'Taivaaseenastumisen kirkko', lat: 52.29045, lon: 104.28246 },
+      { nimi: 'Rautatieasema', lat: 52.28293, lon: 104.25981 },
+      { nimi: 'Ristin ylentämisen kirkko', lat: 52.27636, lon: 104.28837 },
+      { nimi: '130. kortteli', lat: 52.27394, lon: 104.28987 },
+      /*
+       * TÄMÄ PISTE ON VEDESSÄ, JA SE ON OIKEIN.
+       * tools/tarkista-karttapisteet.mjs merkitsee sen vedeksi, kuten
+       * kuuluukin: kohde on museolaiva, joka on kiinni laiturissa
+       * Irkutskin tekoaltaalla. Työkalun oma sääntö on "sillat ja
+       * majakat saavat olla vedellä, muut eivät", ja laivalla on
+       * täsmälleen sama peruste kuin sillalla. Piste on laivan oma
+       * koordinaatti: en-Wikipedian Icebreaker Angara Museum antaa
+       * 52°15′00,6″N 104°20′38,3″E ja OSM:n oma solmu ("Ангара
+       * ледокол") 52,24999 / 104,34427 — ero on 20 metriä, ja
+       * käytössä on Wikipedian arvo. Laiturille siirtämistä
+       * kokeiltiin kahdesti (52,2513 / 104,3425 ja 52,2501 /
+       * 104,3438) ja mitattiin: molemmat osuivat yhä veteen, koska
+       * yksinkertaistetussa kartassa poukaman rantaviiva kulkee
+       * laiturin takaa.
+       */
+      { nimi: 'Jäänmurtaja Angara', lat: 52.25017, lon: 104.34397 },
+    ],
+  },
 };
 
 /*
