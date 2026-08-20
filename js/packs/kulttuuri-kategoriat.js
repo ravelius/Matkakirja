@@ -16816,6 +16816,449 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * RUB AL-KHALI (Opus 20.8.2026). ALUELEHTI Siinain ja Kappadokian mallin
+   * mukaan: kaksi sivua (kansi + teemasivu `luonto`) ja matkaopas, ei
+   * kohdekarttaa eikä nähtävyysjuttuja. Kohteella oli laudalla jo
+   * saapumisrivi, aarrejahdin kohtaaminen ja kulttuurivisa, mutta ei
+   * lehteä eikä säätietoja; säärivi tehtiin samalla (saatiedot.js:
+   * rubalkhali).
+   *
+   * Faktat on tarkistettu en-Wikipedian artikkeleista Rub' al Khali,
+   * Wabar craters, Bertram Thomas, Wilfred Thesiger, St John Philby,
+   * Atlantis of the Sands, Iram of the Pillars, Archaeological site of
+   * Shisr, Arabian oryx, 'Uruq Bani Ma'arid, Liwa Oasis, Moreeb Dune,
+   * Umm al Samim, Al Murrah, Incense trade route, Ghawar Field ja
+   * Shaybah oil field (haettu 20.8.2026).
+   *
+   * NELJÄ KORJAUSTA AIEMPAAN FAKTAPOHJAAN (docs/arkisto/faktapohja-
+   * rubalkhali.md), jotka on tehty tässä:
+   *  1. Bertram Thomasin ylitys 1930–31 kerrotaan ILMAN reittiväitettä.
+   *     "Soharista Sharjahiin" on artikkelin kuvatekstissä ja koskee eri
+   *     matkaa vuodelta 1927; leipäteksti ei anna ylitykselle reittiä.
+   *     Samasta syystä kamelin nimi Khawarah on jätetty pois — se on
+   *     saman 1927-kuvatekstin tieto.
+   *  2. Shisr rakennettiin 300-luvulla (4th century), ei 400-luvulla.
+   *     Hylkäys 1400–1500-luvuilla pitää paikkansa.
+   *  3. Oryks palautettiin San Diegon villieläinpuistosta (San Diego Wild
+   *     Animal Park), ei San Diegon eläintarhasta.
+   *  4. "Ennen tietä kuljettiin vain tutkimusretkikuntien uria" on
+   *     Shaybah-artikkelin paikallistieto 1990-luvulta eikä koko aavikkoa
+   *     koskeva väite — sitä ei ole käytetty.
+   *
+   * MOREEB-DYYNIN KORKEUTTA EI ANNETA LUKUNA, koska talossa on siitä jo
+   * päätös: maakartat.js (ARE) kertoo, että Wikipedian ja festivaalin
+   * toistama 300 metriä on ristiriidassa SRTM-30m-korkeusprofiilin kanssa
+   * (tasanko 87–95 m, harja 190–201 m), ja kieltää luvun palauttamisen.
+   * Oppaan jakso "Alueen rakenne" sanoo siis vain, että dyyni on
+   * Arabiemiirikuntien korkein (Moreeb Dune). Samasta syystä jakso ei
+   * käytä myöskään etäisyyslukua: Liwa Oasis antaa 22 km Muzayri'sta,
+   * Moreeb Dune 25 km keitaasta, ja maakartat.js käyttää jo jälkimmäistä.
+   * Aavikon dyyneille yleisesti annettu 250 metrin yläraja (Rub' al Khali)
+   * on kansisivun nostossa sellaisenaan — se ei koske Moreebia.
+   *
+   * HUOMIO FABLELLE: maakartat.js:n ARE-nosto sanoo hiekan
+   * ruosteenpunaisuuden johtuvan raudasta, kun taas Rub' al Khali
+   * -artikkeli sanoo värin tulevan maasälvästä. Tämä lehti käyttää
+   * artikkelin omaa selitystä (maasälpä); maakartat.js on Fablen
+   * päätettävissä eikä sitä ole koskettu.
+   *
+   * RISTIRIITA, JOKA ON KIRJOITETTU AUKI LUKIJALLE:
+   *  - Suitsukekaravaanien loppu. Incense trade route: maakauppa kukoisti
+   *    200-luvulta eaa. 100-luvulle jaa.; Rub' al Khali: karavaanit
+   *    kulkivat noin vuoteen 300 jaa. Molemmat luvut ovat oppaan jaksossa
+   *    "Historian käännekohta", lähde nimettynä.
+   *
+   * RISTIRIITA, JOKA ON RATKAISTU TARKEMMAN LÄHTEEN HYVÄKSI: Shaybahin
+   * kentän vuosiluku. Rub' al Khali sanoo kentän löytyneen 1968, mutta
+   * kentän oma artikkeli Shaybah oil field antaa sekä löydön, kehityksen
+   * että tuotannon alun vuodelle 1998 ("brought the project on-stream in
+   * 1998"). Lehti kertoo vain sen, mistä lähteet eivät ole eri mieltä:
+   * tuotanto alkoi 1998.
+   *
+   * WABAR JA RIAD. Meteoriitin suurimman kappaleen paino on 2 045 kiloa,
+   * sama luku kuin Riadin kansallismuseon jutussa (nahtavyysjutut.js) —
+   * Aramcon nostoryhmän punnitus lokakuussa 1966. Wabar craters -artikkeli
+   * mainitsee myös arvion "2,2 tonnia" (National Geographicin toimittajan
+   * silmämääräinen laskelma samalta vuodelta) ja museon kyltti lupaa 2,75;
+   * peli käyttää vain punnittua lukua. Aihe esiintyy pelissä kahdesti eri
+   * kulmasta — Riadissa museonäyttelynä, täällä löytöretkenä — sama linja
+   * kuin Vasa-laivalla (docs/moduulit/kaupunkilehti.md).
+   *
+   * KUVAT. Kohteella on jo viisi rekisteröityä valokuvaa
+   * (asia-valokuvat.js: Sanaw well, The massive sand dunes of Rub Al
+   * Khali, Rub al khali sunset Nov 2007, Camel tracks in the Empty
+   * Quarter, Saudi Arabia Empty Quarter Nov. 2021 (100)); yhtäkään niistä
+   * ei käytetä uudelleen täällä. Aavikolta ei löytynyt yhtään riittävän
+   * suurta vapaata kuvaa Wabarin kraattereista — kaikki kolme Commonsin
+   * kraatterikuvaa ovat alle 500 pikseliä leveitä — joten Philbyn noston
+   * kuvana on ASTER-satelliittikuva samasta dyynikentästä, jonka
+   * kiintopisteettömyys on osa juttua.
+   */
+  rubalkhali: [
+    {
+      id: 'kaupunki',
+      nimi: 'Rub al-Khali',
+      johdanto: 'Hiekkameri, joka on Ranskaa suurempi ja jonka nimi '
+        + 'tarkoittaa tyhjää neljännestä. Sen alta on kaivettu virtahepojen '
+        + 'luita ja löydetty maailman suurimpia öljyesiintymiä — ja '
+        + 'ensimmäisen dokumentoidun ylityksen se sai vasta 1931.',
+      kansikuvat: [
+        {
+          tiedosto: 'Ar-Rub\' Al-Khali (Oman) kz01.jpg',
+          selite: 'Dyyniselänne iltavalossa: tuulen kampaamat aallot '
+            + 'juoksevat harjanteen yli, ja kaukana horisontissa hiekka '
+            + 'päättyy tasaiseen lakeuteen.',
+          lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Crest of dune in Abu Dhabi.jpg',
+          selite: 'Näkymä dyynin harjalta: terävä harjanne jatkuu kauas '
+            + 'eteenpäin, ja oikealla dyynien välissä näkyy vaalea, kova '
+            + 'pohja.',
+          lahde: 'Slywire, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Liwa Oasis palm trees with the desert view.jpg',
+          selite: 'Liwan keidas ylhäältä: taatelipalmulehto peittää laakson '
+            + 'pohjan, ja sen takana alkaa hiekka. Horisontissa kulkee '
+            + 'sähkölinja.',
+          lahde: 'Josephyousry, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Ar-Rub\' Al-Khali (Oman) kz03.jpg',
+          selite: 'Dyyniharjanne jakaa kuvan kahtia: vasen rinne on varjossa '
+            + 'ja oikea auringossa, ja taustalla hiekka vaihtuu tasaiseksi '
+            + 'lakeudeksi.',
+          lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Rub al Khali 002.JPG',
+          selite: 'Punaisenoranssia hiekkamerta: dyynit nousevat '
+            + 'kerroksittain toistensa taakse, ja niiden jyrkät rinteet ovat '
+            + 'kuin veitsellä leikattuja.',
+          lahde: 'Nepenthes, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Ar-Rub\' Al-Khali (Oman) kz05.jpg',
+          selite: 'Aurinko matalalla dyynimeren yllä: hiekka aaltoilee '
+            + 'etualalta horisonttiin, ja jokainen harjanne heittää oman '
+            + 'varjonsa.',
+          lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Tyhjä neljännes on Ranskaa suurempi',
+          tiedosto: 'Ar Rub’ al Khali Sand Sea, Arabian Peninsula.JPG',
+          teksti: 'Rub al-Khali on arabiaa ja tarkoittaa tyhjää '
+            + 'neljännestä. Se on maailman suurin yhtenäinen hiekka-aavikko: '
+            + 'noin 650 000 neliökilometriä eli Ranskaa suurempi, tuhat '
+            + 'kilometriä idästä länteen ja viisisataa pohjoisesta etelään. '
+            + 'Aavikko peittää suurimman osan Arabian niemimaan eteläisestä '
+            + 'kolmanneksesta ja jakautuu neljän maan kesken: '
+            + 'Saudi-Arabian, Omanin, Arabiemiirikuntien ja Jemenin. '
+            + 'Valtaosa maastosta on hiekkamerta eli ergiä, jonka dyynit '
+            + 'kohoavat jopa kahteensataanviiteenkymmeneen metriin, ja '
+            + 'niiden väliin jää sora- ja kipsitasankoja. Hiekan '
+            + 'punaisenoranssi väri tulee maasälvästä.',
+          selite: 'Astronautin kuva Tyhjän neljänneksen kaakkoisreunalta '
+            + 'Omanin puolelta. Pitkät ruskeanpunaiset dyyniselänteet '
+            + 'vuorottelevat vaaleampien välialtaiden kanssa, ja oikealla '
+            + 'selänteet hajoavat erillisiksi tähtidyyneiksi.',
+          lahde: 'ISS Expedition 27 crew, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kaksi brittiä ja yksi heinäsirkkatoimeksianto',
+          tiedosto: 'Timeless Sands.jpg',
+          teksti: 'Ensimmäiset dokumentoidut matkat tekivät 1930-luvun '
+            + 'alussa britit Bertram Thomas ja St John Philby. Thomas oli '
+            + 'Masqatin ja Omanin sulttaanin valtiovarainministeri, ja hän '
+            + 'ylitti hiekkameren talvella 1930–1931 Rashid-heimon '
+            + 'beduiinien opastamana; matkasta syntyi kirja Arabia Felix, '
+            + 'joka kuvaa aavikon eläimet, asukkaat ja tavat. Wilfred '
+            + 'Thesiger tuli myöhemmin ja aivan toisesta syystä: '
+            + 'hyönteistutkija palkkasi hänet 1945 heinäsirkkojen '
+            + 'torjuntayksikön lukuun etsimään sirkkojen lisääntymisalueita. '
+            + 'Työ venyi kahdeksi kamelilla tehdyksi ylitykseksi vuosina '
+            + '1946–1948, ja samalla kartoittui suuri osa aavikkoa. Kirja '
+            + 'Arabian Sands ilmestyi 1959.',
+          selite: 'Mustavalkoinen kuva Abu Dhabin aavikolta: dyynien harjat '
+            + 'kaartuvat toistensa lomitse, ja pinnan aaltokuvio näkyy '
+            + 'terävänä. Alareunassa on muutama pensas.',
+          lahde: 'Clint Ian Pinto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Hiekkojen Atlantis',
+          tiedosto: 'Ubar.jpg',
+          teksti: 'Beduiinit kertoivat tutkimusmatkailijoille kadonneesta '
+            + 'kaupungista, jonka Jumala tuhosi. Thomasin opas osoitti '
+            + 'dyynien välissä kulkevia leveitä uria: tuolla on tie Ubariin. '
+            + 'Nimen hiekkojen Atlantis on usein luultu olevan '
+            + 'T. E. Lawrencen, mutta se ei esiinny hänen julkaistuissa '
+            + 'teksteissään — luultavasti sen keksi juuri Thomas. '
+            + 'Helmikuussa 1992 uutisoitiin, että Ubar oli löytynyt Shisrin '
+            + 'kaivolta Omanista. Paikka on aito: sisämaan kauppa-asema, '
+            + 'joka rakennettiin 300-luvulla ja hylättiin 1400–1500-luvuilla '
+            + 'lähteen ehdyttyä. Samastus Ubariin ei silti ole tutkijoiden '
+            + 'hyväksymä, ja sen esittänyt Nicholas Clapp kumosi sen '
+            + 'itsekin myöhemmin.',
+          selite: 'Shisrin kaivauspaikka Omanissa: kalkkikivilohkare on '
+            + 'romahtanut kaivon päälle, ja lohkareen yllä seisovat '
+            + 'kivimuurin ja tornin jäänteet.',
+          lahde: 'Armatus1995, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Raudan paikka',
+          tiedosto: 'Rub\' al Khali (Arabian Empty Quarter) sand dunes imaged by Terra (EOS AM-1).jpg',
+          teksti: 'Philby etsi samaa kadonnutta kaupunkia ja löysi jotain '
+            + 'aivan muuta. Beduiinit puhuivat paikasta nimeltä Al Hadida, '
+            + 'raudan paikka, jossa oli kerran nähty kamelin kokoinen '
+            + 'rautamöhkäle. Kuukauden matkan jälkeen — osa kameleista kuoli '
+            + 'tiellä — Philby seisoi 2. helmikuuta 1932 puolen '
+            + 'neliökilometrin alalla, joka oli täynnä valkoista '
+            + 'hiekkakiveä, mustaa lasia ja rautaa. Hän luuli sitä '
+            + 'tulivuoreksi, mutta Lontoossa British Museumin tutkija '
+            + 'tunnisti näytteistä meteoriitin törmäyspaikan. Kraattereista '
+            + 'suurin on 116 metriä leveä. Aramcon nostoryhmä punnitsi '
+            + 'lokakuussa 1966 suurimman talteen saadun kappaleen: '
+            + '2 045 kiloa.',
+          selite: 'Satelliittikuva samasta hiekkamerestä, jonka keskellä '
+            + 'Wabarin kraatterit ovat: dyyniselänteet kulkevat rinnakkain '
+            + 'ruskeanoransseina, ja niiden välissä näkyy harmaita ja '
+            + 'valkoisia välialtaita. Yhtään kiintopistettä ei ole.',
+          lahde: 'NASA/GSFC/METI/ERSDAC/JAROS, and U.S./Japan ASTER Science '
+            + 'Team, Wikimedia Commons (PD)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Saudi Arabia Empty Quarter Nov. 2021 (3).jpg',
+          selite: 'Loiva dyyni auringonnousun aikaan: hiekka on '
+            + 'vaaleanpunaista, etualan pinta aaltoilee tuulen jäljistä '
+            + 'eikä horisontissa näy mitään.',
+          lahde: 'Prof. Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Rub al-Khali ei ole kohde vaan väli. Sen reunoilla on '
+          + 'keitaita, kaivoja ja öljykenttiä, mutta keskellä ei ole kylää, '
+          + 'peltoa eikä puuta — vain dyyni dyynin perään. Matkailija kulkee '
+          + 'siis reunoja pitkin ja käy sisään ja ulos: hiekkameren '
+          + 'syvimpiin osiin ei mennä tavallisella autolla eikä yksin. Talvi '
+          + 'on ainoa järkevä matka-aika, ja silloinkin päivä ja yö ovat '
+          + 'kuin kaksi eri vuodenaikaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Ruba al-Khali',
+          taitto: 'opas',
+          teksti: 'Aavikko, jossa ei ole kylää eikä kiintopistettä — '
+            + 'matkailija kulkee sen reunoja.',
+          nosto: 'Aavikon poikki kulkeva maantie valmistui vasta syyskuussa '
+            + '2021. Sitä ennen ylitys oli retkikunnan asia.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Rub al-Khaliin ei tulla junalla eikä reittilennolla. '
+                + 'Ensimmäinen aavikon poikki kulkeva maantie valmistui '
+                + 'syyskuussa 2021: se vie Omanin Ibristä Saudi-Arabian '
+                + 'Al-Ahsaan, on 700–800 kilometriä pitkä ja jakautuu '
+                + '160 kilometriin Omanin ja 580 kilometriin Saudin '
+                + 'puolella. Matkalla se sivuaa Batin, Al-Khutmin ja '
+                + 'Al-Aynin arkeologisia kohteita. Muut hiekkameren sisällä '
+                + 'olevat pisteet ovat öljykenttiä eivätkä kyliä: '
+                + 'Shaybahissa on majoitus tuhannelle työntekijälle ja oma '
+                + 'kiitorata, jolta lennetään vain yhtiön omia vuoroja.',
+              kuva: {
+                tiedosto: 'Road to Ubar.jpg',
+                selite: 'Uusi asfalttitie Omanin aavikolla: kaistaviivat '
+                  + 'jatkuvat suoraan usvaan, ja tiellä näkyy yksi auto. '
+                  + 'Molemmin puolin on tasaista soraa.',
+                lahde: 'Griebi 01, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Aavikko ei ole joka puolelta samanlainen. '
+                + 'Pohjoisreunalla, lähes sadan kilometrin päässä '
+                + 'Persianlahdesta, kaartuu Liwan keidas: noin sata '
+                + 'kilometriä pitkä, pohjoiseen kaareva vyöhyke, jossa on '
+                + 'viitisenkymmentä kylää ja keskuksena Muzayri\'. Sen '
+                + 'eteläpuolella kohoaa Moreeb-dyyni, Arabiemiirikuntien '
+                + 'korkein. Itäreunalla maasto vaihtuu kokonaan toiseksi: '
+                + 'Umm al-Samim on suolakosteikko, johon vedet valuvat '
+                + 'Omanin vuorilta ja hiekkameren uomista. Sen kuori näyttää '
+                + 'kovalta mutta pettää jalan alta, ja beduiinit kutsuvat '
+                + 'sitä myrkkyjen tai huolien äidiksi. Wilfred Thesiger oli '
+                + '1940-luvun lopulla ensimmäinen eurooppalainen, joka näki '
+                + 'paikan.',
+              kuva: {
+                tiedosto: 'Liwa Oasis - panoramio (2).jpg',
+                selite: 'Liwan keitaan reuna: tien vieressä kulkee kapea '
+                  + 'vihreä vyöhyke pensaita ja palmuja, ja heti sen takana '
+                  + 'nousee hiekkaseinämä. Sähkölinja seuraa tietä.',
+                lahde: 'Xiaotong Gao, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Aavikon asukkaat',
+              teksti: 'Aavikon reunoilla asuu yhä beduiiniheimoja, jotka '
+                + 'ovat eläneet paimentolaisina kameliensa kanssa. '
+                + 'Laajimmalla alueella liikkuu Al Murrah, Banu Yamista '
+                + 'polveutuva heimo, johon kuuluu noin 15 000 ihmistä ja '
+                + 'jonka saudiarabialainen haara jakautuu seitsemään sukuun. '
+                + 'Vuodessa kertyi perinteisesti jopa kolmetuhatta '
+                + 'kilometriä. Heistä on kirjoitettu tutkimus Nomads of the '
+                + 'Nomads. Jemenin ja Najranin puolella liikkuvat Banu Yam '
+                + 'ja Banu Hamdan, emiirikuntien puolella Bani Yas, jonka '
+                + 'miehet olivat Liwassa kesäisin helmenkalastajia '
+                + 'rannikolla.',
+            },
+            {
+              otsikko: 'Historian käännekohta',
+              teksti: 'Kaksituhatta vuotta sitten aavikon arvo oli siinä, '
+                + 'mitä sen poikki kulki. Suitsuke kerättiin Dhofarissa, '
+                + 'laivattiin Qanaan ja kuljetettiin sieltä karavaaneilla '
+                + 'Shabwan, Najranin, Mekan ja Medinan kautta Petraan ja '
+                + 'Gazaan; Rooman maailmassa se oli kultaa kalliimpaa. '
+                + 'Maakauppa kukoisti 200-luvulta eaa. 100-luvulle jaa., ja '
+                + 'Rub al-Khalin oma artikkeli antaa karavaanien '
+                + 'viimeiseksi vuosisadaksi noin 300 jaa. Sitten '
+                + 'aavikoituminen katkaisi reitit. 1900-luvulla arvo löytyi '
+                + 'hiekan alta: Ghawar, maailman suurin öljykenttä, '
+                + 'löydettiin 1948, ja Shaybahin kentän tuotanto alkoi 1998 '
+                + '1 494 metrin syvyydestä.',
+              kuva: {
+                tiedosto: 'Oman, Wadi Dawkah, Land of Frankincense.jpg',
+                selite: 'Wadi Dawkahin suitsukepuita Omanissa: matalia, '
+                  + 'kiertyneitä puita kivisellä tasangolla. Oikeassa '
+                  + 'reunassa on kohteen kaksihuippuinen katos.',
+                lahde: 'Dr. Thomas Liptak, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Aavikolla on kaksi vuodenaikaa, kuuma ja kuumempi. '
+                + 'Säärivin mittauspiste on Wikipedian koko aavikolle antama '
+                + 'keskikoordinaatti 20° pohjoista ja 50° itäistä, '
+                + 'ERA5-ruudun korkeus kaksisataakahdeksankymmentä metriä — '
+                + 'siis keskeltä hiekkamerta. Reunat ovat toista maata: '
+                + 'Shaybahin öljykentällä talviyöt painuvat noin kymmeneen '
+                + 'asteeseen ja kesäpäivät noin viiteenkymmeneen, ja '
+                + 'pölymyrskyt ovat siellä tavallisia. Matka tehdään '
+                + 'talvella, ja aamu aloitetaan aikaisin: keskipäivä on '
+                + 'hiekassa raskas myös tammikuussa.',
+              kuva: {
+                tiedosto: 'Saudi Arabia Empty Quarter Nov. 2021 (101).jpg',
+                selite: 'Laakea dyynikenttä sinisen taivaan alla. Etualalla '
+                  + 'on dyynin varjo, ja kaukana harjanteella erottuu yksi '
+                  + 'pensas.',
+                lahde: 'Prof. Mortel, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Hiekan alta on kaivettu virtahepojen luita, ja hiekan '
+        + 'päällä kävelee laji, joka ehdittiin julistaa luonnosta '
+        + 'hävinneeksi. Tyhjä neljännes ei ole tyhjä, mutta sen elämä on '
+        + 'ohutta ja kaukana toisistaan.',
+      tehtava: {
+        kysymys: 'Minkä eläimen luita on kaivettu Rub al-Khalin muinaisten '
+          + 'järvien pohjista?',
+        vaihtoehdot: [
+          'Strutsin',
+          'Gasellin',
+          'Virtahevon',
+          'Kamelin',
+        ],
+        oikea: 2,
+        fakta: 'Virtahevosta jäi luita, kun aavikolla oli matalia järviä '
+          + '6 000–5 000 ja 3 000–2 000 vuotta sitten. Samoista kerroksista '
+          + 'on löytynyt vesipuhvelin ja pitkäsarvisen naudan luita sekä '
+          + 'makean veden simpukoita.',
+      },
+      nostot: [
+        {
+          otsikko: 'Järvien pohjat hiekan seassa',
+          tiedosto: 'Rub al Khali 001.JPG',
+          teksti: 'Aavikon keskivaiheilla on koholla olevia kovettuneita '
+            + 'laikkuja, joissa on kalsiumkarbonaattia, kipsiä, liejusavea '
+            + 'ja savea. Ne ovat matalien järvien pohjia. Järviä syntyi '
+            + 'kahdesti, 6 000–5 000 ja 3 000–2 000 vuotta sitten, kun '
+            + 'sadetta tuli monsuunin tapaan rajusti; useimmat kuivuivat '
+            + 'parissa vuodessa, mutta lounaassa Mundafanin alueella vesi '
+            + 'säilyi jopa kahdeksansataa vuotta, koska Tuwaiqin '
+            + 'jyrkänteeltä valui lisää. Kerrostumista on löytynyt '
+            + 'virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, '
+            + 'etanoita ja makean veden simpukoita — ja piikivityökaluja, '
+            + 'mutta ei yhtään ihmisen luuta.',
+          selite: 'Vaalea, kova tasanko dyynien välissä: taustalla nousee '
+            + 'punaista hiekkaa, ja etualalla tuuli on kasannut soran päälle '
+            + 'uuden pienen dyynin.',
+          lahde: 'Nepenthes, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Laji, joka palasi hävinneiden luettelosta',
+          tiedosto: 'Arabian Oryx at DDCR.jpg',
+          teksti: 'Vielä 1930-luvun puolivälissä arabianoryksin viimeiset '
+            + 'kannat elivät Nafudin aavikolla ja täällä. Sitten alkoi '
+            + 'metsästys autoilla ja kivääreillä, ja viimeinen '
+            + 'luonnonvarainen yksilö nähtiin 1972. Laji oli silloin jo '
+            + 'pelastettu tarhoihin: Phoenixin eläintarhassa vuonna 1962 '
+            + 'aloitettu jalostuskanta lähti liikkeelle yhdeksästä '
+            + 'eläimestä. Palautusistutukset alkoivat 1980, ja ensimmäinen '
+            + 'erä vietiin Omaniin San Diegon villieläinpuistosta. Vuonna '
+            + '2011 arabianoryks oli ensimmäinen laji, joka nostettiin '
+            + 'punaisella listalla luokasta hävinnyt luonnosta takaisin '
+            + 'vaarantuneisiin; 2016 luonnossa eli noin 1 220 yksilöä.',
+          selite: 'Arabianoryks kävelee kameraa kohti: valkoinen turkki, '
+            + 'tummat jalat, kasvoissa mustat juovat ja pitkät suorat '
+            + 'sarvet. Ympärillä kasvaa aavikkoheinää.',
+          lahde: 'Josephyousry, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Dyynit eivät vaella',
+          tiedosto: 'Uruq Bani Ma\'arid Reserve, Saudi Arabia, 2025.jpg',
+          teksti: 'Aavikon länsireunalla on 12 658 neliökilometrin '
+            + 'suojelualue Uruq Bani Ma\'arid, joka otettiin 2023 '
+            + 'maailmanperintöön Saudi-Arabian ensimmäisenä luontokohteena. '
+            + 'Se näyttää tiivistettynä, mistä hiekkameri koostuu: korkeita '
+            + 'hiekkadyynejä ja niiden välissä suola-altaita. Punaiset '
+            + 'dyyniselänteet kulkevat rinnakkain jopa sadanviidenkymmenen '
+            + 'metrin korkuisina, ja niiden väliin jää hiekka- tai '
+            + 'sorapohjaisia käytäviä. Suola-altaat eli sabkhat selittävät '
+            + 'oudon havainnon: dyynit eivät vaella. Pintahiekka lentää '
+            + 'tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta '
+            + 'dyynin juureen.',
+          selite: 'Uruq Bani Ma\'aridin suojelualue: punainen dyyniselänne '
+            + 'täyttää kuvan, ja sen juurella kulkee vihreä käytävä, jolla '
+            + 'liikkuu kaksi kauriseläintä.',
+          lahde: 'Saudi Press Agency (SPA), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kolmekymmentäyksi uutta kasvia yhdellä retkellä',
+          tiedosto: 'Saudi Arabia Empty Quarter Nov. 2021 (74).jpg',
+          teksti: 'Eläimistö on pientä ja piilossa: hämähäkkieläimiä, '
+            + 'skorpioneja ja jyrsijöitä, ja kasveja kasvaa hajallaan '
+            + 'kaikkialla. Suurista lajeista aasiangepardi on hävinnyt '
+            + 'Saudi-Arabiasta kokonaan. Kuinka vähän aavikko tunnetaan, '
+            + 'näkyi vuonna 2006: Saudi-Arabian geologisen tutkimuslaitoksen '
+            + 'retkikunta, jossa oli 89 tutkijaa, löysi Tyhjästä '
+            + 'neljänneksestä 31 tieteelle uutta kasvilajia ja -muotoa sekä '
+            + '24 alueella elävää lintulajia. Tutkijoita hämmästytti eniten '
+            + 'se, miten linnut ylipäätään selviävät näissä oloissa.',
+          selite: 'Kukkiva aavikkokasvi hiekalla: matala varsi leviää '
+            + 'kahteen suuntaan, lehdet ovat vaaleanvihreät ja kukat '
+            + 'keltaiset. Matala aurinko piirtää kasvista pitkän varjon.',
+          lahde: 'Prof. Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+  ],
   tromssa: [
     {
       id: 'kaupunki',
