@@ -14517,6 +14517,15 @@ export const KULTTUURI_KATEGORIAT = {
    * nähtävyysjuttuna (Diego Delson yökuva). Eri tiedostot ja eri
    * näkökulma — sama linja kuin Vasa-laivalla ja kattohaikaralla
    * (docs/moduulit/kaupunkilehti.md).
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Fablen eräohje R1, Raamatun "TEKSTIEN
+   * PAINOPISTE"): kaikki tämän kaupungin selitteet on tiivistetty
+   * yhteen virkkeeseen. Pakolliset selitykset säilyivät tiiviinä —
+   * Wadi Rumin kuva on radan Jordanian-osuudelta, Birminghamin lehti
+   * ei ole Medinan perustuslaki, ja Quban kylähistoria kuuluu
+   * kuvatekstiin. Nostot, opas, johdannot, kuvatiedostot ja
+   * lähderivit ovat ennallaan; etusivun leipäteksti on
+   * asia-artikkelit.js:n intro-kentässä.
    */
   medina: [
     {
@@ -14544,8 +14553,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Mount Uhud.JPG',
-          selite: 'Uhudin punaruskea vuorimassa kohoaa kaupungin '
-            + 'reunalla. Edustalla on rivi valkoisia matalia taloja ja '
+          selite: 'Uhudin punaruskea vuorimassa kohoaa kaupungin reunalla, '
+            + 'ja sen edustalla on rivi valkoisia matalia taloja ja '
             + 'moskeija minareetteineen.',
           lahde: 'Adiput (talk), Wikimedia Commons (PD)',
         },
@@ -14565,16 +14574,15 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Madinah Museum.JPG',
-          selite: 'Vanhan rautatieaseman julkisivu iltavalossa. Muuri on '
+          selite: 'Vanhan rautatieaseman julkisivu iltavalossa: muuri on '
             + 'ladottu vuorotellen tummasta basaltista ja vaaleasta '
             + 'hiekkakivestä, ja ihmisiä kävelee kuvasta poispäin selin.',
           lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Jabal al Rumah جبل الرماه.jpg',
-          selite: 'Jousimiesten kukkula ja sen takana Uhudin rinteet. '
-            + 'Etualalla on kivetty aukio lyhtypylväineen, ja rinne '
-            + 'nousee siitä suoraan ylös.',
+          selite: 'Jousimiesten kukkula ja sen takana suoraan ylös nouseva '
+            + 'Uhudin rinne, etualalla kivetty aukio lyhtypylväineen.',
           lahde: 'CR Guru PK, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -14632,9 +14640,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laskettiin väliaikaisille penkereille wadien yli. Mekkaan '
             + 'rataa ei jatkettu, sillä Harb-heimo nousi vuonna 1907 '
             + 'vastustamaan jatkoa.',
-          selite: 'Hidžaz-radan raide kulkee suorana aavikon halki. Kuva '
-            + 'on radan Jordanian-osuudelta Wadi Rumista, jossa kiskot '
-            + 'ovat yhä paikoillaan hiekan keskellä.',
+          selite: 'Hidžaz-radan raide kulkee suorana aavikon halki radan '
+            + 'Jordanian-osuudella Wadi Rumissa, jossa kiskot ovat yhä '
+            + 'paikoillaan hiekan keskellä.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Medina',
         },
@@ -14651,9 +14659,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'entisöitiin, ja niihin avattiin vuonna 2006 Hidžaz-radan '
             + 'museo. Aseman kortteli on siis yhä olemassa, vaikka '
             + 'raiteet eivät enää vie mihinkään.',
-          selite: 'Entisöity tumma tavaravaunu museoraiteella. Vaunun '
-            + 'kylki on peltiä, ja sen alla erottuvat jouset ja '
-            + 'teräspyörät.',
+          selite: 'Entisöity tumma tavaravaunu museoraiteella: kylki on '
+            + 'peltiä, ja sen alla erottuvat jouset ja teräspyörät.',
           lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Medina',
         },
@@ -14661,8 +14668,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Al-Masjid al-Nabawi, Medina - panoramio.jpg',
-          selite: 'Moskeijan aukion jättimäiset varjostimet avattuina. '
-            + 'Valo siivilöityy vaaleiden kankaiden läpi, ja pylväät '
+          selite: 'Moskeijan aukion jättimäiset varjostimet avattuina: '
+            + 'valo siivilöityy vaaleiden kankaiden läpi, ja pylväät '
             + 'nousevat kivetyltä pihalta suorina riveinä.',
           lahde: 'Vebra, Wikimedia Commons (CC BY 3.0)',
         },
@@ -14701,9 +14708,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jotka kiertävät keskustan renkaina.',
               kuva: {
                 tiedosto: 'قطار الحرمين 2023.jpg',
-                selite: 'Haramain-pikajuna kaartaa radalla vihertävän '
-                  + 'rinnemaiseman halki. Juna on valkoinen ja matala, '
-                  + 'ja rata kulkee loivassa kaarteessa rinteen alla.',
+                selite: 'Valkoinen ja matala Haramain-pikajuna kaartaa '
+                  + 'loivassa kaarteessa vihertävän rinnemaiseman halki.',
                 lahde: 'وكالة الأنباء السعودية, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -14748,9 +14754,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vahva perinneyhteys profeetta Muhammadiin.',
               kuva: {
                 tiedosto: 'Ajwa dates.JPG',
-                selite: 'Tummia ajwa-taateleita kasassa lasikulhossa. '
-                  + 'Hedelmien pinta on ryppyinen ja kiiltävä, ja koko '
-                  + 'on tasainen taatelista toiseen.',
+                selite: 'Tummia ajwa-taateleita kasassa lasikulhossa: '
+                  + 'pinta on ryppyinen ja kiiltävä ja koko tasainen '
+                  + 'taatelista toiseen.',
                 lahde: 'Miansari66, Wikimedia Commons (PD)',
               },
             },
@@ -14832,8 +14838,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kahdelle heistä, Awsille ja Khazrajille. Quban kylä '
             + 'keitaan eteläreunalla pysyi omana yhdyskuntanaan vielä '
             + 'pitkään.',
-          selite: 'Quban valkoinen moskeija auringossa: neljä minareettia '
-            + 'kulmilla ja niiden välissä kupolien rypäs. Quba oli oma '
+          selite: 'Quban valkoinen moskeija auringossa neljine '
+            + 'kulmaminareetteineen ja kupolirypäineen — Quba oli oma '
             + 'kylänsä keitaan laidalla, kunnes kaupunki kasvoi sen '
             + 'ympärille.',
           lahde: 'يحيى الزعبي 2025, Wikimedia Commons (CC BY 3.0)',
@@ -14874,10 +14880,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'riidat vietiin Muhammadin ratkaistaviksi. Tutkijat '
             + 'kiistelevät yhä siitä, oliko kyseessä yksi asiakirja vai '
             + 'kokoelma sopimuksia.',
-          selite: 'Kaksi varhaista käsikirjoituslehteä pergamentilla, '
-            + 'teksti ruskeaa mustetta. Kyseessä ei ole perustuslaki '
-            + 'vaan Birminghamin Koraani-fragmentti — näyte siitä, '
-            + 'miltä aikakauden kirjoitus näytti.',
+          selite: 'Kaksi varhaista käsikirjoituslehteä pergamentilla '
+            + 'ruskealla musteella — ei perustuslaki vaan Birminghamin '
+            + 'Koraani-fragmentti, näyte aikakauden kirjoituksesta.',
           lahde: 'AnonymousUnknown author, Wikimedia Commons (PD)',
           wiki: 'Medina',
         },
@@ -14895,10 +14900,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kestänyt neljäkymmentä päivää, lyheni viiteen, ja '
             + 'vuosikymmenessä kaupungin väkiluku nousi '
             + 'kahdeksaankymmeneentuhanteen.',
-          selite: 'Anbariyan osmanimoskeija: vaalea kivirakennus '
-            + 'kupoleineen ja kaksi hoikkaa minareettia. Moskeija seisoo '
-            + 'vanhan rautatieaseman kupeessa, ja se rakennettiin radan '
-            + 'yhteydessä vuonna 1908.',
+          selite: 'Anbariyan osmanimoskeija vanhan rautatieaseman '
+            + 'kupeessa: vaalea kivirakennus kupoleineen ja kaksi hoikkaa '
+            + 'minareettia, rakennettu radan yhteydessä vuonna 1908.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Medina',
         },
@@ -14965,6 +14969,15 @@ export const KULTTUURI_KATEGORIAT = {
    * Wikimedia Commons (PD)'. Commonsin rajapinta antaa lisenssiksi
    * "No restrictions", joka tarkoittaa samaa; kuva on skannaus
    * Snouck Hurgronjen teoksesta Mekka (Haag 1888).
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Fablen eräohje R1, Raamatun "TEKSTIEN
+   * PAINOPISTE"): kaikki tämän kaupungin selitteet on tiivistetty
+   * yhteen virkkeeseen. Pakolliset selitykset säilyivät tiiviinä —
+   * vuoden 1889 kuvan pienet numerot ovat julkaisun omia litteroita,
+   * Ajyadin linnoitusta ei enää ole, kiswa-näyte on Bursassa ja
+   * Burtonin kuva on hänen vaimonsa elämäkerrasta. Nostot, opas,
+   * johdannot, kuvatiedostot ja lähderivit ovat ennallaan; etusivun
+   * leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
   mekka: [
     {
@@ -14992,9 +15005,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Mount Arafat3.jpg',
-          selite: 'Arafatin kukkula pyhiinvaelluksen aikaan. Rinne on '
-            + 'täynnä valkopukuisia ihmisiä pieninä hahmoina, ja '
-            + 'laella erottuu valkoinen obeliskimerkki.',
+          selite: 'Arafatin kukkula pyhiinvaelluksen aikaan: rinne on '
+            + 'täynnä valkopukuisia ihmisiä pieninä hahmoina, ja laella '
+            + 'erottuu valkoinen obeliskimerkki.',
           lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15007,26 +15020,25 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Mecca at night.jpg',
-          selite: 'Laakso yöllä valomerenä. Kellotorni kohoaa oikealla '
+          selite: 'Laakso yöllä valomerenä: kellotorni kohoaa oikealla '
             + 'kirkkaimpana pisteenä, ja reunoilla vuoret ovat mustia '
             + 'aukkoja valojen keskellä.',
           lahde: 'عباد ديرانية, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Masjid Haram 1889 Snouck Hurgronje.jpg',
-          selite: 'Moskeijan piha ja Kaaba vuonna 1889. Takana '
-            + 'kukkulalla erottuu Ajyadin linnoitus, jota ei ole enää '
-            + 'olemassa. Kuvan pienet numerot ovat alkuperäisen '
-            + 'julkaisun omia litteroita, joilla kohteet nimettiin '
-            + 'kirjan tekstissä.',
+          selite: 'Moskeijan piha ja Kaaba vuonna 1889, takana kukkulalla '
+            + 'sittemmin purettu Ajyadin linnoitus; kuvan pienet numerot '
+            + 'ovat alkuperäisen julkaisun omia litteroita, joilla kohteet '
+            + 'nimettiin kirjan tekstissä.',
           lahde: 'C. Snouck Hurgronje, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Jabbal An-Nour (2024).jpg',
-          selite: 'Jabal al-Nour tieltä kuvattuna: kaksihuippuinen '
-            + 'vuori, jonka laki näyttää siltä kuin sen päälle olisi '
-            + 'nostettu toinen vuori. Etualalla ajoneuvot ovat pieniä '
-            + 'rinteen mittakaavassa.',
+          selite: 'Jabal al-Nour tieltä kuvattuna: kaksihuippuinen vuori, '
+            + 'jonka laki näyttää siltä kuin sen päälle olisi nostettu '
+            + 'toinen vuori, ja etualan ajoneuvot ovat pieniä rinteen '
+            + 'mittakaavassa.',
           lahde: 'Kaliper1, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15048,10 +15060,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuoteen 1965 mennessä tullut kahdeksankymmentä'
             + 'yhdeksän, pahin niistä vuonna 1942.',
           selite: 'Mekan asemakaava Snouck Hurgronjen teoksesta vuodelta '
-            + '1888, pohjana Burckhardtin mittaukset — kartan oma otsikko '
-            + 'kertoo sen. Laakson uoma on piirretty sinisellä ja '
-            + 'haarautuu kaupungin läpi, korttelit seuraavat sen mutkia, '
-            + 'ja molemmin puolin nousevat viivoitetut vuoret.',
+            + '1888, pohjana Burckhardtin mittaukset: laakson uoma '
+            + 'haarautuu sinisenä kaupungin läpi, korttelit seuraavat sen '
+            + 'mutkia, ja molemmin puolin nousevat viivoitetut vuoret.',
           lahde: 'The British Library, Wikimedia Commons (PD)',
           wiki: 'Mekka',
         },
@@ -15072,9 +15083,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä '
             + 'katsellaan lasin takaa.',
           selite: 'Zamzamin vanha kaivonkehä museonäyttelyssä '
-            + 'koristeellisen rauta-aitauksen takana. Yllä riippuu '
-            + 'messinkiämpäri, jolla vettä nostettiin, ja sen vieressä '
-            + 'on vanha nostoväkipyörä.',
+            + 'rauta-aitauksen takana, yllä vedennostoon käytetty '
+            + 'messinkiämpäri ja vanha nostoväkipyörä.',
           lahde: 'Mohammad Bahareth, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Mekka',
         },
@@ -15095,10 +15105,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1800-luvun alussa kiswan kulut valtion kassasta, ja '
             + 'silloin työ annettiin Kairon Dar '
             + 'al-Khoronfoshin verstaalle.',
-          selite: 'Kiswa-kangasta lähikuvassa: mustalle silkille on '
-            + 'kirjottu kullalla kalligrafiaa ja köynnöskuviota. Tämä '
-            + 'kappale on mamelukkiaikainen Kaaban oviverho, joka on '
-            + 'säilynyt Bursan Ulu Camiissa Turkissa.',
+          selite: 'Mamelukkiaikainen Kaaban oviverho Bursan Ulu Camiissa '
+            + 'Turkissa: mustalle silkille on kirjottu kullalla '
+            + 'kalligrafiaa ja köynnöskuviota.',
           lahde: 'Yahia.Mokhtar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mekka',
         },
@@ -15118,9 +15127,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nykyään seitsemän tai kahdeksan sirpaletta '
             + 'hopeakehyksessä, ja näkyvää pintaa on noin 20 kertaa 16 '
             + 'senttiä.',
-          selite: 'Kaaba vuonna 1910: oviverho on nostettu ylös, ja '
-            + 'kankaan kultakirjailu erottuu mustaa vasten. Ympärillä '
-            + 'liikkuu ihmisiä aikakauden asuissa pieninä hahmoina.',
+          selite: 'Kaaba vuonna 1910: oviverho on nostettu ylös, kankaan '
+            + 'kultakirjailu erottuu mustaa vasten, ja ympärillä liikkuu '
+            + 'ihmisiä aikakauden asuissa pieninä hahmoina.',
           lahde: 'G. Eric or Edith Matson, for American Colony Jerusalem, '
             + 'Wikimedia Commons (PD)',
           wiki: 'Mekka',
@@ -15129,9 +15138,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Jabbal An-Nour - Makkah (2241558560).jpg',
-          selite: 'Jabal al-Nourin huippu läheltä. Rinteessä erottuu '
-            + 'polku valkoisena pistejonona: se on jono ihmisiä matkalla '
-            + 'Hiran luolalle, ja se näyttää vuoren mittakaavan.',
+          selite: 'Jabal al-Nourin huippu läheltä: rinteen polku erottuu '
+            + 'valkoisena pistejonona, joka on jono ihmisiä matkalla Hiran '
+            + 'luolalle ja näyttää vuoren mittakaavan.',
           lahde: 'Wal N., Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Mekka on Saudi-Arabian kolmanneksi suurin kaupunki, ja '
@@ -15225,9 +15234,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'keskuudessa 27 kertaa vuosien 1830 ja 1930 välillä.',
               kuva: {
                 tiedosto: 'Mina\'s tents.JPG',
-                selite: 'Minan telttameri yöllä. Valkoisia telttoja '
-                  + 'jatkuu riveissä horisonttiin asti, ja niiden '
-                  + 'välissä palavat korkeat valonpylväät.',
+                selite: 'Minan telttameri yöllä: valkoisia telttoja jatkuu '
+                  + 'riveissä horisonttiin asti, ja niiden välissä palavat '
+                  + 'korkeat valonpylväät.',
                 lahde: 'Arisdp, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -15318,9 +15327,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muslimi ja pääsi Mekkaan, jossa vietti useita kuukausia ja '
             + 'teki pyhiinvaelluksen riitit. Muistiinpanot julkaistiin '
             + 'vasta kuoleman jälkeen, vuonna 1829.',
-          selite: 'Öljyvärimuotokuva Burckhardtista: vaalea turbaani, '
-            + 'jonka laella on punainen lakki, tuuhea parta ja vaalea '
-            + 'viitta. Tausta on tumma ja tyhjä.',
+          selite: 'Öljyvärimuotokuva Burckhardtista tummaa tyhjää taustaa '
+            + 'vasten: vaalea turbaani punaisine lakkeineen, tuuhea parta '
+            + 'ja vaalea viitta.',
           lahde: 'Maurice Babey, Wikimedia Commons (PD)',
           wiki: 'Mekka',
         },
@@ -15340,9 +15349,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjoitti: "Mekassa ei ole mitään teatraalista, mikään ei '
             + 'muistuta oopperaa, vaan kaikki on yksinkertaista ja '
             + 'vaikuttavaa."',
-          selite: 'Burton valepuvussaan: valkoinen turbaani, pitkä viitta '
-            + 'ja vyöllä ase. Kuva on hänen vaimonsa elämäkerran '
-            + 'kuvituksesta.',
+          selite: 'Burton valepuvussaan valkoisessa turbaanissa ja '
+            + 'pitkässä viitassa, ase vyöllä — kuva on hänen vaimonsa '
+            + 'elämäkerran kuvituksesta.',
           lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
           wiki: 'Mekka',
         },
@@ -15361,9 +15370,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'osa kukkulasta tasoitettiin kellotornikompleksin tieltä. '
             + 'Rakennuksesta on jäljellä 1:25-kokoinen pienoismalli '
             + 'Istanbulin Miniatürk-puistossa.',
-          selite: 'Kellotornikompleksi nykyään. Tornit nousevat siltä '
-            + 'kukkulalta, jolla linnoitus seisoi, ja kellotaulu '
-            + 'erottuu keskimmäisen tornin kyljessä.',
+          selite: 'Kellotornikompleksi nykyään sillä kukkulalla, jolla '
+            + 'linnoitus seisoi, kellotaulu keskimmäisen tornin kyljessä.',
           lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mekka',
         },
@@ -15381,9 +15389,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Mekasta sen keskus, ja vuonna 1885 vali Osman Nuri Pasha '
             + 'toi kaupunkiin ensimmäisen kirjapainon. Samana vuonna '
             + 'väkiluvuksi arvioitiin neljäkymmentäviisi tuhatta.',
-          selite: 'Muhammad Alin muotokuva: valkoinen turbaani, tumma '
-            + 'viitta ja miekka sylissä. Hän hallitsi Egyptiä '
-            + 'osmanisulttaanin varakuninkaana.',
+          selite: 'Egyptiä osmanisulttaanin varakuninkaana hallinneen '
+            + 'Muhammad Alin muotokuva: valkoinen turbaani, tumma viitta '
+            + 'ja miekka sylissä.',
           lahde: 'Auguste Couder, Wikimedia Commons (PD)',
           wiki: 'Mekka',
         },
@@ -27578,6 +27586,11 @@ export const KULTTUURI_KATEGORIAT = {
    * uudet väitteet on tarkistettu en-Wikipedian raakatekstistä
    * (Isfahan ja New Julfa, haettu 20.8.2026), eivätkä johdannot
    * toista viereisten nostojen virkkeitä.
+   *
+   * TÄYDENNYS SAMANA PÄIVÄNÄ (Fablen eräohje R1): kuvatekstit
+   * tiivistettiin vielä yhdeksi virkkeeksi, eli kaksivirkkeisiä
+   * selitteitä ei enää ole. Intro, johdannot ja kartan esittely
+   * jäivät ennalleen.
    */
   isfahan: [
     {
@@ -27604,8 +27617,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Iran Teahouse in Isfahan, Iran (3573969242).jpg',
           selite: 'Teehuoneen sisusta Isfahanissa: kaaret ja seinät on '
-            + 'verhottu painokankailla, joissa toistuvat rivit ihmis- ja '
-            + 'lintuhahmoja. Pöydillä on teelaseja ja metallisia '
+            + 'verhottu ihmis- ja lintuhahmoriveillä kuvioiduilla '
+            + 'painokankailla, ja pöydillä on teelaseja ja metallisia '
             + 'teekannuja tarjottimineen.',
           lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
         },
@@ -27657,9 +27670,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Isfahanin maakunnasta on nykyään tunnistettu yli 300 '
             + 'vanhaa kyyhkystornia, ja niistä 65 on merkitty Iranin '
             + 'kansalliseen kulttuuriperintöluetteloon.',
-          selite: 'Kaksi savitiilistä kyyhkystornia vihreällä pellolla. '
-            + 'Etummaisen kylkiin on liitetty kapeampia puolilieriöitä, '
-            + 'ja seinissä on tasavälein pieniä neliömäisiä reikiä.',
+          selite: 'Kaksi savitiilistä kyyhkystornia vihreällä pellolla: '
+            + 'etummaisen kylkiin on liitetty kapeampia puolilieriöitä, ja '
+            + 'seinissä on tasavälein pieniä neliömäisiä reikiä.',
           lahde: 'Ziegler175, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27679,8 +27692,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'luetteloon 10. kesäkuuta 1942.',
           selite: 'Monar Jonbanin julkisivu alaviistosta: keltatiilistä '
             + 'seinää halkoo suuri teräväkärkinen holvikaari '
-            + 'tummansinisine laattanauhoineen. Kummastakin päästä nousee '
-            + 'kapea minareetti, jonka huipulla on avoin lyhty.',
+            + 'tummansinisine laattanauhoineen, ja kummastakin päästä '
+            + 'nousee kapea minareetti avoimine lyhtyineen.',
           lahde: 'آرش, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -27699,9 +27712,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '2002 radiohiiliajoituksiin nojaten, että paikka on sitäkin '
             + 'vanhempi, elamilainen.',
           selite: 'Kukkulan laen pyöreä raunio: savitiilestä muurattu '
-            + 'lieriö seisoo paljaan kallion päällä, ja sen seinässä on '
-            + 'kolme kapeaa pystyaukkoa. Ympärillä on sortuneita muureja '
-            + 'ja perustuksia.',
+            + 'lieriö kolmine kapeine pystyaukkoineen seisoo paljaalla '
+            + 'kalliolla sortuneiden muurien ja perustusten keskellä.',
           lahde: 'Ivan Mlinaric from Slovenia, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -27743,8 +27755,8 @@ export const KULTTUURI_KATEGORIAT = {
         kuva: {
           tiedosto: 'Palacio Aali Qapu, Isfahán, Irán, 2016-09-20, DD 56.jpg',
           selite: 'Mustia hevosvaunuja punaisine pyörineen odottamassa '
-            + 'Naqsh-e Jahanin aukion laidalla. Takana kohoaa Ali Qapun '
-            + 'pylväikköinen parveke, ja sen oikealla puolella jatkuu '
+            + 'Naqsh-e Jahanin aukion laidalla, takana Ali Qapun '
+            + 'pylväikköinen parveke ja sen oikealla puolella '
             + 'kaksikerroksinen kaarikäytävä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -27811,10 +27823,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja uoma jää tyhjäksi.',
               kuva: {
                 tiedosto: 'Khaju Bridge, Isfahan 04.jpg',
-                selite: 'Khajun sillan keskiosa kuivan jokiuoman '
-                  + 'puolelta: alarivin kaarien alla on kivinen '
-                  + 'patokynnys ja keskellä kohoaa kaksikerroksinen '
-                  + 'paviljonki. Edustalla on pelkkää hiekkaa.',
+                selite: 'Khajun sillan keskiosa kuivan jokiuoman puolelta: '
+                  + 'alarivin kaarien alla on kivinen patokynnys, keskellä '
+                  + 'kohoaa kaksikerroksinen paviljonki ja edustalla on '
+                  + 'pelkkää hiekkaa.',
                 lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27839,9 +27851,8 @@ export const KULTTUURI_KATEGORIAT = {
                 tiedosto: 'Haft-rang tilework. Shah Mosque (Isfahan).jpg',
                 selite: 'Kaakeloitu holvikaaren kärki lähikuvassa: '
                   + 'tummansinisellä pohjalla kiemurtelee vaaleita '
-                  + 'köynnöksiä ja turkoosia medaljonkia. Yksittäisten '
-                  + 'laattojen saumat näkyvät suorina ruutuina kuvion '
-                  + 'läpi.',
+                  + 'köynnöksiä ja turkoosia medaljonkia, ja laattojen '
+                  + 'saumat näkyvät suorina ruutuina kuvion läpi.',
                 lahde: 'Kimiakardani, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27868,8 +27879,8 @@ export const KULTTUURI_KATEGORIAT = {
                 tiedosto: 'Naqsh-e Jahan Square by Pascal Coste 1 edited.jpg',
                 selite: 'Pascal Costen värillinen kivipiirros aukiosta: '
                   + 'kenttä on paljasta hiekkaa, laidoilla kiertää '
-                  + 'kaksikerroksinen kaarikäytävä ja perällä on moskeija '
-                  + 'turkoosikupoleineen. Etualalla on pieniä ratsastajia '
+                  + 'kaksikerroksinen kaarikäytävä, perällä on moskeija '
+                  + 'turkoosikupoleineen ja etualalla pieniä ratsastajia '
                   + 'ja kulkijoita.',
                 lahde: 'Pascal Coste, Wikimedia Commons (PD)',
               },
@@ -27934,8 +27945,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'murretta.',
           selite: 'Uuden Julfan aukiolla seisoo suuri aurinkokello: '
             + 'kivijalustan päällä on musta kaareva malja ja valkoinen '
-            + 'viuhkamainen taulu persialaisine numeroineen. Niiden läpi '
-            + 'kulkee vino metallivarsi.',
+            + 'viuhkamainen taulu persialaisine numeroineen, ja niiden '
+            + 'läpi kulkee vino metallivarsi.',
           lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -27973,10 +27984,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kesaratsin mukaan; siellä ovat esillä vanha painokone ja '
             + 'Iranissa ensimmäisenä painettu kirja. Kirjastossa on yli '
             + '700 käsin kirjoitettua kirjaa.',
-          selite: 'Vuoden 1638 psalttari auki tummalla kankaalla: sivun '
-            + 'yläosassa on puupiirroskehys ja sen alla kolmetoista riviä '
-            + 'tekstiä armenialaisin kirjaimin. Koristealkukirjain on '
-            + 'piirretty kahdeksi linnuksi.',
+          selite: 'Vuoden 1638 psalttari auki tummalla kankaalla: '
+            + 'yläosassa on puupiirroskehys, sen alla kolmetoista riviä '
+            + 'tekstiä armenialaisin kirjaimin ja koristealkukirjain '
+            + 'piirrettynä kahdeksi linnuksi.',
           lahde: 'digital.bodleian.ox.ac.uk, Wikimedia Commons (PD)',
         },
       ],
@@ -36370,6 +36381,11 @@ export const KULTTUURI_KATEGORIAT = {
    * virkkeen mittaisia, ja kohdekartan esittely on lyhyt eikä kuvaile
    * karttaa. Nostot ovat entiseen tapaan 440–660 merkkiä.
    *
+   * TÄYDENNYS SAMANA PÄIVÄNÄ (Fablen eräohje R1): kuvatekstit
+   * tiivistettiin vielä yhdeksi virkkeeksi, eli kaksivirkkeisiä
+   * selitteitä ei enää ole. Intro, johdannot ja kartan esittely
+   * jäivät ennalleen.
+   *
    * KOLME HYLKÄYSTÄ KUVATYÖSTÄ, JOTKA KANNATTAA MUISTAA: 1870-luvun
    * Kioto-valokuvat ovat käytännössä kaikki studiokuvia, joiden
    * kuvapintaan on painettu negatiivin numero ja nimi ("930 B KIOTO
@@ -36388,10 +36404,9 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Yasaka-dori early morning with street lanterns and the Tower of Yasaka (Hokan-ji Temple), Kyoto, Japan.jpg',
-          selite: 'Yasaka-dōri aamuhämärissä: kivetty kuja nousee '
+          selite: 'Yasaka-dōri aamuhämärissä: tyhjä kivetty kuja nousee '
             + 'puutalojen välissä kohti Hōkan-jin viisikerroksista '
-            + 'pagodia, ja seinillä palavat paperilyhdyt. Katu on '
-            + 'tyhjä.',
+            + 'pagodia, ja seinillä palavat paperilyhdyt.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -36426,10 +36441,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Fushimi Inari Taisha tunnel droit.jpg',
-          selite: 'Fushimi Inarin toriit muodostavat tunnelin: '
-            + 'oranssinpunaiset pylväät seisovat mustilla jaloilla '
-            + 'tiheässä rivissä, ja palkkeihin on maalattu '
-            + 'lahjoittajien nimet. Polku on tyhjä.',
+          selite: 'Fushimi Inarin toriit muodostavat tyhjän polun ylle '
+            + 'tunnelin: oranssinpunaiset pylväät seisovat mustilla '
+            + 'jaloilla tiheässä rivissä, ja palkkeihin on maalattu '
+            + 'lahjoittajien nimet.',
           lahde: 'Hyppolyte de Saint-Rambert, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -36457,12 +36472,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'juomavettä, kastelua ja vuodesta 1895 vesivoimaa, ja '
             + 'samana vuonna Kiotossa kulki Japanin ensimmäinen '
             + 'kaupallinen sähköraitiotie.',
-          selite: 'Hiroshigen puupiirros Tōkaidōn viimeisestä '
-            + 'pysäkistä: matkalaisia kulkee punakaiteisen Sanjōn '
-            + 'sillan yli Kamo-joen matalan uoman poikki, takana '
-            + 'kaupungin katot ja punaiseksi värjätyt Higashiyaman '
-            + 'harjat. Otsikkokartussa lukee Keishi, yksi Kioton '
-            + 'vanhoista nimistä.',
+          selite: 'Hiroshigen puupiirros Tōkaidōn viimeisestä pysäkistä: '
+            + 'matkalaisia kulkee punakaiteisen Sanjōn sillan yli '
+            + 'Kamo-joen matalan uoman poikki, takana kaupungin katot ja '
+            + 'Higashiyaman harjat, ja otsikkokartussa lukee Keishi, yksi '
+            + 'Kioton vanhoista nimistä.',
           lahde: 'Utagawa Hiroshige, Wikimedia Commons (CC0)',
           wiki: 'Kioto',
         },
@@ -36505,10 +36519,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pyhäkköjä ja yksi linna. Kaikki eivät ole Kiotossa — '
             + 'kaksi on naapurissa Ujissa ja yksi Ōtsussa Shigan '
             + 'puolella.',
-          selite: 'Ryōan-jin kivipuutarha: valkoiseksi haravoitua '
-            + 'soraa, jonka pinnalla kiertävät suorat ja kaarevat '
-            + 'urat, ja kolme sammalsaareketta kivineen. Takana on '
-            + 'matala savimuuri tiilikatteineen.',
+          selite: 'Ryōan-jin kivipuutarha matalan tiilikatteisen '
+            + 'savimuurin edessä: valkoiseksi haravoitua soraa suorine ja '
+            + 'kaarevine urineen ja kolme sammalsaareketta kivineen.',
           lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kioto',
         },
@@ -36529,8 +36542,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Odori, joita esitetään yhä koko huhtikuun ajan.',
           selite: 'Gion Kobun Kaburenjo-teatteri, jossa Miyako Odori '
             + 'esitetään: vaalea rakennus, jonka vihreät tiilikatot '
-            + 'nousevat kolmessa portaassa, ja edessä pilareiden '
-            + 'kannattama sisäänkäyntikatos. Aukio on tyhjä.',
+            + 'nousevat kolmessa portaassa, ja edessä tyhjällä aukiolla '
+            + 'pilareiden kannattama sisäänkäyntikatos.',
           lahde: '663highland, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kioto',
         },
@@ -36538,10 +36551,10 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Streets of Gion, Kyoto - Gion7712.jpg',
-          selite: 'Kapea kuja Gionissa keskellä päivää: molemmin '
-            + 'puolin machiya-taloja tummine säleikköineen, '
-            + 'bambukaihtimet ikkunoiden edessä, punainen '
-            + 'paperilyhty ja teehuoneen nimikyltti. Ei kulkijoita.',
+          selite: 'Kapea kuja Gionissa keskellä päivää ilman kulkijoita: '
+            + 'molemmin puolin machiya-taloja tummine säleikköineen, '
+            + 'bambukaihtimet ikkunoiden edessä, punainen paperilyhty ja '
+            + 'teehuoneen nimikyltti.',
           lahde: 'lumoplank, Wikimedia Commons (CC0)',
         },
         kappale: 'Kioto on Kioton prefektuurin pääkaupunki Japanin '
@@ -36626,11 +36639,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'epätarkka, jottei kukaan esittäisi oikeaa maikoa.',
               kuva: {
                 tiedosto: 'Shirakara Canal, Gion, Kyoto.jpg',
-                selite: 'Shirakawan puro Gionissa: matala vesi '
-                  + 'juoksee kiveystä pitkin, ja rantaan asti '
+                selite: 'Shirakawan puro Gionissa: matala vesi juoksee '
+                  + 'pajujen välissä kiveystä pitkin, ja rantaan asti '
                   + 'rakennetut teehuoneet kääntävät puroon päin '
-                  + 'bambukaihtimensa ja puuseinänsä. Rannalla kasvaa '
-                  + 'pajuja.',
+                  + 'bambukaihtimensa ja puuseinänsä.',
                 lahde: 'MichaelMaggs, Wikimedia Commons (CC BY-SA 2.5)',
               },
             },
@@ -36799,11 +36811,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paljon sotaa edeltäviä puutaloja — machiya-'
             + 'kaupunkitaloja, jollaisia muista suurkaupungeista ei '
             + 'juuri löydy.',
-          selite: 'Kamo-joen länsiranta: kivetty penger nousee '
-            + 'vedestä, ja sen päällä seisoo rivi vanhoja puutaloja '
-            + 'parvekkeineen ja jokeen päin avautuvine terasseineen. '
-            + 'Takana kohoavat uudemmat betonitalot, ja rantapolulla '
-            + 'kulkee yksi lenkkeilijä.',
+          selite: 'Kamo-joen länsiranta: vedestä nousevan kivetyn '
+            + 'pengerryksen päällä seisoo rivi vanhoja puutaloja '
+            + 'parvekkeineen ja jokeen avautuvine terasseineen, takana '
+            + 'uudempia betonitaloja ja rantapolulla yksi lenkkeilijä.',
           lahde: 'Benh LIEU SONG from Torcy, France, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Kioto',
         },

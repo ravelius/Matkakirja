@@ -254,10 +254,38 @@ export const ASIA_ARTIKKELIT = {
       + 'nousee kuumailmapalloja, ja iltaisin risteilylaivat lähtevät '
       + 'jokea alas kohti Assuania.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (Raamatun "TEKSTIEN PAINOPISTE" ja Fablen
+   * eräohje): intro EI ole enää kahden virkkeen nosto vaan lehden
+   * etusivun leipäteksti — 7–10 virkettä kahdessa tai kolmessa
+   * kappaleessa ('\n\n'), maltillinen **lihavointi** avainkohdissa.
+   * Faktat ovat kaupungin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Medina;
+   * maakartat.js), ei uusista lähteistä. teksti-kenttä on ennallaan.
+   */
   Medina: {
-    intro: 'Medina on islamin toiseksi pyhin kaupunki. Sinne profeetta '
-      + 'Muhammad siirtyi vuonna 622, ja siitä muutosta lasketaan '
-      + 'islamilaisen ajanlaskun ensimmäinen vuosi.',
+    intro: 'Medina on Saudi-Arabian länsiosassa, Hidžazissa noin 250 '
+      + 'kilometriä Punaisenmeren rannikolta sisämaahan. Se on keidas '
+      + 'kolmen kuivan laakson yhtymäkohdassa, ja pohjaveden varassa '
+      + 'siellä on kasvatettu taatelipalmuja ainakin 800-luvulta eKr. '
+      + 'Silloin paikka tunnettiin nimellä **Yathrib**.'
+      + '\n\n'
+      + 'Vuonna 622 profeetta Muhammad siirtyi tänne Mekasta, ja '
+      + 'tuosta muutosta eli hidžrasta lasketaan islamilaisen '
+      + 'ajanlaskun ensimmäinen vuosi. Kaupungin nimeksi vakiintui '
+      + 'al-Madina, kaupunki, ja Mekan jälkeen se on islamin toiseksi '
+      + 'pyhin. Keskellä on **Profeetan moskeija**, jonka vihreän '
+      + 'kupolin alla on Muhammadin hauta.'
+      + '\n\n'
+      + 'Vanhaa muurikaupunkia ei ole enää jäljellä: muurien paikalla '
+      + 'kaartaa nyt kolme kehätietä. Osmanit hallitsivat Medinaa '
+      + 'vuodesta 1517, ja 1900-luvun alussa sulttaani Abdul Hamid II '
+      + 'toi sinne lennättimen, voimalaitoksen ja Hidžaz-radan: matka '
+      + 'Damaskoksesta lyheni neljästäkymmenestä päivästä viiteen. '
+      + 'Asukkaita on vajaat puolitoista miljoonaa ja vierailijoita '
+      + 'yli seitsemän miljoonaa vuodessa. Pyhälle ytimelle ei ole '
+      + 'asiaa muilla kuin muslimeilla, mutta sen ulkopuolella '
+      + 'kaupunki on tavallinen.',
     teksti: 'Medina on Saudi-Arabian länsiosassa, noin 600 metrin '
       + 'korkeudessa laaksossa, jota laavakentät ympäröivät. Vettä on '
       + 'ollut riittävästi palmutarhoihin, ja kaupunki tunnettiin '
@@ -276,10 +304,37 @@ export const ASIA_ARTIKKELIT = {
       + 'vain muslimit. Mekan ja Medinan välillä kulkee nykyään '
       + 'suurnopeusjuna, joka taittaa matkan noin kahdessa tunnissa.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, sama linja kuin Medinassa yllä: intro on
+   * nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat Mekan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan Mekka).
+   */
   Mekka: {
-    intro: 'Mekka on islamin pyhin kaupunki. Kaikkialla maailmassa '
-      + 'muslimit kääntyvät rukoillessaan kohti sen keskellä olevaa '
-      + 'Kaabaa — viisi kertaa vuorokaudessa, ympäri vuoden.',
+    intro: 'Mekka on Länsi-Arabiassa kapean laakson pohjalla '
+      + 'paljaiden vuorten välissä, seitsemänkymmentä kilometriä '
+      + 'Jeddan satamasta sisämaahan. Laaksoa kutsutaan Mekan '
+      + 'kuopaksi; sen muoto on ohjannut kaupungin kasvua, ja sama '
+      + 'kouru kerää rankkasateiden vedet kaduille. Vettä on ollut '
+      + 'niukasti: kaupunki syntyi Zamzamin kaivon ja Syyriaan '
+      + 'kulkeneen karavaanireitin varaan.'
+      + '\n\n'
+      + 'Laakson pohjalla on **Kaaba**, runsaat kolmetoista metriä '
+      + 'korkea kivinen kuutio, jota kohti jokainen moskeija '
+      + 'maailmassa osoittaa; sen ympärillä on Suuri moskeija. '
+      + 'Muhammad syntyi Mekassa noin vuonna 570, ja kaupunki on '
+      + 'islamin pyhin. Pyhiinvaellus eli **hadž** on yksi islamin '
+      + 'viidestä pilarista, ja vuonna 2019 sille tuli lähes kaksi ja '
+      + 'puoli miljoonaa ihmistä.'
+      + '\n\n'
+      + 'Talous on aina nojannut pyhiinvaeltajiin, ja osmanien aikana '
+      + 'Mekka oli veroista vapautettu ja sai valtiolta '
+      + 'vuosiavustuksen. Vuonna 1872, vuosi ennen isoisän matkaa, '
+      + 'Hidžaz järjestettiin vilajetiksi ja Mekasta tuli maakunnan '
+      + 'keskus. '
+      + 'Asukkaita on nykyään 2,4 miljoonaa, eivätkä muut kuin '
+      + 'muslimit saa tulla pyhälle alueelle, jossa moskeijaa '
+      + 'ympäröivät nyt hotellitornit.',
     teksti: 'Mekka on kapeassa laaksossa Länsi-Arabian vuorten välissä, '
       + 'noin 70 kilometrin päässä Punaisestamerestä. Vettä on aina '
       + 'ollut niukasti; kaupungin syntyminen juuri tähän selittyy '
@@ -616,14 +671,16 @@ export const ASIA_ARTIKKELIT = {
     intro: 'Kioto on Japanin vanha pääkaupunki, ja se '
       + 'perustettiin kerralla: vuonna 794 keisari Kanmu siirsi '
       + 'hovin Narasta tänne ja rakennutti uuden kaupungin, '
-      + 'Heian-kyōn, kiinalaisen Chang’anin ruutukaavan mukaan. '
+      + '**Heian-kyōn**, kiinalaisen Chang’anin ruutukaavan mukaan. '
       + 'Kaupunki pysyi keisarien kotina yli tuhat vuotta vuoteen '
       + '1868 asti, vaikka todellinen valta oli välillä '
       + 'Kamakurassa ja Edossa. Vuonna 1869 hovi muutti Tokioon, ja '
       + 'Kioto menetti kerralla sekä hallinnollisen että '
       + 'taloudellisen asemansa — vuoden 1873 matkustaja saapui '
       + 'siis kaupunkiin, joka oli juuri jäänyt tyhjän palatsin '
-      + 'ympärille. Vastauksena kaupunki kaivoi Biwa-järveltä '
+      + 'ympärille.'
+      + '\n\n'
+      + 'Vastauksena kaupunki kaivoi Biwa-järveltä '
       + 'kanavan ja sai sen voimalla Japanin ensimmäisen '
       + 'kaupallisen sähköraitiotien. Laaksoa, jossa Kioto seisoo, '
       + 'ympäröivät vuoret kolmelta suunnalta, ja sen läpi virtaa '
@@ -645,13 +702,16 @@ export const ASIA_ARTIKKELIT = {
       + '642 ja tekivät siitä al-Jibalin maakunnan pääkaupungin. '
       + 'Kukoistus kesti 800-luvulta 1700-luvulle: buyidien ja '
       + 'seldžukkien aikana kaupunki kasvoi suureksi, ja vasta '
-      + 'seldžukkivallan päätyttyä noin vuonna 1200 seurasi taantuma. Käänne tuli vuonna 1598, kun Abbas Suuri '
+      + 'seldžukkivallan päätyttyä noin vuonna 1200 seurasi taantuma.'
+      + '\n\n'
+      + 'Käänne tuli vuonna 1598, kun **Abbas Suuri** '
       + 'siirsi safavidien pääkaupungin Qazvinista tänne — toisen '
       + 'kerran kaupungin historiassa — ja rakennutti sille uuden '
       + 'keskustan. Siltä ajalta ovat puistokadut, kaakeloidut '
       + 'moskeijat, palatsit ja katetut sillat, joista kaupunki '
-      + 'tunnetaan. Naqsh-e Jahanin aukio on maailman '
-      + 'suurimpia kaupunkiaukioita ja Unescon maailmanperintökohde. '
+      + 'tunnetaan. **Naqsh-e Jahanin aukio** on maailman '
+      + 'suurimpia kaupunkiaukioita ja Unescon maailmanperintökohde.'
+      + '\n\n'
       + 'Maine tiivistyy persialaiseen sananlaskuun Esfahan nesf-e '
       + 'jahan ast, Isfahan on puoli maailmaa. Nimi on paljon '
       + 'vanhempi: keskipersian Spahān tarkoittaa armeijan paikkaa, ja '

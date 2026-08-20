@@ -10529,6 +10529,10 @@ export const NAHTAVYYSJUTUT = {
    *
    * MUSEON AUKIOLOA EI VÄITETÄ (asematarina): tieto vanhenee
    * nopeammin kuin lehti, joten jutussa on rakennukset ja kokoelma.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Fablen eräohje R1): kaikki selitteet on
+   * tiivistetty yhteen virkkeeseen. Juttutekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
    */
   medina: {
     'Qiblatayn-moskeija': {
@@ -10564,8 +10568,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Masjid Qiblatain.jpg',
           selite: 'Qiblatayn puiden takaa: valkoinen kupoli kohoaa '
-            + 'keskeltä ja sen molemmin puolin nousee minareetti. '
-            + 'Etualan lehvästö peittää rakennuksen alaosan.',
+            + 'keskeltä, sen molemmin puolin nousee minareetti, ja etualan '
+            + 'lehvästö peittää rakennuksen alaosan.',
           lahde: 'Muhammad Mahdi Karim at English Wikipedia, Wikimedia Commons (CC BY-SA 2.5)',
         },
       ],
@@ -10602,8 +10606,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Sab\'u Masajid.jpg',
           selite: 'Valkoinen moskeija kaarikäytävineen ja mataline '
-            + 'kupoleineen. Takana kohoaa Sela-vuoren paljas '
-            + 'kalliorinne aivan rakennuksen takaseinän takaa.',
+            + 'kupoleineen, takanaan Sela-vuoren paljas kalliorinne aivan '
+            + 'takaseinän takana.',
           lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10648,10 +10652,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Close-up shot of the Green Dome at The Prophet\'s Mosque (Al Masjid-e-Nabawi).jpg',
-          selite: 'Vihreä kupoli lähikuvassa. Sen alla erottuu '
-            + 'hiekankeltainen muuri ikkunarivin kanssa, ja kupolin '
-            + 'kupeessa nousee minareetin varsi kirkasta taivasta '
-            + 'vasten.',
+          selite: 'Vihreä kupoli lähikuvassa: sen alla erottuu '
+            + 'hiekankeltainen muuri ikkunariveineen, ja kupolin kupeessa '
+            + 'nousee minareetin varsi kirkasta taivasta vasten.',
           lahde: 'TheHadiRahim, Wikimedia Commons (CC0)',
         },
         {
@@ -10694,10 +10697,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Perkuburan Baqi\' (Maqbaratu al-Baqi\') & Masjid al-Nabawi.jpg',
-          selite: 'Hautausmaan kenttä etualalla: karua soraa ja '
-            + 'matalia kiviä riveissä, ei kupoleita eikä '
-            + 'hautakivitekstejä. Taustalla kohoavat Profeetan '
-            + 'moskeijan minareetit.',
+          selite: 'Hautausmaan kenttä etualalla: karua soraa ja matalia '
+            + 'kiviä riveissä ilman kupoleita ja hautakivitekstejä, '
+            + 'taustalla Profeetan moskeijan minareetit.',
           lahde: 'Kerina yin, Wikimedia Commons (CC0)',
         },
       ],
@@ -10735,8 +10737,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Masjid Al-Ghamamah.jpg',
           selite: 'Basalttikivinen moskeija palmunrunkojen välistä '
-            + 'katsottuna. Tumma kivimuuri ja sen päällä matalat '
-            + 'kupolit erottuvat vaaleaa taivasta vasten.',
+            + 'katsottuna: tumma kivimuuri ja sen päällä matalat kupolit '
+            + 'vaaleaa taivasta vasten.',
           lahde: 'معتز توفيق اغبارية, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10849,6 +10851,10 @@ export const NAHTAVYYSJUTUT = {
    *    Architecture-osio antaa Petersonin mukaan "noin 15 m korkea,
    *    sivut 12 × 10,5 m". Ero on kirjattu tähän eikä leipätekstiin,
    *    koska juttu tarvitsee yhden mitan eikä mittakiistaa.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Fablen eräohje R1): kaikki selitteet on
+   * tiivistetty yhteen virkkeeseen. Juttutekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
    */
   mekka: {
     'Jabal al-Nour': {
@@ -10880,7 +10886,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jabal al-Nour And cave Hira.jpg',
-          selite: 'Vuoren kalliohuippu alhaalta katsottuna. Etualalla on '
+          selite: 'Vuoren kalliohuippu alhaalta katsottuna: etualalla on '
             + 'rakennuksen kaarikoristeinen yläkerta, ja sen takana rinne '
             + 'nousee paljaana kivenä suoraan ylös.',
           lahde: 'Sadath i, Wikimedia Commons (CC BY-SA 4.0)',
@@ -10917,8 +10923,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Jannat ul Mualla Cemetery.jpg',
           selite: 'Hautakenttä katosten alla: matalia kiviä pitkinä '
-            + 'riveinä soralla, ei kupoleita eikä kirjoitettuja '
-            + 'hautakiviä. Muutama kyyhkynen kävelee kivien välissä.',
+            + 'riveinä soralla ilman kupoleita ja kirjoitettuja '
+            + 'hautakiviä, ja muutama kyyhkynen kivien välissä.',
           lahde: 'Tubi719, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10952,9 +10958,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mosque of the Jinn 01.jpg',
-          selite: 'Punaruskeasta kivestä muurattu moskeija kadunkulmassa. '
-            + 'Julkisivussa on kaarevat ikkunat ja kulmassa minareetti; '
-            + 'vasemmalla kadulla seisoo bussi.',
+          selite: 'Punaruskeasta kivestä muurattu moskeija kadunkulmassa: '
+            + 'julkisivussa kaarevat ikkunat, kulmassa minareetti ja '
+            + 'vasemmalla kadulla bussi.',
           lahde: 'Sadrettin, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10985,9 +10991,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Site of the birthplace of the Prophet Muhammad, Mecca, Saudi Arabia.jpg',
-          selite: 'Kirjastorakennuksen julkisivu kadulta: vaalea '
+          selite: 'Kirjastorakennuksen julkisivu tyhjältä kadulta: vaalea '
             + 'kivipinta, kaareva pääty ja seinässä arabiankielinen '
-            + 'kyltti. Kuvassa ei ole ihmisiä.',
+            + 'kyltti.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -11036,10 +11042,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Holy Mosque in Mecca.jpg',
-          selite: 'Kaaba päivänvalossa moskeijan pihalla. Ympärillä '
-            + 'kaartuvat pylväskäytävät kerroksittain, ihmiset ovat '
-            + 'pieniä hahmoja mustan kuution ympärillä, ja taustalla '
-            + 'nousee tornirivi rakennusnostureineen.',
+          selite: 'Kaaba päivänvalossa moskeijan pihalla: ympärillä '
+            + 'kaartuvat pylväskäytävät kerroksittain ja ihmiset ovat '
+            + 'pieniä hahmoja mustan kuution vierellä, taustalla tornirivi '
+            + 'rakennusnostureineen.',
           lahde: 'Meshal Obeidallah (talk), Wikimedia Commons (PD)',
         },
       ],
@@ -15229,6 +15235,9 @@ export const NAHTAVYYSJUTUT = {
    * liian pitkiä). Kaikki kuudentoista kuvan selitteet on tiivistetty
    * yhteen tai enintään kahteen virkkeeseen; juttutekstit,
    * kuvatiedostot ja lähderivit ovat ennallaan.
+   *
+   * TÄYDENNYS SAMANA PÄIVÄNÄ (Fablen eräohje R1): loputkin
+   * kaksivirkkeiset selitteet tiivistettiin yhteen virkkeeseen.
    */
   isfahan: {
     'Jameh-moskeija': {
@@ -15263,11 +15272,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20180301124354 IMG 4179And6more Interior 3.jpg',
-          selite: 'Neljän iwanin piha: yhden kaaren puolikupolissa on '
-            + 'kennomaista muqarnasia, toisen sivuilla nousevat '
-            + 'tiiliminareetit ja kolmannen pintaa peittää kulmikas '
-            + 'kufi-kirjoitus. Pihaa kiertää kaksikerroksinen '
-            + 'kaarikäytävä.',
+          selite: 'Neljän iwanin piha kaksikerroksisen kaarikäytävän '
+            + 'ympäröimänä: yhden kaaren puolikupolissa on kennomaista '
+            + 'muqarnasia, toisen sivuilla nousevat tiiliminareetit ja '
+            + 'kolmannen pintaa peittää kulmikas kufi-kirjoitus.',
           lahde: 'Hamidespanani, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -15316,9 +15324,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bricks, pillars, and vaults (2966769898).jpg',
-          selite: 'Basaarin katettua käytävää: järeät tiilipilarit, '
+          selite: 'Basaarin tyhjää katettua käytävää: järeät tiilipilarit, '
             + 'kärjekkäät kaaret peräkkäin ja tiiliholvit, joiden tiilet '
-            + 'on ladottu vinoriveihin. Käytävällä ei näy ketään.',
+            + 'on ladottu vinoriveihin.',
           lahde: 'dynamosquito from France, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -15361,17 +15369,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mur et plafond de la terrasse d\'Ali Qāpu.jpg',
-          selite: 'Parvekkeen puukatto on jaettu kenttiin, joissa toistuu '
-            + 'tähdistä ja monikulmioista koottu kuvio punaisena, '
-            + 'kullankeltaisena, mustana ja valkoisena. Puupylväiden '
-            + 'kapiteelit on veistetty kennomaisiin kerroksiin.',
+          selite: 'Parvekkeen puukatossa toistuu kentittäin tähdistä ja '
+            + 'monikulmioista koottu kuvio punaisena, kullankeltaisena, '
+            + 'mustana ja valkoisena, ja puupylväiden kapiteelit on '
+            + 'veistetty kennomaisiin kerroksiin.',
           lahde: 'Zythème, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ali-Qapu 13920419 (18).JPG',
           selite: 'Musiikkihuoneen yläseinään ja holviin on leikattu '
-            + 'stukkiin kymmeniä syvennyksiä, joiden muodot ovat pulloja, '
-            + 'ruukkuja ja maljoja. Holvin ripakaaret on maalattu '
+            + 'stukkiin kymmeniä pullon, ruukun ja maljan muotoisia '
+            + 'syvennyksiä, ja holvin ripakaaret on maalattu '
             + 'vaaleansinisiksi ja niiden väliset pinnat '
             + 'oranssinpunaisiksi.',
           lahde: 'Mohsen Ghasemee, Wikimedia Commons (CC BY-SA 3.0)',
@@ -15418,18 +15426,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Naghshejahan3.jpg',
-          selite: 'Ilmakuva etelästä: Shaahin moskeijan piha iwaneineen '
-            + 'ja turkoosilaattaisine minareetteineen kääntyy eri kulmaan '
-            + 'kuin aukio. Aukion laidoilla erottuvat Ali Qapu ja Sheikh '
+          selite: 'Ilmakuva etelästä: Shaahin moskeijan piha iwaneineen ja '
+            + 'turkoosilaattaisine minareetteineen kääntyy eri kulmaan '
+            + 'kuin aukio, jonka laidoilla erottuvat Ali Qapu ja Sheikh '
             + 'Lotfollahin kuvioitu kupoli.',
           lahde: 'Pedram forouzanfar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mosque Shah Portal.jpg',
           selite: 'Pääportti alaviistosta: kaaren sisus on täynnä '
-            + 'muqarnas-kennoja, ja kaarta kiertää valkoinen '
-            + 'kirjoitusnauha tummansinisellä pohjalla. Kummallakin '
-            + 'puolella nousee laatoitettu minareetti.',
+            + 'muqarnas-kennoja, kaarta kiertää valkoinen kirjoitusnauha '
+            + 'tummansinisellä pohjalla, ja kummallakin puolella nousee '
+            + 'laatoitettu minareetti.',
           lahde: 'Farhad Tafreshi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15471,15 +15479,15 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Hasht Behesht Palace, Isfahan 01.jpg',
           selite: 'Hasht Beheshtin julkisivu altaan takana: keskellä on '
-            + 'korkea kaari, joka on auki läpi talon. Sen yläpuolella on '
-            + 'ohuiden puupylväiden kannattama parveke ja pitkä räystäs.',
+            + 'läpi talon aukeava korkea kaari ja sen yläpuolella ohuiden '
+            + 'puupylväiden kannattama parveke pitkine räystäineen.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hasht-Behesht, North-Western View.jpg',
           selite: 'Kahdeksankulmion nurkka luoteesta: ylemmän kerroksen '
-            + 'kaaressa riippuu porrastettu stukkoholvi ja sen alla on '
-            + 'puukaiteinen parveke. Kaarien yllä kulkee sinistä, '
+            + 'kaaressa riippuu porrastettu stukkoholvi, sen alla on '
+            + 'puukaiteinen parveke, ja kaarien yllä kulkee sinistä, '
             + 'turkoosia ja keltaista kaakelinauhaa.',
           lahde: 'Meincluded, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -15527,24 +15535,23 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Chahar bagh school drawing.jpg',
           selite: 'Pascal Costen 1800-luvun piirros koulusta puistokadun '
             + 'puolelta: kaksikerroksisessa julkisivussa on '
-            + 'suippokaarisyvennyksiä ja keskellä korkeampi portti. Muurin '
-            + 'takaa kohoavat kaksi minareettia ja köynnöskuvioinen '
+            + 'suippokaarisyvennyksiä ja keskellä korkeampi portti, ja '
+            + 'muurin takaa kohoavat kaksi minareettia ja köynnöskuvioinen '
             + 'kupoli.',
           lahde: 'Pascal Coste, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'مدرسه چهارباغ اصفهان 03.jpg',
           selite: 'Sisäpihan halki kulkee pitkä matala vesiallas '
-            + 'suihkuineen, ja pihalla kasvaa plataaneja ja tummia '
-            + 'sypressejä. Iwanien kaaret on peitetty tiheällä sinisellä '
-            + 'mosaiikilla.',
+            + 'suihkuineen plataanien ja tummien sypressien keskellä, ja '
+            + 'iwanien kaaret on peitetty tiheällä sinisellä mosaiikilla.',
           lahde: 'Alimalekzadehfar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Chaharbagh Madrasa.jpg',
           selite: 'Iwanin laatoitus alaviistosta: kaarta kehystää leveä '
-            + 'kobolttisininen nauha valkoisine kalligrafioineen, ja '
-            + 'kaaren sisäpintaa täyttää tiheä köynnöskuvio. Perällä on '
+            + 'kobolttisininen nauha valkoisine kalligrafioineen, '
+            + 'sisäpintaa täyttää tiheä köynnöskuvio ja perällä on '
             + 'kennomainen muqarnas-syvennys.',
           lahde: 'Moe Alian, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -21953,6 +21960,10 @@ export const NAHTAVYYSJUTUT = {
    * tämän suoraan), ja Ginkaku-jin hopeanimi on Edo-kaudelta eikä
    * paviljonkia koskaan aiottukaan päällystää hopealla siinä
    * muodossa kuin nimestä päättelisi.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Fablen eräohje R1): kaksivirkkeiset
+   * selitteet tiivistettiin yhteen virkkeeseen. Juttutekstit,
+   * kuvatiedostot ja lähderivit ovat ennallaan.
    */
   kioto: {
     'Kinkaku-ji': {
@@ -22023,10 +22034,9 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Sunlight through clouds and view of Ginkaku-ji Temple from above, Kyoto, Japan.jpg',
           selite: 'Ginkaku-ji rinteen puolivälistä nähtynä: '
-            + 'kaksikerroksinen paviljonki jää vasemmalle puiden '
-            + 'lomaan, oikealla ovat temppelin muut katot, ja '
-            + 'taustalla levittäytyy Kioton laakso vuorineen. '
-            + 'Auringonsäteet murtautuvat pilvien läpi.',
+            + 'kaksikerroksinen paviljonki jää vasemmalle puiden lomaan, '
+            + 'oikealla ovat temppelin muut katot, ja taustalla '
+            + 'levittäytyy Kioton laakso vuorineen.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -22104,11 +22114,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nijo-jo Ninomaru-goten 2009.jpg',
-          selite: 'Ninomaru-palatsi sorapihalta: tiilikattoja '
-            + 'porrastuu peräkkäin, keskellä on kullattu '
-            + 'koristepääty ja säleikkö, oikealla sisäänkäyntikatos '
-            + 'valkoisine paperiovineen. Edessä on rivi leikattuja '
-            + 'mäntyjä.',
+          selite: 'Ninomaru-palatsi sorapihalta: tiilikattoja porrastuu '
+            + 'peräkkäin, keskellä on kullattu koristepääty ja säleikkö, '
+            + 'oikealla sisäänkäyntikatos valkoisine paperiovineen ja '
+            + 'edessä rivi leikattuja mäntyjä.',
           lahde: 'Wiiii, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -22251,11 +22260,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sanjusangendo temple01s1408.jpg',
-          selite: 'Sanjūsangen-dōn päähalli sivusta: tumma '
-            + 'puurakennus jatkuu kuvan syvyyteen niin pitkälle, '
-            + 'ettei päätä näy, vaalean tiilikaton alla kulkee '
-            + 'yhtenäinen pilaririvi ja kivijalka. Edessä on '
-            + 'soraa ja kaukana kaksi pientä hahmoa.',
+          selite: 'Sanjūsangen-dōn päähalli sivusta: tumma puurakennus '
+            + 'jatkuu kuvan syvyyteen niin pitkälle, ettei päätä näy, '
+            + 'vaalean tiilikaton alla kulkee yhtenäinen pilaririvi ja '
+            + 'kivijalka, ja soraisella pihalla erottuu kaksi pientä '
+            + 'hahmoa.',
           lahde: '663highland, Wikimedia Commons (CC BY 2.5)',
         },
       ],
@@ -22327,10 +22336,10 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Inari fox statue, Fushimi-Inari Shrine (46473407471).jpg',
           selite: 'Kivinen kettu Fushimi Inarin portailla alhaalta '
-            + 'kuvattuna: istuva kettu pitää suussaan avainta, '
-            + 'kaulassa on punainen kangasruokalappu mustin '
-            + 'siveltimenvedoin, ja jalusta on koristeltu '
-            + 'kierrekuvioin. Taustalla on pilvinen taivas.',
+            + 'kuvattuna pilvistä taivasta vasten: istuva kettu pitää '
+            + 'suussaan avainta, kaulassa on punainen kangasruokalappu '
+            + 'mustin siveltimenvedoin, ja jalusta on koristeltu '
+            + 'kierrekuvioin.',
           lahde: 'Dumphasizer, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
