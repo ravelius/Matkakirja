@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v954 — Delhi uusi lehti; Venäjä-erät V1+V3 (Jekaterinburg, Novosibirsk, Irkutsk kartat+opas; Vladivostok kartta+opas, Kamtšatka ja Sahalin opas); kartan valmiusvärit kehittäjätilaan (harmaa/keltainen); Isfahanin tekstiremontin PILOTTI (johdanto 7–10 virkettä, kuvatekstit 1–2). Tarkista: Isfahanin johdanto ja kuvatekstit, kartan värit, Delhi. Opaskuvien pystyvaihdot tulevat v955:ssä',
   'v952 — Jakutsk ja Magadan: kohdekartat (8+7), avauskuvat, opas. Tarkista molempien kartta ja Matkaopas',
   'v951 — Peking: uusi lehti, kartta 10 kohteella + kesapalatsien kainalo. Tarkista kartta, Matkaopas, Historian tehtava',
   'v950 — Bangkok: uusi lehti, kartta 9 kohteella. Tarkista kartta, Matkaopas, Historian tehtava',
@@ -320,25 +321,21 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '20.8.2026',
   valmiit: [
+    { id: 'isfahan', nimi: 'Isfahan', versio: 'v954' },
+    { id: 'delhi', nimi: 'Delhi', versio: 'v954' },
+    { id: 'jekaterinburg', nimi: 'Jekaterinburg', versio: 'v954' },
+    { id: 'novosibirsk', nimi: 'Novosibirsk', versio: 'v954' },
+    { id: 'irkutsk', nimi: 'Irkutsk', versio: 'v954' },
+    { id: 'vladivostok', nimi: 'Vladivostok', versio: 'v954' },
+    { id: 'kamtsatka', nimi: 'Kamtšatka', versio: 'v954' },
+    { id: 'sahalin', nimi: 'Sahalin', versio: 'v954' },
     { id: 'jakutsk', nimi: 'Jakutsk', versio: 'v952' },
     { id: 'magadan', nimi: 'Magadan', versio: 'v952' },
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
     { id: 'bangkok', nimi: 'Bangkok', versio: 'v950' },
-    { id: 'mosul', nimi: 'Mosul', versio: 'v949' },
-    { id: 'halab', nimi: 'Halab', versio: 'v949' },
-    { id: 'damaskos', nimi: 'Damaskos', versio: 'v949' },
-    { id: 'salalah', nimi: 'Salalah', versio: 'v947' },
-    { id: 'riad', nimi: 'Riad', versio: 'v946' },
-    { id: 'doha', nimi: 'Doha', versio: 'v946' },
-    { id: 'kuwait', nimi: 'Kuwait', versio: 'v946' },
   ],
   tyossa: [
-    { id: 'jekaterinburg', nimi: 'Jekaterinburg' },
-    { id: 'novosibirsk', nimi: 'Novosibirsk' },
-    { id: 'irkutsk', nimi: 'Irkutsk' },
-    { id: 'vladivostok', nimi: 'Vladivostok' },
-    { id: 'kamtsatka', nimi: 'Kamtšatka' },
-    { id: 'sahalin', nimi: 'Sahalin' },
-    { id: 'delhi', nimi: 'Delhi' },
+    { id: 'kioto', nimi: 'Kioto' },
+    { id: 'singapore', nimi: 'Singapore' },
   ],
 };
