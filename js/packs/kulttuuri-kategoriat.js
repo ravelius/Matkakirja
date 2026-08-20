@@ -11016,28 +11016,25 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Golden Gate Kiev 2018 G1.jpg',
-          selite: 'Kultainen portti: punatiilinen porttitorni, jonka päällä on '
-            + 'pieni kullattu kupoli ja kyljessä hirsistä rakennettu käytävä. '
-            + 'Rakennus on vuodelta 1982 — se on arvaus, sillä 1000-luvun '
-            + 'portista ei ole säilynyt yhtään kuvaa. Aidot muurinpätkät ovat '
-            + 'sen sisällä.',
+          selite: 'Kultainen portti: punatiilinen porttitorni kullattuine '
+            + 'kupoleineen on vuodelta 1982 ja pelkkä arvaus, sillä '
+            + '1000-luvun portista ei ole säilynyt yhtään kuvaa — aidot '
+            + 'muurinpätkät ovat sen sisällä.',
           lahde: 'George Chernilevsky, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Saint Andrew\'s Church, Kyiv.jpg',
-          selite: 'Andreaksen kirkko mäen päällä Kiovassa. '
-            + 'Turkoosinvihreiden seinien yllä on tumma sipulikupoli ja '
-            + 'sen ympärillä pienempiä torneja kultaisine huippuineen. '
-            + 'Kirkko valmistui 1750-luvulla Bartolomeo Rastrellin '
-            + 'piirustusten mukaan.',
+          selite: 'Andreaksen kirkko mäen päällä Kiovassa: turkoosinvihreiden '
+            + 'seinien yllä on tumma sipulikupoli ja sen ympärillä pienempiä '
+            + 'torneja kultaisine huippuineen, Bartolomeo Rastrellin '
+            + 'piirustusten mukaan 1750-luvulla valmistuneena.',
           lahde: 'Oleh Kushch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2019-07-13 Kyiv funicular car.jpg',
-          selite: 'Funikulaarin vaunu kiipeää jyrkkää rataa puiden välissä. '
-            + 'Kyljessä on sinikeltainen kuviointi ja suurin numeroin 905. '
-            + 'Rata avattiin vuonna 1905, se on 238 metriä pitkä, ja matka '
-            + 'alakaupungista ylös kestää noin kolme minuuttia.',
+          selite: 'Funikulaarin sinikeltainen vaunu numero 905 kiipeää '
+            + 'jyrkkää rataa puiden välissä: vuonna 1905 avattu 238 metrin '
+            + 'rata vie alakaupungista ylös noin kolmessa minuutissa.',
           lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11092,7 +11089,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Albaniaan, Bulgariaan, Kreikan mantereelle ja '
                 + 'Pohjois-Makedoniaan. Kiovan päivää vietetään '
                 + 'toukokuun lopulla, juuri kukinnan aikaan.',
-              kuva: { tiedosto: '2010.05.09 Horse chestnut blossom, Kyiv, Ukraine 001c.jpg', selite: 'Lähikuva hevoskastanjan kukista: valkoiset, poimureunaiset terälehdet on täplitetty kirkkaanpunaisella ja keltaisella, ja kukista työntyy pitkiä kaarevia heteitä. Taustalla erottuu vihreä oksa ja lisää kukkatertuja.', lahde: 'William N. Beckon, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: '2010.05.09 Horse chestnut blossom, Kyiv, Ukraine 001c.jpg', selite: 'Lähikuva hevoskastanjan kukista: valkoiset, poimureunaiset terälehdet on täplitetty kirkkaanpunaisella ja keltaisella, ja kukista työntyy pitkiä kaarevia heteitä.', lahde: 'William N. Beckon, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Pääkatu, joka rakennettiin uudelleen',
@@ -11241,9 +11238,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys '
             + 'ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja '
             + 'asema on kaivettu törmän sisään.',
-          selite: 'Arsenalnan liukuportaat ylhäältä kuvattuna. Matka pinnalta '
-            + 'laiturille kestää useita minuutteja, ja tunnelin pää katoaa '
-            + 'näkyvistä.',
+          selite: 'Arsenalnan liukuportaat ylhäältä kuvattuna: tunnelin pää '
+            + 'katoaa näkyvistä, ja matka pinnalta laiturille kestää useita '
+            + 'minuutteja.',
           lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Kiovan metro',
         },
@@ -11257,9 +11254,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja ruhtinas Vladimir Monomah kirjoitti seinään oman nimensä. '
             + 'Tutkijat lukevat seiniä kuin ilmoitustaulua, jolle on '
             + 'kirjoitettu seitsemänsadan vuoden ajan.',
-          selite: 'Sofian katedraali kellotornista kuvattuna: vihreitä kattoja ja '
-            + 'kupoliryhmä, jonka keskimmäinen kupoli on kullattu. Takana '
-            + 'alkaa nykyinen kaupunki kerrostaloineen.',
+          selite: 'Sofian katedraali kellotornista kuvattuna: vihreitä '
+            + 'kattoja ja kupoliryhmä, jonka keskimmäinen kupoli on kullattu, '
+            + 'ja takana nykyinen kaupunki kerrostaloineen.',
           lahde: 'Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Pyhän Sofian katedraali (Kiova)',
         },
@@ -11274,7 +11271,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tehtiin kovassa tuulessa ja sateessa ja keskeytyi '
             + 'ilmahälytyksiin, mutta kilpi oli valmis ennen '
             + 'itsenäisyyspäivää 24. elokuuta.',
-          selite: 'Patsas alhaalta kuvattuna. Teräsnainen kohottaa oikeassa '
+          selite: 'Patsas alhaalta kuvattuna: teräsnainen kohottaa oikeassa '
             + 'kädessään miekkaa ja vasemmassa kilpeä, jossa erottuu Ukrainan '
             + 'kolmikärki.',
           lahde: 'Світлана 743, Wikimedia Commons (CC BY-SA 4.0)',
@@ -11290,28 +11287,24 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Aerial view kyiv.jpg',
-          selite: 'Podilin kaupunginosa ja Dnepri ylhäältä '
-            + 'syysaamuna: etualan rinne on ruskan värinen, ja sen '
-            + 'takaa avautuu matalien kortteleiden ruudukko. Oikealla '
-            + 'levittäytyy leveä joki, jonka yli kulkee kaksi siltaa.',
+          selite: 'Podilin kaupunginosa ja Dnepri ylhäältä syysaamuna: ruskan '
+            + 'värisen rinteen takaa avautuu matalien kortteleiden ruudukko, '
+            + 'ja oikealla levittäytyy leveä joki kahden siltansa kanssa.',
           lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 DE)',
         },
         {
           tiedosto: '2017 - Київ - Світанок над Дніпром.jpg',
-          selite: 'Jokiranta auringon noustessa: etualalla on '
-            + 'kivetty terassi ja rivi valurautaisia katulyhtyjä '
-            + 'monine kupuineen, ja niiden takana kaartuu joen yli '
-            + 'jalankulkusilta riippuvine köysineen. Aurinko nousee '
-            + 'vastarannan puiden takaa.',
+          selite: 'Jokiranta auringon noustessa: kivetyllä terassilla on rivi '
+            + 'valurautaisia katulyhtyjä, ja niiden takana kaartuu joen yli '
+            + 'jalankulkusilta riippuvine köysineen.',
           lahde: 'Moahim, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Khreshchatyk Street, Kiev. Ukraine (45935065521).jpg',
-          selite: 'Hreshtshatykin bulevardi yöllä sumussa: leveä '
-            + 'kiveys jatkuu suoraan pimeään, katulyhdyt hehkuvat '
-            + 'oransseina utuisina palloina ja katujen ylle on '
-            + 'ripustettu valokaaria. Molemmin puolin nousevat '
-            + 'valaistut julkisivut.',
+          selite: 'Hreshtshatykin bulevardi yöllä sumussa: leveä kiveys '
+            + 'jatkuu suoraan pimeään, katulyhdyt hehkuvat oransseina '
+            + 'utuisina palloina ja molemmin puolin nousevat valaistut '
+            + 'julkisivut.',
           lahde: 'Juan Antonio Segal from Madrid, Spain, Wikimedia '
             + 'Commons (CC BY 2.0)',
         },
@@ -11342,9 +11335,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seuran jäsentä ja 60 kutsuvierasta. Seuraavana vuonna hän '
             + 'lauloi Kiovan arkeologisessa kongressissa, ja lontoolainen '
             + 'Athenaeum-lehti vertasi häntä antiikin Kreikan runonlaulajiin.',
-          selite: 'Ostap Veresai vaimonsa kanssa vuonna 1873. Bandura on polvella '
-            + 'ja kävelykeppi nojaa seinään — kobzarit kulkivat kylästä '
-            + 'kylään oppaan kanssa.',
+          selite: 'Ostap Veresai vaimonsa kanssa vuonna 1873, bandura '
+            + 'polvella ja kävelykeppi seinää vasten — kobzarit kulkivat '
+            + 'kylästä kylään oppaan kanssa.',
           lahde: 'Joseph Kordysch, Wikimedia Commons (PD)',
           wiki: 'Bandura',
           musiikki: 'https://music.apple.com/fi/search?term=bandura%20kobzar',
@@ -12106,31 +12099,30 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Alexander Nevsky Cathedral, Sofia, 2025.jpg',
-          selite: 'Aleksanteri Nevskin katedraali aurinkoisena päivänä. '
-            + 'Keskikupoli on kullattu ja muut kupolit vihreää kuparia; '
-            + 'kellotornissa on kaksitoista kelloa, joista raskain painaa 12 '
-            + 'tonnia ja kevyin 10 kiloa.',
+          selite: 'Aleksanteri Nevskin katedraali aurinkoisena päivänä: '
+            + 'keskikupoli on kullattu ja muut vihreää kuparia, ja '
+            + 'kellotornin kahdestatoista kellosta raskain painaa 12 tonnia '
+            + 'ja kevyin 10 kiloa.',
           lahde: 'Beyoglou, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Oldest building in the city, Church St. George Rotunda Храм ротонда "Св. Георги", Sofia, Bulgaria.jpg',
-          selite: 'Pyhän Yrjön rotunda, Sofian vanhin rakennus. Punatiilinen '
+          selite: 'Pyhän Yrjön rotunda, Sofian vanhin rakennus: punatiilinen '
             + 'pyöreä kirkko seisoo kaivannon pohjalla nykyisten katujen '
-            + 'alapuolella, harmaiden kerrostalojen ympäröimänä.',
+            + 'alapuolella harmaiden kerrostalojen ympäröimänä.',
           lahde: 'Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Sofia Central Mineral Baths 20180224.jpg',
-          selite: 'Keskustan mineraalikylpylä. Julkisivu on raidoitettu '
-            + 'keltaisella ja valkoisella, ja kulmissa kohoaa kupolit; talon '
-            + 'takaa pilkistää vanha savupiippu.',
+          selite: 'Keskustan mineraalikylpylä, jonka julkisivu on raidoitettu '
+            + 'keltaisella ja valkoisella ja jonka kulmissa kohoaa kupolit.',
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Stone River in Vitosha 47.jpg',
-          selite: 'Leveä kivivirta kaartuu metsän halki: harmaita, pyöristyneitä lohkareita on maassa kymmenien metrien matkalla kuin jäätynyt joki. Molemmin puolin nousee syksyinen lehtimetsä keltaisena ja ruosteenruskeana.',
+          selite: 'Leveä kivivirta kaartuu metsän halki: harmaita, pyöristyneitä lohkareita on maassa kymmenien metrien matkalla kuin jäätynyt joki keltaisen ja ruosteenruskean lehtimetsän välissä.',
           lahde: 'Gligan, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Sofia on pääkaupunki, jonka kyljessä on 2 292 metriin '
@@ -12156,7 +12148,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'noin kaksikymmentä minuuttia. Lentokenttä on '
                 + 'kymmenen kilometriä itään, ja se vihittiin käyttöön '
                 + 'jo syyskuussa 1937.',
-              kuva: { tiedosto: 'Vitosha metro station, terminus platform.jpg', selite: 'Metron pääteaseman laituri: vaalean vihreä juna seisoo oikealla, ja laiturin lattiassa on kaksi isoa pyöreää mosaiikkikuviota vihreänä ja keltaisena. Katosta riippuu rivi leveitä kartionmuotoisia valaisimia.', lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Vitosha metro station, terminus platform.jpg', selite: 'Metron pääteaseman laituri: vaalean vihreä juna seisoo oikealla, lattiassa on kaksi isoa pyöreää mosaiikkikuviota ja katosta riippuu rivi leveitä kartionmuotoisia valaisimia.', lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Vuori kuuluu kaupunkiin',
@@ -12191,7 +12183,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'enää 19 000. Kasvu alkoi vasta pääkaupungiksi '
                 + 'tulon jälkeen. Toisessa maailmansodassa '
                 + 'pommituksissa tuhoutui täysin 2 670 rakennusta.',
-              kuva: { tiedosto: 'Sofia sv Sophia 1878.jpg', selite: 'Puupiirros vuodelta 1878: vanha tiilikirkko seisoo puoliksi raunioituneena aukion laidalla, ja sen vieressä kohoaa kapea minareetti. Ympärillä on matalia puutaloja ja mukulakivinen aukio; etualalla kulkee lennätinlanka pylväineen.', lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)' },
+              kuva: { tiedosto: 'Sofia sv Sophia 1878.jpg', selite: 'Puupiirros vuodelta 1878: puoliksi raunioitunut tiilikirkko ja kapea minareetti mukulakivisen aukion laidalla, ympärillä matalia puutaloja ja etualalla lennätinlanka pylväineen.', lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)' },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -12327,9 +12319,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. '
             + 'Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota '
             + 'pitkin on kuljettu 1800 vuotta.',
-          selite: 'Etualalla antiikin Serdican perustuksia: matalia kivi- ja '
-            + 'tiilimuureja aidattuna aukiolla. Takana kohoaa Banja Bashin '
-            + 'moskeija punatiilisine minareetteineen.',
+          selite: 'Etualalla antiikin Serdican perustuksia eli matalia kivi- '
+            + 'ja tiilimuureja aidatulla aukiolla, ja takana kohoaa Banja '
+            + 'Bashin moskeija punatiilisine minareetteineen.',
           lahde: 'Лили Маркова, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Sofia',
         },
@@ -12343,9 +12335,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'suvaitsevaisuuden neliöksi. Synagoga avattiin 1909 ja on '
             + 'Kaakkois-Euroopan suurin. Sen kattokruunu painaa 1,7 tonnia — '
             + 'enemmän kuin henkilöauto.',
-          selite: 'Sofian synagogan kattokruunu vaaleanvihreän kupolin alla. '
-            + 'Kullanvärisestä kehästä riippuu kymmeniä pieniä lyhtyjä '
-            + 'kahdessa kerroksessa, ja keskellä on suurempi valaisin.',
+          selite: 'Sofian synagogan kattokruunu vaaleanvihreän kupolin alla: '
+            + 'kullanvärisestä kehästä riippuu kymmeniä pieniä lyhtyjä '
+            + 'kahdessa kerroksessa ja keskellä suurempi valaisin.',
           lahde: 'DMY, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -12359,9 +12351,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ajaksi. Tahtilajit ovat suomalaiseen korvaan outoja: yleisiä '
             + 'ovat 7/8 ja 11/16, joten askel menee pitkä–lyhyt–lyhyt.',
           selite: 'Kostadin Varimezov, yksi Bulgarian tunnetuimmista '
-            + 'gaida-soittajista, istuu sisällä soittamassa. Puhallusputki on '
-            + 'suussa, sormet melodiapillillä ja vaalea nahkasäkki '
-            + 'kainalossa.',
+            + 'gaida-soittajista, soittaa istualtaan puhallusputki suussa, '
+            + 'sormet melodiapillillä ja vaalea nahkasäkki kainalossa.',
           lahde: 'Martha Forsyth, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Säkkipilli',
           aani: 'https://archive.org/download/aporee_34245_39372/streetmusicianssofia.mp3',
@@ -12381,29 +12372,24 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Sofia (37139621884).jpg',
-          selite: 'Keskusta ilmasta auringonlaskun aikaan: suora '
-            + 'puistokatu halkoo tiilikattoisten kortteleiden meren '
-            + 'ja katkeaa horisontissa vuorijonoon. Taivas palaa '
-            + 'oranssina pilvien raoista, ja kadunvalot ovat jo '
-            + 'syttyneet.',
+          selite: 'Keskusta ilmasta auringonlaskun aikaan: suora puistokatu '
+            + 'halkoo tiilikattoisten kortteleiden meren ja katkeaa '
+            + 'horisontissa vuorijonoon oranssina palavan taivaan alla.',
           lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Άποψη του Largo από τα δυτικά.jpg',
-          selite: 'Largon aukio lännestä aamuauringossa: keskellä '
-            + 'kohoaa entinen puoluetalo tornimaisine huippuineen ja '
-            + 'sitä reunustavat molemmin puolin raskaat pylväikköiset '
-            + 'siivet. Aukion pintana on Sofian tunnettu keltainen '
-            + 'mukulakivi, joka kiiltää kosteana.',
+          selite: 'Largon aukio aamuauringossa: keskellä kohoaa entinen '
+            + 'puoluetalo tornimaisine huippuineen raskaiden pylväikköisten '
+            + 'siipiensä välissä, ja aukion pintana on Sofian keltainen '
+            + 'mukulakivi.',
           lahde: 'PLAKLE, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Sofia seen from Vitosha 1.jpg',
-          selite: 'Kaupunki Vitosan rinteeltä kesäpäivänä: etualalla '
-            + 'aukeaa aukko tummanvihreään metsään, ja sen takaa '
-            + 'levittäytyy koko Sofia tasangolle. Horisontissa nousee '
-            + 'toinen vuorijono, ja pilvet kelluvat kaupungin '
-            + 'yläpuolella.',
+          selite: 'Kaupunki Vitosan rinteeltä kesäpäivänä: tummanvihreän '
+            + 'metsän aukosta levittäytyy koko Sofia tasangolle, ja '
+            + 'horisontissa nousee toinen vuorijono.',
           lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
         },
       ],
@@ -12432,9 +12418,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'toisessa puoliskossa on kaupunginmuseo. Seinustalla on silti '
             + 'yhä julkisia hanoja, joista tulee lämmintä lähdevettä — niiden '
             + 'luona seisoo joka päivä ihmisiä pullot ja kanisterit mukanaan.',
-          selite: 'Kivennäisvesihana Sofian keskustassa. Karkeasta harmaasta '
-            + 'kivestä tehdyn altaan takaseinästä suihkuaa ohut vesisuihku, '
-            + 'ja taustalla näkyy kylpylän raidallinen tiiliseinä.',
+          selite: 'Kivennäisvesihana Sofian keskustassa: karkeasta harmaasta '
+            + 'kivestä tehdyn altaan takaseinästä suihkuaa ohut vesisuihku '
+            + 'kylpylän raidallisen tiiliseinän edessä.',
           lahde: 'Vanjakom, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -12447,10 +12433,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pieniä paperilappuja, joihin on kirjoitettu toivotuksia — se, '
             + 'minkä lapun omasta palastaan löytää, kertoo tulevasta '
             + 'vuodesta.',
-          selite: 'Kaksi banitsarullaa punakeltaisen paperin päällä kahvilan '
-            + 'pöydällä. Filotaikina on kääritty pitkäksi kierteeksi ja '
-            + 'paistettu kullanruskeaksi; kyljestä pursuaa hieman '
-            + 'juustotäytettä.',
+          selite: 'Kaksi banitsarullaa kahvilan pöydällä: filotaikina on '
+            + 'kääritty pitkäksi kierteeksi ja paistettu kullanruskeaksi, ja '
+            + 'kyljestä pursuaa hieman juustotäytettä.',
           lahde: 'Apostoloff, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Banitsa',
         },
@@ -12468,30 +12453,30 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'RO B Stavropoleos Church 1.jpg',
           selite: 'Stavropoleoksen luostarikirkko vuodelta 1724 '
-            + 'vanhassakaupungissa. Ulkoseinän kaariin on maalattu '
+            + 'vanhassakaupungissa: ulkoseinän kaariin on maalattu '
             + 'pyhimyksiä, kuistin pylväät on veistetty kivestä ja katto on '
             + 'punaista tiiltä.',
           lahde: 'Andrei Stroe, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Pasajul Macca-Villacrosse - Vedere Interior.jpg',
-          selite: 'Macca–Villacrossen kauppakäytävä vanhassakaupungissa. '
-            + 'Keltainen lasikatto kaartuu kujan yli, ja alla on kahviloita, '
+          selite: 'Macca–Villacrossen kauppakäytävä vanhassakaupungissa: '
+            + 'keltainen lasikatto kaartuu kujan yli, ja alla on kahviloita, '
             + 'kylttejä ja kaksi Romanian lippua.',
           lahde: 'Mihai Petre, Wikimedia Commons (CC BY-SA 3.0 ro)',
         },
         {
           tiedosto: 'Libraria Carturesti Carusel - Interior ziua.jpg',
-          selite: 'Cărturești Carusel -kirjakauppa Lipscanin kadulla. Valkoiset '
-            + 'pylväät ja kaarevat parvekkeet nousevat lasikaton alle, ja '
-            + 'kierreportaat vievät hyllyriviltä toiselle.',
+          selite: 'Cărturești Carusel -kirjakauppa Lipscanin kadulla: '
+            + 'valkoiset pylväät ja kaarevat parvekkeet nousevat lasikaton '
+            + 'alle, ja kierreportaat vievät hyllyriviltä toiselle.',
           lahde: 'Mihai Petre, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Bucharest - Gara de Nord (2023) - img 04.jpg',
-          selite: 'Rautatieaseman edusta iltapäivällä: vaalea asemarakennus kellotorneineen levittäytyy taustalle, ja sen edessä suihkuaa matala suihkulähderivi. Etualalla odottaa jono keltaisia takseja, ja oikealla on metron sisäänkäynnin katos.',
+          selite: 'Rautatieaseman edusta iltapäivällä: vaalea asemarakennus kellotorneineen levittäytyy taustalle, sen edessä suihkuaa matala suihkulähderivi ja etualalla odottaa jono keltaisia takseja.',
           lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Bukarest on iso kaupunki, jonka nykyinen muoto on '
@@ -12517,7 +12502,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'siinä on viisi linjaa, 64 asemaa ja 80 kilometriä '
                 + 'rataa. Päärautatieaseman peruskivi laskettiin '
                 + 'syyskuussa 1868 ja asema avattiin 1872.',
-              kuva: { tiedosto: 'Grivița Metro Station, Bucharest, Romania - 1.jpg', selite: 'Täysin tyhjä metrolaituri suoraan päädystä kuvattuna: tummanpunaiset seinät kaartuvat molemmin puolin, katossa on musta ripakatto ja loisteputkirivit. Keskellä laituria on yksi punainen penkkirivi, ja perällä nousevat portaat ja liukuportaat.', lahde: 'Mihnea L, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Grivița Metro Station, Bucharest, Romania - 1.jpg', selite: 'Täysin tyhjä metrolaituri suoraan päädystä kuvattuna: tummanpunaiset seinät kaartuvat molemmin puolin, keskellä laituria on yksi punainen penkkirivi ja perällä nousevat portaat ja liukuportaat.', lahde: 'Mihnea L, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Kuusi sektoria',
@@ -12692,9 +12677,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kymmenettuhannet asukkaat muuttivat muualle. Nyt talossa '
             + 'kokoontuu Romanian parlamentti, mutta noin 70 prosenttia '
             + 'huoneista on yhä tyhjillään.',
-          selite: 'Parlamenttipalatsin pääjulkisivu puiden takaa. Edessä seisova '
-            + 'bussirivi näyttää mittakaavan: taloa jatkuu kuvan molempien '
-            + 'reunojen yli, ja korkeutta on 84 metriä.',
+          selite: 'Parlamenttipalatsin pääjulkisivu puiden takaa, ja edessä '
+            + 'seisova bussirivi näyttää mittakaavan: taloa jatkuu kuvan '
+            + 'molempien reunojen yli ja korkeutta on 84 metriä.',
           lahde: 'Rakoon, Wikimedia Commons (CC0)',
           wiki: 'Casa Poporului',
         },
@@ -12709,10 +12694,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Schitul Maicilor: kesäkuussa 1982 se matkasi 245 metriä uusien '
             + 'talojen taakse. Iordăchescu siirsi kaikkiaan 29 rakennusta, '
             + 'joista 13 oli kirkkoja tai luostareita.',
-          selite: 'Schitul Maicilorin kirkko nykyisellä paikallaan. Pieni '
-            + 'valkoinen kirkko punaisine tiilikattoineen jäi ison '
-            + 'toimistotalon ja kerrostalojen väliin, ja sen eteen mahtuu '
-            + 'muutama pysäköity auto.',
+          selite: 'Schitul Maicilorin pieni valkoinen kirkko punaisine '
+            + 'tiilikattoineen nykyisellä paikallaan ison toimistotalon ja '
+            + 'kerrostalojen välissä.',
           lahde: 'Biruitorul, Wikimedia Commons (CC0)',
           wiki: 'Bukarest',
         },
@@ -12726,9 +12710,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'loppuivat makkarankuoret kesken illan ja hän paistoi massan '
             + 'sellaisenaan. Vappuna niitä grillataan koko maassa pihoilla ja '
             + 'puistoissa.',
-          selite: 'Micejä hiiligrillissä. Massa puristetaan sormenpaksuisiksi '
-            + 'pötköiksi ilman kuorta ja käännellään hiilloksella muutaman '
-            + 'minuutin ajan. Lisukkeeksi tulee sinappia ja leipää.',
+          selite: 'Micejä hiiligrillissä: kuoreton massa puristetaan '
+            + 'sormenpaksuisiksi pötköiksi ja käännellään hiilloksella '
+            + 'muutaman minuutin ajan.',
           lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Mititei',
         },
@@ -12743,28 +12727,24 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Bucharest - Dambovita view 01.jpg',
-          selite: 'Dâmbovița sillalta katsottuna auringonlaskun '
-            + 'aikaan: joki kulkee suorassa betonisessa uomassa, ja '
-            + 'sen tyyni pinta heijastaa oranssin taivaan ja rannan '
-            + 'lehdettömät puut. Vasemmalla on matala klassistinen '
-            + 'julkisivu, oikealla kerrostalorivi.',
+          selite: 'Dâmbovița sillalta katsottuna auringonlaskun aikaan: joki '
+            + 'kulkee suorassa betonisessa uomassa, ja sen tyyni pinta '
+            + 'heijastaa oranssin taivaan ja rannan lehdettömät puut.',
           lahde: 'Joe Mabel, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Bucharest-Skyline-01.jpg',
-          selite: 'Yliopiston aukio ylhäältä: keskellä kaartuu '
-            + 'vaaleaharmaa 1900-luvun alun palatsi mansardikattoineen '
-            + 'ja tornipäätyineen, ja sen editse kulkee leveä '
-            + 'bulevardi. Kaukana horisontissa kohoaa parlamentin '
-            + 'palatsin valtava massa.',
+          selite: 'Yliopiston aukio ylhäältä: keskellä kaartuu vaaleaharmaa '
+            + '1900-luvun alun palatsi mansardikattoineen, sen editse kulkee '
+            + 'leveä bulevardi ja kaukana horisontissa kohoaa parlamentin '
+            + 'palatsi.',
           lahde: 'seisdeagosto, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Bucharest Skyline.jpg',
           selite: 'Kaupunki matalien kattojen yli iltaruskossa: '
-            + 'etualalla on tiilikattoisten omakotitalojen ja pihapuiden '
-            + 'sekava meri, ja niiden takana nousee rivi vaaleita '
-            + 'kerrostaloja. Oikealla erottuu vinoköysisillan valkoinen '
+            + 'tiilikattoisten omakotitalojen ja pihapuiden takana nousee '
+            + 'rivi vaaleita kerrostaloja ja vinoköysisillan valkoinen '
             + 'pyloni.',
           lahde: 'Dan Mihai Pitea, Wikimedia Commons (CC BY-SA 3.0)',
         },
@@ -12794,9 +12774,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja pian muidenkin maiden museot pyysivät Antipalta neuvoja. '
             + 'Samassa talossa seisoo dinoteriumin luuranko: norsun '
             + 'sukulainen, jonka syöksyhampaat kaartuvat alaleuasta alaspäin.',
-          selite: 'Dinoteriumin luuranko museon salissa. Alaleuasta kaartuu kaksi '
-            + 'syöksyhammasta alaspäin kuin koukut, vasemmalla näkyy toinen '
-            + 'luuranko ja takana lasin takana vihreä Afrikan dioraama.',
+          selite: 'Dinoteriumin luuranko museon salissa: alaleuasta kaartuu '
+            + 'kaksi syöksyhammasta alaspäin kuin koukut, ja takana lasin '
+            + 'takana on vihreä Afrikan dioraama.',
           lahde: 'Britchi Mirela, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Dioraama',
         },
@@ -12811,10 +12791,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaksi, toinen ohjaamon edessä ja toinen siiven takana, ja ne '
             + 'pyörivät vastakkaisiin suuntiin. Wienin lentoviikolla 1912 '
             + 'Vlaicu voitti palkinnot muun muassa tarkkuuslaskusta.',
-          selite: 'Vlaicu-kone Cotrocenin kentällä vuonna 1912. Peräsimeen on '
-            + 'maalattu A. VLAICU Nr II, keskellä konetta näkyy potkuri ja '
-            + 'moottori, ja vieressä seisoo sotilaita lippalakeissa; '
-            + 'taustalla on lentokonehalleja.',
+          selite: 'Vlaicu-kone Cotrocenin kentällä vuonna 1912, peräsimessä '
+            + 'maalaus A. VLAICU Nr II, keskellä potkuri ja moottori ja '
+            + 'vieressä sotilaita lippalakeissa.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Lentokone',
         },
@@ -12831,24 +12810,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Sarajevo City Hall 01.jpg',
-          selite: 'Vijećnica eli kaupungintalo Miljackan rannalla. '
-            + 'Punavalkoraidallinen julkisivu ja kaarikäytävä ovat '
-            + '1890-luvulta. Talossa toimi kansalliskirjasto, joka tuhoutui '
-            + 'pommituksessa 1992; rakennus avattiin uudelleen 2014.',
+          selite: 'Vijećnica eli kaupungintalo Miljackan rannalla: '
+            + 'punavalkoraidallinen julkisivu on 1890-luvulta, ja talossa '
+            + 'toiminut kansalliskirjasto tuhoutui pommituksessa 1992, minkä '
+            + 'jälkeen rakennus avattiin uudelleen 2014.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Coppersmith at work in Baščaršija (6086857358).jpg',
-          selite: 'Kuparisepän puoti Baščaršijan basaarissa. Mies takoo pientä '
-            + 'kahvipannua polvellaan, ja hyllyillä ja seinillä kiiltää '
-            + 'valmiita džezvoja, tarjottimia ja kannuja.',
+          selite: 'Kuparisepän puoti Baščaršijan basaarissa: mies takoo '
+            + 'pientä kahvipannua polvellaan, ja hyllyillä ja seinillä '
+            + 'kiiltää valmiita džezvoja, tarjottimia ja kannuja.',
           lahde: 'Jennifer Boyer, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Loop Bridge 01 (23776388375).jpg',
-          selite: 'Festina lente -kävelysilta Miljackan yli sumuisena päivänä. '
-            + 'Sillan keskellä kaide kiertyy silmukaksi, jonka läpi '
-            + 'yksinäinen kulkija juuri astuu. Nimi on latinaa ja tarkoittaa: '
+          selite: 'Festina lente -kävelysilta Miljackan yli sumuisena '
+            + 'päivänä: kaide kiertyy sillan keskellä silmukaksi, jonka läpi '
+            + 'yksinäinen kulkija astuu, ja latinankielinen nimi tarkoittaa '
             + 'kiirehdi hitaasti.',
           lahde: 'sundeviljeff, Wikimedia Commons (CC BY 2.0)',
         },
@@ -12856,7 +12835,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Vrelo Bosne, Sarajevo park.JPG',
-          selite: 'Kirkasvetinen lähdealtaan pinta hohtaa smaragdinvihreänä, ja pohjan kivet näkyvät läpi. Rantoja reunustaa tiheä kesäinen lehtimetsä, ja taustalla kaartuu pieni puinen kaarisilta veden yli.',
+          selite: 'Kirkasvetinen lähdeallas hohtaa smaragdinvihreänä pohjakivineen tiheän kesäisen lehtimetsän keskellä, ja taustalla kaartuu pieni puinen kaarisilta veden yli.',
           lahde: 'BiHVolim, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Sarajevo on rakennettu kapeaan jokilaaksoon 518 metrin '
@@ -12897,7 +12876,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Cultures: sen toisella puolella on matala '
                 + 'ottomaaniajan kaupunki, toisella suoraviivainen '
                 + 'itävaltalainen ruutukaava.',
-              kuva: { tiedosto: 'Buiobuione-Sarajevo-Meeting-of-Cultures-23-04-2018.jpg', selite: 'Jalkakäytävään upotettu vaalea kivinauha, jossa lukee suurin kirjaimin Sarajevo Meeting of Cultures. Viivan yli kulkee jalankulkijoita, joista näkyvät vain jalat ja pitkät varjot kirkkaassa auringossa.', lahde: 'Buiobuione, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Buiobuione-Sarajevo-Meeting-of-Cultures-23-04-2018.jpg', selite: 'Jalkakäytävään upotettu vaalea kivinauha, jossa lukee suurin kirjaimin Sarajevo Meeting of Cultures ja jonka yli kulkevista jalankulkijoista näkyvät vain jalat ja pitkät varjot.', lahde: 'Buiobuione, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Kello, joka seuraa aurinkoa',
@@ -12910,7 +12889,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vaihtelee, mekanismia on säädettävä jatkuvasti. '
                 + 'Torni on maan kellotorneista ainoa, jota ei ole '
                 + 'muutettu eurooppalaiseen aikaan.',
-              kuva: { tiedosto: 'Sahat kula in Sarajevo 02.jpg', selite: 'Nelikulmainen harmaakivinen kellotorni kuvattuna alhaalta ylöspäin sinistä ja pilvistä taivasta vasten. Tornin yläosassa on kaksi kaari-ikkunaa ja niiden yllä pyöreä kellotaulu.', lahde: 'Adam Harangozó, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Sahat kula in Sarajevo 02.jpg', selite: 'Nelikulmainen harmaakivinen kellotorni alhaalta ylöspäin kuvattuna: yläosassa on kaksi kaari-ikkunaa ja niiden yllä pyöreä kellotaulu.', lahde: 'Adam Harangozó, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Tuhat neljäsataa kaksikymmentäviisi päivää',
@@ -13063,7 +13042,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sen jälkeen. Kaarten välissä on pyöreitä aukkoja, joita '
             + 'sanotaan sillan silmiksi — ne näkyvät myös kaupungin '
             + 'sinetissä.',
-          selite: 'Latinalaissilta ja matala Miljacka kesällä. Neljän kaaren '
+          selite: 'Latinalaissilta ja matala Miljacka kesällä: neljän kaaren '
             + 'välissä näkyvät pyöreät aukot eli sillan silmät, ja '
             + 'vastarannalla on Itävalta-Unkarin aikaisia taloja.',
           lahde: 'BiHVolim, Wikimedia Commons (CC BY-SA 4.0)',
@@ -13080,9 +13059,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'niistä 1900-luvulla koko maan musiikkia: Nada Mamula muutti '
             + 'Sarajevoon ja lauloi Radio Sarajevon ohjelmissa, ja '
             + 'radioarkistoihin jäi häneltä yli 150 levytystä.',
-          selite: 'Nada Mamula (1927–2001) laulamassa televisio-ohjelmassa vuonna '
-            + '1962. Hänellä on yllään perinteinen pitkä asu, vieressä '
-            + 'soittaa haitaristi ja takana näkyvät kontrabasso ja viulu.',
+          selite: 'Nada Mamula (1927–2001) laulamassa televisio-ohjelmassa '
+            + 'vuonna 1962 perinteisessä pitkässä asussa, vieressään '
+            + 'haitaristi ja takanaan kontrabasso ja viulu.',
           lahde: 'Stevan Kragujević, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Sevdalinka',
           musiikki: 'https://music.apple.com/fi/artist/nada-mamula/289134144',
@@ -13100,9 +13079,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'moskeijaan, ja 1990-luvun piirityksen ajan kirja oli pankin '
             + 'holvissa. Sivuilla on viinitahroja: sitä on luettu '
             + 'pääsiäisaterioilla.',
-          selite: 'Sivu Sarajevon haggadasta. Opettaja istuu oikealla kullatulla '
-            + 'penkillä, kolme kuulijaa pitelee avattuja kirjoja, ja '
-            + 'yläreunassa on kultaisia heprealaisia kirjaimia sinisellä '
+          selite: 'Sivu Sarajevon haggadasta: opettaja istuu oikealla '
+            + 'kullatulla penkillä, kolme kuulijaa pitelee avattuja kirjoja, '
+            + 'ja yläreunassa on kultaisia heprealaisia kirjaimia sinisellä '
             + 'pohjalla.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Haggada',
@@ -13122,31 +13101,24 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Bosnia IMG 9302 sarajevo from east.JPG',
           selite: 'Kaupunki idänpuoleiselta rinteeltä kesäpäivänä: '
             + 'punakattoiset talot kiipeävät laakson rinteitä ylös niin '
-            + 'tiheästi, että katot peittävät koko etualan. Vasemmassa '
-            + 'reunassa nousee moskeijan kapea minareetti, keskellä '
-            + 'kohoaa uuden keskustan lasitorneja, ja laakso päättyy '
-            + 'metsäiseen vuorenharjanteeseen, joka häipyy utuun.',
+            + 'tiheästi, että katot peittävät koko etualan, ja laakso päättyy '
+            + 'utuun häipyvään metsäiseen vuorenharjanteeseen.',
           lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Sarajevo Reflections.jpg',
           selite: 'Miljacka-joki kaupungin itälaidalla toukokuussa: '
             + 'vasemmalla seisoo vanha pelti- ja lautaverhoiltu talo '
-            + 'pylväiden varassa veden yllä, ja sen edestä kaartuu suuri '
-            + 'lehtipuu joen päälle. Vastarannan jyrkkä rinne on '
-            + 'vihreän peitossa, ja metsän seasta pilkottavat vaaleat '
-            + 'talot punaisine kattoineen.',
+            + 'pylväiden varassa veden yllä, ja vastarannan jyrkkä rinne on '
+            + 'vihreän peitossa vaaleine punakattoisine taloineen.',
           lahde: 'Jocelyn777 Love Europe, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Clouds over Vratnik Fortress, Sarajevo.jpg',
           selite: 'Vratnikin vanha kaupunginmuuri katutasolta: oikealla '
-            + 'seisoo porttitorni, jonka jyrkkä paanukatto lepää '
-            + 'kivimuurin päällä ja jonka alta johtaa holvattu '
-            + 'porttiaukko. Muuri kaartuu vasemmalle nurmirinteen poikki, '
-            + 'etualalla laskeutuvat leveät kiviportaat, ja rinteen '
-            + 'yläpuolella nousevat talot ja minareetti tumman '
-            + 'ukkospilven alla.',
+            + 'seisoo porttitorni, jonka jyrkän paanukaton alta johtaa '
+            + 'holvattu porttiaukko, ja muuri kaartuu nurmirinteen poikki '
+            + 'kohti taloja ja minareettia tumman ukkospilven alla.',
           lahde: 'Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13175,10 +13147,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hiihti lisäksi viestistä pronssia. Isäntämaa Jugoslavia sai '
             + 'kisoista ensimmäisen talviolympiamitalinsa, kun Jure Franko '
             + 'tuli suurpujottelussa toiseksi.',
-          selite: 'Katsojia rinteen laidalla Bjelašnica-vuorella 19. helmikuuta '
-            + '1984. Alhaalla näkyy maalialue punaisine aitoineen ja lumisia '
-            + 'metsiä; menossa on miesten pujottelu, jonka voitti Phil Mahre '
-            + 'ja jossa hänen kaksoisveljensä Steve tuli toiseksi.',
+          selite: 'Katsojia rinteen laidalla Bjelašnica-vuorella 19. '
+            + 'helmikuuta 1984, kun käynnissä on miesten pujottelu, jonka '
+            + 'voitti Phil Mahre ja jossa hänen kaksoisveljensä Steve tuli '
+            + 'toiseksi.',
           lahde: 'Milan Suvajac, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Talviolympialaiset 1984',
         },
@@ -13192,8 +13164,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja graffitimaalarit. Nyt kaarteet ovat maalauksia täynnä ja '
             + 'radalle pääsee kävelemään: Trebevićille nousee köysirata, '
             + 'jonka gondoli vie kaupungista vuorelle yhdeksässä minuutissa.',
-          selite: 'Olympiaradan kaarre Trebevićillä. Betonikouru mutkittelee '
-            + 'mäntyjen välissä, kaarteen reunus on maalattu graffiteilla, ja '
+          selite: 'Olympiaradan kaarre Trebevićillä: betonikouru mutkittelee '
+            + 'mäntyjen välissä, kaarteen reunus on maalattu graffiteilla ja '
             + 'radan yllä törröttävät vanhat kannatinpalkit.',
           lahde: 'Julian Nyča, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Rattikelkkailu',
@@ -13211,31 +13183,30 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Potemkin stairs, Odessa.jpg',
-          selite: 'Potjomkinin portaat alhaalta katsottuna: leveä kiviporras '
+          selite: 'Potjomkinin portaat alhaalta katsottuna: 192 askelmaa '
             + 'nousee puurivien välissä kaupunkiin, ja portaita kiipeävät '
-            + 'ihmiset näyttävät pieniltä. Askelmia on 192.',
+            + 'ihmiset näyttävät pieniltä.',
           lahde: 'DIMSFIKAS, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Vorontsov Lighthouse 2017 G1.jpg',
           selite: 'Vorontsovin majakka sataman aallonmurtajalla: valkoinen 27 '
-            + 'metrin torni ja sen päässä punainen lyhtyhuone. Valo välähtää '
-            + 'kolme pitkää — morseaakkosten O niin kuin Odessa.',
+            + 'metrin torni punaisine lyhtyhuoneineen, ja valo välähtää kolme '
+            + 'pitkää — morseaakkosten O niin kuin Odessa.',
           lahde: 'George Chernilevsky, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Lion odessa city park.jpg',
-          selite: 'Kaupunginpuiston pronssileijona vaalealla jalustallaan, '
-            + 'käpälän alla saalis. Leijona ja sen pari ovat ranskalaisen '
-            + 'Auguste Cainin työtä vuodelta 1854, ja kyljissä näkyy yhä '
-            + 'luodinjälkiä sodan ajoilta.',
+          selite: 'Kaupunginpuiston pronssileijona jalustallaan, käpälän alla '
+            + 'saalis: ranskalaisen Auguste Cainin työ vuodelta 1854, jonka '
+            + 'kyljissä näkyy yhä luodinjälkiä sodan ajoilta.',
           lahde: 'HOBOPOCC, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: '51-101-1013 Odesa Dworzec DSC 3087.jpg',
-          selite: 'Vaaleankeltainen rautatieasema iltavalossa: keskellä kohoaa matala kupoli, jonka päällä liehuu lippu, ja julkisivussa on rivi korkeita kaari-ikkunoita pylväineen. Etualalla kaartuu tyhjä katu ja vasemmalla on tummia puita.',
+          selite: 'Vaaleankeltainen rautatieasema iltavalossa: keskellä kohoaa matala kupoli lippuineen, julkisivussa on rivi korkeita kaari-ikkunoita pylväineen ja etualalla kaartuu tyhjä katu.',
           lahde: 'Haidamac, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Odessa on suunniteltu kaupunki: sen ruutukaavan piirsi '
@@ -13273,7 +13244,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja se säilytti liitoksen jälkeenkin oman '
                 + 'katuverkkonsa. Ennen vuotta 1917 se oli kaupungin '
                 + 'juutalaisen väestön ja työväen kortteli.',
-              kuva: { tiedosto: 'Staroportofrankivska Street - panoramio.jpg', selite: 'Leveä katu kesäiltana: vasemmalla on matala rapistunut kivitalo, jonka seinässä on kauppojen kylttejä, ja sen ympärillä kasvaa suuria lehtipuita. Kadun keskellä kulkevat raitiokiskot ja perällä ajaa keltainen pikkubussi.', lahde: 'Дмитрий Ванькевич, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Staroportofrankivska Street - panoramio.jpg', selite: 'Leveä katu kesäiltana: vasemmalla on matala rapistunut kivitalo kauppojen kyltteineen ja suurine lehtipuineen, kadun keskellä kulkevat raitiokiskot ja perällä ajaa keltainen pikkubussi.', lahde: 'Дмитрий Ванькевич, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Kaupunki, jolla on oma puheenparsi',
@@ -13434,9 +13405,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'prosenttia, eikä koko verkostoa ole koskaan kartoitettu. '
             + 'Toisen maailmansodan aikana käytävissä piileskeli '
             + 'partisaaneja, jotka nousivat maan alta ja katosivat takaisin.',
-          selite: 'Katakombien käytävä. Seinissä näkyvät sahanjäljet: kalkkikivi '
-            + 'leikattiin suorakulmaisiksi lohkoiksi ja nostettiin ylös '
-            + 'talojen seiniksi.',
+          selite: 'Katakombien käytävä, jonka seinissä näkyvät sahanjäljet: '
+            + 'kalkkikivi leikattiin suorakulmaisiksi lohkoiksi ja nostettiin '
+            + 'ylös talojen seiniksi.',
           lahde: 'Vi Ko, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Katakombi',
         },
@@ -13468,7 +13439,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ensimmäinen rakennus Odessassa, johon asennettiin sähkövalot. '
             + 'Maapohja sen alla liikkuu, joten halkeamia on paikattu '
             + 'käytännössä avajaisista asti.',
-          selite: 'Oopperatalon julkisivu iltapäivän valossa. Katolla seisoo '
+          selite: 'Oopperatalon julkisivu iltapäivän valossa: katolla seisoo '
             + 'veistosryhmiä, sisäänkäynnin kaaren molemmin puolin kaksi '
             + 'valkoista patsasta ja edessä rivi vanhanmallisia katulyhtyjä.',
           lahde: 'Assedo, Wikimedia Commons (PD)',
@@ -13487,33 +13458,26 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Спасо-Преображенський кафедральний собор (Одеса) DJI 0084.jpg',
-          selite: 'Vanha keskusta ilmasta auringon laskiessa: keskellä '
-            + 'kohoaa Kristuksen kirkastumisen katedraali — korkea '
-            + 'vaalea kellotorni tummine teräväkärkisine kattoineen ja '
-            + 'kirkkosalin päällä rivi tummia kupoleita kultaisine '
-            + 'risteineen. Katedraalia ympäröi kivetty aukio ja tuuhea '
-            + 'puistokehä, ja sen takana matala ruutukaavainen kaupunki '
-            + 'jatkuu horisonttiin.',
+          selite: 'Vanha keskusta ilmasta auringon laskiessa: keskellä kohoaa '
+            + 'Kristuksen kirkastumisen katedraali korkeine kellotorneineen '
+            + 'ja kultaristisine kupoleineen, ja sen takana matala '
+            + 'ruutukaavainen kaupunki jatkuu horisonttiin.',
           lahde: 'Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Deribasivska-Street-aerial-1.jpg',
-          selite: 'Keskustan ruutukaava ilmasta aamulla: alareunasta '
-            + 'lähtee suora katu, jonka molemmin puolin on kolmi- ja '
-            + 'nelikerroksisia kivitaloja, ja sen vieressä levittäytyy '
-            + 'puistokadun tuuhea puukatos. Keskietäisyydellä erottuvat '
-            + 'puoliympyrän muotoinen aukio ja vaaleita klassistisia '
-            + 'julkisivuja; kauimpana kaupunki hämärtyy aamu-usvaan.',
+          selite: 'Keskustan ruutukaava ilmasta aamulla: suoran kadun '
+            + 'molemmin puolin on kolmi- ja nelikerroksisia kivitaloja ja '
+            + 'vieressä puistokadun tuuhea puukatos, ja kauimpana kaupunki '
+            + 'hämärtyy aamu-usvaan.',
           lahde: 'Alexey M., Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mys-Fontan-aerial-2.jpg',
           selite: 'Rantaviiva ilmasta kohti keskustaa kesäaamuna: '
-            + 'vasemmalla on turkoosinsininen meri, johon työntyy '
-            + 'peräkkäin kivisiä aallonmurtajia, ja rannassa on kapeita '
-            + 'hiekkakaistoja ja laitureita. Rinteessä nousevat huvilat '
-            + 'ja punakattoiset matalat talot, ja niiden takana alkaa '
-            + 'esikaupungin puutarhakortteleiden meri.',
+            + 'turkoosinsiniseen mereen työntyy peräkkäin kivisiä '
+            + 'aallonmurtajia, ja rinteessä nousevat huvilat ja punakattoiset '
+            + 'matalat talot esikaupungin puutarhakortteleiden edessä.',
           lahde: 'Alexey M., Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],

@@ -7104,8 +7104,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Kiev Golden Gate.jpg',
           selite: 'Kultainen portti puistikon laidalla: jälleenrakennettu '
-            + 'porttitorni kultakupolisine kirkkoineen. Alaosan harmaa '
-            + 'betonikuori pitää sisällään portin säilyneet muurinpätkät.',
+            + 'porttitorni kultakupolisine kirkkoineen, ja alaosan harmaan '
+            + 'betonikuoren sisällä ovat portin säilyneet muurinpätkät.',
           lahde: 'Луц Фишер-Лампрехт, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -7660,7 +7660,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Воронцовський маяк та грузовий порт.jpg',
           selite: 'Vorontsovin majakka aallonmurtajan päässä omalla pyöreällä '
-            + 'jalustallaan. Takana näkyy rahtisatama nostureineen.',
+            + 'jalustallaan, takana rahtisatama nostureineen.',
           lahde: 'SvetlanaM85, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {

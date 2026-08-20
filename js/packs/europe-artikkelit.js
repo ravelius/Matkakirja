@@ -359,11 +359,42 @@ export const EUROPE_ARTIKKELIT = {
       + 'eroavat toisistaan selvästi — se näkyy jokaisissa vaaleissa.',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro EI OLE ENÄÄ kahden lauseen nosto vaan lehden ETUSIVUN
+   * LEIPÄTEKSTI — 7–10 virkkeen johdatus (~700–1100 mrk) kolmessa
+   * kappaleessa ('\n\n') ja 1–3 maltillista **lihavointia**.
+   * Renderöijä (piirraLeipateksti) tekee kappaleet ja boldit, joten
+   * tänne ei kirjoiteta HTML:ää. Faktat ovat Sarajevon omista jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Sarajevo, nahtavyysjutut.js, maakartat.js, oma
+   * teksti-kenttä alla). Sisältölinjaus (omistaja 20.8.2026):
+   * 1990-luvun sota vain siinä laajuudessa kuin lehti sen jo kertoo,
+   * neutraalisti ja ilman osapuolikehystä; painopiste on osmani- ja
+   * itävaltalaiskaudessa. teksti on ennallaan.
+   */
   Sarajevo: {
-    intro: 'Sarajevo on Bosnia ja Hertsegovinan pääkaupunki, kapeassa '
-      + 'vuoristolaaksossa Miljacka-joen varrella. Samalla kadulla '
-      + 'seisovat ottomaanien basaari, itävaltalaiset julkisivut, '
-      + 'moskeija, katedraali, ortodoksikirkko ja synagoga.',
+    intro: 'Sarajevo on Bosnia ja Hertsegovinan pääkaupunki kapeassa '
+      + 'jokilaaksossa 518 metrin korkeudessa: pohjalla virtaa Miljacka, '
+      + 'ympärillä kohoaa viisi vuorta. Osmanien käskynhaltija '
+      + 'Isa-beg Ishaković rakennutti tänne 1460-luvulla basaarin, sillan '
+      + 'ja majatalon, ja kaupungin nimi tulee turkin sanasta saray.'
+      + '\n\n'
+      + '**Baščaršijan** basaarissa oli parhaimmillaan tuhansia puoteja, '
+      + 'ja jokaisella kujalla tehtiin omaa käsityötä. Sen laidalla '
+      + 'seisovat Gazi Husrev-begin moskeija vuodelta 1531 ja '
+      + 'Sahat-kulan kellotorni, jonka kello asetetaan yhä niin, että '
+      + 'auringonlasku on kaksitoista. Vuonna 1878 alue siirtyi '
+      + 'Itävalta-Unkarille, joka rakensi länsipuolen uuteen '
+      + 'tyyliin; Ferhadija-kadun jalkakäytävään on merkitty kohta, '
+      + 'jossa kaksi kaupunkia kohtaa.'
+      + '\n\n'
+      + '**Latinalaissillan** pohjoispäässä ammuttiin 28. kesäkuuta 1914 '
+      + 'arkkiherttua Frans Ferdinand, ja siitä alkoi ketju kohti '
+      + 'ensimmäistä maailmansotaa. Vuonna 1984 kaupunki isännöi '
+      + 'talviolympialaisia, ja vuosina 1992–1996 se oli piiritettynä. '
+      + 'Nyt Sarajevo on taas opiskelijoiden ja kahviloiden kaupunki, ja '
+      + 'raitiotie vuodelta 1885 kulkee laakson läpi päästä päähän.',
     teksti: 'Kaupungin perusti ottomaanihallinto 1400-luvulla, ja '
       + 'basaarialue Baščaršija on siltä ajalta. Vuonna 1878 alue '
       + 'siirtyi Itävalta-Unkarille, joka rakensi kaupungin länsipuolen '
@@ -694,11 +725,39 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkkeen johdatus
+   * (~700–1100 mrk) kolmessa kappaleessa ('\n\n') ja 1–3 maltillista
+   * **lihavointia**; renderöijä tekee kappaleet ja boldit, joten HTML:ää
+   * ei kirjoiteta tänne. Faktat ovat Sofian omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan Sofia,
+   * nahtavyysjutut.js, maakartat.js, oma teksti-kenttä alla).
+   * teksti on ennallaan.
+   */
   Sofia: {
     intro: 'Sofia on Bulgarian pääkaupunki ja yksi Euroopan vanhimmista '
-      + 'kaupungeista: paikalla on asuttu yli 7 000 vuotta. Se sijaitsee '
-      + 'laaksossa Vitosha-vuoren juurella, ja vuorelle pääsee '
-      + 'keskustasta bussilla.',
+      + 'kaupungeista: paikalla on asuttu yli 7 000 vuotta. Se on '
+      + 'laaksossa noin 550 metrin korkeudessa, ja etelässä kohoaa '
+      + 'Vitosha-vuori 2 292 metriin; sen rinteet rauhoitettiin '
+      + 'luonnonpuistoksi jo 1934, ensimmäisenä Balkanilla. Kaupunki '
+      + 'syntyi veden takia: maan alla on 49 kivennäis- ja '
+      + 'lämpölähdettä, ja roomalaiset rakensivat niiden ympärille '
+      + '**Serdican**, josta keisari Konstantinus Suuren kerrotaan '
+      + 'sanoneen, että se on hänen Roomansa.'
+      + '\n\n'
+      + 'Metroa kaivettaessa 2010-luvun alussa maasta paljastui '
+      + 'kokonainen roomalainen kortteli, eikä löytöjä peitetty '
+      + 'takaisin. Kaupungin vanhin rakennus on Pyhän Yrjön punatiilinen '
+      + 'rotunda 300-luvulta, ja muutaman sadan metrin säteellä seisovat '
+      + 'ortodoksikirkko, katolinen katedraali, moskeija ja '
+      + 'Kaakkois-Euroopan suurin synagoga.'
+      + '\n\n'
+      + 'Osmanien vallan alla Sofia oli lähes viisi vuosisataa, ja '
+      + '**pääkaupungiksi** se valittiin vasta 1879, kun asukkaita oli '
+      + 'reilut yksitoistatuhatta; nyt heitä on lähes 1,3 miljoonaa. '
+      + 'Keskustan pääväylillä on yhä kellertävää keraamista katukiveä '
+      + 'vuosilta 1907–1908.',
     teksti: 'Roomalaiset perustivat tänne kaupungin nimeltä Serdica '
       + 'kuumien lähteiden takia. Keisari Konstantinus Suuri viihtyi '
       + 'siellä niin hyvin, että sanoi: "Serdica on minun Roomani." '
@@ -1583,11 +1642,42 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkkeen johdatus
+   * (~700–1100 mrk) kolmessa kappaleessa ('\n\n') ja 1–3 maltillista
+   * **lihavointia**; renderöijä tekee kappaleet ja boldit, joten HTML:ää
+   * ei kirjoiteta tänne. Faktat ovat Bukarestin omista jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Bukarest, nahtavyysjutut.js, maakartat.js, oma
+   * teksti-kenttä alla). teksti on ennallaan.
+   */
   Bukarest: {
     intro: 'Bukarest on Romanian pääkaupunki ja Balkanin suurimpia '
-             + 'kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se sijaitsee '
-             + 'tasangolla Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä '
-             + 'meri — kaupunki on aina ollut kauppareittien risteys.',
+             + 'kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on '
+             + 'keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä '
+             + 'sitä suojaa vuori eikä meri — kaupunki on aina ollut '
+             + 'kauppareittien risteys. Ensimmäisen kerran nimi mainitaan '
+             + 'vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian '
+             + 'ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli '
+             + '1862.'
+             + '\n\n'
+             + '1800-luvun lopulla kaupunkia rakennettiin '
+             + 'Pariisin malliin: leveitä bulevardeja, ranskalaisia '
+             + 'arkkitehteja ja puistoja. Siltä ajalta on **Romanian '
+             + 'ateneum**, konserttitalo, johon kerättiin rahaa '
+             + 'tavallisilta ihmisiltä tunnuslauseella anna yksi leu '
+             + 'Ateneumille. Puistoista vanhin, Cișmigiun puutarha, '
+             + 'avattiin jo 1847.'
+             + '\n\n'
+             + 'Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa '
+             + 'romahti noin 33 suurta kerrostaloa. Sitä seuranneina '
+             + 'vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle '
+             + 'betonikortteleita ja **Parlamenttipalatsin**, joka on '
+             + 'maailman raskain rakennus. Vanhoja kirkkoja '
+             + 'säilyi, koska insinööri Eugeniu Iordăchescu keksi työntää '
+             + 'ne kiskoilla syrjään — kaikkiaan hän siirsi 29 '
+             + 'rakennusta.',
     teksti: 'Kaupungin nimi tulee tarinan mukaan paimenesta nimeltä Bucur. '
               + 'Ensimmäisen kerran Bukarest mainitaan asiakirjassa vuonna '
               + '1459, jonka allekirjoitti Valakian ruhtinas Vlad Kolottaja — '
@@ -1616,12 +1706,43 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkkeen johdatus
+   * (~700–1100 mrk) kolmessa kappaleessa ('\n\n') ja 1–3 maltillista
+   * **lihavointia**; renderöijä tekee kappaleet ja boldit, joten HTML:ää
+   * ei kirjoiteta tänne. Faktat ovat Kiovan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan Kiova,
+   * nahtavyysjutut.js, maakartat.js, oma teksti-kenttä alla).
+   * SISÄLTÖLINJAUS (omistaja 20.8.2026): introssa EI nykysotaa eikä
+   * nykypolitiikkaa — painopiste on Rusin ajassa, bysanttilaisessa
+   * perinnössä, arkkitehtuurissa ja neutraalissa maantieteessä.
+   * teksti on ennallaan.
+   */
   Kiova: {
     intro: 'Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita '
-             + 'on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle '
-             + 'länsirannalle, ja kaupungin vanhimmat kirkot ovat 1000-luvulta '
-             + '— ajalta, jolloin Kiova johti Itä-Euroopan mahtavinta '
-             + 'valtakuntaa.',
+             + 'on noin kolme miljoonaa. Se on rakennettu Dnepr-joen '
+             + 'jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen '
+             + 'kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, '
+             + 'alhaalla joen rannassa Podil eli alakaupunki.'
+             + '\n\n'
+             + 'Keskiajalla Kiova johti **Kiovan Rusia**, joka ulottui '
+             + 'Itämereltä Mustallemerelle, ja kristinusko otettiin '
+             + 'vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti '
+             + 'muurien pääportin eli Kultaisen portin sekä **Pyhän '
+             + 'Sofian katedraalin**, joka valmistui ilmeisesti vuonna '
+             + '1037. Katedraalin seinillä on Euroopan parhaiten '
+             + 'säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli '
+             + '7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja '
+             + 'Dneprin rinteen Luolaluostari kuuluvat Unescon '
+             + 'maailmanperintöön vuodesta 1990.'
+             + '\n\n'
+             + '1800-luvulla teollistuminen kasvatti Kiovasta yhden '
+             + 'keisarikunnan suurimmista kaupungeista. Arsenalnan '
+             + 'metroasema on 105,5 metriä maanpinnan alapuolella, '
+             + 'pitkään maailman syvin. Kaupungin epävirallinen tunnus on '
+             + 'hevoskastanja, joka kukkii toukokuussa valkoisin, '
+             + 'punatäpläisin kukkatertuin.',
     teksti: 'Kiovaa on kutsuttu itäslaavilaisten kaupunkien äidiksi. '
               + 'Keskiajalla se oli Kiovan Rusin keskus: valtakunnan, joka '
               + 'ulottui Itämereltä Mustallemerelle. Ruhtinas Vladimir '
@@ -1650,12 +1771,42 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkkeen johdatus
+   * (~700–1100 mrk) kolmessa kappaleessa ('\n\n') ja 1–3 maltillista
+   * **lihavointia**; renderöijä tekee kappaleet ja boldit, joten HTML:ää
+   * ei kirjoiteta tänne. Faktat ovat Odessan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan Odessa,
+   * nahtavyysjutut.js, maakartat.js, oma teksti-kenttä alla).
+   * SISÄLTÖLINJAUS (omistaja 20.8.2026): introssa EI nykysotaa eikä
+   * nykypolitiikkaa — painopiste on 1800-luvun satama- ja
+   * kauppakaupungissa, kulttuurissa ja arkkitehtuurissa.
+   * teksti on ennallaan.
+   */
   Odessa: {
     intro: 'Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, '
-             + 'ja siellä asuu noin miljoona ihmistä. Kaupunki perustettiin '
-             + 'vasta vuonna 1794, joten se on Ukrainan mittapuulla nuori — '
-             + 'mutta se kasvoi sadassa vuodessa yhdeksi keisarikunnan '
-             + 'suurimmista kaupungeista.',
+             + 'ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja '
+             + 'suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan '
+             + 'Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi '
+             + 'ranskalainen insinööri F. de Volan. Rannikko päättyy täällä '
+             + 'jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka '
+             + 'päällä tasainen aro.'
+             + '\n\n'
+             + '**Vapaasatamana** Odessa eli lähes neljäkymmentä vuotta '
+             + 'vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja '
+             + 'sadassa vuodessa kaupungista kasvoi keisarikunnan '
+             + 'neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. '
+             + 'Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi '
+             + 'oma puhetapa ja oma huumori. Talot muurattiin '
+             + 'simpukkakalkkikivestä, jota louhittiin suoraan kaupungin '
+             + 'alta, ja käytäviä kertyi arviolta 2 500 kilometriä.'
+             + '\n\n'
+             + 'Merestä keskustaan nousevat **Potjomkinin portaat** '
+             + 'rakennettiin vuosina 1837–1841; niiden 192 askelmaa on '
+             + 'aseteltu niin, että alhaalta katsoen portaat näyttävät '
+             + 'lyhyiltä. Oopperatalo avattiin 1887 ja oli kaupungin '
+             + 'ensimmäinen rakennus, johon asennettiin sähkövalot.',
     teksti: 'Odessa rakennettiin turkkilaisen linnoituksen paikalle '
               + 'keisarinna Katariina II:n päätöksellä. Kadut vedettiin suoraan '
               + 'ruudukkoon, ja kaupunkia kehitti vuosina 1803–1814 '

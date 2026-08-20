@@ -4601,25 +4601,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/sofia-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.705, etela: 42.681, lansi: 23.312, ita: 23.345 },
-    esittely: 'Sofia on tasaisessa laaksossa noin 550 metrin '
-      + 'korkeudessa. Etelässä kohoaa Vitosha-vuori ja pohjoisessa '
-      + 'Balkanvuoret, ja niiden välinen sola on ollut kulkureitti '
-      + 'Keski-Euroopasta Istanbuliin. Kaupunki syntyi silti veden '
-      + 'takia: maan alla on 49 kivennäis- ja lämpölähdettä, ja '
-      + 'roomalaiset rakensivat niiden ympärille kaupungin nimeltä '
-      + 'Serdica. Keskustan hanoista tulee yhä lämmintä lähdevettä. '
-      + 'Isoa jokea täällä ei ole, vain kaksi pientä: Vladajska ja '
-      + 'Perlovska.\n\nKartalla sen näkee heti: leveät bulevardit '
-      + 'lähtevät keskustasta säteinä joka suuntaan kuin pyörän puolat, '
-      + 'eikä yksikään joki katkaise niitä. Keskeltä oikealta erottuu '
-      + 'soikea aukio, ja sen keskellä seisoo Aleksanteri Nevskin '
-      + 'katedraali. Alaoikealla kulkee vinosti vaalea nauha: se on '
-      + 'Perlovska, joka on kaivettu aivan suoraksi. Nauhan takana '
-      + 'levittäytyy Borisovan puutarha polkuineen ja järvineen. '
-      + 'Alavasemmalla on iso aukea, jonka reunassa kohoaa '
-      + 'Kansalliskulttuuripalatsi. Vanha keskusta on ylhäällä '
-      + 'vasemmalla, mutta se ei erotu: siellä kadut vain tihenevät. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, nauhojen ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Sofian keskusta, joka syntyi lämpimien '
+      + 'lähteiden ympärille: maan alla on 49 kivennäis- ja '
+      + 'lämpölähdettä, ja roomalaiset rakensivat niiden päälle '
+      + 'Serdican. Lähteiden kohdalla seisoo vuonna 1913 valmistunut '
+      + 'mineraalikylpylä, jossa toimii nyt kaupunginmuseo, ja aivan '
+      + 'sen tuntumassa kaupungin vanhin rakennus eli 300-luvun Pyhän '
+      + 'Yrjön rotunda. Idässä ovat Aleksanteri Nevskin katedraali ja '
+      + 'Sofian yliopisto, joka aloitti 1888. Kaakossa levittäytyy '
+      + 'Borisovan puutarha vuodelta 1884 ja etelässä '
+      + 'Kansalliskulttuuripalatsi. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään.
@@ -4658,25 +4656,24 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
         x: 3, y: 9, leveys: 26, korkeus: 24.86 },
     ],
-    esittely: 'Bukarest on keskellä Valakian tasankoa, Karpaattien ja '
-      + 'Tonavan välissä. Tonavalle on täältä noin 60 kilometriä '
-      + 'etelään. Kaupunki kasvoi Dâmbovița-joen varteen: joki toi '
-      + 'veden, ja ympärillä oli tammimetsää ja soita, joiden suojaan '
-      + 'oli helppo kadota. Ensimmäisen kerran Bukarest mainitaan '
-      + 'asiakirjassa vuonna 1459, ja sen antoi ruhtinas Vlad III. '
-      + 'Dâmbovița on 286 kilometriä pitkä ja laskee '
-      + 'Argeș-jokeen.\n\nKartan halki kulkee vaalea, hämmästyttävän '
-      + 'suora nauha. Se on Dâmbovița, joka kaivettiin 1880-luvulla '
-      + 'suoraksi kanavaksi, jottei se enää tulvisi. Ylhäällä '
-      + 'vasemmalla on iso vihreä laikku ja sen keskellä mutkitteleva '
-      + 'järvi: Cișmigiun puutarha. Oikealla erottuu sokkelo kapeita '
-      + 'kujia — se on vanhakaupunki, ainoa osa Bukarestia, jossa kadut '
-      + 'eivät ole suoria. Alhaalla vasemmalla ammottaa outo tyhjä '
-      + 'alue: siellä seisoo Parlamenttipalatsi, jonka tieltä purettiin '
-      + 'kokonainen kaupunginosa. Vasemmassa ylänurkassa on oma pieni '
-      + 'kartta kilometrin päästä pohjoisesta, ja sen tähtimäisessä '
-      + 'risteyksessä seisoo Antipan museo. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, nauhojen ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Bukarestin keskusta Dâmbovița-joen '
+      + 'molemmin puolin. Pohjoisessa on Romanian ateneum, vuonna 1888 '
+      + 'vihitty konserttitalo, ja sen lounaispuolella Cișmigiun '
+      + 'puutarha, kaupungin vanhin puisto vuodelta 1847. Keskellä ovat '
+      + 'Yliopiston aukio vuodelta 1857 ja vanhakaupunki, jossa '
+      + 'seisovat Stavropoleoksen luostarikirkko vuodelta 1724 ja '
+      + 'Vanhan ruhtinaanhovin rauniot — Valakian ruhtinaiden linna '
+      + 'vuodelta 1459. Lounaassa kohoaa Parlamenttipalatsi, jonka '
+      + 'tieltä purettiin kokonainen kaupunginosa. Kainalokartassa on '
+      + 'Antipan luonnontieteellinen museo kilometrin päässä '
+      + 'pohjoisessa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: ateneumilta vanhaankaupunkiin
@@ -4717,24 +4714,24 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/sarajevo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
-    esittely: 'Sarajevo on kapeassa laaksossa noin 500 metrin '
-      + 'korkeudessa. Laakson pohjalla virtaa Miljacka-joki, ja joka '
-      + 'suunnalla kohoaa vuoria: Trebević, Jahorina, Bjelašnica ja '
-      + 'Igman. Samoilla vuorilla hiihdettiin talviolympialaisissa '
-      + 'vuonna 1984. Kaupunki syntyi kohtaan, jossa vuoristotie ylitti '
-      + 'joen ja maasta nousi lähteitä. Osmanien käskynhaltija Isa-beg '
-      + 'Ishaković rakennutti tänne 1460-luvulla basaarin, sillan ja '
-      + 'majatalon, ja niiden ympärille kasvoi kaupunki. Nimi tulee '
-      + 'turkin sanasta saray, joka tarkoittaa hallitsijan '
-      + 'taloa.\n\nKartta on leveä ja matala, koska laakso on: taloja '
-      + 'mahtuu vain idästä länteen. Miljacka kulkee kuvan halki '
-      + 'vaaleana nauhana ja tekee oikealla suuren mutkan, jossa laakso '
-      + 'kapenee rotkoksi. Joen yläpuolella rinne on täynnä ohuita '
-      + 'mutkittelevia katuja, jotka kiipeävät ylös. Alapuolella '
-      + 'Trebevićin rinne on melkein tyhjä: se on liian jyrkkä, ja '
-      + 'sinne nousee vain muutama serpentiinitie. Keskellä erottuu '
-      + 'tiheä kujaruudukko, ja se on Baščaršijan basaari. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, rinteiden ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Sarajevon vanha ydin Miljacka-joen '
+      + 'laaksossa, ja se kulkee lännestä itään kuten laaksokin. '
+      + 'Lännessä on Pyhän Sydämen katedraali vuosilta 1884–1889, ja '
+      + 'siitä itään alkaa Baščaršija, vuonna 1462 perustettu basaari, '
+      + 'jossa oli parhaimmillaan tuhansia puoteja. Basaarin laidalla '
+      + 'on Gazi Husrev-begin moskeija vuodelta 1531 ja joen rannassa '
+      + 'maurilaistyylinen kaupungintalo Vijećnica. Latinalaissilta on '
+      + 'nykyisessä asussaan vuosilta 1798–1799, ja sen pohjoispäässä '
+      + 'ammuttiin arkkiherttua Frans Ferdinand vuonna 1914. Idässä '
+      + 'kalliolla seisoo Keltainen linnake, 1700-luvun tykkilinnoitus, '
+      + 'jolta näkyy koko vanhakaupunki. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi lännestä itään, koska laakso kulkee niin.
@@ -4773,25 +4770,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kiova-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.47, etela: 50.44, lansi: 30.499, ita: 30.539 },
-    esittely: 'Kiova seisoo Dneprin länsirannalla, kohdassa jossa joen '
-      + 'törmä nousee jyrkäksi kukkulaksi. Paikka valittiin kahdesta '
-      + 'syystä. Kukkulan laella oli helppo puolustautua, ja sen '
-      + 'juurella, joen rannassa, oli suojaisa satama. Dnepr oli '
-      + 'keskiajan valtatie: sitä pitkin kuljettiin pohjoisen metsistä '
-      + 'etelän kaupunkeihin, ja Kiova oli matkan puolivälissä. Siksi '
-      + 'kaupunki kasvoi kahteen kerrokseen: ylhäällä kirkkojen ja '
-      + 'porttien yläkaupunki, alhaalla Podil eli alakaupunki.\n\nKartan '
-      + 'yläreunassa on Podilin suora ruudukko aivan joen rannassa. Sen '
-      + 'alapuolella levittäytyy vaalea vihreä vyö: se on jyrkkä rinne, '
-      + 'jota pitkin noustaan ylös. Rinteen laella kadut kiemurtelevat, '
-      + 'ja siellä ovat kartan vanhimmat kohteet. Oikeassa yläkulmassa '
-      + 'kaartaa Dnepr. Se on niin leveä, ettei kartta piirrä sitä '
-      + 'yhtenä vetenä: näkyviin tulevat vain sen rannat omina '
-      + 'viivoinaan, ja niiden väliin jäävä vaalea kaista on itse joki. '
-      + 'Keskeltä lähtee alaviistoon leveä '
-      + 'katu, Hreštšatyk: se on 1,2 kilometriä pitkä ja kulkee '
-      + 'Itsenäisyyden aukion halki. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, rinteiden ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Kiovan vanha ydin Dneprin länsirannalla, '
+      + 'ja se on kahdessa kerroksessa: rannassa alakaupunki Podil, '
+      + 'jyrkän rinteen päällä yläkaupunki. Podilissa on Kontraktovan '
+      + 'aukio, seudun vilkkain kauppapaikka 1800-luvulla. Rinteen '
+      + 'laella seisovat Andreaksen kirkko vuosilta 1747–1754, Pyhän '
+      + 'Mikaelin kultakupolinen luostari ja Pyhän Sofian katedraali, '
+      + 'joka valmistui ilmeisesti vuonna 1037 ja kuuluu Unescon '
+      + 'maailmanperintöön. Etelämpänä ovat Itsenäisyyden aukio ja '
+      + 'Kultainen portti, kaupunginmuurin pääsisäänkäynti '
+      + '1000-luvulta, joka rakennettiin uudelleen 1982. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: Podilista rinnettä ylös
@@ -4958,23 +4953,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/odessa-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
-    esittely: 'Odessa on Mustanmeren rannalla kohdassa, jossa maa loppuu '
-      + 'jyrkkään törmään. Törmän alla on suojainen lahti, johon laivat '
-      + 'pääsevät tuulelta piiloon, ja törmän päällä on tasainen aro, '
-      + 'jolle mahtuu kokonainen kaupunki. Satamalle annettiin käsky '
-      + 'vuonna 1794, ja siitä lasketaan Odessan ikä. Kaupunki oli heti '
-      + 'kauppasatama: viljalastit tulivat aroa pitkin ja lähtivät '
-      + 'täältä laivoilla maailmalle. Talot tehtiin '
-      + 'simpukkakalkkikivestä, jota louhittiin suoraan kaupungin '
-      + 'alta.\n\nKartan oikea kolmannes on merta. Yläreunassa on '
-      + 'satama: laiturit työntyvät veteen kuin sormet, ja niiden '
-      + 'ulkopuolella kaartaa aallonmurtaja, jonka kärjessä seisoo '
-      + 'majakka. Vasemmalla ja alhaalla levittäytyy suora ruudukko. Se '
-      + 'ei ole kasvanut itsekseen vaan piirrettiin kerralla valmiiksi, '
-      + 'ja siksi kadut jatkuvat suorina kilometrikaupalla. Ruudukon ja '
-      + 'sataman välissä on jyrkkä rinne, ja sitä ylös nousevat '
-      + 'Potjomkinin portaat. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, ruudukon ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Odessan keskusta ja satama meren äärellä. '
+      + 'Sataman suulla seisoo Vorontsovin majakka, jonka valo vilkkuu '
+      + 'kolme pitkää — morseaakkosten O niin kuin Odessa. Sataman ja '
+      + 'keskustan välillä nousevat Potjomkinin portaat vuosilta '
+      + '1837–1841, ja niiden yläpuolelta alkaa ruutukaava, jonka '
+      + 'ranskalainen insinööri piirsi kerralla valmiiksi. Keskustassa '
+      + 'ovat vuonna 1887 avattu oopperatalo ja Kaupunginpuisto, '
+      + 'kaupungin vanhin puisto vuodelta 1803. Etelämpänä on Privozin '
+      + 'tori vuodelta 1827, Odessan suurin ruokatori. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: majakalta satamaan, portaita
