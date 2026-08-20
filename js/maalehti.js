@@ -680,7 +680,12 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
    * yhteyteen, jota se houkuttelee lukemaan, ja seuraavasta
    * nostosta poimittuna se tekee juuri sen.
    */
-  const nostoVirke = sitaatti ? poimiNostoVirke((kategoria.nostot ?? []).slice(1, 2)) : null;
+  // Sivu voi kieltää sitaattinoston itse (kategoria.sitaatti: false):
+  // kehittäjän liitteet ovat työkaluja, ei taittoa (omistaja 20.8.2026:
+  // "näitä ei ole tarkoitus taittaa lehden muotoon vaan mahdollisimman
+  // käytettävään muotoon").
+  const sitaattiSallittu = sitaatti && kategoria.sitaatti !== false;
+  const nostoVirke = sitaattiSallittu ? poimiNostoVirke((kategoria.nostot ?? []).slice(1, 2)) : null;
   let ensimmainen = true;
   let nostoSijoitettu = false;
   for (const nosto of kategoria.nostot ?? []) {

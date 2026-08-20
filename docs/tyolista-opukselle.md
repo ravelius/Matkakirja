@@ -116,7 +116,10 @@ kohteisiin (linjaus 17.8.) — vain lehdet.
    tarkista-savukkeet, kartallisille tarkista-karttapisteet.
 2. `git fetch origin main` JUURI ennen versionumeron valintaa,
    sitten `node tools/uusi-versio.mjs "vNNN: viesti"` (max 60 mrk).
-3. TESTATTAVAA-rivi (pitkä muoto, uusin ensin) ja TUOREET-taulu
+3. TESTATTAVAA-rivi (LYHYT: "vNNN — mitä tuli: mitä testata",
+   enintään pari riviä — omistajan linjaus 20.8.2026: "ihan liian
+   pitkiä sepostuksia" — yksityiskohdat kuuluvat PR-kuvaukseen,
+   eivät peliin) ja TUOREET-taulu
    (valmistuneet kärkeen versioineen, työn alla ajan tasalle)
    js/tyohuone-tilanne.js:ään — tätä tiedostoa päivittää VAIN
    pääsessio, eivät aliagentit.
