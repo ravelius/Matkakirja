@@ -17585,4 +17585,360 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PERSEPOLIKSEN NÄHTÄVYYSJUTUT (20.8.2026). Lehti on v932:sta, mutta
+   * kohdekartta puuttui siitä kokonaan, koska Overpass oli alhaalla —
+   * nämä kahdeksan juttua kirjoitettiin vasta kartan kanssa.
+   *
+   * JUTUT ON KIRJOITETTU LEHDEN VIERELLE, EIVÄT SEN PÄÄLLE. Lehden
+   * nostot kertovat jo portin mitat, valtaistuinsalin koon ja
+   * linnoitusmuurin savitaulut, joten samat luvut eivät ole enää tässä.
+   * Jokaiselle kohteelle on etsitty se osa lähdettä, jota lehdessä EI
+   * ole: portille Artakserkses III:n kesken jäänyt tie, valtaistuin-
+   * salille sen käyttö (sotapäälliköiden vastaanotto, myöhemmin
+   * keisarillinen museo), aarrekammiolle SEN OMA arkisto, joka on eri
+   * arkisto kuin lehden nostossa oleva linnoitusarkisto — ja jonka
+   * sisältö on päinvastainen: hopeaa annosten sijaan.
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA, JOTKA RATKAISTIIN NÄIN:
+   *
+   * 1. Apadanan pinta-ala. Apadana-artikkeli sanoo salin olevan
+   *    1 000 neliömetriä, mutta Tachara-artikkeli sanoo Tacharan
+   *    1 160 neliömetriä olevan terassin palatsirakennuksista PIENIN,
+   *    ja Persepolis-artikkeli sanoo Apadanan olevan terassin suurin
+   *    rakennus. Luvut eivät voi olla yhtä aikaa tosia, joten Apadanan
+   *    pinta-alaa ei kerrota lainkaan; Tacharan luku on mukana, koska
+   *    se on ristiriidatta artikkelinsa oma.
+   * 2. Apadanan tuhovuosi. Apadana-artikkeli sanoo 331 eKr., Persepolis-
+   *    artikkeli 330 eKr. Teksteissä on 330, koska se on pääartikkelin
+   *    luku, se on ajoitettu tapahtumaketjuun (Persian porttien taistelu
+   *    ja sitä seurannut ryöstö) ja koska lehti käyttää jo sitä.
+   * 3. Hadishin pinta-ala. Persepolis-artikkeli sanoo 2 550 neliömetriä
+   *    ja antaa mitoiksi 40 × 55 metriä, mutta 40 × 55 on 2 200. Luku
+   *    annetaan siksi tekstissä pyöristettynä ("noin kaksi ja puoli
+   *    tuhatta") eikä tarkkana.
+   *
+   * SIJAINTIHUOMIO. Persepolis-artikkeli listaa Kolmen oven salin
+   * niiden rakennusten joukkoon, jotka ovat "terassin kaakkoisnurkan
+   * lähellä vuoren juurella", mutta OSM:n oma alue (way 95531793) on
+   * terassin keskellä. Kartan piste noudattaa koordinaattia
+   * (ennakkotapaus: koordinaatit voittavat leipätekstin sijaintiarviot),
+   * eikä juttu väitä salin sijainnista mitään.
+   *
+   * KUVAT: kahdeksan kuvaa, jokainen katsottu silmin 900 px:n
+   * esikatselusta ja lisenssi luettu rajapinnasta. Yksikään ei ole
+   * lehden jo käyttämistä kahdestakymmenestä. Kaksi hylkäystä on
+   * kirjattu: Luigi Pescen 1850-luvun valokuvissa (MET, CC0) on
+   * kuvaan kuulumaton merkintä — toisessa käsin kirjoitettu signeeraus
+   * vasemmassa alanurkassa, toisessa albumin paspartuu ja musta palkki
+   * alareunassa.
+   */
+  persepolis: {
+    'Kaikkien kansojen portti': {
+      aika: 'Xerxes I, 486–465 eKr.',
+      teksti: 'Portin nimi tulee sen omasta seinästä. Rakennuksessa on '
+          + 'piirtokirjoitus, jota tutkijat kutsuvat lyhenteellä XPa, ja '
+          + 'juuri se kertoo kyseessä olevan kaikkien kansojen portti — '
+          + 'muinaispersiaksi duvarthim visadahyum. Toinen käytössä oleva '
+          + 'nimi on Xerxesin portti, koska rakennuttaja oli Xerxes I, '
+          + 'Persepoliksen perustajan Dareios I:n seuraaja. Portti on '
+          + 'siis nuorempi kuin terassi, jolla se seisoo.'
+          + '\n\n'
+          + 'Rakennus on yksi ainoa sali eikä porttiholvi. Sisäänkäynti '
+          + 'on länsiseinässä, eli sinne astutaan suoraan terassille '
+          + 'nousevan portaikon päästä, ja salin katon kannatti neljä '
+          + 'pylvästä. Oviaukkoja vartioivat lamassut, siivekkäät '
+          + 'härkähahmot, joilla on parrakkaat ihmiskasvot.'
+          + '\n\n'
+          + 'Portilta lähti itään tie kohti Sadan pylvään salia, mutta '
+          + 'sitä ei koskaan saatu valmiiksi. Artakserkses III aloitti '
+          + 'sekä tien että uuden portin sen varrelle, ja molemmat jäivät '
+          + 'kesken hänen kuoltuaan. Juuri siksi ne ovat arkeologeille '
+          + 'arvokkaita: keskeneräisestä työmaasta näkee, missä '
+          + 'järjestyksessä Persepolista rakennettiin.',
+      kuvat: [
+        {
+          tiedosto: 'Persepolis – Gate of All Nations 02.jpg',
+          selite: 'Portti alaviistosta: etualalla lamassu, jolla on '
+            + 'kiharaksi veistetty parta ja sulkakuvioinen siipi, sen '
+            + 'takana portin korkea kivimuuri ja keskellä yksi pystyssä '
+            + 'oleva uurrettu pylväs pylväänpäineen. Oikealla häämöttää '
+            + 'toinen ovenpieli ja takana paljas vuorenrinne.',
+          lahde: 'Skot, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Artakserkses III:n hauta': {
+      aika: 'n. 358–338 eKr.',
+      teksti: 'Terassin takana vuoren kyljessä on kolme kallioon '
+          + 'louhittua hautaa. Kaksi on valmiita ja kolmas jäi kesken '
+          + 'kilometrin päähän. Kenen haudat ovat, ei lue missään, vaan '
+          + 'nimet päätellään: Ktesias kertoo, että kuningas valmistutti '
+          + 'hautansa eläessään, ja Naqsh-e Rustamin neljä hautaa on '
+          + 'tavallisesti luettu Dareios I:lle, Xerxes I:lle, '
+          + 'Artakserkses I:lle ja Dareios II:lle. Jäljelle jäävät '
+          + 'Artakserkses II ja Artakserkses III, ja heille nämä kaksi '
+          + 'valmista hautaa annetaan.'
+          + '\n\n'
+          + 'Artakserkses III rakensi Persepolikseen myöhään: hän pystytti '
+          + 'oman palatsinsa, louhi hautansa isänsä haudan viereen ja '
+          + 'aloitti pitkiä hankkeita, jotka jäivät kesken — keskeneräisen '
+          + 'portin ja kolmenkymmenenkahden pylvään salin, jonka '
+          + 'käyttötarkoitusta ei tiedetä. Kuninkaan murha ja sitä '
+          + 'seurannut sekasorto katkaisivat rakennustyöt, ja valtakunta '
+          + 'kaatui pian Aleksanterin joukoille.'
+          + '\n\n'
+          + 'Haudan yläreliefissä kuningas seisoo korokkeella tulialttarin '
+          + 'ääressä, ja korokkeen kantavat valtakunnan eri kansojen '
+          + 'sotilaat riveissä. Naapurihaudassa, Artakserkses II:n, sama '
+          + 'aihe on tehty vielä yksityiskohtaisemmin: jokaisen kantajan '
+          + 'yläpuolelle on kaiverrettu kolmikielinen teksti, joka kertoo '
+          + 'mistä kansasta hahmo on. Ne tunnetaan yhdessä nimellä '
+          + 'A2Pa-piirtokirjoitus.',
+      kuvat: [
+        {
+          tiedosto: 'Persepolis - Tomb of Artaxerxes III 03.jpg',
+          selite: 'Haudan yläreliefi läheltä: kuningas seisoo korokkeella '
+            + 'kädet koholla, edessään on tulialttari ja yläpuolella '
+            + 'siivekäs kiekko ja kuunsirppi. Korokkeen alla on kaksi '
+            + 'riviä pieniä hahmoja kädet ylhäällä, ja koko kuva-ala on '
+            + 'kehystetty kallioon louhittuun syvennykseen.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sadan pylvään sali': {
+      aika: 'Xerxes I aloitti, Artakserkses I sai valmiiksi 400-luvulla eKr.',
+      teksti: 'Sali on Apadanan naapuri ja terassin toiseksi suurin '
+          + 'rakennus. Se on myös yksi viimeisistä valmistuneista: '
+          + 'Xerxes I aloitti työn ja hänen poikansa Artakserkses I sai '
+          + 'sen päätökseen 400-luvun eKr. lopulla. Nimiä on kolme, ja ne '
+          + 'kertovat kukin oman puolensa — Sadan pylvään sali, '
+          + 'valtaistuinsali ja keisarillisen armeijan kunniasali.'
+          + '\n\n'
+          + 'Käyttö vaihtui kesken talon historian. Xerxes I:n '
+          + 'hallituskauden alussa salissa otettiin vastaan ennen kaikkea '
+          + 'sotapäälliköitä ja valtakunnan alamaiskansojen edustajia. '
+          + 'Myöhemmin siitä tuli keisarillinen museo: paikka, jossa '
+          + 'säilytettiin ja näytettiin sitä, mitä valtakunta oli '
+          + 'kerännyt.'
+          + '\n\n'
+          + 'Salin nimi jäi elämään pitempään kuin koko kaupungin nimi. '
+          + 'Sasanidiruhtinas Shapur Sakanshah kaiversi paikalle vuonna '
+          + '311 tekstin, jossa raunioita kutsutaan nimellä Sad-stūn eli '
+          + 'sata pylvästä — koko rauniokenttä oli siis saanut nimensä '
+          + 'tästä yhdestä salista. Keskiajalla käytössä oli myös nimi '
+          + 'Tšehel Minar, neljäkymmentä minareettia, joka syntyi '
+          + 'laskemalla pystyssä olevia pylväitä.',
+      kuvat: [
+        {
+          tiedosto: 'Bull statue in the northern facade, Hall of hundred columns Persepolis 2014.jpg',
+          selite: 'Salin pohjoissivu: oikealla kohoaa jättimäinen '
+            + 'kivihärkä, jonka pää, harja ja etujalat erottuvat '
+            + 'muurista, ja vasemmalla seisoo yksi kokonainen uurrettu '
+            + 'pylväs. Välissä on ovenpieliä ja katkenneita '
+            + 'pylväänjalustoja sorakentällä.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Apadana: {
+      aika: 'Dareios I aloitti, Xerxes I sai valmiiksi',
+      teksti: 'Apadana on Dareios I:n rakennuttama ja terassin suurin '
+          + 'rakennus, ja se seisoo alustan länsilaidalla. Suurkuningas '
+          + 'käytti sitä virallisiin vastaanottoihin. Sana apadana ei ole '
+          + 'erisnimi vaan rakennustyypin nimi: se tarkoittaa kivistä '
+          + 'pylvässalia, jollaisessa hallitsija otti vieraita vastaan. '
+          + 'Sana jäi elämään kauas alkuperäisestä — arabian sana fadan '
+          + 'ja armenian aparan-kʿ tarkoittavat molemmat palatsia ja ovat '
+          + 'samaa juurta.'
+          + '\n\n'
+          + 'Kattoa kannatti seitsemänkymmentäkaksi pylvästä, ja jokainen '
+          + 'niistä oli kaksikymmentäneljä metriä korkea. Vuoden 330 eKr. '
+          + 'jälkeen pylväitä alettiin purkaa rakennusaineeksi lähiseudun '
+          + 'kyliin, ja 1900-luvun alussa niistä oli pystyssä enää '
+          + 'kolmetoista. Yksi kaatunut mutta ehjä pylväs nostettiin '
+          + 'takaisin pystyyn 1970-luvulla, ja siitä tuli neljästoista.'
+          + '\n\n'
+          + 'Perustuksista löytyi 1930-luvun kaivauksissa kaksi '
+          + 'kivilaatikkoa, joissa oli kulta- ja hopeatauluja. Niihin on '
+          + 'kaiverrettu Dareioksen teksti, joka luettelee valtakunnan '
+          + 'rajat sakoista Sogdian takaa Kušiin ja Indusjoelta Lyydiaan. '
+          + 'Laatikoiden alta löytyi lisäksi kolikoita: kahdeksan '
+          + 'kultaista kroisoksenrahaa, Abderan tetradrakhma, Aiginan '
+          + 'stateeri ja kolme kyproslaista kaksoissiglosta. Ne on '
+          + 'haudattu noin vuonna 515 eKr. Joukossa ei ole ainuttakaan '
+          + 'dareikkia eikä siglosta eli persialaisten omaa rahaa, ja '
+          + 'siitä päätellään, että niitä alettiin lyödä vasta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'The Apadana, Persepolis, Iran (47727273482).jpg',
+          selite: 'Apadanan pystyssä olevat pylväät pilvistä taivasta '
+            + 'vasten. Etummaisen huipulla on murtunut pylväänpää, ja '
+            + 'takana rivissä viisi muuta. Alhaalla kulkee kolme kävijää '
+            + 'selin kameraan — heidän kokonsa kertoo, kuinka korkeita '
+            + 'pylväät ovat.',
+          lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
+            + 'Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kolmen oven sali': {
+      aika: 'Dareios I aloitti, Xerxes I sai valmiiksi',
+      teksti: 'Dareios I tilasi Persepolikseen kolme asiaa: Apadanan, '
+          + 'keisarillisen aarrekammion ympäristöineen ja tämän salin. '
+          + 'Kaikki kolme valmistuivat vasta hänen poikansa Xerxes I:n '
+          + 'aikana. Sali on näistä pienin ja vähiten tunnettu, mutta se '
+          + 'kuuluu siis terassin alkuperäiseen suunnitelmaan eikä ole '
+          + 'myöhempi lisäys.'
+          + '\n\n'
+          + 'Nimiä on kaksi, eikä kumpikaan ole rakennuksen oma. '
+          + 'Englanninkielinen Wikipedia kutsuu salia sekä neuvostosaliksi '
+          + 'että nimellä Tripylon, joka on kreikkaa ja tarkoittaa kolmea '
+          + 'porttia — suomeksi siis kolmen oven sali. Nimi kuvaa '
+          + 'rakennusta eikä sen käyttöä: mitä salissa tehtiin, ei ole '
+          + 'säilynyt missään tekstissä.'
+          + '\n\n'
+          + 'Persepoliksen rakennukset jakautuvat kolmeen ryhmään: '
+          + 'sotilastiloihin, aarrekammioon sekä vastaanottosaleihin ja '
+          + 'kuninkaan asuintiloihin. Kolmen oven sali kuuluu viimeiseen '
+          + 'ryhmään yhdessä Apadanan, valtaistuinsalin, Tacharan ja '
+          + 'Hadishin kanssa. Pystyssä siitä on enää ovenpieliä ja '
+          + 'pylväänjalustoja.',
+      kuvat: [
+        {
+          tiedosto: 'The ruins of the Tripylon (or Council Hall), Persepolis, Iran (47727258352).jpg',
+          selite: 'Salin rauniot: oikealla seisoo kokonainen kiveen '
+            + 'veistetty ovenpieli, jota tukee nykyaikainen '
+            + 'metalliteline, ja vasemmalla on katkenneita pylväitä ja '
+            + 'matalia perustuksia ruohikossa. Taustalla aukeaa tasanko '
+            + 'ja sen takana vuorijono.',
+          lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
+            + 'Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Aarrekammio: {
+      aika: 'Dareios I:n aikaa; kaivettu 1934–1939',
+      teksti: 'Aarrekammio on terassin kaakkoisosassa, ja se on yksi '
+          + 'Dareios I:n kolmesta alkuperäisestä tilauksesta. Nimi ei ole '
+          + 'antiikista vaan kaivauksilta: kun Erich Schmidtin ryhmä '
+          + 'kaivoi tätä rakennusryhmää 1930-luvulla, sieltä löytyi ohuita '
+          + 'kultalehtiä, ja sen mukaan koko kortteli ja sieltä löytyneet '
+          + 'savitaulut nimettiin.'
+          + '\n\n'
+          + 'Taulut kertovat palkanmaksusta. Suurin osa niistä koskee '
+          + 'hopeaa, joka maksettiin työläisille ja käsityöläisille '
+          + 'kokonaan tai osittain sen sijaan, että heille olisi annettu '
+          + 'luvattu annos lampaita, viiniä tai viljaa. Osa on hallinnon '
+          + 'kirjeitä, joissa määrätään maksu suoritettavaksi, ja osa '
+          + 'kuittauksia siitä, että maksu on tehty. Aineisto kattaa '
+          + 'kolmekymmentäviisi vuotta, 492–457 eKr., eli Dareios I:n '
+          + 'kolmannestakymmenennestä hallitusvuodesta Artakserkses I:n '
+          + 'seitsemänteen; tiheimmillään taulut ovat Xerxesin '
+          + 'yhdeksäntenätoista ja kahdentenakymmenentenä vuotena.'
+          + '\n\n'
+          + 'Juuri siinä on niiden merkitys. Sukupolvea vanhempi '
+          + 'linnoitusmuurin arkisto tuntee vain tavarana maksetun palkan '
+          + '— viiniä, olutta, viljaa, jauhoja ja lampaita — kun taas '
+          + 'aarrekammion taulut näyttävät, milloin lyöty hopearaha tuli '
+          + 'seudun talouteen. Matka museoon oli sekin oma lukunsa: taulut '
+          + 'pakattiin pieniin peltisiin savukerasioihin, jotka täytettiin '
+          + 'sahanpurulla, ennen kuin ne lähetettiin Teheraniin.',
+      kuvat: [
+        {
+          tiedosto: 'The Treasury, Persepolis, Iran (33902500738).jpg',
+          selite: 'Aarrekammion perustukset ylhäältä: matalat muurit '
+            + 'jakavat alueen huoneiksi ja käytäviksi, ja yhdessä salissa '
+            + 'on rivissä pyöreitä pylväänjalustoja. Muurien välissä '
+            + 'kasvaa ruohoa, vasemmalla ylhäällä näkyy pystyssä olevia '
+            + 'ovenpieliä ja takana kohoaa vuoren kivinen rinne.',
+          lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
+            + 'Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tachara: {
+      aika: 'Dareios I aloitti, valmistui 486 eKr. jälkeen',
+      teksti: 'Tachara on Dareios Suuren oma palatsi, terassin vanhin '
+          + 'rakennus ja parhaiten säilynyt. Hänen elinaikanaan siitä '
+          + 'valmistui vain pieni osa; loput teetti poika Xerxes isänsä '
+          + 'kuoltua vuonna 486 eKr., ja hän antoi rakennukselle '
+          + 'muinaispersialaisen nimen taçara, talvipalatsi. Myöhemmin '
+          + 'sitä käytti Artakserkses I. Vuoden 330 eKr. tulipalo ohitti '
+          + 'Tacharan lähes koskematta, ja siksi se seisoo yhä '
+          + 'kokonaisempana kuin mikään muu Persepoliksessa.'
+          + '\n\n'
+          + 'Kokoa se ei kuitenkaan ole: tuhat sataakuusikymmentä '
+          + 'neliömetriä eli terassin palatsirakennuksista pienin. '
+          + 'Päähuone on vain noin viisitoista metriä kumpaankin suuntaan, '
+          + 'ja siinä on kolme riviä ja kussakin neljä pylvästä. Kivi on '
+          + 'parasta harmaata laatua ja kappaleet ovat valtavia: yksi '
+          + 'kokonainen ikkuna on veistetty yhdestä lohkareesta, mitat '
+          + 'ovat 2,65 × 2,65 × 1,70 metriä ja paino kahdeksantoista '
+          + 'tonnia. Ovenpieli tehtiin kolmesta erillisestä lohkareesta, '
+          + 'ja ne painavat yhteensä seitsemänkymmentäviisi tonnia.'
+          + '\n\n'
+          + 'Reliefeissä toistuu hovin arki. Keihäsmiehillä on suuret '
+          + 'suorakaiteen muotoiset pajukilvet, palvelijat kantavat '
+          + 'pyyhettä ja hajuvesipulloa, ja kuninkaallinen sankari surmaa '
+          + 'leijonia ja hirviöitä. Pääoven pielessä Dareios I:llä on '
+          + 'harjamainen kruunu, joka on päällystetty kultalevyillä. '
+          + 'Palatsi seisoo selkä selkää vasten Apadanan kanssa ja '
+          + 'aukeaa etelään; eteläpihalle laskee kaksoisportaikko, ja '
+          + 'Artakserkses III lisäsi myöhemmin toisen luoteispuolelle. '
+          + 'Nimestä huolimatta talon käyttö oli enemmän seremoniallista '
+          + 'kuin asumista.',
+      kuvat: [
+        {
+          tiedosto: '2018-09-21 Iran, Persepolis, Tachara (from the southeast).jpg',
+          selite: 'Tachara kaakosta: alhaalla kulkee terassin muuri, '
+            + 'jonka kylkeen on veistetty rivi hahmoja astiat käsissään, '
+            + 'ja muurin päällä seisovat pystyssä olevat ovenpielet ja '
+            + 'ikkuna-aukot suorina riveinä. Katto ja seinät puuttuvat, '
+            + 'joten aukoista näkyy pelkkä taivas.',
+          lahde: 'Laurens R. Krol, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hadishin palatsi': {
+      aika: 'Xerxes I, 486–465 eKr.',
+      teksti: 'Hadish oli Xerxes I:n oma palatsi, ja se on terassin '
+          + 'ylimmällä tasolla. Alustaa ei tarvittu, sillä rakennus '
+          + 'seisoo suoraan paljaan kallion päällä. Sen piirtokirjoitukset '
+          + 'sanovat sen olevan Xerxesin määräyksestä rakennettu, joten '
+          + 'rakennuttajasta ei tarvitse päätellä mitään. Pinta-alaa on '
+          + 'noin kaksi ja puoli tuhatta neliömetriä.'
+          + '\n\n'
+          + 'Palatsi on kiinni naapureissaan. Idässä on Artakserkses I:n '
+          + 'palatsi, lännestä laskee kaksoisportaikko Tacharan pihalle ja '
+          + 'koillisesta toinen portaikko Kolmen oven salin pihalle. '
+          + 'Hadish oli siis Dareioksen palatsin ja neuvostosalin välissä, '
+          + 'korkeimmalla kohdalla koko terassia.'
+          + '\n\n'
+          + 'Juuri täältä tulipalon uskotaan lähteneen. Vuonna 330 eKr. '
+          + 'liekit nousivat kertomusten mukaan Xerxesin asuintiloista ja '
+          + 'levisivät sieltä muualle terassille. Oliko palo vahinko vai '
+          + 'tahallinen, ei ole tiedossa — lähteet ovat vuosisatoja '
+          + 'tapahtumaa myöhäisempiä eivätkä yksimielisiä.',
+      kuvat: [
+        {
+          tiedosto: 'Palace of Xerxes, Persepolis.jpg',
+          selite: 'Hadishin pystyssä olevat ovenpielet ja ikkuna-aukot '
+            + 'rivissä pilvistä taivasta vasten. Aukkojen läpi näkyy '
+            + 'tasanko ja kaukana vuorijono, ja etualalla on kivilaattaa '
+            + 'ja ruohoa.',
+          lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

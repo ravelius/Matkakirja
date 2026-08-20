@@ -2944,6 +2944,18 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Saudi-Arabian kansallismuseo', lat: 24.6472, lon: 46.7108 },
     ],
   },
+  /*
+   * LUXORIN PNG PIIRRETTIIN UUDELLEEN 20.8.2026, ja rajat ovat
+   * tarkoituksella ennallaan. Vanha kuva oli laiha, koska temppelialueet
+   * ovat OSM:ssä historic=ruins / archaeological_site -alueita, joita
+   * piirtäjä ei silloin hakenut; nyt hakee, ja luxor-rajaus sai
+   * rauniokaupunki-lipun (tools/piirra-kaupunkikartta.mjs). Muutos on
+   * mitattu: tarkista-karttapisteet luki ennen viisi kuudesta pisteestä
+   * paljaalta paperilta (#f6eeda), nyt neljä kuudesta osuu rauniolaikun
+   * päälle (#ece0c2). Alla oleva esittely kuvaa siis vasta nyt sitä,
+   * mitä kuvassa oikeasti on: Karnakin muurin sisällä näkyvät pihat ja
+   * salit, ja Mutin piirin pyhä järvi erottuu hevosenkenkänä.
+   */
   luxor: {
     polku: 'assets/kartat/luxor-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -5652,6 +5664,83 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Siq', lat: 30.3232, lon: 35.4567 },
       { nimi: 'Al-Khazneh', lat: 30.3221, lon: 35.4515 },
       { nimi: 'Uhripaikka', lat: 30.3215, lon: 35.447 },
+    ],
+  },
+
+  /*
+   * PERSEPOLIS (20.8.2026). Lehti julkaistiin v932:ssa ILMAN karttaa,
+   * koska Overpass oli silloin alhaalla — tässä se puuttuva kartta.
+   *
+   * KOORDINAATIT OVAT OVERPASSISTA EIVÄTKÄ WIKIPEDIASTA, ja ero on
+   * kohteen mittainen. en-Wikipedian Gate of All Nations -artikkeli
+   * antaa portille pisteen 29,934444 / 52,891389, mutta OSM:ssä portti
+   * (way 95531813) on 29,93618 / 52,889078 eli 250 metriä koillisempana;
+   * Wikipedian piste osuisi tällä kartalla aarrekammion kohdalle.
+   * Apadanan artikkelin koordinaatti on sekin koko kohteen piste
+   * (29,935 / 52,890, lähteenä de-Wikipedia) eikä salin oma. Rajaus on
+   * 770 × 520 metriä, joten 250 metrin heitto olisi kolmannes kuvan
+   * leveydestä — Tokion kansallismuseon ennakkotapaus pätee tässäkin.
+   * Kaikki kahdeksan pistettä ovat siksi OSM:n rakennusalueiden
+   * keskipisteitä (haettu 20.8.2026).
+   *
+   * KAKSI KOHDETTA JÄI POIS TARKOITUKSELLA. Artakserkses II:n hauta on
+   * 200 metriä muita idempänä, ja koska se on OSM:ssä historic=tomb eikä
+   * ruins, piirtäjä ei hae sitä lainkaan: laajemmalla rajauksella kuvan
+   * oikea kolmannes oli tyhjää paperia yhden numeroympyrän ympärillä
+   * (kokeiltu ja katsottu). Persepoliksen museo on kartalla rakennuksena
+   * mutta ei kohteena — se on nykyrakennus, ja lehden kohteet ovat
+   * akhaimenidiaikaisia.
+   */
+  persepolis: {
+    polku: 'assets/kartat/persepolis-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 29.9372, etela: 29.9325, lansi: 52.8858, ita: 52.8938 },
+    esittely: 'Persepolis ei ole kaupunki vaan yksi rakennusryhmä. '
+      + 'Kreikkalaiset antoivat sille nimen Persepolis eli persialaisten '
+      + 'kaupunki; persialaisten omalla kielellä paikka oli Pārsa, sama '
+      + 'sana kuin koko maakunnan nimi. Vanhimmat jäänteet ovat vuodelta '
+      + '515 eKr. Dareios I rakennutti terassin ja sen ensimmäiset '
+      + 'palatsit, ja rakentaminen jatkui valtakunnan loppuun asti. '
+      + 'Terassi on 125 000 neliömetriä: osa siitä on muurattu tasangolle '
+      + 'ja osa louhittu Rahmat-vuoren kylkeen, ja päämateriaali oli '
+      + 'harmaa kalkkikivi. Hallinnon todelliset pääkaupungit olivat '
+      + 'muualla — Susa, Babylon ja Ekbatana — ja se selittää, miksi '
+      + 'kreikkalaiset eivät tunteneet paikkaa ennen kuin Aleksanteri '
+      + 'valtasi sen vuonna 330 eKr. Sen jälkeen katosi nimikin: '
+      + 'sasanidiruhtinas Shapur Sakanshah kutsui raunioita vuonna 311 '
+      + 'nimellä Sad-stūn eli sata pylvästä, ja keskiajalla ne olivat '
+      + 'Tahti Jamshid, Jamshidin valtaistuin, ja Tšehel Minar, '
+      + 'neljäkymmentä minareettia. Vieressä virtaa pieni Pulvar-joki, '
+      + 'joka laskee Kur-jokeen.\n\nKartalla on koko kohde: vajaan '
+      + 'kahdeksansadan metrin levyinen pala tasankoa vuoren juurella. '
+      + 'Keskellä on terassi, ja sen reuna piirtyy sahalaitaisena. '
+      + 'Porrastus ei ole koriste vaan puolustusta: kulmikas tukimuuri '
+      + 'antoi puolustajille näkymän ulkosivun jokaiseen kohtaan, kuten '
+      + 'linnassa. Terassin sisällä ei ole katuja vaan ohuita viivoja, '
+      + 'jotka erottavat palatsit toisistaan — nämä viivat ovat '
+      + 'perustuksia eivätkä kujia. Luoteisnurkassa on kaksoisportaikko '
+      + 'ja sen päässä Kaikkien kansojen portti, josta jokainen astui '
+      + 'sisään. Idässä kartta nousee vuorelle: polut kiipeävät '
+      + 'rinnettä, ja niiden yläpäässä on Artakserkses III:n kallioon '
+      + 'louhittu hauta. Lännestä tullaan nykyistä tuloreittiä, jonka '
+      + 'varrella ovat lipunmyynti ja pysäköintialueet. Vasemmassa '
+      + 'alakulmassa erottuu tähtimäinen kaava pienen altaan ympärillä: '
+      + 'sinne pystytettiin vuonna 1971 telttakaupunki valtakunnan '
+      + 'kaksituhatviisisataavuotisjuhliin — viisikymmentä telttaa '
+      + 'tähtikuvioon suihkulähteen ympärille. Teltat ovat poissa, '
+      + 'mutta tiet ja allas ovat kartalla yhä. Alalaidassa kaivausalue '
+      + 'jatkuu terassin eteläpuolelle. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Petrassa ja Medinassa. */
+      { nimi: 'Kaikkien kansojen portti', lat: 29.93618, lon: 52.889078 },
+      { nimi: 'Artakserkses III:n hauta', lat: 29.935872, lon: 52.892459 },
+      { nimi: 'Sadan pylvään sali', lat: 29.9353, lon: 52.891028 },
+      { nimi: 'Apadana', lat: 29.935107, lon: 52.88951 },
+      { nimi: 'Kolmen oven sali', lat: 29.934664, lon: 52.890555 },
+      { nimi: 'Aarrekammio', lat: 29.934446, lon: 52.891737 },
+      { nimi: 'Tachara', lat: 29.934382, lon: 52.889554 },
+      { nimi: 'Hadishin palatsi', lat: 29.933952, lon: 52.890206 },
     ],
   },
 
