@@ -61,7 +61,13 @@ speksi täydentää tätä; ristiriidassa speksi voittaa.
   raporttiin kirjattuna.
 
 ## Mitat (mittaa koneellisesti ennen committia, taulukko raporttiin)
-- johdannot 154–232 mrk; nostot 440–660 mrk; nostoja 4 per sivu.
+- UUSI TEKSTILINJAUS (omistaja 20.8.2026, Raamatussa): JOHDANTO on
+  7–10 virkkeen johdatus kaupunkiin — millainen kaupunki on, mikä
+  sen merkitys ja historia; kaikki oleellinen alkuun (n. 700–1100
+  mrk). KUVATEKSTI (selite) on 1, korkeintaan 2 virkettä. Kohdekartan
+  esittelyteksti LYHYT — ei kartan kuvailua, vain oleellinen.
+  Nämä KORVAAVAT vanhat johdanto- ja seliterajat.
+- nostot 440–660 mrk; nostoja 4 per sivu.
 - kaupunkilehti: sivu `kaupunki` (johdanto, kansikuvat 3,
   avauskuvat 3, nostot 4, matkailijalle { kuva, kappale, artikkeli
   { nimi 'Matkailijan X', taitto 'opas', teksti, nosto, jaksot 5 } })

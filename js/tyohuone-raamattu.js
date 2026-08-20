@@ -516,6 +516,15 @@ export const RAAMATTU = {
           + 'kuvateksti sanoo mitä kuvassa näkyy. Edelleen EI '
           + 'taistelukuvia eikä uhreja. Korvaa aiemman "kuvat eivät '
           + 'saa näyttää tuhoja" -käytännön.',
+        'TEKSTIEN PAINOPISTE (omistaja 20.8.2026: "Kuvatekstit '
+          + 'liian pitkiä ja leipäteksti liian lyhyt"): lehden '
+          + 'JOHDANTO on 7–10 virkkeen johdatus — millainen kaupunki '
+          + 'on, mikä sen merkitys ja historia; kaikki oleellinen '
+          + 'alkuun. KUVATEKSTI on 1, korkeintaan 2 virkettä. '
+          + 'Kohdekartan esittelyteksti lyhyeksi: kartan kuvailu ei '
+          + 'ole oleellista tietoa. Korvaa vanhat mitat (johdanto '
+          + '154–232 mrk); vanhat lehdet kirjoitetaan uusiksi tähän '
+          + 'asuun erissä.',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
           + 'koskaan repoon eikä lokiin.',
       ],
