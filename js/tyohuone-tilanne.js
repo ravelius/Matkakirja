@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v957 — Tekstiremontti R2+R3: Jerusalem, Siinai, Persepolis, Rub al-Khali, Mosul, Halab, Damaskos, Luxor — introt 7–10 virkkeen johdatuksiksi kappalein ja boldauksin, 204 kuvatekstia yhteen virkkeeseen, karttaesittelyt lyhyiksi. Tarkista muutaman lehden etusivu',
   'v956 — Etusivun leipateksti kahdelle palstalle, kappaleisiin ja boldauksin; tekstiremontti R1: Medina ja Mekka (intro 7–10 virketta, kuvatekstit 1 virke, karttaesittely lyhyt) + Isfahanin ja Kioton kuvatekstit 1 virkkeeseen. Tarkista: Isfahan/Medina/Mekka etusivu',
   'v955 — Kioto: uusi lehti (kartta 10 kohteella, 8,0×9,3 km ruutukaava ilman kainaloa) — ensimmainen uudella tekstilinjalla alusta asti. Tarkista kartta, Matkaopas, Historian tehtava',
   'v954 — Delhi uusi lehti; Venäjä-erät V1+V3 (Jekaterinburg, Novosibirsk, Irkutsk kartat+opas; Vladivostok kartta+opas, Kamtšatka ja Sahalin opas); kartan valmiusvärit kehittäjätilaan (harmaa/keltainen); Isfahanin tekstiremontin PILOTTI (johdanto 7–10 virkettä, kuvatekstit 1–2). Tarkista: Isfahanin johdanto ja kuvatekstit, kartan värit, Delhi. Opaskuvien pystyvaihdot tulevat v955:ssä',
