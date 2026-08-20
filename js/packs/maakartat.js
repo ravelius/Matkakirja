@@ -6508,6 +6508,73 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pushkinin kirjasto', lat: 59.5592, lon: 150.8148 },
     ],
   },
+  /*
+   * DELHI (20.8.2026). Rajaus on Vanha Delhi eli Shahjahanabad:
+   * Punainen linnoitus idässä Yamunan rantaan asti, Chandni Chowk
+   * keskellä, Jama Masjid etelässä ja Delhi Junctionin ratapiha
+   * luoteessa. Delhin muut historialliset kaupungit ovat kaukana —
+   * Qutb Minar 15,6 km lounaassa ja Purana Qila 5 km etelässä — eikä
+   * mikään yksi ruutu kata niitä muuttumatta puuroksi (Soulin ja
+   * Shanghain oppi); ne kerrotaan historiasivun nostoissa ilman
+   * karttapistettä (Medinan Uhud-vuoren ratkaisu).
+   *
+   * KAINALOSSA HUMAYUNIN MAUSOLEUMI, 7 km etelään — ainoa
+   * kaukokohde, joka on lehdessä omana juttunaan. Kainalon korkeus
+   * 14,95 on piirtäjän tulosteesta (tools/piirra-kaupunkikartta.mjs),
+   * ei käsin kirjoitettu, ja prosentit ovat piirretystä kuvasta
+   * (laajennus 1,6; Helsingin muunnoskaava 18,75 + ydin × 0,625).
+   *
+   * Koordinaatit ovat kohteiden omista en-Wikipedian artikkeleista,
+   * ja ne on tarkistettu putken erillisessä tarkistusvaiheessa
+   * (haettu 20.8.2026). Delhin kaupungintalon suunta korjattiin
+   * tarkistuksessa: se on linnoituksesta luoteeseen, ei lounaaseen.
+   */
+  delhi: {
+    polku: 'assets/kartat/delhi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 28.6665, etela: 28.6455, lansi: 77.216, ita: 77.2495 },
+    piirtoRajat: { pohjoinen: 28.6728, etela: 28.6392, lansi: 77.20595, ita: 77.25955 },
+    kainalot: [
+      { rajat: { pohjoinen: 28.5985, etela: 28.588, lansi: 77.244, ita: 77.258 },
+        x: 67.5, y: 63.75, leveys: 12.5, korkeus: 14.95, suunta: '7 km etelään' },
+    ],
+    esittely: 'Delhi on rakennettu samalle Yamunan rannalle seitsemään '
+      + 'kertaan: perimätieto laskee seudulle seitsemän peräkkäistä '
+      + 'kaupunkia, joista legendaarisin on Mahabharatan Indraprastha '
+      + 'ja viimeisin keisari Shah Jahanin Shahjahanabad. Sen '
+      + 'muurikaupungin hän pystytti 1600-luvun puolivälissä: Punainen '
+      + 'linnoitus nousi joen törmälle vuosina 1638–1648, Jama Masjid '
+      + 'kaupungin korkeimmalle kohdalle ja Chandni Chowkin kauppakatu '
+      + 'niiden väliin. Vuoden 1857 kapinan jälkeen kaupunki siirtyi '
+      + 'Britannian kruunulle, ja 1911 sen eteläpuolelle alettiin '
+      + 'rakentaa New Delhiä, nykyisen Intian pääkaupunkia. '
+      + 'Muurikaupunki on silti yhä olemassa — se on Vanha Delhi, ja '
+      + 'juuri se on tällä kartalla.\n\n'
+      + 'Kartan itälaidassa erottuu Punaisen linnoituksen tumma '
+      + 'muurikehä ja sen takana Yamunan leveä uoma; linnoituksen '
+      + 'pohjoispuolella joen saarekkeella on Salimgarhin vanhempi '
+      + 'linnake. Länteen linnoituksesta lähtee Chandni Chowk suorana '
+      + 'viivana, ja sen molemmin puolin levittäytyy tiheä kujaverkko — '
+      + 'gali-kujat ovat kapeimmillaan parin metrin levyisiä, ja '
+      + 'kartalla ne piirtyvät hiusviivoina. Vasemmassa yläkulmassa '
+      + 'kaartuvat Delhi Junctionin ratapihan raiteet, ja ylälaidassa '
+      + 'kulkee katkonaisena tumma viiva: se on kaupunginmuurin '
+      + 'säilynyt pohjoiskaari. Oikean alakulman kainalossa on '
+      + 'Humayunin mausoleumi puutarhoineen seitsemän kilometrin '
+      + 'päässä etelässä. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
+      { nimi: 'Delhi Junction', lat: 28.661, lon: 77.2277 },
+      { nimi: 'Delhin kaupungintalo', lat: 28.6573, lon: 77.2275 },
+      { nimi: 'Fatehpuri-moskeija', lat: 28.6567, lon: 77.2225 },
+      { nimi: 'Chandni Chowk', lat: 28.656, lon: 77.231 },
+      { nimi: 'Punainen linnoitus', lat: 28.6558, lon: 77.2408 },
+      { nimi: 'Gurdwara Sis Ganj Sahib', lat: 28.6558, lon: 77.2325 },
+      { nimi: 'Jama Masjid', lat: 28.6507, lon: 77.2334 },
+      { nimi: 'Humayunin mausoleumi', lat: 28.5933, lon: 77.2507 },
+    ],
+  },
 };
 
 /*

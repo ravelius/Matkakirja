@@ -30113,6 +30113,435 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
+   * DELHI (Opus 20.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktapohja ja erillinen tarkistus kulkivat kolmiportaisen
+   * putken läpi, ja faktat on tarkistettu en-Wikipedian artikkeleista
+   * Delhi, History of Delhi, Red Fort, Jama Masjid Delhi, Chandni
+   * Chowk, Qutb Minar, Shahjahanabad, Fatehpuri Mosque, Delhi
+   * Junction railway station, Humayun's tomb, Delhi Town Hall,
+   * Gurdwara Sis Ganj Sahib, New Delhi, Delhi Metro ja Taj Mahal
+   * (haettu 20.8.2026).
+   *
+   * SISÄLTÖLINJAUS on Fablen Aasian-speksi 20.8.2026:
+   * siirtomaahistoria neutraalisti, vuoden 1857 kapina pelkkänä
+   * tapahtumaketjuna ilman uhrilukuja tai väkivallan yksityiskohtia
+   * (päivämäärät, valtaus, antautuminen, karkotus, takavarikot),
+   * ja jaon 1947 väkivaltaan ei viitata edes pakolaislukuina —
+   * lehden painopiste on 1600–1800-luvuissa. Guru Tegh Bahadurin
+   * kuolema kerrotaan nähtävyysjutussa yhdellä lauseella, koska
+   * pyhäkkö on olemassa juuri sen takia (Al-Baqin ennakkotapaus:
+   * kuva jäisi muuten selittämättä).
+   *
+   * KAKSI KORJAUSTA FAKTAPOHJAAN tarkistusraportin mukaisesti:
+   * 1) Punaisen linnoituksen marmoriväite oli faktapohjassa
+   *    väärinpäin — britit purkivat n. 80 % linnoituksen
+   *    RAKENNUKSISTA ja juuri marmoripaviljongit SÄILYIVÄT
+   *    (vaurioituneina). Teksti sanoo sen näin päin.
+   * 2) Delhin kaupungintalo on Punaisesta linnoituksesta LUOTEESEEN,
+   *    ei lounaaseen; suunnat on laskettu koordinaateista uudelleen.
+   *
+   * KAKSI RISTIRIITAA KIRJOITETTU VAROVASTI AUKI: Punaisen
+   * linnoituksen rakennustöiden alku on artikkelin leipätekstissä
+   * 1638 ja tietolaatikossa 1639 (K1 sanoo "lähteestä riippuen"),
+   * ja Ghantaghar-kellotornin pystytys on Chandni Chowk -artikkelissa
+   * 1870-luku mutta Delhi Town Hall -artikkelissa 1860-luku — lehti
+   * ei anna tornille vuosilukua, vaan sanoo altaan saaneen väistyä
+   * kellotornin tieltä.
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY (Mekan kolmen Jabal al-Nourin
+   * linja): Punainen linnoitus kolmena eri kuvana (avauskuvan
+   * panoraama, K1:n 1846 akvarelli ja jutun Naubat Khana), Jama
+   * Masjid kolmena (kannen siluetti, K2:n sisäpiha ylhäältä ja jutun
+   * julkisivu), Chandni Chowk kahtena (K3:n vanha postikortti ja
+   * jutun nykykatu), asema kahtena (K4 ja juttu), Humayun kahtena
+   * (matkailijan kuva ja jutun sisäkuva) ja Qutb Minar kahtena
+   * (kansi ja H2:n katos). Kaikki eri tiedostoja ja eri näkökulmia.
+   *
+   * 'Shahjahanabad or Modern Delhi 1911 map' -kuvan lähderivi on
+   * '(PD)': Commonsin rajapinta antaa lisenssiksi "No restrictions",
+   * joka tarkoittaa samaa (Mekan '273 of Mekka' -ennakkotapaus).
+   * 'Clock Tower Chandni Chowk' on vanha painettu postikortti, jonka
+   * alalaidassa on kustantajan oma otsikkorivi — se on julkaisijan
+   * oma litera, ja kuvateksti kertoo sen lukijalle (Snouck
+   * Hurgronjen litterat -ennakkotapaus).
+   */
+  delhi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Delhi',
+      johdanto: 'Samalle Yamunan rannalle on rakennettu kaupunki seitsemän '
+        + 'kertaa. Viimeisimmän muurikaupungin pystytti keisari Shah Jahan '
+        + '1600-luvulla, ja sen sydän sykkii yhä: Punainen linnoitus, Jama '
+        + 'Masjid ja Chandni Chowkin kauppakatu.',
+      kansikuvat: [
+        {
+          tiedosto: 'Jama Masjid during Sunset.jpg',
+          selite: 'Jama Masjid vastavalossa auringonlaskun aikaan: kupolit, '
+            + 'kaarimuuri ja kaksi minareettia piirtyvät mustana siluettina, '
+            + 'ja aurinko hehkuu keskikupolin takana.',
+          lahde: 'Sreejit Ghosh, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Shahjahanabad or Modern Delhi 1911 map.jpg',
+          selite: 'Painettu kartta vuodelta 1911: muurikaupunki Shahjahanabad '
+            + 'on punainen läiskä Yamunan länsirannalla, linnoitus sen '
+            + 'itäreunassa ja ympärillä puutarhoja ja kasarmialueita.',
+          lahde: 'Internet Archive Book Images, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Qutb Minar with Neem Tree.jpg',
+          selite: 'Qutb Minar alhaalta kuvattuna: uurrettu punainen '
+            + 'hiekkakivitorni kapenee kohti taivasta, ja etualalla '
+            + 'neempuun lehvästö kaartuu sen ylle.',
+          lahde: 'Shikhers, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: linnoitus, muuri ja uusi pääkaupunki — kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (keisarin kaupunki, sitä ympäröinyt muurikaupunki ja
+       * 1900-luvun New Delhi).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Red Fort Front.jpg',
+          selite: 'Punaisen linnoituksen julkisivu koko leveydeltään: '
+            + 'hiekkakivimuuri, kulmatornit ja keskellä Lahori-portin '
+            + 'katos, jonka yllä liehuu Intian lippu.',
+          lahde: 'Ayushjainr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Shahjahanabad City Wall - Side View -2.jpg',
+          selite: 'Säilynyt pätkä Shahjahanabadin kaupunginmuuria: '
+            + 'sammaloitunut kiviharja jatkuu puiden alla, ja muurin '
+            + 'juurella kadun varressa on autoja puskuri puskurissa.',
+          lahde: 'IshiSenpai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'India Gate, New Delhi.jpg',
+          selite: 'India Gate -muistoportin yläosa New Delhissä. '
+            + 'Hiekkakiveen on hakattu sana INDIA, vuosiluvut 1914 ja '
+            + '1919 roomalaisin numeroin sekä omistus kaatuneille '
+            + 'intialaissotilaille.',
+          lahde: 'Yann, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Keisarin linnoitus vaihtoi isäntää',
+          tiedosto: 'The Lahore Gate, detail from the \'The Delhi Panorama\', by Mazhar Ali Khan, 1846.jpg',
+          teksti: 'Shah Jahan siirsi Mughal-valtakunnan pääkaupungin '
+            + 'Agrasta Delhiin ja rakennutti itselleen linnoituksen: työt '
+            + 'alkoivat toukokuussa — lähteestä riippuen 1638 tai 1639 — '
+            + 'ja valmista tuli huhtikuussa 1648. Arkkitehtina pidetään '
+            + 'Ustad Ahmad Lahoria, jonka nimiin luetaan myös Agran '
+            + 'valkoinen marmorimausoleumi Taj Mahal. Vuoden 1857 kapinan '
+            + 'jälkeen linnoituksesta tehtiin varuskunta, ja noin neljä '
+            + 'viidesosaa sen rakennuksista purettiin — haaremi, '
+            + 'palvelusväen tilat ja puutarhat. Vain itäsivun '
+            + 'marmoripaviljongit säilyivät, nekin vaurioituneina, mutta '
+            + 'puolustusmuurit jäivät pystyyn. Maailmanperintökohde '
+            + 'linnoituksesta tuli vuonna 2007.',
+          selite: 'Mazhar Ali Khanin akvarelli vuodelta 1846: Punaisen '
+            + 'linnoituksen Lahori-portti kupoleineen yksitoista vuotta '
+            + 'ennen kapinaa, jonka jälkeen suurin osa linnoituksen '
+            + 'sisäosista purettiin.',
+          lahde: 'Mazhar Ali Khan, Wikimedia Commons (PD)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Moskeija, joka peilaa koko maailman',
+          tiedosto: 'Jama Masjid, Courtyard, Delhi, India.jpg',
+          teksti: 'Shah Jahan rakennutti Jama Masjidin vuosina 1650–1656 '
+            + 'Shahjahanabadin korkeimmalle kohdalle, ja työhön tarvittiin '
+            + 'noin viisituhatta rakentajaa. Moskeijan vanha nimi '
+            + 'Masjid-i-Jehan-Numa tarkoittaa koko maailman peilaavaa '
+            + 'moskeijaa. Se toimi keisarien hovimoskeijana Mughal-vallan '
+            + 'loppuun asti: vuoden 1857 kapinan jälkeen britit '
+            + 'takavarikoivat rakennuksen ja majoittivat sinne sotilaita, '
+            + 'ja vasta 1862 se palautettiin kaupungin muslimeille '
+            + 'ehdolla, että sitä käytetään vain uskonnollisiin menoihin. '
+            + 'Pihalle mahtuu 25 000 rukoilijaa, ja kahdessa '
+            + '41-metrisessä minareetissa on kummassakin 130 porrasta.',
+          selite: 'Moskeijan sisäpiha minareetista kuvattuna: punaista '
+            + 'hiekkakiveä oleva piha peseytymisaltaineen jatkuu kauas '
+            + 'alhaalla, ihmiset näkyvät pieninä pisteinä ja taustalla '
+            + 'erottuu Punaisen linnoituksen muuri.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Kuunvalon tori',
+          tiedosto: 'Clock Tower Chandni Chowk, Delhi.jpg',
+          teksti: 'Chandni Chowkin suunnitteli prinsessa: Shah Jahanin '
+            + 'tytär Jahanara Begum piirsi kauppakadun vuonna 1650. Kadun '
+            + 'keskellä virtasi kanava, joka levisi torin kohdalla '
+            + 'altaaksi — kuutamo kimmelsi vedessä ja antoi kadulle '
+            + 'nimen, kuunvalon torin. Alun perin kauppoja oli 1560, ja '
+            + 'katu oli 40 jaardia leveä ja 1520 jaardia pitkä. Kanavat '
+            + 'tuhoutuivat vuoden 1857 jälkeen brittivallan aikana, ja '
+            + 'allas sai väistyä kellotornin tieltä; tornia kutsuttiin '
+            + 'Ghantaghariksi, ja vaikka sekin on jo purettu, torin '
+            + 'keskustaa kutsutaan yhä sillä nimellä.',
+          selite: 'Vanha painettu postikortti: Ghantaghar-kellotorni '
+            + 'kohoaa Chandni Chowkin torin laidalla kaupungintalon '
+            + 'vieressä. Alalaidan tekstirivi on postikortin kustantajan '
+            + 'oma otsikko.',
+          lahde: 'H.A. Mirza & Sons, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Juna toi maailman Delhiin',
+          tiedosto: 'Old Delhi Railway Station (DLI).jpg',
+          teksti: 'Delhin ensimmäinen rautatieasema avattiin 1864, kun '
+            + 'leveäraiteinen rata Kalkutasta saatiin valmiiksi. Vuonna '
+            + '1873 Rajputana State Railway rakensi asemalta metrin '
+            + 'raideleveyden radan Rewariin ja edelleen Ajmeriin, ja '
+            + 'liikenne sillä alkoi 1876. Nykyinen asemarakennus '
+            + 'punaisine torneineen valmistui vasta 1903, ja se on tehty '
+            + 'tarkoituksella naapurinsa Punaisen linnoituksen tyyliin. '
+            + 'Delhi Junction pysyi kaupungin pääasemana, kunnes New '
+            + 'Delhin asema valmistui vuosina 1926–1931.',
+          selite: 'Delhi Junctionin punainen asemarakennus '
+            + 'sakaraharjaisine torneineen. Julkisivussa on kello ja '
+            + 'DELHI-kyltti kolmella kirjoituksella, ja pihalla kohoaa '
+            + 'lipputanko.',
+          lahde: 'Lovedeepsingh, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Delhi',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '20191205 Grobowiec Humajuna w Delhi 1055 6794.jpg',
+          selite: 'Humayunin mausoleumi puutarhansa keskellä: punaista '
+            + 'hiekkakiveä ja valkoista marmoria oleva rakennus peilautuu '
+            + 'suihkulähteen altaaseen, ja kävijät näkyvät pieninä '
+            + 'käytävillä.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Delhi on yksi maailman suurimmista kaupunkialueista: '
+          + 'pelkällä pääkaupunkialueella asui vuoden 2011 laskennassa '
+          + 'lähes 17 miljoonaa ihmistä. Matkailijan Delhi jakautuu '
+          + 'kahtia. Vanha Delhi on Shah Jahanin muurikaupunki kujineen '
+          + 'ja basaareineen, ja sen eteläpuolella levittäytyy New Delhi, '
+          + '1900-luvulla rakennettu leveiden bulevardien '
+          + 'hallintokaupunki, joka on nykyään Intian pääkaupunki. '
+          + 'Kauempana etelässä odottavat vanhempien kaupunkien '
+          + 'maamerkit, Qutb Minar ja Humayunin mausoleumi.',
+        artikkeli: {
+          nimi: 'Matkailijan Delhi',
+          taitto: 'opas',
+          teksti: 'Muurikaupunki pohjoisessa, hallintokaupunki etelässä '
+            + 'ja metro kaiken alla — Delhi on monta kaupunkia sisäkkäin '
+            + 'ja peräkkäin.',
+          nosto: 'Qutb Minar on 72,5 metriä korkea, ja se on seissyt '
+            + 'Delhin eteläreunalla yli 800 vuotta — maailman korkein '
+            + 'tiiliminareetti.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaukolennot laskeutuvat Indira Gandhin '
+                + 'kansainväliselle lentoasemalle kaupungin '
+                + 'lounaispuolelle. Kaupungin sisällä nopein tapa liikkua '
+                + 'on Delhin metro: ensimmäinen osuus avattiin '
+                + 'joulupäivänä 2002, ja verkosta on kasvanut Intian '
+                + 'suurin ja vilkkain — junat kulkevat osin tunnelissa, '
+                + 'osin siltaa pitkin katujen yllä. Vanhaan Delhiin '
+                + 'junalla saapuva astuu laiturille Delhi Junctionilla, '
+                + 'jonka punaiset tornit valmistuivat 1903; kaukojunien '
+                + 'pääasema New Delhi on muurikaupungin eteläpuolella.',
+              kuva: {
+                tiedosto: 'Delhi Metro train red line at Shaheed Sthal metro station.jpg',
+                selite: 'Punaisen linjan metrojuna asemalaiturilla. Juna '
+                  + 'on hopeanharmaa ja sen kyljessä kulkee punainen '
+                  + 'raita; laituriovien lasiseinä kertoo aseman olevan '
+                  + 'uutta polvea.',
+                lahde: 'Ravi Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Delhi on Pohjois-Intiassa Yamunan varrella, '
+                + 'enimmäkseen joen länsirannalla Haryanan ja Uttar '
+                + 'Pradeshin osavaltioiden välissä. Pääkaupunkialue '
+                + 'kattaa 1 483 neliökilometriä 200–250 metrin '
+                + 'korkeudessa, ja sen halki kulkee Delhi Ridge, '
+                + 'Aravalli-vuoriston metsäinen jatke, joka nousee 318 '
+                + 'metriin. Kaupungin sisällä on toinen kaupunki: New '
+                + 'Delhi, jonka rakentaminen alkoi, kun kuningas Yrjö V '
+                + 'ilmoitti joulukuussa 1911 pääkaupungin siirtyvän '
+                + 'Kalkutasta Delhiin. Edwin Lutyensin ja Herbert '
+                + 'Bakerin suunnittelema hallintokaupunki vihittiin '
+                + '1931, ja se on nykyään Intian pääkaupunki.',
+              kuva: {
+                tiedosto: 'Delhi Aerial View, Satellite Image, India September 2003.jpg',
+                selite: 'NASAn satelliittikuva Delhistä: Yamuna '
+                  + 'mutkittelee kuvan halki, kaupunkialue on '
+                  + 'harmaata ja keskellä erottuu Delhi Ridgen '
+                  + 'tummanvihreä metsäkaistale.',
+                lahde: 'NASA, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kolme basaaria',
+              teksti: 'Vanhan Delhin kolme suurta tukkutoria syntyivät '
+                + '1800-luvulla, ja ne palvelevat yhä samoilla '
+                + 'paikoillaan. Rautakauppojen Chawri Bazaar avattiin '
+                + '1840 muurikaupungin ensimmäisenä tukkutorina, ja '
+                + 'kukkia on myyty Daryaganjin Phool Mandissa vuodesta '
+                + '1869. Kuuluisin on Khari Baoli Fatehpuri-moskeijan '
+                + 'kupeessa: vuonna 1850 avattu katu on kasvanut Aasian '
+                + 'suurimmaksi maustetoriksi, jonka säkeissä ja vadeissa '
+                + 'on mausteita, yrttejä, pähkinöitä ja kuivattuja '
+                + 'hedelmiä. Ilmassa leijuva chili kirvelee silmiä — ja '
+                + 'juuri siitä kadun tunnistaa.',
+              kuva: {
+                tiedosto: 'Shop selling spices, at Khari Baoli, Old Delhi.jpg',
+                selite: 'Maustekaupan pöytä Khari Baolilla: vadeissa ja '
+                  + 'säkeissä kohoaa keiloja teetä, pähkinöitä ja '
+                  + 'kuivattuja hedelmiä, ja jokaisessa on käsin '
+                  + 'kirjoitettu hintalappu.',
+                lahde: 'Michael Vito from South Orange, NJ, USA, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Käännekohta: moskeija ostettiin takaisin',
+              teksti: 'Chandni Chowkin länsipään päättää '
+                + 'Fatehpuri-moskeija, jonka Shah Jahanin puoliso '
+                + 'Fatehpuri Begum rakennutti 1650. Vuoden 1857 kapinan '
+                + 'jälkeen britit myivät moskeijan huutokaupassa: sen '
+                + 'osti kauppias Rai Lala Chunnamal 19 000 rupialla, ja '
+                + 'rakennus oli kaksikymmentä vuotta yksityisomistuksessa. '
+                + 'Vuonna 1877, Delhin suuren durbar-juhlan yhteydessä, '
+                + 'hallitus hankki moskeijan takaisin vaihtamalla siihen '
+                + 'neljä kylää ja palautti sen muslimiyhteisölle — '
+                + 'rukoukset jatkuvat rakennuksessa yhä.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Delhin vuosi jakautuu kolmia, ja se näkyy '
+                + 'luvuissa. Loka–maaliskuu on kuiva ja enimmäkseen '
+                + 'leuto: tammikuun keskilämpö on 13 astetta, ja päivät '
+                + 'nousevat parinkymmenen tuntumaan. Huhtikuusta '
+                + 'kesäkuuhun kaupunki hehkuu — kesäkuun keskilämpö on '
+                + '33 astetta, ja toukokuun päivät nousevat '
+                + 'neljäänkymmeneen. Kesäkuun lopulla saapuu monsuuni: '
+                + 'heinä- ja elokuussa sataa yhteensä yli 360 '
+                + 'millimetriä eli yli puolet koko vuoden 663 '
+                + 'millimetristä, ja ilma on paksua kosteudesta. '
+                + 'Kävelijän kuukaudet ovat lokakuusta maaliskuuhun — '
+                + 'tammikuun aamuihin voi silti kuulua sakeaa sumua.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ennen Punaista linnoitusta paikalla seisoi kuusi muuta '
+        + 'kaupunkia, legendoista ensimmäisenä Indraprastha. Sulttaanit '
+        + 'ja Mughal-keisarit rakensivat vuorollaan uudelleen, kunnes '
+        + 'brittikruunu otti Delhin hallintaansa vuonna 1858.',
+      tehtava: {
+        kysymys: 'Kuinka monta porttia Shahjahanabadin kaupunkimuurissa '
+          + 'oli?',
+        vaihtoehdot: [
+          'Neljä',
+          'Neljätoista',
+          'Seitsemän',
+          'Kaksikymmentäneljä',
+        ],
+        oikea: 1,
+        fakta: 'Muurissa oli neljätoista porttia. Muuri itse on '
+          + 'kadonnut lähes kokonaan, mutta osa porteista seisoo yhä '
+          + 'keskellä katuverkkoa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Seitsemän kaupungin perintö',
+          tiedosto: 'Robert Smith - The Kila Kona Masjid, Purana Qila, Delhi - Google Art Project.jpg',
+          teksti: 'Perinteen mukaan Delhin seudulla on seissyt seitsemän '
+            + 'kaupunkia peräkkäin. Sarjan legendaarisin on Indraprastha, '
+            + 'jonka Mahabharata-eepos kuvaa ja jonka perimätieto '
+            + 'sijoittaa Purana Qilan linnoituksen paikalle — kaivaukset '
+            + 'eivät ole löytäneet sieltä eepoksen kaupunkia, vain vanhaa '
+            + 'maalattua keramiikkaa. Historiallinen sarja alkaa '
+            + 'Tomara-hallitsija Anangpal Tomarin Lal Kotista vuodelta '
+            + '1052; Chauhan-suvun Vigraharaja valtasi sen ja nimesi '
+            + 'Qila Rai Pithoraksi. Sulttaanikunnan linnoituskaupunkien '
+            + 'jälkeen Shah Jahanin Shahjahanabad täydensi sarjan '
+            + 'seitsemänteen — se on nykyinen Vanha Delhi.',
+          selite: 'Robert Smithin 1800-luvun maalaus: Purana Qilan '
+            + 'Qila-i-Kuhna-moskeija kupoleineen rauniokumpujen '
+            + 'keskellä, ja etualalla kulkee pieni norsusaattue.',
+          lahde: 'Robert Smith (1787 - 1873) – Artist (British) Details on Google Art Project, Wikimedia Commons (PD)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Torni ja Smithin hulluus',
+          tiedosto: 'Smith\'s Cupola 2.jpg',
+          teksti: 'Qutb-ud-din Aibak aloitti voittotornin rakentamisen '
+            + 'vuonna 1199 islamilaisen vallan alun kunniaksi; hän ehti '
+            + 'valmiiksi vain ensimmäisen kerroksen, ja vävy Iltutmish '
+            + 'vei punaisesta hiekkakivestä muuratun tornin noin vuonna '
+            + '1220 täyteen mittaansa. Qutb Minar on 72,5-metrisenä yhä '
+            + 'maailman korkein tiiliminareetti ja Delhin maamerkki. '
+            + 'Vuoden 1803 maanjäristys vaurioitti tornia, ja '
+            + 'brittiläinen insinööri Robert Smith kunnosti sen 1828 — '
+            + 'ja lisäsi huipulle pyöreän katoksen. Lisäys tuomittiin '
+            + 'epäonnistuneeksi, ja katos purettiin 1848; se seisoo yhä '
+            + 'maassa tornin vieressä nimellä Smithin hulluus. '
+            + 'Maailmanperintökohde tornista tuli 1993.',
+          selite: 'Smithin hulluus nykyään: pyöreä huvimajamainen katos '
+            + 'seisoo nurmella Qutb Minarin puistossa lähellä tornia, '
+            + 'jonka huipulla se ehti olla kaksikymmentä vuotta.',
+          lahde: 'Rangan Datta Wiki, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Muurattu kaupunki',
+          tiedosto: 'Kashmiri Gate 009.jpg',
+          teksti: 'Shahjahanabad rakennettiin muurien sisään '
+            + 'neljänneskaaren muotoon, Punainen linnoitus '
+            + 'painopisteenään. Muurin sisään jäi noin 1 500 eekkeriä '
+            + 'eli kuusi neliökilometriä, ja portteja oli neljätoista. '
+            + 'Muuri oli kaksitoista jalkaa leveä ja kaksikymmentäkuusi '
+            + 'korkea, aluksi savea, mutta vuonna 1657 se korvattiin '
+            + 'punaisella kivellä; Mughal-aikana portit lukittiin öisin. '
+            + 'Muurista on nykyään jäljellä vain katkelmia, mutta osa '
+            + 'porteista — kuten Kashmiri Gate, Ajmeri Gate ja Turkman '
+            + 'Gate — seisoo yhä keskellä liikennettä.',
+          selite: 'Kashmiri Gate sisäpuolelta: kaksi tiilistä '
+            + 'porttiholvia vierekkäin ja niiden päällä sakaraharja. '
+            + 'Nurmella porttien edessä istuskelee apinoita.',
+          lahde: 'Anupamg, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Viimeinen keisari',
+          tiedosto: 'A panorama in 12 folds showing the procession of the Emperor Bahadur Shah to celebrate the feast of the \'Id., 1843.jpg',
+          teksti: 'Toukokuun 11. päivänä 1857 kapinaan nousseet joukot '
+            + 'valtasivat Delhin ja julistivat ikääntyneen Bahadur Shah '
+            + 'II:n Intian keisariksi. Britit piirittivät kaupunkia '
+            + 'kesäkuusta alkaen, ja 21. syyskuuta Delhi antautui; '
+            + 'kaupunki kärsi taisteluissa pahoja vaurioita. Keisari oli '
+            + 'paennut Humayunin mausoleumille, jossa hänet vangittiin, '
+            + 'ja hänet karkotettiin Rangooniin. Delhi siirtyi vuonna '
+            + '1858 suoraan Britannian kruunun hallintaan ja liitettiin '
+            + 'Punjabin provinssiin — Mughal-valtakunta oli päättynyt.',
+          selite: 'Metcalfen albumin miniatyyrimaalaus vuodelta 1843: '
+            + 'Bahadur Shah II:n id-juhlakulkue norsuineen ja '
+            + 'lippuineen. Alalaidan käsinkirjoitetut rivit ovat albumin '
+            + 'omia nimiöitä, jotka kertovat kuka kulkueessa kulkee.',
+          lahde: 'Sir Thomas Metcalfe, 4th Baronet, Wikimedia Commons (PD)',
+          wiki: 'Delhi',
+        },
+      ],
+    },
+  ],
+  /*
    * TOKION KANSISIVU (nippu 2, 13.8.2026). JPN-maalehti vie
    * historian, ruoan, kuvataiteen, luonnon ja tieteen, joten
    * kaupungille jää arki ja alakaupunki.

@@ -1556,6 +1556,47 @@ const KAUPUNGIT = {
       },
     ],
   },
+  delhi: {
+    /*
+     * VANHA DELHI ELI SHAHJAHANABAD (20.8.2026). Ruutu on noin
+     * 3,3 × 2,3 km ja kattaa muurikaupungin ytimen: Punainen
+     * linnoitus idässä Yamunan rantakaistaleeseen asti, Chandni
+     * Chowkin katu keskellä länteen Fatehpuri-moskeijalle, Jama
+     * Masjid etelässä ja Delhi Junctionin asema luoteessa. Kaikki
+     * seitsemän pääkartan kohdetta ovat kävelymatkan päässä
+     * toisistaan — sama tiivis muurikaupunkirajaus kuin Sanaassa.
+     *
+     * MIKSI TÄMÄ NURKKA DELHISTÄ. Delhi on megakaupunki, jonka
+     * historialliset kohteet ovat "seitsemän kaupungin" perinnön
+     * takia kymmenien kilometrien päässä toisistaan: Qutb Minar on
+     * 15,6 km lounaaseen, Humayunin mausoleumi 7 km ja Purana Qila
+     * 5 km etelään. Mikään yksi ruutu ei kata niitä muuttumatta
+     * puuroksi (Soulin ja Shanghain oppi) — ja Vanha Delhi on juuri
+     * se Delhi, jossa isoisä käveli vuonna 1873.
+     *
+     * KAINALOSSA HUMAYUNIN MAUSOLEUMI, 7 km etelään. Se on ainoa
+     * kaukokohde, joka on lehdessä omana juttunaan; Qutb Minar ja
+     * Purana Qila kerrotaan historiasivun nostoissa ilman
+     * karttapistettä (Medinan Uhud-vuoren ratkaisu). Kainalon
+     * prosentit ovat piirretystä kuvasta Helsingin kaavalla
+     * (18,75 + ydin × 0,625).
+     *
+     * Jalkakäytävät ja palvelutiet päällä samasta syystä kuin
+     * Medinassa ja Mosulissa: Vanhan Delhin kujat ovat OSM:ssä
+     * valtaosin service- ja footway-luokkaa, ja ilman lippuja juuri
+     * muurikaupungin korttelisto jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 28.6665, etela: 28.6455, lansi: 77.216, ita: 77.2495 },
+    laajennus: 1.6,
+    jalkakaydat: true,
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 28.5985, etela: 28.588, lansi: 77.244, ita: 77.258 },
+        x: 67.5, y: 63.75, leveys: 12.5, suunta: '7 km etelään',
+      },
+    ],
+  },
   jakutsk: {
     /*
      * RAJAUS ON KESKUSTA JA JOEN RANTA, 3,5 × 2,7 km. Jakutsk on

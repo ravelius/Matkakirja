@@ -20491,4 +20491,291 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * DELHIN KOHDEKARTAN JUTUT (Opus 20.8.2026). Kahdeksan kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään;
+   * kahdeksas on kainalon Humayunin mausoleumi. Faktat on tarkistettu
+   * en-Wikipedian artikkeleista Delhi Junction railway station, Delhi
+   * Town Hall, Fatehpuri Mosque, Chandni Chowk, Red Fort, Gurdwara
+   * Sis Ganj Sahib, Jama Masjid Delhi, Humayun's tomb ja Shahjahanabad
+   * (haettu 20.8.2026).
+   *
+   * SISÄLTÖLINJAUS: vuoden 1857 tapahtumat neutraalina
+   * tapahtumaketjuna ilman uhrilukuja; Guru Tegh Bahadurin kuolema
+   * yhdellä lauseella ilman yksityiskohtia, koska pyhäkkö on olemassa
+   * juuri sen takia (Al-Baqin ennakkotapaus). Kellotornin
+   * pystytysvuotta ei anneta, koska Chandni Chowk -artikkeli sanoo
+   * 1870-luku ja Delhi Town Hall -artikkeli 1860-luku — romahdus 1951
+   * ja purku 1955 ovat yhdestä lähteestä ja kerrotaan.
+   */
+  delhi: {
+    'Delhi Junction': {
+      aika: '1864',
+      teksti: 'Delhin ensimmäinen rautatieasema avattiin vuonna 1864, '
+          + 'kun leveäraiteinen rata Kalkutasta valmistui. Asema '
+          + 'rakennettiin muurikaupungin luoteiskulmaan, ja pian '
+          + 'siitä haarautui ratoja joka suuntaan — pohjoiseen kohti '
+          + 'Panipatia ja Ambalaa, lounaaseen kohti Rewaria.'
+          + '\n\n'
+          + 'Vuonna 1873 Rajputana State Railway rakensi asemalta '
+          + 'metrin raideleveyden radan Rewariin ja edelleen Ajmeriin; '
+          + 'liikenne sillä alkoi 1876. Asemalla kohtasivat siis kaksi '
+          + 'raideleveyttä, leveä ja kapea, ja vaihtoasemana se sitoi '
+          + 'Rajputanan radat Kalkutan pääväylään.'
+          + '\n\n'
+          + 'Nykyinen punatiilinen asemarakennus sakaratorneineen '
+          + 'avattiin vuonna 1903, ja se on tehty tarkoituksella '
+          + 'naapurinsa Punaisen linnoituksen tyyliin. Delhi Junction '
+          + 'oli kaupungin pääasema, kunnes New Delhin asema valmistui '
+          + 'vuosina 1926–1931 — mutta Vanhaan Delhiin junalla tuleva '
+          + 'astuu yhä sen laitureille.',
+      kuvat: [
+        {
+          tiedosto: 'Delhi Junction railway station building.jpg',
+          selite: 'Asema auringonlaskussa: punaiset sakarapäiset tornit '
+            + 'nousevat rivissä, ja etualalla on aseman uudempi '
+            + 'laajennusosa. Aurinko laskee tornien taakse.',
+          lahde: 'Ravi Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Delhin kaupungintalo': {
+      aika: '1860–1863',
+      teksti: 'Keltaiseksi rapattu kaupungintalo rakennettiin vuosina '
+          + '1860–1863 Chandni Chowkin torin laidalle. Se ei syntynyt '
+          + 'kaupungintaloksi vaan Lawrence-instituutiksi: talossa oli '
+          + 'museo, lukusali, kirjasto ja eurooppalaisen yhteisön '
+          + 'kokoushuoneet. Kaupunki osti rakennuksen vuonna 1866, ja '
+          + 'siitä tuli vuosikymmeniksi kunnallishallinnon päämaja.'
+          + '\n\n'
+          + 'Talon eteläpuutarhat kuuluivat aikoinaan prinsessa '
+          + 'Jahanaralle, Chandni Chowkin suunnittelijalle, ja niissä on '
+          + 'yhä kahdeksankulmainen suihkulähdeallas. Talon edessä '
+          + 'seisoi alun perin kuningatar Viktorian pronssipatsas; '
+          + 'itsenäistymisen jälkeen sen tilalle nostettiin '
+          + 'hindulaisen uudistusliikkeen johtajan Swami Shraddhanandin '
+          + 'patsas.'
+          + '\n\n'
+          + 'Talon vieressä kohosi lähes 40-metrinen kellotorni, jota '
+          + 'kutsuttiin varakuninkaan mukaan Northbrook Toweriksi ja '
+          + 'kansanomaisesti Ghantaghariksi. Tornin yläkerta romahti '
+          + 'vuonna 1951, ja rakennelma purettiin vuoteen 1955 '
+          + 'mennessä — mutta koko torinseutua kutsutaan yhä '
+          + 'Ghantaghariksi, kellotorniksi.',
+      kuvat: [
+        {
+          tiedosto: 'Delhi Town Hall 2012.jpg',
+          selite: 'Kaupungintalo puutarhan puolelta: keltainen '
+            + 'kaksikerroksinen rakennus valkoisine pylväineen ja '
+            + 'kellonkehyksineen, edessä porrastettu käytävä ja '
+            + 'takorauta-aita.',
+          lahde: 'AASHNA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fatehpuri-moskeija': {
+      aika: '1650',
+      teksti: 'Chandni Chowkin länsipään päättää punainen '
+          + 'hiekkakivimoskeija, jonka rakennutti vuonna 1650 Fatehpuri '
+          + 'Begum, yksi Shah Jahanin puolisoista. Moskeija sulkee '
+          + 'kadun näkymän kuin piste lauseen: toisessa päässä on '
+          + 'Punainen linnoitus, toisessa tämä.'
+          + '\n\n'
+          + 'Vuoden 1857 kapinan jälkeen britit myivät moskeijan '
+          + 'huutokaupassa kauppias Rai Lala Chunnamalille 19 000 '
+          + 'rupialla, ja rakennus oli kaksi vuosikymmentä '
+          + 'yksityisomistuksessa. Vuonna 1877, Delhin suuren '
+          + 'durbar-juhlan yhteydessä, hallitus lunasti moskeijan '
+          + 'takaisin vaihtamalla siihen neljä kylää ja palautti sen '
+          + 'muslimiyhteisölle.'
+          + '\n\n'
+          + 'Moskeijan kylkeen nojaa Khari Baoli, vuonna 1850 avattu '
+          + 'katu, joka on kasvanut Aasian suurimmaksi maustetoriksi. '
+          + 'Sen säkeistä ja vadeista nouseva katku kantautuu '
+          + 'moskeijan pihalle asti — pyhä ja arki ovat tässä '
+          + 'korttelissa seinänaapureita.',
+      kuvat: [
+        {
+          tiedosto: 'Fatehpuri Masjid in Delhi 11.jpg',
+          selite: 'Moskeijan piha aamuvalossa: punaista hiekkakiveä '
+            + 'oleva rukoussali kaarineen ja kaksi minareettia, pihan '
+            + 'poikki kävelee kissa. Takana kohoavat basaarikorttelin '
+            + 'talot.',
+          lahde: 'Indrajit Das, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chandni Chowk': {
+      aika: '1650',
+      teksti: 'Vanhan Delhin pääkatu on prinsessan piirtämä: Shah '
+          + 'Jahanin tytär Jahanara Begum suunnitteli kauppakadun '
+          + 'vuonna 1650. Kadun keskellä virtasi kanava, joka levisi '
+          + 'torin kohdalla altaaksi; kuutamon kimallus altaan vedessä '
+          + 'antoi kadulle nimen — Chandni Chowk, kuunvalon tori. Alun '
+          + 'perin kauppoja oli 1560.'
+          + '\n\n'
+          + 'Kanava tuhoutui brittivallan aikana vuoden 1857 jälkeen, '
+          + 'ja altaan paikalle nousi kellotorni. Sekin on jo purettu, '
+          + 'mutta nimi jäi: torin keskustaa kutsutaan yhä '
+          + 'Ghantaghariksi. Kadun varrella seisovat vierekkäin '
+          + 'temppeli, moskeija, sikhien gurdwara ja kirkko — '
+          + 'kauppakatu on aina ollut myös uskontojen katu.'
+          + '\n\n'
+          + 'Nykyinen Chandni Chowk on tiheimmillään basaaria basaarin '
+          + 'perään: kangasta, koruja, kirjoja ja katukeittiöitä. '
+          + 'Kadun itäpää avautuu Punaisen linnoituksen muurille, '
+          + 'jonka porteilta koko katu aikanaan alkoi.',
+      kuvat: [
+        {
+          tiedosto: 'Chandni Chowk Temple and Red Fort.jpg',
+          selite: 'Chandni Chowk aamu-usvassa: temppelien tornit ja '
+            + 'kauppatalot reunustavat katua, jonka päässä häämöttää '
+            + 'Punaisen linnoituksen portti. Kulkijat näkyvät '
+            + 'vastavalossa tummina hahmoina.',
+          lahde: 'Pallav.journo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Punainen linnoitus': {
+      aika: '1638/1639–1648',
+      teksti: 'Shah Jahanin linnoitus on kaupunki kaupungin sisällä: '
+          + 'muurien ympärysmitta on yli kaksi kilometriä, ja '
+          + 'punaisesta hiekkakivestä ladottu muuri nousee '
+          + 'korkeimmillaan kolmeenkymmeneenkolmeen metriin. Sisään '
+          + 'mennään Lahori-portista, jonka takana avautuu Chhatta '
+          + 'Chowk, katettu basaarikuja — Mughal-aikana täällä myytiin '
+          + 'silkkiä ja koruja hoville.'
+          + '\n\n'
+          + 'Basaarin päässä on Naubat Khana, rumputalo, jonka '
+          + 'parvella soitettiin musiikkia päivittäin määrätunteina — '
+          + 'ja jonka kohdalla jokaisen muun paitsi kuninkaallisten '
+          + 'oli laskeuduttava ratsailta. Sen takana olivat '
+          + 'audienssisali ja joen puolella marmoripaviljongit. Vuoden 1857 '
+          + 'jälkeen linnoitus muuttui varuskunnaksi, ja noin neljä '
+          + 'viidesosaa rakennuksista purettiin; marmoripaviljongit '
+          + 'säilyivät vaurioituneina.'
+          + '\n\n'
+          + 'Itsenäisyyspäivänä 15. elokuuta 1947 pääministeri '
+          + 'Jawaharlal Nehru nosti Intian lipun Lahori-portin ylle, '
+          + 'ja siitä lähtien pääministeri on toistanut saman eleen '
+          + 'joka vuosi ja pitänyt puheensa linnoituksen valleilta. '
+          + 'Maailmanperintökohde linnoituksesta tuli 2007.',
+      kuvat: [
+        {
+          tiedosto: 'Naubat Khana - Red Fort, Delhi.jpg',
+          selite: 'Naubat Khana eli rumputalo holvikaaren läpi '
+            + 'kuvattuna: punaista hiekkakiveä, kaiverrettuja '
+            + 'kukkakuvioita ja valkoinen kattolista. Etualan kulkija '
+            + 'on pelkkä tumma ääriviiva.',
+          lahde: 'Andrew Moore from Johannesburg, South Africa, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gurdwara Sis Ganj Sahib': {
+      aika: '1783',
+      teksti: 'Chandni Chowkin varrella kohoaa kullatuin kupolein '
+          + 'sikhien gurdwara, jonka sotapäällikkö Baghel Singh '
+          + 'pystytti vuonna 1783 marssittuaan joukkoineen Delhiin ja '
+          + 'sovittuaan Mughal-hallitsijan kanssa oikeudesta rakentaa '
+          + 'pyhäkköjä sikhien historian paikoille.'
+          + '\n\n'
+          + 'Paikka oli valittu kauan ennen rakennusta: tässä '
+          + 'yhdeksäs guru Tegh Bahadur surmattiin keisari Aurangzebin '
+          + 'käskystä marraskuussa 1675. Nimen alkuosa sis tarkoittaa '
+          + 'päätä — perimätiedon mukaan gurun opetuslapsi kantoi '
+          + 'hänen päänsä turvaan Anandpuriin, jossa sitä varten on '
+          + 'toinen samanniminen gurdwara.'
+          + '\n\n'
+          + 'Baghel Singhin pyhäkkö oli aluksi pieni, ja nykyiseen '
+          + 'asuunsa sitä on laajennettu todennäköisesti vuoden 1857 '
+          + 'jälkeen ja uudelleen 1900-luvulla. Kullatut kupolit '
+          + 'erottuvat kauas kadulle, ja rakennus on yksi Chandni '
+          + 'Chowkin uskontojen kadun kiintopisteistä temppelin, '
+          + 'moskeijan ja kirkon rinnalla.',
+      kuvat: [
+        {
+          tiedosto: 'Pillared Canopies - Gurdwara Sis Ganj Sahib - Chandni Chowk Road - Delhi 2014-05-13 3504.JPG',
+          selite: 'Gurdwaran katto lähikuvassa: kullattu pääkupoli '
+            + 'nousee kahdeksankulmaisen tornin päältä, ja nurkissa on '
+            + 'pienempiä kupolikatoksia. Alla erottuu hiekkakivinen '
+            + 'parvekerivi.',
+          lahde: 'Biswarup Ganguly, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jama Masjid': {
+      aika: '1650–1656',
+      teksti: 'Shah Jahan rakennutti suuren perjantaimoskeijansa '
+          + 'Shahjahanabadin korkeimmalle kohdalle vuosina 1650–1656, '
+          + 'noin viidentuhannen rakentajan voimin. Punainen '
+          + 'hiekkakivi ja valkoinen marmori vuorottelevat '
+          + 'julkisivussa, ja pihalle mahtuu 25 000 rukoilijaa — '
+          + 'perjantairukouksiin ja id-juhliin kaupungin muslimit '
+          + 'kokoontuvat yhä tänne.'
+          + '\n\n'
+          + 'Moskeijan vanha nimi Masjid-i-Jehan-Numa tarkoittaa koko '
+          + 'maailman peilaavaa moskeijaa. Se oli keisarien '
+          + 'hovimoskeija Mughal-vallan loppuun asti; vuoden 1857 '
+          + 'jälkeen britit takavarikoivat rakennuksen ja palauttivat '
+          + 'sen ehdollisena vasta 1862.'
+          + '\n\n'
+          + 'Matkailijalle moskeija on myös näköalapaikka: '
+          + 'kummassakin minareetissa on 130 porrasta ja matkalla '
+          + 'kolme näköalaparvea, joilta Vanha Delhi avautuu kattojen '
+          + 'merenä ja Punainen linnoitus sen reunalla. Pihalta näkee, '
+          + 'miksi moskeija rakennettiin kaupungin korkeimmalle '
+          + 'kohdalle — se hallitsee Vanhaa Delhiä yhä.',
+      kuvat: [
+        {
+          tiedosto: '20191203 Wielki Meczet w Delhi 0700 6459 DxO.jpg',
+          selite: 'Moskeijan julkisivu pihalta: valkoisin raidoin '
+            + 'koristellut kupolit, korkea keskiportaali ja kaksi '
+            + 'punavalkoista minareettia. Pihalla kävelijät näkyvät '
+            + 'selin ja etäältä.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Humayunin mausoleumi': {
+      aika: '1558',
+      teksti: 'Keisarinna rakennutti puolisolleen haudan, jollaista '
+          + 'Intiassa ei ollut nähty. Humayunin leski Bega Begum '
+          + 'tilasi mausoleumin vuonna 1558 ja valitsi arkkitehdiksi '
+          + 'Heratista tuodun Mirak Mirza Ghiyasin, jonka työtä jatkoi '
+          + 'hänen poikansa Sayyid Muhammad. Esikuvana oli Timurin '
+          + 'hauta Samarkandissa.'
+          + '\n\n'
+          + 'Se oli Intian niemimaan ensimmäinen puutarhahauta: '
+          + 'rakennus istuu charbaghin, neljään yhtä suureen osaan '
+          + 'jaetun persialaisen paratiisipuutarhan, keskellä. '
+          + 'Punaisen hiekkakiven ja valkoisen marmorin yhdistelmästä '
+          + 'tuli Mughal-arkkitehtuurin tunnus, ja sarja huipentui '
+          + 'seuraavalla vuosisadalla Agran Taj Mahaliin. '
+          + 'Maailmanperintökohde mausoleumista tuli 1993.'
+          + '\n\n'
+          + 'Rakennus on myös historian näyttämö: tänne viimeinen '
+          + 'Mughal-keisari Bahadur Shah II pakeni vuonna 1857, ja '
+          + 'täältä hänet vangittiin. Alueella on kaikkiaan yli sata '
+          + 'hautaa, ja siksi mausoleumia on kutsuttu Mughalien '
+          + 'makuusaliksi.',
+      kuvat: [
+        {
+          tiedosto: 'Humayun\'s Tomb - Delhi - 0016.jpg',
+          selite: 'Mausoleumin keskikammio: valkoinen '
+            + 'marmorikenotafi lattian keskellä, ympärillä kohoavat '
+            + 'holvikaaret ja ikkunoiden kiviristikot, joista valo '
+            + 'siivilöityy sisään.',
+          lahde: 'Rupeshsarkar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
