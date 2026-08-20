@@ -24,6 +24,16 @@
 // Ei ylisanoja eikä huutomerkkejä: nuoren herran innostus kuuluu
 // saapumistekstissä, ja tämä on se rauhallinen ääni, joka kertoo
 // taustan.
+//
+// TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+// intro EI OLE ENÄÄ kaksi lausetta vaan lehden ETUSIVUN LEIPÄTEKSTI —
+// 7–10 virkkeen johdatus (~700–1100 mrk) siihen, millainen kaupunki
+// on ja mikä sen merkitys ja historia. Omistajan lisäys samana
+// päivänä: intro jaetaan 2–3 kappaleeseen '\n\n'-rajalla kuten
+// teksti-kentässä, ja 1–3 avainkohtaa saa lihavoida **näin**.
+// Remontti etenee erissä; erässä R3 uuteen asuun kirjoitettiin
+// Mosul, Aleppo, Damaskos ja Luxor. Kappaleet ja boldit vaativat
+// leipätekstin renderöijän — ks. erän loppuraportti.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'Izmir on Turkin kolmanneksi suurin kaupunki ja sen tärkein '
@@ -119,9 +129,27 @@ export const ASIA_ARTIKKELIT = {
       + 'kyltit ja lippu vaihtuvat.',
   },
   Aleppo: {
-    intro: 'Aleppo on yksi maailman vanhimmista yhtäjaksoisesti '
-      + 'asutuista kaupungeista. Sen katetussa basaarissa on käyty '
-      + 'kauppaa noin neljäntuhannen vuoden ajan.',
+    intro: 'Aleppo on Pohjois-Syyrian suurkaupunki ja maan väkirikkaimman '
+      + 'maakunnan pääkaupunki. Se seisoo 380 metrin ylängöllä 120 '
+      + 'kilometriä Välimereltä sisämaahan, ja asukkaita arvioitiin vuonna '
+      + '2021 olevan runsaat kaksi miljoonaa. Kaupunki on yksi maailman '
+      + 'vanhimmista yhtäjaksoisesti asutuista paikoista — samaa sanoo '
+      + 'Damaskos itsestään.'
+      + '\n\n'
+      + 'Kaupunki on kasvanut yhden kummun ympärille: **linnoitus** seisoo '
+      + 'omalla kukkulallaan, ja sen ympärille levisivät muurikaupunki ja '
+      + 'kaupunginosat. Kaksi kauppatietä risteää täällä: idän tavara '
+      + 'purettiin Aleppossa ja jatkoi Välimerelle, ja kauppiaiden '
+      + 'majatalot eli khanit ovat siltä ajalta. Kaupunki oli 1500-luvun '
+      + 'puolivälistä idän tavaran tärkein portti Eurooppaan, kunnes '
+      + '**Suezin kanava** avattiin vuonna 1869 ja kauppa siirtyi '
+      + 'laivoille. Vanhakaupunki on Unescon maailmanperintökohde, ja '
+      + 'tunnetuin tuote on oliivi- ja laakeriöljystä keitetty saippua.'
+      + '\n\n'
+      + 'Vuosien 2012–2016 sota vaurioitti vanhaakaupunkia pahoin, ja '
+      + 'jälleenrakennus on kesken: osa katetusta basaarista ja khaneista '
+      + 'on jo kunnostettu. Lehden kuvissa näkyy sekä sotaa edeltävä että '
+      + 'nykyinen Aleppo.',
     teksti: 'Aleppo on Pohjois-Syyriassa, tasangolla, jonka poikki '
       + 'kulkivat karavaanireitit idästä Välimerelle. Sijainti teki '
       + 'siitä varakkaan: karavaanit purkivat kuormansa täällä, ja '
@@ -143,9 +171,28 @@ export const ASIA_ARTIKKELIT = {
       + 'ja osa basaarista on jo avattu uudelleen.',
   },
   Damaskos: {
-    intro: 'Damaskosta pidetään maailman vanhimpana yhtäjaksoisesti '
-      + 'asuttuna pääkaupunkina. Sen läpi kulkee Suora katu, joka '
-      + 'mainitaan nimeltä Raamatussa ja on yhä olemassa.',
+    intro: 'Damaskos on Syyrian pääkaupunki ja suurin kaupunki, ja sitä '
+      + 'pidetään maailman vanhimpana yhtäjaksoisesti asuttuna '
+      + 'pääkaupunkina. Se on 680 metrin tasangolla Anti-Libanonin '
+      + 'vuoriston itäisillä juurilla 80 kilometriä Välimereltä '
+      + 'sisämaahan, ja suurkaupunkialueella asuu arviolta lähes kolme '
+      + 'miljoonaa ihmistä. Vuoret jättävät kaupungin sadevarjoon, joten '
+      + 'ilmasto on kuiva; vastapainona on Barada-joki, joka kastelee '
+      + '**Ghoutan** viljelysalueen.'
+      + '\n\n'
+      + 'Roomalaiset kaavoittivat kaupungin ruutuun, ja vanhakaupunki on '
+      + 'yhä muurien ympäröimä suorakaide, jossa on seitsemän vanhaa '
+      + 'porttia. Sen keskellä on paikka, joka on ollut pyhä neljä kertaa: '
+      + 'aramealainen temppeli, Jupiterin temppeli, kirkko ja moskeija. '
+      + 'Suurin käänne oli vuosi 661: Damaskoksesta tuli '
+      + '**umaijadikalifaatin pääkaupunki**, ja valtakunta ulottui Iberian '
+      + 'niemimaalta Indus-joelle, kunnes valta siirtyi vuonna 750 '
+      + 'Bagdadiin. Kaupungista ovat saaneet nimensä damasti ja '
+      + 'damaskosteräs.'
+      + '\n\n'
+      + 'Sisällissota ulottui Damaskokseen vuonna 2012, mutta taistelut '
+      + 'käytiin pääosin laitakaupungilla, ja vanhakaupunki säilyi '
+      + 'ehjempänä kuin Aleppossa tai Mosulissa.',
     teksti: 'Damaskos sijaitsee Ghouta-keitaalla Anti-Libanonin vuorten '
       + 'juurella. Barada-joki tekee kuivaan maastoon vihreän läiskän, '
       + 'ja sen ansiosta paikalla on voitu asua yhtäjaksoisesti '
@@ -269,9 +316,27 @@ export const ASIA_ARTIKKELIT = {
       + 'auringonnousun aikaan.',
   },
   Luxor: {
-    intro: 'Luxor on rakennettu antiikin Theban päälle, ja temppelit '
-      + 'ovat keskellä nykyistä kaupunkia. Joen toisella rannalla '
-      + 'ovat Kuninkaiden laakso ja faaraoiden haudat.',
+    intro: 'Luxor on Ylä-Egyptin kaupunki Niilin varrella, 670 kilometriä '
+      + 'Kairosta etelään ja 220 kilometriä Assuanista pohjoiseen. '
+      + 'Asukkaita oli vuonna 2023 noin 285 000, ja korkeutta on 89 '
+      + 'metriä. Kaupunki on rakennettu antiikin Theban päälle: '
+      + 'egyptiläisittäin Waset, kreikkalaisittain Thebai, ja se oli '
+      + 'Egyptin pääkaupunki useiden dynastioiden aikaan.'
+      + '\n\n'
+      + 'Niili jakaa Luxorin kahtia, ja jako on ikivanha: itäpuolelle, '
+      + 'missä aurinko nousi, rakennettiin temppelit ja asuttiin, ja '
+      + 'länsipuolelle, missä se laski, haudattiin. Itärannalla ovat '
+      + '**Karnakin ja Luxorin temppelit** keskellä nykyistä kaupunkia, ja '
+      + 'niitä yhdisti sfinksien reunustama kuja. Länsirannalla on Theban '
+      + 'nekropoli Kuninkaiden ja Kuningattarien laaksoineen; Howard '
+      + 'Carter löysi sieltä **Tutankhamonin haudan** 4. marraskuuta 1922, '
+      + 'ja se oli ensimmäinen kuninkaanhauta, joka löytyi pääosin '
+      + 'koskemattomana.'
+      + '\n\n'
+      + 'Nykyään kaupunki elää matkailusta ja saa vuodessa noin viisi '
+      + 'miljoonaa vierailijaa. Aamut alkavat ennen aurinkoa, kun '
+      + 'kuumailmapallot nousevat länsirannan yllä, ja peltojen poikki '
+      + 'kulkevat kapearaiteiset radat vievät sokeriruokoa tehtaille.',
     teksti: 'Luxor on Niilin rannalla Ylä-Egyptissä. Antiikin aikana '
       + 'kaupunki oli nimeltään Waset, kreikkalaisille Thebai, ja se '
       + 'oli Egyptin pääkaupunki useiden dynastioiden aikaan. Idässä '
@@ -634,10 +699,27 @@ export const ASIA_ARTIKKELIT = {
       + 'hitaasti hiillokseen.',
   },
   Mosul: {
-    intro: 'Mosul on Tigrisin varrella Pohjois-Irakissa, ja joen '
-      + 'toisella rannalla ovat Niniven rauniot. Ninive oli aikanaan '
-      + 'maailman suurin kaupunki, ja se tuhoutui niin täydellisesti, '
-      + 'että sitä pidettiin pitkään satuna.',
+    intro: 'Mosul on Irakin toiseksi suurin kaupunki ja Niniven maakunnan '
+      + 'pääkaupunki. Se kasvoi Tigriin ylityspaikkaan Ylä-Mesopotamiassa '
+      + '223 metrin korkeuteen, ja arabiankielinen nimi al-Mawsil '
+      + 'tarkoittaa liitoskohtaa. Asukkaita on kaupunkiseudulla noin 1,8 '
+      + 'miljoonaa (2023), ja väestö on vanhastaan monimuotoinen: arabeja, '
+      + 'kurdeja, turkmeeneja, assyrialaisia ja jesidejä. Joki jakaa '
+      + 'kaupungin kahtia: länsirannalla on ennen autoja syntynyt '
+      + 'kujaverkko, itärannalla leveät kadut.'
+      + '\n\n'
+      + 'Itärannalla ovat **Niniven kummut**. Sanherib teki Ninivestä '
+      + 'Assyrian pääkaupungin noin vuonna 700 eaa., ja siitä tuli aikansa '
+      + 'suurin kaupunki. Ninive kukistui 612 eaa. ja unohtui niin '
+      + 'tarkkaan, että paikka tunnistettiin vasta 1840-luvulla. '
+      + 'Tasangolle sataa sen verran, että viljaa kasvaa ilman kastelua, '
+      + 'ja keskiajalta kaupunki tunnetaan ohuesta puuvillakankaasta ja '
+      + 'hopeaupotteisesta messingistä.'
+      + '\n\n'
+      + 'Vuosien 2014–2017 sotatoimissa vanhakaupunki vaurioitui pahoin, '
+      + 'ja **jälleenrakennus** etenee kortteli kerrallaan: al-Nurin '
+      + 'moskeija minareetteineen vihittiin uudelleen syyskuussa 2025. '
+      + 'Lehdessä on siksi sekä sotaa edeltäviä että tuoreita kuvia.',
     teksti: 'Mosul on Irakin toiseksi suurin kaupunki. Se sijaitsee '
       + 'hedelmällisellä tasangolla, jossa sataa enemmän kuin etelässä '
       + '— täällä viljaa voi kasvattaa ilman kastelua. Kaupungin '
