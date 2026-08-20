@@ -19413,4 +19413,394 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PEKINGIN KOHDEKARTAN JUTUT (Opus 20.8.2026). Kymmenen kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään —
+   * kaksi ensimmäistä ovat luoteisen kainalokartan kohteet. Faktat
+   * on tarkistettu en-Wikipedian artikkeleista Old Summer Palace,
+   * Summer Palace, Yonghe Temple, Nanluoguxiang, Drum Tower and
+   * Bell Tower of Beijing, Jingshan Park, Forbidden City, Tiananmen,
+   * Zhengyangmen ja Temple of Heaven (haettu 20.8.2026).
+   *
+   * SISÄLTÖLINJAUS on sama kuin lehden puolella: ei nykypolitiikkaa,
+   * ei Kulttuurivallankumouksen eikä vuoden 1989 käsittelyä.
+   * Yonghe-temppelin sulkeminen 1949–1981 kerrotaan tapahtumana
+   * ilman syiden ruotimista, ja Tiananmenin jutussa vuoden 1949
+   * julistus on yksi neutraali virke. Chongzhen-keisarin kuolema
+   * Jingshanilla ja vuoden 1644 palot ovat mukana tavallisena
+   * historiana ilman yksityiskohtien korostusta.
+   *
+   * KELLOTORNIN KORKEUS: artikkeli Drum Tower and Bell Tower of
+   * Beijing antaa kellotornille 33 metriä; muualla verkossa näkyy
+   * myös suurempia lukuja, mutta talon tapaan lähdeartikkeli
+   * voittaa. Summer Palace -artikkelin kaksi eri kertomusta Cixin
+   * jälleenrakennuksen rahoituksesta (laivastorahat vs. korkotuotot)
+   * on kirjoitettu auki lukijalle v925:n tapaan.
+   */
+  peking: {
+    'Vanha kesäpalatsi': {
+      aika: '1707–1860',
+      teksti: 'Yuanmingyuan eli Täydellisen kirkkauden puutarha alkoi '
+          + 'vuonna 1707 Kangxi-keisarin lahjana neljännelle pojalleen, '
+          + 'tulevalle Yongzheng-keisarille. Siitä kasvoi kolmen '
+          + 'puutarhan kokonaisuus, 3,5 neliökilometriä eli lähes viisi '
+          + 'kertaa Kielletyn kaupungin ala. Qing-keisarit asuivat ja '
+          + 'hoitivat valtion asiat täällä — Kielletty kaupunki jäi '
+          + 'seremonioille — ja aikalaiset kutsuivat paikkaa '
+          + 'puutarhojen puutarhaksi.'
+          + '\n\n'
+          + 'Kuuluisin kulma oli eurooppalainen. Qianlong-keisari '
+          + 'ihastui kaiverrukseen eurooppalaisesta suihkulähteestä ja '
+          + 'tilasi jesuiitoilta länsimaistyylisten palatsien sarjan: '
+          + 'Giuseppe Castiglione suunnitteli rakennukset ja Michel '
+          + 'Benoist vesilaitteet. Haiyantangin edustalla oli '
+          + 'suihkulähdekello, jonka kaksitoista eläinradan '
+          + 'eläinhahmoa suihkuttivat vettä kukin vuorollaan kahden '
+          + 'tunnin välein — ja keskipäivällä kaikki yhtä aikaa. '
+          + 'Silti yli 95 prosenttia puutarhoista oli kiinalaista '
+          + 'tyyliä.'
+          + '\n\n'
+          + 'Toisen oopiumisodan lopussa 1860 anglo-ranskalaiset '
+          + 'joukot ryöstivät palatsin ja polttivat sen; tuhoaminen '
+          + 'vei neljältätuhannelta mieheltä kolme päivää, ja '
+          + 'ryöstettyjä aarteita on UNESCOn mukaan nykyään 47 museossa '
+          + 'eri puolilla maailmaa. Vuonna 1873 nuori Tongzhi-keisari '
+          + 'yritti jälleenrakentaa palatsia, mutta rahat loppuivat ja '
+          + 'hanke keskeytyi 1874. Nykyään Yuanmingyuan on '
+          + 'rauniopuisto, jonka tunnetuin näky on eurooppalaisten '
+          + 'palatsien kivinen luuranko.',
+      kuvat: [
+        {
+          tiedosto: 'Ruins of Old Summer Palace (Yuanmingyuan) - 2019 - 03.jpg',
+          selite: 'Eurooppalaistyylisen palatsin raunio nykyään: '
+            + 'koristeltu pylväs kapiteeleineen seisoo nurmella, '
+            + 'ympärillä makaa kaiverrettuja kivenlohkareita ja '
+            + 'taustan lammessa kasvaa lootuksia.',
+          lahde: 'Leiem, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kesäpalatsi': {
+      aika: '1750–1764, uusi asu 1884–1895',
+      teksti: 'Qianlong-keisari rakennutti palatsin äitinsä '
+          + '60-vuotispäivän kunniaksi: työt alkoivat noin 1749 ja '
+          + 'valmistuivat 1764. Länsijärveä laajennettiin, ja '
+          + 'kaivumaat kasattiin Pitkän iän kukkulaksi; järvi sai '
+          + 'nimen Kunming Han-dynastian keisarin '
+          + 'laivastoharjoitusaltaan mukaan. Kokonaisuus on 2,9 '
+          + 'neliökilometriä, ja siitä kolme neljäsosaa on vettä.'
+          + '\n\n'
+          + 'Puutarha on täynnä lainauksia muualta Kiinasta: järvi '
+          + 'jäljittelee Hangzhoun Länsijärveä, kolme saarta esittävät '
+          + 'taruston kolmea jumalten vuorta, ja kauppakujat '
+          + 'rakennettiin Suzhoun ja Yangzhoun malliin. Rantaa '
+          + 'seuraa yli 700 metrin pituinen katettu Pitkä käytävä '
+          + 'maalauksineen.'
+          + '\n\n'
+          + 'Anglo-ranskalaiset joukot polttivat palatsin 1860 samassa '
+          + 'hyökkäyksessä kuin Vanhan kesäpalatsin. Keisarinnaleski '
+          + 'Cixi rakennutti sen uudelleen 1884–1895 ja antoi sille '
+          + 'nykyisen nimen Yiheyuan 1888; kerrotaan, että työhön '
+          + 'käytettiin laivastolle varattuja miljoonia, toisten '
+          + 'lähteiden mukaan vain rahaston korkotuotot. Vuoden 1873 '
+          + 'matkustaja näki siis täälläkin rauniot — nykyinen loisto '
+          + 'on sitä nuorempaa. UNESCO otti palatsin '
+          + 'maailmanperintöluetteloon 1998.',
+      kuvat: [
+        {
+          tiedosto: 'Kunming Lake of Summer Palace (20240706140421).jpg',
+          selite: 'Kunming-järvi Pitkän iän kukkulalta nähtynä: '
+            + 'veneitä kyntää järveä, etualalla laskeutuvat '
+            + 'palatsirakennusten oranssit katot ja kaupungin siluetti '
+            + 'häämöttää horisontissa.',
+          lahde: 'HoweyYuan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Yonghe-temppeli': {
+      aika: '1694, luostariksi 1744',
+      teksti: 'Rakennus alkoi prinssin kotina. Kangxi-keisari antoi '
+          + 'sen 1702 neljännelle pojalleen Yinzhenille, ja tämän '
+          + 'tuleva seuraaja, Qianlong-keisari, syntyi talon '
+          + 'itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle '
+          + 'Yongzheng-keisarina, talosta tuli Harmonian ja rauhan '
+          + 'palatsi — ja keisarin arvon merkiksi sen turkoosit '
+          + 'tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain '
+          + 'keisarille.'
+          + '\n\n'
+          + 'Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi '
+          + 'luostariksi. Siitä tuli Qing-kauden merkittävin '
+          + 'buddhalainen temppeli, jonka rakennuksissa kiinalainen ja '
+          + 'tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti '
+          + 'munkkeja Mongoliasta ja Tiibetistä asti.'
+          + '\n\n'
+          + 'Kuuluisin aarre on Kymmenentuhannen onnen paviljongissa: '
+          + 'Maitreya-buddhan patsas, joka on veistetty yhdestä '
+          + 'valkosanteli-puun rungosta. Näkyvää patsasta on 18 metriä '
+          + 'ja maan alla vielä kahdeksan lisää; puu oli seitsemännen '
+          + 'Dalai-laman lahja Qianlongille, ja sen kuljetus Tiibetistä '
+          + 'Pekingiin kesti kolme vuotta. Temppeli oli suljettuna '
+          + 'kolmisenkymmentä vuotta 1900-luvun jälkipuolella, mutta '
+          + 'avattiin uudelleen 1981, ja se on nykyään sekä toimiva '
+          + 'luostari että suosittu käyntikohde.',
+      kuvat: [
+        {
+          tiedosto: 'Peking Jonghe Tempel -20071022-RM-093428.jpg',
+          selite: 'Yonghe-temppelin koristeportti eli paifang: siniset '
+            + 'ja vihreät maalauskuviot peittävät palkiston, keskellä '
+            + 'on kirjoituskilpi ja katonharjoilla istuu pieniä '
+            + 'vartijahahmoja.',
+          lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nanluoguxiang': {
+      aika: 'Yuan-kausi, nimi n. 1750',
+      teksti: 'Nanluoguxiang eli Eteläinen gongi- ja rumpukuja on '
+          + 'noin 800 metrin pituinen kuja, joka kulkee Rumpu- ja '
+          + 'kellotornien itäpuolella pohjoisesta etelään. Se '
+          + 'rakennettiin jo Yuan-dynastian aikana osaksi Dadun '
+          + 'ruutukaavaa, ja nykyisen nimensä se sai Qing-kaudella '
+          + 'noin vuonna 1750.'
+          + '\n\n'
+          + 'Kuja on vanhan Pekingin läpileikkaus: sen molemmin '
+          + 'puolin haarautuu hutong-kujia, joiden varsilla on '
+          + 'siheyuan-pihataloja — osa niistä kuuluisien '
+          + 'historiallisten henkilöiden entisiä koteja. Viime '
+          + 'vuosina kujasta on tullut suosittu käyntikohde, jonka '
+          + 'vanhoihin taloihin on avattu ravintoloita, kahviloita, '
+          + 'musiikkiklubeja ja matkamuistokauppoja; metroasema '
+          + 'avattiin kujan eteläpään tuntumaan 2012.',
+      kuvat: [
+        {
+          tiedosto: 'Nanluogu Xiang 1.jpg',
+          selite: 'Kujan koristeportti: maalatut palkit ja '
+            + 'lohikäärmekuviot kaartuvat kadun ylle, ja sinisessä '
+            + 'kilvessä lukee kujan nimi kiinaksi.',
+          lahde: 'EditQ, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rumpu- ja kellotorni': {
+      aika: '1272, uudelleen 1420',
+      teksti: 'Rumputorni rakennettiin 1272, kun kaupunki oli vielä '
+          + 'Kublai-kaanin Khanbaliq, ja sen nimi oli Järjestyksen '
+          + 'hallinnon torni. Yongle-keisari rakennutti sen uudelleen '
+          + 'nykyiselle paikalleen 1420, ja Qing-kausi korjasi sitä '
+          + 'perusteellisesti 1800. Torni on 47 metriä korkea ja '
+          + 'kokonaan puuta; sen takana seisoo 33-metrinen kellotorni '
+          + 'harmaine muureineen ja vihreine lasitettuine kattoineen.'
+          + '\n\n'
+          + 'Tornit olivat kaupungin kello. Rummut ja kello '
+          + 'ilmoittivat virallisen ajan Yuan-, Ming- ja Qing-kausien '
+          + 'läpi aina vuoteen 1924, jolloin tehtävä siirtyi '
+          + 'länsimaisille kelloille. Yläkerrassa oli alun perin yksi '
+          + 'päärumpu ja 24 pienempää rumpua — niistä on jäljellä '
+          + 'enää päärumpu, jonka rinnalle on tehty uudet rummut.'
+          + '\n\n'
+          + 'Ennen korkeita taloja tornipari hallitsi Pekingin '
+          + 'siluettia, ja kaupungin pääakseli päättyy pohjoisessa '
+          + 'juuri niihin. Korjausten jälkeen tornit avattiin '
+          + 'kävijöille 1980-luvulla, ja niiden ylätasanteilta näkee '
+          + 'yhä yli vanhan kaupungin kattojen.',
+      kuvat: [
+        {
+          tiedosto: 'Beijing Drum Tower.jpg',
+          selite: 'Rumputorni Kellotornista nähtynä: punainen torni '
+            + 'kohoaa hutong-kattojen ja puiden vihreän meren '
+            + 'keskeltä, ja sen edustan aukiolla ihmiset näkyvät '
+            + 'pieninä pisteinä.',
+          lahde: 'Toadspike, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jingshanin puisto': {
+      aika: 'Ming-kausi, 1400-luku',
+      teksti: 'Jingshan on keinotekoinen vuori. Kun Yongle-keisarin '
+          + 'työmiehet kaivoivat Kielletyn kaupungin vallihautoja ja '
+          + 'kanavia 1400-luvun alussa, kaivumaa kasattiin palatsin '
+          + 'pohjoispuolelle 45,7 metriä korkeaksi kukkulaksi — '
+          + 'kaikki lihas- ja juhtavoimin. Kukkulalla on viisi '
+          + 'huippua ja jokaisella oma paviljonkinsa, ja feng shuin '
+          + 'opin mukaan se suojaa palatsia pohjoisen kylmiltä '
+          + 'tuulilta ja haitalliselta yin-voimalta.'
+          + '\n\n'
+          + 'Paikalliset kutsuvat kukkulaa myös Hiilikukkulaksi — '
+          + 'vanhan huhun mukaan keisarit pitivät sen alla salaista '
+          + 'hiilivarastoa. Kukkulaan liittyy myös synkkä käänne: '
+          + 'Ming-dynastian viimeinen keisari Chongzhen päätti '
+          + 'elämänsä täällä puuhun hirttäytymällä vuonna 1644, kun '
+          + 'kapinallisjoukot olivat vallanneet kaupungin.'
+          + '\n\n'
+          + 'Puisto oli keisarien yksityinen puutarha, johon '
+          + 'pääsi vain Kielletyn kaupungin kautta; yleisölle se '
+          + 'avattiin 1928. Keskimmäisen huipun paviljongista '
+          + 'aukeaa Pekingin kuuluisin näköala suoraan Kielletyn '
+          + 'kaupungin kultaiseen kattomereen, ja nykyään rinteillä '
+          + 'tanssitaan ja lauletaan oopperaa.',
+      kuvat: [
+        {
+          tiedosto: 'Fulanting Pavilion in Jingshan Park 2.jpg',
+          selite: 'Fulan-paviljonki Jingshanin rinteellä: '
+            + 'kaksikerroksinen lasitettu katto nousee puiden '
+            + 'välistä ja punaiset pylväät kantavat avointa '
+            + 'alakertaa. Kävijät näkyvät pieninä portaiden juurella.',
+          lahde: 'そらみみ, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kielletty kaupunki': {
+      aika: '1406–1420',
+      teksti: 'Kiinaksi palatsi on Zijincheng, Purppurainen kielletty '
+          + 'kaupunki. Purppura ei viittaa väriin vaan Pohjantähteen, '
+          + 'jonka ympärillä taivaan keisarin uskottiin asuvan — '
+          + 'maan keisarin palatsi oli sen maallinen vastine. '
+          + 'Kielletty se oli kirjaimellisesti: sisään pääsivät vain '
+          + 'keisari perheineen ja palvelijoineen, ja luvattomasta '
+          + 'tulosta seurasi kuolemantuomio.'
+          + '\n\n'
+          + 'Eteläinen pääportti on Meridiaaniportti, ja sen '
+          + 'keskiaukosta alkaa Keisarillinen tie — kivetty polku '
+          + 'kaupungin akselilla, jolla sai kulkea vain keisari '
+          + 'itse; poikkeuksia olivat keisarinna hääpäivänään ja '
+          + 'virkatutkinnon parhaat heti tulosten julistuksen '
+          + 'jälkeen. Tien päässä kohoaa Korkeimman harmonian sali, '
+          + 'Kiinan suurin säilynyt puurakennus, jonka mitat — '
+          + 'yhdeksän huonealaa leveyttä ja viisi syvyyttä — '
+          + 'toistavat keisarin lukuja. Koko akseli on muuten '
+          + 'runsaat kaksi astetta vinossa: tutkijat arvelevat '
+          + 'Yuan-kauden suuntauksen tähdänneen dynastian toiseen '
+          + 'pääkaupunkiin Shangduhun.'
+          + '\n\n'
+          + 'Muurin kulmissa on neljä tornia, joiden katoissa on 72 '
+          + 'harjaa; tarinan mukaan korjaajat eivät saaneet purettua '
+          + 'tornia enää kasaan, ennen kuin mestarikirvesmies Lu Ban '
+          + 'puuttui asiaan. Viimeinen keisari muutti pois 1924, ja '
+          + 'seuraavana vuonna palatsiin avattiin Palatsimuseo.',
+      kuvat: [
+        {
+          tiedosto: 'The Hall of Supreme Harmony.jpg',
+          selite: 'Korkeimman harmonian sali kolmiportaisen '
+            + 'marmoriterassin päällä: kaksoiskatto levittäytyy koko '
+            + 'terassin leveydelle, ja kävijät näkyvät kaiteiden '
+            + 'äärellä pieninä.',
+          lahde: 'Rabs003, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tiananmen': {
+      aika: '1420, nykyasu 1651',
+      teksti: 'Taivaallisen rauhan portti on Keisarikaupungin '
+          + 'pääportti, jonka kautta jokainen palatsiin tulija '
+          + 'kulki. Ensimmäinen portti valmistui 1420 nimellä '
+          + 'Chengtianmen, mutta salama poltti sen 1457; '
+          + 'uudelleenrakennus 1465 muutti muodon porttikaaresta '
+          + 'porttitaloksi. Vuonna 1644 portti paloi jälleen '
+          + 'kapinajoukkojen vallatessa kaupungin, ja Qing-dynastia '
+          + 'rakensi sen uudelleen — nykyinen nimi on vuodelta 1651.'
+          + '\n\n'
+          + 'Rakennus on 66 metriä pitkä, 37 leveä ja 32 korkea. '
+          + 'Edustalla seisoo kaksi kivileijonaa pahoja henkiä '
+          + 'torjumassa ja kaksi huabiao-pylvästä, joiden huipulla '
+          + 'istuu taruolento. Portin edestä virtaa vallihauta, ja '
+          + 'sen takana avautuu nykyään Tiananmenin aukio.'
+          + '\n\n'
+          + 'Portilla on erityinen asema Kiinan tunnuskuvana: sen '
+          + 'parvekkeelta julistettiin kansantasavalta 1949, ja '
+          + 'portin kuva on maan vaakunassa. Vuosina 1969–1970 '
+          + 'ikääntynyt rakennus purettiin ja koottiin salaa '
+          + 'uudelleen niin, että ulkoasu säilyi entisellään.',
+      kuvat: [
+        {
+          tiedosto: 'Tiananmen 1901.jpg',
+          selite: 'Tiananmen vuonna 1901: muuri on rapistunut ja '
+            + 'terassilla kasvaa heinää. Edustalla kulkee '
+            + 'muulivankkureita hiekkatiellä — aukiota ei vielä ole, '
+            + 'ja kuvan etäiset kulkijat ovat pieniä hahmoja.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zhengyangmen': {
+      aika: '1419',
+      teksti: 'Zhengyangmen eli kansanomaisesti Qianmen, Etuportti, '
+          + 'vartioi sisäkaupungin eteläistä sisäänkäyntiä suoraan '
+          + 'kaupungin pääakselilla. Se rakennettiin 1419, ja '
+          + 'kokonaisuuteen kuuluivat porttitalo, jousiampujatorni ja '
+          + 'niitä yhdistänyt barbakaanimuuri. Porttitalo on 42 '
+          + 'metriä korkea — korkein kaikista Pekingin '
+          + 'kaupunginmuurin porteista.'
+          + '\n\n'
+          + 'Portti vaurioitui pahoin kesän 1900 taisteluissa ja '
+          + 'kunnostettiin perusteellisesti 1914; barbakaanin '
+          + 'sivuportit purettiin 1915. Kun muuri muuten purettiin '
+          + '1960-luvulla metron tieltä, Zhengyangmen säästyi '
+          + 'molempine torneineen — useimmista muista porteista jäi '
+          + 'korkeintaan jousiampujatorni.'
+          + '\n\n'
+          + 'Portin edustalla on Kiinan maanteiden nollapiste, '
+          + 'laatta josta maan valtateiden etäisyydet lasketaan. '
+          + 'Etelään jatkuu Qianmenin katu, joka on ollut '
+          + 'kauppakatu vuosisatoja; sen varrella on Quanjuden '
+          + 'ankkaravintola ja sivukujana Pekingin kapein hutong.',
+      kuvat: [
+        {
+          tiedosto: 'Zhengyangmen (gatehouse) 2010 April.jpg',
+          selite: 'Zhengyangmenin porttitalo etelästä: harmaassa '
+            + 'muurissa on rivejä ikkuna-aukkoja ja sen päällä '
+            + 'kaksikerroksinen paviljonki. Edustalla kasvaa rivi '
+            + 'havupuita.',
+          lahde: 'Morio, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Taivaan temppeli': {
+      aika: '1420',
+      teksti: 'Taivaan temppeli ei ole yksi rakennus vaan laaja '
+          + 'uhripuisto kaupungin kaakkoisosassa. Keisari oli '
+          + 'Taivaan poika, ja tärkein hänen tehtävistään oli '
+          + 'uhrata vuosittain hyvän sadon puolesta; temppeli '
+          + 'rakennettiin näitä seremonioita varten 1420, ja '
+          + 'Jiajing-keisari antoi sille nykyisen nimen 1534 '
+          + 'rakennuttaessaan kaupunkiin myös auringon, maan ja '
+          + 'kuun temppelit. Nykyasunsa alue sai Qing-kauden '
+          + 'korjauksissa 1749 mennessä.'
+          + '\n\n'
+          + 'Pääakselilla ovat pyöreä Sadonkorjuurukoushalli, '
+          + 'Keisarillinen taivaanholvi ja Pyöreä alttari. Halli on '
+          + '38 metriä korkea ja kokonaan puuta, ilman ainuttakaan '
+          + 'naulaa — mutta nykyinen rakennus on jälleenrakennus, '
+          + 'sillä salama sytytti alkuperäisen palamaan 1889. '
+          + 'Vuoden 1873 matkustaja näki siis vielä alkuperäisen. '
+          + 'Taivaanholvia kiertää kaikumuuri, jota pitkin kuiskaus '
+          + 'kantaa yllättävän kauas, ja rakennuksia yhdistää 360 '
+          + 'metrin korotettu käytävä.'
+          + '\n\n'
+          + 'Keisarien uhrit päättyivät dynastian mukana, ja '
+          + 'temppelistä tuli puisto 1918. UNESCO otti sen '
+          + 'maailmanperintöluetteloon 1998, ja nykyään puisto on '
+          + 'pekingiläisten olohuone: aamuisin sen käytävillä '
+          + 'voimistellaan, tanssitaan ja pelataan korttia.',
+      kuvat: [
+        {
+          tiedosto: 'Imperial Vault of Heaven at Temple of Heaven, Beijing.jpg',
+          selite: 'Keisarillinen taivaanholvi: pyöreä sali yhden '
+            + 'marmoriterassin päällä, ja etualalla seisoo '
+            + 'lyhtypylväitä ja kävijöitä enimmäkseen selin '
+            + 'kameraan.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

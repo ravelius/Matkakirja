@@ -6283,6 +6283,90 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hua Lamphong', lat: 13.7389, lon: 100.5167 },
     ],
   },
+  /*
+   * PEKING (20.8.2026). Rajaus seuraa kaupungin pohjois–etelä-
+   * pääakselia: pohjoisessa Yonghe-temppeli sekä Rumpu- ja
+   * kellotornit, keskellä Kielletty kaupunki, Jingshan ja Tiananmen,
+   * etelässä Zhengyangmen ja Taivaan temppeli. Ruutu on noin
+   * 7,7 × 9,3 km eli väljempi kuin Euroopan ytimet — Taivaan
+   * temppeli on 3,1 km Tiananmenista etelään eikä sitä voi jättää
+   * pois, ja pohjoisessa Yonghe on 4,7 km:n päässä samasta
+   * pisteestä. Kahdeksan ydinkohdetta ovat silti kaikki akselilla
+   * tai parin kilometrin päässä siitä.
+   *
+   * KAINALOSSA KESÄPALATSIT. Kesäpalatsi (Yiheyuan) ja Vanha
+   * kesäpalatsi (Yuanmingyuan) ovat noin 14 km luoteessa eivätkä
+   * mahdu mihinkään järkevään pääruutuun; ne ovat samassa
+   * kainalossa, koska niiden väli on vain puolitoista kilometriä —
+   * sama ratkaisu kuin Medinassa ja Adenissa. Kainalo on vasemmassa
+   * ylänurkassa, joka on suuntana oikea.
+   *
+   * BADALING JÄI KARTALTA TARKOITUKSELLA: Kiinan muurin lähin
+   * osuus on noin 80 km luoteessa (Badaling-artikkeli; linnuntie
+   * koordinaateista n. 59 km) eli kaukana minkä tahansa
+   * kaupunkikartan ulkopuolella. Muuri kerrotaan lehden nostossa.
+   *
+   * Koordinaatit ovat kohteiden omista en-Wikipedian artikkeleista
+   * (prop=coordinates; Zhengyangmenin ja Jingshanin artikkeleissa
+   * infobox-koordinaattia ei ole raakatekstissä, mutta rajapinnan
+   * coordinates-taulu antaa ne) ja ne on tarkistettu erikseen
+   * (haettu 20.8.2026).
+   */
+  peking: {
+    polku: 'assets/kartat/peking-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 39.956, etela: 39.872, lansi: 116.345, ita: 116.435 },
+    kainalot: [
+      { rajat: { pohjoinen: 40.014, etela: 39.99, lansi: 116.256, ita: 116.303 },
+        x: 14, y: 2, leveys: 20, korkeus: 10.96, suunta: '14 km luoteeseen' },
+    ],
+    esittely: 'Peking on Pohjois-Kiinan tasangon pohjoisreunalla, ja '
+      + 'sitä on rakennettu saman akselin varaan dynastiasta toiseen: '
+      + 'kaupunki oli ensin Ji ja Yanjing, sitten Jurchenien Zhongdu '
+      + 'ja Kublai-kaanin Dadu, kunnes Ming-dynastian Yongle-keisari '
+      + 'antoi sille 1403 nimen Beijing, pohjoinen pääkaupunki, ja '
+      + 'rakennutti Kielletyn kaupungin ja Taivaan temppelin. Muurien '
+      + 'kaupunki se oli 1960-luvulle asti: Ming-kauden kaupunginmuuri '
+      + 'purettiin 1965, ja metro rakennettiin sen perustusten päälle. '
+      + 'Toinen kehätie seuraa yhä muurin ääriviivaa.\n\nKartan '
+      + 'keskellä on Kielletty kaupunki: suorakaide, jota kiertää '
+      + 'vallihauta ja jonka eteläpuolelta alkaa Tiananmenin aukio. '
+      + 'Palatsin takana pohjoisessa on Jingshanin puistokukkula ja '
+      + 'länsikyljessä kiemurtelee entisten keisarillisten puistojen '
+      + 'järviketju. Pohjoista kohti katuverkko tihenee kapeiden '
+      + 'hutong-kujien sokkeloksi, jonka keskeltä nousevat Rumpu- ja '
+      + 'kellotorni ja jonka läpi kulkee Nanluoguxiangin kuja; '
+      + 'koillisnurkassa on Yonghe-temppelin kortteli. Etelässä '
+      + 'akselilla seisoo Zhengyangmenin portti, ja kaakossa '
+      + 'levittäytyy Taivaan temppelin muurien ympäröimä puisto. '
+      + 'Vasemman yläkulman kainalossa ovat kesäpalatsit 14 '
+      + 'kilometrin päässä luoteessa: Kunming-järvi rantoineen ja sen '
+      + 'koillispuolella Vanhan kesäpalatsin rauniopuisto. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa;
+       * kaksi ensimmäistä ovat kainalokartan kohteet. */
+      /*
+       * Vanhan kesäpalatsin piste EI ole artikkelin koordinaatti
+       * (40,0072 / 116,2925): se osuu puiston järveen, koska
+       * Yuanmingyuan on suurelta osin vesialuetta, ja
+       * tools/tarkista-karttapisteet.mjs hylkäsi sen. Pistettä
+       * siirrettiin n. 500 m koilliseen puiston maalle raunioalueen
+       * suuntaan (Dubain ja Tokion oppi: piste rannalle, kun
+       * artikkelin koordinaatti ei kelpaa).
+       */
+      { nimi: 'Vanha kesäpalatsi', lat: 40.008, lon: 116.298 },
+      { nimi: 'Kesäpalatsi', lat: 39.9975, lon: 116.2689 },
+      { nimi: 'Yonghe-temppeli', lat: 39.9469, lon: 116.4111 },
+      { nimi: 'Nanluoguxiang', lat: 39.9425, lon: 116.3964 },
+      { nimi: 'Rumpu- ja kellotorni', lat: 39.9402, lon: 116.3896 },
+      { nimi: 'Jingshanin puisto', lat: 39.9236, lon: 116.3906 },
+      { nimi: 'Kielletty kaupunki', lat: 39.9158, lon: 116.3908 },
+      { nimi: 'Tiananmen', lat: 39.9073, lon: 116.3911 },
+      { nimi: 'Zhengyangmen', lat: 39.8992, lon: 116.3915 },
+      { nimi: 'Taivaan temppeli', lat: 39.8822, lon: 116.4066 },
+    ],
+  },
 };
 
 /*

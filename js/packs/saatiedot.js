@@ -1253,6 +1253,45 @@ export const SAATIEDOT = {
    * season" (haettu 17.8.2026), joka ajoittaa sen kesä–heinäkuulle.
    * Sama piikki on tämän rivin omissa luvuissa heinä- ja elokuussa.
    */
+  /*
+   * PEKING (20.8.2026). Sama menetelmä kuin paketin muillakin
+   * riveillä: Open-Meteon arkisto (ERA5), jakso 1991–2020, keskilämpö
+   * kuukauden päiväkeskiarvojen keskiarvona ja sade kuukausisumman
+   * vuosikeskiarvona; ylin ja alin koko jakson päivittäisten ylimpien
+   * ja alimpien keskiarvojen puolivälinä keskilämmön ympärillä.
+   * Haku tehtiin kuutena viiden vuoden palana ja palat yhdistettiin
+   * samalla kaavalla (Open-Meteon päiväkiintiö oli 20.8.2026 täynnä
+   * yhden pyynnön 30 vuoden hauille; Fablen ohje Bangkokin
+   * ennakkotapauksesta) — lopputulos on sama summa samoista
+   * päivistä, vuosia 30.
+   *
+   * MITTAUSPISTE on keskusta 39,91 / 116,39 eli Tiananmenin kulmilla
+   * — sama piste, jonka en-Wikipedian Tiananmen-artikkeli antaa
+   * (haettu 20.8.2026; kaupunkialueen korkeus 40–60 m). Peking on
+   * tasankokaupunki, joten piste edustaa koko keskustaa; luoteiset
+   * vuoristopiirit ovat toista maailmaa, mutta ne eivät ole lehden
+   * aluetta.
+   *
+   * Luonnehdinnan monsuuni- ja hiekkamyrskymaininnat ovat
+   * en-Wikipedian Beijing-artikkelin ilmasto-osiosta (Itä-Aasian
+   * monsuuni, Siperian antisykloni, kevään pöly Gobilta); luvut ovat
+   * rivin omia.
+   */
+  peking: {
+    lat: 39.91,
+    lon: 116.39,
+    keskilampo: [-3.7, -0.2, 6.2, 14.4, 21.2, 25.6, 26.9, 25.3, 20.6, 13, 3.8, -2.4],
+    ylin: [1, 5, 13, 21, 28, 32, 32, 30, 26, 19, 9, 2],
+    alin: [-9, -6, -1, 7, 14, 20, 22, 21, 15, 7, -2, -7],
+    sade: [3, 5, 9, 19, 35, 76, 166, 125, 56, 33, 15, 3],
+    luonnehdinta: 'Monsuuni jakaa Pekingin vuoden kahtia: heinä- ja '
+      + 'elokuussa sataa yhteensä lähes kolmesataa millimetriä eli yli '
+      + 'puolet koko vuoden 545 millimetristä, ja heinäkuun keskilämpö '
+      + 'on lähes kaksikymmentäseitsemän astetta. Talvi on kylmä ja '
+      + 'kuiva — tammikuun keskilämpö on liki neljä pakkasastetta, ja '
+      + 'joulu–helmikuussa vettä tulee yhteensä vain reilut kymmenen '
+      + 'millimetriä.',
+  },
   soul: {
     lat: 37.56,
     lon: 126.99,
