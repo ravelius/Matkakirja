@@ -1424,6 +1424,74 @@ const KAUPUNGIT = {
       },
     ],
   },
+  salalah: {
+    /*
+     * Salalahin rantakaistale Sultan Qaboosin suurmoskeijalta
+     * Al-Baleedin raunioille: moskeija ja Al-Husnin palatsi lännessä,
+     * Al-Haffan basaari rannassa, Nabi Umranin hauta ja Burj
+     * an-Nahdan kellotorni keskellä ja itäreunalla Al-Baleedin
+     * arkeologinen puisto suitsukemuseoineen. Ruutu on noin
+     * 5,9 × 4,6 km eli leveämpi kuin korkea, ja se on kaupungin oma
+     * muoto: Salalah on nauha meren ja Dhofarin vuorten välissä,
+     * eivätkä kohteet ole missään ytimessä vaan yhdessä rivissä
+     * rannikon suuntaan.
+     *
+     * ENSIMMÄINEN RAJAUS ULOTTUI LÄNNESSÄ 54,080:aan, jotta
+     * kulttuurikeskuksen Salalah Museum olisi mahtunut mukaan. Se
+     * jätettiin pois kahdesta syystä: museosta ei ole Commonsissa
+     * yhtään vapaata kuvaa, ja lisäkilometri teki ruudusta 6,7 km
+     * leveän eli suhteettoman matalan. Nyt kohteita on seitsemän
+     * kuten Medinassa.
+     *
+     * LENTOASEMA JÄI KARTALTA (17,0400 / 54,0906). Se on noin
+     * kilometrin pohjoisreunan yläpuolella, ja sen ottaminen mukaan
+     * olisi venyttänyt ruudun pohjoisosan pelkäksi kiitotieksi ja
+     * aavikoksi. Lentoasema kerrotaan matkailijan oppaassa.
+     *
+     * ETELÄREUNA 16,9915 EIKÄ 16,995, ja se on mitattu korjaus.
+     * Ensimmäisellä rajauksella Al-Husnin palatsi osui 88,7 %:n
+     * korkeudelle eli tarkalleen mittakaavajanan päälle
+     * (tools/tarkista-karttapisteet.mjs; sama vika kuin Masqatissa
+     * ja Kööpenhaminassa). Reunaa vietiin 390 metriä etelämmäs, ja
+     * piste nousi 81,2 %:iin. KOKEILTIIN ENSIN LEVEYDELLÄ: länsireuna
+     * 54,082 nosti pisteen 24,3 %:iin sivusuunnassa, mutta samalla
+     * jana vaihtui kilometristä kahteen ja levisi 17 %:sta 31 %:iin —
+     * osuma vain paheni. Leveyttä ei siis kannata kasvattaa janan
+     * takia, koska jana kasvaa mukana.
+     *
+     * meri: true — Arabianmeri on OSM:ssä Dohan ja Masqatin tapaan
+     * pelkkää rantaviivaa ilman vesimonikulmiota, joten ilman lippua
+     * kuvan alalaita jäisi paperinvalkoiseksi. Khawr Salalah ja muut
+     * rannikon laguunit ovat sen sijaan omia vesialueitaan.
+     */
+    rajat: { pohjoinen: 17.033, etela: 16.9915, lansi: 54.088, ita: 54.143 },
+    meri: true,
+  },
+  mosul: {
+    /*
+     * RAJAUS KATTAA MOLEMMAT RANNAT, ja se on harkittu ratkaisu eikä
+     * laiskuus. Mosulin vanhakaupunki on Tigriin länsirannalla, mutta
+     * kaupungin toinen puoli on kirjaimellisesti toisella rannalla:
+     * Kuyunjikin ja Nabi Yunusin kummut eli antiikin Ninive nousevat
+     * itäpuolella runsaan kilometrin päässä joesta. Pelkkä länsiranta
+     * jättäisi Niniven kartan ulkopuolelle, ja pelkkä Ninive jättäisi
+     * kaupungin. Ruutu on noin 5,2 × 4,0 km, ja Tigris kulkee sen
+     * halki lounaasta koilliseen.
+     *
+     * Länsireuna 43,112 riittää Bash Tapian linnalle (43,1217) ja
+     * Qara Saraylle (43,1257); itäreuna 43,170 vie Nabi Yunusin
+     * kummun (43,1594) yli. Pohjoisreuna 36,368 kattaa Kuyunjikin
+     * (36,3594) ja eteläreuna 36,332 Mosulin museon (36,3379).
+     *
+     * Jalkakäytävät ja palvelutiet päällä samasta syystä kuin
+     * Medinassa ja Mekassa: vanhankaupungin kujat ovat OSM:ssä
+     * jalankulkuväyliä ja huoltoteitä, ja ilman lippuja juuri se
+     * korttelisto, jonka takia kartta piirretään, jää tyhjäksi.
+     */
+    rajat: { pohjoinen: 36.368, etela: 36.332, lansi: 43.112, ita: 43.17 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
   izmir: {
     // Konakin aukio, Kemeraltin basaari ja antiikin agora mahtuvat
     // samaan runsaan puolentoista kilometrin ruutuun, ja niiden väli on
