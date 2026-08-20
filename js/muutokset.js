@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 938, teksti: 'Mekka: uusi lehti, kohdekartta, opas ja säärivi' },
   { v: 937, teksti: 'Medina: uusi lehti, kohdekartta, opas ja säärivi' },
   { v: 936, teksti: 'Siirtopromptit aina kopioitavana koodilohkona' },
   { v: 935, teksti: 'Wabarin paino punnittuun lukuun; kuvalinjaus kirjattu' },

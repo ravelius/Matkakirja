@@ -14905,6 +14905,491 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MEKKA (Opus 20.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian artikkeleista Mecca,
+   * Masjid al-Haram, Kaaba, Black Stone, Zamzam Well, Kiswah, Mahmal,
+   * Safa and Marwa, Maqam Ibrahim, Jabal al-Nour, Jannat al-Mu'alla,
+   * Mosque of the Jinn, Al-Jinn, Makkah Al Mukarramah Library, Ajyad
+   * Fortress, The Clock Towers, Hejaz railway, Hejaz Vilayet, Mina,
+   * Mount Arafat, Muzdalifah, Haramain High Speed Railway, Hajj,
+   * Timeline of Mecca, Johann Ludwig Burckhardt ja Richard Francis
+   * Burton (haettu 20.8.2026).
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 20.8.2026 ja sama kuin Medinassa ja
+   * Jerusalemissa: ei nykysotaa eikä nykypolitiikkaa, uskonto
+   * kerrotaan historiallis-kulttuurisena ilmiönä ja kunnioittavasti.
+   * POIS JÄTETTY: vuoden 1979 Suuren moskeijan valtaus, Ajyadin purun
+   * ympärille noussut diplomaattikiista ja hautakupolien purkuun
+   * liittyvä uskonnollinen kiista. Purut itse ovat mukana
+   * tapahtumina ilman kannanottoa (sama ratkaisu kuin Al-Baqissa
+   * v937). Pyhiinvaelluksen onnettomuudet on jätetty pois lukuun
+   * ottamatta koleraa, joka on osa 1800-luvun matkan todellisuutta.
+   * Ei-muslimien pääsykielto on asiallisena nykytietona oppaassa,
+   * koska isoisän saapumisrivi viittaa siihen ja koska matkailija
+   * törmää siihen ensimmäisenä.
+   *
+   * NELJÄ KORJAUSTA AIEMPAAN FAKTAPOHJAAN (docs/arkisto/
+   * faktapohja-mekka.md), jotka on tehty tässä:
+   * 1) K4:n "kolme vuotta myöhemmin" ei pidä paikkaansa. Kaaba-
+   *    artikkeli rakentaa Kaaban uudelleen SAMANA vuonna 1626 (ja
+   *    mainitsee toisaalla vuoden 1627), Masjid al-Haram -artikkeli
+   *    ajoittaa tulvat vuosiin 1621 ja 1629 ja korjauksen 1629,
+   *    Timeline of Mecca sanoo "1631 – Kaaba rebuilt". Ristiriita on
+   *    kirjoitettu auki lukijalle (v925/v932:n tapa).
+   * 2) Faktapohjan väite, että Timeline of Mecca olisi käyttökelvoton,
+   *    perustuu koostajan omaan lukuvirheeseen. Sivun luvut 45 000
+   *    (1885) ja kirjapaino (n. 1886) tarkistettiin: väestöluku
+   *    täsmää Statesman's Year-Bookiin ja kirjapaino Mecca-artikkelin
+   *    tarkempaan tietoon, jonka mukaan vali Osman Nuri Pasha toi
+   *    painon kaupunkiin 1885. Käytetty tarkempaa lukua 1885.
+   * 3) Dar al-Khoronfosh EI ole Ayyubidien aikainen valinta. Kiswan
+   *    valmistus siirtyi Egyptiin Ayyubidien aikana, mutta juuri
+   *    Kairon Dar al-Khoronfoshin verstas valittiin vasta Muhammad
+   *    Ali Pashan aikana 1800-luvun alussa. Teksti sanoo sen näin.
+   * 4) Faktapohjan väite, että "jopa 20 % pyhiinvaeltajista kuoli
+   *    matkalla", EI löydy Hejaz railway -artikkelista eikä mistään
+   *    muusta tarkistetusta artikkelista. Jätetty kokonaan pois.
+   *    Samoin jätettiin pois Burtonin "vihreä turbaani", jolle ei
+   *    löytynyt katetta hänen artikkelistaan.
+   *
+   * KOLME JABAL AL-NOURIA. Vuori esiintyy kolmena eri kuvana
+   * (avauskuva, matkailijan kuva ja kainalon nähtävyysjuttu). Se on
+   * tietoinen valinta ja Fablen kuvajaon mukainen: vuori on Mekan
+   * näkyvin maamerkki myös sille, joka ei pääse kaupunkiin, ja
+   * kolme kuvaa näyttävät sen kolmelta etäisyydeltä. Sama linja kuin
+   * Vasa-laivalla ja kattohaikaralla (docs/moduulit/kaupunkilehti.md).
+   *
+   * '273 of Mekka' -kuvan lähderivi on 'The British Library,
+   * Wikimedia Commons (PD)'. Commonsin rajapinta antaa lisenssiksi
+   * "No restrictions", joka tarkoittaa samaa; kuva on skannaus
+   * Snouck Hurgronjen teoksesta Mekka (Haag 1888).
+   */
+  mekka: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mekka',
+      johdanto: 'Kapea laakso paljaiden vuorten välissä, jonne sade tulee '
+        + 'harvoin mutta rajusti. Keskellä on Kaaba, jota kohti muslimit '
+        + 'kääntyvät kaikkialla maailmassa, ja sen ympärillä kaupunki, '
+        + 'joka on elänyt pyhiinvaeltajista.',
+      kansikuvat: [
+        {
+          tiedosto: 'Masjid al-Haram 2022.jpg',
+          selite: 'Ilmakuva Suuresta moskeijasta: musta Kaaba on '
+            + 'keskellä pyöreää pihaa, väki näkyy sen ympärillä pieninä '
+            + 'pisteinä, ja reunoilla seisovat nostokurjet kertovat '
+            + 'yhä jatkuvasta laajennustyöstä.',
+          lahde: 'مريم محمد الغلبان, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'المسجد الحرام٣.jpg',
+          selite: 'Sama moskeija yöllä ylhäältä: rakennus hehkuu '
+            + 'valaistuna laakson pohjalla, ja kellotornin huipusta '
+            + 'nousee suora valokiila pilviin.',
+          lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mount Arafat3.jpg',
+          selite: 'Arafatin kukkula pyhiinvaelluksen aikaan. Rinne on '
+            + 'täynnä valkopukuisia ihmisiä pieninä hahmoina, ja '
+            + 'laella erottuu valkoinen obeliskimerkki.',
+          lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: laakso yöllä, moskeija vuonna 1889 ja vuori —
+       * kaupungin kolme kerrosta siinä järjestyksessä, jossa lehti ne
+       * kertoo (nykyinen laakso, isoisän aikainen moskeija linnoituksineen
+       * ja se maasto, joka on ollut paikallaan koko ajan).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Mecca at night.jpg',
+          selite: 'Laakso yöllä valomerenä. Kellotorni kohoaa oikealla '
+            + 'kirkkaimpana pisteenä, ja reunoilla vuoret ovat mustia '
+            + 'aukkoja valojen keskellä.',
+          lahde: 'عباد ديرانية, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Masjid Haram 1889 Snouck Hurgronje.jpg',
+          selite: 'Moskeijan piha ja Kaaba vuonna 1889. Takana '
+            + 'kukkulalla erottuu Ajyadin linnoitus, jota ei ole enää '
+            + 'olemassa. Kuvan pienet numerot ovat alkuperäisen '
+            + 'julkaisun omia litteroita, joilla kohteet nimettiin '
+            + 'kirjan tekstissä.',
+          lahde: 'C. Snouck Hurgronje, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Jabbal An-Nour (2024).jpg',
+          selite: 'Jabal al-Nour tieltä kuvattuna: kaksihuippuinen '
+            + 'vuori, jonka laki näyttää siltä kuin sen päälle olisi '
+            + 'nostettu toinen vuori. Etualalla ajoneuvot ovat pieniä '
+            + 'rinteen mittakaavassa.',
+          lahde: 'Kaliper1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Laakso kerää sateen kaduille',
+          tiedosto: '273 of \'Mekka\' (11198318543).jpg',
+          teksti: 'Mekka on rakennettu kapeaan laaksoon, jota kutsutaan '
+            + 'Mekan kuopaksi. Kaupunki lepää 277 metrin korkeudessa '
+            + 'alastomien vuorten välissä, seitsemänkymmentä kilometriä '
+            + 'Jeddasta sisämaahan. Laakson muoto on '
+            + 'suoja ja riesa yhtä aikaa: sama kouru, joka piti '
+            + 'kaupungin koossa, ohjaa rankkasateen vedet suoraan '
+            + 'kaduille. Ongelma on vanha. Jo kalifien Umarin '
+            + '(634–644) ja Uthmanin (644–656) aikana kaupunkiin '
+            + 'kutsuttiin kristittyjä insinöörejä rakentamaan patoja ja '
+            + 'penkereitä matalille kortteleille, jotta Kaaban ympärys '
+            + 'pysyisi kuivana. Tutkija al-Kurdin mukaan tulvia oli '
+            + 'vuoteen 1965 mennessä tullut kahdeksankymmentä'
+            + 'yhdeksän, pahin niistä vuonna 1942.',
+          selite: 'Mekan asemakaava Snouck Hurgronjen teoksesta vuodelta '
+            + '1888, pohjana Burckhardtin mittaukset — kartan oma otsikko '
+            + 'kertoo sen. Laakson uoma on piirretty sinisellä ja '
+            + 'haarautuu kaupungin läpi, korttelit seuraavat sen mutkia, '
+            + 'ja molemmin puolin nousevat viivoitetut vuoret.',
+          lahde: 'The British Library, Wikimedia Commons (PD)',
+          wiki: 'Mekka',
+        },
+        {
+          otsikko: 'Kaivo, jolla oli oma ammattikunta',
+          tiedosto: 'بئر زمزم الأثري.jpg',
+          teksti: 'Kaksikymmentä metriä Kaabasta itään on Zamzamin '
+            + 'kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se '
+            + 'on noin kolmekymmentä metriä syvä ja halkaisijaltaan '
+            + 'runsaasta metristä kahteen ja puoleen; yläpuolisko on '
+            + 'hiekkakerroksissa kivimuurattuna, alapuolisko louhittu '
+            + 'kallioon. Perimätiedon mukaan kaivo avautui, kun '
+            + 'Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin '
+            + 'köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, '
+            + 'zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, '
+            + 'joka säilytti hänen nimellään merkittyä ruukkua ja kantoi '
+            + 'vettä koko matkan. '
+            + 'Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä '
+            + 'katsellaan lasin takaa.',
+          selite: 'Zamzamin vanha kaivonkehä museonäyttelyssä '
+            + 'koristeellisen rauta-aitauksen takana. Yllä riippuu '
+            + 'messinkiämpäri, jolla vettä nostettiin, ja sen vieressä '
+            + 'on vanha nostoväkipyörä.',
+          lahde: 'Mohammad Bahareth, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mekka',
+        },
+        {
+          otsikko: 'Karavaani toi Kaaballe uuden puvun',
+          tiedosto: 'Ulu Camii - Kaaba Curtain - Kabe Örtüsü (3).jpg',
+          teksti: 'Mekka eli karavaaneista. Afrikasta ja Kaukoidästä '
+            + 'kulki täältä Syyriaan mausteita, nahkaa, lääkkeitä, '
+            + 'kangasta ja orjia, ja vastavirtaan rahaa, aseita, '
+            + 'viljaa ja viiniä. Yksi vuotuinen karavaani oli muita '
+            + 'juhlavampi. Kaaban musta peite eli kiswa valmistettiin '
+            + 'Ayyubidien ajoista lähtien Egyptissä, ja se tuotiin '
+            + 'kamelinselässä rumpujen ja lippujen '
+            + 'saattelemana — Ibn Jubayr kuvasi kulkueen jo vuonna '
+            + '1184. Mukana kulki mahmal, tyhjä kantotuoli, joka kertoi '
+            + 'kenen sulttaanin suojeluksessa '
+            + 'pyhät paikat olivat. Egyptin Muhammad Ali Pasha määräsi '
+            + '1800-luvun alussa kiswan kulut valtion kassasta, ja '
+            + 'silloin työ annettiin Kairon Dar '
+            + 'al-Khoronfoshin verstaalle.',
+          selite: 'Kiswa-kangasta lähikuvassa: mustalle silkille on '
+            + 'kirjottu kullalla kalligrafiaa ja köynnöskuviota. Tämä '
+            + 'kappale on mamelukkiaikainen Kaaban oviverho, joka on '
+            + 'säilynyt Bursan Ulu Camiissa Turkissa.',
+          lahde: 'Yahia.Mokhtar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mekka',
+        },
+        {
+          otsikko: 'Kuutio, jota kohti maailma kääntyy',
+          tiedosto: 'Kaaba (1910)-2.jpg',
+          teksti: 'Kaaba on kivinen kuutio, 13,1 metriä korkea ja '
+            + 'pohjaltaan 12,86 kertaa 11,03 metriä. Se on qibla eli '
+            + 'rukoussuunta: jokainen moskeija maailmassa osoittaa '
+            + 'tänne. Nykyinen rakennus on 1600-luvulta. Rankkasade '
+            + 'kaatoi seinät, ja sulttaani Murad IV:n aikana ne '
+            + 'muurattiin uudelleen mekkalaisesta graniitista — '
+            + 'tarkasta vuodesta lähteet ovat eri mieltä: tulva '
+            + 'ajoitetaan vuoteen 1626 ja korjaus milloin samaan '
+            + 'vuoteen, milloin vuosiin 1629 tai 1631. Itäkulmassa on '
+            + 'musta kivi. Se oli alun perin yksi kappale, mutta on '
+            + 'nykyään seitsemän tai kahdeksan sirpaletta '
+            + 'hopeakehyksessä, ja näkyvää pintaa on noin 20 kertaa 16 '
+            + 'senttiä.',
+          selite: 'Kaaba vuonna 1910: oviverho on nostettu ylös, ja '
+            + 'kankaan kultakirjailu erottuu mustaa vasten. Ympärillä '
+            + 'liikkuu ihmisiä aikakauden asuissa pieninä hahmoina.',
+          lahde: 'G. Eric or Edith Matson, for American Colony Jerusalem, '
+            + 'Wikimedia Commons (PD)',
+          wiki: 'Mekka',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Jabbal An-Nour - Makkah (2241558560).jpg',
+          selite: 'Jabal al-Nourin huippu läheltä. Rinteessä erottuu '
+            + 'polku valkoisena pistejonona: se on jono ihmisiä matkalla '
+            + 'Hiran luolalle, ja se näyttää vuoren mittakaavan.',
+          lahde: 'Wal N., Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Mekka on Saudi-Arabian kolmanneksi suurin kaupunki, ja '
+          + 'vuoden 2022 laskennassa siinä oli 2,4 miljoonaa asukasta. '
+          + 'Pyhiinvaellus moninkertaistaa luvun: vuonna 2024 kaupungissa '
+          + 'kävi yli yhdeksäntoista miljoonaa ulkomaista vierailijaa, ja '
+          + 'hadžin viikolla väkiluku lähes kolminkertaistuu. Kaupungin '
+          + 'pyhälle alueelle eivät muut kuin muslimit saa tulla, ja raja '
+          + 'näkyy maastossa: Jeddan tieltä tultaessa sen merkitsee Mekan '
+          + 'portti, jättimäinen kirja lukutelineellä. Haram-alue on '
+          + 'täällä selvästi laajempi kuin Medinassa.',
+        artikkeli: {
+          nimi: 'Matkailijan Mekka',
+          taitto: 'opas',
+          teksti: 'Yksi moskeija laakson pohjalla, neljä kehätietä sen '
+            + 'ympärillä ja joka suunnassa vuori, jonka yli tie ei mene.',
+          nosto: 'Rautatietä Mekkaan ei koskaan rakennettu. Hidžaz-rata '
+            + 'pysähtyi Medinaan, neljäsataa kilometriä pohjoiseen — '
+            + 'osaksi siksi, että Harb-heimo nousi vuonna 1907 '
+            + 'vastustamaan jatkoa, koska kamelinajajat olisivat '
+            + 'menettäneet elantonsa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Mekassa ei ole omaa toimivaa lentoasemaa. '
+                + 'Kaupunkiin tullaan Jeddan Kuningas Abdulazizin '
+                + 'lentoaseman kautta noin seitsemänkymmenen kilometrin '
+                + 'päästä tai Ta\'ifista noin sadankahdenkymmenen '
+                + 'kilometrin päästä; Jeddan lentoasemalla on hadžia '
+                + 'varten oma terminaalinsa, johon mahtuu neljäkymmentä'
+                + 'seitsemän konetta yhtä aikaa. 1800-luvulla reitti oli '
+                + 'sama mutta hitaampi: laivalla Jeddaan ja siitä '
+                + 'maitse. Rautatie tuli vasta 2018, kun '
+                + 'Haramain-pikajuna avattiin yleisölle 11. lokakuuta. '
+                + 'Rata on 449 kilometriä pitkää ja junat kulkevat 300 '
+                + 'kilometrin tuntinopeudella, joten Medinaan pääsee '
+                + 'alle kahdessa tunnissa. Mekan asema on Rusaiyfahin '
+                + 'kaupunginosassa kolmannen kehätien varressa. '
+                + 'Kaupungin sisällä ajetaan neljää kehätietä ja '
+                + 'lukuisia tunneleita pitkin.',
+              kuva: {
+                tiedosto: 'Haramain High Speed Railway Station Interior 2022.jpg',
+                selite: 'Haramain-radan asemahalli sisältä: katto '
+                  + 'kaartuu valkoisina palkkeina korkealla, ja '
+                  + 'matkustajat erottuvat vastavalossa siluetteina.',
+                lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Mekan kuoppa',
+              teksti: 'Kaupunki on Hidžazissa, kahdensadan kilometrin '
+                + 'levyisellä vuorikaistaleella Nafudin aavikon ja '
+                + 'Punaisenmeren välissä. Keskusta on käytävä vuorten '
+                + 'välissä, ja sitä kutsutaan Mekan kuopaksi; siihen '
+                + 'kuuluvat al-Taneemin, Bakkahin ja Abqarin notkot, ja '
+                + 'juuri tämä muoto on ohjannut kaupungin kasvua koko '
+                + 'sen historian ajan. Kaupunki on 277 metrin '
+                + 'korkeudessa eli Hidžazin matalimpia, vaikka sen omat '
+                + 'huiput yltävät tuhanteen metriin — korkein on Jabal '
+                + 'al-Nour, 642 metriä. Alaa on yli 1 200 '
+                + 'neliökilometriä ja kaupunginosia 34. Keskusta on '
+                + 'al-Haramin alue, ja sen ympärillä on vanha kaupunki, '
+                + 'jonka tunnetuin kortteli on Ajyad. Paikallisesta '
+                + 'kivestä muurattuja kahden ja kolmen kerroksen taloja '
+                + 'on yhä jäljellä hotellien ja kauppakeskusten '
+                + 'välissä.',
+              kuva: {
+                tiedosto: 'Roof of Masjid al-Haram 03.jpg',
+                selite: 'Suuren moskeijan kattotaso: rukousmatot on '
+                  + 'ladottu pitkiksi suoriksi riveiksi laattapinnalle, '
+                  + 'ja kyyhkysiä kävelee rivien välissä.',
+                lahde: 'Mondephile, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: pyhiinvaellus elinkeinona',
+              teksti: 'Hadž on yksi islamin viidestä pilarista, ja se '
+                + 'tehdään kerran vuodessa kuukalenterin viimeisessä '
+                + 'kuukaudessa dhu al-hijjassa; jokaisen terveen ja '
+                + 'siihen kykenevän muslimin toivotaan tekevän sen '
+                + 'kerran elämässään. Vuonna 2019 hadžille tuli '
+                + '2 489 406 ihmistä. Kaupungin talous on aina '
+                + 'nojannut heihin: osmanien aikana Mekka ja Medina '
+                + 'olivat vapautettuja veroista ja saivat sen sijaan '
+                + 'valtion kassasta vuotuisen surre-avustuksen, ja koko '
+                + 'maakunta oli vapautettu asepalveluksesta. Riitit '
+                + 'vievät väen kaupungin ulkopuolelle: Minan '
+                + 'telttalaaksoon kaakkoon, Arafatin kukkulalle ja '
+                + 'Muzdalifahin tasangolle. Sesonki toi myös sesongin '
+                + 'riskit — koleraa puhkesi pyhiinvaeltajien '
+                + 'keskuudessa 27 kertaa vuosien 1830 ja 1930 välillä.',
+              kuva: {
+                tiedosto: 'Mina\'s tents.JPG',
+                selite: 'Minan telttameri yöllä. Valkoisia telttoja '
+                  + 'jatkuu riveissä horisonttiin asti, ja niiden '
+                  + 'välissä palavat korkeat valonpylväät.',
+                lahde: 'Arisdp, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: vuosi ennen isoisää',
+              teksti: 'Vuonna 1803 ensimmäinen saudivaltio valtasi '
+                + 'Mekan ja piti sitä kymmenen vuotta; osa kaupungin '
+                + 'historiallisista haudoista ja kupoleista purettiin '
+                + 'silloin. Osmanit antoivat takaisinvaltauksen '
+                + 'Egyptin varakuninkaalle Muhammad Ali Pashalle, joka '
+                + 'onnistui siinä vuonna 1813. Kuusikymmentä vuotta '
+                + 'myöhemmin, vuonna 1872 eli vuosi ennen isoisän '
+                + 'matkaa, Hidžaz järjestettiin uudelleen vilajetiksi '
+                + 'vuoden 1864 vilajettilain mukaan: Mekasta tuli '
+                + 'maakunnan keskus, ja Medina ja Jedda jäivät sen '
+                + 'alaisiksi sandžakeiksi. Kaupungin väkiluvusta '
+                + 'liikkui eri arvioita — 1878 laskettiin viidestä'
+                + 'kymmenestä kuuteenkymmeneen tuhatta, 1885 '
+                + 'neljäkymmentäviisi tuhatta — koska pyhiinvaellus '
+                + 'muutti luvun joka vuosi. Ensimmäisen kirjapainon toi '
+                + 'kaupunkiin vali Osman Nuri Pasha vuonna 1885.',
+              kuva: {
+                tiedosto: 'Zemzem takımı.jpg',
+                selite: 'Zamzam-astiasto Adanan museossa Turkissa: '
+                  + '1800–1900-luvun hopeoitu kannu ja maljat, joilla '
+                  + 'Zamzamin vettä kannettiin ja tarjoiltiin '
+                  + 'osmanivaltakunnassa.',
+                lahde: 'Tpinar, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Mekka on kuuma aavikkokaupunki, ja se näkyy '
+                + 'luvuissa. Kesä- ja heinäkuussa kuukauden keskilämpö '
+                + 'on kolmekymmentäkolme ja puoli astetta, kesäkuun '
+                + 'päivät nousevat neljäänkymmeneenyhteen, eivätkä yöt '
+                + 'auta: heinä- ja elokuussa vuorokauden alin on '
+                + 'keskimäärin kaksikymmentäseitsemän astetta. Talvi on '
+                + 'toinen kaupunki — tammikuun keskilämpö on '
+                + 'kaksikymmentäyksi. Sadetta tulee koko vuonna '
+                + 'satakolmekymmentäseitsemän millimetriä, ja siitä '
+                + 'lähes kaksi kolmasosaa marras–tammikuussa, usein '
+                + 'rajuina ukkoskuuroina. Marras–maaliskuu on siis '
+                + 'kävelijän aika. Nämä luvut ovat keskustan '
+                + 'mittauspisteen normaaleja vuosilta 1991–2020; '
+                + 'Mekan artikkelin sanallinen kuvaus antaa talvelle '
+                + 'hieman viileämmät yöt, noin yhdeksäntoista astetta, '
+                + 'koska se ei nojaa samaan mittapisteeseen.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Osmanien hallintokaupunki, jossa moskeijaa korjattiin ja '
+        + 'linnoitus vartioi kukkulalta. Samaan aikaan kaksi '
+        + 'eurooppalaista matkakirjailijaa livahti kaupunkiin '
+        + 'valepuvussa ja kirjoitti muistiin, mitä näki.',
+      tehtava: {
+        kysymys: 'Ajyadin linnoitusta ei ole enää olemassa. Missä sitä '
+          + 'voi silti käydä katsomassa?',
+        vaihtoehdot: [
+          'Istanbulin pienoismallipuistossa',
+          'Mekan kellotornin näyttelyssä',
+          'Kairon kansallismuseossa',
+          'Jeddan satamamuseossa',
+        ],
+        oikea: 0,
+        fakta: 'Linnoituksesta on jäljellä 1:25-kokoinen pienoismalli '
+          + 'Miniatürk-puistossa Istanbulissa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sveitsiläinen šeikki Ibrahim',
+          tiedosto: 'Bildnis Johann Ludwig Burckhardt HMB 1947-221.jpg',
+          teksti: 'Johann Ludwig Burckhardt oli sveitsiläinen maantieteilijä '
+            + 'Afrikan-tutkimusseuran palveluksessa. Määränpää oli '
+            + 'Timbuktu, jonne hän ei koskaan päässyt. Hän '
+            + 'opiskeli Cambridgessa arabiaa, muutti vuonna 1809 Aleppoon '
+            + 'ja otti nimen šeikki Ibrahim ibn Abdallah. Matkan varrella '
+            + 'hän näki eurooppalaisista ensimmäisenä Petran rauniot vuonna '
+            + '1812 ja Abu Simbelin hiekkaan hautautuneen temppelin '
+            + 'seuraavana vuonna; hän piirsi myös Medinan vanhan '
+            + 'asemakaavan. '
+            + 'Jeddaan hän astui 18. heinäkuuta 1814, todisti olevansa '
+            + 'muslimi ja pääsi Mekkaan, jossa vietti useita kuukausia ja '
+            + 'teki pyhiinvaelluksen riitit. Muistiinpanot julkaistiin '
+            + 'vasta kuoleman jälkeen, vuonna 1829.',
+          selite: 'Öljyvärimuotokuva Burckhardtista: vaalea turbaani, '
+            + 'jonka laella on punainen lakki, tuuhea parta ja vaalea '
+            + 'viitta. Tausta on tumma ja tyhjä.',
+          lahde: 'Maurice Babey, Wikimedia Commons (PD)',
+          wiki: 'Mekka',
+        },
+        {
+          otsikko: 'Upseeri, joka vaihtoi hahmoa matkalla',
+          tiedosto: 'The Romance of Isabel, Lady Burton - Richard Burton in native dress.jpg',
+          teksti: 'Richard Francis Burton oli brittiupseeri, joka oli '
+            + 'palvellut seitsemän vuotta Intiassa ja tunsi tavat. Vuonna '
+            + '1853 hän lähti Mekkaan valepuvussa ja vaihtoi hahmoa '
+            + 'matkalla: ensin persialainen mirza, sitten '
+            + 'sunnisheikki, lääkäri, taikuri ja dervissi. Huhtikuussa hän '
+            + 'oli Aleksandriassa, toukokuussa Kairossa, 27. heinäkuuta '
+            + 'Medinassa ja 11. syyskuuta Mekassa. Koraanikotelossa hän '
+            + 'kantoi kelloa, kompassia, kynää ja numeroituja '
+            + 'paperiliuskoja muistiinpanoille. Kirjassaan Personal '
+            + 'Narrative of a Pilgrimage to Al-Medinah and Meccah hän '
+            + 'kirjoitti: "Mekassa ei ole mitään teatraalista, mikään ei '
+            + 'muistuta oopperaa, vaan kaikki on yksinkertaista ja '
+            + 'vaikuttavaa."',
+          selite: 'Burton valepuvussaan: valkoinen turbaani, pitkä viitta '
+            + 'ja vyöllä ase. Kuva on hänen vaimonsa elämäkerran '
+            + 'kuvituksesta.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Mekka',
+        },
+        {
+          otsikko: 'Linnoitus, joka vartioi kukkulalta',
+          tiedosto: 'Abraj-al-Bait largest clock tower ever.jpg',
+          teksti: 'Moskeijan eteläpuolella kohoavalla Bulbul-kukkulalla '
+            + 'seisoi vuodesta 1780 osmanien linnoitus. Ajyadin linnake '
+            + 'peitti noin kaksikymmentäkolmetuhatta neliömetriä, se '
+            + 'rakennettiin suojaamaan pyhäkköä rosvoilta ja '
+            + 'hyökkääjiltä, ja kukkulalta näki suoraan moskeijan '
+            + 'pihaan. Linnoitus kuului Mekan siluettiin koko 1800-luvun '
+            + '— se näkyy tämän lehden vuoden 1889 valokuvassa '
+            + 'moskeijan takana. Tammikuun ensimmäisen ja yhdeksännen '
+            + 'päivän välillä vuonna 2002 linnoitus purettiin ja suurin '
+            + 'osa kukkulasta tasoitettiin kellotornikompleksin tieltä. '
+            + 'Rakennuksesta on jäljellä 1:25-kokoinen pienoismalli '
+            + 'Istanbulin Miniatürk-puistossa.',
+          selite: 'Kellotornikompleksi nykyään. Tornit nousevat siltä '
+            + 'kukkulalta, jolla linnoitus seisoi, ja kellotaulu '
+            + 'erottuu keskimmäisen tornin kyljessä.',
+          lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mekka',
+        },
+        {
+          otsikko: 'Vallanvaihdoksia ja ensimmäinen kirjapaino',
+          tiedosto: 'ModernEgypt, Muhammad Ali by Auguste Couder, BAP 17996.jpg',
+          teksti: 'Osmanien valta Mekassa alkoi vuonna 1517, kun kaupungin '
+            + 'sharif Barakat bin Muhammad tunnusti sulttaanin ylivallan '
+            + 'mutta säilytti laajan itsehallinnon. Vuonna 1803 '
+            + 'ensimmäinen saudivaltio valtasi kaupungin ja piti sitä '
+            + 'kymmenen vuotta. Osmanit antoivat takaisinvaltauksen '
+            + 'Egyptin varakuninkaalle Muhammad Ali Pashalle, joka '
+            + 'onnistui siinä vuonna 1813. Loppuvuosisata oli hallintoa '
+            + 'ja uudistuksia: vuonna 1872 Hidžazista tuli vilajetti ja '
+            + 'Mekasta sen keskus, ja vuonna 1885 vali Osman Nuri Pasha '
+            + 'toi kaupunkiin ensimmäisen kirjapainon. Samana vuonna '
+            + 'väkiluvuksi arvioitiin neljäkymmentäviisi tuhatta.',
+          selite: 'Muhammad Alin muotokuva: valkoinen turbaani, tumma '
+            + 'viitta ja miekka sylissä. Hän hallitsi Egyptiä '
+            + 'osmanisulttaanin varakuninkaana.',
+          lahde: 'Auguste Couder, Wikimedia Commons (PD)',
+          wiki: 'Mekka',
+        },
+      ],
+    },
+  ],
   kapadokia: [
     {
       id: 'kaupunki',

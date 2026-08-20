@@ -10821,6 +10821,275 @@ export const NAHTAVYYSJUTUT = {
     },
   },
   /*
+   * MEKAN KOHDEKARTAN JUTUT (Opus 20.8.2026). Kuusi kohdetta samassa
+   * järjestyksessä kuin kartalla, pohjoisesta etelään. Faktat on
+   * tarkistettu en-Wikipedian artikkeleista Mecca, Masjid al-Haram,
+   * Kaaba, Black Stone, Zamzam Well, Safa and Marwa, Maqam Ibrahim,
+   * Jabal al-Nour, Jannat al-Mu'alla, Mosque of the Jinn, Al-Jinn,
+   * Makkah Al Mukarramah Library, Ajyad Fortress ja The Clock Towers
+   * (haettu 20.8.2026).
+   *
+   * PYHIEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa ja Medinassa:
+   * uskonto kerrotaan historiallis-kulttuurisena ilmiönä, rakennuksina
+   * ja kerrostumina, eikä hartauskielellä. Perimätieto merkitään
+   * perimätiedoksi. Jannat al-Mu'allan hautarakenteiden purku
+   * 1925–1926 on mukana tapahtumana ilman kannanottoa, koska ilman
+   * sitä kuva paljaasta kivikentästä jäisi selittämättä — sama
+   * ratkaisu kuin Medinan Al-Baqissa (v937).
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA, JOTKA ON RATKAISTU TÄSSÄ:
+   * 1) Kellotornin korkeus. The Clock Towers -artikkelin infobox
+   *    sanoo 607 m, saman artikkelin leipäteksti ja Mecca-artikkeli
+   *    sanovat 601 m. Käytetty 601, koska kaksi lähdekohtaa kolmesta
+   *    antaa sen ja infoboxin luku on merkitty ristiriitaiseksi jo
+   *    artikkelissa itsessään.
+   * 2) Jabal al-Nourin korkeus. Infobox ja Mecca-artikkeli 642 m,
+   *    leipäteksti "barely 640 m". Käytetty 642.
+   * 3) Kaaban mitat. Infobox 12,86 × 11,03 × 13,1 m (käytetty);
+   *    Architecture-osio antaa Petersonin mukaan "noin 15 m korkea,
+   *    sivut 12 × 10,5 m". Ero on kirjattu tähän eikä leipätekstiin,
+   *    koska juttu tarvitsee yhden mitan eikä mittakiistaa.
+   */
+  mekka: {
+    'Jabal al-Nour': {
+      aika: 'perimätiedossa 600-luvun alusta',
+      teksti: 'Valon vuori on kaupungin korkein kohta, 642 metriä, ja se '
+          + 'nousee laakson itäisellä suulla. Muodoltaan se on '
+          + 'poikkeuksellinen: huippu näyttää siltä kuin vuoren päälle '
+          + 'olisi nostettu toinen vuori, ja juuri siitä sen tunnistaa '
+          + 'kaukaa. Kivi on syväkiveä, pääosin karkearakeista '
+          + 'sarvivälke-tonaliittia, eikä rinteillä ole vettä eikä '
+          + 'kasvillisuutta muutamaa piikkipensasta lukuun ottamatta.'
+          + '\n\n'
+          + 'Rinteessä on Hiran luola, kahdensadanseitsemänkymmenen '
+          + 'metrin korkeudella. Se on pieni — noin kolme ja puoli '
+          + 'metriä pitkä ja puolitoista metriä leveä — eikä sillä ollut '
+          + 'ennen islamia mitään erityistä merkitystä. Muslimien '
+          + 'perimätiedon mukaan Muhammad vetäytyi tänne yksinäisyyteen '
+          + 'kuukaudeksi vuodessa ja sai neljänkymmenen vuoden iässä '
+          + 'täällä ensimmäisen ilmestyksen: Koraanin 96. suuran eli '
+          + 'al-Alaqin viisi ensimmäistä jaetta.'
+          + '\n\n'
+          + 'Luolalle noustaan tuhatta seitsemääsataaviittäkymmentä '
+          + 'askelmaa. Nousuun menee puolesta tunnista kolmeen tuntiin '
+          + 'sen mukaan, kuinka kovaa kävelee ja kuinka paljon edessä on '
+          + 'muita: pyhiinvaelluksen aikaan huipulle arvioidaan kiipeävän '
+          + 'noin viisituhatta ihmistä päivässä. Vuori on Mekan '
+          + 'suosituimpia käyntikohteita, ja se on yksi harvoista, jotka '
+          + 'näkyvät kaupungin ulkopuolelle asti.',
+      kuvat: [
+        {
+          tiedosto: 'Jabal al-Nour And cave Hira.jpg',
+          selite: 'Vuoren kalliohuippu alhaalta katsottuna. Etualalla on '
+            + 'rakennuksen kaarikoristeinen yläkerta, ja sen takana rinne '
+            + 'nousee paljaana kivenä suoraan ylös.',
+          lahde: 'Sadath i, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jannat al-Mu\'alla': {
+      aika: 'esi-islamilaiselta ajalta',
+      teksti: 'Hautausmaa on Suuren moskeijan pohjoispuolella, ja siitä '
+          + 'käytetään myös nimiä Maqbarat al-Ma\'la ja al-Hajun. Paikkaa '
+          + 'on käytetty hautamaana jo esi-islamilaisella ajalla: sinne '
+          + 'haudattiin Quraysh-heimon väkeä ja Mekan arvostettujen '
+          + 'sukujen vainajia. Muhammadin lähipiiristä sinne haudattiin '
+          + 'useita ennen vuoden 622 muuttoa Medinaan — vaimo Khadija, '
+          + 'isoisä Abd al-Muttalib, setä Abu Talib ja esikoispoika '
+          + 'Qasim. Myöhemmin sinne haudattiin muun muassa kalifi '
+          + 'al-Mansur, Bagdadin perustaja.'
+          + '\n\n'
+          + 'Vuosisatojen kuluessa kentälle nousi kupolihautoja ja '
+          + 'mausoleumeja arvostetuimpien vainajien kohdille. '
+          + 'Osmanimatkaaja Evliya Çelebi laski 1600-luvulla '
+          + 'seitsemänkymmentäviisi kupolihautaa, joiden joukossa olivat '
+          + 'Muhammadin sedän ja isoisän haudat. Kuvauksia ja piirroksia '
+          + 'niistä on säilynyt useissa matkakertomuksissa.'
+          + '\n\n'
+          + 'Vuosina 1925–1926, kun Hidžaz siirtyi Ibn Saudin '
+          + 'hallintaan, suuri osa hautarakenteista purettiin täällä ja '
+          + 'Medinan Al-Baqissa. Siitä lähtien haudat on merkitty '
+          + 'pelkillä kivillä. Hautausmaa on yhä käytössä, ja se, mitä '
+          + 'siellä nykyään näkee, on laaja kivikenttä rivissä keskellä '
+          + 'miljoonakaupunkia.',
+      kuvat: [
+        {
+          tiedosto: 'Jannat ul Mualla Cemetery.jpg',
+          selite: 'Hautakenttä katosten alla: matalia kiviä pitkinä '
+            + 'riveinä soralla, ei kupoleita eikä kirjoitettuja '
+            + 'hautakiviä. Muutama kyyhkynen kävelee kivien välissä.',
+          lahde: 'Tubi719, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jinnien moskeija': {
+      teksti: 'Masjid al-Jinn on rakennettu paikalle, johon liittyy yksi '
+          + 'Koraanin omista kertomuksista. Perimätiedon mukaan joukko '
+          + 'jinnejä kokoontui täällä yhtenä yönä kuuntelemaan, kun '
+          + 'Muhammad lausui Koraanin katkelmaa; myöhemmin hän tapasi '
+          + 'samassa paikassa niiden johtajat ja otti vastaan näiden '
+          + 'uskontunnustuksen ja uskollisuudenvalan.'
+          + '\n\n'
+          + 'Koraanin seitsemäskymmenestoinen suura on nimeltään '
+          + 'al-Jinn, ja siinä on kaksikymmentäkahdeksan jaetta. Se '
+          + 'alkaa juuri tästä: jinnit kuulevat Koraania ja kääntyvät. '
+          + 'Koraanin mukaan ihminen on luotu maasta ja jinni '
+          + 'savuttomasta tulesta, ja suura erottelee niitä eri '
+          + 'ryhmiin — osa on muslimeja, osa ei. Suura luetaan '
+          + 'mekkalaiseksi, mutta sen katsotaan yleisesti syntyneen '
+          + 'selvästi myöhemmin kuin muut saman jakson suurat; Abdullah '
+          + 'Yusuf Ali ajoittaa sen noin kahta vuotta ennen hidžraa, '
+          + 'aikaan jolloin Muhammad saarnasi nykyisen Ta\'ifin '
+          + 'seudulla.'
+          + '\n\n'
+          + 'Moskeija on kaupungin vanhimpia ja samalla sen käydyimpiä. '
+          + 'Se on Sunni-moskeija, siinä on yksi minareetti, ja se '
+          + 'seisoo laakson pohjoisosassa lähellä Jannat al-Mu\'allan '
+          + 'hautausmaata — parin korttelin päässä hautakentän '
+          + 'eteläpuolella.',
+      kuvat: [
+        {
+          tiedosto: 'Mosque of the Jinn 01.jpg',
+          selite: 'Punaruskeasta kivestä muurattu moskeija kadunkulmassa. '
+            + 'Julkisivussa on kaarevat ikkunat ja kulmassa minareetti; '
+            + 'vasemmalla kadulla seisoo bussi.',
+          lahde: 'Sadrettin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mekan kirjasto': {
+      teksti: 'Maktabat Makkah al-Mukarramah eli Mekan kirjasto on '
+          + 'tavallinen kirjastorakennus epätavallisella paikalla. '
+          + 'Perimätiedon mukaan tällä tontilla seisoi talo, jossa Amina '
+          + 'bint Wahb synnytti Muhammadin rabi\' al-awwal -kuussa. '
+          + 'Paikka on Suuren moskeijan koillispuolella, vajaan '
+          + 'puolen kilometrin päässä Kaabasta.'
+          + '\n\n'
+          + 'Nykyinen rakennus on Saudi-Arabian ajalta. Ibn Saud, '
+          + 'kuningaskunnan perustaja, rakennutti kirjaston paikan '
+          + 'päälle neuvoteltuaan ensin oppineiden kanssa. Ratkaisu oli '
+          + 'tarkoituksellinen: rakennus on kirjasto eikä pyhäkkö, ja '
+          + 'sen kokoelmiin kuuluu käsikirjoituksia, joista on julkaistu '
+          + 'oma luettelonsa 1990-luvulla.'
+          + '\n\n'
+          + 'Mekassa tämä on pikemminkin sääntö kuin poikkeus. Moni '
+          + 'muistettu paikka on nykyään rakennus, jolla on toinen '
+          + 'tehtävä: syntymäpaikan kohdalla on kirjasto, linnoituksen '
+          + 'kukkulalla kellotorni ja Zamzamin kaivon päällä moskeijan '
+          + 'laattalattia. Matkailija näkee siis harvoin sen, mitä '
+          + 'paikassa oli — hän näkee sen, mikä paikan päälle on '
+          + 'rakennettu.',
+      kuvat: [
+        {
+          tiedosto: 'Site of the birthplace of the Prophet Muhammad, Mecca, Saudi Arabia.jpg',
+          selite: 'Kirjastorakennuksen julkisivu kadulta: vaalea '
+            + 'kivipinta, kaareva pääty ja seinässä arabiankielinen '
+            + 'kyltti. Kuvassa ei ole ihmisiä.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri moskeija': {
+      aika: '638 alkaen',
+      teksti: 'Moskeija ei ole rakennettu Kaaban ympärille kerralla vaan '
+          + 'kerroksittain. Aluksi Kaaba seisoi avoimella aukiolla. '
+          + 'Kalifi Umar laajensi paikkaa vuonna 637 puolellatoista '
+          + 'tuhannella neliömetrillä, jolloin ala nousi kolmeen ja '
+          + 'puoleen tuhanteen; Uthmanin aikana tehtiin ensimmäiset '
+          + 'katetut pylväskäytävät. Abd Allah ibn al-Zubayr venytti '
+          + 'alan vuonna 682 lähes seitsemään ja puoleen tuhanteen '
+          + 'neliömetriin, ja kalifi al-Mahdin vuonna 779 aloittama työ '
+          + 'nosti sen kahteenkymmeneenkahdeksaantuhanteen — suurempaa '
+          + 'laajennusta ei tehty ennen Saudi-Arabian aikaa.'
+          + '\n\n'
+          + 'Se moskeija, jonka 1800-luvun matkalainen näki, oli '
+          + 'osmanien työtä. Vuonna 1570 sulttaani Selim II tilasi '
+          + 'korjauksen pääarkkitehti Mimar Sinanilta: tasakatto vaihtui '
+          + 'kupoleiksi ja saliin tuli uudet pylväät, ja juuri nämä ovat '
+          + 'rakennuksen vanhimmat säilyneet osat. Tulvavaurioiden '
+          + 'jälkeen vuonna 1629 Murad IV:n aikana lisättiin kivinen '
+          + 'kaarikäytävä ja kolme minareettia — yhteensä seitsemän — ja '
+          + 'marmorilattia ladottiin uudelleen. Tässä asussa moskeija '
+          + 'pysyi lähes kolmesataa vuotta.'
+          + '\n\n'
+          + 'Sisällä on neljä paikkaa, joiden takia tänne tullaan. '
+          + 'Kaaba on keskellä: kivinen kuutio, 13,1 metriä korkea ja '
+          + 'pohjaltaan 12,86 kertaa 11,03 metriä, ja sen itäkulmassa on '
+          + 'musta kivi. Kaaba on qibla eli rukoussuunta — jokainen '
+          + 'moskeija maailmassa osoittaa tänne — ja pyhiinvaeltajat '
+          + 'kiertävät sen seitsemän kertaa vastapäivään. Maqam Ibrahim, '
+          + 'jalanjälkiä kantava kivi, on Kaaban vieressä lasi- ja '
+          + 'kultakuoressa; kivi itse on neljäkymmentä senttiä '
+          + 'kanttiinsa ja kaksikymmentä korkea. Zamzamin kaivo on '
+          + 'kaksikymmentä metriä Kaabasta itään. Safan ja Marwan '
+          + 'kukkulat, joiden väliä pyhiinvaeltajat kulkevat seitsemän '
+          + 'kertaa, ovat 130 metriä kaakkoon ja 300 metriä koilliseen '
+          + 'Kaabasta; matkaa kertyy noin kolme kilometriä, ja '
+          + 'kukkuloiden välinen käytävä liitettiin moskeijan sisään '
+          + 'vasta vuosina 1955–1956. Nykyinen moskeija on 356 000 '
+          + 'neliömetriä, ja sen kolmetoista minareettia ovat 139 '
+          + 'metriä korkeita.',
+      kuvat: [
+        {
+          tiedosto: 'The Holy Mosque in Mecca.jpg',
+          selite: 'Kaaba päivänvalossa moskeijan pihalla. Ympärillä '
+            + 'kaartuvat pylväskäytävät kerroksittain, ihmiset ovat '
+            + 'pieniä hahmoja mustan kuution ympärillä, ja taustalla '
+            + 'nousee tornirivi rakennusnostureineen.',
+          lahde: 'Meshal Obeidallah (talk), Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kellotorni': {
+      aika: '2002–2012',
+      teksti: 'Kukkulalla on ollut kaksi rakennusta. Ensimmäinen oli '
+          + 'Ajyadin linnoitus, jonka osmanit pystyttivät vuonna 1780 '
+          + 'Bulbul-kukkulalle moskeijan eteläpuolelle suojaamaan Kaabaa '
+          + 'rosvoilta ja hyökkääjiltä; kivilinnake peitti noin '
+          + 'kaksikymmentäkolmetuhatta neliömetriä ja katsoi suoraan '
+          + 'moskeijan pihalle. Tammikuun ensimmäisen ja yhdeksännen '
+          + 'päivän välillä vuonna 2002 linnoitus purettiin ja suurin osa '
+          + 'kukkulasta tasoitettiin.'
+          + '\n\n'
+          + 'Tilalle nousi Abraj al-Bait eli Kellotornit: seitsemän '
+          + 'tornin hotellikokonaisuus kolmensadan metrin päässä '
+          + 'Suuresta moskeijasta. Keskimmäinen torni, Mekan '
+          + 'kuninkaallinen kellotorni, on 601 metriä korkea ja '
+          + 'maailman neljänneksi korkein rakennus. Työ alkoi vuonna '
+          + '2002, kompleksi valmistui 2011 ja avattiin 2012; hinnaksi '
+          + 'tuli noin viisitoista miljardia dollaria. Rakentaja oli '
+          + 'Saudi Binladin Group, ja koska paikka on Mekassa, '
+          + 'työryhmän ei-muslimijäsenet eivät päässeet työmaalle '
+          + 'lainkaan.'
+          + '\n\n'
+          + 'Kello on tornin oma nähtävyys. Taululevyjä on neljä, '
+          + 'kummallakin sivulla yksi, ja kukin on 43 kertaa 43 metriä '
+          + '— maailman suurimmat. Koko kellon korkeus on 57 metriä ja '
+          + 'sen katto on 450 metrissä, mikä tekee siitä maailman '
+          + 'korkeimmalla sijaitsevan rakennuskellon. Kellokoneiston '
+          + 'teki saksalainen Perrot. Taulujen takana on '
+          + 'tähtitieteellinen näyttely, ja huipun tyvessä toimii '
+          + 'keskus, jossa tähyillään uutta kuuta islamilaisten '
+          + 'kuukausien alkaessa ja pidetään atomikelloa, joka ohjaa '
+          + 'kellotauluja.',
+      kuvat: [
+        {
+          tiedosto: 'ZamZam tower (Mecca clock tower) 2026-05-28.jpg',
+          selite: 'Kellotorni yöllä alhaalta kuvattuna: vihreä kellotaulu '
+            + 'hehkuu tornin kyljessä, huippu on kullanvärinen, ja '
+            + 'edustalla erottuvat moskeijan minareetit.',
+          lahde: 'FaysaLBinDaruL, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
    * Dohan nähtävyysjutut (nippu 2, 12.8.2026). Kolme kohdetta — Souq
    * Waqif, Islamilaisen taiteen museo ja kansallismuseo — on jo QAT-
    * maalehdessä omina juttuinaan, koska maalehti kirjoitettiin ennen
