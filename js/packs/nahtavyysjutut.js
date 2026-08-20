@@ -10512,6 +10512,315 @@ export const NAHTAVYYSJUTUT = {
     },
   },
   /*
+   * MEDINAN KOHDEKARTAN JUTUT (Opus 20.8.2026). Seitsemän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään. Faktat
+   * on tarkistettu en-Wikipedian artikkeleista Medina, Prophet's
+   * Mosque, Green Dome, Al-Baqi Cemetery, Mosque of Al-Ghamama, Quba
+   * Mosque, Masjid al-Qiblatayn, The Seven Mosques, Battle of the
+   * Trench, Hejaz railway, Hejaz Railway Museum ja Anbariya Mosque
+   * (haettu 20.8.2026).
+   *
+   * PYHIEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa: uskonto
+   * kerrotaan historiallis-kulttuurisena ilmiönä, rakennuksina ja
+   * kerrostumina, eikä hartauskielellä. Al-Baqin hautakupolien purku
+   * on mukana, koska ilman sitä kuva paljaasta hautakentästä jäisi
+   * lukijalle selittämättä — se on kerrottu tapahtumana ilman
+   * kannanottoa.
+   *
+   * MUSEON AUKIOLOA EI VÄITETÄ (asematarina): tieto vanhenee
+   * nopeammin kuin lehti, joten jutussa on rakennukset ja kokoelma.
+   */
+  medina: {
+    'Qiblatayn-moskeija': {
+      aika: '623 (2 AH)',
+      teksti: 'Qiblatayn tarkoittaa kahta rukoussuuntaa, ja nimi on '
+          + 'peräisin moskeijan omalta rakennusvuodelta. Sawad ibn '
+          + 'Ghanam ibn Ka\'ab rakensi sen hidžran toisena vuotena, ja '
+          + 'samana vuonna kaupungissa tapahtui käänne, joka näkyy yhä '
+          + 'jokaisessa maailman moskeijassa: rukoussuunta siirtyi '
+          + 'Jerusalemista Mekan Kaabaan. Muslimien perimätiedon mukaan '
+          + 'Muhammad sai käskyn juuri täällä kesken keskipäivän '
+          + 'rukouksen. Moskeija on noin viiden kilometrin päässä '
+          + 'Profeetan moskeijasta luoteeseen.'
+          + '\n\n'
+          + 'Siitä tuli yksi maailman kahdesta moskeijasta, joissa on '
+          + 'ollut kaksi mihrabia eli rukoussuunnan osoittavaa syvennystä '
+          + 'eri suuntiin — toinen on Mombasan Mandhry-moskeija Keniassa. '
+          + 'Kun rakennus purettiin ja rakennettiin kokonaan uudelleen '
+          + 'vuonna 1987, vanha Jerusalemia kohti osoittanut mihrab '
+          + 'poistettiin. Sen tilalle tehtiin pieni merkkisyvennys '
+          + 'toisen, umpinaisen kupolin alle muistuttamaan entisestä '
+          + 'suunnasta.'
+          + '\n\n'
+          + 'Nykyinen rakennus on siis nuori, vaikka paikka on vanha. '
+          + 'Sen muoto on tahallisen symmetrinen: kaksi minareettia, '
+          + 'kaksi kupolia ja rukoussalissa kaarirykelmä, jonka '
+          + 'tynnyriholvit kulkevat rukoussuunnan seinän suuntaisesti. '
+          + 'Pääkupoli nousee '
+          + 'ikkunarivin varaan suoraan mihrabin yläpuolelle, ja pieni '
+          + 'ristiholvi yhdistää sen toiseen kupoliin — siirtymä '
+          + 'suunnasta toiseen on siis rakennettu kattoon asti.',
+      kuvat: [
+        {
+          tiedosto: 'Masjid Qiblatain.jpg',
+          selite: 'Qiblatayn puiden takaa: valkoinen kupoli kohoaa '
+            + 'keskeltä ja sen molemmin puolin nousee minareetti. '
+            + 'Etualan lehvästö peittää rakennuksen alaosan.',
+          lahde: 'Muhammad Mahdi Karim at English Wikipedia, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Seitsemän moskeijaa': {
+      aika: 'taistelu 627, rakennukset 700-luvulta alkaen',
+      teksti: 'Seitsemän moskeijaa on kokoelma pieniä moskeijoita '
+          + 'Sela-vuoren eteläpuolella, ja nimi on väärä kahdella '
+          + 'tavalla. Rakennuksia on kuusi, ei seitsemää: osa arvelee, '
+          + 'että alun perin niitä oli seitsemän, ja osa laskee '
+          + 'seitsemänneksi Qiblatayn-moskeijan, jossa kävijät '
+          + 'tavallisesti käyvät samalla kierroksella. Jotkut laskevat '
+          + 'mukaan myös al-Khandaqin eli Kaivannon moskeijan.'
+          + '\n\n'
+          + 'Paikka liittyy vuoden 627 kaivantotaisteluun. Kaupunkia '
+          + 'puolustaneet miehet olivat asemissa tällä rinteellä, ja '
+          + 'jokainen moskeija on nimetty sen mukaan, kuka siinä kohdassa '
+          + 'seisoi: al-Fath, Salman al-Farsi, Abu Bakr, Umar, Ali ja '
+          + 'Fatima. Välimatkat ovat pieniä kuin puolustuslinjassa '
+          + 'ainakin — Salmanin moskeija on kaksikymmentä metriä '
+          + 'al-Fathista etelään, Abu Bakrin viisitoista metriä siitä '
+          + 'kaakkoon ja Umarin vielä kymmenen metriä etelämpänä. '
+          + 'Fatiman moskeija on kolme kertaa neljä metriä.'
+          + '\n\n'
+          + 'Rakennukset ovat eri-ikäisiä. Al-Fath ja Salman al-Farsi '
+          + 'ovat kalifi Umar ibn Abd al-Azizin ajalta 700-luvun alusta, '
+          + 'ja ministeri Saifuddin Abu al-Hija kunnosti ne vuonna 1154. '
+          + 'Fatiman moskeija on osmaniaikaa, sulttaani Abdulmecid I:n '
+          + 'kaudelta. Kolme moskeijaa — al-Fath, Salman ja Abu Bakr — '
+          + 'on sittemmin yhdistetty yhdeksi isommaksi moskeijaksi, '
+          + 'jolla on avoin sisäpiha.',
+      kuvat: [
+        {
+          tiedosto: 'Sab\'u Masajid.jpg',
+          selite: 'Valkoinen moskeija kaarikäytävineen ja mataline '
+            + 'kupoleineen. Takana kohoaa Sela-vuoren paljas '
+            + 'kalliorinne aivan rakennuksen takaseinän takaa.',
+          lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Profeetan moskeija': {
+      aika: '622 alkaen',
+      teksti: 'Moskeija alkoi Muhammadin oman kodin pihasta. Kun hän '
+          + 'saapui Medinaan vuonna 622, hän osti tontin kahdelta '
+          + 'orvolta — kauppahinnan maksoi Abu Ayyub al-Ansari — ja '
+          + 'rakennus valmistui seitsemässä kuukaudessa. Se oli '
+          + 'kolmenkymmenen ja puolen metrin levyinen ja vajaat '
+          + 'kolmekymmentäkuusi metriä pitkä avoin piha, jonka katon '
+          + 'kannattivat palmunrungot ja jonka kattopinta oli poljettua '
+          + 'savea ja palmunlehtiä kolmen ja puolen metrin korkeudella. '
+          + 'Ovia oli kolme, ja rukoussuunta osoitti aluksi pohjoiseen '
+          + 'Jerusalemiin. Tila oli yhtä aikaa rukoushuone, oikeussali '
+          + 'ja koulu.'
+          + '\n\n'
+          + 'Sen jälkeen tulivat kerrokset. Kalifi Umar purki ympäriltä '
+          + 'talot ja laajensi, Uthman rakensi vuonna 649 kivestä uuden '
+          + 'suorakaiteen — nyt Kaaban suuntaan — ja umaijadikalifi '
+          + 'al-Walid I laajensi vuosina 706–707 pinta-alan runsaasta '
+          + 'viidestätuhannesta lähes yhdeksääntuhanteen neliömetriin. '
+          + 'Silloin syntyivät myös islamilaisen arkkitehtuurin '
+          + 'ensimmäinen kaareva mihrab ja neljä kulmatornia, joita '
+          + 'pidetään maailman ensimmäisinä minareetteina. Kuningas '
+          + 'Fahdin laajennus 1985–1992 vei moskeijan yli sadan '
+          + 'kuudenkymmenentuhannen neliömetrin kokoiseksi, ja vuonna '
+          + '2010 aukiolle nostettiin 250 jättiläisvarjostinta, jotka '
+          + 'aukeavat ja sulkeutuvat sään mukaan.'
+          + '\n\n'
+          + 'Kaikkein tunnetuin osa on kaakkoiskulmassa. Vihreän kupolin '
+          + 'alla on Aishan talon paikka, jonne Muhammad haudattiin; '
+          + 'samassa kammiossa ovat myös kalifit Abu Bakr ja Umar. '
+          + 'Ensimmäisen puisen kupolin rakennutti mamelukkisulttaani '
+          + 'Qalawun vuonna 1279, nykyinen kupoli on vuodelta 1818 ja '
+          + 'vihreäksi se maalattiin vasta 1837. Hauta on syy siihen, '
+          + 'että Medina on Mekan jälkeen islamin toiseksi pyhin '
+          + 'kaupunki. Moskeija oli myös Arabian niemimaan ensimmäinen '
+          + 'paikka, johon tuli sähkövalo — vuonna 1909.',
+      kuvat: [
+        {
+          tiedosto: 'Close-up shot of the Green Dome at The Prophet\'s Mosque (Al Masjid-e-Nabawi).jpg',
+          selite: 'Vihreä kupoli lähikuvassa. Sen alla erottuu '
+            + 'hiekankeltainen muuri ikkunarivin kanssa, ja kupolin '
+            + 'kupeessa nousee minareetin varsi kirkasta taivasta '
+            + 'vasten.',
+          lahde: 'TheHadiRahim, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Al-Masjid al-Nabawī al-Sharīf Original Construction 1 AH.jpg',
+          selite: 'Nykyaikainen kaavio ensimmäisestä moskeijasta '
+            + 'vuodelta 622: suorakaiteen muotoinen piha, jonka '
+            + 'laidoilla ovat pylväsrivit, ja kaavioon on merkitty '
+            + 'kolme ovea sekä vaimojen asuintilat sivussa.',
+          lahde: 'SPQR10, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Baqin hautausmaa': {
+      aika: '622 alkaen',
+      teksti: 'Al-Baqi on Medinan vanhin hautausmaa ja se on kiinni '
+          + 'Profeetan moskeijan kaakkoiskyljessä. Kun Muhammad saapui '
+          + 'kaupunkiin syyskuussa 622, paikka oli piikkipensaikkoa '
+          + '— siitä tulee myös nimi Baqi al-Gharqad, gharqad-pensaiden '
+          + 'kenttä. Pensaikko raivattiin ja alue vihittiin kaupungissa '
+          + 'kuolevien muslimien hautapaikaksi. Idässä sen vieressä oli '
+          + 'palmuviljelmiä ja lännessä taloja, joten hautausmaa jäi '
+          + 'talorivien taakse.'
+          + '\n\n'
+          + 'Ensimmäisenä sinne haudattiin As\'ad ibn Zurarah, joka '
+          + 'kuoli kesken moskeijan rakennustöiden. Sen jälkeen tulivat '
+          + 'Muhammadin tytär Ruqayya vuonna 624, hänen poikansa Ibrahim '
+          + 'ja seuralainen Uthman ibn Maz\'un. Kalifi Muawiya laajensi '
+          + 'aluetta ja liitti siihen viereisen juutalaisen hautausmaan, '
+          + 'ja umaijadit rakensivat ensimmäisen kupolin kalifi Uthmanin '
+          + 'haudan päälle. Vuosisatojen kuluessa kenttä täyttyi '
+          + 'kupoleista ja hautarakennuksista.'
+          + '\n\n'
+          + 'Niistä ei näy enää mitään. Hautojen päälliset purettiin '
+          + 'vuonna 1806 ja uudelleen vuonna 1926, ja siitä lähtien '
+          + 'haudat on merkitty pelkillä kivillä. Se, mitä '
+          + 'hautausmaalla nykyään näkee, on laaja aukea kenttä '
+          + 'keskellä miljoonakaupunkia — haudat erottuvat vain maasta '
+          + 'nousevina kivinä.',
+      kuvat: [
+        {
+          tiedosto: 'Perkuburan Baqi\' (Maqbaratu al-Baqi\') & Masjid al-Nabawi.jpg',
+          selite: 'Hautausmaan kenttä etualalla: karua soraa ja '
+            + 'matalia kiviä riveissä, ei kupoleita eikä '
+            + 'hautakivitekstejä. Taustalla kohoavat Profeetan '
+            + 'moskeijan minareetit.',
+          lahde: 'Kerina yin, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Ghamama-moskeija': {
+      aika: '705–712',
+      teksti: 'Al-Ghamama tarkoittaa pilveä, ja moskeija on saanut '
+          + 'nimensä kertomuksesta: sen paikalla Muhammadin sanotaan '
+          + 'rukoilleen sadetta kuivuuden aikana, ja sadepilvet '
+          + 'kerääntyivät kaupungin ylle. Toisen perimätiedon mukaan hän '
+          + 'piti täällä myös id-rukouksen vuonna 631. Moskeija on '
+          + 'viidensadan metrin päässä Profeetan moskeijan Salamin '
+          + 'ovesta länteen — kävelymatka, ei ajomatka.'
+          + '\n\n'
+          + 'Rakennus on kaupungin vanhimpia. Se pystytettiin kalifi '
+          + 'Umar ibn Abd al-Azizin aikana 700-luvun alussa, ja sitä on '
+          + 'kunnostettu ainakin neljästi: mamelukkisulttaani Hasanin '
+          + 'aikana 1340, sharif Saifuddin Inal al-Ala\'in käskystä '
+          + '1622, sulttaani Abdulmecid I:n kaudella 1859 ja vielä Abdul '
+          + 'Hamid II:n aikana. Vuoden 1859 korjaus antoi sille suunnilleen '
+          + 'sen ulkonäön, joka rakennuksella on nyt.'
+          + '\n\n'
+          + 'Muoto on selkeä. Moskeija on suorakaide, jossa on kaksi '
+          + 'osaa: kahdenkymmenenkuuden metrin pituinen ja neljä metriä '
+          + 'syvä eteinen, jonka julkisivuun on piirretty viisi '
+          + 'kupolinmuotoista kehää, sekä kolmenkymmenen ja '
+          + 'viidentoista metrin rukoussali, jonka päällä on kuusi '
+          + 'kupolia. Suurin niistä '
+          + 'on mihrabin kohdalla. Moskeija oli aikanaan kiinni '
+          + 'päivittäisiltä rukouksilta, koska se on niin lähellä '
+          + 'Profeetan moskeijaa; nyt se on taas käytössä, ja sisällä on '
+          + 'oma äänentoisto, jotta kutsut eivät menisi päällekkäin.',
+      kuvat: [
+        {
+          tiedosto: 'Masjid Al-Ghamamah.jpg',
+          selite: 'Basalttikivinen moskeija palmunrunkojen välistä '
+            + 'katsottuna. Tumma kivimuuri ja sen päällä matalat '
+            + 'kupolit erottuvat vaaleaa taivasta vasten.',
+          lahde: 'معتز توفيق اغبارية, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hidžaz-radan asema': {
+      aika: '1908',
+      teksti: 'Tämä oli radan pääte, viimeinen asema ennen kuin kiskot '
+          + 'loppuvat. Asema rakennettiin Anbariyan kaupunginosaan '
+          + 'lähelle Profeetan moskeijaa, ja siihen kuului useita '
+          + 'rakennuksia: halli, sivurakennuksia ja oma raiteistonsa. '
+          + 'Ensimmäinen juna kaartoi laiturille 1. syyskuuta 1908, ja '
+          + 'kortteli oli kaupungille aivan uudenlainen — mitään '
+          + 'vastaavaa teollisen ajan rakennusryhmää täällä ei ollut '
+          + 'ennen nähty.'
+          + '\n\n'
+          + 'Junat lakkasivat tulemasta vuoden 1920 tienoilla, mutta '
+          + 'rakennukset jäivät. Entisöityyn asemakortteliin avattiin '
+          + 'vuonna 2006 Hidžaz-radan museo: siellä on pätkä '
+          + 'alkuperäistä rataa, vaunuhalli, vetureita ja liikkuvaa '
+          + 'kalustoa sekä aseman omia työkaluja. Osa esineistä on '
+          + 'tuotu muualta radan varrelta. Museo kuuluu Medinan museoon, '
+          + 'joka kertoo kaupungin historiaa laajemminkin.'
+          + '\n\n'
+          + 'Aseman kupeessa seisoo Anbariyan moskeija, jonka sulttaani '
+          + 'Abdul Hamid II rakennutti vuonna 1908 osana rautatiehanketta. '
+          + 'Se on osmanityyliä ja siinä on kaksi minareettia; nimensä se '
+          + 'sai viereisestä Anbariyan portista. Rautatie toi '
+          + 'kaupunkiin siis kerralla sekä aseman että moskeijan.',
+      kuvat: [
+        {
+          tiedosto: 'Hijaz Railway Station 2020.jpg',
+          selite: 'Asemarakennuksen julkisivu päivänvalossa: rivi '
+            + 'holvikaaria kivimuurissa, tasainen katto ja edessä '
+            + 'kivetty aukio ilman raiteita.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Quba-moskeija': {
+      aika: '622',
+      teksti: 'Perimätiedon mukaan tämä on islamin ensimmäinen '
+          + 'moskeija. Kun Muhammad tuli Mekasta vuonna 622, hän '
+          + 'pysähtyi ensin Quban kylään, joka oli silloin kuuden '
+          + 'kilometrin päässä kaupungista — kylä oli osa samaa '
+          + 'keidasta, ja vasta myöhemmin kaupunki kasvoi sen ympärille. '
+          + 'Lähteestä riippuen hän viipyi Qubassa kolmesta '
+          + 'kahteenkymmeneenkahteen päivään, ja moskeijan ensimmäisen '
+          + 'kiven hänen kerrotaan laskeneen itse.'
+          + '\n\n'
+          + 'Perustamisesta on useampi kertomus. Yhden mukaan paikka oli '
+          + 'taatelien kuivatuskenttä, joka kuului hänen isännälleen '
+          + 'Kulthumille, toisen mukaan kohta, johon eräs nainen oli '
+          + 'sitonut aasinsa. Kolmannen mukaan Mekasta tulleet '
+          + 'siirtolaiset olivat rakentaneet moskeijan jo valmiiksi ja '
+          + 'Muhammad rukoili siinä heidän kanssaan. Ensimmäinen '
+          + 'rakennus osoitti Jerusalemiin, ja se lienee rakennettu '
+          + 'uudelleen rukoussuunnan vaihduttua. Hadithin mukaan '
+          + 'Muhammad kulki Qubaan joka lauantai, milloin kävellen '
+          + 'milloin ratsain.'
+          + '\n\n'
+          + 'Nykyinen moskeija on 1980-luvulta. Vanha rakennus purettiin '
+          + 'kokonaan, ja egyptiläinen arkkitehti Abdel-Wahed El-Wakil '
+          + 'suunnitteli tilalle uuden, joka muurattiin perinteisistä '
+          + 'onteloista saviharkoista ilman valubetonia. Se valmistui '
+          + 'vuonna 1986, ja siinä on neljä minareettia ja '
+          + 'viisikymmentäkuusi kupolia runsaan kolmentoistatuhannen '
+          + 'neliömetrin tontilla. Quban ja Profeetan moskeijan välinen '
+          + 'kolmen kilometrin katu on muutettu kävelyväyläksi, jonka '
+          + 'nimi Darb as-Sunnah viittaa juuri niihin lauantaikävelyihin.',
+      kuvat: [
+        {
+          tiedosto: 'Mezquita de Quba, Medina, Arabia Saudita, 2025-05-22, DD 16-18 HDR.jpg',
+          selite: 'Quba yöllä valaistuna: vaalea julkisivu ja kupolit '
+            + 'hehkuvat lämpimässä valossa, ja minareetit erottuvat '
+            + 'valopylväinä tummaa taivasta vasten.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
    * Dohan nähtävyysjutut (nippu 2, 12.8.2026). Kolme kohdetta — Souq
    * Waqif, Islamilaisen taiteen museo ja kansallismuseo — on jo QAT-
    * maalehdessä omina juttuinaan, koska maalehti kirjoitettiin ennen

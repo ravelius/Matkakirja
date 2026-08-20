@@ -14483,6 +14483,428 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MEDINA (Opus 20.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian artikkeleista Medina,
+   * Prophet's Mosque, Green Dome, Al-Baqi Cemetery, Quba Mosque,
+   * Masjid al-Qiblatayn, The Seven Mosques, Mosque of Al-Ghamama,
+   * Battle of the Trench, Constitution of Medina, Hejaz railway,
+   * Hejaz Railway Museum, Anbariya Mosque, Harrat Rahat, Mount Uhud,
+   * Ajwa date, Nabonidus, Haramain High Speed Railway ja Prince
+   * Mohammad bin Abdulaziz International Airport (haettu 20.8.2026).
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 20.8.2026 ja sama kuin Jerusalemissa:
+   * ei nykysotaa eikä nykypolitiikkaa, uskonto kerrotaan
+   * historiallis-kulttuurisena ilmiönä ja kunnioittavasti. Uhud 625 ja
+   * Khandaq 627 ovat mukana tavallisena historiana ja kaupunkirakenteen
+   * kautta. Vuosien 1916–1919 piiritys on jätetty kokonaan pois, samoin
+   * Banu Qurayzan kohtalo. Ei-muslimien pääsyrajaus keskustan pyhälle
+   * alueelle on oppaassa asiallisena nykytietona, koska isoisän
+   * saapumisrivi viittaa siihen ja koska matkailija törmää siihen —
+   * muotoilu on Medina-artikkelin oma ("the city's sacred core of the
+   * old city is off limits to non-Muslims").
+   *
+   * KAKSI KORJAUSTA AIEMPAAN FAKTAPOHJAAN (docs/arkisto/faktapohja-
+   * medina.md), jotka on tehty tässä: Bab al-Salam on Rauhan portti
+   * eikä Egyptin portti, ja Muawiyan lähde, kanavat ja padot ovat
+   * 600-lukua, kun taas Wadi al-Aqiqin vehreys kuuluu vuoden 692
+   * jälkeiseen toiseen nousukauteen. Ne ovat kaksi eri asiaa, eivät
+   * yksi.
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY: Quba-moskeija esiintyy sekä
+   * historia-sivun H1-nostossa (eri kuva, panoramio) että
+   * nähtävyysjuttuna (Diego Delson yökuva). Eri tiedostot ja eri
+   * näkökulma — sama linja kuin Vasa-laivalla ja kattohaikaralla
+   * (docs/moduulit/kaupunkilehti.md).
+   */
+  medina: [
+    {
+      id: 'kaupunki',
+      nimi: 'Medina',
+      johdanto: 'Keidaskaupunki kolmen kuivan laakson yhtymäkohdassa, '
+        + 'taatelipalmikoiden ympäröimänä. Muurit ovat kadonneet '
+        + 'kehäteiden alta, ja keskellä kasvaa moskeija, jonka vihreä '
+        + 'kupoli näkyy kauas aavikolle.',
+      kansikuvat: [
+        {
+          tiedosto: 'Al-Masjid An-Nabawi (Bird\'s Eye View).jpg',
+          selite: 'Ilmakuva Profeetan moskeijasta iltahämärissä: vihreä '
+            + 'kupoli erottuu laajan kattopinnan reunalta, minareetit '
+            + 'nousevat kulmista, ja takana kaupunki jatkuu vuorten '
+            + 'juurelle asti.',
+          lahde: 'Konevi, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Wide shot of the Green Dome at The Prophet\'s Mosque (Al Masjid-e-Nabawi).jpg',
+          selite: 'Moskeijan muurilinja sivulta katsottuna: pitkä '
+            + 'julkisivu, sen päällä minareettirivi ja keskellä vihreä '
+            + 'kupoli kirkkaan sinistä taivasta vasten.',
+          lahde: 'TheHadiRahim, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Mount Uhud.JPG',
+          selite: 'Uhudin punaruskea vuorimassa kohoaa kaupungin '
+            + 'reunalla. Edustalla on rivi valkoisia matalia taloja ja '
+            + 'moskeija minareetteineen.',
+          lahde: 'Adiput (talk), Wikimedia Commons (PD)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kupoli, asema ja vuori — kaupungin kolme kerrosta
+       * siinä järjestyksessä, jossa lehti ne kertoo (pyhä keskusta,
+       * osmanien rautatie, ympäröivä maasto).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Medium shot of the Green Dome at The Prophet\'s Mosque (Al Masjid-e-Nabawi).jpg',
+          selite: 'Vihreä kupoli lähempää: sen vieressä on hopeanharmaa '
+            + 'sivukupoli ja kaksi minareettia, ja etualalle nousee '
+            + 'koristeellinen lyhtypylväs.',
+          lahde: 'TheHadiRahim, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Madinah Museum.JPG',
+          selite: 'Vanhan rautatieaseman julkisivu iltavalossa. Muuri on '
+            + 'ladottu vuorotellen tummasta basaltista ja vaaleasta '
+            + 'hiekkakivestä, ja ihmisiä kävelee kuvasta poispäin selin.',
+          lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Jabal al Rumah جبل الرماه.jpg',
+          selite: 'Jousimiesten kukkula ja sen takana Uhudin rinteet. '
+            + 'Etualalla on kivetty aukio lyhtypylväineen, ja rinne '
+            + 'nousee siitä suoraan ylös.',
+          lahde: 'CR Guru PK, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Muuri, joka on nykyään kehätie',
+          tiedosto: '19th-century Plan of Medina.jpg',
+          teksti: 'Vanha Medina oli soikea muurikaupunki. Muuri oli '
+            + 'yhdeksästä kahteentoista metriin korkea, sitä kiersivät '
+            + 'tornit, ja sisään pääsi neljästä portista — kauneimpana '
+            + 'pidettiin Bab al-Salamia eli Rauhan porttia. Muurien '
+            + 'ulkopuolella lännessä ja etelässä oli esikaupunkeja: '
+            + 'matalia taloja, pihoja, puutarhoja ja viljelyksiä. '
+            + 'Saudi-Arabian aikana muurit purettiin, ja niiden paikalle '
+            + 'vedettiin kolme kehätietä, King Faisal Road, King '
+            + 'Abdullah Road ja King Khalid Road. Vanhan kaupungin '
+            + 'soikea ääriviiva elää siis yhä katuverkossa, vaikka '
+            + 'muurikiveä ei ole jäljellä.',
+          selite: '1800-luvun kaiverrettu asemakaava Medinasta: soikea '
+            + 'muurikaupunki portteineen keskellä, ja sen ympärille on '
+            + 'merkitty taatelitarhoja.',
+          lahde: 'John Lewis Burckhardt, Wikimedia Commons (PD)',
+          wiki: 'Medina',
+        },
+        {
+          otsikko: 'Vesi ratkaisi, kasvoiko mikään',
+          tiedosto: 'Date palm with fruits.jpg',
+          teksti: 'Aavikkokaupunki eli kaivoistaan. Kalifi Muawiyan '
+            + 'käskyläiset kaivoivat 600-luvulla Ayn az-Zarqan eli '
+            + 'Sinisen lähteen ja rakensivat maanalaisia kanavia peltojen '
+            + 'kasteluun; laaksoihin nostettiin patoja, ja maatalous '
+            + 'nousi. Varsinainen vauraus tuli kuitenkin vasta toisessa '
+            + 'aallossa: kun umaijadit saivat vallan takaisin vuonna 692, '
+            + 'kauppa vilkastui, väkeä muutti kaupunkiin ja Wadi '
+            + 'al-Aqiqin rannat vihertyivät viljelyksistä. Kaivoista '
+            + 'kuuluisimpia on Ruman kaivo, jonka kalifi Uthman osti ja '
+            + 'lahjoitti yhteiseksi, niin ettei vedestä tarvinnut maksaa.',
+          selite: 'Taatelipalmun latvus alhaalta kuvattuna: lehtien alta '
+            + 'riippuu keltaisia hedelmätertuja tiheinä ryppäinä.',
+          lahde: 'Kerina yin, Wikimedia Commons (CC0)',
+          wiki: 'Medina',
+        },
+        {
+          otsikko: 'Juna Damaskoksesta',
+          tiedosto: 'Wadi Rum railway track, Hejaz railway, Jordan.jpg',
+          teksti: 'Hanke aloitettiin ilman ulkomaista rahaa. Sulttaani '
+            + 'Abdul Hamid II tilasi radan maaliskuussa 1900, ja '
+            + 'valtion maatalouspankki Ziraat antoi alkuun satatuhatta '
+            + 'liiraa; loput kerättiin muslimien lahjoituksina, joista '
+            + 'kuitenkin vain noin joka kymmenes tuli valtakunnan '
+            + 'ulkopuolelta. Työtä johti pääinsinööri Mouktar Bey, ja '
+            + 'rata saavutti Medinan 1. syyskuuta 1908 — päivä oli '
+            + 'valittu, sillä se oli sulttaanin valtaannousun '
+            + 'vuosipäivä. Määräaika näkyi jäljessä: osa raiteesta '
+            + 'laskettiin väliaikaisille penkereille wadien yli. Mekkaan '
+            + 'rataa ei jatkettu, sillä Harb-heimo nousi vuonna 1907 '
+            + 'vastustamaan jatkoa.',
+          selite: 'Hidžaz-radan raide kulkee suorana aavikon halki. Kuva '
+            + 'on radan Jordanian-osuudelta Wadi Rumista, jossa kiskot '
+            + 'ovat yhä paikoillaan hiekan keskellä.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Medina',
+        },
+        {
+          otsikko: 'Asema jäi, juna ei',
+          tiedosto: 'القطار المسخدم في السكة الحديدية الحجاز.jpg',
+          teksti: 'Rata ehti palvella runsaat kymmenen vuotta. Vuoteen '
+            + '1920 mennessä se oli käytännössä hylätty, ja Jordanian ja '
+            + 'Saudi-Arabian rajan eteläpuolella liikenne loppui '
+            + 'kokonaan. Rataa yritettiin rakentaa uudelleen '
+            + '1960-luvun puolivälissä, mutta työ keskeytyi. Jordaniassa '
+            + 'vanhaa rataa käytetään yhä fosfaatin kuljetukseen. '
+            + 'Medinassa kävi toisin: pääteaseman rakennukset '
+            + 'entisöitiin, ja niihin avattiin vuonna 2006 Hidžaz-radan '
+            + 'museo. Aseman kortteli on siis yhä olemassa, vaikka '
+            + 'raiteet eivät enää vie mihinkään.',
+          selite: 'Entisöity tumma tavaravaunu museoraiteella. Vaunun '
+            + 'kylki on peltiä, ja sen alla erottuvat jouset ja '
+            + 'teräspyörät.',
+          lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Medina',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Al-Masjid al-Nabawi, Medina - panoramio.jpg',
+          selite: 'Moskeijan aukion jättimäiset varjostimet avattuina. '
+            + 'Valo siivilöityy vaaleiden kankaiden läpi, ja pylväät '
+            + 'nousevat kivetyltä pihalta suorina riveinä.',
+          lahde: 'Vebra, Wikimedia Commons (CC BY 3.0)',
+        },
+        kappale: 'Medina on aavikon keskellä oleva suurkaupunki, jossa on '
+          + 'vajaat puolitoista miljoonaa asukasta, ja kaikki kiertää '
+          + 'yhden korttelin ympärillä: Profeetan moskeija aukioineen on '
+          + 'kaupungin keskipiste, ja hotellit, kadut ja kehätiet '
+          + 'asettuvat sen mukaan. Mekan jälkeen Medina on islamin '
+          + 'toiseksi pyhin kaupunki. Vanhan kaupungin pyhälle ytimelle '
+          + 'ei ole asiaa muilla kuin muslimeilla, mutta alue on selvästi '
+          + 'pienempi kuin Mekassa — sen ulkopuolella kaupunki on '
+          + 'tavallinen.',
+        artikkeli: {
+          nimi: 'Matkailijan Medina',
+          taitto: 'opas',
+          teksti: 'Yksi moskeija keskellä, kolme kehätietä ympärillä ja '
+            + 'niiden takana taatelitarhoja ja laavakenttiä.',
+          nosto: 'Uhud-vuori on kaupungin korkein kohta, 1 077 metriä — '
+            + 'ja sen juurella on jousimiesten kukkula, jonka '
+            + 'tyhjentyminen ratkaisi vuoden 625 taistelun.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Medinaan tullaan nykyään kahta reittiä. Prince '
+                + 'Mohammad bin Abdulaziz -lentoasema vanhan Qassimin '
+                + 'tien varressa on Saudi-Arabian neljänneksi vilkkain: '
+                + 'vuonna 2024 sen kautta kulki lähes yksitoista '
+                + 'miljoonaa matkustajaa, ja luku nousee '
+                + 'pyhiinvaellusaikaan. Toinen reitti on Haramain-'
+                + 'pikajuna, joka avattiin yleisölle 11. lokakuuta 2018. '
+                + 'Se kulkee Mekasta Jeddan ja Kuningas Abdullahin '
+                + 'talouskaupungin kautta Medinaan — matkaa on noin 450 '
+                + 'kilometriä ja aikaa noin kaksi tuntia, sillä junan '
+                + 'nopeus liikenteessä on 300 kilometriä tunnissa. '
+                + 'Kaupungin sisällä ajetaan kolmea kehätietä pitkin, '
+                + 'jotka kiertävät keskustan renkaina.',
+              kuva: {
+                tiedosto: 'قطار الحرمين 2023.jpg',
+                selite: 'Haramain-pikajuna kaartaa radalla vihertävän '
+                  + 'rinnemaiseman halki. Juna on valkoinen ja matala, '
+                  + 'ja rata kulkee loivassa kaarteessa rinteen alla.',
+                lahde: 'وكالة الأنباء السعودية, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Medina on Hidžazissa, kahdensadan kilometrin '
+                + 'levyisellä kaistalla Nafudin aavikon ja Punaisenmeren '
+                + 'välissä, noin 250 kilometriä rannikolta sisämaahan ja '
+                + '620 metrin korkeudessa. Se on keidas: kaupunki istuu '
+                + 'tasangolla kolmen wadin — Wadi al-Aqlin, Wadi '
+                + 'al-Aqiqin ja Wadi al-Himdhin — yhtymäkohdassa, ja '
+                + 'juuri siksi keskellä kuivaa vuoristoa on laajoja '
+                + 'vihreitä alueita. Maaperä on enimmäkseen basalttia. '
+                + 'Etelässä maisemaa hallitsee Harrat Rahat, '
+                + 'Saudi-Arabian suurin laavakenttä: se purkautui '
+                + 'viimeksi vuonna 1256, jolloin laava juoksi kuudesta '
+                + 'rinnakkaisesta kuonakeilasta 23 kilometrin matkan ja '
+                + 'pysähtyi neljän kilometrin päähän kaupungista. Alaa '
+                + 'kaupungilla on 589 neliökilometriä, siitä taajamaa '
+                + '293.',
+              kuva: {
+                tiedosto: 'Harrat Rahat.jpg',
+                selite: 'NASAn satelliittikuva laavakentästä: musta '
+                  + 'kivipinta peittää maan laajoina läikkinä, ja '
+                  + 'kentän pohjoislaidalla erottuu Medinan vaalea '
+                  + 'kaupunkialue.',
+                lahde: 'NASA Space Shuttle image (http://eol.jsc.nasa.gov/), Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: taatelit',
+              teksti: 'Medinan talous eli pitkään taateleista. Vuonna '
+                + '1920 seudulla laskettiin kasvatettavan 139 '
+                + 'taatelilajiketta, ja tunnetuin niistä on ajwa: '
+                + 'soikea, keskikokoinen ja mustakuorinen. Ajwa-tarhat '
+                + 'ympäröivät kaupunkia, ja niistä viedään vuosittain '
+                + 'tuhansia tonneja maailmalle — lajike ei silti ole '
+                + 'yksin Medinan, sillä sitä kasvatetaan muuallakin '
+                + 'Arabian niemimaalla ja Saharassa. Taateli ei ole '
+                + 'täällä matkamuisto vaan ruokaa: sitä syödään '
+                + 'erityisesti ramadanin iftar-aterialla, ja sillä on '
+                + 'vahva perinneyhteys profeetta Muhammadiin.',
+              kuva: {
+                tiedosto: 'Ajwa dates.JPG',
+                selite: 'Tummia ajwa-taateleita kasassa lasikulhossa. '
+                  + 'Hedelmien pinta on ryppyinen ja kiiltävä, ja koko '
+                  + 'on tasainen taatelista toiseen.',
+                lahde: 'Miansari66, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Pyhä ydin ja sen ympärys',
+              teksti: 'Keskusta on käytännössä yksi rakennus ja sen '
+                + 'kehä. Lähes koko historiallinen kaupunki on purettu '
+                + 'Saudi-Arabian aikana, ja tilalle on noussut '
+                + 'valtavasti laajennettu Profeetan moskeija, jonka '
+                + 'vihreän kupolin alla on Muhammadin hauta. Moskeijaa '
+                + 'ympäröivät hotellitornit, ja sen alla on maanalainen '
+                + 'pysäköinti. Vanhan kaupungin pyhä ydin on suljettu '
+                + 'muilta kuin muslimeilta, mutta Medinan haram-alue on '
+                + 'selvästi pienempi kuin Mekan. Sen ulkopuolella '
+                + 'kaupunki on tavallinen: asukkaista runsaat neljäkymmentä '
+                + 'prosenttia on ulkomaalaisia, ja korttelien välissä '
+                + 'seisoo vanhempia rakennuksia, kuten Al-Ghamaman '
+                + 'moskeija ja vanha rautatieasema.',
+              kuva: {
+                tiedosto: 'Mosque of Al-Ghamama 2026-05-13.jpg',
+                selite: 'Al-Ghamaman moskeija ylhäältä: matala '
+                  + 'kivirakennus, jonka katolla on rivi kupoleita, ja '
+                  + 'sen ympärillä kohoavat hotellitornit.',
+                lahde: 'FaysaLBinDaruL, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Medina on aavikkokaupunki, ja se näkyy luvuissa. '
+                + 'Touko–syyskuussa kuukauden keskilämpö on yli '
+                + 'kolmekymmentäyksi astetta ja elokuun päivät nousevat '
+                + 'yli neljänkymmenen; kesä- ja heinäkuussa sekä '
+                + 'syyskuussa sadetta ei normaalisti tule lainkaan, ja '
+                + 'koko vuoden sade on neljäkymmentä millimetriä. Talvi '
+                + 'on aivan toinen kaupunki: tammikuun keskilämpö on '
+                + 'lähes seitsemäntoista astetta ja yöt yhdeksän. Kuiva '
+                + 'ilma tekee vuorokausivaihtelusta suuren, joten aamu '
+                + 'on aina viileämpi kuin kuukauden luku antaa '
+                + 'ymmärtää. Marras–maaliskuu on siis kävelijän aika. '
+                + 'Väkeä riittää silti ympäri vuoden: kaupunkiin tulee '
+                + 'yli seitsemän miljoonaa vierailijaa vuodessa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki tunnettiin ennen nimellä Yathrib, ja se oli '
+        + 'keidas aavikkoreittien varrella. Siitä kasvoi muurein '
+        + 'suojattu kaupunki, jonka rakenteen muuttivat vuorollaan '
+        + 'osmanien linnoitus ja lopulta rautatie.',
+      tehtava: {
+        kysymys: 'Kuinka kauan matka Damaskoksesta Medinaan kesti sen '
+          + 'jälkeen, kun Hidžaz-rata valmistui?',
+        vaihtoehdot: [
+          'Neljäkymmentä päivää',
+          'Viisi päivää',
+          'Kaksi viikkoa',
+          'Yhden vuorokauden',
+        ],
+        oikea: 1,
+        fakta: 'Kamelikaravaanilla matkaan kului noin neljäkymmentä '
+          + 'päivää. Juna teki saman viidessä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Yathrib ennen Medinaa',
+          tiedosto: 'Quba Mosque - panoramio.jpg',
+          teksti: 'Ennen kuin kaupunkia kutsuttiin Medinaksi, se oli '
+            + 'Yathrib. Paikalla on asuttu ainakin puolitoista tuhatta '
+            + 'vuotta ennen hidžraa eli suunnilleen 800-luvulta eKr., '
+            + 'ja se oli keidas: vettä, taatelipalmuja ja viljelyksiä '
+            + 'keskellä kivistä vuoristoaavikkoa. Kaupungissa vaikutti '
+            + 'kolme juutalaista heimoa — Banu Qaynuqa, Banu Qurayza ja '
+            + 'Banu Nadir — ja 300-luvulta alkaen alueelle muutti '
+            + 'arabiheimoja Jemenistä. 400-luvun lopulla valta siirtyi '
+            + 'kahdelle heistä, Awsille ja Khazrajille. Quban kylä '
+            + 'keitaan eteläreunalla pysyi omana yhdyskuntanaan vielä '
+            + 'pitkään.',
+          selite: 'Quban valkoinen moskeija auringossa: neljä minareettia '
+            + 'kulmilla ja niiden välissä kupolien rypäs. Quba oli oma '
+            + 'kylänsä keitaan laidalla, kunnes kaupunki kasvoi sen '
+            + 'ympärille.',
+          lahde: 'يحيى الزعبي 2025, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Medina',
+        },
+        {
+          otsikko: 'Kaupunki, jolla on monta nimeä',
+          tiedosto: 'Urfa museum Stele H2A King Nabonid relief inscription Iron age in 2025 9345.jpg',
+          teksti: 'Vanhin tunnettu maininta kaupungista ei ole '
+            + 'arabialainen. Nimi Yathrib esiintyy Harranista '
+            + 'löytyneessä kirjoituksessa, joka kuuluu babylonialaiselle '
+            + 'kuninkaalle Nabonidukselle 500-luvulla eKr.; '
+            + 'babylonialaisten lähteiden mukaan hän valloitti Arabiaa '
+            + 'Yathribia myöten. Nimiä tuli myöhemmin kaksi '
+            + 'rinnakkaista. Muhammadin kerrotaan antaneen kaupungille '
+            + 'nimen Taybah tai Tabah eli hyvä ja lempeä, ja toisaalta '
+            + 'sitä alettiin kutsua yksinkertaisesti al-Madinaksi, '
+            + 'kaupungiksi. Jälkimmäisestä ovat lähtöisin pidemmät '
+            + 'muodot Profeetan kaupunki ja Valaistu kaupunki.',
+          selite: 'Naboniduksen Harranista löytyneen steelan yläosa '
+            + 'lähikuvassa: kuningas seisoo sauva kädessä, ja hänen '
+            + 'edessään kiveen on hakattu taivaankappaleiden symbolit.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Medina',
+        },
+        {
+          otsikko: 'Sopimus, joka teki heimoista yhteisön',
+          tiedosto: 'Birmingham Quran manuscript.jpg',
+          teksti: 'Aws ja Khazraj olivat sotineet keskenään '
+            + 'satakaksikymmentä vuotta, kun kaupungin klaanit '
+            + 'lähettivät lähetystön kutsumaan Muhammadin puolueettomaksi '
+            + 'välimieheksi. Pian hänen tulonsa jälkeen syntyi '
+            + 'asiakirja, jota kutsutaan Medinan perustuslaiksi: noin '
+            + 'neljäkymmentäseitsemän kohtaa, jotka tekivät Mekasta '
+            + 'muuttaneista, medinalaisista ja kaupungin juutalaisista '
+            + 'klaaneista yhden yhteisön. Yksi kohta kuuluu, että '
+            + 'juutalaisilla on oma uskontonsa ja muslimeilla omansa; '
+            + 'riidat vietiin Muhammadin ratkaistaviksi. Tutkijat '
+            + 'kiistelevät yhä siitä, oliko kyseessä yksi asiakirja vai '
+            + 'kokoelma sopimuksia.',
+          selite: 'Kaksi varhaista käsikirjoituslehteä pergamentilla, '
+            + 'teksti ruskeaa mustetta. Kyseessä ei ole perustuslaki '
+            + 'vaan Birminghamin Koraani-fragmentti — näyte siitä, '
+            + 'miltä aikakauden kirjoitus näytti.',
+          lahde: 'AnonymousUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Medina',
+        },
+        {
+          otsikko: 'Sulttaanin linnoitus ja rata',
+          tiedosto: 'Anbariya Mosque, Madinah, Saudi Arabia.jpg',
+          teksti: 'Osmanit saivat Medinan haltuunsa vuonna 1517, kun '
+            + 'Selim I valloitti Egyptin, ja vuonna 1532 Suleiman '
+            + 'Suurenmoinen rakennutti kaupungin ympärille linnoituksen '
+            + 'ja sijoitti sinne oman pataljoonansa. Valta kesti '
+            + 'katkoineen lähes neljäsataa vuotta. Sen loppupuolella '
+            + 'sulttaani Abdul Hamid II uudisti kaupungin kertaheitolla: '
+            + 'lennätinlinja Konstantinopoliin, voimalaitos Profeetan '
+            + 'moskeijalle ja Hidžaz-rata Damaskoksesta. Matka, joka oli '
+            + 'kestänyt neljäkymmentä päivää, lyheni viiteen, ja '
+            + 'vuosikymmenessä kaupungin väkiluku nousi '
+            + 'kahdeksaankymmeneentuhanteen.',
+          selite: 'Anbariyan osmanimoskeija: vaalea kivirakennus '
+            + 'kupoleineen ja kaksi hoikkaa minareettia. Moskeija seisoo '
+            + 'vanhan rautatieaseman kupeessa, ja se rakennettiin radan '
+            + 'yhteydessä vuonna 1908.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Medina',
+        },
+      ],
+    },
+  ],
   kapadokia: [
     {
       id: 'kaupunki',

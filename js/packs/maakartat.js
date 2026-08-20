@@ -5654,6 +5654,77 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Uhripaikka', lat: 30.3215, lon: 35.447 },
     ],
   },
+
+  /*
+   * MEDINA (20.8.2026). Rajaus on keskusta: Profeetan moskeija
+   * keskellä, kolmen kehätien sisus ja luoteen suunnassa Qiblatayn.
+   * Kainalossa oikeassa alakulmassa on Quba, joka on 3,5 kilometriä
+   * kaakkoon eikä mahtuisi samaan rajaukseen ilman että keskusta
+   * kutistuisi lukukelvottomaksi — sama ratkaisu kuin Helsingissä ja
+   * Budapestissa.
+   *
+   * KAKSI KOHDETTA JÄI POIS TARKOITUKSELLA. Uhud-vuori on runsaat
+   * neljä kilometriä pohjoiseen eli rajauksen ulkopuolella; se on
+   * lehden kuvissa ja teksteissä. Ruman kaivo jäi pois, koska siitä ei
+   * ole vapaata kuvaa muuta kuin porttikyltti — Jerusalemin
+   * ennakkotapaus: ei kuvaa, ei kohdetta. Kaivo mainitaan lehden
+   * teksteissä.
+   *
+   * Koordinaatit ovat kohteiden omista en-Wikipedian artikkeleista ja
+   * ne on tarkistettu erikseen (haettu 20.8.2026).
+   */
+  medina: {
+    polku: 'assets/kartat/medina-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 24.499, etela: 24.456, lansi: 39.571, ita: 39.624 },
+    kainalot: [
+      { rajat: { pohjoinen: 24.4455, etela: 24.433, lansi: 39.61, ita: 39.6245 },
+        x: 78, y: 76.8, leveys: 20, korkeus: 21.24, suunta: '3,5 km kaakkoon' },
+    ],
+    esittely: 'Medina on keidas, joka syntyi kolmen kuivan laakson '
+      + 'yhtymäkohtaan: Wadi al-Aqiqin, Wadi al-Aqlin ja Wadi al-Himdhin '
+      + 'pohjavesi teki vuoristoisen aavikon keskelle vihreän läikän, ja '
+      + 'sen varassa paikalla on asuttu ainakin 800-luvulta eKr. Silloin '
+      + 'kaupunki tunnettiin nimellä Yathrib, ja siihen aikaan siellä '
+      + 'asuivat sekä juutalaiset heimot että Jemenistä muuttaneet Aws ja '
+      + 'Khazraj. Vuonna 622 Muhammad muutti tänne Mekasta, ja tapahtuma '
+      + 'antoi islamille sekä ajanlaskun alun että ensimmäisen '
+      + 'kaupunkiyhteisön. Mekan jälkeen Medina on islamin toiseksi pyhin '
+      + 'kaupunki. Keskiajalla se oli soikea muurikaupunki: yhdeksästä '
+      + 'kahteentoista metriin korkea muuri kiersi sitä torneineen, ja '
+      + 'sisään pääsi neljästä portista. Osmanit hallitsivat kaupunkia '
+      + 'vuodesta 1517, ja 1900-luvun alussa sulttaani Abdul Hamid II toi '
+      + 'sinne lennättimen, voimalaitoksen ja Hidžaz-radan. Muurit '
+      + 'purettiin Saudi-Arabian aikana.\n\nKartalla ei siksi näy '
+      + 'muureista mitään. Niiden paikalla ovat kolme kehätietä — King '
+      + 'Faisal Road, King Abdullah Road ja King Khalid Road — jotka '
+      + 'kaartavat keskustan ympäri renkaina. Renkaiden sisällä erottuu '
+      + 'suorakaiteena Profeetan moskeija aukioineen: se on kartan '
+      + 'suurin yksittäinen rakennus, ja sen vieressä idässä on iso '
+      + 'aukea, jolta rakennukset on purettu moskeijan laajennushanketta '
+      + 'varten. Hautausmaa Al-Baqi on kiinni moskeijan itäkyljessä, ja '
+      + 'lounaassa kadun mutkassa on vanha Hidžaz-radan asema, jonne '
+      + 'junat tulivat Damaskoksesta vuosina 1908–1920. Luoteeseen '
+      + 'mentäessä katuverkko '
+      + 'harvenee ja rinne nousee: siellä ovat Seitsemän moskeijaa ja '
+      + 'kauimpana Qiblatayn. Oikean alakulman kainalossa on Quba, '
+      + 'kolmen ja puolen kilometrin päässä kaakossa — se oli oma '
+      + 'kylänsä keitaan laidalla, kunnes kaupunki kasvoi sen '
+      + 'ympärille. Kartalta '
+      + 'jää pohjoiseen Uhud-vuori, 1 077 metriä korkea ja kaupungin '
+      + 'korkein kohta. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Petrassa ja Dubaissa. */
+      { nimi: 'Qiblatayn-moskeija', lat: 24.4841, lon: 39.5789 },
+      { nimi: 'Seitsemän moskeijaa', lat: 24.4768, lon: 39.596 },
+      { nimi: 'Profeetan moskeija', lat: 24.4683, lon: 39.6108 },
+      { nimi: 'Al-Baqin hautausmaa', lat: 24.4669, lon: 39.6164 },
+      { nimi: 'Al-Ghamama-moskeija', lat: 24.4658, lon: 39.607 },
+      { nimi: 'Hidžaz-radan asema', lat: 24.4617, lon: 39.6002 },
+      { nimi: 'Quba-moskeija', lat: 24.4392, lon: 39.6172 },
+    ],
+  },
 };
 
 /*
