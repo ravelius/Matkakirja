@@ -21931,4 +21931,410 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KIOTON KOHDEKARTAN JUTUT (Opus 20.8.2026). Kymmenen kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään.
+   * Faktat on tarkistettu en-Wikipedian artikkeleista Kinkaku-ji,
+   * Ginkaku-ji, Kyoto Imperial Palace, Nijō Castle, Nishiki Market,
+   * Gion, Yasaka Shrine, Kiyomizu-dera, Sanjūsangen-dō, Tō-ji ja
+   * Fushimi Inari-taisha (haettu 20.8.2026).
+   *
+   * SISÄLTÖLINJAUS on sama kuin lehden puolella: uskonto historiallis-
+   * kulttuurisena ilmiönä, kunnioittava sävy, ei nykypolitiikkaa.
+   * Kinkaku-jin tuhopoltto 1950 kerrotaan tapahtumana ilman
+   * tekijän tai tekotavan yksityiskohtia, ja Kiyomizun Edo-kauden
+   * hyppyperinne kerrotaan lukuina, jotka artikkeli itse antaa, ja
+   * mainitaan että se kiellettiin 1872.
+   *
+   * KAKSI KOHTAA, JOISSA LÄHDE ITSE OIKAISEE YLEISEN USKOMUKSEN,
+   * ja molemmat on kirjoitettu auki lukijalle: Nijō-linnan
+   * "satakielilattiat" eivät ole varoitusjärjestelmä vaan naulojen
+   * ja kiinnikkeiden liikkeen ääni (Nijō Castle -artikkeli sanoo
+   * tämän suoraan), ja Ginkaku-jin hopeanimi on Edo-kaudelta eikä
+   * paviljonkia koskaan aiottukaan päällystää hopealla siinä
+   * muodossa kuin nimestä päättelisi.
+   */
+  kioto: {
+    'Kinkaku-ji': {
+      aika: '1397, nykyinen rakennus 1955',
+      teksti: 'Paikalla oli valtiomies Saionji Kintsunen huvila '
+          + 'Kitayama-dai, kunnes shōgun Ashikaga Yoshimitsu osti sen '
+          + 'suvulta vuonna 1397 ja rakensi tilalle oman '
+          + 'huvilakokonaisuutensa. Kultainen paviljonki valmistui '
+          + 'arvion mukaan 1399. Yoshimitsun kuoltua rakennuksesta '
+          + 'tehtiin hänen toiveensa mukaisesti zen-temppeli, jonka '
+          + 'virallinen nimi on Rokuon-ji eli Peurapuutarhan temppeli.'
+          + '\n\n'
+          + 'Kolmikerroksinen paviljonki on kolmea eri '
+          + 'rakennustapaa päällekkäin: alin kerros on Heian-ajan '
+          + 'aateliston shinden-tyyliä maalaamattomine puineen, '
+          + 'keskimmäinen soturiaateliston buke-tyyliä ja ylin '
+          + 'kiinalaista zen-tyyliä. Kaksi ylintä kerrosta on '
+          + 'päällystetty kultalehdellä, ja katonharjalla seisoo '
+          + 'pronssinen feeniks. Rakennus kurottaa Peililammen yli, '
+          + 'ja lammessa on kymmenen pientä saarta.'
+          + '\n\n'
+          + 'Ōnin-sodassa 1467–1477 kaikki alueen muut rakennukset '
+          + 'paloivat, mutta paviljonki säilyi. Vuoden 1873 '
+          + 'matkustaja ei olisi silti nähnyt kultaista taloa: '
+          + 'kultalehti oli kulunut pois ja seinät olivat harmaata '
+          + 'puuta. Paviljonki paloi tuhopoltossa 2. heinäkuuta 1950 '
+          + 'ja rakennettiin uudelleen 1955. Nykyinen kultapinta on '
+          + 'vuosien 1986–1987 työtä: 0,5 mikrometrin paksuista '
+          + 'kultalehteä, yhteensä kaksikymmentä kiloa.',
+      kuvat: [
+        {
+          tiedosto: 'Japon-1886-41.jpg',
+          selite: 'Adolfo Farsarin käsinväritetty valokuva '
+            + '1880-luvulta: paviljonki seisoo lammen takana '
+            + 'harmaana puurakennuksena ilman kultapintaa ja '
+            + 'peilautuu tyyneen veteen.',
+          lahde: 'Adolfo Farsari (1841 - 1898) HDR Photographs by Esby (talk), Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ginkaku-ji': {
+      aika: '1482–1490',
+      teksti: 'Shōgun Ashikaga Yoshimasa alkoi suunnitella '
+          + 'eläkehuvilaa jo 1460 ja muutti Higashiyaman juurelle '
+          + 'kesken Ōnin-sodan. Kerrotaan, että hän istui '
+          + 'paviljongissaan ja katseli puutarhan rauhaa samaan '
+          + 'aikaan, kun kaupunki paloi. Kannon-den eli päärakennus '
+          + 'aloitettiin 21. helmikuuta 1482, ja Yoshimasan kuoltua '
+          + '1490 huvilasta tuli zen-temppeli Jishō-ji.'
+          + '\n\n'
+          + 'Yoshimasa otti mallia isoisänsä Yoshimitsun '
+          + 'Kultaisesta paviljongista ja aikoi päällystää oman '
+          + 'talonsa. Työ viivästyi niin pitkään, ettei sitä koskaan '
+          + 'tehty, ja lempinimi Hopeinen paviljonki on vasta '
+          + 'Edo-kaudelta. Rakennus näyttää siis yhä samalta kuin '
+          + 'sinä päivänä, kun Yoshimasa näki sen viimeisen kerran — '
+          + 'ja juuri se keskeneräisyys on tehnyt siitä wabi-sabin '
+          + 'oppikirjaesimerkin.'
+          + '\n\n'
+          + 'Puutarhassa on kaksi kerrosta: sammaleinen '
+          + 'kävelypuutarha ja hiekkapuutarha, jonka kartiomaisen '
+          + 'kummun sanotaan esittävän Fuji-vuorta. Yoshimasan '
+          + 'ympärille kehittynyttä aikakautta kutsutaan '
+          + 'Higashiyaman kulttuuriksi, ja siihen kuuluvat teeseremonia, '
+          + 'kukka-asetelmat ja tussimaalaus.',
+      kuvat: [
+        {
+          tiedosto: 'Sunlight through clouds and view of Ginkaku-ji Temple from above, Kyoto, Japan.jpg',
+          selite: 'Ginkaku-ji rinteen puolivälistä nähtynä: '
+            + 'kaksikerroksinen paviljonki jää vasemmalle puiden '
+            + 'lomaan, oikealla ovat temppelin muut katot, ja '
+            + 'taustalla levittäytyy Kioton laakso vuorineen. '
+            + 'Auringonsäteet murtautuvat pilvien läpi.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Keisarillinen palatsi': {
+      aika: '1331–1869',
+      teksti: 'Nykyinen palatsi ei ole Heian-kauden alkuperäinen. '
+          + 'Vanha Heian-palatsi oli kauempana lännessä, ja kun se '
+          + 'hylättiin 1100-luvun lopulla, keisarit asuivat '
+          + 'aatelissukujen tarjoamissa väliaikaisissa '
+          + 'residensseissä. Nykyinen palatsi polveutuu yhdestä '
+          + 'niistä, Fujiwara-suvun Tsuchimikado-donosta, ja se on '
+          + 'ollut keisarien kotina vuodesta 1331 aina Meiji-'
+          + 'restauraatioon asti.'
+          + '\n\n'
+          + 'Tärkein rakennus on Shishinden, seremoniasali, joka on '
+          + '33 metriä leveä ja 23 metriä syvä. Portaiden itäpuolella '
+          + 'kasvaa kirsikkapuu ja länsipuolella tachibana-'
+          + 'appelsiinipuu, ja edessä on valkoinen sorapiha, jolla '
+          + 'seremoniat pidettiin. Täällä julistettiin vuonna 1868 '
+          + 'viiden artiklan valaksi kutsuttu uudistusohjelma, ja '
+          + 'täällä kruunattiin sekä Taishō että Shōwa, vaikka hovi '
+          + 'oli jo muuttanut Tokioon.'
+          + '\n\n'
+          + 'Palatsin ympärillä on laaja Kioto Gyoen -puisto, jossa '
+          + 'oli ennen satoja aatelistalojen tontteja. Kun hovi '
+          + 'lähti 1869, tyhjilleen jääneet residenssit purettiin '
+          + 'järjestelmällisesti — yksi niistä siirrettiin '
+          + 'kokonaisena Nijō-linnan sisäpihaan. Nykyään puisto on '
+          + 'avoin kaikille.',
+      kuvat: [
+        {
+          tiedosto: 'Kyoto Kaiserpalast Kenreimon-Tor 1.jpg',
+          selite: 'Kenreimon, palatsin eteläinen pääportti: tumma '
+            + 'puurakenne sypressintuohikaton alla, räystäslaudassa '
+            + 'mustavalkoinen ruutukuvio, ja molemmin puolin jatkuu '
+            + 'okrankeltainen muuri tiilikatteineen.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nijō-linna': {
+      aika: '1601–1626',
+      teksti: 'Tokugawa Ieyasu määräsi 1601 Länsi-Japanin '
+          + 'läänitysherrat osallistumaan linnan rakentamiseen, ja '
+          + 'valmiiksi se tuli hänen pojanpoikansa Tokugawa '
+          + 'Iemitsun aikana 1626. Fushimin linnasta siirrettiin '
+          + 'tänne osia, muun muassa päätorni ja karamon-portti. '
+          + 'Linna oli shōgunien Kioton-asunto: valta oli Edossa, '
+          + 'mutta keisari asui täällä, ja shōgunin oli syytä olla '
+          + 'näkyvillä. Aluetta on 275 000 neliömetriä, ja sitä '
+          + 'kiertää kaksi muuri- ja vallihautarengasta.'
+          + '\n\n'
+          + 'Ninomaru-palatsi on 3 300 neliömetriä ja rakennettu '
+          + 'lähes kokonaan hinoki-sypressistä. Seinät ja liukuovet '
+          + 'on maalannut Kanō-koulun taiteilijat, ja kultalehteä ja '
+          + 'puuveistoksia on käytetty niin runsaasti, että vierailija '
+          + 'ymmärtäisi asian ilman sanojakin. Arvojärjestys näkyy '
+          + 'pohjapiirroksessa: alempiarvoiset otettiin vastaan '
+          + 'ulommissa saleissa, korkea-arvoiset päästettiin '
+          + 'sisemmäs. Käytävien lattiat vinkuvat astuttaessa, ja '
+          + 'niitä kutsutaan satakielilattioiksi — ääni ei kuitenkaan '
+          + 'ole tunkeilijahälytin, vaan se syntyy kiinnikkeiden '
+          + 'liikkeestä nauloja vasten.'
+          + '\n\n'
+          + 'Ninomarussa tapahtui myös se, mikä lopetti '
+          + 'shōgunien ajan: vuonna 1867 Tokugawa Yoshinobu '
+          + 'ilmoitti täällä palauttavansa vallan keisarille, ja '
+          + 'vuonna 1868 linnaan sijoitettiin keisarillinen '
+          + 'hallitus. Tokugawa-suvun malvavaakuna vaihdettiin '
+          + 'keisarilliseen krysanteemiin kaikkialla, missä se '
+          + 'kävi päinsä.',
+      kuvat: [
+        {
+          tiedosto: 'Nijo-jo Ninomaru-goten 2009.jpg',
+          selite: 'Ninomaru-palatsi sorapihalta: tiilikattoja '
+            + 'porrastuu peräkkäin, keskellä on kullattu '
+            + 'koristepääty ja säleikkö, oikealla sisäänkäyntikatos '
+            + 'valkoisine paperiovineen. Edessä on rivi leikattuja '
+            + 'mäntyjä.',
+          lahde: 'Wiiii, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nishiki-tori': {
+      aika: 'kalakauppaa vuodesta 782',
+      teksti: 'Nishikin torilla myytiin kalaa jo vuonna 782, ja syy '
+          + 'oli maan alla: paikan kylmä pohjavesi piti kalan ja '
+          + 'lihan tuoreena aivan keisarillisen palatsin lähellä. '
+          + 'Virallisen luvan kalakaupalle tori sai shogunaatilta '
+          + 'vuonna 1615, ja siitä alkoi sen nousu.'
+          + '\n\n'
+          + 'Meiji-restauraation jälkeen kilpailu koveni niin, '
+          + 'että 1883 jäljellä oli enää seitsemän kauppaa. '
+          + 'Vuonna 1911 perustettu yhdistys nosti torin takaisin '
+          + 'jaloilleen, ja kun 1928 mukaan otettiin hedelmät, '
+          + 'vihannekset ja liha, torille jäi nimi, jota se kantaa '
+          + 'yhä: Kioton keittiö.'
+          + '\n\n'
+          + 'Tori on noin 400 metrin pituinen kapea kuja '
+          + 'Nishikikōji-kadulla Takakuran ja Teramachin välissä, '
+          + 'ja sen varrella on noin 130 kauppaa. Katos '
+          + 'rakennettiin 1993 ja nykyinen mukulakivetys 1984. '
+          + 'Myynnissä on kalaa, kuivatuotteita ja kyō-yasai eli '
+          + 'Kioton omat vihannekset, joita kehitettiin merestä '
+          + 'kaukana olevassa ja temppeleitä täynnä olevassa '
+          + 'kaupungissa vuosisatojen ajan.',
+      kuvat: [
+        {
+          tiedosto: 'Tsukemono shop by collinox in Nishiki Ichiba, Kyoto.jpg',
+          selite: 'Tsukemono- eli suolakurkkukauppa Nishikillä: rivi '
+            + 'pyöreitä puusaaveja matalilla jalustoilla, ja '
+            + 'jokaisessa kasa suolattuja vihanneksia keltaisesta '
+            + 'takuan-retikasta kurpitsaan.',
+          lahde: 'collinox, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gion': {
+      aika: '1500-luvulta alkaen',
+      teksti: 'Gion syntyi Yasaka-pyhäkön edustalle Sengoku-'
+          + 'kaudella: kortteli rakennettiin palvelemaan pyhäkölle '
+          + 'tulevia matkalaisia teehuoneineen ja majataloineen. '
+          + 'Nimi tulee buddhalaisesta Jetavana-luostarista '
+          + 'kiinalaisen välivaiheen kautta. Pyhäkkö itse tunnettiin '
+          + 'Gion-pyhäkkönä, kunnes Meiji-restauraatiossa '
+          + 'buddhalaisuus ja shinto erotettiin toisistaan ja se sai '
+          + 'nykyisen nimensä Yasaka.'
+          + '\n\n'
+          + 'Vuosien mittaan korttelista tuli Japanin arvostetuin '
+          + 'geishakortteli, ja vuonna 1881 se jakautui kahdeksi '
+          + 'hanamachiksi: laaja Gion Kobu Hanamikōji-katuineen ja '
+          + 'pienempi Gion Higashi koillisnurkassa. Osa alueesta on '
+          + 'suojeltu valtakunnallisena historiallisena alueena, ja '
+          + 'sähkölinjoja on viety maan alle vuodesta 1986.'
+          + '\n\n'
+          + 'Korttelin läpi juoksee Shirakawan puro ennen laskuaan '
+          + 'Kamo-jokeen. Sen eteläpuolella teehuoneet on rakennettu '
+          + 'kiinni rantaan; pohjoispuolen talot purettiin toisen '
+          + 'maailmansodan aikana paloturvallisuuden vuoksi, ja '
+          + 'tilalle tuli kirsikkapuiden reunustama kävelykatu. '
+          + 'Yasaka-pyhäköstä lähtee myös Gion Matsuri, joka juontaa '
+          + 'juurensa vuoden 869 puhdistusrituaaliin ja täyttää '
+          + 'kadut heinäkuussa suurilla vaunuilla.',
+      kuvat: [
+        {
+          tiedosto: 'Streets of Gion, Kyoto - Gion7708.jpg',
+          selite: 'Hanamikōji illalla: kivetty katu kulkee '
+            + 'puurakenteisten teehuoneiden välissä, ovien edessä '
+            + 'roikkuu noren-verhoja ja säleiköt hehkuvat '
+            + 'sisävalossa.',
+          lahde: 'lumoplank, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kiyomizu-dera': {
+      aika: 'perustettu 778, päähalli 1633',
+      teksti: 'Kiyomizu-dera on Kiotoa vanhempi: se perustettiin '
+          + 'perimätiedon mukaan vuonna 778, kuusitoista vuotta '
+          + 'ennen kuin Heian-kyō mitattiin. Nimi tarkoittaa '
+          + 'kirkkaan veden temppeliä ja viittaa Otowan putoukseen, '
+          + 'joka virtaa yhä temppelin alueella. Päähalli on '
+          + 'omistettu Kannonille, ja se on Saigokun '
+          + 'pyhiinvaellusreitin kuudestoista pysäkki.'
+          + '\n\n'
+          + 'Temppeli on palanut yhdeksän kertaa, ja nykyinen '
+          + 'päähalli rakennettiin 1633 Tokugawa Iemitsun '
+          + 'lahjoituksella edellisvuoden palon jälkeen. Sen '
+          + 'kuuluisin osa on lava, joka työntyy rinteen yli '
+          + 'korkeiden pilarien varassa kakezukuri-tekniikalla. '
+          + 'Koko rakennuksessa ei ole yhtään naulaa.'
+          + '\n\n'
+          + 'Edo-kaudella eli usko, jonka mukaan lavalta hypännyt '
+          + 'sai toiveensa täytettyä, jos selvisi kolmentoista '
+          + 'metrin pudotuksesta. Hyppyjä kirjattiin 234, ja '
+          + 'hyppääjistä 85,4 prosenttia selvisi. Tapa kiellettiin '
+          + 'vuonna 1872 — vuotta ennen isoisän matkaa. Sanonta '
+          + '"hypätä Kiyomizun lavalta" tarkoittaa japanissa yhä '
+          + 'suuren päätöksen tekemistä.',
+      kuvat: [
+        {
+          tiedosto: 'Kiyomizu-dera,koyasu no tou.JPG',
+          selite: 'Koyasu-pagodi Kiyomizu-deran alueella: '
+            + 'kolmikerroksinen torni, jonka pilarit ja kaiteet on '
+            + 'maalattu kirkkaanpunaisiksi ja seinät valkoisiksi, ja '
+            + 'takana nousee metsäinen rinne.',
+          lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sanjūsangen-dō': {
+      aika: '1164, nykyinen halli 1266',
+      teksti: 'Samurai ja valtiomies Taira no Kiyomori rakennutti '
+          + 'temppelin vuonna 1164 luostarikeisari Go-Shirakawalle '
+          + 'tämän omalle tontille. Kiyomori sai vastineeksi '
+          + 'arvonimen — hän oli ensimmäinen samurai, joka nousi '
+          + 'valtakunnankanslerin asemaan. Temppelin virallinen nimi '
+          + 'on Rengeō-in, Lootuskuninkaan sali, mutta se tunnetaan '
+          + 'lempinimellään, joka viittaa päähallin pilariväleihin.'
+          + '\n\n'
+          + 'Vuoden 1249 kaupunkipalo tuhosi koko temppelin. '
+          + 'Alkuperäisistä tuhannesta seisovasta Kannon-patsaasta '
+          + 'saatiin pelastettua 124, ja keisari Go-Saga määräsi '
+          + 'loput 876 veistettäviksi uudelleen. Kolme '
+          + 'veistäjäkoulua teki työn kuudessatoista vuodessa. '
+          + 'Nykyinen päähalli valmistui 1266 ja seisoo yhä: se on '
+          + '120 metriä pitkä, ja sisällä on tuhat seisovaa '
+          + 'Kannonia kymmenessä rivissä sekä suuri istuva Kannon '
+          + 'keskellä.'
+          + '\n\n'
+          + 'Länsikuistilla käytiin Edo-kaudella jousiammuntakilpailua '
+          + 'nimeltä tōshiya, jossa nuoli piti saada lentämään koko '
+          + 'hallin pituudelta. Perinne jatkui 255 vuotta. Nykyään '
+          + 'tammikuussa järjestetään sen jatkokilpailu, johon tulee '
+          + 'noin kaksituhatta ampujaa eri puolilta Japania.',
+      kuvat: [
+        {
+          tiedosto: 'Sanjusangendo temple01s1408.jpg',
+          selite: 'Sanjūsangen-dōn päähalli sivusta: tumma '
+            + 'puurakennus jatkuu kuvan syvyyteen niin pitkälle, '
+            + 'ettei päätä näy, vaalean tiilikaton alla kulkee '
+            + 'yhtenäinen pilaririvi ja kivijalka. Edessä on '
+            + 'soraa ja kaukana kaksi pientä hahmoa.',
+          lahde: '663highland, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tō-ji': {
+      aika: 'perustettu 796, pagodi 1643',
+      teksti: 'Tō-ji tarkoittaa itäistä temppeliä, ja se '
+          + 'perustettiin 796 — kaksi vuotta pääkaupungin '
+          + 'perustamisen jälkeen. Kaupungin eteläportin '
+          + 'molemmin puolin nousi kaksi temppeliä, Tō-ji idässä ja '
+          + 'Sai-ji lännessä; ne olivat yhdessä hovin oman '
+          + 'Shingon-in-temppelin kanssa ainoat kolme buddhalaista '
+          + 'temppeliä, jotka uuteen pääkaupunkiin sallittiin. '
+          + 'Kolmesta on jäljellä vain Tō-ji.'
+          + '\n\n'
+          + 'Vuonna 823 keisari Saga antoi temppelin munkki '
+          + 'Kūkaille, joka tunnetaan myös nimellä Kōbō Daishi. '
+          + 'Temppelistä tuli shingon-buddhalaisuuden keskus, ja '
+          + 'Kūkain asuinpaikalle rakennettu Miei-dō on yhä '
+          + 'temppelin kunnioitetuin rakennus.'
+          + '\n\n'
+          + 'Viisikerroksinen pagodi on 54,8 metriä korkea ja '
+          + 'Japanin korkein puutorni. Alkuperäinen rakennettiin '
+          + '800-luvulla, mutta se tuhoutui ja rakennettiin '
+          + 'uudelleen neljä kertaa; nykyinen on vuodelta 1643, '
+          + 'shōgun Tokugawa Iemitsun määräyksestä. Kuukauden '
+          + 'kahdentenakymmenentenäensimmäisenä päivänä pihalla '
+          + 'pidetään kirpputori, jota kutsutaan Kōbō-saniksi '
+          + 'Kūkain kuolinpäivän mukaan.',
+      kuvat: [
+        {
+          tiedosto: 'Toji, tou.jpg',
+          selite: 'Tō-jin viisikerroksinen pagodi: tumma, '
+            + 'säänharmaannuttama puutorni, jonka räystäskerrat '
+            + 'kaartuvat alaspäin ja jonka huipulla on renkaista '
+            + 'koottu pronssikärki.',
+          lahde: 'Saigen Jiro, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fushimi Inari-taisha': {
+      aika: 'perustettu 711',
+      teksti: 'Pyhäkön perusti vuonna 711 Hata-suku, Korean '
+          + 'niemimaalta muuttanut mahtisuku, joka toi mukanaan '
+          + 'kastelun, silkinviljelyn ja sakenpanon taidot. Se on '
+          + 'omistettu Inarille, riisin ja maanviljelyn kamille — ja '
+          + 'kun riisi oli myös maksuväline, kauppiaat alkoivat '
+          + 'palvoa Inaria liike-elämän suojelijana. Inari-pyhäköitä '
+          + 'on jaettu ympäri Japania niin ahkerasti, että '
+          + 'sivupyhäköitä lasketaan olevan noin 32 000.'
+          + '\n\n'
+          + 'Ensimmäiset rakennukset nousivat Inari-vuorelle 711, ja '
+          + 'pyhäkkö siirrettiin vuonna 816 munkki Kūkain pyynnöstä '
+          + 'nykyiselle paikalleen vuoren juurelle. Päärakennus on '
+          + 'vuodelta 1499. Vuosina 1871–1946 Fushimi Inari oli '
+          + 'valtion tukemien pyhäköiden ylimmässä luokassa.'
+          + '\n\n'
+          + 'Kuuluisimpia ovat toriit. Tapa lahjoittaa portti toiveen '
+          + 'täyttymisen toivossa tai kiitokseksi levisi Edo-'
+          + 'kaudella, ja nyt portteja on noin kymmenentuhatta. '
+          + 'Vuorelle nousevan polun tiheimmällä osuudella niitä on '
+          + 'noin 800 peräkkäin, ja sitä kutsutaan Senbon Toriiksi '
+          + 'eli tuhannen portin käytäväksi. Polun varrella on '
+          + 'lisäksi kymmeniätuhansia pieniä kivialttareita, jotka '
+          + 'kaupunkilaiset ovat pystyttäneet itse.',
+      kuvat: [
+        {
+          tiedosto: 'Inari fox statue, Fushimi-Inari Shrine (46473407471).jpg',
+          selite: 'Kivinen kettu Fushimi Inarin portailla alhaalta '
+            + 'kuvattuna: istuva kettu pitää suussaan avainta, '
+            + 'kaulassa on punainen kangasruokalappu mustin '
+            + 'siveltimenvedoin, ja jalusta on koristeltu '
+            + 'kierrekuvioin. Taustalla on pilvinen taivas.',
+          lahde: 'Dumphasizer, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
