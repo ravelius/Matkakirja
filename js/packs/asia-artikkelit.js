@@ -33,8 +33,54 @@
 // teksti-kentässä, ja 1–3 avainkohtaa saa lihavoida **näin**.
 // Remontti etenee erissä; erässä R3 uuteen asuun kirjoitettiin
 // Mosul, Aleppo, Damaskos ja Luxor, erässä R4 Sanaa, Aden, Masqat
-// ja Tabriz ja erässä R5 Riad, Doha, Kuwait ja Salalah. Kappaleet ja boldit vaativat leipätekstin renderöijän —
-// ks. erän loppuraportti.
+// ja Tabriz, erässä R5 Riad, Doha, Kuwait ja Salalah ja erässä R6
+// Teheran ja Bagdad (saman erän Istanbul on europe-artikkelit.js:ssä
+// ja Kairo africa-artikkelit.js:ssä) ja erässä R7 Tokio, Soul,
+// Shanghai, Peking, Delhi ja Bangkok. Kappaleet ja boldit vaativat
+// leipätekstin renderöijän — ks. erän loppuraportti.
+//
+// ERÄ R6 (20.8.2026) SAI HALLINNOLLISET JA VÄESTÖLUVUT en-Wikipedian
+// raakateksteistä (Tehran, Baghdad; haettu 20.8.2026): Teheran on
+// Iranin pääkaupunki, maan suurin kaupunki ja Teheranin maakunnan
+// hallinnollinen keskus, asukkaita noin yhdeksän miljoonaa; Bagdad on
+// Irakin pääkaupunki ja suurin kaupunki, asukkaita noin kahdeksan
+// miljoonaa eli 22 prosenttia maan väestöstä, ja se oli osmanien
+// Irakin hallintokeskus. Muu aineisto tulee kaupunkien omista, jo
+// tarkistetuista lehtiteksteistä. Sisältölinjaus: Teheranista ei
+// kirjoiteta vuoden 1979 jälkeisiä kiistoja eikä Bagdadista
+// nykytilannetta — sota vain neutraalina historiana (1258).
+//
+// ERÄ R7 (20.8.2026) EI OTTANUT UUSIA LÄHTEITÄ: jokainen introväite
+// tulee kaupungin omista, jo tarkistetuista lehtiteksteistä
+// (kulttuuri-kategoriat.js:n nostot ja matkaoppaat,
+// nahtavyysjutut.js, maakartat.js) tai kaupungin omasta
+// teksti-kentästä. Sisältölinjaus: Kiinan kaupunkien introissa ei
+// nykypolitiikkaa, ja Soulin introssa ei sotaa, koska lehti ei sitä
+// kerro.
+// ja Tabriz, erässä R5 Riad, Doha, Kuwait ja Salalah ja erässä R9b
+// Jakutsk, Magadan, Kamtšatka ja Sahalin. Kappaleet ja boldit
+// vaativat leipätekstin renderöijän — ks. erän loppuraportti.
+// ja Tabriz, erässä R5 Riad, Doha, Kuwait ja Salalah ja erässä R9a
+// Jekaterinburg, Novosibirsk, Irkutsk ja Vladivostok. Kappaleet ja
+// boldit vaativat leipätekstin renderöijän — ks. erän loppuraportti.
+// ERÄ R9a (20.8.2026) EI TUONUT UUSIA VÄITTEITÄ: neljän Siperian ja
+// Uralin kaupungin introt on koottu kaupunkien omista, jo
+// tarkistetuista lehtiteksteistä (kulttuuri-kategoriat.js: nostot,
+// matkaoppaat ja niiden kappale-kentät; maakartat.js: kohdekarttojen
+// esittelyt; oma teksti-kenttä). Venäjä-linjaus: ei nykysotaa eikä
+// nykypolitiikkaa, ja Jekaterinburgin introssa ei ole vuoden 1918
+// aihepiiriä.
+//
+// ERÄ R8 (20.8.2026) kirjoitti uuteen asuun kuusi introa: Petra,
+// Kappadokia, Nikosia, Ankara, İzmir ja Dubai. Faktat ovat näiden
+// lehtien omista, jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:
+// nostot, johdannot ja Matkailijan-oppaat; nahtavyysjutut.js;
+// oma teksti-kenttä alla) — uusia lähteitä ei tarvittu. Samassa erässä
+// tiivistettiin näiden kuuden lehden kuvatekstit yhteen virkkeeseen ja
+// lyhennettiin viiden kohdekartan esittely (maakartat.js);
+// Kappadokialla ei ole kohdekarttaa. NIKOSIAN LINJAUS on Fablen
+// "Antaa olla": jaettu kaupunki kerrotaan hallinnollisena tosiasiana
+// ilman kannanottoja, ja muissa ei käsitellä nykypolitiikkaa.
 //
 // ERÄ R4 (20.8.2026) SAI UUDET LUVUT en-Wikipedian raakateksteistä
 // (Sanaa, Aden, Muscat, Tabriz; haettu 20.8.2026): Sanaan asukasluku
@@ -44,12 +90,39 @@
 // wilajaa, Tabrizin 1 558 693 (laskenta 2016) sekä Urmiajärven
 // etäisyys 60 km. Muu aineisto tulee kaupunkien omista, jo
 // tarkistetuista lehtiteksteistä.
+//
+// ERÄ R9b (20.8.2026) EI TUONUT YHTÄÄN UUTTA VÄITETTÄ. Jakutskin,
+// Magadanin, Kamtšatkan ja Sahalinin introt on koottu näiden neljän
+// lehden omista, jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:n
+// johdannot, nostot ja matkailijan oppaat, nahtavyysjutut.js ja
+// maakartat.js) — ei uusia lähdehakuja. Venäjä-linjaus: ei nykysotaa
+// eikä nykypolitiikkaa, ja Magadanin introssa kaupungin synty
+// 1930-luvulla kerrotaan neutraalina rakentamisen historiana; Kolyman
+// leirit ja Surun maski pysyvät siinä laajuudessa kuin lehden oma
+// nosto ne jo kertoo.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
-    intro: 'Izmir on Turkin kolmanneksi suurin kaupunki ja sen tärkein '
-      + 'satama Egeanmerellä. Vanha nimi Smyrna on kolmetuhatta vuotta '
-      + 'vanha, ja paikalla on asuttu yhtäjaksoisesti kauemmin kuin '
-      + 'melkein missään muualla Välimerellä.',
+    intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
+      + 'kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme '
+      + 'miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan '
+      + 'merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa '
+      + '— ylös mennään portaita, vastarannalle lautalla. Vanha nimi '
+      + '**Smyrna** elää yhä englannin kielessä ja viikunalajikkeiden '
+      + 'nimissä.'
+      + '\n\n'
+      + 'Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri '
+      + 'Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale '
+      + 'on siitä muistona. Kaupungin syy on aina ollut lahti: laivat '
+      + 'pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle '
+      + 'tielle. Hedelmää varten rakennettiin myös **Anatolian ensimmäinen '
+      + 'rautatie**: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan '
+      + 'Aydınin tasangon viikunoita satamaan.'
+      + '\n\n'
+      + 'Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin '
+      + 'viikunantuottaja. Pohjoisessa aukeaa Gedizin suisto, jossa '
+      + 'talvehtii noin 80 000 lintua ja jonka suola-altaista tulee '
+      + 'kolmasosa Turkin suolasta. Rantabulevardi Kordon on kilometrien '
+      + 'kävelykatu, ja aamiainen ostetaan kadulta.',
     teksti: 'Izmir on rakennettu syvän lahden pohjukkaan, jota vuoret '
       + 'ympäröivät kolmelta suunnalta. Lahti tekee siitä luonnollisen '
       + 'sataman: laivat pääsevät sisään suojaan, ja tavara siirtyy '
@@ -70,10 +143,26 @@ export const ASIA_ARTIKKELIT = {
       + 'jota myydään kadulla työntökärryistä aamusta iltaan.',
   },
   Ankara: {
-    intro: 'Ankara on Turkin pääkaupunki ja maan toiseksi suurin '
-      + 'kaupunki. Se nostettiin pääkaupungiksi vuonna 1923 osittain '
-      + 'siksi, että Istanbul oli liian lähellä rajaa ja liian kaukana '
-      + 'maan omasta sydämestä.',
+    intro: 'Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: '
+      + 'keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä '
+      + 'Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja '
+      + 'ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja '
+      + 'elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.'
+      + '\n\n'
+      + 'Ankara jakautuu kahtia. Pohjoisessa on **Ulus**, joka kiertyy '
+      + 'linnavuoren juurelle; siinä roomalainen, bysanttilainen ja '
+      + 'ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei '
+      + 'koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin '
+      + 'vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, '
+      + 'angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.'
+      + '\n\n'
+      + 'Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden '
+      + 'tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu '
+      + 'tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 '
+      + 'kaupunkisuunnittelukilpailun voitti saksalainen Hermann Jansen. '
+      + 'Linnavuoren eteläpuolelle nousi uusi kaupunki, Kızılay ja sen '
+      + 'takana Çankaya, ja Rasattepen kukkulalle rakennettiin vuosina '
+      + '1944–1953 **Anıtkabir**.',
     teksti: 'Ankara sijaitsee Anatolian ylängöllä noin 900 metrin '
       + 'korkeudessa. Ilmasto on mannerilmasto: kesät ovat kuivia ja '
       + 'kuumia, talvet kylmiä ja lumisia — hyvin toisenlaisia kuin '
@@ -93,10 +182,26 @@ export const ASIA_ARTIKKELIT = {
       + 'kohoaa omalla kukkulallaan keskustan yllä.',
   },
   Kappadokia: {
-    intro: 'Kappadokia on Keski-Turkin alue, jonka maisema on '
-      + 'muodostunut tulivuoren tuhkasta. Kivi on niin pehmeää, että '
-      + 'siihen on kaiverrettu taloja, kirkkoja ja kokonaisia '
-      + 'maanalaisia kaupunkeja.',
+    intro: 'Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen '
+      + 'alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. '
+      + 'Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät '
+      + 'tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat '
+      + 'syöneet siitä piikkejä ja pilareita — turkiksi **keijupiippuja**.'
+      + '\n\n'
+      + 'Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa '
+      + 'lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, '
+      + 'talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä '
+      + 'asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia '
+      + 'kaupunkeja — **Derinkuyu** ulottuu noin kahdeksaankymmeneenviiteen '
+      + 'metriin ja viiteen kerrokseen, ja sen käytävät suljettiin '
+      + 'kivilaatoilla, jotka aukesivat vain sisältä.'
+      + '\n\n'
+      + 'Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen '
+      + 'ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. '
+      + 'Kansallispuisto ja alueen kalliokohteet ovat olleet Unescon '
+      + 'maailmanperintöluettelossa vuodesta 1985. Matkailijalle alue on '
+      + 'silti pieni: Göreme, Uçhisar, Avanos ja Ürgüp mahtuvat muutaman '
+      + 'kymmenen kilometrin säteelle.',
     teksti: 'Miljoonia vuosia sitten alueen tulivuoret peittivät maan '
       + 'paksuun tuhkakerrokseen, joka kovettui pehmeäksi kiveksi. '
       + 'Sade ja tuuli ovat kuluttaneet siitä kartioita, harjuja ja '
@@ -116,9 +221,27 @@ export const ASIA_ARTIKKELIT = {
       + 'leijuu kymmeniä kuumailmapalloja.',
   },
   Nikosia: {
-    intro: 'Nikosia on Kyproksen pääkaupunki ja maailman viimeinen '
-      + 'jaettu pääkaupunki. Kaupungin läpi kulkee puskurivyöhyke, jonka '
-      + 'toisella puolella puhutaan kreikkaa ja toisella turkkia.',
+    intro: 'Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista '
+      + 'ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon '
+      + 'keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten '
+      + 'välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa '
+      + 'ja Kyproksen vanhin arkeologinen museo.'
+      + '\n\n'
+      + 'Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat '
+      + 'vuosina 1567–1570 sen ympärille noin viiden kilometrin '
+      + '**muurikehän** ja siihen yksitoista viisikulmaista bastionia. '
+      + 'Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta '
+      + 'vallihauta saataisiin täytettyä; hauta on nyt puistoja ja '
+      + 'urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta '
+      + 'brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja '
+      + 'liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 '
+      + '629.'
+      + '\n\n'
+      + 'Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee '
+      + '**puskurivyöhyke**. Eteläpuolen kunnassa asuu runsaat 111 000 ja '
+      + 'pohjoispuolen kunnassa runsaat 61 000 ihmistä; etelässä maksetaan '
+      + 'euroilla ja pohjoisessa Turkin liiroilla. Puolelta toiselle pääsee '
+      + 'jalan tarkastuspisteistä.',
     teksti: 'Nikosia on saaren keskellä, kaukana rannikosta, tasangolla '
       + 'jota vuoristot reunustavat pohjoisessa ja etelässä. '
       + 'Vanhaakaupunkia ympäröi venetsialaisten 1500-luvulla '
@@ -261,10 +384,27 @@ export const ASIA_ARTIKKELIT = {
       + 'kuulee samaan aikaan kirkonkellot, rukouskutsun ja shofar-torven.',
   },
   'Petra (kaupunki)': {
-    intro: 'Petra on kallioon veistetty kaupunki Jordanian '
-      + 'aavikkovuorilla. Sen rikkaus ei perustunut kultaan vaan '
-      + 'veteen: nabatealaiset osasivat kerätä ja johtaa sadeveden '
-      + 'niin, että aavikon keskellä riitti juotavaa ympäri vuoden.',
+    intro: 'Petra on Etelä-Jordanian vuoristossa 810 metrin korkeudessa, ja '
+      + 'sinne tullaan kalliorotkoa pitkin. **Siq** on runsaan kilometrin '
+      + 'mittainen, kapeimmillaan kolme metriä leveä, ja sen seinät kohoavat '
+      + 'paikoin lähes kahteensataan metriin. Rotkon päässä odottaa '
+      + 'Al-Khazneh, 37 metriä korkea julkisivu, joka on louhittu suoraan '
+      + 'kallioseinään.'
+      + '\n\n'
+      + 'Nabatealaiset, arabialainen kauppiaskansa, asettuivat vuorille '
+      + '300-luvulla eKr. ja tekivät Petrasta kuningaskuntansa pääkaupungin. '
+      + 'Rikkaus tuli suitsuke- ja mausteteistä eteläisestä Arabiasta '
+      + 'Välimerelle. Kukoistuskaudellaan 100-luvulla jKr. laaksossa asui '
+      + 'arviolta kaksikymmentätuhatta ihmistä keskellä puoliaavikkoa, jossa '
+      + 'sataa runsaat sata millimetriä vuodessa — se onnistui, koska '
+      + '**jokainen sadekuuro otettiin talteen** patoihin, kouruihin ja '
+      + 'naamioituihin säiliöihin.'
+      + '\n\n'
+      + 'Rooma liitti kuningaskunnan itseensä vuonna 106 jKr., ja vuoden 363 '
+      + 'maanjäristys rikkoi rakennukset ja vesijärjestelmän. Länsi unohti '
+      + 'kaupungin sijainnin, kunnes sveitsiläinen Johann Ludwig Burckhardt '
+      + 'tuli katsomaan sitä 1812. Unescon maailmanperintöluetteloon Petra '
+      + 'hyväksyttiin 1985.',
     teksti: 'Petraan tullaan kapeaa rotkoa, Siqiä, pitkin. Se on yli '
       + 'kilometrin pituinen, ja sen seinät nousevat paikoin '
       + 'kahdeksankymmeneen metriin. Rotkon päässä aukeaa al-Khazneh, '
@@ -721,9 +861,27 @@ export const ASIA_ARTIKKELIT = {
       + 'myydään suitsuketta, hopeaa ja kankaita.',
   },
   Dubai: {
-    intro: 'Dubai oli sata vuotta sitten pieni helmenkalastajien satama. '
-      + 'Nyt siinä on maailman korkein rakennus — ja viiden minuutin '
-      + 'venematkan päässä yhä sama vanha basaari.',
+    intro: 'Dubai on Persianlahden rannalla Arabiemiirikunnissa, ja koko '
+      + 'kaupunki on kasvanut yhden vesiuoman ympärille. Khor Dubai ei ole '
+      + 'joki vaan kapea suolaisen veden lahti, joka työntyy noin '
+      + 'neljätoista kilometriä sisämaahan ja on keskimäärin kuutisen metriä '
+      + 'syvä — luonnonsatama. Etelärannalle syntyi Bur Dubai ja '
+      + 'pohjoisrannalle Deira, eikä niiden välillä ollut pitkään yhtään '
+      + 'siltaa.'
+      + '\n\n'
+      + '1870-luvulla Dubai oli muutaman tuhannen asukkaan kylä, joka eli '
+      + 'kaupasta ja **helmistä**. Kesäisin sukellettiin simpukoiden perään '
+      + 'ilman happilaitteita, ja helmenpyynti oli tärkein elinkeino '
+      + '1930-luvulle asti. Al Maktoumin suku asettui lahden suulle Al '
+      + 'Shindaghaan vuonna 1833. Kun lahti 1960-luvulla ruopattiin '
+      + 'syvemmäksi, Dubaista tuli jälleenvientisatama.'
+      + '\n\n'
+      + 'Nykyään lahden kautta kulkee yli 13 000 alusta vuodessa, ja toinen '
+      + 'puoli kaupunkia on tornikaupunki: **Burj Khalifa** valmistui vuonna '
+      + '2010 ja on 828 metriä korkea. Metro avattiin 2009 ilman '
+      + 'kuljettajaa. Vanhassa kaupungissa liikutaan silti yhä vedessä: abra '
+      + 'eli puuvene vie lahden yli muutamassa minuutissa, ja kultaa myydään '
+      + 'Deirassa painon mukaan.',
     teksti: 'Dubai on Persianlahden rannalla Arabiemiirikunnissa. '
       + 'Kaupungin halki kulkee luonnollinen merenlahti, Dubai Creek, '
       + 'jonka molemmilla rannoilla vanhat kaupunginosat ovat. Lahden '
@@ -832,11 +990,38 @@ export const ASIA_ARTIKKELIT = {
       + 'samanlaisia sienimäisiä vesitorneja. Telakalla rakennetaan yhä '
       + 'puisia veneitä käsin.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on nyt lehden etusivun leipäteksti — kahdeksan virkettä
+   * kolmessa kappaleessa ('\n\n') ja kaksi maltillista **lihavointia**.
+   * Faktat ovat Bagdadin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Bagdad,
+   * maakartat.js, oma teksti-kenttä alla) sekä en-Wikipedian
+   * Baghdad-artikkelin hallinto- ja väestöluvuista. Sisältölinjaus:
+   * sota vain neutraalina historiana (mongolit 1258), ei nykytilannetta.
+   * teksti on ennallaan.
+   */
   Bagdad: {
-    intro: 'Bagdad oli tuhat vuotta sitten maailman suurin kaupunki. '
-      + 'Sen Viisauden talossa käännettiin kreikkalaiset tieteelliset '
-      + 'teokset arabiaksi — ilman sitä työtä osa niistä olisi '
-      + 'kadonnut kokonaan.',
+    intro: 'Bagdad on Irakin pääkaupunki ja suurin kaupunki, ja siellä asuu noin '
+      + 'kahdeksan miljoonaa ihmistä eli runsas viidennes koko maan '
+      + 'väestöstä. Kaupunki on Tigrisin varrella Keski-Irakissa, ja joki '
+      + 'jakaa sen kahtia: itäpuoli on Rusafa ja länsipuoli Karkh.'
+      + '\n\n'
+      + 'Kalifi al-Mansur perusti kaupungin vuonna 762 täydellisen ympyrän '
+      + 'muotoiseksi, ja siitä tuli abbasidien kalifaatin pääkaupunki. '
+      + 'Silloin Bagdad oli yksi maailman suurimmista kaupungeista ja '
+      + 'oppineisuuden keskus: **Viisauden talossa** käännettiin arabiaksi '
+      + 'kreikkalaisia, persialaisia ja intialaisia teoksia, ja intialaiset '
+      + 'numerot levisivät täältä Eurooppaan. Mongolit tuhosivat kaupungin '
+      + 'vuonna 1258, ja se menetti asemansa vuosisadoiksi; myöhemmin siitä '
+      + 'tuli osmanien Irakin hallintokeskus.'
+      + '\n\n'
+      + 'Pyöreästä kaupungista ei ole jäljellä mitään näkyvää, ja vanha '
+      + 'säilynyt puoli on toisella rannalla. Koska tasangolla ei ole '
+      + 'rakennuskiveä, Bagdad on rakennettu tiilestä: **Mustansiriya-koulu** '
+      + '1200-luvulta, Khan Mirjanin majatalo 1350-luvulta ja kaupunginmuurin '
+      + 'viimeinen portti ovat samaa ainetta. Kahvilassa tee tulee lasissa '
+      + 'eikä kupissa, ja joen rannalla grillataan yhä masgoufia.',
     teksti: 'Bagdad on Tigrisin varrella Keski-Irakissa, tasangolla '
       + 'Tigrisin ja Eufratin välissä. Kaupungin perusti kalifi '
       + 'al-Mansur vuonna 762, ja alkuperäinen kaupunki oli täydellisen '
@@ -938,10 +1123,39 @@ export const ASIA_ARTIKKELIT = {
       + 'keskusmedaljonki. Alue on tunnettu myös maanjäristyksistään, '
       + 'jotka ovat tuhonneet kaupungin useaan otteeseen.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on nyt lehden etusivun leipäteksti — kahdeksan virkettä
+   * kolmessa kappaleessa ('\n\n') ja kaksi maltillista **lihavointia**.
+   * Faktat ovat Teheranin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Teheran,
+   * maakartat.js, oma teksti-kenttä alla) sekä en-Wikipedian
+   * Tehran-artikkelin hallinto- ja väestöluvuista. Sisältölinjaus:
+   * hallinnollinen nykyasema kerrotaan neutraalisti eikä vuoden 1979
+   * jälkeisiin kiistoihin mennä. teksti on ennallaan.
+   */
   Teheran: {
-    intro: 'Teheran on Iranin pääkaupunki Alborz-vuorten juurella. '
-      + 'Kaupunki nousee rinnettä niin jyrkästi, että pohjoisosassa on '
-      + 'useita asteita viileämpää kuin eteläosassa.',
+    intro: 'Teheran on Iranin pääkaupunki, maan suurin kaupunki ja Teheranin '
+      + 'maakunnan hallinnollinen keskus: kaupungissa asuu noin yhdeksän '
+      + 'miljoonaa ihmistä ja koko kaupunkiseudulla yli viisitoista '
+      + 'miljoonaa. Se nousee **Alborz-vuorten** etelärinnettä noin 1 200 '
+      + 'metrin korkeudessa, ja rinne on niin jyrkkä, että pohjoisosassa on '
+      + 'useita asteita viileämpää kuin eteläosassa. Suunnistaminen on siksi '
+      + 'helppoa: vuoret ovat aina pohjoisessa, ja idässä näkyy selkeällä '
+      + 'säällä Damavand, Iranin korkein huippu.'
+      + '\n\n'
+      + 'Teheran oli pitkään vain kylä suuren Rayn kaupungin varjossa, ja '
+      + 'kadžaarien Agha Mohammad Khan valitsi sen pääkaupungiksi vasta '
+      + 'vuonna 1786. Vielä 1870-luvulla koko kaupunki mahtui muurien sisään: '
+      + 'linnake, katettu basaari ja kolme asuinkorttelia. Kadžaariajasta '
+      + 'ovat jäljellä **Golestanin palatsi**, joka kuuluu Unescon '
+      + 'maailmanperintöön, ja Dar al-Fonun, Iranin ensimmäinen moderni '
+      + 'korkeakoulu vuodelta 1851.'
+      + '\n\n'
+      + 'Vanha ydin on yhä etelässä, jossa basaarin yli kymmenen kilometriä '
+      + 'katettua kujaa, palatsi ja kansallismuseo ovat kävelymatkan päässä '
+      + 'toisistaan. Vapaapäivänä teheranilaiset nousevat Darbandin polkua '
+      + 'puron vartta vuorille teehuoneiden ohi.',
     teksti: 'Teheran on noin 1 200 metrin korkeudessa, ja sen '
       + 'pohjoislaidalla kohoavat Alborz-vuoret. Niiden takana näkyy '
       + 'Damavand, Iranin korkein huippu, 5 610 metriä. Se on uinuva '
@@ -1085,10 +1299,38 @@ export const ASIA_ARTIKKELIT = {
       + 'Unescon maailmanperintökohde ja Iranin tunnetuin '
       + 'muinaisjäännös.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on nyt lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkettä kolmessa
+   * kappaleessa ('\n\n') ja kaksi maltillista **lihavointia**. Faktat
+   * ovat kaupungin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Jekaterinburg;
+   * maakartat.js: kohdekartan esittely), ei uusista lähteistä.
+   * teksti-kenttä on ennallaan. Venäjä-linjaus: vuoden 1918
+   * aihepiiriä ei ole introssa.
+   */
   Jekaterinburg: {
-    intro: 'Jekaterinburg on Venäjän neljänneksi suurin kaupunki ja '
-      + 'Uralin pääkaupunki. Sen laidalla seisoo obeliski, jonka '
-      + 'toisella kyljellä lukee Eurooppa ja toisella Aasia.',
+    intro: 'Jekaterinburg on Uralin pääkaupunki ja Venäjän neljänneksi '
+      + 'väkirikkain kaupunki: vuoden 2021 väenlaskussa asukkaita oli '
+      + '1 544 376. Se on vuoriston itärinteellä 1 667 kilometriä '
+      + 'Moskovasta itään, kaksi tuntia pääkaupungin aikaa edellä. '
+      + 'Uralvuoret ovat tässä matalia ja loivia, ja juuri siksi tiet ja '
+      + 'radat Euroopan ja Aasian välillä vedettiin tästä; länsipuolella '
+      + 'seisoo obeliski maanosien rajalla.'
+      + '\n\n'
+      + 'Kaupunki alkoi padosta. Vasili Tatištšev valitsi vuonna 1721 '
+      + 'Iset-joen rannan, jossa oli sekä malmia että metsää, ja padon '
+      + 'voimalla käyvän rautaruukin vasarapaja koeajettiin '
+      + '**18. marraskuuta 1723** — siitä päivästä lasketaan kaupungin '
+      + 'ikä. Nimi tuli keisarinna Katariina I:ltä, ja ruukissa alettiin '
+      + '1725 lyödä kuparirahaa. Siperian valtatie avautui 1763 ja teki '
+      + 'kaupungista idän ja lännen kaupan solmukohdan — ikkunan Aasiaan.'
+      + '\n\n'
+      + 'Uralin malmit näkyvät yhä: museoissa on korukiviä ja Kaslin '
+      + 'ruukin valurautaa, ja **malakiitti** on se kivi, josta Pavel '
+      + 'Bažovin tarinat kertovat. Keskustassa on kolme aikaa '
+      + 'päällekkäin: klassismia, 1900-luvun alun eklektiikkaa ja '
+      + '1920–1930-luvun konstruktivismia.',
     teksti: 'Jekaterinburg on Uralvuorten itärinteellä, siinä missä '
       + 'Euroopan ja Aasian raja tavallisesti vedetään. Uralvuoret '
       + 'eivät ole korkeita — enimmäkseen metsäisiä kumpuja, joiden '
@@ -1109,10 +1351,36 @@ export const ASIA_ARTIKKELIT = {
       + 'tunnetuimman luona käydään ottamassa kuva jalat kahdessa '
       + 'maanosassa.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9a: sama linjaus kuin
+   * Jekaterinburgissa. Faktat ovat kaupungin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot, Historia-sivu ja
+   * Matkailijan Novosibirsk; maakartat.js).
+   */
   Novosibirsk: {
-    intro: 'Novosibirsk on Siperian suurin kaupunki, ja se on nuorempi '
-      + 'kuin useimmat siellä käyneet matkalaiset. Se syntyi vuonna '
-      + '1893, kun Siperian radan silta piti rakentaa Obin yli.',
+    intro: 'Novosibirsk on Siperian suurin kaupunki ja Moskovan ja '
+      + 'Pietarin jälkeen Venäjän kolmanneksi väkirikkain: vuoden 2021 '
+      + 'väenlaskussa asukkaita oli 1 633 595. Se on Länsi-Siperian '
+      + 'tasangolla Obin molemmin puolin, ja ilmasto on jyrkkä '
+      + 'mannerilmasto: tammikuun keskilämpö on seitsemäntoista '
+      + 'pakkasastetta, heinäkuun lähes kaksikymmentä lämpöastetta.'
+      + '\n\n'
+      + 'Suurten kaupunkien joukossa se on nuorin. Se syntyi **vuonna '
+      + '1893 rautatiesillan työmaalle**: Transsiperian radan piti '
+      + 'ylittää Ob, ja Nikolai Garin-Mihailovski valitsi kohdan, jossa '
+      + 'molemmat rannat ja uoma ovat kalliota. '
+      + 'Silta valmistui 1897. Nimi oli vuodesta 1895 '
+      + 'Novonikolajevsk ja nykyinen vuodesta 1926; miljoona asukasta '
+      + 'täyttyi 2. syyskuuta 1962, alle seitsemässäkymmenessä vuodessa '
+      + 'perustamisesta.'
+      + '\n\n'
+      + 'Vanhaa keskustaa ei ole: ydin on 1900-luvun alun ja '
+      + '1930-luvun rakentama, ja sen selkäranka on Punainen valtakatu. '
+      + 'Tunnetuin talo on **oopperatalo**, Venäjän suurin, jonka kupoli '
+      + 'on kuusikymmentä metriä leveä. Kaupungin eteläpuolen metsään '
+      + 'perustettiin 1957 '
+      + 'Akademgorodok, oma tiedekaupunkinsa, jossa asui parhaimmillaan '
+      + '65 000 tutkijaa perheineen.',
     teksti: 'Novosibirsk on Länsi-Siperian tasangolla Obin varrella. '
       + 'Ilmasto on jyrkkä mannerilmasto: talvella pakkanen käy '
       + 'kolmessakymmenessä asteessa, kesällä lämpötila voi nousta '
@@ -1131,10 +1399,36 @@ export const ASIA_ARTIKKELIT = {
       + 'sodan aikana vuonna 1945. Kaupunki on Siperian liikenteen ja '
       + 'kaupan keskus, ja Siperian rata kulkee yhä sen läpi.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9a: sama linjaus kuin
+   * Jekaterinburgissa. Faktat ovat kaupungin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: johdannot, nostot ja
+   * Matkailijan Irkutsk; maakartat.js).
+   */
   Irkutsk: {
-    intro: 'Irkutsk on Itä-Siperian vanha kauppakaupunki Baikalin '
-      + 'lähellä. Baikal on maailman syvin järvi, ja siinä on noin '
-      + 'viidesosa maailman jäätymättömästä pintamakeasta vedestä.',
+    intro: 'Irkutsk on Itä-Siperian vanha kauppakaupunki Angaran '
+      + 'mutkassa: vuoden 2010 väenlaskussa asukkaita oli 587 891. '
+      + 'Kaupunki alkoi verotusasemasta: Ivan Pohabov rakensi 1652 '
+      + 'talvimajan turkiskauppaa ja jasak-veroa varten, ja Jakov '
+      + 'Pohabov pystytti 1661 lähelle paalulinnoituksen. '
+      + 'Kaupunkioikeudet tulivat 1686.'
+      + '\n\n'
+      + 'Vaurauden toi kauppa. Siperian valtatie Moskovasta valmistui '
+      + '1760, ja Kjahtan rajakaupan myötä Kiinan tee ja silkki tulivat '
+      + 'täällä laajalti saataville; vuonna 1821 Irkutskista tuli '
+      + 'Itä-Siperian kenraalikuvernöörin istuin. **Dekabristikapinan** '
+      + 'jälkeen kaupunkiin karkotettiin upseereita ja aatelisia, ja '
+      + 'vuosisadan loppuun mennessä joka kolmas asukas oli karkotettu — '
+      + 'heidän jälkeensä jäivät koulut, kirjastot ja koristeelliset '
+      + 'puutalot.'
+      + '\n\n'
+      + 'Heinäkuussa 1879 kaksi tulipaloa tuhosi puolet kaupungista, ja '
+      + 'sen jälkeen puusta rakentaminen kiellettiin joen '
+      + 'puolella: rannassa on kivitaloja ja palorajan takana puinen '
+      + 'Irkutsk. Kaupunkia alettiin kutsua Siperian Pariisiksi, ja '
+      + 'ensimmäinen juna saapui elokuussa 1898. Kaupungista 72 '
+      + 'kilometriä ylävirtaan on **Baikal**, maailman syvin ja vanhin '
+      + 'järvi.',
     teksti: 'Irkutsk on Angara-joen varrella noin 70 kilometrin päässä '
       + 'Baikaljärvestä. Kaupunki perustettiin 1661 turkiskaupan '
       + 'tukikohdaksi, ja siitä tuli Itä-Siperian hallinnollinen '
@@ -1154,10 +1448,36 @@ export const ASIA_ARTIKKELIT = {
       + 'nerpa, maailman ainoa kokonaan makeassa vedessä elävä hylje. '
       + 'Talvella jää kantaa auton.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on nyt lehden etusivun leipäteksti — kahdeksan virkettä
+   * kolmessa kappaleessa ('\n\n') ja kaksi maltillista **lihavointia**.
+   * Faktat ovat Jakutskin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: kaupunki- ja ikirouta-sivun johdannot,
+   * nostot ja Matkailijan Jakutsk; maakartat.js), ei uusista lähteistä.
+   * teksti-kenttä on ennallaan.
+   */
   Jakutsk: {
-    intro: 'Jakutsk on maailman kylmin suuri kaupunki. Talot seisovat '
-      + 'paaluilla ilmassa, koska maassa seisova talo sulattaisi alleen '
-      + 'ikiroudan ja vajoaisi.',
+    intro: 'Jakutsk on Sahan tasavallan pääkaupunki Lena-joen '
+      + 'länsirannalla Tuimaadan laaksossa, noin neljäsataaviisikymmentä '
+      + 'kilometriä napapiiristä etelään. Kasakkapäällikkö Pjotr Beketov '
+      + 'pystytti 1632 joen vastarannalle hirsivarustuksen, ja linnoitus '
+      + 'siirrettiin vuosina 1642–1643 nykyiselle paikalleen. Asukkaita oli '
+      + 'vuoden 1897 väenlaskussa 6 535 ja vuoden 2021 laskennassa 355 443, '
+      + 'ja heistä 59,2 prosenttia on jakuutteja.'
+      + '\n\n'
+      + 'Jakutsk on **maailman suurin yhtenäisen ikiroudan päälle '
+      + 'rakennettu kaupunki**: talot seisovat betonipaaluilla irti maasta, '
+      + 'ja vesi- ja lämpöputket kulkevat eristettyinä pukkien päällä '
+      + 'katujen vieressä. Maa on jäässä runsaan kahdensadan metrin '
+      + 'syvyyteen, ja vuonna 1960 perustettu ikiroutainstituutti tutkii '
+      + 'jäätyneelle maalle rakentamista.'
+      + '\n\n'
+      + 'Vuodenaikojen ero on maailman suurimpia: kylmin mitattu lukema on '
+      + '−64,4 astetta vuodelta 1891 ja kuumin +38,4 astetta vuodelta 2011. '
+      + '**Siltaa Lenan yli ei ole koko tasavallassa**, joten kesällä joki '
+      + 'ylitetään lautalla ja keskitalvella ajetaan jäätietä pitkin. '
+      + 'Seudulta louhitaan timantteja, kultaa ja kivihiiltä.',
     teksti: 'Jakutsk on Lena-joen varrella Itä-Siperiassa, Sahan '
       + 'tasavallan pääkaupunki. Maa on jäässä satojen metrien syvyyteen '
       + 'asti, ja vain ohut pintakerros sulaa kesäksi. Ero vuodenaikojen '
@@ -1177,10 +1497,37 @@ export const ASIA_ARTIKKELIT = {
       + 'myös hyvin säilyneitä mammutteja. Jakutskiin ei johda '
       + 'rautatietä eikä ympärivuotista maantietä joen yli.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b. Intro on koottu Magadanin
+   * omista jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:n
+   * johdanto, nosto «Sitsikaupunki kahden lahden välissä» ja
+   * Matkailijan Magadan; nahtavyysjutut.js:n Nagajevanlahti;
+   * maakartat.js). VENÄJÄ-LINJAUS (omistaja 20.8.2026): kaupungin
+   * synty 1930-luvulla kerrotaan neutraalina rakentamisen historiana,
+   * eikä intro laajenna leirihistoriaa — se käsitellään kerran
+   * kansisivun Surun maski -nostossa, joka on ennallaan.
+   */
   Magadan: {
-    intro: 'Magadan on satamakaupunki Ohotanmeren rannalla. Sen '
-      + 'laidalla seisoo Surun naamio, muistomerkki niille, jotka '
-      + 'tuotiin tänne pakolla työleireille.',
+    intro: 'Magadan on satamakaupunki Ohotanmeren pohjoisrannalla ja '
+      + 'Magadanin alueen hallinnollinen keskus. Kaupunki istuu Staritskin '
+      + 'niemimaan kannaksella kahden lahden välissä: lounaassa '
+      + '**Nagajevanlahti**, jota on kutsuttu koko Ohotanmeren parhaaksi '
+      + 'ankkuripaikaksi, koillisessa Gertnerinlahti. Lahti oli '
+      + 'merikartoilla kauan ennen kaupunkia: amerikkalaiset '
+      + 'valaanpyytäjät ankkuroivat siihen vuosina 1852–1869 ja merkitsivät '
+      + 'sen Jeannette Harbouriksi.'
+      + '\n\n'
+      + 'Asuintalot, koulu ja sairaala alkoivat nousta rannalle kesäkuussa '
+      + '1929, ja kaupunkioikeudet tulivat 14. heinäkuuta 1939. Kasvu oli '
+      + 'nopeaa ja lasku on ollut pitkä: vuoden 1989 väenlaskussa asukkaita '
+      + 'oli 151 652, vuoden 2024 arviossa enää 89 193.'
+      + '\n\n'
+      + 'Rautatietä ei ole, ja ainoa maayhteys on **Kolyman valtatie**, '
+      + 'joka alkaa kaupungin pohjoislaidalta ja vie 2 032 kilometrin '
+      + 'päähän Jakutiaan. Satama on Petropavlovskin jälkeen Venäjän '
+      + 'koillisosan toiseksi suurin, ja se pidetään auki jäänmurtajilla, '
+      + 'sillä jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. '
+      + 'Elinkeinot ovat kullankaivuu ja kalastus.',
     teksti: 'Magadan on Venäjän Kaukoidässä Nagajevanlahden rannalla. '
       + 'Kaupunki on käytännössä eristyksissä: maantietä etelään ei ole, '
       + 'ja ainoa tie johtaa pohjoiseen sisämaahan. Ilmasto on kylmä ja '
@@ -1198,10 +1545,35 @@ export const ASIA_ARTIKKELIT = {
       + 'huippuvuosien määrästä. Kultaa louhitaan yhä, ja satama '
       + 'palvelee koko Kolyman aluetta.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b. Kamtšatka on ALUELEHTI ilman
+   * kohdekarttaa, joten remontista tehtiin kohdat 1 ja 2. Intron
+   * faktat ovat niemimaan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: kaupunki- ja tulivuorisivun johdannot,
+   * nostot ja Matkailijan Kamtšatka). Suljetun alueen vuodet ovat
+   * neutraalia historiaa, kuten Venäjä-linjaus edellyttää.
+   */
   'Kamtšatkan niemimaa': {
-    intro: 'Kamtšatka on tulivuorten niemimaa Venäjän Kaukoidässä. '
-      + 'Siellä on yli kolmesataa tulivuorta, joista parikymmentä on '
-      + 'yhä toiminnassa.',
+    intro: 'Kamtšatka on niemimaa Venäjän Kaukoidässä Ohotanmeren, '
+      + 'Beringinmeren ja Tyynenmeren välissä: pituutta on noin '
+      + '1 200 kilometriä ja pinta-alaa neljänneksen Suomea vähemmän. '
+      + 'Niemimaa kuuluu Tyynenmeren tulirenkaaseen, jossa Tyynenmeren '
+      + 'laatta painuu Euraasian laatan alle noin kahdeksan senttimetriä '
+      + 'vuodessa. Tulivuoria on siksi satoja ja niistä yli kaksikymmentä '
+      + 'toimivia; korkein on **Kljutševskaja sopka**, 4 750 metriä.'
+      + '\n\n'
+      + 'Ainoa suuri kaupunki on satamakaupunki Petropavlovsk-Kamtšatski '
+      + 'Avatšanlahden rannalla. Se sai nimensä kahdesta pakettiveneestä, '
+      + 'jotka tulivat lahdelle talvehtimaan syksyllä 1740. Niemimaan '
+      + 'vanhinta väestöä ovat itelmeenit, joiden elämän ja kielen kirjasi '
+      + 'muistiin Stepan Krašeninnikov neljän vuoden matkallaan 1737–1741.'
+      + '\n\n'
+      + 'Kamtšatkalle ei vie maantietä eikä rautatietä, vaan sinne tullaan '
+      + 'lentäen tai laivalla, ja neuvostoaikana koko niemimaa oli suljettu '
+      + 'ulkopuolisilta vuoteen 1989 ja ulkomaalaisilta vuoteen 1990. Maa '
+      + 'on kuuma myös pinnan alla: kuumia lähteitä on lukemattomia, ja '
+      + '**Gejsirien laakso** löytyi vasta huhtikuussa 1941 '
+      + 'koiravaljakolla tehdyllä retkellä.',
     teksti: 'Kamtšatka työntyy Ohotanmeren ja Tyynenmeren väliin noin '
       + '1 250 kilometrin pituisena. Se kuuluu Tyynenmeren tuliseen '
       + 'kehään, jossa mannerlaatat painuvat toistensa alle — siksi '
@@ -1218,10 +1590,37 @@ export const ASIA_ARTIKKELIT = {
       + 'niemimaalla elää enemmän ruskeakarhuja kuin missään muualla '
       + 'Euraasiassa. Tulivuoret kuuluvat Unescon maailmanperintöön.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b. Sahalin on ALUELEHTI ilman
+   * kohdekarttaa, joten remontista tehtiin kohdat 1 ja 2. Intron
+   * faktat ovat saaren omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: kaupunki- ja historiasivun johdannot,
+   * nostot ja Matkailijan Sahalin). Katorga ja Karafuto kerrotaan
+   * historiallisina vaiheina ilman nykypolitiikkaa.
+   */
   Sahalin: {
-    intro: 'Sahalin on pitkä ja kapea saari Venäjän Kaukoidässä. '
-      + 'Sen eteläpuolisko kuului Japanille vuoteen 1945, ja siellä '
-      + 'näkyy yhä japanilaisten rakentamia siltoja ja rautatielinjoja.',
+    intro: 'Sahalin on Venäjän suurin saari, pitkä ja kapea kaistale '
+      + 'Ohotanmeressä: mittaa on 948 kilometriä pohjoisesta etelään ja '
+      + 'kapeimmillaan vain 26 kilometriä. '
+      + 'Mantereesta sen erottaa Tatarinsalmi, jota pitkin Gennadi '
+      + 'Nevelskoi purjehti 1849 ja todisti, ettei saari olekaan '
+      + 'mantereesta työntyvä niemi. Kaksi kolmasosaa saaresta on '
+      + 'vuoristoa, ja etelässä La Pérousen salmen takana on Japanin '
+      + 'Hokkaido.'
+      + '\n\n'
+      + 'Saarella on kolme alkuperäiskansaa: nivkhit pohjoisessa, uiltat '
+      + 'keskiosassa ja ainut etelässä. Venäjä käytti saarta '
+      + '**pakkotyösiirtolana** vuodesta 1869 vuoteen 1906, ja kirjailija '
+      + 'Anton Tšehov saapui sinne kesällä 1890 ja teki oman '
+      + 'väestölaskentansa noin kymmenelletuhannelle kortistokortille.'
+      + '\n\n'
+      + 'Vuonna 1875 Japani luopui osuudestaan Sahaliniin ja sai '
+      + 'vastineeksi Kuriilit, mutta vuoden 1905 '
+      + 'rauhassa saaren eteläpuolisko siirtyi Japanille **Karafuton** '
+      + 'prefektuuriksi, ja koko saari tuli Neuvostoliitolle elokuussa '
+      + '1945. Japanilainen kerros näkyy yhä: saaren rautatiet kulkivat '
+      + 'kapealla japanilaisella raideleveydellä vuoteen 2019. Ainoa suuri '
+      + 'kaupunki on Južno-Sahalinsk, entinen Toyohara.',
     teksti: 'Sahalin on noin 950 kilometriä pitkä mutta kapeimmillaan '
       + 'vain 26 kilometriä leveä. Pohjoisosa on tundraa ja '
       + 'ikiroudan aluetta, eteläosassa kasvaa havumetsää. Ero on '
@@ -1238,10 +1637,37 @@ export const ASIA_ARTIKKELIT = {
       + 'ja niiden hyödyntäminen on saaren tärkein elinkeino '
       + 'kalastuksen ohella.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9a: sama linjaus kuin
+   * Jekaterinburgissa. Faktat ovat kaupungin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Vladivostok; maakartat.js; nahtavyysjutut.js). Suljetun kaupungin
+   * vuodet 1952–1992 kerrotaan neutraalina historiana.
+   */
   Vladivostok: {
     intro: 'Vladivostok on Venäjän tärkein Tyynenmeren satama ja '
-      + 'Siperian radan itäinen pääteasema. Asemalla oleva '
-      + 'kilometripylväs kertoo matkan Moskovaan: 9 288 kilometriä.',
+      + 'Transsiperian radan itäinen pääteasema: laiturin päässä seisoo '
+      + 'kilometripylväs, jossa lukee 9288. Kaupunki on '
+      + 'Muravjov-Amurskin niemimaan eteläkärjessä kahden veden välissä — '
+      + 'lännessä Amurinlahti, idässä Kultaisen sarven satamalahti — ja '
+      + 'muuten se kiipeää kukkuloille. Se on Kaukoidän liittopiirin '
+      + 'pääkaupunki.'
+      + '\n\n'
+      + 'Kenraalikuvernööri Nikolai Muravjov-Amurski nimesi poukaman '
+      + 'vuonna 1859 Kultaiseksi sarveksi Konstantinopolin mukaan, ja '
+      + 'nimeksi vakiintui **Vladivostok, idän '
+      + 'hallitsija**. Sotilasosasto jätettiin rantaan kesäkuussa 1860, '
+      + 'ja 1871 tänne siirrettiin Siperian laivasto-osaston '
+      + 'tukikohta. Kiinalaiset olivat kutsuneet poukamaa '
+      + 'merimakkaralahdeksi, ja vuosisadan alussa jopa puolet '
+      + 'asukkaista oli aasialaisia.'
+      + '\n\n'
+      + 'Neuvostoaika käänsi oven kiinni: vuodesta 1952 vuoteen 1992 '
+      + 'kaupunki oli suljettu, eikä ulkomaalaisilla ollut sinne asiaa. '
+      + 'Vuonna 2012 valmistui kaksi jättisiltaa, joista **Russkin '
+      + 'sillan** 1 104 metrin jänneväli on vinoköysisiltojen '
+      + 'maailmanlistan kärkeä. Katukuvassa eurooppalainen kivikaupunki '
+      + 'ja Aasian naapurit sekoittuvat.',
     teksti: 'Vladivostok on kukkuloilla Kultaisen sarven lahden '
       + 'ympärillä, lähellä Kiinan ja Korean rajaa. Lahti on syvä ja '
       + 'suojaisa, ja se jäätyy talvella vain lyhyeksi aikaa. '
@@ -1372,10 +1798,27 @@ export const ASIA_ARTIKKELIT = {
       + 'yli 5 000 metrissä.',
   },
   Peking: {
-    intro: 'Peking on Kiinan pääkaupunki ja yksi maailman vanhimmista '
-      + 'pääkaupungeista. Sen keskellä on Kielletty kaupunki: 980 '
-      + 'rakennusta muurin sisällä, jonne tavallinen ihminen ei päässyt '
-      + 'viiteensataan vuoteen.',
+    intro: 'Peking on Kiinan pääkaupunki ja lähes 22 miljoonan asukkaan '
+      + 'kaupunki Pohjois-Kiinan tasangon pohjoisreunalla vuorten '
+      + 'suojassa. Se on kantanut monta nimeä — Ji, Yanjing, Zhongdu ja '
+      + 'Dadu — kunnes Ming-dynastian Yongle-keisari antoi sille 1403 '
+      + 'nimen Beijing, pohjoinen pääkaupunki. Läntinen kirjoitusasu '
+      + 'Peking on peräisin jesuiitta Martino Martinin kartastosta '
+      + 'vuodelta 1655.'
+      + '\n\n'
+      + 'Yongle-keisari rakennutti myös **Kielletyn kaupungin**, joka '
+      + 'valmistui 1420 ja oli keisarien koti vuoteen 1924. Muurin ja '
+      + 'vallihaudan sisällä on 8 886 huonetta, ja se on maailman suurin '
+      + 'säilynyt puurakenteinen palatsikokonaisuus; nykyään se on '
+      + 'Palatsimuseo. Samaan aikaan valmistui Taivaan temppeli, jossa '
+      + 'keisari uhrasi vuosittain hyvän sadon puolesta.'
+      + '\n\n'
+      + 'Palatsin ympärille jää vanhaa kaupunkia: **hutong-kujia**, '
+      + 'joiden varrella on siheyuan-pihataloja. Ming-kauden '
+      + 'kaupunginmuuri purettiin 1965, ja metron ensimmäinen linja '
+      + 'rakennettiin sen perustusten päälle. Kaupungin pohjoispuolella '
+      + 'vuorten harjoilla kulkee Kiinan muuri, jonka lähin osuus '
+      + 'Badaling rakennettiin 1504.',
     teksti: 'Peking on Pohjois-Kiinan tasangolla, vuorten suojassa '
       + 'lännessä ja pohjoisessa. Nimi tarkoittaa pohjoista '
       + 'pääkaupunkia. Kaupunkiseudulla asuu yli kaksikymmentä '
@@ -1419,9 +1862,24 @@ export const ASIA_ARTIKKELIT = {
   },
   Shanghai: {
     intro: 'Shanghai on Kiinan suurin kaupunki ja maailman vilkkain '
-      + 'konttisatama. Joen toisella rannalla on 1920-luvun '
-      + 'eurooppalaisia pankkitaloja, toisella lasitorneja, joita ei '
-      + 'ollut vielä 1990.',
+      + 'konttisatama. Se on Jangtsen suistossa Itä-Kiinanmeren rannalla, '
+      + 'ja kaupunkiseudulla asuu noin 29 miljoonaa ihmistä. Nimi '
+      + 'tarkoittaa merenrantaa. Huangpu-joki jakaa kaupungin kahtia: '
+      + 'länsipuoli Puxi on vanha keskusta, itäpuoli Pudong uusi.'
+      + '\n\n'
+      + 'Vanhinta Shanghaita on kiinalainen vanhakaupunki, jota kiersi '
+      + 'vuonna 1553 merirosvoja vastaan rakennettu muuri; se purettiin '
+      + '1912 ja tilalle tuli kehäkatu. Muurin sisällä on '
+      + '**Yu-puutarha**, jonka rakentaminen alkoi 1559. Kaupunki '
+      + 'avattiin ulkomaankaupalle 1843, ja rantakadulle eli Bundille '
+      + 'nousi kauppahuoneiden ja pankkien rivi. Kortteleihin syntyi '
+      + '1860-luvulta alkaen shikumen: kivikehyksinen ovi ja sen takana '
+      + 'kujien varsille rakennetut rivitalot.'
+      + '\n\n'
+      + 'Pudongin puoli jokea oli vielä 1990 peltoa ja varastoja. Sen '
+      + 'kehittäminen aloitettiin samana vuonna, ja nyt siellä seisoo '
+      + '**Shanghain torni**, 632 metriä korkea ja Kiinan korkein '
+      + 'rakennus.',
     teksti: 'Shanghai on Jangtsen suistossa Itä-Kiinanmeren rannalla. '
       + 'Nimi tarkoittaa merenrantaa. Kaupungin halki virtaa '
       + 'Huangpu-joki, ja sen molemmat rannat näyttävät kahdelta eri '
@@ -1485,10 +1943,25 @@ export const ASIA_ARTIKKELIT = {
       + 'taidekokoelmasta.',
   },
   'Soul (kaupunki)': {
-    intro: 'Soul on Etelä-Korean pääkaupunki Han-joen varrella. '
-      + 'Palatsin portilla vaihdetaan vartio vanhoissa asuissa, ja '
-      + 'sadan metrin päässä metroasemalla näkyy junan saapumisaika '
-      + 'sekunnin tarkkuudella.',
+    intro: 'Soul on Etelä-Korean pääkaupunki Han-joen varrella vuorten '
+      + 'ympäröimässä laaksossa. Kaupungissa asuu yli yhdeksän miljoonaa '
+      + 'ihmistä ja kaupunkiseudulla noin puolet koko maan väestöstä. '
+      + 'Joki jakaa kaupungin kahtia: pohjoispuoli Gangbuk on vanha Soul, '
+      + 'eteläpuoli Gangnam on rakennettu pääosin 1970-luvun jälkeen.'
+      + '\n\n'
+      + 'Joseon-dynastia siirsi pääkaupunkinsa tänne vuonna 1394 ja '
+      + 'rakensi ensimmäisenä kolme asiaa: palatsin, esi-isien pyhäkön ja '
+      + 'kellotornin. Kaupunkia kiersi 18,2 kilometrin muuri, ja sen '
+      + 'kahdeksasta portista eteläinen **Sungnyemun** valmistui 1398 ja '
+      + 'seisoo yhä liikenteen keskellä. Suuria palatseja rakennettiin '
+      + 'viisi, ja niistä ensimmäinen ja tärkein on Gyeongbokgung, jonka '
+      + 'pääportin Gwanghwamunin edessä on kaupungin keskusaukio.'
+      + '\n\n'
+      + 'Vanha keskusta on yhä kävelymatkan mittainen: palatsien '
+      + 'ympärillä ovat Bukchonin puutalokortteli, antiikkikatu Insadong '
+      + 'ja vuonna 1905 perustettu Gwangjangin tori. Niiden eteläpuolella '
+      + 'virtaa **Cheonggyecheon**, puro joka peitettiin betonin ja '
+      + 'moottoritien alle ja kaivettiin esiin vuonna 2005.',
     teksti: 'Soul on Korean niemimaan luoteisosassa, vuorten '
       + 'ympäröimässä laaksossa. Han-joki halkaisee kaupungin, ja sen '
       + 'molemmin puolin nousee kerrostaloja. Kaupunkiseudulla asuu '
@@ -1508,10 +1981,28 @@ export const ASIA_ARTIKKELIT = {
       + 'kävelyreitiksi keskellä keskustaa.',
   },
   Tokio: {
-    intro: 'Tokio on maailman väkirikkain kaupunkialue. Shibuyan '
-      + 'risteyksen yli kävelee kerralla tuhansia ihmisiä joka '
-      + 'suuntaan, ja kadun kulman takana on pyhäkkö, jonka pihalla '
-      + 'ei kuulu mitään.',
+    intro: 'Tokio on Japanin pääkaupunki Honshun itärannikolla '
+      + 'Tokionlahden pohjukassa, ja sen kaupunkiseudulla asuu noin 37 '
+      + 'miljoonaa ihmistä, enemmän kuin millään muulla kaupunkiseudulla. '
+      + 'Seutu on maanjäristysherkkää, ja rakennusmääräykset ovat '
+      + 'maailman tiukimpia. Kaupunki jakautuu kymmeniin kaupunginosiin, '
+      + 'jotka **Yamanote-rengasrata** sitoo yhteen kolmenkymmenen aseman '
+      + 'lenkillään.'
+      + '\n\n'
+      + 'Kaupunki kantoi nimeä Edo ja oli vuodesta 1603 shogunien '
+      + 'hallintokeskus. Keisari muutti sinne 1868, ja nimeksi tuli '
+      + 'Tokio, itäinen pääkaupunki. Vuoden 1923 maanjäristys ja toisen '
+      + 'maailmansodan pommitukset tuhosivat kaupungin kahdesti, ja '
+      + 'kummallakin kerralla se rakennettiin uudelleen. '
+      + 'Shinkansen-luotijuna aloitti liikennöinnin Tokion ja Osakan '
+      + 'välillä 1964.'
+      + '\n\n'
+      + 'Vanhinta Tokiota on rengasradan pohjois- ja itäpuolelle jäävä '
+      + 'shitamachi eli alakaupunki: Uenon puisto, maan vanhin eläintarha '
+      + 'vuodelta 1882 ja Kappabashi-dōri, jonka liikkeet myyvät '
+      + 'ravintoloille näyteikkunoiden muoviruokaa. Asakusassa seisoo '
+      + 'kaupungin vanhin temppeli **Sensō-ji**, jonka kävijämäärä on '
+      + 'suurempi kuin minkään muun pyhäkön maailmassa.',
     teksti: 'Tokio on Honshun saaren itärannikolla Tokionlahden '
       + 'pohjukassa. Kaupunkiseudulla asuu noin 37 miljoonaa ihmistä. '
       + 'Alue on maanjäristysherkkä, ja rakennusmääräykset ovat '
@@ -1575,9 +2066,27 @@ export const ASIA_ARTIKKELIT = {
       + 'eteenpäin — liikenne kiertää, jos kulkija ei pysähdy.',
   },
   Bangkok: {
-    intro: 'Bangkok on Thaimaan pääkaupunki Chao Phraya -joen varrella. '
-      + 'Sen seremonialliseen nimeen kuuluu 168 kirjainta, ja se on '
-      + 'maailman pisin virallinen paikannimi.',
+    intro: 'Bangkok on Thaimaan pääkaupunki ja maan selvästi suurin '
+      + 'kaupunki: asukkaita on runsaat yhdeksän miljoonaa. Se on Chao '
+      + 'Phraya -joen suistotasangolla, jonka keskikorkeus on vain '
+      + 'puolitoista metriä merenpinnasta, ja joki laskee Siaminlahteen '
+      + 'noin 25 kilometriä keskustan eteläpuolella. Thaimaalaiset '
+      + 'kutsuvat kaupunkia nimellä Krung Thep Maha Nakhon; juhlallinen '
+      + 'täysi nimi on 168 kirjainta pitkä ja maailman pisin paikannimi.'
+      + '\n\n'
+      + 'Kun vanha pääkaupunki Ayutthaya tuhoutui 1767, kuningas Taksin '
+      + 'perusti uuden pääkaupungin Thonburiin joen länsirannalle. Vuonna '
+      + '1782 Rama I siirsi sen itärannalle ja kaivatti kanavat, jotka '
+      + 'tekivät **Rattanakosinista** keinotekoisen saaren; samana '
+      + 'keväänä pystytettiin kaupunginpylväs ja aloitettiin Suurpalatsin '
+      + 'rakentaminen.'
+      + '\n\n'
+      + 'Kaupunki eli pitkään veden varassa: kanavat eli khlongit olivat '
+      + 'sen katuja, ja 1800-luvun matkustajat kutsuivat sitä idän '
+      + 'Venetsiaksi. Ensimmäinen länsimaiseen tapaan rakennettu katu '
+      + 'valmistui vasta 1864, ja moni kanava on sittemmin täytetty '
+      + 'kaduksi. Thaimaa on **ainoa Kaakkois-Aasian maa**, jota ei '
+      + 'koskaan alistettu siirtomaaksi.',
     teksti: 'Bangkok on joen suistossa lähellä Thaimaanlahtea. Maa on '
       + 'matalaa ja pehmeää, ja kaupunki vajoaa hitaasti. Joki on '
       + 'edelleen liikenneväylä: pitkähäntäveneet, lautat ja proomut '
@@ -1728,9 +2237,25 @@ export const ASIA_ARTIKKELIT = {
       + 'Boudhanathin stupa on yksi maailman suurimmista.',
   },
   Delhi: {
-    intro: 'Delhissä on seitsemän vanhaa kaupunkia päällekkäin ja '
-      + 'vierekkäin. Yhden niistä keskellä seisoo rautapylväs, joka on '
-      + 'ollut ulkona 1 600 vuotta eikä ole ruostunut.',
+    intro: 'Delhi on Pohjois-Intiassa Yamuna-joen varrella, ja se on yksi '
+      + 'maailman suurimmista kaupunkialueista. Kaupungin halki kulkee '
+      + 'Delhi Ridge, Aravalli-vuoriston metsäinen jatke. Perimätieto '
+      + 'laskee samalle rannalle seitsemän peräkkäistä kaupunkia, ja '
+      + 'jokainen valtakunta rakensi omansa vanhojen viereen.'
+      + '\n\n'
+      + 'Etelässä seisoo **Qutb Minar**, punaisesta hiekkakivestä '
+      + 'muurattu voittotorni, jonka rakentaminen alkoi 1199; 72,5 metriä '
+      + 'korkeana se on yhä maailman korkein tiiliminareetti. Sen '
+      + 'vieressä on nelisenmetrinen rautapylväs 400-luvulta, joka ei ole '
+      + 'ruostunut. Mughal-keisari Shah Jahan siirsi pääkaupunkinsa '
+      + 'Agrasta tänne ja rakennutti muurikaupungin Shahjahanabadin: '
+      + '**Punainen linnoitus** valmistui 1648, Jama Masjid 1656 ja '
+      + 'niiden väliin Chandni Chowkin kauppakatu.'
+      + '\n\n'
+      + 'Muurikaupunki on nykyään Vanha Delhi kujineen ja tukkutoreineen. '
+      + 'Sen eteläpuolelle alettiin rakentaa New Delhiä vuoden 1911 '
+      + 'jälkeen, ja Edwin Lutyensin ja Herbert Bakerin hallintokaupunki '
+      + 'vihittiin 1931; se on nykyään Intian pääkaupunki.',
     teksti: 'Delhi on Pohjois-Intiassa Yamuna-joen varrella. Kaupunki '
       + 'on Intian pääkaupunkialue, ja siellä asuu yli '
       + 'kolmekymmentä miljoonaa ihmistä. Kesät ovat hyvin kuumia ja '

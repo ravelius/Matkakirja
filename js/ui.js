@@ -182,7 +182,8 @@ import { puheTuettu } from './puhe.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
 import { TILANNE, TESTATTAVAA, TUOREET } from './tyohuone-tilanne.js';
 // Kartan kehittäjävärit lukevat lehtitiedon samasta funktiosta kuin
-// Tilastot-taulun Lehti-sarake (drawBoard, valmiusLuokka).
+// Tilastot-taulun Lehti-sarake, ja tekstiremontin tilan samasta
+// ARTIKKELIT-taulusta kuin lehden etusivu (drawBoard, valmiusLuokka).
 import { kaupungillaLehti } from './tyohuone-tilastot.js';
 import {
   el,
@@ -371,6 +372,26 @@ const PALUU_KESTO_MS = 8000;
  * jottei kartta ja taulu voi kertoa eri tarinaa samasta kaupungista.
  */
 const TYON_ALLA_IDT = new Set((TUOREET?.tyossa ?? []).map((k) => k.id));
+/*
+ * TEKSTIREMONTIN RAJA (omistajan tilaus 20.8.2026: "korjatut ja
+ * korjaamattomat kaupungit voisi erottaa toisistaan kartalla
+ * kehittäjätilassa").
+ *
+ * Lehden olemassaolo ei enää riitä kertomaan, onko kaupunki tehty:
+ * remontissa etusivun ARTIKKELIT-intro kirjoitetaan 7–10 virkkeen
+ * johdatukseksi (Raamattu, "TEKSTIEN PAINOPISTE"), kun vanha nosto on
+ * pari virkettä. Ero näkyy merkkimäärässä niin selvästi, ettei
+ * erillistä tilannetaulua tarvita: remontoidut introt ovat noin
+ * 1000–1100 merkkiä ja remontoimattomat 160–270. Kynnys 600 osuu
+ * keskelle tyhjää väliä, joten sen kummallakaan puolella ei ole
+ * rajatapauksia — ja se on tarkoituksella väliaikainen tunniste, joka
+ * poistetaan sitten kun kaikki lehdet ovat läpi remontista.
+ *
+ * Merkkiraja luetaan samasta ARTIKKELIT-taulusta ja samalla avaimella
+ * (wiki-otsikko, varalla nimi) kuin lehden etusivu itse — pelkkä id ei
+ * kelpaa avaimeksi.
+ */
+const REMONTIN_INTRO_RAJA = 600;
 // Kirjoituskoneen tahti: avaus saa naksua rauhassa, muut tekstit ripeästi.
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
@@ -4267,11 +4288,20 @@ export class UI {
      * Rakennustyön väri kartalle — VAIN kehittäjätilassa (omistajan
      * tilaus 20.8.2026, ks. TYON_ALLA_IDT).
      *
-     * Kolme luokkaa: työn alla oleva saa keltaisen, valmis
-     * (kaupungilla on kaupunkilehti) pitää nykyisen värinsä eikä saa
-     * luokkaa lainkaan, ja koskematon jää harmaaksi. Pelaajan laudalle
-     * ei lisätä edes luokkaa, joten tavallinen näkymä on tismalleen
-     * entisensä.
+     * Neljä luokkaa: työn alla oleva saa keltaisen, koskematon jää
+     * harmaaksi, ja lehdelliset kaupungit jakautuvat kahtia sen mukaan,
+     * onko lehti käynyt tekstiremontissa (omistajan tilaus 20.8.2026,
+     * ks. REMONTIN_INTRO_RAJA): remontoimaton saa oranssinruskean,
+     * remontoitu pitää nykyisen värinsä eikä saa luokkaa lainkaan.
+     * Pelaajan laudalle ei lisätä edes luokkaa, joten tavallinen näkymä
+     * on tismalleen entisensä.
+     *
+     * VALMIS ON SE, JOKA EI SAA LUOKKAA. Vihreä korostus remontoiduille
+     * olisi kääntänyt merkinnän ympäri: kun jokainen piste olisi
+     * värjätty, laudan oma pergamentinvaalea katoaisi kartalta eikä
+     * silmä enää poimisi poikkeamia. Nyt jäljellä oleva työ hohtaa
+     * kartalta (Euroopassa lähes kaikki oranssinruskeita, Lähi-idässä
+     * enää muutama) ja tehty työ palaa hiljaa taustaan.
      *
      * TYÖN ALLA KATSOTAAN ENSIN, vaikka kaupungilla jo olisi lehden
      * kansiosio: TUOREET.tyossa on nimenomaan lista siitä, mikä on
@@ -4279,10 +4309,12 @@ export class UI {
      * työ on tehty. Aloitettu lehti ei siis tee kaupungista valmista —
      * päinvastoin, juuri ne kaupungit omistaja haluaa nähdä keltaisina.
      */
-    const valmiusLuokka = (id) => {
+    const valmiusLuokka = (c) => {
       if (!this.kehittajaTila) return '';
-      if (TYON_ALLA_IDT.has(id)) return ' city-tyossa';
-      return kaupungillaLehti(id) ? '' : ' city-kesken';
+      if (TYON_ALLA_IDT.has(c.id)) return ' city-tyossa';
+      if (!kaupungillaLehti(c.id)) return ' city-kesken';
+      const intro = ARTIKKELIT[c.wiki ?? c.name]?.intro ?? '';
+      return intro.length >= REMONTIN_INTRO_RAJA ? '' : ' city-remontoimaton';
     };
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
@@ -4291,7 +4323,7 @@ export class UI {
       const ry = base + vary(`city:ry:${c.id}`, 0.7);
       if (c.start) {
         el('ellipse', {
-          cx: c.x, cy: c.y, rx, ry, transform: wobble, class: `city-start${valmiusLuokka(c.id)}`,
+          cx: c.x, cy: c.y, rx, ry, transform: wobble, class: `city-start${valmiusLuokka(c)}`,
         }, cities);
         el('ellipse', {
           cx: c.x, cy: c.y, rx: rx * 0.6, ry: ry * 0.6, transform: wobble, class: 'coast-soft',
@@ -4304,7 +4336,7 @@ export class UI {
           ry,
           transform: wobble,
           'stroke-width': (2.2 + hash01(`city:sw:${c.id}`) * 0.7).toFixed(2),
-          class: `city${valmiusLuokka(c.id)}`,
+          class: `city${valmiusLuokka(c)}`,
         }, cities);
       }
       // Porttikaupungista lähtee pitkä lento toiselle laudalle: kaksoiskehä

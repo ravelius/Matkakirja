@@ -5070,6 +5070,23 @@ body.flight-active .fact-card {
 .city-start.city-tyossa { fill: #f2cf46; stroke: #8a6a12; }
 .city.city-kesken,
 .city-start.city-kesken { fill: #c9c4bb; stroke: #78736b; }
+
+/*
+ * Tekstiremontin tila lehdellisissä kaupungeissa — myös vain
+ * kehittäjätilassa (omistajan tilaus 20.8.2026: "korjatut ja
+ * korjaamattomat kaupungit voisi erottaa toisistaan kartalla
+ * kehittäjätilassa"). Remontoitu lehti ei saa luokkaa lainkaan eli
+ * pitää laudan oman pergamentinvaalean; remontoimaton saa tämän.
+ *
+ * Oranssinruskea on valittu erottumaan kolmesta jo kartalla olevasta
+ * sävystä yhtä aikaa: se on selvästi tummempi ja punaisempi kuin työn
+ * alla olevan keltainen (#f2cf46) ja lähtökaupungin hunaja (#eec66b),
+ * kylläinen siinä missä koskemattoman harmaa (#c9c4bb) on kuollut, ja
+ * pergamentin päällä (#f3e5c4) se lukee pisteenä eikä läiskänä.
+ * Kynnys 600 merkkiä on js/ui.js:n REMONTIN_INTRO_RAJA.
+ */
+.city.city-remontoimaton,
+.city-start.city-remontoimaton { fill: #c9773a; stroke: #7a4116; }
 .airport { font-size: 14px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */

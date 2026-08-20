@@ -2607,22 +2607,22 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 35.73035, etela: 35.69915, lansi: 139.75355, ita: 139.81195,
     },
     varikartta: 'assets/kartat/tokio-varikartta.png',
-    esittely: 'Kartalla on kaksi erilaista Tokiota. Vasemmassa '
-      + 'laidassa on laaja puisto, jonka eteläkärjessä on '
-      + 'munanmuotoinen lampi, ja sen kupeessa kulkee etelästä '
-      + 'pohjoiseen leveä ratapiha katkoviivoineen. Oikea puoli on '
-      + 'aivan toisenlainen: pikkukatujen ruudukkoa niin tiheässä, '
-      + 'että korttelit ovat vain kymmenien metrien kokoisia.\n\n'
-      + 'Se tiheä puoli on shitamachi, alakaupunki, ja se on Tokion '
-      + 'vanhinta kaupunkia. Oikeassa alakulmassa mutkittelee '
-      + 'Sumida-joki, ja sen ja ruudukon välissä erottuu pieni '
-      + 'suorakaiteen muotoinen alue: Sensō-jin temppelipiiri. '
-      + 'Kohteet jakautuvat kahteen ryhmään aivan kuin kaupunkikin — '
-      + 'idässä Kaminarimon, Sensō-ji ja niiden takana huvipuisto '
-      + 'Hanayashiki, ja lännessä Uenon kukkulalla puisto, '
-      + 'kansallismuseo, Kan\'ei-ji, Tōshō-gū, Shitamachi-museo ja '
-      + 'Iwasakien talo. Väliin jää asema, jonne pohjoisen junat '
-      + 'tulevat.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Tokion shitamachi eli alakaupunki, '
+      + 'kaupungin vanhinta osaa Sumida-joen tuntumassa. Kohteet ovat '
+      + 'kahdessa ryhmässä. Idässä Asakusassa ovat Kaminarimonin portti, '
+      + 'kaupungin vanhin temppeli Sensō-ji ja niiden takana Hanayashiki, '
+      + 'joka avattiin 1853 kukkatarhana ja on Japanin vanhin huvipuisto. '
+      + 'Lännessä Uenon kukkulalla ovat puisto vuodelta 1873, Tokion '
+      + 'kansallismuseo, Kan\'ei-jin temppeli, Ueno Tōshō-gūn pyhäkkö, '
+      + 'Shitamachi-museo ja Iwasakien talo. Väliin jää Uenon asema, '
+      + 'jonne pohjoisen junat tulevat. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * KYMMENEN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
@@ -2671,31 +2671,24 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 37.59345, etela: 37.55905, lansi: 126.9608, ita: 127.0072,
     },
     varikartta: 'assets/kartat/soul-varikartta.png',
-    esittely: 'Soul on kymmenen miljoonan asukkaan kaupunki, mutta '
-      + 'tämä kartta näyttää siitä vain kaksi ja puoli kilometriä: sen '
-      + 'nurkan, josta kaikki alkoi. Joseon-dynastia siirsi '
-      + 'pääkaupunkinsa tänne vuonna 1394 ja rakensi kolme asiaa '
-      + 'ensimmäisenä — palatsin, esi-isien pyhäkön ja kellotornin. Ne '
-      + 'kaikki ovat yhä kartalla, ja niiden väliin mahtuu kävellen '
-      + 'puoli tuntia.\n\nKartan ilme syntyy kolmesta suuresta '
-      + 'aitauksesta, jotka rikkovat muuten tiheän ruudukon. '
-      + 'Vasemmalla ylhäällä on Gyeongbokgungin palatsi paksun '
-      + 'muurin sisällä; sen alueella erottuu kaksi vesiallasta, iso '
-      + 'suorakaide ja pieni pyöreä lampi. Oikeassa yläkulmassa on '
-      + 'toinen ja vielä laajempi aitaus, Changdeokgung, jonka '
-      + 'takapihalla mutkittelee metsäinen puutarha omine '
-      + 'lampineen. Sen alapuolella on soikea vihreä saareke: '
-      + 'Jongmyon pyhäkkö, jonne kuninkaiden sielut kannettiin '
-      + 'kuoleman jälkeen.\n\nKuvan alalaidassa kulkee lännestä itään '
-      + 'kapea vesiviiva. Se on Cheonggyecheon, puro joka jakoi vanhan '
-      + 'kaupungin pohjoiseen ja eteläiseen puoliskoon — sen '
-      + 'pohjoispuolta sanotaan yhä Bukchoniksi eli pohjoiskyläksi. '
-      + 'Puron ja palatsien välissä on Jongno, kellokatu, ja sen '
-      + 'varrella loput kohteet: Insadongin käsityökatu, Jogyesan '
-      + 'temppeli, Tapgol-puisto ja Bosingak. Palatsin edessä seisoo '
-      + 'Gwanghwamun, jonka kautta koko akseli alkaa. Namsanin torni, '
-      + 'Han-joki ja Gangnam jäävät kaikki tämän ruudun ulkopuolelle '
-      + 'etelään.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on vanhan Soulin ydin, se kahden ja puolen '
+      + 'kilometrin nurkka, johon Joseon-dynastia rakensi pääkaupunkinsa '
+      + 'vuodesta 1394 alkaen: palatsin, esi-isien pyhäkön ja '
+      + 'kellotornin. Lännessä on Gyeongbokgung, dynastian ensimmäinen ja '
+      + 'suurin palatsi, ja sen edessä Gwanghwamunin portti; idässä ovat '
+      + 'asuinpalatsi Changdeokgung salaisine puutarhoineen ja '
+      + 'kuninkaiden pyhäkkö Jongmyo. Palatsien välissä rinteessä on '
+      + 'Bukchonin hanok-kortteli, ja etelämpänä Jongnon eli kellokadun '
+      + 'varrella Bosingakin kellopaviljonki, Jogyesan temppeli, '
+      + 'Tapgol-puisto ja Insadongin käsityökatu. Namsanin torni, '
+      + 'Han-joki ja Gangnam jäävät kartan ulkopuolelle etelään. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * YHDEKSÄN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
@@ -2745,30 +2738,26 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 31.2552, etela: 31.2168, lansi: 121.4565, ita: 121.5045,
     },
     varikartta: 'assets/kartat/shanghai-varikartta.png',
-    esittely: 'Kartan oikeaa laitaa hallitsee leveä joki, joka kaartaa '
-      + 'alhaalta ylös ja poistuu yläkulmasta. Se on Huangpu, ja sen '
-      + 'länsirannalla kulkeva kaartuva katu on Bund eli kiinaksi '
-      + 'Waitan. Vasemmalta tulee toinen, paljon kapeampi vesi, joka '
-      + 'mutkittelee kuin nauha ja yhtyy jokeen oikeassa yläkulmassa: '
-      + 'se on Suzhou-puro. Näiden kahden veden kainalo on se paikka, '
-      + 'jossa ulkomaiset kauppahuoneet aloittivat vuonna 1846 — '
-      + 'Shanghai avattiin sopimussatamaksi 1843, ja isoisän matkan '
-      + 'aikaan Bund oli jo täynnä kauppahuoneiden '
-      + 'konttoreita.\n\nKuvan alaosassa erottuu jotain, mitä muualla '
-      + 'kartalla ei ole: soikea katukehä, jonka sisällä kadut ovat '
-      + 'aivan eri kokoisia kuin ulkopuolella. Kehä on vanhan '
-      + 'kaupunginmuurin paikka. Muuri rakennettiin 1553 japanilaisia '
-      + 'merirosvoja vastaan ja purettiin 1912; sen tilalle tuli katu, '
-      + 'ja kehän sisään jäi kiinalainen vanhakaupunki kujineen. Juuri '
-      + 'siellä on Yu-puutarha. Kehän ulkopuolinen ruutukaava on '
-      + 'sopimussataman aikaista uutta kaupunkia.\n\nVasemmalla '
-      + 'puolella on iso vihreä alue, Kansanpuisto ja Kansanaukio. Se '
-      + 'oli 1860-luvulta lähtien laukkaradan sisäkenttä, ja radan '
-      + 'soikea muoto näkyy yhä katujen kulmissa. Sieltä itään lähtee '
-      + 'Nanjing-katu, kaupungin kauppakatu, joka johtaa suoraan '
-      + 'Bundille. Pudongin pilvenpiirtäjät ovat joen toisella '
-      + 'puolella heti kartan itäreunan takana — ne tulevat näkyviin, '
-      + 'kun karttaa suurentaa.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Shanghain vanha keskusta Huangpu-joen '
+      + 'länsirannalla. Rannassa kulkee Bund eli Waitan, kauppahuoneiden '
+      + 'rantakatu, jonka varrella on Rauhanhotellina tunnettu Sassoonin '
+      + 'talo ja jonka pohjoispäässä Waibaidun silta ylittää '
+      + 'Suzhou-puron; ulkomaiset kauppahuoneet aloittivat täällä 1846, '
+      + 'kolme vuotta sen jälkeen kun kaupunki avattiin sopimussatamaksi. '
+      + 'Etelässä on kiinalainen vanhakaupunki vuonna 1553 rakennetun ja '
+      + '1912 puretun kaupunginmuurin kehän sisällä: Yu-puutarha, '
+      + 'Kaupunginjumalan temppeli, Fuyoun moskeija ja Dajingin '
+      + 'pavilonki, muurin viimeinen pala. Lännessä ovat Shanghain museo '
+      + 'Kansanaukion laidalla ja Nanjing-katu, joka vie sieltä suoraan '
+      + 'Bundille. Pudongin pilvenpiirtäjät jäävät joen toiselle puolelle '
+      + 'kartan itäreunan taakse. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * YHDEKSÄN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
@@ -2856,21 +2845,19 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 35.69815, etela: 35.66535, lansi: 51.404, ita: 51.444,
     },
     varikartta: 'assets/kartat/teheran-varikartta.png',
-    esittely: 'Teheranin vanha ydin on kartalla ruutu, jonka halki '
-      + 'kulkee kaksi pitkää suoraa väylää pohjoisesta etelään. '
-      + 'Vasemmassa laidassa on laaja puisto, jonka sisäiset polut '
-      + 'kiertävät soikioina, ja sen alapuolella korttelit ovat suuria '
-      + 'ja harvakatuisia.\n\n'
-      + 'Idässä ja etelässä kuva muuttuu toisenlaiseksi: siellä on '
-      + 'tiheä kujaverkko, jossa viivat ovat ohuita ja lyhyitä. '
-      + 'Eteläreunan tiheä tilkku on basaari — se ei ole yksi halli '
-      + 'vaan katettujen kujien kortteli, ja juuri siksi sen kujat '
-      + 'näkyvät kartalla jalankulkureitteinä eivätkä katuina. '
-      + 'Kohteet nousevat etelästä pohjoiseen: basaari alimpana, sen '
-      + 'yläpuolella Golestanin palatsi ja Dar al-Fonun, niiden '
-      + 'pohjoispuolella Toopkhanen aukio keskellä kuvaa, ja ylimpänä '
-      + 'kansallismuseo ja Bagh-e Mellin portti lännessä sekä '
-      + 'Masoudiehin talo ja Sepahsalarin moskeija idässä.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Teheranin vanha ydin, kaupungin eteläosa, johon '
+      + 'qajar-ajan Teheran mahtui muurien sisään. Eteläreunassa on basaari, '
+      + 'joka ei ole yksi halli vaan katettujen kujien kortteli — siksi sen '
+      + 'kujat merkitään kartalle jalankulkureitteinä eivätkä katuina. '
+      + 'Kohteet nousevat etelästä pohjoiseen: basaarin yläpuolella ovat '
+      + 'Golestanin palatsi ja Dar al-Fonun, niiden pohjoispuolella '
+      + 'Toopkhanen aukio, ja ylimpänä kansallismuseo, Bagh-e Mellin portti, '
+      + 'Masoudiehin talo ja Sepahsalarin moskeija.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
@@ -3040,17 +3027,22 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 39.948, etela: 39.936, lansi: 32.851, ita: 32.868,
     },
-    esittely: 'Ankara on Turkin pääkaupunki vuodesta 1923, mutta tämä '
-      + 'kartta ei ole siitä kaupungista. Ulus on se Ankara, joka oli '
-      + 'olemassa jo silloin: linnavuori, jonka muurit näkyvät kuvan '
-      + 'oikeassa laidassa, ja sen juurella kortteleita, joissa on '
-      + 'roomalaisia, bysanttilaisia ja ottomaanisia kerroksia '
-      + 'päällekkäin.\n\n'
-      + 'Kaupunki oli pitkään pieni maakuntakeskus, ja juuri siksi '
-      + 'antiikin kerros säilyi — sitä ei rakennettu pois. Kartan '
-      + 'pohjoisreunassa on roomalaisen kylpylän pohjakaava, keskellä '
-      + 'Augustuksen temppeli ja idässä linnavuori, ja niiden välit '
-      + 'kävelee alle puolessa tunnissa.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja miksi
+     * ne kiinnostavat; kartan laitojen ja ilmansuuntien kuvailu on
+     * poistettu, ja kaupungin oma historia asuu nyt etusivun
+     * leipätekstissä (js/packs/asia-artikkelit.js).
+     */
+    esittely: 'Kartan alue on Ulus, se osa Ankaraa joka oli olemassa jo '
+      + 'ennen pääkaupungiksi tuloa. Linnavuoren muurien juurella '
+      + 'roomalainen, bysanttilainen ja ottomaaninen kerros ovat '
+      + 'päällekkäin: Augustuksen temppeli keisarin omine teksteineen, '
+      + 'roomalaisen kylpylän lämmityspilaristo, Julianuksen pylväs, '
+      + 'Anatolian sivilisaatioiden museo vanhassa bedestenissä ja linnan '
+      + 'pääportin vieressä kellotorni. Kaupunki oli pitkään pieni '
+      + 'maakuntakeskus, ja juuri siksi antiikin kerros säilyi — sitä ei '
+      + 'rakennettu pois. Kohteiden välit kävelee alle puolessa tunnissa.',
     kohteet: [
       { nimi: 'Ankaran linna', lat: 39.9415, lon: 32.8654 },
       { nimi: 'Augustuksen temppeli', lat: 39.9442, lon: 32.8583 },
@@ -3066,15 +3058,17 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 38.426, etela: 38.413, lansi: 27.124, ita: 27.142,
     },
-    esittely: 'İzmir on rakennettu lahden pohjukkaan, ja sen vanha '
-      + 'keskusta on puolikuun muotoinen. Muoto ei ole sattumaa: '
-      + 'kartan keskellä kaartuvat kadut seuraavat antiikin sataman '
-      + 'rantaviivaa, joka on sittemmin täytetty maaksi. Basaari '
-      + 'kasvoi umpeenkasvaneen sataman päälle.\n\n'
-      + 'Kemeraltin kujat, Konakin aukio ja roomalainen agora ovat '
-      + 'kaikki saman kilometrin sisällä, ja niiden välissä kaupunki '
-      + 'on yhtenäistä vanhaa rakennuskantaa: moskeijoita, '
-      + 'karavaaniseraajeja ja katettuja käytäviä.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8, sama linja kuin Ankarassa yllä:
+     * esittely kertoo kohteet, ei kartan viivastoja.
+     */
+    esittely: 'Kartan alue on İzmirin vanha keskusta lahden pohjukassa. '
+      + 'Kemeraltın basaari kasvoi antiikin sataman päälle sen jälkeen, kun '
+      + 'poukama kasvoi umpeen, ja samoilla kujilla ovat Hisarin moskeija, '
+      + 'Sulu Han ja Salepçioğlun moskeija. Idässä on Smyrnan roomalainen '
+      + 'agora, jonka holvit kannattivat torin lattiaa, ja lännessä Konakin '
+      + 'aukio kellotorneineen. Kaikki mahtuvat saman kilometrin sisään. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       { nimi: 'İzmirin kellotorni', lat: 38.4189, lon: 27.1287 },
       { nimi: 'Kemeraltin basaari', lat: 38.4187, lon: 27.1329 },
@@ -3098,16 +3092,19 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 33.3528, etela: 33.3272, lansi: 44.3688, ita: 44.4072,
     },
     varikartta: 'assets/kartat/bagdad-varikartta.png',
-    esittely: 'Bagdad perustettiin vuonna 762 Tigrisin länsirannalle '
-      + 'täydellisen pyöreäksi kaupungiksi. Siitä ei ole jäljellä '
-      + 'mitään: pyöreä kaupunki on maan alla nykykaupunginosien '
-      + 'kohdalla, eikä sen muuria ole löydetty. Kaupungin vanha '
-      + 'säilynyt puoli on toisella rannalla.\n\n'
-      + 'Tämä kartta on Rusafa, Tigrisin itäranta. Kaikki kuvan '
-      + 'kohteet ovat kävelymatkan päässä toisistaan, ja ne ovat eri '
-      + 'aikakausilta: abbasidien 1200-luku, al-Wazirin moskeija 1599, '
-      + 'Mirjanin karavaaniseraaji 1359, Haydarkhanan moskeija '
-      + '1820-luvulta, ottomaanien kasarmiaukio ja 1900-luvun '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Bagdad perustettiin vuonna 762 Tigrisin länsirannalle täydellisen '
+      + 'pyöreäksi kaupungiksi. Siitä ei ole jäljellä mitään: pyöreä kaupunki '
+      + 'on maan alla nykykaupunginosien kohdalla, eikä sen muuria ole '
+      + 'löydetty. Kartta on siksi Rusafa, Tigrisin itäranta, jolle vanha '
+      + 'säilynyt Bagdad jäi. Kaikki kohteet ovat kävelymatkan päässä '
+      + 'toisistaan ja eri aikakausilta: abbasidien 1200-luku, Mirjanin '
+      + 'karavaaniseraaji 1359, al-Wazirin moskeija 1599, Haydarkhanan '
+      + 'moskeija 1820-luvulta, ottomaanien kasarmiaukio ja 1900-luvun '
       + 'kirjakatu.',
     kohteet: [
       /*
@@ -3231,25 +3228,23 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378,
     },
-    esittely: 'Nikosia on tasangon keskellä, ei rannikolla, ja se on '
-      + 'ainoa Kyproksen suurista kaupungeista jota ei perustettu '
-      + 'sataman viereen. Kaupunki kasvoi joen mutkaan, ja sen muoto '
-      + 'päätettiin kerralla vuonna 1567: venetsialaiset purkivat '
-      + 'keskiaikaisen kaupungin laidat ja rakensivat tilalle '
-      + 'ympyränmuotoisen muurin, jossa on yksitoista nuolenkärjen '
-      + 'muotoista bastionia. Kehä on kartan selvin muoto, ja se on '
-      + 'yhä kaupungin sisärengas: muurin sisäpuoli on vanhakaupunki, '
-      + 'ulkopuoli nykyistä Nikosiaa.'
-      + '\n\n'
-      + 'Kartalla tähtimuoto erottuu heti keskeltä. Sen sisällä kadut '
-      + 'ovat kapeita ja mutkittelevia, ulkopuolella suoria ja leveitä '
-      + '— ero näkyy viivojen tiheydestä. Muurin ympärillä kiertää '
-      + 'vaaleampi kaistale: se on entinen vallihauta, jossa kasvaa '
-      + 'nykyään puita ja jonka pohjalla on puistoja ja '
-      + 'urheilukenttiä. Vanhankaupungin kohteet ovat kävelymatkan '
-      + 'päässä toisistaan; kartan itäreunassa kulkeva leveä väylä on '
-      + 'jo muurien ulkopuolella. Kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8, sama linja kuin Ankarassa ja
+     * İzmirissä: esittely kertoo kohteet, ei kartan viivastoja. Jaettu
+     * kaupunki mainitaan tosiasiana ilman kannanottoja.
+     */
+    esittely: 'Kartan alue on Nikosian vanhakaupunki venetsialaisten '
+      + 'muurikehän sisällä. Muuri rakennettiin vuosina 1567–1570, ja sen '
+      + 'yksitoista bastionia on nimetty rakennustyön maksaneiden '
+      + 'italialaissukujen mukaan; entinen vallihauta on nyt puistoja ja '
+      + 'urheilukenttiä. Kehän sisällä ovat Selimiyen moskeija, joka '
+      + 'rakennettiin goottilaiseksi katedraaliksi ja vihittiin moskeijaksi '
+      + 'vuonna 1570, karavaanimajatalo Büyük Han, Faneromenin kirkko ja '
+      + 'Omeryen hamam; Kyproksen museo ja Leventis-museo ovat aivan muurin '
+      + 'tuntumassa. Kaupunki on jaettu, ja puskurivyöhyke kulkee '
+      + 'vanhankaupungin poikki — kohteita on sen molemmin puolin, ja '
+      + 'puolelta toiselle pääsee jalan tarkastuspisteistä. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       { nimi: 'Selimiyen moskeija', lat: 35.1765, lon: 33.3645 },
       { nimi: 'Büyük Han', lat: 35.1763, lon: 33.3625 },
@@ -3315,25 +3310,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/istanbul-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 41.0335, etela: 40.9975, lansi: 28.958, ita: 29.024 },
-    esittely: 'Istanbul seisoo kahden meren välisessä kapeikossa. '
-      + 'Bosporinsalmi yhdistää Mustanmeren ja Marmaranmeren ja '
-      + 'erottaa samalla Euroopan Aasiasta, joten kaupunki on kahdessa '
-      + 'maanosassa yhtä aikaa. Kreikkalaiset merenkulkijat perustivat '
-      + 'tänne Byzantionin noin 2 700 vuotta sitten, ja paikka '
-      + 'valittiin veden takia: salmen länsipuolelle työntyy niemi, '
-      + 'jolla on vettä kolmella sivulla, ja niemen pohjoispuolella on '
-      + 'syvä, tyyni lahti. Lahti on Kultainen sarvi, luonnonsatama, '
-      + 'jonne laivat pääsevät myrskyltä suojaan. Vanhakaupunki '
-      + 'rakennettiin juuri sille niemelle.\n\nKartalla niemi on '
-      + 'vasemmalla alhaalla. Sen pohjoispuolella kaartaa Kultainen '
-      + 'sarvi, jonka yli vie Galatan silta, pituudeltaan noin puoli '
-      + 'kilometriä. Lahden takana kohoaa mäki ja sen laella Galatan '
-      + 'torni. Oikealla levittäytyy Bosporinsalmi: kartan kohdalla se '
-      + 'on noin kaksi kilometriä leveä, ja sen takana alkaa Aasian '
-      + 'puoli, jonne pääsee lautalla Üsküdariin. Vedessä näkyy pieni '
-      + 'valkoinen täplä, luodolle rakennettu Neitsyttorni. Salmen ali '
-      + 'kulkee vuodesta 2013 myös junatunneli. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Istanbul seisoo kahden meren välisessä kapeikossa: Bosporinsalmi '
+      + 'yhdistää Mustanmeren ja Marmaranmeren ja erottaa samalla Euroopan '
+      + 'Aasiasta. Kreikkalaiset merenkulkijat perustivat tänne Byzantionin '
+      + 'noin 2 700 vuotta sitten, ja paikka valittiin veden takia — salmen '
+      + 'länsipuolelle työntyy niemi, jolla on vettä kolmella sivulla, ja sen '
+      + 'pohjoispuolella on Kultainen sarvi, luonnonsatama, jonne laivat '
+      + 'pääsevät myrskyltä suojaan. Vanhakaupunki rakennettiin juuri sille '
+      + 'niemelle, ja kartan kohteet jakautuvat sen ja salmen molempien '
+      + 'rantojen kesken: Galatan silta ja torni lahden pohjoispuolella, '
+      + 'Üsküdar Aasian puolella ja Neitsyttorni omalla luodollaan. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Suuresta basaarista ei ole suomenkielistä artikkelia; se jää
@@ -4041,15 +4033,19 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kairo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 30.068, etela: 30.018, lansi: 31.198, ita: 31.278 },
-    esittely: 'Kairo on Afrikan suurin kaupunki ja kasvoi kahdesta '
-      + 'suunnasta: etelässä oli arabien perustama Fustat, pohjoisessa '
-      + 'fatimidien 900-luvulla rakentama linnoituskaupunki al-Qahira, '
-      + 'jonka nimestä tuli Kairo. Vasta 1800-luvulla väliin '
-      + 'rakennettiin leveäkatuinen keskusta Pariisin malliin.\n\n'
-      + 'Niili jakaa kaupungin, ja sen keskellä on Geziran saari. '
-      + 'Idässä kadut kapenevat kujiksi — se osa on Unescon '
-      + 'maailmanperintökohde, jossa on yli 600 suojeltua rakennusta. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Kairo on Afrikan suurin kaupunki ja kasvoi kahdesta suunnasta: '
+      + 'etelässä oli arabien perustama Fustat, pohjoisessa fatimidien '
+      + '900-luvulla rakentama linnoituskaupunki al-Qahira, jonka nimestä '
+      + 'tuli Kairo. Väliin rakennettiin leveäkatuinen keskusta vasta '
+      + '1800-luvulla. Niili jakaa kaupungin, ja sen keskellä on Geziran '
+      + 'saari. Kartan itälaidassa on vanhakaupunki, Unescon '
+      + 'maailmanperintökohde, jossa on yli 600 suojeltua rakennusta. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään, jotta numerot etenevät kartalla luontevasti.
@@ -5433,37 +5429,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/dubai-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 25.276, etela: 25.256, lansi: 55.284, ita: 55.312 },
-    esittely: 'Dubai kasvoi lahdelman ympärille. Khor Dubai ei ole '
-      + 'joki vaan kapea suolaisen veden lahti, joka työntyy '
-      + 'Persianlahdesta noin neljätoista kilometriä sisämaahan. Se '
-      + 'on luonnonsatama: avomereltä pääsee tyyneen veteen, jossa ei '
-      + 'ole aallokkoa, ja lasti voidaan purkaa suoraan rannalle. '
-      + 'Lahden etelärannalle syntyi Bur Dubai ja pohjoisrannalle '
-      + 'Deira, eikä niiden välillä ollut pitkään aikaan yhtään '
-      + 'siltaa — toiselle puolelle mentiin veneellä. 1870-luvulla '
-      + 'Dubai oli muutaman tuhannen asukkaan kylä, joka eli kahdesta '
-      + 'asiasta: kaupasta ja helmistä. Kesäisin miehet purjehtivat '
-      + 'matalikoille ja sukelsivat simpukoiden perään ilman mitään '
-      + 'happilaitteita, pelkkä nenäpuristin nenässä ja kivi jalassa. '
-      + 'Helmenpyynti oli kaupungin tärkein elinkeino 1930-luvulle '
-      + 'asti. Vanhin yhä pystyssä oleva rakennus on Al Fahidin '
-      + 'linnoitus vuodelta 1787.\n\nKartalla on vain vanha kaupunki, '
-      + 'noin kolmen kilometrin levyinen pala. Lahti kaartaa kuvan '
-      + 'halki isona koukkuna: se tulee sisään ylhäältä, kiertää '
-      + 'vasemmalla niemen ympäri ja jatkaa oikealle. Niemi on Al '
-      + 'Shindagha, ja sen takana kartan ulkopuolella aukeaa avomeri. '
-      + 'Kapeimmillaan lahti on tässä kohdassa vain parisataa metriä '
-      + 'leveä, ja juuri siitä pikkuveneet eli abrat kulkevat '
-      + 'rannalta toiselle. Lahden eteläreuna on piirtynyt '
-      + 'sahalaitaiseksi: ranta ei ole siellä suora vaan porrastettu '
-      + 'pieniksi ulokkeiksi, joiden väliin veneet mahtuvat. '
-      + 'Etelässä on Bur Dubai, '
-      + 'pohjoisessa Deira, ja molemmilla puolilla katuverkko '
-      + 'muuttuu rannan lähellä tiheäksi kujien seitiksi — siellä '
-      + 'ovat suukit eli kauppakujat. Dubain kuuluisat pilvenpiirtäjät '
-      + 'eivät näy kartalla lainkaan: Burj Khalifa on kahdeksan '
-      + 'kilometriä lounaassa, kaukana tämän kuvan ulkopuolella. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8: esittely kertoo kohteet, ei
+     * kartan viivastoja; helmenpyynti jää mukaan, koska yllä oleva
+     * kohteiden lähdeperustelu nojaa siihen.
+     */
+    esittely: 'Kartan alue on vanha Dubai lahden molemmin puolin. '
+      + 'Etelärannalla on Bur Dubai: Al Fahidin linnoitus vuodelta 1787, '
+      + 'Bastakian tuulitornikorttelit, tekstiilisuuk ja Suuri moskeija, ja '
+      + 'lahden suulla Al Shindaghan niemi, jonne Al Maktoumin suku asettui '
+      + 'vuonna 1833. Pohjoisrannalla on Deira, jossa ovat kultasuuk, '
+      + 'maustesuuk, Al Ahmadiyan koulu ja dhow-satama. Ennen öljyä kaupunki '
+      + 'eli kaupasta ja helmenpyynnistä, ja helmiretkikunnat lähtivät juuri '
+      + 'tästä vedestä. Rantojen väliä kulkee abra, sillä lahti on tässä '
+      + 'kohdassa vain parisataa metriä leveä. Burj Khalifa ja muut '
+      + 'pilvenpiirtäjät jäävät kartan ulkopuolelle kahdeksan kilometrin '
+      + 'päähän lounaaseen. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, kuten Odessassa.
@@ -5622,40 +5604,21 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/petra-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 30.341, etela: 30.3175, lansi: 35.427, ita: 35.4665 },
-    esittely: 'Petra ei ole rakennettu vaan veistetty. Nabatealaiset, '
-      + 'arabialainen kansa, asettuivat näille vuorille 300-luvulla '
-      + 'eKr., ja kaupungista tuli heidän kuningaskuntansa pääkaupunki '
-      + '100-luvulla eKr. Nimi oli heidän omalla kielellään Raqmu. '
-      + 'Rikkaus tuli kaupasta: suitsuke ja mausteet kulkivat '
-      + 'eteläisestä Arabiasta Välimerelle, ja reitti kulki tästä '
-      + 'laaksosta. Kukoistuskaudellaan 100-luvulla jKr. kaupungissa '
-      + 'arvioidaan asuneen noin kaksikymmentätuhatta ihmistä keskellä '
-      + 'puoliaavikkoa, jossa sataa runsaat sata millimetriä vuodessa. '
-      + 'Se onnistui, koska vesi otettiin talteen: padot, kallioon '
-      + 'louhitut vesikourut ja naamioidut sadevesisäiliöt keräsivät '
-      + 'jokaisen kuuron. Rooma liitti kuningaskunnan valtakuntaansa '
-      + 'vuonna 106 jKr., ja vuoden 363 maanjäristys rikkoi sekä '
-      + 'rakennuksia että vesijärjestelmän. Kauppa siirtyi merille, ja '
-      + 'kaupunki hiljeni. Länsimaat unohtivat sen sijainnin kokonaan, '
-      + 'kunnes sveitsiläinen Johann Ludwig Burckhardt tuli vuonna 1812 '
-      + 'paikalliseksi pukeutuneena katsomaan, mitä beduiinit '
-      + 'tarkoittivat puhuessaan raunioista vuorten takana. Unescon '
-      + 'maailmanperintöluetteloon Petra hyväksyttiin 6. joulukuuta '
-      + '1985.\n\nKartalla on muinaiskaupunki kokonaan, runsaan neljän '
-      + 'kilometrin levyinen pala vuoristoa. Katuja ei ole: kaikki '
-      + 'kartan viivat ovat polkuja, ja ne ovat tämän kaupungin kadut. '
-      + 'Oikeasta laidasta tulee sisään Siq, kapea rotko, jota pitkin '
-      + 'jokainen saapuu — se mutkittelee kohti keskustaa ja päättyy '
-      + 'Al-Khaznehin eteen. Sieltä polku kääntyy luoteeseen ja '
-      + 'levenee laaksoksi, jonka pohjalla erottuvat suorakaiteina '
-      + 'Suuren temppelin ja Qasr al-Bintin kaivausalueet. Laakson '
-      + 'pohjoisreunaa seuraa kuninkaanhautojen rivi ja eteläreunaa '
-      + 'teatteri, joka on kokonaan louhittu kallioon. Vasemmassa '
-      + 'ylälaidassa, kilometrin päässä ylämäkeä, on Ad Deir; sinne '
-      + 'noustaan portaita, jotka näkyvät kartalla mutkittelevana '
-      + 'polkuna. Alalaidan haarova viivasto on kuivien uomien verkko '
-      + '— vettä niissä on vain sadekuuron jälkeen, ja silloin paljon. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8: esittely kertoo kohteet, ei
+     * kartan polkuverkkoa; nabatealaisten historia asuu nyt etusivun
+     * leipätekstissä (js/packs/asia-artikkelit.js).
+     */
+    esittely: 'Kartan alue on koko muinaiskaupunki. Idästä tulee sisään Siq, '
+      + 'kapea rotko, jota pitkin jokainen saapuu; se päättyy Al-Khaznehin '
+      + 'eli Aarrekammion eteen. Laakson pohjalla ovat Suuren temppelin ja '
+      + 'Qasr al-Bintin kaivausalueet, pohjoisreunalla kuninkaanhautojen '
+      + 'rivi ja eteläreunalla teatteri, joka on kokonaan louhittu kallioon. '
+      + 'Bysanttilainen kirkko, josta löytyivät Petran hiiltyneet '
+      + 'papyrukset, on laakson pohjoislaidalla. Ylös noustaan kahteen '
+      + 'suuntaan: luoteeseen Ad Deirille ja etelään uhripaikalle, ja '
+      + 'kumpikin nousu vie tunnin. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Dubaissa ja Odessassa. */
       { nimi: 'Ad Deir', lat: 30.3382, lon: 35.431 },
@@ -6148,33 +6111,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/bangkok-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 13.7625, etela: 13.7315, lansi: 100.4805, ita: 100.5245 },
-    esittely: 'Bangkok on nuori pääkaupunki vanhalla paikalla. Kylä '
-      + 'nimeltä Bangkok oli Chao Phrayan varrella jo Ayutthayan '
-      + 'kaudella, ja kun Ayutthaya tuhoutui 1767, kuningas Taksin '
-      + 'perusti uuden pääkaupungin Thonburiin joen länsirannalle. '
-      + 'Rama I siirsi sen 1782 itärannalle ja kaivatti kanavat, jotka '
-      + 'tekivät Rattanakosinista keinotekoisen saaren; tiilet uusiin '
-      + 'muureihin haettiin proomuilla Ayutthayan raunioista. Kaupunki '
-      + 'eli veden varassa: kanavat eli khlongit olivat sen katuja, ja '
-      + 'ulkomaalaiset kutsuivat sitä idän Venetsiaksi. Ensimmäinen '
-      + 'länsimaiseen tapaan rakennettu katu Charoen Krung valmistui '
-      + 'vasta 1864, ja Rama V:n kaudella katuverkko kasvoi kanavien '
-      + 'rinnalle — silloin syntyi myös kiinalaiskorttelin pääkatu '
-      + 'Yaowarat.\n\n'
-      + 'Kartalla joki on pääosassa: Chao Phraya tulee kuvaan '
-      + 'vasemmasta ylänurkasta, kaartaa suuren S-mutkan kuvan '
-      + 'vasemmassa puoliskossa ja poistuu alalaidasta. Mutkan sisään '
-      + 'jää Rattanakosinin saari, jonka erottaa mantereesta '
-      + 'kanavarengas — vanha vallihauta piirtyy kapeana vesiuomana '
-      + 'katujen lomassa. Saaren kärjessä ovat '
-      + 'Sanam Luangin avoin kenttä sekä Suurpalatsin ja Wat Phra '
-      + 'Kaew\'n suuri kortteli, ja heti niiden alapuolella Wat Pho. '
-      + 'Joen toisella puolella lounaassa on Wat Arun ja sen ympärillä '
-      + 'Thonburin kanavien verkko. Itään mentäessä katuverkko '
-      + 'tihenee: keskellä ovat Jättiläiskeinun aukio ja Kultaisen '
-      + 'vuoren kukkula, kaakossa Yaowaratin vino katu kiinalais'
-      + 'kortteleineen ja sen takana Hua Lamphongin asema '
-      + 'ratapihoineen. Kartan kohteista pääsee lukemaan lisää '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Bangkokin vanha ydin Chao Phrayan mutkassa. '
+      + 'Mutkan sisään jää Rattanakosinin keinosaari, jonka Rama I '
+      + 'kaivatti kanavarenkaan sisään vuodesta 1782 alkaen: siellä ovat '
+      + 'Sanam Luangin kenttä, Suurpalatsi ja Wat Phra Kaew sekä niiden '
+      + 'eteläpuolella Wat Pho. Joen toisella puolella Thonburin kanavien '
+      + 'keskellä kohoaa Wat Arun. Idempänä ovat Jättiläiskeinu Sao Ching '
+      + 'Cha ja Wat Saketin Kultainen vuori sekä kaakossa '
+      + 'kiinalaiskorttelin pääkatu Yaowarat ja Hua Lamphongin '
+      + 'rautatieasema. Kaupunki eli pitkään kanaviensa varassa, ja '
+      + 'ensimmäinen länsimaiseen tapaan rakennettu katu Charoen Krung '
+      + 'valmistui vasta 1864. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
@@ -6226,29 +6179,25 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 40.014, etela: 39.99, lansi: 116.256, ita: 116.303 },
         x: 14, y: 2, leveys: 20, korkeus: 10.96, suunta: '14 km luoteeseen' },
     ],
-    esittely: 'Peking on Pohjois-Kiinan tasangon pohjoisreunalla, ja '
-      + 'sitä on rakennettu saman akselin varaan dynastiasta toiseen: '
-      + 'kaupunki oli ensin Ji ja Yanjing, sitten Jurchenien Zhongdu '
-      + 'ja Kublai-kaanin Dadu, kunnes Ming-dynastian Yongle-keisari '
-      + 'antoi sille 1403 nimen Beijing, pohjoinen pääkaupunki, ja '
-      + 'rakennutti Kielletyn kaupungin ja Taivaan temppelin. Muurien '
-      + 'kaupunki se oli 1960-luvulle asti: Ming-kauden kaupunginmuuri '
-      + 'purettiin 1965, ja metro rakennettiin sen perustusten päälle. '
-      + 'Toinen kehätie seuraa yhä muurin ääriviivaa.\n\nKartan '
-      + 'keskellä on Kielletty kaupunki: suorakaide, jota kiertää '
-      + 'vallihauta ja jonka eteläpuolelta alkaa Tiananmenin aukio. '
-      + 'Palatsin takana pohjoisessa on Jingshanin puistokukkula ja '
-      + 'länsikyljessä kiemurtelee entisten keisarillisten puistojen '
-      + 'järviketju. Pohjoista kohti katuverkko tihenee kapeiden '
-      + 'hutong-kujien sokkeloksi, jonka keskeltä nousevat Rumpu- ja '
-      + 'kellotorni ja jonka läpi kulkee Nanluoguxiangin kuja; '
-      + 'koillisnurkassa on Yonghe-temppelin kortteli. Etelässä '
-      + 'akselilla seisoo Zhengyangmenin portti, ja kaakossa '
-      + 'levittäytyy Taivaan temppelin muurien ympäröimä puisto. '
-      + 'Vasemman yläkulman kainalossa ovat kesäpalatsit 14 '
-      + 'kilometrin päässä luoteessa: Kunming-järvi rantoineen ja sen '
-      + 'koillispuolella Vanhan kesäpalatsin rauniopuisto. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Pekingin vanha ydin sen '
+      + 'pohjois–etelä-akselin ympärillä. Keskellä on Kielletty kaupunki, '
+      + 'keisarien palatsi vuosina 1420–1924, ja sen eteläpuolella '
+      + 'Tiananmen. Palatsin takana on Jingshanin puistokukkula ja sen '
+      + 'länsipuolella entisten keisarillisten puistojen järviketju. '
+      + 'Pohjoisessa katuverkko tihenee hutong-kujien sokkeloksi, josta '
+      + 'nousevat Rumpu- ja kellotorni ja jonka läpi kulkee '
+      + 'Nanluoguxiangin kuja; koillisessa on Yonghe-temppeli. Etelässä '
+      + 'akselilla seisoo Zhengyangmenin portti ja kaakossa Taivaan '
+      + 'temppelin muurien ympäröimä puisto. Luoteessa 14 kilometrin '
+      + 'päässä ovat kesäpalatsit: Kunming-järvi rantoineen ja Vanhan '
+      + 'kesäpalatsin rauniopuisto. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa;
        * kaksi ensimmäistä ovat kainalokartan kohteet. */
@@ -6316,25 +6265,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/jakutsk-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 62.042, etela: 62.0178, lansi: 129.701, ita: 129.768 },
-    esittely: 'Jakutsk on Sahan tasavallan pääkaupunki ja maailman '
-      + 'suurin yhtenäisen ikiroudan päälle rakennettu kaupunki. Se '
-      + 'perustettiin 1632 hirsilinnoitukseksi ja siirrettiin '
-      + 'vuosina 1642–1643 Lenan vastarannalle Tuimaadan laaksoon, '
-      + 'jossa se on yhä. Asukkaita oli vuoden 1897 väenlaskussa '
-      + '6 535 ja vuoden 2021 laskennassa 355 443, ja heistä 59,2 '
-      + 'prosenttia on jakuutteja. Kaupunki on napapiiriltä noin '
-      + 'neljäsataaviisikymmentä kilometriä etelään.\n\n'
-      + 'Kartalla huomaa kolme asiaa. Ensimmäinen on ruutukaava, joka '
-      + 'kulkee vinosti jokeen nähden — sama vinous näkyy jo vuoden '
-      + '1900 asemakaavassa. Toinen on järvet: kaupungin keskellä on '
-      + 'useita pieniä vesialtaita, jotka eivät ole kaivettuja vaan '
-      + 'painanteita sulaneen ikiroudan päällä, ja niiden lisäksi '
-      + 'ruudukon poikki kulkee kaivettu kaupunkikanava. Kolmas on '
-      + 'yläreunan Lena, kaupungin vanhin yhteys ulospäin; siltaa '
-      + 'joen yli ei ole missään koko tasavallassa, joten kesällä '
-      + 'ylitys tehdään lautalla ja keskitalvella ajetaan jäätä '
-      + 'pitkin. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * ESITTELY LYHENNETTIIN 20.8.2026 (tekstiremontti, erä R9b):
+     * kartan visuaalinen kuvailu poistettiin ja jäljelle jäi se, mitä
+     * alueella on. Kohteet ovat kahden kilometrin nauhassa Kirovin ja
+     * Leninin katujen välissä; teatterit, museot ja kirkot ovat
+     * kaikki kävelymatkan päässä toisistaan.
+     */
+    esittely: 'Kartan alue on Jakutskin keskusta Lenan länsirannalla. '
+      + 'Kaupunki perustettiin 1632 hirsilinnoitukseksi ja siirrettiin '
+      + 'vuosina 1642–1643 Tuimaadan laaksoon, jossa se on yhä. '
+      + 'Kaikki kahdeksan kohdetta ovat runsaan kahden kilometrin '
+      + 'nauhassa Kirovin ja Leninin katujen välissä: neljästä '
+      + 'teatterista kaksi, kaupungin päämuseo ja taidemuseo, '
+      + 'Spasskin luostari ja Nikolskin kirkko sekä 1800-luvun asuun '
+      + 'rakennettu Vanhakaupunki. Yläreunassa virtaa Lena, kaupungin '
+      + 'vanhin yhteys ulospäin — siltaa joen yli ei ole koko '
+      + 'tasavallassa.',
     kohteet: [
       /* Numerointi pohjoisesta etelään. */
       { nimi: 'Saha-teatteri', lat: 62.0335, lon: 129.7417 },
@@ -6383,26 +6330,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/magadan-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.5764, etela: 59.5502, lansi: 150.755, ita: 150.822 },
-    esittely: 'Magadan on Magadanin alueen hallinnollinen keskus ja '
-      + 'Kolyman portti. Kaupunki istuu Staritskin niemimaan '
-      + 'kannaksella kahden lahden välissä, ja kartan vasen kolmannes '
-      + 'on niistä läntinen: Nagajevanlahti, 14,5 kilometriä pitkä ja '
-      + 'suultaan 6,4 kilometriä leveä, jota on kutsuttu Ohotanmeren '
-      + 'parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun '
-      + 'lopulta kesäkuun puoliväliin, ja satama pidetään auki '
-      + 'jäänmurtajilla. Kaupunki perustettiin 1929 ja sai '
-      + 'kaupunkioikeudet 14. heinäkuuta 1939.\n\n'
-      + 'Kartalla kaupunki on kapea nauha. Ruutukaava alkaa lahden '
-      + 'rannasta ja nousee kannasta ylös koilliseen, ja sen halki '
-      + 'kulkee vinosti kaksi pääväylää: Leninin valtakatu ja Karl '
-      + 'Marxin valtakatu. Oikeassa yläkulmassa mutkittelee '
-      + 'Magadanka-joki, joka laskee Ohotanmereen ja jonka pituus on '
-      + '192 kilometriä. Kartan yläreunassa, aivan ruudun sisällä, on '
-      + 'Kolyman valtatien nollakilometri — kaupungin ainoan '
-      + 'maayhteyden alkupiste, josta on 2 032 kilometriä Jakutiaan. '
-      + 'Ruudun ulkopuolelle jäävät koillisessa Gertnerinlahti ja '
-      + 'pohjoisessa Surun maski. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    /*
+     * ESITTELY LYHENNETTIIN 20.8.2026 (tekstiremontti, erä R9b):
+     * ruutukaavan ja pääväylien kuvailu poistettiin. Jäljelle jäi se,
+     * mitä alueella on — lahti, kaupungin 1930–1950-luvun julkiset
+     * talot ja Kolyman valtatien nollakilometri.
+     */
+    esittely: 'Kartan alue on Magadanin keskusta Staritskin niemimaan '
+      + 'kannaksella. Vasemmalla on Nagajevanlahti, 14,5 kilometriä '
+      + 'pitkä ja suultaan 6,4 kilometriä leveä, jota on kutsuttu '
+      + 'Ohotanmeren parhaaksi ankkuripaikaksi; jäätä siinä on '
+      + 'marraskuun lopulta kesäkuun puoliväliin, ja satama pidetään '
+      + 'auki jäänmurtajilla. Muut kohteet ovat kaupungin omaa '
+      + '1930–1950-luvun arkkitehtuuria: yleinen sauna, '
+      + 'Severovostokzoloton talo, Leninin valtakadun talorivi, '
+      + 'kinoteatteri Gornjak, urheilupalatsi ja Pushkinin kirjasto. '
+      + 'Yläreunassa on Kolyman valtatien nollakilometri, kaupungin '
+      + 'ainoan maayhteyden alkupiste.',
     kohteet: [
       /* Numerointi pohjoisesta etelään. */
       { nimi: 'Kaupungin sauna', lat: 59.5693, lon: 150.7943 },
@@ -6444,31 +6388,23 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 28.5985, etela: 28.588, lansi: 77.244, ita: 77.258 },
         x: 67.5, y: 63.75, leveys: 12.5, korkeus: 14.95, suunta: '7 km etelään' },
     ],
-    esittely: 'Delhi on rakennettu samalle Yamunan rannalle seitsemään '
-      + 'kertaan: perimätieto laskee seudulle seitsemän peräkkäistä '
-      + 'kaupunkia, joista legendaarisin on Mahabharatan Indraprastha '
-      + 'ja viimeisin keisari Shah Jahanin Shahjahanabad. Sen '
-      + 'muurikaupungin hän pystytti 1600-luvun puolivälissä: Punainen '
-      + 'linnoitus nousi joen törmälle vuosina 1638–1648, Jama Masjid '
-      + 'kaupungin korkeimmalle kohdalle ja Chandni Chowkin kauppakatu '
-      + 'niiden väliin. Vuoden 1857 kapinan jälkeen kaupunki siirtyi '
-      + 'Britannian kruunulle, ja 1911 sen eteläpuolelle alettiin '
-      + 'rakentaa New Delhiä, nykyisen Intian pääkaupunkia. '
-      + 'Muurikaupunki on silti yhä olemassa — se on Vanha Delhi, ja '
-      + 'juuri se on tällä kartalla.\n\n'
-      + 'Kartan itälaidassa erottuu Punaisen linnoituksen tumma '
-      + 'muurikehä ja sen takana Yamunan leveä uoma; linnoituksen '
-      + 'pohjoispuolella joen saarekkeella on Salimgarhin vanhempi '
-      + 'linnake. Länteen linnoituksesta lähtee Chandni Chowk suorana '
-      + 'viivana, ja sen molemmin puolin levittäytyy tiheä kujaverkko — '
-      + 'gali-kujat ovat kapeimmillaan parin metrin levyisiä, ja '
-      + 'kartalla ne piirtyvät hiusviivoina. Vasemmassa yläkulmassa '
-      + 'kaartuvat Delhi Junctionin ratapihan raiteet, ja ylälaidassa '
-      + 'kulkee katkonaisena tumma viiva: se on kaupunginmuurin '
-      + 'säilynyt pohjoiskaari. Oikean alakulman kainalossa on '
-      + 'Humayunin mausoleumi puutarhoineen seitsemän kilometrin '
-      + 'päässä etelässä. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Vanha Delhi eli Shahjahanabad, keisari Shah '
+      + 'Jahanin 1600-luvun puolivälissä perustama muurikaupunki. Idässä '
+      + 'on Punainen linnoitus, joka nousi Yamunan törmälle 1638–1648, ja '
+      + 'sen pohjoispuolella joen saarekkeella vanhempi Salimgarhin '
+      + 'linnake. Linnoituksesta länteen vie Chandni Chowk, prinsessa '
+      + 'Jahanara Begumin vuonna 1650 piirtämä kauppakatu, jonka varrella '
+      + 'ovat Gurdwara Sis Ganj Sahib, kaupungintalo ja kadun päässä '
+      + 'Fatehpuri-moskeija; eteläpuolella kohoaa Jama Masjid. Luoteessa '
+      + 'on vuonna 1903 valmistunut Delhi Junctionin asema, ja etelässä '
+      + 'seitsemän kilometrin päässä Humayunin mausoleumi puutarhoineen. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Delhi Junction', lat: 28.661, lon: 77.2277 },
@@ -6510,36 +6446,32 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/vladivostok-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.13, etela: 43.1035, lansi: 131.864, ita: 131.912 },
-    esittely: 'Vladivostok perustettiin 1860 sotilasvartioksi lahdelle, '
-      + 'jonka kenraalikuvernööri Muravjov-Amurski oli nimennyt '
-      + 'Kultaiseksi sarveksi Konstantinopolin mukaan, ja nimi lupasi '
-      + 'suoraan mihin satama tähtäsi: se tarkoittaa idän hallitsijaa. '
-      + 'Vuonna 1871 tänne siirrettiin Siperian laivasto-osaston '
-      + 'tukikohta Nikolajevsk-na-Amuresta, ja kun Transsiperian radan '
-      + 'itäpää valmistui, kaupungista tuli Venäjän tärkein '
-      + 'Tyynenmeren satama. Kiinalaiset olivat kutsuneet poukamaa '
-      + 'merimakkaralahdeksi, Haishenwaiksi, ja vuosisadan alussa jopa '
-      + 'puolet asukkaista oli aasialaisia. Neuvostoaika käänsi oven '
-      + 'kiinni: vuodesta 1952 vuoteen 1992 Vladivostok oli suljettu '
-      + 'kaupunki, johon ulkomaalaisilla ei ollut asiaa. Nykyään se on '
-      + 'Kaukoidän liittopiirin pääkaupunki ja Habarovskin jälkeen '
-      + 'alueen toiseksi suurin kaupunki, jonka katukuvassa Aasian '
-      + 'naapurit ja eurooppalainen kivikaupunki sekoittuvat.'
-      + '\n\n'
-      + 'Kartalla kaupunki on niemi kahden veden välissä: vasemmalla '
-      + 'aukeaa Amurinlahti ja oikeasta alakulmasta työntyy Kultaisen '
-      + 'sarven kapea satamalahti laitureineen. Niiden välissä on '
-      + 'ruutukaava, jonka kaksi pääkatua erottuvat heti — '
-      + 'Svetlanskaja seuraa Kultaisen sarven rantaa ja Aleutskaja '
-      + 'laskee kohtisuoraan sitä vastaan, ja rautatieasema on niiden '
-      + 'risteyksessä sataman vieressä. Lahden yli hyppää vuoden 2012 '
-      + 'vinoköysisilta, ja sen vasemmalla puolen rinne nousee '
-      + 'Kotkanpesän kukkulalle, jonka kylkeen funikulaari on '
-      + 'piirretty lyhyenä suorana viivana. Luoteessa katuverkko '
-      + 'harvenee Sportivnajan rannan ja linnoitusmuseon ympärillä. '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan rantaviivojen, ruutukaavan ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Vladivostokin niemenkärki Pokrovskin '
+      + 'puistosta Kultaisen sarven sillalle. Kaupunki perustettiin 1860 '
+      + 'sotilasvartioksi lahdelle, jonka kenraalikuvernööri '
+      + 'Muravjov-Amurski oli nimennyt Kultaiseksi sarveksi '
+      + 'Konstantinopolin mukaan, ja nimi lupasi suoraan mihin satama '
+      + 'tähtäsi: se tarkoittaa idän hallitsijaa. Vuonna 1871 tänne '
+      + 'siirrettiin Siperian laivasto-osaston tukikohta '
+      + 'Nikolajevsk-na-Amuresta, ja kun Transsiperian radan itäpää '
+      + 'valmistui, kaupungista tuli Venäjän tärkein Tyynenmeren satama; '
+      + 'vuodesta 1952 vuoteen 1992 se oli suljettu kaupunki, johon '
+      + 'ulkomaalaisilla ei ollut asiaa. Kartan kohteita ovat '
+      + 'rautatieasema ja sen naapurissa oleva matkustajasatama, Kunst & '
+      + 'Albersin talossa toimiva GUM-tavaratalo ja Arsenjevin museo '
+      + 'Svetlanskajan varrella, museosukellusvene S-56, Kotkanpesän '
+      + 'kukkula ja sen rinnettä nouseva funikulaari, linnoitusmuseo '
+      + 'Sportivnajan yläpuolella, entiselle hautausmaalle tehty '
+      + 'Pokrovskin puisto ja vuoden 2012 vinoköysisilta lahden yli. '
       + 'Kartalta jää etelään Russkin saari siltoineen ja lounaaseen '
-      + 'Tokarevin majakka niemen kärjessä. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+      + 'Tokarevin majakka. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Pokrovskin puisto', lat: 43.1258, lon: 131.8914 },
@@ -6598,32 +6530,30 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 56.8635, etela: 56.8545, lansi: 60.5955, ita: 60.6065 },
         x: 2.5, y: 2, leveys: 20, korkeus: 29.66, suunta: '2,3 km pohjoiseen' },
     ],
-    esittely: 'Jekaterinburg alkoi padosta. Vasili Tatištšev etsi vuonna '
-      + '1721 Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan uomien, ruudukon ja ilmansuuntien
+     * kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Isetin ydinkeskusta, ja sen keskellä on yhä '
+      + 'se pato, josta kaupunki alkoi. Vasili Tatištšev etsi vuonna 1721 '
+      + 'Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja '
       + 'valitsi Iset-joen rannan; Georg Wilhelm de Genninin johdolla '
       + 'joki padottiin ja padon voimalla käyvä rautaruukki koeajettiin '
-      + '18. marraskuuta 1723. Kaksi vuotta myöhemmin ruukissa alettiin '
-      + 'lyödä ruplaa. Siperian valtatie avautui 1763 ja kulki kaupungin '
-      + 'läpi, ja siitä tuli idän ja lännen kaupan solmukohta — ikkuna '
-      + 'Aasiaan. Katariina Suuri antoi kaupunkioikeudet 1781, ja vuonna '
-      + '1807 Jekaterinburg sai Venäjän ainoana nimityksen vuorikaupunki: '
-      + 'se oli vuoriruukkien päällikön ja keisarin alainen ja pitkälti '
-      + 'vapaa kuvernööristä. Rautatie tuli Permistä 1878.\n\nKartalla '
-      + 'pato on yhä keskellä. Sen yläpuolella levittäytyy '
-      + 'kaupunginlampi, alapuolella Iset jatkaa kapeana kanavana etelään '
-      + 'ja kaartaa lopulta kaakkoon. Padon ympärillä on Historiallinen '
-      + 'aukio, ruukin vanha alue, jonka portit ja muurit ovat yhä '
-      + 'paikoillaan; kuvataidemuseo on sen laidalla entisessä vuoden '
-      + '1730 sairaalarakennuksessa. Ruudukko ympärillä on 1700-luvun '
-      + 'kaavaa, jonka pääsuunnat noudattavat jokea, ja sen halki '
-      + 'kulkee lännestä itään Leninin valtakatu. Koilliskulmassa maasto '
-      + 'nousee Nousemuksen kukkulalle, jossa on Kharitonovin kartano '
-      + 'puistoineen; kaakkoisnurkassa on Kolminaisuuden katedraali. '
-      + 'Vasemman ylänurkan kainalossa on vanha rautatieasema '
-      + 'ratapihoineen, 2,3 kilometriä pohjoiseen. Kartalta jää '
-      + 'länteen Verh-Isetskin allas ja pohjoiseen Uralmašin '
-      + 'tehdaskaupunginosa. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+      + '18. marraskuuta 1723, ja kaksi vuotta myöhemmin ruukissa '
+      + 'alettiin lyödä ruplaa. Siperian valtatie avautui 1763 ja kulki '
+      + 'kaupungin läpi, ja siitä tuli idän ja lännen kaupan solmukohta '
+      + '— ikkuna Aasiaan; vuonna 1807 Jekaterinburg sai Venäjän ainoana '
+      + 'nimityksen vuorikaupunki. Ruukin vanha alue on nykyään '
+      + 'Historiallinen aukio, ja sen laidalla on kuvataidemuseo '
+      + 'entisessä vuoden 1730 sairaalarakennuksessa. Muut kohteet ovat '
+      + 'Kharitonovin kartano puistoineen, Uralin valtionyliopisto, '
+      + 'kellotorni Suuri Zlatoust ja Kolminaisuuden katedraali; '
+      + 'kainalossa on vuonna 1878 valmistunut vanha rautatieasema, 2,3 '
+      + 'kilometriä pohjoiseen. Kartalta jää länteen Verh-Isetskin allas '
+      + 'ja pohjoiseen Uralmašin tehdaskaupunginosa. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mosulissa. */
       { nimi: 'Vanha rautatieasema', lat: 56.85879, lon: 60.60074 },
@@ -6669,28 +6599,29 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/novosibirsk-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.04, etela: 55.005, lansi: 82.885, ita: 82.942 },
-    esittely: 'Novosibirsk on Venäjän suurten kaupunkien nuorin. Se '
-      + 'syntyi 30. huhtikuuta 1893 rautatiesillan työmaalle: '
-      + 'Transsiperian radan piti ylittää Ob, ja retkikuntaa johtanut '
-      + 'Nikolai Garin-Mihailovski valitsi kohdan, jossa molemmat '
-      + 'rannat ja uoma ovat kalliota. Silta valmistui keväällä 1897, '
-      + 'ja työmaan kupeessa asui silloin 7 800 ihmistä. Nimi oli '
-      + 'vuodesta 1895 Novonikolajevsk; kaupunkioikeudet tulivat 1903, '
-      + 'nykyinen nimi 12. syyskuuta 1926. Miljoona asukasta täyttyi 2. '
-      + 'syyskuuta 1962, alle seitsemässäkymmenessä vuodessa '
-      + 'perustamisesta.\n\nKartalla se näkyy suoraan. Vanhaa '
-      + 'mutkittelevaa kujastoa ei ole lainkaan, vaan korttelit ovat '
-      + 'säännöllisiä ja kadut leveitä, ja niiden keskellä kulkee '
-      + 'luoteesta kaakkoon Punainen valtakatu. Luoteisnurkassa on '
-      + 'Novosibirsk-Glavnyin asema, ja siitä lähtevät ratapihat '
-      + 'levittäytyvät viuhkana kartan yli — rata on kuvassa yhtä '
-      + 'näkyvä kuin kadut, koska se oli täällä ensin. Etelässä ja '
-      + 'lounaassa virtaa Ob leveänä ja hitaana; sen yli kulkee kartan '
-      + 'alalaidassa maantiesilta, ja oikean rannan puistossa seisoo '
-      + 'ensimmäisen rautatiesillan säästetty jänne. Kartalta jää '
-      + 'etelään Obin tekojärvi ja Akademgorodok, pohjoiseen '
-      + 'eläintarhan männikkö. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kortteleiden, ratapihaviuhkan ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Novosibirskin keskusta radan ja Obin '
+      + 'välissä. Kaupunki on Venäjän suurten kaupunkien nuorin: se '
+      + 'syntyi 30. huhtikuuta 1893 rautatiesillan työmaalle, kun '
+      + 'Transsiperian radan piti ylittää Ob ja retkikuntaa johtanut '
+      + 'Nikolai Garin-Mihailovski valitsi kohdan, jossa molemmat rannat '
+      + 'ja uoma ovat kalliota. Nimi oli vuodesta 1895 Novonikolajevsk, '
+      + 'kaupunkioikeudet tulivat 1903 ja nykyinen nimi 12. syyskuuta '
+      + '1926; miljoona asukasta täyttyi 2. syyskuuta 1962. '
+      + 'Kartan pohjoispäässä on Novosibirsk-Glavnyin asema '
+      + 'ratapihoineen. Keskustan kohteet ovat vuosien 1910–1911 '
+      + 'kaupungin kauppatalo ja taidemuseo Punaisen valtakadun '
+      + 'varrella, Satohuoneiston talo vuodelta 1937 ja Aleksanteri '
+      + 'Nevskin katedraali, kaupungin ensimmäisiä kivirakennuksia. '
+      + 'Obin rantapuistossa seisoo ensimmäisen '
+      + 'rautatiesillan säästetty jänne. Kartalta jää etelään Obin '
+      + 'tekojärvi ja Akademgorodok, pohjoiseen eläintarhan männikkö. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mosulissa. */
       { nimi: 'Novosibirsk-Glavnyi', lat: 55.0358, lon: 82.9 },
@@ -6744,33 +6675,31 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 52.2555, etela: 52.245, lansi: 104.338, ita: 104.35 },
         x: 78, y: 76.8, leveys: 20, korkeus: 28.66, suunta: '6 km kaakkoon' },
     ],
-    esittely: 'Irkutsk alkoi verotusasemasta. Ivan Pohabov rakensi '
-      + 'vuonna 1652 talvimajan turkiskauppaa ja burjaateilta '
-      + 'kerättävää jasak-veroa varten, ja Jakov Pohabov pystytti '
-      + 'vuonna 1661 lähelle pienen paalulinnoituksen. Kaupunkioikeudet '
-      + 'tulivat 1686. Ensimmäinen maantie Moskovasta, Siperian '
-      + 'valtatie, valmistui 1760, ja Kjahtan rajakaupan myötä '
-      + 'Kiinan tee ja silkki tulivat kaupunkiin; vuonna 1821 '
-      + 'Irkutskista tuli Itä-Siperian kenraalikuvernöörin istuin. '
-      + 'Dekabristikapinan jälkeen kaupunkiin karkotettiin upseereita '
-      + 'ja aatelisia, ja vuosisadan loppuun mennessä joka kolmas '
-      + 'asukas oli karkotettu; heidän jälkeensä jäivät koulut, '
-      + 'kirjastot ja koristeelliset puutalot. Rautatie saapui 16. '
-      + 'elokuuta 1898.\n\nKartalla kaupunki on Angaran mutkassa. Joki '
-      + 'tulee kuvaan luoteesta, kaartaa etelään ja jättää oikealle '
-      + 'rannalle sen niemekkeen, jolla vanha kaupunki on; pohjoisessa '
-      + 'siihen laskee Ušakovka, ja sen takana on Znamenskin luostari. '
-      + 'Vasemmalla rannalla on Glaskovon puoli ratapihoineen ja '
-      + 'asemineen. Katuverkko oikealla rannalla on tiheä ja kaareva, '
-      + 'koska ensimmäiset asukkaat käänsivät talonsa ikkunat etelään '
-      + 'eivätkä välittäneet naapureista; ainoa suora katu on '
-      + 'entinen Bolšaja Prešpektnaja, joka syntyi vuonna 1790 puretun '
-      + 'paaluvarustuksen paikalle ja erottuu kartalla pitkänä '
-      + 'kaarena rannan suuntaisesti. Sen ja joen välissä on '
-      + 'kivikaupunki, sen takana puukaupunki — jako on vuoden 1879 '
-      + 'palon jäljiltä. Oikean alakulman kainalossa on jäänmurtaja '
-      + 'Angaran laituri tekoaltaalla, kuusi kilometriä kaakkoon. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; joen kulun, katuverkon ja ilmansuuntien
+     * kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Irkutskin keskusta Angaran mutkassa. '
+      + 'Kaupunki alkoi verotusasemasta: Ivan Pohabov rakensi vuonna '
+      + '1652 talvimajan turkiskauppaa ja burjaateilta kerättävää '
+      + 'jasak-veroa varten, ja Jakov Pohabov pystytti vuonna 1661 '
+      + 'lähelle pienen paalulinnoituksen, jonka paikalla on nyt Kirovin '
+      + 'aukio kahtine vanhoine kirkkoineen. Kjahtan rajakaupan myötä '
+      + 'Kiinan tee ja silkki toivat vaurautta, ja vuonna 1821 '
+      + 'Irkutskista tuli Itä-Siperian kenraalikuvernöörin istuin; '
+      + 'dekabristikapinan jälkeen karkotetut jättivät jälkeensä koulut, '
+      + 'kirjastot ja koristeelliset puutalot, joita 130. kortteli '
+      + 'esittelee kokonaisena ryhmänä. Vuoden 1879 palon jälkeen puusta '
+      + 'rakentaminen kiellettiin joen puolella, ja siitä syntyi '
+      + 'kaupungin jako kivikaupunkiin ja puukaupunkiin. Muut kohteet '
+      + 'ovat Znamenskin luostari Ušakovkan takana, puolalainen '
+      + 'Taivaaseenastumisen kirkko, Siperian barokin Ristin ylentämisen '
+      + 'kirkko ja vuonna 1899 avattu rautatieasema joen vasemmalla '
+      + 'rannalla; kainalossa on jäänmurtaja Angaran laituri '
+      + 'tekoaltaalla, kuusi kilometriä kaakkoon. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mosulissa. */
       { nimi: 'Znamenskin luostari', lat: 52.30108, lon: 104.29475 },
