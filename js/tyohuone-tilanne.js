@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v947 — VAIHE B ERA 5, LAHI-ITA VALMIS: SALALAH ja MOSUL saivat avauskuvat, matkaoppaan JA KOHDEKARTAT (7+7 kohdetta, 7+7 juttua) — vanhat "ei kohdekarttaa" -perustelut kumottiin ja kirjoitettiin auki lohkokommentteihin. Mosulin OSM-aineisto EI ollut harvaa (2604 elementtia; vanhankaupungin kujasto on kartan tihein kohta); rajaus kattaa molemmat rannat koska Ninive on itarannalla. Salalahin mittakaavajanaoppi: kartan LEVENTAMINEN pahensi janaosumaa (jana vaihtui 1 km → 2 km), korjaus etelareunaa laskemalla — kirjattu tyokaluun. YKSI TESTIMUUTOS, Fable katsoi diffin: vanha-maailma-testiin kapea poikkeus arabian nahda-sanalle (Burj an-Nahda; vain al-/an-nahda-muodot, paljas "nahda" jaa kiinni). LoC-KUVASAANTO LOYTYI: "…-16200v"-rajatut versiot ovat puhtaita, "LOC matpc.*" -versioissa on negatiivireunus ja arkistonumero — 9 hylkaysta talla saannolla. Mosulin sisaltolinja: ei 2010-luvun tuhoja, Al-Nurin kalteva minareetti historiallisena (4 eri kuvaa 4 etaisyydelta — kaupungin ainoa sailynyt tunnusmerkki); Timur-ristiriita (3 artikkelia, 3 savya) kirjoitettu auki. Fable korjasi mergessa maakartat-lohkojen paikan (olivat vaarassa objektissa — runtime-tarkistus nappasi). Overpass toimi vain maps.mail.ru-peililla. Tarkista: avaa Salalah → kohdekartta (7), Mosul → kohdekartta (7), molempien Matkaopas. LAHI-IDAN URAKKA: v937-v947 = 8 uutta lehtea, 5 uutta kohdekarttaa, 2 karttakorjausta, 16 taydennettya lehtea, tuoreusnakymat',
   'v946 — VAIHE B ERA 3: RIAD, DOHA ja KUWAIT saivat avauskuvat ja matkaoppaan. 21 uutta kuvaa; 15+ hylkaysta (mm. kameran polttama paivays, FAL- ja "Attribution"-lisenssit jotka eivat ole sallitussa listassa, taysi terminaalihalli kasvoineen, mainostaulun hallitsema skyline). WABAR-KURI PITI: Riadin uusissa teksteissa ei yhtaan painolukua — 2 045 kg elaa vain kansallismuseojutussa. Toisto valtetty ristiin: gahwa on jo ARE-maalehdessa → Riadin arjen ilmio on Doxiadisin 1972 ruudukko; Dohan ruokasivu kattaa jo ruoat → arjen ilmio on karak; KWT-maalehden Jahra-aiheita ei toistettu. Kirjoittaja poisti oman lahteettoman vaitteensa (Kuwaitin "vuorovesi paljastaa liejutasankoja") ja korvasi sourcatuilla — itsekuri toimii. Lahderistiriidat auki: Riadin korkeus (612 vs 600 m), Diriyahin piirityksen kesto (vuosi vs 6 kk), Hamadin ala (22 vs 36 km2). Nykysota pois (Dohan 2025 ilmaisku, Kuwaitin 1990). Visaopetukset lehdissa: Diriyah, helmenkalastajakyla, helmielinkeino. Tarkista: avaa Riad/Doha/Kuwait → avauskuvat ja Matkailijalle → Matkaopas',
   'v945 — VAIHE B ERA 4: SANA ja ADEN saivat avauskuvat, matkaoppaan JA KOHDEKARTAT JUTTUINEEN — molemmilta puuttuivat karttakohteet kokonaan. SANAN KARTTA SYNTYI OVERPASSIN ANSIOSTA: Al-Bakiriyyan Wikipedia-koordinaatti on 560 m pielessa (kaytannossa Suuren moskeijan piste) — Overpass voitti taas (v940-ennakkotapaus). 6 kohdetta ja 6 juttua. ADENIN KARTALLA ON VAIN 4 KOHDETTA: Siran linnasta, Aidrus-moskeijasta, minareetista ja Main Passista ei ole vapaata ≥1200 px kuvaa — Jerusalemin ennakkotapaus (ei kuvaa, ei kohdetta); poisjaaneet kerrotaan esittelyssa ja jutuissa. Steamer Point on kainalokarttana (6 km, x nostettu 14:aan ettei leikkaudu — Budapestin oppi vaakasuunnassa). Adenin kartta vaati meri: true. Tawilan altaiden piste on "vedessa" tyokalun mukaan — se ON vesiallas, hyvaksytty kuten Marseillen satama-allas. Jemenin sisaltolinja: ei nykysotaa, painotus 1800-luvun hiilisatamaan ja arkkitehtuuriin; Sanan historia paattyy 1904. Adenin vuosisade kerrotaan kolmena lukuna (36/61/125 mm — kolme eri lahdetta ja mittapistetta). Kuvahylkayksissa mm. diaan poltettu paivays, alamree.net-vesileima ja kamerapaivayksia; Sanan kahvivisan opetus lisattiin Suolatori-juttuun (Mokhan satama). OVERPASS-VINKKI KIRJATTU: maps.mail.ru-peili toimi kun vakiopalvelimet olivat nurin. Tarkista: avaa Sana → kohdekartta (6 numeroa), Aden → kohdekartta (4 numeroa + kainalo), molempien Matkaopas',
   'v944 — VAIHE B ERA 6: MASQAT, TABRIZ ja ISFAHAN saivat avauskuvat ja matkaoppaan. 23 uutta kuvaa (mm. Naqsh-e Jahan muqarnas-holvin lapi, 1600-luvun Mascate-puupiirros ja Costen 1839 kivipiirros); 6 hylkaysta (vesileima "©2015 Neeku Shamekhi", lisatty kehys, tunnistettavia kasvoja, opastetaulun hallitsema falaj-kuva). Faktapaatoksia: aflajin ika jatettiin antamatta (lahde sanoo seka 500 jaa etta 5000 vuotta), Tabrizin asukasluku auki molempina lukuina (1,7 milj vs 1 558 693 samassa artikkelissa), Sinisen moskeijan kustantaja korjattu Khatun Jan Begomiksi (ei Jahan Shah), metron avaus "elokuun lopussa 2015" koska artikkeli antaa kaksi paivaa. Iranin sisaltolinja pidetty (ei nykypolitiikkaa, ei 1979 jalkeisia nimimuutoksia). Visakattavuus tarkistettu kaikilta kolmelta. Tarkista: avaa Masqat/Tabriz/Isfahan → avauskuvat ja Matkailijalle → Matkaopas',
@@ -314,6 +315,8 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '20.8.2026',
   valmiit: [
+    { id: 'salalah', nimi: 'Salalah', versio: 'v947' },
+    { id: 'mosul', nimi: 'Mosul', versio: 'v947' },
     { id: 'riad', nimi: 'Riad', versio: 'v946' },
     { id: 'doha', nimi: 'Doha', versio: 'v946' },
     { id: 'kuwait', nimi: 'Kuwait', versio: 'v946' },
@@ -322,12 +325,7 @@ export const TUOREET = {
     { id: 'masqat', nimi: 'Masqat', versio: 'v944' },
     { id: 'tabriz', nimi: 'Tabriz', versio: 'v944' },
     { id: 'isfahan', nimi: 'Isfahan', versio: 'v944' },
-    { id: 'halab', nimi: 'Halab', versio: 'v943' },
-    { id: 'damaskos', nimi: 'Damaskos', versio: 'v943' },
-    { id: 'luxor', nimi: 'Luxor', versio: 'v943' },
   ],
   tyossa: [
-    { id: 'salalah', nimi: 'Salalah' },
-    { id: 'mosul', nimi: 'Mosul' },
   ],
 };

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 947, teksti: 'Salalah ja Mosul: kohdekartat, jutut, avauskuvat ja opas' },
   { v: 946, teksti: 'Riad, Doha ja Kuwait: avauskuvat ja matkaopas' },
   { v: 945, teksti: 'Sana ja Aden: kohdekartat, jutut, avauskuvat ja opas' },
   { v: 944, teksti: 'Masqat, Tabriz ja Isfahan: avauskuvat ja matkaopas' },
