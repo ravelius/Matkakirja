@@ -2301,6 +2301,13 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamattu "TEKSTIEN PAINOPISTE",
+   * omistajan tarkennus "kuvateksti on YKSI virke"): Panthéonin ja Orsayn
+   * kaksivirkkeiset selitteet tiivistettiin yhteen virkkeeseen. Muut
+   * Pariisin selitteet olivat jo yhden virkkeen mittaisia, eivätkä jutut,
+   * lähderivit tai kuvatiedostot muuttuneet.
+   */
   pariisi: {
     'Eiffel-torni': {
       aika: '1889',
@@ -2528,16 +2535,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Panthéon, Paris 15 August 2011.jpg',
-          selite: 'Kupoli lepää pylväskehän päällä, ja oikealla kohoaa '
-            + 'korinttilainen pylväikkö päätykolmioineen. Pitkä sivuseinä '
-            + 'on umpinainen — sieltä ikkunat muurattiin pois.',
+          selite: 'Kupoli lepää pylväskehän päällä, oikealla kohoaa '
+            + 'korinttilainen pylväikkö päätykolmioineen, ja pitkä sivuseinä '
+            + 'on umpinainen, koska ikkunat muurattiin pois.',
           lahde: 'Michal Osmenda, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Foucault pendulum at Panthéon de Paris, August 2023.JPG',
-          selite: 'Heilurin kullattu pallo liikkuu marmorilattian yllä. '
-            + 'Lattian kehälle merkityt numerot näyttävät, miten '
-            + 'heilahdustaso kiertää päivän mittaan.',
+          selite: 'Heilurin kullattu pallo liikkuu marmorilattian yllä, '
+            + 'jonka kehälle merkityt numerot näyttävät heilahdustason '
+            + 'kiertymisen päivän mittaan.',
           lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
         },
       ],
@@ -2605,9 +2612,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Musee d\'Orsay and Pont Royal, North-West view 140402 1.jpg',
-          selite: 'Orsayn museo Seinen rannalla auringonnousun aikaan. '
-            + 'Entisen aseman kellotaulu erottuu julkisivussa, ja '
-            + 'vasemmalla kaartuu Pont Royal.',
+          selite: 'Orsayn museo Seinen rannalla auringonnousun aikaan: '
+            + 'entisen aseman kellotaulu erottuu julkisivussa, ja vasemmalla '
+            + 'kaartuu Pont Royal.',
           lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],

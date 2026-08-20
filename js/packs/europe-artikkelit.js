@@ -423,11 +423,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamatun "TEKSTIEN PAINOPISTE" ja
+   * Fablen eräohje; sama linja kuin Medinassa ja Mekassa
+   * asia-artikkelit.js:ssä): intro EI ole enää kahden virkkeen nosto vaan
+   * lehden etusivun leipäteksti — 7–10 virkettä kolmessa kappaleessa
+   * ('\n\n'), maltillinen **lihavointi** avainkohdissa. Faktat ovat
+   * kaupungin omista jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:
+   * nostot ja Matkailijan Rooma; maakartat.js) sekä alla olevasta
+   * teksti-kentästä, ei uusista lähteistä. teksti-kenttä on ennallaan.
+   */
   Rooma: {
-    intro: 'Rooma on Italian pääkaupunki ja rakennettu seitsemälle '
-      + 'kukkulalle Tiber-joen varrelle. Se oli aikoinaan maailman '
-      + 'suurimman valtakunnan keskus, ja sen keskustassa kävelee yhä '
-      + 'kahdentuhannen vuoden takaisilla katukivillä.',
+    intro: 'Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen '
+      + 'varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen '
+      + 'perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna '
+      + '753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se '
+      + 'oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, '
+      + 'jonka raja ulottui Skotlannista Egyptiin.'
+      + '\n\n'
+      + 'Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, '
+      + 'siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat '
+      + 'vuorilta vettä painovoimalla. Yksi niistä syöttää yhä **Trevin '
+      + 'suihkulähdettä**. He keksivät myös betonin, joka kovettuu veden '
+      + 'alla: **Pantheonin** kupoli on yhä maailman suurin raudoittamaton '
+      + 'betonikupoli.'
+      + '\n\n'
+      + 'Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui '
+      + 'noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat '
+      + 'sen uudelleen, ja renessanssin ja barokin aikana syntyivät '
+      + 'Pietarinkirkko, Trevin lähde ja Espanjalaiset portaat. Yhdistyneen '
+      + 'Italian pääkaupungiksi Rooma tuli vasta 1871, ja sen sisällä on '
+      + 'maailman pienin valtio Vatikaani, pinta-alaltaan puoli '
+      + 'neliökilometriä.',
     teksti: 'Tarun mukaan Rooma perustettiin 753 eaa., ja sen perustivat '
       + 'susiemon kasvattamat veljekset Romulus ja Remus. Todellisuudessa '
       + 'kaupunki kasvoi vähitellen kukkuloiden kylistä. Se oli ensin '
@@ -638,11 +665,29 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
+  // kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
   Lontoo: {
-    intro: 'Lontoo on Yhdistyneen kuningaskunnan pääkaupunki Thames-joen '
-             + 'varrella. Roomalaiset perustivat sen noin vuonna 47 nimellä '
-             + 'Londinium. Nykyään kaupungissa asuu lähes yhdeksän miljoonaa '
-             + 'ihmistä, ja sen kaduilla puhutaan yli kolmeasataa kieltä.',
+    intro: 'Lontoo on Yhdistyneen kuningaskunnan pääkaupunki Thamesin '
+      + 'varrella, ja siellä asuu lähes yhdeksän miljoonaa ihmistä. '
+      + 'Roomalaiset perustivat paikalle **Londiniumin** noin vuonna 47, ja '
+      + 'kaupunki eli vuosisatoja satamastaan: Thames on vuorovesijoki '
+      + 'keskustaan asti, joten purjelaivat pääsivät aivan kaupungin '
+      + 'sydämeen, ja 1800-luvulla satama oli maailman vilkkain.'
+      + '\n\n'
+      + 'Vuoden 1666 suurpalo tuhosi neljässä päivässä noin 13 000 taloa, ja '
+      + 'sen jälkeen puujulkisivut kiellettiin — siitä vanhojen kortteleiden '
+      + 'tiili. Christopher Wren piirsi palon jälkeen **Pyhän Paavalin '
+      + 'katedraalin**, jonka kupoli oli kaupungin korkein rakennus yli 250 '
+      + 'vuotta. Maailman ensimmäinen metro avattiin täällä vuonna 1863, ja '
+      + 'ensimmäinen liikennevalo syttyi parlamenttitalon kupeessa 1868.'
+      + '\n\n'
+      + 'Keskustassa on itse asiassa kaksi kaupunkia: rahaa tekevä City of '
+      + 'London on vain 2,9 neliökilometriä omine sääntöineen, ja '
+      + 'Westminsterissä ovat parlamentti ja hallitus. Ympärillä on 31 muuta '
+      + 'hallintoaluetta, ja kaupunki tuntuu kylien rykelmältä, jossa '
+      + 'jokaisella on oma torinsa ja pubinsa. Kaduilla puhutaan yli '
+      + 'kolmeasataa kieltä.',
     teksti: 'Lontoo kasvoi satamasta. Thames on vuorovesijoki aina '
               + 'keskustaan asti, joten purjelaivat pääsivät kaupungin '
               + 'sydämeen, ja 1800-luvulla Lontoon satama oli maailman '
@@ -731,12 +776,30 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
+  // kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
   Pariisi: {
-    intro: 'Pariisi on Ranskan pääkaupunki ja rakennettu Seine-joen '
-             + 'mutkaan. Kaupungissa asuu runsaat kaksi miljoonaa ihmistä, '
-             + 'mutta koko seudulla yli kymmenen miljoonaa. Se jakautuu '
-             + 'kahteenkymmeneen kaupunginosaan, jotka kiertävät keskustasta '
-             + 'ulospäin kuin etanan kuori.',
+    intro: 'Pariisi on Ranskan pääkaupunki, ja se on rakennettu Seinen '
+      + 'mutkaan. Kaupungissa asuu runsaat kaksi miljoonaa ihmistä ja koko '
+      + 'seudulla yli kymmenen miljoonaa. Kaikki alkoi joen keskellä '
+      + 'olevasta saaresta: **Île de la Citéllä** asui gallialainen '
+      + 'parisii-heimo, ja roomalaiset perustivat sinne kaupungin nimeltä '
+      + 'Lutetia.'
+      + '\n\n'
+      + 'Samalla saarella seisoo Notre-Dame, jota alettiin rakentaa 1163; '
+      + 'sen katto paloi huhtikuussa 2019, ja kirkko avattiin uudelleen '
+      + 'joulukuussa 2024. Nykyisen kaupunkikuvan teki yksi mies: keisari '
+      + 'Napoleon III määräsi 1853 prefekti **Haussmannin** uudistamaan '
+      + 'Pariisin, ja seitsemäntoista vuoden aikana kapeat kujat väistyivät '
+      + 'leveiden bulevardien ja vaaleiden kivitalojen tieltä.'
+      + '\n\n'
+      + 'Eiffel-torni nousi vuoden 1889 maailmannäyttelyyn, ja se oli määrä '
+      + 'purkaa parinkymmenen vuoden kuluttua, kunnes huipun radioantenni '
+      + 'teki siitä armeijalle liian hyödyllisen. Metro avattiin 1900, ja '
+      + 'Hector Guimardin vihreät valurautakaaret kaartuvat yhä monen '
+      + 'sisäänkäynnin yllä. Kaupunki jakautuu kahteenkymmeneen '
+      + 'kaupunginosaan, jotka kiertyvät keskustasta ulospäin kuin etanan '
+      + 'kuori.',
     teksti: 'Pariisi alkoi saarelta. Seinen keskellä olevalla Île de la '
               + 'Citéllä asui gallialainen parisii-heimo, ja roomalaiset '
               + 'perustivat sinne kaupungin. Samalla saarella seisoo '
@@ -892,11 +955,33 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
+   * kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
+   * Muuri ja kaupungin jako kerrotaan neutraalina historiana ilman
+   * osapuolikehystä ja ilman nykypolitiikkaa (Fablen eräohje).
+   */
   Berliini: {
-    intro: 'Berliini on Saksan pääkaupunki ja sen suurin kaupunki, lähes '
-             + 'neljä miljoonaa asukasta. Se on rakennettu tasaiselle '
-             + 'hiekkamaalle Spree-joen varrelle, ja noin kolmannes '
-             + 'pinta-alasta on puistoa, metsää tai vettä.',
+    intro: 'Berliini on Saksan pääkaupunki ja maan suurin kaupunki, jossa '
+      + 'asuu lähes neljä miljoonaa ihmistä. Se on rakennettu tasaiselle '
+      + 'hiekkamaalle Spree-joen varrelle, ja noin kolmannes pinta-alasta on '
+      + 'puistoa, metsää tai vettä. Berliini oli ensin Preussin ja vuodesta '
+      + '1871 koko Saksan keisarikunnan pääkaupunki, ja vuonna 1920 seudulla '
+      + 'asui jo yli kolme miljoonaa ihmistä.'
+      + '\n\n'
+      + 'Vuonna 1933 valtaan noussut natsihallinto teki Berliinistä '
+      + 'keskuksensa, ja täältä johdettiin sota ja juutalaisten joukkotuho. '
+      + 'Sodan lopussa kaupunki oli raunioina, ja raivaustyön tekivät '
+      + 'suureksi osaksi naiset eli Trümmerfrauen. Voittajavallat jakoivat '
+      + 'Berliinin neljään sektoriin, ja vuonna 1961 Itä-Saksa rakensi '
+      + 'Länsi-Berliinin ympärille **155 kilometrin muurin**, joka katkaisi '
+      + 'kadut ja metrolinjat 28 vuodeksi; raja aukesi 9. marraskuuta 1989.'
+      + '\n\n'
+      + 'Yhdistyneen Saksan pääkaupunki Berliinistä tuli 1990. Muurin linja '
+      + 'on merkitty keskustan katukiveykseen kaksoisrivinä, ja **East Side '
+      + 'Galleryssä** on 1,3 kilometriä muuria, jonka 118 taiteilijaa '
+      + 'maalasi 1990. Halvat vuokrat vetivät kaupunkiin taiteilijoita '
+      + 'ympäri maailmaa.',
     teksti: 'Berliini oli ensin Preussin ja vuodesta 1871 koko Saksan '
               + 'keisarikunnan pääkaupunki. Se kasvoi hurjaa vauhtia: '
               + '1870-luvulla rakennettiin kokonaisia kortteleita kerralla, ja '
@@ -923,11 +1008,29 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
+  // kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
   Wien: {
-    intro: 'Wien on Itävallan pääkaupunki Tonavan varrella, noin kaksi '
-             + 'miljoonaa asukasta. Se oli satojen vuosien ajan Habsburgien '
-             + 'valtakunnan keskus, ja siksi keskusta näyttää yhä paljon '
-             + 'suuremman maan pääkaupungilta kuin Itävalta nykyään on.',
+    intro: 'Wien on Itävallan pääkaupunki Tonavan varrella, ja siellä asuu '
+      + 'noin kaksi miljoonaa ihmistä. Kaupunki seisoo kohdassa, jossa joki '
+      + 'tulee ulos vuorten välistä: lännessä nousee Wienerwald ja idässä '
+      + 'alkaa Unkariin asti jatkuva lakeus. Roomalaiset perustivat paikalle '
+      + 'Vindobonan leirin lähes kaksituhatta vuotta sitten.'
+      + '\n\n'
+      + 'Satojen vuosien ajan Wien oli **Habsburgien** valtakunnan keskus, '
+      + 'joka 1900-luvun alussa ulottui Sveitsin rajalta Ukrainaan — siksi '
+      + 'keskusta näyttää yhä suuremman maan pääkaupungilta kuin Itävalta '
+      + 'nykyään on. Kaupunginmuuri purettiin keisarin käskystä, ja tilalle '
+      + 'avattiin 1865 puistokatu **Ring**, jonka varteen nousivat ooppera, '
+      + 'raatihuone ja parlamentti. Valtakunta hajosi ensimmäisen '
+      + 'maailmansodan jälkeen 1918.'
+      + '\n\n'
+      + 'Musiikki on kaupungin tunnetuin vientituote: Haydn, Mozart, '
+      + 'Beethoven, Schubert ja Brahms työskentelivät täällä. Vuoden 1900 '
+      + 'tienoilla Wien oli uusien ajatusten laboratorio: Freud kehitti '
+      + 'täällä psykoanalyysia ja Klimt maalasi kultalehteä käyttäen. '
+      + 'Juomavesi tulee kaupunkiin yhä vuorten lähteistä vuonna 1873 '
+      + 'valmistunutta vesijohtoa pitkin, pelkällä painovoimalla.',
     teksti: 'Habsburgien suku hallitsi Wienistä käsin valtakuntaa, joka '
               + '1900-luvun alussa ulottui Sveitsin rajalta Ukrainaan ja jossa '
               + 'puhuttiin toistakymmentä kieltä. Ensimmäisen maailmansodan '

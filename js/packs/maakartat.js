@@ -3820,20 +3820,21 @@ export const KAUPUNKIKARTAT = {
      */
     rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
     piirtoRajat: { pohjoinen: 48.91446, etela: 48.82454, lansi: 2.23177, ita: 2.41273 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E1, Raamattu "TEKSTIEN PAINOPISTE"):
+     * esittelystä poistettiin koko toinen kappale, joka kuvaili kartan
+     * saarta, siltoja, tähtiristeystä ja Montmartren sijaintia kuvassa.
+     * Jäljelle jäi se, miksi kaupunki syntyi tähän ja mitä alueella on.
+     */
     esittely: 'Pariisi alkoi saarelta. Seine haarautuu keskellä kaupunkia '
       + 'kahdeksi kapeaksi uomaksi, ja niiden väliin jää Île de la Cité — '
       + 'saari, joka on kymmenen katua pitkä ja viisi leveä. Kapeat haarat '
       + 'oli helppo ylittää ja saari helppo puolustaa, joten kelttiläinen '
       + 'kalastajakylä ja sen jälkeen roomalaisten Lutetia asettuivat juuri '
-      + 'tähän. Kaupunki kasvoi saarelta molemmille rannoille, ja joen '
-      + 'suuri kaari on yhä sen selkäranka.\n\nKartan keskellä näkyy '
-      + 'saari, josta sillat vievät molemmille rannoille. Vanhin Seinen '
-      + 'silloista on Pont Neuf, joka rakennettiin vuosina 1578–1607 — nimi '
-      + 'tarkoittaa uutta siltaa. Vasemmalla tusina katua kohtaa yhdessä '
-      + 'pisteessä ja piirtää kartalle tähden; sen keskellä seisoo '
-      + 'Riemukaari. Ylhäällä oikealla kohoaa Montmartre, kaupungin korkein '
-      + 'kukkula, 130 metriä merenpinnan yläpuolella, ja sen laella on '
-      + 'valkoinen Sacré-Cœur.',
+      + 'tähän. Kaupunki kasvoi saarelta molemmille rannoille, ja joen suuri '
+      + 'kaari on yhä sen selkäranka. Kartan alueelle mahtuvat sekä '
+      + 'Eiffel-torni että Montmartren laella oleva Sacré-Cœur, vaikka '
+      + 'niiden väli on lähes viisi kilometriä.',
     kohteet: [
       /*
        * Laaja rajaus, 15.8.2026 alkaen 8,3 km (pelin laajin on nyt
@@ -3987,22 +3988,25 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 48.191, etela: 48.178, lansi: 16.303, ita: 16.325 },
         x: 20, y: 57.85, leveys: 18.75, korkeus: 22.15 },
     ],
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E1, Raamattu "TEKSTIEN PAINOPISTE"):
+     * esittelystä poistettiin kartan visuaalinen kuvailu (soikea katukehä,
+     * kapeat kadut kehän sisällä, Praterin vihreä). Ring on yhä mukana,
+     * mutta asiana eikä kuvan muotona, ja loppuun tuli lyhyt luettelo
+     * siitä, mitä kohteita alueella on.
+     */
     esittely: 'Wien seisoo kohdassa, jossa Tonava tulee ulos vuorten '
       + 'välistä. Lännessä nousee Wienerwald, Alppien viimeinen '
       + 'kukkulaselänne, ja idässä alkaa tasainen lakeus, joka jatkuu '
       + 'Unkariin asti. Roomalaiset huomasivat paikan ensin: he perustivat '
       + 'tänne Vindobonan leirin lähes kaksituhatta vuotta sitten, sillä '
-      + 'Tonava oli heidän valtakuntansa pohjoisraja. Vanhakaupunki ei '
-      + 'silti ole ison joen rannalla vaan sen sivuhaaran, Donaukanalin, '
-      + 'varrella — pääuoma suoristettiin nykyiselle paikalleen vasta '
-      + '1870-luvulla.\n\nKartan keskellä näkyy soikea katukehä. Se on '
-      + 'Ring: kaupunginmuuri purettiin keisarin käskystä, ja tilalle '
-      + 'avattiin 1865 yli viisi kilometriä pitkä puistokatu, jonka '
-      + 'varrelle rakennettiin ooppera, raatihuone ja museot. Kehän sisällä '
-      + 'kadut ovat kapeita ja mutkaisia, ulkopuolella leveitä ja suoria. '
-      + 'Koillisessa kaartaa Donaukanal, ja sen takana levittäytyy Praterin '
-      + 'vihreä — entinen keisarin metsästysmaa, jonka reunalla pyörii '
-      + 'jättiratas.',
+      + 'Tonava oli heidän valtakuntansa pohjoisraja. Vanhakaupunki ei silti '
+      + 'ole ison joen rannalla vaan sen sivuhaaran, Donaukanalin, varrella '
+      + '— pääuoma suoristettiin nykyiselle paikalleen vasta 1870-luvulla. '
+      + 'Vanhan ytimen kiertää Ring, kaupunginmuurin paikalle 1865 avattu '
+      + 'puistokatu: sen varrella ovat raatihuone, Hofburg ja ooppera, kehän '
+      + 'sisällä Stephansdom ja laidoilla Belvedere sekä Praterin jättiratas, '
+      + 'ja Schönbrunn on omassa kainalokartassaan.',
     kohteet: [
       /*
        * Lännestä itään. Belvedere on 89 %:n kohdalla ja jättiratas
@@ -4426,20 +4430,22 @@ export const KAUPUNKIKARTAT = {
     // --vari, Eurooppa-erä 1 15.8.2026).
     piirtoRajat: { pohjoinen: 41.9222, etela: 41.8758, lansi: 12.429, ita: 12.517 },
     varikartta: 'assets/kartat/rooma-varikartta.png',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E1, Raamattu "TEKSTIEN PAINOPISTE"):
+     * esittelystä poistettiin kartan visuaalinen kuvailu (mistä Tiber tulee
+     * ja mihin menee, kujaverkon sekavuus, suorat kadut). Tilalle tuli
+     * lyhyt luettelo siitä, mitä kohteita alueella on.
+     */
     esittely: 'Rooma syntyi Tiberin mutkaan noin 25 kilometriä merestä '
-      + 'ylävirtaan, ja paikan valitsi joki. Keskellä virtaa on saari, '
-      + 'Isola Tiberina, joka jakaa uoman kahdeksi kapeaksi haaraksi. Siinä '
-      + 'kohtaa joen yli pääsi kahlaamalla, eikä toista yhtä helppoa '
-      + 'ylityspaikkaa ollut pitkään matkaan. Kahlaamon ympärillä kohoaa '
-      + 'seitsemän kukkulaa, ja niiden välinen suo kuivattiin viemärillä '
-      + 'nimeltä Cloaca Maxima. Kuivatusta notkosta tuli Forum Romanum, '
-      + 'kaupungin tori.\n\nKartalla Tiber tulee alhaalta, tekee kaksi '
-      + 'jyrkkää mutkaa ja poistuu ylälaidasta. Vasemmalle puolelle jokea '
-      + 'jää Vatikaani, oikealle vanhakaupunki. Sen kujaverkko on niin '
-      + 'sekava, että muutamat suorat kadut erottuvat siitä heti — ne on '
-      + 'puhkaistu talojen läpi vasta myöhemmin. Oikeassa alalaidassa '
-      + 'katuverkko harvenee ja tilalle tulee antiikin alue: siellä ovat '
-      + 'Forum ja Colosseum.',
+      + 'ylävirtaan, ja paikan valitsi joki. Keskellä virtaa on saari, Isola '
+      + 'Tiberina, joka jakaa uoman kahdeksi kapeaksi haaraksi. Siinä kohtaa '
+      + 'joen yli pääsi kahlaamalla, eikä toista yhtä helppoa ylityspaikkaa '
+      + 'ollut pitkään matkaan. Kahlaamon ympärillä kohoaa seitsemän '
+      + 'kukkulaa, ja niiden välinen suo kuivattiin viemärillä nimeltä '
+      + 'Cloaca Maxima. Kuivatusta notkosta tuli Forum Romanum, kaupungin '
+      + 'tori. Kartan kohteet ovat joen molemmin puolin: lännessä Vatikaani '
+      + 'ja Castel Sant’Angelo, idässä Espanjalaiset portaat, Trevin '
+      + 'suihkulähde ja Pantheon, ja kaakossa antiikin alue Colosseumeineen.',
     kohteet: [
       /*
        * Numerointi kulkee lännestä itään, eli samassa järjestyksessä
