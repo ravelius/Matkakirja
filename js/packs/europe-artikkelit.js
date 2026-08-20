@@ -129,10 +129,36 @@ export const EUROPE_ARTIKKELIT = {
       + 'mikä on Euroopassa poikkeuksellista.',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2), sama linja kuin muissa erän
+   * kaupungeissa: intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat Granadan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Granada; maakartat.js).
+   */
   Granada: {
-    intro: 'Granada on Etelä-Espanjassa Sierra Nevadan juurella. Se oli '
-      + 'Iberian niemimaan viimeinen muslimivaltio: Granadan emiirikunta '
-      + 'säilyi vuoteen 1492, lähes 250 vuotta pidempään kuin muut.',
+    intro: 'Granada on Etelä-Espanjassa Sierra Nevadan juurella noin '
+      + '740 metrin korkeudessa, viidenkymmenen kilometrin päässä '
+      + 'merestä. Kaupunki syntyi kohtaan, jossa vuorilta tuleva Darro '
+      + 'yhtyy Geniliin, ja vuoret ovat sen vesisäiliö: huipuilla on '
+      + 'lunta vielä toukokuussa, ja sulamisvesi johdettiin kanavia '
+      + 'pitkin pelloille ja puutarhoihin.'
+      + '\n\n'
+      + 'Granada oli Iberian niemimaan viimeinen muslimivaltio. '
+      + 'Nasridien emiirikunta säilyi vuoteen 1492, lähes 250 vuotta '
+      + 'muita pidempään, ja sen hallitsijat rakensivat 1200- ja '
+      + '1300-luvuilla **Alhambran**. Kun kaupunki luovutettiin '
+      + 'Kastilian ja Aragonian hallitsijoille, palatsia ei purettu '
+      + 'vaan siihen muutettiin. Vastapäisellä kukkulalla on '
+      + '**Albaicín**, vanha maurilainen kaupunginosa, ja sen takana '
+      + 'Sacromonten rinne, jonka luola-asunnoissa kehittyi zambra, '
+      + 'oma flamencon muoto.'
+      + '\n\n'
+      + 'Nykyinen Granada on ennen kaikkea opiskelijakaupunki: '
+      + 'yliopisto perustettiin 1531, ja opiskelijoita on yli 60 000. '
+      + 'Pääkatu Gran Vía de Colón murrettiin vanhan kaupungin läpi '
+      + 'vuosina 1895–1934, ja työ vaati viidesosan siitä. Baareissa '
+      + 'juoman mukana tuodaan yhä tapas ilman lisämaksua.',
     teksti: 'Alhambra on kaupungin ja koko Espanjan tunnetuin '
       + 'rakennusryhmä: linnoitus, palatsi ja puutarhat samalla '
       + 'kukkulalla. Nasridi-hallitsijat rakensivat sen 1200–1300-'
@@ -348,11 +374,35 @@ export const EUROPE_ARTIKKELIT = {
       + 'kirjoja kuin juuri mikään muu.',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2), sama linja kuin muissa erän
+   * kaupungeissa: intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat Ateenan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan Ateena;
+   * maakartat.js).
+   */
   Ateena: {
     intro: 'Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja '
-      + 'kaupunkeja: samalla paikalla on eletty yli 3 000 vuotta. Sen '
-      + 'yllä kohoaa Akropolis, kalliokukkula, jonka päällä seisoo '
-      + 'Parthenon — temppeli, joka valmistui 432 eaa.',
+      + 'kaupunkeja: samalla paikalla on eletty yli kolmetuhatta '
+      + 'vuotta. Kaupunki syntyi kallion ympärille — **Akropolis** '
+      + 'kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella '
+      + 'seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi '
+      + 'kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, '
+      + 'eikä keskustan läpi virtaa jokea.'
+      + '\n\n'
+      + 'Antiikin Ateenassa kehitettiin **demokratia**, kirjoitettiin '
+      + 'ensimmäiset näytelmät ja perustettiin filosofian koulut. '
+      + 'Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja '
+      + 'ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan '
+      + 'kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.'
+      + '\n\n'
+      + 'Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli '
+      + 'noin neljänsadan talon kylä Akropoliin juurella, ja valinta '
+      + 'tehtiin historian eikä koon perusteella. Nykyään seudulla '
+      + 'asuu noin kolme ja puoli miljoonaa ihmistä. Metrotunneleita '
+      + 'kaivettaessa arkeologit kulkivat insinöörien rinnalla kuusi '
+      + 'vuotta, ja löydöt ovat esillä asemien seinillä. Kesä on '
+      + 'Manner-Euroopan kuumimpia, ja sade osuu talveen.',
     teksti: 'Antiikin Ateenassa keksittiin demokratia. Se ei ollut '
       + 'nykyisen kaltainen: äänioikeus oli vain vapailla ateenalaisilla '
       + 'miehillä, eli noin kymmenesosalla asukkaista. Mutta idea oli '
@@ -822,12 +872,37 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2), sama linja kuin muissa erän
+   * kaupungeissa: intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat Lissabonin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Lissabon; maakartat.js).
+   */
   Lissabon: {
-    intro: 'Lissabon on Portugalin pääkaupunki ja Manner-Euroopan läntisin. '
-             + 'Se on rakennettu kukkuloille Tejo-joen pohjoisrannalle siihen '
-             + 'kohtaan, jossa joki levenee lähes merenlahdeksi. Kaupungissa '
-             + 'asuu noin 550 000 ihmistä ja koko seudulla lähes kolme '
-             + 'miljoonaa.',
+    intro: 'Lissabon on Portugalin pääkaupunki ja Manner-Euroopan '
+      + 'läntisin. Se on rakennettu kukkuloille Tejo-joen '
+      + 'pohjoisrannalle kohtaan, jossa joki levenee lähes '
+      + 'merenlahdeksi mutta avomerelle on vain viitisentoista '
+      + 'kilometriä; juuri siksi kaupunki on tässä, sillä satama oli '
+      + 'suojaisa. Asukkaita on noin 550 000 ja koko seudulla lähes '
+      + 'kolme miljoonaa.'
+      + '\n\n'
+      + 'Lissabon oli purjehdusten pääkaupunki: Vasco da Gama lähti '
+      + 'täältä 1497 ja avasi eurooppalaisille meritien Afrikan ympäri '
+      + 'Intiaan. Jokisatamaan purettiin sadan vuoden ajan pippuria, '
+      + 'kanelia ja kultaa, ja samoilla laivoilla tuotiin Afrikasta '
+      + 'orjuutettuja ihmisiä. Kaikki muuttui **1. marraskuuta 1755**, '
+      + 'kun maanjäristys, hyökyaalto ja tulipalo hävittivät suurimman '
+      + 'osan keskustasta.'
+      + '\n\n'
+      + 'Uusi alakaupunki **Baixa** vedettiin viivoittimella '
+      + 'ruudukkoon, ja talojen sisään piilotettiin puinen '
+      + 'ristikkohäkki, joka joustaa järistyksessä. Ruudukon molemmin '
+      + 'puolin kadut kiipeävät vanhoihin kortteleihin, joita '
+      + 'kolistelevat keltaiset raitiovaunut vuodesta 1873. '
+      + 'Diktatuuri päättyi 25. huhtikuuta 1974 verettömään '
+      + 'vallankaappaukseen, neilikkavallankumoukseen.',
     teksti: 'Lissabon oli purjehdusten pääkaupunki. Täältä lähti Vasco da '
               + 'Gama vuonna 1497 ja avasi eurooppalaisille meritien Afrikan '
               + 'ympäri Intiaan; Intian valtamerellä oli purjehdittu jo satoja '
@@ -858,12 +933,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamatun "TEKSTIEN PAINOPISTE" ja
+   * Fablen eräohje): intro ei ole enää kahden virkkeen nosto vaan lehden
+   * etusivun leipäteksti — 7–10 virkettä kahdessa tai kolmessa
+   * kappaleessa ('\n\n'), maltillinen **lihavointi** avainkohdissa.
+   * Faktat ovat Madridin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Madrid;
+   * maakartat.js), ei uusista lähteistä. teksti-kenttä on ennallaan.
+   */
   Madrid: {
-    intro: 'Madrid on Espanjan pääkaupunki ja maan suurin kaupunki: siellä '
-             + 'asuu noin 3,4 miljoonaa ihmistä ja koko maakunnassa lähes '
-             + 'seitsemän miljoonaa. Se on keskellä Iberian niemimaata 667 '
-             + 'metrin korkeudella ylängöllä, jolla ei ole merta eikä suurta '
-             + 'jokea.',
+    intro: 'Madrid on Espanjan pääkaupunki ja maan suurin kaupunki: '
+      + 'asukkaita on noin 3,4 miljoonaa ja koko maakunnassa lähes '
+      + 'seitsemän miljoonaa. Se on keskellä Iberian niemimaata '
+      + 'Kastilian ylätasangolla noin 650 metrin korkeudessa, '
+      + 'korkeammalla kuin yksikään toinen Euroopan unionin '
+      + 'pääkaupunki. Merelle on neljäsataa kilometriä, joten kesä on '
+      + 'kuuma ja kuiva ja talviyöt kylmiä.'
+      + '\n\n'
+      + 'Kaupunki alkoi 800-luvulla maurien linnoituksena nimeltä '
+      + '**Mayrit**, ja pitkään se oli pikkukaupunki muiden joukossa. '
+      + 'Pääkaupungiksi se nousi vuonna 1561, kun kuningas Filip II '
+      + 'siirsi hovinsa Toledosta lähes tasan valtakunnan keskelle. '
+      + 'Hovin ympärille rakennettiin Plaza Mayor, aukio, joka '
+      + 'suljettiin talorivillä kaikilta neljältä sivulta, ja '
+      + 'keskustan sydämeksi jäi Puerta del Sol: sen kiveyksessä on '
+      + 'laatta, josta Espanjan päätiet mitataan.'
+      + '\n\n'
+      + 'Nykyään Madrid tunnetaan museoistaan. **Prado** esittelee '
+      + 'Velázquezin ja Goyan tärkeimmät työt, ja Reina Sofíassa on '
+      + 'Picasson Guernica, joka saapui Espanjaan vasta 1981. Arki '
+      + 'venyy myöhään iltaan, ja Manzanares-joki kaivettiin '
+      + '2000-luvulla moottoritien alta takaisin esiin puistoksi.',
     teksti: 'Madrid ei ole Espanjan vanhin kaupunki. Se alkoi 800-luvulla '
               + 'maurien linnoituksena, jonka nimi oli Mayrit, ja pitkään se '
               + 'oli pikkukaupunki muiden joukossa. Vuonna 1561 kuningas Filip '
@@ -890,12 +991,37 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2), sama linja kuin muissa erän
+   * kaupungeissa: intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat Barcelonan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Barcelona; maakartat.js).
+   */
   Barcelona: {
-    intro: 'Barcelona on Katalonian pääkaupunki ja Espanjan toiseksi suurin '
-             + 'kaupunki: siellä asuu noin 1,7 miljoonaa ihmistä. Se on '
-             + 'Välimeren rannalla kapealla tasangolla vuorten ja meren '
-             + 'välissä, ja kaupungissa on kaksi virallista kieltä, katalaani '
-             + 'ja espanja.',
+    intro: 'Barcelona on Katalonian pääkaupunki ja Espanjan toiseksi '
+      + 'suurin kaupunki: asukkaita on noin 1,7 miljoonaa. Se on '
+      + 'rakennettu kapealle tasangolle Välimeren ja Collserolan '
+      + 'metsäisen harjanteen väliin. Kaupungissa on kaksi virallista '
+      + 'kieltä, katalaani ja espanja; katalaani on oma romaaninen '
+      + 'kielensä eikä espanjan murre, ja se on nykyään koulujen '
+      + 'opetuskieli.'
+      + '\n\n'
+      + 'Roomalaiset perustivat **Barcinon** pienelle kummulle, jonka '
+      + 'päällä seisoo nyt katedraali, ja kaupunki pysyi muurien '
+      + 'sisässä 1850-luvulle asti. Kun muurit purettiin, '
+      + 'insinööri Ildefons Cerdà piirsi niiden ulkopuolelle '
+      + '**Eixamplen**: ruudukon, jossa korttelin sivu on 113 metriä ja '
+      + 'jokainen kulma on viistetty, jotta valoa ja kääntyviä vaunuja '
+      + 'varten jäisi risteykseen tilaa.'
+      + '\n\n'
+      + 'Sagrada Famílian rakentaminen alkoi vuonna 1882, ja Antoni '
+      + 'Gaudí teki työtä siinä kuolemaansa asti; kirkko rakennetaan '
+      + 'yhä lahjoitusvaroin. Kaupungin ilmeen muutti vuosi 1992, kun '
+      + 'olympialaisia varten rannan tehtaat purettiin ja tilalle tuli '
+      + 'uimarantoja ja rantabulevardi. '
+      + 'Syyskuun lopun Mercè-juhla on ollut kaupungin virallinen '
+      + 'vapaapäivä vuodesta 1871.',
     teksti: 'Barcelona alkoi roomalaisena kaupunkina nimeltä Barcino. '
               + 'Vanhankaupungin kujien seassa on yhä pätkiä roomalaista '
               + 'muuria, ja keskiajalta ovat kirkot ja niin kapeat korttelit, '

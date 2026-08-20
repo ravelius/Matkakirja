@@ -3367,21 +3367,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/lissabon-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 38.7265, etela: 38.7035, lansi: -9.1505, ita: -9.118 },
-    esittely: 'Lissabon seisoo kukkuloilla Tejo-joen pohjoisrannalla. '
-      + 'Tejo on Iberian niemimaan pisin joki, ja Lissabonin kohdalla '
-      + 'se on jo melkein meri: Kauppatorilta vastarannalle on runsaat '
-      + 'kaksi kilometriä. Juuri siksi kaupunki on tässä. Laivat '
-      + 'pääsivät leveään ja suojaisaan satamaan, mutta avomerelle oli '
-      + 'vain noin viisitoista kilometriä. Kukkuloilta näki tulijat '
-      + 'kaukaa, ja jyrkkää rinnettä oli helppo puolustaa: roomalaiset, '
-      + 'maurit ja portugalilaiset rakensivat linnansa kaikki samalle '
-      + 'kukkulalle.\n\nKartan alalaidassa kaartaa Tejo. Keskellä on '
-      + 'suora ruudukko, noin 800 metriä leveä: se on Baixa eli '
-      + 'alakaupunki. Vanha keskusta romahti maanjäristyksessä 1. '
-      + 'marraskuuta 1755, ja tilalle vedettiin viivoittimella uudet '
-      + 'kadut. Ruudukon molemmin puolin kadut menevät solmuun ja '
-      + 'kiipeävät ylös: oikealla Alfama linnankukkulalla, vasemmalla '
-      + 'Bairro Alto. Ruudukon yläkulmasta lähtee vinosti leveä '
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Lissabonin keskusta Tejo-joen '
+      + 'pohjoisrannalla. Joki on tässä kohtaa jo melkein meri, ja '
+      + 'juuri siksi kaupunki on tässä: laivat pääsivät leveään ja '
+      + 'suojaisaan satamaan, mutta avomerelle oli vain noin '
+      + 'viisitoista kilometriä. Rannasta nousee Baixa eli alakaupunki, '
+      + 'joka vedettiin suoraksi ruudukoksi sen jälkeen, kun vanha '
+      + 'keskusta romahti maanjäristyksessä 1. marraskuuta 1755. Sen '
+      + 'molemmin puolin kohoavat vanhat kukkulakaupunginosat, Alfama '
+      + 'linnankukkulalla ja Bairro Alto, ja pohjoiseen lähtee '
       + 'puistokatu Avenida da Liberdade. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
@@ -3406,23 +3405,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/barcelona-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 41.4085, etela: 41.37, lansi: 2.147, ita: 2.1984 },
-    esittely: 'Barcelona on rakennettu kapealle tasangolle meren ja '
-      + 'vuorten väliin. Selän takana kohoaa Collserolan metsäinen '
-      + 'harjanne, ja tasangon molemmissa reunoissa virtaa joki: '
-      + 'lännessä Llobregat, idässä Besòs. Sataman vieressä on vielä '
-      + 'yksi mäki, Montjuïc, jonka itäreuna putoaa lähes '
-      + 'pystysuorana alas. Roomalaiset perustivat Barcinon pienelle '
-      + 'kummulle, joka on vain noin seitsemäntoista metriä korkea. '
-      + 'Kummun päällä seisoo nyt katedraali, ja kaupunki pysyi sen '
-      + 'ympärillä muurien sisässä aina 1850-luvulle asti.\n\nKartan '
-      + 'yläosa on pelkkää ruudukkoa. Se on Eixample, joka piirrettiin '
-      + 'tyhjälle kentälle, kun muurit purettiin: korttelit ovat 113 '
-      + 'metriä sivultaan ja joka kulmasta on leikattu 20 metrin '
-      + 'viiste. Ruudukon poikki viistää kaksi leveää katua, ja aivan '
-      + 'sen sisällä seisoo Sagrada Família. Keskellä ruudukko loppuu '
-      + 'kuin veitsellä katkaistuna, ja alkaa vanhankaupungin sokkelo '
-      + '— siinä kulki muuri. Alhaalla oikealla on satama ja meri. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartta kattaa Barcelonan keskustan kapealla tasangolla '
+      + 'Välimeren ja Collserolan metsäisen harjanteen välissä. '
+      + 'Roomalaiset perustivat Barcinon pienelle kummulle, jonka '
+      + 'päällä seisoo nyt katedraali, ja kaupunki pysyi muurien '
+      + 'sisässä aina 1850-luvulle asti; muurien paikalta alkaa '
+      + 'vanhankaupungin sokkelo. Sen pohjoispuolelle piirrettiin '
+      + 'tyhjälle kentälle Eixample, jonka korttelit ovat 113 metriä '
+      + 'sivultaan ja joiden joka kulmasta on leikattu 20 metrin '
+      + 'viiste. Ruudukon sisällä seisoo Sagrada Família, ja etelässä '
+      + 'ovat satama ja meri. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Boquerian kauppahallista ja Kolumbuksen patsaasta ei ole
@@ -3444,25 +3442,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/granada-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
-    esittely: 'Granada on Sierra Nevadan juurella noin 740 metrin '
-      + 'korkeudessa. Kaupunki syntyi kohtaan, jossa kaksi jokea '
-      + 'yhtyy: pieni Darro tulee vuorilta idästä ja laskee Geniliin, '
-      + 'joka jatkaa lännen viljavalle tasangolle. Vuoret ovat '
-      + 'kaupungin vesisäiliö. Ylimmillä huipuilla on lunta vielä '
-      + 'toukokuussa, lumi sulaa hitaasti, ja sulamisvesi johdettiin '
-      + 'kanavia pitkin pelloille, suihkulähteisiin ja puutarhoihin. '
-      + 'Darron molemmin puolin nousee kaksi kukkulaa vastakkain: '
-      + 'toisella on Alhambra, toisella Albaicínin valkoinen '
-      + 'kaupunginosa.\n\nKartalla Darro tulee oikealta vinosti alas. '
-      + 'Vanhankaupungin kohdalla se katoaa: joki katettiin 1800-luvun '
-      + 'lopulla kadun alle, ja vesiviiva jatkuu talojen alitse '
-      + 'Geniliin, joka kulkee kuvan alalaidassa. Oikealla '
-      + 'levittäytyy metsäinen Alhambran kukkula ja sen laella '
-      + 'palatsin rakennusrykelmä; alue on 142 000 neliömetriä. '
-      + 'Vastapäätä ylhäällä kiemurtelee Albaicínin kujaverkko '
-      + 'rinnettä ylös. Vasemmalla maa tasoittuu, ja siellä seisoo '
-      + 'katedraali. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartta rajaa Granadan vanhan ytimen Sierra Nevadan '
+      + 'juurella noin 740 metrin korkeudessa. Kaupunki syntyi '
+      + 'kohtaan, jossa vuorilta tuleva Darro yhtyy Geniliin; Darro '
+      + 'katettiin 1800-luvun lopulla kadun alle ja virtaa nykyään '
+      + 'talojen alitse. Joen molemmin puolin nousee kaksi kukkulaa '
+      + 'vastakkain: toisella on Alhambran 142 000 neliömetrin '
+      + 'palatsialue, toisella Albaicínin valkoinen kaupunginosa. '
+      + 'Tasaisemmalla maalla lännessä seisoo katedraali. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Sacromonten luolista ja Granadan katedraalista ei ole
@@ -3668,25 +3661,21 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/ateena-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
     esittely: 'Ateena syntyi kallion ympärille. Akropolis kohoaa noin '
       + '90 metriä ympäröivän tasangon yli ja 156 metrin korkeuteen '
-      + 'merenpinnasta. Seinämät ovat jyrkät ja sisään pääsee vain '
-      + 'länsipäästä, ja rinteillä oli lähteitä, joten kukkula kesti '
-      + 'pitkänkin piirityksen. Meri jäi kauas: Pireuksen satama on '
-      + 'kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa '
-      + 'yhtään jokea. Ateena on siis linnavuoren kaupunki, ei sataman '
-      + 'eikä joen.\n\nKartalla ei siksi näy vettä. Sen tilalla '
-      + 'erottuu vaaleina laikkuina kukkuloiden puistoja: lounaassa '
-      + 'metsäinen Filopáppos, keskellä Akropoliin kallio rinteineen '
-      + 'ja idässä Kansallispuutarha. Koillisessa on vielä yksi '
-      + 'kukkula, jota kartta ei näytä mutta numero löytää: '
-      + 'Lykavittós, 277 metriä korkea ja koko keskustan korkein '
-      + 'kohta. Kukkuloiden välissä vanhat kadut ovat kapeita ja '
-      + 'mutkaisia. Pohjoisempana ne suoristuvat, '
-      + 'sillä se osa piirrettiin 1830-luvulla kerralla uuden '
-      + 'pääkaupungin ruutukaavaksi. Oikeassa alalaidassa erottuu '
-      + 'hevosenkengän muotoinen stadion. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+      + 'merenpinnasta; seinämät ovat jyrkät ja sisään pääsee vain '
+      + 'länsipäästä, joten kukkula kesti pitkänkin piirityksen. Meri '
+      + 'jäi kauas, sillä Pireuksen satama on kahdeksan kilometriä '
+      + 'lounaaseen, eikä keskustan läpi virtaa yhtään jokea. Kartan '
+      + 'alueella ovat Akropoliin rinteet, antiikin kaupungin torit ja '
+      + 'kukkuloiden puistot, ja koillisessa kohoaa vielä Lykavittós, '
+      + '277 metriä korkea ja koko keskustan korkein kohta. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAKSI TÄSMENNYSSIVUANSAA, jotka on tarkistettu 9.8.2026 —
@@ -4311,15 +4300,19 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/madrid-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 40.43, etela: 40.406, lansi: -3.72, ita: -3.675 },
-    esittely: 'Madrid oli pieni linnoituskaupunki, kunnes kuningas '
-      + 'Filip II siirsi hovinsa tänne vuonna 1561. Sen jälkeen '
-      + 'kaupunki kasvoi ulospäin keskustastaan kuin puu '
-      + 'vuosirenkaineen, ja kartalla se näkyy yhä: vanhat kadut '
-      + 'mutkittelevat kapeina, uudemmat kulkevat suorina ja '
-      + 'leveinä.\n\nPuerta del Solin kiveyksessä on laatta, josta '
-      + 'Espanjan tiet mitataan: se on kilometri nolla, ja maan '
-      + 'päätiet lähtevät siitä ulospäin kuin kellotaulun viisarit. '
-      + 'Kartan itälaidan iso vihreä on Retiro, entinen kuninkaan '
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartta rajaa Madridin vanhan ytimen kuninkaanlinnalta '
+      + 'Retiron portille. Madrid oli pieni linnoituskaupunki, kunnes '
+      + 'kuningas Filip II siirsi hovinsa tänne vuonna 1561, ja sen '
+      + 'jälkeen kaupunki kasvoi ulospäin keskustastaan: vanhat kadut '
+      + 'mutkittelevat kapeina, uudemmat kulkevat suorina ja leveinä. '
+      + 'Reitin varrella ovat Plaza Mayor ja Puerta del Sol, jonka '
+      + 'kiveyksessä on kilometri nolla, laatta, josta Espanjan '
+      + 'päätiet mitataan. Idässä on Retiro, entinen kuninkaan '
       + 'puutarha, joka siirtyi kaupungille ja kaikkien käyttöön vasta '
       + '1868. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [

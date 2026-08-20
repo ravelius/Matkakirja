@@ -4484,6 +4484,11 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E2 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * selitteet käytiin läpi ja Casa Batllón iltakuvan kaksi virkettä
+   * yhdistettiin; muut olivat jo valmiiksi yksivirkkeisiä.
+   */
   barcelona: {
     'Sagrada Família': {
       aika: '1882–',
@@ -4561,9 +4566,9 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Casa Batlló facade at night.JPG',
           lahde: 'Mikenorton, Wikimedia Commons (CC BY-SA 3.0)',
-          selite: 'Casa Batllón julkisivu valaistuna illalla. Mosaiikki hohtaa '
-            + 'lampuissa, ja parvekkeet erottuvat naamiomaisina Passeig de '
-            + 'Gràcialle.',
+          selite: 'Casa Batllón julkisivu valaistuna illalla, kun '
+            + 'mosaiikki hohtaa lampuissa ja parvekkeet erottuvat '
+            + 'naamiomaisina Passeig de Gràcialle.',
         },
       ],
       lahde: 'Wikipedia',
