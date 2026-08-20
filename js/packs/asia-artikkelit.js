@@ -32,8 +32,18 @@
 // päivänä: intro jaetaan 2–3 kappaleeseen '\n\n'-rajalla kuten
 // teksti-kentässä, ja 1–3 avainkohtaa saa lihavoida **näin**.
 // Remontti etenee erissä; erässä R3 uuteen asuun kirjoitettiin
-// Mosul, Aleppo, Damaskos ja Luxor. Kappaleet ja boldit vaativat
-// leipätekstin renderöijän — ks. erän loppuraportti.
+// Mosul, Aleppo, Damaskos ja Luxor ja erässä R4 Sanaa, Aden, Masqat
+// ja Tabriz. Kappaleet ja boldit vaativat leipätekstin renderöijän —
+// ks. erän loppuraportti.
+//
+// ERÄ R4 (20.8.2026) SAI UUDET LUVUT en-Wikipedian raakateksteistä
+// (Sanaa, Aden, Muscat, Tabriz; haettu 20.8.2026): Sanaan asukasluku
+// 2 545 000 (2017) ja asema yhtenä maailman korkeimmalla sijaitsevista
+// pääkaupungeista, Adenin 863 000 (2017) ja etäisyys Bab el-Mandebiin
+// 170 km, Masqatin kaupunkiseudun 1,72 miljoonaa (2022) ja kuusi
+// wilajaa, Tabrizin 1 558 693 (laskenta 2016) sekä Urmiajärven
+// etäisyys 60 km. Muu aineisto tulee kaupunkien omista, jo
+// tarkistetuista lehtiteksteistä.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'Izmir on Turkin kolmanneksi suurin kaupunki ja sen tärkein '
@@ -520,10 +530,25 @@ export const ASIA_ARTIKKELIT = {
       + 'voi kuvitella.',
   },
   Sanaa: {
-    intro: 'Sanaa on Jemenin pääkaupunki ja yksi maailman '
-      + 'vanhimmista asutuista kaupungeista. Sen vanhassakaupungissa on '
-      + 'tuhansia savitiilitaloja, joista monet ovat kuusi- tai '
-      + 'seitsemänkerroksisia.',
+    intro: 'Sanaa on Jemenin pääkaupunki ja suurin kaupunki, ja se on runsaan '
+      + '2 200 metrin korkeudessa vuorten rajaamalla tasangolla — yksi '
+      + 'maailman korkeimmalla sijaitsevista pääkaupungeista. Idässä kohoaa '
+      + 'Jabal Nuqum, lännessä Arabian niemimaan korkeimman vuoren juuret, ja '
+      + 'kaupunki on siksi kasvanut vain pohjoisesta etelään. Asukkaita oli '
+      + 'vuoden 2017 tilastossa noin 2,5 miljoonaa.'
+      + '\n\n'
+      + 'Nimi juontuu sabalaisesta sanasta masnaa, linnoitus, ja vanhin '
+      + 'tunnettu maininta kaupungista on 400-luvulta eKr. **Vanhakaupunki** '
+      + 'on Unescon maailmanperintökohde vuodesta 1986: savimuurin sisällä on '
+      + 'yli sata moskeijaa, kaksitoista kylpylää ja 6 500 taloa, ja niiden '
+      + 'joukossa Suuri moskeija, joka on perimätiedon mukaan 600-luvulta ja '
+      + 'siten islamilaisen maailman vanhimpia. Osmanit valtasivat kaupungin '
+      + '1547, menettivät sen 1629 ja palasivat vasta vuonna **1872**.'
+      + '\n\n'
+      + 'Jemenin sisällissota on kestänyt vuodesta 2014, eikä maahan '
+      + 'matkustaminen ole nyt turvallista: vanhastakaupungista tuhoutui '
+      + 'vuonna 2015 ilmaiskuissa historiallisia taloja, ja Unesco on '
+      + 'teettänyt niiden korjauksia.',
     teksti: 'Sanaa on noin 2 250 metrin korkeudessa vuorten ympäröimässä '
       + 'laaksossa. Korkeus tekee ilmastosta viileän ja kuivan keskellä '
       + 'Arabiaa: päivät ovat lämpimiä, yöt viileitä, eikä kuumuus ole '
@@ -542,9 +567,26 @@ export const ASIA_ARTIKKELIT = {
       + 'Kunnostustyötä tehdään perinteisillä menetelmillä.',
   },
   Aden: {
-    intro: 'Aden on rakennettu sammuneen tulivuoren kraatteriin. '
-      + 'Suojaisa satama teki siitä yhden Punaisenmeren tärkeimmistä '
-      + 'pysähdyspaikoista heti Suezin kanavan avaamisen jälkeen.',
+    intro: 'Aden on vanha satamakaupunki Arabian niemimaan etelärannikolla, '
+      + 'Adeninlahden pohjoisrannalla ja 170 kilometriä Bab el-Mandebin '
+      + 'salmesta itään. Kaupunki on kahdella niemellä, ja niiden väliin jää '
+      + 'yksi maailman suurimmista luonnonsatamista. Vanhin kaupunginosa '
+      + 'Crater on sammuneen tulivuoren pohjalla Jabal Shamsanin vuoriston '
+      + 'ympäröimänä; merta on molemmin puolin, joten vuoden keskilämpötila '
+      + 'pysyy 29 asteen tuntumassa. Asukkaita oli vuoden 2017 tilastossa '
+      + 'noin 863 000.'
+      + '\n\n'
+      + 'Kreikkalaiset tunsivat paikan nimellä Eudaimon, ja se oli '
+      + 'Punaisenmeren kaupan jälleenlaivauspaikka jo ennen ajanlaskun alkua. '
+      + '**Britit ottivat Adenin vuonna 1839** ja julistivat sen '
+      + 'vapaakauppasatamaksi 1850; kun Suezin kanava avattiin 1869, siitä '
+      + 'tuli höyrylaivojen hiilenottopaikka Intian-reitille. Vuoteen 1937 '
+      + 'asti Adenia hallittiin osana Brittiläistä Intiaa, ja vuosina '
+      + '1967–1990 se oli **Etelä-Jemenin pääkaupunki**.'
+      + '\n\n'
+      + 'Jemenin sisällissota on kestänyt vuodesta 2014, eikä maahan '
+      + 'matkustaminen ole nyt turvallista; Aden on ollut maaliskuusta 2015 '
+      + 'alkaen maan väliaikainen pääkaupunki.',
     teksti: 'Aden on Jemenin etelärannikolla, siinä missä Punainenmeri '
       + 'kohtaa Adeninlahden. Kaupungin vanha osa Crater on '
       + 'kirjaimellisesti tulivuoren kraatterin sisällä: mustat kalliot '
@@ -586,9 +628,26 @@ export const ASIA_ARTIKKELIT = {
       + 'värin ja tuoksun mukaan.',
   },
   Masqat: {
-    intro: 'Masqat on Omanin pääkaupunki, puristettuna meren ja '
-      + 'paljaiden vuorten väliin. Sataman suulla seisoo kaksi '
-      + 'portugalilaisten 1500-luvulla rakentamaa linnaketta vastakkain.',
+    intro: 'Masqat on Omanin pääkaupunki maan koillisrannikolla Omaninlahden '
+      + 'äärellä lähellä Hormuzinsalmea, ja **Hajar-vuorten** harjanteet '
+      + 'tulevat paikoin aivan mereen asti, joten kaupunki on venynyt '
+      + 'nauhaksi lahtia ja laaksoja. Kaupunkiseudulla asui vuonna 2022 noin '
+      + '1,72 miljoonaa ihmistä kuudessa wilajassa, mutta vanha Masqat on yhä '
+      + 'pieni, runsaan kolmenkymmenentuhannen asukkaan kaupunginosa. Talot '
+      + 'ovat matalia ja valkoisia, sillä määräykset rajoittavat korkeutta.'
+      + '\n\n'
+      + 'Nimi tarkoittaa ankkuripaikkaa, ja satama tunnettiin idän ja lännen '
+      + 'välisenä kauppapaikkana jo ensimmäisellä vuosisadalla. '
+      + '**Portugalilaiset** valtasivat kaupungin vuonna 1507 ja linnoittivat '
+      + 'sataman suun kahdella linnakkeella, jotka valvovat väylää yhä; '
+      + 'omanilaiset ottivat sataman takaisin vuonna 1650. Myöhemmin Omanin '
+      + 'sulttaanikunnan valta ulottui Sansibariin asti.'
+      + '\n\n'
+      + 'Kaupunki kasvoi nopeasti 1970-luvulta alkaen, ja sen '
+      + 'tunnusrakennukset ovat siksi nuoria: sulttaanin seremoniallinen '
+      + 'palatsi, suurmoskeija ja oopperatalo ovat viime vuosikymmeniltä. '
+      + 'Mutrahin basaari sataman vieressä on sen sijaan Omanin vanhimpia ja '
+      + 'yhä käytössä.',
     teksti: 'Masqat on Omaninlahden rannalla Hajar-vuorten juurella. '
       + 'Vuoret tulevat paikoin aivan mereen asti, joten kaupunki on '
       + 'venynyt pitkäksi nauhaksi rantaviivaa myöten. Talot ovat '
@@ -741,9 +800,26 @@ export const ASIA_ARTIKKELIT = {
       + 'uudelleen alkuperäisistä tiilistä.',
   },
   Tabriz: {
-    intro: 'Tabriz on Luoteis-Iranin suurin kaupunki ja silkkitien vanha '
-      + 'solmukohta. Sen katettu basaari on maailman suurimpia, ja '
-      + 'sillä on oma kaupunginosansa pelkästään matoille.',
+    intro: 'Tabriz on Iranin kuudenneksi suurin kaupunki ja Itä-Azerbaidžanin '
+      + 'maakunnan pääkaupunki. Se on Quru-joen laaksossa '
+      + 'tulivuorenharjanteiden välissä — etelässä Sahand, pohjoisessa Eynali '
+      + '— ja laakso laskee lännessä Urmiajärvelle 60 kilometrin päässä. '
+      + 'Vuoden 2016 laskennassa kaupungissa oli 1 558 693 asukasta ja '
+      + 'laajemmalla seudulla yli 1,7 miljoonaa. Kadulla ja kaupassa puhutaan '
+      + 'iranilaista azeria, ja persia opitaan koulussa.'
+      + '\n\n'
+      + 'Keskusta on käytännössä yksi rakennus: **maailman suurin katettu '
+      + 'basaari**, jonka tiiliholvisia kujia pitkin kuljetaan paikasta '
+      + 'toiseen ja joka on Unescon maailmanperintökohde vuodesta 2010. '
+      + 'Kaupunki oli silkkitien pohjoisen haaran etappi, ja sekä Marco Polo '
+      + 'että Ibn Battuta mainitsivat basaarin. Käsin solmittu '
+      + '**tabrizilainen matto** on yhä kaupungin tunnetuin tuote.'
+      + '\n\n'
+      + 'Vanhaa rakennuskantaa on silti vähän, sillä seutu on '
+      + 'maanjäristysaluetta ja kaupunki on rakennettu uudelleen useaan '
+      + 'otteeseen; säilyneet muistomerkit ovat enimmäkseen ajoilta, joina '
+      + 'Tabriz oli pääkaupunki — ilkhaanien vuodesta 1265, Qara Qoyunlun ja '
+      + 'Aq Qoyunlun 1375–1501 ja safavidien vuoteen 1555.',
     teksti: 'Tabriz on noin 1 350 metrin korkeudessa vuorten ympäröimässä '
       + 'laaksossa Iranin Itä-Azerbaidžanissa. Kaupungin valtakieli on '
       + 'azeri, ja se on ollut vuosisatojen ajan Iranin portti '

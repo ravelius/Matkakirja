@@ -23187,6 +23187,13 @@ export const KULTTUURI_KATEGORIAT = {
    * MASQATIN KANSISIVU (nippu 2, 12.8.2026). Aihesivun id on arki,
    * koska OMN-maalehdellä on vuoret, meri, historia ja luonto —
    * sama id kaupungilla peittäisi maan sivun (rakennaSivut).
+   *
+   * TEKSTIREMONTTI 20.8.2026 (erä R4, Raamattu "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän lehden kuvatekstit tiivistettiin yhteen virkkeeseen —
+   * kuvassa näkyvä olennainen säilyi, luettelot karsittiin. Nostot,
+   * opas ja johdannot jäivät ennalleen. Lehden ETUSIVUN LEIPÄTEKSTI ei
+   * ole täällä vaan asia-artikkelit.js:n Masqat-intro, joka
+   * kirjoitettiin samassa erässä uuteen mittaan.
    */
   masqat: [
     {
@@ -23198,26 +23205,23 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 29.jpg',
-          selite: 'Al Alamin palatsi aukion perällä. Molemmin puolin aukiota '
-            + 'jatkuu valkoinen kaarikäytävä, keskellä on punaruskeaksi '
-            + 'kivetty ajotie ja kaksi riviä leikattuja puita, ja '
-            + 'palatsin takaa erottuu paljas vuorenharjanne.',
+          selite: 'Al Alamin palatsi aukion perällä: molemmin puolin jatkuu '
+            + 'valkoinen kaarikäytävä, keskellä on kivetty ajotie '
+            + 'puurivistöineen, ja takana erottuu paljas vuorenharjanne.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Royal Opera House Muscat, Muscat, Sultanate of Oman.jpg',
-          selite: 'Oopperatalon katsomo permannolta ylöspäin kuvattuna. Kolme '
-            + 'parvea kaartuu salin ympäri, puupinnat on jaettu '
-            + 'kullattuihin ruutuihin, penkit ovat punaiset ja '
-            + 'keskimmäisen parven etureunassa on kullattu tunnus.',
+          selite: 'Oopperatalon katsomo permannolta: kolme parvea kaartuu '
+            + 'salin ympäri, puupinnat on jaettu kullattuihin ruutuihin ja '
+            + 'penkit ovat punaiset.',
           lahde: 'Chief National Guard Bureau, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Riyam Park with incense burner Mabkhara (47954080007).jpg',
-          selite: 'Suitsukeastian muotoinen monumentti paljaan kalliokummun '
-            + 'laella Riyamin puistossa. Valkoisen astian kuvussa on '
-            + 'kaarevat aukot, ja alhaalla on puistoa: kukkapenkkejä, '
-            + 'palmuja ja mustaksi maalattu rauta-aita.',
+          selite: 'Suitsukeastian muotoinen monumentti kalliokummun laella '
+            + 'Riyamin puistossa, valkoisen astian kuvussa kaarevat aukot ja '
+            + 'alhaalla kukkapenkkejä ja palmuja.',
           lahde: 'Eduard Marmet, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -23231,10 +23235,9 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Muttrah Corniche 2.jpg',
-          selite: 'Mutrahin lahti mereltä päin. Rannassa on rivi valkoisia '
-            + 'taloja, laiturissa keinuu kaksi puista dhow-alusta, ja '
-            + 'kallionkielekkeellä seisoo linnake lippusalkoineen. Takana '
-            + 'nousee ruskea vuorenharjanne.',
+          selite: 'Mutrahin lahti mereltä: rannassa rivi valkoisia taloja, '
+            + 'laiturissa kaksi puista dhow-alusta ja kallionkielekkeellä '
+            + 'linnake lippusalkoineen.',
           lahde: 'Juozas Šalna, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -23248,9 +23251,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Mountain Vista.jpg',
           selite: 'Hajar-vuoriston harjanteita Masqatin lähellä olevalta '
-            + 'polulta. Rinteet ovat paljasta kiveä, kasvillisuutta on '
-            + 'vain harvoina pensastupsuina, ja kaukana laaksossa häämöttää '
-            + 'kaupunkia.',
+            + 'polulta: rinteet ovat paljasta kiveä, ja kaukana laaksossa '
+            + 'häämöttää kaupunkia.',
           lahde: 'Daredeep33, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -23269,11 +23271,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vitriiniin. Museo oli ensimmäinen Lähi-idässä, jonka '
             + 'opasteissa on näkövammaisille tarkoitettua arabiankielistä '
             + 'pistekirjoitusta.',
-          selite: 'Omanin kansallismuseon julkisivu vaaleaa kiveä: keskellä '
-            + 'korkea teräväkärkinen kaari, sivuilla holvikäytävät ja '
-            + 'päissä torneiksi korotetut osat. Katolla liehuu Omanin '
-            + 'lippu, ja rakennuksen takana nousee paljas ruskea '
-            + 'vuorenrinne.',
+          selite: 'Omanin kansallismuseon vaaleakivinen julkisivu: keskellä '
+            + 'korkea teräväkärkinen kaari, sivuilla holvikäytävät, katolla '
+            + 'Omanin lippu ja takana paljas vuorenrinne.',
           lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -23289,10 +23289,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lavalla nähtiin Domingon lisäksi Andrea Bocelli ja Renée '
             + 'Fleming, myöhemmin muun muassa sellisti Yo-Yo Ma ja '
             + 'Mariinski-teatterin Joutsenlampi.',
-          selite: 'Oopperatalon aula ennen esitystä. Marmoriportaat nousevat '
-            + 'kahtaalle punaista mattoa pitkin, seinissä on tummasta '
-            + 'puusta tehtyjä teräväkärkisiä kaaria ja katossa maalattuja '
-            + 'palkkeja; alhaalla odottaa yleisöä.',
+          selite: 'Oopperatalon aula ennen esitystä: marmoriportaat nousevat '
+            + 'kahtaalle punaista mattoa pitkin, seinissä on tummapuisia '
+            + 'teräväkärkisiä kaaria ja alhaalla odottaa yleisöä.',
           lahde: 'Juozas Šalna, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -23307,10 +23306,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kruunu, jossa on 600 000 kristallia ja 1 122 lamppua, ja '
             + 'kruunun sisällä on portaat, joita pitkin lamput '
             + 'vaihdetaan. Samanlaisia pienempiä kruunuja on talossa 34.',
-          selite: 'Suurmoskeijan päärukoussali. Kupolin keskeltä riippuu '
-            + 'jättimäinen kristallikruunu, holvit on peitetty vihreällä '
-            + 'ja kullalla, perällä erottuu mihrab-syvennys, ja kävijät '
-            + 'kulkevat maton yli levitettyä sinistä kaistaa pitkin.',
+          selite: 'Suurmoskeijan päärukoussali: kupolin keskeltä riippuu '
+            + 'jättimäinen kristallikruunu, holvit on peitetty vihreällä ja '
+            + 'kullalla, ja kävijät kulkevat maton yli levitettyä sinistä '
+            + 'kaistaa pitkin.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -23401,10 +23400,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tavan mukaan hotellista etukäteen.',
               kuva: {
                 tiedosto: 'Sur 002 (30932766735).jpg',
-                selite: 'Dhow rakenteilla Surin telakalla. Vaalea puurunko '
-                  + 'seisoo tukipuiden varassa, laudat on kiinnitetty '
-                  + 'rivissä nauloilla, ja kuvassa oleva veneenrakentaja '
-                  + 'istuu selin telineen alla.',
+                selite: 'Dhow rakenteilla Surin telakalla: vaalea puurunko '
+                  + 'seisoo tukipuiden varassa, ja veneenrakentaja istuu '
+                  + 'selin telineen alla.',
                 lahde: 'John Crane from Prague, Czech Republic, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -23430,9 +23428,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'FalajDaris.JPG',
                 selite: 'Falaj Daris, yksi viidestä maailmanperintöön '
-                  + 'merkitystä falajista. Vesi juoksee kapeassa uomassa '
-                  + 'korkeiden ladottujen kivimuurien välissä, ja '
-                  + 'yläpuolella kaartuu piikkinen akasiapensaikko.',
+                  + 'merkitystä falajista: vesi juoksee kapeassa uomassa '
+                  + 'korkeiden ladottujen kivimuurien välissä akasiapensaikon '
+                  + 'alla.',
                 lahde: 'Paolotacchi, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -23457,11 +23455,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'mukana.',
               kuva: {
                 tiedosto: 'Omani Kummahs in a shop.jpg',
-                selite: 'Kummah-lakkeja pinossa Mutrahin basaarin '
-                  + 'myymälässä. Lakit ovat valkoista kangasta, ja '
-                  + 'jokaiseen on kirjailtu ruskealla, vihreällä ja '
-                  + 'sinisellä oma kuvionsa; reunoissa on rivi pieniä '
-                  + 'reikiä.',
+                selite: 'Kummah-lakkeja pinossa Mutrahin basaarin myymälässä: '
+                  + 'valkoiseen kankaaseen on kirjailtu ruskealla, vihreällä '
+                  + 'ja sinisellä kuhunkin oma kuvionsa.',
                 lahde: 'Riyadh Al Balushi, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -23485,12 +23481,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'on siis ulkoa katsottava rakennus.',
               kuva: {
                 tiedosto: 'Mascate.png',
-                selite: 'Masqat 1600-luvun portugalilaisessa '
-                  + 'puupiirroksessa. Hevosenkengän muotoisen lahden '
-                  + 'molemmilla niemekkeillä on tornillinen linnake, '
-                  + 'rannalla rivejä taloja, ja lahdelle on piirretty '
-                  + 'ankkuri. Nimi lukee muodossa MASCATE, ja vasemmassa '
-                  + 'yläkulmassa on kirjan sivunumero 41.',
+                selite: 'Masqat 1600-luvun portugalilaisessa puupiirroksessa '
+                  + 'nimellä MASCATE: hevosenkengän muotoisen lahden '
+                  + 'molemmilla niemekkeillä on tornillinen linnake, ja '
+                  + 'lahdelle on piirretty ankkuri.',
                 lahde: 'Manuel de Faria y Sousa, Wikimedia Commons (PD)',
               },
             },
@@ -23534,10 +23528,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'huhmaressa. Huhmaren kalkkeesta naapurit tiesivät, että '
             + 'kahvia on tulossa ja että vieraat ovat tervetulleita. '
             + 'Kuppi, finjan, on pieni ja korvaton.',
-          selite: 'Kuparista ja messingistä tehty dallah Bait al-Zubairin '
-            + 'museossa vanhassa Masqatissa. Pinta on kaiverrettu täyteen '
-            + 'kukka- ja köynnöskuvioita, kansi päättyy piikkiin ja nokka '
-            + 'kaartuu alaspäin kuin linnun nokka.',
+          selite: 'Kuparinen dallah Bait al-Zubairin museossa: pinta on '
+            + 'kaiverrettu täyteen kukka- ja köynnöskuvioita, kansi päättyy '
+            + 'piikkiin ja nokka kaartuu alaspäin kuin linnun nokka.',
           lahde: 'Reda Kerbush, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -23554,11 +23547,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'käteen, ja jokainen ohjaa savua vaatteidensa alle ja '
             + 'hiuksiinsa. Illan päätteeksi sama kierros on kohtelias '
             + 'merkki siitä, että vierailu on ohi.',
-          selite: 'Savesta poltettu suitsutusastia museovitriinissä. Se on '
-            + 'muotoiltu veneeksi: kokka ja perä nousevat ylös, kannella '
-            + 'seisoo kaksi kupolitornia ja niiden välissä laatikkomainen '
-            + 'koppi. Kylkiin on leikattu kolmiomaisia reikiä ja maalattu '
-            + 'punaruskeaa kuviota.',
+          selite: 'Veneeksi muotoiltu savinen suitsutusastia '
+            + 'museovitriinissä: kokka ja perä nousevat ylös, kannella seisoo '
+            + 'kaksi kupolitornia, ja kylkiin on leikattu kolmiomaisia '
+            + 'reikiä.',
           lahde: 'Mohammed90m, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -23573,10 +23565,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kankaasta sidottu turbaani; omanilaiset eivät käytä sen '
             + 'pitämiseen mustaa agal-rengasta, joka on tavallinen '
             + 'muualla Persianlahdella.',
-          selite: 'Kaksi omanilaispoikaa Masqatin kansainvälisillä '
-            + 'kirjamessuilla. Molemmilla on valkoinen dishdasha ja '
-            + 'päässä kirjailtu kummah-lakki, ja pöydän yli kirjapinojen '
-            + 'takaa ojennetaan heille sinistä paperia.',
+          selite: 'Kaksi omanilaispoikaa Masqatin kirjamessuilla valkoisissa '
+            + 'dishdashoissa ja kirjailluissa kummah-lakeissa, kirjapinojen '
+            + 'takaa heille ojennetaan sinistä paperia.',
           lahde: 'Mostafameraji, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -26550,6 +26541,13 @@ export const KULTTUURI_KATEGORIAT = {
    * TABRIZIN KANSISIVU (nippu 2, 13.8.2026). IRN-maalehti käsittelee
    * historian, rakennukset, puutarhat, ruoan ja käsityön, joten
    * kaupungille jää luonto ja talvi — Sahand, Eynali ja lumi.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (erä R4, Raamattu "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän lehden kuvatekstit tiivistettiin yhteen virkkeeseen.
+   * Lehden ETUSIVUN LEIPÄTEKSTI on asia-artikkelit.js:n Tabriz-intro,
+   * joka kirjoitettiin samassa erässä uuteen mittaan. Iran-linjaus
+   * pitää: intro kertoo maantieteen, basaarin, matot ja
+   * pääkaupunkikaudet eikä koske nykypolitiikkaan.
    */
   tabriz: [
     {
@@ -26562,28 +26560,26 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '11 Chardin Tabriz 1673.png',
-          selite: 'Jean Chardinin piirros Tabrizista vuodelta 1673, nimi '
-            + 'kirjoitettuna muotoon TAURIS. Reunan luetteloissa '
-            + 'mainitaan kuninkaan aarrekammio, kymmenkunta moskeijaa, '
-            + 'suuri sairaala ja kapusiinien hospitaali. Matalan '
-            + 'kaupungin yllä kohoavat kupolit ja minareetit.',
+          selite: 'Jean Chardinin piirros Tabrizista vuodelta 1673 nimellä '
+            + 'TAURIS: matalan kaupungin yllä kohoavat kupolit ja minareetit, '
+            + 'ja reunan luettelo nimeää muun muassa kuninkaan aarrekammion '
+            + 'ja kymmenkunta moskeijaa.',
           lahde: 'Jean Chardin, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Landscape of Tabriz 03.jpg',
-          selite: 'Tabriz iltapäivän matalassa valossa, kuvattuna '
-            + 'kaupungin yllä seisovan tuulivoimalan vierestä. Matalien '
-            + 'talojen lomassa erottuu urheilukenttä ja sinikupolinen '
-            + 'rakennus. Ylhäällä talot loppuvat paljaisiin kukkuloihin.',
+          selite: 'Tabriz iltapäivän matalassa valossa kaupungin yllä '
+            + 'seisovan tuulivoimalan vierestä: talojen lomassa erottuu '
+            + 'urheilukenttä ja sinikupolinen rakennus, ja ylhäällä talot '
+            + 'loppuvat paljaisiin kukkuloihin.',
           lahde: 'Mostafameraji, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'A street in Tabriz.jpg',
-          selite: 'Hedelmäkoju Taleghanin kadulla Tabrizissa. '
-            + 'Tarjottimilla on persikoita, omenoita, luumuja, meloneita '
-            + 'ja banaaneja, ja koju valaistaan johtojen varassa '
-            + 'roikkuvilla hehkulampuilla. Kadulla odottaa keltainen '
-            + 'taksi ovi auki.',
+          selite: 'Hedelmäkoju Taleghanin kadulla: tarjottimilla on '
+            + 'persikoita, omenoita, luumuja ja meloneita, kojua valaisevat '
+            + 'johtojen varassa roikkuvat hehkulamput, ja kadulla odottaa '
+            + 'keltainen taksi.',
           lahde: 'Monsieur_mahdi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -26597,26 +26593,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Tabriz Bazaar Carpet Corner.jpg',
-          selite: 'Basaarin mattokäytävä. Punatiilinen holvi kaartuu '
-            + 'korkeana käytävän yllä, kupolien laessa on valoaukkoja, '
-            + 'ja käytävän lattialle on levitetty ja kääritty mattoja '
-            + 'rivistä toiseen.',
+          selite: 'Basaarin mattokäytävä: punatiilinen holvi kaartuu korkeana '
+            + 'käytävän yllä valoaukkoineen, ja lattialle on levitetty ja '
+            + 'kääritty mattoja rivistä toiseen.',
           lahde: 'Nasser Ghassembaglou, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Saat Tower - 4R9A0823.jpg',
-          selite: 'Tabrizin kaupungintalo eli Saat-torni iltavalaistuksessa. '
-            + 'Tiiliseinäisen rakennuksen keskeltä nousee kellotorni, '
-            + 'katonreunassa on rivi vaaleita koristepylväitä, ja kadun '
-            + 'yli on pingotettu lamppuketju.',
+          selite: 'Tabrizin kaupungintalo eli Saat-torni iltavalaistuksessa: '
+            + 'tiiliseinäisen rakennuksen keskeltä nousee kellotorni, ja '
+            + 'kadun yli on pingotettu lamppuketju.',
           lahde: 'Monaesfandiar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tabriz Bazaar Bridge.jpg',
-          selite: 'Kaupungin halki kulkeva kivetty jokiuoma keväällä: '
-            + 'pohjalla on vain kapea vesijuova. Oikealla on kupolirivin '
-            + 'peittämä rakennus, joka kaartuu uoman yli, ja vasemmalla '
-            + 'tiiliseinäinen talo kupoleineen.',
+          selite: 'Kaupungin halki kulkeva kivetty jokiuoma keväällä, '
+            + 'pohjalla vain kapea vesijuova ja oikealla uoman yli kaartuva '
+            + 'kupolirivin peittämä rakennus.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -26636,11 +26629,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '(1906–1988), jonka runoelma Heydar Babaya Salam on '
             + 'käännetty yli kolmellekymmenelle kielelle. Nykyinen '
             + 'muistorakennus on pystytetty paikalle 1970-luvulta alkaen.',
-          selite: 'Runoilijoiden mausoleumin muistorakennus. Vaaleista '
-            + 'kivilaatoista ladottu rakennelma muodostuu toisiinsa '
-            + 'lomittuvista teräväkärkisistä kaarista, jotka kasvavat '
-            + 'reunoilta keskelle päin, ja kaarien väliin jää aukkoja '
-            + 'viuhkamaisine holvikuvioineen.',
+          selite: 'Runoilijoiden mausoleumin muistorakennus: vaaleista '
+            + 'kivilaatoista ladotut teräväkärkiset kaaret lomittuvat '
+            + 'toisiinsa ja kasvavat reunoilta keskelle päin.',
           lahde: 'Arashk rp2, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -26658,11 +26649,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nykyään ravintola. Länsirinteen lähde syöttää altaaseen '
             + 'vettä viittä terassia pitkin. Puistolla on kaksi nimeä: '
             + 'Shah Goli on kuninkaan lampi, El Goli kansan järvi.',
-          selite: 'El Golin paviljonki. Keltaisesta tiilestä muurattu '
-            + 'monikulmainen rakennus on kaksikerroksinen, ja molemmissa '
-            + 'kerroksissa kiertää rivi teräväkärkisiä kaaria; katolla on '
-            + 'keltainen, uurteinen kupoli. Paviljongilta laskee '
-            + 'laatoitettu terassi vesikouruineen.',
+          selite: 'El Golin paviljonki: keltaisesta tiilestä muurattu '
+            + 'monikulmainen kaksikerroksinen rakennus, jonka molemmissa '
+            + 'kerroksissa kiertää rivi teräväkärkisiä kaaria ja jonka '
+            + 'katolla on uurteinen kupoli.',
           lahde: 'Meysem, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -26679,11 +26669,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja merkittiin kansallisesti suojelluksi kohteeksi. '
             + 'Vuodesta 2006 siinä on toiminut museo, jonka aihe on '
             + 'qajar-kausi 1781–1925.',
-          selite: 'Amir Nezamin talon piha. Kaksikerroksisen rakennuksen '
-            + 'keskellä on tiilikuvioinen kolmiopääty, sen alla rivi '
-            + 'valkoisia pylväitä ja kaarevissa ikkunoissa puiset ristikot. '
-            + 'Holvikaariset siipirakennukset reunustavat pihaa, jolla on '
-            + 'kaksi vesiallasta.',
+          selite: 'Amir Nezamin talon piha: kaksikerroksisen rakennuksen '
+            + 'keskellä on tiilikuvioinen kolmiopääty ja sen alla rivi '
+            + 'valkoisia pylväitä, ja holvikaariset siivet reunustavat pihan '
+            + 'kahta vesiallasta.',
           lahde: 'Farzad Karimnijad, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -26731,11 +26720,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Tabriz Bazaar Mozaffariyeh Arcade (10).jpg',
-          selite: 'Mozaffariehin käytävä basaarissa. Punatiilinen '
-            + 'ristiholvi nousee korkealle, laesta putoaa valokiila '
-            + 'lattialle asti, ja käytävän molemmin puolin on '
-            + 'kaarevaikkunaisia myymälöitä parvekkeineen. Lattialla on '
-            + 'mattoja pinoissa.',
+          selite: 'Mozaffariehin käytävä basaarissa: punatiilisen ristiholvin '
+            + 'laesta putoaa valokiila lattialle asti, ja käytävän molemmin '
+            + 'puolin on kaarevaikkunaisia myymälöitä parvekkeineen.',
           lahde: 'AmirAK, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Tabriz on Iranin kuudenneksi suurin kaupunki ja '
@@ -26774,11 +26761,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'moottoritietä 2.',
               kuva: {
                 tiedosto: 'Tabriz Metro 2018.jpg',
-                selite: 'Metrojuna laiturissa. Valkoinen vaunusarja on '
+                selite: 'Metrojuna laiturissa: valkoinen vaunusarja on '
                   + 'raidoitettu sinisellä ja punaisella, keulassa palaa '
-                  + 'numero 101, ja laiturin katossa roikkuu opastekyltti, '
-                  + 'jossa lukee Line 1 - El Goli. Muutama matkustaja on '
-                  + 'kuvassa selin.',
+                  + 'numero 101, ja katon opastekyltissä lukee Line 1 - El '
+                  + 'Goli.',
                 lahde: 'NicholasNCE, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -26821,11 +26807,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kanssa vaihdetaan persiaan.',
               kuva: {
                 tiedosto: 'Fəraqan xalçası, Təbriz xalçaçılıq məktəbi.jpg',
-                selite: 'Tabrizin mattokoulun matto kokonaisuudessaan. '
-                  + 'Tummalla pohjalla toistuu tiheä vinoneliöverkko, '
-                  + 'jonka jokaisessa silmässä on pieni kukka tai '
-                  + 'kaareva lehti; reunoja kiertää useita kapeita '
-                  + 'kehyskaistoja, ja päistä riippuu vaalea hapsu.',
+                selite: 'Tabrizin mattokoulun matto kokonaisuudessaan: '
+                  + 'tummalla pohjalla toistuu tiheä vinoneliöverkko, jonka '
+                  + 'jokaisessa silmässä on pieni kukka tai kaareva lehti.',
                 lahde: 'Sefer azeri, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -26850,10 +26834,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'maan lähin portti Eurooppaan.',
               kuva: {
                 tiedosto: 'Kabood (Blue) mosque, Tabriz, Iran.jpg',
-                selite: 'Sinisen moskeijan tiilinen pylväskäytävä. '
-                  + 'Teräväkärkiset kaaret jatkuvat peräkkäin kauas, '
+                selite: 'Sinisen moskeijan tiilinen pylväskäytävä: '
+                  + 'teräväkärkiset kaaret jatkuvat peräkkäin kauas, ja '
                   + 'tiilikuvioon on ladottu turkoosinvihreitä paloja '
-                  + 'vinoneliöiksi, ja lattia on kiillotettua kiveä.',
+                  + 'vinoneliöiksi.',
                 lahde: 'Hameddaeipic, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -26898,11 +26882,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuoden väliin; vuorta pidetään uinuvana, eikä viimeisintä '
             + 'purkausta tunneta. Kasvien ja eläinten runsauden takia '
             + 'vuoristoa kutsutaan Iranissa vuorten morsiameksi.',
-          selite: 'Sahandin lumihuippu keväällä. Leveää kartiomaista '
-            + 'huippua peittää lumi, jota rikkovat tummat sulaneet läiskät '
-            + 'ja juovat, ja sen vierestä nousee lumeton harjanne. Vuoren '
-            + 'juurella levittäytyy vihreitä laidunmaita, joiden poikki '
-            + 'kulkee uomia ja kapea tie.',
+          selite: 'Sahandin lumihuippu keväällä: leveää kartiomaista huippua '
+            + 'peittää lumi tummine sulaneine läiskineen, ja juurella '
+            + 'levittäytyy vihreitä laidunmaita.',
           lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -26918,11 +26900,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Rinteille on istutettu metsää, ja alue on valtion '
             + 'metsäpuisto. Tabrizissa on kaikkiaan 132 puistoa, joista '
             + '97 on pieniä, 31 alueellisia ja 4 koko kaupungin puistoja.',
-          selite: 'Eynalin rinne aamun vastavalossa. Kukkulalle on '
-            + 'istutettu nuori metsä, jonka pikkupuut kasvavat riveissä '
-            + 'paljaassa ruskeassa maassa. Rinteen poikki kulkee narulla '
-            + 'rajattu polku, jonka varrella liikkuu ihmisiä, ja harjanteen '
-            + 'ristikkomasto kannattaa köysirataa.',
+          selite: 'Eynalin rinne aamun vastavalossa: paljaaseen ruskeaan '
+            + 'maahan istutetun nuoren metsän pikkupuut kasvavat riveissä, ja '
+            + 'rinteen poikki kulkee polku, jonka varrella liikkuu ihmisiä.',
           lahde: 'User:Abdossamad Talebpour, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -26938,11 +26918,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja kuumin 42,0 astetta 26. heinäkuuta 1966. Ranskalainen '
             + 'matkaaja Jean Chardin kirjoitti 1600-luvulla, että lumi '
             + 'pysyy seudun vuorilla yhdeksän kuukautta vuodessa.',
-          selite: 'El Golin puisto lumisateen jälkeen. Lehdettömien puiden '
-            + 'oksat ovat kauttaaltaan lumen peitossa, ja puurivien välissä '
-            + 'laskee suora käytävä puiston pohjalle. Altaan rannalla '
-            + 'seisoo vaalea monikulmainen paviljonki, jonka keltainen '
-            + 'kupoli on sekin lumen peittämä.',
+          selite: 'El Golin puisto lumisateen jälkeen: lehdettömien puiden '
+            + 'oksat ovat lumen peitossa, ja altaan rannalla seisoo '
+            + 'paviljonki, jonka keltainen kupoli on sekin valkoinen.',
           lahde: 'Faridb89, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -27940,6 +27918,13 @@ export const KULTTUURI_KATEGORIAT = {
    * teettää korjaustöitä, ja ensimmäinen matkustajalento kuuteen
    * vuoteen lähti Sanaan kentältä 17.5.2022. Osapuolet on jätetty
    * nimeämättä linjauksen mukaisesti.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (erä R4, Raamattu "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän lehden kuvatekstit tiivistettiin yhteen virkkeeseen.
+   * Lehden ETUSIVUN LEIPÄTEKSTI on asia-artikkelit.js:n Sanaa-intro,
+   * joka kirjoitettiin samassa erässä uuteen mittaan; sen viimeinen
+   * kappale sanoo nykytilanteen samalla tavalla neutraalisti kuin
+   * oppaan turvallisuusjakso, osapuolia nimeämättä.
    */
   sana: [
     {
@@ -27952,52 +27937,49 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Rooftops of Old Sana\'a (2286011017).jpg',
-          selite: 'Sanaan vanhankaupungin kattoja ylhäältä katsottuna. '
-            + 'Ruskeatiilisten talojen yläosat on kuvioitu valkoisella '
-            + 'kalkilla, ja tasakatoilla on vesisäiliöitä, '
-            + 'lautasantenneja ja kuivumassa olevaa pyykkiä. Keskellä '
-            + 'kohoaa valkoinen minareetti.',
+          selite: 'Vanhankaupungin kattoja ylhäältä: ruskeatiilisten talojen '
+            + 'yläosat on kuvioitu valkoisella kalkilla, tasakatoilla on '
+            + 'vesisäiliöitä ja pyykkiä, ja keskellä kohoaa valkoinen '
+            + 'minareetti.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Façades in the Old City of Sana\'a (2286046989).jpg',
-          selite: 'Kaksi sanaalaisen tornitalon julkisivua pilvetöntä '
-            + 'taivasta vasten. Valkoiset kipsivyöt kiertävät jokaisen '
-            + 'kerroksen, ikkunoiden yläpuolella on läpimurrettuja '
-            + 'puoliympyräikkunoita ja seinissä pyöreitä valkoisia '
-            + 'medaljonkeja.',
+          selite: 'Kaksi tornitalon julkisivua pilvetöntä taivasta vasten: '
+            + 'valkoiset kipsivyöt kiertävät jokaisen kerroksen, ikkunoiden '
+            + 'yllä on läpimurrettuja puoliympyräikkunoita ja seinissä '
+            + 'pyöreitä medaljonkeja.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Beside Bab Al-Yemen (10874332564).jpg',
-          selite: 'Aukio Jemenin portin vieressä illalla. Tornitalojen '
-            + 'katutasossa on valaistuja kauppoja markiiseineen, ja '
-            + 'keskellä palaa kolmilamppuinen katulyhty. Aukiolla liikkuu '
-            + 'tiheä ihmisjoukko.',
+          selite: 'Aukio Jemenin portin vieressä illalla: tornitalojen '
+            + 'katutasossa on valaistuja kauppoja markiiseineen, keskellä '
+            + 'palaa kolmilamppuinen katulyhty ja aukiolla liikkuu tiheä '
+            + 'ihmisjoukko.',
           lahde: 'Julian-G. Albert, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       avauskuvat: [
         {
           tiedosto: 'Bab-ul-Yemen, Sana\'a (2286823122).jpg',
-          selite: 'Bab al-Yaman ylhäältä. Portin kaariaukon kummallakin '
-            + 'puolella on pyöreä tiilitorni, ja muurin takaa nousee '
-            + 'kokonainen tornitalojen rinne kahtena valkoisena '
-            + 'minareettina.',
+          selite: 'Bab al-Yaman ylhäältä: kaariaukon kummallakin puolella on '
+            + 'pyöreä tiilitorni, ja muurin takana nousee tornitalojen rinne, '
+            + 'jonka yllä kohoaa kaksi valkoista minareettia.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Street, Sanaá, Yemen - Flickr - Rod Waddington.jpg',
-          selite: 'Kivetty kuja vanhassakaupungissa. Molemmin puolin nousee '
-            + 'tiiliseiniä, joissa on valkoiset siksakkivyöt ja pyöreät '
-            + 'medaljongit; perällä kaartuu kahdeksankulmainen tornitalo.',
+          selite: 'Kivetty kuja vanhassakaupungissa: molemmin puolin nousee '
+            + 'tiiliseiniä valkoisine siksakkivöineen ja medaljonkeineen, ja '
+            + 'perällä kaartuu kahdeksankulmainen tornitalo.',
           lahde: 'Rod Waddington from Kergunyah, Australia, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Old Sana\'a City - Yemen.jpg',
           selite: 'Vanhankaupungin kattomeri iltavalossa: satoja '
-            + 'litteäkattoisia tornitaloja, joiden ruskeaa tiiltä '
-            + 'jaksottavat valkoiset kaaret. Takana häämöttävät vuoret.',
+            + 'litteäkattoisia tornitaloja, joiden ruskeaa tiiltä jaksottavat '
+            + 'valkoiset kaaret, ja takana häämöttävät vuoret.',
           lahde: 'Ibrahim Alqousi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -28016,11 +27998,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jonka al-Hamdani kuvasi 900-luvulla '
             + 'kaksikymmenkerroksiseksi; useimmat arviot jäävät kuuden ja '
             + 'kymmenen kerroksen välille.',
-          selite: 'Sanaan tornitaloja kadulta kuvattuna. Tiilipintaa '
-            + 'jaksottavat valkoiset vaakavyöt ja siksakkinauhat, ja '
-            + 'ikkunoiden yläpuolella on kaarevia valoaukkoja. Ylimmällä '
-            + 'katolla on erillinen pieni huone, jonka seinät on kuvioitu '
-            + 'samoin kuin alempien kerrosten.',
+          selite: 'Tornitaloja kadulta: tiilipintaa jaksottavat valkoiset '
+            + 'vaakavyöt ja siksakkinauhat, ja ylimmällä katolla on erillinen '
+            + 'pieni huone samoin kuvioituine seinineen.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -28037,11 +28017,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'aqd mulawwan, jonka lasit pysyvät paikoillaan '
             + 'kipsiritilässä. Tiiliseinä suojataan kalkkirappauksella ja '
             + 'qadad-laastilla.',
-          selite: 'Värilasinen kaariaukko sisältä katsottuna. Kipsiin '
-            + 'leikatun ristikon jokaisessa aukossa on lasi: keskellä kaksi '
-            + 'suurta sinistä ristiä, niiden välissä keltaisia pisteitä ja '
-            + 'punaisia kukkia ja ympärillä pieniä keltaisia, oransseja ja '
-            + 'valkoisia soikioita.',
+          selite: 'Värilasinen kaariaukko sisältä: kipsiritilän jokaisessa '
+            + 'aukossa on lasi — keskellä kaksi suurta sinistä ristiä, '
+            + 'ympärillä keltaisia, oransseja ja valkoisia soikioita.',
           lahde: 'Rod Waddington from Kergunyah, Australia, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -28057,23 +28035,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'es-Sha\'ub. Portin pylväiden messinkirenkaat tekivät '
             + 'juutalaiset käsityöläiset imaamien hallitsijakaudella. '
             + 'Suurelle moskeijalle on portilta noin 300 jaardia.',
-          selite: 'Bab al-Yaman vuonna 1986. Korkean harmaakivisen '
-            + 'kaariaukon kummallakin puolella on pilarein jäsennetty seinä '
-            + 'ja pyöreä tiilitorni, ja muurin yläreunaa kiertää '
-            + 'sahalaitainen harja. Portin edessä on kymmeniä ihmisiä ja '
-            + 'arabiankielisiä kangasbannereita.',
+          selite: 'Bab al-Yaman vuonna 1986: harmaakivisen kaariaukon '
+            + 'kummallakin puolella on pyöreä tiilitorni ja sahalaitainen '
+            + 'muurinharja, ja portin edessä seisoo kymmeniä ihmisiä.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Old City Of Sanaa (95129511).jpeg',
-          selite: 'Sana ylhäältä hämärtyvässä illassa vuonna 2012. '
-            + 'Etualalla on vanhankaupungin ruskeatiilisiä tornitaloja '
-            + 'valkoisine kipsikuvioineen ja niiden keskellä kapea '
-            + 'minareetti; kauempana erottuvat uuden kaupungin '
-            + 'valkoiset kerrostalot ja oikealla laakson reunan paljas '
-            + 'vuorenrinne. Taivaalla näkyy kuu.',
+          selite: 'Sana hämärtyvässä illassa vuonna 2012: etualalla '
+            + 'vanhankaupungin tornitaloja ja kapea minareetti, kauempana '
+            + 'uuden kaupungin valkoiset kerrostalot ja laakson reunan paljas '
+            + 'vuorenrinne.',
           lahde: 'Hamza Shiban, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Sana on vuoristokaupunki, jonka vanhakaupunki on vain '
@@ -28124,8 +28098,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Sana\'a (2286828534).jpg',
                 selite: 'Dabab-pikkubusseja kymmenittäin rivissä '
-                  + 'hiekkakentällä. Kaikki ovat valkoisia ja kylkeen on '
-                  + 'maalattu keltainen raita.',
+                  + 'hiekkakentällä, kaikki valkoisia ja keltaraitaisia.',
                 lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -28147,9 +28120,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'laavakenttiä pohjoiseen menevän tien varressa.',
               kuva: {
                 tiedosto: 'Sana\'a3.JPG',
-                selite: 'Vanhankaupungin kattoja ja kaksi minareettia, '
-                  + 'joista toisen ympärillä on rakennusteline. Taustalla '
-                  + 'kulkee vuorijono koko kuvan leveydeltä.',
+                selite: 'Vanhankaupungin kattoja ja kaksi minareettia, joista '
+                  + 'toisen ympärillä on rakennusteline, ja taustalla '
+                  + 'vuorijono koko kuvan leveydeltä.',
                 lahde: 'Scastellsf, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -28176,8 +28149,8 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Wadi highway, Sana\'a Yemen.jpg',
                 selite: 'Kivinen holvisilta, jonka kolmen leveän kaaren '
-                  + 'alitse kulkee autotie kuivan uoman pohjaa pitkin. '
-                  + 'Kaarien takaa näkyy tornitaloja.',
+                  + 'alitse kulkee autotie kuivan uoman pohjaa pitkin ja '
+                  + 'jonka takaa näkyy tornitaloja.',
                 lahde: 'Step, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -28248,11 +28221,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vanhassakaupungissa lasketaan olleen yli sata moskeijaa, '
             + '12 hammamia ja 6 500 taloa, toisaalla 103 moskeijaa, 14 '
             + 'hammamia ja yli 6 000 taloa.',
-          selite: 'Muurin rajaama viljelypalsta keskellä vanhaakaupunkia. '
-            + 'Vihreä kasvusto on jaettu kaistoihin, ja palstalla kasvaa '
-            + 'kolme palmua ja neljä lehtipuuta. Kivimuurin takaa nousee '
-            + 'rivi tornitaloja, joiden ruskeaa tiilipintaa jaksottavat '
-            + 'valkoiset kaaret ja vyöt.',
+          selite: 'Muurin rajaama viljelypalsta keskellä vanhaakaupunkia: '
+            + 'kaistoihin jaettu vihreä kasvusto, muutama palmu ja lehtipuu, '
+            + 'ja muurin takana rivi tornitaloja.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -28267,11 +28238,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'olemassa olleen torin viereen. Torit ovat ohjanneet koko '
             + 'kaupungin kasvua myöhemminkin, sillä uudet kaupunginosat '
             + 'ovat syntyneet niiden ympärille.',
-          selite: 'Vanhankaupungin torikuja hämärissä, katukiveys märkänä. '
-            + 'Kujan varrella on valaistuja myymälöitä ja arabiankielisiä '
-            + 'kylttejä, vaatekaupan edessä rivi värikkäitä pitkiä pukuja '
-            + 'ja kangaskojuja tekstiilikasoineen. Kadulla kulkee '
-            + 'toistakymmentä ihmistä.',
+          selite: 'Vanhankaupungin torikuja hämärissä: märkä katukiveys, '
+            + 'valaistuja myymälöitä kyltteineen ja vaatekaupan edessä rivi '
+            + 'värikkäitä pitkiä pukuja.',
           lahde: 'Rod Waddington from Kergunyah, Australia, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -28287,11 +28256,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kannatellaan peukaloilla ja lyödään kevyesti kahdeksalla '
             + 'muulla sormella. Tyyli on yksi noin viidestä '
             + 'jemeniläisestä sävystä, joita sanotaan sanalla lawn.',
-          selite: 'Tornitalon ylempi kerros lähikuvassa. Kolmen ikkunan '
-            + 'yläpuolella on rivissä kolme puoliympyrän muotoista '
-            + 'valoaukkoa, joihin on leikattu kipsinen tähtiristikko, ja '
-            + 'ikkunoita kehystää paksu valkoinen kipsityö. Seinän '
-            + 'yläreunassa kulkee läpimurrettu kaide.',
+          selite: 'Tornitalon ylempi kerros lähikuvassa: kolmen ikkunan '
+            + 'yläpuolella on rivi puoliympyräisiä valoaukkoja kipsisine '
+            + 'tähtiristikkoineen, ja seinän yläreunassa kulkee läpimurrettu '
+            + 'kaide.',
           lahde: 'Rod Waddington from Kergunyah, Australia, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -28375,6 +28343,15 @@ export const KULTTUURI_KATEGORIAT = {
    * Kuvat vastaavat eri kysymykseen (missä kaupunki on / mistä se
    * koostuu), ja avaruuskuva on ainoa tapa näyttää kahden niemen
    * muoto — sama linja kuin Medinan Harrat Rahatilla.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (erä R4, Raamattu "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän lehden kuvatekstit tiivistettiin yhteen virkkeeseen.
+   * Konsulaattikuvan käsin kirjoitettu litera säilyi lyhennettynä
+   * ("French & English Consulates"), koska se on osa sitä, mitä
+   * kuvassa näkyy. Lehden ETUSIVUN LEIPÄTEKSTI on
+   * asia-artikkelit.js:n Aden-intro, joka kirjoitettiin samassa
+   * erässä uuteen mittaan; nykytilanne on siinä yhtenä virkkeenä
+   * ilman osapuolia.
    */
   aden: [
     {
@@ -28386,51 +28363,46 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Aden Crater.jpg',
-          selite: 'Adenin Crater-kaupunginosa ylhäältä kuvattuna. Matalat '
-            + 'vaaleat talot täyttävät kraatterin pohjan, ja takana '
-            + 'kohoaa kasviton ruskeanharmaa harjanne. Lahdella kelluu '
-            + 'toistakymmentä kapeaa venettä.',
+          selite: 'Craterin kaupunginosa ylhäältä: matalat vaaleat talot '
+            + 'täyttävät kraatterin pohjan, takana kohoaa kasviton harjanne '
+            + 'ja lahdella kelluu kapeita veneitä.',
           lahde: 'Christina Hecker @ Deutsch-Jemenitische Gesellschaft, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gebouwen aan de kust van Aden in Jemen Aden. French & English consulates (titel op object), RP-F-00-5018-15.jpg',
-          selite: 'Adenin rantaviivaa 1800-luvun lopulla. Matalien '
-            + 'valkoisten rakennusten rivissä on kaksikerroksinen talo, '
-            + 'jonka molemmissa kerroksissa kiertää avoin veranta. Kuvan '
-            + 'alle on kirjoitettu käsin: Aden. French & English '
-            + 'Consulates.',
+          selite: 'Adenin rantaviivaa 1800-luvun lopulla: matalien valkoisten '
+            + 'rakennusten rivissä on kaksikerroksinen talo, jossa kiertää '
+            + 'avoin veranta molemmissa kerroksissa, ja kuvan alle on '
+            + 'kirjoitettu käsin French & English Consulates.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: '24 Aden (6) cisterne.jpg',
-          selite: 'Tawilan altaille johtava kuru Adenissa. Jyrkkien '
-            + 'harmaiden kallioseinämien välissä on kivestä muurattu '
-            + 'terassi valkoisine kaiteineen, ja terassilla seisoo kuuden '
-            + 'hengen ryhmä. Kurun perällä erottuu poikittainen muuri.',
+          selite: 'Tawilan altaille johtava kuru: jyrkkien kallioseinämien '
+            + 'välissä on kivestä muurattu terassi valkoisine kaiteineen, ja '
+            + 'kurun perällä erottuu poikittainen muuri.',
           lahde: 'Ljuba brank, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       avauskuvat: [
         {
           tiedosto: 'Aden, Yemen Port.jpg',
-          selite: 'Adenin satama mereltä katsottuna. Rannassa on matalia '
-            + 'vaaleita rakennuksia ja laituri veneineen, ja niiden takaa '
-            + 'nousee paljas ruskea vuorenrinne, jonka päällä erottuu '
-            + 'kapea torni.',
+          selite: 'Adenin satama mereltä: rannassa matalia vaaleita '
+            + 'rakennuksia ja laituri veneineen, ja takana paljas '
+            + 'vuorenrinne, jonka päällä erottuu kapea torni.',
           lahde: 'T3n60, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Old Town Aden Yemen.jpg',
-          selite: 'Kaksi valkoista minareettia kraatterin kaupungissa. '
-            + 'Niiden takana kohoaa lähes pystysuora tumma kallioseinämä, '
-            + 'jonka juurella talot kiipeävät rinnettä ylös.',
+          selite: 'Kaksi valkoista minareettia kraatterin kaupungissa, '
+            + 'takanaan lähes pystysuora tumma kallioseinämä, jonka juurella '
+            + 'talot kiipeävät rinnettä ylös.',
           lahde: 'Jialiang Gao www.peace-on-earth.org, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Aden. Steamer Point. Aug 2013 (9727325813).jpg',
-          selite: 'Tawahin niemi ylhäältä. Vasemmalla on satama '
-            + 'nostureineen ja rahtilaivoineen, oikealla tiivis '
-            + 'kaupunginosa, joka nousee vuorenrinnettä ylöspäin.',
+          selite: 'Tawahin niemi ylhäältä: vasemmalla satama nostureineen ja '
+            + 'rahtilaivoineen, oikealla tiivis kaupunginosa vuorenrinteellä.',
           lahde: 'Brian Harrington Spier from Shanghai, China, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -28448,11 +28420,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muodostuu kahdesta niemestä, ja meri molemmin puolin '
             + 'tasoittaa lämpötilaa: vuoden keskilämpötila on 29,1 '
             + 'astetta ja ilma on kostea ympäri vuoden.',
-          selite: 'Puupiirros Adenista markkinapäivänä vuodelta 1885. '
-            + 'Kivisellä kentällä on kymmeniä kameleita, joista osa makaa '
-            + 'maassa. Kenttää reunustaa matala rakennusrivi '
-            + 'holvikaarikäytävineen, ja litteäkattoisten valkoisten '
-            + 'talojen yllä kohoaa jyrkkä paljas vuorenseinämä.',
+          selite: 'Puupiirros Adenista markkinapäivänä vuodelta 1885: '
+            + 'kivisellä kentällä makaa kymmeniä kameleita, ja '
+            + 'holvikaarikäytävien reunustaman talorivin yllä kohoaa jyrkkä '
+            + 'vuorenseinämä.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
         },
         {
@@ -28471,10 +28442,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kunnostivat niitä vuosina 1229-1454. Paikalla oleva kyltti '
             + 'myöntää, ettei rakentamisesta tiedetä varmaa.',
           selite: 'Puupiirros Adenin porrasaltaista, alareunassa teksti '
-            + 'TERRACE-CISTERNS, ADEN. Suuren tyhjän altaan kaareva '
-            + 'reunamuuri on rapattu sileäksi, ja sen takana altaat '
-            + 'jatkuvat porrastuen ylös kurua kohti. Kurun perällä erottuu '
-            + 'pato jyrkkien rinteiden välissä.',
+            + 'TERRACE-CISTERNS, ADEN: tyhjän altaan sileäksi rapatun '
+            + 'reunamuurin takana altaat jatkuvat porrastuen ylös kurua '
+            + 'kohti.',
           lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -28492,22 +28462,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Hadramautiin. Moskeija rakennettiin 1400-luvun lopulla tai '
             + '1500-luvun alussa, ja nykyinen rakennus on vuoden 1859 '
             + 'jälkeiseltä ajalta.',
-          selite: 'Aidrus-moskeija Craterissa. Suuren valkoisen kupolin '
-            + 'huipulla on kolme päällekkäistä vihreää palloa, ja sen '
-            + 'vieressä ovat pienempi kupoli ja neliömäinen rakennus '
-            + 'tummanruskeine puuluukkuineen. Minareetissa on kaksi '
-            + 'puuparveketta ja uritettu kupoli huipulla.',
+          selite: 'Aidrus-moskeija Craterissa: valkoisen kupolin huipulla on '
+            + 'kolme päällekkäistä vihreää palloa, ja minareetissa kaksi '
+            + 'puuparveketta ja uritettu huippukupoli.',
           lahde: 'Manfred Steffen @ Deutsch-Jemenitische Gesellschaft, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'The Yemeni cities of Little Aden and Aden (iss069e004371).jpg',
-          selite: 'Adenin rannikko avaruusasemalta kuvattuna. Merestä '
-            + 'työntyy kaksi tummaa vuoriniemeä: vasemmalla Little Aden '
-            + 'ja oikealla Aden, ja niiden välissä on matala '
-            + 'turkoosi lahti. Oikeassa laidassa erottuu kiitotien '
-            + 'suora viiva.',
+          selite: 'Adenin rannikko avaruusasemalta: merestä työntyy kaksi '
+            + 'tummaa vuoriniemeä, vasemmalla Little Aden ja oikealla Aden, '
+            + 'ja niiden välissä on matala turkoosi lahti.',
           lahde: 'NASA Johnson Space Center, Wikimedia Commons (PD)',
         },
         kappale: 'Aden ei ole yksi kaupunki vaan ketju kaupunginosia '
@@ -28559,11 +28525,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'liikenteeseen naapurimaiden tavoin.',
               kuva: {
                 tiedosto: 'مطار عدن الدولي (محمدناصر مهدي القميشي - panoramio.jpg',
-                selite: 'Adenin kansainvälisen lentoaseman terminaali '
-                  + 'vuonna 2007, kuvattuna laskeutuvan koneen siiven '
-                  + 'yli. Vaalean rakennuksen julkisivussa on rivi '
-                  + 'korkeita kaariaukkoisia ikkunoita, ja sen edessä '
-                  + 'odottaa kaksi valkoista matkustajabussia.',
+                selite: 'Adenin lentoaseman terminaali vuonna 2007 '
+                  + 'laskeutuvan koneen siiven yli kuvattuna, julkisivussa '
+                  + 'rivi korkeita kaari-ikkunoita ja edessä kaksi '
+                  + 'matkustajabussia.',
                 lahde: 'محمد ناصر مهدي القمي…, Wikimedia Commons (CC BY 3.0)',
               },
             },
@@ -28586,10 +28551,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuuden kilometrin kokoiseksi.',
               kuva: {
                 tiedosto: 'ISS-47 Port of Aden, Yemen.jpg',
-                selite: 'Avaruusaseman kuva Adenista. Keskellä on tumma '
-                  + 'uurteinen vuoristoniemi, sen ympärillä sininen '
-                  + 'merenlahti, ja pohjoisessa erottuu kiitotien suora '
-                  + 'valkoinen viiva.',
+                selite: 'Avaruusaseman kuva Adenista: keskellä tumma '
+                  + 'uurteinen vuoristoniemi, ympärillä sininen merenlahti ja '
+                  + 'pohjoisessa kiitotien suora valkoinen viiva.',
                 lahde: 'NASA, Wikimedia Commons (PD)',
               },
             },
@@ -28655,10 +28619,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'keskilämpö 24–25 astetta ja sade muutama millimetri.',
               kuva: {
                 tiedosto: 'Yémen-209.JPG',
-                selite: 'Gold Mohurin lahden norsukallio vuonna 2004. '
-                  + 'Tummasta laavakivestä kulunut kaari työntyy mereen '
-                  + 'kuin norsun kärsä, ja takana rannan yläpuolella on '
-                  + 'vaaleita kerrostaloja rinteessä.',
+                selite: 'Gold Mohurin lahden norsukallio vuonna 2004: '
+                  + 'tummasta laavakivestä kulunut kaari työntyy mereen kuin '
+                  + 'norsun kärsä, ja takana rinteessä on vaaleita '
+                  + 'kerrostaloja.',
                 lahde: 'BluesyPete, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -28689,12 +28653,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Bombayhin menevä laiva saattoi jättää Adeniin sen postin, '
             + 'joka oli menossa Mombasaan. Suezin kanavan avaaminen 1869 '
             + 'moninkertaisti liikenteen.',
-          selite: 'Käsin väritetty postikortti Adenin Steamer Pointista '
-            + 'noin vuodelta 1910. '
-            + 'Ulapalla on ankkurissa suuri kaksisavupiippuinen '
-            + 'matkustajahöyrylaiva, jonka runko on punainen; yläreunan '
-            + 'teksti nimeää sen Persiaksi ja paikan laivalaituriksi. '
-            + 'Rannassa on avoin aukio ja kaksi katosta.',
+          selite: 'Käsin väritetty postikortti Steamer Pointista noin '
+            + 'vuodelta 1910: ulapalla on ankkurissa punarunkoinen '
+            + 'kaksisavupiippuinen matkustajahöyrylaiva, jonka yläreunan '
+            + 'teksti nimeää Persiaksi.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
         },
         {
@@ -28711,11 +28673,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'edellä oli vain New York. Raha vaihtui sataman mukana: kun '
             + 'Intia itsenäistyi vuonna 1947, Adenissa käytetyt Intian '
             + 'rupiat korvattiin Itä-Afrikan shillingeillä.',
-          selite: 'Adenin satama veneestä kuvattuna vuonna 1949. Rannassa '
-            + 'on rivi matalia vaaleita rakennuksia, ja niiden takana '
-            + 'nousee paljas kukkula, jonka laella seisoo kapea torni. '
-            + 'Lahdella kelluu toistakymmentä pientä venettä, ja '
-            + 'haalistunut kuva on kauttaaltaan vaalea.',
+          selite: 'Adenin satama veneestä vuonna 1949: rannan matalien '
+            + 'rakennusten takana nousee paljas kukkula kapeine torneineen, '
+            + 'ja lahdella kelluu toistakymmentä pientä venettä.',
           lahde: 'Taks, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -28733,11 +28693,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Craterissa on siitä pienempi jäljennös Arwan kadun '
             + 'varrella. Kello pysäytettiin kunnostusta varten vuonna '
             + '1986.',
-          selite: 'Adenin sisäsatama pilvisenä päivänä. Keskellä on matala '
-            + 'tumma kallioluoto, jonka päällä on muutama vaalea '
-            + 'rakennelma. Rinteeseen nousee tiivis vaaleiden talojen '
-            + 'kaupunginosa, ja sen yllä erottuu kapea torni, jonka huippu '
-            + 'on terävä ja tumma.',
+          selite: 'Adenin sisäsatama pilvisenä päivänä: keskellä on matala '
+            + 'tumma kallioluoto, ja rinteeseen nousevan kaupunginosan yllä '
+            + 'erottuu kapea terävähuippuinen torni.',
           lahde: 'Грищук ЮН, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
