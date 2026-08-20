@@ -4082,26 +4082,24 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 32.90291, etela: 32.89219, lansi: 13.17154, ita: 13.18466,
     },
     varikartta: 'assets/kartat/tripoli-varikartta.png',
-    esittely: 'Tripolin vanhakaupunki näkyy kartalla yhtenä selvänä '
-      + 'kuviona: tumma viiva kiertää viisikulmion, ja sen sisällä on '
-      + 'yhtenäinen vaalea ala muutamine ohuine viivoineen. Viiva on '
-      + 'kaupunginmuuri, ja ala on medina — se näyttää kartalla '
-      + 'tyhjältä siksi, että sen kujat ovat liian kapeita ajettaviksi '
-      + 'eikä niitä ole kaikkia edes merkitty karttoihin. Viisikulmion '
-      + 'muodon vanhakaupunki sai '
-      + '1500-luvun puolivälissä, kun ottomaanien ensimmäinen '
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartta rajaa Tripolin vanhankaupungin eli medinan, jota '
+      + 'kiertää viisikulmion muotoinen kaupunginmuuri. Muodon '
+      + 'vanhakaupunki sai 1500-luvun puolivälissä, kun ottomaanien '
       + 'käskynhaltija Darghut rakensi linnoitukset uudelleen. Muurin '
       + 'sisäpuoli on vain noin kuudensadan metrin levyinen, eli koko '
       + 'medina kävellään ristiin vartissa.\n\n'
       + 'Kaupunki on paljon muuriaan vanhempi. Foinikialaiset '
       + 'perustivat tähän Oean, ja roomalaisajan suora ristikkokaava '
-      + 'on yhä kujaverkon alla. Kahden pääkadun risteykseen '
-      + 'pystytettiin vuonna 165 Marcus Aureliuksen riemukaari, joka '
-      + 'on kartan pohjoisosassa. Kaakkoisnurkassa muurin ulkopuolella '
-      + 'kohoaa Punainen linna omalla kalliollaan, ja sen takana '
-      + 'kartta jatkuu satamaan: meri tulee kuvaan ylhäältä ja '
-      + 'oikealta, sillä medina on niemekkeellä. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+      + 'on yhä kujaverkon alla; kahden pääkadun risteykseen '
+      + 'pystytettiin vuonna 165 Marcus Aureliuksen riemukaari. Muurin '
+      + 'ulkopuolella kohoaa Punainen linna omalla kalliollaan, ja sen '
+      + 'takana alkaa satama. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * SEITSEMÄN KOHDETTA pohjoisesta etelään (kohdemäärien nosto
@@ -5227,33 +5225,25 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/dubrovnik-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
     esittely: 'Dubrovnik on kaupunki muurin sisällä. Vanhakaupunki on '
       + 'vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen '
-      + 'ympäri kiertää yhtenäinen kivimuuri, joka on paikoin '
-      + 'kuusi metriä paksu ja kaksikymmentäviisi metriä korkea. '
-      + 'Muurilla voi kävellä koko kierroksen. Kaupunki oli satojen '
-      + 'vuosien ajan oma pieni valtionsa, Ragusan tasavalta, jolla '
-      + 'oli omat lakinsa, oma laivastonsa ja oma tapansa selvitä '
-      + 'isompien naapureiden välissä: se maksoi veroa sekä '
-      + 'Venetsialle että sulttaanille eikä sotinut kummankaan '
-      + 'kanssa. Rikkaudet tulivat suolasta ja merenkulusta. '
-      + 'Kaupunki rakennettiin uudestaan kivestä vuoden 1667 '
-      + 'maanjäristyksen jälkeen, ja siksi talot ovat keskenään '
-      + 'samannäköisiä — samaa kiveä, samat kattotiilet, sama '
-      + 'korkeus.\n\nKartalla on melkein pelkkä vanhakaupunki, alle '
-      + 'kilometrin levyinen pala. Tumma viiva kuvan keskellä on '
-      + 'muuri, ja siitä erottuvat pyöreät tornit: ylhäällä on '
-      + 'Minčetan torni, kaupungin korkein kohta. Muurin sisällä '
-      + 'kulkee vasemmalta oikealle yksi leveä suora — se on Stradun, '
-      + 'kaupungin pääkatu, jonka molemmilta puolilta lähtee kapeita '
-      + 'kujia ja portaita rinnettä ylös. Kujat eivät näy kartalla '
-      + 'kaikki, koska ne ovat enimmäkseen portaita. Oikealla on '
-      + 'vanhasatama aallonmurtajineen, ja vasemmalla omalla '
-      + 'kalliollaan Lovrijenacin linnake, joka vartioi sisääntuloa '
-      + 'merelle päin. Lokrumin saari, jonne laivat joutuivat '
-      + 'odottamaan karanteeniin, on kartan ulkopuolella runsaan '
-      + 'kilometrin päässä kaakossa. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+      + 'ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu '
+      + 'ja kaksikymmentäviisi metriä korkea. Kaupunki oli satojen '
+      + 'vuosien ajan oma pieni valtionsa, Ragusan tasavalta, joka '
+      + 'maksoi veroa sekä Venetsialle että sulttaanille eikä sotinut '
+      + 'kummankaan kanssa; rikkaudet tulivat suolasta ja '
+      + 'merenkulusta.\n\nKartan alueella on lähes pelkkä '
+      + 'vanhakaupunki: muuri torneineen, korkeimpana Minčetan torni, '
+      + 'pääkatu Stradun ja siitä rinteeseen nousevat kujat ja '
+      + 'portaat, vanhasatama sekä omalla kalliollaan Lovrijenacin '
+      + 'linnake. Lokrumin saari, jonne laivat joutuivat odottamaan '
+      + 'karanteeniin, jää runsaan kilometrin päähän kaakkoon. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, kuten muillakin kartoilla.
@@ -5352,30 +5342,25 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/tromssa-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
     esittely: 'Tromssa on rakennettu saarelle. Tromsøya on noin '
-      + 'yhdeksän kilometriä pitkä ja kolme leveä, ja kaupungin '
-      + 'keskusta on sen itärannalla, kapean salmen varrella. Salmi '
-      + 'on Tromssan koko olemassaolon syy: se on syvä ja jäätyy '
-      + 'harvoin, koska Golfvirta tuo lämmintä vettä napapiirin '
-      + 'pohjoispuolelle asti. Siksi täältä pääsi merelle silloinkin, '
-      + 'kun Itämeri oli umpijäässä. Isoisän matkan aikaan 1870-luvulla '
-      + 'Tromssa oli noin viiden tuhannen asukkaan puukaupunki, josta '
-      + 'lähdettiin pohjoiseen: hylkeenpyytäjien ja jäämerenkalastajien '
-      + 'laivat purjehtivat täältä Huippuvuorille ja Novaja Zemljalle, '
-      + 'ja myöhemmin samasta satamasta lähtivät myös naparetkikunnat. '
-      + 'Kaupunkia sanottiin Pohjolan Pariisiksi, koska merimiehet '
-      + 'ihmettelivät, että näin kaukana pohjoisessa oli katulyhtyjä, '
-      + 'kauppoja ja soittokunta.\n\nKartalla on salmi keskellä ja kaksi '
-      + 'rantaa. Vasemmalla on saari ja sen keskusta, jossa kadut '
-      + 'kulkevat tiiviinä ruutuna rannan suuntaisesti — pisin niistä '
-      + 'on Storgata, kaupungin vanha pääkatu. Rannassa erottuvat '
-      + 'satamalaiturit sormina, ja niiden juurella on puinen '
-      + 'tuomiokirkko. Oikealla on manner, Tromsdalenin puoli, jonne '
-      + 'noustaan jyrkkää rinnettä; siellä sijaitsevat '
-      + 'Jäämerenkatedraali ja köysirata, joka vie vuorelle. Rantoja '
-      + 'yhdistää yksi kaari: Tromssan silta valmistui vuonna 1960, ja '
-      + 'sitä ennen salmen yli mentiin lautalla — aivan kuten Dubaissa. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'yhdeksän kilometriä pitkä ja kolme leveä, ja keskusta on sen '
+      + 'itärannalla kapean salmen varrella. Salmi on kaupungin koko '
+      + 'olemassaolon syy: se on syvä ja jäätyy harvoin, koska '
+      + 'Golfvirta tuo lämmintä vettä napapiirin pohjoispuolelle asti. '
+      + 'Isoisän matkan aikaan 1870-luvulla Tromssa oli noin viiden '
+      + 'tuhannen asukkaan puukaupunki, josta jäämerenkalastajien '
+      + 'laivat purjehtivat Huippuvuorille ja Novaja '
+      + 'Zemljalle.\n\nKartan alueella ovat saaren ruutumainen '
+      + 'keskusta, satamalaiturit ja puinen tuomiokirkko sekä salmen '
+      + 'toisella puolella Tromsdalenin rinne, jossa ovat '
+      + 'Jäämerenkatedraali ja köysirata. Rannat yhdistää Tromssan '
+      + 'silta vuodelta 1960. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, kuten Dubaissa ja Odessassa.

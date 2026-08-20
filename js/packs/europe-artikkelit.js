@@ -537,11 +537,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8 (Raamattu "TEKSTIEN PAINOPISTE",
+   * Fablen eräohje): intro on nyt lehden ETUSIVUN LEIPÄTEKSTI —
+   * 7–10 virkettä kappaleissa ('\n\n') ja maltillinen **lihavointi**.
+   * Faktat Kreetan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Kreeta) sekä alla
+   * olevasta teksti-kentästä; teksti-kenttä on ennallaan.
+   */
   Kreeta: {
     intro: 'Kreeta on Kreikan suurin saari ja Välimeren viidenneksi '
-      + 'suurin. Sen pohjoisrannalla, Knossoksessa, kukoisti neljä '
-      + 'tuhatta vuotta sitten minolainen kulttuuri — Euroopan vanhin '
-      + 'kaupunkikulttuuri.',
+      + 'suurin: 8 450 neliökilometriä ja 260 kilometriä idästä '
+      + 'länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on '
+      + 'runsaat tuhat kilometriä, ja selkärankana kulkee kuusi '
+      + 'vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 '
+      + 'metriin. Asukkaita on yli 600 000 — enemmän kuin millään '
+      + 'muulla Kreikan saarella.'
+      + '\n\n'
+      + 'Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta '
+      + 'sitten **minolainen kulttuuri**, Euroopan vanhin '
+      + 'kaupunkikulttuuri. Se rakensi palatseja, joissa oli '
+      + 'valokuiluja, juokseva vesi ja viemärit, ja kirjoitti '
+      + 'kahdella merkistöllä, joista toista ei ole vieläkään pystytty '
+      + 'lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin '
+      + 'purkauksen ja sen tsunamien jäljiltä.'
+      + '\n\n'
+      + 'Sen jälkeen saari on ollut vuorollaan roomalaisten, '
+      + 'bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja '
+      + 'Kreikkaan se liittyi vasta **vuonna 1913**. Nykyään saari '
+      + 'elää maataloudesta ja matkailusta: oliivipuita on kymmeniä '
+      + 'miljoonia, ja Kreetan ruokatavoista tuli 1950-luvun '
+      + 'tutkimusten myötä koko Välimeren ruokavalion malli. Kesä on '
+      + 'käytännössä sateeton.',
     teksti: 'Minolaiset rakensivat palatseja, joissa oli monikerroksisia '
       + 'siipiä, valokuiluja, juokseva vesi ja viemärit. He kirjoittivat '
       + 'kahdella kirjoitusjärjestelmällä, joista toista — lineaari '
@@ -563,10 +590,37 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat Sisilian omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot, Matkailijan Sisilia ja
+   * Rauniot-kategoria) sekä teksti-kentästä, joka on ennallaan.
+   */
   Sisilia: {
-    intro: 'Sisilia on Välimeren suurin saari ja Italian eteläkärjessä '
-      + 'salmen takana. Sen yllä kohoaa Etna, Euroopan korkein aktiivinen '
-      + 'tulivuori — yli 3 300 metriä, ja se kasvaa yhä.',
+    intro: 'Sisilia on Välimeren suurin saari, lähes 26 000 '
+      + 'neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen '
+      + 'antiikin nimi Trinacria. Mantereelle on Messinansalmen yli '
+      + 'kapeimmillaan vain kolme kilometriä, mutta siltaa ei '
+      + 'vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. '
+      + 'Saaren yllä kohoaa **Etna**, Euroopan korkein aktiivinen '
+      + 'tulivuori, yli 3 300 metriä.'
+      + '\n\n'
+      + 'Sisilia on ollut kaikkien maa. Foinikialaiset ja '
+      + 'kreikkalaiset perustivat sinne siirtokuntia, roomalaiset '
+      + 'tekivät siitä valtakunnan viljavaraston, arabit toivat '
+      + 'sitrushedelmät ja sokeriruo’on, ja normannit rakensivat '
+      + 'kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia '
+      + 'mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen '
+      + 'ja ruokaan.'
+      + '\n\n'
+      + 'Kivessä se näkyy yhä: **Agrigenton temppelilaakso** on '
+      + 'kreikkalaisten temppelirivi meren yllä, Piazza Armerinan '
+      + 'roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja '
+      + 'Syrakusan kallioon hakatussa teatterissa esitetään antiikin '
+      + 'tragedioita joka kevät. Etna purkautuu lähes joka vuosi, '
+      + 'mutta laava valuu useimmiten hitaasti, ja tuhka tekee '
+      + 'maaperästä poikkeuksellisen hedelmällistä.',
     teksti: 'Sisilia on ollut kaikkien maa. Foinikialaiset ja '
       + 'kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät '
       + 'siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät, '
@@ -700,11 +754,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat Dubrovnikin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot, Matkailijan Dubrovnik ja
+   * Tasavalta-kategoria; maakartat.js) sekä teksti-kentästä, joka on
+   * ennallaan. Vuosien 1991–1992 piiritys jää introsta pois: se on
+   * kerrottu jo oppaassa ja teksti-kentässä.
+   */
   Dubrovnik: {
     intro: 'Dubrovnik on muurien ympäröimä satamakaupunki Kroatian '
-      + 'eteläkärjessä Adrianmeren rannalla. Vanhaa kaupunkia kiertää '
-      + 'lähes kaksi kilometriä muuria, jonka päällä voi kävellä koko '
-      + 'kierroksen.',
+      + 'eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain '
+      + 'noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen '
+      + 'ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu '
+      + 'ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin '
+      + 'kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun '
+      + 'kunnassa asuu noin 42 000.'
+      + '\n\n'
+      + 'Satojen vuosien ajan kaupunki oli oma valtionsa, **Ragusan '
+      + 'tasavalta**, omine lakeineen ja laivastoineen. Se selvisi '
+      + 'isompien naapureiden välissä sopimalla eikä sotimalla: veroa '
+      + 'maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli '
+      + 'suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: '
+      + 'Euroopan vanhin yhä toimiva apteekki avattiin '
+      + 'täällä 1317, orjakauppa kiellettiin 1416 ja '
+      + 'kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.'
+      + '\n\n'
+      + 'Vuoden **1667 maanjäristys** tuhosi suuren osan kaupungista, '
+      + 'ja se rakennettiin uudelleen kivestä yhtenä kokonaisuutena — '
+      + 'siksi talot ovat samannäköisiä: samaa kiveä, samat '
+      + 'kattotiilet, sama korkeus. Vanhakaupunki on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1979.',
     teksti: 'Kaupunki tunnettiin vuosisatoja nimellä Ragusa, ja se oli '
       + 'oma itsenäinen tasavaltansa 1300-luvulta vuoteen 1808. Se pysyi '
       + 'hengissä kaupalla ja diplomatialla: Ragusa maksoi veroa milloin '
@@ -1431,12 +1512,35 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat Alppien omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot, Matkailijan Alpit ja
+   * Luonto-kategoria) sekä teksti-kentästä, joka on ennallaan.
+   */
   Alpit: {
     intro: 'Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin '
              + 'kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. '
              + 'Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin '
              + '13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu '
-             + 'seutu.',
+             + 'seutu. Yli neljän kilometrin huippuja on 82, ja korkein '
+             + 'niistä on **Mont Blanc**.'
+             + '\n\nVuoristossa on aina eletty karjan ehdoilla. Lehmät '
+             + 'viedään keväällä ylös alppilaitumille ja tuodaan syksyllä '
+             + 'alas, ja kesän maito tehdään juustoksi ylhäällä, koska '
+             + 'juusto kestää kantamisen ja maito ei. Samoista laaksoista '
+             + 'ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja '
+             + 'viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan '
+             + 'taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa '
+             + '2018.'
+             + '\n\nMuuri Alpit eivät ole koskaan olleet. Solat ovat olleet '
+             + 'kauppateitä kivikaudelta asti, ja isoisän matkan aikaan '
+             + 'vuoren läpi päästiin jo junalla: **Fréjus-tunneli** avattiin '
+             + 'syyskuussa 1871 ja Semmeringin vuoristorata jo 1854. '
+             + 'Nykyään vuoristo '
+             + 'lämpenee nopeammin kuin Euroopan tasangot, ja jäätiköistä on '
+             + 'sulanut 1800-luvun puolivälin jälkeen yli puolet.',
     teksti: 'Alpit syntyivät, kun Afrikan mannerlaatta törmäsi Euroopan '
               + 'laattaan ja väliin jäänyt merenpohja työntyi ylös. Siksi '
               + 'huipuilta löytyy merieläinten fossiileja. Vuoristossa on 82 '
@@ -2505,12 +2609,35 @@ export const EUROPE_ARTIKKELIT = {
    * maailmankartta.js:ää, jonka päätoimittaja generoi erikseen, ja
    * lehden uudistus ratkaisee sen kohtalon.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat tämän artikkelin omasta teksti-kentästä ja Lapin lehden jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: Matkailijan
+   * Lappi, jakso "Kaupunki poronpään muotoon"). teksti on ennallaan.
+   */
   Rovaniemi: {
-    intro: 'Rovaniemi on Lapin maakuntakeskus Kemijoen ja Ounasjoen '
-             + 'yhtymäkohdassa, kahdeksan kilometriä napapiirin '
-             + 'eteläpuolella. Asukkaita on noin 65 000, mutta pinta-alaa '
-             + 'runsaat 8 000 neliökilometriä — enemmän kuin monella '
-             + 'Euroopan pikkuvaltiolla.',
+    intro: 'Rovaniemi on Lapin maakuntakeskus siinä, missä Ounasjoki '
+             + 'laskee Kemijokeen kahdeksan kilometriä napapiirin '
+             + 'eteläpuolella. Asukkaita on noin 65 000 ja pinta-alaa '
+             + 'runsaat 8 000 neliökilometriä, mikä tekee siitä '
+             + 'pinta-alaltaan Euroopan suurimpia kaupunkeja — enemmän maata '
+             + 'kuin monella pikkuvaltiolla. Jokien risteys oli kauppapaikka '
+             + 'kauan ennen kuin täällä oli kaupunkia: pohjoisesta tultiin '
+             + 'Ounasjokea, merelle päästiin Kemijokea. Markkinapaikasta '
+             + 'tuli kunta 1929 ja kauppala 1938.'
+             + '\n\nLokakuussa 1944 vetäytyvät saksalaisjoukot polttivat '
+             + 'Rovaniemen, ja rakennuksista tuhoutui yhdeksänkymmentä '
+             + 'prosenttia. Jälleenrakennuskaavan laati 1946 **Alvar '
+             + 'Aalto**: pääkadut piirtävät kartalle poronsarvet, ja '
+             + 'urheilukenttä jää sarvien väliin kuin silmä.'
+             + '\n\n**Napapiiri** on kaupungin tunnetuin viiva. Sen '
+             + 'pohjoispuolella aurinko ei laske keskikesällä eikä nouse '
+             + 'keskitalvella, ja Rovaniemellä yötön yö kestää runsaan '
+             + 'kuukauden. Kemijoen rannalle avattiin 1992 Arktikum, museo '
+             + 'ja tiedekeskus, jonka lasiputki työntyy sata metriä jokea '
+             + 'kohti. Kaupungissa toimii myös Lapin yliopisto, Euroopan '
+             + 'unionin pohjoisin.',
     teksti: 'Kahden joen risteys on ollut kauppapaikka kauan ennen '
               + 'kaupunkia: Ounasjokea pitkin tultiin pohjoisesta ja '
               + 'Kemijokea myöten merelle. Markkinapaikasta tuli kunta 1929 '
@@ -2572,11 +2699,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat Tromssan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot, Matkailijan Tromssa ja
+   * Valo-kategoria; maakartat.js) sekä teksti-kentästä, joka on
+   * ennallaan.
+   */
   Tromssa: {
     intro: 'Tromssa on Pohjoismaiden suurin napapiirin pohjoispuolinen '
-             + 'kaupunki: noin 80 000 asukasta 69. leveyspiirin tuntumassa. '
-             + 'Keskusta on saarella, joka on kymmenen kilometriä pitkä ja '
-             + 'kaksi leveä, ja mantereelle pääsee siltaa pitkin.',
+             + 'kaupunki: noin 78 000 asukasta 69. leveysasteen tuntumassa. '
+             + 'Keskusta on Tromsøyan saarella kapean salmen varrella, ja '
+             + 'mantereelle pääsee vuoden 1960 siltaa pitkin. Salmi on syvä '
+             + 'ja jäätyy harvoin, koska **Golfvirran** haara lämmittää '
+             + 'rannikkoa — täältä pääsi merelle silloinkin, kun Itämeri '
+             + 'oli umpijäässä.'
+             + '\n\nKaupunkioikeudet Tromssa sai 1794, ja kasvu tuli '
+             + 'Jäämerestä: 1800-luvun puoliväliin mennessä se oli arktisen '
+             + 'pyynnin keskus, jonka laivat purjehtivat Huippuvuorille ja '
+             + 'Novaja Zemljalle. Kaupunkia sanottiin Pohjolan Pariisiksi: '
+             + 'merimiehet ihmettelivät katulyhtyjä ja kauppoja näin '
+             + 'kaukana pohjoisessa. Keskustan puutalot ovat vuosilta '
+             + '1789–1904.'
+             + '\n\nNykyään Tromssa on arktisen tutkimuksen kaupunki: sen '
+             + '1968 perustettu yliopisto on maailman pohjoisin, ja '
+             + 'revontuliobservatorio on toiminut vuodesta 1928. Valo tulee '
+             + 'ja menee vuodenajoittain eikä päivittäin: aurinko pysyy '
+             + 'horisontin alapuolella marraskuun lopusta tammikuun '
+             + 'puoliväliin, ja vuorten takaa se nähdään vasta **21. '
+             + 'tammikuuta**, jolloin kouluissa syödään aurinkopullia.',
     teksti: 'Tromssa sai kaupunkioikeudet 1794, kun siellä asui noin 80 '
               + 'ihmistä. Kasvu alkoi Jäämerestä: 1800-luvun puoliväliin '
               + 'mennessä kaupungista oli tullut arktisen pyynnin keskus, ja '

@@ -17116,6 +17116,12 @@ export const NAHTAVYYSJUTUT = {
    * tarkistettu koko js/packs-hakemistosta: yksikään ei esiinny
    * muualla.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8 (Raamattu "TEKSTIEN PAINOPISTE",
+   * omistajan tarkennus "kuvateksti on YKSI virke"): tämän kaupungin
+   * monivirkkeiset selite-kentät tiivistettiin yhteen virkkeeseen.
+   * Juttujen teksti-kentät, kuvatiedostot ja lahde-rivit ennallaan.
+   */
   tripoli: {
     'Marcus Aureliuksen riemukaari': {
       aika: '165',
@@ -17145,22 +17151,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Marcus Aurelius Arch Tripoli Libya.jpg',
-          selite: 'Riemukaari kaivetun aukion perällä. Marmorinen '
-            + 'nelisivuinen kaari seisoo katutasoa alempana, ja sen '
-            + 'ympärillä on nurmea ja kaiteella eristetty kaivausalue, '
-            + 'jonka reunoilla makaa pylväänpätkiä. Takana kohoaa '
-            + 'valkoisia taloja ja palmuja.',
+          selite: 'Riemukaari kaivetun aukion perällä katutasoa alempana, '
+            + 'ympärillä nurmea ja kaiteella eristetty kaivausalue, jonka '
+            + 'reunoilla makaa pylväänpätkiä.',
           lahde: 'Daniel and Kate Pett, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Front view of Marcus Aurelius Arch.jpg',
-          selite: 'Kaaren alta katsottuna: etummaisen holvin takaa '
-            + 'näkyy vastakkainen kaariaukko, ja niiden välissä kaartuu '
-            + 'kasettikoristeltu kupoli, jonka kivipaneelit ovat '
-            + 'kuluneet mutta kuviot yhä erottuvat. Aukosta erottuu '
-            + 'palmuja ja valkoinen talo vihreäkärkisine minareetteineen. '
-            + 'Kaaren alla seisoo kaksi nuorta miestä, joista näkee, '
-            + 'kuinka korkea rakennus on.',
+          selite: 'Kaaren alta katsottuna: etummaisen holvin takaa näkyy '
+            + 'vastakkainen kaariaukko, ja niiden välissä kaartuu '
+            + 'kasettikoristeltu kupoli kuluneine kivipaneeleineen.',
           lahde: 'أوس, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17197,11 +17197,9 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Darghut Mosque Exterior Tripoli Libya.JPG',
           selite: 'Darghutin moskeija ja hautakammio kadulta: matala '
-            + 'valkoiseksi kalkittu rakennusryhmä, jonka katolla '
-            + 'kohoaa rivi pyöreitä kupoleita. Oikealla nousee '
-            + 'valkoinen minareetti, jonka parvekkeen yläpuolella on '
-            + 'okrankeltainen kärkiosa. Edessä on kadunvarsi ja '
-            + 'pysäköityjä autoja.',
+            + 'valkoiseksi kalkittu rakennusryhmä, jonka katolla kohoaa '
+            + 'rivi pyöreitä kupoleita ja oikealla valkoinen minareetti '
+            + 'okrankeltaisine kärkiosineen.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17236,9 +17234,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Old City’s Clock Tower.jpg',
           selite: 'Kellotornin yläosa alaviistosta kirkasta taivasta '
-            + 'vasten: vaalea kaksikerroksinen huippu, jonka kulmissa '
-            + 'on parittain pylväitä, ja kellotaulu kahdella näkyvällä '
-            + 'sivulla. Räystäslistan yllä lentää lintuja.',
+            + 'vasten: vaalea kaksikerroksinen huippu, jonka kulmissa on '
+            + 'parittain pylväitä ja kahdella sivulla kellotaulu.',
           lahde: 'Mohamed Hwedi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17285,10 +17282,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'The Red Castle.jpg',
           selite: 'Linna vedenrajasta kuvattuna iltavalossa: matala '
-            + 'hiekankeltainen linnoitusmassa jatkuu pitkänä koko '
-            + 'kuvan poikki, ja sen päällä erottuu kaaririvi. Edessä '
-            + 'oleva tyyni lampi heijastaa rakennuksen ja oranssin '
-            + 'taivaan.',
+            + 'hiekankeltainen linnoitusmassa kaaririveineen jatkuu koko '
+            + 'kuvan poikki, ja edessä oleva tyyni lampi heijastaa sen.',
           lahde: 'Abdulfatah Amr, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17329,19 +17324,15 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Ahmed Pasha Karamanli Mosque Interior Tripoli Libya.JPG',
           selite: 'Rukoussali sisältä: paksut vaaleat marmoripylväät '
-            + 'seisovat riveissä ja niiden päältä nousevat valkoiset '
-            + 'holvit kupoleihin. Kattoon on ripustettu kristallikruunuja, '
-            + 'seinässä on värilasi-ikkuna, ja lattialla on maton '
-            + 'päällä muutama rukoilija.',
+            + 'seisovat riveissä ja niiden päältä nousevat valkoiset holvit '
+            + 'kupoleihin, joista riippuu kristallikruunuja.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'المدينة القديمة-جامع احمد باشا.jpg',
-          selite: 'Moskeijan katupuoli: valkoinen kaarikäytävä, jonka '
-            + 'kaaret on raidoitettu ruskealla ja valkoisella kivellä '
-            + 'ja joiden holveissa riippuu lyhtyjä. Takana kohoaa '
-            + 'valkoinen minareetti, jonka parvekkeen yläpuolella on '
-            + 'vihreä suippokärki.',
+          selite: 'Moskeijan katupuoli: valkoinen kaarikäytävä '
+            + 'ruskeavalkoisin raidoitetuin kaarin ja lyhtyineen, ja takana '
+            + 'kohoaa minareetti vihreine suippokärkineen.',
           lahde: 'WisiW, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17379,19 +17370,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2 Tripoli En-Naga mosque (51791288947).jpg',
-          selite: 'Moskeijan pihakäytävä: valkoisiksi kalkitut '
-            + 'suippokaaret lepäävät paksujen kivipylväiden päällä, ja '
-            + 'pylväiden kapiteelit ovat selvästi vanhempaa ja '
-            + 'karkeampaa kiveä kuin muu rakennus. Kaarien takana on '
-            + 'vihreiksi maalattuja ovia ja lattialla itämaisia mattoja.',
+          selite: 'Moskeijan pihakäytävä: valkoisiksi kalkitut suippokaaret '
+            + 'lepäävät paksujen kivipylväiden päällä, joiden kapiteelit '
+            + 'ovat selvästi vanhempaa ja karkeampaa kiveä kuin muu '
+            + 'rakennus.',
           lahde: 'Libyan Studies, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Naga Mosque Exterior Tripoli Libya.JPG',
           selite: 'Moskeijan ulkosivu kujalta: umpinainen valkoiseksi '
             + 'kalkittu seinä, jossa on vain muutama pieni ikkuna '
-            + 'korkealla. Kujaa pitkin kävelee valkoasuinen mies, ja '
-            + 'seinien yli kulkee sähköjohtoja.',
+            + 'korkealla, ja kujaa pitkin kävelee valkoasuinen mies.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17436,12 +17425,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tripoli - Gurgi-Moschee 1833 bis 34 erbaut, Eingangstor.jpg',
-          selite: 'Moskeijan sisäänkäynti kujalta. Vihreä kaksiosainen ovi '
-            + 'on koristeltu valkoisilla tähtinapeilla, ja sen ympärillä '
-            + 'on marmorista veistetty suippokaari. Kehystä reunustavat '
-            + 'sini-vihreät kaakelinauhat, yläpuolella on '
-            + 'arabiankielinen laattataulu, ja seinään on kiinnitetty '
-            + 'kilpi, jossa lukee moskeijan nimi.',
+          selite: 'Moskeijan sisäänkäynti kujalta: vihreä kaksiosainen ovi '
+            + 'valkoisine tähtinappeineen, ympärillään marmorista veistetty '
+            + 'suippokaari ja sini-vihreät kaakelinauhat.',
           lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],

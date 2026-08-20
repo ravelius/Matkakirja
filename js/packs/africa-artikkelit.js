@@ -95,11 +95,41 @@ export const OMAT_ARTIKKELIT = {
       + 'kuuluvat katukuvaan kuten sata vuotta sittenkin — kaupunki on '
       + 'yhä paikka, jossa kaksi mannerta katsoo toisiaan silmiin.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E8 (Raamattu, "TEKSTIEN PAINOPISTE"
+   * ja Fablen eräohje): intro EI OLE ENÄÄ kahden lauseen nosto vaan
+   * lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkettä kolmessa kappaleessa
+   * ('\n\n') ja 1–3 maltillista **lihavointia**. Renderöijä
+   * (piirraLeipateksti) tekee kappaleet ja boldit, joten tänne ei
+   * kirjoiteta HTML:ää. Faktat ovat Tripolin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot, Matkailijan Tripoli
+   * ja Kauppa ja karavaanit; maakartat.js) sekä alla olevasta
+   * artikkeli-kentästä, joka on ennallaan. Sisältölinjaus: ei
+   * nykypolitiikkaa eikä Libyan nykytilannetta.
+   */
   Tripoli: {
-    intro: 'Tripoli on Libyan pääkaupunki ja Välimeren rannan valkoinen '
-      + 'satamakaupunki, jota on kutsuttu meren morsiameksi. Sen '
-      + 'kauppapaikalla ovat kohdanneet meri ja Sahara: laivat toivat '
-      + 'tavaransa satamaan, karavaanit aavikon halki.',
+    intro: 'Tripoli on Libyan pääkaupunki, noin 1,3 miljoonan asukkaan '
+      + 'satamakaupunki Välimeren rannalla. Nimi on kreikkaa ja '
+      + 'tarkoittaa kolmea kaupunkia: antiikin rannikolla olivat Oea, '
+      + 'Sabratha ja Leptis Magna. Vain **Oea** on ollut asuttuna '
+      + 'keskeytyksettä tähän päivään asti, ja siksi sen '
+      + 'roomalaisesta ajasta on jäljellä niin vähän: kahden muun '
+      + 'rauniot säilyivät, mutta Oeassa vanhat rakennukset purettiin '
+      + 'rakennusaineeksi tai jäivät uusien alle.'
+      + '\n\n'
+      + 'Matkailijan Tripoli on vanhakaupunki eli **medina**, jonka '
+      + 'katuverkko noudattaa yhä roomalaista kaavaa ja jonka muurit '
+      + 'ovat pystyssä. Sisäpuoli on vain kuudensadan metrin '
+      + 'levyinen, joten koko medina kävellään ristiin vartissa. Kujat '
+      + 'on jaettu ammateittain — kultasepät, hajusteet, kupariseppien '
+      + 'vasarointi — ja niiden keskellä seisoo Marcus Aureliuksen '
+      + 'marmorinen riemukaari vuodelta 165.'
+      + '\n\n'
+      + 'Meri ja aavikko kohtasivat täällä: Tripoli oli '
+      + 'Saharan-kaupan pohjoinen pää, ja karavaanitie toi kultaa ja '
+      + 'norsunluuta aavikon takaa. Ibn Battutan mukaan tavallisessa '
+      + 'karavaanissa kulki noin tuhat kamelia. Ottomaanien ajalta '
+      + 'ovat medinan moskeijat ja kellotorni.',
     artikkeli: 'Tripoli on Libyan pääkaupunki ja maan suurin kaupunki '
       + 'Välimeren rannalla. Nimi tulee kreikan sanoista "kolme '
       + 'kaupunkia": antiikin aikana rannikolla oli kolme '

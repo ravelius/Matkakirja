@@ -17090,6 +17090,13 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8 (Raamattu "TEKSTIEN PAINOPISTE",
+   * omistajan tarkennus "kuvateksti on YKSI virke"): tämän lehden
+   * monivirkkeiset selite-kentät tiivistettiin yhteen virkkeeseen. Kuvan
+   * olennaisin sisältö ja pakolliset selitykset säilyivät; lahde-rivit,
+   * nostot, oppaat, johdannot ja kuvatiedostot eivät muuttuneet.
+   */
   tromssa: [
     {
       id: 'kaupunki',
@@ -17100,22 +17107,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Aurora Borealis Tromsø Norway.jpg',
-          selite: 'Revontulet kaartuvat vihreinä lumisten tunturien yllä Tromssan '
-            + 'lähellä. Etualalla on koivuja ja hankea, ja pilvien raosta '
-            + 'näkyy tähtiä.',
+          selite: 'Revontulet kaartuvat vihreinä lumisten tunturien yllä '
+            + 'Tromssan lähellä, etualalla koivuja ja hankea.',
           lahde: 'Andi Gentsch, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: '09512 Tromsdalen church and bridge - Tromso, Norway - V-P.jpg',
-          selite: 'Tromssan silta kaartaa salmen yli kirkkaana kesäpäivänä. '
-            + 'Vastarannalla nousee lumihuippuinen tunturi, ja rannassa näkyy '
-            + 'kaupungin taloja.',
+          selite: 'Tromssan silta kaartaa salmen yli kirkkaana kesäpäivänä, '
+            + 'vastarannalla lumihuippuinen tunturi ja rannassa kaupungin '
+            + 'taloja.',
           lahde: 'Virtual-Pano, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tromsø Hurtigruten Trollfjord 01.jpg',
-          selite: 'Hurtigrutenin laiva Trollfjord Tromssan laiturissa. Laiva on '
-            + 'poikennut samaa rannikkoreittiä vuodesta 1893, ja se tuo yhä '
+          selite: 'Hurtigrutenin laiva Trollfjord Tromssan laiturissa; sama '
+            + 'rannikkoreitti on kulkenut vuodesta 1893, ja laiva tuo yhä '
             + 'matkustajien lisäksi rahtia.',
           lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -17123,7 +17129,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Sentrum - Downtown Tromsø (4147084546).jpg',
-          selite: 'Näkymä katolta yli pienen kaupungin: etualalla seisoo keltainen puurakennus jyrkkine harmaine kattoineen, ja sen takana levittäytyy matalaa keskustaa kohti sinistä salmea. Vastarannalla nousee jyrkkä paljas vuori, ja oikealla kaartaa pitkä silta veden yli.',
+          selite: 'Näkymä katolta yli kaupungin: etualalla keltainen '
+            + 'puurakennus, sen takana matalaa keskustaa kohti sinistä '
+            + 'salmea ja vastarannalla jyrkkä paljas vuori.',
           lahde: 'Mark Ledingham, Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Tromssa on pieni kaupunki kaukana pohjoisessa: '
@@ -17172,7 +17180,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'paljon, että puutarhassa kasvaa rododendroneja 69. '
                 + 'leveysasteella — tammikuun keskilämpötila jää '
                 + 'vain neljään pakkasasteeseen.',
-              kuva: { tiedosto: 'Arctic-Alpine Botanical Garden Tromsø 2022-09-06 09.jpg', selite: 'Kapea sorapolku mutkittelee tiheän tunturikoivikon läpi sateisena päivänä. Koivujen rungot ovat harmaita ja kallellaan, lehdet vielä vihreitä, ja polun reunoilla kasvaa saniaisia ja heinää.', lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)' },
+              kuva: { tiedosto: 'Arctic-Alpine Botanical Garden Tromsø 2022-09-06 09.jpg', selite: 'Kapea sorapolku mutkittelee tiheän tunturikoivikon läpi sateisena päivänä, koivujen rungot harmaina ja kallellaan ja lehdet vielä vihreinä.', lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)' },
             },
             {
               otsikko: 'Kevät 1940 ja marraskuu 1944',
@@ -17317,9 +17325,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Biosphere, ja lapsuudenystävät Svein Berge ja Torbjørn '
             + 'Brundtland perustivat Röyksoppin 1998. Pieni kaupunki kuuluu '
             + 'yhä maailman festivaaleilla.',
-          selite: 'Röyksopp Glastonburyn festivaalilla 2005: kaksi miestä, pino '
-            + 'Korgin syntetisaattoreita ja valotaulu. Duon kotikaupunki on '
-            + 'noin 350 kilometriä napapiiristä pohjoiseen.',
+          selite: 'Röyksopp Glastonburyn festivaalilla 2005: kaksi miestä, '
+            + 'pino Korgin syntetisaattoreita ja valotaulu — duon '
+            + 'kotikaupunki on noin 350 kilometriä napapiiristä pohjoiseen.',
           lahde: 'Beyond My Ken (talk), Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Röyksopp',
         },
@@ -17332,10 +17340,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. '
             + 'Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia '
             + 'vedestä, ja sen jälkeen se säilyy vuosia.',
-          selite: 'Kapakalatelineitä Moskenesissä Lofooteilla. Samanlaisia '
-            + 'telineitä on pitkin Pohjois-Norjan rannikkoa. Suurin osa '
-            + 'valmiista kalasta viedään Italiaan, missä se liotetaan viikon '
-            + 'ajan ennen ruoanlaittoa.',
+          selite: 'Kapakalatelineitä Moskenesissä Lofooteilla; samanlaisia '
+            + 'on pitkin Pohjois-Norjan rannikkoa, ja suurin osa valmiista '
+            + 'kalasta viedään Italiaan.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Kapakala',
         },
@@ -17348,9 +17355,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '21. tammikuuta. Se päivä juhlitaan: kouluissa ja päiväkodeissa '
             + 'syödään aurinkopullia ja appelsiineja. Kesällä aurinko ei '
             + 'laske toukokuun puolivälistä heinäkuun loppuun.',
-          selite: 'Jäämeren katedraali eli Tromsdalenin kirkko tapaninpäivänä '
-            + 'kello 14.50. Keskellä kaamosta taivas on tunnin tai kaksi '
-            + 'juuri näin sininen — se on päivän valoisin hetki.',
+          selite: 'Jäämeren katedraali eli Tromsdalenin kirkko '
+            + 'tapaninpäivänä kello 14.50, jolloin keskellä kaamosta taivas '
+            + 'on hetken juuri näin sininen.',
           lahde: 'Harald Groven, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Kaamos',
         },
@@ -17365,34 +17372,25 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Tromso-Drone-20160721-092 (28276376613).jpg',
-          selite: 'Keskusta ilmasta heinäkuussa: etualalla ovat '
-            + 'keskustan tasakatot ja väritetyt puutalot, ja niiden '
-            + 'takana kohoaa puinen tuomiokirkko vihreine tornihuippuineen. '
-            + 'Sen takaa aukeaa satama-allas venelaitureineen ja '
-            + 'Tromssan salmi, jonka yli kaartaa hoikkapilarinen silta. '
-            + 'Vastarannalla talot nousevat rinnettä ylös kesävihreän '
-            + 'tunturiselänteen juurelle.',
+          selite: 'Keskusta ilmasta heinäkuussa: väritettyjen puutalojen '
+            + 'takaa kohoaa puinen tuomiokirkko, ja sen takaa aukeaa '
+            + 'satama-allas ja salmi, jonka yli kaartaa hoikkapilarinen '
+            + 'silta.',
           lahde: 'CucombreLibre from New York, NY, USA, Wikimedia '
             + 'Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Tromsø from Fjellheisen in Winter.JPG',
-          selite: 'Kaupunki kaamosyönä vuorenrinteeltä: alareunassa '
-            + 'levittäytyy salmen musta vesi, jossa laiturivalot '
-            + 'piirtyvät pitkinä juovina. Keskellä koko saari palaa '
-            + 'tiheänä keltaisten katuvalojen mattona, ja vastarannan '
-            + 'valot kiipeävät rinteeseen. Niiden yläpuolella tunturit '
-            + 'ja taivas ovat täysin mustat.',
+          selite: 'Kaupunki kaamosyönä vuorenrinteeltä: koko saari palaa '
+            + 'tiheänä keltaisten katuvalojen mattona salmen mustan veden '
+            + 'takana, ja tunturit ja taivas ovat täysin mustat.',
           lahde: 'Smitra0, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Hamna Tromsø.jpg',
-          selite: 'Asuinkortteli tammikuussa: valkoisia, siniharmaita '
-            + 'ja punaisia puutaloja nousee rinnettä ylös rivi rivin '
-            + 'takaa, ja jokaisen harjakaton päällä lepää paksu '
-            + 'lumipatja. Talojen välissä on hankia ikkunoiden '
-            + 'korkeudelle ja paljaita koivuja. Taustalla kohoaa matala '
-            + 'lumen peittämä vaara vaaleanpunertavaa taivasta vasten.',
+          selite: 'Asuinkortteli tammikuussa: valkoisia, siniharmaita ja '
+            + 'punaisia puutaloja nousee rinnettä ylös rivi rivin takaa, ja '
+            + 'jokaisen harjakaton päällä lepää paksu lumipatja.',
           lahde: 'Harald Groven, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17427,9 +17425,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pimennysverho. Kaupungissa järjestetään keskiyön aurinkoon '
             + 'ajoitettuja konsertteja ja maratonjuoksu, joka lähtee vasta '
             + 'puoli yhdeltätoista illalla.',
-          selite: 'Keskiyön aurinko matalalla Tromssan yllä vuorelta nähtynä. '
-            + 'Valo on oranssi, salmi hohtaa ja silta erottuu tummana kaarena '
-            + 'veden päällä.',
+          selite: 'Keskiyön aurinko matalalla Tromssan yllä vuorelta '
+            + 'nähtynä: valo on oranssi, salmi hohtaa ja silta erottuu '
+            + 'tummana kaarena.',
           lahde: 'Osopolar, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -17443,9 +17441,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sinkoutuvat sähköiset hiukkaset, jotka törmäävät ilmakehän '
             + 'kaasuihin. Moni ei uskonut sitä ennen kuin satelliitit '
             + 'todistivat asian vasta 1960-luvulla.',
-          selite: 'Vanha valokuva kivestä muuratusta havaintoasemasta paljaan '
-            + 'tunturin huipulla. Katolla liehuu Norjan lippu ja seinistä '
-            + 'lähtee harusvaijereita.',
+          selite: 'Vanha valokuva kivestä muuratusta havaintoasemasta '
+            + 'paljaan tunturin huipulla, katolla Norjan lippu ja seinistä '
+            + 'lähteviä harusvaijereita.',
           lahde: 'Kristian Birkeland, Wikimedia Commons (public domain)',
           wiki: 'Kristian Birkeland',
         },
@@ -17460,7 +17458,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kaupunki on pieni mutta täynnä tutkijoita, ja opiskelijoita '
             + 'tulee kymmenistä maista — moni jää talveksi juuri nähdäkseen '
             + 'pimeän ajan.',
-          selite: 'Tromssan yliopiston kampus Breivikassa syksyllä. Matalia '
+          selite: 'Tromssan yliopiston kampus Breivikassa syksyllä: matalia '
             + 'tiilirakennuksia nurmikentän takana, edessä hiekkatie ja '
             + 'koivuja.',
           lahde: 'Edricson, Wikimedia Commons (CC BY-SA 3.0)',
@@ -17840,6 +17838,11 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
+   * tiivistettiin yhteen virkkeeseen (ks. tromssa-lohkon perustelu).
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lahde-rivit ennallaan.
+   */
   lappi: [
     {
       id: 'kaupunki',
@@ -17849,20 +17852,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Gentle but wide green aurora display over Levi, Kittilä, Lapland, Finland, 2023 September - 2.jpg',
-          selite: 'Revontulet leviävät vihreinä juovina tunturin yllä Kittilässä. '
-            + 'Alhaalla erottuu matalaa männikköä ja jäkäläpeitteistä maata.',
+          selite: 'Revontulet leviävät vihreinä juovina tunturin yllä '
+            + 'Kittilässä, ja alhaalla erottuu matalaa männikköä ja '
+            + 'jäkäläpeitteistä maata.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Betula pubescens czerepanovii in autumn colors on the lower peak of Sallatunturit in Salla, Lapland, Finland.jpg',
-          selite: 'Tunturikoivu hehkuu oranssina ruskan aikaan Sallassa. Takana '
-            + 'aukeaa metsäinen laakso ja seuraavat tunturit.',
+          selite: 'Tunturikoivu hehkuu oranssina ruskan aikaan Sallassa, ja '
+            + 'takana aukeaa metsäinen laakso ja seuraavat tunturit.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Reindeer farm, Inari, Suomi - Finland 2013-03-10 f.jpg',
-          selite: 'Poroja valjaissa ahkioiden edessä Inarissa. Aidan takana '
-            + 'odottaa jono rekiä, ja tienvarressa on kolmion muotoinen '
+          selite: 'Poroja valjaissa ahkioiden edessä Inarissa, aidan takana '
+            + 'jono rekiä ja tienvarressa kolmion muotoinen '
             + 'porovaroituskyltti.',
           lahde: 'Manfred Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
@@ -17870,7 +17874,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Landscape from Kultakero, Pyhätunturi, Pelkosenniemi, Lapland, Finland, 2021 September.jpg',
-          selite: 'Tunturin laelta avautuva ruskamaisema: etualalla on matalaa varpukasvillisuutta punaisena ja vihreänä, seassa kitukasvuisia mäntyjä ja kuolleita kuusia. Keskellä laskeutuu vaalea kivikkorinne, ja horisontissa kohoaa loiva tunturinselkä pilvisen taivaan alla.',
+          selite: 'Tunturin laelta avautuva ruskamaisema: matalaa '
+            + 'varpukasvillisuutta punaisena ja vihreänä, keskellä vaalea '
+            + 'kivikkorinne ja horisontissa loiva tunturinselkä.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Lappi on Suomen suurin maakunta, sata tuhatta '
@@ -17918,7 +17924,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'harvakseltaan väkeä. Kruunu perusti joen varteen '
                 + 'oman valvonta-asemansa. Isoisän matkan aikaan 1873 '
                 + 'ryntäys oli vielä käynnissä.',
-              kuva: { tiedosto: 'Kultala 1874.jpg', selite: 'Käsin väritetty kartta vuodelta 1874: mutkitteleva joki kulkee vaaleansinisenä kuvan halki, ja sen rannoille on merkitty rakennuksia, teitä ja työmaita. Yläkulmassa on ruotsinkielinen otsikko ja oikeassa laidassa merkkien selitykset.', lahde: 'Geologian tutkimuskeskus, Wikimedia Commons (PD)' },
+              kuva: { tiedosto: 'Kultala 1874.jpg', selite: 'Käsin väritetty kartta vuodelta 1874: mutkitteleva joki kulkee vaaleansinisenä kuvan halki, ja sen rannoille on merkitty rakennuksia, teitä ja työmaita.', lahde: 'Geologian tutkimuskeskus, Wikimedia Commons (PD)' },
             },
             {
               otsikko: 'Kaupunki poronpään muotoon',
@@ -18064,9 +18070,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muuteta, ja se voi periytyä suvussa. Kirkko piti joikaamista '
             + 'syntinä, ja vielä 1950-luvulla se oli kielletty '
             + 'saamelaisalueen kouluissa.',
-          selite: 'Wimme Saari joikaa Etno-Espan lavalla Helsingissä elokuussa '
-            + '2006. Yllään hänellä on gákti eli saamenpuku. Joikaaja tulee '
-            + 'toimeen ilman soittimia: sävel muuntuu kurkunpään lihaksilla.',
+          selite: 'Wimme Saari joikaa gákti eli saamenpuku yllään '
+            + 'Etno-Espan lavalla Helsingissä elokuussa 2006 — joikaaja '
+            + 'tulee toimeen ilman soittimia.',
           lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Joiku',
         },
@@ -18079,9 +18085,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'poronhoitoalue on 122 936 neliökilometriä eli 36 prosenttia '
             + 'Suomen maapinta-alasta, ja suurin sallittu poromäärä on ollut '
             + '203 700 eloporoa.',
-          selite: 'Poronkäristystä perunamuusin, puolukan ja suolakurkun kanssa '
-            + 'Muonion Jeriksellä. Liha on porosta, joka on ollut ulkona koko '
-            + 'elämänsä — siksi lastut ovat tummia ja lähes rasvattomia.',
+          selite: 'Poronkäristystä perunamuusin, puolukan ja suolakurkun '
+            + 'kanssa Muonion Jeriksellä — liha on ulkona koko elämänsä '
+            + 'olleesta porosta, joten lastut ovat tummia ja lähes '
+            + 'rasvattomia.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Poronkäristys',
         },
@@ -18094,9 +18101,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat '
             + 'lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja '
             + 'osa kielipesän lapsista opettaa kieltä itse.',
-          selite: 'Sajos-talon opastaulu Inarissa: samat asiat pohjoissaameksi, '
-            + 'inarinsaameksi, koltansaameksi ja suomeksi. Alimmalla rivillä '
-            + 'on Anarâškielâ servi, inarinsaamen kieliyhdistys.',
+          selite: 'Sajos-talon opastaulu Inarissa: samat asiat '
+            + 'pohjoissaameksi, inarinsaameksi, koltansaameksi ja suomeksi, '
+            + 'alimmalla rivillä inarinsaamen kieliyhdistys Anarâškielâ '
+            + 'servi.',
           lahde: 'Kimberli Mäkäräinen, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Inarinsaame',
         },
@@ -18112,25 +18120,21 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Saana at Kilpisjärvi, 2012 March.jpg',
           selite: 'Saana maaliskuussa: laakeahuippuinen tunturi kohoaa '
-            + 'kokonaan lumen peitossa, ja sen laella erottuu ohut '
-            + 'masto. Etualalla levittäytyy jäätynyt ja luminen '
-            + 'Kilpisjärvi, rannassa on tummaa koivikkoa.',
+            + 'kokonaan lumen peitossa jäätyneen Kilpisjärven takana, ja '
+            + 'sen laella erottuu ohut masto.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Kevo canyon from Bođosroadjá.JPG',
           selite: 'Kevon kanjoni kesällä: jyrkät rinteet laskeutuvat '
-            + 'kapeaan uomaan, ja niitä peittää vuorotellen '
-            + 'harmaa lohkarekivikko ja matala tunturikoivikko. Pohjalla '
-            + 'kasvaa tiheä vihreä puusto, ja taivas on '
-            + 'pilvenharmaa.',
+            + 'kapeaan uomaan lohkarekivikon ja tunturikoivikon peittäminä, '
+            + 'ja pohjalla kasvaa tiheä vihreä puusto.',
           lahde: 'Antti Leppänen, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Pallastunturi peaks in september 2021.jpg',
           selite: 'Pallastunturit syyskuussa: etualan suolla ja '
-            + 'kangasmetsässä palaa ruska punaisena, oranssina ja '
-            + 'keltaisena kuusten välissä. Taustalla kohoaa loivakaarinen '
+            + 'kangasmetsässä palaa ruska, ja taustalla kohoaa '
             + 'tunturiselänne, jonka lakea peittää jo ohut lumi.',
           lahde: 'Htm, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -18166,9 +18170,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'porot kootaan erotukseen, jossa ne lajitellaan omistajille ja '
             + 'osa erotetaan teuraaksi. Aidan sisällä pyörii tuhansia eläimiä '
             + 'samaan aikaan.',
-          selite: 'Neljä poroa kulkee lumisella rinteellä Utsjoella. Maassa on '
-            + 'paljasta kangasta ja lunta laikuittain, ja takana näkyy '
-            + 'tunturin rinne.',
+          selite: 'Neljä poroa kulkee lumisella rinteellä Utsjoella, jossa '
+            + 'maassa on lunta laikuittain ja takana näkyy tunturin rinne.',
           lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Poro',
         },
@@ -18199,14 +18202,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin siksi, että pitkän matkan takaa tulleet saivat '
             + 'yöpyä kirkonmenojen ajan. Osaa käytettiin vielä 1900-luvun '
             + 'puolella.',
-          selite: 'Turvekammi, jonka katto ja seinät ovat paksun ruohon peitossa. '
-            + 'Keskellä on pieni ikkuna, ja ympärillä kasvaa heinää ja '
-            + 'kukkia.',
+          selite: 'Turvekammi, jonka katto ja seinät ovat paksun ruohon '
+            + 'peitossa; keskellä on pieni ikkuna ja ympärillä kasvaa '
+            + 'heinää ja kukkia.',
           lahde: 'EerikLehto, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
+   * tiivistettiin yhteen virkkeeseen (ks. tromssa-lohkon perustelu).
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lahde-rivit ennallaan.
+   */
   kreeta: [
     {
       id: 'kaupunki',
@@ -18217,16 +18225,16 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Chania Old Harbour in Crete, Greece 004.jpg',
-          selite: 'Chanian vanha satama iltavalossa. Venetsialaisajan talot '
+          selite: 'Chanian vanha satama iltavalossa: venetsialaisajan talot '
             + 'kaartuvat rannan mukana, ja veden pinnassa näkyy niiden '
             + 'peilikuva.',
           lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Ruins of the Minoan Palace in Knossos.jpg',
-          selite: 'Knossoksen palatsin raunioita: punaisia pylväitä, portaita ja '
-            + 'kivimuureja. Palatsissa oli satoja huoneita käytävien '
-            + 'varrella.',
+          selite: 'Knossoksen palatsin raunioita — punaisia pylväitä, '
+            + 'portaita ja kivimuureja; palatsissa oli satoja huoneita '
+            + 'käytävien varrella.',
           lahde: 'Annatsach, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -18239,7 +18247,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Psiloritis view from Thronos 01.JPG',
-          selite: 'Saaren korkein vuori kohoaa loivana harmaana kupuna kirkkaan sinisen taivaan alle. Sen edessä on matalampia kallioharjanteita ja tummanvihreä metsäinen kumpu, ja etualalla rehottaa kuivan kesän jälkeen vielä vihreä pensaikko ja lehtipuita.',
+          selite: 'Saaren korkein vuori kohoaa loivana harmaana kupuna '
+            + 'kirkkaan sinisen taivaan alle, ja sen edessä on matalampia '
+            + 'kallioharjanteita ja vihreää pensaikkoa.',
           lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Kreeta on 260 kilometriä pitkä mutta kapea, ja sen '
@@ -18266,7 +18276,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Heraklioniin. Pohjoisrannikon moottoritiestä on '
                 + 'valmiina vasta noin 310 kilometriä suunnitellusta '
                 + '557:stä.',
-              kuva: { tiedosto: 'Minoan Lines, Ariadne Palace 1.jpg', selite: 'Iso puna-valkoinen matkustaja-autolautta liukuu tyynellä merellä iltahämärässä. Kyljessä lukee varustamon nimi ja keulassa aluksen nimi; ikkunariveistä loistaa valo ja savupiipusta nousee ohut savu.', lahde: 'Dnalor 01, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Minoan Lines, Ariadne Palace 1.jpg', selite: 'Iso puna-valkoinen matkustaja-autolautta liukuu tyynellä merellä iltahämärässä ikkunarivit valaistuina, kyljessä varustamon nimi.', lahde: 'Dnalor 01, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Pitkä ja kapea',
@@ -18434,8 +18444,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kiistelevät yhä siitä, oliko se urheilua, uskonnon meno vai '
             + 'molempia — eikä kukaan tiedä, onnistuiko se oikeasti koskaan.',
           selite: 'Härkähyppyfreskon jäänteet Herakleionin arkeologisessa '
-            + 'museossa, maalattu noin 1500 eaa. Vaaleat hahmot ovat naisia, '
-            + 'tumma mies — minolainen tapa merkitä sukupuoli värillä.',
+            + 'museossa noin vuodelta 1500 eaa.: vaaleat hahmot ovat naisia '
+            + 'ja tumma mies, minolainen tapa merkitä sukupuoli värillä.',
           lahde: 'Wikimedia Commons (CC0)',
           wiki: 'Knossos',
         },
@@ -18446,8 +18456,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pystyssä polvella eikä leuan alla. Sitä soitetaan häissä ja '
             + 'kylän juhlissa, usein läpi yön: tanssi kestää niin kauan kuin '
             + 'soittajaa jaksaa.',
-          selite: 'Kreetalainen lyyra. Kieliä painetaan kynsien kyljellä, ei '
-            + 'sormenpäillä — siitä tulee soittimen erikoinen liukuva ääni.',
+          selite: 'Kreetalainen lyyra, jonka kieliä painetaan kynsien '
+            + 'kyljellä eikä sormenpäillä — siitä tulee soittimen erikoinen '
+            + 'liukuva ääni.',
           lahde: 'Lemur12, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Psarantónis',
         },
@@ -18458,8 +18469,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '600 000 ihmistä — puita on siis viisikymmentä kertaa enemmän. '
             + 'Osa puista on tuhansia vuosia vanhoja ja tuottaa yhä satoa. '
             + 'Sato korjataan talvella, usein koko suvun voimin.',
-          selite: 'Oliivinkorjuuta Sitiassa Itä-Kreetalla. Verkot levitetään puun '
-            + 'alle ja oksat ravistellaan tai kammataan tyhjiksi.',
+          selite: 'Oliivinkorjuuta Sitiassa Itä-Kreetalla: verkot '
+            + 'levitetään puun alle ja oksat ravistellaan tai kammataan '
+            + 'tyhjiksi.',
           lahde: 'Petro Stelte, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Oliivi',
         },
@@ -18475,29 +18487,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Lefka Ori 01.jpg',
-          selite: 'Lefka Ori eli Valkoiset vuoret kesäpäivänä: '
-            + 'paljaat kalkkikivihuiput nousevat vaaleina syvänsinistä '
-            + 'taivasta vasten. Etualan rinteillä kasvaa hajanaista '
-            + 'pensaikkoa ja yksittäisiä puita, ja alhaalla vasemmalla '
-            + 'näkyy kylän valkoisia taloja.',
+          selite: 'Lefka Ori eli Valkoiset vuoret kesäpäivänä: paljaat '
+            + 'kalkkikivihuiput nousevat vaaleina syvänsinistä taivasta '
+            + 'vasten, ja alhaalla vasemmalla näkyy kylän valkoisia taloja.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Kourtaliotiko Gorge 01.JPG',
           selite: 'Kourtaliotikon rotko: kaksi jyrkkää kalkkikiviseinämää '
             + 'sulkeutuu kapeaksi kuruksi, jonka pohjalla kasvaa tummaa '
-            + 'vihreää. Vasemmalla rinteellä kiemurtelee kapea tie, ja '
-            + 'etualan sorapenkereellä on keltaisenaan kukkivia '
-            + 'pensaita.',
+            + 'vihreää ja rinteellä kiemurtelee kapea tie.',
           lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Omalos Plateau.jpg',
           selite: 'Omalosin tasanko ylhäältä: vuorten ympäröimä laakea '
-            + 'ylänkö on jaettu vaaleiksi peltokuvioiksi, joiden välissä '
-            + 'kasvaa yksittäisiä puita. Tasangon poikki kulkee mutkitteleva '
-            + 'tie, ja taustalla harjanteet nousevat tummina '
-            + 'hattarapilvien alle.',
+            + 'ylänkö on jaettu vaaleiksi peltokuvioiksi, joiden poikki '
+            + 'kulkee mutkitteleva tie.',
           lahde: 'Emmanuel Eragne from Tokyo, Japan, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
@@ -18533,7 +18539,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja siellä kalliot nousevat molemmin puolin satoja metrejä. '
             + 'Alue on ollut kansallispuisto vuodesta 1962, ja kesällä siellä '
             + 'kulkee tuhansia kävijöitä päivässä.',
-          selite: 'Näkymä Samarian rotkon suulle sumuisena päivänä. Jyrkät '
+          selite: 'Näkymä Samarian rotkon suulle sumuisena päivänä: jyrkät '
             + 'kalliorinteet sukeltavat alas laaksoon, ja etualalla '
             + 'mutkittelee polku.',
           lahde: 'C messier, Wikimedia Commons (CC BY-SA 4.0)',
@@ -18549,8 +18555,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'noin kymmenentuhatta. Nykyään useimmat on korvattu '
             + 'moottoripumpuilla, mutta osa on kunnostettu ja purjeet '
             + 'nostetaan kesäksi paikoilleen.',
-          selite: 'Metallinen tuulimylly Lassithin tasangolla. Pyörässä on '
-            + 'kymmenen valkoista kangaspurjetta, ja alla on betoninen '
+          selite: 'Metallinen tuulimylly Lassithin tasangolla: pyörässä on '
+            + 'kymmenen valkoista kangaspurjetta ja alla betoninen '
             + 'vesisäiliö.',
           lahde: 'Lourakis, Wikimedia Commons (CC BY-SA 3.0)',
         },
@@ -18564,14 +18570,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä '
             + 'kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään '
             + 'mennään taskulampun kanssa.',
-          selite: 'Idan luolan suu kalliorinteessä. Aukko on tumma ja leveä, ja '
-            + 'sen eteen on rakennettu kapea kiskoilla kulkeva ratayhteys '
+          selite: 'Idan luolan tumma ja leveä suu kalliorinteessä, ja sen '
+            + 'eteen on rakennettu kapea kiskoilla kulkeva ratayhteys '
             + 'kaivauksia varten.',
           lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
+   * tiivistettiin yhteen virkkeeseen (ks. tromssa-lohkon perustelu).
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lahde-rivit ennallaan.
+   */
   sisilia: [
     {
       id: 'kaupunki',
@@ -18581,19 +18592,20 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Taormina BW 2025-04-27 09-32-42.jpg',
-          selite: 'Taormina rinteellä meren yllä. Talot kiipeävät kukkulalle '
-            + 'terasseittain, ja alhaalla siintää Joonianmeren rannikko.',
+          selite: 'Taormina rinteellä meren yllä: talot kiipeävät '
+            + 'kukkulalle terasseittain, ja alhaalla siintää Joonianmeren '
+            + 'rannikko.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mount Etna snow-toppd.jpg',
-          selite: 'Etna lumihuippuisena. Tulivuoren rinteillä on tummaa laavaa ja '
+          selite: 'Etna lumihuippuisena, rinteillä tummaa laavaa ja '
             + 'alempana vihreää viljelysmaata.',
           lahde: 'Jeanne boleyn, Wikimedia Commons (public domain)',
         },
         {
           tiedosto: 'Palermo Cathedral BW 2025-04-29 11-14-42.jpg',
-          selite: 'Palermon katedraalin portaali ja kupoli. Rakennuksessa näkyy '
+          selite: 'Palermon katedraalin portaali ja kupoli, joissa näkyy '
             + 'päällekkäin arabialaista, normannilaista ja espanjalaista '
             + 'tyyliä.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
@@ -18602,7 +18614,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Carretto siciliano (3101352500).jpg',
-          selite: 'Lähikuva koristellun hevoskärryn kyljestä: puupintaan on veistetty ja maalattu kokonainen taistelukohtaus haarniskoituine ratsastajineen, ja sen ympärillä kiertää tiheä punaisen, sinisen ja vihreän kiehkuroista tehty koristelu. Alanurkassa kaartuu keltainen puupyörä kuvioituine puolineen.',
+          selite: 'Lähikuva koristellun hevoskärryn kyljestä: puupintaan on '
+            + 'veistetty ja maalattu taistelukohtaus haarniskoituine '
+            + 'ratsastajineen, ja alanurkassa kaartuu keltainen puupyörä.',
           lahde: 'Rino Porrovecchio, Wikimedia Commons (CC BY-SA 2.0)',
         },
         kappale: 'Sisilia on kolmion muotoinen — siitä juontuu sen '
@@ -18628,7 +18642,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Palermon kenttä on nimetty vuonna 1992 murhattujen '
                 + 'tuomareiden Giovanni Falconen ja Paolo Borsellinon '
                 + 'mukaan.',
-              kuva: { tiedosto: '16.11.95 Between Messina & Villa San Giovanni mv "Scilla" (12788799193).jpg', selite: 'Valkoinen junalautta ylittää kapeaa salmea; kyljessä lukee valtion rautateiden nimi. Taustalla nousee rinteille rakennettu kaupunki ja sen takana korkeat, kuivat vuoret. Meri on syvänsininen ja tyyni.', lahde: 'Phil Richards, Wikimedia Commons (CC BY-SA 2.0)' },
+              kuva: { tiedosto: '16.11.95 Between Messina & Villa San Giovanni mv "Scilla" (12788799193).jpg', selite: 'Valkoinen junalautta ylittää kapeaa salmea kyljessään valtion rautateiden nimi, ja taustalla nousee rinteille rakennettu kaupunki kuivine vuorineen.', lahde: 'Phil Richards, Wikimedia Commons (CC BY-SA 2.0)' },
             },
             {
               otsikko: 'Kolme kilometriä mannermaahan',
@@ -18793,7 +18807,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarinoissa. Sama tarina jatkui iltaa toisensa jälkeen '
             + 'kuukausia, ja yleisö tuli katsomaan kuin televisiosarjaa. '
             + 'Unesco suojeli perinteen 2001.',
-          selite: 'Sisilialaisia pupi-nukkeja haarniskoissaan. Nuket painavat '
+          selite: 'Sisilialaisia pupi-nukkeja haarniskoissaan; ne painavat '
             + 'jopa kymmenen kiloa, ja niitä ohjataan rautatangoilla '
             + 'ylhäältä.',
           lahde: 'Lookandlike, Wikimedia Commons (CC BY-SA 4.0)',
@@ -18807,7 +18821,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asiakas tilaa — muuten kuori pehmenee. Ricotta tehdään '
             + 'lampaanmaidosta, ja arabit toivat sokeriruo’on saarelle '
             + '800-luvulla.',
-          selite: 'Cannoli siciliani tarjolla. Päihin painetaan usein '
+          selite: 'Cannoli siciliani tarjolla, päihin painettuna '
             + 'pistaasirouhetta tai kandeerattua hedelmää.',
           lahde: 'Stefano Mortellaro, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Cannolo',
@@ -18819,9 +18833,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuotta, arabivallan ajoista asti. Myyjien huuto on oma '
             + 'taiteenlajinsa nimeltä abbanniata: hinta ja tavara lauletaan '
             + 'venytetyllä melodialla, joka kuuluu korttelin päähän.',
-          selite: 'Ballarò-tori Palermossa. Kojujen välissä myydään kalaa, '
-            + 'vihanneksia ja katuruokaa; markkina alkaa aamuvarhain ja '
-            + 'jatkuu iltaan.',
+          selite: 'Ballarò-tori Palermossa, jossa kojujen välissä myydään '
+            + 'kalaa, vihanneksia ja katuruokaa aamuvarhaisesta iltaan.',
           lahde: 'Benjamín Núñez González, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Palermo',
         },
@@ -18836,27 +18849,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Aerial image of Stromboli (view from the northeast).jpg',
-          selite: 'Stromboli ilmasta: tulivuorisaari kohoaa merestä '
-            + 'lähes säännöllisenä kartiona, ja huipulta nousee ohut '
-            + 'valkoinen höyrysuihku. Rinteet ovat ylhäältä tummaa '
-            + 'tuhkaa ja alempaa vihreitä, ja rannassa on valkoisten '
-            + 'talojen rivi.',
+          selite: 'Stromboli ilmasta: tulivuorisaari kohoaa merestä lähes '
+            + 'säännöllisenä kartiona, huipulta nousee ohut valkoinen '
+            + 'höyrysuihku ja rannassa on valkoisten talojen rivi.',
           lahde: 'Carsten Steger, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Madonie montagna.jpg',
-          selite: 'Madonien vuoristo alkukesästä: rinteet ovat vihreitä '
-            + 'ja niiden seasta työntyy paljaita kalliopaljastumia. '
-            + 'Etualalla kukkii keltainen ginsti tiheänä pensaana, ja '
-            + 'taivaalla kelluu valkoisia kumpupilviä.',
+          selite: 'Madonien vuoristo alkukesästä: vihreiden rinteiden '
+            + 'seasta työntyy paljaita kalliopaljastumia, ja etualalla '
+            + 'kukkii keltainen ginsti tiheänä pensaana.',
           lahde: 'Martin Teetz, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Capo Zafferano ottobre 2025 3.jpg',
-          selite: 'Capo Zafferano mereltä lokakuussa: kalkkikivinen '
-            + 'niemi kohoaa jyrkkänä vedestä, ja sen laella seisoo '
-            + 'valkoinen majakka. Rantaviiva on lohkeillutta kalliota, '
-            + 'ja edessä on syvänsininen ja aaltoileva meri.',
+          selite: 'Capo Zafferano mereltä lokakuussa: lohkeilleesta '
+            + 'kalliosta muodostuva niemi kohoaa jyrkkänä vedestä, ja sen '
+            + 'laella seisoo valkoinen majakka.',
           lahde: 'Auregann, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18892,8 +18901,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan '
             + 'ulkopuolella olevista suurimmista kreikkalaisista '
             + 'kokonaisuuksista.',
-          selite: 'Concordian temppeli harjanteella. Kaikki pylväät ovat pystyssä '
-            + 'ja kattopääty ehjä, ja ympärillä kasvaa oliivipuita.',
+          selite: 'Concordian temppeli harjanteella oliivipuiden keskellä, '
+            + 'kaikki pylväät pystyssä ja kattopääty ehjä.',
           lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -18907,8 +18916,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '1950-luvulla lähes ennallaan. Kuuluisin on kuusikymmentä '
             + 'metriä pitkä käytävä, jonka mosaiikissa pyydystetään '
             + 'villieläimiä eri puolilta valtakuntaa.',
-          selite: 'Roomalainen lattiamosaiikki, jossa metsästäjät ajavat tiikeriä '
-            + 'ja villisikaa. Hahmot on tehty pienistä värillisistä kivistä.',
+          selite: 'Roomalainen lattiamosaiikki, jossa pienistä värillisistä '
+            + 'kivistä tehdyt metsästäjät ajavat tiikeriä ja villisikaa.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
         },
         {
@@ -18922,13 +18931,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tragedioita, ja yleisö istuu samoilla kiviportailla kuin '
             + 'kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee '
             + 'niin, että mukaan otetaan tyyny.',
-          selite: 'Kallioon hakattu puolikaaren muotoinen katsomo. Kivipenkit '
-            + 'nousevat riveittäin, ja alhaalla on pyöreä näyttämöpaikka.',
+          selite: 'Kallioon hakattu puolikaaren muotoinen katsomo, jonka '
+            + 'kivipenkit nousevat riveittäin pyöreän näyttämöpaikan '
+            + 'yläpuolelle.',
           lahde: 'Andrew Malone, Wikimedia Commons (CC BY 2.0)',
         },
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
+   * tiivistettiin yhteen virkkeeseen (ks. tromssa-lohkon perustelu).
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lahde-rivit ennallaan.
+   */
   alpit: [
     {
       id: 'kaupunki',
@@ -18939,27 +18954,29 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'CH.VS.Zermatt 2021-10-17 Matterhorn 8726.jpg',
-          selite: 'Matterhorn kohoaa yksinäisenä pyramidina. Rinteillä on lunta '
-            + 'juovina, ja alempana kulkee polku kivikossa.',
+          selite: 'Matterhorn kohoaa yksinäisenä pyramidina, rinteillä '
+            + 'lunta juovina ja alempana polku kivikossa.',
           lahde: 'Roy Egloff, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Alpine meadows.jpg',
-          selite: 'Alppiniitty kesällä. Keltaiset katkerot kukkivat rinteellä, ja '
-            + 'takana nousee kolmituhantisten harjanne.',
+          selite: 'Alppiniitty kesällä: keltaiset katkerot kukkivat '
+            + 'rinteellä, ja takana nousee kolmituhantisten harjanne.',
           lahde: 'Peter Sabol, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Wetterhorn from Grindelwald.jpg',
-          selite: 'Wetterhorn kohoaa Grindelwaldin kylän yllä. Vuoren juurella '
-            + 'näkyy taloja ja niittyjä, huipulla lunta.',
+          selite: 'Wetterhorn kohoaa Grindelwaldin kylän yllä, juurellaan '
+            + 'taloja ja niittyjä ja huipullaan lunta.',
           lahde: 'Einaz80, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Semmering Railway, Breitenstein, Styria, Austro-Hungary-LCCN2002710981.jpg',
-          selite: 'Värjätty valokuva 1800-luvun lopulta: vuoristolaakson yli kaartuu kivinen holvisilta, jonka takana kohoaa kallioinen huippu. Rinteillä on niittyjä, heinäseipäitä ja muutama punakattoinen talo, ja alalaidassa lukee radan ja paikan nimi.',
+          selite: 'Värjätty valokuva 1800-luvun lopulta: vuoristolaakson '
+            + 'yli kaartuu kivinen holvisilta, ja sen takana kohoaa '
+            + 'kallioinen huippu niittyineen ja punakattoisine taloineen.',
           lahde: 'Photochrom Print Collection, Wikimedia Commons (PD)',
         },
         kappale: 'Alppien läpi pääsi junalla jo isoisän matkan aikaan. '
@@ -19007,7 +19024,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'säilynyt asiakirja, jossa kesälaitumet mainitaan. '
                 + 'Suurin osa laitumista on alle 2 400 metrin '
                 + 'korkeudessa, kaikki alle 2 800:n.',
-              kuva: { tiedosto: 'Rattener alm 3 kuehe.jpg', selite: 'Kolme lehmää avoimella ylängön laitumella: yksi seisoo ruskeana, kaksi makaa nurmella valkoruskeina. Taustalla nurmi jatkuu horisonttiin, jossa erottuu kuusia ja kaukainen vuorenharjanne, ja taivas on tummien sadepilvien peitossa.', lahde: 'Thomas Macht, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Rattener alm 3 kuehe.jpg', selite: 'Kolme lehmää avoimella ylängön laitumella, jonka takana nurmi jatkuu horisonttiin kuusien ja kaukaisen vuorenharjanteen luo tummien sadepilvien alla.', lahde: 'Thomas Macht, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Heinäkuu 1865',
@@ -19154,9 +19171,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yltää kuuteentoista. Ääni kantaa maastosta riippuen viidestä '
             + 'kymmeneen kilometriin. Sillä kutsuttiin karja kotiin ja '
             + 'viestittiin naapurilaaksoon, kun muuta puhelinta ei ollut.',
-          selite: 'Alppitorvensoittajia Zermattissa. Torvien suppilot lepäävät '
-            + 'maassa; jokainen on veistetty kuusesta ja koottu kolmesta '
-            + 'osasta, ja seinämä on vain 6–8 millimetriä paksu.',
+          selite: 'Alppitorvensoittajia Zermattissa torvien suppilot '
+            + 'maassa; jokainen torvi on veistetty kuusesta ja koottu '
+            + 'kolmesta osasta.',
           lahde: 'Walter Schärer, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Alppitorvi',
         },
@@ -19170,8 +19187,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä '
             + 'maksaa laulun.',
           selite: 'Fonduepata eli caquelon lämmittimen päällä, vieressä '
-            + 'leipäkuutioita ja pikkukurkkuja. Juusto pidetään sulana '
-            + 'pienellä liekillä ja sitä sekoitetaan koko ajan.',
+            + 'leipäkuutioita ja pikkukurkkuja, ja juusto pidetään sulana '
+            + 'pienellä liekillä.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Fondue',
         },
@@ -19184,9 +19201,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'teräsaitoja pitämään lumi paikallaan. Unesco lisäsi tämän '
             + 'osaamisen kulttuuriperintöluetteloonsa vuonna 2018 Sveitsin ja '
             + 'Itävallan yhteisestä hakemuksesta.',
-          selite: 'Lumivyöryesteitä St. Antöniessa Graubündenin kantonissa. '
-            + 'Teräsristikot on rakennettu juuri sinne, mistä vyöry lähtisi '
-            + 'liikkeelle — kylän yläpuoliseen rinteeseen.',
+          selite: 'Lumivyöryesteitä St. Antöniessa Graubündenin kantonissa: '
+            + 'teräsristikot on rakennettu kylän yläpuoliseen rinteeseen, '
+            + 'juuri sinne mistä vyöry lähtisi liikkeelle.',
           lahde: 'Paebi, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lumivyöry',
         },
@@ -19202,27 +19219,22 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Aletsch Glacier from Jungfraujoch (1).jpg',
           selite: 'Aletschin jäätikkö Jungfraujochilta: leveä jäävirta '
-            + 'kaartuu laaksoa alas, ja sen pintaa juovittavat tummat '
-            + 'moreeniraidat pitkinä viivoina. Molemmin puolin nousevat '
-            + 'lumiset huiput ja paljaat kalliokielekkeet.',
+            + 'kaartuu laaksoa alas tummien moreeniraitojen juovittamana, '
+            + 'ja molemmin puolin nousevat lumiset huiput.',
           lahde: 'Gzzz, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Drei Zinnen Tre Cime di Lavaredo Dolomites.jpg',
           selite: 'Tre Cime di Lavaredon kolme tornia pilvimeren yllä: '
             + 'vaaleat kalkkikivipaadet nousevat pystysuorina, ja niiden '
-            + 'railoissa on tuoretta lunta. Huippujen juuret katoavat '
-            + 'valkoiseen pilveen, ja ylhäällä taivas on kirkkaan '
-            + 'sininen.',
+            + 'railoissa on tuoretta lunta.',
           lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Lauterbrunnen-valley.jpg',
-          selite: 'Lauterbrunnenin laakso talvella: kapea laakso '
-            + 'laskeutuu jyrkkien kallioseinämien väliin, ja pohjalla '
-            + 'näkyy lumisia peltoja ja kylän taloja. Pilvenriekaleita '
-            + 'ajelehtii rinteitä pitkin, ja taustalla kohoaa luminen '
-            + 'huippujono.',
+          selite: 'Lauterbrunnenin laakso talvella: kapea laakso laskeutuu '
+            + 'jyrkkien kallioseinämien väliin, ja pohjalla näkyy lumisia '
+            + 'peltoja ja kylän taloja.',
           lahde: 'Keith Halstead, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -19257,8 +19269,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Vaaran uhatessa vartija viheltää kimeästi, ja koko rinne '
             + 'katoaa koloihinsa sekunneissa — vihellys kuuluu kilometrin '
             + 'päähän.',
-          selite: 'Murmeli seisoo takajaloillaan kivikkoisella rinteellä ja '
-            + 'pitelee etukäpälissään ruohoa. Turkki on ruskea ja tuuhea.',
+          selite: 'Murmeli seisoo takajaloillaan kivikkoisella rinteellä '
+            + 'ruskea ja tuuhea turkki pörhöllään ja pitelee etukäpälissään '
+            + 'ruohoa.',
           lahde: 'Fundraisingnetz, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Alppimurmeli',
         },
@@ -19273,9 +19286,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Alpeilta sukupuuttoon 1900-luvun alkuun mennessä, koska sen '
             + 'luultiin vievän lampaita ja lapsia. Palautus aloitettiin 1986, '
             + 'ja nyt niitä pesii taas satakunta paria.',
-          selite: 'Partakorppikotka liitää lumisten vuorenrinteiden edessä. '
-            + 'Siivet ovat suorina levällään ja pyrstö on vinoneliön '
-            + 'muotoinen.',
+          selite: 'Partakorppikotka liitää lumisten vuorenrinteiden edessä '
+            + 'siivet suorina levällään ja pyrstö vinoneliön muotoisena.',
           lahde: 'Giles Laurent, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Partakorppikotka',
         },
@@ -19298,6 +19310,11 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
+   * tiivistettiin yhteen virkkeeseen (ks. tromssa-lohkon perustelu).
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lahde-rivit ennallaan.
+   */
   dubrovnik: [
     {
       id: 'kaupunki',
@@ -19308,30 +19325,31 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Dubrovnik Old Town 1.jpg',
-          selite: 'Dubrovnikin vanhakaupunki ylhäältä nähtynä. Punaisten '
+          selite: 'Dubrovnikin vanhakaupunki ylhäältä nähtynä: punaisten '
             + 'tiilikattojen ympärillä kiertää muuri, ja vasemmalla näkyy '
-            + 'vanha satama ja pyöreä linnake meren rannassa.',
+            + 'vanha satama ja pyöreä linnake.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Old harbour, Dubrovnik 01.jpg',
-          selite: 'Vanha satama muurin sisäpuolella. Laiturissa on purjeveneitä '
-            + 'ja retkilaiva, ja lahden takana kohoaa metsäinen Lokrumin '
-            + 'saari.',
+          selite: 'Vanha satama muurin sisäpuolella: laiturissa '
+            + 'purjeveneitä ja retkilaiva, ja lahden takana metsäinen '
+            + 'Lokrumin saari.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Stradun, Dubrovnik - September 2017.jpg',
-          selite: 'Stradun eli kaupungin pääkatu. Kiiltäväksi kuluneet '
-            + 'kivilaatat, valkoiset markiisit ja kadun päässä kellotorni. '
-            + 'Ihmiset kävelevät talojen välissä varjossa.',
+          selite: 'Stradun eli kaupungin pääkatu: kiiltäväksi kuluneet '
+            + 'kivilaatat, valkoiset markiisit ja kadun päässä kellotorni.',
           lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Dubrovnik Port Gruž (50247624561).jpg',
-          selite: 'Suojaisa lahti täynnä veneitä: laiturissa on rivi puisia retkialuksia punaisin ja sinisin kansirakentein, ja edessä keinuu purjeveneitä ankkurissa. Rinnettä nousee tiiviisti taloja, joiden katot ovat oranssinpunaista tiiltä.',
+          selite: 'Suojaisa lahti täynnä veneitä: laiturissa rivi puisia '
+            + 'retkialuksia, edessä purjeveneitä ankkurissa ja rinteellä '
+            + 'tiiviisti taloja oranssinpunaisine tiilikattoineen.',
           lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Muurien sisäpuolinen vanhakaupunki on vain pieni osa '
@@ -19368,7 +19386,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'asuintaloja ja hotelleja mutta ei suuria '
                 + 'nähtävyyksiä. Mokošicassa aatelisneuvosto kokoontui '
                 + 'viimeisen kerran vuonna 1815.',
-              kuva: { tiedosto: 'Aerial view West Dubrovnik Lapad.jpg', selite: 'Ilmakuva niemestä ja lahdesta: metsäisen niemen selkää pitkin kulkee mutkitteleva tie, ja rinteillä on tiivistä punakattoista asutusta. Taustalla kaartuu vaijerisilta lahden yli, ja laiturissa on kaksi valkoista risteilyalusta.', lahde: 'Chris93, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Aerial view West Dubrovnik Lapad.jpg', selite: 'Ilmakuva niemestä ja lahdesta: metsäisen niemen selkää pitkin kulkee mutkitteleva tie, ja taustalla kaartuu vaijerisilta lahden yli.', lahde: 'Chris93, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Kun matkailijoita on liikaa',
@@ -19381,7 +19399,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + '2023 tuli lisää rajoituksia: vanhassakaupungissa '
                 + 'kiellettiin muun muassa pyörillä varustetut '
                 + 'matkalaukut.',
-              kuva: { tiedosto: 'Costa Diadema docked at Dubrovnik.jpg', selite: 'Valtava valkoinen risteilyalus laiturissa alaviistosta kuvattuna: kymmenen kansirivin parvekkeet nousevat päällekkäin ja keulassa liehuu lippu. Laiturilla näkyy pieninä hahmoina matkustajia ja yksi linja-auto.', lahde: 'Luca Mauri, Wikimedia Commons (CC BY 4.0)' },
+              kuva: { tiedosto: 'Costa Diadema docked at Dubrovnik.jpg', selite: 'Valtava valkoinen risteilyalus laiturissa alaviistosta kuvattuna, kymmenen kansirivin parvekkeet päällekkäin ja laiturilla matkustajia pieninä hahmoina.', lahde: 'Luca Mauri, Wikimedia Commons (CC BY 4.0)' },
             },
             {
               otsikko: 'Seitsemän kuukautta 1991–1992',
@@ -19527,8 +19545,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'viidestä kymmeneen laulajaa seisoo tiiviissä puolikaaressa ja '
             + 'sovittaa äänet toisiinsa. Perinne syntyi kirkoissa ja '
             + 'satamissa, ja Unesco suojeli sen 2012.',
-          selite: 'Klapa-yhtye laulamassa Orebićissä. Laulajat asettuvat lähelle '
-            + 'toisiaan, jotta kukin kuulee muut ilman vahvistusta.',
+          selite: 'Klapa-yhtye laulamassa Orebićissä lähekkäin, jotta kukin '
+            + 'kuulee muut ilman vahvistusta.',
           lahde: 'Quahadi, Añtó, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Klapa',
           musiikki: 'https://music.apple.com/fi/search?term=klapa',
@@ -19542,8 +19560,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'palvelee yhä asiakkaita — se on Euroopan vanhin '
             + 'yhtäjaksoisesti toiminut apteekki. Munkit valmistivat voiteita '
             + 'yrteistä, ja osa resepteistä on yhä käytössä.',
-          selite: 'Vanhan apteekin purkkeja luostarin museossa. Fajanssiruukuissa '
-            + 'säilytettiin yrttejä ja voiteita; jokaisen kyljessä lukee '
+          selite: 'Vanhan apteekin fajanssiruukkuja luostarin museossa; '
+            + 'niissä säilytettiin yrttejä ja voiteita, ja kyljessä lukee '
             + 'sisältö latinaksi.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Dubrovnik',
@@ -19557,8 +19575,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin viiden kilometrin muuri — Euroopan pisin '
             + 'linnoitusmuuri Kiinan muurin jälkeen. Suola kerätään yhä käsin '
             + 'puulastoilla.',
-          selite: 'Stonin suola-altaat. Merivesi johdetaan matalille kentille ja '
-            + 'haihdutetaan auringossa; jäljelle jää suola.',
+          selite: 'Stonin suola-altaat, joille merivesi johdetaan matalille '
+            + 'kentille haihtumaan auringossa.',
           lahde: 'Tony Hisgett, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Ston',
         },
@@ -19573,32 +19591,25 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Dubrovnik and Lokrum.jpg',
-          selite: 'Vanhakaupunki Srđ-vuorelta: etualalla on paljasta '
-            + 'valkoista karstikalliota ja kuivaa pensaikkoa, ja sen '
+          selite: 'Vanhakaupunki Srđ-vuorelta: valkoisen karstikallion '
             + 'takaa aukeaa muurien ympäröimä niemi punaisine '
-            + 'tiilikattoineen. Vanhankaupungin edustalla kelluu '
-            + 'metsäinen Lokrumin saari, ja sen takana levittäytyy avoin '
-            + 'Adrianmeri. Oikeassa reunassa erottuu köysiradan pylväs.',
+            + 'tiilikattoineen, ja sen edustalla kelluu metsäinen Lokrumin '
+            + 'saari.',
           lahde: 'Hibasi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '29.12.16 Dubrovnik Old City Walls 106 (31122279274).jpg',
-          selite: 'Kattojen tasalta kaupunginmuurilta katsottuna: '
-            + 'etualalla laskeutuu vinoja tiilikattoja savupiippuineen '
-            + 'ja kuivuneine köynnöspergoloineen, keskellä nousevat '
-            + 'kellotorni ja pyöreä kupoli ja oikealla suuri harmaa '
-            + 'kivikirkko. Kattojen takaa avautuu meri ja metsäinen '
-            + 'Lokrum matalassa joulukuun auringossa.',
+          selite: 'Kattojen tasalta kaupunginmuurilta katsottuna: vinoja '
+            + 'tiilikattoja savupiippuineen, keskellä kellotorni ja pyöreä '
+            + 'kupoli, ja takana meri ja Lokrum matalassa joulukuun '
+            + 'auringossa.',
           lahde: 'donald judge, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: '2011 Dubrownik, port (09).jpg',
-          selite: 'Gružin satama muurien ulkopuolella: laiturissa on '
-            + 'valkoinen matkustajalautta ja sen takana toinen alus, '
-            + 'rannassa terminaalin matalat rakennukset. Takana kohoaa '
-            + 'paljas kivinen rinne, jota pitkin kulkee moottoritien '
-            + 'silta, ja oikealla nousee riippusillan valkoinen pyloni '
-            + 'vaijereineen. Etualan tyynellä vedellä ui lokkeja.',
+          selite: 'Gružin satama muurien ulkopuolella: laiturissa valkoinen '
+            + 'matkustajalautta, takana paljas kivinen rinne ja '
+            + 'moottoritien silta, oikealla riippusillan valkoinen pyloni.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19636,9 +19647,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1600-luvulla kaupungin viereen muurattiin kivinen '
             + 'odotuspaikka, lazareti, jossa oli kymmenen rakennusta ja omat '
             + 'vartijat.',
-          selite: 'Dubrovnikin lazaretit meren rannalla: matalia kivirakennuksia '
-            + 'punaisine tiilikattoineen. Takana rinteessä on valkoisia '
-            + 'taloja ja mäntyjä.',
+          selite: 'Dubrovnikin lazaretit meren rannalla: matalia '
+            + 'kivirakennuksia punaisine tiilikattoineen, takana rinteessä '
+            + 'valkoisia taloja ja mäntyjä.',
           lahde: 'Lasta, Wikimedia Commons (public domain)',
         },
         {
@@ -19653,9 +19664,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Suuremmassa on kuusitoista kivinaamiota, joiden suusta vesi '
             + 'valuu. Kupolin koristeet murtuivat vuoden 1667 '
             + 'maanjäristyksessä, mutta lähde toimii yhä.',
-          selite: 'Suuri Onofrion suihkulähde: matala kupoli ja monikulmainen '
-            + 'kivikehä, jonka seinissä on koristeltuja naamioita. Kupolin '
-            + 'reunalla istuu kivinen koira.',
+          selite: 'Suuri Onofrion suihkulähde: matala kupoli ja '
+            + 'monikulmainen kivikehä, jonka seinissä on koristeltuja '
+            + 'naamioita.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -19671,9 +19682,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jalustaan. Myrsky kaatoi patsaan vuonna 1825, ja se '
             + 'palautettiin paikalleen vasta yli viisikymmentä vuotta '
             + 'myöhemmin.',
-          selite: 'Kivinen ritaripatsas haarniskassa. Ritari pitää oikeassa '
-            + 'kädessään pitkää miekkaa ja vasemmassa kilpeä, ja takana näkyy '
-            + 'kirkon julkisivun pylväitä.',
+          selite: 'Kivinen ritaripatsas haarniskassa, oikeassa kädessä '
+            + 'pitkä miekka ja vasemmassa kilpi, ja takana kirkon '
+            + 'julkisivun pylväitä.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -31937,6 +31948,12 @@ export const KULTTUURI_KATEGORIAT = {
    * Castle.jpg" (kuvaan poltettu tekijän nimimerkki) ja "Souq El
    * Attara Tripoli Libya.JPG" (pääosassa selin oleva ohikulkija).
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
+   * tiivistettiin yhteen virkkeeseen (ks. tromssa-lohkon perustelu).
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lahde-rivit ennallaan.
+   * Sisältölinjaus säilyi: ei nykypolitiikkaa eikä Libyan nykytilannetta.
+   */
   tripoli: [
     {
       id: 'kaupunki',
@@ -31949,28 +31966,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Medina Tripoli Libya 2008.jpg',
-          selite: 'Vanhankaupungin kuja Tripolissa. Kapean kujan molemmin '
+          selite: 'Vanhankaupungin kuja Tripolissa: kapean kujan molemmin '
             + 'puolin on avoimia puoteja, joiden edustat ovat täynnä '
-            + 'kiillotettuja kupari- ja messinkiastioita: kannuja, '
-            + 'tarjottimia ja pannuja. Kujan yllä on peltikatos, ja '
-            + 'perällä näkyy aurinkoinen aukio.',
+            + 'kiillotettuja kupari- ja messinkiastioita.',
           lahde: 'Victor Korniyenko, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Al-Saraya al-Hamra Fortress, Tripoli (5282695461).jpg',
           selite: 'Punainen linna eli As-Saraya al-Hamra vanhankaupungin '
-            + 'laidalla. Hiekankeltainen linnoitusmuuri kohoaa suoraan '
+            + 'laidalla: hiekankeltainen linnoitusmuuri kohoaa suoraan '
             + 'kadun varresta, ja sen päällä on kaarikäytävällinen '
-            + 'rakennussiipi. Muurin edessä on lipputankojen rivi ja '
-            + 'liikennettä.',
+            + 'rakennussiipi.',
           lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Gurgi Mosque Exterior Tripoli Libya.JPG',
-          selite: 'Gurgin moskeija vanhassakaupungissa. Valkoinen minareetti '
-            + 'kohoaa palmujen yli, ja sen kahta parveketta kiertävät '
-            + 'vihreät kaiteet. Kadun varren talon seinässä on '
-            + 'värikkäitä maalauksia, ja edessä kasvaa köynnöksiä.',
+          selite: 'Gurgin moskeija vanhassakaupungissa: valkoinen '
+            + 'minareetti kohoaa palmujen yli, ja sen kahta parveketta '
+            + 'kiertävät vihreät kaiteet.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -32267,11 +32280,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Pystyssä on enää Marcus Aureliuksen riemukaari vuodelta '
             + '165. Arabiaksi kaupunkia sanotaan Tarabulus al-Gharbiksi, '
             + 'Lännen Tripoliksi, jotta se erottuu Libanonin Tripolista.',
-          selite: 'Marcus Aureliuksen riemukaari Tripolissa. Marmorinen '
+          selite: 'Marcus Aureliuksen riemukaari Tripolissa: marmorinen '
             + 'nelisivuinen kaari seisoo kaivetun aukion perällä '
             + 'asuintalojen keskellä, ja sen edessä maassa on '
-            + 'pylväänpätkiä ja kivilohkareita. Kaaren päälle on jäänyt '
-            + 'myöhempää muurausta.',
+            + 'pylväänpätkiä.',
           lahde: 'Esam Tabone, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -32290,10 +32302,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'olevansa medinan keskellä. Rappaus on paikoin lohkeillut '
             + 'ja paljastanut alta kiviaineksen.',
           selite: 'Vanhankaupungin kellotorni Tripolissa alaviistosta '
-            + 'kuvattuna. Vaalea torni kapenee ylöspäin kolmessa '
-            + 'kerroksessa, ja kulmissa on parittain valkoisia pylväitä '
-            + 'koristeltuine kapiteeleineen. Rappaus on lohkeillut '
-            + 'pylväiden pinnasta.',
+            + 'kuvattuna: vaalea torni kapenee ylöspäin kolmessa '
+            + 'kerroksessa, ja kulmissa on parittain valkoisia pylväitä.',
           lahde: 'Ridda Basheer, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -32310,10 +32320,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kujallaan, kuten kultasepät ja hajustekauppiaat omillaan '
             + '— jako ammattien mukaan on vanha ja näkyy yhä kujien '
             + 'nimissä.',
-          selite: 'Peltiseppä työssään Tripolin vanhassakaupungissa. Mies '
-            + 'pitelee pihdeillä levyä pienen ahjon liekin yllä; '
-            + 'ympärillä on kuparinvärisiä levyjä, kattiloita ja '
-            + 'valmiita astioita hyllyillä.',
+          selite: 'Peltiseppä työssään Tripolin vanhassakaupungissa: mies '
+            + 'pitelee pihdeillä levyä pienen ahjon liekin yllä, '
+            + 'ympärillään kuparinvärisiä levyjä ja valmiita astioita.',
           lahde: 'Patrick André Perron, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -32358,11 +32367,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ei voitu kantaa koko matkalle, joten edeltä lähetettiin '
             + 'juoksijoita keitaille: sieltä tuotiin vettä karavaania '
             + 'vastaan, kun perillä oltiin vasta päivien päästä.',
-          selite: 'Karavaanin keskipäivän leiri Tripolin takamaalla '
-            + 'valokuvassa vuodelta 1909. Lastatut kamelit makaavat '
-            + 'hiekkakuopan pohjalla kuormat kyljillään, ja miehet '
-            + 'lepäävät viittakankaista kepeillä pystytettyjen '
-            + 'varjokatosten alla.',
+          selite: 'Karavaanin keskipäivän leiri Tripolin takamaalla vuonna '
+            + '1909: lastatut kamelit makaavat hiekkakuopan pohjalla ja '
+            + 'miehet lepäävät kepeillä pystytettyjen varjokatosten alla.',
           lahde: 'Internet Archive Book Images, Wikimedia Commons (PD)',
         },
         {
@@ -32380,10 +32387,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupungin yli. Vanhakaupunki on maailmanperintökohde, ja '
             + 'se palveli Saharan-kaupan tukikohtana 1800-luvulle asti.',
           selite: 'Ghadamesin vanhankaupungin katu: valkoiseksi kalkittu '
-            + 'käytävä kulkee talojen alla, kattoa kannattavat paksut '
-            + 'palmunrunkopalkit, ja seinustalla on muurattuja '
-            + 'istuinpenkkejä. Käytävän perältä lankeaa valoaukosta '
-            + 'auringonvalo hiekkalattialle.',
+            + 'käytävä kulkee talojen alla palmunrunkopalkkien '
+            + 'kannattamana, ja perältä lankeaa valoaukosta auringonvalo.',
           lahde: 'giomodica, Wikimedia Commons (CC BY 3.0)',
         },
         {
@@ -32402,10 +32407,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'naamioidulla laivalla ja poltti fregatin '
             + 'ankkuripaikalleen. Sota päättyi 1805, ja Yhdysvaltain '
             + 'merijalkaväen hymnissä lauletaan yhä Tripolin rannoista.',
-          selite: 'Edward Moranin maalaus vuodelta 1897: Philadelphia '
-            + 'palaa yöllä Tripolin satamassa liekkien lyödessä '
-            + 'mastoihin, ja etualalla Decaturin miehet pakenevat '
-            + 'pienellä purjealuksella. Palon kajo heijastuu aallokosta.',
+          selite: 'Edward Moranin maalaus vuodelta 1897: Philadelphia palaa '
+            + 'yöllä Tripolin satamassa, ja etualalla Decaturin miehet '
+            + 'pakenevat pienellä purjealuksella.',
           lahde: 'Edward Moran, Wikimedia Commons (PD)',
         },
       ],
