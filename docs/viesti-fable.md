@@ -359,3 +359,30 @@ vanhassakaupungissa ilman sitä kuva oli lähes tyhjä paperi.
 **Sama lippu korjaisi todennäköisesti Luxorin ongelman**, joka on
 merkitty saman tiedoston luxor-kohtaan keskeneräiseksi 13.8.2026.
 Tämä on halpa parannus, jos B-urakka aloitetaan.
+
+---
+
+## Uusi kuvalinjaus tuhoutuneille kaupungeille (omistaja 20.8.2026) — Raamattuun kirjattava
+
+Omistajan linjaus lehtisessiolle: *"kyllä pitää olla uusia kuvia myös
+ja selkeästi kertoa mistä johtuu. pitää muuttaa pelin linjausta."*
+(Tausta: Mosulin lehdessä oli vain sotaa edeltäviä kuvia, koska vanha
+linja kielsi 2010-luvun tuhojen näyttämisen.)
+
+Ehdotettu Raamattu-rivi (osioon "Kuvat ja lähteet" tai "Rajaukset ja
+turvalinjat"):
+
+> TUHOUTUNEEN KAUPUNGIN NYKYKUVAT (omistaja 20.8.2026): sodassa tai
+> katastrofissa vaurioituneesta kaupungista näytetään MYÖS tuoreita
+> kuvia, vaikka niissä näkyisi vaurioita tai jälleenrakennusta — ja
+> lehti KERTOO LUKIJALLE SELKEÄSTI, mistä kaupungin nykyilme johtuu.
+> Tuho kerrotaan tapahtumana neutraalisti, ilman julmuuksien
+> yksityiskohtia ja ilman osapuolikehystä; kuvateksti sanoo mitä
+> kuvassa näkyy (rauniot, työmaa, uusi rakennus). Vanha "ei näytetä
+> tuhoja" -käytäntö poistuu; edelleen EI näytetä taistelukuvia eikä
+> uhreja.
+
+PÄIVITYS: omistaja antoi lehtisessiolle päätoimittajan valtuudet
+samana päivänä — linjaus on KIRJATTU Raamattuun (Kuvat ja lähteet)
+ja Mosul/Halab/Damaskos päivitetään v948:ssa. Tämä merkintä jää
+tiedoksi.

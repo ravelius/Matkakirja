@@ -235,6 +235,17 @@ export const RAAMATTU = {
       otsikko: 'Viisas Pöllö',
       tila: 'luonnos — ideointi, ei vielä toteutukseen',
       kohdat: [
+        'VAIKEAT NYKYAIHEET (omistaja 20.8.2026): Pöllö vastaa '
+          + 'asiallisesti suoriin kysymyksiin vaikeista nykyaiheista '
+          + '(esim. "miksi Mosul on tuhoutunut", "onko siellä elämää '
+          + 'nyt"): mitä tapahtui ja milloin, millainen tilanne nyt '
+          + 'on, ja maininta jos tieto voi olla vanhentunutta. '
+          + 'Neutraalisti: ei osapuolten syyttelyä, ei julmuuksien '
+          + 'yksityiskohtia. Aidosti kiistanalaisessa asiassa '
+          + 'kerrotaan molemmat vakiintuneet kannat lyhyesti '
+          + 'valitsematta puolta. Sotaan ei syvennytä oma-'
+          + 'aloitteisesti, mutta suoraa kysymystä ei väistetä. '
+          + 'Toteutettu tools/pollo/worker.js-kehotteeseen.',
         'PÖLLÖ ON AARRE (omistaja 18.8.2026): peli alkaa ilman '
           + 'pöllöä — nappi piilossa, ei kuplia eikä vihjeitä, eikä '
           + 'ennen ensimmäistä laattaa anneta ohjeita tai korvaavaa '
@@ -482,6 +493,26 @@ export const RAAMATTU = {
           + 'erillinen kertapäätös (työjonossa).',
         'Miniatyyripiirrokset generoidaan yhdellä otolla per kohde '
           + '(kustannuslinjaus 16.8.2026).',
+        'MATKAOPAS ON NYKYTIETOA (omistaja 20.8.2026): '
+          + 'Matkailijalle-osion ja matkaoppaan kuvat ovat TUOREITA '
+          + 'kuvia — historialliset kuvat kuuluvat historia- ja '
+          + 'nosto-osioihin. Matkailijalle-kuvaksi ei liian korkeaa '
+          + 'pystykuvaa (venyttää palstan). Opas sanoo SUORAAN, jos '
+          + 'matkustaminen kohteeseen on nykyisin vaarallista tai '
+          + 'rajoitettua — asiallisesti ja lyhyesti, ilman '
+          + 'pelottelua; pelaajaa ei jätetä kuvittelemaan että kohde '
+          + 'on tavallinen lomakohde jos se ei ole.',
+        'TUHOUTUNEEN KAUPUNGIN NYKYKUVAT (omistaja 20.8.2026): '
+          + 'sodassa tai katastrofissa vaurioituneesta kaupungista '
+          + 'näytetään MYÖS tuoreita kuvia, vaikka niissä näkyy '
+          + 'vaurioita tai jälleenrakennusta — ja lehti kertoo '
+          + 'lukijalle selkeästi, mistä kaupungin nykyilme johtuu, '
+          + 'ettei pelaaja jää ihmettelemään miksi kuvat ovat '
+          + 'vanhoja. Tuho kerrotaan tapahtumana neutraalisti, ilman '
+          + 'julmuuksien yksityiskohtia ja ilman osapuolikehystä; '
+          + 'kuvateksti sanoo mitä kuvassa näkyy. Edelleen EI '
+          + 'taistelukuvia eikä uhreja. Korvaa aiemman "kuvat eivät '
+          + 'saa näyttää tuhoja" -käytännön.',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
           + 'koskaan repoon eikä lokiin.',
       ],
