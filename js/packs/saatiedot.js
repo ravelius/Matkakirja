@@ -1413,6 +1413,45 @@ export const SAATIEDOT = {
       + 'sataa lunta.',
   },
   /*
+   * RUB AL-KHALI (20.8.2026). Aluelehti kuten Siinai ja Kappadokia, ja
+   * samasta syystä sillä ei ole yhtä keskustaa: hiekkameri on 650 000
+   * neliökilometriä eikä siellä ole pysyvää asutusta. MITTAUSPISTE on
+   * en-Wikipedian Rub' al Khali -artikkelin tietolaatikon oma koordinaatti
+   * koko aavikolle, 20,0 / 50,0 (haettu 20.8.2026), ja ERA5-ruudun korkeus
+   * siinä on 280 metriä. Piste osuu hiekkameren SISÄOSAAN — kaikki nimetyt
+   * paikat (Liwa, Shaybah, Sanaw) ovat reunoilla, ja reunoilla luvut ovat
+   * toiset. Ero on kerrottu myös lehden matkaoppaan sääjaksossa
+   * (Siinai-ennakkotapaus: vuoristo vs. rannikko).
+   *
+   * Menetelmä on paketin oma: Open-Meteon arkisto (ERA5), jakso 1991–2020,
+   * keskilämpö kuukauden päiväkeskiarvojen keskiarvona ja sade
+   * kuukausisumman vuosikeskiarvona; ylin ja alin koko jakson päivittäisten
+   * ylimpien ja alimpien keskiarvojen puolivälinä keskilämmön ympärillä.
+   *
+   * Vuosisade on kuusitoista millimetriä: koko paketin toiseksi kuivin rivi
+   * heti Luxorin (2 mm) jälkeen, ja alle Kairon kahdeksantoista.
+   * Luonnehdinta ei käytä en-Wikipedian ilmasto-osion lukuja (alle 50 mm
+   * vuodessa, kosteus 52 % tammikuussa ja 15 % kesä–heinäkuussa), koska
+   * artikkeli on itse merkinnyt ne tarkistamattomiksi — rivin omat
+   * ERA5-normaalit riittävät.
+   */
+  rubalkhali: {
+    lat: 20.0,
+    lon: 50.0,
+    keskilampo: [17.5, 20.6, 25.1, 30.1, 34, 35.5, 37, 36.9, 33.7, 28.7, 23.4, 18.8],
+    ylin: [24, 28, 32, 38, 42, 44, 45, 44, 41, 36, 30, 26],
+    alin: [11, 13, 18, 23, 26, 27, 29, 30, 26, 21, 17, 12],
+    sade: [2, 2, 6, 2, 1, 0, 0, 1, 0, 1, 1, 0],
+    luonnehdinta: 'Rub al-Khalissa sataa vuodessa kuusitoista millimetriä, '
+      + 'ja koko paketissa vain Luxorissa sataa vähemmän. Kesäkuussa, '
+      + 'heinäkuussa, syyskuussa ja joulukuussa normaali on nolla. Heinäkuun '
+      + 'keskilämpö on kolmekymmentäseitsemän astetta ja päivät nousevat '
+      + 'neljäänkymmeneenviiteen. Talvi on toinen aavikko: tammikuun '
+      + 'keskilämpö on seitsemäntoista ja puoli astetta, päivä '
+      + 'kaksikymmentäneljä ja yö yksitoista. Kuivassa ilmassa yön ja päivän '
+      + 'ero pysyy kolmestatoista seitsemääntoista asteeseen ympäri vuoden.',
+  },
+  /*
    * MEDINA (20.8.2026). Sama menetelmä kuin paketin muillakin riveillä:
    * Open-Meteon arkisto (ERA5), jakso 1991–2020, keskilämpö kuukauden
    * päiväkeskiarvojen keskiarvona ja sade kuukausisumman
