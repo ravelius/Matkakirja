@@ -264,26 +264,98 @@ sitäkin ajankohtaisempi, koska Flickr-reitti pysyy käytössä.
 
 ---
 
-## Opus 19.8.2026 — kapulanvaihto, työ siirtyy toiselle sessiolle
+## Opus 19.8.2026 — kapulanvaihto: aineisto luovutuspromptia varten
 
-Kreditit loppuvat. Tilanne on kirjattu kokonaisuudessaan tiedostoon
-**docs/arkisto/kapulanvaihto-2026-08-19-opus.md** — lue se ensin.
+Kreditit loppuvat, ja omistaja kertoi että SINÄ kirjoitat
+luovutuspromptin seuraavalle sessiolle. Tämä viesti on kirjoitettu
+sitä varten: alla on se, mitä promptiin kannattaa laittaa, ja
+erikseen ne päätökset, jotka ovat sinun eivätkä minun.
 
-Lyhyesti:
+Koko tilanne on tiedostossa
+**docs/arkisto/kapulanvaihto-2026-08-19-opus.md**. Älä toista sitä
+promptissa vaan viittaa siihen — se on pitkä ja sen lukeminen on
+uuden session ensimmäinen työ.
 
-- Haarassa `claude/kaupunkilehti-istanbul-4e5pif` on **v930–v934**
-  (Petra, Kappadokia, Persepolis, Jerusalem, Siinai) valmiina ja
-  pushattuna. **PR:ää ei ole avattu**, ja `origin/main` on yhä v929.
-  Siihen asti versionosto tehdään käsin, koska tools/uusi-versio.mjs
-  lukee vain mainia eikä tiedä haaran versioista.
-- Lähi-idän lehdettömistä kahdeksasta on tehty viisi. Jäljellä
-  **Medina, Mekka ja Ruba al-Khali**, joiden faktapohjat on tallennettu
-  repoon (`docs/arkisto/faktapohja-*.md`), koska ne syntyivät kontin
-  väliaikaiskansioon ja olisivat muuten kadonneet.
-- **Ennen Ruba al-Khalia pitää ratkaista pelin sisäinen ristiriita:**
-  Riadin nostossa Wabarin meteoriitin paino on 2,2 / 2,75 tonnia,
-  Wikipediassa suurimman kappaleen paino on 2 045 kg.
-- Persepolikselta puuttuu kohdekartta, koska Overpass oli alhaalla.
-- Ämpärikysymys (edellinen osio) odottaa yhä päätöstäsi, ja se on nyt
-  ajankohtaisempi: omistaja linjasi, että Flickriä käytetään aina kun
-  siellä on parempia kuvia.
+### 1. Missä työ on nyt
+
+- Haara `claude/kaupunkilehti-istanbul-4e5pif`, versiot **v930–v934**:
+  Petra, Kappadokia, Persepolis, Jerusalem, Siinai. Kaikki
+  committoitu ja pushattu, työpuu puhdas, portit vihreät.
+- **PR:ää ei ole avattu** ja `origin/main` on yhä v929.
+- Lähi-idän kahdeksasta lehdettömästä kohteesta viisi on tehty.
+
+### 2. Mitä promptissa pitää ehdottomasti sanoa
+
+Nämä kolme ovat sellaisia, että ilman niitä uusi sessio tekee
+varmasti virheen:
+
+1. **Versionosto tehdään käsin**, kunnes v930–v934 on mainissa.
+   `tools/uusi-versio.mjs` lukee vain mainia (v929) eikä tiedä haaran
+   versioista, joten se ehdottaa v930:tä uudelleen ja kaatuu omaan
+   tuplavahtiinsa. Käsin nostetaan kolmeen paikkaan: sw.js CACHE,
+   js/main.js APP_VERSION ja js/muutokset.js:n kärki.
+2. **Agenttien faktapohjia ei saa käyttää tarkistamatta.** Yön aikana
+   niistä löytyi kolme virhettä, joista yksi olisi tuonut lehteen
+   pelin linjan vastaisen väkivaltamaininnan (Montefioren mylly,
+   Jerusalem) ja yksi oli agentin itsensä keksimä luku. Tallennetut
+   faktapohjat `docs/arkisto/faktapohja-*.md` kantavat tämän
+   varoituksen, mutta se kannattaa sanoa myös promptissa.
+3. **Ruba al-Khalia ei voi kirjoittaa ennen Wabar-ratkaisua**, ks.
+   kohta 4 alla.
+
+### 3. Työjärjestys, jota ehdotan
+
+Omistajan linjaus on: Lähi-itä valmiiksi, sitten Aasia. Lähi-idässä
+on kuitenkin kahdenlaista työtä jäljellä, ja niiden järjestys on
+sinun päätettävissäsi:
+
+- **A. Kolme lehdetöntä kohdetta:** Medina, Mekka, Ruba al-Khali.
+  Faktapohjat ovat valmiina repossa, joten näissä pääsee suoraan
+  kuviin ja kirjoittamiseen. Nopein tie eteenpäin.
+- **B. Kuusitoista lehteä, joilta puuttuu avauskuvat ja matkaopas:**
+  ankara, nikosia, izmir, halab, damaskos, luxor, riad, sana, aden,
+  salalah, masqat, doha, kuwait, mosul, tabriz, isfahan. Tämä on
+  määrällisesti isompi urakka kuin A.
+
+Suositukseni: A ensin, koska aineisto on jo koottu ja kolme lehteä
+syntyy nopeasti. Mutta B on se, mikä oikeasti ratkaisee onko Lähi-itä
+"valmis" — päätä sinä, kumpi menee promptiin ensin.
+
+### 4. Päätökset, jotka ovat sinun
+
+1. **Wabarin meteoriitin paino.** Riadin lehden nostossa lukee museon
+   kyltin mukaan 2,2 / 2,75 tonnia; en-Wikipedian *Wabar craters*
+   sanoo suurimman kappaleen olevan 2 045 kg. Kyse on pelin sisäisestä
+   ristiriidasta eikä pelkästä lähdevirheestä. Vaihtoehdot: (a) korjaa
+   Riadin nosto, (b) kirjoita ero auki lukijalle kuten Kaymaklın
+   ajoituksessa ja Katariinanvuoren korkeudessa on tehty, (c) jätä
+   Wabar kokonaan pois Ruba al-Khalin lehdestä. En tehnyt tätä
+   päätöstä puolestasi.
+2. **Persepoliksen kohdekartta.** Se jäi tekemättä, koska Overpass oli
+   alhaalla — ei sisällöllisestä syystä. Lisätäänkö jälkikäteen omana
+   versionaan vai jätetäänkö lehti kartattomaksi?
+3. **Avataanko PR v930–v934:lle** ennen kuin uusi sessio aloittaa? Jos
+   avataan, uusi sessio saa puhtaan version­numeroinnin heti.
+4. **Ämpärikysymys** (edellinen osio tässä tiedostossa) odottaa yhä
+   päätöstäsi. Se on nyt ajankohtaisempi, koska omistaja linjasi että
+   Flickriä käytetään aina kun siellä on parempia kuvia — eli
+   paikallisia kopioita syntyy jatkossakin.
+
+### 5. Mitä promptiin EI tarvitse laittaa
+
+Työtapa, apuskriptit ja ansat ovat kaikki kapulanvaihdossa ja
+tiedostossa `docs/arkisto/lehtityon-apuskriptit.md`. Riittää että
+prompti käskee lukemaan ne. Erityisesti kannattaa mainita, että
+apuskriptien **uusintalogiikka** on niiden tärkein osa: sen puute oli
+yön suurin yksittäinen virhelähde, ja se on nyt korjattu.
+
+### 6. Yksi tekninen löydös, joka kannattaa viedä eteenpäin
+
+`tools/piirra-kaupunkikartta.mjs`:ään lisättiin kaupunkikohtainen
+lippu **`rauniokaupunki`**. Se nostaa polut ja raunioalueiden
+reunaviivat asuinkadun vahvuuteen, ja sitä tarvitaan aina kun kartan
+"kadut" ovat OSM:ssä jalankulkuteitä — Petrassa ja Jerusalemin
+vanhassakaupungissa ilman sitä kuva oli lähes tyhjä paperi.
+**Sama lippu korjaisi todennäköisesti Luxorin ongelman**, joka on
+merkitty saman tiedoston luxor-kohtaan keskeneräiseksi 13.8.2026.
+Tämä on halpa parannus, jos B-urakka aloitetaan.
