@@ -8421,6 +8421,11 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5: monivirkkeiset kuvatekstit
+   * tiivistetty yhdeksi virkkeeksi. Juttutekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   riika: {
     Vapaudenpatsas: {
       aika: '1935',
@@ -8619,8 +8624,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'House of the Blackheads.jpg',
           selite: 'Mustapäiden talo valaistuna sinisellä hämärätunnilla, '
-            + 'edessä Roland-patsas miekka pystyssä. Julkisivun yläosassa '
-            + 'erottuvat kello ja vaakunat.',
+            + 'edessä Roland-patsas miekka pystyssä ja julkisivun yläosassa '
+            + 'kello ja vaakunat.',
           lahde: 'Shawn M. Kent, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -8672,6 +8677,11 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5: monivirkkeiset kuvatekstit
+   * tiivistetty yhdeksi virkkeeksi. Juttutekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   vilna: {
     'Gediminaksen torni': {
       aika: '1409',
@@ -8697,9 +8707,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gediminas Tower (9651326233).jpg',
-          selite: 'Gediminaksen torni mäen laella, rinteen juurelta '
-            + 'kuvattuna. Punatiilisen kahdeksankulmaisen tornin huipulla '
-            + 'liehuu Liettuan lippu.',
+          selite: 'Gediminaksen torni mäen laella rinteen juurelta kuvattuna, '
+            + 'punatiilisen kahdeksankulmaisen tornin huipulla liehuu '
+            + 'Liettuan lippu.',
           lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -8927,7 +8937,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Vault of the Ostra brama chapel.JPG',
           selite: 'Kappelin holvi sisältä: valkoista stukkokoristelua '
-            + 'vaakunoineen ja kullattuja sädekuvioita. Vasemmalla näkyy '
+            + 'vaakunoineen ja kullattuja sädekuvioita, ja vasemmalla näkyy '
             + 'ihmekuvan kehyksen yläreuna kerubeineen.',
           lahde: 'Alma Pater, Wikimedia Commons (CC BY-SA 3.0)',
         },

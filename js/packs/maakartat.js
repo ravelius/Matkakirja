@@ -4554,24 +4554,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/tallinna-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
-    esittely: 'Tallinna on Suomenlahden etelärannalla, 80 kilometrin '
-      + 'päässä Helsingistä. Rannassa on suojaisa lahti, johon laivat '
-      + 'pääsevät tuulelta piiloon, ja aivan sen vieressä kohoaa '
-      + 'kalkkikivikallio Toompea. Kallion päälle rakennettiin linna ja '
-      + 'sen juurelle kauppiaiden kaupunki. Paikka oli keskellä '
-      + 'kauppatietä: Novgorodista tuleva turkis ja vaha vaihtoivat '
-      + 'täällä laivaa matkalla länteen. Tallinna liittyi hansaan '
-      + 'vuonna 1285, ja kauppa toi rahat, joilla muuri '
-      + 'rakennettiin.\n\nKartan yläreunassa on meri ja satama, jonka '
-      + 'laiturit työntyvät veteen kuin sormet. Sieltä lähtee lautta '
-      + 'Helsinkiin. Keskellä näkyy soikea rengas: siinä kulki '
-      + 'kaupunginmuuri. Sen sisään jäi 35 hehtaaria eli noin '
-      + 'viidenkymmenen jalkapallokentän verran maata, ja muurista on '
-      + 'yhä pystyssä 1,85 kilometriä ja 28 tornia. Renkaan sisällä '
-      + 'kadut mutkittelevat, ulkopuolella ne suoristuvat. Renkaan '
-      + 'vasemmassa laidassa on oma tasaisempi laikkunsa: se on '
-      + 'Toompean kallio, jonne alakaupungista nousee vain kaksi '
-      + 'katua. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat. Kartan viivastojen, renkaiden ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Tallinnan vanhakaupunki ja sen satama. '
+      + 'Entinen kaupunginmuuri sulki sisäänsä 35 hehtaaria, ja '
+      + 'muurista on yhä pystyssä 1,85 kilometriä ja 28 tornia. '
+      + 'Pohjoisessa seisovat tykkitorni Paksu Margareeta ja Olevisten '
+      + 'kirkko, keskellä on Raatihuoneentori ja idässä Virun portti. '
+      + 'Lännessä kohoaa Toompean kallio, jonne alakaupungista nousee '
+      + 'vain kaksi katua ja jolla on Aleksanteri Nevskin katedraali. '
+      + 'Pohjoisrannassa on matkustajasatama, josta lähtee lautta '
+      + 'Helsinkiin. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, lopuksi satama.
@@ -4846,22 +4844,21 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/pietari-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.9545, etela: 59.9215, lansi: 30.284, ita: 30.347 },
-    esittely: 'Pietaria ei ollut olemassa ennen vuotta 1703. Se '
-      + 'rakennettiin Nevan suistoon, matalille ja soisille saarille, '
-      + 'koska Venäjä halusi oman sataman Itämerelle. Neva on lyhyt '
-      + 'mutta valtava joki: se tuo Laatokan vedet mereen ja on '
-      + 'Talvipalatsin kohdalla lähes 700 metriä leveä. Maa oli niin '
-      + 'märkää, että kaduille piti ensin kaivaa ojia veden johtamiseksi '
-      + 'pois. Ojista tuli kanavia, ja kanavista tuli koko kaupungin '
-      + 'tuntomerkki.\n\nKartan yläosassa virtaa Neva, ja sen keskellä '
-      + 'on pieni tähdenmuotoinen saari: Pietari-Paavalin linnoitus, '
-      + 'kaupungin ensimmäinen rakennus. Vasemmalla joki haarautuu '
-      + 'kahdeksi. Alaosassa kaartaa kolme kanavaa sisäkkäisinä kaarina '
-      + '— Moika, Gribojedovin kanava ja Fontanka — ja niiden poikki '
-      + 'vetää suora viiva vasemmalta oikealle. Se on Nevski prospekt, '
-      + 'kaupungin pääkatu. Kanavien välissä kadut ovat suoria, koska ne '
-      + 'piirrettiin valmiiksi ennen kuin taloja oli. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
+     * esittely kertoo kohteet, ei kanavien ja katujen viivastoja.
+     */
+    esittely: 'Kartan alue on Pietarin vanha ydin Nevan molemmin '
+      + 'puolin. Joessa on tähdenmuotoinen saari, jolla seisoo '
+      + 'Pietari-Paavalin linnoitus, kaupungin ensimmäinen rakennus '
+      + 'vuodelta 1703. Etelärannalla ovat Talvipalatsi eli Eremitaaši, '
+      + 'Verikirkko Gribojedovin kanavan varrella ja Kazanin katedraali '
+      + 'pääkadun Nevski prospektin laidalla. Vaskiratsastaja, Pietari '
+      + 'Suuren ratsastajapatsas, on Senaatintorilla joen rannassa, ja '
+      + 'kartan eteläreunassa on Mariinski-teatteri. Kaupungin läpi '
+      + 'kaartaa kolme kanavaa — Moika, Gribojedovin kanava ja Fontanka '
+      + '— jotka kaivettiin alun perin ojiksi soisen maan kuivaamiseen. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään. Tämä on pelin ainoa
@@ -4899,23 +4896,21 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/moskova-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
-    esittely: 'Moskova syntyi kukkulalle, jonka juurella Moskova-joki '
-      + 'tekee mutkan. Mutkan sisään jäävää niemekettä oli helppo '
-      + 'puolustaa: vettä kahdella sivulla ja jyrkkä rinne kolmannella. '
-      + 'Sinne rakennettiin puinen linnoitus, kreml, ja sen ympärille '
-      + 'kaupunki. Moskova ei ole meren rannalla eikä suuren joen '
-      + 'suulla, mutta se on Venäjän tasangon keskellä, kohdassa josta '
-      + 'pääsee jokia pitkin joka suuntaan. Kaupunki kasvoi renkaina: '
-      + 'kun se täyttyi, ympärille vedettiin uusi muuri, ja muurien '
-      + 'paikoille jäivät leveät kehäkadut.\n\nKartan keskellä on '
-      + 'Kremlin kolmio. Sen ympäri kiertää vaalea vesijuova: se on '
-      + 'Neglinnaja-joki, joka virtaa nykyään maan alla putkessa. '
-      + 'Kolmion sisällä näkyy vain muutama viiva, sillä kartta ei '
-      + 'piirrä rakennuksia. Alhaalla kaartaa Moskova-joki leveänä '
-      + 'nauhana ja sen eteläpuolella toinen, kapeampi vesi — tulvia '
-      + 'varten kaivettu kanava. Ylhäällä ja sivuilla erottuu kaksi '
-      + 'kaarta, jotka kiertävät keskustaa: Bulevardikehä ja '
-      + 'Puutarhakehä. Kartan kohteista pääsee lukemaan lisää '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
+     * esittely kertoo kohteet, ei kartan viivastoja eikä värejä.
+     */
+    esittely: 'Kartan alue on Moskovan ydin Moskova-joen mutkassa. '
+      + 'Keskellä on Kremlin kolmio, jonka muurien sisällä ovat '
+      + 'palatsit ja katedraalit; sen itäkyljessä avautuu Punainen '
+      + 'tori, ja torin eteläpäässä seisoo Pyhän Vasilin katedraali. '
+      + 'Pohjoisessa on Bolšoi-teatteri, lännessä joen rannalla '
+      + 'Kristus Vapahtajan katedraali ja etelässä joen toisella '
+      + 'puolen Tretjakovin galleria. Kremlin vieritse virtaa '
+      + 'Neglinnaja-joki, joka katettiin 1817–1819 ja kulkee nykyään '
+      + 'kokonaan putkessa maan alla. Keskustaa kiertävät '
+      + 'Bulevardikehä ja Puutarhakehä ovat vanhojen kaupunginmuurien '
+      + 'linjoilla. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
@@ -5292,26 +5287,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/riika-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
-    esittely: 'Riika kasvoi Väinäjoen suulle. Joki on leveä ja syvä, ja '
-      + 'sen kautta pääsi sisämaahan asti — siksi tähän syntyi '
-      + 'kauppapaikka, josta tuli Baltian suurin kaupunki. '
-      + 'Vanhakaupunki on joen itärannalla, ja siellä talot ovat '
-      + 'kapeita ja korkeita, koska tontista maksettiin leveyden '
-      + 'mukaan. Kaupunkia ympäröi keskiajalla muuri, mutta se '
-      + 'purettiin 1800-luvulla. Muurin paikalle ei rakennettu '
-      + 'taloja vaan puisto ja kanava, ja juuri se tekee Riian '
-      + 'kartasta helposti tunnistettavan: vanhakaupunkia kiertää '
-      + 'vihreä kaari.\n\nKartalla on vanhakaupunki keskellä, Väinäjoki '
-      + 'vasemmalla ja puistovyöhyke oikealla. Kanava mutkittelee '
-      + 'puiston läpi kuin pieni joki — se on entinen vallihauta. '
-      + 'Vanhankaupungin kadut ovat lyhyitä ja kaartuvia, eivätkä ne '
-      + 'muodosta ruutua kuten uudemmissa kaupunginosissa: keskiajalla '
-      + 'katu kulki sinne, minne pääsi. Alhaalla oikealla erottuu '
-      + 'viisi isoa hallia rivissä. Ne ovat keskustorin hallit, ja ne '
-      + 'olivat alun perin ilmalaivojen halleja, jotka siirrettiin '
-      + 'tänne ja koottiin uudestaan toriksi. Jugend-kortteli, josta '
-      + 'Riika on kuuluisa, jää kartan ulkopuolelle runsaan kilometrin '
-      + 'päähän pohjoiseen. Kartan kohteista pääsee lukemaan lisää '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
+     * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
+     */
+    esittely: 'Kartan alue on Riian vanhakaupunki Väinäjoen '
+      + 'itärannalla. Keskiaikainen muuri purettiin 1800-luvulla, ja '
+      + 'sen paikalle tehtiin puisto ja kanava, joka on entinen '
+      + 'vallihauta. Puiston laidalla seisoo Vapaudenpatsas, ja '
+      + 'vanhassakaupungissa ovat Kolme veljestä, Riian tuomiokirkko, '
+      + 'Pyhän Pietarin kirkko ja Mustapäiden talo. Eteläreunassa on '
+      + 'keskustorin viisi hallia, jotka koottiin zeppelin-ilmalaivojen '
+      + 'hallien teräsrungoista. Jugendkortteli, josta Riika on '
+      + 'kuuluisa, jää runsaan kilometrin päähän pohjoiseen kartan '
+      + 'ulkopuolelle. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
@@ -5335,27 +5324,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/vilna-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
-    esittely: 'Vilna on rakennettu kahden joen yhtymäkohtaan. Iso joki '
-      + 'on Neris ja pieni on Vilnia, ja kaupunki on saanut nimensä '
-      + 'pienemmästä. Niiden väliin jää kukkula, jonka päällä on '
-      + 'linnan torni — siitä kaupunki alkoi 1300-luvulla. '
-      + 'Vanhakaupunki levisi kukkulan eteläpuolelle, ja siitä tuli '
-      + 'yksi Euroopan laajimmista: kujia on satoja ja kirkkoja '
-      + 'toistasataa, koska Vilnassa asui rinnakkain katolisia, '
-      + 'ortodokseja, juutalaisia ja muslimeja, ja jokainen rakensi '
-      + 'omansa. Kaupunkia ympäröi ennen muuri yhdeksine portteineen. '
-      + 'Niistä on jäljellä yksi, Aamuportti, ja pätkä muuria sen '
-      + 'kummallakin puolella.\n\nKartalla vanhakaupunki on keskellä '
-      + 'pystysuorana vyöhykkeenä: se alkaa ylhäältä tuomiokirkon '
-      + 'aukiolta ja päättyy alhaalla Aamuportille, ja matkaa on noin '
-      + 'puolitoista kilometriä. Kujat piirtyvät tiheänä verkkona, '
-      + 'jossa korttelit ovat epäsäännöllisiä — mikään katu ei kulje '
-      + 'suoraan päästä päähän. Oikealla mutkittelee Vilnia, ja sen '
-      + 'takana on oma kolkkansa: Užupis, joka julistautui '
-      + 'tasavallaksi ja kirjoitti itselleen perustuslain. Ylhäällä '
-      + 'kaartaa Neris isona koukkuna. Tumma viivanpätkä '
-      + 'vanhankaupungin eteläreunassa on jäljellä oleva '
-      + 'kaupunginmuuri. Kartan kohteista pääsee lukemaan lisää '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
+     * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
+     */
+    esittely: 'Kartan alue on Vilnan vanhakaupunki, joka ulottuu '
+      + 'tuomiokirkon aukiolta Aamuportille noin puolentoista '
+      + 'kilometrin matkalla. Jokien väliin jäävällä kukkulalla seisoo '
+      + 'Gediminaksen torni, ja sen juurella ovat Vilnan tuomiokirkko '
+      + 'ja erillinen kellotorni. Etelämpänä ovat punatiilinen Pyhän '
+      + 'Annan kirkko ja Vilnan yliopisto, jonka rakennusten väliin jäi '
+      + 'kolmetoista sisäpihaa. Aamuportti on ainoa jäljellä oleva '
+      + 'yhdeksästä kaupunginportista. Vilnia-joen takana on Užupis, '
+      + 'joka julistautui omaksi tasavallakseen ja kirjoitti itselleen '
+      + 'perustuslain. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
