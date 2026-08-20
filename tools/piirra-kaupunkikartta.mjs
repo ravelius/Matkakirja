@@ -1316,6 +1316,79 @@ const KAUPUNGIT = {
       },
     ],
   },
+  sana: {
+    /*
+     * TIIVIS RAJAUS UNESCON VANHANKAUPUNGIN YMPÄRILLE (erä 4,
+     * 20.8.2026). Ruutu on 1,9 × 1,7 km ja siihen mahtuu koko
+     * muurikaupunki: pohjoisessa Bab Sha'ub, etelässä Bab al-Yaman,
+     * idässä Qasr al-Silah ja lännessä Wadi al-Sailahin toisella
+     * puolella al-Mahdin moskeija. Rajaus on tarkoituksella pieni:
+     * Sanaan koko kaupunkialue on kymmeniä kilometrejä pitkä laakso,
+     * ja kaikki lehden kohteet ovat muurien sisällä tai niiden
+     * vieressä — laajempi ruutu olisi tehnyt vanhastakaupungista
+     * pienen läikän keskelle uutta kaupunkia.
+     *
+     * KAINALOA EI OLE. Toisin kuin Medinassa tai Mekassa, yhtään
+     * lehden kohdetta ei jää ruudun ulkopuolelle: Jabal Nuqum on
+     * vuori eikä katuverkon kohde, ja se kerrotaan oppaassa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ. Vanhankaupungin kujat
+     * ovat OSM:ssä valtaosin highway=footway ja highway=service
+     * eivätkä tavallisia katuja — ilman lippuja muurien sisus
+     * piirtyi lähes tyhjänä paperina, jossa näkyi vain al-Sailahin
+     * uomaa myötäilevä ajotie. Kokeiltu ensin ilman ja katsottu,
+     * sama ratkaisu kuin Vilnassa, Jerusalemissa ja Medinassa.
+     */
+    rajat: { pohjoinen: 15.363, etela: 15.348, lansi: 44.206, ita: 44.224 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
+  aden: {
+    /*
+     * KRAATTERIKAUPUNKI JA SATAMA (erä 4, 20.8.2026). Pääruutu on
+     * Crater eli Seera, sammuneen tulivuoren pohja: 2,4 × 2,9 km,
+     * pohjoisessa Adenin portti (Main Pass), idässä Siran saari ja
+     * lounaassa Tawilan altaat. Ruudun etelä- ja länsireuna on
+     * Jabal Shamsanin rinnettä, jolle ei ole rakennettu — tyhjyys
+     * on siis aitoa maastoa eikä puuttuvaa aineistoa.
+     *
+     * KAINALOSSA TAWAHI eli entinen Steamer Point, runsaat kuusi
+     * kilometriä länsiluoteeseen niemen toisella puolella. Sinne
+     * höyrylaivat tulivat ja siellä on Big Ben Aden. Väli on
+     * kapeaa kannasta ja satamavesiä, joten yhteen ruutuun
+     * mahtuessaan kraatteri kutistuisi lukukelvottomaksi — sama
+     * ratkaisu kuin Medinassa ja Mekassa. Kainalo on vasemmassa
+     * ylänurkassa, joka on suuntana oikea.
+     *
+     * PALVELUTIET PÄÄLLÄ, JALKAKÄYTÄVÄT EIVÄT. Craterin korttelien
+     * sisäkujat ovat OSM:ssä service-teitä, ja ilman niitä kuvaan
+     * jäi vain muutama pääkatu. Jalkakäytäviä kokeiltiin myös,
+     * mutta ne toivat lähinnä rantabulevardin kaksinkertaisena
+     * viivana.
+     */
+    rajat: { pohjoinen: 12.791, etela: 12.769, lansi: 45.023, ita: 45.053 },
+    palvelutiet: true,
+    /*
+     * meri: true. Adeninlahti on OSM:ssä pelkkää rantaviivaa eikä
+     * vesimonikulmiota, ja ensimmäisessä koeajossa ilman lippua koko
+     * satama ja Siran salmi jäivät paperin värisiksi — rantaviiva
+     * piirtyi yksinäisenä nauhana, joka näytti tieltä. Katsottu ja
+     * korjattu.
+     */
+    meri: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 12.7955, etela: 12.7845, lansi: 44.9755, ita: 44.9875 },
+        /*
+         * x: 14 eikä 2. Kahdella prosentilla suuntateksti keskittyy
+         * kohtaan 12 % kuvan leveydestä, ja "6 km länsiluoteeseen"
+         * on puolet leveämpi kuin se — teksti leikkautui kuvan
+         * vasempaan reunaan. Sama Budapestin oppi kuin pystysuunnassa.
+         */
+        x: 14, y: 2, leveys: 20, suunta: '6 km länsiluoteeseen', meri: true,
+      },
+    ],
+  },
   mekka: {
     /*
      * Ydin Suuren moskeijan ympärillä: Kaaba lännessä, kellotorni

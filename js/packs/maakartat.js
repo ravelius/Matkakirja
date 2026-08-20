@@ -5892,6 +5892,174 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kellotorni', lat: 21.4189, lon: 39.8264 },
     ],
   },
+
+  /*
+   * SANA (erä 4, 20.8.2026). Rajaus on Unescon vanhakaupunki ja sen
+   * välitön ympärys, 1,9 × 1,7 km. Ruutu on tarkoituksella pieni:
+   * kaikki lehden kohteet ovat muurien sisällä tai niiden vieressä,
+   * eikä uuden kaupungin kymmenien kilometrien laakso mahtuisi samaan
+   * kuvaan ilman että vanhakaupunki kutistuisi läikäksi.
+   *
+   * KOORDINAATIT OVAT OVERPASSISTA (haettu 20.8.2026), ja tähän on
+   * syy. Kolme en-Wikipedian coord-mallia on tässä kaupungissa
+   * epäluotettava:
+   *  - Al-Bakiriyya-moskeija: artikkelin coord on 15,35306 / 44,2150,
+   *    eli 12 metrin päässä Suuresta moskeijasta. OSM:n
+   *    مسجد البكيلية on 15,35599 / 44,21975 eli 560 metriä
+   *    koillisempana, mikä vastaa artikkelin omaa kuvausta
+   *    vanhankaupungin itäosasta. Overpass voittaa (v925, v932, v937).
+   *  - Ghumdanin palatsi: artikkelin coord 15,353115 / 44,214722 on
+   *    sekin käytännössä Suuren moskeijan piste, vaikka sama artikkeli
+   *    sanoo raunioiden ulottuvan moskeijasta itään ja Bab al-Jemenin
+   *    pohjoispuolelle. OSM:n قصر غمدان قصر السلاح on 640 metriä
+   *    idempänä. Kohde JÄTETTIIN SILTI POIS: raunioista ei ole
+   *    Commonsissa yhtään vapaata vähintään 1 200 pikselin kuvaa.
+   *  - Bab al-Yaman: wikidata-lähtöinen coord 15,3512 / 44,2159 on
+   *    28 metriä OSM:n pisteestä. Ero on alle sadan metrin, joten
+   *    kumpi tahansa kelpaisi; käytetään Overpassia yhdenmukaisuuden
+   *    vuoksi.
+   *
+   * KOLME KOHDETTA JÄI POIS KUVAN PUUTTEESSA (Jerusalemin
+   * ennakkotapaus): Ghumdanin palatsi, Bab al-Salam ja Bab es-Shaub.
+   * Kaksi ensimmäistä ovat OSM:ssä historic=monument, mutta
+   * Commonsista ei löydy niistä kelvollista kuvaa.
+   *
+   * KAKSI KOHDETTA ON MYÖS LEHDEN NOSTOISSA (Suolatori ja
+   * Bab al-Yaman). Aihetoisto on tässä hyväksytty samalla perusteella
+   * kuin Medinan Quba: eri tiedosto ja eri näkökulma — nostot
+   * kertovat torin tavaroista ja portin messinkirenkaista, jutut
+   * kaupungin torikorttelista ja muurin porteista.
+   */
+  sana: {
+    polku: 'assets/kartat/sana-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 15.363, etela: 15.348, lansi: 44.206, ita: 44.224 },
+    esittely: 'Sana on yksi maailman korkeimmalla sijaitsevista '
+      + 'pääkaupungeista: vanhakaupunki on runsaan 2 200 metrin '
+      + 'korkeudessa omannimisellään tasangolla, jota rajaavat idässä '
+      + 'Jabal Nuqum ja lännessä Jemenin korkeimman vuoren juuret. '
+      + 'Ensimmäinen tunnettu maininta kaupungista on 400-luvulta eKr. '
+      + 'muinaiseteläarabialaisella musnad-kirjoituksella, ja nimi '
+      + 'juontuu sabalaisesta sanasta masnaa, linnoitus. Saban '
+      + 'valtakunta perusti paikalle toisen pääkaupunkinsa '
+      + 'ensimmäisellä vuosisadalla jaa., ja al-Hamdanin mukaan '
+      + 'sabalaiset myös muurasivat kaupungin hallitsijansa Shar '
+      + 'Awtarin aikana. Islamin tulon jälkeen Sana oli pitkään '
+      + 'hallintokeskus, ja sitä hallitsivat vuoron perään sulayhidit, '
+      + 'hamdanidit, ajjubidit ja zaidiitti-imaamit. Osmanit valtasivat '
+      + 'kaupungin 1547, menettivät sen 1629 ja palasivat 1872.'
+      + '\n\nKartalla vanhakaupunki erottuu heti. Keskellä on tiheä '
+      + 'kujaverkko, jollaista ei ole missään muualla ruudussa: kujat '
+      + 'ovat niin kapeita, että ne on merkitty OpenStreetMapiin '
+      + 'jalankulkuväyliksi ja huoltoteiksi eivätkä kaduiksi. Sitä '
+      + 'kiertää soikea kehä, joka on kaupunginmuurin paikalla, ja '
+      + 'muurin jäänteet piirtyvät tummina pätkinä idässä ja '
+      + 'pohjoisessa — loput on purettu 1960-luvulta alkaen, samoin '
+      + 'useimmat porteista. Eteläreunassa on Bab al-Yaman ja '
+      + 'pohjoisreunassa sen vastapari Bab es-Shaub. Vanhankaupungin '
+      + 'länsipuolella kulkee pohjoisesta etelään al-Sailah, tulvauoma '
+      + 'joka on kuivana aikana ajotie; sen toisella puolella on '
+      + 'al-Mahdin moskeija ja siitä länteen Bir al-Azabin '
+      + 'osmaniaikainen puutarhakaupunginosa. Ruudun ulkopuolelle jää '
+      + 'idässä Jabal Nuqum, joka kohoaa noin 500 metriä kaupungin '
+      + 'yläpuolelle; se kerrotaan oppaassa. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
+      { nimi: 'Al-Bakiriyyan moskeija', lat: 15.35599, lon: 44.21975 },
+      { nimi: 'Suolatori', lat: 15.35496, lon: 44.21584 },
+      { nimi: 'Talhan moskeija', lat: 15.35399, lon: 44.21238 },
+      { nimi: 'Suuri moskeija', lat: 15.35315, lon: 44.2149 },
+      { nimi: 'Al-Mahdin moskeija', lat: 15.35308, lon: 44.20922 },
+      { nimi: 'Bab al-Yaman', lat: 15.35095, lon: 44.21591 },
+    ],
+  },
+
+  /*
+   * ADEN (erä 4, 20.8.2026). Pääruutu on Crater eli Seera, sammuneen
+   * tulivuoren pohja, ja kainalossa Tawahi eli entinen Steamer Point
+   * runsaat kuusi kilometriä länsiluoteeseen. Väli on kannasta ja
+   * satamavesiä, joten yhteen ruutuun pakotettuna kraatteri kutistuisi
+   * lukukelvottomaksi — sama ratkaisu kuin Medinassa (Quba) ja
+   * Mekassa (Jabal al-Nour).
+   *
+   * VAIN NELJÄ KOHDETTA, mikä on kaksi alle talon alarajan, ja syy on
+   * kuvissa eikä koordinaateissa. Overpass antaa Craterista kymmenkunta
+   * nimettyä kohdetta — Siran linna 12,77896 / 45,04967, Aidrus-
+   * moskeija 12,77212 / 45,03647, Adenin minareetti 12,77825 /
+   * 45,03987, Adenin portti 12,78816 / 45,02663 — mutta Commonsissa
+   * ei ole yhdestäkään niistä vapaata vähintään 1 200 pikselin kuvaa.
+   * Siran linnan parhaat tiedostot ovat 1 080 ja 665 pikseliä leveitä,
+   * Aidrus-moskeijan 791 ja 720, ja Adenin kirjaston ainoassa
+   * kelpokokoisessa kuvassa on poliittisia julisteita ja tunnistettava
+   * henkilö. "Ei kuvaa, ei kohdetta" (Jerusalemin ennakkotapaus).
+   * Kaikki neljä kerrotaan kartan esittelyssä ja lehden teksteissä.
+   *
+   * KOORDINAATIT: Kansallismuseo, Craterin tori ja Tawilan altaat ovat
+   * Overpassista (haettu 20.8.2026). Altaiden osalta en-Wikipedian
+   * coord 12,7743 / 45,0290 ja Overpassin 12,77459 / 45,02912 ovat
+   * 35 metrin päässä toisistaan eli samaa mieltä. Siran linnalla ero
+   * on 120 metriä (Wikipedia 12,780044 / 45,049821), eli yli sadan —
+   * Overpass olisi voittanut, mutta kohde jäi joka tapauksessa pois.
+   * KAINALON Steamer Point on POIKKEUS: OSM:ssä ei ole Big Ben Adenia
+   * eikä muutakaan nimettyä pistettä kaupunginosan ytimessä, joten
+   * koordinaatti on en-Wikipedian Big Ben Aden -artikkelista
+   * (12,789904 / 44,98151). Se on kirjattu tähän, koska se on ainoa
+   * kartan piste, joka ei tule Overpassista.
+   *
+   * TARKISTA-KARTTAPISTEET VAROITTAA YHDESTÄ PISTEESTÄ: Tawilan
+   * altaat osuu vesialueelle. Varoitus on oikea mutta tässä
+   * tarkoituksellinen — altaat ovat OSM:ssä natural=water, koska ne
+   * ovat vesialtaita, ja piste osuu siis juuri siihen kohteeseen,
+   * jonka se nimeää. Pistettä EI siirretty rannalle: siirto veisi
+   * numeron pois altaista. Muut kolme pistettä ovat maalla.
+   */
+  aden: {
+    polku: 'assets/kartat/aden-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 12.791, etela: 12.769, lansi: 45.023, ita: 45.053 },
+    kainalot: [
+      { rajat: { pohjoinen: 12.7955, etela: 12.7845, lansi: 44.9755, ita: 44.9875 },
+        x: 14, y: 2, leveys: 20, korkeus: 25, suunta: '6 km länsiluoteeseen' },
+    ],
+    esittely: 'Aden on kaksi niemeä ja niiden väliin jäävä '
+      + 'luonnonsatama. Kreikkalaiset tunsivat paikan nimellä Eudaimon '
+      + 'eli onnekas, ja Punaisenmeren kaupan jälleenlaivauspaikkana se '
+      + 'oli tärkeä jo ennen ajanlaskun alkua; Periplus kuvasi sen '
+      + 'sanoilla "kylä rannalla". Antiikin aikaan Aden oli enemmän '
+      + 'saari kuin niemi, koska mantereeseen yhdistävä kannas oli '
+      + 'nykyistä kapeampi. Kaupunkia hallitsivat vuorollaan '
+      + 'himjarilaiset, zurayidit, ajjubidit ja rasulidit, ja '
+      + '1300-luvulla käynyt Ibn Battuta kirjoitti muistiin sen '
+      + 'vesialtaat: "nämä altaat keräävät sadeveden yksinomaan '
+      + 'kaupunkilaisten juomavedeksi". Osmanit ottivat kaupungin 1538, '
+      + 'ja britit vuonna 1839 — heille se oli hiiliasema Bombayn ja '
+      + 'Suezin välissä.'
+      + '\n\nKartan pääruutu on Crater, jonka nimi on kirjaimellinen: '
+      + 'korttelit ovat sammuneen tulivuoren pohjalla. Katuverkko on '
+      + 'säännöllinen ruudukko, ja se päättyy joka suunnassa samalla '
+      + 'tavalla — rinteeseen. Ruudun etelä- ja länsilaidan tyhjyys on '
+      + 'aitoa maastoa eikä puuttuvaa aineistoa: siellä nousee Jabal '
+      + 'Shamsanin vuoristo, jonka huiput ylittävät 500 metriä. '
+      + 'Pohjoisreunassa katu kaartaa kapean solan läpi ulos '
+      + 'kraatterista — se on Main Pass eli Adenin portti, kaupungin '
+      + 'ainoa maayhteys, jonka osmaniaikainen holvikaari purettiin '
+      + 'vuonna 1963 tien leventämiseksi. Idässä meri työntyy '
+      + 'kraatterin kylkeen, ja lahden keskellä on kalliosaari: siellä '
+      + 'seisoo Siran linna, jonka vanhin osa on 1000-luvulta ja joka '
+      + 'kesti sekä portugalilaisten että osmanien hyökkäykset. '
+      + 'Vasemmassa ylänurkassa on kainalokartta Tawahista eli '
+      + 'entisestä Steamer Pointista, jonne höyrylaivat tulivat ja '
+      + 'matkustajat nousivat maihin. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään; kainalo ensin, kuten Mekassa. */
+      { nimi: 'Steamer Point', lat: 12.789904, lon: 44.98151 },
+      { nimi: 'Kansallismuseo', lat: 12.77892, lon: 45.04306 },
+      { nimi: 'Craterin tori', lat: 12.77755, lon: 45.03497 },
+      { nimi: 'Tawilan altaat', lat: 12.77459, lon: 45.02912 },
+    ],
+  },
 };
 
 /*
