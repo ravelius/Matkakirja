@@ -1277,7 +1277,20 @@ const KAUPUNGIT = {
      * ruutuun — se on KAINALOKARTTANA oikeassa ylänurkassa, joka on
      * suuntana oikea ja jossa on vain vuorenrinnettä.
      */
-    rajat: { pohjoinen: 21.4425, etela: 21.4145, lansi: 39.82, ita: 39.857 },
+    /*
+     * ENSIMMÄINEN RAJAUS ULOTTUI AL-ADLIN HAUTAUSMAALLE ITÄÄN
+     * (ita 39.857) ja KATSOTTIIN: keskusta jäi vasempaan alakulmaan
+     * ja kuvan itäinen kolmannes oli tyhjää vuorenrinnettä. Al-Adl
+     * jäi siksi kartalta (kerrotaan teksteissä), ja ruutu tiivistyi
+     * laakson ympärille: Suuren moskeijan kehä lounaassa, Jinnien
+     * moskeija ja Jannat al-Mu'alla pohjoisessa.
+     *
+     * Jalkakäytävät ja palvelutiet päällä samasta syystä kuin
+     * Medinassa: moskeijan ympäristö on jalankulkualuetta.
+     */
+    rajat: { pohjoinen: 21.4425, etela: 21.4145, lansi: 39.816, ita: 39.846 },
+    jalkakaydat: true,
+    palvelutiet: true,
     kainalot: [
       {
         rajat: { pohjoinen: 21.4645, etela: 21.4515, lansi: 39.8545, ita: 39.8685 },
