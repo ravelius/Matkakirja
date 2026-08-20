@@ -1229,6 +1229,31 @@ const KAUPUNGIT = {
     palvelutiet: true,
     rauniokaupunki: true,
   },
+  medina: {
+    /*
+     * Keskusta Profeetan moskeijan ympärillä: idässä Al-Baqin
+     * hautausmaa, lännessä Qiblatayn-moskeija, luoteessa Ruman kaivo
+     * ja etelässä Hidžaz-radan asema-alue. Ruutu on 5,4 × 4,8 km —
+     * väljempi kuin Euroopan ytimet, koska varhaisislamin kohteet
+     * ovat vanhan muurikaupungin ULKOPUOLELLA eri suunnissa; itse
+     * muurikaupunki purettiin 1900-luvulla, joten tiivistä vanhaa
+     * ydintä ei ole.
+     *
+     * Quba-moskeija on 3,5 km kaakkoon eikä mahdu samaan ruutuun
+     * venyttämättä kuvaa pystypuuroksi — se on KAINALOKARTTANA
+     * oikeassa alakulmassa, joka on suuntana oikea (Wienin ja
+     * Budapestin malli). Uhud-vuori (4,5 km pohjoiseen) jää kartalta
+     * kokonaan: se on vuori eikä katuverkon kohde, ja se kerrotaan
+     * lehden teksteissä.
+     */
+    rajat: { pohjoinen: 24.499, etela: 24.456, lansi: 39.571, ita: 39.624 },
+    kainalot: [
+      {
+        rajat: { pohjoinen: 24.4455, etela: 24.433, lansi: 39.61, ita: 39.6245 },
+        x: 78, y: 76.8, leveys: 20, suunta: '3,5 km kaakkoon',
+      },
+    ],
+  },
   izmir: {
     // Konakin aukio, Kemeraltin basaari ja antiikin agora mahtuvat
     // samaan runsaan puolentoista kilometrin ruutuun, ja niiden väli on
@@ -1638,7 +1663,14 @@ async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false, palv
  * vastauksen — ei siis 429:ään vaan pitkän vastauksen katkeamiseen.
  * Neljäs yritys meni läpi.
  */
-async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 5) {
+/*
+ * KYMMENEN YRITYSTÄ 20.8.2026 ALKAEN. Lehtityön apuskriptien oppi
+ * (docs/arkisto/lehtityon-apuskriptit.md): kuusi yritystä ei riittänyt
+ * konttiympäristön yhteyskatkoihin, kymmenen kasvavalla odotuksella
+ * riitti kaikkiin. Medinan ajo kaatui viidellä yrityksellä kahdesti
+ * peräkkäin (500 + ECONNRESET), kymmenellä meni läpi.
+ */
+async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 10) {
   for (let i = 1; ; i++) {
     const palvelin = OVERPASS_PALVELIMET[(i - 1) % OVERPASS_PALVELIMET.length];
     try {
