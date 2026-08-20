@@ -27,6 +27,15 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
   speksattuna, valmiin mallin kanssa. Pienemmille malleille menee
   monistustyö, ei muodon hakeminen.
 
+- **Fablemax — syvätason agentti vaativimpiin pulmiin** (kirjattu
+  19.8.2026; määritys .claude/agents/fablemax.md). Fable kutsuu sen,
+  kun tehtävä vaatii max-tason ajattelua: arkkitehtuuri- ja
+  moduulisuunnitelmat, isot refaktoroinnit, dokumenttiremontit,
+  vaativat katselmoinnit ja sitkeät juurisyybugit (esim. kartan
+  tilabugin kierrokset). Rutiinityö menee tavallisille agenteille —
+  Fablemax on kallein työkalu, ja sitä käytetään vain kun halvempi
+  ei riitä. Aina isolation: worktree, kuten muutkin agentit.
+
 ## Opus — toimitus: lehdet ja koodi
 
 - **Matkasanomat:** lehtisivut, aihesivut, kuvat, kartat, mediat,
