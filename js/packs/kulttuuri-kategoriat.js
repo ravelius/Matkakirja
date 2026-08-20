@@ -33063,6 +33063,218 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Spiridon Shishigin khomus',
         },
       ],
+      /*
+       * AVAUSKUVAT: talvi, puutalo ja joki — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa ne matkailijaa
+       * koskettavat. Yksikään ei toista kansikuvia, jotka ovat
+       * korkealta kuvattu talvinäkymä, ostrogin torni ja kaupungin
+       * uimaranta.
+       *
+       * KUVIA KATSOTTIIN 32 JA HYLÄTTIIN NELJÄ. Hylkäyssyyt olivat
+       * tunnistettavat kasvot (Nikolskin kirkon syyskuva, jossa
+       * etualalla on myyntipöytä ja neljä ihmistä) ja aiheen toisto
+       * (kaksi ilmakuvaa talvisesta kaupungista olisi mennyt
+       * päällekkäin ensimmäisen kansikuvan kanssa; toinen niistä on
+       * nyt oppaan kuvana, jossa se on oikeassa tehtävässä).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Улица Курашова, Якутск 14.12.2025.jpg',
+          selite: 'Kurašovin katu joulukuussa. Pakkassumu peittää '
+            + 'näkymän niin, että sadan metrin päässä olevat '
+            + 'kerrostalot ovat vain harmaita palkkeja, ja matala '
+            + 'aurinko on vaalea läiskä niiden takana. Oikean laidan '
+            + 'puut ovat paksussa kuurassa, ja ainoa auto ajaa '
+            + 'valot päällä keskellä risteystä.',
+          lahde: 'SmallSonMarex, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Якутск, ул.Петра Алексеева, 22.06.2013 - panoramio.jpg',
+          selite: 'Kaksikerroksisia hirsitaloja Pjotr Aleksejevin '
+            + 'kadun varrella kesäkuussa. Harmaantuneet seinät '
+            + 'kallistuvat eri suuntiin, ikkunapielet ovat vinossa ja '
+            + 'katot ovat aaltopeltiä. Talojen takaa nousee vaalea '
+            + 'kerrostalo ja vasemmalta kirkon punainen torni.',
+          lahde: 'Vadim Zhivotovsky, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Вид на реку Лена со стороны набережной имени Романа Дмитриева, Якутск 18.06.2026.jpg',
+          selite: 'Lena Roman Dmitrijevin rantakadulta katsottuna '
+            + 'kesäkuussa. Joki leviää kuvan laidasta laitaan, ja sen '
+            + 'keskellä on pieni sorasaari, jolla seisoo '
+            + 'ristikkorakenteinen voimalinjan pylväs. Etualan vedessä '
+            + 'kelluu punaisten poijujen jono.',
+          lahde: 'SmallSonMarex, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Yakutsk - 190228 DSC 5393.jpg',
+          selite: 'Jakutsk ilmasta helmikuussa. Ruutukaava ja sen '
+            + 'kerrostalorivit erottuvat lumen keskeltä vaaleina '
+            + 'paloina, ja kaupungin ympärillä on tasaista valkoista '
+            + 'lakeutta niin kauas kuin kuva ulottuu. Matala aurinko '
+            + 'värjää talojen seinät kellertäviksi.',
+          lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Jakutsk on Sahan tasavallan pääkaupunki noin '
+          + 'neljänsadanviidenkymmenen kilometrin päässä napapiiristä '
+          + 'etelään. Kaupunki on Lenan länsirannalla Tuimaadan '
+          + 'laaksossa, sen pinta-ala on 122 neliökilometriä ja '
+          + 'asukkaita oli vuoden 2021 väenlaskussa 355 443. Rosstatin '
+          + 'arvio vuodelle 2025 on 372 801 kaupungissa ja 390 236 '
+          + 'kaupunkialueella — yli kolmannes koko tasavallan '
+          + 'väestöstä. Vuoden 2021 laskennassa jakuutteja oli 59,2 '
+          + 'prosenttia ja venäläisiä 26,4; loput jakautuvat '
+          + 'kirgiiseihin, evenkeihin, tadžikkeihin, kiinalaisiin ja '
+          + 'armenialaisiin.',
+        artikkeli: {
+          nimi: 'Matkailijan Jakutsk',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jonne pääsee lentäen ympäri vuoden, '
+            + 'lautalla kolme kuukautta ja joen jäätä pitkin kolme.',
+          nosto: 'Koko Sahan tasavallassa ei ole yhtään siltaa Lenan '
+            + 'yli. Kesällä ylitys tehdään lautalla, keskitalvella '
+            + 'ajetaan jäätä pitkin — ja väliajat, jolloin jäätä on '
+            + 'liikaa lautalle ja liian vähän autolle, ovat vuoden '
+            + 'hankalinta aikaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Jakutskiin tullaan lentäen. Kaupungin '
+                + 'lentoasema on nimetty jakuuttikirjailija Platon '
+                + 'Ojunskin mukaan, ja pienempi Maganin kenttä on sen '
+                + 'rinnalla; Jakutia-lentoyhtiön pääkonttori on '
+                + 'kaupungissa. Maantiellä tullaan Lenan valtatietä '
+                + 'A360, mutta tie ei tule perille asti: se päättyy '
+                + 'joen itärannalle Nižni Bestjahiin, noin '
+                + 'neljäntuhannen asukkaan taajamaan, ja Jakutsk on '
+                + 'kokonaan länsirannalla. Kesällä väli ylitetään '
+                + 'lautalla, keskitalvella ajetaan jäätietä pitkin '
+                + 'suoraan joen yli. Kelirikko katkaisee yhteyden '
+                + 'kahdesti vuodessa: silloin kun jää ei vielä kanna '
+                + 'ja silloin kun sitä on liikaa lautalle. Rautatie '
+                + 'ulottui Nižni Bestjahiin marraskuussa 2011, ja '
+                + 'vuonna 2019 valmistunut uusi rataosuus toi '
+                + 'henkilöjunat Jakutskin ulottuville. Samasta '
+                + 'Nižni Bestjahista lähtee itään Kolyman valtatie '
+                + 'Magadaniin.',
+              kuva: {
+                tiedosto: 'Aeroport Yakutsk 02.jpg',
+                selite: 'Jakutskin lentoaseman terminaali kevätpäivänä. '
+                  + 'Pitkä lasiseinäinen rakennus levittäytyy koko '
+                  + 'kuvan mitalle, ja sen ylälaidassa lukee '
+                  + 'kyrillisin kirjaimin lentoaseman nimi. Edustan '
+                  + 'aukiolla kiertää kaareva kaidejono ja siitä '
+                  + 'nousee harmaa kivipylväs.',
+                lahde: 'Staselnik, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Keski-Jakutian alangolla, '
+                + 'Tuimaadan laaksossa, ja on Lenan tärkein satama. '
+                + 'Jakuutit asettuivat laaksoon 1200–1500-luvuilla; '
+                + 'kaupungin alueelta tunnetaan yli kaksisataa '
+                + 'muinaisjäännöstä, joista vanhin, Jubileinajan '
+                + 'asuinpaikka, ajoitetaan 20 500–10 000 vuoden '
+                + 'ikäiseksi. Hallinnollisesti Jakutskiin kuuluu '
+                + 'kaupungin lisäksi yksitoista maaseutukylää — '
+                + 'Magan, Namtsyr, Vanha Tabaga, Tabaga, Hatassy ja '
+                + 'muut — ja niiden mukana suuri osa tasavallan '
+                + 'maataloudesta: Jakutskin alueella tuotetaan 89 '
+                + 'prosenttia tasavallan lihasta ja 34 prosenttia '
+                + 'maidosta. Elinkeinojen kärki on silti kaivos: '
+                + 'seudulta louhitaan kivihiiltä, kultaa ja '
+                + 'timantteja, ja jalokivet ja -metallit ovat '
+                + 'Jakutskin tärkein vientitavara. Kartalla huomaa '
+                + 'heti järvet. Ne eivät ole kaivettuja altaita vaan '
+                + 'painanteita sulaneen ikiroudan päällä, ja niitä on '
+                + 'keskellä kortteleita: Talooje, Tjoploje, '
+                + 'Soldatskoje ja Gubinskoje.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: putket kulkevat maan päällä',
+              teksti: 'Jakutsk on maailman suurin yhtenäisen ikiroudan '
+                + 'päälle rakennettu kaupunki, ja se näkyy joka '
+                + 'korttelissa. Talot seisovat betonipaaluilla irti '
+                + 'maasta, koska lämmin rakennus sulattaisi maan '
+                + 'altaan ja painuisi. Samasta syystä vesi- ja '
+                + 'lämpöputkia ei haudata: ne kulkevat eristettyinä '
+                + 'pukkien päällä katujen vieressä, nousevat kaarena '
+                + 'ajoväylien yli ja kääntyvät talojen kylkiin. '
+                + 'Ratkaisu on ruma ja täysin välttämätön. Kaupungissa '
+                + 'toimii vuonna 1960 perustettu ikiroutainstituutti, '
+                + 'jonka tehtäväksi annettiin nimenomaan jäätyneelle '
+                + 'maalle rakentamisen kalliiden ongelmien '
+                + 'ratkaiseminen; nykyään se mittaa myös sitä, kuinka '
+                + 'nopeasti ikirouta sulaa.',
+              kuva: {
+                tiedosto: 'Yakutsk - 190227 DSC 4912.jpg',
+                selite: 'Lämpöputkia kadun varrella talvella. Paksut '
+                  + 'hopeanharmaat eristeputket kulkevat matalilla '
+                  + 'teräspukeilla lumipenkan takana, kiertyvät '
+                  + 'silmukoiksi ja nousevat kauempana kaarisillaksi '
+                  + 'ajoradan yli. Taustalla on viisikerroksisia '
+                  + 'kerrostaloja, joiden katoilta nousee höyryä.',
+                lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: silta, jota ei vielä ole',
+              teksti: 'Lenan silta on ollut suunnitelmissa vuodesta '
+                + '2008, ja presidentti hyväksyi hankkeen 9. '
+                + 'marraskuuta 2019. Silta tulee neljänkymmenen '
+                + 'kilometrin päähän ylävirtaan Vanhan Tabagan '
+                + 'kohdalle, jossa joki kapenee eikä kevättulva levitä '
+                + 'vettä laajalle. Pituutta tulee yli kolme '
+                + 'kilometriä ja tuloteitä 10,9 kilometriä. '
+                + 'Kustannusarvio oli aluksi 63,7 miljardia ruplaa '
+                + '(83 miljardia arvonlisäveroineen), josta '
+                + 'valtionavustusta 54,2 miljardia; rakentaminen alkoi '
+                + '2024 ja arvio nousi 130 miljardiin, valmistuminen '
+                + '2028. Henkilöautoilta ei peritä maksua, kuorma-'
+                + 'autoilta peritään. Alun perin sillasta piti tulla '
+                + 'yhdistetty rautatie- ja maantiesilta, joka olisi '
+                + 'liittänyt etelästä nousevan Amur–Jakutsk-radan '
+                + 'itä–länsisuuntaiseen Baikal–Amur-rataan.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kesällä, jos haluaa nähdä kaupungin, ja '
+                + 'talvella, jos haluaa nähdä sen mistä se tunnetaan. '
+                + 'Pelin sääriviltä tammikuu on −35,9 astetta ja '
+                + 'heinäkuu +20,0: väliä on kuusikymmentä astetta, ja '
+                + 'sadetta tulee koko vuonna vain 230 millimetriä. '
+                + 'Kylmin mitattu lukema on −64,4 astetta 5. '
+                + 'helmikuuta 1891 ja kuumin +38,4 astetta 17. '
+                + 'heinäkuuta 2011; Guinnessin ennätyskirja pitää '
+                + 'seudun 102 asteen vaihteluväliä maailman '
+                + 'suurimpana. Marraskuun 10. ja maaliskuun 14. '
+                + 'päivän välillä kaupungissa ei ole koskaan mitattu '
+                + 'suojasäätä. Rivin lukuja kannattaa lukea asteen '
+                + 'tarkkuudella eikä sen tarkemmin: pelin rivi on '
+                + 'ERA5-hilaruudusta ja antaa tammikuulle −35,9, kun '
+                + 'taas kaupungin oman havaintosarjan keskiarvo on '
+                + '−36,9. Juhannuksen tienoilla vietetään '
+                + 'ysyah-kesäjuhlaa, jakuuttien uudenvuoden juhlaa, '
+                + 'johon kuuluvat kumissi, hevoskilpailut ja '
+                + 'ohuohai-piiritanssi.',
+              kuva: {
+                tiedosto: 'Lena River Ice Road.jpg',
+                selite: 'Lenan jäätie keskitalvella. Auratun tien '
+                  + 'harmaa pinta johtaa suoraan eteenpäin joen '
+                  + 'jäätä pitkin, ja molemmin puolin kohoavat '
+                  + 'lumivallit ja auratut kinokset. Vastarannalla '
+                  + 'näkyy matala metsäjuova ja sen takana '
+                  + 'siniharmaa vaara.',
+                lahde: 'Natxo Rodriguez from Vitoria-Gasteiz, Basque '
+                  + 'Country, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -33264,6 +33476,229 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Вадим Козин Осень',
         },
       ],
+      /*
+       * MAGADANIN AVAUSKUVAT JA OPAS (Opus 20.8.2026).
+       *
+       * SISÄLTÖLINJAUS (Fablen ohje): kaupungin historia kytkeytyy
+       * Gulagiin, ja kansisivun nosto Surun maskista näyttää linjan —
+       * muistaminen neutraalina historiana ilman julmuuksien
+       * yksityiskohtia. Opas EI toista leirihistoriaa lainkaan.
+       * Painopiste on siinä mitä Fablen speksi pyysi: maantiede,
+       * satama ja Kolyman valtatie maanteinä. Vahvin 1873-henkinen
+       * aines löytyi lahdesta itsestään — amerikkalaiset
+       * valaanpyytäjät ankkuroivat Nagajevanlahteen 1852–1869 ja
+       * kutsuivat sitä Jeannette Harbouriksi — ja se on oppaan
+       * nostona.
+       *
+       * LÄHTEET: en-Wikipedian artikkelit Magadan, Nagaev Bay,
+       * Port of Magadan, Staritsky Peninsula, Alexey Nagayev,
+       * Sokol Airport, R504 Kolyma Highway ja Sea of Okhotsk
+       * (haettu 20.8.2026), sekä pelin oma saarivi.
+       *
+       * YKSI AIHETOISTO ON TIETOINEN. Kansisivun nosto «Sitsikaupunki
+       * kahden lahden välissä» käyttää kuvaa Marchekanin puolelta
+       * kesällä; oppaan viimeisen jakson kuva on Martšekanin vaaran
+       * pohjoisrinteeltä talvella. Sama katselusuunta, eri vuodenaika
+       * ja eri korkeus — ja jakso kertoo nimenomaan vaaralle
+       * nousemisesta, joten kuva on siinä tehtävässään.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Magadan, Gertner Bay.jpg',
+          selite: 'Gertnerinlahti kesäpäivänä. Loivaa rinnettä laskee '
+            + 'hiekkatie kohti rantaa, jossa on kirkkaankattoisia '
+            + 'matalia rakennuksia, ja niiden takaa avautuu tyyni '
+            + 'meri. Vastarannalla kohoaa metsäinen niemi, ja '
+            + 'horisontissa erottuu lumitäpläinen vuorijono.',
+          lahde: 'frage23, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Огни Магадана.jpg',
+          selite: 'Magadanin valot hämärässä. Katulyhtyjen rivi '
+            + 'kaartaa rantaa pitkin, ja niiden takana kimaltaa '
+            + 'Nagajevanlahden tumma vesi. Vasemmalla nousee '
+            + 'kerrostalojen rinne, ja lahden yli levittäytyy pitkä '
+            + 'matala vaara, jonka harjalla palaa yksittäisiä valoja.',
+          lahde: 'Vladislava21, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Магадан, Транспортная-Речная, 20240831 01.jpg',
+          selite: 'Vaaleankeltainen kaksikerroksinen talo '
+            + 'Transportnajan ja Retšnajan kulmassa. Julkisivua '
+            + 'jäsentävät leveät pystypilasterit, ja rakennuksen '
+            + 'takaosassa kohoaa pieni nelikulmainen torni, jonka '
+            + 'ympäri kiertää kaide. Edessä on tyhjä asfalttikenttä.',
+          lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Magadan viewed from the Staritski peninsula.jpg',
+          selite: 'Magadan Staritskin niemimaalta katsottuna keväällä. '
+            + 'Etualalla on kuivunutta heinikkoa ja sulavaa '
+            + 'lumipolkua, keskellä kaupungin matalien kerrostalojen '
+            + 'nauha ja sen takana lumiset loivat vaarat, joiden '
+            + 'harjalta nousee ohut radiomasto.',
+          lahde: 'Johannes Rohr, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Magadan on Magadanin alueen hallinnollinen keskus ja '
+          + 'Kolyman portti. Kaupunki istuu Staritskin niemimaan '
+          + 'kannaksella kahden lahden välissä: lounaassa '
+          + 'Nagajevanlahti, koillisessa Gertnerinlahti. Sen läpi '
+          + 'virtaa 192 kilometrin mittainen Magadanka, joka laskee '
+          + 'Ohotanmereen, ja lännessä ja koillisessa kaupunkia '
+          + 'ympäröivät vuoret. Pinta-alaa on 295 neliökilometriä. '
+          + 'Asukasluku on laskenut pitkään: vuoden 1989 '
+          + 'väenlaskussa 151 652, vuonna 2010 enää 95 982 ja vuoden '
+          + '2024 arviossa 89 193.',
+        artikkeli: {
+          nimi: 'Matkailijan Magadan',
+          taitto: 'opas',
+          teksti: 'Kaupunki kahden lahden välissä, jonne ei tule '
+            + 'rautatietä ja josta lähtee tasan yksi tie.',
+          nosto: 'Lahti oli merikartoilla kauan ennen kuin siellä oli '
+            + 'kaupunkia: amerikkalaiset valaanpyytäjät ankkuroivat '
+            + 'siihen vuosina 1852–1869 hakemaan puuta ja vettä ja '
+            + 'keittämään traania, ja he kutsuivat sitä Jeannette '
+            + 'Harbouriksi.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Magadaniin tullaan lentäen tai yhtä tietä '
+                + 'pitkin. Lentoasema on Sokolissa viidenkymmenen '
+                + 'kilometrin päässä pohjoisessa, ja sen nimi kertoo '
+                + 'senkin: kenttä avattiin 12. tammikuuta 1961 nimellä '
+                + 'Magadan-56, koska se on Kolyman valtatien '
+                + 'viidennelläkymmenennelläkuudennella kilometrillä. '
+                + 'Ensimmäinen Il-62 laskeutui 13. joulukuuta 1980, ja '
+                + 'seuraavasta päivästä alkaen Moskovaan lennettiin '
+                + 'suoraan; nykyinen terminaali avattiin 20. '
+                + 'joulukuuta 2024. Rautatietä ei ole: '
+                + 'Magadan–Palatka-rata oli käytössä vuosina '
+                + '1941–1956, eikä uutta ole. Maayhteys on '
+                + 'liittovaltion tie R504 «Kolyma», joka päättyy '
+                + 'Magadaniin ja vie toisessa päässä Nižni Bestjahiin '
+                + 'Lenan itärannalle, Jakutskia vastapäätä. Sen '
+                + 'nollakilometri on kaupungin pohjoislaidalla. Tie '
+                + 'sai liittovaltiontien aseman 2008; päällyste '
+                + 'ulottuu Magadanista noin 159 kilometrin päähän, '
+                + 'muutoin se on soraa.',
+              kuva: {
+                tiedosto: 'Новый терминал "Аэропорта Магадан".jpg',
+                selite: 'Sokolin lentoaseman uusi terminaali '
+                  + 'talvi-iltana. Rakennuksen katto on muotoiltu '
+                  + 'loivaksi aaltoviivaksi, joka nousee molemmissa '
+                  + 'päissä ylös, ja koko julkisivu on lasia. '
+                  + 'Yläreunassa palaa valkoinen kyrillinen teksti, ja '
+                  + 'taivas on vaaleanpunainen.',
+                lahde: 'Магадан 2001, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kannas, jolla kaupunki on, kuuluu Staritskin '
+                + 'niemimaahan, ja niemimaan nimi on vasta vuodelta '
+                + '1875. Sitä ennen sitä sanottiin Mijekanin '
+                + 'niemimaaksi eveenien Nagajevanlahdesta käyttämän '
+                + 'nimen Mijekan mukaan. Vuonna 1875 hydrografi '
+                + 'Mihail Onatsevitš kartoitti seudun rannat ja nimesi '
+                + 'niemimaan kapteeni ja hydrologi Konstantin '
+                + 'Staritskin mukaan. Niemimaan korkein kohta on '
+                + 'Martšekanin vaara, 694 metriä, ja sen suhteellinen '
+                + 'korkeus on 625 metriä. Lahtia on neljä: '
+                + 'Nagajevanlahti lännessä ja Gertnerinlahti idässä '
+                + 'erottavat niemimaan mantereesta, ja niiden '
+                + 'eteläpuolella ovat Vesjolajan ja Svetlajan lahdet, '
+                + 'joista jälkimmäisen rantaviiva on suojelualuetta. '
+                + 'Kasvillisuus on koillissiperialaista taigaa: '
+                + 'kuusia, lehtikuusia ja rauduskoivuja, ja niiden '
+                + 'alla ikirouta ja tundra. Kasvukausi kestää sata '
+                + 'päivää.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: satama, joka pidetään auki',
+              teksti: 'Magadanin satama on Petropavlovskin jälkeen '
+                + 'Venäjän koillisosan toiseksi suurin, ja se toimii '
+                + 'ympäri vuoden jäänmurtajien avulla. Se on '
+                + 'välttämätöntä, koska jäätä on Nagajevanlahdella '
+                + 'marraskuun lopulta kesäkuun puoliväliin — eli '
+                + 'kuutisen kuukautta joka vuosi. Laituripaikkoja on '
+                + 'kolmetoista: kolme öljytuotteille, kaksi '
+                + 'konteille ja kahdeksan muulle tavaralle. '
+                + 'Ensimmäinen laituri rakennettiin 1932 ja '
+                + 'ensimmäiset kiinnityspaikat otettiin käyttöön 6. '
+                + 'joulukuuta 1933; nykyiset rajat satama sai 1980, ja '
+                + 'sen ala on 32 hehtaaria. Sataman merkitys näkyy '
+                + 'ruokakaupassa asti: alueen maatalouden omavaraisuus '
+                + 'on Venäjän Kaukoidän alhaisimpia, ja paikallinen '
+                + 'teollisuus on pastaa, makkaraa ja väkijuomia. '
+                + 'Toinen elinkeino on kalastus, toinen kullankaivuu.',
+              kuva: {
+                tiedosto: 'Magadan-port.jpg',
+                selite: 'Rahtilaiva Magadanin sataman laiturissa '
+                  + 'sumuisena päivänä. Mustan rungon kylkeen on '
+                  + 'maalattu kyrillinen nimi, keulassa nousee kaksi '
+                  + 'keltaista lastipuomia, ja laiturilla seisoo '
+                  + 'vihreä satamanosturi. Laiturin toisella laidalla '
+                  + 'on rivi mustia kivihiilikasoja.',
+                lahde: 'Andrey dementev, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: lahden nimet',
+              teksti: 'Nagajevanlahti on 14,5 kilometriä pitkä ja '
+                + 'suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu '
+                + 'Ohotanmeren parhaaksi ankkuripaikaksi. Nimi tulee '
+                + 'amiraali Aleksei Nagajevilta (1704–1781), joka oli '
+                + 'hydrografi ja kartantekijä: hän laati Beringinmeren '
+                + 'ja Itämeren ensimmäiset kartastot, jotka '
+                + 'ilmestyivät vuonna 1752 ja joita käytettiin vielä '
+                + 'viisikymmentä vuotta myöhemmin, vaikka niissä ei '
+                + 'ollut lainkaan astekoordinaatistoa. Lahdella oli '
+                + 'kuitenkin toinenkin nimi. Vuosina 1852–1869 siihen '
+                + 'ankkuroivat newbedfordilaiset ja '
+                + 'stoningtonilaiset valaanpyyntialukset hakemaan '
+                + 'puuta ja vettä ja keittämään traania, ja he '
+                + 'merkitsivät sen karttoihinsa Jeannette Harbourina '
+                + '— 340 tonnin aluksen Jeannetten mukaan, joka kävi '
+                + 'Tauinlahdella usein 1850-luvun alussa. Kaupunkia '
+                + 'ei silloin ollut olemassa: se perustettiin vasta '
+                + '1929.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Heinä–elokuussa, jos haluaa nähdä maiseman '
+                + 'sulana. Pelin sääriviltä lämpimin kuukausi on '
+                + 'elokuu 12,8 asteella ja kylmin tammikuu −19,5:llä; '
+                + 'vettä tulee vuodessa runsaat viisisataa '
+                + 'millimetriä, ja märin aika on elo–syyskuu. Talvi '
+                + 'on pitkä: vielä huhtikuussa keskilämpö on kuusi '
+                + 'astetta pakkasen puolella. Rivin luvut kannattaa tässä '
+                + 'lukea varauksella. Pelin sääkäyrä on '
+                + 'ERA5-hilaruudusta, joka on kymmeniä kilometrejä '
+                + 'leveä ja ottaa mukaan sisämaan vaarat; kaupungin '
+                + 'oman havaintosarjan 1991–2020 tammikuun keskiarvo '
+                + 'on −15,6 astetta eli neljä astetta lauhempi. Ero '
+                + 'on juuri se, jonka meri tekee: rannikolla luvut '
+                + 'vaihtelevat −22 ja +12 asteen välillä, sisämaassa '
+                + '−38 ja +16 välillä. Kuumin mitattu lukema on 27,8 '
+                + 'astetta 15. heinäkuuta 2021. Retkeilijän kannattaa '
+                + 'nousta Martšekanin vaaralle: sieltä koko kannas '
+                + 'näkyy yhtenä kuvana.',
+              kuva: {
+                tiedosto: 'Чаша. Марчеканская сопка.jpg',
+                selite: 'Näkymä Martšekanin vaaran pohjoisrinteeltä '
+                  + 'talvella. Etualan lumikenttä laskee loivana '
+                  + 'kaarena alaspäin, ja rinteessä kasvaa harvassa '
+                  + 'matalia lehtikuusia. Alhaalla levittäytyy '
+                  + 'kaupunki, ja sen takana nousevat lumiset '
+                  + 'vaarajonot kerroksittain horisonttiin.',
+                lahde: 'Странник 18, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',

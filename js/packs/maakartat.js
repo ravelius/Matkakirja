@@ -6367,6 +6367,147 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Taivaan temppeli', lat: 39.8822, lon: 116.4066 },
     ],
   },
+  /*
+   * JAKUTSKIN KOHDEKARTTA (Opus 20.8.2026, Aasian täydennyserä V2).
+   *
+   * RAJAUS 3,5 × 2,7 km. Jakutsk on kokonaan Lenan länsirannalla, ja
+   * kaikki kahdeksan kohdetta ovat runsaan kahden kilometrin nauhassa
+   * Kirovin ja Leninin katujen välissä (129,7116–129,7478).
+   * Pohjoisreuna 62,042 on vedetty niin, että Lenan uoma tulee
+   * kuvaan: joki on kaupungin vanhin ja pitkään ainoa yhteys ulos,
+   * eikä pelkkä ruutukaava kertoisi siitä mitään.
+   *
+   * NUMEROINTI POHJOISESTA ETELÄÄN kuten Medinassa ja Mosulissa.
+   * Ruutu on leveämpi kuin korkea, mutta kohteiden hajonta on
+   * pystysuunnassa suurempi (35–77 % korkeudesta vastaan 16–70 %
+   * leveydestä), joten pohjois-eteläjärjestys pysyy luettavana.
+   *
+   * KOORDINAATIT OVAT OVERPASSISTA, ja se on tässä kaupungissa
+   * pakko: yhdelläkään kohteella ei ole omaa en-Wikipedian
+   * artikkelia, joten vertailukoordinaattia ei ole olemassa.
+   * En-Wikivoyagen Salalah-käytäntö pätee tähänkin — Wikivoyage
+   * täydentää, ei korvaa. Kolmella kohteella Wikivoyage antaa oman
+   * pisteensä, ja ero Overpassiin on:
+   *  - Kansallinen taidemuseo: Wikivoyage 62,02565 / 129,73530,
+   *    Overpass 62,0257 / 129,7321 — ero noin 170 metriä, käytetty
+   *    Overpassia (talon sääntö);
+   *  - Jaroslavskin museo: Wikivoyage 62,03142 / 129,74820, Overpass
+   *    62,0323 / 129,7478 — ero noin 100 metriä, Overpass;
+   *  - Vanhakaupunki: Wikivoyagella ei ole koordinaattia lainkaan,
+   *    vain katurajaus (Ammosova, Aržakova, Kaatuneiden sotilaiden
+   *    aukio); Overpassin piste 62,0248 / 129,7383 on juuri siinä.
+   *
+   * KOLME KOHDETTA JÄTETTIIN POIS TAHALLAAN. Mammuttimuseo (62,0166 /
+   * 129,7040), khomusmuseo ja ikiroutainstituutin maanalainen
+   * käytävä (62,0094 / 129,6676) ovat kaikki jo lehden nostoja, ja
+   * kaksi jälkimmäistä olisi lisäksi venyttänyt rajauksen yli viiden
+   * kilometrin. Läänin rahastontalo (62,0312 / 129,7351) ja Šerginin
+   * kuilu jäivät pois, koska niistä ei ole en-Wikipedian eikä
+   * Wikivoyagen kunnollista kuvausta — kuilu on kylläkin jo
+   * ikirouta-sivun nosto.
+   */
+  jakutsk: {
+    polku: 'assets/kartat/jakutsk-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 62.042, etela: 62.0178, lansi: 129.701, ita: 129.768 },
+    esittely: 'Jakutsk on Sahan tasavallan pääkaupunki ja maailman '
+      + 'suurin yhtenäisen ikiroudan päälle rakennettu kaupunki. Se '
+      + 'perustettiin 1632 hirsilinnoitukseksi ja siirrettiin '
+      + 'vuosina 1642–1643 Lenan vastarannalle Tuimaadan laaksoon, '
+      + 'jossa se on yhä. Asukkaita oli vuoden 1897 väenlaskussa '
+      + '6 535 ja vuoden 2021 laskennassa 355 443, ja heistä 59,2 '
+      + 'prosenttia on jakuutteja. Kaupunki on napapiiriltä noin '
+      + 'neljäsataaviisikymmentä kilometriä etelään.\n\n'
+      + 'Kartalla huomaa kolme asiaa. Ensimmäinen on ruutukaava, joka '
+      + 'kulkee vinosti jokeen nähden — sama vinous näkyy jo vuoden '
+      + '1900 asemakaavassa. Toinen on järvet: kaupungin keskellä on '
+      + 'useita pieniä vesialtaita, jotka eivät ole kaivettuja vaan '
+      + 'painanteita sulaneen ikiroudan päällä, ja niiden lisäksi '
+      + 'ruudukon poikki kulkee kaivettu kaupunkikanava. Kolmas on '
+      + 'yläreunan Lena, kaupungin vanhin yhteys ulospäin; siltaa '
+      + 'joen yli ei ole missään koko tasavallassa, joten kesällä '
+      + 'ylitys tehdään lautalla ja keskitalvella ajetaan jäätä '
+      + 'pitkin. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään. */
+      { nimi: 'Saha-teatteri', lat: 62.0335, lon: 129.7417 },
+      { nimi: 'Jaroslavskin museo', lat: 62.0323, lon: 129.7478 },
+      { nimi: 'Spasskin luostari', lat: 62.0302, lon: 129.7469 },
+      { nimi: 'Nikolskin kirkko', lat: 62.0301, lon: 129.7116 },
+      { nimi: 'Pushkinin draamateatteri', lat: 62.0285, lon: 129.7355 },
+      { nimi: 'Kansallinen taidemuseo', lat: 62.0257, lon: 129.7321 },
+      { nimi: 'Vanhakaupunki', lat: 62.0248, lon: 129.7383 },
+      { nimi: 'Ooppera- ja balettiteatteri', lat: 62.0234, lon: 129.7191 },
+    ],
+  },
+  /*
+   * MAGADANIN KOHDEKARTTA (Opus 20.8.2026, Aasian täydennyserä V2).
+   *
+   * RAJAUS 3,8 × 2,9 km, ja se on vedetty lahdelta ylös kaupunkiin.
+   * Ensimmäinen rajaus oli 2,9 × 2,3 km (länsireuna 150,770) ja se
+   * hylättiin mitattuna: silloin Nagajevanlahti jäi vasempaan
+   * reunaan kahdentoista prosentin kaistaleeksi ja kaikki muut
+   * kohteet puristuivat 64–87 prosentin väliin. Nyt länsireuna on
+   * 150,755, lahti täyttää vasemman kolmanneksen ja kohteet
+   * asettuvat 32–89 prosentin välille.
+   *
+   * SISÄLTÖLINJAUS (Fablen ohje 20.8.2026) määräsi kohdevalinnan
+   * enemmän kuin mikään muu. Magadanin näkyvin muistomerkki on Surun
+   * maski, ja se on jo kansisivun nosto; kartalle sitä ei otettu,
+   * koska se on 3,3 kilometriä pohjoiseen ja koska lehden linja on
+   * että aihe käsitellään kerran ja neutraalisti. Kartan kohteet
+   * ovat siksi kaupungin omaa 1930–1950-luvun arkkitehtuuria,
+   * satamalahti ja kirjasto — se mitä kaupungissa on, ei se mitä
+   * siellä on tapahtunut.
+   *
+   * KOORDINAATIT OVAT KAIKKI OVERPASSISTA. Yhdelläkään kohteella ei
+   * ole omaa en-Wikipedian artikkelia, ja en-Wikivoyagen Magadan-sivu
+   * listaa vain neljä kohdetta, joista kolme (Surun maski, Leninin
+   * patsas, aluemuseo) jäi pois — kaksi ensimmäistä linjauksen ja
+   * viimeinen kuvapuutteen takia. Aluemuseosta (59,5585 / 150,8154)
+   * on Commonsissa vain sisäkuvia, ja se on 78 metrin päässä
+   * Pushkinin kirjastosta, joka on nyt kartalla sen sijaan.
+   *
+   * KOLYMAN VALTATIEN NOLLAKILOMETRI (59,5702 / 150,8101) on kartan
+   * sisällä mutta ei kohteena: siitä ei ole yhtään vapaata kuvaa
+   * Commonsissa. Se mainitaan oppaan ensimmäisessä jaksossa.
+   */
+  magadan: {
+    polku: 'assets/kartat/magadan-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 59.5764, etela: 59.5502, lansi: 150.755, ita: 150.822 },
+    esittely: 'Magadan on Magadanin alueen hallinnollinen keskus ja '
+      + 'Kolyman portti. Kaupunki istuu Staritskin niemimaan '
+      + 'kannaksella kahden lahden välissä, ja kartan vasen kolmannes '
+      + 'on niistä läntinen: Nagajevanlahti, 14,5 kilometriä pitkä ja '
+      + 'suultaan 6,4 kilometriä leveä, jota on kutsuttu Ohotanmeren '
+      + 'parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun '
+      + 'lopulta kesäkuun puoliväliin, ja satama pidetään auki '
+      + 'jäänmurtajilla. Kaupunki perustettiin 1929 ja sai '
+      + 'kaupunkioikeudet 14. heinäkuuta 1939.\n\n'
+      + 'Kartalla kaupunki on kapea nauha. Ruutukaava alkaa lahden '
+      + 'rannasta ja nousee kannasta ylös koilliseen, ja sen halki '
+      + 'kulkee vinosti kaksi pääväylää: Leninin valtakatu ja Karl '
+      + 'Marxin valtakatu. Oikeassa yläkulmassa mutkittelee '
+      + 'Magadanka-joki, joka laskee Ohotanmereen ja jonka pituus on '
+      + '192 kilometriä. Kartan yläreunassa, aivan ruudun sisällä, on '
+      + 'Kolyman valtatien nollakilometri — kaupungin ainoan '
+      + 'maayhteyden alkupiste, josta on 2 032 kilometriä Jakutiaan. '
+      + 'Ruudun ulkopuolelle jäävät koillisessa Gertnerinlahti ja '
+      + 'pohjoisessa Surun maski. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään. */
+      { nimi: 'Kaupungin sauna', lat: 59.5693, lon: 150.7943 },
+      { nimi: 'Severovostokzoloton talo', lat: 59.5658, lon: 150.8101 },
+      { nimi: 'Leninin valtakatu 18', lat: 59.5651, lon: 150.804 },
+      { nimi: 'Kinoteatteri Gornjak', lat: 59.5633, lon: 150.8035 },
+      { nimi: 'Nagajevanlahti', lat: 59.5622, lon: 150.7763 },
+      { nimi: 'Urheilupalatsi', lat: 59.561, lon: 150.8071 },
+      { nimi: 'Pushkinin kirjasto', lat: 59.5592, lon: 150.8148 },
+    ],
+  },
 };
 
 /*

@@ -19803,4 +19803,692 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * JAKUTSKIN KOHDEKARTAN JUTUT (Opus 20.8.2026). Kahdeksan kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään.
+   *
+   * LÄHTEET OVAT KAHTA LAJIA, kuten Salalahissa. Yhdelläkään
+   * kohteella ei ole omaa en-Wikipedian artikkelia, joten runko
+   * tulee en-Wikipedian artikkeleista Yakutsk, Platon Oyunsky,
+   * Olonkho, Yhyakh, Sakha Republic ja Melnikov Permafrost Institute
+   * sekä en-Wikivoyagen Yakutsk-sivun see-merkinnöistä (osoitteet,
+   * aukioloajat, kokoelmien kuvaukset). Kaikki haettu 20.8.2026.
+   * Kolmella kohteella on lisäksi Commonsin luokkatieto, joka
+   * varmistaa tunnistuksen: Nikolskin kirkon kuva on luokassa
+   * «Saint Nicholas church in Yakutsk» ja kantaa Venäjän
+   * kulttuuriperintötunnusta 1400036000, ja Spasskin luostarin kuva
+   * on luokassa «Monastery of the Savior Not Made with Hands
+   * (Yakutsk)».
+   *
+   * YKSI RISTIRIITA KIRJOITETTIIN AUKI (v925:n tapa). Jakutskin
+   * kaupunkioikeuksien vuosi on en-Wikipedian omassa artikkelissa
+   * kahdesti eri: tietoruudun current_cat_date antaa 1643 ja
+   * etymologiaosio sanoo «In 1708 it received city status as
+   * Yakutsk» lähteenään Pospelovin paikannimisanakirja. Lehden
+   * kansisivun nosto on kirjoitettu 1643:n mukaan, ja se saa jäädä;
+   * ero mainitaan Vanhankaupungin jutussa.
+   *
+   * NOSTOJEN TOISTOA VÄLTETTY. Kansisivun nostot ovat ostrogin
+   * siirto 1642–1643, Kate Marsdenin matka 1891 ja khomus, ja
+   * ikirouta-sivun nostot Šerginin kuilu, mammuttimuseo ja Lenan
+   * pilarit. Siksi ostrogin torni ei ole kartan kohde (Vanhakaupunki
+   * on, mutta juttu kertoo korttelista eikä tornista), khomusmuseo
+   * ei ole kohde lainkaan, eikä Jaroslavskin museon juttu käsittele
+   * mammuttiluurankoa, vaikka Wikivoyage sen mainitseekin.
+   */
+  jakutsk: {
+    'Saha-teatteri': {
+      aika: 'nimikkokirjailija 1893–1939',
+      teksti: 'Jakutskissa on neljä teatteria, ja tämä on niistä se, '
+          + 'jossa näytellään jakuutiksi. Se on nimetty Platon '
+          + 'Ojunskin mukaan. Ojunski syntyi 1893 Boturussin — '
+          + 'nykyisen Tattan — ulusissa nimellä Platon Aleksejevitš '
+          + 'Sleptsov, ja sukunimen taustalla oleva sana tarkoittaa '
+          + 'šamaania; siitä hän otti kirjailijanimensä. Hän oli '
+          + 'kirjailija, kielentutkija ja poliitikko, yksi jakuutin '
+          + 'kirjakielen ja koko jakuuttilaisen kirjallisuuden '
+          + 'perustajista, ja hän johti Jakutian '
+          + 'vallankumouskomiteaa 1921–1922 ja tasavallan '
+          + 'toimeenpanevaa keskuskomiteaa 1923–1926.'
+          + '\n\n'
+          + 'Ojunskin tärkein työ oli kuitenkin vanhan tallentaminen. '
+          + 'Olonho on jakuuttien sankarieepos, vanhimpia turkkilaisten '
+          + 'kansojen eepposperinteitä: runoelmia on tallennettu yli '
+          + 'sata, ja ne ovat muutamasta tuhannesta kymmeniin tuhansiin '
+          + 'säkeisiin. Tunnetuin niistä, Njurgun Bootur Nopea, on yli '
+          + '36 000 säettä pitkä. Esitys kestää tavallisesti seitsemän '
+          + 'tai kahdeksan tuntia, alkaa illalla ja jatkuu läpi yön, ja '
+          + 'sinä aikana ehditään seitsemän–kahdeksantuhatta säettä; '
+          + 'pisimmät ovat vieneet yli kuukauden. Kertova osuus '
+          + 'lausutaan, vuorosanat lauletaan, ja sama esittäjä erottaa '
+          + 'hahmot äänensävyllä ja melodialla. Ojunski julkaisi '
+          + '1930-luvulla olonho-kokoelmia ja sovitti eepoksen '
+          + 'luettavaan muotoon jakamalla sen osiin ja lauluihin.'
+          + '\n\n'
+          + 'Ojunski joutui suuren puhdistuksen kohteeksi ja kuoli '
+          + 'vankeudessa Jakutskissa vuonna 1939. Hänet '
+          + 'kuntoutettiin virallisesti 15. lokakuuta 1955, ja hänen '
+          + 'nimensä on nyt tämän teatterin lisäksi kaupungin '
+          + 'lentoasemassa, kirjallisuusmuseossa ja yhdessä kadussa. '
+          + 'Jakutian valtionpalkinto kirjallisuudesta, taiteista ja '
+          + 'arkkitehtuurista kantaa samaa nimeä.',
+      kuvat: [
+        {
+          tiedosto: 'Саха Академический Театр им. П.А. Ойунского, Якутск 28.03.2026.jpg',
+          selite: 'Saha-teatteri maaliskuun pakkaspäivänä. Punatiilisen '
+            + 'ja harmaan rakennuksen päällä lepää valkoinen '
+            + 'teräsristikko kuin kaareva purje, ja julkisivussa on '
+            + 'suuri vinolistoitettu lasiseinä. Sisäänkäynnin yläpuolella '
+            + 'lukee kyrillisin kirjaimin teatterin nimi.',
+          lahde: 'SmallSonMarex, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jaroslavskin museo': {
+      aika: 'kaupungin päämuseo',
+      teksti: 'Leninin valtakadun varrella osoitteessa 5/2 on '
+          + 'Jakutskin päämuseo, pohjoisen kansojen historian ja '
+          + 'kulttuurin museo. Se on nimetty Jemeljan Jaroslavskin '
+          + 'mukaan, se on auki päivittäin kello kymmenestä '
+          + 'seitsemääntoista, eikä pääsymaksua ole. Kokoelma kattaa '
+          + 'kaiken esihistoriasta 1990-luvulle asti, ja sen '
+          + 'omalaatuisin osa on runsas kokoelma pohjoisen eläimiä '
+          + 'täytettyinä.'
+          + '\n\n'
+          + 'Museon aihe alkaa maasta. Jakutskin kaupunkialueelta '
+          + 'tunnetaan yli kaksisataa muinaisjäännöstä, ja vanhin '
+          + 'niistä, Jubileinajan asuinpaikka, ajoitetaan 20 500–10 000 '
+          + 'vuoden ikäiseksi. Tuimaadan laaksoon jakuutit asettuivat '
+          + '1200–1500-luvuilla, mistä kertovat Zernovaja II:n, '
+          + 'Orbita-16:n ja Vladimirovka IV:n vanhat asuinpaikat: ne '
+          + 'kuuluvat kulun-atahin kulttuuriin, jota pidetään '
+          + 'jakuuttien esi-isien kulttuurina.'
+          + '\n\n'
+          + 'Ikirouta säilyttää muutakin kuin luuta. Vuonna 2024 '
+          + 'Jakutskista löytyi kokonainen asiakirjakokonaisuus, '
+          + 'johon kuului neljätoista musteella kirjoitettua '
+          + 'tuohikirjettä 1600-luvun kaunokirjoituksella; numerot '
+          + 'niissä on kirjoitettu kirjaimin. Arkeologit arvelevat '
+          + 'niiden kuuluneen vojevodan kanslian arkistoon, joka '
+          + 'tuhoutui tulipalossa vuonna 1700. Yksi katkelma koskee '
+          + 'jasakin eli turkisveron keräämistä. Vuonna 2025 löytyi '
+          + 'lisäksi paperille kirjoitettu kirje arkkimandriitta '
+          + 'Feofanille, joka johti kaupungin Spasskin luostaria '
+          + 'vuosina 1714–1719.',
+      kuvat: [
+        {
+          tiedosto: 'Якутск, пр.Ленина,5-2, музей истории и культуры народов Севера им.Е.М.Ярославского, 22.06.2013 - panoramio (4).jpg',
+          selite: 'Museon sisäänkäynti kesäkuussa. Punatiilisen '
+            + 'julkisivun edessä on valkoinen katos, jonka '
+            + 'etureunassa on tervetulotoivotus kolmella kielellä, ja '
+            + 'katoksen päällä seisoo täytetty karhu takajaloillaan. '
+            + 'Sisäänkäynnille nousee leveä porrasjono.',
+          lahde: 'Vadim Zhivotovsky, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Spasskin luostari': {
+      aika: 'arkkimandriitta Feofan 1714–1719',
+      teksti: 'Kurašovin kadun luostari on Jakutskin vanhin '
+          + 'kirkollinen laitos, ja sen varhaisin nimeltä tunnettu '
+          + 'johtaja on arkkimandriitta Feofan, joka oli luostarin '
+          + 'esimiehenä vuosina 1714–1719. Kaupungin venäläinen '
+          + 'kirkollinen elämä on siis lähes yhtä vanhaa kuin '
+          + 'linnoitus itse: hirsivarustus pystytettiin 1632, ja '
+          + 'sata vuotta myöhemmin paikalla oli jo luostari '
+          + 'arkkimandriittoineen.'
+          + '\n\n'
+          + 'Luostarin rakennukset ovat puuta, ja se on Jakutskissa '
+          + 'sääntö eikä poikkeus. Ikiroudan päällä hirsi on '
+          + 'käyttökelpoinen materiaali: se on kevyt, joustaa maan '
+          + 'liikkeiden mukana ja on korjattavissa hirsi kerrallaan. '
+          + 'Kaupungin vanhin säilynyt rakennuskanta on juuri '
+          + 'hirsitaloja, ja niiden joukossa luostarin kirkko on '
+          + 'helppo tunnistaa: keltaiseksi maalattu salvos, valkoiset '
+          + 'listat ja kullattu sipulikupoli.'
+          + '\n\n'
+          + 'Luostari on nyt yksi harvoista paikoista, joissa '
+          + 'kaupungin hirsirakentaminen jatkuu käytössä olevana '
+          + 'eikä museona. Vanhaa puukantaa on Jakutskissa vielä '
+          + 'runsaasti — kokonaisia kortteleita kaksikerroksisia '
+          + 'salvostaloja — mutta ne ovat pääosin asuintaloja, jotka '
+          + 'kallistuvat vuosi vuodelta enemmän. Uusi kaupunki '
+          + 'nousee niiden vieressä betonielementistä ja seisoo '
+          + 'paaluilla.',
+      kuvat: [
+        {
+          tiedosto: 'Спасский мужской монастырь г.Якутска, Якутск 26.09.2025.jpg',
+          selite: 'Luostarin puukirkko syyskuussa. Keltaiseksi '
+            + 'maalatun salvoksen päällä on kaksitasoinen kellotorni, '
+            + 'jonka aukoissa riippuu useita kelloja, ja sen takana '
+            + 'kohoaa kullattu sipulikupoli. Etuosaan on rakennettu '
+            + 'katettu kuisti valkoisine pinnakaiteineen.',
+          lahde: 'SmallSonMarex, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nikolskin kirkko': {
+      aika: 'suojeltu kohde 1400036000',
+      teksti: 'Nikolskin eli Pyhän Nikolauksen kirkko on kartan '
+          + 'läntisin kohde ja Jakutskin ortodoksisista kirkoista '
+          + 'sirointi. Se on kivestä, valkoiseksi rapattu, ja sen '
+          + 'kolmiportaisesta kellotornista kohoaa kullattu kupoli ja '
+          + 'sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän '
+          + 'kulttuuriperintökohteisiin tunnuksella 1400036000.'
+          + '\n\n'
+          + 'Kirkko kertoo siitä, miten Jakutskin uskonnollinen '
+          + 'kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin '
+          + 'linnoituksen mukana 1600-luvulla, ja sen laitokset ovat '
+          + 'yhä näkyvissä: Preobraženskin katedraali, hengellinen '
+          + 'seminaari ja Spasskin luostari. Niiden rinnalla elävät '
+          + 'kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen '
+          + 'usko tuntee kolme maailmaa — ylämaailman jumalineen, '
+          + 'keskimaailman ihmisineen ja alamaailman — ja niiden '
+          + 'tasapainon rikkominen on tabu. Olonho-eepoksissa juuri '
+          + 'tästä epätasapainosta juonet lähtevät liikkeelle.'
+          + '\n\n'
+          + 'Rukoushetkien ulkopuolella kirkon voi tunnistaa myös '
+          + 'siitä, mitä se ei ole: se ei ole hirsirakennus. Kivikirkko '
+          + 'oli Jakutskissa pitkään harvinaisuus, koska kivi johtaa '
+          + 'lämpöä ja painaa, ja molemmat ovat ikiroudan päällä '
+          + 'ongelmia. Kaupungin oma vastaus tähän on nykyään '
+          + 'betonipaalu, jonka päälle rakennus nostetaan irti '
+          + 'maasta — mutta se keksittiin vasta paljon kirkkojen '
+          + 'jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Никольская церковь, полдень.jpg',
+          selite: 'Nikolskin kirkko syyskuisena keskipäivänä. '
+            + 'Valkoisesta kolmiportaisesta kellotornista nousee '
+            + 'kullattu kupoli ja pitkä terävä huippu ristiineen, ja '
+            + 'aukoissa riippuu kaksi kellokerrosta. Sisäänkäynnin '
+            + 'molemmin puolin on kultapohjaiset pyhimyskuvat.',
+          lahde: 'Prok of eva, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pushkinin draamateatteri': {
+      aika: 'kaupungin teatterikortteli',
+      teksti: 'Valtiollinen akateeminen venäläinen draamateatteri on '
+          + 'nimetty Aleksandr Pushkinin mukaan, ja se on Jakutskin '
+          + 'neljästä teatterista se, joka näyttelee venäjäksi. '
+          + 'Muut kolme ovat Ojunskin Saha-teatteri, Suorun Omolloonin '
+          + 'nuorisoteatteri ja Sivtsevin ooppera- ja balettiteatteri. '
+          + 'Talo on klassisistinen: hiekankeltainen julkisivu, '
+          + 'valkoiset korinttilaispylväät ja päätykolmio, jonka alla '
+          + 'lukee teatterin koko nimi kahdella rivillä.'
+          + '\n\n'
+          + 'Neljä teatteria on paljon 355 000 asukkaan kaupungille, '
+          + 'ja niiden lisäksi on vielä sirkus ja museot: Sahan '
+          + 'kansallinen taidemuseo, Jaroslavskin historia- ja '
+          + 'kulttuurimuseo sekä maailman ainoat khomukselle ja '
+          + 'ikiroudalle omistetut museot. Vuonna 2020 Gagarinin '
+          + 'kaupunginosaan avattiin nykytaiteen keskus, ja vuonna '
+          + '2021 alettiin rakentaa Jakutian valtionfilharmoniaa, '
+          + 'jonka nimeksi tulee Arktinen eepoksen ja taiteiden '
+          + 'keskus.'
+          + '\n\n'
+          + 'Kaupungin omalaatuisin kulttuurivienti ei kuitenkaan ole '
+          + 'teatteri vaan elokuva. Jakutskiin on syntynyt oma '
+          + 'elokuvateollisuus, joka kuvaa seutua ja sen ihmisiä ja '
+          + 'joka on saanut kansainvälistä huomiota; sitä sanotaan '
+          + 'lempinimellä Sakhawood. Sen rinnalla kaupungissa on '
+          + 'poikkeuksellisen vilkas punk-skene, jossa toimii useita '
+          + 'yhtyeitä.',
+      kuvat: [
+        {
+          tiedosto: 'Государственный академический русский драматический театр им. А.С. Пушкина 10.09.2025.jpg',
+          selite: 'Draamateatteri syyskuun aurinkoisena päivänä. '
+            + 'Hiekankeltaisen talon edessä on kaksi valkoista '
+            + 'pylväsryhmää korinttilaisine kapiteeleineen, ja '
+            + 'päätykolmion alla lukee kahdella rivillä teatterin '
+            + 'nimi. Vasemmalla on ilmoitustaulu ja edessä '
+            + 'kivilaattapiha.',
+          lahde: 'SmallSonMarex, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen taidemuseo': {
+      aika: 'Kirovin katu 12',
+      teksti: 'Sahan kansallinen taidemuseo on Kirovin kadulla '
+          + 'numerossa 12 ja auki päivittäin kello kymmenestä '
+          + 'kahdeksaantoista. Kokoelma on suuri ja kolmiosainen: '
+          + 'jakuuttien omaa taidetta, venäläistä taidetta ja '
+          + 'kansainvälistä taidetta 1500-luvulta nykypäivään. '
+          + 'Näyttelyihin kuuluu lisäksi runsas kokoelma jakuuttien '
+          + 'perinteistä kansantaidetta ja käsityötä.'
+          + '\n\n'
+          + 'Rakennus itsessään on kaupunkikuvan kannalta yhtä '
+          + 'kiinnostava kuin sen sisältö. Se on kaksikerroksinen '
+          + 'kulmatalo, jonka pitkät siivet jatkuvat kahteen suuntaan '
+          + 'ja jonka kulmaa korostavat kaarevat päätykolmiot. '
+          + 'Julkisivu on valkoinen ja hiekanvärinen, ikkunarivit '
+          + 'ovat tasavälisiä ja katonreuna suora — tyyli, joka '
+          + 'kaupungissa erottuu, koska sen ympärillä on hirttä ja '
+          + 'betonielementtiä.'
+          + '\n\n'
+          + 'Museon paikka Kirovin kadulla ei ole sattuma. Sama katu '
+          + 'kokoaa kaupungin kulttuurilaitokset: hieman pohjoisempana '
+          + 'samalla kadulla ovat maailman kansojen khomusmuseo ja '
+          + 'Jakutian kansojen musiikin ja kansanperinteen museo. '
+          + 'Kävelymatka museolta toiselle on muutama minuutti — mikä '
+          + 'on Jakutskissa merkittävä ominaisuus, koska talvella '
+          + 'ulkona vietetty aika mitataan minuuteissa.',
+      kuvat: [
+        {
+          tiedosto: 'Национальный художественный музей Якутии, Якутск 06.07.2026.jpg',
+          selite: 'Taidemuseo heinäkuussa. Pitkä kaksikerroksinen '
+            + 'kulmatalo jatkuu kahteen suuntaan risteyksen laidalla, '
+            + 'ja sen valkoisia kaarevia päätyjä vasten erottuu '
+            + 'hiekanvärinen ikkunarivi. Kadun yllä kulkee nippu '
+            + 'sähköjohtoja.',
+          lahde: 'SmallSonMarex, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vanhakaupunki: {
+      aika: '1800-luvun tyyliin rakennettu kortteli',
+      teksti: 'Vanhakaupunki on aivan Jakutskin ytimessä, ja sitä '
+          + 'rajaavat Ammosovin ja Aržakovin kadut sekä Kaatuneiden '
+          + 'sotilaiden aukio. Se on rakennettu uudelleen '
+          + '1800-luvun rakennustyyliin, ja kadut on suljettu '
+          + 'liikenteeltä ja päällystetty puupölkyillä. Korttelissa on '
+          + 'ruokapaikkoja ja myyntikojuja, ja se on kaupunkilaisten '
+          + 'suosituin oleskelupaikka.'
+          + '\n\n'
+          + 'Kohteita on korttelissa useita. Siellä ovat entisöity '
+          + 'Preobraženskin kirkko, perustajien muistomerkki, '
+          + 'kaatuneiden sotilaiden muistomerkki, Maksim Ammosovin '
+          + 'museo sekä kivipylväs, joka pystytettiin Jakutian '
+          + 'Venäjään liittämisen 375-vuotispäivänä. Lähistöllä ovat '
+          + 'myös 1600-luvun paaluvarustuksen entisöidyt tornit ja '
+          + '1700-luvulta periytyvä läänin rahastontalo.'
+          + '\n\n'
+          + 'Yksi vuosiluku kannattaa lukea kahdesti. Jakutskin '
+          + 'kaupunkioikeuksien ajankohta on en-Wikipedian omassa '
+          + 'artikkelissa kahdessa kohdassa eri: tietoruutu antaa '
+          + 'vuoden 1643, jolloin linnoitus siirrettiin Lenan '
+          + 'vasemmalle rannalle Tuimaadan laaksoon, kun taas '
+          + 'etymologiaosio kertoo Pospelovin paikannimisanakirjaan '
+          + 'nojaten, että kaupunkioikeudet tulivat vasta 1708. '
+          + 'Kumpikin luku esiintyy kirjallisuudessa, eikä artikkeli '
+          + 'selitä eroa; matkailijan kannalta olennaisempi on '
+          + 'kuitenkin 1632, jolloin ensimmäinen hirsivarustus '
+          + 'pystytettiin joen toiselle rannalle.',
+      kuvat: [
+        {
+          tiedosto: 'In Yakutsk (10802989066).jpg',
+          selite: 'Vanhankaupungin kortteli lumen aikaan. Oikealla on '
+            + 'uusi hirsitalo, jonka ikkunapielissä on veistetyt '
+            + 'koristelaudat, ja sen edessä kohoaa puinen pylväs '
+            + 'katoksineen. Vasemmalla näkyy kirkon kullattuja '
+            + 'sipulikupoleita ja vihreä telttakatto.',
+          lahde: 'Pavel Kirillov from St.Petersburg, Russia, Wikimedia '
+            + 'Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ooppera- ja balettiteatteri': {
+      aika: 'nimikkokirjailija Suorun Omolloon',
+      teksti: 'Kartan eteläisin kohde on ooppera- ja balettitalo, '
+          + 'joka kantaa Dmitri Sivtsevin eli kirjailijanimeltään '
+          + 'Suorun Omolloonin nimeä. Rakennus on 1900-luvun '
+          + 'jälkipuoliskolta: betonia, syvä pylväikkö julkisivun '
+          + 'levyisenä ja tummapuiset ovet sen takana. Talvella '
+          + 'pylväiden väliin ripustetaan pitkiä pystysuoria '
+          + 'esitejulisteita, jotka ovat käytännössä ainoa väri koko '
+          + 'aukiolla.'
+          + '\n\n'
+          + 'Ohjelmisto on kaksikielinen, ja se on koko talon '
+          + 'olemassaolon syy. Jakuuttien musiikkiperinteessä on '
+          + 'piirteitä, joita ei ole muualla: ohuohai on '
+          + 'samanaikaisesti piiritanssi ja laulu, jossa esilaulaja '
+          + 'sepittää säkeet ja piiri toistaa ne, ja kylyhah on '
+          + 'äänihuulten värähtelyyn perustuva laulutekniikka, jota '
+          + 'kurkkulaulun tuntijat pitävät jakuuttilaisen laulun '
+          + 'tunnusmerkkinä. Ohuohain sävelmiä on sovitettu kaikkeen '
+          + 'marsseista oopperoihin.'
+          + '\n\n'
+          + 'Teatterin ja eepoksen suhde on suora. Njurgun Bootur '
+          + 'Nopea, tunnetuin olonho, on useimpien jakuutinpuhujien '
+          + 'tuntema ja sitä pidetään kansallisen identiteetin '
+          + 'ytimenä; se on myös yksi harvoista olonhoista, jotka on '
+          + 'käännetty muille kielille. Sama sankari seisoo '
+          + 'kaupungin Voitonaukion steelan huipulla. Oopperatalon '
+          + 'lavalla eepos saa sen muodon, jonka Platon Ojunski sille '
+          + '1920- ja 1930-luvulla kirjoitti.',
+      kuvat: [
+        {
+          tiedosto: 'Театр оперы и балета им. Д. К. Сивцева, Якутск 24.02.2026.jpg',
+          selite: 'Oopperatalo helmikuussa. Betonijulkisivun syvässä '
+            + 'pylväikössä riippuu kaksi pitkää pystysuoraa '
+            + 'esitejulistetta, ja niiden alla on rivi tummia '
+            + 'puuovia. Edustan aukio on umpilumen peitossa, ja '
+            + 'oikeassa laidassa seisoo tumma patsas jalustallaan.',
+          lahde: 'SmallSonMarex, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MAGADANIN KOHDEKARTAN JUTUT (Opus 20.8.2026). Seitsemän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään.
+   *
+   * SISÄLTÖLINJAUS (Fablen ohje): kaupungin historia kytkeytyy
+   * Gulagiin, ja lehden kansisivun nosto Surun maskista käsittelee
+   * aiheen kerran neutraalina historiana. Kartan jutut EIVÄT palaa
+   * siihen. Ne kertovat siitä, mitä kaupungissa on: 1930–1950-luvun
+   * arkkitehtuurista, satamalahdesta ja kirjastosta. Neljä
+   * seitsemästä kohteesta on Venäjän kulttuuriperintöluettelossa, ja
+   * tunnukset ovat Commonsin luokkatiedoista (sauna 4930001000,
+   * urheilupalatsi 4930006000).
+   *
+   * LÄHTEET: en-Wikipedian artikkelit Magadan, Nagaev Bay,
+   * Port of Magadan, Staritsky Peninsula, Alexey Nagayev ja
+   * Sea of Okhotsk, en-Wikivoyagen Magadan-sivu sekä Commonsin
+   * luokka- ja osoitetiedot (kaikki haettu 20.8.2026).
+   *
+   * NELJÄSTÄ KOHTEESTA EI OLE OMAA ARTIKKELIA MISSÄÄN. Kaupungin
+   * sauna, Severovostokzoloton talo, Leninin valtakatu 18 ja
+   * kinoteatteri Gornjak tunnetaan vain osoitteestaan,
+   * kulttuuriperintötunnuksestaan ja kuvastaan. Niiden jutut on
+   * siksi kirjoitettu siitä, mitä kuvassa näkyy ja mitä
+   * kaupunkiartikkeli kertoo ajasta jolloin ne rakennettiin — ei
+   * keksityistä yksityiskohdista. Se on tässä lehdessä tietoinen
+   * rajaus eikä laiskuus: mitään ei väitetä ilman lähdettä.
+   */
+  magadan: {
+    'Kaupungin sauna': {
+      aika: 'suojeltu kohde 4930001000',
+      teksti: 'Karl Marxin valtakadun numerossa 12 on matala '
+          + 'valkoinen talo, jonka julkisivun keskellä on kaksi '
+          + 'leveää pilasteria ja niiden välissä kolme kapeaa '
+          + 'valoaukkoa. Rakennus on kaupungin yleinen sauna, ja se '
+          + 'on Venäjän kulttuuriperintöluettelossa tunnuksella '
+          + '4930001000. Seinäpinta on karkeaa roiskerappausta, jonka '
+          + 'väri on kulunut harmaanvalkoiseksi, ja katto on '
+          + 'aaltopeltiä.'
+          + '\n\n'
+          + 'Miksi sauna on suojelukohde? Koska se on yhtä vanha kuin '
+          + 'kaupunki. Magadan perustettiin 1929 ja sai '
+          + 'kaupunkioikeudet 14. heinäkuuta 1939, ja vuoden 1939 '
+          + 'väenlaskussa asukkaita oli 27 313. Kaikki mitä täällä '
+          + 'silloin rakennettiin, rakennettiin tyhjälle rannalle '
+          + 'kuljetetuista materiaaleista, ja julkinen sauna oli '
+          + 'sellaisessa kaupungissa yhtä välttämätön laitos kuin '
+          + 'sairaala tai koulu. Vesijohtoa ei ollut joka taloon, ja '
+          + 'talvi kestää täällä puoli vuotta.'
+          + '\n\n'
+          + 'Talon mittasuhteet kertovat rakennusajastaan. Keskiosan '
+          + 'pilasterit ja niiden päällä oleva suora räystäslista '
+          + 'ovat klassisistista muotokieltä pienessä mitassa — sama '
+          + 'kieli, jota Magadanin suuremmat 1950-luvun talot '
+          + 'puhuvat kokonaisilla pylväsriveillä. Naapurissa on '
+          + 'nykyaikainen tiilirakennus, ja ero kahden vuosikymmenen '
+          + 'välillä näkyy yhdessä silmäyksessä.',
+      kuvat: [
+        {
+          tiedosto: 'Magadan, banya1.jpg',
+          selite: 'Kaupungin sauna syyskuun matalassa auringossa. '
+            + 'Yksikerroksisen valkoisen talon keskiosaa jäsentävät '
+            + 'kaksi leveää pilasteria, joiden välissä on kolme '
+            + 'kapeaa aukkoa, ja alla on harmaa teräsovipari. '
+            + 'Seinässä on sininen osoitekilpi.',
+          lahde: 'BerryYew, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Severovostokzoloton talo': {
+      aika: 'Proletarskajan katu 12',
+      teksti: 'Proletarskajan kadun numerossa 12 seisoo Magadanin '
+          + 'komein 1950-luvun talo. Se on kolmikerroksinen, '
+          + 'valkoinen ja pitkä, ja sen ikkunoita kehystävät '
+          + 'kaksoispylväät ja pienet päätykolmiot. Alakerta on '
+          + 'punertavaa lohkokiveä jäljittelevää rappausta, ja '
+          + 'sisäänkäynnin kohdalla julkisivusta työntyy esiin '
+          + 'punainen pylväsportikko. Talon kansanomainen nimi on '
+          + 'lyhenne SVZ.'
+          + '\n\n'
+          + 'Nimi kertoo kaupungin elinkeinosta. Magadanin talouden '
+          + 'kaksi tukijalkaa ovat kullankaivuu ja kalastus, ja '
+          + 'kaupunki syntyi nimenomaan siksi, että Kolyman '
+          + 'sisämaasta löytyi kultaa: satama rakennettiin viemään '
+          + 'sitä ulos. Kullantuotanto on sittemmin laskenut, ja '
+          + 'kalastuskin on jäänyt kiintiöidensä alle, mutta '
+          + 'kaupungin keskustan mittakaava on yhä siitä ajasta, '
+          + 'jolloin metalli maksoi kaiken.'
+          + '\n\n'
+          + 'Talon julkisivu on myös kaupungin mittatikku. '
+          + 'Magadanin keskusta rakennettiin muutamassa '
+          + 'vuosikymmenessä ja lähes yhtenä eleenä, ja siksi '
+          + 'kaikki sen edustavat rakennukset puhuvat samaa '
+          + 'kieltä: valkoista rappausta, pylväitä, päätykolmioita '
+          + 'ja lohkokivijalustaa. Sen jälkeen kaupunki loppuu — '
+          + 'lännessä vaaraan, etelässä mereen.',
+      kuvat: [
+        {
+          tiedosto: 'Магадан, Пролетарская, 12 20240901 01.jpg',
+          selite: 'Proletarskajan kadun 12 syyskuun sadepäivänä. '
+            + 'Valkoisen kolmikerroksisen talon ikkunoita kehystävät '
+            + 'kaksoispylväät ja pienet päätykolmiot, ja alakerta on '
+            + 'punertavaa lohkokivirappausta. Keskellä työntyy esiin '
+            + 'punainen pylväsportikko, ja edessä on penkkejä ja '
+            + 'kukkalaatikoita.',
+          lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Leninin valtakatu 18': {
+      aika: 'kaupungin pääkatu',
+      teksti: 'Leninin valtakatu on Magadanin selkäranka, ja se '
+          + 'nousee lahden suunnasta koilliseen kohti kannaksen '
+          + 'harjaa. Numero 18 on osa yhtenäistä talorivistöä, jonka '
+          + 'muodostavat numerot 14, 16, 18 ja 20; ne on rakennettu '
+          + 'samaan aikaan ja samalla tavalla, ja ne seuraavat kadun '
+          + 'kaltevuutta porrastuen. Katutasossa on liiketiloja, '
+          + 'ylemmissä kerroksissa asuntoja, ja parvekkeet ovat '
+          + 'monessa talossa lasitettu umpeen.'
+          + '\n\n'
+          + 'Rivistö on Magadanin tapa ratkaista rinne. Kaupunki '
+          + 'nousee merestä vaaran juurelle, eikä sen ruutukaava ole '
+          + 'tasainen missään; talot on siksi porrastettu niin, että '
+          + 'jokainen seuraava seisoo hieman edellistä ylempänä ja '
+          + 'katonreunat muodostavat portaikon. Kaupunkia ympäröivät '
+          + 'vuoret lännessä ja koillisessa, ja Leninin valtakatu '
+          + 'katsoo suoraan niitä kohti.'
+          + '\n\n'
+          + 'Katu on myös aikataulun mitta. Magadanin väkiluku '
+          + 'nousi 27 313:sta vuonna 1939 huippuunsa 151 652:een '
+          + 'vuonna 1989 ja on sen jälkeen laskenut: vuonna 2010 '
+          + 'asukkaita oli 95 982 ja vuoden 2024 arviossa 89 193. '
+          + 'Keskusta on rakennettu suuremmalle kaupungille kuin '
+          + 'se, joka siellä nyt asuu, ja se näkyy katujen '
+          + 'leveydessä.',
+      kuvat: [
+        {
+          tiedosto: 'Магадан, Ленина, 18 20240904 01.jpg',
+          selite: 'Leninin valtakadun talorivi syyskuussa. '
+            + 'Vaaleanruskeat ja valkoiset kerrostalot porrastuvat '
+            + 'rinteen mukana alaspäin, parvekkeet on lasitettu '
+            + 'umpeen ja katutasossa on liikkeiden kylttejä. '
+            + 'Etualalla on takorautainen kaide ja punainen penkki.',
+          lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kinoteatteri Gornjak': {
+      aika: 'Leninin valtakatu 19',
+      teksti: 'Gornjak tarkoittaa kaivosmiestä, ja se on Magadanin '
+          + 'elokuvateatteri. Talo on vaaleanvihreä, sen julkisivua '
+          + 'jäsentävät valkoiset pilasterit ja sen katolla lukee '
+          + 'kolmessa osassa mainoskirjaimin sana elokuva, nimi '
+          + 'Gornjak punaisella käsialakirjaimistolla ja sana '
+          + 'teatteri. Sisäänkäynnin viereen on ripustettu '
+          + 'elokuvajulisteita lasitettuihin kehyksiin.'
+          + '\n\n'
+          + 'Elokuvateatteri kuuluu samaan sarjaan kuin kaupungin '
+          + 'muut julkiset talot: se on kulttuurilaitos, joka '
+          + 'rakennettiin, kun kaupunki oli vasta muutaman '
+          + 'vuosikymmenen ikäinen, ja se sai saman klassisistisen '
+          + 'asun. Magadanissa on lisäksi aluemuseo, geologinen '
+          + 'museo, aluekirjasto ja yliopisto, ja kaupungin oma '
+          + 'sanomalehti on Magadanskaja Pravda.'
+          + '\n\n'
+          + 'Magadan on esiintynyt myös valkokankaalla ja '
+          + 'ruudulla. Vuonna 2004 kaupunki näkyi Long Way Round '
+          + '-televisiosarjassa, joka seurasi Ewan McGregorin ja '
+          + 'Charley Boormanin moottoripyörämatkaa maailman ympäri; '
+          + 'Magadan oli reitin kaukaisin itäinen piste. Näyttelijä '
+          + 'Georgi Žžonov työskenteli kaupungin teatterissa kaksi '
+          + 'vuotta, ja laulaja Vadim Kozin asui täällä kuolemaansa '
+          + 'asti vuoteen 1994.',
+      kuvat: [
+        {
+          tiedosto: 'Кинотеатр «Горняк».jpg',
+          selite: 'Elokuvateatteri Gornjak iltahämärässä. '
+            + 'Vaaleanvihreän talon katolla on kolmiosainen '
+            + 'valokyltti, jonka keskellä nimi on kirjoitettu '
+            + 'punaisella käsialakirjaimistolla. Julkisivua jakavat '
+            + 'valkoiset pilasterit, ja edessä on leveä '
+            + 'kiviporrasjono.',
+          lahde: 'Сергей Ковалев, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Nagajevanlahti: {
+      aika: 'Jeannette Harbour 1852–1869',
+      teksti: 'Nagajevanlahti on Tauinlahden osa Ohotanmeren '
+          + 'pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan '
+          + '6,4 kilometriä leveä, ja sitä on kutsuttu koko '
+          + 'Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on '
+          + 'marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja '
+          + 'sen satama ovat lahden perukassa Staritskin niemimaan '
+          + 'kannaksella.'
+          + '\n\n'
+          + 'Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen '
+          + 'nimi tulee amiraali Aleksei Nagajevilta (1704–1781), '
+          + 'joka oli hydrografi ja kartantekijä ja jonka '
+          + 'Beringinmeren ja Itämeren kartastot ilmestyivät vuonna '
+          + '1752; niitä käytettiin vielä viisikymmentä vuotta '
+          + 'myöhemmin, vaikka niissä ei ollut astekoordinaatistoa '
+          + 'lainkaan. Toinen nimi on amerikkalainen. Vuosina '
+          + '1852–1869 lahteen ankkuroivat New Bedfordin ja '
+          + 'Stoningtonin valaanpyyntialukset hakemaan puuta ja '
+          + 'vettä ja keittämään traania, ja he merkitsivät sen '
+          + 'karttoihinsa nimellä Jeannette Harbour — 340 tonnin '
+          + 'aluksen Jeannetten mukaan, joka kävi Tauinlahdella usein '
+          + '1850-luvun alussa.'
+          + '\n\n'
+          + 'Kaupunkia ei silloin ollut. Kun isoisä Fogg matkusti, '
+          + 'lahti oli merikartalla mutta ranta tyhjä: asutus alkoi '
+          + 'vasta 1929. Nykyään satama on Petropavlovskin jälkeen '
+          + 'Venäjän koillisosan toiseksi suurin ja toimii ympäri '
+          + 'vuoden jäänmurtajien avulla. Rannalla on Maijakka-'
+          + 'puisto, josta lahti näkyy koko pituudeltaan.',
+      kuvat: [
+        {
+          tiedosto: 'Nagaevo bay - panoramio.jpg',
+          selite: 'Nagajevanlahti auringonlaskun aikaan. Aurinko '
+            + 'painuu vaarojen väliin lahden suulla ja piirtää veteen '
+            + 'kapean valojuovan, ja taivas on juovikkaan oranssi. '
+            + 'Etualalla on tummia rantakiviä, joiden koloissa on '
+            + 'lunta.',
+          lahde: 'Андрей Куполов, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Urheilupalatsi: {
+      aika: 'suojeltu kohde 4930006000',
+      teksti: 'Parkovajan kadun numerossa 18 on Magadanin '
+          + 'urheilupalatsi, ja se on kaupungin koristeellisin '
+          + 'julkisivu. Alaosa on punertavaa lohkokivirappausta, '
+          + 'yläosa valkoista, ja ikkunoiden edessä on pieniä '
+          + 'pylväsparveja omine päätykolmioineen ja '
+          + 'balustradikaiteineen. Räystäslistan alla kiertää rivi '
+          + 'pyöreitä koristelaattoja ja kipsiornamentteja. Talo on '
+          + 'Venäjän kulttuuriperintöluettelossa tunnuksella '
+          + '4930006000.'
+          + '\n\n'
+          + 'Parkovajan katu on kaupungin liikunnan ja koulutuksen '
+          + 'kortteli: saman kadun varrella ovat urheilupalatsin '
+          + 'lisäksi polytekninen opisto ja uimahalli, ja niiden '
+          + 'väli on parisataa metriä. Se kertoo jotain siitäkin, '
+          + 'miten Magadan on rakennettu — julkiset talot nousivat '
+          + 'kerralla ja vierekkäin, ja kaupungin keskusta on '
+          + 'kävelymatkan mittainen.'
+          + '\n\n'
+          + 'Liikkuminen ulkona on Magadanissa kausiluontoista, ja '
+          + 'sisähalli on siksi enemmän kuin ylellisyys. '
+          + 'Pakkaspäiviä on jopa kuusi kuukautta putkeen, ja '
+          + 'kaupungin lähin ulkoilumaasto on Martšekanin vaara, '
+          + 'jonka korkeus on 694 metriä ja jonne noustaan '
+          + 'talvellakin. Kesällä puolestaan puolet kaupungista '
+          + 'siirtyy Gertnerinlahden rannalle.',
+      kuvat: [
+        {
+          tiedosto: 'Дворец спорта г. Магадан.jpg',
+          selite: 'Urheilupalatsin julkisivu elokuussa. Valkoisen '
+            + 'yläosan ikkunoiden edessä on pieniä pylväsparveja '
+            + 'päätykolmioineen ja balustradikaiteineen, ja '
+            + 'räystäslistan alla kiertää rivi pyöreitä '
+            + 'koristelaattoja. Alaosa on punertavaa '
+            + 'lohkokivirappausta.',
+          lahde: 'Maximila, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pushkinin kirjasto': {
+      aika: 'alueen tieteellinen kirjasto',
+      teksti: 'Magadanin alueen yleinen tieteellinen kirjasto on '
+          + 'nimetty Aleksandr Pushkinin mukaan, ja se on kartan '
+          + 'eteläisin kohde. Rakennus on toista maailmansotaa '
+          + 'myöhempää aikaa: keltatiilinen, kolmikerroksinen ja '
+          + 'kaartuva, ja sen matalampaan siipeen on kiinnitetty '
+          + 'suurin kirjaimin kirjaston nimi. Sisäänkäynnin '
+          + 'yläpuolella on musta metalliin leikattu Pushkinin '
+          + 'sivuprofiili.'
+          + '\n\n'
+          + 'Kirjasto on osa kaupungin laitosten rypästä. Sen '
+          + 'naapurissa, alle sadan metrin päässä, on Magadanin '
+          + 'alueen kotiseutumuseo Karl Marxin valtakadulla, ja '
+          + 'kaupungissa on lisäksi geologinen museo ja yliopisto. '
+          + 'Museon kokoelmiin kuuluu luonnonhistoriallista '
+          + 'aineistoa, muun muassa mammutinjäänteitä — Kolyman '
+          + 'ikirouta antaa niitä samalla tavalla kuin Jakutian.'
+          + '\n\n'
+          + 'Kirjaston edessä on aukio, jota talvella ei aurata '
+          + 'kokonaan: lumi jää kentäksi, jonka läpi kulkee auratut '
+          + 'käytävät. Se on Magadanissa tavallinen näky, sillä '
+          + 'lumipeite muodostuu jo loka–marraskuun sateiden aikaan '
+          + 'ja säilyy koko talven, vaikka Siperian korkeapaine '
+          + 'kuivattaa loppuvuoden lähes sateettomaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Магаданская научная библиотека им. А. С. Пушкина.jpg',
+          selite: 'Pushkinin kirjasto joulukuussa. Keltatiilisen '
+            + 'talon matalamman siiven seinässä lukee suurin '
+            + 'kirjaimin kirjaston nimi, ja sisäänkäynnin katoksen '
+            + 'yläpuolella on musta metalliin leikattu Pushkinin '
+            + 'sivuprofiili. Etupihan lumi on aurattu vain '
+            + 'käytäviltä.',
+          lahde: 'JukoFF, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
