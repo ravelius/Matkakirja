@@ -579,15 +579,18 @@ function piirraTaulu(kohde, mantereet, jarjestys, nakyma = 'kaikki') {
         const rivi = html('tr', 'tk-rivi tk-kaupunki');
         rivi.hidden = !vainTuoreet;
         const tuoreus = tuoreusLuokka(kaupunki.id);
-        const solu = nimisolu(kaupunki.nimi, { taso: 'kaupunki', osuus: null });
+        // HUOM: nimi EI saa olla "solu" — se peittäisi solu()-funktion,
+        // jota tarvitaan alempana samassa silmukassa (v948-korjaus:
+        // varjostus kaatoi koko taulun "solu is not a function").
+        const kaupunkiSolu = nimisolu(kaupunki.nimi, { taso: 'kaupunki', osuus: null });
         if (tuoreus) {
-          solu.classList.add(tuoreus);
+          kaupunkiSolu.classList.add(tuoreus);
           const versio = TUORE_VALMIS.get(kaupunki.id);
-          solu.querySelector('.tk-nimi-rivi')?.appendChild(
+          kaupunkiSolu.querySelector('.tk-nimi-rivi')?.appendChild(
             html('span', 'tk-tuore-merkki', versio || 'työn alla'),
           );
         }
-        rivi.appendChild(solu);
+        rivi.appendChild(kaupunkiSolu);
         for (const s of SARAKKEET) {
           if (s.taso === 'maa') { rivi.appendChild(html('td', 'tk-num tk-tyhja', '·')); continue; }
           const tieto = kaupunki.solut[s.avain];
