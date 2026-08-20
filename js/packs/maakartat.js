@@ -5774,39 +5774,21 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 24.4455, etela: 24.433, lansi: 39.61, ita: 39.6245 },
         x: 78, y: 76.8, leveys: 20, korkeus: 21.24, suunta: '3,5 km kaakkoon' },
     ],
-    esittely: 'Medina on keidas, joka syntyi kolmen kuivan laakson '
-      + 'yhtymäkohtaan: Wadi al-Aqiqin, Wadi al-Aqlin ja Wadi al-Himdhin '
-      + 'pohjavesi teki vuoristoisen aavikon keskelle vihreän läikän, ja '
-      + 'sen varassa paikalla on asuttu ainakin 800-luvulta eKr. Silloin '
-      + 'kaupunki tunnettiin nimellä Yathrib, ja siihen aikaan siellä '
-      + 'asuivat sekä juutalaiset heimot että Jemenistä muuttaneet Aws ja '
-      + 'Khazraj. Vuonna 622 Muhammad muutti tänne Mekasta, ja tapahtuma '
-      + 'antoi islamille sekä ajanlaskun alun että ensimmäisen '
-      + 'kaupunkiyhteisön. Mekan jälkeen Medina on islamin toiseksi pyhin '
-      + 'kaupunki. Keskiajalla se oli soikea muurikaupunki: yhdeksästä '
-      + 'kahteentoista metriin korkea muuri kiersi sitä torneineen, ja '
-      + 'sisään pääsi neljästä portista. Osmanit hallitsivat kaupunkia '
-      + 'vuodesta 1517, ja 1900-luvun alussa sulttaani Abdul Hamid II toi '
-      + 'sinne lennättimen, voimalaitoksen ja Hidžaz-radan. Muurit '
-      + 'purettiin Saudi-Arabian aikana.\n\nKartalla ei siksi näy '
-      + 'muureista mitään. Niiden paikalla ovat kolme kehätietä — King '
-      + 'Faisal Road, King Abdullah Road ja King Khalid Road — jotka '
-      + 'kaartavat keskustan ympäri renkaina. Renkaiden sisällä erottuu '
-      + 'suorakaiteena Profeetan moskeija aukioineen: se on kartan '
-      + 'suurin yksittäinen rakennus, ja sen vieressä idässä on iso '
-      + 'aukea, jolta rakennukset on purettu moskeijan laajennushanketta '
-      + 'varten. Hautausmaa Al-Baqi on kiinni moskeijan itäkyljessä, ja '
-      + 'lounaassa kadun mutkassa on vanha Hidžaz-radan asema, jonne '
-      + 'junat tulivat Damaskoksesta vuosina 1908–1920. Luoteeseen '
-      + 'mentäessä katuverkko '
-      + 'harvenee ja rinne nousee: siellä ovat Seitsemän moskeijaa ja '
-      + 'kauimpana Qiblatayn. Oikean alakulman kainalossa on Quba, '
-      + 'kolmen ja puolen kilometrin päässä kaakossa — se oli oma '
-      + 'kylänsä keitaan laidalla, kunnes kaupunki kasvoi sen '
-      + 'ympärille. Kartalta '
-      + 'jää pohjoiseen Uhud-vuori, 1 077 metriä korkea ja kaupungin '
-      + 'korkein kohta. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (sama linjaus kuin Isfahanissa):
+     * esittely kertoo, mitä kohteita alueella on ja miksi ne
+     * kiinnostavat. Kartan viivastojen ja värien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Medinan keskusta kolmen kehätien sisällä, '
+      + 'ja tiet kulkevat siellä, missä ennen kiersi kaupunginmuuri. '
+      + 'Keskellä on Profeetan moskeija, kartan suurin rakennus, ja '
+      + 'aivan sen itäkyljessä on Al-Baqin vanha hautausmaa. Lounaassa '
+      + 'on Hidžaz-radan pääteasema, jonne junat tulivat Damaskoksesta '
+      + 'vuosina 1908–1920, ja sen lähellä osmaniaikainen Al-Ghamaman '
+      + 'moskeija. Luoteessa rinne nousee, ja siellä ovat Seitsemän '
+      + 'moskeijaa ja Qiblatayn. Oikean alakulman kainalossa on Quba, '
+      + 'kolmen ja puolen kilometrin päässä kaakossa. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Petrassa ja Dubaissa. */
       { nimi: 'Qiblatayn-moskeija', lat: 24.4841, lon: 39.5789 },
@@ -5859,33 +5841,21 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 21.4645, etela: 21.4515, lansi: 39.8545, ita: 39.8685 },
         x: 78, y: 2, leveys: 20, korkeus: 19.9, suunta: '5,3 km koilliseen' },
     ],
-    esittely: 'Mekka on kapeassa laaksossa paljaiden vuorten välissä, ja '
-      + 'juuri laakso selittää koko kaupungin muodon. Se on Hidžazissa, '
-      + 'kahdensadan kilometrin levyisellä vuorikaistaleella Nafudin '
-      + 'aavikon ja Punaisenmeren välissä, seitsemänkymmenen kilometrin '
-      + 'päässä Jeddan satamasta sisämaahan ja 277 metrin korkeudessa — '
-      + 'yksi Hidžazin matalimmista kaupungeista, vaikka sen omat huiput '
-      + 'kohoavat tuhanteen metriin. Keskustaa kutsutaan nimellä Mekan '
-      + 'kuoppa, ja siihen kuuluvat al-Taneemin, Bakkahin ja Abqarin '
-      + 'notkot. Kauppa kulki täältä Afrikasta ja Kaukoidästä kohti '
-      + 'Syyriaa, ja pyhiinvaellus on pitänyt kaupunkia pystyssä siitä '
-      + 'lähtien. Nykyään kaupunkia kiertää neljä kehätietä ja sen alue '
-      + 'on yli 1 200 neliökilometriä, jaettuna 34 kaupunginosaan.'
-      + '\n\nKartalla se näkyy heti. Kuvan alavasemmalla erottuu soikea '
-      + 'kehä, ja sen sisällä kadut lähtevät keskipisteestä säteittäin '
-      + 'kuin pyörän puolat: keskellä on Suuri moskeija, ja kaupunki on '
-      + 'rakennettu sen ympärille eikä toisin päin. Kehän eteläreunalla '
-      + 'kohoaa kellotornikompleksi sillä kukkulalla, jolla ennen seisoi '
-      + 'Ajyadin linnoitus. Moskeijasta pohjoiseen kadut jatkuvat laakson '
-      + 'mukaan: aivan kehän tuntumassa on Mekan kirjasto, ja kauempana '
-      + 'pohjoisessa ensin Jinnien moskeija ja sitten Jannat al-Mu\'allan '
-      + 'hautausmaa. Leveät kaaret, jotka halkovat karttaa reunasta '
-      + 'reunaan, ovat kehäteitä ja moottoriteitä. Kartan itäosassa katuja '
-      + 'on harvassa, ja tyhjyys on aitoa maastoa eikä puuttuvaa tietoa — '
-      + 'siellä nousee vuorenrinne, jolle ei ole rakennettu. Oikean '
-      + 'ylänurkan kainalossa on Jabal al-Nour, viiden ja kolmen '
-      + 'kymmenyksen kilometrin päässä koilliseen. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (sama linjaus kuin Isfahanissa ja
+     * Medinassa): esittely kertoo kohteet ja niiden merkityksen, ei
+     * kartan viivastoja.
+     */
+    esittely: 'Kartan alue on Mekan keskusta laakson pohjalla. Keskellä '
+      + 'on Suuri moskeija Kaaboineen, ja kaupunki on rakennettu sen '
+      + 'ympärille eikä toisin päin. Moskeijan eteläpuolella kohoaa '
+      + 'kellotornikompleksi sillä kukkulalla, jolla ennen seisoi '
+      + 'Ajyadin linnoitus. Pohjoiseen mentäessä ovat ensin Mekan '
+      + 'kirjasto, sitten Jinnien moskeija ja kauimpana Jannat '
+      + 'al-Mu\'allan hautausmaa. Oikean ylänurkan kainalossa on Jabal '
+      + 'al-Nour, viiden ja kolmen kymmenyksen kilometrin päässä '
+      + 'koilliseen. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Petrassa. */
       { nimi: 'Jabal al-Nour', lat: 21.4581, lon: 39.8614 },
