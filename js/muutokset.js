@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 935, teksti: 'Wabarin paino punnittuun lukuun; kuvalinjaus kirjattu' },
   { v: 934, teksti: 'Siinain aluelehti: 8 nostoa ja matkaopas' },
   { v: 933, teksti: 'Jerusalemin lehti, kohdekartta ja kuusi juttua' },
   { v: 932, teksti: 'Persepoliksen lehti: 8 nostoa ja matkaopas' },
