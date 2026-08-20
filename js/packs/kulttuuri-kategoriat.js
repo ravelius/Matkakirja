@@ -36401,4 +36401,485 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SINGAPORE (Opus 20.8.2026, uusi kaupunkilehti Aasian laudalle).
+   *
+   * LÄHTEET: en-Wikipedian raakatekstit (action=raw, haettu
+   * 20.8.2026): Singapore, History of Singapore, Port of Singapore,
+   * Strait of Malacca, Cavenagh Bridge, Empress Place Building,
+   * Boat Quay, Clarke Quay, Fort Canning Hill, Chinatown Singapore,
+   * Kampong Glam, Istana Kampong Glam, Malay Heritage Centre,
+   * Sultan Mosque, Thian Hock Keng Temple, Sri Mariamman Temple
+   * Singapore, Raffles Hotel, Merlion, Gardens by the Bay,
+   * Singapore River, Water supply and sanitation in Singapore,
+   * 1819 Singapore Treaty. Pohjana Sonnetin faktapohja ja sen
+   * riippumaton tarkistus (docs/aasia-tyoaineisto/).
+   *
+   * SISÄLTÖLINJAUS on Fablen eräohje 20.8.2026: siirtomaahistoria
+   * kerrotaan neutraalisti tapahtumina — kauppa, hallinto,
+   * väestönkasvu, rakennukset — ilman kummankaan osapuolen kehystä.
+   * Uskonto on historiallis-kulttuurinen ilmiö: temppelit ja
+   * moskeija ovat rakennuksia ja yhteisöjen tekoja, ei julistusta.
+   * Kaupunkivaltion nykyasema on neutraali tosiasia (Nikosian ja
+   * Taipein "Antaa olla"), eikä nykypolitiikkaa ole missään.
+   * Vankityövoima mainitaan kahdessa kohdassa (Cavenagh-silta,
+   * Empress Place), koska molempien artikkelit kertovat sen
+   * rakennushistoriana — ilman yksityiskohtien korostusta.
+   *
+   * KOLME RISTIRIITAA, JOTKA ON RATKAISTU TÄSSÄ:
+   * 1. Cavenagh-sillan syy. Oma artikkelinsa sanoo, että silta
+   *    avattiin marraskuussa 1869 muistoksi Straitsin siirtokuntien
+   *    kruununsiirtokunta-asemasta 1867, kun taas artikkeli "1819
+   *    Singapore Treaty" sanoo sen juhlistaneen Singaporen
+   *    perustamisen 50-vuotispäivää. K4 seuraa sillan omaa
+   *    artikkelia (talon sääntö: kohteen oma artikkeli voittaa) ja
+   *    mainitsee toisen selityksen lukijalle.
+   * 2. Suezin kanavan yhteys. Pääartikkeli "Singapore" ei sano
+   *    siitä mitään, mutta "History of Singapore" sanoo suoraan,
+   *    että kaupungin menestys johtui muun muassa siitä, miten
+   *    Suezin kanavan avaaminen 1869 lyhensi matkan ja laski
+   *    rahdin hintaa Eurooppaan. Se on K3:n lähde.
+   * 3. Kampong Glamin koordinaatti. Kolme artikkelia antaa kolme
+   *    pistettä 90 metrin sisällä toisistaan; kartalla on
+   *    Sultan-moskeijan piste (perustelu maakartat.js:ssä).
+   *
+   * MITÄ JÄTETTIIN POIS: toisen maailmansodan miehitys ja sen
+   * tapahtumat (mainitaan vain vuosilukuina oppaan
+   * käännekohtajaksossa), vuoden 1950 mellakat, 1960-luvun
+   * poliittiset kiistat sekä nykyiset satamatilastot. Merlionin
+   * patsas on vuodelta 1972 eikä siksi kanna nostoa — se on
+   * kartan kohteena ja avauskuvassa nykysymbolina, ja sen ikä
+   * sanotaan jutussa suoraan.
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY: Sri Mariammanin temppeli
+   * esiintyy kannessa (gopuram-torni), historiasivun nostossa
+   * (koko kortteli ylhäältä) ja nähtävyysjutussa (katon Nandi) —
+   * kolme eri tiedostoa ja kolme eri näkökulmaa samaan
+   * rakennukseen. Sama koskee Thian Hock Kengia (nosto: ovet,
+   * juttu: sisäsali), Sultan-moskeijaa (avauskuva ja juttu) ja
+   * Boat Quayta (avauskuva ylhäältä, juttu joen tasalta). Linja on
+   * sama kuin Medinassa, jossa Profeetan moskeija on kannessa,
+   * avauskuvissa ja oppaassa.
+   *
+   * SELITTEET OVAT YHDEN VIRKKEEN MITTAISIA (omistajan tarkennus
+   * 20.8.2026). Kaksi kuvaa vaatii pakollisen selityksen, ja se on
+   * mahdutettu samaan virkkeeseen: KITLV:n satamakuvan alalaitaan
+   * on painettu julkaisijan oma numero ja nimi, ja Amiraliteetin
+   * merikartan nurkissa ovat sen omat karttanumerot.
+   *
+   * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
+   */
+  singapore: [
+    {
+      id: 'kaupunki',
+      nimi: 'Singapore',
+      johdanto: 'Vapaasatama Malakan salmen suulla, jonka britit '
+        + 'perustivat vuonna 1819 joen suistoon. Kiinalaiset, '
+        + 'malaijit, intialaiset ja eurooppalaiset kauppahuoneet '
+        + 'asettuivat saman joen varrelle, kukin omalle rannalleen.',
+      kansikuvat: [
+        {
+          tiedosto: '1 singapore city skyline dusk panorama 2011.jpg',
+          selite: 'Kaupungin ydin iltahämärissä ylhäältä katsottuna: '
+            + 'Singapore-joen suu kaartaa keskellä, torniryhmä nousee '
+            + 'sen takaa, ja etualalla on kaksi valaistua '
+            + 'nurmikenttää.',
+          lahde: 'chenisyuan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Traditional shophouses in Upper Cross Street, Chinatown, Singapore (17161367876).jpg',
+          selite: 'Kolme kauppahuonetta Chinatownissa vierekkäin: '
+            + 'keltainen, oranssi ja vaaleanvihreä julkisivu, '
+            + 'säleikköikkunat, tiilikatto ja alakerran katettu '
+            + 'käytävä kadun puolella.',
+          lahde: 'Nicolas Lannuzel from Singapore, Singapore, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Gopuram monumental ornate tower at the entrance of Sri Mariamman Temple with sculptures of Hindu deities Chinatown Singapore.jpg',
+          selite: 'Sri Mariammanin porttitorni alhaalta kuvattuna: '
+            + 'kuusi kapenevaa kerrosta täynnä värillisiä '
+            + 'kipsipatsaita, ja harjalla on rivi kultaisia huippuja.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: joki, moskeija ja patsas — kaupungin vanha
+       * ydin, sen koillinen kaupunginosa ja sen nykysymboli.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Boat quay sct.JPG',
+          selite: 'Singapore-joen mutka ylhäältä: eteläisellä '
+            + 'rannalla on tiivis rivi matalia kauppahuoneita '
+            + 'punaisine kattoineen, ja niiden takaa nousee '
+            + 'pankkitorneja.',
+          lahde: 'chensiyuan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Sultan Mosque, Singapore.jpg',
+          selite: 'Sultan-moskeija Kampong Glamissa: kullattu kupoli '
+            + 'lepää tumman rengasvyön päällä, kulmissa on '
+            + 'pikkutornit, ja aidan varressa liehuu lippurivi.',
+          lahde: 'Johan Jönsson (Julle), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Singapore (SG), Merlion -- 2019 -- 4496.jpg',
+          selite: 'Joen suu vastarannalta: valkoinen Merlion-patsas '
+            + 'seisoo laiturilla, sen takana on Fullertonin entinen '
+            + 'postitalo pylväineen ja niiden yllä nykykeskustan '
+            + 'lasitorneja.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Sopimus, joka avasi saaren',
+          tiedosto: 'Charles Dyce, Government Hill from the New Harbour Road, Singapore, 1846, Watercolour & Ink on paper, 27.2 x 44.8 cm.png',
+          teksti: 'Brittiläinen virkamies Stamford Raffles saapui '
+            + 'saarelle 28. tammikuuta 1819. Alue kuului nimellisesti '
+            + 'Johorin sulttaanille, mutta hallitsijasuku oli '
+            + 'jakautunut kahtia. Temenggong Abdul Rahmanin avulla '
+            + 'Raffles salakuljetti maanpaossa olleen vanhemman '
+            + 'veljen Tengku Longin takaisin saarelle ja tunnusti '
+            + 'tämän sulttaaniksi nimellä Hussein — vuotuista viiden '
+            + 'tuhannen dollarin maksua vastaan, ja temenggong sai '
+            + 'kolmetuhatta. Vastineeksi Itä-Intian kauppakomppania '
+            + 'sai luvan perustaa kauppa-aseman. Sopimus '
+            + 'allekirjoitettiin 6. helmikuuta 1819, ja vuonna 1824 '
+            + 'uusi sopimus toi koko saaren Britannian alaisuuteen.',
+          selite: 'Charles Dycen akvarelli vuodelta 1846 näyttää '
+            + 'Government Hillin eli nykyisen Fort Canningin: '
+            + 'kukkulan laella on kuvernöörin talo lipputankoineen ja '
+            + 'sen juurella matalia tiilikattoisia varastoja.',
+          lahde: 'Charles Andrew Dyce, Wikimedia Commons (PD)',
+          wiki: 'Singapore',
+        },
+        {
+          otsikko: 'Tuhannesta kahdeksaankymmeneen tuhanteen',
+          tiedosto: 'KITLV - 50215 - Lambert & Co., G.R. - Singapore - Port in Singapore - circa 1900.jpg',
+          teksti: 'Ennen Rafflesin tuloa saarella asui noin tuhat '
+            + 'ihmistä, enimmäkseen malaijeja ja pieni joukko '
+            + 'kiinalaisia. Vuoteen 1860 mennessä väkiluku oli noussut '
+            + 'yli kahdeksaankymmeneentuhanteen, ja yli puolet '
+            + 'asukkaista oli kiinalaisia; heitä oli tullut töihin '
+            + 'pippuri- ja gambierviljelmille ja pakoon Etelä-Kiinan '
+            + 'levottomuuksia. Malaijit olivat 1860-luvulle asti '
+            + 'toiseksi suurin ryhmä, ja sen jälkeen intialaiset. '
+            + 'Vuonna 1826 Singaporesta tuli Penangin ja Malakan '
+            + 'kanssa osa Straitsin siirtokuntia, vuodesta 1836 '
+            + 'niiden pääkaupunki ja vuonna 1867 osa suoraan '
+            + 'Lontoosta hallittua kruununsiirtokuntaa.',
+          selite: 'Noin vuonna 1900 otetussa kuvassa Singapore-joki '
+            + 'on täynnä tongkang-lastiveneitä rannasta rantaan, '
+            + 'takana ovat kaksikerroksiset kauppahuoneet, ja kuvan '
+            + 'alalaitaan on painettu julkaisijan oma numero ja nimi '
+            + '"River Scene".',
+          lahde: 'Lambert & Co., G.R. / Singapore, Wikimedia Commons (PD)',
+          wiki: 'Singapore',
+        },
+        {
+          otsikko: 'Vapaasatama, jossa ei peritty tullia',
+          tiedosto: 'Singapore Roads Surveyed by JW Reed Master Commanding 1864-1892.jpg',
+          teksti: 'Raffles määräsi sataman vapaasatamaksi, ja se '
+            + 'ratkaisi kilpailun: Batavian ja Manilan satamissa '
+            + 'perittiin tulleja, täällä ei. Kiinalaiset kauppiaat '
+            + 'asettuivat joen alajuoksulle ja englantilaiset '
+            + 'yläjuoksulle, ja kaupungissa risteytyi kolme '
+            + 'kauppaverkostoa: kiinalainen, kaakkoisaasialainen '
+            + 'saariverkosto ja eurooppalais-intialainen. '
+            + '1830-luvulla Singapore oli jo '
+            + 'ohittanut Batavian kiinalaisen junkkikaupan keskuksena, '
+            + 'ja 1840-luvulta se oli höyrylaivojen hiiliasema. Suezin '
+            + 'kanavan avaaminen 1869 laski rahdin hintaa Eurooppaan '
+            + 'rajusti: vuonna 1880 satamasta kulki jo yli puolitoista '
+            + 'miljoonaa tonnia tavaraa vuodessa, neljä viidesosaa '
+            + 'siitä höyrylaivoilla.',
+          selite: 'Amiraliteetin merikartta Singaporen redistä '
+            + 'näyttää kaupungin ruutukaavan vasemmassa ylänurkassa '
+            + 'ja ankkuripaikkojen syvyysluvut tuhansina pisteinä '
+            + 'sen edustalla, ja nurkkiin on painettu kartan omat '
+            + 'julkaisunumerot.',
+          lahde: 'British Admiralty, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Port of Singapore',
+        },
+        {
+          otsikko: 'Silta, joka jäi liian matalaksi',
+          tiedosto: '2016 Singapur, Downtown Core, Most Cavenagha (02).jpg',
+          teksti: 'Cavenagh-silta avattiin marraskuussa 1869 '
+            + 'muistoksi siitä, että Straitsin siirtokunnista oli '
+            + 'kaksi vuotta aiemmin tullut suoraan Britannian alainen '
+            + 'kruununsiirtokunta. Teräsrakenteet valoi Glasgow’ssa '
+            + 'P. & W. MacLellanin konepaja, ja suunnittelijat olivat '
+            + 'insinöörit George Chancellor Collyer ja Rowland Mason '
+            + 'Ordish. Avajaisviikolla The Straits Times joutui '
+            + 'kertomaan, etteivät isot lastiveneet mahtuneet alitse '
+            + 'nousuveden aikaan. Vuonna 1910 valmistui viereinen '
+            + 'Anderson-silta, ja ajoneuvoliikenne siirtyi sinne. '
+            + 'Cavenagh on yhä Singaporen vanhin alkuperäisessä '
+            + 'muodossaan säilynyt silta.',
+          selite: 'Cavenagh-silta joen tasalta: matala '
+            + 'riippuvaijerikaari ulottuu rannalta rannalle, '
+            + 'graniittipylonit seisovat sen päissä, ja alitse ujuttaa '
+            + 'itsensä keltakattoinen lastivene.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cavenagh Bridge',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Singapore Downtown - Telok Ayer Street IMG 9994.jpg',
+          selite: 'Kauppahuoneen sisäänkäynti Telok Ayer -kadulla: '
+            + 'katetun käytävän takana on tummanpunainen ovipari, '
+            + 'yläpuolella kullattu kilpi ja seinän alaosassa '
+            + 'kukkakuvioiset laatat.',
+          lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Singapore on kaupunkivaltio: koko maa on yhden '
+          + 'kaupungin kokoinen, eikä siinä ole erillistä '
+          + 'pääkaupunkia. Pinta-alaa on 744 neliökilometriä ja '
+          + 'asukkaita runsaat kuusi miljoonaa, joten tiheys on '
+          + 'maailman toiseksi suurin. Lehden kohteet ovat parin '
+          + 'kilometrin säteellä Singapore-joen suulta: eteläpuolella '
+          + 'Chinatown temppeleineen, pohjoispuolella '
+          + 'siirtomaahallinnon rakennukset ja Fort Canningin '
+          + 'kukkula, koillisessa Kampong Glam ja idässä täyttömaalle '
+          + 'rakennettu puisto. Virallisia kieliä on neljä, ja '
+          + 'englanti on niistä se, jolla asiat hoituvat.',
+        artikkeli: {
+          nimi: 'Matkailijan Singapore',
+          taitto: 'opas',
+          teksti: 'Yksi joki, neljä kansanryhmää ja saari, joka on '
+            + 'kasvanut merta täyttämällä.',
+          nosto: 'Chinatownin kiinankielinen nimi tarkoittaa '
+            + '"härkävankkurivettä" — 1800-luvulla korttelien juomavesi '
+            + 'tuotiin sinne eläinten vetämillä kärryillä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokone laskeutuu Changiin, joka avattiin '
+                + 'vuonna 1981 vanhan Paya Lebarin kentän tilalle. '
+                + 'Maateitse saarelle pääsee kahta rakennettua '
+                + 'yhteyttä pitkin: pohjoisessa Johorin pengertie ja '
+                + 'lännessä Tuasin toinen yhteys, molemmat Malesian '
+                + 'Johoriin. Kaupungin sisällä liikutaan metrolla, '
+                + 'jossa on kuusi linjaa ja kolme kevytraidelinjaa, '
+                + 'yhteensä noin 241 kilometriä rataa, sekä yli '
+                + 'kolmellasadalla bussilinjalla. Omaa autoa ei '
+                + 'kannata suunnitella: autojen määrää säädellään '
+                + 'kiintiöllä ja huutokaupattavalla oikeudella, ja '
+                + 'siksi auto maksaa täällä enemmän kuin missään '
+                + 'muualla maailmassa. Ruuhkamaksu otettiin käyttöön '
+                + 'jo 1975, ensimmäisenä maailmassa.',
+              kuva: {
+                tiedosto: 'Empty Singapore-Malaysia Causeway 2.jpg',
+                selite: 'Johorin pengertie iltavalaistuksessa: suora '
+                  + 'penger kulkee salmen yli valonauhana, ja sen '
+                  + 'toisessa päässä hohtaa Johor Bahrun kaupunki.',
+                lahde: 'Lionel Lim, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Singapore on matala saari Malakan niemimaan '
+                + 'eteläkärjen edustalla, noin 137 kilometriä eli '
+                + 'asteen verran päiväntasaajasta pohjoiseen. Pääsaaren '
+                + 'lisäksi maahan kuuluu yli kuusikymmentä pienempää '
+                + 'saarta, joista suurimmat ovat Jurong, Pulau '
+                + 'Tekong, Pulau Ubin ja Sentosa. Korkein '
+                + 'luonnollinen kohta on Bukit Timahin kukkula, vain '
+                + '163,6 metriä. Maata on tehty lisää merestä: '
+                + '1960-luvulla pinta-alaa oli noin 580 '
+                + 'neliökilometriä, nyt 744, ja 2030-luvulle '
+                + 'mennessä sitä on määrä olla 770 — yli '
+                + 'kolmanneksen lisäys. Osa saarista on sulautettu '
+                + 'täytöillä yhteen, kuten Jurong.',
+              kuva: {
+                tiedosto: 'Bukit Timah Hill.jpg',
+                selite: 'Bukit Timahin kukkula kaukaa: metsäinen '
+                  + 'harjanne kohoaa loivana matalan kaupungin yllä, '
+                  + 'ja laella seisoo ristikkomasto.',
+                lahde: 'Mx. Granger, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: neljä hanaa',
+              teksti: 'Saarella ei ole järviä eikä pohjavesiesiintymiä, '
+                + 'ja 1800-luvulla Chinatownin vesi tuotiin kortteliin '
+                + 'härkien vetämillä kärryillä — siitä sen malaijin- ja '
+                + 'kiinankieliset nimet Kreta Ayer ja Niu che shui, '
+                + 'vesikärry ja härkävankkurivesi. Nykyään vesi tulee '
+                + 'neljästä lähteestä, joita kutsutaan neljäksi '
+                + 'kansalliseksi hanaksi: sadevesi kerätään '
+                + 'suojelluilta valuma-alueilta tekoaltaisiin, vettä '
+                + 'tuodaan sopimuksella Johorin joesta, jätevettä '
+                + 'puhdistetaan uudelleen juotavaksi NEWater-nimellä ja '
+                + 'merivedestä poistetaan suola. Sadetta saarelle tulee '
+                + 'runsaasti, mutta maata sen keräämiseen on vähän. '
+                + 'Vuonna 2008 joen suu suljettiin padolla, ja '
+                + 'suistosta tuli makean veden allas.',
+              kuva: {
+                tiedosto: 'Marina Barrage Dam 11Jul2026 01.jpg',
+                selite: 'Marina Barrage sulkee joen suun matalana '
+                  + 'patoketjuna, ja sen takana salmen ulapalla on '
+                  + 'rivi ankkurissa odottavia rahtilaivoja.',
+                lahde: 'RFNirmala, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kauppa-asemasta valtioksi',
+              teksti: 'Vuoden 1819 sopimusta pidetään nykyisen '
+                + 'Singaporen perustamishetkenä, ja siitä alkava '
+                + 'ketju on lyhyt kertoa. Vuonna 1824 koko saari '
+                + 'siirtyi Britannian alaisuuteen, 1826 se liitettiin '
+                + 'Straitsin siirtokuntiin Penangin ja Malakan '
+                + 'kanssa, ja 1867 siirtokunnat irrotettiin '
+                + 'Brittiläisestä Intiasta suoraan Lontoon '
+                + 'hallintoon. Japani miehitti saaren vuosina '
+                + '1942–1945, minkä jälkeen se palasi kruunun '
+                + 'siirtokunnaksi. Sisäinen itsehallinto tuli 1959, '
+                + 'ja vuonna 1963 Singaporesta tuli osa uutta '
+                + 'Malesian liittovaltiota. Liitto kesti kaksi '
+                + 'vuotta: vuonna 1965 Singapore erosi siitä ja '
+                + 'itsenäistyi. Ennen kaikkea tätä paikalla oli '
+                + 'kauppasatama jo 1300-luvulla, kun saarta '
+                + 'kutsuttiin Temasekiksi.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Vuodenaikoja ei ole. Kuukausien keskilämpö '
+                + 'liikkuu tammikuun vajaasta '
+                + 'kahdestakymmenestäkuudesta toukokuun '
+                + 'kahteenkymmeneenseitsemään ja puoleen asteeseen, '
+                + 'eli koko vuoden vaihtelu on puolitoista astetta. '
+                + 'Sadetta tulee 2 553 millimetriä vuodessa eikä '
+                + 'yksikään kuukausi jää kuivaksi; sateisimmat ovat '
+                + 'marras- ja joulukuu, kuivin helmikuu. '
+                + 'Heinä–lokakuussa naapurimaiden metsäpalojen '
+                + 'savusumu voi laskea näkyvyyttä. Yksi varoitus '
+                + 'lukuihin: lehden vuosigraafi on laskettu ERA5:n '
+                + 'hilaruudusta, joka on kymmeniä kilometrejä leveä '
+                + 'ja sekoittaa mukaan ympäröivän meren, joten sen '
+                + 'vuorokausikaista 24–29 astetta on kapeampi kuin '
+                + 'saarella mitattu 23–32 astetta. Kuumin hetki on '
+                + 'siis kuumempi kuin käyrä lupaa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki suunniteltiin kerralla vuonna 1822, ja '
+        + 'jokainen kansanryhmä sai oman alueensa. Niiden temppelit, '
+        + 'moskeijat ja kauppahuoneet seisovat yhä samoilla '
+        + 'korttelinkulmilla.',
+      tehtava: {
+        kysymys: 'Mistä Thian Hock Keng -temppelin kivet, puutavara '
+          + 'ja kattotiilet tulivat Singaporeen?',
+        vaihtoehdot: [
+          'Kiinasta laivojen painolastina',
+          'Jaavan tulivuorten rinteiltä',
+          'Intian Koromandelin rannikolta',
+          'Malakan kaupungin raunioista',
+        ],
+        oikea: 0,
+        fakta: 'Rakennusaineet ja Mazu-patsas tuotiin Kiinasta, ja osa '
+          + 'pylväskivistä, puutavarasta ja tiilistä oli laivojen '
+          + 'painolastia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kartta, joka jakoi kaupungin',
+          tiedosto: 'Part of Singapore Island (British Library India Office Records, 1825, detail).jpg',
+          teksti: 'Vuonna 1822 Raffles antoi kaupungin '
+            + 'suunnittelukomitealle tehtäväksi järjestää alueet '
+            + '"eri asukasluokkien mukavuuden ja turvallisuuden '
+            + 'vuoksi". Näin syntyi Jackson-suunnitelma: '
+            + 'eurooppalaisten kaupunginosa, kiinalaisille varattu '
+            + 'alue joen lounaispuolella, Koromandelin rannikolta '
+            + 'tulleiden chulia-kauppiaiden kortteli sekä arabien ja '
+            + 'bugien kampongit. Kampong Glam annettiin sulttaani '
+            + 'Husseinille ja malaijiyhteisölle. Raffles määräsi myös '
+            + 'rakennustavan: tulipalojen varalta muurattua kiveä ja '
+            + 'tiilikatto, ja kadun puolelle yhtenäinen katettu '
+            + 'käytävä, joka tunnetaan viiden jalan tienä.',
+          selite: 'Vuoden 1825 käsin väritetyssä kartassa näkyvät '
+            + 'joen suun ruutukaava, Kampong Glam oikeassa '
+            + 'ylänurkassa ja kiinalaisten kampong joen '
+            + 'lounaispuolella.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Chinatown, Singapore',
+        },
+        {
+          otsikko: 'Meren jumalattaren temppeli',
+          tiedosto: 'Singapore (SG), China Town, Thian Hock Keng -- 2019 -- 4528.jpg',
+          teksti: 'Thian Hock Keng alkoi vaatimattomana majana '
+            + 'rantaviivalla 1820-luvun alussa. Telok Ayer -katu '
+            + 'kulki silloin meren rajassa, joten hokkien-yhteisön '
+            + 'merenkulkijat saattoivat astua maihin ja kiittää '
+            + 'merenjumalatar Mazua turvallisesta matkasta melkein '
+            + 'samalla askeleella; täyttötyöt siirsivät rannan '
+            + 'kauemmas vasta 1880-luvulla. Vuodesta 1839 temppeli '
+            + 'rakennettiin uudelleen kerätyin varoin, ja suurimman '
+            + 'lahjoituksen antoi kauppias Tan Tock Seng. '
+            + 'Rakennusaineet ja Mazu-patsas tuotiin laivoilla '
+            + 'Kiinasta: osa pylväskivistä, puutavarasta ja '
+            + 'kattotiilistä oli laivojen painolastia. Myös '
+            + 'Chulia-kadun intialaisyhteisö auttoi työssä. Temppeli '
+            + 'valmistui 1842.',
+          selite: 'Temppelin pääovet kadulta: kullatut '
+            + 'lohikäärmeovet, niiden molemmin puolin maalatut '
+            + 'ovenvartijat ja edessä vaaleanvihreä valurauta-aita.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Thian Hock Keng Temple',
+        },
+        {
+          otsikko: 'Kirjuri, joka rakensi temppelin',
+          tiedosto: '2016 Singapur, Chinatown, Świątynia Sri Mariamman (01).jpg',
+          teksti: 'Naraina Pillai oli Penangista tullut hallinnon '
+            + 'kirjuri, joka saapui Rafflesin toisella matkalla '
+            + 'toukokuussa 1819. Hän perusti saaren ensimmäisen '
+            + 'rakennusyhtiön, siirtyi tekstiilikauppaan ja nousi '
+            + 'intialaisyhteisön johtohahmoksi. Temppelille annettiin '
+            + 'ensin tontti Telok Ayer -kadulta, mutta siellä ei '
+            + 'ollut makeaa vettä, jota rituaalit vaativat; vuonna '
+            + '1823 hän sai nykyisen paikan South Bridge Roadin '
+            + 'varrelta. Vuoteen 1827 mennessä siinä seisoi '
+            + 'yksinkertainen puusta ja attap-lehdistä tehty '
+            + 'temppeli. Nykyisen tiilirakennuksen vanhimmat osat '
+            + 'ovat vuodelta 1843, ja viereiset kadut saivat sen '
+            + 'mukaan nimensä Pagoda Street ja Temple Street.',
+          selite: 'Sri Mariamman ylhäältä katsottuna: matalan '
+            + 'muurin päällä on rivi valkoisia Nandi-härkiä, pihan '
+            + 'takana vihreät kupolit ja oikealla porttitorni '
+            + 'Chinatownin kattojen keskellä.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sri Mariamman Temple, Singapore',
+        },
+        {
+          otsikko: 'Hotelli Beach Roadin varrella',
+          tiedosto: 'Hotel Raffles exterior 1.jpg',
+          teksti: 'Rakennus alkoi 1830-luvun alussa yksityisenä '
+            + 'rantahuvilana. Lääkäri Charles Emerson vuokrasi sen '
+            + 'hotelliksi 1878, ja hänen kuoltuaan talo seisoi '
+            + 'asuntolana, kunnes armenialaiset Sarkies-veljekset '
+            + 'ottivat sen haltuunsa. He avasivat kymmenen huoneen '
+            + 'Raffles Hotelin 1. joulukuuta 1887 ja nimesivät sen '
+            + 'Stamford Rafflesin mukaan. Laajennus oli nopeaa: '
+            + 'vuonna 1890 valmistui kaksi kaksikerroksista siipeä, '
+            + 'joissa kummassakin oli 22 huoneistoa, ja 1894 Palm '
+            + 'Court -siipi, jolloin huoneita oli 75. Uusi '
+            + 'päärakennus valmistui 1899, ja siihen tulivat '
+            + 'sähkövalot ja sähköiset kattotuulettimet — '
+            + 'ensimmäisenä hotellina koko alueella.',
+          selite: 'Hotellin valkoinen julkisivu keskeltä: '
+            + 'kolmikerroksinen pylväsrivi, säleikköikkunat ja '
+            + 'ylimmällä listalla kohokirjaimin nimi Raffles Hotel.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Raffles Hotel',
+        },
+      ],
+    },
+  ],
 };

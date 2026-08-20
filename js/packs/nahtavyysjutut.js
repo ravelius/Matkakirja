@@ -22167,4 +22167,456 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * SINGAPOREN KOHDEKARTAN JUTUT (Opus 20.8.2026). Kymmenen kohdetta
+   * pohjoisesta etelään, sama järjestys kuin maakartat.js:ssä.
+   *
+   * Lähteet ovat kohteiden omat en-Wikipedian artikkelit, haettu
+   * 20.8.2026 raakatekstinä. Sisältölinjaus on sama kuin lehden
+   * muissakin osissa: siirtomaahistoria tapahtumina, uskonto
+   * historiallis-kulttuurisena ilmiönä, ei nykypolitiikkaa.
+   *
+   * CAVENAGH-SILTA KERROTAAN EMPRESS PLACEN JUTUSSA eikä omana
+   * kohteenaan: sen piste olisi runsaat sata metriä Empress Placen
+   * pisteestä ja numeroympyrät menisivät päällekkäin (perustelu
+   * maakartat.js:n singapore-lohkossa). Siksi tuolla jutulla on
+   * kaksi kuvaa — rakennus ja sillan glasgowlainen valuleima.
+   *
+   * MERLIONIN IKÄ SANOTAAN SUORAAN, koska patsas näyttää lehden
+   * muiden kohteiden rinnalla vanhemmalta kuin on: se on vuodelta
+   * 1972, ja lukija saisi muuten väärän kuvan siitä, mikä joen
+   * suulla on 1800-luvulta ja mikä ei.
+   *
+   * AUKIOLOJA, PÄÄSYMAKSUJA TAI RAVINTOLOITA EI VÄITETÄ: ne
+   * vanhenevat nopeammin kuin lehti (Medinan asematarinan linja).
+   *
+   * YKSI SISÄINEN RISTIRIITA ON MERKITTY LUKIJALLE. Sultan Mosque
+   * -artikkeli sanoo, että kupolien tyven pullonkorkkikoriste on
+   * sulttaani Hussein Shahin päätös, vaikka nykyiset kupolit ovat
+   * vuoden 1932 rakennuksesta ja sulttaani kuoli 1835. Artikkeli ei
+   * selitä eroa, joten juttu kertoo asian sanalla "perimätiedon
+   * mukaan" eikä väitä sitä rakennushistoriaksi.
+   */
+  singapore: {
+    'Sultan-moskeija': {
+      aika: 'ensimmäinen moskeija 1826, nykyinen 1932',
+      teksti: 'Kampong Glam tarkoittaa gelam-puun kylää, ja se on '
+          + 'kaupungin malaijilainen ja muslimien kortteli. Vuoden '
+          + '1822 kaupunkisuunnitelmassa alue annettiin sulttaani '
+          + 'Husseinille, hänen perheelleen ja hoviväelleen sekä '
+          + 'malaijeille ja arabikauppiaille. Sulttaani pyysi '
+          + 'palatsinsa viereen moskeijaa, ja Raffles myönsi '
+          + 'hankkeeseen kolmetuhatta dollaria. Ensimmäinen moskeija '
+          + 'valmistui 1826: yksikerroksinen puurakennus, jossa oli '
+          + 'kaksiportainen katto.'
+          + '\n\n'
+          + 'Sata vuotta myöhemmin rakennus oli rapistunut, ja tilalle '
+          + 'nousi nykyinen moskeija vuonna 1932. Sen suunnitteli '
+          + 'Denis Santry arkkitehtitoimistosta Swan & Maclaren, ja se '
+          + 'on maan tunnetuin esimerkki indo-saraseenilaisesta '
+          + 'tyylistä. Rakennus kääntyy tarkoituksella vinoon '
+          + 'katuruudukkoon nähden, koska rukoussuunnan on osoitettava '
+          + 'Mekkaan. Kahden kullatun sipulikupolin tyvessä kiertää '
+          + 'tumma vyö, jonka koristeena on vähävaraisilta kerättyjä '
+          + 'pullonkorkkeja: perimätiedon mukaan sulttaani Hussein '
+          + 'Shah oli toivonut, että jokainen yhteisön jäsen voisi '
+          + 'osallistua rakentamiseen varallisuudestaan riippumatta.'
+          + '\n\n'
+          + 'Moskeijan vieressä seisoo Istana Kampong Glam, sulttaanin '
+          + 'palatsi. Ensimmäinen puinen istana oli vuodelta 1819; '
+          + 'nykyisen kaksikerroksisen kivitalon rakennutti Husseinin '
+          + 'vanhin poika sulttaani Ali vuosina 1836–1843, ja sen '
+          + 'tyylissä yhdistyvät englantilainen palladiolaisuus ja '
+          + 'malaijilaiset koristeaiheet. Talossa asui sulttaanin suvun '
+          + 'jälkeläisiä 2000-luvulle asti, ja vuodesta 2004 se on '
+          + 'ollut Malay Heritage Centre. Ympärillä olevat Arab '
+          + 'Street, Bussorah Street ja Baghdad Street ovat säilyneet '
+          + 'kauppahuonekatuina.',
+      kuvat: [
+        {
+          tiedosto: 'Masjid Sultan, augusti 2023.jpg',
+          selite: 'Moskeija aamuvarhaisella tyhjän risteyksen takaa: '
+            + 'kullattu kupoli kohoaa vaalean rakennusmassan päältä, '
+            + 'vieressä on valkoinen minareetti ja etualalla '
+            + 'levittäytyy sateenvarjopuu.',
+          lahde: 'Johan Jönsson (Julle), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Raffles Hotel': {
+      aika: 'avattu 1887, päärakennus 1899',
+      teksti: 'Beach Roadin numero yksi oli 1830-luvun alussa '
+          + 'yksityinen rantahuvila. Lääkäri Charles Emerson vuokrasi '
+          + 'sen hotelliksi vuonna 1878, ja kun vuokrasopimus päättyi '
+          + '1887, armenialaiset Sarkies-veljekset ottivat paikan '
+          + 'haltuunsa. He avasivat 1. joulukuuta 1887 kymmenen '
+          + 'huoneen hotellin ja nimesivät sen Stamford Rafflesin '
+          + 'mukaan.'
+          + '\n\n'
+          + 'Kymmenessä vuodessa hotellista tuli kortteli. Vuonna 1890 '
+          + 'valmistui kaksi kaksikerroksista siipeä, kummassakin 22 '
+          + 'huoneistoa, ja 1894 naapuritalosta kunnostettu Palm Court '
+          + '-siipi nosti huoneluvun 75:een. Vanhan rantahuvilan '
+          + 'paikalle rakennettiin uusi päärakennus, jonka suunnitteli '
+          + 'Regent Alfred John Bidwell toimistosta Swan and Maclaren. '
+          + 'Se valmistui 1899 sähkövaloin ja sähköisin '
+          + 'kattotuulettimin — ensimmäisenä hotellina koko alueella.'
+          + '\n\n'
+          + 'Talon tarinoista tunnetuin on vuodelta 1902, jolloin '
+          + 'läheisestä sirkuksesta karannut tiikeri ammuttiin '
+          + 'biljardihuoneen alta; huone oli rakennettu korotetulle '
+          + 'perustukselle, ja eläin oli hakeutunut sen alle. '
+          + 'Sarkies-veljekset menettivät hotellin 1930-luvun lamassa, '
+          + 'ja se siirtyi osakeyhtiölle 1933. Rakennus on ollut '
+          + 'suojeltu kansallismonumentti vuodesta 1987.',
+      kuvat: [
+        {
+          tiedosto: 'Facade of Raffles Hotel - Singapore (35543226882).jpg',
+          selite: 'Hotellin julkisivu kadun puiden lomasta: '
+            + 'valkoiseksi rapattu räystäslinja, sen päällä '
+            + 'kohokirjaimin nimi ja alla vihreät kaidepylväikköt.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fort Canningin kukkula': {
+      aika: 'linnoitus 1861, purettu 1907',
+      teksti: 'Kaupungin keskellä kohoava 48 metrin kukkula tunnettiin '
+          + 'malaijiksi nimellä Bukit Larangan, Kielletty kukkula. '
+          + 'Perimätiedon mukaan siellä lepäsivät muinaisen '
+          + 'Singapuran kuninkaat, ja paikkaa pidettiin '
+          + 'aavemaisena. Rinteen länsipuolella pulppusi lähde, jota '
+          + 'kutsuttiin kielletyksi lähteeksi; 1800-luvun alussa siitä '
+          + 'otettiin juomavesi jokaiseen satamaan poikkeavaan '
+          + 'laivaan, kunnes kysyntä ylitti sen tuoton ja lähde '
+          + 'kuivui kaivojen myötä.'
+          + '\n\n'
+          + 'Kun sopimus oli allekirjoitettu 6. helmikuuta 1819, '
+          + 'majuri William Farquhar nousi kukkulalle, veti sinne '
+          + 'ensimmäisen tykin ja nosti lipun. Raffles rakennutti '
+          + 'laelle asuinrakennuksen, jonka piirsi George Drumgoole '
+          + 'Coleman: puinen bungalow attap-katolla, kolmisenkymmentä '
+          + 'metriä pitkä, valmis tammikuussa 1823. Talo muurattiin '
+          + 'tiilestä uudelleen 1824, ja siitä tuli kuvernöörien '
+          + 'Government House — kukkulaa alettiin kutsua Government '
+          + 'Hilliksi. Raffles perusti rinteelle myös saaren '
+          + 'ensimmäisen kasvitieteellisen puutarhan vuonna 1822, '
+          + 'mutta koeviljelmät epäonnistuivat ja puutarha hylättiin '
+          + '1829.'
+          + '\n\n'
+          + 'Vuonna 1859 residenssi purettiin linnoituksen tieltä. '
+          + 'Linnoitus valmistui 1861 ja sai nimen Fort Canning Intian '
+          + 'ensimmäisen varakuninkaan Charles John Canningin mukaan. '
+          + 'Se osoittautui heti hyödyttömäksi: laivat pääsivät niin '
+          + 'lähelle, että ne saattoivat ampua kaupunkia, mutta '
+          + 'pysyivät silti linnoituksen tykkien kantaman '
+          + 'ulkopuolella. '
+          + 'Linnoitus purettiin 1907, ja siitä ovat jäljellä portti '
+          + 'ja kaksi tykkiä. Rinteellä on myös vanha kristillinen '
+          + 'hautausmaa, joka suljettiin täytenä 1865; sen ympärille '
+          + 'muurattiin 1846 tiilimuuri ja goottilainen portti.',
+      kuvat: [
+        {
+          tiedosto: 'Gothic gate, Fort Canning Green, Singapore - 20120913.jpg',
+          selite: 'Vanhan hautausmaan valkoiseksi maalattu '
+            + 'goottilainen portti puiden alla: huipussa on risti ja '
+            + 'kirjaimet IHS, ja holvikaaresta johtaa tiilipolku '
+            + 'puistoon.',
+          lahde: 'Jorge Cancela., Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Clarke Quay': {
+      aika: 'laituri 1800-luvulta, kävelyalue 1993',
+      teksti: 'Clarke Quay on Singapore-joen laituri Boat Quayn '
+          + 'yläpuolella. Se on nimetty Sir Andrew Clarken mukaan, '
+          + 'joka oli Straitsin siirtokuntien kuvernööri vuosina '
+          + '1873–1875 ja jonka aikana Singaporesta tuli Malakan '
+          + 'niemimaan valtioiden — Perakin, Selangorin ja Sungei '
+          + 'Ujongin — pääsatama. Viereinen Clarke Street sai '
+          + 'virallisen nimensä 1896; sitä ennen se oli kaksi katua, '
+          + 'East Street ja West Street.'
+          + '\n\n'
+          + 'Työnjako joella oli selvä. Boat Quayssa isot laivat '
+          + 'purettiin lastiveneisiin, ja veneet kuljettivat tavaran '
+          + 'ylävirtaan Clarke Quayn varastoihin. Eteläisen rannan '
+          + 'hokkieninkielinen nimi Chhâ-chûn-thâu tarkoittaa '
+          + 'polttopuulaituria: Indonesiasta tulleet pienet '
+          + 'tongkangit toivat tänne '
+          + 'polttopuuta, ja se kauppa oli teochew-yhteisön käsissä. '
+          + 'Parhaimmillaan laiturin viereen tunkeutui kymmeniä '
+          + 'veneitä kerrallaan.'
+          + '\n\n'
+          + 'Vene-elämä jatkui pitkälle 1900-luvun jälkipuoliskolle. '
+          + 'Kun joki oli pahasti saastunut, rahtiliikenne siirrettiin '
+          + 'uuteen satamaan Pasir Panjangiin ja laituri hiljeni. Joki '
+          + 'ympäristöineen puhdistettiin vuosina 1977–1987, ja Clarke '
+          + 'Quayn vanhat varastot kunnostettiin: uudisrakentamisen '
+          + 'ehtona oli, että uusi täydentää vanhaa. Nykyinen '
+          + 'kävelyalue avattiin joulukuussa 1993.',
+      kuvat: [
+        {
+          tiedosto: 'Clarke Quay, Singapore, at night - 20150308.jpg',
+          selite: 'Clarke Quay illalla joen toiselta rannalta: '
+            + 'entisten varastojen matalat rivit on valaistu ja '
+            + 'katettu suurilla sinisillä kupukatoksilla, ja valot '
+            + 'heijastuvat pitkinä juovina veteen.',
+          lahde: 'C1815., Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Empress Place': {
+      aika: 'rakennettu 1864–1867',
+      teksti: 'Joen pohjoisrannalla seisova pitkä kellertävä rakennus '
+          + 'oli siirtomaahallinnon konttoritalo, jota kutsuttiin '
+          + 'yksinkertaisesti nimellä Government Offices. Sen '
+          + 'suunnitteli siirtokunnan insinööri J. F. A. McNair, ja se '
+          + 'rakennettiin vankityövoimalla kesäkuun 1864 ja joulukuun '
+          + '1867 välillä. Taloon sijoitettiin sihteeristö, '
+          + 'tilintarkastus, maanmittaus, rakennusvirasto, '
+          + 'lääkintäosasto, rahasto ja poliisin ylitarkastajan '
+          + 'toimisto; lainsäädäntöneuvosto kokoontui yläkerran '
+          + 'salissa. Laajennuksia tehtiin 1880, 1904–1909 ja 1920, ja '
+          + 'jokainen noudatti McNairin uuspalladiolaista linjaa, '
+          + 'joten talo näyttää yhtenäiseltä.'
+          + '\n\n'
+          + 'Rakennuksen edessä oleva aukio nimettiin vuonna 1907 '
+          + 'Empress Placeksi kuningatar Victorian kunniaksi, ja '
+          + 'aikaa myöten nimi siirtyi talolle. Aukiota pidetään '
+          + 'Singaporen vanhimpana jalankulkutilana. Nykyään '
+          + 'rakennuksessa toimii Asian Civilisations Museum.'
+          + '\n\n'
+          + 'Talon kulmalta lähtee Cavenagh-silta, joka avattiin '
+          + 'marraskuussa 1869. Se on 79 metriä pitkä, sen pisin '
+          + 'jänneväli on 61 metriä, ja sen graniittipylonien välissä '
+          + 'riippuvat teräsketjut valettiin Glasgow’ssa P. & W. '
+          + 'MacLellanin konepajassa — valuvuosi 1868 lukee yhä '
+          + 'kaiteen renkaassa. Silta oli yksi viimeisistä '
+          + 'intialaisella vankityövoimalla tehdyistä hankkeista. Kun '
+          + 'ajoneuvoliikenne siirtyi 1910 Anderson-sillalle, '
+          + 'Cavenaghista tuli kävelysilta, ja sen päähän pystytettiin '
+          + 'kyltti, joka kieltää ajoneuvot ja eläimet; kyltti on '
+          + 'yhä paikallaan.',
+      kuvat: [
+        {
+          tiedosto: 'Empress Place Building 2023-03-22.jpg',
+          selite: 'Empress Place joen yli katsottuna: matala '
+            + 'kellertävä konttoritalo punaisine kattoineen, sen '
+            + 'takana Victoria-teatterin kellotorni ja edessä '
+            + 'kivetty rantamuuri.',
+          lahde: 'Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Cavenagh Bridge 2012 0045.jpg',
+          selite: 'Cavenagh-sillan kaiteen valurautarenkaassa lukee '
+            + 'kohokirjaimin P & W MacLellan, 1868, Engineers, '
+            + 'Glasgow.',
+          lahde: 'Elisa.rolle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Boat Quay': {
+      aika: '1820-luvulta lähtien',
+      teksti: 'Boat Quay on Singapore-joen eteläinen ranta UOB '
+          + 'Plazan kauppahuoneilta Elgin-sillalle. Se oli vanhan '
+          + 'sataman vilkkain kohta: '
+          + '1860-luvulla kolme neljäsosaa koko Singaporen '
+          + 'laivaliikenteen asioista hoidettiin täällä. Ranta oli '
+          + 'myös haluttu: joen mutka muistuttaa kiinalaisen '
+          + 'perimätiedon mukaan karpin vatsaa, ja karpin vatsassa '
+          + 'asuu vauraus, joten kauppahuoneita ahdettiin rinnakkain '
+          + 'niin tiiviisti kuin tilaa riitti.'
+          + '\n\n'
+          + 'Kauppahuone eli shophouse on kapea ja syvä: alakerrassa '
+          + 'puoti tai varasto, yläkerrassa asunto, ja kadun puolella '
+          + 'ulokkeen alle jäävä katettu käytävä, viiden jalan tie. '
+          + 'Ne ovat kaksi- tai kolmikerroksisia, ja Boat Quayn rivi '
+          + 'on säilynyt lähes kokonaisena. Rannassa lastattiin '
+          + 'laivoihin posliinia, mausteita ja kumia.'
+          + '\n\n'
+          + 'Kaupankäynti loppui, kun joki puhdistettiin: vuonna 1983 '
+          + 'viimeiset lastiveneet siirrettiin Pasir Panjangin uuteen '
+          + 'laituriin, ja Boat Quay seisoi tyhjänä kuusi vuotta. '
+          + 'Vuonna 1989 alue suojeltiin, kauppahuoneet kunnostettiin '
+          + 'ja niihin muutti liikkeitä ja ravintoloita. Puhdistuksen '
+          + 'näkyvin tulos ei kuitenkaan ole rakennuksissa vaan '
+          + 'vedessä: jokeen ovat palanneet varaanit ja saukot.',
+      kuvat: [
+        {
+          tiedosto: 'Boat Quay 05.jpg',
+          selite: 'Joki alavirtaan katsottuna: vasemmalla nousee '
+            + 'pankkitornien rivi, oikealla kaartuu Boat Quayn '
+            + 'matala kauppahuoneketju, ja vesi on vihertävän '
+            + 'ruskeaa.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Merlion-puisto': {
+      aika: 'patsas 1972, siirretty 2002',
+      teksti: 'Merlion on leijonanpäinen ja kalaruumiinen olento, '
+          + 'joka on Singaporen virallinen tunnuseläin. Se ei ole '
+          + 'vanha: kuvan piirsi vuonna 1964 Van Kleefin akvaarion '
+          + 'intendentti Alec Fraser-Brunner matkailutoimiston '
+          + 'tunnukseksi. Sen kaksi puolta ovat kaksi vanhaa nimeä. '
+          + 'Kalanruumis muistaa ajasta, jolloin saarta kutsuttiin '
+          + 'Temasekiksi, mikä tarkoittaa jaavaksi merikaupunkia, ja '
+          + 'leijonanpää '
+          + 'viittaa nimeen Singapura, leijonakaupunki — Malaijien '
+          + 'aikakirjojen mukaan Sang Nila Utama näki joen suulla '
+          + 'oudon eläimen, jonka arveli olevan leijona.'
+          + '\n\n'
+          + 'Patsaan veisti kuvanveistäjä Lim Nang Seng marraskuun '
+          + '1971 ja elokuun 1972 välillä. Se on 8,6 metriä korkea ja '
+          + 'painaa 70 tonnia, ja se vihittiin käyttöön 15. syyskuuta '
+          + '1972 joen suulle.'
+          + '\n\n'
+          + 'Vuonna 1997 valmistunut Esplanade-silta jäi patsaan '
+          + 'eteen, ja täyttötyöt olivat samalla siirtäneet '
+          + 'rantaviivaa niin, ettei patsas enää seissyt joen suulla. '
+          + 'Siksi se siirrettiin huhtikuussa 2002 runsaan sadan '
+          + 'metrin päähän nykyiseen Merlion-puistoon. Siirto kesti kaksi '
+          + 'päivää: patsas nostettiin proomulle kahdella nosturilla, '
+          + 'ja koska se oli liian korkea mahtuakseen Esplanade-sillan '
+          + 'alitse, se piti nostaa matkan varrella sillan yli ja '
+          + 'takaisin proomulle.',
+      kuvat: [
+        {
+          tiedosto: 'Singapore Merlion BCT.jpg',
+          selite: 'Merlion läheltä: valkoinen leijonanpää suihkuttaa '
+            + 'vettä kaarena, ruumis on suomuinen kalanpyrstö, ja '
+            + 'takana näkyy Fullertonin entisen postitalon '
+            + 'pylväsjulkisivu.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gardens by the Bay': {
+      aika: 'avattu 2012',
+      teksti: 'Gardens by the Bay on satakunta hehtaaria puistoa '
+          + 'Marina Bayn rannalla, maalla joka on täytetty merestä. '
+          + 'Kolmesta rantapuutarhasta '
+          + 'suurin on Bay South, 54 hehtaaria, ja se avattiin '
+          + 'yleisölle 29. kesäkuuta 2012. Puiston yleissuunnitelman '
+          + 'muoto on otettu orkideasta, joka on maan kansalliskukka: '
+          + 'juuret ovat rannassa kasvihuoneina, lehdet maastonmuotoja '
+          + 'ja versot polkuja, ja kukat ovat teemapuutarhoja.'
+          + '\n\n'
+          + 'Puiston tunnus ovat superpuut: kahdeksantoista '
+          + 'puumaista teräsrakennelmaa, joiden korkeus vaihtelee '
+          + '25 metristä 50 metriin. Ne ovat pystypuutarhoja, joiden '
+          + 'runkoja peittävät saniaiset, köynnökset, orkideat ja '
+          + 'bromeliat. Rakennelmat myös tekevät työtä kuin puut: '
+          + 'katoksissa on aurinkokennoja, jotka tuottavat sähköä '
+          + 'valaistukseen, ne keräävät sadevettä kasteluun ja '
+          + 'suihkulähteisiin, ja ne toimivat viereisten '
+          + 'kasvihuoneiden jäähdytyksen ilmanotto- ja '
+          + 'poistokanavina.'
+          + '\n\n'
+          + 'Rannassa on kaksi lasikupolia. Flower Dome on maailman '
+          + 'suurin pilariton lasikasvihuone, ja sen vieressä on '
+          + 'viileä Cloud Forest. Kupolien katolta kerätty sadevesi '
+          + 'kiertää jäähdytysjärjestelmässä, joka on kytketty '
+          + 'superpuihin. Yksi puista, se viisikymmenmetrinen, on '
+          + 'ontto ja siihen on rakennettu näköalataso.',
+      kuvat: [
+        {
+          tiedosto: 'Singapore Supertree-Grove-in-The-Gardens-02.jpg',
+          selite: 'Superpuulehto ylhäältä: kymmenkunta '
+            + 'teräsrunkoista pylvästä kannattelee levymäisiä '
+            + 'latvuksia, runkoja peittää violetti kasvillisuus, ja '
+            + 'kahden puun väliin on ripustettu kaareva kävelysilta.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sri Mariamman -temppeli': {
+      aika: 'perustettu 1827, vanhimmat osat 1843',
+      teksti: 'Sri Mariamman on Singaporen ensimmäinen ja vanhin '
+          + 'hindutemppeli. Sen perusti vuonna 1827 Naraina Pillai, '
+          + 'Penangista tullut hallinnon kirjuri, joka oli saapunut '
+          + 'saarelle Rafflesin mukana toukokuussa 1819. Ensimmäinen '
+          + 'rakennus oli puuta ja attap-lehtiä, ja siihen asetettiin '
+          + 'pieni Mariamman-jumalattaren kuva nimeltä Sinna Amman. '
+          + 'Mariamman on eteläintialainen maaseudun jumalatar, jolta '
+          + 'pyydetään suojaa tauteja vastaan. Temppelin nykyisten '
+          + 'hoitajien mukaan päähuoneen jumalankuva on yhä sama, '
+          + 'jonka Pillai asetti paikalleen.'
+          + '\n\n'
+          + 'Nykyisen tiilirakennuksen vanhimmat osat ovat vuodelta '
+          + '1843, ja suurin osa siitä, mitä nyt näkyy, rakennettiin '
+          + '1862–1863. Koristeveistokset teki todennäköisesti '
+          + 'Nagapattinamin ja Cuddaloren seudulta tullut '
+          + 'käsityöläisryhmä. Katua hallitseva porttitorni eli '
+          + 'gopuram on nuorempi: ensimmäinen, kolmikerroksinen '
+          + 'valmistui 1903, ja nykyinen kuusikerroksinen 1925.'
+          + '\n\n'
+          + 'Temppeli oli aikanaan enemmän kuin rukouspaikka. Se '
+          + 'majoitti uusia siirtolaisia, kunnes nämä löysivät työn ja '
+          + 'oman katon, ja pitkään sen pappi oli ainoa, joka sai '
+          + 'vihkiä hinduavioliittoja Singaporessa — temppeli toimi '
+          + 'siis myös rekisterinä. Vuosittain siellä vietetään '
+          + 'timiti-juhlaa, jonka katsomiseen on rakennettu korotettu '
+          + 'katsomo.',
+      kuvat: [
+        {
+          tiedosto: '2016 Singapur, Chinatown, Świątynia Sri Mariamman (04).jpg',
+          selite: 'Temppelin katolla makaa valkoinen Nandi-härkä '
+            + 'kaulanauhassaan, ja sen takana kohoaa värikäs '
+            + 'pyhäkkökupoli kaarikoristeineen.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Thian Hock Keng -temppeli': {
+      aika: '1821–1842',
+      teksti: 'Thian Hock Keng eli Taivaallisen onnen palatsi on '
+          + 'hokkien-yhteisön vanhin ja tärkein temppeli '
+          + 'Singaporessa. Se alkoi noin vuonna 1821 pienenä '
+          + 'suitsukemajana Telok Ayer -kadun varrella, joka kulki '
+          + 'silloin rantaviivalla. Kiinasta saapuneet merenkulkijat '
+          + 'ja siirtolaiset tulivat sinne kiittämään merenjumalatar '
+          + 'Mazua siitä, että olivat päässeet perille.'
+          + '\n\n'
+          + 'Varsinainen temppeli rakennettiin vuosina 1839–1842, ja '
+          + 'sen kustannukset olivat 30 000 Espanjan dollaria. '
+          + 'Suurimman lahjoituksen antoi liikemies Tan Tock Seng. '
+          + 'Rakennusaineet ja Mazu-patsas tuotiin laivoilla '
+          + 'Kiinasta — osa pylväskivistä, puutavarasta ja tiilistä '
+          + 'oli laivojen painolastia. Työssä auttoi myös '
+          + 'Chulia-kadun intialaisyhteisö, ja sen muistoksi oikeaan '
+          + 'siipeen asetettiin patsas miehestä, joka kannattelee '
+          + 'kattopalkkia harteillaan.'
+          + '\n\n'
+          + 'Pohjakaava on Fujianin perinteinen: kolme salia '
+          + 'peräkkäin ja niiden välissä avoimet pihat. Pääsalissa on '
+          + 'Mazun pyhäkkö, sen takana Guanyinin pienempi alttari, ja '
+          + 'sivuilla kaksi kahdeksankulmaista pagodia — toisessa on '
+          + 'Kungfutsen pyhäkkö, toisessa temppelin perustaneiden '
+          + 'hokkien-siirtolaisten sukutaulut. Vuoden 1906 '
+          + 'kunnostuksessa taloon lisättiin kaksi länsimaista '
+          + 'yksityiskohtaa: Glasgow’sta tilattu takorautaportti ja '
+          + 'seinien kaakelilista.',
+      kuvat: [
+        {
+          tiedosto: 'Thian Hock Keng Temple Singapore.jpg',
+          selite: 'Temppelin pääsali sisältä: kaksi punaista '
+            + 'paperilyhtyä riippuu kattopalkeista, perällä on '
+            + 'kullattu alttaripöytä ja monikätinen jumalankuva, ja '
+            + 'lattia on ladottu kuviolaatoista.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

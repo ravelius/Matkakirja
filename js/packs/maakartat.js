@@ -6782,6 +6782,73 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Fushimi Inari-taisha', lat: 34.9672, lon: 135.7728 },
     ],
   },
+  /*
+   * SINGAPOREN KOHDEKARTTA (Opus 20.8.2026).
+   *
+   * RAJAUS 4,2 × 3,6 km joen suun ympärillä. Kahdeksan kymmenestä
+   * kohteesta mahtuu 1,5 kilometrin ympyrään (oma haversine-laskenta
+   * koordinaateista: kaukaisin pari tässä ytimessä on Thian Hock
+   * Keng ↔ Fort Canning, 1,49 km), mutta kaksi on selvästi
+   * ulompana — Sultan-moskeija 2,4 km koilliseen ja Gardens by the
+   * Bay 2,2 km itään. Molempien ympärillä on katuverkkoa, joten
+   * kainalokartta olisi ollut väärä työkalu: kainalo on Medinan
+   * Quban ja Adenin Tawahin kaltaisille kohteille, joiden ympärillä
+   * on tyhjää. Väljempi yhtenäinen ruutu pitää kaikki kymmenen
+   * samassa kuvassa, ja joen suun tihein rykelmä avautuu
+   * zoomaamalla.
+   *
+   * KOORDINAATIT ovat kohteiden omista en-Wikipedian artikkeleista
+   * (haettu 20.8.2026), YHTÄ LUKUUN OTTAMATTA: Raffles Hotelin
+   * artikkelin infoboksissa on tyhjä {{Coord|format=dms}} ilman
+   * arvoja, joten sen piste on OpenStreetMapista (Nominatim,
+   * osoitteella "1 Beach Road, Singapore 189673", joka täsmää
+   * artikkelin infoboksin osoitteeseen sanatarkasti). Ero on
+   * kirjattu tähän, koska lähde ei ole sama kuin muilla.
+   *
+   * KAMPONG GLAMIN PISTEELLE ON KAKSI EHDOKASTA, ja ne ovat 90
+   * metrin päässä toisistaan: Sultan-moskeija 1,3022 / 103,8590 ja
+   * Istana Kampong Glam 1,3029 / 103,85988 (Malay Heritage Centren
+   * artikkeli antaa vielä kolmannen, 1°18′08″N 103°51′37″E). Kartan
+   * piste on moskeijan, koska se on kadulta katsottuna alueen
+   * maamerkki; istana ja Malay Heritage Centre kerrotaan sen
+   * jutussa. Ero on kartan mittakaavassa alle prosentin.
+   *
+   * CAVENAGH-SILTA JÄI POIS KARTALTA, vaikka se on lehden nostona
+   * ja kartan alueella. Sen piste (1,28656 / 103,85235) on 105
+   * metrin päässä Empress Placen pisteestä eli 2,5 % ruudun
+   * leveydestä, ja numeroympyrät menisivät päällekkäin — sama
+   * ratkaisu kuin Mekan Kaaballa ja Petran palatsihaudoilla. Silta
+   * kerrotaan Empress Placen jutussa ja omassa nostossaan.
+   *
+   * CHINATOWN EI OLE OMANA PISTEENÄÄN samasta syystä: sen
+   * aluekoordinaatti on 160 metriä Sri Mariammanin temppelistä, ja
+   * kaupunginosaa edustavat kartalla sen kaksi temppeliä.
+   */
+  singapore: {
+    polku: 'assets/kartat/singapore-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 1.308, etela: 1.276, lansi: 103.836, ita: 103.874 },
+    esittely: 'Kartan alue on Singapore-joen suu ja sen ympärille '
+      + 'vuodesta 1819 kasvaneet kaupunginosat. Joen eteläpuolella '
+      + 'ovat Boat Quay ja Chinatownin temppelit, pohjoispuolella '
+      + 'siirtomaahallinnon Empress Place ja Fort Canningin kukkula. '
+      + 'Koillisessa on Kampong Glam, joka annettiin sulttaanille ja '
+      + 'malaijiyhteisölle, ja idässä täyttömaalla Gardens by the '
+      + 'Bay. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Sultan-moskeija', lat: 1.3022, lon: 103.859 },
+      { nimi: 'Raffles Hotel', lat: 1.29468, lon: 103.85464 },
+      { nimi: 'Fort Canningin kukkula', lat: 1.29444, lon: 103.84694 },
+      { nimi: 'Clarke Quay', lat: 1.29002, lon: 103.84609 },
+      { nimi: 'Empress Place', lat: 1.28722, lon: 103.85167 },
+      { nimi: 'Boat Quay', lat: 1.28685, lon: 103.84951 },
+      { nimi: 'Merlion-puisto', lat: 1.28681, lon: 103.8545 },
+      { nimi: 'Gardens by the Bay', lat: 1.28472, lon: 103.865 },
+      { nimi: 'Sri Mariamman -temppeli', lat: 1.28261, lon: 103.84528 },
+      { nimi: 'Thian Hock Keng -temppeli', lat: 1.28106, lon: 103.84753 },
+    ],
+  },
 };
 
 /*

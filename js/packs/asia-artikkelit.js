@@ -2126,10 +2126,38 @@ export const ASIA_ARTIKKELIT = {
       + 'paljon siirtomaa-ajan rakennuksia, koska rakennuskanta ei '
       + 'uusiutunut vuosikymmeniin.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, sama linja kuin Medinassa ja Mekassa:
+   * intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat kaupungin omista, tähän erään
+   * tarkistetuista lähteistä (en-Wikipedia "Singapore", "History of
+   * Singapore", "Port of Singapore", "Strait of Malacca", haettu
+   * 20.8.2026) ja lehden omista teksteistä. teksti-kenttä on
+   * ennallaan.
+   */
   Singapore: {
-    intro: 'Singapore on saarivaltio, joka mahtuisi Suomeen yli '
-      + 'kolmesataa kertaa. Silti sen satama on yksi maailman '
-      + 'vilkkaimmista, ja maalla on neljä virallista kieltä.',
+    intro: 'Singapore on saarivaltio Malakan salmen suulla, noin '
+      + 'asteen verran päiväntasaajasta pohjoiseen. Pääsaaren lisäksi '
+      + 'siihen kuuluu yli kuusikymmentä pientä saarta, ja koko maa '
+      + 'mahtuu yhden suurkaupungin alalle: se on **kaupunkivaltio**, '
+      + 'jolla ei ole erillistä pääkaupunkia. Lännessä on Malakan '
+      + 'salmi, etelässä Singaporen salmi ja pohjoisessa kapea '
+      + 'Johorin salmi, jonka yli pääsee pengertietä Malesiaan.'
+      + '\n\n'
+      + 'Nykyinen kaupunki alkaa vuodesta 1819, kun brittiläinen '
+      + 'virkamies Stamford Raffles perusti joen suulle kauppa-aseman '
+      + 'ja teki siitä **vapaasataman**. Ennen häntä saarella asui '
+      + 'noin tuhat ihmistä; vuoteen 1860 mennessä väkeä oli yli '
+      + 'kahdeksankymmentätuhatta. Kiinalaiset, malaijit, intialaiset '
+      + 'ja eurooppalaiset kauppahuoneet asettuivat saman joen '
+      + 'varrelle, ja Suezin kanavan avaaminen vuonna 1869 lyhensi '
+      + 'matkan Eurooppaan niin, että höyrylaivoja alkoi kulkea '
+      + 'salmen kautta entistä tiheämmin.'
+      + '\n\n'
+      + 'Virallisia kieliä on neljä — englanti, malaiji, '
+      + 'mandariinikiina ja tamili — ja ilmasto on trooppinen '
+      + 'sademetsäilmasto ilman selviä vuodenaikoja. Singapore oli '
+      + 'osa Malesiaa vuosina 1963–1965 ja siitä lähtien itsenäinen.',
     teksti: 'Singapore on Malakan niemimaan eteläkärjessä, aivan '
       + 'päiväntasaajan tuntumassa. Pinta-alaa on noin 730 '
       + 'neliökilometriä, ja se kasvaa yhä: merta täytetään maalla. '

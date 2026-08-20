@@ -1957,6 +1957,48 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 43.13, etela: 43.1035, lansi: 131.864, ita: 131.912 },
     meri: true,
   },
+  singapore: {
+    /*
+     * JOEN SUU JA SEN KAUPUNGINOSAT (20.8.2026). Ruutu on
+     * 4,2 × 3,6 km ja se kattaa kaikki kymmenen lehden kohdetta:
+     * pohjoisessa Kampong Glamin Sultan-moskeija, keskellä
+     * Singapore-joen suu siltoineen ja laitureineen, lännessä
+     * Fort Canningin kukkula, etelässä Chinatownin kaksi temppeliä
+     * ja idässä Marina Bayn takaa Gardens by the Bay.
+     *
+     * RUUTU ON VÄLJEMPI KUIN ITSE KLUSTERI, JA SE ON HARKITTU.
+     * Kahdeksan kohdetta kymmenestä mahtuu 1,5 kilometrin
+     * ympyrään joen suulla — tiukka rajaus olisi ollut kaunis,
+     * mutta se olisi jättänyt pois sekä Kampong Glamin (2,4 km
+     * koilliseen) että Gardens by the Bayn (2,2 km itään). Kumpikin
+     * on lehden oma kohde ja kummankin ympärillä on katuverkkoa,
+     * joten kainalokartta olisi ollut väärä ratkaisu: kainalo on
+     * niitä varten, joiden ympärillä on tyhjää (Medinan Quba,
+     * Adenin Tawahi). Nyt kaikki kymmenen ovat samassa ruudussa,
+     * ja joen suun tihein rykelmä avautuu zoomaamalla.
+     *
+     * CAVENAGH-SILTA JÄI POIS KARTALTA, vaikka se on lehden
+     * nostona: sen piste olisi runsaat sata metriä Empress Placen
+     * pisteestä eli noin kaksi ja puoli prosenttia ruudun
+     * leveydestä, ja numeroympyrät menisivät päällekkäin (Petran ja
+     * Mekan oppi). Silta on Empress Placen jutussa ja omassa
+     * nostossaan.
+     *
+     * PALVELUTIET PÄÄLLÄ, JALKAKÄYTÄVÄT EIVÄT. Boat Quayn ja Clarke
+     * Quayn rantalaiturit sekä Chinatownin korttelien sisäkujat ovat
+     * OSM:ssä service-teitä. Jalkakäytävät kokeiltiin myös, mutta
+     * ne toivat rantabulevardit ja Marina Bayn kiertoreitin
+     * kaksinkertaisina viivoina.
+     *
+     * meri: true. Marina Bay, Kallanginlahti ja sataman vedet ovat
+     * täällä valtaosin rantaviivaa ilman vesimonikulmiota, ja ilman
+     * lippua kartan koko itälaita jäi paperin väriseksi — joki
+     * piirtyi silloin ainoana vetenä ja näytti kadulta.
+     */
+    rajat: { pohjoinen: 1.308, etela: 1.276, lansi: 103.836, ita: 103.874 },
+    palvelutiet: true,
+    meri: true,
+  },
 };
 
 /*
