@@ -29688,6 +29688,431 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
+   * PEKING (Opus 20.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian artikkeleista Beijing,
+   * Forbidden City, Hutong, Peking duck, Great Wall of China,
+   * Badaling, Temple of Heaven, Old Summer Palace, Summer Palace,
+   * Peking opera, Nanluoguxiang, Tiananmen, Zhengyangmen, Jingshan
+   * Park, Drum Tower and Bell Tower of Beijing ja Yonghe Temple
+   * (haettu 20.8.2026; "Lama Temple" on uudelleenohjaus Yonghe
+   * Templeen). Faktapohja ja riippumaton tarkistus löysivät nolla
+   * asiavirhettä; tarkistuksen kaksi huomiota on huomioitu tässä:
+   * H3-nostoon otettiin mukaan Old Summer Palace -artikkelin tieto,
+   * että Tongzhi-keisarin entisöintiyritys alkoi juuri vuonna 1873 ja
+   * keskeytyi 1874, ja Badalingin etäisyytenä käytetään artikkelin
+   * omaa lukua "noin 80 km luoteeseen" selittämättä sitä tiepituudeksi
+   * (linnuntie koordinaateista olisi n. 59 km — ero kerrotaan vain
+   * tässä kommentissa, ei lukijalle, koska selitys olisi tulkintaa).
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 20.8.2026: ei nykypolitiikkaa, ei
+   * Kulttuurivallankumouksen eikä vuoden 1989 käsittelyä missään
+   * muodossa, vaikka lähdeartikkeleissa niistä on runsaasti
+   * aineistoa. Painopiste on keisariajan historiassa, kulttuurissa ja
+   * arkkitehtuurissa. 1900-luvun kiistanalaisista tapahtumista mukana
+   * on vain nyrkkeilijäkapina 1900, ja se VAIN oppaan jaksossa 4,
+   * lyhyesti ja neutraalisti. Neutraalit nykytosiasiat (metro,
+   * lentoasemat, museokävijät) ovat oppaassa normaalisti.
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY: Kielletty kaupunki näkyy neljässä
+   * kuvassa (kansikuvan kulmatorni, avauskuvan kattomeri Jingshanilta,
+   * K1:n Meridiaaniportti ja kohdejutun Korkeimman harmonian sali) —
+   * se on lehden pääkohde ja jokainen kuva näyttää eri rakennuksen,
+   * sama linja kuin Mekan kolme Jabal al-Nouria. Kiinan muuri on
+   * kahdesti (avauskuva ja K4, eri kuvakulmat) ja hutong-kujat
+   * kolmesti (avauskuva, jakso 3 ja K2:n siheyuan-piha — kaikki eri
+   * paikkoja); hutongit ovat lehden kantoteemoja. Taivaan temppeli
+   * näkyy kansikuvassa (Sadonkorjuuhalli), H2:ssa (Pyöreä alttari) ja
+   * jutussa (Keisarillinen taivaanholvi) — kolme eri rakennusta
+   * samassa puistossa.
+   *
+   * KAKSI HYLKÄYSLINJAA KUVATYÖSTÄ: 1874 otettu Qianmenin katukuva
+   * (WDL2110) hylättiin arkistonumeromerkinnän vuoksi ja vuoden 1900
+   * lähetystökorttelin panoraama valokuvaan kirjoitetun tekstin
+   * vuoksi — jakso 4 jäi siksi kuvattomaksi (sallittua: kuvattomia
+   * jaksoja on kaksi viidestä, jaksot 4 ja 5).
+   */
+  peking: [
+    {
+      id: 'kaupunki',
+      nimi: 'Peking',
+      johdanto: 'Pohjoinen pääkaupunki, jota keisarit hallitsivat '
+        + 'Kielletystä kaupungista käsin lähes viisisataa vuotta. '
+        + 'Muurien takaa löytyy kapeita hutong-kujia ja niiden '
+        + 'pihataloja, ja pöydässä maistuu rapea Peking-ankka.',
+      kansikuvat: [
+        {
+          tiedosto: 'Hall of Prayer for Good Harvests 2013.jpg',
+          selite: 'Sadonkorjuurukoushalli Taivaan temppelissä: kolme '
+            + 'sinistä lasitettua kattoa kapenee kullattuun huippuun, '
+            + 'ja halli seisoo kolmiportaisen marmoriterassin päällä. '
+            + 'Portailla liikkuu kävijöitä pieninä hahmoina.',
+          lahde: 'Bernhard Wintersperger, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Peking duck by Mr Wabu in Beijing.jpg',
+          selite: 'Peking-ankkaa siivuina valkoisella lautasella '
+            + 'pekingiläisessä ravintolassa. Taustalla odottavat ohuet '
+            + 'vehnäletut, kurkkutikut ja kevätsipulit, joihin '
+            + 'rapeanahkaiset siivut kääritään.',
+          lahde: 'Mr Wabu, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Forbidden City northwest corner tower and moat.jpg',
+          selite: 'Kielletyn kaupungin luoteinen kulmatorni ja leveä '
+            + 'vallihauta. Monikattoinen torni nousee harmaan muurin '
+            + 'takaa, ja rannalla riippuu pajuja veden ylle.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: palatsi, kuja ja muuri — kaupungin kolme kerrosta
+       * siinä järjestyksessä, jossa lehti ne kertoo (keisarin
+       * kaupunki, tavallisten kaupunkilaisten kujat ja pohjoinen
+       * raja, jota vasten kaupunki rakennettiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Views of the Forbidden City from Jingshan Park 3.jpg',
+          selite: 'Kielletty kaupunki Jingshanin kukkulalta: kultaiset '
+            + 'katot jatkuvat riveinä etelään, ja etualalla on '
+            + 'palatsin pohjoisportti aukioineen.',
+          lahde: 'EditQ, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Hutong, Gasse in Peking, alley in Beijing (44042315480).jpg',
+          selite: 'Hutong-kuja harmaine tiilimuureineen. Ovien päälle '
+            + 'on rakennettu pienet katokset, ja yksi kulkija '
+            + 'etääntyy kujaa pitkin selin.',
+          lahde: 'FLASHPACKER TRAVELGUIDE, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Peking Grosse Mauer-20071019-RM-115708.jpg',
+          selite: 'Kiinan muuri nousee ja laskee vuorenharjalla '
+            + 'Badalingissa. Syksy värittää rinteet, ja vartiotornit '
+            + 'merkitsevät harjanteen käännekohdat.',
+          lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki muurin sisällä',
+          tiedosto: 'Meridian Gate (Forbidden City) 2015 December.jpg',
+          teksti: 'Kielletty kaupunki oli keisarin koti ja valtakunnan '
+            + 'keskus lähes 500 vuotta, vuodesta 1420 vuoteen 1924. '
+            + 'Palatsialue on suorakaide, 961 metriä pohjoisesta '
+            + 'etelään ja 753 metriä idästä länteen, ja sitä kiertää '
+            + '7,9 metriä korkea muuri sekä 52 metriä leveä '
+            + 'vallihauta. Kansan suussa palatsissa on 9999 huonetta, '
+            + 'mutta tarkka laskenta löysi niitä 8886 — silti se on '
+            + 'maailman suurin säilynyt puurakenteinen '
+            + 'palatsikokonaisuus. Alueella asui 24 keisaria, 14 '
+            + 'Mingin ja 10 Qingin sukua.',
+          selite: 'Meridiaaniportti, Kielletyn kaupungin '
+            + 'pääsisäänkäynti etelästä: portin kaksi siipeä työntyvät '
+            + 'aukiolle niin, että tulija on kolmelta sivulta muurien '
+            + 'ympäröimä.',
+          lahde: 'Morio, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Peking',
+        },
+        {
+          otsikko: 'Kuja jonka nimi tarkoittaa kaivoa',
+          tiedosto: 'GongWangFu courtyard (2917111732).jpg',
+          teksti: 'Hutong tulee mongolinkielisestä sanasta, joka '
+            + 'tarkoittaa vesikaivoa, ja termi ilmestyi Yuan-dynastian '
+            + 'aikana 1200-luvulla. Hutongit ovat siheyuan-pihatalojen '
+            + 'riveistä syntyneitä kujia, jotka kulkevat yleensä '
+            + 'idästä länteen niin, että ovet avautuvat pohjoiseen ja '
+            + 'etelään — hyvän feng shuin vuoksi. Lähellä keisarin '
+            + 'palatsia asuivat aateliset suurine pihoineen ja '
+            + 'koristelluin kattopalkein, kauempana tavalliset '
+            + 'kaupunkilaiset ahtaammissa ja vaatimattomammissa '
+            + 'kujissa.',
+          selite: 'Siheyuan-piha prinssi Gongin residenssissä: '
+            + 'harmaakattoiset siipirakennukset, punaiset ovet ja '
+            + 'ikkunaristikot kiertävät pihan pientä puutarhaa.',
+          lahde: 'Caitriana Nicholson from 北京 ~ Beijing, 中国 ~ China, '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Peking',
+        },
+        {
+          otsikko: 'Ankka joka teki Pekingistä kuuluisan',
+          tiedosto: 'Beijing Roast Duck in oven.jpeg',
+          teksti: 'Pekingin ankkaa on paistettu Kiinassa jo '
+            + '500-luvulta lähtien, ja jo 1330 keisarin '
+            + 'keittiömestari kirjasi reseptin oppaaseensa. Mutta '
+            + 'ravintola Quanjude, joka avattiin 1864, teki siitä '
+            + 'maailmankuulun. Perustaja Yang Quanren kehitti '
+            + 'riippu-uunin, jossa ankka paahtuu avotulella '
+            + 'hedelmäpuun oksien lämmössä, kunnes nahka rutisee '
+            + 'lasimaisena. Toinen perinne, suljetussa uunissa '
+            + 'paistettu tyyli, on peräisin Bianyifang-ravintolasta, '
+            + 'jonka nimi on merkitty vuoteen 1416 asti.',
+          selite: 'Ankkoja kypsymässä riippu-uunissa: linnut roikkuvat '
+            + 'koukuissa liekkien yllä, ja tulen hehku valaisee '
+            + 'hämärän paistohuoneen.',
+          lahde: 'ZhengZhou, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Peking',
+        },
+        {
+          otsikko: 'Muuri joka ei mahdu yhteen näkymään',
+          tiedosto: 'Peking Great Wall-20071019-RM-111425.jpg',
+          teksti: 'Kiinan muuri kulkee Pekingin pohjoispuolella '
+            + 'vuorten harjoja pitkin. Kaikkine haaroineen sitä on '
+            + '21 196 kilometriä — Liaodongin niemimaalta Lop Nurin '
+            + 'järvelle asti — ja ensimmäiset pätkät rakennettiin jo '
+            + '600-luvulla eaa. Osa muurista on mitattu vasta '
+            + '2000-luvulla infrapunalaittein ja GPS:llä, kun '
+            + 'kukkuloiden alle kätkeytyneitä osuuksia löytyi lisää. '
+            + 'Lähin ja eniten vierailtu osuus on Badaling, noin 80 '
+            + 'kilometrin päässä keskustasta luoteeseen: se '
+            + 'rakennettiin 1504 ja avattiin matkailijoille 1957, '
+            + 'ensimmäisenä koko muurista.',
+          selite: 'Badalingin osuus syksyllä: muuri seuraa harjannetta '
+            + 'vartiotornilta toiselle, kävijät näkyvät sen päällä '
+            + 'pieninä pisteinä ja vuoret jatkuvat usvaan asti.',
+          lahde: 'Reinhold Möller Ermell, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Peking',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '201902 Qianmen Street in snow.jpg',
+          selite: 'Qianmenin katu lumisateessa: Zhengyangmenin '
+            + 'jousiampujatorni häämöttää kadun päässä, kiskoilla '
+            + 'seisoo vanhanmallinen raitiovaunu ja kulkijat '
+            + 'kääntyvät lumessa selin kameraan.',
+          lahde: 'Zheng sun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Peking on Kiinan pääkaupunki ja lähes 22 miljoonan '
+          + 'asukkaan jättiläinen, mutta sen ydin on yhä sama kuin '
+          + 'keisarien aikana: kaupunki järjestyy pohjois–etelä-'
+          + 'akselin ympärille, jonka keskellä on Kielletty kaupunki '
+          + '— nykyään Palatsimuseo, jossa käy noin 14 miljoonaa '
+          + 'kävijää vuodessa. Vanhat portit, temppelit ja '
+          + 'hutong-kujat ovat kehäteiden renkaiden sisällä, ja '
+          + 'muurin kuuluisin osuus odottaa vuorilla kaupungin '
+          + 'pohjoispuolella.',
+        artikkeli: {
+          nimi: 'Matkailijan Peking',
+          taitto: 'opas',
+          teksti: 'Keisarikaupungin akseli keskellä, kehätiet '
+            + 'renkaina sen ympärillä ja luoteessa vuoret, joiden '
+            + 'harjalla muuri kulkee.',
+          nosto: 'Ming-kauden kaupunginmuuri seisoi vuoteen 1965, '
+            + 'jolloin se purettiin ja metro rakennettiin sen '
+            + 'perustusten päälle — toinen kehätie seuraa yhä muurin '
+            + 'ääriviivaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Pekingiin lennetään kahta kenttää: vanhempi '
+                + 'pääkenttä on koillisessa, ja etelässä on Daxingin '
+                + 'lentoasema, jonka terminaali on maailman suurin '
+                + 'yhtenäinen asemarakennus. Kaupungissa liikutaan '
+                + 'metrolla, jonka verkosto on maailman toiseksi '
+                + 'pisin — ja jonka ensimmäinen linja rakennettiin '
+                + '1965 puretun kaupunginmuurin perustusten päälle. '
+                + 'Muurille Badalingiin pääsee luotijunalla: '
+                + 'Pohjoisasemalta kulkeva rata pysähtyy maan alle '
+                + 'louhitulla Badalingin asemalla, josta noustaan '
+                + 'suoraan muurin juurelle.',
+              kuva: {
+                tiedosto: 'Beijing Daxing International Airport Terminal 20191005.jpg',
+                selite: 'Daxingin lentoaseman halli: valkoinen '
+                  + 'kattorakenne aaltoilee korkealla liukukäytävien '
+                  + 'yllä, ja matkustajat näkyvät kaukana pieninä.',
+                lahde: 'Tyg728, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Peking on Pohjois-Kiinan tasangon '
+                + 'pohjoisreunalla 40–60 metrin korkeudessa, ja '
+                + 'vuoret suojaavat sitä pohjoisessa, luoteessa ja '
+                + 'lännessä. Kaupungin joet — muun muassa Chaobai ja '
+                + 'Yongding — kuuluvat Hai-joen vesistöön ja '
+                + 'virtaavat kaakkoon kohti merta. Itse kaupunki '
+                + 'kasvaa kehätie kehätieltä ulospäin; pekingiläiset '
+                + 'kuvaavat sitä sanomalla, että kaupunki leviää '
+                + 'kuin pannukakku. Toinen kehätie seuraa vanhan '
+                + 'muurin linjaa, kuudes yhdistää jo '
+                + 'satelliittikaupunkeja.',
+              kuva: {
+                tiedosto: 'Beijing ast 2007220 lrg.jpg',
+                selite: 'Satelliittikuva Pekingistä: harmaa '
+                  + 'kaupunki leviää tasangolle joka suuntaan '
+                  + 'vihreiden peltojen keskellä, ja oikeassa '
+                  + 'yläkulmassa erottuvat lentoaseman vaaleat '
+                  + 'kiitotiet.',
+                lahde: 'NASA, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: hutongit tänään',
+              teksti: 'Siheyuan-pihatalot ja hutong-kujat olivat '
+                + 'aikoinaan kaikkialla Pekingissä, mutta ne '
+                + 'katoavat nopeasti korkeiden talojen tieltä. '
+                + 'Puretun kujan asukkailla on oikeus vähintään yhtä '
+                + 'suureen asuntoon uudessa talossa, mutta moni '
+                + 'kaipaa silti kujien yhteisöllisyyttä ja '
+                + 'katuelämää, jota uusi kerrostalo ei korvaa. '
+                + 'Tunnetuimpia säilyneitä kujia on Nanluoguxiang, '
+                + 'noin 800 metriä pitkä, jonka varrella vanhat '
+                + 'pihatalot ja uudet kahvilat elävät rinnakkain.',
+              kuva: {
+                tiedosto: 'Hutong, BJ (2917986982).jpg',
+                selite: 'Arkinen hutong-kuja: pyykkiä kuivumassa '
+                  + 'narulla, polkupyöriä seinustalla ja matalien '
+                  + 'tiilitalojen kattoja vieri vieressä.',
+                lahde: 'Caitriana Nicholson from 北京 ~ Beijing, '
+                  + '中国 ~ China, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kesä 1900',
+              teksti: 'Elokuussa 1900 Pekingissä käytiin taistelu, '
+                + 'joka päätti nyrkkeilijäkapinan piirityksen: '
+                + 'ulkomaiset lähetystöt olivat olleet saarrettuina '
+                + 'kaupungissa, kunnes kahdeksan valtion liittouma '
+                + 'otti Pekingin haltuunsa. Rauhansopimus '
+                + 'allekirjoitettiin syyskuussa 1901, ja Kiina '
+                + 'joutui maksamaan korvauksia lähes neljänkymmenen '
+                + 'vuoden ajan. Keisarinnaleski Cixi palasi '
+                + 'kaupunkiin tammikuussa 1902, ja Qing-dynastia '
+                + 'jatkoi heikentyneenä vuoteen 1911 asti.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Peking on mantereinen kaupunki, jonka vuoden '
+                + 'jakaa Itä-Aasian monsuuni. Kesä on kuuma ja '
+                + 'kostea: heinäkuun keskilämpö on lähes '
+                + 'kaksikymmentäseitsemän astetta, ja heinä–elokuussa '
+                + 'sataa lähes kolmesataa millimetriä eli yli puolet '
+                + 'koko vuoden 545 millimetristä. Talvi on lyhyt, '
+                + 'kylmä ja kuiva: tammikuun keskilämpö on liki '
+                + 'neljä pakkasastetta ja yöt painuvat yhdeksään '
+                + 'pakkasasteeseen, mutta sadetta tulee vain muutama '
+                + 'millimetri kuussa. Kevääseen voi kuulua Gobin '
+                + 'aavikolta puhaltavia hiekkamyrskyjä. Kävelijän '
+                + 'parhaat kuukaudet ovat huhti–toukokuu ja '
+                + 'syys–lokakuu, jolloin päivälämmöt liikkuvat '
+                + 'parinkymmenen asteen molemmin puolin eikä '
+                + 'monsuunisade ole päällä.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki on ollut Yanjing, Zhongdu, Dadu, Beiping ja '
+        + 'Peking, ennen kuin siitä tuli Beijing. Joka nimenvaihdos '
+        + 'kertoo vallanvaihdosta — ja jokainen hallitsija jätti '
+        + 'jälkensä muureihin, temppeleihin ja palatseihin.',
+      tehtava: {
+        kysymys: 'Mistä läntinen kirjoitusasu Peking on peräisin?',
+        vaihtoehdot: [
+          'Jesuiitan Amsterdamissa 1655 julkaisemasta kartastosta',
+          'Brittiläisten sanomalehtien kirjoitusvirheestä',
+          'Venäläisten karttojen käännöksestä',
+          'Ranskalaisesta tietosanakirjasta',
+        ],
+        oikea: 0,
+        fakta: 'Jesuiitta Martino Martini käytti asua Peking '
+          + 'Amsterdamissa 1655 julkaistussa kartastossaan Novus '
+          + 'Atlas Sinensis, ja siitä se levisi Euroopan kieliin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Viisi nimeä, yksi kaupunki',
+          tiedosto: 'Novvs atlas Sinensis. LOC 2002625249-1.jpg',
+          teksti: 'Kaupunki on kantanut monta nimeä: Ji, Yanjing, '
+            + 'Zhongdu, Dadu ja lopulta Beijing eli pohjoinen '
+            + 'pääkaupunki — nimen antoi 1403 Ming-dynastian '
+            + 'Yongle-keisari erottaakseen kaupungin Nanjingista, '
+            + 'eteläisestä pääkaupungista. Läntinen kirjoitusasu '
+            + 'Peking on peräisin jesuiittalähetyssaarnaaja Martino '
+            + 'Martinilta, joka käytti sitä Amsterdamissa 1655 '
+            + 'julkaistussa kartastossaan Novus Atlas Sinensis. '
+            + 'Yongle-keisari aloitti myös Kielletyn kaupungin ja '
+            + 'Taivaan temppelin rakentamisen; molemmat valmistuivat '
+            + '1420.',
+          selite: 'Kiinan-kartta Martino Martinin kartastosta Novus '
+            + 'Atlas Sinensis (1655). Vasemmassa yläkulmassa on '
+            + 'koristeellinen nimikilpi, ja maakunnat on rajattu '
+            + 'värivyöhykkein.',
+          lahde: 'Martino Martini and Joan Blaeu, Wikimedia Commons (PD)',
+          wiki: 'Peking',
+        },
+        {
+          otsikko: 'Taivaan alttari ja luku yhdeksän',
+          tiedosto: 'Circular Mound Altar.JPG',
+          teksti: 'Taivaan temppeli rakennettiin samaan aikaan '
+            + 'Kielletyn kaupungin kanssa, 1406–1420, ja siellä '
+            + 'keisari uhrasi vuosittain hyvän sadon puolesta. '
+            + 'Pyöreän alttarin suunnittelussa toistuu keisarin luku '
+            + 'yhdeksän: keskimmäistä marmorilaattaa ympäröi '
+            + 'yhdeksän laatan rengas, sitten kahdeksantoista laatan '
+            + 'rengas, ja niin edelleen yhdeksään renkaaseen asti — '
+            + 'uloin on 9 × 9 laattaa. Sadonkorjuurukoushallissa '
+            + 'neljä sisintä pilaria ovat vuodenajat, kaksitoista '
+            + 'keskimmäistä kuukaudet ja kaksitoista uloimmaista '
+            + 'perinteiset kiinalaiset tunnit.',
+          selite: 'Pyöreä alttari iltavalossa: valkoiset '
+            + 'marmorikaiteet kiertävät porrastettua tasannetta '
+            + 'kolmena kehänä, ja portaat nousevat suoraan ylimmälle '
+            + 'tasolle. Kaksi kävijää erottuu vain tummina '
+            + 'siluetteina.',
+          lahde: 'Zcm11, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Peking',
+        },
+        {
+          otsikko: 'Puutarha jonka isoisä näki raunioina',
+          tiedosto: 'Xieqiqu Ruins of the Yuanmingyuan, Ernst Ohlmer, 1870\'s.jpg',
+          teksti: 'Qing-keisarit rakensivat luoteeseen kaupungista '
+            + 'laajoja puistopalatseja, joista suurin oli Vanha '
+            + 'kesäpalatsi eli Yuanmingyuan. Toisen oopiumisodan '
+            + 'lopussa 1860 anglo-ranskalaiset joukot ryöstivät ja '
+            + 'polttivat sen. Vuonna 1873 — isoisän matkavuonna — '
+            + 'nuori Tongzhi-keisari yritti entisöidä osan '
+            + 'rakennuksista, mutta hovin rahat eivät riittäneet, ja '
+            + 'hanke keskeytettiin jo 1874. Matkustaja olisi siis '
+            + 'nähnyt rikkinäisiä pylväitä, marmoriportaita ja '
+            + 'kesken jääneen työmaan — ei loistavaa palatsia. Myös '
+            + 'naapurin kesäpalatsi oli tuolloin vielä rauniona.',
+          selite: 'Ernst Ohlmerin valokuva 1870-luvulta: Xieqiqun '
+            + 'eurooppalaistyylisen palatsin raunio Vanhassa '
+            + 'kesäpalatsissa. Koristeellinen julkisivu seisoo yhä, '
+            + 'mutta katto on poissa ja pensaat kasvavat portailla.',
+          lahde: 'Ernst Ohlmer, Wikimedia Commons (PD)',
+          wiki: 'Peking',
+        },
+        {
+          otsikko: 'Ooppera syntyy keisarin syntymäpäivillä',
+          tiedosto: 'Chineese opera 1 by Joseph Lazer.jpg',
+          teksti: 'Peking-ooppera sai alkunsa 1790, kun neljä '
+            + 'Anhui-maakunnan teatteriseuruetta saapui Pekingiin '
+            + 'juhlimaan keisari Qianlongin 80-vuotispäivää. Vuonna '
+            + '1828 mukaan liittyi Hubein seurueita, ja tyylit '
+            + 'sulautuivat yhteen: oopperan katsotaan olleen täysin '
+            + 'kehittynyt vuoteen 1845 mennessä. Aluksi lavalla sai '
+            + 'esiintyä vain miehiä — naiset oli kielletty jo '
+            + '1670-luvulta lähtien — mutta 1870-luvulla naiset '
+            + 'alkoivat epävirallisesti ilmestyä lavalle mieshahmoja '
+            + 'esittäen. Virallinen kielto purettiin vasta 1912.',
+          selite: 'Peking-oopperan naishahmo eli dan täydessä '
+            + 'asussa: kasvot on maalattu valkoisiksi ja punaisiksi '
+            + 'naamion tavoin, päähine on koristeltu tupsuin ja '
+            + 'helmin, ja kirjailtu puku laskeutuu lattiaan asti.',
+          lahde: 'Joseph Lazer, Wikimedia Commons (CC BY-SA 2.5 in)',
+          wiki: 'Peking',
+        },
+      ],
+    },
+  ],
+  /*
    * TOKION KANSISIVU (nippu 2, 13.8.2026). JPN-maalehti vie
    * historian, ruoan, kuvataiteen, luonnon ja tieteen, joten
    * kaupungille jää arki ja alakaupunki.

@@ -1516,6 +1516,46 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  peking: {
+    /*
+     * KEISARIKAUPUNGIN AKSELI (20.8.2026). Ruutu seuraa Pekingin
+     * pohjois–etelä-pääakselia: pohjoisessa Yonghe-temppeli ja Rumpu-
+     * ja kellotornit, keskellä Kielletty kaupunki, Jingshan ja
+     * Tiananmen, etelässä Zhengyangmen ja Taivaan temppeli. Ruutu on
+     * noin 7,7 × 9,3 km eli hieman korkeampi kuin leveä — se on
+     * kaupungin oma muoto, sillä kaikki kahdeksan ydinkohdetta ovat
+     * samalla akselilla tai parin kilometrin päässä siitä.
+     *
+     * TAIVAAN TEMPPELI MÄÄRÄÄ ETELÄREUNAN. Se on 3,1 km Tiananmenista
+     * etelään, ja ilman sitä ruutu olisi tiiviimpi — mutta temppeli
+     * on lehden pääkohteita eikä sitä voi jättää pois. Piste osuu
+     * 88 %:n korkeudelle KUVAN OIKEASSA laidassa (x 68 %), joten se
+     * ei osu vasemman alakulman mittakaavajanaan (Salalahin oppi
+     * tarkistettu tools/tarkista-karttapisteet.mjs:llä).
+     *
+     * KAINALOSSA KESÄPALATSIT: Kesäpalatsi (Yiheyuan) ja Vanha
+     * kesäpalatsi (Yuanmingyuan) ovat noin 14 km luoteeseen eivätkä
+     * mahdu mihinkään järkevään pääruutuun — sama ratkaisu kuin
+     * Medinassa ja Adenissa, ja x: 14 on Adenin oppi suuntatekstin
+     * leikkautumisesta. Molemmat kohteet ovat samassa kainalossa,
+     * koska niiden väli on vain puolitoista kilometriä.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ: Kielletty kaupunki,
+     * Jingshan ja Taivaan temppelin puisto ovat OSM:ssä
+     * jalankulkualueita ja huoltoteitä, ja ilman lippuja juuri
+     * kartan pääkohteet piirtyisivät tyhjinä kenttinä — sama syy
+     * kuin Medinassa ja Mekassa.
+     */
+    rajat: { pohjoinen: 39.956, etela: 39.872, lansi: 116.345, ita: 116.435 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 40.014, etela: 39.99, lansi: 116.256, ita: 116.303 },
+        x: 14, y: 2, leveys: 20, suunta: '14 km luoteeseen',
+      },
+    ],
+  },
   izmir: {
     // Konakin aukio, Kemeraltin basaari ja antiikin agora mahtuvat
     // samaan runsaan puolentoista kilometrin ruutuun, ja niiden väli on
