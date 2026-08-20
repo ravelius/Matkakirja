@@ -640,6 +640,11 @@ export const RAAMATTU = {
         'Tieto kulkee sessiolta toiselle vain kirjoitettuna. Kartta '
           + 'on täydellinen: dokumentti, jota ei ole listalla, ei ole '
           + 'ohje. Testi valvoo (tests/dokumentit.test.mjs).',
+        'SIIRTOPROMPTIT (omistaja 19.8.2026): kun sessio kirjoittaa '
+          + 'omistajalle promptin toiselle sessiolle vietäväksi, se '
+          + 'annetaan vastauksessa AINA yhtenä koodilohkona, jotta '
+          + 'omistajan ympäristöön tulee kopioi-nappi — ei koskaan '
+          + 'juoksevana tekstinä tai vaakaviivoin rajattuna.',
         'CLAUDE.md — sisääntulo, osoittaa tänne.',
         'docs/tarina.md + docs/isoisan-raamattu.md — tarinan kaanon '
           + '(vain Fable kirjoittaa).',
