@@ -3477,23 +3477,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/edinburgh-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
     esittely: 'Edinburgh seisoo sammuneen tulivuoren päällä. Kallio '
       + 'jähmettyi noin 350 miljoonaa vuotta sitten niin kovaksi, '
       + 'ettei jäätikkö jaksanut kuluttaa sitä: jää kiersi kallion ja '
-      + 'kaivoi maan sen molemmilta puolilta, mutta taakse jäi pitkä '
-      + 'loiva rinne. Kallion laelle rakennettiin linna ja rinteelle '
-      + 'kaupunki, kapealle harjanteelle, jonne pääsi vain yhtä '
-      + 'tietä.\n\nKartalla näkyy kaksi kaupunkia vierekkäin. '
-      + 'Alaosassa kulkee vanhankaupungin harjanne: yksi katu linnalta '
-      + 'Holyroodin palatsille, vajaat kaksi kilometriä, ja sen '
-      + 'molemmin puolin kapeita kujia kuin kalanruotoja. Yläosassa on '
-      + 'Uusikaupunki, jonka suorat kadut ja aukiot muodostavat '
-      + 'ruudukon. Sitä alettiin rakentaa vuonna 1767, kun vanha '
-      + 'harjanne oli tullut täyteen. Kaupunkien välissä on vihreä '
-      + 'notko. Siellä oli ennen tekojärvi nimeltä Nor Loch; se '
-      + 'laskettiin kuiviin 1700-luvun lopulla, ja nyt notkossa on '
-      + 'puisto ja rautatie. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+      + 'jätti taakseen pitkän loivan rinteen. Laelle rakennettiin '
+      + 'linna ja rinteelle kaupunki kapealle harjanteelle, jonne '
+      + 'pääsi vain yhtä tietä; vanhankaupungin ainoa pääkatu kulkee '
+      + 'linnalta Holyroodin palatsille. Kun harjanne tuli täyteen, '
+      + 'vuodesta 1767 alettiin rakentaa suorakatuista uuttakaupunkia '
+      + 'notkon toiselle puolelle. Notkossa oli ennen tekojärvi Nor '
+      + 'Loch, joka laskettiin kuiviin 1700-luvun lopulla; nyt siinä '
+      + 'on puisto ja rautatie. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * Charlotte Squaresta ei ole suomenkielistä artikkelia, joten se
@@ -3513,24 +3513,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/marseille-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
     esittely: 'Marseille on rakennettu valkoisten kalkkikivikukkuloiden '
       + 'muodostamaan kulhoon, joka aukeaa länteen merelle. Kulhon '
-      + 'pohjassa on kapea luonnonpoukama, noin kilometrin mittainen '
-      + 'halkeama rannassa. Poukama on suojassa mistraalilta, '
-      + 'kylmältä tuulelta, joka syöksyy tänne luoteesta. Juuri siksi '
-      + 'kreikkalaiset purjehtijat pysähtyivät tähän noin 600 eaa. ja '
-      + 'perustivat Massalian. Makeaa vettä kukkuloilla ei sen sijaan '
-      + 'ollut juuri lainkaan: lopulta se tuotiin 80 kilometrin päästä '
-      + 'kanavaa pitkin, ja kanava valmistui vuonna 1849.\n\nKartan '
-      + 'keskellä on tuo poukama, Vanhasatama. Vesiallas on noin 900 '
-      + 'metriä pitkä ja 400 metriä leveä, ja sitä reunustaa laituri '
-      + 'kolmelta sivulta. Nykyään siinä on huviveneitä, ei '
-      + 'rahtilaivoja: isot laivat siirtyivät pohjoisempiin '
-      + 'satama-altaisiin 1800-luvun puolivälissä. Pohjoispuolella '
-      + 'kohoaa kukkulalle vanha kaupunginosa Le Panier, ja etelässä '
-      + 'nousee 149 metriä korkea kalliokieleke, jonka laella on '
-      + 'Notre-Dame de la Garde. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+      + 'pohjassa on kapea luonnonpoukama, joka on suojassa '
+      + 'mistraalilta, luoteesta syöksyvältä kylmältä tuulelta — juuri '
+      + 'siksi kreikkalaiset purjehtijat pysähtyivät tähän noin 600 '
+      + 'eaa. ja perustivat Massalian. Poukama on Vanhasatama, noin '
+      + '900 metriä pitkä ja 400 metriä leveä allas, jossa on nykyään '
+      + 'huviveneitä: rahtilaivat siirtyivät pohjoisempiin '
+      + 'satama-altaisiin 1800-luvun puolivälissä. Makeaa vettä '
+      + 'kukkuloilla ei ollut juuri lainkaan, ja lopulta se tuotiin 80 '
+      + 'kilometrin päästä kanavaa pitkin, joka valmistui 1849. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Saint-Victorin kirkosta ja Saint-Charlesin asemasta ei ole
@@ -3748,24 +3747,24 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/dublin-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 53.355, etela: 53.335, lansi: -6.294, ita: -6.244 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
     esittely: 'Dublinilla on kaksi nimeä, ja molemmat kertovat vedestä. '
       + 'Iirinkielinen Baile Átha Cliath tarkoittaa risuista tehdyn '
       + 'kahlaamon kaupunkia: Liffey-joen yli päästiin kävellen '
       + 'kohdassa, johon oli ladottu punottuja risuaitoja. '
-      + 'Englanninkielinen Dublin taas tulee sanoista dubh linn eli '
-      + 'musta lammikko. Se oli tumma vuorovesiallas siinä, missä pieni '
+      + 'Englanninkielinen Dublin tulee sanoista dubh linn eli musta '
+      + 'lammikko — tumma vuorovesiallas siinä, missä pieni '
       + 'Poddle-joki laski Liffeyhin. Viikingit perustivat altaan '
-      + 'rannalle tukikohdan vuonna 841 ja pitivät siinä laivojaan. '
-      + 'Allas on nykyään Dublinin linnan takapiha.\n\nKartan halki '
-      + 'kulkee Liffey. Sen lähde on vuorilla vain runsaan '
-      + 'kahdenkymmenen kilometrin päässä etelässä, mutta joki kiertää '
-      + 'sisämaan kautta pitkän lenkin ennen kuin palaa tänne mereen. '
-      + 'Joki jakaa kaupungin pohjoiseen ja eteläiseen puoleen, ja '
-      + 'tällä kartalla sen ylittää toistakymmentä siltaa. Kuuluisin on '
-      + 'valurautainen Ha’penny-silta vuodelta 1816: sen yli sai '
-      + 'kävellä puolen pennin maksusta, ja maksua perittiin sata '
-      + 'vuotta. Pohjoispuolella kohoaa 120 metriä korkea teräsneula '
-      + 'Spire. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'rannalle tukikohdan vuonna 841 ja pitivät siinä laivojaan; '
+      + 'allas on nykyään Dublinin linnan takapiha. Liffey jakaa '
+      + 'kaupungin pohjoiseen ja eteläiseen puoleen, ja keskustassa '
+      + 'sen ylittää toistakymmentä siltaa, joista kuuluisin on '
+      + 'valurautainen Ha’penny-silta vuodelta 1816. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Dublinin linnasta ja Ha’penny-sillasta ei ole suomenkielistä
@@ -4391,17 +4390,19 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/venetsia-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
     esittely: 'Venetsia on rakennettu 118 saarelle keskelle matalaa '
-      + 'laguunia. Talot seisovat miljoonien puupaalujen varassa, '
-      + 'jotka lyötiin pohjamutaan satoja vuosia sitten ja ovat '
-      + 'säilyneet hapettomassa liejussa kovina kuin kivi. Saaret on '
+      + 'laguunia, ja talot seisovat miljoonien puupaalujen varassa: '
+      + 'hapettomassa liejussa puu ei lahoa vaan kovettuu. Saaret on '
       + 'ommeltu yhteen sadoilla silloilla, ja jokainen niistä '
-      + 'ylitetään jalan.\n\nKartan halki kaartaa S-kirjaimen '
-      + 'muotoinen Canal Grande, kaupungin pääkatu: se on lähes neljä '
-      + 'kilometriä pitkä, ja sen yli pääsee kuivin jaloin vain '
-      + 'neljästä kohdasta. Muualla kanavan ylittää traghetto, iso '
-      + 'gondoli, jossa matkustajat seisovat koko matkan ajan. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'ylitetään jalan. Alueen halki kaartaa Canal Grande, kaupungin '
+      + 'lähes neljä kilometriä pitkä pääkatu, jonka yli pääsee kuivin '
+      + 'jaloin vain neljästä kohdasta. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi seuraa Canal Grandea lännestä itään, eli samassa
@@ -5176,23 +5177,23 @@ export const KAUPUNKIKARTAT = {
     // --vari).
     piirtoRajat: { pohjoinen: 43.78325, etela: 43.75525, lansi: 11.2349, ita: 11.2781 },
     varikartta: 'assets/kartat/firenze-varikartta.png',
-    esittely: 'Firenzen vanhakaupunki on pieni: kartan reunasta reunaan on '
-      + 'noin kaksi kilometriä, ja kaikki kohteet ovat kävelymatkan päässä '
-      + 'toisistaan. Kaupunki alkoi roomalaisena varuskuntana vuonna 59 '
-      + 'eaa., ja sen suorakulmainen sotilasruutukaava on yhä kartalla '
-      + 'näkyvissä keskellä muuten mutkittelevaa kujaverkkoa. Keskiajalla '
-      + 'kaupunki kasvoi villakankaan ja pankkien varassa niin isoksi, '
-      + 'että se joutui rakentamaan muurinsa kolmesti uudelleen. Viimeiset '
-      + 'muurit purettiin 1860-luvulla, kun Firenze oli Italian '
-      + 'pääkaupunki, ja niiden paikalle tuli leveä kehäkatujen '
-      + 'rengas — se erottuu kartalla vanhan ytimen ympärillä.\n\nArno '
-      + 'virtaa kartan halki lännestä itään ja jakaa kaupungin kahtia. '
-      + 'Pohjoispuolella on vanha ydin: Duomon kupoli, Signorian aukio ja '
-      + 'Uffizi joen rannassa. Eteläpuolta sanotaan Oltrarnoksi eli '
-      + '"Arnon takaiseksi", ja siellä ovat käsityöläisten korttelit ja '
-      + 'Bobolin puutarhan iso vihreä kiila. Joen yli johtaa useita '
-      + 'siltoja, joista vanhin ja kuuluisin on Ponte Vecchio — kartalla '
-      + 'se erottuu siitä, että sen päällä on taloja.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Firenzen vanhakaupunki mahtuu noin kahden kilometrin '
+      + 'levyiselle alalle, joten kaikki kohteet ovat kävelymatkan '
+      + 'päässä toisistaan. Kaupunki alkoi roomalaisena varuskuntana vuonna 59 '
+      + 'eaa., ja sen suorakulmainen sotilasruutukaava on yhä '
+      + 'nähtävissä keskellä muuten mutkittelevaa kujaverkkoa. '
+      + 'Keskiajalla kaupunki kasvoi villakankaan ja pankkien varassa '
+      + 'niin isoksi, että muurit jouduttiin rakentamaan kolmesti '
+      + 'uudelleen; viimeiset purettiin 1860-luvulla, kun Firenze oli '
+      + 'Italian pääkaupunki. Arno jakaa kaupungin kahtia: '
+      + 'pohjoispuolella ovat Duomo, Signorian aukio ja Uffizi, '
+      + 'eteläpuolella eli Oltrarnossa käsityöläisten korttelit ja '
+      + 'Bobolin puutarha.',
     kohteet: [
       /*
        * NELJÄ ANSAA fi.wikipediassa, kaikki tarkistettu

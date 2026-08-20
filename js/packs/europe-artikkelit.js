@@ -2,11 +2,41 @@
 // sama rakenne kuin Afrikan OMAT_ARTIKKELIT). Rakentuu kaupunki
 // kerrallaan.
 export const EUROPE_ARTIKKELIT = {
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro EI OLE ENÄÄ kahden lauseen nosto vaan lehden ETUSIVUN
+   * LEIPÄTEKSTI — 7–10 virkkeen johdatus (~700–1100 mrk) kahdessa tai
+   * kolmessa kappaleessa ('\n\n') ja 1–3 maltillista **lihavointia**.
+   * Renderöijä (piirraLeipateksti) tekee kappaleet ja boldit, joten
+   * tänne ei kirjoiteta HTML:ää. Faktat ovat Venetsian omista jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Venetsia, nahtavyysjutut.js, maakartat.js, oma
+   * teksti-kenttä alla) sekä en-Wikipedian Venice-artikkelin
+   * hallinnollisesta asemasta ja väestöluvuista. teksti on ennallaan.
+   */
   Venetsia: {
-    intro: 'Venetsia on rakennettu laguunin sadalle pienelle saarelle, ja '
-      + 'sen kadut ovat kanavia. Talot seisovat miljoonien puupaalujen '
-      + 'varassa, jotka hakattiin liejuun jo keskiajalla — veden alla, '
-      + 'hapettomassa mudassa, puu ei lahoa vaan kovettuu.',
+    intro: 'Venetsia on Koillis-Italian rannikkokaupunki ja Veneton '
+      + 'alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan '
+      + 'laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen '
+      + 'tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei '
+      + 'ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta '
+      + 'itse vanhassa saarikaupungissa enää noin 50 000; suurin osa '
+      + 'väestä asuu mantereen puolella.'
+      + '\n\n'
+      + 'Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan '
+      + 'pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä '
+      + '**La Serenissima**. Sen laivat hallitsivat idänkauppaa, ja '
+      + 'vaurauden näkee yhä Pyhän Markuksen torilla: basilikan '
+      + 'kultamosaiikeissa ja dogen palatsin kaaririvistössä. '
+      + 'Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta '
+      + 'tuli osa Italiaa.'
+      + '\n\n'
+      + 'Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat '
+      + 'pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin '
+      + 'nousuvesi tulvii toreille; laguunin suuaukkoihin rakennetut '
+      + '**MOSE-portit** nostetaan pahimpia tulvia vastaan. Laguuni ja '
+      + 'kaupunki ovat kuuluneet Unescon maailmanperintöön vuodesta '
+      + '1987.',
     teksti: 'Venetsia oli vuosisatojen ajan itsenäinen tasavalta ja '
       + 'Välimeren mahtavin kauppakaupunki. Sen laivat toivat idästä '
       + 'silkkiä, mausteita ja tarinoita — kuuluisin kertoja oli '
@@ -66,11 +96,36 @@ export const EUROPE_ARTIKKELIT = {
       + 'teiden varsilla.',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E7: intro on nyt etusivun leipäteksti
+  // (ks. Venetsian lohkokommentti yllä). Faktat Marseillen omista jo
+  // tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+  // Matkailijan Marseille, nahtavyysjutut.js, maakartat.js) sekä
+  // en-Wikipedian Marseille-artikkelin väkiluvusta ja hallinnollisesta
+  // asemasta. teksti on ennallaan.
   Marseille: {
-    intro: 'Marseille on Ranskan vanhin kaupunki ja sen suurin satama. '
-      + 'Kreikkalaiset merenkulkijat perustivat sen noin 600 eaa. nimellä '
-      + 'Massalia — Pariisi oli silloin vielä suo. Kaupunki on aina '
-      + 'katsonut merelle päin, ei pääkaupunkiin.',
+    intro: 'Marseille on Ranskan vanhin kaupunki ja Pariisin jälkeen sen '
+      + 'väkirikkain: asukkaita on runsaat 880 000 ja koko seudulla '
+      + 'lähes kaksi miljoonaa. Kreikkalaiset merenkulkijat perustivat '
+      + 'sen noin 600 eaa. nimellä Massalia luonnonpoukamaan, jonka '
+      + 'nimi on nyt **Vanhasatama**. Se on '
+      + 'Bouches-du-Rhônen departementin hallintokeskus ja yhä Ranskan '
+      + 'suurin satama.'
+      + '\n\n'
+      + 'Marseille on aina katsonut merelle päin, ei pääkaupunkiin, ja '
+      + 'se näkyy väestössä: satama on tuonut tänne väkeä Italiasta, '
+      + 'Armeniasta, Algeriasta, Marokosta ja Komoreilta. Sataman yllä '
+      + 'kohoaa kukkulalla basilika **Notre-Dame de la Garde**, jonka '
+      + 'kullattu patsas näkyy merelle ja jota kaupunkilaiset sanovat '
+      + 'nimellä la Bonne Mère. Saippuaa täällä on keitetty '
+      + 'oliiviöljystä noin kuudensadan vuoden ajan, ja vuoden 1688 '
+      + 'asetus varasi nimen sille.'
+      + '\n\n'
+      + 'Kaupunki jakautuu kuuteentoista keskenään hyvin erilaiseen '
+      + 'kaupunginosaan, ja yhteen niistä kuuluu kokonainen '
+      + 'kansallispuisto: Calanques\'in kalkkikivijyrkänteet ja kapeat '
+      + 'poukamat alkavat kaupungin rajojen sisältä. Luoteesta '
+      + 'puhaltava kylmä mistraali kuuluu samaan maisemaan, ja sade '
+      + 'painottuu syksyyn.',
     teksti: 'Vanha satama Vieux-Port on kaupungin sydän ja alkupiste: '
       + 'kreikkalaisten laivat laskivat juuri tähän lahteen, ja samassa '
       + 'altaassa myydään aamun kala vieläkin. Sataman suulla kohoaa '
@@ -554,11 +609,35 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E7: intro on nyt etusivun leipäteksti
+  // (ks. Venetsian lohkokommentti yllä). Faktat Firenzen omista jo
+  // tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+  // Matkailijan Firenze, nahtavyysjutut.js, maakartat.js, oma
+  // teksti-kenttä alla) sekä en-Wikipedian Florence-artikkelista
+  // (maailmanperintövuosi 1982). teksti on ennallaan.
   Firenze: {
     intro: 'Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä '
-      + 'asuu noin 360 000 ihmistä. Vanhakaupunki on niin pieni, että sen '
-      + 'kävelee ristiin puolessa tunnissa — ja juuri siitä kaupungista '
-      + 'renessanssi lähti liikkeelle.',
+      + 'asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta '
+      + 'reunaan on noin kaksi kilometriä, ja kaikki tärkeä on '
+      + 'kävelymatkan päässä. Roomalaiset perustivat paikalle '
+      + 'varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu '
+      + 'vanhankaupungin katuverkossa yhä.'
+      + '\n\n'
+      + 'Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja '
+      + 'vuodesta 1252 se löi omaa kultarahaansa floriinia, johon '
+      + 'luotettiin kaikkialla Euroopassa. Rahan takana olleista '
+      + 'suvuista mahtavimmaksi nousi Medici, joka osti valtansa '
+      + 'kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä '
+      + 'myöhemmin alettiin kutsua **renessanssiksi**: taiteen ja '
+      + 'tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat '
+      + 'Donatellosta Michelangeloon.'
+      + '\n\n'
+      + 'Tuomiokirkon **kupoli** valmistui 1436, eikä tiilistä ole sen '
+      + 'jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri '
+      + 'kirjoitti pääteoksensa oman kaupunkinsa puhekielellä, ja siitä '
+      + 'kehittyi italian kirjakieli. Kaupunki oli lyhyen aikaa myös '
+      + 'Italian pääkaupunki, vuosina 1865–1871, ja sen historiallinen '
+      + 'keskusta on kuulunut Unescon maailmanperintöön vuodesta 1982.',
     teksti: 'Firenze perustettiin roomalaisten sotilaskaupungiksi vuonna 59 '
       + 'eaa., ja sen suorakulmainen ruutukaava näkyy keskustan kaduissa '
       + 'yhä. Keskiajalla kaupunki rikastui villakankaasta ja pankeista. '
@@ -790,12 +869,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E7: intro on nyt etusivun leipäteksti
+  // (ks. Venetsian lohkokommentti yllä). Faktat Edinburghin omista jo
+  // tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+  // Matkailijan Edinburgh, nahtavyysjutut.js, maakartat.js, oma
+  // teksti-kenttä alla) sekä en-Wikipedian Edinburgh-artikkelista
+  // (asema Skotlannin toiseksi väkirikkaimpana, hallinnon ja
+  // tuomioistuinten sijaintipaikka). teksti on ennallaan.
   Edinburgh: {
     intro: 'Edinburgh on Skotlannin pääkaupunki Firth of Forthin rannalla, '
-             + 'ja siellä asuu noin puoli miljoonaa ihmistä. Keskellä kaupunkia '
-             + 'kohoaa sammuneen tulivuoren kallio, jonka päällä linna seisoo. '
-             + 'Vanhakaupunki ja uusikaupunki ovat molemmat Unescon '
-             + 'maailmanperintöä.',
+             + 'ja siellä asuu noin puoli miljoonaa ihmistä — Glasgow’n '
+             + 'jälkeen toiseksi eniten koko maassa. Kaupungin keskellä '
+             + 'kohoaa sammuneen tulivuoren kallio, jonka laella **linna** '
+             + 'seisoo, ja kalliolta itään laskeva harjanne kantaa '
+             + 'vanhankaupungin ainoan pääkadun. Kaupunki on Skotlannin '
+             + 'hallituksen, parlamentin ja ylimpien tuomioistuinten '
+             + 'kotipaikka.'
+             + '\n\n'
+             + 'Vanhakaupunki kasvoi kapealle harjanteelle ja ylöspäin, '
+             + 'koska sivusuunnassa ei ollut tilaa. Kun harjanne tuli '
+             + 'täyteen, 1760-luvulla ryhdyttiin rakentamaan notkon '
+             + 'toiselle puolelle uuttakaupunkia, jonka kadut ovat '
+             + 'suoria; nämä kaksi hyvin erilaista kaupunkia ovat yhdessä '
+             + 'Unescon maailmanperintökohde. Yliopisto perustettiin 1582, ja '
+             + '1700-luvun lopulla samoilla kaduilla kävelivät David Hume, '
+             + 'Adam Smith ja James Hutton — aikaa sanotaan Skotlannin '
+             + 'valistukseksi.'
+             + '\n\n'
+             + 'Skotlannin oma parlamentti lakkautettiin 1707 ja palasi '
+             + 'vasta 1999 uuteen taloon Holyroodiin. Joka elokuu '
+             + 'kaupunki täyttyy esiintyjistä: vuoden 1947 '
+             + 'taidefestivaalin reunalle syntynyt **Fringe** on '
+             + 'maailman suurin esittävän taiteen festivaali.',
     teksti: 'Edinburgh on kahden kaupungin kaupunki. Vanhakaupunki kasvoi '
               + 'kapealle harjulle linnan ja Holyroodin palatsin väliin. Kun '
               + 'tilaa ei ollut sivusuunnassa, rakennettiin ylöspäin: '
@@ -822,11 +927,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E7: intro on nyt etusivun leipäteksti
+  // (ks. Venetsian lohkokommentti yllä). Faktat Dublinin omista jo
+  // tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+  // Matkailijan Dublin, nahtavyysjutut.js, maakartat.js, oma
+  // teksti-kenttä alla) sekä en-Wikipedian Dublin-artikkelin
+  // väestöluvuista ja varhaisimman asutuksen ajoituksesta.
+  // teksti on ennallaan.
   Dublin: {
-    intro: 'Dublin on Irlannin pääkaupunki Liffey-joen suulla Irlanninmeren '
-             + 'rannalla. Viikingit perustivat sinne kauppapaikan 800-luvulla, '
-             + 'ja nimi tulee sanoista dubh linn eli musta lampi. Dublinin '
-             + 'seudulla asuu noin puolitoista miljoonaa ihmistä.',
+    intro: 'Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se '
+             + 'sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. '
+             + 'Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa '
+             + 'ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja '
+             + 'viikingit perustivat joen rantaan kauppasataman '
+             + '800-luvulla.'
+             + '\n\n'
+             + 'Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: '
+             + 'iirinkielinen Baile Átha Cliath tarkoittaa risuista '
+             + 'punotun kahlaamon kaupunkia, ja englanninkielinen Dublin '
+             + 'tulee tummasta vuorovesialtaasta, jonka rannalla viikingit '
+             + 'pitivät laivojaan. 1700-luvulla kaupunki rakennettiin '
+             + 'uudelleen: katuja oikaistiin ja talojen mitat määrättiin, '
+             + 'ja niin syntyi **georgiaaninen Dublin** tiilirivistöineen '
+             + 'ja viuhkaikkunoineen.'
+             + '\n\n'
+             + 'Dublin on ennen kaikkea kirjojen kaupunki. Trinity '
+             + 'Collegen kirjastossa säilytetään noin vuonna 800 '
+             + 'kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin '
+             + 'muun muassa Jonathan Swift, Oscar Wilde, W. B. Yeats, '
+             + 'James Joyce ja Samuel Beckett — Unesco nimesi Dublinin '
+             + '**kirjallisuuden kaupungiksi** vuonna 2010. Irlanti oli '
+             + 'vuosisatoja Britannian hallinnassa, ja itsenäinen valtio '
+             + 'syntyi vuonna 1922.',
     teksti: 'Irlanniksi kaupunki ei ole Dublin vaan Baile Átha Cliath, '
               + '"risuista punotun kahlaamon kaupunki". Kaksi nimeä kertoo '
               + 'kahdesta asutuksesta: gaelilaisesta kahlaamosta joen '

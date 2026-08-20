@@ -49,17 +49,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Florence, Duomo di Firenze.jpg',
-          selite: 'Tuomiokirkon itäpää, kellotorni ja etualalla '
-            + 'kahdeksankulmainen kastekappale. Kaikki kolme on '
-            + 'vuorattu valkoisella, vihreällä ja punaisella marmorilla, '
-            + 'ja takana kohoaa tiilikupoli.',
+          selite: 'Tuomiokirkon itäpää, kellotorni ja kahdeksankulmainen '
+            + 'kastekappale valkoisessa, vihreässä ja punaisessa marmorissa, '
+            + 'takana tiilikupoli.',
           lahde: 'George M. Groutas, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'The Facade of Cattedrale di Santa Maria del Fiore (Cathedral of Saint Mary of the Flowers), Florence.jpg',
-          selite: 'Julkisivun keskiportaali läheltä. Marmorikuvio jatkuu '
-            + 'seinästä toiseen pikkuruisiin yksityiskohtiin asti, ja '
-            + 'oven yläpuolella on kultapohjainen mosaiikki.',
+          selite: 'Julkisivun keskiportaali läheltä: marmorikuvio jatkuu '
+            + 'pikkuruisiin yksityiskohtiin ja oven yläpuolella on '
+            + 'kultapohjainen mosaiikki.',
           lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -91,10 +90,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Italie, Florence, Piazza della Signoria, Palazzo Vecchio (1299-1314), Torre di Arnolfo et les blasons (50130860426).jpg',
-          selite: 'Julkisivu alaviistosta: karkeaa kiveä, kaksoisikkunoita ja '
-            + 'ylimpänä ulkoneva ampumakäytävä. Sen kaarissa on rivi '
-            + 'maalattuja vaakunoita, ja takaa nousee Arnolfon torni '
-            + 'kellotauluineen.',
+          selite: 'Julkisivu alaviistosta: karkeaa kiveä, kaksoisikkunoita, '
+            + 'maalattuja vaakunoita ampumakäytävän kaarissa ja takana '
+            + 'Arnolfon torni.',
           lahde: 'Marie Thérèse Hébert & Jean Robert Thibault from Québec, Canada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -125,9 +123,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Piazzale degli Uffizi perspective view, Florence, Italy, August 2025.jpg',
-          selite: 'Uffizin sisäpiha ylhäältä. Kaksi identtistä siipeä '
-            + 'reunustaa kapeaa kujaa, jonka päässä näkyy Palazzo Vecchion '
-            + 'torni ja sen takana tuomiokirkon kupoli.',
+          selite: 'Uffizin sisäpiha ylhäältä: kaksi identtistä siipeä '
+            + 'reunustaa kujaa, jonka päässä näkyvät Palazzo Vecchion torni '
+            + 'ja tuomiokirkon kupoli.',
           lahde: 'Verum3414, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -157,10 +155,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ponte Vecchio at sunset from Piazzale Michelangelo Florence 2023 dllu.jpg',
-          selite: 'Ponte Vecchio ylhäältä ilta-auringossa. Sillan päällä on '
-            + 'yhtenäinen talorivi, ja sen yläpuolella kulkee kapea '
-            + 'ikkunarivi — Vasarin käytävä. Taustalla näkyvät kaupungin '
-            + 'muut sillat, joissa ei ole taloja.',
+          selite: 'Ponte Vecchio ylhäältä ilta-auringossa: talorivin yllä '
+            + 'kulkee kapea ikkunarivi eli Vasarin käytävä, taustalla sillat '
+            + 'ilman taloja.',
           lahde: 'Daniel Lu (User:dllu), Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -191,17 +188,15 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Basilica di Santa Croce (12437).jpg',
-          selite: 'Kirkon julkisivu koko leveydeltään. Valkoista, vihreää ja '
-            + 'vaaleanpunaista marmoria, keskellä pyöreä ruusuikkuna ja '
-            + 'ylimpänä kuusisakarainen tähti. Vasemmalla portaiden '
-            + 'vieressä seisoo Danten patsas.',
+          selite: 'Kirkon julkisivu koko leveydeltään valkoisessa, vihreässä '
+            + 'ja vaaleanpunaisessa marmorissa, portaiden vieressä Danten '
+            + 'patsas.',
           lahde: 'Rhododendrites, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Basílica de la Santa Cruz, Florencia, Italia, 2022-09-18, DD 116-118 HDR.jpg',
-          selite: 'Sivukappelin holvi alhaalta kuvattuna. Ristiholvin kaikki '
-            + 'lohkot ja seinät on maalattu täyteen kuvia 1300-luvun '
-            + 'tapaan, ja taustalla erottuu kirkon paljas puinen kattopalkisto.',
+          selite: 'Sivukappelin holvi alhaalta: kaikki lohkot ja seinät on '
+            + 'maalattu täyteen kuvia 1300-luvun tapaan.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -233,16 +228,14 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jardín de Bóboli, Florencia, Italia, 2022-09-19, DD 34.jpg',
-          selite: 'Pitti-palatsin takajulkisivu ja sen edessä oleva '
-            + 'amfiteatterin hiekkakenttä. Kentän laidalla seisoo '
-            + 'marmoripatsas, ja rinne nousee loivasti palatsista poispäin.',
+          selite: 'Pitti-palatsin takajulkisivu ja sen edessä amfiteatterin '
+            + 'hiekkakenttä, jonka laidalla seisoo marmoripatsas.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Florence, Giardino di Boboli, Isolotto 7.jpg',
-          selite: 'Isolotto eli soikea lampi. Sitä kiertää rautakaide ja '
-            + 'reunuksella on kivimaljakoita; vastarannalla näkyy rivi '
-            + 'sitruunapuita ruukuissa leikatun pensasseinän edessä.',
+          selite: 'Isolotto eli soikea lampi rautakaiteineen, vastarannalla '
+            + 'rivi sitruunapuita ruukuissa.',
           lahde: 'Armin Kleiner, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -277,10 +270,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Firenze, galleria dell\'accademia, tribuna del david 01.jpg',
-          selite: 'Daavid De Fabrisin rakentamassa salissa. Patsas seisoo '
-            + 'matalalla jalustalla puoliympyrän muotoisen syvennyksen '
-            + 'edessä, ja sen yllä avautuu lasitettu kupoli, josta valo '
-            + 'putoaa suoraan alas. Lattia on punaruskeaa kuviolaattaa.',
+          selite: 'Daavid De Fabrisin rakentamassa salissa, jonka '
+            + 'lasitetusta kupolista valo putoaa suoraan patsaan päälle.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -314,10 +305,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Santa Maria Novella Florence façade.jpg',
-          selite: 'Julkisivu koko leveydeltään. Alaosassa on kolme '
-            + 'kaariportaalia ja rivi hautakaaria valkoisen ja vihreän '
-            + 'marmorin ruuduissa; keskellä on pyöreä ikkuna, ja yläosan '
-            + 'kolmion reunoilla kaartuvat Albertin kaksi kiehkuraa.',
+          selite: 'Julkisivu koko leveydeltään: kaariportaaleja ja '
+            + 'hautakaaria valkoisen ja vihreän marmorin ruuduissa, ja '
+            + 'yläosan reunoilla Albertin kaksi kiehkuraa.',
           lahde: 'Jebulon, Wikimedia Commons (CC0)',
         },
       ],
@@ -360,9 +350,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Bronze David by Donatello-Bargello.jpg',
           selite: 'Donatellon pronssinen Daavid museosalissa: alaston nuori '
-            + 'mies seisoo hattu päässä, miekka oikeassa kädessä ja toinen '
-            + 'jalka Goljatin irti hakatun pään päällä. Pinta on '
-            + 'tummanruskeaa, kiiltäväksi hiottua pronssia.',
+            + 'mies hattu päässä, miekka kädessä ja jalka Goljatin pään '
+            + 'päällä.',
           lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],

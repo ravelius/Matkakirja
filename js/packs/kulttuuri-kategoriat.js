@@ -3097,7 +3097,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Santa Maria della Salute from Hotel Monaco.jpg',
-          selite: 'Santa Maria della Salute Canal Granden suulta: suuri lyijynharmaa kupoli lepää valkoisen marmorikehän päällä, ja sen huipulla seisoo veistos. Vasemmalla kohoavat pienempi kupoli ja kellotorni, ja portaat laskeutuvat suoraan veteen.',
+          selite: 'Santa Maria della Salute Canal Granden suulta: suuri '
+            + 'lyijynharmaa kupoli valkoisen marmorikehän päällä, ja portaat '
+            + 'laskeutuvat suoraan veteen.',
           lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Venetsiaan pääsee autolla vain yhtä siltaa pitkin, ja '
@@ -3124,8 +3126,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tehdään jalan tai vesibussilla: vaporettoon mahtuu '
                 + '210–220 matkustajaa, kapeampaan motoscafoon 154.',
               kuva: [
-                { tiedosto: 'Ponte della Libertà 10-19 1767.jpg', selite: 'Ponte della Libertà laguunilta: matala tiilikaarisilta jatkuu horisonttiin asti, ja kaarten päällä kulkee tie. Sen vieressä nousee rivi rautatien ajolankapylväitä, ja sillalla ajaa oranssi linja-auto.', lahde: 'Chris Light, Wikimedia Commons (CC BY-SA 4.0)' },
-                { tiedosto: 'Vaporetti Venice Lagoon.jpg', selite: 'Kaksi vaporettoa iltapäivän valossa: kummankin kyljessä on rekisterinumero ja katoksen alla matkustajia. Taustalla kohoaa Santa Maria della Saluten kupoli, ja rannassa on raidallisia kiinnityspaaluja.', lahde: 'Peter K Burian, Wikimedia Commons (CC BY-SA 4.0)' },
+                { tiedosto: 'Ponte della Libertà 10-19 1767.jpg', selite: 'Ponte della Libertà laguunilta: matala tiilikaarisilta jatkuu horisonttiin asti, tie ja rautatie rinnakkain.', lahde: 'Chris Light, Wikimedia Commons (CC BY-SA 4.0)' },
+                { tiedosto: 'Vaporetti Venice Lagoon.jpg', selite: 'Kaksi vaporettoa iltapäivän valossa, taustalla Santa Maria della Saluten kupoli ja rannassa raidallisia kiinnityspaaluja.', lahde: 'Peter K Burian, Wikimedia Commons (CC BY-SA 4.0)' },
               ],
             },
             {
@@ -3139,7 +3141,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'päässä toisistaan. Santa Croceen kuuluvat Piazzale '
                 + 'Roma ja matkustajasatama, joten saapuja astuu maihin '
                 + 'juuri siellä; San Polo on kaupungin keskellä.',
-              kuva: { tiedosto: 'Calle dei albanesi a san polo plaquette.JPG', selite: 'Nizioleto eli venetsialainen kadunnimi: valkoiseksi maalattuun laattaan on mustattu teksti CALLE DEI ALBANESI. Laatta on kiinni rapautuneessa tiiliseinässä, ja sen yllä kulkevat vanhat puiset kattopalkit.', lahde: 'Abxbay, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Calle dei albanesi a san polo plaquette.JPG', selite: 'Nizioleto eli venetsialainen kadunnimi: valkoiseksi maalattuun laattaan on mustattu teksti CALLE DEI ALBANESI.', lahde: 'Abxbay, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Laguuni on isompi kuin kaupunki',
@@ -3152,7 +3154,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'hautausmaasaari San Michele Castelloa. Kauempana on '
                 + 'omia yhteisöjä, joilla on oma kaupunginosajakonsa — '
                 + 'Buranolla viisi, Pellestrinalla neljä.',
-              kuva: { tiedosto: 'San Giorgio Island (187816497).jpeg', selite: 'San Giorgio Maggiore laguunin yli pilvisenä päivänä: saaren kirkko erottuu kellotorneineen ja kupoleineen veden takana. Etualalla nousee vedestä kaksi kallellaan olevaa puupaalua ja rivi katkaistuja paalunkantoja; pitkä valotus on silottanut veden peiliksi.', lahde: 'Matteo Slanzi, Wikimedia Commons (CC BY 3.0)' },
+              kuva: { tiedosto: 'San Giorgio Island (187816497).jpeg', selite: 'San Giorgio Maggiore laguunin yli pilvisenä päivänä, etualalla vedestä nousevia puupaaluja peilityynellä vedellä.', lahde: 'Matteo Slanzi, Wikimedia Commons (CC BY 3.0)' },
             },
             {
               otsikko: 'Tuhat vuotta tasavaltaa',
@@ -3166,7 +3168,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'miestä, yksi kutakin sestieriä kohti. Itsenäisyys '
                 + 'päättyi Napoleoniin 1797, ja 1866 kaupungista tuli '
                 + 'osa Italiaa.',
-              kuva: { tiedosto: 'View across the lagoon to St Mark\'s Square, Venice (2024).jpg', selite: 'Laguunin yli Pyhän Markuksen aukiolle: keskellä kohoaa tiilinen kellotorni vihreine huippuineen, ja sen oikealla puolella erottuu dogen palatsin vaalea kaarikäytävärivi. Oikeassa reunassa seisoo vedessä paalupari, jonka päällä on lyhty.', lahde: 'Paul Colin Hennig firstdorsal.eu, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'View across the lagoon to St Mark\'s Square, Venice (2024).jpg', selite: 'Laguunin yli Pyhän Markuksen aukiolle: tiilinen kellotorni vihreine huippuineen ja sen oikealla puolella dogen palatsin vaalea kaarikäytävärivi.', lahde: 'Paul Colin Hennig firstdorsal.eu, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Kuka täällä asuu',
@@ -3180,7 +3182,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vähemmän väkeä kuin monessa suomalaisessa '
                 + 'pikkukaupungissa, ja asukkaiden keski-ikä on '
                 + '48,6 vuotta.',
-              kuva: { tiedosto: 'Courtyard and colourful houses in Burano (50415863808).jpg', selite: 'Buranon asuinpiha ukkospilven alla: matalia taloja punaisena, keltaisena, vaaleanpunaisena ja sinisenä, ja niiden välissä kulkee pyykkinaruja. Pihalla on saviruukkuja kasveineen, ja kujan päässä siintää laguuni.', lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)' },
+              kuva: { tiedosto: 'Courtyard and colourful houses in Burano (50415863808).jpg', selite: 'Buranon asuinpiha ukkospilven alla: matalia taloja punaisena, keltaisena, vaaleanpunaisena ja sinisenä, ja niiden välissä pyykkinaruja.', lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)' },
             },
           ],
           matkailu: {
@@ -3308,11 +3310,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'näkymiä niin tarkasti, että tutkijat käyttävät niitä yhä '
             + 'lähteinä. Maalauksia ostivat etenkin englantilaiset '
             + 'matkailijat muistoksi suurelta Euroopan-kiertueeltaan.',
-          selite: 'Bucintoron paluu Molon rantaan helatorstaina (n. 1733): dogen '
-            + 'kullattu juhlalaiva palaa seremoniasta, jossa Venetsia '
-            + '"vihittiin" merensä kanssa heittämällä sormus aaltoihin. '
-            + 'Taustalla dogen palatsi ja kellotorni — näkymä on sama '
-            + 'tänäänkin.',
+          selite: 'Bucintoron paluu Molon rantaan helatorstaina (n. 1733): '
+            + 'dogen kullattu juhlalaiva palaa seremoniasta, jossa Venetsia '
+            + 'vihittiin merensä kanssa heittämällä sormus aaltoihin.',
           lahde: 'Canaletto, Wikimedia Commons (PD)',
           wiki: 'Canaletto',
           galleria: [
@@ -3320,44 +3320,39 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Kivenhakkaajien piha',
               tiedosto: 'Canaletto - The Stonemason\'s Yard.jpg',
               selite: 'Kivenhakkaajien piha (n. 1725): Campo San Vidalilla '
-                + 'veistetään kiveä kirkon korjaustöihin. Harvinainen näkymä '
-                + 'arjen Venetsiasta — ei juhlaa vaan työtä, pyykkinaruja ja '
-                + 'leikkiviä lapsia.',
+                + 'veistetään kiveä kirkon korjaustöihin — harvinainen '
+                + 'näkymä arjen Venetsiasta.',
               lahde: 'Canaletto, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'Markuksentori',
               tiedosto: 'Canaletto - The Piazza San Marco in Venice - Google Art Project.jpg',
-              selite: 'Markuksentori (n. 1724): basilika ja kellotorni nuoren '
-                + 'Canaletton siveltimellä. Kauppiaiden kojut täyttävät torin '
-                + '— se oli silloinkin kaupungin olohuone.',
+              selite: 'Markuksentori (n. 1724): basilika, kellotorni ja '
+                + 'kauppiaiden kojut nuoren Canaletton siveltimellä.',
               lahde: 'Canaletto, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'Canal Granden suu',
               tiedosto: 'Canaletto - The Entrance to the Grand Canal, Venice - Google Art Project.jpg',
               selite: 'Canal Granden suu ja Santa Maria della Saluten '
-                + 'kupolikirkko (n. 1730). Kirkko rakennettiin kiitokseksi '
-                + 'ruton väistymisestä, ja sen portaille kuljetaan yhä joka '
-                + 'marraskuu siltaa pitkin juhlimaan.',
+                + 'kupolikirkko (n. 1730), joka rakennettiin kiitokseksi '
+                + 'ruton väistymisestä.',
               lahde: 'Canaletto, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'Regatta Canal Grandella',
               tiedosto: 'Canal, Giovanni Antonio Canal - Venice, A Regatta on the Grand Canal - National Gallery NG938.jpg',
-              selite: 'Regatta Canal Grandella (n. 1740): kevyet kilpagondolat '
+              selite: 'Regatta Canal Grandella (n. 1740): kilpagondolat '
                 + 'kiitävät väkijoukon editse, ja parvekkeet on verhoiltu '
-                + 'juhlakankain. Sama soutukilpailu soudetaan Venetsiassa yhä '
-                + 'joka syksy.',
+                + 'juhlakankain.',
               lahde: 'Canaletto, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'Rio dei Mendicanti',
               tiedosto: 'Ca\' Rezzonico - Il rio dei Mendicanti - Canaletto.jpg',
               selite: 'Rio dei Mendicanti (n. 1723): varhainen Canaletto '
-                + 'sivukanavan varrelta. Ikkunoissa kuivuu pyykkiä ja '
-                + 'rannassa korjataan veneitä — tavallista Venetsiaa ilman '
-                + 'juhlapukua.',
+                + 'sivukanavan varrelta, ikkunoissa kuivuvaa pyykkiä ja '
+                + 'rannassa veneiden korjausta.',
               lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 4.0)',
             },
           ],
@@ -3369,9 +3364,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'bacaro-baarien tiskillä, ja viinilasillista kutsutaan nimellä '
             + 'ombra, varjo. Raaka-aineet tulevat Rialton torilta, jossa '
             + 'laguunin kalaa on myyty satojen vuosien ajan.',
-          selite: 'Rialton kalatorin pylväshalli Canal Granden varrella. Kauppa '
-            + 'käy aamuisin: laguunin ja Adrianmeren kalat ja äyriäiset '
-            + 'tuodaan suoraan veneillä hallin laituriin.',
+          selite: 'Rialton kalatorin pylväshalli Canal Granden varrella, '
+            + 'jonne laguunin ja Adrianmeren saalis tuodaan aamuisin '
+            + 'veneillä.',
           lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -3382,9 +3377,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sen orkesterille satoja konserttoja. Kuuluisin on Neljä '
             + 'vuodenaikaa, jossa musiikista voi kuulla linnunlaulun ja '
             + 'ukkosmyrskyn.',
-          selite: 'Ainoa varma Vivaldin muotokuva: François Morellon la Caven '
-            + 'kaiverrus vuodelta 1725. Säveltäjä pitelee nuottivihkoa — '
-            + 'peruukin alla hehkui lempinimen antanut punainen tukka.',
+          selite: 'Ainoa varma Vivaldin muotokuva: François Morellon la '
+            + 'Caven kaiverrus vuodelta 1725, jossa säveltäjä pitelee '
+            + 'nuottivihkoa.',
           lahde: 'François Morellon la Cave, Wikimedia Commons (PD)',
           wiki: 'Antonio Vivaldi',
           musiikki: 'https://music.apple.com/fi/artist/antonio-vivaldi/242604',
@@ -3408,29 +3403,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Views of Venice, near Canal Grande5.jpg',
-          selite: 'Katot ylhäältä: kuvan täyttävät ruskeanpunaiset '
-            + 'tiilikatot, valkoiset savupiiput ja puiset kattoterassit '
-            + 'kaiteineen — venetsialaiset kutsuvat niitä altanoiksi. '
-            + 'Keskellä kohoaa tiilinen kellotorni, jonka huipulla on '
-            + 'vaalea kivinen sipulikupoli.',
+          selite: 'Katot ylhäältä: ruskeanpunaisia tiilikattoja, valkoisia '
+            + 'savupiippuja ja puisia kattoterasseja eli altanoita, keskellä '
+            + 'tiilinen kellotorni.',
           lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Views from the Campanile of Basilica di San Giorgio Maggiore (Venice) 03.jpg',
-          selite: 'Kellotornista Bacinon yli: etualalla kaartuu '
-            + 'aallonmurtaja pienine majakkoineen ja sen suojassa on '
-            + 'rivi purjeveneitä. Turkoosin veden takana levittäytyy '
-            + 'kaupungin koko rantajulkisivu, josta kohoavat Markuksen '
-            + 'kampanile ja dogen palatsin vaalea kaaririvistö.',
+          selite: 'Kellotornista Bacinon yli: aallonmurtaja ja purjeveneitä '
+            + 'etualalla, veden takana Markuksen kampanile ja dogen palatsin '
+            + 'kaaririvistö.',
           lahde: 'Derbrauni, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Canale Venezia sole.jpg',
-          selite: 'Kapea sivukanava veneestä nähtynä: oikealla nousee '
-            + 'talorivi vaaleanpunaisine rappauksineen, vihreine '
-            + 'ikkunaluukkuineen ja pyykkinaruineen, ja vedenrajassa '
-            + 'aukeavat holvatut oviaukot ja rautaportit. Alareunassa '
-            + 'näkyy gondolin musta keula.',
+          selite: 'Kapea sivukanava veneestä nähtynä: vaaleanpunaista '
+            + 'rappausta, vihreitä ikkunaluukkuja ja vedenrajassa holvattuja '
+            + 'oviaukkoja, alareunassa gondolin musta keula.',
           lahde: 'Francesca Lissoni, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -3451,11 +3440,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'niiden päälle tiilet. Mudassa ei ole happea, joten puu ei '
             + 'lahoa vaan kovettuu vuosisatojen kuluessa. Santa Maria della '
             + 'Saluten kirkkoa varten mutaan lyötiin yli miljoona paalua.',
-          selite: 'Venetsialainen kanava vuonna 1956: molemmat päät on '
-            + 'padottu, vesi pumpattu pois ja miehet lapioivat pohjan mutaa '
-            + 'kapearaiteista kiskoa pitkin työnnettäviin vaunuihin. '
-            + 'Kanavia tyhjennetään yhä, sillä perustuksia pääsee '
-            + 'korjaamaan vain kuivalla pohjalla.',
+          selite: 'Venetsialainen kanava vuonna 1956: molemmat päät padottu, '
+            + 'vesi pumpattu pois ja miehet lapioivat pohjan mutaa '
+            + 'kiskovaunuihin.',
           lahde: 'Tuntematon valokuvaaja 1956, Wikimedia Commons (PD-Italy)',
           wiki: 'Venetsia',
         },
@@ -3469,21 +3456,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sireeni soi, sitä korkeammalle vesi nousee. Lokakuusta 2020 '
             + 'alkaen suojana on ollut MOSE, 78 terästulvaporttia laguunin '
             + 'kolmen suuaukon pohjassa.',
-          selite: 'Mies kävelee märkää kujaa pitkin reisisaappaissa '
-            + 'marraskuussa 2019, sateenvarjo kädessä. Tiiliseinän alaosan '
-            + 'rappaus on lohkeillut suolaisen veden syövyttämänä. Acqua '
-            + 'altan aikaan saappaat ovat venetsialaisen tavallinen työasu.',
+          selite: 'Mies kävelee märkää kujaa reisisaappaissa marraskuussa '
+            + '2019 — acqua altan aikaan saappaat ovat venetsialaisen '
+            + 'tavallinen työasu.',
           lahde: 'GodeNehler, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Venetsian laguuni',
           galleria: [
             {
               otsikko: 'Näin portti nousee',
               tiedosto: '03 movimento paratoie.jpg',
-              selite: 'Piirrossarja MOSE-portin liikkeestä: portti makaa '
-                + 'merenpohjan betonikotelossa vedellä täytettynä, siihen '
-                + 'puhalletaan paineilmaa, joka työntää veden ulos, ja '
-                + 'portti kääntyy saranansa varassa pystyyn erottamaan '
-                + 'laguunin merestä. Nousuun menee noin puoli tuntia.',
+              selite: 'Piirrossarja MOSE-portin liikkeestä: paineilma '
+                + 'työntää veden ulos merenpohjan betonikotelosta, ja portti '
+                + 'kääntyy saranansa varassa pystyyn noin puolessa tunnissa.',
               lahde: 'Magistrato alle Acque di Venezia — Consorzio Venezia Nuova, Wikimedia Commons (CC BY-SA 3.0)',
             },
           ],
@@ -3518,21 +3502,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Muranossa mestarit saivat erikoisoikeuksia — jopa luvan kantaa '
             + 'miekkaa — mutta tasavallasta heidän ei ollut lupa lähteä. '
             + 'Lasin valmistustapa oli valtionsalaisuus.',
-          selite: 'Lasimestari istuu työpenkin ääressä ja muotoilee raudan päässä '
-            + 'hehkuvaa oranssia lasia pieneksi hevoseksi. Penkin reunalla on '
-            + 'rivi pihtejä ja saksia, edessä lattialla puinen '
-            + 'muotoilupölkky. Muranossa esineet tehdään yhä käsin ilman '
-            + 'muotteja.',
+          selite: 'Lasimestari muotoilee raudan päässä hehkuvaa oranssia '
+            + 'lasia pieneksi hevoseksi — Muranossa esineet tehdään yhä '
+            + 'käsin ilman muotteja.',
           lahde: 'Miguel Mendez, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Murano',
           galleria: [
             {
               otsikko: 'Uunin suu',
               tiedosto: 'Italy-1453 - Murano Glass (5228946002).jpg',
-              selite: 'Muranolaisen uunin aukko hehkuu keltaisena kuin pieni '
-                + 'aurinko. Aukon keskellä näkyy pyörivän raudan päässä '
-                + 'lasimalja, jota kuumennetaan uudelleen pehmeäksi. Alhaalla '
-                + 'lepää kolme punahehkuista lasitankoa.',
+              selite: 'Muranolaisen uunin aukko hehkuu keltaisena, ja sen '
+                + 'keskellä pyörii raudan päässä lasimalja uudelleen '
+                + 'pehmeäksi kuumennettavana.',
               lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
             },
           ],
@@ -3549,21 +3530,16 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jyrkäksi vinous kehittyi vasta 1900-luvun alussa. Tavallinen '
             + 'gondoli on musta, ja vain kilpaveneet ovat värikkäitä.',
           selite: 'Veistetty puinen forcola eli hankain nousee veneen '
-            + 'laidalta, ja airo lepää sen ylimmässä lovessa. Lovia on '
-            + 'useita eri soutuotteita varten, eikä forcolaa ole '
-            + 'kiinnitetty mihinkään — se nostetaan pois soudun jälkeen. '
-            + 'Kuvan vene on kirkkaan sininen.',
+            + 'laidalta, ja airo lepää sen ylimmässä lovessa — lovia on '
+            + 'useita eri soutuotteita varten.',
           lahde: 'Kevin Lucich, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Gondoli',
           galleria: [
             {
               otsikko: 'Keulan kampa',
               tiedosto: 'Gondola ferro di prua.jpg',
-              selite: 'Gondolin keulan metallinen ferro: leveä kaareva '
-                + 'terä, jonka alla on kuusi eteenpäin osoittavaa piikkiä. '
-                + 'Ferro ei ole pelkkä koriste vaan raskas vastapaino '
-                + 'perässä seisovalle soutajalle, jotta veneen litteä pohja '
-                + 'pysyisi vaakasuorassa.',
+              selite: 'Gondolin keulan metallinen ferro on koristeen lisäksi '
+                + 'raskas vastapaino perässä seisovalle soutajalle.',
               lahde: 'Adriano, Wikimedia Commons (CC BY-SA 3.0)',
             },
           ],
@@ -5976,9 +5952,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Samuel Beckett Bridge, Dublin 20150807 1.jpg',
-          selite: 'Samuel Beckettin silta Liffey-joen yli. Kaareva pyloni ja '
-            + 'siitä lähtevät vaijerit muodostavat kyljelleen kaadetun '
-            + 'harpun.',
+          selite: 'Samuel Beckettin silta Liffey-joen yli: kaareva pyloni '
+            + 'vaijereineen muodostaa kyljelleen kaadetun harpun.',
           lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -5992,7 +5967,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Georgian Dublin. Merrion Square - panoramio.jpg',
-          selite: 'Georgiaaninen tiilitalorivi, jonka julkisivut ovat lähes kokonaan villiviinin peitossa: lehdet ovat vihreitä ja paikoin punertavia, ja niiden alta pilkottavat valkoiset ikkunanpielet ja mustat rautakaiteet. Kadun reunassa seisoo valkoinen valurautainen katulyhty.',
+          selite: 'Georgiaaninen tiilitalorivi lähes kokonaan villiviinin '
+            + 'peitossa, lehtien alta pilkottavat valkoiset ikkunanpielet ja '
+            + 'mustat rautakaiteet.',
           lahde: 'Pastor Sam, Wikimedia Commons (CC BY 3.0)',
         },
         kappale: 'Dublin on pieni pääkaupunki: kaupungin oman kunnan '
@@ -6019,7 +5996,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaksi linjaa, 67 pysäkkiä ja 42 kilometriä kiskoa. '
                 + 'Liput ostetaan Leap-kortille, joka laskee itse '
                 + 'päiväkaton.',
-              kuva: { tiedosto: 'Luas tram 4008 at The Point.jpg', selite: 'Hopeanharmaa nivelraitiovaunu pysäkillä, kylkiraidassa keltainen viiva ja numero 4008. Laituri on tyhjä, ja sen katoksen takana näkyy kivinen vanha varastorakennus ja iso valkoinen peltiseinäinen halli.', lahde: 'Grendelkhan, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Luas tram 4008 at The Point.jpg', selite: 'Hopeanharmaa nivelraitiovaunu numero 4008 tyhjällä pysäkillä, takana vanha kivinen varastorakennus.', lahde: 'Grendelkhan, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Joki jakaa kaupungin kahtia',
@@ -6042,7 +6019,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuusipeuraa, jotka polveutuvat 1660-luvulla tuodusta '
                 + 'laumasta. Saman aidan sisällä ovat presidentin '
                 + 'virka-asunto ja eläintarha, joka avattiin 1831.',
-              kuva: { tiedosto: 'Phoenix Park Dublin Daims.JPG', selite: 'Laaja nurmikenttä, jolla laiduntaa parikymmentä kuusipeuraa hajallaan. Kentän poikki nousee valkoinen rugbymaali, ja taustalla on tumma havumetsän reuna ja lehdettömiä puita. Taivaalla on hajanaisia pilviä.', lahde: 'Cqui, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Phoenix Park Dublin Daims.JPG', selite: 'Laaja nurmikenttä, jolla laiduntaa parikymmentä kuusipeuraa valkoisen rugbymaalin ympärillä.', lahde: 'Cqui, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Kuusi päivää huhtikuussa 1916',
@@ -6054,7 +6031,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'siviilejä. Kuusitoista johtajaa teloitettiin '
                 + 'jälkeenpäin, ja se käänsi mielipiteen: vuoden 1918 '
                 + 'vaaleissa Sinn Féin voitti 73 paikkaa 105:stä.',
-              kuva: { tiedosto: 'Dublin General Post Office clock facade.jpg', selite: 'Pääpostitalon pylväskäytävä alhaalta kuvattuna: kaksi paksua uurrettua pylvästä kohoaa kohti koristeltua kattoholvia, ja niiden välissä näkyy julkisivun sininen kello ja kaarevat ikkunat. Seinillä palaa kaksi vanhanaikaista lyhtyä.', lahde: 'William Murphy, Wikimedia Commons (CC BY-SA 2.0)' },
+              kuva: { tiedosto: 'Dublin General Post Office clock facade.jpg', selite: 'Pääpostitalon pylväskäytävä alhaalta: kaksi paksua uurrettua pylvästä ja niiden välissä julkisivun sininen kello.', lahde: 'William Murphy, Wikimedia Commons (CC BY-SA 2.0)' },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -6194,9 +6171,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vanhanaikaisilla hevosvaunuilla, ja se jäi kesken. Vuonna 1982 '
             + 'Irlannin radio luki koko kirjan yhteen menoon: siihen meni 30 '
             + 'tuntia.',
-          selite: 'James Joyce valokuvattuna Zürichissä vuonna 1915: olkihattu, '
-            + 'pyöreät silmälasit, viikset ja rusetti. Odysseus ilmestyi '
-            + 'seitsemän vuotta myöhemmin.',
+          selite: 'James Joyce valokuvattuna Zürichissä vuonna 1915 '
+            + 'olkihatussa ja pyöreissä silmälaseissa, seitsemän vuotta '
+            + 'ennen Odysseusta.',
           lahde: 'Alex Ehrenzweig, Wikimedia Commons (public domain)',
           wiki: 'James Joyce',
         },
@@ -6210,9 +6187,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maistuu. Coddlea keitettiin, jotta viikon tähteet saatiin '
             + 'syödyksi, eikä sitä juuri tunneta muualla Irlannissa. Myös '
             + 'James Joyce mainitsee sen teksteissään.',
-          selite: 'Lautasellinen coddlea dublinilaisessa pubissa, vieressä viipale '
-            + 'soodaleipää ja takana tumma olut. Makkarat ja pekoni ovat '
-            + 'vaaleanharmaita eikä yhdessäkään ole ruskistettua pintaa.',
+          selite: 'Lautasellinen coddlea dublinilaisessa pubissa: makkarat '
+            + 'ja pekoni ovat vaaleanharmaita eikä yhdessäkään ole '
+            + 'ruskistettua pintaa.',
           lahde: 'Kari Haley, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Irlantilainen keittiö',
         },
@@ -6226,9 +6203,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Euroopan neljänneksi eniten, mutta yksikään pelaaja ei saa '
             + 'ottelusta palkkaa — kaikki ovat amatöörejä ja käyvät arkena '
             + 'töissä.',
-          selite: 'Joukkueiden marssi ennen hurlingin All-Ireland-välierää Croke '
-            + 'Parkissa 2017. Pelaajat kiertävät kentän soittokunnan perässä '
-            + 'ennen aloitusta.',
+          selite: 'Joukkueiden marssi soittokunnan perässä ennen hurlingin '
+            + 'All-Ireland-välierää Croke Parkissa 2017.',
           lahde: 'Sheila1988, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Hurling',
         },
@@ -6270,30 +6246,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Dublin, városkép a Guinness-toronyból.jpg',
-          selite: 'Panimon tornista yli kaupungin: etualalla ovat '
-            + 'teräksiset käymissäiliöt ja hallien katot, niiden takana '
-            + 'matalat tiilitalot, kirkontornit ja torninhuiput. '
-            + 'Horisontissa siintää meri, sataman nosturit ja '
-            + 'raidalliset voimalan piiput.',
+          selite: 'Panimon tornista yli kaupungin: teräksisiä '
+            + 'käymissäiliöitä, matalia tiilitaloja ja kirkontorneja, '
+            + 'horisontissa meri ja sataman nosturit.',
           lahde: 'Kiss Tamás ( Kit36a at Hungarian Wikipedia ), '
             + 'Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'The Four Courts and River Liffey, Dublin - geograph.org.uk - 2776535.jpg',
-          selite: 'Liffey virtaa graniittisten rantamuurien välissä: '
-            + 'vasemmalla rannalla kohoaa Four Courtsin oikeustalo '
-            + 'pylväikköineen ja vihreäksi hapettuneine kupoleineen, ja '
-            + 'sen editse ajaa busseja. Alavirtaan näkyy kivinen '
-            + 'kaarisilta.',
+          selite: 'Liffey virtaa graniittisten rantamuurien välissä, '
+            + 'vasemmalla Four Courtsin oikeustalo pylväikköineen ja '
+            + 'vihreäksi hapettuneine kupoleineen.',
           lahde: 'Richard Humphrey, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'The sunset - Dublin, Ireland - Cityscape photography.jpg',
-          selite: 'Auringonlasku Liffeyn yllä satama-altaan rannalta: '
-            + 'pilvien takaa levittäytyy säteikkö ja vedessä väreilee '
-            + 'oranssi heijastus. Oikealla ovat satamakortteleiden '
-            + 'talot, kaukana erottuvat tullitalon kupoli ja '
-            + 'purjelaivan mastot.',
+          selite: 'Auringonlasku Liffeyn yllä satama-altaan rannalta, '
+            + 'kaukana tullitalon kupoli ja purjelaivan mastot.',
           lahde: 'Giuseppe Milo, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -6317,9 +6286,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kolmiulotteisesti: peliruudulla, roboteissa ja satelliiteissa. '
             + 'Joka 16. lokakuuta matka kävellään uudestaan: Dunsinkin '
             + 'observatoriolta, jossa Hamilton asui, samalle sillalle.',
-          selite: 'William Rowan Hamilton (1805–1865) vanhassa painokuvassa: '
-            + 'kalju päälaki, tuuheat pulisongit ja korkea valkoinen kaulus. '
-            + 'Hän asui Dunsinkin observatoriossa Dublinin laidalla.',
+          selite: 'William Rowan Hamilton (1805–1865) vanhassa painokuvassa; '
+            + 'hän asui Dunsinkin observatoriossa Dublinin laidalla.',
           lahde: 'Library of Congress, Wikimedia Commons (public domain)',
           wiki: 'William Rowan Hamilton',
         },
@@ -6335,9 +6303,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuulijaa mutta tulijoita oli 400, joten luennot pidettiin '
             + 'kahteen kertaan. Watson ja Crick kertoivat molemmat, että '
             + 'luennoista tehty kirja pani heidät dna:n jäljille.',
-          selite: 'Erwin Schrödinger (1887–1961) puutarhassa: pyöreät '
-            + 'tummasankaiset silmälasit, pilkullinen rusetti ja pystyyn '
-            + 'kampaamattomat hiukset. Hän viipyi Dublinissa 16 vuotta.',
+          selite: 'Erwin Schrödinger (1887–1961) puutarhassa pyöreissä '
+            + 'silmälaseissa ja pilkullisessa rusetissa; hän viipyi '
+            + 'Dublinissa 16 vuotta.',
           lahde: 'Francis Simon, Wikimedia Commons (Attribution)',
           wiki: 'Erwin Schrödinger',
         },
@@ -6367,32 +6335,31 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Diagon Alley (49520096076).jpg',
-          selite: 'Victoria Streetin kaartuva puotirivi vanhassakaupungissa. '
-            + 'Alakerrat on maalattu vaaleanpunaisiksi, sinisiksi ja '
-            + 'oranssiksi, ja ikkunoiden alla roikkuu punaisia '
-            + 'kukkalaatikoita.',
+          selite: 'Victoria Streetin kaartuva puotirivi vanhassakaupungissa, '
+            + 'alakerrat maalattuina vaaleanpunaisiksi, sinisiksi ja '
+            + 'oranssiksi.',
           lahde: 'Mike McBey, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'The crown spire on St Giles Cathedral, Edinburgh.JPG',
-          selite: 'St Gilesin kirkon torninhuippu Royal Milen varrella. Kahdeksan '
-            + 'kivikaarta nousee tornin reunoilta yhteen kruunuksi, ja aivan '
-            + 'ylimpänä seisoo kultainen tuuliviirikukko.',
+          selite: 'St Gilesin kirkon torninhuippu Royal Milen varrella: '
+            + 'kahdeksan kivikaarta nousee yhteen kruunuksi.',
           lahde: 'Stephencdickson, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Edinburgh National Monument 20211020.jpg',
-          selite: 'Calton Hillin laella nurmen keskellä seisoo rivi paksuja '
-            + 'pylväitä ja niiden päällä pätkä kivikattoa. Muuta ei koskaan '
-            + 'valmistunut: kansallismonumentilta loppuivat rahat vuonna '
-            + '1829.',
+          selite: 'Calton Hillin laella seisoo rivi paksuja pylväitä ja '
+            + 'pätkä kivikattoa — kansallismonumentilta loppuivat rahat '
+            + 'vuonna 1829.',
           lahde: 'Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'The Shore, Leith - geograph.org.uk - 5638471.jpg',
-          selite: 'Satamakanavan ranta aurinkoisena talvipäivänä: vastarannalla on rivi kivisiä varasto- ja asuintaloja, joiden joukossa erottuu valkoinen porrasfrontonillinen talo ja punatiilisiä kattoja. Etualalla seisoo ruosteenpunainen vanha kääntösillan koneisto ja yllä lehdettömiä oksia.',
+          selite: 'Satamakanavan ranta aurinkoisena talvipäivänä: '
+            + 'vastarannalla rivi kivisiä varasto- ja asuintaloja, etualalla '
+            + 'vanhan kääntösillan ruosteenpunainen koneisto.',
           lahde: 'Graeme Yuill, Wikimedia Commons (CC BY-SA 2.0)',
         },
         kappale: 'Edinburgh on kaksi kaupunkia vierekkäin: ahdas '
@@ -6422,7 +6389,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tunnissa. Linja avattiin 31. toukokuuta 2014, ja '
                 + 'sitä jatkettiin satamaan asti kesäkuussa 2023. '
                 + 'Pysäkkejä on 23.',
-              kuva: { tiedosto: 'Edinburgh Park Central tram stop.jpg', selite: 'Valko-musta nivelraitiovaunu saapuu tyhjälle pysäkille; kyljessä lukee Edinburgh Trams. Laiturilla on lipunmyyntiautomaatti ja kaksi lasista katosta, ja taivaalla on kirkkaita kumpupilviä.', lahde: 'Brian Turner, Wikimedia Commons (CC BY-SA 2.0)' },
+              kuva: { tiedosto: 'Edinburgh Park Central tram stop.jpg', selite: 'Valko-musta nivelraitiovaunu saapuu tyhjälle pysäkille, kyljessä teksti Edinburgh Trams.', lahde: 'Brian Turner, Wikimedia Commons (CC BY-SA 2.0)' },
             },
             {
               otsikko: 'Kaupunki, joka piirrettiin kerralla',
@@ -6435,7 +6402,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Vanhassakaupungissa kujat ovat paikoin vain '
                 + 'muutaman jalan levyisiä, koska tilaa oli kapealla '
                 + 'kalliolla vähän.',
-              kuva: { tiedosto: '1768 James Craig Map of New Town, Edinburgh, Scotland (First Plan of New Town) - Geographicus - Edinburgh-craig-1768.jpg', selite: 'Kuparipiirroskartta vuodelta 1768: uudenkaupungin ruutukaava kolmine pitkine katuineen, päissä kaksi neliömäistä aukiota kirkkoineen. Reunoilla on koristeellisia allegoriakuvia ja tekstikilpiä, oikealla vanhan kaupungin kortteleita.', lahde: 'James Craig 1768, Wikimedia Commons (PD)' },
+              kuva: { tiedosto: '1768 James Craig Map of New Town, Edinburgh, Scotland (First Plan of New Town) - Geographicus - Edinburgh-craig-1768.jpg', selite: 'Kuparipiirroskartta vuodelta 1768: uudenkaupungin ruutukaava kolmine pitkine katuineen ja päissä kaksi neliömäistä aukiota.', lahde: 'James Craig 1768, Wikimedia Commons (PD)' },
             },
             {
               otsikko: 'Satamakaupunki, joka ei halunnut liittyä',
@@ -6598,10 +6565,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'esiintyä, jos löytää itselleen esityspaikan. Vuonna 2025 '
             + 'mukana oli 3 893 eri esitystä 301 paikassa, ja niitä '
             + 'näytettiin yhteensä 53 942 kertaa.',
-          selite: 'Royal Milen yläpää elokuussa. Kadun yli on pingotettu '
-            + 'punavalkoinen fringe-portti, väkeä seisoo kylki kyljessä, ja '
-            + 'vasemmalla kilttiin pukeutunut esiintyjä on kiivennyt pollarin '
-            + 'päälle mainostamaan omaa esitystään.',
+          selite: 'Royal Milen yläpää elokuussa: kadun yli on pingotettu '
+            + 'punavalkoinen fringe-portti, ja kilttiin pukeutunut esiintyjä '
+            + 'mainostaa esitystään pollarin päältä.',
           lahde: 'Brian McNeil, Wikimedia Commons (CC BY 3.0)',
         },
         {
@@ -6614,11 +6580,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joka 25. tammikuuta istutaan Burns-illalliselle: makkara '
             + 'kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja '
             + 'puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.',
-          selite: 'Ravintola-annos: pyöreä haggisnokare on kasattu oranssin '
-            + 'lanttusoseen päälle, ja aivan alimpana erottuu vaalea '
-            + 'perunakerros. Ruskea kastike lainehtii valkoisella '
-            + 'lautasella ja päällä on persiljanoksa. Kotona osat ladotaan '
-            + 'lautaselle vierekkäin, ei päällekkäin.',
+          selite: 'Ravintola-annos, jossa haggisnokare on kasattu '
+            + 'lanttusoseen ja perunan päälle — kotona osat ladotaan '
+            + 'lautaselle vierekkäin.',
           lahde: 'Metukkalihis, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Haggis',
         },
@@ -6633,9 +6597,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Royal Mile linnalta palatsille asti, ja siksi linnaan pääsee '
             + 'kävellen vain idästä. Vettä kalliolta ei sen sijaan tahtonut '
             + 'saada: 34 metriä syvä kaivo ehtyi piiritysten aikana.',
-          selite: 'Linna Princes Street Gardensin puolelta nähtynä. Muurit '
-            + 'alkavat suoraan jyrkänteen päältä, alempana rinne on ruohoa ja '
-            + 'puita, ja etualalla riippuu pihlajanmarjoja.',
+          selite: 'Linna Princes Street Gardensin puolelta: muurit alkavat '
+            + 'suoraan jyrkänteen päältä ja alempana rinne on ruohoa ja '
+            + 'puita.',
           lahde: 'Scglossop1, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Edinburghin linna',
         },
@@ -6657,9 +6621,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Edinburgh Auld Toun (138362373).jpeg',
           selite: 'Talviaamun matala aurinko osuu vanhankaupungin '
-            + 'harjanteeseen: oikealla kohoaa hotellin kellotorni, '
-            + 'keskellä linna kalliollaan ja vasemmalla vihreä kupoli '
-            + 'sekä tumma kirkontorni. Katoilla on ohut lumikerros.',
+            + 'harjanteeseen, jonka keskellä linna seisoo kalliollaan ohuen '
+            + 'lumen alla.',
           lahde: 'Paul Vallis, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -6674,11 +6637,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Dean Village, Edinburgh (37952869852).jpg',
-          selite: 'Water of Leith virtaa matalana kivien yli Dean '
-            + 'Villagen läpi: vasemmalla kohoaa punertava rakennus '
-            + 'erkkeri-ikkunoineen, keskellä monikerroksinen '
-            + 'harmaakivinen myllyrakennus ja oikealla puukaiteinen '
-            + 'kävelytie. Rantoja reunustaa rehevä kesäkasvillisuus.',
+          selite: 'Water of Leith virtaa matalana kivien yli Dean Villagen '
+            + 'läpi, keskellä monikerroksinen harmaakivinen myllyrakennus.',
           lahde: 'Gary Campbell-Hall from Edinburgh, UK, '
             + 'Wikimedia Commons (CC BY 2.0)',
         },
@@ -6708,9 +6668,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siis kolme — yksi antoi munasolun, toinen perimän ja kolmas '
             + 'kantoi karitsan. Nimi tuli laulaja Dolly Partonilta. Yrityksiä '
             + 'tarvittiin 277, ja niistä yksi ainoa kasvoi aikuiseksi.',
-          selite: 'Dolly täytettynä museon lasikaapissa. Villa on paksu ja '
-            + 'kihara, jalat seisovat olkien päällä harmaalla laatalla ja pää '
-            + 'on kääntynyt katsojaan päin. Taustalla häämöttää museon sali.',
+          selite: 'Dolly täytettynä museon lasikaapissa, villa paksuna ja '
+            + 'kiharana ja pää kääntyneenä katsojaan päin.',
           lahde: 'Sgerbic, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Dolly (lammas)',
         },
@@ -6725,10 +6684,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vasta seuraavana aamuna lattialta tuolien seasta. Simpson '
             + 'tiesi heti löytäneensä aineen, jonka avulla leikkaus ja '
             + 'synnytys voitiin tehdä nukkuvalle potilaalle.',
-          selite: 'James Young Simpson vuoden 1867 aikakauslehden kuvassa. '
-            + 'Piirros on tehty pelkillä viivoilla: pitkät hiukset kaartuvat '
-            + 'korvien yli, poskiparta on leveä ja kaulassa on vaalea '
-            + 'solmuke.',
+          selite: 'James Young Simpson vuoden 1867 aikakauslehden kuvassa: '
+            + 'pelkillä viivoilla piirretyt pitkät hiukset, leveä poskiparta '
+            + 'ja vaalea solmuke.',
           lahde: 'The Leisure Hour 1867, Wikimedia Commons (PD)',
           wiki: 'Kloroformi',
         },
@@ -6746,29 +6704,30 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Notre-Dame de la Garde Marseille 2024.jpg',
           selite: 'Notre-Dame de la Garden basilika raidallisine '
-            + 'kivikerroksineen. Kellotornin päällä seisoo 11,2 metriä korkea '
-            + 'kullattu Neitsyt-patsas, joka näkyy merelle asti.',
+            + 'kivikerroksineen, kellotornin päällä 11,2 metriä korkea '
+            + 'kullattu Neitsyt-patsas.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Marché poisson Marseille 013.jpg',
-          selite: 'Vanhan sataman kalatiskin sinisessä laatikossa kiemurtelee '
-            + 'täplikäs murena. Ympärillä on punaisia rascasse-kaloja eli '
-            + 'skorpionisimppuja, jotka ovat bouillabaissen tärkein aines.',
+          selite: 'Vanhan sataman kalatiskillä kiemurtelee täplikäs murena '
+            + 'punaisten rascasse-kalojen eli skorpionisimppujen seassa, '
+            + 'jotka ovat bouillabaissen tärkein aines.',
           lahde: 'Arnaud 25, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Calanque de Sugiton, 2016.jpg',
           selite: 'Sugitonin calanque: kapea turkoosi poukama valkoisten '
-            + 'kalkkikivijyrkänteiden välissä. Poukama on Marseillen omalla '
-            + 'alueella, Calanques\'in kansallispuistossa.',
+            + 'kalkkikivijyrkänteiden välissä Calanques\'in '
+            + 'kansallispuistossa.',
           lahde: 'Visions of Domino, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Marseille (France) former hospital La Vielle Charité, church and arcades.JPG',
-          selite: 'Vaaleasta kivestä muurattu kappeli kupoleineen seisoo keskellä laattapihaa. Sitä kiertää kolmikerroksinen kaariholvikäytävä, ja pihalla on rivi oliivipuita isoissa saviruukuissa. Taivaalla on repaleisia valkoisia pilviä.',
+          selite: 'Vaaleasta kivestä muurattu kappeli kupoleineen keskellä '
+            + 'laattapihaa, jota kiertää kolmikerroksinen kaariholvikäytävä.',
           lahde: 'Philippe Alès, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Marseille on Ranskan vanhin kaupunki mutta ei sen '
@@ -6796,7 +6755,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'metron ensimmäinen linja avattiin 26. marraskuuta '
                 + '1977 ja toinen 1984. Linjoja on kaksi, rataa 22,7 '
                 + 'kilometriä ja asemia 31.',
-              kuva: { tiedosto: 'Marseille-Metro-ligne-1-La-Fourragere-station-vue-vers-tunnel.jpg', selite: 'Metroaseman laituri ja raiteet vielä tyhjinä: betonipalkkikatto, keltaiset valonauhat ja raiteiden reunassa punaisia muoviaitoja. Perällä näkyy tunnelin suu, oikealla liukuportaat ja vihreä opastekyltti.', lahde: 'Revolutionjoyeuse, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Marseille-Metro-ligne-1-La-Fourragere-station-vue-vers-tunnel.jpg', selite: 'Metroaseman laituri ja raiteet vielä tyhjinä, perällä tunnelin suu ja oikealla liukuportaat.', lahde: 'Revolutionjoyeuse, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Kuudessatoista osassa',
@@ -6821,7 +6780,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'padoissa. Valmistus kestää kahdesta viikosta '
                 + 'kuukauteen: massa keitetään, leikataan, leimataan ja '
                 + 'kovetetaan.',
-              kuva: { tiedosto: 'Marseiller Seife.jpg', selite: 'Kaksi kuutionmuotoista oliivinvihreää saippuapalaa valkoisella pinnalla. Vasemmanpuoleiseen on painettu pyöreitä leimoja tekstein, oikeanpuoleinen on kääritty kalvoon ja siinä on sinivalkoinen etiketti.', lahde: 'Simon A. Eugster, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Marseiller Seife.jpg', selite: 'Kaksi kuutionmuotoista oliivinvihreää saippuapalaa, joista toiseen on painettu pyöreitä leimoja tekstein.', lahde: 'Simon A. Eugster, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Kesä 1720',
@@ -6988,9 +6947,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keksintöä eikä koskaan istunut siellä. '
             + 'Oikeat vangit eivät päässeet minnekään: saarelta ei '
             + 'tiettävästi ole koskaan paennut kukaan.',
-          selite: 'Château d\'If matalalla kalliosaarellaan. Kaksi pyöreää tornia '
-            + 'nousee muurin takaa ja niiden välissä on nelikulmainen '
-            + 'päärakennus; kaukana vasemmalla häämöttää kaupungin rantaviiva.',
+          selite: 'Château d\'If matalalla kalliosaarellaan: kaksi pyöreää '
+            + 'tornia muurin takana ja niiden välissä nelikulmainen '
+            + 'päärakennus.',
           lahde: 'Rémih, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ifin linna',
         },
@@ -7025,34 +6984,24 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Vue Ville depuis Basilique Notre Dame Garde - Marseille (FR13) - 2023-07-22 - 4.jpg',
           selite: 'Kaupunki Notre-Dame de la Garden mäeltä heinäkuun '
-            + 'keskipäivällä: keskellä kuvaa on vanhansataman pitkä '
-            + 'allas, jonka molemmat laiturit ovat täynnä valkoisia '
-            + 'veneitä vieri vieressä. Altaan ympärillä levittäytyy '
-            + 'tiivis oranssien tiilikattojen meri, vasemmalla kohoaa '
-            + 'tummia lasitorneja ja horisontin sulkevat vaaleat '
+            + 'keskipäivällä: keskellä vanhansataman pitkä allas veneineen, '
+            + 'ympärillä oranssien tiilikattojen meri ja horisontissa '
             + 'kalkkikivikukkulat.',
           lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Frioul et toits marseillais. Vue au dessus d\'Endoume (9401141357).jpg',
-          selite: 'Endoumen kattojen yli merelle vastavalossa: etualalla '
-            + 'porrastuvat vaaleat talot ja tiilikatot, ja keskellä '
-            + 'kohoaa tiilinen huvila tornimaisine päätyineen. Kattojen '
-            + 'takana kimaltaa lahti, ja sen keskellä seisoo Ifin linna '
-            + 'matalalla kalliosaarellaan. Kauimpana levittäytyvät '
-            + 'Frioulin saaret patoineen.',
+          selite: 'Endoumen kattojen yli merelle vastavalossa, lahden '
+            + 'keskellä Ifin linna kalliosaarellaan ja kauimpana Frioulin '
+            + 'saaret.',
           lahde: 'Jeanne Menjoulet from Paris, France, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
         {
           tiedosto: 'Marseille Vallon des Auffes 10.jpg',
-          selite: 'Vallon des Auffesin poukama suoraan ylhäältä: kapean '
-            + 'lahden reunaan on nostettu tiivis kaari valkoisia '
-            + 'moottoriveneitä, ja niiden takana nousevat kalastajien '
-            + 'matalat talot vaaleanpunaisina, keltaisina ja '
-            + 'oransseina. Oikealla kohoaa paksu kivimuuri ja ylhäällä '
-            + 'kalkkikivijyrkänne; matala aurinko kimaltaa vedessä ja '
-            + 'jättää talojen välit varjoon.',
+          selite: 'Vallon des Auffesin poukama suoraan ylhäältä: tiivis '
+            + 'kaari valkoisia moottoriveneitä ja niiden takana kalastajien '
+            + 'matalat talot vaaleanpunaisina, keltaisina ja oransseina.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -7081,9 +7030,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ravintoloitsijat allekirjoittivat oman peruskirjansa siitä, '
             + 'mitä aitoon annokseen kuuluu. Se tuodaan pöytään kahdessa '
             + 'osassa: ensin liemi valkosipulileivän kanssa, sitten kalat.',
-          selite: 'Kalastajien verkkoja levitettynä Saint-Jeanin laiturille; '
-            + 'kaksi miestä istuu paikkaamassa niitä ja kolmas seisoo edessä '
-            + 'kovassa knallihatussa. Kuva on 1900-luvun alun postikortista.',
+          selite: 'Kalastajien verkkoja levitettynä Saint-Jeanin laiturille '
+            + '1900-luvun alun postikortissa, kaksi miestä paikkaamassa '
+            + 'niitä.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Bouillabaisse',
         },
@@ -7098,9 +7047,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Keksejä ostetaan tusina kerrallaan, yksi jokaista vuoden '
             + 'kuukautta kohti, ja ennen niitä säilytettiin kotona '
             + 'onnenkaluina.',
-          selite: 'Rasiallinen navetteja: vaaleita, kovaksi paistettuja keksejä, '
-            + 'joiden pinnassa kulkee pituussuuntainen halkeama. Yksi keksi '
-            + 'on noin kämmenen mittainen.',
+          selite: 'Rasiallinen navetteja: vaaleita, kovaksi paistettuja '
+            + 'keksejä, joiden pinnassa kulkee pituussuuntainen halkeama.',
           lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
         },
       ],
@@ -20943,9 +20891,8 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Apartments on the Ponte Vecchio. Florence, Italy.jpg',
-          selite: 'Ponte Vecchion kauppojen takaseinä joen puolelta. Huoneet '
-            + 'roikkuvat sillan reunan yli puisten vinotukien varassa, ja '
-            + 'yhdellä on parveke köynnöksineen keskellä Arnoa.',
+          selite: 'Ponte Vecchion kauppojen takaseinä joen puolelta: huoneet '
+            + 'roikkuvat sillan reunan yli puisten vinotukien varassa.',
           lahde: 'Ввласенко, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -20997,25 +20944,22 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'View from Giotto IMG 4586.JPG',
-          selite: 'Näkymä Giotton kellotornista lounaaseen. Katot ovat lähes '
-            + 'samalla korkeudella niin pitkälle kuin näkee — ainoa '
-            + 'poikkeus on Palazzo Vecchion torni vasemmalla. Kaukana '
-            + 'kukkulan juurella erottuu Pitti-palatsin pitkä julkisivu.',
+          selite: 'Näkymä Giotton kellotornista lounaaseen: katot ovat lähes '
+            + 'samalla korkeudella niin pitkälle kuin näkee, ainoana '
+            + 'poikkeuksena Palazzo Vecchion torni.',
           lahde: 'Deror avi, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Arno river sunset, Florence, Italy.jpg',
-          selite: 'Arno auringonlaskun aikaan. Joki on tyyni kuin peili, ja '
-            + 'sen molemmin puolin nousevat rantamuurit ja talorivit; '
-            + 'keskellä kuvaa kaartuu Ponte Vecchio kauppoineen.',
+          selite: 'Arno auringonlaskun aikaan tyynenä kuin peili, keskellä '
+            + 'kuvaa Ponte Vecchio kauppoineen.',
           lahde: 'hozinja, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-27155711546.jpg',
-          selite: 'Ponte Vecchio ylhäältä iltapäivän valossa: sillan päällä '
-            + 'kulkee yhtenäinen kauppojen rivi ja niiden yläpuolella '
-            + 'pienten neliöikkunoiden nauha eli Vasarin käytävä. '
-            + 'Alavirrassa erottuu kolme muuta siltaa peräkkäin.',
+          selite: 'Ponte Vecchio ylhäältä iltapäivän valossa: kauppojen '
+            + 'rivin yläpuolella kulkee pienten neliöikkunoiden nauha eli '
+            + 'Vasarin käytävä.',
           lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
         },
         {
@@ -21073,15 +21017,14 @@ export const KULTTUURI_KATEGORIAT = {
                 {
                   tiedosto: 'Florence 020 streets of Florence.JPG',
                   selite: 'Kivetty kauppakatu Duomon ja Signorian aukion '
-                    + 'välissä. Autoja ei näy yhtään — ainoa ajoneuvo on '
-                    + 'keltainen pikkuauto keskellä katua.',
+                    + 'välissä ilman autoja — ainoa ajoneuvo on keltainen '
+                    + 'pikkuauto.',
                   lahde: 'Filius humanitas, Wikimedia Commons (CC BY-SA 3.0)',
                 },
                 {
                   tiedosto: 'Via dei Calzaiuoli, Florence (26609473351).jpg',
-                  selite: 'Via dei Calzaiuoli täynnä kävelijöitä. Katu '
-                    + 'yhdistää kaupungin kaksi aukiota, ja sen päässä '
-                    + 'kohoaa Giotton kellotorni.',
+                  selite: 'Via dei Calzaiuoli täynnä kävelijöitä, kadun '
+                    + 'päässä Giotton kellotorni.',
                   lahde: 'Dimitris Kamaras from Athens, Greece, Wikimedia Commons (CC BY 2.0)',
                 },
                 {
@@ -21102,17 +21045,15 @@ export const KULTTUURI_KATEGORIAT = {
                 {
                   tiedosto: 'flickr-52090914588.jpg',
                   selite: 'Kapea katu, jonka parvekkeilta roikkuu '
-                    + 'ruukkukasveja ja kukkivaa sinipunaista köynnöstä. '
-                    + 'Ikkunaluukut ovat vihreät, ja vasemman talon '
-                    + 'kaiteella kuivuu pyykkiä.',
+                    + 'ruukkukasveja ja kukkivaa sinipunaista köynnöstä '
+                    + 'vihreiden ikkunaluukkujen välissä.',
                   lahde: 'Jocelyn Erskine-Kellie, Flickr (CC BY-SA 2.0)',
                 },
                 {
                   tiedosto: 'flickr-34464102352.jpg',
                   selite: 'Mukulakivinen kuja Ponte Vecchion pohjoispäästä '
-                    + 'kaupunkiin päin. Vasemman talon seinässä lukee PIAZZA '
-                    + 'DEL PESCE, kadun yli kaartuu holvi, ja kaukana kadun '
-                    + 'päässä näkyy torikojujen väriä.',
+                    + 'kaupunkiin päin, vasemman talon seinässä teksti '
+                    + 'PIAZZA DEL PESCE.',
                   lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
                 },
               ],
@@ -21148,17 +21089,16 @@ export const KULTTUURI_KATEGORIAT = {
                 {
                   tiedosto: 'Ceiling of Uffizi Gallery.jpg',
                   asettelu: 'kapea',
-                  selite: 'Uffizin käytävän maalattu katto. Koko holvi on '
-                    + 'peitetty groteskikuvioilla: kiehkuroita, lintuja, '
-                    + 'pieniä maisemia ja vaakunoita kultakehysten välissä.',
+                  selite: 'Uffizin käytävän maalattu katto: koko holvi on '
+                    + 'peitetty groteskikuvioilla, kiehkuroilla, linnuilla '
+                    + 'ja pienillä maisemilla.',
                   lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-51960599162.jpg',
-                  selite: 'Uffizi joen puolelta: maan tasalla avautuu kolme '
-                    + 'kaarta, niiden yllä kulkee kaiteellinen parveke ja '
-                    + 'ylimpänä koko rakennuksen mittainen ikkunarivi. '
-                    + 'Julkisivu heijastuu Arnon vihertävästä vedestä.',
+                  selite: 'Uffizi joen puolelta: kolme kaarta maan tasalla '
+                    + 'ja ylimpänä koko rakennuksen mittainen ikkunarivi, '
+                    + 'julkisivu heijastuu Arnosta.',
                   lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
                 },
                 {
@@ -21200,9 +21140,8 @@ export const KULTTUURI_KATEGORIAT = {
                 {
                   tiedosto: 'flickr-52104490496.jpg',
                   selite: 'Kaupustelijan teline täynnä nahkalaukkuja aukion '
-                    + 'laidalla. Takana nousee Badia Fiorentinan kapea '
-                    + 'kuusikulmainen kellotorni ja oikealla Bargellon '
-                    + 'hammastettu tornitalo.',
+                    + 'laidalla, takana Badia Fiorentinan kellotorni ja '
+                    + 'Bargellon hammastettu tornitalo.',
                   lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
                 },
               ],
@@ -21221,9 +21160,8 @@ export const KULTTUURI_KATEGORIAT = {
                 {
                   tiedosto: 'Firenze Palazzo Vecchio 02.jpg',
                   asettelu: 'kapea',
-                  selite: 'Palazzo Vecchio hämärissä kadun päässä. Torni ja '
-                    + 'vaakunarivi on valaistu lämpimäksi, ja alhaalla '
-                    + 'kadulla kävellään vielä.',
+                  selite: 'Palazzo Vecchio hämärissä kadun päässä, torni ja '
+                    + 'vaakunarivi lämpimästi valaistuina.',
                   lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
@@ -21365,9 +21303,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kalanruotokuvioon: muuraus kannatti itse itsensä, joten koko '
             + 'aukon täyttävää puutelinettä ei tarvittu. Tiiliä kului yli '
             + 'neljä miljoonaa, ja kupoli valmistui 1436.',
-          selite: 'Kupoli kellotornista katsottuna. Katteen päällä näkyy '
-            + 'valkoinen huippulyhty, jonka kaiteella seisoo ihmisiä — '
-            + 'sinne noustaan kahden kuoren välistä.',
+          selite: 'Kupoli kellotornista katsottuna: valkoisen huippulyhdyn '
+            + 'kaiteella seisoo ihmisiä, ja sinne noustaan kahden kuoren '
+            + 'välistä.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Santa Maria del Fiore',
         },
@@ -21383,9 +21321,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'takana olivat pankkiirisuvut, joista mahtavimmaksi nousi '
             + 'Medici. Se ei ollut ruhtinassuku vaan kauppiassuku, joka osti '
             + 'valtansa rahalla ja taiteella.',
-          selite: 'Floriini molemmilta puolilta. Vasemmalla kaupungin lilja ja '
-            + 'kirjoitus FLORENTIA, oikealla Johannes Kastaja seisomassa '
-            + 'sädekehä päänsä ympärillä.',
+          selite: 'Floriini molemmilta puolilta: vasemmalla kaupungin lilja '
+            + 'ja kirjoitus FLORENTIA, oikealla Johannes Kastaja.',
           lahde: 'CNG (Classical Numismatic Group), Wikimedia Commons (CC BY-SA 2.5)',
           wiki: 'Floriini',
         },
@@ -21400,8 +21337,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sisältä punaisena. Kypsyysastetta ei kysytä eikä tarjota. '
             + 'Pihvi punnitaan ennen paistamista ja hinta lasketaan kilon '
             + 'mukaan, joten se tilataan tavallisesti kahdelle.',
-          selite: 'Paistettu T-luupihvi metallilautasella. Luu erottuu '
-            + 'keskellä T-kirjaimena, ja liha on pinnalta ruskea mutta '
+          selite: 'Paistettu T-luupihvi metallilautasella: pinnalta ruskea, '
             + 'leikkauspinnalta punainen.',
           lahde: 'Number55, Wikimedia Commons (CC BY-SA 3.0)',
         },
@@ -21455,9 +21391,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oven viereen. Siellä se seisoi 369 vuotta. Vuonna 1873 patsas '
             + 'siirrettiin sään ja vaurioiden takia sisätiloihin Accademian '
             + 'museoon, ja aukiolle tuli myöhemmin kopio.',
-          selite: 'David museon kupolisalissa korkealla jalustalla. Marmori on '
-            + 'vaalea ja kiiltävä, ja patsaan juurella seisoo tiivis '
-            + 'joukko katsojia — mittasuhteen näkee heistä.',
+          selite: 'David museon kupolisalissa korkealla jalustalla, ja '
+            + 'mittasuhteen näkee juurella seisovasta katsojajoukosta.',
           lahde: 'Mariordo, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Daavid (veistos)',
         },
