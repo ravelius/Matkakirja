@@ -6575,6 +6575,78 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Humayunin mausoleumi', lat: 28.5933, lon: 77.2507 },
     ],
   },
+  /*
+   * VLADIVOSTOKIN KOHDEKARTTA (Opus 20.8.2026, täydennyserä V3).
+   * Rajaus on 3,9 × 2,9 km: niemen kärki Pokrovskin puistosta
+   * Kultaisen sarven siltaan. Piirtoperustelut (meri, ei reunusta,
+   * eteläraja) ovat tools/piirra-kaupunkikartta.mjs:n
+   * vladivostok-lohkossa.
+   *
+   * KOORDINAATIT OVAT OVERPASSISTA (openstreetmap.fr-peili,
+   * 20.8.2026), ja en-Wikipedian coord-mallit vahvistavat ne missä
+   * artikkeli on: rautatieasema 43,1112/131,8815 (ero 20 m), S-56
+   * 43,11342/131,891221 (ero 10 m), GUM eli Kunst & Albers
+   * 43,1155/131,8879 (ero 15 m), Arsenjevin museo 43,1163/131,8821
+   * (ero 15 m). Wikivoyagen linnoitusmuseo 43,1224/131,8766 vastaa
+   * Overpassin monikulmion keskipistettä (ero 40 m). Funikulaarin
+   * piste on radan keskikohta Overpassin funicular-polkujen
+   * keskiarvona, ja sillan piste on kannen keskellä lahden yllä —
+   * sillat saavat olla vedellä (tools/tarkista-karttapisteet.mjs).
+   *
+   * NIKOLAIN RIEMUKAARI JÄI KARTALTA TARKOITUKSELLA: se on 110
+   * metrin päässä S-56:sta, ja kahden pisteen numeroympyrät
+   * olisivat lepotilassa käytännössä kiinni toisissaan (Petran
+   * oppi). Kaari kerrotaan S-56:n jutussa — ne ovat samalla
+   * Korabelnajan rantakadulla. Tokarevin majakka (43,073/131,843)
+   * on 4,5 km lounaaseen eikä mahdu; se on lehden avauskuvissa.
+   */
+  vladivostok: {
+    polku: 'assets/kartat/vladivostok-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 43.13, etela: 43.1035, lansi: 131.864, ita: 131.912 },
+    esittely: 'Vladivostok perustettiin 1860 sotilasvartioksi lahdelle, '
+      + 'jonka kenraalikuvernööri Muravjov-Amurski oli nimennyt '
+      + 'Kultaiseksi sarveksi Konstantinopolin mukaan, ja nimi lupasi '
+      + 'suoraan mihin satama tähtäsi: se tarkoittaa idän hallitsijaa. '
+      + 'Vuonna 1871 tänne siirrettiin Siperian laivasto-osaston '
+      + 'tukikohta Nikolajevsk-na-Amuresta, ja kun Transsiperian radan '
+      + 'itäpää valmistui, kaupungista tuli Venäjän tärkein '
+      + 'Tyynenmeren satama. Kiinalaiset olivat kutsuneet poukamaa '
+      + 'merimakkaralahdeksi, Haishenwaiksi, ja vuosisadan alussa jopa '
+      + 'puolet asukkaista oli aasialaisia. Neuvostoaika käänsi oven '
+      + 'kiinni: vuodesta 1952 vuoteen 1992 Vladivostok oli suljettu '
+      + 'kaupunki, johon ulkomaalaisilla ei ollut asiaa. Nykyään se on '
+      + 'Kaukoidän liittopiirin pääkaupunki ja Habarovskin jälkeen '
+      + 'alueen toiseksi suurin kaupunki, jonka katukuvassa Aasian '
+      + 'naapurit ja eurooppalainen kivikaupunki sekoittuvat.'
+      + '\n\n'
+      + 'Kartalla kaupunki on niemi kahden veden välissä: vasemmalla '
+      + 'aukeaa Amurinlahti ja oikeasta alakulmasta työntyy Kultaisen '
+      + 'sarven kapea satamalahti laitureineen. Niiden välissä on '
+      + 'ruutukaava, jonka kaksi pääkatua erottuvat heti — '
+      + 'Svetlanskaja seuraa Kultaisen sarven rantaa ja Aleutskaja '
+      + 'laskee kohtisuoraan sitä vastaan, ja rautatieasema on niiden '
+      + 'risteyksessä sataman vieressä. Lahden yli hyppää vuoden 2012 '
+      + 'vinoköysisilta, ja sen vasemmalla puolen rinne nousee '
+      + 'Kotkanpesän kukkulalle, jonka kylkeen funikulaari on '
+      + 'piirretty lyhyenä suorana viivana. Luoteessa katuverkko '
+      + 'harvenee Sportivnajan rannan ja linnoitusmuseon ympärillä. '
+      + 'Kartalta jää etelään Russkin saari siltoineen ja lounaaseen '
+      + 'Tokarevin majakka niemen kärjessä. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
+      { nimi: 'Pokrovskin puisto', lat: 43.1258, lon: 131.8914 },
+      { nimi: 'Linnoitusmuseo', lat: 43.1225, lon: 131.8766 },
+      { nimi: 'Kotkanpesän kukkula', lat: 43.1224, lon: 131.899 },
+      { nimi: 'Funikulaari', lat: 43.1166, lon: 131.9004 },
+      { nimi: 'Arsenjevin museo', lat: 43.1164, lon: 131.8822 },
+      { nimi: 'GUM-tavaratalo', lat: 43.1156, lon: 131.8879 },
+      { nimi: 'Sukellusvene S-56', lat: 43.1134, lon: 131.8912 },
+      { nimi: 'Rautatieasema', lat: 43.1112, lon: 131.8817 },
+      { nimi: 'Kultaisen sarven silta', lat: 43.1089, lon: 131.8962 },
+    ],
+  },
 };
 
 /*

@@ -20778,4 +20778,348 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * VLADIVOSTOKIN KOHDEKARTAN JUTUT (Opus 20.8.2026, täydennyserä
+   * V3). Yhdeksän kohdetta samassa järjestyksessä kuin kartalla,
+   * pohjoisesta etelään. Lähteet: en-Wikipedian artikkelit
+   * Vladivostok, Vladivostok Fortress, Vladimir K. Arseniev Museum of
+   * Far East History, Kunst and Albers, Soviet submarine S-56,
+   * Vladivostok railway station, Zolotoy Bridge, Russky Bridge ja
+   * Svetlanskaya Street sekä en-Wikivoyagen Vladivostok-sivu
+   * (riemukaari, linnoitusmuseon käynti, funikulaarin ja kukkulan
+   * suhde) — sama Wikivoyage-käytäntö kuin Tripolissa ja Salalahissa.
+   * Kaikki haettu 20.8.2026.
+   *
+   * FUNIKULAARIN MITAT (183 m, nousu 66,5 m, 1,5 min, avattu
+   * 5.5.1962) ovat pelin oman kansikuvan selitteestä eli jo
+   * hyväksytystä paketista; en-Wikipediassa radalla ei ole omaa
+   * artikkelia, ja Vladivostok-artikkeli vahvistaa funikulaarin
+   * osana joukkoliikennettä.
+   *
+   * NOSTOJEN TOISTOA VÄLTETTY: kansisivun nostot kertovat nimen ja
+   * vuoden 1860, aseman rakennusvaiheet Planson-laajennuksineen ja
+   * Brynnerin suvun. Aseman juttu on siksi kirjoitettu sisätiloista,
+   * väreistä ja entisöinnistä, ja nimijuttua ei toisteta — kartan
+   * esittely hoitaa sen. Aihetoistot on kirjattu raporttiin
+   * (funikulaari ja asema esiintyvät sekä lehden kuvissa että
+   * kartalla, eri tiedostoin ja eri näkymin).
+   *
+   * VENÄJÄ-LINJAUS: S-56 ja linnoitus ovat historiallisia
+   * museokohteita, ja niistä kerrotaan kuten muiden lautojen
+   * linnoituksista ja sotamuseoista — ilman nykyaikaa. Kuvissa ei
+   * ole nykysotilaskohteita.
+   */
+  vladivostok: {
+    'Pokrovskin puisto': {
+      aika: 'puistoksi 1934',
+      teksti: 'Pokrovskin puisto keskustan pohjoislaidalla on '
+          + 'Vladivostokin puistoista vanhin tarinaltaan — ja tarina on '
+          + 'tavallista vakavampi, sillä puisto oli alkujaan kaupungin '
+          + 'hautausmaa. Se muutettiin puistoksi 1934, ja '
+          + 'neuvostovuosikymmenet se palveli kaupunkilaisia '
+          + 'kävelypaikkana. Vuonna 1990 puisto suljettiin ja maa '
+          + 'palautettiin ortodoksiselle kirkolle, ja kun kirkkoa '
+          + 'rakennettiin uudelleen, maasta löytyi vanhoja hautoja. '
+          + 'Nykyään lehtevien käytävien päässä kohoaa Jumalanäidin '
+          + 'suojeluksen katedraali, jolta puisto ja koko kaupunginosa '
+          + 'ovat saaneet nimensä.'
+          + '\n\n'
+          + 'Puistot kertovat tässä kaupungissa muutenkin sen '
+          + 'historiaa. Minny Gorodok eli Miinakaupunki idempänä on '
+          + 'nimensä mukaisesti entinen sotilasalue vuodelta 1880: '
+          + 'merimiinoja säilytettiin maanalaisissa varastoissa, ja '
+          + 'alue avattiin kaupunkilaisille puistona vasta 1985. Sen '
+          + 'lammilla luistellaan talvisin. Kävelijän Vladivostok on '
+          + 'siis kerroksellinen — pinnalla penkit ja lyhtyrivit, '
+          + 'pinnan alla varuskuntakaupungin ja siirtolaiskaupungin '
+          + 'vaiheet.',
+      kuvat: [
+        {
+          tiedosto: 'Владивосток, Покровский парк.jpg',
+          selite: 'Pokrovskin puiston pääkäytävä marraskuussa. '
+            + 'Lehdettömien puiden välissä on lyhtyrivi ja kivipenkkejä, '
+            + 'käytävällä kävelee kaksi ihmistä kaukana, ja puiden takaa '
+            + 'häämöttää katedraalin siluetti.',
+          lahde: 'A. C. Tatarinov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Linnoitusmuseo: {
+      aika: 'linnoitus 1889–1918',
+      teksti: 'Vladivostokin ympärille rakennettiin vuosina 1889–1918 '
+          + 'yksi aikansa vahvimmista merilinnoituksista: kuusitoista '
+          + 'linnaketta, kymmeniä rannikkopattereita ja maalinnakkeita, '
+          + 'kilometreittäin tunneleita ja kasematteja, kaikki '
+          + 'yhdistettyinä teihin ja maanalaisiin kaapeleihin. '
+          + 'Port Arthurin menetys 1904 opetti suunnittelijoita: '
+          + 'linnakkeita ei tehty kaavakirjan mukaan vaan vuorimaaston '
+          + 'muotoihin, hajalleen ja näkymättömiin, ja betonia '
+          + 'vahvistettiin vuoden 1913 koeammuntojen jälkeen entisestään. '
+          + 'Työ katkesi ensimmäiseen maailmansotaan ja vallankumoukseen, '
+          + 'kun noin kaksi kolmasosaa oli valmiina — eikä linnoitusta '
+          + 'koskaan koeteltu taistelussa.'
+          + '\n\n'
+          + 'Rakentajien johtaja Aleksei Šošin perusteli 1914 myös '
+          + 'rakennusten ulkonäköä: linnoituksen piti näyttää siltä, '
+          + 'että tänne on tultu jäädäkseen. Kartan piste on '
+          + 'Bezymjannajan eli Nimettömän rannikkopatterin kukkulalla '
+          + 'Sportivnajan sataman yläpuolella, jossa toimii linnoituksen '
+          + 'museo. Vallien tykkien ja kasemattien välissä saa kuljeskella '
+          + 'vapaasti, ja pieni pääsymaksu vie sisähuoneisiin, joissa on '
+          + 'seudun historian näyttelyitä ja pienoismalleja. Museota '
+          + 'hoitaa nykyään Arsenjevin museo, johon se liitettiin '
+          + 'vuonna 2019.',
+      kuvat: [
+        {
+          tiedosto: 'Безымянная береговая батарея.jpg',
+          selite: 'Bezymjannajan patterin valli museon pihalla. Vanha '
+            + 'rannikkotykki seisoo pyöreällä betonikorokkeella, kaartuvan '
+            + 'rintavarustuksen kyljessä on holvattu teräsovi, ja taustalla '
+            + 'näkyvät Amurinlahti ja keskustan tornitalot.',
+          lahde: 'Rost.galis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kotkanpesän kukkula': {
+      aika: '199 metriä',
+      teksti: 'Kotkanpesä eli Orlinoje gnezdo on keskustan korkein '
+          + 'kohta, 199 metriä — toisten mittausten mukaan 214. Sitä '
+          + 'kutsutaan usein koko kaupungin korkeimmaksi paikaksi, '
+          + 'mutta se ei pidä paikkaansa: Holodilnik-vuori pohjoisempana '
+          + 'on 257 metriä. Väärinkäsitys on silti ymmärrettävä, sillä '
+          + 'juuri tältä kukkulalta kaupunki avautuu parhaiten. Laelta '
+          + 'näkee kerralla sen, minkä kartta kertoo viivoina: Kultaisen '
+          + 'sarven mutkan laitureineen, sillan pylonit, Amurinlahden '
+          + 'ja kirkkaalla säällä Russkin saaren sillan salmen takana.'
+          + '\n\n'
+          + 'Kukkula kertoo myös, miksi Vladivostokissa kävellään '
+          + 'raskaasti: keskustan kadut on vedetty rantaviivan '
+          + 'suuntaisesti, ja niiden väliset poikkikadut kiipeävät '
+          + 'rinteitä suoraan ylös. Huipun juurelle nousee funikulaari, '
+          + 'ja loppumatka taitetaan portaita. Laki on '
+          + 'näköalapaikkana suosittu iltaisin, kun satamalahden valot '
+          + 'syttyvät — ja tuulinen se on lähes aina.',
+      kuvat: [
+        {
+          tiedosto: "A view from Eagle's Nest (21466232344).jpg",
+          selite: 'Kotkanpesän paljas kallioinen laki. Rinteen '
+            + 'kerrostalot nousevat lähes huipulle asti, vasemmalla '
+            + 'näkyvät Kultaisen sarven sillan pylonit ja takana '
+            + 'Amurinlahti vuorineen.',
+          lahde: 'Raita Futo from Tokyo, Japan, Wikimedia Commons '
+            + '(CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Funikulaari: {
+      aika: 'avattu 1962',
+      teksti: 'Vladivostokin joukkoliikenne alkoi raiteilta: '
+          + 'ensimmäinen raitiolinja avattiin Svetlanskajalle '
+          + 'kesäkuussa 1908, ja lokakuussa 1912 liikenteeseen tulivat '
+          + 'Belgiassa rakennetut puukoriset vaunut. Kaupungin '
+          + 'erikoisin raide on kuitenkin lyhin: Kotkanpesän rinnettä '
+          + 'kiipeävä funikulaari, joka avattiin toukokuussa 1962 '
+          + 'Hruštšovin ajan suuren rakennuskauden hankkeena. Rataa on '
+          + '183 metriä, nousua 66 ja puoli, ja matka kestää '
+          + 'puolitoista minuuttia.'
+          + '\n\n'
+          + 'Lyhyys ei tee siitä turhaa. Kukkulakaupungissa suora '
+          + 'nousu on kävelijälle raskain, ja funikulaari korvaa '
+          + 'satojen portaiden pätkän; samalla se on kaupungin '
+          + 'rakastetuimpia laitteita, kahden vastapainona toisiaan '
+          + 'kohtaavan vaunun pieni teatteri. Yläasemalta on lyhyt '
+          + 'matka Kotkanpesän näköalapaikalle. Vaihtoehto kulkee '
+          + 'saman rinteen ali: kadut kiertävät serpentiininä, ja '
+          + 'bussit ja martšrutkat hoitavat saman nousun pidempää '
+          + 'reittiä.',
+      kuvat: [
+        {
+          tiedosto: 'Vladivostok Funicular (October 2024)-0 5.jpg',
+          selite: 'Funikulaarin molemmat vaunut rinteessä ala-asemalta '
+            + 'nähtynä: sininen vaunu laskeutuu yläaseman kaariportista, '
+            + 'punainen odottaa kohtauspaikan alapuolella. Kukkulan '
+            + 'huipulla kohoaa televisiomasto.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Arsenjevin museo': {
+      aika: 'perustettu 1884',
+      teksti: 'Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. '
+          + 'huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt '
+          + 'vahvistettiin, ja ovet avautuivat yleisölle lokakuussa '
+          + '1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, '
+          + 'Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan '
+          + '— hänen tarinansa on lehden taigasivulla. Kokoelmissa on '
+          + 'seudun tutkijoiden, muun muassa Prževalskin, aineistoja, '
+          + 'jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain '
+          + 'valtakunnan hallitsijan peili; täytetyt tiikeri ja '
+          + 'karhu ovat museon kuuluisin näky. Vuonna 2015 se oli '
+          + 'Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja '
+          + 'vuonna 2019 siitä tehtiin liittovaltion museo.'
+          + '\n\n'
+          + 'Rakennus on tarina itsessään: kauppahuone Tšurin & '
+          + 'Kasjanovin osakkaan Babintsevin vuokratalo vuosilta '
+          + '1903–1906 Svetlanskajan ja Aleutskajan kulmassa. Talossa '
+          + 'ovat ehtineet toimia Japanin konsulaatti, Jokohaman '
+          + 'pankki, parturi ja kalataloustutkimuslaitos, ennen kuin '
+          + 'museo muutti siihen vuonna 1977.',
+      kuvat: [
+        {
+          tiedosto: 'Vladivostok September Night. 2022. Slava Ivanov 02.jpg',
+          selite: 'Museon kulmatalo iltavalossa. Vaaleanpunaiseksi '
+            + 'rapattu jugendtalo kaartuu kadunkulman ympäri, kulmassa '
+            + 'on pyöreä kupolitorni ja katutasossa valaistut '
+            + 'näyteikkunat.',
+          lahde: 'Slavagallery, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'GUM-tavaratalo': {
+      aika: 'nykyinen talo 1907',
+      teksti: 'Syyskuussa 1864 hampurilaisen kultasepän poika Gustav '
+          + 'Albers purki kuunari Metan lastin rantaan, jossa oli '
+          + 'kaikkiaan 44 puutaloa. Hän oli sopinut Shanghaissa '
+          + 'kauppias Gustav Kunstin kanssa yhteisestä liikkeestä, ja '
+          + 'ensimmäinen puinen kauppa nousi 1865. Kunst & Albersista '
+          + 'kasvoi Venäjän Kaukoidän suurin kauppahuone: vuonna 1884 '
+          + 'valmistuneen kivitalon rakennusaineet tiiliä lukuun '
+          + 'ottamatta tuotiin laivalla Hampurista, myyntiosastoja oli '
+          + 'kahdeksantoista ja liike hoiti pankkiasioitakin. Vuonna '
+          + '1907 arkkitehti Georg Junghändel rakensi Svetlanskajalle '
+          + 'nykyisen jugendtalon, ja haaraliikkeitä oli 1914 jo '
+          + 'kolmekymmentäkaksi.'
+          + '\n\n'
+          + 'Ensimmäinen maailmansota katkaisi tavaravirran Saksasta, '
+          + 'ja osakas Adolph Dattan karkotettiin vakoojahuhujen '
+          + 'saattelemana Siperiaan 1915 — huhukampanjaa on kutsuttu '
+          + 'lehdistöhistorian pisimmäksi henkilövainoksi. '
+          + 'Neuvostovalta pakkolunasti yhtiön, ja kauppa suljettiin '
+          + 'veroruuviin 1930. Talo jäi: siinä toimii yhä tavaratalo, '
+          + 'GUM, ja jugendjulkisivu tornihuippuineen on Svetlanskajan '
+          + 'koristeellisin.',
+      kuvat: [
+        {
+          tiedosto: 'Vladivostok. GUM Department Store P8070703 2200.jpg',
+          selite: 'Kunst & Albersin vuoden 1907 tavaratalo '
+            + 'Svetlanskajalla. Vaalean jugendjulkisivun katolla on '
+            + 'vihreä torni ja koristepäätyjä, katutasossa kauppojen '
+            + 'ovia — talossa toimii yhä tavaratalo GUM.',
+          lahde: 'Alexxx1979, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sukellusvene S-56': {
+      aika: 'vesille 1939, museona 1975',
+      teksti: 'Korabelnajan rantakadulla makaa kuivalla maalla '
+          + 'kokonainen sukellusvene. S-56 aloitti matkansa erikoisesti: '
+          + 'runko rakennettiin Leningradissa 1936, kuljetettiin '
+          + 'osina rautateitse halki mantereen ja koottiin '
+          + 'Dalzavodin telakalla, ja vesille vene laskettiin '
+          + 'joulukuussa 1939. Sota vei sen vielä pidemmälle: '
+          + 'Tyynenmeren laivastosta vene siirrettiin pohjoiseen '
+          + 'Tyynenmeren ja Atlantin yli Panaman kanavan kautta. '
+          + 'Pohjoisilla vesillä se upotti neljä alusta, ja '
+          + 'palveluksestaan se sai kaartin arvon ja Punalipun '
+          + 'kunniamerkin. Museolaivaksi vene nostettiin vuonna 1975; '
+          + 'sisällä pääsee kulkemaan osastosta toiseen lähes '
+          + 'vapaasti.'
+          + '\n\n'
+          + 'Sama rantakatu on pieni ulkoilmamuseo muutenkin. Aivan '
+          + 'veneen vieressä on Admiralski skver, jota hallitsee '
+          + 'Nikolain riemukaari: kappelimainen portti pystytettiin '
+          + 'kruununperillisen, tulevan Nikolai II:n, vierailun '
+          + 'kunniaksi, purettiin vallankumouksen jälkeen ja '
+          + 'rakennettiin uudelleen vuonna 2003. Kaaren ja veneen väliin '
+          + 'jää laivaston muistomerkki ikuisine tulineen.',
+      kuvat: [
+        {
+          tiedosto: '053 - Wladiwostok 2015 (24130179580).jpg',
+          selite: 'S-56 kuivalla maalla Korabelnajan rantakadulla. '
+            + 'Vihreäpohjainen, harmaakylkinen vene lepää koko '
+            + 'pituudeltaan jalustalla, kannella on tykki ja tornissa '
+            + 'tunnus C-56. Takana kohoaa muistomerkkiseinä.',
+          lahde: 'Uwe Brodrecht, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Rautatieasema: {
+      aika: 'vihitty 1893',
+      teksti: 'Aseman tarina on kerrottu lehden kansisivulla; tässä '
+          + 'kannattaa katsoa taloa läheltä. Ensimmäinen kivi '
+          + 'muurattiin toukokuussa 1891 kruununperillisen läsnä '
+          + 'ollessa, ja vihkiäisiä vietettiin marraskuun alussa 1893. '
+          + 'Lattioihin pantiin japanilaiset savilaatat, jotka ovat '
+          + 'paikoillaan tänäkin päivänä, ja julkisivuja koristivat '
+          + 'mosaiikkivaakunat: länsipäädyssä Primorjen, itäpäädyssä '
+          + 'Moskovan. Vuodesta 1924 talo alkoi muuttua: kaksipäinen '
+          + 'kotka ammuttiin alas, vaakunat katosivat rappauksen alle '
+          + 'ja keltainen julkisivu maalattiin vihreäksi. Vuonna 1936 '
+          + 'taiteilija Grigorovitš maalasi sisätilat, ja '
+          + 'kaksikymmentä vuotta myöhemmin lipunmyyntisaliin syntyi '
+          + 'seinämaalaus Meidän suuri kotimaamme.'
+          + '\n\n'
+          + 'Nykyinen asu on entisöinnin tulos: venäläis-italialainen '
+          + 'urakoitsija palautti talon 1994–1996 lähelle '
+          + 'vallankumousta edeltänyttä ilmettään. Laiturilla seisovat '
+          + 'kilometripylväs 9288 ja vanha höyryveturi, ja asemalta '
+          + 'lähtee kaukojunien lisäksi lähijuna lentoasemalle. '
+          + 'Meren puolella aivan vieressä on matkustajasatama — '
+          + 'juna ja laiva kohtaavat tässä kaupungissa saman '
+          + 'korttelin sisällä.',
+      kuvat: [
+        {
+          tiedosto: 'Vladivostok railway station (October 2024)-0 6.jpg',
+          selite: 'Rautatieasema aukiolta nähtynä lokakuussa. '
+            + 'Vanhavenäläinen asematalo koristeharjoineen on kuvan '
+            + 'keskellä, ja sen takana kohoavat Kultaisen sarven sillan '
+            + 'valkoiset pylonit ja satamanosturi.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kultaisen sarven silta': {
+      aika: 'avattu 2012',
+      teksti: 'Kultaisen sarven lahti teki Vladivostokista sataman, '
+          + 'mutta se myös halkaisi kaupungin: Tšurkinin puolelle '
+          + 'pääsi vuosikymmenten ajan vain lautalla tai pitkällä '
+          + 'kierrolla lahden pohjukan kautta, pahimmillaan '
+          + 'puolentoista–kahden tunnin matkalla. Silta tilattiin '
+          + '2006, rakennustyöt alkoivat heinäkuussa 2008, ja '
+          + 'elokuussa 2012 vuoden 2012 APEC-huippukokouksen alla '
+          + 'lahden yli avattiin 1 387 metrin vinoköysisilta. Ylitys '
+          + 'kestää nyt viidestä kymmeneen minuuttia.'
+          + '\n\n'
+          + 'Mitat ovat kaupungin mittakaavassa valtavat: pääjänne on '
+          + '737 metriä, V-kirjaimen muotoiset pylonit nousevat 222 '
+          + 'metriin ja kannen alla on kuusikymmentä metriä vapaata '
+          + 'korkeutta laivoille. Samana kesänä valmistui toinenkin '
+          + 'jättiläinen, Russkin silta Itäisen Bosporin yli, jonka '
+          + '1 104 metrin jänne on vinoköysisiltojen maailmanlistan '
+          + 'kärkipäätä. Paikalliset ottivat lahden sillan omakseen '
+          + 'nopeasti, sillä se puolitti pohjukan Lugovajan aukion '
+          + 'ikuiset ruuhkat — ja antoi kaupungille uuden siluetin, '
+          + 'joka näkyy lähes joka kadun päässä.',
+      kuvat: [
+        {
+          tiedosto: 'Золотой мост, июль 2013.jpg',
+          selite: 'Kultaisen sarven silta ylhäältä nähtynä. '
+            + 'V-muotoiset pylonit kannattavat viuhkoina leviäviä '
+            + 'vaijereita, kuusikaistainen ajorata kaartaa rantaan, ja '
+            + 'lahden takana on Tšurkinin ranta laitureineen.',
+          lahde: 'Даниил Рыжков (Daniil Ryzhkov), Wikimedia Commons '
+            + '(CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

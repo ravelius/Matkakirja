@@ -1810,6 +1810,53 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     meri: true,
   },
+  vladivostok: {
+    /*
+     * Niemen kärki kahden veden välissä: Amurinlahti jää kuvan
+     * vasempaan laitaan ja Kultaisen sarven lahti työntyy kuvaan
+     * oikeasta alakulmasta. Niiden välissä on ruutukaava, jonka kaksi
+     * pääkatua ovat kuvan juoni — Svetlanskaja kulkee Kultaisen
+     * sarven rantaa idän suuntaan ja Aleutskaja kohtisuoraan sitä
+     * vastaan niemen mittaan, ja rautatieasema on niiden risteyksessä
+     * (en-Wikipedia "Vladivostok", Urban layout). Ruutu on
+     * 3,9 × 2,9 km ja kattaa kaikki yhdeksän kohdetta
+     * Pokrovskin puistosta pohjoisessa Kultaisen sarven siltaan
+     * etelässä.
+     *
+     * ETELÄRAJA 43,1035 EIKÄ tiukempi: Kultaisen sarven sillan
+     * kohdepiste on sillan keskellä lahden yllä (43,1089), ja
+     * tiukemmalla rajalla se putoaisi mittakaavajanan korkeudelle.
+     * Nyt piste on 80 %:n korkeudella ja kaukana vasemman alakulman
+     * janasta (x 67 %).
+     *
+     * TOKAREVIN MAJAKKA JÄI POIS (43,073 / 131,843): se on niemen
+     * kärjessä 4,5 km lounaaseen, ja mukaan ottaminen olisi
+     * kaksinkertaistanut ruudun ja tehnyt keskustasta täplän.
+     * Kainaloa ei tehty, koska majakan ympärillä ei ole katuverkkoa —
+     * ruutu olisi tyhjää paperia kuten Tallinnan laulukentästä.
+     * Majakka mainitaan oppaassa. Russkin saaren silta jää samasta
+     * syystä pois (5 km etelään).
+     *
+     * meri: true — Japaninmeri on OSM:ssä täällä pelkkää rantaviivaa
+     * ilman vesimonikulmioita, ja ilman lippua sekä Amurinlahti että
+     * Kultainen sarvi jäisivät paperin värisiksi. Tavallisella
+     * rajauksella täyttö osuu oikein: molemmat lahdet vettä, niemi
+     * kuivana, laiturit piirtyvät sormina.
+     *
+     * EI laajennusta, JA SE ON MITATTU PÄÄTÖS eikä unohdus. Reunus
+     * kokeiltiin (laajennus 1.6, koeajot 20.8.2026): laajennetulla
+     * alueella rantaviiva pilkkoutuu niin moneksi pätkäksi (Egeršeld,
+     * Tšurkin, Kultaisen sarven pohjukka), että vesipuolten unioni
+     * peittäisi 142 % rajauksesta ja työkalu putoaa rantanauhaan —
+     * silloin KUMPIKAAN lahti ei täyty ja satamakaupungilta katoaa
+     * vesi. Myös meri: 'maa' kokeiltiin laajennuksen kanssa: maan
+     * renkaat sulkeutuvat väärin ja peittävät lahdetkin paperilla.
+     * Ilman laajennusta täyttö toimii, ja vesi on tässä kuvassa
+     * tärkeämpi kuin reunus.
+     */
+    rajat: { pohjoinen: 43.13, etela: 43.1035, lansi: 131.864, ita: 131.912 },
+    meri: true,
+  },
 };
 
 /*

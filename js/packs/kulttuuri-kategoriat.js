@@ -34321,6 +34321,201 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Itelmeenit',
         },
       ],
+      /*
+       * AVAUSKUVAT JA MATKAILIJAN OPAS (Opus 20.8.2026, täydennyserä
+       * V3). Kamtšatka on ALUELEHTI (Kappadokia/Siinai-malli): ei
+       * kohdekarttaa eikä nähtävyysjuttuja, mutta kaupunkisivu saa
+       * avauskuvat ja oppaan. Faktat on tarkistettu en-Wikipedian
+       * artikkeleista Kamchatka Peninsula, Petropavlovsk-Kamchatsky,
+       * Avacha Bay, Valley of Geysers ja Kronotsky Nature Reserve
+       * (haettu 20.8.2026).
+       *
+       * VENÄJÄ-LINJAUS: Avatšanlahden etelärannan tukikohdista ei
+       * kerrota eikä näytetä kuvia; suljetun alueen vuodet (koko
+       * niemimaa suljettuna omiltakin 1989:ään ja ulkomaalaisilta
+       * 1990:een asti) kerrotaan neutraalina historiana. Nykyiset
+       * rajoitteet kerrotaan lupakäytäntöinä ilman politiikkaa:
+       * Kronotskin luonnonpuiston kävijämäärä ja maksu ovat
+       * en-Wikipedian lukuja (n. 3 000 kävijää/vuosi, noin 700
+       * dollarin helikopteripäivä).
+       *
+       * OPAS EI TOISTA NOSTOJA EIKÄ VISAA: nostot kertovat sataman
+       * synnyn, Krašeninnikovin ja itelmeenit, luontosivu tulivuoret
+       * ja gejsirit. Visa kysyy mm. "miten Kamtšatkalle pääsee?"
+       * (lentäen tai laivalla, maantietä ei ole) — oppaan
+       * Perille-jakso kertoo saman asian laveammin, samoin
+       * karhu- ja lohivisojen opetukset ovat jo luontosivulla.
+       * Sääjakson luvut ovat pelin sääriviltä (saatiedot.js).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Лежбище сивучей.jpg',
+          selite: 'Sivutši eli stellerinmerileijona makaa vanhalla '
+            + 'laiturilla Petropavlovskin Avatšan kaupunginosassa '
+            + 'maaliskuussa. Merileijonat pesivät niemimaan rannoilla, ja '
+            + 'talvisin niitä lojuu kaupungin laitureilla; takana on '
+            + 'lahden jäätä ja lumisia vuoria.',
+          lahde: 'Artem Rybalchenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Халактырский пляж (лето).jpg',
+          selite: 'Halaktyrin ranta Petropavlovskin itäpuolella on '
+            + 'avoimen Tyynenmeren ranta, jonka hiekka on mustaa '
+            + 'tulivuorten laavamurskaa. Ilmakuvassa maininki vyöryy '
+            + 'suorana viivana tummalle rannalle syysauringossa.',
+          lahde: 'Алексей Чернышев1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Petropavlovsk-Kamchatsky city center 02.jpg',
+          selite: 'Petropavlovskin keskustaa syksyllä ylhäältä nähtynä. '
+            + 'Pitkä punakattoinen kerrostalo seuraa pääkadun kaarta, '
+            + 'pihoilla hehkuvat ruskan värit ja kadun päässä erottuvat '
+            + 'sataman nosturit.',
+          lahde: 'ФГБУ "ИНФОРМАВТОДОР", Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Вид на морской порт.jpg',
+          selite: 'Kalastusaluksia ja laitureita Petropavlovskin '
+            + 'satamassa Nikolskajan kukkulalta nähtynä. Kaupunki nousee '
+            + 'vihreille rinteille lahden ympärillä, ja oikealla '
+            + 'Avatšanlahti jatkuu kohti suutaan.',
+          lahde: 'Stasich116, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Petropavlovsk-Kamtšatski on 6 766 kilometrin päässä '
+          + 'Moskovasta ja yli 2 000 kilometrin päässä lähimmästä '
+          + 'suurkaupungista Vladivostokista — ja silti se on niemimaan '
+          + 'ainoa oikea kaupunki ja koko Kamtšatkan portti. Kaupunki '
+          + 'istuu meren tasossa Avatšanlahden rannalla niin vuorten '
+          + 'ympäröimänä, ettei horisonttia näe mistään kohtaa '
+          + 'kaupunkia. Kaikki niemimaan matkat alkavat täältä: '
+          + 'satamasta, lentokentältä tai helikopterin ruumasta, sillä '
+          + 'teitä on vain kourallinen.',
+        artikkeli: {
+          nimi: 'Matkailijan Kamtšatka',
+          taitto: 'opas',
+          teksti: 'Niemimaa, jonne ei vie maantietä — tulivuorten, '
+            + 'lohijokien ja karhujen maa Tyynenmeren tulirenkaalla.',
+          nosto: 'Kronotskin luonnonpuistoon pääsee vain tutkijana tai '
+            + 'helikopterilla: kävijöitä on vuodessa vain noin kolme '
+            + 'tuhatta, ja yhden päivän lento maksaa noin 700 dollaria.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kamtšatkalle ei vie maantietä eikä rautatietä, '
+                + 'joten niemimaalle tullaan lentäen tai laivalla — '
+                + 'kuten pelin visakin opettaa. Lennot laskeutuvat '
+                + 'Jelizovon kentälle, josta A-401-tie vie '
+                + 'Petropavlovskiin ja satamaan, ja kesäisin '
+                + 'Avatšanlahdella piipahtaa risteilyaluksia '
+                + 'päiväkäynnillä. Kaupungissa on bussiliikenne, mutta '
+                + 'niemimaan mitassa liikkuminen on toista: '
+                + 'asfalttitie kääntyy soraksi puolimatkassa '
+                + 'pohjoiseen, valtaosa muista teistä vaatii '
+                + 'maastoauton, ja syrjäkyliin lennetään pienkoneilla '
+                + 'puolisäännöllisin vuoroin. Venäjälle pääsyn '
+                + 'edellytykset kannattaa tarkistaa tuoreista '
+                + 'lähteistä ennen matkan suunnittelua.',
+              kuva: {
+                tiedosto: 'Passenger terminal airport yelizovo2.jpg',
+                selite: 'Jelizovon lentoaseman vanha terminaali ja '
+                  + 'lennonjohtotorni toukokuussa. Asematason takana '
+                  + 'kohoaa lumihuippuinen vuori — kenttä on '
+                  + 'Kamtšatkan pääovi.',
+                lahde: 'Der.metzger2009, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Niemimaan rakenne',
+              teksti: 'Kamtšatkan selkäranka on Keskivuoristo eli '
+                + 'Sredinnyi, ja kaakkoisrannikkoa seuraa Itäinen '
+                + 'vuoristo; niiden väliin jää keskuslaakso, jota '
+                + 'pitkin Kamtšatkajoki virtaa pohjoiseen ja kääntyy '
+                + 'Kljutšin kohdalla itään mereen. Sama laakso on myös '
+                + 'liikenteen ura: ainoa pitkä maantie kulkee '
+                + 'Petropavlovskista laaksoa pohjoiseen '
+                + 'Ust-Kamtšatskiin, ja toinen tie ylittää niemen '
+                + 'Bolšeretskiin, josta kuljettiin merta Ohotskiin jo '
+                + 'ennen sataman perustamista. Eteläkärki on Lopatka '
+                + 'eli Lapio, ja sen takaa alkaa Kuriilien ketju. '
+                + 'Avatšanlahti on kaupungin oma etupiha: 24 '
+                + 'kilometriä pitkä, suulta vain kolme kilometriä '
+                + 'leveä ja talvella jäässä — juuri suojaisuus toi '
+                + 'Beringin laivat tänne aikanaan talvehtimaan.',
+              kuva: {
+                tiedosto: 'Kamchatka road car stopped mountains.jpg',
+                selite: 'Maastoauto niemimaan maantiellä lokakuussa. '
+                  + 'Tien takana on koivuvyöhyke ja lumen saaneet '
+                  + 'vuoret — tällaisena tie jatkuu satoja kilometrejä '
+                  + 'keskuslaaksossa.',
+                lahde: 'Rosavtodor, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kuuma maa',
+              teksti: 'Tulirengas ei näy vain purkauksina vaan myös '
+                + 'siinä, että maasta tulee kuumaa vettä. Niemimaalla '
+                + 'on lukemattomia kuumia ja kivennäispitoisia '
+                + 'lähteitä, ja Paratunkan laakso kaupungin '
+                + 'lounaispuolella on kokonainen kylpylä- ja '
+                + 'parantolaseutu lähteidensä varassa. Sama lämpö '
+                + 'näkyy talvella jokien mutkissa: lähteiden '
+                + 'syöttämä vesi ei jäädy, vaan joki juoksee mustana '
+                + 'nauhana hangen halki kovimmillakin pakkasilla, ja '
+                + 'höyry paljastaa lähteet jo kaukaa. Matkailijalle '
+                + 'kuuma maa on helpoin Kamtšatkan ihmeistä, sillä '
+                + 'kylpylään pääsee tavallisella autolla. '
+                + 'Krašeninnikov kuvasi pienempiä gejsirejä jo '
+                + '1730-luvulla, ja suuri Gejsirien laakso löytyi '
+                + 'vasta 1941 — se tarina on luontosivulla.',
+              kuva: {
+                tiedosto: 'Паратунские горячие источники.jpg',
+                selite: 'Paratunkan lähdeseutu ilmasta joulukuussa. '
+                  + 'Lumi peittää laakson ja rinteet, mutta lähteiden '
+                  + 'lämmittämät purot juoksevat sulina ja mustina '
+                  + 'hangen keskellä.',
+                lahde: 'LukaE, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Luvat ja retket',
+              teksti: 'Neuvostoaikana koko niemimaa oli suljettua '
+                + 'seutua: sinne ei päässyt ilman lupaa edes maan '
+                + 'omista kaupungeista ennen vuotta 1989, eikä '
+                + 'ulkomaalaisia päästetty ennen vuotta 1990. Nykyisin '
+                + 'rajoitukset ovat luonnonsuojelun lupia: Kronotskin '
+                + 'luonnonpuisto gejsireineen on ensisijaisesti '
+                + 'tutkimusalue, jonne pääsee vain opastetulla '
+                + 'helikopteripäivällä, ja kävijöitä on vuodessa vain '
+                + 'noin kolme tuhatta. Retkien Kamtšatka on silti '
+                + 'laaja: vaellusta tulivuorille, koiravaljakoita, '
+                + 'urheilukalastusta, heliskiä ja jopa surffausta '
+                + 'Tyynenmeren mainingissa. Retket varataan '
+                + 'paikallisilta järjestäjiltä, ja sää sanoo aina '
+                + 'viimeisen sanan.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Meri tasoittaa Kamtšatkan vuoden: pelin '
+                + 'säärivillä talven kylmin kuukausi jää kymmeneen '
+                + 'pakkasasteeseen ja kesän lämpimin kolmeentoista '
+                + 'lämpöasteeseen — talven ja kesän ero on laudan '
+                + 'Venäjän-kohteista pienin. Hintana on märkyys: '
+                + 'vuodessa sataa yli 1 200 millimetriä, eikä '
+                + 'kuivinkaan kuukausi alita kuuttakymmentä. '
+                + 'Heinä–elokuu on retkien pääkausi, jolloin lohi '
+                + 'nousee jokiin ja polut ovat sulat; syyskuu tuo '
+                + 'ruskan ja lokakuu vuoden sateisimman kuun, jolloin '
+                + 'vettä kertyy lähes sataneljäkymmentä millimetriä. '
+                + 'Talven runsas lumi kantaa maaliskuulle asti '
+                + 'valjakoita ja laskettelijoita — hanki kantoi '
+                + 'aikanaan myös Ustinovan koirat, sillä juuri '
+                + 'kevättalvella Gejsirien laakso löydettiin.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -34499,6 +34694,196 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Ainut',
         },
       ],
+      /*
+       * AVAUSKUVAT JA MATKAILIJAN OPAS (Opus 20.8.2026, täydennyserä
+       * V3). Sahalin on ALUELEHTI (Kappadokia/Siinai-malli): ei
+       * kohdekarttaa eikä nähtävyysjuttuja. Faktat on tarkistettu
+       * en-Wikipedian artikkeleista Sakhalin, Yuzhno-Sakhalinsk ja
+       * Sakhalin Regional Museum (haettu 20.8.2026).
+       *
+       * VENÄJÄ-LINJAUS: öljy ja kaasu kerrotaan neutraalina taloutena
+       * (visa kysyy juuri sitä), Karafuton perintö historiallis-
+       * kulttuurisena ilmiönä. NYKYRAJOITTEET LUPAKÄYTÄNTÖINÄ ilman
+       * politiikkaa: en-Wikipedian Yuzhno-Sakhalinsk-artikkelin
+       * mukaan ulkomaalainen tarvitsee luvan matkustaakseen
+       * kaupungista muualle Sahalinin alueelle, ja rannikolla
+       * oleskelu on sallittua vain osoitetuissa paikoissa — tämä
+       * kerrotaan oppaassa sellaisenaan, viranomaisia nimeämättä.
+       *
+       * OPAS EI TOISTA NOSTOJA: kansisivu kertoo salmen ja
+       * alkuperäiskansat, historiasivu Tšehovin, pakkotyön ja
+       * Karafuton vaiheet. Opas keskittyy liikkumiseen (raideleveys
+       * vaihdettiin venäläiseksi elokuussa 2019, junalautta
+       * Vanino–Holmsk), saaren rakenteeseen, japanilaisen perinnön
+       * arkeen ja säähän. Sääjakson luvut pelin sääriviltä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Yuzhno-Sakhalinsk Museum July 2012.jpg',
+          selite: 'Aluemuseon talo on Južno-Sahalinskin tunnetuin '
+            + 'rakennus: japanilaisen Yoshio Kaizukan piirtämä ja 1937 '
+            + 'valmistunut, tyyliltään niin sanottua keisarillisen '
+            + 'kruunun tyyliä. Toyoharan ajalta säilyneitä taloja on '
+            + 'kaupungissa enää kourallinen.',
+          lahde: 'Sakhalinio, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Сахалин, Чертов мост, 2023-10-07 02.jpg',
+          selite: 'Pirunsilta eli Tšortov most Holmskin takamailla on '
+            + 'käytöstä poistuneen vuoristoradan silta. Ruostuneet kiskot '
+            + 'jatkuvat kohti tunnelin suuaukkoa, ja ympärillä hehkuu '
+            + 'lokakuun ruska — silta on nykyään retkeilijöiden polku.',
+          lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2024-10-03-Sakhalin-park-lake.jpg',
+          selite: 'Gagarinin puiston Ylempi lampi Južno-Sahalinskissa '
+            + 'syyskuun lopulla. Rannalla on lasten rautatien '
+            + 'Komsomolskajan asema, ja tyyni vesi peilaa talot ja '
+            + 'ruskan — puisto on kaupunkilaisten arkinen keidas.',
+          lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Yuzhno-Sakhalinsk, Sakhalinskaya street 2022-09.jpg',
+          selite: 'Sateinen risteys Sahalinskajan kadulla '
+            + 'Južno-Sahalinskissa. Japanilainen kuorma-auto kääntyy '
+            + 'kadulle, ja taustalla on kauppakeskuksia ja matalia '
+            + 'liiketaloja — saaren arkea ilman kiiltokuvaa.',
+          lahde: 'Svetlov Artem, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Sahalinin portti on Južno-Sahalinsk, saaren ainoa '
+          + 'suuri kaupunki, joka alkoi 1882 pakkotyöläisten '
+          + 'perustamana Vladimirovkan kylänä ja oli välillä Japanin '
+          + 'Karafuton pääkaupunki Toyohara. Kaupunki istuu Susujajoen '
+          + 'laaksossa vuorten välissä sisämaassa, ja meri on joka '
+          + 'suunnassa vasta tunnin ajomatkan päässä: satamiin '
+          + 'Korsakoviin ja Holmskiin vievät omat tiensä. Moskovaan on '
+          + 'linnuntietä 6 660 kilometriä — Sapporoon murto-osa '
+          + 'siitä.',
+        artikkeli: {
+          nimi: 'Matkailijan Sahalin',
+          taitto: 'opas',
+          teksti: 'Venäjän suurin saari on pitkä kaistale Ohotanmeressä '
+            + '— katorgan, Karafuton ja öljyn saari, jonka naapuri on '
+            + 'Hokkaido.',
+          nosto: 'Saaren rautatiet rakennettiin Japanin kapealle '
+            + 'raideleveydelle, ja vasta elokuussa 2019 koko verkko oli '
+            + 'muutettu venäläiseen leveyteen — työ oli alkanut jo '
+            + '2004.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Južno-Sahalinskiin tullaan tavallisesti '
+                + 'lentäen; kaupunki on Aurora-lentoyhtiön kotikenttä. '
+                + 'Meritse saarelle pääsee junalautalla, joka kulkee '
+                + 'mantereen Vaninosta Holmskiin ja kuljettaa '
+                + 'rautatievaunut suoraan saaren verkolle — verkolle, '
+                + 'joka vaihdettiin japanilaisesta kapeasta '
+                + 'raideleveydestä venäläiseen vasta elokuussa 2019. '
+                + 'Junalla ja linja-autolla pääsee rannikon kaupunkeihin: '
+                + 'A-391-tie vie etelään Korsakoviin ja A-392 länteen '
+                + 'Holmskiin. Talvella jää ja lumimyrskyt sanelevat '
+                + 'aikataulut niin merellä kuin maanteillä. Venäjälle '
+                + 'pääsyn edellytykset kannattaa tarkistaa tuoreista '
+                + 'lähteistä ennen matkan suunnittelua.',
+              kuva: {
+                tiedosto: '2M62U-0082 with train, Yuzhno-Sakhalinsk.jpg',
+                selite: 'Matkustajajuna Južno-Sahalinskin asemalla '
+                  + 'syyskuussa. Puna-harmaa dieselveturi vetää sinisiä '
+                  + 'vaunuja — raideleveys on ollut venäläinen vuodesta '
+                  + '2019.',
+                lahde: 'Koshekans, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Saaren rakenne',
+              teksti: 'Sahalin on 948 kilometriä pitkä mutta '
+                + 'enimmilläänkin vain 170 kilometriä leveä — samoilla '
+                + 'leveysasteilla kuin Englanti ja Irlanti, vaikka '
+                + 'ilmasto väittää muuta. Kaksi kolmasosaa saaresta on '
+                + 'vuoristoa: Länsi-Sahalinin vuoret nousevat Itšaran '
+                + 'huipulla 1 481 metriin ja Itä-Sahalinin vuoret '
+                + 'Lopatinilla 1 609 metriin, ja niiden välissä kulkee '
+                + 'Tym–Poronain laakso jokineen. Pohjoinen kolmannes '
+                + 'on soista tasankoa. Etelässä ovat kaupungit: '
+                + 'Južno-Sahalinsk sisämaassa, satamat '
+                + 'Korsakov Anivanlahdella ja Holmsk Tatarinsalmen '
+                + 'rannalla hoitavat saaren tavarat. Etelässä aukeaa '
+                + 'La Pérousen salmi, jonka takana on Japanin '
+                + 'Hokkaido — kirkkaalla säällä naapurin näkee '
+                + 'paljain silmin.',
+              kuva: {
+                tiedosto: 'Sea port and town of Kholmsk, Sakhalin oblast.jpg',
+                selite: 'Holmskin satamakaupunki Tatarinsalmen '
+                  + 'rannalla kesäkuussa. Nosturit ja laiturit ovat '
+                  + 'etualalla, ja kerrostalot kiipeävät vihreille '
+                  + 'rinteille — tänne junalautta mantereelta saapuu.',
+                lahde: 'Vasilii Martynov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: Japanin jäljet',
+              teksti: 'Neljä vuosikymmentä Karafutoa jätti saaren '
+                + 'arkeen kerroksen, johon törmää yhä: aluemuseo toimii '
+                + 'japanilaisen arkkitehdin piirtämässä '
+                + 'linnamaisessa talossa, rautatieaseman aukiolla '
+                + 'seisoo japanilainen D51-höyryveturi muistomerkkinä, '
+                + 'ja junat kulkivat Japanin kapealla raideleveydellä '
+                + 'aina vuoteen 2019. Vanhan radan hylätyt sillat ja '
+                + 'tunnelit Holmskin vuorissa ovat nykyään '
+                + 'retkikohteita, joista tunnetuin on lehden '
+                + 'avauskuvien Pirunsilta. Ja katukuvassa Japani näkyy '
+                + 'tuoreempana tuontina: autot ja työkoneet ovat '
+                + 'suureksi osaksi japanilaisia, samaan tapaan kuin '
+                + 'muuallakin Venäjän Kaukoidässä, ja naapurin '
+                + 'kysyntä pitää saaren kalan ja kaasun liikkeessä.',
+              kuva: {
+                tiedosto: 'Японский паровоз D51-22 Южно-Сахалинск.jpg',
+                selite: 'Japanilainen D51-höyryveturi muistomerkkinä '
+                  + 'Južno-Sahalinskin asema-aukiolla. Musta veturi '
+                  + 'punaisine vetopyörineen on Karafuton rautateiden '
+                  + 'ajan muisto keskellä nykykaupunkia.',
+                lahde: 'Апатинаити, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Luvat ja liikkuminen',
+              teksti: 'Sahalinilla matkailijan on hyvä tietää saaren '
+                + 'omat säännöt: ulkomaalainen tarvitsee '
+                + 'rajaviranomaisten luvan, jos aikoo matkustaa '
+                + 'Južno-Sahalinskista muualle saaren alueelle tai sen '
+                + 'vesille, ja merenrannalla oleskelu ja sukeltaminen '
+                + 'on sallittua vain osoitetuissa paikoissa — saari on '
+                + 'rajaseutua joka suuntaansa. Käytännössä retket '
+                + 'hoituvat paikallisten '
+                + 'järjestäjien kautta, jotka tuntevat lupakuviot. '
+                + 'Öljyn ja kaasun Sahalin taas pysyy matkailijalta '
+                + 'piilossa: kentät ovat merellä saaren koillispuolella '
+                + 'ja niiden maatukikohdat pohjoisessa ovat työmaita, '
+                + 'eivät retkikohteita. Ajantasaiset käytännöt '
+                + 'kannattaa varmistaa ennen matkaa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Meri ympäröi Sahalinia joka suunnalta, mutta '
+                + 'jäätyvä Ohotanmeri ei lämmitä talvea: pelin '
+                + 'säärivillä tammikuu on yksitoista astetta '
+                + 'pakkasella, kylmempi kuin Vladivostokissa tai '
+                + 'Kamtšatkalla. Kesä sen sijaan on Siperian '
+                + 'mittapuulla lämmin — elokuussa kahdeksantoista '
+                + 'astetta — ja juuri silloin saari on vihreimmillään. '
+                + 'Loppukesän varjopuoli on märkyys: elo- ja syyskuussa '
+                + 'sataa kumpanakin yli sata millimetriä myöhäiskesän '
+                + 'matalapaineiden tuomana. Kuivinta on helmikuussa, '
+                + 'jolloin lunta riittää ja kertymä jää '
+                + 'neljäänkymmeneen millimetriin — talviretkien aika. '
+                + 'Kesä-heinäkuu on valoisin ja tasaisin ikkuna.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -34686,6 +35071,203 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Yul Brynner gypsy',
         },
       ],
+      /*
+       * AVAUSKUVAT JA MATKAILIJAN OPAS (Opus 20.8.2026, täydennyserä
+       * V3). Faktat on tarkistettu en-Wikipedian artikkeleista
+       * Vladivostok, Vladivostok railway station, Vladivostok
+       * International Airport, Zolotoy Bridge, Russky Bridge ja
+       * Trans-Siberian Railway sekä en-Wikivoyagen Vladivostok-sivusta
+       * (haettu 20.8.2026; Wikivoyage täydentää, ei korvaa — sama
+       * käytäntö kuin Tripolissa ja Salalahissa).
+       *
+       * VENÄJÄ-LINJAUS (Raamattu): ei nykysotaa eikä nykypolitiikkaa;
+       * painotus historiaan, maantieteeseen ja arkkitehtuuriin.
+       * Suljetun kaupungin vuodet 1952–1992 kerrotaan neutraalina
+       * historiana päätösten päivämäärillä. Kuvissa ei sotilaskohteita:
+       * laivastosta ei ole kuvaa, ja S-56 on toisen maailmansodan
+       * museolaiva samalla tavalla kuin muiden lautojen linnoitukset.
+       *
+       * OPAS EI TOISTA NOSTOJA: kansisivun nostot kertovat nimen ja
+       * perustamisen, rautatieaseman rakennushistorian ja Brynnerin
+       * suvun, joten opas keskittyy liikkumiseen, niemen muotoon,
+       * autokauppaan ja suljetun kaupungin aikaan. Visa kysyy radan
+       * päätepistettä, merta, sataman asemaa, nimen merkitystä ja
+       * Kultaisen sarven siltaa — kaikki löytyvät lehden teksteistä.
+       *
+       * Lämpö- ja sadeluvut Milloin kannattaa tulla -jaksossa ovat
+       * pelin omalta sääriviltä (js/packs/saatiedot.js: vladivostok);
+       * talven ohuen lumen ja aurinkoisten selkeiden päivien kuvaus on
+       * en-Wikipedian ilmasto-osiosta (lumensyvyys enintään 5 cm).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Svetlanskaya Street in Vladivostok (October 2024)-0.jpg',
+          selite: 'Svetlanskaja, kaupungin vanhin pääkatu, kulkee '
+            + 'Kultaisen sarven rannan suuntaisesti. Oikealla kohoaa '
+            + 'kultakupolinen Kirkastuksen katedraali, ja kadun päässä '
+            + 'näkyvät Kultaisen sarven sillan valkoiset pylonit.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vladivostok Sportivnaya bay 2024-09 23.jpg',
+          selite: 'Sportivnajan poukama ja keskustan rantabulevardi '
+            + 'mereltä nähtynä. Rannassa erottuvat maailmanpyörä ja '
+            + 'tornitalorivi — tämä on kaupungin Amurinlahden puoleinen, '
+            + 'huvittelulle varattu ranta.',
+          lahde: 'Artyom Svetlov, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Tokarevskiy Lighthouse (October 2024)-0 5.jpg',
+          selite: 'Tokarevin majakka vuodelta 1910 seisoo kapean '
+            + 'kivisärkän päässä niemen lounaiskärjessä. Matalalla '
+            + 'säikällä kävellään merenkäynnin salliessa perille asti, ja '
+            + 'taustalla nousevat kaupungin tornitalot.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Admirala Fokina Street in Vladivostok.jpg',
+          selite: 'Amiraali Fokinin katu on keskustan kävelykatu, joka '
+            + 'laskeutuu kohti Sportivnajan rantaa. Kadun yllä riippuu '
+            + 'valoköynnöksiä, ja keskellä on suihkulähde ja '
+            + 'istutusaltaita 1900-luvun alun talojen välissä.',
+          lahde: 'Quick and my, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Vladivostok istuu Muravjov-Amurskin niemimaan '
+          + 'eteläkärjessä kahden veden välissä: lännessä on Amurinlahti, '
+          + 'idässä Kultaisen sarven satamalahti. Keskusta on kahden '
+          + 'kadun risti — Svetlanskaja seuraa Kultaisen sarven rantaa ja '
+          + 'Aleutskaja kulkee sitä vastaan kohtisuoraan, ja '
+          + 'rautatieasema on niiden risteyksessä. Loppu kaupunki '
+          + 'kiipeää kukkuloille, joten kävely on täällä nousemista ja '
+          + 'laskeutumista — ja siksi parhaat näköalapaikat ovat '
+          + 'keskellä kaupunkia.',
+        artikkeli: {
+          nimi: 'Matkailijan Vladivostok',
+          taitto: 'opas',
+          teksti: 'Niemen kärkeen rakennettu satamakaupunki, jossa '
+            + 'Euroopan kaupunkitalot, Aasian naapurit ja Tyynimeri '
+            + 'kohtaavat.',
+          nosto: 'Vladivostok on lähempänä Anchoragea ja jopa '
+            + 'Australian Darwinia kuin omaa pääkaupunkiaan Moskovaa — '
+            + 'ja lähempänä Honolulua kuin Mustanmeren Sotšia.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Juna on tämän kaupungin juhlallisin tuloreitti: '
+                + 'Transsiperian rata päättyy tänne, ja asemalaiturilla '
+                + 'seisoo kilometripylväs 9288. Lentoasema on 44 '
+                + 'kilometriä pohjoisessa Artjomin kaupungin luona; '
+                + 'huippuvuoden 2012 Aeroexpress-junan tilalla asemalle '
+                + 'kulkee nykyään tavallinen lähijuna, ja samaa matkaa '
+                + 'ajavat bussit. Kansainvälisiä lentoyhteyksiä on ollut '
+                + 'Japaniin, Kiinaan, Koreoihin, Filippiineille ja '
+                + 'Vietnamiin. Kaupungin sisällä liikkuvat bussit ja '
+                + 'martšrutkat, joihin noustaan takaovesta ja maksetaan '
+                + 'kuljettajalle ulos mentäessä; matkustajasatama on '
+                + 'rautatieaseman naapurissa. Venäjälle pääsyn '
+                + 'edellytykset kannattaa tarkistaa tuoreista lähteistä '
+                + 'ennen matkan suunnittelua.',
+              kuva: {
+                tiedosto: '2025-09-15-vdk-marine-terminal.jpg',
+                selite: 'Matkustajasatama eli merivokzal on '
+                  + 'rautatieaseman merenpuoleinen naapuri. Laajan '
+                  + 'jalankulkukannen takana kaartuu 1960-luvun '
+                  + 'terminaalirakennus, jonka katolla lukee Morskoi '
+                  + 'vokzal, ja oikealla näkyy satamanosturi.',
+                lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Niemi ja sen sillat',
+              teksti: 'Muravjov-Amurskin niemimaa on kolmisenkymmentä '
+                + 'kilometriä pitkä ja kaksitoista leveä, ja keskusta '
+                + 'täyttää sen eteläkärjen. Vuosisadan ajan kaupungin '
+                + 'kaksi rantaa yhdisti vain lautta tai pitkä kierto '
+                + 'lahden pohjukan kautta, kunnes vuoden 2012 '
+                + 'huippukokousta varten rakennettiin kaksi jättisiltaa: '
+                + 'Kultaisen sarven silta keskustasta Tšurkinin '
+                + 'kaupunginosaan ja Russkin silta Itäisen Bosporin '
+                + 'salmen yli Russkin saarelle. Jälkimmäisen jänneväli, '
+                + '1 104 metriä, on vinoköysisiltojen maailmanlistan '
+                + 'kärkeä, ja saarelle nousi samana vuonna Kaukoidän '
+                + 'liittovaltionyliopiston kampus. Matka Tšurkiniin '
+                + 'lyheni sillan myötä puolestatoista tunnista '
+                + 'kymmeneen minuuttiin.',
+              kuva: {
+                tiedosto: 'Russki Island Bridge, Russia1.jpg',
+                selite: 'Russkin silta ylittää Itäisen Bosporin salmen '
+                  + 'yhdellä 1 104 metrin jännevälillä. A-kirjaimen '
+                  + 'muotoiset pylonit ovat 320 metriä korkeat, ja '
+                  + 'takana vihertää Russkin saaren ranta.',
+                lahde: 'Константин Сергеевич…, Wikimedia Commons '
+                  + '(CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: autokaupungin liikenne',
+              teksti: 'Vladivostok on Venäjän japanilaisten '
+                + 'käytettyjen autojen pääsatama, ja autokauppa on '
+                + 'kaupungin suuria työllistäjiä: parhaina vuosina '
+                + 'täältä on myyty neljännesmiljoona autoa vuodessa, '
+                + 'joista valtaosa jatkaa matkaa muualle Venäjälle, ja '
+                + '2010-luvun alussa arvioitiin joka kolmannen '
+                + 'Primorjen työssäkävijän liittyvän jotenkin '
+                + 'autokauppaan — myyjinä, korjaajina, tullaajina tai '
+                + 'kuljettajina. Kaupungin omille kaduille autoja on '
+                + 'enemmän kuin vuosisadan takainen katuverkko vetää, '
+                + 'joten ruuhkat ovat arkea. Linja-autotkin kertovat '
+                + 'naapuruston suunnan: suuri osa on Koreasta tuotuja, '
+                + 'ja joissakin näkyy yhä Soulin tai Busanin vanha '
+                + 'reittikilpi.',
+              kuva: {
+                tiedosto: 'Vladivostok Aleutskaya Street 2008-01 1199468390.jpg',
+                selite: 'Iltapäiväruuhkaa Aleutskajalla tammikuussa. '
+                  + 'Autojono ja raitiotien kiskot kulkevat lumisen '
+                  + 'kadun täydeltä, ja pakkasesta huolimatta lunta on '
+                  + 'vain ohuelti — Vladivostokin talvi on kuiva.',
+                lahde: 'Ivan Z., Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: neljäkymmentä suljettua vuotta',
+              teksti: 'Vuoden 1952 alusta Vladivostok suljettiin '
+                + 'ulkomaalaisilta kokonaan: elokuussa 1951 annettu '
+                + 'päätös teki laivastokaupungista paikan, johon ei '
+                + 'ollut asiaa ilman erityislupaa, ja suunnitelmissa '
+                + 'oli siirtää pois jopa kauppa- ja kalastuslaivasto '
+                + 'konsulaateista puhumattakaan. Neljän vuosikymmenen '
+                + 'ajan kaupunki eli ovet kiinni; poikkeuksiakin oli, '
+                + 'sillä vuonna 1974 Yhdysvaltain presidentti Gerald '
+                + 'Ford tapasi täällä Leonid Brežnevin ensimmäisenä '
+                + 'virassa olevana presidenttinä. Syyskuussa 1991 '
+                + 'allekirjoitettu asetus avasi kaupungin '
+                + 'ulkomaalaisille vuoden 1992 alusta, ja '
+                + 'lehden kaikki tuoreet valokuvat ovat tuon '
+                + 'käänteen jälkeistä aikaa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Vladivostokin vuosi on monsuunin vuosi, ja '
+                + 'pelin säärivi näyttää sen suoraan: tammikuussa on '
+                + 'yksitoista astetta pakkasta ja vain yksitoista '
+                + 'millimetriä vettä, elokuussa kaksikymmentä astetta '
+                + 'ja sataviisikymmentä millimetriä. Talvi on kuiva ja '
+                + 'usein aurinkoinen — lunta on maassa enimmillään '
+                + 'senttejä, ei kinoksia — mutta tuuli puree. '
+                + 'Keskikesä on kostea ja sumuinen — kesä-elokuussa '
+                + 'ilmankosteus on keskimäärin yhdeksänkymmentä '
+                + 'prosenttia — ja loppukesällä Japaninmereltä voi '
+                + 'nousta trooppisia myrskyjä. Miellyttävin ikkuna on '
+                + 'syyskuussa ja lokakuun alussa, kun sateet '
+                + 'hellittävät, meri on vielä lämmin ja ilma '
+                + 'kirkastuu: syyskuun keskilämpö on seitsemäntoista '
+                + 'astetta ja lokakuunkin vielä kymmenen.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
