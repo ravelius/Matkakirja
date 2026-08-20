@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v944 — VAIHE B ERA 6: MASQAT, TABRIZ ja ISFAHAN saivat avauskuvat ja matkaoppaan. 23 uutta kuvaa (mm. Naqsh-e Jahan muqarnas-holvin lapi, 1600-luvun Mascate-puupiirros ja Costen 1839 kivipiirros); 6 hylkaysta (vesileima "©2015 Neeku Shamekhi", lisatty kehys, tunnistettavia kasvoja, opastetaulun hallitsema falaj-kuva). Faktapaatoksia: aflajin ika jatettiin antamatta (lahde sanoo seka 500 jaa etta 5000 vuotta), Tabrizin asukasluku auki molempina lukuina (1,7 milj vs 1 558 693 samassa artikkelissa), Sinisen moskeijan kustantaja korjattu Khatun Jan Begomiksi (ei Jahan Shah), metron avaus "elokuun lopussa 2015" koska artikkeli antaa kaksi paivaa. Iranin sisaltolinja pidetty (ei nykypolitiikkaa, ei 1979 jalkeisia nimimuutoksia). Visakattavuus tarkistettu kaikilta kolmelta. Tarkista: avaa Masqat/Tabriz/Isfahan → avauskuvat ja Matkailijalle → Matkaopas',
   'v943 — VAIHE B ERA 2: HALAB, DAMASKOS ja LUXOR saivat avauskuvat ja matkaoppaan. 21 uutta kuvaa; Syyrian sisaltolinjaa noudatettu tarkasti — ei sisallissotaa, moderni kuvasto sotaa edeltavaa (Argenbergin 2000-luvun sarjat), eika yksikaan kuvateksti vaita nykytilaa; mm. Aleppon suuren moskeijan kuva hylattiin koska minareetti on sortunut 2013. FABLEN PISTOKOE NAPPASI YHDEN: LOC-lasinegatiivissa oli kuvaajan numero negatiivin reunassa — agentti oli kertonut sen kuvatekstissa, mutta v933-ennakkotapaus hylkaa reunamerkinnat — vaihdettu Argenbergin kattonakymaan. Visavastaukset oppaisiin: saippua (halab), damasti + damaskosteras (damaskos). Luxorin opas viittaa v940:n korjattuun karttaan. Wikipedian ristiriidat auki: Aleppon sija ottomaanikaupunkien joukossa (2. vai 3.), Damaskoksen kentan avausvuosi (1973 vai 60-luvun loppu), Kuninkaiden laakson hautamaara (63 vai 65). Yksi hylkays oli melkein-ansa: "The Valley of Kings 2" osoittautui SIPERIAN Kuninkaiden laaksoksi. Tarkista: avaa Halab/Damaskos/Luxor → avauskuvat ja Matkailijalle → Matkaopas',
   'v942 — TUOREUSNAKYMAT (omistajan tilaus 20.8.): 1) Tilannelehden karkeen chippirivit — vihreat vasta valmistuneet versionumeroineen, keltaiset tyon alla olevat; data uudessa TUOREET-taulussa (tyohuone-tilanne.js), jota Fable paivittaa julkaisujen tahdissa. 2) Tilastot-taulussa tuoreen kaupungin nimisolu varjaytyy samoin varein ja saa versiomerkin; ohjausriville uusi Nayta-vipu (kaikki / vain tuoreet) joka muistetaan localStoragessa; mannerrivilla uusi "kaupungit esiin" -nappi joka avaa ja sulkee koko mantereen kaupungit kerralla. Tekninen: maalehti.js sai rakennaJatka-lipun (rakenna-koukku + nostot samalla sivulla); lueNakyma nimettiin lueTilastoNakyma-muotoon niputustormayksen takia (pollo.js). Tarkista: kehittajatila → Tilannelehti (chipit karjessa) ja Tilastot (Nayta-vipu, kaupungit esiin -nappi, varitetyt nimet)',
   'v941 — VAIHE B ERA 1: ANKARA, NIKOSIA ja IZMIR saivat matkaoppaan, Ankara ja Nikosia myos avauskuvat (Izmirin tulivat jo v929). 20 uutta kuvaa, agentti katsoi silmin ja Fable pistokoetarkisti 2 (tasmasivat); parikymmenta hylkaysta mm. HUAWEI-vesileima, mainoskyltti, tunnistettavia kasvoja — ja yksi hieno nappaus: taydelliselta nayttanyt "Nikosian bastioni" paljastui Commons-kategorioista FAMAGUSTAKSI. Nikosian Antaa olla -linja: jako nakyy vain matkailijan arjen tosiasioina (kaksi kuntaa, jalankulkuylitys, kaksi valuuttaa), ei syita eika vuosia 1955-74. Visaopetukset taydennettiin oppaisiin: angoravuohi, halloumi, viikuna. Faktapaatoksia: Izmir-Aydin-radan avaus 1866 (tarkempi lahde voitti 1867:n), Anitkabirin ristiriitaiset kilpailupaivat pois, Ledran ylityspaikan jarjestysluku pois (sama artikkeli sanoo 5. ja 6.). HUOM FABLELLE KIRJATTU: naiden kolmen lehden vanhat sivut ovat 3 noston mittaisia (uusi malli on 4) — erillinen taydennysera jos omistaja haluaa. Tarkista: avaa Ankara/Nikosia/Izmir → Matkailijalle → Matkaopas',
@@ -311,6 +312,9 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '20.8.2026',
   valmiit: [
+    { id: 'masqat', nimi: 'Masqat', versio: 'v944' },
+    { id: 'tabriz', nimi: 'Tabriz', versio: 'v944' },
+    { id: 'isfahan', nimi: 'Isfahan', versio: 'v944' },
     { id: 'halab', nimi: 'Halab', versio: 'v943' },
     { id: 'damaskos', nimi: 'Damaskos', versio: 'v943' },
     { id: 'luxor', nimi: 'Luxor', versio: 'v943' },
@@ -319,8 +323,6 @@ export const TUOREET = {
     { id: 'izmir', nimi: 'İzmir', versio: 'v941' },
     { id: 'persepolis', nimi: 'Persepolis (kartta)', versio: 'v940' },
     { id: 'rubalkhali', nimi: 'Rub al-Khali', versio: 'v939' },
-    { id: 'mekka', nimi: 'Mekka', versio: 'v938' },
-    { id: 'medina', nimi: 'Medina', versio: 'v937' },
   ],
   tyossa: [
     { id: 'riad', nimi: 'Riad' },
@@ -330,8 +332,5 @@ export const TUOREET = {
     { id: 'aden', nimi: 'Aden' },
     { id: 'salalah', nimi: 'Salalah' },
     { id: 'mosul', nimi: 'Mosul' },
-    { id: 'masqat', nimi: 'Masqat' },
-    { id: 'tabriz', nimi: 'Tabriz' },
-    { id: 'isfahan', nimi: 'Isfahan' },
   ],
 };
