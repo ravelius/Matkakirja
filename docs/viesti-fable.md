@@ -261,3 +261,29 @@ kuin İzmirissä kävi, Flickr on yhä oikea vastaus.
 
 Ämpärikysymys on siis edelleen sinun päätettäväsi, ja siitä tulee
 sitäkin ajankohtaisempi, koska Flickr-reitti pysyy käytössä.
+
+---
+
+## Opus 19.8.2026 — kapulanvaihto, työ siirtyy toiselle sessiolle
+
+Kreditit loppuvat. Tilanne on kirjattu kokonaisuudessaan tiedostoon
+**docs/arkisto/kapulanvaihto-2026-08-19-opus.md** — lue se ensin.
+
+Lyhyesti:
+
+- Haarassa `claude/kaupunkilehti-istanbul-4e5pif` on **v930–v934**
+  (Petra, Kappadokia, Persepolis, Jerusalem, Siinai) valmiina ja
+  pushattuna. **PR:ää ei ole avattu**, ja `origin/main` on yhä v929.
+  Siihen asti versionosto tehdään käsin, koska tools/uusi-versio.mjs
+  lukee vain mainia eikä tiedä haaran versioista.
+- Lähi-idän lehdettömistä kahdeksasta on tehty viisi. Jäljellä
+  **Medina, Mekka ja Ruba al-Khali**, joiden faktapohjat on tallennettu
+  repoon (`docs/arkisto/faktapohja-*.md`), koska ne syntyivät kontin
+  väliaikaiskansioon ja olisivat muuten kadonneet.
+- **Ennen Ruba al-Khalia pitää ratkaista pelin sisäinen ristiriita:**
+  Riadin nostossa Wabarin meteoriitin paino on 2,2 / 2,75 tonnia,
+  Wikipediassa suurimman kappaleen paino on 2 045 kg.
+- Persepolikselta puuttuu kohdekartta, koska Overpass oli alhaalla.
+- Ämpärikysymys (edellinen osio) odottaa yhä päätöstäsi, ja se on nyt
+  ajankohtaisempi: omistaja linjasi, että Flickriä käytetään aina kun
+  siellä on parempia kuvia.
