@@ -1556,6 +1556,54 @@ const KAUPUNGIT = {
       },
     ],
   },
+  jakutsk: {
+    /*
+     * RAJAUS ON KESKUSTA JA JOEN RANTA, 3,5 × 2,7 km. Jakutsk on
+     * kokonaan Lenan länsirannalla, ja kaikki kohteet ovat runsaan
+     * kahden kilometrin nauhassa Kirovin ja Leninin katujen välissä
+     * (129,7116–129,7478). Pohjoisreuna 62,042 on valittu niin, että
+     * Lenan uoma ja Moskovan rantakatu tulevat kuvaan: joki on
+     * kaupungin ainoa yhteys ulos ennen lentokentän aikaa, ja ilman
+     * sitä kartta olisi pelkkää ruutukaavaa.
+     *
+     * EI meri-lippua: Lena on OSM:ssä way «Лена», joka täyttyy
+     * vesialueena normaalisti.
+     *
+     * KAUPUNGIN JÄRVET OVAT TAHALLAAN MUKANA. Talooje (62,0308 /
+     * 129,7290), Solдatskoje (62,0376 / 129,7472), Gubinskoje
+     * (62,0406 / 129,7469) ja Kaupunkikanava (62,0300 / 129,7192)
+     * ovat termokarstipainanteita sulaneen ikiroudan päällä — ne
+     * ovat kartan ainoa merkki siitä, mistä kaupungin maaperässä on
+     * kyse, ja siksi rajaus on vedetty niiden yli eikä ohi.
+     */
+    rajat: { pohjoinen: 62.042, etela: 62.0178, lansi: 129.701, ita: 129.768 },
+  },
+  magadan: {
+    /*
+     * RAJAUS 3,8 × 2,9 km, ja se on vedetty lahdelta ylös kaupunkiin.
+     * Magadan istuu kannaksella kahden lahden välissä: Nagajevanlahti
+     * lounaassa ja Gertnerinlahti koillisessa. Kartta ottaa niistä
+     * lounaisen, koska satama on siinä ja koska koko kaupungin syy
+     * olla olemassa on tämä lahti.
+     *
+     * ENSIMMÄINEN RAJAUS OLI 2,9 × 2,3 km (lansi 150,770), ja se
+     * hylättiin mitattuna: silloin lahti jäi vasempaan reunaan
+     * kahdentoista prosentin kaistaleeksi ja kaikki muut kohteet
+     * puristuivat 64–87 prosentin väliin. Nyt länsireuna on
+     * 150,755, lahti täyttää vasemman kolmanneksen ja kohteet
+     * asettuvat 31–90 prosentin välille.
+     *
+     * Pohjoisreuna 59,5764 ottaa mukaan Kolyman valtatien
+     * nollakilometrin (59,5702) — kaupungin ainoan maayhteyden ulos —
+     * ja eteläreuna 59,5502 aluemuseon (59,5585).
+     *
+     * meri: true, koska Nagajevanlahden rantaviiva kulkee kuvan
+     * halki yhtenä pätkänä (Odessan tapaus) — ilman lippua lahti jää
+     * paperin väriseksi.
+     */
+    rajat: { pohjoinen: 59.5764, etela: 59.5502, lansi: 150.755, ita: 150.822 },
+    meri: true,
+  },
   izmir: {
     // Konakin aukio, Kemeraltin basaari ja antiikin agora mahtuvat
     // samaan runsaan puolentoista kilometrin ruutuun, ja niiden väli on
