@@ -29510,6 +29510,15 @@ export const KULTTUURI_KATEGORIAT = {
    * vuoksi — jakso 4 jäi siksi kuvattomaksi (sallittua: kuvattomia
    * jaksoja on kaksi viidestä, jaksot 4 ja 5).
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän kaupungin kuvatekstit — kansikuvat, avauskuvat,
+   * nostojen selitteet ja matkaoppaan kuvat — on tiivistetty yhteen
+   * virkkeeseen. Sivujen johdannot pysyvät lyhyinä (1–2 virkettä);
+   * lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   peking: [
     {
       id: 'kaupunki',
@@ -29522,24 +29531,22 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Hall of Prayer for Good Harvests 2013.jpg',
           selite: 'Sadonkorjuurukoushalli Taivaan temppelissä: kolme '
-            + 'sinistä lasitettua kattoa kapenee kullattuun huippuun, '
-            + 'ja halli seisoo kolmiportaisen marmoriterassin päällä. '
-            + 'Portailla liikkuu kävijöitä pieninä hahmoina.',
+            + 'sinistä lasitettua kattoa kapenee kullattuun huippuun, ja '
+            + 'halli seisoo kolmiportaisen marmoriterassin päällä.',
           lahde: 'Bernhard Wintersperger, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Peking duck by Mr Wabu in Beijing.jpg',
-          selite: 'Peking-ankkaa siivuina valkoisella lautasella '
-            + 'pekingiläisessä ravintolassa. Taustalla odottavat ohuet '
-            + 'vehnäletut, kurkkutikut ja kevätsipulit, joihin '
-            + 'rapeanahkaiset siivut kääritään.',
+          selite: 'Peking-ankkaa siivuina valkoisella lautasella, '
+            + 'taustalla ohuet vehnäletut, kurkkutikut ja kevätsipulit, '
+            + 'joihin rapeanahkaiset siivut kääritään.',
           lahde: 'Mr Wabu, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Forbidden City northwest corner tower and moat.jpg',
-          selite: 'Kielletyn kaupungin luoteinen kulmatorni ja leveä '
-            + 'vallihauta. Monikattoinen torni nousee harmaan muurin '
-            + 'takaa, ja rannalla riippuu pajuja veden ylle.',
+          selite: 'Kielletyn kaupungin luoteinen monikattoinen kulmatorni '
+            + 'harmaan muurin takana ja sen edessä leveä vallihauta, '
+            + 'jonka rannalla riippuu pajuja veden ylle.',
           lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -29559,16 +29566,16 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Hutong, Gasse in Peking, alley in Beijing (44042315480).jpg',
-          selite: 'Hutong-kuja harmaine tiilimuureineen. Ovien päälle '
-            + 'on rakennettu pienet katokset, ja yksi kulkija '
+          selite: 'Hutong-kuja harmaine tiilimuureineen ja ovien päälle '
+            + 'rakennettuine pienine katoksineen, ja yksi kulkija '
             + 'etääntyy kujaa pitkin selin.',
           lahde: 'FLASHPACKER TRAVELGUIDE, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Peking Grosse Mauer-20071019-RM-115708.jpg',
-          selite: 'Kiinan muuri nousee ja laskee vuorenharjalla '
-            + 'Badalingissa. Syksy värittää rinteet, ja vartiotornit '
-            + 'merkitsevät harjanteen käännekohdat.',
+          selite: 'Kiinan muuri nousee ja laskee syksyn värittämällä '
+            + 'vuorenharjalla Badalingissa, ja vartiotornit merkitsevät '
+            + 'harjanteen käännekohdat.',
           lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -29817,10 +29824,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Yongle-keisari aloitti myös Kielletyn kaupungin ja '
             + 'Taivaan temppelin rakentamisen; molemmat valmistuivat '
             + '1420.',
-          selite: 'Kiinan-kartta Martino Martinin kartastosta Novus '
-            + 'Atlas Sinensis (1655). Vasemmassa yläkulmassa on '
-            + 'koristeellinen nimikilpi, ja maakunnat on rajattu '
-            + 'värivyöhykkein.',
+          selite: 'Kiinan-kartta Martino Martinin kartastosta Novus Atlas '
+            + 'Sinensis (1655), jossa maakunnat on rajattu värivyöhykkein '
+            + 'ja yläkulmassa on koristeellinen nimikilpi.',
           lahde: 'Martino Martini and Joan Blaeu, Wikimedia Commons (PD)',
           wiki: 'Peking',
         },
@@ -29838,11 +29844,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'neljä sisintä pilaria ovat vuodenajat, kaksitoista '
             + 'keskimmäistä kuukaudet ja kaksitoista uloimmaista '
             + 'perinteiset kiinalaiset tunnit.',
-          selite: 'Pyöreä alttari iltavalossa: valkoiset '
-            + 'marmorikaiteet kiertävät porrastettua tasannetta '
-            + 'kolmena kehänä, ja portaat nousevat suoraan ylimmälle '
-            + 'tasolle. Kaksi kävijää erottuu vain tummina '
-            + 'siluetteina.',
+          selite: 'Pyöreä alttari iltavalossa: valkoiset marmorikaiteet '
+            + 'kiertävät porrastettua tasannetta kolmena kehänä, ja '
+            + 'portaat nousevat suoraan ylimmälle tasolle.',
           lahde: 'Zcm11, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Peking',
         },
@@ -29862,8 +29866,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'naapurin kesäpalatsi oli tuolloin vielä rauniona.',
           selite: 'Ernst Ohlmerin valokuva 1870-luvulta: Xieqiqun '
             + 'eurooppalaistyylisen palatsin raunio Vanhassa '
-            + 'kesäpalatsissa. Koristeellinen julkisivu seisoo yhä, '
-            + 'mutta katto on poissa ja pensaat kasvavat portailla.',
+            + 'kesäpalatsissa, koristeellinen julkisivu yhä pystyssä '
+            + 'mutta katto poissa ja pensaat portailla.',
           lahde: 'Ernst Ohlmer, Wikimedia Commons (PD)',
           wiki: 'Peking',
         },
@@ -29944,6 +29948,15 @@ export const KULTTUURI_KATEGORIAT = {
    * oma litera, ja kuvateksti kertoo sen lukijalle (Snouck
    * Hurgronjen litterat -ennakkotapaus).
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän kaupungin kuvatekstit — kansikuvat, avauskuvat,
+   * nostojen selitteet ja matkaoppaan kuvat — on tiivistetty yhteen
+   * virkkeeseen. Sivujen johdannot pysyvät lyhyinä (1–2 virkettä);
+   * lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   delhi: [
     {
       id: 'kaupunki',
@@ -29998,9 +30011,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'India Gate, New Delhi.jpg',
-          selite: 'India Gate -muistoportin yläosa New Delhissä. '
-            + 'Hiekkakiveen on hakattu sana INDIA, vuosiluvut 1914 ja '
-            + '1919 roomalaisin numeroin sekä omistus kaatuneille '
+          selite: 'India Gate -muistoportin yläosa New Delhissä, '
+            + 'hiekkakiveen hakattuna sana INDIA, vuosiluvut 1914 ja 1919 '
+            + 'roomalaisin numeroin sekä omistus kaatuneille '
             + 'intialaissotilaille.',
           lahde: 'Yann, Wikimedia Commons (CC BY-SA 3.0)',
         },
@@ -30062,10 +30075,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'allas sai väistyä kellotornin tieltä; tornia kutsuttiin '
             + 'Ghantaghariksi, ja vaikka sekin on jo purettu, torin '
             + 'keskustaa kutsutaan yhä sillä nimellä.',
-          selite: 'Vanha painettu postikortti: Ghantaghar-kellotorni '
-            + 'kohoaa Chandni Chowkin torin laidalla kaupungintalon '
-            + 'vieressä. Alalaidan tekstirivi on postikortin kustantajan '
-            + 'oma otsikko.',
+          selite: 'Vanha painettu postikortti, jossa '
+            + 'Ghantaghar-kellotorni kohoaa Chandni Chowkin torin '
+            + 'laidalla kaupungintalon vieressä ja alalaidan tekstirivi '
+            + 'on kustantajan oma otsikko.',
           lahde: 'H.A. Mirza & Sons, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Delhi',
         },
@@ -30082,9 +30095,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Delhi Junction pysyi kaupungin pääasemana, kunnes New '
             + 'Delhin asema valmistui vuosina 1926–1931.',
           selite: 'Delhi Junctionin punainen asemarakennus '
-            + 'sakaraharjaisine torneineen. Julkisivussa on kello ja '
-            + 'DELHI-kyltti kolmella kirjoituksella, ja pihalla kohoaa '
-            + 'lipputanko.',
+            + 'sakaraharjaisine torneineen, julkisivussa kello ja '
+            + 'DELHI-kyltti kolmella kirjoituksella.',
           lahde: 'Lovedeepsingh, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Delhi',
         },
@@ -30131,10 +30143,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pääasema New Delhi on muurikaupungin eteläpuolella.',
               kuva: {
                 tiedosto: 'Delhi Metro train red line at Shaheed Sthal metro station.jpg',
-                selite: 'Punaisen linjan metrojuna asemalaiturilla. Juna '
-                  + 'on hopeanharmaa ja sen kyljessä kulkee punainen '
-                  + 'raita; laituriovien lasiseinä kertoo aseman olevan '
-                  + 'uutta polvea.',
+                selite: 'Punaisen linjan hopeanharmaa metrojuna '
+                  + 'asemalaiturilla, kyljessä punainen raita ja '
+                  + 'laiturilla uuden polven lasiset laituriovet.',
                 lahde: 'Ravi Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -30292,8 +30303,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'porteista — kuten Kashmiri Gate, Ajmeri Gate ja Turkman '
             + 'Gate — seisoo yhä keskellä liikennettä.',
           selite: 'Kashmiri Gate sisäpuolelta: kaksi tiilistä '
-            + 'porttiholvia vierekkäin ja niiden päällä sakaraharja. '
-            + 'Nurmella porttien edessä istuskelee apinoita.',
+            + 'porttiholvia vierekkäin sakaraharjoineen, ja nurmella '
+            + 'porttien edessä istuskelee apinoita.',
           lahde: 'Anupamg, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Delhi',
         },
@@ -30309,10 +30320,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja hänet karkotettiin Rangooniin. Delhi siirtyi vuonna '
             + '1858 suoraan Britannian kruunun hallintaan ja liitettiin '
             + 'Punjabin provinssiin — Mughal-valtakunta oli päättynyt.',
-          selite: 'Metcalfen albumin miniatyyrimaalaus vuodelta 1843: '
-            + 'Bahadur Shah II:n id-juhlakulkue norsuineen ja '
-            + 'lippuineen. Alalaidan käsinkirjoitetut rivit ovat albumin '
-            + 'omia nimiöitä, jotka kertovat kuka kulkueessa kulkee.',
+          selite: 'Metcalfen albumin miniatyyrimaalaus vuodelta 1843, '
+            + 'jossa Bahadur Shah II:n id-juhlakulkue kulkee norsuineen '
+            + 'ja lippuineen ja alalaidan käsinkirjoitetut rivit ovat '
+            + 'albumin omia nimiöitä.',
           lahde: 'Sir Thomas Metcalfe, 4th Baronet, Wikimedia Commons (PD)',
           wiki: 'Delhi',
         },
@@ -30323,6 +30334,15 @@ export const KULTTUURI_KATEGORIAT = {
    * TOKION KANSISIVU (nippu 2, 13.8.2026). JPN-maalehti vie
    * historian, ruoan, kuvataiteen, luonnon ja tieteen, joten
    * kaupungille jää arki ja alakaupunki.
+   */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän kaupungin kuvatekstit — kansikuvat, avauskuvat,
+   * nostojen selitteet ja matkaoppaan kuvat — on tiivistetty yhteen
+   * virkkeeseen. Sivujen johdannot pysyvät lyhyinä (1–2 virkettä);
+   * lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
   tokio: [
     {
@@ -30335,28 +30355,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '言問橋 - panoramio.jpg',
-          selite: 'Kototoi-silta Sumida-joen yli. Turkoosiksi maalattu '
-            + 'teräspalkkisilta lepää kahden kivipäällysteisen pilarin '
-            + 'varassa, ja palkin kylkeen on kiinnitetty sillan nimi '
-            + 'kolmena isona mustana merkkinä. Vastarannalla on asuin- ja '
-            + 'toimistotaloja.',
+          selite: 'Turkoosiksi maalattu Kototoi-silta Sumida-joen yli '
+            + 'kahden kivipäällysteisen pilarin varassa, palkin kylkeen '
+            + 'kiinnitettynä sillan nimi kolmena isona mustana merkkinä.',
           lahde: 'Jun Matsuo, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Ameya-yokocho on a March morning, Tokyo, 2016.jpg',
-          selite: 'Ameya-yokochōn kuja Tokiossa maaliskuun aamuna. Kapea '
-            + 'katu on täynnä ihmisiä, ja kalatiskillä on riveittäin '
-            + 'lohifileitä ja pakattuja mereneläviä hintalappuineen. '
-            + 'Kujan yli kohoaa rautainen ratasilta.',
+          selite: 'Ameya-yokochōn kuja Tokiossa maaliskuun aamuna: kapea '
+            + 'katu on täynnä ihmisiä, kalatiskillä on riveittäin '
+            + 'lohifileitä ja pakattuja mereneläviä, ja kujan yli kohoaa '
+            + 'rautainen ratasilta.',
           lahde: 'DimiTalen, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Chopsticks for sale in bulk (14163826889).jpg',
-          selite: 'Syömäpuikkoja myynnissä Kappabashi-dōrin varrella. '
-            + 'Jokaisessa nipussa on oma kuviollinen paperivyö: '
-            + 'kirsikankukkia, vaahteranlehtiä, kurkia ja kaneja. '
-            + 'Japaninkielisessä kyltissä kerrotaan kotimaisesta '
-            + 'seteripuusta ja hinnasta.',
+          selite: 'Syömäpuikkoja myynnissä Kappabashi-dōrin varrella, '
+            + 'jokainen nippu omassa kuviollisessa paperivyössään: '
+            + 'kirsikankukkia, vaahteranlehtiä, kurkia ja kaneja.',
           lahde: 'Steven-L-Johnson, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -30388,11 +30404,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'flickr-54125112487.jpg',
           selite: 'Pilvenpiirtäjien rivi alakaupungin kattojen yli '
-            + 'katsottuna. Etualalla on matalia asuin- ja liiketaloja '
+            + 'katsottuna: etualalla on matalia asuin- ja liiketaloja '
             + 'parvekkeineen ja katolle nostettuine vesisäiliöineen, ja '
-            + 'niiden takana nousee toimistotornien seinämä — vasemmalla '
-            + 'porrastettu harmaa torni, keskellä lasinen kotelon '
-            + 'muotoinen talo.',
+            + 'niiden takana nousee toimistotornien seinämä.',
           lahde: "Pom', Flickr (CC BY-SA 2.0)",
         },
       ],
@@ -30504,11 +30518,10 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-51334303085.jpg',
-                  selite: 'Linnan vallihauta ja sen takana valkoinen '
-                    + 'kulmatorni, jonka päällä on kaksi mustaa '
-                    + 'tiilikattoa. Torni seisoo kaltevan kivimuurin '
-                    + 'päällä, vesi heijastaa sen ja muurin, ja etualalla '
-                    + 'kaartuu männyn oksa kuvan yli.',
+                  selite: 'Linnan vallihauta ja sen takana kaltevan '
+                    + 'kivimuurin päällä seisova valkoinen kulmatorni '
+                    + 'kahtine mustine tiilikattoineen, torni ja muuri '
+                    + 'veteen heijastuen.',
                   lahde: 'Bernard Spragg. NZ, Flickr (Public Domain Mark)',
                 },
               ],
@@ -30538,11 +30551,10 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-54184684642.jpg',
-                  selite: 'Kalatiskiltä pöytään: kaksi nigiriä puulaudalla. '
-                    + 'Etummaisen päällä on paksu, vaaleanpunaiseksi '
-                    + 'juovikas tonnikalaviipale, joka kaartuu riisipaakun '
-                    + 'yli molemmin puolin, ja takana on toinen annos '
-                    + 'valkoista kalaa.',
+                  selite: 'Kalatiskiltä pöytään: kaksi nigiriä '
+                    + 'puulaudalla, etummaisessa paksu vaaleanpunaiseksi '
+                    + 'juovikas tonnikalaviipale riisipaakun yli kaartuen '
+                    + 'ja takana annos valkoista kalaa.',
                   lahde: "Pom', Flickr (CC BY-SA 2.0)",
                 },
               ],
@@ -30580,41 +30592,35 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-16200454374.jpg',
-                  selite: 'Nuudelikulho sinikuvioisessa kupissa: vaaleassa '
-                    + 'sameassa liemessä kelluu ohut vaalea lihaviipale, '
-                    + 'puolikas keltakeltuainen kananmuna, vaaleanpunainen '
-                    + 'kalamassakiekko ja kourallinen silputtua '
-                    + 'kevätsipulia, ja oikeassa laidassa törröttää '
-                    + 'tummanvihreä merileväliuska.',
+                  selite: 'Nuudelikulho sinikuvioisessa kupissa: '
+                    + 'vaaleassa sameassa liemessä kelluu lihaviipale, '
+                    + 'puolikas kananmuna, vaaleanpunainen '
+                    + 'kalamassakiekko ja silputtua kevätsipulia, ja '
+                    + 'laidassa törröttää merileväliuska.',
                   lahde: 'Zengame, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-10626604003.jpg',
-                  selite: 'Nuudeliravintolan pyöreä paperilyhty katon rajassa. '
-                    + 'Valkoiseen paperiin on maalattu mustalla siveltimellä '
-                    + 'liikkeen nimi tavumerkein ja alle punainen '
-                    + 'nelikulmainen leimamerkki; lyhdyn vieressä roikkuu '
-                    + 'valkoinen nyöri.',
+                  selite: 'Nuudeliravintolan pyöreä paperilyhty katon '
+                    + 'rajassa, valkoiseen paperiin maalattuna mustalla '
+                    + 'siveltimellä liikkeen nimi tavumerkein ja alle '
+                    + 'punainen nelikulmainen leimamerkki.',
                   lahde: 'Zengame, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-47492986562.jpg',
-                  selite: 'Grilliravintolan lautanen: valkoisella '
-                    + 'neliölautasella on ohuita naudanlihaviipaleita, '
-                    + 'joiden rasva kulkee lihassa hienona valkoisena '
-                    + 'verkkona. Viipaleet on aseteltu vihreän bambunlehden '
-                    + 'kahden puolen, ja koristeena on violetti orkidean '
-                    + 'terälehti.',
+                  selite: 'Grilliravintolan valkoisella neliölautasella '
+                    + 'ohuita naudanlihaviipaleita, joiden rasva kulkee '
+                    + 'lihassa hienona valkoisena verkkona, aseteltuina '
+                    + 'vihreän bambunlehden kahden puolen.',
                   lahde: 'Kanesue, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-40579744563.jpg',
                   selite: 'Lounastarjotin grilliravintolassa: keskellä '
-                    + 'pöytää on upotettu hiiligrilli, sen ympärillä kulho '
-                    + 'valkoista riisiä, kulho keittoa merilevänpaloineen, '
-                    + 'lautasellinen kimchiä ja kurkkua sekä kolmiosainen '
-                    + 'kastikelautanen, jonka keskilokerossa kelluu '
-                    + 'sitruunaviipale.',
+                    + 'pöytää on upotettu hiiligrilli, sen ympärillä '
+                    + 'kulho riisiä, kulho keittoa, lautasellinen kimchiä '
+                    + 'ja kurkkua sekä kolmiosainen kastikelautanen.',
                   lahde: 'Kanesue, Flickr (CC BY 2.0)',
                 },
               ],
@@ -30673,28 +30679,25 @@ export const KULTTUURI_KATEGORIAT = {
                 {
                   tiedosto: 'flickr-15204166021.jpg',
                   selite: 'Temppelin portti kadun toiselta puolen '
-                    + 'iltapäivällä. Etualalla kulkee leveä valkoinen '
-                    + 'suojatie, sen takana odottaa väkeä jalkakäytävällä, '
-                    + 'ja portin punaisen katoksen alla riippuu iso '
-                    + 'paperilyhty; oikealla palaa katulyhtypylvään viisi '
-                    + 'kupua.',
+                    + 'iltapäivällä: leveän valkoisen suojatien takana '
+                    + 'odottaa väkeä jalkakäytävällä, ja portin punaisen '
+                    + 'katoksen alla riippuu iso paperilyhty.',
                   lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-25880389523.jpg',
-                  selite: 'Katukojun makeisia tikkujen nokassa: banaaneja, '
-                    + 'jotka on kastettu turkoosiin ja tummanruskeaan '
-                    + 'kuorrutteeseen ja koristeltu pinkeillä raidoilla ja '
-                    + 'värillisillä nonparelleilla. Tikut seisovat '
-                    + 'pystyssä valkoisessa reikälevyssä.',
+                  selite: 'Katukojun makeisia tikkujen nokassa: '
+                    + 'turkoosiin ja tummanruskeaan kuorrutteeseen '
+                    + 'kastettuja banaaneja, jotka on koristeltu '
+                    + 'pinkeillä raidoilla ja värillisillä '
+                    + 'nonparelleilla.',
                   lahde: 'Jon Connell, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-16339556998.jpg',
                   selite: 'Lähetystorni valaistuna illalla kanavan takaa '
-                    + 'katsottuna: runko hehkuu alhaalta ylös kullankeltaisena '
-                    + 'ja vaihtuu ylempänä turkoosiksi ja violetiksi. Alhaalla '
-                    + 'kadun varrella palavat liikkeiden kyltit, ja tornin '
+                    + 'katsottuna: runko hehkuu alhaalta kullankeltaisena '
+                    + 'ja vaihtuu ylempänä turkoosiksi ja violetiksi, ja '
                     + 'värit heijastuvat mustasta vedestä.',
                   lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
                 },
@@ -30788,11 +30791,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yli 500. Puoliskoja yhdisti maan ensimmäinen '
             + 'yksikiskorata, joka suljettiin lopullisesti 2023 '
             + 'vanhentuneiden rakenteiden takia.',
-          selite: 'Uenon eläintarhan pääportti talvella. Turkoosin katoksen '
-            + 'päällä lukee eläintarhan nimi punaisin merkein ja perässä '
-            + 'sana ZOO, ja lippuluukkujen mainostauluissa on pandoja ja '
-            + 'jääkarhuja. Lehdettömien puiden takaa kohoaa '
-            + 'viisikerroksinen pagodi.',
+          selite: 'Uenon eläintarhan pääportti talvella: turkoosin '
+            + 'katoksen päällä lukee eläintarhan nimi punaisin merkein ja '
+            + 'perässä sana ZOO, ja lippuluukkujen mainostauluissa on '
+            + 'pandoja ja jääkarhuja.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -30809,11 +30811,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sana on Amerika, sillä kadulla myytiin Yhdysvaltain '
             + 'armeijan ylijäämätavaraa. Lyhenne ameyoko sopii '
             + 'kumpaankin.',
-          selite: 'Kalakoju Ameya-yokochōssa. Metallivuoissa on punaiseksi '
-            + 'keitettyä mustekalaa, lonkero imukuppeineen ja '
-            + 'muovipusseihin nypittyjä paloja, ja väleissä on '
-            + 'hintakylttejä kiinalaisin numeroin. Kojussa on myös '
-            + 'katkarapuja, merilevää ja kuivattua kalaa.',
+          selite: 'Kalakoju Ameya-yokochōssa: metallivuoissa on '
+            + 'punaiseksi keitettyä mustekalaa, lonkero imukuppeineen ja '
+            + 'muovipusseihin nypittyjä paloja, ja väleissä hintakylttejä '
+            + 'kiinalaisin numeroin.',
           lahde: 'Kamasakizaki, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -30830,11 +30831,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'auringossa, joten 1980-luvun puolivälissä siirryttiin '
             + 'PVC-muoviin. Ravintolan koko lista voi maksaa yli miljoona '
             + 'jeniä.',
-          selite: 'Muoviruokakaupan näyteikkuna Kappabashissa. Lasikaappien '
-            + 'hyllyt ovat täynnä vaahtopäisiä olutlaseja, joissa neste on '
-            + 'kellertävää muovia, ja muilla hyllyillä on muovista tehtyjä '
-            + 'leipiä, sushia ja pikkuannoksia. Yläreunassa palaa '
-            + 'punasininen neonkyltti Welcome.',
+          selite: 'Muoviruokakaupan näyteikkuna Kappabashissa: '
+            + 'lasikaappien hyllyt ovat täynnä vaahtopäisiä olutlaseja '
+            + 'kellertävää muovia sekä muovista tehtyjä leipiä, sushia ja '
+            + 'pikkuannoksia.',
           lahde: 'Maarten Heerlien from Voorschoten, The Netherlands, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -30861,11 +30861,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laattamaalaus, useimmiten Fuji-vuori. Takana on '
             + 'kattilahuone, jonka korkea piippu erottuu kauas kattojen '
             + 'ylle.',
-          selite: 'Tatsuno-yu-kylpylä Nerimassa. Julkisivu on tehty pyhäkön '
-            + 'tapaan: harmaa tiilikatto, kaksi päätykolmiota ja niiden '
-            + 'edessä aaltona kaartuva kolmas pääty. Takaa nousee korkea '
-            + 'vaaleansininen savupiippu, jonka kylkeen on maalattu '
-            + 'punainen kylpymerkki.',
+          selite: 'Tatsuno-yu-kylpylä Nerimassa, jonka julkisivu on tehty '
+            + 'pyhäkön tapaan harmaine tiilikattoineen ja '
+            + 'päätykolmioineen ja jonka takaa nousee korkea '
+            + 'vaaleansininen savupiippu.',
           lahde: 'Kurihaya, Wikimedia Commons (CC0)',
         },
         {
@@ -30882,11 +30881,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kullakin oli oma matoi: pitkä tanko, jonka päässä on '
             + 'ryhmän tunnus ja nippu nauhoja. Se nostettiin katolle '
             + 'palavan talon viereen.',
-          selite: 'Kuusi miestä matoin ympärillä Ikegamissa Tokiossa. '
-            + 'Kaikilla on ruudullinen puuvillatakki, mustat housut ja '
-            + 'sandaalit. Miesten keskellä seisoo pystyssä matoi: pitkä '
-            + 'vaalea tanko, jonka päässä on valkoinen levy mustin merkein '
-            + 'ja nippu valkoisia suikaleita.',
+          selite: 'Kuusi ruudullisiin puuvillatakkeihin pukeutunutta '
+            + 'miestä Ikegamissa Tokiossa matoin ympärillä: pitkän tangon '
+            + 'päässä on valkoinen levy mustin merkein ja nippu valkoisia '
+            + 'suikaleita.',
           lahde: '湯越慶太, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -30902,11 +30900,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on rakugo eli tarina jolla on putous. Kertoja istuu '
             + 'korokkeella polvillaan. Välineitä on kaksi: viuhka ja '
             + 'liina.',
-          selite: 'Asakusa Engei Hallin julkisivu illansuussa. Katoksen '
-            + 'yläpuolella on rivi valkoisia kylttilaatikoita, joihin on '
-            + 'maalattu mustia merkkejä, ja ylimpänä palaa rivi kellertäviä '
-            + 'paperilyhtyjä. Katoksen reunaa kiertävät punaiset lyhdyt, ja '
-            + 'alla on lippuluukku.',
+          selite: 'Asakusa Engei Hallin julkisivu illansuussa: katoksen '
+            + 'yläpuolella on rivi valkoisia kylttilaatikoita mustin '
+            + 'merkein, ylimpänä kellertäviä paperilyhtyjä ja katoksen '
+            + 'reunalla punaiset lyhdyt.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -30949,6 +30946,15 @@ export const KULTTUURI_KATEGORIAT = {
    * skyline at night from Namsan Mountain" (pääosassa oksat eikä
    * kaupunki).
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän kaupungin kuvatekstit — kansikuvat, avauskuvat,
+   * nostojen selitteet ja matkaoppaan kuvat — on tiivistetty yhteen
+   * virkkeeseen. Sivujen johdannot pysyvät lyhyinä (1–2 virkettä);
+   * lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   soul: [
     {
       id: 'kaupunki',
@@ -30961,27 +30967,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Traditional hanok houses at golden hour in Bukchon Hanok Village in Seoul.jpg',
-          selite: 'Hanok-taloja Bukchonin kortteleissa aamuauringossa. '
-            + 'Puurunkoisten talojen harjakatot on katettu harmailla '
+          selite: 'Hanok-taloja Bukchonin kortteleissa aamuauringossa: '
+            + 'puurunkoisten talojen harjakatot on katettu harmailla '
             + 'tiilillä, ja pihoja kiertää muuri, jonka alaosa on '
-            + 'mukulakiveä ja yläosa punatiiltä. Kadun päässä nousee '
-            + 'rinne, jonka takaa näkyy vuori.',
+            + 'mukulakiveä ja yläosa punatiiltä.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gwangjang Market, Seoul 2020-02-01.jpg',
-          selite: 'Gwangjangin torin käytävä talvipäivänä. Katettu kuja on '
-            + 'täynnä ihmisiä, kojujen yllä roikkuu punaisia '
-            + 'kylttilaattoja puhelinnumeroineen, ja tiskeillä on '
+          selite: 'Gwangjangin torin katettu käytävä talvipäivänä täynnä '
+            + 'ihmisiä, kojujen yllä punaisia kylttilaattoja ja tiskeillä '
             + 'kuivattua kalaa, vihanneksia ja pakattuja tavaroita.',
           lahde: 'Stck w, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Yeouido Hangang Park from Mapo Bridge 1.jpg',
           selite: 'Yeouidon rantapuisto Han-joen varrella Mapo-sillalta '
-            + 'kuvattuna. Etualalla on puistokenttä ja lehdettömiä puita, '
-            + 'takana joki siltoineen ja vastarannan talorivit; oikealla '
-            + 'kohoaa yksinäinen ruskea tornitalo.',
+            + 'kuvattuna: etualalla puistokenttä ja lehdettömiä puita, '
+            + 'takana joki siltoineen ja vastarannan talorivit.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         /*
@@ -30993,20 +30996,18 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           tiedosto: 'flickr-48968719746.jpg',
-          selite: 'Vanha kaupunginportti keskellä liikennettä. '
-            + 'Kaksikerroksinen puinen porttitalo vihreine kattopalkkeineen '
-            + 'seisoo harmaan kivijalustan päällä, jonka läpi vie musta '
-            + 'holvikäytävä; edessä ajaa autoja ja takana kohoaa lasisia '
-            + 'toimistotaloja.',
+          selite: 'Vanha kaupunginportti keskellä liikennettä: '
+            + 'kaksikerroksinen puinen porttitalo seisoo harmaan '
+            + 'kivijalustan päällä, jonka läpi vie musta holvikäytävä, ja '
+            + 'takana kohoaa lasisia toimistotaloja.',
           lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-48966437893.jpg',
-          selite: 'Hopeanharmaa metallipintainen rakennus yöllä: pyöristetty '
-            + 'seinämä kaartuu maasta ylös ja jatkuu vaakasuorana '
-            + 'aallonharjana kuvan poikki. Alhaalla nousee valaistu '
-            + 'kävelyramppi, oikealla liehuu lippurivi ja taustalla palaa '
-            + 'tornitalon vihreä kärki.',
+          selite: 'Hopeanharmaa metallipintainen rakennus yöllä: '
+            + 'pyöristetty seinämä kaartuu maasta ylös ja jatkuu '
+            + 'vaakasuorana aallonharjana kuvan poikki, ja alhaalla '
+            + 'nousee valaistu kävelyramppi.',
           lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
         },
       ],
@@ -31028,9 +31029,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'flickr-14775785519.jpg',
-          selite: 'Aurinko nousee usvan läpi kaupungin yllä. Oikeassa '
+          selite: 'Aurinko nousee usvan läpi kaupungin yllä: oikeassa '
             + 'laidassa kohoaa punavalkoinen ristikkomasto, alhaalla '
-            + 'levittäytyy matalien talojen kortteleita, ja kaukana '
+            + 'levittäytyy matalien talojen kortteleita ja kaukana '
             + 'kimaltaa joki siltoineen.',
           lahde: 'Kristoffer Trolle, Flickr (CC BY 2.0)',
         },
@@ -31124,8 +31125,7 @@ export const KULTTUURI_KATEGORIAT = {
                   tiedosto: 'flickr-30596173403.jpg',
                   selite: 'Joen eteläpuoli yöllä: sillan kaide kaartuu '
                     + 'oikealle, katuvalot jatkuvat rivissä kauas, ja '
-                    + 'kerrostalojen ikkunat palavat vaaleansinisinä. '
-                    + 'Keskellä kohoaa kapeneva lasitorni, jonka kylkeen '
+                    + 'keskellä kohoaa kapeneva lasitorni, jonka kylkeen '
                     + 'on juovitettu valonauhoja.',
                   lahde: 'Tony, Flickr (CC BY 2.0)',
                 },
@@ -31184,11 +31184,9 @@ export const KULTTUURI_KATEGORIAT = {
                   tiedosto: 'flickr-41646399301.jpg',
                   selite: 'Katukojun tiski illalla: myyjä pitää kudotuin '
                     + 'käsinein kaasupoltinta padan reunalla ja liekki '
-                    + 'osuu ritilän päällä olevaan annokseen, jolloin '
-                    + 'höyry nousee valkoisena pilvenä. Oikealla on '
-                    + 'kuoritut kastanjat pellillä ja sinivalkoisissa '
-                    + 'pahvimukeissa, takana paahdettuja bataatteja, ja '
-                    + 'ylhäällä riippuu hintakyltti ₩5 000.',
+                    + 'osuu ritilän päällä olevaan annokseen, ja oikealla '
+                    + 'on kuorittuja kastanjoita ja paahdettuja '
+                    + 'bataatteja.',
                   lahde: 'Marc DUPUY, Flickr (CC BY-SA 2.0)',
                 },
               ],
@@ -31248,11 +31246,10 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-45979304321.jpg',
-                  selite: 'Sama juhlasali syksyllä lammen toiselta puolelta: '
-                    + 'kaksikerroksinen sali seisoo kivipilaririvin päällä '
-                    + 'kivetyllä saarekkeella, ja koko rakennus heijastuu '
-                    + 'tyynestä vedestä. Vasemmalla kellastuvat puut ja '
-                    + 'niiden takana kohoaa kallioinen vuori.',
+                  selite: 'Sama juhlasali syksyllä lammen toiselta '
+                    + 'puolelta: kaksikerroksinen sali seisoo '
+                    + 'kivipilaririvin päällä kivetyllä saarekkeella ja '
+                    + 'heijastuu kokonaan tyynestä vedestä.',
                   lahde: 'wikiphotographer, Flickr (CC BY-SA 2.0)',
                 },
                 {
@@ -31350,11 +31347,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'perinteisessä uunissa Buyeossa, ja työtä ohjasivat '
             + 'piirustukset, jotka oli tehty edellisen korjauksen '
             + 'yhteydessä 2005 juuri tällaisen tilanteen varalle.',
-          selite: 'Sungnyemunin portti Soulissa. Kaksikerroksinen puinen '
+          selite: 'Sungnyemunin portti Soulissa: kaksikerroksinen puinen '
             + 'porttirakennus tiilikattoineen seisoo kivijalustan päällä, '
-            + 'jonka läpi vie holvikäytävä. Vasemmalla kohoaa lasinen '
-            + 'toimistotalo, ja portin edessä on nurmikenttä ja matala '
-            + 'kaide.',
+            + 'jonka läpi vie holvikäytävä, ja vasemmalla kohoaa lasinen '
+            + 'toimistotalo.',
           lahde: 'm-louis, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -31373,11 +31369,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rahoitti muun muassa korean kielen seuraa, ja vuoden 1942 '
             + 'kielikahakassa hänet vangittiin ja kidutettiin ja omaisuutta '
             + 'takavarikoitiin.',
-          selite: 'Kuja Bukchonin hanok-korttelissa aamuauringossa. '
-            + 'Vasemmalla nousee punatiilinen muuri, jonka yli kaartuu '
+          selite: 'Kuja Bukchonin hanok-korttelissa aamuauringossa: '
+            + 'vasemmalla nousee punatiilinen muuri, jonka yli kaartuu '
             + 'punaisia ruusuja, ja oikealla on hanok-talon puinen '
-            + 'julkisivu ja tiilikaton räystäs. Kuja nousee loivasti '
-            + 'ylämäkeen.',
+            + 'julkisivu ja tiilikaton räystäs.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -31395,11 +31390,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'suurta palatsia ovat Changdeokgung salaisine puutarhoineen, '
             + 'Changgyeonggung, Gyeonghuigung ja monarkian viimeisinä '
             + 'vuosina käytetty Deoksugung.',
-          selite: 'Vartijaksi pukeutunut esiintyjä Gwanghwamunin portilla. '
-            + 'Punaisessa hatussa on kaksi pystyyn nostettua riikinkukon '
-            + 'sulkaa ja keltainen tunnus, viitta on punainen ja hihat '
-            + 'keltaiset, ja käsissä on vaakasuora sauva. Takana näkyy '
-            + 'palatsin portti.',
+          selite: 'Vartijaksi pukeutunut esiintyjä Gwanghwamunin '
+            + 'portilla: punaisessa hatussa on kaksi pystyyn nostettua '
+            + 'riikinkukon sulkaa, viitta on punainen ja hihat keltaiset, '
+            + 'ja käsissä on vaakasuora sauva.',
           lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31438,11 +31432,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jakkaralla. Illan pimetessä moni koju muuttuu '
             + 'pikkuravintolaksi, jossa istutaan soju-lasin ääressä '
             + 'pitkään; tunnetuimmat kojurivit ovat Jongnon varrella.',
-          selite: 'Pojangmacha-koju iltapimeällä Soulissa. Punaisen '
+          selite: 'Pojangmacha-koju iltapimeällä Soulissa: punaisen '
             + 'pressukatoksen kirkas ikkuna avautuu tiskille, jolla on '
-            + 'vartaita, kastikepulloja ja talouspaperirulla; myyjä '
-            + 'nostaa annosta paistoaltaasta ja kaksi asiakasta odottaa '
-            + 'teltan suojassa. Taustalla palavat kadun neonkyltit.',
+            + 'vartaita ja kastikepulloja, ja myyjä nostaa annosta '
+            + 'paistoaltaasta.',
           lahde: 'LinasD, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -31460,11 +31453,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'buddhalaismunkit. Moni kylpylä palvelee läpi yön, ja '
             + 'makuusaliin voi jäädä nukkumaan — perheille se on halpa '
             + 'viikonlopunvietto.',
-          selite: 'Dragon Hill -kylpylän talo Yongsanissa Soulissa. '
-            + 'Vaalean palatsimaisen julkisivun katolla lukee '
-            + 'sinisin kirjaimin kylpylän nimi ja 24H, ja kadun puolella '
-            + 'on koristeellinen portti kylttirivistöineen. Etualalla on '
-            + 'pyöriä ja skoottereita pysäköitynä puun ympärille.',
+          selite: 'Dragon Hill -kylpylän talo Yongsanissa Soulissa: '
+            + 'vaalean palatsimaisen julkisivun katolla lukee sinisin '
+            + 'kirjaimin kylpylän nimi ja 24H, ja kadun puolella on '
+            + 'koristeellinen portti kylttirivistöineen.',
           lahde: 'Matt Kieffer from London, United Kingdom, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -31483,11 +31475,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hallit ovat auki vuorokauden ympäri. Suuret turnaukset '
             + 'katsotaan yhdessä hallin ruuduilta kuin urheilua — mitä '
             + 'kilpapelaaminen Etelä-Koreassa onkin.',
-          selite: 'Pelihalli Hongdaen kaupunginosassa Soulissa. Matalien '
+          selite: 'Pelihalli Hongdaen kaupunginosassa Soulissa: matalien '
             + 'väliseinien lokeroissa on rivikaupalla näyttöjä ja '
-            + 'punavalkoisia pelituoleja, käytävän lattiaa reunustaa '
-            + 'valonauha, ja seinillä on punaisia kylttejä ja '
-            + 'palkintovuosien taulu. Käytävällä kävelee kaksi kävijää.',
+            + 'punavalkoisia pelituoleja, ja käytävän lattiaa reunustaa '
+            + 'valonauha.',
           lahde: 'Wvdp, Wikimedia Commons (CC0)',
         },
       ],
@@ -31524,6 +31515,15 @@ export const KULTTUURI_KATEGORIAT = {
    * Commonsin API:sta, sijainti kuvaustekstistä ja kategorioista,
    * jokainen kuva katsottu silmin.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän kaupungin kuvatekstit — kansikuvat, avauskuvat,
+   * nostojen selitteet ja matkaoppaan kuvat — on tiivistetty yhteen
+   * virkkeeseen. Sivujen johdannot pysyvät lyhyinä (1–2 virkettä);
+   * lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   shanghai: [
     {
       id: 'kaupunki',
@@ -31536,26 +31536,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Shanghai-Bund-56-Kolonialstil-2012-gje.jpg',
-          selite: 'Rantakadun eli Bundin taloja aamuauringossa. Punatiilinen '
-            + 'kolmikerroksinen kauppahuone on koristeltu valkoisin '
-            + 'pylväin ja päätykolmioin, ja sen edessä aukiolla seisoo '
-            + 'pronssinen härkäpatsas. Taustalla näkyy lasisia '
-            + 'toimistotaloja.',
+          selite: 'Rantakadun eli Bundin taloja aamuauringossa: '
+            + 'punatiilinen kolmikerroksinen kauppahuone on koristeltu '
+            + 'valkoisin pylväin ja päätykolmioin, ja sen edessä aukiolla '
+            + 'seisoo pronssinen härkäpatsas.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Yu Garden Shanghai November 2017 012.jpg',
-          selite: 'Yun puutarhan lampi ja sen takana kaksikerroksinen sali. '
-            + 'Rantaa reunustavat harmaat kalkkikivikasat ja muotoon '
-            + 'leikatut pensaat, ja lammen yli vie matala kaiteellinen '
-            + 'silta. Talon julkisivu on tummanpunaista puuta.',
+          selite: 'Yun puutarhan lampi ja sen takana kaksikerroksinen '
+            + 'sali tummanpunaisine puujulkisivuineen, rantaa reunustavat '
+            + 'harmaat kalkkikivikasat ja lammen yli vievä matala silta.',
           lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2014.11.15.184711 East Nanjing Road Pedestrian Zone Shanghai.jpg',
-          selite: 'Itäisen Nanjing-kadun kävelykatu illalla. Molemmin puolin '
-            + 'katua kohoaa neonkylttien rivi, katulyhdyt palavat '
-            + 'keskikaistalla ja väkeä kulkee kadulla ristiin rastiin.',
+          selite: 'Itäisen Nanjing-kadun kävelykatu illalla: molemmin '
+            + 'puolin katua kohoaa neonkylttien rivi, katulyhdyt palavat '
+            + 'keskikaistalla ja väkeä kulkee ristiin rastiin.',
           lahde: 'Hermann Luyken, Wikimedia Commons (CC0)',
         },
         /*
@@ -31567,11 +31565,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'flickr-30366279333.jpg',
           selite: 'Kullattu temppelikatto lasitornien välissä '
-            + 'auringonlaskun aikaan. Vasemmalla kaartuu sininen '
-            + 'lasijulkisivu ja oikealla punaiseksi hehkuva tornitalo, '
-            + 'niiden välissä nousee monikerroksinen kultainen stupa, ja '
-            + 'alhaalla jonottaa autoja leveällä kadulla; aivan etualalla '
-            + 'on pinkkejä köynnöskukkia.',
+            + 'auringonlaskun aikaan: vasemmalla kaartuu sininen '
+            + 'lasijulkisivu ja oikealla punaiseksi hehkuva tornitalo, ja '
+            + 'niiden välissä nousee monikerroksinen kultainen stupa.',
           lahde: 'lwtt93, Flickr (CC BY 2.0)',
         },
       ],
@@ -31588,9 +31584,8 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'flickr-32354797618.jpg',
           selite: 'Vanha keskusta ylhäältä sinisenä hetkenä: alareunassa '
             + 'kaartuu leveä joki, sen rannassa kulkee valaistu '
-            + 'kivitalojen rivi, ja niiden takaa nousee tornitalojen '
-            + 'meri usvaan asti. Katujen autonvalot piirtävät punaisia '
-            + 'juovia, ja oikealla taivas hehkuu vielä oranssina.',
+            + 'kivitalojen rivi, ja niiden takaa nousee tornitalojen meri '
+            + 'usvaan asti.',
           lahde: 'Franck Michel, Flickr (CC BY 2.0)',
         },
       ],
@@ -31669,12 +31664,11 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-44705397404.jpg',
-                  selite: 'Kävelykadun neonkylttejä lähietäisyydeltä yöllä: '
-                    + 'talon kyljessä laskeutuu kaksi pystyriviä '
-                    + 'valoputkikirjoitusta, vasemmanpuoleinen sinisenä '
-                    + 'punaisissa kehyksissä ja oikeanpuoleinen '
-                    + 'vaaleanvihreänä punaisella pohjalla. Alimmassa '
-                    + 'ruudussa lukee latinalaisin kirjaimin HUNTLEY.',
+                  selite: 'Kävelykadun neonkylttejä lähietäisyydeltä '
+                    + 'yöllä: talon kyljessä laskeutuu kaksi pystyriviä '
+                    + 'valoputkikirjoitusta, toinen sinisenä punaisissa '
+                    + 'kehyksissä ja toinen vaaleanvihreänä punaisella '
+                    + 'pohjalla.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
@@ -31731,13 +31725,10 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-50101388983.jpg',
-                  selite: 'Puutarhan laidan lampi illalla: kaksikerroksisten '
-                    + 'puutalojen ylöskaartuvat räystäät on ääriviivoitettu '
-                    + 'kullankeltaisin valoin, ja koko rivi heijastuu '
-                    + 'tummasta vedestä. Vasemmalla kelluu pieni '
-                    + 'lumpeensaareke, oikealla seisoo valkoinen '
-                    + 'naisenkuva kivijalustalla, ja takana palavat '
-                    + 'myyntikojujen keltaiset varjot.',
+                  selite: 'Puutarhan laidan lampi illalla: '
+                    + 'kaksikerroksisten puutalojen ylöskaartuvat '
+                    + 'räystäät on ääriviivoitettu kullankeltaisin '
+                    + 'valoin, ja koko rivi heijastuu tummasta vedestä.',
                   lahde: 'Steve FUNG, Flickr (CC BY-SA 2.0)',
                 },
               ],
@@ -31772,22 +31763,18 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-42164576345.jpg',
-                  selite: 'Korttelin ruokapaikka yöllä: julkisivun yllä palaa '
-                    + 'musta valotaulu, jonka kiinalaiset merkit on tehty '
-                    + 'valkoisista lampuista ja kehys keltaisesta '
-                    + 'valonauhasta. Ikkunaan on teipattu kuvallisia '
-                    + 'ruokalistoja, sisällä istuu ruokailijoita, ja '
-                    + 'jalkakäytävällä seisoo kaksi sähköskootteria.',
+                  selite: 'Korttelin ruokapaikka yöllä: julkisivun yllä '
+                    + 'palaa musta valotaulu, jonka kiinalaiset merkit on '
+                    + 'tehty valkoisista lampuista, ja ikkunaan on '
+                    + 'teipattu kuvallisia ruokalistoja.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-44774108052.jpg',
-                  selite: 'Aamiaispuodin ovi illalla. Sisäänkäynnin yli '
-                    + 'kaartuu valkoinen holvi, jota kiertää värillinen '
-                    + 'lamppurivi, ja alla hehkuvat vihreät ja punaiset '
-                    + 'neonmerkit sekä piirretty possunkuva. Vihreässä '
-                    + 'kyltissä luetellaan aamun ruoat, ja avoimesta '
-                    + 'ovesta näkyy tyhjiä pöytiä ja tiiliseinä.',
+                  selite: 'Aamiaispuodin ovi illalla: sisäänkäynnin yli '
+                    + 'kaartuu valkoinen holvi värillisine '
+                    + 'lamppuriveineen, ja alla hehkuvat vihreät ja '
+                    + 'punaiset neonmerkit sekä piirretty possunkuva.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
@@ -31818,10 +31805,8 @@ export const KULTTUURI_KATEGORIAT = {
                   tiedosto: 'flickr-45493688424.jpg',
                   selite: 'Sama torni kadun tasalta yöllä: kierteinen '
                     + 'lasijulkisivu nousee matalan valkoisen '
-                    + 'toimistotalon takaa ja jatkuu ulos kuvasta. '
-                    + 'Vasemmalla palaa punainen pystykyltti, oikealla '
-                    + 'toimiston ikkunarivit, ja kadun poikki venyy ohi '
-                    + 'ajaneen auton valojuova.',
+                    + 'toimistotalon takaa ja jatkuu ulos kuvasta, ja '
+                    + 'kadun poikki venyy ohi ajaneen auton valojuova.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
@@ -31911,10 +31896,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerrosta ja nykyaikaiset saniteettitilat. Rakennustapa '
             + 'merkittiin Kiinan aineettoman kulttuuriperinnön '
             + 'luetteloon vuonna 2010.',
-          selite: 'Shikumen-portti Shanghaissa. Tummaa puuovea kehystävät '
-            + 'harmaat kivipielet, joiden yläosassa on simpukkakuvioinen '
-            + 'koriste, ja oven päällä on kivipalkki ja koristelaatta. '
-            + 'Ovilehdistä on maali kulunut pois laikuittain.',
+          selite: 'Shikumen-portti Shanghaissa: tummaa puuovea kehystävät '
+            + 'harmaat kivipielet simpukkakuvioisine koristeineen, ja '
+            + 'oven päällä on kivipalkki ja koristelaatta.',
           lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -31932,10 +31916,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'salissa 1853–1855, ja sen jälkeen alkuperäisistä '
             + 'rakennuksista oli jäljellä vain vähän. Puutarha '
             + 'kunnostettiin 1956–1961 ja avattiin yleisölle 1961.',
-          selite: 'Yun puutarhan kivikkoa ja lampi. Rantaa reunustavat '
+          selite: 'Yun puutarhan kivikkoa ja lampi: rantaa reunustavat '
             + 'pystyyn ladotut harmaat kalkkikivet, joiden välissä kasvaa '
-            + 'muotoon leikattuja mäntyjä ja vaahteroita, ja taustalla '
-            + 'näkyy puutarhan salien katonharjat.',
+            + 'muotoon leikattuja mäntyjä ja vaahteroita.',
           lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -31952,10 +31935,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'korkeamman vuokran. Suuri osa kortteleista on purettu '
             + 'uudisrakentamisen tieltä, ja jäljellä olevissa asutaan yhä.',
           selite: 'Kujakorttelin porttikäytävä Shanhaiguan-kadulla '
-            + 'Shanghaissa. Vaalean julkisivun keskellä on kaita '
+            + 'Shanghaissa: vaalean julkisivun keskellä on kaita '
             + 'porttiaukko, jonka yli on pingotettu pyykkinaruja '
-            + 'vaatteineen; molemmin puolin on katutason puoteja ja '
-            + 'yläpuolella koristeltu päätykolmio.',
+            + 'vaatteineen.',
           lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -31997,11 +31979,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'osumia syntyy harvoin, ja osa vanhemmista ei ole '
             + 'kertonut ilmoituksesta lapselleen lainkaan.',
           selite: 'Avioliittotorin ilmoituksia Kansanpuistossa '
-            + 'Shanghaissa. Katetun käytävän seinälle on ripustettu '
+            + 'Shanghaissa: katetun käytävän seinälle on ripustettu '
             + 'narujen varaan rivikaupalla valkoisia ja punaisia '
-            + 'paperiarkkeja käsin kirjoitettuine tietoineen, ja '
-            + 'oikealla kaksi ihmistä istuu taittopöydän ääressä '
-            + 'keltaisen sateenvarjon alla.',
+            + 'paperiarkkeja käsin kirjoitettuine tietoineen.',
           lahde: 'Jpbowen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -32021,8 +32001,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'aamu uudelleen.',
           selite: 'Cifantuan lähikuvassa: tahmeista riisinjyvistä '
             + 'puristetun pötkön sisältä pilkistää rapeaksi paistetun '
-            + 'youtiao-tangon kullanruskea kierre. Pötköä pidellään '
-            + 'muovipussin läpi, ja oikeassa reunassa näkyy syömäpuikko.',
+            + 'youtiao-tangon kullanruskea kierre, ja pötköä pidellään '
+            + 'muovipussin läpi.',
           lahde: 'Galaxyharrylion, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -32040,10 +32020,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '2011, bussit alkoivat kuuluttaa pysäkkejä shanghaiksi '
             + '2013, ja 2017 kieltä oppi myös puhelimen ääniavustaja.',
           selite: 'Linjan 14 sinivalkoinen johdinauto Dalian-kadulla '
-            + 'Shanghaissa. Auton kyljessä on kiinalaisin merkein '
-            + 'teksti sadan vuoden bussiliikenteestä, katolla '
-            + 'virroitintangot, ja takana kohoaa porrastettu '
-            + 'toimistotorni puiden yllä.',
+            + 'Shanghaissa: kyljessä on kiinalaisin merkein teksti sadan '
+            + 'vuoden bussiliikenteestä ja katolla virroitintangot.',
           lahde: '4084470 0.smil, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -35704,6 +35682,15 @@ export const KULTTUURI_KATEGORIAT = {
    * NASA-kuvassa NASAn oma kuvausnumero alareunassa — molemmat
    * selitetään kuvatekstissä.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * kaikki tämän kaupungin kuvatekstit — kansikuvat, avauskuvat,
+   * nostojen selitteet ja matkaoppaan kuvat — on tiivistetty yhteen
+   * virkkeeseen. Sivujen johdannot pysyvät lyhyinä (1–2 virkettä);
+   * lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   bangkok: [
     {
       id: 'kaupunki',
@@ -35779,9 +35766,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yhteispituudeksi 2 604 kilometriä, vaikka moni on '
             + 'täytetty maalla tai muutettu viemäriksi.',
           selite: 'Illustrated London Newsin kaiverrus vuodelta 1865: '
-            + 'venekulkue soutaa jokea ylös ja rannat ovat täynnä '
-            + 'paalutaloja. Kuvien välissä olevat tekstipalkit ovat '
-            + 'lehden omia kuvatekstejä.',
+            + 'venekulkue soutaa jokea ylös rantojen paalutalojen '
+            + 'välissä, ja kuvien välissä olevat tekstipalkit ovat lehden '
+            + 'omia kuvatekstejä.',
           lahde: 'Engraving of a sketch by Mr. R. Campbell Bates. From '
             + '"Illustrated London News", 1865., Wikimedia Commons (PD)',
           wiki: 'Bangkok',
@@ -35840,9 +35827,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kauppiaat asettuivat alueelle jo 1780-luvulla, kun '
             + 'Rama I siirsi yhteisön pois Suurpalatsin rakennustyön '
             + 'tieltä.',
-          selite: 'Katukeittiön paistolevy täynnä täytettyjä '
-            + 'ohukaisia ja paistoksia. Vieressä on pinottu kulhoja, '
-            + 'ämpäreitä ja kauhoja — koko keittiö mahtuu kärryyn.',
+          selite: 'Katukeittiön paistolevy täynnä täytettyjä ohukaisia ja '
+            + 'paistoksia, vieressä pinottuina kulhoja, ämpäreitä ja '
+            + 'kauhoja — koko keittiö mahtuu kärryyn.',
           lahde: 'David McKelvey from Brisbane, Australia, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Bangkok',
         },
@@ -35850,9 +35837,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Lunch at Rongros, Bangkok (Jan 2021) - img 05.jpg',
-          selite: 'Jokibussi kaartaa Chao Phrayalla ja Wat Arunin '
-            + 'torni kohoaa vastarannalla. Matkustajat näkyvät '
-            + 'veneessä vain pieninä hahmoina.',
+          selite: 'Jokibussi kaartaa Chao Phrayalla matkustajineen, ja '
+            + 'Wat Arunin torni kohoaa vastarannalla.',
           lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Bangkok on Thaimaan pääkaupunki ja selvästi maan suurin '
@@ -35913,8 +35899,8 @@ export const KULTTUURI_KATEGORIAT = {
                 tiedosto: 'Astronaut Photography of Earth - Bangkok-Gulf of Thailand - ISS006-E-49922.JPG',
                 selite: 'Bangkok avaruudesta: Chao Phraya kiemurtelee '
                   + 'S-kirjaimena harmaan kaupunkimaton halki kohti '
-                  + 'Siaminlahtea. Vasemman alakulman tunnus on NASAn '
-                  + 'oma kuvausnumero.',
+                  + 'Siaminlahtea, ja alakulman tunnus on NASAn oma '
+                  + 'kuvausnumero.',
                 lahde: 'Image Science and Analysis Laboratory, '
                   + 'NASA-Johnson Space Center (astronaut not stated), '
                   + 'Wikimedia Commons (PD)',
@@ -36013,8 +35999,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'matkavuonna 1873 kuningas kielsi myös alamaisten maahan '
             + 'heittäytymisen: kumarrus riitti vastedes.',
           selite: 'Chulalongkornin ratsastajapatsas Kuninkaallisella '
-            + 'aukiolla. Pronssinen kuningas istuu hevosen selässä '
-            + 'univormussa; patsas valettiin Pariisissa ja '
+            + 'aukiolla: pronssinen kuningas istuu hevosen selässä '
+            + 'univormussa, ja patsas valettiin Pariisissa ja '
             + 'paljastettiin 1908 hallitsijakauden 40-vuotisjuhlaan.',
           lahde: 'กสิณธร ราชโอรส, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Bangkok',
@@ -36034,8 +36020,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ehti valmiiksi vasta hänen kuolemansa jälkeen, vuonna '
             + '1916.',
           selite: 'Vanha höyryveturi Hua Lamphongin asemahallin '
-            + 'kaarikaton alla iltavalaistuksessa. Hallin '
-            + 'lasimaalauspääty hehkuu veturin takana.',
+            + 'kaarikaton alla iltavalaistuksessa, hallin '
+            + 'lasimaalauspääty hehkuen veturin takana.',
           lahde: 'Kriengsak Jirasirirojanakorn, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Bangkok',
         },
@@ -36072,11 +36058,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tasan sata vuotta. Vuoteen 1925 mennessä hovi oli '
             + 'muuttanut uudempiin asuinpaikkoihin, mutta Suurpalatsi '
             + 'säilyi seremonioiden näyttämönä — ja on sitä yhä.',
-          selite: 'Chakri Maha Prasat edestä: eurooppalainen '
-            + 'kivipalatsi, jonka katoksi on nostettu kolme '
-            + 'thaimaalaista kultahuippua. Yhdistelmää on verrattu '
-            + 'viktoriaaniseen rouvaan, jolle on puettu thaimaalainen '
-            + 'kruunu.',
+          selite: 'Chakri Maha Prasat edestä: eurooppalainen kivipalatsi, '
+            + 'jonka katoksi on nostettu kolme thaimaalaista kultahuippua '
+            + '— yhdistelmää on verrattu viktoriaaniseen rouvaan '
+            + 'thaimaalaisessa kruunussa.',
           lahde: 'Supanut Arunoprayote, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Bangkok',
         },

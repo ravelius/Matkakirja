@@ -2607,22 +2607,22 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 35.73035, etela: 35.69915, lansi: 139.75355, ita: 139.81195,
     },
     varikartta: 'assets/kartat/tokio-varikartta.png',
-    esittely: 'Kartalla on kaksi erilaista Tokiota. Vasemmassa '
-      + 'laidassa on laaja puisto, jonka eteläkärjessä on '
-      + 'munanmuotoinen lampi, ja sen kupeessa kulkee etelästä '
-      + 'pohjoiseen leveä ratapiha katkoviivoineen. Oikea puoli on '
-      + 'aivan toisenlainen: pikkukatujen ruudukkoa niin tiheässä, '
-      + 'että korttelit ovat vain kymmenien metrien kokoisia.\n\n'
-      + 'Se tiheä puoli on shitamachi, alakaupunki, ja se on Tokion '
-      + 'vanhinta kaupunkia. Oikeassa alakulmassa mutkittelee '
-      + 'Sumida-joki, ja sen ja ruudukon välissä erottuu pieni '
-      + 'suorakaiteen muotoinen alue: Sensō-jin temppelipiiri. '
-      + 'Kohteet jakautuvat kahteen ryhmään aivan kuin kaupunkikin — '
-      + 'idässä Kaminarimon, Sensō-ji ja niiden takana huvipuisto '
-      + 'Hanayashiki, ja lännessä Uenon kukkulalla puisto, '
-      + 'kansallismuseo, Kan\'ei-ji, Tōshō-gū, Shitamachi-museo ja '
-      + 'Iwasakien talo. Väliin jää asema, jonne pohjoisen junat '
-      + 'tulevat.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Tokion shitamachi eli alakaupunki, '
+      + 'kaupungin vanhinta osaa Sumida-joen tuntumassa. Kohteet ovat '
+      + 'kahdessa ryhmässä. Idässä Asakusassa ovat Kaminarimonin portti, '
+      + 'kaupungin vanhin temppeli Sensō-ji ja niiden takana Hanayashiki, '
+      + 'joka avattiin 1853 kukkatarhana ja on Japanin vanhin huvipuisto. '
+      + 'Lännessä Uenon kukkulalla ovat puisto vuodelta 1873, Tokion '
+      + 'kansallismuseo, Kan\'ei-jin temppeli, Ueno Tōshō-gūn pyhäkkö, '
+      + 'Shitamachi-museo ja Iwasakien talo. Väliin jää Uenon asema, '
+      + 'jonne pohjoisen junat tulevat. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * KYMMENEN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
@@ -2671,31 +2671,24 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 37.59345, etela: 37.55905, lansi: 126.9608, ita: 127.0072,
     },
     varikartta: 'assets/kartat/soul-varikartta.png',
-    esittely: 'Soul on kymmenen miljoonan asukkaan kaupunki, mutta '
-      + 'tämä kartta näyttää siitä vain kaksi ja puoli kilometriä: sen '
-      + 'nurkan, josta kaikki alkoi. Joseon-dynastia siirsi '
-      + 'pääkaupunkinsa tänne vuonna 1394 ja rakensi kolme asiaa '
-      + 'ensimmäisenä — palatsin, esi-isien pyhäkön ja kellotornin. Ne '
-      + 'kaikki ovat yhä kartalla, ja niiden väliin mahtuu kävellen '
-      + 'puoli tuntia.\n\nKartan ilme syntyy kolmesta suuresta '
-      + 'aitauksesta, jotka rikkovat muuten tiheän ruudukon. '
-      + 'Vasemmalla ylhäällä on Gyeongbokgungin palatsi paksun '
-      + 'muurin sisällä; sen alueella erottuu kaksi vesiallasta, iso '
-      + 'suorakaide ja pieni pyöreä lampi. Oikeassa yläkulmassa on '
-      + 'toinen ja vielä laajempi aitaus, Changdeokgung, jonka '
-      + 'takapihalla mutkittelee metsäinen puutarha omine '
-      + 'lampineen. Sen alapuolella on soikea vihreä saareke: '
-      + 'Jongmyon pyhäkkö, jonne kuninkaiden sielut kannettiin '
-      + 'kuoleman jälkeen.\n\nKuvan alalaidassa kulkee lännestä itään '
-      + 'kapea vesiviiva. Se on Cheonggyecheon, puro joka jakoi vanhan '
-      + 'kaupungin pohjoiseen ja eteläiseen puoliskoon — sen '
-      + 'pohjoispuolta sanotaan yhä Bukchoniksi eli pohjoiskyläksi. '
-      + 'Puron ja palatsien välissä on Jongno, kellokatu, ja sen '
-      + 'varrella loput kohteet: Insadongin käsityökatu, Jogyesan '
-      + 'temppeli, Tapgol-puisto ja Bosingak. Palatsin edessä seisoo '
-      + 'Gwanghwamun, jonka kautta koko akseli alkaa. Namsanin torni, '
-      + 'Han-joki ja Gangnam jäävät kaikki tämän ruudun ulkopuolelle '
-      + 'etelään.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on vanhan Soulin ydin, se kahden ja puolen '
+      + 'kilometrin nurkka, johon Joseon-dynastia rakensi pääkaupunkinsa '
+      + 'vuodesta 1394 alkaen: palatsin, esi-isien pyhäkön ja '
+      + 'kellotornin. Lännessä on Gyeongbokgung, dynastian ensimmäinen ja '
+      + 'suurin palatsi, ja sen edessä Gwanghwamunin portti; idässä ovat '
+      + 'asuinpalatsi Changdeokgung salaisine puutarhoineen ja '
+      + 'kuninkaiden pyhäkkö Jongmyo. Palatsien välissä rinteessä on '
+      + 'Bukchonin hanok-kortteli, ja etelämpänä Jongnon eli kellokadun '
+      + 'varrella Bosingakin kellopaviljonki, Jogyesan temppeli, '
+      + 'Tapgol-puisto ja Insadongin käsityökatu. Namsanin torni, '
+      + 'Han-joki ja Gangnam jäävät kartan ulkopuolelle etelään. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * YHDEKSÄN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
@@ -2745,30 +2738,26 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 31.2552, etela: 31.2168, lansi: 121.4565, ita: 121.5045,
     },
     varikartta: 'assets/kartat/shanghai-varikartta.png',
-    esittely: 'Kartan oikeaa laitaa hallitsee leveä joki, joka kaartaa '
-      + 'alhaalta ylös ja poistuu yläkulmasta. Se on Huangpu, ja sen '
-      + 'länsirannalla kulkeva kaartuva katu on Bund eli kiinaksi '
-      + 'Waitan. Vasemmalta tulee toinen, paljon kapeampi vesi, joka '
-      + 'mutkittelee kuin nauha ja yhtyy jokeen oikeassa yläkulmassa: '
-      + 'se on Suzhou-puro. Näiden kahden veden kainalo on se paikka, '
-      + 'jossa ulkomaiset kauppahuoneet aloittivat vuonna 1846 — '
-      + 'Shanghai avattiin sopimussatamaksi 1843, ja isoisän matkan '
-      + 'aikaan Bund oli jo täynnä kauppahuoneiden '
-      + 'konttoreita.\n\nKuvan alaosassa erottuu jotain, mitä muualla '
-      + 'kartalla ei ole: soikea katukehä, jonka sisällä kadut ovat '
-      + 'aivan eri kokoisia kuin ulkopuolella. Kehä on vanhan '
-      + 'kaupunginmuurin paikka. Muuri rakennettiin 1553 japanilaisia '
-      + 'merirosvoja vastaan ja purettiin 1912; sen tilalle tuli katu, '
-      + 'ja kehän sisään jäi kiinalainen vanhakaupunki kujineen. Juuri '
-      + 'siellä on Yu-puutarha. Kehän ulkopuolinen ruutukaava on '
-      + 'sopimussataman aikaista uutta kaupunkia.\n\nVasemmalla '
-      + 'puolella on iso vihreä alue, Kansanpuisto ja Kansanaukio. Se '
-      + 'oli 1860-luvulta lähtien laukkaradan sisäkenttä, ja radan '
-      + 'soikea muoto näkyy yhä katujen kulmissa. Sieltä itään lähtee '
-      + 'Nanjing-katu, kaupungin kauppakatu, joka johtaa suoraan '
-      + 'Bundille. Pudongin pilvenpiirtäjät ovat joen toisella '
-      + 'puolella heti kartan itäreunan takana — ne tulevat näkyviin, '
-      + 'kun karttaa suurentaa.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Shanghain vanha keskusta Huangpu-joen '
+      + 'länsirannalla. Rannassa kulkee Bund eli Waitan, kauppahuoneiden '
+      + 'rantakatu, jonka varrella on Rauhanhotellina tunnettu Sassoonin '
+      + 'talo ja jonka pohjoispäässä Waibaidun silta ylittää '
+      + 'Suzhou-puron; ulkomaiset kauppahuoneet aloittivat täällä 1846, '
+      + 'kolme vuotta sen jälkeen kun kaupunki avattiin sopimussatamaksi. '
+      + 'Etelässä on kiinalainen vanhakaupunki vuonna 1553 rakennetun ja '
+      + '1912 puretun kaupunginmuurin kehän sisällä: Yu-puutarha, '
+      + 'Kaupunginjumalan temppeli, Fuyoun moskeija ja Dajingin '
+      + 'pavilonki, muurin viimeinen pala. Lännessä ovat Shanghain museo '
+      + 'Kansanaukion laidalla ja Nanjing-katu, joka vie sieltä suoraan '
+      + 'Bundille. Pudongin pilvenpiirtäjät jäävät joen toiselle puolelle '
+      + 'kartan itäreunan taakse. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * YHDEKSÄN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
@@ -6150,33 +6139,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/bangkok-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 13.7625, etela: 13.7315, lansi: 100.4805, ita: 100.5245 },
-    esittely: 'Bangkok on nuori pääkaupunki vanhalla paikalla. Kylä '
-      + 'nimeltä Bangkok oli Chao Phrayan varrella jo Ayutthayan '
-      + 'kaudella, ja kun Ayutthaya tuhoutui 1767, kuningas Taksin '
-      + 'perusti uuden pääkaupungin Thonburiin joen länsirannalle. '
-      + 'Rama I siirsi sen 1782 itärannalle ja kaivatti kanavat, jotka '
-      + 'tekivät Rattanakosinista keinotekoisen saaren; tiilet uusiin '
-      + 'muureihin haettiin proomuilla Ayutthayan raunioista. Kaupunki '
-      + 'eli veden varassa: kanavat eli khlongit olivat sen katuja, ja '
-      + 'ulkomaalaiset kutsuivat sitä idän Venetsiaksi. Ensimmäinen '
-      + 'länsimaiseen tapaan rakennettu katu Charoen Krung valmistui '
-      + 'vasta 1864, ja Rama V:n kaudella katuverkko kasvoi kanavien '
-      + 'rinnalle — silloin syntyi myös kiinalaiskorttelin pääkatu '
-      + 'Yaowarat.\n\n'
-      + 'Kartalla joki on pääosassa: Chao Phraya tulee kuvaan '
-      + 'vasemmasta ylänurkasta, kaartaa suuren S-mutkan kuvan '
-      + 'vasemmassa puoliskossa ja poistuu alalaidasta. Mutkan sisään '
-      + 'jää Rattanakosinin saari, jonka erottaa mantereesta '
-      + 'kanavarengas — vanha vallihauta piirtyy kapeana vesiuomana '
-      + 'katujen lomassa. Saaren kärjessä ovat '
-      + 'Sanam Luangin avoin kenttä sekä Suurpalatsin ja Wat Phra '
-      + 'Kaew\'n suuri kortteli, ja heti niiden alapuolella Wat Pho. '
-      + 'Joen toisella puolella lounaassa on Wat Arun ja sen ympärillä '
-      + 'Thonburin kanavien verkko. Itään mentäessä katuverkko '
-      + 'tihenee: keskellä ovat Jättiläiskeinun aukio ja Kultaisen '
-      + 'vuoren kukkula, kaakossa Yaowaratin vino katu kiinalais'
-      + 'kortteleineen ja sen takana Hua Lamphongin asema '
-      + 'ratapihoineen. Kartan kohteista pääsee lukemaan lisää '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Bangkokin vanha ydin Chao Phrayan mutkassa. '
+      + 'Mutkan sisään jää Rattanakosinin keinosaari, jonka Rama I '
+      + 'kaivatti kanavarenkaan sisään vuodesta 1782 alkaen: siellä ovat '
+      + 'Sanam Luangin kenttä, Suurpalatsi ja Wat Phra Kaew sekä niiden '
+      + 'eteläpuolella Wat Pho. Joen toisella puolella Thonburin kanavien '
+      + 'keskellä kohoaa Wat Arun. Idempänä ovat Jättiläiskeinu Sao Ching '
+      + 'Cha ja Wat Saketin Kultainen vuori sekä kaakossa '
+      + 'kiinalaiskorttelin pääkatu Yaowarat ja Hua Lamphongin '
+      + 'rautatieasema. Kaupunki eli pitkään kanaviensa varassa, ja '
+      + 'ensimmäinen länsimaiseen tapaan rakennettu katu Charoen Krung '
+      + 'valmistui vasta 1864. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
@@ -6228,29 +6207,25 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 40.014, etela: 39.99, lansi: 116.256, ita: 116.303 },
         x: 14, y: 2, leveys: 20, korkeus: 10.96, suunta: '14 km luoteeseen' },
     ],
-    esittely: 'Peking on Pohjois-Kiinan tasangon pohjoisreunalla, ja '
-      + 'sitä on rakennettu saman akselin varaan dynastiasta toiseen: '
-      + 'kaupunki oli ensin Ji ja Yanjing, sitten Jurchenien Zhongdu '
-      + 'ja Kublai-kaanin Dadu, kunnes Ming-dynastian Yongle-keisari '
-      + 'antoi sille 1403 nimen Beijing, pohjoinen pääkaupunki, ja '
-      + 'rakennutti Kielletyn kaupungin ja Taivaan temppelin. Muurien '
-      + 'kaupunki se oli 1960-luvulle asti: Ming-kauden kaupunginmuuri '
-      + 'purettiin 1965, ja metro rakennettiin sen perustusten päälle. '
-      + 'Toinen kehätie seuraa yhä muurin ääriviivaa.\n\nKartan '
-      + 'keskellä on Kielletty kaupunki: suorakaide, jota kiertää '
-      + 'vallihauta ja jonka eteläpuolelta alkaa Tiananmenin aukio. '
-      + 'Palatsin takana pohjoisessa on Jingshanin puistokukkula ja '
-      + 'länsikyljessä kiemurtelee entisten keisarillisten puistojen '
-      + 'järviketju. Pohjoista kohti katuverkko tihenee kapeiden '
-      + 'hutong-kujien sokkeloksi, jonka keskeltä nousevat Rumpu- ja '
-      + 'kellotorni ja jonka läpi kulkee Nanluoguxiangin kuja; '
-      + 'koillisnurkassa on Yonghe-temppelin kortteli. Etelässä '
-      + 'akselilla seisoo Zhengyangmenin portti, ja kaakossa '
-      + 'levittäytyy Taivaan temppelin muurien ympäröimä puisto. '
-      + 'Vasemman yläkulman kainalossa ovat kesäpalatsit 14 '
-      + 'kilometrin päässä luoteessa: Kunming-järvi rantoineen ja sen '
-      + 'koillispuolella Vanhan kesäpalatsin rauniopuisto. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Pekingin vanha ydin sen '
+      + 'pohjois–etelä-akselin ympärillä. Keskellä on Kielletty kaupunki, '
+      + 'keisarien palatsi vuosina 1420–1924, ja sen eteläpuolella '
+      + 'Tiananmen. Palatsin takana on Jingshanin puistokukkula ja sen '
+      + 'länsipuolella entisten keisarillisten puistojen järviketju. '
+      + 'Pohjoisessa katuverkko tihenee hutong-kujien sokkeloksi, josta '
+      + 'nousevat Rumpu- ja kellotorni ja jonka läpi kulkee '
+      + 'Nanluoguxiangin kuja; koillisessa on Yonghe-temppeli. Etelässä '
+      + 'akselilla seisoo Zhengyangmenin portti ja kaakossa Taivaan '
+      + 'temppelin muurien ympäröimä puisto. Luoteessa 14 kilometrin '
+      + 'päässä ovat kesäpalatsit: Kunming-järvi rantoineen ja Vanhan '
+      + 'kesäpalatsin rauniopuisto. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa;
        * kaksi ensimmäistä ovat kainalokartan kohteet. */
@@ -6446,31 +6421,23 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 28.5985, etela: 28.588, lansi: 77.244, ita: 77.258 },
         x: 67.5, y: 63.75, leveys: 12.5, korkeus: 14.95, suunta: '7 km etelään' },
     ],
-    esittely: 'Delhi on rakennettu samalle Yamunan rannalle seitsemään '
-      + 'kertaan: perimätieto laskee seudulle seitsemän peräkkäistä '
-      + 'kaupunkia, joista legendaarisin on Mahabharatan Indraprastha '
-      + 'ja viimeisin keisari Shah Jahanin Shahjahanabad. Sen '
-      + 'muurikaupungin hän pystytti 1600-luvun puolivälissä: Punainen '
-      + 'linnoitus nousi joen törmälle vuosina 1638–1648, Jama Masjid '
-      + 'kaupungin korkeimmalle kohdalle ja Chandni Chowkin kauppakatu '
-      + 'niiden väliin. Vuoden 1857 kapinan jälkeen kaupunki siirtyi '
-      + 'Britannian kruunulle, ja 1911 sen eteläpuolelle alettiin '
-      + 'rakentaa New Delhiä, nykyisen Intian pääkaupunkia. '
-      + 'Muurikaupunki on silti yhä olemassa — se on Vanha Delhi, ja '
-      + 'juuri se on tällä kartalla.\n\n'
-      + 'Kartan itälaidassa erottuu Punaisen linnoituksen tumma '
-      + 'muurikehä ja sen takana Yamunan leveä uoma; linnoituksen '
-      + 'pohjoispuolella joen saarekkeella on Salimgarhin vanhempi '
-      + 'linnake. Länteen linnoituksesta lähtee Chandni Chowk suorana '
-      + 'viivana, ja sen molemmin puolin levittäytyy tiheä kujaverkko — '
-      + 'gali-kujat ovat kapeimmillaan parin metrin levyisiä, ja '
-      + 'kartalla ne piirtyvät hiusviivoina. Vasemmassa yläkulmassa '
-      + 'kaartuvat Delhi Junctionin ratapihan raiteet, ja ylälaidassa '
-      + 'kulkee katkonaisena tumma viiva: se on kaupunginmuurin '
-      + 'säilynyt pohjoiskaari. Oikean alakulman kainalossa on '
-      + 'Humayunin mausoleumi puutarhoineen seitsemän kilometrin '
-      + 'päässä etelässä. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, mutkien ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Vanha Delhi eli Shahjahanabad, keisari Shah '
+      + 'Jahanin 1600-luvun puolivälissä perustama muurikaupunki. Idässä '
+      + 'on Punainen linnoitus, joka nousi Yamunan törmälle 1638–1648, ja '
+      + 'sen pohjoispuolella joen saarekkeella vanhempi Salimgarhin '
+      + 'linnake. Linnoituksesta länteen vie Chandni Chowk, prinsessa '
+      + 'Jahanara Begumin vuonna 1650 piirtämä kauppakatu, jonka varrella '
+      + 'ovat Gurdwara Sis Ganj Sahib, kaupungintalo ja kadun päässä '
+      + 'Fatehpuri-moskeija; eteläpuolella kohoaa Jama Masjid. Luoteessa '
+      + 'on vuonna 1903 valmistunut Delhi Junctionin asema, ja etelässä '
+      + 'seitsemän kilometrin päässä Humayunin mausoleumi puutarhoineen. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Delhi Junction', lat: 28.661, lon: 77.2277 },

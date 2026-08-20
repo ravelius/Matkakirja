@@ -35,7 +35,8 @@
 // Mosul, Aleppo, Damaskos ja Luxor, erässä R4 Sanaa, Aden, Masqat
 // ja Tabriz, erässä R5 Riad, Doha, Kuwait ja Salalah ja erässä R6
 // Teheran ja Bagdad (saman erän Istanbul on europe-artikkelit.js:ssä
-// ja Kairo africa-artikkelit.js:ssä). Kappaleet ja boldit vaativat
+// ja Kairo africa-artikkelit.js:ssä) ja erässä R7 Tokio, Soul,
+// Shanghai, Peking, Delhi ja Bangkok. Kappaleet ja boldit vaativat
 // leipätekstin renderöijän — ks. erän loppuraportti.
 //
 // ERÄ R6 (20.8.2026) SAI HALLINNOLLISET JA VÄESTÖLUVUT en-Wikipedian
@@ -48,6 +49,14 @@
 // tarkistetuista lehtiteksteistä. Sisältölinjaus: Teheranista ei
 // kirjoiteta vuoden 1979 jälkeisiä kiistoja eikä Bagdadista
 // nykytilannetta — sota vain neutraalina historiana (1258).
+//
+// ERÄ R7 (20.8.2026) EI OTTANUT UUSIA LÄHTEITÄ: jokainen introväite
+// tulee kaupungin omista, jo tarkistetuista lehtiteksteistä
+// (kulttuuri-kategoriat.js:n nostot ja matkaoppaat,
+// nahtavyysjutut.js, maakartat.js) tai kaupungin omasta
+// teksti-kentästä. Sisältölinjaus: Kiinan kaupunkien introissa ei
+// nykypolitiikkaa, ja Soulin introssa ei sotaa, koska lehti ei sitä
+// kerro.
 //
 // ERÄ R4 (20.8.2026) SAI UUDET LUVUT en-Wikipedian raakateksteistä
 // (Sanaa, Aden, Muscat, Tabriz; haettu 20.8.2026): Sanaan asukasluku
@@ -1441,10 +1450,27 @@ export const ASIA_ARTIKKELIT = {
       + 'yli 5 000 metrissä.',
   },
   Peking: {
-    intro: 'Peking on Kiinan pääkaupunki ja yksi maailman vanhimmista '
-      + 'pääkaupungeista. Sen keskellä on Kielletty kaupunki: 980 '
-      + 'rakennusta muurin sisällä, jonne tavallinen ihminen ei päässyt '
-      + 'viiteensataan vuoteen.',
+    intro: 'Peking on Kiinan pääkaupunki ja lähes 22 miljoonan asukkaan '
+      + 'kaupunki Pohjois-Kiinan tasangon pohjoisreunalla vuorten '
+      + 'suojassa. Se on kantanut monta nimeä — Ji, Yanjing, Zhongdu ja '
+      + 'Dadu — kunnes Ming-dynastian Yongle-keisari antoi sille 1403 '
+      + 'nimen Beijing, pohjoinen pääkaupunki. Läntinen kirjoitusasu '
+      + 'Peking on peräisin jesuiitta Martino Martinin kartastosta '
+      + 'vuodelta 1655.'
+      + '\n\n'
+      + 'Yongle-keisari rakennutti myös **Kielletyn kaupungin**, joka '
+      + 'valmistui 1420 ja oli keisarien koti vuoteen 1924. Muurin ja '
+      + 'vallihaudan sisällä on 8 886 huonetta, ja se on maailman suurin '
+      + 'säilynyt puurakenteinen palatsikokonaisuus; nykyään se on '
+      + 'Palatsimuseo. Samaan aikaan valmistui Taivaan temppeli, jossa '
+      + 'keisari uhrasi vuosittain hyvän sadon puolesta.'
+      + '\n\n'
+      + 'Palatsin ympärille jää vanhaa kaupunkia: **hutong-kujia**, '
+      + 'joiden varrella on siheyuan-pihataloja. Ming-kauden '
+      + 'kaupunginmuuri purettiin 1965, ja metron ensimmäinen linja '
+      + 'rakennettiin sen perustusten päälle. Kaupungin pohjoispuolella '
+      + 'vuorten harjoilla kulkee Kiinan muuri, jonka lähin osuus '
+      + 'Badaling rakennettiin 1504.',
     teksti: 'Peking on Pohjois-Kiinan tasangolla, vuorten suojassa '
       + 'lännessä ja pohjoisessa. Nimi tarkoittaa pohjoista '
       + 'pääkaupunkia. Kaupunkiseudulla asuu yli kaksikymmentä '
@@ -1488,9 +1514,24 @@ export const ASIA_ARTIKKELIT = {
   },
   Shanghai: {
     intro: 'Shanghai on Kiinan suurin kaupunki ja maailman vilkkain '
-      + 'konttisatama. Joen toisella rannalla on 1920-luvun '
-      + 'eurooppalaisia pankkitaloja, toisella lasitorneja, joita ei '
-      + 'ollut vielä 1990.',
+      + 'konttisatama. Se on Jangtsen suistossa Itä-Kiinanmeren rannalla, '
+      + 'ja kaupunkiseudulla asuu noin 29 miljoonaa ihmistä. Nimi '
+      + 'tarkoittaa merenrantaa. Huangpu-joki jakaa kaupungin kahtia: '
+      + 'länsipuoli Puxi on vanha keskusta, itäpuoli Pudong uusi.'
+      + '\n\n'
+      + 'Vanhinta Shanghaita on kiinalainen vanhakaupunki, jota kiersi '
+      + 'vuonna 1553 merirosvoja vastaan rakennettu muuri; se purettiin '
+      + '1912 ja tilalle tuli kehäkatu. Muurin sisällä on '
+      + '**Yu-puutarha**, jonka rakentaminen alkoi 1559. Kaupunki '
+      + 'avattiin ulkomaankaupalle 1843, ja rantakadulle eli Bundille '
+      + 'nousi kauppahuoneiden ja pankkien rivi. Kortteleihin syntyi '
+      + '1860-luvulta alkaen shikumen: kivikehyksinen ovi ja sen takana '
+      + 'kujien varsille rakennetut rivitalot.'
+      + '\n\n'
+      + 'Pudongin puoli jokea oli vielä 1990 peltoa ja varastoja. Sen '
+      + 'kehittäminen aloitettiin samana vuonna, ja nyt siellä seisoo '
+      + '**Shanghain torni**, 632 metriä korkea ja Kiinan korkein '
+      + 'rakennus.',
     teksti: 'Shanghai on Jangtsen suistossa Itä-Kiinanmeren rannalla. '
       + 'Nimi tarkoittaa merenrantaa. Kaupungin halki virtaa '
       + 'Huangpu-joki, ja sen molemmat rannat näyttävät kahdelta eri '
@@ -1554,10 +1595,25 @@ export const ASIA_ARTIKKELIT = {
       + 'taidekokoelmasta.',
   },
   'Soul (kaupunki)': {
-    intro: 'Soul on Etelä-Korean pääkaupunki Han-joen varrella. '
-      + 'Palatsin portilla vaihdetaan vartio vanhoissa asuissa, ja '
-      + 'sadan metrin päässä metroasemalla näkyy junan saapumisaika '
-      + 'sekunnin tarkkuudella.',
+    intro: 'Soul on Etelä-Korean pääkaupunki Han-joen varrella vuorten '
+      + 'ympäröimässä laaksossa. Kaupungissa asuu yli yhdeksän miljoonaa '
+      + 'ihmistä ja kaupunkiseudulla noin puolet koko maan väestöstä. '
+      + 'Joki jakaa kaupungin kahtia: pohjoispuoli Gangbuk on vanha Soul, '
+      + 'eteläpuoli Gangnam on rakennettu pääosin 1970-luvun jälkeen.'
+      + '\n\n'
+      + 'Joseon-dynastia siirsi pääkaupunkinsa tänne vuonna 1394 ja '
+      + 'rakensi ensimmäisenä kolme asiaa: palatsin, esi-isien pyhäkön ja '
+      + 'kellotornin. Kaupunkia kiersi 18,2 kilometrin muuri, ja sen '
+      + 'kahdeksasta portista eteläinen **Sungnyemun** valmistui 1398 ja '
+      + 'seisoo yhä liikenteen keskellä. Suuria palatseja rakennettiin '
+      + 'viisi, ja niistä ensimmäinen ja tärkein on Gyeongbokgung, jonka '
+      + 'pääportin Gwanghwamunin edessä on kaupungin keskusaukio.'
+      + '\n\n'
+      + 'Vanha keskusta on yhä kävelymatkan mittainen: palatsien '
+      + 'ympärillä ovat Bukchonin puutalokortteli, antiikkikatu Insadong '
+      + 'ja vuonna 1905 perustettu Gwangjangin tori. Niiden eteläpuolella '
+      + 'virtaa **Cheonggyecheon**, puro joka peitettiin betonin ja '
+      + 'moottoritien alle ja kaivettiin esiin vuonna 2005.',
     teksti: 'Soul on Korean niemimaan luoteisosassa, vuorten '
       + 'ympäröimässä laaksossa. Han-joki halkaisee kaupungin, ja sen '
       + 'molemmin puolin nousee kerrostaloja. Kaupunkiseudulla asuu '
@@ -1577,10 +1633,28 @@ export const ASIA_ARTIKKELIT = {
       + 'kävelyreitiksi keskellä keskustaa.',
   },
   Tokio: {
-    intro: 'Tokio on maailman väkirikkain kaupunkialue. Shibuyan '
-      + 'risteyksen yli kävelee kerralla tuhansia ihmisiä joka '
-      + 'suuntaan, ja kadun kulman takana on pyhäkkö, jonka pihalla '
-      + 'ei kuulu mitään.',
+    intro: 'Tokio on Japanin pääkaupunki Honshun itärannikolla '
+      + 'Tokionlahden pohjukassa, ja sen kaupunkiseudulla asuu noin 37 '
+      + 'miljoonaa ihmistä, enemmän kuin millään muulla kaupunkiseudulla. '
+      + 'Seutu on maanjäristysherkkää, ja rakennusmääräykset ovat '
+      + 'maailman tiukimpia. Kaupunki jakautuu kymmeniin kaupunginosiin, '
+      + 'jotka **Yamanote-rengasrata** sitoo yhteen kolmenkymmenen aseman '
+      + 'lenkillään.'
+      + '\n\n'
+      + 'Kaupunki kantoi nimeä Edo ja oli vuodesta 1603 shogunien '
+      + 'hallintokeskus. Keisari muutti sinne 1868, ja nimeksi tuli '
+      + 'Tokio, itäinen pääkaupunki. Vuoden 1923 maanjäristys ja toisen '
+      + 'maailmansodan pommitukset tuhosivat kaupungin kahdesti, ja '
+      + 'kummallakin kerralla se rakennettiin uudelleen. '
+      + 'Shinkansen-luotijuna aloitti liikennöinnin Tokion ja Osakan '
+      + 'välillä 1964.'
+      + '\n\n'
+      + 'Vanhinta Tokiota on rengasradan pohjois- ja itäpuolelle jäävä '
+      + 'shitamachi eli alakaupunki: Uenon puisto, maan vanhin eläintarha '
+      + 'vuodelta 1882 ja Kappabashi-dōri, jonka liikkeet myyvät '
+      + 'ravintoloille näyteikkunoiden muoviruokaa. Asakusassa seisoo '
+      + 'kaupungin vanhin temppeli **Sensō-ji**, jonka kävijämäärä on '
+      + 'suurempi kuin minkään muun pyhäkön maailmassa.',
     teksti: 'Tokio on Honshun saaren itärannikolla Tokionlahden '
       + 'pohjukassa. Kaupunkiseudulla asuu noin 37 miljoonaa ihmistä. '
       + 'Alue on maanjäristysherkkä, ja rakennusmääräykset ovat '
@@ -1644,9 +1718,27 @@ export const ASIA_ARTIKKELIT = {
       + 'eteenpäin — liikenne kiertää, jos kulkija ei pysähdy.',
   },
   Bangkok: {
-    intro: 'Bangkok on Thaimaan pääkaupunki Chao Phraya -joen varrella. '
-      + 'Sen seremonialliseen nimeen kuuluu 168 kirjainta, ja se on '
-      + 'maailman pisin virallinen paikannimi.',
+    intro: 'Bangkok on Thaimaan pääkaupunki ja maan selvästi suurin '
+      + 'kaupunki: asukkaita on runsaat yhdeksän miljoonaa. Se on Chao '
+      + 'Phraya -joen suistotasangolla, jonka keskikorkeus on vain '
+      + 'puolitoista metriä merenpinnasta, ja joki laskee Siaminlahteen '
+      + 'noin 25 kilometriä keskustan eteläpuolella. Thaimaalaiset '
+      + 'kutsuvat kaupunkia nimellä Krung Thep Maha Nakhon; juhlallinen '
+      + 'täysi nimi on 168 kirjainta pitkä ja maailman pisin paikannimi.'
+      + '\n\n'
+      + 'Kun vanha pääkaupunki Ayutthaya tuhoutui 1767, kuningas Taksin '
+      + 'perusti uuden pääkaupungin Thonburiin joen länsirannalle. Vuonna '
+      + '1782 Rama I siirsi sen itärannalle ja kaivatti kanavat, jotka '
+      + 'tekivät **Rattanakosinista** keinotekoisen saaren; samana '
+      + 'keväänä pystytettiin kaupunginpylväs ja aloitettiin Suurpalatsin '
+      + 'rakentaminen.'
+      + '\n\n'
+      + 'Kaupunki eli pitkään veden varassa: kanavat eli khlongit olivat '
+      + 'sen katuja, ja 1800-luvun matkustajat kutsuivat sitä idän '
+      + 'Venetsiaksi. Ensimmäinen länsimaiseen tapaan rakennettu katu '
+      + 'valmistui vasta 1864, ja moni kanava on sittemmin täytetty '
+      + 'kaduksi. Thaimaa on **ainoa Kaakkois-Aasian maa**, jota ei '
+      + 'koskaan alistettu siirtomaaksi.',
     teksti: 'Bangkok on joen suistossa lähellä Thaimaanlahtea. Maa on '
       + 'matalaa ja pehmeää, ja kaupunki vajoaa hitaasti. Joki on '
       + 'edelleen liikenneväylä: pitkähäntäveneet, lautat ja proomut '
@@ -1797,9 +1889,25 @@ export const ASIA_ARTIKKELIT = {
       + 'Boudhanathin stupa on yksi maailman suurimmista.',
   },
   Delhi: {
-    intro: 'Delhissä on seitsemän vanhaa kaupunkia päällekkäin ja '
-      + 'vierekkäin. Yhden niistä keskellä seisoo rautapylväs, joka on '
-      + 'ollut ulkona 1 600 vuotta eikä ole ruostunut.',
+    intro: 'Delhi on Pohjois-Intiassa Yamuna-joen varrella, ja se on yksi '
+      + 'maailman suurimmista kaupunkialueista. Kaupungin halki kulkee '
+      + 'Delhi Ridge, Aravalli-vuoriston metsäinen jatke. Perimätieto '
+      + 'laskee samalle rannalle seitsemän peräkkäistä kaupunkia, ja '
+      + 'jokainen valtakunta rakensi omansa vanhojen viereen.'
+      + '\n\n'
+      + 'Etelässä seisoo **Qutb Minar**, punaisesta hiekkakivestä '
+      + 'muurattu voittotorni, jonka rakentaminen alkoi 1199; 72,5 metriä '
+      + 'korkeana se on yhä maailman korkein tiiliminareetti. Sen '
+      + 'vieressä on nelisenmetrinen rautapylväs 400-luvulta, joka ei ole '
+      + 'ruostunut. Mughal-keisari Shah Jahan siirsi pääkaupunkinsa '
+      + 'Agrasta tänne ja rakennutti muurikaupungin Shahjahanabadin: '
+      + '**Punainen linnoitus** valmistui 1648, Jama Masjid 1656 ja '
+      + 'niiden väliin Chandni Chowkin kauppakatu.'
+      + '\n\n'
+      + 'Muurikaupunki on nykyään Vanha Delhi kujineen ja tukkutoreineen. '
+      + 'Sen eteläpuolelle alettiin rakentaa New Delhiä vuoden 1911 '
+      + 'jälkeen, ja Edwin Lutyensin ja Herbert Bakerin hallintokaupunki '
+      + 'vihittiin 1931; se on nykyään Intian pääkaupunki.',
     teksti: 'Delhi on Pohjois-Intiassa Yamuna-joen varrella. Kaupunki '
       + 'on Intian pääkaupunkialue, ja siellä asuu yli '
       + 'kolmekymmentä miljoonaa ihmistä. Kesät ovat hyvin kuumia ja '

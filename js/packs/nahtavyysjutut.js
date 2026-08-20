@@ -15750,6 +15750,12 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * tämän kaupungin nähtävyysjuttujen kuvatekstit on tiivistetty
+   * yhteen virkkeeseen. Juttujen tekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   tokio: {
     'Kaminarimon': {
       aika: '941',
@@ -15782,11 +15788,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kaminarimon 2020-04-19.jpg',
-          selite: 'Kaminarimonin etupuoli aamuvalossa: harmaan tiilikaton '
-            + 'alla punaisten pylväiden välissä riippuu punainen lyhty, '
-            + 'jossa on portin nimi mustin merkein ja alareunassa pieni '
-            + 'kultainen kilpi. Syvennyksissä seisovat Raijin rumpukehineen '
-            + 'ja Fūjin tuulisäkkeineen.',
+          selite: 'Kaminarimonin etupuoli aamuvalossa: punaisten '
+            + 'pylväiden välissä riippuu punainen lyhty portin nimi '
+            + 'mustin merkein, ja syvennyksissä seisovat Raijin '
+            + 'rumpukehineen ja Fūjin tuulisäkkeineen.',
           lahde: 'Asanagi, Wikimedia Commons (CC0)',
         },
         {
@@ -15794,8 +15799,7 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Lyhdyn pohja alhaalta: kullanvärisen metallikehyksen '
             + 'sisällä kiertyy puuhun veistetty lohikäärme '
             + 'pilvikiehkuroiden keskellä, suu auki ja punainen kieli '
-            + 'ulkona. Suomuinen ruumis, kynsijalka ja punareunaiset '
-            + 'liekinmuotoiset evät erottuvat reliefissä.',
+            + 'ulkona.',
           lahde: 'Puchku, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -15833,28 +15837,23 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Sensoji 2023.jpg',
           selite: 'Sensō-jin päähalli edestä: leveän harmaan tiilikaton '
-            + 'keskellä kaartuu jyrkkä päätykolmio, ja sen alla ovat '
-            + 'punaiset pilarit ja punainen kaide. Keskiaukossa riippuu '
-            + 'punainen lyhty mustin kirjoitusmerkein, ja portaiden edessä '
-            + 'nousee savua suitsutusastiasta.',
+            + 'alla ovat punaiset pilarit ja kaide, keskiaukossa riippuu '
+            + 'punainen lyhty mustin kirjoitusmerkein ja portaiden edessä '
+            + 'savuaa suitsutusastia.',
           lahde: 'Akonnchiroll, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Hozomon on an overcast day dllu.jpg',
           selite: 'Hōzōmon edestä pilvisellä säällä: kaksikerroksinen '
-            + 'portti, kaksi harmaata tiilikattoa, punaiset pilarit ja '
-            + 'valkoiset seinäpinnat. Keskellä riippuu punamusta lyhty ja '
-            + 'sen kummallakin puolella metallilyhty, uloimmissa aukoissa '
-            + 'seisovat Niō-vartijapatsaat.',
+            + 'portti punaisine pilareineen, keskellä punamusta lyhty ja '
+            + 'uloimmissa aukoissa Niō-vartijapatsaat.',
           lahde: 'Daniel L. Lu (user:dllu), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Nakamise in Asakusa, Tokyo.jpg',
           selite: 'Nakamise-dōri päiväsaikaan: rivi vihreäkattoisia '
-            + 'kauppoja, joiden räystäillä on pyöreitä valkoisia lamppuja, '
-            + 'punaisia kylttejä ja tekovihreää lehvästöä. Kujan päässä '
-            + 'kohoaa punainen Hōzōmon harmaine kattoineen, ja kujalla '
-            + 'kulkee väkeä.',
+            + 'kauppoja punaisine kyltteineen, ja kujan päässä kohoaa '
+            + 'punainen Hōzōmon harmaine kattoineen.',
           lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15892,19 +15891,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kaneiji 2012.JPG',
-          selite: 'Kan\'ei-jin päähalli Konponchūdō: harmaa tiilikatto '
-            + 'kaartuu kahtena kerroksena, ja ylemmän räystään mustalla '
-            + 'laudalla on kolme kullanväristä vaakunaa. Tummaksi petsatun '
-            + 'puurungon pylväiden välissä on valkoisia paperiseinäruutuja '
-            + 'ja keskellä lasiovet.',
+          selite: 'Kan\'ei-jin päähalli Konponchūdō, jonka harmaa '
+            + 'tiilikatto kaartuu kahtena kerroksena ja jonka ylemmän '
+            + 'räystään mustalla laudalla on kolme kullanväristä '
+            + 'vaakunaa.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: '20181124 Ueno Park pagoda.jpg',
           selite: 'Kan\'ei-jin viisikerroksinen pagodi: viisi kaartuvaa '
-            + 'tiilikattoa päällekkäin, ja ylimmästä nousee vihertäväksi '
-            + 'patinoitunut metallihuippu renkaineen. Neljä ylintä kerrosta '
-            + 'ovat tummanruskeaa puuta, alin kirkkaan punainen kullalla '
+            + 'tiilikattoa päällekkäin, neljä ylintä kerrosta '
+            + 'tummanruskeaa puuta ja alin kirkkaan punainen kullalla '
             + 'helattuine kaksoisovineen.',
           lahde: 'Balon Greyjoy, Wikimedia Commons (CC0)',
         },
@@ -15944,18 +15941,15 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Tokyo National Museum, Honkan 2010.jpg',
           selite: 'Honkan talvipäivänä: vaalean kivijulkisivun päällä on '
-            + 'tummanruskea tiilikatto ylöspäin kaartuvine räystäineen ja '
-            + 'sisäänkäynnin kohdalla harjakattoinen katos. Julkisivulla '
-            + 'riippuu kaksi pystybanneria, ja rakennus heijastuu '
-            + 'suorakaiteen muotoiseen altaaseen.',
+            + 'tummanruskea tiilikatto ylöspäin kaartuvine räystäineen, '
+            + 'ja rakennus heijastuu suorakaiteen muotoiseen altaaseen.',
           lahde: 'Wiiii, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Hyokeikan - Tokyo National Museum.jpg',
           selite: 'Hyōkeikan edestä: valkoisen kivijulkisivun keskeltä '
             + 'nousee vihreäksi patinoitunut kupoli pylväikköineen, ja '
-            + 'kummassakin päädyssä on pienempi vihreä kupoli. Pääoven '
-            + 'pylväsaulan portaiden molemmin puolin istuu kivijalustalla '
+            + 'pääoven portaiden molemmin puolin istuu kivijalustalla '
             + 'pronssileijona.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -15992,19 +15986,15 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sakura (cherry trees) blooming in Ueno Park in Tokyo, Japan 20140404023022 (26290773175).jpg',
-          selite: 'Uenon puiston kirsikkakuja täydessä kukassa: oksat '
-            + 'kaartuvat polun yli molemmilta puolilta, ja kukinta on '
-            + 'vaaleanpunaista ja valkoista. Polkua täyttää tiivis '
-            + 'väkijoukko, ja puiden alla riippuu rivi pieniä lyhtyjä ja '
-            + 'pystysuoria viirejä.',
+          selite: 'Uenon puiston kirsikkakuja täydessä kukassa: '
+            + 'vaaleanpunaiset ja valkoiset oksat kaartuvat polun yli '
+            + 'molemmilta puolilta, ja polkua täyttää tiivis väkijoukko.',
           lahde: 'Yiannis Theologos Michellis, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Shinobazu pond Tokyo 2017.jpg',
           selite: 'Shinobazun lampi kesällä: koko vesipinta on yhtenäisen '
-            + 'lootuslehtimaton peitossa, ja lehtien seasta erottuu kaksi '
-            + 'vaaleanpunaista kukkaa. Lammen poikki kulkee kävelytie '
-            + 'mustine metallikaiteineen, ja takarannan puiden takana '
+            + 'lootuslehtimaton peitossa, ja takarannan puiden takana '
             + 'nousee rivi korkeita asuintorneja.',
           lahde: 'Alexandar Vujadinovic, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -16044,27 +16034,24 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Alley - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08717.JPG',
           selite: 'Museoon rakennettu alakaupungin kuja: kapea '
             + 'kivilaattapolku kulkee kahden tummaksi patinoituneen '
-            + 'puutalon välissä; toisessa on liukuovia ja toisen seinällä '
-            + 'kuivuu narulla hedelmänpuolikkaita. Kuja päättyy '
-            + 'mustavalkoiseen valokuvaan samanlaisesta kujasta.',
+            + 'puutalon välissä ja päättyy mustavalkoiseen valokuvaan '
+            + 'samanlaisesta kujasta.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Coppersmith - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08719.JPG',
-          selite: 'Vaskisepän työtila ja asunto samassa huoneessa: '
-            + 'kivireunaisen ahjon edessä on puutelineillä kolme kuparista '
-            + 'vesipannua puisine kantokahvoineen, ja seinätangossa riippuu '
-            + 'toistakymmentä talttaa ja puikkoa. Asuinpuolella on '
-            + 'tatamilattia, puulipasto ja shōji-ovi.',
+          selite: 'Vaskisepän työtila ja asunto samassa huoneessa: ahjon '
+            + 'edessä on kolme kuparista vesipannua puutelineillä ja '
+            + 'seinätangossa toistakymmentä talttaa, ja asuinpuolella on '
+            + 'tatamilattia ja shōji-ovi.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Corner - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08740.JPG',
           selite: 'Museoon siirretty yleisen kylpylän sisäänkäynti: '
-            + 'puukorokkeella seisoo korkea puinen vahtikoju, jonka '
-            + 'yläpuolella on kaksi lasitettua kilpeä, toisessa keltainen '
-            + 'kolmihaarainen höyrymerkki. Takaseinän peittää '
-            + 'kaksikerroksinen rivistö puisia kenkälokeroita.',
+            + 'puukorokkeella seisoo korkea puinen vahtikoju lasitettuine '
+            + 'kilpineen, ja takaseinän peittää kaksikerroksinen rivistö '
+            + 'puisia kenkälokeroita.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
       ],
@@ -16110,20 +16097,17 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Ueno Tōshō-gū 1.jpg',
           selite: 'Pyhäkön kullattu karamon-portti kuparinvihreän '
-            + 'tiilikaton alla. Keskellä kaartuu koristeellinen '
-            + 'päätykaari, jonka alla riippuu valkoisia paperisuikaleita '
-            + 'köydessä, ja punaisiksi maalattujen seinien pinnat ovat '
-            + 'täynnä kullattuja kaiverruksia. Portin edessä seisoo '
-            + 'joukko kävijöitä.',
+            + 'tiilikaton alla, punaisiksi maalattujen seinien pinnat '
+            + 'täynnä kullattuja kaiverruksia ja päätykaaren alla '
+            + 'köydessä valkoisia paperisuikaleita.',
           lahde: 'Fraxinus2, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tôshôgû-schrijn in het Ueno-park in Tokyo Ueno Tôshôgû (titel op object), RP-F-F01177-G.jpg',
-          selite: 'Käsin väritetty valokuva samasta portista 1800-luvulta. '
-            + 'Kivetty käytävä johtaa suoraan portille, kaksi '
-            + 'kimonoon pukeutunutta hahmoa seisoo käytävän laidoilla '
-            + 'sateenvarjoineen, ja taustan tummien havupuiden seassa '
-            + 'kukkii vaaleanpunainen kirsikka.',
+          selite: 'Käsin väritetty valokuva samasta portista '
+            + '1800-luvulta: kivetty käytävä johtaa suoraan portille, ja '
+            + 'sen laidoilla seisoo kaksi kimonoon pukeutunutta hahmoa '
+            + 'sateenvarjoineen.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],
@@ -16157,12 +16141,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ueno Station Main Building.jpg',
-          selite: 'Uenon aseman pääjulkisivu. Vaalean betonirakennuksen '
-            + 'keskellä on rivi korkeita ikkunoita ja niiden yläpuolella '
-            + 'pyöreä kello; katolla lukee vihrein kirjaimin aseman nimi '
-            + 'sekä japaniksi että latinalaisin aakkosin. Alhaalla '
-            + 'kulkee matala sisäänkäyntikatos ja edustalla keltainen '
-            + 'taksi.',
+          selite: 'Uenon aseman pääjulkisivu: vaalean betonirakennuksen '
+            + 'keskellä on rivi korkeita ikkunoita ja pyöreä kello, ja '
+            + 'katolla lukee vihrein kirjaimin aseman nimi sekä japaniksi '
+            + 'että latinalaisin aakkosin.',
           lahde: 'Sushiya, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -16197,12 +16179,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Asakusa Hanayashiki -03.jpg',
-          selite: 'Hanayashiki ylhäältä kuvattuna. Sinivalkoinen '
-            + 'vuoristorata kiertää tiiviin tontin päästä päähän ja '
-            + 'kulkee talojen kattojen yli; sisään mahtuvat vielä '
-            + 'karuselli, raidallinen sirkusteltta ja pinkki '
-            + 'kuppikaruselli. Ympärillä nousevat asuintalot aivan '
-            + 'aidan viereen.',
+          selite: 'Hanayashiki ylhäältä kuvattuna: sinivalkoinen '
+            + 'vuoristorata kiertää tiiviin tontin päästä päähän talojen '
+            + 'kattojen yli, ja ympärillä nousevat asuintalot aivan aidan '
+            + 'viereen.',
           lahde: 'Aimaimyi, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -16243,12 +16223,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kyu Iwasaki Tei Garden (180139793).jpeg',
-          selite: 'Iwasakien länsimainen päärakennus nurmikentän takaa. '
-            + 'Valkoiseksi maalatun puutalon eteläsivulla on '
-            + 'kaksikerroksinen pylväskuisti kaidekoristeineen, oikealla '
-            + 'pullistuu monikulmainen lasiveranta, ja katonharjalla on '
-            + 'rivi teräviä koristepiikkejä. Vasemmalla näkyy '
-            + 'japanilaisen siiven matala katto.',
+          selite: 'Iwasakien länsimainen päärakennus nurmikentän takaa: '
+            + 'valkoiseksi maalatun puutalon eteläsivulla on '
+            + 'kaksikerroksinen pylväskuisti ja oikealla pullistuu '
+            + 'monikulmainen lasiveranta.',
           lahde: 'Takuya Matsuyama, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -16271,6 +16249,12 @@ export const NAHTAVYYSJUTUT = {
    *
    * Kaksi jutuista nojaa 1906 otettuun valokuvasarjaan — se on
    * lähinnä isoisän aikakautta, mitä Soulista on vapaana saatavilla.
+   */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * tämän kaupungin nähtävyysjuttujen kuvatekstit on tiivistetty
+   * yhteen virkkeeseen. Juttujen tekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
    */
   soul: {
     Gyeongbokgung: {
@@ -16304,22 +16288,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Front view of the Imperial Throne Hall Geunjeongjeon at Gyeongbokgung Palace with blue sky in Seoul.jpg',
-          selite: 'Valtaistuinsali Geunjeongjeon suoraan edestä: '
-            + 'kaksikerroksinen harmaa tiilikatto kaartuvine räystäineen, '
-            + 'sen alla vihreä-punainen koristemaalaus ja kaksi '
-            + 'kivikaiteista terassia. Tyhjällä laattapihalla seisoo '
-            + 'kahdessa rivissä matalia kivipaaluja, jotka merkitsivät '
-            + 'virkamiesten arvojärjestyksen. Takana kohoaa vuori.',
+          selite: 'Valtaistuinsali Geunjeongjeon edestä: kaksikerroksisen '
+            + 'harmaan tiilikaton alla on kaksi kivikaiteista terassia, '
+            + 'ja laattapihalla seisoo kahdessa rivissä matalia '
+            + 'kivipaaluja, jotka merkitsivät virkamiesten '
+            + 'arvojärjestyksen.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gyeongbokgung Gyeonghoeru 1906.png',
-          selite: 'Gyeonghoerun juhlapaviljonki vuonna 1906: kaksikerroksinen '
-            + 'puurakennus seisoo neliskulmaisen lammen rannassa '
-            + 'kymmenien kivipylväiden varassa, ja etualan vesi on '
-            + 'kokonaan lootuksenlehtien peitossa. Yläkerran kaiteen '
-            + 'takana ja pylväiden välissä näkyy vaaleisiin pukuihin '
-            + 'pukeutuneita ihmisiä.',
+          selite: 'Gyeonghoerun juhlapaviljonki vuonna 1906: '
+            + 'kaksikerroksinen puurakennus seisoo neliskulmaisen lammen '
+            + 'rannassa kymmenien kivipylväiden varassa, ja etualan vesi '
+            + 'on kokonaan lootuksenlehtien peitossa.',
           lahde: 'Asahi Shimbun (朝日新聞社), Wikimedia Commons (PD)',
         },
       ],
@@ -16359,21 +16340,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bukchon Hanok Village 01.jpg',
-          selite: 'Bukchonin kuja alamäkeen: molemmin puolin hanok-talojen '
-            + 'harmaat tiilikatot ja kaartuvat räystäät, oikealla valkoinen '
-            + 'kivimuuri, jonka yläreunassa on punaisella maalattu '
-            + 'kulmikas meanderikuvio. Kujan päässä avautuu nykyinen Soul: '
-            + 'lasitorneja utuisessa valossa ja niiden takana '
-            + 'Namsan-vuorella seisova torni.',
+          selite: 'Bukchonin kuja alamäkeen hanok-talojen harmaiden '
+            + 'tiilikattojen ja kaartuvien räystäiden välissä, ja kujan '
+            + 'päässä avautuu nykyinen Soul lasitorneineen ja '
+            + 'Namsan-vuorella seisovine torneineen.',
           lahde: 'Bgag, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Bukchon Hanok Village 05.jpg',
           selite: 'Hanok-talon portti läheltä: leveä kaksiosainen puuovi '
-            + 'rautarenkaineen, sen yllä kaartuva tiilikatto ja '
-            + 'ristikkoikkunoita. Portin molemmin puolin jatkuu muuri, '
-            + 'jonka vaaleaan kivipintaan on ladottu punaisia '
-            + 'kulmikkaita kuvioita. Katukyltissä lukee numero 49.',
+            + 'rautarenkaineen ja sen yllä kaartuva tiilikatto, ja portin '
+            + 'molemmin puolin jatkuu muuri, jonka kivipintaan on ladottu '
+            + 'punaisia kulmikkaita kuvioita.',
           lahde: 'Bgag, Wikimedia Commons (CC0)',
         },
       ],
@@ -16411,22 +16389,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Changdeok Palace, Seoul.11.jpg',
-          selite: 'Valtaistuinsali Injeongjeon edestä kirkkaassa '
-            + 'auringonpaisteessa: kaksikerroksinen harmaa tiilikatto, '
-            + 'jonka harjalla on valkoinen raita, sen alla vihreä-punainen '
-            + 'koristemaalaus ja rivi valkoisia ovipaneeleita. Edessä '
-            + 'nousee leveä kiviterassi, ja tyhjällä laattapihalla seisoo '
-            + 'kahdessa rivissä matalia kivipaaluja.',
+          selite: 'Valtaistuinsali Injeongjeon edestä auringonpaisteessa: '
+            + 'kaksikerroksisen harmaan tiilikaton alla on rivi valkoisia '
+            + 'ovipaneeleita, ja edessä nousevan kiviterassin alla '
+            + 'laattapihalla seisoo kahdessa rivissä matalia kivipaaluja.',
           lahde: 'Rtflakfizer, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Changdeokgung, Seoul - Changdeokgung3136.jpg',
           selite: 'Buyongji-lampi salaisessa puutarhassa: vasemmalla '
             + 'seisoo pieni paviljonki kivipylväiden varassa osittain '
-            + 'veden päällä, keskellä lammessa on pyöreä kivireunainen '
-            + 'saari, jolla kasvaa mänty ja pensaita, ja oikealla '
-            + 'kohoaa toinen paviljonki portteineen. Vesi on '
-            + 'vihertävä ja heijastaa rakennukset.',
+            + 'veden päällä, keskellä on pyöreä kivireunainen saari '
+            + 'mäntyineen, ja vesi heijastaa rakennukset.',
           lahde: 'lumoplank, Wikimedia Commons (CC0)',
         },
       ],
@@ -16468,9 +16442,7 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Jeongjeon-sali viistosti: hyvin pitkä matala rakennus '
             + 'katoaa perspektiiviin, punaisia pylväitä ja tummia '
             + 'kaksoisovia rivi toisensa jälkeen yhtenäisen harmaan '
-            + 'tiilikaton alla. Rakennus lepää korkealla kivijalustalla, '
-            + 'jolle nousee muutama porras, ja edessä on karkeasti '
-            + 'ladottu laattapiha.',
+            + 'tiilikaton alla korkealla kivijalustalla.',
           lahde: 'Daderot, Wikimedia Commons (PD)',
         },
       ],
@@ -16505,20 +16477,16 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Pagoda 1906.png',
           selite: 'Puisto vuonna 1906, pian perustamisensa jälkeen: '
-            + 'kymmenkerroksinen vaalea kivipagodi kohoaa keskellä ja '
-            + 'sen vieressä on tiilikattoinen paviljonki. Etualalla '
-            + 'kulkee soratie nuorten istutusten välissä, tiellä '
-            + 'kävelee vaaleisiin pukuihin pukeutuneita miehiä, ja '
-            + 'taustalla näkyy loivia vuoria.',
+            + 'kymmenkerroksinen vaalea kivipagodi kohoaa keskellä, sen '
+            + 'vieressä on tiilikattoinen paviljonki, ja soratiellä '
+            + 'kävelee vaaleisiin pukuihin pukeutuneita miehiä.',
           lahde: 'Asahi Shimbun (朝日新聞社), Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Tapgol Park, Seoul.jpg',
           selite: 'Puiston paviljonki sateella: kuusikulmainen '
             + 'punapylväinen rakennus harmaine tiilikattoineen seisoo '
-            + 'matalalla kiviportaikolla, ja portailla istuu rivi '
-            + 'ihmisiä. Ympärillä on märkä asfalttiaukio, isoja mäntyjä '
-            + 'ja niiden takana kerrostaloja.',
+            + 'matalalla kiviportaikolla, jolla istuu rivi ihmisiä.',
           lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16554,10 +16522,8 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Bosingak, Seoul.jpg',
           selite: 'Kellopaviljonki lännestä nähtynä: punaisten pylväiden '
             + 'varaan nostettu avoin yläkerta punaisine kaiteineen, sen '
-            + 'yllä leveä harmaa tiilikatto voimakkaasti kaartuvine '
-            + 'kulmineen ja räystään alla vihreä-punainen koristemaalaus. '
-            + 'Etuseinässä on kultakirjaiminen nimikilpi, ja rakennusta '
-            + 'kiertää matala kivikaide nurmikentän laidalla.',
+            + 'yllä leveä harmaa tiilikatto kaartuvine kulmineen ja '
+            + 'etuseinässä kultakirjaiminen nimikilpi.',
           lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16601,13 +16567,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gwanghwamun 2012.jpg',
-          selite: 'Gwanghwamun vinosti alhaalta. Vaalean kivimuurin '
-            + 'kolmen holvikaaren yllä lepää puinen porttitorni, jonka '
-            + 'räystään alusta on maalattu tiheään vihreällä, '
-            + 'punaisella ja sinisellä, ja keskellä riippuu musta '
-            + 'nimikilpi kultaisin merkein. Holvien edessä seisoo '
-            + 'vartiosto sinisissä, punaisissa ja keltaisissa puvuissa '
-            + 'lippuineen.',
+          selite: 'Gwanghwamun vinosti alhaalta: vaalean kivimuurin '
+            + 'kolmen holvikaaren yllä lepää puinen porttitorni tiheään '
+            + 'maalattuine räystäineen, ja holvien edessä seisoo '
+            + 'vartiosto puvuissaan lippuineen.',
           lahde: 'Komatta, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -16644,12 +16607,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2012-05-11 Insadong.jpg',
-          selite: 'Insadongin pääkatu iltapäivällä. Kadun yllä roikkuu '
+          selite: 'Insadongin pääkatu iltapäivällä: kadun yllä roikkuu '
             + 'rivi värikkäitä paperilyhtyjä puiden oksien välissä, '
-            + 'liikkeiden kylttejä on seinillä päällekkäin, ja '
-            + 'kivetyllä kadulla kävelee ihmisiä puvuissa ja '
-            + 'ostoskasseineen. Vasemmassa laidassa on katukoju '
-            + 'aurinkovarjon alla.',
+            + 'liikkeiden kylttejä on seinillä päällekkäin, ja kivetyllä '
+            + 'kadulla kävelee ihmisiä.',
           lahde: 'Mario Sánchez Prada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -16687,12 +16648,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "Jogye Temple near Buddha's birthday, Seoul.jpg",
-          selite: 'Temppelin piha lootuslyhtyjen alla. Tuhannet '
-            + 'punaiset, keltaiset, vihreät ja siniset lyhdyt on '
-            + 'ripustettu tiiviiksi katoksi koko pihan yli, ja niiden '
-            + 'läpi siivilöityvä valo täplittää hiekkaa. Keskellä '
-            + 'kasvaa vanha kaksihaarainen puu, ja takana näkyy '
-            + 'päärakennuksen kirjavaksi maalattu julkisivu.',
+          selite: 'Temppelin piha lootuslyhtyjen alla: tuhannet punaiset, '
+            + 'keltaiset, vihreät ja siniset lyhdyt on ripustettu '
+            + 'tiiviiksi katoksi koko pihan yli, ja keskellä kasvaa vanha '
+            + 'kaksihaarainen puu.',
           lahde: 'Rtflakfizer, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16715,6 +16674,12 @@ export const NAHTAVYYSJUTUT = {
    * Kaupungit). Waibaidun sillan jutussa on Lai Afongin valokuva
    * juuri siitä puusillasta, joka rakennettiin 1873 — isoisän
    * matkan vuonna.
+   */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * tämän kaupungin nähtävyysjuttujen kuvatekstit on tiivistetty
+   * yhteen virkkeeseen. Juttujen tekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
    */
   shanghai: {
     Bund: {
@@ -16754,10 +16719,8 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Shanghai The Bund (22219109059).jpg',
           selite: 'Bundin julkisivurivi päivänvalossa: harmaita '
             + 'kivijulkisivuja peräkkäin, keskellä kellotornillinen '
-            + 'kauppahuone jonka huipulla on ohut salko, oikealla '
-            + 'vaaleampi talo jonka katolla on koristeelliset '
-            + 'huippukaaret. Kattojen tangoissa liehuu punaisia lippuja, '
-            + 'ja taustalla kohoaa lasinen nykytorni.',
+            + 'kauppahuone ja oikealla vaaleampi talo, jonka katolla on '
+            + 'koristeelliset huippukaaret.',
           lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
         },
       ],
@@ -16796,18 +16759,15 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Lai Afongin valokuva 1800-luvulta: puron yli kaartuu '
             + 'kyttyräselkäinen puusilta kaiteineen, vedessä on rivi '
             + 'kattoineen varustettuja jokiveneitä, ja vastarannalla '
-            + 'seisoo matalia vaaleita siirtomaataloja tummine '
-            + 'ikkunaluukkuineen. Etualalla on puurivi ja valkoinen '
-            + 'aita.',
+            + 'seisoo matalia vaaleita taloja.',
           lahde: 'Lai Afong, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Pont Waibaidu (1).jpg',
           selite: 'Nykyinen terässilta illalla punaiseksi valaistuna: '
-            + 'ristikkokaari nousee kuvan vasemmasta laidasta '
-            + 'keskelle kyttyräksi ja laskeutuu vastarannalle. Takana '
-            + 'näkyy tumma tornitalo ja oikealla valaistu vanha '
-            + 'kulmatalo kupolitornineen. Vesi heijastaa valot.',
+            + 'ristikkokaari nousee kuvan vasemmasta laidasta keskelle '
+            + 'kyttyräksi ja laskeutuu vastarannalle, ja vesi heijastaa '
+            + 'valot.',
           lahde: 'Guerinf, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16848,11 +16808,9 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Sassoon House 20250501.jpg',
           selite: 'Sassoonin talo kadunkulmasta alaviistosta: kymmenen '
-            + 'kerrosta vaaleaa graniittia, pystysuorat ikkunanauhat ja '
-            + 'porrastuvat ylimmät kerrokset, ja huipulla jyrkkä, '
-            + 'vihertäväksi hapettunut kuparipyramidi. Katutasossa on '
-            + 'rivi korkeita kaari-ikkunoita, ja kadulla kulkee '
-            + 'ihmisiä.',
+            + 'kerrosta vaaleaa graniittia pystysuorine ikkunanauhoineen '
+            + 'ja huipulla jyrkkä, vihertäväksi hapettunut '
+            + 'kuparipyramidi.',
           lahde: 'Suicasmo, Wikimedia Commons (CC0)',
         },
       ],
@@ -16895,20 +16853,17 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: '20090510 Shanghai Yuyan 6573.jpg',
           selite: 'Yu-puutarhan lampi: vasemmalla kulkee katettu '
-            + 'pylväskäytävä harmaine tiilikattoineen ja siitä lähtee '
-            + 'matala kivisilta veden yli, oikealla kohoaa '
-            + 'kaksikerroksinen tummanpunainen paviljonki, jonka '
-            + 'räystäänkulmat kaartuvat jyrkästi ylös. Rannassa on '
-            + 'valkoisia kalkkikivilohkareita ja vesi on vihreää.',
+            + 'pylväskäytävä ja siitä lähtee matala kivisilta veden yli, '
+            + 'ja oikealla kohoaa kaksikerroksinen tummanpunainen '
+            + 'paviljonki jyrkästi kaartuvine räystäänkulmineen.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2014.11.16.121201 Jiuqu Bridge Yuyuan Park Shanghai.jpg',
           selite: 'Huxintingin teehuone keskellä lampea: kaksikerroksinen '
             + 'puutalo seisoo pylväiden varassa suoraan vedessä, '
-            + 'katonkulmat nousevat teräviksi kärjiksi ja parvekkeiden '
-            + 'kaiteissa on ristikkokuviointia. Vasemmalla näkyy '
-            + 'kivikaiteinen silta ja sillalla sateenvarjoja.',
+            + 'katonkulmat teräviksi kärjiksi nousten, ja vasemmalla '
+            + 'näkyy kivikaiteinen silta.',
           lahde: 'Hermann Luyken, Wikimedia Commons (CC0)',
         },
       ],
@@ -16945,10 +16900,8 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'East Nanjing road Shanghai.jpg',
           selite: 'Itä-Nanjing-kadun kävelyosuus päivällä: molemmin '
             + 'puolin nousee kerroksittain punaisia ja sinisiä '
-            + 'mainostauluja kiinalaisin kirjoitusmerkein, keskellä '
-            + 'katua on matalia kivipalloja ja istutuslaatikoita, ja '
-            + 'ihmisiä kulkee laatoitetulla kadulla. Perällä näkyy '
-            + 'lasitorni ja liikennevalot.',
+            + 'mainostauluja kiinalaisin kirjoitusmerkein, ja ihmisiä '
+            + 'kulkee laatoitetulla kadulla.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16987,21 +16940,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '上海博物馆.jpg',
-          selite: 'Museo Kansanaukion nurmikon takaa: neliskulmainen '
-            + 'vaalea graniittijalusta, jonka päällä lepää matala '
-            + 'pyöreä rumpu, ja rummun reunasta nousee kaksi kaarevaa '
-            + 'korvaketta kuin pronssiastian sangat. Etualalla on '
-            + 'nurmikenttä ja punakeltaisia kukkapenkkejä, taustalla '
-            + 'lasisia tornitaloja.',
+          selite: 'Museo Kansanaukion nurmikon takaa: neliskulmaisen '
+            + 'vaalean graniittijalustan päällä lepää matala pyöreä '
+            + 'rumpu, jonka reunasta nousee kaksi kaarevaa korvaketta '
+            + 'kuin pronssiastian sangat.',
           lahde: 'Mir7ror, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Shanghai Museum 20609-Shanghai (32914707972).jpg',
           selite: 'Museon aula ylhäältä kuvattuna: keskellä nousee '
-            + 'symmetrinen kaksihaarainen porrasyhdistelmä '
-            + 'puukaiteineen, seinät ovat vaaleaa kiveä ja kulmissa on '
-            + 'riippuvia viherkasveja. Lattiaan on ladottu vihreästä '
-            + 'ja valkoisesta kivestä suuri pyöreä kuvio.',
+            + 'symmetrinen kaksihaarainen porrasyhdistelmä puukaiteineen, '
+            + 'ja lattiaan on ladottu vihreästä ja valkoisesta kivestä '
+            + 'suuri pyöreä kuvio.',
           lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -17045,12 +16995,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20090510 Shanghai City God Temple 6514.jpg',
-          selite: 'Temppelin alttari. Kaksi kullattua istuvaa hahmoa '
-            + 'kohoaa lähes kattoon asti: vasemmalla punakasvoinen ja '
-            + 'mustapartainen vartija kättään kohottaen, oikealla '
-            + 'rauhallinen virkamieshahmo mustassa hatussa kädet ristissä '
-            + 'rinnalla. Edessä on rivi sinivalkoisia posliinimaljakoita '
-            + 'ja appelsiineja uhrilautasella.',
+          selite: 'Temppelin alttari, jolla kaksi kullattua istuvaa '
+            + 'hahmoa kohoaa lähes kattoon asti: punakasvoinen vartija '
+            + 'kättään kohottaen ja rauhallinen virkamieshahmo mustassa '
+            + 'hatussa kädet ristissä rinnalla.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17085,13 +17033,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fuyou Road Mosque - Prayer Hall.jpg',
-          selite: 'Moskeijan rukoushuone. Tumma puinen palkkikatto ja '
-            + 'kiinalaiset ristikkoikkunat kehystävät salin, jonka '
-            + 'lattialla on rivissä sinivalkoisia rukousmattoja. '
-            + 'Perällä on kullattu mihrab-syvennys arabiankielisine '
-            + 'kirjoituksineen, sen molemmin puolin kaksi vanhaa '
-            + 'kaappikelloa, ja katosta riippuu suuri lootuksenmuotoinen '
-            + 'kruunu.',
+          selite: 'Moskeijan rukoushuone, jonka tumma puinen palkkikatto '
+            + 'ja kiinalaiset ristikkoikkunat kehystävät rivin '
+            + 'sinivalkoisia rukousmattoja ja perällä kullatun '
+            + 'mihrab-syvennyksen arabiankielisine kirjoituksineen.',
           lahde: 'Chongkian, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17123,12 +17068,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dajing Ge ramparts.jpg',
-          selite: 'Kaupunginmuurin viimeinen pala. Harmaasta tiilestä '
-            + 'ladottu muuri on hammastettu ylhäältä, ja jokaisessa '
-            + 'hampaassa on neliskulmainen ampuma-aukko. Muurin takaa '
-            + 'nousee kaksikerroksinen paviljonki, jonka punaruskeat '
-            + 'puuseinät ja ikkunarivit jäävät kahden voimakkaasti '
-            + 'kaartuvan tiilikaton väliin.',
+          selite: 'Kaupunginmuurin viimeinen pala: harmaasta tiilestä '
+            + 'ladottu muuri on hammastettu ylhäältä ampuma-aukkoineen, '
+            + 'ja sen takaa nousee kaksikerroksinen paviljonki '
+            + 'punaruskeine puuseinineen.',
           lahde: 'World Imaging, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -18952,6 +18895,12 @@ export const NAHTAVYYSJUTUT = {
    * takia. Aukioloa tai junavuoroja ei väitetä (Medinan asemamuseon
    * oppi: tieto vanhenee nopeammin kuin lehti).
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * tämän kaupungin nähtävyysjuttujen kuvatekstit on tiivistetty
+   * yhteen virkkeeseen. Juttujen tekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   bangkok: {
     'Sanam Luang': {
       aika: '1782 alkaen',
@@ -19208,9 +19157,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Wat Arun 03-2012-01.JPG',
-          selite: 'Wat Arunin suuri prangi ja sen neljä sivutornia '
-            + 'joelta nähtynä. Rannassa liehuu lippurivi, ja '
-            + 'pitkähäntäveneet kulkevat kuvan poikki pieninä.',
+          selite: 'Wat Arunin suuri prangi ja sen neljä sivutornia joelta '
+            + 'nähtynä, rannassa liehuva lippurivi ja pitkähäntäveneitä '
+            + 'kulkemassa kuvan poikki.',
           lahde: 'Rolf Heinrich, Köln, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -19315,6 +19264,12 @@ export const NAHTAVYYSJUTUT = {
    * voittaa. Summer Palace -artikkelin kaksi eri kertomusta Cixin
    * jälleenrakennuksen rahoituksesta (laivastorahat vs. korkotuotot)
    * on kirjoitettu auki lukijalle v925:n tapaan.
+   */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * tämän kaupungin nähtävyysjuttujen kuvatekstit on tiivistetty
+   * yhteen virkkeeseen. Juttujen tekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
    */
   peking: {
     'Vanha kesäpalatsi': {
@@ -19526,9 +19481,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Fulanting Pavilion in Jingshan Park 2.jpg',
           selite: 'Fulan-paviljonki Jingshanin rinteellä: '
-            + 'kaksikerroksinen lasitettu katto nousee puiden '
-            + 'välistä ja punaiset pylväät kantavat avointa '
-            + 'alakertaa. Kävijät näkyvät pieninä portaiden juurella.',
+            + 'kaksikerroksinen lasitettu katto nousee puiden välistä ja '
+            + 'punaiset pylväät kantavat avointa alakertaa.',
           lahde: 'そらみみ, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19599,10 +19553,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tiananmen 1901.jpg',
-          selite: 'Tiananmen vuonna 1901: muuri on rapistunut ja '
-            + 'terassilla kasvaa heinää. Edustalla kulkee '
-            + 'muulivankkureita hiekkatiellä — aukiota ei vielä ole, '
-            + 'ja kuvan etäiset kulkijat ovat pieniä hahmoja.',
+          selite: 'Tiananmen vuonna 1901 muurin rapistuttua ja terassin '
+            + 'heinittyä: edustalla kulkee muulivankkureita hiekkatiellä, '
+            + 'eikä aukiota ole vielä olemassa.',
           lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
         },
       ],
@@ -19633,10 +19586,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Zhengyangmen (gatehouse) 2010 April.jpg',
-          selite: 'Zhengyangmenin porttitalo etelästä: harmaassa '
-            + 'muurissa on rivejä ikkuna-aukkoja ja sen päällä '
-            + 'kaksikerroksinen paviljonki. Edustalla kasvaa rivi '
-            + 'havupuita.',
+          selite: 'Zhengyangmenin porttitalo etelästä: harmaassa muurissa '
+            + 'on rivejä ikkuna-aukkoja ja sen päällä kaksikerroksinen '
+            + 'paviljonki.',
           lahde: 'Morio, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -20387,6 +20339,12 @@ export const NAHTAVYYSJUTUT = {
    * 1870-luku ja Delhi Town Hall -artikkeli 1860-luku — romahdus 1951
    * ja purku 1955 ovat yhdestä lähteestä ja kerrotaan.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * tämän kaupungin nähtävyysjuttujen kuvatekstit on tiivistetty
+   * yhteen virkkeeseen. Juttujen tekstit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   delhi: {
     'Delhi Junction': {
       aika: '1864',
@@ -20412,8 +20370,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Delhi Junction railway station building.jpg',
           selite: 'Asema auringonlaskussa: punaiset sakarapäiset tornit '
-            + 'nousevat rivissä, ja etualalla on aseman uudempi '
-            + 'laajennusosa. Aurinko laskee tornien taakse.',
+            + 'nousevat rivissä aurinkoa vasten, ja etualalla on aseman '
+            + 'uudempi laajennusosa.',
           lahde: 'Ravi Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20478,10 +20436,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fatehpuri Masjid in Delhi 11.jpg',
-          selite: 'Moskeijan piha aamuvalossa: punaista hiekkakiveä '
-            + 'oleva rukoussali kaarineen ja kaksi minareettia, pihan '
-            + 'poikki kävelee kissa. Takana kohoavat basaarikorttelin '
-            + 'talot.',
+          selite: 'Moskeijan piha aamuvalossa: punaista hiekkakiveä oleva '
+            + 'rukoussali kaarineen ja kaksi minareettia, ja pihan poikki '
+            + 'kävelee kissa.',
           lahde: 'Indrajit Das, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20512,8 +20469,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Chandni Chowk Temple and Red Fort.jpg',
           selite: 'Chandni Chowk aamu-usvassa: temppelien tornit ja '
             + 'kauppatalot reunustavat katua, jonka päässä häämöttää '
-            + 'Punaisen linnoituksen portti. Kulkijat näkyvät '
-            + 'vastavalossa tummina hahmoina.',
+            + 'Punaisen linnoituksen portti.',
           lahde: 'Pallav.journo, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20546,10 +20502,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Naubat Khana - Red Fort, Delhi.jpg',
-          selite: 'Naubat Khana eli rumputalo holvikaaren läpi '
-            + 'kuvattuna: punaista hiekkakiveä, kaiverrettuja '
-            + 'kukkakuvioita ja valkoinen kattolista. Etualan kulkija '
-            + 'on pelkkä tumma ääriviiva.',
+          selite: 'Naubat Khana eli rumputalo holvikaaren läpi kuvattuna: '
+            + 'punaista hiekkakiveä, kaiverrettuja kukkakuvioita ja '
+            + 'valkoinen kattolista.',
           lahde: 'Andrew Moore from Johannesburg, South Africa, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -20579,10 +20534,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Pillared Canopies - Gurdwara Sis Ganj Sahib - Chandni Chowk Road - Delhi 2014-05-13 3504.JPG',
-          selite: 'Gurdwaran katto lähikuvassa: kullattu pääkupoli '
-            + 'nousee kahdeksankulmaisen tornin päältä, ja nurkissa on '
-            + 'pienempiä kupolikatoksia. Alla erottuu hiekkakivinen '
-            + 'parvekerivi.',
+          selite: 'Gurdwaran katto lähikuvassa: kullattu pääkupoli nousee '
+            + 'kahdeksankulmaisen tornin päältä, nurkissa pienempiä '
+            + 'kupolikatoksia ja alla hiekkakivinen parvekerivi.',
           lahde: 'Biswarup Ganguly, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -20615,8 +20569,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: '20191203 Wielki Meczet w Delhi 0700 6459 DxO.jpg',
           selite: 'Moskeijan julkisivu pihalta: valkoisin raidoin '
             + 'koristellut kupolit, korkea keskiportaali ja kaksi '
-            + 'punavalkoista minareettia. Pihalla kävelijät näkyvät '
-            + 'selin ja etäältä.',
+            + 'punavalkoista minareettia.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
