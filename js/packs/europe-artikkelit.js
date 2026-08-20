@@ -2,11 +2,41 @@
 // sama rakenne kuin Afrikan OMAT_ARTIKKELIT). Rakentuu kaupunki
 // kerrallaan.
 export const EUROPE_ARTIKKELIT = {
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro EI OLE ENÄÄ kahden lauseen nosto vaan lehden ETUSIVUN
+   * LEIPÄTEKSTI — 7–10 virkkeen johdatus (~700–1100 mrk) kahdessa tai
+   * kolmessa kappaleessa ('\n\n') ja 1–3 maltillista **lihavointia**.
+   * Renderöijä (piirraLeipateksti) tekee kappaleet ja boldit, joten
+   * tänne ei kirjoiteta HTML:ää. Faktat ovat Venetsian omista jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Venetsia, nahtavyysjutut.js, maakartat.js, oma
+   * teksti-kenttä alla) sekä en-Wikipedian Venice-artikkelin
+   * hallinnollisesta asemasta ja väestöluvuista. teksti on ennallaan.
+   */
   Venetsia: {
-    intro: 'Venetsia on rakennettu laguunin sadalle pienelle saarelle, ja '
-      + 'sen kadut ovat kanavia. Talot seisovat miljoonien puupaalujen '
-      + 'varassa, jotka hakattiin liejuun jo keskiajalla — veden alla, '
-      + 'hapettomassa mudassa, puu ei lahoa vaan kovettuu.',
+    intro: 'Venetsia on Koillis-Italian rannikkokaupunki ja Veneton '
+      + 'alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan '
+      + 'laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen '
+      + 'tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei '
+      + 'ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta '
+      + 'itse vanhassa saarikaupungissa enää noin 50 000; suurin osa '
+      + 'väestä asuu mantereen puolella.'
+      + '\n\n'
+      + 'Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan '
+      + 'pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä '
+      + '**La Serenissima**. Sen laivat hallitsivat idänkauppaa, ja '
+      + 'vaurauden näkee yhä Pyhän Markuksen torilla: basilikan '
+      + 'kultamosaiikeissa ja dogen palatsin kaaririvistössä. '
+      + 'Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta '
+      + 'tuli osa Italiaa.'
+      + '\n\n'
+      + 'Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat '
+      + 'pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin '
+      + 'nousuvesi tulvii toreille; laguunin suuaukkoihin rakennetut '
+      + '**MOSE-portit** nostetaan pahimpia tulvia vastaan. Laguuni ja '
+      + 'kaupunki ovat kuuluneet Unescon maailmanperintöön vuodesta '
+      + '1987.',
     teksti: 'Venetsia oli vuosisatojen ajan itsenäinen tasavalta ja '
       + 'Välimeren mahtavin kauppakaupunki. Sen laivat toivat idästä '
       + 'silkkiä, mausteita ja tarinoita — kuuluisin kertoja oli '
@@ -66,11 +96,36 @@ export const EUROPE_ARTIKKELIT = {
       + 'teiden varsilla.',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E7: intro on nyt etusivun leipäteksti
+  // (ks. Venetsian lohkokommentti yllä). Faktat Marseillen omista jo
+  // tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+  // Matkailijan Marseille, nahtavyysjutut.js, maakartat.js) sekä
+  // en-Wikipedian Marseille-artikkelin väkiluvusta ja hallinnollisesta
+  // asemasta. teksti on ennallaan.
   Marseille: {
-    intro: 'Marseille on Ranskan vanhin kaupunki ja sen suurin satama. '
-      + 'Kreikkalaiset merenkulkijat perustivat sen noin 600 eaa. nimellä '
-      + 'Massalia — Pariisi oli silloin vielä suo. Kaupunki on aina '
-      + 'katsonut merelle päin, ei pääkaupunkiin.',
+    intro: 'Marseille on Ranskan vanhin kaupunki ja Pariisin jälkeen sen '
+      + 'väkirikkain: asukkaita on runsaat 880 000 ja koko seudulla '
+      + 'lähes kaksi miljoonaa. Kreikkalaiset merenkulkijat perustivat '
+      + 'sen noin 600 eaa. nimellä Massalia luonnonpoukamaan, jonka '
+      + 'nimi on nyt **Vanhasatama**. Se on '
+      + 'Bouches-du-Rhônen departementin hallintokeskus ja yhä Ranskan '
+      + 'suurin satama.'
+      + '\n\n'
+      + 'Marseille on aina katsonut merelle päin, ei pääkaupunkiin, ja '
+      + 'se näkyy väestössä: satama on tuonut tänne väkeä Italiasta, '
+      + 'Armeniasta, Algeriasta, Marokosta ja Komoreilta. Sataman yllä '
+      + 'kohoaa kukkulalla basilika **Notre-Dame de la Garde**, jonka '
+      + 'kullattu patsas näkyy merelle ja jota kaupunkilaiset sanovat '
+      + 'nimellä la Bonne Mère. Saippuaa täällä on keitetty '
+      + 'oliiviöljystä noin kuudensadan vuoden ajan, ja vuoden 1688 '
+      + 'asetus varasi nimen sille.'
+      + '\n\n'
+      + 'Kaupunki jakautuu kuuteentoista keskenään hyvin erilaiseen '
+      + 'kaupunginosaan, ja yhteen niistä kuuluu kokonainen '
+      + 'kansallispuisto: Calanques\'in kalkkikivijyrkänteet ja kapeat '
+      + 'poukamat alkavat kaupungin rajojen sisältä. Luoteesta '
+      + 'puhaltava kylmä mistraali kuuluu samaan maisemaan, ja sade '
+      + 'painottuu syksyyn.',
     teksti: 'Vanha satama Vieux-Port on kaupungin sydän ja alkupiste: '
       + 'kreikkalaisten laivat laskivat juuri tähän lahteen, ja samassa '
       + 'altaassa myydään aamun kala vieläkin. Sataman suulla kohoaa '
@@ -304,11 +359,42 @@ export const EUROPE_ARTIKKELIT = {
       + 'eroavat toisistaan selvästi — se näkyy jokaisissa vaaleissa.',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro EI OLE ENÄÄ kahden lauseen nosto vaan lehden ETUSIVUN
+   * LEIPÄTEKSTI — 7–10 virkkeen johdatus (~700–1100 mrk) kolmessa
+   * kappaleessa ('\n\n') ja 1–3 maltillista **lihavointia**.
+   * Renderöijä (piirraLeipateksti) tekee kappaleet ja boldit, joten
+   * tänne ei kirjoiteta HTML:ää. Faktat ovat Sarajevon omista jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Sarajevo, nahtavyysjutut.js, maakartat.js, oma
+   * teksti-kenttä alla). Sisältölinjaus (omistaja 20.8.2026):
+   * 1990-luvun sota vain siinä laajuudessa kuin lehti sen jo kertoo,
+   * neutraalisti ja ilman osapuolikehystä; painopiste on osmani- ja
+   * itävaltalaiskaudessa. teksti on ennallaan.
+   */
   Sarajevo: {
-    intro: 'Sarajevo on Bosnia ja Hertsegovinan pääkaupunki, kapeassa '
-      + 'vuoristolaaksossa Miljacka-joen varrella. Samalla kadulla '
-      + 'seisovat ottomaanien basaari, itävaltalaiset julkisivut, '
-      + 'moskeija, katedraali, ortodoksikirkko ja synagoga.',
+    intro: 'Sarajevo on Bosnia ja Hertsegovinan pääkaupunki kapeassa '
+      + 'jokilaaksossa 518 metrin korkeudessa: pohjalla virtaa Miljacka, '
+      + 'ympärillä kohoaa viisi vuorta. Osmanien käskynhaltija '
+      + 'Isa-beg Ishaković rakennutti tänne 1460-luvulla basaarin, sillan '
+      + 'ja majatalon, ja kaupungin nimi tulee turkin sanasta saray.'
+      + '\n\n'
+      + '**Baščaršijan** basaarissa oli parhaimmillaan tuhansia puoteja, '
+      + 'ja jokaisella kujalla tehtiin omaa käsityötä. Sen laidalla '
+      + 'seisovat Gazi Husrev-begin moskeija vuodelta 1531 ja '
+      + 'Sahat-kulan kellotorni, jonka kello asetetaan yhä niin, että '
+      + 'auringonlasku on kaksitoista. Vuonna 1878 alue siirtyi '
+      + 'Itävalta-Unkarille, joka rakensi länsipuolen uuteen '
+      + 'tyyliin; Ferhadija-kadun jalkakäytävään on merkitty kohta, '
+      + 'jossa kaksi kaupunkia kohtaa.'
+      + '\n\n'
+      + '**Latinalaissillan** pohjoispäässä ammuttiin 28. kesäkuuta 1914 '
+      + 'arkkiherttua Frans Ferdinand, ja siitä alkoi ketju kohti '
+      + 'ensimmäistä maailmansotaa. Vuonna 1984 kaupunki isännöi '
+      + 'talviolympialaisia, ja vuosina 1992–1996 se oli piiritettynä. '
+      + 'Nyt Sarajevo on taas opiskelijoiden ja kahviloiden kaupunki, ja '
+      + 'raitiotie vuodelta 1885 kulkee laakson läpi päästä päähän.',
     teksti: 'Kaupungin perusti ottomaanihallinto 1400-luvulla, ja '
       + 'basaarialue Baščaršija on siltä ajalta. Vuonna 1878 alue '
       + 'siirtyi Itävalta-Unkarille, joka rakensi kaupungin länsipuolen '
@@ -451,11 +537,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8 (Raamattu "TEKSTIEN PAINOPISTE",
+   * Fablen eräohje): intro on nyt lehden ETUSIVUN LEIPÄTEKSTI —
+   * 7–10 virkettä kappaleissa ('\n\n') ja maltillinen **lihavointi**.
+   * Faktat Kreetan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Kreeta) sekä alla
+   * olevasta teksti-kentästä; teksti-kenttä on ennallaan.
+   */
   Kreeta: {
     intro: 'Kreeta on Kreikan suurin saari ja Välimeren viidenneksi '
-      + 'suurin. Sen pohjoisrannalla, Knossoksessa, kukoisti neljä '
-      + 'tuhatta vuotta sitten minolainen kulttuuri — Euroopan vanhin '
-      + 'kaupunkikulttuuri.',
+      + 'suurin: 8 450 neliökilometriä ja 260 kilometriä idästä '
+      + 'länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on '
+      + 'runsaat tuhat kilometriä, ja selkärankana kulkee kuusi '
+      + 'vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 '
+      + 'metriin. Asukkaita on yli 600 000 — enemmän kuin millään '
+      + 'muulla Kreikan saarella.'
+      + '\n\n'
+      + 'Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta '
+      + 'sitten **minolainen kulttuuri**, Euroopan vanhin '
+      + 'kaupunkikulttuuri. Se rakensi palatseja, joissa oli '
+      + 'valokuiluja, juokseva vesi ja viemärit, ja kirjoitti '
+      + 'kahdella merkistöllä, joista toista ei ole vieläkään pystytty '
+      + 'lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin '
+      + 'purkauksen ja sen tsunamien jäljiltä.'
+      + '\n\n'
+      + 'Sen jälkeen saari on ollut vuorollaan roomalaisten, '
+      + 'bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja '
+      + 'Kreikkaan se liittyi vasta **vuonna 1913**. Nykyään saari '
+      + 'elää maataloudesta ja matkailusta: oliivipuita on kymmeniä '
+      + 'miljoonia, ja Kreetan ruokatavoista tuli 1950-luvun '
+      + 'tutkimusten myötä koko Välimeren ruokavalion malli. Kesä on '
+      + 'käytännössä sateeton.',
     teksti: 'Minolaiset rakensivat palatseja, joissa oli monikerroksisia '
       + 'siipiä, valokuiluja, juokseva vesi ja viemärit. He kirjoittivat '
       + 'kahdella kirjoitusjärjestelmällä, joista toista — lineaari '
@@ -477,10 +590,37 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat Sisilian omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot, Matkailijan Sisilia ja
+   * Rauniot-kategoria) sekä teksti-kentästä, joka on ennallaan.
+   */
   Sisilia: {
-    intro: 'Sisilia on Välimeren suurin saari ja Italian eteläkärjessä '
-      + 'salmen takana. Sen yllä kohoaa Etna, Euroopan korkein aktiivinen '
-      + 'tulivuori — yli 3 300 metriä, ja se kasvaa yhä.',
+    intro: 'Sisilia on Välimeren suurin saari, lähes 26 000 '
+      + 'neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen '
+      + 'antiikin nimi Trinacria. Mantereelle on Messinansalmen yli '
+      + 'kapeimmillaan vain kolme kilometriä, mutta siltaa ei '
+      + 'vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. '
+      + 'Saaren yllä kohoaa **Etna**, Euroopan korkein aktiivinen '
+      + 'tulivuori, yli 3 300 metriä.'
+      + '\n\n'
+      + 'Sisilia on ollut kaikkien maa. Foinikialaiset ja '
+      + 'kreikkalaiset perustivat sinne siirtokuntia, roomalaiset '
+      + 'tekivät siitä valtakunnan viljavaraston, arabit toivat '
+      + 'sitrushedelmät ja sokeriruo’on, ja normannit rakensivat '
+      + 'kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia '
+      + 'mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen '
+      + 'ja ruokaan.'
+      + '\n\n'
+      + 'Kivessä se näkyy yhä: **Agrigenton temppelilaakso** on '
+      + 'kreikkalaisten temppelirivi meren yllä, Piazza Armerinan '
+      + 'roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja '
+      + 'Syrakusan kallioon hakatussa teatterissa esitetään antiikin '
+      + 'tragedioita joka kevät. Etna purkautuu lähes joka vuosi, '
+      + 'mutta laava valuu useimmiten hitaasti, ja tuhka tekee '
+      + 'maaperästä poikkeuksellisen hedelmällistä.',
     teksti: 'Sisilia on ollut kaikkien maa. Foinikialaiset ja '
       + 'kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät '
       + 'siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät, '
@@ -554,11 +694,35 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E7: intro on nyt etusivun leipäteksti
+  // (ks. Venetsian lohkokommentti yllä). Faktat Firenzen omista jo
+  // tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+  // Matkailijan Firenze, nahtavyysjutut.js, maakartat.js, oma
+  // teksti-kenttä alla) sekä en-Wikipedian Florence-artikkelista
+  // (maailmanperintövuosi 1982). teksti on ennallaan.
   Firenze: {
     intro: 'Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä '
-      + 'asuu noin 360 000 ihmistä. Vanhakaupunki on niin pieni, että sen '
-      + 'kävelee ristiin puolessa tunnissa — ja juuri siitä kaupungista '
-      + 'renessanssi lähti liikkeelle.',
+      + 'asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta '
+      + 'reunaan on noin kaksi kilometriä, ja kaikki tärkeä on '
+      + 'kävelymatkan päässä. Roomalaiset perustivat paikalle '
+      + 'varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu '
+      + 'vanhankaupungin katuverkossa yhä.'
+      + '\n\n'
+      + 'Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja '
+      + 'vuodesta 1252 se löi omaa kultarahaansa floriinia, johon '
+      + 'luotettiin kaikkialla Euroopassa. Rahan takana olleista '
+      + 'suvuista mahtavimmaksi nousi Medici, joka osti valtansa '
+      + 'kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä '
+      + 'myöhemmin alettiin kutsua **renessanssiksi**: taiteen ja '
+      + 'tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat '
+      + 'Donatellosta Michelangeloon.'
+      + '\n\n'
+      + 'Tuomiokirkon **kupoli** valmistui 1436, eikä tiilistä ole sen '
+      + 'jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri '
+      + 'kirjoitti pääteoksensa oman kaupunkinsa puhekielellä, ja siitä '
+      + 'kehittyi italian kirjakieli. Kaupunki oli lyhyen aikaa myös '
+      + 'Italian pääkaupunki, vuosina 1865–1871, ja sen historiallinen '
+      + 'keskusta on kuulunut Unescon maailmanperintöön vuodesta 1982.',
     teksti: 'Firenze perustettiin roomalaisten sotilaskaupungiksi vuonna 59 '
       + 'eaa., ja sen suorakulmainen ruutukaava näkyy keskustan kaduissa '
       + 'yhä. Keskiajalla kaupunki rikastui villakankaasta ja pankeista. '
@@ -590,11 +754,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat Dubrovnikin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot, Matkailijan Dubrovnik ja
+   * Tasavalta-kategoria; maakartat.js) sekä teksti-kentästä, joka on
+   * ennallaan. Vuosien 1991–1992 piiritys jää introsta pois: se on
+   * kerrottu jo oppaassa ja teksti-kentässä.
+   */
   Dubrovnik: {
     intro: 'Dubrovnik on muurien ympäröimä satamakaupunki Kroatian '
-      + 'eteläkärjessä Adrianmeren rannalla. Vanhaa kaupunkia kiertää '
-      + 'lähes kaksi kilometriä muuria, jonka päällä voi kävellä koko '
-      + 'kierroksen.',
+      + 'eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain '
+      + 'noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen '
+      + 'ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu '
+      + 'ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin '
+      + 'kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun '
+      + 'kunnassa asuu noin 42 000.'
+      + '\n\n'
+      + 'Satojen vuosien ajan kaupunki oli oma valtionsa, **Ragusan '
+      + 'tasavalta**, omine lakeineen ja laivastoineen. Se selvisi '
+      + 'isompien naapureiden välissä sopimalla eikä sotimalla: veroa '
+      + 'maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli '
+      + 'suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: '
+      + 'Euroopan vanhin yhä toimiva apteekki avattiin '
+      + 'täällä 1317, orjakauppa kiellettiin 1416 ja '
+      + 'kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.'
+      + '\n\n'
+      + 'Vuoden **1667 maanjäristys** tuhosi suuren osan kaupungista, '
+      + 'ja se rakennettiin uudelleen kivestä yhtenä kokonaisuutena — '
+      + 'siksi talot ovat samannäköisiä: samaa kiveä, samat '
+      + 'kattotiilet, sama korkeus. Vanhakaupunki on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1979.',
     teksti: 'Kaupunki tunnettiin vuosisatoja nimellä Ragusa, ja se oli '
       + 'oma itsenäinen tasavaltansa 1300-luvulta vuoteen 1808. Se pysyi '
       + 'hengissä kaupalla ja diplomatialla: Ragusa maksoi veroa milloin '
@@ -615,11 +806,39 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkkeen johdatus
+   * (~700–1100 mrk) kolmessa kappaleessa ('\n\n') ja 1–3 maltillista
+   * **lihavointia**; renderöijä tekee kappaleet ja boldit, joten HTML:ää
+   * ei kirjoiteta tänne. Faktat ovat Sofian omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan Sofia,
+   * nahtavyysjutut.js, maakartat.js, oma teksti-kenttä alla).
+   * teksti on ennallaan.
+   */
   Sofia: {
     intro: 'Sofia on Bulgarian pääkaupunki ja yksi Euroopan vanhimmista '
-      + 'kaupungeista: paikalla on asuttu yli 7 000 vuotta. Se sijaitsee '
-      + 'laaksossa Vitosha-vuoren juurella, ja vuorelle pääsee '
-      + 'keskustasta bussilla.',
+      + 'kaupungeista: paikalla on asuttu yli 7 000 vuotta. Se on '
+      + 'laaksossa noin 550 metrin korkeudessa, ja etelässä kohoaa '
+      + 'Vitosha-vuori 2 292 metriin; sen rinteet rauhoitettiin '
+      + 'luonnonpuistoksi jo 1934, ensimmäisenä Balkanilla. Kaupunki '
+      + 'syntyi veden takia: maan alla on 49 kivennäis- ja '
+      + 'lämpölähdettä, ja roomalaiset rakensivat niiden ympärille '
+      + '**Serdican**, josta keisari Konstantinus Suuren kerrotaan '
+      + 'sanoneen, että se on hänen Roomansa.'
+      + '\n\n'
+      + 'Metroa kaivettaessa 2010-luvun alussa maasta paljastui '
+      + 'kokonainen roomalainen kortteli, eikä löytöjä peitetty '
+      + 'takaisin. Kaupungin vanhin rakennus on Pyhän Yrjön punatiilinen '
+      + 'rotunda 300-luvulta, ja muutaman sadan metrin säteellä seisovat '
+      + 'ortodoksikirkko, katolinen katedraali, moskeija ja '
+      + 'Kaakkois-Euroopan suurin synagoga.'
+      + '\n\n'
+      + 'Osmanien vallan alla Sofia oli lähes viisi vuosisataa, ja '
+      + '**pääkaupungiksi** se valittiin vasta 1879, kun asukkaita oli '
+      + 'reilut yksitoistatuhatta; nyt heitä on lähes 1,3 miljoonaa. '
+      + 'Keskustan pääväylillä on yhä kellertävää keraamista katukiveä '
+      + 'vuosilta 1907–1908.',
     teksti: 'Roomalaiset perustivat tänne kaupungin nimeltä Serdica '
       + 'kuumien lähteiden takia. Keisari Konstantinus Suuri viihtyi '
       + 'siellä niin hyvin, että sanoi: "Serdica on minun Roomani." '
@@ -790,12 +1009,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E7: intro on nyt etusivun leipäteksti
+  // (ks. Venetsian lohkokommentti yllä). Faktat Edinburghin omista jo
+  // tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+  // Matkailijan Edinburgh, nahtavyysjutut.js, maakartat.js, oma
+  // teksti-kenttä alla) sekä en-Wikipedian Edinburgh-artikkelista
+  // (asema Skotlannin toiseksi väkirikkaimpana, hallinnon ja
+  // tuomioistuinten sijaintipaikka). teksti on ennallaan.
   Edinburgh: {
     intro: 'Edinburgh on Skotlannin pääkaupunki Firth of Forthin rannalla, '
-             + 'ja siellä asuu noin puoli miljoonaa ihmistä. Keskellä kaupunkia '
-             + 'kohoaa sammuneen tulivuoren kallio, jonka päällä linna seisoo. '
-             + 'Vanhakaupunki ja uusikaupunki ovat molemmat Unescon '
-             + 'maailmanperintöä.',
+             + 'ja siellä asuu noin puoli miljoonaa ihmistä — Glasgow’n '
+             + 'jälkeen toiseksi eniten koko maassa. Kaupungin keskellä '
+             + 'kohoaa sammuneen tulivuoren kallio, jonka laella **linna** '
+             + 'seisoo, ja kalliolta itään laskeva harjanne kantaa '
+             + 'vanhankaupungin ainoan pääkadun. Kaupunki on Skotlannin '
+             + 'hallituksen, parlamentin ja ylimpien tuomioistuinten '
+             + 'kotipaikka.'
+             + '\n\n'
+             + 'Vanhakaupunki kasvoi kapealle harjanteelle ja ylöspäin, '
+             + 'koska sivusuunnassa ei ollut tilaa. Kun harjanne tuli '
+             + 'täyteen, 1760-luvulla ryhdyttiin rakentamaan notkon '
+             + 'toiselle puolelle uuttakaupunkia, jonka kadut ovat '
+             + 'suoria; nämä kaksi hyvin erilaista kaupunkia ovat yhdessä '
+             + 'Unescon maailmanperintökohde. Yliopisto perustettiin 1582, ja '
+             + '1700-luvun lopulla samoilla kaduilla kävelivät David Hume, '
+             + 'Adam Smith ja James Hutton — aikaa sanotaan Skotlannin '
+             + 'valistukseksi.'
+             + '\n\n'
+             + 'Skotlannin oma parlamentti lakkautettiin 1707 ja palasi '
+             + 'vasta 1999 uuteen taloon Holyroodiin. Joka elokuu '
+             + 'kaupunki täyttyy esiintyjistä: vuoden 1947 '
+             + 'taidefestivaalin reunalle syntynyt **Fringe** on '
+             + 'maailman suurin esittävän taiteen festivaali.',
     teksti: 'Edinburgh on kahden kaupungin kaupunki. Vanhakaupunki kasvoi '
               + 'kapealle harjulle linnan ja Holyroodin palatsin väliin. Kun '
               + 'tilaa ei ollut sivusuunnassa, rakennettiin ylöspäin: '
@@ -822,11 +1067,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E7: intro on nyt etusivun leipäteksti
+  // (ks. Venetsian lohkokommentti yllä). Faktat Dublinin omista jo
+  // tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+  // Matkailijan Dublin, nahtavyysjutut.js, maakartat.js, oma
+  // teksti-kenttä alla) sekä en-Wikipedian Dublin-artikkelin
+  // väestöluvuista ja varhaisimman asutuksen ajoituksesta.
+  // teksti on ennallaan.
   Dublin: {
-    intro: 'Dublin on Irlannin pääkaupunki Liffey-joen suulla Irlanninmeren '
-             + 'rannalla. Viikingit perustivat sinne kauppapaikan 800-luvulla, '
-             + 'ja nimi tulee sanoista dubh linn eli musta lampi. Dublinin '
-             + 'seudulla asuu noin puolitoista miljoonaa ihmistä.',
+    intro: 'Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se '
+             + 'sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. '
+             + 'Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa '
+             + 'ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja '
+             + 'viikingit perustivat joen rantaan kauppasataman '
+             + '800-luvulla.'
+             + '\n\n'
+             + 'Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: '
+             + 'iirinkielinen Baile Átha Cliath tarkoittaa risuista '
+             + 'punotun kahlaamon kaupunkia, ja englanninkielinen Dublin '
+             + 'tulee tummasta vuorovesialtaasta, jonka rannalla viikingit '
+             + 'pitivät laivojaan. 1700-luvulla kaupunki rakennettiin '
+             + 'uudelleen: katuja oikaistiin ja talojen mitat määrättiin, '
+             + 'ja niin syntyi **georgiaaninen Dublin** tiilirivistöineen '
+             + 'ja viuhkaikkunoineen.'
+             + '\n\n'
+             + 'Dublin on ennen kaikkea kirjojen kaupunki. Trinity '
+             + 'Collegen kirjastossa säilytetään noin vuonna 800 '
+             + 'kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin '
+             + 'muun muassa Jonathan Swift, Oscar Wilde, W. B. Yeats, '
+             + 'James Joyce ja Samuel Beckett — Unesco nimesi Dublinin '
+             + '**kirjallisuuden kaupungiksi** vuonna 2010. Irlanti oli '
+             + 'vuosisatoja Britannian hallinnassa, ja itsenäinen valtio '
+             + 'syntyi vuonna 1922.',
     teksti: 'Irlanniksi kaupunki ei ole Dublin vaan Baile Átha Cliath, '
               + '"risuista punotun kahlaamon kaupunki". Kaksi nimeä kertoo '
               + 'kahdesta asutuksesta: gaelilaisesta kahlaamosta joen '
@@ -1240,12 +1512,35 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat Alppien omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot, Matkailijan Alpit ja
+   * Luonto-kategoria) sekä teksti-kentästä, joka on ennallaan.
+   */
   Alpit: {
     intro: 'Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin '
              + 'kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. '
              + 'Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin '
              + '13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu '
-             + 'seutu.',
+             + 'seutu. Yli neljän kilometrin huippuja on 82, ja korkein '
+             + 'niistä on **Mont Blanc**.'
+             + '\n\nVuoristossa on aina eletty karjan ehdoilla. Lehmät '
+             + 'viedään keväällä ylös alppilaitumille ja tuodaan syksyllä '
+             + 'alas, ja kesän maito tehdään juustoksi ylhäällä, koska '
+             + 'juusto kestää kantamisen ja maito ei. Samoista laaksoista '
+             + 'ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja '
+             + 'viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan '
+             + 'taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa '
+             + '2018.'
+             + '\n\nMuuri Alpit eivät ole koskaan olleet. Solat ovat olleet '
+             + 'kauppateitä kivikaudelta asti, ja isoisän matkan aikaan '
+             + 'vuoren läpi päästiin jo junalla: **Fréjus-tunneli** avattiin '
+             + 'syyskuussa 1871 ja Semmeringin vuoristorata jo 1854. '
+             + 'Nykyään vuoristo '
+             + 'lämpenee nopeammin kuin Euroopan tasangot, ja jäätiköistä on '
+             + 'sulanut 1800-luvun puolivälin jälkeen yli puolet.',
     teksti: 'Alpit syntyivät, kun Afrikan mannerlaatta törmäsi Euroopan '
               + 'laattaan ja väliin jäänyt merenpohja työntyi ylös. Siksi '
               + 'huipuilta löytyy merieläinten fossiileja. Vuoristossa on 82 '
@@ -1451,11 +1746,42 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkkeen johdatus
+   * (~700–1100 mrk) kolmessa kappaleessa ('\n\n') ja 1–3 maltillista
+   * **lihavointia**; renderöijä tekee kappaleet ja boldit, joten HTML:ää
+   * ei kirjoiteta tänne. Faktat ovat Bukarestin omista jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Bukarest, nahtavyysjutut.js, maakartat.js, oma
+   * teksti-kenttä alla). teksti on ennallaan.
+   */
   Bukarest: {
     intro: 'Bukarest on Romanian pääkaupunki ja Balkanin suurimpia '
-             + 'kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se sijaitsee '
-             + 'tasangolla Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä '
-             + 'meri — kaupunki on aina ollut kauppareittien risteys.',
+             + 'kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on '
+             + 'keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä '
+             + 'sitä suojaa vuori eikä meri — kaupunki on aina ollut '
+             + 'kauppareittien risteys. Ensimmäisen kerran nimi mainitaan '
+             + 'vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian '
+             + 'ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli '
+             + '1862.'
+             + '\n\n'
+             + '1800-luvun lopulla kaupunkia rakennettiin '
+             + 'Pariisin malliin: leveitä bulevardeja, ranskalaisia '
+             + 'arkkitehteja ja puistoja. Siltä ajalta on **Romanian '
+             + 'ateneum**, konserttitalo, johon kerättiin rahaa '
+             + 'tavallisilta ihmisiltä tunnuslauseella anna yksi leu '
+             + 'Ateneumille. Puistoista vanhin, Cișmigiun puutarha, '
+             + 'avattiin jo 1847.'
+             + '\n\n'
+             + 'Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa '
+             + 'romahti noin 33 suurta kerrostaloa. Sitä seuranneina '
+             + 'vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle '
+             + 'betonikortteleita ja **Parlamenttipalatsin**, joka on '
+             + 'maailman raskain rakennus. Vanhoja kirkkoja '
+             + 'säilyi, koska insinööri Eugeniu Iordăchescu keksi työntää '
+             + 'ne kiskoilla syrjään — kaikkiaan hän siirsi 29 '
+             + 'rakennusta.',
     teksti: 'Kaupungin nimi tulee tarinan mukaan paimenesta nimeltä Bucur. '
               + 'Ensimmäisen kerran Bukarest mainitaan asiakirjassa vuonna '
               + '1459, jonka allekirjoitti Valakian ruhtinas Vlad Kolottaja — '
@@ -1484,12 +1810,43 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkkeen johdatus
+   * (~700–1100 mrk) kolmessa kappaleessa ('\n\n') ja 1–3 maltillista
+   * **lihavointia**; renderöijä tekee kappaleet ja boldit, joten HTML:ää
+   * ei kirjoiteta tänne. Faktat ovat Kiovan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan Kiova,
+   * nahtavyysjutut.js, maakartat.js, oma teksti-kenttä alla).
+   * SISÄLTÖLINJAUS (omistaja 20.8.2026): introssa EI nykysotaa eikä
+   * nykypolitiikkaa — painopiste on Rusin ajassa, bysanttilaisessa
+   * perinnössä, arkkitehtuurissa ja neutraalissa maantieteessä.
+   * teksti on ennallaan.
+   */
   Kiova: {
     intro: 'Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita '
-             + 'on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle '
-             + 'länsirannalle, ja kaupungin vanhimmat kirkot ovat 1000-luvulta '
-             + '— ajalta, jolloin Kiova johti Itä-Euroopan mahtavinta '
-             + 'valtakuntaa.',
+             + 'on noin kolme miljoonaa. Se on rakennettu Dnepr-joen '
+             + 'jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen '
+             + 'kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, '
+             + 'alhaalla joen rannassa Podil eli alakaupunki.'
+             + '\n\n'
+             + 'Keskiajalla Kiova johti **Kiovan Rusia**, joka ulottui '
+             + 'Itämereltä Mustallemerelle, ja kristinusko otettiin '
+             + 'vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti '
+             + 'muurien pääportin eli Kultaisen portin sekä **Pyhän '
+             + 'Sofian katedraalin**, joka valmistui ilmeisesti vuonna '
+             + '1037. Katedraalin seinillä on Euroopan parhaiten '
+             + 'säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli '
+             + '7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja '
+             + 'Dneprin rinteen Luolaluostari kuuluvat Unescon '
+             + 'maailmanperintöön vuodesta 1990.'
+             + '\n\n'
+             + '1800-luvulla teollistuminen kasvatti Kiovasta yhden '
+             + 'keisarikunnan suurimmista kaupungeista. Arsenalnan '
+             + 'metroasema on 105,5 metriä maanpinnan alapuolella, '
+             + 'pitkään maailman syvin. Kaupungin epävirallinen tunnus on '
+             + 'hevoskastanja, joka kukkii toukokuussa valkoisin, '
+             + 'punatäpläisin kukkatertuin.',
     teksti: 'Kiovaa on kutsuttu itäslaavilaisten kaupunkien äidiksi. '
               + 'Keskiajalla se oli Kiovan Rusin keskus: valtakunnan, joka '
               + 'ulottui Itämereltä Mustallemerelle. Ruhtinas Vladimir '
@@ -1518,12 +1875,42 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on lehden ETUSIVUN LEIPÄTEKSTI — 7–10 virkkeen johdatus
+   * (~700–1100 mrk) kolmessa kappaleessa ('\n\n') ja 1–3 maltillista
+   * **lihavointia**; renderöijä tekee kappaleet ja boldit, joten HTML:ää
+   * ei kirjoiteta tänne. Faktat ovat Odessan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan Odessa,
+   * nahtavyysjutut.js, maakartat.js, oma teksti-kenttä alla).
+   * SISÄLTÖLINJAUS (omistaja 20.8.2026): introssa EI nykysotaa eikä
+   * nykypolitiikkaa — painopiste on 1800-luvun satama- ja
+   * kauppakaupungissa, kulttuurissa ja arkkitehtuurissa.
+   * teksti on ennallaan.
+   */
   Odessa: {
     intro: 'Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, '
-             + 'ja siellä asuu noin miljoona ihmistä. Kaupunki perustettiin '
-             + 'vasta vuonna 1794, joten se on Ukrainan mittapuulla nuori — '
-             + 'mutta se kasvoi sadassa vuodessa yhdeksi keisarikunnan '
-             + 'suurimmista kaupungeista.',
+             + 'ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja '
+             + 'suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan '
+             + 'Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi '
+             + 'ranskalainen insinööri F. de Volan. Rannikko päättyy täällä '
+             + 'jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka '
+             + 'päällä tasainen aro.'
+             + '\n\n'
+             + '**Vapaasatamana** Odessa eli lähes neljäkymmentä vuotta '
+             + 'vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja '
+             + 'sadassa vuodessa kaupungista kasvoi keisarikunnan '
+             + 'neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. '
+             + 'Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi '
+             + 'oma puhetapa ja oma huumori. Talot muurattiin '
+             + 'simpukkakalkkikivestä, jota louhittiin suoraan kaupungin '
+             + 'alta, ja käytäviä kertyi arviolta 2 500 kilometriä.'
+             + '\n\n'
+             + 'Merestä keskustaan nousevat **Potjomkinin portaat** '
+             + 'rakennettiin vuosina 1837–1841; niiden 192 askelmaa on '
+             + 'aseteltu niin, että alhaalta katsoen portaat näyttävät '
+             + 'lyhyiltä. Oopperatalo avattiin 1887 ja oli kaupungin '
+             + 'ensimmäinen rakennus, johon asennettiin sähkövalot.',
     teksti: 'Odessa rakennettiin turkkilaisen linnoituksen paikalle '
               + 'keisarinna Katariina II:n päätöksellä. Kadut vedettiin suoraan '
               + 'ruudukkoon, ja kaupunkia kehitti vuosina 1803–1814 '
@@ -2222,12 +2609,35 @@ export const EUROPE_ARTIKKELIT = {
    * maailmankartta.js:ää, jonka päätoimittaja generoi erikseen, ja
    * lehden uudistus ratkaisee sen kohtalon.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat tämän artikkelin omasta teksti-kentästä ja Lapin lehden jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: Matkailijan
+   * Lappi, jakso "Kaupunki poronpään muotoon"). teksti on ennallaan.
+   */
   Rovaniemi: {
-    intro: 'Rovaniemi on Lapin maakuntakeskus Kemijoen ja Ounasjoen '
-             + 'yhtymäkohdassa, kahdeksan kilometriä napapiirin '
-             + 'eteläpuolella. Asukkaita on noin 65 000, mutta pinta-alaa '
-             + 'runsaat 8 000 neliökilometriä — enemmän kuin monella '
-             + 'Euroopan pikkuvaltiolla.',
+    intro: 'Rovaniemi on Lapin maakuntakeskus siinä, missä Ounasjoki '
+             + 'laskee Kemijokeen kahdeksan kilometriä napapiirin '
+             + 'eteläpuolella. Asukkaita on noin 65 000 ja pinta-alaa '
+             + 'runsaat 8 000 neliökilometriä, mikä tekee siitä '
+             + 'pinta-alaltaan Euroopan suurimpia kaupunkeja — enemmän maata '
+             + 'kuin monella pikkuvaltiolla. Jokien risteys oli kauppapaikka '
+             + 'kauan ennen kuin täällä oli kaupunkia: pohjoisesta tultiin '
+             + 'Ounasjokea, merelle päästiin Kemijokea. Markkinapaikasta '
+             + 'tuli kunta 1929 ja kauppala 1938.'
+             + '\n\nLokakuussa 1944 vetäytyvät saksalaisjoukot polttivat '
+             + 'Rovaniemen, ja rakennuksista tuhoutui yhdeksänkymmentä '
+             + 'prosenttia. Jälleenrakennuskaavan laati 1946 **Alvar '
+             + 'Aalto**: pääkadut piirtävät kartalle poronsarvet, ja '
+             + 'urheilukenttä jää sarvien väliin kuin silmä.'
+             + '\n\n**Napapiiri** on kaupungin tunnetuin viiva. Sen '
+             + 'pohjoispuolella aurinko ei laske keskikesällä eikä nouse '
+             + 'keskitalvella, ja Rovaniemellä yötön yö kestää runsaan '
+             + 'kuukauden. Kemijoen rannalle avattiin 1992 Arktikum, museo '
+             + 'ja tiedekeskus, jonka lasiputki työntyy sata metriä jokea '
+             + 'kohti. Kaupungissa toimii myös Lapin yliopisto, Euroopan '
+             + 'unionin pohjoisin.',
     teksti: 'Kahden joen risteys on ollut kauppapaikka kauan ennen '
               + 'kaupunkia: Ounasjokea pitkin tultiin pohjoisesta ja '
               + 'Kemijokea myöten merelle. Markkinapaikasta tuli kunta 1929 '
@@ -2289,11 +2699,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8: intro on lehden etusivun
+   * leipäteksti (kappaleet '\n\n', maltillinen **lihavointi**).
+   * Faktat Tromssan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot, Matkailijan Tromssa ja
+   * Valo-kategoria; maakartat.js) sekä teksti-kentästä, joka on
+   * ennallaan.
+   */
   Tromssa: {
     intro: 'Tromssa on Pohjoismaiden suurin napapiirin pohjoispuolinen '
-             + 'kaupunki: noin 80 000 asukasta 69. leveyspiirin tuntumassa. '
-             + 'Keskusta on saarella, joka on kymmenen kilometriä pitkä ja '
-             + 'kaksi leveä, ja mantereelle pääsee siltaa pitkin.',
+             + 'kaupunki: noin 78 000 asukasta 69. leveysasteen tuntumassa. '
+             + 'Keskusta on Tromsøyan saarella kapean salmen varrella, ja '
+             + 'mantereelle pääsee vuoden 1960 siltaa pitkin. Salmi on syvä '
+             + 'ja jäätyy harvoin, koska **Golfvirran** haara lämmittää '
+             + 'rannikkoa — täältä pääsi merelle silloinkin, kun Itämeri '
+             + 'oli umpijäässä.'
+             + '\n\nKaupunkioikeudet Tromssa sai 1794, ja kasvu tuli '
+             + 'Jäämerestä: 1800-luvun puoliväliin mennessä se oli arktisen '
+             + 'pyynnin keskus, jonka laivat purjehtivat Huippuvuorille ja '
+             + 'Novaja Zemljalle. Kaupunkia sanottiin Pohjolan Pariisiksi: '
+             + 'merimiehet ihmettelivät katulyhtyjä ja kauppoja näin '
+             + 'kaukana pohjoisessa. Keskustan puutalot ovat vuosilta '
+             + '1789–1904.'
+             + '\n\nNykyään Tromssa on arktisen tutkimuksen kaupunki: sen '
+             + '1968 perustettu yliopisto on maailman pohjoisin, ja '
+             + 'revontuliobservatorio on toiminut vuodesta 1928. Valo tulee '
+             + 'ja menee vuodenajoittain eikä päivittäin: aurinko pysyy '
+             + 'horisontin alapuolella marraskuun lopusta tammikuun '
+             + 'puoliväliin, ja vuorten takaa se nähdään vasta **21. '
+             + 'tammikuuta**, jolloin kouluissa syödään aurinkopullia.',
     teksti: 'Tromssa sai kaupunkioikeudet 1794, kun siellä asui noin 80 '
               + 'ihmistä. Kasvu alkoi Jäämerestä: 1800-luvun puoliväliin '
               + 'mennessä kaupungista oli tullut arktisen pyynnin keskus, ja '

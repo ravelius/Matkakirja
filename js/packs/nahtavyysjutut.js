@@ -49,17 +49,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Florence, Duomo di Firenze.jpg',
-          selite: 'Tuomiokirkon itäpää, kellotorni ja etualalla '
-            + 'kahdeksankulmainen kastekappale. Kaikki kolme on '
-            + 'vuorattu valkoisella, vihreällä ja punaisella marmorilla, '
-            + 'ja takana kohoaa tiilikupoli.',
+          selite: 'Tuomiokirkon itäpää, kellotorni ja kahdeksankulmainen '
+            + 'kastekappale valkoisessa, vihreässä ja punaisessa marmorissa, '
+            + 'takana tiilikupoli.',
           lahde: 'George M. Groutas, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'The Facade of Cattedrale di Santa Maria del Fiore (Cathedral of Saint Mary of the Flowers), Florence.jpg',
-          selite: 'Julkisivun keskiportaali läheltä. Marmorikuvio jatkuu '
-            + 'seinästä toiseen pikkuruisiin yksityiskohtiin asti, ja '
-            + 'oven yläpuolella on kultapohjainen mosaiikki.',
+          selite: 'Julkisivun keskiportaali läheltä: marmorikuvio jatkuu '
+            + 'pikkuruisiin yksityiskohtiin ja oven yläpuolella on '
+            + 'kultapohjainen mosaiikki.',
           lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -91,10 +90,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Italie, Florence, Piazza della Signoria, Palazzo Vecchio (1299-1314), Torre di Arnolfo et les blasons (50130860426).jpg',
-          selite: 'Julkisivu alaviistosta: karkeaa kiveä, kaksoisikkunoita ja '
-            + 'ylimpänä ulkoneva ampumakäytävä. Sen kaarissa on rivi '
-            + 'maalattuja vaakunoita, ja takaa nousee Arnolfon torni '
-            + 'kellotauluineen.',
+          selite: 'Julkisivu alaviistosta: karkeaa kiveä, kaksoisikkunoita, '
+            + 'maalattuja vaakunoita ampumakäytävän kaarissa ja takana '
+            + 'Arnolfon torni.',
           lahde: 'Marie Thérèse Hébert & Jean Robert Thibault from Québec, Canada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -125,9 +123,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Piazzale degli Uffizi perspective view, Florence, Italy, August 2025.jpg',
-          selite: 'Uffizin sisäpiha ylhäältä. Kaksi identtistä siipeä '
-            + 'reunustaa kapeaa kujaa, jonka päässä näkyy Palazzo Vecchion '
-            + 'torni ja sen takana tuomiokirkon kupoli.',
+          selite: 'Uffizin sisäpiha ylhäältä: kaksi identtistä siipeä '
+            + 'reunustaa kujaa, jonka päässä näkyvät Palazzo Vecchion torni '
+            + 'ja tuomiokirkon kupoli.',
           lahde: 'Verum3414, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -157,10 +155,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ponte Vecchio at sunset from Piazzale Michelangelo Florence 2023 dllu.jpg',
-          selite: 'Ponte Vecchio ylhäältä ilta-auringossa. Sillan päällä on '
-            + 'yhtenäinen talorivi, ja sen yläpuolella kulkee kapea '
-            + 'ikkunarivi — Vasarin käytävä. Taustalla näkyvät kaupungin '
-            + 'muut sillat, joissa ei ole taloja.',
+          selite: 'Ponte Vecchio ylhäältä ilta-auringossa: talorivin yllä '
+            + 'kulkee kapea ikkunarivi eli Vasarin käytävä, taustalla sillat '
+            + 'ilman taloja.',
           lahde: 'Daniel Lu (User:dllu), Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -191,17 +188,15 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Basilica di Santa Croce (12437).jpg',
-          selite: 'Kirkon julkisivu koko leveydeltään. Valkoista, vihreää ja '
-            + 'vaaleanpunaista marmoria, keskellä pyöreä ruusuikkuna ja '
-            + 'ylimpänä kuusisakarainen tähti. Vasemmalla portaiden '
-            + 'vieressä seisoo Danten patsas.',
+          selite: 'Kirkon julkisivu koko leveydeltään valkoisessa, vihreässä '
+            + 'ja vaaleanpunaisessa marmorissa, portaiden vieressä Danten '
+            + 'patsas.',
           lahde: 'Rhododendrites, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Basílica de la Santa Cruz, Florencia, Italia, 2022-09-18, DD 116-118 HDR.jpg',
-          selite: 'Sivukappelin holvi alhaalta kuvattuna. Ristiholvin kaikki '
-            + 'lohkot ja seinät on maalattu täyteen kuvia 1300-luvun '
-            + 'tapaan, ja taustalla erottuu kirkon paljas puinen kattopalkisto.',
+          selite: 'Sivukappelin holvi alhaalta: kaikki lohkot ja seinät on '
+            + 'maalattu täyteen kuvia 1300-luvun tapaan.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -233,16 +228,14 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jardín de Bóboli, Florencia, Italia, 2022-09-19, DD 34.jpg',
-          selite: 'Pitti-palatsin takajulkisivu ja sen edessä oleva '
-            + 'amfiteatterin hiekkakenttä. Kentän laidalla seisoo '
-            + 'marmoripatsas, ja rinne nousee loivasti palatsista poispäin.',
+          selite: 'Pitti-palatsin takajulkisivu ja sen edessä amfiteatterin '
+            + 'hiekkakenttä, jonka laidalla seisoo marmoripatsas.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Florence, Giardino di Boboli, Isolotto 7.jpg',
-          selite: 'Isolotto eli soikea lampi. Sitä kiertää rautakaide ja '
-            + 'reunuksella on kivimaljakoita; vastarannalla näkyy rivi '
-            + 'sitruunapuita ruukuissa leikatun pensasseinän edessä.',
+          selite: 'Isolotto eli soikea lampi rautakaiteineen, vastarannalla '
+            + 'rivi sitruunapuita ruukuissa.',
           lahde: 'Armin Kleiner, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -277,10 +270,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Firenze, galleria dell\'accademia, tribuna del david 01.jpg',
-          selite: 'Daavid De Fabrisin rakentamassa salissa. Patsas seisoo '
-            + 'matalalla jalustalla puoliympyrän muotoisen syvennyksen '
-            + 'edessä, ja sen yllä avautuu lasitettu kupoli, josta valo '
-            + 'putoaa suoraan alas. Lattia on punaruskeaa kuviolaattaa.',
+          selite: 'Daavid De Fabrisin rakentamassa salissa, jonka '
+            + 'lasitetusta kupolista valo putoaa suoraan patsaan päälle.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -314,10 +305,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Santa Maria Novella Florence façade.jpg',
-          selite: 'Julkisivu koko leveydeltään. Alaosassa on kolme '
-            + 'kaariportaalia ja rivi hautakaaria valkoisen ja vihreän '
-            + 'marmorin ruuduissa; keskellä on pyöreä ikkuna, ja yläosan '
-            + 'kolmion reunoilla kaartuvat Albertin kaksi kiehkuraa.',
+          selite: 'Julkisivu koko leveydeltään: kaariportaaleja ja '
+            + 'hautakaaria valkoisen ja vihreän marmorin ruuduissa, ja '
+            + 'yläosan reunoilla Albertin kaksi kiehkuraa.',
           lahde: 'Jebulon, Wikimedia Commons (CC0)',
         },
       ],
@@ -360,9 +350,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Bronze David by Donatello-Bargello.jpg',
           selite: 'Donatellon pronssinen Daavid museosalissa: alaston nuori '
-            + 'mies seisoo hattu päässä, miekka oikeassa kädessä ja toinen '
-            + 'jalka Goljatin irti hakatun pään päällä. Pinta on '
-            + 'tummanruskeaa, kiiltäväksi hiottua pronssia.',
+            + 'mies hattu päässä, miekka kädessä ja jalka Goljatin pään '
+            + 'päällä.',
           lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -7115,8 +7104,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Kiev Golden Gate.jpg',
           selite: 'Kultainen portti puistikon laidalla: jälleenrakennettu '
-            + 'porttitorni kultakupolisine kirkkoineen. Alaosan harmaa '
-            + 'betonikuori pitää sisällään portin säilyneet muurinpätkät.',
+            + 'porttitorni kultakupolisine kirkkoineen, ja alaosan harmaan '
+            + 'betonikuoren sisällä ovat portin säilyneet muurinpätkät.',
           lahde: 'Луц Фишер-Лампрехт, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -7671,7 +7660,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Воронцовський маяк та грузовий порт.jpg',
           selite: 'Vorontsovin majakka aallonmurtajan päässä omalla pyöreällä '
-            + 'jalustallaan. Takana näkyy rahtisatama nostureineen.',
+            + 'jalustallaan, takana rahtisatama nostureineen.',
           lahde: 'SvetlanaM85, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -17127,6 +17116,12 @@ export const NAHTAVYYSJUTUT = {
    * tarkistettu koko js/packs-hakemistosta: yksikään ei esiinny
    * muualla.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E8 (Raamattu "TEKSTIEN PAINOPISTE",
+   * omistajan tarkennus "kuvateksti on YKSI virke"): tämän kaupungin
+   * monivirkkeiset selite-kentät tiivistettiin yhteen virkkeeseen.
+   * Juttujen teksti-kentät, kuvatiedostot ja lahde-rivit ennallaan.
+   */
   tripoli: {
     'Marcus Aureliuksen riemukaari': {
       aika: '165',
@@ -17156,22 +17151,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Marcus Aurelius Arch Tripoli Libya.jpg',
-          selite: 'Riemukaari kaivetun aukion perällä. Marmorinen '
-            + 'nelisivuinen kaari seisoo katutasoa alempana, ja sen '
-            + 'ympärillä on nurmea ja kaiteella eristetty kaivausalue, '
-            + 'jonka reunoilla makaa pylväänpätkiä. Takana kohoaa '
-            + 'valkoisia taloja ja palmuja.',
+          selite: 'Riemukaari kaivetun aukion perällä katutasoa alempana, '
+            + 'ympärillä nurmea ja kaiteella eristetty kaivausalue, jonka '
+            + 'reunoilla makaa pylväänpätkiä.',
           lahde: 'Daniel and Kate Pett, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Front view of Marcus Aurelius Arch.jpg',
-          selite: 'Kaaren alta katsottuna: etummaisen holvin takaa '
-            + 'näkyy vastakkainen kaariaukko, ja niiden välissä kaartuu '
-            + 'kasettikoristeltu kupoli, jonka kivipaneelit ovat '
-            + 'kuluneet mutta kuviot yhä erottuvat. Aukosta erottuu '
-            + 'palmuja ja valkoinen talo vihreäkärkisine minareetteineen. '
-            + 'Kaaren alla seisoo kaksi nuorta miestä, joista näkee, '
-            + 'kuinka korkea rakennus on.',
+          selite: 'Kaaren alta katsottuna: etummaisen holvin takaa näkyy '
+            + 'vastakkainen kaariaukko, ja niiden välissä kaartuu '
+            + 'kasettikoristeltu kupoli kuluneine kivipaneeleineen.',
           lahde: 'أوس, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17208,11 +17197,9 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Darghut Mosque Exterior Tripoli Libya.JPG',
           selite: 'Darghutin moskeija ja hautakammio kadulta: matala '
-            + 'valkoiseksi kalkittu rakennusryhmä, jonka katolla '
-            + 'kohoaa rivi pyöreitä kupoleita. Oikealla nousee '
-            + 'valkoinen minareetti, jonka parvekkeen yläpuolella on '
-            + 'okrankeltainen kärkiosa. Edessä on kadunvarsi ja '
-            + 'pysäköityjä autoja.',
+            + 'valkoiseksi kalkittu rakennusryhmä, jonka katolla kohoaa '
+            + 'rivi pyöreitä kupoleita ja oikealla valkoinen minareetti '
+            + 'okrankeltaisine kärkiosineen.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17247,9 +17234,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Old City’s Clock Tower.jpg',
           selite: 'Kellotornin yläosa alaviistosta kirkasta taivasta '
-            + 'vasten: vaalea kaksikerroksinen huippu, jonka kulmissa '
-            + 'on parittain pylväitä, ja kellotaulu kahdella näkyvällä '
-            + 'sivulla. Räystäslistan yllä lentää lintuja.',
+            + 'vasten: vaalea kaksikerroksinen huippu, jonka kulmissa on '
+            + 'parittain pylväitä ja kahdella sivulla kellotaulu.',
           lahde: 'Mohamed Hwedi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17296,10 +17282,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'The Red Castle.jpg',
           selite: 'Linna vedenrajasta kuvattuna iltavalossa: matala '
-            + 'hiekankeltainen linnoitusmassa jatkuu pitkänä koko '
-            + 'kuvan poikki, ja sen päällä erottuu kaaririvi. Edessä '
-            + 'oleva tyyni lampi heijastaa rakennuksen ja oranssin '
-            + 'taivaan.',
+            + 'hiekankeltainen linnoitusmassa kaaririveineen jatkuu koko '
+            + 'kuvan poikki, ja edessä oleva tyyni lampi heijastaa sen.',
           lahde: 'Abdulfatah Amr, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17340,19 +17324,15 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Ahmed Pasha Karamanli Mosque Interior Tripoli Libya.JPG',
           selite: 'Rukoussali sisältä: paksut vaaleat marmoripylväät '
-            + 'seisovat riveissä ja niiden päältä nousevat valkoiset '
-            + 'holvit kupoleihin. Kattoon on ripustettu kristallikruunuja, '
-            + 'seinässä on värilasi-ikkuna, ja lattialla on maton '
-            + 'päällä muutama rukoilija.',
+            + 'seisovat riveissä ja niiden päältä nousevat valkoiset holvit '
+            + 'kupoleihin, joista riippuu kristallikruunuja.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'المدينة القديمة-جامع احمد باشا.jpg',
-          selite: 'Moskeijan katupuoli: valkoinen kaarikäytävä, jonka '
-            + 'kaaret on raidoitettu ruskealla ja valkoisella kivellä '
-            + 'ja joiden holveissa riippuu lyhtyjä. Takana kohoaa '
-            + 'valkoinen minareetti, jonka parvekkeen yläpuolella on '
-            + 'vihreä suippokärki.',
+          selite: 'Moskeijan katupuoli: valkoinen kaarikäytävä '
+            + 'ruskeavalkoisin raidoitetuin kaarin ja lyhtyineen, ja takana '
+            + 'kohoaa minareetti vihreine suippokärkineen.',
           lahde: 'WisiW, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17390,19 +17370,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2 Tripoli En-Naga mosque (51791288947).jpg',
-          selite: 'Moskeijan pihakäytävä: valkoisiksi kalkitut '
-            + 'suippokaaret lepäävät paksujen kivipylväiden päällä, ja '
-            + 'pylväiden kapiteelit ovat selvästi vanhempaa ja '
-            + 'karkeampaa kiveä kuin muu rakennus. Kaarien takana on '
-            + 'vihreiksi maalattuja ovia ja lattialla itämaisia mattoja.',
+          selite: 'Moskeijan pihakäytävä: valkoisiksi kalkitut suippokaaret '
+            + 'lepäävät paksujen kivipylväiden päällä, joiden kapiteelit '
+            + 'ovat selvästi vanhempaa ja karkeampaa kiveä kuin muu '
+            + 'rakennus.',
           lahde: 'Libyan Studies, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Naga Mosque Exterior Tripoli Libya.JPG',
           selite: 'Moskeijan ulkosivu kujalta: umpinainen valkoiseksi '
             + 'kalkittu seinä, jossa on vain muutama pieni ikkuna '
-            + 'korkealla. Kujaa pitkin kävelee valkoasuinen mies, ja '
-            + 'seinien yli kulkee sähköjohtoja.',
+            + 'korkealla, ja kujaa pitkin kävelee valkoasuinen mies.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17447,12 +17425,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tripoli - Gurgi-Moschee 1833 bis 34 erbaut, Eingangstor.jpg',
-          selite: 'Moskeijan sisäänkäynti kujalta. Vihreä kaksiosainen ovi '
-            + 'on koristeltu valkoisilla tähtinapeilla, ja sen ympärillä '
-            + 'on marmorista veistetty suippokaari. Kehystä reunustavat '
-            + 'sini-vihreät kaakelinauhat, yläpuolella on '
-            + 'arabiankielinen laattataulu, ja seinään on kiinnitetty '
-            + 'kilpi, jossa lukee moskeijan nimi.',
+          selite: 'Moskeijan sisäänkäynti kujalta: vihreä kaksiosainen ovi '
+            + 'valkoisine tähtinappeineen, ympärillään marmorista veistetty '
+            + 'suippokaari ja sini-vihreät kaakelinauhat.',
           lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],

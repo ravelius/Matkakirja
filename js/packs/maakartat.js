@@ -3477,23 +3477,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/edinburgh-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
     esittely: 'Edinburgh seisoo sammuneen tulivuoren päällä. Kallio '
       + 'jähmettyi noin 350 miljoonaa vuotta sitten niin kovaksi, '
       + 'ettei jäätikkö jaksanut kuluttaa sitä: jää kiersi kallion ja '
-      + 'kaivoi maan sen molemmilta puolilta, mutta taakse jäi pitkä '
-      + 'loiva rinne. Kallion laelle rakennettiin linna ja rinteelle '
-      + 'kaupunki, kapealle harjanteelle, jonne pääsi vain yhtä '
-      + 'tietä.\n\nKartalla näkyy kaksi kaupunkia vierekkäin. '
-      + 'Alaosassa kulkee vanhankaupungin harjanne: yksi katu linnalta '
-      + 'Holyroodin palatsille, vajaat kaksi kilometriä, ja sen '
-      + 'molemmin puolin kapeita kujia kuin kalanruotoja. Yläosassa on '
-      + 'Uusikaupunki, jonka suorat kadut ja aukiot muodostavat '
-      + 'ruudukon. Sitä alettiin rakentaa vuonna 1767, kun vanha '
-      + 'harjanne oli tullut täyteen. Kaupunkien välissä on vihreä '
-      + 'notko. Siellä oli ennen tekojärvi nimeltä Nor Loch; se '
-      + 'laskettiin kuiviin 1700-luvun lopulla, ja nyt notkossa on '
-      + 'puisto ja rautatie. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+      + 'jätti taakseen pitkän loivan rinteen. Laelle rakennettiin '
+      + 'linna ja rinteelle kaupunki kapealle harjanteelle, jonne '
+      + 'pääsi vain yhtä tietä; vanhankaupungin ainoa pääkatu kulkee '
+      + 'linnalta Holyroodin palatsille. Kun harjanne tuli täyteen, '
+      + 'vuodesta 1767 alettiin rakentaa suorakatuista uuttakaupunkia '
+      + 'notkon toiselle puolelle. Notkossa oli ennen tekojärvi Nor '
+      + 'Loch, joka laskettiin kuiviin 1700-luvun lopulla; nyt siinä '
+      + 'on puisto ja rautatie. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * Charlotte Squaresta ei ole suomenkielistä artikkelia, joten se
@@ -3513,24 +3513,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/marseille-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
     esittely: 'Marseille on rakennettu valkoisten kalkkikivikukkuloiden '
       + 'muodostamaan kulhoon, joka aukeaa länteen merelle. Kulhon '
-      + 'pohjassa on kapea luonnonpoukama, noin kilometrin mittainen '
-      + 'halkeama rannassa. Poukama on suojassa mistraalilta, '
-      + 'kylmältä tuulelta, joka syöksyy tänne luoteesta. Juuri siksi '
-      + 'kreikkalaiset purjehtijat pysähtyivät tähän noin 600 eaa. ja '
-      + 'perustivat Massalian. Makeaa vettä kukkuloilla ei sen sijaan '
-      + 'ollut juuri lainkaan: lopulta se tuotiin 80 kilometrin päästä '
-      + 'kanavaa pitkin, ja kanava valmistui vuonna 1849.\n\nKartan '
-      + 'keskellä on tuo poukama, Vanhasatama. Vesiallas on noin 900 '
-      + 'metriä pitkä ja 400 metriä leveä, ja sitä reunustaa laituri '
-      + 'kolmelta sivulta. Nykyään siinä on huviveneitä, ei '
-      + 'rahtilaivoja: isot laivat siirtyivät pohjoisempiin '
-      + 'satama-altaisiin 1800-luvun puolivälissä. Pohjoispuolella '
-      + 'kohoaa kukkulalle vanha kaupunginosa Le Panier, ja etelässä '
-      + 'nousee 149 metriä korkea kalliokieleke, jonka laella on '
-      + 'Notre-Dame de la Garde. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+      + 'pohjassa on kapea luonnonpoukama, joka on suojassa '
+      + 'mistraalilta, luoteesta syöksyvältä kylmältä tuulelta — juuri '
+      + 'siksi kreikkalaiset purjehtijat pysähtyivät tähän noin 600 '
+      + 'eaa. ja perustivat Massalian. Poukama on Vanhasatama, noin '
+      + '900 metriä pitkä ja 400 metriä leveä allas, jossa on nykyään '
+      + 'huviveneitä: rahtilaivat siirtyivät pohjoisempiin '
+      + 'satama-altaisiin 1800-luvun puolivälissä. Makeaa vettä '
+      + 'kukkuloilla ei ollut juuri lainkaan, ja lopulta se tuotiin 80 '
+      + 'kilometrin päästä kanavaa pitkin, joka valmistui 1849. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Saint-Victorin kirkosta ja Saint-Charlesin asemasta ei ole
@@ -3748,24 +3747,24 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/dublin-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 53.355, etela: 53.335, lansi: -6.294, ita: -6.244 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
     esittely: 'Dublinilla on kaksi nimeä, ja molemmat kertovat vedestä. '
       + 'Iirinkielinen Baile Átha Cliath tarkoittaa risuista tehdyn '
       + 'kahlaamon kaupunkia: Liffey-joen yli päästiin kävellen '
       + 'kohdassa, johon oli ladottu punottuja risuaitoja. '
-      + 'Englanninkielinen Dublin taas tulee sanoista dubh linn eli '
-      + 'musta lammikko. Se oli tumma vuorovesiallas siinä, missä pieni '
+      + 'Englanninkielinen Dublin tulee sanoista dubh linn eli musta '
+      + 'lammikko — tumma vuorovesiallas siinä, missä pieni '
       + 'Poddle-joki laski Liffeyhin. Viikingit perustivat altaan '
-      + 'rannalle tukikohdan vuonna 841 ja pitivät siinä laivojaan. '
-      + 'Allas on nykyään Dublinin linnan takapiha.\n\nKartan halki '
-      + 'kulkee Liffey. Sen lähde on vuorilla vain runsaan '
-      + 'kahdenkymmenen kilometrin päässä etelässä, mutta joki kiertää '
-      + 'sisämaan kautta pitkän lenkin ennen kuin palaa tänne mereen. '
-      + 'Joki jakaa kaupungin pohjoiseen ja eteläiseen puoleen, ja '
-      + 'tällä kartalla sen ylittää toistakymmentä siltaa. Kuuluisin on '
-      + 'valurautainen Ha’penny-silta vuodelta 1816: sen yli sai '
-      + 'kävellä puolen pennin maksusta, ja maksua perittiin sata '
-      + 'vuotta. Pohjoispuolella kohoaa 120 metriä korkea teräsneula '
-      + 'Spire. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'rannalle tukikohdan vuonna 841 ja pitivät siinä laivojaan; '
+      + 'allas on nykyään Dublinin linnan takapiha. Liffey jakaa '
+      + 'kaupungin pohjoiseen ja eteläiseen puoleen, ja keskustassa '
+      + 'sen ylittää toistakymmentä siltaa, joista kuuluisin on '
+      + 'valurautainen Ha’penny-silta vuodelta 1816. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Dublinin linnasta ja Ha’penny-sillasta ei ole suomenkielistä
@@ -4083,26 +4082,24 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 32.90291, etela: 32.89219, lansi: 13.17154, ita: 13.18466,
     },
     varikartta: 'assets/kartat/tripoli-varikartta.png',
-    esittely: 'Tripolin vanhakaupunki näkyy kartalla yhtenä selvänä '
-      + 'kuviona: tumma viiva kiertää viisikulmion, ja sen sisällä on '
-      + 'yhtenäinen vaalea ala muutamine ohuine viivoineen. Viiva on '
-      + 'kaupunginmuuri, ja ala on medina — se näyttää kartalla '
-      + 'tyhjältä siksi, että sen kujat ovat liian kapeita ajettaviksi '
-      + 'eikä niitä ole kaikkia edes merkitty karttoihin. Viisikulmion '
-      + 'muodon vanhakaupunki sai '
-      + '1500-luvun puolivälissä, kun ottomaanien ensimmäinen '
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartta rajaa Tripolin vanhankaupungin eli medinan, jota '
+      + 'kiertää viisikulmion muotoinen kaupunginmuuri. Muodon '
+      + 'vanhakaupunki sai 1500-luvun puolivälissä, kun ottomaanien '
       + 'käskynhaltija Darghut rakensi linnoitukset uudelleen. Muurin '
       + 'sisäpuoli on vain noin kuudensadan metrin levyinen, eli koko '
       + 'medina kävellään ristiin vartissa.\n\n'
       + 'Kaupunki on paljon muuriaan vanhempi. Foinikialaiset '
       + 'perustivat tähän Oean, ja roomalaisajan suora ristikkokaava '
-      + 'on yhä kujaverkon alla. Kahden pääkadun risteykseen '
-      + 'pystytettiin vuonna 165 Marcus Aureliuksen riemukaari, joka '
-      + 'on kartan pohjoisosassa. Kaakkoisnurkassa muurin ulkopuolella '
-      + 'kohoaa Punainen linna omalla kalliollaan, ja sen takana '
-      + 'kartta jatkuu satamaan: meri tulee kuvaan ylhäältä ja '
-      + 'oikealta, sillä medina on niemekkeellä. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+      + 'on yhä kujaverkon alla; kahden pääkadun risteykseen '
+      + 'pystytettiin vuonna 165 Marcus Aureliuksen riemukaari. Muurin '
+      + 'ulkopuolella kohoaa Punainen linna omalla kalliollaan, ja sen '
+      + 'takana alkaa satama. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * SEITSEMÄN KOHDETTA pohjoisesta etelään (kohdemäärien nosto
@@ -4391,17 +4388,19 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/venetsia-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
     esittely: 'Venetsia on rakennettu 118 saarelle keskelle matalaa '
-      + 'laguunia. Talot seisovat miljoonien puupaalujen varassa, '
-      + 'jotka lyötiin pohjamutaan satoja vuosia sitten ja ovat '
-      + 'säilyneet hapettomassa liejussa kovina kuin kivi. Saaret on '
+      + 'laguunia, ja talot seisovat miljoonien puupaalujen varassa: '
+      + 'hapettomassa liejussa puu ei lahoa vaan kovettuu. Saaret on '
       + 'ommeltu yhteen sadoilla silloilla, ja jokainen niistä '
-      + 'ylitetään jalan.\n\nKartan halki kaartaa S-kirjaimen '
-      + 'muotoinen Canal Grande, kaupungin pääkatu: se on lähes neljä '
-      + 'kilometriä pitkä, ja sen yli pääsee kuivin jaloin vain '
-      + 'neljästä kohdasta. Muualla kanavan ylittää traghetto, iso '
-      + 'gondoli, jossa matkustajat seisovat koko matkan ajan. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'ylitetään jalan. Alueen halki kaartaa Canal Grande, kaupungin '
+      + 'lähes neljä kilometriä pitkä pääkatu, jonka yli pääsee kuivin '
+      + 'jaloin vain neljästä kohdasta. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi seuraa Canal Grandea lännestä itään, eli samassa
@@ -4600,25 +4599,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/sofia-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.705, etela: 42.681, lansi: 23.312, ita: 23.345 },
-    esittely: 'Sofia on tasaisessa laaksossa noin 550 metrin '
-      + 'korkeudessa. Etelässä kohoaa Vitosha-vuori ja pohjoisessa '
-      + 'Balkanvuoret, ja niiden välinen sola on ollut kulkureitti '
-      + 'Keski-Euroopasta Istanbuliin. Kaupunki syntyi silti veden '
-      + 'takia: maan alla on 49 kivennäis- ja lämpölähdettä, ja '
-      + 'roomalaiset rakensivat niiden ympärille kaupungin nimeltä '
-      + 'Serdica. Keskustan hanoista tulee yhä lämmintä lähdevettä. '
-      + 'Isoa jokea täällä ei ole, vain kaksi pientä: Vladajska ja '
-      + 'Perlovska.\n\nKartalla sen näkee heti: leveät bulevardit '
-      + 'lähtevät keskustasta säteinä joka suuntaan kuin pyörän puolat, '
-      + 'eikä yksikään joki katkaise niitä. Keskeltä oikealta erottuu '
-      + 'soikea aukio, ja sen keskellä seisoo Aleksanteri Nevskin '
-      + 'katedraali. Alaoikealla kulkee vinosti vaalea nauha: se on '
-      + 'Perlovska, joka on kaivettu aivan suoraksi. Nauhan takana '
-      + 'levittäytyy Borisovan puutarha polkuineen ja järvineen. '
-      + 'Alavasemmalla on iso aukea, jonka reunassa kohoaa '
-      + 'Kansalliskulttuuripalatsi. Vanha keskusta on ylhäällä '
-      + 'vasemmalla, mutta se ei erotu: siellä kadut vain tihenevät. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, nauhojen ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Sofian keskusta, joka syntyi lämpimien '
+      + 'lähteiden ympärille: maan alla on 49 kivennäis- ja '
+      + 'lämpölähdettä, ja roomalaiset rakensivat niiden päälle '
+      + 'Serdican. Lähteiden kohdalla seisoo vuonna 1913 valmistunut '
+      + 'mineraalikylpylä, jossa toimii nyt kaupunginmuseo, ja aivan '
+      + 'sen tuntumassa kaupungin vanhin rakennus eli 300-luvun Pyhän '
+      + 'Yrjön rotunda. Idässä ovat Aleksanteri Nevskin katedraali ja '
+      + 'Sofian yliopisto, joka aloitti 1888. Kaakossa levittäytyy '
+      + 'Borisovan puutarha vuodelta 1884 ja etelässä '
+      + 'Kansalliskulttuuripalatsi. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään.
@@ -4657,25 +4654,24 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
         x: 3, y: 9, leveys: 26, korkeus: 24.86 },
     ],
-    esittely: 'Bukarest on keskellä Valakian tasankoa, Karpaattien ja '
-      + 'Tonavan välissä. Tonavalle on täältä noin 60 kilometriä '
-      + 'etelään. Kaupunki kasvoi Dâmbovița-joen varteen: joki toi '
-      + 'veden, ja ympärillä oli tammimetsää ja soita, joiden suojaan '
-      + 'oli helppo kadota. Ensimmäisen kerran Bukarest mainitaan '
-      + 'asiakirjassa vuonna 1459, ja sen antoi ruhtinas Vlad III. '
-      + 'Dâmbovița on 286 kilometriä pitkä ja laskee '
-      + 'Argeș-jokeen.\n\nKartan halki kulkee vaalea, hämmästyttävän '
-      + 'suora nauha. Se on Dâmbovița, joka kaivettiin 1880-luvulla '
-      + 'suoraksi kanavaksi, jottei se enää tulvisi. Ylhäällä '
-      + 'vasemmalla on iso vihreä laikku ja sen keskellä mutkitteleva '
-      + 'järvi: Cișmigiun puutarha. Oikealla erottuu sokkelo kapeita '
-      + 'kujia — se on vanhakaupunki, ainoa osa Bukarestia, jossa kadut '
-      + 'eivät ole suoria. Alhaalla vasemmalla ammottaa outo tyhjä '
-      + 'alue: siellä seisoo Parlamenttipalatsi, jonka tieltä purettiin '
-      + 'kokonainen kaupunginosa. Vasemmassa ylänurkassa on oma pieni '
-      + 'kartta kilometrin päästä pohjoisesta, ja sen tähtimäisessä '
-      + 'risteyksessä seisoo Antipan museo. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, nauhojen ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Bukarestin keskusta Dâmbovița-joen '
+      + 'molemmin puolin. Pohjoisessa on Romanian ateneum, vuonna 1888 '
+      + 'vihitty konserttitalo, ja sen lounaispuolella Cișmigiun '
+      + 'puutarha, kaupungin vanhin puisto vuodelta 1847. Keskellä ovat '
+      + 'Yliopiston aukio vuodelta 1857 ja vanhakaupunki, jossa '
+      + 'seisovat Stavropoleoksen luostarikirkko vuodelta 1724 ja '
+      + 'Vanhan ruhtinaanhovin rauniot — Valakian ruhtinaiden linna '
+      + 'vuodelta 1459. Lounaassa kohoaa Parlamenttipalatsi, jonka '
+      + 'tieltä purettiin kokonainen kaupunginosa. Kainalokartassa on '
+      + 'Antipan luonnontieteellinen museo kilometrin päässä '
+      + 'pohjoisessa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: ateneumilta vanhaankaupunkiin
@@ -4716,24 +4712,24 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/sarajevo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
-    esittely: 'Sarajevo on kapeassa laaksossa noin 500 metrin '
-      + 'korkeudessa. Laakson pohjalla virtaa Miljacka-joki, ja joka '
-      + 'suunnalla kohoaa vuoria: Trebević, Jahorina, Bjelašnica ja '
-      + 'Igman. Samoilla vuorilla hiihdettiin talviolympialaisissa '
-      + 'vuonna 1984. Kaupunki syntyi kohtaan, jossa vuoristotie ylitti '
-      + 'joen ja maasta nousi lähteitä. Osmanien käskynhaltija Isa-beg '
-      + 'Ishaković rakennutti tänne 1460-luvulla basaarin, sillan ja '
-      + 'majatalon, ja niiden ympärille kasvoi kaupunki. Nimi tulee '
-      + 'turkin sanasta saray, joka tarkoittaa hallitsijan '
-      + 'taloa.\n\nKartta on leveä ja matala, koska laakso on: taloja '
-      + 'mahtuu vain idästä länteen. Miljacka kulkee kuvan halki '
-      + 'vaaleana nauhana ja tekee oikealla suuren mutkan, jossa laakso '
-      + 'kapenee rotkoksi. Joen yläpuolella rinne on täynnä ohuita '
-      + 'mutkittelevia katuja, jotka kiipeävät ylös. Alapuolella '
-      + 'Trebevićin rinne on melkein tyhjä: se on liian jyrkkä, ja '
-      + 'sinne nousee vain muutama serpentiinitie. Keskellä erottuu '
-      + 'tiheä kujaruudukko, ja se on Baščaršijan basaari. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, rinteiden ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Sarajevon vanha ydin Miljacka-joen '
+      + 'laaksossa, ja se kulkee lännestä itään kuten laaksokin. '
+      + 'Lännessä on Pyhän Sydämen katedraali vuosilta 1884–1889, ja '
+      + 'siitä itään alkaa Baščaršija, vuonna 1462 perustettu basaari, '
+      + 'jossa oli parhaimmillaan tuhansia puoteja. Basaarin laidalla '
+      + 'on Gazi Husrev-begin moskeija vuodelta 1531 ja joen rannassa '
+      + 'maurilaistyylinen kaupungintalo Vijećnica. Latinalaissilta on '
+      + 'nykyisessä asussaan vuosilta 1798–1799, ja sen pohjoispäässä '
+      + 'ammuttiin arkkiherttua Frans Ferdinand vuonna 1914. Idässä '
+      + 'kalliolla seisoo Keltainen linnake, 1700-luvun tykkilinnoitus, '
+      + 'jolta näkyy koko vanhakaupunki. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi lännestä itään, koska laakso kulkee niin.
@@ -4772,25 +4768,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kiova-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.47, etela: 50.44, lansi: 30.499, ita: 30.539 },
-    esittely: 'Kiova seisoo Dneprin länsirannalla, kohdassa jossa joen '
-      + 'törmä nousee jyrkäksi kukkulaksi. Paikka valittiin kahdesta '
-      + 'syystä. Kukkulan laella oli helppo puolustautua, ja sen '
-      + 'juurella, joen rannassa, oli suojaisa satama. Dnepr oli '
-      + 'keskiajan valtatie: sitä pitkin kuljettiin pohjoisen metsistä '
-      + 'etelän kaupunkeihin, ja Kiova oli matkan puolivälissä. Siksi '
-      + 'kaupunki kasvoi kahteen kerrokseen: ylhäällä kirkkojen ja '
-      + 'porttien yläkaupunki, alhaalla Podil eli alakaupunki.\n\nKartan '
-      + 'yläreunassa on Podilin suora ruudukko aivan joen rannassa. Sen '
-      + 'alapuolella levittäytyy vaalea vihreä vyö: se on jyrkkä rinne, '
-      + 'jota pitkin noustaan ylös. Rinteen laella kadut kiemurtelevat, '
-      + 'ja siellä ovat kartan vanhimmat kohteet. Oikeassa yläkulmassa '
-      + 'kaartaa Dnepr. Se on niin leveä, ettei kartta piirrä sitä '
-      + 'yhtenä vetenä: näkyviin tulevat vain sen rannat omina '
-      + 'viivoinaan, ja niiden väliin jäävä vaalea kaista on itse joki. '
-      + 'Keskeltä lähtee alaviistoon leveä '
-      + 'katu, Hreštšatyk: se on 1,2 kilometriä pitkä ja kulkee '
-      + 'Itsenäisyyden aukion halki. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, rinteiden ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Kiovan vanha ydin Dneprin länsirannalla, '
+      + 'ja se on kahdessa kerroksessa: rannassa alakaupunki Podil, '
+      + 'jyrkän rinteen päällä yläkaupunki. Podilissa on Kontraktovan '
+      + 'aukio, seudun vilkkain kauppapaikka 1800-luvulla. Rinteen '
+      + 'laella seisovat Andreaksen kirkko vuosilta 1747–1754, Pyhän '
+      + 'Mikaelin kultakupolinen luostari ja Pyhän Sofian katedraali, '
+      + 'joka valmistui ilmeisesti vuonna 1037 ja kuuluu Unescon '
+      + 'maailmanperintöön. Etelämpänä ovat Itsenäisyyden aukio ja '
+      + 'Kultainen portti, kaupunginmuurin pääsisäänkäynti '
+      + '1000-luvulta, joka rakennettiin uudelleen 1982. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: Podilista rinnettä ylös
@@ -4957,23 +4951,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/odessa-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
-    esittely: 'Odessa on Mustanmeren rannalla kohdassa, jossa maa loppuu '
-      + 'jyrkkään törmään. Törmän alla on suojainen lahti, johon laivat '
-      + 'pääsevät tuulelta piiloon, ja törmän päällä on tasainen aro, '
-      + 'jolle mahtuu kokonainen kaupunki. Satamalle annettiin käsky '
-      + 'vuonna 1794, ja siitä lasketaan Odessan ikä. Kaupunki oli heti '
-      + 'kauppasatama: viljalastit tulivat aroa pitkin ja lähtivät '
-      + 'täältä laivoilla maailmalle. Talot tehtiin '
-      + 'simpukkakalkkikivestä, jota louhittiin suoraan kaupungin '
-      + 'alta.\n\nKartan oikea kolmannes on merta. Yläreunassa on '
-      + 'satama: laiturit työntyvät veteen kuin sormet, ja niiden '
-      + 'ulkopuolella kaartaa aallonmurtaja, jonka kärjessä seisoo '
-      + 'majakka. Vasemmalla ja alhaalla levittäytyy suora ruudukko. Se '
-      + 'ei ole kasvanut itsekseen vaan piirrettiin kerralla valmiiksi, '
-      + 'ja siksi kadut jatkuvat suorina kilometrikaupalla. Ruudukon ja '
-      + 'sataman välissä on jyrkkä rinne, ja sitä ylös nousevat '
-      + 'Potjomkinin portaat. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, ruudukon ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Odessan keskusta ja satama meren äärellä. '
+      + 'Sataman suulla seisoo Vorontsovin majakka, jonka valo vilkkuu '
+      + 'kolme pitkää — morseaakkosten O niin kuin Odessa. Sataman ja '
+      + 'keskustan välillä nousevat Potjomkinin portaat vuosilta '
+      + '1837–1841, ja niiden yläpuolelta alkaa ruutukaava, jonka '
+      + 'ranskalainen insinööri piirsi kerralla valmiiksi. Keskustassa '
+      + 'ovat vuonna 1887 avattu oopperatalo ja Kaupunginpuisto, '
+      + 'kaupungin vanhin puisto vuodelta 1803. Etelämpänä on Privozin '
+      + 'tori vuodelta 1827, Odessan suurin ruokatori. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: majakalta satamaan, portaita
@@ -5176,23 +5169,23 @@ export const KAUPUNKIKARTAT = {
     // --vari).
     piirtoRajat: { pohjoinen: 43.78325, etela: 43.75525, lansi: 11.2349, ita: 11.2781 },
     varikartta: 'assets/kartat/firenze-varikartta.png',
-    esittely: 'Firenzen vanhakaupunki on pieni: kartan reunasta reunaan on '
-      + 'noin kaksi kilometriä, ja kaikki kohteet ovat kävelymatkan päässä '
-      + 'toisistaan. Kaupunki alkoi roomalaisena varuskuntana vuonna 59 '
-      + 'eaa., ja sen suorakulmainen sotilasruutukaava on yhä kartalla '
-      + 'näkyvissä keskellä muuten mutkittelevaa kujaverkkoa. Keskiajalla '
-      + 'kaupunki kasvoi villakankaan ja pankkien varassa niin isoksi, '
-      + 'että se joutui rakentamaan muurinsa kolmesti uudelleen. Viimeiset '
-      + 'muurit purettiin 1860-luvulla, kun Firenze oli Italian '
-      + 'pääkaupunki, ja niiden paikalle tuli leveä kehäkatujen '
-      + 'rengas — se erottuu kartalla vanhan ytimen ympärillä.\n\nArno '
-      + 'virtaa kartan halki lännestä itään ja jakaa kaupungin kahtia. '
-      + 'Pohjoispuolella on vanha ydin: Duomon kupoli, Signorian aukio ja '
-      + 'Uffizi joen rannassa. Eteläpuolta sanotaan Oltrarnoksi eli '
-      + '"Arnon takaiseksi", ja siellä ovat käsityöläisten korttelit ja '
-      + 'Bobolin puutarhan iso vihreä kiila. Joen yli johtaa useita '
-      + 'siltoja, joista vanhin ja kuuluisin on Ponte Vecchio — kartalla '
-      + 'se erottuu siitä, että sen päällä on taloja.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Firenzen vanhakaupunki mahtuu noin kahden kilometrin '
+      + 'levyiselle alalle, joten kaikki kohteet ovat kävelymatkan '
+      + 'päässä toisistaan. Kaupunki alkoi roomalaisena varuskuntana vuonna 59 '
+      + 'eaa., ja sen suorakulmainen sotilasruutukaava on yhä '
+      + 'nähtävissä keskellä muuten mutkittelevaa kujaverkkoa. '
+      + 'Keskiajalla kaupunki kasvoi villakankaan ja pankkien varassa '
+      + 'niin isoksi, että muurit jouduttiin rakentamaan kolmesti '
+      + 'uudelleen; viimeiset purettiin 1860-luvulla, kun Firenze oli '
+      + 'Italian pääkaupunki. Arno jakaa kaupungin kahtia: '
+      + 'pohjoispuolella ovat Duomo, Signorian aukio ja Uffizi, '
+      + 'eteläpuolella eli Oltrarnossa käsityöläisten korttelit ja '
+      + 'Bobolin puutarha.',
     kohteet: [
       /*
        * NELJÄ ANSAA fi.wikipediassa, kaikki tarkistettu
@@ -5232,33 +5225,25 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/dubrovnik-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
     esittely: 'Dubrovnik on kaupunki muurin sisällä. Vanhakaupunki on '
       + 'vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen '
-      + 'ympäri kiertää yhtenäinen kivimuuri, joka on paikoin '
-      + 'kuusi metriä paksu ja kaksikymmentäviisi metriä korkea. '
-      + 'Muurilla voi kävellä koko kierroksen. Kaupunki oli satojen '
-      + 'vuosien ajan oma pieni valtionsa, Ragusan tasavalta, jolla '
-      + 'oli omat lakinsa, oma laivastonsa ja oma tapansa selvitä '
-      + 'isompien naapureiden välissä: se maksoi veroa sekä '
-      + 'Venetsialle että sulttaanille eikä sotinut kummankaan '
-      + 'kanssa. Rikkaudet tulivat suolasta ja merenkulusta. '
-      + 'Kaupunki rakennettiin uudestaan kivestä vuoden 1667 '
-      + 'maanjäristyksen jälkeen, ja siksi talot ovat keskenään '
-      + 'samannäköisiä — samaa kiveä, samat kattotiilet, sama '
-      + 'korkeus.\n\nKartalla on melkein pelkkä vanhakaupunki, alle '
-      + 'kilometrin levyinen pala. Tumma viiva kuvan keskellä on '
-      + 'muuri, ja siitä erottuvat pyöreät tornit: ylhäällä on '
-      + 'Minčetan torni, kaupungin korkein kohta. Muurin sisällä '
-      + 'kulkee vasemmalta oikealle yksi leveä suora — se on Stradun, '
-      + 'kaupungin pääkatu, jonka molemmilta puolilta lähtee kapeita '
-      + 'kujia ja portaita rinnettä ylös. Kujat eivät näy kartalla '
-      + 'kaikki, koska ne ovat enimmäkseen portaita. Oikealla on '
-      + 'vanhasatama aallonmurtajineen, ja vasemmalla omalla '
-      + 'kalliollaan Lovrijenacin linnake, joka vartioi sisääntuloa '
-      + 'merelle päin. Lokrumin saari, jonne laivat joutuivat '
-      + 'odottamaan karanteeniin, on kartan ulkopuolella runsaan '
-      + 'kilometrin päässä kaakossa. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+      + 'ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu '
+      + 'ja kaksikymmentäviisi metriä korkea. Kaupunki oli satojen '
+      + 'vuosien ajan oma pieni valtionsa, Ragusan tasavalta, joka '
+      + 'maksoi veroa sekä Venetsialle että sulttaanille eikä sotinut '
+      + 'kummankaan kanssa; rikkaudet tulivat suolasta ja '
+      + 'merenkulusta.\n\nKartan alueella on lähes pelkkä '
+      + 'vanhakaupunki: muuri torneineen, korkeimpana Minčetan torni, '
+      + 'pääkatu Stradun ja siitä rinteeseen nousevat kujat ja '
+      + 'portaat, vanhasatama sekä omalla kalliollaan Lovrijenacin '
+      + 'linnake. Lokrumin saari, jonne laivat joutuivat odottamaan '
+      + 'karanteeniin, jää runsaan kilometrin päähän kaakkoon. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, kuten muillakin kartoilla.
@@ -5357,30 +5342,25 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/tromssa-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
     esittely: 'Tromssa on rakennettu saarelle. Tromsøya on noin '
-      + 'yhdeksän kilometriä pitkä ja kolme leveä, ja kaupungin '
-      + 'keskusta on sen itärannalla, kapean salmen varrella. Salmi '
-      + 'on Tromssan koko olemassaolon syy: se on syvä ja jäätyy '
-      + 'harvoin, koska Golfvirta tuo lämmintä vettä napapiirin '
-      + 'pohjoispuolelle asti. Siksi täältä pääsi merelle silloinkin, '
-      + 'kun Itämeri oli umpijäässä. Isoisän matkan aikaan 1870-luvulla '
-      + 'Tromssa oli noin viiden tuhannen asukkaan puukaupunki, josta '
-      + 'lähdettiin pohjoiseen: hylkeenpyytäjien ja jäämerenkalastajien '
-      + 'laivat purjehtivat täältä Huippuvuorille ja Novaja Zemljalle, '
-      + 'ja myöhemmin samasta satamasta lähtivät myös naparetkikunnat. '
-      + 'Kaupunkia sanottiin Pohjolan Pariisiksi, koska merimiehet '
-      + 'ihmettelivät, että näin kaukana pohjoisessa oli katulyhtyjä, '
-      + 'kauppoja ja soittokunta.\n\nKartalla on salmi keskellä ja kaksi '
-      + 'rantaa. Vasemmalla on saari ja sen keskusta, jossa kadut '
-      + 'kulkevat tiiviinä ruutuna rannan suuntaisesti — pisin niistä '
-      + 'on Storgata, kaupungin vanha pääkatu. Rannassa erottuvat '
-      + 'satamalaiturit sormina, ja niiden juurella on puinen '
-      + 'tuomiokirkko. Oikealla on manner, Tromsdalenin puoli, jonne '
-      + 'noustaan jyrkkää rinnettä; siellä sijaitsevat '
-      + 'Jäämerenkatedraali ja köysirata, joka vie vuorelle. Rantoja '
-      + 'yhdistää yksi kaari: Tromssan silta valmistui vuonna 1960, ja '
-      + 'sitä ennen salmen yli mentiin lautalla — aivan kuten Dubaissa. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'yhdeksän kilometriä pitkä ja kolme leveä, ja keskusta on sen '
+      + 'itärannalla kapean salmen varrella. Salmi on kaupungin koko '
+      + 'olemassaolon syy: se on syvä ja jäätyy harvoin, koska '
+      + 'Golfvirta tuo lämmintä vettä napapiirin pohjoispuolelle asti. '
+      + 'Isoisän matkan aikaan 1870-luvulla Tromssa oli noin viiden '
+      + 'tuhannen asukkaan puukaupunki, josta jäämerenkalastajien '
+      + 'laivat purjehtivat Huippuvuorille ja Novaja '
+      + 'Zemljalle.\n\nKartan alueella ovat saaren ruutumainen '
+      + 'keskusta, satamalaiturit ja puinen tuomiokirkko sekä salmen '
+      + 'toisella puolella Tromsdalenin rinne, jossa ovat '
+      + 'Jäämerenkatedraali ja köysirata. Rannat yhdistää Tromssan '
+      + 'silta vuodelta 1960. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, kuten Dubaissa ja Odessassa.

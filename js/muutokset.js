@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 963, teksti: 'v963: tekstiremontti valmis — E6-E8' },
   { v: 962, teksti: 'v962: opaskuvat pystyyn, Mosulin etusivu nykyaikaan' },
   { v: 961, teksti: 'v961: Singapore + tekstiremontti E4-E5' },
   { v: 960, teksti: 'v960: tekstiremontti E1-E3 — 15 Euroopan lehteä' },
