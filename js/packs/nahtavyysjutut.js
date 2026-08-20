@@ -9611,6 +9611,10 @@ export const NAHTAVYYSJUTUT = {
    * maakartat.js:n kommentissa: neljästä muusta ehdokkaasta ei
    * löytynyt yhtään vapaasti lisensoitua kuvaa ilman tunnistettavia
    * ihmisiä.
+   *
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R2: kuuden jutun selite-kentät on
+   * tiivistetty yhteen virkkeeseen. Juttujen leipätekstit, kuvat ja
+   * lähderivit ovat ennallaan.
    */
   jerusalem: {
     'Damaskoksen portti': {
@@ -9635,10 +9639,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'DAMASCUS GATE AND PART OF THE CITY WALL AROUND JERUSALEM. שער דמשק בעיר העתיקה בירושלים..jpg',
-          selite: 'Vanha valokuva Damaskoksen portista ylhäältä: '
-            + 'hammastettu portinpää työntyy ulos muurilinjasta, ja '
-            + 'takana levittäytyy vanhankaupungin kattomeri kupoleineen '
-            + 'ja kellotorneineen.',
+          selite: 'Vanha valokuva Damaskoksen portista ylhäältä: hammastettu '
+            + 'portinpää työntyy ulos muurilinjasta kattomeren edessä.',
           lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },
       ],
@@ -9665,9 +9667,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Holy Sepulchre BW 18.JPG',
-          selite: 'Golgatan kappeli: kullattu alttarikaari, sen keskellä '
-            + 'ristiinnaulittu ja molemmin puolin hopeiset hahmot, ja '
-            + 'edessä lasin alta näkyy paljas kallio.',
+          selite: 'Golgatan kappeli: kullattu alttarikaari hopeisine '
+            + 'hahmoineen, ja edessä lasin alta näkyy paljas kallio.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -9695,9 +9696,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Dome of the rock BW 14.JPG',
-          selite: 'Kalliomoskeija Öljymäeltä nähtynä: kullattu kupoli '
-            + 'kohoaa kahdeksankulmaisen laattapinnan päältä, ja '
-            + 'etualalla kulkee temppelivuoren itämuuri.',
+          selite: 'Kalliomoskeija Öljymäeltä: kullattu kupoli '
+            + 'kahdeksankulmaisen laattapinnan päällä ja etualalla '
+            + 'temppelivuoren itämuuri.',
           lahde: 'Berthold Werner, Wikimedia Commons (public domain)',
         },
       ],
@@ -9724,9 +9725,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Western Wall stones, closeup.jpg',
-          selite: 'Läntisen muurin kiviä läheltä: valtavia '
-            + 'reunahakattuja lohkareita, joiden pinta on kulunut '
-            + 'aalloiksi, ja pystysaumaan on työnnetty tiheästi '
+          selite: 'Läntisen muurin kiviä läheltä: valtavia reunahakattuja '
+            + 'lohkareita, joiden pystysaumaan on työnnetty tiheästi '
             + 'paperilappuja.',
           lahde: 'Danielrosehill, Wikimedia Commons (CC BY 4.0)',
         },
@@ -9755,9 +9755,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Jaffa Gate BW 1.JPG',
-          selite: 'Jaffan portin torni iltavalossa: hammastettu '
-            + 'kivimassa työntyy ulos muurilinjasta, ja kaariovi on '
-            + 'varjossa. Edessä on nuoria puita istutuskuopissaan.',
+          selite: 'Jaffan portin torni iltavalossa: hammastettu kivimassa '
+            + 'työntyy ulos muurilinjasta, ja kaariovi jää varjoon.',
           lahde: 'Berthold Werner, Wikimedia Commons (public domain)',
         },
       ],
@@ -9783,10 +9782,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Al-Aqsa Mosque BW 2010-09-21 06-38-12.JPG',
-          selite: 'Al-Aqsan julkisivu koko leveydeltään: vasemmalla '
-            + 'tumma lyijykupoli, keskellä kaari-ikkunoiden rivi ja '
-            + 'oikealla korkeampi kaarikäytävä. Edessä on tyhjä '
-            + 'kiveysaukio.',
+          selite: 'Al-Aqsan julkisivu: vasemmalla tumma lyijykupoli, '
+            + 'keskellä kaari-ikkunoiden rivi ja edessä tyhjä kiveysaukio.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13258,6 +13255,11 @@ export const NAHTAVYYSJUTUT = {
    * 2000-luvun korjauksia mainita lainkaan. Kulttuurivisa kertoo jo
    * linnoituksen kukkulasta ja Aleppon saippuasta, joten linnoitus- ja
    * khanjutut on kulmattu toisin.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke). Tämän kaupungin kuvatekstit on
+   * tiivistetty yhteen virkkeeseen; kuvatiedostot, lähderivit ja
+   * juttujen tekstit ovat ennallaan.
    */
   halab: {
     'Aleppon linnoitus': {
@@ -13291,20 +13293,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'John Henry Haynes. Gate of castle of Aleppo (id.13993458).jpg',
-          selite: 'Linnoituksen sisäänkäynti vuonna 1887: hammaslaitaisesta '
-            + 'ulkotornista lähtee kaarien varaan muurattu kivisilta '
-            + 'vallihaudan yli korkeaan porttirakennukseen, jonka '
-            + 'julkisivulla on rivi ulkonevia kivikoteloita. Rinnettä '
-            + 'peittää lohkareista ladottu kivetys.',
+          selite: 'Linnoituksen sisäänkäynti vuonna 1887: '
+            + 'hammaslaitaisesta ulkotornista lähtee kaarien varaan '
+            + 'muurattu kivisilta vallihaudan yli korkeaan '
+            + 'porttirakennukseen.',
           lahde: 'John Henry Haynes, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'In de citadel van Aleppo Zicht op de hoofdpoort vanuit een binnenplaats, Bestanddeelnr 255-5951.jpg',
           selite: 'Näkymä ulomman portin holvikaaren alta '
-            + 'porttirakennukseen vuonna 1950. Kiviportaat nousevat suoraan '
-            + 'ovelle, ja julkisivulla vuorottelevat kannattimien varaan '
-            + 'muuratut kivikotelot ja kapeat pystyaukot. Ylempänä on '
-            + 'ristikkoikkuna koristekehyksessä.',
+            + 'porttirakennukseen vuonna 1950: kiviportaat nousevat '
+            + 'suoraan ovelle, ja julkisivulla vuorottelevat kivikotelot '
+            + 'ja kapeat pystyaukot.',
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
@@ -13341,19 +13341,15 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Aleppo Bab Antakya 9065.jpg',
           selite: 'Antiokian portti ulkoa: kaksi järeää kivimassaa nousee '
-            + 'rinnakkain, ja niiden jatkeena kulkee vanhankaupungin korkea '
-            + 'muuri, jonka päällä ja takana on asuintaloja. Muurin '
-            + 'juurella on pieni kärkikaarinen oviaukko, ja portin edessä '
-            + 'avautuu aukio.',
+            + 'rinnakkain, ja niiden jatkeena kulkee vanhankaupungin '
+            + 'korkea muuri asuintaloineen.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Bab Antakya 9106.jpg',
-          selite: 'Portin aukko lähempää: syvän kärkikaaren sisällä avautuu '
-            + 'toinen, matalampi kaari, ja yläpuolella kiertää kiveen '
-            + 'hakattu arabiankielinen kirjoitusnauha. Kaaren alla käydään '
-            + 'kauppaa: maahan on levitetty myytäviksi punaisia paprikoita '
-            + 'ja vihreitä varsia.',
+          selite: 'Portin aukko lähempää: syvän kärkikaaren sisällä '
+            + 'avautuu toinen, matalampi kaari, ja sen alla käydään '
+            + 'kauppaa maahan levitetyillä paprikoilla.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13394,8 +13390,7 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Qinnasrinin portin kivinen julkisivu kadun tasolta: '
             + 'korkea suippokaari kehystää holvattua porttikäytävää, ja '
             + 'seinässä vuorottelevat vaaleat ja lähes mustat '
-            + 'kivikerrokset. Julkisivussa on arabiankielinen '
-            + 'kaiverruspaneeli ja pyöreä medaljonki.',
+            + 'kivikerrokset.',
           lahde: 'Nicholas Johnson, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -13429,19 +13424,16 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Aleppo Khan al-Sabun 9310.jpg',
           selite: 'Khanin tunnetuin yksityiskohta: rautaristikkoinen '
-            + 'ikkuna, jonka ympärillä mustaa, vaaleaa ja kellertävää kiveä '
-            + 'on ladottu lomittain, sivuilla kierrepintaiset pylväät ja '
-            + 'yllä rivi veistettyjä kennoja. Alempana kaartuu portin holvi '
-            + 'kasviaiheineen.',
+            + 'ikkuna, jonka ympärille on ladottu lomittain mustaa, '
+            + 'vaaleaa ja kellertävää kiveä ja jonka sivuilla ovat '
+            + 'kierrepintaiset pylväät.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Khan al-Sabun 9331.jpg',
-          selite: 'Khanin yläkerran kaarikäytävä: teräväkärkiset kivikaaret '
-            + 'lepäävät massiivisten pilareiden päällä, katossa on paljaat '
-            + 'puupalkit ja lattiassa suuret kivilaatat. Käytävällä on '
-            + 'pinoissa valkoisia ja raidallisia säkkejä, ja kaarien läpi '
-            + 'näkyy pihalle.',
+          selite: 'Khanin yläkerran kaarikäytävä: teräväkärkiset '
+            + 'kivikaaret lepäävät massiivisten pilareiden päällä, ja '
+            + 'käytävällä on pinoissa valkoisia ja raidallisia säkkejä.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13478,19 +13470,16 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Bimaristan Argun 03.jpg',
           selite: 'Yksi bimaristanin sisäpihoista: keskellä on '
-            + 'kivireunainen suorakaiteen muotoinen vesiallas ja ympärillä '
-            + 'istutettuja pensaita. Perällä avautuu holvattu sali, jonka '
-            + 'kaari on ladottu vuorotellen vaaleasta ja mustasta kivestä '
-            + 'ja jonka takaa nousee kupoli.',
+            + 'kivireunainen vesiallas, ja perällä avautuu holvattu sali, '
+            + 'jonka kaari on ladottu vuorotellen vaaleasta ja mustasta '
+            + 'kivestä.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Bimaristan Argun fountain.jpg',
           selite: 'Pienemmän pihan keskellä on kahdeksankulmainen kivinen '
-            + 'allas, jonka keskeltä nousee metalliputken päässä '
-            + 'maljamainen suihkulähde. Pihaa kiertää rivi kapeita '
-            + 'oviaukkoja, jotka johtavat pieniin kammioihin, ja niiden '
-            + 'yläpuolella on puolikupolimaisia syvennyksiä.',
+            + 'allas maljamaisine suihkulähteineen, ja pihaa kiertää rivi '
+            + 'pieniin kammioihin johtavia oviaukkoja.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13527,20 +13516,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Aleppo Beit Ajiqbash 9348.jpg',
-          selite: 'Beit Ajiqbashin sisäpiha: kahden ikkunakerroksen '
-            + 'aukkojen ylle on veistetty kiveen viuhkamaisia '
-            + 'koristekenttiä, kasviaiheisia nauhoja ja ruusukkeita. '
-            + 'Pihalla kasvaa puita ja ruukkukasveja, ja reunalla on '
-            + 'kivinen allas ja mustavalkoraidallinen kaariovi.',
+          selite: 'Beit Ajiqbashin sisäpiha: ikkuna-aukkojen ylle on '
+            + 'veistetty kiveen viuhkamaisia koristekenttiä, kasviaiheisia '
+            + 'nauhoja ja ruusukkeita.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Beit Ajiqbash 9363.jpg',
-          selite: 'Pihan iwan eli holvisali, jonka koko etusivu on auki '
-            + 'pihalle ja joka on talon kesähuone. Kaaren kivet ovat '
-            + 'vuoroin vaaleita ja tummia, reunalla on puinen räystäs ja '
-            + 'seinillä riippuu lyhtyjä. Salin edessä on ruutukuvioinen '
-            + 'marmorilattia ja pyöreä suihkulähde.',
+          selite: 'Pihan iwan eli holvisali, talon kesähuone, jonka koko '
+            + 'etusivu on auki pihalle ja jonka kaaren kivet ovat vuoroin '
+            + 'vaaleita ja tummia.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13554,6 +13539,11 @@ export const NAHTAVYYSJUTUT = {
    * Kulttuurivisa kertoo jo Hamidiyyan peltiholvin valopisteet ja
    * kaariteksti moskeijan temppeli–kirkko–moskeija-ketjun, joten
    * suukin ja moskeijan jutut on kulmattu toisin.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke). Tämän kaupungin kuvatekstit on
+   * tiivistetty yhteen virkkeeseen; kuvatiedostot, lähderivit ja
+   * juttujen tekstit ovat ennallaan.
    */
   damaskos: {
     'Damaskoksen linnoitus': {
@@ -13587,20 +13577,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus Citadel western wall right 7926.jpg',
-          selite: 'Linnoitus seisoo tasamaalla, samassa tasossa kuin muu '
+          selite: 'Linnoitus seisoo tasamaalla samassa tasossa kuin muu '
             + 'kaupunki, ja sen kalkkikivinen länsimuuri ampuma-aukkoineen '
-            + 'nousee suoraan kadun tasosta. Muurin vierellä kulkee '
-            + 'mustavalkoraidalliseksi kivetty kävelykatu, jonka päässä '
-            + 'seisoo Saladinin ratsastajapatsas.',
+            + 'nousee suoraan kadun tasosta.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Damascus north-western tower of the Citadel 1410.jpg',
-          selite: 'Luoteisnurkan torni alaviistosta pilvetöntä taivasta '
-            + 'vasten: nurkka on suora kulma, kiviladonta karkeaa ja '
-            + 'lohkopintaista, seinässä on kapeita ampuma-aukkoja, ja '
-            + 'ylimpänä työntyy ulos kannatinkivien varaan muurattuja '
-            + 'ulokkeita.',
+          selite: 'Luoteisnurkan torni alaviistosta: kiviladonta on '
+            + 'karkeaa ja lohkopintaista, seinässä on kapeita '
+            + 'ampuma-aukkoja, ja ylimpänä työntyy ulos kannatinkivien '
+            + 'varaan muurattuja ulokkeita.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13638,28 +13625,22 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Damascus east and south side of courtyard of Umayyad Mosque 8078.jpg',
           selite: 'Umaijadien moskeijan kivetyn pihan itä- ja eteläsivu: '
-            + 'kaksikerroksinen kaarikäytävä ja pylväiden varassa lepäävä '
-            + 'matala kupolipaviljonki. Rukoussalin seinä avautuu pihalle '
-            + 'ristikkoikkunoin ja punaruskein oviaukoin, ja pihan yllä '
-            + 'kohoaa kapea minareetti.',
+            + 'kaksikerroksinen kaarikäytävä, pylväiden varassa lepäävä '
+            + 'kupolipaviljonki ja pihan yllä kohoava kapea minareetti.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Damascus Barada Panel of Umayyad Mosque 8130.jpg',
           selite: 'Pihan kultapohjaista mosaiikkia lähietäisyydeltä: '
-            + 'isolehtisiä puita, pylväiköitä, kaarigallerioita ja pieniä '
-            + 'kaksikerroksisia taloja vihertävän joen varrella. Kenttää '
-            + 'reunustavat kukkakuvioiset mosaiikkinauhat, eikä yhtään '
-            + 'ihmistä tai eläintä ole kuvattu.',
+            + 'puita, pylväiköitä ja pieniä taloja joen varrella, eikä '
+            + 'yhtään ihmistä tai eläintä ole kuvattu.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The Great Umayyed Mosque of Damascus, Syria, and Khazne (Treasury).jpg',
-          selite: 'Aarrekammion kahdeksankulmainen runko lepää roomalaisten '
-            + 'pylväiden korinttilaisten kapiteelien päällä. Sen pintaa '
-            + 'peittää kultapohjainen mosaiikki, jossa kiertyy vihreitä '
-            + 'lehtiköynnöksiä ja maljakkoaiheita ja jossa on myös pala '
-            + 'talo- ja palmumaisemaa.',
+          selite: 'Aarrekammion kahdeksankulmainen runko lepää '
+            + 'roomalaisten pylväiden korinttilaisten kapiteelien päällä, '
+            + 'ja sen pintaa peittää kultapohjainen lehtiköynnösmosaiikki.',
           lahde: 'James Gordon from Los Angeles, California, USA, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -13694,18 +13675,14 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Damascus Propylaeum at west of Umayyad Mosque 1420.jpg',
           selite: 'Hamidiyyan suukin itäpää päättyy roomalaiseen '
             + 'porttikaareen, jonka läpi näkyy Umaijadien moskeijan '
-            + 'sisäänkäynti värillisine viuhkaikkunoineen. Kaarta '
-            + 'reunustavat korinttilaiskapiteelein kruunatut kivipilarit, '
-            + 'ja väkijoukko virtaa kohti aukiota.',
+            + 'sisäänkäynti värillisine viuhkaikkunoineen.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ingang van suq Hamidieh, Bestanddeelnr 255-5877.jpg',
           selite: 'Suukin länsipää vuonna 1950: metalliholvin '
-            + 'puoliympyräinen pääty kaareutuu sisäänkäynnin yllä, ja '
-            + 'siihen on ripustettu suuria käsin maalattuja '
-            + 'elokuvajulisteita arabiankielisin tekstein. Portista virtaa '
-            + 'sisään ja ulos tiivis väkijoukko.',
+            + 'puoliympyräiseen päätyyn on ripustettu suuria käsin '
+            + 'maalattuja elokuvajulisteita arabiankielisin tekstein.',
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
@@ -13743,19 +13720,16 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Khan As\'ad Pasha Panorama.jpg',
           selite: 'Khanin katettu piha holvikäytävän alta: '
-            + 'mustavalkoraidallinen nelikulmapilari, kupolit '
-            + 'ikkunarenkaineen ja maalattuine medaljonkeineen sekä niiden '
-            + 'välissä soikea aukko taivaalle. Pihaa kiertävät kaariaukot '
-            + 'ja puiset ristikkoparvekkeet, keskellä suihkuallas.',
+            + 'mustavalkoraidallinen pilari, kupolit ikkunarenkaineen ja '
+            + 'keskellä suihkuallas puisten ristikkoparvekkeiden '
+            + 'ympäröimänä.',
           lahde: 'Bassel Khabbaz, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'A Dome in Khan As\'ad Pasha- قبة في خان أسعد باشا.jpg',
-          selite: 'Yksi khanin kahdeksasta kupolista alhaalta kuvattuna: '
-            + 'kehä kehän perään maalattuja pisara- ja '
-            + 'neliapilamedaljonkeja okran, harmaan ja violetin sävyissä. '
-            + 'Kupolin juurta kiertää rengas ristikkoikkunoita, ja kulmissa '
-            + 'erottuu mustavalkoinen ablaq-raidoitus.',
+          selite: 'Yksi khanin kahdeksasta kupolista alhaalta: kehä kehän '
+            + 'perään maalattuja pisara- ja neliapilamedaljonkeja okran, '
+            + 'harmaan ja violetin sävyissä.',
           lahde: 'Hani Zaitoun, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13793,18 +13767,14 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Damascus Bab Sharqi (Eastern Gate) 8210.jpg',
           selite: 'Itäportti ulkoa: korkea keskikaari ja sen kummallakin '
             + 'puolella matalampi jalankulkijoiden aukko, eli portin '
-            + 'alkuperäinen kolmiaukkoinen muoto. Keskikaaren läpi näkyy '
-            + 'puuerkkerinen talo, ja portin takaa kohoaa valkoinen '
-            + 'minareetti.',
+            + 'alkuperäinen kolmiaukkoinen muoto.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'De Bab Sharqi (Oostpoort) in de stadsmuur van Damascus, Bestanddeelnr 255-5863.jpg',
           selite: 'Sama portti vuonna 1950: käytössä on vain yksi kaari, '
-            + 'jonka läpi kuljetaan kapealle kujalle. Portin vierestä '
-            + 'nousee vaalea nelikulmainen minareetti, jossa on puinen '
-            + 'parveke ja kartiohuippu; kujaa reunustavat puuparvekkeiset '
-            + 'talot ja antiikkiliikkeet.',
+            + 'ja portin vierestä nousee vaalea nelikulmainen minareetti '
+            + 'puisine parvekkeineen ja kartiohuippuineen.',
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
@@ -13838,19 +13808,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus-Bab Kisan.jpg',
-          selite: 'Kisanin portti edestä: kaksi ulkonevaa kivitornia, '
-            + 'joiden yläreunassa kulkee pienten kaarien lista ja pinnassa '
-            + 'on punoskoristeinen pyöreä kivimedaljonki. Tornien välissä '
-            + 'on umpeen muurattu porttiaukko ja sen alla koristereunainen '
-            + 'pyöröholvi ja tumma puuovi.',
+          selite: 'Kisanin portti edestä: kaksi ulkonevaa kivitornia '
+            + 'pyöreine punoskoristeisine medaljonkeineen, ja niiden '
+            + 'välissä umpeen muurattu porttiaukko ja tumma puuovi.',
           lahde: 'Heretiq, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Szent Pál kapuja és kápolnája.jpg',
           selite: 'Sama rakennus viistosti: kulmatornin lohkareet ovat eri '
-            + 'kokoisia ja käsin hakattuja, ja saumat kulkevat epätasaisina '
-            + 'rivistöinä. Portaikko mustine kaiteineen johtaa holvatulle '
-            + 'ovelle, jonka yläpuolella riippuu tummanpunainen viiri.',
+            + 'kokoisia ja käsin hakattuja, ja portaikko mustine '
+            + 'kaiteineen johtaa holvatulle ovelle.',
           lahde: 'Kocsis Fülöp, Hajdúdorogi Főegyházmegye, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13864,6 +13831,11 @@ export const NAHTAVYYSJUTUT = {
    * Khonsu temppelin kaavaan ja pylvässali valoon. Kulttuurivisa
    * kertoo jo salin 134 pylvästä, joten sitä lukua ei käytetä
    * kärkenä.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke). Tämän kaupungin kuvatekstit on
+   * tiivistetty yhteen virkkeeseen; kuvatiedostot, lähderivit ja
+   * juttujen tekstit ovat ennallaan.
    */
   luxor: {
     'Luxorin temppeli': {
@@ -13895,20 +13867,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Louksor (Thèbes), Construction Antérieure - Pylône Colosses et Obélisque MET DP144527.jpg',
-          selite: 'Luxorin temppelin pyloni 1850-luvun alussa: hieroglyfien '
-            + 'peittämä obeliski, jonka jalusta on hiekan alla, ja kaksi '
-            + 'tornia, joiden kiveen on hakattu ihmishahmoja. Hiekasta '
-            + 'pistää esiin kahden istuvan kolossin kruunupäät ja hartiat, '
-            + 'muu osa on maan alla.',
+          selite: 'Luxorin temppelin pyloni 1850-luvun alussa: obeliskin '
+            + 'jalusta on hiekan alla, ja kahden istuvan kolossin '
+            + 'kruunupäät ja hartiat pistävät esiin maasta.',
           lahde: 'Félix Teynard, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Louksor (Thèbes). Construction Centrale - Grande Colonnade MET DP71345.jpg',
           selite: 'Luxorin temppelin suuri pylväskäytävä samalla matkalla '
-            + 'kuvattuna: viisi järeää pylvästä vinossa rivissä, avonaiset '
-            + 'papyruskukkakapiteelit osin lohjenneina ja niiden päällä '
-            + 'massiiviset kivipalkit. Pylväiden juuret ovat hiekkakinoksen '
-            + 'peitossa.',
+            + 'kuvattuna: viisi järeää pylvästä vinossa rivissä, '
+            + 'papyruskukkakapiteelit osin lohjenneina ja juuret '
+            + 'hiekkakinoksen peitossa.',
           lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
         },
       ],
@@ -13948,28 +13917,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Luxor Museum 1.JPG',
-          selite: 'Luxorin museo rantakadun varrella Niilin itärannalla: '
-            + 'matala punaruskea seinä ilman ikkunoita, vain kapeita '
-            + 'pystyrakoja rivissä. Aidatulla nurmikolla seisoo kaksi '
-            + 'tummaa kivipatsasta palmujen keskellä.',
+          selite: 'Luxorin museo rantakadun varrella: matala punaruskea '
+            + 'seinä ilman ikkunoita, vain kapeita pystyrakoja rivissä, ja '
+            + 'nurmikolla kaksi tummaa kivipatsasta.',
           lahde: 'Charlesdrakew at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Luxor Museum Amenophis III. Statue 05.jpg',
           selite: 'Amenhotep III:n kvartsiittipatsas Luxorin museossa: '
-            + 'päässä kaksoiskruunu, leuassa seremoniaparta ja takana '
-            + 'kaareva selkäpilari kartušeineen. Jalustana on kelkka, jonka '
-            + 'jalakset työntyvät edessä esiin, ja patsas seisoo yksin '
-            + 'paljasseinäisessä salissa.',
+            + 'päässä on kaksoiskruunu, leuassa seremoniaparta ja '
+            + 'jalustana kelkka, jonka jalakset työntyvät edessä esiin.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Luxor Museum Relief Talatat 06.jpg',
-          selite: 'Talatat-seinä koottuna Luxorin museossa: pieniä '
-            + 'kivilohkoja riveissä kuin tiilimuuri. Kuvavyöhykkeissä on '
-            + 'nautoja ja uhrikasoja, lannevaatteisiin puettuja miehiä '
-            + 'kantotankoineen ja hieroglyfipaneeleja, ja ihon punaruskeaa '
-            + 'maalia on paikoin jäljellä.',
+          selite: 'Talatat-seinä koottuna Luxorin museossa: pienistä '
+            + 'kivilohkoista ladotuissa kuvavyöhykkeissä on nautoja, '
+            + 'uhrikasoja ja kantotankoja kantavia miehiä.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -14006,28 +13970,22 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Luxor Temple Avenue of Sphinxes (9794899133).jpg',
           selite: 'Sfinksikuja Luxorin temppelin päästä: vaalea kivetty '
-            + 'väylä kulkee suorana kohti taivaanrantaa, ja sen molemmin '
-            + 'puolin seisoo ihmispäisiä sfinksejä matalilla jalustoilla. '
-            + 'Kujan takana kohoaa palmurivejä, matalia okranvärisiä taloja '
-            + 'ja kapea minareetti.',
+            + 'väylä kulkee suorana kohti taivaanrantaa ihmispäisten '
+            + 'sfinksien reunustamana.',
           lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Theban region, Temple Complex of Amon in Karnak, 19th century pictures, 1870-1888, photo 2 of 91 - Archivio fotografico Museo Egizio, Turin INV08 005.jpg',
           selite: 'Karnakin pässinpäisiä sfinksejä ruskeasävyisessä '
             + 'valokuvassa: rivi patsaita korkeilla kivijalustoilla, ja '
-            + 'suurimman patsaan leuan alla seisoo pieni kuninkaanhahmo. '
-            + 'Patsaiden ympärillä on irtolohkareita ja kivimurskaa, takana '
-            + 'kuivamuuri ja tiheä palmulehto.',
+            + 'suurimman leuan alla seisoo pieni kuninkaanhahmo.',
           lahde: 'Antonio Beato, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Karnak (Thèbes), Sphinx a Tête Humaine et a Tête de Bélier, en Y MET DP71386.jpg',
           selite: 'Kujan kaksi patsaslajia rinnakkain maahan vajonneina: '
-            + 'pässinpäinen sfinksi, jonka leuan alla on pieni seisova '
-            + 'hahmo, ja sen takana ihmispäinen sfinksi nemes-päähineessään '
-            + 'hartioita myöten mullassa. Patsaita ympäröi tupsuheinän ja '
-            + 'pensaiden peittämä rinne.',
+            + 'pässinpäinen sfinksi ja sen takana ihmispäinen sfinksi '
+            + 'nemes-päähineessään hartioita myöten mullassa.',
           lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
         },
       ],
@@ -14062,20 +14020,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Egipto, 1882 "Las Estatuas on cabeza de Leon en Karnak" (21683939911).jpg',
-          selite: 'Mutin alueen pyhä allas vuoden 1882 kirjan värilehdellä, '
-            + 'jonka on signeerannut C. Werner: vihertävän veden rannalla '
-            + 'istuu rivi tummia leijonapäisiä patsaita, ja yksi makaa '
-            + 'kaatuneena puoliksi hiekassa. Altaan takana on vihreää '
-            + 'peltoa ja autiomaan pöytävuoria.',
+          selite: 'Mutin alueen pyhä allas vuoden 1882 kirjan '
+            + 'värilehdellä, jonka on signeerannut C. Werner: rannalla '
+            + 'istuu rivi tummia leijonapäisiä patsaita ja yksi makaa '
+            + 'kaatuneena hiekassa.',
           lahde: 'Fondo Antiguo de la Biblioteca de la Universidad de Sevilla from Sevilla, España, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Ruines du temple de Mout - A3167.jpg',
-          selite: 'Mutin temppelin raunioalue vuoden 1914 autokromilevyllä: '
-            + 'kaatuneita hiekkakivilohkareita ja matalia muurinjäännöksiä, '
-            + 'niiden seassa päättömiä patsastorsoja. Raunioiden takana on '
-            + 'savitiilimuuri ja tiheä palmulehto; levyyn on kirjoitettu '
-            + 'käsin EGYPTE A 3167.',
+          selite: 'Mutin temppelin raunioalue vuoden 1914 '
+            + 'autokromilevyllä, johon on kirjoitettu käsin EGYPTE A 3167: '
+            + 'kaatuneita hiekkakivilohkareita ja päättömiä patsastorsoja.',
           lahde: 'Léon Auguste, Wikimedia Commons (CC0)',
         },
       ],
@@ -14112,19 +14067,17 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Théodule Devéria (French - (Portal of the Temple of Khonsu, Karnak) - Google Art Project.jpg',
           selite: 'Ptolemaios III Euergeteen portti edestäpäin noin vuonna '
-            + '1860: ovenpielet on jaettu ruutuihin, joissa kuningas seisoo '
-            + 'jumalten edessä, ja päällä on siivekäs aurinkokiekko ja '
-            + 'uurrettu kourulista. Portin takaa nousevat Khonsun temppelin '
-            + 'pylonin viistot tornit.',
+            + '1860: ovenpielet on jaettu ruutuihin, joissa kuningas '
+            + 'seisoo jumalten edessä, ja päällä on siivekäs '
+            + 'aurinkokiekko.',
           lahde: 'Théodule Devéria, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Karnak Tempel Chons 06.jpg',
           selite: 'Khonsun temppelin pylväspiha sisältä pylonia kohti: '
             + 'oviaukon yllä kulkee kourulista siivekkäine '
-            + 'aurinkokiekkoineen, ja sen yläpuolelle kohoavat pylonin '
-            + 'kaksi tornia. Pihan kummallakin sivulla seisoo pylväsrivi, '
-            + 'ja osassa pylväitä on maalit yhä jäljellä.',
+            + 'aurinkokiekkoineen, ja osassa pylväitä on maalit yhä '
+            + 'jäljellä.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -14161,19 +14114,15 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Karnak (Thèbes), Palais - Salle Hypostyle - Fenêtre et Chapiteaux des Galeries Latérales MET DP71376.jpg',
           selite: 'Félix Teynardin valokuva vuosilta 1851–52 sivulaivan '
-            + 'yllä kohoavasta ikkunaseinästä: kolmesta aukosta '
-            + 'keskimmäisessä on yhä paikallaan kivipuikoista veistetty '
-            + 'ritilä. Seinän alla seisoo pylväitä, joiden nupinmuotoisiin '
-            + 'kapiteeleihin on kaiverrettu kartusseja.',
+            + 'yllä kohoavasta ikkunaseinästä, jonka keskimmäisessä '
+            + 'aukossa on yhä kivipuikoista veistetty ritilä.',
           lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Hall of columns, Karnac, RP-F-F25403-AG.jpg',
           selite: 'Francis Frithin valokuva vuodelta 1857 suuresta '
-            + 'pylvässalista: pylväiden yläpäät ovat murtuneet, muutamassa '
-            + 'on yhä leveä kapiteeli, ja maa on kaatuneiden '
-            + 'kivilohkareiden peitossa. Osassa pilareita lepää vielä '
-            + 'järeitä kivipalkkeja.',
+            + 'pylvässalista: pylväiden yläpäät ovat murtuneet, ja maa on '
+            + 'kaatuneiden kivilohkareiden peitossa.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],
@@ -17625,6 +17574,10 @@ export const NAHTAVYYSJUTUT = {
    * kuvaan kuulumaton merkintä — toisessa käsin kirjoitettu signeeraus
    * vasemmassa alanurkassa, toisessa albumin paspartuu ja musta palkki
    * alareunassa.
+   *
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R2: kaikkien kahdeksan jutun
+   * selite-kentät on tiivistetty yhteen virkkeeseen. Leipätekstit,
+   * kuvatiedostot ja lähderivit ovat ennallaan.
    */
   persepolis: {
     'Kaikkien kansojen portti': {
@@ -17652,11 +17605,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Persepolis – Gate of All Nations 02.jpg',
-          selite: 'Portti alaviistosta: etualalla lamassu, jolla on '
-            + 'kiharaksi veistetty parta ja sulkakuvioinen siipi, sen '
-            + 'takana portin korkea kivimuuri ja keskellä yksi pystyssä '
-            + 'oleva uurrettu pylväs pylväänpäineen. Oikealla häämöttää '
-            + 'toinen ovenpieli ja takana paljas vuorenrinne.',
+          selite: 'Portti alaviistosta: etualalla lamassu partoineen ja '
+            + 'siipineen, takana portin kivimuuri ja yksi pystyssä oleva '
+            + 'uurrettu pylväs.',
           lahde: 'Skot, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17692,11 +17643,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Persepolis - Tomb of Artaxerxes III 03.jpg',
-          selite: 'Haudan yläreliefi läheltä: kuningas seisoo korokkeella '
-            + 'kädet koholla, edessään on tulialttari ja yläpuolella '
-            + 'siivekäs kiekko ja kuunsirppi. Korokkeen alla on kaksi '
-            + 'riviä pieniä hahmoja kädet ylhäällä, ja koko kuva-ala on '
-            + 'kehystetty kallioon louhittuun syvennykseen.',
+          selite: 'Haudan yläreliefi: kuningas seisoo korokkeella '
+            + 'tulialttarin ääressä, ja korokkeen kantaa kaksi riviä pieniä '
+            + 'hahmoja.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17728,11 +17677,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bull statue in the northern facade, Hall of hundred columns Persepolis 2014.jpg',
-          selite: 'Salin pohjoissivu: oikealla kohoaa jättimäinen '
-            + 'kivihärkä, jonka pää, harja ja etujalat erottuvat '
-            + 'muurista, ja vasemmalla seisoo yksi kokonainen uurrettu '
-            + 'pylväs. Välissä on ovenpieliä ja katkenneita '
-            + 'pylväänjalustoja sorakentällä.',
+          selite: 'Salin pohjoissivu: oikealla jättimäinen kivihärkä '
+            + 'muurissa ja vasemmalla yksi kokonainen uurrettu pylväs.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -17769,11 +17715,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Apadana, Persepolis, Iran (47727273482).jpg',
-          selite: 'Apadanan pystyssä olevat pylväät pilvistä taivasta '
-            + 'vasten. Etummaisen huipulla on murtunut pylväänpää, ja '
-            + 'takana rivissä viisi muuta. Alhaalla kulkee kolme kävijää '
-            + 'selin kameraan — heidän kokonsa kertoo, kuinka korkeita '
-            + 'pylväät ovat.',
+          selite: 'Apadanan pylväät pilvistä taivasta vasten, ja alhaalla '
+            + 'kulkevat kolme kävijää kertovat, kuinka korkeita ne ovat.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -17805,11 +17748,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The ruins of the Tripylon (or Council Hall), Persepolis, Iran (47727258352).jpg',
-          selite: 'Salin rauniot: oikealla seisoo kokonainen kiveen '
-            + 'veistetty ovenpieli, jota tukee nykyaikainen '
-            + 'metalliteline, ja vasemmalla on katkenneita pylväitä ja '
-            + 'matalia perustuksia ruohikossa. Taustalla aukeaa tasanko '
-            + 'ja sen takana vuorijono.',
+          selite: 'Salin rauniot: oikealla kokonainen ovenpieli '
+            + 'metallitelineen varassa ja vasemmalla katkenneita pylväitä '
+            + 'ruohikossa.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -17846,11 +17787,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Treasury, Persepolis, Iran (33902500738).jpg',
-          selite: 'Aarrekammion perustukset ylhäältä: matalat muurit '
-            + 'jakavat alueen huoneiksi ja käytäviksi, ja yhdessä salissa '
-            + 'on rivissä pyöreitä pylväänjalustoja. Muurien välissä '
-            + 'kasvaa ruohoa, vasemmalla ylhäällä näkyy pystyssä olevia '
-            + 'ovenpieliä ja takana kohoaa vuoren kivinen rinne.',
+          selite: 'Aarrekammion perustukset ylhäältä: matalat muurit jakavat '
+            + 'alueen huoneiksi, ja yhdessä salissa on rivi pyöreitä '
+            + 'pylväänjalustoja.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -17891,11 +17830,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2018-09-21 Iran, Persepolis, Tachara (from the southeast).jpg',
-          selite: 'Tachara kaakosta: alhaalla kulkee terassin muuri, '
-            + 'jonka kylkeen on veistetty rivi hahmoja astiat käsissään, '
-            + 'ja muurin päällä seisovat pystyssä olevat ovenpielet ja '
-            + 'ikkuna-aukot suorina riveinä. Katto ja seinät puuttuvat, '
-            + 'joten aukoista näkyy pelkkä taivas.',
+          selite: 'Tachara kaakosta: terassin muurin kyljessä on rivi '
+            + 'hahmoja astiat käsissään, ja muurin päällä ovenpielet '
+            + 'seisovat suorina riveinä.',
           lahde: 'Laurens R. Krol, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -17924,10 +17861,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palace of Xerxes, Persepolis.jpg',
-          selite: 'Hadishin pystyssä olevat ovenpielet ja ikkuna-aukot '
-            + 'rivissä pilvistä taivasta vasten. Aukkojen läpi näkyy '
-            + 'tasanko ja kaukana vuorijono, ja etualalla on kivilaattaa '
-            + 'ja ruohoa.',
+          selite: 'Hadishin ovenpielet ja ikkuna-aukot rivissä, ja aukkojen '
+            + 'läpi näkyy tasanko ja kaukana vuorijono.',
           lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -18747,6 +18682,11 @@ export const NAHTAVYYSJUTUT = {
    * sen suurempana samana vuonna 1393 ja että timuridit säästivät
    * kaupungin ja kunnostivat islamilaisia laitoksia. Ristiriita on
    * kerrottu lukijalle Bash Tapian jutussa.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke). Tämän kaupungin kuvatekstit on
+   * tiivistetty yhteen virkkeeseen; kuvatiedostot, lähderivit ja
+   * juttujen tekstit ovat ennallaan.
    */
   mosul: {
     'Kuyunjikin kumpu': {
@@ -18784,11 +18724,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kouyunjick.jpg',
-          selite: 'Akvarelli Kuyunjikin kummusta 1840-luvulla. Tasangolta '
+          selite: 'Akvarelli Kuyunjikin kummusta 1840-luvulla: tasangolta '
             + 'nousee pitkä ja laakea kumpu, jonka juurella on kylä ja '
-            + 'muutama kivirakennus. Etualalla laiduntaa lehmiä ja '
-            + 'kameleja, ja oikealla on musta beduiiniteltta. Paperiin on '
-            + 'kirjoitettu paikan nimi.',
+            + 'etualalla laiduntaa lehmiä ja kameleja.',
           lahde: 'Frederick Charles Cooper (1817- ?), Wikimedia Commons (PD)',
         },
       ],
@@ -18824,11 +18762,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'سور الموصل.jpg',
-          selite: 'Mosulin kaupunginmuuria vuonna 1916. Vasemmalla '
-            + 'kohoaa pyöreä tiilitorni, jonka yläreunassa on '
-            + 'hammastettu harja ja kaksi kaari-ikkunaa; oikealle jatkuu '
-            + 'korkea muuri samanlaisine harjoineen. Edustalla on '
-            + 'hiekkakumpuja.',
+          selite: 'Mosulin kaupunginmuuria vuonna 1916: vasemmalla kohoaa '
+            + 'pyöreä tiilitorni hammastettuine harjoineen, ja oikealle '
+            + 'jatkuu korkea muuri samanlaisine harjoineen.',
           lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
         },
       ],
@@ -18866,11 +18802,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Islamic Art from Mosul between 1251 to 1275 (28086730483).jpg',
-          selite: 'Mosulissa vuosina 1251–1275 tehty messinkikannu '
-            + 'museon vitriinissä. Päärynänmuotoisen rungon pinta on '
-            + 'täynnä hopealla ja kullalla upotettuja medaljonkeja ja '
-            + 'kirjoitusnauhoja. Kuva ei ole palatsista — siitä ei ole '
-            + 'vapaata kuvaa — vaan saman vuosikymmenen esineestä.',
+          selite: 'Mosulissa vuosina 1251–1275 tehty messinkikannu museon '
+            + 'vitriinissä, pinta täynnä hopea- ja kultaupotteisia '
+            + 'medaljonkeja — ei kuva palatsista, josta ei ole vapaata '
+            + 'kuvaa, vaan saman vuosikymmenen esineestä.',
           lahde: 'Gary Todd, Wikimedia Commons (CC0)',
         },
       ],
@@ -18906,10 +18841,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'NiniveNabiYunisOutside.jpg',
-          selite: 'Portaat Nabi Yunusin kummulle vuonna 1999. Rinne on '
-            + 'muotoiltu leveiksi kivipenkereiksi, keskeltä nousee '
-            + 'portaikko ylös moskeijalle, ja moskeijan takaa kohoaa '
-            + 'hoikka minareetti. Rinteessä kasvaa yksittäisiä palmuja.',
+          selite: 'Portaat Nabi Yunusin kummulle vuonna 1999: rinne on '
+            + 'muotoiltu leveiksi kivipenkereiksi, ja keskeltä nousee '
+            + 'portaikko ylös moskeijalle.',
           lahde: 'Roland Unger, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -18944,10 +18878,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'الجامع الأموي في الموصل 03.jpg',
-          selite: 'Moskeijan sisäpiha. Vasemmalla kulkee kiviholvattu '
-            + 'kaarikäytävä, jonka pilarit ovat tummaa kiveä ja seinät '
-            + 'valkoiseksi kalkittuja; keskellä pihaa kasvaa yksi '
-            + 'taatelipalmu, ja oikealla nousee korkea valkoinen muuri.',
+          selite: 'Moskeijan sisäpiha, jonka vasemmalla sivulla kulkee '
+            + 'kiviholvattu kaarikäytävä ja jonka keskellä kasvaa yksi '
+            + 'taatelipalmu.',
           lahde: 'Ali.tinbo, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18983,11 +18916,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'جامع النبي جرجيس (باحة الجامع).jpg',
-          selite: 'Moskeijan sisäpiha. Kolmella sivulla kiertää '
-            + 'kaarikäytävä, jonka yläreunassa juoksee kaiverrettu '
-            + 'koristenauha; keskellä kohoaa matala kupoli ja oikealla '
-            + 'hoikka minareetti parvekkeineen. Piha on vaaleaa '
-            + 'kivilaattaa.',
+          selite: 'Moskeijan sisäpiha, jota kiertää kolmella sivulla '
+            + 'kaarikäytävä koristenauhoineen ja jonka keskellä kohoaa '
+            + 'matala kupoli ja oikealla hoikka minareetti.',
           lahde: 'Ali.tinbo, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19033,11 +18964,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hadba-16207v.jpg',
-          selite: 'Kalteva minareetti vuonna 1932. Neliömäisen '
+          selite: 'Kalteva minareetti vuonna 1932: neliömäisen '
             + 'tiilijalustan päältä nousee lieriö, jonka pintaa kiertää '
-            + 'useita eri tiilikuvioita, ja huipulla on kaide ja kupoli. '
-            + 'Ympärillä on matalia rakennuksia, rautainen aita ja '
-            + 'pieni pylväikkökatos.',
+            + 'useita eri tiilikuvioita, ja huipulla on kaide ja kupoli.',
           lahde: 'American colony photographers., Wikimedia Commons (PD)',
         },
       ],

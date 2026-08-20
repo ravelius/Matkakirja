@@ -2573,15 +2573,19 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 33.516, etela: 33.5045, lansi: 36.299, ita: 36.32,
     },
-    esittely: 'Damaskoksen vanhakaupunki on suorakaide, ja sen muoto '
-      + 'on roomalainen: kaupunki kaavoitettiin ruutuun, ja itä-länsi- '
-      + 'akseli kulkee yhä läpi koko kartan. Muurit ovat paikoin samoja '
-      + 'kuin roomalaisaikana, ja portit ovat niissä samoissa kohdissa.\n\n'
-      + 'Keskellä on suuri suorakaiteen muotoinen piha-alue, joka on '
-      + 'ollut pyhä paikka kolmella eri tavalla: siinä seisoi ensin '
-      + 'aramealainen temppeli, sitten roomalainen Jupiterin temppeli, '
-      + 'sitten kirkko ja lopulta moskeija. Sama muuri on kiertänyt '
-      + 'niitä kaikkia.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä kohteita alueella on ja miksi ne
+     * kiinnostavat; kartan viivastojen ja laikkujen kuvailu on
+     * poistettu.
+     */
+    esittely: 'Kartan alue on Damaskoksen vanhakaupunki, jonka '
+      + 'suorakaiteen muodon ja porttien paikat roomalaiset määräsivät. '
+      + 'Lännessä ovat linnoitus ja Hamidiyyan suuki, joka päättyy '
+      + 'Umaijadien moskeijalle; sen paikalla on ollut vuorollaan '
+      + 'aramealainen temppeli, roomalainen Jupiterin temppeli ja kirkko. '
+      + 'Etelämpänä on ottomaanien ajan karavaanimajatalo Khan As\'ad '
+      + 'Pashan, ja idässä muurissa ovat Itäportti ja Kisanin portti.',
     kohteet: [
       { nimi: 'Damaskoksen linnoitus', lat: 33.5119, lon: 36.3021 },
       { nimi: 'Umaijadien moskeija', lat: 33.5116, lon: 36.3067 },
@@ -2966,17 +2970,20 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 25.7225, etela: 25.693, lansi: 32.6335, ita: 32.6625,
     },
-    esittely: 'Luxorin kartta on kapea kaistale Niilin itärantaa, ja '
-      + 'sillä on kaksi päätä. Eteläpäässä on Luxorin temppeli aivan '
-      + 'rannan tuntumassa, pohjoispäässä Karnakin laaja temppelialue '
-      + 'omine muureineen. Väli on runsaat kaksi kilometriä, ja se '
-      + 'kuljettiin ennen suoraan: temppeliltä toiselle vei sfinksien '
-      + 'reunustama kuja.\n\n'
-      + 'Karnakin ulkomuuri erottuu kartalla paksuna suorakaiteena, ja '
-      + 'sen sisällä näkyvät temppelin pihat ja salit. Eteläpuolella on '
-      + 'oma muurinsa ympäröimä Mutin alue, jonka pyhä järvi on '
-      + 'hevosenkengän muotoinen. Nykyinen kaupunki on kasvanut '
-      + 'temppelien väliin ja ympärille.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä kohteita alueella on ja miksi ne
+     * kiinnostavat; kartan viivastojen ja laikkujen kuvailu on
+     * poistettu.
+     */
+    esittely: 'Kartan alue on kapea kaistale Niilin itärantaa, ja sillä on '
+      + 'kaksi päätä: eteläpäässä Luxorin temppeli aivan rannan tuntumassa '
+      + 'ja pohjoispäässä Karnakin laaja temppelialue omine muureineen. '
+      + 'Väli on runsaat kaksi kilometriä, ja se kuljettiin ennen suoraan '
+      + 'sfinksien reunustamaa kujaa pitkin. Karnakin eteläpuolella on oma '
+      + 'muurinsa ympäröimä Mutin alue pyhine järvineen, ja rantakadun '
+      + 'varrella Luxorin museo. Nykyinen kaupunki on kasvanut temppelien '
+      + 'väliin ja ympärille.',
     kohteet: [
       { nimi: 'Luxorin temppeli', lat: 25.6996, lon: 32.6394 },
       { nimi: 'Luxorin museo', lat: 25.7077, lon: 32.6445 },
@@ -2992,17 +2999,21 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 36.2075, etela: 36.193, lansi: 37.146, ita: 37.168,
     },
-    esittely: 'Aleppon vanhakaupunki on kartalla helppo tunnistaa: '
-      + 'kuvan oikeassa laidassa on soikea rengas, ja se on '
-      + 'linnoituksen vallihauta. Linnoitus seisoo omalla kummullaan '
-      + 'keskellä kaupunkia, ja kumpu on osin ihmisten tekemä — '
-      + 'asuinkerroksia on kasautunut päällekkäin tuhansien vuosien '
-      + 'ajan.\n\n'
-      + 'Kummun ympärillä kujat ovat kapeita ja mutkittelevia, ja '
-      + 'niiden verkosto on keskiaikainen. Kaupunki oli karavaanitien '
-      + 'pää: idästä tullut tavara purettiin täällä ja jatkoi matkaa '
-      + 'Välimerelle. Siitä ovat jäljelle jääneet khanit, kauppiaiden '
-      + 'majatalot, joita on kartan keskiosassa useita.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä kohteita alueella on ja miksi ne
+     * kiinnostavat; kartan viivastojen ja laikkujen kuvailu on
+     * poistettu.
+     */
+    esittely: 'Kartan alue on Aleppon vanhakaupunki. Keskellä seisoo '
+      + 'linnoitus omalla kummullaan, joka on osin ihmisten tekemä: '
+      + 'asuinkerroksia on kasautunut päällekkäin tuhansien vuosien ajan. '
+      + 'Ympärillä on keskiaikainen kujaverkko, ja sen varrella ovat '
+      + 'Saippuakhan, yksi kaupungin vanhimmista karavaanimajataloista, ja '
+      + 'Arghunin sairaala. Lännessä ja etelässä ovat vanhat '
+      + 'kaupunginportit Antiokian ja Qinnesrinin suuntiin, pohjoisessa '
+      + 'vuonna 1757 valmistunut kauppiastalo Beit Ajiqbash. Kaikki kuusi '
+      + 'kohdetta ovat kävelymatkan päässä toisistaan.',
     kohteet: [
       { nimi: 'Aleppon linnoitus', lat: 36.1994, lon: 37.1625 },
       { nimi: 'Antiokian portti', lat: 36.1989, lon: 37.1516 },
@@ -5579,35 +5590,25 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/jerusalem-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 31.7865, etela: 31.772, lansi: 35.221, ita: 35.244 },
-    esittely: 'Jerusalem on vuoristokaupunki. Se kohoaa lähes '
-      + 'kahdeksansadan metrin korkeuteen Juudean vuorilla, ja sitä '
-      + 'ympäröi kolme laaksoa — siksi kaupunki on aina ollut helppo '
-      + 'puolustaa ja vaikea kastella. Omaa jokea ei ole, joten koko '
-      + 'asutuksen paikan ratkaisi yksi lähde: Gihon, joka pulppuaa '
-      + 'Kidronin laakson kalliossa. Nykyiset muurit eivät ole '
-      + 'muinaiset vaan ottomaanien työtä: sulttaani Suleiman määräsi '
-      + 'rauniona olleet muurit rakennettavaksi uudelleen vuonna 1535, '
-      + 'ja työ tehtiin vuosina 1537–1541. Kiveä on 4 018 metrin '
-      + 'matkalla, keskikorkeus on noin kaksitoista metriä ja paksuus '
-      + 'kaksi ja puoli metriä, ja muuria kiertää 34 tornia. '
-      + 'Liikennöityjä portteja on seitsemän. Muurit ja vanhakaupunki '
-      + 'hyväksyttiin Unescon maailmanperintöluetteloon vuonna 1981. '
-      + 'Vielä 1800-luvun puoliväliin asti koko kaupunki mahtui '
-      + 'muurien sisään; ensimmäinen kortteli niiden ulkopuolelle '
-      + 'rakennettiin vasta vuonna 1860.\n\nKartalla on vain '
-      + 'vanhakaupunki, runsaan kahden kilometrin levyinen pala. '
-      + 'Muuri erottuu kuvassa tummana yhtenäisenä viivana, joka '
-      + 'kiertää koko alueen — se on kartan selkäranka. Sen sisällä ei '
-      + 'ole juuri katuja vaan kujia, ja siksi verkko näyttää '
-      + 'tiheämmältä kuin muissa kaupungeissa: leveys riittää '
-      + 'jalankulkijalle ja aasille, ei vaunulle. Oikeassa laidassa '
-      + 'erottuu suuri suorakaide, jota kujat eivät halkaise: se on '
-      + 'temppelivuoren aitaus, vanhankaupungin pinta-alasta noin '
-      + 'kuudesosa. Länsilaidassa muuri kaartaa ulos ja sisään — '
-      + 'siellä on Jaffan portti, josta lähti 1800-luvulla ainoa '
-      + 'ajokelpoinen tie rannikolle. Kartan ulkopuolelle jäävät '
-      + 'etelään Daavidin kaupungin kaivausalue ja Siiloan allas. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * kohdekartan esittely lyhennettiin oleelliseen. Kartan
+     * visuaalinen kuvailu (muuriviiva, kujaverkon tiheys, suorakaide
+     * oikeassa laidassa) on poistettu; jäljelle jäi se, mitä alueella
+     * on ja miksi. Kaupungin korkeus, Gihonin lähde ja muurien
+     * mitat kerrotaan etusivun leipätekstissä ja lehden nostoissa.
+     */
+    esittely: 'Kartalla on vain vanhakaupunki: 0,9 neliökilometrin pala, '
+      + 'jota kiertää ottomaanien muuri ja jonka kävelee laidasta laitaan '
+      + 'vartissa. Sen sisällä ovat kolmen uskonnon keskeisimmät paikat '
+      + 'kävelymatkan päässä toisistaan: Läntinen muuri, temppelivuorella '
+      + 'seisovat Kalliomoskeija ja Al-Aqsa sekä Pyhän haudan kirkko. '
+      + 'Pohjoisessa on Damaskoksen portti, jonka paikalla on ollut portti '
+      + 'roomalaisajasta asti, ja lännessä Jaffan portti, josta lähti '
+      + '1800-luvulla ainoa ajokelpoinen tie rannikolle. Daavidin '
+      + 'kaupungin kaivausalue ja Siiloan allas jäävät rajauksen '
+      + 'eteläpuolelle; ne kerrotaan lehden Vesi-sivulla. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään. */
       { nimi: 'Damaskoksen portti', lat: 31.7816, lon: 35.2305 },
@@ -5699,42 +5700,26 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/persepolis-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 29.9372, etela: 29.9325, lansi: 52.8858, ita: 52.8938 },
-    esittely: 'Persepolis ei ole kaupunki vaan yksi rakennusryhmä. '
-      + 'Kreikkalaiset antoivat sille nimen Persepolis eli persialaisten '
-      + 'kaupunki; persialaisten omalla kielellä paikka oli Pārsa, sama '
-      + 'sana kuin koko maakunnan nimi. Vanhimmat jäänteet ovat vuodelta '
-      + '515 eKr. Dareios I rakennutti terassin ja sen ensimmäiset '
-      + 'palatsit, ja rakentaminen jatkui valtakunnan loppuun asti. '
-      + 'Terassi on 125 000 neliömetriä: osa siitä on muurattu tasangolle '
-      + 'ja osa louhittu Rahmat-vuoren kylkeen, ja päämateriaali oli '
-      + 'harmaa kalkkikivi. Hallinnon todelliset pääkaupungit olivat '
-      + 'muualla — Susa, Babylon ja Ekbatana — ja se selittää, miksi '
-      + 'kreikkalaiset eivät tunteneet paikkaa ennen kuin Aleksanteri '
-      + 'valtasi sen vuonna 330 eKr. Sen jälkeen katosi nimikin: '
-      + 'sasanidiruhtinas Shapur Sakanshah kutsui raunioita vuonna 311 '
-      + 'nimellä Sad-stūn eli sata pylvästä, ja keskiajalla ne olivat '
-      + 'Tahti Jamshid, Jamshidin valtaistuin, ja Tšehel Minar, '
-      + 'neljäkymmentä minareettia. Vieressä virtaa pieni Pulvar-joki, '
-      + 'joka laskee Kur-jokeen.\n\nKartalla on koko kohde: vajaan '
-      + 'kahdeksansadan metrin levyinen pala tasankoa vuoren juurella. '
-      + 'Keskellä on terassi, ja sen reuna piirtyy sahalaitaisena. '
-      + 'Porrastus ei ole koriste vaan puolustusta: kulmikas tukimuuri '
-      + 'antoi puolustajille näkymän ulkosivun jokaiseen kohtaan, kuten '
-      + 'linnassa. Terassin sisällä ei ole katuja vaan ohuita viivoja, '
-      + 'jotka erottavat palatsit toisistaan — nämä viivat ovat '
-      + 'perustuksia eivätkä kujia. Luoteisnurkassa on kaksoisportaikko '
-      + 'ja sen päässä Kaikkien kansojen portti, josta jokainen astui '
-      + 'sisään. Idässä kartta nousee vuorelle: polut kiipeävät '
-      + 'rinnettä, ja niiden yläpäässä on Artakserkses III:n kallioon '
-      + 'louhittu hauta. Lännestä tullaan nykyistä tuloreittiä, jonka '
-      + 'varrella ovat lipunmyynti ja pysäköintialueet. Vasemmassa '
-      + 'alakulmassa erottuu tähtimäinen kaava pienen altaan ympärillä: '
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely lyhennettiin oleelliseen. Kartan viivastojen kuvailu
+     * (sahalaitainen reuna, perustusviivat, tuloreitin pysäköinti)
+     * on poistettu; nimihistoria ja terassin mitat kerrotaan etusivun
+     * leipätekstissä ja lehden nostoissa. Vuoden 1971 telttakaupunki
+     * jäi, koska se on ainoa selitys kartalla yhä näkyvälle tiestölle.
+     */
+    esittely: 'Kartalla on koko kohde: vajaan kahdeksansadan metrin '
+      + 'levyinen pala tasankoa Rahmat-vuoren juurella. Terassille '
+      + 'noustaan luoteisnurkan kaksoisportaikkoa Kaikkien kansojen '
+      + 'portille, ja sen takana ovat palatsit ja salit: Apadana, Sadan '
+      + 'pylvään sali, Kolmen oven sali, aarrekammio sekä Dareios I:n '
+      + 'Tachara ja Xerxesin Hadish. Idässä polut nousevat vuoren '
+      + 'rinteeseen, johon on louhittu Artakserkses III:n hauta. Terassin '
+      + 'lounaispuolella erottuu tähtikuvioinen tiestö altaan ympärillä: '
       + 'sinne pystytettiin vuonna 1971 telttakaupunki valtakunnan '
-      + 'kaksituhatviisisataavuotisjuhliin — viisikymmentä telttaa '
-      + 'tähtikuvioon suihkulähteen ympärille. Teltat ovat poissa, '
-      + 'mutta tiet ja allas ovat kartalla yhä. Alalaidassa kaivausalue '
-      + 'jatkuu terassin eteläpuolelle. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+      + 'kaksituhatviisisataavuotisjuhliin, ja teltat ovat poissa mutta '
+      + 'tiet jäivät. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Petrassa ja Medinassa. */
       { nimi: 'Kaikkien kansojen portti', lat: 29.93618, lon: 52.889078 },
@@ -6145,37 +6130,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/mosul-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 36.368, etela: 36.332, lansi: 43.112, ita: 43.17 },
-    esittely: 'Mosulin arabiankielinen nimi al-Mawsil tarkoittaa '
-      + 'liitoskohtaa, ja kartta näyttää miksi. Tigris halkoo kuvan '
-      + 'luoteesta kaakkoon, ja joen kaksi rantaa ovat kaksi eri '
-      + 'kaupunkia. Itärannalla, runsaan kilometrin päässä vedestä, '
-      + 'ovat Kuyunjikin ja Nabi Yunusin kummut: ne ovat antiikin '
-      + 'Ninive, jonka Sanherib teki Assyrian pääkaupungiksi noin '
-      + 'vuonna 700 eKr. ja josta tuli aikansa suurin kaupunki '
-      + 'maailmassa. Kaupunkia kiersi kahdentoista kilometrin muuri, '
-      + 'sen sisällä oli seitsemänsataaviisikymmentä hehtaaria ja '
-      + 'muurissa viisitoista porttia. Ninive kukistui vuonna 612 eKr. '
-      + 'Länsiranta on nuorempi: sinne perustettiin Mepsila, jonka '
-      + 'rakensivat Niniven entiset asukkaat oman pääkaupunkinsa '
-      + 'raunioista, ja se otti Tigriin ylityspaikan tehtävän tiellä, '
-      + 'joka yhdisti Assyrian Anatoliaan. Kaupunki on 223 metrin '
-      + 'korkeudessa Ylä-Mesopotamiassa, ja se on Bagdadin jälkeen '
-      + 'Irakin toiseksi suurin.\n\n'
-      + 'Kartalla erot näkyvät heti. Kuvan vasen puolisko on tiheintä '
-      + 'kujastoa koko kartastossa: se on vanhakaupunki, jonka '
-      + 'katuverkko syntyi ennen autoja ja jota osmanivallan alussa '
-      + 'kehuttiin seitsemästä portistaan, sairaalastaan ja katetusta '
-      + 'basaaristaan. Sen pohjoislaidalla joen mutkassa on Bash '
-      + 'Tapian linna, yksi kaupunginmuurin seitsemästä linnakkeesta, '
-      + 'ja hieman siitä sisämaahan Qara Saray eli Musta palatsi. '
-      + 'Kujaston keskeltä löytyvät Al-Nurin ja Al-Nabi Jirjisin '
-      + 'moskeijat, ja pohjoisempaa Al-Masfi, jonka paikalla seisoi '
-      + 'kaupungin ensimmäinen perjantaimoskeija. Itäranta on '
-      + 'päinvastainen: leveitä suoria katuja ja säännöllisiä '
-      + 'kortteleita. Sen keskellä avautuu kartan suurin yhtenäinen '
-      + 'alue, jolla ei ole katuja lainkaan — se on Niniven muurien '
-      + 'sisäpuoli, ja sen halki mutkittelee Khosr-joki. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä kohteita alueella on ja miksi ne
+     * kiinnostavat; kartan viivastojen ja laikkujen kuvailu on
+     * poistettu.
+     */
+    esittely: 'Kartta kattaa Tigriin molemmat rannat, ja juuri siitä '
+      + 'kaupunki on saanut nimensä: al-Mawsil tarkoittaa liitoskohtaa. '
+      + 'Länsirannalla on vanhakaupunki, jonka kujaverkko syntyi ennen '
+      + 'autoja; sen pohjoislaidalla joen mutkassa on Bash Tapian linna ja '
+      + 'hieman sisämaahan Qara Saray eli Musta palatsi, ja kujaston '
+      + 'keskeltä löytyvät Al-Nurin, Al-Nabi Jirjisin ja Al-Masfin '
+      + 'moskeijat. Itärannalla ovat Kuyunjikin ja Nabi Yunusin kummut eli '
+      + 'antiikin Ninive, jonka Sanherib teki Assyrian pääkaupungiksi noin '
+      + 'vuonna 700 eKr. ja joka kukistui vuonna 612 eKr. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Kuyunjikin kumpu', lat: 36.3594, lon: 43.1528 },

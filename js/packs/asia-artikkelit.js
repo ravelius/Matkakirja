@@ -6,8 +6,13 @@
 // ja sen pituus vaihtelee kaupungista toiseen kymmenkertaisesti.
 //
 // Muoto on sama kuin EUROPE_ARTIKKELIT-taulussa:
-//   intro   — kaksi lausetta Tutki-kortille. Toisessa on jotain, mitä
-//             lukija ei arvaisi.
+//   intro   — ETUSIVUN LEIPÄTEKSTI. Tekstiremontti 20.8.2026 (Raamattu,
+//             "TEKSTIEN PAINOPISTE") vaihtoi mitan: 7–10 virkkeen
+//             johdatus, ~700–1100 merkkiä, 2–3 kappaletta '\n\n'-rajalla
+//             ja 1–3 maltillista **lihavointia**. Vanhat kahden lauseen
+//             introt kirjoitetaan uusiksi erissä; erä R2 (20.8.2026) teki
+//             Jerusalemin, Siinain, Persepoliksen ja Rub al-Khalin.
+//             Renderöijä tekee kappaleet ja boldit — ei HTML:ää tänne.
 //   teksti  — kolme kappaletta, yhteensä 800–1000 merkkiä. Ensimmäinen
 //             kertoo missä ollaan, toinen mitä täällä on tapahtunut,
 //             kolmas millaista täällä on nyt.
@@ -19,6 +24,16 @@
 // Ei ylisanoja eikä huutomerkkejä: nuoren herran innostus kuuluu
 // saapumistekstissä, ja tämä on se rauhallinen ääni, joka kertoo
 // taustan.
+//
+// TEKSTIREMONTTI 20.8.2026 (Raamattu, "TEKSTIEN PAINOPISTE"):
+// intro EI OLE ENÄÄ kaksi lausetta vaan lehden ETUSIVUN LEIPÄTEKSTI —
+// 7–10 virkkeen johdatus (~700–1100 mrk) siihen, millainen kaupunki
+// on ja mikä sen merkitys ja historia. Omistajan lisäys samana
+// päivänä: intro jaetaan 2–3 kappaleeseen '\n\n'-rajalla kuten
+// teksti-kentässä, ja 1–3 avainkohtaa saa lihavoida **näin**.
+// Remontti etenee erissä; erässä R3 uuteen asuun kirjoitettiin
+// Mosul, Aleppo, Damaskos ja Luxor. Kappaleet ja boldit vaativat
+// leipätekstin renderöijän — ks. erän loppuraportti.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'Izmir on Turkin kolmanneksi suurin kaupunki ja sen tärkein '
@@ -114,9 +129,27 @@ export const ASIA_ARTIKKELIT = {
       + 'kyltit ja lippu vaihtuvat.',
   },
   Aleppo: {
-    intro: 'Aleppo on yksi maailman vanhimmista yhtäjaksoisesti '
-      + 'asutuista kaupungeista. Sen katetussa basaarissa on käyty '
-      + 'kauppaa noin neljäntuhannen vuoden ajan.',
+    intro: 'Aleppo on Pohjois-Syyrian suurkaupunki ja maan väkirikkaimman '
+      + 'maakunnan pääkaupunki. Se seisoo 380 metrin ylängöllä 120 '
+      + 'kilometriä Välimereltä sisämaahan, ja asukkaita arvioitiin vuonna '
+      + '2021 olevan runsaat kaksi miljoonaa. Kaupunki on yksi maailman '
+      + 'vanhimmista yhtäjaksoisesti asutuista paikoista — samaa sanoo '
+      + 'Damaskos itsestään.'
+      + '\n\n'
+      + 'Kaupunki on kasvanut yhden kummun ympärille: **linnoitus** seisoo '
+      + 'omalla kukkulallaan, ja sen ympärille levisivät muurikaupunki ja '
+      + 'kaupunginosat. Kaksi kauppatietä risteää täällä: idän tavara '
+      + 'purettiin Aleppossa ja jatkoi Välimerelle, ja kauppiaiden '
+      + 'majatalot eli khanit ovat siltä ajalta. Kaupunki oli 1500-luvun '
+      + 'puolivälistä idän tavaran tärkein portti Eurooppaan, kunnes '
+      + '**Suezin kanava** avattiin vuonna 1869 ja kauppa siirtyi '
+      + 'laivoille. Vanhakaupunki on Unescon maailmanperintökohde, ja '
+      + 'tunnetuin tuote on oliivi- ja laakeriöljystä keitetty saippua.'
+      + '\n\n'
+      + 'Vuosien 2012–2016 sota vaurioitti vanhaakaupunkia pahoin, ja '
+      + 'jälleenrakennus on kesken: osa katetusta basaarista ja khaneista '
+      + 'on jo kunnostettu. Lehden kuvissa näkyy sekä sotaa edeltävä että '
+      + 'nykyinen Aleppo.',
     teksti: 'Aleppo on Pohjois-Syyriassa, tasangolla, jonka poikki '
       + 'kulkivat karavaanireitit idästä Välimerelle. Sijainti teki '
       + 'siitä varakkaan: karavaanit purkivat kuormansa täällä, ja '
@@ -138,9 +171,28 @@ export const ASIA_ARTIKKELIT = {
       + 'ja osa basaarista on jo avattu uudelleen.',
   },
   Damaskos: {
-    intro: 'Damaskosta pidetään maailman vanhimpana yhtäjaksoisesti '
-      + 'asuttuna pääkaupunkina. Sen läpi kulkee Suora katu, joka '
-      + 'mainitaan nimeltä Raamatussa ja on yhä olemassa.',
+    intro: 'Damaskos on Syyrian pääkaupunki ja suurin kaupunki, ja sitä '
+      + 'pidetään maailman vanhimpana yhtäjaksoisesti asuttuna '
+      + 'pääkaupunkina. Se on 680 metrin tasangolla Anti-Libanonin '
+      + 'vuoriston itäisillä juurilla 80 kilometriä Välimereltä '
+      + 'sisämaahan, ja suurkaupunkialueella asuu arviolta lähes kolme '
+      + 'miljoonaa ihmistä. Vuoret jättävät kaupungin sadevarjoon, joten '
+      + 'ilmasto on kuiva; vastapainona on Barada-joki, joka kastelee '
+      + '**Ghoutan** viljelysalueen.'
+      + '\n\n'
+      + 'Roomalaiset kaavoittivat kaupungin ruutuun, ja vanhakaupunki on '
+      + 'yhä muurien ympäröimä suorakaide, jossa on seitsemän vanhaa '
+      + 'porttia. Sen keskellä on paikka, joka on ollut pyhä neljä kertaa: '
+      + 'aramealainen temppeli, Jupiterin temppeli, kirkko ja moskeija. '
+      + 'Suurin käänne oli vuosi 661: Damaskoksesta tuli '
+      + '**umaijadikalifaatin pääkaupunki**, ja valtakunta ulottui Iberian '
+      + 'niemimaalta Indus-joelle, kunnes valta siirtyi vuonna 750 '
+      + 'Bagdadiin. Kaupungista ovat saaneet nimensä damasti ja '
+      + 'damaskosteräs.'
+      + '\n\n'
+      + 'Sisällissota ulottui Damaskokseen vuonna 2012, mutta taistelut '
+      + 'käytiin pääosin laitakaupungilla, ja vanhakaupunki säilyi '
+      + 'ehjempänä kuin Aleppossa tai Mosulissa.',
     teksti: 'Damaskos sijaitsee Ghouta-keitaalla Anti-Libanonin vuorten '
       + 'juurella. Barada-joki tekee kuivaan maastoon vihreän läiskän, '
       + 'ja sen ansiosta paikalla on voitu asua yhtäjaksoisesti '
@@ -160,10 +212,26 @@ export const ASIA_ARTIKKELIT = {
       + 'valopilkkuja — reiät ovat luodinjälkiä 1900-luvun alusta.',
   },
   Jerusalem: {
-    intro: 'Jerusalem on pyhä kaupunki kolmelle uskonnolle, ja niiden '
-      + 'tärkeimmät paikat ovat alle kilometrin levyisen vanhankaupungin '
-      + 'sisällä. Kaupunki on rakennettu vaaleasta kalkkikivestä, joka '
-      + 'iltapäivällä hehkuu kullanvärisenä.',
+    intro: 'Jerusalem on vuoristokaupunki Juudean vuorilla, noin 750 metrin '
+      + 'korkeudessa. Sitä ympäröi kolme laaksoa, eikä sillä ole omaa jokea: '
+      + 'asutuksen paikan ratkaisi yksi lähde, Kidronin laakson kalliosta '
+      + 'pulppuava **Gihon**. Vanhaakaupunkia kiertävät muurit eivät ole '
+      + 'muinaiset vaan ottomaanien työtä vuosilta 1537–1541.'
+      + '\n\n'
+      + 'Kaupunki on pyhä kolmelle uskonnolle, ja niiden keskeisimmät paikat '
+      + 'ovat alle kilometrin levyisen vanhankaupungin sisällä: Länsimuuri, '
+      + 'temppelivuorella seisovat Kalliomoskeija ja al-Aqsa sekä **Pyhän '
+      + 'haudan kirkko**. Historian suurin käännekohta osui antiikkiin, kun '
+      + 'keisari Hadrianus perusti kaupungin uudelleen roomalaisena '
+      + 'siirtokuntana vuosina 129–130 ja antoi sille nimen Aelia '
+      + 'Capitolina. Jako neljään kortteliin on paljon nuorempi tapa '
+      + 'hahmottaa aluetta: se juontuu 1840-luvun brittiläisistä '
+      + 'sotilaskartoista.'
+      + '\n\n'
+      + 'Talot on rakennettu kaupungin omasta vaaleasta kalkkikivestä, ja '
+      + 'louhoskuopasta muurattiin usein saman talon sadevesisäiliö. Muurien '
+      + 'ulkopuolelle nousi ensimmäinen kortteli vasta 1860, eikä isoisän '
+      + 'matkan aikaan tänne päässyt junalla: rata Jaffasta valmistui 1892.',
     teksti: 'Jerusalem on Juudean vuorilla noin 750 metrin korkeudessa, '
       + 'Välimeren ja Kuolleenmeren välissä. Vanhaakaupunkia ympäröi '
       + 'osmanien 1500-luvulla rakentama muuri, ja sen sisällä on neljä '
@@ -208,10 +276,26 @@ export const ASIA_ARTIKKELIT = {
       + 'ja Unescon maailmanperintökohde.',
   },
   Siinai: {
-    intro: 'Siinai on kolmion muotoinen niemimaa Afrikan ja Aasian '
-      + 'välissä. Sen eteläkärjessä on vuori, jonka juurella toimii '
-      + 'maailman vanhin yhtäjaksoisesti käytössä ollut kristillinen '
-      + 'luostari.',
+    intro: 'Siinai on kolmion muotoinen niemimaa Afrikan ja Aasian välissä: '
+      + 'pohjoisreuna on Välimerellä, kärki Punaisenmeren suulla ja kyljillä '
+      + 'Suezin- ja Aqabanlahti. Niemimaa kuuluu Egyptille, mutta **Suezin '
+      + 'kanava** erottaa sen muusta maasta: kanava avattiin marraskuussa '
+      + '1869, ja se veti rajan Afrikan ja Aasian väliin niin, että Siinai '
+      + 'jäi Aasian puolelle.'
+      + '\n\n'
+      + 'Maasto vaihtuu kahdesti: pohjoinen on hiekka-aavikkoa, etelä '
+      + 'jyrkkää punaista graniittia ja rannikko koralliriuttaa. '
+      + 'Siinainvuori kohoaa 2 285 metriin, ja aivan sen vieressä on Egyptin '
+      + 'korkein huippu Katariinanvuori. Kolmen uskonnon perinteen mukaan '
+      + 'Mooses sai käskynsä täällä, ja vuoren juurelle rakennettiin '
+      + '500-luvulla **Pyhän Katariinan luostari**, joka on toiminut siitä '
+      + 'asti keskeytyksettä ja jonka käsikirjoituskokoelma on maailman '
+      + 'toiseksi suurin.'
+      + '\n\n'
+      + 'Egyptiläiset louhivat vuoristosta turkoosia ja kuparia tuhansien '
+      + 'vuosien ajan, ja samoilta Serabit el-Khadimin kallioilta löytyivät '
+      + 'varhaisimmat aakkoskirjoituksen merkit. Sisämaan laaksoissa on '
+      + 'keitaita, joista suurin on Wadi Feiran.',
     teksti: 'Siinai erottaa Välimeren Punaisestamerestä ja Afrikan '
       + 'Aasiasta. Pohjoisosa on hiekka-aavikkoa, eteläosa jyrkkää '
       + 'graniittivuoristoa, jonka korkein huippu Katariinanvuori nousee '
@@ -232,9 +316,27 @@ export const ASIA_ARTIKKELIT = {
       + 'auringonnousun aikaan.',
   },
   Luxor: {
-    intro: 'Luxor on rakennettu antiikin Theban päälle, ja temppelit '
-      + 'ovat keskellä nykyistä kaupunkia. Joen toisella rannalla '
-      + 'ovat Kuninkaiden laakso ja faaraoiden haudat.',
+    intro: 'Luxor on Ylä-Egyptin kaupunki Niilin varrella, 670 kilometriä '
+      + 'Kairosta etelään ja 220 kilometriä Assuanista pohjoiseen. '
+      + 'Asukkaita oli vuonna 2023 noin 285 000, ja korkeutta on 89 '
+      + 'metriä. Kaupunki on rakennettu antiikin Theban päälle: '
+      + 'egyptiläisittäin Waset, kreikkalaisittain Thebai, ja se oli '
+      + 'Egyptin pääkaupunki useiden dynastioiden aikaan.'
+      + '\n\n'
+      + 'Niili jakaa Luxorin kahtia, ja jako on ikivanha: itäpuolelle, '
+      + 'missä aurinko nousi, rakennettiin temppelit ja asuttiin, ja '
+      + 'länsipuolelle, missä se laski, haudattiin. Itärannalla ovat '
+      + '**Karnakin ja Luxorin temppelit** keskellä nykyistä kaupunkia, ja '
+      + 'niitä yhdisti sfinksien reunustama kuja. Länsirannalla on Theban '
+      + 'nekropoli Kuninkaiden ja Kuningattarien laaksoineen; Howard '
+      + 'Carter löysi sieltä **Tutankhamonin haudan** 4. marraskuuta 1922, '
+      + 'ja se oli ensimmäinen kuninkaanhauta, joka löytyi pääosin '
+      + 'koskemattomana.'
+      + '\n\n'
+      + 'Nykyään kaupunki elää matkailusta ja saa vuodessa noin viisi '
+      + 'miljoonaa vierailijaa. Aamut alkavat ennen aurinkoa, kun '
+      + 'kuumailmapallot nousevat länsirannan yllä, ja peltojen poikki '
+      + 'kulkevat kapearaiteiset radat vievät sokeriruokoa tehtaille.',
     teksti: 'Luxor on Niilin rannalla Ylä-Egyptissä. Antiikin aikana '
       + 'kaupunki oli nimeltään Waset, kreikkalaisille Thebai, ja se '
       + 'oli Egyptin pääkaupunki useiden dynastioiden aikaan. Idässä '
@@ -378,9 +480,27 @@ export const ASIA_ARTIKKELIT = {
       + 'ovat tyhjiä, ja kaupunki herää vasta pimeän tultua.',
   },
   'Rub al-Khali': {
-    intro: 'Rub al-Khali on maailman suurin yhtenäinen hiekka-aavikko. '
-      + 'Nimi tarkoittaa tyhjää neljännestä, ja se pitää paikkansa: '
-      + 'alueella ei ole kyliä, teitä eikä pysyvää asutusta.',
+    intro: 'Rub al-Khali tarkoittaa arabiaksi tyhjää neljännestä, ja se on '
+      + 'maailman suurin yhtenäinen hiekka-aavikko. Pinta-alaa on noin 650 '
+      + '000 neliökilometriä eli enemmän kuin koko Ranskassa, mittaa tuhat '
+      + 'kilometriä idästä länteen ja viisisataa pohjoisesta etelään. Alue '
+      + 'jakautuu Saudi-Arabian, Omanin, Arabiemiirikuntien ja Jemenin '
+      + 'kesken, ja sen dyynit kohoavat jopa kahteensataanviiteenkymmeneen '
+      + 'metriin.'
+      + '\n\n'
+      + 'Nimi pitää paikkansa siinä, ettei keskellä ole kyliä, peltoja eikä '
+      + 'puita: ensimmäinen aavikon poikki kulkeva maantie valmistui vasta '
+      + 'syyskuussa 2021, ja **ensimmäiset dokumentoidut ylitykset** tehtiin '
+      + '1930-luvulla. Aina täällä ei ole ollut kuivaa: hiekan seassa on '
+      + 'muinaisten järvien pohjia, joista on kaivettu virtahevon ja '
+      + 'vesipuhvelin luita.'
+      + '\n\n'
+      + 'Kaksituhatta vuotta sitten aavikon arvo oli siinä, mitä sen poikki '
+      + 'kulki: Dhofarin suitsuke vietiin karavaaneilla kohti Välimerta. '
+      + '1900-luvulla arvo löytyi hiekan alta, kun **Ghawarin öljykenttä** '
+      + 'löydettiin 1948. Reunoilla asuu yhä beduiiniheimoja kameleineen, ja '
+      + 'lännessä on vuonna 2023 maailmanperintöön otettu Uruq Bani '
+      + 'Ma\'aridin suojelualue.',
     teksti: 'Aavikko peittää suuren osan Arabian niemimaan eteläosaa ja '
       + 'ulottuu Saudi-Arabian, Omanin, Jemenin ja Arabiemiirikuntien '
       + 'alueelle. Pinta-alaa on noin 650 000 neliökilometriä — '
@@ -579,10 +699,27 @@ export const ASIA_ARTIKKELIT = {
       + 'hitaasti hiillokseen.',
   },
   Mosul: {
-    intro: 'Mosul on Tigrisin varrella Pohjois-Irakissa, ja joen '
-      + 'toisella rannalla ovat Niniven rauniot. Ninive oli aikanaan '
-      + 'maailman suurin kaupunki, ja se tuhoutui niin täydellisesti, '
-      + 'että sitä pidettiin pitkään satuna.',
+    intro: 'Mosul on Irakin toiseksi suurin kaupunki ja Niniven maakunnan '
+      + 'pääkaupunki. Se kasvoi Tigriin ylityspaikkaan Ylä-Mesopotamiassa '
+      + '223 metrin korkeuteen, ja arabiankielinen nimi al-Mawsil '
+      + 'tarkoittaa liitoskohtaa. Asukkaita on kaupunkiseudulla noin 1,8 '
+      + 'miljoonaa (2023), ja väestö on vanhastaan monimuotoinen: arabeja, '
+      + 'kurdeja, turkmeeneja, assyrialaisia ja jesidejä. Joki jakaa '
+      + 'kaupungin kahtia: länsirannalla on ennen autoja syntynyt '
+      + 'kujaverkko, itärannalla leveät kadut.'
+      + '\n\n'
+      + 'Itärannalla ovat **Niniven kummut**. Sanherib teki Ninivestä '
+      + 'Assyrian pääkaupungin noin vuonna 700 eaa., ja siitä tuli aikansa '
+      + 'suurin kaupunki. Ninive kukistui 612 eaa. ja unohtui niin '
+      + 'tarkkaan, että paikka tunnistettiin vasta 1840-luvulla. '
+      + 'Tasangolle sataa sen verran, että viljaa kasvaa ilman kastelua, '
+      + 'ja keskiajalta kaupunki tunnetaan ohuesta puuvillakankaasta ja '
+      + 'hopeaupotteisesta messingistä.'
+      + '\n\n'
+      + 'Vuosien 2014–2017 sotatoimissa vanhakaupunki vaurioitui pahoin, '
+      + 'ja **jälleenrakennus** etenee kortteli kerrallaan: al-Nurin '
+      + 'moskeija minareetteineen vihittiin uudelleen syyskuussa 2025. '
+      + 'Lehdessä on siksi sekä sotaa edeltäviä että tuoreita kuvia.',
     teksti: 'Mosul on Irakin toiseksi suurin kaupunki. Se sijaitsee '
       + 'hedelmällisellä tasangolla, jossa sataa enemmän kuin etelässä '
       + '— täällä viljaa voi kasvattaa ilman kastelua. Kaupungin '
@@ -734,10 +871,26 @@ export const ASIA_ARTIKKELIT = {
       + 'vasaran ääni, kun astioihin lyödään kuviot käsin.',
   },
   Persepolis: {
-    intro: 'Persepolis oli Persian valtakunnan seremoniallinen '
-      + 'pääkaupunki. Sen portaiden kyljessä marssii kivinen jono '
-      + 'lähettiläitä valtakunnan kaikista kansoista, kukin oma '
-      + 'lahjansa kädessä.',
+    intro: 'Persepolis ei ole kaupunki vaan yksi rakennusryhmä: kivinen '
+      + 'terassi Rahmat-vuoren juurella Etelä-Iranin Farsissa. Nimi on '
+      + 'kreikkalaisten antama ja tarkoittaa persialaisten kaupunkia; omalla '
+      + 'kielellään paikka oli Pārsa, sama sana kuin koko maakunnan nimi. '
+      + 'Vanhimmat jäänteet ovat vuodelta 515 eKr., ja terassin ja sen '
+      + 'ensimmäiset palatsit rakennutti **Dareios I**; työtä jatkoivat '
+      + 'Xerxes I sekä Artakserkses I ja III.'
+      + '\n\n'
+      + 'Alusta on 125 000 neliömetriä, ja se on osin muurattu tasangolle, '
+      + 'osin louhittu vuoren kylkeen. Valtakuntaa ei silti johdettu täältä '
+      + 'vaan Susasta, Babylonista ja Ekbatanasta: Persepolis oli '
+      + 'seremoniallinen pääkaupunki. Tunnetuin osa ovat **Apadanan '
+      + 'porrasreliefit**, joissa valtakunnan kansat tuovat lahjojaan kukin '
+      + 'omassa asussaan, ja hallinnon arjesta kertovat savitaulut vuosilta '
+      + '509–493 eKr.'
+      + '\n\n'
+      + 'Vuonna 330 eKr. Aleksanteri Suuren joukot valtasivat paikan, ja '
+      + 'tuli tuhosi rakennusten puuosat, mutta kivi jäi pystyyn. Sen '
+      + 'jälkeen katosi nimikin: raunioita kutsuttiin vuosisatoja Jamshidin '
+      + 'valtaistuimeksi ja neljäksikymmeneksi minareetiksi.',
     teksti: 'Persepolis on Etelä-Iranissa Farsin maakunnassa, '
       + 'terassilla vuoren juurella. Dareios I aloitti rakentamisen '
       + 'noin vuonna 518 eaa., ja työ jatkui useiden kuninkaiden ajan. '
