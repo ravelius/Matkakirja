@@ -32,8 +32,8 @@
 // päivänä: intro jaetaan 2–3 kappaleeseen '\n\n'-rajalla kuten
 // teksti-kentässä, ja 1–3 avainkohtaa saa lihavoida **näin**.
 // Remontti etenee erissä; erässä R3 uuteen asuun kirjoitettiin
-// Mosul, Aleppo, Damaskos ja Luxor ja erässä R4 Sanaa, Aden, Masqat
-// ja Tabriz. Kappaleet ja boldit vaativat leipätekstin renderöijän —
+// Mosul, Aleppo, Damaskos ja Luxor, erässä R4 Sanaa, Aden, Masqat
+// ja Tabriz ja erässä R5 Riad, Doha, Kuwait ja Salalah. Kappaleet ja boldit vaativat leipätekstin renderöijän —
 // ks. erän loppuraportti.
 //
 // ERÄ R4 (20.8.2026) SAI UUDET LUVUT en-Wikipedian raakateksteistä
@@ -466,10 +466,35 @@ export const ASIA_ARTIKKELIT = {
       + 'korkeat hotellitornit, joista suurin, Abraj Al Bait, on yksi '
       + 'maailman massiivisimmista rakennuksista.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R5 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on nyt lehden etusivun leipäteksti — 7–10 virkettä kolmessa
+   * kappaleessa ('\n\n') ja kaksi maltillista **lihavointia**. Faktat
+   * ovat Riadin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Riad; oma
+   * teksti-kenttä alla), ei uusista lähteistä. teksti on ennallaan.
+   */
   Riad: {
-    intro: 'Riad on Saudi-Arabian pääkaupunki keskellä aavikkoa, ilman '
-      + 'jokea tai merenrantaa. Kaupunki kasvoi kaivojen ympärille — '
-      + 'nimi tarkoittaa puutarhoja.',
+    intro: 'Riad on Saudi-Arabian pääkaupunki ja Arabian niemimaan suurin '
+      + 'kaupunki: asukkaita oli vuonna 2022 seitsemän miljoonaa. Se on '
+      + 'Najdin ylätasangon itäosassa noin kuudensadan metrin korkeudessa, '
+      + 'ilman jokea ja ilman merenrantaa. Kaupungin läpi kulkee Wadi '
+      + 'Hanifan kausiuoma, joka virtaa vasta rankkasateiden jälkeen, ja '
+      + 'nimi Riad tarkoittaa puutarhoja.'
+      + '\n\n'
+      + 'Vanhaa Riadia kiersi 1740-luvulta savimuuri, jossa oli yhdeksän '
+      + 'porttia. Naapurissa oli mahtavampi kaksonen, **Diriyah**, jonka '
+      + 'hallitsijasuvun valta ulottui suureen osaan niemimaata, kunnes '
+      + 'osmanien ja Egyptin joukot hävittivät kaupungin vuonna 1818. '
+      + 'Asukkaat siirtyivät Riadiin, ja kun suku nousi uudelleen 1824 ja '
+      + '1902, pääkaupunki oli Riad.'
+      + '\n\n'
+      + 'Öljyä löydettiin 1938, ja se muutti mittakaavan: 1940-luvulla '
+      + 'kaupungissa asui noin viisikymmentätuhatta ihmistä. Muuri purettiin '
+      + '1950, ja vuonna 1968 tilattu yleiskaava jakoi kaupungin kahden '
+      + 'kertaa kahden kilometrin kortteleihin — se **ruudukko** erottuu yhä '
+      + 'avaruuteen asti. Nykyinen keskusta on lasitorneja ja moottoriteitä, '
+      + 'ja raunioitunut Diriyah on kunnostettu yleisölle.',
     teksti: 'Riad on Nedždin ylängöllä noin 600 metrin korkeudessa. '
       + 'Ilmasto on kuiva ja äärimmäinen: kesällä lämpötila nousee yli '
       + 'neljäänkymmeneen asteeseen ja talviyöt voivat olla lähellä '
@@ -604,10 +629,38 @@ export const ASIA_ARTIKKELIT = {
       + 'jälkeen maa yhdistyi, mutta kaupunki on ollut sodan '
       + 'keskipisteessä useaan otteeseen. Satama toimii yhä.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R5, sama linja kuin Riadissa yllä.
+   * Faktat ovat Salalahin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Salalah;
+   * maakartat.js:n karttalohko).
+   *
+   * NIMIASU: avain on kaupungin wiki-otsikko Salala (middleeast.js),
+   * mutta pelaajalle näkyvä nimi on kaikkialla muualla Salalah —
+   * kartalla, lehden kannessa ja kohdekartassa. Leipäteksti käyttää
+   * siksi muotoa Salalah; vanhempi teksti-kenttä jäi ennalleen.
+   */
   Salala: {
-    intro: 'Salala on Omanin eteläinen kaupunki, jossa monsuuni tekee '
-      + 'joka kesä poikkeuksen: aavikon reunalla oleva kaistale '
-      + 'muuttuu kolmeksi kuukaudeksi vihreäksi.',
+    intro: 'Salalah on Omanin eteläkärjessä Dhofarin maakunnan pääkaupunki ja '
+      + 'maan kolmanneksi suurin kaupunki, runsaat '
+      + 'kolmesataakolmekymmentätuhatta asukasta. Meri on etelässä, Dhofarin '
+      + 'vuoret pohjoisessa ja niiden välissä rantatasanko, jolle koko '
+      + 'kaupunki mahtuu. Kesäkuusta syyskuun alkuun puhaltava **khareef** '
+      + 'eli kesämonsuuni peittää rannikon sumuun ja tekee vuorista vihreät '
+      + '— toukokuun 335 paistetunnista jää heinäkuussa jäljelle 44.'
+      + '\n\n'
+      + 'Rannassa on matalia kivimuureja ja perustuksia: ne ovat '
+      + 'keskiaikaista **Zafaria**, josta koko maakunta sai nimensä. '
+      + 'Suitsukesataman kaduilla kulkivat Marco Polo, Ibn Battuta ja Zheng '
+      + 'He, kunnes viereinen lahti kuroutui umpeen järveksi. Alue on ollut '
+      + 'Unescon maailmanperintöluettelossa vuodesta 2000.'
+      + '\n\n'
+      + 'Vuosina 1932–1970 Salalah oli sulttaani Said bin Taimurin '
+      + 'asuinpaikka ja käytännössä maan pääkaupunki, ja hänen poikansa '
+      + 'Qaboos siirsi vallan tultuaan pääkaupungin Masqatiin. Satama palasi '
+      + '1990-luvulla, kun viidentoista kilometrin päähän Raysutiin '
+      + 'rakennettiin syväsatama. Kortteleiden välissä kasvaa kookospalmuja, '
+      + 'mitä ei näe muualla Arabian niemimaalla.',
     teksti: 'Salala on Dhofarin maakunnassa, kapealla rannikkotasangolla '
       + 'vuorten ja meren välissä. Kesäkuusta syyskuuhun Intian '
       + 'valtameren monsuuni tuo alueelle sumua ja tihkusadetta. '
@@ -689,10 +742,32 @@ export const ASIA_ARTIKKELIT = {
       + 'kuulee kymmeniä kieliä. Mausteiden ja kullan basaarit lahden '
       + 'pohjoisrannalla ovat samoilla paikoillaan kuin ennenkin.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R5, sama linja kuin Riadissa yllä.
+   * Faktat ovat Dohan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: johdanto, Matkailijan Doha ja sen
+   * jaksot; oma teksti-kenttä alla).
+   */
   Doha: {
-    intro: 'Doha on Qatarin pääkaupunki, jossa lasitornien vastapäätä '
-      + 'on tori, jolla myydään metsästyshaukkoja. Maa oli sata vuotta '
-      + 'sitten yksi Persianlahden köyhimmistä.',
+    intro: 'Doha on Qatarin pääkaupunki niemimaan itärannikolla, matalan lahden '
+      + 'pohjukassa. Alaa on 132 neliökilometriä, asukkaita vajaat 1,2 '
+      + 'miljoonaa ja korkeutta merenpinnasta kymmenen metriä. Ranta ei ole '
+      + 'sellainen kuin luonto sen jätti: merestä on täytetty neljäsataa '
+      + 'hehtaaria maata ja kolmekymmentä kilometriä uutta rantaviivaa, ja '
+      + 'täyttömaan reunaa kiertää seitsemän kilometrin **Corniche**.'
+      + '\n\n'
+      + 'Sata vuotta sitten Doha oli helmenpyyntisatama. Vuonna 1907 sillä '
+      + 'oli kolmesataaviisikymmentä helmivenettä ja niiden miehistöissä 6 '
+      + '300 miestä, ja brittivirkamies Lorimer laski kaupungista vuonna '
+      + '1908 yhdeksän korttelia ja noin kaksitoistatuhatta asukasta. '
+      + 'Viljelty helmi ja 1930-luvun lama veivät elinkeinon.'
+      + '\n\n'
+      + 'Öljyä porattiin ensimmäisen kerran 1939, mutta tulot alkoivat '
+      + 'kertyä vasta 1950- ja 1960-luvuilla, ja maakaasua löytyi 1971 '
+      + '**Pohjoiskentältä**, joka on maailman suurin yksittäinen '
+      + 'kaasuesiintymä. Tunnetuin Doha on siksi nuori: kulttuurikylä Katara '
+      + 'avattiin 2010, kansalliskirjasto 2018 ja metro 2019. Souq Waqifin '
+      + 'kujilla on silti yhä oma osastonsa metsästyshaukoille.',
     teksti: 'Doha on Qatarin niemimaan itärannikolla. Kaupunki kaartuu '
       + 'lahden ympäri, ja sen rantabulevardi Corniche on seitsemän '
       + 'kilometriä pitkä. Ilmasto on hyvin kuuma ja kostea, ja kesällä '
@@ -710,11 +785,35 @@ export const ASIA_ARTIKKELIT = {
       + '2022. Kaupungissa on useita museoita, joista islamilaisen '
       + 'taiteen museo seisoo omalla tekosaarellaan lahden edustalla.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R5, sama linja kuin Riadissa yllä.
+   * Faktat ovat Kuwaitin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: Matkailijan Kuwait ja sen jaksot;
+   * maakartat.js:n karttalohko; oma teksti-kenttä alla). Vuoden 1990
+   * miehitys ja sota jäävät introsta pois — sisältölinjaus 20.8.2026:
+   * ei nykysotaa eikä nykypolitiikkaa.
+   */
   'Kuwait (kaupunki)': {
-    intro: 'Kuwaitin kaupunki on rakennettu lahden pohjukkaan, jossa on '
-      + 'ollut satama niin kauan kuin alueella on rakennettu laivoja. '
-      + 'Sen tunnus ovat vesitornit, jotka näyttävät helmiltä '
-      + 'betonipiikissä.',
+    intro: 'Kuwaitin kaupunki on rakennettu Kuwaitinlahden etelärannalle, '
+      + 'Persianlahden pohjoisimpaan pohjukkaan. Lahti on jokien tekemä: '
+      + 'Tigriin ja Eufratin tuoma aines muodosti suiston, joka on suurin '
+      + 'osa nykyisen Kuwaitin maasta. Satamaksi paikka on alueen paras, ja '
+      + 'siitä kaupunki sai alkunsa. Kaupunkiseudulla asuu noin kolme '
+      + 'miljoonaa ihmistä, yli seitsemänkymmentä prosenttia maan väestöstä.'
+      + '\n\n'
+      + '1700-luvun alussa paikalla oli kalastajakylä. Kun Basraa '
+      + 'piiritettiin 1775–1779, sieltä paenneet kauppiaat toivat mukanaan '
+      + 'laivanrakennuksen, ja Kuwaitista tuli Persianlahden **laivanveiston '
+      + 'keskus**: puisilla dhow-aluksilla purjehdittiin Intiaan ja '
+      + 'Itä-Afrikkaan, ja mestari kantoi laivan mitat päässään ilman '
+      + 'piirustuksia.'
+      + '\n\n'
+      + 'Helmikauppa hiipui 1930-luvulla, ja matkakirjailija Freya Stark '
+      + 'kuvasi kaupungin köyhtyneen. Öljy käänsi suunnan: vuonna 1952 maa '
+      + 'oli Persianlahden suurin öljynviejä, ja kesäkuussa 1961 siitä tuli '
+      + 'itsenäinen. Vanha savitiilikaupunki purettiin 1950- ja '
+      + '1960-luvuilla ja tilalle piirrettiin uusi keskusta kehäteineen; '
+      + 'tunnukseksi nousivat 1979 valmistuneet **Kuwait Towers**.',
     teksti: 'Kuwait on Persianlahden pohjoisimmassa nurkassa, siinä '
       + 'missä Eufratin ja Tigrisin suisto lähenee lahtea. Luonnollinen '
       + 'satama Kuwait Bay on alueen paras, ja siitä kaupunki sai '

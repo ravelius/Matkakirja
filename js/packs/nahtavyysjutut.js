@@ -11101,6 +11101,12 @@ export const NAHTAVYYSJUTUT = {
    * palatsin. Perustelu ja mittaus:
    * docs/raportit/lehtityo-2026-08-12-nippu2-suunnittelu.md.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R5 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke): tämän kaupungin jutuissa kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Juttutekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   doha: {
     'Islamilaisen taiteen museo': {
       teksti: 'Näyttelysalit on ryhmitelty suuren keskusaulan ympärille, ja '
@@ -11218,10 +11224,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Falcon souq 03.jpg',
-          selite: 'Haukkasuukin liike Souq Waqifissa: hiekkalattian yli '
-            + 'kulkee vihreäpäällysteisiä orsirimoja, joilla istuu '
-            + 'huputtomia haukkoja. Liikkeessä on myytävien varusteiden '
-            + 'vitriini ja sisustuksena suuria muotokuvia.',
+          selite: 'Haukkasuukin liike Souq Waqifissa: hiekkalattian yli kulkee '
+            + 'vihreäpäällysteisiä orsirimoja, joilla istuu huputtomia '
+            + 'haukkoja, ja seinillä on suuria muotokuvia.',
           lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -11689,6 +11694,12 @@ export const NAHTAVYYSJUTUT = {
    * omalla historiallaan. CYP-maalehti kertoo saaren muinaisuudesta
    * ja kirkoista, joten kaupungin jutut pysyvät rakennuksissa.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R5 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke): tämän kaupungin jutuissa kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Juttutekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   kuwait: {
     'Kuwait-tornit': {
       aika: '1976',
@@ -11720,18 +11731,15 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Kuwait towers -2005 2006 Winter- (302658101).jpg',
           selite: 'Kolmikko tienvarresta nähtynä: oikealla päätorni kahtine '
-            + 'palloineen, vasemmalla yksipalloinen torni ja niiden '
-            + 'välissä kolmas, kapea ja palloton. Kiekkojen kierteinen '
-            + 'ladonta erottuu pallojen pinnassa vaaleansinisenä '
-            + 'ristikkona.',
+            + 'palloineen, vasemmalla yksipalloinen torni ja niiden välissä '
+            + 'kolmas, kapea ja palloton.',
           lahde: 'radiant guy from Den Haag, The Netherlands, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Kuwait City\'s popular landmarks Liberty Tower & Kuwait Towers.jpg',
-          selite: 'Samat tornit mereltä kuvattuna keskipäivän autereessa. '
-            + 'Kaukaa katsottuna pallot näyttävät hopeanharmailta ja '
-            + 'kiekkojen kuvio häviää lähes kokonaan; takana kohoavat '
-            + 'kaupungin uudemmat pilvenpiirtäjät.',
+          selite: 'Samat tornit mereltä keskipäivän autereessa, jolloin pallot '
+            + 'näyttävät hopeanharmailta ja kiekkojen kuvio häviää lähes '
+            + 'kokonaan.',
           lahde: 'Mahrs Multiverse, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11775,10 +11783,9 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Al Hamra Kuwait Mai 2010.jpg',
-          selite: 'Torni keskeneräisenä toukokuussa 2010 alhaalta kuvattuna. '
-            + 'Kalkkikivellä verhotut kaarevat betoniseinät nousevat '
-            + 'maasta huipulle, ja niiden väliin jäävään eteläseinään on '
-            + 'tehty vinot ikkuna-aukot.',
+          selite: 'Torni keskeneräisenä toukokuussa 2010 alhaalta kuvattuna: '
+            + 'kalkkikivellä verhotut kaarevat betoniseinät nousevat maasta '
+            + 'huipulle, ja eteläseinään on tehty vinot ikkuna-aukot.',
           lahde: 'J.Stiegler, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -11817,16 +11824,14 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Palatsin vanha pääportti vuonna 1973: teräväkaarinen aukko '
             + 'sakaramuurissa, sen yllä tummareunainen laatta '
             + 'arabiankielisine lauseineen ja kahden puolen vartija '
-            + 'punaisessa takissa. Muurin takaa nousee kellotorni, ja '
-            + 'kaaresta näkyy meri.',
+            + 'punaisessa takissa.',
           lahde: 'FOTO:FORTEPAN / Schiffer Pál, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Plaza Sief, ciudad de Kuwait, Kuwait, 2024-08-12, DD 45.jpg',
-          selite: 'Sama lause kiveen hakattuna uuden aukion portissa, alla '
-            + 'hidžra-vuosi 1337. Takana kohoaa kellotorni: turkoosi '
-            + 'laattakehys kellotaulun ympärillä ja kullattu kupoli, alla '
-            + 'vanhan muurin sakarat.',
+          selite: 'Sama lause kiveen hakattuna uuden aukion portissa '
+            + 'hidžra-vuoden 1337 yläpuolella, ja takana kohoaa kellotorni '
+            + 'kullattuine kupoleineen.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11962,9 +11967,9 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'السدو 3.jpg',
           selite: 'Kapea kaistale museon seinällä: punaisia ja mustia '
-            + 'kolmioruutuja, niiden välissä valkoinen keskiraita. '
-            + 'Vieressä oleva kyltti ajoittaa työn noin vuoteen 1950 ja '
-            + 'nimeää keskiraidan kuvioksi shajarah.',
+            + 'kolmioruutuja ja niiden välissä valkoinen keskiraita, jonka '
+            + 'viereinen kyltti ajoittaa noin vuoteen 1950 ja nimeää '
+            + 'kuvioksi shajarah.',
           lahde: 'Di7ane, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -14136,6 +14141,12 @@ export const NAHTAVYYSJUTUT = {
    * jutut ovat kuvattomia, koska Commonsissa ei ole niistä yhtään
    * kuvaa, joka täyttäisi lisenssi- ja kokovaatimukset — ks. raportti.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R5 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke): tämän kaupungin jutuissa kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Juttutekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   riad: {
     'Masmakin linnoitus': {
       aika: '1902',
@@ -14170,20 +14181,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Masmak Fortress (6329473680).jpg',
-          selite: 'Linnoituksen pääjulkisivu: sileää savimuuria, jossa on '
-            + 'rivi nelikulmaisia aukkoja, ja päissä ylöspäin kapenevat '
-            + 'pyöreät nurkkatornit kolmiohampaisine harjoineen. Portin '
-            + 'syvennyksessä on kaksilehtinen puuovi naulanpäineen ja '
-            + 'kaiverrettuine alapaneeleineen.',
+          selite: 'Linnoituksen pääjulkisivu: sileässä savimuurissa on rivi '
+            + 'nelikulmaisia aukkoja, päissä kolmiohampaiset pyöreät '
+            + 'nurkkatornit ja portin syvennyksessä kaksilehtinen puuovi.',
           lahde: 'Sammy Six, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Masmak Citadel, Riyadh (14372839641).jpg',
-          selite: 'Sisäpihaa kiertävä pylväskäytävä: valkoiseksi rapattuja '
-            + 'nelikulmaisia pilareita porrastettuine kannatinpäineen ja '
-            + 'kattona tiiviisti vierekkäin ladottuja pyöreitä puunrunkoja. '
-            + 'Savipintaisissa seinissä on kolmionmuotoisia syvennyksiä ja '
-            + 'tumma oviaukko.',
+          selite: 'Sisäpihaa kiertävä pylväskäytävä, jossa valkoiseksi '
+            + 'rapattujen nelikulmaisten pilarien päällä on kattona '
+            + 'tiiviisti vierekkäin ladottuja pyöreitä puunrunkoja.',
           lahde: 'Rick McCharles from Calgary, Canada, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -14215,20 +14222,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Deera Square and Imam Turki bin Abdullah Mosque (1).jpg',
-          selite: 'Imam Turkin moskeija Deeran aukion laidalta heinäkuussa '
-            + '2024: pitkä kalkkikiviseinä, jossa on pieniä neliöikkunoita, '
-            + 'kolmion muotoisia tummia aukkoja ja rivi syviä oviaukkoja '
-            + 'tummine puuristikkoineen. Suorakulmaiset minareetit '
-            + 'päättyvät hammasmaiseen harjaan.',
+          selite: 'Imam Turkin moskeija Deeran aukion laidalta heinäkuussa 2024: '
+            + 'pitkässä kalkkikiviseinässä on pieniä neliöikkunoita ja rivi '
+            + 'syviä oviaukkoja, ja suorakulmaiset minareetit päättyvät '
+            + 'hammasmaiseen harjaan.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Qasr Al Hukm Palace, 2022.jpg',
-          selite: 'Aukion vastakkaisella laidalla hallintopalatsi Qasr '
-            + 'al-Hukm joulukuussa 2022: kalkkikiviseinän harjassa on '
-            + 'hammasmainen sahalaita ja seinässä pieniä kolmioaukkoja. '
-            + 'Keskeltä työntyy ulos ylempi kerros, jossa on kaksi suurta '
-            + 'tummaa aukkoa.',
+          selite: 'Aukion vastakkaisella laidalla hallintopalatsi Qasr al-Hukm '
+            + 'joulukuussa 2022: kalkkikiviseinän harjassa on hammasmainen '
+            + 'sahalaita, ja keskeltä työntyy ulos ylempi kerros kahtine '
+            + 'suurine aukkoineen.',
           lahde: 'Geektaker, Wikimedia Commons (CC0)',
         },
       ],
@@ -14325,20 +14330,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Murabba Palace (1).jpg',
-          selite: 'Palatsialueen savitiilimuuri kulmasta katsottuna: '
-            + 'pinnassa kulkee pystysuora harjattu kuviointi ja harjalla on '
-            + 'valkoiseksi maalattu kolmiohampainen reunus. Muurin takaa '
-            + 'nousee savitiilinen rakennus, jossa on kaari-ikkuna ja '
-            + 'samanlainen hampainen harja.',
+          selite: 'Palatsialueen savitiilimuuri kulmasta katsottuna: pinnassa '
+            + 'kulkee pystysuora harjattu kuviointi ja harjalla valkoiseksi '
+            + 'maalattu kolmiohampainen reunus.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Murabba Palace7.jpg',
-          selite: 'Palatsin sali museokäytössä: pyöreät pylväät on maalattu '
-            + 'marmorikuvioisiksi ja niiden päissä on koristellut '
-            + 'kapiteelit. Vaaleanvihreästä katosta riippuu kupulamppuja, '
-            + 'ja seinien vierillä kiertävät matalat istuinpenkit '
-            + 'punakuvioisin patjoin ja tyynyin.',
+          selite: 'Palatsin sali museokäytössä: marmorikuvioisiksi maalatut '
+            + 'pylväät kannattavat vaaleanvihreää kattoa, ja seinien '
+            + 'vierillä kiertävät matalat istuinpenkit punakuvioisin '
+            + 'patjoin.',
           lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -14378,27 +14380,24 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'National Museum Riyadh (6781666263).jpg',
           selite: 'Museon sisäänkäynti illalla: valonheittimet nostavat '
-            + 'hiekankeltaisen kiviverhouksen esiin mustaa taivasta vasten. '
-            + 'Seinä kapenee teräväksi kärjeksi kuin veneen keula, kaartuva '
-            + 'katos peittää lasiseinäisen aulan ja julkisivussa on '
-            + 'ristikkoisia ikkunasäleikköjä.',
+            + 'hiekankeltaisen kiviverhouksen esiin mustaa taivasta vasten, '
+            + 'ja seinä kapenee teräväksi kärjeksi kuin veneen keula.',
           lahde: 'Sammy Six, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'National Museum of Saudi Arabia 01.jpg',
-          selite: 'Rautameteoriitti graniittijalustalla: tumma ja '
-            + 'kuoppainen möhkäle on aikuisen ihmisen levyinen ja rinnan '
-            + 'korkuinen. Jalustan kyltissä lukee ”Meteorite: Found in the '
-            + 'Empty Quarter (2.75 tons)”, ja takana tekokalliossa on salin '
-            + 'nimi MAN AND THE UNIVERSE.',
+          selite: 'Rautameteoriitti graniittijalustalla, aikuisen ihmisen '
+            + 'levyinen ja rinnan korkuinen tumma möhkäle, jonka jalustan '
+            + 'kyltissä lukee ”Meteorite: Found in the Empty Quarter (2.75 '
+            + 'tons)”.',
           lahde: 'Gryffindor, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'National Museum of Saudi Arabia 02.jpg',
-          selite: 'Ihminen ja maailmankaikkeus -sali: tekokalliolla seisoo '
-            + 'norsun kokoinen luuranko, jonka päästä työntyvät eteenpäin '
-            + 'suorat syöksyhampaat ja pitkä alaleuka. Vaalealla kaarevalla '
-            + 'seinällä on kalaliskon luuranko laattaan asetettuna.',
+          selite: 'Ihminen ja maailmankaikkeus -sali, jossa tekokalliolla seisoo '
+            + 'norsun kokoinen luuranko suorine syöksyhampaineen ja '
+            + 'kaarevalla seinällä on kalaliskon luuranko laattaan '
+            + 'asetettuna.',
           lahde: 'Gryffindor, Wikimedia Commons (CC0)',
         },
       ],
@@ -18337,6 +18336,12 @@ export const NAHTAVYYSJUTUT = {
    * Al-Baleedin juttu on siksi kirjoitettu paikasta ja lahdesta,
    * museon juttu kokoelmista ja rakennuksesta.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R5 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke): tämän kaupungin jutuissa kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Juttutekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   salalah: {
     'Sultan Qaboosin moskeija': {
       aika: '2009',
@@ -18367,10 +18372,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sultan Qaboos Mosque 14.JPG',
-          selite: 'Moskeijan pihan kaarikäytävä. Teräväkärkiset kaaret '
-            + 'toistuvat riveinä syvyyssuuntaan, katosta riippuu '
-            + 'kuusikulmaisia mustia lyhtyjä, ja oikealla näkyy '
-            + 'hammastettu muuri ja ruudullinen marmoripiha.',
+          selite: 'Moskeijan pihan kaarikäytävä, jossa teräväkärkiset kaaret '
+            + 'toistuvat riveinä syvyyssuuntaan ja katosta riippuu '
+            + 'kuusikulmaisia mustia lyhtyjä.',
           lahde: 'Rrburke, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -18406,10 +18410,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Oman, Salalah, Qasr al-Hosn Palace.jpg',
-          selite: 'Palatsin portti muurin keskellä. Kaksi hammastettua '
-            + 'hiekkakivitornia reunustaa teräväkärkistä kaarta, jonka '
-            + 'alla on leveä puinen portti, ja vasemmalla muurin takaa '
-            + 'kohoaa kellotorni vihreine kupoleineen.',
+          selite: 'Palatsin portti muurin keskellä: kaksi hammastettua '
+            + 'hiekkakivitornia reunustaa teräväkärkistä kaarta, jonka alla '
+            + 'on leveä puinen portti.',
           lahde: 'Dr. Thomas Liptak, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18443,10 +18446,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Alhusn-market-1.jpg',
-          selite: 'Basaarin sisäänkäynti. Katetun käytävän suulla on '
-            + 'punainen arabiankielinen kyltti, ja sen molemmin puolin '
-            + 'jatkuu rivi kojuja, joiden otsassa lukee samat sanat '
-            + 'kahdella kielellä: suitsuketta ja hajuvettä.',
+          selite: 'Basaarin sisäänkäynti, jonka katetun käytävän suulla on '
+            + 'punainen arabiankielinen kyltti ja molemmin puolin rivi '
+            + 'kojuja: suitsuketta ja hajuvettä.',
           lahde: 'OMLX, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18481,10 +18483,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Salalah, tomba del profeta Imran, ossia Gioacchino padre di maria (Nabi Umran mausoleum), 01.jpg',
-          selite: 'Haudan piha. Vasemmalla kulkee matala kaarikäytävä '
-            + 'hammastettuine räystäineen, keskellä nousee minareetti, '
-            + 'jonka sipulikupoli on vihreä, ja piha on vaaleaa laattaa. '
-            + 'Takana kohoaa kerrostalo.',
+          selite: 'Haudan piha: vasemmalla kulkee matala kaarikäytävä '
+            + 'hammastettuine räystäineen, ja keskellä nousee minareetti '
+            + 'vihreine sipulikupoleineen.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18520,11 +18521,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Salalah, torre al nahda 01.jpg',
-          selite: 'Kellotorni kadun yli kaartuvan portin päällä. '
-            + 'Hiekkakivisessä tornissa on neljä kerrosta kapeita '
-            + 'kaari-ikkunoita, kellotaulu ylimpänä ja otsassa '
-            + 'arabiankielinen kirjoitus. Ympärillä on koristeellisia '
-            + 'katulyhtyjä ja palmuja.',
+          selite: 'Kellotorni kadun yli kaartuvan portin päällä: hiekkakivisessä '
+            + 'tornissa on neljä kerrosta kapeita kaari-ikkunoita, '
+            + 'kellotaulu ylimpänä ja otsassa arabiankielinen kirjoitus.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18561,10 +18560,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al Balid Archeological Park 1.jpg',
-          selite: 'Khawr al-Balid eli entinen lahti puiston keskellä. '
-            + 'Tyyni vesi jatkuu kuvan halki, oikealla rannalla on rivi '
-            + 'puuveneitä ja niiden takana tiheä palmurivistö, '
-            + 'vasemmalla nousee hiekkainen ja kivinen ranta.',
+          selite: 'Khawr al-Balid eli entinen lahti puiston keskellä: tyynen '
+            + 'veden oikealla rannalla on rivi puuveneitä ja niiden takana '
+            + 'tiheä palmurivistö.',
           lahde: 'https://www.flickr.com/photos/130649623@N05/, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -18599,11 +18597,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Salalah, museo della terra degli incensi, entrata.jpg',
-          selite: 'Museon sisäänkäynti. Hammastetun kalkkikivimuurin '
-            + 'keskelle on avattu kolme teräväkärkistä kaarta, joiden '
-            + 'yläpuolella lukee museon nimi kahdella kielellä, ja '
-            + 'muurissa on kaksi kaiverrettua kivilaattaa. Edessä on '
-            + 'laatoitettu piha.',
+          selite: 'Museon sisäänkäynti, jossa hammastetun kalkkikivimuurin '
+            + 'keskelle on avattu kolme teräväkärkistä kaarta ja niiden '
+            + 'yläpuolella lukee museon nimi kahdella kielellä.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
