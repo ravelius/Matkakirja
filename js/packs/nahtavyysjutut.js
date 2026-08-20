@@ -17941,4 +17941,475 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+
+  /*
+   * SANAN NÄHTÄVYYSJUTUT (erä 4, 20.8.2026). Kuusi kohdetta, kaikki
+   * Unescon vanhankaupungin sisällä tai sen laidalla.
+   *
+   * KOLME RISTIRIITAA, JOTKA ON KIRJOITETTU AUKI LUKIJALLE:
+   * 1) Osmanien paluuvuosi. Sanaa-artikkeli sanoo, että osmanijoukot
+   *    tulivat kaupunkiin vuonna 1872 Ahmed Muhtar Pashan johdolla;
+   *    Al-Bakiriyya-artikkeli puhuu vuodesta 1878. Kumpikin on
+   *    jutussa, koska kumpaakaan ei voi todeta vääräksi toisella.
+   * 2) Al-Mahdin moskeijan vuosiluvut. Artikkeli sanoo, että moskeija
+   *    rakennettiin vuonna 1651 imaami Mahdi Abbas bin Mansourin
+   *    käskystä ja että hauta tehtiin hänen kuolemansa jälkeen vuonna
+   *    1768. Sama mies ei voi tilata rakennusta 117 vuotta ennen
+   *    kuolemaansa, joten jutussa kerrotaan molemmat luvut ja
+   *    todetaan, ettei niitä saa sopimaan yhteen.
+   * 3) Suuren moskeijan perustamisaika. Artikkeli antaa infoboxissa
+   *    "7.–8. vuosisata" ja leipätekstissä noin vuoden 630 (6 AH)
+   *    varhaisten islamilaisten lähteiden mukaan. Jutussa käytetään
+   *    leipätekstin lukua ja kerrotaan, että se nojaa perimätietoon.
+   *
+   * KAKSI JUTTUA KOSKEE SAMAA KOHDETTA KUIN LEHDEN NOSTO (Suolatori
+   * ja Bab al-Yaman). Sisältö on tarkoituksella eri: nostot kertovat
+   * torin tavaravalikoimasta ja portin messinkirenkaista, jutut
+   * kaupungin käsityöstä ja muurista, joka antoi kaupungille nimen.
+   */
+  sana: {
+    'Al-Bakiriyyan moskeija': {
+      aika: '1596–1597',
+      teksti: 'Al-Bakiriyya on vanhankaupungin selvin osmanirakennus, ja '
+          + 'sen tunnistaa jo kaukaa: muiden moskeijoiden matalien '
+          + 'kattojen keskeltä nousee yksi suuri pyöreä kupoli. Sen '
+          + 'rakennutti Jemenin osmanikuvernööri Hasan Pasha vuosina '
+          + '1596–1597, kun osmanit olivat hallinneet kaupunkia '
+          + 'puolisen vuosisataa.'
+          + '\n\n'
+          + 'Rakennuksen historia seuraa valtaa. Kun osmanit ajettiin '
+          + 'Jemenistä vuonna 1626, moskeija jäi rappeutumaan, ja se '
+          + 'kunnostettiin kokonaan vasta kun he palasivat Sanaan. '
+          + 'Paluuvuodesta lähteet ovat eri mieltä: Sanaan oma artikkeli '
+          + 'sanoo, että Ahmed Muhtar Pashan joukot tulivat kaupunkiin '
+          + 'vuonna 1872, moskeijan artikkeli puhuu vuodesta 1878. '
+          + 'Kumpikaan luku ei kumoa toista, ja kunnostus osui joka '
+          + 'tapauksessa tuolle vuosikymmenelle.'
+          + '\n\n'
+          + 'Moskeijassa on yksi minareetti ja suuri rukoussali '
+          + 'osmanikupolin alla. Kokonaisuus jakautuu kahtia: avoimeen '
+          + 'osaan eli pihaan ja katettuun osaan eli rukoussaliin, ja '
+          + 'pääsalin ympärillä on useita pienempiä kupolillisia '
+          + 'lisäosia. Saarnastuoli minbar ja rukoussuunnan syvennys '
+          + 'mihrab tehtiin Istanbulista tuodusta aineesta — sama '
+          + 'osmanikäsi näkyy siis sekä ulkona että sisällä. '
+          + 'Kaksikymmentäkolme vuotta myöhemmin rakennettu Talhan '
+          + 'moskeija lainasi Al-Bakiriyyalta osan sen muotokielestä.',
+      kuvat: [
+        {
+          tiedosto: 'Al-Bakirya Mosque, Sana\'a (2286792446).jpg',
+          selite: 'Al-Bakiriyyan suuri valkoinen kupoli iltavalossa. Sen '
+            + 'alla on nelikulmainen rumpuosa kapeine ikkunoineen, '
+            + 'kulmissa pienet pyöreäpäiset tornit, ja edessä rivi '
+            + 'matalampia kupoleita ja läpimurrettu kaide.',
+          lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suolatori': {
+      aika: 'vanhempi kuin 600-luvun moskeija',
+      teksti: 'Suq al-Milh eli suolatori ei ole yksi tori vaan '
+          + 'korttelillinen niitä. Nimi on jäänyt yhdestä tavarasta, '
+          + 'mutta samalla alueella on omat nimensä saaneita osatoreja '
+          + 'kuten Suq al-Buqar ja Suq az-Zumar, ja kokonaisuus on '
+          + 'kaupungin vanhin yhä käytössä oleva rakenne — vanhempi '
+          + 'kuin viereinen Suuri moskeija.'
+          + '\n\n'
+          + 'Tori teki Sanasta sen, mistä se tunnettiin. Kaupungin '
+          + 'ympärillä olevista kukkuloista louhittiin onyksia, '
+          + 'kalsedonia ja karneolia, ja niitä työstettiin täällä. '
+          + 'Metallityöstä kaupunki oli kuuluisa: britit kuvasivat sen '
+          + '1900-luvun alussa sanalla "famous", vaikka huomauttivat '
+          + 'samalla, että ala oli hiipumassa. Torilla vaihtui myös '
+          + 'kaikki muu, mitä ympäröivä maatalous tuotti, ja koska Sana '
+          + 'on Adenista muualle arabimaailmaan johtavan reitin varrella, '
+          + 'sinne päätyivät myös länsimaiset tuontitavarat. Osmanien '
+          + 'ensimmäisellä kaudella 1500-luvulla Sanaassa kävivät '
+          + 'säännöllisesti eurooppalaiset kapteenit, joiden tukikohtina '
+          + 'olivat Adenin ja Mokhan satamat — juuri Mokhasta lähti '
+          + 'maailmalle Jemenin vuorilla kasvatettu kahvi.'
+          + '\n\n'
+          + 'Torien merkitys ei jäänyt vanhaankaupunkiin. Kun kaupunki '
+          + 'kasvoi 1970-luvulta alkaen, uudet keskukset syntyivät '
+          + 'nimenomaan torien ympärille, ja niin Sanasta tuli '
+          + 'monikeskuksinen: kaupunginosat ovat kasvaneet kauppapaikan '
+          + 'ympärille eikä toisin päin. Vanhankaupungin puolella '
+          + 'seisoo yhä samsara eli kauppiaiden varastomajatalo, jonka '
+          + 'iäksi arvioidaan yli 1 400 vuotta — yhtä vanha kuin Suuri '
+          + 'moskeija. Sanaa kehuttiin jo varhain: 900-luvulla '
+          + 'persialainen maantieteilijä Ibn Rustah kirjoitti, ettei '
+          + 'suurempaa, väkirikkaampaa tai vauraampaa kaupunkia löydy, '
+          + 'ja lakioppinut al-Shafii tiivisti asian lauseeseen '
+          + '"La budda min Sanaa" — Sana on nähtävä.',
+      kuvat: [
+        {
+          tiedosto: 'Sanaa, Yemen view.jpg',
+          selite: 'Torialue vanhankaupungin tornitalojen juurella '
+            + 'hämärissä. Katutasossa on valaistuja kojuja ja '
+            + 'markiiseja, kadulla autoja ja väkeä, ja talojen '
+            + 'valkeaksi kalkitut kipsikuviot hohtavat hämärässä.',
+          lahde: 'Александра Пугачевская (Alexandra Pugachevsky), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Talhan moskeija': {
+      aika: '1619–1620',
+      teksti: 'Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja '
+          + 'sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha '
+          + 'vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. '
+          + 'Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 '
+          + 'moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin '
+          + 'käskystä; siitä kertoo rukoussalin seinään hakattu '
+          + 'kirjoitus.'
+          + '\n\n'
+          + 'Talha on Al-Bakiriyyan pikkuveli. Se valmistui '
+          + 'kaksikymmentäkolme vuotta myöhemmin ja lainasi osan '
+          + 'edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: '
+          + 'rukoussali on vaatimaton ja minareetti matala, ja juuri '
+          + 'siksi rakennus istuu kapeiden kujien väliin luontevammin '
+          + 'kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja '
+          + 'minareetin lisäksi piha, peseytymishuoneita, allas ja '
+          + 'majoitustila matkalaisille.'
+          + '\n\n'
+          + 'Sisäänkäynnin edessä on pylväskäytävä, jonka katossa on '
+          + 'neljä kupolia ja jonka läpi vie kaksi kaarikäytävää. '
+          + 'Lisäsiipiä ei ole, joten rukoussali on yksinkertainen '
+          + 'suorakaide. Puoliympyrän muotoinen kupoli lepää '
+          + 'kahdeksankulmaisen rummun päällä, ja rumpua ympäröi neljä '
+          + 'niin ikään kahdeksankulmaista kulmatornia; kaikki on '
+          + 'koristeltu kipsillä. Rummun jokaisessa sivussa on '
+          + 'kaari-ikkuna, joka tuo saliin lisää valoa. Perinteistä '
+          + 'jemeniläistä puukasettikattoa ja pylväsriviä ei ole '
+          + 'lainkaan — kupolin ja rummun paino siirtyy seinille '
+          + 'pienten holvikaarien kautta.',
+      kuvat: [
+        {
+          tiedosto: 'Sana, Yemen (4324293041) (cropped).jpg',
+          selite: 'Talhan harmaa kupoli katsottuna kattojen yli. Sen '
+            + 'vasemmalla puolella nousee valkoinen minareetti, jonka '
+            + 'yläosaan on leikattu läpimurrettu kaide ja pitkiä '
+            + 'pisaramaisia kuvioita. Ympärillä on tornitalojen '
+            + 'ruskeaa tiiltä koko kuvan täydeltä.',
+          lahde: 'yeowatzup, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri moskeija': {
+      aika: 'perimätiedon mukaan noin 630',
+      teksti: 'Al-Jami al-Kabir on kartan tärkein rakennus ja kenties '
+          + 'koko islamilaisen maailman vanhimpia moskeijoita. '
+          + 'Varhaisten islamilaisten lähteiden mukaan Muhammad käski '
+          + 'rakentaa sen noin vuonna 630, ja sitä pidetään '
+          + 'ensimmäisenä Mekan ja Medinan ulkopuolelle rakennettuna '
+          + 'moskeijana. Ajoitus nojaa perimätietoon: sama artikkeli '
+          + 'antaa tietolaatikossaan väljemmän arvion 600–700-luvuille. '
+          + 'Kaivauslöydöt kuitenkin tukevat varhaista ikää, sillä '
+          + 'seinistä on löytynyt rakennusosia sekä aksumilaisesta '
+          + 'katedraalista että sabalaisesta Ghumdanin palatsista — '
+          + 'moskeija on siis rakennettu vanhemman kaupungin kivistä.'
+          + '\n\n'
+          + 'Sen jälkeen se on rakennettu uudelleen monta kertaa. '
+          + 'Umaijadikalifi al-Walid I laajensi moskeijaa vuosina '
+          + '705–715, ja pihasta löytyy kirjoitus vuodelta 753. Vuonna '
+          + '876 tulva vaurioitti rakennusta kahdesti, ja se '
+          + 'kunnostettiin. Itäpuolen minareetti pystytettiin '
+          + '800-luvun alussa. Vuonna 1130 ismaililainen kuningatar '
+          + 'Arwa al-Sulayhi kunnosti suuren osan moskeijasta: hän '
+          + 'teetti itä-, länsi- ja pohjoissiiven veistetyt katot ja '
+          + 'läntisen minareetin, joka muistuttaa saman ajan Kairon '
+          + 'moskeijoita — kuningattarella oli läheiset suhteet Egyptin '
+          + 'fatimideihin. Minareetteja on kaksi.'
+          + '\n\n'
+          + 'Piha on 80 metriä pitkä ja 60 leveä, ja sen keskellä on '
+          + '1500-luvulta peräisin oleva kupolirakennus. Se muistuttaa '
+          + 'Mekan Kaabaa, mutta yhteyttä pidetään näennäisenä: '
+          + 'vuorottelevat värikerrokset ovat ablaq-tekniikkaa, joka on '
+          + 'alueella islamia vanhempaa. Rakennus oli ensin moskeijan '
+          + 'rahasto ja myöhemmin lahjoitusvarojen varasto, ja siellä '
+          + 'on suuri kirjasto ja vanhoja käsikirjoituksia. Juuri '
+          + 'käsikirjoitukset tekivät moskeijasta maailmankuulun: kun '
+          + 'rappausta poistettiin vuosina 1972–1973, löytyi 65 esinettä '
+          + 'ja valtava määrä vanhoja kirjoituksia. Ullakon seinää '
+          + 'korjanneet rakennusmiehet löysivät niiden joukosta Sanaan '
+          + 'käsikirjoituksen, yhden maailman vanhimmista '
+          + 'Koraaninkappaleista, ja kaikkiaan neljätuhatta harvinaista '
+          + 'arabiankielistä käsikirjoitusta.',
+      kuvat: [
+        {
+          tiedosto: 'Yemen-2005-IMG 20181115 0014b2.jpg',
+          selite: 'Suuren moskeijan kaksi valkoista minareettia '
+            + 'kohoamassa vanhankaupungin kattojen yli. Molemmissa on '
+            + 'ympäröivä parveke ja kupolimainen huippu, ja niiden '
+            + 'takana levittäytyy kaupunki ja sen takana vuorijono.',
+          lahde: 'Angela Schoettler († 2023), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Mahdin moskeija': {
+      aika: 'lähteet antavat 1651 ja 1768',
+      teksti: 'Jami Qubbat al-Mahdi seisoo vanhankaupungin länsilaidalla '
+          + 'al-Karim al-Mahdin korttelissa Sararin kaupunginosassa, '
+          + 'aivan al-Sailahin tulvauoman tuntumassa. Se kuuluu Unescon '
+          + 'maailmanperintökohteeseen, ja siinä on yksi kupoli ja yksi '
+          + 'minareetti — kupoli on ulkoa kullanvärinen ja minareetti '
+          + 'tiilistä ladottu.'
+          + '\n\n'
+          + 'Vuosiluvut ovat sotkussa, ja se kannattaa sanoa suoraan. '
+          + 'Lähde kertoo, että moskeija rakennettiin vuonna 1651 '
+          + 'imaami Mahdi Abbas bin Mansourin käskystä, ja että hauta '
+          + 'lisättiin saman imaamin kuoltua vuonna 1768. Sama mies ei '
+          + 'ole voinut tilata rakennusta 117 vuotta ennen kuolemaansa. '
+          + 'Todennäköisin selitys on, että vuosiluku 1651 kuuluu '
+          + 'jollekin aiemmalle al-Mahdi-nimiselle imaamille ja '
+          + 'hautarakennus tälle myöhemmälle, mutta lähde ei sitä sano — '
+          + 'joten tässä kerrotaan molemmat luvut sellaisenaan.'
+          + '\n\n'
+          + 'Sijainti selittää, miksi moskeija näkyy kartalla muurien '
+          + 'ulkopuolella. Se on al-Sailahin länsipuolella, siellä '
+          + 'missä osmanien aikana levisi Bir al-Azabin '
+          + 'puutarhakaupunginosa. Uoma ei ollut este vaan raja: '
+          + 'idässä oli tiivis muurikaupunki, lännessä puutarhoja ja '
+          + 'väljempää rakentamista.',
+      kuvat: [
+        {
+          tiedosto: 'Mosque in Sana\'a.jpg',
+          selite: 'Al-Mahdin moskeija kadun päästä. Kullanhohtoisen '
+            + 'kupolin takaa nousee korkea tiiliminareetti, jossa on '
+            + 'kaksi kaiteellista parveketta ja valkoinen huippukupoli. '
+            + 'Etualalla on savimuureja ja matalia rakennuksia.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bab al-Yaman': {
+      aika: 'nykyinen asu 1600-luvulta',
+      teksti: 'Sanan nimi tarkoittaa linnoitusta. Vanhin tunnettu '
+          + 'maininta kaupungista on 400-luvulta eKr. '
+          + 'musnad-kirjoituksella, jossa se on muodossa Snw, ja nimi '
+          + 'juontuu sabalaisesta sanasta masnaa, linnoitus; toisen '
+          + 'selityksen mukaan juuri snʿ tarkoittaa hyvin '
+          + 'linnoitettua. Muuri oli siis kaupungin ensimmäinen '
+          + 'ominaisuus. Al-Hamdanin mukaan sen rakensivat sabalaiset '
+          + 'hallitsijansa Shar Awtarin aikana.'
+          + '\n\n'
+          + 'Muuri on savesta ja yhdeksästä neljääntoista metriä korkea. '
+          + 'Bab al-Yaman on sen eteläpää, ja siihen liittyy sama '
+          + 'perimätieto kuin koko kaupunkiin: portin alkuperäinen '
+          + 'suunnitelma on liitetty Nooan poikaan Seemiin, jonka on '
+          + 'kerrottu perustaneen Sanan Jabal Nuqumin juurelle. '
+          + 'Kulkijalle muuri oli kalenteri ja kartta yhdessä — se '
+          + 'kertoi, missä kaupunki alkaa ja mistä siitä pääsee ulos.'
+          + '\n\n'
+          + 'Muurista ei ole enää paljon jäljellä, ja siihen on selvä '
+          + 'syy. Vuoden 1962 vallankumouksen jälkeen kaupunkia '
+          + 'uudistettiin voimalla: entisen imaamin palatsin paikalle '
+          + 'rakennettiin Tahririn aukio, pohjoiseen ja luoteeseen '
+          + 'nousi uusia kortteleita, ja samalla purettiin useita '
+          + 'vanhankaupungin porteista ja pätkiä muuria. Kartalla '
+          + 'muuri näkyy siksi vain katkelmina idässä ja pohjoisessa, '
+          + 'mutta sen linja on yhä luettavissa: kaupunkia kiertävä '
+          + 'soikea katu kulkee siinä, missä muuri kulki.',
+      kuvat: [
+        {
+          tiedosto: 'Sanaa PICT0025 (14753805424).jpg',
+          selite: 'Bab al-Yaman ylhäältä kuvattuna. Muurin '
+            + 'harmaakivinen kaariaukko on kahden pyöreän tiilitornin '
+            + 'välissä, muurin harjaa kiertää valkoinen sahalaita, ja '
+            + 'takana kohoaa tornitalojen rivistö ja yksi kapea '
+            + 'minareetti.',
+          lahde: 'lelebella, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+
+  /*
+   * ADENIN NÄHTÄVYYSJUTUT (erä 4, 20.8.2026). Vain neljä kohdetta.
+   * Syy on kuvissa eikä lähteissä — ks. maakartat.js:n aden-lohko.
+   * Siran linna, Aidrus-moskeija, Adenin minareetti ja Main Passin
+   * portti jäivät pois, koska Commonsissa ei ole niistä yhtään
+   * vapaata vähintään 1 200 pikselin kuvaa; ne kerrotaan kartan
+   * esittelyssä ja lehden teksteissä.
+   *
+   * SISÄLTÖLINJAUS: Adenin 1900-luvun loppupuoli ja 2000-luku ovat
+   * en-Wikipediassa lähes kokonaan sotahistoriaa. Jutut on siksi
+   * kirjoitettu 1800-luvun ja 1900-luvun alkupuolen aineistosta —
+   * hiilisatama-ajasta, brittiläisen Intian hallinnosta ja
+   * arkkitehtuurista — eivätkä ne väitä mitään kohteiden nykytilasta.
+   */
+  aden: {
+    'Steamer Point': {
+      aika: 'hiiliasema 1839 alkaen',
+      teksti: 'Tawahi tunnettiin brittiaikana nimellä Steamer Point, ja '
+          + 'nimi kertoo koko jutun: tänne höyrylaivat tulivat. '
+          + 'Kaupunginosa on niemen länsikärjessä, kuuden kilometrin '
+          + 'päässä Craterista, ja se syntyi käytännössä tyhjästä '
+          + 'brittihallinnon myötä. Vielä vuonna 1920 sinne nousivat '
+          + 'kaikki matkustajalaivojen matkustajat.'
+          + '\n\n'
+          + 'Kaupunginosasta tuli Adenin eurooppalainen kortteli. '
+          + 'Rannassa on 1800-luvun laivalaituri, jota käytettiin '
+          + 'arvovieraiden vastaanottoon, ja sen takana Crescent-hotelli '
+          + 'verantoineen. Ranskalainen runoilija Arthur Rimbaud asui '
+          + 'Adenissa vuosina 1880–1891 juuri tässä kaupunginosassa; '
+          + 'hänen kaksikerroksinen talonsa avattiin yleisölle vuonna '
+          + '1991, ja 1990-luvun lopulla sen ensimmäisessä kerroksessa '
+          + 'toimi Ranskan konsulaatin kulttuurikeskus ja kirjasto. '
+          + 'Rimbaud oli tullut Adeniin matkallaan Etiopiaan ja jäi '
+          + 'sinne yhdentoista vuoden ajaksi.'
+          + '\n\n'
+          + 'Kaupunginosan tunnetuin rakennus on lehden toisen sivun '
+          + 'kellotorni, ja juuri siitä tämän kartan kohde on saanut '
+          + 'paikkansa: se on ainoa kohde, jonka koordinaatti ei tule '
+          + 'OpenStreetMapista vaan kellotornin omasta '
+          + 'Wikipedia-artikkelista — kaupunginosan ytimessä ei ole '
+          + 'OSM:ssä yhtään nimettyä pistettä.',
+      kuvat: [
+        {
+          tiedosto: 'Crescent hotel aden.jpg',
+          selite: 'Crescent-hotelli Tawahissa: kolmikerroksinen '
+            + 'siirtomaa-ajan rakennus, jonka jokaisessa kerroksessa '
+            + 'kiertää puinen veranta ja jonka päätykolmiossa on '
+            + 'pyöreä kello. Oikealla on vaalea kärkikaarimonumentti '
+            + 'arabiankielisine kaiverruksineen.',
+          lahde: 'Anne-Linda Amira Augustin @ Deutsch-Jemenitische Gesellschaft, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallismuseo': {
+      aika: 'museo vuodesta 1966',
+      teksti: 'Adenin kansallismuseo ei ole museoksi rakennettu vaan '
+          + 'palatsiksi: rakennus on Lahejin sulttaanikunnan entinen '
+          + 'palatsi, ja museo perustettiin siihen vuonna 1966. Lahej '
+          + 'oli se sulttaanikunta, joka luovutti briteille Adenin '
+          + 'maat vuonna 1838, ja jonka kanssa britit olivat tehneet '
+          + 'ensimmäisen sopimuksensa jo 1802.'
+          + '\n\n'
+          + 'Kokoelma on yhä yksi Jemenin suurimmista, vaikka museo '
+          + 'ryöstettiin vuoden 1994 sisällissodan aikana. Talo itse on '
+          + 'osa kokoelmaa: pitkä kaksikerroksinen julkisivu on '
+          + 'jäsennetty holvikaarikäytävillä ja pylväsverannoilla, '
+          + 'seinäpinta on tummaa vulkaanista kiveä ja koristeet '
+          + 'vaaleaa kiveä — sama vuorottelu, jolla koko kaupunki on '
+          + 'rakennettu, koska Adenissa toinen aine on aina ollut '
+          + 'käsillä ja toinen tuotava.'
+          + '\n\n'
+          + 'Museo on lähellä rantaa, ja sen naapurustossa on '
+          + 'muutakin nähtävää: aivan vieressä Adenin sotamuseo ja '
+          + 'hieman kauempana Aidrus-moskeija, kaupungin tunnetuin. '
+          + 'Kumpikaan ei ole tällä kartalla omana kohteenaan, koska '
+          + 'niistä ei ole vapaata riittävän suurta valokuvaa — '
+          + 'Aidrus-moskeija esitellään lehden etusivulla.',
+      kuvat: [
+        {
+          tiedosto: 'National museum of Yemen aden.jpg',
+          selite: 'Lahejin sulttaanin palatsi kadun toiselta puolelta. '
+            + 'Pitkässä julkisivussa vuorottelevat tumma kivipinta ja '
+            + 'vaaleat kaarikehykset, keskiosassa on pylväsveranta '
+            + 'kahdessa kerroksessa, ja edessä kulkee muuri ja rivi '
+            + 'pallolyhtyjä.',
+          lahde: 'Janina Mitwalli @ Deutsch-Jemenitische Gesellschaft, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Craterin tori': {
+      aika: 'nykyinen katukuva 1800-luvun lopulta',
+      teksti: 'Craterin kaupallinen ydin on kraatterin pohjan '
+          + 'ruudukossa, ja se on kartan tihein kohta. Katujen '
+          + 'säännöllisyys ei ole sattumaa: kaupunki suunniteltiin '
+          + 'uudelleen sen jälkeen, kun britit ottivat Adenin haltuunsa '
+          + 'vuonna 1839 ja tekivät siitä vapaakauppasataman vuonna '
+          + '1850. Sitä ennen paikka oli kutistunut kylän kokoiseksi: '
+          + 'vuonna 1800 Adenissa asui noin 600 ihmistä arabeja, '
+          + 'somaleja, juutalaisia ja intialaisia, ruokokattoisissa '
+          + 'majoissa vanhempien raunioiden keskellä. Rasulidien '
+          + 'aikaan asukkaita oli ollut noin kahdeksankymmentätuhatta.'
+          + '\n\n'
+          + 'Kasvu näkyy katukuvassa. Torin ympärillä on '
+          + 'kaksikerroksisia rakennuksia, joiden alakerrassa kiertää '
+          + 'holvikaarikäytävä ja yläkerrassa puinen veranta — '
+          + 'kaarikäytävä antaa varjoa myyjälle ja veranta viileyttä '
+          + 'asukkaalle, ja molemmat ovat vastauksia samaan '
+          + 'ongelmaan. Rakennustapa tuli Adeniin Intian kautta, '
+          + 'kuten hallintokin.'
+          + '\n\n'
+          + 'Craterin läpi kulkee yhä kaupungin ainoa maayhteys. Tie '
+          + 'nousee pohjoisessa kapean solan läpi ulos kraatterista, ja '
+          + 'kohtaa sanotaan nimellä Main Pass. Alun perin siinä oli '
+          + 'osmanien aikana rakennettu holvikaariportti, joka '
+          + 'purettiin räjäyttämällä maaliskuussa 1963 tien '
+          + 'leventämiseksi kaksikaistaisesta nelikaistaiseksi; '
+          + 'risteykseen on myöhemmin tehty siitä neljäsosakokoinen '
+          + 'jäljennös.',
+      kuvat: [
+        {
+          tiedosto: 'Aden. Esplanade Road, Crater, late 1930s.jpg',
+          selite: 'Craterin Esplanade Road 1930-luvun lopulla. Kadun '
+            + 'varressa on rivi kaksikerroksisia taloja, joiden '
+            + 'alakerrassa on holvikaarikäytävä ja yläkerrassa puinen '
+            + 'veranta; kadulla on muutama auto ja hevosvaunut, ja '
+            + 'talojen yllä kohoaa sahalaitainen vuorenharjanne.',
+          lahde: 'Ed. A Abassi, Aden, late 1930s, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tawilan altaat': {
+      aika: 'ikä kiistanalainen, kunnostus 1800-luvulla',
+      teksti: 'Wadi Tawilan uomaan hakattu allassarja on Adenin vanhin '
+          + 'yhä näkyvä rakennelma ja samalla sen paras selitys: '
+          + 'kraatterissa sataa vähän, eikä pohjavettä ole, joten '
+          + 'kaupunki eli sen varassa, mitä Shamsanin rinteiltä saatiin '
+          + 'talteen. Altaita on jäljellä kolmetoista, ja niiden '
+          + 'yhteistilavuus on noin yhdeksäntoista miljoonaa gallonaa. '
+          + 'Suurimmat ovat päälaitoksen keskellä oleva Coghlanin allas '
+          + 'ja alimpana, varsinaisen alueen ulkopuolella, pyöreä '
+          + 'Playfairin allas.'
+          + '\n\n'
+          + 'Coghlanin altaassa on suorakaiteen muotoinen syvennys, '
+          + 'jota kohteen johtajan mukaan on voitu käyttää '
+          + 'esi-islamilaisiin uhritoimituksiin — se sopisi yhteen '
+          + 'yleisimmän ikäoletuksen kanssa. '
+          + 'Kirjallisia mainintoja on vasta islamin ajalta: '
+          + '900-luvulla al-Hamdani kirjoitti, että "Adenissa on '
+          + 'altaita, jotka varastoivat veden kun sataa", ja 1300-luvulla '
+          + 'paikalla käynyt Ibn Battuta täsmensi, että vesi kerätään '
+          + 'yksinomaan kaupunkilaisten juomavedeksi.'
+          + '\n\n'
+          + 'Rasulidit kunnostivat rappeutuneita altaita vuosina '
+          + '1229–1454, ja siitä on syntynyt käsitys, että he olisivat '
+          + 'ne rakentaneetkin. Sen jälkeen altaat hautautuivat tulvien '
+          + 'tuomaan soraan lähes kokonaan. Robert L. Playfair löysi ne '
+          + 'uudelleen brittiajan alussa, ja britit kunnostivat ne '
+          + 'juomavesivarastoksi — mutta muuttivat samalla koko '
+          + 'järjestelmän. Alkuperäinen verkosto oli lukuisia pieniä '
+          + 'altaita porrastettuna rinteitä pitkin; britit korvasivat sen '
+          + 'muutamalla suurella altaalla saadakseen talteen '
+          + 'mahdollisimman paljon vettä. Muutos heikensi altaiden kykyä '
+          + 'hillitä tulvia ja hävitti samalla sen, mitä alkuperäisestä '
+          + 'rakenteesta olisi voinut tutkia. Tänään paikalla oleva '
+          + 'kokonaisuus on siis pikemminkin viktoriaaninen kuin '
+          + 'himjarilainen.',
+      kuvat: [
+        {
+          tiedosto: 'Cisterns of Tawila - صهاريج عدن - panoramio (1).jpg',
+          selite: 'Kaksi porrastettua allasta kurun pohjalla. Ylempi on '
+            + 'tyhjä ja sen sileäksi rapattu reuna kaartuu leveänä '
+            + 'kaarena, alemmassa on vihertävää vettä. Ympärillä '
+            + 'kohoavat harmaat kallioseinämät, ja terassilla kasvaa '
+            + 'muutama pensas.',
+          lahde: 'Tariq Ahmed, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v945 — VAIHE B ERA 4: SANA ja ADEN saivat avauskuvat, matkaoppaan JA KOHDEKARTAT JUTTUINEEN — molemmilta puuttuivat karttakohteet kokonaan. SANAN KARTTA SYNTYI OVERPASSIN ANSIOSTA: Al-Bakiriyyan Wikipedia-koordinaatti on 560 m pielessa (kaytannossa Suuren moskeijan piste) — Overpass voitti taas (v940-ennakkotapaus). 6 kohdetta ja 6 juttua. ADENIN KARTALLA ON VAIN 4 KOHDETTA: Siran linnasta, Aidrus-moskeijasta, minareetista ja Main Passista ei ole vapaata ≥1200 px kuvaa — Jerusalemin ennakkotapaus (ei kuvaa, ei kohdetta); poisjaaneet kerrotaan esittelyssa ja jutuissa. Steamer Point on kainalokarttana (6 km, x nostettu 14:aan ettei leikkaudu — Budapestin oppi vaakasuunnassa). Adenin kartta vaati meri: true. Tawilan altaiden piste on "vedessa" tyokalun mukaan — se ON vesiallas, hyvaksytty kuten Marseillen satama-allas. Jemenin sisaltolinja: ei nykysotaa, painotus 1800-luvun hiilisatamaan ja arkkitehtuuriin; Sanan historia paattyy 1904. Adenin vuosisade kerrotaan kolmena lukuna (36/61/125 mm — kolme eri lahdetta ja mittapistetta). Kuvahylkayksissa mm. diaan poltettu paivays, alamree.net-vesileima ja kamerapaivayksia; Sanan kahvivisan opetus lisattiin Suolatori-juttuun (Mokhan satama). OVERPASS-VINKKI KIRJATTU: maps.mail.ru-peili toimi kun vakiopalvelimet olivat nurin. Tarkista: avaa Sana → kohdekartta (6 numeroa), Aden → kohdekartta (4 numeroa + kainalo), molempien Matkaopas',
   'v944 — VAIHE B ERA 6: MASQAT, TABRIZ ja ISFAHAN saivat avauskuvat ja matkaoppaan. 23 uutta kuvaa (mm. Naqsh-e Jahan muqarnas-holvin lapi, 1600-luvun Mascate-puupiirros ja Costen 1839 kivipiirros); 6 hylkaysta (vesileima "©2015 Neeku Shamekhi", lisatty kehys, tunnistettavia kasvoja, opastetaulun hallitsema falaj-kuva). Faktapaatoksia: aflajin ika jatettiin antamatta (lahde sanoo seka 500 jaa etta 5000 vuotta), Tabrizin asukasluku auki molempina lukuina (1,7 milj vs 1 558 693 samassa artikkelissa), Sinisen moskeijan kustantaja korjattu Khatun Jan Begomiksi (ei Jahan Shah), metron avaus "elokuun lopussa 2015" koska artikkeli antaa kaksi paivaa. Iranin sisaltolinja pidetty (ei nykypolitiikkaa, ei 1979 jalkeisia nimimuutoksia). Visakattavuus tarkistettu kaikilta kolmelta. Tarkista: avaa Masqat/Tabriz/Isfahan → avauskuvat ja Matkailijalle → Matkaopas',
   'v943 — VAIHE B ERA 2: HALAB, DAMASKOS ja LUXOR saivat avauskuvat ja matkaoppaan. 21 uutta kuvaa; Syyrian sisaltolinjaa noudatettu tarkasti — ei sisallissotaa, moderni kuvasto sotaa edeltavaa (Argenbergin 2000-luvun sarjat), eika yksikaan kuvateksti vaita nykytilaa; mm. Aleppon suuren moskeijan kuva hylattiin koska minareetti on sortunut 2013. FABLEN PISTOKOE NAPPASI YHDEN: LOC-lasinegatiivissa oli kuvaajan numero negatiivin reunassa — agentti oli kertonut sen kuvatekstissa, mutta v933-ennakkotapaus hylkaa reunamerkinnat — vaihdettu Argenbergin kattonakymaan. Visavastaukset oppaisiin: saippua (halab), damasti + damaskosteras (damaskos). Luxorin opas viittaa v940:n korjattuun karttaan. Wikipedian ristiriidat auki: Aleppon sija ottomaanikaupunkien joukossa (2. vai 3.), Damaskoksen kentan avausvuosi (1973 vai 60-luvun loppu), Kuninkaiden laakson hautamaara (63 vai 65). Yksi hylkays oli melkein-ansa: "The Valley of Kings 2" osoittautui SIPERIAN Kuninkaiden laaksoksi. Tarkista: avaa Halab/Damaskos/Luxor → avauskuvat ja Matkailijalle → Matkaopas',
   'v942 — TUOREUSNAKYMAT (omistajan tilaus 20.8.): 1) Tilannelehden karkeen chippirivit — vihreat vasta valmistuneet versionumeroineen, keltaiset tyon alla olevat; data uudessa TUOREET-taulussa (tyohuone-tilanne.js), jota Fable paivittaa julkaisujen tahdissa. 2) Tilastot-taulussa tuoreen kaupungin nimisolu varjaytyy samoin varein ja saa versiomerkin; ohjausriville uusi Nayta-vipu (kaikki / vain tuoreet) joka muistetaan localStoragessa; mannerrivilla uusi "kaupungit esiin" -nappi joka avaa ja sulkee koko mantereen kaupungit kerralla. Tekninen: maalehti.js sai rakennaJatka-lipun (rakenna-koukku + nostot samalla sivulla); lueNakyma nimettiin lueTilastoNakyma-muotoon niputustormayksen takia (pollo.js). Tarkista: kehittajatila → Tilannelehti (chipit karjessa) ja Tilastot (Nayta-vipu, kaupungit esiin -nappi, varitetyt nimet)',
@@ -312,6 +313,8 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '20.8.2026',
   valmiit: [
+    { id: 'sana', nimi: 'Sana', versio: 'v945' },
+    { id: 'aden', nimi: 'Aden', versio: 'v945' },
     { id: 'masqat', nimi: 'Masqat', versio: 'v944' },
     { id: 'tabriz', nimi: 'Tabriz', versio: 'v944' },
     { id: 'isfahan', nimi: 'Isfahan', versio: 'v944' },
@@ -321,15 +324,11 @@ export const TUOREET = {
     { id: 'ankara', nimi: 'Ankara', versio: 'v941' },
     { id: 'nikosia', nimi: 'Nikosia', versio: 'v941' },
     { id: 'izmir', nimi: 'İzmir', versio: 'v941' },
-    { id: 'persepolis', nimi: 'Persepolis (kartta)', versio: 'v940' },
-    { id: 'rubalkhali', nimi: 'Rub al-Khali', versio: 'v939' },
   ],
   tyossa: [
     { id: 'riad', nimi: 'Riad' },
     { id: 'doha', nimi: 'Doha' },
     { id: 'kuwait', nimi: 'Kuwait' },
-    { id: 'sana', nimi: 'Sana' },
-    { id: 'aden', nimi: 'Aden' },
     { id: 'salalah', nimi: 'Salalah' },
     { id: 'mosul', nimi: 'Mosul' },
   ],

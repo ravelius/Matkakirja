@@ -27277,12 +27277,20 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
-   * SANAN KAUPUNKILEHTI (nippu 2, 13.8.2026). EI KOHDEKARTTAA.
-   * Englanninkielisestä Wikipediasta ei löydy kuutta lähteellistä
-   * kohdetta samaan ruutuun: Suuren moskeijan ja Al-Bakiriyyan
-   * coord-mallit antavat pisteet 12 metrin päähän toisistaan,
-   * eikä Bab al-Jemenillä tai kansallismuseolla ole coordia
-   * lainkaan. Sama ratkaisu kuin islanti, lappi ja kreeta.
+   * SANAN KAUPUNKILEHTI (nippu 2, 13.8.2026).
+   *
+   * KOHDEKARTTA LISÄTTIIN 20.8.2026 (erä 4). Aiempi kirjaus tässä
+   * kohtaa sanoi, ettei kuutta lähteellistä kohdetta löydy samaan
+   * ruutuun, koska Suuren moskeijan ja Al-Bakiriyyan coord-mallit
+   * antavat pisteet 12 metrin päähän toisistaan eikä Bab al-Jemenillä
+   * ole coordia lainkaan. Havainto oli oikea mutta johtopäätös
+   * ennenaikainen: en-Wikipedian Al-Bakiriyya-artikkelin coord on
+   * yksinkertaisesti väärä, ja Overpass antaa moskeijalle oikean
+   * paikan 560 metriä koillisempaa. Kaikki kartan koordinaatit ovat
+   * siksi Overpassista (haettu 20.8.2026), ja ristiriidat on
+   * kirjattu maakartat.js:n sana-lohkoon.
+   *
+   * AVAUSKUVAT JA MATKAOPAS lisättiin samalla kertaa (vaihe B).
    */
   sana: [
     {
@@ -27318,6 +27326,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskellä palaa kolmilamppuinen katulyhty. Aukiolla liikkuu '
             + 'tiheä ihmisjoukko.',
           lahde: 'Julian-G. Albert, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Bab-ul-Yemen, Sana\'a (2286823122).jpg',
+          selite: 'Bab al-Yaman ylhäältä. Portin kaariaukon kummallakin '
+            + 'puolella on pyöreä tiilitorni, ja muurin takaa nousee '
+            + 'kokonainen tornitalojen rinne kahtena valkoisena '
+            + 'minareettina.',
+          lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Street, Sanaá, Yemen - Flickr - Rod Waddington.jpg',
+          selite: 'Kivetty kuja vanhassakaupungissa. Molemmin puolin nousee '
+            + 'tiiliseiniä, joissa on valkoiset siksakkivyöt ja pyöreät '
+            + 'medaljongit; perällä kaartuu kahdeksankulmainen tornitalo.',
+          lahde: 'Rod Waddington from Kergunyah, Australia, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Old Sana\'a City - Yemen.jpg',
+          selite: 'Vanhankaupungin kattomeri iltavalossa: satoja '
+            + 'litteäkattoisia tornitaloja, joiden ruskeaa tiiltä '
+            + 'jaksottavat valkoiset kaaret. Takana häämöttävät vuoret.',
+          lahde: 'Ibrahim Alqousi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
@@ -27384,6 +27416,151 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sanaa Yemen 2013 old city 001.jpg',
+          selite: 'Tornitalojen julkisivuja vierekkäin ja päällekkäin. '
+            + 'Jokaisen kerroksen ikkunarivi on kehystetty valkoisella '
+            + 'kipsillä, ja seinien yläreunoja kiertää siksakkinauha.',
+          lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Sana on vuoristokaupunki, jonka vanhakaupunki on vain '
+          + 'pieni osa kokonaisuutta: muurien sisään mahtuu noin '
+          + 'kymmenesosa asukkaista, ja loput asuvat uudessa kaupungissa '
+          + 'eli al-Jadidissa, joka levisi 1960-luvulta alkaen laakson '
+          + 'pohjaa pitkin pohjoiseen ja etelään. Vanhaakaupunkia '
+          + 'sanotaan al-Qadimaksi, ja se on Unescon '
+          + 'maailmanperintökohde vuodesta 1986.',
+        artikkeli: {
+          nimi: 'Matkailijan Sana',
+          taitto: 'opas',
+          teksti: 'Yksi laakso vuorten välissä, kaksi kehätietä ja '
+            + 'niiden keskellä muurikaupunki, joka on vanhempi kuin '
+            + 'kumpikaan.',
+          nosto: 'Sanaan pohjavesi laskee kuudesta kahdeksaan metriä '
+            + 'vuodessa — kaivoja porataan jo 800–1 200 metrin syvyyteen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Sanaan lentoasema on Jemenin tärkein: vuonna 2007 '
+                + 'sen kautta kulki 80 prosenttia koko maan '
+                + 'lentomatkustajista, ja Jemenin kansallisen '
+                + 'lentoyhtiön Yemenian pääkonttori on kaupungissa. '
+                + 'Kaupungin sisällä liikutaan pikkubusseilla. '
+                + 'Dabab-nimisiä minibusseja arvioitiin vuonna 2005 '
+                + 'olevan Sanaassa 4 000–7 000 ja hieman isompia '
+                + 'nuss-busseja 5 500–7 300; takseja on noin 33 000. '
+                + 'Katuverkko kulkee enimmäkseen pohjoisesta etelään, ja '
+                + 'kaupunkia kiertää kaksi kehätietä, joista sisemmän '
+                + 'sisällä liikenne on tihein. Aikatauluja ei ole: '
+                + 'kuljettajan lupa ei velvoita ajamaan säännöllisesti, '
+                + 'joten bussien määrä vaihtelee päivästä toiseen. '
+                + 'Miehistä 51 prosenttia käyttää julkista liikennettä, '
+                + 'naisista 56 prosenttia kävelee.',
+              kuva: {
+                tiedosto: 'Sana\'a (2286828534).jpg',
+                selite: 'Dabab-pikkubusseja kymmenittäin rivissä '
+                  + 'hiekkakentällä. Kaikki ovat valkoisia ja kylkeen on '
+                  + 'maalattu keltainen raita.',
+                lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on omannimisellään tasangolla, jota '
+                + 'sanotaan nimellä Haql Sana. Tasanko on 50–60 '
+                + 'kilometriä pitkä pohjoisesta etelään ja kaupungin '
+                + 'pohjoispuolella noin 25 kilometriä leveä; etelämpänä '
+                + 'se kapenee. Idässä ja lännessä sitä rajaavat jyrkänteet '
+                + 'ja vuoret, joilta laskee wadeja. Sana itse on tasangon '
+                + 'kapeimmassa kohdassa: idässä kohoaa Jabal Nuqum, joka '
+                + 'nousee noin 500 metriä kaupungin yläpuolelle, ja '
+                + 'lännessä ovat Jemenin korkeimman vuoren Jabal '
+                + 'an-Nabi Shuaybin juuret — huippu itse on 25 kilometrin '
+                + 'päässä. Kahden vuoriston puristuksessa kaupunki on '
+                + 'voinut kasvaa vain pohjois–eteläakselilla. Tasangolla '
+                + 'on myös nuorta tulivuoritoimintaa: kuonakeiloja ja '
+                + 'laavakenttiä pohjoiseen menevän tien varressa.',
+              kuva: {
+                tiedosto: 'Sana\'a3.JPG',
+                selite: 'Vanhankaupungin kattoja ja kaksi minareettia, '
+                  + 'joista toisen ympärillä on rakennusteline. Taustalla '
+                  + 'kulkee vuorijono koko kuvan leveydeltä.',
+                lahde: 'Scastellsf, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: vesi ja qat',
+              teksti: 'Sanan alla on Tawilahin pohjavesiesiintymä, joka '
+                + 'löydettiin vasta vuonna 1972. Se täyttyy luonnostaan '
+                + 'noin 42 miljoonalla kuutiometrillä vuodessa, ja vesi '
+                + 'tulee pääosin ympäröivien wadien tulvista tasangolle '
+                + '— sateesta suoraan hyvin vähän. Vuonna 1995 vettä '
+                + 'otettiin noin kolme kertaa se, mitä esiintymään palasi; '
+                + 'uudemmat arviot puhuvat neljästä tai viidestä '
+                + 'kertaisesta. Pinta laskee kuudesta kahdeksaan metriä '
+                + 'vuodessa, ja kaivoja porataan 800–1 200 metrin '
+                + 'syvyyteen. Syy ei ole kaupunki vaan pelto: Sanaan '
+                + 'seudulla oli vuonna 1995 yli 5 000 kaivoa ja vuoteen '
+                + '2010 mennessä noin 13 500, ja peltoalasta yhä suurempi '
+                + 'osa meni qatille — piristävälle pensaalle, jonka '
+                + 'lehtiä pureskellaan iltapäivisin. Osuus nousi '
+                + 'runsaasta neljänneksestä noin puoleen, ja koko Jemenin '
+                + 'bruttokansantuotteesta qat oli vuonna 2010 kuusi '
+                + 'prosenttia. Ennen 1970-lukua vesi otettiin matalista '
+                + 'kaivoista ja käytetty pesuvesi johdettiin puutarhoihin.',
+              kuva: {
+                tiedosto: 'Wadi highway, Sana\'a Yemen.jpg',
+                selite: 'Kivinen holvisilta, jonka kolmen leveän kaaren '
+                  + 'alitse kulkee autotie kuivan uoman pohjaa pitkin. '
+                  + 'Kaarien takaa näkyy tornitaloja.',
+                lahde: 'Step, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: osmanit palaavat 1872',
+              teksti: 'Osmanit tulivat Jemeniin ensimmäisen kerran vuonna '
+                + '1538 ja valtasivat Sanan vuonna 1547 Özdemir Pashan '
+                + 'johdolla. Zaiditti-imaamit ottivat kaupungin takaisin '
+                + '1602 ja ajoivat osmanijoukot pois 1629. Toinen tulo '
+                + 'alkoi 1835, kun osmanien joukkoja saapui Jemenin '
+                + 'rannikolle Egyptin Muhammad Alin joukkojen varjolla, '
+                + 'mutta Sanaan ne pääsivät vasta vuonna 1872 Ahmed '
+                + 'Muhtar Pashan johdolla. Siitä alkoi Tanzimat-'
+                + 'uudistusten kausi: kaupungille tehtiin ensimmäistä '
+                + 'kertaa asemakaava, rakennettiin uusia katuja ja '
+                + 'perustettiin kouluja ja sairaaloita. Kiire oli '
+                + 'poliittinen — osmanit halusivat pitää otteensa alueesta, '
+                + 'jolla kasvoi Egyptin vaikutusvalta, jonka rannikolla '
+                + 'oli brittien Aden ja jonka toisella puolella Somalian '
+                + 'satamissa liikkuivat italialaiset ja ranskalaiset. '
+                + 'Uudistukset jäivät silti hyvin rajallisiksi, ja vuonna '
+                + '1904 valta siirtyi imaami Yahyalle.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Yli kahden kilometrin korkeus tekee '
+                + 'päiväntasaajan lähellä olevasta kaupungista lauhkean. '
+                + 'Kylmimmän ja lämpimimmän kuukauden ero on vain vajaat '
+                + 'kahdeksan astetta: joulukuun keskilämpö on 14,9 ja '
+                + 'kesäkuun 22,7. Päivät nousevat 21 ja 29 asteen välille '
+                + 'ympäri vuoden, mutta yöt painuvat joulu–helmikuussa '
+                + 'yhdeksään asteeseen, joten aamuun kannattaa varata '
+                + 'takki. Sade tulee kahtena piikkinä: huhtikuussa 47 '
+                + 'millimetriä ja elokuussa 34, ja maaliskuussa 31. '
+                + 'Kuivinta on syyskuussa, jolloin normaali on yksi '
+                + 'millimetri. Koko vuoden kertymä on 182 millimetriä. '
+                + 'Mittauspiste on tasangolla viitisen kilometriä '
+                + 'vanhastakaupungista pohjoiseen ja samassa korkeudessa, '
+                + 'joten luvut kuvaavat myös muurien sisäpuolta — mutta '
+                + 'vuoristossa vuorokausivaihtelu on aina suurempi kuin '
+                + 'kuukausikeskiarvo antaa ymmärtää. Lokakuu ja '
+                + 'marraskuu ovat kävelijän kuukaudet: sade on ohi, '
+                + 'keskilämpö vielä 15–18 astetta.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
@@ -27470,10 +27647,32 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
-   * ADENIN KAUPUNKILEHTI (nippu 2, 13.8.2026). EI KOHDEKARTTAA:
-   * lähteellisiä kohteita on kolme tai neljä, ja ne jakautuvat
-   * kraatterin ja Steamer Pointin välille noin viiden kilometrin
-   * päähän toisistaan.
+   * ADENIN KAUPUNKILEHTI (nippu 2, 13.8.2026).
+   *
+   * KOHDEKARTTA LISÄTTIIN 20.8.2026 (erä 4) — mutta VAIN NELJÄLLÄ
+   * KOHTEELLA, mikä on kaksi alle talon tavallisen alarajan. Aiempi
+   * kirjaus tässä kohtaa arvioi lähteellisiä kohteita olevan kolme
+   * tai neljä, ja arvio piti paikkansa. Kraatterin ja Steamer Pointin
+   * viiden kilometrin väli ratkesi kainalokartalla (Medinan malli),
+   * mutta kuvat eivät ratkenneet: Commonsissa ei ole yhtään vapaata
+   * vähintään 1 200 pikselin kuvaa Siran linnasta, Aidrus-moskeijasta,
+   * Adenin minareetista eikä Main Passin portista, ja Adenin
+   * kirjaston ainoassa kuvassa on poliittisia julisteita ja
+   * tunnistettava henkilö. "Ei kuvaa, ei kohdetta" (Jerusalemin
+   * ennakkotapaus) karsi ne kaikki. Ne kerrotaan lehden teksteissä ja
+   * kartan esittelyssä.
+   *
+   * AVAUSKUVAT JA MATKAOPAS lisättiin samalla kertaa (vaihe B).
+   * Kuvavalinnassa painotettiin historiallista aineistoa (1930-luvun
+   * Esplanade Road, Baedekerin 1914 kartta) eikä nykytilaa.
+   *
+   * KAKSI SATELLIITTIKUVAA, JA SE ON HYVÄKSYTTY AIHETOISTO. Oppaan
+   * avauskuva on ISS:n laaja otos, jossa näkyvät molemmat niemet ja
+   * Little Aden, ja alueen rakenne -jakson kuva on toinen ISS:n otos
+   * lähempää: siinä erottuvat kraatterin uurteet, satama ja kiitotie.
+   * Kuvat vastaavat eri kysymykseen (missä kaupunki on / mistä se
+   * koostuu), ja avaruuskuva on ainoa tapa näyttää kahden niemen
+   * muoto — sama linja kuin Medinan Harrat Rahatilla.
    */
   aden: [
     {
@@ -27507,6 +27706,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'terassi valkoisine kaiteineen, ja terassilla seisoo kuuden '
             + 'hengen ryhmä. Kurun perällä erottuu poikittainen muuri.',
           lahde: 'Ljuba brank, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Aden, Yemen Port.jpg',
+          selite: 'Adenin satama mereltä katsottuna. Rannassa on matalia '
+            + 'vaaleita rakennuksia ja laituri veneineen, ja niiden takaa '
+            + 'nousee paljas ruskea vuorenrinne, jonka päällä erottuu '
+            + 'kapea torni.',
+          lahde: 'T3n60, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Old Town Aden Yemen.jpg',
+          selite: 'Kaksi valkoista minareettia kraatterin kaupungissa. '
+            + 'Niiden takana kohoaa lähes pystysuora tumma kallioseinämä, '
+            + 'jonka juurella talot kiipeävät rinnettä ylös.',
+          lahde: 'Jialiang Gao www.peace-on-earth.org, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Aden. Steamer Point. Aug 2013 (9727325813).jpg',
+          selite: 'Tawahin niemi ylhäältä. Vasemmalla on satama '
+            + 'nostureineen ja rahtilaivoineen, oikealla tiivis '
+            + 'kaupunginosa, joka nousee vuorenrinnettä ylöspäin.',
+          lahde: 'Brian Harrington Spier from Shanghai, China, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       nostot: [
@@ -27575,6 +27798,157 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Manfred Steffen @ Deutsch-Jemenitische Gesellschaft, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'The Yemeni cities of Little Aden and Aden (iss069e004371).jpg',
+          selite: 'Adenin rannikko avaruusasemalta kuvattuna. Merestä '
+            + 'työntyy kaksi tummaa vuoriniemeä: vasemmalla Little Aden '
+            + 'ja oikealla Aden, ja niiden välissä on matala '
+            + 'turkoosi lahti. Oikeassa laidassa erottuu kiitotien '
+            + 'suora viiva.',
+          lahde: 'NASA Johnson Space Center, Wikimedia Commons (PD)',
+        },
+        kappale: 'Aden ei ole yksi kaupunki vaan ketju kaupunginosia '
+          + 'kahdella niemellä: idässä on Crater eli Seera sammuneen '
+          + 'tulivuoren pohjalla, lännessä Tawahi eli entinen Steamer '
+          + 'Point, ja niiden välissä satamaa reunustava Maalla ja '
+          + 'lentoaseman Khormaksar. Matkaa Sanaan on 363 kilometriä, ja '
+          + 'kaupunki itse on kuuden metrin korkeudessa merenpinnasta.',
+        artikkeli: {
+          nimi: 'Matkailijan Aden',
+          taitto: 'opas',
+          teksti: 'Kaksi niemeä, yksi luonnonsatama ja tulivuori, jonka '
+            + 'kraatteriin mahtui kokonainen kaupunki.',
+          nosto: 'Vuosina 1916–1917 Aden tuotti yli 120 000 tonnia '
+            + 'suolaa — se oli 1920-luvun alussa ainoa tavara, jonka '
+            + 'kaupunki itse valmisti.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Adenin kansainvälinen lentoasema on noin kymmenen '
+                + 'kilometrin päässä keskustasta, ja se on Jemenin '
+                + 'toiseksi suurin Sanaan jälkeen. Alku oli sotilaallinen: '
+                + 'britit perustivat Khormaksarin kaupunginosaan '
+                + 'sotilaslentokentän vuonna 1927, ja toisen '
+                + 'maailmansodan jälkeen sen viereen rakennettiin '
+                + 'nykyinen siviilikenttä. Sijainti on Jemenin oloissa '
+                + 'poikkeuksellisen helppo, sillä lähestymissuunnat ovat '
+                + 'meren yllä eivätkä vuorten välissä. Etelä-Jemenin oma '
+                + 'lentoyhtiö Alyemda toimi Adenista käsin, kunnes se '
+                + 'sulautui Yemeniaan vuonna 1996. Matkustajalaivat '
+                + 'nousivat maihin Tawahissa. Yksi käytännön asia '
+                + 'muuttui kerralla: brittiaikana ajettiin vasemmalla '
+                + 'kuten Britanniassa, mutta 2. tammikuuta 1977 Aden ja '
+                + 'muu Etelä-Jemen siirtyivät oikeanpuoleiseen '
+                + 'liikenteeseen naapurimaiden tavoin.',
+              kuva: {
+                tiedosto: 'Aden Crater & airport 1994.jpg',
+                selite: 'Mustavalkoinen kuva lentokentän kenttäalueelta. '
+                  + 'Etualalla on tyhjä hiekkakenttä ja kiitotien reuna, '
+                  + 'takana matala rakennusrivi ja sen yllä pitkä '
+                  + 'sahalaitainen vuorenharjanne.',
+                lahde: 'loose_grip_99, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Adenin muoto on kaksi niemeä, ja se selittää sekä '
+                + 'sataman että ilmaston. Meri on molemmin puolin, joten '
+                + 'maa- ja merituuli vaihtuvat vuorokauden mittaan ja '
+                + 'tasoittavat lämpötilaa niin päivän kuin vuodenkin '
+                + 'sisällä. Maasto viettää etelään, ja korkeat osat ovat '
+                + 'eteläpäässä: Jabal Shamsanin ylängöllä huiput '
+                + 'ylittävät 500 metriä, ja Little Adenissa ovat '
+                + 'matalammat Jabal Ihsan ja Jabal al-Muzalqim. Kaikki on '
+                + 'tulivuoriperäistä. Pohjoisessa ja idässä naapurina on '
+                + 'Lahjin maakunta, luoteessa Abyan. Antiikin aikaan Aden '
+                + 'oli enemmän saari kuin niemi, sillä sen mantereeseen '
+                + 'yhdistävä kannas oli paljon kapeampi kuin nyt; '
+                + 'Periplus kuvasi paikan sanoilla "kylä rannalla". '
+                + 'Vuonna 1920 satama-alue mitattiin kolmentoista ja '
+                + 'kuuden kilometrin kokoiseksi.',
+              kuva: {
+                tiedosto: 'ISS-47 Port of Aden, Yemen.jpg',
+                selite: 'Avaruusaseman kuva Adenista. Keskellä on tumma '
+                  + 'uurteinen vuoristoniemi, sen ympärillä sininen '
+                  + 'merenlahti, ja pohjoisessa erottuu kiitotien suora '
+                  + 'valkoinen viiva.',
+                lahde: 'NASA, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: suola, kahvi ja hiili',
+              teksti: 'Vuonna 1920 britit kuvasivat Adenia Arabian '
+                + 'kaupan päävarastoksi, mutta huomauttivat samalla, että '
+                + 'kaupunki itse valmisti vain yhtä tavaraa: suolaa. Sitä '
+                + 'haihdutettiin merivedestä, ja työtä teki kaksi '
+                + 'yritystä. Italialainen Agostino Burgarella Ajola and '
+                + 'Company toimi nimellä Aden Salt Works, ja pienempi '
+                + 'intialainen Abdullabhoy and Joomabhoy Lalji & Company '
+                + 'omisti oman suolatehtaansa; molemmat veivät tuotteensa '
+                + 'ulkomaille. Vuosina 1916–1917 suolaa syntyi yli '
+                + '120 000 tonnia. Kaliumkarbonaattia eli potaskaa '
+                + 'vietiin Bombayhin. Muu vaihtui käsissä: Jemenin '
+                + 'vuorilla kasvatettu kahvi puhdistettiin Adenissa '
+                + 'naisten työnä, ja satamasta lähtivät suitsuke, vehnä, '
+                + 'ohra, sinimailanen ja hirssi. Sinimailasen, hirssin ja '
+                + 'maissin varret ja lehdet jäivät rehuksi. Sisämaassa '
+                + 'poltettiin akaasiasta puuhiiltä, telakoilla tehtiin '
+                + 'jollia, ja kaupungin juutalaiset ja kreikkalaiset '
+                + 'valmistivat savukkeita egyptiläisestä tupakasta.',
+            },
+            {
+              otsikko: 'Historian käänne: kaupunki, joka kuului Intiaan',
+              teksti: 'Aden ei ollut brittiaikanaan siirtomaa vaan osa '
+                + 'Brittiläistä Intiaa. Vuoteen 1937 asti sitä '
+                + 'hallittiin Bombaysta käsin, ja nimi oli Aden '
+                + 'Settlement. Ajatus oli vanha: Bombayn kuvernööri Sir '
+                + 'Robert Grant, joka oli virassa 1834–1838, uskoi että '
+                + 'Intiaa voi puolustaa vain ottamalla haltuun '
+                + '"vahvoja paikkoja" etukäteen. Alue myös kasvoi '
+                + 'palasina: Perimin saari, kolmetoista neliökilometriä, '
+                + 'liitettiin vuonna 1857, Khuriya Muriya -saaret eli 73 '
+                + 'neliökilometriä vuonna 1868 ja Kamaran, 108 '
+                + 'neliökilometriä, vuonna 1915. Vuonna 1935 kokonaisuus '
+                + 'nimettiin Adenin provinssiksi, ja vuonna 1937 se '
+                + 'irrotettiin Intiasta omaksi kruununsiirtomaakseen. '
+                + 'Sisämaa ja Hadramaut jäivät löyhemmin kiinni Adenin '
+                + 'protektoraattina, jota hallinnoitiin samasta '
+                + 'kaupungista. Ensimmäinen sopimus oli tehty jo vuonna '
+                + '1802, kun amiraali Sir Home Popham sopi Lahejin '
+                + 'sulttaanin kanssa kauppapaikasta Craterissa.',
+              kuva: {
+                tiedosto: 'Map of Aden (Baedeker 1914).jpg',
+                selite: 'Baedekerin matkaoppaan kartta Adenin niemestä '
+                  + 'vuodelta 1914. Keskellä on Jebel Shamshamin '
+                  + 'vuoristo korkeuslukuineen, oikeassa laidassa Crater '
+                  + 'ja Sira, ja vasemmassa yläkulmassa kainalokartta '
+                  + 'Steamer Pointista.',
+                lahde: 'Karl Baedeker jr (Life time: 1837-1911), Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Adenissa vuodenajat erottuvat kosteudesta eivätkä '
+                + 'lämmöstä. Kylmimmän ja lämpimimmän kuukauden ero on '
+                + 'vajaat kahdeksan astetta: tammikuun keskilämpö on '
+                + '24,2 ja heinäkuun 32,1. Päivät ovat 27 ja 35 asteen '
+                + 'välillä ja yöt 22 ja 29 asteen, joten viileää ei tule '
+                + 'missään vaiheessa. Sadetta kertyy ERA5-normaaleissa '
+                + '125 millimetriä vuodessa, ja siitä 38 tulee '
+                + 'elokuussa — lähes kolmasosa yhden kuukauden aikana. '
+                + 'Luvuista on huomattava yksi ristiriita: tämän lehden '
+                + 'etusivu kertoo vuosisateeksi 36 millimetriä ja '
+                + 'Craterin oma sääkooste antaa 61, kun taas '
+                + 'ERA5-ruutu antaa 125. Ero syntyy mittaustavasta ja '
+                + 'jaksosta, eikä yksikään luku kumoa toista; suuruusluokka '
+                + 'on joka tapauksessa "vähän ja lähes kokonaan '
+                + 'elokuussa". Joulu–helmikuu on selvästi mukavin aika: '
+                + 'keskilämpö 24–25 astetta ja sade muutama millimetri.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'meri',
