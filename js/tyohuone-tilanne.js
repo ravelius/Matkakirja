@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v946 — VAIHE B ERA 3: RIAD, DOHA ja KUWAIT saivat avauskuvat ja matkaoppaan. 21 uutta kuvaa; 15+ hylkaysta (mm. kameran polttama paivays, FAL- ja "Attribution"-lisenssit jotka eivat ole sallitussa listassa, taysi terminaalihalli kasvoineen, mainostaulun hallitsema skyline). WABAR-KURI PITI: Riadin uusissa teksteissa ei yhtaan painolukua — 2 045 kg elaa vain kansallismuseojutussa. Toisto valtetty ristiin: gahwa on jo ARE-maalehdessa → Riadin arjen ilmio on Doxiadisin 1972 ruudukko; Dohan ruokasivu kattaa jo ruoat → arjen ilmio on karak; KWT-maalehden Jahra-aiheita ei toistettu. Kirjoittaja poisti oman lahteettoman vaitteensa (Kuwaitin "vuorovesi paljastaa liejutasankoja") ja korvasi sourcatuilla — itsekuri toimii. Lahderistiriidat auki: Riadin korkeus (612 vs 600 m), Diriyahin piirityksen kesto (vuosi vs 6 kk), Hamadin ala (22 vs 36 km2). Nykysota pois (Dohan 2025 ilmaisku, Kuwaitin 1990). Visaopetukset lehdissa: Diriyah, helmenkalastajakyla, helmielinkeino. Tarkista: avaa Riad/Doha/Kuwait → avauskuvat ja Matkailijalle → Matkaopas',
   'v945 — VAIHE B ERA 4: SANA ja ADEN saivat avauskuvat, matkaoppaan JA KOHDEKARTAT JUTTUINEEN — molemmilta puuttuivat karttakohteet kokonaan. SANAN KARTTA SYNTYI OVERPASSIN ANSIOSTA: Al-Bakiriyyan Wikipedia-koordinaatti on 560 m pielessa (kaytannossa Suuren moskeijan piste) — Overpass voitti taas (v940-ennakkotapaus). 6 kohdetta ja 6 juttua. ADENIN KARTALLA ON VAIN 4 KOHDETTA: Siran linnasta, Aidrus-moskeijasta, minareetista ja Main Passista ei ole vapaata ≥1200 px kuvaa — Jerusalemin ennakkotapaus (ei kuvaa, ei kohdetta); poisjaaneet kerrotaan esittelyssa ja jutuissa. Steamer Point on kainalokarttana (6 km, x nostettu 14:aan ettei leikkaudu — Budapestin oppi vaakasuunnassa). Adenin kartta vaati meri: true. Tawilan altaiden piste on "vedessa" tyokalun mukaan — se ON vesiallas, hyvaksytty kuten Marseillen satama-allas. Jemenin sisaltolinja: ei nykysotaa, painotus 1800-luvun hiilisatamaan ja arkkitehtuuriin; Sanan historia paattyy 1904. Adenin vuosisade kerrotaan kolmena lukuna (36/61/125 mm — kolme eri lahdetta ja mittapistetta). Kuvahylkayksissa mm. diaan poltettu paivays, alamree.net-vesileima ja kamerapaivayksia; Sanan kahvivisan opetus lisattiin Suolatori-juttuun (Mokhan satama). OVERPASS-VINKKI KIRJATTU: maps.mail.ru-peili toimi kun vakiopalvelimet olivat nurin. Tarkista: avaa Sana → kohdekartta (6 numeroa), Aden → kohdekartta (4 numeroa + kainalo), molempien Matkaopas',
   'v944 — VAIHE B ERA 6: MASQAT, TABRIZ ja ISFAHAN saivat avauskuvat ja matkaoppaan. 23 uutta kuvaa (mm. Naqsh-e Jahan muqarnas-holvin lapi, 1600-luvun Mascate-puupiirros ja Costen 1839 kivipiirros); 6 hylkaysta (vesileima "©2015 Neeku Shamekhi", lisatty kehys, tunnistettavia kasvoja, opastetaulun hallitsema falaj-kuva). Faktapaatoksia: aflajin ika jatettiin antamatta (lahde sanoo seka 500 jaa etta 5000 vuotta), Tabrizin asukasluku auki molempina lukuina (1,7 milj vs 1 558 693 samassa artikkelissa), Sinisen moskeijan kustantaja korjattu Khatun Jan Begomiksi (ei Jahan Shah), metron avaus "elokuun lopussa 2015" koska artikkeli antaa kaksi paivaa. Iranin sisaltolinja pidetty (ei nykypolitiikkaa, ei 1979 jalkeisia nimimuutoksia). Visakattavuus tarkistettu kaikilta kolmelta. Tarkista: avaa Masqat/Tabriz/Isfahan → avauskuvat ja Matkailijalle → Matkaopas',
   'v943 — VAIHE B ERA 2: HALAB, DAMASKOS ja LUXOR saivat avauskuvat ja matkaoppaan. 21 uutta kuvaa; Syyrian sisaltolinjaa noudatettu tarkasti — ei sisallissotaa, moderni kuvasto sotaa edeltavaa (Argenbergin 2000-luvun sarjat), eika yksikaan kuvateksti vaita nykytilaa; mm. Aleppon suuren moskeijan kuva hylattiin koska minareetti on sortunut 2013. FABLEN PISTOKOE NAPPASI YHDEN: LOC-lasinegatiivissa oli kuvaajan numero negatiivin reunassa — agentti oli kertonut sen kuvatekstissa, mutta v933-ennakkotapaus hylkaa reunamerkinnat — vaihdettu Argenbergin kattonakymaan. Visavastaukset oppaisiin: saippua (halab), damasti + damaskosteras (damaskos). Luxorin opas viittaa v940:n korjattuun karttaan. Wikipedian ristiriidat auki: Aleppon sija ottomaanikaupunkien joukossa (2. vai 3.), Damaskoksen kentan avausvuosi (1973 vai 60-luvun loppu), Kuninkaiden laakson hautamaara (63 vai 65). Yksi hylkays oli melkein-ansa: "The Valley of Kings 2" osoittautui SIPERIAN Kuninkaiden laaksoksi. Tarkista: avaa Halab/Damaskos/Luxor → avauskuvat ja Matkailijalle → Matkaopas',
@@ -313,6 +314,9 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '20.8.2026',
   valmiit: [
+    { id: 'riad', nimi: 'Riad', versio: 'v946' },
+    { id: 'doha', nimi: 'Doha', versio: 'v946' },
+    { id: 'kuwait', nimi: 'Kuwait', versio: 'v946' },
     { id: 'sana', nimi: 'Sana', versio: 'v945' },
     { id: 'aden', nimi: 'Aden', versio: 'v945' },
     { id: 'masqat', nimi: 'Masqat', versio: 'v944' },
@@ -321,14 +325,8 @@ export const TUOREET = {
     { id: 'halab', nimi: 'Halab', versio: 'v943' },
     { id: 'damaskos', nimi: 'Damaskos', versio: 'v943' },
     { id: 'luxor', nimi: 'Luxor', versio: 'v943' },
-    { id: 'ankara', nimi: 'Ankara', versio: 'v941' },
-    { id: 'nikosia', nimi: 'Nikosia', versio: 'v941' },
-    { id: 'izmir', nimi: 'İzmir', versio: 'v941' },
   ],
   tyossa: [
-    { id: 'riad', nimi: 'Riad' },
-    { id: 'doha', nimi: 'Doha' },
-    { id: 'kuwait', nimi: 'Kuwait' },
     { id: 'salalah', nimi: 'Salalah' },
     { id: 'mosul', nimi: 'Mosul' },
   ],
