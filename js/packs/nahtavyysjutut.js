@@ -15224,6 +15224,11 @@ export const NAHTAVYYSJUTUT = {
    * kertovat jo Ali Qapun poolokatsomon, Shaahin moskeijan kaiun
    * ja Qeysarien portin soittajat. Jutut on siksi kirjoitettu
    * tarkoituksella toisista kulmista.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (omistajan linjaus: kuvatekstit ovat
+   * liian pitkiä). Kaikki kuudentoista kuvan selitteet on tiivistetty
+   * yhteen tai enintään kahteen virkkeeseen; juttutekstit,
+   * kuvatiedostot ja lähderivit ovat ennallaan.
    */
   isfahan: {
     'Jameh-moskeija': {
@@ -15258,29 +15263,26 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20180301124354 IMG 4179And6more Interior 3.jpg',
-          selite: 'Neljän iwanin piha: yhden kaari on paljasta tiiltä ja '
-            + 'sen puolikupolissa kennomaista muqarnasia, toisen sivuilla '
-            + 'nousevat tiiliminareetit ja kolmannen pintaa peittää '
-            + 'kulmikas kufi-kirjoitus sini-valkoisin laatoin. Pihaa '
-            + 'kiertää kaksikerroksinen kaarikäytävä.',
+          selite: 'Neljän iwanin piha: yhden kaaren puolikupolissa on '
+            + 'kennomaista muqarnasia, toisen sivuilla nousevat '
+            + 'tiiliminareetit ja kolmannen pintaa peittää kulmikas '
+            + 'kufi-kirjoitus. Pihaa kiertää kaksikerroksinen '
+            + 'kaarikäytävä.',
           lahde: 'Hamidespanani, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ceiling of Jameh Mosque of Isfahan.jpg',
-          selite: 'Nizam al-Mulkin eteläkupoli suoraan alhaalta: koko pinta '
-            + 'on paljasta tiiltä ilman laattaa tai maalia, ja lakeen '
-            + 'kokoontuu kahdeksan kaarta, jotka jakavat pinnan kahdeksaan '
-            + 'lohkoon. Kulmien puolikupolit ja holvit kääntävät '
-            + 'neliömäisen salin ympyräksi.',
+          selite: 'Nizam al-Mulkin eteläkupoli suoraan alhaalta: koko '
+            + 'pinta on paljasta tiiltä ilman laattaa tai maalia, ja '
+            + 'lakeen kokoontuu kahdeksan kaarta, jotka jakavat pinnan '
+            + 'kahdeksaan lohkoon.',
           lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gran Mezquita de Isfahán, Isfahan, Irán, 2016-09-19, DD 43-45 HDR Alt.jpg',
           selite: 'Taj al-Mulkin pohjoiskupoli alhaalta: paljasta tiiltä '
             + 'sekin, mutta ristiin kulkevat kaaret piirtävät pintaan '
-            + 'viisisakaraisia tähtiä ja viisikulmioita. Jalustaa kiertää '
-            + 'hammastettu tiilivyö, ja nurkkien puolikupoleissa tiilet on '
-            + 'ladottu kalanruotokuvioon.',
+            + 'viisisakaraisia tähtiä ja viisikulmioita.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15316,18 +15318,14 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Bricks, pillars, and vaults (2966769898).jpg',
           selite: 'Basaarin katettua käytävää: järeät tiilipilarit, '
             + 'kärjekkäät kaaret peräkkäin ja tiiliholvit, joiden tiilet '
-            + 'on ladottu vinoriveihin. Vasemmassa reunassa hohtaa '
-            + 'keltainen ikkuna, holvien poikki on vedetty sähköjohto, '
-            + 'eikä käytävällä näy ketään.',
+            + 'on ladottu vinoriveihin. Käytävällä ei näy ketään.',
           lahde: 'dynamosquito from France, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: '201312 iran esfahan 61 (12468516185).jpg',
-          selite: 'Kohneh-aukio basaarin pohjoispäässä. Aukiota reunustaa '
-            + 'kaksikerroksinen kaarikäytävä, jonka varjossa seisoo '
-            + 'ihmisiä, ja edessä on sinipohjainen allas, jossa on '
-            + 'kymmeniä pystysuihkuja. Oikealla mies ajaa aukion poikki '
-            + 'moottoripyörällä.',
+          selite: 'Kohneh-aukio basaarin pohjoispäässä: aukiota reunustaa '
+            + 'kaksikerroksinen kaarikäytävä, ja edessä on sinipohjainen '
+            + 'allas kymmenine pystysuihkuineen.',
           lahde: 'Franco Pecchio from Milano, Italy, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -15366,26 +15364,23 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Parvekkeen puukatto on jaettu kenttiin, joissa toistuu '
             + 'tähdistä ja monikulmioista koottu kuvio punaisena, '
             + 'kullankeltaisena, mustana ja valkoisena. Puupylväiden '
-            + 'kapiteelit on veistetty kennomaisiin kerroksiin, ja '
-            + 'takaseinän suippokaarta peittää kasviköynnös.',
+            + 'kapiteelit on veistetty kennomaisiin kerroksiin.',
           lahde: 'Zythème, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ali-Qapu 13920419 (18).JPG',
           selite: 'Musiikkihuoneen yläseinään ja holviin on leikattu '
             + 'stukkiin kymmeniä syvennyksiä, joiden muodot ovat pulloja, '
-            + 'ruukkuja, maljoja ja suippokaaria. Holvin ripakaaret on '
-            + 'maalattu vaaleansinisiksi ja niiden väliset pinnat '
-            + 'oranssinpunaisiksi kasvikuvioin.',
+            + 'ruukkuja ja maljoja. Holvin ripakaaret on maalattu '
+            + 'vaaleansinisiksi ja niiden väliset pinnat '
+            + 'oranssinpunaisiksi.',
           lahde: 'Mohsen Ghasemee, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Music hall of Ali Qapu Isfahan 2014.jpg',
-          selite: 'Musiikkihuone kokonaisuutena: seinässä on kaksi kerrosta '
-            + 'syvennyskenttiä, holvin pinnat ovat oranssinpunaiset ja '
-            + 'kaaret vaaleansiniset, toisaalla stukko on harmaata ja '
-            + 'maalaamatonta. Kolmesta korkeasta suippokaari-ikkunasta '
-            + 'tulvii päivänvaloa.',
+          selite: 'Musiikkihuone kokonaisuutena: seinässä on kaksi '
+            + 'kerrosta syvennyskenttiä, ja kolmesta korkeasta '
+            + 'suippokaari-ikkunasta tulvii päivänvaloa.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -15423,20 +15418,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Naghshejahan3.jpg',
-          selite: 'Ilmakuva etelästä: Shaahin moskeijan piha altaineen, '
-            + 'iwaneineen ja turkoosilaattaisine minareetteineen kääntyy '
-            + 'eri kulmaan kuin aukio, joka jatkuu vinosti nurmikenttinä ja '
-            + 'puuriveinä. Aukion laidoilla erottuvat Ali Qapu ja Sheikh '
+          selite: 'Ilmakuva etelästä: Shaahin moskeijan piha iwaneineen '
+            + 'ja turkoosilaattaisine minareetteineen kääntyy eri kulmaan '
+            + 'kuin aukio. Aukion laidoilla erottuvat Ali Qapu ja Sheikh '
             + 'Lotfollahin kuvioitu kupoli.',
           lahde: 'Pedram forouzanfar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mosque Shah Portal.jpg',
           selite: 'Pääportti alaviistosta: kaaren sisus on täynnä '
-            + 'muqarnas-kennoja, kaarta kiertää valkoinen kirjoitusnauha '
-            + 'tummansinisellä pohjalla ja reunassa kulkee turkoosi '
-            + 'kierrelista. Kummallakin puolella nousee laatoitettu '
-            + 'minareetti parvekkeineen.',
+            + 'muqarnas-kennoja, ja kaarta kiertää valkoinen '
+            + 'kirjoitusnauha tummansinisellä pohjalla. Kummallakin '
+            + 'puolella nousee laatoitettu minareetti.',
           lahde: 'Farhad Tafreshi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15478,28 +15471,23 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Hasht Behesht Palace, Isfahan 01.jpg',
           selite: 'Hasht Beheshtin julkisivu altaan takana: keskellä on '
-            + 'korkea kaari, joka on auki läpi talon, ja siitä näkyy puita '
-            + 'toiselle puolelle. Yläpuolella on ohuiden puupylväiden '
-            + 'kannattama parveke ja pitkä räystäs, ja sinireunaisessa '
-            + 'altaassa on suihkulähteen putkia.',
+            + 'korkea kaari, joka on auki läpi talon. Sen yläpuolella on '
+            + 'ohuiden puupylväiden kannattama parveke ja pitkä räystäs.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hasht-Behesht, North-Western View.jpg',
           selite: 'Kahdeksankulmion nurkka luoteesta: ylemmän kerroksen '
-            + 'kaaressa riippuu porrastettu stukkoholvi, jonka kärki on '
-            + 'rei\'itetty, ja sen alla on puukaiteinen parveke. Kaarien '
-            + 'yllä kulkee sinistä, turkoosia ja keltaista kaakelinauhaa, '
-            + 'muuten seinä on paljasta tiiltä.',
+            + 'kaaressa riippuu porrastettu stukkoholvi ja sen alla on '
+            + 'puukaiteinen parveke. Kaarien yllä kulkee sinistä, '
+            + 'turkoosia ja keltaista kaakelinauhaa.',
           lahde: 'Meincluded, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hasht Behesht, Plan and section by Pascal Coste.jpg',
           selite: 'Pascal Costen piirros vuodelta 1840: ylhäällä leikkaus '
             + 'talon ja keskussalin kupolin läpi, alhaalla pohjapiirros ja '
-            + 'sitä ympäröivä puutarha. Kahdeksankulmion keskellä on sali, '
-            + 'jonka keskellä on kahdeksankulmainen allas, ja nurkissa '
-            + 'neljä pyöreää huonetta.',
+            + 'sitä ympäröivä puutarha.',
           lahde: 'Pascal Coste, Wikimedia Commons (PD)',
         },
       ],
@@ -15541,24 +15529,22 @@ export const NAHTAVYYSJUTUT = {
             + 'puolelta: kaksikerroksisessa julkisivussa on '
             + 'suippokaarisyvennyksiä ja keskellä korkeampi portti. Muurin '
             + 'takaa kohoavat kaksi minareettia ja köynnöskuvioinen '
-            + 'sipulimainen kupoli kalligrafianauhoineen.',
+            + 'kupoli.',
           lahde: 'Pascal Coste, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'مدرسه چهارباغ اصفهان 03.jpg',
           selite: 'Sisäpihan halki kulkee pitkä matala vesiallas '
             + 'suihkuineen, ja pihalla kasvaa plataaneja ja tummia '
-            + 'sypressejä. Iwanien kaaret ja kehykset on peitetty tiheällä '
-            + 'sinisellä mosaiikilla, ja katolla seisoo puinen paviljonki '
-            + 'turkoosine telttakattoineen.',
+            + 'sypressejä. Iwanien kaaret on peitetty tiheällä sinisellä '
+            + 'mosaiikilla.',
           lahde: 'Alimalekzadehfar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Chaharbagh Madrasa.jpg',
           selite: 'Iwanin laatoitus alaviistosta: kaarta kehystää leveä '
-            + 'kobolttisininen nauha valkoisine kalligrafioineen, ja kaaren '
-            + 'sisäpintaa täyttää tiheä köynnöskuvio sinisen, turkoosin, '
-            + 'valkoisen ja kullankeltaisen sävyissä. Perällä on '
+            + 'kobolttisininen nauha valkoisine kalligrafioineen, ja '
+            + 'kaaren sisäpintaa täyttää tiheä köynnöskuvio. Perällä on '
             + 'kennomainen muqarnas-syvennys.',
           lahde: 'Moe Alian, Wikimedia Commons (CC BY-SA 4.0)',
         },

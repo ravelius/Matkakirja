@@ -2813,18 +2813,22 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 32.6725, etela: 32.6485, lansi: 51.666, ita: 51.689,
     },
-    esittely: 'Isfahanin vanha kaupunki on kartalla tiheä kujaverkko, '
-      + 'jonka läpi vedetään kaksi eri-ikäistä viivastoa. Vanhempi on '
-      + 'orgaaninen: lyhyitä mutkittelevia kujia, jotka kiertävät '
-      + 'kortteleita eivätkä noudata mitään ruudukkoa. Uudempi on '
-      + 'suora, ja se näkyy leveinä väylinä, jotka halkovat kuvan '
-      + 'luoteesta kaakkoon ja lännestä itään.\n\n'
-      + 'Keskellä kuvaa erottuu pieni vaalea suorakaide, joka ei ole '
-      + 'rakennus vaan vesiallas: se on kaupungin suuren aukion '
-      + 'keskellä. Aukion laidoilla ovat Ali Qapu ja Shaahin moskeija, '
-      + 'ja niistä pohjoiseen johtaa basaari, joka päättyy '
-      + 'Jameh-moskeijaan kartan yläosassa. Etelässä ovat Hasht '
-      + 'Behesht ja Chahar Baghin koulu leveän puistokadun varrella.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (omistajan linjaus: "kaupunki kartalla
+     * on vähän turhan pitkä — vain kuvailua kaupungin kartasta, ei
+     * niin oleellista tietoa"). Esittely kertoo nyt, mitä kohteita
+     * alueella on ja miksi ne kiinnostavat; kartan viivastojen
+     * kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Isfahanin vanha ydin. Keskellä on '
+      + 'Naqsh-e Jahanin aukio altaineen, ja sen laidoilla ovat Ali '
+      + 'Qapun palatsi ja Shaahin moskeija. Aukion pohjoislaidalta '
+      + 'lähtee katettu basaari, joka vie kaupungin vanhimpaan '
+      + 'moskeijaan, Jameh-moskeijaan kartan yläosassa. Etelässä '
+      + 'Chahar Baghin puistokadun varrella ovat safavidien huvimaja '
+      + 'Hasht Behesht ja dynastian viimeinen suuri rakennushanke, '
+      + 'Chahar Baghin koulu. Kaikki kuusi kohdetta ovat kävelymatkan '
+      + 'päässä toisistaan.',
     kohteet: [
       { nimi: 'Jameh-moskeija', lat: 32.6697, lon: 51.6853 },
       { nimi: 'Isfahanin basaari', lat: 32.6631, lon: 51.6753 },

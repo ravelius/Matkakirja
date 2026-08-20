@@ -27568,40 +27568,61 @@ export const KULTTUURI_KATEGORIAT = {
    * ISFAHANIN KANSISIVU (nippu 2, 13.8.2026). IRN-maalehti vie
    * historian, rakennukset, puutarhat, ruoan ja käsityön, Tabriz
    * vei luonnon ja Teheran arjen.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (omistajan linjaus: "kuvatekstit liian
+   * pitkiä ja leipäteksti liian lyhyt"). Molempien sivujen johdannot
+   * on kirjoitettu 7–10 virkkeen johdatuksiksi — millainen kaupunki
+   * on, mikä sen merkitys ja historia — ja kaikki selitteet on
+   * tiivistetty yhteen tai enintään kahteen virkkeeseen. Nostot,
+   * opas, kuvatiedostot ja lähderivit ovat ennallaan. Johdantojen
+   * uudet väitteet on tarkistettu en-Wikipedian raakatekstistä
+   * (Isfahan ja New Julfa, haettu 20.8.2026), eivätkä johdannot
+   * toista viereisten nostojen virkkeitä.
    */
   isfahan: [
     {
       id: 'kaupunki',
       nimi: 'Isfahan',
-      johdanto: '1600-luvulla eurooppalainen matkaaja laski Isfahanin seudulta '
-        + 'jopa 3 000 kyyhkystornia, kaupungin länsipuolella kohoaa '
-        + 'kukkula 210 metriä tasangon ylle, ja erään 1300-luvun '
-        + 'hautarakennuksen kaksi 17,5-metristä minareettia liikkuvat '
-        + 'yhdessä.',
+      johdanto: 'Isfahan on Iranin kolmanneksi suurin kaupunki ja '
+        + 'Isfahanin maakunnan pääkaupunki, 440 kilometriä Teheranista '
+        + 'etelään. Se on kasvanut Irania halkovien pohjois–etelä- ja '
+        + 'itä–länsireittien risteykseen, kuivalle ylätasangolle '
+        + 'Zayandeh-joen varteen. Arabit valloittivat kaupungin vuonna '
+        + '642 ja tekivät siitä al-Jibalin maakunnan pääkaupungin. '
+        + 'Kukoistus kesti 800-luvulta 1700-luvulle: buyidien ja '
+        + 'seldžukkien aikana kaupunki kasvoi suureksi, ja vasta '
+        + 'seldžukkivallan päätyttyä noin vuonna 1200 seurasi taantuma. Käänne tuli vuonna 1598, kun Abbas Suuri '
+        + 'siirsi safavidien pääkaupungin Qazvinista tänne — toisen '
+        + 'kerran kaupungin historiassa — ja rakennutti sille uuden '
+        + 'keskustan. Siltä ajalta ovat puistokadut, kaakeloidut '
+        + 'moskeijat, palatsit ja katetut sillat, joista kaupunki '
+        + 'tunnetaan. Naqsh-e Jahanin aukio on maailman '
+        + 'suurimpia kaupunkiaukioita ja Unescon maailmanperintökohde. '
+        + 'Maine tiivistyy persialaiseen sananlaskuun Esfahan nesf-e '
+        + 'jahan ast, Isfahan on puoli maailmaa. Nimi on paljon '
+        + 'vanhempi: keskipersian Spahān tarkoittaa armeijan paikkaa, ja '
+        + 'Ptolemaios kirjoitti sen muodossa Aspadana.',
       kansikuvat: [
         {
           tiedosto: 'Isfahan to the north side by Eugène Flandin.jpg',
-          selite: 'Isfahan pohjoisesta nähtynä Eugène Flandinin '
-            + 'piirroksessa vuodelta 1840. Savimuurin takaa nousee '
-            + 'puurivistön yllä ohuita minareetteja ja matalia kupoleita, '
-            + 'ja kaukana on jyrkkä sahalaitainen vuorijono.',
+          selite: 'Isfahan pohjoisesta Eugène Flandinin piirroksessa '
+            + 'vuodelta 1840: savimuurin ja puurivistön takaa nousee '
+            + 'ohuita minareetteja ja matalia kupoleita.',
           lahde: 'Eugène Flandin, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Esfahán.jpg',
-          selite: 'Isfahan leveänä panoraamana korkealta. Kaupungin '
-            + 'ympärillä on hedelmätarhoja, suoria poppelirivejä ja '
-            + 'peltokaistaleita, ja horisontissa on rivi paljaita kuivia '
-            + 'vuoria.',
+          selite: 'Isfahan panoraamana korkealta: kaupunkia ympäröivät '
+            + 'hedelmätarhat, poppelirivit ja peltokaistaleet, ja '
+            + 'horisontissa on rivi paljaita vuoria.',
           lahde: 'I, Ondřej Žváček, Wikimedia Commons (CC BY 2.5)',
         },
         {
           tiedosto: 'Iran Teahouse in Isfahan, Iran (3573969242).jpg',
-          selite: 'Teehuoneen sisusta Isfahanissa. Kaaret ja seinät on '
+          selite: 'Teehuoneen sisusta Isfahanissa: kaaret ja seinät on '
             + 'verhottu painokankailla, joissa toistuvat rivit ihmis- ja '
-            + 'lintuhahmoja, ja katosta riippuu lävistetty messinkilyhty. '
-            + 'Pöydillä on teelaseja ja metallisia teekannuja '
-            + 'tarjottimineen.',
+            + 'lintuhahmoja. Pöydillä on teelaseja ja metallisia '
+            + 'teekannuja tarjottimineen.',
           lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -27615,26 +27636,25 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Naqsh-e Jahan Square from the gheisariye Vault.jpg',
-          selite: 'Naqsh-e Jahanin aukio Qeysarie-portin holvin alta '
-            + 'kuvattuna. Kaari on peitetty tiiliseen muqarnas-'
-            + 'kennostoon, ja sen läpi näkyy koko aukio: nurmikentät, '
-            + 'suorakaiteen muotoinen allas, kaksikerroksiset '
-            + 'kaarikäytävät ja perällä moskeijan kupoli.',
+          selite: 'Naqsh-e Jahanin aukio Qeysarie-portin muqarnas-holvin '
+            + 'alta: kaaren läpi näkyvät nurmikentät, suorakaiteen '
+            + 'muotoinen allas, kaksikerroksiset kaarikäytävät ja perällä '
+            + 'moskeijan kupoli.',
           lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Si-o-se Pol, Isfahan, Irán, 2016-09-19, DD 04-06 HDR.jpg',
-          selite: 'Si-o-se-pol iltavalaistuksessa vinosti sivulta. Kaksi '
-            + 'päällekkäistä kaaririviä jatkuu suorana kauas, kivi hohtaa '
-            + 'keltaisena valonheittimissä, ja sillan vieressä oleva '
-            + 'jokiuoma on kuiva.',
+          selite: 'Si-o-se-pol iltavalaistuksessa vinosti sivulta: kaksi '
+            + 'päällekkäistä kaaririviä jatkuu suorana kauas, ja sillan '
+            + 'vieressä jokiuoma on kuiva.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Isfahan Lotfollah mosque ceiling symmetric.jpg',
-          selite: 'Sheikh Lotfollahin moskeijan kupoli sisältä. Kullanruskealla '
-            + 'pohjalla kiertää kehä kehän perään tummansinisiä '
-            + 'vinoneliömedaljonkeja, jotka pienenevät kohti keskustaa.',
+          selite: 'Sheikh Lotfollahin moskeijan kupoli sisältä: '
+            + 'kullanruskealla pohjalla kiertää kehä kehän perään '
+            + 'tummansinisiä vinoneliömedaljonkeja, jotka pienenevät '
+            + 'kohti keskustaa.',
           lahde: 'Phillip Maiwald (Nikopol), Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -27654,10 +27674,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vanhaa kyyhkystornia, ja niistä 65 on merkitty Iranin '
             + 'kansalliseen kulttuuriperintöluetteloon.',
           selite: 'Kaksi savitiilistä kyyhkystornia vihreällä pellolla. '
-            + 'Etummainen on leveä lieriö, jonka kylkiin on liitetty '
-            + 'kapeampia puolilieriöitä ja jonka päälle nousee pienempi '
-            + 'torni; seinissä on tasavälein pieniä neliömäisiä reikiä ja '
-            + 'alhaalla holvikaarinen ovi.',
+            + 'Etummaisen kylkiin on liitetty kapeampia puolilieriöitä, '
+            + 'ja seinissä on tasavälein pieniä neliömäisiä reikiä.',
           lahde: 'Ziegler175, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27675,11 +27693,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mutta niitä käyttää nykyään vain talon hoitaja, joka käy '
             + 'keinuttamassa minareetteja. Kohde merkittiin suojeltujen '
             + 'luetteloon 10. kesäkuuta 1942.',
-          selite: 'Monar Jonbanin julkisivu alaviistosta. Keltatiilistä '
-            + 'seinää halkoo suuri teräväkärkinen holvikaari, jonka reunaa '
-            + 'seuraa tummansininen laattanauha. Kummastakin päästä nousee '
-            + 'kapea minareetti, jonka kyljessä on vaaleansinistä siksakkia '
-            + 'ja huipulla avoin lyhty.',
+          selite: 'Monar Jonbanin julkisivu alaviistosta: keltatiilistä '
+            + 'seinää halkoo suuri teräväkärkinen holvikaari '
+            + 'tummansinisine laattanauhoineen. Kummastakin päästä nousee '
+            + 'kapea minareetti, jonka huipulla on avoin lyhty.',
           lahde: 'آرش, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -27697,11 +27714,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sasanidikaudelle 1937, mutta Alireza Jafari Zand esitti '
             + '2002 radiohiiliajoituksiin nojaten, että paikka on sitäkin '
             + 'vanhempi, elamilainen.',
-          selite: 'Kukkulan laen pyöreä raunio. Savitiilestä muurattu '
-            + 'lieriö seisoo paljaan vaalean kallion päällä, ja sen '
-            + 'seinässä on kolme kapeaa pystyaukkoa paksujen pilarien '
-            + 'välissä; yläreuna on murtunut epätasaiseksi. Ympärillä on '
-            + 'sortuneita muureja ja perustuksia.',
+          selite: 'Kukkulan laen pyöreä raunio: savitiilestä muurattu '
+            + 'lieriö seisoo paljaan kallion päällä, ja sen seinässä on '
+            + 'kolme kapeaa pystyaukkoa. Ympärillä on sortuneita muureja '
+            + 'ja perustuksia.',
           lahde: 'Ivan Mlinaric from Slovenia, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -27742,11 +27758,10 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Palacio Aali Qapu, Isfahán, Irán, 2016-09-20, DD 56.jpg',
-          selite: 'Hevosvaunuja odottamassa Naqsh-e Jahanin aukion '
-            + 'laidalla. Vaunut ovat mustia ja niiden pyörät '
-            + 'kirkkaanpunaiset; takana kohoaa Ali Qapun pylväikköinen '
-            + 'parveke ja sen oikealla puolella jatkuu kaksikerroksinen '
-            + 'kaarikäytävä.',
+          selite: 'Mustia hevosvaunuja punaisine pyörineen odottamassa '
+            + 'Naqsh-e Jahanin aukion laidalla. Takana kohoaa Ali Qapun '
+            + 'pylväikköinen parveke, ja sen oikealla puolella jatkuu '
+            + 'kaksikerroksinen kaarikäytävä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Isfahan on Zayandeh-joen tasangolla 1 574 metrin '
@@ -27784,10 +27799,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joten metrolla pääsee suoraan sillan viereen.',
               kuva: {
                 tiedosto: 'Platform-Azadi Metro Station in Esfahan-Iran 2018.jpg',
-                selite: 'Azadin metroaseman laituri. Seinät ovat paljasta '
-                  + 'punatiiltä, katossa kulkee rivi loisteputkia, '
-                  + 'laiturin reunassa on keltainen varoitusraita, ja '
-                  + 'penkillä istuu yksi matkustaja pää painuksissa.',
+                selite: 'Azadin metroaseman laituri: seinät ovat '
+                  + 'paljasta punatiiltä, ja penkillä istuu yksi '
+                  + 'matkustaja pää painuksissa.',
                 lahde: 'Meysam Eftekhari, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27813,11 +27827,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja uoma jää tyhjäksi.',
               kuva: {
                 tiedosto: 'Khaju Bridge, Isfahan 04.jpg',
-                selite: 'Khajun sillan keskiosa kuivan jokiuoman puolelta. '
-                  + 'Alarivin kaarien alla on kivinen patokynnys, '
-                  + 'ylärivissä on kaakeloituja kaaria, ja keskellä '
-                  + 'kohoaa kaksikerroksinen paviljonki puisine '
-                  + 'kaiteineen. Edustalla on pelkkää hiekkaa.',
+                selite: 'Khajun sillan keskiosa kuivan jokiuoman '
+                  + 'puolelta: alarivin kaarien alla on kivinen '
+                  + 'patokynnys ja keskellä kohoaa kaksikerroksinen '
+                  + 'paviljonki. Edustalla on pelkkää hiekkaa.',
                 lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27840,11 +27853,11 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'miljoonaa.',
               kuva: {
                 tiedosto: 'Haft-rang tilework. Shah Mosque (Isfahan).jpg',
-                selite: 'Kaakeloitu holvikaaren kärki lähikuvassa. '
-                  + 'Tummansinisellä pohjalla kiemurtelee vaaleita '
-                  + 'köynnöksiä ja turkoosia medaljonkia, keskellä on '
-                  + 'maljakon muotoinen kuvio, ja yksittäisten laattojen '
-                  + 'saumat näkyvät suorina ruutuina kuvion läpi.',
+                selite: 'Kaakeloitu holvikaaren kärki lähikuvassa: '
+                  + 'tummansinisellä pohjalla kiemurtelee vaaleita '
+                  + 'köynnöksiä ja turkoosia medaljonkia. Yksittäisten '
+                  + 'laattojen saumat näkyvät suorina ruutuina kuvion '
+                  + 'läpi.',
                 lahde: 'Kimiakardani, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27869,13 +27882,11 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Konstantinopolissa eikä missään kristikunnassa.',
               kuva: {
                 tiedosto: 'Naqsh-e Jahan Square by Pascal Coste 1 edited.jpg',
-                selite: 'Pascal Costen värillinen kivipiirros aukiosta. '
-                  + 'Kenttä on paljasta hiekkaa, laidoilla kiertää '
-                  + 'kaksikerroksinen kaarikäytävä, perällä on moskeija '
-                  + 'turkoosikupoleineen ja kahtena minareettina, '
-                  + 'vasemmalla toinen kupoli ja oikealla pylväikköinen '
-                  + 'parveke. Etualalla on pieniä ratsastajia ja '
-                  + 'kulkijoita.',
+                selite: 'Pascal Costen värillinen kivipiirros aukiosta: '
+                  + 'kenttä on paljasta hiekkaa, laidoilla kiertää '
+                  + 'kaksikerroksinen kaarikäytävä ja perällä on moskeija '
+                  + 'turkoosikupoleineen. Etualalla on pieniä ratsastajia '
+                  + 'ja kulkijoita.',
                 lahde: 'Pascal Coste, Wikimedia Commons (PD)',
               },
             },
@@ -27901,10 +27912,25 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'taide',
       nimi: 'Taide ja kirjapaino',
-      johdanto: 'Joen eteläpuolella on Uusi Julfa, vuonna 1606 perustettu '
-        + 'armenialaiskortteli. Sen katedraali on ulkoa paljasta tiiltä '
-        + 'mutta sisältä maalattu kauttaaltaan, ja samasta korttelista '
-        + 'lähti liikkeelle Iranin ensimmäinen kirjapaino.',
+      johdanto: 'Isfahanin taide ei ole pelkkää shaahin hovin työtä: osa '
+        + 'siitä syntyi joen eteläpuolella, armenialaisten omassa '
+        + 'kaupunginosassa. Uusi Julfa perustettiin Zayandeh-joen '
+        + 'etelärannalle 1600-luvun alussa, ja nimensä se sai vanhasta '
+        + 'Julfan kaupungista, josta asukkaat tulivat. Se on yhä yksi '
+        + 'maailman vanhimmista ja suurimmista armenialaiskortteleista. '
+        + 'Kortteli eli silkkikaupasta, ja siitä kasvoi yhden varhaisen '
+        + 'uuden ajan suurimman kauppaverkoston keskus. Aluetta hallitsi '
+        + 'pitkään armenialainen Lazarjanien aatelissuku, joka siirtyi '
+        + 'Venäjälle Nader-shaahin kuoleman jälkeen vuonna 1747; suvun '
+        + 'jäsenistä tuli muun muassa Katariina Suuren hovipankkiiri. '
+        + 'Vieraita tuli myös toiseen suuntaan: korttelissa asui '
+        + 'katolisia lähetyspappeja ja genevalainen kelloseppä Jacques '
+        + 'Rousseau (1683–1753), filosofi Jean-Jacques Rousseaun setä. '
+        + 'Kaupan tuotto näkyy siinä, mitä kortteliin rakennettiin: '
+        + 'kirkot, koulu ja kirjapaino, joka oli Iranin ensimmäinen. '
+        + 'Armenian kieli, oma keittiö ja armenialainen identiteetti '
+        + 'ovat säilyneet korttelissa tähän päivään asti, ja Iranin '
+        + 'valtio suojelee niitä.',
       nostot: [
         {
           otsikko: 'Kauppaverkosto ulottui Amsterdamista Manilaan',
@@ -27923,10 +27949,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'armenialainen koulu, ja siellä puhutaan omaa Uuden Julfan '
             + 'murretta.',
           selite: 'Uuden Julfan aukiolla seisoo suuri aurinkokello: '
-            + 'kivijalustan päällä on musta kaareva malja ja sen vieressä '
-            + 'valkoinen viuhkamainen taulu, johon on merkitty asteikko ja '
-            + 'persialaiset numerot. Niiden läpi kulkee vino metallivarsi, '
-            + 'ja jalusta nousee kivialtaasta.',
+            + 'kivijalustan päällä on musta kaareva malja ja valkoinen '
+            + 'viuhkamainen taulu persialaisine numeroineen. Niiden läpi '
+            + 'kulkee vino metallivarsi.',
           lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -27944,11 +27969,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on luomiskertomus, holvikulmissa kerubin pää siipien '
             + 'välissä ja seinillä kaksi kuvanauhaa päällekkäin. Pihalla '
             + 'seisoo erillinen kellotorni.',
-          selite: 'Katedraalin katto suoraan alhaalta kuvattuna. Vierekkäin '
-            + 'on kaksi kupolia: kullanruskea, jonka pinta on täynnä tiheää '
-            + 'kasviornamenttia ja pyöreitä kuvakenttiä ihmishahmoineen, ja '
-            + 'tummansininen, jossa kiertää säteittäinen kiilakuvio '
-            + 'kultaisin reunuksin.',
+          selite: 'Katedraalin katto suoraan alhaalta: vierekkäin on '
+            + 'kaksi kupolia, kullanruskea täynnä kasviornamenttia ja '
+            + 'kuvakenttiä ihmishahmoineen sekä tummansininen '
+            + 'säteittäisine kiilakuvioineen.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27965,9 +27989,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kesaratsin mukaan; siellä ovat esillä vanha painokone ja '
             + 'Iranissa ensimmäisenä painettu kirja. Kirjastossa on yli '
             + '700 käsin kirjoitettua kirjaa.',
-          selite: 'Vuoden 1638 kirja auki tummalla kankaalla. Sivun '
-            + 'yläosassa on puupiirroskehys, jonka sisällä toistuu rivi '
-            + 'lehti- ja palmettikuvioita, ja sen alla on kolmetoista riviä '
+          selite: 'Vuoden 1638 psalttari auki tummalla kankaalla: sivun '
+            + 'yläosassa on puupiirroskehys ja sen alla kolmetoista riviä '
             + 'tekstiä armenialaisin kirjaimin. Koristealkukirjain on '
             + 'piirretty kahdeksi linnuksi.',
           lahde: 'digital.bodleian.ox.ac.uk, Wikimedia Commons (PD)',
