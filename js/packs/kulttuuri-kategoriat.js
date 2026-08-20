@@ -22848,6 +22848,39 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Eduard Marmet, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (vaihe B, erä 6, 20.8.2026): lahti, satama ja vuori
+       * — kaupungin kolme kerrosta siinä järjestyksessä, jossa opas ne
+       * kertoo. Kansikuvat ovat kaikki rakennuksia (palatsi, ooppera,
+       * suitsukeastia), joten avauskuvissa on tarkoituksella maastoa ja
+       * vettä eikä yhtään samaa kohdetta.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Muttrah Corniche 2.jpg',
+          selite: 'Mutrahin lahti mereltä päin. Rannassa on rivi valkoisia '
+            + 'taloja, laiturissa keinuu kaksi puista dhow-alusta, ja '
+            + 'kallionkielekkeellä seisoo linnake lippusalkoineen. Takana '
+            + 'nousee ruskea vuorenharjanne.',
+          lahde: 'Juozas Šalna, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Old Muscat City View, Muscat, Oman2.jpg',
+          selite: 'Vanhan Masqatin yllä olevalta rinteeltä: etualalla on '
+            + 'rosoista kalliota, keskellä vihreä laakso ja valkoisia '
+            + 'taloja minareetteineen, ja lahden takana näkyy satama '
+            + 'siiloineen ja laivoineen.',
+          lahde: 'Domenico Convertini, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Mountain Vista.jpg',
+          selite: 'Hajar-vuoriston harjanteita Masqatin lähellä olevalta '
+            + 'polulta. Rinteet ovat paljasta kiveä, kasvillisuutta on '
+            + 'vain harvoina pensastupsuina, ja kaukana laaksossa häämöttää '
+            + 'kaupunkia.',
+          lahde: 'Daredeep33, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Varastokin kuuluu näyttelyyn',
@@ -22908,6 +22941,205 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * MATKAOPAS (vaihe B, erä 6, 20.8.2026). Tarkistettu en-Wikipedian
+       * raakatekstistä: Muscat, Muscat International Airport, Al Jalali
+       * Fort, Muttrah, Aflaj Irrigation Systems of Oman, Dhow, Gulf of
+       * Oman ja Hajar Mountains (haettu 20.8.2026).
+       *
+       * OPAS EI TOISTA NOSTOJA. Lehden nostot ovat kansallismuseo,
+       * oopperatalo ja suurmoskeija; arki-sivu kertoo kahvin, suitsukkeen
+       * ja dishdashan. Opas ottaa siksi ne asiat, joihin matkailija
+       * törmää mutta joita lehti ei vielä kerro: kenttä ja bussit,
+       * vuoret ja falaj, basaari ja satama, portugalilaiskausi.
+       * Kulttuurivisan viisi vastausta (Oman, dhow, linnoitukset,
+       * Omaninlahti, falaj) löytyvät kaikki tästä oppaasta.
+       *
+       * KAKSI KOHTAA, JOISSA LÄHTEET EROAVAT JA JOTKA ON RATKAISTU:
+       * (1) Muscat-artikkelin leipäteksti sanoo lentoaseman avautuneen
+       * seremoniallisesti 1. tammikuuta 1973 ja terminaali 2:n olleen
+       * rakennettu 1970 — opas kertoo vain avausvuoden, koska se on
+       * molemmissa sama. (2) Aflaj-artikkeli antaa järjestelmän iäksi
+       * sekä "AD 500" että "5 000 vuotta" — opas ei anna ikää lainkaan
+       * vaan kertoo sen, mistä lähteet ovat yhtä mieltä: Unescon
+       * merkintä 2006, viisi falajia ja noin 3 000 toiminnassa olevaa.
+       * (3) PTOLEMAIOKSEN AJOITUS: Muscat-artikkeli sanoo sataman olleen
+       * tunnettu "as early as the 1st century AD" ja Ptolemaioksen
+       * kutsuneen sitä nimellä Cryptus Portus, kun taas Al Jalali Fort
+       * -artikkeli ajoittaa Ptolemaioksen kuvauksen 100-luvulle. Nosto
+       * käyttää kaupunkiartikkelin omaa ajoitusta, koska nimi Cryptus
+       * Portus on peräisin siitä.
+       *
+       * SISÄLTÖLINJAUS: Dhofarin 1900-luvun levottomuudet ja vuoden 1970
+       * vallanvaihto on jätetty pois, samoin brittien 1950-luvun
+       * ilmaiskut falaj-artikkelissa. Portugalilaiskausi kerrotaan
+       * neutraalina historiana ilman yksityiskohtien korostusta.
+       *
+       * SÄÄRIVI: saatiedot.js:n masqat-rivi (ERA5, 23.615 N / 58.593 E).
+       * Rivin vuosisumma on 97 mm ja tammikuun keskilämpö 20,7 astetta.
+       * Muscat-artikkelin oma sääasemataulukko (lentoasema, 1991–2020)
+       * antaa tammikuulle 21,1 — ero on alle puoli astetta eikä muuta
+       * sanottavaa, joten opas nojaa paketin riviin ja mittauspiste
+       * mainitaan.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Corniche Streetscape Muttrah.jpg',
+          selite: 'Mutrahin rantakatu: valkoisia taloja, joissa on '
+            + 'siniseksi maalatut kaari-ikkunat ja veistetyt kaiteet, '
+            + 'vasemmalla sinikaakelinen minareetti ja palmu, edessä rivi '
+            + 'pysäköityjä autoja ja takana paljas vuorenrinne.',
+          lahde: 'Izeberg007, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Masqat on puristuksissa Hajar-vuorten ja Omaninlahden '
+          + 'väliin. Kaupunkiseudulla asuu 1,72 miljoonaa ihmistä ja se '
+          + 'levittäytyy kuuteen wilajaan noin 6 500 neliökilometrille, '
+          + 'mutta vanha Masqat on yhä pieni: sen omassa wilajassa on '
+          + 'runsaat kolmekymmentätuhatta asukasta. Kaupunki ei olekaan '
+          + 'yksi keskusta vaan nauha lahtia ja laaksoja, jotka Sultan '
+          + 'Qaboos -katu sitoo yhteen lännestä itään.',
+        artikkeli: {
+          nimi: 'Matkailijan Masqat',
+          taitto: 'opas',
+          teksti: 'Kaksi luonnonsatamaa, niiden yllä kalliolinnakkeet ja '
+            + 'takana vuorijono, joka sulkee kaupungin merta vasten.',
+          nosto: 'Nimi Masqat tarkoittaa ankkuripaikkaa. Kreikkalainen '
+            + 'Ptolemaios merkitsi sen jo ensimmäisellä vuosisadalla '
+            + 'nimellä Cryptus Portus, kätketty satama — vuorten takaa '
+            + 'sitä ei näekään ennen kuin on jo perillä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Masqatin lentoasema on Seebin kaupunginosassa, noin '
+                + '25 kilometrin päässä Ruwin liikekorttelista. Se '
+                + 'vihittiin 1. tammikuuta 1973 nimellä Seeb '
+                + 'International Airport, ja nykyinen terminaali avattiin '
+                + '18. maaliskuuta 2018: siinä on 580 000 neliömetriä, '
+                + '118 lähtöselvitystiskiä ja 97 metriä korkea '
+                + 'lennonjohtotorni. Matkustajia kulki vuonna 2025 '
+                + 'runsaat 13,1 miljoonaa. Meritse tullaan Port Sultan '
+                + 'Qaboosiin, jonka laiturissa seisoo yhä dhow-aluksia — '
+                + 'niitä on rakennettu vuosisatoja Surissa rannikon '
+                + 'eteläpuolella. Kaupungin sisällä liikutaan Mwasalatin '
+                + 'busseilla, joiden verkko uudistettiin marraskuussa '
+                + '2015; linja 4 vie Ruwista Mutrahin rantakadulle. '
+                + 'Oranssivalkoisissa takseissa ei ole mittaria, vaan '
+                + 'hinta sovitaan, ja käypä taksa kysytään paikallisen '
+                + 'tavan mukaan hotellista etukäteen.',
+              kuva: {
+                tiedosto: 'Sur 002 (30932766735).jpg',
+                selite: 'Dhow rakenteilla Surin telakalla. Vaalea puurunko '
+                  + 'seisoo tukipuiden varassa, laudat on kiinnitetty '
+                  + 'rivissä nauloilla, ja kuvassa oleva veneenrakentaja '
+                  + 'istuu selin telineen alla.',
+                lahde: 'John Crane from Prague, Czech Republic, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Masqat on Omanin koillisrannikolla Omaninlahden '
+                + 'äärellä, lähellä Hormuzinsalmea. Vesi käy rannan '
+                + 'tuntumassa syvänä, ja siksi tähän on syntynyt kaksi '
+                + 'luonnonsatamaa: toinen Mutrahiin, toinen vanhaan '
+                + 'Masqatiin. Keskisen Hajar-vuoriston harjanteet '
+                + 'kulkevat kaupungin pohjoisrannikkoa pitkin, ja '
+                + 'kukkulat ovat syväkivilajeja — serpentiniittiä, '
+                + 'vihreäkiveä ja basalttia. Kasvillisuutta rinteillä on '
+                + 'tuskin lainkaan, rautaa sitäkin enemmän. Vettä '
+                + 'vuorilta on siirretty falaj-kanavilla: sana tarkoittaa '
+                + 'klassisessa arabiassa osiin jakamista, ja juuri sitä '
+                + 'järjestelmä tekee — vesi juoksee painovoimalla '
+                + 'lähteeltä taloihin ja pelloille, ja vuorot jaetaan '
+                + 'kylän kesken. Unesco merkitsi viisi falajia '
+                + 'maailmanperintöluetteloon vuonna 2006, ja noin '
+                + 'kolmetuhatta on yhä toiminnassa. Ne ovat sisämaassa, '
+                + 'eivät pääkaupungin kaduilla.',
+              kuva: {
+                tiedosto: 'FalajDaris.JPG',
+                selite: 'Falaj Daris, yksi viidestä maailmanperintöön '
+                  + 'merkitystä falajista. Vesi juoksee kapeassa uomassa '
+                  + 'korkeiden ladottujen kivimuurien välissä, ja '
+                  + 'yläpuolella kaartuu piikkinen akasiapensaikko.',
+                lahde: 'Paolotacchi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: pimeyden basaari',
+              teksti: 'Mutrahin basaarilla on kaksi nimeä. Virallisen '
+                + 'rinnalla kulkee Suq al-Dhalam, pimeyden basaari, ja '
+                + 'nimi tulee kujista: al-Lawatiyan moskeijalta Khour '
+                + 'Bimbaan kojut ovat niin tiheässä, ettei päivänvalo '
+                + 'yllä kadulle, ja perillä on ennen tarvittu lyhtyä. '
+                + 'Basaari on Omanin vanhimpia, iältään noin kaksisataa '
+                + 'vuotta, ja se on satamansa naapuri: purjelaivojen '
+                + 'aikaan tavara tuli suoraan laiturilta. Päätiellä '
+                + 'myydään taloustavaraa, kenkiä ja valmisvaatteita, '
+                + 'sivukujilla omanilaista hopeaa, kirjailtuja '
+                + 'kummah-lakkeja ja khanjar-tikareita kehyksissään; '
+                + 'ilmassa on suitsuketta, hajuöljyä, jasmiinia ja '
+                + 'mausteita. Basaarin takana on Sur al-Lawatiyan '
+                + 'muurattu kortteli, jonka asukkaat puhuvat luwatia, '
+                + 'indoarjalaista kieltä, jonka heidän esivanhempansa '
+                + 'toivat Sindhistä 1780–1880 muuttaneiden aaltojen '
+                + 'mukana.',
+              kuva: {
+                tiedosto: 'Omani Kummahs in a shop.jpg',
+                selite: 'Kummah-lakkeja pinossa Mutrahin basaarin '
+                  + 'myymälässä. Lakit ovat valkoista kangasta, ja '
+                  + 'jokaiseen on kirjailtu ruskealla, vihreällä ja '
+                  + 'sinisellä oma kuvionsa; reunoissa on rivi pieniä '
+                  + 'reikiä.',
+                lahde: 'Riyadh Al Balushi, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: kaksi linnaketta sataman suulla',
+              teksti: 'Portugalilainen amiraali Afonso de Albuquerque '
+                + 'purjehti Masqatiin vuonna 1507 solmiakseen '
+                + 'kauppasuhteet. Satamassa häntä ammuttiin, ja hän '
+                + 'valloitti kaupungin; suuri osa siitä paloi. '
+                + 'Portugalilaiset pitivät Masqatia yli vuosisadan ja '
+                + 'linnoittivat sataman suun: al-Jalali nousi '
+                + '1580-luvulla vanhemman omanilaisen linnakkeen päälle '
+                + 'nimellä Forte de São João, ja vastarannalle tuli '
+                + 'al-Mirani. Kaksikko sulki lahden mereltä päin. Vuonna '
+                + '1624 imaamiksi valittu Nasir bin Murshid käänsi '
+                + 'asetelman: elokuussa 1648 omanilaiset purkivat '
+                + 'portugalilaisten korkeat tornit, ja 23. tammikuuta '
+                + '1650 valta vaihtui lopullisesti. Al-Jalali '
+                + 'kunnostettiin vuonna 1983 kulttuurihistorian museoksi, '
+                + 'jonne pääsevät vain valtiovieraat — matkailijalle se '
+                + 'on siis ulkoa katsottava rakennus.',
+              kuva: {
+                tiedosto: 'Mascate.png',
+                selite: 'Masqat 1600-luvun portugalilaisessa '
+                  + 'puupiirroksessa. Hevosenkengän muotoisen lahden '
+                  + 'molemmilla niemekkeillä on tornillinen linnake, '
+                  + 'rannalla rivejä taloja, ja lahdelle on piirretty '
+                  + 'ankkuri. Nimi lukee muodossa MASCATE, ja vasemmassa '
+                  + 'yläkulmassa on kirjan sivunumero 41.',
+                lahde: 'Manuel de Faria y Sousa, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Masqatin vuosi on kapea mutta kuuma. Kylmimmän ja '
+                + 'lämpimimmän kuukauden ero on vain kolmetoista astetta, '
+                + 'ja pohjalukemakin on runsaat kaksikymmentä: tammikuussa '
+                + 'keskilämpö on 20,7 astetta. Kesäkuussa käyrä käy '
+                + 'huipussaan 33,5 asteessa ja kääntyy sitten alaspäin, '
+                + 'sillä meri tasaa lämpöä toisin kuin lahden pohjukan '
+                + 'kaupungeissa. Sadetta tulee vuodessa vain 97 '
+                + 'millimetriä, eikä yksikään kuukausi ole varsinaisesti '
+                + 'sateinen; syyskuussa normaali on nolla. Luvut ovat '
+                + 'lentoaseman seudun mittauspisteestä eli rannikolta — '
+                + 'vuorilla on viileämpää. Kävelijän aika on siis '
+                + 'marraskuusta maaliskuuhun, jolloin päivät jäävät alle '
+                + 'kahdenkymmenenviiden asteen.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
@@ -25741,6 +25973,39 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Monsieur_mahdi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (vaihe B, erä 6, 20.8.2026): basaari, kaupungintalo
+       * ja jokiuoma. Kansikuvat ovat Chardinin piirros, kaupunkinäkymä
+       * ja hedelmäkoju, eikä yksikään lehden nosto käsittele basaaria
+       * — avauskuvat näyttävät siis sen, mistä kaupunki tunnetaan ja
+       * mitä lehti ei muuten näytä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Tabriz Bazaar Carpet Corner.jpg',
+          selite: 'Basaarin mattokäytävä. Punatiilinen holvi kaartuu '
+            + 'korkeana käytävän yllä, kupolien laessa on valoaukkoja, '
+            + 'ja käytävän lattialle on levitetty ja kääritty mattoja '
+            + 'rivistä toiseen.',
+          lahde: 'Nasser Ghassembaglou, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Saat Tower - 4R9A0823.jpg',
+          selite: 'Tabrizin kaupungintalo eli Saat-torni iltavalaistuksessa. '
+            + 'Tiiliseinäisen rakennuksen keskeltä nousee kellotorni, '
+            + 'katonreunassa on rivi vaaleita koristepylväitä, ja kadun '
+            + 'yli on pingotettu lamppuketju.',
+          lahde: 'Monaesfandiar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tabriz Bazaar Bridge.jpg',
+          selite: 'Kaupungin halki kulkeva kivetty jokiuoma keväällä: '
+            + 'pohjalla on vain kapea vesijuova. Oikealla on kupolirivin '
+            + 'peittämä rakennus, joka kaartuu uoman yli, ja vasemmalla '
+            + 'tiiliseinäinen talo kupoleineen.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kolmetoista nimeä, tuhat vuotta väliä',
@@ -25808,6 +26073,194 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Farzad Karimnijad, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * MATKAOPAS (vaihe B, erä 6, 20.8.2026). Tarkistettu en-Wikipedian
+       * raakatekstistä: Tabriz, Bazaar of Tabriz, Tabriz rug, Tabriz
+       * Shahid Madani International Airport, Tabriz Metro ja East
+       * Azerbaijan province (haettu 20.8.2026).
+       *
+       * OPAS EI TOISTA NOSTOJA. Lehden nostot ovat runoilijoiden
+       * mausoleumi, El Golin allas ja Amir Nezamin talo; luonto-sivu
+       * kertoo Sahandin, Eynalin ja talven. Opas ottaa siksi basaarin,
+       * matot, kaupungin rakenteen ja pääkaupunkikaudet.
+       * Kulttuurivisan viisi vastausta (basaari, matot, silkkitie, Iran,
+       * azeri) löytyvät kaikki tästä oppaasta.
+       *
+       * KOLME KOHTAA, JOISSA LÄHTEET EROAVAT JA JOTKA ON RATKAISTU:
+       * (1) Tabriz Metro -artikkeli antaa ensimmäisen vaiheen
+       * avauspäiväksi johdannossa 28.8.2015 ja Line 1 -osiossa
+       * 27.8.2015 — opas sanoo "elokuun lopussa 2015" eikä valitse
+       * päivää. (2) Basaarin ydinalueen pinta-ala on tietolaatikossa
+       * 28,9733 ha, mikä pyöristetään lähes 29 hehtaariksi.
+       * (3) Kaupungin korkeus on tietolaatikossa 1 351,4 m, kun taas
+       * lehden luonto-sivu antaa laaksolle välin 1 350–1 600 m — opas
+       * ei toista korkeuslukua lainkaan, koska se on jo luonto-sivulla.
+       * (4) ASUKASLUKU ON KIRJOITETTU AUKI LUKIJALLE: artikkelin
+       * johdanto sanoo "over 1.7 million (2016)", mutta saman artikkelin
+       * väestöosio antaa vuoden 2016 laskennasta itse kaupungille
+       * 1 558 693 asukasta. Opas kertoo molemmat luvut ja sen, mistä
+       * ero johtuu.
+       *
+       * SISÄLTÖLINJAUS (Fablen Iran-linjaus): ei nykypolitiikkaa
+       * eikä nykysotaa. Pois on jätetty vuoden 1946 paikallishallinto,
+       * lentoaseman vuoden 2025 vauriot ja sulkeminen sekä safavidien
+       * uskonnollinen käännytyspolitiikka. Maanjäristykset kerrotaan
+       * kaupunkirakenteen kautta ilman uhrilukuja.
+       *
+       * SÄÄRIVI: saatiedot.js:n tabriz-rivi on ERA5-ruutu (38.08 N /
+       * 46.29 E), joka ottaa mukaan ympäröivät vuoret ja on siksi
+       * kaupungin oman sääaseman lukuja viileämpi ja sateisempi. Tämä
+       * on kirjoitettu auki sekä paketin kommentissa että oppaan
+       * sääjaksossa, koska luonto-sivun lumipäivät ja pakkasennätys
+       * tulevat aseman luvuista.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tabriz Bazaar Mozaffariyeh Arcade (10).jpg',
+          selite: 'Mozaffariehin käytävä basaarissa. Punatiilinen '
+            + 'ristiholvi nousee korkealle, laesta putoaa valokiila '
+            + 'lattialle asti, ja käytävän molemmin puolin on '
+            + 'kaarevaikkunaisia myymälöitä parvekkeineen. Lattialla on '
+            + 'mattoja pinoissa.',
+          lahde: 'AmirAK, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Tabriz on Iranin kuudenneksi suurin kaupunki ja '
+          + 'luoteisen Iranin talouden keskus, Itä-Azerbaidžanin '
+          + 'maakunnan pääkaupunki. Matkailijalle olennaista on kaksi '
+          + 'asiaa. Kaupunki on kaksikielinen: kadulla ja kaupassa '
+          + 'puhutaan iranilaista azeria, turkkilaista kieltä, jonka '
+          + 'rinnalla persia opitaan koulussa. Ja keskusta on '
+          + 'käytännössä yksi rakennus — katettu basaari, jonka läpi '
+          + 'kuljetaan paikasta toiseen.',
+        artikkeli: {
+          nimi: 'Matkailijan Tabriz',
+          taitto: 'opas',
+          teksti: 'Silkkitien etappi, jonka keskusta on katettu basaari — '
+            + 'ja jonka kalleimmat tavarat mitataan solmuina.',
+          nosto: 'Tabrizin maton hienous ilmoitetaan rajina: raj on '
+            + 'solmujen määrä seitsemän senttimetrin matkalla. '
+            + 'Basaarilaatu alkaa kahdestakymmenestäneljästä rajista, ja '
+            + 'hienoimmat matot yltävät sataankymmeneen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Tabrizin lentoasema avattiin vuonna 1950, ja '
+                + 'vuodesta 1991 se on ollut Itä-Azerbaidžanin ainoa '
+                + 'kansainvälinen kenttä. Se on 1 359 metrin korkeudessa, '
+                + 'ja vuonna 2017 sen kautta kulki lähes 1,95 miljoonaa '
+                + 'matkustajaa; reitit vievät kotimaassa Teheraniin, '
+                + 'Isfahaniin, Shiraziin ja Mashhadiin, ulkomailla muun '
+                + 'muassa Istanbuliin, Tbilisiin ja Bakuun. Metron '
+                + 'ensimmäinen osuus avattiin elokuun lopussa 2015 — '
+                + 'seitsemän kilometriä ja kuusi asemaa. Linja valmistui '
+                + 'helmikuussa 2020, jolloin sen pituus oli 17,2 '
+                + 'kilometriä ja asemia kaksitoista. Maanteitse Tabriz on '
+                + 'Iranin lähin suurkaupunki Eurooppaan päin: Turkin '
+                + 'rajalle ajetaan Bazarganin kautta ja Teheraniin '
+                + 'moottoritietä 2.',
+              kuva: {
+                tiedosto: 'Tabriz Metro 2018.jpg',
+                selite: 'Metrojuna laiturissa. Valkoinen vaunusarja on '
+                  + 'raidoitettu sinisellä ja punaisella, keulassa palaa '
+                  + 'numero 101, ja laiturin katossa roikkuu opastekyltti, '
+                  + 'jossa lukee Line 1 - El Goli. Muutama matkustaja on '
+                  + 'kuvassa selin.',
+                lahde: 'NicholasNCE, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupungin pinta-ala on 325 neliökilometriä. '
+                + 'Asukasluku riippuu siitä, mitä lasketaan: vuoden 2016 '
+                + 'väestönlaskenta antoi itse kaupungille 1 558 693 '
+                + 'asukasta, kun taas laajemmasta seudusta puhutaan yli '
+                + 'puolentoista miljoonan sijaan yli 1,7 miljoonana. '
+                + 'Teollisuus on '
+                + 'raskasta: autoja, työstökoneita, jalostamoita, '
+                + 'petrokemiaa, tekstiiliä ja sementtiä. Vanhaa '
+                + 'rakennuskantaa on silti vähän, ja syy on maan alla. '
+                + 'Seutu on maanjäristysaluetta, ja kaupunki on hajonnut '
+                + 'ja rakennettu uudelleen useaan otteeseen; tuhoisia '
+                + 'järistyksiä tunnetaan muun muassa vuosilta 858, 1041 '
+                + 'ja 1721. Vuonna 791 kalifi Harun al-Rashidin puoliso '
+                + 'Zubaida rakennutti kaupungin järistyksen jälkeen niin '
+                + 'perusteellisesti uudelleen, että häntä on pidetty sen '
+                + 'perustajana. Säilyneet muistomerkit ovat siksi '
+                + 'enimmäkseen ilkhaani-, safavidi- ja qajar-kausilta.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: basaari ja solmut',
+              teksti: 'Tabrizin katettu basaari on maailman suurin katettu '
+                + 'basaari ja Lähi-idän vanhimpia. Unesco merkitsi sen '
+                + 'maailmanperintöluetteloon heinäkuussa 2010; suojeltua '
+                + 'ydinaluetta on lähes 29 hehtaaria ja suojavyöhykettä '
+                + '75. Basaari ei ole yksi halli vaan rivistö käytäviä, '
+                + 'joista kullakin on oma tavaransa: Amirissa kultaa ja '
+                + 'koruja, Mozaffariehissa käsin solmittuja mattoja, '
+                + 'Bashmakhchissa kenkiä ja Rahlissa vihanneksia. Matot '
+                + 'lajitellaan solmutiheyden ja solmutyypin mukaan, ja '
+                + 'hienoimpien loimet ovat silkkiä puuvillan sijaan. '
+                + 'Kunnostustyö alkoi vuonna 2000 kauppiaiden omalla '
+                + 'osallistumisella, ja hanke sai Aga Khanin '
+                + 'arkkitehtuuripalkinnon vuonna 2013. Asiointikieli on '
+                + 'enimmäkseen azeri, mutta Teheranista tulevan asiakkaan '
+                + 'kanssa vaihdetaan persiaan.',
+              kuva: {
+                tiedosto: 'Fəraqan xalçası, Təbriz xalçaçılıq məktəbi.jpg',
+                selite: 'Tabrizin mattokoulun matto kokonaisuudessaan. '
+                  + 'Tummalla pohjalla toistuu tiheä vinoneliöverkko, '
+                  + 'jonka jokaisessa silmässä on pieni kukka tai '
+                  + 'kaareva lehti; reunoja kiertää useita kapeita '
+                  + 'kehyskaistoja, ja päistä riippuu vaalea hapsu.',
+                lahde: 'Sefer azeri, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: kolme pääkaupunkikautta',
+              teksti: 'Tabrizista kirjoittivat vuorollaan al-Maqdisi '
+                + '900-luvulla, Marco Polo vuonna 1271 ja Ibn Battuta '
+                + 'noin 1330 — kaikki silkkitietä kulkeneita, ja kaikki '
+                + 'mainitsevat basaarin. Kaupunki oli ilkhaanien '
+                + 'pääkaupunki vuodesta 1265, ja Ghazan-kaanin noustua '
+                + 'valtaan 1295 se oli loistonsa huipulla. Sitten '
+                + 'pääkaupunkina olivat vuorollaan Qara Qoyunlu '
+                + '1375–1468 ja Aq Qoyunlu 1468–1501; Qara Qoyunlun '
+                + 'ajalta on peräisin Sininen moskeija, joka valmistui '
+                + 'lokakuussa 1465 ja jonka kustansi hallitsija Jahan '
+                + 'Shahin puoliso Khatun Jan Begom lahjoituksellaan. '
+                + 'Vuonna 1501 Ismail I julisti '
+                + 'Tabrizin safavidivaltakuntansa pääkaupungiksi, mutta '
+                + 'vuonna 1555 Tahmasp I siirsi pääkaupungin Qazviniin. '
+                + 'Kauppa jäi silti: kaupunki kävi kauppaa osmanien, '
+                + 'Venäjän ja Kaukasian kanssa, ja 1800-luvulla se oli '
+                + 'maan lähin portti Eurooppaan.',
+              kuva: {
+                tiedosto: 'Kabood (Blue) mosque, Tabriz, Iran.jpg',
+                selite: 'Sinisen moskeijan tiilinen pylväskäytävä. '
+                  + 'Teräväkärkiset kaaret jatkuvat peräkkäin kauas, '
+                  + 'tiilikuvioon on ladottu turkoosinvihreitä paloja '
+                  + 'vinoneliöiksi, ja lattia on kiillotettua kiveä.',
+                lahde: 'Hameddaeipic, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Tabriz on Lähi-idän lehtikaupungeista ainoa, jonka '
+                + 'talvi menee pakkaselle: tammikuun keskilämpö on '
+                + 'puolitoista astetta nollan alapuolella. Kevät on '
+                + 'vuoden märin aika — huhtikuussa vettä tulee '
+                + 'kuusikymmentäkuusi millimetriä, syyskuussa seitsemän. '
+                + 'Kesä on kuiva ja lämmin muttei kuuma, heinäkuussa '
+                + 'vajaat kaksikymmentäneljä astetta. Kävelijän aika on '
+                + 'siis touko–kesäkuu ja syyskuu. Yksi varaus lukuihin: '
+                + 'ne on laskettu ruudusta, joka ottaa mukaan kaupunkia '
+                + 'ympäröivät vuoret, joten ne ovat kaupungin oman '
+                + 'sääaseman lukuja hieman viileämpiä ja sateisempia. '
+                + 'Aseman mittaamana vuoden keskilämpö on 13,1 astetta.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -26439,6 +26892,39 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (vaihe B, erä 6, 20.8.2026): aukio, silta ja kupoli.
+       * Kansikuvat ovat Flandinin piirros, kaupunkinäkymä ja teehuone,
+       * eikä yksikään lehden nosto käsittele aukiota, siltoja tai
+       * Sheikh Lotfollahin moskeijaa — avauskuvissa on siis kolme
+       * kohdetta, joita lehti ei muuten näytä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Naqsh-e Jahan Square from the gheisariye Vault.jpg',
+          selite: 'Naqsh-e Jahanin aukio Qeysarie-portin holvin alta '
+            + 'kuvattuna. Kaari on peitetty tiiliseen muqarnas-'
+            + 'kennostoon, ja sen läpi näkyy koko aukio: nurmikentät, '
+            + 'suorakaiteen muotoinen allas, kaksikerroksiset '
+            + 'kaarikäytävät ja perällä moskeijan kupoli.',
+          lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Si-o-se Pol, Isfahan, Irán, 2016-09-19, DD 04-06 HDR.jpg',
+          selite: 'Si-o-se-pol iltavalaistuksessa vinosti sivulta. Kaksi '
+            + 'päällekkäistä kaaririviä jatkuu suorana kauas, kivi hohtaa '
+            + 'keltaisena valonheittimissä, ja sillan vieressä oleva '
+            + 'jokiuoma on kuiva.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Isfahan Lotfollah mosque ceiling symmetric.jpg',
+          selite: 'Sheikh Lotfollahin moskeijan kupoli sisältä. Kullanruskealla '
+            + 'pohjalla kiertää kehä kehän perään tummansinisiä '
+            + 'vinoneliömedaljonkeja, jotka pienenevät kohti keskustaa.',
+          lahde: 'Phillip Maiwald (Nikopol), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Neljätoistatuhatta lintua yhden tornin sisällä',
@@ -26506,6 +26992,198 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ivan Mlinaric from Slovenia, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      /*
+       * MATKAOPAS (vaihe B, erä 6, 20.8.2026). Tarkistettu en-Wikipedian
+       * raakatekstistä: Isfahan, Naqsh-e Jahan Square, Shah Mosque
+       * (Isfahan), Si-o-se-pol, Khaju Bridge, Isfahan Shahid Beheshti
+       * International Airport, Isfahan Metro ja Zayanderud (haettu
+       * 20.8.2026).
+       *
+       * OPAS EI TOISTA NOSTOJA. Lehden nostot ovat kyyhkystornit, Monar
+       * Jonban ja Atashgahin kukkula; taide-sivu kertoo Uuden Julfan,
+       * katedraalin ja kirjapainon. Opas ottaa siksi aukion, joen ja
+       * sillat sekä kaakelitekniikan. Kulttuurivisan viisi vastausta
+       * (sananlasku, siniset kaakelit, aukion koko, Iran, sillat
+       * patoina) löytyvät kaikki tästä oppaasta.
+       *
+       * SANANLASKU on Isfahan-artikkelin oma: "Esfahān nesf-e-jahān
+       * ast", ja artikkelin tietolaatikossa kaupungin lisänimenä on
+       * Half of the World. Kaksi kohtaa, joissa lähteet eroavat:
+       * (1) lentoasema-artikkeli sanoo samassa kappaleessa sekä "oldest
+       * airport in the country" että "began operations in 1982" — opas
+       * kertoo vain jälkimmäisen, koska se on täsmällinen eikä
+       * ristiriitainen; (2) Si-o-se-polin mitat annetaan pituudeksi
+       * 297,76 m ja leveydeksi 14,75 m artikkelin Structure-osiossa,
+       * kun taas Commonsin persiankielinen kuvateksti sanoo 295 ja 14 —
+       * opas käyttää artikkelin lukuja.
+       *
+       * SISÄLTÖLINJAUS: nykypolitiikka jätetään kokonaan pois, samoin
+       * moskeijoiden nykyiset viralliset nimet ja niiden 1979 jälkeiset
+       * muutokset. Uskonto kerrotaan rakennustaiteen ja kaupunkikuvan
+       * kautta. Joen kuivuminen kerrotaan neutraalina vesitalouden
+       * asiana.
+       *
+       * SÄÄRIVI: saatiedot.js:n isfahan-rivi (ERA5, 32.65 N / 51.67 E),
+       * vuosisumma 98 mm, heinä–syyskuu nolla.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Palacio Aali Qapu, Isfahán, Irán, 2016-09-20, DD 56.jpg',
+          selite: 'Hevosvaunuja odottamassa Naqsh-e Jahanin aukion '
+            + 'laidalla. Vaunut ovat mustia ja niiden pyörät '
+            + 'kirkkaanpunaiset; takana kohoaa Ali Qapun pylväikköinen '
+            + 'parveke ja sen oikealla puolella jatkuu kaksikerroksinen '
+            + 'kaarikäytävä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Isfahan on Zayandeh-joen tasangolla 1 574 metrin '
+          + 'korkeudessa, Zagros-vuoriston juurella; lähin vuori on '
+          + 'Soffeh aivan kaupungin eteläpuolella. Asukkaita on runsaat '
+          + '2,2 miljoonaa. Persialainen sananlasku kuuluu Esfahan '
+          + 'nesf-e jahan ast, Isfahan on puoli maailmaa, ja se on '
+          + 'peräisin ajalta, jolloin kaupunki oli Persian pääkaupunki. '
+          + 'Matkailijalle se tarkoittaa käytännössä yhtä asiaa: tärkeä '
+          + 'osa kaupunkia on kävelymatkan päässä yhdestä aukiosta ja '
+          + 'yhdestä joesta.',
+        artikkeli: {
+          nimi: 'Matkailijan Isfahan',
+          taitto: 'opas',
+          teksti: 'Yksi aukio, yksi joki ja yksitoista siltaa — ja kaikki '
+            + 'muu asettuu niiden mukaan.',
+          nosto: 'Naqsh-e Jahanin aukio on 160 metriä leveä ja 560 pitkä, '
+            + 'siis 89 600 neliömetriä. Se rakennettiin vuosina '
+            + '1598–1629, ja siinä pelattiin poolo-otteluita shaahin '
+            + 'seuratessa peliä Ali Qapun parvekkeelta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Isfahanin Shahid Beheshtin kansainvälinen '
+                + 'lentoasema on 18,5 kilometriä kaupungista itään, '
+                + 'aavikon reunalla 1 542 metrin korkeudessa, ja sen alue '
+                + 'on 1 315 hehtaaria. Matkustajaliikenne alkoi vuonna '
+                + '1982, ja vuonna 2017 matkustajia oli runsaat 2,78 '
+                + 'miljoonaa. Metron linja 1 avattiin liikenteelle 15. '
+                + 'lokakuuta 2015 — rakentaminen oli alkanut jo 2001 ja '
+                + 'viivästynyt useaan otteeseen. Linja kulkee yksitoista '
+                + 'kilometriä pohjois-eteläsuunnassa Qodsista Shohadaan '
+                + 'Kaven kaukoliikenneterminaalin kautta, ja asemia on '
+                + 'kaksikymmentä. Yksi niistä on nimeltään Si-o-se-pol, '
+                + 'joten metrolla pääsee suoraan sillan viereen.',
+              kuva: {
+                tiedosto: 'Platform-Azadi Metro Station in Esfahan-Iran 2018.jpg',
+                selite: 'Azadin metroaseman laituri. Seinät ovat paljasta '
+                  + 'punatiiltä, katossa kulkee rivi loisteputkia, '
+                  + 'laiturin reunassa on keltainen varoitusraita, ja '
+                  + 'penkillä istuu yksi matkustaja pää painuksissa.',
+                lahde: 'Meysam Eftekhari, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne: joki, madit ja sillat',
+              teksti: 'Isfahan on rakennettu veden varaan keskellä kuivaa '
+                + 'tasankoa. Zayandeh-joesta johdettiin safavidien aikana '
+                + 'kanavaverkosto, jonka osia kutsutaan nimellä madi: '
+                + 'joen pohjoispuolella niitä on 77 ja eteläpuolella 71. '
+                + 'Suunnittelijana oli shaahi Abbasin insinööri Sheikh '
+                + 'Bahai. Vuonna 1993 verkoston vedestä yhdeksänkymmentäyksi '
+                + 'prosenttia meni maatalouteen, neljä teollisuuteen ja '
+                + 'viisi talouksiin. Joen yli kulkee yksitoista '
+                + 'historiallista siltaa, ja kaksi tunnetuinta tekee '
+                + 'kahta työtä yhtä aikaa. Si-o-se-pol rakennettiin '
+                + '1599–1602 ja on 297,76 metriä pitkä; siinä on kaksi '
+                + 'päällekkäistä riviä 33 kaarta, joista nimi tulee, ja '
+                + 'se toimii samalla patona. Khaju valmistui noin 1650 '
+                + 'vanhemman sillan perustuksille: 133 metriä, 23 kaarta '
+                + 'ja keskellä paviljonki, jossa shaahilla oli oma '
+                + 'istuimensa. Khaju oli myös kokoontumispaikka, ei vain '
+                + 'kulkuväylä. Kuivina vuosina joki padotaan yläjuoksulla, '
+                + 'ja uoma jää tyhjäksi.',
+              kuva: {
+                tiedosto: 'Khaju Bridge, Isfahan 04.jpg',
+                selite: 'Khajun sillan keskiosa kuivan jokiuoman puolelta. '
+                  + 'Alarivin kaarien alla on kivinen patokynnys, '
+                  + 'ylärivissä on kaakeloituja kaaria, ja keskellä '
+                  + 'kohoaa kaksikerroksinen paviljonki puisine '
+                  + 'kaiteineen. Edustalla on pelkkää hiekkaa.',
+                lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: seitsemän väriä yhdessä laatassa',
+              teksti: 'Isfahanin kupolien sininen syntyy tekniikasta, joka '
+                + 'otettiin laajaan käyttöön juuri täällä. Vanhempi tapa '
+                + 'oli mosaiikki: yksivärisistä laatoista leikattiin '
+                + 'pikkuruisia paloja ja niistä koottiin kuvio — hidasta '
+                + 'ja kallista. Shaahin moskeijassa siirryttiin haft '
+                + 'rangiin, seitsemään väriin: yksi laatta maalattiin '
+                + 'monella värillä kerralla ja poltettiin sitten. Työ '
+                + 'nopeutui, hinta laski ja väriskaala laajeni. Portaalin '
+                + 'parhaissa laatoissa värejä on seitsemän: tummansininen, '
+                + 'vaaleansininen, valkoinen, musta, keltainen, vihreä ja '
+                + 'beige; muualla talossa sininen hallitsee. Jean Chardin '
+                + 'arveli 1600-luvulla, että paikallinen kuiva ilma pitää '
+                + 'värit kirkkaampina kuin Euroopassa. Laattoja '
+                + 'moskeijassa lasketaan olevan 475 000 ja tiiliä 18 '
+                + 'miljoonaa.',
+              kuva: {
+                tiedosto: 'Haft-rang tilework. Shah Mosque (Isfahan).jpg',
+                selite: 'Kaakeloitu holvikaaren kärki lähikuvassa. '
+                  + 'Tummansinisellä pohjalla kiemurtelee vaaleita '
+                  + 'köynnöksiä ja turkoosia medaljonkia, keskellä on '
+                  + 'maljakon muotoinen kuvio, ja yksittäisten laattojen '
+                  + 'saumat näkyvät suorina ruutuina kuvion läpi.',
+                lahde: 'Kimiakardani, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: aukio, joka ei osoita Mekkaan',
+              teksti: 'Vuonna 1598 Abbas Suuri siirsi pääkaupunkinsa '
+                + 'Qazvinista Isfahaniin. Syitä oli kaksi: keskeinen '
+                + 'sijainti oli kauempana osmanien ja uzbekkien '
+                + 'ulottuvilta, ja Persianlahti tuli lähemmäs juuri kun '
+                + 'siitä oli tulossa hollantilaisten ja englantilaisten '
+                + 'kauppakomppanioiden reitti. Kaupunkisuunnitelman laati '
+                + 'Sheikh Bahai, ja siinä oli kaksi pääosaa: Chahar Bagh '
+                + '-puistokatu ja Naqsh-e Jahanin aukio. Aukiota ei '
+                + 'kuitenkaan suunnattu Mekkaan päin. Shaahin moskeijan '
+                + 'portaalista sisään tullessaan kävijä tekee '
+                + 'huomaamattaan noin 45 asteen käännöksen, jotta '
+                + 'rukoussali osoittaisi oikeaan suuntaan. Donald Wilberin '
+                + 'selitys on yksinkertainen: jos akselit olisivat samat, '
+                + 'portaali peittäisi kupolin eikä kupoli näkyisi '
+                + 'aukiolle. Italialainen Pietro Della Valle kirjoitti '
+                + 'vuonna 1617, ettei aukion veroista ole '
+                + 'Konstantinopolissa eikä missään kristikunnassa.',
+              kuva: {
+                tiedosto: 'Naqsh-e Jahan Square by Pascal Coste 1 edited.jpg',
+                selite: 'Pascal Costen värillinen kivipiirros aukiosta. '
+                  + 'Kenttä on paljasta hiekkaa, laidoilla kiertää '
+                  + 'kaksikerroksinen kaarikäytävä, perällä on moskeija '
+                  + 'turkoosikupoleineen ja kahtena minareettina, '
+                  + 'vasemmalla toinen kupoli ja oikealla pylväikköinen '
+                  + 'parveke. Etualalla on pieniä ratsastajia ja '
+                  + 'kulkijoita.',
+                lahde: 'Pascal Coste, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Isfahanissa koko vuoden sade on 98 millimetriä, ja '
+                + 'heinä-, elo- ja syyskuussa se on nolla. Talvi on '
+                + 'kylmempi kuin aavikkokaupungeissa: tammikuun '
+                + 'keskilämpö on runsaat kaksi astetta ja yöt käyvät '
+                + 'pakkasen puolella. Kesä on kuitenkin kolmenkymmenen '
+                + 'asteen kuuma, heinäkuussa 30,3. Vuodenkierto on siis '
+                + 'lämmön kierto eikä sateen: vesi on täällä rakennettu '
+                + 'asia, madien ja siltojen työtä, eikä säätila. Paras '
+                + 'aika kävelijälle on huhtikuu ja loka–marraskuu, '
+                + 'jolloin keskilämpö on kuudentoista ja kahdenkymmenen '
+                + 'kahden asteen välissä. Luvut ovat kaupungin kohdalta '
+                + 'tasangolta; Soffeh-vuoren rinteillä on viileämpää.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'taide',
