@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 953, teksti: 'v953: tilannelehti käytettävään muotoon' },
   { v: 952, teksti: 'v952: Jakutsk ja Magadan — kartat, kuvat ja opas' },
   { v: 951, teksti: 'v951: Peking — kohdekartta kainaloineen ja lehti' },
   { v: 950, teksti: 'v950: Bangkok — ensimmäinen uusi Aasian lehti' },
