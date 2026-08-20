@@ -7364,12 +7364,24 @@ body.katselu #newgame-btn { display: none; }
   }
 }
 
-/* Lehden yksipalstaiset kappaleet: ingressi ja esittelyt. Lehden oma
+/* Lehden yksipalstaiset kappaleet: esittelyt. Lehden oma
  * raja pysyy 768:ssa — sen taitto ei ollut osa 18.8.2026 levennystä. */
 @media (min-width: 768px) {
-  .dialog.lehti #arrival-intro,
   .dialog.lehti .wiki-kategoria .johdanto,
   .dialog.lehti .nahtavyys-kappale { max-width: 38em; }
+  /*
+   * Etusivun leipäteksti kahdella palstalla (omistaja 20.8.2026:
+   * "jaa teksti kahteen palstaan") — uuden tekstilinjan 7–10 virkkeen
+   * johdatus latoutuu lehtimäisesti kuten kaupunkisivun nostot.
+   * Kapealla näytöllä pysytään yhdessä palstassa (media queryn raja).
+   */
+  .dialog.lehti #arrival-intro {
+    column-count: 2;
+    column-gap: 2rem;
+    max-width: none;
+    text-align: justify;
+    hyphens: auto;
+  }
 }
 
 /* Kuvan napautus avaa katselimen — kursori kertoo sen hiirikäyttäjälle. */

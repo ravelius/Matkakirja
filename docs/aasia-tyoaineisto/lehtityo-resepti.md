@@ -69,7 +69,7 @@ speksi täydentää tätä; ristiriidassa speksi voittaa.
   kaupungilta puuttuu ARTIKKELIT-merkintä, kirjoita myös sen
   kolmikappaleinen teksti-kenttä (600–1100 mrk, Lue lisää).
   Sivujen johdanto-kentät (kulttuuri-kategoriat) pysyvät LYHYINÄ,
-  1–2 virkettä. KUVATEKSTI (selite) on 1, korkeintaan 2 virkettä.
+  1–2 virkettä. KUVATEKSTI (selite) on YKSI virke (omistajan tarkennus 20.8.2026).
   Kohdekartan esittelyteksti LYHYT — ei kartan kuvailua.
 - nostot 440–660 mrk; nostoja 4 per sivu.
 - kaupunkilehti: sivu `kaupunki` (johdanto, kansikuvat 3,
