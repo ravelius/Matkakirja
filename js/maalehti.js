@@ -597,7 +597,13 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
    */
   if (kategoria.rakenna) {
     kategoria.rakenna(kohde, ui);
-    return;
+    /*
+     * rakennaJatka (20.8.2026, Tilannelehden tuoreet-chipit): sivu
+     * voi haluta oman rakennelman NOSTOJEN LISÄKSI eikä niiden
+     * sijaan. Oletus on vanha käytös (pelkkä rakenna), jotta
+     * Tilastot-lehden taulusivut eivät muutu.
+     */
+    if (!kategoria.rakennaJatka) return;
   }
   if (kategoria.johdanto) {
     kohde.appendChild(html('p', 'johdanto', kategoria.johdanto));
