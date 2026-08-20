@@ -5725,6 +5725,84 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Quba-moskeija', lat: 24.4392, lon: 39.6172 },
     ],
   },
+  /*
+   * MEKAN KOHDEKARTTA (20.8.2026). Rajaus on noin 3,1 × 3,1 km, ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa.
+   *
+   * YKSI KOHDE SUURELLE MOSKEIJALLE, vaikka siellä on neljä
+   * lehdessä kerrottua paikkaa. Kaaba, Maqam Ibrahim, Zamzamin kaivo
+   * ja Safan kukkula ovat kaikki moskeijan sisällä muutaman
+   * kymmenen metrin säteellä toisistaan — Zamzam on
+   * en-Wikipedian Masjid al-Haram -artikkelin mukaan 20 metriä
+   * Kaabasta itään ja Safa 130 metriä kaakkoon — joten erillisinä
+   * pisteinä niiden numeroympyrät menisivät päällekkäin (Petran
+   * oppi). Ne kerrotaan Suuren moskeijan jutussa.
+   *
+   * KARTALTA JÄIVÄT POIS Al-Adlin hautausmaa (itäinen vuorenrinne
+   * olisi venyttänyt ruudun tyhjäksi) sekä Arafat, Mina ja
+   * Muzdalifah, jotka ovat 5–20 kilometrin päässä eivätkä mahdu
+   * mihinkään järkevään rajaukseen. Ne kerrotaan oppaassa.
+   *
+   * KAINALOSSA Jabal al-Nour, 5,3 km koilliseen. Se on ainoa
+   * kaupungin ulkopuolinen kohde, joka on lehdessä omana juttunaan,
+   * ja samalla kaupungin korkein kohta (642 m, en-Wikipedia
+   * "Mecca" ja "Jabal al-Nour").
+   *
+   * KAINALON KORKEUS 19,9 on laskettu piirtäjän omalla kaavalla
+   * (tools/piirra-kaupunkikartta.mjs: leveys × kuvasuhde(rajat) /
+   * kuvasuhde(kainalon rajat)) eikä kirjoitettu käsin. Fablen
+   * speksissä luki 24,55, mutta se ei vastaa piirrettyä kuvaa:
+   * piirtäjä antaa kuvan korkeudeksi 1600 / kuvasuhde(rajat) = 1604
+   * pikseliä, ja mekka-keskusta.png on tarkalleen 1600 × 1604 —
+   * samalla kaavalla myös Medinan 21,24 täsmää. Väärä korkeus olisi
+   * siirtänyt kainalon numeroympyrän eri kohtaan kuin kartan oma
+   * piirros.
+   */
+  mekka: {
+    polku: 'assets/kartat/mekka-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 21.4425, etela: 21.4145, lansi: 39.816, ita: 39.846 },
+    kainalot: [
+      { rajat: { pohjoinen: 21.4645, etela: 21.4515, lansi: 39.8545, ita: 39.8685 },
+        x: 78, y: 2, leveys: 20, korkeus: 19.9, suunta: '5,3 km koilliseen' },
+    ],
+    esittely: 'Mekka on kapeassa laaksossa paljaiden vuorten välissä, ja '
+      + 'juuri laakso selittää koko kaupungin muodon. Se on Hidžazissa, '
+      + 'kahdensadan kilometrin levyisellä vuorikaistaleella Nafudin '
+      + 'aavikon ja Punaisenmeren välissä, seitsemänkymmenen kilometrin '
+      + 'päässä Jeddan satamasta sisämaahan ja 277 metrin korkeudessa — '
+      + 'yksi Hidžazin matalimmista kaupungeista, vaikka sen omat huiput '
+      + 'kohoavat tuhanteen metriin. Keskustaa kutsutaan nimellä Mekan '
+      + 'kuoppa, ja siihen kuuluvat al-Taneemin, Bakkahin ja Abqarin '
+      + 'notkot. Kauppa kulki täältä Afrikasta ja Kaukoidästä kohti '
+      + 'Syyriaa, ja pyhiinvaellus on pitänyt kaupunkia pystyssä siitä '
+      + 'lähtien. Nykyään kaupunkia kiertää neljä kehätietä ja sen alue '
+      + 'on yli 1 200 neliökilometriä, jaettuna 34 kaupunginosaan.'
+      + '\n\nKartalla se näkyy heti. Kuvan alavasemmalla erottuu soikea '
+      + 'kehä, ja sen sisällä kadut lähtevät keskipisteestä säteittäin '
+      + 'kuin pyörän puolat: keskellä on Suuri moskeija, ja kaupunki on '
+      + 'rakennettu sen ympärille eikä toisin päin. Kehän eteläreunalla '
+      + 'kohoaa kellotornikompleksi sillä kukkulalla, jolla ennen seisoi '
+      + 'Ajyadin linnoitus. Moskeijasta pohjoiseen kadut jatkuvat laakson '
+      + 'mukaan: aivan kehän tuntumassa on Mekan kirjasto, ja kauempana '
+      + 'pohjoisessa ensin Jinnien moskeija ja sitten Jannat al-Mu\'allan '
+      + 'hautausmaa. Leveät kaaret, jotka halkovat karttaa reunasta '
+      + 'reunaan, ovat kehäteitä ja moottoriteitä. Kartan itäosassa katuja '
+      + 'on harvassa, ja tyhjyys on aitoa maastoa eikä puuttuvaa tietoa — '
+      + 'siellä nousee vuorenrinne, jolle ei ole rakennettu. Oikean '
+      + 'ylänurkan kainalossa on Jabal al-Nour, viiden ja kolmen '
+      + 'kymmenyksen kilometrin päässä koilliseen. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Petrassa. */
+      { nimi: 'Jabal al-Nour', lat: 21.4581, lon: 39.8614 },
+      { nimi: 'Jannat al-Mu\'alla', lat: 21.4369, lon: 39.8292 },
+      { nimi: 'Jinnien moskeija', lat: 21.4334, lon: 39.829 },
+      { nimi: 'Mekan kirjasto', lat: 21.425, lon: 39.83 },
+      { nimi: 'Suuri moskeija', lat: 21.4225, lon: 39.8262 },
+      { nimi: 'Kellotorni', lat: 21.4189, lon: 39.8264 },
+    ],
+  },
 };
 
 /*

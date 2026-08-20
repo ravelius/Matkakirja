@@ -1444,4 +1444,46 @@ export const SAATIEDOT = {
       + 'aavikkoilma tekee vuorokausivaihtelusta suuren — elokuussa yön ja '
       + 'päivän välillä on kuusitoista astetta.',
   },
+  /*
+   * MEKKA (20.8.2026). Sama menetelmä kuin paketin muillakin riveillä:
+   * Open-Meteon arkisto (ERA5), jakso 1991–2020.
+   *
+   * MITTAUSPISTE on keskusta 21,4225 / 39,826. en-Wikipedian
+   * Mecca-artikkelin infobox antaa kaupungin koordinaateiksi
+   * 21°25′21″N 39°49′24″E eli 21,4225 / 39,8233 (haettu 20.8.2026);
+   * käytetty piste on siitä runsaat kaksisataa metriä itään, yhä
+   * saman laakson pohjalla. Saman artikkelin LEIPÄTEKSTI ilmoittaa
+   * Geography-osiossa sijainniksi "21º23' north latitude and 39º51'
+   * east longitude", mikä on toista kilometriä sivussa infoboxin
+   * koordinaatista — talon sääntö on, että koordinaatti voittaa
+   * leipätekstin (v925, v932, v937), joten infoboxia seurataan.
+   *
+   * KAKSI LUKUA, JOTKA POIKKEAVAT ARTIKKELIN SANALLISESTA KUVAUKSESTA.
+   * Artikkelin Climate-osio sanoo talvesta "19 °C at night to 30 °C in
+   * the afternoon", kun ERA5 antaa tammikuulle alimmaksi 16 ja
+   * ylimmäksi 26. Ero on mittapisteen ja jakson ero, ei ristiriita
+   * faktoissa; se on kerrottu myös oppaan sääjaksossa (Siinain ja
+   * Petran ennakkotapaus). Tammikuun 42 mm on ERA5-ruudun lukema.
+   *
+   * Vuosisade on 137 millimetriä eli yli kolminkertainen Medinaan
+   * (40 mm) verrattuna, vaikka kaupungit ovat samalla Hidžazin
+   * kaistaleella neljänsadan kilometrin päässä toisistaan.
+   */
+  mekka: {
+    lat: 21.4225,
+    lon: 39.826,
+    keskilampo: [21, 22.6, 25.2, 28.8, 32.1, 33.5, 33.5, 33.2, 32.4, 29.6, 25.7, 22.8],
+    ylin: [26, 29, 32, 36, 39, 41, 40, 39, 39, 36, 31, 28],
+    alin: [16, 16, 19, 22, 25, 26, 27, 27, 26, 23, 20, 17],
+    sade: [42, 6, 11, 11, 7, 0, 0, 2, 5, 7, 21, 25],
+    luonnehdinta: 'Mekassa sataa vuodessa satakolmekymmentäseitsemän '
+      + 'millimetriä, ja siitä lähes kaksi kolmasosaa tulee '
+      + 'marras–tammikuussa — pelkästään tammikuussa neljäkymmentäkaksi. '
+      + 'Kesä- ja heinäkuussa normaali on nolla. Talvi on lämmin: '
+      + 'tammikuun keskilämpö on kaksikymmentäyksi astetta. Kesällä '
+      + 'keskilämpö nousee yli kolmenkymmenenkolmen ja kesäkuun päivät '
+      + 'neljäänkymmeneenyhteen asteeseen, eivätkä yöt anna periksi: '
+      + 'heinä- ja elokuussa vuorokauden alin on keskimäärin '
+      + 'kaksikymmentäseitsemän astetta.',
+  },
 };
