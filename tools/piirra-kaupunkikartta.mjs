@@ -1229,6 +1229,75 @@ const KAUPUNGIT = {
     palvelutiet: true,
     rauniokaupunki: true,
   },
+  medina: {
+    /*
+     * Keskusta Profeetan moskeijan ympärillä: idässä Al-Baqin
+     * hautausmaa, lännessä Qiblatayn-moskeija, luoteessa Ruman kaivo
+     * ja etelässä Hidžaz-radan asema-alue. Ruutu on 5,4 × 4,8 km —
+     * väljempi kuin Euroopan ytimet, koska varhaisislamin kohteet
+     * ovat vanhan muurikaupungin ULKOPUOLELLA eri suunnissa; itse
+     * muurikaupunki purettiin 1900-luvulla, joten tiivistä vanhaa
+     * ydintä ei ole.
+     *
+     * Quba-moskeija on 3,5 km kaakkoon eikä mahdu samaan ruutuun
+     * venyttämättä kuvaa pystypuuroksi — se on KAINALOKARTTANA
+     * oikeassa alakulmassa, joka on suuntana oikea (Wienin ja
+     * Budapestin malli). Uhud-vuori (4,5 km pohjoiseen) jää kartalta
+     * kokonaan: se on vuori eikä katuverkon kohde, ja se kerrotaan
+     * lehden teksteissä.
+     */
+    rajat: { pohjoinen: 24.499, etela: 24.456, lansi: 39.571, ita: 39.624 },
+    /*
+     * Jalkakäytävät ja palvelutiet päällä samasta syystä kuin
+     * Jerusalemissa: Profeetan moskeijan ympäristö ja Quban aukio
+     * ovat OSM:ssä jalankulkualueita ja huoltoteitä, ja ilman lippuja
+     * juuri kartan pääkohteen ympärys piirtyi tyhjänä paperina —
+     * kokeiltu ensin ilman ja katsottu.
+     */
+    jalkakaydat: true,
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 24.4455, etela: 24.433, lansi: 39.61, ita: 39.6245 },
+        x: 78, y: 76.8, leveys: 20, suunta: '3,5 km kaakkoon',
+      },
+    ],
+  },
+  mekka: {
+    /*
+     * Ydin Suuren moskeijan ympärillä: Kaaba lännessä, kellotorni
+     * etelässä, Jannat al-Mu'allan hautausmaa pohjoisessa ja Al-Adlin
+     * hautausmaa itäreunalla. Ruutu on 3,8 × 3,1 km. Kaaba, Maqam
+     * Ibrahim, Zamzamin kaivo ja Safa–Marwa ovat kaikki saman
+     * moskeijan sisällä muutaman kymmenen metrin säteellä — ne ovat
+     * YKSI kartan kohde (numeroympyrät menisivät täysin päällekkäin,
+     * Petran oppi), ja loput kerrotaan sen jutussa.
+     *
+     * Jabal al-Nour (Hiran luola) on 5,3 km koilliseen eikä mahdu
+     * ruutuun — se on KAINALOKARTTANA oikeassa ylänurkassa, joka on
+     * suuntana oikea ja jossa on vain vuorenrinnettä.
+     */
+    /*
+     * ENSIMMÄINEN RAJAUS ULOTTUI AL-ADLIN HAUTAUSMAALLE ITÄÄN
+     * (ita 39.857) ja KATSOTTIIN: keskusta jäi vasempaan alakulmaan
+     * ja kuvan itäinen kolmannes oli tyhjää vuorenrinnettä. Al-Adl
+     * jäi siksi kartalta (kerrotaan teksteissä), ja ruutu tiivistyi
+     * laakson ympärille: Suuren moskeijan kehä lounaassa, Jinnien
+     * moskeija ja Jannat al-Mu'alla pohjoisessa.
+     *
+     * Jalkakäytävät ja palvelutiet päällä samasta syystä kuin
+     * Medinassa: moskeijan ympäristö on jalankulkualuetta.
+     */
+    rajat: { pohjoinen: 21.4425, etela: 21.4145, lansi: 39.816, ita: 39.846 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 21.4645, etela: 21.4515, lansi: 39.8545, ita: 39.8685 },
+        x: 78, y: 2, leveys: 20, suunta: '5,3 km koilliseen',
+      },
+    ],
+  },
   izmir: {
     // Konakin aukio, Kemeraltin basaari ja antiikin agora mahtuvat
     // samaan runsaan puolentoista kilometrin ruutuun, ja niiden väli on
@@ -1638,7 +1707,14 @@ async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false, palv
  * vastauksen — ei siis 429:ään vaan pitkän vastauksen katkeamiseen.
  * Neljäs yritys meni läpi.
  */
-async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 5) {
+/*
+ * KYMMENEN YRITYSTÄ 20.8.2026 ALKAEN. Lehtityön apuskriptien oppi
+ * (docs/arkisto/lehtityon-apuskriptit.md): kuusi yritystä ei riittänyt
+ * konttiympäristön yhteyskatkoihin, kymmenen kasvavalla odotuksella
+ * riitti kaikkiin. Medinan ajo kaatui viidellä yrityksellä kahdesti
+ * peräkkäin (500 + ECONNRESET), kymmenellä meni läpi.
+ */
+async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 10) {
   for (let i = 1; ; i++) {
     const palvelin = OVERPASS_PALVELIMET[(i - 1) % OVERPASS_PALVELIMET.length];
     try {

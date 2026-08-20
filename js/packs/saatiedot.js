@@ -1393,8 +1393,9 @@ export const SAATIEDOT = {
    * matkaoppaassa, jottei lukija oleta rivin kuvaavan koko niemimaata.
    *
    * Menetelmä on paketin oma: Open-Meteon arkisto (ERA5), jakso
-   * 1991–2020. Vuosisade on vain 46 millimetriä, mikä on paketin
-   * kuivin rivi.
+   * 1991–2020. Vuosisade on vain 46 millimetriä — Lähi-idän uusista
+   * riveistä kuivimpia, joskin Medina (40 mm) ja ennen kaikkea Luxor
+   * (pari millimetriä) jäävät alle.
    */
   siinai: {
     lat: 28.5644,
@@ -1410,5 +1411,37 @@ export const SAATIEDOT = {
       + 'astetta, eli vähemmän kuin rannikolla, ja tammikuussa vajaat '
       + 'kahdeksan. Yöt ovat kylmiä ympäri vuoden, ja talvella huipuilla '
       + 'sataa lunta.',
+  },
+  /*
+   * MEDINA (20.8.2026). Sama menetelmä kuin paketin muillakin riveillä:
+   * Open-Meteon arkisto (ERA5), jakso 1991–2020, keskilämpö kuukauden
+   * päiväkeskiarvojen keskiarvona ja sade kuukausisumman
+   * vuosikeskiarvona; ylin ja alin koko jakson päivittäisten ylimpien
+   * ja alimpien keskiarvojen puolivälinä keskilämmön ympärillä.
+   *
+   * MITTAUSPISTE on keskusta 24,47 / 39,61 eli Profeetan moskeijan
+   * kulmilla — sama piste, jonka en-Wikipedian Medina-artikkeli antaa
+   * kaupungin koordinaateiksi (haettu 20.8.2026; korkeus siellä 620 m).
+   * Kaupunki on 589 neliökilometriä laaja ja sen laidoilla nousee
+   * laavakenttiä, joten reunoilla luvut ovat toiset kuin keskustassa.
+   *
+   * Vuosisade on neljäkymmentä millimetriä — vähemmän kuin Siinailla
+   * (46 mm), mutta koko paketin kuivin rivi on yhä Luxor, jolla
+   * ERA5:n normaaleissa sataa vain pari millimetriä vuodessa.
+   */
+  medina: {
+    lat: 24.47,
+    lon: 39.61,
+    keskilampo: [16.7, 19, 22.6, 27.2, 31.6, 34.2, 34.1, 34.8, 33.7, 29, 22.8, 18.4],
+    ylin: [24, 27, 31, 35, 39, 42, 42, 43, 42, 37, 30, 26],
+    alin: [9, 11, 15, 19, 24, 26, 26, 27, 26, 21, 16, 11],
+    sade: [9, 3, 4, 5, 2, 0, 0, 2, 0, 2, 6, 7],
+    luonnehdinta: 'Medinassa sataa koko vuonna neljäkymmentä millimetriä, '
+      + 'ja kesä-, heinä- ja syyskuussa normaali on nolla. Touko–syyskuussa '
+      + 'keskilämpö pysyy yli kolmessakymmenessäyhdessä asteessa, ja elokuun '
+      + 'päivät nousevat yli neljänkymmenen. Talvi on sen sijaan leuto: '
+      + 'tammikuun keskilämpö on lähes seitsemäntoista astetta. Kuiva '
+      + 'aavikkoilma tekee vuorokausivaihtelusta suuren — elokuussa yön ja '
+      + 'päivän välillä on kuusitoista astetta.',
   },
 };
