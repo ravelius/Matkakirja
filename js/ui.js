@@ -26,7 +26,7 @@ import {
   MERKKI_SOITA, REVEAL_SUB, VIIVA_IKONIT, aarreIkoni, aarrekuvanOsoitteet,
   alkuKehykset, arvoHuudahdus, ekaLause, esilataaKuvat, html, jaaKappaleiksi,
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
-  onVanhaKuva, pehmeaPolku, polunPituus,
+  onVanhaKuva, pehmeaPolku, piirraLeipateksti, polunPituus,
   cachedImage, cachedSummary, kehittajaTilaPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
@@ -6514,7 +6514,7 @@ export class UI {
     // kaupungeilta, joilta wiki-kenttä puuttui.
     const omaIntro = ARTIKKELIT[city.wiki ?? city.name]?.intro;
     if (omaIntro) {
-      this.arrivalIntro.textContent = omaIntro;
+      piirraLeipateksti(this.arrivalIntro, omaIntro);
       this.arrivalWiki.hidden = false;
     }
 

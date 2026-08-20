@@ -7382,6 +7382,8 @@ body.katselu #newgame-btn { display: none; }
     text-align: justify;
     hyphens: auto;
   }
+  .dialog.lehti #arrival-intro p { margin: 0 0 0.7em; }
+  .dialog.lehti #arrival-intro p:last-child { margin-bottom: 0; }
 }
 
 /* Kuvan napautus avaa katselimen — kursori kertoo sen hiirikäyttäjälle. */

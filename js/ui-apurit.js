@@ -301,6 +301,32 @@ export function ekaLause(teksti) {
   return { eka: m[0], loput: teksti.slice(m[0].length).trimStart() };
 }
 
+/*
+ * Lehden etusivun leipäteksti kappaleina ja maltillisin lihavoinnein
+ * (omistaja 20.8.2026: "Kokeile jakaa pariin kappaleeseen ja lisäksi
+ * voi käyttää boldausta tarvittaessa"). Kappaleraja on tyhjä rivi
+ * (jaaKappaleiksi) ja lihavointi merkitään tekstissä **näin** —
+ * DOM rakennetaan käsin, ei innerHTML:ää.
+ */
+export function piirraLeipateksti(el, teksti) {
+  el.replaceChildren();
+  for (const kappale of jaaKappaleiksi(teksti)) {
+    const p = document.createElement('p');
+    const palat = kappale.split(/\*\*/);
+    palat.forEach((pala, i) => {
+      if (!pala) return;
+      if (i % 2 === 1) {
+        const b = document.createElement('strong');
+        b.textContent = pala;
+        p.appendChild(b);
+      } else {
+        p.appendChild(document.createTextNode(pala));
+      }
+    });
+    el.appendChild(p);
+  }
+}
+
 export function html(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
