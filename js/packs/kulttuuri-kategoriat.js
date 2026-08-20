@@ -22080,6 +22080,65 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * VAIHE B, ERÄ 3 (Opus 20.8.2026): Dohan lehteen on lisätty
+       * avauskuvat ja matkaopas. Nostoihin, kansikuviin, johdantoon,
+       * ruokasivuun ja visaan ei ole koskettu. Faktat on tarkistettu
+       * en-Wikipedian artikkeleista Doha, Hamad International
+       * Airport, Qatari cuisine ja Pearl hunting (haettu 20.8.2026).
+       *
+       * YKSI RISTIRIITA, JOKA ON RATKAISTU: lentoaseman pinta-ala.
+       * Doha-artikkeli sanoo, että kenttä rakennettiin 22
+       * neliökilometrille ja siitä puolet on täyttömaata; kentän oma
+       * artikkeli sanoo 36 neliökilometriä ja saman puolikkaan.
+       * Opas käyttää kentän omaa artikkelia, koska se on aiheen
+       * tarkempi lähde ja koska sama luku esiintyy siellä myös
+       * eekkereinä (9 000 acrea = noin 36 km²).
+       *
+       * POIS JÄTETTY: syyskuun 2025 ilmaisku Dohaan, joka on
+       * Doha-artikkelin historiaosiossa. Sisältölinjaus 20.8.2026:
+       * ei nykysotaa eikä nykypolitiikkaa. Myös vuoden 1867 sotatoimet
+       * on jätetty pois; 1900-luvun käänne kerrotaan elinkeinon
+       * kautta.
+       *
+       * EI TOISTOA: kansalliskirjasto, Kataran amfiteatteri ja metro
+       * ovat lehden omia nostoja, ja madžbus, hamour ja garangao ovat
+       * ruokasivulla — siksi arjen ilmiöksi valittiin karak-tee, joka
+       * on juoma eikä ateria. Helmenkalastus on visan aihe, ja nyt se
+       * löytyy myös lehden tekstistä.
+       *
+       * KUVAT: kolme avauskuvaa, matkailijalle-kuva ja kolme
+       * jaksokuvaa; kaksi jaksoa on kuvatta (Tukholma-ennakkotapaus).
+       * Hylättyjä oli useita: yksi ilmakuva kaupungista kantoi
+       * kameran polttamaa päivämäärää, terminaalin sisäkuvassa oli
+       * tunnistettavia kasvoja ja Lusailin raitiovaunun kuvat ovat
+       * FAL-lisenssillä, joka ei ole reseptin sallitussa listassa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Highrises in The Pearl Qatar.jpg',
+          selite: 'Helmi-saaren taloja yöllä. Kahden lähimmän talon '
+            + 'huipulla on valaistu kupolimainen kruunu, ja niiden takana '
+            + 'erottuu utuisena West Bayn tornirivi.',
+          lahde: 'Christine und Hagen Graf @ Flickr.com, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Al Aaliya Street in Al Mirqab Doha.jpg',
+          selite: 'Al Mirqabin kaupunginosa illalla katonrajasta '
+            + 'kuvattuna. Asuintornien ikkunoissa palaa valoja, taivaalla '
+            + 'on puolikuu, ja keskellä seisoo vihreä tulppaanin '
+            + 'muotoinen vesitorni.',
+          lahde: 'Isabell Schulz @ Flickr.com, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Villas in Onaiza Doha.jpg',
+          selite: 'Onaizan kaupunginosa ylhäältä. Hiekanvärisiä huviloita '
+            + 'muurien takana, osalla punainen tiilikatto, pihoilla '
+            + 'palmuja; leveän kadun takana jatkuu tiheämpi valkoinen '
+            + 'talorivistö.',
+          lahde: 'Alex Sergeev (www.asergeev.com), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kaikki hyllyt ovat samassa salissa',
@@ -22142,6 +22201,145 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Thameur Belghith, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'ISS-33 Nighttime view of Qatar.jpg',
+          selite: 'Qatarin niemimaa yöllä avaruusasemalta kuvattuna. Doha '
+            + 'hehkuu itärannikolla laajana valkoisena läiskänä, ja '
+            + 'siitä lähtee oransseja teitä eri suuntiin pimeän '
+            + 'niemimaan halki; vasemmassa alakulmassa näkyy Bahrain.',
+          lahde: 'NASA, Wikimedia Commons (PD)',
+        },
+        kappale: 'Doha on Qatarin pääkaupunki niemimaan itärannikolla. '
+          + 'Alaa on 132 neliökilometriä, asukkaita 1 186 023 ja '
+          + 'korkeutta merenpinnasta kymmenen metriä. Ranta ei ole '
+          + 'sellainen kuin luonto sen jätti: merestä on täytetty '
+          + 'neljäsataa hehtaaria maata ja kolmekymmentä kilometriä '
+          + 'uutta rantaviivaa. Kaupunginosia oli 1900-luvun alussa '
+          + 'yhdeksän, vuoden 2010 väestönlaskennassa yli kuusikymmentä.',
+        artikkeli: {
+          nimi: 'Matkailijan Doha',
+          taitto: 'opas',
+          teksti: 'Matala rannikkokaupunki, jonka rantaviivasta iso osa on '
+            + 'tehty itse ja jonka vanhin osa on kokonaan uusittu.',
+          nosto: 'Brittiläinen virkamies J. G. Lorimer kuvasi Dohan vuoden '
+            + '1908 käsikirjassaan. Kaupunki oli hänen mukaansa jaettu '
+            + 'yhdeksään kortteliin ja sen merenpuoleinen rintama oli '
+            + 'lähes kahden mailin eli runsaan kolmen kilometrin '
+            + 'mittainen. Asukkaita hän arvioi '
+            + 'olevan noin kaksitoistatuhatta, mukaan lukien '
+            + 'kolmensadanviidenkymmenen miehen varuskunta. Ulkonäöstä '
+            + 'hän ei innostunut: kujat olivat kapeita ja mutkaisia, ja '
+            + 'koko kaupungissa oli yksi ainoa puutarha.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Hamadin kansainvälinen lentoasema on viiden '
+                + 'kilometrin päässä idässä siitä, missä vanha kenttä '
+                + 'oli. Suunnittelu alkoi vuonna 2003 ja rakentaminen '
+                + '2005, ja kenttä levittäytyy 36 neliökilometrille, '
+                + 'josta puolet on merestä täytettyä maata. '
+                + 'Matkustajaliikenne alkoi 30. huhtikuuta 2014, ja '
+                + 'loputkin yhtiöt siirtyivät uudelle kentälle 27. '
+                + 'toukokuuta. Nimi tulee edelliseltä emiiriltä Hamad bin '
+                + 'Khalifa Al Thanilta. Vuonna 2025 kentän kautta kulki '
+                + '54,3 miljoonaa matkustajaa. Kaupunkiin pääsee '
+                + 'kentältä metrolla: punaisen linjan haara avattiin '
+                + 'lentoasemalle joulukuussa 2019. Aiheeksi rakennukseen '
+                + 'on valittu keidas, ja se näkyy aaltoilevina kattoina '
+                + 'ja kierrätysvedellä kasteltuina aavikkokasveina.',
+              kuva: {
+                tiedosto: 'Aerial view of Hamad Airport, May 2014.jpg',
+                selite: 'Hamadin lentoasema ilmasta pölysumun läpi. '
+                  + 'Terminaalin katto aaltoilee rinnakkaisina kaarina, '
+                  + 'edessä on täyttömaata ja kaivettu vesiallas, ja '
+                  + 'kaukana takana häämöttää kaupunki.',
+                lahde: 'Chris Hoare, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on niemimaan keskiosan itärannalla, ja '
+                + 'maaperä on eoseenikautisen Dammamin muodostuman '
+                + 'kulunutta dolomiittista kalkkikiveä. Lahti on matala, '
+                + 'ja se on ratkaissut paljon: isot laivat eivät päässeet '
+                + 'satamaan ennen kuin syväsatama valmistui 1970-luvulla. '
+                + 'Sen jälkeen rantaa on muokattu rajusti, ja lahdesta on '
+                + 'tullut kaaren muotoinen. Helmi-saaren ensimmäinen osa '
+                + 'avattiin vuonna 2004 West Bayn edustalle. Vanhat '
+                + 'korttelit kävivät samaan aikaan päinvastaista tietä: '
+                + 'al-Najada, al-Asmakh ja vanha al-Hitmi rappeutuivat '
+                + 'itsenäistymisen jälkeen, ja suuri osa niiden vanhasta '
+                + 'rakennuskannasta purettiin, kun huomio siirtyi lahden '
+                + 'rannalle al-Dafnaan ja West Bayhin.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: karak',
+              teksti: 'Kahvi on juhlava juoma, karak arkinen. Se on teetä, '
+                + 'jota haudutetaan mausteiden kanssa ja johon lisätään '
+                + 'haihdutettua maitoa; väri on kirkkaan oranssi ja '
+                + 'mausteina ovat kardemumma, sahrami ja sokeri. Karak on '
+                + 'suosittu, mutta paikallisten keskuudessa se ei ole yhtä '
+                + 'yleinen kuin gahwa eli arabialainen kahvi, joka '
+                + 'tarjoillaan perinteisesti taatelien kanssa. Kahvin '
+                + 'valmistus on Qatarin kodeissa oma taitonsa: pavut '
+                + 'valitaan huolella ja mausteina käytetään sahramia, '
+                + 'kardemummaa ja neilikkaa. Nykyään seurustelu on '
+                + 'siirtynyt vanhoista kahvihuoneista majlis-tiloihin ja '
+                + 'toisaalta kaupungin uusiin erikoiskahviloihin.',
+              kuva: {
+                tiedosto: 'Karak Tea.jpg',
+                selite: 'Karak-tee pahvimukissa ylhäältä kuvattuna. Neste '
+                  + 'on vaaleanruskeaa, reunoilla on rengas hienoa '
+                  + 'vaahtoa, ja mukin alla on rypistynyttä paperia.',
+                lahde: 'Gaurav Dhwaj Khadka, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: helmistä öljyyn',
+              teksti: 'Ennen öljyä kaupunki eli helmistä. Vuonna 1907 '
+                + 'Dohassa oli kolmesataaviisikymmentä helmivenettä ja '
+                + 'niiden miehistöissä 6 300 miestä, ja helmien '
+                + 'keskihinta oli yli kaksinkertaistunut vuodesta 1877. '
+                + 'Samana vuonna markkinat romahtivat: hallitsija Jassim '
+                + 'Al Thani joutui myymään koko vuoden saaliin puoleen '
+                + 'hintaan, ja seurauksena kaupunkiin perustettiin maan '
+                + 'ensimmäinen tullikamari. Lopullisesti elinkeinon '
+                + 'veivät viljelty helmi ja 1930-luvun lama, ja väkiluku '
+                + 'kääntyi laskuun. Öljyä porattiin ensimmäisen kerran '
+                + 'vuonna 1939, mutta tulot alkoivat kertyä vasta '
+                + '1950- ja 1960-luvuilla. Silloin kaupunki kasvoi '
+                + 'nopeasti: asukasluku nousi noin neljästätoista '
+                + 'tuhannesta yli kahdeksaankymmeneenkolmeen tuhanteen, '
+                + 'ja tulijoista kaksi kolmasosaa oli ulkomaalaisia.',
+              kuva: {
+                tiedosto: 'Doha Dhow Harbour 07.jpg',
+                selite: 'Puinen dhow-purjelaiva ankkurissa tyynessä '
+                  + 'satamassa. Rungon takana kulkee palmurivi ja '
+                  + 'matalia taloja, joiden joukossa on kullanvärinen '
+                  + 'lasijulkisivu.',
+                lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Dohan vuosi jakautuu jyrkästi kahtia. '
+                + 'Touko–lokakuussa sadetta ei kirjaudu ainuttakaan '
+                + 'millimetriä, ja touko–syyskuussa kuukauden keskilämpö '
+                + 'on yli kolmenkymmenen asteen: heinäkuussa '
+                + 'kolmekymmentäviisi ja päivän ylin neljäkymmentäyksi. '
+                + 'Talvi on aivan toinen kaupunki. Tammikuun keskilämpö '
+                + 'on vajaat kahdeksantoista astetta, päivällä '
+                + 'kaksikymmentäyksi ja yöllä neljätoista, mikä on '
+                + 'Välimeren kevään luokkaa. Koko vuoden sade, '
+                + 'kuutisenkymmentä millimetriä, mahtuu marraskuun ja '
+                + 'huhtikuun väliin ja tulee lyhyinä ryöppyinä. '
+                + 'Rantakadulla kannattaa siis kävellä marras–maaliskuussa '
+                + 'ja kesällä siirtyä sisätiloihin.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'ruoka',
@@ -22668,6 +22866,65 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'TSCKuwait, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * VAIHE B, ERÄ 3 (Opus 20.8.2026): Kuwaitin lehteen on lisätty
+       * avauskuvat ja matkaopas. Nostoihin, kansikuviin, johdantoon,
+       * arkisivuun ja visaan ei ole koskettu. Faktat on tarkistettu
+       * en-Wikipedian artikkeleista Kuwait City, Kuwait, Kuwait Bay,
+       * Failaka Island, Kuwait International Airport ja Dewaniya
+       * (haettu 20.8.2026).
+       *
+       * SÄÄRIVIN MITTAUSPISTE, JOKA ON SELITETTY AUKI: lehden
+       * arkisivun nosto kertoo heinäkuun ylimmäksi 46,6 astetta
+       * kaupungin oman sääaseman mukaan, kun taas saatiedot.js:n rivi
+       * antaa heinäkuun ylimmäksi 44 astetta ja keskilämmöksi 37,6.
+       * Ero on mittaustavassa: rivi on ERA5-ruutu, joka keskiarvoistaa
+       * myös lahden vettä, ja asemalukema on yksi piste asfaltin
+       * keskellä. Molemmat ovat oikein, ja ero kerrotaan oppaan
+       * sääjaksossa (Siinai- ja Petra-ennakkotapaus).
+       *
+       * POIS JÄTETTY: vuoden 1990 miehitys ja Persianlahden sota sekä
+       * kaikki vuoden 2026 tapahtumat, jotka ovat lentoaseman
+       * artikkelissa. Sisältölinjaus 20.8.2026: ei nykysotaa eikä
+       * nykypolitiikkaa. Siksi oppaan lentoasemajakso kertoo vain
+       * rakennuksista ja etäisyyksistä, ei liikenteen nykytilasta.
+       *
+       * EI TOISTOA: Al-Hashemi-II, Tareq Rajab -museo ja
+       * kansalliskokouksen talo ovat lehden omia nostoja, ja
+       * KWT-maalehti kertoo Jahran kosteikosta ja Aasian kuumimmasta
+       * mittauksesta — siksi opas ei mainitse niitä. Purjelaiva- ja
+       * helmenkalastuselinkeino on visan aihe, ja nyt se löytyy myös
+       * lehden tekstistä.
+       *
+       * KUVAT: kolme avauskuvaa, matkailijalle-kuva ja kolme
+       * jaksokuvaa; kaksi jaksoa on kuvatta (Tukholma-ennakkotapaus).
+       * Diwaniya-jakso jäi kuvattomaksi, koska Commonsista ei löydy
+       * yhtään vapaata kuvaa kuwaitilaisesta diwaniyasta.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Kuwait City Skyline 1.jpg',
+          selite: 'Kuwait Cityn tornit päivällä. Etualalla on matalia '
+            + 'taloja, moskeijan minareetteja, pysäköintikenttiä ja '
+            + 'hiekkaisia tyhjiä tontteja, ja niiden takana nousee '
+            + 'liikekeskustan lasitornien rivi.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Antiquities of Failaka island 01.JPG',
+          selite: 'Kaivausalue Failakan saarella. Matalat savi- ja '
+            + 'kivimuurit muodostavat huoneiden pohjia, maa on hiekkaa, '
+            + 'ja alueen takana kulkee köysiaita ja sen takana merenpinta.',
+          lahde: 'Bo hessin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Al Shaheed Park, Kuwait.jpg',
+          selite: 'Al Shaheedin puisto illalla. Kivetyllä aukiolla seisoo '
+            + 'rivi hoikkia valaisinmastoja, puiden takana loistavat '
+            + 'valaistut tornit, ja oikealla odottaa pieni sähkökärry.',
+          lahde: 'Salwa Farwaneh Dameh, Wikimedia Commons (CC0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Laivaa ei ole koskaan laskettu vesille',
@@ -22729,6 +22986,158 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kuwait International Airport.jpg',
+          selite: 'Lentoaseman pyöreä halli sisältä. Vihreiksi verhotut '
+            + 'pilarit kannattavat kaarevaa kattoa, jonka rakoja pitkin '
+            + 'kulkee valorivistö; keskellä on liukuportaat ja niiden '
+            + 'ympärillä rengas punaisia istuimia.',
+          lahde: 'Dhaval Surana, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Kuwait City on Kuwaitinlahden eteläisellä rannalla '
+          + 'Persianlahden pohjukassa. Kaupunkiseudulla asui vuonna 2018 '
+          + 'noin kolme miljoonaa ihmistä eli yli seitsemänkymmentä '
+          + 'prosenttia koko maan väestöstä. Kaupungilla itsellään ei '
+          + 'ole hallinnollista asemaa: kaikkiin maan kuuteen '
+          + 'kuvernoraattiin kuuluu paloja samasta taajamasta, ja '
+          + 'suppeassa merkityksessä Kuwait City tarkoittaa vain vanhaa '
+          + 'ydintä pääkaupunkikuvernoraatissa.',
+        artikkeli: {
+          nimi: 'Matkailijan Kuwait',
+          taitto: 'opas',
+          teksti: 'Lahden pohjukan kaupunki, jolla ei ole omaa '
+            + 'hallinnollista rajaa ja jonka edustalla on saari.',
+          nosto: 'Ptolemaios mainitsi lahden noin vuonna 150 nimellä Hieros '
+            + 'Kolpos, latinaksi Sacer Sinus eli pyhä lahti. Aleksanteri '
+            + 'Suuren aikaan Eufrat laski Persianlahteen Khor Subiyan '
+            + 'uomaa pitkin nykyisen Pohjois-Kuwaitin kohdalla, ja '
+            + 'Failakan saari oli viidentoista kilometrin päässä '
+            + 'joensuusta. Ensimmäisellä vuosisadalla eaa. uoma kuivui '
+            + 'kokonaan. Saarelle kreikkalaiset antoivat nimen Ikaros: '
+            + 'Strabonin ja Arrianoksen mukaan Aleksanteri nimesi sen '
+            + 'Egeanmeren samannimisen saaren mukaan, koska ne '
+            + 'muistuttivat toisiaan kooltaan ja muodoltaan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kuwaitin kansainvälinen lentoasema on Farwaniyan '
+                + 'kuvernoraatissa 15,5 kilometrin päässä keskustasta '
+                + 'etelään, ja alaa sillä on 37,7 neliökilometriä. '
+                + 'Ykkösterminaalin piirsi japanilainen Kenzo Tange, ja '
+                + 'se avattiin vuonna 1979. Nelosterminaali vihittiin 8. '
+                + 'elokuuta 2018: se on 55 000 neliömetriä, siinä on '
+                + 'viisi bussiporttia ja yhdeksän matkustajasiltaa, ja '
+                + 'kerralla siihen mahtuu kahdeksan konetta. '
+                + 'Vuosikapasiteetti on 4,5 miljoonaa matkustajaa ja '
+                + 'pysäköintipaikkoja 2 450, ja pysäköintialueelta '
+                + 'terminaaliin pääsee siltaa pitkin. Kenttä on kahden '
+                + 'kotimaisen lentoyhtiön tukikohta. Meritse kaupunkia '
+                + 'palvelevat Shuwaikhin ja Ahmadin satamat.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Lahti on Persianlahden pohjoisin pohjukka, ja se on '
+                + 'jokien tekemä: Tigrisin ja Eufratin tuoma aines '
+                + 'muodosti suiston, joka on suurin osa nykyisen '
+                + 'Kuwaitin maasta ja joka piirsi rantaviivat sellaisiksi '
+                + 'kuin ne nyt ovat. Pohjoinen Kuwait kuului '
+                + 'historiallisesti muinaiseen Mesopotamiaan. Ihmisiä on '
+                + 'ollut lahden äärellä kauan: eteläisen Kuwaitin '
+                + 'Burganista on löytynyt keskikivikautisia työkaluja '
+                + 'noin vuodelta 8000 eaa., uudella kivikaudella '
+                + 'täällä kohtasivat Mesopotamian ja Itä-Arabian väet, ja '
+                + 'Subiyan H3-paikalta on löytynyt yksi maailman '
+                + 'vanhimmista ruokoveneistä. Vuosina 4000–2000 eaa. '
+                + 'lahtea hallitsi Dilmun, jonka piiriin kuuluivat myös '
+                + 'Akkaz, Umm an Namil ja Failaka. Suurin osa lahden '
+                + 'pohjasta on yhä arkeologisesti tutkimatta.',
+              kuva: {
+                tiedosto: 'Sulaibikhat District (Aerial view).jpg',
+                selite: 'Kuwaitinlahden ranta suoraan ylhäältä kuvattuna '
+                  + 'Sulaibikhatin kohdalla. Okranruskean lieju halkeaa '
+                  + 'mutkittelevaksi uomaksi, josta haarautuu ohuita '
+                  + 'sivu-uomia kuin puun oksia.',
+                lahde: 'Di7ane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: diwaniya',
+              teksti: 'Diwaniya on huone ja tilaisuus samalla kertaa. '
+                + 'Alun perin se oli vastaanottohuone, jossa talon isäntä '
+                + 'otti vastaan liikekumppanit ja miesvieraat; nykyään '
+                + 'sana tarkoittaa sekä salia että siellä pidettävää '
+                + 'kokoontumista. Nimi tulee persian sanasta divan, joka '
+                + 'palautuu sumerin savitaulua tarkoittavaan sanaan dub '
+                + 'ja jonka merkitys on kulkenut kirjasta '
+                + 'tilikamariin ja siitä neuvotteluhuoneeseen. '
+                + 'Kuwaitissa diwaniya on ollut kahdensadanviidenkymmenen '
+                + 'vuoden ajan tapa saada viesti kulkemaan ja päätös '
+                + 'syntymään. Se on yhä maan seuraelämän, liike-elämän ja '
+                + 'julkisen keskustelun ydin: muodollisiin diwaniyoihin '
+                + 'kutsutaan puhujia, ja niitä pidetään myös vaalien '
+                + 'alla.',
+            },
+            {
+              otsikko: 'Historian käänne: purjelaivoista öljyyn',
+              teksti: '1700-luvun alkupuolella paikalla oli pieni '
+                + 'kalastajakylä. Vuosisadan puolivälissä sinne asettui '
+                + 'Bani Utub, ja kylästä kasvoi kauttakulkupaikka Intian, '
+                + 'Masqatin, Bagdadin, Persian ja Arabian välillä. Kun '
+                + 'Basraa piiritettiin vuosina 1775–1779, sieltä paenneet '
+                + 'kauppiaat toivat mukanaan laivanrakennuksen, ja '
+                + 'kauppareitit Bagdadiin, Aleppoon, Smyrnaan ja '
+                + 'Konstantinopoliin kääntyivät Kuwaitin kautta; vuonna '
+                + '1792 myös Itä-Intian kauppakomppania siirsi asiansa '
+                + 'tänne. Kuwaitista tuli Persianlahden laivanveiston '
+                + 'keskus, ja sen aluksilla kulki suuri osa Intian, '
+                + 'Itä-Afrikan ja Punaisenmeren satamien kaupasta. '
+                + 'Vuonna 1937 brittiläinen matkakirjailija Freya Stark '
+                + 'kirjoitti kaupungin köyhtyneen, kun helmikauppa hiipui. '
+                + 'Samana vuonna löytyi öljy. Vuonna 1950 alkoi laaja '
+                + 'julkinen rakennusohjelma, vuonna 1952 maa oli '
+                + 'Persianlahden suurin öljynviejä ja hyväksyi uuden '
+                + 'yleiskaavan, ja kesäkuussa 1961 siitä tuli '
+                + 'itsenäinen.',
+              kuva: {
+                tiedosto: 'Kuwait City Dhow Harbour 05.jpg',
+                selite: 'Puisia dhow-kalastusaluksia kiinni laiturissa '
+                  + 'rivissä. Lähimmän rungon punaruskea maali on '
+                  + 'kulunut, kannella on tavaraa ja tankoja, ja takana '
+                  + 'kulkee kivinen aallonmurtaja.',
+                lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kesä kannattaa jättää väliin. Heinäkuun keskilämpö '
+                + 'on lähes kolmekymmentäkahdeksan astetta ja päivän ylin '
+                + 'neljäkymmentäneljä, ja kesäkuusta syyskuuhun sadetta '
+                + 'ei kirjaudu lainkaan. Nämä luvut ovat ERA5-ruudusta, '
+                + 'joka keskiarvoistaa mukaan myös lahden veden; '
+                + 'kaupungin oma sääasema mittaa asfaltin keskellä '
+                + 'korkeampia lukemia, ja siksi lehden arkisivu antaa '
+                + 'heinäkuun ylimmäksi vielä pari astetta enemmän. Kesään '
+                + 'kuuluu myös shamal, luoteesta puhaltava tuuli, joka on '
+                + 'kesä- ja heinäkuussa tavallinen ja nostaa hiekkamyrskyjä; '
+                + 'hiekkaa voi tulla mihin aikaan vuodesta tahansa, mutta '
+                + 'useimmiten kesällä ja harvemmin syksyllä. Talvi on '
+                + 'lyhyt ja siedettävä: tammikuun keskilämpö on runsaat '
+                + 'kolmetoista astetta, päivällä seitsemäntoista ja yöllä '
+                + 'kymmenen. Sadetta kertyy vuodessa runsaat sata '
+                + 'millimetriä, ja se tulee marras–maaliskuussa.',
+              kuva: {
+                tiedosto: 'Great sunset view from gulf street - July 2025.jpg',
+                selite: 'Ilta rantakadulla. Tummat lehvät kehystävät '
+                  + 'kuvan ylälaidan, edessä kulkee kävelytie ja meri, ja '
+                  + 'vastarannalla erottuu kaupungin siluetti oranssia '
+                  + 'taivasta vasten.',
+                lahde: 'Zs.84, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
@@ -25781,6 +26190,75 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
+      /*
+       * VAIHE B, ERÄ 3 (Opus 20.8.2026): Riadin lehteen on lisätty
+       * avauskuvat ja matkaopas. Nostoihin, kansikuviin, johdantoon
+       * ja visaan ei ole koskettu. Faktat on tarkistettu
+       * en-Wikipedian artikkeleista Riyadh, King Khalid International
+       * Airport, Saudi Arabia Railways, Tuwaiq, Wadi Hanifa, Najd,
+       * Diriyah, At-Turaif District ja Riyadh Season (haettu
+       * 20.8.2026).
+       *
+       * KOLME RISTIRIITAA, JOTKA ON RATKAISTU:
+       * 1) Korkeus merenpinnasta. Riyadh-artikkelin tietolaatikko
+       *    sanoo 612 metriä, sama artikkelin leipäteksti "noin 600
+       *    metriä". Opas kertoo molemmat.
+       * 2) Kaupunginosien määrä. Tietolaatikko puhuu viidestätoista
+       *    kunnallisesta piiristä, leipäteksti neljästätoista
+       *    alakunnasta ja niiden lisäksi diplomaattikaupunginosasta.
+       *    Opas käyttää leipätekstin jakoa ja mainitsee eron.
+       * 3) Diriyahin piirityksen kesto vuonna 1818. Diriyah-artikkeli
+       *    antaa samassa jutussa sekä "lähes vuoden" että "kuusi
+       *    kuukautta". Ero on kirjoitettu auki lukijalle.
+       *
+       * POIS JÄTETTY: piirityksen tappioluvut (sisältölinjaus:
+       * väkivalta vain neutraalina historiana ilman yksityiskohtia)
+       * ja Jenadriyah-festivaali, jonka nykytilanne on artikkelissa
+       * kesken — tilalla on Riadin kausi, jonka kuukaudet ovat
+       * vakaita.
+       *
+       * EI TOISTOA: arabialainen kahvi on jo ARE-maalehden nostossa
+       * ("Kahvi kaadetaan kupin pohjalle"), joten arjen ilmiöksi
+       * valittiin Riadin ruudukko, joka näkyy myös jakson kuvassa.
+       * Metro, Kingdom Centre, al-Faisaliah ja savimuuri ovat lehden
+       * omia nostoja, joten opas ei kerro niitä uudelleen. Wabarin
+       * meteoriitin painoa ei mainita täällä lainkaan: sitova
+       * punnittu luku 2 045 kg pysyy vain nahtavyysjutut.js:n
+       * kansallismuseojutussa.
+       *
+       * KUVAT: kolme avauskuvaa, matkailijalle-kuva ja kolme
+       * jaksokuvaa; kaksi jaksoa on kuvatta (Tukholma-ennakkotapaus).
+       * Diriyah esiintyy kahdessa kuvassa: avauskuvassa ollaan
+       * raunioiden sisällä ja historiajakson kuvassa katsotaan
+       * laakson yli koko kaupunkiin. Eri tiedostot ja eri etäisyys —
+       * sama linja kuin Medinan Quba-moskeijassa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'At-Turaif District in ad-Dir\'iyah (5).jpg',
+          selite: 'Savitiilistä muurattuja seiniä At-Turaifin '
+            + 'raunioalueella. Seinien harjat on suojattu pyöreäksi '
+            + 'muotoillulla vaalealla rappauksella, seinissä on pieniä '
+            + 'reikiä, ja vasemmalla erottuu kunnostustyön teline.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+        {
+          tiedosto: 'Lake at Wadi Hanifah (5218227168).jpg',
+          selite: 'Wadi Hanifan pohjalle jäänyt vesi sateiden jälkeen. '
+            + 'Laakson yli kulkee pitkä pilarien varassa lepäävä silta, '
+            + 'ja rannalla on soratie, kalkkikivilohkareita ja nuoria '
+            + 'istutettuja puita.',
+          lahde: 'Peter Dowley from Dubai, United Arab Emirates, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'KING KHALED INTL.TER.1 - panoramio.jpg',
+          selite: 'Kuningas Khalidin lentoaseman ykkösterminaali '
+            + 'asematasolta nähtynä. Katto laskeutuu peräkkäisinä '
+            + 'holvikaarina, matkustajasillat työntyvät ulos punaisin '
+            + 'raidoin, ja edessä seisoo kaksi rahtikonttia.',
+          lahde: 'Kayhan ERTUGRUL, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Aukko nostaa talon määräyksen yli',
@@ -25847,6 +26325,157 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Hamza A. Durrani, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tuwaiq Escarpment (2981960802).jpg',
+          selite: 'Tuwaiqin jyrkänteen reuna Riadin länsipuolella. '
+            + 'Kivinen maa katkeaa äkisti, ja alapuolella aukeaa laakso, '
+            + 'joka häviää pölysumuun; kuvauspäivänä ilmassa oli hiekkaa '
+            + 'koko päivän.',
+          lahde: 'Peter Dowley from Dubai, United Arab Emirates, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Riad on Saudi-Arabian pääkaupunki ja Arabian niemimaan '
+          + 'suurin kaupunki: asukkaita oli vuonna 2022 seitsemän '
+          + 'miljoonaa. Kaupunki on Najdin ylätasangon itäosassa noin '
+          + 'kuudensadan metrin korkeudessa ja Wadi Hanifan itärannalla, '
+          + 'ja nykyisen muotonsa se sai 1950-luvulla, kun vanhan '
+          + 'kaupungin ympäriltä purettiin puolustusvarustukset. '
+          + 'Matkailijoita käy vuodessa noin viisi miljoonaa: maailman '
+          + 'vierailluimpien kaupunkien listalla se on sija 49 ja '
+          + 'Lähi-idässä kuudes.',
+        artikkeli: {
+          nimi: 'Matkailijan Riad',
+          taitto: 'opas',
+          teksti: 'Ylätasangon ruudukko, jonka länsilaidalla kulkee kuiva '
+            + 'laakso ja jonka takana maa katkeaa jyrkänteeksi.',
+          nosto: 'Tuwaiq on kapea jyrkänne, joka halkoo Najdin ylätasangon '
+            + 'noin kahdeksansadan kilometrin matkalla Qasimin '
+            + 'eteläreunalta Rub al-Khalin pohjoislaidalle ja kohoaa '
+            + 'kuuteensataan metriin. Itäpuoli laskee loivasti, '
+            + 'länsipuoli katkeaa äkisti. Muoto on oikeastaan kapea '
+            + 'ylätasanko, mutta paikalliset sanovat sitä vuoreksi. '
+            + 'Sadan kilometrin päässä '
+            + 'Riadista luoteeseen on Jabal Fihrayn eli Maailman reuna, '
+            + '1 131 metriä korkea kallionreuna, joka putoaa kolmesataa '
+            + 'metriä muinaisen merenpohjan päälle.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kuningas Khalidin kansainvälinen lentoasema on '
+                + 'kolmenkymmenenviiden kilometrin päässä keskustasta '
+                + 'pohjoiseen. Kuningas Fahd avasi sen 16. marraskuuta '
+                + '1983, ja aikataulunmukaiset lennot alkoivat saman '
+                + 'vuoden 5. joulukuuta. Terminaaleja on neljä, '
+                + 'pysäköintipaikkoja 11 600 autolle, ja lennonjohtotorni '
+                + 'on yksi maailman korkeimmista. Sitä ennen liikenne '
+                + 'kulki vanhan kentän kautta, joka suljettiin vuonna '
+                + '2021 ja jonka paikalle rakennetaan puistoa. Junalla '
+                + 'pääsee kahteen suuntaan: pohjoisen rata vie Majmaahin, '
+                + 'Hailin, Qassimin ja Joufin kautta Qurayyatiin, ja sillä '
+                + 'kulkee myös makuuvaunujunia, kun taas itään mennään '
+                + 'Hofufin ja Abqaiqin kautta Dammamiin. Radat siirtyivät '
+                + 'yhdelle yhtiölle 1. huhtikuuta 2021, kun kaksi vanhaa '
+                + 'rautatieyhtiötä yhdistettiin.',
+              kuva: {
+                tiedosto: 'SAR passenger train near Dhahran, Saudi Arabia August 2025 (1).jpg',
+                selite: 'Saudi-Arabian rautateiden matkustajajuna kiitää '
+                  + 'aavikon halki. Vaunut ovat hopeanharmaita ja niiden '
+                  + 'kyljessä on sininen raita; kuva on Dammamin ja Riadin '
+                  + 'välisen radan itäpäästä Dhahranin luota.',
+                lahde: 'Zach1055, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Riad on Najdin ylätasangon itäosassa. Korkeudeksi '
+                + 'kerrotaan noin kuusisataa metriä, tarkemmin '
+                + 'kuusisataakaksitoista, ja alaa kaupungilla on 1 973 '
+                + 'neliökilometriä. Kaupungin läpi kulkee Wadi Hanifa, '
+                + 'sadankahdenkymmenen kilometrin mittainen kausiuoma, '
+                + 'joka virtaa luoteesta kaakkoon. Vanha kaupunki on '
+                + 'uoman koillispuolella, mutta nykyinen kaupunki on '
+                + 'levinnyt myös toiselle rannalle. Saman laakson varrella '
+                + 'ovat Uyaynah, Irqah ja Diriyah. Sadetta tulee laakson '
+                + 'kuivimmissa kohdissa kuutisenkymmentä millimetriä '
+                + 'vuodessa, ja se tulee lyhyinä rankkoina ryöppyinä, '
+                + 'jotka saavat uoman hetkeksi tulvimaan. Lännessä maa '
+                + 'katkeaa Tuwaiqin jyrkänteeseen.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: ruudukko',
+              teksti: 'Riadin kartta on ruudukko, ja se on piirretty '
+                + 'tarkoituksella. Kunnallishallinto valitsi vuonna 1968 '
+                + 'kreikkalaisen Doxiadis Associatesin laatimaan '
+                + 'kaupungille yleiskaavan, ja suunnitelma hyväksyttiin '
+                + 'vuonna 1972. Sen mukaan kaupunki kasvaisi '
+                + 'pohjois-eteläsuunnassa liikeakselin varrella ja '
+                + 'jakautuisi kahden kertaa kahden kilometrin kortteleihin. '
+                + 'Juuri niin kävi, ja ruudukosta tuli kaupungin '
+                + 'tunnusmerkki. Asuintaloiksi vakiintui Malazin '
+                + 'kaupunginosassa aloitettu malli: erillinen talo, jonka '
+                + 'ja kadun väliin jää etäisyys. Kaupunki jakautuu '
+                + 'nykyään neljääntoista alakuntaan ja niiden lisäksi '
+                + 'diplomaattikaupunginosaan — tietolaatikko puhuu '
+                + 'viidestätoista piiristä, eli lukutapoja on kaksi — ja '
+                + 'kaupunginosia on yli satakolmekymmentä. Kaupallinen '
+                + 'keskus on al-Olaya, vanhin osa al-Bat\'ha ja al-Deerah.',
+              kuva: {
+                tiedosto: 'Riyadh, Saudi Arabia\'s capital and largest city (iss072e445326).jpg',
+                selite: 'Riad yöllä avaruusasemalta kuvattuna. Katuvalot '
+                  + 'piirtävät kaupungin ruudukon selvästi näkyviin, ja '
+                  + 'ruudukon reunoilta lähtee oransseja teitä ulos '
+                  + 'pimeään aavikkoon.',
+                lahde: 'NASA Johnson Space Center, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: Diriyah',
+              teksti: 'Kaupungin vanhempi kaksonen on aivan Riadin '
+                + 'luoteislaidalla. Diriyah perustettiin '
+                + 'vuosina 1446–1447, ja vuodesta 1727 se oli oman '
+                + 'ruhtinaskuntansa pääkaupunki. Vuonna 1744 sen '
+                + 'hallitsija Muhammad ibn Saud otti luokseen '
+                + 'uskonoppineen Muhammad ibn Abd al-Wahhabin, ja siitä '
+                + 'liitosta syntyi valtio, joka ulotti valtansa suureen '
+                + 'osaan niemimaata. Vuonna 1818 osmanien ja Egyptin '
+                + 'joukot ottivat kaupungin piirityksen jälkeen ja '
+                + 'määräsivät sen hävitettäväksi; piirityksen kestosta '
+                + 'lähde antaa kaksi lukemaa, lähes vuoden ja kuusi '
+                + 'kuukautta. Asukkaat muuttivat Riadiin, ja kun '
+                + 'Saudi-suku nousi uudelleen vuosina 1824 ja 1902, '
+                + 'pääkaupunki oli Riad eikä Diriyah. Raunioiden '
+                + 'kunnostus alkoi vuonna 2000, ja At-Turaifin kortteli '
+                + 'liitettiin maailmanperintöluetteloon 31. heinäkuuta '
+                + '2010.',
+              kuva: {
+                tiedosto: 'At-Turaif District in ad-Dir\'iyah (1).jpg',
+                selite: 'At-Turaif laakson toiselta puolelta katsottuna. '
+                  + 'Etualalla on kivetty puisto, nurmea ja '
+                  + 'taatelipalmuja, ja niiden takana kohoaa '
+                  + 'hiekanvärinen savitiilikaupunki, jonka keskellä on '
+                  + 'muita korkeampi palatsirakennus.',
+                lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Riadissa vuoden sade mahtuu seitsemäänkymmeneen '
+                + 'millimetriin, ja kesäkuusta syyskuuhun sitä ei tule '
+                + 'lainkaan. Kesällä keskilämpö on heinäkuussa '
+                + 'kolmekymmentäkuusi astetta ja päivän ylin '
+                + 'neljäkymmentäneljä, joten ulkona liikkuminen on '
+                + 'aamun ja illan asia. Tammikuussa keskilämpö on '
+                + 'neljätoista astetta, päivällä kaksikymmentä ja yöllä '
+                + 'kahdeksan; kuiva ylätasanko jäähtyy yöksi nopeasti. '
+                + 'Sateisin kuukausi on huhtikuu neljällätoista '
+                + 'millimetrillä. Vuodenaika näkyy myös ohjelmassa: '
+                + 'Riadin kausi, joka avattiin ensimmäisen kerran 11. '
+                + 'lokakuuta 2019, kestää lokakuusta maaliskuuhun eli '
+                + 'täsmälleen sen ajan, jonka kaupungissa jaksaa kävellä.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
