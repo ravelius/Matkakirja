@@ -1393,8 +1393,9 @@ export const SAATIEDOT = {
    * matkaoppaassa, jottei lukija oleta rivin kuvaavan koko niemimaata.
    *
    * Menetelmä on paketin oma: Open-Meteon arkisto (ERA5), jakso
-   * 1991–2020. Vuosisade on vain 46 millimetriä, mikä on paketin
-   * kuivin rivi.
+   * 1991–2020. Vuosisade on vain 46 millimetriä — Lähi-idän uusista
+   * riveistä kuivimpia, joskin Medina (40 mm) ja ennen kaikkea Luxor
+   * (pari millimetriä) jäävät alle.
    */
   siinai: {
     lat: 28.5644,
@@ -1424,9 +1425,9 @@ export const SAATIEDOT = {
    * Kaupunki on 589 neliökilometriä laaja ja sen laidoilla nousee
    * laavakenttiä, joten reunoilla luvut ovat toiset kuin keskustassa.
    *
-   * Vuosisade on neljäkymmentä millimetriä, mikä on paketin kuivin
-   * rivi — Siinain lohkon kommentti tämän yläpuolella on siltä osin
-   * vanhentunut.
+   * Vuosisade on neljäkymmentä millimetriä — vähemmän kuin Siinailla
+   * (46 mm), mutta koko paketin kuivin rivi on yhä Luxor, jolla
+   * ERA5:n normaaleissa sataa vain pari millimetriä vuodessa.
    */
   medina: {
     lat: 24.47,

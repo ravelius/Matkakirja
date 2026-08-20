@@ -10540,7 +10540,7 @@ export const NAHTAVYYSJUTUT = {
           + 'jokaisessa maailman moskeijassa: rukoussuunta siirtyi '
           + 'Jerusalemista Mekan Kaabaan. Muslimien perimätiedon mukaan '
           + 'Muhammad sai käskyn juuri täällä kesken keskipäivän '
-          + 'rukouksen. Moskeija on noin viiden kilometrin päässä '
+          + 'rukouksen. Moskeija on vajaan neljän kilometrin päässä '
           + 'Profeetan moskeijasta luoteeseen.'
           + '\n\n'
           + 'Siitä tuli yksi maailman kahdesta moskeijasta, joissa on '
