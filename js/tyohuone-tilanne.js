@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v958 — KARTTAKORJAUS: kohdekartat nakyvat taas kaupungeissa, joiden kartta on piirretty ilman piirtoRajat-lohkoa (koko Lahi-ita v937+, Kioto, Vladivostok ym. — kehys jai 0-korkuiseksi v892:n kokokontin takia). Lisaksi tekstiremontti R4+R5: Sanaa, Aden, Masqat, Tabriz, Riad, Doha, Kuwait, Salalah uuteen tekstiasuun (182 kuvatekstia yhteen virkkeeseen). Tarkista: Medinan/Mekan/Persepoliksen kartta nakyy, pari R4/R5-etusivua',
   'v957 — Tekstiremontti R2+R3: Jerusalem, Siinai, Persepolis, Rub al-Khali, Mosul, Halab, Damaskos, Luxor — introt 7–10 virkkeen johdatuksiksi kappalein ja boldauksin, 204 kuvatekstia yhteen virkkeeseen, karttaesittelyt lyhyiksi. Tarkista muutaman lehden etusivu',
   'v956 — Etusivun leipateksti kahdelle palstalle, kappaleisiin ja boldauksin; tekstiremontti R1: Medina ja Mekka (intro 7–10 virketta, kuvatekstit 1 virke, karttaesittely lyhyt) + Isfahanin ja Kioton kuvatekstit 1 virkkeeseen. Tarkista: Isfahan/Medina/Mekka etusivu',
   'v955 — Kioto: uusi lehti (kartta 10 kohteella, 8,0×9,3 km ruutukaava ilman kainaloa) — ensimmainen uudella tekstilinjalla alusta asti. Tarkista kartta, Matkaopas, Historian tehtava',

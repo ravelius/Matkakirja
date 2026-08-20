@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 958, teksti: 'v958: karttakorjaus + tekstiremontti R4+R5' },
   { v: 957, teksti: 'v957: tekstiremontti R2+R3 — 8 lehteä' },
   { v: 956, teksti: 'v956: palstataitto ja tekstiremontti R1' },
   { v: 955, teksti: 'v955: Kioto — uusi lehti uudella tekstilinjalla' },

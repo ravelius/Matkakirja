@@ -2910,15 +2910,21 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 38.085, etela: 38.07, lansi: 46.286, ita: 46.304,
     },
-    esittely: 'Tabrizin keskusta on kartalla ruutu, jonka poikki kulkee '
-      + 'kaksi leveää väylää ja jonka koillisnurkassa mutkittelee joen '
-      + 'uoma tienpenkereiden välissä. Pohjoisosassa kujaverkko tihenee '
-      + 'ja rakennusten ääriviivoja on tiheässä: siellä on basaari, joka '
-      + 'ei ole yksi halli vaan katettujen kujien ja pihojen verkosto.\n\n'
-      + 'Muualla kadut ovat pitkiä ja suoria ja liikenneympyrät '
-      + 'erottuvat selvästi. Kohteet jakautuvat kahteen ryhmään: '
-      + 'basaari ja perustuslakitalo ylhäällä, ja alempana Arg, '
-      + 'Saat-torni, museo ja Sininen moskeija samalla itä-länsi-linjalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä R4, Raamattu "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä kohteita alueella on ja miksi ne
+     * kiinnostavat; kartan väylien, liikenneympyröiden ja jokiuoman
+     * kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Tabrizin keskusta. Pohjoisosassa on katettu '
+      + 'basaari, joka ei ole yksi halli vaan verkosto kujia, pihoja ja '
+      + 'pienoisbasaareja, ja aivan sen kyljessä on Perustuslakitalo, '
+      + 'basaarikauppiaan vuonna 1868 rakennuttama qajar-kauden talo. '
+      + 'Etelämpänä samalla itä–länsi-linjalla ovat Arg eli 1300-luvulla '
+      + 'keskeneräiseksi jääneen suurmoskeijan muurinpala, kaupungintaloksi '
+      + 'vuonna 1934 valmistunut Saat-torni, Azerbaidžanin museo ja vuonna '
+      + '1465 valmistunut Sininen moskeija. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       { nimi: 'Tabrizin basaari', lat: 38.0808, lon: 46.2922 },
       { nimi: 'Perustuslakitalo', lat: 38.0829, lon: 46.2899 },
@@ -2934,15 +2940,20 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 24.65, etela: 24.628, lansi: 46.7, ita: 46.722,
     },
-    esittely: 'Riadin kartalla on kaksi päätä. Alalaidassa on vanha '
-      + 'ydin: Masmakin linnoitus ja Imam Turkin suurmoskeija ovat '
-      + 'parinsadan metrin päässä toisistaan, ja niiden ympärillä '
-      + 'korttelit ovat pieniä. Ylälaidassa on Murabban kortteli, jonne '
-      + 'hallinto siirtyi vanhan ytimen ulkopuolelle.\n\n'
-      + 'Kahden pään väli on runsaat kaksi kilometriä, ja se näkyy '
-      + 'kartalla leveinä suorina väylinä. Korttelit ovat ympärillä '
-      + 'isoja, ja mittakaavaero vanhan ytimen ja muun kartan välillä '
-      + 'erottuu suoraan.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R5 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, laikkujen ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan eteläpäässä on vanhan Riadin ydin, jota savimuuri '
+      + 'kiersi vuoteen 1950 asti: Masmakin savitiililinnoitus ja Imam '
+      + 'Turkin suurmoskeija ovat siellä parinsadan metrin päässä '
+      + 'toisistaan. Pohjoispäässä on '
+      + 'Murabban kortteli, jonne hallinto siirtyi vanhan ytimen '
+      + 'ulkopuolelle, ja siellä ovat Murabban palatsi, Punainen palatsi, '
+      + 'vanha vesitorni ja Saudi-Arabian kansallismuseo. Kahden pään väli '
+      + 'on runsaat kaksi kilometriä.',
     kohteet: [
       { nimi: 'Masmakin linnoitus', lat: 24.6311, lon: 46.7133 },
       { nimi: 'Imam Turkin suurmoskeija', lat: 24.6307, lon: 46.7108 },
@@ -3136,25 +3147,22 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 23.6205, etela: 23.6085, lansi: 58.5805, ita: 58.602,
     },
-    esittely: 'Masqat ei ole yksi kaupunki vaan jono pieniä lahtia '
-      + 'vuorten välissä. Vanha Masqat on niistä itäisin: puolikuun '
-      + 'muotoinen poukama, jonka ympärillä kalliot nousevat suoraan '
-      + 'ylös. Juuri siksi kaupunki syntyi tähän — poukama on '
-      + 'luonnonsatama, jonne pääsee mereltä mutta jonne maitse '
-      + 'pääsee vain kahdesta portista. Portugalilaiset ottivat '
-      + 'sataman 1507 ja rakensivat sen suulle kaksi linnaketta, '
-      + 'Jalalin ja Miranin, jotka valvovat väylää edelleen. Muuri '
-      + 'kiersi kaupungin, ja portit suljettiin öisin vielä '
-      + '1970-luvulla.'
-      + '\n\n'
-      + 'Kartalla meri tulee sisään oikealta ja ylhäältä, ja '
-      + 'poukaman ympärillä kulkee ohut rantaviiva. Vanhankaupungin '
-      + 'kadut näkyvät keskellä pienenä tiheänä ruudukkona — se on '
-      + 'koko historiallinen Masqat, alle kilometrin levyinen. '
-      + 'Katkoviivat ovat vanhan kaupunginmuurin jäänteitä. '
-      + 'Ympärillä oleva vaalea ala ei ole tyhjää tonttimaata vaan '
-      + 'paljasta vuorta: siihen ei ole rakennettu, koska siihen ei '
-      + 'voi rakentaa. Kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä R4, Raamattu "TEKSTIEN PAINOPISTE"):
+     * esittelystä poistettiin koko toinen kappale, joka kuvaili kartan
+     * rantaviivaa, katkoviivoja ja vaaleaa alaa. Jäljelle jäi se, mitä
+     * alueella on ja miksi kaupunki syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on vanha Masqat, itäisin niistä pienistä lahdista, '
+      + 'joista kaupunki koostuu. Poukama on luonnonsatama, jonne pääsee '
+      + 'mereltä mutta maitse vain kahdesta portista, ja juuri siksi kaupunki '
+      + 'syntyi tähän; ympärillä nouseva paljas vuori on estänyt leviämisen, '
+      + 'joten historiallista Masqatia on alle kilometrin verran. '
+      + 'Portugalilaiset ottivat sataman vuonna 1507 ja linnoittivat sen suun '
+      + 'kahdella linnakkeella, al-Jalalilla ja al-Miranilla, jotka valvovat '
+      + 'väylää edelleen. Muuri kiersi kaupungin, ja portit suljettiin öisin '
+      + 'vielä 1970-luvulla. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       { nimi: 'Masqatin portti', lat: 23.6175, lon: 58.5869 },
       { nimi: 'Al-Miranin linnake', lat: 23.6172, lon: 58.5931 },
@@ -3181,24 +3189,20 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 29.392, etela: 29.366, lansi: 47.962, ita: 48.010,
     },
-    esittely: 'Kuwait City on rakennettu lahden kaarelle, ja koko '
-      + 'kaupunki katsoo veteen päin. Vanha kaupunki oli 1950-luvulle '
-      + 'asti pieni: muurin sisällä asui muutama kymmenentuhatta '
-      + 'ihmistä, ja muurin ulkopuolella alkoi aavikko. Öljy muutti '
-      + 'mittakaavan kerralla. Vanha savitiilikaupunki purettiin '
-      + 'lähes kokonaan 1950- ja 1960-luvuilla ja tilalle piirrettiin '
-      + 'uusi keskusta kehäteineen — juuri ne kaaret, jotka kartalla '
-      + 'erottuvat leveimpinä viivoina. Vanhasta kaupungista jäivät '
-      + 'jäljelle tori, muutama portti ja rannan palatsi.'
-      + '\n\n'
-      + 'Kartalla meri on ylhäällä ja vasemmalla. Rannassa erottuu '
-      + 'satamien suorakulmaisia altaita, ja oikeassa yläkulmassa '
-      + 'niemi työntyy veteen: siinä ovat Kuwait-tornit. Kehätiet '
-      + 'kaartavat rannan suuntaisesti, ja niiden väliin jäävät '
-      + 'korttelit ovat sitä tiheämpiä mitä lähempänä rantaa ollaan. '
-      + 'Vasemmassa alakulmassa näkyy pieni tiheä ruudukko: se on '
-      + 'vanhan torin kortteli, ainoa kohta jossa kadut ovat yhä '
-      + 'kapeita. Kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R5 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, laikkujen ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Kuwait Cityn rantakaari lahden etelärannalla. Vanha '
+      + 'savitiilikaupunki purettiin lähes kokonaan 1950- ja 1960-luvuilla '
+      + 'ja tilalle tuli kehäteiden jäsentämä uusi keskusta; vanhasta '
+      + 'kaupungista ovat kartalla jäljellä Mubarakiyan tori ja rannan '
+      + 'Seifin palatsi. Uudempaa aikaa edustavat niemen kärjessä seisovat '
+      + 'Kuwait-tornit, keskustan Al Hamra -torni ja Kuwaitin suurmoskeija. '
+      + 'Kudonnaisistaan tunnettu Sadu House on rannan tuntumassa palatsin '
+      + 'länsipuolella.',
     kohteet: [
       { nimi: 'Kuwait-tornit', lat: 29.3900, lon: 48.0031 },
       { nimi: 'Al Hamra -torni', lat: 29.3790, lon: 47.9932 },
@@ -3273,26 +3277,20 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 25.302, etela: 25.278, lansi: 51.518, ita: 51.556,
     },
-    esittely: 'Doha kasvoi matalan lahden pohjukkaan. Vielä 1900-luvun '
-      + 'alussa se oli helmenpyyntisatama, jonka talot seisoivat aivan '
-      + 'rantaviivassa: vesi tuli nykyisten kortteleiden kohdalle, ja '
-      + 'veneet vedettiin hiekalle. Öljyn jälkeen rantaa siirrettiin. '
-      + 'Lahden pohjukkaa täytettiin 1970- ja 1980-luvuilla niin '
-      + 'paljon, että syntyi kokonaan uutta maata, ja sen reunaa '
-      + 'kiertämään rakennettiin Corniche — seitsemän kilometrin '
-      + 'kaari, joka on kartan selvin muoto. Vanha kaupunki jäi sen '
-      + 'taakse sisämaahan: Souq Waqif ja Msheirebin kortteli ovat '
-      + 'siellä, missä ranta ennen oli.'
-      + '\n\n'
-      + 'Kartalla meri tulee sisään ylhäältä ja kaartaa vasemmalta '
-      + 'oikealle. Rantaviivan myötäistä kaarta seuraa leveä katu; se '
-      + 'on Corniche. Keskellä ylhäällä työntyy veteen niemeke, jonka '
-      + 'kärjessä on Islamilaisen taiteen museo omalla tekosaarellaan '
-      + '— se erottuu kartalta selvästi, koska sen ympärillä ei ole '
-      + 'mitään muuta. Oikeassa reunassa vesi työntyy takaisin maalle: '
-      + 'siellä on vanha satama. Cornichen eteläpuolella katuverkko '
-      + 'muuttuu tiheäksi kujien seitiksi, ja juuri siinä ovat tori ja '
-      + 'linnake. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R5 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, laikkujen ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Dohan rantakaari ja sen takana oleva vanha keskusta. '
+      + 'Rantabulevardi Corniche kiertää lahtea, jonka pohjukkaa täytettiin '
+      + '1970- ja 1980-luvuilla; kaaren pohjoispäässä on Islamilaisen '
+      + 'taiteen museo omalla tekosaarellaan ja idempänä Qatarin '
+      + 'kansallismuseo. Rannan takana sisämaassa, siellä missä ranta ennen '
+      + 'oli, ovat Souq Waqifin kujat, Al Koot -linnake ja uudelleen '
+      + 'rakennettu Msheirebin kortteli. Kaikki kuusi kohdetta ovat parin '
+      + 'kilometrin sisällä toisistaan.',
     kohteet: [
       /*
        * VESITARKISTIN VAROITTAA TÄSTÄ PISTEESTÄ, JA SE ON OIKEIN NÄIN.
@@ -5888,41 +5886,29 @@ export const KAUPUNKIKARTAT = {
    * kuin Medinan Quba: eri tiedosto ja eri näkökulma — nostot
    * kertovat torin tavaroista ja portin messinkirenkaista, jutut
    * kaupungin torikorttelista ja muurin porteista.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (erä R4, Raamattu "TEKSTIEN PAINOPISTE"):
+   * esittely lyheni 1 682 merkistä runsaaseen 700:aan. Pois jäi koko
+   * kartan kuvailu (kujaverkon merkintätavat, tummat muuripätkät) ja
+   * kaupungin dynastialuettelo, joka on nyt lehden etusivun
+   * leipätekstissä; jäljelle jäi se, mitä alueella on.
    */
   sana: {
     polku: 'assets/kartat/sana-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 15.363, etela: 15.348, lansi: 44.206, ita: 44.224 },
-    esittely: 'Sana on yksi maailman korkeimmalla sijaitsevista '
-      + 'pääkaupungeista: vanhakaupunki on runsaan 2 200 metrin '
-      + 'korkeudessa omannimisellään tasangolla, jota rajaavat idässä '
-      + 'Jabal Nuqum ja lännessä Jemenin korkeimman vuoren juuret. '
-      + 'Ensimmäinen tunnettu maininta kaupungista on 400-luvulta eKr. '
-      + 'muinaiseteläarabialaisella musnad-kirjoituksella, ja nimi '
-      + 'juontuu sabalaisesta sanasta masnaa, linnoitus. Saban '
-      + 'valtakunta perusti paikalle toisen pääkaupunkinsa '
-      + 'ensimmäisellä vuosisadalla jaa., ja al-Hamdanin mukaan '
-      + 'sabalaiset myös muurasivat kaupungin hallitsijansa Shar '
-      + 'Awtarin aikana. Islamin tulon jälkeen Sana oli pitkään '
-      + 'hallintokeskus, ja sitä hallitsivat vuoron perään sulayhidit, '
-      + 'hamdanidit, ajjubidit ja zaidiitti-imaamit. Osmanit valtasivat '
-      + 'kaupungin 1547, menettivät sen 1629 ja palasivat 1872.'
-      + '\n\nKartalla vanhakaupunki erottuu heti. Keskellä on tiheä '
-      + 'kujaverkko, jollaista ei ole missään muualla ruudussa: kujat '
-      + 'ovat niin kapeita, että ne on merkitty OpenStreetMapiin '
-      + 'jalankulkuväyliksi ja huoltoteiksi eivätkä kaduiksi. Sitä '
-      + 'kiertää soikea kehä, joka on kaupunginmuurin paikalla, ja '
-      + 'muurin jäänteet piirtyvät tummina pätkinä idässä ja '
-      + 'pohjoisessa — loput on purettu 1960-luvulta alkaen, samoin '
-      + 'useimmat porteista. Eteläreunassa on Bab al-Yaman ja '
-      + 'pohjoisreunassa sen vastapari Bab es-Shaub. Vanhankaupungin '
-      + 'länsipuolella kulkee pohjoisesta etelään al-Sailah, tulvauoma '
-      + 'joka on kuivana aikana ajotie; sen toisella puolella on '
-      + 'al-Mahdin moskeija ja siitä länteen Bir al-Azabin '
-      + 'osmaniaikainen puutarhakaupunginosa. Ruudun ulkopuolelle jää '
-      + 'idässä Jabal Nuqum, joka kohoaa noin 500 metriä kaupungin '
-      + 'yläpuolelle; se kerrotaan oppaassa. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Sanaan vanhakaupunki, joka on runsaan 2 200 '
+      + 'metrin korkeudessa vuorten rajaamalla tasangolla. Nimi juontuu '
+      + 'sabalaisesta sanasta masnaa, linnoitus, ja vanhin tunnettu maininta '
+      + 'kaupungista on 400-luvulta eKr. — muuri oli siis kaupungin '
+      + 'ensimmäinen ominaisuus. Sen paikalla kulkee nykyään soikea kehäkatu, '
+      + 'ja muurista itsestään on jäljellä vain pätkiä idässä ja pohjoisessa; '
+      + 'loput purettiin 1960-luvulta alkaen, samoin useimmat porteista. '
+      + 'Eteläreunassa on yhä Bab al-Yaman ja pohjoisessa sen vastapari Bab '
+      + 'es-Shaub. Muurien sisällä ovat suolatori ja Suuri moskeija, ja '
+      + 'länsipuolella tulvauoma al-Sailahin takana on al-Mahdin moskeija Bir '
+      + 'al-Azabin osmaniaikaisessa puutarhakaupunginosassa. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Al-Bakiriyyan moskeija', lat: 15.35599, lon: 44.21975 },
@@ -5972,6 +5958,13 @@ export const KAUPUNKIKARTAT = {
    * ovat vesialtaita, ja piste osuu siis juuri siihen kohteeseen,
    * jonka se nimeää. Pistettä EI siirretty rannalle: siirto veisi
    * numeron pois altaista. Muut kolme pistettä ovat maalla.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (erä R4, Raamattu "TEKSTIEN PAINOPISTE"):
+   * esittely lyheni 1 649 merkistä runsaaseen 700:aan. Pois jäi
+   * antiikin ja brittiajan kertaus, joka on nyt lehden etusivun
+   * leipätekstissä, sekä katuverkon ja tyhjien laitojen kuvailu;
+   * jäljelle jäivät kraatteri, Main Pass, Siran linna ja kainalon
+   * Tawahi eli ne neljä asiaa, joita kartalla katsotaan.
    */
   aden: {
     polku: 'assets/kartat/aden-keskusta.png',
@@ -5981,36 +5974,18 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 12.7955, etela: 12.7845, lansi: 44.9755, ita: 44.9875 },
         x: 14, y: 2, leveys: 20, korkeus: 25, suunta: '6 km länsiluoteeseen' },
     ],
-    esittely: 'Aden on kaksi niemeä ja niiden väliin jäävä '
-      + 'luonnonsatama. Kreikkalaiset tunsivat paikan nimellä Eudaimon '
-      + 'eli onnekas, ja Punaisenmeren kaupan jälleenlaivauspaikkana se '
-      + 'oli tärkeä jo ennen ajanlaskun alkua; Periplus kuvasi sen '
-      + 'sanoilla "kylä rannalla". Antiikin aikaan Aden oli enemmän '
-      + 'saari kuin niemi, koska mantereeseen yhdistävä kannas oli '
-      + 'nykyistä kapeampi. Kaupunkia hallitsivat vuorollaan '
-      + 'himjarilaiset, zurayidit, ajjubidit ja rasulidit, ja '
-      + '1300-luvulla käynyt Ibn Battuta kirjoitti muistiin sen '
-      + 'vesialtaat: "nämä altaat keräävät sadeveden yksinomaan '
-      + 'kaupunkilaisten juomavedeksi". Osmanit ottivat kaupungin 1538, '
-      + 'ja britit vuonna 1839 — heille se oli hiiliasema Bombayn ja '
-      + 'Suezin välissä.'
-      + '\n\nKartan pääruutu on Crater, jonka nimi on kirjaimellinen: '
-      + 'korttelit ovat sammuneen tulivuoren pohjalla. Katuverkko on '
-      + 'säännöllinen ruudukko, ja se päättyy joka suunnassa samalla '
-      + 'tavalla — rinteeseen. Ruudun etelä- ja länsilaidan tyhjyys on '
-      + 'aitoa maastoa eikä puuttuvaa aineistoa: siellä nousee Jabal '
-      + 'Shamsanin vuoristo, jonka huiput ylittävät 500 metriä. '
-      + 'Pohjoisreunassa katu kaartaa kapean solan läpi ulos '
-      + 'kraatterista — se on Main Pass eli Adenin portti, kaupungin '
-      + 'ainoa maayhteys, jonka osmaniaikainen holvikaari purettiin '
-      + 'vuonna 1963 tien leventämiseksi. Idässä meri työntyy '
-      + 'kraatterin kylkeen, ja lahden keskellä on kalliosaari: siellä '
-      + 'seisoo Siran linna, jonka vanhin osa on 1000-luvulta ja joka '
-      + 'kesti sekä portugalilaisten että osmanien hyökkäykset. '
-      + 'Vasemmassa ylänurkassa on kainalokartta Tawahista eli '
+    esittely: 'Kartan pääruutu on Crater eli Seera, Adenin vanhin '
+      + 'kaupunginosa, jonka korttelit ovat sammuneen tulivuoren pohjalla; '
+      + 'etelässä ja lännessä nousee Jabal Shamsanin vuoristo, jonka huiput '
+      + 'ylittävät 500 metriä. Pohjoisreunan kapea sola on Main Pass eli '
+      + 'Adenin portti, kaupungin ainoa maayhteys, jonka osmaniaikainen '
+      + 'holvikaari purettiin vuonna 1963 tien leventämiseksi. Idässä lahden '
+      + 'keskellä on kalliosaari, jolla seisoo Siran linna: sen vanhin osa on '
+      + '1000-luvulta, ja se kesti sekä portugalilaisten että osmanien '
+      + 'hyökkäykset. Vasemmassa ylänurkassa on kainalokartta Tawahista eli '
       + 'entisestä Steamer Pointista, jonne höyrylaivat tulivat ja '
-      + 'matkustajat nousivat maihin. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+      + 'matkustajat nousivat maihin. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään; kainalo ensin, kuten Mekassa. */
       { nimi: 'Steamer Point', lat: 12.789904, lon: 44.98151 },
@@ -6055,33 +6030,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/salalah-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 17.033, etela: 16.9915, lansi: 54.088, ita: 54.143 },
-    esittely: 'Salalah on Omanin eteläisen Dhofarin maakunnan pääkaupunki '
-      + 'ja maan kolmanneksi suurin kaupunki, runsaat kolmesataakolme'
-      + 'kymmentätuhatta asukasta. Se on aina ollut Dhofarin oma '
-      + 'keskus. Seudun huippukausi oli 1200-luku, jolloin suitsuke'
-      + 'kauppa teki rannikosta rikkaan; sen jälkeen alue hiipui, ja '
-      + '1800-luvulla se liitettiin Masqatin ja Omanin sulttaanikuntaan. '
-      + 'Vuosina 1932–1970 Salalah oli sulttaani Said bin Taimurin '
-      + 'asuinpaikka ja käytännössä maan pääkaupunki, ja hänen '
-      + 'poikansa Qaboos syntyi täällä vuonna 1940. Kun Qaboos nousi '
-      + 'valtaan vuonna 1970, hän siirsi pääkaupungin Masqatiin. '
-      + 'Kesäkuusta syyskuun alkuun puhaltava khareef-monsuuni tekee '
-      + 'ympäröivistä vuorista vihreät, ja se on nykyään kaupungin '
-      + 'tärkein matkailukausi.\n\n'
-      + 'Kartalla kaupunki on nauha. Meri on alalaidassa, ja rannan '
-      + 'suuntaisesti kulkee kaksi pitkää katua: alempi rantatie ja '
-      + 'ylempi As Sultan Qaboos, joka on kaupungin selkäranka. Niiden '
-      + 'väliin jää tiheä ruutukaava lännessä ja itään mentäessä yhä '
-      + 'harvempi verkko — se ei ole puuttuvaa tietoa vaan kookos- ja '
-      + 'banaanitarhoja, joita keitaan pohjavesi elättää. Oikeassa '
-      + 'alakulmassa erottuu selvästi rajattu suorakaide veden '
-      + 'ympärillä: se on Al-Baleedin arkeologinen puisto, ja sen '
-      + 'keskellä näkyvät keskiaikaisen Zafarin perustusrivit. Puiston '
-      + 'vesi on Khawr al-Balid, entinen lahti, joka kuroutui umpeen '
-      + 'järveksi ja lopetti sataman. Kartalta jää pohjoiseen Salalahin '
-      + 'lentoasema, runsaan kilometrin päähän yläreunasta, ja lännessä '
-      + 'kulttuurikeskuksen museo. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R5 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat; kartan viivastojen, laikkujen ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Salalahin rantanauha meren ja Dhofarin vuorten '
+      + 'välissä. Länsipäässä ovat Sultan Qaboosin moskeija ja kaupungin '
+      + 'vanha ydin Al-Haffa, jossa seisovat Al-Husnin palatsi ja basaari; '
+      + 'keskivaiheilla ovat Nabi Umranin hauta ja kellotorni Burj an-Nahda. '
+      + 'Itäpäässä on Al-Baleedin arkeologinen puisto, jonka muurien sisällä '
+      + 'ovat keskiaikaisen Zafarin perustusrivit ja vuonna 2007 avattu '
+      + 'suitsukemuseo. Puiston vesi on Khawr al-Balid, entinen lahti, joka '
+      + 'kuroutui umpeen järveksi ja lopetti sataman.',
     kohteet: [
       /* Numerointi lännestä itään — ks. lohkon esittely. */
       { nimi: 'Sultan Qaboosin moskeija', lat: 17.0172, lon: 54.0939 },

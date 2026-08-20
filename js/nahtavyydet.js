@@ -136,6 +136,30 @@ export function piirraKaupunkiKartta(ui, kohde) {
   else asetaKuva(kuva, valokuvaUrl(kartta.tiedosto, 1000), valokuvaVara(kartta.tiedosto, 1000));
   kotelo.appendChild(kuva);
   /*
+   * KEHYKSEN KORKEUS ILMAN piirtoRajat-LOHKOA (korjaus 20.8.2026,
+   * omistajan havainto "Lähi-idässä ei näy kaupunkien kartat").
+   *
+   * .kartta-kehys on container-type: size -kokokontti (v892, jotta
+   * valittu piirros voi mitata itsensä cqh:lla) — ja kokokontin
+   * korkeus EI tule sisällöstä. Laajennettu kartta saa korkeutensa
+   * yllä aspect-ratiosta, mutta ilman piirtoRajat-lohkoa piirretty
+   * kartta (koko Lähi-itä v937+, uudet Aasian kartat) jäi nollaan:
+   * osio näytti tekstin ja kohdelistan mutta itse kartta oli
+   * näkymätön. Kuvasuhde otetaan itse kuvatiedostosta eikä
+   * rajauksesta, koska kainalollisen kartan PNG on rajausta
+   * korkeampi (kainalo piirtyy kuvan jatkeeksi) ja rajaussuhteella
+   * kainalo leikkautuisi pois.
+   */
+  if (!laajennettu) {
+    const mitoitaKehys = () => {
+      if (kuva.naturalWidth && kuva.naturalHeight) {
+        kehys.style.aspectRatio = `${kuva.naturalWidth} / ${kuva.naturalHeight}`;
+      }
+    };
+    if (kuva.complete) mitoitaKehys();
+    else kuva.addEventListener('load', mitoitaKehys, { once: true });
+  }
+  /*
    * Kuva peittää koko lavan. (Satelliittinäkymän erikoistapaus —
    * vanhan rajauksen kuva ydinrajauksen päällä — poistui v709:ssä,
    * kun värikartta korvasi satelliitin kaikissa kaupungeissa;
