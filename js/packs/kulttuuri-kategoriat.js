@@ -24945,7 +24945,8 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Aleppo 03.jpg',
-          selite: 'Aleppon kattoja korkealta katsottuna. Matalien '
+          selite: 'Aleppon kattoja korkealta katsottuna vuonna 2010, '
+            + 'ennen sisällissotaa. Matalien '
             + 'kivitalojen katoilla on kymmeniä lautasantenneja ja pieniä '
             + 'kupoleita, ja keskellä kohoaa kivinen minareetti vihreäksi '
             + 'maalatun kupolin vierellä. Kaupunki jatkuu tiheänä '
@@ -24954,7 +24955,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Al-Madina Souq 02.jpg',
-          selite: 'Katettu kivinen kuja Aleppon Al-Madina-basaarissa. '
+          selite: 'Katettu kivinen kuja Aleppon Al-Madina-basaarissa '
+            + 'vuonna 2005, ennen sisällissotaa. '
             + 'Kaareva kivikatto häviää hämärään, ja sen alla riippuu '
             + 'rivistöittäin värikkäitä paperilippusia ja lamppuja. '
             + 'Lihakaupan edessä roikkuu koukuissa leikattuja '
@@ -24963,7 +24965,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Aleppo Beit Wakil 9673.jpg',
-          selite: 'Beit Wakilin sisäpiha Aleppossa. Kiviseinässä on '
+          selite: 'Beit Wakilin sisäpiha Aleppossa vuonna 2009, ennen '
+            + 'sisällissotaa. Kiviseinässä on '
             + 'kaiverrettuja kaarisyvennyksiä ja kapeita ikkunoita '
             + 'sinisine ja valkoisine laseineen, ja pihan keskellä on '
             + 'matala marmorinen suihkulähde. Pihalle on katettu pöytiä '
@@ -24981,7 +24984,8 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Aleppo Citadel 01.jpg',
-          selite: 'Aleppon linnoituksen porttitorni kummun juurella. '
+          selite: 'Aleppon linnoituksen porttitorni kummun juurella '
+            + 'vuonna 2010, ennen sisällissotaa. '
             + 'Vaaleasta kivestä muurattuun torniin noustaan leveitä '
             + 'kiviportaita pitkin, ja kummun harjalla jatkuu muurilinja '
             + 'torneineen. Edustalla on kivetty aukio lyhtypylväineen.',
@@ -24989,7 +24993,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Aleppo Khan al-Jumruk 9158.jpg',
-          selite: 'Tullikhanin portin holvi alhaalta kuvattuna. Kivi on '
+          selite: 'Tullikhanin portin holvi alhaalta kuvattuna vuonna '
+            + '2009, ennen sisällissotaa. Kivi on '
             + 'ladottu vuorotellen vaaleana ja tummana kerroksena, ja '
             + 'keskellä on kaksi keltaista ristikkoikkunaa ja niiden '
             + 'välissä kaiverrettu kirjoituslaatta. Holvin alla riippuu '
@@ -25065,12 +25070,35 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valtaannoususta oli kulunut 25 vuotta. Muoto lainattiin '
             + 'vanhoista minareeteista: neljä samanlaista julkisivua ja '
             + 'huipulla itämainen kennokoriste.',
-          selite: 'Bab al-Farajin kellotorni aukiollaan. Vaalea kivitorni '
+          selite: 'Bab al-Farajin kellotorni aukiollaan tammikuussa '
+            + '2011, ennen sisällissotaa. Vaalea kivitorni '
             + 'kapenee ylöspäin, ylimmässä kerroksessa on kaksi valkoista '
             + 'kellotaulua mustine viisareineen ja huipulla pieni '
             + 'lyhtymäinen kupu. Torni seisoo aidatulla korokkeella '
             + 'palmujen keskellä.',
           lahde: 'Preacher lad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Basaari paloi, ja sitä korjataan yhä',
+          tiedosto: 'Khan Al-Harir (Silk Khan) Gate After Reconstruction - Aleppo Oct 2020.jpg',
+          teksti: 'Aleppossa taisteltiin 19. heinäkuuta 2012 alkaneesta '
+            + 'hyökkäyksestä 22. joulukuuta 2016 asti, ja vanhakaupunki '
+            + 'jäi rintamalinjan päälle. Al-Madinan katettu basaari, '
+            + 'maailman suurin historiallinen kauppahalli, syttyi '
+            + 'palamaan 25. syyskuuta 2012, ja suuri osa keskiaikaisia '
+            + 'kortteleita tuhoutui tai vaurioitui. Unesco siirsi '
+            + 'vanhankaupungin vaarantuneiden maailmanperintökohteiden '
+            + 'luetteloon vuonna 2013, missä se pysyi vuoteen 2020. '
+            + 'Korjaustyö on edennyt khan kerrallaan: silkkikhanin eli '
+            + 'Khan al-Haririn portti oli kunnostettu vuonna 2020, ja '
+            + '1600-luvun Beit Wakilia on korjattu sodan jäljiltä. Siksi '
+            + 'osa tämän lehden kuvista on ajalta ennen sotaa.',
+          selite: 'Khan al-Haririn kunnostettu portti lokakuussa 2020. '
+            + 'Suippokaari on muurattu vuorotellen keltaisesta ja mustasta '
+            + 'kivestä, kaaren sisäreunaa kiertää veistetty '
+            + 'lehtiköynnös, ja aukossa on kaksi mustaa nuppinaulattua '
+            + 'rautaovea. Kynnyksen edessä on uusi mukulakivetys.',
+          lahde: 'Anas Badawi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -25080,13 +25108,27 @@ export const KULTTUURI_KATEGORIAT = {
        * Levant Company (haettu 20.8.2026); sääjakso nojaa saatiedot.js:n
        * halab-riviin (ERA5 1991–2020).
        *
-       * SISÄLTÖLINJAUS on Fablen ohje: ei nykysotaa eikä nykypolitiikkaa.
-       * POIS JÄTETTY sen takia: lentoaseman ja rautatien sotavuodet,
-       * kaupungin epäviralliset asuinalueet, vuoden 2023 maanjäristys ja
-       * kaikki 2010-luvun tuho. Kuvat on valittu niin, ettei yksikään
-       * väitä nykytilaa: linnoitus ja Kuolleet kaupungit ovat
-       * sotaa edeltäviä otoksia, kaupunkinäkymä 1900-luvun alun
-       * lasinegatiivi.
+       * SISÄLTÖLINJAUS MUUTTUI 20.8.2026 (omistajan linjausmuutos ja
+       * -tarkennus). Aiemmin tässä luki: "ei nykysotaa, kuvat eivät saa
+       * väittää nykytilaa". Nyt vaurioituneesta kaupungista näytetään
+       * MYÖS tuoreita kuvia ja lehti kertoo suoraan, mistä nykyilme
+       * johtuu. Uusi kansisivun nosto "Basaari paloi ja se muurattiin
+       * auki" kertoo sodan 2012–2016 ja korjaustyön neutraalisti,
+       * ilman osapuolikehystä; kansi- ja avauskuvien kuvateksteihin
+       * lisättiin vuosiluku ja sana "ennen sisällissotaa".
+       * Nykypolitiikka on edelleen ulkona, samoin vuoden 2023
+       * maanjäristys ja kaikki julmuuksien yksityiskohdat.
+       *
+       * OPPAAN KUVAT OVAT TUOREITA (linjaustarkennus: matkaopas on
+       * nykytietoa): linnoitus 2026, M5-tie 2026, saippuavarasto 2025
+       * ja Khan al-Tahan 2023. Sotaa edeltävät oppaan kuvat
+       * poistettiin (Bagdadin asema, Argenbergin kaupunkinäkymä ja
+       * linnoitusnäkymä, Gagnonin saippuapata). Jakso "Alueen
+       * rakenne" jäi kuvattomaksi: tuoretta vapaata kuvaa Aleppon
+       * ylängöstä tai kukkularenkaasta ei löytynyt kuvasäännöillä.
+       * AIHETOISTO on tässä tietoinen: linnoitus näkyy avauskuvassa
+       * sotaa edeltävänä ja oppaan kuvassa vuonna 2026, ja khaneja on
+       * kolme eri rakennusta (Jumruk 2009, Harir 2020, Tahan 2023).
        *
        * WIKIPEDIAN SISÄINEN RISTIRIITA, joka on kirjoitettu auki
        * lukijalle jaksossa "Historian käänne": Aleppo-artikkelin
@@ -25105,12 +25147,13 @@ export const KULTTUURI_KATEGORIAT = {
        */
       matkailijalle: {
         kuva: {
-          tiedosto: 'Citadel of Aleppo, View of the city, Aleppo, Syria.jpg',
-          selite: 'Mies seisoo linnoituksen muurilla selin kameraan ja '
-            + 'katsoo kädellä varjostaen yli kaupungin. Rautakaiteen '
-            + 'takana levittäytyy tasakattoisten talojen meri, josta '
-            + 'kohoaa muutama torni, ja horisontti häviää utuun.',
-          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+          tiedosto: 'Aleppo citadel 2026.jpg',
+          selite: 'Aleppon linnoitus kesäkuussa 2026. Kummun harjalla '
+            + 'jatkuu muurilinja torneineen, keskellä kohoaa korkea '
+            + 'porttitorni, jonka ikkuna-aukot ovat tyhjiä ja jonka '
+            + 'salossa liehuu lippu. Rinne on paljasta kuivaa maata, ja '
+            + 'portille nousee leveä kiviporras.',
+          lahde: 'Wassim Faour, Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Aleppo on Syyrian pohjoinen suurkaupunki 380 metrin '
           + 'ylängöllä, 120 kilometriä Välimereltä sisämaahan ja 45 '
@@ -25121,7 +25164,10 @@ export const KULTTUURI_KATEGORIAT = {
           + 'neliökilometriä, ja kauppapaikkana se on ollut niin kauan '
           + 'kuin siitä on kirjoitettu: kaksi kauppatietä risteää täällä, '
           + 'ja niitä myöten on tullut tavaraa Intiasta, Tigrisin ja '
-          + 'Eufratin varsilta ja etelästä Damaskoksen suunnasta.',
+          + 'Eufratin varsilta ja etelästä Damaskoksen suunnasta. '
+          + 'Vanhakaupunki vaurioitui pahoin vuosien 2012–2016 sodassa ja '
+          + 'on jälleenrakennusvaiheessa; matkailu Syyriaan ei ole tällä '
+          + 'hetkellä turvallista.',
         artikkeli: {
           nimi: 'Matkailijan Aleppo',
           taitto: 'opas',
@@ -25146,15 +25192,19 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'toiseksi vanhin asema, ja Agatha Christien Idän '
                 + 'pikajunan arvoitus alkaa juuri tältä laiturilta. '
                 + 'Maanteitse kaupunkiin tullaan M5-moottoritietä, joka '
-                + 'vie etelään Homsin ja Haman kautta Damaskokseen.',
+                + 'vie etelään Homsin ja Haman kautta Damaskokseen. '
+                + 'Nämä ovat rauhan ajan kulkuyhteyksiä: sodan jäljiltä '
+                + 'liikenneyhteydet ovat osin poikki tai vasta '
+                + 'korjattuja, eikä matkailu Syyriaan ole tällä hetkellä '
+                + 'turvallista.',
               kuva: {
-                tiedosto: 'Aleppo Bagdad Railway Station, cropped.jpg',
-                selite: 'Bagdadin asema iltavalaistuksessa. '
-                  + 'Kivirakennuksen räystäslinjaa kiertää valonauha, '
-                  + 'sisäänkäynnin edessä nousee rivi lipputankoja, ja '
-                  + 'keskellä kuvaa kohoaa korkea palmu. Pihalla on '
-                  + 'autoja ja moottoripyörä.',
-                lahde: 'Reinhard Dietrich, Wikimedia Commons (CC BY-SA 3.0)',
+                tiedosto: 'M5 Motorway - Aleppo.jpg',
+                selite: 'M5-moottoritie Aleppon maakunnassa heinäkuussa '
+                  + '2026. Kaksi ajorataa erottaa matala betonikaide, '
+                  + 'asfaltti on halkeillut ja keltainen reunaviiva on '
+                  + 'kulunut. Molemmin puolin jatkuu kuiva tasanko, ja '
+                  + 'kaukana ajaa muutama auto.',
+                lahde: 'PersuadingPassion, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
             {
@@ -25172,15 +25222,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'yhdeksän porttia ja leveä syvä vallihauta, eikä siitä '
                 + 'ole enää jäljellä mitään. Pohjoisessa ja lännessä ovat '
                 + 'oliivi- ja pistaasitarhat, idässä Syyrian aavikko.',
-              kuva: {
-                tiedosto: 'Aleppo city centre, Syria.jpg',
-                selite: 'Aleppon kattoja linnoituksen kummulta ennen '
-                  + 'sisällissotaa kuvattuna. Kivitalot jatkuvat '
-                  + 'tiiviinä mattona horisonttiin, katoilla on '
-                  + 'lautasantenneja, ja vasemmalla nousee minareetti '
-                  + 'vihreäkupolisen moskeijan vierestä.',
-                lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
-              },
             },
             {
               otsikko: 'Arjen ilmiö: saippua',
@@ -25200,12 +25241,14 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'prosenttiin, ja yli kuudentoista prosentin palaa '
                 + 'pidetään parempana.',
               kuva: {
-                tiedosto: 'Aleppo soap - vat.jpg',
-                selite: 'Maahan upotettu saippuapata ylhäältä kuvattuna. '
-                  + 'Pyöreä altaan pohja on tumma ja kiiltävä, reunat '
-                  + 'vaaleat ja karstaiset, ja reunan takana näkyy vain '
-                  + 'seisojien jalkoja ja kenkiä.',
-                lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+                tiedosto: 'Zanabili factory in Aleppo.jpg',
+                selite: 'Saippuavarasto aleppolaisessa tehtaassa '
+                  + 'tammikuussa 2025. Holvatun kivisalin lattialla ja '
+                  + 'seinustoilla seisoo tuhansia vaaleanvihreitä '
+                  + 'saippuakuutioita pitkinä riveinä ja korkeina '
+                  + 'pinoina, ja käytävä katoaa holvien alle salin '
+                  + 'perälle.',
+                lahde: 'Dorfbroicher, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
             {
@@ -25226,7 +25269,19 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'toinen heti Konstantinopolin jälkeen. Kun Suezin '
                 + 'kanava avattiin 1869, kauppa siirtyi merelle ja '
                 + 'pitkien karavaanireittien tilalle tuli villan ja '
-                + 'maataloustuotteiden alueellinen kauppa.',
+                + 'maataloustuotteiden alueellinen kauppa. Khanit eli '
+                + 'karavaanimajatalot jäivät, ja osa niistä on '
+                + 'kunnostettu takaisin käyttöön.',
+              kuva: {
+                tiedosto: 'Khan al-Tahan in Aleppo.jpg',
+                selite: 'Khan al-Tahanin piha joulukuussa 2023. Valaistun '
+                  + 'kaksikerroksisen kivitalon julkisivussa on kolme '
+                  + 'kaari-ikkunaa ja niiden yläpuolella kaksi pyöreää '
+                  + 'kilpeä, ja molemmilta sivuilta nousee kaidetta '
+                  + 'myötäilevä porras. Etualalla kohoaa kaksi palmun '
+                  + 'runkoa.',
+                lahde: 'Shahdddddddd, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -25394,7 +25449,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Damascus alley 9779.jpg',
-          selite: 'Vanhankaupungin kujan yläkerta alhaalta kuvattuna. '
+          selite: 'Vanhankaupungin kujan yläkerta alhaalta kuvattuna '
+            + 'vuonna 2010, ennen sisällissotaa. '
             + 'Puukehyksiset ikkunat työntyvät ulokkeena kadun päälle, '
             + 'yhden edessä on kiemurainen rautaristikko ja toisessa '
             + 'tiheä puuritilä. Rappaus on lohkeillut, ja alempana '
@@ -25403,7 +25459,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Damascus Al-Salihiyah - Madrasa Atabakiye (farthest) Madrasa Murshidiye (medium) Mausoleum al- Faranti (near) 1593.jpg',
-          selite: 'Al-Salihiyan kortteli Qasioun-vuoren rinteellä. Kaksi '
+          selite: 'Al-Salihiyan kortteli Qasioun-vuoren rinteellä vuonna '
+            + '2010, ennen sisällissotaa. Kaksi '
             + 'punaruskeaa kupolia lepää kahdeksankulmaisten, '
             + 'kaarisyvennyksin koristeltujen rumpujen päällä, ja '
             + 'niiden takaa nousee kaksi minareettia: toinen paljasta '
@@ -25484,11 +25541,26 @@ export const KULTTUURI_KATEGORIAT = {
        * Damascus International Airport (haettu 20.8.2026); sääjakso
        * nojaa saatiedot.js:n damaskos-riviin (ERA5 1991–2020).
        *
-       * SISÄLTÖLINJAUS on Fablen ohje, sama kuin Aleppossa: ei
-       * nykysotaa eikä nykypolitiikkaa. POIS JÄTETTY sen takia
-       * 1800-luvun ja 1900-luvun väkivaltaiset välikohtaukset, mandaatin
-       * ja itsenäisyyden politiikka ja kaikki 2010-luvun tapahtumat.
-       * Uskonto kerrotaan historiallis-kulttuurisena ilmiönä.
+       * SISÄLTÖLINJAUS MUUTTUI 20.8.2026, sama muutos kuin Aleppossa
+       * ja Mosulissa. Nykypolitiikka on edelleen ulkona, samoin
+       * 1800- ja 1900-luvun väkivaltaiset välikohtaukset ja
+       * julmuuksien yksityiskohdat, mutta sodan olemassaolo
+       * kerrotaan lukijalle: Damaskos säilyi Aleppoa ja Mosulia
+       * ehjempänä, ja se sanotaan Matkailijalle-kappaleessa ja
+       * jaksossa "Perille ja liikkeelle" — samassa yhteydessä
+       * kerrotaan myös, ettei matkailu Syyriaan ole tällä hetkellä
+       * turvallista. Uskonto kerrotaan historiallis-kulttuurisena
+       * ilmiönä.
+       *
+       * OPPAAN KUVAT VAIHDETTIIN TUOREISIIN (linjaustarkennus:
+       * matkaopas on nykytietoa). Vanha Matkailijalle-kuva oli
+       * vuodelta 2010 ja "Alueen rakenne" -jakson ilmakuva
+       * osoittautui Dumbarton Oaksin metatiedoissa vuoden 1993
+       * otokseksi, vaikka tiedostonimen "2016" antoi ymmärtää muuta —
+       * kumpikaan ei kelpaa oppaaseen. Tilalle tulivat Ardatin
+       * vuoden 2021 kuvat vanhastakaupungista. Damastin ja
+       * kultadinaarin museokuvat jäivät: ne ovat nykyvalokuvia
+       * esineistä, eivät vanhoja kaupunkikuvia.
        *
        * WIKIPEDIAN SISÄINEN RISTIRIITA, joka on kirjoitettu auki
        * jaksossa "Perille ja liikkeelle": Damascus International Airport
@@ -25511,13 +25583,14 @@ export const KULTTUURI_KATEGORIAT = {
        */
       matkailijalle: {
         kuva: {
-          tiedosto: 'Damascus Jabal Qasioun 3121-3123mod.jpg',
-          selite: 'Damaskos Qasioun-vuoren rinteeltä. Etualalla on '
-            + 'paljasta vaaleaa kalkkikiveä ja soraa, ja rinteen alta '
-            + 'alkaa tiheä kaupunki, joka jatkuu tasangolla utuun asti. '
-            + 'Oikealla erottuu vihreitä kaistaleita viljelysalueen '
-            + 'reunassa.',
-          lahde: 'JYB Devot, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Traditional courtyard café surrounded by olive trees in Old Damascus, Syria.jpg',
+          selite: 'Vanhankaupungin kahvilapiha syyskuussa 2021. '
+            + 'Kivetyn aukion molemmin puolin on matalia rakennuksia '
+            + 'tiilikatoksineen, keskellä kasvaa oliivipuita ja '
+            + 'havupuu, ja niiden alle on aseteltu rivi metallisia '
+            + 'baarijakkaroita ja pieniä pöytiä. Vasemmalla riippuu '
+            + 'lyhty seinässä.',
+          lahde: 'Abd Alsattar Ardati, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Damaskos on 680 metrin tasangolla, 80 kilometriä '
           + 'Välimereltä sisämaahan, Anti-Libanonin vuoriston itäisillä '
@@ -25527,7 +25600,11 @@ export const KULTTUURI_KATEGORIAT = {
           + 'ja Imara. Qasioun-vuoren rinteillä on al-Salihiyan '
           + 'kaupunginosa kahden ja kolmen kilometrin päässä '
           + 'vanhastakaupungista pohjoiseen. Kaikkea ympäröi Ghouta, '
-          + 'Baradan kastelema viljelysalue.',
+          + 'Baradan kastelema viljelysalue. Syyrian sisällissota ulottui '
+          + 'Damaskokseen vuonna 2012, mutta taistelut käytiin pääosin '
+          + 'laitakaupungilla, ja vanhakaupunki säilyi ehjempänä kuin '
+          + 'Aleppossa tai Mosulissa. Matkailu Syyriaan ei ole tällä '
+          + 'hetkellä turvallista.',
         artikkeli: {
           nimi: 'Matkailijan Damaskos',
           taitto: 'opas',
@@ -25554,7 +25631,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ole numeroita — ne tunnetaan päätepysäkkiensä nimistä, '
                 + 'ja bussi pysähtyy siinä, missä matkustaja pyytää. '
                 + 'Takseilla on lailla säädetty taksa ja pakollinen '
-                + 'mittari.',
+                + 'mittari. Tämä on rauhan ajan kuva liikenteestä. '
+                + 'Sisällissodan vuosista 2012 eteenpäin lentoyhteydet '
+                + 'supistuivat muutamaan kohteeseen, ja matkailu Syyriaan '
+                + 'ei ole tällä hetkellä turvallista; kaupunki itse on '
+                + 'jälleenrakennusvaiheessa, vaikka vanhakaupunki '
+                + 'säilyikin ehjempänä kuin Aleppossa tai Mosulissa.',
             },
             {
               otsikko: 'Alueen rakenne',
@@ -25576,13 +25658,15 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pitkä, noin kaksi kertaa pohjois–etelä-akselia '
                 + 'pidempi.',
               kuva: {
-                tiedosto: 'Urban Landscape and Scenes of Everyday Life, Damascus (دمشق), Syria - Aerial view looking southeast from Mount Qasioun - PHBZ024 2016 0034 - Dumbarton Oaks.jpg',
-                selite: 'Damaskos ylhäältä kaakkoon päin katsottuna. '
-                  + 'Kaupunki peittää koko tasangon reunasta reunaan, '
-                  + 'leveät suorat väylät halkovat sitä ruudukoksi, ja '
-                  + 'kaukana horisontissa alkaa vihertävä viljelysvyöhyke. '
-                  + 'Etualan rinteellä kasvaa havupuita.',
-                lahde: 'Frank Kidner, Wikimedia Commons (CC BY-SA 4.0)',
+                tiedosto: 'Traditional Damascene buildings with Mount Qasioun in the background, Syria.jpg',
+                selite: 'Vanhankaupungin kattoja ja niiden takana '
+                  + 'Qasioun-vuori syyskuussa 2021. Kaksikerroksisten '
+                  + 'talojen valkoiset julkisivut työntyvät ulokkeina '
+                  + 'kadun päälle, katoilla on aurinkokeräimiä ja '
+                  + 'vesisäiliöitä, ja yhden julkisivun edessä on '
+                  + 'suojapeite ja tikkaat. Rinnettä peittää tiivis '
+                  + 'kaupunginosa.',
+                lahde: 'Abd Alsattar Ardati, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
             {
@@ -29171,14 +29255,29 @@ export const KULTTUURI_KATEGORIAT = {
    * Mosque, Badr al-Din Lu'lu', Austen Henry Layard, Muslin, Tigris,
    * Mosul Eyalet ja Nineveh Plains (haettu 20.8.2026).
    *
-   * SISÄLTÖLINJAUS (Fablen ohje 20.8.2026): EI 2010-luvun sotaa eikä
-   * tuhoja. Painopiste on 1800-luvussa ja sitä vanhemmassa
-   * historiassa, arkkitehtuurissa ja maantieteessä. Al-Nurin moskeija
-   * on mukana historiallisena rakennuksena (1172, kalteva
-   * minareetti); jälleenrakennusta ei käsitellä. Kuvat ovat joko
-   * historiallisia tai sellaisia nykyvalokuvia, joissa ei näy
-   * vaurioita, ja kuvatekstit kertovat vain sen, mitä kuvassa on —
-   * yksikään ei väitä mitään kohteen nykytilasta.
+   * SISÄLTÖLINJAUS MUUTTUI 20.8.2026 (omistajan linjausmuutos ja
+   * -tarkennus, Raamattu / Kuvat ja lähteet). Aiempi ohje oli "EI
+   * 2010-luvun sotaa eikä tuhoja, kuvissa ei saa näkyä vaurioita".
+   * Se johti siihen, että koko lehti näytti 1930-luvulta eikä
+   * lukijalle kerrottu miksi. Uusi linja: vaurioituneesta
+   * kaupungista näytetään MYÖS tuoreita kuvia, ja lehti sanoo
+   * suoraan mistä nykyilme johtuu. Tuho kerrotaan tapahtumana
+   * neutraalisti, ilman osapuolikehystä ja ilman julmuuksien
+   * yksityiskohtia; ei taistelukuvia eikä uhreja.
+   *
+   * MISSÄ SE KERROTAAN: kansisivun neljäs nosto "Minareetti nousi
+   * uudelleen" (sota 2014–2017, al-Nurin moskeijan tuho ja
+   * jälleenrakennus, ja miksi osa kuvista on vanhoja) sekä oppaan
+   * Matkailijalle-kappale ja jakso "Perille ja liikkeelle", jossa
+   * sanotaan myös matkustamisen tilanne suoraan.
+   *
+   * OPPAAN KUVAT OVAT TUOREITA (linjaustarkennus: matkaopas on
+   * nykytietoa). Kaikki neljä oppaan kuvaa ovat vuosilta 2025;
+   * historialliset kuvat jäivät kansi- ja avauskuviin sekä
+   * nostoihin, joissa kuvateksti kertoo ajankohdan. Oppaasta
+   * poistettiin Placen 1867 kelek-piirros, Cooperin 1840-luvun
+   * akvarelli ja Layardin 1853 salikuvitelma; niille ei ollut
+   * nostopaikkaa vapaana.
    *
    * OPAS EI TOISTA NOSTOJA. Kansisivun nostot ovat musliini, Badr
    * al-Din Lu'lu' ja Mosulin kipsikivi, ja käsityösivun nostot
@@ -29287,6 +29386,28 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarkasti veistettyä.',
           lahde: 'Allan Gluck, Wikimedia Commons (CC BY 4.0)',
         },
+        {
+          otsikko: 'Minareetti nousi uudelleen',
+          tiedosto: 'Al-Hadba Minaret Mosul.jpg',
+          teksti: 'Mosul joutui sotatoimien kohteeksi vuosina 2014–2017. '
+            + 'Kaupunki siirtyi kesäkuussa 2014 pois valtion hallinnasta, '
+            + 'ja taistelut sen takaisin saamiseksi kestivät lokakuusta '
+            + '2016 heinäkuuhun 2017. Eniten vaurioitui vanhakaupunki. '
+            + 'Al-Nurin moskeija ja sen kalteva minareetti tuhoutuivat '
+            + 'räjähdyksessä kesäkuussa 2017. Jälleenrakennuksen '
+            + 'peruskivi laskettiin joulukuussa 2018: työstä vastasivat '
+            + 'Unesco ja Irakin kulttuuriministeriö, ja Arabiemiirikunnat '
+            + 'maksoi 50,4 miljoonan dollarin hankkeen. Minareetin '
+            + 'huippuun nostettiin lippu marraskuussa 2024, ja moskeija '
+            + 'vihittiin uudelleen 1. syyskuuta 2025. Siksi osa lehden '
+            + 'kuvista on sotaa edeltävältä ajalta.',
+          selite: 'Uudelleen rakennettu Hadba-minareetti marraskuussa '
+            + '2025 alta kuvattuna. Neliömäisen jalustan pinta on '
+            + 'kuvioitua tiiltä, ja sen päältä nousee lieriö, jota '
+            + 'kiertää vyöhykkeittäin eri tiilikuvio. Huipulla on kaide, '
+            + 'ja alimpana sileä rappauspinta kenttiin jaettuna.',
+          lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
+        },
       ],
       /*
        * AVAUSKUVAT: kaupunki, tasanko ja se mitä tasangolla oli.
@@ -29325,12 +29446,13 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Hadba-16208v.jpg',
-          selite: 'Kaltevan minareetin tiilipinta läheltä vuonna 1932. '
-            + 'Lieriötä kiertää seitsemän vyöhykettä, joissa jokaisessa '
-            + 'on eri geometrinen tiilikuvio — vinoruutuja, murtoviivoja '
-            + 'ja punoksia — ja huipulla on kaide ja pieni kupoli.',
-          lahde: 'American colony photographers., Wikimedia Commons (PD)',
+          tiedosto: 'Mosul Corniche.jpg',
+          selite: 'Mosulin rantabulevardi tammikuussa 2025. Aukio on '
+            + 'laatoitettu punaisin ja keltaisin kuviolaatoin, reunaa '
+            + 'kiertää matala koristemuuri ja sen takana avautuu joen '
+            + 'suunta. Istutettujen puiden taimet ovat vielä ohuita, ja '
+            + 'penkkien vieressä nousee uusia lyhtypylväitä.',
+          lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Mosul on Irakin toiseksi suurin kaupunki, ja se on '
           + 'oikeastaan kaksi kaupunkia yhden nimen alla. Tigriin '
@@ -29339,7 +29461,10 @@ export const KULTTUURI_KATEGORIAT = {
           + 'ja niiden takana antiikin Niniven kummut. Nimi al-Mawsil '
           + 'tarkoittaa liitoskohtaa, ja assyrialaiset kutsuvat koko '
           + 'kaupunkia yhä Niniveksi. Korkeus merenpinnasta on 223 '
-          + 'metriä, ja ympärillä avautuu Niniven tasanko.',
+          + 'metriä, ja ympärillä avautuu Niniven tasanko. Kaupunki on '
+          + 'yhä jälleenrakennusvaiheessa vuosien 2014–2017 sodan '
+          + 'jäljiltä: uusia katuja ja rantapuistoja on valmiina, mutta '
+          + 'vanhassakaupungissa korjaustyöt jatkuvat.',
         artikkeli: {
           nimi: 'Matkailijan Mosul',
           taitto: 'opas',
@@ -29365,16 +29490,22 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'niminä Al-Shohada, Viides silta, Vanha eli Rautasilta, '
                 + 'Al-Huriya ja Neljäs silta; Al-Huriya rakennettiin '
                 + 'vuosina 1955–1958 saksalais-ranskalais-hollantilaisena '
-                + 'yhteistyönä, se on kuusijänteinen ja 340 metriä pitkä.',
+                + 'yhteistyönä, se on kuusijänteinen ja 340 metriä pitkä. '
+                + 'Sillat ja kadut ovat sodan jäljiltä korjattuja tai '
+                + 'kokonaan uusia. Tämä on syytä sanoa suoraan: matkailu '
+                + 'Irakiin on yhä rajoitettua eikä kaikkialla turvallista, '
+                + 'ja Mosulissa osa vanhastakaupungista on työmaana. '
+                + 'Lehden kuvista osa on siksi sotaa edeltävältä ajalta ja '
+                + 'osa aivan viime vuosilta.',
               kuva: {
-                tiedosto: 'Place V 1867 III Plate 43 6.jpg',
-                selite: 'Vuoden 1867 kuparipiirroslevy, jonka aiheena on '
-                  + 'antiikkiesineiden kuljetus. Keskellä ui puolenkymmentä '
-                  + 'kelek-lauttaa alavirtaan, alalaidassa on yhden lautan '
-                  + 'pohjapiirros nahkakelluke kerrallaan, ja reunassa '
-                  + 'ovat airo ja täyteen puhallettu vuohennahka '
-                  + 'erillisinä piirroksina.',
-                lahde: 'Place, Victor, 1818 - 1875: Tafeln. - Paris: Imprimerie Impériale, 1867, Wikimedia Commons (PD)',
+                tiedosto: 'The Old Bridge and The Tigris River-Mosul 02.jpg',
+                selite: 'Tigris Vanhalta sillalta tammikuussa 2025. '
+                  + 'Vasemmalla näkyy sillan valkoinen kaide, joki '
+                  + 'levittäytyy leveänä ja vaaleansinisenä, ja sen yllä '
+                  + 'kaartaa parikymmentä lokkia. Molemmilla rannoilla '
+                  + 'jatkuu matala kaupunki, ja kauempana erottuu toinen '
+                  + 'silta.',
+                lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
             {
@@ -29393,14 +29524,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kahtia Khosr-joella: pohjoispuolella on Kuyunjikin '
                 + 'kumpu, eteläpuolella Nabi Yunusin kumpu.',
               kuva: {
-                tiedosto: 'Nineveh from the North-East.jpg',
-                selite: 'Akvarelli Niniven tasangosta koillisesta '
-                  + 'katsottuna 1840-luvulla. Etualalla laskee loiva '
-                  + 'rinne, jonka laidalla on kylä ja karjaa, ja '
-                  + 'horisontissa erottuu tasangon takana kaupunki '
-                  + 'yksittäisine torneineen. Paperin alareunaan on '
-                  + 'kirjoitettu käsin taiteilijan muistiinpanot.',
-                lahde: 'Frederick Charles Cooper (1817- ?), Wikimedia Commons (PD)',
+                tiedosto: 'Mosul Wall-Nineveh 02.jpg',
+                selite: 'Niniven muurilinjaa tammikuussa 2025. Vaaleista '
+                  + 'kivilohkoista uudelleen muurattu seinä jatkuu '
+                  + 'porrastettujen harjahampaiden alla, ja siitä työntyy '
+                  + 'ulos kolme nelikulmaista tornia. Kivien pinta on '
+                  + 'karheaksi hakattu, saumat suorat.',
+                lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
             {
@@ -29420,6 +29550,16 @@ export const KULTTUURI_KATEGORIAT = {
                 + '1873 on tässä kirjassa muutenkin tuttu — se on isoisän '
                 + 'matkavuosi, ja samoihin aikoihin Mosulissa alettiin '
                 + 'painaa kirjoja.',
+              kuva: {
+                tiedosto: 'Ibn al-Atheer Printing House-University of Mosul.jpg',
+                selite: 'Mosulin yliopiston painotalo tammikuussa 2025. '
+                  + 'Symmetrisen julkisivun keskellä on korkea '
+                  + 'sisäänkäynti neljän paksun pylvään takana, seinät on '
+                  + 'laatoitettu vihertävin ja ruskein levyin, ja '
+                  + 'sivusiivissä on rivi kaari-ikkunoita. Edustalla '
+                  + 'kasvaa nuoria oliivipuita.',
+                lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Historian käänne: 1847 ja Kuyunjik',
@@ -29439,16 +29579,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Britannian museoon, ja työtä jatkoivat Hormuzd Rassam '
                 + 'ja George Smith. Layardin kirjat olivat myyntimenestys '
                 + 'ja tekivät hänestä rikkaan.',
-              kuva: {
-                tiedosto: 'Artist’s impression of a hall in an Assyrian palace from The Monuments of Nineveh by Sir Austen Henry Layard, 1853.jpg',
-                selite: 'Layardin vuoden 1853 kuvitelma assyrialaisen '
-                  + 'palatsin salista. Seinät on jaettu vaakavyöhykkeisiin '
-                  + 'kuvakertomusta, katto on maalattu kirkkain kuvioin, '
-                  + 'ja käytävän molemmin puolin seisoo siivekäs '
-                  + 'ihmispäinen härkä. Värit ovat arvaus: kaivauksista '
-                  + 'löytyi vain kiveä.',
-                lahde: 'Sir Austen Henry Layard, 1853, Wikimedia Commons (PD)',
-              },
             },
             {
               otsikko: 'Milloin kannattaa tulla',

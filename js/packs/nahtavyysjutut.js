@@ -18720,11 +18720,19 @@ export const NAHTAVYYSJUTUT = {
    * Mosque, Great Mosque of al-Nuri (Mosul) ja Austen Henry Layard
    * (haettu 20.8.2026).
    *
-   * SISÄLTÖLINJAUS (Fablen ohje 20.8.2026) on tässä tiukempi kuin
-   * missään muussa kaupungissa: EI 2010-luvun sotaa eikä tuhoja.
-   * Jokainen näistä seitsemästä kohteesta esiintyy en-Wikipediassa
-   * artikkelissa, jonka loppuosa kertoo tuhosta tai
-   * jälleenrakennuksesta. Yksikään juttu ei kerro kummastakaan.
+   * SISÄLTÖLINJAUS: nämä seitsemän juttua kertovat, mitä kohteet
+   * ovat olleet, eivät niiden nykytilaa. Jokainen kohde esiintyy
+   * en-Wikipediassa artikkelissa, jonka loppuosa kertoo tuhosta tai
+   * jälleenrakennuksesta; sitä ei kerrota tässä.
+   *
+   * HUOM. LINJAUSMUUTOS 20.8.2026: vaurioituneen kaupungin nykyilme
+   * ja sen syy KERROTAAN lukijalle — mutta kaupunkilehden puolella,
+   * ei nähtävyysjutuissa. Sota 2014–2017, al-Nurin moskeijan tuho ja
+   * jälleenrakennus sekä matkustamisen tilanne ovat mosul-lehden
+   * kansisivun nostossa "Minareetti nousi uudelleen" ja
+   * Matkailijan Mosul -oppaassa (js/packs/kulttuuri-kategoriat.js).
+   * Jos näihin juttuihin joskus lisätään nykytilaa, se tehdään
+   * samalla neutraalilla tavalla.
    * Kohteet on kirjoitettu siitä, mitä ne ovat olleet: Sanheribin
    * pääkaupungista, Nur ad-Din Zangin rakennushankkeesta, Nader
    * Shahin piirityksestä, Badr al-Din Lu'lu'n hovista, ensimmäisestä
