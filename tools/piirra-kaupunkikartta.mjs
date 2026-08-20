@@ -1146,15 +1146,25 @@ const KAUPUNGIT = {
     // temppeli osuisi tiukemmassa rajauksessa 86 %:n korkeudelle
     // vasemmalle, eli suoraan mittakaavajanan päälle; nyt se on 78 %:ssa.
     //
-    // KESKEN 13.8.2026. Rajaus on ajettu kahdesti ja KATSOTTU: kartta
-    // on kelvollinen mutta laiha. Syy on mitattu eikä arvattu — Luxorin
-    // ja Karnakin temppelialueet EIVÄT ole OSM:ssä rakennuksia vaan
-    // historic=ruins / archaeological_site -alueita, eikä piirtotyökalu
-    // pyydä niitä lainkaan. Karnakin ulkomuuri näkyy vain siksi, että se
-    // on erikseen way-viiva. Ennen Luxorin julkaisua työkalulle pitää
-    // lisätä arkeologisten alueiden taso; pelkkä rajauksen kiristäminen
-    // ei auta, koska aineisto puuttuu eikä ole väärässä paikassa.
+    // VALMIS 20.8.2026 — KESKEN-merkintä 13.8.2026 on poistettu, ja
+    // tässä on mitä sen aikana puuttui. Silloin kartta oli kelvollinen
+    // mutta laiha, ja syy mitattiin: Luxorin ja Karnakin temppelialueet
+    // EIVÄT ole OSM:ssä rakennuksia vaan historic=ruins /
+    // archaeological_site -alueita, eikä piirtotyökalu pyytänyt niitä
+    // lainkaan. Karnakin ulkomuuri näkyi vain siksi, että se on erikseen
+    // way-viiva. Arkeologisten alueiden taso lisättiin kyselyyn
+    // (way["historic"~"^(ruins|archaeological_site)$"], ks. haeOverpass)
+    // ja rauniokaupunki-lippu v930:ssa, ja tässä ne otetaan käyttöön:
+    // nyt molemmat temppelipiirit piirtyvät omina laikkuinaan reunoineen.
+    //
+    // EI jalkakaydat- eikä palvelutiet-lippua, ja se on mitattu
+    // kuvasta eikä oletettu: pelkkä rauniokaupunki riitti. Luxorissa
+    // vaiva oli päinvastainen kuin Petrassa ja Jerusalemissa — kaduista
+    // ei ollut puutetta, koska temppelien ympärillä on nykyinen kaupunki
+    // tiheine kortteleineen, vaan puuttuvat olivat itse temppelipiirit.
+    // Sfinksikuja piirtyi jo ennen lippua omana viivanaan ja piirtyy yhä.
     rajat: { pohjoinen: 25.7225, etela: 25.693, lansi: 32.6335, ita: 32.6625 },
+    rauniokaupunki: true,
   },
   halab: {
     // Aleppo. Avain on halab, koska laudan kaupunki-id on halab.
@@ -1225,6 +1235,49 @@ const KAUPUNGIT = {
      * highway=path. Ilman lippua kuvassa olisi pelkkä maantie.
      */
     rajat: { pohjoinen: 30.341, etela: 30.3175, lansi: 35.427, ita: 35.4665 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    rauniokaupunki: true,
+  },
+  persepolis: {
+    /*
+     * Persepolis ei ole kaupunki vaan YKSI RAKENNUSRYHMÄ: kivinen
+     * terassi Rahmat-vuoren kupeessa. Terassi itse on vain noin
+     * 450 × 300 metriä, eli tämä on koko kartaston tiukin rajaus —
+     * 770 × 520 metriä. Laveampi ruutu olisi tyhjää tasankoa, koska
+     * lähin nykyinen asutus (Marvdasht) on kilometrien päässä.
+     *
+     * ENSIMMÄINEN RAJAUS OLI LEVEÄMPI (52,8865–52,8960) JA KATSOTTIIN.
+     * Se otti mukaan myös Artakserkses II:n haudan, joka on 200 metriä
+     * muita idempänä vuoren kyljessä — ja koska hauta on OSM:ssä
+     * historic=tomb eikä ruins, piirtotyökalu ei hae sitä lainkaan:
+     * kuvan oikea kolmannes jäi tyhjäksi paperiksi, jonka keskellä olisi
+     * ollut yksi numeroympyrä ilman mitään ympärillään. Hauta jätettiin
+     * siksi kartalta pois ja ruutu kiristettiin terassin ympärille.
+     * Artakserkses III:n hauta on mukana: se on kiinni terassin
+     * itäkyljessä ja osuu nyt 82 prosenttiin leveydestä.
+     *
+     * KOORDINAATIT OVAT OVERPASSISTA, EIVÄT WIKIPEDIASTA, ja ero on
+     * kohteen mittainen. en-Wikipedian Gate of All Nations -artikkeli
+     * antaa portille pisteen 29,934444 / 52,891389, mutta OSM:ssä portti
+     * (way 95531813) on 29,93618 / 52,889078 — 250 metriä koillisempana.
+     * Wikipedian piste osuu tällä kartalla suunnilleen aarrekammion
+     * kohdalle. Terassi on niin pieni, että 250 metriä on neljännes
+     * kuvan leveydestä, joten OSM voittaa (Tokion kansallismuseon
+     * ennakkotapaus: piste haetaan Overpassista, kun artikkelin oma
+     * koordinaatti ei kelpaa).
+     *
+     * jalkakaydat JA palvelutiet päällä ja rauniokaupunki: true kuten
+     * Petrassa, ja tässä se on MITATTU eikä peritty. Overpass antaa
+     * rajaukselle 149 highway-viivaa, ja ne jakautuvat näin: 118
+     * footway, 19 steps, 9 path, 2 service ja 1 pedestrian. Tavallisia
+     * katuja (residential, tertiary, secondary…) ei ole yhtäkään, eikä
+     * steps ole KADUT-taulussa lainkaan. Ilman kahta lippua kartalle
+     * piirtyisi siis TÄSMÄLLEEN YKSI viiva. Rakennukset puuttuisivat
+     * niiden lisäksi kokonaan, koska palatsit ovat historic=ruins
+     * -alueita eivätkä building-monikulmioita.
+     */
+    rajat: { pohjoinen: 29.9372, etela: 29.9325, lansi: 52.8858, ita: 52.8938 },
     jalkakaydat: true,
     palvelutiet: true,
     rauniokaupunki: true,
@@ -1599,10 +1652,26 @@ const {
  * laajaa vastausta ECONNRESETillä viidesti peräkkäin — yksi palvelin
  * ei siis riitä, vaan uusintayritys kiertää listaa.
  */
-const OVERPASS_PALVELIMET = [
+/*
+ * KOLMAS PALVELIN ANNETAAN YMPÄRISTÖMUUTTUJALLA, ei kovakoodattuna.
+ * 20.8.2026 MOLEMMAT vakiopalvelimet olivat pitkään alhaalla samaan
+ * aikaan (kymmenen yritystä: viisi ECONNRESETiä, kaksi 502:ta, kaksi
+ * 500:aa), eikä Persepoliksen karttaa saanut piirrettyä lainkaan.
+ * Julkisia peilejä on muitakin, mutta ne vaihtuvat ja niiden aineisto
+ * voi olla rajattu — osa peileistä sisältää vain oman maansa (kokeiltu:
+ * overpass.osm.ch vastaa 200:lla mutta palauttaa Iranista tyhjän
+ * listan). Peiliä ei siksi kirjata pysyväksi riippuvuudeksi vaan
+ * annetaan ajokohtaisesti:
+ *
+ *   OVERPASS_PALVELIMET=https://peili.example/api/interpreter \
+ *     node tools/piirra-kaupunkikartta.mjs persepolis
+ *
+ * Useampi peili erotetaan pilkulla. Ilman muuttujaa lista on entinen.
+ */
+const OVERPASS_PALVELIMET = (process.env.OVERPASS_PALVELIMET || [
   'https://overpass-api.de/api/interpreter',
   'https://overpass.kumi.systems/api/interpreter',
-];
+].join(',')).split(',').map((s) => s.trim()).filter(Boolean);
 
 async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false, palvelin = OVERPASS_PALVELIMET[0]) {
   const alue = `(${rajat.etela},${rajat.lansi},${rajat.pohjoinen},${rajat.ita})`;
