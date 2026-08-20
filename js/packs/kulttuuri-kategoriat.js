@@ -22226,6 +22226,41 @@ export const KULTTUURI_KATEGORIAT = {
    * niin, ettei se peitä CYP-maalehden omaa sivua (rakennaSivut):
    * maalehdellä on muinaisuus, kirkot, luonto, kasityo ja ruoka.
    * Jakoa ei käsitellä — ks. nahtavyysjutut.js:n nikosia-kommentti.
+   *
+   * VAIHE B (Opus 20.8.2026): lisätty avauskuvat ja matkailijalle-osio
+   * Medinan mallilla. Vanhoihin johdantoihin, nostoihin, kansikuviin
+   * eikä tehtävään ole koskettu. Faktat on tarkistettu en-Wikipedian
+   * artikkeleista Nicosia, Walls of Nicosia, Kyrenia Gate, Cyprus,
+   * Halloumi ja Mesaoria (haettu 20.8.2026).
+   *
+   * JAON KÄSITTELY on Fablen ennakkopäätös 20.8.2026 ("Antaa olla"):
+   * jaettu kaupunki kerrotaan neutraalina maantieteellisenä
+   * nykytosiasiana eikä politiikkana. Oppaassa se näkyy kolmena
+   * asiana, jotka matkailija kohtaa: kaksi kuntaa väkilukuineen,
+   * puskurivyöhyke jalan ylitettävine tarkastuspisteineen sekä eri
+   * valuutat. Syitä, osapuolia eikä neuvotteluja ei käsitellä. Sama
+   * linja on jo asia-valokuvat.js:n nikosia-kuvateksteissä.
+   * POIS JÄTETTY: Nikosian lentoasema (vuoden 1974 tapahtumat), Ledran
+   * kadun ylityspaikan avaamisen yksityiskohdat sekä 1955–1959 ja 1974.
+   * Ottomaanien valloitus 1570 on mukana vain vuosilukuna muurin
+   * yhteydessä, ilman piirityksen kuvausta.
+   *
+   * WIKIPEDIAN SISÄINEN RISTIRIITA: Ledra Street -artikkelin johdanto
+   * sanoo ylityspaikan olleen "kuudes" ja saman artikkelin
+   * tapahtumakuvaus lainaa avajaispuhetta, jossa se on "viides".
+   * Järjestysluku on jätetty pois eikä ylityspaikkaa käsitellä
+   * numeroina lainkaan.
+   *
+   * SÄÄN MITTAUSPISTE: Kyproksen viralliset lukemat mitataan
+   * Athalassassa 162 metrin korkeudessa, kun keskusta on 220 metrissä.
+   * Ero kerrotaan oppaan sääjaksossa (Siinai/Petra-ennakkotapaus).
+   *
+   * VÄKILUVUT ovat eri vuosilta, koska kaupungin kahdessa osassa on
+   * eri väestönlaskennat: eteläpuolen kunnan 111 797 on vuodelta 2021
+   * ja pohjoispuolen kunnan 61 378 vuodelta 2011. Vuosilukuja ei
+   * mainita oppaassa, koska ne johtaisivat kysymykseen jaon syistä;
+   * luvut on siksi pyöristetty muotoon "runsaat 111 000" ja "runsaat
+   * 61 000", jotka pitävät paikkansa kummankin laskennan mukaan.
    */
   nikosia: [
     {
@@ -22259,6 +22294,38 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kierrekoristeiset kivikonsolit. Ikkunoissa on puiset '
             + 'säleluukut.',
           lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: muuri ja vallihauta, Samanbahçen matalat rivitalot
+       * ja Kyrenian portti — kehä, sen sisäpuoli ja yksi kolmesta
+       * portista. Kansikuvat käsittelevät kattoja ja asuintaloja, joten
+       * avauskuvat pysyvät muurissa ja kaupunkirakenteessa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'CY-nikosia-stadtmauer.jpg',
+          selite: 'Näkymä muurin harjalta pitkin vallihautaa. Vasemmalla '
+            + 'viettää kalkkikivinen muurinrinne, oikealla kaartuu '
+            + 'seuraavan bastionin pyöristetty kylki, ja välissä oleva '
+            + 'hauta on nurmea ja palmuja.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Samanbahçe in North Nicosia.jpg',
+          selite: 'Kivetty kuja Samanbahçen korttelissa. Molemmin puolin '
+            + 'jatkuu rivi samanlaisia matalia, valkoiseksi kalkittuja '
+            + 'taloja vihreine säleluukkuineen, ja kujan päässä erottuu '
+            + 'kupolikattoinen suihkulähde.',
+          lahde: 'muffinn, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Kyrenia Gate, Nicosia, Cyprus.jpg',
+          selite: 'Kyrenian portti keskellä katua. Hiekankeltaisen '
+            + 'kivimassan päällä on nelisivuinen vartiokamari ja sen '
+            + 'takana matala kupoli; holvikaaren yläpuolella on '
+            + 'kivitauluja, ja molemmin puolin nousee lyhtypylväs.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
@@ -22325,6 +22392,162 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * MATKAILIJALLE: jaksot eivät toista lehden nostoja (Kornesioksen
+       * kartano, Bedesten, arkkipiispan palatsi) eivätkä arki-sivun
+       * nostoja (Laiki Geitonia, Pedieos, postimuseo). Pedieos esiintyy
+       * silti kerran uudestaan, koska joen kääntäminen on syy siihen,
+       * miksi vallihauta on siinä missä se on — eri asia kuin arki-sivun
+       * nosto, joka kertoo joen pituudesta ja kuivumisesta.
+       * Arjen ilmiöksi on otettu halloumi, jota lehti ei ennestään
+       * käsittele; kulttuurivisan halloumikysymys saa näin vastineen.
+       * Kohdekartan esittely (maakartat.js) kertoo muurin muodosta,
+       * joten rakennejakso keskittyy siihen, mitä muurin rakentaminen
+       * teki joelle, portteihin ja kaupungin kahtiajakoon.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Nicosia - Camocio Giovanni Francesco - 1574.jpg',
+          selite: 'Venetsialainen kuparipiirros vuodelta 1574. Kaupunki on '
+            + 'piirretty yhdentoista kärjen tähdeksi, ja jokaisen '
+            + 'bastionin kylkeen on kirjoitettu sen nimi; keskellä kohoaa '
+            + 'S. Sofia -katedraali ja joki kulkee kehän ohi. Vasemmassa '
+            + 'alanurkassa on julkaisijan oma mitta-asteikko.',
+          lahde: 'Giovanni Francesco Camocio, Wikimedia Commons (PD)',
+        },
+        kappale: 'Nikosia on Kyproksen pääkaupunki ja saaren ainoa suuri '
+          + 'kaupunki, jota ei perustettu sataman viereen: se on keskellä '
+          + 'Mesaorian tasankoa 220 metrin korkeudessa. Ydin on '
+          + 'venetsialaisten muurien rajaama ympyrä, ja sen ulkopuolelle '
+          + 'on kasvanut nykyinen kaupunki. Kaupunki on kahdessa osassa, '
+          + 'ja niiden välissä kulkee puskurivyöhyke; eteläpuolen kunnassa '
+          + 'asuu runsaat 111 000 ja pohjoispuolen kunnassa runsaat 61 000 '
+          + 'ihmistä. Puolelta toiselle pääsee jalan tarkastuspisteistä.',
+        artikkeli: {
+          nimi: 'Matkailijan Nikosia',
+          taitto: 'opas',
+          teksti: 'Ympyränmuotoinen muuri keskellä tasankoa, sen sisällä '
+            + 'kapeat kujat ja ulkopuolella suorat kadut.',
+          nosto: 'Muurin yksitoista bastionia on nimetty niiden '
+            + 'italialaissukujen mukaan, jotka maksoivat rakennustyön — '
+            + 'Caraffa, Podocattaro, D\'Avila, Quirini ja seitsemän '
+            + 'muuta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Nikosiassa ei ole käytössä olevaa lentoasemaa, joten '
+                + 'perille tullaan maanteitse. Lähin lentoasema on '
+                + 'Larnacassa noin viidenkymmenen kilometrin päässä '
+                + 'kaakossa ja toinen Pafoksessa noin sadan kilometrin '
+                + 'päässä lounaassa. Junaa ei ole lainkaan: Kyproksella ei '
+                + 'ole yhtään toimivaa rautatietä. Saaren ainoa rata, '
+                + 'Cyprus Government Railway, kulki vuosina 1905–1951 ja '
+                + 'pysähtyi myös Nikosiassa, mutta se lakkautettiin '
+                + 'kannattamattomana. Moottoritiet vievät kaupungista '
+                + 'etelään Limassoliin, kaakkoon Larnacaan ja länteen '
+                + 'Troodoksen suuntaan, ja kaupungin ympäri rakennetaan '
+                + 'kehätietä. Autoilijan on syytä muistaa yksi asia: '
+                + 'Kypros on niitä kolmea EU-maata, joissa ajetaan '
+                + 'vasemmalla. Kaupunkipyöriä on ollut vuodesta 2011.',
+              kuva: {
+                tiedosto: 'Empfangsgebäude Evrychou.jpg',
+                selite: 'Kyproksen valtionrautateiden entinen asemarakennus '
+                  + 'Evrychoussa. Kaksikerroksisen talon seinät on ladottu '
+                  + 'vaaleista kivilohkareista, ikkunaluukut ovat vihreät, '
+                  + 'ja eteen on palautettu pätkä raidetta. Talossa on nyt '
+                  + 'rautatiemuseo.',
+                lahde: 'Liebjens, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Vanhankaupungin muoto päätettiin kerralla. '
+                + 'Venetsialaiset rakensivat vuosina 1567–1570 kaupungin '
+                + 'ympärille ympyränmuotoisen muurin, jonka kehä on noin '
+                + 'viisi kilometriä ja jossa on yksitoista viisikulmaista '
+                + 'bastionia. Portteja tehtiin kolme: Kyrenian portti '
+                + 'pohjoiseen, Famagustan portti itään ja Pafoksen portti '
+                + 'länteen. Samalla Pedieos-joki käännettiin kaupungin '
+                + 'ohi, jotta se ei tulvisi kaduille ja jotta vallihauta '
+                + 'saataisiin täytettyä. Hauta on nykyään puistoja ja '
+                + 'urheilukenttiä. Ero näkyy kartalla yhä: muurin sisällä '
+                + 'kadut ovat kapeita ja mutkittelevia, ulkopuolella '
+                + 'suoria ja leveitä. Kaupungin kahtiajako näkyy myös '
+                + 'arjessa — etelässä maksetaan euroilla ja pohjoisessa '
+                + 'Turkin liiroilla, ja saaren viralliset kielet ovat '
+                + 'kreikka ja turkki.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: halloumi',
+              teksti: 'Kyproksen tunnetuin ruoka on juusto, joka ei sula. '
+                + 'Halloumi tehdään perinteisesti vuohen- ja '
+                + 'lampaanmaidosta; lehmiä saarella oli vähän ennen kuin '
+                + 'britit toivat niitä 1900-luvulla. Puristetut '
+                + 'juustomassat keitetään omassa herassaan vähintään puoli '
+                + 'tuntia, ja juuri tämä vaihe antaa halloumille sen '
+                + 'rakenteen: pannulla se ruskistuu sulamatta ja narskuu '
+                + 'hampaissa. Keittämisen jälkeen palat suolataan, niiden '
+                + 'väliin pannaan tuoretta tai kuivattua minttua, ne '
+                + 'taitetaan kaksin kerroin ja säilytetään suolatussa '
+                + 'herassa yhdestä kolmeen vuorokautta. Yksi perinteinen '
+                + 'halloumi painaa 220–270 grammaa. Vanhin säilynyt kuvaus '
+                + 'on noin vuodelta 1554, ja vuodesta 2021 nimi on EU:ssa '
+                + 'suojattu: sillä saa myydä vain Kyproksella tehtyä '
+                + 'juustoa.',
+              kuva: {
+                tiedosto: 'Fromage Halloumi (Chypre) en juin 2023.jpg',
+                selite: 'Pala tuoretta halloumia harmaalla alustalla. '
+                  + 'Juusto on taitettu kaksin kerroin, pinta on kostea ja '
+                  + 'kiiltävä, ja siihen on tarttunut tummanvihreitä '
+                  + 'minttusilppuja.',
+                lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Muuriin puhkaistiin aukkoja',
+              teksti: 'Vielä 1800-luvun lopulla koko kaupunki mahtui '
+                + 'muurin sisään, ja ulos päästiin vain kolmesta portista. '
+                + 'Muutos alkoi vuonna 1878, kun saaren hallinto siirtyi '
+                + 'briteille. Jo seuraavana vuonna muuriin puhkaistiin '
+                + 'Pafoksen portin viereen aukko, jotta liikenne pääsisi '
+                + 'kulkemaan, ja 1900-luvulla aukkoja tehtiin lisää. '
+                + 'Vuonna 1931 purettiin muurit Kyrenian portin molemmilta '
+                + 'puolilta, ja portti jäi seisomaan yksin keskelle katua; '
+                + 'siihen hakattiin vuosiluku 1931. Samassa työssä '
+                + 'paljastui portin päältä venetsialainen latinankielinen '
+                + 'kivitaulu, joka oli ollut piilossa myöhemmän '
+                + 'kaiverruksen alla. Aukot näkyivät väkiluvussa: vuonna '
+                + '1881 kaupungissa oli 11 536 asukasta, vuonna 1931 jo '
+                + '23 324 ja vuonna 1960 45 629.',
+              kuva: {
+                tiedosto: 'NIVOSIA(1881) p035 THE TAHTA GALA FROM THE FAMAGOSTA GATE.jpg',
+                selite: 'Kivipiirros vuodelta 1881: näkymä Famagustan '
+                  + 'portin holvikaaren läpi Tahtakalen korttelia kohti. '
+                  + 'Aukossa kasvaa kolme palmua, oikealla kulkee kuja '
+                  + 'matalien talojen välissä ja taempana nousee '
+                  + 'minareetti. Alareunan tekstit ovat kirjan oman '
+                  + 'painolaitoksen merkintöjä.',
+                lahde: 'Archduke Ludwig Salvator of Austria, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nikosia on Troodoksen sadevarjossa, ja se näkyy '
+                + 'luvuissa. Heinäkuun keskilämpö on 29,7 astetta ja '
+                + 'elokuun 29,6, ja päivälämpötila nousee kummassakin 36 '
+                + 'asteeseen; vettä tulee heinäkuussa kaksi millimetriä ja '
+                + 'elokuussa kolme. Tammikuussa keskilämpö on 10,7 '
+                + 'astetta ja sadetta 54 millimetriä. Koko vuoden sade jää '
+                + 'alle kolmensadanviidenkymmenen millimetrin, ja lähes '
+                + 'kaikki siitä tulee marras–maaliskuussa. Kävelijän kausi '
+                + 'on siis loka–huhtikuu. Yksi varaus lukuihin: Kyproksen '
+                + 'viralliset mittaukset tehdään Athalassassa kaupungin '
+                + 'laidalla 162 metrin korkeudessa, kun keskusta on 220 '
+                + 'metrissä.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
@@ -23275,6 +23498,35 @@ export const KULTTUURI_KATEGORIAT = {
    * İZMIRIN KANSISIVU (nippu 2, 13.8.2026). Aihesivun id on arki,
    * koska TUR-maalehdellä on historia, luonto, kasityo, musiikki ja
    * ruoka — sama id kaupungilla peittäisi maan sivun.
+   *
+   * VAIHE B (Opus 20.8.2026): lisätty pelkkä matkailijalle-osio.
+   * Avauskuvat tehtiin jo v929:ssä, eikä niihin ole koskettu; oppaan
+   * kuvat on valittu niin, etteivät ne toista niitä (Kadifekalen
+   * muuriaukko, auringonlasku lahdella, lauttalaituri). Faktat on
+   * tarkistettu en-Wikipedian artikkeleista İzmir, İzmir Adnan Menderes
+   * Airport, İZBAN, İzmir Metro, Ottoman Railway Company, Alsancak
+   * railway station, Gediz Delta ja Fig (haettu 20.8.2026).
+   *
+   * WIKIPEDIAN SISÄINEN RISTIRIITA: İzmir-artikkeli sanoo İzmir–Aydın
+   * -radan valmistuneen 1867, kun Ottoman Railway Company- ja Alsancak
+   * railway station -artikkelit antavat päiväyksen 1. heinäkuuta 1866.
+   * Oppaassa on 1866, koska kaksi tarkempaa artikkelia ovat yksimielisiä
+   * ja antavat päivämäärän (ennakkotapaukset v925, v932, v937: tarkempi
+   * lähde voittaa yleisartikkelin arvion).
+   *
+   * TOINEN RISTIRIITA: İzmir-artikkelin mukaan Çiğlin lintuparatiisi on
+   * 80 neliökilometriä ja siinä on 205 lajia, kun Gediz Delta
+   * -artikkeli antaa suistolle 14 900 hehtaaria ja yli 250 lajia. Ne
+   * eivät ole sama alue — lintuparatiisi on suojeltu osa suistoa —
+   * joten oppaassa käytetään suiston omia lukuja ja puhutaan
+   * suistosta, ei lintuparatiisista.
+   *
+   * SÄÄN MITTAUSPISTE: saatiedot.js:n İzmir-rivi antaa tammikuulle 7,5
+   * astetta, kun kaupungin oma sääasema antaa 9,0. Ero syntyy siitä,
+   * että ERA5-ruutu kattaa lahden lisäksi ympäröivät vuoret. Kesän
+   * luvut sen sijaan täsmäävät (rivi 28,7 / asema 28,6 heinäkuussa).
+   * Ero kerrotaan sekä tässä että oppaan sääjaksossa
+   * (Siinai/Petra-ennakkotapaus).
    */
   izmir: [
     {
@@ -23390,6 +23642,165 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
         },
       ],
+      /*
+       * MATKAILIJALLE: jaksot eivät toista lehden nostoja (Asansör,
+       * Kültürpark, Kadifekale) eivätkä arki-sivun nostoja (boyoz,
+       * kumru, İzdenizin lautat). Siksi liikennejakso kertoo
+       * lentoasemasta, lähijunasta, metrosta ja raitiovaunuista muttei
+       * lautoista, ja historiajakso kertoo radasta eikä antiikin
+       * Smyrnasta, joka on jo Kadifekale-nostossa. Arjen ilmiöksi on
+       * otettu viikuna: kulttuurivisa kysyy juuri sitä, eikä lehdessä
+       * ollut siihen ennestään vastinetta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Izmir Alsancak Kordon 6339.jpg',
+          selite: 'Kordonin nurmikenttä Alsancakin kohdalla. Etualalla '
+            + 'seisoo yksinäinen kellanvihreä sypressi, keskellä kaartuu '
+            + 'punainen juoksurata, ja lahden takana nousee vuorijono '
+            + 'utuun. Oikealla rantaviivaa reunustavat tornitalot.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren '
+          + 'suurin kaupunkialue. Se on rakennettu lahden pohjukkaan '
+          + 'aivan merenpinnan tasoon: rakennettu alue jatkuu pohjoiseen '
+          + 'Gedizin suistoon, idässä purojen kasaamalle tasangolle ja '
+          + 'etelässä jyrkemmille rinteille. Yhdessätoista '
+          + 'kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä ja koko '
+          + 'maakunnassa yli neljä ja puoli miljoonaa. Vanha nimi Smyrna '
+          + 'elää yhä englannin kielessä ja viikunalajikkeiden nimissä.',
+        artikkeli: {
+          nimi: 'Matkailijan İzmir',
+          taitto: 'opas',
+          teksti: 'Lahti keskellä, rinteet reunoilla ja suisto '
+            + 'pohjoisessa — kaupunki kiertyy veden ympäri.',
+          nosto: 'Turkin ensimmäinen rautatie lähti İzmiristä vuonna 1858, '
+            + 'ja se rakennettiin hedelmää varten: brittiyhtiön tehtävä '
+            + 'oli tuoda Aydınin tasangon viikunat satamaan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Adnan Menderesin lentoasema avattiin 17. marraskuuta '
+                + '1987 Gaziemirin puolelle, kahdeksantoista kilometriä '
+                + 'keskustasta lounaaseen. Vuonna 2025 sen kautta kulki '
+                + '12,7 miljoonaa matkustajaa, joista 7,6 miljoonaa '
+                + 'kotimaan lennoilla; Turkin lentoasemista se on '
+                + 'viidenneksi vilkkain. Asemalta pääsee suoraan '
+                + 'lähijunaan. İZBAN perustettiin 2007 ja aloitti '
+                + 'liikenteen 2010, ja se on nykyään Turkin vilkkain '
+                + 'lähijunaverkko: rataa on 136 kilometriä, asemia 41 ja '
+                + 'matkustajia keskimäärin 185 000 päivässä. Nimi on '
+                + 'lyhenne sanoista İzmir ja banliyö, esikaupunki. Metroa '
+                + 'on yksi linja, M1, joka kulkee 27 kilometriä kaupungin '
+                + 'länsilaidalta Bornovaan. Raitiovaunulinjoja on kolme: '
+                + 'Karşıyaka 2017, Konak 2018 ja Çiğli 2024.',
+              kuva: {
+                tiedosto: 'İzban E 22031 Bayraklı.jpg',
+                selite: 'İZBANin lähijuna seisoo Bayraklın laiturilla. '
+                  + 'Keula on pyöristetty ja tummansininen, kyljessä '
+                  + 'kulkee punainen ja sininen raita, ja takana rinne on '
+                  + 'täynnä vaaleita kerrostaloja.',
+                lahde: 'ToprakM, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupungin muoto tulee lahdesta. İzmir on aivan '
+                + 'merenpinnan tasossa, ja rakennettu alue leviää lahden '
+                + 'ympäri. Pohjoisessa on Gedizin suisto: 14 900 hehtaarin '
+                + 'kosteikko Foçan, Menemenin ja Çiğlin kuntien alueella, '
+                + '26 kilometrin päässä keskustasta. Se on Ramsarin '
+                + 'sopimuksen kohde vuodesta 1998 ja kansainvälisesti '
+                + 'tärkeä lintualue vuodesta 2000: lajeja on yli 250, '
+                + 'talvella siellä on noin 80 000 lintua, ja maailman '
+                + 'flamingoista kymmenesosa turvautuu siihen. Suistossa on '
+                + 'myös Çamaltın suola-allas, josta tulee kolmasosa Turkin '
+                + 'suolasta. Kesällä lahdella puhaltaa säännöllisesti '
+                + 'Egeanmeren etesiantuuli, jota täällä kutsutaan nimellä '
+                + 'meltem.',
+              kuva: {
+                tiedosto: 'Flamingos from Gediz Delta.jpg',
+                selite: 'Pitkä jono vaaleanpunaisia flamingoja seisoo '
+                  + 'matalassa vedessä Gedizin suistossa. Etualalla on '
+                  + 'ruohoinen ja kivinen penger, ja taustalla siintävät '
+                  + 'utuiset vuoret.',
+                lahde: 'Emoboy1331, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: viikuna',
+              teksti: 'Turkki on maailman suurin viikunantuottaja: vuonna '
+                + '2024 maailmassa korjattiin 1,34 miljoonaa tonnia '
+                + 'viikunoita, ja siitä 28 prosenttia tuli Turkista. '
+                + 'Suurin osa kaupasta on kuivattua, koska kypsä viikuna '
+                + 'vaurioituu kuljetuksessa eikä säily. Smyrnan tyypin '
+                + 'viikuna ei myöskään kypsy itsestään: se tarvitsee '
+                + 'pölytyksen, jonka hoitaa pieni ampiainen Blastophaga '
+                + 'psenes. Ampiainen elää koirasviikunassa, jota turkiksi '
+                + 'sanotaan ilekiksi; jo Theofrastos kuvasi '
+                + 'kreikkalaisten viljelijöiden sitovan villiviikunoita '
+                + 'satopuiden oksiin juuri tätä varten. Ilman pölytystä '
+                + 'raakileet putoavat maahan. Turkkilainen lajike vietiin '
+                + 'Kaliforniaan 1800-luvun lopulla, ja siellä sitä myydään '
+                + 'yhä nimellä Calimyrna, joka on yhdistelmä sanoista '
+                + 'California ja Smyrna.',
+              kuva: {
+                tiedosto: 'Figs - İlek 01.jpg',
+                selite: 'Koirasviikunan eli ilekin oksa: harmaalla oksalla '
+                  + 'kasvaa rivi pieniä pyöreitä vihreitä hedelmiä ja '
+                  + 'niiden välissä vaaleanvihreitä lehtiä. Kuva on '
+                  + 'Adanan seudulta, mutta sama laji kasvaa myös '
+                  + 'Egeanmeren viikunatarhoissa.',
+                lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Rata rakennettiin hedelmää varten',
+              teksti: 'Ennen rataa tavarat kulkivat karavaanilla, ja '
+                + 'pelloilta satamaan meni päiviä. Syyskuun 22. päivänä '
+                + '1856 ottomaanihallinto myönsi brittiläiselle yhtiölle '
+                + 'luvan rakentaa rata Aydınin tasangolta İzmirin '
+                + 'satamaan; tarkoitus oli tuoda malmia ja hedelmää, '
+                + 'ennen kaikkea viikunoita, laivattavaksi. Ensimmäinen '
+                + 'osuus İzmiristä Seydiköyn kylään avattiin 30. lokakuuta '
+                + '1858, ja se oli ensimmäinen rautatie Anatoliassa ja '
+                + 'nykyisen Turkin alueella. Aydıniin asti päästiin vasta '
+                + '1. heinäkuuta 1866, sillä 1,2 miljoonan punnan '
+                + 'alkupääoma osoittautui liian pieneksi. Rata alkoi '
+                + 'Alsancakin korttelista aivan laiturien vierestä, ja sen '
+                + 'konepajoista tuli valtakunnan suurimmat. Vuonna 1871 '
+                + 'asemalle rakennettiin uusi rakennus kellotorneineen — '
+                + 'se oli İzmirin ensimmäinen kellotorni.',
+              kuva: {
+                tiedosto: 'Ottoman Railway 1st class exterior.jpg',
+                selite: 'Ottomaanien rautatieyhtiön ensimmäisen luokan '
+                  + 'vaunu tehtaan ottamassa kuvassa. Vaunu on pitkä ja '
+                  + 'tumma, kylkeä kiertää tiheä ikkunarivi, katto on '
+                  + 'vaalea ja pyöristetty, ja seinään on maalattu '
+                  + 'arabialaisin kirjaimin yhtiön nimi.',
+                lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'İzmirissä sade ja lämpö ovat toistensa vastakohdat. '
+                + 'Joulukuussa vettä tulee 109 millimetriä ja tammikuussa '
+                + '108, kun keskilämpö on yhdeksän ja seitsemän ja puolen '
+                + 'asteen välissä. Heinäkuussa vettä tulee kolme '
+                + 'millimetriä ja elokuussa neljä, ja päivälämpötila '
+                + 'nousee 35 asteeseen. Koko vuoden sade on runsaat '
+                + 'seitsemänsataa millimetriä, ja siitä lähes kaikki tulee '
+                + 'loka–huhtikuussa. Paras kävelysää on huhti–kesäkuussa '
+                + 'ja syys–lokakuussa. Yksi tarkennus talven lukuihin: '
+                + 'tämän lehden säärivi on laskettu ruudusta, joka kattaa '
+                + 'lahden lisäksi sitä ympäröivät vuoret, joten se näyttää '
+                + 'talvella noin puolitoista astetta viileämpää kuin '
+                + 'kaupungin oma mittausasema rannalla. Kesän luvut sen '
+                + 'sijaan täsmäävät lähes tarkalleen.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
@@ -23481,6 +23892,32 @@ export const KULTTUURI_KATEGORIAT = {
    * ANKARAN KANSISIVU (nippu 2, 13.8.2026). Aihesivun id on arki,
    * koska TUR-maalehdellä on jo historia, luonto, kasityo, musiikki,
    * ruoka ja menovinkit — sama id kaupungilla peittäisi maan sivun.
+   *
+   * VAIHE B (Opus 20.8.2026): lisätty avauskuvat ja matkailijalle-osio
+   * Medinan mallilla. Vanhoihin johdantoihin, nostoihin, kansikuviin
+   * eikä tehtävään ole koskettu. Faktat on tarkistettu en-Wikipedian
+   * artikkeleista Ankara, Ankara Esenboğa Airport, Ankara railway
+   * station, High-speed rail in Turkey, Angora goat, Mohair, Hermann
+   * Jansen ja Anıtkabir (haettu 20.8.2026).
+   *
+   * KAKSI WIKIPEDIAN SISÄISTÄ RISTIRIITAA:
+   * 1) Anıtkabir-artikkeli antaa suunnittelukilpailun julistamiselle
+   *    kaksi päivämäärää (1.3.1941 leipätekstissä, 18.2.1941 osiossa
+   *    "The international competition") ja ratkaisulle kaksi (2.3.1942
+   *    ja 21.3.1942). Oppaassa kerrotaan vain se päivä, josta artikkeli
+   *    on yksimielinen: lopullinen päätös julkaistiin 9.6.1942.
+   * 2) Ankara-artikkelin ilmastolaatikko antaa tammikuulle 0,9 ja
+   *    heinäkuulle 24,3 astetta, kun saatiedot.js:n ERA5-rivi antaa 1,0
+   *    ja elokuulle 24,6. Ero on 0,1–0,3 astetta eli mittauspisteen
+   *    kohinaa, joten sääjakso on kirjoitettu rivin omista luvuista
+   *    eikä eroa selitetä lukijalle (vrt. İzmir, jossa ero on
+   *    puolitoista astetta ja se kerrotaan auki).
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY: Anıtkabir esiintyy kahdesti,
+   * matkailijalle-kuvassa (seremonia-aukio, Diego Delso DD 20) ja
+   * historiajakson kuvassa (Leijonatie, sama kuvaaja DD 26). Eri
+   * tiedostot ja eri kohde saman alueen sisällä; sama linja kuin
+   * Medinan Quba-moskeijalla.
    */
   ankara: [
     {
@@ -23512,6 +23949,37 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ANKARA GARI ja pyöreässä kulmatornissa valtionrautateiden '
             + 'TCDD:n lippu.',
           lahde: 'Gargarapalvin, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: linnavuori, Hamamönün kunnostettu kortteli ja
+       * näkymä linnalta uuteen keskustaan — kaupungin kolme kerrosta
+       * vanhimmasta uusimpaan.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Ankara Castle Outer wall from outside at west side in 2017 01.jpg',
+          selite: 'Linnan ulkomuuri lännestä katsottuna. Muuriin on '
+            + 'ladottu tummaa ja vaaleaa kiveä sekaisin, kulmassa nousee '
+            + 'nelisivuinen torni, ja portin holvikaaresta johtavat '
+            + 'kiviportaat ylös sisälinnaan.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tarihi Hamamönü Evleri, Ankara.jpg',
+          selite: 'Kapea kuja Hamamönün kunnostetussa korttelissa alhaalta '
+            + 'kuvattuna. Talot ovat valkoiseksi rapattuja, ikkunanpuitteet '
+            + 'ja räystäslaudat ruskeaa puuta, ja alaosa on ladottu '
+            + 'tummasta kivestä. Ylin kerros työntyy kujan ylle.',
+          lahde: 'BIG-K006, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ankara Central from Ankara Kalesi, Ankara Turkey 2024.jpg',
+          selite: 'Näkymä linnavuorelta uuteen keskustaan. Etualalla '
+            + 'kaartuu suurnopeusaseman pitkä aaltokatto, sen takana '
+            + 'kohoavat toimistotornit, ja kauimpana horisontissa erottuu '
+            + 'Kocatepen moskeijan minareettinelikko.',
+          lahde: 'Zach1055, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
@@ -23579,6 +24047,163 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * MATKAILIJALLE: jaksot on valittu niin, etteivät ne toista
+       * lehden nostoja (Hacı Bayram, Atakule, Gençlik Parkı) eivätkä
+       * arki-sivun nostoja (Ankaray ja metro, Ankara tava, Çıkrıkçılar
+       * Yokuşu). Siksi liikennejakso kertoo lentoasemasta ja
+       * suurnopeusradasta eikä metrosta, ja arjen ilmiöksi on otettu
+       * angoravuohi, jota lehti ei ennestään käsittele — kulttuurivisan
+       * kysymys mohair-villasta saa näin vastineen lehden teksteistä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Anıtkabir, Ankara, Turquía, 2024-10-03, DD 20.jpg',
+          selite: 'Anıtkabirin seremonia-aukio. Aukion kiveys on ladottu '
+            + 'mattokuvioiksi vaaleasta, mustasta ja punertavasta '
+            + 'travertiinista, ja perällä kohoaa portaiden päässä '
+            + 'suorakulmainen pylväikkörakennus.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ankara on Anatolian ylängöllä 938 metrin korkeudessa, ja '
+          + 'keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Kaupunki on '
+          + 'kahdessa osassa. Pohjoisessa on Ulus, joka kiertyy '
+          + 'linnavuoren juurelle ja jossa roomalainen, bysanttilainen ja '
+          + 'ottomaaninen kerros ovat päällekkäin. Etelässä nousee uusi '
+          + 'kaupunki, Kızılay ja sen takana Çankaya, joka piirrettiin '
+          + 'kartalle vasta pääkaupungiksi tulon jälkeen. Kaupungin '
+          + 'kreikkalainen nimi Ánkyra tarkoittaa ankkuria.',
+        artikkeli: {
+          nimi: 'Matkailijan Ankara',
+          taitto: 'opas',
+          teksti: 'Vanha kaupunki linnavuoren juurella, uusi kaupunki sen '
+            + 'eteläpuolella ja aroa joka suuntaan ympärillä.',
+          nosto: 'Vanha nimi Angora tarttui kolmeen eläimeen: '
+            + 'angoravuoheen, angorakaniin ja angorakissaan. Kaikki '
+            + 'kolme ovat kotoisin Ankarasta ja Keski-Anatoliasta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Esenboğan lentoasema avattiin vuonna 1955 Çubukin '
+                + 'puolelle 953 metrin korkeuteen. Vuonna 2025 sen kautta '
+                + 'kulki yli kolmetoista miljoonaa matkustajaa, joista '
+                + 'kymmenen miljoonaa kotimaan lennoilla, ja Turkin '
+                + 'lentoasemista se on neljänneksi vilkkain. Raiteilla '
+                + 'Ankara on koko maan solmukohta. Turkin ensimmäinen '
+                + 'suurnopeusrata avattiin Ankarasta Eskişehiriin 13. '
+                + 'maaliskuuta 2009, Konyaan päästiin 24. elokuuta 2011 '
+                + 'ja Istanbuliin 25. heinäkuuta 2014; Istanbulin rata on '
+                + '533 kilometriä pitkä ja matka Pendikiin kestää kolme '
+                + 'ja puoli tuntia. Junat lähtevät Ulusista, jossa aseman '
+                + 'art deco -rakennus valmistui 1937 Şekip Akalınin '
+                + 'piirustusten mukaan. Suurnopeuslaitureiden päälle '
+                + 'avattiin oma terminaali vuonna 2016.',
+              kuva: {
+                tiedosto: 'TCDD Taşımacılık HT65000 at Ankara Tren Gari.jpg',
+                selite: 'Valkoinen suurnopeusjuna odottaa lähtöä Ankaran '
+                  + 'aseman katetulla laiturilla. Keula on pyöristetty, '
+                  + 'kyljessä kulkee sininen ja punainen raita, ja '
+                  + 'laiturikatto on lasia ja terästä.',
+                lahde: 'NicholasNCE, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Ankara on Keski-Anatolian alueella, ja korkeutta on '
+                + '938 metriä. Kaupungin keskustan läpi virtaa Çubukin '
+                + 'puro, joka yhtyy läntisissä esikaupungeissa Ankaran '
+                + 'jokeen; se puolestaan laskee Sakaryaan. Historiallinen '
+                + 'ydin on kallioinen kukkula, joka kohoaa noin 150 '
+                + 'metriä joen vasemmalta rannalta ja jonka laella ovat '
+                + 'linnan rauniot. Itse joki on nykyään katettu ja '
+                + 'käännetty toisaalle, mutta se muodosti roomalaisen, '
+                + 'bysanttilaisen ja ottomaanisen kaupungin pohjoisrajan. '
+                + 'Etelässä maa nousee: Çankaya on kaupungin korkein '
+                + 'kaupunginosa, ja roomalaisena aikana se jäi selvästi '
+                + 'kaupungin ulkopuolelle. Ympärillä kasvaa aroa, ja '
+                + 'metsää on lähinnä eteläreunalla.',
+              kuva: {
+                tiedosto: 'Ankara, Turkey.jpg',
+                selite: 'Astronautin ottama kuva Ankarasta. Punaruskeat '
+                  + 'kattopinnat täyttävät laaksot ja työntyvät ylös '
+                  + 'rinteille, ja niiden välissä kiemurtelevat vihertävät '
+                  + 'kukkulanharjat. Keskellä erottuu vaalea aukioiden ja '
+                  + 'puistojen ketju.',
+                lahde: 'This image was taken by the NASA Expedition 19 crew, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: angoravuohi',
+              teksti: 'Kaupungin vanha eurooppalainen nimi oli Angora, ja '
+                + 'se tarttui kolmeen eläimeen. Angoravuohi eli Ankara '
+                + 'keçisi on kotoisin juuri tästä maakunnasta, ja sen '
+                + 'villa on mohair. Yksi vuohi tuottaa vuodessa viidestä '
+                + 'kahdeksaan kiloa karvaa, ja toisin kuin lampaat, '
+                + 'angorat keritään kahdesti vuodessa; nopea karvankasvu '
+                + 'vaatii hyvää ruokaa, sillä heikolla ravinnolla mohairin '
+                + 'kehitys tyrehtyy. Suurimmat tuottajat ovat nykyään '
+                + 'Yhdysvallat, Turkki ja Etelä-Afrikka. Kaupunki vei '
+                + 'mohairia maailmalle vuosisatoja, ja 1800-luvulla '
+                + 'samoja teitä kulkivat vuohen- ja kissannahat, kumi, '
+                + 'vaha, hunaja, marjat ja krappijuuri. Angoravuohi oli '
+                + 'kuvana Turkin 50 liiran setelin kääntöpuolella '
+                + 'vuosina 1938–1952.',
+              kuva: {
+                tiedosto: 'Angora goat flickr.jpg',
+                selite: 'Nuori angoravuohi seisoo nurmella kyljittäin '
+                  + 'kameraan. Villa on paksua, valkoista ja kihartuvaa '
+                  + 'aina sorkkiin asti, ja päässä on pienet taaksepäin '
+                  + 'kaartuvat sarvet.',
+                lahde: 'Tim Green, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kun kaupungista tuli pääkaupunki',
+              teksti: 'Angora sai uuden tehtävän 13. lokakuuta 1923, kun '
+                + 'siitä tehtiin virallisesti pääkaupunki; tasavalta '
+                + 'julistettiin kaksi viikkoa myöhemmin. Kaupunki oli '
+                + 'silloin pieni: vuonna 1924 asukkaita oli noin 35 000 ja '
+                + 'kolme vuotta myöhemmin 44 553. Kasvu tuli niin '
+                + 'nopeasti, ettei sitä osattu ohjata, ja hallitus '
+                + 'julisti vuonna 1927 kansainvälisen '
+                + 'kaupunkisuunnittelukilpailun. Sen voitti 1929 '
+                + 'saksalainen Hermann Jansen. Hän jakoi kaupungin '
+                + 'käyttötarkoituksen mukaan alueisiin, mutta uutta '
+                + 'liikekeskustaa hän ei piirtänyt lainkaan, vaan jätti '
+                + 'kaupankäynnin vanhaan keskustaan. Suunnitelma jäi '
+                + 'kesken, ja Jansen pyysi 1938 nimensä poistettavaksi '
+                + 'siitä. Rasattepen kukkulalle nousi vuosina 1944–1953 '
+                + 'Anıtkabir, jonka suunnittelukilpailuun tuli 49 '
+                + 'ehdotusta kuudesta maasta.',
+              kuva: {
+                tiedosto: 'Anıtkabir, Ankara, Turquía, 2024-10-03, DD 26.jpg',
+                selite: 'Anıtkabirin Leijonatie: matalilla jalustoilla '
+                  + 'makaa rivi vaaleasta travertiinista veistettyjä '
+                  + 'leijonia, jotka on tehty heettiläisten kivileijonien '
+                  + 'malliin. Tien toisella puolella jatkuu samanlainen '
+                  + 'rivi, ja välissä kulkee kivetty kävelytie.',
+                lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Ankaran vuosi on ylängön vuosi. Tammikuun '
+                + 'keskilämpö on yksi aste ja yöt painuvat kolmeen '
+                + 'pakkasasteeseen; elokuu on lämpimin, keskimäärin 24,6 '
+                + 'astetta ja päivisin 32. Kesä on kuiva muttei paahtava: '
+                + 'heinäkuussa vettä tulee yhdeksän millimetriä ja '
+                + 'elokuussa kymmenen, kun joulukuussa kertyy 54 ja '
+                + 'maaliskuussa 53. Koko vuoden sade jää runsaaseen '
+                + 'neljäänsataan millimetriin. Kävelijän parasta aikaa '
+                + 'ovat touko–kesäkuu ja syyskuu, jolloin keskilämpö '
+                + 'asettuu seitsemäntoista ja kahdenkymmenenyhden asteen '
+                + 'välille. Korkeus näkyy vuorokausivaihtelussa: kuiva '
+                + 'ilma jäähtyy nopeasti, joten aamut ovat selvästi '
+                + 'kuukauden keskilukua viileämpiä.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
