@@ -43,7 +43,7 @@ import {
 import { ARTIKKELIT, KULTTUURIT } from './sisaltotaulut.js';
 import { sfx } from './sound.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
-import { TESTATTAVAA, TILANNE } from './tyohuone-tilanne.js';
+import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
 import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
 import {
   cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, shortIntro,
@@ -835,12 +835,40 @@ export function avaaRaamattuLehti(ui) {
   avaaKehittajaLehti(ui, 'Raamattu', sivut);
 }
 
+/*
+ * Tuoreet kaupungit chippiriveinä Tilanne-sivun kärkeen (omistajan
+ * tilaus 20.8.2026): vihreä = juuri valmistunut (versionumero
+ * mukana, jotta tietää mitä testata), keltainen = parhaillaan työn
+ * alla. Data on TUOREET-taulussa (tyohuone-tilanne.js), jota Fable
+ * päivittää jokaisen julkaisun yhteydessä.
+ */
+function piirraTuoreetChipit(kohde) {
+  const rivit = [
+    ['Vasta valmistuneet', TUOREET.valmiit ?? [], 'valmis'],
+    ['Työn alla', TUOREET.tyossa ?? [], 'tyossa'],
+  ];
+  const kotelo = html('div', 'tuoreet');
+  for (const [otsikko, lista, luokka] of rivit) {
+    if (!lista.length) continue;
+    const rivi = html('div', 'tuoreet-rivi');
+    rivi.appendChild(html('span', 'tuoreet-otsikko', otsikko));
+    for (const k of lista) {
+      rivi.appendChild(html('span', `tuore-chip ${luokka}`,
+        k.versio ? `${k.nimi} · ${k.versio}` : k.nimi));
+    }
+    kotelo.appendChild(rivi);
+  }
+  kohde.appendChild(kotelo);
+}
+
 /** Työhuoneen tilannetaulut lehtenä: tilanne + testattavaa. */
 export function avaaTilanneLehti(ui) {
   const sivut = [{
     id: 'tilanne-taulu',
     nimi: 'Tilanne',
     yksipalsta: true,
+    rakenna: piirraTuoreetChipit,
+    rakennaJatka: true,
     nostot: [{
       otsikko: TILANNE.paivitetty,
       teksti: TILANNE.tavoite,

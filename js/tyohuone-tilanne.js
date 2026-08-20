@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v942 — TUOREUSNAKYMAT (omistajan tilaus 20.8.): 1) Tilannelehden karkeen chippirivit — vihreat vasta valmistuneet versionumeroineen, keltaiset tyon alla olevat; data uudessa TUOREET-taulussa (tyohuone-tilanne.js), jota Fable paivittaa julkaisujen tahdissa. 2) Tilastot-taulussa tuoreen kaupungin nimisolu varjaytyy samoin varein ja saa versiomerkin; ohjausriville uusi Nayta-vipu (kaikki / vain tuoreet) joka muistetaan localStoragessa; mannerrivilla uusi "kaupungit esiin" -nappi joka avaa ja sulkee koko mantereen kaupungit kerralla. Tekninen: maalehti.js sai rakennaJatka-lipun (rakenna-koukku + nostot samalla sivulla); lueNakyma nimettiin lueTilastoNakyma-muotoon niputustormayksen takia (pollo.js). Tarkista: kehittajatila → Tilannelehti (chipit karjessa) ja Tilastot (Nayta-vipu, kaupungit esiin -nappi, varitetyt nimet)',
   'v941 — VAIHE B ERA 1: ANKARA, NIKOSIA ja IZMIR saivat matkaoppaan, Ankara ja Nikosia myos avauskuvat (Izmirin tulivat jo v929). 20 uutta kuvaa, agentti katsoi silmin ja Fable pistokoetarkisti 2 (tasmasivat); parikymmenta hylkaysta mm. HUAWEI-vesileima, mainoskyltti, tunnistettavia kasvoja — ja yksi hieno nappaus: taydelliselta nayttanyt "Nikosian bastioni" paljastui Commons-kategorioista FAMAGUSTAKSI. Nikosian Antaa olla -linja: jako nakyy vain matkailijan arjen tosiasioina (kaksi kuntaa, jalankulkuylitys, kaksi valuuttaa), ei syita eika vuosia 1955-74. Visaopetukset taydennettiin oppaisiin: angoravuohi, halloumi, viikuna. Faktapaatoksia: Izmir-Aydin-radan avaus 1866 (tarkempi lahde voitti 1867:n), Anitkabirin ristiriitaiset kilpailupaivat pois, Ledran ylityspaikan jarjestysluku pois (sama artikkeli sanoo 5. ja 6.). HUOM FABLELLE KIRJATTU: naiden kolmen lehden vanhat sivut ovat 3 noston mittaisia (uusi malli on 4) — erillinen taydennysera jos omistaja haluaa. Tarkista: avaa Ankara/Nikosia/Izmir → Matkailijalle → Matkaopas',
   'v940 — PERSEPOLIKSEN KOHDEKARTTA + LUXORIN KARTAN KORJAUS (Vaihe B0). Persepolis sai v932:sta puuttuneen kartan (Overpass oli silloin nurin): 770 x 520 m terassirajaus, rauniokaupunki-lippu, 8 kohdetta ja 8 uutta juttua. KOHTEIDEN PISTEET OVAT OVERPASSISTA EIVATKA WIKIPEDIASTA: Kaikkien kansojen portin artikkelikoordinaatti on 250 m pielessa OSM:n aluetta vasten — Wikipedian piste olisi osunut aarrekammion kohdalle. Apadanan pinta-ala jatettiin pois (kolme artikkelia antaa ristiriitaiset luvut), tuhovuosi 330 paaartikkelin mukaan, Hadishin 2 550 m2 pyoristettyna koska artikkelin omat mitat antavat 2 200. LUXOR: rauniokaupunki-lippu paalle — Karnakin pihat, Mutin pyha jarvi ja Luxorin temppeli piirtyvat nyt laikkuina, sfinksikuja katkoviivana; mitattu muutos: ennen 5/6 pistetta paljaalla paperilla, nyt 4/6 rauniolaikulla. KESKEN 13.8.2026 -merkinta poistettu tyokalusta. Uusi ymparistomuuttuja OVERPASS_PALVELIMET (peililista ajokohtaisesti) — vakiopalvelimet olivat tunteja nurin yhta aikaa. 8 uutta kuvaa (silmatty; hylatty mm. Luigi Pescen 1850-luvun vedokset signeerausten takia ja Gagnonin hautakuva kavijoiden takia). FABLEN MERGEVIRHE NAPATTU PORTISSA: persepolis-lohkon poiminta nielaisi ensin tiedoston loput (19 kaksoisavainta) — tarkista-kaksoisavaimet loysi, korjattu aarimerkkilaskennalla ennen committia. Tarkista: avaa Persepolis → kohdekartta (8 numeroa), Luxor → kohdekartta (temppelilaikut)',
   'v939 — RUB AL-KHALI, kahdeksas alusta tehty Lahi-idan lehti ja kolmas ALUELEHTI — VAIHE A VALMIS: kaikki 8 lehdetonta Lahi-idan kohdetta on nyt tehty. Kaksi sivua (Rub al-Khali + Luonto), 8 nostoa, tehtava (virtahevon luut jarvenpohjista), opas viidella jaksolla; ei karttaa eika juttuja (Kappadokia/Siinai-malli). SITOVA WABAR-LUKU 2 045 kg pitaa (sama kuin Riadin jutussa v935). KIRJOITTAJA LOYSI TALON OMAN ENNAKKOPAATOKSEN jota speksi ei tiennyt: ARE-maalehden Moreeb-nosto kieltaa dyynin 300 m -korkeuden (SRTM-mittaus 100-115 m) — lehti ei anna korkeuslukua eika kayta samaa kuvaa. Faktakorjaukset: Thomasin ylitysreitti ilman reittivaitetta (Sohar-Sharjah oli 1927 eri matkan kuvateksti), Shisr 300-luvulla, oryks San Diegon villielainpuistosta, suitsukekaupan loppu kirjoitettu auki (200 vs 300 jaa). Wikipedian ilmasto-osiota EI kaytetty koska artikkeli itse merkitsee sen Failed verification -tagilla — saarivi on ERA5 20N/50E (280 m), vuosisade 16 mm, paketin toiseksi kuivin (Luxor 2 mm). 19 kuvaa, kirjoittaja katsoi silmin ja Fable pistokoetarkisti 2 (tasmasivat); 10+ hylattya (vesileima, kasvot, LIWA-kyltti, alle 1200 px Wabar-kuvat). Aluelehdessa ei yhtaan henkilokuvaa. AVOIN RISTIRIITA OMISTAJALLE: ARE-maalehti selittaa hiekan varin raudalla, Rub al-Khali -artikkeli maasalvalla — lehti kayttaa artikkelin selitysta, ARE-nostoa ei korjattu (eri tiedosto). Sivun nimi korjattu laudan asuun Rub al-Khali (Kappadokia-ennakkotapaus). Tarkista: avaa Rub al-Khali → avauskuvat, Matkailijalle → Matkaopas, Luonto-sivun tehtava',
@@ -292,3 +293,45 @@ export const TESTATTAVAA = [
   'v692 — taustaäänet tasattu; v691 Venäjän radio',
   'v683–v687 — lukijan automoodi, otsikkotauot, väistö',
 ];
+
+/*
+ * TUOREET — mitkä kaupungit valmistuivat viimeksi (testattavaksi) ja
+ * mitkä ovat parhaillaan työn alla (omistajan tilaus 20.8.2026:
+ * "mitkä kaupungit ovat viimeisimpänä valmistuneet ... sekä mitkä
+ * ovat parhaillaan työnalla? voisi ehkä värikoodata").
+ *
+ * TÄTÄKIN PÄIVITTÄÄ VAIN FABLE, samalla kun TESTATTAVAA-rivi
+ * kirjoitetaan: valmistunut erä siirtyy tyossa-listalta valmiit-
+ * listan kärkeen versionumeroineen, ja valmiit-listalta pudotetaan
+ * hännästä pois kaikki yli ~10 kaupunkia vanhemmat. Avaimena on
+ * kaupungin lauta-id, jotta Tilastot-taulu voi värittää rivinsä
+ * samasta listasta ilman nimivertailua.
+ */
+export const TUOREET = {
+  paivitetty: '20.8.2026',
+  valmiit: [
+    { id: 'ankara', nimi: 'Ankara', versio: 'v941' },
+    { id: 'nikosia', nimi: 'Nikosia', versio: 'v941' },
+    { id: 'izmir', nimi: 'İzmir', versio: 'v941' },
+    { id: 'persepolis', nimi: 'Persepolis (kartta)', versio: 'v940' },
+    { id: 'luxor', nimi: 'Luxor (kartta)', versio: 'v940' },
+    { id: 'rubalkhali', nimi: 'Rub al-Khali', versio: 'v939' },
+    { id: 'mekka', nimi: 'Mekka', versio: 'v938' },
+    { id: 'medina', nimi: 'Medina', versio: 'v937' },
+  ],
+  tyossa: [
+    { id: 'halab', nimi: 'Halab' },
+    { id: 'damaskos', nimi: 'Damaskos' },
+    { id: 'luxor', nimi: 'Luxor (opas)' },
+    { id: 'riad', nimi: 'Riad' },
+    { id: 'doha', nimi: 'Doha' },
+    { id: 'kuwait', nimi: 'Kuwait' },
+    { id: 'sana', nimi: 'Sana' },
+    { id: 'aden', nimi: 'Aden' },
+    { id: 'salalah', nimi: 'Salalah' },
+    { id: 'mosul', nimi: 'Mosul' },
+    { id: 'masqat', nimi: 'Masqat' },
+    { id: 'tabriz', nimi: 'Tabriz' },
+    { id: 'isfahan', nimi: 'Isfahan' },
+  ],
+};

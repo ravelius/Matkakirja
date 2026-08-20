@@ -52,6 +52,7 @@ import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { RADIOT } from './packs/radiot.js';
 import { TARINAKAARI } from './packs/tarinakaari.js';
 import { PELIT as KATKOPELIT } from './tyohuone-pelit.js';
+import { TUOREET } from './tyohuone-tilanne.js';
 import {
   SAAPUMISTEKSTIT, MAATIEDOT, KAIKKI_VALOKUVAT, ARTIKKELIT,
   KIELET, SAAPUMISLUENNAT, luentaLauta,
@@ -76,6 +77,29 @@ const MANTEREET = [
 
 /** Järjestysvalinnan muistipaikka (omistajan toive 18.8.2026). */
 const JARJESTYS_AVAIN = 'matkakirja-tilastot-jarjestys';
+
+/*
+ * Tuoreusvärit ja -suodatin (omistajan tilaus 20.8.2026): vasta
+ * valmistuneen kaupungin nimi saa vihreän pohjan versionumeroineen ja
+ * työn alla olevan keltaisen; "vain tuoreet" -näkymä listaa pelkät
+ * nämä rivit avattuina. Lähde on TUOREET-taulu (tyohuone-tilanne.js),
+ * jota Fable päivittää julkaisujen tahdissa — taulu itse ei voi
+ * tietää tuoreutta pelidatasta, koska paketeissa ei ole aikaleimoja.
+ */
+const TUORE_VALMIS = new Map((TUOREET?.valmiit ?? []).map((k) => [k.id, k.versio ?? '']));
+const TUORE_TYOSSA = new Set((TUOREET?.tyossa ?? []).map((k) => k.id));
+const NAKYMA_AVAIN = 'matkakirja-tilastot-nakyma';
+
+function lueTilastoNakyma() {
+  try {
+    return window.localStorage?.getItem(NAKYMA_AVAIN) === 'tuoreet'
+      ? 'tuoreet' : 'kaikki';
+  } catch { return 'kaikki'; }
+}
+
+function tallennaTilastoNakyma(arvo) {
+  try { window.localStorage?.setItem(NAKYMA_AVAIN, arvo); } catch { /* yksityinen tila */ }
+}
 
 function lueJarjestys() {
   try {
@@ -446,7 +470,15 @@ function nimisolu(nimi, { taso, avattava, osuus, lisa }) {
  * kun järjestys vaihtuu — taulu on muutaman sadan rivin kokoinen,
  * eikä osittainen päivitys olisi sen arvoista.
  */
-function piirraTaulu(kohde, mantereet, jarjestys) {
+/** Kaupungin tuoreusluokka nimisoluun, tai null. */
+function tuoreusLuokka(id) {
+  if (TUORE_VALMIS.has(id)) return 'tk-tuore-valmis';
+  if (TUORE_TYOSSA.has(id)) return 'tk-tuore-tyossa';
+  return null;
+}
+
+function piirraTaulu(kohde, mantereet, jarjestys, nakyma = 'kaikki') {
+  const vainTuoreet = nakyma === 'tuoreet';
   const kotelo = html('div', 'tk-vieri');
   const taulu = html('table', 'tk-taulu');
   const otsikkoRivi = html('tr');
@@ -467,28 +499,68 @@ function piirraTaulu(kohde, mantereet, jarjestys) {
     : [...lista].sort((a, b) => a.nimi.localeCompare(b.nimi, 'fi')));
 
   for (const manner of mantereet) {
+    /*
+     * Vain tuoreet -näkymä (omistaja 20.8.2026): mantereesta jäävät
+     * jäljelle vain TUOREET-listan kaupungit maariveineen, valmiiksi
+     * avattuina. Manner ilman tuoreita rivejä jää kokonaan pois.
+     */
+    const suodatettu = vainTuoreet
+      ? {
+        ...manner,
+        maat: manner.maat
+          .map((maa) => ({ ...maa, kaupungit: maa.kaupungit.filter((k) => tuoreusLuokka(k.id)) }))
+          .filter((maa) => maa.kaupungit.length),
+      }
+      : manner;
+    if (vainTuoreet && !suodatettu.maat.length) continue;
     const mannerRivi = html('tr', 'tk-rivi tk-manner');
     mannerRivi.tabIndex = 0;
     mannerRivi.setAttribute('role', 'button');
-    mannerRivi.setAttribute('aria-expanded', 'false');
-    mannerRivi.appendChild(nimisolu(manner.nimi, {
+    mannerRivi.setAttribute('aria-expanded', String(vainTuoreet));
+    if (vainTuoreet) mannerRivi.classList.add('auki');
+    const mannerSolu = nimisolu(manner.nimi, {
       taso: 'manner',
       avattava: true,
       osuus: manner.osuus,
       lisa: `${manner.maat.length} maata · ${manner.kaupunkeja} kaupunkia — ${tiivistelma(manner)}`,
-    }));
+    });
+    /*
+     * Kaupungit esiin -nappi (omistaja 20.8.2026): avaa tai sulkee
+     * mantereen KAIKKI maat kaupunkeineen kerralla. stopPropagation,
+     * ettei sama napautus laukaise mannerrivin omaa avausta.
+     */
+    if (!vainTuoreet) {
+      const kaikkiNappi = html('button', 'tk-kaikki-nappi', 'kaupungit esiin');
+      kaikkiNappi.type = 'button';
+      kaikkiNappi.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const avataan = kaikkiNappi.textContent === 'kaupungit esiin';
+        kaikkiNappi.textContent = avataan ? 'piilota kaupungit' : 'kaupungit esiin';
+        mannerRivi.setAttribute('aria-expanded', String(avataan));
+        mannerRivi.classList.toggle('auki', avataan);
+        for (const { maaRivi, kaupunkiRivit } of maaRivit) {
+          maaRivi.hidden = !avataan;
+          maaRivi.setAttribute('aria-expanded', String(avataan));
+          maaRivi.classList.toggle('auki', avataan);
+          for (const r of kaupunkiRivit) r.hidden = !avataan;
+        }
+      });
+      mannerSolu.querySelector('.tk-nimi-rivi')?.appendChild(kaikkiNappi);
+    }
+    mannerRivi.appendChild(mannerSolu);
     for (const s of SARAKKEET) {
       mannerRivi.appendChild(solu(manner.summa[s.avain], { koonti: true }));
     }
     runko.appendChild(mannerRivi);
 
     const maaRivit = [];
-    for (const maa of jarjesta(manner.maat)) {
+    for (const maa of jarjesta(suodatettu.maat)) {
       const maaRivi = html('tr', 'tk-rivi tk-maa');
-      maaRivi.hidden = true;
+      maaRivi.hidden = !vainTuoreet;
       maaRivi.tabIndex = 0;
       maaRivi.setAttribute('role', 'button');
-      maaRivi.setAttribute('aria-expanded', 'false');
+      maaRivi.setAttribute('aria-expanded', String(vainTuoreet));
+      if (vainTuoreet) maaRivi.classList.add('auki');
       maaRivi.appendChild(nimisolu(maa.nimi, {
         taso: 'maa',
         avattava: true,
@@ -505,8 +577,17 @@ function piirraTaulu(kohde, mantereet, jarjestys) {
       const kaupunkiRivit = [];
       for (const kaupunki of jarjesta(maa.kaupungit)) {
         const rivi = html('tr', 'tk-rivi tk-kaupunki');
-        rivi.hidden = true;
-        rivi.appendChild(nimisolu(kaupunki.nimi, { taso: 'kaupunki', osuus: null }));
+        rivi.hidden = !vainTuoreet;
+        const tuoreus = tuoreusLuokka(kaupunki.id);
+        const solu = nimisolu(kaupunki.nimi, { taso: 'kaupunki', osuus: null });
+        if (tuoreus) {
+          solu.classList.add(tuoreus);
+          const versio = TUORE_VALMIS.get(kaupunki.id);
+          solu.querySelector('.tk-nimi-rivi')?.appendChild(
+            html('span', 'tk-tuore-merkki', versio || 'työn alla'),
+          );
+        }
+        rivi.appendChild(solu);
         for (const s of SARAKKEET) {
           if (s.taso === 'maa') { rivi.appendChild(html('td', 'tk-num tk-tyhja', '·')); continue; }
           const tieto = kaupunki.solut[s.avain];
@@ -572,6 +653,20 @@ function piirraOhjausrivi(kohde, piirraUudelleen) {
     napit.appendChild(nappi);
   }
   rivi.appendChild(napit);
+  /* Näytä-vipu (omistaja 20.8.2026): kaikki tai vain tuoreet. */
+  rivi.appendChild(html('span', 'tk-ohjaus-nimi', 'Näytä'));
+  const nakymaNapit = html('div', 'tk-vipu');
+  for (const [arvo, nimi] of [['kaikki', 'kaikki'], ['tuoreet', 'vain tuoreet']]) {
+    const nappi = html('button', 'tk-vipu-nappi', nimi);
+    nappi.type = 'button';
+    nappi.setAttribute('aria-pressed', String(lueTilastoNakyma() === arvo));
+    nappi.addEventListener('click', () => {
+      tallennaTilastoNakyma(arvo);
+      piirraUudelleen();
+    });
+    nakymaNapit.appendChild(nappi);
+  }
+  rivi.appendChild(nakymaNapit);
   kohde.appendChild(rivi);
 }
 
@@ -582,7 +677,7 @@ function piirraTilastosivu(kohde) {
     // Otsikko on jo piirretty; tyhjennetään vain oma sisältömme.
     kohde.querySelectorAll('.tk-ohjaus, .tk-vieri, .tk-selite').forEach((n) => n.remove());
     piirraOhjausrivi(kohde, piirra);
-    piirraTaulu(kohde, mantereet, lueJarjestys());
+    piirraTaulu(kohde, mantereet, lueJarjestys(), lueTilastoNakyma());
     kohde.appendChild(html('p', 'tk-selite',
       'Napauta mannerta: sen maat avautuvat, ja maan napautus paljastaa '
       + 'sen kaupungit. ✓ = tehty, – = puuttuu, suhde = tehdyt kaikista. '

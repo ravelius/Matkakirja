@@ -10977,6 +10977,54 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .tk-valmis { background: #e2efdc; color: #2c5e2a; }
 .tk-kesken { background: #f7ecd2; color: #7a5a12; }
 .tk-puuttuu { color: rgba(70, 51, 31, 0.45); }
+
+/*
+ * Tuoreusmerkinnät (omistaja 20.8.2026): vasta valmistuneen kaupungin
+ * nimipohja vihreänä versionumeroineen, työn alla olevan keltaisena.
+ * Sävyt ovat samat kuin solujen valmis/kesken-luokissa, jotta taulu
+ * pysyy yhtenä palettina.
+ */
+.tk-nimi.tk-tuore-valmis { background: #e2efdc; }
+.tk-nimi.tk-tuore-tyossa { background: #f7ecd2; }
+.tk-tuore-merkki {
+  font-size: 0.72em;
+  padding: 0.1em 0.5em;
+  border-radius: 0.8em;
+  background: rgba(255, 255, 255, 0.65);
+  color: inherit;
+  white-space: nowrap;
+}
+.tk-kaikki-nappi {
+  font: inherit;
+  font-size: 0.72em;
+  padding: 0.15em 0.6em;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 0.8em;
+  background: rgba(255, 255, 255, 0.5);
+  color: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Tilannelehden tuoreet-chipit (omistaja 20.8.2026). */
+.tuoreet { display: flex; flex-direction: column; gap: 0.5em; margin: 0 0 1em; }
+.tuoreet-rivi { display: flex; flex-wrap: wrap; gap: 0.4em; align-items: baseline; }
+.tuoreet-otsikko {
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.7);
+  margin-right: 0.3em;
+}
+.tuore-chip {
+  font-size: 0.85em;
+  padding: 0.2em 0.7em;
+  border-radius: 1em;
+  white-space: nowrap;
+}
+.tuore-chip.valmis { background: #e2efdc; color: #2c5e2a; }
+.tuore-chip.tyossa { background: #f7ecd2; color: #7a5a12; }
 .tk-tyhja { color: rgba(70, 51, 31, 0.28); }
 
 .tk-ohjaus {
