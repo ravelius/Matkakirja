@@ -27583,25 +27583,9 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Isfahan',
-      johdanto: 'Isfahan on Iranin kolmanneksi suurin kaupunki ja '
-        + 'Isfahanin maakunnan pääkaupunki, 440 kilometriä Teheranista '
-        + 'etelään. Se on kasvanut Irania halkovien pohjois–etelä- ja '
-        + 'itä–länsireittien risteykseen, kuivalle ylätasangolle '
-        + 'Zayandeh-joen varteen. Arabit valloittivat kaupungin vuonna '
-        + '642 ja tekivät siitä al-Jibalin maakunnan pääkaupungin. '
-        + 'Kukoistus kesti 800-luvulta 1700-luvulle: buyidien ja '
-        + 'seldžukkien aikana kaupunki kasvoi suureksi, ja vasta '
-        + 'seldžukkivallan päätyttyä noin vuonna 1200 seurasi taantuma. Käänne tuli vuonna 1598, kun Abbas Suuri '
-        + 'siirsi safavidien pääkaupungin Qazvinista tänne — toisen '
-        + 'kerran kaupungin historiassa — ja rakennutti sille uuden '
-        + 'keskustan. Siltä ajalta ovat puistokadut, kaakeloidut '
-        + 'moskeijat, palatsit ja katetut sillat, joista kaupunki '
-        + 'tunnetaan. Naqsh-e Jahanin aukio on maailman '
-        + 'suurimpia kaupunkiaukioita ja Unescon maailmanperintökohde. '
-        + 'Maine tiivistyy persialaiseen sananlaskuun Esfahan nesf-e '
-        + 'jahan ast, Isfahan on puoli maailmaa. Nimi on paljon '
-        + 'vanhempi: keskipersian Spahān tarkoittaa armeijan paikkaa, ja '
-        + 'Ptolemaios kirjoitti sen muodossa Aspadana.',
+      johdanto: 'Isfahanista sanotaan persiaksi, että se on puoli maailmaa. '
+        + 'Sen keskusaukio on yli 500 metriä pitkä, ja sitä reunustavat '
+        + 'moskeija, palatsi ja basaarin portti.',
       kansikuvat: [
         {
           tiedosto: 'Isfahan to the north side by Eugène Flandin.jpg',
@@ -36398,28 +36382,9 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Kioto',
-      johdanto: 'Kioto on Japanin vanha pääkaupunki, ja se '
-        + 'perustettiin kerralla: vuonna 794 keisari Kanmu siirsi '
-        + 'hovin Narasta tänne ja rakennutti uuden kaupungin, '
-        + 'Heian-kyōn, kiinalaisen Chang’anin ruutukaavan mukaan. '
-        + 'Kaupunki pysyi keisarien kotina yli tuhat vuotta vuoteen '
-        + '1868 asti, vaikka todellinen valta oli välillä '
-        + 'Kamakurassa ja Edossa. Vuonna 1869 hovi muutti Tokioon, ja '
-        + 'Kioto menetti kerralla sekä hallinnollisen että '
-        + 'taloudellisen asemansa — vuoden 1873 matkustaja saapui '
-        + 'siis kaupunkiin, joka oli juuri jäänyt tyhjän palatsin '
-        + 'ympärille. Vastauksena kaupunki kaivoi Biwa-järveltä '
-        + 'kanavan ja sai sen voimalla Japanin ensimmäisen '
-        + 'kaupallisen sähköraitiotien. Laaksoa, jossa Kioto seisoo, '
-        + 'ympäröivät vuoret kolmelta suunnalta, ja sen läpi virtaa '
-        + 'kolme jokea. Uskonnollisia paikkoja on '
-        + 'noin kaksituhatta: 1 600 buddhalaista temppeliä ja 400 '
-        + 'shintolaista pyhäkköä. Toisen maailmansodan pommitukset '
-        + 'ohittivat Kioton lähes kokonaan, joten sotaa edeltäviä '
-        + 'puutaloja on yhä paljon. Nishijinin '
-        + 'korttelissa kudotaan silkkiä samalla paikalla kuin '
-        + '1400-luvulla, ja Gionissa geikot esiintyvät yhä '
-        + 'teehuoneissa.',
+      johdanto: 'Kioto oli Japanin keisarillinen pääkaupunki yli tuhat vuotta, '
+        + 'ja sen temppelit, puutarhat ja puutalokorttelit säilyivät '
+        + 'sodalta lähes koskemattomina.',
       kansikuvat: [
         {
           tiedosto: 'Yasaka-dori early morning with street lanterns and the Tower of Yasaka (Hokan-ji Temple), Kyoto, Japan.jpg',
