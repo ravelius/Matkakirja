@@ -6293,25 +6293,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/jakutsk-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 62.042, etela: 62.0178, lansi: 129.701, ita: 129.768 },
-    esittely: 'Jakutsk on Sahan tasavallan pääkaupunki ja maailman '
-      + 'suurin yhtenäisen ikiroudan päälle rakennettu kaupunki. Se '
-      + 'perustettiin 1632 hirsilinnoitukseksi ja siirrettiin '
-      + 'vuosina 1642–1643 Lenan vastarannalle Tuimaadan laaksoon, '
-      + 'jossa se on yhä. Asukkaita oli vuoden 1897 väenlaskussa '
-      + '6 535 ja vuoden 2021 laskennassa 355 443, ja heistä 59,2 '
-      + 'prosenttia on jakuutteja. Kaupunki on napapiiriltä noin '
-      + 'neljäsataaviisikymmentä kilometriä etelään.\n\n'
-      + 'Kartalla huomaa kolme asiaa. Ensimmäinen on ruutukaava, joka '
-      + 'kulkee vinosti jokeen nähden — sama vinous näkyy jo vuoden '
-      + '1900 asemakaavassa. Toinen on järvet: kaupungin keskellä on '
-      + 'useita pieniä vesialtaita, jotka eivät ole kaivettuja vaan '
-      + 'painanteita sulaneen ikiroudan päällä, ja niiden lisäksi '
-      + 'ruudukon poikki kulkee kaivettu kaupunkikanava. Kolmas on '
-      + 'yläreunan Lena, kaupungin vanhin yhteys ulospäin; siltaa '
-      + 'joen yli ei ole missään koko tasavallassa, joten kesällä '
-      + 'ylitys tehdään lautalla ja keskitalvella ajetaan jäätä '
-      + 'pitkin. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * ESITTELY LYHENNETTIIN 20.8.2026 (tekstiremontti, erä R9b):
+     * kartan visuaalinen kuvailu poistettiin ja jäljelle jäi se, mitä
+     * alueella on. Kohteet ovat kahden kilometrin nauhassa Kirovin ja
+     * Leninin katujen välissä; teatterit, museot ja kirkot ovat
+     * kaikki kävelymatkan päässä toisistaan.
+     */
+    esittely: 'Kartan alue on Jakutskin keskusta Lenan länsirannalla. '
+      + 'Kaupunki perustettiin 1632 hirsilinnoitukseksi ja siirrettiin '
+      + 'vuosina 1642–1643 Tuimaadan laaksoon, jossa se on yhä. '
+      + 'Kaikki kahdeksan kohdetta ovat runsaan kahden kilometrin '
+      + 'nauhassa Kirovin ja Leninin katujen välissä: neljästä '
+      + 'teatterista kaksi, kaupungin päämuseo ja taidemuseo, '
+      + 'Spasskin luostari ja Nikolskin kirkko sekä 1800-luvun asuun '
+      + 'rakennettu Vanhakaupunki. Yläreunassa virtaa Lena, kaupungin '
+      + 'vanhin yhteys ulospäin — siltaa joen yli ei ole koko '
+      + 'tasavallassa.',
     kohteet: [
       /* Numerointi pohjoisesta etelään. */
       { nimi: 'Saha-teatteri', lat: 62.0335, lon: 129.7417 },
@@ -6360,26 +6358,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/magadan-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.5764, etela: 59.5502, lansi: 150.755, ita: 150.822 },
-    esittely: 'Magadan on Magadanin alueen hallinnollinen keskus ja '
-      + 'Kolyman portti. Kaupunki istuu Staritskin niemimaan '
-      + 'kannaksella kahden lahden välissä, ja kartan vasen kolmannes '
-      + 'on niistä läntinen: Nagajevanlahti, 14,5 kilometriä pitkä ja '
-      + 'suultaan 6,4 kilometriä leveä, jota on kutsuttu Ohotanmeren '
-      + 'parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun '
-      + 'lopulta kesäkuun puoliväliin, ja satama pidetään auki '
-      + 'jäänmurtajilla. Kaupunki perustettiin 1929 ja sai '
-      + 'kaupunkioikeudet 14. heinäkuuta 1939.\n\n'
-      + 'Kartalla kaupunki on kapea nauha. Ruutukaava alkaa lahden '
-      + 'rannasta ja nousee kannasta ylös koilliseen, ja sen halki '
-      + 'kulkee vinosti kaksi pääväylää: Leninin valtakatu ja Karl '
-      + 'Marxin valtakatu. Oikeassa yläkulmassa mutkittelee '
-      + 'Magadanka-joki, joka laskee Ohotanmereen ja jonka pituus on '
-      + '192 kilometriä. Kartan yläreunassa, aivan ruudun sisällä, on '
-      + 'Kolyman valtatien nollakilometri — kaupungin ainoan '
-      + 'maayhteyden alkupiste, josta on 2 032 kilometriä Jakutiaan. '
-      + 'Ruudun ulkopuolelle jäävät koillisessa Gertnerinlahti ja '
-      + 'pohjoisessa Surun maski. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    /*
+     * ESITTELY LYHENNETTIIN 20.8.2026 (tekstiremontti, erä R9b):
+     * ruutukaavan ja pääväylien kuvailu poistettiin. Jäljelle jäi se,
+     * mitä alueella on — lahti, kaupungin 1930–1950-luvun julkiset
+     * talot ja Kolyman valtatien nollakilometri.
+     */
+    esittely: 'Kartan alue on Magadanin keskusta Staritskin niemimaan '
+      + 'kannaksella. Vasemmalla on Nagajevanlahti, 14,5 kilometriä '
+      + 'pitkä ja suultaan 6,4 kilometriä leveä, jota on kutsuttu '
+      + 'Ohotanmeren parhaaksi ankkuripaikaksi; jäätä siinä on '
+      + 'marraskuun lopulta kesäkuun puoliväliin, ja satama pidetään '
+      + 'auki jäänmurtajilla. Muut kohteet ovat kaupungin omaa '
+      + '1930–1950-luvun arkkitehtuuria: yleinen sauna, '
+      + 'Severovostokzoloton talo, Leninin valtakadun talorivi, '
+      + 'kinoteatteri Gornjak, urheilupalatsi ja Pushkinin kirjasto. '
+      + 'Yläreunassa on Kolyman valtatien nollakilometri, kaupungin '
+      + 'ainoan maayhteyden alkupiste.',
     kohteet: [
       /* Numerointi pohjoisesta etelään. */
       { nimi: 'Kaupungin sauna', lat: 59.5693, lon: 150.7943 },

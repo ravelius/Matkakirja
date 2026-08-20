@@ -19666,6 +19666,10 @@ export const NAHTAVYYSJUTUT = {
    * on, mutta juttu kertoo korttelista eikä tornista), khomusmuseo
    * ei ole kohde lainkaan, eikä Jaroslavskin museon juttu käsittele
    * mammuttiluurankoa, vaikka Wikivoyage sen mainitseekin.
+   *
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * kaikki kahdeksan selitettä tiivistettiin yhteen virkkeeseen.
+   * Juttujen teksti, kuvatiedostot ja lahde-rivit ovat ennallaan.
    */
   jakutsk: {
     'Saha-teatteri': {
@@ -19706,11 +19710,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Саха Академический Театр им. П.А. Ойунского, Якутск 28.03.2026.jpg',
-          selite: 'Saha-teatteri maaliskuun pakkaspäivänä. Punatiilisen '
-            + 'ja harmaan rakennuksen päällä lepää valkoinen '
-            + 'teräsristikko kuin kaareva purje, ja julkisivussa on '
-            + 'suuri vinolistoitettu lasiseinä. Sisäänkäynnin yläpuolella '
-            + 'lukee kyrillisin kirjaimin teatterin nimi.',
+          selite: 'Saha-teatteri maaliskuun pakkaspäivänä: punatiilisen ja '
+            + 'harmaan rakennuksen päällä lepää valkoinen teräsristikko '
+            + 'kuin kaareva purje, ja julkisivussa on suuri '
+            + 'vinolistoitettu lasiseinä.',
           lahde: 'SmallSonMarex, Wikimedia Commons (CC0)',
         },
       ],
@@ -19750,11 +19753,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Якутск, пр.Ленина,5-2, музей истории и культуры народов Севера им.Е.М.Ярославского, 22.06.2013 - panoramio (4).jpg',
-          selite: 'Museon sisäänkäynti kesäkuussa. Punatiilisen '
-            + 'julkisivun edessä on valkoinen katos, jonka '
-            + 'etureunassa on tervetulotoivotus kolmella kielellä, ja '
-            + 'katoksen päällä seisoo täytetty karhu takajaloillaan. '
-            + 'Sisäänkäynnille nousee leveä porrasjono.',
+          selite: 'Museon sisäänkäynti kesäkuussa: punatiilisen julkisivun '
+            + 'edessä on valkoinen katos, jonka etureunassa on '
+            + 'tervetulotoivotus kolmella kielellä ja päällä täytetty '
+            + 'karhu takajaloillaan.',
           lahde: 'Vadim Zhivotovsky, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -19791,11 +19793,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Спасский мужской монастырь г.Якутска, Якутск 26.09.2025.jpg',
-          selite: 'Luostarin puukirkko syyskuussa. Keltaiseksi '
-            + 'maalatun salvoksen päällä on kaksitasoinen kellotorni, '
-            + 'jonka aukoissa riippuu useita kelloja, ja sen takana '
-            + 'kohoaa kullattu sipulikupoli. Etuosaan on rakennettu '
-            + 'katettu kuisti valkoisine pinnakaiteineen.',
+          selite: 'Luostarin puukirkko syyskuussa: keltaiseksi maalatun '
+            + 'salvoksen päällä on kaksitasoinen kellotorni ja sen takana '
+            + 'kullattu sipulikupoli.',
           lahde: 'SmallSonMarex, Wikimedia Commons (CC0)',
         },
       ],
@@ -19832,11 +19832,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Никольская церковь, полдень.jpg',
-          selite: 'Nikolskin kirkko syyskuisena keskipäivänä. '
-            + 'Valkoisesta kolmiportaisesta kellotornista nousee '
-            + 'kullattu kupoli ja pitkä terävä huippu ristiineen, ja '
-            + 'aukoissa riippuu kaksi kellokerrosta. Sisäänkäynnin '
-            + 'molemmin puolin on kultapohjaiset pyhimyskuvat.',
+          selite: 'Nikolskin kirkko syyskuisena keskipäivänä: valkoisesta '
+            + 'kolmiportaisesta kellotornista nousee kullattu kupoli ja '
+            + 'pitkä terävä huippu ristiineen.',
           lahde: 'Prok of eva, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19873,12 +19871,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Государственный академический русский драматический театр им. А.С. Пушкина 10.09.2025.jpg',
-          selite: 'Draamateatteri syyskuun aurinkoisena päivänä. '
-            + 'Hiekankeltaisen talon edessä on kaksi valkoista '
+          selite: 'Draamateatteri syyskuun aurinkoisena päivänä: '
+            + 'hiekankeltaisen talon edessä on kaksi valkoista '
             + 'pylväsryhmää korinttilaisine kapiteeleineen, ja '
-            + 'päätykolmion alla lukee kahdella rivillä teatterin '
-            + 'nimi. Vasemmalla on ilmoitustaulu ja edessä '
-            + 'kivilaattapiha.',
+            + 'päätykolmion alla lukee kahdella rivillä teatterin nimi.',
           lahde: 'SmallSonMarex, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19913,11 +19909,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Национальный художественный музей Якутии, Якутск 06.07.2026.jpg',
-          selite: 'Taidemuseo heinäkuussa. Pitkä kaksikerroksinen '
-            + 'kulmatalo jatkuu kahteen suuntaan risteyksen laidalla, '
-            + 'ja sen valkoisia kaarevia päätyjä vasten erottuu '
-            + 'hiekanvärinen ikkunarivi. Kadun yllä kulkee nippu '
-            + 'sähköjohtoja.',
+          selite: 'Taidemuseo heinäkuussa: pitkä kaksikerroksinen '
+            + 'kulmatalo jatkuu kahteen suuntaan risteyksen laidalla, ja '
+            + 'sen valkoisia kaarevia päätyjä vasten erottuu hiekanvärinen '
+            + 'ikkunarivi.',
           lahde: 'SmallSonMarex, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19955,11 +19950,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'In Yakutsk (10802989066).jpg',
-          selite: 'Vanhankaupungin kortteli lumen aikaan. Oikealla on '
-            + 'uusi hirsitalo, jonka ikkunapielissä on veistetyt '
-            + 'koristelaudat, ja sen edessä kohoaa puinen pylväs '
-            + 'katoksineen. Vasemmalla näkyy kirkon kullattuja '
-            + 'sipulikupoleita ja vihreä telttakatto.',
+          selite: 'Vanhankaupungin kortteli lumen aikaan: oikealla on uusi '
+            + 'hirsitalo veistettyine ikkunapielineen, vasemmalla kirkon '
+            + 'kullattuja sipulikupoleita ja vihreä telttakatto.',
           lahde: 'Pavel Kirillov from St.Petersburg, Russia, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -19998,11 +19991,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Театр оперы и балета им. Д. К. Сивцева, Якутск 24.02.2026.jpg',
-          selite: 'Oopperatalo helmikuussa. Betonijulkisivun syvässä '
+          selite: 'Oopperatalo helmikuussa: betonijulkisivun syvässä '
             + 'pylväikössä riippuu kaksi pitkää pystysuoraa '
-            + 'esitejulistetta, ja niiden alla on rivi tummia '
-            + 'puuovia. Edustan aukio on umpilumen peitossa, ja '
-            + 'oikeassa laidassa seisoo tumma patsas jalustallaan.',
+            + 'esitejulistetta, ja edustan aukio on umpilumen peitossa.',
           lahde: 'SmallSonMarex, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -20035,6 +20026,10 @@ export const NAHTAVYYSJUTUT = {
    * kaupunkiartikkeli kertoo ajasta jolloin ne rakennettiin — ei
    * keksityistä yksityiskohdista. Se on tässä lehdessä tietoinen
    * rajaus eikä laiskuus: mitään ei väitetä ilman lähdettä.
+   *
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * kaikki seitsemän selitettä tiivistettiin yhteen virkkeeseen.
+   * Juttujen teksti, kuvatiedostot ja lahde-rivit ovat ennallaan.
    */
   magadan: {
     'Kaupungin sauna': {
@@ -20068,11 +20063,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Magadan, banya1.jpg',
-          selite: 'Kaupungin sauna syyskuun matalassa auringossa. '
-            + 'Yksikerroksisen valkoisen talon keskiosaa jäsentävät '
-            + 'kaksi leveää pilasteria, joiden välissä on kolme '
-            + 'kapeaa aukkoa, ja alla on harmaa teräsovipari. '
-            + 'Seinässä on sininen osoitekilpi.',
+          selite: 'Kaupungin sauna syyskuun matalassa auringossa: '
+            + 'yksikerroksisen valkoisen talon keskiosaa jäsentävät kaksi '
+            + 'leveää pilasteria, joiden välissä on kolme kapeaa aukkoa.',
           lahde: 'BerryYew, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20108,12 +20101,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Магадан, Пролетарская, 12 20240901 01.jpg',
-          selite: 'Proletarskajan kadun 12 syyskuun sadepäivänä. '
-            + 'Valkoisen kolmikerroksisen talon ikkunoita kehystävät '
-            + 'kaksoispylväät ja pienet päätykolmiot, ja alakerta on '
-            + 'punertavaa lohkokivirappausta. Keskellä työntyy esiin '
-            + 'punainen pylväsportikko, ja edessä on penkkejä ja '
-            + 'kukkalaatikoita.',
+          selite: 'Proletarskajan kadun 12 syyskuun sadepäivänä: valkoisen '
+            + 'kolmikerroksisen talon ikkunoita kehystävät kaksoispylväät '
+            + 'ja pienet päätykolmiot, alakerta on punertavaa '
+            + 'lohkokivirappausta ja keskellä työntyy esiin punainen '
+            + 'pylväsportikko.',
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20148,11 +20140,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Магадан, Ленина, 18 20240904 01.jpg',
-          selite: 'Leninin valtakadun talorivi syyskuussa. '
-            + 'Vaaleanruskeat ja valkoiset kerrostalot porrastuvat '
-            + 'rinteen mukana alaspäin, parvekkeet on lasitettu '
-            + 'umpeen ja katutasossa on liikkeiden kylttejä. '
-            + 'Etualalla on takorautainen kaide ja punainen penkki.',
+          selite: 'Leninin valtakadun talorivi syyskuussa: vaaleanruskeat '
+            + 'ja valkoiset kerrostalot porrastuvat rinteen mukana '
+            + 'alaspäin, parvekkeet on lasitettu umpeen ja katutasossa on '
+            + 'liikkeiden kylttejä.',
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20187,12 +20178,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Кинотеатр «Горняк».jpg',
-          selite: 'Elokuvateatteri Gornjak iltahämärässä. '
-            + 'Vaaleanvihreän talon katolla on kolmiosainen '
-            + 'valokyltti, jonka keskellä nimi on kirjoitettu '
-            + 'punaisella käsialakirjaimistolla. Julkisivua jakavat '
-            + 'valkoiset pilasterit, ja edessä on leveä '
-            + 'kiviporrasjono.',
+          selite: 'Elokuvateatteri Gornjak iltahämärässä: vaaleanvihreän '
+            + 'talon katolla on kolmiosainen valokyltti, jonka keskellä '
+            + 'nimi on kirjoitettu punaisella käsialakirjaimistolla.',
           lahde: 'Сергей Ковалев, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20231,11 +20219,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nagaevo bay - panoramio.jpg',
-          selite: 'Nagajevanlahti auringonlaskun aikaan. Aurinko '
-            + 'painuu vaarojen väliin lahden suulla ja piirtää veteen '
-            + 'kapean valojuovan, ja taivas on juovikkaan oranssi. '
-            + 'Etualalla on tummia rantakiviä, joiden koloissa on '
-            + 'lunta.',
+          selite: 'Nagajevanlahti auringonlaskun aikaan: aurinko painuu '
+            + 'vaarojen väliin lahden suulla ja piirtää veteen kapean '
+            + 'valojuovan.',
           lahde: 'Андрей Куполов, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -20271,12 +20257,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Дворец спорта г. Магадан.jpg',
-          selite: 'Urheilupalatsin julkisivu elokuussa. Valkoisen '
-            + 'yläosan ikkunoiden edessä on pieniä pylväsparveja '
-            + 'päätykolmioineen ja balustradikaiteineen, ja '
-            + 'räystäslistan alla kiertää rivi pyöreitä '
-            + 'koristelaattoja. Alaosa on punertavaa '
-            + 'lohkokivirappausta.',
+          selite: 'Urheilupalatsin julkisivu elokuussa: valkoisen yläosan '
+            + 'ikkunoiden edessä on pieniä pylväsparveja päätykolmioineen, '
+            + 'ja alaosa on punertavaa lohkokivirappausta.',
           lahde: 'Maximila, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20310,12 +20293,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Магаданская научная библиотека им. А. С. Пушкина.jpg',
-          selite: 'Pushkinin kirjasto joulukuussa. Keltatiilisen '
-            + 'talon matalamman siiven seinässä lukee suurin '
-            + 'kirjaimin kirjaston nimi, ja sisäänkäynnin katoksen '
-            + 'yläpuolella on musta metalliin leikattu Pushkinin '
-            + 'sivuprofiili. Etupihan lumi on aurattu vain '
-            + 'käytäviltä.',
+          selite: 'Pushkinin kirjasto joulukuussa: keltatiilisen talon '
+            + 'seinässä lukee suurin kirjaimin kirjaston nimi, ja '
+            + 'sisäänkäynnin yläpuolella on musta metalliin leikattu '
+            + 'Pushkinin sivuprofiili.',
           lahde: 'JukoFF, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],

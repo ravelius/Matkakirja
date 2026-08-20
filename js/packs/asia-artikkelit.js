@@ -57,6 +57,9 @@
 // teksti-kentästä. Sisältölinjaus: Kiinan kaupunkien introissa ei
 // nykypolitiikkaa, ja Soulin introssa ei sotaa, koska lehti ei sitä
 // kerro.
+// ja Tabriz, erässä R5 Riad, Doha, Kuwait ja Salalah ja erässä R9b
+// Jakutsk, Magadan, Kamtšatka ja Sahalin. Kappaleet ja boldit
+// vaativat leipätekstin renderöijän — ks. erän loppuraportti.
 //
 // ERÄ R4 (20.8.2026) SAI UUDET LUVUT en-Wikipedian raakateksteistä
 // (Sanaa, Aden, Muscat, Tabriz; haettu 20.8.2026): Sanaan asukasluku
@@ -66,6 +69,16 @@
 // wilajaa, Tabrizin 1 558 693 (laskenta 2016) sekä Urmiajärven
 // etäisyys 60 km. Muu aineisto tulee kaupunkien omista, jo
 // tarkistetuista lehtiteksteistä.
+//
+// ERÄ R9b (20.8.2026) EI TUONUT YHTÄÄN UUTTA VÄITETTÄ. Jakutskin,
+// Magadanin, Kamtšatkan ja Sahalinin introt on koottu näiden neljän
+// lehden omista, jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:n
+// johdannot, nostot ja matkailijan oppaat, nahtavyysjutut.js ja
+// maakartat.js) — ei uusia lähdehakuja. Venäjä-linjaus: ei nykysotaa
+// eikä nykypolitiikkaa, ja Magadanin introssa kaupungin synty
+// 1930-luvulla kerrotaan neutraalina rakentamisen historiana; Kolyman
+// leirit ja Surun maski pysyvät siinä laajuudessa kuin lehden oma
+// nosto ne jo kertoo.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'Izmir on Turkin kolmanneksi suurin kaupunki ja sen tärkein '
@@ -1232,10 +1245,36 @@ export const ASIA_ARTIKKELIT = {
       + 'nerpa, maailman ainoa kokonaan makeassa vedessä elävä hylje. '
       + 'Talvella jää kantaa auton.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on nyt lehden etusivun leipäteksti — kahdeksan virkettä
+   * kolmessa kappaleessa ('\n\n') ja kaksi maltillista **lihavointia**.
+   * Faktat ovat Jakutskin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: kaupunki- ja ikirouta-sivun johdannot,
+   * nostot ja Matkailijan Jakutsk; maakartat.js), ei uusista lähteistä.
+   * teksti-kenttä on ennallaan.
+   */
   Jakutsk: {
-    intro: 'Jakutsk on maailman kylmin suuri kaupunki. Talot seisovat '
-      + 'paaluilla ilmassa, koska maassa seisova talo sulattaisi alleen '
-      + 'ikiroudan ja vajoaisi.',
+    intro: 'Jakutsk on Sahan tasavallan pääkaupunki Lena-joen '
+      + 'länsirannalla Tuimaadan laaksossa, noin neljäsataaviisikymmentä '
+      + 'kilometriä napapiiristä etelään. Kasakkapäällikkö Pjotr Beketov '
+      + 'pystytti 1632 joen vastarannalle hirsivarustuksen, ja linnoitus '
+      + 'siirrettiin vuosina 1642–1643 nykyiselle paikalleen. Asukkaita oli '
+      + 'vuoden 1897 väenlaskussa 6 535 ja vuoden 2021 laskennassa 355 443, '
+      + 'ja heistä 59,2 prosenttia on jakuutteja.'
+      + '\n\n'
+      + 'Jakutsk on **maailman suurin yhtenäisen ikiroudan päälle '
+      + 'rakennettu kaupunki**: talot seisovat betonipaaluilla irti maasta, '
+      + 'ja vesi- ja lämpöputket kulkevat eristettyinä pukkien päällä '
+      + 'katujen vieressä. Maa on jäässä runsaan kahdensadan metrin '
+      + 'syvyyteen, ja vuonna 1960 perustettu ikiroutainstituutti tutkii '
+      + 'jäätyneelle maalle rakentamista.'
+      + '\n\n'
+      + 'Vuodenaikojen ero on maailman suurimpia: kylmin mitattu lukema on '
+      + '−64,4 astetta vuodelta 1891 ja kuumin +38,4 astetta vuodelta 2011. '
+      + '**Siltaa Lenan yli ei ole koko tasavallassa**, joten kesällä joki '
+      + 'ylitetään lautalla ja keskitalvella ajetaan jäätietä pitkin. '
+      + 'Seudulta louhitaan timantteja, kultaa ja kivihiiltä.',
     teksti: 'Jakutsk on Lena-joen varrella Itä-Siperiassa, Sahan '
       + 'tasavallan pääkaupunki. Maa on jäässä satojen metrien syvyyteen '
       + 'asti, ja vain ohut pintakerros sulaa kesäksi. Ero vuodenaikojen '
@@ -1255,10 +1294,37 @@ export const ASIA_ARTIKKELIT = {
       + 'myös hyvin säilyneitä mammutteja. Jakutskiin ei johda '
       + 'rautatietä eikä ympärivuotista maantietä joen yli.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b. Intro on koottu Magadanin
+   * omista jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:n
+   * johdanto, nosto «Sitsikaupunki kahden lahden välissä» ja
+   * Matkailijan Magadan; nahtavyysjutut.js:n Nagajevanlahti;
+   * maakartat.js). VENÄJÄ-LINJAUS (omistaja 20.8.2026): kaupungin
+   * synty 1930-luvulla kerrotaan neutraalina rakentamisen historiana,
+   * eikä intro laajenna leirihistoriaa — se käsitellään kerran
+   * kansisivun Surun maski -nostossa, joka on ennallaan.
+   */
   Magadan: {
-    intro: 'Magadan on satamakaupunki Ohotanmeren rannalla. Sen '
-      + 'laidalla seisoo Surun naamio, muistomerkki niille, jotka '
-      + 'tuotiin tänne pakolla työleireille.',
+    intro: 'Magadan on satamakaupunki Ohotanmeren pohjoisrannalla ja '
+      + 'Magadanin alueen hallinnollinen keskus. Kaupunki istuu Staritskin '
+      + 'niemimaan kannaksella kahden lahden välissä: lounaassa '
+      + '**Nagajevanlahti**, jota on kutsuttu koko Ohotanmeren parhaaksi '
+      + 'ankkuripaikaksi, koillisessa Gertnerinlahti. Lahti oli '
+      + 'merikartoilla kauan ennen kaupunkia: amerikkalaiset '
+      + 'valaanpyytäjät ankkuroivat siihen vuosina 1852–1869 ja merkitsivät '
+      + 'sen Jeannette Harbouriksi.'
+      + '\n\n'
+      + 'Asuintalot, koulu ja sairaala alkoivat nousta rannalle kesäkuussa '
+      + '1929, ja kaupunkioikeudet tulivat 14. heinäkuuta 1939. Kasvu oli '
+      + 'nopeaa ja lasku on ollut pitkä: vuoden 1989 väenlaskussa asukkaita '
+      + 'oli 151 652, vuoden 2024 arviossa enää 89 193.'
+      + '\n\n'
+      + 'Rautatietä ei ole, ja ainoa maayhteys on **Kolyman valtatie**, '
+      + 'joka alkaa kaupungin pohjoislaidalta ja vie 2 032 kilometrin '
+      + 'päähän Jakutiaan. Satama on Petropavlovskin jälkeen Venäjän '
+      + 'koillisosan toiseksi suurin, ja se pidetään auki jäänmurtajilla, '
+      + 'sillä jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. '
+      + 'Elinkeinot ovat kullankaivuu ja kalastus.',
     teksti: 'Magadan on Venäjän Kaukoidässä Nagajevanlahden rannalla. '
       + 'Kaupunki on käytännössä eristyksissä: maantietä etelään ei ole, '
       + 'ja ainoa tie johtaa pohjoiseen sisämaahan. Ilmasto on kylmä ja '
@@ -1276,10 +1342,35 @@ export const ASIA_ARTIKKELIT = {
       + 'huippuvuosien määrästä. Kultaa louhitaan yhä, ja satama '
       + 'palvelee koko Kolyman aluetta.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b. Kamtšatka on ALUELEHTI ilman
+   * kohdekarttaa, joten remontista tehtiin kohdat 1 ja 2. Intron
+   * faktat ovat niemimaan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: kaupunki- ja tulivuorisivun johdannot,
+   * nostot ja Matkailijan Kamtšatka). Suljetun alueen vuodet ovat
+   * neutraalia historiaa, kuten Venäjä-linjaus edellyttää.
+   */
   'Kamtšatkan niemimaa': {
-    intro: 'Kamtšatka on tulivuorten niemimaa Venäjän Kaukoidässä. '
-      + 'Siellä on yli kolmesataa tulivuorta, joista parikymmentä on '
-      + 'yhä toiminnassa.',
+    intro: 'Kamtšatka on niemimaa Venäjän Kaukoidässä Ohotanmeren, '
+      + 'Beringinmeren ja Tyynenmeren välissä: pituutta on noin '
+      + '1 200 kilometriä ja pinta-alaa neljänneksen Suomea vähemmän. '
+      + 'Niemimaa kuuluu Tyynenmeren tulirenkaaseen, jossa Tyynenmeren '
+      + 'laatta painuu Euraasian laatan alle noin kahdeksan senttimetriä '
+      + 'vuodessa. Tulivuoria on siksi satoja ja niistä yli kaksikymmentä '
+      + 'toimivia; korkein on **Kljutševskaja sopka**, 4 750 metriä.'
+      + '\n\n'
+      + 'Ainoa suuri kaupunki on satamakaupunki Petropavlovsk-Kamtšatski '
+      + 'Avatšanlahden rannalla. Se sai nimensä kahdesta pakettiveneestä, '
+      + 'jotka tulivat lahdelle talvehtimaan syksyllä 1740. Niemimaan '
+      + 'vanhinta väestöä ovat itelmeenit, joiden elämän ja kielen kirjasi '
+      + 'muistiin Stepan Krašeninnikov neljän vuoden matkallaan 1737–1741.'
+      + '\n\n'
+      + 'Kamtšatkalle ei vie maantietä eikä rautatietä, vaan sinne tullaan '
+      + 'lentäen tai laivalla, ja neuvostoaikana koko niemimaa oli suljettu '
+      + 'ulkopuolisilta vuoteen 1989 ja ulkomaalaisilta vuoteen 1990. Maa '
+      + 'on kuuma myös pinnan alla: kuumia lähteitä on lukemattomia, ja '
+      + '**Gejsirien laakso** löytyi vasta huhtikuussa 1941 '
+      + 'koiravaljakolla tehdyllä retkellä.',
     teksti: 'Kamtšatka työntyy Ohotanmeren ja Tyynenmeren väliin noin '
       + '1 250 kilometrin pituisena. Se kuuluu Tyynenmeren tuliseen '
       + 'kehään, jossa mannerlaatat painuvat toistensa alle — siksi '
@@ -1296,10 +1387,37 @@ export const ASIA_ARTIKKELIT = {
       + 'niemimaalla elää enemmän ruskeakarhuja kuin missään muualla '
       + 'Euraasiassa. Tulivuoret kuuluvat Unescon maailmanperintöön.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b. Sahalin on ALUELEHTI ilman
+   * kohdekarttaa, joten remontista tehtiin kohdat 1 ja 2. Intron
+   * faktat ovat saaren omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: kaupunki- ja historiasivun johdannot,
+   * nostot ja Matkailijan Sahalin). Katorga ja Karafuto kerrotaan
+   * historiallisina vaiheina ilman nykypolitiikkaa.
+   */
   Sahalin: {
-    intro: 'Sahalin on pitkä ja kapea saari Venäjän Kaukoidässä. '
-      + 'Sen eteläpuolisko kuului Japanille vuoteen 1945, ja siellä '
-      + 'näkyy yhä japanilaisten rakentamia siltoja ja rautatielinjoja.',
+    intro: 'Sahalin on Venäjän suurin saari, pitkä ja kapea kaistale '
+      + 'Ohotanmeressä: mittaa on 948 kilometriä pohjoisesta etelään ja '
+      + 'kapeimmillaan vain 26 kilometriä. '
+      + 'Mantereesta sen erottaa Tatarinsalmi, jota pitkin Gennadi '
+      + 'Nevelskoi purjehti 1849 ja todisti, ettei saari olekaan '
+      + 'mantereesta työntyvä niemi. Kaksi kolmasosaa saaresta on '
+      + 'vuoristoa, ja etelässä La Pérousen salmen takana on Japanin '
+      + 'Hokkaido.'
+      + '\n\n'
+      + 'Saarella on kolme alkuperäiskansaa: nivkhit pohjoisessa, uiltat '
+      + 'keskiosassa ja ainut etelässä. Venäjä käytti saarta '
+      + '**pakkotyösiirtolana** vuodesta 1869 vuoteen 1906, ja kirjailija '
+      + 'Anton Tšehov saapui sinne kesällä 1890 ja teki oman '
+      + 'väestölaskentansa noin kymmenelletuhannelle kortistokortille.'
+      + '\n\n'
+      + 'Vuonna 1875 Japani luopui osuudestaan Sahaliniin ja sai '
+      + 'vastineeksi Kuriilit, mutta vuoden 1905 '
+      + 'rauhassa saaren eteläpuolisko siirtyi Japanille **Karafuton** '
+      + 'prefektuuriksi, ja koko saari tuli Neuvostoliitolle elokuussa '
+      + '1945. Japanilainen kerros näkyy yhä: saaren rautatiet kulkivat '
+      + 'kapealla japanilaisella raideleveydellä vuoteen 2019. Ainoa suuri '
+      + 'kaupunki on Južno-Sahalinsk, entinen Toyohara.',
     teksti: 'Sahalin on noin 950 kilometriä pitkä mutta kapeimmillaan '
       + 'vain 26 kilometriä leveä. Pohjoisosa on tundraa ja '
       + 'ikiroudan aluetta, eteläosassa kasvaa havumetsää. Ero on '

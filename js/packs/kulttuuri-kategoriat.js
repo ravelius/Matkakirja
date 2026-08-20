@@ -33652,6 +33652,16 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R9b (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * Jakutskin, Magadanin, Kamtšatkan ja Sahalinin kaikki selite-kentät
+   * tiivistettiin yhteen virkkeeseen — mitä kuvassa näkyy, ei enää
+   * kolmen virkkeen yksityiskohtaluetteloa. Pakolliset selitykset
+   * (vuosiluvut, julkaisijan litera, kuvan alkuperä) säilyivät
+   * tiiviinä, ja lahde-rivit, kuvatiedostot, nostot, oppaat ja
+   * johdannot ovat koskemattomat. Samassa erässä näiden neljän lehden
+   * etusivun leipätekstit kirjoitettiin uusiksi asia-artikkelit.js:ssä.
+   */
   jakutsk: [
     {
       id: 'kaupunki',
@@ -33664,29 +33674,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Якутск.jpg',
-          selite: 'Jakutsk talvipäivänä korkealta kuvattuna. Lumisen '
-            + 'kadun takana leviää matalien puutalojen kortteli, ja yhtä '
-            + 'kaksikerroksista puutaloa verhoillaan parhaillaan '
-            + 'uudelleen vaalealla vinolaudalla. Taustalla nousee rivi '
-            + 'kerrostaloja ja rakennusnostureita.',
+          selite: 'Jakutsk talvipäivänä korkealta kuvattuna: lumisen kadun '
+            + 'takana leviää matalien puutalojen kortteli, ja sen takana '
+            + 'nousee rivi kerrostaloja ja rakennusnostureita.',
           lahde: 'Якупова Инна, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Якутский острог (восстановленный).jpg',
-          selite: 'Jakutskin ostrogin puutornin jäljennös syyspäivänä. '
-            + 'Torni on salvottu pyöreistä hirsistä, ja harmaan aumakaton '
-            + 'päällä on pieni vartiokoju. Julkisivusta työntyy ulos '
-            + 'katettu parveke, jonka kaiteessa toistuu vinoruutuinen '
-            + 'puuleikkaus.',
+          selite: 'Jakutskin ostrogin puutornin jäljennös syyspäivänä: '
+            + 'pyöreistä hirsistä salvottu torni, jonka aumakaton päällä '
+            + 'on pieni vartiokoju ja julkisivussa katettu parveke.',
           lahde: 'Prok of eva, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Вид на городской пляж, 203-мкр Якутск 18.06.2026.jpg',
-          selite: 'Jakutskin kaupungin uimaranta kesäkuussa. '
-            + 'Hiekkarannalla ja vedessä on uimapukuisia ihmisiä, ja '
-            + 'rantaa vartioi kaksi ristikkojalkaista uimavalvojan '
-            + 'tornia. Törmän takana nousee toistakymmentä vaaleaa '
-            + 'kerrostaloa.',
+          selite: 'Jakutskin kaupungin uimaranta kesäkuussa: '
+            + 'hiekkarannalla on uimapukuisia ihmisiä ja kaksi '
+            + 'uimavalvojan tornia, ja törmän takana nousee toistakymmentä '
+            + 'vaaleaa kerrostaloa.',
           lahde: 'SmallSonMarex, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -33705,11 +33710,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'elokuuta 2002, muutamaa päivää ennen kaupungin '
             + '370-vuotisjuhlaa. Torni rakennettiin uudelleen vanhojen '
             + 'mittapiirustusten mukaan.',
-          selite: 'Jakutskin asemakaava vuodelta 1900, nimi kyrillisin '
-            + 'kirjaimin. Ruutukaava kulkee vinosti jokeen nähden, ja sen '
-            + 'ympärillä ovat leveä joki ja suuri soikea järvi '
-            + 'korkeuskäyrineen. Selitysluettelossa mainitaan basaari, '
-            + 'suolamakasiini, luostari ja Šerginin kuilu.',
+          selite: 'Jakutskin asemakaava vuodelta 1900, nimet kyrillisin '
+            + 'kirjaimin: ruutukaava kulkee vinosti jokeen nähden, ja sen '
+            + 'ympärillä ovat leveä joki ja suuri soikea järvi.',
           lahde: 'Unknown author, Wikimedia Commons (PD)',
           wiki: 'Jakutsk',
         },
@@ -33728,10 +33731,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jäseneksi, ja seuraavana vuonna ilmestyi hänen '
             + 'matkakirjansa. Viljuiskiin avattiin 1897 spitaalisairaala.',
           selite: 'Karkearakeinen mustavalkoinen painate ratsastajista '
-            + 'lähdössä matkaan suuren hirsitalon edestä. Salvotussa '
-            + 'talossa on veistetyt pielilaudat ja katettu porttikäytävä. '
-            + 'Vaaleiden hevosten selkään on sidottu kuormia, ja niiden '
-            + 'välissä seisoo miehiä univormuissa.',
+            + 'lähdössä matkaan suuren hirsitalon edestä: hevosten selkään '
+            + 'on sidottu kuormia, ja niiden välissä seisoo miehiä '
+            + 'univormuissa.',
           lahde: 'Unknown author, Wikimedia Commons (PD)',
         },
         {
@@ -33749,10 +33751,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joukossa, joille myönnettiin maailman khomusvirtuoosin '
             + 'arvonimi, ja vuonna 2011 kaupungin sirkustalossa soitti yhtä '
             + 'aikaa 1 344 khomusistia.',
-          selite: 'Rivi khomuksia lasivitriinissä khomusmuseossa. Jokainen '
-            + 'rautakehys on taottu omanlaisekseen: yksi muistuttaa pöllöä, '
-            + 'toinen on viuhkamainen ja sahalaitainen, kolmannen päällä '
-            + 'istuu lintu. Kehysten keskeltä työntyy ohut suora kieleke.',
+          selite: 'Rivi khomuksia lasivitriinissä khomusmuseossa: jokainen '
+            + 'rautakehys on taottu omanlaisekseen, ja kehysten keskeltä '
+            + 'työntyy ohut suora kieleke.',
           lahde: 'Vadim Zhivotovsky, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Munniharppu',
           musiikki: 'https://music.apple.com/fi/album/sing-my-khomus-live/1794380412?i=1794383325',
@@ -33777,41 +33778,35 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Улица Курашова, Якутск 14.12.2025.jpg',
-          selite: 'Kurašovin katu joulukuussa. Pakkassumu peittää '
-            + 'näkymän niin, että sadan metrin päässä olevat '
-            + 'kerrostalot ovat vain harmaita palkkeja, ja matala '
-            + 'aurinko on vaalea läiskä niiden takana. Oikean laidan '
-            + 'puut ovat paksussa kuurassa, ja ainoa auto ajaa '
-            + 'valot päällä keskellä risteystä.',
+          selite: 'Kurašovin katu joulukuussa: pakkassumu peittää näkymän '
+            + 'niin, että sadan metrin päässä olevat kerrostalot ovat vain '
+            + 'harmaita palkkeja, ja ainoa auto ajaa valot päällä keskellä '
+            + 'risteystä.',
           lahde: 'SmallSonMarex, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Якутск, ул.Петра Алексеева, 22.06.2013 - panoramio.jpg',
-          selite: 'Kaksikerroksisia hirsitaloja Pjotr Aleksejevin '
-            + 'kadun varrella kesäkuussa. Harmaantuneet seinät '
-            + 'kallistuvat eri suuntiin, ikkunapielet ovat vinossa ja '
-            + 'katot ovat aaltopeltiä. Talojen takaa nousee vaalea '
-            + 'kerrostalo ja vasemmalta kirkon punainen torni.',
+          selite: 'Kaksikerroksisia hirsitaloja Pjotr Aleksejevin kadun '
+            + 'varrella kesäkuussa: harmaantuneet seinät kallistuvat eri '
+            + 'suuntiin, ikkunapielet ovat vinossa ja talojen takaa nousee '
+            + 'vaalea kerrostalo.',
           lahde: 'Vadim Zhivotovsky, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Вид на реку Лена со стороны набережной имени Романа Дмитриева, Якутск 18.06.2026.jpg',
           selite: 'Lena Roman Dmitrijevin rantakadulta katsottuna '
-            + 'kesäkuussa. Joki leviää kuvan laidasta laitaan, ja sen '
-            + 'keskellä on pieni sorasaari, jolla seisoo '
-            + 'ristikkorakenteinen voimalinjan pylväs. Etualan vedessä '
-            + 'kelluu punaisten poijujen jono.',
+            + 'kesäkuussa: joki leviää kuvan laidasta laitaan, ja sen '
+            + 'keskellä on pieni sorasaari voimalinjan pylväineen.',
           lahde: 'SmallSonMarex, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Yakutsk - 190228 DSC 5393.jpg',
-          selite: 'Jakutsk ilmasta helmikuussa. Ruutukaava ja sen '
-            + 'kerrostalorivit erottuvat lumen keskeltä vaaleina '
-            + 'paloina, ja kaupungin ympärillä on tasaista valkoista '
-            + 'lakeutta niin kauas kuin kuva ulottuu. Matala aurinko '
-            + 'värjää talojen seinät kellertäviksi.',
+          selite: 'Jakutsk ilmasta helmikuussa: ruutukaavan '
+            + 'kerrostalorivit erottuvat lumen keskeltä vaaleina paloina, '
+            + 'ja kaupungin ympärillä on tasaista valkoista lakeutta niin '
+            + 'kauas kuin kuva ulottuu.',
           lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Jakutsk on Sahan tasavallan pääkaupunki noin '
@@ -33858,12 +33853,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Magadaniin.',
               kuva: {
                 tiedosto: 'Aeroport Yakutsk 02.jpg',
-                selite: 'Jakutskin lentoaseman terminaali kevätpäivänä. '
-                  + 'Pitkä lasiseinäinen rakennus levittäytyy koko '
-                  + 'kuvan mitalle, ja sen ylälaidassa lukee '
-                  + 'kyrillisin kirjaimin lentoaseman nimi. Edustan '
-                  + 'aukiolla kiertää kaareva kaidejono ja siitä '
-                  + 'nousee harmaa kivipylväs.',
+                selite: 'Jakutskin lentoaseman terminaali kevätpäivänä: '
+                  + 'pitkä lasiseinäinen rakennus, jonka ylälaidassa lukee '
+                  + 'kyrillisin kirjaimin lentoaseman nimi.',
                 lahde: 'Staselnik, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -33908,12 +33900,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'nopeasti ikirouta sulaa.',
               kuva: {
                 tiedosto: 'Yakutsk - 190227 DSC 4912.jpg',
-                selite: 'Lämpöputkia kadun varrella talvella. Paksut '
+                selite: 'Lämpöputkia kadun varrella talvella: paksut '
                   + 'hopeanharmaat eristeputket kulkevat matalilla '
-                  + 'teräspukeilla lumipenkan takana, kiertyvät '
-                  + 'silmukoiksi ja nousevat kauempana kaarisillaksi '
-                  + 'ajoradan yli. Taustalla on viisikerroksisia '
-                  + 'kerrostaloja, joiden katoilta nousee höyryä.',
+                  + 'teräspukeilla lumipenkan takana ja nousevat kauempana '
+                  + 'kaarisillaksi ajoradan yli.',
                 lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -33959,12 +33949,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ohuohai-piiritanssi.',
               kuva: {
                 tiedosto: 'Lena River Ice Road.jpg',
-                selite: 'Lenan jäätie keskitalvella. Auratun tien '
-                  + 'harmaa pinta johtaa suoraan eteenpäin joen '
-                  + 'jäätä pitkin, ja molemmin puolin kohoavat '
-                  + 'lumivallit ja auratut kinokset. Vastarannalla '
-                  + 'näkyy matala metsäjuova ja sen takana '
-                  + 'siniharmaa vaara.',
+                selite: 'Lenan jäätie keskitalvella: auratun tien harmaa '
+                  + 'pinta johtaa suoraan eteenpäin joen jäätä pitkin, ja '
+                  + 'molemmin puolin kohoavat lumivallit.',
                 lahde: 'Natxo Rodriguez from Vitoria-Gasteiz, Basque '
                   + 'Country, Wikimedia Commons (CC BY-SA 2.0)',
               },
@@ -33995,10 +33982,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Jakutskiin perustettiin 1960 ikiroutainstituutti, jonka '
             + 'maanalainen tutkimuskäytävä kulkee 12–15 metrin syvyydessä.',
           selite: 'Opastettu ryhmä ikiroutainstituutin maanalaisessa '
-            + 'tutkimuskäytävässä. Katto ja seinien yläosa ovat paksun '
-            + 'huurteen peitossa, ja jääkiteet ovat kasvaneet lehtimäisiksi '
-            + 'tupsuiksi. Alempana seinä on paljasta harmaata maata, ja '
-            + 'kuulijoilla on paksut talvitakit.',
+            + 'tutkimuskäytävässä, jonka katto ja seinien yläosa ovat '
+            + 'paksun huurteen ja lehtimäisiksi tupsuiksi kasvaneiden '
+            + 'jääkiteiden peitossa.',
           lahde: 'Тереховская Полина Юрьевна, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Ikirouta',
         },
@@ -34015,11 +34001,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oli kuollessaan 40–45-vuotias, ja se eli noin 18 000 vuotta '
             + 'sitten. Löytöä tutkivat 2003–2004 asiantuntijat muun muassa '
             + 'Yhdysvalloista, Ranskasta, Alankomaista ja Japanista.',
-          selite: 'Mammutin luuranko museosalissa. Ruskeanharmaasta '
-            + 'kallosta erottuvat silmäkuoppa, leukaluu ja poskihampaat, ja '
-            + 'siitä lähtee kaksi pitkää syöksyhammasta, jotka kaartuvat '
-            + 'alas ja sisäänpäin. Luurankoa tukevat siniharmaat '
-            + 'metallitangot.',
+          selite: 'Mammutin luuranko museosalissa: ruskeanharmaasta '
+            + 'kallosta lähtee kaksi pitkää syöksyhammasta, jotka '
+            + 'kaartuvat alas ja sisäänpäin.',
           lahde: 'JukoFF, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Villamammutti',
         },
@@ -34036,11 +34020,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pitkin kymmenien kilometrien matkan. Lenan pilarien '
             + 'luonnonpuisto otettiin Unescon maailmanperintöluetteloon '
             + 'vuonna 2012; sen pinta-ala on yli miljoona hehtaaria.',
-          selite: 'Lenan pilarit ilta-auringossa. Kalkkikiviseinämä on '
+          selite: 'Lenan pilarit ilta-auringossa: kalkkikiviseinämä on '
             + 'halkeillut kapeiksi pystysuoriksi pylväiksi, joiden '
-            + 'vaaleanruskea kivi päättyy teräviin huippuihin. Pylväiden '
-            + 'juurella kasvaa tiheää havumetsää, ja tyyni joki heijastaa '
-            + 'kallion pitkinä juovina.',
+            + 'juurella kasvaa tiheää havumetsää ja joita tyyni joki '
+            + 'heijastaa.',
           lahde: 'VasilyevaED, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lena',
         },
@@ -34075,28 +34058,25 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'The Bay of Nagaev, Magadan.jpg',
-          selite: 'Nagajevanlahden ranta syyspäivänä. Nurmikummulla '
-            + 'seisoo valkoinen majakkatorni, jonka jalustaa kiertää '
-            + 'punainen nauha, ja lahden takana kohoavat siniharmaat '
-            + 'vaarat. Nurmella makaa paksuja ajopuunrunkoja.',
+          selite: 'Nagajevanlahden ranta syyspäivänä: nurmikummulla seisoo '
+            + 'valkoinen majakkatorni, ja lahden takana kohoavat '
+            + 'siniharmaat vaarat.',
           lahde: 'Евгений Пиманов, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Trinity Cathedral in Magadan.jpg',
           selite: 'Pyhän Kolminaisuuden katedraali matalassa '
-            + 'talviauringossa. Valkoisesta rakennuksesta nousee kolme '
-            + 'kullattua sipulikupolia risteineen, ja kaarevan '
-            + 'sisäänkäyntikatoksen päällä on neljäs, pienempi kupoli. '
-            + 'Katokselle nousee leveä kiviportaikko.',
+            + 'talviauringossa: valkoisesta rakennuksesta nousee kolme '
+            + 'kullattua sipulikupolia risteineen ja sisäänkäyntikatoksen '
+            + 'päällä neljäs, pienempi.',
           lahde: 'Евгений Пиманов, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Lenin Avenue in Magadan.jpg',
-          selite: 'Leninin valtakatu Magadanissa aurinkoisena päivänä. '
-            + 'Kadun varrella seisoo pitkä rivi vaaleankeltaisia '
-            + 'nelikerroksisia taloja, joiden tummanpunaisia kattoja '
-            + 'kiertää musta kaide ja rivi kivimaljakoita. Talojen edessä '
-            + 'kasvaa havupuita toiseen kerrokseen asti.',
+          selite: 'Leninin valtakatu Magadanissa aurinkoisena päivänä: '
+            + 'kadun varrella seisoo pitkä rivi vaaleankeltaisia '
+            + 'nelikerroksisia taloja, joiden edessä kasvaa havupuita '
+            + 'toiseen kerrokseen asti.',
           lahde: 'Евгений Пиманов, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -34116,11 +34096,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'telttakatu nimettiin armeijan komentajan Vasili Bljuherin '
             + 'mukaan; nykyään se on Nagajevan katu. Kaupunkioikeudet '
             + 'tulivat 14. heinäkuuta 1939.',
-          selite: 'Magadan kukkulalta nähtynä kesäpäivänä: matalien talojen '
-            + 'ja kerrostalojen meri levittäytyy rantaan asti, jossa vesi '
-            + 'näkyy kapeana sinisenä kaistaleena. Kaupungin takana kohoaa '
-            + 'pitkä loivarinteinen vaara, jonka kupeissa viipyy vielä '
-            + 'valkoisia lumilaikkuja.',
+          selite: 'Magadan kukkulalta nähtynä kesäpäivänä: matalien '
+            + 'talojen ja kerrostalojen meri levittäytyy rantaan asti, ja '
+            + 'kaupungin takana kohoaa pitkä loivarinteinen vaara '
+            + 'lumilaikkuineen.',
           lahde: 'frage23, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Magadan',
         },
@@ -34140,10 +34119,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kozajevilta on peräisin myös ajatus muuttaa muistomerkki '
             + 'museoksi.',
           selite: 'Surun maski alhaalta kuvattuna: harmaa kulmikas '
-            + 'ihmiskasvo kohoaa taivasta vasten niin, että ylälaita jää '
-            + 'kauas katsojan yläpuolelle. Poskella valuu jono pieniä '
-            + 'naamioita, joissa erottuu silmiä ja suita, ja alaosaa '
-            + 'kehystävät rosoiset graniittilohkareet.',
+            + 'ihmiskasvo kohoaa taivasta vasten, ja poskella valuu jono '
+            + 'pieniä naamioita.',
           lahde: 'Сергей Ковалев, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ernst Neizvestny',
         },
@@ -34162,11 +34139,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Vapauduttuaan hän jäi kaupunkiin ja kuoli siellä 1994. '
             + 'Lauluja hän sävelsi noin kolmesataa, tunnetuimpina Osen ja '
             + 'Ljubuška.',
-          selite: 'Magadanin musiikki- ja draamateatteri iltavalossa. '
-            + 'Kolmikerroksisen talon hiekankeltaisia seiniä jäsentävät '
+          selite: 'Magadanin musiikki- ja draamateatteri iltavalossa: '
+            + 'kolmikerroksisen talon hiekankeltaisia seiniä jäsentävät '
             + 'valkoiset pilasterit, ja sisäänkäynnin edessä on neljän '
-            + 'valkoisen pilarin rivi. Katonreunalla seisoo neljä tummaa '
-            + 'hahmoa, joista yksi pitelee soitinta.',
+            + 'pilarin rivi.',
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
           musiikki: 'https://music.apple.com/fi/album/%D0%BE%D1%81%D0%B5%D0%BD%D1%8C/1707574060?i=1707574190',
           musiikkiNimi: 'Vadim Kozin: Osen Apple Musicissa',
@@ -34202,40 +34178,33 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Magadan, Gertner Bay.jpg',
-          selite: 'Gertnerinlahti kesäpäivänä. Loivaa rinnettä laskee '
-            + 'hiekkatie kohti rantaa, jossa on kirkkaankattoisia '
-            + 'matalia rakennuksia, ja niiden takaa avautuu tyyni '
-            + 'meri. Vastarannalla kohoaa metsäinen niemi, ja '
-            + 'horisontissa erottuu lumitäpläinen vuorijono.',
+          selite: 'Gertnerinlahti kesäpäivänä: hiekkatie laskee loivaa '
+            + 'rinnettä kohti rannan matalia rakennuksia, ja niiden takaa '
+            + 'avautuu tyyni meri ja lumitäpläinen vuorijono.',
           lahde: 'frage23, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Огни Магадана.jpg',
-          selite: 'Magadanin valot hämärässä. Katulyhtyjen rivi '
-            + 'kaartaa rantaa pitkin, ja niiden takana kimaltaa '
-            + 'Nagajevanlahden tumma vesi. Vasemmalla nousee '
-            + 'kerrostalojen rinne, ja lahden yli levittäytyy pitkä '
-            + 'matala vaara, jonka harjalla palaa yksittäisiä valoja.',
+          selite: 'Magadanin valot hämärässä: katulyhtyjen rivi kaartaa '
+            + 'rantaa pitkin, ja niiden takana kimaltaa Nagajevanlahden '
+            + 'tumma vesi.',
           lahde: 'Vladislava21, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Магадан, Транспортная-Речная, 20240831 01.jpg',
-          selite: 'Vaaleankeltainen kaksikerroksinen talo '
-            + 'Transportnajan ja Retšnajan kulmassa. Julkisivua '
-            + 'jäsentävät leveät pystypilasterit, ja rakennuksen '
-            + 'takaosassa kohoaa pieni nelikulmainen torni, jonka '
-            + 'ympäri kiertää kaide. Edessä on tyhjä asfalttikenttä.',
+          selite: 'Vaaleankeltainen kaksikerroksinen talo Transportnajan '
+            + 'ja Retšnajan kulmassa: julkisivua jäsentävät leveät '
+            + 'pystypilasterit, ja takaosassa kohoaa pieni nelikulmainen '
+            + 'torni.',
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Magadan viewed from the Staritski peninsula.jpg',
-          selite: 'Magadan Staritskin niemimaalta katsottuna keväällä. '
-            + 'Etualalla on kuivunutta heinikkoa ja sulavaa '
-            + 'lumipolkua, keskellä kaupungin matalien kerrostalojen '
-            + 'nauha ja sen takana lumiset loivat vaarat, joiden '
-            + 'harjalta nousee ohut radiomasto.',
+          selite: 'Magadan Staritskin niemimaalta katsottuna keväällä: '
+            + 'kaupungin matalien kerrostalojen nauha kulkee kuivuneen '
+            + 'heinikon takana, ja sen takana ovat lumiset loivat vaarat.',
           lahde: 'Johannes Rohr, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Magadan on Magadanin alueen hallinnollinen keskus ja '
@@ -34282,12 +34251,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muutoin se on soraa.',
               kuva: {
                 tiedosto: 'Новый терминал "Аэропорта Магадан".jpg',
-                selite: 'Sokolin lentoaseman uusi terminaali '
-                  + 'talvi-iltana. Rakennuksen katto on muotoiltu '
-                  + 'loivaksi aaltoviivaksi, joka nousee molemmissa '
-                  + 'päissä ylös, ja koko julkisivu on lasia. '
-                  + 'Yläreunassa palaa valkoinen kyrillinen teksti, ja '
-                  + 'taivas on vaaleanpunainen.',
+                selite: 'Sokolin lentoaseman uusi terminaali talvi-iltana: '
+                  + 'katto on muotoiltu loivaksi aaltoviivaksi, koko '
+                  + 'julkisivu on lasia ja yläreunassa palaa valkoinen '
+                  + 'kyrillinen teksti.',
                 lahde: 'Магадан 2001, Wikimedia Commons (CC0)',
               },
             },
@@ -34332,12 +34299,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Toinen elinkeino on kalastus, toinen kullankaivuu.',
               kuva: {
                 tiedosto: 'Magadan-port.jpg',
-                selite: 'Rahtilaiva Magadanin sataman laiturissa '
-                  + 'sumuisena päivänä. Mustan rungon kylkeen on '
-                  + 'maalattu kyrillinen nimi, keulassa nousee kaksi '
-                  + 'keltaista lastipuomia, ja laiturilla seisoo '
-                  + 'vihreä satamanosturi. Laiturin toisella laidalla '
-                  + 'on rivi mustia kivihiilikasoja.',
+                selite: 'Rahtilaiva Magadanin sataman laiturissa sumuisena '
+                  + 'päivänä: mustan rungon kylkeen on maalattu kyrillinen '
+                  + 'nimi, ja laiturilla seisoo vihreä satamanosturi.',
                 lahde: 'Andrey dementev, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -34385,11 +34349,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Чаша. Марчеканская сопка.jpg',
                 selite: 'Näkymä Martšekanin vaaran pohjoisrinteeltä '
-                  + 'talvella. Etualan lumikenttä laskee loivana '
-                  + 'kaarena alaspäin, ja rinteessä kasvaa harvassa '
-                  + 'matalia lehtikuusia. Alhaalla levittäytyy '
-                  + 'kaupunki, ja sen takana nousevat lumiset '
-                  + 'vaarajonot kerroksittain horisonttiin.',
+                  + 'talvella: alhaalla levittäytyy kaupunki, ja sen '
+                  + 'takana nousevat lumiset vaarajonot kerroksittain '
+                  + 'horisonttiin.',
                 lahde: 'Странник 18, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -34420,11 +34382,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metriin. Matykil nousee noin 700 metriin, ja sen rannalla on '
             + 'Ohotanmeren pohjoisin paikka, jossa stellerinmerileijonat '
             + 'saavat poikasensa.',
-          selite: 'Kallioinen saari nousee merestä usvan keskeltä. Terävät '
-            + 'huiput ja jyrkät seinämät hohtavat matalassa auringossa '
-            + 'kullanruskeina, ja kielekkeitä peittää paikoin vihreä '
-            + 'sammal- ja ruohokasvusto. Seinämien edessä liitelee pieniä '
-            + 'vaaleita lintuja.',
+          selite: 'Kallioinen saari nousee merestä usvan keskeltä: terävät '
+            + 'huiput hohtavat matalassa auringossa kullanruskeina, ja '
+            + 'seinämien edessä liitelee pieniä vaaleita lintuja.',
           lahde: 'Екатерина Васягина, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ohotanmeri',
         },
@@ -34442,11 +34402,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'alle. Poikaset kuoriutuvat marras–tammikuussa ja laskeutuvat '
             + 'mereen touko–kesäkuussa kolmisenttisinä. Kudun jälkeen '
             + 'emokala kuolee.',
-          selite: 'Lohia tiiviissä parvessa kirkkaan veden alla, '
-            + 'kymmenittäin lähes samaan suuntaan kääntyneinä. Selät ovat '
-            + 'vihertävän harmaat ja täynnä suuria mustia soikeita täpliä, '
-            + 'ja kyljet ovat hopeanvalkoiset. Pohjan pyöreitä vaaleita '
-            + 'kiviä peittää vihreä levä.',
+          selite: 'Lohia tiiviissä parvessa kirkkaan veden alla, selät '
+            + 'vihertävän harmaat ja täynnä suuria mustia soikeita täpliä '
+            + 'ja kyljet hopeanvalkoiset.',
           lahde: 'Кирилл Уютнов, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kyttyrälohi',
         },
@@ -34465,11 +34423,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'saaliista, sillä ravinto on enimmäkseen kalaa, etenkin '
             + 'lohikaloja. Pesä kasvaa vuosien korjailussa kolme metriä '
             + 'leveäksi ja kaksi metriä korkeaksi.',
-          selite: 'Kuningasmerikotka lennossa. Höyhenpuku on tummanruskea, '
-            + 'mutta siiven etureunassa on leveä valkoinen kaistale ja '
-            + 'pyrstö sekä sääret ovat valkoiset. Suuri oranssinkeltainen '
-            + 'nokka on raollaan, ja keltaisissa varpaissa roikkuu vaalea '
-            + 'kuollut lintu saaliina.',
+          selite: 'Kuningasmerikotka lennossa: höyhenpuku on tummanruskea '
+            + 'mutta siiven etureunassa on leveä valkoinen kaistale, ja '
+            + 'suurine oranssinkeltaisine nokkineen lintu kantaa '
+            + 'varpaissaan saalista.',
           lahde: 'Кирилл Уютнов, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kuningasmerikotka',
         },
@@ -34502,28 +34459,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Petropavlovsk-Kamchatsky, 2025 - 54824368776.jpg',
-          selite: 'Petropavlovsk Avatšanlahden rannalla. Kaupunki kiertää '
+          selite: 'Petropavlovsk Avatšanlahden rannalla: kaupunki kiertää '
             + 'Kultutšnoje-järveä ja nousee kukkuloiden rinteille, ja '
-            + 'sataman laiturit ovat lahden puolella. Avatšanlahti on 24 '
-            + 'kilometriä pitkä, mutta sen suu vain kolme kilometriä leveä.',
+            + 'sataman laiturit ovat lahden puolella.',
           lahde: 'Nikita Zhuravlev, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Памятник мореплавателю В. Берингу.jpg',
-          selite: 'Vitus Beringin muistomerkki Petropavlovskissa. '
-            + 'Metallipylväs on muotoiltu tykinputkeksi, ja sen huipulla '
-            + 'lepää lootuskukassa tykinkuula. Jalustan kilvessä on omistus '
-            + 'Petropavlovskin perustajalle, merenkulkija Beringille, ja '
-            + 'vuosi 1740.',
+          selite: 'Vitus Beringin muistomerkki Petropavlovskissa: '
+            + 'tykinputkeksi muotoillun metallipylvään huipulla lepää '
+            + 'tykinkuula, ja jalustan kilvessä on omistus kaupungin '
+            + 'perustajalle ja vuosi 1740.',
           lahde: 'NadezhdaKhaustova, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Бухта Авачинская Три брата.jpg',
-          selite: 'Kolmen veljen kalliot Avatšanlahden suulla. Kolme '
+          selite: 'Kolmen veljen kalliot Avatšanlahden suulla: kolme '
             + 'kivipaadetta kohoaa merestä lahdensuun reunassa, ja ne ovat '
-            + 'Petropavlovskin tunnus. Tarina kertoo veljeksistä, jotka '
-            + 'asettuivat hyökyaallon tielle kaupungin edestä ja jäivät '
-            + 'kiveksi.',
+            + 'Petropavlovskin tunnus.',
           lahde: 'Анна Руденко-Гринащук, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -34542,10 +34495,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja 6. lokakuuta Beringin Pyhä apostoli Pietari. Satama sai '
             + 'nimensä aluksilta, ja jälkimmäistä päivää — uutta lukua 17. '
             + 'lokakuuta — pidetään kaupungin perustamispäivänä.',
-          selite: 'Petropavlovskin satama 1740-luvulla. Redillä on Martin '
-            + 'Spanbergin laivueen aluksia ja rannoilla matalia '
-            + 'hirsirakennuksia. Kuparipiirros ilmestyi Krašeninnikovin '
-            + 'Kamtšatkan maan kuvauksen ensimmäisessä painoksessa.',
+          selite: 'Petropavlovskin satama 1740-luvulla kuparipiirroksessa, '
+            + 'joka ilmestyi Krašeninnikovin Kamtšatkan maan kuvauksen '
+            + 'ensimmäisessä painoksessa: redillä on aluksia ja rannoilla '
+            + 'matalia hirsirakennuksia.',
           lahde: 'Stepan Krasheninnikov, Wikimedia Commons (PD)',
           wiki: 'Petropavlovsk-Kamtšatski',
         },
@@ -34563,9 +34516,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuolleen juuri sinä päivänä, jona kirjan viimeinen arkki tuli '
             + 'painosta.',
           selite: 'Kuriilien kartta Krašeninnikovin Kamtšatkan maan '
-            + 'kuvauksesta vuodelta 1755. Kartalla ovat Kamtšatkan '
+            + 'kuvauksesta vuodelta 1755: siinä ovat Kamtšatkan '
             + 'eteläkärki, Sahalin, koko Kuriilien saariketju ja Japanin '
-            + 'pohjoisosa. Nimet on kaiverrettu kyrillisin kirjaimin.',
+            + 'pohjoisosa kyrillisin nimin.',
           lahde: 'Stepan Krasheninnikov, Wikimedia Commons (PD)',
         },
         {
@@ -34581,10 +34534,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oli tehty enemmän kuin kukaan tarvitsi. Jasakkikirjoista on '
             + 'arvioitu, että itelmeenejä oli 1697 noin 12 680 ja 1738 enää '
             + '8 448.',
-          selite: 'Kamtšadaaleja Natšikin kylässä vuonna 1904. Aikuiset ja '
-            + 'lapset seisovat puisen kuivaustelineen ääressä, jonka '
-            + 'riu\'uilla riippuu tiheässä halkaistuja kaloja. Kuva on Jelim '
-            + 'Demidovin Kamtšatkan-matkakirjasta.',
+          selite: 'Kamtšadaaleja Natšikin kylässä vuonna 1904 puisen '
+            + 'kuivaustelineen ääressä, jonka riu\'uilla riippuu tiheässä '
+            + 'halkaistuja kaloja; kuva on Jelim Demidovin '
+            + 'Kamtšatkan-matkakirjasta.',
           lahde: 'DEMIDOV, Elim Pavlovich (1867-1943), Wikimedia Commons (PD)',
           wiki: 'Itelmeenit',
         },
@@ -34620,35 +34573,31 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Лежбище сивучей.jpg',
           selite: 'Sivutši eli stellerinmerileijona makaa vanhalla '
             + 'laiturilla Petropavlovskin Avatšan kaupunginosassa '
-            + 'maaliskuussa. Merileijonat pesivät niemimaan rannoilla, ja '
-            + 'talvisin niitä lojuu kaupungin laitureilla; takana on '
-            + 'lahden jäätä ja lumisia vuoria.',
+            + 'maaliskuussa, takanaan lahden jäätä ja lumisia vuoria.',
           lahde: 'Artem Rybalchenko, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Халактырский пляж (лето).jpg',
-          selite: 'Halaktyrin ranta Petropavlovskin itäpuolella on '
-            + 'avoimen Tyynenmeren ranta, jonka hiekka on mustaa '
-            + 'tulivuorten laavamurskaa. Ilmakuvassa maininki vyöryy '
-            + 'suorana viivana tummalle rannalle syysauringossa.',
+          selite: 'Ilmakuva Halaktyrin rannasta Petropavlovskin '
+            + 'itäpuolella: avoimen Tyynenmeren maininki vyöryy suorana '
+            + 'viivana rannalle, jonka hiekka on mustaa tulivuorten '
+            + 'laavamurskaa.',
           lahde: 'Алексей Чернышев1, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Petropavlovsk-Kamchatsky city center 02.jpg',
-          selite: 'Petropavlovskin keskustaa syksyllä ylhäältä nähtynä. '
-            + 'Pitkä punakattoinen kerrostalo seuraa pääkadun kaarta, '
-            + 'pihoilla hehkuvat ruskan värit ja kadun päässä erottuvat '
-            + 'sataman nosturit.',
+          selite: 'Petropavlovskin keskustaa syksyllä ylhäältä nähtynä: '
+            + 'pitkä punakattoinen kerrostalo seuraa pääkadun kaarta, ja '
+            + 'kadun päässä erottuvat sataman nosturit.',
           lahde: 'ФГБУ "ИНФОРМАВТОДОР", Wikimedia Commons (CC BY 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Вид на морской порт.jpg',
-          selite: 'Kalastusaluksia ja laitureita Petropavlovskin '
-            + 'satamassa Nikolskajan kukkulalta nähtynä. Kaupunki nousee '
-            + 'vihreille rinteille lahden ympärillä, ja oikealla '
-            + 'Avatšanlahti jatkuu kohti suutaan.',
+          selite: 'Kalastusaluksia ja laitureita Petropavlovskin satamassa '
+            + 'Nikolskajan kukkulalta nähtynä, kaupunki nousee vihreille '
+            + 'rinteille lahden ympärillä.',
           lahde: 'Stasich116, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Petropavlovsk-Kamtšatski on 6 766 kilometrin päässä '
@@ -34688,9 +34637,8 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Passenger terminal airport yelizovo2.jpg',
                 selite: 'Jelizovon lentoaseman vanha terminaali ja '
-                  + 'lennonjohtotorni toukokuussa. Asematason takana '
-                  + 'kohoaa lumihuippuinen vuori — kenttä on '
-                  + 'Kamtšatkan pääovi.',
+                  + 'lennonjohtotorni toukokuussa, asematason takana '
+                  + 'lumihuippuinen vuori.',
                 lahde: 'Der.metzger2009, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -34713,10 +34661,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Beringin laivat tänne aikanaan talvehtimaan.',
               kuva: {
                 tiedosto: 'Kamchatka road car stopped mountains.jpg',
-                selite: 'Maastoauto niemimaan maantiellä lokakuussa. '
-                  + 'Tien takana on koivuvyöhyke ja lumen saaneet '
-                  + 'vuoret — tällaisena tie jatkuu satoja kilometrejä '
-                  + 'keskuslaaksossa.',
+                selite: 'Maastoauto niemimaan maantiellä lokakuussa: tien '
+                  + 'takana on koivuvyöhyke ja lumen saaneet vuoret.',
                 lahde: 'Rosavtodor, Wikimedia Commons (CC BY 4.0)',
               },
             },
@@ -34739,10 +34685,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vasta 1941 — se tarina on luontosivulla.',
               kuva: {
                 tiedosto: 'Паратунские горячие источники.jpg',
-                selite: 'Paratunkan lähdeseutu ilmasta joulukuussa. '
-                  + 'Lumi peittää laakson ja rinteet, mutta lähteiden '
-                  + 'lämmittämät purot juoksevat sulina ja mustina '
-                  + 'hangen keskellä.',
+                selite: 'Paratunkan lähdeseutu ilmasta joulukuussa: lumi '
+                  + 'peittää laakson, mutta lähteiden lämmittämät purot '
+                  + 'juoksevat sulina ja mustina hangen keskellä.',
                 lahde: 'LukaE, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -34804,9 +34749,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'miestä. Sen jälkeen huipulle ei kiivetty ennen vuotta 1931, '
             + 'ja tuolta retkikunnalta menehtyi useita miehiä '
             + 'laskeutumismatkalla lentäviin laavapalloihin.',
-          selite: 'Kljutševskaja sopka purkauksessa kesällä 1993. '
-            + 'Lumijuovaisen kartion huipulta kohoaa tumma tuhkapatsas. '
-            + 'Vuori on Euraasian korkein toimiva tulivuori.',
+          selite: 'Kljutševskaja sopka purkauksessa kesällä 1993: '
+            + 'lumijuovaisen kartion huipulta kohoaa tumma tuhkapatsas.',
           lahde: 'Giorgio Galeotti, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kljutševskaja sopka',
         },
@@ -34823,9 +34767,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kahta vuorta Pietariksi ja Paavaliksi ja kirjasi '
             + 'päiväkirjaansa Avatšinskajan purkauksen 15. kesäkuuta 1779.',
           selite: 'Korjakskaja, Avatšinskaja ja Kozelskaja Petropavlovskin '
-            + 'takana. Kaupungin talot peittävät kukkulat metsänrajaan asti, '
-            + 'ja tulivuoret kohoavat metsävyöhykkeen takaa selväpiirteisinä '
-            + 'kartioina. Korjakskaja on niistä korkein, 3 456 metriä.',
+            + 'takana: tulivuoret kohoavat metsävyöhykkeen takaa '
+            + 'selväpiirteisinä kartioina, ja Korjakskaja on niistä '
+            + 'korkein, 3 456 metriä.',
           lahde: 'kuhnmi, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Korjakskaja',
         },
@@ -34841,10 +34785,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tunnetaan maailmassa vain kourallinen, ja tämä oli niistä '
             + 'viimeisiä löydettyjä — vaikka niemimaan pienempiä gejsirejä '
             + 'oli kuvannut jo Krašeninnikov 1738.',
-          selite: 'Gejsirien laakso Kronotskin luonnonpuistossa. '
-            + 'Höyrysuihkut nousevat jokikanjonin rinteiltä, jotka ovat '
-            + 'kesällä vihreät ja kukkivat. Gejsernaja-joen alajuoksulla on '
-            + 'parisenkymmentä suurta gejsiriä ja satoja kuumia lähteitä.',
+          selite: 'Gejsirien laakso Kronotskin luonnonpuistossa: '
+            + 'höyrysuihkut nousevat jokikanjonin rinteiltä, jotka ovat '
+            + 'kesällä vihreät ja kukkivat.',
           lahde: 'Kandukuru Nagarjun from Bangalore, India, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -34875,26 +34818,25 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Скалы мыса Великан.jpg',
-          selite: 'Velikanin niemen kalliot Sahalinin kaakkoisrannikolla. '
-            + 'Merestä kohoaa vaalea kekurikallio, ja laskuveden jättämässä '
-            + 'altaassa näkyy sen peilikuva. Niemi sijaitsee Toninon–Anivan '
-            + 'niemimaalla Korsakovin piirissä.',
+          selite: 'Velikanin niemen kalliot Sahalinin kaakkoisrannikolla '
+            + 'Toninon–Anivan niemimaalla: merestä kohoaa vaalea '
+            + 'kekurikallio, jonka peilikuva näkyy laskuveden jättämässä '
+            + 'altaassa.',
           lahde: 'Rost.galis, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The frozen southeastern coast of Russia’s Sakhalin Island (iss074e0312749).jpg',
           selite: 'Jäätynyt Terpenijanlahti Sahalinin kaakkoisrannikolla '
-            + 'kansainväliseltä avaruusasemalta kuvattuna. Lahtea peittää '
-            + 'rikkonainen ajojää, ja saaren vuoriselänteet ovat lumen alla. '
-            + 'Kuva on otettu helmikuussa 2026.',
+            + 'kansainväliseltä avaruusasemalta kuvattuna helmikuussa '
+            + '2026: lahtea peittää rikkonainen ajojää ja vuoriselänteet '
+            + 'ovat lumen alla.',
           lahde: 'NASA Johnson Space Center, Wikimedia Commons (PD)',
         },
         {
           tiedosto: '2024-09-29-Sakhalin-panorama.jpg',
           selite: 'Južno-Sahalinsk syyskuussa 2024 Bolševikin vuoren '
-            + 'rinteeltä nähtynä. Kaupunki täyttää vuorten väliin jäävän '
-            + 'laakson, ja rinteellä seisoo köysiradan pylväs. Japanin '
-            + 'hallinnon aikana kaupungin nimi oli Toyohara.',
+            + 'rinteeltä nähtynä: kaupunki täyttää vuorten väliin jäävän '
+            + 'laakson, ja rinteellä seisoo köysiradan pylväs.',
           lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -34912,11 +34854,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'leveä, mutta sen pohjoisin kuristuskohta on nimetty '
             + 'Nevelskoin salmeksi — 56 kilometriä pitkä ja kapeimmillaan '
             + 'noin 7,3 kilometriä.',
-          selite: 'Mamiya Rinzōn vuonna 1810 piirtämä kartta Amurin '
-            + 'suistosta ja Sahalinista. Se on ensimmäinen japanilainen '
-            + 'kartta, joka perustuu omaan maastomittaukseen ja esittää '
-            + 'Sahalinin saarena. Käsin väritetylle paperille on merkitty '
-            + 'rantaviivat ja jokiuomat.',
+          selite: 'Mamiya Rinzōn vuonna 1810 käsin väritetylle paperille '
+            + 'piirtämä kartta Amurin suistosta ja Sahalinista on '
+            + 'ensimmäinen japanilainen kartta, joka perustuu omaan '
+            + 'maastomittaukseen ja esittää Sahalinin saarena.',
           lahde: 'Mamiya Rinzo 間宮林蔵, Wikimedia Commons (CC0)',
           wiki: 'Sahalin',
         },
@@ -34933,11 +34874,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '7,5 metriä, jonka seinät tuettiin pystypuilla ja katettiin '
             + 'maalla ja heinällä. Metsässä ja matkoilla kuljettiin '
             + 'koiravaljakolla.',
-          selite: 'Nivkhien paaluille nostettu aitta, kuva vuodelta 1903. '
-            + 'Lautaseinäisen rakennuksen räystäiltä riippuu kuivumaan '
-            + 'ripustettua tavaraa, ja lattian alle jää avoin tila. '
-            + 'Rakennuksen luona on kaksi turkkiin pukeutunutta ihmistä ja '
-            + 'koira.',
+          selite: 'Nivkhien paaluille nostettu aitta vuonna 1903: '
+            + 'lautaseinäisen rakennuksen räystäiltä riippuu kuivumaan '
+            + 'ripustettua tavaraa, ja lattian alle jää avoin tila.',
           lahde: 'Internet Archive Book Images, Wikimedia Commons (CC0)',
           wiki: 'Nivkhit',
         },
@@ -34954,10 +34893,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'opetti lapsille venäjää ja laskentoa. Vuonna 1903 hän äänitti '
             + 'ainun kieltä vahasylintereille. Hän oli Józef Piłsudskin '
             + 'vanhempi veli.',
-          selite: 'Bronisław Piłsudskin ottama valokuva Sahalinin ainuista. '
-            + 'Neljä nuorta istuu maassa inau-rivin ääressä; inaut ovat '
-            + 'vuolluista lastuista tehtyjä uhripuikkoja. Yksi heistä on '
-            + 'juhlapuvussa, muut arkivaatteissa.',
+          selite: 'Bronisław Piłsudskin ottama valokuva Sahalinin '
+            + 'ainuista: neljä nuorta istuu maassa inau-rivin ääressä, ja '
+            + 'inaut ovat vuolluista lastuista tehtyjä uhripuikkoja.',
           lahde: 'Pilsudski, Bronislaw, Wikimedia Commons (PD)',
           wiki: 'Ainut',
         },
@@ -34990,25 +34928,22 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Yuzhno-Sakhalinsk Museum July 2012.jpg',
           selite: 'Aluemuseon talo on Južno-Sahalinskin tunnetuin '
             + 'rakennus: japanilaisen Yoshio Kaizukan piirtämä ja 1937 '
-            + 'valmistunut, tyyliltään niin sanottua keisarillisen '
-            + 'kruunun tyyliä. Toyoharan ajalta säilyneitä taloja on '
-            + 'kaupungissa enää kourallinen.',
+            + 'valmistunut, tyyliltään niin sanottua keisarillisen kruunun '
+            + 'tyyliä.',
           lahde: 'Sakhalinio, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Сахалин, Чертов мост, 2023-10-07 02.jpg',
           selite: 'Pirunsilta eli Tšortov most Holmskin takamailla on '
-            + 'käytöstä poistuneen vuoristoradan silta. Ruostuneet kiskot '
-            + 'jatkuvat kohti tunnelin suuaukkoa, ja ympärillä hehkuu '
-            + 'lokakuun ruska — silta on nykyään retkeilijöiden polku.',
+            + 'käytöstä poistuneen vuoristoradan silta, jonka ruostuneet '
+            + 'kiskot jatkuvat lokakuun ruskassa kohti tunnelin suuaukkoa.',
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2024-10-03-Sakhalin-park-lake.jpg',
           selite: 'Gagarinin puiston Ylempi lampi Južno-Sahalinskissa '
-            + 'syyskuun lopulla. Rannalla on lasten rautatien '
-            + 'Komsomolskajan asema, ja tyyni vesi peilaa talot ja '
-            + 'ruskan — puisto on kaupunkilaisten arkinen keidas.',
+            + 'syyskuun lopulla: rannalla on lasten rautatien '
+            + 'Komsomolskajan asema, ja tyyni vesi peilaa talot ja ruskan.',
           lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -35016,9 +34951,9 @@ export const KULTTUURI_KATEGORIAT = {
         kuva: {
           tiedosto: 'Yuzhno-Sakhalinsk, Sakhalinskaya street 2022-09.jpg',
           selite: 'Sateinen risteys Sahalinskajan kadulla '
-            + 'Južno-Sahalinskissa. Japanilainen kuorma-auto kääntyy '
+            + 'Južno-Sahalinskissa: japanilainen kuorma-auto kääntyy '
             + 'kadulle, ja taustalla on kauppakeskuksia ja matalia '
-            + 'liiketaloja — saaren arkea ilman kiiltokuvaa.',
+            + 'liiketaloja.',
           lahde: 'Svetlov Artem, Wikimedia Commons (CC0)',
         },
         kappale: 'Sahalinin portti on Južno-Sahalinsk, saaren ainoa '
@@ -35059,8 +34994,8 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: '2M62U-0082 with train, Yuzhno-Sakhalinsk.jpg',
                 selite: 'Matkustajajuna Južno-Sahalinskin asemalla '
-                  + 'syyskuussa. Puna-harmaa dieselveturi vetää sinisiä '
-                  + 'vaunuja — raideleveys on ollut venäläinen vuodesta '
+                  + 'syyskuussa: puna-harmaa dieselveturi vetää sinisiä '
+                  + 'vaunuja, ja raideleveys on ollut venäläinen vuodesta '
                   + '2019.',
                 lahde: 'Koshekans, Wikimedia Commons (CC BY 4.0)',
               },
@@ -35084,10 +35019,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'paljain silmin.',
               kuva: {
                 tiedosto: 'Sea port and town of Kholmsk, Sakhalin oblast.jpg',
-                selite: 'Holmskin satamakaupunki Tatarinsalmen '
-                  + 'rannalla kesäkuussa. Nosturit ja laiturit ovat '
-                  + 'etualalla, ja kerrostalot kiipeävät vihreille '
-                  + 'rinteille — tänne junalautta mantereelta saapuu.',
+                selite: 'Holmskin satamakaupunki Tatarinsalmen rannalla '
+                  + 'kesäkuussa: nosturit ja laiturit ovat etualalla, '
+                  + 'kerrostalot kiipeävät vihreille rinteille, ja tänne '
+                  + 'junalautta mantereelta saapuu.',
                 lahde: 'Vasilii Martynov, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -35110,9 +35045,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Японский паровоз D51-22 Южно-Сахалинск.jpg',
                 selite: 'Japanilainen D51-höyryveturi muistomerkkinä '
-                  + 'Južno-Sahalinskin asema-aukiolla. Musta veturi '
-                  + 'punaisine vetopyörineen on Karafuton rautateiden '
-                  + 'ajan muisto keskellä nykykaupunkia.',
+                  + 'Južno-Sahalinskin asema-aukiolla: musta veturi '
+                  + 'punaisine vetopyörineen on Karafuton rautateiden ajan '
+                  + 'muisto keskellä nykykaupunkia.',
                 lahde: 'Апатинаити, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -35175,9 +35110,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ilmestyivät Russkaja mysl -lehdessä 1893–1894 ja kokonaisena '
             + 'teoksena 1895.',
           selite: 'Tšehovin Sahalinilta mukanaan tuoma valokuva eteläisen '
-            + 'Sahalinin ainuista. Neljä aikuista istuu lautaseinän '
-            + 'edustalla, ja heidän kanssaan on kaksi lasta. Miehillä on '
-            + 'pitkä parta ja yllään paksusta kankaasta ommeltu kaapu.',
+            + 'Sahalinin ainuista: neljä aikuista ja kaksi lasta '
+            + 'lautaseinän edustalla, miehillä pitkä parta ja paksusta '
+            + 'kankaasta ommeltu kaapu.',
           lahde: 'Tschechow, Anton, Wikimedia Commons (PD)',
           wiki: 'Anton Tšehov',
         },
@@ -35194,10 +35129,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rautamalmia, taloja ja teitä, lennätinlinjoja, soiden '
             + 'kuivatusta ja talvista metsänkaatoa. Kaikkiaan järjestelmän '
             + 'läpi kulki yli kolmekymmentätuhatta tuomittua.',
-          selite: 'Sahalinin pakkotyövankeja työssä. Parikymmentä miestä '
+          selite: 'Sahalinin pakkotyövankeja työssä: parikymmentä miestä '
             + 'lapioi maata ja työntää kottikärryjä juuri raivatulla '
-            + 'tienpohjalla. Useimmilla on yllään vaalea paita ja päässä '
-            + 'lakki.',
+            + 'tienpohjalla.',
           lahde: 'Pavlovskij, I.I., Wikimedia Commons (PD)',
           wiki: 'Katorga',
         },
@@ -35215,10 +35149,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'prefektuurina. Pääkaupunki oli Toyohara, nykyinen '
             + 'Južno-Sahalinsk. Elokuussa 1945 koko saari siirtyi '
             + 'Neuvostoliitolle.',
-          selite: 'Anivan majakka Sahalinin kaakkoiskärjen edustalla. '
-            + 'Betonitorni valmistui 1939, kun saaren eteläosa oli Japanin '
-            + 'Karafutoa, ja sen korkeus on 31 metriä. Torni on nykyään '
-            + 'autio, ja kallion yllä kiertää lokkiparvi.',
+          selite: 'Anivan majakka Sahalinin kaakkoiskärjen edustalla: '
+            + '31-metrinen betonitorni valmistui 1939, kun saaren eteläosa '
+            + 'oli Japanin Karafutoa, ja se on nykyään autio.',
           lahde: 'Yaroslav Shuraev, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Karafuto',
         },
