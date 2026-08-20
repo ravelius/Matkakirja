@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 943, teksti: 'Halab, Damaskos ja Luxor: avauskuvat ja matkaopas' },
   { v: 942, teksti: 'Tilastoihin tuoreusvärit, suodatin ja chipit' },
   { v: 941, teksti: 'Ankara, Nikosia ja Izmir: avauskuvat ja matkaopas' },
   { v: 940, teksti: 'Persepoliksen kohdekartta ja jutut; Luxorin kartta korjattu' },

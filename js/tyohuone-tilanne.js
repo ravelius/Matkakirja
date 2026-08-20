@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v943 — VAIHE B ERA 2: HALAB, DAMASKOS ja LUXOR saivat avauskuvat ja matkaoppaan. 21 uutta kuvaa; Syyrian sisaltolinjaa noudatettu tarkasti — ei sisallissotaa, moderni kuvasto sotaa edeltavaa (Argenbergin 2000-luvun sarjat), eika yksikaan kuvateksti vaita nykytilaa; mm. Aleppon suuren moskeijan kuva hylattiin koska minareetti on sortunut 2013. FABLEN PISTOKOE NAPPASI YHDEN: LOC-lasinegatiivissa oli kuvaajan numero negatiivin reunassa — agentti oli kertonut sen kuvatekstissa, mutta v933-ennakkotapaus hylkaa reunamerkinnat — vaihdettu Argenbergin kattonakymaan. Visavastaukset oppaisiin: saippua (halab), damasti + damaskosteras (damaskos). Luxorin opas viittaa v940:n korjattuun karttaan. Wikipedian ristiriidat auki: Aleppon sija ottomaanikaupunkien joukossa (2. vai 3.), Damaskoksen kentan avausvuosi (1973 vai 60-luvun loppu), Kuninkaiden laakson hautamaara (63 vai 65). Yksi hylkays oli melkein-ansa: "The Valley of Kings 2" osoittautui SIPERIAN Kuninkaiden laaksoksi. Tarkista: avaa Halab/Damaskos/Luxor → avauskuvat ja Matkailijalle → Matkaopas',
   'v942 — TUOREUSNAKYMAT (omistajan tilaus 20.8.): 1) Tilannelehden karkeen chippirivit — vihreat vasta valmistuneet versionumeroineen, keltaiset tyon alla olevat; data uudessa TUOREET-taulussa (tyohuone-tilanne.js), jota Fable paivittaa julkaisujen tahdissa. 2) Tilastot-taulussa tuoreen kaupungin nimisolu varjaytyy samoin varein ja saa versiomerkin; ohjausriville uusi Nayta-vipu (kaikki / vain tuoreet) joka muistetaan localStoragessa; mannerrivilla uusi "kaupungit esiin" -nappi joka avaa ja sulkee koko mantereen kaupungit kerralla. Tekninen: maalehti.js sai rakennaJatka-lipun (rakenna-koukku + nostot samalla sivulla); lueNakyma nimettiin lueTilastoNakyma-muotoon niputustormayksen takia (pollo.js). Tarkista: kehittajatila → Tilannelehti (chipit karjessa) ja Tilastot (Nayta-vipu, kaupungit esiin -nappi, varitetyt nimet)',
   'v941 — VAIHE B ERA 1: ANKARA, NIKOSIA ja IZMIR saivat matkaoppaan, Ankara ja Nikosia myos avauskuvat (Izmirin tulivat jo v929). 20 uutta kuvaa, agentti katsoi silmin ja Fable pistokoetarkisti 2 (tasmasivat); parikymmenta hylkaysta mm. HUAWEI-vesileima, mainoskyltti, tunnistettavia kasvoja — ja yksi hieno nappaus: taydelliselta nayttanyt "Nikosian bastioni" paljastui Commons-kategorioista FAMAGUSTAKSI. Nikosian Antaa olla -linja: jako nakyy vain matkailijan arjen tosiasioina (kaksi kuntaa, jalankulkuylitys, kaksi valuuttaa), ei syita eika vuosia 1955-74. Visaopetukset taydennettiin oppaisiin: angoravuohi, halloumi, viikuna. Faktapaatoksia: Izmir-Aydin-radan avaus 1866 (tarkempi lahde voitti 1867:n), Anitkabirin ristiriitaiset kilpailupaivat pois, Ledran ylityspaikan jarjestysluku pois (sama artikkeli sanoo 5. ja 6.). HUOM FABLELLE KIRJATTU: naiden kolmen lehden vanhat sivut ovat 3 noston mittaisia (uusi malli on 4) — erillinen taydennysera jos omistaja haluaa. Tarkista: avaa Ankara/Nikosia/Izmir → Matkailijalle → Matkaopas',
   'v940 — PERSEPOLIKSEN KOHDEKARTTA + LUXORIN KARTAN KORJAUS (Vaihe B0). Persepolis sai v932:sta puuttuneen kartan (Overpass oli silloin nurin): 770 x 520 m terassirajaus, rauniokaupunki-lippu, 8 kohdetta ja 8 uutta juttua. KOHTEIDEN PISTEET OVAT OVERPASSISTA EIVATKA WIKIPEDIASTA: Kaikkien kansojen portin artikkelikoordinaatti on 250 m pielessa OSM:n aluetta vasten — Wikipedian piste olisi osunut aarrekammion kohdalle. Apadanan pinta-ala jatettiin pois (kolme artikkelia antaa ristiriitaiset luvut), tuhovuosi 330 paaartikkelin mukaan, Hadishin 2 550 m2 pyoristettyna koska artikkelin omat mitat antavat 2 200. LUXOR: rauniokaupunki-lippu paalle — Karnakin pihat, Mutin pyha jarvi ja Luxorin temppeli piirtyvat nyt laikkuina, sfinksikuja katkoviivana; mitattu muutos: ennen 5/6 pistetta paljaalla paperilla, nyt 4/6 rauniolaikulla. KESKEN 13.8.2026 -merkinta poistettu tyokalusta. Uusi ymparistomuuttuja OVERPASS_PALVELIMET (peililista ajokohtaisesti) — vakiopalvelimet olivat tunteja nurin yhta aikaa. 8 uutta kuvaa (silmatty; hylatty mm. Luigi Pescen 1850-luvun vedokset signeerausten takia ja Gagnonin hautakuva kavijoiden takia). FABLEN MERGEVIRHE NAPATTU PORTISSA: persepolis-lohkon poiminta nielaisi ensin tiedoston loput (19 kaksoisavainta) — tarkista-kaksoisavaimet loysi, korjattu aarimerkkilaskennalla ennen committia. Tarkista: avaa Persepolis → kohdekartta (8 numeroa), Luxor → kohdekartta (temppelilaikut)',
@@ -310,19 +311,18 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '20.8.2026',
   valmiit: [
+    { id: 'halab', nimi: 'Halab', versio: 'v943' },
+    { id: 'damaskos', nimi: 'Damaskos', versio: 'v943' },
+    { id: 'luxor', nimi: 'Luxor', versio: 'v943' },
     { id: 'ankara', nimi: 'Ankara', versio: 'v941' },
     { id: 'nikosia', nimi: 'Nikosia', versio: 'v941' },
     { id: 'izmir', nimi: 'İzmir', versio: 'v941' },
     { id: 'persepolis', nimi: 'Persepolis (kartta)', versio: 'v940' },
-    { id: 'luxor', nimi: 'Luxor (kartta)', versio: 'v940' },
     { id: 'rubalkhali', nimi: 'Rub al-Khali', versio: 'v939' },
     { id: 'mekka', nimi: 'Mekka', versio: 'v938' },
     { id: 'medina', nimi: 'Medina', versio: 'v937' },
   ],
   tyossa: [
-    { id: 'halab', nimi: 'Halab' },
-    { id: 'damaskos', nimi: 'Damaskos' },
-    { id: 'luxor', nimi: 'Luxor (opas)' },
     { id: 'riad', nimi: 'Riad' },
     { id: 'doha', nimi: 'Doha' },
     { id: 'kuwait', nimi: 'Kuwait' },
