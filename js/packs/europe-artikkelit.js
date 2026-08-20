@@ -1553,12 +1553,48 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro EI OLE ENÄÄ kahden lauseen nosto vaan lehden ETUSIVUN
+   * LEIPÄTEKSTI — 7–10 virkkeen johdatus kolmessa kappaleessa ('\n\n')
+   * ja kahdella maltillisella **lihavoinnilla**. Renderöijä
+   * (piirraLeipateksti) tekee kappaleet ja boldit, joten tänne ei
+   * kirjoiteta HTML:ää. Faktat ovat Moskovan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Moskova, maakartat.js, oma teksti-kenttä alla) — ei uusia
+   * lähdehakuja.
+   *
+   * VENÄJÄ-LINJAUS (omistaja, Raamatun "Rajaukset ja turvalinjat"):
+   * ei nykysotaa eikä nykypolitiikkaa missään muodossa. Intro pysyy
+   * 1873-henkisessä historiassa, arkkitehtuurissa ja kulttuurissa;
+   * vuoden 1918 pääkaupunkiasema on hallinnollinen tosiasia ilman
+   * poliittista kehystä. Ei huutomerkkejä.
+   */
   Moskova: {
     intro: 'Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain '
              + 'kaupunki: asukkaita on noin kolmetoista miljoonaa. Se '
-             + 'mainittiin kirjoituksissa ensi kerran vuonna 1147, ja sen '
-             + 'keskellä on Kreml — linnoitus, jonka punatiilistä muuria '
-             + 'riittää 2 235 metriä.',
+             + 'mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi '
+             + 'kukkulalle Moskova-joen mutkaan: niemekettä oli helppo '
+             + 'puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli '
+             + 'kreml. Kaupunki kasvoi renkaina, ja purettujen muurien '
+             + 'paikoille jäivät leveät kehäkadut.'
+             + '\n\n'
+             + '**Kremlin** nykyiset muurit muurattiin 1480- ja '
+             + '1490-luvulla italialaisten arkkitehtien johdolla: '
+             + 'punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi '
+             + 'palatsia ja neljä katedraalia, pihalla maailman suurin '
+             + 'kello ja tykki, jota ei ole koskaan ammuttu. Muurin '
+             + 'ulkopuolelle Punaiselle torille valmistui 1561 Pyhän '
+             + 'Vasilin katedraali yhdeksine värikkäine kupoleineen.'
+             + '\n\n'
+             + 'Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja '
+             + 'Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; '
+             + 'vuodesta 1918 se on taas ollut pääkaupunki. **Metro** '
+             + 'avattiin 1935, ja sen vanhimmat asemat tehtiin '
+             + 'tarkoituksella palatsimaisiksi: marmoria, mosaiikkia ja '
+             + 'kristallikruunuja kolmenkymmenen metrin syvyydessä. '
+             + 'Moskova on myös venäläisen kirjallisuuden, musiikin ja '
+             + 'teatterin koti — Bolshoin juuret ulottuvat vuoteen 1776.',
     teksti: 'Kremlin nykyiset muurit ja tornit rakennettiin 1480- ja '
               + '1490-luvulla, ja työn tekivät italialaiset arkkitehdit. Muuri '
               + 'on paikoin 5 ja paikoin 19 metriä korkea ja 3,5–6,5 metriä '
@@ -1580,22 +1616,49 @@ export const EUROPE_ARTIKKELIT = {
               + 'kaupunki kasvaa kehinä: Kreml keskellä, sitten puistokehä, '
               + 'tulliraja ja moottoritierengas.\n\nMoskovassa syntyi suuri osa '
               + 'venäläisestä kirjallisuudesta, musiikista ja teatterista — '
-              + 'Tolstoi, Tšehov, Bolshoi-teatteri. Venäjä aloitti '
-              + 'täysimittaisen sodan Ukrainassa helmikuussa 2022, minkä '
-              + 'jälkeen monet maat asettivat Venäjälle pakotteita ja suorat '
-              + 'lennot länteen loppuivat. Arki jatkuu silti: metro kuljettaa '
-              + 'miljoonia päivittäin, ja laskiaisviikolla paistetaan blinejä '
-              + 'kuten aina.',
+              + 'Tolstoi, Tšehov, Bolshoi-teatteri. Arki kulkee omaa '
+              + 'tahtiaan: metro kuljettaa miljoonia päivittäin, ja '
+              + 'laskiaisviikolla paistetaan blinejä kuten aina.',
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
   // Avain on kaupungin wiki-otsikko: fi-wikin 'Pietari' on täsmennyssivu.
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linja kuin Moskovassa yllä):
+   * intro on nyt etusivun leipäteksti kolmessa kappaleessa ja kahdella
+   * lihavoinnilla. Faktat Pietarin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Pietari,
+   * maakartat.js, oma teksti-kenttä alla).
+   *
+   * VENÄJÄ-LINJAUS: ei nykysotaa eikä nykypolitiikkaa. Painopiste on
+   * 1873-henkisessä historiassa ja arkkitehtuurissa — kaupungin synty,
+   * kanavat, palatsit ja Eremitaaši. Piiritysvuodet jäävät intron
+   * ulkopuolelle; ne kertoo teksti-kenttä ja lehden oma nosto.
+   */
   'Pietari (kaupunki)': {
     intro: 'Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu '
-             + 'noin 5,6 miljoonaa ihmistä. Pietari Suuri perusti sen vuonna '
-             + '1703 Nevan suistoon valloitetun ruotsalaislinnoituksen '
-             + 'paikalle, ja kaupungista tuli keisarikunnan pääkaupunki jo '
-             + 'yhdeksän vuotta myöhemmin.',
+             + 'noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen '
+             + 'vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, '
+             + 'kun **Pietari Suuri** aloitti rakentamisen ja antoi paikalle '
+             + 'hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin '
+             + 'mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin '
+             + 'pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.'
+             + '\n\n'
+             + 'Maa oli niin märkää, että kaduille kaivettiin ensin ojia '
+             + 'veden johtamiseksi pois; ojista tuli kanavia ja kanavista '
+             + 'kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja '
+             + 'Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja '
+             + 'vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina '
+             + 'palatseina. Keisarinna Elisabet rakennutti **Talvipalatsin** '
+             + '1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen '
+             + 'taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.'
+             + '\n\n'
+             + 'Kaupunki seisoo suiston saarilla, ja siltoja on toista '
+             + 'tuhatta. Nimi on vaihtunut kolmesti: Petrograd 1914, '
+             + 'Leningrad 1924 ja kansanäänestyksen jälkeen Pietari taas '
+             + '1991. Pohjoisempana ei ole yhtään yli miljoonan asukkaan '
+             + 'kaupunkia, ja kesäkuussa yö ei pimene täällä kunnolla '
+             + 'lainkaan.',
     teksti: 'Kaupunki rakennettiin soiselle suistoalueelle, jossa ei ollut '
               + 'kaupunkia ennestään. Pietari Suuri halusi Venäjälle sataman ja '
               + '"ikkunan Eurooppaan". Hän määräsi suon kuivaamiseen ja '
@@ -1625,11 +1688,41 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linja kuin Moskovassa yllä):
+   * intro on etusivun leipäteksti kolmessa kappaleessa ja kahdella
+   * lihavoinnilla. Faktat Tallinnan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Tallinna, maakartat.js, oma teksti-kenttä alla). Tornien
+   * lukumäärä jätettiin pois: vanha intro sanoi 26 ja kohdekartan
+   * esittely 28, eikä lukua ole tarkistettu — muurin pituus
+   * ("lähes kaksi kilometriä") riittää. Neuvostoaika kerrotaan
+   * neutraalina historiana.
+   */
   Tallinna: {
-    intro: 'Tallinna on Viron pääkaupunki Suomenlahden etelärannalla, noin '
-             + '80 kilometrin päässä Helsingistä. Sen vanhakaupunki on '
-             + 'Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia kaupunkeja: '
-             + 'muuria on jäljellä lähes kaksi kilometriä ja tornejakin 26.',
+    intro: 'Tallinna on Viron pääkaupunki Suomenlahden etelärannalla, '
+             + 'noin kahdeksankymmenen kilometrin päässä Helsingistä. Se '
+             + 'syntyi suojaisan lahden ja Toompean kalkkikivikallion '
+             + 'väliin: kalliolle nousi linna ja sen juurelle kauppiaiden '
+             + 'kaupunki. Tanskan kuningas valtasi mäen 1219, ja nimi tulee '
+             + 'luultavasti sanoista Taani linn, tanskalaisten kaupunki.'
+             + '\n\n'
+             + 'Vuonna 1285 Reval oli jo hansakaupunki, jonka kauppiaat '
+             + 'välittivät suolaa, silliä ja vahaa lännen ja Novgorodin '
+             + 'välillä. **Vanhakaupunki** on Pohjois-Euroopan parhaiten '
+             + 'säilyneitä keskiaikaisia keskustoja, ja muuria on siitä '
+             + 'jäljellä lähes kaksi kilometriä. Raatihuoneen tornin '
+             + 'huipulla kääntyy Vana Toomas, sotilaaksi puettu tuuliviiri, '
+             + 'josta on merkintä jo vuoden 1530 tilikirjassa.'
+             + '\n\n'
+             + 'Kaupunki oli vuosisatoja kaksi kaupunkia — ylhäällä '
+             + 'Toompean herrat, alhaalla kauppiaiden raati — ja osat '
+             + 'yhdistettiin vasta 1878. Viro itsenäistyi 1918, oli '
+             + 'miehitettynä vuodesta 1940 ja sai itsenäisyytensä takaisin '
+             + '1991; syyskuussa 1988 **laulukentälle** kokoontui arviolta '
+             + '300 000 ihmistä laulamaan. Muurien takana alkaa toinen '
+             + 'kaupunki: Kalamajan puutalot ja idän betonilähiöt, joissa '
+             + 'asuu neljäsosa kaupunkilaisista.',
     teksti: 'Tanskan kuningas valtasi meren rannalla kohoavan mäen vuonna '
               + '1219. Nimi Tallinn tulee luultavasti sanoista Taani linn, '
               + 'tanskalaisten kaupunki. Jo vuonna 1285 Reval oli Hansaliiton '
@@ -1657,12 +1750,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linja kuin Moskovassa yllä).
+   * Faktat Riian omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Riika,
+   * maakartat.js, oma teksti-kenttä alla). Neuvostoaika neutraalina
+   * historiana.
+   */
   Riika: {
     intro: 'Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: '
-             + 'asukkaita on noin 600 000. Se sijaitsee Daugava-joen suulla '
-             + 'lähellä Riianlahtea. Keskusta kuuluu Unescon '
-             + 'maailmanperintöluetteloon, ja siellä on yli seitsemänsataa '
-             + 'jugendtaloa.',
+             + 'asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, '
+             + 'sillä leveää ja syvää jokea pitkin pääsi laivalla '
+             + 'sisämaahan asti. Piispa Albert perusti kaupungin vuonna '
+             + '1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, '
+             + 'pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan '
+             + 'saksalaiset ritarit, Puola, Ruotsi ja Venäjä.'
+             + '\n\n'
+             + '**Vanhassakaupungissa** talot ovat kapeita ja korkeita, '
+             + 'koska tontista maksettiin leveyden mukaan. Keskiaikainen '
+             + 'muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu '
+             + 'taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika '
+             + 'kasvoi nopeammin kuin melkein mikään muu Euroopan '
+             + 'kaupunki, ja uusiin kortteleihin nousi **jugendtaloja**, '
+             + 'joita on säilynyt yli seitsemänsataa.'
+             + '\n\n'
+             + 'Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti '
+             + '517 500:sta alle 190 000:een, kun tehtaat ja väki '
+             + 'evakuoitiin itään. Latvia itsenäistyi 1918, ja keskustaan '
+             + 'pystytettiin 1935 kansalaisten keräämillä rahoilla 42 '
+             + 'metriä korkea Vapaudenpatsas; itsenäisyys palasi 1991. '
+             + 'Joka viides vuosi kaupungin laulukentälle kokoontuu noin '
+             + '40 000 esiintyjää laulujuhliin, joita on pidetty vuodesta '
+             + '1873.',
     teksti: 'Piispa Albert perusti Riian 1201 lähetysasemaksi ja '
               + 'kauppapaikaksi. Kaupunki liittyi Hansaan ja rikastui viljasta, '
               + 'pellavasta ja hirsistä, joita Daugavaa pitkin uitettiin '
@@ -1690,11 +1809,41 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linja kuin Moskovassa yllä).
+   * Faktat Vilnan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Vilna,
+   * maakartat.js, oma teksti-kenttä alla). Neuvostoaika neutraalina
+   * historiana; juutalaisyhteisön kohtalo kerrotaan yhtä tiiviisti
+   * kuin teksti-kentässä, koska se on kaupungin historian ydintä.
+   */
   Vilna: {
-    intro: 'Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 '
-             + '000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan '
-             + 'kukkuloiden väliin, ja sen vanhakaupunki on Pohjois-Euroopan '
-             + 'laajimpia keskiaikaisia keskustoja: yli kolmesataa hehtaaria.',
+    intro: 'Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin '
+             + '600 000 ihmistä. Se on rakennettu kahden joen '
+             + 'yhtymäkohtaan kukkuloiden väliin ja saanut nimensä '
+             + 'pienemmästä joesta, Vilniasta. Jokien väliin jäävällä '
+             + 'kukkulalla seisoo linnan torni, josta kaupunki '
+             + '1300-luvulla alkoi.'
+             + '\n\n'
+             + 'Vilna mainitaan ensi kerran 1323 suuriruhtinas '
+             + 'Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja '
+             + 'käsityöläisiä ja lupasi jokaiselle oikeuden omaan '
+             + 'uskontoonsa. Kutsu toimi, ja **vanhastakaupungista** '
+             + 'kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista '
+             + 'keskustoista: yli kolmesataa hehtaaria kujia ja '
+             + 'toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan '
+             + 'laajin valtio, mutta 1795 alue joutui Venäjän '
+             + 'keisarikuntaan, ja liettuan painaminen latinalaisin '
+             + 'kirjaimin oli kiellettyä 1865–1904.'
+             + '\n\n'
+             + '**Yliopisto** perustettiin 1579, ja se on Baltian vanhin. '
+             + 'Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista '
+             + 'maailmansotaa noin kolmasosa asukkaista oli juutalaisia, '
+             + 'ja Saksan miehityksen aikana lähes koko yhteisö '
+             + 'surmattiin. Liettua julistautui itsenäiseksi 1990 '
+             + 'ensimmäisenä neuvostotasavaltana, ja nykyään Vilna on '
+             + 'vilkas yliopistokaupunki, jonka pinta-alasta lähes '
+             + 'seitsemänkymmentä prosenttia on viheraluetta.',
     teksti: 'Vilna mainitaan ensimmäisen kerran 1323 suuriruhtinas '
               + 'Gediminaksen kirjeissä. Hän kutsui niissä kauppiaita ja '
               + 'käsityöläisiä muualta Euroopasta ja lupasi, että jokainen saa '
@@ -1780,11 +1929,40 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN PAINOPISTE" ja
+   * Fablen eräohje; malli asia-artikkelit.js Medina/Mekka): intro EI ole
+   * enää kahden virkkeen nosto vaan lehden ETUSIVUN LEIPÄTEKSTI —
+   * 7-10 virkettä kolmessa kappaleessa ('\n\n') ja pari maltillista
+   * **lihavointia**. Faktat ovat kaupungin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijalle-opas;
+   * maakartat.js; tämän tiedoston teksti-kenttä), ei uusista lähteistä.
+   * teksti-kenttä ja lähderivi ovat ennallaan.
+   */
   Helsinki: {
     intro: 'Helsinki on Suomen pääkaupunki ja suurin kaupunki; seudulla '
-             + 'asuu noin 1,5 miljoonaa ihmistä. Se perustettiin 1550 '
-             + 'kilpailemaan Tallinnan kaupasta, mutta jäi pitkään '
-             + 'pikkukaupungiksi. Pääkaupungiksi siitä tehtiin vasta 1812.',
+             + 'asuu noin 1,5 miljoonaa ihmistä. Kustaa Vaasa perusti sen '
+             + '1550 Vantaanjoen suulle Tallinnan kilpailijaksi, mutta '
+             + 'satama jäi matalaksi, ja 1640 koko kaupunki siirrettiin '
+             + 'viisi kilometriä etelämmäs Vironniemelle. Pikkukaupungista '
+             + 'tuli pääkaupunki vasta 1812, kun Suomesta oli tullut '
+             + 'Venäjän suuriruhtinaskunta.'
+             + '\n\n'
+             + 'Uusi keskusta nousi Senaatintorin ympärille **Carl Ludvig '
+             + 'Engelin** piirustusten mukaan, ja vaalea empire muistuttaa '
+             + 'yhä Pietaria — kylmän sodan aikana tänne tultiin kuvaamaan '
+             + 'Neuvostoliittoa. Merta on joka suunnalla: saaria on noin '
+             + '330 ja rantaviivaa yli sata kilometriä, ja talvella '
+             + 'jäänmurtajat pitävät väylät auki. Edustalla on '
+             + '**Suomenlinna**, vuonna 1748 aloitettu merilinnoitus, jossa '
+             + 'asuu yhä noin 800 ihmistä.'
+             + '\n\n'
+             + 'Kaupunki on kaksikielinen: kadunnimet ovat suomeksi ja '
+             + 'ruotsiksi, ja ruotsinkielisiä on nykyään noin viisi '
+             + 'prosenttia. Tunnetuinta on muotoilu ja julkinen '
+             + 'rakentaminen: Finlandia-talo, kallioon louhittu '
+             + 'Temppeliaukion kirkko ja keskustakirjasto Oodi. '
+             + 'Raitiovaunut ovat kulkeneet kaduilla vuodesta 1891.',
     teksti: 'Keskusta rakennettiin uudelleen 1800-luvun alussa, kun '
               + 'Suomesta oli tullut Venäjän suuriruhtinaskunta. Arkkitehti '
               + 'Carl Ludvig Engel piirsi Senaatintorin ympärille kirkon, '
@@ -1810,11 +1988,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 — sama linja kuin Helsingissä
+   * yllä: intro on nyt etusivun leipäteksti kappaleineen ja
+   * maltillisine lihavointeineen, faktat kaupungin omista jo
+   * tarkistetuista teksteistä.
+   */
   Tampere: {
     intro: 'Tampere on Pohjoismaiden suurin sisämaakaupunki ja Suomen '
-             + 'kolmanneksi väkirikkain: seudulla asuu noin 400 000 ihmistä. '
-             + 'Se on rakennettu kapealle kannakselle kahden järven väliin, '
-             + 'ja kannaksen halki laskee Tammerkoski.',
+             + 'kolmanneksi väkirikkain: seudulla asuu noin 400 000 '
+             + 'ihmistä. Kaupunki seisoo kannaksella Näsijärven ja '
+             + 'Pyhäjärven välissä, ja järvien kahdeksantoista metrin '
+             + 'korkeusero purkautuu keskustan halki **Tammerkoskena**. '
+             + 'Kustaa III antoi kauppapaikalle kaupunkioikeudet 1779, '
+             + 'mutta ratkaisevat olivat vasta vuoden 1821 '
+             + 'vapaakaupunkioikeudet: tavaraa sai tuoda tullitta, ja '
+             + 'tehtailijoiden kannatti tulla juuri tänne.'
+             + '\n\n'
+             + 'Ensimmäisenä tuli skotlantilainen **James Finlayson**, joka '
+             + 'rakensi kosken länsirannalle konepajan 1820. Uudet '
+             + 'omistajat käänsivät sen puuvillatehtaaksi, joka työllisti '
+             + 'vuosisadan lopulla tuhansia, enimmäkseen naisia ja lapsia. '
+             + 'Verkatehtaat, paperitehdas ja konepajat seurasivat, ja '
+             + 'kaupungille vakiintui liikanimi Pohjolan Manchester.'
+             + '\n\n'
+             + 'Tehtaat ovat siirtyneet muualle, mutta punatiiliset '
+             + 'rakennukset jäivät paikoilleen museoiksi ja ravintoloiksi. '
+             + 'Länsipuolella kohoaa Pyynikinharju, maailman korkein '
+             + 'pitkittäisharju. Vuonna 1971 avattu 168-metrinen Näsinneula '
+             + 'on yhä maan korkein näkötorni, ja raitiovaunut tulivat '
+             + 'kaupunkiin 2021.',
     teksti: 'Ruotsin kuningas Kustaa III antoi Tammerkosken partaalla '
               + 'olleelle kauppapaikalle kaupunkioikeudet 1. lokakuuta 1779. '
               + 'Ratkaiseva etu tuli kuitenkin vasta 1821, kun kaupunki sai '
@@ -1850,12 +2053,35 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 — sama linja kuin Helsingissä
+   * yllä: intro on nyt etusivun leipäteksti kappaleineen ja
+   * maltillisine lihavointeineen, faktat kaupungin omista jo
+   * tarkistetuista teksteistä.
+   */
   Tukholma: {
     intro: 'Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin '
-             + 'kaupunki: seudulla asuu yli kaksi miljoonaa ihmistä. Se on '
-             + 'rakennettu neljälletoista saarelle siihen kohtaan, jossa '
-             + 'Mälaren-järvi laskee Itämereen. Nimi tarkoittaa suunnilleen '
-             + 'paalusaarta.',
+             + 'kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla '
+             + '1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista '
+             + 'saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; '
+             + 'nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 '
+             + 'perustettu kaupunki sai merkityksensä väylästä: salmeen '
+             + 'lyödyt paalut pysäyttivät vieraat laivat ennen järveä.'
+             + '\n\n'
+             + 'Vanhin osa on **Gamla stan**, pääosin yksi saari, jonka '
+             + 'kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen '
+             + 'virallinen nimi oli Staden mellan broarna, kaupunki '
+             + 'siltojen välissä. Keskustan itäpuolella alkaa saaristo, '
+             + 'jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on '
+             + 'niin vähäsuolaista, ettei se maistu merivedeltä.'
+             + '\n\n'
+             + 'Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien '
+             + 'jälkeen maa rakensi kansankodiksi kutsuttua '
+             + 'hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa '
+             + 'jaetaan **Nobel-palkinnot**, ja juhlaillallinen katetaan '
+             + 'kaupungintalon Siniseen saliin 1 300 hengelle. Vesi on '
+             + 'tukholmalaisille arkea: keskustassa saa uida, sillä '
+             + 'jätevedet on puhdistettu 1930-luvulta asti.',
     teksti: 'Kaupunki syntyi 1200-luvulla salpaamaan laivaväylän järvelle: '
               + 'kuka hallitsi salmea, hallitsi kauppaa. Vanhinta osaa '
               + 'kutsutaan nimellä Gamla stan, ja sen kujat ovat yhä '
@@ -1880,11 +2106,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 — sama linja kuin Helsingissä
+   * yllä: intro on nyt etusivun leipäteksti kappaleineen ja
+   * maltillisine lihavointeineen, faktat kaupungin omista jo
+   * tarkistetuista teksteistä.
+   */
   Oslo: {
-    intro: 'Oslo on Norjan pääkaupunki ja suurin kaupunki; asukkaita on '
-             + 'noin 720 000. Se sijaitsee Oslovuonon pohjukassa metsäisten '
-             + 'kukkuloiden keskellä, ja kaupungin rajojen sisällä on enemmän '
-             + 'metsää ja vettä kuin rakennettua aluetta.',
+    intro: 'Oslo on Norjan pääkaupunki ja suurin kaupunki; sen '
+             + 'viidessätoista kaupunginosassa asuu runsaat 717 000 '
+             + 'ihmistä. Kaupunki on Oslovuonon pohjukassa, siinä missä '
+             + 'vuono loppuu ja metsäiset kukkulat alkavat. Rajojen sisällä '
+             + 'on 301 neliökilometriä metsää, 343 järveä ja 40 saarta, ja '
+             + 'metsäalueella asuu vain 1 610 ihmistä — **metsä ja vesi '
+             + 'ovat kaupunkia**, eivät sen ulkopuolta.'
+             + '\n\n'
+             + 'Asutus alkoi vuonon rannalla noin vuonna 1040. Vuoden 1624 '
+             + 'palon jälkeen Tanskan kuningas Kristian IV siirsi kaupungin '
+             + 'linnoituksen kupeeseen ja nimesi sen itsensä mukaan '
+             + 'Christianiaksi; vanha nimi palautettiin vasta 1925. Norja '
+             + 'kuului Tanskaan yli neljäsataa vuotta ja sen jälkeen '
+             + 'unioniin Ruotsin kanssa, joka purettiin rauhanomaisesti '
+             + '1905.'
+             + '\n\n'
+             + 'Öljy muutti maan: Ekofiskin kentältä löytyi öljyä 1969, ja '
+             + 'tuotot päätettiin siirtää rahastoon. Pääkaupunki laati 2017 '
+             + 'maailman ensimmäisen kaupungin **ilmastobudjetin**, ja '
+             + 'kunnassa rekisteröidyistä autoista 41 prosenttia on '
+             + 'täyssähköisiä. Nobelin rauhanpalkinto luovutetaan joka 10. '
+             + 'joulukuuta Oslon kaupungintalossa — niin Alfred Nobel '
+             + 'testamentissaan määräsi.',
     teksti: 'Oslo perustettiin noin vuonna 1040 vuonon rantaan. Kun '
               + 'kaupunki paloi 1624, Tanskan kuningas Kristian IV rakennutti '
               + 'sen uudelleen linnoituksen kupeeseen ja antoi sille oman '
@@ -1908,11 +2159,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 — sama linja kuin Helsingissä
+   * yllä: intro on nyt etusivun leipäteksti kappaleineen ja
+   * maltillisine lihavointeineen, faktat kaupungin omista jo
+   * tarkistetuista teksteistä.
+   */
   Kööpenhamina: {
-    intro: 'Kööpenhamina on Tanskan pääkaupunki Sjællandin saarella, aivan '
-             + 'Ruotsin rannikon tuntumassa. Nimi tarkoittaa kauppasatamaa. '
-             + 'Seudulla asuu noin 1,4 miljoonaa ihmistä, ja kaupunki on maan '
-             + 'hallinnon, kaupan ja liikenteen keskus.',
+    intro: 'Kööpenhamina on Tanskan pääkaupunki Sjællandin saarella, '
+             + 'aivan Ruotsin rannikon tuntumassa; nimi tarkoittaa '
+             + 'kauppasatamaa. Seudulla asuu noin 1,4 miljoonaa ihmistä, ja '
+             + 'kaupunki on maan hallinnon ja kaupan keskus. Alku oli '
+             + 'kalastajakylä, jonka viereen piispa Absalon rakennutti '
+             + '1100-luvulla linnoituksen keskelle salmea — tästä on lyhin '
+             + 'matka Skånen puolelle, ja kaikki Itämerelle menevä '
+             + 'laivaliikenne kulkee ohi.'
+             + '\n\n'
+             + 'Kaupunki on matala ja rakennettu veden ehdoilla: kanavia '
+             + 'kaivettiin sinne missä niitä tarvittiin, ja vanhat '
+             + 'vallihaudat ovat nyt järviä keskellä kaupunkia. **Tivoli** '
+             + 'avattiin vallihaudan ulkopuolelle vuonna 1843 ja toimii '
+             + 'yhä. Isoisän matkan aikaan asukkaita oli jo yli '
+             + 'satatuhatta, ja ympäriltä oli juuri purettu muurit, jotka '
+             + 'olivat estäneet kasvun.'
+             + '\n\n'
+             + 'Nykyisen ilmeen antaa **polkupyörä**: autoliikenteestä '
+             + 'erotettuja pyöräteitä on noin 385 kilometriä, ja niitä '
+             + 'pitkin tehdään noin puolet työ- ja koulumatkoista. Sataman '
+             + 'vesi on puhdistettu niin, että keskellä kaupunkia voi uida. '
+             + 'Ruotsin Malmöhön pääsee vuonna 2000 avattua Juutinrauman '
+             + 'siltaa pitkin.',
     teksti: 'Kaupunki kasvoi kalastajakylästä 1100-luvulla, kun piispa '
               + 'Absalon rakennutti linnoituksen pienelle saarelle keskelle '
               + 'salmea. Paikka oli valittu hyvin: tästä on lyhin matka Skånen '

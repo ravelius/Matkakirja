@@ -3605,24 +3605,25 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
         x: 66.25, y: 61.97, leveys: 13.75, korkeus: 18 },
     ],
-    esittely: 'Helsinki ei ole aina ollut tässä. Kustaa Vaasa perusti sen '
-      + 'vuonna 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, mutta '
-      + 'satama oli matala, ja vuonna 1640 koko kaupunki siirrettiin '
-      + 'runsaat viisi kilometriä etelämmäs Vironniemen kärkeen. Niemellä '
-      + 'on merta kolmella sivulla, ja edustalla on saaria ja matalikkoja, '
-      + 'joiden välistä laiva pääsee vain kapeita väyliä pitkin. Siksi '
-      + 'Ruotsi alkoi 1748 rakentaa väylän suulle merilinnoitusta. Kun '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on Vironniemi, jonne koko Helsinki siirrettiin vuonna '
+      + '1640. Kustaa Vaasa oli perustanut kaupungin 1550 Vantaanjoen '
+      + 'suulle Tallinnan kilpailijaksi, mutta satama oli matala, ja '
+      + 'kaupunki muutti runsaat viisi kilometriä etelämmäs. Niemellä on '
+      + 'merta kolmella sivulla, ja edustan saarten ja matalikkojen välistä '
+      + 'laiva pääsee vain kapeita väyliä pitkin — siksi Ruotsi alkoi 1748 '
+      + 'rakentaa väylän suulle Suomenlinnan merilinnoitusta, ja kun '
       + 'Venäjän keisari valitsi Helsingin pääkaupungiksi vuonna 1812, '
-      + 'linnoitus oli jo valmiina.\n\nKartalla niemi näkyy kokonaan. '
-      + 'Idässä työntyy mereen Katajanokka, joka oli ennen kiinni '
-      + 'mantereessa; nyt sen erottaa kaivettu kanava, jonka yli kulkee '
-      + 'neljä siltaa. Väliin jää Eteläsatama, jonka perukassa on '
-      + 'Kauppatori. Ylhäällä oleva lahti on Töölönlahti — se näyttää '
-      + 'järveltä, mutta on merenlahti, jonka rautatiepenger sulkee: veden '
-      + 'ainoa tie mereen kulkee penkereen ali kapeana väylänä. Penkereeltä '
-      + 'etelään levittäytyy kartan levein raita, ratapiha, joka päättyy '
-      + 'päärautatieasemaan. Rata loppuu siihen: junat peruuttavat ulos. '
-      + 'Oikeassa alanurkassa on oma pieni kartta Suomenlinnasta.',
+      + 'linnoitus oli jo valmiina. Alueella ovat Senaatintori '
+      + 'empirekortteleineen, Eteläsatama ja sen perukan Kauppatori, '
+      + 'kaivetun kanavan takana Katajanokka sekä pohjoisessa merenlahti '
+      + 'Töölönlahti ja päärautatieasemalle päättyvä ratapiha. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään ja lopuksi etelään. Kauppatori jätettiin pois
@@ -4345,15 +4346,21 @@ export const KAUPUNKIKARTAT = {
     // --vari, Eurooppa-erä 1 15.8.2026).
     piirtoRajat: { pohjoinen: 59.3507, etela: 59.3043, lansi: 18.006, ita: 18.134 },
     varikartta: 'assets/kartat/tukholma-varikartta.png',
-    esittely: 'Tukholma seisoo siinä, missä Mälaren-järvi purkautuu '
-      + 'Itämereen. Kapeikossa vesi virtaa kuin joessa — sen nimi on '
-      + 'Strömmen, ja siinä saa onkia lohta keskellä kaupunkia. Juuri tämä '
-      + 'paikka teki kaupungista tärkeän: 1200-luvulla salmi suljettiin '
-      + 'paaluilla, jotka pysäyttivät vieraat laivat ennen järveä.\n\n'
-      + 'Kartan keskellä on Gamla stan, vanhakaupunki, jonka kujat '
-      + 'kiertelevät samoja mutkia kuin keskiajalla. Kapein niistä on 90 '
-      + 'senttiä leveä. Idässä levittäytyy Djurgården, entinen kuninkaan '
-      + 'metsästyspuisto, jossa ovat nyt museot ja huvipuisto.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on Tukholman ydin siinä kohdassa, jossa Mälaren-järvi '
+      + 'purkautuu Itämereen. Kapeikossa vesi virtaa kuin joessa — sen nimi '
+      + 'on Strömmen, ja siinä saa onkia lohta keskellä kaupunkia. Juuri '
+      + 'tämä paikka teki kaupungista tärkeän: 1200-luvulla salmi '
+      + 'suljettiin paaluilla, jotka pysäyttivät vieraat laivat ennen '
+      + 'järveä. Alueella ovat vanhakaupunki Gamla stan kujineen, sen '
+      + 'laidalla kuninkaanlinna ja Riddarholmenin kirkko, kaupungintalo '
+      + 'ja Sergelin tori sekä idässä Djurgården, entinen kuninkaan '
+      + 'metsästyspuisto, jossa ovat nyt Vasa-museo ja Skansen.',
     kohteet: [
       /*
        * Lännestä itään: kaupungintalolta Skansenille. Jokaisen wiki on
@@ -4547,24 +4554,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/tallinna-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
-    esittely: 'Tallinna on Suomenlahden etelärannalla, 80 kilometrin '
-      + 'päässä Helsingistä. Rannassa on suojaisa lahti, johon laivat '
-      + 'pääsevät tuulelta piiloon, ja aivan sen vieressä kohoaa '
-      + 'kalkkikivikallio Toompea. Kallion päälle rakennettiin linna ja '
-      + 'sen juurelle kauppiaiden kaupunki. Paikka oli keskellä '
-      + 'kauppatietä: Novgorodista tuleva turkis ja vaha vaihtoivat '
-      + 'täällä laivaa matkalla länteen. Tallinna liittyi hansaan '
-      + 'vuonna 1285, ja kauppa toi rahat, joilla muuri '
-      + 'rakennettiin.\n\nKartan yläreunassa on meri ja satama, jonka '
-      + 'laiturit työntyvät veteen kuin sormet. Sieltä lähtee lautta '
-      + 'Helsinkiin. Keskellä näkyy soikea rengas: siinä kulki '
-      + 'kaupunginmuuri. Sen sisään jäi 35 hehtaaria eli noin '
-      + 'viidenkymmenen jalkapallokentän verran maata, ja muurista on '
-      + 'yhä pystyssä 1,85 kilometriä ja 28 tornia. Renkaan sisällä '
-      + 'kadut mutkittelevat, ulkopuolella ne suoristuvat. Renkaan '
-      + 'vasemmassa laidassa on oma tasaisempi laikkunsa: se on '
-      + 'Toompean kallio, jonne alakaupungista nousee vain kaksi '
-      + 'katua. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
+     * miksi ne kiinnostavat. Kartan viivastojen, renkaiden ja
+     * ilmansuuntien kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Tallinnan vanhakaupunki ja sen satama. '
+      + 'Entinen kaupunginmuuri sulki sisäänsä 35 hehtaaria, ja '
+      + 'muurista on yhä pystyssä 1,85 kilometriä ja 28 tornia. '
+      + 'Pohjoisessa seisovat tykkitorni Paksu Margareeta ja Olevisten '
+      + 'kirkko, keskellä on Raatihuoneentori ja idässä Virun portti. '
+      + 'Lännessä kohoaa Toompean kallio, jonne alakaupungista nousee '
+      + 'vain kaksi katua ja jolla on Aleksanteri Nevskin katedraali. '
+      + 'Pohjoisrannassa on matkustajasatama, josta lähtee lautta '
+      + 'Helsinkiin. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, lopuksi satama.
@@ -4839,22 +4844,21 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/pietari-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.9545, etela: 59.9215, lansi: 30.284, ita: 30.347 },
-    esittely: 'Pietaria ei ollut olemassa ennen vuotta 1703. Se '
-      + 'rakennettiin Nevan suistoon, matalille ja soisille saarille, '
-      + 'koska Venäjä halusi oman sataman Itämerelle. Neva on lyhyt '
-      + 'mutta valtava joki: se tuo Laatokan vedet mereen ja on '
-      + 'Talvipalatsin kohdalla lähes 700 metriä leveä. Maa oli niin '
-      + 'märkää, että kaduille piti ensin kaivaa ojia veden johtamiseksi '
-      + 'pois. Ojista tuli kanavia, ja kanavista tuli koko kaupungin '
-      + 'tuntomerkki.\n\nKartan yläosassa virtaa Neva, ja sen keskellä '
-      + 'on pieni tähdenmuotoinen saari: Pietari-Paavalin linnoitus, '
-      + 'kaupungin ensimmäinen rakennus. Vasemmalla joki haarautuu '
-      + 'kahdeksi. Alaosassa kaartaa kolme kanavaa sisäkkäisinä kaarina '
-      + '— Moika, Gribojedovin kanava ja Fontanka — ja niiden poikki '
-      + 'vetää suora viiva vasemmalta oikealle. Se on Nevski prospekt, '
-      + 'kaupungin pääkatu. Kanavien välissä kadut ovat suoria, koska ne '
-      + 'piirrettiin valmiiksi ennen kuin taloja oli. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
+     * esittely kertoo kohteet, ei kanavien ja katujen viivastoja.
+     */
+    esittely: 'Kartan alue on Pietarin vanha ydin Nevan molemmin '
+      + 'puolin. Joessa on tähdenmuotoinen saari, jolla seisoo '
+      + 'Pietari-Paavalin linnoitus, kaupungin ensimmäinen rakennus '
+      + 'vuodelta 1703. Etelärannalla ovat Talvipalatsi eli Eremitaaši, '
+      + 'Verikirkko Gribojedovin kanavan varrella ja Kazanin katedraali '
+      + 'pääkadun Nevski prospektin laidalla. Vaskiratsastaja, Pietari '
+      + 'Suuren ratsastajapatsas, on Senaatintorilla joen rannassa, ja '
+      + 'kartan eteläreunassa on Mariinski-teatteri. Kaupungin läpi '
+      + 'kaartaa kolme kanavaa — Moika, Gribojedovin kanava ja Fontanka '
+      + '— jotka kaivettiin alun perin ojiksi soisen maan kuivaamiseen. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään. Tämä on pelin ainoa
@@ -4892,23 +4896,21 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/moskova-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
-    esittely: 'Moskova syntyi kukkulalle, jonka juurella Moskova-joki '
-      + 'tekee mutkan. Mutkan sisään jäävää niemekettä oli helppo '
-      + 'puolustaa: vettä kahdella sivulla ja jyrkkä rinne kolmannella. '
-      + 'Sinne rakennettiin puinen linnoitus, kreml, ja sen ympärille '
-      + 'kaupunki. Moskova ei ole meren rannalla eikä suuren joen '
-      + 'suulla, mutta se on Venäjän tasangon keskellä, kohdassa josta '
-      + 'pääsee jokia pitkin joka suuntaan. Kaupunki kasvoi renkaina: '
-      + 'kun se täyttyi, ympärille vedettiin uusi muuri, ja muurien '
-      + 'paikoille jäivät leveät kehäkadut.\n\nKartan keskellä on '
-      + 'Kremlin kolmio. Sen ympäri kiertää vaalea vesijuova: se on '
-      + 'Neglinnaja-joki, joka virtaa nykyään maan alla putkessa. '
-      + 'Kolmion sisällä näkyy vain muutama viiva, sillä kartta ei '
-      + 'piirrä rakennuksia. Alhaalla kaartaa Moskova-joki leveänä '
-      + 'nauhana ja sen eteläpuolella toinen, kapeampi vesi — tulvia '
-      + 'varten kaivettu kanava. Ylhäällä ja sivuilla erottuu kaksi '
-      + 'kaarta, jotka kiertävät keskustaa: Bulevardikehä ja '
-      + 'Puutarhakehä. Kartan kohteista pääsee lukemaan lisää '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
+     * esittely kertoo kohteet, ei kartan viivastoja eikä värejä.
+     */
+    esittely: 'Kartan alue on Moskovan ydin Moskova-joen mutkassa. '
+      + 'Keskellä on Kremlin kolmio, jonka muurien sisällä ovat '
+      + 'palatsit ja katedraalit; sen itäkyljessä avautuu Punainen '
+      + 'tori, ja torin eteläpäässä seisoo Pyhän Vasilin katedraali. '
+      + 'Pohjoisessa on Bolšoi-teatteri, lännessä joen rannalla '
+      + 'Kristus Vapahtajan katedraali ja etelässä joen toisella '
+      + 'puolen Tretjakovin galleria. Kremlin vieritse virtaa '
+      + 'Neglinnaja-joki, joka katettiin 1817–1819 ja kulkee nykyään '
+      + 'kokonaan putkessa maan alla. Keskustaa kiertävät '
+      + 'Bulevardikehä ja Puutarhakehä ovat vanhojen kaupunginmuurien '
+      + 'linjoilla. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
@@ -5004,27 +5006,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/oslo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
-    esittely: 'Oslo on vuonon perukassa. Oslovuono työntyy merestä '
-      + 'noin sata kilometriä sisämaahan, ja kaupunki on sen '
-      + 'pohjoisimmassa päässä, siinä missä vesi loppuu ja metsäiset '
-      + 'kukkulat alkavat. Metsä ei ole kaukana: kaupungin pohjoisosista '
-      + 'pääsee raitiovaunulla suoraan Nordmarkaan, joka on suurempi '
-      + 'kuin koko rakennettu kaupunki. Keskusta on rakennettu '
-      + 'suoraviivaiseksi ruuduksi 1600-luvulla, kun vanha puukaupunki '
-      + 'oli palanut ja Tanskan kuningas Kristian IV käski rakentaa '
-      + 'uuden linnoituksen suojaan — kaupunki kantoi hänen nimeään '
-      + 'Kristianiana aina vuoteen 1925.\n\nKartalla vuono on '
-      + 'vasemmalla alhaalla ja kaupunki kiertyy sen ympärille. '
-      + 'Keskustan kadut ovat suoria ja risteävät suorassa kulmassa, '
-      + 'mikä erottaa Oslon Tallinnan tai Vilnan kaltaisista '
-      + 'keskiaikaisista kaupungeista. Yksi katu kulkee vinosti muiden '
-      + 'poikki: se on Karl Johans gate, joka vie kuninkaanlinnalta '
-      + 'tuomiokirkolle ja rautatieasemalle. Niemellä sataman kupeessa '
-      + 'näkyy tumma vallirengas — Akershusin linnoitus, joka on '
-      + 'seisonut paikallaan 1300-luvulta. Oopperatalo on veden '
-      + 'toisella puolella oikealla, ja sen katolle voi kävellä. '
-      + 'Lehden laivamuseot eli viikinkilaiva, Fram ja Kon-Tiki ovat '
-      + 'Bygdøyn niemellä kolme ja puoli kilometriä lännessä, kartan '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on Oslon keskusta vuonon pohjukassa, siinä missä vesi '
+      + 'loppuu ja metsäiset kukkulat alkavat. Keskusta rakennettiin '
+      + 'suoraviivaiseksi ruuduksi 1600-luvulla, kun vanha puukaupunki oli '
+      + 'palanut ja Tanskan kuningas Kristian IV käski rakentaa uuden '
+      + 'linnoituksen suojaan; kaupunki kantoi hänen nimeään Kristianiana '
+      + 'aina vuoteen 1925. Alueella ovat kuninkaanlinna, sieltä '
+      + 'tuomiokirkolle ja rautatieasemalle vievä Karl Johans gate, '
+      + 'kaupungintalo, 1300-luvulta paikallaan seissyt Akershusin '
+      + 'linnoitus sataman kupeessa sekä oopperatalo, jonka katolle voi '
+      + 'kävellä. Lehden laivamuseot eli viikinkilaiva, Fram ja Kon-Tiki '
+      + 'ovat Bygdøyn niemellä kolme ja puoli kilometriä lännessä, kartan '
       + 'ulkopuolella. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
@@ -5050,24 +5048,25 @@ export const KAUPUNKIKARTAT = {
     // --vari, Eurooppa-erä 1 15.8.2026).
     piirtoRajat: { pohjoinen: 55.70215, etela: 55.66135, lansi: 12.53867, ita: 12.62843 },
     varikartta: 'assets/kartat/kobenhavn-varikartta.png',
-    esittely: 'Kööpenhamina on satamakaupunki kahden saaren välissä. Vanha '
-      + 'kaupunki on Sjællandin puolella ja sen vastarannalla on Amager, ja '
-      + 'niiden välissä kulkee satamakanava, jota pitkin laivat pääsevät '
-      + 'kaupungin läpi. Nimi tarkoittaa kauppasatamaa. Kaupunki on hyvin '
-      + 'matala — korkeimmat asiat ovat kirkontornit — ja se on rakennettu '
-      + 'veden ehdoilla: kanavia on kaivettu lisää sinne, missä niitä '
-      + 'tarvittiin, ja vanhat vallihaudat ovat nykyään järviä keskellä '
-      + 'kaupunkia. Isoisän matkan aikaan Kööpenhaminassa asui jo yli sata '
-      + 'tuhatta ihmistä, ja kaupungin ympäriltä oli juuri purettu muurit, '
-      + 'jotka olivat estäneet sitä kasvamasta.\n\nKartalla kanava kulkee '
-      + 'ylhäältä alas oikeanpuoleisen kolmanneksen halki. Vasemmalla ovat '
-      + 'pitkulaiset järvet, jotka ovat entisiä vallihautoja, ja niiden ja '
-      + 'kanavan välissä on vanha kaupunki kapeine katuineen. Oikeassa '
-      + 'yläkulmassa erottuu tähden muotoinen linnoitus vallihautoineen: se '
-      + 'on Kastellet, ja sen takana rannalla istuu Pieni merenneito. '
-      + 'Kanavan itäpuolella on Christianshavn, jonka omat kanavat näkyvät '
-      + 'suorina juovina — se rakennettiin hollantilaiseen tapaan '
-      + 'kaivamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on vanha Kööpenhamina Sjællandin puolella ja sen '
+      + 'vastarannalla Amager; niiden välissä kulkee satamakanava, jota '
+      + 'pitkin laivat pääsevät kaupungin läpi. Nimi tarkoittaa '
+      + 'kauppasatamaa. Kaupunki on rakennettu veden ehdoilla: kanavia on '
+      + 'kaivettu sinne missä niitä tarvittiin, ja vanhat vallihaudat ovat '
+      + 'nykyään pitkulaisia järviä keskellä kaupunkia. Isoisän matkan '
+      + 'aikaan asukkaita oli jo yli satatuhatta, ja kaupungin ympäriltä '
+      + 'oli juuri purettu muurit, jotka olivat estäneet sitä kasvamasta. '
+      + 'Alueella ovat Christiansborgin linna, Rundetårn, Nyhavn, Tivoli, '
+      + 'Rosenborgin linna, Amalienborg, tähtilinnoitus Kastellet ja sen '
+      + 'takana rannalla istuva Pieni merenneito sekä kanavan itäpuolella '
+      + 'hollantilaiseen tapaan kaivamalla rakennettu Christianshavn. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * AMALIENBORG ON ANSA. fi.wikipedian `Amalienborg` EI ole
@@ -5117,25 +5116,25 @@ export const KAUPUNKIKARTAT = {
     // --vari, 17.8.2026).
     piirtoRajat: { pohjoinen: 61.515, etela: 61.483, lansi: 23.6946, ita: 23.8034 },
     varikartta: 'assets/kartat/tampere-varikartta.png',
-    esittely: 'Tampere on rakennettu kannakselle kahden järven väliin. '
-      + 'Näsijärvi on kartan yläreunassa ja Pyhäjärvi alalaidassa, ja '
-      + 'niiden pinnoilla on kahdeksantoista metriä korkeuseroa. Ero '
-      + 'purkautuu Tammerkoskena, joka juoksee kartan keskellä '
-      + 'pohjoisesta etelään noin kilometrin matkan. Juuri se koski on '
-      + 'koko kaupungin syy: sen partaalle nousivat 1800-luvulla '
-      + 'puuvillatehdas, verkatehdas, paperitehdas ja konepajat, ja '
-      + 'kaupunkia alettiin kutsua Pohjolan Manchesteriksi. Isoisän '
-      + 'matkan aikaan Tampereella asui noin kuusi tuhatta ihmistä ja '
-      + 'Finlaysonin tehdas oli Pohjoismaiden suurin '
-      + 'työpaikka.\n\nKartalla kosken länsipuolella on Finlaysonin '
-      + 'punatiilinen tehdaskortteli ja itäpuolella Tampella, jonka '
-      + 'verstaassa toimii nykyään museokeskus Vapriikki. Kosken yli '
-      + 'kulkee kaupungin pääkatu Hämeenkatu, joka jatkuu oikealle '
-      + 'rautatieasemalle asti — rata näkyy kuvassa pystysuorana '
-      + 'juovana keskustan takana. Vasemmalla kohoaa Pyynikinharju, '
-      + 'maailman korkein pitkittäisharju, ja sen laella seisoo '
-      + 'punagraniittinen näkötorni. Pohjoisessa Näsijärven rantaan '
-      + 'työntyy Särkänniemen niemi, jonka kärjessä on Näsinneula.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on Tampereen kannas kahden järven välissä: Näsijärvi '
+      + 'on pohjoisessa ja Pyhäjärvi etelässä, ja niiden pintojen '
+      + 'kahdeksantoista metrin korkeusero purkautuu Tammerkoskena. Juuri '
+      + 'se koski on koko kaupungin syy: sen partaalle nousivat '
+      + '1800-luvulla puuvillatehdas, verkatehdas, paperitehdas ja '
+      + 'konepajat, ja kaupunkia alettiin kutsua Pohjolan Manchesteriksi. '
+      + 'Isoisän matkan aikaan Tampereella asui noin kuusi tuhatta ihmistä '
+      + 'ja Finlaysonin tehdas oli Pohjoismaiden suurin työpaikka. Alueella '
+      + 'ovat kosken länsirannalla Finlaysonin punatiilikortteli ja '
+      + 'itärannalla Tampella, jonka verstaassa toimii museokeskus '
+      + 'Vapriikki, pääkatu Hämeenkatu Hämeensiltoineen, lännessä '
+      + 'Pyynikinharjun näkötorni ja pohjoisessa Särkänniemen kärjessä '
+      + 'Näsinneula. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Kahdeksan kohdetta, kaikki tarkistettu fi-Wikipedian
@@ -5288,26 +5287,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/riika-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
-    esittely: 'Riika kasvoi Väinäjoen suulle. Joki on leveä ja syvä, ja '
-      + 'sen kautta pääsi sisämaahan asti — siksi tähän syntyi '
-      + 'kauppapaikka, josta tuli Baltian suurin kaupunki. '
-      + 'Vanhakaupunki on joen itärannalla, ja siellä talot ovat '
-      + 'kapeita ja korkeita, koska tontista maksettiin leveyden '
-      + 'mukaan. Kaupunkia ympäröi keskiajalla muuri, mutta se '
-      + 'purettiin 1800-luvulla. Muurin paikalle ei rakennettu '
-      + 'taloja vaan puisto ja kanava, ja juuri se tekee Riian '
-      + 'kartasta helposti tunnistettavan: vanhakaupunkia kiertää '
-      + 'vihreä kaari.\n\nKartalla on vanhakaupunki keskellä, Väinäjoki '
-      + 'vasemmalla ja puistovyöhyke oikealla. Kanava mutkittelee '
-      + 'puiston läpi kuin pieni joki — se on entinen vallihauta. '
-      + 'Vanhankaupungin kadut ovat lyhyitä ja kaartuvia, eivätkä ne '
-      + 'muodosta ruutua kuten uudemmissa kaupunginosissa: keskiajalla '
-      + 'katu kulki sinne, minne pääsi. Alhaalla oikealla erottuu '
-      + 'viisi isoa hallia rivissä. Ne ovat keskustorin hallit, ja ne '
-      + 'olivat alun perin ilmalaivojen halleja, jotka siirrettiin '
-      + 'tänne ja koottiin uudestaan toriksi. Jugend-kortteli, josta '
-      + 'Riika on kuuluisa, jää kartan ulkopuolelle runsaan kilometrin '
-      + 'päähän pohjoiseen. Kartan kohteista pääsee lukemaan lisää '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
+     * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
+     */
+    esittely: 'Kartan alue on Riian vanhakaupunki Väinäjoen '
+      + 'itärannalla. Keskiaikainen muuri purettiin 1800-luvulla, ja '
+      + 'sen paikalle tehtiin puisto ja kanava, joka on entinen '
+      + 'vallihauta. Puiston laidalla seisoo Vapaudenpatsas, ja '
+      + 'vanhassakaupungissa ovat Kolme veljestä, Riian tuomiokirkko, '
+      + 'Pyhän Pietarin kirkko ja Mustapäiden talo. Eteläreunassa on '
+      + 'keskustorin viisi hallia, jotka koottiin zeppelin-ilmalaivojen '
+      + 'hallien teräsrungoista. Jugendkortteli, josta Riika on '
+      + 'kuuluisa, jää runsaan kilometrin päähän pohjoiseen kartan '
+      + 'ulkopuolelle. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
@@ -5331,27 +5324,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/vilna-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
-    esittely: 'Vilna on rakennettu kahden joen yhtymäkohtaan. Iso joki '
-      + 'on Neris ja pieni on Vilnia, ja kaupunki on saanut nimensä '
-      + 'pienemmästä. Niiden väliin jää kukkula, jonka päällä on '
-      + 'linnan torni — siitä kaupunki alkoi 1300-luvulla. '
-      + 'Vanhakaupunki levisi kukkulan eteläpuolelle, ja siitä tuli '
-      + 'yksi Euroopan laajimmista: kujia on satoja ja kirkkoja '
-      + 'toistasataa, koska Vilnassa asui rinnakkain katolisia, '
-      + 'ortodokseja, juutalaisia ja muslimeja, ja jokainen rakensi '
-      + 'omansa. Kaupunkia ympäröi ennen muuri yhdeksine portteineen. '
-      + 'Niistä on jäljellä yksi, Aamuportti, ja pätkä muuria sen '
-      + 'kummallakin puolella.\n\nKartalla vanhakaupunki on keskellä '
-      + 'pystysuorana vyöhykkeenä: se alkaa ylhäältä tuomiokirkon '
-      + 'aukiolta ja päättyy alhaalla Aamuportille, ja matkaa on noin '
-      + 'puolitoista kilometriä. Kujat piirtyvät tiheänä verkkona, '
-      + 'jossa korttelit ovat epäsäännöllisiä — mikään katu ei kulje '
-      + 'suoraan päästä päähän. Oikealla mutkittelee Vilnia, ja sen '
-      + 'takana on oma kolkkansa: Užupis, joka julistautui '
-      + 'tasavallaksi ja kirjoitti itselleen perustuslain. Ylhäällä '
-      + 'kaartaa Neris isona koukkuna. Tumma viivanpätkä '
-      + 'vanhankaupungin eteläreunassa on jäljellä oleva '
-      + 'kaupunginmuuri. Kartan kohteista pääsee lukemaan lisää '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
+     * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
+     */
+    esittely: 'Kartan alue on Vilnan vanhakaupunki, joka ulottuu '
+      + 'tuomiokirkon aukiolta Aamuportille noin puolentoista '
+      + 'kilometrin matkalla. Jokien väliin jäävällä kukkulalla seisoo '
+      + 'Gediminaksen torni, ja sen juurella ovat Vilnan tuomiokirkko '
+      + 'ja erillinen kellotorni. Etelämpänä ovat punatiilinen Pyhän '
+      + 'Annan kirkko ja Vilnan yliopisto, jonka rakennusten väliin jäi '
+      + 'kolmetoista sisäpihaa. Aamuportti on ainoa jäljellä oleva '
+      + 'yhdeksästä kaupunginportista. Vilnia-joen takana on Užupis, '
+      + 'joka julistautui omaksi tasavallakseen ja kirjoitti itselleen '
+      + 'perustuslain. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
@@ -6776,6 +6762,73 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Sanjūsangen-dō', lat: 34.9878, lon: 135.7717 },
       { nimi: 'Tō-ji', lat: 34.9806, lon: 135.7478 },
       { nimi: 'Fushimi Inari-taisha', lat: 34.9672, lon: 135.7728 },
+    ],
+  },
+  /*
+   * SINGAPOREN KOHDEKARTTA (Opus 20.8.2026).
+   *
+   * RAJAUS 4,2 × 3,6 km joen suun ympärillä. Kahdeksan kymmenestä
+   * kohteesta mahtuu 1,5 kilometrin ympyrään (oma haversine-laskenta
+   * koordinaateista: kaukaisin pari tässä ytimessä on Thian Hock
+   * Keng ↔ Fort Canning, 1,49 km), mutta kaksi on selvästi
+   * ulompana — Sultan-moskeija 2,4 km koilliseen ja Gardens by the
+   * Bay 2,2 km itään. Molempien ympärillä on katuverkkoa, joten
+   * kainalokartta olisi ollut väärä työkalu: kainalo on Medinan
+   * Quban ja Adenin Tawahin kaltaisille kohteille, joiden ympärillä
+   * on tyhjää. Väljempi yhtenäinen ruutu pitää kaikki kymmenen
+   * samassa kuvassa, ja joen suun tihein rykelmä avautuu
+   * zoomaamalla.
+   *
+   * KOORDINAATIT ovat kohteiden omista en-Wikipedian artikkeleista
+   * (haettu 20.8.2026), YHTÄ LUKUUN OTTAMATTA: Raffles Hotelin
+   * artikkelin infoboksissa on tyhjä {{Coord|format=dms}} ilman
+   * arvoja, joten sen piste on OpenStreetMapista (Nominatim,
+   * osoitteella "1 Beach Road, Singapore 189673", joka täsmää
+   * artikkelin infoboksin osoitteeseen sanatarkasti). Ero on
+   * kirjattu tähän, koska lähde ei ole sama kuin muilla.
+   *
+   * KAMPONG GLAMIN PISTEELLE ON KAKSI EHDOKASTA, ja ne ovat 90
+   * metrin päässä toisistaan: Sultan-moskeija 1,3022 / 103,8590 ja
+   * Istana Kampong Glam 1,3029 / 103,85988 (Malay Heritage Centren
+   * artikkeli antaa vielä kolmannen, 1°18′08″N 103°51′37″E). Kartan
+   * piste on moskeijan, koska se on kadulta katsottuna alueen
+   * maamerkki; istana ja Malay Heritage Centre kerrotaan sen
+   * jutussa. Ero on kartan mittakaavassa alle prosentin.
+   *
+   * CAVENAGH-SILTA JÄI POIS KARTALTA, vaikka se on lehden nostona
+   * ja kartan alueella. Sen piste (1,28656 / 103,85235) on 105
+   * metrin päässä Empress Placen pisteestä eli 2,5 % ruudun
+   * leveydestä, ja numeroympyrät menisivät päällekkäin — sama
+   * ratkaisu kuin Mekan Kaaballa ja Petran palatsihaudoilla. Silta
+   * kerrotaan Empress Placen jutussa ja omassa nostossaan.
+   *
+   * CHINATOWN EI OLE OMANA PISTEENÄÄN samasta syystä: sen
+   * aluekoordinaatti on 160 metriä Sri Mariammanin temppelistä, ja
+   * kaupunginosaa edustavat kartalla sen kaksi temppeliä.
+   */
+  singapore: {
+    polku: 'assets/kartat/singapore-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 1.308, etela: 1.276, lansi: 103.836, ita: 103.874 },
+    esittely: 'Kartan alue on Singapore-joen suu ja sen ympärille '
+      + 'vuodesta 1819 kasvaneet kaupunginosat. Joen eteläpuolella '
+      + 'ovat Boat Quay ja Chinatownin temppelit, pohjoispuolella '
+      + 'siirtomaahallinnon Empress Place ja Fort Canningin kukkula. '
+      + 'Koillisessa on Kampong Glam, joka annettiin sulttaanille ja '
+      + 'malaijiyhteisölle, ja idässä täyttömaalla Gardens by the '
+      + 'Bay. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Sultan-moskeija', lat: 1.3022, lon: 103.859 },
+      { nimi: 'Raffles Hotel', lat: 1.29468, lon: 103.85464 },
+      { nimi: 'Fort Canningin kukkula', lat: 1.29444, lon: 103.84694 },
+      { nimi: 'Clarke Quay', lat: 1.29002, lon: 103.84609 },
+      { nimi: 'Empress Place', lat: 1.28722, lon: 103.85167 },
+      { nimi: 'Boat Quay', lat: 1.28685, lon: 103.84951 },
+      { nimi: 'Merlion-puisto', lat: 1.28681, lon: 103.8545 },
+      { nimi: 'Gardens by the Bay', lat: 1.28472, lon: 103.865 },
+      { nimi: 'Sri Mariamman -temppeli', lat: 1.28261, lon: 103.84528 },
+      { nimi: 'Thian Hock Keng -temppeli', lat: 1.28106, lon: 103.84753 },
     ],
   },
 };

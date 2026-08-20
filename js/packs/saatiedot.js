@@ -1690,4 +1690,50 @@ export const SAATIEDOT = {
       + 'yhteensä 450 millimetriä; syyskuun 192 millimetriä tuovat '
       + 'taifuunit.',
   },
+  /*
+   * SINGAPORE (20.8.2026). Sama menetelmä kuin paketin muillakin
+   * riveillä: Open-Meteon arkisto (ERA5), jakso 1991–2020. Jakso
+   * haettiin kuudessa viiden vuoden palassa ja summat koottiin itse,
+   * koska palvelimen vuorokausikiintiö taittui yhteen kolmenkymmenen
+   * vuoden kutsuun.
+   *
+   * MITTAUSPISTE on keskusta 1,29 / 103,85 eli Singapore-joen suu.
+   * en-Wikipedian Singapore-artikkelin infobox antaa maan
+   * koordinaateiksi 1°17′N 103°50′E eli 1,283 / 103,833; käytetty
+   * piste on siitä runsaan kilometrin koilliseen, samalla
+   * kaupunkialueella. ERA5 asetti lähimmän ruutunsa kohtaan
+   * 1,3005 / 103,8626, korkeus 27 metriä — siis maalle.
+   *
+   * VUOROKAUSIVAIHTELU ON PIENEMPI KUIN PAIKALLISET LUVUT, ja se on
+   * ruudun ominaisuus eikä virhe. ERA5:n ruutu on kymmeniä
+   * kilometrejä leveä, ja Singaporen saari on niin kapea, että ruutu
+   * sekoittaa mukaan ympäröivän meren: kaista jää 24–29 asteeseen,
+   * kun en-Wikipedian Singapore-artikkeli sanoo lämpötilan
+   * vaihtelevan tyypillisesti 23 ja 32 asteen välillä. Ero on
+   * kerrottu myös oppaan sääjaksossa (Siinain, Petran ja Mekan
+   * ennakkotapaus). Kuukausikeskilämpöihin ja sademääriin ero ei
+   * juuri vaikuta.
+   *
+   * Luonnehdinnan luvut ovat rivin omia. Sateisen kauden ajoitus
+   * (marraskuusta helmikuuhun) ja heinä–lokakuun savusumu ovat
+   * en-Wikipedian Singapore-artikkelin ilmasto-osiosta.
+   */
+  singapore: {
+    lat: 1.29,
+    lon: 103.85,
+    keskilampo: [25.9, 26.3, 26.8, 27.2, 27.5, 27.5, 27.2, 27.1, 27, 26.8, 26.3, 26],
+    ylin: [28, 28, 29, 29, 29, 29, 28, 28, 28, 28, 28, 28],
+    alin: [24, 24, 25, 26, 26, 26, 26, 26, 26, 25, 25, 24],
+    sade: [196, 129, 209, 242, 224, 179, 163, 167, 166, 240, 322, 316],
+    luonnehdinta: 'Singaporen vuodessa ei ole vuodenaikoja: kylmimmän '
+      + 'ja lämpimimmän kuukauden ero on puolitoista astetta, '
+      + 'tammikuun vajaasta kahdestakymmenestäkuudesta toukokuun '
+      + 'kahteenkymmeneenseitsemään ja puoleen. Sadetta sen sijaan '
+      + 'tulee paljon, 2 553 millimetriä vuodessa, eikä yksikään '
+      + 'kuukausi jää kuivaksi — vähitenkin sataa helmikuussa 129 '
+      + 'millimetriä. Sateisimmat ovat marras- ja joulukuu, jolloin '
+      + 'kertyy yhteensä 638 millimetriä; märkä monsuunikausi jatkuu '
+      + 'helmikuulle asti. Heinä–lokakuussa naapurimaiden '
+      + 'metsäpalojen savusumu voi laskea näkyvyyttä.',
+  },
 };

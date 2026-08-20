@@ -3584,6 +3584,15 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+   * PAINOPISTE"): kaikki tämän kaupungin kuvatekstit — kansikuvat,
+   * avauskuvat, nostojen selitteet ja Matkailijalle-osion kuvat —
+   * on tiivistetty YHTEEN virkkeeseen. Sivujen johdannot pysyvät
+   * lyhyinä; lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/europe-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   tukholma: [
     {
       id: 'kaupunki',
@@ -3594,23 +3603,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Riddarholmen (by Pudelek).JPG',
-          selite: 'Riddarholmen Riddarfjärdenin takaa. Terävä valurautainen torni '
-            + 'kuuluu Riddarholmenin kirkolle, jonne Ruotsin kuninkaat '
-            + 'haudattiin 1600-luvulta 1950-luvulle.',
+          selite: 'Riddarholmen Riddarfjärdenin takaa: terävä valurautainen '
+            + 'torni kuuluu Riddarholmenin kirkolle, Ruotsin kuninkaiden '
+            + 'hautakirkolle.',
           lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Julmarknad på Stortorget, Gamla stan, Stockholm, 2017b.jpg',
-          selite: 'Joulutori Stortorgetilla, Gamla stanin keskusaukiolla. Kapeat '
-            + 'talot ovat 1600-luvulta, ja niiden erikokoiset ikkunat '
-            + 'kertovat, että jokainen rakensi omaan tahtiinsa.',
+          selite: 'Joulutori Stortorgetilla, Gamla stanin keskusaukiolla, jonka '
+            + 'kapeat 1600-luvun talot ovat kukin eri levyisiä ja eri '
+            + 'korkuisia.',
           lahde: 'Bysmon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Storskär August 2015 05.jpg',
-          selite: 'Höyrylaiva Storskär ohittaa Vaxholmin linnoituksen. Laiva on '
-            + 'vuodelta 1908 ja kulkee yhä saaristoreittiä kesäisin — sen '
-            + 'koneet ovat alkuperäiset.',
+          selite: 'Höyrylaiva Storskär vuodelta 1908 ohittaa Vaxholmin '
+            + 'linnoituksen yhä alkuperäisillä koneillaan.',
           lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -3628,7 +3636,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: '00 5279 Stockholm, Riddarholmskyrkan.jpg',
-          selite: 'Riddarholmenin kirkko: tiilitornin päällä nousee läpimurrettu valurautainen huippu kuin pitsi, ja sen ympärillä on rivi pieniä tornihuippuja. Vasemmalla erottuu hautakappelin kupoli ja oikealla toinen, kullatulla tähdellä koristeltu.',
+          selite: 'Riddarholmenin kirkko: tiilitornin päällä nousee '
+            + 'läpimurrettu valurautainen huippu kuin pitsi, ja sen '
+            + 'ympärillä on rivi pieniä tornihuippuja.',
           lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Tukholma on rakennettu neljälletoista saarelle siihen '
@@ -3655,7 +3665,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'aikataulun mukaan kulkevilla matkustajalaivoilla. '
                 + 'Lähisaarilla kuten Vaxholmissa, Värmdössä ja '
                 + 'Ljusterössä asutaan ympäri vuoden.',
-              kuva: { tiedosto: 'Af chapman (16187233384).jpg', selite: 'Täystakiloitu purjelaiva laiturissa sinisellä hetkellä: kolme mastoa ja niiden raakapuut piirtyvät vaaleaa iltataivasta vasten. Vastarannalla palaa valaistu kaupunki, ja tyyni vesi heijastaa valot pitkinä juovina.', lahde: 'Magnus Johansson, Wikimedia Commons (CC BY-SA 2.0)' },
+              kuva: { tiedosto: 'Af chapman (16187233384).jpg', selite: 'Täystakiloitu purjelaiva laiturissa sinisellä hetkellä, kolme mastoa raakapuineen vaaleaa iltataivasta vasten ja vastarannalla valaistu kaupunki.', lahde: 'Magnus Johansson, Wikimedia Commons (CC BY-SA 2.0)' },
             },
             {
               otsikko: 'Kaupunki, jolla on kaksi vettä',
@@ -3669,7 +3679,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kun koko kunnassa heitä on noin miljoona ja '
                 + 'kaupunkiseudulla 1,6 miljoonaa. Kaupunki '
                 + 'perustettiin vuonna 1252.',
-              kuva: { tiedosto: 'Gamla stan i Stockholm, sommarkväll..JPG', selite: 'Vanhakaupunki kesäiltana ylhäältä: rantakadun edessä on laivalaituri, ja sen takana nousee kirjava talorivi keltaisena, punaisena ja okrana. Kattojen yli kohoavat Saksalaisen kirkon vihertävä torninhuippu ja kauempana kaksi muuta tornia.', lahde: 'Loxdalen, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Gamla stan i Stockholm, sommarkväll..JPG', selite: 'Vanhakaupunki kesäiltana ylhäältä: laivalaiturin takana nousee kirjava talorivi keltaisena, punaisena ja okrana, ja kattojen yli kohoaa Saksalaisen kirkon vihertävä torninhuippu.', lahde: 'Loxdalen, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Saaristo alkaa heti keskustan takaa',
@@ -3682,7 +3692,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kesämökkejä viisikymmentätuhatta. Osa alueesta on '
                 + 'ollut Ramsar-kosteikkokohde vuodesta 1989. Saaristo '
                 + 'alkaa heti kaupungin itäpuolelta.',
-              kuva: { tiedosto: '20130202 Stockholm Skärgård (38).jpg', selite: 'Saaristo ilmasta helmikuussa: kymmenet metsäiset saaret kohoavat jäätyneestä merestä, ja niiden välissä kiemurtelee vaalea rikottu laivaväylä. Rannoilla näkyy yksittäisiä taloja ja lumisia peltotilkkuja.', lahde: 'Belola80, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: '20130202 Stockholm Skärgård (38).jpg', selite: 'Saaristo ilmasta helmikuussa: kymmenet metsäiset saaret kohoavat jäätyneestä merestä, ja niiden välissä kiemurtelee vaalea rikottu laivaväylä.', lahde: 'Belola80, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Meri, joka ei maistu suolalta',
@@ -3834,8 +3844,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sellaisenaan: satamaan, toreille ja työn ääreen. Veli Johan '
             + 'Fredrik kaiversi kuvat levyiksi, ja niitä myytiin sarjoina. Ne '
             + 'ovat tarkin näkymä Tukholmaan ennen valokuvaa.',
-          selite: 'Näkymä Tukholmaan Mosebackelta Södermalmilta noin 1790. '
-            + 'Kirkontornien takana laivoja on ankkurissa niin tiheässä, että '
+          selite: 'Näkymä Tukholmaan Mosebackelta Södermalmilta noin 1790, '
+            + 'kirkontornien takana laivoja ankkurissa niin tiheässä että '
             + 'masto peittää maston.',
           lahde: 'Elias Martin, Wikimedia Commons (PD)',
           wiki: 'Elias Martin',
@@ -3843,33 +3853,32 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Drottninggatan',
               tiedosto: 'Elias Martin - Street in Stockholm (Drottninggatan) - A II 868 - Finnish National Gallery.jpg',
-              selite: 'Drottninggatan matalien puutalojen aikaan. Katu on yhä '
-                + 'samassa paikassa, mutta nykyään se on kävelykatu ja talot '
-                + 'ovat kivestä.',
+              selite: 'Drottninggatan matalien puutalojen aikaan — katu on yhä '
+                + 'samassa paikassa, mutta nykyään se on kävelykatu ja '
+                + 'talot ovat kivestä.',
               lahde: 'Elias Martin, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'Näkymä Mälarenille',
               tiedosto: 'Southern shore of Lake Mälaren in Stockholm, Sweden (25413579586).jpg',
-              selite: 'Mälarenin eteläranta Söderin sulun kohdalta. Purjeveneet '
-                + 'toivat kaupunkiin polttopuuta, viljaa ja rautaa sisämaan '
-                + 'järviltä.',
+              selite: 'Mälarenin eteläranta Söderin sulun kohdalta, jonne '
+                + 'purjeveneet toivat sisämaan järviltä polttopuuta, viljaa '
+                + 'ja rautaa.',
               lahde: 'Elias Martin / Riksantikvarieämbetet, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'Rautavaaka',
               tiedosto: '"Järnvågen" - "The Iron Weighing Scale" in Stockholm, Sweden (25969387273).jpg',
               selite: 'Järnvågen eli rautavaaka, jossa punnittiin kaikki '
-                + 'Ruotsista ulos lähtenyt tankorauta. Rauta oli maan tärkein '
-                + 'vientitavara, ja se kulki tämän pihan kautta.',
+                + 'Ruotsista ulos lähtenyt tankorauta, maan tärkein '
+                + 'vientitavara.',
               lahde: 'Elias Martin / Riksantikvarieämbetet, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'Skeppsbron portaat',
               tiedosto: 'The steps on Skeppsbro etching by Elias Martin.jpg',
               selite: 'Skeppsbron portaat, joita myöten tavara nostettiin '
-                + 'veneistä maihin. Etiketti puuttuu: kuvassa tehdään työtä, '
-                + 'ei poseerata.',
+                + 'veneistä maihin — kuvassa tehdään työtä, ei poseerata.',
               lahde: 'Elias Martin, Wikimedia Commons (PD)',
             },
           ],
@@ -3884,9 +3893,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'peitetty laatoilla — se ruiskubetonoitiin ja maalattiin '
             + 'sellaisenaan, joten aseman seinä on kirjaimellisesti vuori. '
             + 'Tavallinen matkalippu kelpaa koko näyttelyyn.',
-          selite: 'T-Centralenin sinisen linjan laituri. Per Olof Ultvedt maalasi '
-            + '1975 karkeaan kallioon siniset köynnökset — rauhallinen väri '
-            + 'valittiin kaupungin vilkkaimmalle vaihtoasemalle.',
+          selite: 'T-Centralenin sinisen linjan laituri, jonka karkeaan '
+            + 'kallioon Per Olof Ultvedt maalasi 1975 siniset köynnökset.',
           lahde: 'Sonse, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Tukholman metro',
         },
@@ -3902,9 +3910,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään '
             + 'alus seisoo omassa museossaan yhä valtaosin alkuperäisenä '
             + 'puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.',
-          selite: 'Vasa hinataan Beckholmenin kuivatelakalle 14. toukokuuta 1961, '
-            + 'kohta noston jälkeen. Runko on musta ja liejun peitossa, vesi '
-            + 'valuu kannelta ja rannalla seisoo katsojia.',
+          selite: 'Vasa hinataan Beckholmenin kuivatelakalle 14. toukokuuta '
+            + '1961 mustana ja liejun peitossa, vesi valuen kannelta ja '
+            + 'katsojia rannalla.',
           lahde: 'Tuntematon lehtikuvaaja, Wikimedia Commons (public domain)',
           wiki: 'Vasa (laiva)',
         },
@@ -3920,31 +3928,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Gamla stan February 2013 01.jpg',
-          selite: 'Vanhakaupunki ilmasta helmikuussa: saaren täyttää '
-            + 'tiivis korttelirykelmä, jonka keltaiset, punaiset ja '
-            + 'vihreät katot kiertyvät kapeiden kujien ympärille. '
-            + 'Yläreunassa erottuu kuninkaanlinnan neliömäinen sisäpiha, '
-            + 'oikealla kaartuu rantakatu laivoineen, ja vedessä '
-            + 'ajelehtii jäälauttoja.',
+          selite: 'Vanhakaupunki ilmasta helmikuussa: keltaisten, punaisten ja '
+            + 'vihreiden kattojen keskeltä erottuu kuninkaanlinnan '
+            + 'neliömäinen sisäpiha, ja vedessä ajelehtii jäälauttoja.',
           lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Skeppsbrokajen Gamla Stan from Skeppsholmen Stockholm 2016 01.jpg',
-          selite: 'Talvinen keskipäivä salmen rannassa: etualalla on '
-            + 'lumen peittämä nurmikko penkkeineen ja lehdettömine '
-            + 'puineen, ja vastarannalla seisoo keltaisten, ruskeiden '
-            + 'ja oranssien julkisivujen rivi lumisine kattoineen. '
-            + 'Laiturissa on iso valkoinen laiva ja rannalla '
-            + 'koristeltu joulukuusi.',
+          selite: 'Talvinen keskipäivä salmen rannassa: lumisen nurmikon takana '
+            + 'seisoo keltaisten, ruskeiden ja oranssien julkisivujen rivi, '
+            + 'ja laiturissa on iso valkoinen laiva.',
           lahde: 'Julian Herzog (Website), Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Stockholm (15103231170).jpg',
-          selite: 'Rantabulevardi syyskuun iltapäivänä: oikealla nousee '
-            + 'pitkä rivi 1800-luvun lopun kivitaloja tornipäätteineen '
-            + 'ja vihreine kuparikattoineen, ja niiden edessä kulkee '
-            + 'puurivi ja leveä kivilaituri. Laituriin on kiinnitetty '
-            + 'vanhoja puuveneitä ja purjeveneitä mastoineen.',
+          selite: 'Rantabulevardi syyskuun iltapäivänä: oikealla rivi '
+            + '1800-luvun lopun kivitaloja vihreine kuparikattoineen, ja '
+            + 'kivilaiturissa vanhoja puu- ja purjeveneitä.',
           lahde: 'Magnus Johansson, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -3968,9 +3968,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'annettiin 1744 Christopher Polhemille, joka oli silloin '
             + '83-vuotias. Hän kuoli kesken hankkeen, ja poika Gabriel sai '
             + 'sulun valmiiksi 1755.',
-          selite: 'Polhemin sulku noin vuonna 1800. Sinisen nostosillan yli '
-            + 'kulkee hevoskärry, sulkukanavassa on kiinni purjevene ja '
-            + 'taustalla nousee laivojen mastoja.',
+          selite: 'Polhemin sulku noin vuonna 1800: sinisen nostosillan yli '
+            + 'kulkee hevoskärry ja sulkukanavassa on kiinni purjevene.',
           lahde: 'Johan Petter Cumelin, Wikimedia Commons (PD)',
           wiki: 'Christopher Polhem',
           galleria: [
@@ -3978,8 +3977,8 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Sulku vuonna 2005',
               tiedosto: 'Slussning i Slussen Stockholm 01 2005-08-09.JPG',
               selite: 'Vene odottaa sulussa liikenneramppien alla vuonna 2005 — '
-                + 'ylhäällä ajaa punainen bussi. Tämä Slussen purettiin 2016, '
-                + 'ja uuden sulun on määrä avautua veneille 2027.',
+                + 'tämä Slussen purettiin 2016, ja uuden sulun on määrä '
+                + 'avautua veneille 2027.',
               lahde: 'Jordgubbe, Wikimedia Commons (CC BY-SA 2.0)',
             },
           ],
@@ -9899,6 +9898,15 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+   * PAINOPISTE"): kaikki tämän kaupungin kuvatekstit — kansikuvat,
+   * avauskuvat, nostojen selitteet ja Matkailijalle-osion kuvat —
+   * on tiivistetty YHTEEN virkkeeseen. Sivujen johdannot pysyvät
+   * lyhyinä; lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/europe-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   helsinki: [
     {
       id: 'kaupunki',
@@ -9909,23 +9917,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Lutheran Cathedral Helsinki.jpg',
-          selite: 'Helsingin tuomiokirkko Senaatintorin portaiden yläpäässä. '
-            + 'Katolla seisoo kaksitoista sinkistä apostolipatsasta — '
-            + 'maailman suurin yhtenäinen sinkkiveistoskokoelma.',
+          selite: 'Helsingin tuomiokirkko Senaatintorin portaiden yläpäässä, '
+            + 'katollaan kaksitoista sinkistä apostolipatsasta.',
           lahde: 'Hans Hillewaert, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'HKL HST Nr II 71, Aleksanterinkatu, 2019 (01).jpg',
-          selite: 'Vihreä raitiovaunu Aleksanterinkadulla, takana odottaa jo '
-            + 'seuraava. Raitiovaunut ovat kulkeneet Helsingin kaduilla '
-            + 'vuodesta 1891.',
+          selite: 'Vihreä raitiovaunu Aleksanterinkadulla ja sen takana jo '
+            + 'seuraava — vaunut ovat kulkeneet kaduilla vuodesta 1891.',
           lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Passengers of Suomenlinna ferry on an early winter morning; Helsinki, Finland, 2024 January.jpg',
           selite: 'Suomenlinnan lautan matkustajat kävelevät Kauppatorin '
-            + 'lumiselle rannalle talviaamuna. Oikealla on lautta '
-            + 'laiturissa, takana Uspenskin katedraalin vihreät kupolit.',
+            + 'lumiselle rannalle talviaamuna, takanaan Uspenskin '
+            + 'katedraalin vihreät kupolit.',
           lahde: 'Pekka Vyhtinen, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -9937,10 +9943,9 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg',
-          selite: 'Ilmakuva keskustasta merelle: Tuomiokirkko ja '
-            + 'Senaatintori keskellä, oikealla Esplanadin vihreä nauha ja '
-            + 'edessä Eteläsatama laivoineen. Horisontissa saaristo '
-            + 'jatkuu sinisenä.',
+          selite: 'Ilmakuva keskustasta merelle: Tuomiokirkko ja Senaatintori '
+            + 'keskellä, oikealla Esplanadin vihreä nauha ja edessä '
+            + 'Eteläsatama laivoineen.',
           lahde: 'Suomen Ilmakuva Oy, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -9952,9 +9957,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Market Square in Helsinki, Finland, 2024 May.jpg',
-          selite: 'Kauppatori kesäiltana: saaristolaiva laiturissa, '
-            + 'oranssit torikatokset ja kävelijöitä rantalaiturilla. '
-            + 'Takana vasemmalla erottuu Kolera-altaan kaari.',
+          selite: 'Kauppatori kesäiltana: saaristolaiva laiturissa, oranssit '
+            + 'torikatokset ja kävelijöitä rantalaiturilla.',
           lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -10035,7 +10039,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Kings-gate-A12.jpg',
                 selite: 'Suomenlinnan Kuninkaanportti ja Kustaanmiekan '
-                  + 'kivimuurit. Portti rakennettiin 1750-luvulla '
+                  + 'kivimuurit — portti rakennettiin 1750-luvulla '
                   + 'linnoituksen juhlasisäänkäynniksi.',
                 lahde: 'Jisis, Wikimedia Commons (CC BY-SA 4.0)',
               },
@@ -10089,9 +10093,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'matkan ja hoitaa jarrutuksen. Kesässä rataa kierretään noin '
             + '47 000 kertaa. Huvipuiston omistaa Lasten Päivän Säätiö, ja '
             + 'tuotto jaetaan kuudelle lastensuojelujärjestölle.',
-          selite: 'Vuoristoradan sininen juna kiipeää ylös täydessä lastissa. '
-            + 'Kiskojen alusta, pylväät ja kaiteet ovat puuta, kuten radan '
-            + 'valmistuessa 1951.',
+          selite: 'Vuoristoradan sininen juna kiipeää ylös täydessä lastissa '
+            + 'puisten pylväiden ja kaiteiden välissä.',
           lahde: 'Oona Räisänen, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Vuoristorata (Linnanmäki)',
         },
@@ -10105,10 +10108,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'silakkamarkkinat. Joka lokakuu Eteläsataman rantaan purjehtii '
             + 'kalastajia myymään suolattua ja maustettua silakkaa suoraan '
             + 'veneen kannelta, ja raati valitsee vuoden parhaan maustekalan.',
-          selite: 'Syys- eli silakkamarkkinat Kauppatorilla 1890-luvulla. Silakan '
-            + 'lisäksi kojuissa myytiin villasukkia ja kangaspakkoja — '
-            + 'markkinat olivat saariston ja kaupungin vuosittainen '
-            + 'kohtaaminen.',
+          selite: 'Syys- eli silakkamarkkinat Kauppatorilla 1890-luvulla, '
+            + 'kojuissa silakan lisäksi villasukkia ja kangaspakkoja.',
           lahde: 'Unknown author, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Silakkamarkkinat',
         },
@@ -10123,9 +10124,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hahmoista 2000-luvulla Kivimiehet, ja niille on puettu '
             + 'jääkiekkomaajoukkueen pelipaidat, kasvomaskit ja Käärijän '
             + 'vihreä bolero.',
-          selite: 'Kaksi aseman neljästä kivimiehestä alaviistosta kuvattuna. '
-            + 'Punertavat graniittihahmot pitelevät valkoisia pallolamppuja, '
-            + 'ja vartalon alaosa jatkuu uurteisena pilarina seinään asti.',
+          selite: 'Kaksi aseman neljästä kivimiehestä alaviistosta: punertavat '
+            + 'graniittihahmot pitelevät valkoisia pallolamppuja.',
           lahde: 'Ethan Doyle White, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Lyhdynkantajat',
         },
@@ -10157,9 +10157,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kauppatorilta kuuluu joukkoliikenteeseen ja kulkee ympäri '
             + 'vuoden. Kirkontornin majakka välähtää neljä lyhyttä kertaa — '
             + 'se on morseaakkosten H niin kuin Helsinki.',
-          selite: 'Vanha rannikkotykki Suomenlinnan Kustaanmiekassa. Pitkä musta '
-            + 'piippu lepää ruostuneella rautalavetilla, ja takana näkyy '
-            + 'linnoituksen matalaa kivistä maastoa.',
+          selite: 'Vanha rannikkotykki Suomenlinnan Kustaanmiekassa, pitkä '
+            + 'musta piippu ruostuneella rautalavetilla.',
           lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)',
           wiki: 'Suomenlinna',
         },
@@ -10175,8 +10174,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nimikkopuistoa. Reds-elokuvan ryhmä taas odotti Helsingissä '
             + 'lunta.',
           selite: 'Uspenskin katedraali Katajanokan kalliolla: punatiiliset '
-            + 'seinät ja kullatut sipulikupolit. Tiilet tuotiin '
-            + 'Ahvenanmaalta, puretusta Bomarsundin linnoituksesta.',
+            + 'seinät ja kullatut sipulikupolit — tiilet tuotiin puretusta '
+            + 'Bomarsundin linnoituksesta.',
           lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Uspenskin katedraali',
         },
@@ -10197,6 +10196,15 @@ export const KULTTUURI_KATEGORIAT = {
    * EI TARINAKAARTA (omistajan linjaus 17.8.2026): ei matkakirjan
    * kaaritekstejä eikä kohtaamista.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+   * PAINOPISTE"): kaikki tämän kaupungin kuvatekstit — kansikuvat,
+   * avauskuvat, nostojen selitteet ja Matkailijalle-osion kuvat —
+   * on tiivistetty YHTEEN virkkeeseen. Sivujen johdannot pysyvät
+   * lyhyinä; lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/europe-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   tampere: [
     {
       id: 'kaupunki',
@@ -10208,8 +10216,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Tampere Cathedral.jpg',
           selite: 'Tampereen tuomiokirkko harmaasta graniitista: paksu '
-            + 'nelisivuinen torni, jyrkät punatiilikatot ja pyöreä ruusuikkuna '
-            + 'päädyssä. Lars Sonck suunnitteli kirkon, ja se valmistui 1907.',
+            + 'nelisivuinen torni, jyrkät punatiilikatot ja pyöreä '
+            + 'ruusuikkuna päädyssä.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -10326,10 +10334,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'on niin tiivis, ettei kulkuneuvoa oikeastaan tarvita.',
               kuva: {
                 tiedosto: 'Raitiovaunu1 Tampere Tammerfors 240725.jpg',
-                selite: 'Vihreä raitiovaunu numero 1 Hämeenkadulla '
-                  + 'Keskustorin kohdalla. Kiskot kaartavat etualalla '
-                  + 'kivetyksen halki, ja taustalla on 1900-luvun alun '
-                  + 'kivitaloja.',
+                selite: 'Vihreä raitiovaunu numero 1 Hämeenkadulla Keskustorin '
+                  + 'kohdalla, taustalla 1900-luvun alun kivitaloja.',
                 lahde: 'Drefer, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -10348,16 +10354,14 @@ export const KULTTUURI_KATEGORIAT = {
                   tiedosto: 'Finlayson 2018.jpg',
                   selite: 'Finlaysonin viisikerroksinen punatiilinen '
                     + 'tehdasrakennus Frenckellinaukion laidalla, takana '
-                    + 'yksinäinen tiilipiippu ja katolla Suomen lippu. Alhaalla '
-                    + 'on ravintolan punainen markiisi.',
+                    + 'yksinäinen tiilipiippu ja katolla Suomen lippu.',
                   lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-17339041906.jpg',
-                  selite: 'Kosken yli vievä kapea kävelysilta pilvisenä '
-                    + 'päivänä. Molemmin puolin nousevat punatiiliset '
-                    + 'tehdassalit kaari-ikkunoineen, ja vasemmalla vesi on '
-                    + 'laskenut niin alas, että uoman kalliot ovat paljaina.',
+                  selite: 'Kosken yli vievä kapea kävelysilta pilvisenä päivänä '
+                    + 'punatiilisten tehdassalien välissä, vasemmalla uoman '
+                    + 'kalliot paljaina.',
                   lahde: 'Jorge Franganillo, Flickr (CC BY 2.0)',
                 },
               ],
@@ -10375,7 +10379,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Pyynikki observation tower doughnut cafe on 1st May 2016.jpg',
                 selite: 'Sokerissa kieritetty munkki ja lasillinen simaa '
-                  + 'metallitarjottimella. Lasin kyljessä lukee PYYNIKIN '
+                  + 'metallitarjottimella, lasin kyljessä teksti PYYNIKIN '
                   + 'MUNKKIKAHVILA.',
                 lahde: 'Lauren Stevens, Wikimedia Commons (CC BY-SA 4.0)',
               },
@@ -10393,8 +10397,7 @@ export const KULTTUURI_KATEGORIAT = {
                 {
                   tiedosto: 'Mustamakkara2019.jpg',
                   selite: 'Kaksi paksua, lähes mustaa makkaraa pahvivadilla ja '
-                    + 'niiden vieressä kirkkaanpunainen puolukkahillo. '
-                    + 'Makkaran leikatusta päästä näkyy karkea ohrainen sisus.',
+                    + 'niiden vieressä kirkkaanpunainen puolukkahillo.',
                   lahde: 'Onsilla / Wikimedia Commons, Wikimedia Commons (CC BY 4.0)',
                 },
                 {
@@ -10561,8 +10564,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sähkön. Tammerkoski on nykyään yksi Suomen '
             + 'kansallismaisemista, ja sen rantoja pitkin kävellään '
             + 'tehtaalta toiselle.',
-          selite: 'Tammerkosken alajuoksu kesäpäivänä. Vasemmalla on hotellin '
-            + 'valkoinen seinä ja vihreäkupolinen talo, keskellä kaartuu '
+          selite: 'Tammerkosken alajuoksu kesäpäivänä: keskellä kaartuu '
             + 'Hämeensillan graniittiholvi ja oikealla nousee Takon tehtaan '
             + 'punainen tiilipiippu.',
           lahde: 'Drefer, Wikimedia Commons (CC BY-SA 4.0)',
@@ -10581,9 +10583,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin vanhan kivisillan näköiseksi ja verhoiltiin '
             + 'samalla punertavalla graniitilla — patsaat nostettiin '
             + 'takaisin paikoilleen.',
-          selite: 'Hämeensillan graniittiholvi vedenpinnan tasalta kuvattuna. '
-            + 'Kaiteen päällä erottuu yksi pronssinen mieshahmo, ja sillan '
-            + 'alta näkyy vastarannan puistoa.',
+          selite: 'Hämeensillan graniittiholvi vedenpinnan tasalta, kaiteen '
+            + 'päällä yksi pronssinen mieshahmo.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Hämeensilta',
         },
@@ -10657,9 +10658,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nähtävä lanka myös pimeällä, ja avoliekki oli puuvillasalissa '
             + 'jatkuva palonvaara. Sali sai nimekseen Plevna, ja siinä '
             + 'toimii nykyään elokuvateatteri.',
-          selite: 'Plevnan pitkä punatiilinen julkisivu talvella. Portin '
-            + 'yläpuolella lukee FINLAYSON & C:o ja katolla on elokuva'
-            + 'teatterin keltainen kyltti; kadulla on lunta ja autoja.',
+          selite: 'Plevnan pitkä punatiilinen julkisivu talvella, portin '
+            + 'yläpuolella teksti FINLAYSON & C:o ja katolla '
+            + 'elokuvateatterin keltainen kyltti.',
           lahde: 'Museokeskus Vapriikki, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -10681,6 +10682,13 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on YKSI virke): tämän kaupungin kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Nostot, oppaat, johdannot, matkailuvinkit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   tallinna: [
     {
       id: 'kaupunki',
@@ -10691,22 +10699,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Ayuntamiento, Tallin, Estonia, 2012-08-05, DD 09.JPG',
-          selite: 'Raatihuoneen torni kapean kadun päässä. Vaalea kivitorni '
-            + 'nousee 64 metriin, ja huipulla on tumma renessanssiajan kärki. '
-            + 'Alhaalla seisoo hevoskärry raidallisen katoksen alla.',
+          selite: 'Raatihuoneen torni kapean kadun päässä: vaalea kivitorni '
+            + 'nousee 64 metriin ja päättyy tummaan renessanssiajan kärkeen, '
+            + 'ja alhaalla seisoo hevoskärry katoksen alla.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Viru Gate in Tallinn (45758703212).jpg',
           selite: 'Virun portin kaksi pyöreää tornia valaistuina sinisenä '
-            + 'hetkenä. Portti johtaa vanhaankaupunkiin idästä, märkä '
-            + 'katukivetys heijastaa valot, ja kadun päässä siintää tornin '
-            + 'huippu.',
+            + 'hetkenä: portti johtaa vanhaankaupunkiin idästä, ja märkä '
+            + 'katukivetys heijastaa valot.',
           lahde: 'Radek Kucharski, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Alexander Nevsky Cathedral, Tallinn.jpg',
-          selite: 'Aleksanteri Nevskin katedraali Toompean laella. Mustat '
+          selite: 'Aleksanteri Nevskin katedraali Toompean laella: mustat '
             + 'sipulikupolit ja kultaiset ristit valmistuivat vuonna 1900, '
             + 'kun Viro kuului Venäjän keisarikuntaan.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 3.0)',
@@ -10715,7 +10722,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Architectural Detail - Kalamaja District - Tallinn - Estonia - 01 (36045920535).jpg',
-          selite: 'Rivi vanhoja puutaloja vinosti kuvattuna: lähinnä on okrankeltainen kaksikerroksinen talo, sen takana vaaleanpunainen ja kauimpana harmaaksi patinoitunut. Katot ovat ruosteenpunaista peltiä, ja seiniä kiertävät vaakalaudat ja peltiset syöksytorvet.',
+          selite: 'Rivi Kalamajan vanhoja puutaloja vinosti kuvattuna: '
+            + 'okrankeltainen, vaaleanpunainen ja harmaaksi patinoitunut talo '
+            + 'peräkkäin, kattoina ruosteenpunaista peltiä.',
           lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
         },
         kappale: 'Suomalaiselle Tallinna on tuttu vanhastakaupungista ja '
@@ -10741,7 +10750,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'linjaa. Joukkoliikenne on maksutonta, mutta vain '
                 + 'kaupunkiin kirjatuille asukkaille: muualta tulevat '
                 + 'ostavat lipun normaalisti.',
-              kuva: { tiedosto: 'Empty tram near Tallinn airport.JPG', selite: 'Raitiovaunun tyhjä sisätila päästä päähän kuvattuna: kuvioidut punasiniset istuimet riveissä, hopeanväriset kaiteet ja katossa pitkittäiset valolistat. Kattonäytöllä lukee linjan numero ja kellonaika, ja ikkunoista tulvii kirkas päivänvalo.', lahde: 'Dmitry G, Wikimedia Commons (PD)' },
+              kuva: { tiedosto: 'Empty tram near Tallinn airport.JPG', selite: 'Raitiovaunun tyhjä sisätila päästä päähän kuvattuna: kuvioidut punasiniset istuimet riveissä, hopeanväriset kaiteet ja kattonäytöllä linjan numero ja kellonaika.', lahde: 'Dmitry G, Wikimedia Commons (PD)' },
             },
             {
               otsikko: 'Puutaloja ja betonia',
@@ -10754,7 +10763,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Lasnamäen betonilähiössä asuu 119 695 ihmistä eli '
                 + 'runsas neljäsosa koko kaupungista. Rakentaminen '
                 + 'alkoi 1973.',
-              kuva: { tiedosto: 'Soviet-era apartment building in Lasnamäe, Tallinn, Estonia.jpg', selite: 'Erittäin pitkä kahdeksankerroksinen elementtitalo kaartuu tien vartta pitkin niin kauas, ettei sen päätä näy. Julkisivussa vuorottelevat valkoiset parvekelevyt ja vaalea rappaus. Etualalla on tyhjä tie ja harmaa kevättalven nurmi.', lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)' },
+              kuva: { tiedosto: 'Soviet-era apartment building in Lasnamäe, Tallinn, Estonia.jpg', selite: 'Lasnamäen kahdeksankerroksinen elementtitalo kaartuu tien vartta pitkin niin kauas, ettei sen päätä näy, ja julkisivussa vuorottelevat valkoiset parvekelevyt ja vaalea rappaus.', lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)' },
             },
             {
               otsikko: 'Valtio, johon voi liittyä verkosta',
@@ -10912,9 +10921,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuulijaa. Syyskuussa 1988 samalle kentälle kokoontui arviolta '
             + '300 000 ihmistä laulamaan lauluja, joita ei silloin saanut '
             + 'laulaa julkisesti. Siitä tuli nimi laulava vallankumous.',
-          selite: 'XXVI laulujuhlat kesällä 2014. Yhteiskuoro seisoo laulukaaren '
-            + 'alla ja yleisö kentällä. Kaari valmistui 1960, ja sen kaareva '
-            + 'katto heijastaa äänen alas väkijoukkoon.',
+          selite: 'XXVI laulujuhlat kesällä 2014: yhteiskuoro seisoo vuonna '
+            + '1960 valmistuneen laulukaaren alla ja yleisö kentällä.',
           lahde: 'Ivo Kruusamägi, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Tallinnan laulujuhlat',
           musiikki: 'https://music.apple.com/fi/search?term=estonian%20choir',
@@ -10959,9 +10967,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'se vaurioitui, ja tornissa on nyt vaskiseppä Vello Rooveerin '
             + 'vuonna 1996 takoma kopio. Alkuperäinen seisoo museossa '
             + 'sisällä.',
-          selite: 'Alkuperäinen Vana Toomas läheltä. Metallista taottu sotilas '
-            + 'leveälierisessä hatussa, rinnassa haarniska, vyöllä pitkä '
-            + 'miekka ja kädessä tanko. Pinta on tummunut vihertäväksi.',
+          selite: 'Alkuperäinen Vana Toomas läheltä: metallista taottu '
+            + 'sotilas leveälierisessä hatussa, haarniska rinnassa ja miekka '
+            + 'vyöllä, pinta vihertäväksi tummuneena.',
           lahde: 'Kynnap, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Tallinnan raatihuone',
         },
@@ -10978,29 +10986,23 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Tallinn Landmarks 01.jpg',
           selite: 'Alakaupunki Toompean rinteeltä kesäpäivänä: etualalla '
-            + 'kohoaa kaupunginmuurin harmaita kivitorneja punaisine '
-            + 'kartiokattoineen, ja keskellä nousee Olevisten kirkon '
-            + 'vaalea torni tummine huippuineen. Horisontissa siintää '
-            + 'meri ja sataman rakenteita.',
+            + 'kaupunginmuurin kivitorneja punaisine kartiokattoineen, '
+            + 'keskellä Olevisten kirkon vaalea torni ja horisontissa meri.',
           lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tallinn view from Kohtuotsa 2018.jpg',
           selite: 'Kohtuotsan näköalapaikalta uuteen keskustaan: '
-            + 'alareunassa ovat vanhankaupungin punaiset tiilikatot ja '
-            + 'päätykolmiot, ja niiden yllä kohoaa raatihuoneen kapea '
-            + 'tumma torni tuuliviireineen. Tornin takana seisoo rivi '
-            + 'lasipintaisia toimistotorneja — keskiaikainen ja '
-            + 'nykyinen kaupunki samassa kuvassa.',
+            + 'vanhankaupungin punaiset tiilikatot ja raatihuoneen kapea '
+            + 'torni tuuliviireineen, ja niiden takana rivi lasipintaisia '
+            + 'toimistotorneja.',
           lahde: 'VargaA, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Talvine Tallinn.jpg',
-          selite: 'Kaupungin siluetti meren takaa talvipäivänä: '
-            + 'etualalla rannassa on jäälohkareita ja rikkonaista '
-            + 'ahtojäätä, kauempana meri on auki ja höyryää pakkasessa. '
-            + 'Usvan yläpuolella erottuu torniviiva kirkkojen kapeine '
-            + 'huippuineen ja oikealla sataman nostureita.',
+          selite: 'Kaupungin siluetti meren takaa talvipäivänä: rannassa '
+            + 'ahtojäätä, ulompana höyryävä avovesi ja usvan yllä kirkkojen '
+            + 'torniviiva ja sataman nostureita.',
           lahde: 'Enel Lepik, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11030,9 +11032,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1820. Kesäkuun yönä 1820 palo kesti neljä tuntia ja söi koko '
             + 'sisustuksen. Loimun kerrotaan näkyneen Helsinkiin asti, ja '
             + 'uusi torninhuippu valmistui vasta 20 vuotta myöhemmin.',
-          selite: 'Olevisten kirkon torni alaviistosta kuvattuna. Valkoiseksi '
-            + 'rapattu kivitorni nousee suoraan siniselle taivaalle, ja aivan '
-            + 'ylhäällä erottuu vihertävä kuparinen kärki.',
+          selite: 'Olevisten kirkon torni alaviistosta kuvattuna: valkoiseksi '
+            + 'rapattu kivitorni nousee siniselle taivaalle ja päättyy '
+            + 'vihertävään kupariseen kärkeen.',
           lahde: 'SofiRussia, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Olevisten kirkko',
         },
@@ -11048,10 +11050,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Toompealle — siksi sitä on kutsuttu Epäluulon torniksi. Kahden '
             + 'eripituisen jalan takia Tallinnaa sanotaan leikillään '
             + 'ontuvaksi kaupungiksi.',
-          selite: 'Lyhyen jalan portti alhaalta katsottuna. Kiviholvin takaa '
-            + 'nousevat portaat Toompealle, paksu puuovi seisoo auki, ja '
-            + 'holvin yläpuolella on värillinen reliefi, jossa Neitsyt Maria '
-            + 'pitää lasta sylissään.',
+          selite: 'Lyhyen jalan portti alhaalta katsottuna: kiviholvin takaa '
+            + 'nousevat portaat Toompealle, ja holvin yläpuolella on reliefi, '
+            + 'jossa Neitsyt Maria pitää lasta sylissään.',
           lahde: 'NOSSER, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Toompea',
         },
@@ -11428,6 +11429,13 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on YKSI virke): tämän kaupungin kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Nostot, oppaat, johdannot, matkailuvinkit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   pietari: [
     {
       id: 'kaupunki',
@@ -11438,32 +11446,34 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Smolny Cathedral SPB 02.jpg',
-          selite: 'Smolnan katedraali kesätaivasta vasten. Seinät ovat '
-            + 'vaaleansiniset ja koristeet valkoiset, keskikupolin ympärillä '
-            + 'seisoo neljä tornia, ja molemmin puolin kaartuu luostarin '
-            + 'matalampi rakennus.',
+          selite: 'Smolnan katedraali kesätaivasta vasten: seinät ovat '
+            + 'vaaleansiniset ja koristeet valkoiset, ja keskikupolin '
+            + 'ympärillä seisoo neljä tornia.',
           lahde: 'Florstein (Telegram:WikiPhoto.Space), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Saint Petersburg Winter Palace IMG 6487 1280.jpg',
-          selite: 'Talvipalatsin julkisivu Palatsiaukiolle. Seinä on '
-            + 'vaaleanvihreä, pylväät valkoiset ja koristeet kullattuja; '
+          selite: 'Talvipalatsin julkisivu Palatsiaukiolle: seinä on '
+            + 'vaaleanvihreä, pylväät valkoiset ja koristeet kullattuja, ja '
             + 'portin edessä odottaa valkoisen hevosen vetämä vaunu.',
           lahde: 'Alexxx1979, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'The Bronze Horseman (St. Petersburg, Russia).jpg',
-          selite: 'Vaskiratsastaja jättimäisen graniittilohkareen päällä: hevonen '
-            + 'nousee takajaloilleen ja Pietari Suuri ojentaa kätensä '
-            + 'eteenpäin. Kiveen on kaiverrettu venäjäksi Pietari '
-            + 'ensimmäiselle, Katariina toiselta.',
+          selite: 'Vaskiratsastaja jättimäisen graniittilohkareen päällä, '
+            + 'hevonen takajaloillaan ja Pietari Suuri käsi ojossa; kiveen on '
+            + 'kaiverrettu venäjäksi Pietari ensimmäiselle, Katariina '
+            + 'toiselta.',
           lahde: 'Godot13, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Saint Petersburg Kunstkamera from Neva.jpg',
-          selite: 'Vaaleanvihreä barokkirakennus joen rannalla: pitkän kaksikerroksisen julkisivun keskeltä nousee valkoinen torni kupolein ja parvekkein. Rantaa reunustaa graniittimuuri, jonka edessä on laituri ja pieni valkoinen jokialus.',
+          selite: 'Vaaleanvihreä barokkirakennus joen rannalla: '
+            + 'kaksikerroksisen julkisivun keskeltä nousee valkoinen torni '
+            + 'kupolein ja parvekkein, ja rantaa reunustaa graniittimuuri '
+            + 'laitureineen.',
           lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Pietari on rakennettu Nevan suiston saarille. Saaria '
@@ -11488,7 +11498,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kanavien yli kulkee yli 340 isompaa siltaa, ja '
                 + 'pienemmät mukaan laskien niitä on toista tuhatta. '
                 + 'Kesäisin liikkuu myös kantosiipialuksia.',
-              kuva: { tiedosto: 'Metro SPB Line5 Admiralteyskaya Platform.jpg', selite: 'Tyhjä metrolaituri holvikaton alla: molemmin puolin nousee rivi mustia pylväitä kullattuine tyvineen, ja seinät ovat vaaleaa marmoria. Kiiltävä lattia heijastaa valot, ja perällä näkyy värikäs seinämosaiikki.', lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Metro SPB Line5 Admiralteyskaya Platform.jpg', selite: 'Tyhjä metrolaituri holvikaton alla: molemmin puolin rivi mustia pylväitä kullattuine tyvineen, seinät vaaleaa marmoria ja perällä värikäs seinämosaiikki.', lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Sata saarta, sitten neljäkymmentä',
@@ -11653,10 +11663,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kauppiaiden muuttaa Moskovasta tänne rakentamaan uudet '
             + 'talonsa. Nimi on vaihtunut sen jälkeen kolmesti: Petrograd '
             + '1914, Leningrad 1924, Pietari taas 1991.',
-          selite: 'Pietari Suuri Godfrey Knellerin maalauksessa vuodelta 1698. '
-            + 'Hän seisoo hopeisessa haarniskassa kultainen viitta '
-            + 'hartioilla, ja takana olevasta aukosta näkyy purjelaivoja '
-            + 'merellä.',
+          selite: 'Pietari Suuri Godfrey Knellerin maalauksessa vuodelta '
+            + '1698, hopeisessa haarniskassa ja kultainen viitta hartioilla, '
+            + 'taustalla purjelaivoja merellä.',
           lahde: 'Godfrey Kneller, Wikimedia Commons (PD)',
           wiki: 'Pietari Suuri',
         },
@@ -11669,9 +11678,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hiirenpyytäjiä pidettiin maan parhaina. Nykyään kissoja on '
             + 'noin 60, niillä on kolme hoitajaa, ja museossa on '
             + 'lehdistösihteeri pelkästään kissoja varten.',
-          selite: 'Eremitaašin kissa istumassa museon graniittiportaalla. Kissat '
-            + 'asuvat kellarikerroksessa mutta käyvät kesäisin ulkona '
-            + 'rantakadulla.',
+          selite: 'Eremitaašin kissa istumassa museon graniittiportaalla, '
+            + 'jonne kellarikerroksen asukkaat tulevat kesäisin ulos.',
           lahde: 'Petrov Victor, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Eremitaaši',
         },
@@ -11685,7 +11693,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'haettiin rintamalta. Esitys kuului kaiuttimista kaduilla ja '
             + 'kaupungin ulkopuolelle asti. Sinfonia kestää noin 80 '
             + 'minuuttia.',
-          selite: 'Šostakovitš palokunnan varusteissa. Hän oli sodan alussa '
+          selite: 'Šostakovitš palokunnan varusteissa: hän oli sodan alussa '
             + 'Leningradin konservatorion palovartiossa, ja kuva kiersi '
             + 'maailman lehdissä 1942.',
           lahde: 'Wikimedia Commons (PD)',
@@ -11708,31 +11716,24 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Spb Views from Isaac Cathedral May2012 05.jpg',
           selite: 'Vanha ydin Iisakinkirkon kolonnadilta toukokuussa: '
-            + 'etualalla vihertyviä puita ja pelti- ja ruostepintaisia '
-            + 'kattoja, keskellä vaaleankeltainen klassistinen julkisivu '
-            + 'pylväsportiikkeineen ja harmaa kupoli. Oikealla erottuu '
-            + 'mintunvihreä pylväsjulkisivu, ja katot jatkuvat '
-            + 'horisonttiin asti.',
+            + 'vihertyvien puiden ja peltikattojen takana kohoaa '
+            + 'vaaleankeltainen klassistinen julkisivu pylväsportiikkeineen '
+            + 'ja harmaa kupoli.',
           lahde: 'A.Savin, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Petersburg Vasilievsky Island-20070703-RM-124551.jpg',
           selite: 'Vasilinsaaren kärki Nevan yli kesäpäivänä: etualalla '
-            + 'on punatiilinen laiturikiveys ja valurautainen pollari '
-            + 'raskaine ketjuineen. Vastarannalla seisovat vanhan '
-            + 'pörssitalon valkoinen pylväsrivi ja punainen '
-            + 'rostraalipylväs, ja niiden oikealla puolella jatkuu pitkä '
-            + 'keltainen makasiinirakennus graniittirantaa myöten.',
+            + 'punatiilinen laiturikiveys ja valurautainen pollari, '
+            + 'vastarannalla vanhan pörssitalon valkoinen pylväsrivi ja '
+            + 'punainen rostraalipylväs.',
           lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Санкт-Петербург. Дворцовый мост и Зимний дворец.jpg',
-          selite: 'Jäätynyt Neva talviyönä: etuala on kokonaan lumen '
-            + 'peittämää ahtojäätä, jonka röykkiöt piirtyvät '
-            + 'sinivalkoisina pimeydessä. Sen takana Palatsisilta on '
-            + 'reunustettu valkoisilla valonauhoilla ja lyhtypylväissä '
-            + 'hehkuvat siniset valokoristeet. Sillan takaa erottuu '
-            + 'Talvipalatsin valaistu julkisivu.',
+          selite: 'Jäätynyt Neva talviyönä: lumen peittämän ahtojään takana '
+            + 'Palatsisilta on reunustettu valkoisilla valonauhoilla, ja '
+            + 'sillan takaa erottuu Talvipalatsin valaistu julkisivu.',
           lahde: 'Igor Abramov, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -11760,9 +11761,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'myyntiin, ja kaupungissa on 2000-luvun alusta järjestetty '
             + 'sille oma juhla. Suomessa sama kala tunnetaan myös nimellä '
             + 'norssi.',
-          selite: 'Paistettuja kuoreita lautasella Pietarissa. Kalat ovat '
-            + 'kämmenen mittaisia ja ne syödään kokonaisina, päät ja pyrstöt '
-            + 'mukaan lukien.',
+          selite: 'Paistettuja kuoreita lautasella Pietarissa: kämmenen '
+            + 'mittaiset kalat syödään kokonaisina, päät ja pyrstöt mukaan '
+            + 'lukien.',
           lahde: 'Markovka, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kuore',
         },
@@ -11777,14 +11778,21 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tyttö odottaa vuosikausia laivaa, jolla on punaiset purjeet. '
             + 'Nyt sellainen laiva purjehtii oikeasti Nevalle — vuonna 2010 '
             + 'sitä katsoi kolme miljoonaa ihmistä.',
-          selite: 'Purjelaiva punaisine purjeineen Nevalla kesällä 2010. '
-            + 'Rantakadun palatsirivi on valaistu ja taivas täynnä '
+          selite: 'Purjelaiva punaisine purjeineen Nevalla kesällä 2010, '
+            + 'rantakadun palatsirivi valaistuna ja taivas täynnä '
             + 'ilotulitusta.',
           lahde: 'Spbkinoforum, Wikimedia Commons (CC BY 3.0)',
         },
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on YKSI virke): tämän kaupungin kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Nostot, oppaat, johdannot, matkailuvinkit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   moskova: [
     {
       id: 'kaupunki',
@@ -11795,22 +11803,20 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Sobornaya Square at the Moscow Kremlin, 2014.jpg',
           selite: 'Kremlin Katedraaliaukio ylhäältä Ivan Suuren kellotornista '
-            + 'kuvattuna. Valkoiset kirkot seisovat kivetyn aukion ympärillä, '
-            + 'kupolit hopeana ja kultana, ja oikealla kohoaa palatsin vihreä '
-            + 'katto.',
+            + 'kuvattuna: valkoiset kirkot hopeisine ja kultaisine '
+            + 'kupoleineen kivetyn aukion ympärillä.',
           lahde: 'Gerarus, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Moscow State University crop.jpg',
           selite: 'Moskovan valtionyliopiston päärakennus, 239 metriä korkea '
-            + 'tornitalo vuodelta 1953. Se oli Euroopan korkein rakennus 37 '
-            + 'vuoden ajan, ja edessä puiston keskellä seisoo patsas.',
+            + 'tornitalo vuodelta 1953, joka oli Euroopan korkein rakennus 37 '
+            + 'vuoden ajan.',
           lahde: 'Dmitry A. Mottl (cropped by King of Hearts), Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Vostok 8K72K in VDNKh (1).jpg',
-          selite: 'Vostok-kantoraketin täysikokoinen malli VDNH-puistossa. '
-            + 'Puna-valkoinen raketti nojaa harmaaseen teräsristikkoon; '
+          selite: 'Vostok-kantoraketin täysikokoinen malli VDNH-puistossa; '
             + 'tällainen raketti vei Juri Gagarinin kiertoradalle vuonna '
             + '1961.',
           lahde: 'Dmitry Ivanov, Wikimedia Commons (CC BY-SA 4.0)',
@@ -11819,7 +11825,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Boulevard Ring, Yauzsky Boulevard - Moscow, Russia - panoramio.jpg',
-          selite: 'Leveä katu, jonka keskellä kulkee puistokaistale isoine lehtipuineen ja mustine valurautalyhtyineen. Vasemmalla kaartaa sinivalkoinen raitiovaunu ja oikealla nousee vaaleanharmaa kerrostalorivi koristeellisine julkisivuineen.',
+          selite: 'Leveä katu, jonka keskellä kulkee puistokaistale isoine '
+            + 'lehtipuineen ja valurautalyhtyineen, vasemmalla sinivalkoinen '
+            + 'raitiovaunu ja oikealla koristeellinen kerrostalorivi.',
           lahde: 'Sergey Ashmarin, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Moskovan kartta on kehä kehän sisällä. Puistokadut '
@@ -11844,7 +11852,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'rakennettu tavararata kiertää yhä kaupunkia, mutta '
                 + 'se muutettiin matkustajaliikenteen kehäradaksi '
                 + 'vuonna 2016.',
-              kuva: { tiedosto: 'Moscow, unusually easy traffic on the north arc of the MKAD (April 2013).jpg', selite: 'Monikaistainen moottoritie kuvattuna sillalta: vasemmalla ajaa tiivis rivi autoja ja rekkoja kohti kameraa, oikealla poispäin. Keskikaistalla nousee korkea valaisinpylväsrivi, ja reunoilla on mainostauluja ja havumetsää.', lahde: 'Konstantin E, Wikimedia Commons (CC BY 3.0)' },
+              kuva: { tiedosto: 'Moscow, unusually easy traffic on the north arc of the MKAD (April 2013).jpg', selite: 'Monikaistainen moottoritie sillalta kuvattuna: tiivis rivi autoja ja rekkoja molempiin suuntiin, keskikaistalla korkea valaisinpylväsrivi ja reunoilla havumetsää.', lahde: 'Konstantin E, Wikimedia Commons (CC BY 3.0)' },
             },
             {
               otsikko: 'Kehä kehän sisällä',
@@ -12013,7 +12021,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kelloa ei ole soitettu kertaakaan. Saman muurin sisällä seisoo '
             + 'tsaarin tykki vuodelta 1586, jota ei ole koskaan ammuttu '
             + 'sodassa.',
-          selite: 'Tsaarin kello jalustallaan Kremlissä. Kellon kyljessä ammottaa '
+          selite: 'Tsaarin kello jalustallaan Kremlissä: kyljessä ammottaa '
             + 'musta aukko, ja irronnut pala nojaa maassa kellon vierellä '
             + 'kuin auki jätetty ovi.',
           lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
@@ -12029,8 +12037,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '2011 kuusi vuotta kestäneen korjauksen jälkeen, jossa salin '
             + 'alkuperäinen akustiikka palautettiin. Teatterin julkisivu on '
             + 'painettu Venäjän sadan ruplan seteliin.',
-          selite: 'Bolshoin koko seurue lavalla. Taustakankaaseen on maalattu '
-            + 'teatterin oma julkisivu pylväineen, ja edessä seisovat '
+          selite: 'Bolshoin koko seurue lavalla: taustakankaaseen on maalattu '
+            + 'teatterin oma pylväsjulkisivu, ja edessä seisovat '
             + 'balettitanssijat mustissa tutuissa.',
           lahde: 'www.kremlin.ru, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Bolshoi-teatteri',
@@ -12050,9 +12058,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metriä. Vesi lämmitettiin, joten siellä uitiin pakkasellakin. '
             + 'Allas suljettiin 1994, ja kirkko rakennettiin samalle paikalle '
             + 'uudelleen.',
-          selite: 'Uudelleen rakennettu Kristus Vapahtajan katedraali. Valkoisen '
-            + 'kivijulkisivun päällä on suuri kullattu kupoli ja neljä '
-            + 'pienempää, ja portaita ylös kulkee jono ihmisiä.',
+          selite: 'Uudelleen rakennettu Kristus Vapahtajan katedraali: '
+            + 'valkoisen kivijulkisivun päällä on suuri kullattu kupoli ja '
+            + 'neljä pienempää, ja portaita ylös kulkee jono ihmisiä.',
           lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
           wiki: 'Kristus Vapahtajan katedraali (Moskova)',
         },
@@ -12067,32 +12075,26 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Moscow skyline.jpg',
-          selite: 'Varpusvuorilta talvi-iltahämärässä: etualalla '
-            + 'huurteisia lehdettömiä puunlatvoja, ja niiden takaa '
-            + 'avautuu jokilaakso valonauhoineen. Vasemmalla kohoaa '
-            + 'lasitornirivistö, oikealla savuavat voimalan '
-            + 'punavalkoiset piiput. Taivas on syvänsininen ja '
-            + 'pilvivyöhykkeiden juovittama.',
+          selite: 'Varpusvuorilta talvi-iltahämärässä: huurteisten '
+            + 'puunlatvojen takaa avautuu jokilaakso valonauhoineen, '
+            + 'vasemmalla lasitornirivistö ja oikealla voimalan punavalkoiset '
+            + 'piiput.',
           lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Moscow panoramic October 2008.jpg',
-          selite: 'Moskvajoen mutka ylhäältä lokakuisena päivänä: '
-            + 'alareunassa kulkee lasitettu kävelysilta joen yli, ja '
-            + 'rannoissa on laitureita ja kiinnitettyjä jokilaivoja. '
-            + 'Keskellä joki kaartuu kohti ydintä, oikealla nousee '
-            + 'pyöreä sinilasinen torni ja sen takana Stalinin ajan '
-            + 'tornitalo piikkeineen.',
+          selite: 'Moskvajoen mutka ylhäältä lokakuisena päivänä: lasitettu '
+            + 'kävelysilta ylittää joen, rannoissa on kiinnitettyjä '
+            + 'jokilaivoja ja oikealla nousee pyöreä sinilasinen torni '
+            + 'Stalinin ajan tornitalon edessä.',
           lahde: 'Антон Денисов, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'High Night Moscow City (195406651).jpeg',
           selite: 'Kaupunki pilvenpiirtäjän korkeudelta auringonlaskun '
-            + 'jälkeen: oikeaa reunaa hallitsevat kahden naapuritornin '
-            + 'lasijulkisivut valaistuine ikkunariveineen. Vasemmalla '
-            + 'kaupunki leviää alas oranssien katuvalojen mattona, jota '
-            + 'moottoritiet halkovat valojuovina. Taivas hehkuu '
-            + 'vaaleanpunaisena ja tummenee ylöspäin siniseksi.',
+            + 'jälkeen: oikealla kahden naapuritornin valaistut '
+            + 'lasijulkisivut, vasemmalla katuvalojen oranssi matto ja '
+            + 'moottoriteiden valojuovat.',
           lahde: 'Igor Gorshkov, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -12121,9 +12123,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Dushkin sai New Yorkin maailmannäyttelyn pääpalkinnon vuonna '
             + '1939. Sodan aikana asemalla suojauduttiin pommituksilta, ja '
             + 'marraskuussa 1941 sen keskushallissa pidettiin suuri kokous.',
-          selite: 'Majakovskajan laituri alhaalta kuvattuna. Kattoon on upotettu '
-            + 'soikeita kuoppia, joiden pohjassa on mosaiikki ja reunalla '
-            + 'rengas lamppuja.',
+          selite: 'Majakovskajan laituri alhaalta kuvattuna: kattoon on '
+            + 'upotettu soikeita kuoppia, joiden pohjassa on mosaiikki ja '
+            + 'reunalla rengas lamppuja.',
           lahde: 'Andrey Kryuchenko, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Moskovan metro',
         },
@@ -12137,8 +12139,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea. '
             + 'Sunnuntaina on tapana pyytää anteeksi kaikilta, joita on '
             + 'vuoden mittaan loukannut.',
-          selite: 'Laskiaispöytä lumihangessa koivikon reunassa. Samovaari '
-            + 'höyryää keskellä, koreissa on blinejä ja piirakoita, ja seurue '
+          selite: 'Laskiaispöytä lumihangessa koivikon reunassa: samovaari '
+            + 'höyryää keskellä, koreissa on blinejä ja piirakoita ja seurue '
             + 'seisoo ulkona takit päällä.',
           lahde: 'Avsolov, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Maslenitsa',
@@ -19765,6 +19767,13 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on YKSI virke): tämän kaupungin kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Nostot, oppaat, johdannot, matkailuvinkit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   riika: [
     {
       id: 'kaupunki',
@@ -19782,23 +19791,24 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Riga Cathedral viewed from Dome square, Riga, Latvia Jul 14, 2022 09-42-07 AM.jpeg',
-          selite: 'Riian tuomiokirkko punatiilisenä aukion laidalla. Tornissa on '
-            + 'tummunut kupoli ja kello, ja aukiolla kävelee ihmisiä '
-            + 'kesäpäivänä.',
+          selite: 'Riian tuomiokirkko punatiilisenä aukion laidalla, tornissa '
+            + 'tummunut kupoli ja kello ja aukiolla kesäpäivän kävelijöitä.',
           lahde: 'Crannofonix, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Livu Square - panoramio.jpg',
-          selite: 'Līvun aukio vanhassakaupungissa. Keltaisia ja vihreitä taloja, '
-            + 'keltaisia aurinkovarjoja terassilla ja etualalla matalaksi '
-            + 'leikattu kukkapenkki.',
+          selite: 'Līvun aukio vanhassakaupungissa: keltaisia ja vihreitä '
+            + 'taloja, keltaisia aurinkovarjoja terassilla ja etualalla '
+            + 'matala kukkapenkki.',
           lahde: 'TomasEE, Wikimedia Commons (CC BY 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Riga tram 57051 2020-03 Skoda 15T.jpg',
-          selite: 'Sinivalkoinen matalalattiaraitiovaunu ajaa leveää katua pitkin talvipäivänä. Vasemmalla on vaaleanharmaa koulumainen rakennus ja sen takana punatiilinen kerrostalo; kiskot kaartuvat kadun keskellä kohti keskustaa.',
+          selite: 'Sinivalkoinen matalalattiaraitiovaunu ajaa leveää katua '
+            + 'pitkin talvipäivänä, ja kiskot kaartuvat kadun keskellä kohti '
+            + 'keskustaa.',
           lahde: 'Svetlov Artem, Wikimedia Commons (CC0)',
         },
         kappale: 'Riika on Baltian suurin kaupunki, mutta se on myös '
@@ -19825,7 +19835,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Kaupungissa ajavat raitiovaunut ja johdinautot: '
                 + 'sähköraitiovaunut aloittivat 1901 ja johdinautot '
                 + '1947. Linjoja on kahdeksan ja kaksikymmentäneljä.',
-              kuva: { tiedosto: 'Riga Airport 2016.jpg', selite: 'Lentoaseman terminaali sinisellä hetkellä: katolla loistavat siniset kirjaimet, ja lasiseinän takana näkyy valaistu lähtöaula. Oikealla häämöttää lennonjohtotorni ja etualalla tyhjä ajotie suojatiemerkintöineen.', lahde: 'Avio2016, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Riga Airport 2016.jpg', selite: 'Riian lentoaseman terminaali sinisellä hetkellä: katolla loistavat siniset kirjaimet, lasiseinän takana valaistu lähtöaula ja oikealla lennonjohtotorni.', lahde: 'Avio2016, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Joen toinen puoli',
@@ -19838,7 +19848,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'virallisesti helmikuussa 1924. Vuonna 1812 kaikki '
                 + 'alueen rakennukset poltettiin ennen Napoleonin '
                 + 'joukkojen tuloa, joten talot ovat sitä nuorempia.',
-              kuva: { tiedosto: 'Kalnciema iela 16, Rīga, Latvia - panoramio.jpg', selite: 'Pitkä vaaleanvihreä puutalo kadun varressa lumisessa säässä: kaksi kerrosta, tiheä ikkunarivi ja keskellä pieni parveke kaiteineen. Talon edessä kasvaa kaksi lehdetöntä puuta ja tien reunassa on lumivalleja.', lahde: 'M.Strīķis, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Kalnciema iela 16, Rīga, Latvia - panoramio.jpg', selite: 'Pitkä vaaleanvihreä puutalo kadun varressa lumisessa säässä: kaksi kerrosta, tiheä ikkunarivi ja keskellä pieni parveke kaiteineen.', lahde: 'M.Strīķis, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Apteekkarin resepti vuodelta 1752',
@@ -19998,9 +20008,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '160 senttiä korkea, 70 laatikkoa, jokaisessa 20 lokeroa. '
             + 'Lappuja on 268 815, kukin 3 × 11 senttiä. Unesco liitti kaapin '
             + 'maailman muisti -rekisteriin 2001.',
-          selite: 'Dainakaapin alkuperäiskappale Latvian kansalliskirjastossa. '
-            + 'Laatikot on vedetty auki, ja lokeroissa näkyvät pystyyn '
-            + 'ladotut paperilaput, joihin laulut on kirjoitettu käsin.',
+          selite: 'Dainakaapin alkuperäiskappale Latvian '
+            + 'kansalliskirjastossa: laatikot on vedetty auki, ja lokeroissa '
+            + 'näkyvät käsin kirjoitetut laululiput pystyssä.',
           lahde: 'Savannah Rivka, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Daina',
           musiikki: 'https://music.apple.com/fi/search?term=latvian%20folk%20songs',
@@ -20015,8 +20025,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Se on kotoisin Kuurinmaalta Latvian länsiosasta, jossa asui '
             + 'liiviläisiä, ja sitä leivottiin ennen juhlapyhiksi. EU myönsi '
             + 'sille aidon perinteisen tuotteen merkin vuonna 2013.',
-          selite: 'Sklandrauši-piirakoita rivissä. Reunat nostetaan sormin '
-            + 'pystyyn ja täyte jää näkyviin: alla vaalea perunakerros, '
+          selite: 'Sklandrauši-piirakoita rivissä: reunat on nostettu sormin '
+            + 'pystyyn ja täyte jää näkyviin, alla vaalea perunakerros ja '
             + 'päällä oranssi porkkanakerros.',
           lahde: 'Liga Eglite, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Kuurinmaa',
@@ -20030,9 +20040,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria '
             + 'on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä '
             + 'Euroopan suurimpia.',
-          selite: 'Lihahallin sisäkatto Riian keskustorilla. Teräsristikko '
-            + 'kaartuu toistakymmentä metriä pään yläpuolelle. Se tehtiin '
-            + 'alun perin kannattamaan ilmalaivan seinämiä, ei kalatiskejä.',
+          selite: 'Lihahallin sisäkatto Riian keskustorilla: teräsristikko '
+            + 'kaartuu toistakymmentä metriä pään yläpuolella, sillä se '
+            + 'tehtiin alun perin kannattamaan ilmalaivan seinämiä.',
           lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Riian keskustori',
         },
@@ -20048,28 +20058,25 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Riga From 26th Floor of Radisson Blu, Latvia.jpg',
           selite: 'Kaupunki tornihotellin ikkunasta illan hämärtyessä: '
-            + 'alhaalla kulkee valaistu puistokatu ja sen päässä '
-            + 'kohoaa Vapaudenpatsaan vaalea pylväs. Kauempana '
-            + 'erottuvat Pietarinkirkon terävä huippu ja '
-            + 'Kansalliskirjaston vino lasikatto joen rannassa.',
+            + 'valaistun puistokadun päässä kohoaa Vapaudenpatsaan vaalea '
+            + 'pylväs ja kauempana Pietarinkirkon huippu ja '
+            + 'Kansalliskirjaston vino lasikatto.',
           lahde: 'Ken Eckert, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '20070630-IMG 1662. Rīgas Doms, panorāma.jpg',
-          selite: 'Vanhankaupungin torniviiva Daugavan toiselta '
-            + 'rannalta kesäpäivänä: rantaa reunustaa yhtenäinen '
-            + 'puurivi, jonka yli nousevat tuomiokirkon punatiilinen '
-            + 'torni mustine kupuineen ja kaksi kapeampaa kirkontornia. '
-            + 'Taivaalla ajelehtii poutapilviä.',
+          selite: 'Vanhankaupungin torniviiva Daugavan toiselta rannalta '
+            + 'kesäpäivänä: rantapuiden yli nousevat tuomiokirkon '
+            + 'punatiilinen torni mustine kupuineen ja kaksi kapeampaa '
+            + 'kirkontornia.',
           lahde: 'Karlis Ustups, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Art Nouveau Riga 09.jpg',
-          selite: 'Jugendkortteli katutasolta kirkkaassa auringossa: '
-            + 'kadun molemmin puolin nousee koristeellisia julkisivuja '
-            + 'keltaisena, vaaleanpunaisena ja vihreänä, ja niiden '
-            + 'parvekkeita kannattavat veistetyt konsolit ja '
-            + 'kasvomaiset koristeet. Katu kaartuu varjoon kauempana.',
+          selite: 'Jugendkortteli katutasolta kirkkaassa auringossa: kadun '
+            + 'molemmin puolin koristeellisia keltaisia, vaaleanpunaisia ja '
+            + 'vihreitä julkisivuja, joiden parvekkeita kannattavat veistetyt '
+            + 'kasvot.',
           lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -20121,9 +20128,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja lopulta kaupunki määräsi kääntämään kissat toisin päin. Nyt '
             + 'ne katsovat kiltataloa kohti, ja moni pysähtyy kadulle '
             + 'katsomaan niitä ylös.',
-          selite: 'Musta kissapatsas talon suippenevan tornihuipun päällä. Kissan '
-            + 'selkä on köyryssä ja häntä koukussa ylöspäin sinistä taivasta '
-            + 'vasten.',
+          selite: 'Musta kissapatsas talon suippenevan tornihuipun päällä, '
+            + 'selkä köyryssä ja häntä koukussa sinistä taivasta vasten.',
           lahde: 'Voytek S, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
@@ -20137,14 +20143,21 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. '
             + 'Talot korjattiin 1950-luvulla, ja nykyään niissä toimii '
             + 'arkkitehtuurimuseo.',
-          selite: 'Kolme kapeaa taloa vierekkäin kadun varrella: vasemmalla '
-            + 'vaaleanvihreä, keskellä keltainen porrasmaisine päätyineen ja '
-            + 'oikealla valkoinen. Katu on mukulakivinen.',
+          selite: 'Kolme kapeaa taloa vierekkäin mukulakivikadun varrella: '
+            + 'vasemmalla vaaleanvihreä, keskellä keltainen porrasmaisine '
+            + 'päätyineen ja oikealla valkoinen.',
           lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on YKSI virke): tämän kaupungin kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Nostot, oppaat, johdannot, matkailuvinkit, kuvatiedostot ja
+   * lähderivit ovat ennallaan.
+   */
   vilna: [
     {
       id: 'kaupunki',
@@ -20155,9 +20168,9 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Gedimino pilis by Augustas Didzgalvis.jpg',
-          selite: 'Gediminaksen torni vihreän kukkulan päällä. Punatiilisen '
-            + 'tornin salossa liehuu Liettuan lippu, ja taustalla mutkittelee '
-            + 'joki kaupungin läpi.',
+          selite: 'Gediminaksen torni vihreän kukkulan päällä, punatiilisen '
+            + 'tornin salossa Liettuan lippu ja taustalla joen mutka '
+            + 'kaupungin läpi.',
           lahde: 'BigHead (Augustas Didžgalvis), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -20168,16 +20181,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Pearl of Vilnius, the churches of Saint Anne and Bernardin (8123183908).jpg',
-          selite: 'Pyhän Annan kirkko ja sen takana bernardiinikirkko. Molemmat '
-            + 'on muurattu punatiilestä, ja Annan kirkon julkisivussa on '
-            + 'teräviä tornikoristeita.',
+          selite: 'Pyhän Annan kirkko ja sen takana bernardiinikirkko, '
+            + 'molemmat punatiilestä muurattuina ja Annan julkisivu terävine '
+            + 'tornikoristeineen.',
           lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Vilnius river.jpg',
-          selite: 'Näkymä joen mutkalle ylhäältä kesällä: vihreiden penkereiden välissä virtaa leveä joki, ja sen yli kaartuu vaalea kaarisilta. Etualalla on puistoa ja matalia taloja, taustalla nousee rivi lasisia tornitaloja.',
+          selite: 'Näkymä joen mutkalle ylhäältä kesällä: vihreiden '
+            + 'penkereiden välissä virtaa leveä joki, jonka yli kaartuu '
+            + 'vaalea kaarisilta, ja taustalla nousee rivi lasisia '
+            + 'tornitaloja.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Vilna on kahden joen yhtymäkohdassa, ja sen kaksi '
@@ -20204,7 +20220,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'helmikuuta 2025; sen tarkoitus on kaksinkertaistaa '
                 + 'kapasiteetti. Kentältä lähtee myös suoria busseja '
                 + 'muihin Baltian kaupunkeihin.',
-              kuva: { tiedosto: 'Vilnius International Airport Departure Terminal, June 2026.jpg', selite: 'Lentoaseman uusi lähtöhalli sisältä: kattoa jäsentävät vaaleat ripalamellit ja teräsristikko, ja lattia on vaaleaa kiveä. Oikealla on rivi valkoisia itsepalveluautomaatteja ja vasemmalla lähtöselvityksen jonoaidat.', lahde: 'Bdx, Wikimedia Commons (CC0)' },
+              kuva: { tiedosto: 'Vilnius International Airport Departure Terminal, June 2026.jpg', selite: 'Vilnan lentoaseman uusi lähtöhalli sisältä: kattoa jäsentävät vaaleat ripalamellit ja teräsristikko, ja oikealla on rivi valkoisia itsepalveluautomaatteja.', lahde: 'Bdx, Wikimedia Commons (CC0)' },
             },
             {
               otsikko: 'Kylä, josta kasvoi tornikortteli',
@@ -20217,7 +20233,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'alun perin suurruhtinaan metsästysmaata; se '
                 + 'liitettiin kaupunkiin 1901, ja siellä on yhä yli sata '
                 + 'puuhuvilaa.',
-              kuva: { tiedosto: '3bures by Augustas Didzgalvis.jpg', selite: 'Ilmakuva kolmesta lasitornista, joiden julkisivut heijastavat taivasta. Tornien takana ja sivuilla näkyy matalia vanhoja puu- ja tiilitaloja pihoineen, ja oikealla on rakennustyömaan keltaisia nostureita.', lahde: 'Augustas Didžgalvis, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: '3bures by Augustas Didzgalvis.jpg', selite: 'Ilmakuva kolmesta lasitornista, joiden takana ja sivuilla näkyy yhä matalia vanhoja puu- ja tiilitaloja pihoineen.', lahde: 'Augustas Didžgalvis, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Patsaat, jotka puhuvat',
@@ -20377,9 +20393,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'toisistaan — siis niin lähellä, että sointi hankaa korvaa '
             + 'tahallaan. Laji on kotoisin Aukštaitijasta, ja Unesco otti sen '
             + 'ihmiskunnan perintöluetteloon vuonna 2010.',
-          selite: 'Kaksi laulajaa esittää sutartinėtä. Laulajat seisovat '
-            + 'vastakkain ja liikkuvat askel kerrallaan: laululla on usein '
-            + 'oma yksinkertainen koreografiansa.',
+          selite: 'Kaksi laulajaa esittää sutartinėtä vastakkain seisten ja '
+            + 'askel kerrallaan liikkuen, sillä laululla on usein oma '
+            + 'yksinkertainen koreografiansa.',
           lahde: 'Bcecilija, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Liettua',
           musiikki: 'https://music.apple.com/fi/search?term=sutartines',
@@ -20412,9 +20428,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'perustuslaki, jossa on 41 pykälää. Ne on kiinnitetty kadun '
             + 'seinään kiiltäville metallilaatoille, yksi laatta kutakin '
             + 'kieltä kohti.',
-          selite: 'Užupisin perustuslakilaatta englanniksi Paupion kadulla. '
-            + 'Pykälä 12 kuuluu: "Koiralla on oikeus olla koira." Pykälä 16: '
-            + '"Jokaisella on oikeus olla onnellinen."',
+          selite: 'Užupisin perustuslakilaatta englanniksi Paupion kadulla: '
+            + 'pykälä 12 kuuluu "Koiralla on oikeus olla koira" ja pykälä 16 '
+            + '"Jokaisella on oikeus olla onnellinen".',
           lahde: 'AwOiSoAk KaOsIoWa, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Užupis',
         },
@@ -20429,30 +20445,24 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'View of the Vilnius Old Town from the Observation Tower of the Palace of the Grand Dukes of Lithuania.jpg',
-          selite: 'Vanhakaupunki näkötornista kesäaamuna: etualalla '
-            + 'aaltoilee tiheä lehtipuiden latvusto, ja sen takaa '
-            + 'levittäytyy punatiilikattojen meri. Kattojen seasta '
-            + 'nousee kirkontorneja, joista oikeanpuoleisin on '
-            + 'yliopiston valkoinen kellotorni.',
+          selite: 'Vanhakaupunki näkötornista kesäaamuna: lehtipuiden '
+            + 'latvustojen takaa levittäytyy punatiilikattojen meri, josta '
+            + 'nousee kirkontorneja ja yliopiston valkoinen kellotorni.',
           lahde: 'Pofka, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Baltasis tiltas by Augustas Didzgalvis.jpg',
-          selite: 'Neris ja Valkoinen silta ylhäältä auringonlaskussa: '
-            + 'silta kaartuu kevyenä yhtenä kaarena rannalta toiselle, '
-            + 'ja joen pinta hehkuu oranssina. Vasemmalla ovat vanhan '
-            + 'puolen matalat korttelit, oikealla nurmikenttä ja '
-            + 'kaukana lasitorneja.',
+          selite: 'Neris ja Valkoinen silta ylhäältä auringonlaskussa: silta '
+            + 'kaartuu kevyenä yhtenä kaarena rannalta toiselle, ja joen '
+            + 'pinta hehkuu oranssina.',
           lahde: 'BigHead (Augustas Didžgalvis), Wikimedia Commons '
             + '(CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Didžioji Street at dusk, Vilnius, Lithuania - Diliff.jpg',
-          selite: 'Didžioji-kadun aukio sinisellä hetkellä: taivas on '
-            + 'syvän sininen ja katulyhdyt palavat lämpiminä. Vasemmalla '
-            + 'jatkuu vaaleiden talojen rivi ravintolakatoksineen, '
-            + 'keskellä kohoaa kirkontorni ja etualalla levittäytyy '
-            + 'laaja mukulakivetys.',
+          selite: 'Didžioji-kadun aukio sinisellä hetkellä: katulyhdyt '
+            + 'palavat lämpiminä vaaleiden talojen rivin edessä, keskellä '
+            + 'kohoaa kirkontorni ja etualalla on laaja mukulakivetys.',
           lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -20487,9 +20497,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'holvikäytävien läpi. Suurimman pihan laidalla on Pyhän '
             + 'Johanneksen kirkko ja korkea kellotorni. Yliopiston kirjasto '
             + 'aloitti jo 1570, ja siellä on nykyään miljoonia kirjoja.',
-          selite: 'Yliopiston suuri sisäpiha: vaaleankeltainen kirkon julkisivu '
-            + 'ja sen vieressä korkea kellotorni. Piha on laskettu '
-            + 'kuvioidusta mukulakivestä.',
+          selite: 'Yliopiston suuri sisäpiha: vaaleankeltainen kirkon '
+            + 'julkisivu, sen vieressä korkea kellotorni ja piha kuvioitua '
+            + 'mukulakiveä.',
           lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -20503,8 +20513,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai '
             + 'karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä '
             + 'vuotta, kunnes kielto kumottiin vuonna 1904.',
-          selite: 'Vanha mustavalkoinen valokuva kirjankantaja Kazys Ūdrasta. '
-            + 'Iäkäs mies suurissa viiksissä katsoo kameraan paksu villatakki '
+          selite: 'Vanha mustavalkoinen valokuva kirjankantaja Kazys Ūdrasta: '
+            + 'iäkäs mies suurissa viiksissä katsoo kameraan paksu villatakki '
             + 'yllään.',
           lahde: 'tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },
@@ -20527,6 +20537,15 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+   * PAINOPISTE"): kaikki tämän kaupungin kuvatekstit — kansikuvat,
+   * avauskuvat, nostojen selitteet ja Matkailijalle-osion kuvat —
+   * on tiivistetty YHTEEN virkkeeseen. Sivujen johdannot pysyvät
+   * lyhyinä; lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/europe-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   oslo: [
     {
       id: 'kaupunki',
@@ -20537,16 +20556,14 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Bjørvika Oslo Opera house 3.JPG',
-          selite: 'Oslon oopperatalo vuonon rannassa. Valkoinen katto laskeutuu '
-            + 'vinona rinteenä suoraan veteen, ja edustalla kelluu lasinen '
-            + 'taideteos.',
+          selite: 'Oslon oopperatalo vuonon rannassa, valkoinen katto laskeutuu '
+            + 'vinona rinteenä suoraan veteen.',
           lahde: 'Øyvind Holmstad, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Karl Johans gate Oslo 2022-08-17 01.jpg',
-          selite: 'Karl Johanin katu keskustassa. Kävelykadun varrella on '
-            + 'vaaleita kivitaloja ja kulmatalossa kello, ja ihmiset kulkevat '
-            + 'aurinkoisessa säässä.',
+          selite: 'Karl Johanin katu keskustassa: kävelykadun varrella vaaleita '
+            + 'kivitaloja ja kulmatalossa kello.',
           lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)',
         },
         {
@@ -20560,7 +20577,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Road in Maridalen protected Landscape in Oslo.jpg',
-          selite: 'Kapea soratie kaartuu havumetsän läpi kesäaamuna: vasemmalla nousee kuusia ja mäntyjä rinteessä, oikealla vaaleampaa koivikkoa. Tien päässä metsä sulkeutuu, ja puiden yllä näkyy kaistale kirkasta taivasta.',
+          selite: 'Kapea soratie kaartuu havumetsän läpi kesäaamuna, vasemmalla '
+            + 'kuusia ja mäntyjä rinteessä ja oikealla vaaleampaa '
+            + 'koivikkoa.',
           lahde: 'Frankemann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Oslo on Euroopan metsäisin pääkaupunki. Kaupungin '
@@ -20587,7 +20606,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'prosenttia matkustajista tulee kentälle julkisella '
                 + 'liikenteellä. Metrossa on viisi linjaa ja 101 '
                 + 'asemaa, joista seitsemäntoista maan alla.',
-              kuva: { tiedosto: 'Flytoget Gardermoen.jpg', selite: 'Hopeanharmaa lentokenttäjuna seisoo laiturissa lasikatteisen aseman alla: keulan punaiset takavalot palavat, ja kattoa kannattavat vaaleat puukaaret. Laiturilla kävelee kaksi matkustajaa selin, ja vasemmalla näkyy toinen juna.', lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Flytoget Gardermoen.jpg', selite: 'Hopeanharmaa lentokenttäjuna seisoo laiturissa lasikatteisen aseman alla, kattoa kannattavat vaaleat puukaaret.', lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Metsä alkaa metroaseman päästä',
@@ -20622,7 +20641,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muuttuu 450 000 neliömetriksi rakennuksia, joista '
                 + 'puolet on asuntoja — noin 2 200 kappaletta. '
                 + 'Rannassa nousi samalla rivi kapeita tornitaloja.',
-              kuva: { tiedosto: 'Oslo, Bjørvika Barcode (2).jpg', selite: 'Rivi kapeita, eri korkuisia ja eri värisiä toimistotaloja seisoo vieretysten kuin viivakoodi. Etualalla on laaja vaalea kivipinta ja matalia betoniseiniä, oikealla kohoaa keltainen nostokurki. Taivaalla on repaleisia pilviä.', lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Oslo, Bjørvika Barcode (2).jpg', selite: 'Rivi kapeita, eri korkuisia ja eri värisiä toimistotaloja seisoo vieretysten kuin viivakoodi, ja oikealla kohoaa keltainen nostokurki.', lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -20761,8 +20780,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kohti niin, että soittajilla on työ pysyä mukana. Grieg '
             + 'kirjoitti näytelmään 26 musiikkinumeroa.',
           selite: 'Edvard Grieg (1843–1907) valokuvaaja Anders Beer Wilsen '
-            + 'kuvaamana vuonna 1903. Grieg oli kotoisin Bergenistä, mutta '
-            + 'hänen tunnetuin teoksensa kuultiin ensi kerran Oslossa.',
+            + 'kuvaamana vuonna 1903.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Peer Gynt',
           musiikki: 'https://music.apple.com/fi/search?term=Grieg%20Peer%20Gynt',
@@ -20780,9 +20798,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '1863 Gudbrandsdalenissa, ja siitä syntyi maan tunnetuin '
             + 'juusto. Leivän päälle se leikataan juustohöylällä — myös se on '
             + 'norjalainen keksintö, vuodelta 1925.',
-          selite: 'Palanen brunostia leikattuna. Väri ei tule väriaineesta vaan '
-            + 'kuumennuksesta: maitosokeri karamellisoituu samalla tavalla '
-            + 'kuin sokeri pannulla.',
+          selite: 'Palanen brunostia leikattuna — väri ei tule väriaineesta '
+            + 'vaan kuumennuksessa karamellisoituneesta maitosokerista.',
           lahde: 'color line, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Gudbrandsdalsost',
         },
@@ -20797,10 +20814,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kolme kivenhakkaajaa työsti sitä yhdestä graniittilohkareesta '
             + 'neljätoista vuotta. Puistoon pääsee maksutta mihin aikaan '
             + 'tahansa.',
-          selite: 'Monoliitti Frognerin puistossa. Graniittilohkare tuotiin '
-            + 'Halden lähistöltä 1920-luvulla, ja veistotyö kesti vuodesta '
-            + '1929 vuoteen 1943. Vigeland teki savimallin, kivenhakkaajat '
-            + 'siirsivät sen kiveen.',
+          selite: 'Monoliitti Frognerin puistossa: graniittilohkare tuotiin '
+            + 'Halden lähistöltä, ja kivenhakkaajat työstivät sitä vuodesta '
+            + '1929 vuoteen 1943.',
           lahde: 'The original uploader was DIMSFIKAS at Greek Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Vigelandin puisto',
         },
@@ -20815,20 +20831,16 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Barcode and Oslo Opera house seen from Ekeberg.JPG',
-          selite: 'Keskusta Ekebergin rinteeltä iltapäivän '
-            + 'auringossa: vasemmalla laskeutuu oopperatalon valkoinen '
-            + 'vino katto suoraan veteen, ja sen oikealla puolella '
-            + 'seisoo rivi eri korkuisia lasitorneja tiukassa jonossa. '
-            + 'Taustalla nousevat metsäiset kukkulat.',
+          selite: 'Keskusta Ekebergin rinteeltä iltapäivän auringossa: '
+            + 'vasemmalla oopperatalon valkoinen vino katto ja sen oikealla '
+            + 'puolella rivi eri korkuisia lasitorneja.',
           lahde: 'Helge Høifødt, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Oslo - Damstredet.jpg',
-          selite: 'Damstredetin puutalokuja kesäpäivänä: mukulakivinen '
-            + 'katu nousee mäkeä, ja sen varrella on pieniä '
-            + 'puutaloja — musta lautaseinä, keltainen rapattu '
-            + 'julkisivu ja punatiilikattoja. Ovien vieressä palavat '
-            + 'lyhdyt ja pihoilla kukkii.',
+          selite: 'Damstredetin puutalokuja kesäpäivänä: mukulakivinen katu '
+            + 'nousee mäkeä pienten puutalojen välissä, ja ovien vieressä '
+            + 'palavat lyhdyt.',
           lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -20872,9 +20884,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kosteana, joten laiva säilyi lähes kokonaisena. Se kaivettiin '
             + 'esiin vuonna 1904, ja palaset koottiin takaisin yhteen. Keulan '
             + 'kaareva koristekierre on veistetty yhdestä puukappaleesta.',
-          selite: 'Osebergin viikinkilaiva museosalissa. Tumma puurunko on matala '
-            + 'ja pitkä, ja keula kaartuu ylös kierteeksi kuin käärmeen '
-            + 'häntä.',
+          selite: 'Osebergin viikinkilaiva museosalissa, tumma puurunko '
+            + 'matalana ja pitkänä ja keula kaartuen ylös kierteeksi.',
           lahde: 'Larry Lamsa, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -20889,9 +20900,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siinä oli tuulimylly sähkövaloja varten. Sillä purjehtivat '
             + 'sekä Nansen että myöhemmin Roald Amundsen, ja nykyään sen '
             + 'ympärille on rakennettu museo.',
-          selite: 'Fram-laiva museorakennuksen sisällä. Puinen kylki nousee '
-            + 'korkeana katsojan yläpuolelle, ja mastojen köydet risteilevät '
-            + 'kattoa vasten.',
+          selite: 'Fram-laiva museorakennuksen sisällä, puinen kylki korkeana '
+            + 'katsojan yläpuolella ja mastojen köydet kattoa vasten.',
           lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -20905,8 +20915,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'länteen. Matka kesti 101 päivää ja lautta ajelehti lähes '
             + 'seitsemäntuhatta kilometriä, kunnes se ajautui riutalle '
             + 'Tuamotusaarilla. Lautta on nyt museossa Oslossa.',
-          selite: 'Kon-Tiki-lautta museossa: paksut puunrungot vierekkäin, päällä '
-            + 'ruokokattoinen maja ja purje. Vasemmalla liehuu Norjan lippu.',
+          selite: 'Kon-Tiki-lautta museossa: paksut puunrungot vierekkäin, '
+            + 'päällä ruokokattoinen maja ja purje.',
           lahde: 'Wikipek, Wikimedia Commons (CC0)',
         },
       ],
@@ -21469,6 +21479,15 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+   * PAINOPISTE"): kaikki tämän kaupungin kuvatekstit — kansikuvat,
+   * avauskuvat, nostojen selitteet ja Matkailijalle-osion kuvat —
+   * on tiivistetty YHTEEN virkkeeseen. Sivujen johdannot pysyvät
+   * lyhyinä; lehden pitkä ETUSIVUN LEIPÄTEKSTI on ARTIKKELIT-paketin
+   * intro-kenttä (js/packs/europe-artikkelit.js). Nostot, oppaan
+   * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
+   */
   kobenhavn: [
     {
       id: 'kaupunki',
@@ -21479,8 +21498,8 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Kopenhagen (DK), Runder Turm -- 2017 -- 1633.jpg',
-          selite: 'Pyöreä torni alhaalta kuvattuna. Punatiilinen sylinteri nousee '
-            + 'suoraan taivasta vasten, ja seinässä on kapeita ikkunoita eri '
+          selite: 'Pyöreä torni alhaalta: punatiilinen sylinteri nousee suoraan '
+            + 'taivasta vasten, seinässään kapeita ikkunoita eri '
             + 'korkeuksilla.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -21490,8 +21509,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Canal Tours at Christianshavn.jpg',
           selite: 'Matala kanaalivene täynnä matkustajia kulkee leveällä '
-            + 'satama-altaalla. Vastarannalla on vanhoja tiilisiä makasiineja '
-            + 'ja kirkontorni.',
+            + 'satama-altaalla vanhojen tiilisten makasiinien ohi.',
           lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -21505,10 +21523,9 @@ export const KULTTUURI_KATEGORIAT = {
            * API:sta, kuva katsottu silmin.
            */
           tiedosto: "The Gefion Fountain against background of St. Alban's Church. Copenhagen, Denmark, Northern Europe.jpg",
-          selite: 'Gefionin lähde alaviistosta: valtava pronssihärkä '
-            + 'painaa päänsä alas, takana Gefjon ohjaa valjakkoa huppu '
-            + 'päässä, ja vesi ryöppyää valkoisena patsaan takaa. '
-            + 'Vasemmalla kohoaa Pyhän Albanin kirkon kivinen torni.',
+          selite: 'Gefionin lähde alaviistosta: valtava pronssihärkä painaa '
+            + 'päänsä alas, takana Gefjon ohjaa valjakkoa ja vesi ryöppyää '
+            + 'valkoisena patsaan takaa.',
           lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -21524,17 +21541,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Panorama view on Copenhagen from Church of Our Saviour (2).jpg',
           selite: 'Ilta-aurinko kattojen yllä Vapahtajan kirkon tornista '
-            + 'katsottuna. Keskellä kohoaa Christiansborgin torni, oikealla '
-            + 'vihreä Nikolain kirkon torni, ja talorivit jatkuvat '
-            + 'tasaisina horisonttiin — korkeita taloja ei näy missään.',
+            + 'katsottuna, keskellä Christiansborgin torni ja talorivit '
+            + 'tasaisina horisonttiin.',
           lahde: 'Erwin Verbruggen, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Copenhagen, view from Rundetårn with Rosenborg Castle, 20220617 1004 6716.jpg',
           selite: 'Näkymä Rundetårnin huipulta: punatiilikattojen takana '
             + 'Rosenborgin linna vihreine kupolikattoineen ja Kuninkaan '
-            + 'puutarhan puut. Taustalla erottuvat voimalan kolme piippua '
-            + 'ja Juutinrauman salmi.',
+            + 'puutarhan puut.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -21629,17 +21644,14 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Cykelslangen (Dybbøls Bro).JPG',
-                  selite: 'Cykelslangen eli pyöräkäärme: oranssi kansi '
-                    + 'kaartaa satama-altaan yli pelkästään pyöriä varten. '
-                    + 'Kaiteessa toivotetaan tervetulleeksi uudelle '
-                    + 'pyöräsillalle.',
+                  selite: 'Cykelslangen eli pyöräkäärme: oranssi kansi kaartaa '
+                    + 'satama-altaan yli pelkästään pyöriä varten.',
                   lahde: 'Orf3us, Wikimedia Commons (CC BY 3.0)',
                 },
                 {
                   tiedosto: 'København Metro 20100507 0317F (8455266869).jpg',
-                  selite: 'Metrovaunun sisällä Islands Bryggen asemalla. '
-                    + 'Matkustaja työntää pyörän mukaansa ovesta — sateella '
-                    + 'pyörä ja metro kulkevat samaa matkaa.',
+                  selite: 'Metrovaunun sisällä Islands Bryggen asemalla '
+                    + 'matkustaja työntää pyörän mukanaan ovesta.',
                   lahde: 'Johan Wessman / News Øresund, Wikimedia Commons (CC BY 2.0)',
                 },
               ],
@@ -21846,10 +21858,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskenään kaksintaistelun. Nielsen kirjoitti myös satoja '
             + 'lauluja, joita tanskalaiset laulavat yhdessä koulussa ja '
             + 'juhlissa.',
-          selite: 'Carl Nielsen (1865–1931) noin vuonna 1908. Hän kasvoi köyhässä '
-            + 'perheessä Fynin saarella ja soitti nuorena '
-            + 'sotilassoittokunnassa, ennen kuin pääsi opiskelemaan '
-            + 'Kööpenhaminaan.',
+          selite: 'Carl Nielsen (1865–1931) noin vuonna 1908 — hän kasvoi '
+            + 'köyhässä perheessä Fynin saarella ja tuli Kööpenhaminaan '
+            + 'opiskelemaan.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Carl Nielsen',
           musiikki: 'https://music.apple.com/fi/search?term=Carl%20Nielsen',
@@ -21865,9 +21876,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sekoiteta keskenään. Vanhoissa lounasravintoloissa listalla '
             + 'voi olla yli kaksikymmentä eri leipää, ja jokaisella on oma '
             + 'nimensä ja vakiintunut kuormansa.',
-          selite: 'Kaksi smørrebrødiä kööpenhaminalaisella lautasella. Pohjalla '
-            + 'on tumma ruisleipä, jonka päälle levitetään voi — juuri siitä '
-            + 'nimi tulee: smør on voi ja brød leipä.',
+          selite: 'Kaksi smørrebrødiä kööpenhaminalaisella lautasella tummalla '
+            + 'ruisleivällä, jonka päälle levitetystä voista nimi tulee: '
+            + 'smør on voi ja brød leipä.',
           lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Smørrebrød',
         },
@@ -21881,10 +21892,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'koulumatkoista tehdään pyörällä. Risteyksissä pyörillä on omat '
             + 'liikennevalonsa, ja talvella pyörätiet aurataan ensimmäisten '
             + 'teiden joukossa.',
-          selite: 'Pyöräilijöitä odottamassa vihreää valoa Kööpenhaminassa. '
-            + 'Pyöräkaista on korotettu ajoradan ja jalkakäytävän väliin '
-            + 'omalle tasolleen, joten pyörä ei kulje autojen eikä '
-            + 'kävelijöiden seassa.',
+          selite: 'Pyöräilijöitä odottamassa vihreää valoa korotetulla '
+            + 'pyöräkaistalla ajoradan ja jalkakäytävän välissä.',
           lahde: 'heb@Wikimedia Commons (mail), Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Pyöräily',
         },
@@ -21921,8 +21930,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paljon nuorempien kanssa. Ensimmäinen ohut satuvihko ilmestyi '
             + 'vuonna 1835, ja satuja on käännetty yli sadalle kielelle.',
           selite: 'Vanha ruskeasävyinen valokuva Hans Christian Andersenista '
-            + 'sivulta. Mies istuu tuolilla tumma rusetti kaulassa ja katsoo '
-            + 'eteenpäin.',
+            + 'tuolilla istumassa, tumma rusetti kaulassa.',
           lahde: 'Thora Hallager, Wikimedia Commons (public domain)',
           wiki: 'H. C. Andersen',
         },
@@ -21952,9 +21960,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'istuu jarrumies, joka hidastaa vauhtia alamäissä, koska rata '
             + 'ei muuten pysyisi hallinnassa. Myös Walt Disney kävi Tivolissa '
             + 'ennen kuin rakensi oman huvipuistonsa.',
-          selite: 'Tivolin puisen vuoristoradan lähtöpaikka illalla. Katon yllä '
-            + 'palaa lamppukyltti RUTSCHEBANEN, ja avovaunuissa istuu '
-            + 'matkustajia talvitakeissa.',
+          selite: 'Tivolin puisen vuoristoradan lähtöpaikka illalla, katon yllä '
+            + 'lamppukyltti RUTSCHEBANEN ja avovaunuissa matkustajia '
+            + 'talvitakeissa.',
           lahde: 'Stefan Scheer, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -36398,6 +36406,487 @@ export const KULTTUURI_KATEGORIAT = {
             + 'uudempia betonitaloja ja rantapolulla yksi lenkkeilijä.',
           lahde: 'Benh LIEU SONG from Torcy, France, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Kioto',
+        },
+      ],
+    },
+  ],
+  /*
+   * SINGAPORE (Opus 20.8.2026, uusi kaupunkilehti Aasian laudalle).
+   *
+   * LÄHTEET: en-Wikipedian raakatekstit (action=raw, haettu
+   * 20.8.2026): Singapore, History of Singapore, Port of Singapore,
+   * Strait of Malacca, Cavenagh Bridge, Empress Place Building,
+   * Boat Quay, Clarke Quay, Fort Canning Hill, Chinatown Singapore,
+   * Kampong Glam, Istana Kampong Glam, Malay Heritage Centre,
+   * Sultan Mosque, Thian Hock Keng Temple, Sri Mariamman Temple
+   * Singapore, Raffles Hotel, Merlion, Gardens by the Bay,
+   * Singapore River, Water supply and sanitation in Singapore,
+   * 1819 Singapore Treaty. Pohjana Sonnetin faktapohja ja sen
+   * riippumaton tarkistus (docs/aasia-tyoaineisto/).
+   *
+   * SISÄLTÖLINJAUS on Fablen eräohje 20.8.2026: siirtomaahistoria
+   * kerrotaan neutraalisti tapahtumina — kauppa, hallinto,
+   * väestönkasvu, rakennukset — ilman kummankaan osapuolen kehystä.
+   * Uskonto on historiallis-kulttuurinen ilmiö: temppelit ja
+   * moskeija ovat rakennuksia ja yhteisöjen tekoja, ei julistusta.
+   * Kaupunkivaltion nykyasema on neutraali tosiasia (Nikosian ja
+   * Taipein "Antaa olla"), eikä nykypolitiikkaa ole missään.
+   * Vankityövoima mainitaan kahdessa kohdassa (Cavenagh-silta,
+   * Empress Place), koska molempien artikkelit kertovat sen
+   * rakennushistoriana — ilman yksityiskohtien korostusta.
+   *
+   * KOLME RISTIRIITAA, JOTKA ON RATKAISTU TÄSSÄ:
+   * 1. Cavenagh-sillan syy. Oma artikkelinsa sanoo, että silta
+   *    avattiin marraskuussa 1869 muistoksi Straitsin siirtokuntien
+   *    kruununsiirtokunta-asemasta 1867, kun taas artikkeli "1819
+   *    Singapore Treaty" sanoo sen juhlistaneen Singaporen
+   *    perustamisen 50-vuotispäivää. K4 seuraa sillan omaa
+   *    artikkelia (talon sääntö: kohteen oma artikkeli voittaa) ja
+   *    mainitsee toisen selityksen lukijalle.
+   * 2. Suezin kanavan yhteys. Pääartikkeli "Singapore" ei sano
+   *    siitä mitään, mutta "History of Singapore" sanoo suoraan,
+   *    että kaupungin menestys johtui muun muassa siitä, miten
+   *    Suezin kanavan avaaminen 1869 lyhensi matkan ja laski
+   *    rahdin hintaa Eurooppaan. Se on K3:n lähde.
+   * 3. Kampong Glamin koordinaatti. Kolme artikkelia antaa kolme
+   *    pistettä 90 metrin sisällä toisistaan; kartalla on
+   *    Sultan-moskeijan piste (perustelu maakartat.js:ssä).
+   *
+   * MITÄ JÄTETTIIN POIS: toisen maailmansodan miehitys ja sen
+   * tapahtumat (mainitaan vain vuosilukuina oppaan
+   * käännekohtajaksossa), vuoden 1950 mellakat, 1960-luvun
+   * poliittiset kiistat sekä nykyiset satamatilastot. Merlionin
+   * patsas on vuodelta 1972 eikä siksi kanna nostoa — se on
+   * kartan kohteena ja avauskuvassa nykysymbolina, ja sen ikä
+   * sanotaan jutussa suoraan.
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY: Sri Mariammanin temppeli
+   * esiintyy kannessa (gopuram-torni), historiasivun nostossa
+   * (koko kortteli ylhäältä) ja nähtävyysjutussa (katon Nandi) —
+   * kolme eri tiedostoa ja kolme eri näkökulmaa samaan
+   * rakennukseen. Sama koskee Thian Hock Kengia (nosto: ovet,
+   * juttu: sisäsali), Sultan-moskeijaa (avauskuva ja juttu) ja
+   * Boat Quayta (avauskuva ylhäältä, juttu joen tasalta). Linja on
+   * sama kuin Medinassa, jossa Profeetan moskeija on kannessa,
+   * avauskuvissa ja oppaassa.
+   *
+   * SELITTEET OVAT YHDEN VIRKKEEN MITTAISIA (omistajan tarkennus
+   * 20.8.2026). Kaksi kuvaa vaatii pakollisen selityksen, ja se on
+   * mahdutettu samaan virkkeeseen: KITLV:n satamakuvan alalaitaan
+   * on painettu julkaisijan oma numero ja nimi, ja Amiraliteetin
+   * merikartan nurkissa ovat sen omat karttanumerot.
+   *
+   * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
+   */
+  singapore: [
+    {
+      id: 'kaupunki',
+      nimi: 'Singapore',
+      johdanto: 'Vapaasatama Malakan salmen suulla, jonka britit '
+        + 'perustivat vuonna 1819 joen suistoon. Kiinalaiset, '
+        + 'malaijit, intialaiset ja eurooppalaiset kauppahuoneet '
+        + 'asettuivat saman joen varrelle, kukin omalle rannalleen.',
+      kansikuvat: [
+        {
+          tiedosto: '1 singapore city skyline dusk panorama 2011.jpg',
+          selite: 'Kaupungin ydin iltahämärissä ylhäältä katsottuna: '
+            + 'Singapore-joen suu kaartaa keskellä, torniryhmä nousee '
+            + 'sen takaa, ja etualalla on kaksi valaistua '
+            + 'nurmikenttää.',
+          lahde: 'chenisyuan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Traditional shophouses in Upper Cross Street, Chinatown, Singapore (17161367876).jpg',
+          selite: 'Kolme kauppahuonetta Chinatownissa vierekkäin: '
+            + 'keltainen, oranssi ja vaaleanvihreä julkisivu, '
+            + 'säleikköikkunat, tiilikatto ja alakerran katettu '
+            + 'käytävä kadun puolella.',
+          lahde: 'Nicolas Lannuzel from Singapore, Singapore, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Gopuram monumental ornate tower at the entrance of Sri Mariamman Temple with sculptures of Hindu deities Chinatown Singapore.jpg',
+          selite: 'Sri Mariammanin porttitorni alhaalta kuvattuna: '
+            + 'kuusi kapenevaa kerrosta täynnä värillisiä '
+            + 'kipsipatsaita, ja harjalla on rivi kultaisia huippuja.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: joki, moskeija ja patsas — kaupungin vanha
+       * ydin, sen koillinen kaupunginosa ja sen nykysymboli.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Boat quay sct.JPG',
+          selite: 'Singapore-joen mutka ylhäältä: eteläisellä '
+            + 'rannalla on tiivis rivi matalia kauppahuoneita '
+            + 'punaisine kattoineen, ja niiden takaa nousee '
+            + 'pankkitorneja.',
+          lahde: 'chensiyuan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Sultan Mosque, Singapore.jpg',
+          selite: 'Sultan-moskeija Kampong Glamissa: kullattu kupoli '
+            + 'lepää tumman rengasvyön päällä, kulmissa on '
+            + 'pikkutornit, ja aidan varressa liehuu lippurivi.',
+          lahde: 'Johan Jönsson (Julle), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Singapore (SG), Merlion -- 2019 -- 4496.jpg',
+          selite: 'Joen suu vastarannalta: valkoinen Merlion-patsas '
+            + 'seisoo laiturilla, sen takana on Fullertonin entinen '
+            + 'postitalo pylväineen ja niiden yllä nykykeskustan '
+            + 'lasitorneja.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Sopimus, joka avasi saaren',
+          tiedosto: 'Charles Dyce, Government Hill from the New Harbour Road, Singapore, 1846, Watercolour & Ink on paper, 27.2 x 44.8 cm.png',
+          teksti: 'Brittiläinen virkamies Stamford Raffles saapui '
+            + 'saarelle 28. tammikuuta 1819. Alue kuului nimellisesti '
+            + 'Johorin sulttaanille, mutta hallitsijasuku oli '
+            + 'jakautunut kahtia. Temenggong Abdul Rahmanin avulla '
+            + 'Raffles salakuljetti maanpaossa olleen vanhemman '
+            + 'veljen Tengku Longin takaisin saarelle ja tunnusti '
+            + 'tämän sulttaaniksi nimellä Hussein — vuotuista viiden '
+            + 'tuhannen dollarin maksua vastaan, ja temenggong sai '
+            + 'kolmetuhatta. Vastineeksi Itä-Intian kauppakomppania '
+            + 'sai luvan perustaa kauppa-aseman. Sopimus '
+            + 'allekirjoitettiin 6. helmikuuta 1819, ja vuonna 1824 '
+            + 'uusi sopimus toi koko saaren Britannian alaisuuteen.',
+          selite: 'Charles Dycen akvarelli vuodelta 1846 näyttää '
+            + 'Government Hillin eli nykyisen Fort Canningin: '
+            + 'kukkulan laella on kuvernöörin talo lipputankoineen ja '
+            + 'sen juurella matalia tiilikattoisia varastoja.',
+          lahde: 'Charles Andrew Dyce, Wikimedia Commons (PD)',
+          wiki: 'Singapore',
+        },
+        {
+          otsikko: 'Tuhannesta kahdeksaankymmeneen tuhanteen',
+          tiedosto: 'KITLV - 50215 - Lambert & Co., G.R. - Singapore - Port in Singapore - circa 1900.jpg',
+          teksti: 'Ennen Rafflesin tuloa saarella asui noin tuhat '
+            + 'ihmistä, enimmäkseen malaijeja ja pieni joukko '
+            + 'kiinalaisia. Vuoteen 1860 mennessä väkiluku oli noussut '
+            + 'yli kahdeksaankymmeneentuhanteen, ja yli puolet '
+            + 'asukkaista oli kiinalaisia; heitä oli tullut töihin '
+            + 'pippuri- ja gambierviljelmille ja pakoon Etelä-Kiinan '
+            + 'levottomuuksia. Malaijit olivat 1860-luvulle asti '
+            + 'toiseksi suurin ryhmä, ja sen jälkeen intialaiset. '
+            + 'Vuonna 1826 Singaporesta tuli Penangin ja Malakan '
+            + 'kanssa osa Straitsin siirtokuntia, vuodesta 1836 '
+            + 'niiden pääkaupunki ja vuonna 1867 osa suoraan '
+            + 'Lontoosta hallittua kruununsiirtokuntaa.',
+          selite: 'Noin vuonna 1900 otetussa kuvassa Singapore-joki '
+            + 'on täynnä tongkang-lastiveneitä rannasta rantaan, '
+            + 'takana ovat kaksikerroksiset kauppahuoneet, ja kuvan '
+            + 'alalaitaan on painettu julkaisijan oma numero ja nimi '
+            + '"River Scene".',
+          lahde: 'Lambert & Co., G.R. / Singapore, Wikimedia Commons (PD)',
+          wiki: 'Singapore',
+        },
+        {
+          otsikko: 'Vapaasatama, jossa ei peritty tullia',
+          tiedosto: 'Singapore Roads Surveyed by JW Reed Master Commanding 1864-1892.jpg',
+          teksti: 'Raffles määräsi sataman vapaasatamaksi, ja se '
+            + 'ratkaisi kilpailun: Batavian ja Manilan satamissa '
+            + 'perittiin tulleja, täällä ei. Kiinalaiset kauppiaat '
+            + 'asettuivat joen alajuoksulle ja englantilaiset '
+            + 'yläjuoksulle, ja kaupungissa risteytyi kolme '
+            + 'kauppaverkostoa: kiinalainen, kaakkoisaasialainen '
+            + 'saariverkosto ja eurooppalais-intialainen. '
+            + '1830-luvulla Singapore oli jo '
+            + 'ohittanut Batavian kiinalaisen junkkikaupan keskuksena, '
+            + 'ja 1840-luvulta se oli höyrylaivojen hiiliasema. Suezin '
+            + 'kanavan avaaminen 1869 laski rahdin hintaa Eurooppaan '
+            + 'rajusti: vuonna 1880 satamasta kulki jo yli puolitoista '
+            + 'miljoonaa tonnia tavaraa vuodessa, neljä viidesosaa '
+            + 'siitä höyrylaivoilla.',
+          selite: 'Amiraliteetin merikartta Singaporen redistä '
+            + 'näyttää kaupungin ruutukaavan vasemmassa ylänurkassa '
+            + 'ja ankkuripaikkojen syvyysluvut tuhansina pisteinä '
+            + 'sen edustalla, ja nurkkiin on painettu kartan omat '
+            + 'julkaisunumerot.',
+          lahde: 'British Admiralty, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Port of Singapore',
+        },
+        {
+          otsikko: 'Silta, joka jäi liian matalaksi',
+          tiedosto: '2016 Singapur, Downtown Core, Most Cavenagha (02).jpg',
+          teksti: 'Cavenagh-silta avattiin marraskuussa 1869 '
+            + 'muistoksi siitä, että Straitsin siirtokunnista oli '
+            + 'kaksi vuotta aiemmin tullut suoraan Britannian alainen '
+            + 'kruununsiirtokunta. Teräsrakenteet valoi Glasgow’ssa '
+            + 'P. & W. MacLellanin konepaja, ja suunnittelijat olivat '
+            + 'insinöörit George Chancellor Collyer ja Rowland Mason '
+            + 'Ordish. Avajaisviikolla The Straits Times joutui '
+            + 'kertomaan, etteivät isot lastiveneet mahtuneet alitse '
+            + 'nousuveden aikaan. Vuonna 1910 valmistui viereinen '
+            + 'Anderson-silta, ja ajoneuvoliikenne siirtyi sinne. '
+            + 'Cavenagh on yhä Singaporen vanhin alkuperäisessä '
+            + 'muodossaan säilynyt silta.',
+          selite: 'Cavenagh-silta joen tasalta: matala '
+            + 'riippuvaijerikaari ulottuu rannalta rannalle, '
+            + 'graniittipylonit seisovat sen päissä, ja alitse ujuttaa '
+            + 'itsensä keltakattoinen lastivene.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cavenagh Bridge',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Singapore Downtown - Telok Ayer Street IMG 9994.jpg',
+          selite: 'Kauppahuoneen sisäänkäynti Telok Ayer -kadulla: '
+            + 'katetun käytävän takana on tummanpunainen ovipari, '
+            + 'yläpuolella kullattu kilpi ja seinän alaosassa '
+            + 'kukkakuvioiset laatat.',
+          lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Singapore on kaupunkivaltio: koko maa on yhden '
+          + 'kaupungin kokoinen, eikä siinä ole erillistä '
+          + 'pääkaupunkia. Pinta-alaa on 744 neliökilometriä ja '
+          + 'asukkaita runsaat kuusi miljoonaa, joten tiheys on '
+          + 'maailman toiseksi suurin. Lehden kohteet ovat parin '
+          + 'kilometrin säteellä Singapore-joen suulta: eteläpuolella '
+          + 'Chinatown temppeleineen, pohjoispuolella '
+          + 'siirtomaahallinnon rakennukset ja Fort Canningin '
+          + 'kukkula, koillisessa Kampong Glam ja idässä täyttömaalle '
+          + 'rakennettu puisto. Virallisia kieliä on neljä, ja '
+          + 'englanti on niistä se, jolla asiat hoituvat.',
+        artikkeli: {
+          nimi: 'Matkailijan Singapore',
+          taitto: 'opas',
+          teksti: 'Yksi joki, neljä kansanryhmää ja saari, joka on '
+            + 'kasvanut merta täyttämällä.',
+          nosto: 'Chinatownin kiinankielinen nimi tarkoittaa '
+            + '"härkävankkurivettä" — 1800-luvulla korttelien juomavesi '
+            + 'tuotiin sinne eläinten vetämillä kärryillä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokone laskeutuu Changiin, joka avattiin '
+                + 'vuonna 1981 vanhan Paya Lebarin kentän tilalle. '
+                + 'Maateitse saarelle pääsee kahta rakennettua '
+                + 'yhteyttä pitkin: pohjoisessa Johorin pengertie ja '
+                + 'lännessä Tuasin toinen yhteys, molemmat Malesian '
+                + 'Johoriin. Kaupungin sisällä liikutaan metrolla, '
+                + 'jossa on kuusi linjaa ja kolme kevytraidelinjaa, '
+                + 'yhteensä noin 241 kilometriä rataa, sekä yli '
+                + 'kolmellasadalla bussilinjalla. Omaa autoa ei '
+                + 'kannata suunnitella: autojen määrää säädellään '
+                + 'kiintiöllä ja huutokaupattavalla oikeudella, ja '
+                + 'siksi auto maksaa täällä enemmän kuin missään '
+                + 'muualla maailmassa. Ruuhkamaksu otettiin käyttöön '
+                + 'jo 1975, ensimmäisenä maailmassa.',
+              kuva: {
+                tiedosto: 'Empty Singapore-Malaysia Causeway 2.jpg',
+                selite: 'Johorin pengertie iltavalaistuksessa: suora '
+                  + 'penger kulkee salmen yli valonauhana, ja sen '
+                  + 'toisessa päässä hohtaa Johor Bahrun kaupunki.',
+                lahde: 'Lionel Lim, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Singapore on matala saari Malakan niemimaan '
+                + 'eteläkärjen edustalla, noin 137 kilometriä eli '
+                + 'asteen verran päiväntasaajasta pohjoiseen. Pääsaaren '
+                + 'lisäksi maahan kuuluu yli kuusikymmentä pienempää '
+                + 'saarta, joista suurimmat ovat Jurong, Pulau '
+                + 'Tekong, Pulau Ubin ja Sentosa. Korkein '
+                + 'luonnollinen kohta on Bukit Timahin kukkula, vain '
+                + '163,6 metriä. Maata on tehty lisää merestä: '
+                + '1960-luvulla pinta-alaa oli noin 580 '
+                + 'neliökilometriä, nyt 744, ja 2030-luvulle '
+                + 'mennessä sitä on määrä olla 770 — yli '
+                + 'kolmanneksen lisäys. Osa saarista on sulautettu '
+                + 'täytöillä yhteen, kuten Jurong.',
+              kuva: {
+                tiedosto: 'Bukit Timah Hill.jpg',
+                selite: 'Bukit Timahin kukkula kaukaa: metsäinen '
+                  + 'harjanne kohoaa loivana matalan kaupungin yllä, '
+                  + 'ja laella seisoo ristikkomasto.',
+                lahde: 'Mx. Granger, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: neljä hanaa',
+              teksti: 'Saarella ei ole järviä eikä pohjavesiesiintymiä, '
+                + 'ja 1800-luvulla Chinatownin vesi tuotiin kortteliin '
+                + 'härkien vetämillä kärryillä — siitä sen malaijin- ja '
+                + 'kiinankieliset nimet Kreta Ayer ja Niu che shui, '
+                + 'vesikärry ja härkävankkurivesi. Nykyään vesi tulee '
+                + 'neljästä lähteestä, joita kutsutaan neljäksi '
+                + 'kansalliseksi hanaksi: sadevesi kerätään '
+                + 'suojelluilta valuma-alueilta tekoaltaisiin, vettä '
+                + 'tuodaan sopimuksella Johorin joesta, jätevettä '
+                + 'puhdistetaan uudelleen juotavaksi NEWater-nimellä ja '
+                + 'merivedestä poistetaan suola. Sadetta saarelle tulee '
+                + 'runsaasti, mutta maata sen keräämiseen on vähän. '
+                + 'Vuonna 2008 joen suu suljettiin padolla, ja '
+                + 'suistosta tuli makean veden allas.',
+              kuva: {
+                tiedosto: 'Marina Barrage Dam 11Jul2026 01.jpg',
+                selite: 'Marina Barrage sulkee joen suun matalana '
+                  + 'patoketjuna, ja sen takana salmen ulapalla on '
+                  + 'rivi ankkurissa odottavia rahtilaivoja.',
+                lahde: 'RFNirmala, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kauppa-asemasta valtioksi',
+              teksti: 'Vuoden 1819 sopimusta pidetään nykyisen '
+                + 'Singaporen perustamishetkenä, ja siitä alkava '
+                + 'ketju on lyhyt kertoa. Vuonna 1824 koko saari '
+                + 'siirtyi Britannian alaisuuteen, 1826 se liitettiin '
+                + 'Straitsin siirtokuntiin Penangin ja Malakan '
+                + 'kanssa, ja 1867 siirtokunnat irrotettiin '
+                + 'Brittiläisestä Intiasta suoraan Lontoon '
+                + 'hallintoon. Japani miehitti saaren vuosina '
+                + '1942–1945, minkä jälkeen se palasi kruunun '
+                + 'siirtokunnaksi. Sisäinen itsehallinto tuli 1959, '
+                + 'ja vuonna 1963 Singaporesta tuli osa uutta '
+                + 'Malesian liittovaltiota. Liitto kesti kaksi '
+                + 'vuotta: vuonna 1965 Singapore erosi siitä ja '
+                + 'itsenäistyi. Ennen kaikkea tätä paikalla oli '
+                + 'kauppasatama jo 1300-luvulla, kun saarta '
+                + 'kutsuttiin Temasekiksi.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Vuodenaikoja ei ole. Kuukausien keskilämpö '
+                + 'liikkuu tammikuun vajaasta '
+                + 'kahdestakymmenestäkuudesta toukokuun '
+                + 'kahteenkymmeneenseitsemään ja puoleen asteeseen, '
+                + 'eli koko vuoden vaihtelu on puolitoista astetta. '
+                + 'Sadetta tulee 2 553 millimetriä vuodessa eikä '
+                + 'yksikään kuukausi jää kuivaksi; sateisimmat ovat '
+                + 'marras- ja joulukuu, kuivin helmikuu. '
+                + 'Heinä–lokakuussa naapurimaiden metsäpalojen '
+                + 'savusumu voi laskea näkyvyyttä. Yksi varoitus '
+                + 'lukuihin: lehden vuosigraafi on laskettu ERA5:n '
+                + 'hilaruudusta, joka on kymmeniä kilometrejä leveä '
+                + 'ja sekoittaa mukaan ympäröivän meren, joten sen '
+                + 'vuorokausikaista 24–29 astetta on kapeampi kuin '
+                + 'saarella mitattu 23–32 astetta. Kuumin hetki on '
+                + 'siis kuumempi kuin käyrä lupaa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki suunniteltiin kerralla vuonna 1822, ja '
+        + 'jokainen kansanryhmä sai oman alueensa. Niiden temppelit, '
+        + 'moskeijat ja kauppahuoneet seisovat yhä samoilla '
+        + 'korttelinkulmilla.',
+      tehtava: {
+        kysymys: 'Mistä Thian Hock Keng -temppelin kivet, puutavara '
+          + 'ja kattotiilet tulivat Singaporeen?',
+        vaihtoehdot: [
+          'Kiinasta laivojen painolastina',
+          'Jaavan tulivuorten rinteiltä',
+          'Intian Koromandelin rannikolta',
+          'Malakan kaupungin raunioista',
+        ],
+        oikea: 0,
+        fakta: 'Rakennusaineet ja Mazu-patsas tuotiin Kiinasta, ja osa '
+          + 'pylväskivistä, puutavarasta ja tiilistä oli laivojen '
+          + 'painolastia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kartta, joka jakoi kaupungin',
+          tiedosto: 'Part of Singapore Island (British Library India Office Records, 1825, detail).jpg',
+          teksti: 'Vuonna 1822 Raffles antoi kaupungin '
+            + 'suunnittelukomitealle tehtäväksi järjestää alueet '
+            + '"eri asukasluokkien mukavuuden ja turvallisuuden '
+            + 'vuoksi". Näin syntyi Jackson-suunnitelma: '
+            + 'eurooppalaisten kaupunginosa, kiinalaisille varattu '
+            + 'alue joen lounaispuolella, Koromandelin rannikolta '
+            + 'tulleiden chulia-kauppiaiden kortteli sekä arabien ja '
+            + 'bugien kampongit. Kampong Glam annettiin sulttaani '
+            + 'Husseinille ja malaijiyhteisölle. Raffles määräsi myös '
+            + 'rakennustavan: tulipalojen varalta muurattua kiveä ja '
+            + 'tiilikatto, ja kadun puolelle yhtenäinen katettu '
+            + 'käytävä, joka tunnetaan viiden jalan tienä.',
+          selite: 'Vuoden 1825 käsin väritetyssä kartassa näkyvät '
+            + 'joen suun ruutukaava, Kampong Glam oikeassa '
+            + 'ylänurkassa ja kiinalaisten kampong joen '
+            + 'lounaispuolella.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Chinatown, Singapore',
+        },
+        {
+          otsikko: 'Meren jumalattaren temppeli',
+          tiedosto: 'Singapore (SG), China Town, Thian Hock Keng -- 2019 -- 4528.jpg',
+          teksti: 'Thian Hock Keng alkoi vaatimattomana majana '
+            + 'rantaviivalla 1820-luvun alussa. Telok Ayer -katu '
+            + 'kulki silloin meren rajassa, joten hokkien-yhteisön '
+            + 'merenkulkijat saattoivat astua maihin ja kiittää '
+            + 'merenjumalatar Mazua turvallisesta matkasta melkein '
+            + 'samalla askeleella; täyttötyöt siirsivät rannan '
+            + 'kauemmas vasta 1880-luvulla. Vuodesta 1839 temppeli '
+            + 'rakennettiin uudelleen kerätyin varoin, ja suurimman '
+            + 'lahjoituksen antoi kauppias Tan Tock Seng. '
+            + 'Rakennusaineet ja Mazu-patsas tuotiin laivoilla '
+            + 'Kiinasta: osa pylväskivistä, puutavarasta ja '
+            + 'kattotiilistä oli laivojen painolastia. Myös '
+            + 'Chulia-kadun intialaisyhteisö auttoi työssä. Temppeli '
+            + 'valmistui 1842.',
+          selite: 'Temppelin pääovet kadulta: kullatut '
+            + 'lohikäärmeovet, niiden molemmin puolin maalatut '
+            + 'ovenvartijat ja edessä vaaleanvihreä valurauta-aita.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Thian Hock Keng Temple',
+        },
+        {
+          otsikko: 'Kirjuri, joka rakensi temppelin',
+          tiedosto: '2016 Singapur, Chinatown, Świątynia Sri Mariamman (01).jpg',
+          teksti: 'Naraina Pillai oli Penangista tullut hallinnon '
+            + 'kirjuri, joka saapui Rafflesin toisella matkalla '
+            + 'toukokuussa 1819. Hän perusti saaren ensimmäisen '
+            + 'rakennusyhtiön, siirtyi tekstiilikauppaan ja nousi '
+            + 'intialaisyhteisön johtohahmoksi. Temppelille annettiin '
+            + 'ensin tontti Telok Ayer -kadulta, mutta siellä ei '
+            + 'ollut makeaa vettä, jota rituaalit vaativat; vuonna '
+            + '1823 hän sai nykyisen paikan South Bridge Roadin '
+            + 'varrelta. Vuoteen 1827 mennessä siinä seisoi '
+            + 'yksinkertainen puusta ja attap-lehdistä tehty '
+            + 'temppeli. Nykyisen tiilirakennuksen vanhimmat osat '
+            + 'ovat vuodelta 1843, ja viereiset kadut saivat sen '
+            + 'mukaan nimensä Pagoda Street ja Temple Street.',
+          selite: 'Sri Mariamman ylhäältä katsottuna: matalan '
+            + 'muurin päällä on rivi valkoisia Nandi-härkiä, pihan '
+            + 'takana vihreät kupolit ja oikealla porttitorni '
+            + 'Chinatownin kattojen keskellä.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sri Mariamman Temple, Singapore',
+        },
+        {
+          otsikko: 'Hotelli Beach Roadin varrella',
+          tiedosto: 'Hotel Raffles exterior 1.jpg',
+          teksti: 'Rakennus alkoi 1830-luvun alussa yksityisenä '
+            + 'rantahuvilana. Lääkäri Charles Emerson vuokrasi sen '
+            + 'hotelliksi 1878, ja hänen kuoltuaan talo seisoi '
+            + 'asuntolana, kunnes armenialaiset Sarkies-veljekset '
+            + 'ottivat sen haltuunsa. He avasivat kymmenen huoneen '
+            + 'Raffles Hotelin 1. joulukuuta 1887 ja nimesivät sen '
+            + 'Stamford Rafflesin mukaan. Laajennus oli nopeaa: '
+            + 'vuonna 1890 valmistui kaksi kaksikerroksista siipeä, '
+            + 'joissa kummassakin oli 22 huoneistoa, ja 1894 Palm '
+            + 'Court -siipi, jolloin huoneita oli 75. Uusi '
+            + 'päärakennus valmistui 1899, ja siihen tulivat '
+            + 'sähkövalot ja sähköiset kattotuulettimet — '
+            + 'ensimmäisenä hotellina koko alueella.',
+          selite: 'Hotellin valkoinen julkisivu keskeltä: '
+            + 'kolmikerroksinen pylväsrivi, säleikköikkunat ja '
+            + 'ylimmällä listalla kohokirjaimin nimi Raffles Hotel.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Raffles Hotel',
         },
       ],
     },

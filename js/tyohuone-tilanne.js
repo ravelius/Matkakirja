@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v961 — SINGAPORE: uusi lehti (kartta 10 kohteella, meri mukana; Suezin kanavan 1869 -yhteys loytyi History of Singapore -artikkelista). Tekstiremontti E4+E5: Tukholma, Kobenhavn, Oslo, Helsinki, Tampere, Tallinna, Riika, Vilna, Pietari, Moskova (140 kuvatekstia yhteen virkkeeseen; Moskovan Lue lisaa -tekstista poistettu Venaja-linjauksen vastainen nykysotavirke). Tarkista: Singapore, pari pohjoista etusivua',
   'v960 — Tekstiremontti E1–E3: Lontoo, Pariisi, Rooma, Berliini, Wien, Madrid, Barcelona, Granada, Lissabon, Ateena, Praha, Budapest, Krakova, Varsova, Amsterdam (240 kuvatekstia yhteen virkkeeseen). Tarkista pari etusivua',
   'v959 — Kehittajakartta erottaa nyt tekstiremontin: remontoimaton lehti hohtaa oranssinruskeana, tehty palaa taustaan (tunniste: intron mitta). Tekstiremontti R6+R7+R9b: Teheran, Bagdad, Istanbul, Kairo, Tokio, Soul, Shanghai, Peking, Delhi, Bangkok, Jakutsk, Magadan, Kamtsatka, Sahalin (291 kuvatekstia yhteen virkkeeseen). Tarkista: kartan varit kehittajatilassa, pari etusivua',
   'v958 — KARTTAKORJAUS: kohdekartat nakyvat taas kaupungeissa, joiden kartta on piirretty ilman piirtoRajat-lohkoa (koko Lahi-ita v937+, Kioto, Vladivostok ym. — kehys jai 0-korkuiseksi v892:n kokokontin takia). Lisaksi tekstiremontti R4+R5: Sanaa, Aden, Masqat, Tabriz, Riad, Doha, Kuwait, Salalah uuteen tekstiasuun (182 kuvatekstia yhteen virkkeeseen). Tarkista: Medinan/Mekan/Persepoliksen kartta nakyy, pari R4/R5-etusivua',
@@ -327,6 +328,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '20.8.2026',
   valmiit: [
+    { id: 'singapore', nimi: 'Singapore', versio: 'v961' },
     { id: 'kioto', nimi: 'Kioto', versio: 'v955' },
     { id: 'isfahan', nimi: 'Isfahan', versio: 'v954' },
     { id: 'delhi', nimi: 'Delhi', versio: 'v954' },
@@ -341,6 +343,5 @@ export const TUOREET = {
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
   ],
   tyossa: [
-    { id: 'singapore', nimi: 'Singapore' },
   ],
 };
