@@ -9803,6 +9803,12 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R8 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * tämän kaupungin juttujen monivirkkeiset selitteet on tiivistetty
+   * yhteen virkkeeseen. Juttutekstit, kuvatiedostot ja lähderivit ovat
+   * ennallaan.
+   */
   dubai: {
     'Kultasuuk': {
       aika: '1900-luvun alku',
@@ -9939,16 +9945,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bur Dubai Abra Station.jpg',
-          selite: 'Abroja kiinni Bur Dubain laiturilla iltavalossa. Veneiden '
+          selite: 'Abroja kiinni Bur Dubain laiturilla iltavalossa: veneiden '
             + 'päällä on vaaleat kangaskatokset, mastoissa liehuu '
             + 'Emiraattien lippuja, ja takana avautuu lahdelma.',
           lahde: 'Iwona Rege, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Commuting by Abra (3049532876).jpg',
-          selite: 'Täysi abra ylittämässä lahdelmaa. Matkustajat istuvat '
-            + 'katoksen alla kahdessa rivissä, ja takarannalla näkyy '
-            + 'Deiran matalia taloja ja minareetti.',
+          selite: 'Täysi abra ylittämässä lahdelmaa matkustajat katoksen '
+            + 'alla kahdessa rivissä, takarannalla Deiran matalia taloja ja '
+            + 'minareetti.',
           lahde: 'Peter Dowley, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -9981,8 +9987,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bastikya - With Old City Wall.jpg',
-          selite: 'Kapea kuja Bastakiassa. Vasemmalla on palmunvarsista tehty '
-            + 'seinä ja rivi puuovia, oikealla korkea hiekanvärinen '
+          selite: 'Kapea kuja Bastakiassa: vasemmalla on palmunvarsista '
+            + 'tehty seinä ja rivi puuovia, oikealla korkea hiekanvärinen '
             + 'muuri, ja perällä kohoaa tuulitorni.',
           lahde: 'MrT HK, Wikimedia Commons (CC BY 2.0)',
         },
@@ -10016,8 +10022,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Al Fahidi Fort 02.jpg',
           selite: 'Al Fahidin linnoituksen pyöreä kulmatorni ja '
-            + 'korallikivestä ladottu muuri. Tornin huipulla liehuu '
-            + 'Dubain lippu, ja takana kohoaa moskeijan minareetti.',
+            + 'korallikivestä ladottu muuri, tornin huipulla Dubain lippu ja '
+            + 'takana moskeijan minareetti.',
           lahde: 'Nasser Ali Alkhlaifi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10218,6 +10224,10 @@ export const NAHTAVYYSJUTUT = {
    * wiki-linkkinä — sama linkki jokaisen kohteen alla veisi lukijan
    * yhdeksän kertaa samaan artikkeliin eikä kertoisi paikasta mitään.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R8: monivirkkeiset selitteet yhteen
+   * virkkeeseen, juttutekstit ja lähderivit ennallaan.
+   */
   petra: {
     'Ad Deir': {
       aika: '100-luku eKr.',
@@ -10244,9 +10254,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Petra Deir 44.jpg',
-          selite: 'Ad Deir kalliokummun kyljessä ja sen edessä laaja '
-            + 'tasattu aukio. Taustalla aukeaa paljasta vuoristoa '
-            + 'horisonttiin asti.',
+          selite: 'Ad Deir kalliokummun kyljessä, edessä laaja tasattu aukio '
+            + 'ja taustalla paljasta vuoristoa horisonttiin asti.',
           lahde: 'Teo Gomez, Wikimedia Commons (PD)',
         },
       ],
@@ -10483,9 +10492,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al-Khazneh, Petra, Jordan.jpg',
-          selite: 'Aarrekammio koko korkeudeltaan. Alarivin pylväiden '
-            + 'juurella kulkevat ihmiset näkyvät pieninä, ja niistä '
-            + 'näkee, kuinka korkea julkisivu on.',
+          selite: 'Aarrekammio koko korkeudeltaan: alarivin pylväiden '
+            + 'juurella kulkevat ihmiset näkyvät pieninä, ja niistä näkee, '
+            + 'kuinka korkea julkisivu on.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -11392,6 +11401,10 @@ export const NAHTAVYYSJUTUT = {
    * omalla historiallaan. CYP-maalehti kertoo saaren muinaisuudesta
    * ja kirkoista, joten kaupungin jutut pysyvät rakennuksissa.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R8: monivirkkeiset selitteet yhteen
+   * virkkeeseen, juttutekstit ja lähderivit ennallaan.
+   */
   nikosia: {
     'Selimiyen moskeija': {
       aika: '1570',
@@ -11425,17 +11438,16 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Selimiye Mosque (St. Sophie Cathedral) (01).JPG',
           selite: 'Länsipäädyn eteishalli: kaksi korkeaa goottilaista '
-            + 'suippokaarta järeiden kivipilarien välissä, takaa nousee '
-            + 'minareetti parvekkeineen. Kaaren takana näkyy veistoksin '
-            + 'koristeltu ovipieli, josta kuljetaan rukoussaliin.',
+            + 'suippokaarta järeiden kivipilarien välissä, takana veistoksin '
+            + 'koristeltu ovipieli rukoussaliin ja sen yllä minareetti '
+            + 'parvekkeineen.',
           lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Lefkoşa Selimiye-Moschee (Sophienkathedrale) Innen Mihrab 1.jpg',
           selite: 'Mihrab valkoiseksi kalkitun goottilaisen seinän edessä: '
             + 'maalattu kukkakehys, kalligrafiakenttä ja tippukivimäinen '
-            + 'katos syvennyksen yllä. Vasemmalla kohoaa kimppupilari, '
-            + 'oikealla korkea puuristikkoikkuna, ja koko lattian peittää '
+            + 'katos syvennyksen yllä, vasemmalla kimppupilari ja lattialla '
             + 'punainen kuviomatto.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -11529,18 +11541,16 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Lefkosia-faneromeni-church-inside.jpg',
           selite: 'Kirkkosali sisäänkäynniltä: pilaririvit, suippokaariset '
-            + 'holvit ja perällä kullattu ikonostaasi. Katosta riippuu '
-            + 'monikerroksinen kristallikruunu, vasemmalla on puinen '
-            + 'saarnatuoli portaineen.',
+            + 'holvit, perällä kullattu ikonostaasi, katosta riippuva '
+            + 'kristallikruunu ja vasemmalla puinen saarnatuoli portaineen.',
           lahde: 'Mboesch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'NICOSIA, 11 AUGUST, 2011 172.jpg',
           selite: 'Marmorinen mausoleumi kirkon pihalla: pylväät kannattavat '
-            + 'kaarta ja kupolia, jonka huipulla on risti. Takana kohoaa '
-            + 'Faneromenin koulun uusklassinen julkisivu, ja niiden '
-            + 'välissä liehuu ortodoksikirkon keltainen lippu '
-            + 'kaksipäisine kotkineen.',
+            + 'kupolia risteineen, takana kohoaa Faneromenin koulun '
+            + 'uusklassinen julkisivu, ja välissä liehuu ortodoksikirkon '
+            + 'keltainen lippu kaksipäisine kotkineen.',
           lahde: 'Giorgis 2011, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -11580,18 +11590,15 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Hamam baths, Cyprus.jpg',
           selite: 'Hamamin matalat valkoiset kupolit karkean '
             + 'kalkkikivimuurin takaa: kupoleihin on upotettu rivi pyöreitä '
-            + 'lasitäpliä ja yksi suorakaiteen muotoinen valoluukku. Niiden '
-            + 'takaa kohoaa kaksi rapattua hormia, joiden yläosassa on '
-            + 'aukko, ja moskeijan minareetti.',
+            + 'lasitäpliä valoa varten, ja takana kohoaa kaksi rapattua '
+            + 'hormia ja moskeijan minareetti.',
           lahde: 'Mikettg at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Omerye - panoramio.jpg',
-          selite: 'Kylpylän laatoitettu etupiha: seinässä lukee Hamam Omerye, '
-            + 'vieressä ruskeat luukkuovet, ja muurin takaa nousee '
-            + 'valkoinen kupoli, jonka huipulla on ikkunallinen lyhty. '
-            + 'Kupolin edessä näkyy vanhaa hiekkakivimuuria ja pihalle '
-            + 'ripustetut verhot.',
+          selite: 'Kylpylän laatoitettu etupiha: seinässä lukee Hamam '
+            + 'Omerye, vieressä ovat ruskeat luukkuovet, ja vanhan '
+            + 'hiekkakivimuurin takaa nousee valkoinen kupoli lyhtyineen.',
           lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -11684,8 +11691,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'LMM - Schüssel 14.Jhdt.jpg',
           selite: 'Lasitettu savivati 1300-luvulta: vaalealle pohjalle on '
-            + 'kaiverrettu kiertävä kuvio ja siihen levitetty vihreää ja '
-            + 'oranssinruskeaa. Vati on halkeillut ja koottu paloista.',
+            + 'kaiverrettu kiertävä kuvio ja levitetty vihreää ja '
+            + 'oranssinruskeaa, ja vati on koottu paloista.',
           lahde: 'Wolfgang Sauber, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -12654,6 +12661,10 @@ export const NAHTAVYYSJUTUT = {
    * omalla historiallaan. CYP-maalehti kertoo saaren muinaisuudesta
    * ja kirkoista, joten kaupungin jutut pysyvät rakennuksissa.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R8: monivirkkeiset selitteet yhteen
+   * virkkeeseen, juttutekstit ja lähderivit ennallaan.
+   */
   izmir: {
     'İzmirin kellotorni': {
       aika: '1901',
@@ -12689,18 +12700,17 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'İzmir Clock Tower, 2026.jpg',
           selite: 'Kellotorni Konakin aukiolla: kahdeksankulmaisen '
             + 'kaarigallerian päältä nousee kapeneva torni, kellotaulu ja '
-            + 'ylimpänä avoin pylväikkökamari. Lähellä kohoavat '
-            + 'Yalı-moskeijan kupoli ja minareetti sekä kuvernöörinkonak '
-            + 'keltaisine julkisivuineen.',
+            + 'ylimpänä avoin pylväikkökamari, ja lähellä kohoavat '
+            + 'Yalı-moskeijan kupoli ja kuvernöörinkonak.',
           lahde: 'Koray, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Izmir Clock tower 5864.jpg',
           selite: 'Jalusta lähempää: hevosenkenkäkaaret lepäävät '
-            + 'parittaisten hoikkien pylväiden päällä, ja kaarien alla on '
-            + 'kaksi neljästä marmorisuihkulähteestä altaineen. '
-            + 'Rautaristikolla suljetun oven kummallakin puolella on '
-            + 'ympyrämedaljonki tähtineen ja puolikuineen.',
+            + 'parittaisten hoikkien pylväiden päällä, kaarien alla on kaksi '
+            + 'marmorisuihkulähdettä altaineen, ja rautaristikko-oven '
+            + 'kummallakin puolella on ympyrämedaljonki tähtineen ja '
+            + 'puolikuineen.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12736,10 +12746,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kemeraltı daytime.jpg',
-          selite: 'Kemeraltın kivetty kuja keskipäivällä: markiisien alla '
-            + 'on rivissä myymälöitä, joiden kylteissä lukee turkiksi '
-            + 'berber, kahvesi ja aksesuar. Katua varjostaa iso plataani, '
-            + 'ja kujalla liikkuu ostoksilla olevia ihmisiä.',
+          selite: 'Kemeraltın kivetty kuja keskipäivällä: markiisien alla on '
+            + 'rivissä myymälöitä kyltteineen, ja katua varjostaa iso '
+            + 'plataani.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -12783,26 +12792,24 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Hisar Mosque (October 2018).jpg',
           selite: 'Hisarin moskeija kauppakorttelin katolta: lyijynharmaa '
             + 'pääkupoli kuunsirppihuippuineen, ympärillä pienempiä '
-            + 'kupoleita valkoisin, rei\'itetyin kaari-ikkunoin, ja '
-            + 'minareetti, jonka ainoalla parvekkeella on kaiuttimet. '
-            + 'Alhaalla on Kemeraltın kuja markiiseineen.',
+            + 'kupoleita ja minareetti, jonka ainoalla parvekkeella on '
+            + 'kaiuttimet.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Hisar Camii 2025 Şubat 1.jpg',
-          selite: 'Pääkupoli alhaalta: kehä kehältä soikeita medaljonkeja, '
-            + 'joissa on kullattuja kukkakimppuja vaalean liilalla '
-            + 'pohjalla, ja keskellä tumma pyörylä kullattuine '
-            + 'ruusukkeineen. Reunoja kiertää kullattu kipsikoriste ja '
-            + 'seinillä on mustia kalligrafiakilpiä.',
+          selite: 'Pääkupoli alhaalta: kehä kehältä soikeita medaljonkeja '
+            + 'kullattuine kukkakimppuineen vaalean liilalla pohjalla, '
+            + 'keskellä tumma pyörylä ruusukkeineen ja seinillä mustia '
+            + 'kalligrafiakilpiä.',
           lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hisar Camii 2025 Şubat 14.jpg',
-          selite: 'Yksi kupolia kannattavista järeistä pylväistä: kapiteeli '
-            + 'on veistetty kullatuiksi lehtikoristeiksi. Ympärillä '
-            + 'avautuvat sivukupolit ja kapeat kaari-ikkunat, ja salissa '
-            + 'riippuu iso messinkinen kynttiläkruunu.',
+          selite: 'Yksi kupolia kannattavista järeistä pylväistä kullatuiksi '
+            + 'lehtikoristeiksi veistettyine kapiteeleineen, ympärillä '
+            + 'sivukupolit ja salissa riippuva iso messinkinen '
+            + 'kynttiläkruunu.',
           lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12869,17 +12876,15 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Izmir agora substructure 6255.jpg',
           selite: 'Torin lattiaa kannattaneet holvit: leveä kivikaari ja sen '
-            + 'takana rivi kapeampia kaaria, joiden alla kasvaa ruohoa ja '
-            + 'pikkukukkia. Kaarten yläpuolella näkyy pylväshallin '
-            + 'pylväitä ja yksi katkennut pylväänpätkä.',
+            + 'takana rivi kapeampia kaaria, joiden yläpuolella näkyy '
+            + 'pylväshallin pylväitä.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Agora of Smyrna, built during the Hellenistic era at the base of Pagos Hill and totally rebuilt under Marcus Aurelius after the destructive 178 AD earthquake, Izmir, Turkey (18699693425).jpg',
           selite: 'Läntisen pylväshallin korinttilaiset pylväät nurmen '
-            + 'reunassa. Taustalla kohoaa vaaleanpunainen monikerroksinen '
-            + 'pysäköintitalo, jonka kansilla seisoo autoja; vasemmalla '
-            + 'kaivausalueen ylle on vedetty vihreä peltikatos.',
+            + 'reunassa, taustallaan vaaleanpunainen pysäköintitalo ja '
+            + 'vasemmalla kaivausalueen vihreä peltikatos.',
           lahde: 'Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -12911,19 +12916,16 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Salepçioğlu Mosque, October 2018.jpg',
           selite: 'Salepçioğlun moskeija kadulta: keskellä kohoaa harmaa '
-            + 'pääkupoli puolikuukoristeineen, sivuilla pienemmät kupolit, '
-            + 'ja seinät ovat tummanvihreää kiveä valkoisin '
-            + 'marmorikehyksin. Erillään rakennuksesta nousee hyvin hoikka '
-            + 'minareetti, jossa on yksi parveke.',
+            + 'pääkupoli, seinät ovat tummanvihreää kiveä valkoisin '
+            + 'marmorikehyksin, ja erillään rakennuksesta nousee hyvin '
+            + 'hoikka yksiparvekkeinen minareetti.',
           lahde: 'BSRF, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Salepçioğlu Camii Kubbesi.jpg',
           selite: 'Kupoli alhaalta: vaaleansiniseltä pohjalta säteilee '
-            + 'kullanruskeita ripoja keskusmedaljonkiin, ja väleissä on '
-            + 'tähti- ja kasviaiheita. Kupolin juurella kiertää '
-            + 'kaari-ikkunoita värillisin lasein ja pendentiiveissä on '
-            + 'mustat kahdeksankulmaiset kalligrafialevyt.',
+            + 'kullanruskeita ripoja keskusmedaljonkiin, ja kupolin juurella '
+            + 'kiertää värilasi-ikkunoita mustine kalligrafialevyineen.',
           lahde: 'Canercangul, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12935,6 +12937,10 @@ export const NAHTAVYYSJUTUT = {
    * kirjoitettiin uudelleen, koska se alkoi samalla virkkeellä kuin
    * linnan juttu ja toisti muurikehien mitat; nyt se lähtee
    * portista, jonka torniin kellotorni on rakennettu.
+   */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R8: monivirkkeiset selitteet yhteen
+   * virkkeeseen, juttutekstit ja lähderivit ennallaan.
    */
   ankara: {
     'Ankaran linna': {
@@ -12967,18 +12973,17 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Castillo de Ankara, Ankara, Turquía, 2024-10-02, DD 11-13 HDR.jpg',
           selite: 'Linnavuoren laki iltavalossa: sisemmän kehän hammastettu '
-            + 'muuri seisoo kalliojyrkänteen päällä, ja sen takaa nousee '
-            + 'salko Turkin lippuineen. Rinteessä on tiheässä vanhoja '
-            + 'punatiilikattoisia taloja, ja kauempana kohoaa nykyinen '
-            + 'keskusta tornitaloineen.',
+            + 'muuri seisoo kalliojyrkänteen päällä Turkin lippu salossaan, '
+            + 'rinteessä on tiheässä punatiilikattoisia taloja, ja kauempana '
+            + 'kohoaa nykyinen keskusta tornitaloineen.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ankara Ickale street view in 2011 01.jpg',
           selite: 'Kuja muurien sisäpuolella: kapean kadun molemmin puolin '
-            + 'on valkoiseksi rapattuja taloja, joiden ikkunoita suojaavat '
-            + 'ristikkosäleiköt. Kauempana yläkerrat työntyvät kadun päälle '
-            + 'ja katot ovat punaista tiiltä.',
+            + 'on valkoiseksi rapattuja taloja ristikkosäleikköineen, ja '
+            + 'kauempana yläkerrat työntyvät kadun päälle punatiilikattojen '
+            + 'alla.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13015,27 +13020,24 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Ankara Temple of Augustus and Rome exterior from S in 2019 02.jpg',
           selite: 'Temppelin cellan seinä etelästä: vaaleaa kalkkikiveä '
-            + 'kerroksittain ladottuna, pinnassa pieniä ristikkoikkunoita '
-            + 'ja lohkeamia. Vieressä kohoaa Hacı Bayramin moskeijan '
-            + 'tiiliminareetti ja punatiilinen katto, nurmella edessä '
-            + 'pylväänpaloja ja kivilohkareita.',
+            + 'kerroksittain ladottuna, pinnassa pieniä ristikkoikkunoita, '
+            + 'ja vieressä kohoaa Hacı Bayramin moskeijan tiiliminareetti.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The Temple of Augustus and Rome with the Res Gestae Divi Augusti ("Deeds of the Divine Augustus") inscribed on the walls of the cella, Ancyra, Ankara (Turkey) (26068597826).jpg',
-          selite: 'Kreikankielinen käännös cellan ulkoseinässä: kreikkalaisin '
-            + 'suuraakkosin hakattua tekstiä tiiviinä palstoina, '
-            + 'kivipinta paikoin lohjennut ja kirjaimia kadonnut. '
-            + 'Alareunassa kulkee meanderilista.',
+          selite: 'Kreikankielinen käännös cellan ulkoseinässä: '
+            + 'kreikkalaisin suuraakkosin hakattua tekstiä tiiviinä '
+            + 'palstoina, kivipinta paikoin lohjennut ja alareunassa '
+            + 'meanderilista.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Turkey. Ankara. Temple of Augustus Caesar. Latin inscription closer up. LOC matpc.03372.jpg',
           selite: 'Mustavalkokuva eteishallin seinästä: ylhäällä '
-            + 'latinankielisen tekstin isokirjaiminen otsikkorivi RERVM '
-            + 'GESTARVM DIVI AVGVSTI, sen alla tiheitä tekstipalstoja, ja '
-            + 'seinässä isoja lohkeamia ja reikiä. Negatiivin mustaan '
-            + 'alareunaan on tehty vaalea merkintä.',
+            + 'latinankielisen tekstin otsikkorivi RERVM GESTARVM DIVI '
+            + 'AVGVSTI, sen alla tiheitä tekstipalstoja, ja seinässä isoja '
+            + 'lohkeamia.',
           lahde: 'Matson Collection, Wikimedia Commons (PD)',
         },
       ],
@@ -13074,17 +13076,15 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'The Roman Baths of Ancyra, constructed in the third century during the reign of Roman Emperor Caracalla by a wealthy citizen of Ancyra called Tiberius Julius Justus Junianus, Ankara, Turkey (26211723132).jpg',
           selite: 'Hypokaustin pilarit paikoillaan: pyöreistä ja '
             + 'neliskulmaisista tiilistä ladotut pinot seisovat tasaisissa '
-            + 'riveissä nurmettuneella pohjalla, ympärillä kiveä ja tiiltä '
-            + 'vuorottelevat perustusmuurit ja rivi tiilikaaria. Takana '
-            + 'nykykaupunki nousee rinteille.',
+            + 'riveissä, ympärillä kiveä ja tiiltä vuorottelevat '
+            + 'perustusmuurit, ja takana nykykaupunki nousee rinteille.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Ankara Thermen13.jpg',
           selite: 'Ulkoilmamuseon kivilöytöjä nurmella: korinttilaisia '
-            + 'pylväänkapiteeleja akantinlehtineen ja hakattu kivitaulu, '
-            + 'jonka syvennyksessä seisoo ihmishahmo. Maassa on lisäksi '
-            + 'harmaita pylväänvarsia.',
+            + 'pylväänkapiteeleja akantinlehtineen, hakattu kivitaulu '
+            + 'ihmishahmoineen ja maassa harmaita pylväänvarsia.',
           lahde: 'Ingeborg Simon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13122,20 +13122,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Julian Column, Ankara 2024.jpg',
-          selite: 'Julianuksen pylväs aamuvalossa: vaalea kivijalusta '
-            + 'seisoo karkeasta punaruskeasta kivestä muuratulla perustalla '
-            + 'nurmisaarekkeella. Ylöspäin kapeneva varsi on uurrettu '
-            + 'tiheiksi vaakarenkaiksi, ja lehtikoristeisessa kapiteelissa '
-            + 'erottuu soikea medaljonki.',
+          selite: 'Julianuksen pylväs aamuvalossa: vaalea kivijalusta seisoo '
+            + 'punaruskeasta kivestä muuratulla perustalla, ja ylöspäin '
+            + 'kapeneva varsi on uurrettu tiheiksi vaakarenkaiksi '
+            + 'lehtikoristeisen kapiteelin alla.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Ankara - Julianus Sütunu 0366.jpg',
-          selite: 'Pylvään latva talvella: kapiteelin päälle on kertynyt '
-            + 'iso risuista kyhätty pesä. Kapiteeliin on veistetty '
-            + 'akantinlehtiä muistuttavat lehdet ja pyöreä medaljonki, ja '
-            + 'sen alapuolella varsi on uurrettu kymmeniksi kapeiksi '
-            + 'vaakarenkaiksi.',
+          selite: 'Pylvään latva talvella: akantinlehtiä muistuttavin lehdin '
+            + 'ja pyörein medaljongein koristellun kapiteelin päälle on '
+            + 'kertynyt iso risupesä.',
           lahde: 'Phyrexian, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13174,26 +13171,24 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Museum of Anatolian Civilizations 2024.jpg',
           selite: 'Museon sisäänkäynti pihalta: luonnonkiviseinässä on '
             + 'valkoinen marmorikaari, johon on hakattu ANADOLU '
-            + 'MEDENİYETLERİ MÜZESİ. Takana kohoavat bedestenin '
-            + 'lyijykupolit lyhtyineen ja vieressä avautuu hanin '
-            + 'kaarikäytävä. Pihalla seisoo kivileijonia ja torsoja.',
+            + 'MEDENİYETLERİ MÜZESİ, takana kohoavat bedestenin '
+            + 'lyijykupolit, ja pihalla seisoo kivileijonia ja torsoja.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Museo de las Civilizaciones Anatólicas. Interior.jpg',
-          selite: 'Kymmenkupolinen keskihalli tiiliholvien alla: '
-            + 'seinustalla jatkuu rivi kivireliefejä, joissa kulkee '
-            + 'pitkäkaapuisia hahmoja sauva ja jousi kädessä, ja rivin '
-            + 'jatkona on hieroglyfein kirjoitettu kivipaasi. Kaksi tummaa '
+          selite: 'Kymmenkupolinen keskihalli tiiliholvien alla: seinustalla '
+            + 'jatkuu rivi kivireliefejä pitkäkaapuisine hahmoineen ja '
+            + 'hieroglyfein kirjoitettu kivipaasi, ja kaksi tummaa '
             + 'basalttileijonaa on nostettu korokkeille.',
           lahde: 'José Luis Filpo Cabana, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Museum Ankara 04.jpg',
           selite: 'Esihistorian sivusali: valaistuissa syvennyksissä on '
-            + 'Çatalhöyükin seinämaalausten rappauspaloja, joihin on '
-            + 'maalattu punaruskeita eläin- ja ihmishahmoja. Salin keskellä '
-            + 'on lasivitriinejä pienlöytöineen.',
+            + 'Çatalhöyükin seinämaalausten rappauspaloja punaruskeine '
+            + 'eläin- ja ihmishahmoineen, ja keskellä on lasivitriinejä '
+            + 'pienlöytöineen.',
           lahde: 'Ingeborg Simon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13234,19 +13229,17 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Ankara Aug 2023 13 39 04 215000.jpeg',
           selite: 'Vaaleanpunaiseksi rapattu kellotorni nousee linnan '
-            + 'pääportin vierestä pyöreän tiili- ja kivimuuritornin päältä. '
-            + 'Ylinnä on kahdeksankulmainen kamari kaariaukkoineen, '
-            + 'alempana valkoinen kellotaulu roomalaisin numeroin. Portin '
-            + 'läpi näkyy kauppakatu.',
+            + 'pääportin vierestä pyöreän muuritornin päältä: ylinnä on '
+            + 'kahdeksankulmainen kamari kaariaukkoineen ja alempana '
+            + 'valkoinen kellotaulu roomalaisin numeroin.',
           lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Old Turkish Houses Ankara.jpg',
           selite: 'Ottomaanitalo linnan kaupunginosassa: kivisen '
             + 'pohjakerroksen päällä yläkerta työntyy ulos puupalkin '
-            + 'varassa, ja puurunko on täytetty kalanruotokuvioon '
-            + 'ladotuilla tiilillä. Ikkunat ovat puukehyksisiä ja '
-            + 'pieniruutuisia, ja julkisivun yli kiipeää villiviini.',
+            + 'varassa, puurunko on täytetty kalanruotokuvioon ladotuilla '
+            + 'tiilillä, ja julkisivun yli kiipeää villiviini.',
           lahde: 'Pivox, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],

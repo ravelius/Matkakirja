@@ -71,6 +71,17 @@
 // nykypolitiikkaa, ja Jekaterinburgin introssa ei ole vuoden 1918
 // aihepiiriä.
 //
+// ERÄ R8 (20.8.2026) kirjoitti uuteen asuun kuusi introa: Petra,
+// Kappadokia, Nikosia, Ankara, İzmir ja Dubai. Faktat ovat näiden
+// lehtien omista, jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:
+// nostot, johdannot ja Matkailijan-oppaat; nahtavyysjutut.js;
+// oma teksti-kenttä alla) — uusia lähteitä ei tarvittu. Samassa erässä
+// tiivistettiin näiden kuuden lehden kuvatekstit yhteen virkkeeseen ja
+// lyhennettiin viiden kohdekartan esittely (maakartat.js);
+// Kappadokialla ei ole kohdekarttaa. NIKOSIAN LINJAUS on Fablen
+// "Antaa olla": jaettu kaupunki kerrotaan hallinnollisena tosiasiana
+// ilman kannanottoja, ja muissa ei käsitellä nykypolitiikkaa.
+//
 // ERÄ R4 (20.8.2026) SAI UUDET LUVUT en-Wikipedian raakateksteistä
 // (Sanaa, Aden, Muscat, Tabriz; haettu 20.8.2026): Sanaan asukasluku
 // 2 545 000 (2017) ja asema yhtenä maailman korkeimmalla sijaitsevista
@@ -91,10 +102,27 @@
 // nosto ne jo kertoo.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
-    intro: 'Izmir on Turkin kolmanneksi suurin kaupunki ja sen tärkein '
-      + 'satama Egeanmerellä. Vanha nimi Smyrna on kolmetuhatta vuotta '
-      + 'vanha, ja paikalla on asuttu yhtäjaksoisesti kauemmin kuin '
-      + 'melkein missään muualla Välimerellä.',
+    intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
+      + 'kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme '
+      + 'miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan '
+      + 'merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa '
+      + '— ylös mennään portaita, vastarannalle lautalla. Vanha nimi '
+      + '**Smyrna** elää yhä englannin kielessä ja viikunalajikkeiden '
+      + 'nimissä.'
+      + '\n\n'
+      + 'Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri '
+      + 'Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale '
+      + 'on siitä muistona. Kaupungin syy on aina ollut lahti: laivat '
+      + 'pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle '
+      + 'tielle. Hedelmää varten rakennettiin myös **Anatolian ensimmäinen '
+      + 'rautatie**: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan '
+      + 'Aydınin tasangon viikunoita satamaan.'
+      + '\n\n'
+      + 'Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin '
+      + 'viikunantuottaja. Pohjoisessa aukeaa Gedizin suisto, jossa '
+      + 'talvehtii noin 80 000 lintua ja jonka suola-altaista tulee '
+      + 'kolmasosa Turkin suolasta. Rantabulevardi Kordon on kilometrien '
+      + 'kävelykatu, ja aamiainen ostetaan kadulta.',
     teksti: 'Izmir on rakennettu syvän lahden pohjukkaan, jota vuoret '
       + 'ympäröivät kolmelta suunnalta. Lahti tekee siitä luonnollisen '
       + 'sataman: laivat pääsevät sisään suojaan, ja tavara siirtyy '
@@ -115,10 +143,26 @@ export const ASIA_ARTIKKELIT = {
       + 'jota myydään kadulla työntökärryistä aamusta iltaan.',
   },
   Ankara: {
-    intro: 'Ankara on Turkin pääkaupunki ja maan toiseksi suurin '
-      + 'kaupunki. Se nostettiin pääkaupungiksi vuonna 1923 osittain '
-      + 'siksi, että Istanbul oli liian lähellä rajaa ja liian kaukana '
-      + 'maan omasta sydämestä.',
+    intro: 'Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: '
+      + 'keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä '
+      + 'Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja '
+      + 'ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja '
+      + 'elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.'
+      + '\n\n'
+      + 'Ankara jakautuu kahtia. Pohjoisessa on **Ulus**, joka kiertyy '
+      + 'linnavuoren juurelle; siinä roomalainen, bysanttilainen ja '
+      + 'ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei '
+      + 'koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin '
+      + 'vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, '
+      + 'angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.'
+      + '\n\n'
+      + 'Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden '
+      + 'tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu '
+      + 'tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 '
+      + 'kaupunkisuunnittelukilpailun voitti saksalainen Hermann Jansen. '
+      + 'Linnavuoren eteläpuolelle nousi uusi kaupunki, Kızılay ja sen '
+      + 'takana Çankaya, ja Rasattepen kukkulalle rakennettiin vuosina '
+      + '1944–1953 **Anıtkabir**.',
     teksti: 'Ankara sijaitsee Anatolian ylängöllä noin 900 metrin '
       + 'korkeudessa. Ilmasto on mannerilmasto: kesät ovat kuivia ja '
       + 'kuumia, talvet kylmiä ja lumisia — hyvin toisenlaisia kuin '
@@ -138,10 +182,26 @@ export const ASIA_ARTIKKELIT = {
       + 'kohoaa omalla kukkulallaan keskustan yllä.',
   },
   Kappadokia: {
-    intro: 'Kappadokia on Keski-Turkin alue, jonka maisema on '
-      + 'muodostunut tulivuoren tuhkasta. Kivi on niin pehmeää, että '
-      + 'siihen on kaiverrettu taloja, kirkkoja ja kokonaisia '
-      + 'maanalaisia kaupunkeja.',
+    intro: 'Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen '
+      + 'alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. '
+      + 'Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät '
+      + 'tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat '
+      + 'syöneet siitä piikkejä ja pilareita — turkiksi **keijupiippuja**.'
+      + '\n\n'
+      + 'Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa '
+      + 'lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, '
+      + 'talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä '
+      + 'asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia '
+      + 'kaupunkeja — **Derinkuyu** ulottuu noin kahdeksaankymmeneenviiteen '
+      + 'metriin ja viiteen kerrokseen, ja sen käytävät suljettiin '
+      + 'kivilaatoilla, jotka aukesivat vain sisältä.'
+      + '\n\n'
+      + 'Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen '
+      + 'ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. '
+      + 'Kansallispuisto ja alueen kalliokohteet ovat olleet Unescon '
+      + 'maailmanperintöluettelossa vuodesta 1985. Matkailijalle alue on '
+      + 'silti pieni: Göreme, Uçhisar, Avanos ja Ürgüp mahtuvat muutaman '
+      + 'kymmenen kilometrin säteelle.',
     teksti: 'Miljoonia vuosia sitten alueen tulivuoret peittivät maan '
       + 'paksuun tuhkakerrokseen, joka kovettui pehmeäksi kiveksi. '
       + 'Sade ja tuuli ovat kuluttaneet siitä kartioita, harjuja ja '
@@ -161,9 +221,27 @@ export const ASIA_ARTIKKELIT = {
       + 'leijuu kymmeniä kuumailmapalloja.',
   },
   Nikosia: {
-    intro: 'Nikosia on Kyproksen pääkaupunki ja maailman viimeinen '
-      + 'jaettu pääkaupunki. Kaupungin läpi kulkee puskurivyöhyke, jonka '
-      + 'toisella puolella puhutaan kreikkaa ja toisella turkkia.',
+    intro: 'Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista '
+      + 'ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon '
+      + 'keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten '
+      + 'välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa '
+      + 'ja Kyproksen vanhin arkeologinen museo.'
+      + '\n\n'
+      + 'Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat '
+      + 'vuosina 1567–1570 sen ympärille noin viiden kilometrin '
+      + '**muurikehän** ja siihen yksitoista viisikulmaista bastionia. '
+      + 'Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta '
+      + 'vallihauta saataisiin täytettyä; hauta on nyt puistoja ja '
+      + 'urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta '
+      + 'brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja '
+      + 'liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 '
+      + '629.'
+      + '\n\n'
+      + 'Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee '
+      + '**puskurivyöhyke**. Eteläpuolen kunnassa asuu runsaat 111 000 ja '
+      + 'pohjoispuolen kunnassa runsaat 61 000 ihmistä; etelässä maksetaan '
+      + 'euroilla ja pohjoisessa Turkin liiroilla. Puolelta toiselle pääsee '
+      + 'jalan tarkastuspisteistä.',
     teksti: 'Nikosia on saaren keskellä, kaukana rannikosta, tasangolla '
       + 'jota vuoristot reunustavat pohjoisessa ja etelässä. '
       + 'Vanhaakaupunkia ympäröi venetsialaisten 1500-luvulla '
@@ -306,10 +384,27 @@ export const ASIA_ARTIKKELIT = {
       + 'kuulee samaan aikaan kirkonkellot, rukouskutsun ja shofar-torven.',
   },
   'Petra (kaupunki)': {
-    intro: 'Petra on kallioon veistetty kaupunki Jordanian '
-      + 'aavikkovuorilla. Sen rikkaus ei perustunut kultaan vaan '
-      + 'veteen: nabatealaiset osasivat kerätä ja johtaa sadeveden '
-      + 'niin, että aavikon keskellä riitti juotavaa ympäri vuoden.',
+    intro: 'Petra on Etelä-Jordanian vuoristossa 810 metrin korkeudessa, ja '
+      + 'sinne tullaan kalliorotkoa pitkin. **Siq** on runsaan kilometrin '
+      + 'mittainen, kapeimmillaan kolme metriä leveä, ja sen seinät kohoavat '
+      + 'paikoin lähes kahteensataan metriin. Rotkon päässä odottaa '
+      + 'Al-Khazneh, 37 metriä korkea julkisivu, joka on louhittu suoraan '
+      + 'kallioseinään.'
+      + '\n\n'
+      + 'Nabatealaiset, arabialainen kauppiaskansa, asettuivat vuorille '
+      + '300-luvulla eKr. ja tekivät Petrasta kuningaskuntansa pääkaupungin. '
+      + 'Rikkaus tuli suitsuke- ja mausteteistä eteläisestä Arabiasta '
+      + 'Välimerelle. Kukoistuskaudellaan 100-luvulla jKr. laaksossa asui '
+      + 'arviolta kaksikymmentätuhatta ihmistä keskellä puoliaavikkoa, jossa '
+      + 'sataa runsaat sata millimetriä vuodessa — se onnistui, koska '
+      + '**jokainen sadekuuro otettiin talteen** patoihin, kouruihin ja '
+      + 'naamioituihin säiliöihin.'
+      + '\n\n'
+      + 'Rooma liitti kuningaskunnan itseensä vuonna 106 jKr., ja vuoden 363 '
+      + 'maanjäristys rikkoi rakennukset ja vesijärjestelmän. Länsi unohti '
+      + 'kaupungin sijainnin, kunnes sveitsiläinen Johann Ludwig Burckhardt '
+      + 'tuli katsomaan sitä 1812. Unescon maailmanperintöluetteloon Petra '
+      + 'hyväksyttiin 1985.',
     teksti: 'Petraan tullaan kapeaa rotkoa, Siqiä, pitkin. Se on yli '
       + 'kilometrin pituinen, ja sen seinät nousevat paikoin '
       + 'kahdeksankymmeneen metriin. Rotkon päässä aukeaa al-Khazneh, '
@@ -766,9 +861,27 @@ export const ASIA_ARTIKKELIT = {
       + 'myydään suitsuketta, hopeaa ja kankaita.',
   },
   Dubai: {
-    intro: 'Dubai oli sata vuotta sitten pieni helmenkalastajien satama. '
-      + 'Nyt siinä on maailman korkein rakennus — ja viiden minuutin '
-      + 'venematkan päässä yhä sama vanha basaari.',
+    intro: 'Dubai on Persianlahden rannalla Arabiemiirikunnissa, ja koko '
+      + 'kaupunki on kasvanut yhden vesiuoman ympärille. Khor Dubai ei ole '
+      + 'joki vaan kapea suolaisen veden lahti, joka työntyy noin '
+      + 'neljätoista kilometriä sisämaahan ja on keskimäärin kuutisen metriä '
+      + 'syvä — luonnonsatama. Etelärannalle syntyi Bur Dubai ja '
+      + 'pohjoisrannalle Deira, eikä niiden välillä ollut pitkään yhtään '
+      + 'siltaa.'
+      + '\n\n'
+      + '1870-luvulla Dubai oli muutaman tuhannen asukkaan kylä, joka eli '
+      + 'kaupasta ja **helmistä**. Kesäisin sukellettiin simpukoiden perään '
+      + 'ilman happilaitteita, ja helmenpyynti oli tärkein elinkeino '
+      + '1930-luvulle asti. Al Maktoumin suku asettui lahden suulle Al '
+      + 'Shindaghaan vuonna 1833. Kun lahti 1960-luvulla ruopattiin '
+      + 'syvemmäksi, Dubaista tuli jälleenvientisatama.'
+      + '\n\n'
+      + 'Nykyään lahden kautta kulkee yli 13 000 alusta vuodessa, ja toinen '
+      + 'puoli kaupunkia on tornikaupunki: **Burj Khalifa** valmistui vuonna '
+      + '2010 ja on 828 metriä korkea. Metro avattiin 2009 ilman '
+      + 'kuljettajaa. Vanhassa kaupungissa liikutaan silti yhä vedessä: abra '
+      + 'eli puuvene vie lahden yli muutamassa minuutissa, ja kultaa myydään '
+      + 'Deirassa painon mukaan.',
     teksti: 'Dubai on Persianlahden rannalla Arabiemiirikunnissa. '
       + 'Kaupungin halki kulkee luonnollinen merenlahti, Dubai Creek, '
       + 'jonka molemmilla rannoilla vanhat kaupunginosat ovat. Lahden '

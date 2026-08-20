@@ -3027,17 +3027,22 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 39.948, etela: 39.936, lansi: 32.851, ita: 32.868,
     },
-    esittely: 'Ankara on Turkin pääkaupunki vuodesta 1923, mutta tämä '
-      + 'kartta ei ole siitä kaupungista. Ulus on se Ankara, joka oli '
-      + 'olemassa jo silloin: linnavuori, jonka muurit näkyvät kuvan '
-      + 'oikeassa laidassa, ja sen juurella kortteleita, joissa on '
-      + 'roomalaisia, bysanttilaisia ja ottomaanisia kerroksia '
-      + 'päällekkäin.\n\n'
-      + 'Kaupunki oli pitkään pieni maakuntakeskus, ja juuri siksi '
-      + 'antiikin kerros säilyi — sitä ei rakennettu pois. Kartan '
-      + 'pohjoisreunassa on roomalaisen kylpylän pohjakaava, keskellä '
-      + 'Augustuksen temppeli ja idässä linnavuori, ja niiden välit '
-      + 'kävelee alle puolessa tunnissa.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja miksi
+     * ne kiinnostavat; kartan laitojen ja ilmansuuntien kuvailu on
+     * poistettu, ja kaupungin oma historia asuu nyt etusivun
+     * leipätekstissä (js/packs/asia-artikkelit.js).
+     */
+    esittely: 'Kartan alue on Ulus, se osa Ankaraa joka oli olemassa jo '
+      + 'ennen pääkaupungiksi tuloa. Linnavuoren muurien juurella '
+      + 'roomalainen, bysanttilainen ja ottomaaninen kerros ovat '
+      + 'päällekkäin: Augustuksen temppeli keisarin omine teksteineen, '
+      + 'roomalaisen kylpylän lämmityspilaristo, Julianuksen pylväs, '
+      + 'Anatolian sivilisaatioiden museo vanhassa bedestenissä ja linnan '
+      + 'pääportin vieressä kellotorni. Kaupunki oli pitkään pieni '
+      + 'maakuntakeskus, ja juuri siksi antiikin kerros säilyi — sitä ei '
+      + 'rakennettu pois. Kohteiden välit kävelee alle puolessa tunnissa.',
     kohteet: [
       { nimi: 'Ankaran linna', lat: 39.9415, lon: 32.8654 },
       { nimi: 'Augustuksen temppeli', lat: 39.9442, lon: 32.8583 },
@@ -3053,15 +3058,17 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 38.426, etela: 38.413, lansi: 27.124, ita: 27.142,
     },
-    esittely: 'İzmir on rakennettu lahden pohjukkaan, ja sen vanha '
-      + 'keskusta on puolikuun muotoinen. Muoto ei ole sattumaa: '
-      + 'kartan keskellä kaartuvat kadut seuraavat antiikin sataman '
-      + 'rantaviivaa, joka on sittemmin täytetty maaksi. Basaari '
-      + 'kasvoi umpeenkasvaneen sataman päälle.\n\n'
-      + 'Kemeraltin kujat, Konakin aukio ja roomalainen agora ovat '
-      + 'kaikki saman kilometrin sisällä, ja niiden välissä kaupunki '
-      + 'on yhtenäistä vanhaa rakennuskantaa: moskeijoita, '
-      + 'karavaaniseraajeja ja katettuja käytäviä.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8, sama linja kuin Ankarassa yllä:
+     * esittely kertoo kohteet, ei kartan viivastoja.
+     */
+    esittely: 'Kartan alue on İzmirin vanha keskusta lahden pohjukassa. '
+      + 'Kemeraltın basaari kasvoi antiikin sataman päälle sen jälkeen, kun '
+      + 'poukama kasvoi umpeen, ja samoilla kujilla ovat Hisarin moskeija, '
+      + 'Sulu Han ja Salepçioğlun moskeija. Idässä on Smyrnan roomalainen '
+      + 'agora, jonka holvit kannattivat torin lattiaa, ja lännessä Konakin '
+      + 'aukio kellotorneineen. Kaikki mahtuvat saman kilometrin sisään. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       { nimi: 'İzmirin kellotorni', lat: 38.4189, lon: 27.1287 },
       { nimi: 'Kemeraltin basaari', lat: 38.4187, lon: 27.1329 },
@@ -3221,25 +3228,23 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378,
     },
-    esittely: 'Nikosia on tasangon keskellä, ei rannikolla, ja se on '
-      + 'ainoa Kyproksen suurista kaupungeista jota ei perustettu '
-      + 'sataman viereen. Kaupunki kasvoi joen mutkaan, ja sen muoto '
-      + 'päätettiin kerralla vuonna 1567: venetsialaiset purkivat '
-      + 'keskiaikaisen kaupungin laidat ja rakensivat tilalle '
-      + 'ympyränmuotoisen muurin, jossa on yksitoista nuolenkärjen '
-      + 'muotoista bastionia. Kehä on kartan selvin muoto, ja se on '
-      + 'yhä kaupungin sisärengas: muurin sisäpuoli on vanhakaupunki, '
-      + 'ulkopuoli nykyistä Nikosiaa.'
-      + '\n\n'
-      + 'Kartalla tähtimuoto erottuu heti keskeltä. Sen sisällä kadut '
-      + 'ovat kapeita ja mutkittelevia, ulkopuolella suoria ja leveitä '
-      + '— ero näkyy viivojen tiheydestä. Muurin ympärillä kiertää '
-      + 'vaaleampi kaistale: se on entinen vallihauta, jossa kasvaa '
-      + 'nykyään puita ja jonka pohjalla on puistoja ja '
-      + 'urheilukenttiä. Vanhankaupungin kohteet ovat kävelymatkan '
-      + 'päässä toisistaan; kartan itäreunassa kulkeva leveä väylä on '
-      + 'jo muurien ulkopuolella. Kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8, sama linja kuin Ankarassa ja
+     * İzmirissä: esittely kertoo kohteet, ei kartan viivastoja. Jaettu
+     * kaupunki mainitaan tosiasiana ilman kannanottoja.
+     */
+    esittely: 'Kartan alue on Nikosian vanhakaupunki venetsialaisten '
+      + 'muurikehän sisällä. Muuri rakennettiin vuosina 1567–1570, ja sen '
+      + 'yksitoista bastionia on nimetty rakennustyön maksaneiden '
+      + 'italialaissukujen mukaan; entinen vallihauta on nyt puistoja ja '
+      + 'urheilukenttiä. Kehän sisällä ovat Selimiyen moskeija, joka '
+      + 'rakennettiin goottilaiseksi katedraaliksi ja vihittiin moskeijaksi '
+      + 'vuonna 1570, karavaanimajatalo Büyük Han, Faneromenin kirkko ja '
+      + 'Omeryen hamam; Kyproksen museo ja Leventis-museo ovat aivan muurin '
+      + 'tuntumassa. Kaupunki on jaettu, ja puskurivyöhyke kulkee '
+      + 'vanhankaupungin poikki — kohteita on sen molemmin puolin, ja '
+      + 'puolelta toiselle pääsee jalan tarkastuspisteistä. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       { nimi: 'Selimiyen moskeija', lat: 35.1765, lon: 33.3645 },
       { nimi: 'Büyük Han', lat: 35.1763, lon: 33.3625 },
@@ -5424,37 +5429,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/dubai-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 25.276, etela: 25.256, lansi: 55.284, ita: 55.312 },
-    esittely: 'Dubai kasvoi lahdelman ympärille. Khor Dubai ei ole '
-      + 'joki vaan kapea suolaisen veden lahti, joka työntyy '
-      + 'Persianlahdesta noin neljätoista kilometriä sisämaahan. Se '
-      + 'on luonnonsatama: avomereltä pääsee tyyneen veteen, jossa ei '
-      + 'ole aallokkoa, ja lasti voidaan purkaa suoraan rannalle. '
-      + 'Lahden etelärannalle syntyi Bur Dubai ja pohjoisrannalle '
-      + 'Deira, eikä niiden välillä ollut pitkään aikaan yhtään '
-      + 'siltaa — toiselle puolelle mentiin veneellä. 1870-luvulla '
-      + 'Dubai oli muutaman tuhannen asukkaan kylä, joka eli kahdesta '
-      + 'asiasta: kaupasta ja helmistä. Kesäisin miehet purjehtivat '
-      + 'matalikoille ja sukelsivat simpukoiden perään ilman mitään '
-      + 'happilaitteita, pelkkä nenäpuristin nenässä ja kivi jalassa. '
-      + 'Helmenpyynti oli kaupungin tärkein elinkeino 1930-luvulle '
-      + 'asti. Vanhin yhä pystyssä oleva rakennus on Al Fahidin '
-      + 'linnoitus vuodelta 1787.\n\nKartalla on vain vanha kaupunki, '
-      + 'noin kolmen kilometrin levyinen pala. Lahti kaartaa kuvan '
-      + 'halki isona koukkuna: se tulee sisään ylhäältä, kiertää '
-      + 'vasemmalla niemen ympäri ja jatkaa oikealle. Niemi on Al '
-      + 'Shindagha, ja sen takana kartan ulkopuolella aukeaa avomeri. '
-      + 'Kapeimmillaan lahti on tässä kohdassa vain parisataa metriä '
-      + 'leveä, ja juuri siitä pikkuveneet eli abrat kulkevat '
-      + 'rannalta toiselle. Lahden eteläreuna on piirtynyt '
-      + 'sahalaitaiseksi: ranta ei ole siellä suora vaan porrastettu '
-      + 'pieniksi ulokkeiksi, joiden väliin veneet mahtuvat. '
-      + 'Etelässä on Bur Dubai, '
-      + 'pohjoisessa Deira, ja molemmilla puolilla katuverkko '
-      + 'muuttuu rannan lähellä tiheäksi kujien seitiksi — siellä '
-      + 'ovat suukit eli kauppakujat. Dubain kuuluisat pilvenpiirtäjät '
-      + 'eivät näy kartalla lainkaan: Burj Khalifa on kahdeksan '
-      + 'kilometriä lounaassa, kaukana tämän kuvan ulkopuolella. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8: esittely kertoo kohteet, ei
+     * kartan viivastoja; helmenpyynti jää mukaan, koska yllä oleva
+     * kohteiden lähdeperustelu nojaa siihen.
+     */
+    esittely: 'Kartan alue on vanha Dubai lahden molemmin puolin. '
+      + 'Etelärannalla on Bur Dubai: Al Fahidin linnoitus vuodelta 1787, '
+      + 'Bastakian tuulitornikorttelit, tekstiilisuuk ja Suuri moskeija, ja '
+      + 'lahden suulla Al Shindaghan niemi, jonne Al Maktoumin suku asettui '
+      + 'vuonna 1833. Pohjoisrannalla on Deira, jossa ovat kultasuuk, '
+      + 'maustesuuk, Al Ahmadiyan koulu ja dhow-satama. Ennen öljyä kaupunki '
+      + 'eli kaupasta ja helmenpyynnistä, ja helmiretkikunnat lähtivät juuri '
+      + 'tästä vedestä. Rantojen väliä kulkee abra, sillä lahti on tässä '
+      + 'kohdassa vain parisataa metriä leveä. Burj Khalifa ja muut '
+      + 'pilvenpiirtäjät jäävät kartan ulkopuolelle kahdeksan kilometrin '
+      + 'päähän lounaaseen. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, kuten Odessassa.
@@ -5613,40 +5604,21 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/petra-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 30.341, etela: 30.3175, lansi: 35.427, ita: 35.4665 },
-    esittely: 'Petra ei ole rakennettu vaan veistetty. Nabatealaiset, '
-      + 'arabialainen kansa, asettuivat näille vuorille 300-luvulla '
-      + 'eKr., ja kaupungista tuli heidän kuningaskuntansa pääkaupunki '
-      + '100-luvulla eKr. Nimi oli heidän omalla kielellään Raqmu. '
-      + 'Rikkaus tuli kaupasta: suitsuke ja mausteet kulkivat '
-      + 'eteläisestä Arabiasta Välimerelle, ja reitti kulki tästä '
-      + 'laaksosta. Kukoistuskaudellaan 100-luvulla jKr. kaupungissa '
-      + 'arvioidaan asuneen noin kaksikymmentätuhatta ihmistä keskellä '
-      + 'puoliaavikkoa, jossa sataa runsaat sata millimetriä vuodessa. '
-      + 'Se onnistui, koska vesi otettiin talteen: padot, kallioon '
-      + 'louhitut vesikourut ja naamioidut sadevesisäiliöt keräsivät '
-      + 'jokaisen kuuron. Rooma liitti kuningaskunnan valtakuntaansa '
-      + 'vuonna 106 jKr., ja vuoden 363 maanjäristys rikkoi sekä '
-      + 'rakennuksia että vesijärjestelmän. Kauppa siirtyi merille, ja '
-      + 'kaupunki hiljeni. Länsimaat unohtivat sen sijainnin kokonaan, '
-      + 'kunnes sveitsiläinen Johann Ludwig Burckhardt tuli vuonna 1812 '
-      + 'paikalliseksi pukeutuneena katsomaan, mitä beduiinit '
-      + 'tarkoittivat puhuessaan raunioista vuorten takana. Unescon '
-      + 'maailmanperintöluetteloon Petra hyväksyttiin 6. joulukuuta '
-      + '1985.\n\nKartalla on muinaiskaupunki kokonaan, runsaan neljän '
-      + 'kilometrin levyinen pala vuoristoa. Katuja ei ole: kaikki '
-      + 'kartan viivat ovat polkuja, ja ne ovat tämän kaupungin kadut. '
-      + 'Oikeasta laidasta tulee sisään Siq, kapea rotko, jota pitkin '
-      + 'jokainen saapuu — se mutkittelee kohti keskustaa ja päättyy '
-      + 'Al-Khaznehin eteen. Sieltä polku kääntyy luoteeseen ja '
-      + 'levenee laaksoksi, jonka pohjalla erottuvat suorakaiteina '
-      + 'Suuren temppelin ja Qasr al-Bintin kaivausalueet. Laakson '
-      + 'pohjoisreunaa seuraa kuninkaanhautojen rivi ja eteläreunaa '
-      + 'teatteri, joka on kokonaan louhittu kallioon. Vasemmassa '
-      + 'ylälaidassa, kilometrin päässä ylämäkeä, on Ad Deir; sinne '
-      + 'noustaan portaita, jotka näkyvät kartalla mutkittelevana '
-      + 'polkuna. Alalaidan haarova viivasto on kuivien uomien verkko '
-      + '— vettä niissä on vain sadekuuron jälkeen, ja silloin paljon. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R8: esittely kertoo kohteet, ei
+     * kartan polkuverkkoa; nabatealaisten historia asuu nyt etusivun
+     * leipätekstissä (js/packs/asia-artikkelit.js).
+     */
+    esittely: 'Kartan alue on koko muinaiskaupunki. Idästä tulee sisään Siq, '
+      + 'kapea rotko, jota pitkin jokainen saapuu; se päättyy Al-Khaznehin '
+      + 'eli Aarrekammion eteen. Laakson pohjalla ovat Suuren temppelin ja '
+      + 'Qasr al-Bintin kaivausalueet, pohjoisreunalla kuninkaanhautojen '
+      + 'rivi ja eteläreunalla teatteri, joka on kokonaan louhittu kallioon. '
+      + 'Bysanttilainen kirkko, josta löytyivät Petran hiiltyneet '
+      + 'papyrukset, on laakson pohjoislaidalla. Ylös noustaan kahteen '
+      + 'suuntaan: luoteeseen Ad Deirille ja etelään uhripaikalle, ja '
+      + 'kumpikin nousu vie tunnin. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Dubaissa ja Odessassa. */
       { nimi: 'Ad Deir', lat: 30.3382, lon: 35.431 },
