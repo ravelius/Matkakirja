@@ -18412,4 +18412,635 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * SALALAHIN KOHDEKARTAN JUTUT (Opus 20.8.2026). Seitsemän kohdetta
+   * samassa järjestyksessä kuin kartalla, lännestä itään.
+   *
+   * LÄHTEET OVAT KAHTA LAJIA, ja se on tässä kaupungissa
+   * välttämätöntä. Al-Baleedista ja suitsukemuseosta on omat
+   * en-Wikipedian artikkelit (Al-Baleed Archaeological Park, Museum of
+   * the Land of Frankincense, Land of Frankincense); moskeijasta,
+   * palatsista, basaarista, haudasta ja kellotornista ei ole. Ne on
+   * kirjoitettu en-Wikivoyagen Salalah-sivun see- ja buy-merkinnöistä
+   * yhdistettynä en-Wikipedian artikkeleihin Salalah, Said bin Taimur,
+   * Omani Renaissance, Sultan Qaboos Grand Mosque ja Al Imran. Sama
+   * lähdekäytäntö kuin Tripolin lehdessä (Wikivoyage täydentää, ei
+   * korvaa). Kaikki haettu 20.8.2026.
+   *
+   * YKSI RISTIRIITA KIRJOITETTIIN AUKI (v925:n tapa): Nabi Umranin
+   * haudan pituus on en-Wikipedian Salalah-artikkelissa 12 metriä ja
+   * en-Wikivoyagessa 33 metriä. Kumpikaan ei kerro mittaustapaa, joten
+   * molemmat ovat jutussa.
+   *
+   * NOSTOJEN TOISTOA VÄLTETTY: kansisivun nosto kertoo jo Al-Baleedin
+   * historian (500-luku, autioituminen, Marco Polo, kaivaukset 1952,
+   * Unesco 2000) ja kauppa-sivun nosto suitsukemuseon kaksi salia.
+   * Al-Baleedin juttu on siksi kirjoitettu paikasta ja lahdesta,
+   * museon juttu kokoelmista ja rakennuksesta.
+   */
+  salalah: {
+    'Sultan Qaboosin moskeija': {
+      aika: '2009',
+      teksti: 'Salalahin suurin moskeija valmistui vuonna 2009, ja siihen '
+          + 'mahtuu neljätoistatuhatta rukoilijaa. Se on osa sarjaa: '
+          + 'Omanin suuret perjantaimoskeijat ovat lähes kaikki 1900-luvun '
+          + 'lopun ja 2000-luvun alun rakennuksia, ja ne ovat kaupunkien '
+          + 'näkyvimpiä uusia rakennuksia. Vertailukohta on Masqatissa, '
+          + 'jonka Sultan Qaboosin suurmoskeija valmistui vuonna 2001 ja '
+          + 'vetää kaksikymmentätuhatta; sen päaminareetti on '
+          + 'yhdeksänkymmentä metriä korkea ja neljä muuta '
+          + 'neljäkymmentäviisi ja puoli.'
+          + '\n\n'
+          + 'Salalahin moskeija on rakennettu samaan tapaan mutta '
+          + 'pienemmässä mitassa. Piha-alue on marmoria, ja sitä kiertää '
+          + 'katettu pylväskäytävä, jonka teräväkärkiset kaaret toistuvat '
+          + 'riveinä syvyyssuunnassa. Kaarikäytävän katosta riippuu '
+          + 'kuusikulmaisia metallilyhtyjä, ja pihaa rajaa hammastettu '
+          + 'muuri — sama muotokieli, jolla Omanissa on tuhat vuotta '
+          + 'rakennettu linnakkeita.'
+          + '\n\n'
+          + 'Moskeija on Salalahin kartalla ainoa kohde, joka on '
+          + 'kokonaan nuori. Kaupungin muut kohteet ovat joko '
+          + 'keskiaikaisia raunioita tai 1900-luvun puolivälin '
+          + 'rakennuksia, ja moskeija on niiden joukossa se, joka '
+          + 'kertoo eniten siitä miltä Salalah näyttää nyt: leveitä '
+          + 'katuja, hiekanväristä kiveä ja paljon tilaa.',
+      kuvat: [
+        {
+          tiedosto: 'Sultan Qaboos Mosque 14.JPG',
+          selite: 'Moskeijan pihan kaarikäytävä. Teräväkärkiset kaaret '
+            + 'toistuvat riveinä syvyyssuuntaan, katosta riippuu '
+            + 'kuusikulmaisia mustia lyhtyjä, ja oikealla näkyy '
+            + 'hammastettu muuri ja ruudullinen marmoripiha.',
+          lahde: 'Rrburke, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Husnin palatsi': {
+      aika: 'sulttaanin asuinpaikka 1932–1970',
+      teksti: 'Said bin Taimur (1910–1972) nousi Masqatin ja Omanin '
+          + 'sulttaaniksi vuonna 1932 kaksikymmentäyksivuotiaana ja peri '
+          + 'velkaantuneen hallinnon. Kun hän oli saanut sisämaan '
+          + 'heimoalueet hallintaansa, hän teki jotain harvinaista: '
+          + 'muutti pois pääkaupungista. Loput hallintovuotensa hän asui '
+          + 'Dhofarissa Salalahissa, ja kaupunki oli käytännössä maan '
+          + 'pääkaupunki vuodesta 1932 vuoteen 1970.'
+          + '\n\n'
+          + 'Täällä syntyi vuonna 1940 hänen poikansa Qaboos. Äiti Mazoon '
+          + 'bint Ahmad Al Mashani oli dhofarilaisesta suvusta, ja se '
+          + 'sitoi hallitsijasuvun eteläiseen maakuntaan tavalla, joka '
+          + 'näkyy Salalahissa yhä. Qaboos opiskeli Britanniassa ja '
+          + 'palasi 1964. Vuonna 1970 valta vaihtui, ja uusi sulttaani '
+          + 'siirsi pääkaupungin takaisin Masqatiin. Palatsi pidettiin '
+          + 'silti aina valmiina ottamaan hänet vastaan; hänen viimeiset '
+          + 'vierailunsa olivat 2006 ja 2010, jolloin paraatia seurasi '
+          + 'arviolta satatuhatta ihmistä.'
+          + '\n\n'
+          + 'Nykyinen palatsi on uusi rakennus vanhan linnakkeen '
+          + 'paikalla. Sisään ei pääse, mutta muurin ulkopuolelta sen '
+          + 'näkee ja saa kuvata: hiekkakivinen muuri, kaksi hammastettua '
+          + 'porttitornia ja niiden välissä puinen portti '
+          + 'teräväkärkisessä kaaressa. Muurin takaa nousee kellotorni, '
+          + 'jonka kupoli on vihreä. Palatsi on aivan rannassa Al-Haffan '
+          + 'vanhassa ytimessä, ja basaari on sen kupeessa.',
+      kuvat: [
+        {
+          tiedosto: 'Oman, Salalah, Qasr al-Hosn Palace.jpg',
+          selite: 'Palatsin portti muurin keskellä. Kaksi hammastettua '
+            + 'hiekkakivitornia reunustaa teräväkärkistä kaarta, jonka '
+            + 'alla on leveä puinen portti, ja vasemmalla muurin takaa '
+            + 'kohoaa kellotorni vihreine kupoleineen.',
+          lahde: 'Dr. Thomas Liptak, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Haffan basaari': {
+      aika: 'kaupungin vanha ydin',
+      teksti: 'Al-Haffa on Salalahin vanhakaupunki, ja se on kapea '
+          + 'kaistale aivan meren rannassa. Basaari tunnetaan kahdella '
+          + 'nimellä: Souq al-Hafa kaupunginosan mukaan ja Souq al-Husn '
+          + 'sen viereisen palatsin mukaan. Kojut ovat matalia ja '
+          + 'peräkkäin rivissä katetun katoksen alla, ja niiden kylkeen '
+          + 'on maalattu sama teksti kahdella kielellä: suitsuketta ja '
+          + 'hajuvettä.'
+          + '\n\n'
+          + 'Suitsuke on se, mitä täältä ostetaan. Sitä myydään useassa '
+          + 'laatuluokassa, jotka erottaa väristä — mitä vaaleampi jyvä, '
+          + 'sitä parempi ja sitä kalliimpi. Jyvien vieressä myydään '
+          + 'suitsutusastioita, jotka on tehty käsin paikallisesta '
+          + 'dhofarilaisesta savesta, ja niiden vieressä mirhamia, '
+          + 'omanilaisia hajuvesiä ja khanjareita eli omanilaisia '
+          + 'kaarevia tikareita. Hinnasta tingitään; se ei ole tapa vaan '
+          + 'oletus.'
+          + '\n\n'
+          + 'Basaari on auki aamukahdeksasta keskiyöhön, ja maksun voi '
+          + 'suorittaa Omanin rialeissa, euroissa tai dollareissa. '
+          + 'Vilkkainta on khareefin aikaan kesällä, kun kaupunkiin '
+          + 'tulee satojatuhansia matkailijoita muualta Arabiasta. '
+          + 'Basaarin edestä alkaa Al-Haffan rantabulevardi, ja sitä '
+          + 'pitkin pääsee kävellen kohti Al-Baleedin raunioita.',
+      kuvat: [
+        {
+          tiedosto: 'Alhusn-market-1.jpg',
+          selite: 'Basaarin sisäänkäynti. Katetun käytävän suulla on '
+            + 'punainen arabiankielinen kyltti, ja sen molemmin puolin '
+            + 'jatkuu rivi kojuja, joiden otsassa lukee samat sanat '
+            + 'kahdella kielellä: suitsuketta ja hajuvettä.',
+          lahde: 'OMLX, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nabi Umranin hauta': {
+      aika: 'perimätieto, ajoittamaton',
+      teksti: 'Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla '
+          + 'on neljä hautaa, joita perimätieto pitää islamin '
+          + 'profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli '
+          + 'Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta '
+          + 'on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja '
+          + 'rannikolla kymmenien kilometrien päässä.'
+          + '\n\n'
+          + 'Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä '
+          + 'Neitsyt Marian isänä eli kristillisen perinteen Joakimina, '
+          + 'osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al '
+          + 'Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. '
+          + 'Salalahin oma artikkeli pitää todennäköisimpänä, että '
+          + 'kyseessä on paikallinen profeetta, jonka nimi on '
+          + 'myöhemmin yhdistetty Koraanin Imraniin.'
+          + '\n\n'
+          + 'Hauta on pitkä, ja lähteet ovat pituudesta eri mieltä. '
+          + 'en-Wikipedian Salalah-artikkeli sanoo sen olevan '
+          + 'kaksitoista metriä ja kutsuu sitä maailman pisimmäksi '
+          + 'haudaksi; en-Wikivoyage ilmoittaa sarkofagin pituudeksi '
+          + 'kolmekymmentäkolme metriä. Kumpikaan ei kerro, mistä mihin '
+          + 'on mitattu. Rakennus itse on vaatimaton: matala '
+          + 'kaarikäytävä, laatoitettu piha ja yksi minareetti, jonka '
+          + 'sipulikupoli on vihreä. Sisään mennessä kengät jätetään '
+          + 'ulos, ja naisilta odotetaan huivia.',
+      kuvat: [
+        {
+          tiedosto: 'Salalah, tomba del profeta Imran, ossia Gioacchino padre di maria (Nabi Umran mausoleum), 01.jpg',
+          selite: 'Haudan piha. Vasemmalla kulkee matala kaarikäytävä '
+            + 'hammastettuine räystäineen, keskellä nousee minareetti, '
+            + 'jonka sipulikupoli on vihreä, ja piha on vaaleaa laattaa. '
+            + 'Takana kohoaa kerrostalo.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Burj an-Nahda': {
+      aika: 'kehityskausi vuodesta 1970',
+      teksti: 'Kellotorni ei ole pilvenpiirtäjä, mutta se on Salalahin '
+          + 'tunnus, ja se on myös Dhofarin maakunnan vaakunassa. Nimi '
+          + 'Burj an-Nahda tarkoittaa heräämisen tornia, ja sanalla on '
+          + 'Omanissa täsmällinen merkitys: nahdaksi kutsutaan vuonna '
+          + '1970 alkanutta kehityskautta.'
+          + '\n\n'
+          + 'Mitä sillä kaudella tehtiin, näkyy luvuissa. Ennen vuotta '
+          + '1970 koko maassa oli kolme koulua, lukutaitoisia oli viisi '
+          + 'prosenttia väestöstä ja päällystettyä tietä kymmenkunta '
+          + 'kilometriä. Vuoteen 1980 mennessä maassa oli '
+          + 'kaksikymmentäkahdeksan sairaalaa, kolmesataakuusikymmentä'
+          + 'kolme koulua ja kaksitoistatuhatta kilometriä päällystettyä '
+          + 'tietä. Sähkö vietiin kyliin, ja orjuus lakkautettiin. '
+          + 'Kaudella on Omanissa oma kansallispäivänsä, ja sen mukaan on '
+          + 'nimetty rakennuksia ympäri maata — tämä torni on niistä '
+          + 'yksi.'
+          + '\n\n'
+          + 'Torni seisoo kadun yli kaartuvan portin päällä. Se on '
+          + 'hiekkakiveä, siinä on neljä kerrosta kapeita '
+          + 'teräväkärkisiä ikkunoita, kellotaulu ylimmässä ja otsassa '
+          + 'arabiankielinen nimi kultaisin kirjaimin. Ympärillä on '
+          + 'koristeellisia katulyhtyjä, palmurivistöjä ja liikenteen '
+          + 'keltamustia reunakiviä. Toisin kuin Masqatissa, jossa '
+          + 'kaupungin tunnus on 1500-luvun linnake, Salalahin tunnus on '
+          + 'alle puoli vuosisataa vanha.',
+      kuvat: [
+        {
+          tiedosto: 'Salalah, torre al nahda 01.jpg',
+          selite: 'Kellotorni kadun yli kaartuvan portin päällä. '
+            + 'Hiekkakivisessä tornissa on neljä kerrosta kapeita '
+            + 'kaari-ikkunoita, kellotaulu ylimpänä ja otsassa '
+            + 'arabiankielinen kirjoitus. Ympärillä on koristeellisia '
+            + 'katulyhtyjä ja palmuja.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Baleedin puisto': {
+      aika: 'kaivauksia vuodesta 1952',
+      teksti: 'Al-Baleedin arkeologinen puisto on rannassa kaupungin '
+          + 'itälaidalla, ja se on osa Unescon maailmanperintökohdetta '
+          + 'nimeltä Suitsukkeen maa. Kohde ei ole yksi paikka vaan '
+          + 'neljä: Al-Baleedin lisäksi siihen kuuluvat Khor Rorin '
+          + 'satamarauniot, Shisrin karavaanikeidas aavikolla ja Wadi '
+          + 'Dawkahin suitsukepuisto. Yhteensä ne kattavat lähes '
+          + 'kahdeksansataaviisikymmentä hehtaaria, ja niiden ympärillä '
+          + 'on vielä yli tuhannen hehtaarin suojavyöhyke. Kohde '
+          + 'kirjattiin luetteloon vuonna 2000 nimellä Suitsuketie ja '
+          + 'nimettiin uudelleen vuonna 2005.'
+          + '\n\n'
+          + 'Puiston läpi kulkee vesi, ja se on koko paikan avain. '
+          + 'Khawr al-Balid oli aikanaan lahti, johon laivat pääsivät '
+          + 'suoraan mereltä; sen suu kuroutui umpeen, ja lahdesta tuli '
+          + 'järvi. Kartalla se näkyy pitkulaisena vesialueena '
+          + 'raunioalueen keskellä. Rannalla on rivi puuveneitä, ja '
+          + 'niiden takana palmurivistö. Ilman lahtea kaupungilla ei '
+          + 'ollut satamaa, ja ilman satamaa sillä ei ollut mitään.'
+          + '\n\n'
+          + 'Alueen nimi on aiheuttanut sekaannusta. Rauniot ovat '
+          + 'keskiaikaista Zafaria, ja niitä on toisinaan yhdistetty '
+          + 'antiikin kreikkalais-roomalaisten kirjoittajien mainitsemaan '
+          + 'Sapphara Metropolikseen. Tutkijat pitävät sitä silti '
+          + 'epätodennäköisenä: nimi viittaa todennäköisemmin '
+          + 'samannimiseen himjariittiseen kaupunkiin Jemenissä. Kaksi '
+          + 'eri Zafaria, kaksi eri maata.',
+      kuvat: [
+        {
+          tiedosto: 'Al Balid Archeological Park 1.jpg',
+          selite: 'Khawr al-Balid eli entinen lahti puiston keskellä. '
+            + 'Tyyni vesi jatkuu kuvan halki, oikealla rannalla on rivi '
+            + 'puuveneitä ja niiden takana tiheä palmurivistö, '
+            + 'vasemmalla nousee hiekkainen ja kivinen ranta.',
+          lahde: 'https://www.flickr.com/photos/130649623@N05/, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suitsukemuseo': {
+      aika: '2007',
+      teksti: 'Museo on Al-Baleedin puiston sisällä, ja sen rakentaminen '
+          + 'kesti kaksi vuotta. Se avattiin vuonna 2007, ja rahoituksen '
+          + 'antoi sulttaani Qaboos. Sisäänpääsy kuuluu puiston lippuun, '
+          + 'eli museo ja rauniot ovat käytännössä sama käynti. '
+          + 'Sisäänkäynti on hammastetun kalkkikivimuurin keskellä: '
+          + 'muuriin on avattu kolme teräväkärkistä kaarta, ja niiden '
+          + 'yläpuolelle on kirjoitettu museon nimi kahdella kielellä.'
+          + '\n\n'
+          + 'Kokoelma on jaettu kahteen saliin. Merisalissa kerrotaan '
+          + 'Omanin merenkulusta ja siitä, miten se teki ylellisyys'
+          + 'tavaroiden kaupan mahdolliseksi: esillä on omanilaisia '
+          + 'aluksia ja niiden malleja sekä virtuaalitodellisuutena '
+          + 'toteutettu osuus. Historiasalissa käydään läpi Omanin ja '
+          + 'Dhofarin historia, islamin historia Omanissa, maan '
+          + 'maantiede ja muinainen Oman.'
+          + '\n\n'
+          + 'Suitsuke kulkee läpi molempien salien, ja siitä kerrotaan '
+          + 'muutakin kuin kauppa. Museossa käydään läpi hartsin käyttö '
+          + 'uskonnollisissa menoissa ja perinnelääkinnässä — kaksi '
+          + 'käyttötapaa, jotka ovat vanhempia kuin mikään Dhofarin '
+          + 'satamista. Museo on nimenomaan Suitsukkeen maan museo eikä '
+          + 'Salalahin museo: kaupungilla on erikseen oma museonsa '
+          + 'kulttuurikeskuksessa lännempänä, ja siellä on muun muassa '
+          + 'pysyvä näyttely Wilfred Thesigerin valokuvista.',
+      kuvat: [
+        {
+          tiedosto: 'Salalah, museo della terra degli incensi, entrata.jpg',
+          selite: 'Museon sisäänkäynti. Hammastetun kalkkikivimuurin '
+            + 'keskelle on avattu kolme teräväkärkistä kaarta, joiden '
+            + 'yläpuolella lukee museon nimi kahdella kielellä, ja '
+            + 'muurissa on kaksi kaiverrettua kivilaattaa. Edessä on '
+            + 'laatoitettu piha.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MOSULIN KOHDEKARTAN JUTUT (Opus 20.8.2026). Seitsemän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään. Faktat
+   * on tarkistettu en-Wikipedian artikkeleista Mosul, Nineveh,
+   * Sennacherib, Bash Tapia Castle, Qara Saray, Badr al-Din Lu'lu',
+   * Umayyad Mosque of Mosul, Al-Nabi Jirjis Mosque, Al-Nabi Yunus
+   * Mosque, Great Mosque of al-Nuri (Mosul) ja Austen Henry Layard
+   * (haettu 20.8.2026).
+   *
+   * SISÄLTÖLINJAUS (Fablen ohje 20.8.2026) on tässä tiukempi kuin
+   * missään muussa kaupungissa: EI 2010-luvun sotaa eikä tuhoja.
+   * Jokainen näistä seitsemästä kohteesta esiintyy en-Wikipediassa
+   * artikkelissa, jonka loppuosa kertoo tuhosta tai
+   * jälleenrakennuksesta. Yksikään juttu ei kerro kummastakaan.
+   * Kohteet on kirjoitettu siitä, mitä ne ovat olleet: Sanheribin
+   * pääkaupungista, Nur ad-Din Zangin rakennushankkeesta, Nader
+   * Shahin piirityksestä, Badr al-Din Lu'lu'n hovista, ensimmäisestä
+   * perjantaimoskeijasta ja Timurin uudelleenrakennuksesta.
+   *
+   * KUVAT: viisi seitsemästä on vuosilta 1849–1932. Kaksi
+   * (Al-Masfi, Al-Nabi Jirjis) on tuoreita valokuvia, koska
+   * vanhempaa vapaata kuvaa ei ole; niissä ei näy vaurioita, ja
+   * kuvateksti kertoo vain sen, mitä kuvassa on. Qara Saraysta ei ole
+   * yhtään vapaata kuvaa, joka ei näyttäisi työmaata, joten sen
+   * kuvana on saman vuosikymmenen mosulilainen esine ja kuvateksti
+   * sanoo sen ääneen (sama ratkaisu kuin Medinan perustuslaissa,
+   * jonka kuvana on Koraani-fragmentti).
+   *
+   * TIMUR-RISTIRIITA KIRJOITETTIIN AUKI. Mosul-artikkeli sanoo, että
+   * kaupunki "välttyi Timurin tuhoilta"; Bash Tapia Castle -artikkeli
+   * sanoo, että Timur vahingoitti linnaa vuonna 1393; Al-Nabi Jirjis
+   * -artikkeli sanoo, että Timur purki vanhan moskeijan ja rakensi
+   * sen suurempana samana vuonna 1393 ja että timuridit säästivät
+   * kaupungin ja kunnostivat islamilaisia laitoksia. Ristiriita on
+   * kerrottu lukijalle Bash Tapian jutussa.
+   */
+  mosul: {
+    'Kuyunjikin kumpu': {
+      aika: 'pääkaupunki noin 700–612 eKr.',
+      teksti: 'Kuyunjik on Niniven kahdesta kummusta pohjoisempi, ja se '
+          + 'on kaupungin akropoli. Kummun alla ovat Sanheribin ja hänen '
+          + 'seuraajiensa palatsit: Asarhaddonin, Assurbanipalin, '
+          + 'Assur-etel-ilanin, Sin-shumu-lisirin ja Sin-shar-ishkunin. '
+          + 'Sanherib teki Ninivestä Assyrian pääkaupungin noin vuonna '
+          + '700 eKr., ja rakennustyö oli mittava: kaupungista tuli '
+          + 'suurempi kuin Babylon, Kalhu tai Assur, ja aikansa suurin '
+          + 'koko maailmassa. Asukkaita oli yli satatuhatta, ehkä lähes '
+          + 'sataviisikymmentätuhatta, eli noin kaksi kertaa niin paljon '
+          + 'kuin Babylonissa.'
+          + '\n\n'
+          + 'Nimi Kuyunjik on Layardin mukaan turkkia ja tarkoittaa '
+          + 'lampaan deminutiivia; arabit tunsivat kummun myös nimellä '
+          + 'Armousheeah. Kumpu ja sen eteläpuolinen pari sijaitsevat '
+          + 'tasangolla Tigriin ja Khosr-joen yhtymäkohdassa. Muurin '
+          + 'sisään jäi seitsemänsataaviisikymmentä hehtaaria, muuria '
+          + 'oli kaksitoista kilometriä ja siinä oli viisitoista '
+          + 'porttia. Kaupunkiin tuotiin vettä kahdeksantoista kanavan '
+          + 'verkolla, ja Sanheribin rakennuttaman vesijohdon osia on '
+          + 'löydetty Jerwanista kuudenkymmenenviiden kilometrin '
+          + 'päästä.'
+          + '\n\n'
+          + 'Kumpu tunnistettiin Niniveksi vasta 1800-luvulla. '
+          + 'Tanskalaisen retkikunnan Carsten Niebuhr merkitsi paikan '
+          + 'muistiin 1760-luvulla mutta ei tiennyt seisovansa Niniven '
+          + 'päällä: hänelle näytettiin kukkulaa nimeltä Nunia ja '
+          + 'toista, jota kutsuttiin Niniven linnaksi, ja sen päällä oli '
+          + 'kylä nimeltä Koindsjug. Claudius Rich tutki ja kuvasi '
+          + 'paikan vuonna 1820, ja Austen Henry Layard tunnisti sen '
+          + 'vuonna 1847.',
+      kuvat: [
+        {
+          tiedosto: 'Kouyunjick.jpg',
+          selite: 'Akvarelli Kuyunjikin kummusta 1840-luvulla. Tasangolta '
+            + 'nousee pitkä ja laakea kumpu, jonka juurella on kylä ja '
+            + 'muutama kivirakennus. Etualalla laiduntaa lehmiä ja '
+            + 'kameleja, ja oikealla on musta beduiiniteltta. Paperiin on '
+            + 'kirjoitettu paikan nimi.',
+          lahde: 'Frederick Charles Cooper (1817- ?), Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bash Tapian linna': {
+      aika: '1100-luku',
+      teksti: 'Bash Tapia on rakennettu 1100-luvulla, ja se oli yksi '
+          + 'Mosulin kaupunginmuurin seitsemästä linnakkeesta. Se seisoo '
+          + 'Tigriin länsirannalla siinä kohdassa, jossa muuri kääntyy '
+          + 'joen mukana, eli se puolusti sekä muuria että rantaa. '
+          + 'Linnakkeista se on ainoa, josta on jäljellä nähtävää: '
+          + 'pyöreä hammastettu torni ja pätkä muuria sen vieressä.'
+          + '\n\n'
+          + 'Linnan tärkein hetki oli syksyllä 1743. Persian shaahi '
+          + 'Nader Shah saapui kaupungin edustalle 14. syyskuuta ja '
+          + 'aloitti piirityksen. Mosulin pasha Hajji Hossein al-Jalili '
+          + 'puolusti kaupunkia, ja piiritys purettiin saman vuoden 23. '
+          + 'lokakuuta — kuusi viikkoa. Bash Tapialla oli puolustuksessa '
+          + 'keskeinen osa, ja al-Jalilin suvusta tuli sen jälkeen '
+          + 'kaupungin mahtisuku vuosikymmeniksi.'
+          + '\n\n'
+          + 'Sitä ennen linnaa oli jouduttu korjaamaan. Bash Tapiaa '
+          + 'koskeva artikkeli kertoo, että Timur vahingoitti sitä '
+          + 'vuonna 1393 ja että osmanit rakensivat sen myöhemmin '
+          + 'uudelleen. Mosulia koskeva artikkeli sanoo päinvastaista: '
+          + 'että kaupunki välttyi Timurin tuhoilta. Kolmas artikkeli, '
+          + 'Al-Nabi Jirjisin moskeijasta, kertoo Timurin purkaneen '
+          + 'moskeijan ja rakentaneen sen suurempana juuri vuonna 1393 '
+          + 'ja timuridien muutenkin säästäneen kaupungin ja '
+          + 'kunnostaneen sen islamilaisia laitoksia. Kolme artikkelia, '
+          + 'kolme sävyä; varmaa on vain vuosiluku.',
+      kuvat: [
+        {
+          tiedosto: 'سور الموصل.jpg',
+          selite: 'Mosulin kaupunginmuuria vuonna 1916. Vasemmalla '
+            + 'kohoaa pyöreä tiilitorni, jonka yläreunassa on '
+            + 'hammastettu harja ja kaksi kaari-ikkunaa; oikealle jatkuu '
+            + 'korkea muuri samanlaisine harjoineen. Edustalla on '
+            + 'hiekkakumpuja.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Qara Saray': {
+      aika: 'n. 1230–1250',
+      teksti: 'Qara Saray tarkoittaa Mustaa palatsia, ja se oli Badr '
+          + 'al-Din Lu\'lu\'n hovi Tigriin länsirannalla. Nimi on '
+          + 'tarinan mukaan syntynyt onnettomuudesta: palatsi tunnettiin '
+          + 'alun perin nimellä Ak Saray eli Valkoinen palatsi, ja kun '
+          + 'se paloi mongolien ensimmäisessä hyökkäyksessä, sen '
+          + 'ulkopinta muuttui valkoisesta mustaksi. Lu\'lu\' rakennutti '
+          + 'lisäksi Sinjarin portin sekä Imam Yahyan ja Awn al-Dinin '
+          + 'hautapyhäköt.'
+          + '\n\n'
+          + 'Rakennuksesta tiedetään enemmän kuin sitä katsomalla '
+          + 'näkisi, ja siitä saadaan kiittää kahta saksalaista. Vuonna '
+          + '1910 arkeologi Ernst Herzfeld ja taidehistorioitsija '
+          + 'Friedrich Sarre tekivät paikalla rakennustutkimuksen. '
+          + 'Heidän mukaansa palatsi oli louhittua kalkkikiveä, joka oli '
+          + 'peitetty rappauksella; ulkokehällä oli pitkät '
+          + 'puolustusvallit ja perustus oli tavanomaista tiiltä. '
+          + 'Sisällä oli muqarnas-holvausta eli tippukiviholveja, jotka '
+          + 'sekä kannattivat kattoa että koristivat sitä.'
+          + '\n\n'
+          + 'Koristelu kertoo, mihin taloa käytettiin. Kaaret olivat '
+          + 'teräväkärkisiä tai kolmiliuskaisia, ja niiden välit oli '
+          + 'täytetty kasviaiheilla ja eläimillä: siivilleen levittäneitä '
+          + 'kotkia ja käärmeitä. Eläinkuvat viittaavat siihen, ettei '
+          + 'tiloissa rukoiltu vaan pidettiin maallisia tilaisuuksia. '
+          + 'Kirjoitusnauhat oli tehty naskhi- eikä kufi-tyylillä, mitä '
+          + 'brittitutkija Dorothy Lamb piti merkkinä tuoreesta '
+          + 'keskiaasialaisesta vaikutuksesta.',
+      kuvat: [
+        {
+          tiedosto: 'Islamic Art from Mosul between 1251 to 1275 (28086730483).jpg',
+          selite: 'Mosulissa vuosina 1251–1275 tehty messinkikannu '
+            + 'museon vitriinissä. Päärynänmuotoisen rungon pinta on '
+            + 'täynnä hopealla ja kullalla upotettuja medaljonkeja ja '
+            + 'kirjoitusnauhoja. Kuva ei ole palatsista — siitä ei ole '
+            + 'vapaata kuvaa — vaan saman vuosikymmenen esineestä.',
+          lahde: 'Gary Todd, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nabi Yunusin kumpu': {
+      aika: 'assyrialainen asevarasto, moskeija 1365',
+      teksti: 'Nabi Yunusin kumpu on Niniven toinen kumpu, kilometrin '
+          + 'verran Kuyunjikista etelään Khosr-joen toisella puolella. '
+          + 'Sanheribin tekstien perusteella sitä on pidetty Niniven '
+          + 'asevarastona, ja kummun alla on Asarhaddonin ja '
+          + 'Assurbanipalin palatsi. Vuoden 1990 kaivauksissa '
+          + 'paljastui monumentaalinen sisäänkäynti: suuria kaiverrettuja '
+          + 'orthostaatteja ja härkämiespatsaita, joista osa oli jäänyt '
+          + 'kesken.'
+          + '\n\n'
+          + 'Kummun päällä oli pitkään kristillinen luostari. Vuonna '
+          + '1349 idän kirkon jäsenet kaivoivat siellä esiin '
+          + 'patriarkka Hnanisho I:n jäännökset. Historioitsija Amr, '
+          + 'joka näki ruumiin omin silmin, kertoi sen olleen '
+          + 'plataanipuisessa arkussa hämmästyttävän hyvin säilynyt, ja '
+          + 'väkeä tuli katsomaan patriarkkaa, joka näytti vain '
+          + 'nukkuvan.'
+          + '\n\n'
+          + 'Pian tämän jälkeen luostari purettiin. Kun paikalle '
+          + 'rakennettiin perjantaimoskeija vuonna 1365, ilmoitettiin '
+          + 'löydetyn profeetta Joonan hauta. Kun Timur kävi paikalla '
+          + 'vuonna 1393, Hnanishoa ei enää muistettu ja vieraalle '
+          + 'näytettiin Joonan hautaa. Osa historioitsijoista epäilee, '
+          + 'että kuusi vuosisataa on osoitettu kunnioitusta '
+          + 'kristityn patriarkan jäännöksille. Arkeologit ovat sitä '
+          + 'mieltä, ettei Joonaa ole haudattu tänne lainkaan.',
+      kuvat: [
+        {
+          tiedosto: 'NiniveNabiYunisOutside.jpg',
+          selite: 'Portaat Nabi Yunusin kummulle vuonna 1999. Rinne on '
+            + 'muotoiltu leveiksi kivipenkereiksi, keskeltä nousee '
+            + 'portaikko ylös moskeijalle, ja moskeijan takaa kohoaa '
+            + 'hoikka minareetti. Rinteessä kasvaa yksittäisiä palmuja.',
+          lahde: 'Roland Unger, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Masfin moskeija': {
+      aika: 'perustettu 600-luvulla',
+      teksti: 'Tässä kohdassa alkoi arabialainen Mosul. Kaupungin '
+          + 'perustivat varhaiset muslimivalloittajat noin vuonna 637 '
+          + 'tai 640–641, ja keskiaikaisten arabialähteiden mukaan '
+          + 'Arfaja al-Bariki — jonka kalifi Umar oli asettanut joukon '
+          + 'johtoon — perusti paikalle misrin eli sotilasleirin ja '
+          + 'rakensi sen sisään perjantaimoskeijan. Osa lähteistä '
+          + 'lukee moskeijan perustamisen umaijadikalifi Marwan II:n '
+          + 'ansioksi, joka hallitsi vuosina 744–750 ja jonka aikana '
+          + 'kaupunkia kehitettiin edelleen.'
+          + '\n\n'
+          + 'Rakennus tunnettiin kahdella nimellä: Umaijadien moskeija '
+          + 'ja al-Atiq eli Vanha moskeija. Sen minareetti kantoi omaa '
+          + 'nimeä, al-Kawazin. Moskeija purettiin vuonna 1810, ja '
+          + 'osalle sen tonttia rakennettiin uusi rakennus, al-Masfi. '
+          + 'Sekin tunnetaan yhä nimellä Umaijadien moskeija, mikä '
+          + 'sekoittaa kaksi eri rakennusta samaan nimeen.'
+          + '\n\n'
+          + 'Paikka kannattaa nähdä siksi, mitä se todistaa. Mosul ei '
+          + 'ole syntynyt kasvamalla Ninivestä, vaan se on perustettu '
+          + 'joen toiselle rannalle sotilasleiriksi tuhat kolmesataa '
+          + 'vuotta Niniven kukistumisen jälkeen. Vanhankaupungin '
+          + 'kujaverkko lähtee tästä nurkasta, ja kaikki muut kartan '
+          + 'länsirannan kohteet ovat vähintään viisisataa vuotta '
+          + 'nuorempia.',
+      kuvat: [
+        {
+          tiedosto: 'الجامع الأموي في الموصل 03.jpg',
+          selite: 'Moskeijan sisäpiha. Vasemmalla kulkee kiviholvattu '
+            + 'kaarikäytävä, jonka pilarit ovat tummaa kiveä ja seinät '
+            + 'valkoiseksi kalkittuja; keskellä pihaa kasvaa yksi '
+            + 'taatelipalmu, ja oikealla nousee korkea valkoinen muuri.',
+          lahde: 'Ali.tinbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Nabi Jirjisin moskeija': {
+      aika: 'nykyinen rakennus 1393',
+      teksti: 'Moskeija on nimetty pyhän Yrjänän mukaan, joka tunnetaan '
+          + 'islamilaisessa perinteessä nimellä Jirjis ja jonka '
+          + 'paikalliset uskovat olevan haudattuna moskeijan viereiseen '
+          + 'mausoleumiin. Mausoleumin alkuperä on hämärä. Osa arvelee, '
+          + 'että se oli alun perin al-Hurr ibn Yusufin pyhäkkö ja että '
+          + 'nimi vaihdettiin ajan mittaan pyhäksi Yrjänäksi juuri '
+          + 'siksi, että rakennus säilyisi.'
+          + '\n\n'
+          + 'Maininnat ovat vanhoja. Ibn Jubayr kuvasi 1100-luvulla '
+          + 'mausoleumin osana suurempaa moskeijakokonaisuutta, ja '
+          + '1200-luvulla kirjoittanut Yaqut al-Hamawi kertoo, että '
+          + 'Mosulia kutsuttiin pyhän Yrjänän kaupungiksi juuri tämän '
+          + 'oletetun haudan takia. Nykyinen rakennus on Timurin '
+          + 'aikaansaannos: hän purki vanhemman moskeijan ja rakensi '
+          + 'sen suurempana vuonna 1393 otettuaan kaupungin '
+          + 'jalayiridien hallusta.'
+          + '\n\n'
+          + 'Rakennus on timuridityyliä ja siinä on kaksi '
+          + 'rukoussalia, toinen shafiiteille ja toinen hanafiiteille. '
+          + 'Shafiittien sali on suorakaiteen muotoinen ja jaettu '
+          + 'viiteen laivaan teräväkärkisillä kaarilla; hanafiittien '
+          + 'sali on neliö, jonka katon kannattaa neljä pilaria. Suurempi '
+          + 'shafiittien sali on ollut yleisemmin käytössä. '
+          + 'Maanjäristys vaurioitti rakennusta vuonna 1910, minkä '
+          + 'jälkeen se rakennettiin kokonaan uudelleen hiekkakivestä.',
+      kuvat: [
+        {
+          tiedosto: 'جامع النبي جرجيس (باحة الجامع).jpg',
+          selite: 'Moskeijan sisäpiha. Kolmella sivulla kiertää '
+            + 'kaarikäytävä, jonka yläreunassa juoksee kaiverrettu '
+            + 'koristenauha; keskellä kohoaa matala kupoli ja oikealla '
+            + 'hoikka minareetti parvekkeineen. Piha on vaaleaa '
+            + 'kivilaattaa.',
+          lahde: 'Ali.tinbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Nurin moskeija': {
+      aika: '1172–1173',
+      teksti: 'Perimätiedon mukaan zengidien atabeg Nur ad-Din Zangi '
+          + 'rakennutti moskeijan vuosina 1172–1173, vähän ennen '
+          + 'kuolemaansa. Ibn al-Athirin kronikka kertoo tapahtuman '
+          + 'yksityiskohtaisesti: Nur ad-Din ratsasti itse paikalle, '
+          + 'nousi Abu Hajirin moskeijan minareettiin katsoakseen '
+          + 'tulevaa tonttia ylhäältä ja määräsi, että viereiset talot '
+          + 'ja puodit liitetään alueeseen mutta ettei mitään oteta '
+          + 'ilman omistajan suostumusta. Kiinteistöt ostettiin '
+          + 'huomattavilla hinnoilla, ja hankkeen johtoon pantiin '
+          + 'paikallinen sheikki Umar al-Malla.'
+          + '\n\n'
+          + 'Kuuluisin osa oli minareetti, jota kutsuttiin nimellä '
+          + 'al-Hadba eli kyttyräselkä — ja siitä koko kaupunki sai '
+          + 'lempinimensä. Torni oli valmistuessaan neljäkymmentäviisi '
+          + 'metriä korkea, ja sen kyljessä oli seitsemän '
+          + 'tiilikoristevyöhykettä, joissa jokaisessa oli oma '
+          + 'geometrinen kuvionsa. Muoto oli alun perin kehitetty '
+          + 'Iranissa ja Keski-Aasiassa, ja samaa sukua ovat Mardinin, '
+          + 'Sinjarin ja Erbilin minareetit. Kun Ibn Battuta kävi '
+          + 'kaupungissa 1300-luvulla, torni oli jo vinossa ja sillä oli '
+          + 'lempinimensä.'
+          + '\n\n'
+          + 'Kallistuman syytä on selitetty monella tavalla. Osa on '
+          + 'syyttänyt vallitsevaa tuulta; paikalliset viranomaiset ovat '
+          + 'pitäneet syynä auringon aiheuttamaa lämpölaajenemista, '
+          + 'jolloin aurinkoisen puolen tiilet laajenevat ja torni '
+          + 'kallistuu vähitellen. Paikallinen perinne kertoo toisin: '
+          + 'minareetti kumarsi profeetta Muhammadia tämän noustessa '
+          + 'taivaaseen eikä saanut suoristettua itseään kuin ylimmästä '
+          + 'nivelestään. Vuonna 1878 matkustanut Grattan Geary kuvasi '
+          + 'sen näin: torni lähtee maasta suorana, on ylhäältä taas '
+          + 'suora, ja siltä väliltä sen asento on kuin kumartavan '
+          + 'miehen. Moskeija, sen madrasa ja hauta purettiin ja '
+          + 'koottiin uudelleen vuonna 1942 Irakin hallituksen '
+          + 'kunnostushankkeessa.',
+      kuvat: [
+        {
+          tiedosto: 'Hadba-16207v.jpg',
+          selite: 'Kalteva minareetti vuonna 1932. Neliömäisen '
+            + 'tiilijalustan päältä nousee lieriö, jonka pintaa kiertää '
+            + 'useita eri tiilikuvioita, ja huipulla on kaide ja kupoli. '
+            + 'Ympärillä on matalia rakennuksia, rautainen aita ja '
+            + 'pieni pylväikkökatos.',
+          lahde: 'American colony photographers., Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

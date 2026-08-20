@@ -462,11 +462,28 @@ test('suomenkielisistä teksteistä ei puutu ä- ja ö-kirjaimia', async () => {
   ];
   const hahmo = new RegExp(`\\b(${EPASANAT.join('|')})\\b`, 'gi');
 
+  /*
+   * YKSI VIERASKIELINEN POIKKEUS: arabian nahda.
+   *
+   * Salalahin kohdekartalla on Burj an-Nahda, kaupungin kellotorni, ja
+   * sen Commons-tiedosto on nimeltään "Salalah, torre al nahda 01.jpg".
+   * Sana on arabiaa ja tarkoittaa heräämistä; Omanissa se on vuonna
+   * 1970 alkaneen kehityskauden nimi. Se osuu tähän testiin, koska se
+   * kirjoitetaan täsmälleen kuten väärin kirjoitettu "nähdä".
+   *
+   * Poikkeus on TAHALLAAN KAPEA: se koskee vain muotoja "al-nahda",
+   * "an-nahda" ja "al nahda" eli sanaa osana arabialaista nimeä.
+   * Paljas "nahda" jää yhä kiinni, eli suomalainen kirjoitusvirhe
+   * löytyy edelleen. Suomenkielisissä teksteissä sana taivutetaan
+   * ("nahdaksi", "nahdan"), jolloin se ei osu hahmoon lainkaan.
+   */
+  const VIERASSANAT = /\b(a[ln][- ])nahda\b/gi;
+
   const kansio = new URL('../js/packs/', import.meta.url).pathname;
   const osumat = [];
   for (const nimi of readdirSync(kansio)) {
     if (!nimi.endsWith('.js')) continue;
-    const s = readFileSync(join(kansio, nimi), 'utf8');
+    const s = readFileSync(join(kansio, nimi), 'utf8').replace(VIERASSANAT, '$1—');
     const loydot = [...new Set((s.match(hahmo) ?? []).map((x) => x.toLowerCase()))];
     if (loydot.length) osumat.push(`${nimi}: ${loydot.slice(0, 6).join(', ')}`);
   }

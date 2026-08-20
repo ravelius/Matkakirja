@@ -6060,6 +6060,159 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tawilan altaat', lat: 12.77459, lon: 45.02912 },
     ],
   },
+    /*
+   * SALALAHIN KOHDEKARTTA (Opus 20.8.2026). Kaupungille kirjoitettiin
+   * lehti elokuussa nimenomaan ILMAN kohdekarttaa, ja perustelu luki
+   * kulttuuri-kategoriat.js:ssä: "lähteellisiä kohteita on kaksi, ja
+   * ne ovat sama paikka". Perustelu oli liian tiukka. Se laski vain
+   * ne kohteet, joilla on OMA en-Wikipedian artikkeli. Kun mukaan
+   * otetaan en-Wikivoyagen Salalah-sivu — sama lähdekäytäntö kuin
+   * Tripolin lehdessä — kohteita on seitsemän, ja jokaisella niistä
+   * on koordinaatti sekä vapaa kuva Commonsissa.
+   *
+   * RAJAUS on 5,9 × 4,6 km ja tahallaan leveä: Salalah on nauha meren
+   * ja Dhofarin vuorten välissä, ja kohteet ovat rivissä rannikon
+   * suuntaan eivätkä ytimen ympärillä. Numerointi on siksi LÄNNESTÄ
+   * ITÄÄN eikä pohjoisesta etelään kuten Medinassa ja Mekassa —
+   * pohjois-eteläsuunnassa koko kartta on vain neljä kilometriä, ja
+   * numerot menisivät sekaisin.
+   *
+   * KOORDINAATIT: Wikivoyagen see-merkinnät ja Overpass antavat
+   * viidessä kohteessa saman pisteen sadan metrin sisällä. Kahdessa
+   * ne eroavat enemmän, ja talon sääntö on että Overpass voittaa:
+   *  - Al-Husnin palatsi: Wikivoyage 16,999768 / 54,099334, Overpass
+   *    16,9993 / 54,09682 — ero noin 270 metriä, käytetty Overpassia;
+   *  - Al-Haffan basaari: Wikivoyage 17,00072 / 54,10335, Overpass
+   *    17,00291 / 54,10246 — ero noin 260 metriä, käytetty Overpassia.
+   * Al-Baleedissa ero on 106 metriä (Wikivoyage 17,006929 /
+   * 54,132433), ja sekin ratkaistiin Overpassin hyväksi.
+   *
+   * SALALAH MUSEUM JÄI POIS. Kulttuurikeskuksen museo (17,0225 /
+   * 54,0866) olisi ollut kahdeksas kohde, mutta siitä ei ole
+   * Commonsissa yhtään vapaata kuvaa, ja sen mukaan ottaminen olisi
+   * levittänyt rajauksen 6,7 kilometriin. Se mainitaan oppaassa.
+   */
+  salalah: {
+    polku: 'assets/kartat/salalah-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 17.033, etela: 16.9915, lansi: 54.088, ita: 54.143 },
+    esittely: 'Salalah on Omanin eteläisen Dhofarin maakunnan pääkaupunki '
+      + 'ja maan kolmanneksi suurin kaupunki, runsaat kolmesataakolme'
+      + 'kymmentätuhatta asukasta. Se on aina ollut Dhofarin oma '
+      + 'keskus. Seudun huippukausi oli 1200-luku, jolloin suitsuke'
+      + 'kauppa teki rannikosta rikkaan; sen jälkeen alue hiipui, ja '
+      + '1800-luvulla se liitettiin Masqatin ja Omanin sulttaanikuntaan. '
+      + 'Vuosina 1932–1970 Salalah oli sulttaani Said bin Taimurin '
+      + 'asuinpaikka ja käytännössä maan pääkaupunki, ja hänen '
+      + 'poikansa Qaboos syntyi täällä vuonna 1940. Kun Qaboos nousi '
+      + 'valtaan vuonna 1970, hän siirsi pääkaupungin Masqatiin. '
+      + 'Kesäkuusta syyskuun alkuun puhaltava khareef-monsuuni tekee '
+      + 'ympäröivistä vuorista vihreät, ja se on nykyään kaupungin '
+      + 'tärkein matkailukausi.\n\n'
+      + 'Kartalla kaupunki on nauha. Meri on alalaidassa, ja rannan '
+      + 'suuntaisesti kulkee kaksi pitkää katua: alempi rantatie ja '
+      + 'ylempi As Sultan Qaboos, joka on kaupungin selkäranka. Niiden '
+      + 'väliin jää tiheä ruutukaava lännessä ja itään mentäessä yhä '
+      + 'harvempi verkko — se ei ole puuttuvaa tietoa vaan kookos- ja '
+      + 'banaanitarhoja, joita keitaan pohjavesi elättää. Oikeassa '
+      + 'alakulmassa erottuu selvästi rajattu suorakaide veden '
+      + 'ympärillä: se on Al-Baleedin arkeologinen puisto, ja sen '
+      + 'keskellä näkyvät keskiaikaisen Zafarin perustusrivit. Puiston '
+      + 'vesi on Khawr al-Balid, entinen lahti, joka kuroutui umpeen '
+      + 'järveksi ja lopetti sataman. Kartalta jää pohjoiseen Salalahin '
+      + 'lentoasema, runsaan kilometrin päähän yläreunasta, ja lännessä '
+      + 'kulttuurikeskuksen museo. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi lännestä itään — ks. lohkon esittely. */
+      { nimi: 'Sultan Qaboosin moskeija', lat: 17.0172, lon: 54.0939 },
+      { nimi: 'Al-Husnin palatsi', lat: 16.9993, lon: 54.0968 },
+      { nimi: 'Al-Haffan basaari', lat: 17.0029, lon: 54.1025 },
+      { nimi: 'Nabi Umranin hauta', lat: 17.0214, lon: 54.1113 },
+      { nimi: 'Burj an-Nahda', lat: 17.025, lon: 54.1118 },
+      { nimi: 'Al-Baleedin puisto', lat: 17.0069, lon: 54.1335 },
+      { nimi: 'Suitsukemuseo', lat: 17.0094, lon: 54.1361 },
+    ],
+  },
+  /*
+   * MOSULIN KOHDEKARTTA (Opus 20.8.2026). Tässäkin kumotaan aiempi
+   * "ei kohdekarttaa" -perustelu, joka luki kulttuuri-kategoriat.js:ssä:
+   * "kaupungin rakennuksia koskevat artikkelit kertovat pääosin
+   * vuosien 2014-2017 tuhosta". Se pitää artikkeleista paikkansa,
+   * mutta EI KOHTEISTA: jokaisesta seitsemästä kohteesta on
+   * kirjoitettavissa täysi juttu pelkällä 1900-lukua edeltävällä
+   * aineistolla, ja juuri niin on tehty. Yksikään juttu ei kerro
+   * tuhosta eikä jälleenrakennuksesta, eikä yksikään kuvateksti
+   * väitä mitään kohteen nykytilasta — kuvat on valittu vuosilta
+   * 1849–2013 ja kuvateksteissä on vuosiluku.
+   *
+   * RAJAUS KATTAA MOLEMMAT RANNAT. Vanhakaupunki on Tigriin
+   * länsirannalla, mutta antiikin Ninive on itärannalla runsaan
+   * kilometrin päässä joesta, ja kaupungin nimi tarkoittaa juuri
+   * liitoskohtaa näiden kahden välillä. Pelkkä länsiranta olisi
+   * jättänyt Niniven pois. Ruutu on 5,2 × 4,0 km.
+   *
+   * OSM-AINEISTO EI OLE HARVAA, vaikka Fablen speksi varoitti siitä.
+   * Rajauksen kysely palautti 2 604 elementtiä, ja vanhankaupungin
+   * kujasto piirtyy kartalle tiheimpänä kohtana koko kuvassa —
+   * tiheämpänä kuin itärannan ruutukaava. Jalkakäytävä- ja
+   * palvelutielippujen kanssa (ks. tools/piirra-kaupunkikartta.mjs)
+   * kujat tulevat mukaan sellaisina kuin ne ovat.
+   *
+   * KOORDINAATIT ovat kohteiden omista en-Wikipedian artikkeleista.
+   * Overpass antaa jokaiselle seitsemälle vastineen, ja suurin ero on
+   * Niniven linnavuorella 80 metriä (Wikipedia 36,3594 / 43,1528,
+   * Overpass 36,35945 / 43,15188) — sadan metrin rajan alla, joten
+   * artikkelin koordinaatti kelpaa. Al-Masfin moskeijalla ei ole
+   * artikkelissaan koordinaattia lainkaan, joten se on ainoana
+   * suoraan Overpassista (36,34641 / 43,13223).
+   */
+  mosul: {
+    polku: 'assets/kartat/mosul-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 36.368, etela: 36.332, lansi: 43.112, ita: 43.17 },
+    esittely: 'Mosulin arabiankielinen nimi al-Mawsil tarkoittaa '
+      + 'liitoskohtaa, ja kartta näyttää miksi. Tigris halkoo kuvan '
+      + 'luoteesta kaakkoon, ja joen kaksi rantaa ovat kaksi eri '
+      + 'kaupunkia. Itärannalla, runsaan kilometrin päässä vedestä, '
+      + 'ovat Kuyunjikin ja Nabi Yunusin kummut: ne ovat antiikin '
+      + 'Ninive, jonka Sanherib teki Assyrian pääkaupungiksi noin '
+      + 'vuonna 700 eKr. ja josta tuli aikansa suurin kaupunki '
+      + 'maailmassa. Kaupunkia kiersi kahdentoista kilometrin muuri, '
+      + 'sen sisällä oli seitsemänsataaviisikymmentä hehtaaria ja '
+      + 'muurissa viisitoista porttia. Ninive kukistui vuonna 612 eKr. '
+      + 'Länsiranta on nuorempi: sinne perustettiin Mepsila, jonka '
+      + 'rakensivat Niniven entiset asukkaat oman pääkaupunkinsa '
+      + 'raunioista, ja se otti Tigriin ylityspaikan tehtävän tiellä, '
+      + 'joka yhdisti Assyrian Anatoliaan. Kaupunki on 223 metrin '
+      + 'korkeudessa Ylä-Mesopotamiassa, ja se on Bagdadin jälkeen '
+      + 'Irakin toiseksi suurin.\n\n'
+      + 'Kartalla erot näkyvät heti. Kuvan vasen puolisko on tiheintä '
+      + 'kujastoa koko kartastossa: se on vanhakaupunki, jonka '
+      + 'katuverkko syntyi ennen autoja ja jota osmanivallan alussa '
+      + 'kehuttiin seitsemästä portistaan, sairaalastaan ja katetusta '
+      + 'basaaristaan. Sen pohjoislaidalla joen mutkassa on Bash '
+      + 'Tapian linna, yksi kaupunginmuurin seitsemästä linnakkeesta, '
+      + 'ja hieman siitä sisämaahan Qara Saray eli Musta palatsi. '
+      + 'Kujaston keskeltä löytyvät Al-Nurin ja Al-Nabi Jirjisin '
+      + 'moskeijat, ja pohjoisempaa Al-Masfi, jonka paikalla seisoi '
+      + 'kaupungin ensimmäinen perjantaimoskeija. Itäranta on '
+      + 'päinvastainen: leveitä suoria katuja ja säännöllisiä '
+      + 'kortteleita. Sen keskellä avautuu kartan suurin yhtenäinen '
+      + 'alue, jolla ei ole katuja lainkaan — se on Niniven muurien '
+      + 'sisäpuoli, ja sen halki mutkittelee Khosr-joki. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
+      { nimi: 'Kuyunjikin kumpu', lat: 36.3594, lon: 43.1528 },
+      { nimi: 'Bash Tapian linna', lat: 36.3554, lon: 43.1216 },
+      { nimi: 'Qara Saray', lat: 36.3528, lon: 43.1257 },
+      { nimi: 'Nabi Yunusin kumpu', lat: 36.3481, lon: 43.1594 },
+      { nimi: 'Al-Masfin moskeija', lat: 36.3464, lon: 43.1322 },
+      { nimi: 'Al-Nabi Jirjisin moskeija', lat: 36.3443, lon: 43.1303 },
+      { nimi: 'Al-Nurin moskeija', lat: 36.3431, lon: 43.1267 },
+    ],
+  },
 };
 
 /*
@@ -6251,5 +6404,5 @@ export function ydinAla(kartta) {
     y: ((p.pohjoinen - r.pohjoinen) / (p.pohjoinen - p.etela)) * 100,
     leveys: ((r.ita - r.lansi) / (p.ita - p.lansi)) * 100,
     korkeus: ((r.pohjoinen - r.etela) / (p.pohjoinen - p.etela)) * 100,
-  };
+};
 }

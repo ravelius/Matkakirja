@@ -28670,10 +28670,34 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
-   * SALALAHIN KAUPUNKILEHTI (nippu 2, 13.8.2026). EI KOHDEKARTTAA:
-   * lähteellisiä kohteita on kaksi, ja ne ovat sama paikka —
-   * Museum of the Land of Frankincense on Al-Baleedin puiston
-   * sisällä. Khor Rori ja Taqah ovat 35-40 km itään.
+   * SALALAHIN KAUPUNKILEHTI (nippu 2, 13.8.2026). Lehti tehtiin
+   * alun perin ilman kohdekarttaa, ja perustelu kuului: "lähteellisiä
+   * kohteita on kaksi, ja ne ovat sama paikka — Museum of the Land of
+   * Frankincense on Al-Baleedin puiston sisällä".
+   *
+   * KOHDEKARTTA TEHTIIN SILTI 20.8.2026 (Opus). Vanha perustelu laski
+   * vain kohteet, joilla on oma en-Wikipedian artikkeli. Kun mukaan
+   * otetaan en-Wikivoyagen Salalah-sivu — sama lähdekäytäntö kuin
+   * Tripolin lehdessä — kohteita on seitsemän: Sultan Qaboosin
+   * moskeija, Al-Husnin palatsi, Al-Haffan basaari, Nabi Umranin
+   * hauta, Burj an-Nahda, Al-Baleedin puisto ja suitsukemuseo. Kartta
+   * ja sen perustelut ovat js/packs/maakartat.js:ssä, jutut
+   * js/packs/nahtavyysjutut.js:ssä. Khor Rori ja Taqah ovat yhä
+   * 35–40 km itään eivätkä mahdu mihinkään järkevään rajaukseen.
+   *
+   * AVAUSKUVAT JA MATKAILIJAN OPAS lisättiin samalla (20.8.2026).
+   * Faktat on tarkistettu en-Wikipedian artikkeleista Salalah, Dhofar,
+   * Khareef, Al-Baleed Archaeological Park, Museum of the Land of
+   * Frankincense, Land of Frankincense, Port of Salalah, Salalah
+   * International Airport, Said bin Taimur, Omani Renaissance,
+   * Sultan Qaboos Grand Mosque ja Al Imran sekä en-Wikivoyagen
+   * Salalah-sivulta (haettu 20.8.2026).
+   *
+   * OPAS EI TOISTA NOSTOJA. Kansisivun nostot ovat Al-Baleed, khareef
+   * ja shehri-kieli, ja kauppa-sivun nostot suitsukepuu, pihkan keruu
+   * ja kauppareitti — niistä yksikään ei esiinny oppaassa uudelleen.
+   * Erityisesti shehri jätettiin oppaasta kokonaan pois, vaikka
+   * "arjen ilmiö" -jakso olisi luontevasti käsitellyt kieliä.
    */
   salalah: [
     {
@@ -28773,6 +28797,178 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Erfan.arafat, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT: puutarha, sumu ja ranta — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa ne matkailijan silmiin
+       * osuvat (keitaan viljelys, khareefin sumu, meri). Yksikään
+       * niistä ei toista kansikuvia, jotka ovat Al-Baleed, Wadi
+       * Darbatin putoukset ja Wadi Dawkahin suitsukepuisto.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Salalah, orti 01.jpg',
+          selite: 'Vihannespenkkejä ja kookospalmuja keskellä kaupunkia. '
+            + 'Ruskeaan multaan on muotoiltu matalia kasteluvalleja '
+            + 'ruuduiksi, takana nousee tiheä kookospalmurivistö ja sen '
+            + 'takaa vaalea kerrostalo parvekkeineen.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Foggy afternoon, Dahreez beach, Dhofar, Salalah, Sultanate of Oman.jpg',
+          selite: 'Mustavalkoinen kuva Ad-Dahrizin rannalta sumuisena '
+            + 'iltapäivänä. Kookospalmujen rungot kaartuvat vinosti meren '
+            + 'ylle, rantaviivaa pitkin ajaa polkupyörällä yksi ihminen '
+            + 'selin katsojaan, eikä horisonttia erota lainkaan.',
+          lahde: 'Erfan.arafat, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Salalah, spiaggia al tramonto (presso hotel al-mansur) 01.jpg',
+          selite: 'Salalahin ranta auringonlaskun aikaan. Märkä hiekka '
+            + 'heijastaa oranssia taivasta, hiekassa risteilee '
+            + 'renkaanjälkiä, ja kaukana rantaviivalla erottuu muutama '
+            + 'ihmishahmo ja rivi matalia hotellirakennuksia palmujen '
+            + 'seassa.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Salalah, ad-dahariz street, 01.jpg',
+          selite: 'Katu Ad-Dahrizin kaupunginosassa. Molemmin puolin '
+            + 'nousee kaksi- ja nelikerroksisia hiekanvärisiä taloja, '
+            + 'joiden ikkunat ovat teräväkärkisiä kaaria, ja kadun yli '
+            + 'kulkee nippu sähköjohtoja.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Salalah on Omanin eteläkärjessä, ja sen pääsuunta on '
+          + 'itä–länsi: meri etelässä, Dhofarin vuoret pohjoisessa ja '
+          + 'niiden välissä rantatasanko, jolle koko kaupunki mahtuu. '
+          + 'Asukkaita on runsaat kolmesataakolmekymmentätuhatta, ja '
+          + 'suuri osa heistä on tullut muualta — Intiasta, Pakistanista, '
+          + 'Bangladeshista ja Filippiineiltä. Vanha ydin on Al-Haffa '
+          + 'aivan rannassa; muu kaupunki on levinnyt sen ympärille '
+          + 'matalana ja väljänä, ja kortteleiden välissä kasvaa '
+          + 'kookospalmuja.',
+        artikkeli: {
+          nimi: 'Matkailijan Salalah',
+          taitto: 'opas',
+          teksti: 'Meri etelässä, vuoret pohjoisessa ja niiden välissä '
+            + 'kaistale, jolla kasvaa kookospalmuja keskellä Arabiaa.',
+          nosto: 'Salalahin satama ei ole kaupungissa vaan Raysutissa '
+            + 'viidentoista kilometrin päässä lännessä — ja se on '
+            + 'maailman yhdenneksitoista vilkkain jälleenlaivaussatama.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Salalahiin tullaan lentäen. Uusi lentoasema '
+                + 'avattiin 15. kesäkuuta 2015, ja vanha jäi kotimaan ja '
+                + 'hätätilanteiden käyttöön. Oman Air lentää Masqatiin '
+                + 'viidesti päivässä ja Dubaihin kahdesti viikossa, Qatar '
+                + 'Airways Dohaan päivittäin, ja Intian Keralaan on suora '
+                + 'viikkovuoro Kochiin ja Kozhikodeen — se kertoo '
+                + 'kaupungin väestöstä enemmän kuin mikään tilasto. '
+                + 'Khareefin aikaan lisätään kausivuoroja. Maitse tullaan '
+                + 'linja-autolla: Dubain Deirasta lähtee vuoro joka päivä '
+                + 'kello viisitoista, ja Masqatiin, Nizwaan, Al-Buraimiin '
+                + 'ja Jemenin puolelle Mukallaan ajetaan säännöllisesti. '
+                + 'Kaupungin sisällä oli vuoteen 2018 asti vain takseja; '
+                + 'ne ovat oranssivalkoisia, mittarittomia ja hinta '
+                + 'sovitaan ennen matkaa.',
+              kuva: {
+                tiedosto: 'Salalah Airport.jpg',
+                selite: 'Salalahin lentoaseman lennonjohtotorni '
+                  + 'vastavalossa. Pyöreä torni levenee ylhäältä '
+                  + 'lasitetuksi ohjaamoksi, oikealla jatkuu terminaalin '
+                  + 'sahalaitainen kattolinja, ja etualalla on täysi '
+                  + 'pysäköintialue.',
+                lahde: 'Silvio Taverna, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Dhofar on Omanin eteläisin ja laajin maakunta, ja '
+                + 'Salalah on sen pääkaupunki. Kaupunki istuu rantatasangolla, '
+                + 'jonka takaseinänä ovat Dhofarin vuoret; tasangolla on '
+                + 'sarja khawreja eli laguuneja, joihin vuorilta tuleva '
+                + 'vesi pysähtyy ennen merta. Khawr Salalah aivan '
+                + 'keskustan länsipuolella on lintupaikka: marras–huhtikuussa '
+                + 'siellä käy flamingoja, kalasääskiä ja muuttolintuja. '
+                + 'Kaupunginosia on toistakymmentä, ja niistä vanhin on '
+                + 'rannan Al-Haffa; uudempi ruutukaava on lännessä New '
+                + 'Salalahissa ja itäpuolella Ad-Dahriz. Kaupunkialueen '
+                + 'ulkopuolelle jäävät lännessä satama ja idässä 35–40 '
+                + 'kilometrin päässä Taqah, Khor Rori ja Wadi Darbatin '
+                + 'putoukset.',
+              kuva: {
+                tiedosto: 'Khor Salalah Dhofar.jpg',
+                selite: 'Rannikon khawr eli laguuni hämärän aikaan. '
+                  + 'Etualalla on kuivaa soraikkoa ja matalaa vihreää '
+                  + 'pensasta, ja niiden takana levittäytyy laaja tasainen '
+                  + 'alue, jonka reunaa kiertää tiheä kookospalmurivi.',
+                lahde: 'Silvio Taverna, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: puutarhat korttelien välissä',
+              teksti: 'Salalah on ainoa arabialainen suurkaupunki, jossa '
+                + 'kasvaa kookospalmuja kadunkulmissa. Syy on khareef: '
+                + 'kesämonsuuni täyttää pohjaveden, ja kaupunki juo sitä '
+                + 'koko muun vuoden. Sama vesi elättää tarhat, joita on '
+                + 'kortteleiden välissä ympäri kaupunkia — niissä kasvaa '
+                + 'kookosta ja banaania sekä vihanneksia, ja tuote '
+                + 'myydään tienvarsikojuissa muutaman sadan metrin '
+                + 'päässä pellosta. Kartalla tarhat näkyvät alueina, '
+                + 'joilla katuverkko harvenee eikä lopu: viivat ovat '
+                + 'ajouria penkkien välissä. Muualla Arabian '
+                + 'niemimaalla vastaava vehreys vaatii keinokastelun; '
+                + 'täällä se tulee taivaalta, mutta vain kolmena '
+                + 'kuukautena.',
+            },
+            {
+              otsikko: 'Historian käänne: satama palasi',
+              teksti: 'Dhofarin vauraus rakentui kerran sille, että täällä '
+                + 'oli satama. Keskiajan Zafar hiipui, kun sen lahti '
+                + 'kuroutui umpeen järveksi, ja sen jälkeen rannikko oli '
+                + 'kolmesataa vuotta sivussa. Käänne tuli 1990-luvulla: '
+                + 'Raysutiin, viidentoista kilometrin päähän lännessä, '
+                + 'rakennettiin syväsatama, johon mahtuu kahdeksantoista '
+                + 'metrin syväyksellä kulkeva alus. Siitä tuli maailman '
+                + 'yhdenneksitoista vilkkain jälleenlaivaussatama ja '
+                + 'Lähi-idän toiseksi vilkkain: laivat vaihtavat siellä '
+                + 'kontteja Afrikan, Lähi-idän ja Aasian reittien '
+                + 'välillä. Satamaa hoitaa tanskalaisen A. P. '
+                + 'Moller-Maerskin APM Terminals, ja se on Dhofarin '
+                + 'suurin yksityinen työnantaja. Viereen on kasvanut '
+                + 'vapaakauppa-alue.',
+              kuva: {
+                tiedosto: 'Salalah Port - panoramio.jpg',
+                selite: 'Salalahin sataman laituri. Betonilaiturin reunassa '
+                  + 'on rivi mustia kiinnityspollareita, oikealla kohoaa '
+                  + 'kolme oranssia konttinosturia, ja lahden takana '
+                  + 'häämöttää matala vaalea vuorijono.',
+                lahde: 'ismo, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Salalahissa kannattaa tulla silloin, kun muualla '
+                + 'Arabiassa ei kannata. Pelin sääriviltä kuumin kuukausi '
+                + 'ei ole heinäkuu vaan toukokuu, jolloin keskilämpö on '
+                + 'lähes kaksikymmentäyhdeksän astetta; elokuuhun mennessä '
+                + 'se on laskenut yli kolme astetta, kahteenkymmeneenviiteen. '
+                + 'Talvi on lämmin ja kuiva: tammikuussa runsaat '
+                + 'kaksikymmentäyksi astetta ja sadetta pari millimetriä. '
+                + 'Sadeluvuissa on huomattava ristiriita, joka kannattaa '
+                + 'tietää: pelin rivi on laskettu ERA5-hilaruudusta ja '
+                + 'panee sateen toukokuulle, kun taas lentoaseman omat '
+                + 'mittaukset panevat sen heinä- ja elokuulle. Ruutu on '
+                + 'kymmeniä kilometrejä leveä, ja khareefin sumuvyöhyke on '
+                + 'kapea rannikkokaistale — hila tasoittaa sen pois. '
+                + 'Kesäkuukausina tänne tullaan sumun eikä sateen takia.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kauppa',
@@ -28862,11 +29058,41 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
-   * MOSULIN KAUPUNKILEHTI (nippu 2, 13.8.2026). EI KOHDEKARTTAA:
-   * kaupungin rakennuksia koskevat artikkelit kertovat pääosin
-   * vuosien 2014-2017 tuhosta, joka on pelin rajauksen ulkopuolella.
-   * Lehti on siksi kirjoitettu aiheista, jotka kestävät ilman sitä:
-   * musliini, 1200-luvun rakennuskausi ja Tigriksen ylityspaikka.
+   * MOSULIN KAUPUNKILEHTI (nippu 2, 13.8.2026). Lehti tehtiin ilman
+   * kohdekarttaa, ja perustelu kuului: "kaupungin rakennuksia
+   * koskevat artikkelit kertovat pääosin vuosien 2014-2017 tuhosta,
+   * joka on pelin rajauksen ulkopuolella".
+   *
+   * KOHDEKARTTA TEHTIIN SILTI 20.8.2026 (Opus). Perustelu pitää
+   * artikkeleista paikkansa mutta ei kohteista: jokaisesta
+   * seitsemästä karttakohteesta on kirjoitettavissa täysi juttu
+   * pelkällä 1900-lukua edeltävällä aineistolla, ja niin on tehty.
+   * Yksikään juttu ei kerro tuhosta eikä jälleenrakennuksesta.
+   * Kartta ja sen perustelut ovat js/packs/maakartat.js:ssä, jutut
+   * js/packs/nahtavyysjutut.js:ssä.
+   *
+   * AVAUSKUVAT JA MATKAILIJAN OPAS lisättiin samalla (20.8.2026).
+   * Faktat on tarkistettu en-Wikipedian artikkeleista Mosul, Nineveh,
+   * Great Mosque of al-Nuri (Mosul), Bash Tapia Castle, Qara Saray,
+   * Umayyad Mosque of Mosul, Al-Nabi Jirjis Mosque, Al-Nabi Yunus
+   * Mosque, Badr al-Din Lu'lu', Austen Henry Layard, Muslin, Tigris,
+   * Mosul Eyalet ja Nineveh Plains (haettu 20.8.2026).
+   *
+   * SISÄLTÖLINJAUS (Fablen ohje 20.8.2026): EI 2010-luvun sotaa eikä
+   * tuhoja. Painopiste on 1800-luvussa ja sitä vanhemmassa
+   * historiassa, arkkitehtuurissa ja maantieteessä. Al-Nurin moskeija
+   * on mukana historiallisena rakennuksena (1172, kalteva
+   * minareetti); jälleenrakennusta ei käsitellä. Kuvat ovat joko
+   * historiallisia tai sellaisia nykyvalokuvia, joissa ei näy
+   * vaurioita, ja kuvatekstit kertovat vain sen, mitä kuvassa on —
+   * yksikään ei väitä mitään kohteen nykytilasta.
+   *
+   * OPAS EI TOISTA NOSTOJA. Kansisivun nostot ovat musliini, Badr
+   * al-Din Lu'lu' ja Mosulin kipsikivi, ja käsityösivun nostot
+   * upotekoristeinen messinki kolmesta näkökulmasta. Oppaan
+   * "arjen ilmiö" -jakso oli ensin kirjoitettu kipsikivestä, ja se
+   * hylättiin juuri toiston takia — tilalle tuli dominikaanien
+   * koulut, kirjapaino ja ompelupajat.
    */
   mosul: [
     {
@@ -28969,6 +29195,187 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Allan Gluck, Wikimedia Commons (CC BY 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT: kaupunki, tasanko ja se mitä tasangolla oli.
+       * Kaksi ensimmäistä ovat vuodelta 1932 ja 1840-luvulta, kolmas
+       * on Layardin oma väritetty kuvitelma Ninivestä Tigriin
+       * rannalla — se on tahallaan mielikuva eikä valokuva, ja
+       * kuvateksti sanoo sen.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Hadba-16200v.jpg',
+          selite: 'Yleisnäkymä Mosulin vanhankaupungin katoille vuonna '
+            + '1932. Tasakattoja on näkyvissä satoja, ja niiden keskeltä '
+            + 'nousee yksinään korkea lieriömäinen minareetti, jonka '
+            + 'kylki on kuvioitua tiiltä ja huipulla pieni kupoli.',
+          lahde: 'American colony photographers., Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Ancient Mosul, a Yezidi shrine to the left and the Nouri Mosque minaret to the right.jpg',
+          selite: 'Aukio vanhassa Mosulissa vuonna 1932. Vasemmalla '
+            + 'kohoaa kartiokattoinen pyhäkkö savitiilitalojen keskellä, '
+            + 'oikealla nousee kalteva minareetti, ja etualalla kävelee '
+            + 'kaksi ihmistä selin katsojaan kantaen taakkaa päänsä '
+            + 'päällä.',
+          lahde: 'American colony photographers., Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Artist’s impression of Assyrian palaces from The Monuments of Nineveh by Sir Austen Henry Layard, 1853.jpg',
+          selite: 'Layardin vuoden 1853 väritetty kuvitelma siitä, miltä '
+            + 'Assyrian palatsit näyttivät joen rannalla: porrastettu '
+            + 'torni vasemmalla, pitkiä pylväikköjä terassien päällä ja '
+            + 'siivekkäitä härkähahmoja portilla. Etualalla laiduntaa '
+            + 'vuohia. Kuva on rekonstruktio, ei havainto.',
+          lahde: 'Austen Henry Layard, Wikimedia Commons (PD)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Hadba-16208v.jpg',
+          selite: 'Kaltevan minareetin tiilipinta läheltä vuonna 1932. '
+            + 'Lieriötä kiertää seitsemän vyöhykettä, joissa jokaisessa '
+            + 'on eri geometrinen tiilikuvio — vinoruutuja, murtoviivoja '
+            + 'ja punoksia — ja huipulla on kaide ja pieni kupoli.',
+          lahde: 'American colony photographers., Wikimedia Commons (PD)',
+        },
+        kappale: 'Mosul on Irakin toiseksi suurin kaupunki, ja se on '
+          + 'oikeastaan kaksi kaupunkia yhden nimen alla. Tigriin '
+          + 'länsirannalla on vanhakaupunki, jonka kujaverkko syntyi '
+          + 'ennen autoja; itärannalla on leveiden katujen kaupunginosat '
+          + 'ja niiden takana antiikin Niniven kummut. Nimi al-Mawsil '
+          + 'tarkoittaa liitoskohtaa, ja assyrialaiset kutsuvat koko '
+          + 'kaupunkia yhä Niniveksi. Korkeus merenpinnasta on 223 '
+          + 'metriä, ja ympärillä avautuu Niniven tasanko.',
+        artikkeli: {
+          nimi: 'Matkailijan Mosul',
+          taitto: 'opas',
+          teksti: 'Kaksi rantaa, yksi silta ja niiden välissä joki, joka '
+            + 'on kuljettanut kaiken pohjoisesta etelään.',
+          nosto: 'Niniven muuri oli kaksitoista kilometriä pitkä ja '
+            + 'kiersi seitsemänsataaviisikymmentä hehtaaria — kaupunki '
+            + 'oli 600-luvulla eKr. maailman suurin, ja sen läpi kulki '
+            + 'kahdeksantoista kanavan vesijohtoverkko.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Mosul syntyi ylityspaikkaan, ja tuhat vuotta se '
+                + 'ylitettiin ilman siltaa. Tigriillä liikuttiin '
+                + 'kelekeillä: puurunko ladottiin täyteen puhallettujen '
+                + 'vuohennahkojen päälle, lastattiin ja annettiin virran '
+                + 'viedä alavirtaan, minkä jälkeen runko purettiin ja '
+                + 'nahat kannettiin takaisin muulin selässä. Tapa on '
+                + 'assyrialaista perua — sama lautta näkyy palatsien '
+                + 'seinäreliefeissä — ja sillä vietiin 1850-luvulla '
+                + 'kaivauslöydöt Basran suuntaan. Nykyään joen yli menee '
+                + 'viisi siltaa. Ne tunnetaan pohjoisesta etelään '
+                + 'niminä Al-Shohada, Viides silta, Vanha eli Rautasilta, '
+                + 'Al-Huriya ja Neljäs silta; Al-Huriya rakennettiin '
+                + 'vuosina 1955–1958 saksalais-ranskalais-hollantilaisena '
+                + 'yhteistyönä, se on kuusijänteinen ja 340 metriä pitkä.',
+              kuva: {
+                tiedosto: 'Place V 1867 III Plate 43 6.jpg',
+                selite: 'Vuoden 1867 kuparipiirroslevy, jonka aiheena on '
+                  + 'antiikkiesineiden kuljetus. Keskellä ui puolenkymmentä '
+                  + 'kelek-lauttaa alavirtaan, alalaidassa on yhden lautan '
+                  + 'pohjapiirros nahkakelluke kerrallaan, ja reunassa '
+                  + 'ovat airo ja täyteen puhallettu vuohennahka '
+                  + 'erillisinä piirroksina.',
+                lahde: 'Place, Victor, 1818 - 1875: Tafeln. - Paris: Imprimerie Impériale, 1867, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Mosul on Ylä-Mesopotamiassa: lounaassa alkaa Syyrian '
+                + 'aavikko, idässä nousevat Zagros-vuoret, ja välissä on '
+                + 'Niniven tasanko, joka saa sen verran sadetta että '
+                + 'viljaa voi kasvattaa ilman kastelua. Juuri se teki '
+                + 'paikasta rikkaan. Kaupungin kaksi puoliskoa ovat eri '
+                + 'ikäisiä: itäranta on vanhempi, sillä Ninive oli siellä '
+                + 'jo kuutta vuosituhatta ennen ajanlaskun alkua, ja '
+                + 'länsiranta sai asutuksensa vasta myöhäisantiikissa, '
+                + 'kun kuningas Khosrau II rakennutti sinne linnoituksen '
+                + 'ja lähelle nousi kaksi kristillistä luostaria noin '
+                + 'vuosina 570 ja 595. Niniven raunioalue on jaettu '
+                + 'kahtia Khosr-joella: pohjoispuolella on Kuyunjikin '
+                + 'kumpu, eteläpuolella Nabi Yunusin kumpu.',
+              kuva: {
+                tiedosto: 'Nineveh from the North-East.jpg',
+                selite: 'Akvarelli Niniven tasangosta koillisesta '
+                  + 'katsottuna 1840-luvulla. Etualalla laskee loiva '
+                  + 'rinne, jonka laidalla on kylä ja karjaa, ja '
+                  + 'horisontissa erottuu tasangon takana kaupunki '
+                  + 'yksittäisine torneineen. Paperin alareunaan on '
+                  + 'kirjoitettu käsin taiteilijan muistiinpanot.',
+                lahde: 'Frederick Charles Cooper (1817- ?), Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kirjapaino ja ompelupaja',
+              teksti: 'Mosulin arkisista laitoksista — kouluista, '
+                + 'sairasvastaanotoista, kirjapainosta — moni sai alkunsa '
+                + 'samasta lähteestä. Kaupungissa oli suuri kristitty '
+                + 'väestö, pääosin alkuperäisiä assyrialaisia, ja vuonna '
+                + '1750 paavi Benedictus XIV lähetti sinne '
+                + 'dominikaani-isiä. Vuonna 1873 heidän peräänsä tulivat '
+                + 'dominikaanisisaret, ja juuri he perustivat kouluja, '
+                + 'terveysasemia, kirjapainon, orpokodin ja pajat, joissa '
+                + 'tytöille opetettiin ompelua ja kirjontaa. 1800-luvulla '
+                + 'perustetun sisarkunnan emotalo oli yhä Mosulissa '
+                + '2000-luvun alussa, ja siihen kuului yli sata '
+                + 'kaksikymmentä assyrialaista irakilaissisarta. Vuosiluku '
+                + '1873 on tässä kirjassa muutenkin tuttu — se on isoisän '
+                + 'matkavuosi, ja samoihin aikoihin Mosulissa alettiin '
+                + 'painaa kirjoja.',
+            },
+            {
+              otsikko: 'Historian käänne: 1847 ja Kuyunjik',
+              teksti: 'Vuonna 1842 Ranskan konsuli Paul-Émile Botta alkoi '
+                + 'kaivaa joen toisella puolella olevia kumpuja. '
+                + 'Kuyunjikissa hän ei löytänyt juuri mitään, mutta hänen '
+                + 'palkkaamansa paikalliset osuivat kahdenkymmenen '
+                + 'kilometrin päässä Khorsabadissa Sargon II:n palatsiin. '
+                + 'Vuonna 1847 nuori brittidiplomaatti Austen Henry '
+                + 'Layard tutki Kuyunjikin ja tunnisti sen Niniveksi. '
+                + 'Hänen menetelmänsä oli hänen omien sanojensa mukaan '
+                + 'saada "mahdollisimman suuri määrä hyvin säilyneitä '
+                + 'taide-esineitä mahdollisimman pienellä ajan ja rahan '
+                + 'kululla"; vuonna 1851 hän löysi Assurbanipalin '
+                + 'kirjaston, jossa oli kaksikymmentäkaksituhatta '
+                + 'nuolenpääsavitaulua. Suurin osa löydöistä lähti '
+                + 'Britannian museoon, ja työtä jatkoivat Hormuzd Rassam '
+                + 'ja George Smith. Layardin kirjat olivat myyntimenestys '
+                + 'ja tekivät hänestä rikkaan.',
+              kuva: {
+                tiedosto: 'Artist’s impression of a hall in an Assyrian palace from The Monuments of Nineveh by Sir Austen Henry Layard, 1853.jpg',
+                selite: 'Layardin vuoden 1853 kuvitelma assyrialaisen '
+                  + 'palatsin salista. Seinät on jaettu vaakavyöhykkeisiin '
+                  + 'kuvakertomusta, katto on maalattu kirkkain kuvioin, '
+                  + 'ja käytävän molemmin puolin seisoo siivekäs '
+                  + 'ihmispäinen härkä. Värit ovat arvaus: kaivauksista '
+                  + 'löytyi vain kiveä.',
+                lahde: 'Sir Austen Henry Layard, 1853, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Mosulin vuosi on jyrkkä. Heinäkuun keskilämpö on '
+                + 'yli kolmekymmentäviisi astetta ja päivät nousevat yli '
+                + 'neljänkymmenen; tammikuussa keskilämpö on seitsemän ja '
+                + 'yöt kolmessa asteessa. Sade tulee marras–huhtikuussa, '
+                + 'ja kesäkuusta syyskuuhun normaali on nolla tai yksi '
+                + 'millimetri. Vuosisade on lähes neljäsataa millimetriä '
+                + 'eli lähes kolminkertainen Bagdadiin verrattuna, vaikka '
+                + 'kaupungit ovat samassa maassa ja saman joen varrella — '
+                + 'ero on se, että Mosul on jo Välimeren sadevyöhykkeen '
+                + 'reunalla ja Bagdad ei. Käytännössä maalis–huhtikuu ja '
+                + 'loka–marraskuu ovat kävelijän kuukaudet: silloin '
+                + 'keskilämpö on kahdenkymmenen molemmin puolin, ja '
+                + 'kevätsateet tekevät tasangosta vihreän.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kasityo',
