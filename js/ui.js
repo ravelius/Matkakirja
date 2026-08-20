@@ -180,7 +180,10 @@ import { puheTuettu } from './puhe.js';
  * piirretään vain kehittäjätilan valikkolinkeistä.
  */
 import { RAAMATTU } from './tyohuone-raamattu.js';
-import { TILANNE, TESTATTAVAA } from './tyohuone-tilanne.js';
+import { TILANNE, TESTATTAVAA, TUOREET } from './tyohuone-tilanne.js';
+// Kartan kehittäjävärit lukevat lehtitiedon samasta funktiosta kuin
+// Tilastot-taulun Lehti-sarake (drawBoard, valmiusLuokka).
+import { kaupungillaLehti } from './tyohuone-tilastot.js';
 import {
   el,
   hash01,
@@ -356,6 +359,18 @@ const OIKAISUN_HILJAISUUS_MS = 250;
  */
 const PALUU_TAHTI_MS = 300;
 const PALUU_KESTO_MS = 8000;
+/*
+ * KEHITTÄJÄN VALMIUSVÄRIT KARTALLA (omistajan tilaus 20.8.2026:
+ * "kehittäjätilassa keskeneräiset kaupungit saisi näkyä kartalla
+ * harmaalla ja työn alla olevat keltaisella ja valmiit nykyisellä
+ * värillä").
+ *
+ * Työn alla olevat luetaan TUOREET-taulusta (js/tyohuone-tilanne.js,
+ * jota vain Fable päivittää) ja lehden olemassaolo Tilastot-taulun
+ * omasta funktiosta (kaupungillaLehti) — sama määritelmä molemmissa,
+ * jottei kartta ja taulu voi kertoa eri tarinaa samasta kaupungista.
+ */
+const TYON_ALLA_IDT = new Set((TUOREET?.tyossa ?? []).map((k) => k.id));
 // Kirjoituskoneen tahti: avaus saa naksua rauhassa, muut tekstit ripeästi.
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
@@ -2277,6 +2292,13 @@ export class UI {
    */
   paivitaKehittajaTila() {
     this.kehittajaTila = kehittajaTilaPaalla();
+    /*
+     * Kaupunkien valmiusvärit syntyvät laudan piirrossa (drawBoard),
+     * joten kytkin jäisi ilman tätä näkymättömäksi seuraavaan laudan
+     * vaihtoon asti. Tyhjä drawnPackId saa renderin piirtämään laudan
+     * uusiksi samalla polulla kuin laudan vaihdossa.
+     */
+    this.drawnPackId = null;
     this.render();
   }
 
@@ -4241,6 +4263,27 @@ export class UI {
     const cities = el('g', { class: 'cities' }, root);
     // Kaupunkilaudalla solmut ovat pienempiä: mittakaava on kortteleissa.
     const nodeScale = pack.style === 'city' ? 0.82 : 1;
+    /*
+     * Rakennustyön väri kartalle — VAIN kehittäjätilassa (omistajan
+     * tilaus 20.8.2026, ks. TYON_ALLA_IDT).
+     *
+     * Kolme luokkaa: työn alla oleva saa keltaisen, valmis
+     * (kaupungilla on kaupunkilehti) pitää nykyisen värinsä eikä saa
+     * luokkaa lainkaan, ja koskematon jää harmaaksi. Pelaajan laudalle
+     * ei lisätä edes luokkaa, joten tavallinen näkymä on tismalleen
+     * entisensä.
+     *
+     * TYÖN ALLA KATSOTAAN ENSIN, vaikka kaupungilla jo olisi lehden
+     * kansiosio: TUOREET.tyossa on nimenomaan lista siitä, mikä on
+     * kesken juuri nyt, ja Fable siirtää kaupungin valmiisiin vasta kun
+     * työ on tehty. Aloitettu lehti ei siis tee kaupungista valmista —
+     * päinvastoin, juuri ne kaupungit omistaja haluaa nähdä keltaisina.
+     */
+    const valmiusLuokka = (id) => {
+      if (!this.kehittajaTila) return '';
+      if (TYON_ALLA_IDT.has(id)) return ' city-tyossa';
+      return kaupungillaLehti(id) ? '' : ' city-kesken';
+    };
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
       const base = (c.start ? 20 : 11.6) * nodeScale;
@@ -4248,7 +4291,7 @@ export class UI {
       const ry = base + vary(`city:ry:${c.id}`, 0.7);
       if (c.start) {
         el('ellipse', {
-          cx: c.x, cy: c.y, rx, ry, transform: wobble, class: 'city-start',
+          cx: c.x, cy: c.y, rx, ry, transform: wobble, class: `city-start${valmiusLuokka(c.id)}`,
         }, cities);
         el('ellipse', {
           cx: c.x, cy: c.y, rx: rx * 0.6, ry: ry * 0.6, transform: wobble, class: 'coast-soft',
@@ -4261,7 +4304,7 @@ export class UI {
           ry,
           transform: wobble,
           'stroke-width': (2.2 + hash01(`city:sw:${c.id}`) * 0.7).toFixed(2),
-          class: 'city',
+          class: `city${valmiusLuokka(c.id)}`,
         }, cities);
       }
       // Porttikaupungista lähtee pitkä lento toiselle laudalle: kaksoiskehä

@@ -5054,6 +5054,22 @@ body.flight-active .fact-card {
 
 .city { fill: #f3e5c4; stroke: #6b5230; stroke-width: 2.4; }
 .city-start { fill: #eec66b; stroke: #6d4d12; stroke-width: 3.4; }
+
+/*
+ * Rakennustyön väri kaupunkipisteissä — vain kehittäjätilassa
+ * (omistajan tilaus 20.8.2026: keskeneräiset harmaalla, työn alla
+ * keltaisella, valmiit nykyisellä värillä). Luokat lisätään vain
+ * kehittäjätilassa (js/ui.js drawBoard, valmiusLuokka), joten
+ * pelaajan kartta ei muutu näistä säännöistä millään tavalla.
+ *
+ * Keltainen on Tilastot-taulun .tk-tuore-tyossa-sävystä (#f7ecd2)
+ * kirkastettu: laudan oma pergamentinvaalea (#f3e5c4) on jo niin
+ * lähellä sitä, ettei ero erottuisi kartan päältä.
+ */
+.city.city-tyossa,
+.city-start.city-tyossa { fill: #f2cf46; stroke: #8a6a12; }
+.city.city-kesken,
+.city-start.city-kesken { fill: #c9c4bb; stroke: #78736b; }
 .airport { font-size: 14px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */

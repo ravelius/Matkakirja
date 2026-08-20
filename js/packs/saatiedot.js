@@ -1292,6 +1292,41 @@ export const SAATIEDOT = {
       + 'joulu–helmikuussa vettä tulee yhteensä vain reilut kymmenen '
       + 'millimetriä.',
   },
+  /*
+   * DELHI (20.8.2026). Sama menetelmä kuin paketin muillakin
+   * riveillä: Open-Meteon arkisto (ERA5), jakso 1991–2020,
+   * keskilämpö kuukauden päiväkeskiarvojen keskiarvona ja sade
+   * kuukausisumman vuosikeskiarvona; ylin ja alin koko jakson
+   * päivittäisten ylimpien ja alimpien keskiarvojen puolivälinä
+   * keskilämmön ympärillä.
+   *
+   * MITTAUSPISTE on Vanha Delhi 28,6558 / 77,2408 eli Punaisen
+   * linnoituksen kulmilla — sama piste, johon lehden kohdekartta
+   * ankkuroituu (en-Wikipedian Red Fort -infobox, haettu 20.8.2026).
+   * Koko pääkaupunkialue on 1 483 neliökilometriä 200–250 metrin
+   * korkeudessa, joten reunoilla luvut poikkeavat hieman keskustasta.
+   *
+   * MONSUUNI on rivin oma piirre ja se on myös lähteessä:
+   * en-Wikipedian Delhi-artikkelin Climate-luku sanoo monsuunin
+   * saapuvan kesäkuun lopulla, ja ERA5:n normaalit näyttävät saman —
+   * heinä- ja elokuuhun osuu 362 mm vuoden 663:sta. Kylmimmän
+   * kuukauden sumu (tammikuu) on samasta luvusta.
+   */
+  delhi: {
+    lat: 28.6558,
+    lon: 77.2408,
+    keskilampo: [13.3, 16.6, 22.1, 28.7, 32.7, 33, 29.9, 28.7, 27.9, 25.3, 20.2, 15.2],
+    ylin: [19, 23, 29, 36, 40, 38, 33, 32, 32, 32, 27, 22],
+    alin: [7, 10, 15, 21, 26, 28, 26, 25, 24, 19, 14, 9],
+    sade: [24, 33, 22, 14, 19, 69, 189, 173, 95, 13, 5, 7],
+    luonnehdinta: 'Delhin vuoden jakaa monsuuni: heinä- ja elokuussa '
+      + 'sataa yhteensä 362 millimetriä eli yli puolet vuoden 663:sta, '
+      + 'kun marras–joulukuussa normaali on muutama millimetri. Kuumin '
+      + 'aika on ennen sateita — toukokuun keskilämpö on lähes 33 '
+      + 'astetta ja päivät nousevat neljäänkymmeneen. Talvi on lyhyt '
+      + 'ja leuto: tammikuun keskilämpö on 13 astetta, ja yöt '
+      + 'viilenevät seitsemään.',
+  },
   soul: {
     lat: 37.56,
     lon: 126.99,

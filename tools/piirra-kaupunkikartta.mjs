@@ -1556,6 +1556,147 @@ const KAUPUNGIT = {
       },
     ],
   },
+  delhi: {
+    /*
+     * VANHA DELHI ELI SHAHJAHANABAD (20.8.2026). Ruutu on noin
+     * 3,3 × 2,3 km ja kattaa muurikaupungin ytimen: Punainen
+     * linnoitus idässä Yamunan rantakaistaleeseen asti, Chandni
+     * Chowkin katu keskellä länteen Fatehpuri-moskeijalle, Jama
+     * Masjid etelässä ja Delhi Junctionin asema luoteessa. Kaikki
+     * seitsemän pääkartan kohdetta ovat kävelymatkan päässä
+     * toisistaan — sama tiivis muurikaupunkirajaus kuin Sanaassa.
+     *
+     * MIKSI TÄMÄ NURKKA DELHISTÄ. Delhi on megakaupunki, jonka
+     * historialliset kohteet ovat "seitsemän kaupungin" perinnön
+     * takia kymmenien kilometrien päässä toisistaan: Qutb Minar on
+     * 15,6 km lounaaseen, Humayunin mausoleumi 7 km ja Purana Qila
+     * 5 km etelään. Mikään yksi ruutu ei kata niitä muuttumatta
+     * puuroksi (Soulin ja Shanghain oppi) — ja Vanha Delhi on juuri
+     * se Delhi, jossa isoisä käveli vuonna 1873.
+     *
+     * KAINALOSSA HUMAYUNIN MAUSOLEUMI, 7 km etelään. Se on ainoa
+     * kaukokohde, joka on lehdessä omana juttunaan; Qutb Minar ja
+     * Purana Qila kerrotaan historiasivun nostoissa ilman
+     * karttapistettä (Medinan Uhud-vuoren ratkaisu). Kainalon
+     * prosentit ovat piirretystä kuvasta Helsingin kaavalla
+     * (18,75 + ydin × 0,625).
+     *
+     * Jalkakäytävät ja palvelutiet päällä samasta syystä kuin
+     * Medinassa ja Mosulissa: Vanhan Delhin kujat ovat OSM:ssä
+     * valtaosin service- ja footway-luokkaa, ja ilman lippuja juuri
+     * muurikaupungin korttelisto jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 28.6665, etela: 28.6455, lansi: 77.216, ita: 77.2495 },
+    laajennus: 1.6,
+    jalkakaydat: true,
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 28.5985, etela: 28.588, lansi: 77.244, ita: 77.258 },
+        x: 67.5, y: 63.75, leveys: 12.5, suunta: '7 km etelään',
+      },
+    ],
+  },
+  jekaterinburg: {
+    /*
+     * SIPERIAN ERÄ (20.8.2026). Rajaus on Iset-joen ydinkeskusta:
+     * pohjoisessa Kharitonovin kartano Nousemuksen kukkulalla,
+     * etelässä Kolminaisuuden katedraali, lännessä Plotinkan pato ja
+     * rahapajan portit, idässä Rosa Luxemburgin katu. Ruutu on noin
+     * 2,9 × 2,9 km eli lähes neliö, ja se on tarkoituksella tiukka:
+     * Jekaterinburgin kaupunkialue on Uralin itärinteellä kymmeniä
+     * kilometrejä pitkä, mutta kaikki 1800-luvun kohteet ovat padon
+     * ja Leninin valtakadun risteyksen ympärillä.
+     *
+     * VANHA RAUTATIEASEMA (1878) ON KAINALOSSA, koska se on 2,3 km
+     * pohjoiseen: samaan ruutuun mahtuessaan ydin olisi kutistunut
+     * niin, että Suuren Zlatoustin ja kuvataidemuseon numeroympyrät
+     * (270 metriä toisistaan) olisivat menneet päällekkäin. Sama
+     * ratkaisu kuin Medinassa ja Adenissa; kainalo on vasemmassa
+     * ylänurkassa, joka on suuntana oikea.
+     *
+     * VALKOINEN TORNI (Uralmash, 6,5 km pohjoiseen) JÄI KARTALTA
+     * KOKONAAN. Se on lehden oppaassa omalla kuvallaan: kaksi
+     * kainaloa samaan reunaan olisi tehnyt kuvasta levottoman, ja
+     * torni on tehdaskaupunginosan kohde eikä vanhan keskustan.
+     *
+     * palvelutiet: true. Historiallisen aukion ja padon ympärys on
+     * OSM:ssä valtaosin service-teitä ja jalankulkuväyliä; ilman
+     * lippua kartan länsilaita jäi lähes tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 56.849, etela: 56.8225, lansi: 60.585, ita: 60.633 },
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 56.8635, etela: 56.8545, lansi: 60.5955, ita: 60.6065 },
+        x: 2.5, y: 2, leveys: 20, suunta: '2,3 km pohjoiseen',
+      },
+    ],
+  },
+  novosibirsk: {
+    /*
+     * SIPERIAN ERÄ (20.8.2026). Rajaus alkaa siitä, mistä kaupunkikin:
+     * lounaisnurkassa on ensimmäisen Ob-sillan paikka, ja siitä
+     * koilliseen nousee Punainen valtakatu Nikolauksen kappelin ja
+     * kaupungin kauppatalon ohi Novosibirsk-Glavnyin asemalle.
+     * Ruutu on noin 3,9 × 3,6 km. Obin uoma tulee mukaan koko
+     * länsilaidalle, ja se on tarkoituksellista: joki on syy siihen,
+     * että kaupunki on olemassa.
+     *
+     * KAINALOA EI OLE. Akademgorodok on kolmenkymmenen kilometrin
+     * päässä etelässä eikä ole katuverkon kohde vaan oma kaupunkinsa
+     * metsässä — se kerrotaan lehden nostossa ja oppaassa. Yhtään
+     * kartan kohdetta ei jää ruudun ulkopuolelle.
+     *
+     * meri: true, koska Ob on OSM:ssä leveä vesimonikulmio, joka ei
+     * sulkeudu rajauksen sisällä; ilman lippua joen länsipuoli jäi
+     * paperin väriseksi.
+     *
+     * palvelutiet: true. Ensimmäinen ajo ilman lippua katsottiin:
+     * Novosibirskin korttelit ovat isoja ja niiden sisukset ovat
+     * OSM:ssä service-teitä, joten kartta jäi harvaksi verkoksi
+     * pääkatuja ja Obin molemmat rannat lähes tyhjiksi. Lipun kanssa
+     * korttelien sisus piirtyy ja kaupunki näyttää kaupungilta.
+     */
+    rajat: { pohjoinen: 55.04, etela: 55.005, lansi: 82.885, ita: 82.942 },
+    meri: true,
+    palvelutiet: true,
+  },
+  irkutsk: {
+    /*
+     * SIPERIAN ERÄ (20.8.2026). Rajaus on Angaran mutka: pohjoisessa
+     * Znamenskin luostari Ušakovkan suulla, keskellä Kirovin aukio eli
+     * vuoden 1661 linnoituksen paikka, etelässä 130. kortteli ja
+     * lännessä joen toisella rannalla Glaskovon rautatieasema. Ruutu
+     * on noin 4,0 × 3,9 km.
+     *
+     * BAIKAL EI OLE KARTALLA EIKÄ KAINALOSSA, ja se on päätös eikä
+     * unohdus. Järvi alkaa 72 kilometrin päästä ylävirtaa (en-Wikipedia,
+     * Irkutsk: "72 km below its outflow from Lake Baikal"), eli
+     * kolmekymmentä kertaa kauempana kuin yksikään tähänastinen
+     * kainalo — Medinan Quba on 3,5 km, Adenin Tawahi 6 km. Sen
+     * kokoisessa hypyssä kainalon mittakaava olisi aivan toinen kuin
+     * pääkartan, ja ruutuun mahtuisi vain nimetön pala rantaviivaa.
+     * Baikal kerrotaan oppaan omassa jaksossa, ja sillä on jo
+     * lehdessä kokonainen teemasivu. Yhteys näkyy silti kartalla:
+     * Angara tulee kuvaan järvestä.
+     *
+     * JÄÄNMURTAJA ANGARA ON KAINALOSSA (6 km kaakkoon, Irkutskin
+     * tekoaltaalla). Se on 1900-luvun alun Baikalin lauttalaiva ja
+     * siksi juuri se kohde, joka sitoo kaupungin järveen.
+     *
+     * palvelutiet: true. 130. korttelin ja Kirovin aukion väliset
+     * kujat ovat OSM:ssä service-teitä.
+     */
+    rajat: { pohjoinen: 52.306, etela: 52.27, lansi: 104.253, ita: 104.312 },
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 52.2555, etela: 52.245, lansi: 104.338, ita: 104.35 },
+        x: 78, y: 76.8, leveys: 20, suunta: '6 km kaakkoon',
+      },
+    ],
+  },
   jakutsk: {
     /*
      * RAJAUS ON KESKUSTA JA JOEN RANTA, 3,5 × 2,7 km. Jakutsk on
@@ -1767,6 +1908,53 @@ const KAUPUNGIT = {
     laajennus: 1.6,
     palvelutiet: true,
     jalkakaydat: true,
+    meri: true,
+  },
+  vladivostok: {
+    /*
+     * Niemen kärki kahden veden välissä: Amurinlahti jää kuvan
+     * vasempaan laitaan ja Kultaisen sarven lahti työntyy kuvaan
+     * oikeasta alakulmasta. Niiden välissä on ruutukaava, jonka kaksi
+     * pääkatua ovat kuvan juoni — Svetlanskaja kulkee Kultaisen
+     * sarven rantaa idän suuntaan ja Aleutskaja kohtisuoraan sitä
+     * vastaan niemen mittaan, ja rautatieasema on niiden risteyksessä
+     * (en-Wikipedia "Vladivostok", Urban layout). Ruutu on
+     * 3,9 × 2,9 km ja kattaa kaikki yhdeksän kohdetta
+     * Pokrovskin puistosta pohjoisessa Kultaisen sarven siltaan
+     * etelässä.
+     *
+     * ETELÄRAJA 43,1035 EIKÄ tiukempi: Kultaisen sarven sillan
+     * kohdepiste on sillan keskellä lahden yllä (43,1089), ja
+     * tiukemmalla rajalla se putoaisi mittakaavajanan korkeudelle.
+     * Nyt piste on 80 %:n korkeudella ja kaukana vasemman alakulman
+     * janasta (x 67 %).
+     *
+     * TOKAREVIN MAJAKKA JÄI POIS (43,073 / 131,843): se on niemen
+     * kärjessä 4,5 km lounaaseen, ja mukaan ottaminen olisi
+     * kaksinkertaistanut ruudun ja tehnyt keskustasta täplän.
+     * Kainaloa ei tehty, koska majakan ympärillä ei ole katuverkkoa —
+     * ruutu olisi tyhjää paperia kuten Tallinnan laulukentästä.
+     * Majakka mainitaan oppaassa. Russkin saaren silta jää samasta
+     * syystä pois (5 km etelään).
+     *
+     * meri: true — Japaninmeri on OSM:ssä täällä pelkkää rantaviivaa
+     * ilman vesimonikulmioita, ja ilman lippua sekä Amurinlahti että
+     * Kultainen sarvi jäisivät paperin värisiksi. Tavallisella
+     * rajauksella täyttö osuu oikein: molemmat lahdet vettä, niemi
+     * kuivana, laiturit piirtyvät sormina.
+     *
+     * EI laajennusta, JA SE ON MITATTU PÄÄTÖS eikä unohdus. Reunus
+     * kokeiltiin (laajennus 1.6, koeajot 20.8.2026): laajennetulla
+     * alueella rantaviiva pilkkoutuu niin moneksi pätkäksi (Egeršeld,
+     * Tšurkin, Kultaisen sarven pohjukka), että vesipuolten unioni
+     * peittäisi 142 % rajauksesta ja työkalu putoaa rantanauhaan —
+     * silloin KUMPIKAAN lahti ei täyty ja satamakaupungilta katoaa
+     * vesi. Myös meri: 'maa' kokeiltiin laajennuksen kanssa: maan
+     * renkaat sulkeutuvat väärin ja peittävät lahdetkin paperilla.
+     * Ilman laajennusta täyttö toimii, ja vesi on tässä kuvassa
+     * tärkeämpi kuin reunus.
+     */
+    rajat: { pohjoinen: 43.13, etela: 43.1035, lansi: 131.864, ita: 131.912 },
     meri: true,
   },
 };

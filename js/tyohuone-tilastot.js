@@ -120,12 +120,25 @@ function tallennaJarjestys(arvo) {
  * `arvo` palauttaa joko totuusarvon (✓ / –) tai parin [tehty, kaikki],
  * jolloin solu näyttää suhteen ja osuus saa murto-osan.
  */
+
+/*
+ * Onko kaupungilla kaupunkilehti — sama ehto kuin Lehti-sarakkeella.
+ *
+ * Oma funktio siksi, että kartan kehittäjävärit (js/ui.js drawBoard,
+ * omistajan tilaus 20.8.2026) tarvitsevat täsmälleen saman määritelmän.
+ * Kaksi rinnakkaista ehtoa ajautuisi ennen pitkää erilleen, ja taulu ja
+ * kartta kertoisivat eri tarinaa samasta kaupungista.
+ */
+export function kaupungillaLehti(id) {
+  return (KULTTUURI_KATEGORIAT[id] ?? []).some((k) => k.id === 'kaupunki');
+}
+
 const KAUPUNGIN_OSAT = [
   {
     avain: 'lehti',
     otsikko: 'Lehti',
     selite: 'kaupungilla on lehden kansiosio',
-    arvo: (c) => (KULTTUURI_KATEGORIAT[c.id] ?? []).some((k) => k.id === 'kaupunki'),
+    arvo: (c) => kaupungillaLehti(c.id),
   },
   {
     avain: 'aiheet',

@@ -27568,40 +27568,61 @@ export const KULTTUURI_KATEGORIAT = {
    * ISFAHANIN KANSISIVU (nippu 2, 13.8.2026). IRN-maalehti vie
    * historian, rakennukset, puutarhat, ruoan ja käsityön, Tabriz
    * vei luonnon ja Teheran arjen.
+   *
+   * TEKSTIREMONTTI 20.8.2026 (omistajan linjaus: "kuvatekstit liian
+   * pitkiä ja leipäteksti liian lyhyt"). Molempien sivujen johdannot
+   * on kirjoitettu 7–10 virkkeen johdatuksiksi — millainen kaupunki
+   * on, mikä sen merkitys ja historia — ja kaikki selitteet on
+   * tiivistetty yhteen tai enintään kahteen virkkeeseen. Nostot,
+   * opas, kuvatiedostot ja lähderivit ovat ennallaan. Johdantojen
+   * uudet väitteet on tarkistettu en-Wikipedian raakatekstistä
+   * (Isfahan ja New Julfa, haettu 20.8.2026), eivätkä johdannot
+   * toista viereisten nostojen virkkeitä.
    */
   isfahan: [
     {
       id: 'kaupunki',
       nimi: 'Isfahan',
-      johdanto: '1600-luvulla eurooppalainen matkaaja laski Isfahanin seudulta '
-        + 'jopa 3 000 kyyhkystornia, kaupungin länsipuolella kohoaa '
-        + 'kukkula 210 metriä tasangon ylle, ja erään 1300-luvun '
-        + 'hautarakennuksen kaksi 17,5-metristä minareettia liikkuvat '
-        + 'yhdessä.',
+      johdanto: 'Isfahan on Iranin kolmanneksi suurin kaupunki ja '
+        + 'Isfahanin maakunnan pääkaupunki, 440 kilometriä Teheranista '
+        + 'etelään. Se on kasvanut Irania halkovien pohjois–etelä- ja '
+        + 'itä–länsireittien risteykseen, kuivalle ylätasangolle '
+        + 'Zayandeh-joen varteen. Arabit valloittivat kaupungin vuonna '
+        + '642 ja tekivät siitä al-Jibalin maakunnan pääkaupungin. '
+        + 'Kukoistus kesti 800-luvulta 1700-luvulle: buyidien ja '
+        + 'seldžukkien aikana kaupunki kasvoi suureksi, ja vasta '
+        + 'seldžukkivallan päätyttyä noin vuonna 1200 seurasi taantuma. Käänne tuli vuonna 1598, kun Abbas Suuri '
+        + 'siirsi safavidien pääkaupungin Qazvinista tänne — toisen '
+        + 'kerran kaupungin historiassa — ja rakennutti sille uuden '
+        + 'keskustan. Siltä ajalta ovat puistokadut, kaakeloidut '
+        + 'moskeijat, palatsit ja katetut sillat, joista kaupunki '
+        + 'tunnetaan. Naqsh-e Jahanin aukio on maailman '
+        + 'suurimpia kaupunkiaukioita ja Unescon maailmanperintökohde. '
+        + 'Maine tiivistyy persialaiseen sananlaskuun Esfahan nesf-e '
+        + 'jahan ast, Isfahan on puoli maailmaa. Nimi on paljon '
+        + 'vanhempi: keskipersian Spahān tarkoittaa armeijan paikkaa, ja '
+        + 'Ptolemaios kirjoitti sen muodossa Aspadana.',
       kansikuvat: [
         {
           tiedosto: 'Isfahan to the north side by Eugène Flandin.jpg',
-          selite: 'Isfahan pohjoisesta nähtynä Eugène Flandinin '
-            + 'piirroksessa vuodelta 1840. Savimuurin takaa nousee '
-            + 'puurivistön yllä ohuita minareetteja ja matalia kupoleita, '
-            + 'ja kaukana on jyrkkä sahalaitainen vuorijono.',
+          selite: 'Isfahan pohjoisesta Eugène Flandinin piirroksessa '
+            + 'vuodelta 1840: savimuurin ja puurivistön takaa nousee '
+            + 'ohuita minareetteja ja matalia kupoleita.',
           lahde: 'Eugène Flandin, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Esfahán.jpg',
-          selite: 'Isfahan leveänä panoraamana korkealta. Kaupungin '
-            + 'ympärillä on hedelmätarhoja, suoria poppelirivejä ja '
-            + 'peltokaistaleita, ja horisontissa on rivi paljaita kuivia '
-            + 'vuoria.',
+          selite: 'Isfahan panoraamana korkealta: kaupunkia ympäröivät '
+            + 'hedelmätarhat, poppelirivit ja peltokaistaleet, ja '
+            + 'horisontissa on rivi paljaita vuoria.',
           lahde: 'I, Ondřej Žváček, Wikimedia Commons (CC BY 2.5)',
         },
         {
           tiedosto: 'Iran Teahouse in Isfahan, Iran (3573969242).jpg',
-          selite: 'Teehuoneen sisusta Isfahanissa. Kaaret ja seinät on '
+          selite: 'Teehuoneen sisusta Isfahanissa: kaaret ja seinät on '
             + 'verhottu painokankailla, joissa toistuvat rivit ihmis- ja '
-            + 'lintuhahmoja, ja katosta riippuu lävistetty messinkilyhty. '
-            + 'Pöydillä on teelaseja ja metallisia teekannuja '
-            + 'tarjottimineen.',
+            + 'lintuhahmoja. Pöydillä on teelaseja ja metallisia '
+            + 'teekannuja tarjottimineen.',
           lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -27615,26 +27636,25 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Naqsh-e Jahan Square from the gheisariye Vault.jpg',
-          selite: 'Naqsh-e Jahanin aukio Qeysarie-portin holvin alta '
-            + 'kuvattuna. Kaari on peitetty tiiliseen muqarnas-'
-            + 'kennostoon, ja sen läpi näkyy koko aukio: nurmikentät, '
-            + 'suorakaiteen muotoinen allas, kaksikerroksiset '
-            + 'kaarikäytävät ja perällä moskeijan kupoli.',
+          selite: 'Naqsh-e Jahanin aukio Qeysarie-portin muqarnas-holvin '
+            + 'alta: kaaren läpi näkyvät nurmikentät, suorakaiteen '
+            + 'muotoinen allas, kaksikerroksiset kaarikäytävät ja perällä '
+            + 'moskeijan kupoli.',
           lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Si-o-se Pol, Isfahan, Irán, 2016-09-19, DD 04-06 HDR.jpg',
-          selite: 'Si-o-se-pol iltavalaistuksessa vinosti sivulta. Kaksi '
-            + 'päällekkäistä kaaririviä jatkuu suorana kauas, kivi hohtaa '
-            + 'keltaisena valonheittimissä, ja sillan vieressä oleva '
-            + 'jokiuoma on kuiva.',
+          selite: 'Si-o-se-pol iltavalaistuksessa vinosti sivulta: kaksi '
+            + 'päällekkäistä kaaririviä jatkuu suorana kauas, ja sillan '
+            + 'vieressä jokiuoma on kuiva.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Isfahan Lotfollah mosque ceiling symmetric.jpg',
-          selite: 'Sheikh Lotfollahin moskeijan kupoli sisältä. Kullanruskealla '
-            + 'pohjalla kiertää kehä kehän perään tummansinisiä '
-            + 'vinoneliömedaljonkeja, jotka pienenevät kohti keskustaa.',
+          selite: 'Sheikh Lotfollahin moskeijan kupoli sisältä: '
+            + 'kullanruskealla pohjalla kiertää kehä kehän perään '
+            + 'tummansinisiä vinoneliömedaljonkeja, jotka pienenevät '
+            + 'kohti keskustaa.',
           lahde: 'Phillip Maiwald (Nikopol), Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -27654,10 +27674,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vanhaa kyyhkystornia, ja niistä 65 on merkitty Iranin '
             + 'kansalliseen kulttuuriperintöluetteloon.',
           selite: 'Kaksi savitiilistä kyyhkystornia vihreällä pellolla. '
-            + 'Etummainen on leveä lieriö, jonka kylkiin on liitetty '
-            + 'kapeampia puolilieriöitä ja jonka päälle nousee pienempi '
-            + 'torni; seinissä on tasavälein pieniä neliömäisiä reikiä ja '
-            + 'alhaalla holvikaarinen ovi.',
+            + 'Etummaisen kylkiin on liitetty kapeampia puolilieriöitä, '
+            + 'ja seinissä on tasavälein pieniä neliömäisiä reikiä.',
           lahde: 'Ziegler175, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27675,11 +27693,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mutta niitä käyttää nykyään vain talon hoitaja, joka käy '
             + 'keinuttamassa minareetteja. Kohde merkittiin suojeltujen '
             + 'luetteloon 10. kesäkuuta 1942.',
-          selite: 'Monar Jonbanin julkisivu alaviistosta. Keltatiilistä '
-            + 'seinää halkoo suuri teräväkärkinen holvikaari, jonka reunaa '
-            + 'seuraa tummansininen laattanauha. Kummastakin päästä nousee '
-            + 'kapea minareetti, jonka kyljessä on vaaleansinistä siksakkia '
-            + 'ja huipulla avoin lyhty.',
+          selite: 'Monar Jonbanin julkisivu alaviistosta: keltatiilistä '
+            + 'seinää halkoo suuri teräväkärkinen holvikaari '
+            + 'tummansinisine laattanauhoineen. Kummastakin päästä nousee '
+            + 'kapea minareetti, jonka huipulla on avoin lyhty.',
           lahde: 'آرش, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -27697,11 +27714,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sasanidikaudelle 1937, mutta Alireza Jafari Zand esitti '
             + '2002 radiohiiliajoituksiin nojaten, että paikka on sitäkin '
             + 'vanhempi, elamilainen.',
-          selite: 'Kukkulan laen pyöreä raunio. Savitiilestä muurattu '
-            + 'lieriö seisoo paljaan vaalean kallion päällä, ja sen '
-            + 'seinässä on kolme kapeaa pystyaukkoa paksujen pilarien '
-            + 'välissä; yläreuna on murtunut epätasaiseksi. Ympärillä on '
-            + 'sortuneita muureja ja perustuksia.',
+          selite: 'Kukkulan laen pyöreä raunio: savitiilestä muurattu '
+            + 'lieriö seisoo paljaan kallion päällä, ja sen seinässä on '
+            + 'kolme kapeaa pystyaukkoa. Ympärillä on sortuneita muureja '
+            + 'ja perustuksia.',
           lahde: 'Ivan Mlinaric from Slovenia, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -27742,11 +27758,10 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Palacio Aali Qapu, Isfahán, Irán, 2016-09-20, DD 56.jpg',
-          selite: 'Hevosvaunuja odottamassa Naqsh-e Jahanin aukion '
-            + 'laidalla. Vaunut ovat mustia ja niiden pyörät '
-            + 'kirkkaanpunaiset; takana kohoaa Ali Qapun pylväikköinen '
-            + 'parveke ja sen oikealla puolella jatkuu kaksikerroksinen '
-            + 'kaarikäytävä.',
+          selite: 'Mustia hevosvaunuja punaisine pyörineen odottamassa '
+            + 'Naqsh-e Jahanin aukion laidalla. Takana kohoaa Ali Qapun '
+            + 'pylväikköinen parveke, ja sen oikealla puolella jatkuu '
+            + 'kaksikerroksinen kaarikäytävä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Isfahan on Zayandeh-joen tasangolla 1 574 metrin '
@@ -27784,10 +27799,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joten metrolla pääsee suoraan sillan viereen.',
               kuva: {
                 tiedosto: 'Platform-Azadi Metro Station in Esfahan-Iran 2018.jpg',
-                selite: 'Azadin metroaseman laituri. Seinät ovat paljasta '
-                  + 'punatiiltä, katossa kulkee rivi loisteputkia, '
-                  + 'laiturin reunassa on keltainen varoitusraita, ja '
-                  + 'penkillä istuu yksi matkustaja pää painuksissa.',
+                selite: 'Azadin metroaseman laituri: seinät ovat '
+                  + 'paljasta punatiiltä, ja penkillä istuu yksi '
+                  + 'matkustaja pää painuksissa.',
                 lahde: 'Meysam Eftekhari, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27813,11 +27827,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja uoma jää tyhjäksi.',
               kuva: {
                 tiedosto: 'Khaju Bridge, Isfahan 04.jpg',
-                selite: 'Khajun sillan keskiosa kuivan jokiuoman puolelta. '
-                  + 'Alarivin kaarien alla on kivinen patokynnys, '
-                  + 'ylärivissä on kaakeloituja kaaria, ja keskellä '
-                  + 'kohoaa kaksikerroksinen paviljonki puisine '
-                  + 'kaiteineen. Edustalla on pelkkää hiekkaa.',
+                selite: 'Khajun sillan keskiosa kuivan jokiuoman '
+                  + 'puolelta: alarivin kaarien alla on kivinen '
+                  + 'patokynnys ja keskellä kohoaa kaksikerroksinen '
+                  + 'paviljonki. Edustalla on pelkkää hiekkaa.',
                 lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27840,11 +27853,11 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'miljoonaa.',
               kuva: {
                 tiedosto: 'Haft-rang tilework. Shah Mosque (Isfahan).jpg',
-                selite: 'Kaakeloitu holvikaaren kärki lähikuvassa. '
-                  + 'Tummansinisellä pohjalla kiemurtelee vaaleita '
-                  + 'köynnöksiä ja turkoosia medaljonkia, keskellä on '
-                  + 'maljakon muotoinen kuvio, ja yksittäisten laattojen '
-                  + 'saumat näkyvät suorina ruutuina kuvion läpi.',
+                selite: 'Kaakeloitu holvikaaren kärki lähikuvassa: '
+                  + 'tummansinisellä pohjalla kiemurtelee vaaleita '
+                  + 'köynnöksiä ja turkoosia medaljonkia. Yksittäisten '
+                  + 'laattojen saumat näkyvät suorina ruutuina kuvion '
+                  + 'läpi.',
                 lahde: 'Kimiakardani, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27869,13 +27882,11 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Konstantinopolissa eikä missään kristikunnassa.',
               kuva: {
                 tiedosto: 'Naqsh-e Jahan Square by Pascal Coste 1 edited.jpg',
-                selite: 'Pascal Costen värillinen kivipiirros aukiosta. '
-                  + 'Kenttä on paljasta hiekkaa, laidoilla kiertää '
-                  + 'kaksikerroksinen kaarikäytävä, perällä on moskeija '
-                  + 'turkoosikupoleineen ja kahtena minareettina, '
-                  + 'vasemmalla toinen kupoli ja oikealla pylväikköinen '
-                  + 'parveke. Etualalla on pieniä ratsastajia ja '
-                  + 'kulkijoita.',
+                selite: 'Pascal Costen värillinen kivipiirros aukiosta: '
+                  + 'kenttä on paljasta hiekkaa, laidoilla kiertää '
+                  + 'kaksikerroksinen kaarikäytävä ja perällä on moskeija '
+                  + 'turkoosikupoleineen. Etualalla on pieniä ratsastajia '
+                  + 'ja kulkijoita.',
                 lahde: 'Pascal Coste, Wikimedia Commons (PD)',
               },
             },
@@ -27901,10 +27912,25 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'taide',
       nimi: 'Taide ja kirjapaino',
-      johdanto: 'Joen eteläpuolella on Uusi Julfa, vuonna 1606 perustettu '
-        + 'armenialaiskortteli. Sen katedraali on ulkoa paljasta tiiltä '
-        + 'mutta sisältä maalattu kauttaaltaan, ja samasta korttelista '
-        + 'lähti liikkeelle Iranin ensimmäinen kirjapaino.',
+      johdanto: 'Isfahanin taide ei ole pelkkää shaahin hovin työtä: osa '
+        + 'siitä syntyi joen eteläpuolella, armenialaisten omassa '
+        + 'kaupunginosassa. Uusi Julfa perustettiin Zayandeh-joen '
+        + 'etelärannalle 1600-luvun alussa, ja nimensä se sai vanhasta '
+        + 'Julfan kaupungista, josta asukkaat tulivat. Se on yhä yksi '
+        + 'maailman vanhimmista ja suurimmista armenialaiskortteleista. '
+        + 'Kortteli eli silkkikaupasta, ja siitä kasvoi yhden varhaisen '
+        + 'uuden ajan suurimman kauppaverkoston keskus. Aluetta hallitsi '
+        + 'pitkään armenialainen Lazarjanien aatelissuku, joka siirtyi '
+        + 'Venäjälle Nader-shaahin kuoleman jälkeen vuonna 1747; suvun '
+        + 'jäsenistä tuli muun muassa Katariina Suuren hovipankkiiri. '
+        + 'Vieraita tuli myös toiseen suuntaan: korttelissa asui '
+        + 'katolisia lähetyspappeja ja genevalainen kelloseppä Jacques '
+        + 'Rousseau (1683–1753), filosofi Jean-Jacques Rousseaun setä. '
+        + 'Kaupan tuotto näkyy siinä, mitä kortteliin rakennettiin: '
+        + 'kirkot, koulu ja kirjapaino, joka oli Iranin ensimmäinen. '
+        + 'Armenian kieli, oma keittiö ja armenialainen identiteetti '
+        + 'ovat säilyneet korttelissa tähän päivään asti, ja Iranin '
+        + 'valtio suojelee niitä.',
       nostot: [
         {
           otsikko: 'Kauppaverkosto ulottui Amsterdamista Manilaan',
@@ -27923,10 +27949,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'armenialainen koulu, ja siellä puhutaan omaa Uuden Julfan '
             + 'murretta.',
           selite: 'Uuden Julfan aukiolla seisoo suuri aurinkokello: '
-            + 'kivijalustan päällä on musta kaareva malja ja sen vieressä '
-            + 'valkoinen viuhkamainen taulu, johon on merkitty asteikko ja '
-            + 'persialaiset numerot. Niiden läpi kulkee vino metallivarsi, '
-            + 'ja jalusta nousee kivialtaasta.',
+            + 'kivijalustan päällä on musta kaareva malja ja valkoinen '
+            + 'viuhkamainen taulu persialaisine numeroineen. Niiden läpi '
+            + 'kulkee vino metallivarsi.',
           lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -27944,11 +27969,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on luomiskertomus, holvikulmissa kerubin pää siipien '
             + 'välissä ja seinillä kaksi kuvanauhaa päällekkäin. Pihalla '
             + 'seisoo erillinen kellotorni.',
-          selite: 'Katedraalin katto suoraan alhaalta kuvattuna. Vierekkäin '
-            + 'on kaksi kupolia: kullanruskea, jonka pinta on täynnä tiheää '
-            + 'kasviornamenttia ja pyöreitä kuvakenttiä ihmishahmoineen, ja '
-            + 'tummansininen, jossa kiertää säteittäinen kiilakuvio '
-            + 'kultaisin reunuksin.',
+          selite: 'Katedraalin katto suoraan alhaalta: vierekkäin on '
+            + 'kaksi kupolia, kullanruskea täynnä kasviornamenttia ja '
+            + 'kuvakenttiä ihmishahmoineen sekä tummansininen '
+            + 'säteittäisine kiilakuvioineen.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27965,9 +27989,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kesaratsin mukaan; siellä ovat esillä vanha painokone ja '
             + 'Iranissa ensimmäisenä painettu kirja. Kirjastossa on yli '
             + '700 käsin kirjoitettua kirjaa.',
-          selite: 'Vuoden 1638 kirja auki tummalla kankaalla. Sivun '
-            + 'yläosassa on puupiirroskehys, jonka sisällä toistuu rivi '
-            + 'lehti- ja palmettikuvioita, ja sen alla on kolmetoista riviä '
+          selite: 'Vuoden 1638 psalttari auki tummalla kankaalla: sivun '
+            + 'yläosassa on puupiirroskehys ja sen alla kolmetoista riviä '
             + 'tekstiä armenialaisin kirjaimin. Koristealkukirjain on '
             + 'piirretty kahdeksi linnuksi.',
           lahde: 'digital.bodleian.ox.ac.uk, Wikimedia Commons (PD)',
@@ -30108,6 +30131,435 @@ export const KULTTUURI_KATEGORIAT = {
             + 'helmin, ja kirjailtu puku laskeutuu lattiaan asti.',
           lahde: 'Joseph Lazer, Wikimedia Commons (CC BY-SA 2.5 in)',
           wiki: 'Peking',
+        },
+      ],
+    },
+  ],
+  /*
+   * DELHI (Opus 20.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktapohja ja erillinen tarkistus kulkivat kolmiportaisen
+   * putken läpi, ja faktat on tarkistettu en-Wikipedian artikkeleista
+   * Delhi, History of Delhi, Red Fort, Jama Masjid Delhi, Chandni
+   * Chowk, Qutb Minar, Shahjahanabad, Fatehpuri Mosque, Delhi
+   * Junction railway station, Humayun's tomb, Delhi Town Hall,
+   * Gurdwara Sis Ganj Sahib, New Delhi, Delhi Metro ja Taj Mahal
+   * (haettu 20.8.2026).
+   *
+   * SISÄLTÖLINJAUS on Fablen Aasian-speksi 20.8.2026:
+   * siirtomaahistoria neutraalisti, vuoden 1857 kapina pelkkänä
+   * tapahtumaketjuna ilman uhrilukuja tai väkivallan yksityiskohtia
+   * (päivämäärät, valtaus, antautuminen, karkotus, takavarikot),
+   * ja jaon 1947 väkivaltaan ei viitata edes pakolaislukuina —
+   * lehden painopiste on 1600–1800-luvuissa. Guru Tegh Bahadurin
+   * kuolema kerrotaan nähtävyysjutussa yhdellä lauseella, koska
+   * pyhäkkö on olemassa juuri sen takia (Al-Baqin ennakkotapaus:
+   * kuva jäisi muuten selittämättä).
+   *
+   * KAKSI KORJAUSTA FAKTAPOHJAAN tarkistusraportin mukaisesti:
+   * 1) Punaisen linnoituksen marmoriväite oli faktapohjassa
+   *    väärinpäin — britit purkivat n. 80 % linnoituksen
+   *    RAKENNUKSISTA ja juuri marmoripaviljongit SÄILYIVÄT
+   *    (vaurioituneina). Teksti sanoo sen näin päin.
+   * 2) Delhin kaupungintalo on Punaisesta linnoituksesta LUOTEESEEN,
+   *    ei lounaaseen; suunnat on laskettu koordinaateista uudelleen.
+   *
+   * KAKSI RISTIRIITAA KIRJOITETTU VAROVASTI AUKI: Punaisen
+   * linnoituksen rakennustöiden alku on artikkelin leipätekstissä
+   * 1638 ja tietolaatikossa 1639 (K1 sanoo "lähteestä riippuen"),
+   * ja Ghantaghar-kellotornin pystytys on Chandni Chowk -artikkelissa
+   * 1870-luku mutta Delhi Town Hall -artikkelissa 1860-luku — lehti
+   * ei anna tornille vuosilukua, vaan sanoo altaan saaneen väistyä
+   * kellotornin tieltä.
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY (Mekan kolmen Jabal al-Nourin
+   * linja): Punainen linnoitus kolmena eri kuvana (avauskuvan
+   * panoraama, K1:n 1846 akvarelli ja jutun Naubat Khana), Jama
+   * Masjid kolmena (kannen siluetti, K2:n sisäpiha ylhäältä ja jutun
+   * julkisivu), Chandni Chowk kahtena (K3:n vanha postikortti ja
+   * jutun nykykatu), asema kahtena (K4 ja juttu), Humayun kahtena
+   * (matkailijan kuva ja jutun sisäkuva) ja Qutb Minar kahtena
+   * (kansi ja H2:n katos). Kaikki eri tiedostoja ja eri näkökulmia.
+   *
+   * 'Shahjahanabad or Modern Delhi 1911 map' -kuvan lähderivi on
+   * '(PD)': Commonsin rajapinta antaa lisenssiksi "No restrictions",
+   * joka tarkoittaa samaa (Mekan '273 of Mekka' -ennakkotapaus).
+   * 'Clock Tower Chandni Chowk' on vanha painettu postikortti, jonka
+   * alalaidassa on kustantajan oma otsikkorivi — se on julkaisijan
+   * oma litera, ja kuvateksti kertoo sen lukijalle (Snouck
+   * Hurgronjen litterat -ennakkotapaus).
+   */
+  delhi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Delhi',
+      johdanto: 'Samalle Yamunan rannalle on rakennettu kaupunki seitsemän '
+        + 'kertaa. Viimeisimmän muurikaupungin pystytti keisari Shah Jahan '
+        + '1600-luvulla, ja sen sydän sykkii yhä: Punainen linnoitus, Jama '
+        + 'Masjid ja Chandni Chowkin kauppakatu.',
+      kansikuvat: [
+        {
+          tiedosto: 'Jama Masjid during Sunset.jpg',
+          selite: 'Jama Masjid vastavalossa auringonlaskun aikaan: kupolit, '
+            + 'kaarimuuri ja kaksi minareettia piirtyvät mustana siluettina, '
+            + 'ja aurinko hehkuu keskikupolin takana.',
+          lahde: 'Sreejit Ghosh, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Shahjahanabad or Modern Delhi 1911 map.jpg',
+          selite: 'Painettu kartta vuodelta 1911: muurikaupunki Shahjahanabad '
+            + 'on punainen läiskä Yamunan länsirannalla, linnoitus sen '
+            + 'itäreunassa ja ympärillä puutarhoja ja kasarmialueita.',
+          lahde: 'Internet Archive Book Images, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Qutb Minar with Neem Tree.jpg',
+          selite: 'Qutb Minar alhaalta kuvattuna: uurrettu punainen '
+            + 'hiekkakivitorni kapenee kohti taivasta, ja etualalla '
+            + 'neempuun lehvästö kaartuu sen ylle.',
+          lahde: 'Shikhers, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: linnoitus, muuri ja uusi pääkaupunki — kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (keisarin kaupunki, sitä ympäröinyt muurikaupunki ja
+       * 1900-luvun New Delhi).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Red Fort Front.jpg',
+          selite: 'Punaisen linnoituksen julkisivu koko leveydeltään: '
+            + 'hiekkakivimuuri, kulmatornit ja keskellä Lahori-portin '
+            + 'katos, jonka yllä liehuu Intian lippu.',
+          lahde: 'Ayushjainr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Shahjahanabad City Wall - Side View -2.jpg',
+          selite: 'Säilynyt pätkä Shahjahanabadin kaupunginmuuria: '
+            + 'sammaloitunut kiviharja jatkuu puiden alla, ja muurin '
+            + 'juurella kadun varressa on autoja puskuri puskurissa.',
+          lahde: 'IshiSenpai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'India Gate, New Delhi.jpg',
+          selite: 'India Gate -muistoportin yläosa New Delhissä. '
+            + 'Hiekkakiveen on hakattu sana INDIA, vuosiluvut 1914 ja '
+            + '1919 roomalaisin numeroin sekä omistus kaatuneille '
+            + 'intialaissotilaille.',
+          lahde: 'Yann, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Keisarin linnoitus vaihtoi isäntää',
+          tiedosto: 'The Lahore Gate, detail from the \'The Delhi Panorama\', by Mazhar Ali Khan, 1846.jpg',
+          teksti: 'Shah Jahan siirsi Mughal-valtakunnan pääkaupungin '
+            + 'Agrasta Delhiin ja rakennutti itselleen linnoituksen: työt '
+            + 'alkoivat toukokuussa — lähteestä riippuen 1638 tai 1639 — '
+            + 'ja valmista tuli huhtikuussa 1648. Arkkitehtina pidetään '
+            + 'Ustad Ahmad Lahoria, jonka nimiin luetaan myös Agran '
+            + 'valkoinen marmorimausoleumi Taj Mahal. Vuoden 1857 kapinan '
+            + 'jälkeen linnoituksesta tehtiin varuskunta, ja noin neljä '
+            + 'viidesosaa sen rakennuksista purettiin — haaremi, '
+            + 'palvelusväen tilat ja puutarhat. Vain itäsivun '
+            + 'marmoripaviljongit säilyivät, nekin vaurioituneina, mutta '
+            + 'puolustusmuurit jäivät pystyyn. Maailmanperintökohde '
+            + 'linnoituksesta tuli vuonna 2007.',
+          selite: 'Mazhar Ali Khanin akvarelli vuodelta 1846: Punaisen '
+            + 'linnoituksen Lahori-portti kupoleineen yksitoista vuotta '
+            + 'ennen kapinaa, jonka jälkeen suurin osa linnoituksen '
+            + 'sisäosista purettiin.',
+          lahde: 'Mazhar Ali Khan, Wikimedia Commons (PD)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Moskeija, joka peilaa koko maailman',
+          tiedosto: 'Jama Masjid, Courtyard, Delhi, India.jpg',
+          teksti: 'Shah Jahan rakennutti Jama Masjidin vuosina 1650–1656 '
+            + 'Shahjahanabadin korkeimmalle kohdalle, ja työhön tarvittiin '
+            + 'noin viisituhatta rakentajaa. Moskeijan vanha nimi '
+            + 'Masjid-i-Jehan-Numa tarkoittaa koko maailman peilaavaa '
+            + 'moskeijaa. Se toimi keisarien hovimoskeijana Mughal-vallan '
+            + 'loppuun asti: vuoden 1857 kapinan jälkeen britit '
+            + 'takavarikoivat rakennuksen ja majoittivat sinne sotilaita, '
+            + 'ja vasta 1862 se palautettiin kaupungin muslimeille '
+            + 'ehdolla, että sitä käytetään vain uskonnollisiin menoihin. '
+            + 'Pihalle mahtuu 25 000 rukoilijaa, ja kahdessa '
+            + '41-metrisessä minareetissa on kummassakin 130 porrasta.',
+          selite: 'Moskeijan sisäpiha minareetista kuvattuna: punaista '
+            + 'hiekkakiveä oleva piha peseytymisaltaineen jatkuu kauas '
+            + 'alhaalla, ihmiset näkyvät pieninä pisteinä ja taustalla '
+            + 'erottuu Punaisen linnoituksen muuri.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Kuunvalon tori',
+          tiedosto: 'Clock Tower Chandni Chowk, Delhi.jpg',
+          teksti: 'Chandni Chowkin suunnitteli prinsessa: Shah Jahanin '
+            + 'tytär Jahanara Begum piirsi kauppakadun vuonna 1650. Kadun '
+            + 'keskellä virtasi kanava, joka levisi torin kohdalla '
+            + 'altaaksi — kuutamo kimmelsi vedessä ja antoi kadulle '
+            + 'nimen, kuunvalon torin. Alun perin kauppoja oli 1560, ja '
+            + 'katu oli 40 jaardia leveä ja 1520 jaardia pitkä. Kanavat '
+            + 'tuhoutuivat vuoden 1857 jälkeen brittivallan aikana, ja '
+            + 'allas sai väistyä kellotornin tieltä; tornia kutsuttiin '
+            + 'Ghantaghariksi, ja vaikka sekin on jo purettu, torin '
+            + 'keskustaa kutsutaan yhä sillä nimellä.',
+          selite: 'Vanha painettu postikortti: Ghantaghar-kellotorni '
+            + 'kohoaa Chandni Chowkin torin laidalla kaupungintalon '
+            + 'vieressä. Alalaidan tekstirivi on postikortin kustantajan '
+            + 'oma otsikko.',
+          lahde: 'H.A. Mirza & Sons, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Juna toi maailman Delhiin',
+          tiedosto: 'Old Delhi Railway Station (DLI).jpg',
+          teksti: 'Delhin ensimmäinen rautatieasema avattiin 1864, kun '
+            + 'leveäraiteinen rata Kalkutasta saatiin valmiiksi. Vuonna '
+            + '1873 Rajputana State Railway rakensi asemalta metrin '
+            + 'raideleveyden radan Rewariin ja edelleen Ajmeriin, ja '
+            + 'liikenne sillä alkoi 1876. Nykyinen asemarakennus '
+            + 'punaisine torneineen valmistui vasta 1903, ja se on tehty '
+            + 'tarkoituksella naapurinsa Punaisen linnoituksen tyyliin. '
+            + 'Delhi Junction pysyi kaupungin pääasemana, kunnes New '
+            + 'Delhin asema valmistui vuosina 1926–1931.',
+          selite: 'Delhi Junctionin punainen asemarakennus '
+            + 'sakaraharjaisine torneineen. Julkisivussa on kello ja '
+            + 'DELHI-kyltti kolmella kirjoituksella, ja pihalla kohoaa '
+            + 'lipputanko.',
+          lahde: 'Lovedeepsingh, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Delhi',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '20191205 Grobowiec Humajuna w Delhi 1055 6794.jpg',
+          selite: 'Humayunin mausoleumi puutarhansa keskellä: punaista '
+            + 'hiekkakiveä ja valkoista marmoria oleva rakennus peilautuu '
+            + 'suihkulähteen altaaseen, ja kävijät näkyvät pieninä '
+            + 'käytävillä.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Delhi on yksi maailman suurimmista kaupunkialueista: '
+          + 'pelkällä pääkaupunkialueella asui vuoden 2011 laskennassa '
+          + 'lähes 17 miljoonaa ihmistä. Matkailijan Delhi jakautuu '
+          + 'kahtia. Vanha Delhi on Shah Jahanin muurikaupunki kujineen '
+          + 'ja basaareineen, ja sen eteläpuolella levittäytyy New Delhi, '
+          + '1900-luvulla rakennettu leveiden bulevardien '
+          + 'hallintokaupunki, joka on nykyään Intian pääkaupunki. '
+          + 'Kauempana etelässä odottavat vanhempien kaupunkien '
+          + 'maamerkit, Qutb Minar ja Humayunin mausoleumi.',
+        artikkeli: {
+          nimi: 'Matkailijan Delhi',
+          taitto: 'opas',
+          teksti: 'Muurikaupunki pohjoisessa, hallintokaupunki etelässä '
+            + 'ja metro kaiken alla — Delhi on monta kaupunkia sisäkkäin '
+            + 'ja peräkkäin.',
+          nosto: 'Qutb Minar on 72,5 metriä korkea, ja se on seissyt '
+            + 'Delhin eteläreunalla yli 800 vuotta — maailman korkein '
+            + 'tiiliminareetti.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaukolennot laskeutuvat Indira Gandhin '
+                + 'kansainväliselle lentoasemalle kaupungin '
+                + 'lounaispuolelle. Kaupungin sisällä nopein tapa liikkua '
+                + 'on Delhin metro: ensimmäinen osuus avattiin '
+                + 'joulupäivänä 2002, ja verkosta on kasvanut Intian '
+                + 'suurin ja vilkkain — junat kulkevat osin tunnelissa, '
+                + 'osin siltaa pitkin katujen yllä. Vanhaan Delhiin '
+                + 'junalla saapuva astuu laiturille Delhi Junctionilla, '
+                + 'jonka punaiset tornit valmistuivat 1903; kaukojunien '
+                + 'pääasema New Delhi on muurikaupungin eteläpuolella.',
+              kuva: {
+                tiedosto: 'Delhi Metro train red line at Shaheed Sthal metro station.jpg',
+                selite: 'Punaisen linjan metrojuna asemalaiturilla. Juna '
+                  + 'on hopeanharmaa ja sen kyljessä kulkee punainen '
+                  + 'raita; laituriovien lasiseinä kertoo aseman olevan '
+                  + 'uutta polvea.',
+                lahde: 'Ravi Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Delhi on Pohjois-Intiassa Yamunan varrella, '
+                + 'enimmäkseen joen länsirannalla Haryanan ja Uttar '
+                + 'Pradeshin osavaltioiden välissä. Pääkaupunkialue '
+                + 'kattaa 1 483 neliökilometriä 200–250 metrin '
+                + 'korkeudessa, ja sen halki kulkee Delhi Ridge, '
+                + 'Aravalli-vuoriston metsäinen jatke, joka nousee 318 '
+                + 'metriin. Kaupungin sisällä on toinen kaupunki: New '
+                + 'Delhi, jonka rakentaminen alkoi, kun kuningas Yrjö V '
+                + 'ilmoitti joulukuussa 1911 pääkaupungin siirtyvän '
+                + 'Kalkutasta Delhiin. Edwin Lutyensin ja Herbert '
+                + 'Bakerin suunnittelema hallintokaupunki vihittiin '
+                + '1931, ja se on nykyään Intian pääkaupunki.',
+              kuva: {
+                tiedosto: 'Delhi Aerial View, Satellite Image, India September 2003.jpg',
+                selite: 'NASAn satelliittikuva Delhistä: Yamuna '
+                  + 'mutkittelee kuvan halki, kaupunkialue on '
+                  + 'harmaata ja keskellä erottuu Delhi Ridgen '
+                  + 'tummanvihreä metsäkaistale.',
+                lahde: 'NASA, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kolme basaaria',
+              teksti: 'Vanhan Delhin kolme suurta tukkutoria syntyivät '
+                + '1800-luvulla, ja ne palvelevat yhä samoilla '
+                + 'paikoillaan. Rautakauppojen Chawri Bazaar avattiin '
+                + '1840 muurikaupungin ensimmäisenä tukkutorina, ja '
+                + 'kukkia on myyty Daryaganjin Phool Mandissa vuodesta '
+                + '1869. Kuuluisin on Khari Baoli Fatehpuri-moskeijan '
+                + 'kupeessa: vuonna 1850 avattu katu on kasvanut Aasian '
+                + 'suurimmaksi maustetoriksi, jonka säkeissä ja vadeissa '
+                + 'on mausteita, yrttejä, pähkinöitä ja kuivattuja '
+                + 'hedelmiä. Ilmassa leijuva chili kirvelee silmiä — ja '
+                + 'juuri siitä kadun tunnistaa.',
+              kuva: {
+                tiedosto: 'Shop selling spices, at Khari Baoli, Old Delhi.jpg',
+                selite: 'Maustekaupan pöytä Khari Baolilla: vadeissa ja '
+                  + 'säkeissä kohoaa keiloja teetä, pähkinöitä ja '
+                  + 'kuivattuja hedelmiä, ja jokaisessa on käsin '
+                  + 'kirjoitettu hintalappu.',
+                lahde: 'Michael Vito from South Orange, NJ, USA, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Käännekohta: moskeija ostettiin takaisin',
+              teksti: 'Chandni Chowkin länsipään päättää '
+                + 'Fatehpuri-moskeija, jonka Shah Jahanin puoliso '
+                + 'Fatehpuri Begum rakennutti 1650. Vuoden 1857 kapinan '
+                + 'jälkeen britit myivät moskeijan huutokaupassa: sen '
+                + 'osti kauppias Rai Lala Chunnamal 19 000 rupialla, ja '
+                + 'rakennus oli kaksikymmentä vuotta yksityisomistuksessa. '
+                + 'Vuonna 1877, Delhin suuren durbar-juhlan yhteydessä, '
+                + 'hallitus hankki moskeijan takaisin vaihtamalla siihen '
+                + 'neljä kylää ja palautti sen muslimiyhteisölle — '
+                + 'rukoukset jatkuvat rakennuksessa yhä.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Delhin vuosi jakautuu kolmia, ja se näkyy '
+                + 'luvuissa. Loka–maaliskuu on kuiva ja enimmäkseen '
+                + 'leuto: tammikuun keskilämpö on 13 astetta, ja päivät '
+                + 'nousevat parinkymmenen tuntumaan. Huhtikuusta '
+                + 'kesäkuuhun kaupunki hehkuu — kesäkuun keskilämpö on '
+                + '33 astetta, ja toukokuun päivät nousevat '
+                + 'neljäänkymmeneen. Kesäkuun lopulla saapuu monsuuni: '
+                + 'heinä- ja elokuussa sataa yhteensä yli 360 '
+                + 'millimetriä eli yli puolet koko vuoden 663 '
+                + 'millimetristä, ja ilma on paksua kosteudesta. '
+                + 'Kävelijän kuukaudet ovat lokakuusta maaliskuuhun — '
+                + 'tammikuun aamuihin voi silti kuulua sakeaa sumua.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ennen Punaista linnoitusta paikalla seisoi kuusi muuta '
+        + 'kaupunkia, legendoista ensimmäisenä Indraprastha. Sulttaanit '
+        + 'ja Mughal-keisarit rakensivat vuorollaan uudelleen, kunnes '
+        + 'brittikruunu otti Delhin hallintaansa vuonna 1858.',
+      tehtava: {
+        kysymys: 'Kuinka monta porttia Shahjahanabadin kaupunkimuurissa '
+          + 'oli?',
+        vaihtoehdot: [
+          'Neljä',
+          'Neljätoista',
+          'Seitsemän',
+          'Kaksikymmentäneljä',
+        ],
+        oikea: 1,
+        fakta: 'Muurissa oli neljätoista porttia. Muuri itse on '
+          + 'kadonnut lähes kokonaan, mutta osa porteista seisoo yhä '
+          + 'keskellä katuverkkoa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Seitsemän kaupungin perintö',
+          tiedosto: 'Robert Smith - The Kila Kona Masjid, Purana Qila, Delhi - Google Art Project.jpg',
+          teksti: 'Perinteen mukaan Delhin seudulla on seissyt seitsemän '
+            + 'kaupunkia peräkkäin. Sarjan legendaarisin on Indraprastha, '
+            + 'jonka Mahabharata-eepos kuvaa ja jonka perimätieto '
+            + 'sijoittaa Purana Qilan linnoituksen paikalle — kaivaukset '
+            + 'eivät ole löytäneet sieltä eepoksen kaupunkia, vain vanhaa '
+            + 'maalattua keramiikkaa. Historiallinen sarja alkaa '
+            + 'Tomara-hallitsija Anangpal Tomarin Lal Kotista vuodelta '
+            + '1052; Chauhan-suvun Vigraharaja valtasi sen ja nimesi '
+            + 'Qila Rai Pithoraksi. Sulttaanikunnan linnoituskaupunkien '
+            + 'jälkeen Shah Jahanin Shahjahanabad täydensi sarjan '
+            + 'seitsemänteen — se on nykyinen Vanha Delhi.',
+          selite: 'Robert Smithin 1800-luvun maalaus: Purana Qilan '
+            + 'Qila-i-Kuhna-moskeija kupoleineen rauniokumpujen '
+            + 'keskellä, ja etualalla kulkee pieni norsusaattue.',
+          lahde: 'Robert Smith (1787 - 1873) – Artist (British) Details on Google Art Project, Wikimedia Commons (PD)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Torni ja Smithin hulluus',
+          tiedosto: 'Smith\'s Cupola 2.jpg',
+          teksti: 'Qutb-ud-din Aibak aloitti voittotornin rakentamisen '
+            + 'vuonna 1199 islamilaisen vallan alun kunniaksi; hän ehti '
+            + 'valmiiksi vain ensimmäisen kerroksen, ja vävy Iltutmish '
+            + 'vei punaisesta hiekkakivestä muuratun tornin noin vuonna '
+            + '1220 täyteen mittaansa. Qutb Minar on 72,5-metrisenä yhä '
+            + 'maailman korkein tiiliminareetti ja Delhin maamerkki. '
+            + 'Vuoden 1803 maanjäristys vaurioitti tornia, ja '
+            + 'brittiläinen insinööri Robert Smith kunnosti sen 1828 — '
+            + 'ja lisäsi huipulle pyöreän katoksen. Lisäys tuomittiin '
+            + 'epäonnistuneeksi, ja katos purettiin 1848; se seisoo yhä '
+            + 'maassa tornin vieressä nimellä Smithin hulluus. '
+            + 'Maailmanperintökohde tornista tuli 1993.',
+          selite: 'Smithin hulluus nykyään: pyöreä huvimajamainen katos '
+            + 'seisoo nurmella Qutb Minarin puistossa lähellä tornia, '
+            + 'jonka huipulla se ehti olla kaksikymmentä vuotta.',
+          lahde: 'Rangan Datta Wiki, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Muurattu kaupunki',
+          tiedosto: 'Kashmiri Gate 009.jpg',
+          teksti: 'Shahjahanabad rakennettiin muurien sisään '
+            + 'neljänneskaaren muotoon, Punainen linnoitus '
+            + 'painopisteenään. Muurin sisään jäi noin 1 500 eekkeriä '
+            + 'eli kuusi neliökilometriä, ja portteja oli neljätoista. '
+            + 'Muuri oli kaksitoista jalkaa leveä ja kaksikymmentäkuusi '
+            + 'korkea, aluksi savea, mutta vuonna 1657 se korvattiin '
+            + 'punaisella kivellä; Mughal-aikana portit lukittiin öisin. '
+            + 'Muurista on nykyään jäljellä vain katkelmia, mutta osa '
+            + 'porteista — kuten Kashmiri Gate, Ajmeri Gate ja Turkman '
+            + 'Gate — seisoo yhä keskellä liikennettä.',
+          selite: 'Kashmiri Gate sisäpuolelta: kaksi tiilistä '
+            + 'porttiholvia vierekkäin ja niiden päällä sakaraharja. '
+            + 'Nurmella porttien edessä istuskelee apinoita.',
+          lahde: 'Anupamg, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Delhi',
+        },
+        {
+          otsikko: 'Viimeinen keisari',
+          tiedosto: 'A panorama in 12 folds showing the procession of the Emperor Bahadur Shah to celebrate the feast of the \'Id., 1843.jpg',
+          teksti: 'Toukokuun 11. päivänä 1857 kapinaan nousseet joukot '
+            + 'valtasivat Delhin ja julistivat ikääntyneen Bahadur Shah '
+            + 'II:n Intian keisariksi. Britit piirittivät kaupunkia '
+            + 'kesäkuusta alkaen, ja 21. syyskuuta Delhi antautui; '
+            + 'kaupunki kärsi taisteluissa pahoja vaurioita. Keisari oli '
+            + 'paennut Humayunin mausoleumille, jossa hänet vangittiin, '
+            + 'ja hänet karkotettiin Rangooniin. Delhi siirtyi vuonna '
+            + '1858 suoraan Britannian kruunun hallintaan ja liitettiin '
+            + 'Punjabin provinssiin — Mughal-valtakunta oli päättynyt.',
+          selite: 'Metcalfen albumin miniatyyrimaalaus vuodelta 1843: '
+            + 'Bahadur Shah II:n id-juhlakulkue norsuineen ja '
+            + 'lippuineen. Alalaidan käsinkirjoitetut rivit ovat albumin '
+            + 'omia nimiöitä, jotka kertovat kuka kulkueessa kulkee.',
+          lahde: 'Sir Thomas Metcalfe, 4th Baronet, Wikimedia Commons (PD)',
+          wiki: 'Delhi',
         },
       ],
     },
@@ -32403,6 +32855,43 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (Opus, Siperian täydennyserä 20.8.2026): rauta, betoni
+       * ja graniitti — kaupungin kolme ainetta siinä järjestyksessä,
+       * jossa lehti ne kertoo. Kaslin paviljonki on ruukkikaupungin
+       * käyntikortti, Tšekistien kaupunki 1930-luvun kerros ja Šartašin
+       * kivipalatsit se maasto, jonka päälle koko kaupunki on rakennettu.
+       * Kansikuvat ovat lampi, Sevastjanovin talo ja Vainerin katu, joten
+       * aiheet eivät toistu.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Kasli Cast Iron Pavilion - 2.jpeg',
+          selite: 'Kaslin valurautapaviljonki kuvataidemuseon salissa. '
+            + 'Mustaksi patinoitu ja kullalla korostettu rakennelma on '
+            + 'koottu tuhansista valetuista osista, ja sen aukkoihin on '
+            + 'ripustettu punaiset samettiverhot. Otsalaudassa lukee '
+            + 'ranskaksi Kyštymin ruukin nimi.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Gorodok Chekistov (August 2022) - 1.jpg',
+          selite: 'Tšekistien kaupunki ylhäältä. Keskellä kaartuu '
+            + 'hevosenkengän muotoinen valkoinen kerrostalo, jonka katto '
+            + 'on vihreä, ja sen ympärillä levittäytyy matalampia '
+            + 'asuinsiipiä puiden lomassa. Korttelin ohi kulkee leveä '
+            + 'puistokatu.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Shartash Stone Tents Rocks-2021 - 3.jpeg',
+          selite: 'Šartašin kivipalatsit mäntymetsän keskellä. Graniitti '
+            + 'on lohkeillut vaakasuoriksi laatoiksi, jotka lepäävät '
+            + 'päällekkäin kuin pinottu kivikasa. Ylimmillä laatoilla '
+            + 'kävelee kaksi ihmistä pieninä hahmoina.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Pato tuli ensin, kaupunki vasta sen jälkeen',
@@ -32475,6 +32964,144 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Prokofiev The Stone Flower',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Исторический сквер и Музей изобразительных искусств, Плотинка, проспект Ленина, Храм-колокольня Большой Златоуст.jpg',
+          selite: 'Keskusta ylhäältä myöhäissyksyllä. Iset virtaa kivettyjen '
+            + 'rantamuurien välissä kaupungin läpi, etualalla on matalia '
+            + 'vanhoja taloja punaisine peltikattoineen, ja vasemmalla '
+            + 'kohoaa Suuren Zlatoustin valkoinen kellotorni kullattuine '
+            + 'kupoleineen.',
+          lahde: 'Moneycantbuy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Jekaterinburg on puolentoista miljoonan asukkaan '
+          + 'suurkaupunki Uralin itärinteellä, 1 667 kilometriä Moskovasta '
+          + 'itään ja kaksi tuntia sitä edellä kellossa. Vuoden 2021 '
+          + 'väenlaskussa asukkaita oli 1 544 376, ja se on Venäjän '
+          + 'neljänneksi väkirikkain kaupunki. Kaikki kiertää yhä sen '
+          + 'padon ympärillä, josta kaupunki alkoi: Iset virtaa '
+          + 'keskustan läpi, ja padon molemmin puolin ovat museot, '
+          + 'kävelykadut ja vanhat kauppiastalot.',
+        artikkeli: {
+          nimi: 'Matkailijan Jekaterinburg',
+          taitto: 'opas',
+          teksti: 'Yksi pato keskellä, malmivuoret lännessä ja rata, joka '
+            + 'vie kumpaankin suuntaan yhtä kauas.',
+          nosto: 'Kaupunki on maanosien rajalla: obeliski Euroopan ja '
+            + 'Aasian välissä seisoo Pervouralskin suunnalla lännessä, '
+            + 'ja Siperian rata ylittää Uralin niin loivasti, ettei '
+            + 'matkustaja huomaa siirtyneensä maanosasta toiseen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Jekaterinburg on Moskovan ja Pietarin jälkeen '
+                + 'Venäjän kolmanneksi suurin liikenteen solmukohta: '
+                + 'kaupungin läpi kulkee kuusi valtatietä ja seitsemän '
+                + 'päärataa. Transsiperian radan juna Moskovasta on '
+                + 'perillä vuorokaudessa, ja Vladivostokiin istutaan '
+                + 'siitä eteenpäin vielä viikko. Kaupungin oma '
+                + 'lentoasema on Koltsovo, joka kuljetti vuonna 2017 '
+                + '5,4 miljoonaa matkustajaa ja on Venäjän kuudenneksi '
+                + 'vilkkain. Kaupungin sisällä kulkevat raitiovaunut, '
+                + 'johdinautot ja metro: se avattiin vuonna 1991 Venäjän '
+                + 'kuudentena, ja siinä on yhä vain yksi linja ja '
+                + 'yhdeksän asemaa. Kellon kanssa kannattaa olla tarkkana '
+                + '— kaupunki elää kaksi tuntia Moskovan aikaa edellä.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Uralin itärinteellä, siis maantieteen '
+                + 'mukaan jo Aasian puolella, ja sitä ympäröivät '
+                + 'metsäiset kukkulat. Vuoristo on tässä kohtaa matala ja '
+                + 'loiva, ja juuri siksi kaupunki on tässä: valtatiet ja '
+                + 'radat vedettiin Euroopan ja Aasian välillä sieltä, '
+                + 'mistä pääsi helpoimmin yli. Iset halkaisee kaupungin '
+                + 'ja jatkaa Tobol-jokeen; kaupungin alueella on kaksi '
+                + 'järveä, Šuvakiš ja Šartaš, ja lännessä Verh-Isetskin '
+                + 'allas, jonka pato rakennettiin 1726 toisen ruukin '
+                + 'tarpeisiin. Alaa kaupungilla on 1 111 neliökilometriä. '
+                + 'Kaupungin länsipuolella Pervouralskin suunnalla seisoo '
+                + 'obeliski Euroopan ja Aasian rajalla.',
+              kuva: {
+                tiedosto: 'Стела Европа-Азия - panoramio.jpg',
+                selite: 'Euroopan ja Aasian raja-obeliski Pervouralskin '
+                  + 'lähellä. Punagraniittinen pylväs nousee '
+                  + 'porrastetulta jalustalta, sen huipulla on '
+                  + 'kaksipäinen kotka, ja kaartuvissa muureissa lukee '
+                  + 'kultakirjaimin ЕВРОПА ja АЗИЯ. Takana on tiheä '
+                  + 'mäntymetsä.',
+                lahde: 'Михаил Притчин, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kivi ja rauta',
+              teksti: 'Uralin malmit ovat kaupungin syy ja sen '
+                + 'matkamuisto. Rautaruukkien rinnalla kasvoi '
+                + 'kivenveiston perinne, ja kaupungin museoissa on '
+                + 'omat kokoelmansa koruja ja korukiviesineitä. '
+                + 'Tunnetuin kivi on malakiitti, jonka vihreässä '
+                + 'pinnassa kiertävät samankeskiset raidat, ja juuri '
+                + 'siitä kertovat Pavel Bažovin tarinat. Toinen '
+                + 'perinne on valurauta: '
+                + 'Kaslin ruukin verstaat valoivat 1800-luvulla '
+                + 'veistoksia ja koristeita niin ohuina, että pinta '
+                + 'näyttää kankaalta, ja Kaslin paviljonki voitti '
+                + 'Pariisin maailmannäyttelyn pääpalkinnot vuonna 1900. '
+                + 'Unesco on kirjannut sen maailman ainoaksi '
+                + 'valurautaiseksi rakennukseksi, joka on museon '
+                + 'kokoelmassa.',
+              kuva: {
+                tiedosto: '2013-03 Malachit aus Gumeschewsk, Ural anagoria.JPG',
+                selite: 'Malakiittinäyte Uralin Gumešovskista. Kivi on '
+                  + 'kyhmyinen ja tummanvihreä, ja murtopinnalta '
+                  + 'paljastuu kirkkaanvihreitä samankeskisiä raitoja '
+                  + 'kuin puun vuosirenkaita.',
+                lahde: 'Anagoria, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunki kerroksina',
+              teksti: 'Keskustassa kolme aikaa on päällekkäin. '
+                + 'Klassismin kerroksen jätti arkkitehti Mihail Malahov, '
+                + 'joka työskenteli kaupungissa 1815–1842 ja jonka '
+                + 'kädenjälki näkyy kauppiaskartanoissa pihoineen ja '
+                + 'englantilaisine puistoineen. Sen päälle tuli '
+                + '1900-luvun alun eklektiikka, jossa rakennettiin '
+                + 'muun muassa oopperatalo ja rautatieasema. Kolmas '
+                + 'kerros on konstruktivismi: 1920- ja 1930-luvulla '
+                + 'nousi yli 140 rakennusta, joissa muoto seuraa '
+                + 'käyttöä ilman koristetta. Tunnetuin niistä on '
+                + 'Uralmašin tehdaskaupunginosan Valkoinen torni, '
+                + 'kaupungin ensimmäisiä teräsbetonirakennuksia — se '
+                + 'kantoi vesisäiliötä, ei enää kanna, ja seisoo yhä.',
+              kuva: {
+                tiedosto: 'The White Tower, Yekaterinburg (4).jpg',
+                selite: 'Valkoisen tornin vesisäiliö lähikuvassa. Betonin '
+                  + 'pinta on säiden kuluttama ja laikukas, säiliön '
+                  + 'kylkeen on tehty rivi pyöreitä ikkuna-aukkoja, ja '
+                  + 'sen yläreunassa kulkee nauhamainen lasitus ja '
+                  + 'kaide.',
+                lahde: 'Смирнов Евгений, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Käyrä on jyrkkä. Tammikuun keskilämpö on '
+                + 'neljätoista pakkasastetta ja heinäkuun kahdeksantoista '
+                + 'lämpöastetta, eli vuoden vaihteluväli on '
+                + 'kolmekymmentäkaksi astetta — se on mannerilmaston '
+                + 'mitta ilman merta pehmentämässä. Sade painottuu '
+                + 'kesään: heinäkuussa kertyy lähes yhdeksänkymmentä '
+                + 'millimetriä, helmikuussa viisitoista, ja talven '
+                + 'vähäinen sade tulee lumena. Kevät ja syksy ovat '
+                + 'lyhyitä välivaiheita, sillä huhtikuu on jo plussalla '
+                + 'ja lokakuu vielä juuri ja juuri. Kävelijän kuukaudet '
+                + 'ovat kesä–elokuu; talvella kaupunki on kaunis mutta '
+                + 'vaatii varusteet.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -32601,6 +33228,44 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Stesso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (Opus, Siperian täydennyserä 20.8.2026): katu, joki
+       * ja tasanko. Kansikuvat ovat maantiesilta, asema ja hirsitalo,
+       * joten avauskuvat kertovat sen, mitä niistä puuttuu — 1930-luvun
+       * valtakadun, Obin rantapuiston siltoineen ja sen tasangon, jonka
+       * keskellä kaupunki on. Ilmakuva on talvinen tarkoituksella:
+       * lehden muut kuvat ovat sulan ajan kuvia, ja Novosibirskissä
+       * lunta on marraskuusta huhtikuuhun.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Streets in Novosibirsk (May 2025) - 0 29.jpg',
+          selite: 'Punainen valtakatu aamuauringossa. Leveä ajorata '
+            + 'kaartuu tyhjänä kuvan halki, molemmin puolin seisoo '
+            + 'okrankeltaisia 1900-luvun puolivälin kerrostaloja '
+            + 'pylväikköineen, ja oikealla erottuu pieni valkoinen '
+            + 'kappeli kullattuine kupoleineen. Ilmassa risteilevät '
+            + 'johdinautojen ajolangat.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Novosibirsk Metro Bridge (May 2025).jpg',
+          selite: 'Obin ranta keväällä. Etualalla on nurmikoita ja '
+            + 'kävelyteitä, keskellä seisoo puistoon jätetty musta '
+            + 'teräksinen siltakaari, ja joen yli kulkee kaksi pitkää '
+            + 'siltaa. Vastarannalla näkyy kerrostalojen rivi.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Novosibirsk from plane (December 2022) - 1.jpg',
+          selite: 'Kaupunki lentokoneesta joulukuussa. Lumen peittämä '
+            + 'tasanko jatkuu horisonttiin asti, Ob mutkittelee sen '
+            + 'halki tummana nauhana, ja ylävirrassa levittäytyy '
+            + 'jäätynyt tekojärvi. Kaupungin katuvalot piirtyvät '
+            + 'hämärässä vaaleina ruudukkoina.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Ainoa kohta, jossa joki on putkessa',
@@ -32668,6 +33333,133 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Vadim Repin Tchaikovsky',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Novosibirsk opera and ballet theatre (May 2025) - 0.jpg',
+          selite: 'Oopperatalo aukion puolelta. Vaalean pylväikön takana '
+            + 'kohoaa harmaa matalakaarinen kupoli, jonka juurella kiertää '
+            + 'ikkunarivi. Talon edessä on nurmikaistaleita ja kivetty '
+            + 'aukio, jonka poikki kulkee ihmisiä pieninä hahmoina.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Novosibirsk on Siperian suurin kaupunki ja Moskovan ja '
+          + 'Pietarin jälkeen Venäjän kolmanneksi väkirikkain: vuoden 2021 '
+          + 'väenlaskussa asukkaita oli 1 633 595. Se on myös Venäjän '
+          + 'suurten kaupunkien nuorin — vuonna 1893 paikalla ei ollut '
+          + 'mitään, ja miljoona asukasta täyttyi 2. syyskuuta 1962, alle '
+          + 'seitsemässäkymmenessä vuodessa. Vanhaa keskustaa ei siis ole; '
+          + 'kaupungin ydin on 1900-luvun alun ja 1930-luvun rakennettu, ja '
+          + 'sen selkäranka on Punainen valtakatu.',
+        artikkeli: {
+          nimi: 'Matkailijan Novosibirsk',
+          taitto: 'opas',
+          teksti: 'Yksi joki, kuusi siltaa ja kaupunki, joka on nuorempi '
+            + 'kuin useimpien maiden rautatieverkko.',
+          nosto: 'Metro ylittää Obin maailman pisintä katettua metrosiltaa '
+            + 'pitkin: putki on 2 145 metriä eikä sen sisällä näy jokea '
+            + 'lainkaan — se on rakennettu niin, että kiskot pääsevät '
+            + 'liikkumaan pakkasen ja helteen välillä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunki syntyi rautatiestä, ja rautatie on yhä sen '
+                + 'pääovi: Novosibirsk-Glavnyi on Transsiperian radan '
+                + 'suurimpia asemia, ja Moskovaan on 2 811 kilometriä. '
+                + 'Metro avattiin vuonna 1985 neljäntenä Venäjällä ja '
+                + 'ensimmäisenä Siperiassa; linjoja on kaksi ja asemia '
+                + 'kolmetoista. Obin ylittää kuusi siltaa: kolme '
+                + 'maantiesiltaa, kaksi rautatiesiltaa ja yksi metrosilta, '
+                + 'ja lisäksi vesivoimalan pato eteläreunalla toimii '
+                + 'tienä. Metrosilta on maailman pisin katettu metrosilta, '
+                + '2 145 metriä. Asemien lisäksi kaupungissa on '
+                + 'raitiovaunut, johdinautot ja joen yli kulkeva '
+                + 'vesibussiliikenne.',
+              kuva: {
+                tiedosto: 'Novosibirsk Metro (May 2025) - 0 5.jpg',
+                selite: 'Metroaseman laituri ja sen seinän mittainen '
+                  + 'kivimosaiikki. Kuvaan on ladottu eri sävyisistä '
+                  + 'kivilaatoista mäntymetsä, lintuja ja hevosta '
+                  + 'taluttava mies. Laiturin edessä kulkevat kiskot '
+                  + 'tunneliin.',
+                lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Novosibirsk on Länsi-Siperian tasangolla Obin '
+                + 'molemmin puolin, ja tasaisuus on tässä sanan '
+                + 'täsmällisessä merkityksessä totta: lähimmät suuret '
+                + 'kaupungit Omsk, Barnaul, Kemerovo ja Tomsk ovat kaikki '
+                + 'satojen kilometrien päässä samalla lakeudella. '
+                + 'Kaupungin eteläraja kulkee Novosibirskin tekojärvessä, '
+                + 'jonka 1950-luvulla rakennetun vesivoimalan pato synnytti '
+                + 'ja jota kutsutaan Obin mereksi. Hinta oli kova: '
+                + 'padotuksen alle jäi laajoja viljelysmaita ja vanhoja '
+                + 'mäntymetsiä, ja avoin vesi kaksinkertaisti alueen '
+                + 'keskituulen. Voimalan teho on 400 megawattia.',
+              kuva: {
+                tiedosto: 'ObskoyeSea 012 7910.jpg',
+                selite: 'Obin meri harmaana päivänä. Vesi jatkuu '
+                  + 'horisonttiin ilman vastarantaa, pinta on tasaisen '
+                  + 'väreilevä, ja etualalla ui kaksi sorsaa. Taivas on '
+                  + 'juovikkaiden pilvien peitossa.',
+                lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: eläintarha männikössä',
+              teksti: 'Novosibirskin eläintarha on Venäjän tunnetuimpia, ja '
+                + 'sen erikoisuus on maasto: tarha on rakennettu suoraan '
+                + 'mäntymetsään, joten kävijä kulkee kaupungin sisällä '
+                + 'taigassa. Kokoelmassa on yli 11 000 eläintä 738 '
+                + 'lajista, ja tarha on mukana kolmessakymmenessäkahdessa '
+                + 'uhanalaisten lajien tarhakasvatusohjelmassa. Kävijöitä '
+                + 'on vuodessa noin puolitoista miljoonaa, eli tarha on '
+                + 'kaupungin suosituin ulkoilupaikka; mäntyjen väliin on '
+                + 'sijoitettu myös betonisia dinosauruksia — ne ovat '
+                + 'lasten kanssa käyville yhtä tärkeä kohde kuin eläimet.',
+              kuva: {
+                tiedosto: 'Novosibirsk Zoo (May 2025) - 0.jpg',
+                selite: 'Eläintarhan mäntymetsässä seisoo kaksi suurta '
+                  + 'betonista dinosaurusta lammen rannalla. Etualalla '
+                  + 'kaartuu sininen, suomukylkinen käärmemäinen hahmo, '
+                  + 'ja sen takana pitkäkaulainen harmaa jättiläinen '
+                  + 'kurkottaa puiden lomasta.',
+                lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kryachkovin kaupunki',
+              teksti: 'Yhden arkkitehdin jälki näkyy keskustassa '
+                + 'poikkeuksellisen selvästi. Andrei Krjatškov piirsi '
+                + 'nuoreen Novonikolajevskiin vuosina '
+                + '1910–1911 Punaisen valtakadun kauppatalon, jossa '
+                + 'toimivat sekä puodit että kaupunginhallinto ja jossa '
+                + 'nykyään on kotiseutumuseo. Neljännesvuosisata '
+                + 'myöhemmin hän suunnitteli Vitali Maslennikovin kanssa '
+                + 'Satohuoneiston talon, kahdeksankerroksisen '
+                + 'asuinrakennuksen, joka valmistui 1937. Pariisin '
+                + 'maailmannäyttely palkitsi hankkeen 11. joulukuuta 1937 '
+                + 'kultamitalilla ja Grand Prix -palkinnolla. Talo on yhä '
+                + 'asuttu, ja sen edessä seisoo arkkitehdin oma patsas.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Talvi on kolme astetta Uralin takaista kylmempi: '
+                + 'tammikuun keskilämpö on seitsemäntoista pakkasastetta. '
+                + 'Kesä yltää silti heinäkuussa lähes kahteenkymmeneen '
+                + 'asteeseen, joten vuoden vaihteluväli on runsaat '
+                + 'kolmekymmentäkuusi astetta. Sade jakautuu tasaisemmin '
+                + 'kuin idempänä Irkutskissa, ja marras–tammikuun runsas '
+                + 'sata millimetriä tulee lumena. Käytännössä se '
+                + 'tarkoittaa, että lumi tulee marraskuussa ja lähtee '
+                + 'huhtikuussa. Kesäkuukaudet ovat kävelijän aikaa, ja '
+                + 'juuri silloin Obin meren rannat ja eläintarhan männikkö '
+                + 'ovat parhaimmillaan.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -32797,6 +33589,45 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Trasprd, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (Opus, Siperian täydennyserä 20.8.2026): kivi, hirsi
+       * ja veisto. Kansikuvat ovat ilmakuva, Kazanin kirkko ja 130.
+       * kortteli, joten avauskuvat kertovat kaupungin toisen puolen —
+       * vuoden 1879 palon jälkeisen kivikeskustan (draamateatteri),
+       * palorajan takaisen puukaupungin ja sen koristeen, josta Irkutsk
+       * tunnetaan. Puuleikkausikkunat ovat lähikuva samasta ilmiöstä
+       * kuin talvinen hirsitalo, ja se on tarkoituksellista: kaukaa ja
+       * läheltä katsottuna ne ovat eri asia.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Teatr Dramatyczny w Irkucku.JPG',
+          selite: 'Draamateatteri kadunkulmassa. Julkisivu on jaettu '
+            + 'vuorotellen tiilenpunaisiin ja vaaleankeltaisiin '
+            + 'kenttiin, kulmaa kiertää pylväsrivi, ja katolla lepää '
+            + 'vihreillä laatoilla katettu kupoli. Otsalaudan '
+            + 'kilpeen on hakattu vuosiluku 1894.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Иркутск. Усадьба Сукачёва 10.JPG',
+          selite: 'Kaksikerroksinen hirsitalo hämärtyvässä talvi-illassa. '
+            + 'Ylemmän kerroksen ympäri kiertää avoin puuparveke, jonka '
+            + 'kaiteet ja pylväät on veistetty koristeiksi, ja katolla '
+            + 'on paksu lumipeite. Edustan aukio on umpeen tallattua '
+            + 'lunta.',
+          lahde: 'Fanzuga, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Irkutsk, Wooden house, Wooden windows, Russia.jpg',
+          selite: 'Kolme ikkunaa punaiseksi maalatussa lautaseinässä. '
+            + 'Siniharmaat luukut on kehystetty veistetyillä pielillä, '
+            + 'joiden yläpuolella on valkoinen päätykolmio ja sen '
+            + 'reunassa rivi pyöreitä hammastuksia. Keskellä kutakin '
+            + 'päätyä on kaiverrettu ruusuke.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Tee ja silkki tulivat Kjahtan kautta',
@@ -32867,6 +33698,139 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Славное море священный Байкал',
         },
       ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Lower Embankment in Irkutsk (September 2025) - 0.jpg',
+          selite: 'Angaran alaranta iltapäivällä. Valkoinen kivikaide '
+            + 'kaartuu kuvan halki, joki levittäytyy vasemmalle vaaleana '
+            + 'ja leveänä, ja oikealla kohoavat Epifanian katedraalin '
+            + 'tumma telttatorni ja Vapahtajan kirkon valkoinen '
+            + 'kellotorni. Rantapenkillä istuu kaksi ihmistä.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Irkutsk on runsaan puolen miljoonan asukkaan kaupunki '
+          + 'Angaran mutkassa: vuoden 2010 väenlaskussa asukkaita oli '
+          + '587 891, ja se on Venäjän kahdenneskymmenesviides. Kaupunki '
+          + 'jakautuu joen mukaan vasempaan ja oikeaan rantaan, ja '
+          + 'historiallinen ydin on oikealla rannalla siinä, missä '
+          + 'Ušakovka laskee Angaraan. Sen keskusta on Unescon '
+          + 'maailmanperintöluettelon ehdokaslistalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Irkutsk',
+          taitto: 'opas',
+          teksti: 'Kivikaupunki joen rannassa, puukaupunki sen takana ja '
+            + 'maailman syvin järvi tunnin päässä.',
+          nosto: 'Vuoden 1879 palon jälkeen puusta rakentaminen '
+            + 'kiellettiin rannan puolella, ja siitä syntyi kaupungin '
+            + 'kahtiajako: Angaran rannassa kivitalot, palorajan takana '
+            + 'puutalot — se näkyy kadulla yhä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Ensimmäinen juna saapui Irkutskiin 16. elokuuta '
+                + '1898, ja rautatie on yhä pääreitti: asema on '
+                + 'vasemmalla rannalla Glaskovon puolella, ja sen ohi '
+                + 'kulkevat Moskovan, Vladivostokin ja Ulan Batorin '
+                + 'junat. Krasnojarskiin on 850 kilometriä luoteeseen ja '
+                + 'Ulan Batoriin 520 kilometriä etelään. Kaupungin läpi '
+                + 'kulkevat myös Siperian valtatiet. Angara on '
+                + 'kaupungin kohdalla 580 metriä leveä, ja sen ylittävät '
+                + 'vesivoimalan pato ja kolme siltaa alavirtaan päin. '
+                + 'Baikalin rannalle on maanteitse runsaat '
+                + 'seitsemänkymmentä kilometriä, ja tavallisin määränpää '
+                + 'on Listvjankan kylä Angaran suulla vastapäätä Port '
+                + 'Baikalia.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Itä-Siperian kumpuilevassa taigassa '
+                + 'kolmen joen kohdalla. Angara tulee Baikalista, Irkut '
+                + 'laskee siihen suoraan kaupungin kohdalla vastarannalla '
+                + '— ja siitä kaupunki on saanut nimensä — ja Ušakovka '
+                + 'erottaa keskustan luostarin, vanhan linnoituksen ja '
+                + 'sataman puolesta. Vanhaa kaupunkia ei ole kaavoitettu: '
+                + 'ensimmäisillä asukkailla ei ollut katuja lainkaan, '
+                + 'talot käännettiin ikkunat etelään, ja kadut '
+                + 'muotoutuivat rantaviivan mukaan. Ainoa suora katu '
+                + 'syntyi vuonna 1790 puretun paaluvarustuksen '
+                + 'paikalle. Kaupungin ja '
+                + 'Baikalin välissä Angaran rannalla on Taltsyn '
+                + 'ulkoilmamuseo, johon on siirretty siperialaisia '
+                + 'hirsirakennuksia.',
+              kuva: {
+                tiedosto: 'Chasovnya - Musei(TAl\'TSI).JPG',
+                selite: 'Hirsikirkko Taltsyn ulkoilmamuseossa. Tummunut '
+                  + 'salvottu runko, valkeiksi maalatut ikkunanpielet ja '
+                  + 'vihreät sipulikupolit; kellotornin katto on '
+                  + 'pärekattoinen teltta. Ympärillä on nurmikenttä ja '
+                  + 'koivuja.',
+                lahde: 'Сычугова Надежда, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: omuli',
+              teksti: 'Baikalin oma kala on omuli, siika, jota ei tavata '
+                + 'muualla. Se on järven tärkein saalislaji ja suurin osa '
+                + 'kaikesta kalastuksesta; tavallisin tapa on savustaa se '
+                + 'kokonaisena ja myydä tienvarsi- ja satamakojuista '
+                + 'lämpimänä. Matkailija törmää omuliin ennen kuin '
+                + 'ehtii järven rantaan: sitä myydään Irkutskin toreilla '
+                + 'ja jokaisella pysäkillä Listvjankan tiellä. Muita '
+                + 'kaupallisesti tärkeitä ja niin ikään vain Baikalissa '
+                + 'eläviä lajeja ovat baikalinharjus ja baikalinsampi. '
+                + 'Kalastajat pyytävät järvestä viittätoista lajia, '
+                + 'mutta omuli on niistä ylivoimaisesti suurin erä.',
+              kuva: {
+                tiedosto: 'RU Lake Baikal Olkhon Smoked Omul.jpg',
+                selite: 'Savustettuja omuleita valkoisella tarjottimella. '
+                  + 'Kalat ovat kokonaisia ja niiden nahka on savun '
+                  + 'kullanruskeaksi kiillottama; ne on ladottu '
+                  + 'ristikkäin päät kuvan etureunaa kohti.',
+                lahde: 'Alexander Klink, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Baikal on seitsemänkymmenen kilometrin päässä',
+              teksti: 'Järvi ei ole kaupungissa vaan sen yläpuolella: '
+                + 'Irkutsk on 72 kilometriä siitä kohdasta alavirtaan, '
+                + 'jossa Angara lähtee Baikalista. Yhteys on silti '
+                + 'suora, sillä kaupungin läpi virtaava vesi on juuri '
+                + 'järven vettä. Vanha reitti sinne oli rautatie: '
+                + 'Kiertobaikalin rata avattiin liikenteelle 29. '
+                + 'lokakuuta 1905, ja se oli aikanaan Transsiperian radan '
+                + 'pääsuunta. Kun Irkutskin voimalan allas täytettiin '
+                + 'vuonna 1956, rannan osuus jäi veden alle, ja jäljelle '
+                + 'jäi 89 kilometrin pussinperä Sljudjankasta Baikalin '
+                + 'kylään. Sillä on 38 tunnelia, yhteensä 9 063 metriä, '
+                + '248 siltaa ja 268 tukimuuria — Venäjässä ei ole '
+                + 'toista yhtä tiheästi rakennettua rataosuutta.',
+              kuva: {
+                tiedosto: 'Baikal Railway, Kirkirey railway tunnels, Russia.jpg',
+                selite: 'Kaksi kivistä tunnelinsuuta rinteen kyljessä. '
+                  + 'Holvit on muurattu tasatuista harmaista lohkareista, '
+                  + 'ja niiden välissä nousee sama kivi tukimuurina. Yksi '
+                  + 'raide kaartaa oikealle, ja rinteessä kasvaa '
+                  + 'syksyisiä koivuja ja mäntyjä.',
+                lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Irkutskin talvi on lähes sateeton: tammi- ja '
+                + 'helmikuussa normaali on kuusi millimetriä, kun heinä- '
+                + 'ja elokuussa se on sata. Pakkasta on marraskuusta '
+                + 'maaliskuuhun, tammikuussa yhdeksäntoista astetta. '
+                + 'Kolme neljäsosaa vuoden vedestä tulee kesäkuun ja '
+                + 'syyskuun välillä, joten talvi on sekä kylmä että '
+                + 'kuiva. Baikal tasoittaa lukuja sen verran, että '
+                + 'Irkutskin ääripäät ovat lievemmät kuin muualla samalla '
+                + 'leveydellä Siperiassa. Kesä on kävelijän aikaa, mutta '
+                + 'helmi–maaliskuu on järven aikaa: silloin jää on '
+                + 'paksuimmillaan ja kirkkaimmillaan.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -33892,6 +34856,201 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Itelmeenit',
         },
       ],
+      /*
+       * AVAUSKUVAT JA MATKAILIJAN OPAS (Opus 20.8.2026, täydennyserä
+       * V3). Kamtšatka on ALUELEHTI (Kappadokia/Siinai-malli): ei
+       * kohdekarttaa eikä nähtävyysjuttuja, mutta kaupunkisivu saa
+       * avauskuvat ja oppaan. Faktat on tarkistettu en-Wikipedian
+       * artikkeleista Kamchatka Peninsula, Petropavlovsk-Kamchatsky,
+       * Avacha Bay, Valley of Geysers ja Kronotsky Nature Reserve
+       * (haettu 20.8.2026).
+       *
+       * VENÄJÄ-LINJAUS: Avatšanlahden etelärannan tukikohdista ei
+       * kerrota eikä näytetä kuvia; suljetun alueen vuodet (koko
+       * niemimaa suljettuna omiltakin 1989:ään ja ulkomaalaisilta
+       * 1990:een asti) kerrotaan neutraalina historiana. Nykyiset
+       * rajoitteet kerrotaan lupakäytäntöinä ilman politiikkaa:
+       * Kronotskin luonnonpuiston kävijämäärä ja maksu ovat
+       * en-Wikipedian lukuja (n. 3 000 kävijää/vuosi, noin 700
+       * dollarin helikopteripäivä).
+       *
+       * OPAS EI TOISTA NOSTOJA EIKÄ VISAA: nostot kertovat sataman
+       * synnyn, Krašeninnikovin ja itelmeenit, luontosivu tulivuoret
+       * ja gejsirit. Visa kysyy mm. "miten Kamtšatkalle pääsee?"
+       * (lentäen tai laivalla, maantietä ei ole) — oppaan
+       * Perille-jakso kertoo saman asian laveammin, samoin
+       * karhu- ja lohivisojen opetukset ovat jo luontosivulla.
+       * Sääjakson luvut ovat pelin sääriviltä (saatiedot.js).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Лежбище сивучей.jpg',
+          selite: 'Sivutši eli stellerinmerileijona makaa vanhalla '
+            + 'laiturilla Petropavlovskin Avatšan kaupunginosassa '
+            + 'maaliskuussa. Merileijonat pesivät niemimaan rannoilla, ja '
+            + 'talvisin niitä lojuu kaupungin laitureilla; takana on '
+            + 'lahden jäätä ja lumisia vuoria.',
+          lahde: 'Artem Rybalchenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Халактырский пляж (лето).jpg',
+          selite: 'Halaktyrin ranta Petropavlovskin itäpuolella on '
+            + 'avoimen Tyynenmeren ranta, jonka hiekka on mustaa '
+            + 'tulivuorten laavamurskaa. Ilmakuvassa maininki vyöryy '
+            + 'suorana viivana tummalle rannalle syysauringossa.',
+          lahde: 'Алексей Чернышев1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Petropavlovsk-Kamchatsky city center 02.jpg',
+          selite: 'Petropavlovskin keskustaa syksyllä ylhäältä nähtynä. '
+            + 'Pitkä punakattoinen kerrostalo seuraa pääkadun kaarta, '
+            + 'pihoilla hehkuvat ruskan värit ja kadun päässä erottuvat '
+            + 'sataman nosturit.',
+          lahde: 'ФГБУ "ИНФОРМАВТОДОР", Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Вид на морской порт.jpg',
+          selite: 'Kalastusaluksia ja laitureita Petropavlovskin '
+            + 'satamassa Nikolskajan kukkulalta nähtynä. Kaupunki nousee '
+            + 'vihreille rinteille lahden ympärillä, ja oikealla '
+            + 'Avatšanlahti jatkuu kohti suutaan.',
+          lahde: 'Stasich116, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Petropavlovsk-Kamtšatski on 6 766 kilometrin päässä '
+          + 'Moskovasta ja yli 2 000 kilometrin päässä lähimmästä '
+          + 'suurkaupungista Vladivostokista — ja silti se on niemimaan '
+          + 'ainoa oikea kaupunki ja koko Kamtšatkan portti. Kaupunki '
+          + 'istuu meren tasossa Avatšanlahden rannalla niin vuorten '
+          + 'ympäröimänä, ettei horisonttia näe mistään kohtaa '
+          + 'kaupunkia. Kaikki niemimaan matkat alkavat täältä: '
+          + 'satamasta, lentokentältä tai helikopterin ruumasta, sillä '
+          + 'teitä on vain kourallinen.',
+        artikkeli: {
+          nimi: 'Matkailijan Kamtšatka',
+          taitto: 'opas',
+          teksti: 'Niemimaa, jonne ei vie maantietä — tulivuorten, '
+            + 'lohijokien ja karhujen maa Tyynenmeren tulirenkaalla.',
+          nosto: 'Kronotskin luonnonpuistoon pääsee vain tutkijana tai '
+            + 'helikopterilla: kävijöitä on vuodessa vain noin kolme '
+            + 'tuhatta, ja yhden päivän lento maksaa noin 700 dollaria.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kamtšatkalle ei vie maantietä eikä rautatietä, '
+                + 'joten niemimaalle tullaan lentäen tai laivalla — '
+                + 'kuten pelin visakin opettaa. Lennot laskeutuvat '
+                + 'Jelizovon kentälle, josta A-401-tie vie '
+                + 'Petropavlovskiin ja satamaan, ja kesäisin '
+                + 'Avatšanlahdella piipahtaa risteilyaluksia '
+                + 'päiväkäynnillä. Kaupungissa on bussiliikenne, mutta '
+                + 'niemimaan mitassa liikkuminen on toista: '
+                + 'asfalttitie kääntyy soraksi puolimatkassa '
+                + 'pohjoiseen, valtaosa muista teistä vaatii '
+                + 'maastoauton, ja syrjäkyliin lennetään pienkoneilla '
+                + 'puolisäännöllisin vuoroin. Venäjälle pääsyn '
+                + 'edellytykset kannattaa tarkistaa tuoreista '
+                + 'lähteistä ennen matkan suunnittelua.',
+              kuva: {
+                tiedosto: 'Passenger terminal airport yelizovo2.jpg',
+                selite: 'Jelizovon lentoaseman vanha terminaali ja '
+                  + 'lennonjohtotorni toukokuussa. Asematason takana '
+                  + 'kohoaa lumihuippuinen vuori — kenttä on '
+                  + 'Kamtšatkan pääovi.',
+                lahde: 'Der.metzger2009, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Niemimaan rakenne',
+              teksti: 'Kamtšatkan selkäranka on Keskivuoristo eli '
+                + 'Sredinnyi, ja kaakkoisrannikkoa seuraa Itäinen '
+                + 'vuoristo; niiden väliin jää keskuslaakso, jota '
+                + 'pitkin Kamtšatkajoki virtaa pohjoiseen ja kääntyy '
+                + 'Kljutšin kohdalla itään mereen. Sama laakso on myös '
+                + 'liikenteen ura: ainoa pitkä maantie kulkee '
+                + 'Petropavlovskista laaksoa pohjoiseen '
+                + 'Ust-Kamtšatskiin, ja toinen tie ylittää niemen '
+                + 'Bolšeretskiin, josta kuljettiin merta Ohotskiin jo '
+                + 'ennen sataman perustamista. Eteläkärki on Lopatka '
+                + 'eli Lapio, ja sen takaa alkaa Kuriilien ketju. '
+                + 'Avatšanlahti on kaupungin oma etupiha: 24 '
+                + 'kilometriä pitkä, suulta vain kolme kilometriä '
+                + 'leveä ja talvella jäässä — juuri suojaisuus toi '
+                + 'Beringin laivat tänne aikanaan talvehtimaan.',
+              kuva: {
+                tiedosto: 'Kamchatka road car stopped mountains.jpg',
+                selite: 'Maastoauto niemimaan maantiellä lokakuussa. '
+                  + 'Tien takana on koivuvyöhyke ja lumen saaneet '
+                  + 'vuoret — tällaisena tie jatkuu satoja kilometrejä '
+                  + 'keskuslaaksossa.',
+                lahde: 'Rosavtodor, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kuuma maa',
+              teksti: 'Tulirengas ei näy vain purkauksina vaan myös '
+                + 'siinä, että maasta tulee kuumaa vettä. Niemimaalla '
+                + 'on lukemattomia kuumia ja kivennäispitoisia '
+                + 'lähteitä, ja Paratunkan laakso kaupungin '
+                + 'lounaispuolella on kokonainen kylpylä- ja '
+                + 'parantolaseutu lähteidensä varassa. Sama lämpö '
+                + 'näkyy talvella jokien mutkissa: lähteiden '
+                + 'syöttämä vesi ei jäädy, vaan joki juoksee mustana '
+                + 'nauhana hangen halki kovimmillakin pakkasilla, ja '
+                + 'höyry paljastaa lähteet jo kaukaa. Matkailijalle '
+                + 'kuuma maa on helpoin Kamtšatkan ihmeistä, sillä '
+                + 'kylpylään pääsee tavallisella autolla. '
+                + 'Krašeninnikov kuvasi pienempiä gejsirejä jo '
+                + '1730-luvulla, ja suuri Gejsirien laakso löytyi '
+                + 'vasta 1941 — se tarina on luontosivulla.',
+              kuva: {
+                tiedosto: 'Паратунские горячие источники.jpg',
+                selite: 'Paratunkan lähdeseutu ilmasta joulukuussa. '
+                  + 'Lumi peittää laakson ja rinteet, mutta lähteiden '
+                  + 'lämmittämät purot juoksevat sulina ja mustina '
+                  + 'hangen keskellä.',
+                lahde: 'LukaE, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Luvat ja retket',
+              teksti: 'Neuvostoaikana koko niemimaa oli suljettua '
+                + 'seutua: sinne ei päässyt ilman lupaa edes maan '
+                + 'omista kaupungeista ennen vuotta 1989, eikä '
+                + 'ulkomaalaisia päästetty ennen vuotta 1990. Nykyisin '
+                + 'rajoitukset ovat luonnonsuojelun lupia: Kronotskin '
+                + 'luonnonpuisto gejsireineen on ensisijaisesti '
+                + 'tutkimusalue, jonne pääsee vain opastetulla '
+                + 'helikopteripäivällä, ja kävijöitä on vuodessa vain '
+                + 'noin kolme tuhatta. Retkien Kamtšatka on silti '
+                + 'laaja: vaellusta tulivuorille, koiravaljakoita, '
+                + 'urheilukalastusta, heliskiä ja jopa surffausta '
+                + 'Tyynenmeren mainingissa. Retket varataan '
+                + 'paikallisilta järjestäjiltä, ja sää sanoo aina '
+                + 'viimeisen sanan.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Meri tasoittaa Kamtšatkan vuoden: pelin '
+                + 'säärivillä talven kylmin kuukausi jää kymmeneen '
+                + 'pakkasasteeseen ja kesän lämpimin kolmeentoista '
+                + 'lämpöasteeseen — talven ja kesän ero on laudan '
+                + 'Venäjän-kohteista pienin. Hintana on märkyys: '
+                + 'vuodessa sataa yli 1 200 millimetriä, eikä '
+                + 'kuivinkaan kuukausi alita kuuttakymmentä. '
+                + 'Heinä–elokuu on retkien pääkausi, jolloin lohi '
+                + 'nousee jokiin ja polut ovat sulat; syyskuu tuo '
+                + 'ruskan ja lokakuu vuoden sateisimman kuun, jolloin '
+                + 'vettä kertyy lähes sataneljäkymmentä millimetriä. '
+                + 'Talven runsas lumi kantaa maaliskuulle asti '
+                + 'valjakoita ja laskettelijoita — hanki kantoi '
+                + 'aikanaan myös Ustinovan koirat, sillä juuri '
+                + 'kevättalvella Gejsirien laakso löydettiin.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -34070,6 +35229,196 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Ainut',
         },
       ],
+      /*
+       * AVAUSKUVAT JA MATKAILIJAN OPAS (Opus 20.8.2026, täydennyserä
+       * V3). Sahalin on ALUELEHTI (Kappadokia/Siinai-malli): ei
+       * kohdekarttaa eikä nähtävyysjuttuja. Faktat on tarkistettu
+       * en-Wikipedian artikkeleista Sakhalin, Yuzhno-Sakhalinsk ja
+       * Sakhalin Regional Museum (haettu 20.8.2026).
+       *
+       * VENÄJÄ-LINJAUS: öljy ja kaasu kerrotaan neutraalina taloutena
+       * (visa kysyy juuri sitä), Karafuton perintö historiallis-
+       * kulttuurisena ilmiönä. NYKYRAJOITTEET LUPAKÄYTÄNTÖINÄ ilman
+       * politiikkaa: en-Wikipedian Yuzhno-Sakhalinsk-artikkelin
+       * mukaan ulkomaalainen tarvitsee luvan matkustaakseen
+       * kaupungista muualle Sahalinin alueelle, ja rannikolla
+       * oleskelu on sallittua vain osoitetuissa paikoissa — tämä
+       * kerrotaan oppaassa sellaisenaan, viranomaisia nimeämättä.
+       *
+       * OPAS EI TOISTA NOSTOJA: kansisivu kertoo salmen ja
+       * alkuperäiskansat, historiasivu Tšehovin, pakkotyön ja
+       * Karafuton vaiheet. Opas keskittyy liikkumiseen (raideleveys
+       * vaihdettiin venäläiseksi elokuussa 2019, junalautta
+       * Vanino–Holmsk), saaren rakenteeseen, japanilaisen perinnön
+       * arkeen ja säähän. Sääjakson luvut pelin sääriviltä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Yuzhno-Sakhalinsk Museum July 2012.jpg',
+          selite: 'Aluemuseon talo on Južno-Sahalinskin tunnetuin '
+            + 'rakennus: japanilaisen Yoshio Kaizukan piirtämä ja 1937 '
+            + 'valmistunut, tyyliltään niin sanottua keisarillisen '
+            + 'kruunun tyyliä. Toyoharan ajalta säilyneitä taloja on '
+            + 'kaupungissa enää kourallinen.',
+          lahde: 'Sakhalinio, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Сахалин, Чертов мост, 2023-10-07 02.jpg',
+          selite: 'Pirunsilta eli Tšortov most Holmskin takamailla on '
+            + 'käytöstä poistuneen vuoristoradan silta. Ruostuneet kiskot '
+            + 'jatkuvat kohti tunnelin suuaukkoa, ja ympärillä hehkuu '
+            + 'lokakuun ruska — silta on nykyään retkeilijöiden polku.',
+          lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2024-10-03-Sakhalin-park-lake.jpg',
+          selite: 'Gagarinin puiston Ylempi lampi Južno-Sahalinskissa '
+            + 'syyskuun lopulla. Rannalla on lasten rautatien '
+            + 'Komsomolskajan asema, ja tyyni vesi peilaa talot ja '
+            + 'ruskan — puisto on kaupunkilaisten arkinen keidas.',
+          lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Yuzhno-Sakhalinsk, Sakhalinskaya street 2022-09.jpg',
+          selite: 'Sateinen risteys Sahalinskajan kadulla '
+            + 'Južno-Sahalinskissa. Japanilainen kuorma-auto kääntyy '
+            + 'kadulle, ja taustalla on kauppakeskuksia ja matalia '
+            + 'liiketaloja — saaren arkea ilman kiiltokuvaa.',
+          lahde: 'Svetlov Artem, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Sahalinin portti on Južno-Sahalinsk, saaren ainoa '
+          + 'suuri kaupunki, joka alkoi 1882 pakkotyöläisten '
+          + 'perustamana Vladimirovkan kylänä ja oli välillä Japanin '
+          + 'Karafuton pääkaupunki Toyohara. Kaupunki istuu Susujajoen '
+          + 'laaksossa vuorten välissä sisämaassa, ja meri on joka '
+          + 'suunnassa vasta tunnin ajomatkan päässä: satamiin '
+          + 'Korsakoviin ja Holmskiin vievät omat tiensä. Moskovaan on '
+          + 'linnuntietä 6 660 kilometriä — Sapporoon murto-osa '
+          + 'siitä.',
+        artikkeli: {
+          nimi: 'Matkailijan Sahalin',
+          taitto: 'opas',
+          teksti: 'Venäjän suurin saari on pitkä kaistale Ohotanmeressä '
+            + '— katorgan, Karafuton ja öljyn saari, jonka naapuri on '
+            + 'Hokkaido.',
+          nosto: 'Saaren rautatiet rakennettiin Japanin kapealle '
+            + 'raideleveydelle, ja vasta elokuussa 2019 koko verkko oli '
+            + 'muutettu venäläiseen leveyteen — työ oli alkanut jo '
+            + '2004.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Južno-Sahalinskiin tullaan tavallisesti '
+                + 'lentäen; kaupunki on Aurora-lentoyhtiön kotikenttä. '
+                + 'Meritse saarelle pääsee junalautalla, joka kulkee '
+                + 'mantereen Vaninosta Holmskiin ja kuljettaa '
+                + 'rautatievaunut suoraan saaren verkolle — verkolle, '
+                + 'joka vaihdettiin japanilaisesta kapeasta '
+                + 'raideleveydestä venäläiseen vasta elokuussa 2019. '
+                + 'Junalla ja linja-autolla pääsee rannikon kaupunkeihin: '
+                + 'A-391-tie vie etelään Korsakoviin ja A-392 länteen '
+                + 'Holmskiin. Talvella jää ja lumimyrskyt sanelevat '
+                + 'aikataulut niin merellä kuin maanteillä. Venäjälle '
+                + 'pääsyn edellytykset kannattaa tarkistaa tuoreista '
+                + 'lähteistä ennen matkan suunnittelua.',
+              kuva: {
+                tiedosto: '2M62U-0082 with train, Yuzhno-Sakhalinsk.jpg',
+                selite: 'Matkustajajuna Južno-Sahalinskin asemalla '
+                  + 'syyskuussa. Puna-harmaa dieselveturi vetää sinisiä '
+                  + 'vaunuja — raideleveys on ollut venäläinen vuodesta '
+                  + '2019.',
+                lahde: 'Koshekans, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Saaren rakenne',
+              teksti: 'Sahalin on 948 kilometriä pitkä mutta '
+                + 'enimmilläänkin vain 170 kilometriä leveä — samoilla '
+                + 'leveysasteilla kuin Englanti ja Irlanti, vaikka '
+                + 'ilmasto väittää muuta. Kaksi kolmasosaa saaresta on '
+                + 'vuoristoa: Länsi-Sahalinin vuoret nousevat Itšaran '
+                + 'huipulla 1 481 metriin ja Itä-Sahalinin vuoret '
+                + 'Lopatinilla 1 609 metriin, ja niiden välissä kulkee '
+                + 'Tym–Poronain laakso jokineen. Pohjoinen kolmannes '
+                + 'on soista tasankoa. Etelässä ovat kaupungit: '
+                + 'Južno-Sahalinsk sisämaassa, satamat '
+                + 'Korsakov Anivanlahdella ja Holmsk Tatarinsalmen '
+                + 'rannalla hoitavat saaren tavarat. Etelässä aukeaa '
+                + 'La Pérousen salmi, jonka takana on Japanin '
+                + 'Hokkaido — kirkkaalla säällä naapurin näkee '
+                + 'paljain silmin.',
+              kuva: {
+                tiedosto: 'Sea port and town of Kholmsk, Sakhalin oblast.jpg',
+                selite: 'Holmskin satamakaupunki Tatarinsalmen '
+                  + 'rannalla kesäkuussa. Nosturit ja laiturit ovat '
+                  + 'etualalla, ja kerrostalot kiipeävät vihreille '
+                  + 'rinteille — tänne junalautta mantereelta saapuu.',
+                lahde: 'Vasilii Martynov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: Japanin jäljet',
+              teksti: 'Neljä vuosikymmentä Karafutoa jätti saaren '
+                + 'arkeen kerroksen, johon törmää yhä: aluemuseo toimii '
+                + 'japanilaisen arkkitehdin piirtämässä '
+                + 'linnamaisessa talossa, rautatieaseman aukiolla '
+                + 'seisoo japanilainen D51-höyryveturi muistomerkkinä, '
+                + 'ja junat kulkivat Japanin kapealla raideleveydellä '
+                + 'aina vuoteen 2019. Vanhan radan hylätyt sillat ja '
+                + 'tunnelit Holmskin vuorissa ovat nykyään '
+                + 'retkikohteita, joista tunnetuin on lehden '
+                + 'avauskuvien Pirunsilta. Ja katukuvassa Japani näkyy '
+                + 'tuoreempana tuontina: autot ja työkoneet ovat '
+                + 'suureksi osaksi japanilaisia, samaan tapaan kuin '
+                + 'muuallakin Venäjän Kaukoidässä, ja naapurin '
+                + 'kysyntä pitää saaren kalan ja kaasun liikkeessä.',
+              kuva: {
+                tiedosto: 'Японский паровоз D51-22 Южно-Сахалинск.jpg',
+                selite: 'Japanilainen D51-höyryveturi muistomerkkinä '
+                  + 'Južno-Sahalinskin asema-aukiolla. Musta veturi '
+                  + 'punaisine vetopyörineen on Karafuton rautateiden '
+                  + 'ajan muisto keskellä nykykaupunkia.',
+                lahde: 'Апатинаити, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Luvat ja liikkuminen',
+              teksti: 'Sahalinilla matkailijan on hyvä tietää saaren '
+                + 'omat säännöt: ulkomaalainen tarvitsee '
+                + 'rajaviranomaisten luvan, jos aikoo matkustaa '
+                + 'Južno-Sahalinskista muualle saaren alueelle tai sen '
+                + 'vesille, ja merenrannalla oleskelu ja sukeltaminen '
+                + 'on sallittua vain osoitetuissa paikoissa — saari on '
+                + 'rajaseutua joka suuntaansa. Käytännössä retket '
+                + 'hoituvat paikallisten '
+                + 'järjestäjien kautta, jotka tuntevat lupakuviot. '
+                + 'Öljyn ja kaasun Sahalin taas pysyy matkailijalta '
+                + 'piilossa: kentät ovat merellä saaren koillispuolella '
+                + 'ja niiden maatukikohdat pohjoisessa ovat työmaita, '
+                + 'eivät retkikohteita. Ajantasaiset käytännöt '
+                + 'kannattaa varmistaa ennen matkaa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Meri ympäröi Sahalinia joka suunnalta, mutta '
+                + 'jäätyvä Ohotanmeri ei lämmitä talvea: pelin '
+                + 'säärivillä tammikuu on yksitoista astetta '
+                + 'pakkasella, kylmempi kuin Vladivostokissa tai '
+                + 'Kamtšatkalla. Kesä sen sijaan on Siperian '
+                + 'mittapuulla lämmin — elokuussa kahdeksantoista '
+                + 'astetta — ja juuri silloin saari on vihreimmillään. '
+                + 'Loppukesän varjopuoli on märkyys: elo- ja syyskuussa '
+                + 'sataa kumpanakin yli sata millimetriä myöhäiskesän '
+                + 'matalapaineiden tuomana. Kuivinta on helmikuussa, '
+                + 'jolloin lunta riittää ja kertymä jää '
+                + 'neljäänkymmeneen millimetriin — talviretkien aika. '
+                + 'Kesä-heinäkuu on valoisin ja tasaisin ikkuna.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -34257,6 +35606,203 @@ export const KULTTUURI_KATEGORIAT = {
           esikuuntelu: 'Yul Brynner gypsy',
         },
       ],
+      /*
+       * AVAUSKUVAT JA MATKAILIJAN OPAS (Opus 20.8.2026, täydennyserä
+       * V3). Faktat on tarkistettu en-Wikipedian artikkeleista
+       * Vladivostok, Vladivostok railway station, Vladivostok
+       * International Airport, Zolotoy Bridge, Russky Bridge ja
+       * Trans-Siberian Railway sekä en-Wikivoyagen Vladivostok-sivusta
+       * (haettu 20.8.2026; Wikivoyage täydentää, ei korvaa — sama
+       * käytäntö kuin Tripolissa ja Salalahissa).
+       *
+       * VENÄJÄ-LINJAUS (Raamattu): ei nykysotaa eikä nykypolitiikkaa;
+       * painotus historiaan, maantieteeseen ja arkkitehtuuriin.
+       * Suljetun kaupungin vuodet 1952–1992 kerrotaan neutraalina
+       * historiana päätösten päivämäärillä. Kuvissa ei sotilaskohteita:
+       * laivastosta ei ole kuvaa, ja S-56 on toisen maailmansodan
+       * museolaiva samalla tavalla kuin muiden lautojen linnoitukset.
+       *
+       * OPAS EI TOISTA NOSTOJA: kansisivun nostot kertovat nimen ja
+       * perustamisen, rautatieaseman rakennushistorian ja Brynnerin
+       * suvun, joten opas keskittyy liikkumiseen, niemen muotoon,
+       * autokauppaan ja suljetun kaupungin aikaan. Visa kysyy radan
+       * päätepistettä, merta, sataman asemaa, nimen merkitystä ja
+       * Kultaisen sarven siltaa — kaikki löytyvät lehden teksteistä.
+       *
+       * Lämpö- ja sadeluvut Milloin kannattaa tulla -jaksossa ovat
+       * pelin omalta sääriviltä (js/packs/saatiedot.js: vladivostok);
+       * talven ohuen lumen ja aurinkoisten selkeiden päivien kuvaus on
+       * en-Wikipedian ilmasto-osiosta (lumensyvyys enintään 5 cm).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Svetlanskaya Street in Vladivostok (October 2024)-0.jpg',
+          selite: 'Svetlanskaja, kaupungin vanhin pääkatu, kulkee '
+            + 'Kultaisen sarven rannan suuntaisesti. Oikealla kohoaa '
+            + 'kultakupolinen Kirkastuksen katedraali, ja kadun päässä '
+            + 'näkyvät Kultaisen sarven sillan valkoiset pylonit.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vladivostok Sportivnaya bay 2024-09 23.jpg',
+          selite: 'Sportivnajan poukama ja keskustan rantabulevardi '
+            + 'mereltä nähtynä. Rannassa erottuvat maailmanpyörä ja '
+            + 'tornitalorivi — tämä on kaupungin Amurinlahden puoleinen, '
+            + 'huvittelulle varattu ranta.',
+          lahde: 'Artyom Svetlov, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Tokarevskiy Lighthouse (October 2024)-0 5.jpg',
+          selite: 'Tokarevin majakka vuodelta 1910 seisoo kapean '
+            + 'kivisärkän päässä niemen lounaiskärjessä. Matalalla '
+            + 'säikällä kävellään merenkäynnin salliessa perille asti, ja '
+            + 'taustalla nousevat kaupungin tornitalot.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Admirala Fokina Street in Vladivostok.jpg',
+          selite: 'Amiraali Fokinin katu on keskustan kävelykatu, joka '
+            + 'laskeutuu kohti Sportivnajan rantaa. Kadun yllä riippuu '
+            + 'valoköynnöksiä, ja keskellä on suihkulähde ja '
+            + 'istutusaltaita 1900-luvun alun talojen välissä.',
+          lahde: 'Quick and my, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Vladivostok istuu Muravjov-Amurskin niemimaan '
+          + 'eteläkärjessä kahden veden välissä: lännessä on Amurinlahti, '
+          + 'idässä Kultaisen sarven satamalahti. Keskusta on kahden '
+          + 'kadun risti — Svetlanskaja seuraa Kultaisen sarven rantaa ja '
+          + 'Aleutskaja kulkee sitä vastaan kohtisuoraan, ja '
+          + 'rautatieasema on niiden risteyksessä. Loppu kaupunki '
+          + 'kiipeää kukkuloille, joten kävely on täällä nousemista ja '
+          + 'laskeutumista — ja siksi parhaat näköalapaikat ovat '
+          + 'keskellä kaupunkia.',
+        artikkeli: {
+          nimi: 'Matkailijan Vladivostok',
+          taitto: 'opas',
+          teksti: 'Niemen kärkeen rakennettu satamakaupunki, jossa '
+            + 'Euroopan kaupunkitalot, Aasian naapurit ja Tyynimeri '
+            + 'kohtaavat.',
+          nosto: 'Vladivostok on lähempänä Anchoragea ja jopa '
+            + 'Australian Darwinia kuin omaa pääkaupunkiaan Moskovaa — '
+            + 'ja lähempänä Honolulua kuin Mustanmeren Sotšia.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Juna on tämän kaupungin juhlallisin tuloreitti: '
+                + 'Transsiperian rata päättyy tänne, ja asemalaiturilla '
+                + 'seisoo kilometripylväs 9288. Lentoasema on 44 '
+                + 'kilometriä pohjoisessa Artjomin kaupungin luona; '
+                + 'huippuvuoden 2012 Aeroexpress-junan tilalla asemalle '
+                + 'kulkee nykyään tavallinen lähijuna, ja samaa matkaa '
+                + 'ajavat bussit. Kansainvälisiä lentoyhteyksiä on ollut '
+                + 'Japaniin, Kiinaan, Koreoihin, Filippiineille ja '
+                + 'Vietnamiin. Kaupungin sisällä liikkuvat bussit ja '
+                + 'martšrutkat, joihin noustaan takaovesta ja maksetaan '
+                + 'kuljettajalle ulos mentäessä; matkustajasatama on '
+                + 'rautatieaseman naapurissa. Venäjälle pääsyn '
+                + 'edellytykset kannattaa tarkistaa tuoreista lähteistä '
+                + 'ennen matkan suunnittelua.',
+              kuva: {
+                tiedosto: '2025-09-15-vdk-marine-terminal.jpg',
+                selite: 'Matkustajasatama eli merivokzal on '
+                  + 'rautatieaseman merenpuoleinen naapuri. Laajan '
+                  + 'jalankulkukannen takana kaartuu 1960-luvun '
+                  + 'terminaalirakennus, jonka katolla lukee Morskoi '
+                  + 'vokzal, ja oikealla näkyy satamanosturi.',
+                lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Niemi ja sen sillat',
+              teksti: 'Muravjov-Amurskin niemimaa on kolmisenkymmentä '
+                + 'kilometriä pitkä ja kaksitoista leveä, ja keskusta '
+                + 'täyttää sen eteläkärjen. Vuosisadan ajan kaupungin '
+                + 'kaksi rantaa yhdisti vain lautta tai pitkä kierto '
+                + 'lahden pohjukan kautta, kunnes vuoden 2012 '
+                + 'huippukokousta varten rakennettiin kaksi jättisiltaa: '
+                + 'Kultaisen sarven silta keskustasta Tšurkinin '
+                + 'kaupunginosaan ja Russkin silta Itäisen Bosporin '
+                + 'salmen yli Russkin saarelle. Jälkimmäisen jänneväli, '
+                + '1 104 metriä, on vinoköysisiltojen maailmanlistan '
+                + 'kärkeä, ja saarelle nousi samana vuonna Kaukoidän '
+                + 'liittovaltionyliopiston kampus. Matka Tšurkiniin '
+                + 'lyheni sillan myötä puolestatoista tunnista '
+                + 'kymmeneen minuuttiin.',
+              kuva: {
+                tiedosto: 'Russki Island Bridge, Russia1.jpg',
+                selite: 'Russkin silta ylittää Itäisen Bosporin salmen '
+                  + 'yhdellä 1 104 metrin jännevälillä. A-kirjaimen '
+                  + 'muotoiset pylonit ovat 320 metriä korkeat, ja '
+                  + 'takana vihertää Russkin saaren ranta.',
+                lahde: 'Константин Сергеевич…, Wikimedia Commons '
+                  + '(CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: autokaupungin liikenne',
+              teksti: 'Vladivostok on Venäjän japanilaisten '
+                + 'käytettyjen autojen pääsatama, ja autokauppa on '
+                + 'kaupungin suuria työllistäjiä: parhaina vuosina '
+                + 'täältä on myyty neljännesmiljoona autoa vuodessa, '
+                + 'joista valtaosa jatkaa matkaa muualle Venäjälle, ja '
+                + '2010-luvun alussa arvioitiin joka kolmannen '
+                + 'Primorjen työssäkävijän liittyvän jotenkin '
+                + 'autokauppaan — myyjinä, korjaajina, tullaajina tai '
+                + 'kuljettajina. Kaupungin omille kaduille autoja on '
+                + 'enemmän kuin vuosisadan takainen katuverkko vetää, '
+                + 'joten ruuhkat ovat arkea. Linja-autotkin kertovat '
+                + 'naapuruston suunnan: suuri osa on Koreasta tuotuja, '
+                + 'ja joissakin näkyy yhä Soulin tai Busanin vanha '
+                + 'reittikilpi.',
+              kuva: {
+                tiedosto: 'Vladivostok Aleutskaya Street 2008-01 1199468390.jpg',
+                selite: 'Iltapäiväruuhkaa Aleutskajalla tammikuussa. '
+                  + 'Autojono ja raitiotien kiskot kulkevat lumisen '
+                  + 'kadun täydeltä, ja pakkasesta huolimatta lunta on '
+                  + 'vain ohuelti — Vladivostokin talvi on kuiva.',
+                lahde: 'Ivan Z., Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: neljäkymmentä suljettua vuotta',
+              teksti: 'Vuoden 1952 alusta Vladivostok suljettiin '
+                + 'ulkomaalaisilta kokonaan: elokuussa 1951 annettu '
+                + 'päätös teki laivastokaupungista paikan, johon ei '
+                + 'ollut asiaa ilman erityislupaa, ja suunnitelmissa '
+                + 'oli siirtää pois jopa kauppa- ja kalastuslaivasto '
+                + 'konsulaateista puhumattakaan. Neljän vuosikymmenen '
+                + 'ajan kaupunki eli ovet kiinni; poikkeuksiakin oli, '
+                + 'sillä vuonna 1974 Yhdysvaltain presidentti Gerald '
+                + 'Ford tapasi täällä Leonid Brežnevin ensimmäisenä '
+                + 'virassa olevana presidenttinä. Syyskuussa 1991 '
+                + 'allekirjoitettu asetus avasi kaupungin '
+                + 'ulkomaalaisille vuoden 1992 alusta, ja '
+                + 'lehden kaikki tuoreet valokuvat ovat tuon '
+                + 'käänteen jälkeistä aikaa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Vladivostokin vuosi on monsuunin vuosi, ja '
+                + 'pelin säärivi näyttää sen suoraan: tammikuussa on '
+                + 'yksitoista astetta pakkasta ja vain yksitoista '
+                + 'millimetriä vettä, elokuussa kaksikymmentä astetta '
+                + 'ja sataviisikymmentä millimetriä. Talvi on kuiva ja '
+                + 'usein aurinkoinen — lunta on maassa enimmillään '
+                + 'senttejä, ei kinoksia — mutta tuuli puree. '
+                + 'Keskikesä on kostea ja sumuinen — kesä-elokuussa '
+                + 'ilmankosteus on keskimäärin yhdeksänkymmentä '
+                + 'prosenttia — ja loppukesällä Japaninmereltä voi '
+                + 'nousta trooppisia myrskyjä. Miellyttävin ikkuna on '
+                + 'syyskuussa ja lokakuun alussa, kun sateet '
+                + 'hellittävät, meri on vielä lämmin ja ilma '
+                + 'kirkastuu: syyskuun keskilämpö on seitsemäntoista '
+                + 'astetta ja lokakuunkin vielä kymmenen.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',

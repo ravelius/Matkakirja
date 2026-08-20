@@ -496,8 +496,11 @@ export const RAAMATTU = {
         'MATKAOPAS ON NYKYTIETOA (omistaja 20.8.2026): '
           + 'Matkailijalle-osion ja matkaoppaan kuvat ovat TUOREITA '
           + 'kuvia — historialliset kuvat kuuluvat historia- ja '
-          + 'nosto-osioihin. Matkailijalle-kuvaksi ei liian korkeaa '
-          + 'pystykuvaa (venyttää palstan). Opas sanoo SUORAAN, jos '
+          + 'nosto-osioihin. Matkailijalle-etusivukuva on AINA PYSTY '
+          + '(omistaja 20.8.2026: "Matkaoppaan kuva etusivulla pitää '
+          + 'olla pysty") — mutta MALTILLINEN pysty, ei ääripitkää '
+          + 'tornikuvaa joka venyttää palstan (Mosul-tapaus). '
+          + 'Opas sanoo SUORAAN, jos '
           + 'matkustaminen kohteeseen on nykyisin vaarallista tai '
           + 'rajoitettua — asiallisesti ja lyhyesti, ilman '
           + 'pelottelua; pelaajaa ei jätetä kuvittelemaan että kohde '
@@ -513,6 +516,15 @@ export const RAAMATTU = {
           + 'kuvateksti sanoo mitä kuvassa näkyy. Edelleen EI '
           + 'taistelukuvia eikä uhreja. Korvaa aiemman "kuvat eivät '
           + 'saa näyttää tuhoja" -käytännön.',
+        'TEKSTIEN PAINOPISTE (omistaja 20.8.2026: "Kuvatekstit '
+          + 'liian pitkiä ja leipäteksti liian lyhyt"): lehden '
+          + 'JOHDANTO on 7–10 virkkeen johdatus — millainen kaupunki '
+          + 'on, mikä sen merkitys ja historia; kaikki oleellinen '
+          + 'alkuun. KUVATEKSTI on 1, korkeintaan 2 virkettä. '
+          + 'Kohdekartan esittelyteksti lyhyeksi: kartan kuvailu ei '
+          + 'ole oleellista tietoa. Korvaa vanhat mitat (johdanto '
+          + '154–232 mrk); vanhat lehdet kirjoitetaan uusiksi tähän '
+          + 'asuun erissä.',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
           + 'koskaan repoon eikä lokiin.',
       ],

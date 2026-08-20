@@ -70,14 +70,17 @@ siirretään arkistoon. Uudet paketit lisää omistaja tai Fable.
 Valmiit paketit ja koko vanha historia:
 docs/arkisto/tyolista-opukselle-2026-08.md.
 
-## Paketti O8: Aasian lehtiurakka — session siirto Opukselle (tilattu 20.8.2026) 🟡 KESKEN
+## Paketti O8: Aasian lehtiurakka (tilattu 20.8.2026) 🟡 KESKEN
 
 **Tämä paketti kumoaa LEHTITAUKO-huomautuksen Aasian osalta:**
 omistaja tilasi Lähi-idän ja Aasian lehtiurakat 20.8.2026 ja ne
 ajavat vanhan tauon ohi. Lähi-itä valmistui v937–v949 (Fable).
-Aasia jatkuu tällä paketilla: sen tekee ITSENÄINEN OPUS-SESSIO
-aliagentteineen, joka myös JULKAISEE ITSE. Ei tarinakaarta uusiin
-kohteisiin (linjaus 17.8.) — vain lehdet.
+SESSIOSIIRTO PERUTTU (omistaja 20.8.2026): Fable jatkaa
+orkestroijana, mutta JOKAINEN agentti käynnistetään
+eksplisiittisellä mallilla (kirjoittajat/kuvatyö: opus,
+faktapohjat/tarkistukset: sonnet) — Fable ei kirjoita sisältöä
+itse. Ei tarinakaarta uusiin kohteisiin (linjaus 17.8.) —
+vain lehdet.
 
 ### Lue ennen aloitusta (järjestyksessä)
 
@@ -94,7 +97,11 @@ kohteisiin (linjaus 17.8.) — vain lehdet.
 
 - Pääsessio orkestroi eikä kirjoita itse: aliagentit tekevät
   faktapohjat (tarkistaja AINA ERI agentti kuin kokoaja),
-  kirjoituksen ja kuvatyön. Kirjoittajat työskentelevät
+  kirjoituksen ja kuvatyön. MALLI ANNETAAN AGENTILLE AINA
+  EKSPLISIITTISESTI (kirjoittajat ja kuvatyö: opus; faktapohjat
+  ja tarkistukset: sonnet) — ilman määritystä agentti perii
+  pääsession mallin, mikä poltti Fable-krediittejä 20.8.2026
+  (omistajan havainto). Kirjoittajat työskentelevät
   git-worktreessä (YKSI commit, ei pushia), pääsessio poimii
   commitit cherry-pickillä. EI KOSKAAN git stashia.
 - Konfliktitilanteessa lohkot poimitaan aarimerkkilaskennalla
