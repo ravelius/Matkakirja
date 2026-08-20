@@ -1370,11 +1370,41 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro EI OLE ENÄÄ kahden lauseen nosto vaan lehden ETUSIVUN
+   * LEIPÄTEKSTI — 7–10 virkkeen johdatus (~700–1100 mrk) kolmessa
+   * kappaleessa ('\n\n') ja 1–3 maltillista **lihavointia**.
+   * Renderöijä (piirraLeipateksti) tekee kappaleet ja boldit, joten
+   * tänne ei kirjoiteta HTML:ää. Faktat ovat Istanbulin omista jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Istanbul, maakartat.js, oma teksti-kenttä alla) sekä
+   * en-Wikipedian Istanbul-artikkelin väestö- ja mannerosuuksista.
+   * Sisältölinjaus: ei nykypolitiikkaa. teksti on ennallaan.
+   */
   Istanbul: {
-    intro: 'Istanbul on Turkin suurin kaupunki: siellä asuu noin 16 '
-             + 'miljoonaa ihmistä. Se on maailman ainoa suurkaupunki kahdella '
-             + 'mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian '
-             + 'puoleen, ja lautat kulkevat välillä koko päivän.',
+    intro: 'Istanbul on Turkin suurin kaupunki ja maan talouden ja '
+             + 'kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa '
+             + 'ihmistä, lähes viidennes koko maan väestöstä. Se on maailman '
+             + 'ainoa suurkaupunki kahdella mantereella — **Bosporinsalmi** '
+             + 'jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa '
+             + 'asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat '
+             + 'salmen suulle Byzantionin 600-luvulla eaa., ja paikka '
+             + 'valittiin veden takia: niemellä on vettä kolmella sivulla ja '
+             + 'sen pohjoispuolella Kultaisen sarven luonnonsatama.'
+             + '\n\n'
+             + 'Vuonna 330 keisari Konstantinus teki kaupungista Rooman '
+             + 'valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden '
+             + 'ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui '
+             + '**Hagia Sofia**, joka on ollut vuorollaan kirkko, moskeija, '
+             + 'museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi '
+             + 'kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 '
+             + 'Ankara, mutta Istanbul pysyi maan suurimpana.'
+             + '\n\n'
+             + 'Vanhankaupungin historialliset alueet kuuluvat Unescon '
+             + 'maailmanperintöön, ja mantereelta toiselle pääsee siltaa, '
+             + 'lauttaa tai metroa pitkin: vuonna 2013 avattu '
+             + 'Marmaray-tunneli kulkee salmen ali merenpohjassa.',
     teksti: 'Kaupungin perustivat kreikkalaiset noin 660 eaa. ja nimesivät '
               + 'sen Byzantioniksi. Vuonna 330 keisari Konstantinus teki siitä '
               + 'Rooman valtakunnan uuden pääkaupungin, ja nimeksi tuli '

@@ -130,11 +130,41 @@ export const OMAT_ARTIKKELIT = {
   },
 
   // --- Laajennus kymmeneen kaupunkiin ja niiden maihin (30.7.) ---------
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro EI OLE ENÄÄ kahden lauseen nosto vaan lehden ETUSIVUN
+   * LEIPÄTEKSTI — 7–10 virkkeen johdatus (~700–1100 mrk) kolmessa
+   * kappaleessa ('\n\n') ja 1–3 maltillista **lihavointia**.
+   * Renderöijä (piirraLeipateksti) tekee kappaleet ja boldit, joten
+   * tänne ei kirjoiteta HTML:ää. Faktat ovat Kairon omista jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Kairo, maakartat.js, oma artikkeli-kenttä alla) sekä
+   * en-Wikipedian Cairo-artikkelin väestöluvuista ja vuoden 1979
+   * maailmanperintömerkinnästä. Sisältölinjaus: ei nykypolitiikkaa.
+   * artikkeli on ennallaan.
+   */
   Kairo: {
-    intro: 'Kairo on arabimaailman suurin kaupunki, jonka läpi Niili '
-      + 'virtaa tyynenä keskellä miljoonien pauhua. Kadun päästä näkyvät '
-      + 'pyramidit — neljä ja puoli tuhatta vuotta historiaa aivan '
-      + 'nykykaupungin laidalla.',
+    intro: 'Kairo on Egyptin pääkaupunki ja arabimaailman suurin kaupunki: itse '
+      + 'kaupungissa asuu lähes kymmenen miljoonaa ihmistä ja koko '
+      + 'suurkaupunkialueella yli kaksikymmentä miljoonaa. Se levittäytyy '
+      + 'Niilin molemmin puolin siinä, missä jokilaakso avautuu suistoksi, ja '
+      + 'joen keskellä on Geziran saari.'
+      + '\n\n'
+      + 'Seudulla on asuttu tuhansia vuosia: joen toisella rannalla oli '
+      + 'muinainen Memfis, ja **Gizan pyramidit** rakennettiin sen '
+      + 'hautakaupungiksi. Nykyinen kaupunki alkoi vuonna 641 telttaleiristä, '
+      + 'josta kasvoi al-Fustat, ja fatimidit perustivat sen pohjoispuolelle '
+      + 'vuonna 969 linnoituskaupungin al-Qahiran, jonka nimestä tuli Kairo. '
+      + 'Vuonna 970 aloitettu **al-Azhar** on yhä maailman vanhimpia '
+      + 'yliopistoja.'
+      + '\n\n'
+      + 'Vanhassa Kairossa moskeijoiden minareetteja on niin tiheässä, että '
+      + 'kaupunkia kutsutaan tuhannen minareetin kaupungiksi, ja sen '
+      + 'historiallinen keskusta on kuulunut Unescon maailmanperintöön '
+      + 'vuodesta 1979. Khan el-Khalilin basaarissa on käyty kauppaa samoilla '
+      + 'kujilla 1300-luvulta asti. Kairo on myös arabimaailman elokuvan, '
+      + 'musiikin ja kirjallisuuden keskus: täällä lauloi Umm Kulthum ja '
+      + 'kirjoitti nobelisti Naguib Mahfouz.',
     artikkeli: 'Kairo on Egyptin pääkaupunki ja Afrikan suurimpia '
       + 'kaupunkeja: suurkaupunkialueella asuu yli kaksikymmentä '
       + 'miljoonaa ihmistä. Kaupunki levittäytyy Niilin molemmin puolin '

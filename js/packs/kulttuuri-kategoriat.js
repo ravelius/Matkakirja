@@ -586,6 +586,13 @@ export const KULTTUURI_KATEGORIAT = {
    * sellaisinaan — kuvat on tarkistettu jo silloin ja ne ovat
    * peilissä. Litteään tauluun jäi vain kulttuurivisa (v220 sääntö).
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke): tämän kaupungin kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lähderivit ovat
+   * ennallaan.
+   */
   kairo: [
     {
       id: 'kaupunki',
@@ -608,9 +615,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Cairo Citadel P1020127.jpg',
           lahde: 'Nikolay Chakrakchiev, Wikimedia Commons (CC BY 3.0)',
-          selite: 'Näkymä Kairon linnoitukselta kaupungin ylle. Etualalla '
+          selite: 'Näkymä Kairon linnoitukselta kaupungin ylle: etualalla '
             + 'kohoavat Sulttaani Hassanin ja al-Rifa\'in moskeijoiden '
-            + 'minareetit, taustalla keskustan tornit.',
+            + 'minareetit ja taustalla keskustan tornit.',
         },
         {
           tiedosto: 'Khan el-Khalili, Cairo Egypt - panoramio (7).jpg',
@@ -738,18 +745,17 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Ramses Station.JPG',
-                  selite: 'Ramsesin rautatieaseman halli: pylväät '
-                    + 'avautuvat kattoon papyrusviuhkoina ja keskellä '
-                    + 'riippuu kerroksittainen valaisin. Junat ovat '
-                    + 'pysähtyneet tällä paikalla 1850-luvulta asti.',
+                  selite: 'Ramsesin rautatieaseman halli, jossa junat ovat '
+                    + 'pysähtyneet 1850-luvulta asti: pylväät avautuvat '
+                    + 'kattoon papyrusviuhkoina ja keskellä riippuu '
+                    + 'kerroksittainen valaisin.',
                   lahde: 'Faris El-Gwely, Wikimedia Commons (CC BY-SA 3.0)',
                 },
                 {
                   tiedosto: 'Passengers get off a train at El Mar Girgis station in Cairo.jpg',
-                  selite: 'Metrojunia Mar Girgisin asemalla '
-                    + 'mustavalkokuvassa: laiturin yllä kohoaa Pyhän '
-                    + 'Yrjön kirkon pyöreä torni. Asema on Vanhan '
-                    + 'Kairon koptilaiskortteleiden pysäkki.',
+                  selite: 'Metrojunia Mar Girgisin asemalla mustavalkokuvassa: '
+                    + 'Vanhan Kairon koptilaiskortteleiden pysäkin laiturin '
+                    + 'yllä kohoaa Pyhän Yrjön kirkon pyöreä torni.',
                   lahde: 'Jim Joel, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
@@ -790,10 +796,9 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Islamic-cairo-street.jpg',
-                  selite: 'Mashrabiya-erkkerit varjostavat katua: '
-                    + 'puuristikko päästää tuulen sisään mutta pitää '
-                    + 'katseet ulkona. Kadun päässä on Katkhudan '
-                    + 'sabil, vesitarjoilupaviljonki vuodelta 1744.',
+                  selite: 'Mashrabiya-erkkerit varjostavat katua '
+                    + 'puuristikoillaan, ja kadun päässä on Katkhudan sabil, '
+                    + 'vesitarjoilupaviljonki vuodelta 1744.',
                   lahde: 'Joonas Plaan, Wikimedia Commons (CC BY 2.0)',
                 },
               ],
@@ -898,9 +903,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Vesijohto Niililtä',
               tiedosto: 'The aqueduct seen from the the Island of Rhoda, Cairo, Egypt Wellcome V0012305.jpg',
-              selite: 'Keskiaikainen vesijohto kantoi Niilin vettä '
-                + 'linnoitukselle asti. Etualalla joen veneitä Rhodan '
-                + 'saaren rannassa.',
+              selite: 'Keskiaikainen vesijohto kantoi Niilin vettä linnoitukselle '
+                + 'asti; etualalla on joen veneitä Rhodan saaren rannassa.',
               lahde: 'David Roberts / Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
             },
           ],
@@ -936,10 +940,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'torstaina, Kairon kadut hiljenivät ja kahvilat täyttyivät '
             + 'kuuntelijoista. Yksi laulu saattoi kestää tunnin, eikä '
             + 'kukaan pitänyt sitä pitkänä.',
-          selite: 'Umm Kulthum mikrofonin äärellä uransa alkupuolella. '
-            + 'Tunnusmerkit olivat aina samat: tummat lasit, nenäliina '
-            + 'kädessä ja orkesteri takana — ja ääni, jota kutsuttiin '
-            + 'Egyptin neljänneksi pyramidiksi.',
+          selite: 'Umm Kulthum mikrofonin äärellä uransa alkupuolella '
+            + 'tunnusmerkkeineen: tummat lasit, nenäliina kädessä ja '
+            + 'orkesteri takana.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Umm Kulthum',
           musiikki: 'https://music.apple.com/fi/album/enta-oumry-remastered/922753882?i=922753943',
@@ -983,10 +986,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuotta. Ensimmäisestä moskeijasta ei ole jäljellä '
             + 'mitään: sali on rakennettu uudelleen kerta toisensa '
             + 'jälkeen.',
-          selite: 'Amr ibn al-Asin moskeijan rukoussali nykyään. '
-            + 'Marmoripylväiden rivit kantavat teräväkärkisiä kaaria '
-            + 'ja puisia vetopalkkeja, katosta riippuu lamppuja ja '
-            + 'lattialla on punainen matto.',
+          selite: 'Amr ibn al-Asin moskeijan rukoussali nykyään: marmoripylväiden '
+            + 'rivit kantavat teräväkärkisiä kaaria ja puisia vetopalkkeja, '
+            + 'ja lattialla on punainen matto.',
           lahde: 'Protious, Wikimedia Commons (CC0)',
         },
         {
@@ -1003,11 +1005,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskimäärin kuusi vuotta, ja yksittäinen opettaja '
             + 'päätti itse, milloin oppilas oli valmis. Opiskelijat '
             + 'asuivat riwaq-osastoissa kotiseutunsa mukaan.',
-          selite: 'Kaksi al-Azharin oppinutta keskustelee moskeijan '
-            + 'marmoripihalla, toisella papereita kädessä. Taustalla '
-            + 'istuu oppilaita lattialla puisen ristikkoseinän edessä, '
-            + 'ja pihaa kiertävät koristeellisin kapiteelein veistetyt '
-            + 'pylväät.',
+          selite: 'Kaksi al-Azharin oppinutta keskustelee moskeijan pylväiden '
+            + 'kiertämällä marmoripihalla, ja taustalla istuu oppilaita '
+            + 'lattialla puisen ristikkoseinän edessä.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -5574,6 +5574,13 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke): tämän kaupungin kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lähderivit ovat
+   * ennallaan.
+   */
   istanbul: [
     {
       id: 'kaupunki',
@@ -5585,22 +5592,21 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Istanbul Basilica Cistern 2009.JPG',
           lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
-          selite: 'Yerebatanin vesisäiliö kaupungin alla. Pylväsrivit katoavat '
-            + 'hämärään, vesi peilaa holvit, ja valaistus värjää kiven '
+          selite: 'Yerebatanin vesisäiliö kaupungin alla: pylväsrivit katoavat '
+            + 'hämärään, vesi peilaa holvit ja valaistus värjää kiven '
             + 'punaiseksi.',
         },
         {
           tiedosto: 'Ortaköy Mosque and Bosphorus Bridge, Istanbul 2008.jpg',
-          selite: 'Ortaköyn moskeija Bosporin rannassa. Takana kaartuu '
-            + 'riippusilta, joka vie salmen yli Aasian puolelle, ja sen '
-            + 'alitse liukuu lautta.',
+          selite: 'Ortaköyn moskeija Bosporin rannassa, ja takana kaartuu '
+            + 'riippusilta, joka vie salmen yli Aasian puolelle.',
           lahde: 'Darwinek, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Istanbul spice bazaar 02.jpg',
-          selite: 'Maustebasaarin koju Eminönüssä. Etualalla on kasoittain '
-            + 'kuivattuja taateleita, aprikooseja ja viikunoita, oikealla '
-            + 'rivi lokumia — ja jokaisessa kasassa oma hintalappunsa.',
+          selite: 'Maustebasaarin koju Eminönüssä: etualalla on kasoittain '
+            + 'kuivattuja taateleita, aprikooseja ja viikunoita ja oikealla '
+            + 'rivi lokumia.',
           lahde: 'Takeaway, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -5615,9 +5621,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'syntyi Hagia Sofiassa vuonna 2004 ja asui siellä kuudentoista '
             + 'vuoden ajan. Presidentti Barack Obama pysähtyi silittämään sitä '
             + 'vierailullaan 2009. Gli haudattiin Hagia Sofian pihaan.',
-          selite: 'Gli Hagia Sofian marmorilattialla ruokakuppinsa vieressä. '
-            + 'Kissa syntyi rakennuksessa, joka oli silloin museo, ja tuli '
-            + 'tunnetuksi tuhansien matkailijoiden valokuvista.',
+          selite: 'Gli Hagia Sofian marmorilattialla ruokakuppinsa vieressä — '
+            + 'kissa syntyi rakennuksessa, joka oli silloin museo.',
           lahde: 'Kadı, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Hagia Sofia',
         },
@@ -5634,9 +5639,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kahden pylvään jalustaksi on pantu kivi, johon on veistetty '
             + 'Medusan kasvot. Toinen on kyljellään, toinen ylösalaisin, eikä '
             + 'kukaan tiedä miksi.',
-          selite: 'Toinen Medusan päistä pylvään alla Yerebatanin holvissa. Kivi '
-            + 'on käännetty ylösalaisin, silmät ovat kiinni ja hiusten '
-            + 'käärmeet kiertyvät kasvojen ympäri.',
+          selite: 'Toinen Medusan päistä pylvään alla Yerebatanin holvissa, '
+            + 'ylösalaisin käännettynä ja silmät kiinni käärmehiusten '
+            + 'keskellä.',
           lahde: 'Ank Kumar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Yerebatan Sarayı',
         },
@@ -5652,7 +5657,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jalustaan hakattiin kaksi kertomusta pystyttämisestä: '
             + 'latinankielinen kehuu työn kestäneen kolmekymmentä päivää, '
             + 'kreikankielisessä lukee kolmekymmentäkaksi.',
-          selite: 'Obeliski Sultanahmetin aukiolla. Jokaisella sivulla kulkee '
+          selite: 'Obeliski Sultanahmetin aukiolla: jokaisella sivulla kulkee '
             + 'yksi pystyrivi hieroglyfejä, ja huippu on hakattu pieneksi '
             + 'pyramidiksi.',
           lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
@@ -5691,10 +5696,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sultanahmet ferry on the Bosphorus in Istanbul, Turkey 001.jpg',
-          selite: 'Lauttoja rantalaiturissa vanhankaupungin kupeessa. '
-            + 'Puiden yllä erottuu harjanteella Hagia Sofian matala '
-            + 'kupoli ja neljä minareettia, ja etualan lautan kyljessä '
-            + 'lukee SULTANAHMET.',
+          selite: 'Lauttoja rantalaiturissa vanhankaupungin kupeessa, '
+            + 'harjanteella kohoavan Hagia Sofian alla; etualan lautan '
+            + 'kyljessä lukee SULTANAHMET.',
           lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -5797,17 +5801,15 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'T1 Istanbul Tram with Hagia Sophia in the background, March 2024.jpg',
-                  selite: 'Puna-valkoinen nivelraitiovaunu kaartaa '
-                    + 'Sultanahmetin pysäkille. Taustalla kohoaa Hagia '
-                    + 'Sofia kupoleineen ja kahtena minareettina, ja '
-                    + 'kadun yllä risteilee ajolankaverkko.',
+                  selite: 'Puna-valkoinen nivelraitiovaunu kaartaa Sultanahmetin '
+                    + 'pysäkille, ja taustalla kohoaa Hagia Sofia kupoleineen '
+                    + 'ja minareetteineen.',
                   lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Karaköy Mars 2013 02.jpg',
-                  selite: 'Kaupunkilautta kiinni Karaköyn laiturissa, '
-                    + 'kyltissä lukee KARAKÖY İSKELESİ. Vasemmalla '
-                    + 'nousee rantakadun talorivi ja vastarannalla '
+                  selite: 'Kaupunkilautta kiinni Karaköyn laiturissa, jonka '
+                    + 'kyltissä lukee KARAKÖY İSKELESİ, ja vastarannalla '
                     + 'häämöttää Aasian puoli.',
                   lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
                 },
@@ -5918,10 +5920,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joka huhtikuu kansainvälinen tulppaanijuhla.',
               kuva: {
                 tiedosto: 'Tulips from 8th Istanbul tulip festival,Emirgan.JPG',
-                selite: 'Pinkkejä tulppaaneja puunrungon vierellä '
-                  + 'Emirganin puistossa. Kukat ovat vielä tiukassa '
-                  + 'nupussa, ja taustalla erottuu toinen, vaaleampi '
-                  + 'penkki.',
+                selite: 'Pinkkejä tulppaaneja puunrungon vierellä Emirganin '
+                  + 'puistossa, kukat vielä tiukassa nupussa.',
                 lahde: 'MustafaAslanbay, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -5948,9 +5948,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '1826, mutta Istanbulin sotilasmuseon johtaja herätti sen '
             + 'henkiin 1911. Museossa se marssii yhä.',
           selite: 'Mehter-soittokunta esiintyy Istanbulin sotilasmuseossa '
-            + 'Harbiyessä. Tummansiniviittaiset rumpalit kantavat hihnoilla '
-            + 'viininpunaisia, kullalla koristeltuja davul-rumpuja, ja '
-            + 'oikealla erottuu vihreä ja punainen kaftaani sekä sapeli.',
+            + 'Harbiyessä: tummansiniviittaiset rumpalit kantavat hihnoilla '
+            + 'kullalla koristeltuja davul-rumpuja.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mehter',
           musiikki: 'https://music.apple.com/fi/search?term=mehter',
@@ -5970,9 +5969,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaikkiaan yli 250 kilometriä — antiikin pisin. Vesi '
             + 'varastoitiin maan alle, muun muassa siihen säiliöön, jossa '
             + 'Medusa nukkuu.',
-          selite: 'Bozdoğan Kemeri Atatürk-bulevardin yllä. Alempi kaaririvi '
-            + 'kannattaa ylempää, ja autot ajavat kaaren alitse molempiin '
-            + 'suuntiin.',
+          selite: 'Bozdoğan Kemeri Atatürk-bulevardin yllä: alempi kaaririvi '
+            + 'kannattaa ylempää, ja autot ajavat kaarien alitse.',
           lahde: 'Laima Gūtmane, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Akvedukti',
         },
@@ -23574,6 +23572,13 @@ export const KULTTUURI_KATEGORIAT = {
    * koska IRQ-maalehdellä on muinaisuus, ruoka, rakennukset ja suot
    * — sama id kaupungilla peittäisi maan sivun (rakennaSivut).
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke): tämän kaupungin kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lähderivit ovat
+   * ennallaan.
+   */
   bagdad: [
     {
       id: 'kaupunki',
@@ -23585,28 +23590,23 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '001124-Alkadhemiya-Baghdad-IMG 7802-2.jpg',
-          selite: 'Al-Kadhimiyan pyhäkkö Bagdadin pohjoisosassa. '
-            + 'Rakennuksessa on kaksi kullattua kupolia ja neljä '
-            + 'kullattua minareettia, ja portti on verhottu siniseen ja '
-            + 'valkoiseen kaakeliin. Katolla liehuu vihreitä lippuja.',
+          selite: 'Al-Kadhimiyan pyhäkkö Bagdadin pohjoisosassa: kaksi kullattua '
+            + 'kupolia, neljä kullattua minareettia ja siniseen ja valkoiseen '
+            + 'kaakeliin verhottu portti.',
           lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'AlKhulafa Mosque in Baghdad 01.jpg',
-          selite: 'Khulafa-moskeijan minareetin huippu alhaalta kuvattuna. '
-            + 'Vaalea yläosa lepää kennomaisten syvennysten varassa, ja '
-            + 'sen päällä on kapea huippu. Alempana kiertää tiiliseinässä '
-            + 'arabiankielinen kirjoitusnauha, edessä on kaide ja '
-            + 'oikeassa reunassa puun oksisto.',
+          selite: 'Khulafa-moskeijan minareetin huippu alhaalta kuvattuna: vaalea '
+            + 'yläosa lepää kennomaisten syvennysten varassa, ja alempana '
+            + 'kiertää tiiliseinässä arabiankielinen kirjoitusnauha.',
           lahde: 'Usamasaad, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'كهرمانة 03.jpg',
-          selite: 'Kahramana-suihkulähde katuaukiolla. Pronssinen naishahmo '
-            + 'kallistaa ruukkua noin neljänkymmenen vihreäksi '
-            + 'patinoituneen pronssiruukun rivistön yläpuolella. '
-            + 'Ympärillä on katulamppuja, palmu, keltainen taksi ja '
-            + 'arabiankielisiä liikekylttejä asuintalon seinässä.',
+          selite: 'Kahramana-suihkulähde katuaukiolla: pronssinen naishahmo '
+            + 'kallistaa ruukkua noin neljänkymmenen patinoituneen '
+            + 'pronssiruukun rivistön yläpuolella.',
           lahde: 'Hussein A.Al-mukhtar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -23623,11 +23623,9 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: '160731-D-PB383-021 Tigris River flows through Baghdad, July 2016.JPG',
-          selite: 'Tigris kaartaa kaupungin halki ilmasta katsottuna: joki '
-            + 'tekee leveän silmukan, jonka niemellä on matalaa '
-            + 'rakennuskantaa ja rannoilla palmulehtoja ja '
-            + 'viljelypalstoja. Etualalla risteilee kaupunkimoottoritie '
-            + 'liittymineen, ja oikealla piirtyy voimalan savupiippuja.',
+          selite: 'Tigris kaartaa kaupungin halki ilmasta katsottuna: joki tekee '
+            + 'leveän silmukan, jonka niemellä on matalaa rakennuskantaa ja '
+            + 'rannoilla palmulehtoja ja viljelypalstoja.',
           lahde: 'DoD photo by Navy Petty Officer 2nd Class Dominique A. '
             + 'Pineiro, Wikimedia Commons (PD)',
         },
@@ -23645,8 +23643,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Mesopotamian sunset.jpg',
           selite: 'Auringonlasku Tigrisin yllä: aurinko painuu vastarannan '
             + 'talojen ja puiden taakse, taivas hehkuu oranssina ja joki '
-            + 'heijastaa värin. Rannan tuntumassa kelluu pieni vene, ja '
-            + 'etualalla tummuu pensaikko.',
+            + 'heijastaa värin.',
           lahde: 'Silver mahmoud, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -23677,9 +23674,9 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Alqushla tower.jpg',
-          selite: 'Qushlan kellotorni kasarmiaukiolla. Ottomaanien '
-            + 'rakennuttama torni kohoaa palmujen yli, ja aukiolla '
-            + 'luetaan yhä runoja ääneen.',
+          selite: 'Ottomaanien rakennuttama Qushlan kellotorni kohoaa '
+            + 'kasarmiaukion palmujen yli, ja aukiolla luetaan yhä runoja '
+            + 'ääneen.',
           lahde: 'Yasin Alqaisy, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Bagdad on kahdeksan miljoonan asukkaan pääkaupunki, '
@@ -23726,22 +23723,22 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'شارع الرشيد 7.jpg',
-                  selite: 'Al-Rashid-katu pylväskäytävineen. Pylväiden '
-                    + 'varaan nousevat ulkonevat parvekkeet, ja käytävä '
-                    + 'varjostaa kulkijaa koko matkan.',
+                  selite: 'Al-Rashid-katu pylväskäytävineen, joiden varaan '
+                    + 'nousevat ulkonevat parvekkeet ja jotka varjostavat '
+                    + 'kulkijaa koko matkan.',
                   lahde: 'Ali.tinbo, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Al-Mutanabbi Street Gate.png',
-                  selite: 'Mutanabbin kadun kaariportti. Kadun toisessa '
-                    + 'päässä portti, toisessa runoilijan patsas '
-                    + 'Tigrisin rannalla.',
+                  selite: 'Mutanabbin kadun kaariportti, jota vastapäätä kadun '
+                    + 'toisessa päässä seisoo runoilijan patsas Tigrisin '
+                    + 'rannalla.',
                   lahde: 'Ayham4002, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'An Iraqi man sells fruit at a market in Al Rashid, Baghdad, Iraq.jpg',
-                  selite: 'Hedelmäkauppias al-Rashidin torilla. Appelsiinit '
-                    + 'ja granaattiomenat ovat laatikoissa myyjän edessä, '
+                  selite: 'Hedelmäkauppias al-Rashidin torilla: appelsiinit ja '
+                    + 'granaattiomenat ovat laatikoissa myyjän edessä ja '
                     + 'banaanit riippuvat katoksesta.',
                   lahde: 'James (Jim) Gordon, Wikimedia Commons (CC BY 2.0)',
                 },
@@ -23766,10 +23763,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja nykyään vihkoja, paperia ja koulukirjoja.',
               kuva: {
                 tiedosto: 'مشهد للكتب وهي تفترش الارض في شارع المتنبي.jpg',
-                selite: 'Kirjat levitettyinä katukiveykselle Mutanabbin '
-                  + 'kadulla. Kannet on ladottu riveihin niin pitkälle '
-                  + 'kuin kuja jatkuu, ja ostajat kävelevät niiden '
-                  + 'välissä.',
+                selite: 'Kirjat levitettyinä katukiveykselle Mutanabbin kadulla '
+                  + 'niin pitkälle kuin kuja jatkuu, ja ostajat kävelevät '
+                  + 'rivien välissä.',
                 lahde: 'Mondalawy, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -23815,10 +23811,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'huonetta eikä lainkaan avointa keskuspihaa.',
               kuva: {
                 tiedosto: 'المدرسة المستنصرية في بغداد (3).jpg',
-                selite: 'Mustansiriya-koulun sisäpiha ja sen '
-                  + 'vesiallas. Tiiliseinien kaarikäytävät ja palmut '
-                  + 'heijastuvat veteen; talo on yksi maailman '
-                  + 'vanhimpia yhä seisovia korkeakoulurakennuksia.',
+                selite: 'Mustansiriya-koulun sisäpiha ja vesiallas, johon '
+                  + 'tiiliseinien kaarikäytävät ja palmut heijastuvat — talo '
+                  + 'on yksi maailman vanhimpia yhä seisovia '
+                  + 'korkeakoulurakennuksia.',
                 lahde: 'Taisir Mahdi, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -23941,11 +23937,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tähtikuvioita ja kasviaiheita, ja oviaukkojen molemmin '
             + 'puolin on pieniä leijonakaiverruksia. Kulkutie ei mene '
             + 'suoraan läpi vaan kaartaa.',
-          selite: 'Bab al-Wastani, Bagdadin keskiaikaisen muurin ainoa '
-            + 'jäljellä oleva portti, sisäpihan puolelta. Korkean ja '
-            + 'teräväkärkisen holvikaaren yläpuolella harjaa kiertävät '
-            + 'hammastetut lohkot, ja pihaa reunustaa tiiliseinä, jossa on '
-            + 'rivi kaarisyvennyksiä.',
+          selite: 'Bab al-Wastani, Bagdadin keskiaikaisen muurin ainoa jäljellä '
+            + 'oleva portti, sisäpihan puolelta: teräväkärkisen holvikaaren '
+            + 'yläpuolella harjaa kiertävät hammastetut lohkot.',
           lahde: 'Aboalhasan Ayad, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -23961,10 +23955,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kupuun. Kennoja on kuusitoista, ja jokaisessa on pieni '
             + 'aukko paksun lasin takana. Sisähuone on noin kolme metriä '
             + 'pitkä ja seitsemän leveä.',
-          selite: 'Zumurrud Khatunin hauta Bagdadin Karkhin puolella. '
-            + 'Kahdeksankulmaisen tiilirungon päällä kohoaa kartiomainen '
-            + 'kennokatto, joka näyttää alhaalta kuusenkävyltä. Seinissä on '
-            + 'teräväkärkisiä syvennyksiä ja koristemuurausta.',
+          selite: 'Zumurrud Khatunin hauta Bagdadin Karkhin puolella: '
+            + 'kahdeksankulmaisen tiilirungon päällä kohoaa kartiomainen '
+            + 'kennokatto, joka näyttää alhaalta kuusenkävyltä.',
           lahde: 'Moshtakmoshtak, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -23981,11 +23974,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'viittaa babylonialaisiin ja assyrialaisiin kaiverruksiin. '
             + 'Salim kuoli tammikuussa 1961, ja työn saattoivat valmiiksi '
             + 'hänen puolisonsa Lorna Selim ja Mohammed Ghani Hikmat.',
-          selite: 'Vapauden monumentti Tahririn aukiolla. Vaalean '
-            + 'travertiiniseinän pinnassa on rivi tummia pronssihahmoja, ja '
-            + 'seinä lepää tukien varassa irti maasta, niin että alta näkyy '
-            + 'puistoa ja palmuja. Muistomerkki tehtiin Irakin '
-            + 'itsenäisyysjulistuksen muistoksi.',
+          selite: 'Vapauden monumentti Tahririn aukiolla, tehty Irakin '
+            + 'itsenäisyysjulistuksen muistoksi: maasta irti nostetun '
+            + 'travertiiniseinän pinnassa on rivi tummia pronssihahmoja.',
           lahde: 'Hussein A.Al-mukhtar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -24011,11 +24002,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Jawad ehdotti sitä abbasidikalifin mukaan. 1930-luvulla '
             + 'kadulle avattiin elokuvateattereita, ja torstai-ilta oli '
             + 'perheiden elokuvailta.',
-          selite: 'Talo al-Rashid-kadun varrella. Kolmessa kerroksessa on '
-            + 'ulkonevat parvekkeet, joiden koristekuvioiksi valetut '
-            + 'kaiteet on maalattu vaaleanpunaisella ja turkoosilla. '
-            + 'Katutasossa parvekerivistöä kannattavat valkoiset pylväät '
-            + 'myymälöiden rullaovien edessä.',
+          selite: 'Talo al-Rashid-kadun varrella: kolmen kerroksen ulkonevien '
+            + 'parvekkeiden valetut kaiteet on maalattu vaaleanpunaisella ja '
+            + 'turkoosilla, ja katutasossa niitä kannattavat valkoiset '
+            + 'pylväät.',
           lahde: 'Ayham4002, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -24032,11 +24022,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sai nimensä runoilija Jamil Sidqi al-Zahawista. '
             + '1930-luvulla siellä kävi bengalilainen runoilija '
             + 'Rabindranath Tagore.',
-          selite: 'Al-Zahawin kahvila al-Rashid-kadun kulmassa illalla. '
-            + 'Puinen julkisivu on jaettu kaariruuduiksi, seinillä palaa '
-            + 'lyhtyjä ja räystään alla kaartuu arabiankielinen kyltti. '
-            + 'Kadulle on nostettu pöytiä ja tuoleja, joissa istuu '
-            + 'vieraita.',
+          selite: 'Al-Zahawin kahvila al-Rashid-kadun kulmassa illalla: puinen '
+            + 'kaariruuduiksi jaettu julkisivu, lyhtyjä seinillä ja kadulle '
+            + 'nostettuja pöytiä, joissa istuu vieraita.',
           lahde: 'Ayham4002, Wikimedia Commons (CC0)',
         },
         {
@@ -24051,11 +24039,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'katua: samalla alueella olivat mandealaisten hopeaseppien '
             + 'pajat, ja vuonna 1866 sinne valmistui Pyhän Joosefin '
             + 'latinalainen katedraali.',
-          selite: 'Shorjan torikuja täynnä ihmisiä. Myyjä kaataa karkkeja '
-            + 'pussiin, tiskeillä on avonaisia laatikoita makeisia, '
-            + 'kuivattuja hedelmiä ja pähkinöitä, ja seinustan hyllyillä '
-            + 'pakattuja tavaroita. Käytävä jatkuu yhtä täytenä niin '
-            + 'pitkälle kuin näkyy.',
+          selite: 'Shorjan torikuja täynnä ihmisiä niin pitkälle kuin näkyy: '
+            + 'tiskeillä on avonaisia laatikoita makeisia, kuivattuja '
+            + 'hedelmiä ja pähkinöitä.',
           lahde: 'Chinese Horse From Kaso Mall, Wikimedia Commons (CC0)',
         },
       ],
@@ -26908,6 +26894,13 @@ export const KULTTUURI_KATEGORIAT = {
    * historian, rakennukset, puutarhat, ruoan ja käsityön, ja
    * Tabrizin kaupunkilehti vei luonnon.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE":
+   * kuvateksti on yksi virke): tämän kaupungin kaksi- ja
+   * kolmivirkkeiset selitteet on tiivistetty yhdeksi virkkeeksi.
+   * Nostot, oppaat, johdannot, kuvatiedostot ja lähderivit ovat
+   * ennallaan.
+   */
   teheran: [
     {
       id: 'kaupunki',
@@ -26920,27 +26913,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'National Garden Gate Tehran.jpg',
-          selite: 'Bagh-e Mellin portti Teheranissa sateen jälkeen. '
-            + 'Tiilisen porttirakennuksen kaarevan puuoven yläpuolella on '
-            + 'värillisiä kaakelitauluja ja persiankielisiä kirjoituksia, '
-            + 'ja ylhäällä kohoaa kaksi tornia. Portin sivuilla jatkuu '
-            + 'pitkä tiilitalo pilastereineen.',
+          selite: 'Bagh-e Mellin portti Teheranissa sateen jälkeen: tiilisen '
+            + 'porttirakennuksen kaarevan puuoven yläpuolella on värillisiä '
+            + 'kaakelitauluja ja persiankielisiä kirjoituksia, ja ylhäällä '
+            + 'kohoaa kaksi tornia.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Irán (RPS 10-10-2019) Aprendiendo de los mayores.jpg',
-          selite: 'Ruokakoju Teheranissa. Kahdessa suuressa kuparipadassa '
-            + 'on vihreää yrttikeittoa ja vaaleaa keitosta, ja mies '
-            + 'nostaa keitosta kauhalla valkoiseen kulhoon. Takana näkyy '
-            + 'myymälän hyllyjä ja kaksi samovaaria.',
+          selite: 'Ruokakoju Teheranissa: kahdessa suuressa kuparipadassa on '
+            + 'vihreää yrttikeittoa ja vaaleaa keitosta, ja mies nostaa '
+            + 'keitosta kauhalla valkoiseen kulhoon.',
           lahde: 'Raimundo Pastor y Pilar Pastor, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '30 Tir street in Tehran 2019 by Mardetanha (101).jpg',
-          selite: 'Katukoju 30 Tir -kadulla Teheranissa. Esiliinaan '
-            + 'pukeutunut myyjä lappaa leveällä lastalla paistettuja '
-            + 'perunanlohkoja kuviolliseen pahvivuokaan, ja vieressä on '
-            + 'matala pelti tummaksi grillattua ruokaa.',
+          selite: 'Katukoju 30 Tir -kadulla Teheranissa: esiliinaan pukeutunut '
+            + 'myyjä lappaa leveällä lastalla paistettuja perunanlohkoja '
+            + 'kuviolliseen pahvivuokaan.',
           lahde: 'Mardetanha, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -27044,9 +27034,8 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Tehran Subway.jpg',
-                  selite: 'Metrojuna saapuu asemalle. Vuonna 1999 avattu '
-                    + 'verkko on kaupungin nopein tapa päästä päästä '
-                    + 'päähän.',
+                  selite: 'Metrojuna saapuu asemalle — vuonna 1999 avattu verkko '
+                    + 'on kaupungin nopein tapa päästä päästä päähän.',
                   lahde: 'Mehrraz, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
@@ -27058,9 +27047,9 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Tabi\'at Bridge - panoramio.jpg',
-                  selite: 'Tabiat-silta vie jalankulkijat moottoritien yli '
-                    + 'kahden puiston välillä. Taustalla näkyy Elburs, '
-                    + 'joka on aina pohjoisessa.',
+                  selite: 'Tabiat-silta vie jalankulkijat moottoritien yli kahden '
+                    + 'puiston välillä, ja taustalla näkyy Elburs, joka on '
+                    + 'aina pohjoisessa.',
                   lahde: 'Ali Safdarian, Wikimedia Commons (CC BY 3.0)',
                 },
               ],
@@ -27084,9 +27073,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'päivänvalo tulee sisään niiden aukoista.',
               kuva: {
                 tiedosto: 'Bazar de Téhéran (2).jpg',
-                selite: 'Basaarin holvikatto sisältä. Tiiliholvit '
-                  + 'seuraavat toisiaan kujan yllä, ja päivänvalo putoaa '
-                  + 'sisään holvien aukoista.',
+                selite: 'Basaarin holvikatto sisältä: tiiliholvit seuraavat '
+                  + 'toisiaan kujan yllä, ja päivänvalo putoaa sisään niiden '
+                  + 'aukoista.',
                 lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27113,8 +27102,8 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Golestan door.JPG',
                 selite: 'Golestanin palatsin ovet ja niitä kehystävä '
-                  + 'kaakelikenttä. Turkoosin ja keltaisen kuvioissa '
-                  + 'toistuu leijona, jonka takaa nousee aurinko.',
+                  + 'kaakelikenttä, jonka turkoosin ja keltaisen kuvioissa '
+                  + 'toistuu leijona ja sen takaa nouseva aurinko.',
                 lahde: 'مانفی, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -27139,9 +27128,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Sangak bread in Tehran, national bread of Iran. (42426069272).jpg',
                 asettelu: 'kapea',
-                selite: 'Sangak-leipä tulee uunista. Taikina paistetaan '
-                  + 'kuumien pikkukivien päällä, ja kivet jättävät '
-                  + 'leipään kuoppaisen pinnan.',
+                selite: 'Sangak-leipä tulee uunista: taikina paistetaan kuumien '
+                  + 'pikkukivien päällä, ja kivet jättävät leipään kuoppaisen '
+                  + 'pinnan.',
                 lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -27165,10 +27154,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Darband, Teherán, Irán, 2016-09-18, DD 13.jpg',
                 asettelu: 'kapea',
-                selite: 'Darbandin puro ja sen ylle rakennetut '
-                  + 'teehuoneet. Rinteeseen on ladottu porrasmainen rivi '
-                  + 'terasseja, joilla istutaan matoilla veden '
-                  + 'yläpuolella.',
+                selite: 'Darbandin puro ja sen ylle rakennetut teehuoneet: '
+                  + 'rinteeseen on ladottu porrasmainen rivi terasseja, '
+                  + 'joilla istutaan matoilla veden yläpuolella.',
                 lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27268,11 +27256,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Itse rakennusta ei ole enää: sen paikalle nousi '
             + '1940-luvulla pankkitalo. Qajar-kaudella koko Teheranissa '
             + 'kerrotaan olleen jopa viisikymmentä takyeh-taloa.',
-          selite: 'Takyeh Dowlatin sisusta 1800-luvun lopulla. Kaartuvassa '
-            + 'seinässä on kolme kerrosta kaariaukkoja, ja pinnat on '
-            + 'peitetty kuviolaatoin ja kipsikoristein. Leveillä '
-            + 'kiviportailla seisoo pitkätakkisia miehiä; albuminlehteen on '
-            + 'kirjoitettu käsin Teheran.',
+          selite: 'Takyeh Dowlatin sisusta 1800-luvun lopulla: kaartuvassa '
+            + 'seinässä on kolme kerrosta kuviolaatoin peitettyjä '
+            + 'kaariaukkoja, ja leveillä kiviportailla seisoo pitkätakkisia '
+            + 'miehiä.',
           lahde: 'Antoin Sevruguin, Wikimedia Commons (PD)',
         },
         {
@@ -27290,11 +27277,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'poikkileikkaus on kolmisakarainen tähti; pylväät '
             + 'kannattavat kaartuvia palkkeja, jotka muodostavat '
             + 'ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.',
-          selite: 'Kaupunginteatteri päivänvalossa. Pyöreää rakennusta '
-            + 'kiertää pylväsrivi, jonka kärjekkäät kaaret kannattavat '
-            + 'vinoneliökuvioista ulkonevaa katosta. Seinän vaalea ja '
-            + 'turkoosi laatoitus muodostaa vinoruudukon, ja sen keskellä '
-            + 'on leveä kaksiosainen ovi.',
+          selite: 'Kaupunginteatteri päivänvalossa: pyöreää, vaalean ja turkoosin '
+            + 'laatan peittämää rakennusta kiertää pylväsrivi, jonka '
+            + 'kärjekkäät kaaret kannattavat ulkonevaa katosta.',
           lahde: 'A 1999 2, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27312,11 +27297,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Mellin alueelle kuusikerroksiseen taloon. Kadun varrella '
             + 'on kaksi kirkkoa, tulitemppeli sekä synagoga moskeijan '
             + 'vieressä, ja siksi sitä sanotaan uskontojen kaduksi.',
-          selite: 'Malekin kirjaston ja museon rakennus Mashqin kentän '
-            + 'laidalla. Keltatiilisessä julkisivussa vuorottelevat '
-            + 'kärjekkäät ikkunat ja sinivalkoiset kaakelitaulut. '
-            + 'Kaariportti on peitetty sinisellä ja turkoosilla laatalla, '
-            + 'ja sen holvissa on tippukivimäinen kuviointi.',
+          selite: 'Malekin kirjaston ja museon rakennus Mashqin kentän laidalla: '
+            + 'keltatiilisessä julkisivussa vuorottelevat kärjekkäät ikkunat '
+            + 'ja sinivalkoiset kaakelitaulut, ja kaariportti on peitetty '
+            + 'sinisellä ja turkoosilla laatalla.',
           lahde: 'Wojciech Kocot, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -27344,10 +27328,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on marinoitua kokolihaa, koobideh jauhettua lihaa sipulin '
             + 'ja persiljan kanssa ja jujeh kanaa.',
           selite: 'Ateria levitettynä punaiselle matolle teheranilaisessa '
-            + 'ravintolassa. Sinikuvioisella lautasella on pitkä '
-            + 'jauhelihavarras, grillattuja tomaatteja ja pikkelssejä, '
-            + 'vieressä kivinen ruukku keitosta ja kulhossa survin. Matolla '
-            + 'on myös teelaseja, yrttejä ja leipää.',
+            + 'ravintolassa: lautasella on pitkä jauhelihavarras, grillattuja '
+            + 'tomaatteja ja pikkelssejä, vieressä kivinen ruukku keitosta ja '
+            + 'ympärillä teelaseja, yrttejä ja leipää.',
           lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -27363,11 +27346,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'survottuna. Survoksen nimi on gusht-e kubideh eli survottu '
             + 'liha, ja se syödään leivän, sipulin ja pikkelssien kanssa. '
             + 'Kaukasuksen ja Keski-Aasian piti on saman ruoan muunnelma.',
-          selite: 'Abgusht-ateria metallitarjottimella ylhäältä kuvattuna. '
-            + 'Kuparipadassa on punaista lientä, lihanpaloja, kikherneitä '
-            + 'ja peruna. Ympärillä on kuparireunaisia kulhoja '
-            + 'säilykkeineen, oliiveineen ja jogurtteineen sekä korillinen '
-            + 'ohutta leipää.',
+          selite: 'Abgusht-ateria metallitarjottimella ylhäältä kuvattuna: '
+            + 'kuparipadassa on punaista lientä, lihanpaloja, kikherneitä ja '
+            + 'peruna, ja ympärillä kulhoja säilykkeineen ja jogurtteineen '
+            + 'sekä korillinen ohutta leipää.',
           lahde: 'Mardetanha, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27384,11 +27366,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'munakoisoa tai hapankirsikoita. Samaa keinoa sovelletaan '
             + 'Iranissa myös spagettiin, joka saa pohjalleen kovan '
             + 'kannen.',
-          selite: 'Riisiannos vaaleanpunareunaisella lautasella. '
-            + 'Kukkurallisen pitkäjyväisen valkoisen riisin laella on '
-            + 'kirkkaan keltaiseksi värjätty läiskä. Riisikeon ympärillä '
-            + 'kiertää rivi perunanviipaleita, joiden reunat ovat '
-            + 'ruskistuneet ja pinta kiiltää rasvasta.',
+          selite: 'Riisiannos lautasella: kukkurallisen valkoisen riisin laella '
+            + 'on kirkkaan keltaiseksi värjätty läiskä, ja keon ympärillä '
+            + 'kiertää rivi ruskistuneita perunanviipaleita.',
           lahde: 'Roozitaa, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],

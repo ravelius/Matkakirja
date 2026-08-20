@@ -33,8 +33,21 @@
 // teksti-kentässä, ja 1–3 avainkohtaa saa lihavoida **näin**.
 // Remontti etenee erissä; erässä R3 uuteen asuun kirjoitettiin
 // Mosul, Aleppo, Damaskos ja Luxor, erässä R4 Sanaa, Aden, Masqat
-// ja Tabriz ja erässä R5 Riad, Doha, Kuwait ja Salalah. Kappaleet ja boldit vaativat leipätekstin renderöijän —
-// ks. erän loppuraportti.
+// ja Tabriz, erässä R5 Riad, Doha, Kuwait ja Salalah ja erässä R6
+// Teheran ja Bagdad (saman erän Istanbul on europe-artikkelit.js:ssä
+// ja Kairo africa-artikkelit.js:ssä). Kappaleet ja boldit vaativat
+// leipätekstin renderöijän — ks. erän loppuraportti.
+//
+// ERÄ R6 (20.8.2026) SAI HALLINNOLLISET JA VÄESTÖLUVUT en-Wikipedian
+// raakateksteistä (Tehran, Baghdad; haettu 20.8.2026): Teheran on
+// Iranin pääkaupunki, maan suurin kaupunki ja Teheranin maakunnan
+// hallinnollinen keskus, asukkaita noin yhdeksän miljoonaa; Bagdad on
+// Irakin pääkaupunki ja suurin kaupunki, asukkaita noin kahdeksan
+// miljoonaa eli 22 prosenttia maan väestöstä, ja se oli osmanien
+// Irakin hallintokeskus. Muu aineisto tulee kaupunkien omista, jo
+// tarkistetuista lehtiteksteistä. Sisältölinjaus: Teheranista ei
+// kirjoiteta vuoden 1979 jälkeisiä kiistoja eikä Bagdadista
+// nykytilannetta — sota vain neutraalina historiana (1258).
 //
 // ERÄ R4 (20.8.2026) SAI UUDET LUVUT en-Wikipedian raakateksteistä
 // (Sanaa, Aden, Muscat, Tabriz; haettu 20.8.2026): Sanaan asukasluku
@@ -832,11 +845,38 @@ export const ASIA_ARTIKKELIT = {
       + 'samanlaisia sienimäisiä vesitorneja. Telakalla rakennetaan yhä '
       + 'puisia veneitä käsin.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on nyt lehden etusivun leipäteksti — kahdeksan virkettä
+   * kolmessa kappaleessa ('\n\n') ja kaksi maltillista **lihavointia**.
+   * Faktat ovat Bagdadin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Bagdad,
+   * maakartat.js, oma teksti-kenttä alla) sekä en-Wikipedian
+   * Baghdad-artikkelin hallinto- ja väestöluvuista. Sisältölinjaus:
+   * sota vain neutraalina historiana (mongolit 1258), ei nykytilannetta.
+   * teksti on ennallaan.
+   */
   Bagdad: {
-    intro: 'Bagdad oli tuhat vuotta sitten maailman suurin kaupunki. '
-      + 'Sen Viisauden talossa käännettiin kreikkalaiset tieteelliset '
-      + 'teokset arabiaksi — ilman sitä työtä osa niistä olisi '
-      + 'kadonnut kokonaan.',
+    intro: 'Bagdad on Irakin pääkaupunki ja suurin kaupunki, ja siellä asuu noin '
+      + 'kahdeksan miljoonaa ihmistä eli runsas viidennes koko maan '
+      + 'väestöstä. Kaupunki on Tigrisin varrella Keski-Irakissa, ja joki '
+      + 'jakaa sen kahtia: itäpuoli on Rusafa ja länsipuoli Karkh.'
+      + '\n\n'
+      + 'Kalifi al-Mansur perusti kaupungin vuonna 762 täydellisen ympyrän '
+      + 'muotoiseksi, ja siitä tuli abbasidien kalifaatin pääkaupunki. '
+      + 'Silloin Bagdad oli yksi maailman suurimmista kaupungeista ja '
+      + 'oppineisuuden keskus: **Viisauden talossa** käännettiin arabiaksi '
+      + 'kreikkalaisia, persialaisia ja intialaisia teoksia, ja intialaiset '
+      + 'numerot levisivät täältä Eurooppaan. Mongolit tuhosivat kaupungin '
+      + 'vuonna 1258, ja se menetti asemansa vuosisadoiksi; myöhemmin siitä '
+      + 'tuli osmanien Irakin hallintokeskus.'
+      + '\n\n'
+      + 'Pyöreästä kaupungista ei ole jäljellä mitään näkyvää, ja vanha '
+      + 'säilynyt puoli on toisella rannalla. Koska tasangolla ei ole '
+      + 'rakennuskiveä, Bagdad on rakennettu tiilestä: **Mustansiriya-koulu** '
+      + '1200-luvulta, Khan Mirjanin majatalo 1350-luvulta ja kaupunginmuurin '
+      + 'viimeinen portti ovat samaa ainetta. Kahvilassa tee tulee lasissa '
+      + 'eikä kupissa, ja joen rannalla grillataan yhä masgoufia.',
     teksti: 'Bagdad on Tigrisin varrella Keski-Irakissa, tasangolla '
       + 'Tigrisin ja Eufratin välissä. Kaupungin perusti kalifi '
       + 'al-Mansur vuonna 762, ja alkuperäinen kaupunki oli täydellisen '
@@ -938,10 +978,39 @@ export const ASIA_ARTIKKELIT = {
       + 'keskusmedaljonki. Alue on tunnettu myös maanjäristyksistään, '
       + 'jotka ovat tuhonneet kaupungin useaan otteeseen.',
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro on nyt lehden etusivun leipäteksti — kahdeksan virkettä
+   * kolmessa kappaleessa ('\n\n') ja kaksi maltillista **lihavointia**.
+   * Faktat ovat Teheranin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Teheran,
+   * maakartat.js, oma teksti-kenttä alla) sekä en-Wikipedian
+   * Tehran-artikkelin hallinto- ja väestöluvuista. Sisältölinjaus:
+   * hallinnollinen nykyasema kerrotaan neutraalisti eikä vuoden 1979
+   * jälkeisiin kiistoihin mennä. teksti on ennallaan.
+   */
   Teheran: {
-    intro: 'Teheran on Iranin pääkaupunki Alborz-vuorten juurella. '
-      + 'Kaupunki nousee rinnettä niin jyrkästi, että pohjoisosassa on '
-      + 'useita asteita viileämpää kuin eteläosassa.',
+    intro: 'Teheran on Iranin pääkaupunki, maan suurin kaupunki ja Teheranin '
+      + 'maakunnan hallinnollinen keskus: kaupungissa asuu noin yhdeksän '
+      + 'miljoonaa ihmistä ja koko kaupunkiseudulla yli viisitoista '
+      + 'miljoonaa. Se nousee **Alborz-vuorten** etelärinnettä noin 1 200 '
+      + 'metrin korkeudessa, ja rinne on niin jyrkkä, että pohjoisosassa on '
+      + 'useita asteita viileämpää kuin eteläosassa. Suunnistaminen on siksi '
+      + 'helppoa: vuoret ovat aina pohjoisessa, ja idässä näkyy selkeällä '
+      + 'säällä Damavand, Iranin korkein huippu.'
+      + '\n\n'
+      + 'Teheran oli pitkään vain kylä suuren Rayn kaupungin varjossa, ja '
+      + 'kadžaarien Agha Mohammad Khan valitsi sen pääkaupungiksi vasta '
+      + 'vuonna 1786. Vielä 1870-luvulla koko kaupunki mahtui muurien sisään: '
+      + 'linnake, katettu basaari ja kolme asuinkorttelia. Kadžaariajasta '
+      + 'ovat jäljellä **Golestanin palatsi**, joka kuuluu Unescon '
+      + 'maailmanperintöön, ja Dar al-Fonun, Iranin ensimmäinen moderni '
+      + 'korkeakoulu vuodelta 1851.'
+      + '\n\n'
+      + 'Vanha ydin on yhä etelässä, jossa basaarin yli kymmenen kilometriä '
+      + 'katettua kujaa, palatsi ja kansallismuseo ovat kävelymatkan päässä '
+      + 'toisistaan. Vapaapäivänä teheranilaiset nousevat Darbandin polkua '
+      + 'puron vartta vuorille teehuoneiden ohi.',
     teksti: 'Teheran on noin 1 200 metrin korkeudessa, ja sen '
       + 'pohjoislaidalla kohoavat Alborz-vuoret. Niiden takana näkyy '
       + 'Damavand, Iranin korkein huippu, 5 610 metriä. Se on uinuva '

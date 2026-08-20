@@ -2856,21 +2856,19 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 35.69815, etela: 35.66535, lansi: 51.404, ita: 51.444,
     },
     varikartta: 'assets/kartat/teheran-varikartta.png',
-    esittely: 'Teheranin vanha ydin on kartalla ruutu, jonka halki '
-      + 'kulkee kaksi pitkää suoraa väylää pohjoisesta etelään. '
-      + 'Vasemmassa laidassa on laaja puisto, jonka sisäiset polut '
-      + 'kiertävät soikioina, ja sen alapuolella korttelit ovat suuria '
-      + 'ja harvakatuisia.\n\n'
-      + 'Idässä ja etelässä kuva muuttuu toisenlaiseksi: siellä on '
-      + 'tiheä kujaverkko, jossa viivat ovat ohuita ja lyhyitä. '
-      + 'Eteläreunan tiheä tilkku on basaari — se ei ole yksi halli '
-      + 'vaan katettujen kujien kortteli, ja juuri siksi sen kujat '
-      + 'näkyvät kartalla jalankulkureitteinä eivätkä katuina. '
-      + 'Kohteet nousevat etelästä pohjoiseen: basaari alimpana, sen '
-      + 'yläpuolella Golestanin palatsi ja Dar al-Fonun, niiden '
-      + 'pohjoispuolella Toopkhanen aukio keskellä kuvaa, ja ylimpänä '
-      + 'kansallismuseo ja Bagh-e Mellin portti lännessä sekä '
-      + 'Masoudiehin talo ja Sepahsalarin moskeija idässä.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Teheranin vanha ydin, kaupungin eteläosa, johon '
+      + 'qajar-ajan Teheran mahtui muurien sisään. Eteläreunassa on basaari, '
+      + 'joka ei ole yksi halli vaan katettujen kujien kortteli — siksi sen '
+      + 'kujat merkitään kartalle jalankulkureitteinä eivätkä katuina. '
+      + 'Kohteet nousevat etelästä pohjoiseen: basaarin yläpuolella ovat '
+      + 'Golestanin palatsi ja Dar al-Fonun, niiden pohjoispuolella '
+      + 'Toopkhanen aukio, ja ylimpänä kansallismuseo, Bagh-e Mellin portti, '
+      + 'Masoudiehin talo ja Sepahsalarin moskeija.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
@@ -3098,16 +3096,19 @@ export const KAUPUNKIKARTAT = {
       pohjoinen: 33.3528, etela: 33.3272, lansi: 44.3688, ita: 44.4072,
     },
     varikartta: 'assets/kartat/bagdad-varikartta.png',
-    esittely: 'Bagdad perustettiin vuonna 762 Tigrisin länsirannalle '
-      + 'täydellisen pyöreäksi kaupungiksi. Siitä ei ole jäljellä '
-      + 'mitään: pyöreä kaupunki on maan alla nykykaupunginosien '
-      + 'kohdalla, eikä sen muuria ole löydetty. Kaupungin vanha '
-      + 'säilynyt puoli on toisella rannalla.\n\n'
-      + 'Tämä kartta on Rusafa, Tigrisin itäranta. Kaikki kuvan '
-      + 'kohteet ovat kävelymatkan päässä toisistaan, ja ne ovat eri '
-      + 'aikakausilta: abbasidien 1200-luku, al-Wazirin moskeija 1599, '
-      + 'Mirjanin karavaaniseraaji 1359, Haydarkhanan moskeija '
-      + '1820-luvulta, ottomaanien kasarmiaukio ja 1900-luvun '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Bagdad perustettiin vuonna 762 Tigrisin länsirannalle täydellisen '
+      + 'pyöreäksi kaupungiksi. Siitä ei ole jäljellä mitään: pyöreä kaupunki '
+      + 'on maan alla nykykaupunginosien kohdalla, eikä sen muuria ole '
+      + 'löydetty. Kartta on siksi Rusafa, Tigrisin itäranta, jolle vanha '
+      + 'säilynyt Bagdad jäi. Kaikki kohteet ovat kävelymatkan päässä '
+      + 'toisistaan ja eri aikakausilta: abbasidien 1200-luku, Mirjanin '
+      + 'karavaaniseraaji 1359, al-Wazirin moskeija 1599, Haydarkhanan '
+      + 'moskeija 1820-luvulta, ottomaanien kasarmiaukio ja 1900-luvun '
       + 'kirjakatu.',
     kohteet: [
       /*
@@ -3315,25 +3316,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/istanbul-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 41.0335, etela: 40.9975, lansi: 28.958, ita: 29.024 },
-    esittely: 'Istanbul seisoo kahden meren välisessä kapeikossa. '
-      + 'Bosporinsalmi yhdistää Mustanmeren ja Marmaranmeren ja '
-      + 'erottaa samalla Euroopan Aasiasta, joten kaupunki on kahdessa '
-      + 'maanosassa yhtä aikaa. Kreikkalaiset merenkulkijat perustivat '
-      + 'tänne Byzantionin noin 2 700 vuotta sitten, ja paikka '
-      + 'valittiin veden takia: salmen länsipuolelle työntyy niemi, '
-      + 'jolla on vettä kolmella sivulla, ja niemen pohjoispuolella on '
-      + 'syvä, tyyni lahti. Lahti on Kultainen sarvi, luonnonsatama, '
-      + 'jonne laivat pääsevät myrskyltä suojaan. Vanhakaupunki '
-      + 'rakennettiin juuri sille niemelle.\n\nKartalla niemi on '
-      + 'vasemmalla alhaalla. Sen pohjoispuolella kaartaa Kultainen '
-      + 'sarvi, jonka yli vie Galatan silta, pituudeltaan noin puoli '
-      + 'kilometriä. Lahden takana kohoaa mäki ja sen laella Galatan '
-      + 'torni. Oikealla levittäytyy Bosporinsalmi: kartan kohdalla se '
-      + 'on noin kaksi kilometriä leveä, ja sen takana alkaa Aasian '
-      + 'puoli, jonne pääsee lautalla Üsküdariin. Vedessä näkyy pieni '
-      + 'valkoinen täplä, luodolle rakennettu Neitsyttorni. Salmen ali '
-      + 'kulkee vuodesta 2013 myös junatunneli. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Istanbul seisoo kahden meren välisessä kapeikossa: Bosporinsalmi '
+      + 'yhdistää Mustanmeren ja Marmaranmeren ja erottaa samalla Euroopan '
+      + 'Aasiasta. Kreikkalaiset merenkulkijat perustivat tänne Byzantionin '
+      + 'noin 2 700 vuotta sitten, ja paikka valittiin veden takia — salmen '
+      + 'länsipuolelle työntyy niemi, jolla on vettä kolmella sivulla, ja sen '
+      + 'pohjoispuolella on Kultainen sarvi, luonnonsatama, jonne laivat '
+      + 'pääsevät myrskyltä suojaan. Vanhakaupunki rakennettiin juuri sille '
+      + 'niemelle, ja kartan kohteet jakautuvat sen ja salmen molempien '
+      + 'rantojen kesken: Galatan silta ja torni lahden pohjoispuolella, '
+      + 'Üsküdar Aasian puolella ja Neitsyttorni omalla luodollaan. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Suuresta basaarista ei ole suomenkielistä artikkelia; se jää
@@ -4041,15 +4039,19 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kairo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 30.068, etela: 30.018, lansi: 31.198, ita: 31.278 },
-    esittely: 'Kairo on Afrikan suurin kaupunki ja kasvoi kahdesta '
-      + 'suunnasta: etelässä oli arabien perustama Fustat, pohjoisessa '
-      + 'fatimidien 900-luvulla rakentama linnoituskaupunki al-Qahira, '
-      + 'jonka nimestä tuli Kairo. Vasta 1800-luvulla väliin '
-      + 'rakennettiin leveäkatuinen keskusta Pariisin malliin.\n\n'
-      + 'Niili jakaa kaupungin, ja sen keskellä on Geziran saari. '
-      + 'Idässä kadut kapenevat kujiksi — se osa on Unescon '
-      + 'maailmanperintökohde, jossa on yli 600 suojeltua rakennusta. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE"):
+     * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
+     * ilmansuuntien ja kortteleiden kuvailu on poistettu.
+     */
+    esittely: 'Kairo on Afrikan suurin kaupunki ja kasvoi kahdesta suunnasta: '
+      + 'etelässä oli arabien perustama Fustat, pohjoisessa fatimidien '
+      + '900-luvulla rakentama linnoituskaupunki al-Qahira, jonka nimestä '
+      + 'tuli Kairo. Väliin rakennettiin leveäkatuinen keskusta vasta '
+      + '1800-luvulla. Niili jakaa kaupungin, ja sen keskellä on Geziran '
+      + 'saari. Kartan itälaidassa on vanhakaupunki, Unescon '
+      + 'maailmanperintökohde, jossa on yli 600 suojeltua rakennusta. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään, jotta numerot etenevät kartalla luontevasti.
