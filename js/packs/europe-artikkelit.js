@@ -218,11 +218,38 @@ export const EUROPE_ARTIKKELIT = {
       + 'suosituin matkailumaa ja Euroopan suurin oliiviöljyn tuottaja.',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro EI ole enää kahden virkkeen nosto vaan lehden ETUSIVUN
+   * LEIPÄTEKSTI — 8–10 virkettä kolmessa kappaleessa ('\n\n') ja kaksi
+   * maltillista **lihavointia**. Faktat ovat kaupungin omista, jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Krakova; maakartat.js), ei uusista lähteistä.
+   * teksti-kenttä on ennallaan.
+   */
   Krakova: {
-    intro: 'Krakova oli Puolan pääkaupunki yli viisisataa vuotta, ja '
-      + 'kuninkaat kruunattiin ja haudattiin Wawelin kukkulan '
-      + 'katedraaliin. Pääkaupunki siirtyi Varsovaan 1596, mutta '
-      + 'kuninkaat jäivät.',
+    intro: 'Krakova on Etelä-Puolan vanha pääkaupunki Veikselin rannalla, '
+      + 'kalkkikivikukkulan juurella. Kukkula on **Wawel**, ja sen '
+      + 'katedraalissa kruunattiin ja haudattiin Puolan kuninkaat yli '
+      + 'viidensadan vuoden ajan. Pääkaupunkina Krakova väistyi Varsovan '
+      + 'tieltä vuonna 1596, mutta kruunajaiset jäivät tänne.'
+      + '\n\n'
+      + 'Mongolien hyökkäys poltti kaupungin vuonna 1241, ja se '
+      + 'rakennettiin 1257 uudelleen kokonaan uudella kaavalla: '
+      + 'suorakulmainen ruudukko, jonka keskellä on noin kaksisataa metriä '
+      + 'sivultaan oleva tori. Kaupunginmuurit purettiin 1820-luvulla, ja '
+      + 'tilalle istutettiin puistokehä Planty, joka kiertää '
+      + 'vanhaakaupunkia yhä. Puolan vanhin yliopisto perustettiin täällä '
+      + 'vuonna 1364, ja sen oppilaita oli muun muassa Nikolaus '
+      + 'Kopernikus.'
+      + '\n\n'
+      + 'Sota ei tuhonnut Krakovaa, joten vanhankaupungin kadut ovat '
+      + 'aitoja keskiaikaisia katuja. **Kazimierz**, 1300-luvulta '
+      + '1800-luvun alkuun oma kaupunkinsa, oli vuosisatoja Puolan '
+      + 'juutalaisen kulttuurin keskus; yhteisö tuhoutui holokaustissa, ja '
+      + 'kortteleihin on sittemmin palannut elämää. Lähistöllä on kaksi '
+      + 'maailmanperintökohdetta lisää, Wieliczkan suolakaivos ja '
+      + 'Auschwitzin muistopaikka.',
     teksti: 'Kaupungin keskellä on Rynek Główny, Euroopan suurin '
       + 'keskiaikainen tori: noin kaksisataa metriä joka suuntaan. '
       + 'Torin keskellä seisoo Sukiennice, keskiaikainen kauppahalli, ja '
@@ -1046,11 +1073,34 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Krakovassa yllä:
+   * intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat Amsterdamin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Amsterdam; maakartat.js).
+   */
   Amsterdam: {
-    intro: 'Amsterdam sai nimensä padosta, joka rakennettiin Amstel-joelle '
-             + '1200-luvulla. Kaupunki seisoo pehmeällä suomaalla pitkien '
-             + 'puupaalujen varassa: pelkästään kuninkaanlinnan alla niitä on '
-             + '13 659 kappaletta, ja ne haettiin aikoinaan Norjasta.',
+    intro: 'Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa '
+      + 'miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen '
+      + 'suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin '
+      + 'padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten '
+      + 'talot seisovat maahan lyötyjen **puupaalujen** varassa.'
+      + '\n\n'
+      + '1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, '
+      + 'ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 '
+      + '000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke '
+      + 'vuosina 1613–1665, ja **Herengracht, Keizersgracht ja '
+      + 'Prinsengracht** ovat yhä paikallaan Unescon '
+      + 'maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja '
+      + 'siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.'
+      + '\n\n'
+      + 'Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat '
+      + 'vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa '
+      + 'surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on '
+      + 'nopein kulkuneuvo, sillä pyöriä on suunnilleen yhtä paljon kuin '
+      + 'asukkaita. Vesi ei ole täällä koristetta vaan työtä, sillä pumput '
+      + 'ja sulut pitävät kaupungin kuivana joka päivä.',
     teksti: '1600-luvulla Amsterdam oli yksi maailman vilkkaimmista '
               + 'satamista. Kaupunki kasvoi niin nopeasti — noin 30 000 '
               + 'asukkaasta yli 200 000:een sadassa vuodessa — että sen '
@@ -1222,11 +1272,34 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Krakovassa:
+   * intro on etusivun leipäteksti kappaleineen ja lihavointeineen.
+   * Faktat Prahan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Praha;
+   * maakartat.js).
+   */
   Praha: {
     intro: 'Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan '
-             + 'kaupunki Vltava-joen mutkissa. Sen keskusta selvisi toisesta '
-             + 'maailmansodasta lähes ehjänä, joten kaduilla seisovat rinta '
-             + 'rinnan keskiaikaiset talot, barokkikirkot ja jugendtalot.',
+      + 'kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän '
+      + 'kallioharjanteen, jonka päälle nousi 800-luvulla linna; '
+      + 'vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä '
+      + 'erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.'
+      + '\n\n'
+      + 'Mahtinsa Praha sai 1300-luvulla, kun **Kaarle IV** teki siitä '
+      + 'keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen '
+      + 'yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. '
+      + 'Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen '
+      + 'kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta '
+      + 'Habsburgien hallintoa ja saksankielisiä virastoja, kunnes '
+      + 'Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.'
+      + '\n\n'
+      + 'Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi '
+      + 'samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko '
+      + 'ja jugendtalo. Vuoden 1968 uudistusyritys eli **Prahan kevät** '
+      + 'päättyi Neuvostoliiton johtamien joukkojen tuloon, mutta vuonna '
+      + '1989 valta vaihtui ilman verenvuodatusta, ja Tšekki ja Slovakia '
+      + 'erosivat rauhanomaisesti vuoden 1993 alussa.',
     teksti: 'Prahan suuri aika alkoi 1300-luvulla, kun Kaarle IV teki siitä '
               + 'Pyhän saksalais-roomalaisen keisarikunnan pääkaupungin. Hän '
               + 'perusti Keski-Euroopan ensimmäisen yliopiston vuonna 1348 ja '
@@ -1254,11 +1327,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Krakovassa:
+   * intro on etusivun leipäteksti kappaleineen ja lihavointeineen.
+   * Faktat Budapestin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Budapest;
+   * maakartat.js).
+   */
   Budapest: {
-    intro: 'Budapest on Unkarin pääkaupunki ja noin 1,7 miljoonan asukkaan '
-             + 'kaupunki Tonavan molemmin puolin. Se syntyi vasta 17. '
-             + 'marraskuuta 1873, kun kolme erillistä kaupunkia — kukkulainen '
-             + 'Buda, vanha Óbuda ja tasainen Pest — yhdistettiin yhdeksi.',
+    intro: 'Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa '
+      + 'ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, '
+      + 'vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa '
+      + 'kaupungin kahtia: länsipuolella maa nousee jyrkästi '
+      + 'kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin '
+      + 'näkee.'
+      + '\n\n'
+      + 'Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien '
+      + 'noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, '
+      + 'sillä maasta nousee yli sata lämmintä lähdettä. Rantojen '
+      + 'ensimmäinen pysyvä yhteys oli vuonna 1849 avattu **Ketjusilta**. '
+      + 'Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen '
+      + 'puolisko, ja kasvu oli rajua: vuonna 1896 avattiin '
+      + 'Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.'
+      + '\n\n'
+      + 'Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, '
+      + 'ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. '
+      + 'Vuonna 1956 unkarilaiset nousivat kapinaan neuvostojohtoista '
+      + 'hallintoa vastaan, ja sosialistinen kausi päättyi 1989–1990. '
+      + '**Unkarin kieli** kuuluu suomen ja viron tavoin uralilaisiin '
+      + 'kieliin, joten suomalainen tunnistaa siitä rakenteita mutta '
+      + 'tuskin yhtään sanaa.',
     teksti: 'Kaupunki on kaksijakoinen jo maastoltaan. Budan puolella on '
               + 'kukkuloita, linna ja jyrkkiä katuja, Pestin puolella tasankoa, '
               + 'leveitä bulevardeja ja parlamenttitalo joen rannassa. Puolia '
@@ -1292,11 +1390,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Krakovassa:
+   * intro on etusivun leipäteksti kappaleineen ja lihavointeineen.
+   * Sota kerrotaan neutraalina historiana ilman yksityiskohtien
+   * korostusta (Fablen sisältölinjaus 20.8.2026). Faktat Varsovan
+   * omista jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:
+   * nostot ja Matkailijan Varsova; maakartat.js).
+   */
   Varsova: {
     intro: 'Varsova on Puolan pääkaupunki ja maan suurin kaupunki: '
-             + 'asukkaita on lähes kaksi miljoonaa. Se sijaitsee Veikselin '
-             + 'varrella tasangolla, kaukana merestä ja vuorista — kaupunki on '
-             + 'kasvanut siihen, missä vanhat kauppareitit risteävät.',
+      + 'asukkaita on lähes kaksi miljoonaa. Se sijaitsee keskellä Puolan '
+      + 'tasankoa Veikselin länsirannalla, jossa jyrkältä törmältä näki '
+      + 'kauas ja törmän alla oli hyvä lastauspaikka viljalautoille.'
+      + '\n\n'
+      + 'Vuonna 1596 kuningas **Sigismund III** siirsi hovinsa Krakovasta '
+      + 'tänne, ja kauppapaikasta tuli valtakunnan pääkaupunki. Puola '
+      + 'katosi Euroopan kartalta vuosiksi 1795–1918, ja Varsova oli '
+      + 'enimmäkseen Venäjän keisarikunnan kaupunki, mutta se kasvoi ja '
+      + 'teollistui silti. Täällä varttui Fryderyk Chopin ja syntyi '
+      + 'vuonna 1867 Maria Skłodowska, josta tuli kahden eri tieteenalan '
+      + 'nobelisti.'
+      + '\n\n'
+      + 'Toinen maailmansota kohteli Varsovaa raskaammin kuin melkein '
+      + 'mitään muuta Euroopan kaupunkia: sodan lopussa rakennuksista oli '
+      + 'raunioina yli kolme neljäsosaa, ja kaupungin suuri '
+      + 'juutalaisyhteisö oli tuhottu. Kaupunki rakennettiin takaisin, ja '
+      + 'vanhankaupungin talot pystytettiin uudelleen vanhojen '
+      + 'piirustusten ja maalausten avulla. Keskustaan nousi vuonna 1955 '
+      + '**Kulttuuri- ja tiedepalatsi**, 237 metriä korkea Neuvostoliiton '
+      + 'lahja, jonka ympärille on kasvanut lasitornien rivi.',
     teksti: 'Varsovasta tuli Puolan pääkaupunki vuonna 1596, kun kuningas '
               + 'Sigismund III siirsi hovinsa Krakovasta tänne: Veikselin '
               + 'varrella oltiin lähempänä valtakunnan keskikohtaa. Kaupungin '

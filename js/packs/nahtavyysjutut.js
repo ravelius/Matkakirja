@@ -1661,6 +1661,11 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * nähtävyysjuttujen monivirkkeiset kuvatekstit on tiivistetty yhteen
+   * virkkeeseen. Jutut, aikamerkinnät ja lähderivit ovat ennallaan.
+   */
   praha: {
     'Petřínin näkötorni': {
       aika: '1891',
@@ -2071,6 +2076,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   budapest: {
     Kalastajanlinnake: {
       aika: '1895–1902',
@@ -2282,11 +2288,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "Heroes' Square (Budapest) 20180824.jpg",
-          selite: 'Aukio sivusta: keskellä uurrettu pylväs, jonka '
-            + 'huipulla Gabriel levittää siipensä, pylvään juurella '
-            + 'ratsastajien pronssiryhmä, ja molemmin puolin kaartuvat '
-            + 'pylväiköt patsaineen. Aukion kivetys jatkuu tyhjänä '
-            + 'kuvan alareunaan.',
+          selite: 'Sankarien aukio sivusta: keskellä uurrettu pylväs, jonka '
+            + 'huipulla Gabriel levittää siipensä, juurella ratsastajien '
+            + 'pronssiryhmä ja molemmin puolin kaartuvat pylväiköt '
+            + 'patsaineen.',
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -3168,6 +3173,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   amsterdam: {
     Keskusrautatieasema: {
       aika: '1889',
@@ -5257,6 +5263,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   krakova: {
     Barbakaani: {
       aika: '1498',
@@ -5524,6 +5531,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   varsova: {
     'Vanhankaupungin tori': {
       aika: 'n. 1280-luku (jälleenrakennettu 1948–1953)',
@@ -5602,8 +5610,8 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Warszawa - Zamek krolewski. 1898-1906 (75185878).jpg',
-          selite: 'Värisävytetty postikortti n. 1898-1906: Varsovan linna ja '
-            + 'Sigismundin pylväs, hevosvaunuja ja raitiotiekiskot '
+          selite: 'Värisävytetty postikortti vuosilta 1898–1906: Varsovan '
+            + 'linna ja Sigismundin pylväs, hevosvaunuja ja raitiotiekiskot '
             + 'aukiolla.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
