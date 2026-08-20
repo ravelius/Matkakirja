@@ -129,10 +129,36 @@ export const EUROPE_ARTIKKELIT = {
       + 'mikä on Euroopassa poikkeuksellista.',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2), sama linja kuin muissa erän
+   * kaupungeissa: intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat Granadan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Granada; maakartat.js).
+   */
   Granada: {
-    intro: 'Granada on Etelä-Espanjassa Sierra Nevadan juurella. Se oli '
-      + 'Iberian niemimaan viimeinen muslimivaltio: Granadan emiirikunta '
-      + 'säilyi vuoteen 1492, lähes 250 vuotta pidempään kuin muut.',
+    intro: 'Granada on Etelä-Espanjassa Sierra Nevadan juurella noin '
+      + '740 metrin korkeudessa, viidenkymmenen kilometrin päässä '
+      + 'merestä. Kaupunki syntyi kohtaan, jossa vuorilta tuleva Darro '
+      + 'yhtyy Geniliin, ja vuoret ovat sen vesisäiliö: huipuilla on '
+      + 'lunta vielä toukokuussa, ja sulamisvesi johdettiin kanavia '
+      + 'pitkin pelloille ja puutarhoihin.'
+      + '\n\n'
+      + 'Granada oli Iberian niemimaan viimeinen muslimivaltio. '
+      + 'Nasridien emiirikunta säilyi vuoteen 1492, lähes 250 vuotta '
+      + 'muita pidempään, ja sen hallitsijat rakensivat 1200- ja '
+      + '1300-luvuilla **Alhambran**. Kun kaupunki luovutettiin '
+      + 'Kastilian ja Aragonian hallitsijoille, palatsia ei purettu '
+      + 'vaan siihen muutettiin. Vastapäisellä kukkulalla on '
+      + '**Albaicín**, vanha maurilainen kaupunginosa, ja sen takana '
+      + 'Sacromonten rinne, jonka luola-asunnoissa kehittyi zambra, '
+      + 'oma flamencon muoto.'
+      + '\n\n'
+      + 'Nykyinen Granada on ennen kaikkea opiskelijakaupunki: '
+      + 'yliopisto perustettiin 1531, ja opiskelijoita on yli 60 000. '
+      + 'Pääkatu Gran Vía de Colón murrettiin vanhan kaupungin läpi '
+      + 'vuosina 1895–1934, ja työ vaati viidesosan siitä. Baareissa '
+      + 'juoman mukana tuodaan yhä tapas ilman lisämaksua.',
     teksti: 'Alhambra on kaupungin ja koko Espanjan tunnetuin '
       + 'rakennusryhmä: linnoitus, palatsi ja puutarhat samalla '
       + 'kukkulalla. Nasridi-hallitsijat rakensivat sen 1200–1300-'
@@ -192,11 +218,38 @@ export const EUROPE_ARTIKKELIT = {
       + 'suosituin matkailumaa ja Euroopan suurin oliiviöljyn tuottaja.',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * intro EI ole enää kahden virkkeen nosto vaan lehden ETUSIVUN
+   * LEIPÄTEKSTI — 8–10 virkettä kolmessa kappaleessa ('\n\n') ja kaksi
+   * maltillista **lihavointia**. Faktat ovat kaupungin omista, jo
+   * tarkistetuista teksteistä (kulttuuri-kategoriat.js: nostot ja
+   * Matkailijan Krakova; maakartat.js), ei uusista lähteistä.
+   * teksti-kenttä on ennallaan.
+   */
   Krakova: {
-    intro: 'Krakova oli Puolan pääkaupunki yli viisisataa vuotta, ja '
-      + 'kuninkaat kruunattiin ja haudattiin Wawelin kukkulan '
-      + 'katedraaliin. Pääkaupunki siirtyi Varsovaan 1596, mutta '
-      + 'kuninkaat jäivät.',
+    intro: 'Krakova on Etelä-Puolan vanha pääkaupunki Veikselin rannalla, '
+      + 'kalkkikivikukkulan juurella. Kukkula on **Wawel**, ja sen '
+      + 'katedraalissa kruunattiin ja haudattiin Puolan kuninkaat yli '
+      + 'viidensadan vuoden ajan. Pääkaupunkina Krakova väistyi Varsovan '
+      + 'tieltä vuonna 1596, mutta kruunajaiset jäivät tänne.'
+      + '\n\n'
+      + 'Mongolien hyökkäys poltti kaupungin vuonna 1241, ja se '
+      + 'rakennettiin 1257 uudelleen kokonaan uudella kaavalla: '
+      + 'suorakulmainen ruudukko, jonka keskellä on noin kaksisataa metriä '
+      + 'sivultaan oleva tori. Kaupunginmuurit purettiin 1820-luvulla, ja '
+      + 'tilalle istutettiin puistokehä Planty, joka kiertää '
+      + 'vanhaakaupunkia yhä. Puolan vanhin yliopisto perustettiin täällä '
+      + 'vuonna 1364, ja sen oppilaita oli muun muassa Nikolaus '
+      + 'Kopernikus.'
+      + '\n\n'
+      + 'Sota ei tuhonnut Krakovaa, joten vanhankaupungin kadut ovat '
+      + 'aitoja keskiaikaisia katuja. **Kazimierz**, 1300-luvulta '
+      + '1800-luvun alkuun oma kaupunkinsa, oli vuosisatoja Puolan '
+      + 'juutalaisen kulttuurin keskus; yhteisö tuhoutui holokaustissa, ja '
+      + 'kortteleihin on sittemmin palannut elämää. Lähistöllä on kaksi '
+      + 'maailmanperintökohdetta lisää, Wieliczkan suolakaivos ja '
+      + 'Auschwitzin muistopaikka.',
     teksti: 'Kaupungin keskellä on Rynek Główny, Euroopan suurin '
       + 'keskiaikainen tori: noin kaksisataa metriä joka suuntaan. '
       + 'Torin keskellä seisoo Sukiennice, keskiaikainen kauppahalli, ja '
@@ -348,11 +401,35 @@ export const EUROPE_ARTIKKELIT = {
       + 'kirjoja kuin juuri mikään muu.',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2), sama linja kuin muissa erän
+   * kaupungeissa: intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat Ateenan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan Ateena;
+   * maakartat.js).
+   */
   Ateena: {
     intro: 'Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja '
-      + 'kaupunkeja: samalla paikalla on eletty yli 3 000 vuotta. Sen '
-      + 'yllä kohoaa Akropolis, kalliokukkula, jonka päällä seisoo '
-      + 'Parthenon — temppeli, joka valmistui 432 eaa.',
+      + 'kaupunkeja: samalla paikalla on eletty yli kolmetuhatta '
+      + 'vuotta. Kaupunki syntyi kallion ympärille — **Akropolis** '
+      + 'kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella '
+      + 'seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi '
+      + 'kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, '
+      + 'eikä keskustan läpi virtaa jokea.'
+      + '\n\n'
+      + 'Antiikin Ateenassa kehitettiin **demokratia**, kirjoitettiin '
+      + 'ensimmäiset näytelmät ja perustettiin filosofian koulut. '
+      + 'Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja '
+      + 'ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan '
+      + 'kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.'
+      + '\n\n'
+      + 'Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli '
+      + 'noin neljänsadan talon kylä Akropoliin juurella, ja valinta '
+      + 'tehtiin historian eikä koon perusteella. Nykyään seudulla '
+      + 'asuu noin kolme ja puoli miljoonaa ihmistä. Metrotunneleita '
+      + 'kaivettaessa arkeologit kulkivat insinöörien rinnalla kuusi '
+      + 'vuotta, ja löydöt ovat esillä asemien seinillä. Kesä on '
+      + 'Manner-Euroopan kuumimpia, ja sade osuu talveen.',
     teksti: 'Antiikin Ateenassa keksittiin demokratia. Se ei ollut '
       + 'nykyisen kaltainen: äänioikeus oli vain vapailla ateenalaisilla '
       + 'miehillä, eli noin kymmenesosalla asukkaista. Mutta idea oli '
@@ -423,11 +500,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamatun "TEKSTIEN PAINOPISTE" ja
+   * Fablen eräohje; sama linja kuin Medinassa ja Mekassa
+   * asia-artikkelit.js:ssä): intro EI ole enää kahden virkkeen nosto vaan
+   * lehden etusivun leipäteksti — 7–10 virkettä kolmessa kappaleessa
+   * ('\n\n'), maltillinen **lihavointi** avainkohdissa. Faktat ovat
+   * kaupungin omista jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:
+   * nostot ja Matkailijan Rooma; maakartat.js) sekä alla olevasta
+   * teksti-kentästä, ei uusista lähteistä. teksti-kenttä on ennallaan.
+   */
   Rooma: {
-    intro: 'Rooma on Italian pääkaupunki ja rakennettu seitsemälle '
-      + 'kukkulalle Tiber-joen varrelle. Se oli aikoinaan maailman '
-      + 'suurimman valtakunnan keskus, ja sen keskustassa kävelee yhä '
-      + 'kahdentuhannen vuoden takaisilla katukivillä.',
+    intro: 'Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen '
+      + 'varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen '
+      + 'perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna '
+      + '753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se '
+      + 'oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, '
+      + 'jonka raja ulottui Skotlannista Egyptiin.'
+      + '\n\n'
+      + 'Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, '
+      + 'siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat '
+      + 'vuorilta vettä painovoimalla. Yksi niistä syöttää yhä **Trevin '
+      + 'suihkulähdettä**. He keksivät myös betonin, joka kovettuu veden '
+      + 'alla: **Pantheonin** kupoli on yhä maailman suurin raudoittamaton '
+      + 'betonikupoli.'
+      + '\n\n'
+      + 'Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui '
+      + 'noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat '
+      + 'sen uudelleen, ja renessanssin ja barokin aikana syntyivät '
+      + 'Pietarinkirkko, Trevin lähde ja Espanjalaiset portaat. Yhdistyneen '
+      + 'Italian pääkaupungiksi Rooma tuli vasta 1871, ja sen sisällä on '
+      + 'maailman pienin valtio Vatikaani, pinta-alaltaan puoli '
+      + 'neliökilometriä.',
     teksti: 'Tarun mukaan Rooma perustettiin 753 eaa., ja sen perustivat '
       + 'susiemon kasvattamat veljekset Romulus ja Remus. Todellisuudessa '
       + 'kaupunki kasvoi vähitellen kukkuloiden kylistä. Se oli ensin '
@@ -638,11 +742,29 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
+  // kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
   Lontoo: {
-    intro: 'Lontoo on Yhdistyneen kuningaskunnan pääkaupunki Thames-joen '
-             + 'varrella. Roomalaiset perustivat sen noin vuonna 47 nimellä '
-             + 'Londinium. Nykyään kaupungissa asuu lähes yhdeksän miljoonaa '
-             + 'ihmistä, ja sen kaduilla puhutaan yli kolmeasataa kieltä.',
+    intro: 'Lontoo on Yhdistyneen kuningaskunnan pääkaupunki Thamesin '
+      + 'varrella, ja siellä asuu lähes yhdeksän miljoonaa ihmistä. '
+      + 'Roomalaiset perustivat paikalle **Londiniumin** noin vuonna 47, ja '
+      + 'kaupunki eli vuosisatoja satamastaan: Thames on vuorovesijoki '
+      + 'keskustaan asti, joten purjelaivat pääsivät aivan kaupungin '
+      + 'sydämeen, ja 1800-luvulla satama oli maailman vilkkain.'
+      + '\n\n'
+      + 'Vuoden 1666 suurpalo tuhosi neljässä päivässä noin 13 000 taloa, ja '
+      + 'sen jälkeen puujulkisivut kiellettiin — siitä vanhojen kortteleiden '
+      + 'tiili. Christopher Wren piirsi palon jälkeen **Pyhän Paavalin '
+      + 'katedraalin**, jonka kupoli oli kaupungin korkein rakennus yli 250 '
+      + 'vuotta. Maailman ensimmäinen metro avattiin täällä vuonna 1863, ja '
+      + 'ensimmäinen liikennevalo syttyi parlamenttitalon kupeessa 1868.'
+      + '\n\n'
+      + 'Keskustassa on itse asiassa kaksi kaupunkia: rahaa tekevä City of '
+      + 'London on vain 2,9 neliökilometriä omine sääntöineen, ja '
+      + 'Westminsterissä ovat parlamentti ja hallitus. Ympärillä on 31 muuta '
+      + 'hallintoaluetta, ja kaupunki tuntuu kylien rykelmältä, jossa '
+      + 'jokaisella on oma torinsa ja pubinsa. Kaduilla puhutaan yli '
+      + 'kolmeasataa kieltä.',
     teksti: 'Lontoo kasvoi satamasta. Thames on vuorovesijoki aina '
               + 'keskustaan asti, joten purjelaivat pääsivät kaupungin '
               + 'sydämeen, ja 1800-luvulla Lontoon satama oli maailman '
@@ -731,12 +853,30 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
+  // kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
   Pariisi: {
-    intro: 'Pariisi on Ranskan pääkaupunki ja rakennettu Seine-joen '
-             + 'mutkaan. Kaupungissa asuu runsaat kaksi miljoonaa ihmistä, '
-             + 'mutta koko seudulla yli kymmenen miljoonaa. Se jakautuu '
-             + 'kahteenkymmeneen kaupunginosaan, jotka kiertävät keskustasta '
-             + 'ulospäin kuin etanan kuori.',
+    intro: 'Pariisi on Ranskan pääkaupunki, ja se on rakennettu Seinen '
+      + 'mutkaan. Kaupungissa asuu runsaat kaksi miljoonaa ihmistä ja koko '
+      + 'seudulla yli kymmenen miljoonaa. Kaikki alkoi joen keskellä '
+      + 'olevasta saaresta: **Île de la Citéllä** asui gallialainen '
+      + 'parisii-heimo, ja roomalaiset perustivat sinne kaupungin nimeltä '
+      + 'Lutetia.'
+      + '\n\n'
+      + 'Samalla saarella seisoo Notre-Dame, jota alettiin rakentaa 1163; '
+      + 'sen katto paloi huhtikuussa 2019, ja kirkko avattiin uudelleen '
+      + 'joulukuussa 2024. Nykyisen kaupunkikuvan teki yksi mies: keisari '
+      + 'Napoleon III määräsi 1853 prefekti **Haussmannin** uudistamaan '
+      + 'Pariisin, ja seitsemäntoista vuoden aikana kapeat kujat väistyivät '
+      + 'leveiden bulevardien ja vaaleiden kivitalojen tieltä.'
+      + '\n\n'
+      + 'Eiffel-torni nousi vuoden 1889 maailmannäyttelyyn, ja se oli määrä '
+      + 'purkaa parinkymmenen vuoden kuluttua, kunnes huipun radioantenni '
+      + 'teki siitä armeijalle liian hyödyllisen. Metro avattiin 1900, ja '
+      + 'Hector Guimardin vihreät valurautakaaret kaartuvat yhä monen '
+      + 'sisäänkäynnin yllä. Kaupunki jakautuu kahteenkymmeneen '
+      + 'kaupunginosaan, jotka kiertyvät keskustasta ulospäin kuin etanan '
+      + 'kuori.',
     teksti: 'Pariisi alkoi saarelta. Seinen keskellä olevalla Île de la '
               + 'Citéllä asui gallialainen parisii-heimo, ja roomalaiset '
               + 'perustivat sinne kaupungin. Samalla saarella seisoo '
@@ -759,12 +899,37 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2), sama linja kuin muissa erän
+   * kaupungeissa: intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat Lissabonin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Lissabon; maakartat.js).
+   */
   Lissabon: {
-    intro: 'Lissabon on Portugalin pääkaupunki ja Manner-Euroopan läntisin. '
-             + 'Se on rakennettu kukkuloille Tejo-joen pohjoisrannalle siihen '
-             + 'kohtaan, jossa joki levenee lähes merenlahdeksi. Kaupungissa '
-             + 'asuu noin 550 000 ihmistä ja koko seudulla lähes kolme '
-             + 'miljoonaa.',
+    intro: 'Lissabon on Portugalin pääkaupunki ja Manner-Euroopan '
+      + 'läntisin. Se on rakennettu kukkuloille Tejo-joen '
+      + 'pohjoisrannalle kohtaan, jossa joki levenee lähes '
+      + 'merenlahdeksi mutta avomerelle on vain viitisentoista '
+      + 'kilometriä; juuri siksi kaupunki on tässä, sillä satama oli '
+      + 'suojaisa. Asukkaita on noin 550 000 ja koko seudulla lähes '
+      + 'kolme miljoonaa.'
+      + '\n\n'
+      + 'Lissabon oli purjehdusten pääkaupunki: Vasco da Gama lähti '
+      + 'täältä 1497 ja avasi eurooppalaisille meritien Afrikan ympäri '
+      + 'Intiaan. Jokisatamaan purettiin sadan vuoden ajan pippuria, '
+      + 'kanelia ja kultaa, ja samoilla laivoilla tuotiin Afrikasta '
+      + 'orjuutettuja ihmisiä. Kaikki muuttui **1. marraskuuta 1755**, '
+      + 'kun maanjäristys, hyökyaalto ja tulipalo hävittivät suurimman '
+      + 'osan keskustasta.'
+      + '\n\n'
+      + 'Uusi alakaupunki **Baixa** vedettiin viivoittimella '
+      + 'ruudukkoon, ja talojen sisään piilotettiin puinen '
+      + 'ristikkohäkki, joka joustaa järistyksessä. Ruudukon molemmin '
+      + 'puolin kadut kiipeävät vanhoihin kortteleihin, joita '
+      + 'kolistelevat keltaiset raitiovaunut vuodesta 1873. '
+      + 'Diktatuuri päättyi 25. huhtikuuta 1974 verettömään '
+      + 'vallankaappaukseen, neilikkavallankumoukseen.',
     teksti: 'Lissabon oli purjehdusten pääkaupunki. Täältä lähti Vasco da '
               + 'Gama vuonna 1497 ja avasi eurooppalaisille meritien Afrikan '
               + 'ympäri Intiaan; Intian valtamerellä oli purjehdittu jo satoja '
@@ -795,12 +960,38 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamatun "TEKSTIEN PAINOPISTE" ja
+   * Fablen eräohje): intro ei ole enää kahden virkkeen nosto vaan lehden
+   * etusivun leipäteksti — 7–10 virkettä kahdessa tai kolmessa
+   * kappaleessa ('\n\n'), maltillinen **lihavointi** avainkohdissa.
+   * Faktat ovat Madridin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Madrid;
+   * maakartat.js), ei uusista lähteistä. teksti-kenttä on ennallaan.
+   */
   Madrid: {
-    intro: 'Madrid on Espanjan pääkaupunki ja maan suurin kaupunki: siellä '
-             + 'asuu noin 3,4 miljoonaa ihmistä ja koko maakunnassa lähes '
-             + 'seitsemän miljoonaa. Se on keskellä Iberian niemimaata 667 '
-             + 'metrin korkeudella ylängöllä, jolla ei ole merta eikä suurta '
-             + 'jokea.',
+    intro: 'Madrid on Espanjan pääkaupunki ja maan suurin kaupunki: '
+      + 'asukkaita on noin 3,4 miljoonaa ja koko maakunnassa lähes '
+      + 'seitsemän miljoonaa. Se on keskellä Iberian niemimaata '
+      + 'Kastilian ylätasangolla noin 650 metrin korkeudessa, '
+      + 'korkeammalla kuin yksikään toinen Euroopan unionin '
+      + 'pääkaupunki. Merelle on neljäsataa kilometriä, joten kesä on '
+      + 'kuuma ja kuiva ja talviyöt kylmiä.'
+      + '\n\n'
+      + 'Kaupunki alkoi 800-luvulla maurien linnoituksena nimeltä '
+      + '**Mayrit**, ja pitkään se oli pikkukaupunki muiden joukossa. '
+      + 'Pääkaupungiksi se nousi vuonna 1561, kun kuningas Filip II '
+      + 'siirsi hovinsa Toledosta lähes tasan valtakunnan keskelle. '
+      + 'Hovin ympärille rakennettiin Plaza Mayor, aukio, joka '
+      + 'suljettiin talorivillä kaikilta neljältä sivulta, ja '
+      + 'keskustan sydämeksi jäi Puerta del Sol: sen kiveyksessä on '
+      + 'laatta, josta Espanjan päätiet mitataan.'
+      + '\n\n'
+      + 'Nykyään Madrid tunnetaan museoistaan. **Prado** esittelee '
+      + 'Velázquezin ja Goyan tärkeimmät työt, ja Reina Sofíassa on '
+      + 'Picasson Guernica, joka saapui Espanjaan vasta 1981. Arki '
+      + 'venyy myöhään iltaan, ja Manzanares-joki kaivettiin '
+      + '2000-luvulla moottoritien alta takaisin esiin puistoksi.',
     teksti: 'Madrid ei ole Espanjan vanhin kaupunki. Se alkoi 800-luvulla '
               + 'maurien linnoituksena, jonka nimi oli Mayrit, ja pitkään se '
               + 'oli pikkukaupunki muiden joukossa. Vuonna 1561 kuningas Filip '
@@ -827,12 +1018,37 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026 (erä E2), sama linja kuin muissa erän
+   * kaupungeissa: intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat ovat Barcelonan omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Barcelona; maakartat.js).
+   */
   Barcelona: {
-    intro: 'Barcelona on Katalonian pääkaupunki ja Espanjan toiseksi suurin '
-             + 'kaupunki: siellä asuu noin 1,7 miljoonaa ihmistä. Se on '
-             + 'Välimeren rannalla kapealla tasangolla vuorten ja meren '
-             + 'välissä, ja kaupungissa on kaksi virallista kieltä, katalaani '
-             + 'ja espanja.',
+    intro: 'Barcelona on Katalonian pääkaupunki ja Espanjan toiseksi '
+      + 'suurin kaupunki: asukkaita on noin 1,7 miljoonaa. Se on '
+      + 'rakennettu kapealle tasangolle Välimeren ja Collserolan '
+      + 'metsäisen harjanteen väliin. Kaupungissa on kaksi virallista '
+      + 'kieltä, katalaani ja espanja; katalaani on oma romaaninen '
+      + 'kielensä eikä espanjan murre, ja se on nykyään koulujen '
+      + 'opetuskieli.'
+      + '\n\n'
+      + 'Roomalaiset perustivat **Barcinon** pienelle kummulle, jonka '
+      + 'päällä seisoo nyt katedraali, ja kaupunki pysyi muurien '
+      + 'sisässä 1850-luvulle asti. Kun muurit purettiin, '
+      + 'insinööri Ildefons Cerdà piirsi niiden ulkopuolelle '
+      + '**Eixamplen**: ruudukon, jossa korttelin sivu on 113 metriä ja '
+      + 'jokainen kulma on viistetty, jotta valoa ja kääntyviä vaunuja '
+      + 'varten jäisi risteykseen tilaa.'
+      + '\n\n'
+      + 'Sagrada Famílian rakentaminen alkoi vuonna 1882, ja Antoni '
+      + 'Gaudí teki työtä siinä kuolemaansa asti; kirkko rakennetaan '
+      + 'yhä lahjoitusvaroin. Kaupungin ilmeen muutti vuosi 1992, kun '
+      + 'olympialaisia varten rannan tehtaat purettiin ja tilalle tuli '
+      + 'uimarantoja ja rantabulevardi. '
+      + 'Syyskuun lopun Mercè-juhla on ollut kaupungin virallinen '
+      + 'vapaapäivä vuodesta 1871.',
     teksti: 'Barcelona alkoi roomalaisena kaupunkina nimeltä Barcino. '
               + 'Vanhankaupungin kujien seassa on yhä pätkiä roomalaista '
               + 'muuria, ja keskiajalta ovat kirkot ja niin kapeat korttelit, '
@@ -857,11 +1073,34 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Krakovassa yllä:
+   * intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
+   * lihavointeineen. Faktat Amsterdamin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Amsterdam; maakartat.js).
+   */
   Amsterdam: {
-    intro: 'Amsterdam sai nimensä padosta, joka rakennettiin Amstel-joelle '
-             + '1200-luvulla. Kaupunki seisoo pehmeällä suomaalla pitkien '
-             + 'puupaalujen varassa: pelkästään kuninkaanlinnan alla niitä on '
-             + '13 659 kappaletta, ja ne haettiin aikoinaan Norjasta.',
+    intro: 'Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa '
+      + 'miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen '
+      + 'suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin '
+      + 'padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten '
+      + 'talot seisovat maahan lyötyjen **puupaalujen** varassa.'
+      + '\n\n'
+      + '1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, '
+      + 'ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 '
+      + '000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke '
+      + 'vuosina 1613–1665, ja **Herengracht, Keizersgracht ja '
+      + 'Prinsengracht** ovat yhä paikallaan Unescon '
+      + 'maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja '
+      + 'siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.'
+      + '\n\n'
+      + 'Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat '
+      + 'vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa '
+      + 'surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on '
+      + 'nopein kulkuneuvo, sillä pyöriä on suunnilleen yhtä paljon kuin '
+      + 'asukkaita. Vesi ei ole täällä koristetta vaan työtä, sillä pumput '
+      + 'ja sulut pitävät kaupungin kuivana joka päivä.',
     teksti: '1600-luvulla Amsterdam oli yksi maailman vilkkaimmista '
               + 'satamista. Kaupunki kasvoi niin nopeasti — noin 30 000 '
               + 'asukkaasta yli 200 000:een sadassa vuodessa — että sen '
@@ -892,11 +1131,33 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
+   * kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
+   * Muuri ja kaupungin jako kerrotaan neutraalina historiana ilman
+   * osapuolikehystä ja ilman nykypolitiikkaa (Fablen eräohje).
+   */
   Berliini: {
-    intro: 'Berliini on Saksan pääkaupunki ja sen suurin kaupunki, lähes '
-             + 'neljä miljoonaa asukasta. Se on rakennettu tasaiselle '
-             + 'hiekkamaalle Spree-joen varrelle, ja noin kolmannes '
-             + 'pinta-alasta on puistoa, metsää tai vettä.',
+    intro: 'Berliini on Saksan pääkaupunki ja maan suurin kaupunki, jossa '
+      + 'asuu lähes neljä miljoonaa ihmistä. Se on rakennettu tasaiselle '
+      + 'hiekkamaalle Spree-joen varrelle, ja noin kolmannes pinta-alasta on '
+      + 'puistoa, metsää tai vettä. Berliini oli ensin Preussin ja vuodesta '
+      + '1871 koko Saksan keisarikunnan pääkaupunki, ja vuonna 1920 seudulla '
+      + 'asui jo yli kolme miljoonaa ihmistä.'
+      + '\n\n'
+      + 'Vuonna 1933 valtaan noussut natsihallinto teki Berliinistä '
+      + 'keskuksensa, ja täältä johdettiin sota ja juutalaisten joukkotuho. '
+      + 'Sodan lopussa kaupunki oli raunioina, ja raivaustyön tekivät '
+      + 'suureksi osaksi naiset eli Trümmerfrauen. Voittajavallat jakoivat '
+      + 'Berliinin neljään sektoriin, ja vuonna 1961 Itä-Saksa rakensi '
+      + 'Länsi-Berliinin ympärille **155 kilometrin muurin**, joka katkaisi '
+      + 'kadut ja metrolinjat 28 vuodeksi; raja aukesi 9. marraskuuta 1989.'
+      + '\n\n'
+      + 'Yhdistyneen Saksan pääkaupunki Berliinistä tuli 1990. Muurin linja '
+      + 'on merkitty keskustan katukiveykseen kaksoisrivinä, ja **East Side '
+      + 'Galleryssä** on 1,3 kilometriä muuria, jonka 118 taiteilijaa '
+      + 'maalasi 1990. Halvat vuokrat vetivät kaupunkiin taiteilijoita '
+      + 'ympäri maailmaa.',
     teksti: 'Berliini oli ensin Preussin ja vuodesta 1871 koko Saksan '
               + 'keisarikunnan pääkaupunki. Se kasvoi hurjaa vauhtia: '
               + '1870-luvulla rakennettiin kokonaisia kortteleita kerralla, ja '
@@ -923,11 +1184,29 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  // TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
+  // kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
   Wien: {
-    intro: 'Wien on Itävallan pääkaupunki Tonavan varrella, noin kaksi '
-             + 'miljoonaa asukasta. Se oli satojen vuosien ajan Habsburgien '
-             + 'valtakunnan keskus, ja siksi keskusta näyttää yhä paljon '
-             + 'suuremman maan pääkaupungilta kuin Itävalta nykyään on.',
+    intro: 'Wien on Itävallan pääkaupunki Tonavan varrella, ja siellä asuu '
+      + 'noin kaksi miljoonaa ihmistä. Kaupunki seisoo kohdassa, jossa joki '
+      + 'tulee ulos vuorten välistä: lännessä nousee Wienerwald ja idässä '
+      + 'alkaa Unkariin asti jatkuva lakeus. Roomalaiset perustivat paikalle '
+      + 'Vindobonan leirin lähes kaksituhatta vuotta sitten.'
+      + '\n\n'
+      + 'Satojen vuosien ajan Wien oli **Habsburgien** valtakunnan keskus, '
+      + 'joka 1900-luvun alussa ulottui Sveitsin rajalta Ukrainaan — siksi '
+      + 'keskusta näyttää yhä suuremman maan pääkaupungilta kuin Itävalta '
+      + 'nykyään on. Kaupunginmuuri purettiin keisarin käskystä, ja tilalle '
+      + 'avattiin 1865 puistokatu **Ring**, jonka varteen nousivat ooppera, '
+      + 'raatihuone ja parlamentti. Valtakunta hajosi ensimmäisen '
+      + 'maailmansodan jälkeen 1918.'
+      + '\n\n'
+      + 'Musiikki on kaupungin tunnetuin vientituote: Haydn, Mozart, '
+      + 'Beethoven, Schubert ja Brahms työskentelivät täällä. Vuoden 1900 '
+      + 'tienoilla Wien oli uusien ajatusten laboratorio: Freud kehitti '
+      + 'täällä psykoanalyysia ja Klimt maalasi kultalehteä käyttäen. '
+      + 'Juomavesi tulee kaupunkiin yhä vuorten lähteistä vuonna 1873 '
+      + 'valmistunutta vesijohtoa pitkin, pelkällä painovoimalla.',
     teksti: 'Habsburgien suku hallitsi Wienistä käsin valtakuntaa, joka '
               + '1900-luvun alussa ulottui Sveitsin rajalta Ukrainaan ja jossa '
               + 'puhuttiin toistakymmentä kieltä. Ensimmäisen maailmansodan '
@@ -993,11 +1272,34 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Krakovassa:
+   * intro on etusivun leipäteksti kappaleineen ja lihavointeineen.
+   * Faktat Prahan omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Praha;
+   * maakartat.js).
+   */
   Praha: {
     intro: 'Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan '
-             + 'kaupunki Vltava-joen mutkissa. Sen keskusta selvisi toisesta '
-             + 'maailmansodasta lähes ehjänä, joten kaduilla seisovat rinta '
-             + 'rinnan keskiaikaiset talot, barokkikirkot ja jugendtalot.',
+      + 'kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän '
+      + 'kallioharjanteen, jonka päälle nousi 800-luvulla linna; '
+      + 'vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä '
+      + 'erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.'
+      + '\n\n'
+      + 'Mahtinsa Praha sai 1300-luvulla, kun **Kaarle IV** teki siitä '
+      + 'keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen '
+      + 'yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. '
+      + 'Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen '
+      + 'kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta '
+      + 'Habsburgien hallintoa ja saksankielisiä virastoja, kunnes '
+      + 'Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.'
+      + '\n\n'
+      + 'Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi '
+      + 'samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko '
+      + 'ja jugendtalo. Vuoden 1968 uudistusyritys eli **Prahan kevät** '
+      + 'päättyi Neuvostoliiton johtamien joukkojen tuloon, mutta vuonna '
+      + '1989 valta vaihtui ilman verenvuodatusta, ja Tšekki ja Slovakia '
+      + 'erosivat rauhanomaisesti vuoden 1993 alussa.',
     teksti: 'Prahan suuri aika alkoi 1300-luvulla, kun Kaarle IV teki siitä '
               + 'Pyhän saksalais-roomalaisen keisarikunnan pääkaupungin. Hän '
               + 'perusti Keski-Euroopan ensimmäisen yliopiston vuonna 1348 ja '
@@ -1025,11 +1327,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Krakovassa:
+   * intro on etusivun leipäteksti kappaleineen ja lihavointeineen.
+   * Faktat Budapestin omista jo tarkistetuista teksteistä
+   * (kulttuuri-kategoriat.js: nostot ja Matkailijan Budapest;
+   * maakartat.js).
+   */
   Budapest: {
-    intro: 'Budapest on Unkarin pääkaupunki ja noin 1,7 miljoonan asukkaan '
-             + 'kaupunki Tonavan molemmin puolin. Se syntyi vasta 17. '
-             + 'marraskuuta 1873, kun kolme erillistä kaupunkia — kukkulainen '
-             + 'Buda, vanha Óbuda ja tasainen Pest — yhdistettiin yhdeksi.',
+    intro: 'Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa '
+      + 'ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, '
+      + 'vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa '
+      + 'kaupungin kahtia: länsipuolella maa nousee jyrkästi '
+      + 'kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin '
+      + 'näkee.'
+      + '\n\n'
+      + 'Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien '
+      + 'noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, '
+      + 'sillä maasta nousee yli sata lämmintä lähdettä. Rantojen '
+      + 'ensimmäinen pysyvä yhteys oli vuonna 1849 avattu **Ketjusilta**. '
+      + 'Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen '
+      + 'puolisko, ja kasvu oli rajua: vuonna 1896 avattiin '
+      + 'Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.'
+      + '\n\n'
+      + 'Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, '
+      + 'ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. '
+      + 'Vuonna 1956 unkarilaiset nousivat kapinaan neuvostojohtoista '
+      + 'hallintoa vastaan, ja sosialistinen kausi päättyi 1989–1990. '
+      + '**Unkarin kieli** kuuluu suomen ja viron tavoin uralilaisiin '
+      + 'kieliin, joten suomalainen tunnistaa siitä rakenteita mutta '
+      + 'tuskin yhtään sanaa.',
     teksti: 'Kaupunki on kaksijakoinen jo maastoltaan. Budan puolella on '
               + 'kukkuloita, linna ja jyrkkiä katuja, Pestin puolella tasankoa, '
               + 'leveitä bulevardeja ja parlamenttitalo joen rannassa. Puolia '
@@ -1063,11 +1390,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Krakovassa:
+   * intro on etusivun leipäteksti kappaleineen ja lihavointeineen.
+   * Sota kerrotaan neutraalina historiana ilman yksityiskohtien
+   * korostusta (Fablen sisältölinjaus 20.8.2026). Faktat Varsovan
+   * omista jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:
+   * nostot ja Matkailijan Varsova; maakartat.js).
+   */
   Varsova: {
     intro: 'Varsova on Puolan pääkaupunki ja maan suurin kaupunki: '
-             + 'asukkaita on lähes kaksi miljoonaa. Se sijaitsee Veikselin '
-             + 'varrella tasangolla, kaukana merestä ja vuorista — kaupunki on '
-             + 'kasvanut siihen, missä vanhat kauppareitit risteävät.',
+      + 'asukkaita on lähes kaksi miljoonaa. Se sijaitsee keskellä Puolan '
+      + 'tasankoa Veikselin länsirannalla, jossa jyrkältä törmältä näki '
+      + 'kauas ja törmän alla oli hyvä lastauspaikka viljalautoille.'
+      + '\n\n'
+      + 'Vuonna 1596 kuningas **Sigismund III** siirsi hovinsa Krakovasta '
+      + 'tänne, ja kauppapaikasta tuli valtakunnan pääkaupunki. Puola '
+      + 'katosi Euroopan kartalta vuosiksi 1795–1918, ja Varsova oli '
+      + 'enimmäkseen Venäjän keisarikunnan kaupunki, mutta se kasvoi ja '
+      + 'teollistui silti. Täällä varttui Fryderyk Chopin ja syntyi '
+      + 'vuonna 1867 Maria Skłodowska, josta tuli kahden eri tieteenalan '
+      + 'nobelisti.'
+      + '\n\n'
+      + 'Toinen maailmansota kohteli Varsovaa raskaammin kuin melkein '
+      + 'mitään muuta Euroopan kaupunkia: sodan lopussa rakennuksista oli '
+      + 'raunioina yli kolme neljäsosaa, ja kaupungin suuri '
+      + 'juutalaisyhteisö oli tuhottu. Kaupunki rakennettiin takaisin, ja '
+      + 'vanhankaupungin talot pystytettiin uudelleen vanhojen '
+      + 'piirustusten ja maalausten avulla. Keskustaan nousi vuonna 1955 '
+      + '**Kulttuuri- ja tiedepalatsi**, 237 metriä korkea Neuvostoliiton '
+      + 'lahja, jonka ympärille on kasvanut lasitornien rivi.',
     teksti: 'Varsovasta tuli Puolan pääkaupunki vuonna 1596, kun kuningas '
               + 'Sigismund III siirsi hovinsa Krakovasta tänne: Veikselin '
               + 'varrella oltiin lähempänä valtakunnan keskikohtaa. Kaupungin '

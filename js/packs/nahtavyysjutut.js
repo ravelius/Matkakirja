@@ -1661,6 +1661,11 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * nähtävyysjuttujen monivirkkeiset kuvatekstit on tiivistetty yhteen
+   * virkkeeseen. Jutut, aikamerkinnät ja lähderivit ovat ennallaan.
+   */
   praha: {
     'Petřínin näkötorni': {
       aika: '1891',
@@ -2071,6 +2076,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   budapest: {
     Kalastajanlinnake: {
       aika: '1895–1902',
@@ -2282,11 +2288,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "Heroes' Square (Budapest) 20180824.jpg",
-          selite: 'Aukio sivusta: keskellä uurrettu pylväs, jonka '
-            + 'huipulla Gabriel levittää siipensä, pylvään juurella '
-            + 'ratsastajien pronssiryhmä, ja molemmin puolin kaartuvat '
-            + 'pylväiköt patsaineen. Aukion kivetys jatkuu tyhjänä '
-            + 'kuvan alareunaan.',
+          selite: 'Sankarien aukio sivusta: keskellä uurrettu pylväs, jonka '
+            + 'huipulla Gabriel levittää siipensä, juurella ratsastajien '
+            + 'pronssiryhmä ja molemmin puolin kaartuvat pylväiköt '
+            + 'patsaineen.',
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -2301,6 +2306,13 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamattu "TEKSTIEN PAINOPISTE",
+   * omistajan tarkennus "kuvateksti on YKSI virke"): Panthéonin ja Orsayn
+   * kaksivirkkeiset selitteet tiivistettiin yhteen virkkeeseen. Muut
+   * Pariisin selitteet olivat jo yhden virkkeen mittaisia, eivätkä jutut,
+   * lähderivit tai kuvatiedostot muuttuneet.
+   */
   pariisi: {
     'Eiffel-torni': {
       aika: '1889',
@@ -2528,16 +2540,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Panthéon, Paris 15 August 2011.jpg',
-          selite: 'Kupoli lepää pylväskehän päällä, ja oikealla kohoaa '
-            + 'korinttilainen pylväikkö päätykolmioineen. Pitkä sivuseinä '
-            + 'on umpinainen — sieltä ikkunat muurattiin pois.',
+          selite: 'Kupoli lepää pylväskehän päällä, oikealla kohoaa '
+            + 'korinttilainen pylväikkö päätykolmioineen, ja pitkä sivuseinä '
+            + 'on umpinainen, koska ikkunat muurattiin pois.',
           lahde: 'Michal Osmenda, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Foucault pendulum at Panthéon de Paris, August 2023.JPG',
-          selite: 'Heilurin kullattu pallo liikkuu marmorilattian yllä. '
-            + 'Lattian kehälle merkityt numerot näyttävät, miten '
-            + 'heilahdustaso kiertää päivän mittaan.',
+          selite: 'Heilurin kullattu pallo liikkuu marmorilattian yllä, '
+            + 'jonka kehälle merkityt numerot näyttävät heilahdustason '
+            + 'kiertymisen päivän mittaan.',
           lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
         },
       ],
@@ -2605,9 +2617,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Musee d\'Orsay and Pont Royal, North-West view 140402 1.jpg',
-          selite: 'Orsayn museo Seinen rannalla auringonnousun aikaan. '
-            + 'Entisen aseman kellotaulu erottuu julkisivussa, ja '
-            + 'vasemmalla kaartuu Pont Royal.',
+          selite: 'Orsayn museo Seinen rannalla auringonnousun aikaan: '
+            + 'entisen aseman kellotaulu erottuu julkisivussa, ja vasemmalla '
+            + 'kaartuu Pont Royal.',
           lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -3161,6 +3173,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   amsterdam: {
     Keskusrautatieasema: {
       aika: '1889',
@@ -4477,6 +4490,11 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E2 (Raamattu, "TEKSTIEN PAINOPISTE"):
+   * selitteet käytiin läpi ja Casa Batllón iltakuvan kaksi virkettä
+   * yhdistettiin; muut olivat jo valmiiksi yksivirkkeisiä.
+   */
   barcelona: {
     'Sagrada Família': {
       aika: '1882–',
@@ -4554,9 +4572,9 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Casa Batlló facade at night.JPG',
           lahde: 'Mikenorton, Wikimedia Commons (CC BY-SA 3.0)',
-          selite: 'Casa Batllón julkisivu valaistuna illalla. Mosaiikki hohtaa '
-            + 'lampuissa, ja parvekkeet erottuvat naamiomaisina Passeig de '
-            + 'Gràcialle.',
+          selite: 'Casa Batllón julkisivu valaistuna illalla, kun '
+            + 'mosaiikki hohtaa lampuissa ja parvekkeet erottuvat '
+            + 'naamiomaisina Passeig de Gràcialle.',
         },
       ],
       lahde: 'Wikipedia',
@@ -5245,6 +5263,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   krakova: {
     Barbakaani: {
       aika: '1498',
@@ -5512,6 +5531,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   varsova: {
     'Vanhankaupungin tori': {
       aika: 'n. 1280-luku (jälleenrakennettu 1948–1953)',
@@ -5590,8 +5610,8 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Warszawa - Zamek krolewski. 1898-1906 (75185878).jpg',
-          selite: 'Värisävytetty postikortti n. 1898-1906: Varsovan linna ja '
-            + 'Sigismundin pylväs, hevosvaunuja ja raitiotiekiskot '
+          selite: 'Värisävytetty postikortti vuosilta 1898–1906: Varsovan '
+            + 'linna ja Sigismundin pylväs, hevosvaunuja ja raitiotiekiskot '
             + 'aukiolla.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },

@@ -3367,21 +3367,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/lissabon-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 38.7265, etela: 38.7035, lansi: -9.1505, ita: -9.118 },
-    esittely: 'Lissabon seisoo kukkuloilla Tejo-joen pohjoisrannalla. '
-      + 'Tejo on Iberian niemimaan pisin joki, ja Lissabonin kohdalla '
-      + 'se on jo melkein meri: Kauppatorilta vastarannalle on runsaat '
-      + 'kaksi kilometriä. Juuri siksi kaupunki on tässä. Laivat '
-      + 'pääsivät leveään ja suojaisaan satamaan, mutta avomerelle oli '
-      + 'vain noin viisitoista kilometriä. Kukkuloilta näki tulijat '
-      + 'kaukaa, ja jyrkkää rinnettä oli helppo puolustaa: roomalaiset, '
-      + 'maurit ja portugalilaiset rakensivat linnansa kaikki samalle '
-      + 'kukkulalle.\n\nKartan alalaidassa kaartaa Tejo. Keskellä on '
-      + 'suora ruudukko, noin 800 metriä leveä: se on Baixa eli '
-      + 'alakaupunki. Vanha keskusta romahti maanjäristyksessä 1. '
-      + 'marraskuuta 1755, ja tilalle vedettiin viivoittimella uudet '
-      + 'kadut. Ruudukon molemmin puolin kadut menevät solmuun ja '
-      + 'kiipeävät ylös: oikealla Alfama linnankukkulalla, vasemmalla '
-      + 'Bairro Alto. Ruudukon yläkulmasta lähtee vinosti leveä '
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartan alue on Lissabonin keskusta Tejo-joen '
+      + 'pohjoisrannalla. Joki on tässä kohtaa jo melkein meri, ja '
+      + 'juuri siksi kaupunki on tässä: laivat pääsivät leveään ja '
+      + 'suojaisaan satamaan, mutta avomerelle oli vain noin '
+      + 'viisitoista kilometriä. Rannasta nousee Baixa eli alakaupunki, '
+      + 'joka vedettiin suoraksi ruudukoksi sen jälkeen, kun vanha '
+      + 'keskusta romahti maanjäristyksessä 1. marraskuuta 1755. Sen '
+      + 'molemmin puolin kohoavat vanhat kukkulakaupunginosat, Alfama '
+      + 'linnankukkulalla ja Bairro Alto, ja pohjoiseen lähtee '
       + 'puistokatu Avenida da Liberdade. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
@@ -3406,23 +3405,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/barcelona-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 41.4085, etela: 41.37, lansi: 2.147, ita: 2.1984 },
-    esittely: 'Barcelona on rakennettu kapealle tasangolle meren ja '
-      + 'vuorten väliin. Selän takana kohoaa Collserolan metsäinen '
-      + 'harjanne, ja tasangon molemmissa reunoissa virtaa joki: '
-      + 'lännessä Llobregat, idässä Besòs. Sataman vieressä on vielä '
-      + 'yksi mäki, Montjuïc, jonka itäreuna putoaa lähes '
-      + 'pystysuorana alas. Roomalaiset perustivat Barcinon pienelle '
-      + 'kummulle, joka on vain noin seitsemäntoista metriä korkea. '
-      + 'Kummun päällä seisoo nyt katedraali, ja kaupunki pysyi sen '
-      + 'ympärillä muurien sisässä aina 1850-luvulle asti.\n\nKartan '
-      + 'yläosa on pelkkää ruudukkoa. Se on Eixample, joka piirrettiin '
-      + 'tyhjälle kentälle, kun muurit purettiin: korttelit ovat 113 '
-      + 'metriä sivultaan ja joka kulmasta on leikattu 20 metrin '
-      + 'viiste. Ruudukon poikki viistää kaksi leveää katua, ja aivan '
-      + 'sen sisällä seisoo Sagrada Família. Keskellä ruudukko loppuu '
-      + 'kuin veitsellä katkaistuna, ja alkaa vanhankaupungin sokkelo '
-      + '— siinä kulki muuri. Alhaalla oikealla on satama ja meri. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartta kattaa Barcelonan keskustan kapealla tasangolla '
+      + 'Välimeren ja Collserolan metsäisen harjanteen välissä. '
+      + 'Roomalaiset perustivat Barcinon pienelle kummulle, jonka '
+      + 'päällä seisoo nyt katedraali, ja kaupunki pysyi muurien '
+      + 'sisässä aina 1850-luvulle asti; muurien paikalta alkaa '
+      + 'vanhankaupungin sokkelo. Sen pohjoispuolelle piirrettiin '
+      + 'tyhjälle kentälle Eixample, jonka korttelit ovat 113 metriä '
+      + 'sivultaan ja joiden joka kulmasta on leikattu 20 metrin '
+      + 'viiste. Ruudukon sisällä seisoo Sagrada Família, ja etelässä '
+      + 'ovat satama ja meri. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Boquerian kauppahallista ja Kolumbuksen patsaasta ei ole
@@ -3444,25 +3442,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/granada-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
-    esittely: 'Granada on Sierra Nevadan juurella noin 740 metrin '
-      + 'korkeudessa. Kaupunki syntyi kohtaan, jossa kaksi jokea '
-      + 'yhtyy: pieni Darro tulee vuorilta idästä ja laskee Geniliin, '
-      + 'joka jatkaa lännen viljavalle tasangolle. Vuoret ovat '
-      + 'kaupungin vesisäiliö. Ylimmillä huipuilla on lunta vielä '
-      + 'toukokuussa, lumi sulaa hitaasti, ja sulamisvesi johdettiin '
-      + 'kanavia pitkin pelloille, suihkulähteisiin ja puutarhoihin. '
-      + 'Darron molemmin puolin nousee kaksi kukkulaa vastakkain: '
-      + 'toisella on Alhambra, toisella Albaicínin valkoinen '
-      + 'kaupunginosa.\n\nKartalla Darro tulee oikealta vinosti alas. '
-      + 'Vanhankaupungin kohdalla se katoaa: joki katettiin 1800-luvun '
-      + 'lopulla kadun alle, ja vesiviiva jatkuu talojen alitse '
-      + 'Geniliin, joka kulkee kuvan alalaidassa. Oikealla '
-      + 'levittäytyy metsäinen Alhambran kukkula ja sen laella '
-      + 'palatsin rakennusrykelmä; alue on 142 000 neliömetriä. '
-      + 'Vastapäätä ylhäällä kiemurtelee Albaicínin kujaverkko '
-      + 'rinnettä ylös. Vasemmalla maa tasoittuu, ja siellä seisoo '
-      + 'katedraali. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartta rajaa Granadan vanhan ytimen Sierra Nevadan '
+      + 'juurella noin 740 metrin korkeudessa. Kaupunki syntyi '
+      + 'kohtaan, jossa vuorilta tuleva Darro yhtyy Geniliin; Darro '
+      + 'katettiin 1800-luvun lopulla kadun alle ja virtaa nykyään '
+      + 'talojen alitse. Joen molemmin puolin nousee kaksi kukkulaa '
+      + 'vastakkain: toisella on Alhambran 142 000 neliömetrin '
+      + 'palatsialue, toisella Albaicínin valkoinen kaupunginosa. '
+      + 'Tasaisemmalla maalla lännessä seisoo katedraali. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Sacromonten luolista ja Granadan katedraalista ei ole
@@ -3668,25 +3661,21 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/ateena-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
     esittely: 'Ateena syntyi kallion ympärille. Akropolis kohoaa noin '
       + '90 metriä ympäröivän tasangon yli ja 156 metrin korkeuteen '
-      + 'merenpinnasta. Seinämät ovat jyrkät ja sisään pääsee vain '
-      + 'länsipäästä, ja rinteillä oli lähteitä, joten kukkula kesti '
-      + 'pitkänkin piirityksen. Meri jäi kauas: Pireuksen satama on '
-      + 'kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa '
-      + 'yhtään jokea. Ateena on siis linnavuoren kaupunki, ei sataman '
-      + 'eikä joen.\n\nKartalla ei siksi näy vettä. Sen tilalla '
-      + 'erottuu vaaleina laikkuina kukkuloiden puistoja: lounaassa '
-      + 'metsäinen Filopáppos, keskellä Akropoliin kallio rinteineen '
-      + 'ja idässä Kansallispuutarha. Koillisessa on vielä yksi '
-      + 'kukkula, jota kartta ei näytä mutta numero löytää: '
-      + 'Lykavittós, 277 metriä korkea ja koko keskustan korkein '
-      + 'kohta. Kukkuloiden välissä vanhat kadut ovat kapeita ja '
-      + 'mutkaisia. Pohjoisempana ne suoristuvat, '
-      + 'sillä se osa piirrettiin 1830-luvulla kerralla uuden '
-      + 'pääkaupungin ruutukaavaksi. Oikeassa alalaidassa erottuu '
-      + 'hevosenkengän muotoinen stadion. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+      + 'merenpinnasta; seinämät ovat jyrkät ja sisään pääsee vain '
+      + 'länsipäästä, joten kukkula kesti pitkänkin piirityksen. Meri '
+      + 'jäi kauas, sillä Pireuksen satama on kahdeksan kilometriä '
+      + 'lounaaseen, eikä keskustan läpi virtaa yhtään jokea. Kartan '
+      + 'alueella ovat Akropoliin rinteet, antiikin kaupungin torit ja '
+      + 'kukkuloiden puistot, ja koillisessa kohoaa vielä Lykavittós, '
+      + '277 metriä korkea ja koko keskustan korkein kohta. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAKSI TÄSMENNYSSIVUANSAA, jotka on tarkistettu 9.8.2026 —
@@ -3718,21 +3707,23 @@ export const KAUPUNKIKARTAT = {
     // --vari, Eurooppa-erä 1 15.8.2026).
     piirtoRajat: { pohjoinen: 52.39435, etela: 52.34715, lansi: 4.8518, ita: 4.9382 },
     varikartta: 'assets/kartat/amsterdam-varikartta.png',
-    esittely: 'Amsterdam syntyi padosta. Amstel-joki laski ennen suoraan '
-      + 'IJ-lahteen, ja lahdesta pääsi merelle. Noin vuonna 1270 joki '
-      + 'padottiin, ja padon päälle kasvoi kylä Amstelredam — siitä tuli '
-      + 'Amsterdam. Pato oli myös lastauspaikka: merilaivat jäivät lahden '
-      + 'puolelle, jokiveneet toiselle, ja tavara kannettiin välissä. Maa '
-      + 'oli pehmeää suota, joten kanavia kaivettiin sekä kulkuväyliksi '
-      + 'että kuivattamaan maata. Pato on yhä paikallaan, mutta sen päällä '
-      + 'on nyt aukio, jonka nimi on lyhyesti Dam.\n\nKartalla näkyy '
-      + 'kolme puolikuuta: Herengracht, Keizersgracht ja Prinsengracht, '
-      + 'joita alettiin kaivaa vuonna 1613. Vesi pilkkoo keskustan noin '
-      + 'yhdeksäksikymmeneksi saareksi, ja niitä yhdistää toistatuhatta '
-      + 'siltaa. Ylhäällä levittäytyy avoin vesi, entinen merenlahti IJ, ja '
-      + 'siellä on kaupungin satama. Keskusasema ei ole rannalla vaan veden '
-      + 'päällä: se rakennettiin 1880-luvulla kolmelle tekosaarelle, jotka '
-      + 'kasattiin hiekasta lahden pohjaan.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja miksi
+     * ne kiinnostavat; kartan laitojen ja ilmansuuntien kuvailu on
+     * poistettu, ja kaupungin oma historia asuu nyt etusivun
+     * leipätekstissä (js/packs/europe-artikkelit.js).
+     */
+    esittely: 'Kartan alue on Amsterdamin vanha ydin. Amstel-joki '
+      + 'padottiin noin vuonna 1270, ja padon päälle kasvoi kylä '
+      + 'Amstelredam; pato on yhä paikallaan, mutta sen päällä on nyt '
+      + 'Dam-aukio ja kuninkaanpalatsi. Ympärille kaivettiin vuodesta 1613 '
+      + 'alkaen kanavavyöhyke, joka pilkkoo keskustan noin '
+      + 'yhdeksäksikymmeneksi saareksi ja jota yhdistää toistatuhatta '
+      + 'siltaa. Alueella ovat myös Anne Frankin talo, Rembrandtin talo, '
+      + 'Artis-eläintarha ja Rijksmuseum, ja keskusasema rakennettiin '
+      + '1880-luvulla kolmelle tekosaarelle entiseen merenlahteen IJ:hin. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Rembrandtin talosta ei ole suomenkielistä artikkelia, joten se
@@ -3820,20 +3811,21 @@ export const KAUPUNKIKARTAT = {
      */
     rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
     piirtoRajat: { pohjoinen: 48.91446, etela: 48.82454, lansi: 2.23177, ita: 2.41273 },
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E1, Raamattu "TEKSTIEN PAINOPISTE"):
+     * esittelystä poistettiin koko toinen kappale, joka kuvaili kartan
+     * saarta, siltoja, tähtiristeystä ja Montmartren sijaintia kuvassa.
+     * Jäljelle jäi se, miksi kaupunki syntyi tähän ja mitä alueella on.
+     */
     esittely: 'Pariisi alkoi saarelta. Seine haarautuu keskellä kaupunkia '
       + 'kahdeksi kapeaksi uomaksi, ja niiden väliin jää Île de la Cité — '
       + 'saari, joka on kymmenen katua pitkä ja viisi leveä. Kapeat haarat '
       + 'oli helppo ylittää ja saari helppo puolustaa, joten kelttiläinen '
       + 'kalastajakylä ja sen jälkeen roomalaisten Lutetia asettuivat juuri '
-      + 'tähän. Kaupunki kasvoi saarelta molemmille rannoille, ja joen '
-      + 'suuri kaari on yhä sen selkäranka.\n\nKartan keskellä näkyy '
-      + 'saari, josta sillat vievät molemmille rannoille. Vanhin Seinen '
-      + 'silloista on Pont Neuf, joka rakennettiin vuosina 1578–1607 — nimi '
-      + 'tarkoittaa uutta siltaa. Vasemmalla tusina katua kohtaa yhdessä '
-      + 'pisteessä ja piirtää kartalle tähden; sen keskellä seisoo '
-      + 'Riemukaari. Ylhäällä oikealla kohoaa Montmartre, kaupungin korkein '
-      + 'kukkula, 130 metriä merenpinnan yläpuolella, ja sen laella on '
-      + 'valkoinen Sacré-Cœur.',
+      + 'tähän. Kaupunki kasvoi saarelta molemmille rannoille, ja joen suuri '
+      + 'kaari on yhä sen selkäranka. Kartan alueelle mahtuvat sekä '
+      + 'Eiffel-torni että Montmartren laella oleva Sacré-Cœur, vaikka '
+      + 'niiden väli on lähes viisi kilometriä.',
     kohteet: [
       /*
        * Laaja rajaus, 15.8.2026 alkaen 8,3 km (pelin laajin on nyt
@@ -3894,23 +3886,18 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
         x: 70, y: 3, leveys: 28, korkeus: 30.56 },
     ],
-    esittely: 'Budapest seisoo siinä, missä Budan kalkkikivikukkulat '
-      + 'loppuvat ja Unkarin suuri tasanko alkaa. Raja kulkee Tonavaa '
-      + 'pitkin: läntisellä rannalla maa nousee jyrkästi, itäisellä se '
-      + 'on tasaista niin kauas kuin näkee. Samaa kallionrakoa myöten '
-      + 'maasta nousee yli sata lämmintä lähdettä, ja niiden päälle on '
-      + 'rakennettu kylpylöitä satojen vuosien ajan. Kaupunkeja oli '
-      + 'pitkään kolme — Buda kukkulalla, Óbuda pohjoisessa ja Pest '
-      + 'tasangolla — ja ne yhdistettiin yhdeksi vasta vuonna '
-      + '1873.\n\nEro näkyy kartalla heti. Lännessä kadut mutkittelevat '
-      + 'rinnettä ylös, ja Gellértinvuori kohoaa 140 metriä joen '
-      + 'yläpuolelle. Idässä kadut lähtevät suorina säteinä ja kaarina '
-      + 'tasangolle. Välissä virtaa Tonava. Ensimmäinen pysyvä silta '
-      + 'sen yli oli Ketjusilta, joka avattiin marraskuussa 1849: 375 '
-      + 'metriä pitkä ja keskijänteeltään 202 metriä, tuohon aikaan '
-      + 'maailman pisimpiä. Sitä ennen rannat yhdisti ponttonisilta, '
-      + 'joka oli talvella jäiden takia usein poissa käytöstä. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
+    // esittely kertoo kohteet, ei kartan viivastoja.
+    esittely: 'Kartan alue on Budapestin keskusta Tonavan molemmin puolin. '
+      + 'Lännessä ovat Budan kalkkikivikukkulat: Kalastajanlinnake '
+      + 'linnavuorella ja Gellértinvuori, joka kohoaa 140 metriä joen '
+      + 'yläpuolelle. Idässä alkaa Unkarin suuri tasanko, jolla ovat '
+      + 'parlamenttitalo, Pyhän Tapanin kirkko ja suuri kauppahalli. '
+      + 'Rannat yhdisti ensimmäisenä Ketjusilta, joka avattiin '
+      + 'marraskuussa 1849 ja on 375 metriä pitkä; sitä ennen välissä oli '
+      + 'ponttonisilta, joka oli talvella jäiden takia usein poissa '
+      + 'käytöstä. Kainalokartassa on Sankarien aukio Városligetin '
+      + 'laidalla. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Kolme kohdetta kummallakin rannalla, jotta kartan juoni —
@@ -3936,18 +3923,19 @@ export const KAUPUNKIKARTAT = {
     // --vari, Eurooppa-erä 1 15.8.2026).
     piirtoRajat: { pohjoinen: 50.1013, etela: 50.0677, lansi: 14.3628, ita: 14.4652 },
     varikartta: 'assets/kartat/praha-varikartta.png',
-    esittely: 'Praha kasvoi Vltavan mutkaan. Joki on Tšekin pisin, 430 '
-      + 'kilometriä, ja Prahan kohdalla se kaartaa jyrkän kallioharjanteen '
-      + 'ympäri. Harjanteen päälle perustettiin 800-luvulla linna, ja '
-      + 'vastarannan tasaiselle maalle syntyi kauppiaiden Vanhakaupunki. '
-      + 'Linna on Guinnessin mukaan maailman suurin muinaislinna: 570 '
-      + 'metriä pitkä ja keskimäärin 128 metriä leveä.\n\nKartan halki '
-      + 'kulkee joki, ja sen yli vie Kaarlensilta: 516 metriä pitkä, '
-      + 'kuusitoista kaarta. Se oli yli neljäsataa vuotta Prahan ainoa '
-      + 'silta — seuraava valmistui vasta 1841. Vanhankaupungin kadut ovat '
-      + 'kapeita ja mutkaisia, ja ne kulkevat pari metriä alkuperäistä '
-      + 'ylempänä: 1200-luvulla koko kaupunginosan maanpinta nostettiin '
-      + 'tulvien takia, ja vanhat pohjakerrokset jäivät kellareiksi.',
+    // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
+    // esittely kertoo kohteet, ei kartan viivastoja.
+    esittely: 'Kartan alue on Prahan vanha ydin Vltavan molemmin puolin. '
+      + 'Joki kaartaa jyrkän kallioharjanteen ympäri, ja harjanteelle '
+      + 'perustettiin 800-luvulla Prahan linna, jota pidetään Guinnessin '
+      + 'mukaan maailman suurimpana muinaislinnana: 570 metriä pitkä. '
+      + 'Vastarannalle syntyi kauppiaiden Vanhakaupunki, jonka maanpinta '
+      + 'nostettiin 1200-luvulla tulvien takia pari metriä ylemmäs, ja '
+      + 'vanhat pohjakerrokset jäivät kellareiksi. Rantoja yhdistää '
+      + 'Kaarlensilta, 516 metriä ja kuusitoista kaarta, joka oli yli '
+      + 'neljäsataa vuotta kaupungin ainoa silta. Alueella ovat myös '
+      + 'Petřínin näkötorni, Vanhauusi synagoga, astronominen kello ja '
+      + 'kansallismuseo.',
     kohteet: [
       /*
        * Lännestä itään: Petřínin kukkulalta Václavin aukion yläpäähän.
@@ -3987,22 +3975,25 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 48.191, etela: 48.178, lansi: 16.303, ita: 16.325 },
         x: 20, y: 57.85, leveys: 18.75, korkeus: 22.15 },
     ],
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E1, Raamattu "TEKSTIEN PAINOPISTE"):
+     * esittelystä poistettiin kartan visuaalinen kuvailu (soikea katukehä,
+     * kapeat kadut kehän sisällä, Praterin vihreä). Ring on yhä mukana,
+     * mutta asiana eikä kuvan muotona, ja loppuun tuli lyhyt luettelo
+     * siitä, mitä kohteita alueella on.
+     */
     esittely: 'Wien seisoo kohdassa, jossa Tonava tulee ulos vuorten '
       + 'välistä. Lännessä nousee Wienerwald, Alppien viimeinen '
       + 'kukkulaselänne, ja idässä alkaa tasainen lakeus, joka jatkuu '
       + 'Unkariin asti. Roomalaiset huomasivat paikan ensin: he perustivat '
       + 'tänne Vindobonan leirin lähes kaksituhatta vuotta sitten, sillä '
-      + 'Tonava oli heidän valtakuntansa pohjoisraja. Vanhakaupunki ei '
-      + 'silti ole ison joen rannalla vaan sen sivuhaaran, Donaukanalin, '
-      + 'varrella — pääuoma suoristettiin nykyiselle paikalleen vasta '
-      + '1870-luvulla.\n\nKartan keskellä näkyy soikea katukehä. Se on '
-      + 'Ring: kaupunginmuuri purettiin keisarin käskystä, ja tilalle '
-      + 'avattiin 1865 yli viisi kilometriä pitkä puistokatu, jonka '
-      + 'varrelle rakennettiin ooppera, raatihuone ja museot. Kehän sisällä '
-      + 'kadut ovat kapeita ja mutkaisia, ulkopuolella leveitä ja suoria. '
-      + 'Koillisessa kaartaa Donaukanal, ja sen takana levittäytyy Praterin '
-      + 'vihreä — entinen keisarin metsästysmaa, jonka reunalla pyörii '
-      + 'jättiratas.',
+      + 'Tonava oli heidän valtakuntansa pohjoisraja. Vanhakaupunki ei silti '
+      + 'ole ison joen rannalla vaan sen sivuhaaran, Donaukanalin, varrella '
+      + '— pääuoma suoristettiin nykyiselle paikalleen vasta 1870-luvulla. '
+      + 'Vanhan ytimen kiertää Ring, kaupunginmuurin paikalle 1865 avattu '
+      + 'puistokatu: sen varrella ovat raatihuone, Hofburg ja ooppera, kehän '
+      + 'sisällä Stephansdom ja laidoilla Belvedere sekä Praterin jättiratas, '
+      + 'ja Schönbrunn on omassa kainalokartassaan.',
     kohteet: [
       /*
        * Lännestä itään. Belvedere on 89 %:n kohdalla ja jättiratas
@@ -4307,15 +4298,19 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/madrid-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 40.43, etela: 40.406, lansi: -3.72, ita: -3.675 },
-    esittely: 'Madrid oli pieni linnoituskaupunki, kunnes kuningas '
-      + 'Filip II siirsi hovinsa tänne vuonna 1561. Sen jälkeen '
-      + 'kaupunki kasvoi ulospäin keskustastaan kuin puu '
-      + 'vuosirenkaineen, ja kartalla se näkyy yhä: vanhat kadut '
-      + 'mutkittelevat kapeina, uudemmat kulkevat suorina ja '
-      + 'leveinä.\n\nPuerta del Solin kiveyksessä on laatta, josta '
-      + 'Espanjan tiet mitataan: se on kilometri nolla, ja maan '
-      + 'päätiet lähtevät siitä ulospäin kuin kellotaulun viisarit. '
-      + 'Kartan itälaidan iso vihreä on Retiro, entinen kuninkaan '
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
+     * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
+     * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
+     */
+    esittely: 'Kartta rajaa Madridin vanhan ytimen kuninkaanlinnalta '
+      + 'Retiron portille. Madrid oli pieni linnoituskaupunki, kunnes '
+      + 'kuningas Filip II siirsi hovinsa tänne vuonna 1561, ja sen '
+      + 'jälkeen kaupunki kasvoi ulospäin keskustastaan: vanhat kadut '
+      + 'mutkittelevat kapeina, uudemmat kulkevat suorina ja leveinä. '
+      + 'Reitin varrella ovat Plaza Mayor ja Puerta del Sol, jonka '
+      + 'kiveyksessä on kilometri nolla, laatta, josta Espanjan '
+      + 'päätiet mitataan. Idässä on Retiro, entinen kuninkaan '
       + 'puutarha, joka siirtyi kaupungille ja kaikkien käyttöön vasta '
       + '1868. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
@@ -4426,20 +4421,22 @@ export const KAUPUNKIKARTAT = {
     // --vari, Eurooppa-erä 1 15.8.2026).
     piirtoRajat: { pohjoinen: 41.9222, etela: 41.8758, lansi: 12.429, ita: 12.517 },
     varikartta: 'assets/kartat/rooma-varikartta.png',
+    /*
+     * TEKSTIREMONTTI 20.8.2026 (erä E1, Raamattu "TEKSTIEN PAINOPISTE"):
+     * esittelystä poistettiin kartan visuaalinen kuvailu (mistä Tiber tulee
+     * ja mihin menee, kujaverkon sekavuus, suorat kadut). Tilalle tuli
+     * lyhyt luettelo siitä, mitä kohteita alueella on.
+     */
     esittely: 'Rooma syntyi Tiberin mutkaan noin 25 kilometriä merestä '
-      + 'ylävirtaan, ja paikan valitsi joki. Keskellä virtaa on saari, '
-      + 'Isola Tiberina, joka jakaa uoman kahdeksi kapeaksi haaraksi. Siinä '
-      + 'kohtaa joen yli pääsi kahlaamalla, eikä toista yhtä helppoa '
-      + 'ylityspaikkaa ollut pitkään matkaan. Kahlaamon ympärillä kohoaa '
-      + 'seitsemän kukkulaa, ja niiden välinen suo kuivattiin viemärillä '
-      + 'nimeltä Cloaca Maxima. Kuivatusta notkosta tuli Forum Romanum, '
-      + 'kaupungin tori.\n\nKartalla Tiber tulee alhaalta, tekee kaksi '
-      + 'jyrkkää mutkaa ja poistuu ylälaidasta. Vasemmalle puolelle jokea '
-      + 'jää Vatikaani, oikealle vanhakaupunki. Sen kujaverkko on niin '
-      + 'sekava, että muutamat suorat kadut erottuvat siitä heti — ne on '
-      + 'puhkaistu talojen läpi vasta myöhemmin. Oikeassa alalaidassa '
-      + 'katuverkko harvenee ja tilalle tulee antiikin alue: siellä ovat '
-      + 'Forum ja Colosseum.',
+      + 'ylävirtaan, ja paikan valitsi joki. Keskellä virtaa on saari, Isola '
+      + 'Tiberina, joka jakaa uoman kahdeksi kapeaksi haaraksi. Siinä kohtaa '
+      + 'joen yli pääsi kahlaamalla, eikä toista yhtä helppoa ylityspaikkaa '
+      + 'ollut pitkään matkaan. Kahlaamon ympärillä kohoaa seitsemän '
+      + 'kukkulaa, ja niiden välinen suo kuivattiin viemärillä nimeltä '
+      + 'Cloaca Maxima. Kuivatusta notkosta tuli Forum Romanum, kaupungin '
+      + 'tori. Kartan kohteet ovat joen molemmin puolin: lännessä Vatikaani '
+      + 'ja Castel Sant’Angelo, idässä Espanjalaiset portaat, Trevin '
+      + 'suihkulähde ja Pantheon, ja kaakossa antiikin alue Colosseumeineen.',
     kohteet: [
       /*
        * Numerointi kulkee lännestä itään, eli samassa järjestyksessä
@@ -4462,22 +4459,19 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/krakova-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.069, etela: 50.047, lansi: 19.9225, ita: 19.9585 },
-    esittely: 'Krakova kasvoi Veikselin rannalle kalkkikivikukkulan '
-      + 'juurelle. Kukkula on Wawel, ja se on täynnä reikiä: kalkkikiveen '
-      + 'on liuennut luolia, ja suurin niistä avautuu suoraan joen '
-      + 'rantaan. Sitä sanotaan Lohikäärmeen luolaksi. Kaupunki paloi '
-      + 'mongolien hyökkäyksessä vuonna 1241 ja rakennettiin uudestaan '
-      + '1257 kokonaan uudella kaavalla: suorakulmainen ruudukko, jonka '
-      + 'keskellä on kaksisataa metriä sivultaan oleva tori. Se on yhä '
-      + 'Euroopan suurimpia keskiaikaisia toreja.\n\nKartan keskellä '
-      + 'näkyy soikea vihreä kehä. Siinä kulki kaupunginmuuri, joka '
-      + 'purettiin 1820-luvulla, ja tilalle istutettiin puistovyö nimeltä '
-      + 'Planty. Muurista jätettiin pystyyn vain pohjoispää: Barbakaani '
-      + 'ja sen takana yksi portti. Kehän sisällä ovat ruudukko ja tori, '
-      + 'etelässä Wawelin kukkula joen mutkassa, ja siitä alas oikealle '
-      + 'Kazimierz, joka oli 1300-luvulta 1800-luvun alkuun oma '
-      + 'kaupunkinsa Krakovan vieressä. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
+    // esittely kertoo kohteet, ei kartan viivastoja.
+    esittely: 'Kartan alue on Krakovan vanhakaupunki ja sen eteläpuoli. '
+      + 'Kaupunki paloi mongolien hyökkäyksessä vuonna 1241 ja '
+      + 'rakennettiin 1257 uudella kaavalla: suorakulmainen ruudukko, '
+      + 'jonka keskellä on kaksisataa metriä sivultaan oleva tori, yhä '
+      + 'Euroopan suurimpia keskiaikaisia toreja. Torilla ovat kangashalli '
+      + 'Sukiennice ja Mariankirkko, pohjoisessa Barbakaani, ja purettujen '
+      + 'muurien paikalla kiertää 1820-luvulla istutettu puistovyö Planty. '
+      + 'Etelässä kohoaa Wawelin kalkkikivikukkula linnoineen ja '
+      + 'Lohikäärmeen luolineen, ja siitä alkaa Kazimierz, joka oli '
+      + '1300-luvulta 1800-luvun alkuun oma kaupunkinsa. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: Barbakaanilta Plantyn kehän
@@ -4503,25 +4497,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/varsova-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
-    esittely: 'Varsova seisoo Veikselin länsirannalla keskellä Puolan '
-      + 'tasankoa. Veiksel on Puolan pisin joki, 1 047 kilometriä, eikä '
-      + 'siinä ole yhtään patoa. Kaupunki syntyi tähän kohtaan kahdesta '
-      + 'syystä. Länsirannalla kulkee jyrkkä törmä, jonka päältä näki '
-      + 'kauas ja jota oli helppo puolustaa, ja törmän alla oli hyvä '
-      + 'lastauspaikka: viljaa vietiin täältä lautoilla Itämerelle '
-      + 'asti. Vuonna 1596 kuningas siirsi hovinsa Krakovasta tänne, ja '
-      + 'kauppakaupungista tuli pääkaupunki.\n\nKartalla Veiksel tulee '
-      + 'ylhäältä ja kaartaa oikeaan alanurkkaan. Joki on tässä kohtaa '
-      + 'noin 350 metriä leveä, ja vedessä näkyy pitkiä hiekkasaaria: '
-      + 'kun jokea ei ole padottu, hiekka pääsee liikkumaan ja saaret '
-      + 'vaihtavat paikkaa. Ylhäällä vasemmalla erottuu vanhankaupungin '
-      + 'tiivis kujaverkko. Se rakennettiin sodan jälkeen uudelleen, ja '
-      + 'apuna käytettiin Bernardo Bellotton 1700-luvulla maalaamia '
-      + 'kaupunkinäkymiä: niistä laskettiin ikkunat ja koristeet '
-      + 'takaisin paikoilleen. Alhaalla vasemmalla aukeaa iso tyhjä '
-      + 'kenttä, ja sen keskellä seisoo Kulttuuri- ja tiedepalatsi, '
-      + 'Neuvostoliiton lahja vuodelta 1955. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
+    // esittely kertoo kohteet, ei kartan viivastoja.
+    esittely: 'Kartan alue on Varsovan keskusta Veikselin länsirannalla. '
+      + 'Veiksel on Puolan pisin joki, 1 047 kilometriä, eikä siinä ole '
+      + 'yhtään patoa, joten hiekkasaaret vaihtavat paikkaa. Kaupunki '
+      + 'syntyi tähän kohtaan jyrkän törmän ja sen alla olevan hyvän '
+      + 'lastauspaikan takia, ja vuonna 1596 kuningas siirsi hovinsa '
+      + 'Krakovasta tänne. Pohjoisessa ovat Vanhankaupungin tori ja '
+      + 'Varsovan linna, jotka rakennettiin sodan jälkeen uudelleen '
+      + 'Bernardo Bellotton 1700-luvulla maalaamien kaupunkinäkymien '
+      + 'avulla. Kuninkaantietä etelään ovat Pyhän ristin kirkko, '
+      + 'Kopernikuksen tiedekeskus, kansallismuseo ja vuoden 1955 '
+      + 'Kulttuuri- ja tiedepalatsi. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, eli Kuninkaantietä pitkin
