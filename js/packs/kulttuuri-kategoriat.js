@@ -24330,6 +24330,41 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (Opus, vaihe B 20.8.2026): kumpu, khan ja ympäröivä
+       * maasto — sama kolmen kerroksen logiikka kuin Medinassa. Kansikuvat
+       * näyttävät jo katot, basaarin ja sisäpihan, joten avaus ottaa ne
+       * kolme, jotka niistä puuttuvat: linnoituskukkulan, tullikhanin
+       * portin ja Aleppon länsipuolen Kuolleet kaupungit.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Aleppo Citadel 01.jpg',
+          selite: 'Aleppon linnoituksen porttitorni kummun juurella. '
+            + 'Vaaleasta kivestä muurattuun torniin noustaan leveitä '
+            + 'kiviportaita pitkin, ja kummun harjalla jatkuu muurilinja '
+            + 'torneineen. Edustalla on kivetty aukio lyhtypylväineen.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Aleppo Khan al-Jumruk 9158.jpg',
+          selite: 'Tullikhanin portin holvi alhaalta kuvattuna. Kivi on '
+            + 'ladottu vuorotellen vaaleana ja tummana kerroksena, ja '
+            + 'keskellä on kaksi keltaista ristikkoikkunaa ja niiden '
+            + 'välissä kaiverrettu kirjoituslaatta. Holvin alla riippuu '
+            + 'vihreitä viirejä.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Church of Saint Simeon Stylites 17.jpg',
+          selite: 'Pyhän Simeon Pylväspyhimyksen kirkon rauniot Aleppon '
+            + 'länsipuolella. Katottomat kiviseinät kiertävät nurmista '
+            + 'pihaa, seinissä on rivi kaari-ikkunoita ja keskellä yksi '
+            + 'korkea puolikaari. Pihalla makaa kaatuneita pylväitä, ja '
+            + 'takana maa jatkuu tasaisena ylänkönä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Katedraalin pylväät jäivät kouluun',
@@ -24397,6 +24432,182 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Preacher lad, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * MATKAILIJAN ALEPPO (Opus, vaihe B 20.8.2026). Faktat tarkistettu
+       * en-Wikipedian artikkeleista Aleppo, Aleppo soap, Aleppo
+       * International Airport, Aleppo railway station, Ancient Aleppo ja
+       * Levant Company (haettu 20.8.2026); sääjakso nojaa saatiedot.js:n
+       * halab-riviin (ERA5 1991–2020).
+       *
+       * SISÄLTÖLINJAUS on Fablen ohje: ei nykysotaa eikä nykypolitiikkaa.
+       * POIS JÄTETTY sen takia: lentoaseman ja rautatien sotavuodet,
+       * kaupungin epäviralliset asuinalueet, vuoden 2023 maanjäristys ja
+       * kaikki 2010-luvun tuho. Kuvat on valittu niin, ettei yksikään
+       * väitä nykytilaa: linnoitus ja Kuolleet kaupungit ovat
+       * sotaa edeltäviä otoksia, kaupunkinäkymä 1900-luvun alun
+       * lasinegatiivi.
+       *
+       * WIKIPEDIAN SISÄINEN RISTIRIITA, joka on kirjoitettu auki
+       * lukijalle jaksossa "Historian käänne": Aleppo-artikkelin
+       * johdanto sanoo kaupunkia ottomaanivaltakunnan kolmanneksi
+       * suurimmaksi Konstantinopolin ja Kairon jälkeen, mutta saman
+       * artikkelin ottomaaniosuus sanoo sen olleen "toinen heti
+       * Konstantinopolin jälkeen". Kumpikaan ei ole tarkempi lähde, joten
+       * ero kerrotaan.
+       *
+       * OPAS EI TOISTA NOSTOJA: nostot kertovat al-Halawiyyan,
+       * al-Firdawsin ja kellotornin, arki-sivu pippurin, muhammaran ja
+       * kebab karazin, ja nähtävyysjutut linnoituksen, portit,
+       * Saippuakhanin, Arghunin sairaalan ja Beit Ajiqbashin. Opas ottaa
+       * sen, mitä niissä ei ole: kulkuyhteydet, maantieteen, saippuan
+       * valmistuksen ja kauppareitin käänteen.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Citadel of Aleppo, View of the city, Aleppo, Syria.jpg',
+          selite: 'Mies seisoo linnoituksen muurilla selin kameraan ja '
+            + 'katsoo kädellä varjostaen yli kaupungin. Rautakaiteen '
+            + 'takana levittäytyy tasakattoisten talojen meri, josta '
+            + 'kohoaa muutama torni, ja horisontti häviää utuun.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Aleppo on Syyrian pohjoinen suurkaupunki 380 metrin '
+          + 'ylängöllä, 120 kilometriä Välimereltä sisämaahan ja 45 '
+          + 'kilometriä Turkin rajalta. Kaikki kiertää yhtä kumpua: '
+          + 'linnoituksen kukkulan ympärille kasvoi muurikaupunki ja sen '
+          + 'ympärille kaupunginosat. Vanhakaupunki otettiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 1986. Kaupungin ala on 190 '
+          + 'neliökilometriä, ja kauppapaikkana se on ollut niin kauan '
+          + 'kuin siitä on kirjoitettu: kaksi kauppatietä risteää täällä, '
+          + 'ja niitä myöten on tullut tavaraa Intiasta, Tigrisin ja '
+          + 'Eufratin varsilta ja etelästä Damaskoksen suunnasta.',
+        artikkeli: {
+          nimi: 'Matkailijan Aleppo',
+          taitto: 'opas',
+          teksti: 'Yksi kumpu keskellä, sen ympärillä kahdeksan kukkulaa '
+            + 'ja niiden välissä kilometrikaupalla katettuja kujia.',
+          nosto: 'Aleppo oli 1500-luvun puolivälistä idän tavaran tärkein '
+            + 'portti Välimerelle — kunnes Suezin kanava avattiin vuonna '
+            + '1869 ja kauppa siirtyi karavaaneilta laivoille.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Aleppoon tullaan kolmea reittiä. Lentoasema on '
+                + 'vanha: vuonna 1924 KLM lensi ensimmäisen kerran '
+                + 'Amsterdamista Bataviaan Aleppon kautta, ja reitistä '
+                + 'tuli säännöllinen vuonna 1929. Nykyinen terminaali '
+                + 'vihittiin vuonna 1999, siinä on neljä kerrosta ja 38 '
+                + '000 neliömetriä, ja mitoitus on 1,7 miljoonaa '
+                + 'matkustajaa vuodessa. Rautatieasemaa sanotaan yhä '
+                + 'Bagdadin asemaksi: saksalaiset insinöörit rakensivat '
+                + 'sen vuonna 1912 Berliini–Bagdad-radan osaksi, ja '
+                + 'ensimmäinen juna lähti Jarabulusiin. Se on Syyrian '
+                + 'toiseksi vanhin asema, ja Agatha Christien Idän '
+                + 'pikajunan arvoitus alkaa juuri tältä laiturilta. '
+                + 'Maanteitse kaupunkiin tullaan M5-moottoritietä, joka '
+                + 'vie etelään Homsin ja Haman kautta Damaskokseen.',
+              kuva: {
+                tiedosto: 'Aleppo Bagdad Railway Station, cropped.jpg',
+                selite: 'Bagdadin asema iltavalaistuksessa. '
+                  + 'Kivirakennuksen räystäslinjaa kiertää valonauha, '
+                  + 'sisäänkäynnin edessä nousee rivi lipputankoja, ja '
+                  + 'keskellä kuvaa kohoaa korkea palmu. Pihalla on '
+                  + 'autoja ja moottoripyörä.',
+                lahde: 'Reinhard Dietrich, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Aleppo istuu ylängöllä 380 metrin korkeudessa. '
+                + 'Kaupunki perustettiin Queiq-joen oikealle rannalle, ja '
+                + 'vanhakaupunki jäi vasemmalle; joki tulee pohjoisesta '
+                + 'Aintabin ylängöltä ja jatkaa etelään Qinnasrinin '
+                + 'viljelysmaille. Linnoituksen kumpua kiertää kahdeksan '
+                + 'kukkulan rengas noin kymmenen kilometrin säteellä: '
+                + 'Tell as-Sawda, Tell Aysha, Tell as-Sett, Tell '
+                + 'al-Yasmin, Tell al-Ansari, An at-Tall, al-Jallum ja '
+                + 'Bahsita. Vanhaa kaupunkia suojasi muuri, jonka '
+                + 'mamelukit rakensivat viimeisen kerran: siinä oli '
+                + 'yhdeksän porttia ja leveä syvä vallihauta, eikä siitä '
+                + 'ole enää jäljellä mitään. Pohjoisessa ja lännessä ovat '
+                + 'oliivi- ja pistaasitarhat, idässä Syyrian aavikko.',
+              kuva: {
+                tiedosto: 'Aleppo from the castle LOC matpc.03555.jpg',
+                selite: 'Näkymä linnoituksen kummulta yli Aleppon '
+                  + '1900-luvun alun lasinegatiivissa. Matalat talot '
+                  + 'jatkuvat tasaisena mattona horisonttiin asti, ja '
+                  + 'keskeltä nousee yksi minareetti ja muutama kupoli. '
+                  + 'Alalaidassa on kuvaajan oma numero peilikuvana '
+                  + 'negatiivin reunassa.',
+                lahde: 'Matson Collection, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: saippua',
+              teksti: 'Aleppon saippua tehdään oliiviöljystä, lipeästä ja '
+                + 'laakerimarjaöljystä. Perinteinen tapa on kuumakeitto: '
+                + 'aineet kaadetaan maahan upotettuun pataan, jonka alla '
+                + 'palaa tuli, ja seos kiehuu kolme vuorokautta. '
+                + 'Laakeriöljy lisätään vasta lopuksi, ja massa kaadetaan '
+                + 'vahatulle paperille verstaan lattialle. Kun se on '
+                + 'jäähtynyt vuorokauden, työntekijät kävelevät sen '
+                + 'päällä laudat jalkoihin sidottuina, jotta kerroksesta '
+                + 'tulisi tasapaksu. Levy leikataan kuutioiksi, kuutiot '
+                + 'pinotaan lomittain torneiksi ja kypsytetään '
+                + 'maanalaisessa kammiossa puolesta vuodesta vuoteen. '
+                + 'Pinta muuttuu vaaleankullaksi, mutta sisus pysyy '
+                + 'vihreänä. Laakeriöljyä on kahdesta kahteenkymmeneen '
+                + 'prosenttiin, ja yli kuudentoista prosentin palaa '
+                + 'pidetään parempana.',
+              kuva: {
+                tiedosto: 'Aleppo soap - vat.jpg',
+                selite: 'Maahan upotettu saippuapata ylhäältä kuvattuna. '
+                  + 'Pyöreä altaan pohja on tumma ja kiiltävä, reunat '
+                  + 'vaaleat ja karstaiset, ja reunan takana näkyy vain '
+                  + 'seisojien jalkoja ja kenkiä.',
+                lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: kanava vei kaupan',
+              teksti: 'Aleppo on yksi maailman vanhimmista yhtäjaksoisesti '
+                + 'asutuista kaupungeista, ja samaa väittää Damaskos; '
+                + 'kiistaa ei ole ratkaistu. 1500-luvun puoliväliin '
+                + 'mennessä Aleppo oli syrjäyttänyt naapurinsa idästä '
+                + 'tulevan tavaran päämarkkinana. Venetsia avasi '
+                + 'kaupunkiin konsulaatin vuonna 1548, Ranska 1562, '
+                + 'Englanti 1583 ja Alankomaat 1613. Lontoossa vuonna '
+                + '1581 perustettu Levant Company piti päämajaansa '
+                + 'Aleppossa 1700-luvun loppupuolelle asti eikä koskaan '
+                + 'lähettänyt asiamiestä Damaskokseen. Kaupungin kokoa '
+                + 'Wikipedia arvioi kahdella tavalla: toisaalla se on '
+                + 'ottomaanivaltakunnan '
+                + 'kolmas Konstantinopolin ja Kairon jälkeen, toisaalla '
+                + 'toinen heti Konstantinopolin jälkeen. Kun Suezin '
+                + 'kanava avattiin 1869, kauppa siirtyi merelle ja '
+                + 'pitkien karavaanireittien tilalle tuli villan ja '
+                + 'maataloustuotteiden alueellinen kauppa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Aleppossa kuiva ja kostea vuodenaika vaihtuvat '
+                + 'jyrkästi. Kesä–syyskuussa vettä tulee yhdestä kolmeen '
+                + 'millimetriä kuukaudessa, joulu–helmikuussa noin '
+                + 'viisikymmentä, ja koko vuoden sade on kolmesataa '
+                + 'millimetriä. Elokuu on lämpimin: keskilämpö on lähes '
+                + 'kaksikymmentäyhdeksän astetta ja tyypillinen päivän '
+                + 'ylin kolmekymmentäkuusi. Tammikuu on viilein, '
+                + 'keskilämpö runsaat kuusi astetta ja yöt kolmen '
+                + 'tienoilla. Ylängön korkeus näkyy juuri öissä, sillä '
+                + 'kuivassa ilmassa lämpö karkaa auringonlaskun jälkeen '
+                + 'nopeasti. Kävelijän kuukaudet ovat huhtikuu ja '
+                + 'lokakuu: keskilämpö on silloin seitsemäntoista ja '
+                + 'yhdenkolmatta asteen välillä eikä sadekausi ole vielä '
+                + 'kunnolla alkanut.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
@@ -24523,6 +24734,43 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (Opus, vaihe B 20.8.2026). Kansikuvat ovat kaikki
+       * 1800-luvulta tai kaupungin ulkopuolelta, joten avaus tulee
+       * lähemmäs: vanhankaupungin katot ylhäältä, yksi kuja alhaalta ja
+       * al-Salihiyan punakupoliset koulut rinteellä. Suuri moskeija on
+       * mukana vain kaukokuvana — nähtävyysjutuilla on siitä jo kolme
+       * lähikuvaa, eikä niitä toisteta.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Umayyad Mosque, Mount Qasioun, Old Damascus.jpg',
+          selite: 'Damaskoksen vanhakaupunki ylhäältä. Tiiviin '
+            + 'kattomeren keskeltä nousee suuren moskeijan harmaa kupoli '
+            + 'ja pitkä harjakatto, ja sen kulmilla kohoaa kolme '
+            + 'erinäköistä minareettia. Etualan katoilla erottuu kaksi '
+            + 'oranssiksi maalattua pikkukupolia.',
+          lahde: 'Mohamad Emad Basha, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Damascus alley 9779.jpg',
+          selite: 'Vanhankaupungin kujan yläkerta alhaalta kuvattuna. '
+            + 'Puukehyksiset ikkunat työntyvät ulokkeena kadun päälle, '
+            + 'yhden edessä on kiemurainen rautaristikko ja toisessa '
+            + 'tiheä puuritilä. Rappaus on lohkeillut, ja alempana '
+            + 'kulkee peltikatos ja nippu sähköjohtoja.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Damascus Al-Salihiyah - Madrasa Atabakiye (farthest) Madrasa Murshidiye (medium) Mausoleum al- Faranti (near) 1593.jpg',
+          selite: 'Al-Salihiyan kortteli Qasioun-vuoren rinteellä. Kaksi '
+            + 'punaruskeaa kupolia lepää kahdeksankulmaisten, '
+            + 'kaarisyvennyksin koristeltujen rumpujen päällä, ja '
+            + 'niiden takaa nousee kaksi minareettia: toinen paljasta '
+            + 'kiveä, toinen valkoiseksi rapattu.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Parturi kirjasi, mistä marmori tuli',
@@ -24589,6 +24837,189 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * MATKAILIJAN DAMASKOS (Opus, vaihe B 20.8.2026). Faktat
+       * tarkistettu en-Wikipedian artikkeleista Damascus, Barada, Ghuta,
+       * Mount Qasioun, Damask, Damascus steel, Umayyad Caliphate ja
+       * Damascus International Airport (haettu 20.8.2026); sääjakso
+       * nojaa saatiedot.js:n damaskos-riviin (ERA5 1991–2020).
+       *
+       * SISÄLTÖLINJAUS on Fablen ohje, sama kuin Aleppossa: ei
+       * nykysotaa eikä nykypolitiikkaa. POIS JÄTETTY sen takia
+       * 1800-luvun ja 1900-luvun väkivaltaiset välikohtaukset, mandaatin
+       * ja itsenäisyyden politiikka ja kaikki 2010-luvun tapahtumat.
+       * Uskonto kerrotaan historiallis-kulttuurisena ilmiönä.
+       *
+       * WIKIPEDIAN SISÄINEN RISTIRIITA, joka on kirjoitettu auki
+       * jaksossa "Perille ja liikkeelle": Damascus International Airport
+       * -artikkelin tietolaatikko antaa avaamisvuodeksi 1973, saman
+       * artikkelin leipäteksti "1960-luvun loppu". Kumpikaan ei ole
+       * tarkempi, joten molemmat kerrotaan.
+       *
+       * DAMASTIKUVA ON ITALIALAINEN eikä damaskoslainen. Commonsista ei
+       * löytynyt vapaata kuvaa damaskoslaisesta damastista, joten
+       * jaksossa käytetään Royal Ontario Museumin 1600-luvun
+       * italialaista kappaletta ja kuvateksti sanoo sen suoraan (sama
+       * ratkaisu kuin Medinan Koraani-fragmentissa v937).
+       *
+       * OPAS EI TOISTA NOSTOJA: nostot kertovat Azm-palatsin, Tekkiye
+       * Süleymaniyen ja Hijaz-aseman, arki-sivu talon umpipihan,
+       * kylpylän ja qamar al-dinin, ja nähtävyysjutut linnoituksen,
+       * Umaijadien moskeijan, Hamidiyyan suukin, Khan As'ad Pashan ja
+       * kaksi porttia. Opas ottaa kulkuyhteydet, maantieteen, damastin
+       * ja umaijadien pääkaupunkikauden.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Damascus Jabal Qasioun 3121-3123mod.jpg',
+          selite: 'Damaskos Qasioun-vuoren rinteeltä. Etualalla on '
+            + 'paljasta vaaleaa kalkkikiveä ja soraa, ja rinteen alta '
+            + 'alkaa tiheä kaupunki, joka jatkuu tasangolla utuun asti. '
+            + 'Oikealla erottuu vihreitä kaistaleita viljelysalueen '
+            + 'reunassa.',
+          lahde: 'JYB Devot, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Damaskos on 680 metrin tasangolla, 80 kilometriä '
+          + 'Välimereltä sisämaahan, Anti-Libanonin vuoriston itäisillä '
+          + 'juurilla. Kaupungin ala on 105 neliökilometriä. Muurien '
+          + 'ympäröimä vanhakaupunki on Barada-joen eteläpuolella, ja sen '
+          + 'ulkopuolella ovat keskiaikaiset esikaupungit Midan, Sarouja '
+          + 'ja Imara. Qasioun-vuoren rinteillä on al-Salihiyan '
+          + 'kaupunginosa kahden ja kolmen kilometrin päässä '
+          + 'vanhastakaupungista pohjoiseen. Kaikkea ympäröi Ghouta, '
+          + 'Baradan kastelema viljelysalue.',
+        artikkeli: {
+          nimi: 'Matkailijan Damaskos',
+          taitto: 'opas',
+          teksti: 'Yksi suora katu roomalaiselta ajalta, sen ympärillä '
+            + 'muurit, ja pohjoisessa vuori, joka vie sateen.',
+          nosto: 'Damaskos oli vuosina 661–750 kalifaatin pääkaupunki, ja '
+            + 'valtakunta ulottui Iberian niemimaalta Indus-joelle. '
+            + 'Vuonna 750 valta siirtyi Bagdadiin, ja kaupunki katosi '
+            + 'kirjallisista lähteistä vuosisadaksi.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentoasema on noin kahdenkymmenen kilometrin '
+                + 'päässä keskustasta. Rakennustyö annettiin vuonna 1965 '
+                + 'ranskalaisten yhtiöiden ryhmälle, jota johti SCB, ja '
+                + 'uusi kenttä korvasi vanhan Mazzehin lentokentän. '
+                + 'Avaamisvuodesta Wikipedia antaa kaksi lukua: '
+                + 'tietolaatikko sanoo 1973 ja leipäteksti 1960-luvun '
+                + 'loppua, eikä kumpikaan ole tarkempi. Maanteitse '
+                + 'pohjoiseen vie M5 Homsin, Haman ja Aleppon kautta '
+                + 'Turkkiin ja etelään Jordaniaan, länteen M1 Beirutiin. '
+                + 'Kaupungin sisällä ajetaan busseilla ja pikkubusseilla: '
+                + 'linjoja on noin sata, aikataulua ei ole eikä linjoilla '
+                + 'ole numeroita — ne tunnetaan päätepysäkkiensä nimistä, '
+                + 'ja bussi pysähtyy siinä, missä matkustaja pyytää. '
+                + 'Takseilla on lailla säädetty taksa ja pakollinen '
+                + 'mittari.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Damaskos on sadevarjossa. Anti-Libanonin huiput '
+                + 'nousevat yli kolmentuhannen metrin ja pysäyttävät '
+                + 'Välimereltä tulevan kosteuden, joten seutu kärsii '
+                + 'ajoittain kuivuudesta. Vastapainona on Barada, joka '
+                + 'saa vetensä sulavan lumen ruokkimista vuoripuroista ja '
+                + 'kastelee Ghoutan viljelysalueen. Roomalaisajan '
+                + 'karttojen mukaan joki laski itäpuoliseen järveen, jota '
+                + 'sanotaan yhä Bahira Ataybaksi eli epäröiväksi '
+                + 'järveksi, koska kuivina vuosina se katoaa. '
+                + 'Aramealaiset kaivoivat jo varhain kanava- ja '
+                + 'tunneliverkon, jota roomalaiset ja umaijadit '
+                + 'paransivat ja joka on yhä vanhankaupungin '
+                + 'vesijärjestelmän pohja. Roomalaiset kaavoittivat '
+                + 'kaupungin uudelleen, ja vanhakaupunki on yhä '
+                + 'suorakaide: itä–länsi-akseli on yli 1 500 metriä '
+                + 'pitkä, noin kaksi kertaa pohjois–etelä-akselia '
+                + 'pidempi.',
+              kuva: {
+                tiedosto: 'Urban Landscape and Scenes of Everyday Life, Damascus (دمشق), Syria - Aerial view looking southeast from Mount Qasioun - PHBZ024 2016 0034 - Dumbarton Oaks.jpg',
+                selite: 'Damaskos ylhäältä kaakkoon päin katsottuna. '
+                  + 'Kaupunki peittää koko tasangon reunasta reunaan, '
+                  + 'leveät suorat väylät halkovat sitä ruudukoksi, ja '
+                  + 'kaukana horisontissa alkaa vihertävä viljelysvyöhyke. '
+                  + 'Etualan rinteellä kasvaa havupuita.',
+                lahde: 'Frank Kidner, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: damasti',
+              teksti: 'Damasti on kaksipuolinen kuviokangas. Kuvio ja '
+                + 'pohja syntyvät siitä, että loimen ja kuteen '
+                + 'työnjärjestys käännetään kudonnassa toistuvasti: '
+                + 'kuvio on loimivoittoista satiinia ja pohja '
+                + 'kudevoittoista. Aito damasti on kokonaan silkkiä, '
+                + 'mutta nimi on levinnyt kaikkiin kaksipuolisiin '
+                + 'kuviokankaisiin. Nimi tulee kaupungista: Damaskos oli '
+                + 'Silkkitien läntisiä päätepisteitä, ja sen kautta '
+                + 'kuviosilkit tulivat länteen. Sana ilmestyi '
+                + 'länsimaiseen kieleen 1300-luvun '
+                + 'puolivälin ranskalaisissa asiakirjoissa. Kutoja käytti '
+                + 'loimen luomiseen viikon tai enemmän ja opetteli kuvion '
+                + 'ulkoa, kunnes 1800-luvulla tuli reikäkorteilla ohjattu '
+                + 'jacquard-kone. Sama kaupunki antoi nimen '
+                + 'damaskosteräkselle, jonka aaltokuvioisia teriä '
+                + 'pidettiin poikkeuksellisen sitkeinä — vaikka harkot '
+                + 'tuotiin useimmiten muualta.',
+              kuva: {
+                tiedosto: 'Damask with floral sprigs, Italy, Baroque, 1600-1650, silk two-tone damask - Royal Ontario Museum - DSC04376.JPG',
+                selite: 'Kaksisävyistä silkkidamastia lähietäisyydeltä. '
+                  + 'Punaista pohjaa vasten toistuu vaaleankeltainen '
+                  + 'kukka- ja lehtiaihe, joka kiiltää eri tavalla kuin '
+                  + 'ympäröivä kangas. Kappale ei ole damaskoslainen vaan '
+                  + 'italialainen 1600-luvun alkupuolelta — näyte siitä '
+                  + 'sidoksesta, joka sai nimensä kaupungista.',
+                lahde: 'Daderot, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: pääkaupungin vuodet',
+              teksti: 'Kalifi Alin kuoltua vuonna 661 Muawiya valittiin '
+                + 'kalifiksi ja teki Damaskoksesta koko '
+                + 'umaijadikalifaatin pääkaupungin: hänen sukunsa omisti '
+                + 'kaupungissa paljon, ja siteet Hidžaziin olivat vanhat. '
+                + 'Kun Abd al-Malik nousi valtaan vuonna 685, otettiin '
+                + 'käyttöön oma islamilainen rahajärjestelmä, provinssien '
+                + 'ylijäämä ohjattiin Damaskoksen valtionkassaan ja '
+                + 'hallintokieleksi vaihdettiin kreikan tilalle arabia. '
+                + 'Sitten asema alkoi liukua: Suleiman valitsi '
+                + 'asuinpaikakseen Ramlan ja Hisham Resafan, ja vuonna '
+                + '744 Marwan II siirsi pääkaupungin Harraniin. '
+                + 'Abbasidit ottivat kaupungin 25. elokuuta 750, muurit '
+                + 'purettiin, ja Damaskoksesta tuli maakuntakaupunki, '
+                + 'joka katosi kirjallisista lähteistä vuosisadaksi.',
+              kuva: {
+                tiedosto: 'Gold dinar of Abd al-Malik b. Marwan, dated AH 78 (697-98), The David Collection, Copenhagen (36240895662).jpg',
+                selite: 'Abd al-Malikin kultadinaari museovitriinissä. '
+                  + 'Pieni kolikko on kiinnitetty ohuilla metallipidikkeillä '
+                  + 'tummalle kankaalle, ja sen keskellä on kolme riviä '
+                  + 'arabialaista tekstiä ja reunaa kiertää yhtenäinen '
+                  + 'kirjoitusnauha. Kuvia ihmisistä tai eläimistä ei ole.',
+                lahde: 'Richard Mortel from Riyadh, Saudi Arabia, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Damaskoksessa sataa vielä vähemmän kuin Aleppossa: '
+                + 'vuosisumma on sata kahdeksankymmentä millimetriä, ja '
+                + 'kesäkuusta elokuuhun normaali on tasan nolla. '
+                + 'Heinäkuun keskilämpö on kaksikymmentäseitsemän astetta '
+                + 'ja tyypillinen päivän ylin kolmekymmentäkuusi, mutta '
+                + 'yöt jäävät yhdeksääntoista — kuudensadan '
+                + 'kahdeksankymmenen metrin korkeudessa ilma viilenee '
+                + 'auringonlaskun jälkeen nopeasti. Tammikuun keskilämpö '
+                + 'on kuusi astetta ja yöt yhden tienoilla, ja silloin '
+                + 'tulee lähes kaikki vuoden vesi. Huhtikuu ja lokakuu '
+                + 'ovat helpoimmat: keskilämpö on kuudentoista ja '
+                + 'kahdenkymmenen asteen välillä ja sadetta noin '
+                + 'kymmenen millimetriä kuukaudessa.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
@@ -24719,6 +25150,42 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (Opus, vaihe B 20.8.2026). Kansikuvat ovat kaksi
+       * 1800-luvun kuvaa ja yksi rantapromenadi, ja nostot ja
+       * nähtävyysjutut ovat kaikki itärannalla. Avaus tasapainottaa:
+       * ensin länsirannan kolossit, sitten nykyinen tori ja lopuksi
+       * joki, joka erottaa nämä kaksi.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Colossi of Memnon R02.jpg',
+          selite: 'Memnonin kolossit Luxorin länsirannalla. Kaksi '
+            + 'istuvaa kivipatsasta on pahoin kulunut: kasvot ovat '
+            + 'lohjenneet pois ja jalustat halkeilleet, ja takimmainen '
+            + 'on koottu suurista lohkareista. Takana kohoaa Theban '
+            + 'vaalea kalliojono ja sen juurella palmurivi.',
+          lahde: 'Marc Ryckaert ( MJJR ), Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Luxor Souq R01.jpg',
+          selite: 'Luxorin tori kangaskatosten alla. Kujan yli on '
+            + 'pingotettu raidallisia ja kukallisia kankaita, jotka '
+            + 'värjäävät valon punaiseksi ja oranssiksi. Vasemmalla '
+            + 'riippuu pitkiä mekkoja rivissä, oikealla on korillinen '
+            + 'tomaatteja ja pinoja palmunlehtikoreja.',
+          lahde: 'Marc Ryckaert ( MJJR ), Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Luxor Nile R09.jpg',
+          selite: 'Kaksi feluccaa Niilillä auringonlaskun aikaan. '
+            + 'Kolmiopurjeet ovat vaaleat ja pitkä raakapuu nousee '
+            + 'viistoon, ja veneiden kuvajaiset piirtyvät tyyneen '
+            + 'veteen. Vastarannalla on palmurivi ja kaukana '
+            + 'minareetti.',
+          lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Moskeija seisoo temppelin pylväiden päällä',
@@ -24787,6 +25254,176 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      /*
+       * MATKAILIJAN LUXOR (Opus, vaihe B 20.8.2026). Faktat tarkistettu
+       * en-Wikipedian artikkeleista Luxor, Luxor International Airport,
+       * Valley of the Kings, Theban Necropolis, Colossi of Memnon,
+       * Thebes (Egypt) ja Hot air ballooning in Luxor (haettu
+       * 20.8.2026); sääjakso nojaa saatiedot.js:n luxor-riviin
+       * (ERA5 1991–2020). Perille-jakso viittaa kohdekarttaan, jonka
+       * PNG piirrettiin uudelleen v940:ssä (maakartat.js).
+       *
+       * WIKIPEDIAN SISÄINEN RISTIRIITA, joka on kirjoitettu auki
+       * artikkelin nostossa: Valley of the Kings -artikkelin johdanto
+       * sanoo laaksossa olevan 65 hautaa ja kammiota, historiaosuus
+       * "ainakin 63 hautaa". Ero on siinä, lasketaanko pelkät kammiot
+       * hautojen joukkoon; molemmat luvut kerrotaan.
+       *
+       * SISÄLTÖLINJAUS: pallojaksosta on jätetty pois onnettomuudet
+       * (Fablen ohje väkivallasta ja yksityiskohtien korostamisesta) ja
+       * mukaan on otettu vain se sääntömuutos, joka näkyy matkailijalle
+       * — pallojen määrän rajoitus ja oma nousukenttä. Vuoden 1997
+       * isku ja 2010-luvun matkailun notkahdukset on jätetty pois
+       * nykypolitiikan välttämiseksi.
+       *
+       * OPAS EI TOISTA NOSTOJA: nostot kertovat Abu al-Haggagin
+       * moskeijan, Winter Palacen ja Karnakin pyhän järven, arki-sivu
+       * lautat, hevosvaunut ja kapearaiteiset radat, ja
+       * nähtävyysjutut kuusi itärannan kohdetta. Opas ottaa lentokentän
+       * ja valtion radan, rantojen työnjaon, aamun pallot ja Kuninkaiden
+       * laakson.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Luxor West Bank R01.jpg',
+          selite: 'Luxorin länsiranta joen yli katsottuna. Matala '
+            + 'kaksikerroksinen lautta kulkee kohti rantaa, jossa on '
+            + 'palmuja, valkoisia taloja ja yksi minareetti, ja takana '
+            + 'kohoaa vaalea kalliojono, jonka rinteessä erottuu '
+            + 'vaakasuoria kerrostumia.',
+          lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
+        },
+        kappale: 'Luxoria sanotaan usein maailman suurimmaksi '
+          + 'ulkoilmamuseoksi: Karnakin ja Luxorin temppelit seisovat '
+          + 'keskellä nykyistä kaupunkia, ja vastarannalla on Theban '
+          + 'nekropoli, muinaisen Theban hautakaupunki. Kaupungin ala on '
+          + '416 neliökilometriä, siitä asuttua 208, ja asukkaita '
+          + 'arvioitiin vuonna 2023 olevan 284 952. Korkeutta on 89 '
+          + 'metriä, matkaa Kairoon 670 kilometriä ja Assuaniin etelään '
+          + '220. Vierailijoita tulee vuodessa noin viisi miljoonaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Luxor',
+          taitto: 'opas',
+          teksti: 'Itärannalla asuttiin, länsirannalle haudattiin, ja '
+            + 'väli ylitetään yhä veneellä.',
+          nosto: 'Kuninkaiden laaksossa on Wikipedian mukaan ainakin 63 '
+            + 'hautaa — toisaalla sama artikkeli laskee 65 hautaa ja '
+            + 'kammiota. Ero syntyy siitä, lasketaanko pelkät kammiot '
+            + 'hautojen joukkoon.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentoasema on kuusi kilometriä kaupungista itään, '
+                + 'ja Egyptin siviili-ilmailuviranomainen perusti sen '
+                + 'vuonna 1946; sitä on laajennettu monta kertaa, koska '
+                + 'se sattuu keskelle maailman tunnetuimpia '
+                + 'kaivausalueita. Rautatieasema on noin 400 metrin '
+                + 'päässä Luxorin temppeliltä, ja junia kulkee useita '
+                + 'kertoja päivässä: aamujuna ja makuuvaunujuna vievät '
+                + 'pohjoiseen Kairoon ja etelään Assuaniin. Lähin '
+                + 'merisatama on Safaga. Kaupungin kohdekartta näyttää, '
+                + 'miksi kävely riittää: kartta on kapea kaistale '
+                + 'itärantaa, jonka eteläpäässä on Luxorin temppeli ja '
+                + 'pohjoispäässä Karnakin muurien ympäröimä alue, ja '
+                + 'väli on runsaat kaksi kilometriä.',
+              kuva: {
+                tiedosto: 'Luxor Train Station R09.jpg',
+                selite: 'Luxorin asema laiturin päästä. Keltaharmaita '
+                  + 'matkustajavaunuja seisoo raiteella hiekkakivisen '
+                  + 'asemarakennuksen vieressä, ja etualalla kaartuu '
+                  + 'useita raiteita vieretysten sorapenkassa. Taivas on '
+                  + 'kirkas ja rakennusten yllä näkyy antennimasto.',
+                lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Työnjako on vanha ja yksinkertainen: aurinko nousi '
+                + 'idässä, ja sille puolelle rakennettiin temppelit ja '
+                + 'asuttiin; aurinko laski lännessä, ja sinne haudattiin. '
+                + 'Länsirannan Theban nekropoli oli käytössä suuren osan '
+                + 'faaraoiden aikaa ja etenkin uuden valtakunnan aikana, '
+                + 'ja siihen kuuluvat Kuninkaiden ja Kuningattarien '
+                + 'laaksot. Kuninkaiden laakso on kuivien kukkuloiden '
+                + 'sisässä, mutta kuivuus pettää harvakseltaan: seudulle '
+                + 'osuu ajoittain raju ukkoskuuro, ja laakson keskiosaan '
+                + 'johtaa ainakin seitsemän tulvauomaa. 18. dynastian '
+                + 'lopulla keskiosa tulvi niin, että useita hautoja jäi '
+                + 'metrien syvyyteen soraa. Haudat KV55, KV62 ja KV63 on '
+                + 'louhittu itse uoman kallioperään, joten laakson pohja '
+                + 'oli silloin viisi metriä nykyistä alempana.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: aamun pallot',
+              teksti: 'Luxorin päivä alkaa ennen aurinkoa. Kaupunki on '
+                + 'vuodesta 1988 ainoa Egyptissä, jossa tarjotaan '
+                + 'kuumailmapallolentoja: brittiläinen yhtiö aloitti '
+                + 'silloin, ja ensimmäinen egyptiläinen yhtiö '
+                + 'perustettiin 1993. Tammikuussa 2018 kahdeksan yhtiötä '
+                + 'lensi yhteensä 32 palloa. Määräykset rajoittavat yhtä '
+                + 'aikaa ilmassa olevien pallojen määrää, ja nousut on '
+                + 'keskitetty omalle kentälleen. Lento tehdään '
+                + 'auringonnousun aikaan, ja alla ovat Karnak, Luxorin '
+                + 'temppeli sekä Kuninkaiden ja Kuningattarien laaksot. '
+                + 'Matkailu kannattelee koko kaupunkia. Sen rinnalla '
+                + 'elävät vanhat käsityöt: alabasterin veisto, keramiikka '
+                + 'ja kudonta, joiden keskus on länsirannan Kurnan kylä.',
+              kuva: {
+                tiedosto: 'Balloon over Luxor - Egypt.jpg',
+                selite: 'Kuumailmapallo aamuauringossa. Pallo näkyy '
+                  + 'mustana siluettina oranssia taivasta vasten, ja sen '
+                  + 'alla erottuu pieni nelikulmainen kori. Oikealla '
+                  + 'nousee aurinko matalan pilvivyön yläpuolelle.',
+                lahde: 'Marcosleal, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käänne: 4. marraskuuta 1922',
+              teksti: 'Kuninkaiden laaksoa käytettiin päähautauksiin noin '
+                + 'vuodesta 1539 vuoteen 1075 eaa., Thutmosis I:stä '
+                + 'Ramses X:ään tai XI:een. Lähes kaikki haudat avattiin '
+                + 'ja tyhjennettiin jo antiikin aikana. Kun Theodore '
+                + 'Davis kuoli alkuvuodesta 1915, lordi Carnarvon sai '
+                + 'kaivuuluvan ja palkkasi Howard Carterin. '
+                + 'Järjestelmällisen etsinnän jälkeen he löysivät '
+                + 'Tutankhamonin haudan KV62:n 4. marraskuuta 1922, ja '
+                + 'tyhjennys ja konservointi jatkuivat vuoteen 1932. Se '
+                + 'oli ensimmäinen kuninkaanhauta, joka löytyi pääosin '
+                + 'koskemattomana, vaikka ryöstäjät olivat käyneet '
+                + 'sielläkin. Hauta oli säilynyt siksi, että Ramses V:n '
+                + 'ja VI:n haudan kaivuumaat ja työläisten majat olivat '
+                + 'peittäneet sen. Tutankhamon oli silti verrattain '
+                + 'vähäpätöinen kuningas, ja monessa muussa haudassa '
+                + 'lienee ollut enemmän aarteita.',
+              kuva: {
+                tiedosto: 'KV62, Egypt 01.jpg',
+                selite: 'Tutankhamonin hautakammion maalattu seinä. '
+                  + 'Kultakeltaista pohjaa vasten kulkee rivi hahmoja '
+                  + 'valkoisissa asuissa, ja niiden yläpuolella on '
+                  + 'hieroglyfirivejä. Etualalla näkyy sarkofagin '
+                  + 'kivikannen tasainen yläpinta.',
+                lahde: 'ولاء, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Luxor on koko pelin kuivin kaupunki: kymmenenä '
+                + 'kuukautena kahdestatoista normaali sade on nolla '
+                + 'millimetriä, ja tammi- ja joulukuussa yksi. Kesä on '
+                + 'paahtava. Heinäkuun keskilämpö on lähes '
+                + 'kolmekymmentäneljä astetta ja kesäkuun tyypillinen '
+                + 'päivän ylin neljäkymmentäkaksi; öisinkään lämpötila ei '
+                + 'laske alle kahdenkymmenenneljän. Talvi on toinen '
+                + 'kaupunki: tammikuun keskilämpö on runsaat neljätoista '
+                + 'astetta, päivät nousevat kahteenkymmeneenyhteen ja yöt '
+                + 'jäävät kahdeksaan. Marras–maaliskuu on siis se aika, '
+                + 'jolloin temppelien välillä jaksaa kävellä, ja se on '
+                + 'myös syy siihen, että pallot nousevat aamuvarhaisella '
+                + 'eivätkä keskellä päivää.',
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
