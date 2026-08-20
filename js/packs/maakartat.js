@@ -3605,24 +3605,25 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
         x: 66.25, y: 61.97, leveys: 13.75, korkeus: 18 },
     ],
-    esittely: 'Helsinki ei ole aina ollut tässä. Kustaa Vaasa perusti sen '
-      + 'vuonna 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, mutta '
-      + 'satama oli matala, ja vuonna 1640 koko kaupunki siirrettiin '
-      + 'runsaat viisi kilometriä etelämmäs Vironniemen kärkeen. Niemellä '
-      + 'on merta kolmella sivulla, ja edustalla on saaria ja matalikkoja, '
-      + 'joiden välistä laiva pääsee vain kapeita väyliä pitkin. Siksi '
-      + 'Ruotsi alkoi 1748 rakentaa väylän suulle merilinnoitusta. Kun '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on Vironniemi, jonne koko Helsinki siirrettiin vuonna '
+      + '1640. Kustaa Vaasa oli perustanut kaupungin 1550 Vantaanjoen '
+      + 'suulle Tallinnan kilpailijaksi, mutta satama oli matala, ja '
+      + 'kaupunki muutti runsaat viisi kilometriä etelämmäs. Niemellä on '
+      + 'merta kolmella sivulla, ja edustan saarten ja matalikkojen välistä '
+      + 'laiva pääsee vain kapeita väyliä pitkin — siksi Ruotsi alkoi 1748 '
+      + 'rakentaa väylän suulle Suomenlinnan merilinnoitusta, ja kun '
       + 'Venäjän keisari valitsi Helsingin pääkaupungiksi vuonna 1812, '
-      + 'linnoitus oli jo valmiina.\n\nKartalla niemi näkyy kokonaan. '
-      + 'Idässä työntyy mereen Katajanokka, joka oli ennen kiinni '
-      + 'mantereessa; nyt sen erottaa kaivettu kanava, jonka yli kulkee '
-      + 'neljä siltaa. Väliin jää Eteläsatama, jonka perukassa on '
-      + 'Kauppatori. Ylhäällä oleva lahti on Töölönlahti — se näyttää '
-      + 'järveltä, mutta on merenlahti, jonka rautatiepenger sulkee: veden '
-      + 'ainoa tie mereen kulkee penkereen ali kapeana väylänä. Penkereeltä '
-      + 'etelään levittäytyy kartan levein raita, ratapiha, joka päättyy '
-      + 'päärautatieasemaan. Rata loppuu siihen: junat peruuttavat ulos. '
-      + 'Oikeassa alanurkassa on oma pieni kartta Suomenlinnasta.',
+      + 'linnoitus oli jo valmiina. Alueella ovat Senaatintori '
+      + 'empirekortteleineen, Eteläsatama ja sen perukan Kauppatori, '
+      + 'kaivetun kanavan takana Katajanokka sekä pohjoisessa merenlahti '
+      + 'Töölönlahti ja päärautatieasemalle päättyvä ratapiha. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään ja lopuksi etelään. Kauppatori jätettiin pois
@@ -4345,15 +4346,21 @@ export const KAUPUNKIKARTAT = {
     // --vari, Eurooppa-erä 1 15.8.2026).
     piirtoRajat: { pohjoinen: 59.3507, etela: 59.3043, lansi: 18.006, ita: 18.134 },
     varikartta: 'assets/kartat/tukholma-varikartta.png',
-    esittely: 'Tukholma seisoo siinä, missä Mälaren-järvi purkautuu '
-      + 'Itämereen. Kapeikossa vesi virtaa kuin joessa — sen nimi on '
-      + 'Strömmen, ja siinä saa onkia lohta keskellä kaupunkia. Juuri tämä '
-      + 'paikka teki kaupungista tärkeän: 1200-luvulla salmi suljettiin '
-      + 'paaluilla, jotka pysäyttivät vieraat laivat ennen järveä.\n\n'
-      + 'Kartan keskellä on Gamla stan, vanhakaupunki, jonka kujat '
-      + 'kiertelevät samoja mutkia kuin keskiajalla. Kapein niistä on 90 '
-      + 'senttiä leveä. Idässä levittäytyy Djurgården, entinen kuninkaan '
-      + 'metsästyspuisto, jossa ovat nyt museot ja huvipuisto.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on Tukholman ydin siinä kohdassa, jossa Mälaren-järvi '
+      + 'purkautuu Itämereen. Kapeikossa vesi virtaa kuin joessa — sen nimi '
+      + 'on Strömmen, ja siinä saa onkia lohta keskellä kaupunkia. Juuri '
+      + 'tämä paikka teki kaupungista tärkeän: 1200-luvulla salmi '
+      + 'suljettiin paaluilla, jotka pysäyttivät vieraat laivat ennen '
+      + 'järveä. Alueella ovat vanhakaupunki Gamla stan kujineen, sen '
+      + 'laidalla kuninkaanlinna ja Riddarholmenin kirkko, kaupungintalo '
+      + 'ja Sergelin tori sekä idässä Djurgården, entinen kuninkaan '
+      + 'metsästyspuisto, jossa ovat nyt Vasa-museo ja Skansen.',
     kohteet: [
       /*
        * Lännestä itään: kaupungintalolta Skansenille. Jokaisen wiki on
@@ -5004,27 +5011,23 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/oslo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
-    esittely: 'Oslo on vuonon perukassa. Oslovuono työntyy merestä '
-      + 'noin sata kilometriä sisämaahan, ja kaupunki on sen '
-      + 'pohjoisimmassa päässä, siinä missä vesi loppuu ja metsäiset '
-      + 'kukkulat alkavat. Metsä ei ole kaukana: kaupungin pohjoisosista '
-      + 'pääsee raitiovaunulla suoraan Nordmarkaan, joka on suurempi '
-      + 'kuin koko rakennettu kaupunki. Keskusta on rakennettu '
-      + 'suoraviivaiseksi ruuduksi 1600-luvulla, kun vanha puukaupunki '
-      + 'oli palanut ja Tanskan kuningas Kristian IV käski rakentaa '
-      + 'uuden linnoituksen suojaan — kaupunki kantoi hänen nimeään '
-      + 'Kristianiana aina vuoteen 1925.\n\nKartalla vuono on '
-      + 'vasemmalla alhaalla ja kaupunki kiertyy sen ympärille. '
-      + 'Keskustan kadut ovat suoria ja risteävät suorassa kulmassa, '
-      + 'mikä erottaa Oslon Tallinnan tai Vilnan kaltaisista '
-      + 'keskiaikaisista kaupungeista. Yksi katu kulkee vinosti muiden '
-      + 'poikki: se on Karl Johans gate, joka vie kuninkaanlinnalta '
-      + 'tuomiokirkolle ja rautatieasemalle. Niemellä sataman kupeessa '
-      + 'näkyy tumma vallirengas — Akershusin linnoitus, joka on '
-      + 'seisonut paikallaan 1300-luvulta. Oopperatalo on veden '
-      + 'toisella puolella oikealla, ja sen katolle voi kävellä. '
-      + 'Lehden laivamuseot eli viikinkilaiva, Fram ja Kon-Tiki ovat '
-      + 'Bygdøyn niemellä kolme ja puoli kilometriä lännessä, kartan '
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on Oslon keskusta vuonon pohjukassa, siinä missä vesi '
+      + 'loppuu ja metsäiset kukkulat alkavat. Keskusta rakennettiin '
+      + 'suoraviivaiseksi ruuduksi 1600-luvulla, kun vanha puukaupunki oli '
+      + 'palanut ja Tanskan kuningas Kristian IV käski rakentaa uuden '
+      + 'linnoituksen suojaan; kaupunki kantoi hänen nimeään Kristianiana '
+      + 'aina vuoteen 1925. Alueella ovat kuninkaanlinna, sieltä '
+      + 'tuomiokirkolle ja rautatieasemalle vievä Karl Johans gate, '
+      + 'kaupungintalo, 1300-luvulta paikallaan seissyt Akershusin '
+      + 'linnoitus sataman kupeessa sekä oopperatalo, jonka katolle voi '
+      + 'kävellä. Lehden laivamuseot eli viikinkilaiva, Fram ja Kon-Tiki '
+      + 'ovat Bygdøyn niemellä kolme ja puoli kilometriä lännessä, kartan '
       + 'ulkopuolella. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
@@ -5050,24 +5053,25 @@ export const KAUPUNKIKARTAT = {
     // --vari, Eurooppa-erä 1 15.8.2026).
     piirtoRajat: { pohjoinen: 55.70215, etela: 55.66135, lansi: 12.53867, ita: 12.62843 },
     varikartta: 'assets/kartat/kobenhavn-varikartta.png',
-    esittely: 'Kööpenhamina on satamakaupunki kahden saaren välissä. Vanha '
-      + 'kaupunki on Sjællandin puolella ja sen vastarannalla on Amager, ja '
-      + 'niiden välissä kulkee satamakanava, jota pitkin laivat pääsevät '
-      + 'kaupungin läpi. Nimi tarkoittaa kauppasatamaa. Kaupunki on hyvin '
-      + 'matala — korkeimmat asiat ovat kirkontornit — ja se on rakennettu '
-      + 'veden ehdoilla: kanavia on kaivettu lisää sinne, missä niitä '
-      + 'tarvittiin, ja vanhat vallihaudat ovat nykyään järviä keskellä '
-      + 'kaupunkia. Isoisän matkan aikaan Kööpenhaminassa asui jo yli sata '
-      + 'tuhatta ihmistä, ja kaupungin ympäriltä oli juuri purettu muurit, '
-      + 'jotka olivat estäneet sitä kasvamasta.\n\nKartalla kanava kulkee '
-      + 'ylhäältä alas oikeanpuoleisen kolmanneksen halki. Vasemmalla ovat '
-      + 'pitkulaiset järvet, jotka ovat entisiä vallihautoja, ja niiden ja '
-      + 'kanavan välissä on vanha kaupunki kapeine katuineen. Oikeassa '
-      + 'yläkulmassa erottuu tähden muotoinen linnoitus vallihautoineen: se '
-      + 'on Kastellet, ja sen takana rannalla istuu Pieni merenneito. '
-      + 'Kanavan itäpuolella on Christianshavn, jonka omat kanavat näkyvät '
-      + 'suorina juovina — se rakennettiin hollantilaiseen tapaan '
-      + 'kaivamalla.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on vanha Kööpenhamina Sjællandin puolella ja sen '
+      + 'vastarannalla Amager; niiden välissä kulkee satamakanava, jota '
+      + 'pitkin laivat pääsevät kaupungin läpi. Nimi tarkoittaa '
+      + 'kauppasatamaa. Kaupunki on rakennettu veden ehdoilla: kanavia on '
+      + 'kaivettu sinne missä niitä tarvittiin, ja vanhat vallihaudat ovat '
+      + 'nykyään pitkulaisia järviä keskellä kaupunkia. Isoisän matkan '
+      + 'aikaan asukkaita oli jo yli satatuhatta, ja kaupungin ympäriltä '
+      + 'oli juuri purettu muurit, jotka olivat estäneet sitä kasvamasta. '
+      + 'Alueella ovat Christiansborgin linna, Rundetårn, Nyhavn, Tivoli, '
+      + 'Rosenborgin linna, Amalienborg, tähtilinnoitus Kastellet ja sen '
+      + 'takana rannalla istuva Pieni merenneito sekä kanavan itäpuolella '
+      + 'hollantilaiseen tapaan kaivamalla rakennettu Christianshavn. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * AMALIENBORG ON ANSA. fi.wikipedian `Amalienborg` EI ole
@@ -5117,25 +5121,25 @@ export const KAUPUNKIKARTAT = {
     // --vari, 17.8.2026).
     piirtoRajat: { pohjoinen: 61.515, etela: 61.483, lansi: 23.6946, ita: 23.8034 },
     varikartta: 'assets/kartat/tampere-varikartta.png',
-    esittely: 'Tampere on rakennettu kannakselle kahden järven väliin. '
-      + 'Näsijärvi on kartan yläreunassa ja Pyhäjärvi alalaidassa, ja '
-      + 'niiden pinnoilla on kahdeksantoista metriä korkeuseroa. Ero '
-      + 'purkautuu Tammerkoskena, joka juoksee kartan keskellä '
-      + 'pohjoisesta etelään noin kilometrin matkan. Juuri se koski on '
-      + 'koko kaupungin syy: sen partaalle nousivat 1800-luvulla '
-      + 'puuvillatehdas, verkatehdas, paperitehdas ja konepajat, ja '
-      + 'kaupunkia alettiin kutsua Pohjolan Manchesteriksi. Isoisän '
-      + 'matkan aikaan Tampereella asui noin kuusi tuhatta ihmistä ja '
-      + 'Finlaysonin tehdas oli Pohjoismaiden suurin '
-      + 'työpaikka.\n\nKartalla kosken länsipuolella on Finlaysonin '
-      + 'punatiilinen tehdaskortteli ja itäpuolella Tampella, jonka '
-      + 'verstaassa toimii nykyään museokeskus Vapriikki. Kosken yli '
-      + 'kulkee kaupungin pääkatu Hämeenkatu, joka jatkuu oikealle '
-      + 'rautatieasemalle asti — rata näkyy kuvassa pystysuorana '
-      + 'juovana keskustan takana. Vasemmalla kohoaa Pyynikinharju, '
-      + 'maailman korkein pitkittäisharju, ja sen laella seisoo '
-      + 'punagraniittinen näkötorni. Pohjoisessa Näsijärven rantaan '
-      + 'työntyy Särkänniemen niemi, jonka kärjessä on Näsinneula.',
+    /*
+     * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+     * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
+     * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
+     * syntyi juuri tähän.
+     */
+    esittely: 'Kartan alue on Tampereen kannas kahden järven välissä: Näsijärvi '
+      + 'on pohjoisessa ja Pyhäjärvi etelässä, ja niiden pintojen '
+      + 'kahdeksantoista metrin korkeusero purkautuu Tammerkoskena. Juuri '
+      + 'se koski on koko kaupungin syy: sen partaalle nousivat '
+      + '1800-luvulla puuvillatehdas, verkatehdas, paperitehdas ja '
+      + 'konepajat, ja kaupunkia alettiin kutsua Pohjolan Manchesteriksi. '
+      + 'Isoisän matkan aikaan Tampereella asui noin kuusi tuhatta ihmistä '
+      + 'ja Finlaysonin tehdas oli Pohjoismaiden suurin työpaikka. Alueella '
+      + 'ovat kosken länsirannalla Finlaysonin punatiilikortteli ja '
+      + 'itärannalla Tampella, jonka verstaassa toimii museokeskus '
+      + 'Vapriikki, pääkatu Hämeenkatu Hämeensiltoineen, lännessä '
+      + 'Pyynikinharjun näkötorni ja pohjoisessa Särkänniemen kärjessä '
+      + 'Näsinneula. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Kahdeksan kohdetta, kaikki tarkistettu fi-Wikipedian

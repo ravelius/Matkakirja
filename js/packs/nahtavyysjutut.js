@@ -2685,6 +2685,11 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+   * PAINOPISTE"): nähtävyysjuttujen kuvatekstit on tiivistetty yhteen
+   * virkkeeseen. Jutut itse, kuvatiedostot ja lähderivit ennallaan.
+   */
   helsinki: {
     'Temppeliaukion kirkko': {
       aika: '1968–1969',
@@ -2746,9 +2751,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Linnanmäki Water Tower 2.jpg',
-          selite: 'Uudempi vesitorni, jonka sisään vuoristorata Linnunrata '
-            + 'on rakennettu. Tiiliseinässä lukee laitteen nimi, ja '
-            + 'tornin juurella kulkee huvipuistoyleisöä.',
+          selite: 'Uudempi vesitorni, jonka sisään vuoristorata Linnunrata on '
+            + 'rakennettu ja jonka tiiliseinässä lukee laitteen nimi.',
           lahde: 'Tatu Kosonen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -2846,9 +2850,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kallio Church Helsinki.jpg',
-          selite: 'Graniittitorni talvitaivasta vasten: kuparikatot ovat '
-            + 'patinoituneet vihreiksi ja huipulla on risti. Mäen '
-            + 'rinteessä kasvaa lumisia kuusia.',
+          selite: 'Graniittitorni talvitaivasta vasten, kuparikatot '
+            + 'patinoituneet vihreiksi ja huipulla risti.',
           lahde: 'Acediscovery, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -15503,6 +15506,11 @@ export const NAHTAVYYSJUTUT = {
    * Faktat fi-Wikipedian rajapinnasta (action=query&prop=extracts),
    * kuvat todennettu Commonsin API:sta ja katsottu silmin.
    */
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
+   * PAINOPISTE"): nähtävyysjuttujen kuvatekstit on tiivistetty yhteen
+   * virkkeeseen. Jutut itse, kuvatiedostot ja lähderivit ennallaan.
+   */
   tampere: {
     'Näsinneula': {
       aika: '1971',
@@ -15527,7 +15535,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Näsinneula tower 20230615.jpg',
           selite: 'Näsinneulan huippu kesäisenä päivänä: betonivarren päällä '
             + 'levenee tummalasinen kaksikerroksinen kori, jonka päältä '
-            + 'nousee ohut antennimasto. Alareunassa näkyy lehtipuiden latvoja.',
+            + 'nousee ohut antennimasto.',
           lahde: 'Santeri Viinamäki, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15642,9 +15650,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tampereen tuomiokirkko (T02).jpg',
-          selite: 'Tuomiokirkon torni alaviistosta: harmaata lohkokiveä, '
-            + 'jyrkkä punatiilinen huippu ja pieni kuparinvihreä risti. '
-            + 'Vasemmalla näkyy sivutornin katto ja oikealla iso kuusi.',
+          selite: 'Tuomiokirkon torni alaviistosta: harmaata lohkokiveä, jyrkkä '
+            + 'punatiilinen huippu ja pieni kuparinvihreä risti.',
           lahde: 'Old Pionear, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15670,10 +15677,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Pyynikki tower.jpg',
-          selite: 'Pyynikin punagraniittinen näkötorni mäntyjen välissä: '
-            + 'lieriömäinen torni, jonka huipulla on ikkunarivi ja lipputanko. '
-            + 'Juurella on kahvilarakennus, pöytiä ja jonottavia ihmisiä, '
-            + 'vasemmalla nousee valkopunainen radiomasto.',
+          selite: 'Pyynikin punagraniittinen näkötorni mäntyjen välissä, '
+            + 'juurellaan kahvilarakennus, pöytiä ja jonottavia ihmisiä.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -15703,17 +15708,14 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Tampere - Tallipiha 2.jpg',
           selite: 'Tallipihan päärakennus syksyisenä päivänä: keltaruskeaksi '
-            + 'petsattu hirsitalo, jonka päädyssä on sahalaidalla koristeltu '
-            + 'parveke ja kaarevat kannatinpuut. Perustus on punatiiltä, '
-            + 'katolla peltiä ja piippuja, ja edessä kulkee mukulakiveys.',
+            + 'petsattu hirsitalo, jonka päädyssä on sahalaidalla '
+            + 'koristeltu parveke ja perustus punatiiltä.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Tampere - Tallipiha.jpg',
-          selite: 'Portti Kuninkaankadulta: puuaidan yläpuolella on kaartuva '
-            + 'kyltti, jossa lukee Tallipiha koristeellisin kirjaimin. '
-            + 'Vasemmalla on alueen kartta lasin takana ja oikealla '
-            + 'kadulle asetettu kahvilan kyltti.',
+          selite: 'Portti Kuninkaankadulta: puuaidan yläpuolella kaartuu '
+            + 'kyltti, jossa lukee Tallipiha koristeellisin kirjaimin.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -15745,17 +15747,15 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Amuri Museum - Saarikuja - Makasiinikatu C IMG 0173.JPG',
-          selite: 'Museokortteli kadulta: matala vaaleanharmaa puutalorivi, '
-            + 'jonka mustalla peltikatolla seisoo kaksi punatiilistä piippua. '
-            + 'Katu on mukulakiveä ja täynnä pysäköityjä autoja, ja talon '
-            + 'takaa nousee sumuun Näsinneula.',
+          selite: 'Museokortteli kadulta: matala vaaleanharmaa puutalorivi '
+            + 'mustine peltikattoineen ja punatiilisine piippuineen, ja '
+            + 'talon takaa nousee sumuun Näsinneula.',
           lahde: 'Anneli Salo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Room at Amuri Workers\' Museum in June 2025 picture 1.jpg',
-          selite: 'Yksi museon huoneista: lautaseinät, tumma lankkulattia ja '
-            + 'kuusiruutuinen ikkuna. Nurkassa on kaappisänky, jonka päällä on '
-            + 'raidallinen patja, ja ikkunan edessä istuu suutariksi puettu '
+          selite: 'Yksi museon huoneista: lautaseinät, nurkassa kaappisänky '
+            + 'raidallisine patjoineen ja ikkunan edessä suutariksi puettu '
             + 'nukke työpenkkinsä ääressä.',
           lahde: 'JIP, Wikimedia Commons (CC BY-SA 4.0)',
         },

@@ -1780,11 +1780,40 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN PAINOPISTE" ja
+   * Fablen eräohje; malli asia-artikkelit.js Medina/Mekka): intro EI ole
+   * enää kahden virkkeen nosto vaan lehden ETUSIVUN LEIPÄTEKSTI —
+   * 7-10 virkettä kolmessa kappaleessa ('\n\n') ja pari maltillista
+   * **lihavointia**. Faktat ovat kaupungin omista jo tarkistetuista
+   * teksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijalle-opas;
+   * maakartat.js; tämän tiedoston teksti-kenttä), ei uusista lähteistä.
+   * teksti-kenttä ja lähderivi ovat ennallaan.
+   */
   Helsinki: {
     intro: 'Helsinki on Suomen pääkaupunki ja suurin kaupunki; seudulla '
-             + 'asuu noin 1,5 miljoonaa ihmistä. Se perustettiin 1550 '
-             + 'kilpailemaan Tallinnan kaupasta, mutta jäi pitkään '
-             + 'pikkukaupungiksi. Pääkaupungiksi siitä tehtiin vasta 1812.',
+             + 'asuu noin 1,5 miljoonaa ihmistä. Kustaa Vaasa perusti sen '
+             + '1550 Vantaanjoen suulle Tallinnan kilpailijaksi, mutta '
+             + 'satama jäi matalaksi, ja 1640 koko kaupunki siirrettiin '
+             + 'viisi kilometriä etelämmäs Vironniemelle. Pikkukaupungista '
+             + 'tuli pääkaupunki vasta 1812, kun Suomesta oli tullut '
+             + 'Venäjän suuriruhtinaskunta.'
+             + '\n\n'
+             + 'Uusi keskusta nousi Senaatintorin ympärille **Carl Ludvig '
+             + 'Engelin** piirustusten mukaan, ja vaalea empire muistuttaa '
+             + 'yhä Pietaria — kylmän sodan aikana tänne tultiin kuvaamaan '
+             + 'Neuvostoliittoa. Merta on joka suunnalla: saaria on noin '
+             + '330 ja rantaviivaa yli sata kilometriä, ja talvella '
+             + 'jäänmurtajat pitävät väylät auki. Edustalla on '
+             + '**Suomenlinna**, vuonna 1748 aloitettu merilinnoitus, jossa '
+             + 'asuu yhä noin 800 ihmistä.'
+             + '\n\n'
+             + 'Kaupunki on kaksikielinen: kadunnimet ovat suomeksi ja '
+             + 'ruotsiksi, ja ruotsinkielisiä on nykyään noin viisi '
+             + 'prosenttia. Tunnetuinta on muotoilu ja julkinen '
+             + 'rakentaminen: Finlandia-talo, kallioon louhittu '
+             + 'Temppeliaukion kirkko ja keskustakirjasto Oodi. '
+             + 'Raitiovaunut ovat kulkeneet kaduilla vuodesta 1891.',
     teksti: 'Keskusta rakennettiin uudelleen 1800-luvun alussa, kun '
               + 'Suomesta oli tullut Venäjän suuriruhtinaskunta. Arkkitehti '
               + 'Carl Ludvig Engel piirsi Senaatintorin ympärille kirkon, '
@@ -1810,11 +1839,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 — sama linja kuin Helsingissä
+   * yllä: intro on nyt etusivun leipäteksti kappaleineen ja
+   * maltillisine lihavointeineen, faktat kaupungin omista jo
+   * tarkistetuista teksteistä.
+   */
   Tampere: {
     intro: 'Tampere on Pohjoismaiden suurin sisämaakaupunki ja Suomen '
-             + 'kolmanneksi väkirikkain: seudulla asuu noin 400 000 ihmistä. '
-             + 'Se on rakennettu kapealle kannakselle kahden järven väliin, '
-             + 'ja kannaksen halki laskee Tammerkoski.',
+             + 'kolmanneksi väkirikkain: seudulla asuu noin 400 000 '
+             + 'ihmistä. Kaupunki seisoo kannaksella Näsijärven ja '
+             + 'Pyhäjärven välissä, ja järvien kahdeksantoista metrin '
+             + 'korkeusero purkautuu keskustan halki **Tammerkoskena**. '
+             + 'Kustaa III antoi kauppapaikalle kaupunkioikeudet 1779, '
+             + 'mutta ratkaisevat olivat vasta vuoden 1821 '
+             + 'vapaakaupunkioikeudet: tavaraa sai tuoda tullitta, ja '
+             + 'tehtailijoiden kannatti tulla juuri tänne.'
+             + '\n\n'
+             + 'Ensimmäisenä tuli skotlantilainen **James Finlayson**, joka '
+             + 'rakensi kosken länsirannalle konepajan 1820. Uudet '
+             + 'omistajat käänsivät sen puuvillatehtaaksi, joka työllisti '
+             + 'vuosisadan lopulla tuhansia, enimmäkseen naisia ja lapsia. '
+             + 'Verkatehtaat, paperitehdas ja konepajat seurasivat, ja '
+             + 'kaupungille vakiintui liikanimi Pohjolan Manchester.'
+             + '\n\n'
+             + 'Tehtaat ovat siirtyneet muualle, mutta punatiiliset '
+             + 'rakennukset jäivät paikoilleen museoiksi ja ravintoloiksi. '
+             + 'Länsipuolella kohoaa Pyynikinharju, maailman korkein '
+             + 'pitkittäisharju. Vuonna 1971 avattu 168-metrinen Näsinneula '
+             + 'on yhä maan korkein näkötorni, ja raitiovaunut tulivat '
+             + 'kaupunkiin 2021.',
     teksti: 'Ruotsin kuningas Kustaa III antoi Tammerkosken partaalla '
               + 'olleelle kauppapaikalle kaupunkioikeudet 1. lokakuuta 1779. '
               + 'Ratkaiseva etu tuli kuitenkin vasta 1821, kun kaupunki sai '
@@ -1850,12 +1904,35 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 — sama linja kuin Helsingissä
+   * yllä: intro on nyt etusivun leipäteksti kappaleineen ja
+   * maltillisine lihavointeineen, faktat kaupungin omista jo
+   * tarkistetuista teksteistä.
+   */
   Tukholma: {
     intro: 'Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin '
-             + 'kaupunki: seudulla asuu yli kaksi miljoonaa ihmistä. Se on '
-             + 'rakennettu neljälletoista saarelle siihen kohtaan, jossa '
-             + 'Mälaren-järvi laskee Itämereen. Nimi tarkoittaa suunnilleen '
-             + 'paalusaarta.',
+             + 'kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla '
+             + '1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista '
+             + 'saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; '
+             + 'nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 '
+             + 'perustettu kaupunki sai merkityksensä väylästä: salmeen '
+             + 'lyödyt paalut pysäyttivät vieraat laivat ennen järveä.'
+             + '\n\n'
+             + 'Vanhin osa on **Gamla stan**, pääosin yksi saari, jonka '
+             + 'kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen '
+             + 'virallinen nimi oli Staden mellan broarna, kaupunki '
+             + 'siltojen välissä. Keskustan itäpuolella alkaa saaristo, '
+             + 'jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on '
+             + 'niin vähäsuolaista, ettei se maistu merivedeltä.'
+             + '\n\n'
+             + 'Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien '
+             + 'jälkeen maa rakensi kansankodiksi kutsuttua '
+             + 'hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa '
+             + 'jaetaan **Nobel-palkinnot**, ja juhlaillallinen katetaan '
+             + 'kaupungintalon Siniseen saliin 1 300 hengelle. Vesi on '
+             + 'tukholmalaisille arkea: keskustassa saa uida, sillä '
+             + 'jätevedet on puhdistettu 1930-luvulta asti.',
     teksti: 'Kaupunki syntyi 1200-luvulla salpaamaan laivaväylän järvelle: '
               + 'kuka hallitsi salmea, hallitsi kauppaa. Vanhinta osaa '
               + 'kutsutaan nimellä Gamla stan, ja sen kujat ovat yhä '
@@ -1880,11 +1957,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 — sama linja kuin Helsingissä
+   * yllä: intro on nyt etusivun leipäteksti kappaleineen ja
+   * maltillisine lihavointeineen, faktat kaupungin omista jo
+   * tarkistetuista teksteistä.
+   */
   Oslo: {
-    intro: 'Oslo on Norjan pääkaupunki ja suurin kaupunki; asukkaita on '
-             + 'noin 720 000. Se sijaitsee Oslovuonon pohjukassa metsäisten '
-             + 'kukkuloiden keskellä, ja kaupungin rajojen sisällä on enemmän '
-             + 'metsää ja vettä kuin rakennettua aluetta.',
+    intro: 'Oslo on Norjan pääkaupunki ja suurin kaupunki; sen '
+             + 'viidessätoista kaupunginosassa asuu runsaat 717 000 '
+             + 'ihmistä. Kaupunki on Oslovuonon pohjukassa, siinä missä '
+             + 'vuono loppuu ja metsäiset kukkulat alkavat. Rajojen sisällä '
+             + 'on 301 neliökilometriä metsää, 343 järveä ja 40 saarta, ja '
+             + 'metsäalueella asuu vain 1 610 ihmistä — **metsä ja vesi '
+             + 'ovat kaupunkia**, eivät sen ulkopuolta.'
+             + '\n\n'
+             + 'Asutus alkoi vuonon rannalla noin vuonna 1040. Vuoden 1624 '
+             + 'palon jälkeen Tanskan kuningas Kristian IV siirsi kaupungin '
+             + 'linnoituksen kupeeseen ja nimesi sen itsensä mukaan '
+             + 'Christianiaksi; vanha nimi palautettiin vasta 1925. Norja '
+             + 'kuului Tanskaan yli neljäsataa vuotta ja sen jälkeen '
+             + 'unioniin Ruotsin kanssa, joka purettiin rauhanomaisesti '
+             + '1905.'
+             + '\n\n'
+             + 'Öljy muutti maan: Ekofiskin kentältä löytyi öljyä 1969, ja '
+             + 'tuotot päätettiin siirtää rahastoon. Pääkaupunki laati 2017 '
+             + 'maailman ensimmäisen kaupungin **ilmastobudjetin**, ja '
+             + 'kunnassa rekisteröidyistä autoista 41 prosenttia on '
+             + 'täyssähköisiä. Nobelin rauhanpalkinto luovutetaan joka 10. '
+             + 'joulukuuta Oslon kaupungintalossa — niin Alfred Nobel '
+             + 'testamentissaan määräsi.',
     teksti: 'Oslo perustettiin noin vuonna 1040 vuonon rantaan. Kun '
               + 'kaupunki paloi 1624, Tanskan kuningas Kristian IV rakennutti '
               + 'sen uudelleen linnoituksen kupeeseen ja antoi sille oman '
@@ -1908,11 +2010,36 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  /*
+   * TEKSTIREMONTTI 20.8.2026, ERÄ E4 — sama linja kuin Helsingissä
+   * yllä: intro on nyt etusivun leipäteksti kappaleineen ja
+   * maltillisine lihavointeineen, faktat kaupungin omista jo
+   * tarkistetuista teksteistä.
+   */
   Kööpenhamina: {
-    intro: 'Kööpenhamina on Tanskan pääkaupunki Sjællandin saarella, aivan '
-             + 'Ruotsin rannikon tuntumassa. Nimi tarkoittaa kauppasatamaa. '
-             + 'Seudulla asuu noin 1,4 miljoonaa ihmistä, ja kaupunki on maan '
-             + 'hallinnon, kaupan ja liikenteen keskus.',
+    intro: 'Kööpenhamina on Tanskan pääkaupunki Sjællandin saarella, '
+             + 'aivan Ruotsin rannikon tuntumassa; nimi tarkoittaa '
+             + 'kauppasatamaa. Seudulla asuu noin 1,4 miljoonaa ihmistä, ja '
+             + 'kaupunki on maan hallinnon ja kaupan keskus. Alku oli '
+             + 'kalastajakylä, jonka viereen piispa Absalon rakennutti '
+             + '1100-luvulla linnoituksen keskelle salmea — tästä on lyhin '
+             + 'matka Skånen puolelle, ja kaikki Itämerelle menevä '
+             + 'laivaliikenne kulkee ohi.'
+             + '\n\n'
+             + 'Kaupunki on matala ja rakennettu veden ehdoilla: kanavia '
+             + 'kaivettiin sinne missä niitä tarvittiin, ja vanhat '
+             + 'vallihaudat ovat nyt järviä keskellä kaupunkia. **Tivoli** '
+             + 'avattiin vallihaudan ulkopuolelle vuonna 1843 ja toimii '
+             + 'yhä. Isoisän matkan aikaan asukkaita oli jo yli '
+             + 'satatuhatta, ja ympäriltä oli juuri purettu muurit, jotka '
+             + 'olivat estäneet kasvun.'
+             + '\n\n'
+             + 'Nykyisen ilmeen antaa **polkupyörä**: autoliikenteestä '
+             + 'erotettuja pyöräteitä on noin 385 kilometriä, ja niitä '
+             + 'pitkin tehdään noin puolet työ- ja koulumatkoista. Sataman '
+             + 'vesi on puhdistettu niin, että keskellä kaupunkia voi uida. '
+             + 'Ruotsin Malmöhön pääsee vuonna 2000 avattua Juutinrauman '
+             + 'siltaa pitkin.',
     teksti: 'Kaupunki kasvoi kalastajakylästä 1100-luvulla, kun piispa '
               + 'Absalon rakennutti linnoituksen pienelle saarelle keskelle '
               + 'salmea. Paikka oli valittu hyvin: tästä on lyhin matka Skånen '
