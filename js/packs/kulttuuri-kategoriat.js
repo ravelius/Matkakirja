@@ -24532,14 +24532,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ole enää jäljellä mitään. Pohjoisessa ja lännessä ovat '
                 + 'oliivi- ja pistaasitarhat, idässä Syyrian aavikko.',
               kuva: {
-                tiedosto: 'Aleppo from the castle LOC matpc.03555.jpg',
-                selite: 'Näkymä linnoituksen kummulta yli Aleppon '
-                  + '1900-luvun alun lasinegatiivissa. Matalat talot '
-                  + 'jatkuvat tasaisena mattona horisonttiin asti, ja '
-                  + 'keskeltä nousee yksi minareetti ja muutama kupoli. '
-                  + 'Alalaidassa on kuvaajan oma numero peilikuvana '
-                  + 'negatiivin reunassa.',
-                lahde: 'Matson Collection, Wikimedia Commons (PD)',
+                tiedosto: 'Aleppo city centre, Syria.jpg',
+                selite: 'Aleppon kattoja linnoituksen kummulta ennen '
+                  + 'sisällissotaa kuvattuna. Kivitalot jatkuvat '
+                  + 'tiiviinä mattona horisonttiin, katoilla on '
+                  + 'lautasantenneja, ja vasemmalla nousee minareetti '
+                  + 'vihreäkupolisen moskeijan vierestä.',
+                lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
               },
             },
             {
