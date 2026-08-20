@@ -16898,7 +16898,7 @@ export const KULTTUURI_KATEGORIAT = {
   rubalkhali: [
     {
       id: 'kaupunki',
-      nimi: 'Ruba al-Khali',
+      nimi: 'Rub al-Khali',
       johdanto: 'Hiekkameri, joka on Ranskaa suurempi ja jonka nimi '
         + 'tarkoittaa tyhjää neljännestä. Sen alta on kaivettu virtahepojen '
         + 'luita ja löydetty maailman suurimpia öljyesiintymiä — ja '
