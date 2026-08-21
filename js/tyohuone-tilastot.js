@@ -38,10 +38,18 @@
  *   Lippu        maailmankartan countryShapes[maatunnus].lippu
  *   Luvut        MAATIEDOT[maatunnus]
  *   Radio        RADIOT[maatunnus]
+ *
+ * Lehden viimeinen sivu on KIINTIÖT (omistajan tilaus 21.8.2026):
+ * R2-tilankäyttö, repon koko sekä ElevenLabsin ja pöllön kuukausi-
+ * kiintiöt. Ne piirrettiin ennen hampurilaisvalikon alaosaan; data ja
+ * hakulogiikka siirtyivät tänne sellaisenaan (ks. osio KIINTIÖT).
  */
 
 import { PACKS } from './pack.js';
-import { html } from './ui-apurit.js';
+import { html, kehittajaTilaPaalla } from './ui-apurit.js';
+import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
+import { POLLO_KEHITTAJAKOODI_AVAIN } from './pollo.js';
+import { PEILI_JUURI } from './media.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
@@ -780,6 +788,214 @@ function piirraLuvut(kohde) {
 }
 
 /* ------------------------------------------------------------------ *
+ * KIINTIÖT — R2, repo, ElevenLabs ja pöllö
+ *
+ * Omistajan tilaus 21.8.2026: "Siirrä alaosan tilastot tilasto
+ * lehdelle". Palkit asuivat v982 asti hampurilaisvalikon Työhuone-
+ * kotelossa (js/main.js). Ne ovat tilastoja siinä missä taulukin,
+ * joten ne kuuluvat Tilastot-lehteen; valikkoon jäi vain versiorivi.
+ *
+ * DATA JA HAKULOGIIKKA OVAT ENNALLAAN — vain esityspaikka vaihtui.
+ * Haku lähtee nyt Tilastojen avauksesta, ei enää valikon avauksesta.
+ *
+ * Alkuperäiset tilaukset 15.8.2026: "tee r2 ja repon koosta
+ * hampurilaiseen yksinkertainen graafi vierekkäin (vihreä-kelt-pun)
+ * palkki" ja jatko: ElevenLabsin kuukausikiintiö, pöllön käyttö sekä
+ * OpenAI+Claude-kulut "jos pystyt näkemään".
+ *
+ * Luvut tulevat kahdesta lähteestä: repon koko GitHubin julkisesta
+ * rajapinnasta ja loput pöllö-workerin tila-haarasta, joka vaatii
+ * kehittäjäkoodin (kulut ja kiintiöt ovat omistajan tilitietoja).
+ * Workerin puolella vastaus on KV-välimuistissa tunnin; täällä
+ * riittää istunnon mittainen muisti, ettei lehden jokainen avaus
+ * hae uudestaan. Puuttuva lähde piirtyy vaisuna "ei tietoa" -palkkina
+ * — palkisto ei koskaan estä lehden käyttöä.
+ * ------------------------------------------------------------------ */
+
+const KIINTIO_RAJAT = {
+  // R2:n ilmaistaso on 10 Gt ja GitHubin suositus repolle 1 Gt.
+  r2: 10 * 1024 ** 3,
+  repo: 1024 ** 2, // kilotavuina (GitHubin size-kenttä on kt)
+};
+let kiintioTila = null;
+let kiintioHaku = null;
+
+async function haeKiintiotila() {
+  /*
+   * HUOM: purkujärjestys seuraa listaa — repo, PEILI, PÖLLÖ. Tässä
+   * oli v746–v757 ristikkäinen purku [repo, tila, peili], jolloin
+   * peilimanifesti meni pöllömuuttujaan ja pöllön vastaus peiliin:
+   * kaikki palkit näyttivät tyhjää ja kulurivi syytti admin-avaimia,
+   * vaikka molemmat lähteet vastasivat koko ajan oikein. Löytyi
+   * v757:n diagnoosirivistä ("peili ok · pöllö ei vastausta" + R2
+   * 0 Mt — mahdoton yhdistelmä ilman ristiinmenoa).
+   */
+  const [repo, peili, tila] = await Promise.all([
+    fetch('https://api.github.com/repos/ravelius/Matkakirja')
+      .then((v) => (v.ok ? v.json() : null))
+      .catch(() => null),
+    // Peiliämpärin koko manifestista (omistajan havainto 15.8.2026:
+    // "r2 sanoo työhuoneessa tilankäytöksi paljon enemmän" — palkki
+    // laski vain puheämpärin 39 Mt, mutta mediapeilissä on ~2 Gt).
+    // Ilmaistason 10 Gt on tilikohtainen, joten palkkiin kuuluu
+    // ämpärien summa.
+    (async () => {
+      // no-store: vanhentunut manifesti näyttäisi väärää summaa.
+      const res = await fetch(`${PEILI_JUURI}manifesti.json`, { cache: 'no-store' });
+      if (!res.ok) return null;
+      const m = await res.json();
+      let tavut = 0;
+      for (const laji of ['kuvat', 'liput', 'aanet', 'tekstit']) {
+        for (const t of Object.values(m?.[laji] ?? {})) tavut += t?.koko ?? 0;
+      }
+      return { tavut };
+    })().catch(() => null),
+    /*
+     * Tila-haun epäonnistumisen SYY talteen (omistajan kysymys
+     * 15.8.2026: "miksi sanoo, että admin avaimet puuttuvat?" —
+     * ruudulla luki admin-avaimista, vaikka oikeasti koko kutsu jäi
+     * tekemättä). Rajattu kehittäjäkoodi ei talleta pöllökoodia
+     * laitteelle, jolloin syy on 'koodi'.
+     */
+    (async () => {
+      const koodi = window.localStorage?.getItem(POLLO_KEHITTAJAKOODI_AVAIN);
+      if (!koodi) return { syy: 'koodi' };
+      const vastaus = await fetch(POLLOPALVELIN, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-pollo-kehittaja': koodi },
+        body: JSON.stringify({ tehtava: 'tila' }),
+      });
+      if (!vastaus.ok) return { syy: `palvelin ${vastaus.status}` };
+      return { syy: null, tila: await vastaus.json() };
+    })().catch(() => ({ syy: 'verkko' })),
+  ]);
+  return {
+    repoKt: repo?.size ?? null,
+    tila: tila?.tila ?? null,
+    tilaSyy: tila?.syy ?? null,
+    peili,
+  };
+}
+
+/** Yksi kiintiöpalkki: nimi, ura ja lukema — tk-paletin sävyissä. */
+function kiintioPalkki(nimi, osuus, arvoTeksti, tyhjaTeksti) {
+  const kotelo = html('div', 'tk-kiintio');
+  const rivi = html('div', 'tk-kiintio-rivi');
+  rivi.appendChild(html('span', 'tk-kiintio-nimi', nimi));
+  rivi.appendChild(html('span', 'tk-kiintio-arvo',
+    osuus === null ? tyhjaTeksti : arvoTeksti));
+  kotelo.appendChild(rivi);
+  const ura = html('div', 'tk-kiintio-ura');
+  const tayte = html('div', 'tk-kiintio-tayte');
+  if (osuus === null) {
+    kotelo.classList.add('tk-kiintio-tyhja');
+  } else {
+    const p = Math.max(0, Math.min(1, osuus));
+    tayte.classList.add(p >= 0.85 ? 'punainen' : (p >= 0.6 ? 'keltainen' : 'vihrea'));
+    tayte.style.width = `${Math.max(2, p * 100).toFixed(1)}%`;
+  }
+  ura.appendChild(tayte);
+  kotelo.appendChild(ura);
+  return kotelo;
+}
+
+/** Neljä palkkia koteloon. `data === null` = haku on vielä kesken. */
+function piirraKiintiopalkit(kotelo, data) {
+  kotelo.replaceChildren();
+  const tyhja = data === null ? 'haetaan…' : 'ei tietoa';
+  const { repoKt = null, tila = null, peili = null } = data ?? {};
+  // Mt alle gigan (omistajan havainto 15.8.2026: "R2 ei voi olla
+  // oikein" — kymmenien megatavujen ämpäri pyöristyi näytöllä
+  // 0,0 gigatavuun, mikä näytti tyhjältä vaikka ei ollut).
+  const r2Arvo = (tavut) => (tavut >= 1024 ** 3
+    ? `${(tavut / 1024 ** 3).toFixed(1)}/10 Gt`
+    : `${Math.round(tavut / 1024 ** 2)} Mt/10 Gt`);
+  // Molemmat ämpärit: puheämpäri workerilta ja mediapeili
+  // manifestistaan — ilmaistason 10 Gt on tilikohtainen.
+  const r2Tavut = tila?.r2 || peili
+    ? (tila?.r2?.tavut ?? 0) + (peili?.tavut ?? 0)
+    : null;
+  kotelo.appendChild(kiintioPalkki('R2',
+    r2Tavut !== null ? r2Tavut / KIINTIO_RAJAT.r2 : null,
+    r2Tavut !== null ? r2Arvo(r2Tavut) : '', tyhja));
+  kotelo.appendChild(kiintioPalkki('Repo',
+    repoKt !== null ? repoKt / KIINTIO_RAJAT.repo : null,
+    repoKt !== null ? `${(repoKt / 1024).toFixed(0)} Mt/1 Gt` : '', tyhja));
+  kotelo.appendChild(kiintioPalkki('ElevenLabs',
+    tila?.eleven?.raja ? tila.eleven.kaytetty / tila.eleven.raja : null,
+    tila?.eleven?.raja
+      ? `${Math.round(tila.eleven.kaytetty / 1000)}/${Math.round(tila.eleven.raja / 1000)} t`
+      : '', tyhja));
+  kotelo.appendChild(kiintioPalkki('Pöllö/kk',
+    tila?.pollo?.raja ? (tila.pollo.kuukausi ?? 0) / tila.pollo.raja : null,
+    tila?.pollo?.raja ? `${tila.pollo.kuukausi ?? 0} / ${tila.pollo.raja}` : '', tyhja));
+  /*
+   * Kulurivi ja lähdediagnoosi POISTETTU (omistajan tilaus 15.8.2026
+   * "Poista nämä tekstit" — palkit riittävät). Diagnoosirivi ehti
+   * tehdä tehtävänsä: se paljasti peili/pöllö-muuttujien ristiinmenon
+   * (v758). Workerin tila-vastauksessa kulut ja viat kulkevat yhä,
+   * jos niitä joskus taas halutaan näyttää.
+   */
+}
+
+/**
+ * Palkkien täyttö. Onnistunut tulos riittää istunnoksi; KAIKKI vajaat
+ * tulokset (virhe, lähdeviat tai kulut tyhjänä mistä syystä hyvänsä —
+ * myös vanhan workerin muotoinen vastaus ilman viat-kenttää) haetaan
+ * uudestaan seuraavasta avauksesta. Ohimenevä häiriö tai kesken ollut
+ * julkaisu ei saa jäädä lehteen koko istunnoksi.
+ */
+function paivitaKiintiot(kotelo) {
+  if (!kehittajaTilaPaalla()) return;
+  const vajaa = kiintioTila && (
+    kiintioTila.tilaSyy
+    || !kiintioTila.tila
+    || kiintioTila.tila.kulut?.yhteensa === null
+    || kiintioTila.tila.kulut?.yhteensa === undefined
+    || (kiintioTila.tila.viat && Object.keys(kiintioTila.tila.viat).length)
+  );
+  if (kiintioTila && !vajaa) {
+    piirraKiintiopalkit(kotelo, kiintioTila);
+    return;
+  }
+  piirraKiintiopalkit(kotelo, null);
+  if (!kiintioHaku) {
+    kiintioHaku = haeKiintiotila()
+      .then((data) => { kiintioTila = data; return data; })
+      .catch(() => null)
+      .finally(() => { kiintioHaku = null; });
+  }
+  /*
+   * Kotelo kiinnitetään AINA menossa olevaan hakuun. Sivu piirretään
+   * uudestaan joka avauksella, joten pelkkä "haku on jo käynnissä"
+   * -paluu jättäisi tuoreen kotelon ikuiseen "haetaan…"-tilaan.
+   */
+  kiintioHaku.then((data) => {
+    if (data && kotelo.isConnected) piirraKiintiopalkit(kotelo, data);
+  });
+}
+
+/** Kiintiöt-sivu: johdanto, palkit ja lähdeselite. */
+function piirraKiintiosivu(kohde) {
+  kohde.appendChild(html('p', 'johdanto',
+    'Tilankäyttö ja kuukausikiintiöt yhdellä silmäyksellä. Palkki on '
+    + 'vihreä väljällä, keltainen kun rajasta on käytetty 60 % ja '
+    + 'punainen 85 %:sta ylöspäin.'));
+  const kotelo = html('div', 'tk-kiintiot');
+  kohde.appendChild(kotelo);
+  kohde.appendChild(html('p', 'tk-selite',
+    'R2 on peiliämpärien yhteiskoko (kuvat, liput, äänet, tekstit) '
+    + 'ilmaistason 10 gigatavusta; Repo on GitHubin ilmoittama repon '
+    + 'koko suosituksen 1 gigatavusta. ElevenLabs ja Pöllö ovat '
+    + 'kuukausikiintiöitä. Repon koko tulee GitHubin julkisesta '
+    + 'rajapinnasta, muut pöllö-workerilta kehittäjäkoodilla — ilman '
+    + 'koodia tai verkkoa palkki jää haaleaksi "ei tietoa" -palkiksi. '
+    + 'Vastaus muistetaan istunnon ajan, joten lehden uusi avaus ei hae '
+    + 'lukuja turhaan uudestaan.'));
+  paivitaKiintiot(kotelo);
+}
+
+/* ------------------------------------------------------------------ *
  * RAAMATUN GENEROIDUT TAULUT
  *
  * Poistetun työhuonesivuston Raamattu-välilehti liitti kahteen osioon
@@ -916,6 +1132,17 @@ export function tilastoSivut() {
       nimi: 'Luvut',
       yksipalsta: true,
       rakenna: piirraLuvut,
+    },
+    /*
+     * Kiintiöt viimeisenä (omistajan tilaus 21.8.2026): ne eivät kerro
+     * rakennustyöstä vaan tilan ja kiintiöiden riittämisestä, joten ne
+     * ovat lehden loppulohko eivätkä sekoitu taulun lukuihin.
+     */
+    {
+      id: 'tilastot-kiintiot',
+      nimi: 'Kiintiöt',
+      yksipalsta: true,
+      rakenna: piirraKiintiosivu,
     },
   ];
 }
