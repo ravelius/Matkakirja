@@ -10157,7 +10157,21 @@ button.lukija-nappi.lukee,
   color: #2d2010;
 }
 
-.dialog.lehti #arrival-maa-intro::first-letter {
+/*
+ * SAMA ANFANGI KAUPUNKILEHDEN ETUSIVULLE (omistajan palaute
+ * 21.8.2026: "kaupunkisivulla saisi olla samat anfangit kuin
+ * maasivulla"). Kirjain, koko, paino, kellutus ja väri ovat yhtä ja
+ * samaa sääntöä maan pääkirjoituksen kanssa — kahdeksi säännöksi
+ * kopioituna ne ajautuisivat erilleen ensimmäisellä säädöllä.
+ *
+ * VAIN ENSIMMÄISEEN KAPPALEESEEN. piirraLeipateksti (js/ui-apurit.js)
+ * latoo esittelyn <p>-kappaleiksi, ja anfangi joka kappaleessa olisi
+ * koristetta eikä lehteä. Kaupungit, joilla ei ole omaa esittelyä,
+ * saavat vakiolauseen suorana tekstisolmuna ilman <p>:tä — yhden
+ * rivin lause jää siis tarkoituksella ilman anfangia.
+ */
+.dialog.lehti #arrival-maa-intro::first-letter,
+.dialog.lehti #arrival-intro > p:first-of-type::first-letter {
   float: left;
   font-family: var(--font-type);
   font-size: 3.1em;

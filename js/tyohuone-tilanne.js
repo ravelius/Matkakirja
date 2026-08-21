@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v980 — ANFANGI KAUPUNKILEHTEEN: kaupunkilehden etusivun esittely alkaa nyt samalla isolla alkukirjaimella kuin maalehden paakirjoitus (todennettu kaikilla 98 lehtikaupungilla). Kakkossivun nostoissa anfangi oli jo. Tarkista: parin kaupungin etusivu',
   'v979 — KOHDEKARTTA KOKORUUDULLE: kaupunkilehden karttaa napauttamalla (tai Enter) se aukeaa kokoruutuun numeroselitteineen; sulku ruksista, Escilla tai napautuksella. Kartan kulmassa pieni Kokoruutu-lappu. Tarkista: jonkin kaupungin kartta auki ja kiinni, myos kannykalla',
   'v978 — YANGON JA MANDALAY: uudet lehdet (Yangon: 9 kohdetta Shwedagonista jokirantaan; Mandalay: 9 kohdetta kukkulalta Mahamuniin, U Bein -silta kannessa). Myanmar-linjaus: ei nykypolitiikkaa; 2025 jaristys rakennusperinnon kautta. HUOM: saarivit puuttuvat viela (Open-Meteon kiintio). Tarkista: molempien kartta ja Matkaopas',
   'v977 — MAAN ETUSIVUN KARTTA ISOMMAKSI: levealla ruudulla kartta mitoittuu nyt kuvasuhteensa mukaan (pystykartta korkeuskattoon, esim. IB 340 px → 419 px leveaksi) ja pitkulainen kartta (esim. Turkki, Itavalta) on taysleveana tekstin ylla kaksipalstaisen paakirjoituksen kera. Kannykkanakyma ennallaan. Tarkista: IB:n ja Turkin etusivu levealla',
