@@ -7242,6 +7242,74 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Patanin Durbar-aukio', lat: 27.6734, lon: 85.325 },
     ],
   },
+  /*
+   * ASTANAN KOHDEKARTTA (21.8.2026). Rajaus on 6,1 × 4,4 km ja se
+   * kattaa Esil-joen (venäjäksi Ishim) molemmat rannat; kohteet on
+   * numeroitu pohjoisesta etelään kuten Medinassa, Xi'anissa ja Ulan
+   * Batorissa.
+   *
+   * SEITSEMÄN KOORDINAATTIA ON en-WIKIPEDIASTA (haettu 21.8.2026)
+   * kohteiden omista infobokseista. KAHDEKSAS, kansallismuseo, on
+   * WIKIDATASTA (Q18405670: 51,1178 / 71,4701), koska museon oma
+   * en-Wikipedia-artikkeli käyttää mallinetta
+   * {{infobox museum/wikidata}} eikä raakatekstissä ole koordinaattia
+   * lainkaan. Tämä on kirjattu tähän, koska lähdejako ei ole
+   * arvattavissa kohdelistasta.
+   *
+   * JOKI KULKEE RUUDUN LÄPI LUOTEESEEN, ja se on kartan tärkein
+   * piirre. Lounaisrannalla (Vasen ranta) on 1990-luvulta alkaen
+   * rakennettu hallintokeskus: Khan Shatyr lännessä, Nurjol-bulevardi
+   * ja Bajterek keskellä ja Akorda joen mutkassa. Koillisrannalla
+   * (Oikea ranta) ovat Itsenäisyysaukion ympäristö — Rauhan ja
+   * sovinnon palatsi, Hazrat Sultanin moskeija ja kansallismuseo — ja
+   * niiden takana vanhempi kaupunki. en-Wikipedian "Astana"-artikkeli
+   * tiivistää jaon muotoon "vanhat kaupunginosat joen pohjoispuolella,
+   * uudet eteläpuolella"; kartalla se näkyy tarkemmin, koska joki
+   * virtaa kaakosta luoteeseen eikä idästä länteen.
+   *
+   * MOLEMMAT RAUTATIEASEMAT PUUTTUVAT EIVÄTKÄ OLE KAINALOSSA. Vanha
+   * Astana-1 on koordinaateista laskien 7,1 km pohjoisluoteeseen ja
+   * Expo-vuoden Nurly Zhol 7,3 km itäkaakkoon eli vastakkaisissa
+   * suunnissa; kahden kainalon sijaan asemat kerrotaan oppaan
+   * ensimmäisessä jaksossa (Medinan Uhud-vuoren ratkaisu). Samasta
+   * syystä pois jäivät Expo 2017:n pallorakennus Nur Alem (4,9 km
+   * etelälounaaseen) ja Suuri moskeija (6,9 km etelään).
+   *
+   * ITSENÄISYYSAUKIO JA ITSENÄISYYDEN PALATSI JÄTETTIIN POIS, vaikka
+   * kummallakin on oma koordinaattinsa: ne ovat 370 ja 480 metrin
+   * päässä Hazrat Sultanin moskeijasta ja 190 metrin päässä
+   * toisistaan, eli kolme numeroympyrää menisi päällekkäin (Petran,
+   * Mekan ja Singaporen oppi). Aukio kerrotaan moskeijan jutussa.
+   *
+   * KAKSI NUMEROA ON LÄHEKKÄIN JA SE ON HYVÄKSYTTY: Bajterekin ja
+   * Nurjol-bulevardin pisteiden väli on 463 metriä eli 7,5 prosenttia
+   * ruudun leveydestä. Bulevardin koordinaatti on sen keskikohta, ja
+   * torni seisoo bulevardin varrella — ympyrät erottuvat toisistaan
+   * (Istanbulin, Moskovan ja Bagdadin ennakkotapaus).
+   */
+  astana: {
+    polku: 'assets/kartat/astana-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 51.152, etela: 51.1125, lansi: 71.394, ita: 71.482 },
+    esittely: 'Kartan halki virtaa Esil, ja se jakaa kaupungin kahtia. '
+      + 'Lounaisrannalla kulkee Nurjol-bulevardi: läntisessä päässä on '
+      + 'Khan Shatyrin teltta, keskellä Bajterek ja itäpäässä joen '
+      + 'mutkassa Akorda. Koillisrannalla ovat Rauhan ja sovinnon '
+      + 'palatsi, Hazrat Sultanin moskeija ja kansallismuseo, ja '
+      + 'pohjoisempana alkaa vanhempi kaupunki. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Xi'anissa. */
+      { nimi: 'Astana Opera', lat: 51.135556, lon: 71.410917 },
+      { nimi: 'Khan Shatyr', lat: 51.132222, lon: 71.403889 },
+      { nimi: 'Bajterek', lat: 51.128333, lon: 71.430556 },
+      { nimi: 'Nurjol-bulevardi', lat: 51.127208, lon: 71.436947 },
+      { nimi: 'Akorda', lat: 51.125833, lon: 71.446389 },
+      { nimi: 'Hazrat Sultanin moskeija', lat: 51.125, lon: 71.4722 },
+      { nimi: 'Rauhan ja sovinnon palatsi', lat: 51.123056, lon: 71.463611 },
+      { nimi: 'Kansallismuseo', lat: 51.1178, lon: 71.4701 },
+    ],
+  },
 };
 
 /*

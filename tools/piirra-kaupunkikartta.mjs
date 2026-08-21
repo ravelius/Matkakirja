@@ -2275,6 +2275,51 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  astana: {
+    /*
+     * ASTANA (21.8.2026). Ruutu on 6,1 × 4,4 km ja se kattaa Esilin
+     * (Ishimin) molemmat rannat: eteläisellä Vasemmalla rannalla
+     * uusi hallintokeskus Khan Shatyrista Hazrat Sultanin
+     * moskeijalle, pohjoisella Oikealla rannalla vanha kaupunki.
+     *
+     * RUUTU ON LEVEÄ SUORAKAIDE, EI NELIÖ. Kahdeksan kohdetta ovat
+     * en-Wikipedian koordinaateista laskien 4,8 kilometrin levyisellä
+     * ja vain 2,0 kilometrin korkuisella nauhalla Nurjol-bulevardin
+     * suunnassa, koska uusi keskusta rakennettiin yhden akselin
+     * varteen. Neliörajaus (Varanasin ja Ulan Batorin ratkaisu) olisi
+     * täyttänyt puolet kuvasta esikaupungilla; tässä tehtiin
+     * päinvastoin ja pohjoisreunaa nostettiin vain sen verran, että
+     * joki ja vanhan puolen ruutukaava mahtuvat mukaan. Ilman sitä
+     * kartta kertoisi vain puolet kaupungista — koko lehden ydin on,
+     * että Astana on kaksi kaupunkia joen kahta puolta.
+     *
+     * MOLEMMAT RAUTATIEASEMAT JÄIVÄT POIS EIVÄTKÄ KAINALOON. Vanha
+     * Astana-1 on en-Wikipedian koordinaatista laskien 7,1 km
+     * pohjoisluoteeseen ja Expo-vuoden Nurly Zhol 7,3 km itäkaakkoon;
+     * ne ovat siis vastakkaisissa suunnissa ja kumpikin yhtä kaukana
+     * kuin Varanasin Sarnath, joten kahden kainalon sijaan asemat
+     * kerrotaan oppaan ensimmäisessä jaksossa (Medinan Uhud-vuoren
+     * ratkaisu). Samasta syystä pois jäivät Expo 2017:n Nur Alem
+     * (4,9 km etelälounaaseen) ja Suuri moskeija (6,9 km etelään).
+     *
+     * ITSENÄISYYSAUKIO JA ITSENÄISYYDEN PALATSI EIVÄT OLE ERILLISINÄ
+     * PISTEINÄ, vaikka niillä on omat koordinaattinsa: ne ovat 370 ja
+     * 480 metrin päässä Hazrat Sultanin moskeijasta ja 190 metrin
+     * päässä toisistaan, joten kolme numeroympyrää menisi
+     * päällekkäin (Petran, Mekan ja Singaporen oppi). Aukio kerrotaan
+     * moskeijan jutussa.
+     *
+     * PALVELUTIET PÄÄLLÄ, JA ERO ON MITATTU. Kartta piirrettiin ensin
+     * ilman lippua: aineistoa tuli 4 690 elementtiä, ja Vasemman
+     * rannan korttelit — juuri se osa kaupunkia, jota lehti kertoo —
+     * jäivät sisältä paperin värisiksi, koska hallintokortteleiden
+     * pihatiet ja pysäköintikadut ovat OSM:ssä service-teitä. Lipun
+     * kanssa elementtejä on 7 353 ja korttelit näkyvät kortteleina.
+     * Sama tilanne kuin Pekingissä, Medinassa ja Samarkandissa.
+     */
+    rajat: { pohjoinen: 51.152, etela: 51.1125, lansi: 71.394, ita: 71.482 },
+    palvelutiet: true,
+  },
 };
 
 /*

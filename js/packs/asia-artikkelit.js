@@ -134,6 +134,21 @@
 // Sisältölinjaus on sama kuin lehdessä: ei nykypolitiikkaa,
 // vuoden 2015 maanjäristys rakennusperinnön kautta. Teksti-kenttä
 // on ennallaan.
+//
+// ASTANA (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js). Jokainen introväite tulee saman erän
+// lehtiteksteistä, jotka on tarkistettu en-Wikipedian raakateksteistä
+// 21.8.2026. Vanha intro sanoi kahdella lauseella vain, että kaupunki
+// rakennettiin arolle 1997 alkaen ja että se on maailman toiseksi
+// kylmin pääkaupunki; uusi kertoo lisäksi sijainnin, joen jakaman
+// kaupungin, nimihistorian ja uuden keskustan akselin. Kazakstan-
+// linjaus: ei nykypolitiikkaa eikä presidenttikulttia, ja
+// pääkaupungin nimihistoria kerrotaan hallinnollisina käänteinä
+// (ks. kulttuuri-kategoriat.js:n astana-lohkon kommentti). Väkiluku
+// on muodossa "runsaat puolitoista miljoonaa", koska en-Wikipedia
+// antaa kaksi eri lukua kahdelta eri kuukaudelta. Teksti-kenttä on
+// ennallaan.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -1719,9 +1734,27 @@ export const ASIA_ARTIKKELIT = {
       + 'maailman pisimpiä.',
   },
   Astana: {
-    intro: 'Astana on Kazakstanin pääkaupunki, joka rakennettiin '
-      + 'lähes tyhjälle arolle vuodesta 1997 alkaen. Se on maailman '
-      + 'toiseksi kylmin pääkaupunki heti Ulaanbaatarin jälkeen.',
+    intro: 'Astana on Kazakstanin pääkaupunki ja maan toiseksi suurin '
+      + 'kaupunki: asukkaita on runsaat puolitoista miljoonaa. Se on '
+      + 'keskellä maata tasaisella puoliaroalueella 347 metrin '
+      + 'korkeudessa, ja **Esil-joki** — venäjäksi Ishim — jakaa sen '
+      + 'kahtia: pohjoispuolella ovat vanhemmat kaupunginosat, '
+      + 'eteläpuolella uusi hallintokeskus.'
+      + '\n\n'
+      + 'Kaupunki alkoi vuonna 1830 Akmolyn linnoituksesta aron '
+      + 'kauppareittien varrella, sai kaupunkioikeudet 1832 nimellä '
+      + 'Akmolinsk ja oli vuosina 1961–1991 Tselinograd, '
+      + 'Uudisviljelysten kaupunki. Nimi on vaihtunut kaikkiaan kuusi '
+      + 'kertaa, ja se on Guinnessin ennätys pääkaupunkien kesken.'
+      + '\n\n'
+      + 'Vuonna 1997 hallinto muutti tänne Almatysta, ja japanilaisen '
+      + '**Kisho Kurokawan** kaavan mukaan joen etelä- ja itäpuolelle '
+      + 'rakennettiin kokonaan uusi keskusta. Sen akseli on '
+      + 'Nurjol-bulevardi: läntisessä päässä Khan Shatyrin '
+      + 'telttarakennus, keskellä Bajterek-torni kultaisine palloineen '
+      + 'ja itäpäässä joen mutkassa Akorda. Talvi on ankara, sillä '
+      + 'Astana on maailman toiseksi kylmin pääkaupunki heti Ulan '
+      + 'Batorin jälkeen.',
     teksti: 'Astana on Kazakstanin pohjoisosassa Ishim-joen varrella '
       + 'keskellä aroa. Ympärillä ei ole vuoria eikä metsää, joten '
       + 'tuuli käy esteettä. Talvella pakkanen laskee alle '

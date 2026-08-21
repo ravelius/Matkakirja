@@ -1736,4 +1736,26 @@ export const SAATIEDOT = {
       + 'helmikuulle asti. Heinä–lokakuussa naapurimaiden '
       + 'metsäpalojen savusumu voi laskea näkyvyyttä.',
   },
+  /*
+   * ASTANAN RIVI PUUTTUU TÄSTÄ, JA SE ON TIETOINEN JÄTTÖ (21.8.2026).
+   * Kaupungille tehtiin samana päivänä alusta asti oma lehti
+   * (kulttuuri-kategoriat.js, maakartat.js, nahtavyysjutut.js), mutta
+   * Open-Meteon arkisto (ERA5) vastasi koko työn ajan 429:llä ja
+   * viestillä "Daily API request limit exceeded. Please try again
+   * tomorrow": kontin jaetun ulosmenevän osoitteen vuorokausikiintiö
+   * oli käytetty loppuun eikä se nollaudu ennen UTC-vuorokauden
+   * vaihdetta. Lukuja EI haettu muualta, koska vuosigraafin lähderivi
+   * lupaa lukijalle nimenomaan "Open-Meteo (ERA5), 1991–2020" — väärä
+   * lähdemerkintä on pahempi kuin puuttuva graafi, ja tämän tiedoston
+   * alkukommentin lupaus pitää: ilman riviä lehti näkyy ilman säätä.
+   *
+   * Rivi haetaan yhdellä ajolla, kun kiintiö on vapautunut:
+   *   NODE_USE_ENV_PROXY=1 node tools/hae-saanormaalit.mjs
+   * Mittauspiste on keskusta 51,13 / 71,43 (en-Wikipedian infoboksin
+   * koordinaatti 51°08′N 71°26′E), korkeus 347 metriä. Sama tilanne
+   * on Samarkandilla, Varanasilla, Xi'anilla ja Ulan Batorilla.
+   * Astanan lehden oppaan sääjakso ei riipu tästä rivistä: se on
+   * kirjoitettu en-Wikipedian oman sääruudun 1991–2020-normaaleista
+   * ja sanoo sen ääneen.
+   */
 };

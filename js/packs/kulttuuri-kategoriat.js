@@ -39767,4 +39767,566 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * ASTANA (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita, kohdekarttaa, juttuja eikä säätietoja ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian raakateksteistä
+   * (action=raw, haettu 21.8.2026): Astana, Baiterek (monument),
+   * Khan Shatyr Entertainment Center, Palace of Peace and
+   * Reconciliation, Ishim (river), Virgin Lands campaign, Akmola
+   * tragedy, Astana Opera, Nurjol Boulevard, Hazrat Sultan Mosque,
+   * Nursultan Mosque, Aqorda Residence, National Museum of the
+   * Republic of Kazakhstan, Astana-1 station, Astana-Nurly Zhol
+   * station, Issyk Golden Cataphract Warrior, Expo 2017 ja Baikonur
+   * Cosmodrome. Kansallismuseon koordinaatti on Wikidatasta
+   * (ks. maakartat.js:n astana-lohko).
+   *
+   * PÄÄARTIKKELI ON MERKITTY {{AI-generated}}-TUNNISTEELLA, ja se
+   * ohjasi koko työtä. en-Wikipedian "Astana" kantaa itse merkintöjä
+   * {{AI-generated|date=October 2025}} ja
+   * {{More citations needed|date=November 2025}}, eli yhteisö
+   * epäilee osan tekstistä olevan koneen kirjoittamaa ja
+   * puutteellisesti lähdetettyä. Käytäntö tässä lehdessä: jokainen
+   * pääartikkelista otettu luku on haettu myös kohteen omasta
+   * artikkelista, ja jos sellaista ei ole, luku on jätetty pois.
+   * Tarkistusraportti (docs/aasia-tyoaineisto/tarkistus-astana.md)
+   * löysi tästä yhden ison esimerkin, ja se on ratkaistu alla.
+   *
+   * SILLAN SORTUMA 1959 JÄTETTIIN KOKONAAN POIS. Faktapohja tarjosi
+   * sitä oppaan jaksoksi pääartikkelin luvuilla (2.8.1959, 143
+   * kuollutta, poliisi pelasti 40). Erillinen "Akmola tragedy"
+   * -artikkeli, jolla on omat arkistolähteensä, sanoo eri asian:
+   * onnettomuus tapahtui 14. kesäkuuta 1959, virallisesti kirjattiin
+   * vain kuusi kuollutta, koska tiedot salattiin, ja
+   * silminnäkijöiden arvio on noin 140; lukua 40 pelastetusta ei
+   * artikkelissa ole lainkaan. Kaksi lähdettä on siis ristiriidassa
+   * jokaisessa yksityiskohdassa, ja aihe on onnettomuus, jonka
+   * uhriluvusta ei ole varmuutta — sitä ei kirjoiteta lehteen
+   * arvaamalla. Oppaan neljäs jakso kertoo sen sijaan väestönkasvun,
+   * jonka luvut ovat väestönlaskennoista.
+   *
+   * NELJÄ MUUTA TARKISTUSRAPORTIN KORJAUSTA on tehty tässä:
+   * 1) H3: uudisviljelyskampanjaan tuli kesällä 1954 kolmesataatuhatta
+   *    komsomol-vapaaehtoista, ei "kymmeniä tuhansia".
+   * 2) H3: 1960-luvulla ei rakennettu oopperataloa. Astana-artikkeli
+   *    luettelee Uudisviljelysten palatsin, Nuorison palatsin,
+   *    Neuvostojen talon, lentokentän ja urheilupaikkoja; kaupungin
+   *    oopperatalot ovat vuosilta 2006 ja 2013.
+   * 3) H4: Unescon Rauhan kaupunki -mitali on 16. heinäkuuta 1999,
+   *    ei kesäkuulta.
+   * 4) Opas: jokea on padottu ja syvennetty vuodesta 1998, ei 2008.
+   *    Vuosi 2008 on eri asia — silloin alkoi veneliikenne joella —
+   *    ja molemmat kerrotaan jaksossa 3 erikseen.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat lehden tekstejä,
+   * on kirjoitettu auki lukijalle (v925/v932:n tapa):
+   * 1) KAUPUNGIN PINTA-ALA. Infoboksi sanoo 810,2 ja Topography-osio
+   *    722,0 neliökilometriä. Kumpikaan ei kanna omaa lähdettään;
+   *    molemmat luvut ovat oppaan jaksossa 2.
+   * 2) BOZOKIN IKÄ. Infoboksi sanoo 700-lukua ja History-osio
+   *    1200–1300-lukua. Molemmat ovat nostossa H1.
+   * 3) KHAN SHATYRIN PINTA-ALA (100 000 vs. 140 000 m²) ja RAUHAN JA
+   *    SOVINNON PALATSIN OOPPERASALIN PAIKKALUKU (1 300 vs. 1 500)
+   *    on kirjoitettu auki nahtavyysjutut.js:n astana-lohkossa.
+   * 4) ESILIN JÄÄTYMISKAUSI. Astana-artikkeli sanoo marraskuun
+   *    toisesta viikosta huhtikuun alkuun ja Ishim (river) -artikkeli
+   *    "late November until March". Käytetty Astana-artikkelin lukua,
+   *    koska se koskee nimenomaan kaupunkia; joki on 2 450 km pitkä ja
+   *    jäätyy eri aikaan eri kohdissa.
+   * 5) VÄKILUKU. Infoboksi sanoo 1 622 245 (1.11.2025) ja
+   *    Demographics-osio 1 528 703 (tammikuu 2025), kumpikin
+   *    tilastoviraston stat.gov.kz:n sivuille viitaten. Teksteissä
+   *    lukee "runsaat puolitoista miljoonaa", joka pitää molemmat
+   *    sisällään. Väestönlaskentojen sarja (1897–2021) on oma,
+   *    hyvin lähdetetty taulukkonsa, ja oppaan jakso 4 käyttää sitä.
+   * 6) KARAGANDAN JA OMSKIN ETÄISYYDET kantavat artikkelissa
+   *    {{citation needed}} -merkintää. Tarkistusraportti laski ne
+   *    itse haversine-kaavalla (189 ja 447 km), joten artikkelin
+   *    pyöristykset 200 ja 450 km ovat kunnossa ja ne on säilytetty.
+   *
+   * KEVYTRAIDELINJA ON TUOREIN JA HEIKOIMMIN LÄHDETETTY KOHTA, ja se
+   * on silti mukana. Astana-artikkelin LRT-osio on juuri sitä
+   * tuoreinta ainesta, josta tarkistusraportti varoittaa: linjan
+   * avaaminen 16.5.2026 nojaa yhteen ulkopuoliseen uutislähteeseen ja
+   * uudelleennimeäminen 2.7.2026 toiseen. Riippumaton vahvistus
+   * löytyi kuvasta: Wikimedia Commonsissa on 18. heinäkuuta 2026
+   * otettu valokuva valmiista, käytössä olevasta radasta, ja se on
+   * oppaan ensimmäisen jakson kuva. Jakso kertoo linjan pituuden,
+   * asemamäärän ja päätepisteet mutta ei sen nykyistä nimeä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje: EI NYKYPOLITIIKKAA JA EI
+   * PRESIDENTTIKULTTIA. Pääkaupungin nimihistoria Akmolinsk →
+   * Tselinograd → Akmola → Astana → Nur-Sultan → Astana kerrotaan
+   * hallinnollisina käänteinä ja päätöksinä, ei henkilön ympärille
+   * rakennettuna kertomuksena. POIS JÄTETTY KOKONAAN: Bajterekin
+   * näköalatasanteen kultainen kämmenjälki ja toivomusrituaali,
+   * tornin hankkeen synty presidentin muistelmien mukaan, Astana
+   * Operan ja Khan Shatyrin kohdalta presidentin määräys, luonnos ja
+   * syntymäpäiväavajaiset, Suuren moskeijan nimeäminen presidentin
+   * mukaan heinäkuussa 2026, lentoaseman virallinen nimi, vuoden 2022
+   * levottomuudet nimenmuutoksen taustalla sekä Akordan artikkelin
+   * galleriakuva valtiovierailun kunniavartiosta. Uudisviljelysten
+   * kampanja on neutraalia neuvostohistoriaa samalla periaatteella
+   * kuin Venäjän kaupungeissa. Uskonto on historiallis-kulttuurinen
+   * ilmiö: moskeija on arkkitehtuuria ja nimensä historiaa, ja
+   * pyramidi on kongressitalo ja rakennetekniikkaa.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Kazakstan (johdanto ja
+   * asia-artikkelit.js:n intro), Baikonurin kosmodromi (oppaan jakso
+   * 2, jossa Baykonyrin kaupunginosan nimen rinnalla kerrotaan
+   * avaruuskeskuksesta), aro (johdanto, K3, oppaan jakso 2),
+   * pääkaupungiksi 1997 (K1, H4, intro) sekä kazakki ja venäjä
+   * (H2:n nimihistoria, jossa Aqmola käännetään kazakista ja
+   * Tselinograd venäjästä). Historia-sivun
+   * minitehtävä kysyy nimenmuutosten määrää, jota visa ei kysy, ja
+   * vastaus on samalla sivulla nostossa H2.
+   *
+   * AIHETOISTO, JOKA ON TIETOINEN (Mekan Jabal al-Nourin ja Xi'anin
+   * terrakotta-armeijan ennakkotapaus): Bajterekistä on kaksi kuvaa
+   * eri etäisyydeltä — kansikuvassa valaistu torni bulevardin päässä
+   * ja K1-nostossa sama torni yökuvassa koko keskustan yllä. Tornin
+   * näköalatasanteelta otettuja kuvia on kolme, ja jokainen katsoo eri
+   * suuntaan: K2 länteen Khan Shatyrin telttaan, bulevardin juttu itään
+   * Akordaan ja tornin oma juttu tasanteen kaiteeseen ja ikkunaan.
+   * Esilistä on neljä kuvaa, ja jokainen kertoo eri asian:
+   * kansikuvassa padottu
+   * ranta, K3:ssa jäätynyt joki kulkureittinä, K4:ssä kaarisilta ja
+   * oppaan jaksossa 3 poljinveneet. Aro on kahdesti: avauskuvan
+   * hevoslaidun ja oppaan jakson 2 tyhjä horisontti.
+   *
+   * YKSI KUVA JOUDUTTIIN VAIHTAMAAN NIMITÖRMÄYKSEN TAKIA. Khan
+   * Shatyrin nostossa oli ensin Bernard Gagnonin CC0-kuva
+   * "Nurjol Boulevard, Astana.jpg", mutta sen peilipolku
+   * (kuvat/nurjol-boulevard-astana.jpg) on sama kuin jo käytössä
+   * olevan "Nurjol Boulevard Astana.jpg" -tiedoston
+   * (asia-valokuvat.js), eli ämpärissä toinen menisi toisen päälle.
+   * tests/media.test.mjs nappasi tämän. Tilalle vaihdettiin sama
+   * näkymä Bajterekin ikkunasta.
+   *
+   * KUVAT: kaikki Commonsista, lisenssi ja Restrictions tarkistettu
+   * rajapinnasta (extmetadata), leveys aina vähintään 1 200 px.
+   * HYLÄTTYJÄ, joiden hylkäysperuste kannattaa tietää ennen kuin
+   * niitä ehdottaa uudelleen: "Khan-Shatyr shopping mall.jpg" ja
+   * "Astana DSC04115" (tunnistettavat kasvot etualalla),
+   * "Reconstruction of the appearance of Golden Man.jpg"
+   * (vitriinilasissa näkyy kuvaajan takana seisovan ihmisen kasvot),
+   * "Kazakhstan P9130229" (rukoushetki ihmisineen), Khan Shatyrin ja
+   * Astana DSC04278/04328:n sisäkuvat (täynnä liikemainoksia),
+   * "Тюльпан (1).jpg" (sotilasparaati), "Frozen Capital" (kuva on
+   * Ottawasta eikä Astanasta) ja "Fall Harvest in Kazakhstan"
+   * (satelliittikuva on maan eteläosan vuoristosta, ei pohjoisen
+   * aroista). Historiallista Akmolinskia EI ole yhdessäkään kuvassa:
+   * Commonsin "History of Astana" -kategoriassa on kolme vanhaa kuvaa
+   * linnoituksesta ja sen kartasta, mutta kaikki ovat alle 700 px
+   * leveitä. Sen tilalla historia-sivulla on vuoden 1796 venäläinen
+   * atlaskartta aroista ja säilynyt 1800-luvun tiilinen kauppiastalo.
+   *
+   * SÄÄRIVI PUUTTUU js/packs/saatiedot.js:stä, ja se on tietoinen
+   * jättö eikä unohdus — sama tilanne kuin Samarkandissa, Varanasissa
+   * ja Ulan Batorissa. Open-Meteon arkisto (ERA5) vastasi koko työn
+   * ajan 429:llä ja viestillä "Daily API request limit exceeded.
+   * Please try again tomorrow". Lukuja ei keksitä muusta lähteestä,
+   * koska vuosigraafin lähderivi lupaa nimenomaan ERA5:n. Oppaan
+   * jakso 5 nojaa siksi en-Wikipedian oman sääruudun
+   * 1991–2020-normaaleihin (lähteinä pogodaiklimat.ru sekä
+   * auringonpaisteessa NOAA ja DWD 1961–1990), ja se on sanottu
+   * jaksossa ääneen. Kun ERA5-rivi lisätään, jakso 5 kirjoitetaan
+   * rivin omista luvuista.
+   *
+   * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
+   */
+  astana: [
+    {
+      id: 'kaupunki',
+      nimi: 'Astana',
+      johdanto: 'Kazakstanin pääkaupunki nousee tasaiselta arolta Esil-joen '
+        + 'molemmin puolin. Melkein kaikki siitä on rakennettu sen '
+        + 'jälkeen, kun hallinto muutti tänne vuonna 1997.',
+      kansikuvat: [
+        {
+          tiedosto: 'Вид на Бульвар Нуржол.jpg',
+          selite: 'Nurjol-bulevardin kaksi kullanväristä tornia kehystävät '
+            + 'iltahämärässä valaistua Bajterekiä.',
+          lahde: 'Шалкер Гам, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Nur-Sultan - 190217 DSC 3461.jpg',
+          selite: 'Akorda seisoo sinikupolisena lumisen aukion perällä, ja '
+            + 'sen takana kaupunki häviää pakkassumuun.',
+          lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Astana-Ishim-River-embankment-7797.jpg',
+          selite: 'Padottu Esil kaartaa kivetyn rantamuurin ohi, ja '
+            + 'iltavalossa hehkuvat asuintalot heijastuvat veteen.',
+          lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: bulevardi, aukio ja aro — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo (uusi
+       * hallintoakseli, joen toisen puolen aukio, ja se maisema,
+       * jolle kaikki rakennettiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Another view of Downtown Astana (6245921591).jpg',
+          selite: 'Bulevardin kukkapenkkien takaa avautuu suora näkymä '
+            + 'kahden kultatornin välistä Akordan siniselle kupolille.',
+          lahde: 'Ken and Nyetta, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Kazakhstan P9130207 (28302919819).jpg',
+          selite: 'Rakentamattoman rinteen takana nousevat vasemmalta '
+            + 'lukien moskeijan minareetit, lasipyramidi ja kultainen '
+            + 'Samruk-lintu pylväänsä päässä.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Horses in Ishim basin near Novoishimskoye.jpg',
+          selite: 'Kaksi hevosta laiduntaa Esilin altaan aroniityllä, jonka '
+            + 'takana ei näy muuta kuin horisontti.',
+          lahde: 'TheGreatSteppeWiki, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Puu, jonka oksissa on kultainen muna',
+          tiedosto: 'Night at Esil District, Astana (P1190721).jpg',
+          teksti: 'Kaupungin tunnus on Bajterek, 105 metriä korkea torni '
+            + 'Nurjol-bulevardin varrella. Se on kansantarun kuva. '
+            + 'Tarussa kasvaa elämänpuu, jonka kahden oksan väliseen '
+            + 'koloon taruolento Samruk munii kultaisen munansa; '
+            + 'tornissa puu on valkoinen ristikkorunko ja muna sen '
+            + 'varassa lepäävä kultapeilipallo, joka on 22 metriä leveä. '
+            + 'Myös näköalatasanteen korkeus on valittu tarkoituksella. '
+            + 'Se on 97 metriä, ja vuonna 1997 pääkaupunki siirtyi '
+            + 'Almatysta tänne — torni pystytettiin juuri sen muistoksi.',
+          selite: 'Yön yli katsottuna Bajterek on ainoa valaistu esine '
+            + 'keskustan siluetissa, ja sen alla kaartuu autojen '
+            + 'valojuova.',
+          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Baiterek (monument)',
+        },
+        {
+          otsikko: 'Maailman suurin teltta',
+          tiedosto: 'Kazakhstan P9130285 (39187641645).jpg',
+          teksti: 'Saman bulevardin läntisessä päässä seisoo Khan Shatyr, '
+            + 'jonka '
+            + 'nimi tarkoittaa kaanin telttaa. Muoto on tarkoitettu '
+            + 'muistuttamaan arojen paimentolaisvaltakuntien perinnettä, '
+            + 'ja sen piirsi brittiläinen Norman Fosterin toimisto; talo '
+            + 'avattiin heinäkuussa 2010. Kate nousee 90 metrin '
+            + 'korkeuteen ja huippu mastoineen 150 metriin, ja pohja on '
+            + 'ellipsi, jonka mitat ovat 200 × 195 metriä. Kankaan alle '
+            + 'ei rakennettu hallia vaan kaupunki: yli kymmenen '
+            + 'jalkapallokentän verran puistoa, mukulakivikatuja, '
+            + 'aukioita, kauppoja, minigolf ja sisäranta hiekkoineen.',
+          selite: 'Bajterekin ikkunasta katsottuna bulevardi päättyy '
+            + 'Khan Shatyrin valkoiseen telttaan, jonka takana alkaa '
+            + 'tyhjä aro.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Khan Shatyr Entertainment Center',
+        },
+        {
+          otsikko: 'Toiseksi kylmin pääkaupunki',
+          tiedosto: 'Sunny January Day on Astana\'s Ishim River (6658586715).jpg',
+          teksti: 'Astana on maailman toiseksi kylmin pääkaupunki heti Ulan '
+            + 'Batorin jälkeen. Asema kuului aiemmin Kanadan Ottawalle ja '
+            + 'siirtyi tänne, kun kaupungista tuli pääkaupunki 1997. '
+            + 'Tammikuun keskilämpötila on 14,5 pakkasastetta, ja '
+            + 'joulukuun puolivälistä maaliskuun alkuun 30–35 '
+            + 'pakkasastetta on tavallista; kylmin koskaan mitattu lukema '
+            + 'on 51,6 pakkasastetta tammikuulta 1893. Kesällä lämpötila '
+            + 'voi nousta 35 asteeseen. Kaupunki tunnetaan myös '
+            + 'tuulisuudestaan, joka tuntuu erityisesti avoimella '
+            + 'Vasemmalla rannalla.',
+          selite: 'Jäätynyt Esil on tammikuussa tasainen lumikenttä, jonka '
+            + 'yli kävellään, ja rannan puut ovat paksussa huurteessa.',
+          lahde: 'Ken and Nyetta, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Astana',
+        },
+        {
+          otsikko: 'Joki, joka jakaa kaupungin kahtia',
+          tiedosto: 'Ishim River, Astana.jpg',
+          teksti: 'Esil-joki, venäjäksi Ishim, jakaa kaupungin: '
+            + 'pohjoispuolella ovat vanhemmat kaupunginosat, '
+            + 'eteläpuolella uusi hallintokeskus. Huhtikuussa 1998 '
+            + 'hallitus kutsui kansainväliset arkkitehdit kilpailemaan '
+            + 'uuden pääkaupungin kaavasta, ja 6. lokakuuta voiton vei '
+            + 'japanilainen Kisho Kurokawa. Hänen periaatteensa oli '
+            + 'historian ja tulevaisuuden symbioosi: vanha kaupunki '
+            + 'säilytettäisiin ja kunnostettaisiin, ja uusi nousisi joen '
+            + 'etelä- ja itäpuolelle. Niin kävi, ja siksi rannat ovat '
+            + 'nyt kahta eri vuosisataa.',
+          selite: 'Kaarisilta ylittää Esilin keskustassa, ja molemmilla '
+            + 'rannoilla nousee uusia asuintorneja aivan veden ääreen.',
+          lahde: 'Nikolamikovic82, Wikimedia Commons (CC0)',
+          wiki: 'Ishim (river)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kazakhstan P9130255 (39373641624).jpg',
+          selite: 'Pronssinen ratsastaja pitää kädessään tankoa, jonka '
+            + 'päässä istuu metsästyslintu, ja hänen takanaan kohoavat '
+            + 'Kazak Elin pylväs ja moskeijan minareetit.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Astana on Kazakstanin pääkaupunki ja maan toiseksi suurin '
+          + 'kaupunki; asukkaita on runsaat puolitoista miljoonaa. '
+          + 'Matkailijan Astana on kapea kaistale Esil-joen molemmin '
+          + 'puolin. Lounaisrannalla kulkee Nurjol-bulevardi Khan '
+          + 'Shatyrista Akordaan, ja koillisrannalla ovat Rauhan ja '
+          + 'sovinnon palatsi, Hazrat Sultanin moskeija ja '
+          + 'kansallismuseo; kaikki tämä mahtuu viiden kilometrin '
+          + 'matkalle. Vanhempi kaupunki jää pohjoiseen radan suuntaan, '
+          + 'ja sen takana alkaa aro.',
+        artikkeli: {
+          nimi: 'Matkailijan Astana',
+          taitto: 'opas',
+          teksti: 'Yksi bulevardi, yksi joki ja tasainen aro joka '
+            + 'suuntaan — pääkaupunki, joka on nuorempi kuin moni sen '
+            + 'asukas.',
+          nosto: 'Ilman patoa Esil olisi keskustassa niin matala, että sen '
+            + 'yli voisi kävellä. Vettä pumpataan lisää Irtyš-joesta '
+            + 'Irtyš–Karaganda-kanavaa ja putkea pitkin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Isoisän aikaan tänne ei tullut rautatietä. Vuonna '
+                + '1879 kenraalimajuri Dubelt ehdotti Venäjän '
+                + 'liikenneministeriölle rataa Tjumenistä Akmolinskiin — '
+                + 'kuusi vuotta isoisän matkan jälkeen. Nykyinen '
+                + 'kansainvälinen lentoasema on noin seitsemäntoista '
+                + 'kilometriä kaakkoon keskustasta ja maan toiseksi '
+                + 'vilkkain: vuonna 2024 sen kautta kulki 8,3 miljoonaa '
+                + 'matkustajaa ja siltä liikennöi 21 lentoyhtiötä. Junat '
+                + 'tulevat kahdelle asemalle. Vanha Astanan asema on '
+                + 'pohjoisessa ja palvelee noin 7 000 matkustajaa '
+                + 'päivässä; Nurly Zhol rakennettiin Expo 2017 '
+                + '-maailmannäyttelyä varten kaakkoon, ja siihen mahtuu '
+                + '12 000. Almatyyn menee päivittäin Tulpar Talgo '
+                + '-pikajuna. Kaupungin sisällä liikutaan busseilla: '
+                + 'linjoja on yli kuusikymmentä ja autoja yli tuhat, ja '
+                + 'joukkoliikenteessä kulkee yli 720 000 matkustajaa '
+                + 'päivässä; jaetuilla takseilla on kolme omaa '
+                + 'vakioreittiä. Toukokuussa 2026 avattiin korkealla '
+                + 'kulkeva kevytraidelinja, joka yhdistää Nurly Zholin '
+                + 'aseman lentokentälle: 22,4 kilometriä ja 18 asemaa.',
+              kuva: {
+                tiedosto: 'Astana light metro (2026-07-18) - 4.jpg',
+                selite: 'Kevytraidelinjan betoniviadukti kulkee kaupungin '
+                  + 'yli suorana, ja vasemmalla erottuu lasipyramidin '
+                  + 'kärki puiden takana.',
+                lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Astana on keskisessä Kazakstanissa hyvin tasaisella '
+                + 'puoliaroalueella Esil-joen varrella, 347 metrin '
+                + 'korkeudessa. Kaupunki jakautuu neljään piiriin: '
+                + 'Almaty, Yesil, Saryarka ja Baykonyr. Yesiliä '
+                + 'kutsutaan myös Vasemmaksi rannaksi, ja se erotettiin '
+                + 'omaksi piirikseen vasta elokuussa 2008 — se on siis '
+                + 'nuorempi kuin useimmat siellä seisovat talot. '
+                + 'Baykonyr taas kantaa samaa nimeä kuin Baikonurin '
+                + 'kosmodromi, aroilla parisataa kilometriä Aral-järven '
+                + 'itäpuolella sijaitseva avaruuskeskus, josta Sputnik '
+                + 'ja ensimmäinen ihminen lähtivät avaruuteen. '
+                + 'Kaupungin pinta-alasta Wikipedia antaa kaksi lukua, '
+                + 'leipätekstin 722 ja infoboksin 810 neliökilometriä; '
+                + 'kumpikaan ei kanna omaa lähdettään, ja ero saattaa '
+                + 'johtua hallinnollisten rajojen laajentamisesta. '
+                + 'Lähimmät suuret kaupungit ovat Karaganda noin '
+                + 'kahdensadan ja Venäjän Omsk noin '
+                + 'neljänsadanviidenkymmenen kilometrin päässä; '
+                + 'Almatyyn, entiseen pääkaupunkiin, on lähes tuhat '
+                + 'kilometriä. Vuoria tai metsää ei ole missään päin, '
+                + 'ja se näkyy tuulessa.',
+              kuva: {
+                tiedosto: 'Astana-steppe-7748.jpg',
+                selite: 'Kaupungin laidalla aro jatkuu tasaisena '
+                  + 'ruoholakeutena horisonttiin asti ilman ainuttakaan '
+                  + 'puuta.',
+                lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: joki jään alla ja jään päällä',
+              teksti: 'Esil jäätyy marraskuun toisella viikolla ja pysyy '
+                + 'jäässä huhtikuun alkuun. Silloin joesta tulee '
+                + 'kulkureitti ja jään yli kävellään rannalta toiselle. '
+                + 'Kesällä samalla kohdalla vuokrataan poljinveneitä, ja '
+                + 'kaupunginpuiston kohdalla on uimaranta. Mikään tästä '
+                + 'ei ole luonnontilaa. Vuodesta 1998 jokea on padottu '
+                + 'keskustan alapuolelta ja perattu syvemmäksi: pato '
+                + 'pitää pinnan korkealla ja syvennetty uoma päästää '
+                + 'tulvavedet nopeasti ohi. Vuodesta 2008 kaupunki on '
+                + 'järjestänyt joella veneliikennettä, ja suunnitelmissa '
+                + 'on syventää 22 kilometrin osuus niin, että pienet '
+                + 'matkustajaveneet pääsevät kulkemaan keskustan halki. '
+                + 'Ylävirtaan on kaavailtu toista patoa tulvien varalle.',
+              kuva: {
+                tiedosto: 'Astana-Ishim-pedalos-7808.jpg',
+                selite: 'Kaksi poljinvenettä liikkuu tyynellä joella '
+                  + 'iltavalossa, ja rannan tornitalot heijastuvat '
+                  + 'pintaan koko leveydeltä.',
+                lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: väkiluku satakertaistui',
+              teksti: 'Vuoden 1897 väenlaskennassa Akmolinskissa oli 9 688 '
+                + 'asukasta. Vuonna 1939 heitä oli 33 209 ja vuonna 1959 '
+                + 'jo 102 276 — kasvu osuu uudisviljelyskampanjan '
+                + 'vuosiin. Vuonna 1989 kaupungissa oli 277 365 asukasta '
+                + 'ja vuonna 1999, kaksi vuotta pääkaupungiksi tulon '
+                + 'jälkeen, 312 965. Sitten mittakaava vaihtui: vuoden '
+                + '2009 laskennassa oli 613 006 ja vuoden 2021 '
+                + 'laskennassa 1 234 042 asukasta. Nyt heitä on runsaat '
+                + 'puolitoista miljoonaa, eli reilussa sadassa vuodessa '
+                + 'väkiluku on yli satakertaistunut. Kasvu näkyy '
+                + 'katukuvassa ympäri vuoden: nosturi on Astanan '
+                + 'tavallisin maamerkki, ja kokonaisia kaupunginosia on '
+                + 'noussut tyhjälle arolle parissa vuosikymmenessä.',
+              kuva: {
+                tiedosto: 'Nur-Sultan - 190217 DSC 3715.jpg',
+                selite: 'Talvisen työmaa-aidan takaa nousee valmis '
+                  + 'kerrostalorivi, ja aidan edessä seisoo kaksi '
+                  + 'betonipilaria vailla siltaa.',
+                lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Ilmasto on äärimmäisen mannermainen, Köppenin '
+                + 'luokituksessa Dfb: pitkä, kuiva ja hyvin kylmä talvi '
+                + 'ja lyhyt, lämmin kesä. Kaupungin oman sääruudun '
+                + 'mukaan (normaalikausi 1991–2020) vuoden keskilämpö on '
+                + '3,9 astetta. Tammikuussa keskilämpö on 14,5 '
+                + 'pakkasastetta ja päivien keskiylin 10,3 '
+                + 'pakkasastetta; heinäkuussa vastaavat luvut ovat 20,6 '
+                + 'ja 26,6 astetta. Sadetta tulee vuodessa vain 337 '
+                + 'millimetriä, ja se painottuu kesään: heinäkuussa 56 '
+                + 'ja helmikuussa 17 millimetriä. Sadepäiviä on koko '
+                + 'vuonna 72. Aurinkoisimmat kuukaudet ovat kesä- ja '
+                + 'heinäkuu, jolloin aurinko paistaa 336 tuntia, '
+                + 'pimeimmät marras- ja joulukuu 100 ja 94 tunnilla. '
+                + 'Kävelijän kuukaudet ovat siis touko-, kesä- ja '
+                + 'syyskuu. Mittausten ääripäät ovat 41,6 lämpöastetta '
+                + 'heinäkuussa ja 51,6 pakkasastetta tammikuussa 1893.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ennen lasitorneja täällä oli vuonna 1830 perustettu '
+        + 'linnoitus aron kauppareittien risteyksessä. Kaupunki on '
+        + 'vaihtanut nimeään sen jälkeen kuusi kertaa.',
+      tehtava: {
+        kysymys: 'Kuinka monta kertaa kaupungin nimi on vaihtunut vuoden '
+          + '1830 jälkeen?',
+        vaihtoehdot: [
+          'Kaksi kertaa',
+          'Neljä kertaa',
+          'Kuusi kertaa',
+          'Kaksitoista kertaa',
+        ],
+        oikea: 2,
+        fakta: 'Vuodesta 2022 Astanalla on Guinnessin ennätys '
+          + 'pääkaupungista, joka on vaihtanut nimeään useimmin '
+          + 'nykyaikana.',
+      },
+      nostot: [
+        {
+          otsikko: 'Linnoitus aron kauppareitin varrella',
+          tiedosto: 'Map of Kazakh Steppe 1796 (small atlas).jpg',
+          teksti: 'Samalla seudulla oli jo ennen kaupunkia Bozok, aron '
+            + 'silkkitiehaaran linnoitettu asutus; sen iästä Wikipedia '
+            + 'antaa kaksi lukua, infoboksin 700-luvun ja leipätekstin '
+            + '1200–1300-luvun. Nykyinen kaupunki syntyi 18. kesäkuuta '
+            + '1830, kun Fjodor Šubin perusti Esil-joen varrelle '
+            + 'Akmolyn siirtokunnan piirikunnan keskukseksi. Vuonna 1832 '
+            + 'se sai kaupunkioikeudet ja nimen Akmolinsk. '
+            + 'Kenesary-kaanin johtaman vapautusliikkeen aikana '
+            + 'linnoitus poltettiin 1838, mutta se rakennettiin '
+            + 'uudelleen, ja 16. heinäkuuta 1863 Akmolinskista tuli '
+            + 'virallisesti ujesdikaupunki.',
+          selite: 'Vuoden 1796 venäläisessä atlaskartassa aro on väritetty '
+            + 'vihreäksi, ja sen laidoille on merkitty Omsk, Semipalatinsk '
+            + 'ja Aral-järvi.',
+          lahde: 'publisher:Sytin\'s print shop, Wikimedia Commons (PD)',
+          wiki: 'Astana',
+        },
+        {
+          otsikko: 'Kaupunki, jolla on kuusi nimeä',
+          tiedosto: 'Старинный купеческий дом в Астане (52449744452).jpg',
+          teksti: 'Aqmola tarkoittaa kazakiksi valkoista hautaa, joskaan '
+            + 'tulkinta ei ole yksimielinen. Nimi vaihtui 1832 '
+            + 'Akmolinskiksi, 1961 Nikita Hruštšovin aloitteesta '
+            + 'Tselinogradiksi — se on venäjää ja tarkoittaa '
+            + 'Uudisviljelysten kaupunkia — ja '
+            + 'itsenäistymisen jälkeen 1991 takaisin Akmolaksi, '
+            + 'toukokuussa 1998 Astanaksi eli pääkaupungiksi, '
+            + 'maaliskuussa 2019 Nur-Sultaniksi ja syyskuussa 2022 '
+            + 'jälleen Astanaksi. Kuusi muutosta riitti ennätykseen: '
+            + 'vuodesta 2022 Astanalla on Guinnessin ennätys '
+            + 'pääkaupungista, joka on vaihtanut nimeään useimmin '
+            + 'nykyaikana.',
+          selite: 'Kaksikerroksinen punatiilinen kauppiastalo koristeltuine '
+            + 'ikkunakaarineen seisoo yhä keskustan kadunkulmassa.',
+          lahde: 'Alexander Yampolsky from Ekaterinburg, Russia, '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Astana',
+        },
+        {
+          otsikko: 'Uudisviljelysten kaupunki',
+          tiedosto: 'Nur-Sultan - 190217 DSC 3849.jpg',
+          teksti: 'Vuonna 1954 Neuvostoliitto määräsi Pohjois-Kazakstanin '
+            + 'arot uudeksi viljavyöhykkeeksi. Pelkästään kesällä 1954 '
+            + 'sinne matkusti 300 000 komsomol-vapaaehtoista kyntämään '
+            + 'maata, ja Akmolinskin väkiluku ja kokoonpano muuttuivat '
+            + 'pysyvästi. Joulukuussa 1960 kaupungista tehtiin uuden '
+            + 'Tselinnyi-aluepiirin keskus, ja maaliskuussa 1961 '
+            + 'Hruštšov ehdotti sille kampanjan mukaista nimeä: '
+            + 'Akmolinskista tuli Tselinograd. Sitten rakennettiin. '
+            + 'Vuonna 1963 aloitettiin kolme ensimmäistä '
+            + 'kerrostaloaluetta, ja niiden rinnalle nousivat '
+            + 'Uudisviljelysten palatsi, Nuorison palatsi, Neuvostojen '
+            + 'talo, uusi lentokenttä ja urheilupaikkoja.',
+          selite: 'Vanhemman puolen matala asuintalo on maalattu '
+            + 'kirkkaansiniseksi, ja sen seinälle on ripustettu rivi '
+            + 'kehystettyjä tauluja.',
+          lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Virgin Lands campaign',
+        },
+        {
+          otsikko: 'Pääkaupunki siirtyy arolle',
+          tiedosto: 'Astana-construction-7788.jpg',
+          teksti: 'Kazakstanin ylin neuvosto päätti 6. heinäkuuta 1994 '
+            + 'siirtää pääkaupungin. Muutto Almatysta Akmolaan tehtiin '
+            + '10. joulukuuta 1997, toukokuussa 1998 kaupunki sai nimen '
+            + 'Astana, ja 10. kesäkuuta 1998 se esiteltiin uutena '
+            + 'pääkaupunkina kansainvälisesti. Valinnan perusteluina '
+            + 'mainitaan keskeinen sijainti, tilaa laajentua, läheisyys '
+            + 'alueen talouskeskuksiin, hyvät liikenneyhteydet ja '
+            + 'verrattain suotuisa ilmasto; entiseen pääkaupunkiin on '
+            + 'täältä lähes tuhat kilometriä. Unesco myönsi Astanalle '
+            + '16. heinäkuuta 1999 Rauhan kaupungin mitalin ja '
+            + 'arvonimen.',
+          selite: 'Kaivinkoneet ja pinotut betoniteräsniput täyttävät '
+            + 'keskeneräisen kadun, jonka takana seisoo juuri valmistunut '
+            + 'kerrostalorivi.',
+          lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Astana',
+        },
+      ],
+    },
+  ],
 };

@@ -24760,4 +24760,318 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * ASTANAN KOHDEKARTAN JUTUT (Opus 21.8.2026). Kahdeksan kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään; kaikki
+   * ovat päärajauksen sisällä, kainaloa ei ole. Faktat on tarkistettu
+   * en-Wikipedian raakateksteistä (action=raw, haettu 21.8.2026):
+   * Astana, Astana Opera, Khan Shatyr Entertainment Center, Baiterek
+   * (monument), Nurjol Boulevard, Aqorda Residence (jonne "Akorda"
+   * ohjaa), Hazrat Sultan Mosque, Palace of Peace and Reconciliation
+   * ja National Museum of the Republic of Kazakhstan.
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA on kirjoitettu auki
+   * lukijalle (v925/v932:n tapa):
+   * 1) Khan Shatyrin pinta-ala on infoboksissa 100 000 ja
+   *    leipätekstissä 140 000 neliömetriä;
+   * 2) Rauhan ja sovinnon palatsin oopperasalin paikkaluku on sen
+   *    omassa artikkelissa 1 300 ja Astana Operan artikkelissa 1 500;
+   * 3) Bozokin ikä on Astana-artikkelin infoboksissa 700-luku ja
+   *    leipätekstissä 1200–1300-luku (kerrottu lehden historia-sivun
+   *    nostossa, ei näissä jutuissa).
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje: ei nykypolitiikkaa eikä
+   * presidenttikulttia. Rakennusten historiat kerrotaan
+   * arkkitehtuurina ja tilaajina, ei henkilökuvina. POIS JÄTETTY
+   * KOKONAAN: Bajterekin näköalatasanteen kultainen kämmenjälki ja
+   * siihen liittyvä toivomusrituaali, tornin hankkeen synty
+   * presidentin muistelmien mukaan (myös hylätyt kilpailevat
+   * ehdotukset ja niiden hinnat, koska koko kohta nojaa muistelmiin),
+   * Astana Operan ja Khan Shatyrin kohdalta maininnat presidentin
+   * määräyksestä, luonnoksesta ja avajaispäivästä sekä Akordan
+   * artikkelin galleriakuva valtiovierailun kunniavartiosta.
+   * Akorda kerrotaan sillä nimellä ja siinä tehtävässä, jonka
+   * en-Wikipedia sille antaa: presidentin työpaikka, ei asunto.
+   *
+   * PYHIEN PAIKKOJEN SÄVY on sama kuin Medinassa, Mekassa ja
+   * Jerusalemissa: moskeija kerrotaan rakennuksena, mittoina ja
+   * nimensä historiana, ei hartauskielellä.
+   */
+  astana: {
+    'Astana Opera': {
+      aika: '2010–2013',
+      teksti: 'Oopperatalo nousi Vasemmalle rannalle yhdeksän hehtaarin '
+          + 'tontille. Rakentaminen alkoi 6. heinäkuuta 2010, ja talo '
+          + 'avattiin vuonna 2013 kazakstanilaisella oopperalla Birzhan '
+          + 'ja Sara. Suunnittelusta vastasi italialainen '
+          + 'arkkitehtitoimisto ABDR ja rakentamisesta Mabetex-yhtiö. '
+          + 'Harjakorkeus on 32 metriä ja kerrosala 64 163 neliömetriä; '
+          + 'pelkkää näyttämöalaa on 3 000 neliömetriä.'
+          + '\n\n'
+          + 'Saleja on kaksi. Pääsalissa on 1 250 paikkaa ja '
+          + 'orkesterisyvennys, johon mahtuu 120 soittajaa; '
+          + 'kamarimusiikkisalissa on 250 paikkaa. Aulassa riippuu '
+          + 'kolmentoista metrin korkeudessa kruunu, joka painaa 1,6 '
+          + 'tonnia. Akustiikan suunnittelivat italialaiset Enrico '
+          + 'Moretti ja Maria Cairoli.'
+          + '\n\n'
+          + 'Julkisivu on antiikin kreikkalaisen temppelin muotoinen: '
+          + 'korkea pylväikkö, päätykolmio ja sen harjalla '
+          + 'nelivaljakko. Koristelu on kuitenkin kazakstanilaista — '
+          + 'päätykolmion kenttä on täynnä perinteistä ornamenttia, ja '
+          + 'sisällä on freskoja Sharynin kanjonista ja Burabaista. '
+          + 'Ohjelmistossa ovat sekä La traviata, Tosca ja '
+          + 'Pähkinänsärkijä että kotimaiset oopperat Abai ja Birzhan '
+          + 'ja Sara.',
+      kuvat: [
+        {
+          tiedosto: 'The State Opera and Ballet Theatre “Astana Opera”.jpg',
+          selite: 'Oopperatalon pylväsjulkisivu nousee nurmikumpareen '
+            + 'takaa, ja päätykolmion harjalla ajaa pronssinen '
+            + 'nelivaljakko.',
+          lahde: 'Nikolamikovic82, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Khan Shatyr': {
+      aika: '2006–2010',
+      teksti: 'Rakennuksen suunnitteli Foster and Partners ja rakenteet '
+          + 'insinööritoimisto Buro Happold; työn teki turkkilainen '
+          + 'Sembol, ja hinnaksi kerrotaan 400 miljoonaa dollaria. '
+          + 'Työmaa alkoi joulukuussa 2006, keskusmasto pystytettiin '
+          + 'joulukuussa 2008 ja talo avattiin 5. heinäkuuta 2010. '
+          + 'Pinta-alasta Wikipedia antaa kaksi lukua, infoboksin '
+          + '100 000 ja leipätekstin 140 000 neliömetriä.'
+          + '\n\n'
+          + 'Katteena ei ole lasi vaan ETFE-kalvotyynyt, jotka riippuvat '
+          + 'keskusmastosta lähtevässä vaijeriverkossa. Kalvo päästää '
+          + 'auringonvalon läpi, ja sen ansiosta katon alla kasvaa '
+          + 'puita. Sisälämpötila pidetään pääosassa 15 ja 30 asteen '
+          + 'välillä ja myymälöissä 19 ja 24 asteen välillä, vaikka '
+          + 'ulkoilma vaihtelee vuoden mittaan 35 pakkasasteesta 35 '
+          + 'lämpöasteeseen. Osan työstä tekee hormivaikutus: lämmin '
+          + 'ilma nousee itsestään kohti huippua.'
+          + '\n\n'
+          + 'Tämä oli Norman Fosterin toimiston toinen suuri työ '
+          + 'kaupungissa; ensimmäinen oli neljä vuotta aiemmin '
+          + 'valmistunut lasipyramidi. Rakennusta on kutsuttu maailman '
+          + 'korkeimmaksi vetorasitukselle rakennetuksi '
+          + 'kalvorakenteeksi.',
+      kuvat: [
+        {
+          tiedosto: 'Khan Shatyr.jpg',
+          selite: 'Teltan harmaa kalvokatto laskeutuu nurmivallille, ja '
+            + 'sen huipulta nousee ohut masto ukkospilviä vasten.',
+          lahde: 'Quarot, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bajterek': {
+      aika: '1996–2002',
+      teksti: 'Nimi tarkoittaa kazakiksi korkeaa poppelia. Torni '
+          + 'rakennettiin 25. lokakuuta 1996 alkaen ja valmistui 30. '
+          + 'elokuuta 2002; suunnittelija oli kazakstanilainen arkkitehti '
+          + 'Akmurza Rustembekov ja päärakennesuunnittelija Mark '
+          + 'Vaynshtein. Vuonna 2017 torni peruskorjattiin. Korkeutta on '
+          + '105 metriä.'
+          + '\n\n'
+          + 'Rakenne on kapea sylinterimäinen kuilu, jota kiertävät '
+          + 'valkoiset oksamaiset ristikkopalkit. Ylhäällä oksat '
+          + 'levittäytyvät ja kannattelevat 22 metriä leveää '
+          + 'kultapeilipintaista palloa. Kuilussa kulkee kaksi hissiä '
+          + 'näköalatasanteelle, joka on 97 metrin korkeudessa ja jossa '
+          + 'on kaksi kerrosta: alemmalta näkee ympäri kaupungin, '
+          + 'ylemmälle noustaan portaita. Sisäänkäynnit on upotettu '
+          + 'aukion pinnan alle, ja niihin laskeudutaan portaita; '
+          + 'jalustassa on lipunmyynti ja näyttelytila.'
+          + '\n\n'
+          + 'Torni on itsenäistyneen Kazakstanin tunnetuin rakennus, ja '
+          + 'sen kuva on ollut myös 10 000 tengen setelissä. Tarun, '
+          + 'jonka mukaan se on muotoiltu, kertoo lehden kansisivu.',
+      kuvat: [
+        {
+          tiedosto: 'Kazakhstan P9130290 (39375228604).jpg',
+          selite: 'Näköalatasanteen kaareva messinkikaide kiertää '
+            + 'lasiseinän vieressä, ja ikkunoista näkyy kaupunki ja sen '
+            + 'takana aron reuna.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nurjol-bulevardi': {
+      aika: 'Kurokawan kaava 1998',
+      teksti: 'Bulevardi on 2 200 metrin mittainen kävelyalue Vasemman '
+          + 'rannan hallinto- ja liikekeskuksessa. Sen ja koko uuden '
+          + 'kaupungin kaavan suunnitteli japanilainen arkkitehti Kisho '
+          + 'Kurokawa, joka voitti vuoden 1998 kansainvälisen '
+          + 'suunnittelukilpailun. Vanha nimi oli Suly Nuly eli '
+          + 'Vihervesibulevardi.'
+          + '\n\n'
+          + 'Bulevardi on kaupungin akseli. Itäpäässä on Akorda joen '
+          + 'rannassa ja länsipäässä Khan Shatyrin teltta; niiden '
+          + 'välissä seisoo Bajterek, ja molemmin puolin kohoaa rivi '
+          + 'ministeriöitä, virastoja ja asuintorneja. Kävelyosuudella '
+          + 'on suihkulähteiden kuja.'
+          + '\n\n'
+          + 'Suunta ei ole sattumaa. Kurokawan periaate oli "historian '
+          + 'ja tulevaisuuden symbioosi": vanha kaupunki joen '
+          + 'pohjoispuolella säilytettäisiin ennallaan, ja uusi '
+          + 'rakennettaisiin eteläpuolelle omalle akselilleen. Siksi '
+          + 'bulevardilta katsoo kahteen suuntaan kahta eri '
+          + 'vuosisataa.',
+      kuvat: [
+        {
+          tiedosto: 'Kazakhstan P9130282 (25214334277).jpg',
+          selite: 'Bulevardi näkyy Bajterekin ikkunasta suorana '
+            + 'kukkakuvioituna puistokaistana, jonka päässä seisovat '
+            + 'kaksi kultatornia ja niiden välissä Akorda.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Akorda': {
+      aika: '2001–2004',
+      teksti: 'Nimi Aqorda tarkoittaa valkoista ordaa eli hallitsijan '
+          + 'leiriä. Talo rakennettiin vuosina 2001–2004 Mabetex-yhtiön '
+          + 'työnä, ja se on presidentin työpaikka ja hallinnon '
+          + 'toimitalo — ei asunto. Korkeutta on huippuineen 80 metriä, '
+          + 'kerroksia seitsemän ja kerrosalaa 36 720 neliömetriä.'
+          + '\n\n'
+          + 'Katolla on sinivalkoinen kupoli ja sen päällä kullattu '
+          + 'huippu: aurinko, jolla on 32 sädettä, ja auringon alla '
+          + 'lentävä arokotka. Sama pari on Kazakstanin lipussa. '
+          + 'Ensimmäisessä kerroksessa ovat suuri keskussali, '
+          + 'lehdistösali, juhlasali ja talvipuutarha, toisessa '
+          + 'työhuoneet.'
+          + '\n\n'
+          + 'Kolmas kerros on kansainvälisiä tilaisuuksia varten, ja '
+          + 'sen salit on nimetty pintojensa mukaan: Marmorisali, '
+          + 'Kultasali, Ovaali sali ja Itäinen sali, joka on rakennettu '
+          + 'jurtan muotoon. Neljännessä kerroksessa ovat kupolisali, '
+          + 'hallituksen kokoussali ja kirjasto. Lattiakuvioihin on '
+          + 'käytetty 21:tä eri marmorilajia.',
+      kuvat: [
+        {
+          tiedosto: 'Astana DSC04160 (7709718350).jpg',
+          selite: 'Akordan sinikupolinen julkisivu näkyy aukion perällä, '
+            + 'ja etualalla kaartuu valtava valko-violetti kukkakuvio '
+            + 'suihkulähteen ympärillä.',
+          lahde: 'jtstewart, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hazrat Sultanin moskeija': {
+      aika: '2009–2012',
+      teksti: 'Moskeija on nimetty Hazrat Sultanin mukaan. Se on yksi '
+          + 'sufilaisen šeikin Khoja Ahmed Yasavin lisänimistä; hänen '
+          + 'mausoleuminsa on Turkistanissa Etelä-Kazakstanissa. '
+          + 'Rakentaminen alkoi kesäkuussa 2009, ja työmaalla oli eri '
+          + 'vaiheissa tuhannesta puoleentoista tuhanteen työntekijää. '
+          + 'Talo avattiin 6. heinäkuuta 2012.'
+          + '\n\n'
+          + 'Tyyli on klassinen islamilainen, mutta koristeaiheet ovat '
+          + 'kazakstanilaisia. Päälaen kupoli on maan suurin: korkeutta '
+          + '51 metriä ja halkaisijaa juurella 28,1 metriä. Pienempiä '
+          + 'kupoleita on kahdeksan, ja nurkissa nousee neljä 77 metrin '
+          + 'minareettia. Tontti on yli yksitoista hehtaaria ja '
+          + 'rakennettu ala 17 700 neliömetriä. Rukoilijoita mahtuu '
+          + 'viisituhatta ja juhlapyhinä kymmenentuhatta.'
+          + '\n\n'
+          + 'Moskeija on Esilin koillisrannalla osa laajaa aukiota. '
+          + 'Naapureina ovat Rauhan ja sovinnon palatsi, Itsenäisyysaukio '
+          + 'ja Kazak Elin muistomerkki: 91 metrin korkuinen pylväs, '
+          + 'jonka huipulla on tarun Samruk-lintu — sama lintu, joka '
+          + 'munii Bajterekin kultaisen pallon.',
+      kuvat: [
+        {
+          tiedosto: 'National Museum of Kazakhstan 03.jpg',
+          selite: 'Aukion suihkulähteen takaa erottuvat vasemmalla '
+            + 'moskeijan valkoinen kupoli ja minareetit, keskellä '
+            + 'Kazak Elin pylväs ja oikealla kansallismuseon sininen '
+            + 'lasiseinä.',
+          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rauhan ja sovinnon palatsi': {
+      aika: '2006',
+      teksti: 'Pyramidi on 62 metriä korkea, ja sen pohja on 62 × 62 '
+          + 'metriä. Se seisoo viisitoista metriä korkean, mullalla '
+          + 'peitetyn jalustan päällä; alakerrat eivät siis ole kellaria, '
+          + 'vaikka puiston maasto nousee niiden ympärille. '
+          + 'Suunnittelija oli Foster and Partners ja rakentaja Sembol, '
+          + 'ja hinta oli 8,74 miljardia tengeä. Talo valmistui 2006 '
+          + 'pysyväksi paikaksi maailmanuskontojen johtajien kongressille, '
+          + 'joka kokoontuu joka kolmas vuosi.'
+          + '\n\n'
+          + 'Kyljet jakautuvat viiteen kolmiokerrokseen, joissa '
+          + 'jokaisen kolmion sivu on kaksitoista metriä. Kolme alinta '
+          + 'kerrosta on verhottu vaalealla graniitilla, kaksi ylintä '
+          + 'lasimaalauksella. Lasityön teki brittiläinen Brian Clarke: '
+          + 'huippuun on poltettu lentäviä kyyhkysiä, ja alempana on 28 '
+          + 'vinoneliön muotoista lasi-ikkunaa. Värit, kulta ja vaalea '
+          + 'sini, ovat Kazakstanin lipusta.'
+          + '\n\n'
+          + 'Aron ilmasto näkyy rakenteessa. Runko on terästä ja '
+          + 'alakerrat betonia, ja insinöörien piti varautua noin 80 '
+          + 'asteen lämpötilaeroon 40 pakkasasteesta yli 40 '
+          + 'lämpöasteeseen — rakennus venyy ja kutistuu jopa 30 '
+          + 'senttimetriä. Siksi vain yksi pyramidin kulma on kiinteä ja '
+          + 'kolme muuta lepää silloista tutuilla laakereilla, mitä ei '
+          + 'ollut aiemmin tehty talossa. Sisällä on oopperasali, jonka '
+          + 'paikkaluvuksi Wikipedia antaa sekä 1 300 että 1 500, '
+          + 'kulttuurimuseo, kirjasto ja tutkimuskeskus, ja huipulla '
+          + 'pyöreä kokoussali, jonka esikuva on YK:n turvallisuusneuvoston '
+          + 'sali New Yorkissa.',
+      kuvat: [
+        {
+          tiedosto: 'Palace of Peace and Reconciliation (pyramid).jpg',
+          selite: 'Pyramidi erottuu vaaleana kolmiona kerrostalorivien '
+            + 'välissä, ja sen yllä kaartuu tumma ukkosrintama.',
+          lahde: 'Nikolamikovic82, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallismuseo': {
+      aika: '2014',
+      teksti: 'Museo avattiin vuonna 2014, ja se oli silloin Keski-Aasian '
+          + 'suurin. Julkisivu on sinistä lasia ja valkoista marmoria. '
+          + 'Suunnittelija oli Vladimir Laptev, joka on myös kaupungin '
+          + 'pääkaavoittaja, ja hänen lähtökohtansa oli liehuva lippu.'
+          + '\n\n'
+          + 'Talo koostuu seitsemästä lohkosta, joissa on yhdestä '
+          + 'yhdeksään kerrosta. Näyttelytilaa on noin 14 000 '
+          + 'neliömetriä yhdessätoista salissa: Astanan sali, itsenäisen '
+          + 'Kazakstanin sali, Kultasali, muinaisen ja keskiajan '
+          + 'historian sali, historian sali, kansatieteen sali ja '
+          + 'nykytaiteen salit. Saman katon alla ovat myös lastenmuseo, '
+          + 'lasten luova keskus, kaksi vaihtuvien näyttelyiden salia, '
+          + 'konservointipajat, laboratoriot, tieteellinen kirjasto '
+          + 'lukusaleineen ja kongressisali.'
+          + '\n\n'
+          + 'Kokoelmien tunnetuin esine on Issykin kultainen soturi: '
+          + 'tuhansista kultalevyistä koottu asu, joka löytyi sattumalta '
+          + 'vuonna 1969 autotallin ja tienparannuksen kaivuutöissä '
+          + 'Issykin hautakummusta maan eteläosassa. Sen arvellaan '
+          + 'kuuluneen noin kahdeksantoistavuotiaalle sakaruhtinaalle '
+          + 'tai -ruhtinattarelle 300-luvulla eaa. Kokoelmien perusta '
+          + 'koottiin valtion Kulttuuriperintö-ohjelmassa.',
+      kuvat: [
+        {
+          tiedosto: 'National Museum of the Republic of Kazakhstan 01.jpg',
+          selite: 'Museon aulassa leijuu kullattu Samruk-lintu siivet '
+            + 'levällään mustan, tähdiksi valaistun katon alla.',
+          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
