@@ -10566,6 +10566,60 @@ body.vertailu-tila .pawns { display: none; }
   margin: 0.15rem 0 0.6rem 1rem;
 }
 
+/*
+ * MAAN ETUSIVUN KARTTA ISOMMAKSI (omistajan palaute 21.8.2026:
+ * "kartat etusivulla saisi olla isompi").
+ *
+ * Kiinteä 340 pikselin katto teki kartasta leveällä ruudulla sivun
+ * sivuhuomion, vaikka se on koko sivun pääkuva. Katto on nyt kartan
+ * OMASSA kuvasuhteessa: kehys ottaa palstasta niin paljon leveyttä
+ * kuin --maakartta-katto sallii korkeutta, mutta enintään 58 %.
+ * Pystymalli (Iso-Britannia) ei siis valu sivun mitan yli ja
+ * neliömäinen saa koko palstan. Suhteen kertoo piirto kuvan
+ * latauduttua (--maakartta-suhde, piirraMaaEtusivu); siihen asti
+ * oletusarvo antaa kehykselle täyden 58 %:n leveyden, ja kehys on
+ * joka tapauksessa tyhjä ennen kuin kuva on ladattu.
+ *
+ * Kuvaa ei rajata eikä venytetä: kehys myötäilee kuvasuhdetta, ja
+ * kuva täyttää kehyksen entiseen tapaan (width: 100 %). Lähderivi
+ * pysyy kartan alla kehyksen sisällä.
+ *
+ * VAIN LEVEÄLLÄ RUUDULLA (≥ 900 px). Sitä kapeammalla kelluva kartta
+ * pysyy entisessä 340 pikselissään: siellä palstaa ei ole varaa antaa
+ * pois, ja leveämpi kartta kaventaisi perustietolaatikon niin, että
+ * sen sijoitusluvut jäisivät kartan alle. Alle 560 px:n täysleveä
+ * kartta on oma sääntönsä alempana.
+ *
+ * Tämä koskee vain maan etusivua — kaupunkilehden kohdekartta ja
+ * zoomattava karttaikkuna käyttävät samoja luokkia omilla mitoillaan.
+ */
+@media (min-width: 900px) {
+  .maa-etusivu .maakartta-kehys {
+    --maakartta-katto: min(72vh, 660px);
+    /* Oletussuhde ennen latausta: leveä, eli täydet 58 %. */
+    --maakartta-suhde: 1.6;
+    width: min(58%, calc(var(--maakartta-katto) * var(--maakartta-suhde)));
+    margin: 0.15rem 0 0.7rem 1.4rem;
+  }
+}
+
+/*
+ * Pitkulainen kartta (Turkki, suhde ≥ 1,6) ei kellu lainkaan: sen
+ * viereen jäisi vain kapea tekstisuikale, ja korkeuskatolla se jäisi
+ * naurettavan matalaksi. Se saa oman täysleveän lohkonsa tekstin
+ * yllä — sama taitto kuin kapealla ruudulla. Luokan antaa piirto
+ * kuvan latauduttua, kuten pystykuvan .pysty nostoissa.
+ *
+ * Tämä sääntö on media-ehtojen ulkopuolella tarkoituksella: myös
+ * tabletin levyisellä ruudulla pitkulainen kartta on parempi
+ * täysleveänä kuin 340 pikselin suikaleena tekstin vieressä.
+ */
+.maa-etusivu .maakartta-kehys.kartta-levea {
+  float: none;
+  width: 100%;
+  margin: 0.15rem 0 0.8rem;
+}
+
 /* Pisteet asemoidaan prosentteina KUVAN päälle, siksi oma kotelo,
  * jossa ei ole muuta kuin kuva (lähderivi venyttäisi pohjaa). */
 .maakartta-kotelo { position: relative; }
@@ -10690,6 +10744,20 @@ body.vertailu-tila .pawns { display: none; }
 .dialog.lehti .maa-etusivu #arrival-maa-intro {
   columns: auto;
   column-rule: none;
+}
+
+/*
+ * Täysleveän kartan alla teksti EI kierrä mitään, joten pääkirjoitus
+ * saa lehtipalstansa takaisin: 888 pikselin rivi olisi toistasataa
+ * merkkiä pitkä eikä sitä lue kukaan. Sama mitta kuin muilla
+ * lehtisivuilla (@media 700px, #arrival-maa-intro).
+ */
+@media (min-width: 700px) {
+  .dialog.lehti .maa-etusivu:has(.maakartta-kehys.kartta-levea) #arrival-maa-intro {
+    columns: 2;
+    column-gap: 2.2rem;
+    column-rule: 1px solid rgba(70, 51, 31, 0.25);
+  }
 }
 
 .maa-etusivu .arrival-maa-rivi,
