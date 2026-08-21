@@ -1994,10 +1994,47 @@ export const ASIA_ARTIKKELIT = {
       + 'on kokonaisia gerkaupunginosia, joissa telttojen ympärille on '
       + 'rakennettu aidat. Aro alkaa heti kaupungin jälkeen.',
   },
+  /*
+   * LHASAN INTRO KIRJOITETTIIN UUSIKSI 21.8.2026 uuden lehden
+   * yhteydessä (Raamattu, "TEKSTIEN PAINOPISTE"): vanha kolmen
+   * lauseen intro kertoi vain korkeuden ja Potalan huonemäärän, ja
+   * tilalle tuli etusivun leipäteksti. Jokainen uuden intron väite
+   * tulee kaupungin omista, samassa erässä tarkistetuista
+   * lehtiteksteistä (kulttuuri-kategoriat.js: johdanto, nostot K1,
+   * K2 ja H2 sekä Matkailijan Lhasa; nahtavyysjutut.js;
+   * maakartat.js) — uusia lähteitä ei otettu. teksti-kenttä oli jo
+   * olemassa eikä siihen koskettu (Manilan ja Hanoin käytäntö);
+   * sen ainoa vuosiluku 1959 on vanha rajapäivämerkintä
+   * talvipalatsikäytön päättymisestä, ei uutta sisältöä.
+   *
+   * TIIBET-LINJAUS (spec-asia.md, "Lhasa"): intron sisältö on vuotta
+   * 1959 vanhempaa, hallinnollinen nykyasema on mukana yhtenä
+   * neutraalina tosiasiana ilman kannanottoa, eikä nykypolitiikkaa
+   * ole missään muodossa. Perustelut kokonaisuudessaan
+   * kulttuuri-kategoriat.js:n lhasa-lohkossa.
+   */
   Lhasa: {
-    intro: 'Lhasa on Tiibetin pääkaupunki 3 650 metrin korkeudessa. '
-      + 'Potalan palatsi nousee kalliolle kolmetoista kerrosta, ja '
-      + 'siinä on yli tuhat huonetta.',
+    intro: 'Lhasa on Tiibetin ylängön keskellä Kyichu-joen laaksossa '
+      + 'noin 3 650 metrin korkeudessa, ja se on yksi maailman '
+      + 'korkeimmalla sijaitsevista kaupungeista. Ympäröivät vuoret '
+      + 'nousevat yli 5 500 metriin, ja ilmassa on vain 68 prosenttia '
+      + 'siitä hapesta, jota merenpinnalla hengitetään. Nimi tarkoittaa '
+      + 'jumalten paikkaa, mutta vanhoissa asiakirjoissa kaupunki on '
+      + '**Rasa**, vuohten paikka.'
+      + '\n\n'
+      + '600-luvun puolivälissä Songtsen Gampo siirsi valtakuntansa '
+      + 'pääkaupungin tänne ja pystytti vuonna 637 ensimmäiset '
+      + 'rakennukset Punaisen kummun kalliolle. Vuodesta 1642 kaupunki '
+      + 'oli myös hallinnon keskus, ja pian sen jälkeen samalle '
+      + 'kalliolle alettiin rakentaa **Potalaa** — kolmentoista '
+      + 'kerroksen ja yli tuhannen huoneen talvipalatsia.'
+      + '\n\n'
+      + 'Vanhankaupungin sydän on Jokhang-temppeli, jonka ympäri '
+      + 'kiertää kilometrin mittainen Barkhor, kaupungin vanhin katu. '
+      + 'Vuonna 1792 Tiibet sulkeutui eurooppalaisilta lähes kokonaan, '
+      + 'ja koko 1800-luvun aikana vain kolme länsimaalaista pääsi '
+      + 'Lhasaan asti. Nykyinen Lhasa on Tiibetin autonomisen alueen '
+      + 'pääkaupunki, ja sinne pääsee vuodesta 2006 myös junalla.',
     teksti: 'Lhasa on Tiibetin ylängöllä Kyi-joen laaksossa. Ilma on '
       + 'korkeudesta johtuen ohutta: happea on noin kaksi kolmasosaa '
       + 'siitä mitä merenpinnan tasolla, ja portaiden nousu '

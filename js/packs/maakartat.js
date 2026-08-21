@@ -7888,6 +7888,71 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Yusuf Khass Hajibin mausoleumi', lat: 39.4592, lon: 75.99195 },
     ],
   },
+  /*
+   * LHASAN KOHDEKARTTA (21.8.2026). Rajaus on 5,6 × 3,7 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Mekassa ja Manilassa.
+   *
+   * RUUTU ON KAUPUNGIN OMA MUOTO eikä valittu ikkuna: vanha Lhasa on
+   * itä–länsisuuntainen nauha Kyichun laakson pohjalla, ja ruudun
+   * päät ovat kaupungin omia päätepisteitä — lännessä Norbulingkan
+   * puisto, idässä Barkhorin korttelit. Eteläreuna on vedetty joen
+   * rantaan asti, koska Kyichu on syy kaupungin sijaintiin.
+   *
+   * JOKHANGIN KOORDINAATTI EI OLE WIKIPEDIAN. en-Wikipedian
+   * Jokhang-artikkelin infoboksissa lukee 29°39′11″N 91°02′51″E,
+   * jonka pituusaste on sama kuin Drepung-luostarilla ja jonka
+   * mukaan temppeli olisi Potalasta 6,7 km LÄNTEEN — vaikka saman
+   * artikkelin oma leipäteksti sanoo sen olevan kilometrin verran
+   * Potalasta ITÄÄN. Kyseessä on kopiointivirhe kahden artikkelin
+   * välillä. Riippumaton tarkistus (docs/aasia-tyoaineisto/
+   * tarkistus-lhasa.md osio 1.1) mittasi todellisen sijainnin sekä
+   * Nominatimista että Overpassista, ja kolme lähdettä osuvat
+   * kahdenkymmenen metrin sisään toisistaan: kartalla on Overpassin
+   * arvo 29,65287 / 91,13184 (relaatio 2358701). Drepungin oma
+   * koordinaatti sen sijaan tarkistettiin oikeaksi (ero Overpassiin
+   * 65 m), eli virhe oli vain Jokhangin rivillä.
+   *
+   * KOLME SUURTA LUOSTARIA JÄIVÄT POIS KARTALTA. Sera on 5,1 km
+   * pohjoiseen, Drepung 7,2 km luoteeseen ja Ganden 36 km
+   * koilliseen. Kolme kohdetta kolmeen ilmansuuntaan vaatisi kolme
+   * kainaloa, eikä yhdelläkään tämän kartaston kartalla ole edes
+   * kahta; Serasta piirrettiin koekainalo, mutta Overpass palautti
+   * sen ruudusta yhdeksän elementtiä eli tyhjän paperin. Luostarit
+   * kerrotaan nostossa K4 ja Chagporin jutussa; sama ratkaisu kuin
+   * Xi'anin terrakotta-armeijalla ja Medinan Uhud-vuorella.
+   *
+   * RAUTATIEASEMA JÄI POIS, koska se on 5,7 km lounaaseen ja siis
+   * kartan ainoa kohde etelässä: ruutuun venytettynä sen
+   * numeroympyrä osuisi mittakaavajanan päälle (Kööpenhaminan
+   * Tivoli, Masqatin hindutemppeli). Asema on matkaoppaan
+   * ensimmäisessä jaksossa.
+   *
+   * MURU NYINGBA, TSOMON LING JA TSAMKHUNGIN NUNNALUOSTARI
+   * jätettiin pois, koska ne ovat 95, 220 ja 358 metrin päässä
+   * naapurikohteestaan eivätkä kaksi numeroympyrää mahdu niin
+   * lyhyelle välille (Petran, Mekan ja Singaporen oppi).
+   */
+  lhasa: {
+    polku: 'assets/kartat/lhasa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 29.672, etela: 29.639, lansi: 91.084, ita: 91.142 },
+    esittely: 'Kartan keskellä kohoaa Potala Punaisen kummun päällä, '
+      + 'ja sen kaakkoispuolella alkaa Barkhorin vanhakaupunki '
+      + 'Jokhangin ympärillä. Lännessä on Norbulingkan puisto ja '
+      + 'etelässä virtaa Kyichu. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Manilassa. */
+      { nimi: 'Ramoche-temppeli', lat: 29.658611, lon: 91.130278 },
+      { nimi: 'Potala-palatsi', lat: 29.657778, lon: 91.116944 },
+      { nimi: 'Norbulingka', lat: 29.653889, lon: 91.091667 },
+      { nimi: 'Jokhang-temppeli', lat: 29.65287, lon: 91.13184 },
+      { nimi: 'Chagpori', lat: 29.65227, lon: 91.1103 },
+      { nimi: 'Tiibetin museo', lat: 29.65146, lon: 91.09762 },
+      { nimi: 'Lhasan suuri moskeija', lat: 29.65084, lon: 91.13671 },
+    ],
+  },
 };
 
 /*

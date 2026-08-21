@@ -2759,6 +2759,55 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  lhasa: {
+    /*
+     * KYICHUN LAAKSON POHJA (21.8.2026). Ruutu on 5,6 × 4,0 km ja se
+     * on kaupungin oma muoto eikä piirtäjän valitsema ikkuna: vanha
+     * Lhasa on itä–länsisuuntainen nauha joen pohjoisrannalla, ja
+     * ruudun molemmat päät ovat kaupungin omia päätepisteitä —
+     * lännessä Norbulingkan puisto, idässä Barkhorin korttelit.
+     * Eteläreuna on vedetty Kyichun rantaan asti, jotta joki näkyy
+     * kartalla; se on ainoa syy, miksi kaupunki on juuri tässä.
+     *
+     * VANHAKAUPUNKI ON AHDAS, ja se määräsi rajauksen koon. Jokhang,
+     * Ramoche, Suuri moskeija ja Chagpori mahtuvat kilometrin
+     * mittaiselle alalle, ja laajemmassa ruudussa niiden
+     * numeroympyrät menisivät päällekkäin (Petran, Mekan ja
+     * Singaporen oppi). Ruutu on siksi työkalun oman ohjeen (5–8 km)
+     * alarajalla, kuten Manilassa ja Kantonissa.
+     *
+     * KOLME SUURTA LUOSTARIA EIVÄT OLE KARTALLA, eikä se ole
+     * rajauksen sivuvaikutus vaan mitattu päätös. Sera on 5,1 km
+     * pohjoiseen, Drepung 7,2 km luoteeseen ja Ganden 36 km
+     * koilliseen (laskelmat en-Wikipedian koordinaateista,
+     * docs/aasia-tyoaineisto/tarkistus-lhasa.md osio 3). Kolmelle
+     * kohteelle kolmeen eri ilmansuuntaan tarvittaisiin kolme
+     * kainaloa, eikä yhdelläkään tämän kartaston kartalla ole edes
+     * kahta; Ganden on lisäksi kymmenkertaisesti kauempana kuin
+     * yksikään kainalo tässä kartastossa (Medinan Quba 3,5 km,
+     * Adenin Tawahi 6 km). Serasta piirrettiin koekainalo ruudulla
+     * 29,690–29,702 / 91,124–91,140: Overpass palautti siitä yhdeksän
+     * elementtiä, eli ruutu oli käytännössä tyhjä paperi kahdella
+     * viivalla, ja se hylättiin (sama syy kuin Kööpenhaminan ja
+     * Vilnan hylätyissä kainaloissa). Luostarit kerrotaan lehden
+     * nostossa K4.
+     *
+     * RAUTATIEASEMA JÄI POIS. Se on 5,7 km lounaaseen ja siis
+     * kartan ainoa kohde etelässä; ruutuun venytettynä sen
+     * numeroympyrä osuisi tarkalleen mittakaavajanan päälle
+     * (Kööpenhaminan Tivoli ja Masqatin hindutemppeli). Asema
+     * kerrotaan matkaoppaan ensimmäisessä jaksossa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kathmandussa ja Manilassa: Barkhorin kehäkatu ja
+     * sen kujat, Potalan aukio ja Norbulingkan puistopolut ovat
+     * OSM:ssä jalankulkualueita ja huoltoteitä, ja ilman lippuja
+     * kartan tihein osa jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 29.672, etela: 29.639, lansi: 91.084, ita: 91.142 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*

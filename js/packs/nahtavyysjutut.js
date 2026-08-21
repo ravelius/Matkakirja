@@ -28082,4 +28082,285 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * LHASAN KOHDEKARTAN JUTUT (Opus 21.8.2026). Lähteet ovat
+   * en-Wikipedian raakatekstit (action=raw, haettu 21.8.2026):
+   * Ramoche Temple, Potala Palace, Norbulingka, Jokhang, Chagpori,
+   * Tibet Museum (Lhasa), Lhasa Great Mosque, Lhasa, Lhasa Zhol
+   * Pillar, Lingkhor ja Sho Dun Festival.
+   *
+   * SISÄLTÖLINJAUS on sama kuin kulttuuri-kategoriat.js:n
+   * lhasa-lohkossa: kaikki sisältö on vuotta 1959 vanhempaa.
+   * Ramochen, Chagporin ja moskeijan artikkeleissa on runsaasti
+   * aineistoa vuosilta 1959–2008, eikä siitä ole käytetty mitään.
+   * Chagporin juttu kertoo kukkulan lääketieteellisen koulun sen
+   * omana historiana eikä mainitse, mitä paikalla on nyt; museon
+   * juttu kertoo rakennuksen ja kokoelman eikä koske näyttelyn
+   * historiaosastoon.
+   */
+  lhasa: {
+    'Ramoche-temppeli': {
+      aika: '600-luvun puoliväli, nykyinen rakennus 1474',
+      teksti: 'Ramoche on Jokhangin jälkeen kaupungin tärkein '
+          + 'temppeli, ja se on yhtä vanha: molemmat pystytettiin '
+          + '600-luvun puolivälissä yhtä ainoaa pronssista '
+          + 'buddhankuvaa varten.'
+          + '\n\n'
+          + 'Temppeli on kaupungin luoteisosassa, Potalasta itään ja '
+          + 'Jokhangista pohjoiseen, ja sen tontti on neljätuhatta '
+          + 'neliömetriä. Alkuperäinen rakennus tuhoutui tulipalossa, '
+          + 'ja tilalle nousi 1474 kolmikerroksinen talo. Pian sen '
+          + 'jälkeen siitä tuli Gyuto-koulukunnan eli Lhasan ylemmän '
+          + 'tantrisen korkeakoulun kokoushalli, ja talossa asui '
+          + 'viisisataa munkkia.'
+          + '\n\n'
+          + 'Kaksi kuvaa vaihtoi aikanaan paikkaa. Kertomuksen mukaan '
+          + 'idästä saapunut patsas siirrettiin täältä Jokhangiin '
+          + 'turvaan, ja etelästä saapunut tuli tilalle — siksi '
+          + 'Jokhangin pääkuva on nykyään se, joka tuli Kiinasta, ja '
+          + 'täällä on se, joka tuli Nepalista.',
+      kuvat: [
+        {
+          tiedosto: 'Ramoche temple.jpg',
+          selite: 'Kokoussalin penkkiriveille on levitetty '
+            + 'viininpunaiset viitat ja niiden päälle keltaiset '
+            + 'päähineet, mutta sali itse on tyhjä.',
+          lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Potala-palatsi': {
+      aika: '1645–1694',
+      teksti: 'Potala on rakennettu dzong-tyyliin eli tiibetiläisen '
+          + 'linnoituksen tapaan: seinät kaartuvat sisäänpäin ylöspäin '
+          + 'mentäessä, ikkunarivit ovat vasta ylimmissä kerroksissa ja '
+          + 'katot ovat tasaisia ja eri korkeuksilla. Rakennus on '
+          + 'neljäsataa metriä idästä länteen ja kolmesataaviisikymmentä '
+          + 'pohjoisesta etelään, ja se seisoo noin 3 700 metrin '
+          + 'korkeudessa keskellä Lhasan laaksoa.'
+          + '\n\n'
+          + 'Nimi tulee Potalaka-vuoresta, joka on buddhalaisessa '
+          + 'perinteessä Avalokiteśvara-bodhisattvan asuinsija Intian '
+          + 'eteläkärjessä. Sama ajatus toistuu kaupungin kolmessa '
+          + 'kukkulassa, joita sanotaan Tiibetin kolmeksi suojelijaksi: '
+          + 'Marpo Ri on Avalokiteśvaran, Chagpori Vajrapanin ja '
+          + 'Pongwari Manjushrin vuori. Punainen keskusosa on Punainen '
+          + 'palatsi, ja siinä ovat pääsalit ja aiempien dalai-lamojen '
+          + 'pyhäköt; valkoinen osa oli asuin- ja hallintosiipi. Värit '
+          + 'syntyvät kalkkikivestä.'
+          + '\n\n'
+          + 'Palatsin alapuolella Zholin kylässä seisoo kivipilari, '
+          + 'joka on pystytetty 700-luvun jälkipuolella kuningas '
+          + 'Trisong Detsenin aikana. Siihen on hakattu mahdollisesti '
+          + 'vanhin säilynyt tiibetinkielinen kirjoitus: kertomus '
+          + 'kenraali Nganlam Takdra Lukhongin palveluksista '
+          + 'kuninkaalle. Pilarin ikä ilmoitetaan Wikipediassa kahdella '
+          + 'tavalla, Lhasa-artikkelissa "noin 764" ja pilarin omassa '
+          + 'artikkelissa vuoden 783 rajasopimuksen muistoksi '
+          + 'pystytettynä.',
+      kuvat: [
+        {
+          tiedosto: 'Potala Palace view Chakpori Hill.jpg',
+          selite: 'Chagporilta katsottuna Punainen palatsi kultaisine '
+            + 'kattoineen kohoaa Valkoisen palatsin ja paljaan kallion '
+            + 'yläpuolelle.',
+          lahde: 'Rene Heise, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Norbulingka: {
+      aika: '1755–1783',
+      teksti: 'Norbulingka on kolmen kilometrin päässä Potalasta '
+          + 'länteen, Kyichun rannalla. Puistossa on 374 huonetta ja '
+          + 'kolmekymmentäkuusi hehtaaria maata, ja se on Tiibetin '
+          + 'suurin ihmisen tekemä puutarha. Ensimmäisen palatsin '
+          + 'rakennutti Seitsemäs dalai-lama ja se kantaa hänen '
+          + 'nimeään; Kahdeksas dalai-lama lisäsi kolme temppeliä, '
+          + 'eteläisen ja itäisen muurin ja suuren joukon puita, ja '
+          + 'sen jälkeen paikka oli kesäasunto.'
+          + '\n\n'
+          + 'Sana lingka tarkoittaa Tiibetissä puistoa yleensä. Lhasaa '
+          + 'ympäröi aikanaan kaksikymmentäkaksi lingkaa, useimmat yli '
+          + 'kahdeksansataa metriä pitkiä, ja kaupunkilaiset kävivät '
+          + 'niissä eväsretkillä. Norbulingka on niistä suurin ja '
+          + 'säilynein.'
+          + '\n\n'
+          + 'Puistossa vietetään Shoton- eli jogurttijuhlaa, jonka nimi '
+          + 'tulee sanoista sho, jogurtti, ja dun, pidot. Juhla alkoi '
+          + '1000-luvulla siitä, että maallikot tarjosivat munkeille '
+          + 'jogurttia kuukauden mittaisen sisällä pysyttelyn jälkeen — '
+          + 'munkit viettivät kesäkuukauden luostarissa, jotta he eivät '
+          + 'astuisi maasta nousevien hyönteisten päälle. Myöhemmin '
+          + 'juhlaan liitettiin lhamo-oopperat, jotka kestävät koko '
+          + 'päivän symbaalien, kellojen ja rumpujen säestyksellä. '
+          + 'Ajankohta on loppukesällä.',
+      kuvat: [
+        {
+          tiedosto: 'Lhasa - Norbulingka - letní palác dalajlámů - panoramio.jpg',
+          selite: 'Kesäpalatsin keltainen julkisivu kultaisen katon '
+            + 'alla sulkee puistokäytävän pään, ja käytävää reunustavat '
+            + 'keltaiset kaiteet ja kukkapenkit.',
+          lahde: 'Pavel Špindler, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jokhang-temppeli': {
+      aika: '600-luvun puoliväli, laajennettu 1610',
+      teksti: 'Jokhang on nelikerroksinen ja peittää kaksi ja puoli '
+          + 'hehtaaria. Katot on päällystetty kullatuilla '
+          + 'pronssitiilillä, ja harjoilla seisovat kultaiset kauriit '
+          + 'opinkehrän kummallakin puolella, voitonliput ja '
+          + 'kalahahmot. Pohjakaava on intialaisen vihara-luostarin '
+          + 'mallia, ja siihen on myöhemmin sekoittunut nepalilaista ja '
+          + 'Tang-kauden kiinalaista rakennustapaa. Ovenpielet, pylväät '
+          + 'ja huiput ovat 600- ja 700-luvun newar-työtä Kathmandun '
+          + 'laaksosta, ja kattopalkkien on radiohiiliajoituksella '
+          + 'todettu olevan alkuperäisiä.'
+          + '\n\n'
+          + 'Sisällä kierretään ympyrää: uloimmalla kehällä on rivi '
+          + 'suuria rukousmyllyjä, ja sen sisäpuolella on päähalli '
+          + 'kappeleineen. Päähallissa on puolitoista metriä korkea '
+          + 'kullattu pronssipatsas, joka esittää Buddhaa '
+          + 'kaksitoistavuotiaana. Temppelin kokoelmiin kuuluu yli '
+          + 'kolmetuhatta patsasta sekä käsikirjoituksia; seinillä on '
+          + 'uskonnollisia ja historiallisia seinämaalauksia, joista '
+          + 'yksi kuvaa prinsessa Wenchengin saapumista.'
+          + '\n\n'
+          + 'Ulkopuolella temppelin pohjois- ja eteläsisäänkäynnin '
+          + 'vieressä on kaksi kivipilaria. Vanhempi on viisi ja puoli '
+          + 'metriä korkea, sen huippu on muotoiltu palatsiksi, ja '
+          + 'siinä on vuodelle 821 tai 822 ajoitettu kirjoitus '
+          + 'tiibetiksi ja kiinaksi. Nuorempi on maaliskuulta 1794, ja '
+          + 'siihen on kaiverrettu ohjeita isorokon torjumiseksi — '
+          + 'kiveä on paikoin veistetty pois, koska sillä uskottiin '
+          + 'itsellään olevan parantava voima.',
+      kuvat: [
+        {
+          tiedosto: 'Cho-Khang The Grand Temple of Buddha at Lhasa 1902.jpg',
+          selite: 'Vuoden 1902 kirjaan piirretyssä lintuperspektiivissä '
+            + 'temppeli on tiivis kortteli litteäkattoisia taloja, ja '
+            + 'sen sisäänkäynti ja pilari on merkitty nimillä.',
+          lahde: 'Sarat Chandra Das, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Jokhang temple monk\'s rooftop house.jpg',
+          selite: 'Temppelin kattopihalla kuivuu narulla kaksi viittaa, '
+            + 'punainen ja oranssi, valkoiseksi kalkitun seinän '
+            + 'edessä.',
+          lahde: 'Maris Burbergs, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Chagpori: {
+      aika: 'lääketieteen koulu 1696',
+      teksti: 'Chagpori tarkoittaa rautavuorta. Se on kallioinen '
+          + 'kukkula aivan Potalan eteläpuolella ja yksi Keski-Tiibetin '
+          + 'neljästä pyhästä vuoresta; kahden muun lhasalaisen '
+          + 'kukkulan kanssa se muodostaa Tiibetin kolme suojelijaa. '
+          + 'Kukkulan ja Potalan välissä kulki ennen kaupungin '
+          + 'länsiportti, suuri Pargo Kaling -chorten, jonka läpi tie '
+          + 'meni holvikäytävänä.'
+          + '\n\n'
+          + 'Kukkulan päällä oli Tiibetin tunnetuin lääketieteellinen '
+          + 'koulu. Sen rakennutti vuonna 1696 sijaishallitsija Sangye '
+          + 'Gyatso Viidennen dalai-laman toiveesta, ja siellä '
+          + 'opetettiin Neljän tantran nimellä tunnettua '
+          + 'lääkintäkirjallisuutta, joka oli koottu Samye-luostarissa '
+          + '700-luvulla ja toimitettu uudelleen 1100-luvulla. '
+          + 'Koululla oli omat tulonsa maista, ja luostarit oli '
+          + 'velvoitettu lähettämään sinne oppilaita.'
+          + '\n\n'
+          + 'Kukkulan juurella kalliopintaan on maalattu ja veistetty '
+          + 'buddhakuvia. Chagporin ohi kulkee myös Lingkhor, kaupungin '
+          + 'ulompi pyhiinvaellustie: kahdeksan kilometrin kierros, '
+          + 'joka sulki sisäänsä vanhankaupungin, Potalan ja tämän '
+          + 'kukkulan. Reitin varrella oli pajujen varjostamia '
+          + 'puistoja, joissa istuttiin kesäisin eväillä ja katsottiin '
+          + 'ulkoilmaoopperaa juhlapäivinä.',
+      kuvat: [
+        {
+          tiedosto: 'Lhasa-von Yakhotel-04-Schneeberge-2014-gje.jpg',
+          selite: 'Chagporin kallioharja mastoineen nousee kaupungin '
+            + 'kattojen takaa, ja sen takana kohoavat lumiset vuoret.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tiibetin museo': {
+      aika: 'avattu 1999',
+      teksti: 'Museo avattiin 5. lokakuuta 1999, ja se on alueen '
+          + 'ensimmäinen suuri nykyaikainen museo. Rakennus on '
+          + 'L-kirjaimen muotoinen ja seisoo Potalan alapuolella '
+          + 'Norbulingkan tien kulmassa. Julkisivu on harmaata tiiltä, '
+          + 'räystäät tummanruskeat ja valkoiset ja katto kullattu — '
+          + 'yhdistelmä perinteistä tiibetiläistä rakennustapaa ja '
+          + 'nykyarkkitehtuuria.'
+          + '\n\n'
+          + 'Tontti on runsaat viisi hehtaaria ja rakennettua alaa on '
+          + '23 508 neliömetriä, josta näyttelytilaa 10 451. '
+          + 'Kokonaisuus jakautuu kolmeen osaan: päänäyttelyhalliin, '
+          + 'kansankulttuurin puutarhaan ja hallinto-osaan. Keskellä on '
+          + 'sisäpiha, jonka valkoinen lattia ja kattoikkunat '
+          + 'jäljittelevät luostarien pihoja.'
+          + '\n\n'
+          + 'Kokoelmassa on yli puoli miljoonaa esinettä, joista noin '
+          + 'tuhat on kerrallaan esillä. Esihistorian osastossa on '
+          + 'kivityökaluja, keramiikkaa, luu- ja metalliesineitä '
+          + 'Karuon ja Qugongin kaivauksilta: vanhimmat ovat '
+          + 'viidenkymmenentuhannen vuoden takaa ja nuorimmat kolmen '
+          + 'vuosituhannen. Muissa saleissa on thangka-maalauksia, '
+          + 'soittimia, lääketieteen ja tähtitieteen taulukoita sekä '
+          + 'pattralehdille ja tuohelle kirjoitettuja sutria.',
+      kuvat: [
+        {
+          tiedosto: 'Tibet Museum Lhasa Tibet China 西藏 拉萨 西藏博物館 - panoramio.jpg',
+          selite: 'Museon sisäänkäynti nousee portaita kivijulkisivun '
+            + 'ja maalattujen räystäiden alla, ja portaiden edessä '
+            + 'seisoo pronssinen suitsutusastia.',
+          lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lhasan suuri moskeija': {
+      aika: '1716, laajennettu 1793',
+      teksti: 'Lhasassa on ollut muslimiyhteisö 1000-luvulta lähtien. '
+          + 'Kaupungissa ja sen ympäristössä on neljä moskeijaa: '
+          + 'vanhin, Khache Lingka, on vuodelta 1650 kaupungin '
+          + 'länsipuolella, Dokdén moskeija pohjoisessa vuodelta 1716, '
+          + 'pieni moskeija 1900-luvun alusta ja tämä, Suuri moskeija, '
+          + 'joka tunnetaan myös Hebalinin moskeijana.'
+          + '\n\n'
+          + 'Moskeija rakennettiin 1716 ja laajennettiin 1793. Sen '
+          + 'rakensivat pääosin Kashmirista tulleet kauppiaat, jotka '
+          + 'olivat asettuneet Lhasaan — samaan aikaan Barkhorin '
+          + 'kauppapaikalla kävivät jesuiitta Ippolito Desiderin '
+          + 'vuonna 1716 luettelemat mongolit, kiinalaiset, '
+          + 'moskovalaiset, armenialaiset, kashmirilaiset, '
+          + 'nepalilaiset ja pohjoisintialaiset.'
+          + '\n\n'
+          + 'Piha on 2 600 neliömetriä ja siihen johtaa kolme '
+          + 'sisäänkäyntiä. Rakennettua alaa on 1 300 neliömetriä: '
+          + 'rukoushuone lännessä, pesuhuone ja muut tilat. '
+          + 'Rakennustapa on tiibetiläinen, ja siihen on sovitettu '
+          + 'islamilaisen rakennusperinteen omat osat — kaksi '
+          + 'valotornia ja arabiankieliset kirjoituskentät kultaisten '
+          + 'räystäiden alla.',
+      kuvat: [
+        {
+          tiedosto: 'Mosques in Lhasa3.jpg',
+          selite: 'Kaksi vihreäkupolista valotornia nousee kultaisten '
+            + 'räystäiden takaa, ja seinäpaneeleissa on arabialaista '
+            + 'kirjoitusta tiibetiläisten koristekuvioiden keskellä.',
+          lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

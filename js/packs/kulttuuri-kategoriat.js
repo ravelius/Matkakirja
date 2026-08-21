@@ -47094,4 +47094,535 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * LHASA (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita, kohdekarttaa, juttuja eikä säätietoja ennen
+   * tätä. ARTIKKELIT-merkintä oli olemassa, ja sen intro
+   * kirjoitettiin uusiksi samassa erässä (asia-artikkelit.js);
+   * teksti-kenttään ei koskettu. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä (action=raw, haettu 21.8.2026): Lhasa, Potala
+   * Palace, Jokhang, Barkhor, Norbulingka, Ramoche Temple, Chagpori,
+   * Sera Monastery, Drepung Monastery, Ganden Monastery, Lhasa Great
+   * Mosque, Tibet Museum (Lhasa), Lhasa Zhol Pillar, Lingkhor,
+   * Sho Dun Festival, History of Tibet, British expedition to Tibet,
+   * Thomas Manning (sinologist), Évariste Régis Huc, Tibet, Tibetan
+   * Plateau, Tsampa, Butter tea ja Lhasa railway station. Pohjana
+   * ovat docs/aasia-tyoaineisto/faktapohja-lhasa.md ja
+   * tarkistus-lhasa.md, jotka luettiin yhdessä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md, "Lhasa") ja
+   * faktapohjan oma sitova rajaus: Tiibet on tässä lehdessä
+   * historiallis-kulttuurinen aihe, ja KAIKKI SISÄLTÖ ON VUOTTA 1959
+   * VANHEMPAA. Pois on jätetty kokonaan vuoden 1959 kansannousu ja
+   * Potalan, Norbulingkan ja Chagporin vauriot, kulttuurivallankumous
+   * ja Jokhangin vuoden 1966 tapahtumat, Seran ja Ganden tuhoutuminen
+   * ja jälleenrakennus, museoituminen ja kävijäkiintiöt, vuoden 2008
+   * levottomuudet, munkkimäärien nykyrajoitukset sekä kaikki
+   * hallintoaseman kiistanalaisuutta koskeva aineisto. Hallinnollinen
+   * nykyasema mainitaan vain neutraalina tosiasiana kahdesti
+   * (matkailijalle-kappale ja artikkelin intro) — Nikosian ja
+   * Taipein "Antaa olla" -ennakkotapaus. Uskonto kerrotaan
+   * historiallis-kulttuurisena ilmiönä ja kunnioittavasti: temppelit
+   * ovat rakennuksia, reittejä ja kaupunkikuvan maamerkkejä.
+   * Younghusbandin retkikunta 1903–04 on lehden myöhäisin tapahtuma,
+   * ja se kerrotaan päivämäärinä ja kulkuna ilman uhrilukuja,
+   * taistelukuvauksia ja osapuolikehystä (tarkistusraportin osio 4
+   * hyväksyi sen "1873-hengen" aiheeksi).
+   *
+   * NELJÄ KOHTAA, JOISSA LEHTI POIKKEAA FAKTAPOHJASTA, ja miksi:
+   * 1) Faktapohjan nosto K2 sanoi Barkhorin kierroksen vievän "kolme
+   *    neljäsosaa tunnista". Lukua ei ole Barkhor- eikä
+   *    Jokhang-artikkelissa; Jokhang-artikkeli sanoo kierroksen
+   *    vievän "about 20 minutes". Lehti käyttää sitä.
+   * 2) Faktapohja käytti korkeutena "n. 3 600 m" (Lhasa-artikkelin
+   *    leipäteksti). Saman artikkelin infoboksi sanoo 3 656 m,
+   *    säälaatikko 3 649 m ja Chengguanin piiriä koskeva kohta
+   *    3 650 m. Tarkistusraportin osio 1.3 suositteli haarukkaa
+   *    3 650–3 656 m, koska kolme mittaustapaa osuvat yhteen ja
+   *    leipätekstin luku on karkea pyöristys yleisatlaksesta. Lehti
+   *    sanoo "noin 3 650 metriä" (sama luku kuin laudan visassa).
+   * 3) Faktapohjan nosto K1 sanoi Potalaa "maailman korkeimmaksi
+   *    linnoitetuksi palatsiksi". Faktapohja merkitsi sen itse omaksi
+   *    päätelmäkseen eikä Wikipedia-sitaatiksi (osio 7 kohta 5).
+   *    Väite on jätetty pois, ja tilalla ovat rakennuksen omat mitat.
+   * 4) Faktapohjan jakso 3 sanoi voiteestä vain, että siihen
+   *    "sekoitetaan jakinvoita". Butter tea -artikkeli on tarkempi:
+   *    juoma tehdään teestä, jakinvoista, vedestä, tsampasta ja
+   *    suolasta ja sen tiibetinkielinen nimi tarkoittaa kirnuttua
+   *    teetä. Lehti käyttää tarkempaa lähdettä, koska laudan visa
+   *    kysyy juuri tästä juomasta.
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA, jotka koskevat lehden
+   * tekstejä. (a) Jokhangin rakennusvuosi: Lhasa-artikkeli sanoo
+   * kuninkaan rakennuttaneen Jokhangin ja Ramochen vuonna 641,
+   * Jokhang-artikkeli sanoo temppelin vanhimman osan olevan vuodelta
+   * 652. Lehti sanoo "600-luvun puolivälissä" (Moreebin dyyni
+   * -sääntö, maakartat.js). (b) Norbulingkan aloitusvuosi on
+   * artikkelissa sekä 1755 (infoboksi ja valtaosa tekstistä) että
+   * "1740-luvulla" yhdessä lauseessa; lehti käyttää lukua 1755, kuten
+   * faktapohjakin. (c) Shoton-juhlan ajankohta on Lhasa-artikkelissa
+   * "seitsemäs tiibetiläinen kuukausi, heinä–elokuu", Norbulingka-
+   * artikkelissa "elokuun alku" ja juhlan omassa artikkelissa
+   * "5. kuukauden 15.–24. päivä, yleensä elokuun puoliväli". Lehti
+   * sanoo "loppukesällä" eikä lyö päivää lukkoon.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Tiibet (johdanto, intro ja
+   * matkailijalle-kappale), ylängön lempinimi "maailman katto"
+   * (oppaan jakso 2), korkeus noin 3 650 metriä (jakso 2 ja intro),
+   * Potala (nosto K1 ja kansikuva) ja suolainen jakkivoitee (jakso
+   * 3). Historia-sivun minitehtävä kysyy, mitä vanha nimi Rasa
+   * tarkoitti — sitä visa ei kysy, ja vastaus on samalla sivulla
+   * nostossa H1.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu. Potala on
+   * kansikuvassa etelästä koko kalliolla, avauskuvassa alhaalta
+   * portaikkoineen, nostossa K1 Punaisen ja Valkoisen palatsin
+   * rajapintana, matkaoppaan pystykuvassa seinänä alhaalta ja
+   * kohdekartan jutussa Chagporilta nähtynä — viisi eri tiedostoa,
+   * viisi eri etäisyyttä ja kuvakulmaa, ja palatsi on koko lehden
+   * aihe (sama ennakkotapaus kuin Manilan Intramuros, Mekan Jabal
+   * al-Nour ja Xi'anin muuri). Jokhang on avauskuvassa kultaisina
+   * kattoina, nostossa K2 rukousmyllykäytävänä ja kohdekartan jutussa
+   * vuoden 1902 pohjapiirroksena ja munkkien kattopihana. Ramoche on
+   * nostossa H1 julkisivuna ja kohdekartan jutussa kokoussalina.
+   * Norbulingka on nostossa K3 lampipaviljonkina ja kohdekartan
+   * jutussa kesäpalatsin julkisivuna.
+   *
+   * KUVISSA EI OLE TUNNISTETTAVIA KASVOJA. Tämä oli Lhasassa työn
+   * vaikein kohta, koska parhaat Barkhorin ja Jokhangin kuvat on
+   * otettu keskeltä pyhiinvaeltajajoukkoa. Hylättyjä: Barkhorin
+   * katunäkymät (kolme eri kuvaa), Barkhorin suitsutusastia,
+   * Jokhangin aukio illalla, Potalan portaikko ja sisäpiha,
+   * tsampan valmistus teltassa ja moskeijan pääportti — kaikissa
+   * etualalla luettavat kasvot. Tilalle valittiin kuvakulmia, joissa
+   * ihmisiä ei ole lainkaan tai he ovat selin ja kaukana.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi'anin, Varanasin, Kathmandun, Kantonin ja
+   * Manilan malli v965–v983). Talon menetelmä on Open-Meteon arkisto
+   * (ERA5, normaalikausi 1991–2020), mutta rajapinta vastasi tämän
+   * työn ajan pelkällä virheellä "Daily API request limit exceeded.
+   * Please try again tomorrow" — kontin jaetun ulosmenevän osoitteen
+   * vuorokausikiintiö oli käytetty loppuun. Lukuja ei ole otettu
+   * mistään muusta lähteestä, koska vuosigraafin lähderivi lupaa
+   * lukijalle nimenomaan ERA5:n. Matkaoppaan jakso 5 nojaa siksi
+   * en-Wikipedian Lhasa-artikkelin sääruutuun (CMA, mittausasema
+   * 3 649 metrissä, normaalit 1991–2020) ja SANOO SEN ÄÄNEEN. Kun
+   * ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava rivin omista
+   * luvuista. Mittauspiste olisi keskusta 29,65 / 91,12.
+   */
+  lhasa: [
+    {
+      id: 'kaupunki',
+      nimi: 'Lhasa',
+      johdanto: 'Kyichun laakson pohjalla runsaan kolmen ja puolen '
+        + 'kilometrin korkeudessa makaava kaupunki, jonka yllä Potala '
+        + 'kohoaa kalliolta. Kadut kiertyvät Jokhangin ympärille, ja '
+        + 'vanhinta niistä kuljetaan yhä myötäpäivään.',
+      kansikuvat: [
+        {
+          tiedosto: 'Lhasa-Potala-04-Suedseite-2014-gje.jpg',
+          selite: 'Potala etelästä: valkoinen ja punainen palatsi '
+            + 'seisovat kallion päällä, ja niiden juurella kulkee '
+            + 'muuri niityn takana.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Lhasa seen from Drepung Temple.jpg',
+          selite: 'Laakso lännestä Drepungin luostarin katolta: '
+            + 'etualalla kultainen pyörä, takana kaupunki ja sen '
+            + 'ympärillä kiertävät vuorenharjanteet.',
+          lahde: 'GrandCeres, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Lhasa-from-Sera4.JPG',
+          selite: 'Kaupunki pohjoisesta Seran rinteiltä: vasemmalla '
+            + 'Potala kalliollaan, keskellä Chagporin kukkula ja '
+            + 'edessä puiden peittämä laakso.',
+          lahde: 'ignat, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: palatsi, temppeli ja ylänkö — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (vallan kallio, uskonnon sydän, se maasto jonka keskellä
+       * molemmat ovat).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Palacio de Potala - 02.JPG',
+          selite: 'Potala alhaalta: siksakkina nousevat portaikot '
+            + 'kulkevat valkoisen palatsin ohi punaiseen keskusosaan.',
+          lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Jokhang-1235.jpg',
+          selite: 'Jokhangin kullatut katot rukousviirien takaa, ja '
+            + 'alemman harjan päällä seisoo kaksi kultaista kaurista '
+            + 'pyörän molemmin puolin.',
+          lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Lhasa-von Yakhotel-12-beschneite Berge-2014-gje.jpg',
+          selite: 'Lumihuiput nousevat laakson reunalta pilviin, ja '
+            + 'etualalla kulkee kattoterassin kaide.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Talvipalatsi Punaisella kummulla',
+          tiedosto: 'Lhasa-Potala-16-Roter Palast-2014-gje.jpg',
+          teksti: 'Marpo Rilla eli Punaisella kummulla oli seissyt '
+            + 'linna jo 600-luvulta, kun Viides dalai-lama määräsi '
+            + '1645 rakennettavaksi uuden palatsin. Ulkoseinät '
+            + 'nousivat kolmessa vuodessa, mutta sisustus vei '
+            + 'neljäkymmentäviisi vuotta lisää. Dalai-lama muutti '
+            + 'Valkoiseen palatsiin 1649, ja Punainen palatsi nousi '
+            + 'vasta 1690–1694, kaksitoista vuotta hänen kuolemansa '
+            + 'jälkeen. Tuloksena on kolmetoista kerrosta, '
+            + 'yli tuhat huonetta, kymmenentuhatta pyhäkköä ja noin '
+            + 'kaksisataatuhatta patsasta; korkeutta on 119 metriä '
+            + 'kukkulan päältä ja yli kolmesataa laakson pohjalta. '
+            + 'Kaltevat kiviseinät ovat kolmisen metriä paksut, ja '
+            + 'perustuksiin valettiin kuparia järistysten varalta.',
+          selite: 'Punainen palatsi kohoaa valkoisen takaa, ja niiden '
+            + 'rajalla kulkee keltaisin verhoin varjostettu '
+            + 'parvekerivi.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Potala Palace',
+        },
+        {
+          otsikko: 'Jumalten talo ja kaupungin vanhin katu',
+          tiedosto: 'Jokhang prayer wheels in 2007.jpg',
+          teksti: 'Songtsen Gampo rakennutti Jokhangin 600-luvun '
+            + 'puolivälissä majoittamaan buddhapatsasta, jonka hänen '
+            + 'nepalilainen vaimonsa Bhrikuti oli tuonut myötäjäisinään. '
+            + 'Tarinan mukaan kuningas heitti hattunsa eteensä ja lupasi '
+            + 'rakentaa temppelin sinne, minne se putoaisi; hattu putosi '
+            + 'järveen, järvi täytettiin, ja täytön päälle nousi '
+            + 'temppeli. Suunnittelu ja rakentaminen luetaan '
+            + 'nepalilaisten käsityöläisten ansioksi, ja pääportti '
+            + 'osoittaa yhä länteen Nepalia kohti. Temppeliä kiertää '
+            + 'Barkhor, 600-luvulta peräisin oleva kilometrin mittainen '
+            + 'kehäkatu, jota kuljetaan myötäpäivään ja johon kuluu '
+            + 'noin kaksikymmentä minuuttia.',
+          selite: 'Kullattujen rukousmyllyjen rivi jatkuu temppeliä '
+            + 'kiertävässä katetussa käytävässä niin kauas kuin valoa '
+            + 'riittää.',
+          lahde: '段修刚, Wikimedia Commons (PD)',
+          wiki: 'Jokhang',
+        },
+        {
+          otsikko: 'Jalokivipuisto, joka oli ennen joutomaata',
+          tiedosto: 'JARDINES DE NORGBULINKA - panoramio.jpg',
+          teksti: 'Kun Seitsemäs dalai-lama alkoi vuonna 1755 '
+            + 'rakennuttaa kesäasuntoa läntiseen Lhasaan, paikka oli '
+            + 'pensaikkoa ja joutomaata villieläimineen; hän oli tullut '
+            + 'sinne alun perin lähteen takia, jonka veden uskottiin '
+            + 'parantavan. Norbulingka eli Jalokivipuisto valmistui '
+            + '1783 Kahdeksannen dalai-laman aikana ja kasvoi '
+            + 'kolmenkymmenenkuuden hehtaarin puistoksi, Tiibetin '
+            + 'suurimmaksi ihmisen tekemäksi puutarhaksi. Penkeissä '
+            + 'kasvoi ruusuja, samettikukkia ja krysanteemeja, ja '
+            + 'omena-, persikka- ja aprikoosipuita istutettiin, vaikka '
+            + 'hedelmät eivät Lhasassa kypsy. Lammissa ui '
+            + 'riikinkukkoja, ja kolmelle saarelle rakennettiin '
+            + 'paviljongit lyhyiden siltojen päähän.',
+          selite: 'Lampipaviljonki seisoo kivireunuksen päällä, ja sen '
+            + 'edessä on rivi ruukkuihin istutettuja krysanteemeja.',
+          lahde: 'Manuel Velazquez, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Norbulingka',
+        },
+        {
+          otsikko: 'Kolme suurta munkkiyliopistoa',
+          tiedosto: 'Drepung monastery view.jpg',
+          teksti: 'Kaupungin liepeille perustettiin 1400-luvun alussa '
+            + 'kolme gelug-luostaria, joita sanotaan suuriksi: Ganden '
+            + 'vuonna 1409, Drepung 1416 ja Sera 1419. Ne olivat '
+            + 'munkkiyliopistoja. Serassa filosofian opinto-ohjelma '
+            + 'kesti kaksikymmentä vuotta ja päättyi geshe-tutkintoon, '
+            + 'ja oppilaita otettiin kahdeksanvuotiaista '
+            + 'seitsemänkymppisiin asti. Drepung — nimeltään Riisikasa '
+            + '— oli niistä suurin: brittiläinen Freddie Spencer '
+            + 'Chapman kertoi vuosien 1936–37 matkansa jälkeen sen '
+            + 'olleen maailman suurin luostari, jossa asui 7 700 ja '
+            + 'ajoittain jopa kymmenentuhatta munkkia. Ganden seisoo '
+            + 'Wangbur-vuorella 4 300 metrin korkeudessa neljänkymmenen '
+            + 'kilometrin päässä koillisessa.',
+          selite: 'Drepungin valkoiset rakennukset nousevat rinnettä '
+            + 'ylös kuin oma pikkukaupunkinsa vuoren juurella.',
+          lahde: 'Maris Burbergs, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Drepung Monastery',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Lhasa-Potala-60-Aufblick-2014-gje.jpg',
+          selite: 'Potalan valkoinen seinä alhaalta katsottuna: kalteva '
+            + 'muuri kapenee ylöspäin, ja sen harjalla porrastuvat '
+            + 'punaruskeat räystäskerrokset.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Lhasa on Tiibetin autonomisen alueen pääkaupunki ja '
+          + 'Xiningin jälkeen ylängön väkirikkain kaupunkialue, mutta '
+          + 'matkailijan Lhasa on pieni: melkein kaikki on parin '
+          + 'kilometrin nauhalla Kyichun pohjoisrannalla. Lännessä on '
+          + 'Norbulingkan puisto, keskellä Potala kalliollaan ja idässä '
+          + 'Barkhorin kortteli Jokhangin ympärillä. Kolme suurta '
+          + 'luostaria ovat omia retkiään viiden, seitsemän ja '
+          + 'kolmenkymmenenkuuden kilometrin päässä, eivätkä ne siksi '
+          + 'ole tämän sivun kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Lhasa',
+          taitto: 'opas',
+          teksti: 'Yksi kallio, yksi temppeli ja yksi kehäkatu — ja '
+            + 'kaiken yllä ilma, jossa on kolmannes vähemmän happea '
+            + 'kuin merenpinnalla.',
+          nosto: 'Kaupunkia sanotaan aurinkoiseksi kaupungiksi. Aurinko '
+            + 'paistaa lähes kolmetuhatta tuntia vuodessa, ja '
+            + 'marraskuussa se on esillä 84 prosenttia siitä ajasta, '
+            + 'jona se voisi paistaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Junalla Lhasaan on päässyt vasta vuodesta 2006, '
+                + 'jolloin Qinghai–Tiibet-rata avattiin '
+                + 'matkustajaliikenteelle. Se on maailman korkein '
+                + 'rautatie: korkeimmillaan rata kulkee 5 072 metrissä, '
+                + 'ja koska korkeus aiheuttaa matkustajille helposti '
+                + 'vuoristotautia, vaunuihin pumpataan ilmastoinnin '
+                + 'kautta lisähappea ja jokaisella makuupaikalla on oma '
+                + 'happiliitäntänsä. Rata yhdistää Lhasan Qinghain '
+                + 'pääkaupunkiin Xiningiin kahdentuhannen kilometrin '
+                + 'päässä, ja sitä kautta muuhun Kiinaan: asemalle '
+                + 'saapuu ja siltä lähtee viisi junaa päivässä, ja '
+                + 'Pekingistä matka kestää neljäkymmentä tuntia ja '
+                + 'runsaan tunnin päälle. Vuodesta 2014 on ollut myös '
+                + 'rata Šigatseen. Gonggarin lentokenttä rakennettiin '
+                + 'jo 1965 kaupungin eteläpuolelle; sinne meni ennen '
+                + 'yli tunti, mutta vuonna 2011 valmistui moottoritie, '
+                + 'ja nyt matka taittuu puolessa tunnissa. Maanteitse '
+                + 'tullaan koillisesta Xiningin tietä, idästä Chengdun '
+                + 'tietä ja lännestä Nepalin rajalta.',
+              kuva: {
+                tiedosto: 'Z6802 25T train at Lhasa Railway Station.jpg',
+                selite: 'Vihreä-keltainen makuuvaunujuna odottaa '
+                  + 'lähtöä Lhasan aseman laiturilla korkean '
+                  + 'lasikaton alla.',
+                lahde: 'Baycrest, Wikimedia Commons (CC BY-SA 2.5)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Lhasa on keskellä Tiibetin ylänköä, jota '
+                + 'sanotaan maailman katoksi. Ylänkö on maailman '
+                + 'suurin ja korkein: kaksi ja puoli miljoonaa '
+                + 'neliökilometriä, keskikorkeus yli 4 500 metriä, ja '
+                + 'sitä reunustavilla vuoristoilla ovat maailman kaksi '
+                + 'korkeinta huippua. Ylängöltä saavat alkunsa Aasian '
+                + 'kolme pisintä jokea, Keltainenjoki, Jangtse ja '
+                + 'Mekong, ja lännessä Manasarovar-järven tienoilta '
+                + 'lähtee Indus. Kaupunki itse on noin 3 650 metrin '
+                + 'korkeudessa, ympäröivät vuoret nousevat 5 500 '
+                + 'metriin, ja ilmassa on vain 68 prosenttia siitä '
+                + 'hapesta, jota merenpinnalla hengitetään. Eteläosan '
+                + 'halki virtaa Lhasan joki eli Kyichu, jota '
+                + 'paikallisesti sanotaan iloisiksi sinisiksi '
+                + 'aalloiksi: se tulee Nyainqêntanglhan lumihuippujen '
+                + 'rotkoista, kulkee 315 kilometriä ja laskee Yarlung '
+                + 'Tsangpoon Qüxüssä. Keskuskaupunkipiiri on '
+                + 'kahdenkymmenenkahdeksan kilometrin levyinen ja '
+                + 'kolmenkymmenenyhden kilometrin korkuinen, mutta '
+                + 'siitä on rakennettua vain kuusikymmentä '
+                + 'neliökilometriä — loppu on vuorta.',
+              kuva: {
+                tiedosto: 'Dissected alluvial fan and Lhasa River - panoramio.jpg',
+                selite: 'Vuorten juurelta laskeutuu uomien uurtama '
+                  + 'sorakeila, ja sen alla levittäytyvät joen '
+                  + 'vaaleat somerikot.',
+                lahde: 'Raymond M. Coveney, …, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: ohraa, voita ja suolaista teetä',
+              teksti: 'Ohra on Tiibetin tärkein vilja, ja siitä '
+                + 'paahdetaan tsampa: valmiiksi kypsä jauho, jota ei '
+                + 'tarvitse keittää. Juuri siksi se on ollut '
+                + 'paimentolaisten ja matkalaisten ruokaa — jauhot '
+                + 'kulkevat pussissa ja ateria syntyy kulhossa. '
+                + 'Tsampasta tehdään myös puuroa ja keittoa, ja vehnä- '
+                + 'tai ohrataikinasta höyrytetään momo-nyyttejä. '
+                + 'Jogurtti, voi ja juusto kuuluvat arkeen samoin, ja '
+                + 'hyvin tehty jogurtti on arvostuksen kohde. Yleisin '
+                + 'juoma on voitee, jonka tiibetinkielinen nimi '
+                + 'tarkoittaa kirnuttua teetä: teelehdistä, jakinvoista, '
+                + 'vedestä, tsampasta ja suolasta vatkattu suolainen '
+                + 'juoma. Teetä on juotu Tiibetissä 700-luvulta lähtien, '
+                + 'mutta voitee yleistyi vasta 1200-luvulla, ja '
+                + 'nykyään myös lehmänvoi käy, koska sitä saa helpommin.',
+              kuva: {
+                tiedosto: 'Tsampa being blended with yak butter tea.jpg',
+                selite: 'Tummassa kulhossa on kasa vaaleaa ohrajauhoa, '
+                  + 'jota sekoitetaan lusikalla voiteehen puupöydän '
+                  + 'päällä.',
+                lahde: 'Jpatokal, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kolmestatoista osasta yksi valtio',
+              teksti: 'Vuoden 1642 kolmantena kuukautena '
+                + 'mongolipäällikkö Gushri Khan kukisti Tsangin '
+                + 'hallinnon ja luovutti Tiibetin kolmetoista osaa eli '
+                + 'koko maan Viidennelle dalai-lamalle, joka nostettiin '
+                + 'kultaiselle pelottomalle lumileijonan '
+                + 'valtaistuimelle. Hallinto sai nimensä Ganden '
+                + 'Phodrangista, kartanosta Drepungin luostarissa: sen '
+                + 'oli rakennuttanut vuonna 1518 Toinen dalai-lama, ja '
+                + 'siellä dalai-lamat olivat asuneet siihen asti. '
+                + 'Vuonna 1642 hallinnon keskus siirtyi Lhasaan, ja '
+                + 'kaupungista tuli sekä uskonnollinen että '
+                + 'hallinnollinen pääkaupunki. Kolme vuotta myöhemmin '
+                + 'alkoi Potalan rakentaminen — palatsin paikan valitsi '
+                + 'dalai-laman neuvonantaja Konchog Chophel sillä '
+                + 'perusteella, että kallio on tarkalleen Drepungin, '
+                + 'Seran ja vanhankaupungin välissä.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Korkeutensa vuoksi Lhasa on Köppenin '
+                + 'luokituksessa viileä puolikuiva alue, joka on '
+                + 'kolmen ilmastotyypin rajalla: talvet ovat pakkasia '
+                + 'ja kesät leutoja, mutta laakson suoja pitää sään '
+                + 'poissa ääripäistä eikä tuuli yllä sinne kovana. '
+                + 'Kylmin kuukausi on tammikuu keskilämmöltään 0,6 '
+                + 'astetta, lämpimimmät kesä- ja heinäkuu 17,5 '
+                + 'asteella, ja koko vuoden keskiarvo on 9,9 astetta. '
+                + 'Sadetta kertyy 458 millimetriä vuodessa, ja se tulee '
+                + 'lähes kokonaan heinä-, elo- ja syyskuussa: kuivin '
+                + 'kuukausi on joulukuu kolmella kymmenyksellä '
+                + 'millimetriä ja sateisin elokuu 133 millimetrillä. '
+                + 'Kesää pidetään silti parhaana aikana, koska sade '
+                + 'tulee enimmäkseen öisin ja päivät ovat aurinkoisia. '
+                + 'Nämä luvut ovat poikkeuksellisesti en-Wikipedian '
+                + 'oman sääruudun lukuja Lhasan mittausasemalta 3 649 '
+                + 'metristä (normaalit 1991–2020) — lehden vuosigraafin '
+                + 'lähde olisi Open-Meteon ERA5, jota ei tähän saatu.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1792 Tiibet sulkeutui eurooppalaisilta lähes '
+        + 'kokonaan, ja seuraavan sadan vuoden aikana Lhasaan pääsi '
+        + 'vain kourallinen vieraita. Sitä ennen kaupunki oli ollut '
+        + 'valtakunnan pääkaupunki jo tuhat vuotta.',
+      tehtava: {
+        kysymys: 'Mitä Lhasan vanha nimi Rasa tarkoitti?',
+        vaihtoehdot: [
+          'Jumalten paikkaa',
+          'Vuohten paikkaa',
+          'Kolmea vuorta',
+          'Iloisia aaltoja',
+        ],
+        oikea: 1,
+        fakta: 'Vuohia käytettiin tarinan mukaan maansiirtoon temppelin '
+          + 'rakennustyömaalla. Lhasaksi eli jumalten paikaksi kaupunkia '
+          + 'alettiin sanoa vasta kuninkaan kuoleman jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki syntyy kalliolle',
+          tiedosto: 'Lhasa-Ramoche-02-2014-gje.jpg',
+          teksti: '600-luvun puolivälissä Songtsen Gampo nousi Yarlung '
+            + 'Tsangpon laaksossa syntyneen Tiibetin valtakunnan '
+            + 'johtoon. Valloitettuaan Zhangzhungin lännessä hän '
+            + 'siirsi pääkaupunkinsa Yarlungista Rasaan ja '
+            + 'pystytti vuonna 637 ensimmäiset rakennukset Marpo Rin '
+            + 'kukkulalle — samalle kalliolle, jolla Potala nyt seisoo. '
+            + 'Rasa tarkoitti vuohten paikkaa: niitä kerrotaan '
+            + 'käytetyn maansiirtoon temppelin työmaalla. Kuningas nai '
+            + 'vuosina 639 ja 641 nepalilaisen prinsessa Bhrikutin ja '
+            + 'Tang-hovin prinsessa Wenchengin, ja kummankin '
+            + 'myötäjäisinä tuli buddhapatsas: toista varten '
+            + 'rakennettiin Jokhang, toista varten Ramoche. Kuninkaan '
+            + 'kuoltua kaupunkia alettiin sanoa Lhasaksi.',
+          selite: 'Ramochen punainen julkisivu kultaisine '
+            + 'kattokoristeineen, ja katon harjalla seisoo pyörä '
+            + 'kahden kauriin välissä.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lhasa',
+        },
+        {
+          otsikko: 'Kielletty kaupunki',
+          tiedosto: 'The National Geographic Magazine Vol 16 1905 - The Outskirts of Lhasa.jpg',
+          teksti: 'Ensimmäiset eurooppalaiset olivat portugalilaisia '
+            + 'lähetyssaarnaajia, jotka saapuivat Tiibetiin 1624 ja '
+            + 'saivat luvan rakentaa kirkon; heidän seuraajansa '
+            + 'karkotettiin 1745. Vuonna 1792, kun Qing-armeija oli '
+            + 'ajanut gurkhajoukot pois Tiibetistä, maa sulkeutui '
+            + 'ulkopuolisilta lähes kokonaan, ja koko 1800-luvun aikana '
+            + 'vain kolme länsimaalaista pääsi Lhasaan asti. '
+            + 'Englantilainen Thomas Manning sai joulukuussa 1811 '
+            + 'audienssin seitsenvuotiaan Yhdeksännen dalai-laman luona '
+            + 'Potalassa ja odotti lähtölupaa huhtikuuhun 1812. '
+            + 'Ranskalaiset lähetyssaarnaajat Évariste Huc ja Joseph '
+            + 'Gabet saapuivat 29. tammikuuta 1846 ja saivat '
+            + 'lähtökäskyn kuukautta myöhemmin.',
+          selite: 'Vuoden 1901 valokuvassa ohrapellot ulottuvat '
+            + 'kaupungin laidalle asti, ja niiden takaa erottuu '
+            + 'muurien ympäröimä temppelialue vuorten juurella.',
+          lahde: 'Gombojab Tsybikov Ovshe Norzunov, Wikimedia Commons (PD)',
+          wiki: 'History of Tibet',
+        },
+        {
+          otsikko: 'Pyhiinvaeltajaksi pukeutunut mittamies',
+          tiedosto: 'Lhasa map in 1878, Plan of Lhasa by A-K- in his report of 1878, from the book entitled Journey to Lhasa and Central Tibet (page 178 crop).jpg',
+          teksti: 'Vuonna 1865 Britannia aloitti Tiibetin salaisen '
+            + 'kartoituksen. Laillisia tutkimusmatkoja ei sallittu, '
+            + 'joten työhön koulutettiin intialaisia maanmittareita, '
+            + 'jotka ylittivät rajan pyhiinvaeltajiksi tai kauppiaiksi '
+            + 'pukeutuneina; heitä sanottiin panditeiksi. He laskivat '
+            + 'askeleensa matkan mitaksi ja tekivät tähtihavaintonsa '
+            + 'öisin. Kuuluisin heistä, Nain Singh, mittasi Lhasan '
+            + 'pituus- ja leveysasteen sekä korkeuden ja jäljitti '
+            + 'Yarlung Tsangpon kulkua — tiedot, joita Britannia ei '
+            + 'olisi muuten saanut kartoilleen. Näin syntyi myös '
+            + 'kaupungin ensimmäinen tarkka pohjakaava, jossa on '
+            + 'nimettynä kaksikymmentä rakennusta.',
+          selite: 'Vuoden 1878 raporttiin piirretyssä pohjakaavassa '
+            + 'kaupunki on pieni ruutu peltojen keskellä, ja sen '
+            + 'kohteet on numeroitu yhdestä kahteenkymmeneen.',
+          lahde: 'Das, Sarat Chandra, 1849-1917, Wikimedia Commons (PD)',
+          wiki: 'Nain Singh',
+        },
+        {
+          otsikko: 'Ison pelin viimeinen näytös',
+          tiedosto: 'Sketch map of Younghusband expedition to Tibet with date.jpg',
+          teksti: 'Joulukuussa 1903 brittiläisen Intian joukot '
+            + 'ylittivät Tiibetin rajan eversti Francis Younghusbandin '
+            + 'johdolla: yli kolmetuhatta sotilasta ja seitsemäntuhatta '
+            + 'kantajaa ja huoltoväkeä. Syynä oli Intian varakuninkaan '
+            + 'lordi Curzonin pelko siitä, että Venäjä oli saamassa '
+            + 'jalansijaa Tiibetissä burjaattilaisen lamaneuvonantajan '
+            + 'Agvan Dorzhievin kautta. Huonosti varustetut '
+            + 'tiibetiläisjoukot eivät kyenneet pysäyttämään '
+            + 'retkikuntaa, ja se saapui Lhasaan 3. elokuuta 1904 — '
+            + 'kolmastoista dalai-lama oli jo lähtenyt Urgaan eli '
+            + 'nykyiseen Ulan Batoriin. Lhasan sopimus allekirjoitettiin '
+            + 'Potalassa 7. syyskuuta, ja retkikunta lähti paluumatkalle '
+            + 'saman kuun lopulla.',
+          selite: 'Vuoden 1904 karttaan on merkitty punaisella '
+            + 'retkikunnan reitti Darjeelingista Lhasaan ja jokaisen '
+            + 'etapin päivämäärä.',
+          lahde: 'Candler, Edmund (1874-1926), Wikimedia Commons (PD)',
+          wiki: 'British expedition to Tibet',
+        },
+      ],
+    },
+  ],
 };

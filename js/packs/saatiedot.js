@@ -1884,5 +1884,33 @@ export const SAATIEDOT = {
    * ilmatieteen laitos, 1991–2020, ääriarvot vuodesta 1951) ja sanoo
    * sen ääneen. Kun rivi joskus lisätään, jakso on kirjoitettava
    * rivin omista luvuista.
+   *
+   * LHASAN RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Kaupungille
+   * tehtiin samana päivänä alusta asti oma lehti
+   * (kulttuuri-kategoriat.js, maakartat.js, nahtavyysjutut.js,
+   * asia-artikkelit.js), mutta Open-Meteon arkisto (ERA5) vastasi
+   * koko työn ajan 429:llä ja viestillä "Daily API request limit
+   * exceeded. Please try again tomorrow" — kontin jaetun
+   * ulosmenevän osoitteen vuorokausikiintiö oli käytetty loppuun.
+   * Lukuja EI haettu muualta, koska vuosigraafin lähderivi lupaa
+   * lukijalle nimenomaan "Open-Meteo (ERA5), 1991-2020".
+   *
+   * Rivi haetaan yhdellä ajolla, kun kiintiö on vapautunut.
+   * Mittauspiste on keskusta 29,65 / 91,12 (en-Wikipedian
+   * Lhasa-artikkelin koordinaattirajapinnan arvo 29,6539 / 91,1175).
+   * KORKEUS ON HAARUKKA EIKÄ YKSI LUKU: sama artikkeli antaa
+   * leipätekstissä "noin 3 600 m", infoboksissa 3 656 m,
+   * säälaatikossa 3 649 m ja Chengguanin piirille 3 650 m;
+   * tarkistusraportti (docs/aasia-tyoaineisto/tarkistus-lhasa.md
+   * osio 1.3) suositteli kolmea jälkimmäistä, ja lehti sanoo
+   * "noin 3 650 metriä".
+   *
+   * Lhasan lehden oppaan sääjakso ei riipu tästä rivistä: se on
+   * kirjoitettu en-Wikipedian oman sääruudun 1991-2020-normaaleista
+   * (Kiinan ilmatieteen laitos, mittausasema 3 649 metrissä) ja sanoo
+   * sen ääneen. Kun rivi joskus lisätään, jakso on kirjoitettava
+   * rivin omista luvuista. Sama tilanne on Samarkandilla,
+   * Varanasilla, Xi'anilla, Ulan Batorilla, Astanalla, Mandalaylla
+   * ja Jakartalla.
    */
 };
