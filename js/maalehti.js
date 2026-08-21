@@ -530,7 +530,15 @@ export function piirraVinkkilista(ui, kohde, ryhmat) {
  * lippua vaikka data oli kunnossa — omistajan havainto 16.8.2026.
  */
 export function aiheenOtsikko(ui, kategoria) {
-  const nimi = html('h3', 'aihe-nimi', kategoria.nimi);
+  /*
+   * KAKKOSSIVUN OMA NIMI (omistajan tilaus 21.8.2026, vaihtoehto A):
+   * teemasivu saa valinnaisen otsikko-kentän, joka näytetään sivun
+   * otsikkona vakioteeman nimen sijasta — esim. Kioton "Historia"
+   * voi olla "Tuhat vuotta pääkaupunkina". Sivu-id ja nimi säilyvät
+   * ennallaan (visat, kuvakkeet, alapalkki ja Pöllö nojaavat
+   * niihin), joten mikään olemassa oleva ei muutu ilman kenttää.
+   */
+  const nimi = html('h3', 'aihe-nimi', kategoria.otsikko ?? kategoria.nimi);
   // Kehittäjän liitteissä osion valmiusaste värichippinä
   // otsikon perässä (omistajan tilaus 15.8.2026).
   if (kategoria.tagi) {
