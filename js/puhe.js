@@ -288,7 +288,10 @@ let viritetty = false;
  * säätövälilehti voi ohjata sitä; oletus on reilusti yli yhden.
  */
 const VOIMA_AVAIN = 'matkakirja-puhe-voima';
-const VOIMA_OLETUS = 1.6;
+// 2,0 on omistajan 21.8.2026 puhelimella hakema taso ("Talleta nämä
+// samat asetukset kaikkiin lukijakohtiin") — koskee kaikkia
+// persoonia, koska voimakkuus on lukijoiden yhteinen säätö.
+const VOIMA_OLETUS = 2.0;
 const VOIMA_MIN = 0.25;
 const VOIMA_MAX = 2.5;
 
@@ -366,7 +369,14 @@ export function asetaPuheenVoima(arvo) {
  * uusi arvo tarttuu seuraavasta generoitavasta palasta.
  */
 const NOPEUS_AVAIN = 'matkakirja-puhe-nopeus';
-const NOPEUS_OLETUS = 1;
+/*
+ * 1,2 on omistajan 21.8.2026 hakema lukutahti kaikille lukijoille
+ * (pöllö, kertoja, merkinnät — nopeus on yhteinen säätö). HUOM:
+ * poikkeava oletus laajentaa välimuistiavaimet (nopeusTunniste),
+ * joten vanhalla 1,0-nopeudella generoidut palat eivät enää osu —
+ * puhe generoituu uudelleen uudella tahdilla ensikuuntelulla.
+ */
+const NOPEUS_OLETUS = 1.2;
 const NOPEUS_MIN = 0.6;
 const NOPEUS_MAX = 1.6;
 
