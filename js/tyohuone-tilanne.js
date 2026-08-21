@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v978 — YANGON JA MANDALAY: uudet lehdet (Yangon: 9 kohdetta Shwedagonista jokirantaan; Mandalay: 9 kohdetta kukkulalta Mahamuniin, U Bein -silta kannessa). Myanmar-linjaus: ei nykypolitiikkaa; 2025 jaristys rakennusperinnon kautta. HUOM: saarivit puuttuvat viela (Open-Meteon kiintio). Tarkista: molempien kartta ja Matkaopas',
   'v977 — MAAN ETUSIVUN KARTTA ISOMMAKSI: levealla ruudulla kartta mitoittuu nyt kuvasuhteensa mukaan (pystykartta korkeuskattoon, esim. IB 340 px → 419 px leveaksi) ja pitkulainen kartta (esim. Turkki, Itavalta) on taysleveana tekstin ylla kaksipalstaisen paakirjoituksen kera. Kannykkanakyma ennallaan. Tarkista: IB:n ja Turkin etusivu levealla',
   'v976 — KANSIKUVAREMONTTI VALMIS: loput 37 kaupunkia saivat viimeisenkin yksityiskohtakannen tilalle laajan yleiskuvan (mm. lontoo, kairo, berliini, helsinki, moskova, jerusalem, peking, soul, kioto, singapore). Koko pelin kansikarusellit ovat nyt laaja yleiskuva -linjassa. AUKI: neljan lehden karttakansi (riad, tabriz, isfahan, delhi) odottaa omistajan paatosta. Tarkista: pari kantta eri mantereilta',
   'v975 — PERUSTIEDOT ALMANAKAKSI: maalehden kartan alla oleva perustietolohko on nyt faktalaatikko kaksoisviivoin — isompi fontti, pisteviivajohtimet sijoituslukuihin, musteenomaiset mittarit, PERUSTIEDOT- ja HYVAA PAIVAA -otsakkeet; sama asu kaupunkilehden maaosastossa. Tarkista: jonkin maan karttasivu kannykalla ja levealla',
@@ -344,6 +345,8 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'yangon', nimi: 'Yangon', versio: 'v978' },
+    { id: 'mandalay', nimi: 'Mandalay', versio: 'v978' },
     { id: 'astana', nimi: 'Astana', versio: 'v973' },
     { id: 'kanton', nimi: 'Kanton', versio: 'v973' },
     { id: 'kathmandu', nimi: 'Kathmandu', versio: 'v970' },
@@ -367,7 +370,7 @@ export const TUOREET = {
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
   ],
   tyossa: [
-    { id: 'mandalay', nimi: 'Mandalay' },
-    { id: 'yangon', nimi: 'Yangon' },
+    { id: 'taipei', nimi: 'Taipei' },
+    { id: 'hongkong', nimi: 'Hongkong' },
   ],
 };
