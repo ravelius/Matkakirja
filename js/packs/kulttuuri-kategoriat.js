@@ -44772,6 +44772,36 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
         },
       ],
+      /*
+       * ENNEN JA NYT (lisätty 21.8.2026): Jakarta jäi ilman paria
+       * ensimmäisellä kierroksella, mutta matkakirjan valokuvataulussa
+       * (asia-lisat-valokuvat.js, jakarta) pari on nyt valmiina —
+       * tiedostot, vuodet ja lähteet on kopioitu sieltä ja selitteet
+       * kirjoitettu tänne omiksi yhden virkkeen versioikseen. Sama
+       * raatihuone molemmissa: vasemmalla se sulkee hiekkatien pään,
+       * oikealla se seisoo kivetyn kävelyaukion laidalla. Lisenssit
+       * tarkistettu extmetadatasta 21.8.2026 (vanha PD tekijän kuolemasta
+       * kuluneen ajan perusteella, uusi CC BY 4.0), Restrictions tyhjä.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Collectie NMvWereldculturen, RV-A121-1-25, Foto, \'Stadhuis van Batavia met het tramspoor\', fotograaf Woodbury & Page, ca. 1900.jpg',
+          vuosi: 'noin 1900',
+          selite: 'Batavian raatihuone hiekkatien päässä noin vuonna 1900, kun '
+            + 'talo oli siirtomaahallinnon keskus ja sen eteen vievään katuun oli '
+            + 'juuri upotettu raitiotien kisko.',
+          lahde: 'Woodbury & Page / Nationaal Museum van Wereldculturen, '
+            + 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Batavia City Hall (Jakarta History Museum) Fatahillah Square (2025) - img 06.jpg',
+          vuosi: '2025',
+          selite: 'Sama talo nykyään Fatahillahin aukion laidalla: raitiotie ja '
+            + 'hiekkatie ovat poissa, tilalla on kivetty kävelyaukio ja talossa '
+            + 'toimii Jakartan historian museo.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kaupunki, jolla on neljä nimeä',
@@ -45295,6 +45325,37 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vasemmalla, vihertävä kupoli keskellä ja edessä puiden '
             + 'varjostama aukio.',
           lahde: 'patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT (lisätty 21.8.2026): vanha kuva on sama kuin
+       * matkakirjan Manilan valokuvataulussa (asia-lisat-valokuvat.js),
+       * mutta uudeksi valittiin taulun sijaan kadunsuuntainen vuoden
+       * 2023 kuva — se katsoo Escoltaa samaan suuntaan kuin vuoden 1910
+       * vedos, joten pari kertoo muutoksesta eikä vain paikasta.
+       * Vanhan vedoksen alareunassa on kuvaamon nimimerkintä, joka on
+       * siksi selitetty kuvatekstissä. Lisenssit tarkistettu
+       * extmetadatasta 21.8.2026 (vanha PD, Library of Congress; uusi
+       * CC BY-SA 4.0 rinnakkaislisenssinä, Restrictions tyhjä).
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Escolta, Manila, P. I. LCCN2013646443.jpg',
+          vuosi: '1910',
+          selite: 'Escolta-katu vuonna 1910 manilalaisen Photo Supply Co:n '
+            + 'vedoksessa: raitiovaunu tulee kiskoillaan kohti kuvaajaa, ja '
+            + 'kadun molemmin puolin roikkuvat kauppojen, ravintoloiden ja '
+            + 'apteekkien kyltit.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Escolta Street (Binondo, Manila; 04-07-2023).jpg',
+          vuosi: '2023',
+          selite: 'Sama katu samasta suunnasta nykyään: raitiovaunut ovat '
+            + 'poissa ja liike-elämän painopiste siirtynyt kauas muualle, mutta '
+            + 'sotia edeltävät liiketalot seisovat yhä pysäköityjen autojen '
+            + 'takana.',
+          lahde: 'Patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
