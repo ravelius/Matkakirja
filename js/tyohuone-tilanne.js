@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v969 — ULAN BATOR: uusi lehti (kartta 8 kohteella Gandanista Zaisaniin; 27 kuvaa mm. Jugderin 1913 Urga-panoraama). HUOM: saarivi puuttuu viela (Open-Meteon kiintio), oppaan saajakso nojaa Wikipedian saaruutuun sen aaneen sanoen. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v968 — HANOI: uusi lehti (kartta 8 kohteella Hoan Kiemin ymparilla, Long Bienin silta mukana; 26 kuvaa mm. vuoden 1873 kartta ja valtauksen kaiverrus). HUOM: saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: kartta, Matkaopas, Historian tehtava',
   'v967 — KAINALOKUVAT: teemasivujen nostojen ja gallerioiden kuvat ovat nyt oikeassa kainalossa (42 % palstasta, pystykuvat 30 % + korkeuskatto) ja leipateksti juoksee kuvan vierella; kapealla nakymalla kuvat taysleveina kuten ennen. Tarkista: pari teemasivua levealla ja kannykalla (esim. Ateenan Arki ja tavat)',
   'v966 — XI\'AN JA VARANASI: uudet lehdet (Ming-muurikaupungin kartta 9 kohteella; ghatien kartta 8 kohteella + Sarnathin kainalo). KAKKOSSIVU-UUDISTUS: kaupunki-sivun otsikko on nyt "X pintaa syvemmalta" ja teemasivut palasivat kategoriatason otsikoihin (v964:n omat nimet pois). HUOM: molempien saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: molempien kartta ja Matkaopas, parin lehden kakkossivu',
@@ -335,6 +336,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'ulanbator', nimi: 'Ulan Bator', versio: 'v969' },
     { id: 'hanoi', nimi: 'Hanoi', versio: 'v968' },
     { id: 'xian', nimi: 'Xi’an', versio: 'v966' },
     { id: 'varanasi', nimi: 'Varanasi', versio: 'v966' },
@@ -354,7 +356,6 @@ export const TUOREET = {
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
   ],
   tyossa: [
-    { id: 'ulanbator', nimi: 'Ulan Bator' },
     { id: 'kathmandu', nimi: 'Kathmandu' },
   ],
 };

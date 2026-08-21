@@ -111,6 +111,18 @@
 // kolmetoista koskee en-Wikipediassa Shaanxin MAAKUNTAA eikä
 // kaupunkia (ks. kulttuuri-kategoriat.js:n xian-lohkon kommentti).
 // Kiina-linjaus: ei nykypolitiikkaa. Teksti-kenttä on ennallaan.
+//
+// ULAN BATOR (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille
+// tehtiin alusta asti oma lehti (kulttuuri-kategoriat.js,
+// maakartat.js, nahtavyysjutut.js). Jokainen introväite tulee saman
+// erän lehtiteksteistä, jotka on tarkistettu en-Wikipedian
+// raakateksteistä 21.8.2026. Vanha intro sanoi vain, että kaupunki on
+// maailman kylmin pääkaupunki ja että laidoilla asutaan gereissä;
+// uusi kertoo lisäksi sijainnin, väestöosuuden, liikkuvan luostarin
+// vaiheet ja nimihistorian. Näyttönimi on laudan oma "Ulan Bator"
+// (js/packs/asia.js), ei en-Wikipedian "Ulaanbaatar" — Kappadokian
+// ennakkotapaus; nykyasu kerrotaan lehden historia-sivulla. Mongolia-
+// linjaus: ei nykypolitiikkaa. Teksti-kenttä on ennallaan.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -1792,9 +1804,25 @@ export const ASIA_ARTIKKELIT = {
       + 'rakennettu uudelleen 2000-luvulla.',
   },
   'Ulan Bator': {
-    intro: 'Ulaanbaatar on Mongolian pääkaupunki ja maailman kylmin '
-      + 'pääkaupunki. Sen laidoilla asutaan yhä geriteltoissa, joiden '
-      + 'savupiippu nousee keskeltä kattoa.',
+    intro: 'Ulan Bator on Mongolian pääkaupunki ja maan ainoa '
+      + 'suurkaupunki: siellä asuu noin **puolet koko maan väestöstä**. '
+      + 'Kaupunki on Tuul-joen laaksossa noin 1 300 metrin korkeudessa, '
+      + 'ja sitä sanotaan neljän vuoren ympäröimäksi; etelässä kohoaa '
+      + 'metsäinen Bogd Khan -vuori. Vuoden keskilämpötila jää 0,2 '
+      + 'asteeseen, mikä tekee siitä maailman kylmimmän pääkaupungin.'
+      + '\n\n'
+      + 'Kaupunki perustettiin vuonna 1639 huopatelttaluostariksi '
+      + 'nimeltä Örgöö, ja se muutti paikkaa 29 kertaa ennen kuin '
+      + 'asettui nykyiselle sijalleen 1778. Lännessä sitä kutsuttiin '
+      + '**Urgaksi**, ja se oli Venäjän ja Kiinan välisen '
+      + 'karavaanireitin tärkein pysähdyspaikka. Vuonna 1911 siitä tuli '
+      + 'itsenäisen Mongolian pääkaupunki, ja nimi vaihtui 1924 '
+      + 'muotoon Ulaanbaatar, punainen sankari.'
+      + '\n\n'
+      + 'Keskustassa on nykyään neuvostoajan elementtitaloja ja uusia '
+      + 'lasitorneja, mutta kaksi kolmasosaa asukkaista asuu '
+      + 'jurtta-alueilla kaupungin laidoilla. Heinäkuun alussa kaupunki '
+      + 'täyttyy Naadamin painista, ratsastuksesta ja jousiammunnasta.',
     teksti: 'Ulaanbaatar on noin 1 300 metrin korkeudessa vuorten '
       + 'ympäröimässä laaksossa Tuul-joen varrella. Vuoden '
       + 'keskilämpötila jää alle nollan. Talvella laaksoon jää '

@@ -7106,6 +7106,67 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kirjallisuuden temppeli', lat: 21.02861, lon: 105.83556 },
     ],
   },
+  /*
+   * ULAN BATORIN KOHDEKARTTA (21.8.2026). Rajaus on 5,5 × 5,4 km ja
+   * kattaa Tuulin laakson koko kaupunkiytimen; kohteet on numeroitu
+   * pohjoisesta etelään kuten Medinassa, Kiotossa ja Xi'anissa.
+   *
+   * KAIKKI KAHDEKSAN KOORDINAATTIA OVAT en-Wikipediasta (haettu
+   * 21.8.2026), eikä yhtäkään ole haettu Overpassista. Kansallismuseon
+   * koordinaatti on artikkelin infoboksissa valmiiksi desimaaleina,
+   * kansallisstadionin ja rautatieaseman artikkelin lopun
+   * {{Coord}}-mallineessa (kummankaan infoboksin koordinaattikenttä ei
+   * ole täytetty) ja loput viisi infobokseissa.
+   *
+   * KANSALLISSTADION ON KARTALLA, vaikka faktapohja väitti, ettei sen
+   * koordinaattia löydy. Löytyy: artikkelin lopussa on
+   * {{Coord|47|54|7.7|N|106|54|58.5|E}}, sama kuvio kuin
+   * rautatieasemalla. Stadion on 1,9 kilometriä Sükhbaatarin aukiolta
+   * etelään eli keskellä ruutua, ja se on lehden Naadam-noston paikka.
+   *
+   * MANJUSRIN LUOSTARIN RAUNIOT JA BOGD KHAN -VUOREN HUIPPU EIVÄT OLE
+   * KARTALLA. Molemmilla on koordinaatti (Manjusrilla oma artikkeli,
+   * vuorella infoboksi), mutta ne ovat 18 ja 13,8 kilometrin päässä
+   * keskustasta etelässä. Se on kolmesta viiteen kertaa kauempana kuin
+   * yksikään kainalo tässä kartastossa, joten kummallekaan ei tehty
+   * kainaloa (Medinan Uhud-vuoren ratkaisu). Vuori näkyy silti lehden
+   * kuvissa ja kerrotaan oppaassa ja nostoissa.
+   *
+   * ZAISANIN MUISTOMERKKI ON MUKANA MAAMERKKINÄ. Se on 1969–1971
+   * rakennettu neuvostoaikainen muistomerkki eikä 1873-henkinen kohde,
+   * mutta se on kaupungin tunnetuin näköalapaikka ja ruudun eteläisin
+   * kohde. Sen juttu kertoo rakenteen ja näköalan; sotahistoria on
+   * siinä neutraali maininta ilman osapuolikehystä.
+   *
+   * NUMEROYMPYRÖISTÄ KAKSI MENEE OSITTAIN PÄÄLLEKKÄIN, ja se on
+   * hyväksytty: kansallismuseo on 264 metriä Sükhbaatarin aukion
+   * pisteestä pohjoisluoteeseen, koska museo on aukion laidalla.
+   * Peittoaste jää alle puoleen, ja numerot pysyvät luettavina
+   * (Istanbulin, Moskovan ja Bagdadin ennakkotapaus).
+   */
+  ulanbator: {
+    polku: 'assets/kartat/ulanbator-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 47.928, etela: 47.879, lansi: 106.8646, ita: 106.9377 },
+    esittely: 'Kartan alue on Tuul-joen laakso: pohjoisrannalla '
+      + 'kaupungin ydin, etelässä joki ja sen takana Zaisanin kukkula. '
+      + 'Keskellä on Sükhbaatarin aukio, sen laidalla kansallismuseo ja '
+      + 'vähän etelämpänä Choijin Laman temppeli. Luoteessa kohoaa '
+      + 'Gandanin luostarikukkula, lännessä on rautatieasema ja '
+      + 'etelässä kansallisstadion sekä Bogd Khanin talvipalatsi. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Xi'anissa. */
+      { nimi: 'Gandantegchinlenin luostari', lat: 47.92306, lon: 106.895 },
+      { nimi: 'Mongolian kansallismuseo', lat: 47.9208, lon: 106.9154 },
+      { nimi: 'Sükhbaatarin aukio', lat: 47.91889, lon: 106.9175 },
+      { nimi: 'Choijin Laman temppeli', lat: 47.915, lon: 106.91833 },
+      { nimi: 'Rautatieasema', lat: 47.90833, lon: 106.88389 },
+      { nimi: 'Kansallisstadion', lat: 47.90214, lon: 106.91625 },
+      { nimi: 'Bogd Khanin talvipalatsi', lat: 47.8975, lon: 106.90667 },
+      { nimi: 'Zaisanin muistomerkki', lat: 47.88417, lon: 106.91583 },
+    ],
+  },
 };
 
 /*
