@@ -13886,6 +13886,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'rakennukset',
+      otsikko: 'Torni, saari ja merivesi',
       nimi: 'Rakennukset',
       johdanto: 'Dubaissa rakennetaan sitä, mitä ei ole: torni joka on korkeampi '
         + 'kuin mikään ennen, saari jota ei ollut kartalla, ja juomavesi, '
@@ -14277,6 +14278,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'tiede',
+      otsikko: 'Vesi kalliossa ja hiiltynyt kirjasto',
       nimi: 'Tiede ja kivi',
       johdanto: 'Aavikkokaupunki eli vedestä, jota ei ollut: padot ja '
         + 'kourut keräsivät kuurot talteen. Kaivaukset ovat nostaneet '
@@ -14700,6 +14702,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Yathribin keitaasta rautatiekaupungiksi',
       nimi: 'Historia',
       johdanto: 'Kaupunki tunnettiin ennen nimellä Yathrib, ja se oli '
         + 'keidas aavikkoreittien varrella. Siitä kasvoi muurein '
@@ -15187,6 +15190,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Valepukuiset vieraat ja kukkulan linnake',
       nimi: 'Historia',
       johdanto: 'Osmanien hallintokaupunki, jossa moskeijaa korjattiin ja '
         + 'linnoitus vartioi kukkulalta. Samaan aikaan kaksi '
@@ -15573,6 +15577,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Maanalaiset kaupungit ja karavaaniseraalit',
       nimi: 'Historia',
       johdanto: 'Kappadokiassa historia on kaivettu näkyviin. Maan alle '
         + 'mahtui kaupunkeja, joiden ovet suljettiin sisältä päin, ja maan '
@@ -15931,6 +15936,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Savitaulut sortuman alla',
       nimi: 'Historia',
       johdanto: 'Savitaulut kertovat, mitä työstä maksettiin. Aleksanterin '
         + 'joukot polttivat palatsit 330 eKr., ja sama sortuma säilytti '
@@ -16273,6 +16279,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'tiede',
+      otsikko: 'Kaupunki ilman omaa jokea',
       nimi: 'Vesi',
       johdanto: 'Kukkulakaupungilla ei ole omaa jokea. Jokainen pisara on '
         + 'pitänyt hakea lähteestä, ohjata kallioon louhitulla tunnelilla '
@@ -16616,6 +16623,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'maasto',
+      otsikko: 'Graniitista koralliriuttaan',
       nimi: 'Maasto',
       johdanto: 'Punaista graniittia, kallioon louhittuja kaivoksia ja '
         + 'koralliriuttoja saman niemimaan sisällä: Siinain maasto vaihtuu '
@@ -17033,6 +17041,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
+      otsikko: 'Tyhjä neljännes ei ole tyhjä',
       nimi: 'Luonto',
       johdanto: 'Hiekan alta on kaivettu virtahepojen luita, ja hiekan '
         + 'päällä kävelee laji, joka ehdittiin julistaa luonnosta '
@@ -22224,6 +22233,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'ruoka',
+      otsikko: 'Ateria yhdeltä vadilta',
       nimi: 'Ruoka',
       johdanto: 'Qatarilainen ateria tuodaan pöytään yhdellä isolla vadilla, ja '
         + 'sen ympärille kokoonnutaan yhdessä. Kala ostetaan aamun '
@@ -22621,6 +22631,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Puuton tasanko ja kävelykortteli',
       nimi: 'Arki',
       johdanto: 'Nikosia on Mesaorian tasangolla, jonka nimi tarkoittaa vuorten '
         + 'välistä. Tasanko on lähes puuton, ja kaupungin pinta-alasta on '
@@ -23006,6 +23017,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Kesä sisällä, talvi sumussa',
       nimi: 'Arki',
       johdanto: 'Kuwait Cityn arki jakautuu kahtia vuodenajan mukaan: kesällä '
         + 'päivä vietetään sisällä ja talvella aamut alkavat sumusta. '
@@ -23408,6 +23420,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Kahvi, suitsuke ja dishdasha',
       nimi: 'Arki',
       johdanto: 'Omanilaisen miehen juhlapuvussa on kolme osaa, joilla '
         + 'jokaisella on oma nimensä, ja vieraan vastaanotossa on oma '
@@ -23900,6 +23913,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Leveä katu ja teelasi',
       nimi: 'Arki',
       johdanto: 'Bagdadin arki mahtuu kolmeen osoitteeseen: leveään katuun, '
         + 'jonka pylväskäytävät varjostavat kulkijaa, kahvilaan, jossa '
@@ -24285,6 +24299,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Boyoz, kumru ja lautta',
       nimi: 'Arki',
       johdanto: 'İzmirin aamiainen ostetaan kadulta ja syödään seisaaltaan, ja '
         + 'päivän mittaan tartutaan sämpylään, jota muualla ei myydä '
@@ -24683,6 +24698,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Metro, pavut ja kutojien mäki',
       nimi: 'Arki',
       johdanto: 'Ankaralainen kulkee töihin maan alla, syö lounaaksi '
         + 'lautasellisen pilahvia ja ostaa kuivatut hedelmänsä samasta '
@@ -25119,6 +25135,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Pippuri, pähkinä ja granaattiomena',
       nimi: 'Arki ja keittiö',
       johdanto: 'Aleppon keittiö nojaa kolmeen ainekseen: kaupungin omaan '
         + 'pippuriin, saksanpähkinään ja granaattiomenasiirappiin. Kaikki '
@@ -25540,6 +25557,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Umpipiha, hammam ja aprikoosilevy',
       nimi: 'Arki ja tavat',
       johdanto: 'Damaskoslainen talo kääntää selkänsä kadulle: ovi vie '
         + 'umpipihalle, jossa on allas ja hedelmäpuita. Saman korttelin '
@@ -25926,6 +25944,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Lautta, hevosvaunu ja kapearaide',
       nimi: 'Arki ja kulkeminen',
       johdanto: 'Luxorissa kuljetaan joen yli lautalla tai moottoriveneellä, '
         + 'kaduilla nelipyöräisillä hevosvaunuilla ja peltojen poikki '
@@ -26321,6 +26340,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Metro ilman kuljettajaa',
       nimi: 'Arki ja metro',
       johdanto: 'Riadin metrossa junat kulkevat ilman kuljettajaa. Verkko '
         + 'avattiin osissa joulukuun 2024 ja tammikuun 2025 välillä, ja '
@@ -26722,6 +26742,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
+      otsikko: 'Sahandin ja Eynalin välissä',
       nimi: 'Luonto ja talvi',
       johdanto: 'Tabriz on Quru-joen laaksossa 1 350–1 600 metrin korkeudella '
         + 'merenpinnasta, ja laaksoa reunustavat tulivuorenkartioiden '
@@ -27217,6 +27238,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Chelow kabab ja tahdig',
       nimi: 'Arki ja ruokapöytä',
       johdanto: 'Iranin kansallisruokana pidetään chelow kababia, ja '
         + 'Encyclopaedia Iranican mukaan yhdistelmä syntyi '
@@ -27631,6 +27653,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'taide',
+      otsikko: 'Uuden Julfan maalattu katedraali',
       nimi: 'Taide ja kirjapaino',
       johdanto: 'Isfahanin taide ei ole pelkkää shaahin hovin työtä: osa '
         + 'siitä syntyi joen eteläpuolella, armenialaisten omassa '
@@ -28056,6 +28079,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Korttelin moskeija, kylpylä ja puutarha',
       nimi: 'Arki ja korttelit',
       johdanto: 'Vanhakaupunki jakautui kortteleihin, joissa jokaisessa oli '
         + 'moskeija, kylpylä ja puutarha. Sama vesi käytettiin kahdesti, '
@@ -28487,6 +28511,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'meri',
+      otsikko: 'Hiiliasema Bab el-Mandebin varrella',
       nimi: 'Meri ja satama',
       johdanto: 'Adenin satama on yksi maailman suurimmista luonnonsatamista, '
         + 'ja siitä on Bab el-Mandebin salmelle 170 kilometriä. '
@@ -28863,6 +28888,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'kauppa',
+      otsikko: 'Hartsi, joka rakensi rannikon',
       nimi: 'Kauppa ja suitsuke',
       johdanto: 'Dhofar on suitsukepuun kotiseutua, ja koko rannikon vauraus '
         + 'rakentui yhden hartsin varaan. Puu kasvaa kalliossa, jyvät '
@@ -29319,6 +29345,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'kasityo',
+      otsikko: 'Messinkiin upotettu hopea',
       nimi: 'Käsityö ja metalli',
       johdanto: '1200-luvun Mosulissa messinkiastioiden kuviot upotettiin '
         + 'pintaan toisella metallilla. Kaikista keskiajan islamilaisista '
@@ -29726,6 +29753,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Chang’anin perilliset ja Kielletty kaupunki',
       nimi: 'Historia',
       johdanto: 'Kaupunki on ollut Yanjing, Zhongdu, Dadu, Beiping ja '
         + 'Peking, ennen kuin siitä tuli Beijing. Joka nimenvaihdos '
@@ -30163,6 +30191,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Seitsemän kaupungin kerrostuma',
       nimi: 'Historia',
       johdanto: 'Ennen Punaista linnoitusta paikalla seisoi kuusi muuta '
         + 'kaupunkia, legendoista ensimmäisenä Indraprastha. Sulttaanit '
@@ -30776,6 +30805,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
+      otsikko: 'Puuta, paperia ja kylpylän piippu',
       nimi: 'Arki ja alakaupunki',
       johdanto: 'Alakaupungin talot olivat puuta ja paperia. Sen arkeen kuului '
         + 'kolme laitosta: kylpylä, jonka piippu näkyy kauas, palokunta, '
@@ -31348,6 +31378,7 @@ export const KULTTUURI_KATEGORIAT = {
      */
     {
       id: 'arki',
+      otsikko: 'Ilta ei lopu illalliseen',
       nimi: 'Arki ja ilta',
       johdanto: 'Soulin ilta ei lopu illalliseen: kadulle nousee '
         + 'telttakoju, kylpylä on auki läpi yön, ja pelihallissa '
@@ -31893,6 +31924,7 @@ export const KULTTUURI_KATEGORIAT = {
      */
     {
       id: 'arki',
+      otsikko: 'Avioliittotori ja oma kieli',
       nimi: 'Arki',
       johdanto: 'Shanghain arki alkaa kadunkulmasta, jossa aamiainen '
         + 'kääritään riisiin. Viikonloppuna puistossa vanhemmat '
@@ -32767,6 +32799,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Šigirin hahmo ja ensimmäinen kulta',
       nimi: 'Historia',
       johdanto: 'Kaupungin museossa seisoo lasikaapissa yli yksitoistatuhatta '
         + 'vuotta vanha lehtikuusesta veistetty hahmo, ja kaupungin '
@@ -33112,6 +33145,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Rautatiesilta ja metsän tiedekaupunki',
       nimi: 'Historia',
       johdanto: 'Kaupungin vanha nimi oli Novonikolajevsk ja sen '
         + 'rautatieaseman nimi pelkkä Ob. Vuonna 1957 kaupungin eteläpuolen '
@@ -33467,6 +33501,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
+      otsikko: 'Maailman vanhin järvi',
       nimi: 'Baikal',
       johdanto: 'Kaupungista 72 kilometriä ylävirtaan Angara lähtee '
         + 'Baikalista ainoana jokena, vaikka järveen laskee jopa 330 jokea. '
@@ -33858,6 +33893,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
+      otsikko: 'Jäässä kahdensadan metrin syvyyteen',
       nimi: 'Ikirouta',
       johdanto: 'Kaupungin alla maa on jäässä yli kahdensadan metrin '
         + 'syvyyteen, ja ikiroudasta nousee mammutinluuta. Ylävirtaan päin '
@@ -34258,6 +34294,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
+      otsikko: 'Kymmenen miljoonaa merilintua',
       nimi: 'Ohotanmeri',
       johdanto: 'Magadanin luonnonsuojelualue perustettiin 1982, ja sen 883 '
         + '817 hehtaaria on jaettu neljään palaan, joiden väli on satoja '
@@ -34630,6 +34667,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
+      otsikko: 'Satoja tulivuoria tulirenkaan reunalla',
       nimi: 'Tulivuoret',
       johdanto: 'Kamtšatkalla on satoja tulivuoria, ja niistä yli '
         + 'kaksikymmentä on toimivia. Niemimaa kuuluu Tyynenmeren '
@@ -34988,6 +35026,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Pakkotyösiirtola ja Tšehovin kortistokortit',
       nimi: 'Historia',
       johdanto: 'Sahalin oli vuodesta 1869 vuoteen 1906 Venäjän '
         + 'pakkotyösiirtola, ja saaren eteläpuolisko kuului välillä '
@@ -35368,6 +35407,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
+      otsikko: 'Tiikerin metsä ja Dersu Uzala',
       nimi: 'Ussurin taiga',
       johdanto: 'Vladivostokin takamailla alkaa metsä, jossa pohjoisen '
         + 'havupuut ja etelän köynnökset kasvavat samassa rinteessä. Sen '
@@ -35794,6 +35834,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Kuninkaiden uusi pääkaupunki',
       nimi: 'Historia',
       johdanto: 'Kuningas Chulalongkorn nousi valtaistuimelle 1868, viisi '
         + 'vuotta ennen isoisän matkaa. Hänen kaudellaan Siam sai '
@@ -36268,6 +36309,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Tuhat vuotta pääkaupunkina',
       nimi: 'Historia',
       johdanto: 'Kioton historia alkaa yhdestä päätöksestä: vuonna '
         + '794 keisari Kanmu jätti Naran ja rakennutti uuden '
@@ -36764,6 +36806,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
+      otsikko: 'Vapaasatama Malakan salmessa',
       nimi: 'Historia',
       johdanto: 'Kaupunki suunniteltiin kerralla vuonna 1822, ja '
         + 'jokainen kansanryhmä sai oman alueensa. Niiden temppelit, '
