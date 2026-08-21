@@ -2367,6 +2367,59 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  yangon: {
+    /*
+     * SHWEDAGONIN KUKKULALTA JOEN RANTAAN (21.8.2026). Ruutu on
+     * 6,5 × 5,5 km, ja siihen mahtuvat lehden kaikki yhdeksän
+     * kohdetta: pohjoisessa Chaukhtatgyin makaava Buddha, keskellä
+     * Shwedagon-pagodi kukkulallaan ja Kandawgyi-järvi, alempana
+     * ruutukaavakeskusta rautatieasemineen ja Sule-pagodeineen ja
+     * etelässä joen rannassa Sihteeristö, Strand-hotelli ja
+     * Botataung-pagodi.
+     *
+     * RUUTU ON HIEMAN PYSTY (1600 × 1806 px), ja se on mitattu
+     * päätös. Kohteet ovat luonnostaan 3,4 × 2,4 kilometrin nauha,
+     * joka kulkee kukkulalta joelle; tiukka rajaus olisi jättänyt
+     * kuvan reunoiksi juuri ne kaksi vesirajaa, jotka lehden koko
+     * kertoma perustuu — Yangon-joki etelässä ja lännessä sekä
+     * Pazundaung-puro idässä, Alexander Fraserin ruutukaavan rajat.
+     * Nyt molemmat piirtyvät reunanauhoina eivätkä kuvan reunana, ja
+     * eteläpuolelta näkyy runsas kilometri Dalan puolta.
+     *
+     * ETELÄREUNA ON VÄLJÄ TARKOITUKSELLA (Kanton ja Kööpenhamina).
+     * Botataung on kartan alalaidan kohde, ja jos joki olisi jäänyt
+     * alareunaksi, sen jokiranta olisi katkennut kesken. Samalla
+     * eteläreuna pysyy kaukana lehden mittakaavajanasta vasemmassa
+     * alakulmassa, joka Kööpenhaminassa jäi numeroympyrän alle.
+     *
+     * YANGONIN YLIOPISTO JÄI POIS EIKÄ KAINALOON, vaikka se on
+     * lehden aihe. Se on en-Wikipedian koordinaatista (16,8300 /
+     * 96,1350) laskien 3,9 kilometriä pohjoisluoteeseen
+     * Shwedagonista ja Inya-järven rannassa vielä kauempana; ruutu
+     * olisi pitänyt venyttää 1600 × 2400 pikseliin, mikä on
+     * Varanasin (1600 × 1595) ja Isfahanin (1600 × 1983) mittojen
+     * ulkopuolella. Yliopisto ja Inya-järvi kerrotaan matkaoppaassa
+     * (Medinan Uhud-vuoren ratkaisu).
+     *
+     * KARAWEIK EI OLE OMANA PISTEENÄÄN. Kandawgyi-järven itärannan
+     * kultainen lautta on en-Wikipedian koordinaateista laskien vain
+     * 360 metrin päässä järven pisteestä, ja kaksi numeroympyrää
+     * olisi mennyt päällekkäin (Petran, Mekan ja Singaporen oppi).
+     * Karaweik kerrotaan järven omassa jutussa, ja järven kuva on
+     * juuri se lautta.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kathmandussa ja Kantonissa: Shwedagonin portaat ja
+     * pagodin terassit, Kandawgyin puistopolut ja ruutukaavan
+     * numeroitujen katujen väliset kujat ovat OSM:ssä jalankulku-
+     * alueita ja huoltoteitä, ja ilman lippuja kartan tihein osa
+     * jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 16.8165, etela: 16.758, lansi: 96.135, ita: 96.1869 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*

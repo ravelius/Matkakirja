@@ -40796,4 +40796,550 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * YANGON (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kohdekarttaa, nähtävyysjuttuja, kategorioita eikä
+   * säätietoja ennen tätä, ja asia-artikkelit.js:n merkinnän intro
+   * on kirjoitettu uudelleen samassa erässä. Faktat on tarkistettu
+   * en-Wikipedian raakateksteistä (action=raw, haettu 21.8.2026):
+   * Yangon, Shwedagon Pagoda, Sule Pagoda, Botataung Pagoda,
+   * Chaukhtatgyi Buddha Temple, Ministers' Building, Strand Hotel,
+   * University of Yangon, Yangon Central railway station, Kandawgyi
+   * Lake, Inya Lake, Karaweik, Bogyoke Market, Mohinga, Yangon River
+   * ja Irrawaddy Delta. Pohjana ovat docs/aasia-tyoaineisto/
+   * faktapohja-yangon.md ja tarkistus-yangon.md, jotka luettiin
+   * yhdessä; tarkistuksen korjaukset on tehty (koordinaatit ovat
+   * maakartat.js:n yangon-lohkossa).
+   *
+   * MYANMAR-LINJAUS on Fablen ohje (spec-asia.md, "Herkkien
+   * kohteiden linjaukset") ja tämän työn erillinen tarkennus: EI
+   * nykypolitiikkaa eikä nykysotaa. Vuoden 1873 matkapäiväkirjan
+   * näkökulmasta Yangon on pyhien pagodien ja brittiläisen
+   * ruutukaavakaupungin Rangoon, ja lehti pysyy siinä. POIS
+   * JÄTETTY KOKONAAN: vuoden 2021 vallankaappaus, sen jälkeiset
+   * mielenosoitukset ja sisällissota, vuosien 1974, 1988 ja 2007
+   * levottomuudet, vuoden 1962 jälkeinen eristäytymiskausi,
+   * vuoden 1947 salamurha Sihteeristössä, vuoden 2005 pommi-isku,
+   * nykyisen hallinnon tiedotusvälineiden ja internetin
+   * rajoitukset sekä yliopistojen sulkemiset. Kolonialistinen
+   * kausi kerrotaan kaupunkihistoriana ilman osapuolikehystä:
+   * valloitukset ovat vuosilukuja, kaavoitus ja rakennuskanta ovat
+   * lehden aihe. Toisen maailmansodan tuhot ovat mukana vain
+   * siltä osin kuin lukija tarvitsee niitä ymmärtääkseen, miksi
+   * kaksi kaupungin maamerkkiä on rakennettu uudelleen vasta
+   * 1948–1954 (linjausmuutos 20.8.2026); uhrilukuja tai
+   * taistelukuvauksia ei ole. Uskonto on arkkitehtuuria,
+   * legendaa ja perinnettä: Shwedagon kerrotaan mittojen,
+   * kullan, kellojen ja kahdeksan päivän viikon kautta.
+   * NAYPYIDAW-SIIRTO 2005 on mukana yhtenä neutraalina
+   * tosiasiana matkailijalle-kappaleessa, koska pelin oma
+   * kulttuurivisa kysyy sitä; sitä ei politisoida eikä siitä tehdä
+   * nostoa (faktapohjan oma suositus, osio 7).
+   *
+   * KAKSI WIKIPEDIAN SISÄISTÄ RISTIRIITAA, jotka koskevat lehden
+   * tekstejä.
+   * 1) Shwedagonin korkeus merenpinnasta on Shwedagon Pagoda
+   *    -artikkelissa 170 metriä ja Yangon-artikkelissa "noin 160
+   *    metriä". Ero syntyy Singuttaran kukkulasta, joka on
+   *    Shwedagon-artikkelin alaviitteessä 51 metriä korkea mutta
+   *    toisen siinä mainitun lähteen mukaan 58 metriä merenpinnan
+   *    yläpuolella. Lehti kertoo vain ne luvut, joista artikkelit
+   *    ovat samaa mieltä: stupa 99 metriä ilman hti-kruunua,
+   *    kukkula 51 metriä ja kaavoituksen yläraja 127 metriä
+   *    merenpinnasta. Kokonaiskorkeutta lehti ei sano lainkaan,
+   *    jolloin kumpikaan luku ei jää vastaan sanomaan (Moreebin
+   *    dyyni -sääntö, maakartat.js).
+   * 2) Pääkaupunkiaseman päättymisvuosi on Yangon-artikkelissa
+   *    kaksi lukua peräkkäin: kaupunki oli pääkaupunki "vuoteen
+   *    2005" ja toimi sellaisena "vuoteen 2006", kun hallinto
+   *    siirtyi Naypyidawiin. Pelin oma kulttuurivisa
+   *    (asia-questions.js) käyttää molempia. Lehti kirjoittaa
+   *    eron auki: päätös tehtiin marraskuussa 2005 ja muutto
+   *    tapahtui seuraavana vuonna.
+   *
+   * KOLME KOHTAA, JOISSA LEHTI POIKKEAA FAKTAPOHJASTA, ja miksi:
+   * 1) Faktapohjan nosto H2 oli Sule-pagodin legenda. Sule on
+   *    tässä lehdessä kohdekartan oma juttu, ja historia-sivun
+   *    toiseksi nostoksi valittiin kaupungin nimihistoria
+   *    (Alaungpaya 1755, Dagon, Yangon, Rangoon), jota
+   *    faktapohja ei ehdottanut nostoksi lainkaan. Syy on
+   *    minitehtävä: sen vastauksen pitää löytyä samalta sivulta,
+   *    eikä se saa toistaa kulttuurivisaa.
+   * 2) Faktapohjan nosto K4 oli pelkkä korkeussääntö. Lehdessä
+   *    korkeussääntö on nostossa K2 muiden mittojen kanssa, ja K4
+   *    kertoo pagodille nousemisen: neljät portaat, chinthe-parit,
+   *    myötäpäiväinen kierros ja kahdeksan planeettapistettä.
+   *    Perustelu on sisältölinjaus — uskonto kerrotaan perinteen
+   *    ja arkkitehtuurin kautta, ja tämä on lehden ainoa kohta,
+   *    jossa pagodilla oikeasti liikutaan.
+   * 3) Faktapohjan opasjaksot 1–5 olivat kaikki historiaa.
+   *    Matkaopas on linjauksen mukaan nykytietoa (20.8.2026), joten
+   *    jaksot ovat liikenne, alueen rakenne, mohinga, ruutukaavan
+   *    katujärjestys ja sää; historia on nostoissa ja kartan
+   *    jutuissa.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Myanmar (matkailijalle-
+   * kappale ja asia-artikkelit.js:n intro), Shwedagon (johdanto,
+   * kansikuva, nostot K2–K4), mohinga eli nuudelikeitto aamiaisena
+   * (oppaan jakso 3), Irrawaddyn suisto (johdanto ja oppaan jakso
+   * 2) ja pääkaupunkiasema vuoteen 2005/2006 (matkailijalle-
+   * kappale). Historia-sivun minitehtävä kysyy nimen Yangon
+   * merkitystä, jota visa ei kysy, ja vastaus on samalla sivulla
+   * nostossa H2.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu. Shwedagon on
+   * lehdessä viidessä kuvassa (kansikuvan siluetti auringon-
+   * noususta, avauskuvan stupa salien takaa, noston K2 telineissä
+   * oleva kultapinta, noston K3 pronssikello ja noston K4
+   * chinthe-leijona portaiden suulla) ja kohdekartan jutussa
+   * Linnaeus Tripen vuoden 1855 valokuvana. Pagodi on koko lehden
+   * syy: se on kaupunkia vanhempi, se määrää rakennusten
+   * korkeuden, ja sen ympärillä ovat kaupungin parhaat puistot.
+   * Sama ennakkotapaus kuin Mekan Jabal al-Nour, Xi’anin muuri ja
+   * Kantonin Shamian. Botataung on kolmesti (avauskuvan stupa,
+   * noston H3 kuva ei ole pagodista vaan sen sisältä, ja kartan
+   * jutun reliikkipyhäkkö) — kaksi kolmesta on sisäkuvaa, koska
+   * pagodin koko erikoisuus on se, että siitä pääsee sisään.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi’anin, Varanasin, Kathmandun ja Kantonin
+   * malli v965–v973). Talon menetelmä on Open-Meteon arkisto (ERA5,
+   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn
+   * ajan pelkällä viestillä ”Daily API request limit exceeded.
+   * Please try again tomorrow” — kontin jaetun ulosmenevän
+   * osoitteen vuorokausikiintiö oli käytetty loppuun, eikä se
+   * nollaudu ennen UTC-vuorokauden vaihdetta. Kokeiltu työn alussa
+   * ja lopussa, sama vastaus kummallakin kerralla. Lukuja ei ole
+   * otettu mistään muusta lähteestä, koska vuosigraafin lähderivi
+   * lupaa lukijalle nimenomaan ERA5:n; ilman riviä lehti näkyy
+   * ilman säätä, kuten saatiedot.js:n alkukommentti lupaa.
+   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian Yangon-artikkelin
+   * sääruutuun (Maailman ilmatieteen järjestön normaalit
+   * 1991–2020, Kaba Ayen mittausasema), ja jakso sanoo sen ääneen.
+   * Kun ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava rivin
+   * omista luvuista. Mittauspiste olisi keskusta 16,80 / 96,15.
+   */
+  yangon: [
+    {
+      id: 'kaupunki',
+      nimi: 'Yangon',
+      johdanto: 'Jokisatama Irrawaddyn suiston reunalla, jonka yllä '
+        + 'hohtaa kullattu Shwedagon-pagodi. Britit mittasivat '
+        + '1850-luvulla suistomaalle ruutukaavan, ja sen numeroidut '
+        + 'kadut ovat yhä keskustan runko.',
+      kansikuvat: [
+        {
+          tiedosto: 'Sunrise of Yangon.jpg',
+          selite: 'Auringonnousu kaupungin yllä: Shwedagon-pagodin '
+            + 'siluetti erottuu matalien kattojen takaa '
+            + 'taivaanrannassa.',
+          lahde: 'Yarzaryeni, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Yangon Port.jpg',
+          selite: 'Yangon-joki kaupungin kohdalla: rahtilaivoja '
+            + 'laiturissa punakattoisten varastojen edessä, ja '
+            + 'etualalla lipuu pitkä puuvene.',
+          lahde: 'Milei.vencel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Central Business District 04.jpg',
+          selite: 'Sule-pagodin kullattu stupa päättää keskustan '
+            + 'valtakadun, jonka reunoilla ovat siirtomaa-ajan talot '
+            + 'ja kaupungintalon kellotorni.',
+          lahde: 'Go-Myanmar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme pagodia siinä järjestyksessä, jossa lehti
+       * ne kertoo — kukkulan Shwedagon, ruutukaavan keskipisteenä
+       * oleva Sule ja jokirannan Botataung. Kaikki kolme ovat
+       * kohdekartalla, ja kaikkien kolmen legendaarinen ikä ylittää
+       * kaksituhatta vuotta.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Yangon - Shwedagon Pagoda 03.jpg',
+          selite: 'Shwedagonin kullattu stupa nousee kultakoristeisten '
+            + 'pyhäkkösalien kattojen takaa.',
+          lahde: 'Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: '2016 Rangun, Pagoda Sule (01).jpg',
+          selite: 'Sule-pagodin kultainen kärki kohoaa niiden pienten '
+            + 'myymälöiden yltä, jotka kiertävät pagodin jalustaa '
+            + 'liikenneympyrän keskellä.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2016 Rangun, Pagoda Botahtaung (52).jpg',
+          selite: 'Botataung-pagodin kultainen stupa marmoritasanteen '
+            + 'keskellä kirkkaan sinistä taivasta vasten.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Ruutukaava suistomaalle',
+          tiedosto: 'Rangoon Harbour.jpg',
+          teksti: 'Toisen Englanti–Burma-sodan jälkeen vuonna 1852 '
+            + 'britit ottivat haltuunsa Yangonin ja koko Ala-Burman ja '
+            + 'tekivät kaupungista alueensa kaupallisen ja '
+            + 'hallinnollisen keskuksen — pääkaupunki siirrettiin '
+            + 'sinne Moulmeinista, nykyisestä Mawlamyinesta. Armeijan '
+            + 'insinööri, luutnantti Alexander Fraser, mittasi '
+            + 'suistomaalle uuden kaupungin ruutukaavaan: rajoina '
+            + 'olivat idässä Pazundaung-puro ja etelässä ja lännessä '
+            + 'Yangon-joki. Kolmannen sodan jälkeen 1885 Rangoonista '
+            + 'tuli koko brittihallitun Burman pääkaupunki, ja '
+            + '1890-luvulla kasvava kauppa synnytti vauraita '
+            + 'esikaupunkeja Kandawgyi- ja Inya-järvien pohjoispuolelle.',
+          selite: '1800-luvun lopun valokuva satamasta: purjelaivoja ja '
+            + 'höyrylaiva laiturissa, ja rannalla lastivenerivi '
+            + 'palmujen alla.',
+          lahde: 'Probably Philip Adolphe Klier, Wikimedia Commons (PD)',
+          wiki: 'Yangon',
+        },
+        {
+          otsikko: 'Kultainen pagodi kaupungin yllä',
+          tiedosto: 'Shwedagon Pagoda, Golden stupa, Yangon, Myanmar.jpg',
+          teksti: 'Legendan mukaan Shwedagon rakennettiin yli 2 500 '
+            + 'vuotta sitten, Buddhan vielä eläessä, kahdeksan '
+            + 'hiussäikeen ympärille, jotka hän antoi '
+            + 'kauppiasveljeksille Tapussalle ja Bhallikalle. Stupa '
+            + 'seisoo 51 metriä korkealla Singuttaran kukkulalla ja on '
+            + 'itse yhdeksänkymmentäyhdeksän metriä korkea ilman '
+            + 'kruunuaan. Kruunussa on 5 448 timanttia ja 2 317 '
+            + 'rubiinia, ja aivan kärjessä on 76 karaatin timantti. '
+            + 'Kaupungin kaavoitussääntö rajaa rakennusten korkeuden '
+            + '127 metriin merenpinnasta eli kolmeen neljäsosaan '
+            + 'pagodin korkeudesta — siksi Yangonissa ei ole '
+            + 'pilvenpiirtäjiä toisin kuin muissa Aasian '
+            + 'suurkaupungeissa.',
+          selite: 'Stupan alaosa hohtaa kultalevyillä, ja yläosaa '
+            + 'kiertää bambuteline kultauksen uusimista varten.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Shwedagon Pagoda',
+        },
+        {
+          otsikko: 'Kello, joka nostettiin bambulla',
+          tiedosto: 'Yangon - Shwedagon Pagode 0017.JPG',
+          teksti: 'Britit nousivat maihin 11. toukokuuta 1824, '
+            + 'ottivat Shwedagonin haltuunsa ja pitivät sitä '
+            + 'linnoituksenaan kaksi vuotta; yksi upseeri kaivoi '
+            + 'tunnelin stupan sisään tutkiakseen, kelpaisiko se '
+            + 'ruutivarastoksi. Samalla vietiin kahdenkymmenenkolmen '
+            + 'tonnin pronssikello, joka oli valettu 1779 kuningas '
+            + 'Singun lahjoituksena. Sen piti päätyä Kalkuttaan, mutta '
+            + 'se putosi jokeen. Kun britit luovuttivat, paikalliset '
+            + 'tarjoutuivat nostamaan sen ja sitoivat kellon alle '
+            + 'satoja bambupaaluja, jotka kelluttivat sen pintaan. '
+            + 'Kello on yhä pagodilla omassa paviljongissaan.',
+          selite: 'Suuri pronssikello riippuu kaiverretun tiikkikaton '
+            + 'alla kultaisten pylväiden välissä, ja sen yläpuolella '
+            + 'kaartuu kaksi naga-käärmettä.',
+          lahde: 'Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Shwedagon Pagoda',
+        },
+        {
+          otsikko: 'Kahdeksan päivän viikko',
+          tiedosto: '2016 Rangun, Pagoda Szwedagon (004).jpg',
+          teksti: 'Kukkulalle nousee neljät portaat, ja jokaisen suulla '
+            + 'istuu pari jättimäistä chinthe-leijonaa. Itäisillä ja '
+            + 'eteläisillä portailla myydään kynttilöitä, kultalehteä, '
+            + 'suitsuketikkuja, rukouslippuja ja kukkia, jotka viedään '
+            + 'ylös lahjaksi. Terassilla kierretään myötäpäivään, ja '
+            + 'kierroksen varrella on kahdeksan planeettapistettä — '
+            + 'burmalaisessa kalenterissa viikossa on kahdeksan '
+            + 'päivää, sillä keskiviikko jakautuu kahtia kello kuudelta '
+            + 'illalla. Jokaisella päivällä on eläimensä: sunnuntailla '
+            + 'garuda, maanantailla tiikeri, tiistailla leijona, '
+            + 'torstailla hiiri, perjantailla marsu ja lauantailla '
+            + 'naga. Syntymäpäivänsä pisteellä kaadetaan vettä Buddhan '
+            + 'kuvan päälle.',
+          selite: 'Valkoinen chinthe-leijona vartioi portaiden suuta '
+            + 'kultakattoisen salin edessä, ja oikealla siintää '
+            + 'pagodin kärki.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Shwedagon Pagoda',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Downtown Yangon (View from Junction City).jpg',
+          selite: 'Keskustan leveä valtakatu suoraan ylhäältä: '
+            + 'pysäköityjä autoja molemmin puolin, kultakupolinen '
+            + 'moskeija keskellä ja joki taivaanrannassa.',
+          lahde: 'Guanghui1991, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Yangon on Myanmarin suurin kaupunki: vuoden 2014 '
+          + 'laskennassa asukkaita oli 5,16 miljoonaa. Se oli myös '
+          + 'maan pääkaupunki, kunnes marraskuussa 2005 tehtiin päätös '
+          + 'siirtää hallinto sisämaahan rakennettuun Naypyidawiin, ja '
+          + 'muutto tapahtui seuraavana vuonna. Matkailijan Yangon on '
+          + 'silti pieni: melkein kaikki tämän sivun kartan kohteet '
+          + 'ovat ruutukaavakeskustassa tai Shwedagonin kukkulan '
+          + 'kupeessa, ja niiden väliä kävelee. Yangonin yliopisto on '
+          + 'Inya-järven rannassa neljän kilometrin päässä '
+          + 'Shwedagonista pohjoisluoteeseen, eikä se siksi ole '
+          + 'kartalla. Matkustaminen Myanmariin ei ole tällä hetkellä '
+          + 'turvallista, ja moni maa kehottaa '
+          + 'välttämään matkoja maahan — tämä sivu kertoo kaupungista, '
+          + 'ei nykyisestä matkailusta.',
+        artikkeli: {
+          nimi: 'Matkailijan Yangon',
+          taitto: 'opas',
+          teksti: 'Yksi kullattu pagodi kukkulalla, yksi ruutukaava '
+            + 'suistomaalla ja niiden välissä kaupunki, jonka kadut on '
+            + 'numeroitu lännestä itään.',
+          nosto: 'Yangonin kaduilla ei näy moottoripyöriä: ne '
+            + 'kiellettiin kaupungin alueella vuonna 2003. Samana '
+            + 'vuonna kuuteen keskustan kaupunginosaan tuli kielto '
+            + 'käyttää auton äänitorvea, ja huhtikuussa 2004 kielto '
+            + 'laajeni koko kaupunkiin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Yangonin kansainvälinen lentoasema on '
+                + 'yhdeksäntoista kilometrin päässä keskustasta '
+                + 'pohjoisessa, ja sieltä lennetään sekä lähialueen '
+                + 'suurkaupunkeihin että noin neljäänkymmeneen '
+                + 'kotimaan kohteeseen. Keskusasemalta lähtee '
+                + 'kehärata, jonka 45,9 kilometrin lenkillä on '
+                + 'kolmekymmentäyhdeksän asemaa; lippuja myydään noin '
+                + '150 000 päivässä, ja suosio kasvoi selvästi, kun '
+                + 'polttoaineen tukea vähennettiin elokuussa 2007. '
+                + 'Autoa harvalla on varaa pitää, joten kaupunki liikkuu '
+                + 'bussilla: yli kolmesataa linjaa ajaa noin 6 300 '
+                + 'bussilla ja kuljettaa yli neljä miljoonaa '
+                + 'matkustajaa päivässä. Kaikki bussit ja neljä '
+                + 'viidesosaa takseista kulkevat paineistetulla '
+                + 'maakaasulla vuoden 2005 määräyksen jälkeen. '
+                + 'Keskustan rannassa on neljä matkustajalaituria, '
+                + 'joilta lähtevät lautat joen yli Dalaan ja '
+                + 'Thanlyiniin sekä alusliikenne suistoon; vuonna 2017 '
+                + 'aloitti myös vesibussi, joka kulkee jokea pitkin '
+                + 'Botahtaungin ja Inseinin väliä.',
+              kuva: {
+                tiedosto: 'Yangon Water Bus 2.jpg',
+                selite: 'Keltainen vesibussi laiturissa jokirannassa, '
+                  + 'ja kannelle johtavan luiskan vieressä seisoo kaksi '
+                  + 'miestä selin kameraan.',
+                lahde: 'Paingpeace, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Ala-Burmassa siinä, missä Yangon- ja '
+                + 'Bago-joet yhtyvät, noin kolmenkymmenen kilometrin '
+                + 'päässä Martabaninlahdelta ja kahdenkymmenenkolmen '
+                + 'metrin korkeudella merenpinnasta. Yangon-jokea '
+                + 'kutsutaan myös Hlaing-joeksi, ja koska '
+                + 'kaupunki on Irrawaddyn suistossa, sen kupeessa on '
+                + 'vuorovesitasankoja, jotka paljastuvat laskuveden '
+                + 'aikaan. Suistoon pääsi pitkään nopeimmin '
+                + 'kolmenkymmenenviiden kilometrin mittaista '
+                + 'Twanten kanavaa pitkin; vasta 1990-luvulla tiet '
+                + 'tulivat käyttökelpoisiksi ympäri vuoden. Kaupungin '
+                + 'kaksi järveä ovat molemmat tekojärviä: Inya '
+                + 'padottiin vuosina 1882–1883 vesivarastoksi ja '
+                + 'tunnettiin aluksi nimellä Lake Victoria, ja siitä '
+                + 'johdetaan putkia pitkin vettä keskustan lähellä '
+                + 'olevaan Kandawgyiin. Kaupungin pinta-ala on kasvanut '
+                + 'vuoden 1901 runsaasta seitsemästäkymmenestä '
+                + 'neliökilometristä lähes kuuteensataan.',
+              kuva: {
+                tiedosto: 'Jetty on the Yangon river (8436534903).jpg',
+                selite: 'Laituri laskuveden aikaan: teräskaarinen '
+                  + 'kulkusilta laskeutuu paljastuneelle mutatasangolle, '
+                  + 'ja sen päässä on kiinnitettynä lautta.',
+                lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: aamiaiskeitto',
+              teksti: 'Mohingaa pidetään maan kansallisruokana, ja se on '
+                + 'tavallisin aamiainen: riisinuudeleita kalaliemessä, joka '
+                + 'sakeutetaan kikhernejauholla tai paahdetulla '
+                + 'riisillä ja johon tulee valkosipulia, sipulia, '
+                + 'sitruunaruohoa, inkivääriä, kalatahnaa, kalakastiketta '
+                + 'ja monnia. Liemi pidetään kiehumapisteessä koko ajan. '
+                + 'Kulhoon lisätään limettiä, korianteria, '
+                + 'kevätsipulia, rapeaksi paistettua sipulia ja '
+                + 'murskattua kuivattua chiliä, ja päälle voi ottaa '
+                + 'uppopaistettuja herne- tai kurpitsapyöryköitä, '
+                + 'keitetyn kananmunan tai kalakakun. Syömiseen '
+                + 'käytetään lusikkaa, jota kutsutaan '
+                + 'mohinga-lusikaksi. Ennen keittoa sai vain aikaisin '
+                + 'aamulla ja illalla ulkoilmanäytäntöjen liepeillä; '
+                + 'myyjä kantoi olkapuulla toisessa päässä liesipatan '
+                + 'ja toisessa nuudelit, kulhot ja lusikat. '
+                + '1960-luvulla ilmestyivät riksakauppiaat, ja sen '
+                + 'jälkeen mohingaa on saanut kaiket päivät.',
+              kuva: {
+                tiedosto: 'Mohinga (83848).jpg',
+                selite: 'Kuvioidussa kulhossa on riisinuudeleita '
+                  + 'sameassa kalaliemessä, ja päällä on limetinlohko, '
+                  + 'korianteria ja sipulinpaloja.',
+                lahde: 'SarKaLay စာကလေး, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: numeroidut kadut',
+              teksti: 'Fraser ja hänen kollegansa Montgomerie '
+                + 'suunnittelivat keskustan katuverkon vuoden 1852 '
+                + 'jälkeen, ja järjestelmä on yhä voimassa. '
+                + 'Idästä länteen kulkevat leveät kadut ovat '
+                + 'neljäkymmentäyhdeksän metriä leveitä, etelästä '
+                + 'pohjoiseen kulkevat leveät kadut kolmekymmentä '
+                + 'metriä. Niiden välissä toistuu sama kuvio lännestä '
+                + 'itään: yksi leveä katu, kaksi kapeaa yhdeksän '
+                + 'metrin katua, yksi keskikokoinen viidentoista '
+                + 'metrin katu, taas kaksi kapeaa ja sitten seuraava '
+                + 'leveä. Kapeat kadut ovat numeroituja, leveillä ja '
+                + 'keskikokoisilla on nimet — Strand Road, Merchant '
+                + 'Road, Maha Bandula Road, Anawrahta Road ja Bogyoke '
+                + 'Aung San Road, joista kolme viimeistä olivat '
+                + 'aiemmin Dalhousie, Fraser ja Montgomerie. Talot '
+                + 'ovat useimmiten nelikerroksisia sekataloja, joissa '
+                + 'on kauppa alhaalla ja asuntoja ylhäällä; '
+                + 'huonekorkeus on runsaat neljä metriä, joten '
+                + 'väliin on mahtunut parvia. Vuonna 1996 noin '
+                + 'kaksisataa merkittävintä rakennusta pantiin '
+                + 'suojeltujen luetteloon, ja vuonna 2012 kaupunki '
+                + 'kielsi viideksikymmeneksi vuodeksi yli '
+                + 'viidenkymmenen vuoden ikäisten talojen purkamisen.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Yangonin ilmasto on Köppenin luokituksessa '
+                + 'trooppinen monsuuni-ilmasto. Sadekausi kestää '
+                + 'toukokuusta lokakuuhun ja kuiva kausi marraskuusta '
+                + 'huhtikuuhun, ja ero on jyrkkä. Nämä luvut ovat '
+                + 'en-Wikipedian Yangon-artikkelin sääruudusta, joka '
+                + 'perustuu Maailman ilmatieteen järjestön '
+                + 'normaaleihin vuosilta 1991–2020 Kaba Ayen '
+                + 'mittausasemalla; lehden vuosigraafia ei ole, koska '
+                + 'sen lupaamaa ERA5-aineistoa ei saatu haettua. '
+                + 'Kuukausikeskilämpö vaihtelee tammikuun vajaasta '
+                + 'kahdestakymmenestäviidestä asteesta huhtikuun '
+                + 'runsaaseen kolmeenkymmeneen, ja koko vuoden '
+                + 'keskiarvo on 27,4 astetta. Sadetta tulee vuodessa '
+                + '2 841 millimetriä, mutta se ei jakaudu tasan: '
+                + 'heinäkuussa sataa 624 millimetriä ja helmikuussa '
+                + 'kolme. Ääripäät ovat 42,2 lämpöastetta huhtikuussa '
+                + 'ja 9,2 astetta joulukuussa. Kuivalla kaudella '
+                + 'marraskuusta maaliskuuhun vietetään pagodijuhlia, '
+                + 'ja niistä suurin on Shwedagonin juhla '
+                + 'maaliskuussa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki oli pyhiinvaelluskylä jo tuhat vuotta ennen '
+        + 'brittejä, ja se on vaihtanut nimeä kolmesti. Nykyinen '
+        + 'keskusta on täsmälleen sen ikäinen kuin vuoden 1852 '
+        + 'valloitus.',
+      tehtava: {
+        kysymys: 'Mitä kaupungin nimi Yangon tarkoittaa?',
+        vaihtoehdot: [
+          'Kultainen kukkula',
+          'Vihollisten loppu',
+          'Suuri kuninkaallinen lampi',
+          'Tuhat upseeria',
+        ],
+        oikea: 1,
+        fakta: 'Nimi on kahdesta burman sanasta: yan on vihollinen ja '
+          + 'koun loppua. Kuningas Alaungpaya antoi sen vuonna 1755.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki nimeltä Dagon',
+          tiedosto: 'Shwedagon Crown.JPG',
+          teksti: 'Ennen brittejä paikka oli Dagon, mon-kansan noin '
+            + 'vuosina 1028–1043 perustama kylä Shwedagon-pagodin '
+            + 'juurella. 1300-luvulta lähtien se kasvoi Hanthawaddyn '
+            + 'kuningaskunnan tärkeäksi pyhiinvaelluskaupungiksi. '
+            + 'Prinsessa Maha Dewi hallitsi sitä vuosina 1364–1392, ja '
+            + 'hänen sukulaisensa Shin Saw Pu — Burman historian ainoa '
+            + 'hallitsijakuningatar — rakennutti vuonna 1460 palatsin '
+            + 'pagodin viereen ja vietti siellä eläkepäivänsä '
+            + 'kuolemaansa 1471 asti. Hän myös kullautti Shwedagonin '
+            + 'ja aloitti perinteen, jossa pagodille lahjoitetaan '
+            + 'kultaa.',
+          selite: 'Jalokivin koristeltu kultainen päähine vitriinissä; '
+            + 'sen uskotaan olleen prinsessa Shin Saw Pun.',
+          lahde: 'Jononmac46, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Yangon',
+        },
+        {
+          otsikko: 'Vihollisten loppu',
+          tiedosto: 'Burmese Paddy boat, photograph by Philip Adolphe Klier.jpg',
+          teksti: 'Vuonna 1755 Konbaung-dynastian perustaja, kuningas '
+            + 'Alaungpaya, valtasi Dagonin, liitti siihen ympäröiviä '
+            + 'kyliä ja antoi laajentuneelle kaupungille uuden nimen: '
+            + 'Yangon. Se tulee kahdesta sanasta, yan eli vihollinen ja '
+            + 'koun eli loppua — vihollisten loppu. Englanninkielinen '
+            + 'Rangoon puolestaan syntyi arakanilaisesta ääntämyksestä, '
+            + 'joka oli tuttu Intiassa asuville briteille. 1790-luvulla '
+            + 'Itä-Intian kauppakomppania avasi kaupunkiin kauppapaikan, '
+            + 'ja vuoden 1823 arvion mukaan asukkaita oli noin '
+            + 'kolmekymmentätuhatta. Britit valtasivat kaupungin '
+            + 'ensimmäisessä sodassaan 1824 mutta palauttivat sen '
+            + 'rauhanteossa; vuonna 1841 tulipalo tuhosi sen.',
+          selite: 'Klierin valokuvassa iso puinen riisivene korkeine '
+            + 'keuloineen odottaa joella, ja vastarannalla savuaa '
+            + 'riisimyllyn piippu.',
+          lahde: 'Philip Adolphe Klier, Wikimedia Commons (PD)',
+          wiki: 'Yangon',
+        },
+        {
+          otsikko: 'Tuhat upseeria',
+          tiedosto: 'Botahtaung Pagoda.JPG',
+          teksti: 'Joen rannassa seisova Botataung sai nimensä '
+            + 'legendasta: kun Buddhan pyhät jäännökset tuotiin '
+            + 'Intiasta yli kaksituhatta vuotta sitten, tuhat '
+            + 'kuninkaan upseeria seisoi kunniavartiossa ottamassa ne '
+            + 'vastaan tällä kummulla. Mon-kansan rakentama '
+            + 'alkuperäinen pagodi tuhoutui täysin 8. marraskuuta 1943, '
+            + 'kun läheisiä satamalaitureita pommitettiin toisen '
+            + 'maailmansodan aikana. Jälleenrakennus aloitettiin '
+            + 'täsmälleen sinä päivänä, jona maa itsenäistyi, 4. '
+            + 'tammikuuta 1948. Kaivauksissa paljastui koskematon '
+            + 'reliikkikammio, josta nostettiin seitsemänsataa kulta-, '
+            + 'hopea-, pronssi- ja terrakottaesinettä.',
+          selite: 'Uuden pagodin sisällä kulkee kullattu käytävä, jonka '
+            + 'seinillä on lasivitriinejä ja lattiana kalanruotoparketti.',
+          lahde: 'C1815, Wikimedia Commons (CC0)',
+          wiki: 'Botataung Pagoda',
+        },
+        {
+          otsikko: 'Hienoin majatalo Suezista itään',
+          tiedosto: 'Rangún, The Strand 2.jpg',
+          teksti: 'Strand-hotelli avattiin jokirannassa vuonna 1901. '
+            + 'Rakennuttaja oli brittiläinen liikemies John Darwood, '
+            + 'mutta pian talo siirtyi Sarkiesin veljeksille, joiden '
+            + 'hotelleja olivat myös Raffles Singaporessa ja Eastern & '
+            + 'Oriental Penangissa. Strandia mainostettiin '
+            + 'hienoimpana majatalona Suezista itään, ja se oli yksi '
+            + 'Brittiläisen imperiumin ylellisimmistä hotelleista. Se '
+            + 'ei ole ainoa säilynyt talo siltä ajalta: Yangonissa on '
+            + 'enemmän siirtomaa-ajan rakennuksia kuin missään muualla '
+            + 'Kaakkois-Aasiassa, ja niistä noin kaksisataa '
+            + 'merkittävintä liitettiin vuonna 1996 suojeltujen '
+            + 'luetteloon.',
+          selite: 'Hotellin aula kattotuulettimien alla: '
+            + 'rottinkituoleja, palmuja ja iso kukka-asetelma '
+            + 'pöydällä.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Strand Hotel',
+        },
+      ],
+    },
+  ],
 };

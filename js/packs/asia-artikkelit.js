@@ -2332,10 +2332,45 @@ export const ASIA_ARTIKKELIT = {
       + 'Krung Thep, enkelten kaupunki. Kanavia on säilynyt joen '
       + 'länsipuolella Thonburin puolella.',
   },
+  /*
+   * YANGON (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille
+   * tehtiin alusta asti oma lehti (kulttuuri-kategoriat.js,
+   * maakartat.js, nahtavyysjutut.js). Jokainen introväite tulee
+   * saman erän lehtiteksteistä, jotka on tarkistettu en-Wikipedian
+   * raakateksteistä 21.8.2026 — uusia lähdehakuja ei tarvittu.
+   * Vanha intro kertoi kolmella lauseella vain, että kaupunki on
+   * maan suurin ja että Shwedagon on kullattu; uusi kertoo lisäksi
+   * sijainnin, nimihistorian, ruutukaavan synnyn ja sen
+   * kaavoitussäännön, joka pitää kaupungin matalana. Myanmar-
+   * linjaus: ei nykypolitiikkaa eikä nykysotaa, ja kolonialistinen
+   * kausi on kaupunkihistoriaa ilman osapuolikehystä (perustelut
+   * kulttuuri-kategoriat.js:n yangon-lohkon kommentissa).
+   * Teksti-kenttä on ennallaan.
+   */
   Yangon: {
-    intro: 'Yangon on Myanmarin suurin kaupunki. Sen Shwedagon-pagodi '
-      + 'kohoaa lähes sata metriä ja on päällystetty oikealla kullalla '
-      + '— lahjoitettuna levy kerrallaan satojen vuosien ajan.',
+    intro: 'Yangon on Myanmarin suurin kaupunki ja sen tärkein satama: '
+      + 'yli viisi miljoonaa asukasta siinä, missä Yangon- ja '
+      + 'Bago-joet yhtyvät kolmisenkymmentä kilometriä merestä '
+      + 'Irrawaddyn suiston reunalla. Kaupunki alkoi 1000-luvulla '
+      + 'mon-kansan pyhiinvaelluskylänä nimeltä Dagon, ja vuonna 1755 '
+      + 'kuningas Alaungpaya antoi laajentuneelle kaupungille nimen '
+      + '**Yangon**, vihollisten loppu.'
+      + '\n\n'
+      + 'Nykyisen keskustan piirsi joku muu. Britit ottivat kaupungin '
+      + 'haltuunsa vuonna 1852, ja luutnantti Alexander Fraser mittasi '
+      + 'suistomaalle ruutukaavan, jonka rajoina ovat Pazundaung-puro '
+      + 'ja Yangon-joki. Vuonna 1885 Rangoonista tuli koko '
+      + 'brittihallitun Burman pääkaupunki, ja siltä ajalta on '
+      + 'jäljellä enemmän siirtomaa-ajan rakennuksia kuin missään '
+      + 'muualla Kaakkois-Aasiassa. Keskustan kapeat kadut ovat yhä '
+      + 'numeroituja, leveät nimettyjä.'
+      + '\n\n'
+      + 'Kaupungin yllä on sama asia kuin ennen kaupunkia: '
+      + '**Shwedagon-pagodi**, yhdeksänkymmentäyhdeksän metriä korkea '
+      + 'kullattu stupa viidenkymmenenyhden metrin kukkulalla. '
+      + 'Kaavoitussääntö rajaa rakennukset kolmeen neljäsosaan '
+      + 'pagodin korkeudesta, ja siksi Yangonissa ei ole '
+      + 'pilvenpiirtäjiä.',
     teksti: 'Yangon on Yangon-joen varrella lähellä Andamaanienmerta. '
       + 'Kaupunki tunnettiin ennen nimellä Rangoon. Se oli Myanmarin '
       + 'pääkaupunki vuoteen 2006, jolloin hallinto siirrettiin '
