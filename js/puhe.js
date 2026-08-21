@@ -370,13 +370,14 @@ export function asetaPuheenVoima(arvo) {
  */
 const NOPEUS_AVAIN = 'matkakirja-puhe-nopeus';
 /*
- * 1,2 on omistajan 21.8.2026 hakema lukutahti kaikille lukijoille
- * (pöllö, kertoja, merkinnät — nopeus on yhteinen säätö). HUOM:
- * poikkeava oletus laajentaa välimuistiavaimet (nopeusTunniste),
- * joten vanhalla 1,0-nopeudella generoidut palat eivät enää osu —
- * puhe generoituu uudelleen uudella tahdilla ensikuuntelulla.
+ * 1,15 on omistajan 21.8.2026 hakema lukutahti kaikille lukijoille
+ * (pöllö, kertoja, merkinnät — nopeus on yhteinen säätö; ensin 1,2,
+ * omistajan tarkennus samana iltana: "Muuta nopeus sittenkin
+ * 1.15x"). HUOM: poikkeava oletus laajentaa välimuistiavaimet
+ * (nopeusTunniste), joten vanhalla 1,0-nopeudella generoidut palat
+ * eivät enää osu — puhe generoituu uudelleen ensikuuntelulla.
  */
-const NOPEUS_OLETUS = 1.2;
+const NOPEUS_OLETUS = 1.15;
 const NOPEUS_MIN = 0.6;
 const NOPEUS_MAX = 1.6;
 
