@@ -7367,6 +7367,138 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Shamianin saari', lat: 23.1094, lon: 113.2394 },
     ],
   },
+  /*
+   * YANGONIN KOHDEKARTTA (21.8.2026). Rajaus on 6,5 × 5,5 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Xi'anissa ja Kantonissa. Piirtoperustelut ja Overpass-lippujen
+   * syyt ovat tools/piirra-kaupunkikartta.mjs:n yangon-lohkossa.
+   *
+   * KAIKKI YHDEKSÄN KOORDINAATTIA OVAT EN-WIKIPEDIAN OMIA
+   * {{Coord}}-arvoja, ja ne on luettu artikkeleista Chaukhtatgyi
+   * Buddha Temple, Shwedagon Pagoda, Kandawgyi Lake, Yangon Central
+   * railway station, Bogyoke Market, Ministers' Building, Sule
+   * Pagoda, Strand Hotel ja Botataung Pagoda (21.8.2026).
+   * Faktapohja (docs/aasia-tyoaineisto/faktapohja-yangon.md, osio 4)
+   * jätti kolme koordinaattia arvioiksi tai kokonaan pois, ja
+   * tarkistusraportti (tarkistus-yangon.md) korvasi ne artikkelien
+   * omilla arvoilla: Strand-hotelli siirtyi 0,27 kilometriä
+   * (16,772 / 96,163 → 16,7696 / 96,1626, koordinaatti on artikkelin
+   * sivunpohjan {{Coord}}), Kandawgyi 0,81 kilometriä
+   * (16,789 / 96,163 → 16,7955 / 96,1666) ja rautatieasema sai
+   * ensimmäisen koordinaattinsa (16,7817 / 96,1611). Tässä on
+   * käytetty tarkistuksen arvoja.
+   *
+   * KANDAWGYIN SUUNTA ON KOORDINAATTIEN MUKAAN, EI LEIPÄTEKSTIN.
+   * en-Wikipedian Yangon-artikkeli sanoo järven olevan pagodista
+   * "kaakkoon" ja Kandawgyi Lake -artikkeli "itään"; pisteistä
+   * laskien ero on 0,32 kilometriä etelään ja 1,79 kilometriä itään
+   * eli suunta on itä hitusen etelään. Lehti sanoo "itäpuolella"
+   * (v925, v932 ja v937: koordinaatti voittaa leipätekstin).
+   *
+   * KANDAWGYIN PISTE ON KARAWEIKIN KOORDINAATISSA, EI JÄRVEN.
+   * Järven oma {{Coord}} (16,7955 / 96,1666) osuu keskelle vettä, ja
+   * tools/tarkista-karttapisteet.mjs hylkäsi sen sadan prosentin
+   * vesipisteenä — talon sääntö on, että vain sillat ja majakat
+   * saavat olla vedellä. Piste siirrettiin siksi itärannalle
+   * Karaweikin omaan koordinaattiin (16,7986 / 96,1657, en-Wikipedia
+   * "Karaweik"), joka on 360 metriä järven pisteestä ja maalla; kaksi
+   * erillistä numeroa noin lyhyelle välille ei mahdu (Petran, Mekan
+   * ja Singaporen oppi), joten kohteen nimi kertoo molemmat ja juttu
+   * käsittelee järven ja lautan yhdessä.
+   *
+   * YANGONIN YLIOPISTO EI OLE KARTALLA EIKÄ KAINALOSSA. Se on
+   * 3,9 kilometriä pohjoisluoteeseen Shwedagonista, ja rajauksen
+   * venyttäminen sinne olisi tehnyt kuvasta 1600 × 2400 pikseliä.
+   * Yliopisto kerrotaan matkaoppaassa (Medinan Uhud-vuoren
+   * ratkaisu); perustelu kokonaisuudessaan piirtäjän lohkossa.
+   */
+  yangon: {
+    polku: 'assets/kartat/yangon-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 16.8165, etela: 16.758, lansi: 96.135, ita: 96.1869 },
+    esittely: 'Kartan yläosassa on Shwedagon-pagodin kukkula ja sen '
+      + 'itäpuolella Kandawgyi-järvi. Alaosan tiheä ruudukko on '
+      + 'Alexander Fraserin 1850-luvulla mittaama keskusta, jonka '
+      + 'eteläreunaa myötäilee Yangon-joki. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Chaukhtatgyin temppeli', lat: 16.811623, lon: 96.163764 },
+      { nimi: 'Shwedagon-pagodi', lat: 16.798354, lon: 96.149705 },
+      { nimi: 'Kandawgyi-järvi ja Karaweik', lat: 16.7986, lon: 96.1657 },
+      { nimi: 'Yangonin keskusasema', lat: 16.7817, lon: 96.1611 },
+      { nimi: 'Bogyoken markkinat', lat: 16.78038, lon: 96.1556 },
+      { nimi: 'Sihteeristö', lat: 16.77556, lon: 96.16583 },
+      { nimi: 'Sule-pagodi', lat: 16.7744, lon: 96.1588 },
+      { nimi: 'Strand-hotelli', lat: 16.7696, lon: 96.1626 },
+      { nimi: 'Botataung-pagodi', lat: 16.768449, lon: 96.171973 },
+    ],
+  },
+  /*
+   * MANDALAYN KOHDEKARTTA (21.8.2026). Rajaus on 8,9 × 8,9 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Kiotossa, Varanasissa ja Kantonissa.
+   *
+   * RUUTU ON TAVALLISTA LAAJEMPI, ja siihen on syy. Mandalayn
+   * kuuluisat kohteet eivät ole yhdessä rykelmässä vaan seitsemän
+   * kilometrin nauhana pohjoisesta etelään: Mandalay-kukkula ja sen
+   * juuren pagodit ylhäällä, muurikaupunki keskellä, Zegyo-tori ja
+   * Setkyathiha sen eteläpuolella ja Mahamuni vasta viiden kilometrin
+   * päässä palatsista lounaassa. Neliörajaus (Varanasin ja Kantonin
+   * tapa) toi samalla mukaan Irrawaddyn länsireunaan ja
+   * Shwetachaung-kanavan, joka kulkee kartan halki pohjois–etelä-
+   * suunnassa keskustan länsipuolella — molemmat selittävät sen,
+   * miksi kaupunki on juuri tässä kohtaa jokea.
+   *
+   * KAIKKI YHDEKSÄN KOORDINAATTIA OVAT KOHTEIDEN OMISTA
+   * en-Wikipedian infobokseista (haettu 21.8.2026). Faktapohjan
+   * (docs/aasia-tyoaineisto/faktapohja-mandalay.md, osio 4) kaksi
+   * arviota korvattiin tarkistusraportin (tarkistus-mandalay.md)
+   * varmennetuilla arvoilla: Mandalay-kukkula 22,005 / 96,101 →
+   * 22,0142 / 96,1075 (ero 1,2 km) ja Kyauktawgyi 22,001 / 96,098 →
+   * 22,004474 / 96,106582. Huomaa nimiristiriita, jonka tarkistus
+   * löysi: oikea artikkeli on "Kyauktawgyi Buddha Temple (Mandalay)"
+   * eikä pelkkä "Kyauktawgyi Pagoda", joka on ERI kohde Amarapurassa
+   * (Pagan Min 1847) Taungthaman-järven luona.
+   *
+   * U BEIN -SILTA EI OLE KARTALLA EIKÄ KAINALOSSA, vaikka se on
+   * lehden kansikuva ja oma nostonsa. Se on Amarapurassa,
+   * 12,0 kilometriä palatsista etelään (tarkistusraportin
+   * haversine-laskelma) — kauempana kuin yksikään kainalo tässä
+   * kartastossa (Medinan Quba 3,5 km, Adenin Tawahi 6 km) ja
+   * käytännössä sama etäisyys, jolla Whampoa jätettiin pois Kantonin
+   * ja Bhaktapur Kathmandun kartalta. Silta kerrotaan lehden
+   * nostossa ja matkaoppaassa.
+   *
+   * ATUMASHI-LUOSTARI JÄI POIS, vaikka se on Shwenandaw'n naapuri ja
+   * oma nähtävyytensä: sen koordinaatti (22,00083 / 96,1125) on vain
+   * 127 metrin päässä Shwenandaw'sta eli puolitoista prosenttia
+   * ruudun leveydestä, ja numeroympyrät olisivat menneet lähes
+   * sisäkkäin (Petran, Mekan ja Singaporen oppi). Se kerrotaan
+   * Shwenandaw'n jutussa.
+   */
+  mandalay: {
+    polku: 'assets/kartat/mandalay-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 22.024, etela: 21.944, lansi: 96.0513, ita: 96.1375 },
+    esittely: 'Kartan keskellä on palatsin neliö muureineen ja '
+      + 'vallihautoineen, ja sen koillispuolella kohoaa Mandalay-'
+      + 'kukkula pagodeineen. Muurin eteläpuolella on ruutukaavainen '
+      + 'keskusta toreineen, ja lännessä virtaa Irrawaddy. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Mandalay-kukkula', lat: 22.014167, lon: 96.1075 },
+      { nimi: 'Kuthodaw-pagodi', lat: 22.004712, lon: 96.112902 },
+      { nimi: 'Kyauktawgyi-pagodi', lat: 22.004474, lon: 96.106582 },
+      { nimi: 'Sandamuni-pagodi', lat: 22.00347, lon: 96.109758 },
+      { nimi: 'Shwenandaw-luostari', lat: 22.000675, lon: 96.113722 },
+      { nimi: 'Mandalayn palatsi', lat: 21.992942, lon: 96.095911 },
+      { nimi: 'Zegyo-tori', lat: 21.9826, lon: 96.0771 },
+      { nimi: 'Setkyathiha-pagodi', lat: 21.9768, lon: 96.075 },
+      { nimi: 'Mahamuni-temppeli', lat: 21.951869, lon: 96.078619 },
+    ],
+  },
 };
 
 /*

@@ -2367,6 +2367,113 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  yangon: {
+    /*
+     * SHWEDAGONIN KUKKULALTA JOEN RANTAAN (21.8.2026). Ruutu on
+     * 6,5 × 5,5 km, ja siihen mahtuvat lehden kaikki yhdeksän
+     * kohdetta: pohjoisessa Chaukhtatgyin makaava Buddha, keskellä
+     * Shwedagon-pagodi kukkulallaan ja Kandawgyi-järvi, alempana
+     * ruutukaavakeskusta rautatieasemineen ja Sule-pagodeineen ja
+     * etelässä joen rannassa Sihteeristö, Strand-hotelli ja
+     * Botataung-pagodi.
+     *
+     * RUUTU ON HIEMAN PYSTY (1600 × 1806 px), ja se on mitattu
+     * päätös. Kohteet ovat luonnostaan 3,4 × 2,4 kilometrin nauha,
+     * joka kulkee kukkulalta joelle; tiukka rajaus olisi jättänyt
+     * kuvan reunoiksi juuri ne kaksi vesirajaa, jotka lehden koko
+     * kertoma perustuu — Yangon-joki etelässä ja lännessä sekä
+     * Pazundaung-puro idässä, Alexander Fraserin ruutukaavan rajat.
+     * Nyt molemmat piirtyvät reunanauhoina eivätkä kuvan reunana, ja
+     * eteläpuolelta näkyy runsas kilometri Dalan puolta.
+     *
+     * ETELÄREUNA ON VÄLJÄ TARKOITUKSELLA (Kanton ja Kööpenhamina).
+     * Botataung on kartan alalaidan kohde, ja jos joki olisi jäänyt
+     * alareunaksi, sen jokiranta olisi katkennut kesken. Samalla
+     * eteläreuna pysyy kaukana lehden mittakaavajanasta vasemmassa
+     * alakulmassa, joka Kööpenhaminassa jäi numeroympyrän alle.
+     *
+     * YANGONIN YLIOPISTO JÄI POIS EIKÄ KAINALOON, vaikka se on
+     * lehden aihe. Se on en-Wikipedian koordinaatista (16,8300 /
+     * 96,1350) laskien 3,9 kilometriä pohjoisluoteeseen
+     * Shwedagonista ja Inya-järven rannassa vielä kauempana; ruutu
+     * olisi pitänyt venyttää 1600 × 2400 pikseliin, mikä on
+     * Varanasin (1600 × 1595) ja Isfahanin (1600 × 1983) mittojen
+     * ulkopuolella. Yliopisto ja Inya-järvi kerrotaan matkaoppaassa
+     * (Medinan Uhud-vuoren ratkaisu).
+     *
+     * KARAWEIK EI OLE OMANA PISTEENÄÄN. Kandawgyi-järven itärannan
+     * kultainen lautta on en-Wikipedian koordinaateista laskien vain
+     * 360 metrin päässä järven pisteestä, ja kaksi numeroympyrää
+     * olisi mennyt päällekkäin (Petran, Mekan ja Singaporen oppi).
+     * Karaweik kerrotaan järven omassa jutussa, ja järven kuva on
+     * juuri se lautta.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kathmandussa ja Kantonissa: Shwedagonin portaat ja
+     * pagodin terassit, Kandawgyin puistopolut ja ruutukaavan
+     * numeroitujen katujen väliset kujat ovat OSM:ssä jalankulku-
+     * alueita ja huoltoteitä, ja ilman lippuja kartan tihein osa
+     * jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 16.8165, etela: 16.758, lansi: 96.135, ita: 96.1869 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
+  mandalay: {
+    /*
+     * MUURIKAUPUNKI JA IRRAWADDYN RANTA (21.8.2026). Ruutu on
+     * 8,9 × 8,9 km, ja siihen mahtuvat lehden kaikki yhdeksän
+     * kohdetta: pohjoisessa Mandalay-kukkula ja sen juuren pagodit
+     * (Kuthodaw, Kyauktawgyi, Sandamuni, Shwenandaw), keskellä
+     * palatsin neliö muureineen ja vallihautoineen, sen
+     * eteläpuolella Zegyo-tori ja Setkyathiha ja etelässä
+     * Mahamuni-temppeli.
+     *
+     * TAVALLISTA LAAJEMPI RAJAUS ON HARKITTU. Työkalun oma ohje
+     * suosittaa 5–8 kilometrin alaa, ja tämä on sen ylärajan yli.
+     * Syy on kaupungin muoto: kohteet eivät ole yhdessä rykelmässä
+     * vaan lähes seitsemän kilometrin nauhana pohjoisesta etelään,
+     * ja tiukempi ruutu olisi jättänyt joko kukkulan tai Mahamunin
+     * ulkopuolelle. Neliörajaus (Varanasin ja Kantonin tapa) toi
+     * samalla mukaan kaksi asiaa, jotka selittävät kaupungin
+     * sijainnin: Irrawaddyn länsireunaan ja Shwetachaung-kanavan,
+     * joka kulkee ruudun halki pohjois–eteläsuunnassa keskustan
+     * länsipuolella. Katuverkko kestää laajennuksen, koska
+     * Mandalayn keskusta on Mindonin ruutukaavaa: kadut ovat
+     * suoria ja harvassa, eikä kuva mene puuroksi.
+     *
+     * ETELÄREUNA ON VÄLJÄ TARKOITUKSELLA. Mahamuni on kartan
+     * alalaidan kohde (90 %), ja rajaa laskettiin, jotta
+     * numeroympyrä ei osu lehden mittakaavajanaan vasemmassa
+     * alakulmassa (Kööpenhaminan Tivoli-tapaus). Ero näkyy
+     * tarkista-karttapisteet.mjs:n tulosteessa: jana on 22,5 %
+     * leveydestä eikä yksikään piste peitä sitä.
+     *
+     * U BEIN -SILTA EI OLE KARTALLA EIKÄ KAINALOSSA. Se on
+     * Amarapurassa 12,0 kilometriä palatsista etelään — kauempana
+     * kuin yksikään kainalo tässä kartastossa (Medinan Quba 3,5 km,
+     * Adenin Tawahi 6 km) ja sama etäisyys, jolla Whampoa
+     * jätettiin pois Kantonin ja Bhaktapur Kathmandun kartalta.
+     * Perustelu kokonaisuudessaan js/packs/maakartat.js:n
+     * mandalay-lohkossa.
+     *
+     * JALKAKÄYTÄVIÄ JA PALVELUTEITÄ EI PYYDETTY. Toisin kuin
+     * Xi'anissa, Kathmandussa ja Kantonissa, Mandalayn kujat ovat
+     * OSM:ssä tavallisia katuja, ja koeajo lipuilla teki kuvasta
+     * rakeisen ilman että yksikään kohde olisi erottunut paremmin.
+     *
+     * OVERPASSIN PÄÄPALVELIMET EIVÄT VASTANNEET tämän työn aikana
+     * (overpass-api.de ja overpass.kumi.systems aikakatkaisivat),
+     * ja kartta piirrettiin peilipalvelimella:
+     *   NODE_USE_ENV_PROXY=1 \
+     *   OVERPASS_PALVELIMET=https://maps.mail.ru/osm/tools/overpass/api/interpreter \
+     *     node tools/piirra-kaupunkikartta.mjs mandalay
+     * Peili palautti 8 024 elementtiä eli saman aineiston kuin
+     * päälaitos olisi palauttanut.
+     */
+    rajat: { pohjoinen: 22.024, etela: 21.944, lansi: 96.0513, ita: 96.1375 },
+  },
 };
 
 /*

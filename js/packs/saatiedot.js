@@ -1758,4 +1758,17 @@ export const SAATIEDOT = {
    * kirjoitettu en-Wikipedian oman sääruudun 1991–2020-normaaleista
    * ja sanoo sen ääneen.
    */
+  /*
+   * MANDALAYN RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Kaupungille
+   * tehtiin alusta asti oma lehti (kulttuuri-kategoriat.js,
+   * maakartat.js, nahtavyysjutut.js, asia-artikkelit.js), ja
+   * Open-Meteon arkisto vastasi tämän työn ajan samalla 429:llä ja
+   * samalla viestillä kuin Astanan, Kantonin ja Kathmandun kohdalla.
+   * Lukuja ei ole otettu muualta. Mittauspiste on keskusta
+   * 21,98 / 96,08 (en-Wikipedian Mandalay-artikkelin oma koordinaatti
+   * 21°58′59″N 96°05′04″E), korkeus 80 metriä. Oppaan sääjakso nojaa
+   * en-Wikipedian sääruutuun (Maailman ilmatieteen järjestön
+   * normaalit 1991–2020, asema 48042) ja sanoo sen ääneen; kun rivi
+   * joskus lisätään, jakso kirjoitetaan rivin omista luvuista.
+   */
 };
