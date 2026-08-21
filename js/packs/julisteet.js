@@ -32,7 +32,9 @@
  * Kentät: `tiedosto` on nimi ämpärin kansiossa julisteet/, `kaupunki`
  * on lyhyt nimi matkalaukun kokoelmarivin alle (koko otsikko murtuisi
  * pikkukuvan levyisenä keskeltä sanaa), `otsikko` ja `selite` näkyvät
- * suurennoksessa.
+ * suurennoksessa — selite on julisteen ilmoitustekstin SUOMENNOS
+ * (omistaja 21.8.2026: juliste on pelkällä alkuperäiskielellä ja
+ * käännös tulee pelin tekstinä kuvan alle).
  *
  * Avain on KAUPUNGIN tunnus: juliste on kaupunkilehden palkinto, ja
  * maan yhteinen aihesivu ei palkitse julisteella (js/ui.js tarkistaa
@@ -50,75 +52,76 @@ export const JULISTEET = {
     tiedosto: 'istanbul.png',
     kaupunki: 'Istanbul',
     otsikko: 'Konstantinopoli — Orient Express',
-    selite: 'Kivipainojuliste Galatan laiturilta: höyrylaiva ankkurissa Kultaisen '
-      + 'sarven suulla, takana Hagia Sofia ja Sininen moskeija, alla '
-      + 'makuuvaunuyhtiön ilmoitus Pariisista Konstantinopoliin.',
+    selite: 'Kansainvälinen makuuvaunuyhtiö — Orient Express. Pariisi — Wien — '
+      + 'Konstantinopoli, ensimmäinen suora yhteys 1883; makuu- ja '
+      + 'ravintolavaunut Sirkecin asemalta kahdesti viikossa.',
   },
   tokio: {
     tiedosto: 'tokio.png',
     kaupunki: 'Tokio',
     otsikko: 'Tokio — keisarikunnan ensimmäinen rautatie',
-    selite: 'Kivipainojuliste Shinbashin asemalta: veturi odottaa laiturin vieressä '
-      + 'kimono- ja hattupukuisten matkustajien katsellessa, ja horisontissa '
-      + 'häämöttää Fuji.',
+    selite: 'Japanin keisarillinen valtionrautatie. Shinbashi (Tokio) — Yokohama, '
+      + 'keisarikunnan ensimmäinen rautatie, avattu Meijin 5. vuonna (1872); '
+      + 'yhdeksän junaa päivässä, matka 53 minuuttia.',
   },
   moskova: {
     tiedosto: 'moskova.png',
     kaupunki: 'Moskova',
     otsikko: 'Moskova — Nikolain rautatie',
-    selite: 'Kivipainojuliste jäätyneen Moskovajoen yli: kolmivaljakko ylittää '
-      + 'jäätietä, rannalla Kremlin muuri ja tornit, kauempana Vasili Autuaan '
-      + 'kupolit talviauringossa.',
+    selite: 'Nikolain rautatie. Moskova — Pietari, 604 virstaa, avattu vuonna '
+      + '1851; pikajunat päivittäin Nikolain asemalta, ensimmäisen luokan '
+      + 'makuuvaunut.',
   },
   lontoo: {
     tiedosto: 'lontoo.png',
     kaupunki: 'Lontoo',
     otsikko: 'Lontoo — Metropolitan Railway',
-    selite: 'Kivipainojuliste Thamesin rannalta: siipirataslaiva savuaa parlamenttitalon '
-      + 'ja Big Benin ohi, ja alla ilmoittaa maailman ensimmäinen maanalainen rautatie.',
+    selite: 'Metropolitan Railway. Maailman ensimmäinen maanalainen rautatie, '
+      + 'avattu 1863; Paddington — Farringdon Street, junat kymmenen minuutin '
+      + 'välein.',
   },
   kairo: {
     tiedosto: 'kairo.png',
     kaupunki: 'Kairo',
     otsikko: 'Kairo — Niilin höyrylaivat',
-    selite: 'Kivipainojuliste Niilin rannalta: siipirataslaiva ja feluccat laiturissa, '
-      + 'ylhäällä kukkulalla Muhammad Alin moskeija ja kaukana Gizan pyramidit.',
+    selite: 'Niilin höyrylaivat. Viikoittaiset matkat Kairosta Assuaniin ja '
+      + 'ensimmäiselle kataraktille kaudesta 1869 alkaen.',
   },
   xian: {
     tiedosto: 'xian.png',
     kaupunki: 'Xi’an',
     otsikko: 'Xi’an — Silkkitien vekselipankki',
-    selite: 'Kivipainojuliste kaupunginmuurin juurelta: kamelikaravaani kulkee '
-      + 'vallihaudan vartta porttitornin ohi, ja ilmoitus lupaa vekselin '
-      + 'lunastuksen joka maakunnassa.',
+    selite: 'Rishengchangin vekselipankki, perustettu 1823. Vekselit lunastetaan '
+      + 'keisarikunnan joka maakunnassa — Silkkitien kaupan rahanvaihto.',
   },
   pariisi: {
     tiedosto: 'pariisi.png',
     kaupunki: 'Pariisi',
     otsikko: 'Pariisi — maailmannäyttely 1889',
-    selite: 'Kivipainojuliste Seinen rannalta: kolmensadan metrin torni kohoaa sillan '
-      + 'ja kirjakojujen takaa, ja höyrylaiva vie näyttelyvieraita Champ de Marsille.',
+    selite: 'Vuoden 1889 maailmannäyttely. Kolmensadan metrin torni, nousu '
+      + 'hisseillä — Champ de Mars, toukokuusta lokakuuhun.',
   },
   delhi: {
     tiedosto: 'delhi.png',
     kaupunki: 'Delhi',
     otsikko: 'Delhi — East Indian Railway',
-    selite: 'Kivipainojuliste torilta Punaisen linnakkeen ja Perjantaimoskeijan välissä: '
-      + 'härkävaunut odottavat kuormineen ja leijat nousevat kattojen yli.',
+    selite: 'East Indian Railway. Delhin risteysasema avattu 1864 — vaunut '
+      + 'Kalkuttaan asti, 954 mailia; lipunmyynti Chandni Chowkin '
+      + 'konttorissa.',
   },
   peking: {
     tiedosto: 'peking.png',
     kaupunki: 'Peking',
     otsikko: 'Peking — Tong Ren Tangin apteekki',
-    selite: 'Kivipainojuliste Qianmenin porttitornin edustalta: Dashilanin katu on '
-      + 'täynnä kylttejä ja kärryjä, ja etäällä siintää Taivaan temppelin kupoli.',
+    selite: 'Tong Ren Tangin apteekki, perustettu 1669. Keisarillisen hovin '
+      + 'lääkkeiden toimittaja — Dashilanin kadulla Qianmenin ulkopuolella.',
   },
   samarkand: {
     tiedosto: 'samarkand.png',
     kaupunki: 'Samarkand',
     otsikko: 'Samarkand — Taka-Kaspian rautatie',
-    selite: 'Kivipainojuliste Registanin aukiolta: kamelit lepäävät kaakelipintaisten '
-      + 'medresojen edessä, ja ilmoitus kertoo radan yltäneen Krasnovodskista asti.',
+    selite: 'Taka-Kaspian rautatie. Krasnovodsk — Samarkand, pääteasema '
+      + 'saavutettu 1888; kahdesti viikossa, yhteys Kaspian höyrylaivoihin.',
   },
 };
 
