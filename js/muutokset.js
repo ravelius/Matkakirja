@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 987, teksti: 'v987: äänirivin ennen ja nyt — vanha tallenne radiolle' },
   { v: 986, teksti: 'v986: ennen ja nyt -kuvapari etusivulle (pilotti)' },
   { v: 985, teksti: 'v985: maan kartta kokoruudulle, iPad-mitoitus kuntoon' },
   { v: 984, teksti: 'v984: Taipei ja Hongkong — uudet kaupunkilehdet' },
