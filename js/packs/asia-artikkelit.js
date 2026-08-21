@@ -159,6 +159,19 @@
 // näyttönimi ”Kanton” eikä en-Wikipedian ”Guangzhou”. Kiina-linjaus:
 // ei nykypolitiikkaa, ja oopiumisodat ovat vain kauppahistorian
 // käännekohta. Perustelut ovat merkinnän omassa kommentissa.
+//
+// TAIPEI (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js). Jokainen introväite tulee saman erän
+// lehtiteksteistä, jotka on tarkistettu en-Wikipedian raakateksteistä
+// 21.8.2026. Vanha intro oli kolmen lauseen mittainen ja kertoi vain
+// yömarkkinoista ja tornista; uusi kertoo lisäksi altaan, joet,
+// Qixing-vuoren, väkiluvun, teekaupan ja hallinnon vaiheet.
+// Taiwan-linjaus (spec-asia.md, ”Taipei”: Antaa olla): hallinnon
+// vaiheet ovat päivämääriä ja hallintomuutoksia ilman kummankaan
+// osapuolen kehystä, eikä saaren nykyistä asemaa käsitellä lainkaan
+// — perustelut ovat kulttuuri-kategoriat.js:n taipei-lohkon
+// kommentissa. Teksti-kenttä on ennallaan.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -2117,9 +2130,29 @@ export const ASIA_ARTIKKELIT = {
       + 'ja metro avattiin 1997.',
   },
   Taipei: {
-    intro: 'Taipei on Taiwanin pääkaupunki saaren pohjoispäässä. Sen '
-      + 'yömarkkinat alkavat auringonlaskusta, ja kaupungin yllä '
-      + 'kohoaa torni, joka oli valmistuessaan maailman korkein.',
+    intro: 'Taipei on Taiwanin pääkaupunki saaren pohjoispäässä, '
+      + 'muinaisen järvenpohjan päälle syntyneessä **Taipein '
+      + 'altaassa**. Etelässä sitä rajaa Xindian-joki ja lännessä '
+      + 'Tamsui, ja pohjoisessa maasto nousee 1 120 metrin '
+      + 'Qixing-vuorelle, joka on Taiwanin korkein lepotilassa oleva '
+      + 'tulivuori. Kaupungissa asuu noin kaksi ja puoli miljoonaa '
+      + 'ihmistä.'
+      + '\n\n'
+      + 'Han-uudisraivaajat asettuivat altaaseen vuonna 1709, ja '
+      + '1800-luvun lopulla **teenvienti** teki seudusta rikkaan. '
+      + 'Vuonna 1875 pohjoinen Taiwan erotettiin omaksi '
+      + 'prefektuurikseen, ja uusi hallintokeskus rakennettiin '
+      + 'muureineen vaurastuneiden kauppakylien kylkeen. Vuonna 1895 '
+      + 'saari siirtyi Japanille, ja kaupunki tunnettiin viisikymmentä '
+      + 'vuotta nimellä Taihoku; siltä ajalta ovat monet keskustan '
+      + 'julkiset rakennukset. Vuodesta 1949 Taipei on ollut Kiinan '
+      + 'tasavallan hallinnon kotipaikka.'
+      + '\n\n'
+      + 'Nykyinen Taipei on saaren talouden, koulutuksen ja kulttuurin '
+      + 'keskus ja tekniikan kaupunki. Kansallinen '
+      + 'palatsimuseo säilyttää Kiinan keisarillisen kokoelman parhaat '
+      + 'esineet, Taipei 101 oli valmistuessaan maailman korkein '
+      + 'rakennus, ja illalla kaupunki syö yömarkkinoilla.',
     teksti: 'Taipei on altaassa vuorten ympäröimänä Tamsui-joen '
       + 'laaksossa. Ilmasto on kostea ja lämmin, ja kesällä saarelle '
       + 'iskee taifuuneja. Taiwanin selkäranka on vuoristo, jonka '

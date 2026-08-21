@@ -26242,4 +26242,388 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TAIPEIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Kymmenen kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään; viimeinen
+   * on kainalokartassa. Faktat on tarkistettu en-Wikipedian artikkeleista
+   * Dalongdong Baoan Temple, Taipei Confucius Temple, Dihua Street,
+   * Dadaocheng, Taipei North Gate, Walls of Taipei, Presidential Office
+   * Building (Taipei), Red House Theater, Ximending, Longshan Temple
+   * (Taipei), Bopiliao Historic Block, Chiang Kai-shek Memorial Hall,
+   * Taipei Botanical Garden ja Taipei 101 (haettu 21.8.2026).
+   *
+   * SISÄLTÖLINJAUS on sama kuin lehdessä (ks. kulttuuri-kategoriat.js:n
+   * taipei-lohkon kommentti): hallinnon vaiheet ovat päivämääriä ja
+   * hallintomuutoksia, ei nykypolitiikkaa. Muistosalin juttu kertoo
+   * rakennuksen ja aukion, ei sen ympärillä käytyä keskustelua.
+   * Presidentinlinnan jutussa on yksi lause toisen maailmansodan
+   * vaurioista, koska rakennuksen korjaushistoria ei muuten olisi
+   * ymmärrettävä; uhrilukuja tai osapuolikehystä ei ole.
+   *
+   * USKONNOLLISET KOHTEET kerrotaan rakennuksina ja kerrostumina,
+   * kuten Jerusalemissa, Medinassa ja Xi'anissa: kuka rakensi, mistä
+   * suvut tulivat, mitä rakennuksessa tehdään.
+   *
+   * KAKSI KOHDETTA KULKEE PARINA. Baoan-temppelin jutussa kerrotaan
+   * myös naapurin Konfutse-temppeli, koska temppelit ovat saman
+   * korttelin vastakkaisilla puolilla eikä niille voi antaa kahta
+   * numeroympyrää ilman että ne menevät päällekkäin (maakartat.js:n
+   * taipei-lohko). Samasta syystä Punaisen talon juttu kertoo koko
+   * Ximendingin.
+   */
+  taipei: {
+    'Baoan-temppeli': {
+      aika: '1804, edeltäjä 1742',
+      teksti: 'Dalongdongin kortteliin muutti 1700- ja 1800-luvulla '
+          + 'väkeä Tong\'anista, Xiamenin seudulta Fujianista. He '
+          + 'pystyttivät ensin puisen pyhäkön vuonna 1742 ja aloittivat '
+          + 'nykyisen temppelin rakentamisen 1804. Nimi Baoan tarkoittaa '
+          + 'sitä, mitä siltä toivottiin: että se suojelisi Tong\'anin '
+          + 'väkeä.'
+          + '\n\n'
+          + 'Temppeliä laajennettiin Japanin hallintokaudella nykyiseen '
+          + 'laajuuteensa, ja se sai 1985 toisen luokan historiallisen '
+          + 'muistomerkin aseman. Vuosien laiminlyönnin jälkeen '
+          + 'rakennukset kunnostettiin 1995 alkaen, ja työstä myönnettiin '
+          + '2003 Unescon Aasian ja Tyynenmeren kulttuuriperintöpalkinto. '
+          + 'Huhtikuun puolivälistä kesäkuun puoliväliin pihalla '
+          + 'vietetään Baoshengin kulttuurijuhlaa.'
+          + '\n\n'
+          + 'Kadun toisella puolella on Taipein Konfutse-temppeli. Se '
+          + 'rakennettiin ensimmäisen kerran 1879, neljä vuotta '
+          + 'prefektuurin perustamisen jälkeen, alkuperäiselle '
+          + 'paikalleen keskustaan; nykyinen rakennus valmistui 1930 '
+          + 'Qufun esikuvan mukaan, ja se on Taiwanin '
+          + 'Konfutse-temppeleistä ainoa, jota koristavat '
+          + 'eteläfujianilaiset keramiikkakoristeet. Joka vuosi '
+          + '28. syyskuuta siellä pidetään seremonia, jossa soitetaan '
+          + 'vanhaa musiikkia ja tanssitaan tarkoin määrätyt kuviot.',
+      kuvat: [
+        {
+          tiedosto: 'Taipeh Dalongdong Baoan Temple Tor 1.jpg',
+          selite: 'Temppelin etusali kaartuvine kattoineen: harjalla '
+            + 'nousee kaksi lohikäärmettä, ja pihalla seisoo rivi '
+            + 'ruukkupensaita.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dihua-katu': {
+      aika: '1850-luvulta',
+      teksti: 'Dihua-katu on Taipein vanhin katu, ja osa siitä on ollut '
+          + 'olemassa jo 1600-luvulla. Nykyinen katu rakennettiin '
+          + '1850-luvulla, kun Quanzhousta lähtöisin olleet '
+          + 'kauppahuoneet siirtyivät Bangkasta Dadaochengiin. Katua '
+          + 'kutsuttiin silloin Keskikaduksi; nimen Dihua se sai vasta '
+          + '1947 Xinjiangin kaupungin mukaan, joka tunnetaan nykyään '
+          + 'nimellä Ürümqi.'
+          + '\n\n'
+          + 'Kadulla käytiin kauppaa kiinalaisilla lääkeyrteillä, '
+          + 'kankailla ja suitsukeaineilla, ja täällä myös '
+          + 'jälkikäsiteltiin saaren teet ennen vientiä. Kauppa jatkuu '
+          + 'yhä: kadun ympäristö on edelleen yksi Taipein vilkkaimmista '
+          + 'kaupankäyntialueista, ja kuivatuotteita ja herkkuja myyviin '
+          + 'liikkeisiin tullaan erityisesti kuunvuoden uudenvuoden '
+          + 'alla. Kadun varrella on myös Xia-Hain kaupunginjumalan '
+          + 'temppeli.'
+          + '\n\n'
+          + 'Ympärillä oleva Dadaocheng — vanhalta nimeltään Twatutia — '
+          + 'oli 1800-luvun tärkeä kauppasatama ja 1900-luvun alussa '
+          + 'Taiwanin toiseksi väkirikkain kaupunki Tainanin jälkeen, '
+          + 'noin kolmenkymmenen tai neljänkymmenentuhannen asukkaan '
+          + 'kokoinen. Siellä asuivat myös eurooppalaiset kauppiaat, ja '
+          + 'sinne valmistui lokakuussa 1891 Taipein ensimmäinen '
+          + 'rautatieasema, kun rata Keelungiin avattiin.',
+      kuvat: [
+        {
+          tiedosto: 'Buildings along Dihua Street 07.23 (6).jpg',
+          selite: 'Kadunkulman kauppahuone koristeltuine päätykolmioineen '
+            + 'on kunnostettu, ja alakerrassa on nyt matkailuneuvonta.',
+          lahde: 'Supanut Arunoprayote, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pohjoisportti': {
+      aika: 'valmistui 1884',
+      teksti: 'Pohjoisportti, viralliselta nimeltään Cheng\'enin portti, '
+          + 'on kaupunginmuurin viidestä portista ainoa, joka on '
+          + 'säilynyt alkuperäisessä asussaan. Se valmistui muurin '
+          + 'kanssa 1884. Rakenne on umpinainen kaksikerroksinen '
+          + 'vahtihuone: paksut kiviseinät, perinteinen kiinalainen '
+          + 'puinen kattotuoli ja virtaviivaiset kaiverrukset, joissa ei '
+          + 'ole mitään ylimääräistä.'
+          + '\n\n'
+          + 'Portti oli Qing-ajan kaupunkisuunnitelmassa tärkeä, ja se '
+          + 'aukeaa pohjoiseen kohti Dadaochengin kauppakortteleita. '
+          + 'Japanin hallinto purki muurit ja länsiportin, ja etelä-, '
+          + 'pikkuetelä- ja itäporttia muokattiin myöhemmin niin paljon, '
+          + 'että ne menettivät suuren osan alkuperäisestä luonteestaan. '
+          + 'Pohjoisportti jäi.'
+          + '\n\n'
+          + 'Portti seisoo keskellä liikennettä, ja vanhemmissa kuvissa '
+          + 'sen takana kaartaa moottoritien estakadi. Portin '
+          + 'nostaminen takaisin näkyville on '
+          + 'ollut viime vuosien kaupunkisuunnittelun tavoite, ja '
+          + 'portista on nimensä saanut myös viereinen metroasema '
+          + 'Beimen.',
+      kuvat: [
+        {
+          tiedosto: '北門 North Gate of Taipei City Wall - panoramio.jpg',
+          selite: 'Portti suoraan edestä: kivijalustan holvikäytävästä '
+            + 'näkyy kadun toiselle puolelle, ja takana kaartuu '
+            + 'estakadi.',
+          lahde: 'lienyuan lee, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Presidentinlinna': {
+      aika: 'rakennettu 1912–1919',
+      teksti: 'Japanin hallinto järjesti uudesta hallintotalostaan '
+          + 'kaksivaiheisen arkkitehtuurikilpailun 1906 ja 1910, ja '
+          + 'voittajaksi valittiin Nagano Uheijin suunnitelma. Tokiossa '
+          + 'sitä muutettiin: keskustorni nostettiin kuudesta kerroksesta '
+          + 'yhteentoista. Työ alkoi 1. kesäkuuta 1912 ja valmistui '
+          + '31. maaliskuuta 1919, ja se maksoi 2,8 miljoonaa jeniä.'
+          + '\n\n'
+          + 'Rakennus on renessanssin ja barokin sekoitusta punatiilestä '
+          + 'ja vaaleasta rappauksesta. Julkisivu on 130 metriä leveä ja '
+          + 'katsoo itään pitkän Ketagalan-bulevardin päähän: '
+          + 'japanilaiset arkkitehdit suuntasivat tärkeät rakennuksensa '
+          + 'nousevaan aurinkoon leveän kadun päätteeksi. Kuusikymmentä '
+          + 'metriä korkea keskustorni oli Japanin kaudella Taipein '
+          + 'altaan korkein rakennelma.'
+          + '\n\n'
+          + 'Rakennus vaurioitui pahoin toisen maailmansodan lopulla, ja '
+          + 'siksi sen sisätilat ovat nykyään yksinkertaisemmat kuin '
+          + 'alkuperäisessä suunnitelmassa. Korjaustyö tehtiin 1947–1948 '
+          + 'lahjoitusvaroin, ja siihen osallistui noin 81 000 '
+          + 'työntekijää. Vuodesta 1950 talo on ollut presidentin '
+          + 'virastorakennus.',
+      kuvat: [
+        {
+          tiedosto: '總統府 The Presidential Office Building - panoramio.jpg',
+          selite: 'Rakennus vinosti Ketagalan-bulevardin suunnasta: '
+            + 'punavalkoinen julkisivu jatkuu korttelin mitan, ja '
+            + 'keskeltä nousee torni.',
+          lahde: 'lienyuan lee, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Punainen talo': {
+      aika: 'rakennettu 1908',
+      teksti: 'Punainen talo valmistui 1908, ja sen suunnitteli '
+          + 'japanilainen arkkitehti Kondo Juro. Se ei ollut alun perin '
+          + 'teatteri vaan markkinahalli, jonka pohjakerroksessa toimi '
+          + 'tavaratalo. Rakennus on kahden osan yhdistelmä: '
+          + 'kahdeksankulmainen etuosa ja sen takana ristin muotoinen '
+          + 'halli. Tyyli sekoittaa länsimaista ja Meiji-kauden '
+          + 'japanilaista rakennustapaa — arkkitehti oli opiskellut '
+          + 'Tokion keisarillisessa yliopistossa.'
+          + '\n\n'
+          + 'Vuodesta 1945 talossa toimi teatteri, jossa esitettiin '
+          + 'pekingiläisoopperaa. Rakennus merkittiin kolmannen luokan '
+          + 'historialliseksi kohteeksi 1997. Ristirakennus kunnostettiin '
+          + '2015 niin, että saaren ensimmäinen markkinahalli tuli taas '
+          + 'näkyviin, ja kahdeksankulmainen osa koki 2016 sadan vuoden '
+          + 'suurimman korjauksen.'
+          + '\n\n'
+          + 'Ympärillä on Ximending, joka sai nimensä Japanin ajan '
+          + 'kaupunginosasta Seimon-chō — "länsiportin kaupunginosa" — '
+          + 'sillä alue oli muurin länsiportin ulkopuolella. Portti ja '
+          + 'muurit purettiin, mutta nimi jäi. Ximendingistä tuli '
+          + '1930-luvulla teatterikatu, jonka yhdellä korttelilla oli '
+          + 'aikanaan yli kymmenen teatteria, ja vuonna 1999 '
+          + 'siitä tehtiin Taipein ensimmäinen ja Taiwanin suurin '
+          + 'kävelykatualue.',
+      kuvat: [
+        {
+          tiedosto: 'Taipei Taiwan Red-House-Theater-01.jpg',
+          selite: 'Punatiilinen halli valkoisine vaakaraitoineen ja '
+            + 'kaari-ikkunoineen kohoaa Ximendingin kattojen keskeltä.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lungshan-temppeli': {
+      aika: '1738, nykyinen rakennus 1919–1924',
+      teksti: 'Bangkan Lungshan-temppeli rakennettiin 1738. Sen '
+          + 'perustivat Fujianin Jinjiangista, Nan\'anista ja '
+          + 'Hui\'anista tulleet uudisasukkaat, jotka nimesivät sen '
+          + 'kotiseutunsa vanhan Lungshan-temppelin mukaan. Temppeli '
+          + 'omistettiin Guanyinille, ja se oli yhtä lailla '
+          + 'kokoontumispaikka kuin pyhäkkö.'
+          + '\n\n'
+          + 'Rakennus on tuhoutunut kokonaan tai osittain useita kertoja '
+          + 'maanjäristyksissä ja tulipaloissa, ja se on rakennettu joka '
+          + 'kerta uudelleen; nykyiset rakennukset tehtiin 1919–1924. '
+          + 'Temppeli on esimerkki eteläkiinalaisesta '
+          + 'rakennusperinteestä, jota näkyy monissa Taiwanin vanhoissa '
+          + 'rakennuksissa: kaartuvat pääskynpyrstökatot ja '
+          + 'posliininsiruista koottu koristelu.'
+          + '\n\n'
+          + 'Kulkusuunta on määrätty. Sisään tullaan Lohikäärmeportista '
+          + 'ja ulos mennään Tiikeriportista. Etusalissa rukoillaan '
+          + 'kolmea bodhisattvaa, päähallissa Guanyinia, ja takasalissa '
+          + 'on joukko kansanuskon jumaluuksia omine erikoisaloineen — '
+          + 'muun muassa Yue Lao, jolta pyydetään apua avioliittoasioissa '
+          + 'punaisin langoin ja kuunsirpin muotoisin arpakappalein. '
+          + 'Yhdessä Qingshui- ja Qingshan-temppelin kanssa Lungshan '
+          + 'muodostaa Bangkan kolme tunnetuinta temppeliä.',
+      kuvat: [
+        {
+          tiedosto: 'Longshan Temple 2010.jpg',
+          selite: 'Kattoharjan päällä kohtaa kaksi lohikäärmettä ja '
+            + 'niiden välissä seisoo kolmas hahmo, ja harjan alla '
+            + 'kulkee rivi valkoisia sotilas- ja hevosfiguureja.',
+          lahde: 'Titoni Thomas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bopiliaon vanha kortteli': {
+      aika: 'Qing-kaudelta, kunnostettu 2009',
+      teksti: 'Bopiliao on Wanhuassa säilynyt katuosuus, jonka talot '
+          + 'ovat yksi- ja kaksikerroksisia tiilirakennuksia. Osa niistä '
+          + 'on yli kahdensadan vuoden ikäisiä, ja kortteli oli aikanaan '
+          + 'yksi pohjoisen Taiwanin varhaisimmista kauppapaikoista. '
+          + 'Kadulla näkyvät päällekkäin Qing-kauden, Japanin ajan ja '
+          + 'sen jälkeisen rakentamisen tavat.'
+          + '\n\n'
+          + 'Japanin ajan kaupunkisuunnitelma muutti korttelin kaavaa, ja '
+          + 'kaupankäynti hiipui. Paradoksaalisesti juuri se säilytti '
+          + 'talot: kun alueelle vuonna 1941 varattiin tontti Laosongin '
+          + 'kansakoululle, rakennuksia ei purettu vaan ne jäivät '
+          + 'seisomaan sellaisina kuin olivat. Korttelissa on myös '
+          + 'aukio, jonka keskellä on palokunnan vesiallas, sekä '
+          + 'puolisuunnikkaan muotoinen tori Japanin ajalta.'
+          + '\n\n'
+          + 'Kaupunki alkoi kunnostaa hylättyä korttelia 1999, ja työ '
+          + 'valmistui 2009. Vuonna 2010 alue merkittiin virallisesti '
+          + 'historialliseksi kohteeksi ja jaettiin itäiseen ja '
+          + 'läntiseen puoliskoon, joilla on eri käyttötarkoitus. '
+          + 'Nykyään taloissa on näyttelyitä, kotiseutuopetuksen keskus '
+          + 'ja pieniä myymälöitä.',
+      kuvat: [
+        {
+          tiedosto: '剝皮寮歷史街區 Bopiliao Historic Block - panoramio (1).jpg',
+          selite: 'Punatiilinen kauppahuoneiden rivi kaartuu kadun '
+            + 'mukana, ja alakerran holvikäytävän edessä on '
+            + 'pysäköityjä skoottereita.',
+          lahde: 'lienyuan lee, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chiang Kai-shek -muistosali': {
+      aika: 'rakennettu 1976–1980',
+      teksti: 'Muistosali rakennettiin vuonna 1975 kuolleen Kiinan '
+          + 'tasavallan presidentin Chiang Kai-shekin muistoksi. '
+          + 'Arkkitehti Yang Cho-chengin suunnitelma valittiin '
+          + 'kilpailulla, ja se lainaa Nanjingin Sun Yat-senin '
+          + 'mausoleumin muotokieltä. Perustuskivi laskettiin '
+          + '31. lokakuuta 1976 ja sali avattiin 5. huhtikuuta 1980.'
+          + '\n\n'
+          + 'Rakennus on neliseinäinen ja valkoinen, ja sen katto on '
+          + 'sininen ja kahdeksankulmainen — kahdeksan on kiinalaisessa '
+          + 'perinteessä runsauden ja onnen luku. Sisään johtaa kahdet '
+          + 'portaat, joissa kummassakin on 89 askelmaa, yksi kutakin '
+          + 'presidentin elinvuotta kohti. Alakerrassa on kirjasto ja '
+          + 'museo, yläkerrassa suuri sali veistoksineen.'
+          + '\n\n'
+          + 'Sali seisoo yli 240 000 neliömetrin puiston itäpäässä. '
+          + 'Aukion pohjoislaidalla on Kansallinen teatteri ja '
+          + 'eteläpuolella Kansallinen konserttitalo, molemmat '
+          + 'oranssikattoisia; länsipäässä on valkoinen porttirakennus, '
+          + 'ja pohjoiseen ja etelään avautuu kaksi pienempää porttia. '
+          + 'Aukio on kaupungin tavallisin kokoontumispaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Liberty Square viewed from Chiang Kai-shek Memorial Hall.jpg',
+          selite: 'Salin portailta katsottuna aukio jatkuu porttiin '
+            + 'asti, ja sen reunoilla seisovat teatteri ja konserttitalo '
+            + 'oranssikattoisina.',
+          lahde: 'Benlisquare, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kasvitieteellinen puutarha': {
+      aika: 'perustettu 1896',
+      teksti: 'Puutarha perustettiin 1896 taimitarhaksi ja nimettiin '
+          + '1921 Taihokun kasvitieteelliseksi puutarhaksi. Vuoteen '
+          + '1930 mennessä siellä kasvoi 1 129 lajia, ja alue palveli '
+          + 'ennen muuta tutkimusta. Hoito keskeytyi toisen '
+          + 'maailmansodan aikana, ja sen jälkeen istutukset '
+          + 'järjestettiin uudelleen. Nykyään kahdeksan hehtaarin '
+          + 'alueella kasvaa yli 2 000 lajia, ja yhdeksään lampeen on '
+          + 'istutettu kuhunkin omat vesikasvinsa.'
+          + '\n\n'
+          + 'Puutarhassa on kaksi suojeltua rakennusta. Toinen on '
+          + 'vuonna 1924 valmistunut kasvimuseo, toinen paljon '
+          + 'vanhempi: keisarillisten lähettiläiden vierastalo vuodelta '
+          + '1888. Se on Qing-kauden virastorakennus vanhan '
+          + 'muurikaupungin ajalta, ja se siirrettiin puutarhaan 1933.'
+          + '\n\n'
+          + 'Vierastalon portin ovipaneeleihin on maalattu kaksi '
+          + 'ovenvartijaa, ja katonrajan koristeltu puurakenne on '
+          + 'maalattu sinisin, vihrein ja punaisin värein. Muurikaupungin '
+          + 'ajan rakennuksista on Taipeissa jäljellä hyvin vähän — '
+          + 'Pohjoisportti ja tämä talo, joka sekään ei enää seiso '
+          + 'omalla paikallaan.',
+      kuvat: [
+        {
+          tiedosto: '欽差行臺 台灣唯一保存的清朝衙門建築.jpg',
+          selite: 'Vierastalon ovipareihin on maalattu kaksi '
+            + 'panssaroitua ovenvartijaa, ja niiden yllä riippuu '
+            + 'kullatuin merkein kirjoitettu kilpi.',
+          lahde: '張欽嵐, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Taipei 101': {
+      aika: 'valmistui 2004',
+      teksti: 'Taipei 101 on 508 metriä korkea ja siinä on 101 '
+          + 'kerrosta. Sen suunnitteli arkkitehtitoimisto C. Y. Lee & '
+          + 'Partners, ja torni avattiin uudenvuodenaattona 2004. '
+          + 'Muoto on tarkoituksella monitulkintainen: kahdeksan '
+          + 'kahdeksankerroksista jaksoa nousee ylöspäin levenevinä '
+          + 'kuin pagodi, kuin bambunvarsi tai kuin päällekkäin '
+          + 'ladotut vanhat rahalippaat. Kahdeksan on kiinalaisessa '
+          + 'perinteessä runsauden luku, ja 101 viittaa uuteen '
+          + 'vuosisataan.'
+          + '\n\n'
+          + 'Rakennus on suunniteltu kestämään 60 metriä sekunnissa '
+          + 'puhaltava myrskytuuli ja kahdentuhannenviidensadan vuoden '
+          + 'välein toistuva maanjäristys. Perustus lepää 380 paalun '
+          + 'varassa, jotka on lyöty 80 metrin syvyyteen ja jotka '
+          + 'ulottuvat kolmenkymmenen metrin matkalta kallioon. Ylhäällä '
+          + 'riippuu 660 tonnin massavaimennin, ja pilarien välissä on '
+          + 'kahdeksan kerroksen välein ristikkokehiä, jotka sitovat '
+          + 'ytimen ulkopilareihin.'
+          + '\n\n'
+          + 'Hissit valmisti japanilainen Toshiba, ja ne olivat '
+          + 'valmistuessaan maailman nopeimmat: viidennestä kerroksesta '
+          + '89:een nousee 37 sekunnissa, mikä on runsaat kuusikymmentä '
+          + 'kilometriä tunnissa. Uudenvuodenyönä torni muuttuu '
+          + 'ilotulitusalustaksi, ja Xinyin kaupunginosaan kokoontuu '
+          + 'tuhansia katsojia keskiyön näytöstä varten. Vuonna 2011 '
+          + 'torni sai LEED-luokituksen maailman korkeimpana '
+          + 'ympäristösertifioituna rakennuksena.',
+      kuvat: [
+        {
+          tiedosto: 'Taipei 101 20230401.jpg',
+          selite: 'Uudenvuoden ilotulitus purkautuu tornin kyljistä '
+            + 'vihreinä viuhkoina, ja huippu häviää valon sisään.',
+          lahde: 'Xiaoanan1207, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

@@ -2474,6 +2474,69 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 22.024, etela: 21.944, lansi: 96.0513, ita: 96.1375 },
   },
+  taipei: {
+    /*
+     * TAIPEIN VANHA PUOLI (21.8.2026). Ruutu on 5,2 × 5,5 km ja se
+     * kattaa sen osan kaupunkia, jota lehti kertoo: pohjoisessa
+     * Dalongdongin ja Dadaochengin teekauppakorttelit, keskellä
+     * Qing-ajan muurikaupungin ruutu Pohjoisportilta
+     * Presidentinlinnalle, lännessä Wanhuan (Bangkan) vanhat kujat ja
+     * etelässä Chiang Kai-shek -muistosalin aukio ja
+     * kasvitieteellinen puutarha.
+     *
+     * RUUTU EI OLE KESKITETTY WIKIPEDIAN KAUPUNKIPISTEESEEN, ja se on
+     * tietoinen valinta (docs/aasia-tyoaineisto/faktapohja-taipei.md
+     * osio 4 ja tarkistus-taipei.md osio 3, vaihtoehto A). Wikipedian
+     * infobox-koordinaatti 25,0375 / 121,5625 osuu nykyiseen Xinyin
+     * kaupunginosaan Taipei 101:n viereen, kun taas kaikki lehden
+     * historialliset kohteet ovat 4–6,4 kilometriä siitä länteen.
+     * Keskipisteeksi on siksi otettu vanhan kaupungin puoli
+     * (25,053 / 121,5105), jolloin yhdeksän kohdetta mahtuu ruutuun,
+     * jonka reunoille jää vielä Tamsui-joki lännessä.
+     *
+     * NELIÖMÄINEN RAJAUS ON HARKITTU, kuten Varanasissa ja
+     * Kantonissa. Kohteet ovat luonnostaan 2,2 kilometriä leveä ja
+     * 4,5 kilometriä korkea nauha, joka kulkee Dalongdongista
+     * etelään; pelkkä nauha olisi piirtynyt kapeaksi pystykaistaleeksi
+     * (paketin korkein kartta on Isfahan 1600 × 1983). Ruutua
+     * levennettiin itään ja länteen niin, että kuvasuhde on 0,95 —
+     * ja samalla länsireunaan tuli Tamsui-joki, jota pitkin teetä
+     * vietiin merelle.
+     *
+     * TAIPEI 101 ON KAINALOSSA, EI PÄÄRUUDUSSA. Se on
+     * en-Wikipedian koordinaatista (25,0336 / 121,5647) laskien 5,9
+     * kilometriä itäkaakkoon kartan keskipisteestä — samaa luokkaa
+     * kuin Adenin Tawahi (6 km) ja selvästi lähempänä kuin Kantonin
+     * Whampoa (12,6 km), joka jätettiin kokonaan pois. Pääruudun
+     * venyttäminen Xinyihin asti olisi tehnyt vanhasta kaupungista
+     * kuvan vasemman laidan läiskän. Kainalo on oikeassa
+     * alakulmassa, koska suunta on kaakko (Xi'anin ja Irkutskin
+     * malli).
+     *
+     * SHILININ YÖMARKKINAT JA KANSALLINEN PALATSIMUSEO EIVÄT OLE
+     * KARTALLA EIVÄTKÄ KAINALOSSA. Ne ovat kartan keskipisteestä
+     * laskien 4,0 ja 6,9 kilometriä pohjoiseen ja koilliseen, mutta
+     * kumpikin omaan suuntaansa: kaksi lisäkainaloa kolmannen rinnalle
+     * tekisi kuvasta levottoman (Astanan kahden aseman ratkaisu).
+     * Molemmat kerrotaan lehden nostoissa ja kuvissa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kathmandussa ja Kantonissa: Wanhuan kujat,
+     * Dihua-kadun kauppahuoneiden kulkuaukot ja Ximendingin
+     * kävelykatualue ovat OSM:ssä jalankulkualueita ja huoltoteitä,
+     * ja ilman lippuja kartan tihein kortteli jäisi tyhjäksi
+     * paperiksi.
+     */
+    rajat: { pohjoinen: 25.078, etela: 25.028, lansi: 121.4845, ita: 121.5365 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 25.0405, etela: 25.0275, lansi: 121.558, ita: 121.572 },
+        x: 74, y: 62, leveys: 24, suunta: '5,9 km itäkaakkoon',
+      },
+    ],
+  },
 };
 
 /*

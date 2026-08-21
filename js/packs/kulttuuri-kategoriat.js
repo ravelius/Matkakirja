@@ -41892,4 +41892,537 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TAIPEI (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä; asia-artikkelit.js:n merkintä oli olemassa, ja siihen
+   * kirjoitettiin uusi intro. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä (action=raw, haettu 21.8.2026): Taipei, Taipei
+   * 101, National Palace Museum, Longshan Temple (Taipei), Shilin
+   * Night Market, Taipei North Gate, Walls of Taipei, Presidential
+   * Office Building (Taipei), Chiang Kai-shek Memorial Hall,
+   * Dalongdong Baoan Temple, Taipei Confucius Temple, Ximending, Red
+   * House Theater, Bopiliao Historic Block, Dadaocheng, Dihua Street,
+   * Taipei Botanical Garden, Beitou District, Beitou Hot Spring
+   * Museum, Yangmingshan, Maokong, Taiwanese tea, Taiwanese tea
+   * culture ja John Dodd (tea merchant). Pohjana ovat
+   * docs/aasia-tyoaineisto/faktapohja-taipei.md ja
+   * tarkistus-taipei.md, jotka luettiin yhdessä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md, "Taipei": Antaa
+   * olla) ja omistajan tarkennus 21.8.2026: EI NYKYPOLITIIKKAA.
+   * Hallinnon vaiheet kerrotaan pelkkinä päivämäärinä ja
+   * hallintomuutoksina ilman kummankaan osapuolen kehystä: 1709
+   * uudisraivaajat, 1875 Taipehin prefektuuri, 1895 luovutus
+   * Japanille, 1945 hallinnon vaihdos ja 1949 muutto. POIS JÄTETTY
+   * KOKONAAN: saaren nykyinen asema ja sitä koskeva kiista
+   * (pääartikkelin oma alaviite "de facto capital" mukaan lukien),
+   * puoluepolitiikka ja pormestarivaalit, sotilaalliset aiheet,
+   * vuoden 1947 tapahtumat ja niitä seurannut sotatilan kausi,
+   * vuoden 1990 mielenosoitukset ja muistosalin nimikiista.
+   * Sotatilan kausi näkyy lehdessä vain siinä, että muistosalin
+   * juttu kertoo salin valmistumisvuoden ja arkkitehtuurin — sen
+   * enempää ei tarvita. Toisen maailmansodan pommitukset ovat mukana
+   * VAIN yhtenä lauseena Presidentinlinnan jutussa, koska rakennuksen
+   * nykyinen ilme selittyy sillä (lehtityo-resepti.md:n linjausmuutos
+   * 20.8.2026: lukijalle kerrotaan, mistä nykyilme johtuu), ilman
+   * uhrilukuja ja ilman osapuolikehystä. Painotus on kulttuurissa,
+   * ruoassa, kuumissa lähteissä ja arkkitehtuurissa, kuten ohje
+   * sanoo.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat lehden tekstejä,
+   * on kirjoitettu auki tai kierretty (v925/v932:n tapa):
+   * 1) Kuinka kauan Taipei 101 oli maailman korkein? Taipei-artikkeli
+   *    sanoo "six years before the Burj Khalifa was completed", tornin
+   *    oma artikkeli "from its opening on 31 December 2004 until it
+   *    was surpassed by the Burj Khalifa in 2009" ja faktapohja viisi
+   *    vuotta. Lehti ei anna vuosilukua lainkaan vaan sanoo tornin
+   *    olleen maailman korkein, kunnes Burj Khalifa ohitti sen
+   *    (maakartat.js:n Moreebin dyyni -sääntö).
+   * 2) Massavaimentimen kerrosväli. Tornin artikkelin leipäteksti
+   *    sanoo pallon riippuvan 92. kerroksesta 88:aan, kerrostaulukko
+   *    kattaa kerrokset 92–87. Tarkistusraportti (osio 1) vahvisti
+   *    molemmat; lehti käyttää leipätekstin lukuja.
+   * 3) Milloin Taipehista tuli provinssin pääkaupunki? Taipei-
+   *    artikkelin johdanto sanoo 1887, historiaosio "In 1886, as work
+   *    commenced to govern the island as a province" ja saman osion
+   *    seuraava lause "formally made the provincial capital in 1894".
+   *    Lehti ei väitä yhtä vuotta vaan sanoo, että hallintokeskus
+   *    nousi 1875 perustetun prefektuurin keskukseksi ja että
+   *    provinssin pääkaupungiksi se vahvistettiin 1800-luvun lopulla.
+   * 4) Milloin muurit purettiin? Walls of Taipei sanoo "In the first
+   *    years of the Japanese colonial rule (ca. 1895)", Ximending-
+   *    artikkeli "torn down in 1905". Lehti sanoo "1900-luvun
+   *    alkuvuosina".
+   * 5) John Doddin kansallisuus ja yhtiön vuosi. Taiwanese tea
+   *    -artikkeli sanoo skotlantilainen ja 1867 (teeyhtiö Wanhuassa),
+   *    Doddin oma artikkeli sanoo lyhyessä kuvauksessaan
+   *    englantilainen ja leipätekstissä skotlantilainen sekä Dodd &
+   *    Co 1865. Lehti käyttää molempien artikkelien leipätekstin
+   *    sanaa skotlantilainen ja vuotta 1867, joka koskee nimenomaan
+   *    Formosa Oolongin vientiä.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viidestä
+   * kysymyksestä kolmen vastaus löytyy lehdestä: Taiwanin saari
+   * (intro asia-artikkelit.js:ssä ja oppaan jakso 2), Taipei 101
+   * pilvenpiirtäjänä (nosto K1, kohdekartan juttu ja kansikuva) ja
+   * yömarkkinoiden katuruoka (nosto K3). KAKSI JÄTETTIIN
+   * TIETOISESTI POIS. Mikrosirukysymys on nykytaloutta, jolle
+   * en-Wikipedian Taipei-artikkeli ei anna kaupunkikohtaista
+   * lähdettä — artikkeli sanoo vain, että kaupunki on tekniikan ja
+   * elektroniikan keskus, ja intro sanoo saman; lukua tai yhtiön
+   * nimeä ei keksitä. Saaren asemaa koskeva kysymys on juuri sitä
+   * nykypolitiikkaa, jota sitova linjaus kieltää, eikä siihen
+   * kirjoiteta vastausta lehteen.
+   *
+   * MINITEHTÄVÄ (historia-sivu) kysyy, miksi muurin rakentaminen
+   * keskeytyi 1879. Visa ei kysy sitä, ja vastaus on samalla sivulla
+   * nostossa H3.
+   *
+   * AIHETOISTO on tietoinen ja perusteltu, ja se noudattaa Xi'anin
+   * mallia (avauskuva ja kohdekartan juttu samasta kohteesta eri
+   * tiedostoina). Pohjoisportti on avauskuvassa vinosti nykykaupungin
+   * keskellä ja kohdekartan jutussa suoraan edestä; Presidentinlinna
+   * on avauskuvassa symmetrisenä julkisivuna ja jutussa
+   * Ketagalan-bulevardin suunnasta; Lungshan-temppelistä näkyy
+   * avauskuvassa kattoharjan koristelu lähietäisyydeltä ja jutussa
+   * koko harja lohikäärmeineen. Chiang Kai-shek -muistosali on
+   * matkaoppaan etusivukuvassa portin kaaren läpi ja jutussa
+   * päinvastaisesta suunnasta salin portailta aukiolle. Taipei 101
+   * on kansikuvassa siluettina, nostossa sisältä (massavaimennin) ja
+   * kohdekartan jutussa uudenvuoden ilotulituksessa — kolme
+   * etäisyyttä samaan tapaan kuin Xi'anin terrakotta-armeija.
+   *
+   * KUVISTA HYLÄTTIIN kuusi: kaksi Lungshan-temppelin pihakuvaa ja
+   * Taiwanin kansallismuseon sisäänkäynti (tunnistettavia kasvoja
+   * etualalla), Taihokun kenraalikuvernöörinviraston 1920-luvun
+   * PD-valokuva (kuvan päälle painetut kirjoitusmerkit eli lisätty
+   * merkintä), Taipein muurin pienoismalli (hämärä vitriinikuva
+   * kauppakäytävässä) ja "09 Street in Bopiliao Taipei" (kuva ei
+   * esitä Bopiliaota vaan Beitoun risteystä).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi'anin, Varanasin, Kathmandun ja Kantonin
+   * malli v965–v966). Talon menetelmä on Open-Meteon arkisto (ERA5,
+   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn
+   * ajan pelkällä viestillä "Daily API request limit exceeded.
+   * Please try again tomorrow" — kontin jaetun ulosmenevän osoitteen
+   * vuorokausikiintiö oli käytetty loppuun, eikä se nollaudu ennen
+   * UTC-vuorokauden vaihdetta. Kokeiltu työn alussa ja lopussa, sama
+   * vastaus kummallakin kerralla. Lukuja ei ole otettu mistään muusta
+   * lähteestä, koska vuosigraafin lähderivi lupaa lukijalle
+   * nimenomaan ERA5:n; ilman riviä lehti näkyy ilman säätä, kuten
+   * saatiedot.js:n alkukommentti lupaa. Matkaoppaan jakso 5 nojaa
+   * siksi en-Wikipedian Taipei-artikkelin sääruutuun (Taiwanin
+   * ilmatieteen laitoksen normaalit 1991–2020), ja jakso sanoo sen
+   * ääneen. Kun ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava
+   * rivin omista luvuista. Mittauspiste olisi keskusta 25,04 /
+   * 121,51.
+   */
+  taipei: [
+    {
+      id: 'kaupunki',
+      nimi: 'Taipei',
+      johdanto: 'Vuoristoaltaan kaupunki kahden joen välissä: '
+        + 'pohjoisessa kohoavat Yangmingshanin tulivuoret, lännessä '
+        + 'virtaa Tamsui-joki. Teekauppa teki 1800-luvulla kylistä '
+        + 'kaupungin ja kaupungista Pohjois-Taiwanin hallintokeskuksen.',
+      kansikuvat: [
+        {
+          tiedosto: 'Taipei Skyline 2022.06.29.jpg',
+          selite: 'Xinyin kaupunginosa Norsuvuoren rinteeltä: Taipei 101 '
+            + 'nousee vasemmalla muiden tornitalojen yli, ja takana '
+            + 'häämöttävät altaan reunavuoret.',
+          lahde: '毛貓大少爺, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Taipei, assorted - TaipeiCityscapes4969.jpg',
+          selite: 'Kaupunki täyttää altaan pohjan, ja sen takana '
+            + 'vuorenharjanteet jatkuvat kerroksittain sinertyen '
+            + 'niin kauas kuin näkyy.',
+          lahde: 'lumoplank, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Aerial panorama of Taipei city\'s west side facing the Tamsui River.jpg',
+          selite: 'Kaupungin länsilaita Tamsui-joen mutkassa: kaksi '
+            + 'siltaa, hiekkasärkkä keskellä uomaa ja matalia '
+            + 'kortteleita molemmin puolin.',
+          lahde: 'Bob Tan, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: portti, virastotalo ja temppelin katto — kaupungin
+       * kolme kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (Qing-ajan muurikaupunki, Japanin ajan hallinto, kylien oma
+       * temppeliperinne).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'North Gate of Taipei City, 2023 (01).jpg',
+          selite: 'Pohjoisportti keskellä nykykaupunkia: punaiseksi '
+            + 'rapattu vahtihuone seisoo harmaalla kivijalustalla, ja '
+            + 'katon räystäät kaartuvat ylös pääskynpyrstöiksi.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Taipei Taiwan Presidential-Office-Building-01.jpg',
+          selite: 'Presidentinlinnan punatiilinen julkisivu palmurivin '
+            + 'takana, ja keskeltä nousee kuusikymmenmetrinen torni.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Taipeh Longshan-Tempel Dachlandschaft.jpg',
+          selite: 'Lungshan-temppelin kattoharjalla kiemurtelee '
+            + 'posliininsiruista koottuja lohikäärmeitä, ja niiden alla '
+            + 'kulkee rivi pieniä ihmishahmoja.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Torni, jonka sisällä riippuu pallo',
+          tiedosto: 'Taipei 101 Tuned Mass Damper 2010.jpg',
+          teksti: 'Taipei 101 avattiin uudenvuodenaattona 2004, ja se '
+            + 'oli maailman korkein rakennus siihen asti, kunnes Dubain '
+            + 'Burj Khalifa ohitti sen. Torni on 508 metriä korkea ja '
+            + 'ensimmäinen pilvenpiirtäjä, joka ylitti puolen '
+            + 'kilometrin rajan. Se seisoo kahdensadan metrin päässä '
+            + 'suuresta siirroksesta, joten sen piti taipua eikä '
+            + 'vastustaa: kahdeksankymmenennestäkahdeksannesta '
+            + 'yhdeksänteenkymmenenteentoiseen kerrokseen on ripustettu '
+            + '660 tonnin teräspallo, joka heilahtaa tuulta ja '
+            + 'järistystä vastaan. Pallo on koottu 41:stä sadan '
+            + 'kahdenkymmenenviiden millimetrin teräslevystä, se on '
+            + 'halkaisijaltaan 5,5 metriä ja se leikkaa tornin '
+            + 'liikkeestä jopa neljäkymmentä prosenttia.',
+          selite: 'Massavaimentimen kullattu pallo riippuu neljän '
+            + 'vaijerin varassa kerrosten välisessä kuilussa, ja sen '
+            + 'alla erottuvat iskunvaimentimet.',
+          lahde: 'Armand du Plessis, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Taipei 101',
+        },
+        {
+          otsikko: 'Kokoelma, joka oli kuusitoista vuotta matkalla',
+          tiedosto: 'National Palace Museum, Taipei.jpg',
+          teksti: 'Kansallinen palatsimuseo perustettiin Pekingin '
+            + 'Kiellettyyn kaupunkiin 10. lokakuuta 1925, kun '
+            + 'viimeinen keisari Puyi oli poistunut palatsista. Kun '
+            + 'sota lähestyi, kokoelma lähti matkaan: keväällä 1933 '
+            + 'pakattiin 13 491 laatikkoa palatsin esineitä ja 6 066 '
+            + 'laatikkoa muista kokoelmista, ja ne vietiin viidessä '
+            + 'erässä Shanghaihin, 1936 Nanjingiin ja sieltä kolmea '
+            + 'reittiä sisämaahan. Vuonna 1947 laatikot palasivat '
+            + 'Nanjingiin, ja joulukuun 1948 ja helmikuun 1949 välillä '
+            + 'niistä 2 972 — noin viidennes — purjehti kolmessa '
+            + 'lastissa Keelungin satamaan. Museo avattiin uudelleen '
+            + 'Shilinissä 12. marraskuuta 1965.',
+          selite: 'Museon keltaiset seinät ja vihreä tiilikatto nousevat '
+            + 'metsäisen rinteen juurella, ja aukiolta johtaa ylös '
+            + 'kaksi valkoista marmoriporrasta.',
+          lahde: 'Jason Zhang, Wikimedia Commons (CC0)',
+          wiki: 'National Palace Museum',
+        },
+        {
+          otsikko: 'Kadut, jotka aukeavat vasta illalla',
+          tiedosto: 'Night markets of Taipei - TaipeiNM4951.jpg',
+          teksti: 'Taipei tunnetaan yömarkkinoistaan, ja tunnetuin '
+            + 'niistä on Shilinin yömarkkina kaupungin pohjoisosassa. '
+            + 'Kojut avautuvat iltapäivän lopulla, ruuhka on '
+            + 'pahimmillaan kahdeksan ja yhdentoista välillä ja '
+            + 'viimeiset menevät kiinni vasta yhden tai kahden aikaan '
+            + 'aamuyöstä. Ruokahallissa on 539 kojua, ja ympäröivillä '
+            + 'kujilla myydään sekaisin ruokaa, vaatteita ja '
+            + 'arkitavaraa. Listalla toistuvat osterimunakas, '
+            + 'osterinuudelikeitto, haiseva tofu, paistettu kanaleike, '
+            + 'papaijamaito ja kuplatee. Markkina syntyi jokilaiturin '
+            + 'viereen, jolta Shilinin viljelijät lähettivät satonsa '
+            + 'Bangkaan ja Dadaochengiin.',
+          selite: 'Kojurivi hehkuu sinisessä iltahämärässä, ja talon '
+            + 'seinällä loistaa pyöreitä neonkilpiä.',
+          lahde: 'lumoplank, Wikimedia Commons (CC0)',
+          wiki: 'Shilin Night Market',
+        },
+        {
+          otsikko: 'Rikin haju ja kuuma vesi',
+          tiedosto: 'Beitou Hot Spring Museum 20150607.jpg',
+          teksti: 'Kaupungin pohjoisreunalla Beitoun laaksossa on yksi '
+            + 'maailman suurimmista kuumien lähteiden keskittymistä. '
+            + 'Vesi nousee Yangmingshanin tulivuorten rikkipitoisesta '
+            + 'maaperästä, ja alkuperäiskansat kylpivät siinä kauan '
+            + 'ennen kuin saksalainen rikkikauppias perusti paikalle '
+            + 'ensimmäisen kylpyläklubinsa. Japanin hallintokaudella '
+            + 'laaksosta tehtiin terveyskylpylä: majataloja, '
+            + 'kivialtaita ja vuonna 1913 valmistunut yleinen kylpylä, '
+            + 'joka oli silloin Itä-Aasian suurin. Rakennus on '
+            + 'nykyisin kuumien lähteiden museo. Asukkaat sanovat, '
+            + 'että rikkihöyryt syövät kodinkoneet ennen aikojaan.',
+          selite: 'Kuumien lähteiden museo on puoliksi punatiiltä ja '
+            + 'puoliksi tummaa puuta, ja alakerran kaari-ikkunat '
+            + 'katsovat nurmikentälle.',
+          lahde: 'ironypoisoning, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Beitou Hot Spring Museum',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Chiang Kai-shek memorial 2 amk.jpg',
+          selite: 'Muistosalin aukiolle johtavan valkoisen portin '
+            + 'kaaresta näkyy sinikattoinen sali aukion toisessa '
+            + 'päässä.',
+          lahde: 'AngMoKio, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Taipei on Taiwanin pohjoispäässä, muinaisen '
+          + 'järvenpohjan päälle syntyneessä altaassa, ja kaupunkia '
+          + 'ympäröi joka suunnalta naapurikaupunki New Taipei. '
+          + 'Matkailijan Taipei on kaksi kaupunkia: lännessä vanha '
+          + 'puoli, jossa ovat Wanhuan kujat, Dadaochengin '
+          + 'kauppahuoneet ja muurikaupungin jäänteet, ja idässä uusi '
+          + 'Xinyi tornitaloineen. Metro yhdistää nämä kaksi puolta. '
+          + 'Kaupungin pinta-ala on 272 neliökilometriä, mutta suurin '
+          + 'osa siitä on vuorta: Yangmingshanin kansallispuisto alkaa '
+          + 'kymmenen kilometrin päässä keskustasta pohjoisessa, ja '
+          + 'Beitoun kuumille lähteille pääsee metrolla.',
+        artikkeli: {
+          nimi: 'Matkailijan Taipei',
+          taitto: 'opas',
+          teksti: 'Kaksi jokea, yksi allas ja vuoret joka suunnalla — '
+            + 'ja niiden välissä kaupunki, joka aukeaa vasta illalla.',
+          nosto: 'Talvet ovat Taipeissa lyhyitä ja sumuisia, mutta '
+            + 'lunta ei ole koskaan mitattu itse kaupunkiin — vain sen '
+            + 'omille vuorille, jotka nousevat kaupungin rajojen '
+            + 'sisällä yli tuhanteen metriin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunkia palvelee kaksi lentokenttää. '
+                + 'Songshanin kenttä on aivan kaupungin sisällä ja '
+                + 'hoitaa kotimaanlennot sekä vuorot Tokion Hanedaan, '
+                + 'Soulin Gimpoon ja noin viiteentoista kohteeseen '
+                + 'Kiinassa; useimmat kansainväliset lennot laskeutuvat '
+                + 'Taoyuanin kentälle naapurikaupunkiin, jonne pääsee '
+                + 'vuonna 2017 avatulla lentokenttäradalla. Kaupungin '
+                + 'sisällä kulkee metro, jolla on kuusi linjaa, ja '
+                + 'kaikkeen käy sama lähimaksukortti EasyCard, joka '
+                + 'kelpaa myös busseissa. Kaikki solmuuntuu Taipein '
+                + 'päärautatieasemalle: sieltä lähtevät metro, bussit, '
+                + 'tavalliset junat ja vuonna 2007 avattu '
+                + 'suurnopeusrata, joka lyhensi matkat länsirannikon '
+                + 'kaupunkeihin yli kuudellakymmenellä prosentilla. '
+                + 'Radat vietiin keskustassa maan alle vuodesta 1983 '
+                + 'alkaen. Vuoden 2022 tutkimuksessa 34,9 prosenttia '
+                + 'kaupunkilaisten matkoista tehtiin joukkoliikenteellä '
+                + '— enemmän kuin missään muualla saarella.',
+              kuva: {
+                tiedosto: 'A Taipei Metro C381 train at Beitou Station.jpg',
+                selite: 'Metrojunan keula laiturilla: sininen aaltokuvio '
+                  + 'juoksee keulan poikki ja ohjaamon ikkunassa '
+                  + 'heijastuvat aseman katosrakenteet.',
+                lahde: 'Lokseng01, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Taipein allas on muinainen järvenpohja, ja '
+                + 'kaupungin läntinen keskiosa lepää sen tasaisella '
+                + 'pohjalla. Etelässä rajana on Xindian-joki ja lännessä '
+                + 'Tamsui-joki, johon Xindian ja pohjoisen Keelung-joki '
+                + 'yhtyvät; Shilinin ja Beitoun kaupunginosat ovat '
+                + 'Keelung-joen pohjoispuolella. Maasto nousee etelään, '
+                + 'itään ja etenkin pohjoiseen: siellä kohoaa 1 120 '
+                + 'metrin Qixing- eli Seitsentähtivuori, Taiwanin '
+                + 'korkein lepotilassa oleva tulivuori, ja aivan sen '
+                + 'vieressä 1 092 metrin Datun. Molemmat kuuluvat '
+                + 'Yangmingshanin kansallispuistoon, joka tunnetaan '
+                + 'kirsikankukista, kuumista lähteistä ja '
+                + 'rikkihöyryistä. Kaakossa nousevat Songshanin kukkulat '
+                + 'ja Qingshuin rotko. Kaupungin pinta-ala on 271,8 '
+                + 'neliökilometriä, ja sen rajojen sisällä asuu noin '
+                + 'kaksi ja puoli miljoonaa ihmistä; koko '
+                + 'Taipei–Keelung-alueella noin seitsemän miljoonaa.',
+              kuva: {
+                tiedosto: '七星山 Qixing Mountain - panoramio.jpg',
+                selite: 'Qixing-vuoren ruohoinen huippu kohoaa metsän '
+                  + 'takaa, ja etualalla lepää kaislainen suolampi.',
+                lahde: 'lienyuan lee, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: tee',
+              teksti: 'Taiwanilainen teekulttuuri on peräisin Kiinasta, '
+                + 'mutta saaren vuoristo ja kostea ilmasto ovat '
+                + 'kehittäneet siitä oman lajinsa — erityisesti korkean '
+                + 'vuoriston oolongin. Perinteistä gongfu-tapaa, jossa '
+                + 'lehdet uutetaan pienessä kannussa monta kertaa '
+                + 'peräkkäin, kutsutaan arkikielessä nimellä laoren '
+                + 'cha, vanhan miehen tee, ja sitä juodaan yhä '
+                + 'teetaloissa. Samasta perinteestä on lähtenyt '
+                + 'maailmalle kuplatee, joka keksittiin Taiwanissa. '
+                + 'Kaupungin oma teenviljelysalue on Maokong '
+                + 'Wenshanin kaupunginosassa: sinne nousee vuonna 2007 '
+                + 'avattu köysirata eläintarhan metroasemalta, rinteillä '
+                + 'kasvaa yhä tieguanyin-teetä, ja mäen päältä näkyy '
+                + 'koko allas. Vanhat polut, joita pitkin teetä '
+                + 'kannettiin alas, ovat nyt vaellusreittejä.',
+              kuva: {
+                tiedosto: 'Tea plantation, Pinglin.jpg',
+                selite: 'Teepensaat kasvavat tiiviinä kaarevina riveinä '
+                  + 'rinteessä, ja niiden takana alkaa metsä.',
+                lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: satama aukeaa',
+              teksti: 'Vuonna 1860 ratifioitiin Tianjinin sopimus, ja '
+                + 'Tamsuin satama joen suussa avattiin '
+                + 'ulkomaankaupalle. Muutamaa vuotta myöhemmin '
+                + 'skotlantilainen kauppias John Dodd alkoi yhdessä '
+                + 'paikallisten kauppiaiden ja viljelijöiden kanssa '
+                + 'kehittää saaren teestä vientitavaraa. Vuonna 1867 '
+                + 'hän perusti teeyhtiön Wanhuaan ja myi saaren '
+                + 'oolongia maailmalle nimellä Formosa Oolong. Kauppa '
+                + 'kasvoi nopeasti: oolongia vietiin vuodesta 1865 ja '
+                + 'baozhong-teetä vuodesta 1881, ja pian tee oli '
+                + 'noussut saaren vientilistan kärkeen sokerin ja '
+                + 'kamferin ohi. Ulkomaiset kauppahuoneet asettuivat '
+                + 'Twatutiaan eli nykyiseen Dadaochengiin vuodesta 1867, '
+                + 'ja vuoteen 1872 mennessä siellä toimi viisi '
+                + 'brittiläistä yhtiötä. Juuri tämä kauppa ratkaisi, '
+                + 'että pohjoisen Taiwanin uusi hallintokeskus '
+                + 'rakennettiin tänne.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Taipein ilmasto on kostea subtrooppinen, jossa on '
+                + 'piirre trooppisesta sademetsäilmastosta. Kesät ovat '
+                + 'pitkiä, hyvin kuumia ja kosteita, ja niihin kuuluvat '
+                + 'rankkasateet; Tyynenmeren taifuunikausi kestää '
+                + 'kesäkuusta lokakuuhun. Talvet ovat lyhyitä ja '
+                + 'yleensä leutoja mutta usein sumuisia, koska '
+                + 'koillistuuli tuo Siperian korkeapaineen viileää ilmaa, '
+                + 'joka kerääntyy altaan pohjalle. Lämmin talvipäivä voi '
+                + 'nousta yli kahdenkymmenenkuuden asteen, ja kesän '
+                + 'iltapäiväkuuro voi pudottaa lämpötilan saman rajan '
+                + 'alle. Nämä luvut ovat en-Wikipedian oman sääruudun '
+                + 'normaaleja vuosilta 1991–2020, eivät lehden muualla '
+                + 'käyttämää ERA5-aineistoa: tammikuun keskilämpö on '
+                + '16,4 astetta ja heinäkuun 29,9, kuivin kuukausi on '
+                + 'marraskuu 89 millimetrillä ja sateisimmat touko–'
+                + 'syyskuu, jolloin kuukausisade on 214–237 millimetriä. '
+                + 'Kylmin mitattu lukema on 0,2 pakkasastetta helmikuulta '
+                + '1901 ja kuumin 39,7 astetta heinäkuulta 2020.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ennen Taipeita altaassa asui Ketagalan-kansaa, ja '
+        + 'han-uudisraivaajat saapuivat vuonna 1709. Sadassa '
+        + 'seitsemässäkymmenessä vuodessa kolmesta kauppakylästä '
+        + 'kasvoi muurein ympäröity prefektuurin pääkaupunki.',
+      tehtava: {
+        kysymys: 'Miksi Taipein kaupunginmuurin rakentaminen '
+          + 'keskeytyi ensimmäisellä yrityksellä vuonna 1879?',
+        vaihtoehdot: [
+          'Rahat loppuivat kesken',
+          'Maaperä oli liian pehmeä kantamaan muuria',
+          'Kivi tuli väärästä louhoksesta',
+          'Työmiehet lähtivät etsimään kultaa',
+        ],
+        oikea: 1,
+        fakta: 'Altaan pohja on vanhaa järvensavea. Uudet mittaukset '
+          + 'tehtiin, perustus siirrettiin ja työ aloitettiin '
+          + 'uudelleen 1882.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolme kylää altaan pohjalla',
+          tiedosto: '2014-02-23 台北 Taipei from 貓空 01.jpg',
+          teksti: 'Ennen 1700-lukua Taipein allas oli Ketagalan-kansan '
+            + 'aluetta. Qing-hallinto alkoi vuosisadan alussa sallia '
+            + 'alueen raivaamisen, ja vuonna 1709 tänne asettuivat '
+            + 'ensimmäiset han-uudisraivaajat Etelä-Fujianista — '
+            + 'Dabusta, Yongdingistä, Anxistä ja Tong\'anista. '
+            + 'Seuraavan sadan vuoden aikana joenrannalle kasvoi kolme '
+            + 'kauppakylää: Bangka nykyisen Wanhuan kohdalle, '
+            + 'Dalongdong pohjoiseen ja Twatutia niiden väliin. '
+            + 'Kylien välit eivät aina olleet hyvät: vuonna 1853 väkeä '
+            + 'siirtyi selkkauksen jälkeen Bangkasta Twatutiaan. Niistä '
+            + 'kolmesta tuli myöhemmin yksi kaupunki.',
+          selite: 'Allas Maokongin rinteiltä katsottuna: matala pohja on '
+            + 'täynnä taloja, ja metsäiset kukkulat reunustavat sitä '
+            + 'joka suunnalta.',
+          lahde: 'othree, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Taipei',
+        },
+        {
+          otsikko: 'Tee nosti kylät kaupungiksi',
+          tiedosto: 'Historic Facades on Dihua Street - Taipei - Taiwan (33996547268).jpg',
+          teksti: 'Twatutian ensimmäinen kauppa avattiin 1851, ja '
+            + 'sen omistaja oli keelungilainen Lin Lan-tian. '
+            + '1850-luvulla Quanzhousta lähtöisin olleet kauppahuoneet '
+            + 'siirtyivät Bangkasta tänne ja rakensivat Keskikadun, '
+            + 'jota nykyään sanotaan Dihua-kaduksi. Kadulla käsiteltiin '
+            + 'teetä, kiinalaisia lääkeyrttejä, kankaita ja '
+            + 'suitsukeaineita. Kun Tamsuin satama avattiin '
+            + 'ulkomaankaupalle 1860, teenvienti teki seudusta rikkaan, '
+            + 'ja vuonna 1875 pohjoinen Taiwan erotettiin omaksi '
+            + 'Taipehin prefektuurikseen. Uusi hallintokeskus '
+            + 'rakennettiin vaurastuneiden kylien kylkeen ja sitä '
+            + 'kutsuttiin nimellä Chengnei, sisäkaupunki.',
+          selite: 'Dihua-kadun kauppahuoneiden julkisivuja: pylväitä, '
+            + 'koristelistoja ja pystysuoria kilpiä katutason '
+            + 'markiisien yllä.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Dihua Street',
+        },
+        {
+          otsikko: 'Muuri, joka ei aluksi pysynyt pystyssä',
+          tiedosto: 'Taipeh Jingfu Gate 7.jpg',
+          teksti: 'Prefekti Chen Hsing-chü määräsi vuonna 1879, että '
+            + 'uusi hallintokeskus ympäröidään muurilla. Työ jouduttiin '
+            + 'keskeyttämään, koska altaan pehmeä maaperä ei kantanut '
+            + 'niin raskasta rakennetta. Fujianin kuvernööri Cen '
+            + 'Yu-ying ja Taiwanin virkamies Liu Ao teettivät uudet '
+            + 'mittaukset perustuksen paikasta, käsityöläiset '
+            + 'palkattiin 1882, ja muuri valmistui 1884. Sitä tuli '
+            + 'lähes viisi kilometriä ja siinä oli viisi porttia. '
+            + 'Japanin hallinto purki muurit ja länsiportin 1900-luvun '
+            + 'alkuvuosina; itä-, etelä- ja pikkueteläportti '
+            + 'rakennettiin myöhemmin uudelleen, mutta ne eivät '
+            + 'palanneet entiselleen. Vain pohjoisportti on säilynyt '
+            + 'sellaisena kuin se tehtiin.',
+          selite: 'Itäportti seisoo liikenneympyrän keskellä: kivijalusta '
+            + 'ja valkoinen rintavarustus ovat vanhat, mutta punaiset '
+            + 'pylväät ja vihreä tiilikatto ovat myöhemmästä '
+            + 'uudelleenrakennuksesta.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Walls of Taipei',
+        },
+        {
+          otsikko: 'Taihoku: uusi nimi ja uusi kaava',
+          tiedosto: 'Control Yuan Building 20141003.jpg',
+          teksti: 'Kun Qing-Kiina luovutti Taiwanin Japanille '
+            + 'Shimonosekin sopimuksessa 1895, kaupunki säilyi '
+            + 'hallintokeskuksena mutta sen nimi kirjoitettiin nyt '
+            + 'japanilaisen ääntämyksen mukaan Taihoku. Kirjoitusmerkit '
+            + 'pysyivät samoina. Uusi hallinto laati laajan '
+            + 'kaupunkisuunnitelman ja rakensi rautatiet, ja samalla '
+            + 'nousi joukko virastotaloja ja virkamiesten asuinalueita '
+            + '— suuri osa Taipein tunnetuista julkisista rakennuksista '
+            + 'on tältä ajalta. Vuonna 1920 Taihoku muodostettiin '
+            + 'kaupungiksi, johon kuuluivat Bangka, Twatutia ja '
+            + 'sisäkaupunki Jōnai; itäinen Matsuyaman kylä, nykyinen '
+            + 'Songshan, liitettiin 1938.',
+          selite: 'Taihokun prefektuurin entinen virastotalo: valkeaksi '
+            + 'rapattu kupolirakennus, jonka parvekkeen kaidetta '
+            + 'kiertää kirjava koristenauha.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Taipei',
+        },
+      ],
+    },
+  ],
 };

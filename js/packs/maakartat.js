@@ -7499,6 +7499,85 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Mahamuni-temppeli', lat: 21.951869, lon: 96.078619 },
     ],
   },
+  /*
+   * TAIPEIN KOHDEKARTTA (21.8.2026). Rajaus on 5,2 × 5,5 km ja kattaa
+   * kaupungin vanhan puolen: Dalongdongin ja Dadaochengin
+   * teekauppakorttelit pohjoisessa, Qing-ajan muurikaupungin ruudun
+   * keskellä, Wanhuan eli Bangkan kujat lännessä ja muistosalin aukion
+   * etelässä. Kohteet on numeroitu pohjoisesta etelään kuten
+   * Medinassa, Kiotossa ja Kantonissa; kymmenes on kainalossa.
+   *
+   * RAJAUS EI OLE WIKIPEDIAN KAUPUNKIPISTEEN YMPÄRILLÄ, ja perustelu
+   * on kokonaisuudessaan tools/piirra-kaupunkikartta.mjs:n
+   * taipei-lohkossa: artikkelin infobox-koordinaatti (25,0375 /
+   * 121,5625) osuu nykyiseen Xinyihin, ja lehden historialliset
+   * kohteet ovat siitä 4–6,4 kilometriä länteen. Faktapohja
+   * (docs/aasia-tyoaineisto/faktapohja-taipei.md, osio 4) tarjosi
+   * kaksi vaihtoehtoa ja tarkistusraportti (tarkistus-taipei.md,
+   * osio 3) vahvisti vaihtoehdon A omalla haversine-laskelmallaan:
+   * kartta keskitetään vanhaan kaupunkiin ja Taipei 101 jää
+   * kainaloon.
+   *
+   * KOORDINAATIT OVAT KOHTEIDEN OMISTA en-Wikipedian artikkeleista
+   * (haettu 21.8.2026). Osa on wikitekstin {{coord}}-mallineessa
+   * (Pohjoisportti, Punainen talo, Bopiliao, Lungshan-temppeli), osa
+   * tulee Wikidatasta ja on luettu MediaWikin
+   * prop=coordinates-kutsulla samoista artikkeleista (Taipei 101,
+   * Presidentinlinna, muistosali, kasvitieteellinen puutarha) —
+   * faktapohjan osio 7 varoitti tästä erosta, ja molemmat tavat
+   * antoivat saman arvon niissä kohteissa, joissa kumpikin oli
+   * saatavilla. Dihua-kadun piste on kadun oman artikkelin
+   * koordinaatti eli kadun keskivaiheilta, ei sen päästä.
+   *
+   * DALONGDONGIN KONFUTSE-TEMPPELI JÄI POIS, vaikka se on
+   * en-Wikipedian mukaan Baoan-temppelin naapurissa: kaksi
+   * numeroympyrää olisi mennyt päällekkäin (Petran, Mekan ja
+   * Singaporen oppi). Temppeli kerrotaan Baoanin jutussa.
+   *
+   * SHILININ YÖMARKKINAT JA KANSALLINEN PALATSIMUSEO EIVÄT OLE
+   * KARTALLA EIVÄTKÄ KAINALOSSA. Ne ovat kartan keskipisteestä 4,0 ja
+   * 6,9 kilometriä pohjoiseen ja koilliseen eli eri suuntaan kuin
+   * Taipei 101, ja kolme kainaloa yhdessä kuvassa olisi levotonta
+   * (Astanan kahden rautatieaseman ratkaisu). Molemmat kerrotaan
+   * lehden nostoissa ja kuvissa.
+   *
+   * KAINALON KORKEUS 23.17 on piirtäjän oma laskelma
+   * (tools/piirra-kaupunkikartta.mjs), ei käsin kirjoitettu luku.
+   */
+  taipei: {
+    polku: 'assets/kartat/taipei-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.078, etela: 25.028, lansi: 121.4845, ita: 121.5365 },
+    kainalot: [
+      { rajat: { pohjoinen: 25.0405, etela: 25.0275, lansi: 121.558, ita: 121.572 },
+        x: 74, y: 62, leveys: 24, korkeus: 23.17 },
+    ],
+    esittely: 'Kartan alue on Taipein vanha puoli. Pohjoisessa ovat '
+      + 'Dalongdongin Baoan-temppeli ja Dadaochengin teekauppakortteli '
+      + 'Dihua-katuineen, keskellä muurikaupungin jäänne Pohjoisportti '
+      + 'ja Japanin ajan Presidentinlinna, lännessä Bangkan vanhat '
+      + 'korttelit Lungshan-temppeleineen ja etelässä muistosalin aukio '
+      + 'ja kasvitieteellinen puutarha. Vasemmalla virtaa Tamsui-joki, '
+      + 'jota pitkin teetä vietiin merelle. Kainalossa on Taipei 101 '
+      + 'kuuden kilometrin päässä kaakossa. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään; Taipei 101 on viimeisenä,
+       * koska se on kainalossa eikä pääkuvassa (Bukarestin malli).
+       */
+      { nimi: 'Baoan-temppeli', lat: 25.073173, lon: 121.515562, wiki: 'Dalongdong Baoan Temple' },
+      { nimi: 'Dihua-katu', lat: 25.066552, lon: 121.509948, wiki: 'Dihua Street' },
+      { nimi: 'Pohjoisportti', lat: 25.04772, lon: 121.51121, wiki: 'Taipei North Gate' },
+      { nimi: 'Presidentinlinna', lat: 25.04, lon: 121.511944, wiki: 'Presidential Office Building, Taipei' },
+      { nimi: 'Punainen talo', lat: 25.041987, lon: 121.506739, wiki: 'Red House Theater' },
+      { nimi: 'Lungshan-temppeli', lat: 25.037222, lon: 121.499444, wiki: 'Longshan Temple (Taipei)' },
+      { nimi: 'Bopiliaon vanha kortteli', lat: 25.03693, lon: 121.50214, wiki: 'Bopiliao Historic Block' },
+      { nimi: 'Chiang Kai-shek -muistosali', lat: 25.034444, lon: 121.521667, wiki: 'Chiang Kai-shek Memorial Hall' },
+      { nimi: 'Kasvitieteellinen puutarha', lat: 25.032286, lon: 121.509519, wiki: 'Taipei Botanical Garden' },
+      { nimi: 'Taipei 101', lat: 25.0336, lon: 121.5647, wiki: 'Taipei 101' },
+    ],
+  },
 };
 
 /*
