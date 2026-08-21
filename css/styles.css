@@ -9161,6 +9161,22 @@ button.lukija-nappi.lukee,
   color: rgba(70, 51, 31, 0.55);
 }
 
+/*
+ * ENNEN JA NYT -PARI etusivun pikkurivillä (omistajan idea 21.8.2026):
+ * vasemmalla vanha vedos, oikealla sama kaupunki nykyään. Harmaasävy
+ * on sama kuin matkakirjan postikortissa, ja rooliotsikko erottaa
+ * parin muusta kuvarivistä ilman omaa palkkia.
+ */
+.lehti-kuva img.vanha-vedos { filter: grayscale(1) contrast(1.03); }
+
+.lehti-kuva-rooli {
+  font-family: var(--font-type);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.95);
+}
+
 /* Esittely on lehden pääjuttu: hieman leipätekstiä isompi. */
 .dialog.lehti #arrival-intro {
   font-size: 1rem;

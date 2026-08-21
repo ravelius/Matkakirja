@@ -5,6 +5,7 @@
  *
  * Renderöintipolut (js/ui.js, js/pollo.js) — tarkistettu 14.8.2026:
  *   kansikuvat[].selite        -> piirraLehtiKuvat, figcaption.kuvateksti
+ *   ennenNyt[].selite          -> sama figcaption (pikkurivin ennen/nyt-pari)
  *   nostot[].selite            -> p.selite kuvan alla lehtisivulla
  *   nostot[].galleria[].selite -> sama p.selite (vaihtuu nuolista)
  *   kategoria.lista[].kohteet[0].selite (ensimmäinen kuvallinen)
@@ -51,6 +52,11 @@ async function lehdet() {
         const paikka = `${avain}/${kat.id ?? kat.nimi}`;
         for (const k of kat.kansikuvat ?? []) {
           mittaa('kansikuva', nimi, k.selite, { paikka, kuva: k.tiedosto });
+        }
+        // Ennen ja nyt -pari korvaa pikkurivin kansikuvat, joten sen
+        // kuvatekstit renderöityvät samaan figcaptioniin (21.8.2026).
+        for (const k of kat.ennenNyt ?? []) {
+          mittaa('ennen-nyt', nimi, k.selite, { paikka, kuva: k.tiedosto });
         }
         for (const n of kat.nostot ?? []) {
           mittaa('nosto', nimi, n.selite, { paikka, kuva: n.tiedosto });

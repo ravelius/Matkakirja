@@ -37,6 +37,17 @@ vaadi koodimuutoksia:
   KOKO SARJAN selattavana täydellä ruudulla (v277) — sama koskee
   etusivun kansikuvia. Peilityökalu poimii galleria- ja kansikuvien
   `tiedosto:`-kentät automaattisesti.
+- **Ennen ja nyt -pari (pilotti Lontoossa, omistajan idea 21.8.2026):**
+  kaupunki-lohko voi kantaa `ennenNyt: [ vanha, uusi ]` -taulukon, ja
+  silloin etusivun pikkurivi näyttää tasan nämä kaksi kuvaa
+  kansikuvien kahden ensimmäisen sijaan — vasemmalla vanha vedos,
+  oikealla sama kaupunki nykyään. Järjestys ratkaisee roolin (ei omaa
+  rooli-kenttää), kuvamuoto on sama kuin kansikuvissa ja vanha
+  tarvitsee lisäksi `vuosi`-kentän: siitä tulee harmaasävy samalla
+  säännöllä kuin matkakirjan postikortissa (raja 1960). Kuvatekstit
+  ovat yhden virkkeen mittaiset kuten muuallakin — vasemmassa myös
+  ajankohta, oikeassa nykytila. Uusi kaupunki ei vaadi koodia; ilman
+  kenttää etusivu taittuu ennallaan.
 - **Sää (v272):** lehtikaupunki saa mastoon päivän ennusteen ja
   napautuksesta koko vuoden graafin, kun sille on rivi
   `js/packs/saatiedot.js`:ssä (lat/lon + kuukausinormaalit; normaalien

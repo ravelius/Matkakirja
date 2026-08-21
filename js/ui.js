@@ -6808,6 +6808,7 @@ export class UI {
     const kuvat = [];
     const kansikuvat = this.lehtitila.tutkiKansi?.kansikuvat ?? [];
     const avauskuvat = this.lehtitila.tutkiKansi?.avauskuvat ?? [];
+    const ennenNyt = this.lehtitila.tutkiKansi?.ennenNyt ?? [];
     // Avauskuvakaupungissa iso paikka on panoraamakaruselli (900,
     // sama leveys kuin nahtavyydenKarusellissa) ja pikkurivillä ovat
     // kansikuvien kaksi ensimmäistä; muuten entinen taitto.
@@ -6817,8 +6818,16 @@ export class UI {
     if (!avauskuvat.length && kansikuvat[0]?.tiedosto) {
       kuvat.push(valokuvaUrl(kansikuvat[0].tiedosto, 1200));
     }
-    for (const teos of kansikuvat.slice(avauskuvat.length ? 0 : 1, avauskuvat.length ? 2 : 3)) {
-      if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 640));
+    // Ennen ja nyt -pari korvaa pikkurivin kansikuvat (ks. lehti.js
+    // piirraLehtiKuvat) — silloin puskuriin kuuluvat juuri ne kaksi.
+    if (ennenNyt.length >= 2) {
+      for (const teos of ennenNyt.slice(0, 2)) {
+        if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 640));
+      }
+    } else {
+      for (const teos of kansikuvat.slice(avauskuvat.length ? 0 : 1, avauskuvat.length ? 2 : 3)) {
+        if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 640));
+      }
     }
     const lippu = this.lehtitila.arrivalMaaTiedot?.lippu;
     if (lippu) kuvat.push(lippuUrl(lippu, 96));

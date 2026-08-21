@@ -47,7 +47,7 @@ import { RAAMATTU } from './tyohuone-raamattu.js';
 import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
 import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
 import {
-  cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, shortIntro,
+  cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, onVanhaKuva, shortIntro,
 } from './ui-apurit.js';
 import {
   haeArtikkeli, haeUutiset, kaannaSuomeksi, uutislahde,
@@ -337,7 +337,7 @@ export function rakennaSivut(ui, cityId) {
   // Liitelinkki päiväysrivillä: "Suomi-liite" (omistajan taitto-ohje 9.8.2026).
   ui.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-liite` : '';
   ui.arrivalDialog.classList.toggle('lehti', lehti);
-  piirraLehtiKuvat(ui, kansi?.kansikuvat, kansi?.avauskuvat);
+  piirraLehtiKuvat(ui, kansi?.kansikuvat, kansi?.avauskuvat, kansi?.ennenNyt);
   // Lehdessä ei ole Lue lisää -nappeja eikä wikin kuvakarusellia:
   // etusivun tekstit riittävät alkuun, ja syventyminen tapahtuu
   // sivuja kääntämällä. Kuvat ovat omia, tarkistettuja valintoja.
@@ -1549,32 +1549,68 @@ export function kytkeTutkiSelaus(ui, kortti) {
  * jälkeen. Kuvat ovat kansikategorian omia, tarkistettuja valintoja
  * (kansikuvat-kenttä) — eivät wikin satunnaiskaruselli. Napautus
  * avaa selattavan suurennoksen, jossa koko sarja kulkee nuolilla.
+ *
+ * ENNEN JA NYT -PARI (omistajan idea 21.8.2026, pilotti Lontoossa:
+ * "voisiko matkakirjan kuvat siirtää kaupunkilehteen ... sopisiko ne
+ * pääkuvagallerian alle niihin kahteen pienempään kuvaan? Vasemmalle
+ * tulisi vanhat kuvat ja oikealle uudet"):
+ *
+ *   kansikategoria.ennenNyt = [ vanha, uusi ]   // järjestys = rooli
+ *
+ * Kun kenttä on olemassa, pikkurivi näyttää TASAN NÄMÄ KAKSI kuvaa —
+ * vasemmalla vanha vedos, oikealla sama kaupunki nykyään — eikä
+ * kansikuvien kahta ensimmäistä. Rooli luetaan järjestyksestä, ei
+ * omasta kentästään: rivi on aina kaksipalstainen, joten kolmatta
+ * roolia ei ole olemassakaan. Harmaasävy tulee samasta säännöstä kuin
+ * matkakirjan postikortissa (ui-apurit: onVanhaKuva, raja 1960), joten
+ * vanha kuva tarvitsee vuosi-kentän.
+ *
+ * Laajennus muihin kaupunkeihin ei vaadi koodia: lisää kaupungin
+ * kaupunki-lohkoon ennenNyt-taulukko (kaksi alkiota, sama kuvamuoto
+ * kuin kansikuvissa + vanhalle vuosi). Ilman kenttää lehti taittuu
+ * täsmälleen ennallaan.
  */
-export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null) {
+export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) {
   const lista = kuvat ?? [];
   const panoraamat = avauskuvat ?? [];
+  const pari = (ennenNyt?.length ?? 0) >= 2 ? ennenNyt.slice(0, 2) : null;
   ui.arrivalLehtiPaakuva.replaceChildren();
   ui.arrivalLehtiKuvat.replaceChildren();
   ui.arrivalLehtiPaakuva.hidden = !lista.length && !panoraamat.length;
-  ui.arrivalLehtiKuvat.hidden = panoraamat.length ? !lista.length : lista.length < 2;
-  if (!lista.length && !panoraamat.length) return;
-  const teeKuva = (teos, indeksi, leveys) => {
-    const kotelo = html('figure', 'lehti-kuva');
+  ui.arrivalLehtiKuvat.hidden = pari
+    ? false
+    : (panoraamat.length ? !lista.length : lista.length < 2);
+  if (!lista.length && !panoraamat.length && !pari) return;
+  const teeKuva = (teos, indeksi, leveys, { sarja = lista, rooli = null } = {}) => {
+    const kotelo = html('figure', `lehti-kuva${rooli ? ` lehti-kuva-${rooli}` : ''}`);
     const kuva = document.createElement('img');
     kuva.decoding = 'async';
     kuva.draggable = false;
     kuva.alt = teos.selite ?? '';
+    // Harmaasävy vain aidosti vanhoille (sama sääntö kuin postikortissa).
+    if (onVanhaKuva(teos)) kuva.classList.add('vanha-vedos');
     asetaKuva(kuva, valokuvaUrl(teos.tiedosto, leveys), valokuvaVara(teos.tiedosto, leveys));
     ui.napautuksesta(kuva, () => ui.naytaKulttuuriKuva(teos, {
-      teokset: lista, kohdalla: indeksi,
+      teokset: sarja, kohdalla: indeksi,
     }));
     kotelo.appendChild(kuva);
     if (teos.selite) {
-      const teksti = html('figcaption', 'kuvateksti', teos.selite);
+      const teksti = html('figcaption', 'kuvateksti');
+      // Rooliotsikko kuvatekstin alkuun: pari luetaan yhtenä juttuna
+      // vasemmalta oikealle, eikä lukijan tarvitse päätellä kumpi on kumpi.
+      if (rooli) {
+        teksti.appendChild(html('b', 'lehti-kuva-rooli',
+          rooli === 'ennen' ? 'Ennen ' : 'Nyt '));
+      }
+      teksti.appendChild(document.createTextNode(teos.selite));
       if (teos.lahde) teksti.appendChild(html('span', 'lehti-kuvalahde', ` ${teos.lahde}`));
       kotelo.appendChild(teksti);
     }
     return kotelo;
+  };
+  const piirraPari = () => {
+    ui.arrivalLehtiKuvat.appendChild(teeKuva(pari[0], 0, 640, { sarja: pari, rooli: 'ennen' }));
+    ui.arrivalLehtiKuvat.appendChild(teeKuva(pari[1], 1, 640, { sarja: pari, rooli: 'nyt' }));
   };
   /*
    * AVAUSKUVAT (omistajan tilaus 15.8.2026: "saisi olla laadukas
@@ -1590,12 +1626,14 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null) {
     ui.arrivalLehtiPaakuva.appendChild(panoraamat.length > 1
       ? nahtavyydenKaruselli(ui, panoraamat)
       : nahtavyydenKuva(ui, panoraamat[0]));
+    if (pari) { piirraPari(); return; }
     for (let i = 0; i < Math.min(lista.length, 2); i += 1) {
       ui.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
     }
     return;
   }
-  ui.arrivalLehtiPaakuva.appendChild(teeKuva(lista[0], 0, 1200));
+  if (lista.length) ui.arrivalLehtiPaakuva.appendChild(teeKuva(lista[0], 0, 1200));
+  if (pari) { piirraPari(); return; }
   for (let i = 1; i < Math.min(lista.length, 3); i += 1) {
     ui.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
   }

@@ -81,6 +81,47 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
+       * ENNEN JA NYT -PARI, PILOTTI (omistajan idea 21.8.2026:
+       * "voisiko matkakirjan kuvat siirtää kaupunkilehteen ... sopisiko
+       * ne pääkuvagallerian alle niihin kahteen pienempään kuvaan?
+       * Vasemmalle tulisi vanhat kuvat ja oikealle uudet").
+       *
+       * Taulukko on kaksialkioinen ja JÄRJESTYS RATKAISEE: [0] on
+       * vasen eli vanha vedos, [1] oikea eli sama kaupunki nykyään.
+       * Kun kenttä on olemassa, etusivun pikkurivi näyttää tasan nämä
+       * kaksi kansikuvien kahden ensimmäisen sijaan (js/lehti.js
+       * piirraLehtiKuvat) — laajennus muihin kaupunkeihin on siis
+       * pelkkä data-lisäys, ei koodimuutos.
+       *
+       * Kuvapari on sama kuin matkakirjan Lontoon postikortissa
+       * (europe-valokuvat.js: lontoo.tiedosto ja lontoo.uusi), koska
+       * juuri niiden siirtäminen lehteen oli idean ydin. Kuvatekstit
+       * on kirjoitettu tähän omiksi yhden virkkeen versioikseen
+       * (Raamattu: kuvateksti on YKSI virke). Lisenssit tarkistettu
+       * Commonsin extmetadatasta 21.8.2026: photochrom on Library of
+       * Congressin kokoelmaa ja PD (kuvattu 1890–1900), Vågenin kuva
+       * CC BY-SA 3.0 (3.3.2014). Vanhan vuosi-kenttä ohjaa myös
+       * harmaasävyn (ui-apurit: onVanhaKuva, raja 1960).
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Tower Bridge, II. (open), London, England-LCCN2002696928.jpg',
+          vuosi: '1890-luku',
+          selite: 'Tower Bridge auki höyrylaivalle 1890-luvun käsinväritetyssä '
+            + 'photochrom-vedoksessa, muutama vuosi sillan vihkiäisten jälkeen — '
+            + 'oikealla häämöttää Lontoon Tower.',
+          lahde: 'Photochrom Print Collection, Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Tower bridge Mars 2014 03.jpg',
+          vuosi: '2014',
+          selite: 'Sama silta samasta suunnasta tänään: läpät ovat kiinni, '
+            + 'punainen bussi ylittää jokea ja taustalla erottuu Pyhän Paavalin '
+            + 'kupoli.',
+          lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
        * Matkailijalle (Kööpenhaminan mallista monistettu 16.8.2026).
        * Taustatiedot Wikipediasta ja Wikivoyagesta — teksti omaa.
        */
