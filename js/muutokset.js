@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 979, teksti: 'v979: kohdekartta aukeaa napautuksesta kokoruudulle' },
   { v: 978, teksti: 'v978: Yangon ja Mandalay — uudet kaupunkilehdet' },
   { v: 977, teksti: 'v977: maan etusivun kartta isommaksi' },
   { v: 976, teksti: 'v976: kansikuvaremontti valmis — 37 kaupunkia laajoiksi' },

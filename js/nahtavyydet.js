@@ -75,8 +75,13 @@ export function piirraKaupunkiKartta(ui, kohde) {
   kehys.setAttribute('role', 'group');
   kehys.setAttribute(
     'aria-label',
-    'Kartta. Suurenna plus- ja miinusnäppäimillä, siirrä nuolilla, palauta nollalla.',
+    'Kartta. Avaa kokoruudulle Enterillä. Suurenna plus- ja miinusnäppäimillä, '
+    + 'siirrä nuolilla, palauta nollalla.',
   );
+  // Napautus avaa kartan kokoruudulle (ks. avaaKarttaSuurennos);
+  // luokka antaa kohdistimen ja pitää zoomatun kartan otekohdistimen
+  // ennallaan.
+  kehys.classList.add('kartta-avattava');
   const kotelo = html('div', 'maakartta-kotelo kaupunkikartta-kotelo kartta-lava');
   /*
    * KARTTA JATKUU REUNOJEN YLI (omistajan tilaus 15.8.2026: "sitä
@@ -255,6 +260,9 @@ export function piirraKaupunkiKartta(ui, kohde) {
     }
     piste.style.left = `${p.x.toFixed(1)}%`;
     piste.style.top = `${p.y.toFixed(1)}%`;
+    // Numero talteen myös piirroskohteelta: kokoruutunäkymä merkitsee
+    // sillä piirrokset selitelistan numeroihin (avaaKarttaSuurennos).
+    piste.dataset.numero = numero;
     const selite = html(avattava ? 'button' : 'span', 'kartta-selite');
     selite.appendChild(html('span', 'kartta-selite-numero', numero));
     selite.appendChild(document.createTextNode(k.nimi));
@@ -365,11 +373,60 @@ export function piirraKaupunkiKartta(ui, kohde) {
       if (v.dataset.alkuLeft) v.style.left = v.dataset.alkuLeft;
       if (v.dataset.alkuTop) v.style.top = v.dataset.alkuTop;
     });
+  // Oliko piirros suurennettuna, kun ele alkoi? Kokoruutu ei saa
+  // aueta samasta napautuksesta, joka purkaa valinnan (alla).
+  let oliValinta = false;
   kehys.addEventListener('pointerdown', (e) => {
+    oliValinta = Boolean(kotelo.querySelector('.kohde-piirros.valittu'));
     if (!e.target.closest?.('.kohde-piirros')) tyhjennaValinta();
   }, true);
+  /*
+   * NAPAUTUS AVAA KARTAN KOKORUUDULLE (omistajan tilaus 21.8.2026:
+   * "voisiko kaupunkikartan saada klikattua kokoruudulle?").
+   *
+   * Ele luetaan itse osoitintapahtumista eikä click-tapahtumasta:
+   * kartalla on jo raahaus, nipistys ja tuplanapautus
+   * (js/karttazoom.js), ja niiden perään jätetty napsautustulppa on
+   * saman kehyksen kuuntelija — click-varainen avaus riippuisi
+   * kuuntelijoiden rekisteröintijärjestyksestä. Mitattu matka on
+   * yksiselitteinen: paikallaan pysynyt sormi tai hiiri on napautus,
+   * liikkunut ei.
+   *
+   * Neljä poikkeusta, joista jokainen on jo jonkun toisen eleen:
+   *   - nappi tai linkki (kohteen ympyrä, piirros, selite) avaa oman
+   *     juttunsa kuten ennen;
+   *   - napautus, joka purki suurennetun piirroksen valinnan;
+   *   - zoomattu kartta, jossa napautus kuuluu panoroinnille ja
+   *     tuplanapautuksen palautukselle;
+   *   - useamman sormen ele (nipistys), joka ei ole napautus lainkaan.
+   */
+  let napautus = null;
+  kehys.addEventListener('pointerdown', (e) => {
+    if (!e.isPrimary || (e.pointerType === 'mouse' && e.button !== 0)) {
+      napautus = null;
+      return;
+    }
+    napautus = { x: e.clientX, y: e.clientY, valinta: oliValinta };
+  });
+  kehys.addEventListener('pointercancel', () => { napautus = null; });
+  kehys.addEventListener('pointerup', (e) => {
+    const alku = napautus;
+    napautus = null;
+    if (!alku || !e.isPrimary || alku.valinta) return;
+    if (Math.hypot(e.clientX - alku.x, e.clientY - alku.y) > 6) return;
+    if (e.target.closest?.('button, a')) return;
+    if (kehys.classList.contains('zoomattu')) return;
+    avaaKarttaSuurennos(ui, kehys, kartta);
+  });
   kehys.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') tyhjennaValinta();
+    if (e.key === 'Escape') { tyhjennaValinta(); return; }
+    // Enter ja väli tekevät näppäimistöllä saman kuin napautus. Sama
+    // näppäin myös sulkee, jottei fokus tarvitse siirtyä mihinkään:
+    // kokoruutu on kehyksen vaihtokytkin.
+    if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+    e.preventDefault();
+    if (ui.lehtitila.kulttuuriKuvaEl) ui.suljeKulttuuriKuva();
+    else avaaKarttaSuurennos(ui, kehys, kartta);
   });
   hajautaPiirrospisteet(kotelo, piirrosPisteet, ydin);
   /*
@@ -449,11 +506,153 @@ export function piirraKaupunkiKartta(ui, kohde) {
   const opaste = html('div', 'kartta-opaste', 'Napauta nähtävyyttä, saat lisätietoja.');
   opaste.setAttribute('aria-hidden', 'true');
   kehys.appendChild(opaste);
+  /*
+   * SUURENNOSVIHJE OMANA LAPPUNAAN kartan oikeassa ALAkulmassa
+   * (omistajan tilaus 21.8.2026). Ensin se kokeiltiin toisena rivinä
+   * yläkulman opasteessa, mutta puhelimen kapealla ruudulla kyltistä
+   * tuli neljä riviä korkea ja se peitti kartan pohjoisreunan
+   * kohteet. Kahden sanan lappu vastakkaisessa kulmassa pysyy
+   * yksirivisenä joka leveydellä; vasen alakulma on mittajanan, joten
+   * oikea on vapaa.
+   */
+  const vihje = html('div', 'kartta-suurennusvihje', '⤢ Kokoruutu');
+  vihje.setAttribute('aria-hidden', 'true');
+  kehys.appendChild(vihje);
   lohko.appendChild(kehys);
   lohko.appendChild(selitteet);
   lohko.appendChild(lahderivi);
   kohde.appendChild(lohko);
   kytkeKarttaZoom(ui, kehys, kotelo, napit, ydin, zoomOhjain);
+}
+
+/**
+ * KOHDEKARTTA KOKORUUDULLE (omistajan tilaus 21.8.2026: "voisiko
+ * kaupunkikartan saada klikattua kokoruudulle?").
+ *
+ * EI UUTTA IKKUNAJÄRJESTELMÄÄ. Suurennos on täsmälleen sama
+ * postikorttikatselin, jolla lehden valokuvat, uutiset ja vuosisää jo
+ * aukeavat (js/ui.js: naytaKulttuuriKuva, js/lehti.js: naytaVuosiSaa):
+ * kortti `postikortti kulttuuri-suurennos`, tumma pohja kortin omasta
+ * ::before-kerroksesta, sulku rastista, Escapesta
+ * (ui.rekisteroiSuurennosNappaimet) ja mistä tahansa napautuksesta.
+ * Kortti menee päällimmäiseen avoimeen dialogiin (ui.suurennosIsanta),
+ * joten kartta aukeaa yhtä lailla kaupunkilehdestä kuin Matkailijan
+ * oppaan ikkunasta.
+ *
+ * KARTTA KLOONATAAN KEHYKSINEEN, ei näytetä pelkkänä <img>-kuvana.
+ * Numeroympyrät, leikatut piirroskohteet ja mittajana ovat
+ * DOM-elementtejä kuvan päällä prosenttipaikoissaan, joten pelkkä
+ * kuvatiedosto jäisi kokoruudulla ilman numeroita — juuri niitä
+ * varten karttaa suurennetaan. Klooni on katselukuva: kuuntelijat
+ * eivät seuraa mukana, napit jäävät tabulaattorin ulkopuolelle ja
+ * zoomiasento nollataan, jotta koko kartta näkyy kerralla.
+ *
+ * ALKUPERÄISEEN KARTTAAN EI KOSKETA. Kehys on container-type: size
+ * -kokokontti, jonka kuvasuhde asetetaan kuvan load-tapahtumassa
+ * (v958); klooni saa oman leveytensä --kartta-suhde-muuttujasta eikä
+ * paikallaan olevan kartan mitoista muutu mikään. Kuvasuhde MITATAAN
+ * kehyksestä eikä lueta sen aspect-ratio-arvosta, koska sama kenttä
+ * on kirjoitettu kahdessa muodossa (luku ja `leveys / korkeus`) —
+ * mitattu laatikko kertoo saman luvun kummassakin tapauksessa.
+ */
+export function avaaKarttaSuurennos(ui, kehys, kartta) {
+  const mitat = kehys.getBoundingClientRect();
+  if (!(mitat.width > 0) || !(mitat.height > 0)) return;
+  ui.suljeKulttuuriKuva();
+  const kortti = html('div', 'postikortti kulttuuri-suurennos kartta-suurennos');
+  kortti.style.setProperty('--kartta-suhde', (mitat.width / mitat.height).toFixed(4));
+  const sulku = html('button', 'uutinen-sulku', '×');
+  sulku.type = 'button';
+  sulku.setAttribute('aria-label', 'Sulje suurennettu kartta');
+  sulku.title = 'Sulje';
+  kortti.appendChild(sulku);
+  const iso = kehys.cloneNode(true);
+  // Kehyksen oma näppäin- ja ruudunlukijarooli kuuluu paikallaan
+  // olevalle kartalle; klooni on kuva kuvasta.
+  iso.removeAttribute('tabindex');
+  iso.removeAttribute('role');
+  iso.removeAttribute('aria-label');
+  iso.classList.remove('zoomattu', 'kartta-avattava');
+  // Ohjekyltit koskevat paikallaan olevaa karttaa: kokoruudulla ei ole
+  // enää kokoruutua avattavana eikä napautettavia kohteita.
+  iso.querySelector('.kartta-opaste')?.remove();
+  iso.querySelector('.kartta-suurennusvihje')?.remove();
+  const lava = iso.querySelector('.kartta-lava');
+  if (lava) {
+    lava.classList.remove('silea');
+    // Zoomattuna avattu kartta näytetään kokonaisena: muunnos pois ja
+    // vastaskaalauksen kerroin takaisin ykköseen.
+    lava.style.transform = '';
+    lava.style.setProperty('--zoom', '1');
+  }
+  for (const valittu of iso.querySelectorAll('.kohde-piirros.valittu')) {
+    valittu.classList.remove('valittu');
+    // Valinta oli siirtänyt pisteen ikkunan keskelle (ks. avaa);
+    // kokoruudulla se kuuluu omalle paikalleen kartalla.
+    if (valittu.dataset.alkuLeft) valittu.style.left = valittu.dataset.alkuLeft;
+    if (valittu.dataset.alkuTop) valittu.style.top = valittu.dataset.alkuTop;
+  }
+  for (const nappi of iso.querySelectorAll('button')) nappi.tabIndex = -1;
+  /*
+   * NUMEROLAPPU PIIRROSKOHTEILLE. Numeroympyrä kertoo itse, monesko
+   * kohde on kyseessä, mutta leikattu piirros ei — lehdessä numeron
+   * näkee vasta napauttamalla piirroksen nimikylttiin, eikä
+   * kokoruudulla napauteta mitään. Ilman lappua alla oleva selitelista
+   * jäisi piirroskaupungeissa (Tokio, Kioto, Peking...) irralliseksi
+   * nimiluetteloksi. Numero tulee samasta lähteestä kuin listakin:
+   * kohteen järjestysnumero datassa (dataset.numero).
+   */
+  for (const piirros of iso.querySelectorAll('.kohde-piirros')) {
+    if (!piirros.dataset.numero) continue;
+    const lappu = html('span', 'kohde-numerolappu', piirros.dataset.numero);
+    lappu.setAttribute('aria-hidden', 'true');
+    piirros.appendChild(lappu);
+  }
+  kortti.appendChild(iso);
+  /*
+   * NUMEROIDEN SELITE KARTAN ALLE. Kokoruudulla numeroympyrät jäisivät
+   * muuten arvoituksiksi: selitelista on lehdessä kartan alapuolella,
+   * eikä sitä näy suurennoksen takaa. Lista rakennetaan datasta eikä
+   * kloonata lehdestä, koska tässä se on nimenomaan KARTAN SELITE eikä
+   * linkkirivi — kokoruutu on katselutila, ja avattava rivi houkuttelisi
+   * napautukseen, joka sulkisi suurennoksen. Numerointi on sama kuin
+   * kartalla ja lehden listassa: kohteiden järjestys datassa.
+   *
+   * Kapealla ruudulla lista täyttää samalla sen pystytilan, joka jää
+   * vaakakuvan alle — puhelimen pystyruudulla koko kartta ja koko
+   * selite näkyvät nyt kerralla ilman vieritystä.
+   */
+  const kohteet = kartta.kohteet ?? [];
+  if (kohteet.length) {
+    const selite = html('div', 'kartta-selitteet kartta-suurennos-selitteet');
+    kohteet.forEach((k, i) => {
+      const rivi = html('span', 'kartta-selite');
+      rivi.appendChild(html('span', 'kartta-selite-numero', String(i + 1)));
+      rivi.appendChild(document.createTextNode(k.nimi));
+      selite.appendChild(rivi);
+    });
+    kortti.appendChild(selite);
+  }
+  if (kartta.lahde) kortti.appendChild(html('p', 'kuvalahde', kartta.lahde));
+  /*
+   * Sulku mistä tahansa napautuksesta kuten muissakin suurennoksissa
+   * — mutta ei heti. Kartalla on tuplanapautuksen zoom, ja tottunut
+   * sormi ehtii lyödä toisen napautuksen juuri avautuneeseen korttiin;
+   * ilman lyhyttä suoja-aikaa kokoruutu välähtäisi auki ja kiinni.
+   */
+  const avattu = performance.now();
+  kortti.addEventListener('click', () => {
+    if (performance.now() - avattu < 400) return;
+    ui.suljeKulttuuriKuva();
+  });
+  sulku.addEventListener('click', (e) => {
+    e.stopPropagation();
+    ui.suljeKulttuuriKuva();
+  });
+  ui.suurennosIsanta().appendChild(kortti);
+  ui.lehtitila.kulttuuriKuvaEl = kortti;
+  ui.rekisteroiSuurennosNappaimet();
+  sfx.play('paper');
 }
 
 /**
