@@ -470,7 +470,9 @@ export function rakennaSisallysLista(ui, sisallys, { suljeValikko = null, etusiv
       rivi.appendChild(img);
     }
     const teksti = html('div', 'sisallys-teksti');
-    teksti.appendChild(html('span', 'sisallys-otsikko', osa.nimi));
+    // Sama otsikko kuin sivulla itsellään ja alapalkin napeissa
+    // (kaupunki-sivulla "X pintaa syvemmältä").
+    teksti.appendChild(html('span', 'sisallys-otsikko', sivunOtsikko(osa)));
     if (ingressi) teksti.appendChild(html('span', 'sisallys-ingressi', ingressi));
     rivi.appendChild(teksti);
     rivi.addEventListener('click', () => {
@@ -529,18 +531,26 @@ export function piirraVinkkilista(ui, kohde, ryhmat) {
  * lippu oli vain piirraKategoriassa, karttasivun otsikko jäi ilman
  * lippua vaikka data oli kunnossa — omistajan havainto 16.8.2026.
  */
-export function aiheenOtsikko(ui, kategoria) {
-  /*
-   * KAKKOSSIVUN NIMI (omistajan tarkennus 21.8.2026): kaupunki-sivu
-   * eli kansisivun jälkeinen sivu toisti kaupungin nimen otsikkona.
-   * Nyt se saa vakiokaavan "X pintaa syvemmältä"; teemasivut pysyvät
-   * kategoriatason vakionimissään (omistaja: spesifit otsikot olivat
-   * liikaa). Valinnainen otsikko-kenttä voittaa aina kaavan. Sivu-id
-   * ja nimi säilyvät ennallaan (visat, kuvakkeet, alapalkki, Pöllö).
-   */
+/*
+ * KAKKOSSIVUN NIMI (omistajan tarkennus 21.8.2026): kaupunki-sivu
+ * eli kansisivun jälkeinen sivu toisti kaupungin nimen otsikkona.
+ * Nyt se saa vakiokaavan "X pintaa syvemmältä"; teemasivut pysyvät
+ * kategoriatason vakionimissään (omistaja: spesifit otsikot olivat
+ * liikaa). Valinnainen otsikko-kenttä voittaa aina kaavan. Sivu-id
+ * ja nimi säilyvät ennallaan (visat, kuvakkeet, Pöllö).
+ *
+ * Oma funktionsa, koska sama nimi tarvitaan myös alapalkin
+ * EDELLINEN/SEURAAVA-napeissa (omistajan havainto 21.8.2026:
+ * napissa luki "Rooma" vaikka sivu on "Rooma pintaa syvemmältä").
+ */
+export function sivunOtsikko(kategoria) {
   const oletus = kategoria.id === 'kaupunki'
     ? `${kategoria.nimi} pintaa syvemmältä` : kategoria.nimi;
-  const nimi = html('h3', 'aihe-nimi', kategoria.otsikko ?? oletus);
+  return kategoria.otsikko ?? oletus;
+}
+
+export function aiheenOtsikko(ui, kategoria) {
+  const nimi = html('h3', 'aihe-nimi', sivunOtsikko(kategoria));
   // Kehittäjän liitteissä osion valmiusaste värichippinä
   // otsikon perässä (omistajan tilaus 15.8.2026).
   if (kategoria.tagi) {
