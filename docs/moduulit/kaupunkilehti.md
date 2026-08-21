@@ -37,7 +37,8 @@ vaadi koodimuutoksia:
   KOKO SARJAN selattavana täydellä ruudulla (v277) — sama koskee
   etusivun kansikuvia. Peilityökalu poimii galleria- ja kansikuvien
   `tiedosto:`-kentät automaattisesti.
-- **Ennen ja nyt -pari (pilotti Lontoossa, omistajan idea 21.8.2026):**
+- **Ennen ja nyt -pari (kaikissa kaupungeissa, omistajan idea ja
+  laajennustilaus 21.8.2026):**
   kaupunki-lohko voi kantaa `ennenNyt: [ vanha, uusi ]` -taulukon, ja
   silloin etusivun pikkurivi näyttää tasan nämä kaksi kuvaa
   kansikuvien kahden ensimmäisen sijaan — vasemmalla vanha vedos,
@@ -62,6 +63,19 @@ vaadi koodimuutoksia:
   radio; kapealla näytöllä napit menevät allekkain. Soitin on sama
   `kulttuuriAaniNapista` kuin radiolla, joten kaksi ääntä ei voi soida
   päällekkäin. Uusi kaupunki ei vaadi koodia.
+  Lontoon pilotti (v986) laajennettiin kaikkiin lehtiin: 96 sadasta
+  kaupungista on nyt pari. Useimmilla kuvat tulivat matkakirjan
+  valokuvatauluista (`js/packs/*-valokuvat.js`), joissa vanha vedos ja
+  nykykuva oli jo tarkistettu Commonsista — silloin tiedostonimi, vuosi
+  ja lähderivi kopioidaan sellaisenaan ja vain selite kirjoitetaan
+  uudestaan yhdeksi virkkeeksi. Kiotoon, Varanasiin, Kantoniin ja
+  Mandalayhin vanha vedos haettiin erikseen Commonsista.
+  **Ilman paria (jatkotyö):** Dubai, Doha, Salalah ja Astana — näistä
+  ei löytynyt kuvasäännöt täyttävää vanhaa vedosta (Dohan Burchardtin
+  kuvat 1904–1908 ovat alle 800 px, muilla ei ole PD/CC-kuvaa isoisän
+  ajalta lainkaan). Sama kuvatiedosto saa esiintyä sekä parissa että
+  kansikuvissa vain, jos se on eri tiedosto — sama aihe kyllä käy
+  (Lontoossa Tower Bridge on molemmissa).
 - **Sää (v272):** lehtikaupunki saa mastoon päivän ennusteen ja
   napautuksesta koko vuoden graafin, kun sille on rivi
   `js/packs/saatiedot.js`:ssä (lat/lon + kuukausinormaalit; normaalien

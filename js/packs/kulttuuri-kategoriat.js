@@ -37397,6 +37397,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Gezicht op Kyoto vanaf Maruyama Kioto Town from Maruyama (titel op object), RP-F-F01196-AE.jpg',
+          vuosi: '1890-luvun alku',
+          selite: 'Kioto Maruyaman rinteeltä 1890-luvun alussa: matala puinen kaupunki '
+            + 'leviää itäisten kukkuloiden juurelta usvaan asti.',
+          lahde: 'Rijksmuseum, Commons (CC0)',
+        },
+        {
+          tiedosto: 'Kyoto Blick vom Schrein Fushimi-Inari-taisha auf Kyoto 1.jpg',
+          vuosi: '2016',
+          selite: 'Sama laakso Fushimi Inarin rinteeltä nykyään: puutalojen tilalla on '
+            + 'betonia ja kaupunki ulottuu vuorten juurelle, mutta kukkuloiden kehä on '
+            + 'ennallaan.',
+          lahde: 'Zairon, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Tuhat vuotta ja yksi muutto',
@@ -39407,6 +39424,24 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Sarnathin Dhamek-stupa iltavalossa nurmikentän takana, '
             + 'reunalla puita ja rivi rukousviirejä.',
           lahde: 'Vinayaraj, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Benares. The Maharajah\'s of Nagbur Ghat LCCN2017658167.jpg',
+          vuosi: '1890-luku',
+          selite: 'Varanasin ghatit joelta nähtynä 1890-luvun käsinväritetyssä '
+            + 'photochrom-vedoksessa: kiviportaat laskeutuvat veteen ja veneet '
+            + 'odottavat rannassa.',
+          lahde: 'Photoglob Co. / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Varanasi, India, Varanasi eternal, Panorama.jpg',
+          vuosi: '2007',
+          selite: 'Samat ghatit tänään katolta kuvattuna: talot ja temppelit '
+            + 'laskeutuvat yhä portaina veteen, ja vastaranta on edelleen tyhjää '
+            + 'hiekkaa.',
+          lahde: 'Vyacheslav Argenberg, Commons (CC BY 4.0)',
         },
       ],
       nostot: [
@@ -42003,6 +42038,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: '斯巴鲁美乐斯, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Guangzhou Channel by Lai Afong, c1880.JPG',
+          vuosi: '1880-luku',
+          selite: 'Kanava Kantonissa noin vuonna 1880: asuinveneet makaavat kylki '
+            + 'kyljessä matalien puotien edessä, ja koko kortteli elää vedessä.',
+          lahde: 'Lai Afong, Commons (PD)',
+        },
+        {
+          tiedosto: '02540-Guangzhou.jpg',
+          vuosi: '2016',
+          selite: 'Kantonin uusi keskusta Helmijoen toiselta rannalta nykyään: '
+            + 'rannalla seisovat pilvenpiirtäjät ja oopperatalo, mutta laivaväylä '
+            + 'kulkee yhä samaa uomaa.',
+          lahde: 'xiquinhosilva, Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kolmetoista faktoriaa',
@@ -43111,6 +43163,24 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pylväskäytävän yläpuolelle, jonka kaaria kiertävät '
             + 'värilliset kipsihahmot.',
           lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Tempels in Mandalay Birmah-Mandalay-Kyaning opposite the Incomparable Pagoda (titel op object), RP-F-F02363.jpg',
+          vuosi: '1800-luvun loppu',
+          selite: 'Tiikkinen luostari Mandalayssa 1800-luvun lopun '
+            + 'albumiinivedoksessa: kaiverretut kattotornit nousevat portaittain aivan '
+            + 'Verrattoman pagodin naapurissa.',
+          lahde: 'Rijksmuseum, Commons (CC0)',
+        },
+        {
+          tiedosto: 'Shwenandaw Monastery 02.jpg',
+          vuosi: '2018',
+          selite: 'Shwenandawin luostari nykyään: tummunut tiikki on samaa '
+            + 'kaiverrettua käsityötä, ja rakennus on ainoa kuninkaanpalatsista '
+            + 'säilynyt puutalo.',
+          lahde: 'Christophe95, Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
