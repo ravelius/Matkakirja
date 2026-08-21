@@ -11901,6 +11901,20 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 .kartta-kehys.zoomattu:active { cursor: grabbing; }
 
 /*
+ * KARTTA AUKEAA KOKORUUDULLE (omistajan tilaus 21.8.2026: "voisiko
+ * kaupunkikartan saada klikattua kokoruudulle?"). Suurennoskohdistin
+ * kertoo sen ennen napautusta — mutta vain lepotilassa: zoomattuna
+ * napautus kuuluu panoroinnille, ja otekohdistimen on säilyttävä.
+ * Valitsimissa on siksi kolme luokkaa, jotta ne voittavat yllä olevat
+ * kaksiluokkaiset zoomatun kartan säännöt.
+ */
+.kartta-kehys.kartta-avattava { cursor: zoom-in; }
+
+.kartta-kehys.kartta-avattava.zoomattu { cursor: grab; }
+
+.kartta-kehys.kartta-avattava.zoomattu:active { cursor: grabbing; }
+
+/*
  * NAPAUTUSOPASTE KARTAN OIKEASSA YLÄKULMASSA (omistajan tilaus
  * 18.8.2026). Ohje siirtyi esittelytekstin lopusta kartan päälle, eli
  * sinne, mitä se koskee — leipätekstistä se poistui kaikista
@@ -11939,6 +11953,37 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
   pointer-events: none;
 }
+
+/*
+ * SUURENNUSVIHJE KARTAN OIKEASSA ALAKULMASSA (omistajan tilaus
+ * 21.8.2026). Samat sävyt ja sama kokoluokka kuin napautusopasteessa
+ * ja mittajanan tekstilipukkeessa — kartan päällä puhutaan yhtä
+ * kieltä. Kehyksen lapsi eikä lavan, joten se ei zoomaa eikä panoroi,
+ * ja `pointer-events: none` pitää sekä panorointiotteen että
+ * kokoruudun avaavan napautuksen ennallaan lapun alla.
+ */
+.kartta-suurennusvihje {
+  position: absolute;
+  right: 0.35rem;
+  bottom: 0.35rem;
+  z-index: 3;
+  padding: 0.16rem 0.42rem;
+  font-family: var(--font-type);
+  font-size: 0.6rem;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  color: rgba(44, 35, 24, 0.92);
+  background: rgba(247, 240, 222, 0.82);
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+
+/* Zoomattuna napautus ei enää avaa kokoruutua vaan panoroi, joten
+ * vihje ei saa luvata sitä (ks. js/nahtavyydet.js). */
+.kartta-kehys.zoomattu .kartta-suurennusvihje { display: none; }
 
 .kaupunkikartta-kotelo { margin: 0.3rem 0 0.55rem; }
 
@@ -11988,6 +12033,164 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 
 @media (prefers-reduced-motion: reduce) {
   .kartta-lava.silea { transition: none; }
+}
+
+/*
+ * KOKORUUTUKARTTA (omistajan tilaus 21.8.2026). Kortti on pelin
+ * tavallinen suurennoskatselin (.postikortti.kulttuuri-suurennos):
+ * tumma pohja, keskitys ja sulku tulevat sieltä sellaisinaan, ja
+ * täällä mitoitetaan vain kloonattu karttakehys.
+ *
+ * MITOITUS ON KUVASUHTEEN VARASSA. Kehyksellä on oma aspect-ratio
+ * (ydinrajauksesta tai kuvatiedostosta), joten korkeutta ei voi
+ * asettaa suoraan — leveys lasketaan halutusta korkeudesta:
+ * `korkeus × suhde`, katkaistuna ruudun leveyteen. Kumpi tahansa
+ * raja tuleekin vastaan, KOKO kartta on näkyvissä eikä mitään
+ * rajaudu pois. Kerroin --kartta-suhde tulee avaajalta
+ * (js/nahtavyydet.js: avaaKarttaSuurennos), joka mittaa sen
+ * paikallaan olevasta kehyksestä.
+ *
+ * dvh eikä vh: puhelimen osoiterivi kutistaa näkyvän ruudun, ja
+ * vh-mitta jättäisi kartan alareunan palkin alle. Katto on 82dvh eikä
+ * koko ruutu, koska kartan alle tulevat vielä numeroiden selite ja
+ * lähderivi.
+ *
+ * KORKEUSKATTO PURREE VAIN LEVEÄLLÄ RUUDULLA, ja siellä selite on
+ * kahden rivin mittainen — kapealla ruudulla vaakakartta törmää aina
+ * ensin leveysrajaan (98vw), jolloin korkeutta jää yli ja pitkäkin
+ * selite mahtuu sen alle. Vaakakuva ei täytä puhelimen pystyruutua:
+ * se on kuvasuhteen laki, ei mitoituksen puute, ja juuri siksi selite
+ * saa sen alta jäävän tilan.
+ */
+.postikortti.kulttuuri-suurennos.kartta-suurennos {
+  width: min(98vw, calc(82dvh * var(--kartta-suhde, 1.4)));
+  max-height: 98dvh;
+  cursor: zoom-out;
+}
+
+/*
+ * Pohja on TÄYSIN PEITTÄVÄ, toisin kuin kuvasuurennoksessa (0,88).
+ * Kartan alla on lehden OMA selitelista samoilla sanoilla, ja läpi
+ * kuultavana se asettui suurennoksen selitteen viereen
+ * kaksoiskappaleeksi: kaksi samaa riviä hieman eri kohdissa luki
+ * huonommin kuin yksikään. Kokoruutu on sitä paitsi juuri sitä —
+ * koko ruutu.
+ */
+.postikortti.kulttuuri-suurennos.kartta-suurennos::before {
+  background: #0b0805;
+}
+
+.kartta-suurennos .kartta-kehys {
+  width: 100%;
+  margin: 0;
+  cursor: inherit;
+  /* Kokoruudulla ei panoroida eikä vieritetä: kortti peittää lehden,
+   * eikä sormi saa liikuttaa sen takana olevaa sivua. */
+  touch-action: none;
+}
+
+/*
+ * KUVASÄÄNNÖT TAKAISIN KARTAN OMIKSI. Kortin sisällä pätisivät muuten
+ * postikortin kuvasäännöt (.postikortti img: kiinteä 330 px:n ikkuna
+ * ja object-fit: cover; .kulttuuri-suurennos img: max-height 80dvh ja
+ * vaalea pohja) — kartta rajautuisi laatikkoonsa ja piirroskohteet
+ * venyisivät. Valitsimet ovat tarkoituksella kolmiluokkaisia, jotta ne
+ * voittavat nuo säännöt paikasta riippumatta.
+ */
+.kartta-suurennos .kartta-kehys > .maakartta-kotelo > img {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  margin-inline: 0;
+  object-fit: contain;
+  background: none;
+  border: 0;
+}
+
+.kartta-suurennos .kartta-kehys img.kohde-piirros-kuva {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin-inline: 0;
+  object-fit: contain;
+  background: none;
+  border: 0;
+}
+
+/*
+ * Piirroskohteen numerolappu kokoruudulla (ks. avaaKarttaSuurennos).
+ * Sama pieni pallo kuin selitelistassa ja kartan numeroympyrässä,
+ * jotta kolme paikkaa puhuvat samaa kieltä; nurkassa, ettei se peitä
+ * itse piirrosta. Laatikko (.kohde-piirros) on absoluuttisesti
+ * asemoitu, joten lappu löytää sen nurkan sellaisenaan.
+ */
+.kartta-suurennos .kohde-numerolappu {
+  position: absolute;
+  right: -0.15rem;
+  bottom: -0.15rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  border: 1px solid #2c2318;
+  border-radius: 50%;
+  background: #e8d3a0;
+  font-family: var(--font-type);
+  font-size: 0.56rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #2c1e07;
+  pointer-events: none;
+}
+
+/*
+ * Numeroiden selite kartan alle. Sama ladelma kuin lehden
+ * selitelistassa, mutta vaalealla musteella tummaa pohjaa vasten ja
+ * keskitettynä kartan alle. Katto ja vieritys ovat varmistus pitkälle
+ * listalle kapealla ruudulla: kortti ei saa kasvaa ruutua
+ * korkeammaksi.
+ */
+.kartta-suurennos .kartta-suurennos-selitteet {
+  justify-content: center;
+  gap: 0.3rem 1rem;
+  /* Sivupehmuste, ettei rivin viimeinen nimi päädy kiinni kortin
+   * reunaan kapealla ruudulla. */
+  margin: 0.45rem 0 0;
+  padding: 0 0.5rem;
+  max-height: 20dvh;
+  overflow-y: auto;
+}
+
+.dialog .kartta-suurennos .kartta-selitteet .kartta-selite {
+  color: rgba(247, 239, 220, 0.92);
+  cursor: inherit;
+}
+
+/* Lähderivi kartan alle kapeaksi riviksi, samaan vaaleaan sävyyn kuin
+ * muissa suurennoksissa. */
+.kartta-suurennos .kuvalahde {
+  margin: 0.3rem 0 0;
+  text-align: center;
+}
+
+/*
+ * Sulkurasti kartan oikeaan yläkulmaan kuvan päälle. Kortin oletusrasti
+ * on tummanruskea paperia varten ja katoaisi tummalle pohjalle; kyltti
+ * on siksi sama vaalea lappu kuin kartan opaste ja mittajanan teksti.
+ */
+.dialog .kartta-suurennos button.uutinen-sulku {
+  z-index: 4;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  border-radius: 3px;
+  background: rgba(247, 240, 222, 0.88);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: rgba(44, 35, 24, 0.92);
 }
 
 /*

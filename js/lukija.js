@@ -190,6 +190,8 @@ export const LUKIJAN_OHITETTAVAT = [
   // juttua — se on kehyksellä eikä lavalla, joten kotelon ohitus ei
   // kata sitä.
   '.kartta-opaste',
+  // Sama koskee alakulman kokoruutuvihjettä (21.8.2026).
+  '.kartta-suurennusvihje',
 
   // Lehden päivämäärä on taittoa, ei juttua (omistajan toive).
   '#arrival-lehti-pvm',
