@@ -129,6 +129,44 @@ export const LEHTI_LOHKOT = [
   { valitsin: '#arrival-kulttuuri-lista', otsikko: 'Lehden nostot' },
 ];
 
+/** VALKOINEN LISTA: nähtävyysjuttu ja matkailijan opas (#nahtavyys-dialog). */
+export const JUTTU_LOHKOT = [
+  { valitsin: '#nahtavyys-otsikko', otsikko: 'Avoinna olevan jutun aihe' },
+  { valitsin: '#nahtavyys-aika', otsikko: 'Jutun ajankohta' },
+  { valitsin: '#nahtavyys-sisalto', otsikko: 'Jutun teksti' },
+];
+
+/** VALKOINEN LISTA: Lue lisää -artikkeli (#wiki-dialog). */
+export const ARTIKKELI_LOHKOT = [
+  { valitsin: '#wiki-title', otsikko: 'Avoinna olevan artikkelin aihe' },
+  { valitsin: '#wiki-kuvateksti', otsikko: 'Artikkelin kuvateksti' },
+  { valitsin: '#wiki-extract', otsikko: 'Artikkelin teksti' },
+];
+
+/**
+ * ARTIKKELI-IKKUNAT: mitä pelaaja lukee LEHDEN PÄÄLLÄ.
+ *
+ * Järjestys on sama pinojärjestys kuin kiinnitysKohteessa: wiki voi
+ * aueta nähtävyysarkin tai lehden päälle, joten päällimmäinen on
+ * ensimmäinen. Sama järjestys ratkaisee sekä sen, missä pöllönappi
+ * asuu, että sen, mitä pöllö lukee — muuten nappi olisi jutun päällä
+ * mutta puhe lehdestä sen alla.
+ */
+const ARTIKKELI_IKKUNAT = [
+  {
+    id: 'wiki-dialog',
+    otsikko: '#wiki-title',
+    nakyma: 'artikkeli auki',
+    lohkot: ARTIKKELI_LOHKOT,
+  },
+  {
+    id: 'nahtavyys-dialog',
+    otsikko: '#nahtavyys-otsikko',
+    nakyma: 'nähtävyysjuttu auki',
+    lohkot: JUTTU_LOHKOT,
+  },
+];
+
 /**
  * MUSTA LISTA: mitä sallitunkin lohkon sisältä poistetaan.
  *
@@ -210,6 +248,35 @@ export function poimiLohkot(juuri, lohkot = LEHTI_LOHKOT, estot = SPOILERI_LOHKO
     }
   }
   return tulos;
+}
+
+/**
+ * PÄÄLLIMMÄINEN AVOIN JUTTU (omistajan bugiraportti 21.8.2026:
+ * "Pöllö ei tajua, että ollaan Karpaateilla").
+ *
+ * JUURISYY: pöllönappi ja -paneeli SIIRTYVÄT auki olevan nähtävyys-
+ * tai artikkeli-ikkunan sisään (kiinnitysKohde), mutta konteksti
+ * luettiin yhä pelkästä #arrival-dialogista. Pelaaja luki Karpaattien
+ * juttua, ja pöllölle lähti sen ALLA olevan kaupunkilehden teksti —
+ * eli edellinen kohde. Ehdotuskysymykset syntyvät kontekstista, joten
+ * nekin jäivät edelliseen kohteeseen.
+ *
+ * Juttuikkuna VOITTAA lehden aina: se on pinossa päällimmäisenä ja se
+ * on se, mitä pelaaja oikeasti katsoo. Alla oleva lehti jätetään pois
+ * kokonaan — kaksi eri aihetta samassa paketissa olisi juuri se
+ * sekaannus, joka tässä korjataan.
+ *
+ * @returns {{id: string, dialogi: object, aihe: string|null,
+ *   nakyma: string, lohkot: Array}|null}
+ */
+export function paallimmainenJuttu(doc = document) {
+  for (const ikkuna of ARTIKKELI_IKKUNAT) {
+    const dialogi = doc?.getElementById?.(ikkuna.id) ?? null;
+    if (!dialogi?.open) continue;
+    const aihe = polloSiisti(dialogi.querySelector?.(ikkuna.otsikko)?.textContent);
+    return { ...ikkuna, dialogi, aihe: aihe || null };
+  }
+  return null;
 }
 
 /**
@@ -352,6 +419,23 @@ export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [
   const lehti = doc?.getElementById?.('arrival-dialog') ?? null;
   const lehtiAuki = Boolean(lehti?.open);
   const matkakirja = polloSiisti(doc?.getElementById?.('fact-text')?.textContent);
+  /*
+   * Avoin nähtävyysjuttu tai artikkeli on lehden PÄÄLLÄ, ja pöllö on
+   * siirtynyt sen sisään — silloin se on myös se, mistä puhutaan
+   * (ks. paallimmainenJuttu). Aihe kerrotaan näkymärivillä, jottei
+   * pöllö lue sitä pelaajan sijainniksi: sijaintirivit tulevat aina
+   * pelinTilasta.
+   */
+  const juttu = paallimmainenJuttu(doc);
+  if (juttu) {
+    return kokoaKonteksti({
+      ...tila,
+      matkakirja,
+      nakyma: juttu.aihe ? `${juttu.nakyma} (${juttu.aihe})` : juttu.nakyma,
+      aineisto,
+      lohkot: poimiLohkot(juttu.dialogi, juttu.lohkot),
+    });
+  }
   // Maalehti kerrotaan nimeltä, jottei sen maaosasto sekoitu siihen
   // maahan, jossa pelaaja seisoo.
   const maalehtiIso = lehtiAuki ? ui?.lehtitila?.tutkiMaaLehti ?? null : null;
@@ -1027,8 +1111,15 @@ class Pollo {
    * laattakonteksti pelaajan sijainnista. Maalehti on eri julkaisu:
    * sille ei ole valmiskysymyksiä, ja väärän kaupungin kysymykset
    * olisivat pahempia kuin ei mitään.
+   *
+   * AVOIN JUTTU EI OLE KUMPIKAAN. Nähtävyysjuttu ja Lue lisää
+   * -artikkeli ovat oma aiheensa lehden päällä, ja käsin kirjoitetut
+   * kaupunkikysymykset koskevat laattaa ja lehteä — ne olisivat jutun
+   * päällä täsmälleen se vika, joka tässä korjataan. Silloin
+   * ehdotukset haetaan palvelimelta jutun omalla kontekstilla (avaa).
    */
   valmiskysymysTilanne() {
+    if (paallimmainenJuttu(this.doc)) return null;
     const ui = this.haeUi?.() ?? null;
     const game = ui?.game ?? null;
     const lehti = this.doc.getElementById?.('arrival-dialog') ?? null;
@@ -1050,8 +1141,15 @@ class Pollo {
    * kaupunki — saavat oman avaimensa: kontekstin vaihtuminen pitää
    * huomata silloinkin, kun uudessa kontekstissa ei ole mitään
    * näytettävää (vanhat kuplat siivotaan silti, ks. avaa).
+   *
+   * AVOIN JUTTU SAA AVAIMEN AIHEESTAAN. Ilman tätä Karpaattien juttu
+   * ja sen alla oleva kaupunkilehti olisivat pöllölle sama tilanne,
+   * eivätkä edellisen kohteen kysymyskuplat väistyisi — ja juuri niin
+   * kävi (omistajan bugiraportti 21.8.2026).
    */
   kysymysAvain() {
+    const juttu = paallimmainenJuttu(this.doc);
+    if (juttu) return `${juttu.id}:${juttu.aihe ?? ''}`;
     const tilanne = this.valmiskysymysTilanne();
     if (tilanne) return `${tilanne.kaupunki}:${tilanne.konteksti}`;
     const ui = this.haeUi?.() ?? null;
