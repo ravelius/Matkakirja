@@ -2275,6 +2275,98 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  astana: {
+    /*
+     * ASTANA (21.8.2026). Ruutu on 6,1 × 4,4 km ja se kattaa Esilin
+     * (Ishimin) molemmat rannat: eteläisellä Vasemmalla rannalla
+     * uusi hallintokeskus Khan Shatyrista Hazrat Sultanin
+     * moskeijalle, pohjoisella Oikealla rannalla vanha kaupunki.
+     *
+     * RUUTU ON LEVEÄ SUORAKAIDE, EI NELIÖ. Kahdeksan kohdetta ovat
+     * en-Wikipedian koordinaateista laskien 4,8 kilometrin levyisellä
+     * ja vain 2,0 kilometrin korkuisella nauhalla Nurjol-bulevardin
+     * suunnassa, koska uusi keskusta rakennettiin yhden akselin
+     * varteen. Neliörajaus (Varanasin ja Ulan Batorin ratkaisu) olisi
+     * täyttänyt puolet kuvasta esikaupungilla; tässä tehtiin
+     * päinvastoin ja pohjoisreunaa nostettiin vain sen verran, että
+     * joki ja vanhan puolen ruutukaava mahtuvat mukaan. Ilman sitä
+     * kartta kertoisi vain puolet kaupungista — koko lehden ydin on,
+     * että Astana on kaksi kaupunkia joen kahta puolta.
+     *
+     * MOLEMMAT RAUTATIEASEMAT JÄIVÄT POIS EIVÄTKÄ KAINALOON. Vanha
+     * Astana-1 on en-Wikipedian koordinaatista laskien 7,1 km
+     * pohjoisluoteeseen ja Expo-vuoden Nurly Zhol 7,3 km itäkaakkoon;
+     * ne ovat siis vastakkaisissa suunnissa ja kumpikin yhtä kaukana
+     * kuin Varanasin Sarnath, joten kahden kainalon sijaan asemat
+     * kerrotaan oppaan ensimmäisessä jaksossa (Medinan Uhud-vuoren
+     * ratkaisu). Samasta syystä pois jäivät Expo 2017:n Nur Alem
+     * (4,9 km etelälounaaseen) ja Suuri moskeija (6,9 km etelään).
+     *
+     * ITSENÄISYYSAUKIO JA ITSENÄISYYDEN PALATSI EIVÄT OLE ERILLISINÄ
+     * PISTEINÄ, vaikka niillä on omat koordinaattinsa: ne ovat 370 ja
+     * 480 metrin päässä Hazrat Sultanin moskeijasta ja 190 metrin
+     * päässä toisistaan, joten kolme numeroympyrää menisi
+     * päällekkäin (Petran, Mekan ja Singaporen oppi). Aukio kerrotaan
+     * moskeijan jutussa.
+     *
+     * PALVELUTIET PÄÄLLÄ, JA ERO ON MITATTU. Kartta piirrettiin ensin
+     * ilman lippua: aineistoa tuli 4 690 elementtiä, ja Vasemman
+     * rannan korttelit — juuri se osa kaupunkia, jota lehti kertoo —
+     * jäivät sisältä paperin värisiksi, koska hallintokortteleiden
+     * pihatiet ja pysäköintikadut ovat OSM:ssä service-teitä. Lipun
+     * kanssa elementtejä on 7 353 ja korttelit näkyvät kortteleina.
+     * Sama tilanne kuin Pekingissä, Medinassa ja Samarkandissa.
+     */
+    rajat: { pohjoinen: 51.152, etela: 51.1125, lansi: 71.394, ita: 71.482 },
+    palvelutiet: true,
+  },
+  kanton: {
+    /*
+     * VANHA MUURIKAUPUNKI JA HELMIJOEN RANTA (21.8.2026). Ruutu on
+     * 6,1 × 6,1 km, ja siihen mahtuvat lehden kaikki kahdeksan
+     * kohdetta: pohjoisessa Zhenhai-torni Yuexiun kukkulalla,
+     * keskellä Guangxiao- ja Liurong-temppelit sekä
+     * Huaisheng-moskeija, lännessä Chenin suvun sali, idässä
+     * Pyhän sydämen katedraali ja etelässä joen rannassa
+     * Kolmentoista faktorian paikka ja Shamianin saari.
+     *
+     * NELIÖRAJAUS ON HARKITTU, kuten Varanasissa. Kohteet ovat
+     * luonnostaan 2,2 × 3,5 kilometrin nauha, joka kulkee kukkulalta
+     * joelle; pelkkä nauha olisi piirtynyt kapeaksi pystykuvaksi.
+     * Ruutua levennettiin itään ja länteen niin, että kuvasuhde on
+     * 1,00 (1600 × 1595 px) — ja samalla mukaan tuli koko se
+     * Helmijoen mutka, jonka varrella kaupungin koko kerrottava
+     * historia tapahtui.
+     *
+     * ETELÄREUNA ON VÄLJÄ TARKOITUKSELLA. Shamian on kartan alalaidan
+     * kohde (77 %), ja jos joki olisi jäänyt kuvan alareunaksi, saari
+     * ei olisi näyttänyt saarelta. Nyt joen eteläpuolelta piirtyy
+     * runsas kilometri Haizhun katuverkkoa, ja kanava saaren
+     * pohjoispuolella erottuu. Samalla eteläreuna pysyy kaukana
+     * lehden mittakaavajanasta vasemmassa alakulmassa (Kööpenhaminan
+     * Tivoli-tapaus).
+     *
+     * WHAMPOAN ANKKURIPAIKKA (nyk. Pazhou) EI OLE KARTALLA EIKÄ
+     * KAINALOSSA, vaikka se on lehden aihe. Se on en-Wikipedian
+     * Pazhou-artikkelin koordinaatista (23,0992 / 113,3767) laskien
+     * 12,6 kilometriä itäkaakkoon Shamianista — kauempana kuin yksikään
+     * kainalo tässä kartastossa (Medinan Quba 3,5 km, Adenin Tawahi
+     * 6 km) ja käytännössä sama etäisyys, jolla Bhaktapur jätettiin
+     * pois Kathmandun kartalta. Artikkelin koordinaatti kattaa
+     * lisäksi koko nykyisen Pazhoun kaupunginosan eikä osoita
+     * historiallista ankkuripaikkaa täsmälleen. Ankkuripaikka
+     * kerrotaan lehden teksteissä ja matkaoppaassa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa ja Kathmandussa: Shamianin puistokadut, Xiguanin
+     * kujat ja Beijing Lun kävelykatu ovat OSM:ssä jalankulkualueita
+     * ja huoltoteitä, ja ilman lippuja kartan tihein kortteli jäisi
+     * tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 23.152, etela: 23.097, lansi: 113.2205, ita: 113.2805 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*

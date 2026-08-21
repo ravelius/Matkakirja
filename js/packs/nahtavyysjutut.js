@@ -24760,4 +24760,656 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * ASTANAN KOHDEKARTAN JUTUT (Opus 21.8.2026). Kahdeksan kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään; kaikki
+   * ovat päärajauksen sisällä, kainaloa ei ole. Faktat on tarkistettu
+   * en-Wikipedian raakateksteistä (action=raw, haettu 21.8.2026):
+   * Astana, Astana Opera, Khan Shatyr Entertainment Center, Baiterek
+   * (monument), Nurjol Boulevard, Aqorda Residence (jonne "Akorda"
+   * ohjaa), Hazrat Sultan Mosque, Palace of Peace and Reconciliation
+   * ja National Museum of the Republic of Kazakhstan.
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA on kirjoitettu auki
+   * lukijalle (v925/v932:n tapa):
+   * 1) Khan Shatyrin pinta-ala on infoboksissa 100 000 ja
+   *    leipätekstissä 140 000 neliömetriä;
+   * 2) Rauhan ja sovinnon palatsin oopperasalin paikkaluku on sen
+   *    omassa artikkelissa 1 300 ja Astana Operan artikkelissa 1 500;
+   * 3) Bozokin ikä on Astana-artikkelin infoboksissa 700-luku ja
+   *    leipätekstissä 1200–1300-luku (kerrottu lehden historia-sivun
+   *    nostossa, ei näissä jutuissa).
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje: ei nykypolitiikkaa eikä
+   * presidenttikulttia. Rakennusten historiat kerrotaan
+   * arkkitehtuurina ja tilaajina, ei henkilökuvina. POIS JÄTETTY
+   * KOKONAAN: Bajterekin näköalatasanteen kultainen kämmenjälki ja
+   * siihen liittyvä toivomusrituaali, tornin hankkeen synty
+   * presidentin muistelmien mukaan (myös hylätyt kilpailevat
+   * ehdotukset ja niiden hinnat, koska koko kohta nojaa muistelmiin),
+   * Astana Operan ja Khan Shatyrin kohdalta maininnat presidentin
+   * määräyksestä, luonnoksesta ja avajaispäivästä sekä Akordan
+   * artikkelin galleriakuva valtiovierailun kunniavartiosta.
+   * Akorda kerrotaan sillä nimellä ja siinä tehtävässä, jonka
+   * en-Wikipedia sille antaa: presidentin työpaikka, ei asunto.
+   *
+   * PYHIEN PAIKKOJEN SÄVY on sama kuin Medinassa, Mekassa ja
+   * Jerusalemissa: moskeija kerrotaan rakennuksena, mittoina ja
+   * nimensä historiana, ei hartauskielellä.
+   */
+  astana: {
+    'Astana Opera': {
+      aika: '2010–2013',
+      teksti: 'Oopperatalo nousi Vasemmalle rannalle yhdeksän hehtaarin '
+          + 'tontille. Rakentaminen alkoi 6. heinäkuuta 2010, ja talo '
+          + 'avattiin vuonna 2013 kazakstanilaisella oopperalla Birzhan '
+          + 'ja Sara. Suunnittelusta vastasi italialainen '
+          + 'arkkitehtitoimisto ABDR ja rakentamisesta Mabetex-yhtiö. '
+          + 'Harjakorkeus on 32 metriä ja kerrosala 64 163 neliömetriä; '
+          + 'pelkkää näyttämöalaa on 3 000 neliömetriä.'
+          + '\n\n'
+          + 'Saleja on kaksi. Pääsalissa on 1 250 paikkaa ja '
+          + 'orkesterisyvennys, johon mahtuu 120 soittajaa; '
+          + 'kamarimusiikkisalissa on 250 paikkaa. Aulassa riippuu '
+          + 'kolmentoista metrin korkeudessa kruunu, joka painaa 1,6 '
+          + 'tonnia. Akustiikan suunnittelivat italialaiset Enrico '
+          + 'Moretti ja Maria Cairoli.'
+          + '\n\n'
+          + 'Julkisivu on antiikin kreikkalaisen temppelin muotoinen: '
+          + 'korkea pylväikkö, päätykolmio ja sen harjalla '
+          + 'nelivaljakko. Koristelu on kuitenkin kazakstanilaista — '
+          + 'päätykolmion kenttä on täynnä perinteistä ornamenttia, ja '
+          + 'sisällä on freskoja Sharynin kanjonista ja Burabaista. '
+          + 'Ohjelmistossa ovat sekä La traviata, Tosca ja '
+          + 'Pähkinänsärkijä että kotimaiset oopperat Abai ja Birzhan '
+          + 'ja Sara.',
+      kuvat: [
+        {
+          tiedosto: 'The State Opera and Ballet Theatre “Astana Opera”.jpg',
+          selite: 'Oopperatalon pylväsjulkisivu nousee nurmikumpareen '
+            + 'takaa, ja päätykolmion harjalla ajaa pronssinen '
+            + 'nelivaljakko.',
+          lahde: 'Nikolamikovic82, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Khan Shatyr': {
+      aika: '2006–2010',
+      teksti: 'Rakennuksen suunnitteli Foster and Partners ja rakenteet '
+          + 'insinööritoimisto Buro Happold; työn teki turkkilainen '
+          + 'Sembol, ja hinnaksi kerrotaan 400 miljoonaa dollaria. '
+          + 'Työmaa alkoi joulukuussa 2006, keskusmasto pystytettiin '
+          + 'joulukuussa 2008 ja talo avattiin 5. heinäkuuta 2010. '
+          + 'Pinta-alasta Wikipedia antaa kaksi lukua, infoboksin '
+          + '100 000 ja leipätekstin 140 000 neliömetriä.'
+          + '\n\n'
+          + 'Katteena ei ole lasi vaan ETFE-kalvotyynyt, jotka riippuvat '
+          + 'keskusmastosta lähtevässä vaijeriverkossa. Kalvo päästää '
+          + 'auringonvalon läpi, ja sen ansiosta katon alla kasvaa '
+          + 'puita. Sisälämpötila pidetään pääosassa 15 ja 30 asteen '
+          + 'välillä ja myymälöissä 19 ja 24 asteen välillä, vaikka '
+          + 'ulkoilma vaihtelee vuoden mittaan 35 pakkasasteesta 35 '
+          + 'lämpöasteeseen. Osan työstä tekee hormivaikutus: lämmin '
+          + 'ilma nousee itsestään kohti huippua.'
+          + '\n\n'
+          + 'Tämä oli Norman Fosterin toimiston toinen suuri työ '
+          + 'kaupungissa; ensimmäinen oli neljä vuotta aiemmin '
+          + 'valmistunut lasipyramidi. Rakennusta on kutsuttu maailman '
+          + 'korkeimmaksi vetorasitukselle rakennetuksi '
+          + 'kalvorakenteeksi.',
+      kuvat: [
+        {
+          tiedosto: 'Khan Shatyr.jpg',
+          selite: 'Teltan harmaa kalvokatto laskeutuu nurmivallille, ja '
+            + 'sen huipulta nousee ohut masto ukkospilviä vasten.',
+          lahde: 'Quarot, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bajterek': {
+      aika: '1996–2002',
+      teksti: 'Nimi tarkoittaa kazakiksi korkeaa poppelia. Torni '
+          + 'rakennettiin 25. lokakuuta 1996 alkaen ja valmistui 30. '
+          + 'elokuuta 2002; suunnittelija oli kazakstanilainen arkkitehti '
+          + 'Akmurza Rustembekov ja päärakennesuunnittelija Mark '
+          + 'Vaynshtein. Vuonna 2017 torni peruskorjattiin. Korkeutta on '
+          + '105 metriä.'
+          + '\n\n'
+          + 'Rakenne on kapea sylinterimäinen kuilu, jota kiertävät '
+          + 'valkoiset oksamaiset ristikkopalkit. Ylhäällä oksat '
+          + 'levittäytyvät ja kannattelevat 22 metriä leveää '
+          + 'kultapeilipintaista palloa. Kuilussa kulkee kaksi hissiä '
+          + 'näköalatasanteelle, joka on 97 metrin korkeudessa ja jossa '
+          + 'on kaksi kerrosta: alemmalta näkee ympäri kaupungin, '
+          + 'ylemmälle noustaan portaita. Sisäänkäynnit on upotettu '
+          + 'aukion pinnan alle, ja niihin laskeudutaan portaita; '
+          + 'jalustassa on lipunmyynti ja näyttelytila.'
+          + '\n\n'
+          + 'Torni on itsenäistyneen Kazakstanin tunnetuin rakennus, ja '
+          + 'sen kuva on ollut myös 10 000 tengen setelissä. Tarun, '
+          + 'jonka mukaan se on muotoiltu, kertoo lehden kansisivu.',
+      kuvat: [
+        {
+          tiedosto: 'Kazakhstan P9130290 (39375228604).jpg',
+          selite: 'Näköalatasanteen kaareva messinkikaide kiertää '
+            + 'lasiseinän vieressä, ja ikkunoista näkyy kaupunki ja sen '
+            + 'takana aron reuna.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nurjol-bulevardi': {
+      aika: 'Kurokawan kaava 1998',
+      teksti: 'Bulevardi on 2 200 metrin mittainen kävelyalue Vasemman '
+          + 'rannan hallinto- ja liikekeskuksessa. Sen ja koko uuden '
+          + 'kaupungin kaavan suunnitteli japanilainen arkkitehti Kisho '
+          + 'Kurokawa, joka voitti vuoden 1998 kansainvälisen '
+          + 'suunnittelukilpailun. Vanha nimi oli Suly Nuly eli '
+          + 'Vihervesibulevardi.'
+          + '\n\n'
+          + 'Bulevardi on kaupungin akseli. Itäpäässä on Akorda joen '
+          + 'rannassa ja länsipäässä Khan Shatyrin teltta; niiden '
+          + 'välissä seisoo Bajterek, ja molemmin puolin kohoaa rivi '
+          + 'ministeriöitä, virastoja ja asuintorneja. Kävelyosuudella '
+          + 'on suihkulähteiden kuja.'
+          + '\n\n'
+          + 'Suunta ei ole sattumaa. Kurokawan periaate oli "historian '
+          + 'ja tulevaisuuden symbioosi": vanha kaupunki joen '
+          + 'pohjoispuolella säilytettäisiin ennallaan, ja uusi '
+          + 'rakennettaisiin eteläpuolelle omalle akselilleen. Siksi '
+          + 'bulevardilta katsoo kahteen suuntaan kahta eri '
+          + 'vuosisataa.',
+      kuvat: [
+        {
+          tiedosto: 'Kazakhstan P9130282 (25214334277).jpg',
+          selite: 'Bulevardi näkyy Bajterekin ikkunasta suorana '
+            + 'kukkakuvioituna puistokaistana, jonka päässä seisovat '
+            + 'kaksi kultatornia ja niiden välissä Akorda.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Akorda': {
+      aika: '2001–2004',
+      teksti: 'Nimi Aqorda tarkoittaa valkoista ordaa eli hallitsijan '
+          + 'leiriä. Talo rakennettiin vuosina 2001–2004 Mabetex-yhtiön '
+          + 'työnä, ja se on presidentin työpaikka ja hallinnon '
+          + 'toimitalo — ei asunto. Korkeutta on huippuineen 80 metriä, '
+          + 'kerroksia seitsemän ja kerrosalaa 36 720 neliömetriä.'
+          + '\n\n'
+          + 'Katolla on sinivalkoinen kupoli ja sen päällä kullattu '
+          + 'huippu: aurinko, jolla on 32 sädettä, ja auringon alla '
+          + 'lentävä arokotka. Sama pari on Kazakstanin lipussa. '
+          + 'Ensimmäisessä kerroksessa ovat suuri keskussali, '
+          + 'lehdistösali, juhlasali ja talvipuutarha, toisessa '
+          + 'työhuoneet.'
+          + '\n\n'
+          + 'Kolmas kerros on kansainvälisiä tilaisuuksia varten, ja '
+          + 'sen salit on nimetty pintojensa mukaan: Marmorisali, '
+          + 'Kultasali, Ovaali sali ja Itäinen sali, joka on rakennettu '
+          + 'jurtan muotoon. Neljännessä kerroksessa ovat kupolisali, '
+          + 'hallituksen kokoussali ja kirjasto. Lattiakuvioihin on '
+          + 'käytetty 21:tä eri marmorilajia.',
+      kuvat: [
+        {
+          tiedosto: 'Astana DSC04160 (7709718350).jpg',
+          selite: 'Akordan sinikupolinen julkisivu näkyy aukion perällä, '
+            + 'ja etualalla kaartuu valtava valko-violetti kukkakuvio '
+            + 'suihkulähteen ympärillä.',
+          lahde: 'jtstewart, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hazrat Sultanin moskeija': {
+      aika: '2009–2012',
+      teksti: 'Moskeija on nimetty Hazrat Sultanin mukaan. Se on yksi '
+          + 'sufilaisen šeikin Khoja Ahmed Yasavin lisänimistä; hänen '
+          + 'mausoleuminsa on Turkistanissa Etelä-Kazakstanissa. '
+          + 'Rakentaminen alkoi kesäkuussa 2009, ja työmaalla oli eri '
+          + 'vaiheissa tuhannesta puoleentoista tuhanteen työntekijää. '
+          + 'Talo avattiin 6. heinäkuuta 2012.'
+          + '\n\n'
+          + 'Tyyli on klassinen islamilainen, mutta koristeaiheet ovat '
+          + 'kazakstanilaisia. Päälaen kupoli on maan suurin: korkeutta '
+          + '51 metriä ja halkaisijaa juurella 28,1 metriä. Pienempiä '
+          + 'kupoleita on kahdeksan, ja nurkissa nousee neljä 77 metrin '
+          + 'minareettia. Tontti on yli yksitoista hehtaaria ja '
+          + 'rakennettu ala 17 700 neliömetriä. Rukoilijoita mahtuu '
+          + 'viisituhatta ja juhlapyhinä kymmenentuhatta.'
+          + '\n\n'
+          + 'Moskeija on Esilin koillisrannalla osa laajaa aukiota. '
+          + 'Naapureina ovat Rauhan ja sovinnon palatsi, Itsenäisyysaukio '
+          + 'ja Kazak Elin muistomerkki: 91 metrin korkuinen pylväs, '
+          + 'jonka huipulla on tarun Samruk-lintu — sama lintu, joka '
+          + 'munii Bajterekin kultaisen pallon.',
+      kuvat: [
+        {
+          tiedosto: 'National Museum of Kazakhstan 03.jpg',
+          selite: 'Aukion suihkulähteen takaa erottuvat vasemmalla '
+            + 'moskeijan valkoinen kupoli ja minareetit, keskellä '
+            + 'Kazak Elin pylväs ja oikealla kansallismuseon sininen '
+            + 'lasiseinä.',
+          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rauhan ja sovinnon palatsi': {
+      aika: '2006',
+      teksti: 'Pyramidi on 62 metriä korkea, ja sen pohja on 62 × 62 '
+          + 'metriä. Se seisoo viisitoista metriä korkean, mullalla '
+          + 'peitetyn jalustan päällä; alakerrat eivät siis ole kellaria, '
+          + 'vaikka puiston maasto nousee niiden ympärille. '
+          + 'Suunnittelija oli Foster and Partners ja rakentaja Sembol, '
+          + 'ja hinta oli 8,74 miljardia tengeä. Talo valmistui 2006 '
+          + 'pysyväksi paikaksi maailmanuskontojen johtajien kongressille, '
+          + 'joka kokoontuu joka kolmas vuosi.'
+          + '\n\n'
+          + 'Kyljet jakautuvat viiteen kolmiokerrokseen, joissa '
+          + 'jokaisen kolmion sivu on kaksitoista metriä. Kolme alinta '
+          + 'kerrosta on verhottu vaalealla graniitilla, kaksi ylintä '
+          + 'lasimaalauksella. Lasityön teki brittiläinen Brian Clarke: '
+          + 'huippuun on poltettu lentäviä kyyhkysiä, ja alempana on 28 '
+          + 'vinoneliön muotoista lasi-ikkunaa. Värit, kulta ja vaalea '
+          + 'sini, ovat Kazakstanin lipusta.'
+          + '\n\n'
+          + 'Aron ilmasto näkyy rakenteessa. Runko on terästä ja '
+          + 'alakerrat betonia, ja insinöörien piti varautua noin 80 '
+          + 'asteen lämpötilaeroon 40 pakkasasteesta yli 40 '
+          + 'lämpöasteeseen — rakennus venyy ja kutistuu jopa 30 '
+          + 'senttimetriä. Siksi vain yksi pyramidin kulma on kiinteä ja '
+          + 'kolme muuta lepää silloista tutuilla laakereilla, mitä ei '
+          + 'ollut aiemmin tehty talossa. Sisällä on oopperasali, jonka '
+          + 'paikkaluvuksi Wikipedia antaa sekä 1 300 että 1 500, '
+          + 'kulttuurimuseo, kirjasto ja tutkimuskeskus, ja huipulla '
+          + 'pyöreä kokoussali, jonka esikuva on YK:n turvallisuusneuvoston '
+          + 'sali New Yorkissa.',
+      kuvat: [
+        {
+          tiedosto: 'Palace of Peace and Reconciliation (pyramid).jpg',
+          selite: 'Pyramidi erottuu vaaleana kolmiona kerrostalorivien '
+            + 'välissä, ja sen yllä kaartuu tumma ukkosrintama.',
+          lahde: 'Nikolamikovic82, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallismuseo': {
+      aika: '2014',
+      teksti: 'Museo avattiin vuonna 2014, ja se oli silloin Keski-Aasian '
+          + 'suurin. Julkisivu on sinistä lasia ja valkoista marmoria. '
+          + 'Suunnittelija oli Vladimir Laptev, joka on myös kaupungin '
+          + 'pääkaavoittaja, ja hänen lähtökohtansa oli liehuva lippu.'
+          + '\n\n'
+          + 'Talo koostuu seitsemästä lohkosta, joissa on yhdestä '
+          + 'yhdeksään kerrosta. Näyttelytilaa on noin 14 000 '
+          + 'neliömetriä yhdessätoista salissa: Astanan sali, itsenäisen '
+          + 'Kazakstanin sali, Kultasali, muinaisen ja keskiajan '
+          + 'historian sali, historian sali, kansatieteen sali ja '
+          + 'nykytaiteen salit. Saman katon alla ovat myös lastenmuseo, '
+          + 'lasten luova keskus, kaksi vaihtuvien näyttelyiden salia, '
+          + 'konservointipajat, laboratoriot, tieteellinen kirjasto '
+          + 'lukusaleineen ja kongressisali.'
+          + '\n\n'
+          + 'Kokoelmien tunnetuin esine on Issykin kultainen soturi: '
+          + 'tuhansista kultalevyistä koottu asu, joka löytyi sattumalta '
+          + 'vuonna 1969 autotallin ja tienparannuksen kaivuutöissä '
+          + 'Issykin hautakummusta maan eteläosassa. Sen arvellaan '
+          + 'kuuluneen noin kahdeksantoistavuotiaalle sakaruhtinaalle '
+          + 'tai -ruhtinattarelle 300-luvulla eaa. Kokoelmien perusta '
+          + 'koottiin valtion Kulttuuriperintö-ohjelmassa.',
+      kuvat: [
+        {
+          tiedosto: 'National Museum of the Republic of Kazakhstan 01.jpg',
+          selite: 'Museon aulassa leijuu kullattu Samruk-lintu siivet '
+            + 'levällään mustan, tähdiksi valaistun katon alla.',
+          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * KANTONIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Kahdeksan kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään;
+   * kainaloa ei ole. Faktat on tarkistettu en-Wikipedian
+   * artikkeleista Zhenhai Tower (Guangzhou), Yuexiu Hill, Guangxiao
+   * Temple (Guangzhou), Chen Clan Ancestral Hall, Temple of the Six
+   * Banyan Trees, Huaisheng Mosque, Sacred Heart Cathedral
+   * (Guangzhou), Thirteen Factories, Shamian ja Guangzhou (haettu
+   * 21.8.2026).
+   *
+   * KAKSI RISTIRIITAA on kirjoitettu auki lukijalle (v925/v932:n
+   * tapa). Zhenhai-tornin korkeus on Zhenhai Tower -artikkelissa 92
+   * jalkaa eli 28 metriä, mutta Yuexiu Hill -artikkeli sanoo
+   * nykyisen rakennuksen olevan 28 metriä korkea ja 16 metriä leveä,
+   * kun Zhenhai Tower -artikkelin leveys on 102 jalkaa eli 31
+   * metriä; juttu kertoo korkeuden ja jättää leveyden sanomatta.
+   * Huaishengin moskeijan perustamisvuosi 627 on vanhojen
+   * kiinalaisten käsikirjoitusten tieto, jonka en-Wikipedia itse
+   * asettaa kyseenalaiseksi (varhaisimmat luotettavat ajoitukset
+   * ovat Song-kaudelta); juttu kertoo molemmat.
+   *
+   * USKONNOLLISTEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa,
+   * Medinassa ja Xi’anissa: rakennukset ja kerrostumat, ei
+   * hartauskieltä. Guangxiaon ja Liurongin jutuista on jätetty pois
+   * 1900-luvun temppelituhot ja katedraalin jutusta
+   * kulttuurivallankumouksen aikaiset vauriot — 2000-luvun korjaus
+   * kerrotaan rakennustyönä ilman sen taustaa.
+   *
+   * KOLMESSA JUTUSSA KUVA ON 1800-LUVULTA (Zhenhai-torni,
+   * Liurong-temppeli ja katedraali Lai Afongin valokuvissa,
+   * Kolmentoista faktorian paikka Vroomanin kartassa). Se on
+   * tietoinen valinta eikä tuoreiden kuvien puute: nämä neljä
+   * kohdetta ovat juuri niitä, jotka isoisän matkapäiväkirjan
+   * aikaan näkyivät kaupungissa, ja Lai Afongin kuvat ovat siltä
+   * vuosikymmeneltä. Matkaoppaan ja matkailijalle-osion kuvat ovat
+   * sitä vastoin kaikki tuoreita, kuten linjaus vaatii.
+   */
+  kanton: {
+    'Zhenhai-torni': {
+      aika: 'rakennettu 1380',
+      teksti: 'Yuexiun kukkula oli vanhan muurikaupungin pohjoisnurkka, '
+          + 'ja sen laelle pystytettiin vuonna 1380 vahtitorni. '
+          + 'Rakennuttaja oli Yongjian markiisi Zhu Liangzu. Tarinan '
+          + 'mukaan hän näki kukkulan yllä keltaista ja purppuraista '
+          + 'usvaa ja kuuli sen ennustavan uutta keisaria — torni '
+          + 'rakennettiin osaksi muuria, jotta se muuttaisi kukkulan '
+          + 'feng shuin ja ennuste jäisi toteutumatta.'
+          + '\n\n'
+          + 'Torni on tuhoutunut ja rakennettu uudelleen viisi kertaa, '
+          + 'ja eri versiot esiintyvät kiinalaisessa runoudessa ja '
+          + 'maalauksessa. Nykyinen rakennus on kaksikymmentäkahdeksan '
+          + 'metriä korkea, ja siinä on viisi kerrosta — siitä '
+          + 'länsimainen nimi Five-Story Pagoda ja kiinalainen Wuceng '
+          + 'Lou. 1800-luvun kaupunkinäkymissä se on toinen kahdesta '
+          + 'rakennuksesta, jotka nousivat matalien kattojen yli.'
+          + '\n\n'
+          + 'Kukkulan ympärille on kasvanut Yuexiun puisto, joka on '
+          + '860 000 neliömetriä. Tornissa on toiminut Kantonin museo '
+          + 'siitä asti, kun se avattiin yleisölle vuonna 1928. '
+          + 'Samassa puistossa on myös vuonna 1960 yli sadasta '
+          + 'kolmestakymmenestä graniittilohkareesta veistetty viiden '
+          + 'pässin patsas.',
+      kuvat: [
+        {
+          tiedosto: 'Lai Afong, Five Stories Pagoda Guangzhou, c1880.JPG',
+          selite: 'Noin vuoden 1880 valokuva: viisikerroksinen torni '
+            + 'seisoo paljaan kukkulan laella, ja rinteessä sen alla on '
+            + 'tiilitaloja ja polkuja.',
+          lahde: 'Lai Afong, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Guangxiao-temppeli': {
+      aika: 'perustettu 233',
+      teksti: 'Temppelin paikalla oli alun perin Nanyuen viimeisen '
+          + 'kuninkaan Zhao Jianden asuinpaikka. Kolmen kuningaskunnan '
+          + 'aikana sinne karkotettiin Wun oppinut virkamies Yu Fan, ja '
+          + 'kun hän kuoli vuonna 233, hänen perheensä lahjoitti '
+          + 'talon temppeliksi. Nimiä on ollut monta; nykyisen antoi '
+          + 'Ming-keisari Chenghua vuonna 1482 ja kirjoitti sen omalla '
+          + 'kädellään kivipaateen.'
+          + '\n\n'
+          + 'Neljännen ja kymmenennen vuosisadan välillä temppeliin '
+          + 'saapui munkkeja Etelä-Aasiasta, ja siellä käännettiin '
+          + 'buddhalaisia kirjoituksia kiinaksi. Vuonna 676 '
+          + 'chan-buddhalaisuuden kuudes patriarkka Huineng leikkasi '
+          + 'täällä hiuksensa ja vihittiin munkiksi; apotti hautasi '
+          + 'hiukset ja rakensi niiden päälle kahdeksankulmaisen, '
+          + 'seitsemänkerroksisen ja 7,8 metriä korkean pagodin, joka '
+          + 'seisoo yhä bodhipuun alla.'
+          + '\n\n'
+          + 'Päärakennus Daxiongbao pystytettiin ensi kerran vuonna '
+          + '401 ja rakennettiin nykyiseen asuunsa 1654. Se on 35 '
+          + 'metriä leveä ja 13,6 metriä korkea, ja tiiliseinien '
+          + 'sijaan sitä kiertävät puuikkunat, joista osa on '
+          + 'läpikuultavaa simpukankuorta. Pihalla on vuonna 826 '
+          + 'veistetty vihreä marmoripylväs ja päärakennuksen takana '
+          + 'kaksi rautapagodia vuosilta 963 ja 967 — Kiinan vanhimmat '
+          + 'säilyneet rautatornit.',
+      kuvat: [
+        {
+          tiedosto: 'Guangxiao Temple Bodhi Tree.jpg',
+          selite: 'Temppelin sali harmaan tiilikaton alla, ja pihalla '
+            + 'sen edessä kasvaa suuri bodhipuu.',
+          lahde: '钉钉, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chenin suvun sali': {
+      aika: 'valmistui 1894',
+      teksti: 'Kaksi Amerikasta palannutta kantonilaista, Chen Ruinan '
+          + 'ja Chen Zhaonan, ehdottivat Qing-kauden lopulla, että '
+          + 'Chen-suvut keräisivät rahaa yhteiseen esi-isien '
+          + 'palvontasaliin ja oppilaitokseen, jossa suvun nuoret '
+          + 'valmistautuisivat keisarillisiin virkatutkintoihin. Rahat '
+          + 'tulivat ulkomailla asuvilta ja Guangdongin '
+          + 'seitsemästäkymmenestäkahdesta piirikunnasta, ja talo '
+          + 'valmistui vuonna 1894. Kun virkatutkinnot lakkautettiin '
+          + '1905, salista tuli ammattikoulu.'
+          + '\n\n'
+          + 'Kokonaisuus on 13 200 neliömetriä ja koostuu '
+          + 'yhdeksästätoista rakennuksesta: yhdeksän salia ja kuusi '
+          + 'pihaa, jotka on ladottu symmetrisesti pohjois–'
+          + 'eteläakselille ja yhdistetty käytävillä. Pääakselilla ovat '
+          + 'porttirakennus, Kokoontumissali ja Takasali. Väliin jäävät '
+          + 'kapeat kujat, joita kutsutaan sinisen pilven kujiksi.'
+          + '\n\n'
+          + 'Talo tunnetaan koristelustaan. Katonharjoilla on '
+          + 'yksitoista keramiikkaharjaa, joiden aiheet ovat '
+          + 'kiinalaisia näytelmiä; Kokoontumissalin harja on 27 metriä '
+          + 'pitkä ja siinä on 224 hahmoa. Kipsikoristelua on kaikkiaan '
+          + '1 800 metriä, ja osa siitä työntyy seinästä yli '
+          + 'puolen metrin päähän. Lisäksi on puu-, kivi- ja '
+          + 'tiilikaiverruksia sekä rautakoristeita kaiteissa, mikä on '
+          + 'kantonilaisessa rakennustaiteessa harvinaista. Nykyään '
+          + 'talossa on Guangdongin kansantaiteen museo.',
+      kuvat: [
+        {
+          tiedosto: 'Chen Clan Academy Wall Carving.jpg',
+          selite: 'Tiiliseinään kaiverrettu kohokuvapaneeli, jossa '
+            + 'kymmenet pienet hahmot seisovat kerroksittain '
+            + 'rakennusten ja puiden lomassa.',
+          lahde: 'Chinatravelsavvy, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Liurong-temppeli': {
+      aika: 'perustettu 537, pagodi 1097',
+      teksti: 'Liangin keisari Wu määräsi munkki Tanyun rakentamaan '
+          + 'vuonna 537 temppelin, johon sijoitettiin Kambodžasta '
+          + 'kaupunkiin tuotuja buddhalaisten pyhimysten jäännöksiä. '
+          + 'Temppelin nimi oli aluksi Baozhuangyan. Nykyinen nimi '
+          + 'tulee runosta: Song-kaudella Su Shi vieraili temppelissä '
+          + 'ja kirjoitti runon ”Kuusi banjaania”, ja sen mukaan '
+          + 'paikka nimettiin uudelleen.'
+          + '\n\n'
+          + 'Alueen päärakennus on Kukkapagodi, joka sai nimensä '
+          + 'värikkäästä ulkoasustaan. Se rakennettiin vuonna 1097 '
+          + 'edeltäjänsä paikalle, mutta pohja muutettiin '
+          + 'neliömäisestä kahdeksankulmaiseksi. Ming-kauden alussa '
+          + 'temppeli paloi jälleen, ja pagodi rakennettiin uudelleen '
+          + 'vuonna 1373. Kunnostus tehtiin vuonna 1900.'
+          + '\n\n'
+          + '1800-luvulla pagodi oli kaupungin näkyvin rakennus. Se on '
+          + 'mukana lähes jokaisessa aikakauden kaupunkinäkymässä, ja '
+          + 'länsimaiset kauppiaat tunsivat sen hyvin, koska temppeli '
+          + 'oli lähellä konsulaattien aluetta. Lai Afongin vuoden '
+          + '1863 valokuva näyttää sen rappiotilassa: kerroksilla '
+          + 'kasvoi pensaita ja huipulla puu. Pagodi näkyy myös vuoden '
+          + '1918 setelissä.',
+      kuvat: [
+        {
+          tiedosto: 'Flower Pagoda in Canton.jpg',
+          selite: 'Vuoden 1863 valokuva pagodista ennen kunnostusta: '
+            + 'kerroksien reunoilta työntyy pensaita ja huipulla kasvaa '
+            + 'puu.',
+          lahde: 'Lai Afong, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Huaisheng-moskeija': {
+      aika: 'perinteen mukaan 627',
+      teksti: 'Vanhojen kiinalaisten käsikirjoitusten mukaan moskeijan '
+          + 'perusti vuonna 627 Sa’d ibn Abi Waqqas, profeetta '
+          + 'Muhammadin toveri, jonka kerrotaan saapuneen Kiinaan '
+          + '620-luvulla. Kaikki eivät ole uskoneet tarinaa: '
+          + 'tataarimatkaaja Abdurreshid Ibrahim piti sitä 1900-luvun '
+          + 'alussa erikoisena ajatuksena, koska hadith-oppineet olisivat '
+          + 'hänen mukaansa kirjanneet niin merkittävän lähetystön. '
+          + 'Varhaisimmat luotettavat ajoitukset kiinalaisille '
+          + 'moskeijoille ovat Song-kaudelta.'
+          + '\n\n'
+          + 'Rakennus on tuhoutunut ja noussut uudelleen. Se '
+          + 'rakennettiin 1350 ja jälleen 1695 tulipalon jälkeen. '
+          + 'Moskeijan hautausmaalle haudattiin vuonna 1349 Ramadan ibn '
+          + 'Alauddin, ensimmäinen nimeltä tunnettu korealainen '
+          + 'muslimi. Kaupungilla on ollut yhteyksiä islamilaiseen '
+          + 'maailmaan Tang-kaudelta asti.'
+          + '\n\n'
+          + 'Moskeijan tunnetuin osa on Guangta eli valotorni, '
+          + 'kaksikerroksinen ja kolmenkymmenenkuuden metrin korkuinen '
+          + 'minareetti, joka on vanhempi kuin nykyinen moskeija. Sen '
+          + 'nimi tarkoittaa myös majakkaa, ja keskiajalla se toimi '
+          + 'majakkana, tuuliviirinä ja jokiliikenteen tähystystornina. '
+          + 'Se oli kaupungin korkein rakennus aina 1900-luvun alkuun '
+          + 'asti.',
+      kuvat: [
+        {
+          tiedosto: 'Guangdong Huaisheng Mosque 2024.jpg',
+          selite: 'Moskeijan porttirakennus kahden kaartuvan tiilikaton '
+            + 'alla, ja sen takaa nousee valkoinen minareetti.',
+          lahde: 'Scott Edmunds, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän sydämen katedraali': {
+      aika: '1861–1888',
+      teksti: 'Katedraalin paikalla oli Qing-kaudella Liangguangin '
+          + 'varakuninkaan virka-asunto, joka tuhoutui 1850-luvun '
+          + 'lopulla. Ranskan lähetysseura sai tontin sopimuksella '
+          + 'vuonna 1861. Perustuksia alettiin kaivaa saman vuoden '
+          + 'kesäkuussa, ja 8. joulukuuta 1863 laskettiin kaksi '
+          + 'peruskiveä: itäiseen kaiverrettiin ”Jerusalem 1863” ja '
+          + 'läntiseen ”Roma 1863”, ja niiden alle pantiin kilo multaa '
+          + 'Roomasta ja kivi Jerusalemista.'
+          + '\n\n'
+          + 'Työ oli vaikeaa. Rakennus tehtiin kokonaan graniitista, '
+          + 'käsivoimin ja ilman koneita, eikä kukaan kiinalaisista '
+          + 'työmiehistä ollut nähnyt länsimaista katedraalia. '
+          + 'Kielimuuri hidasti alkuvuosia, kunnes työnjohtajaksi '
+          + 'palkattiin Jiexin piirikunnasta kotoisin oleva Cai Xiao, '
+          + 'joka oli rakentanut kivitaloja kotiseudullaan. Kivet '
+          + 'louhittiin Kowloonin kukkuloilta ja tuotiin purjelaivoilla. '
+          + 'Rahat tulivat pääosin Napoleon III:lta. Rakennus valmistui '
+          + '1888, kaksikymmentäviisi vuotta peruskivistä.'
+          + '\n\n'
+          + 'Julkisivun esikuva on pariisilainen Sainte-Clotilde, '
+          + 'keskilaivan ja kuorin Toulin katedraali. Keskilaiva on '
+          + '28,2 metriä korkea, rakennus 77 metriä pitkä ja tornit '
+          + '52,8 metriä. Läntinen torni on kellotapuli ja itäinen '
+          + 'kellotorni, jonka viidestä Ranskasta tuodusta kellosta on '
+          + 'jäljellä neljä. Paikalliset kutsuvat rakennusta '
+          + 'Kivitaloksi. Katto uusittiin viimeksi vuosina 2004–2006, '
+          + 'ja lasimaalaukset tilattiin Filippiineiltä.',
+      kuvat: [
+        {
+          tiedosto: 'Lai Afong, Sacred Heart Cathedral Guangzhou, c1880.JPG',
+          selite: 'Noin vuoden 1880 valokuva: katedraalin kaksi tornia '
+            + 'nousevat yksikerroksisten tiilikattojen meren yli.',
+          lahde: 'Lai Afong, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kolmentoista faktorian paikka': {
+      aika: 'noin 1684–1856',
+      teksti: 'Faktorioiden kortteli oli Helmijoen rannassa vanhan '
+          + 'muurikaupungin lounaispuolella, läntisessä esikaupungissa '
+          + 'Xiguanissa. Aluetta rajasivat pohjoisessa Kolmentoista '
+          + 'faktorian katu, lännessä Pwantingin katu ja idässä puro. '
+          + 'Korttelien välissä kulki kolme kujaa: Vanha ja Uusi '
+          + 'Kiinankatu sekä Hog Lane. Kaksi ensimmäistä olivat täynnä '
+          + 'kauppoja — Uusi Kiinankatu sai nimensä posliinikauppiaista '
+          + '— ja Hog Lane oli merimiesten kuja, jonka avonaisista '
+          + 'kojuista sai ruokaa, juomaa, vaatteita ja pikkutavaraa.'
+          + '\n\n'
+          + 'Alue paloi kolmesti. Vuoden 1822 tulipalo oli '
+          + 'vahingossa syttynyt, ja se hävitti kortteleista suurimman '
+          + 'osan; vuosien 1841 ja 1856 palot liittyivät oopiumisotiin. '
+          + 'Kolmannen kerran jälkeen faktorioita ei rakennettu '
+          + 'uudelleen. Kauppa siirtyi ensin Honamin saarelle joen '
+          + 'toiselle puolelle ja sitten Shamianin hiekkasärkälle.'
+          + '\n\n'
+          + 'Paikka on nykyään osa Kantonin kulttuuripuistoa, ja '
+          + 'pohjoispuolella kulkenut Kolmentoista faktorian katu on '
+          + 'nimeltään Shisanhang Lu. Korttelin viimeisistä vuosista '
+          + 'on jäänyt yksi erikoisuus: lääkäri-lähetyssaarnaaja Peter '
+          + 'Parker avasi vuonna 1835 Hog Lanen kolmoseen '
+          + 'silmäsairaalan ja teetti potilaistaan muotokuvia '
+          + 'kantonilaisella maalarilla Lam Qualla.',
+      kuvat: [
+        {
+          tiedosto: 'Canton1860.jpg',
+          selite: 'Vroomanin vuoden 1860 kartta Kantonista: '
+            + 'punaviivainen muurikaupunki keskellä, joki alhaalla ja '
+            + 'Shamianin uusi ruutukaava vasemmassa alakulmassa.',
+          lahde: 'Daniel Vrooman, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shamianin saari': {
+      aika: 'konsessio 1859–1943',
+      teksti: 'Shamian tarkoittaa hiekkapintaa. Särkkä oli ollut '
+          + 'kaupungin ulkomaankaupan satama-aluetta Song-kaudelta '
+          + 'Qing-kaudelle asti. Vuonna 1859 Britannia ja Ranska '
+          + 'kaivoivat sen pohjoispuolelle keinotekoisen kanavan, ja '
+          + 'särkästä tuli saari: 0,3 neliökilometriä, yhdeksänsataa '
+          + 'metriä idästä länteen ja kolmesataa metriä pohjoisesta '
+          + 'etelään. Alue jaettiin kahtia niin, että kolme viidesosaa '
+          + 'kuului briteille ja kaksi viidesosaa ranskalaisille.'
+          + '\n\n'
+          + 'Mantereelle pääsi kahta siltaa pitkin, ja ne suljettiin '
+          + 'joka ilta kello kymmeneltä. Pohjoista kaarisiltaa, joka '
+          + 'valmistui 1861 ja jota kutsuttiin Englannin sillaksi, '
+          + 'vartioivat sikhipoliisit; itäistä ranskalaista siltaa '
+          + 'vartioivat vietnamilaiset siirtomaajoukot. Britannian, '
+          + 'Yhdysvaltain, Ranskan, Alankomaiden, Italian, Saksan, '
+          + 'Portugalin ja Japanin kauppahuoneet rakensivat rantaan '
+          + 'kivitaloja, ja saarelle keskittyi valtaosa kaupungin '
+          + 'konsulaateista.'
+          + '\n\n'
+          + 'Saaren kolme itä–länsisuuntaista katua olivat alun perin '
+          + 'Kanavakatu, puiden reunustama Keskuspuistokatu ja '
+          + 'rantapuistojen Etukatu; nykyään ne ovat Shamianin '
+          + 'pohjois-, pää- ja eteläkatu, ja niitä risteää viisi '
+          + 'numeroitua poikkikatua. Kirkkoja on kaksi: brittiläinen '
+          + 'Christ Church Shameen vuodelta 1865 ja ranskalainen '
+          + 'Lourdesin Neitsyt Marian kappeli vuodelta 1892. Saari on '
+          + 'nykyään suojeltu historiallinen alue, jolla on hotelleja, '
+          + 'ravintoloita ja matkamuistokauppoja.',
+      kuvat: [
+        {
+          tiedosto: 'Shameen, Canton.jpg',
+          selite: '1870-luvun valokuva joelta: saaren matala talorivi '
+            + 'ja kirkontorni näkyvät kaukana, ja etualalla kelluu '
+            + 'kolme katettua lastivenettä.',
+          lahde: 'Lai Afong, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

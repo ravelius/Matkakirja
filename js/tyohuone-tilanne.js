@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v973 — ASTANA JA KANTON: uudet lehdet (Astana: 8 kohdetta Isim-joen molemmin puolin, nimihistoria hallinnollisina kaanteina; Kanton: 8 kohdetta Helmijoen rannoilla, oopiumisodat kauppahistoriana). Molempien kansikuvat jo uuden laaja yleiskuva -linjauksen mukaiset. HUOM: saarivit puuttuvat viela (Open-Meteon kiintio). Tarkista: molempien kartta ja Matkaopas',
   'v972 — TEHTAVALAATIKKO LEHDEN TYYLIIN: minitehtavan ja Tutustuitko-kysymyksen laatikko on nyt tuplaviivakehys paperinsavyisella pohjalla, otsakerivi kapiteelein ja vastaukset aanestyslipukkeen riveina rastiruuduin (ennen keltainen laatikko ja pillerinapit). Tarkista: jonkin lehden kysymys ja minitehtava, myos vastauksen jalkeen',
   'v971 — NAVIGOINTINAPIT: EDELLINEN/SEURAAVA-nappien ja sisallysvalikon sivunimi on nyt sama kuin sivun otsikko (kaupunki-sivulla "X pintaa syvemmalta", ennen pelkka kaupungin nimi). Raamattuun kirjattu uusi kansikuvalinjaus: kansikaruselli on kolme laajaa yleiskuvaa, ei yksityiskohtia (remontti tulossa). Tarkista: jonkin lehden alapalkin napit',
   'v970 — KATHMANDU: uusi lehti (kartta 8 kohteella Swayambhunathista Boudhanathiin; 26 kuvaa; 2015 jaristys kerrotaan jalleenrakennuksen kautta). HUOM: saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: kartta, Matkaopas, Historian tehtava',
@@ -339,6 +340,8 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'astana', nimi: 'Astana', versio: 'v973' },
+    { id: 'kanton', nimi: 'Kanton', versio: 'v973' },
     { id: 'kathmandu', nimi: 'Kathmandu', versio: 'v970' },
     { id: 'ulanbator', nimi: 'Ulan Bator', versio: 'v969' },
     { id: 'hanoi', nimi: 'Hanoi', versio: 'v968' },
@@ -360,6 +363,7 @@ export const TUOREET = {
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
   ],
   tyossa: [
-    { id: 'astana', nimi: 'Astana' },
+    { id: 'mandalay', nimi: 'Mandalay' },
+    { id: 'yangon', nimi: 'Yangon' },
   ],
 };

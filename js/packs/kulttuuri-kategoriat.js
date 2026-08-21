@@ -39767,4 +39767,1077 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * ASTANA (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita, kohdekarttaa, juttuja eikä säätietoja ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian raakateksteistä
+   * (action=raw, haettu 21.8.2026): Astana, Baiterek (monument),
+   * Khan Shatyr Entertainment Center, Palace of Peace and
+   * Reconciliation, Ishim (river), Virgin Lands campaign, Akmola
+   * tragedy, Astana Opera, Nurjol Boulevard, Hazrat Sultan Mosque,
+   * Nursultan Mosque, Aqorda Residence, National Museum of the
+   * Republic of Kazakhstan, Astana-1 station, Astana-Nurly Zhol
+   * station, Issyk Golden Cataphract Warrior, Expo 2017 ja Baikonur
+   * Cosmodrome. Kansallismuseon koordinaatti on Wikidatasta
+   * (ks. maakartat.js:n astana-lohko).
+   *
+   * PÄÄARTIKKELI ON MERKITTY {{AI-generated}}-TUNNISTEELLA, ja se
+   * ohjasi koko työtä. en-Wikipedian "Astana" kantaa itse merkintöjä
+   * {{AI-generated|date=October 2025}} ja
+   * {{More citations needed|date=November 2025}}, eli yhteisö
+   * epäilee osan tekstistä olevan koneen kirjoittamaa ja
+   * puutteellisesti lähdetettyä. Käytäntö tässä lehdessä: jokainen
+   * pääartikkelista otettu luku on haettu myös kohteen omasta
+   * artikkelista, ja jos sellaista ei ole, luku on jätetty pois.
+   * Tarkistusraportti (docs/aasia-tyoaineisto/tarkistus-astana.md)
+   * löysi tästä yhden ison esimerkin, ja se on ratkaistu alla.
+   *
+   * SILLAN SORTUMA 1959 JÄTETTIIN KOKONAAN POIS. Faktapohja tarjosi
+   * sitä oppaan jaksoksi pääartikkelin luvuilla (2.8.1959, 143
+   * kuollutta, poliisi pelasti 40). Erillinen "Akmola tragedy"
+   * -artikkeli, jolla on omat arkistolähteensä, sanoo eri asian:
+   * onnettomuus tapahtui 14. kesäkuuta 1959, virallisesti kirjattiin
+   * vain kuusi kuollutta, koska tiedot salattiin, ja
+   * silminnäkijöiden arvio on noin 140; lukua 40 pelastetusta ei
+   * artikkelissa ole lainkaan. Kaksi lähdettä on siis ristiriidassa
+   * jokaisessa yksityiskohdassa, ja aihe on onnettomuus, jonka
+   * uhriluvusta ei ole varmuutta — sitä ei kirjoiteta lehteen
+   * arvaamalla. Oppaan neljäs jakso kertoo sen sijaan väestönkasvun,
+   * jonka luvut ovat väestönlaskennoista.
+   *
+   * NELJÄ MUUTA TARKISTUSRAPORTIN KORJAUSTA on tehty tässä:
+   * 1) H3: uudisviljelyskampanjaan tuli kesällä 1954 kolmesataatuhatta
+   *    komsomol-vapaaehtoista, ei "kymmeniä tuhansia".
+   * 2) H3: 1960-luvulla ei rakennettu oopperataloa. Astana-artikkeli
+   *    luettelee Uudisviljelysten palatsin, Nuorison palatsin,
+   *    Neuvostojen talon, lentokentän ja urheilupaikkoja; kaupungin
+   *    oopperatalot ovat vuosilta 2006 ja 2013.
+   * 3) H4: Unescon Rauhan kaupunki -mitali on 16. heinäkuuta 1999,
+   *    ei kesäkuulta.
+   * 4) Opas: jokea on padottu ja syvennetty vuodesta 1998, ei 2008.
+   *    Vuosi 2008 on eri asia — silloin alkoi veneliikenne joella —
+   *    ja molemmat kerrotaan jaksossa 3 erikseen.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat lehden tekstejä,
+   * on kirjoitettu auki lukijalle (v925/v932:n tapa):
+   * 1) KAUPUNGIN PINTA-ALA. Infoboksi sanoo 810,2 ja Topography-osio
+   *    722,0 neliökilometriä. Kumpikaan ei kanna omaa lähdettään;
+   *    molemmat luvut ovat oppaan jaksossa 2.
+   * 2) BOZOKIN IKÄ. Infoboksi sanoo 700-lukua ja History-osio
+   *    1200–1300-lukua. Molemmat ovat nostossa H1.
+   * 3) KHAN SHATYRIN PINTA-ALA (100 000 vs. 140 000 m²) ja RAUHAN JA
+   *    SOVINNON PALATSIN OOPPERASALIN PAIKKALUKU (1 300 vs. 1 500)
+   *    on kirjoitettu auki nahtavyysjutut.js:n astana-lohkossa.
+   * 4) ESILIN JÄÄTYMISKAUSI. Astana-artikkeli sanoo marraskuun
+   *    toisesta viikosta huhtikuun alkuun ja Ishim (river) -artikkeli
+   *    "late November until March". Käytetty Astana-artikkelin lukua,
+   *    koska se koskee nimenomaan kaupunkia; joki on 2 450 km pitkä ja
+   *    jäätyy eri aikaan eri kohdissa.
+   * 5) VÄKILUKU. Infoboksi sanoo 1 622 245 (1.11.2025) ja
+   *    Demographics-osio 1 528 703 (tammikuu 2025), kumpikin
+   *    tilastoviraston stat.gov.kz:n sivuille viitaten. Teksteissä
+   *    lukee "runsaat puolitoista miljoonaa", joka pitää molemmat
+   *    sisällään. Väestönlaskentojen sarja (1897–2021) on oma,
+   *    hyvin lähdetetty taulukkonsa, ja oppaan jakso 4 käyttää sitä.
+   * 6) KARAGANDAN JA OMSKIN ETÄISYYDET kantavat artikkelissa
+   *    {{citation needed}} -merkintää. Tarkistusraportti laski ne
+   *    itse haversine-kaavalla (189 ja 447 km), joten artikkelin
+   *    pyöristykset 200 ja 450 km ovat kunnossa ja ne on säilytetty.
+   *
+   * KEVYTRAIDELINJA ON TUOREIN JA HEIKOIMMIN LÄHDETETTY KOHTA, ja se
+   * on silti mukana. Astana-artikkelin LRT-osio on juuri sitä
+   * tuoreinta ainesta, josta tarkistusraportti varoittaa: linjan
+   * avaaminen 16.5.2026 nojaa yhteen ulkopuoliseen uutislähteeseen ja
+   * uudelleennimeäminen 2.7.2026 toiseen. Riippumaton vahvistus
+   * löytyi kuvasta: Wikimedia Commonsissa on 18. heinäkuuta 2026
+   * otettu valokuva valmiista, käytössä olevasta radasta, ja se on
+   * oppaan ensimmäisen jakson kuva. Jakso kertoo linjan pituuden,
+   * asemamäärän ja päätepisteet mutta ei sen nykyistä nimeä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje: EI NYKYPOLITIIKKAA JA EI
+   * PRESIDENTTIKULTTIA. Pääkaupungin nimihistoria Akmolinsk →
+   * Tselinograd → Akmola → Astana → Nur-Sultan → Astana kerrotaan
+   * hallinnollisina käänteinä ja päätöksinä, ei henkilön ympärille
+   * rakennettuna kertomuksena. POIS JÄTETTY KOKONAAN: Bajterekin
+   * näköalatasanteen kultainen kämmenjälki ja toivomusrituaali,
+   * tornin hankkeen synty presidentin muistelmien mukaan, Astana
+   * Operan ja Khan Shatyrin kohdalta presidentin määräys, luonnos ja
+   * syntymäpäiväavajaiset, Suuren moskeijan nimeäminen presidentin
+   * mukaan heinäkuussa 2026, lentoaseman virallinen nimi, vuoden 2022
+   * levottomuudet nimenmuutoksen taustalla sekä Akordan artikkelin
+   * galleriakuva valtiovierailun kunniavartiosta. Uudisviljelysten
+   * kampanja on neutraalia neuvostohistoriaa samalla periaatteella
+   * kuin Venäjän kaupungeissa. Uskonto on historiallis-kulttuurinen
+   * ilmiö: moskeija on arkkitehtuuria ja nimensä historiaa, ja
+   * pyramidi on kongressitalo ja rakennetekniikkaa.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Kazakstan (johdanto ja
+   * asia-artikkelit.js:n intro), Baikonurin kosmodromi (oppaan jakso
+   * 2, jossa Baykonyrin kaupunginosan nimen rinnalla kerrotaan
+   * avaruuskeskuksesta), aro (johdanto, K3, oppaan jakso 2),
+   * pääkaupungiksi 1997 (K1, H4, intro) sekä kazakki ja venäjä
+   * (H2:n nimihistoria, jossa Aqmola käännetään kazakista ja
+   * Tselinograd venäjästä). Historia-sivun
+   * minitehtävä kysyy nimenmuutosten määrää, jota visa ei kysy, ja
+   * vastaus on samalla sivulla nostossa H2.
+   *
+   * AIHETOISTO, JOKA ON TIETOINEN (Mekan Jabal al-Nourin ja Xi'anin
+   * terrakotta-armeijan ennakkotapaus): Bajterekistä on kaksi kuvaa
+   * eri etäisyydeltä — kansikuvassa valaistu torni bulevardin päässä
+   * ja K1-nostossa sama torni yökuvassa koko keskustan yllä. Tornin
+   * näköalatasanteelta otettuja kuvia on kolme, ja jokainen katsoo eri
+   * suuntaan: K2 länteen Khan Shatyrin telttaan, bulevardin juttu itään
+   * Akordaan ja tornin oma juttu tasanteen kaiteeseen ja ikkunaan.
+   * Esilistä on neljä kuvaa, ja jokainen kertoo eri asian:
+   * kansikuvassa padottu
+   * ranta, K3:ssa jäätynyt joki kulkureittinä, K4:ssä kaarisilta ja
+   * oppaan jaksossa 3 poljinveneet. Aro on kahdesti: avauskuvan
+   * hevoslaidun ja oppaan jakson 2 tyhjä horisontti.
+   *
+   * YKSI KUVA JOUDUTTIIN VAIHTAMAAN NIMITÖRMÄYKSEN TAKIA. Khan
+   * Shatyrin nostossa oli ensin Bernard Gagnonin CC0-kuva
+   * "Nurjol Boulevard, Astana.jpg", mutta sen peilipolku
+   * (kuvat/nurjol-boulevard-astana.jpg) on sama kuin jo käytössä
+   * olevan "Nurjol Boulevard Astana.jpg" -tiedoston
+   * (asia-valokuvat.js), eli ämpärissä toinen menisi toisen päälle.
+   * tests/media.test.mjs nappasi tämän. Tilalle vaihdettiin sama
+   * näkymä Bajterekin ikkunasta.
+   *
+   * KUVAT: kaikki Commonsista, lisenssi ja Restrictions tarkistettu
+   * rajapinnasta (extmetadata), leveys aina vähintään 1 200 px.
+   * HYLÄTTYJÄ, joiden hylkäysperuste kannattaa tietää ennen kuin
+   * niitä ehdottaa uudelleen: "Khan-Shatyr shopping mall.jpg" ja
+   * "Astana DSC04115" (tunnistettavat kasvot etualalla),
+   * "Reconstruction of the appearance of Golden Man.jpg"
+   * (vitriinilasissa näkyy kuvaajan takana seisovan ihmisen kasvot),
+   * "Kazakhstan P9130229" (rukoushetki ihmisineen), Khan Shatyrin ja
+   * Astana DSC04278/04328:n sisäkuvat (täynnä liikemainoksia),
+   * "Тюльпан (1).jpg" (sotilasparaati), "Frozen Capital" (kuva on
+   * Ottawasta eikä Astanasta) ja "Fall Harvest in Kazakhstan"
+   * (satelliittikuva on maan eteläosan vuoristosta, ei pohjoisen
+   * aroista). Historiallista Akmolinskia EI ole yhdessäkään kuvassa:
+   * Commonsin "History of Astana" -kategoriassa on kolme vanhaa kuvaa
+   * linnoituksesta ja sen kartasta, mutta kaikki ovat alle 700 px
+   * leveitä. Sen tilalla historia-sivulla on vuoden 1796 venäläinen
+   * atlaskartta aroista ja säilynyt 1800-luvun tiilinen kauppiastalo.
+   *
+   * SÄÄRIVI PUUTTUU js/packs/saatiedot.js:stä, ja se on tietoinen
+   * jättö eikä unohdus — sama tilanne kuin Samarkandissa, Varanasissa
+   * ja Ulan Batorissa. Open-Meteon arkisto (ERA5) vastasi koko työn
+   * ajan 429:llä ja viestillä "Daily API request limit exceeded.
+   * Please try again tomorrow". Lukuja ei keksitä muusta lähteestä,
+   * koska vuosigraafin lähderivi lupaa nimenomaan ERA5:n. Oppaan
+   * jakso 5 nojaa siksi en-Wikipedian oman sääruudun
+   * 1991–2020-normaaleihin (lähteinä pogodaiklimat.ru sekä
+   * auringonpaisteessa NOAA ja DWD 1961–1990), ja se on sanottu
+   * jaksossa ääneen. Kun ERA5-rivi lisätään, jakso 5 kirjoitetaan
+   * rivin omista luvuista.
+   *
+   * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
+   */
+  astana: [
+    {
+      id: 'kaupunki',
+      nimi: 'Astana',
+      johdanto: 'Kazakstanin pääkaupunki nousee tasaiselta arolta Esil-joen '
+        + 'molemmin puolin. Melkein kaikki siitä on rakennettu sen '
+        + 'jälkeen, kun hallinto muutti tänne vuonna 1997.',
+      kansikuvat: [
+        {
+          tiedosto: 'Вид на Бульвар Нуржол.jpg',
+          selite: 'Nurjol-bulevardin kaksi kullanväristä tornia kehystävät '
+            + 'iltahämärässä valaistua Bajterekiä.',
+          lahde: 'Шалкер Гам, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Nur-Sultan - 190217 DSC 3461.jpg',
+          selite: 'Akorda seisoo sinikupolisena lumisen aukion perällä, ja '
+            + 'sen takana kaupunki häviää pakkassumuun.',
+          lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Astana-Ishim-River-embankment-7797.jpg',
+          selite: 'Padottu Esil kaartaa kivetyn rantamuurin ohi, ja '
+            + 'iltavalossa hehkuvat asuintalot heijastuvat veteen.',
+          lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: bulevardi, aukio ja aro — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo (uusi
+       * hallintoakseli, joen toisen puolen aukio, ja se maisema,
+       * jolle kaikki rakennettiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Another view of Downtown Astana (6245921591).jpg',
+          selite: 'Bulevardin kukkapenkkien takaa avautuu suora näkymä '
+            + 'kahden kultatornin välistä Akordan siniselle kupolille.',
+          lahde: 'Ken and Nyetta, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Kazakhstan P9130207 (28302919819).jpg',
+          selite: 'Rakentamattoman rinteen takana nousevat vasemmalta '
+            + 'lukien moskeijan minareetit, lasipyramidi ja kultainen '
+            + 'Samruk-lintu pylväänsä päässä.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Horses in Ishim basin near Novoishimskoye.jpg',
+          selite: 'Kaksi hevosta laiduntaa Esilin altaan aroniityllä, jonka '
+            + 'takana ei näy muuta kuin horisontti.',
+          lahde: 'TheGreatSteppeWiki, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Puu, jonka oksissa on kultainen muna',
+          tiedosto: 'Night at Esil District, Astana (P1190721).jpg',
+          teksti: 'Kaupungin tunnus on Bajterek, 105 metriä korkea torni '
+            + 'Nurjol-bulevardin varrella. Se on kansantarun kuva. '
+            + 'Tarussa kasvaa elämänpuu, jonka kahden oksan väliseen '
+            + 'koloon taruolento Samruk munii kultaisen munansa; '
+            + 'tornissa puu on valkoinen ristikkorunko ja muna sen '
+            + 'varassa lepäävä kultapeilipallo, joka on 22 metriä leveä. '
+            + 'Myös näköalatasanteen korkeus on valittu tarkoituksella. '
+            + 'Se on 97 metriä, ja vuonna 1997 pääkaupunki siirtyi '
+            + 'Almatysta tänne — torni pystytettiin juuri sen muistoksi.',
+          selite: 'Yön yli katsottuna Bajterek on ainoa valaistu esine '
+            + 'keskustan siluetissa, ja sen alla kaartuu autojen '
+            + 'valojuova.',
+          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Baiterek (monument)',
+        },
+        {
+          otsikko: 'Maailman suurin teltta',
+          tiedosto: 'Kazakhstan P9130285 (39187641645).jpg',
+          teksti: 'Saman bulevardin läntisessä päässä seisoo Khan Shatyr, '
+            + 'jonka '
+            + 'nimi tarkoittaa kaanin telttaa. Muoto on tarkoitettu '
+            + 'muistuttamaan arojen paimentolaisvaltakuntien perinnettä, '
+            + 'ja sen piirsi brittiläinen Norman Fosterin toimisto; talo '
+            + 'avattiin heinäkuussa 2010. Kate nousee 90 metrin '
+            + 'korkeuteen ja huippu mastoineen 150 metriin, ja pohja on '
+            + 'ellipsi, jonka mitat ovat 200 × 195 metriä. Kankaan alle '
+            + 'ei rakennettu hallia vaan kaupunki: yli kymmenen '
+            + 'jalkapallokentän verran puistoa, mukulakivikatuja, '
+            + 'aukioita, kauppoja, minigolf ja sisäranta hiekkoineen.',
+          selite: 'Bajterekin ikkunasta katsottuna bulevardi päättyy '
+            + 'Khan Shatyrin valkoiseen telttaan, jonka takana alkaa '
+            + 'tyhjä aro.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Khan Shatyr Entertainment Center',
+        },
+        {
+          otsikko: 'Toiseksi kylmin pääkaupunki',
+          tiedosto: 'Sunny January Day on Astana\'s Ishim River (6658586715).jpg',
+          teksti: 'Astana on maailman toiseksi kylmin pääkaupunki heti Ulan '
+            + 'Batorin jälkeen. Asema kuului aiemmin Kanadan Ottawalle ja '
+            + 'siirtyi tänne, kun kaupungista tuli pääkaupunki 1997. '
+            + 'Tammikuun keskilämpötila on 14,5 pakkasastetta, ja '
+            + 'joulukuun puolivälistä maaliskuun alkuun 30–35 '
+            + 'pakkasastetta on tavallista; kylmin koskaan mitattu lukema '
+            + 'on 51,6 pakkasastetta tammikuulta 1893. Kesällä lämpötila '
+            + 'voi nousta 35 asteeseen. Kaupunki tunnetaan myös '
+            + 'tuulisuudestaan, joka tuntuu erityisesti avoimella '
+            + 'Vasemmalla rannalla.',
+          selite: 'Jäätynyt Esil on tammikuussa tasainen lumikenttä, jonka '
+            + 'yli kävellään, ja rannan puut ovat paksussa huurteessa.',
+          lahde: 'Ken and Nyetta, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Astana',
+        },
+        {
+          otsikko: 'Joki, joka jakaa kaupungin kahtia',
+          tiedosto: 'Ishim River, Astana.jpg',
+          teksti: 'Esil-joki, venäjäksi Ishim, jakaa kaupungin: '
+            + 'pohjoispuolella ovat vanhemmat kaupunginosat, '
+            + 'eteläpuolella uusi hallintokeskus. Huhtikuussa 1998 '
+            + 'hallitus kutsui kansainväliset arkkitehdit kilpailemaan '
+            + 'uuden pääkaupungin kaavasta, ja 6. lokakuuta voiton vei '
+            + 'japanilainen Kisho Kurokawa. Hänen periaatteensa oli '
+            + 'historian ja tulevaisuuden symbioosi: vanha kaupunki '
+            + 'säilytettäisiin ja kunnostettaisiin, ja uusi nousisi joen '
+            + 'etelä- ja itäpuolelle. Niin kävi, ja siksi rannat ovat '
+            + 'nyt kahta eri vuosisataa.',
+          selite: 'Kaarisilta ylittää Esilin keskustassa, ja molemmilla '
+            + 'rannoilla nousee uusia asuintorneja aivan veden ääreen.',
+          lahde: 'Nikolamikovic82, Wikimedia Commons (CC0)',
+          wiki: 'Ishim (river)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kazakhstan P9130255 (39373641624).jpg',
+          selite: 'Pronssinen ratsastaja pitää kädessään tankoa, jonka '
+            + 'päässä istuu metsästyslintu, ja hänen takanaan kohoavat '
+            + 'Kazak Elin pylväs ja moskeijan minareetit.',
+          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Astana on Kazakstanin pääkaupunki ja maan toiseksi suurin '
+          + 'kaupunki; asukkaita on runsaat puolitoista miljoonaa. '
+          + 'Matkailijan Astana on kapea kaistale Esil-joen molemmin '
+          + 'puolin. Lounaisrannalla kulkee Nurjol-bulevardi Khan '
+          + 'Shatyrista Akordaan, ja koillisrannalla ovat Rauhan ja '
+          + 'sovinnon palatsi, Hazrat Sultanin moskeija ja '
+          + 'kansallismuseo; kaikki tämä mahtuu viiden kilometrin '
+          + 'matkalle. Vanhempi kaupunki jää pohjoiseen radan suuntaan, '
+          + 'ja sen takana alkaa aro.',
+        artikkeli: {
+          nimi: 'Matkailijan Astana',
+          taitto: 'opas',
+          teksti: 'Yksi bulevardi, yksi joki ja tasainen aro joka '
+            + 'suuntaan — pääkaupunki, joka on nuorempi kuin moni sen '
+            + 'asukas.',
+          nosto: 'Ilman patoa Esil olisi keskustassa niin matala, että sen '
+            + 'yli voisi kävellä. Vettä pumpataan lisää Irtyš-joesta '
+            + 'Irtyš–Karaganda-kanavaa ja putkea pitkin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Isoisän aikaan tänne ei tullut rautatietä. Vuonna '
+                + '1879 kenraalimajuri Dubelt ehdotti Venäjän '
+                + 'liikenneministeriölle rataa Tjumenistä Akmolinskiin — '
+                + 'kuusi vuotta isoisän matkan jälkeen. Nykyinen '
+                + 'kansainvälinen lentoasema on noin seitsemäntoista '
+                + 'kilometriä kaakkoon keskustasta ja maan toiseksi '
+                + 'vilkkain: vuonna 2024 sen kautta kulki 8,3 miljoonaa '
+                + 'matkustajaa ja siltä liikennöi 21 lentoyhtiötä. Junat '
+                + 'tulevat kahdelle asemalle. Vanha Astanan asema on '
+                + 'pohjoisessa ja palvelee noin 7 000 matkustajaa '
+                + 'päivässä; Nurly Zhol rakennettiin Expo 2017 '
+                + '-maailmannäyttelyä varten kaakkoon, ja siihen mahtuu '
+                + '12 000. Almatyyn menee päivittäin Tulpar Talgo '
+                + '-pikajuna. Kaupungin sisällä liikutaan busseilla: '
+                + 'linjoja on yli kuusikymmentä ja autoja yli tuhat, ja '
+                + 'joukkoliikenteessä kulkee yli 720 000 matkustajaa '
+                + 'päivässä; jaetuilla takseilla on kolme omaa '
+                + 'vakioreittiä. Toukokuussa 2026 avattiin korkealla '
+                + 'kulkeva kevytraidelinja, joka yhdistää Nurly Zholin '
+                + 'aseman lentokentälle: 22,4 kilometriä ja 18 asemaa.',
+              kuva: {
+                tiedosto: 'Astana light metro (2026-07-18) - 4.jpg',
+                selite: 'Kevytraidelinjan betoniviadukti kulkee kaupungin '
+                  + 'yli suorana, ja vasemmalla erottuu lasipyramidin '
+                  + 'kärki puiden takana.',
+                lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Astana on keskisessä Kazakstanissa hyvin tasaisella '
+                + 'puoliaroalueella Esil-joen varrella, 347 metrin '
+                + 'korkeudessa. Kaupunki jakautuu neljään piiriin: '
+                + 'Almaty, Yesil, Saryarka ja Baykonyr. Yesiliä '
+                + 'kutsutaan myös Vasemmaksi rannaksi, ja se erotettiin '
+                + 'omaksi piirikseen vasta elokuussa 2008 — se on siis '
+                + 'nuorempi kuin useimmat siellä seisovat talot. '
+                + 'Baykonyr taas kantaa samaa nimeä kuin Baikonurin '
+                + 'kosmodromi, aroilla parisataa kilometriä Aral-järven '
+                + 'itäpuolella sijaitseva avaruuskeskus, josta Sputnik '
+                + 'ja ensimmäinen ihminen lähtivät avaruuteen. '
+                + 'Kaupungin pinta-alasta Wikipedia antaa kaksi lukua, '
+                + 'leipätekstin 722 ja infoboksin 810 neliökilometriä; '
+                + 'kumpikaan ei kanna omaa lähdettään, ja ero saattaa '
+                + 'johtua hallinnollisten rajojen laajentamisesta. '
+                + 'Lähimmät suuret kaupungit ovat Karaganda noin '
+                + 'kahdensadan ja Venäjän Omsk noin '
+                + 'neljänsadanviidenkymmenen kilometrin päässä; '
+                + 'Almatyyn, entiseen pääkaupunkiin, on lähes tuhat '
+                + 'kilometriä. Vuoria tai metsää ei ole missään päin, '
+                + 'ja se näkyy tuulessa.',
+              kuva: {
+                tiedosto: 'Astana-steppe-7748.jpg',
+                selite: 'Kaupungin laidalla aro jatkuu tasaisena '
+                  + 'ruoholakeutena horisonttiin asti ilman ainuttakaan '
+                  + 'puuta.',
+                lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: joki jään alla ja jään päällä',
+              teksti: 'Esil jäätyy marraskuun toisella viikolla ja pysyy '
+                + 'jäässä huhtikuun alkuun. Silloin joesta tulee '
+                + 'kulkureitti ja jään yli kävellään rannalta toiselle. '
+                + 'Kesällä samalla kohdalla vuokrataan poljinveneitä, ja '
+                + 'kaupunginpuiston kohdalla on uimaranta. Mikään tästä '
+                + 'ei ole luonnontilaa. Vuodesta 1998 jokea on padottu '
+                + 'keskustan alapuolelta ja perattu syvemmäksi: pato '
+                + 'pitää pinnan korkealla ja syvennetty uoma päästää '
+                + 'tulvavedet nopeasti ohi. Vuodesta 2008 kaupunki on '
+                + 'järjestänyt joella veneliikennettä, ja suunnitelmissa '
+                + 'on syventää 22 kilometrin osuus niin, että pienet '
+                + 'matkustajaveneet pääsevät kulkemaan keskustan halki. '
+                + 'Ylävirtaan on kaavailtu toista patoa tulvien varalle.',
+              kuva: {
+                tiedosto: 'Astana-Ishim-pedalos-7808.jpg',
+                selite: 'Kaksi poljinvenettä liikkuu tyynellä joella '
+                  + 'iltavalossa, ja rannan tornitalot heijastuvat '
+                  + 'pintaan koko leveydeltä.',
+                lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: väkiluku satakertaistui',
+              teksti: 'Vuoden 1897 väenlaskennassa Akmolinskissa oli 9 688 '
+                + 'asukasta. Vuonna 1939 heitä oli 33 209 ja vuonna 1959 '
+                + 'jo 102 276 — kasvu osuu uudisviljelyskampanjan '
+                + 'vuosiin. Vuonna 1989 kaupungissa oli 277 365 asukasta '
+                + 'ja vuonna 1999, kaksi vuotta pääkaupungiksi tulon '
+                + 'jälkeen, 312 965. Sitten mittakaava vaihtui: vuoden '
+                + '2009 laskennassa oli 613 006 ja vuoden 2021 '
+                + 'laskennassa 1 234 042 asukasta. Nyt heitä on runsaat '
+                + 'puolitoista miljoonaa, eli reilussa sadassa vuodessa '
+                + 'väkiluku on yli satakertaistunut. Kasvu näkyy '
+                + 'katukuvassa ympäri vuoden: nosturi on Astanan '
+                + 'tavallisin maamerkki, ja kokonaisia kaupunginosia on '
+                + 'noussut tyhjälle arolle parissa vuosikymmenessä.',
+              kuva: {
+                tiedosto: 'Nur-Sultan - 190217 DSC 3715.jpg',
+                selite: 'Talvisen työmaa-aidan takaa nousee valmis '
+                  + 'kerrostalorivi, ja aidan edessä seisoo kaksi '
+                  + 'betonipilaria vailla siltaa.',
+                lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Ilmasto on äärimmäisen mannermainen, Köppenin '
+                + 'luokituksessa Dfb: pitkä, kuiva ja hyvin kylmä talvi '
+                + 'ja lyhyt, lämmin kesä. Kaupungin oman sääruudun '
+                + 'mukaan (normaalikausi 1991–2020) vuoden keskilämpö on '
+                + '3,9 astetta. Tammikuussa keskilämpö on 14,5 '
+                + 'pakkasastetta ja päivien keskiylin 10,3 '
+                + 'pakkasastetta; heinäkuussa vastaavat luvut ovat 20,6 '
+                + 'ja 26,6 astetta. Sadetta tulee vuodessa vain 337 '
+                + 'millimetriä, ja se painottuu kesään: heinäkuussa 56 '
+                + 'ja helmikuussa 17 millimetriä. Sadepäiviä on koko '
+                + 'vuonna 72. Aurinkoisimmat kuukaudet ovat kesä- ja '
+                + 'heinäkuu, jolloin aurinko paistaa 336 tuntia, '
+                + 'pimeimmät marras- ja joulukuu 100 ja 94 tunnilla. '
+                + 'Kävelijän kuukaudet ovat siis touko-, kesä- ja '
+                + 'syyskuu. Mittausten ääripäät ovat 41,6 lämpöastetta '
+                + 'heinäkuussa ja 51,6 pakkasastetta tammikuussa 1893.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ennen lasitorneja täällä oli vuonna 1830 perustettu '
+        + 'linnoitus aron kauppareittien risteyksessä. Kaupunki on '
+        + 'vaihtanut nimeään sen jälkeen kuusi kertaa.',
+      tehtava: {
+        kysymys: 'Kuinka monta kertaa kaupungin nimi on vaihtunut vuoden '
+          + '1830 jälkeen?',
+        vaihtoehdot: [
+          'Kaksi kertaa',
+          'Neljä kertaa',
+          'Kuusi kertaa',
+          'Kaksitoista kertaa',
+        ],
+        oikea: 2,
+        fakta: 'Vuodesta 2022 Astanalla on Guinnessin ennätys '
+          + 'pääkaupungista, joka on vaihtanut nimeään useimmin '
+          + 'nykyaikana.',
+      },
+      nostot: [
+        {
+          otsikko: 'Linnoitus aron kauppareitin varrella',
+          tiedosto: 'Map of Kazakh Steppe 1796 (small atlas).jpg',
+          teksti: 'Samalla seudulla oli jo ennen kaupunkia Bozok, aron '
+            + 'silkkitiehaaran linnoitettu asutus; sen iästä Wikipedia '
+            + 'antaa kaksi lukua, infoboksin 700-luvun ja leipätekstin '
+            + '1200–1300-luvun. Nykyinen kaupunki syntyi 18. kesäkuuta '
+            + '1830, kun Fjodor Šubin perusti Esil-joen varrelle '
+            + 'Akmolyn siirtokunnan piirikunnan keskukseksi. Vuonna 1832 '
+            + 'se sai kaupunkioikeudet ja nimen Akmolinsk. '
+            + 'Kenesary-kaanin johtaman vapautusliikkeen aikana '
+            + 'linnoitus poltettiin 1838, mutta se rakennettiin '
+            + 'uudelleen, ja 16. heinäkuuta 1863 Akmolinskista tuli '
+            + 'virallisesti ujesdikaupunki.',
+          selite: 'Vuoden 1796 venäläisessä atlaskartassa aro on väritetty '
+            + 'vihreäksi, ja sen laidoille on merkitty Omsk, Semipalatinsk '
+            + 'ja Aral-järvi.',
+          lahde: 'publisher:Sytin\'s print shop, Wikimedia Commons (PD)',
+          wiki: 'Astana',
+        },
+        {
+          otsikko: 'Kaupunki, jolla on kuusi nimeä',
+          tiedosto: 'Старинный купеческий дом в Астане (52449744452).jpg',
+          teksti: 'Aqmola tarkoittaa kazakiksi valkoista hautaa, joskaan '
+            + 'tulkinta ei ole yksimielinen. Nimi vaihtui 1832 '
+            + 'Akmolinskiksi, 1961 Nikita Hruštšovin aloitteesta '
+            + 'Tselinogradiksi — se on venäjää ja tarkoittaa '
+            + 'Uudisviljelysten kaupunkia — ja '
+            + 'itsenäistymisen jälkeen 1991 takaisin Akmolaksi, '
+            + 'toukokuussa 1998 Astanaksi eli pääkaupungiksi, '
+            + 'maaliskuussa 2019 Nur-Sultaniksi ja syyskuussa 2022 '
+            + 'jälleen Astanaksi. Kuusi muutosta riitti ennätykseen: '
+            + 'vuodesta 2022 Astanalla on Guinnessin ennätys '
+            + 'pääkaupungista, joka on vaihtanut nimeään useimmin '
+            + 'nykyaikana.',
+          selite: 'Kaksikerroksinen punatiilinen kauppiastalo koristeltuine '
+            + 'ikkunakaarineen seisoo yhä keskustan kadunkulmassa.',
+          lahde: 'Alexander Yampolsky from Ekaterinburg, Russia, '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Astana',
+        },
+        {
+          otsikko: 'Uudisviljelysten kaupunki',
+          tiedosto: 'Nur-Sultan - 190217 DSC 3849.jpg',
+          teksti: 'Vuonna 1954 Neuvostoliitto määräsi Pohjois-Kazakstanin '
+            + 'arot uudeksi viljavyöhykkeeksi. Pelkästään kesällä 1954 '
+            + 'sinne matkusti 300 000 komsomol-vapaaehtoista kyntämään '
+            + 'maata, ja Akmolinskin väkiluku ja kokoonpano muuttuivat '
+            + 'pysyvästi. Joulukuussa 1960 kaupungista tehtiin uuden '
+            + 'Tselinnyi-aluepiirin keskus, ja maaliskuussa 1961 '
+            + 'Hruštšov ehdotti sille kampanjan mukaista nimeä: '
+            + 'Akmolinskista tuli Tselinograd. Sitten rakennettiin. '
+            + 'Vuonna 1963 aloitettiin kolme ensimmäistä '
+            + 'kerrostaloaluetta, ja niiden rinnalle nousivat '
+            + 'Uudisviljelysten palatsi, Nuorison palatsi, Neuvostojen '
+            + 'talo, uusi lentokenttä ja urheilupaikkoja.',
+          selite: 'Vanhemman puolen matala asuintalo on maalattu '
+            + 'kirkkaansiniseksi, ja sen seinälle on ripustettu rivi '
+            + 'kehystettyjä tauluja.',
+          lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Virgin Lands campaign',
+        },
+        {
+          otsikko: 'Pääkaupunki siirtyy arolle',
+          tiedosto: 'Astana-construction-7788.jpg',
+          teksti: 'Kazakstanin ylin neuvosto päätti 6. heinäkuuta 1994 '
+            + 'siirtää pääkaupungin. Muutto Almatysta Akmolaan tehtiin '
+            + '10. joulukuuta 1997, toukokuussa 1998 kaupunki sai nimen '
+            + 'Astana, ja 10. kesäkuuta 1998 se esiteltiin uutena '
+            + 'pääkaupunkina kansainvälisesti. Valinnan perusteluina '
+            + 'mainitaan keskeinen sijainti, tilaa laajentua, läheisyys '
+            + 'alueen talouskeskuksiin, hyvät liikenneyhteydet ja '
+            + 'verrattain suotuisa ilmasto; entiseen pääkaupunkiin on '
+            + 'täältä lähes tuhat kilometriä. Unesco myönsi Astanalle '
+            + '16. heinäkuuta 1999 Rauhan kaupungin mitalin ja '
+            + 'arvonimen.',
+          selite: 'Kaivinkoneet ja pinotut betoniteräsniput täyttävät '
+            + 'keskeneräisen kadun, jonka takana seisoo juuri valmistunut '
+            + 'kerrostalorivi.',
+          lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Astana',
+        },
+      ],
+    },
+  ],
+  /*
+   * KANTON (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja, artikkelia eikä
+   * kategorioita ennen tätä. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä (action=raw, haettu 21.8.2026): Guangzhou,
+   * Thirteen Factories, Canton System, Cohong, Old China Trade,
+   * Shamian, Pazhou, Howqua, Huaisheng Mosque, Guangxiao Temple
+   * (Guangzhou), Temple of the Six Banyan Trees, Chen Clan Ancestral
+   * Hall, Sacred Heart Cathedral (Guangzhou), Zhenhai Tower
+   * (Guangzhou), Yuexiu Hill, Museum of the Mausoleum of the Nanyue
+   * King, Nanyue, Pearl River, Canton Fair ja Cantonese cuisine.
+   * Pohjana ovat docs/aasia-tyoaineisto/faktapohja-kanton.md ja
+   * tarkistus-kanton.md, jotka luettiin yhdessä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md) ja sama kuin
+   * Pekingissä ja Xi’anissa: EI nykypolitiikkaa eikä nykysotaa.
+   * Vuoden 1873 matkapäiväkirjan näkökulmasta Kanton on Kantonin
+   * kauppajärjestelmän, Kolmentoista faktorian ja Shamianin
+   * kaupunki, ja lehti pysyy siinä. POIS JÄTETTY KOKONAAN: vuoden
+   * 1650 kaupungin valtaus ja sen verilöyly, Punti–Hakka-klaanisodat
+   * 1855–1867 ja niiden uhriluku, vuosien 1895 ja 1911 kapinat,
+   * 1920-luvun puoluepolitiikka ja Whampoan sotakoulu, vuoden 1925
+   * Shakeen tapaus, toisen maailmansodan miehitys, vuoden 1949
+   * jälkeinen politiikka ja kulttuurivallankumouksen aikaiset
+   * temppelituhot. Oopiumisodat kerrotaan tapahtumina ja
+   * kauppahistorian käännekohtana ilman taistelukuvauksia,
+   * osapuolikehystä tai uhrilukuja — samoin kuin oopiumikauppa
+   * itsessään, joka on lehdessä kauppatasapainon ongelma eikä
+   * kuvaus aineen käytöstä. Uskonto on historiallis-kulttuurinen
+   * ilmiö: moskeija ja katedraali ovat rakennuksia ja
+   * kaupunkikuvan maamerkkejä, temppelit kerrostumia.
+   *
+   * KOLME KOHTAA, JOISSA LEHTI POIKKEAA FAKTAPOHJASTA, ja miksi:
+   * 1) Teemasivun aihe on faktapohjan ehdottaman ”kauppa”-sivun
+   *    sijaan vakioaihe `historia`. Faktapohja itse tarjosi tätä
+   *    vaihtoehtoa (osio 1, sivu B), ja sisältö on sama: sivu alkaa
+   *    Panyusta ja Nanyuen kuninkaista ja jatkuu Cohongiin ja
+   *    teekauppaan.
+   * 2) Faktapohjan nosto T1 sanoi Shamianin kanavan kaivetun
+   *    ”toisen oopiumisodan jälkeen vuonna 1859”. Sota päättyi
+   *    vasta 1860, joten lehti sanoo pelkän vuosiluvun.
+   * 3) Faktapohjan nostot K1 ja T1 puhuivat siitä, että Kanton oli
+   *    ”Kiinan ainoa satama”. Tarkistusraportti vahvisti, että
+   *    rajoitus koski nimenomaan läntisiä kauppiaita: korealais-
+   *    japanilainen kauppa hoidettiin Zhapussa ja venäläiset kävivät
+   *    kauppaa maitse Kjahtassa. Lehti sanoo joka kerta ”läntiset
+   *    kauppiaat”, ja historia-sivun nosto H2 kirjoittaa poikkeuksen
+   *    auki lukijalle.
+   *
+   * KAKSI WIKIPEDIAN SISÄISTÄ RISTIRIITAA, jotka koskevat lehden
+   * tekstejä. Guangzhou-artikkelin infoboksin yhteenvetorivi sanoo
+   * ilmastoksi Cfa, mutta artikkelin oma ilmasto-osio ja sen
+   * lähteellinen sääruutu sanovat Cwa; lehti käyttää Cwa:ta
+   * (tarkistusraportin suositus). Etäisyys merelle on
+   * Guangzhou-artikkelissa ”noin 80 mailia” eli 129 kilometriä, kun
+   * pelin oma kulttuurivisa (asia-questions.js) sanoo 145
+   * kilometriä; lehti ei sano kilometrilukua lainkaan vaan
+   * ”toistasataa kilometriä”, jolloin kumpikaan luku ei jää
+   * vastaan sanomaan (Moreebin dyyni -sääntö, maakartat.js).
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Helmijoki (johdanto,
+   * matkailijalle-kappale ja oppaan jakso 2), nimen Kanton alkuperä
+   * portugalilaisten käyttämästä maakunnan nimestä (nosto K4),
+   * Kiina (intro asia-artikkelit.js:ssä ja matkailijalle-kappale),
+   * Britannian Itä-Intian kauppakomppanian tukikohta vuodelta 1699
+   * (nosto H2) ja vuonna 1839 alkanut oopiumisota (nosto H4).
+   * Historia-sivun minitehtävä kysyy vuoden 1757 määräystä, jota
+   * visa ei kysy, ja vastaus on samalla sivulla nostossa H2.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu. Shamian on
+   * lehdessä kolmesti (kansikuvan puistokatu, matkaoppaan
+   * etusivukuvan katunäkymä ja kohdekartan jutun Lai Afongin
+   * valokuva 1870-luvulta joelta päin) — eri tiedostot, kolme eri
+   * etäisyyttä ja kaksi eri vuosisataa, ja saari on se paikka,
+   * johon koko lehden kertoma kauppahistoria päättyy. Sama
+   * ennakkotapaus kuin Mekan Jabal al-Nour, Xi’anin muuri ja
+   * Kathmandun Kasthamandap. Pyhän sydämen katedraali on
+   * kansikuvassa nykyisenä ja kohdekartan jutussa Lai Afongin
+   * kuvassa noin 1880, jolloin se oli vielä ainoa korkea rakennus
+   * matalien kattojen yllä. Kolmetoista faktoriaa on nostossa K1
+   * maalauksena ja kohdekartan jutussa Vroomanin vuoden 1860
+   * karttana, joka näyttää saman paikan sen jälkeen kun rakennukset
+   * olivat palaneet.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi’anin, Varanasin ja Kathmandun malli
+   * v965–v966). Talon menetelmä on Open-Meteon arkisto (ERA5,
+   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn
+   * ajan pelkällä 429:llä ja viestillä ”Daily API request limit
+   * exceeded. Please try again tomorrow” — kontin jaetun
+   * ulosmenevän osoitteen vuorokausikiintiö oli käytetty loppuun,
+   * eikä se nollaudu ennen UTC-vuorokauden vaihdetta. Kokeiltu työn
+   * alussa ja lopussa, sama vastaus kummallakin kerralla. Lukuja ei
+   * ole otettu mistään muusta lähteestä, koska vuosigraafin
+   * lähderivi lupaa lukijalle nimenomaan ERA5:n; ilman riviä lehti
+   * näkyy ilman säätä, kuten saatiedot.js:n alkukommentti lupaa.
+   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian
+   * Guangzhou-artikkelin sääruutuun (1991–2020, mittausasema 71
+   * metrin korkeudessa), ja jakso sanoo sen ääneen. Kun ERA5-rivi
+   * joskus lisätään, jakso 5 on kirjoitettava rivin omista
+   * luvuista. Mittauspiste olisi keskusta 23,13 / 113,26.
+   */
+  kanton: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kanton',
+      johdanto: 'Helmijoen suistokaupunki, joka oli lähes vuosisadan '
+        + 'ajan läntisen maailman ainoa portti Kiinaan. Kauppa käytiin '
+        + 'kapealla rantakaistaleella, jonne ulkomaalaiset saivat jäädä '
+        + 'vain kauppakaudeksi kerrallaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Pearl River White Swan Waterfront.JPG',
+          selite: 'Helmijoki kaartaa leveänä kaupungin läpi, ja '
+            + 'vastarannalla nousee tornitalorivi matalan sillan takaa.',
+          lahde: 'Gzdavidwong, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Sacred Heart Cathedral of Guangzhou 2.jpg',
+          selite: 'Pyhän sydämen katedraalin kaksi tornia päättävät '
+            + 'aukion, jonka molemmin puolin kulkee holvikaarikatu '
+            + 'kauppojen edessä.',
+          lahde: '钉钉, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Liwan, Guangzhou, Guangdong, China - panoramio (6).jpg',
+          selite: 'Shamianin puistokatu jatkuu vanhojen viikunapuiden '
+            + 'alla siirtomaa-ajan talorivien välissä.',
+          lahde: 'Ben Bender, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: torni kukkulalla, pagodi ja minareetti — vanhan
+       * kaupungin kolme maamerkkiä siinä järjestyksessä, jossa lehti
+       * ne kertoo (muurin pohjoiskulma, buddhalainen temppeli,
+       * moskeija). Kaikki kolme näkyivät myös 1800-luvun
+       * kaupunkinäkymissä matalien kattojen yllä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Guangzhou Zhenhai Lou 2013.09.14 09-52-09.jpg',
+          selite: 'Zhenhai-torni Yuexiun kukkulalla: viisi punaista '
+            + 'kerrosta nousee porrasaukion päästä vihreiden '
+            + 'tiilikattojen alla.',
+          lahde: 'Zhangzhugang, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Temple of the Six Banyan Trees pagoda 2.jpg',
+          selite: 'Kukkapagodi alhaalta kuvattuna: punaiset '
+            + 'räystäskerrokset kapenevat ylöspäin, ja alimman katon '
+            + 'alla riippuu rivi punaisia lyhtyjä.',
+          lahde: 'Shujianyang, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'CNGD-020-001怀圣寺光塔.jpg',
+          selite: 'Huaishengin moskeijan valkoinen Guangta-minareetti '
+            + 'nousee puiden lomasta, ja sen takana erottuu vihreä '
+            + 'kupoli.',
+          lahde: '斯巴鲁美乐斯, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kolmetoista faktoriaa',
+          tiedosto: 'Canton factories.jpg',
+          teksti: 'Helmijoen rannalla muurikaupungin lounaispuolella '
+            + 'seisoi rivi kaksi- ja kolmikerroksisia taloja, joiden '
+            + 'edessä liehuivat Tanskan, Espanjan, Yhdysvaltain, '
+            + 'Ruotsin, Britannian ja Alankomaiden liput. Niitä '
+            + 'kutsuttiin faktorioiksi portugalin sanasta feitoria, '
+            + 'kauppapaikka — tehtaita ne eivät olleet vaan varastoja '
+            + 'ja asuntoja: alakerrassa tavara, yläkerrassa '
+            + 'kauppa-asiamiehen huoneet. Julkisivut olivat '
+            + 'länsimaista klassismia, mutta muuten talot olivat '
+            + 'paikallista tiiltä ja tiilikattoa. '
+            + 'Vuonna 1748 faktorioita oli '
+            + 'kahdeksan, vuonna 1770 seitsemäntoista. Koko alue oli '
+            + 'yhdeksän hehtaaria — siihen mahtui läntinen '
+            + 'Kiinan-kauppa.',
+          selite: 'Vientimaalaus noin vuodelta 1805: faktorioiden rivi '
+            + 'lippuineen joen takana, ja edustalla kymmeniä katettuja '
+            + 'lastiveneitä.',
+          lahde: 'Unknown Chinese artist, Wikimedia Commons (PD)',
+          wiki: 'Thirteen Factories',
+        },
+        {
+          otsikko: 'Ankkuripaikka nimeltä Whampoa',
+          tiedosto: 'Whampoa in China.jpg',
+          teksti: 'Suuret purjelaivat eivät päässeet kaupungin rantaan '
+            + 'asti. Ne ankkuroivat runsaan kahdentoista mailin päähän '
+            + 'alavirtaan Whampoan saaren itälahteen — saari tunnetaan '
+            + 'nykyään nimellä Pazhou — ja tavara kulki sieltä '
+            + 'kaupunkiin pienillä lastiveneillä. Ankkuripaikalla oli '
+            + 'kullakin maalla oma paikkansa: sisimpänä amerikkalaiset, '
+            + 'sitten hollantilaiset ja ruotsalaiset, sitten tanskalaiset '
+            + 'ja ranskalaiset, uloimpana britit. Laivan piti tulla '
+            + 'sisään kirjava kangas laidoillaan ja miehistö '
+            + 'juhla-asussa, ja tervehdyslaukauksiin vastattiin aina '
+            + 'samalla mitalla, joten parinkymmenen laivan ankkuripaikka '
+            + 'oli meluisa.',
+          selite: 'Akvarelli Whampoan ankkuripaikalta: eurooppalainen '
+            + 'purjelaiva ja kiinalainen jonkki rinnakkain, ja etualalla '
+            + 'katettu jokivene.',
+          lahde: 'William John Huggins, Wikimedia Commons (PD)',
+          wiki: 'Pazhou',
+        },
+        {
+          otsikko: 'Kaupunki, jossa oli kuusisataa katua',
+          tiedosto: '\'Canton from the Heights\' (Guangzhou, China) RMG PT2083.tiff',
+          teksti: '1800-luvun Kanton oli lähes kokonaan yksi- ja '
+            + 'kaksikerroksinen. Kattojen yli näkyi vain kaksi '
+            + 'rakennusta: Liurong-temppelin Kukkapagodi ja Yuexiun '
+            + 'kukkulan viisikerroksinen vahtitorni. Tiilimuuri kiersi '
+            + 'kaupungin noin kuuden mailin matkalta, oli '
+            + 'kaksikymmentäviisi jalkaa korkea ja kaksikymmentä jalkaa '
+            + 'leveä, ja sen kahdeksan pääporttia ja kaksi vesiporttia '
+            + 'olivat päivällä vartioituja ja yöllä kiinni. Poikkimuuri '
+            + 'jakoi pohjoisen vanhankaupungin ja joenpuoleisen '
+            + 'uudenkaupungin. Katuja oli yli kuusisataa, useimmat '
+            + 'kivettyjä mutta hyvin kapeita, ja rantaa peitti neljän '
+            + 'mailin matkalta kalastajien ja kauppiaiden venekylä.',
+          selite: 'Akvarelli vuodelta 1869 kaupungin yläpuolelta: matalat '
+            + 'katot jatkuvat utuun asti, ja oikealla kohoaa pagodi '
+            + 'puiden yllä.',
+          lahde: 'Lt James Henry Butt, Wikimedia Commons (PD)',
+          wiki: 'Guangzhou',
+        },
+        {
+          otsikko: 'Viisi pässiä ja kukkien kaupunki',
+          tiedosto: '五羊城雕 - Five Rams Sculpture - 2012.04 - panoramio.jpg',
+          teksti: 'Kaupungin nimi on vaihtunut monta kertaa. Se '
+            + 'perustettiin Panyuna, sai vuonna 226 Guang-prefektuurin '
+            + 'pääpaikkana nimen, josta tuli nykyinen Guangzhou, ja '
+            + 'keskiajan persialaiset tunsivat sen nimellä Khanfu. '
+            + 'Suomen ja muiden länsimaiden Kanton tulee '
+            + 'portugalilaisten muodosta Cidade de Cantão, joka on '
+            + 'väännös maakunnan nimestä Guangdong — nimi tarttui '
+            + 'kuitenkin kaupunkiin eikä maakuntaan. Lisänimiä on kaksi. '
+            + 'Pässien kaupunki tulee tarusta, jonka mukaan viisi '
+            + 'kuolematonta ratsasti pässeillä kaupunkiin ja opetti '
+            + 'asukkaat viljelemään riisiä; kukkien kaupunki taas '
+            + 'viittaa yksinkertaisesti seudun vehreyteen.',
+          selite: 'Graniittiin veistetty viiden pässin ryhmä puiston '
+            + 'keskellä kukkapenkin takana.',
+          lahde: 'Yin Jichang / Chen Benzong / Kong Fanwei, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Yuexiu Hill',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Guangzhou Shamian 2012.11.15 09-46-58.jpg',
+          selite: 'Shamianin kadulla nousee tiilipilarien kannattama '
+            + 'parveke puiden alle, ja seinästä työntyy pyöreä punainen '
+            + 'kyltti.',
+          lahde: 'Zhangzhugang, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Kanton on Guangdongin maakunnan pääkaupunki ja '
+          + 'Etelä-Kiinan suurin kaupunki: vuoden 2020 laskennassa '
+          + 'asukkaita oli 18,7 miljoonaa ja kaupunkialueella lähes '
+          + '27 miljoonaa. Matkailijan Kanton on silti pieni. Melkein '
+          + 'kaikki tämän sivun kartan kohteet ovat Yuexiun ja Liwanin '
+          + 'kaupunginosissa, vanhan muurikaupungin alueella ja sen '
+          + 'lounaispuolella Helmijoen rannassa, ja niiden väliä '
+          + 'kävelee. Whampoan vanha ankkuripaikka Pazhoussa on '
+          + 'runsaan kahdentoista kilometrin päässä itäkaakossa, eikä '
+          + 'se siksi ole kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Kanton',
+          taitto: 'opas',
+          teksti: 'Yksi joki, yksi vanhan muurin muotoinen keskusta ja '
+            + 'kaksisataa vuotta kauppaa, joka mahtui yhdeksän '
+            + 'hehtaarin alalle rantaan.',
+          nosto: 'Kanton on pitänyt tuonti- ja vientimessuja joka kevät '
+            + 'ja syksy vuodesta 1957. Ne ovat Kiinan vanhimmat ja '
+            + 'suurimmat, ja niiden nykyinen paikka on Pazhoun saarella '
+            + '— samalla saarella, jonka lahdella purjelaivat aikanaan '
+            + 'ankkuroivat.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Baiyunin kansainvälinen lentoasema avattiin '
+                + '5. elokuuta 2004 kaupungin pohjoispuolelle. Kaupungin '
+                + 'sisällä kulkee metro, jonka ensimmäinen linja avattiin '
+                + 'vuonna 1997 — Kanton oli silloin Manner-Kiinan neljäs '
+                + 'metrokaupunki Pekingin, Tianjinin ja Shanghain '
+                + 'jälkeen. Vuoteen 2025 mennessä linjoja oli '
+                + 'yhdeksäntoista ja rataa yli seitsemänsataa '
+                + 'kilometriä, ja matkustajamäärältään verkko on '
+                + 'maailman kolmanneksi vilkkain. Zhongshanin katua '
+                + 'pitkin kulkee lisäksi vuonna 2010 avattu pikabussilinja, '
+                + 'jonka pysäkit ovat maailman pisimmät, noin '
+                + 'kaksisataakuusikymmentä metriä siltoineen; bussi '
+                + 'lähtee samaan suuntaan keskimäärin kymmenen sekunnin '
+                + 'välein. Hongkongiin pääsee suoralla junalla Kantonin '
+                + 'itäiseltä asemalta: matkaa on 182 kilometriä ja aikaa '
+                + 'alle kaksi tuntia. Moottoripyörät kiellettiin '
+                + 'kaupunkialueelta vuoden 2007 alusta.',
+              kuva: {
+                tiedosto: 'Guangzhou Baiyun International Airport Terminal 1 202209.jpg',
+                selite: 'Lentoaseman lähtötason katos kaartuu tien yli, '
+                  + 'ja sen takana näkyy terminaalin aaltoileva '
+                  + 'kattorivi.',
+                lahde: '钉钉, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Vanha kaupunki on Helmijoen itärannalla Baiyunin '
+                + 'vuoren juurella, toistasataa kilometriä siitä, missä '
+                + 'joki laskee Etelä-Kiinan mereen; yhteys merelle '
+                + 'kulkee Humenin salmen kautta, jota linnoitukset '
+                + 'vartioivat. Kaupunki komentaa Helmijoen suiston '
+                + 'rehevää tulvatasankoa, ja nykyinen hallintoalue on '
+                + '7 434 neliökilometriä joen molemmin puolin. '
+                + 'Keskustan korkeus merenpinnasta on kaksikymmentäyksi '
+                + 'metriä, ja maasto nousee lounaasta koilliseen: '
+                + 'korkein kohta on Tiantangin huippu, 1 210 metriä. '
+                + 'Helmijoki on Kiinan neljänneksi suurin joki. Kaupungin '
+                + 'kohdalla se on vuorovesialuetta, ja ennen ruoppauksia '
+                + 'liete teki väylästä matalan ja arvaamattoman aina '
+                + 'Macaoon asti — siksi laivat tarvitsivat paikallisen '
+                + 'luotsin ja usein hinauksen.',
+              kuva: {
+                tiedosto: 'Guangzhou Haizhu Qiao 2014.01.23 18-04-58.jpg',
+                selite: 'Teräsristikkosilta kaartaa Helmijoen yli '
+                  + 'iltavalossa, ja vastarannalla erottuu tornitalojen '
+                  + 'siluetti.',
+                lahde: 'Zhangzhugang, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: aamutee',
+              teksti: 'Kiinalainen sanonta neuvoo yksinkertaisesti: syö '
+                + 'Kantonissa. Kantonilainen keittiö on yksi Kiinan '
+                + 'kahdeksasta suuresta ruokaperinteestä, ja sen '
+                + 'tunnetuin muoto on aamutee eli yum cha, jonka '
+                + 'yhteydessä pöytään tuodaan dim sumia: pieniä '
+                + 'annoksia bambukoreissa, höyrytettyinä ja paistettuina. '
+                + 'Teehuoneet olivat 1800-luvulla kaupungin julkisia '
+                + 'olohuoneita, ja juuri niissä dim sumin suosio kasvoi; '
+                + 'valikoimaan tarttui vuosien mittaan aineksia '
+                + 'muualtakin Kiinasta ja Kiinan ulkopuolelta. '
+                + 'Ravintolat lopettavat bambukorien tarjoilun aamu- ja '
+                + 'iltapäivän jälkeen ja vaihtavat illaksi kokonaan '
+                + 'toiseen listaan. Keittiön oma kunniakäsite on wok '
+                + 'hay, pannun voima: hyvä kokki saa raaka-aineiden maut '
+                + 'tasapainoon nopeassa paistossa, eikä tuoreita yrttejä '
+                + 'juuri käytetä.',
+              kuva: {
+                tiedosto: 'GZ China Hotel Dim Sum Open Kitchen.jpg',
+                selite: 'Avokeittiön tiskillä höyryävät bambukorit ja '
+                  + 'lasikuvut, ja etualalla seisoo rivi punaisella '
+                  + 'kalligrafialla kirjoitettuja ruokalistakortteja.',
+                lahde: 'MingAi, Wikimedia Commons (CC BY-SA 2.5)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: muuri puretaan',
+              teksti: 'Kanton oli 1800-luvun lopulla yhä muurikaupunki, '
+                + 'jonka yli kuudestasadasta kadusta useimmat olivat '
+                + 'kivettyjä mutta niin kapeita, ettei niillä voinut '
+                + 'ajaa. Kesäkuussa 1919 alkoi työ, joka muutti '
+                + 'kaupunkikuvan lopullisesti: muuri purettiin, jotta '
+                + 'tilalle saatiin leveitä katuja ja raitiotie. Purkaminen '
+                + 'kesti kaikkiaan kolme vuotta. Siksi nykyisessä '
+                + 'keskustassa ei ole muuria vaan kehämäisiä '
+                + 'valtakatuja, ja vanhan kaupungin rajat näkee vain '
+                + 'kartalta ja kadunnimistä. Muurista on jäljellä pätkä '
+                + 'Yuexiun kukkulalla Zhenhai-tornin juurella, ja portin '
+                + 'nimi elää yhä esimerkiksi Ximenkoun eli Länsiportin '
+                + 'suun metroasemassa. Faktorioiden alue on nykyään '
+                + 'kulttuuripuisto, ja Kolmentoista faktorian katu on '
+                + 'nimeltään Shisanhang Lu.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kanton on aivan Kravun kääntöpiirin eteläpuolella, '
+                + 'mutta ilmasto on lämmin ja kostea subtrooppinen '
+                + 'monsuuni-ilmasto — Köppenin luokituksessa Cwa. '
+                + 'Kesät ovat kuumia, kosteita ja sateisia, talvet '
+                + 'leutoja ja verrattain kuivia, ja monsuunikausi kestää '
+                + 'huhtikuusta syyskuuhun. Nämä luvut ovat '
+                + 'en-Wikipedian Guangzhou-artikkelin sääruudusta, joka '
+                + 'perustuu kaupungin oman mittausaseman normaaleihin '
+                + 'vuosilta 1991–2020 seitsemänkymmenenyhden metrin '
+                + 'korkeudessa; lehden vuosigraafia ei ole, koska sen '
+                + 'lupaamaa ERA5-aineistoa ei saatu haettua. '
+                + 'Kuukausikeskilämpö nousee tammikuun neljästätoista '
+                + 'asteesta heinäkuun vajaaseen kahteenkymmeneenyhdeksään, '
+                + 'ja vuoden keskiarvo on 22,4 astetta. Sadetta tulee '
+                + 'lähes kaksituhatta millimetriä vuodessa, ja siitä '
+                + 'valtaosa touko–syyskuussa. Kuivin ja aurinkoisin aika '
+                + 'on loka–joulukuu: lokakuussa paistaa yli puolet '
+                + 'mahdollisesta ajasta, maaliskuussa vain kuudesosa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki perustettiin Panyun nimellä vuonna 214 eaa., '
+        + 'ja satama se on ollut siitä asti. Vuosina 1757–1842 se oli '
+        + 'ainoa paikka, jossa läntiset kauppiaat saivat käydä kauppaa '
+        + 'Kiinan kanssa.',
+      tehtava: {
+        kysymys: 'Minä vuonna keisari Qianlong sulki kaikki muut '
+          + 'satamat läntisiltä kauppiailta?',
+        vaihtoehdot: [
+          '1684',
+          '1757',
+          '1799',
+          '1842',
+        ],
+        oikea: 1,
+        fakta: 'Vuoden 1757 määräys jätti auki vain Kantonin '
+          + 'tullitoimiston, ja järjestelmä kesti vuoteen 1842 asti.',
+      },
+      nostot: [
+        {
+          otsikko: 'Panyu ja Nanyuen kuninkaat',
+          tiedosto: 'Site of King’s Tomb, Nanyue King Museum 2025.06-01.jpg',
+          teksti: 'Ennen kiinalaisia seudulla asui baiyue-heimoja, ja '
+            + 'kaupungin virallinen syntymävuosi on 214 eaa., jolloin '
+            + 'Qin-dynastian sotilaat perustivat Helmijoen itärannalle '
+            + 'Panyun. Se oli Nanhain komentokunnan hallintopaikka ja '
+            + 'tukikohta, josta etelään suuntautuneet retket lähtivät. '
+            + 'Qin-valtakunnan hajottua paikallinen käskynhaltija '
+            + 'perusti Nanyuen kuningaskunnan, ja Panyusta tuli sen '
+            + 'pääkaupunki. Yksi sen hallitsijoista oli Zhao Mo, joka '
+            + 'hallitsi vuosina 137–122 eaa. Hänen hautansa löytyi '
+            + 'keskustasta vuonna 1983 koskemattomana, ja sen päälle '
+            + 'avattiin vuonna 1988 museo. Han-dynastia liitti Nanyuen '
+            + 'itseensä vuonna 111 eaa.',
+          selite: 'Nanyuen kuninkaan hautamuseon punainen kivijulkisivu '
+            + 'katukuvassa, ja sen pintaan on hakattu suuria '
+            + 'kuviolaattoja.',
+          lahde: 'Shujianyang, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Museum of the Mausoleum of the Nanyue King',
+        },
+        {
+          otsikko: 'Yhden sataman laki',
+          tiedosto: 'Nieuhof-Ambassade-vers-la-Chine-1665 0744-2.tif',
+          teksti: 'Keisari Kangxi avasi meret kaupalle vuonna 1684, ja '
+            + 'tullitoimistoja perustettiin useaan satamaan. Britannian '
+            + 'Itä-Intian kauppakomppania sai tukikohdan Kantoniin '
+            + 'vuonna 1699, ja vuoteen 1714 asti se ja ranskalainen '
+            + 'komppania lähettivät laivan tai kaksi vuodessa. '
+            + '1750-luvulla britit huomasivat, että maksut olivat '
+            + 'edullisemmat pohjoisempana Ningbossa, joka oli lisäksi '
+            + 'lähempänä teen ja silkin tuotantoa. Vuonna 1757 keisari '
+            + 'Qianlong sulki muut satamat läntisiltä kauppiailta ja '
+            + 'jätti auki vain Kantonin. Kielto ei koskenut kaikkia: '
+            + 'korealais-japanilainen kauppa jatkui Zhapussa ja '
+            + 'venäläiset kävivät kauppaa maitse Kjahtassa.',
+          selite: 'Vuoden 1665 kaiverrus ”Kanton”-kaupungista: '
+            + 'muurin sisällä kortteleita rivi rivin perään, ja '
+            + 'edustalla joella purjeveneitä.',
+          lahde: 'Jacob van Meurs, Wikimedia Commons (PD)',
+          wiki: 'Canton System',
+        },
+        {
+          otsikko: 'Cohong ja maailman rikkain mies',
+          tiedosto: 'Portrait of Houqua MET DP276513.jpg',
+          teksti: 'Vuonna 1760 kaupungin hong-kauppiaat velvoitettiin '
+            + 'perustamaan kilta, jota ulkomaalaiset kutsuivat '
+            + 'Cohongiksi. Kymmenen kauppiasta liittyi heti, ja kukin '
+            + 'maksoi noin kymmenentuhannen Espanjan dollarin '
+            + 'liittymismaksun ja sitoutui kolmen prosentin veroon '
+            + 'tulevasta liiketoiminnastaan. Kiltalainen takasi '
+            + 'henkilökohtaisesti ulkomaisen laivan verot ja miehistön '
+            + 'käytöksen. Killan tunnetuin jäsen oli Wu Bingjian '
+            + '(1769–1843), jota länsimaalaiset kutsuivat nimellä '
+            + 'Howqua; häntä on sanottu aikansa rikkaimmaksi mieheksi '
+            + 'maailmassa. Vuoden 1822 tulipalosta kerrotaan, että '
+            + 'sulanut hopea juoksi lähes kahden mailin mittaisena '
+            + 'norona.',
+          selite: 'Pienoismuotokuva hong-kauppias Howquasta: vanha mies '
+            + 'sinisessä virkapuvussa, jonka rinnassa on kirjailtu '
+            + 'arvomerkki.',
+          lahde: 'Tingqua, Wikimedia Commons (CC0)',
+          wiki: 'Cohong',
+        },
+        {
+          otsikko: 'Mitä laivoihin lastattiin',
+          tiedosto: 'Shop of Tingqua, the painter.jpg',
+          teksti: 'Länteen lähti teetä, silkkiä, posliinia, '
+            + 'lakkatavaraa, viuhkoja, huonekaluja ja '
+            + 'nankinkangasta — ja '
+            + 'vientimaalauksia, joita tehtiin verstaissa aivan '
+            + 'faktorioiden vieressä. Vastineeksi kiinalaiset ottivat '
+            + 'lähinnä hopeaa, sillä läntisillä tavaroilla ei ollut '
+            + 'kysyntää. Epätasapainosta seurasi kaksi asiaa. '
+            + 'Amerikkalaiset etsivät maksuvälineeksi ginsengiä ja '
+            + 'merisaukonnahkoja, ja Britannian Itä-Intian yhtiö alkoi '
+            + 'myydä Intiassa kasvatettua oopiumia, joka oli Kiinassa '
+            + 'kielletty. Kun viranomaiset yrittivät lopettaa sen, '
+            + 'seurasi ensimmäinen oopiumisota 1839–1842. Vuoden 1842 '
+            + 'sopimus lopetti Kantonin kauppajärjestelmän ja avasi '
+            + 'neljä muuta satamaa.',
+          selite: 'Vientimaalaus vuodelta 1855 maalari Tingquan '
+            + 'myymälästä: seinät ovat täynnä kehystettyjä maalauksia, '
+            + 'ja takahuoneessa työskennellään pöytien ääressä.',
+          lahde: 'Tingqua (Guan Lianchang), photo by Mark Sexton, Wikimedia Commons (PD)',
+          wiki: 'Old China Trade',
+        },
+      ],
+    },
+  ],
 };

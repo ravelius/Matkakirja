@@ -134,6 +134,31 @@
 // Sisältölinjaus on sama kuin lehdessä: ei nykypolitiikkaa,
 // vuoden 2015 maanjäristys rakennusperinnön kautta. Teksti-kenttä
 // on ennallaan.
+//
+// ASTANA (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js). Jokainen introväite tulee saman erän
+// lehtiteksteistä, jotka on tarkistettu en-Wikipedian raakateksteistä
+// 21.8.2026. Vanha intro sanoi kahdella lauseella vain, että kaupunki
+// rakennettiin arolle 1997 alkaen ja että se on maailman toiseksi
+// kylmin pääkaupunki; uusi kertoo lisäksi sijainnin, joen jakaman
+// kaupungin, nimihistorian ja uuden keskustan akselin. Kazakstan-
+// linjaus: ei nykypolitiikkaa eikä presidenttikulttia, ja
+// pääkaupungin nimihistoria kerrotaan hallinnollisina käänteinä
+// (ks. kulttuuri-kategoriat.js:n astana-lohkon kommentti). Väkiluku
+// on muodossa "runsaat puolitoista miljoonaa", koska en-Wikipedia
+// antaa kaksi eri lukua kahdelta eri kuukaudelta. Teksti-kenttä on
+// ennallaan.
+//
+// KANTON (21.8.2026) SAI KOKONAAN UUDEN MERKINNÄN samalla kun
+// kaupungille tehtiin alusta asti oma lehti (kulttuuri-kategoriat.js,
+// maakartat.js, nahtavyysjutut.js). Merkintää ei ollut ennestään
+// lainkaan, joten myös teksti-kenttä on kirjoitettu tässä. Jokainen
+// väite tulee saman erän lehtiteksteistä, jotka on tarkistettu
+// en-Wikipedian raakateksteistä 21.8.2026. Avaimena on laudan oma
+// näyttönimi ”Kanton” eikä en-Wikipedian ”Guangzhou”. Kiina-linjaus:
+// ei nykypolitiikkaa, ja oopiumisodat ovat vain kauppahistorian
+// käännekohta. Perustelut ovat merkinnän omassa kommentissa.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -1719,9 +1744,27 @@ export const ASIA_ARTIKKELIT = {
       + 'maailman pisimpiä.',
   },
   Astana: {
-    intro: 'Astana on Kazakstanin pääkaupunki, joka rakennettiin '
-      + 'lähes tyhjälle arolle vuodesta 1997 alkaen. Se on maailman '
-      + 'toiseksi kylmin pääkaupunki heti Ulaanbaatarin jälkeen.',
+    intro: 'Astana on Kazakstanin pääkaupunki ja maan toiseksi suurin '
+      + 'kaupunki: asukkaita on runsaat puolitoista miljoonaa. Se on '
+      + 'keskellä maata tasaisella puoliaroalueella 347 metrin '
+      + 'korkeudessa, ja **Esil-joki** — venäjäksi Ishim — jakaa sen '
+      + 'kahtia: pohjoispuolella ovat vanhemmat kaupunginosat, '
+      + 'eteläpuolella uusi hallintokeskus.'
+      + '\n\n'
+      + 'Kaupunki alkoi vuonna 1830 Akmolyn linnoituksesta aron '
+      + 'kauppareittien varrella, sai kaupunkioikeudet 1832 nimellä '
+      + 'Akmolinsk ja oli vuosina 1961–1991 Tselinograd, '
+      + 'Uudisviljelysten kaupunki. Nimi on vaihtunut kaikkiaan kuusi '
+      + 'kertaa, ja se on Guinnessin ennätys pääkaupunkien kesken.'
+      + '\n\n'
+      + 'Vuonna 1997 hallinto muutti tänne Almatysta, ja japanilaisen '
+      + '**Kisho Kurokawan** kaavan mukaan joen etelä- ja itäpuolelle '
+      + 'rakennettiin kokonaan uusi keskusta. Sen akseli on '
+      + 'Nurjol-bulevardi: läntisessä päässä Khan Shatyrin '
+      + 'telttarakennus, keskellä Bajterek-torni kultaisine palloineen '
+      + 'ja itäpäässä joen mutkassa Akorda. Talvi on ankara, sillä '
+      + 'Astana on maailman toiseksi kylmin pääkaupunki heti Ulan '
+      + 'Batorin jälkeen.',
     teksti: 'Astana on Kazakstanin pohjoisosassa Ishim-joen varrella '
       + 'keskellä aroa. Ympärillä ei ole vuoria eikä metsää, joten '
       + 'tuuli käy esteettä. Talvella pakkanen laskee alle '
@@ -2016,6 +2059,62 @@ export const ASIA_ARTIKKELIT = {
       + 'Sen tiheimmin asutuissa kortteleissa asukastiheys on '
       + 'maailman suurimpia, ja pienten saarten kalastajakylistä osa '
       + 'on yhä ennallaan.',
+  },
+  /*
+   * KANTON (21.8.2026, uusi lehti). Kaupungilla ei ollut merkintää
+   * lainkaan, joten sekä intro että teksti on kirjoitettu tässä.
+   * Jokainen väite tulee saman erän lehtiteksteistä
+   * (kulttuuri-kategoriat.js:n nostot ja Matkailijan Kanton,
+   * nahtavyysjutut.js, maakartat.js), jotka on tarkistettu
+   * en-Wikipedian raakateksteistä 21.8.2026. Avain on laudan oma
+   * näyttönimi ”Kanton” (js/packs/asia.js), ei en-Wikipedian
+   * ”Guangzhou” — Kappadokian ja Ulan Batorin ennakkotapaus.
+   * Kiina-linjaus: ei nykypolitiikkaa, ja oopiumisodat ovat
+   * pelkkä kauppahistorian käännekohta ilman osapuolikehystä.
+   */
+  Kanton: {
+    intro: 'Kanton on Guangdongin maakunnan pääkaupunki Etelä-Kiinassa, '
+      + 'Helmijoen itärannalla toistasataa kilometriä siitä, missä joki '
+      + 'laskee Etelä-Kiinan mereen. Kaupunki perustettiin Panyun '
+      + 'nimellä vuonna 214 eaa., ja läntisten '
+      + 'kielten **Kanton** on portugalilaisten väännös maakunnan '
+      + 'nimestä Guangdong.'
+      + '\n\n'
+      + 'Satama kaupunki on ollut koko olemassaolonsa ajan. Vuonna '
+      + '1757 keisari Qianlong sulki muut satamat läntisiltä '
+      + 'kauppiailta, ja seuraavat kahdeksankymmentäviisi vuotta lähes '
+      + 'koko lännen Kiinan-kauppa mahtui yhdeksän hehtaarin alalle '
+      + 'joen rantaan: **Kolmentoista faktorian** talorivistöön, jonka '
+      + 'edessä liehuivat kuuden maan liput. Kauppa kulki '
+      + 'kiinalaisen kauppiaskillan kautta, ja ulkomaalaiset '
+      + 'saivat jäädä vain kauppakaudeksi kerrallaan.'
+      + '\n\n'
+      + 'Järjestelmä päättyi vuoden 1842 sopimukseen, ja kauppa siirtyi '
+      + 'lopulta Shamianin hiekkasärkälle, josta tehtiin kanavalla '
+      + 'saari. Nykyinen Kanton on 18,7 miljoonan asukkaan kaupunki, '
+      + 'mutta matkailijan Kanton on pieni: vanhan muurikaupungin '
+      + 'alueella ovat temppelit, moskeijan valotorni ja graniittinen '
+      + 'katedraali, ja Shamianin puistokadut kertovat lopun.',
+    teksti: 'Kanton on Etelä-Kiinassa Helmijoen suistossa. Vanha '
+      + 'kaupunki on joen itärannalla Baiyunin vuoren juurella, ja '
+      + 'yhteys merelle kulkee Humenin salmen kautta. Ilmasto on '
+      + 'lämmin ja kostea, monsuunikausi kestää huhtikuusta syyskuuhun '
+      + 'ja sadetta tulee lähes kaksituhatta millimetriä vuodessa.'
+      + '\n\n'
+      + 'Kaupunki oli 1800-luvulla lähes kokonaan yksi- ja '
+      + 'kaksikerroksinen, ja kattojen yli näkyivät vain Kukkapagodi '
+      + 'ja Yuexiun kukkulan viisikerroksinen vahtitorni. Tiilimuuri '
+      + 'kiersi keskustan, ja sen kahdeksan porttia suljettiin yöksi. '
+      + 'Muuri purettiin vuodesta 1919 alkaen, jotta tilalle saatiin '
+      + 'leveitä katuja ja raitiotie. Vanhan kauppakorttelin paikalla '
+      + 'on nykyään kulttuuripuisto, ja Kolmentoista faktorian katu on '
+      + 'nimeltään Shisanhang Lu.'
+      + '\n\n'
+      + 'Kantonilainen keittiö on yksi Kiinan kahdeksasta suuresta '
+      + 'ruokaperinteestä, ja sen tunnetuin muoto on aamutee, jonka '
+      + 'kanssa tarjotaan dim sumia bambukoreissa. Kaupunki on pitänyt '
+      + 'tuonti- ja vientimessuja kaksi kertaa vuodessa vuodesta 1957, '
+      + 'ja metro avattiin 1997.',
   },
   Taipei: {
     intro: 'Taipei on Taiwanin pääkaupunki saaren pohjoispäässä. Sen '

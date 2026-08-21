@@ -7242,6 +7242,131 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Patanin Durbar-aukio', lat: 27.6734, lon: 85.325 },
     ],
   },
+  /*
+   * ASTANAN KOHDEKARTTA (21.8.2026). Rajaus on 6,1 × 4,4 km ja se
+   * kattaa Esil-joen (venäjäksi Ishim) molemmat rannat; kohteet on
+   * numeroitu pohjoisesta etelään kuten Medinassa, Xi'anissa ja Ulan
+   * Batorissa.
+   *
+   * SEITSEMÄN KOORDINAATTIA ON en-WIKIPEDIASTA (haettu 21.8.2026)
+   * kohteiden omista infobokseista. KAHDEKSAS, kansallismuseo, on
+   * WIKIDATASTA (Q18405670: 51,1178 / 71,4701), koska museon oma
+   * en-Wikipedia-artikkeli käyttää mallinetta
+   * {{infobox museum/wikidata}} eikä raakatekstissä ole koordinaattia
+   * lainkaan. Tämä on kirjattu tähän, koska lähdejako ei ole
+   * arvattavissa kohdelistasta.
+   *
+   * JOKI KULKEE RUUDUN LÄPI LUOTEESEEN, ja se on kartan tärkein
+   * piirre. Lounaisrannalla (Vasen ranta) on 1990-luvulta alkaen
+   * rakennettu hallintokeskus: Khan Shatyr lännessä, Nurjol-bulevardi
+   * ja Bajterek keskellä ja Akorda joen mutkassa. Koillisrannalla
+   * (Oikea ranta) ovat Itsenäisyysaukion ympäristö — Rauhan ja
+   * sovinnon palatsi, Hazrat Sultanin moskeija ja kansallismuseo — ja
+   * niiden takana vanhempi kaupunki. en-Wikipedian "Astana"-artikkeli
+   * tiivistää jaon muotoon "vanhat kaupunginosat joen pohjoispuolella,
+   * uudet eteläpuolella"; kartalla se näkyy tarkemmin, koska joki
+   * virtaa kaakosta luoteeseen eikä idästä länteen.
+   *
+   * MOLEMMAT RAUTATIEASEMAT PUUTTUVAT EIVÄTKÄ OLE KAINALOSSA. Vanha
+   * Astana-1 on koordinaateista laskien 7,1 km pohjoisluoteeseen ja
+   * Expo-vuoden Nurly Zhol 7,3 km itäkaakkoon eli vastakkaisissa
+   * suunnissa; kahden kainalon sijaan asemat kerrotaan oppaan
+   * ensimmäisessä jaksossa (Medinan Uhud-vuoren ratkaisu). Samasta
+   * syystä pois jäivät Expo 2017:n pallorakennus Nur Alem (4,9 km
+   * etelälounaaseen) ja Suuri moskeija (6,9 km etelään).
+   *
+   * ITSENÄISYYSAUKIO JA ITSENÄISYYDEN PALATSI JÄTETTIIN POIS, vaikka
+   * kummallakin on oma koordinaattinsa: ne ovat 370 ja 480 metrin
+   * päässä Hazrat Sultanin moskeijasta ja 190 metrin päässä
+   * toisistaan, eli kolme numeroympyrää menisi päällekkäin (Petran,
+   * Mekan ja Singaporen oppi). Aukio kerrotaan moskeijan jutussa.
+   *
+   * KAKSI NUMEROA ON LÄHEKKÄIN JA SE ON HYVÄKSYTTY: Bajterekin ja
+   * Nurjol-bulevardin pisteiden väli on 463 metriä eli 7,5 prosenttia
+   * ruudun leveydestä. Bulevardin koordinaatti on sen keskikohta, ja
+   * torni seisoo bulevardin varrella — ympyrät erottuvat toisistaan
+   * (Istanbulin, Moskovan ja Bagdadin ennakkotapaus).
+   */
+  astana: {
+    polku: 'assets/kartat/astana-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 51.152, etela: 51.1125, lansi: 71.394, ita: 71.482 },
+    esittely: 'Kartan halki virtaa Esil, ja se jakaa kaupungin kahtia. '
+      + 'Lounaisrannalla kulkee Nurjol-bulevardi: läntisessä päässä on '
+      + 'Khan Shatyrin teltta, keskellä Bajterek ja itäpäässä joen '
+      + 'mutkassa Akorda. Koillisrannalla ovat Rauhan ja sovinnon '
+      + 'palatsi, Hazrat Sultanin moskeija ja kansallismuseo, ja '
+      + 'pohjoisempana alkaa vanhempi kaupunki. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Xi'anissa. */
+      { nimi: 'Astana Opera', lat: 51.135556, lon: 71.410917 },
+      { nimi: 'Khan Shatyr', lat: 51.132222, lon: 71.403889 },
+      { nimi: 'Bajterek', lat: 51.128333, lon: 71.430556 },
+      { nimi: 'Nurjol-bulevardi', lat: 51.127208, lon: 71.436947 },
+      { nimi: 'Akorda', lat: 51.125833, lon: 71.446389 },
+      { nimi: 'Hazrat Sultanin moskeija', lat: 51.125, lon: 71.4722 },
+      { nimi: 'Rauhan ja sovinnon palatsi', lat: 51.123056, lon: 71.463611 },
+      { nimi: 'Kansallismuseo', lat: 51.1178, lon: 71.4701 },
+    ],
+  },
+  /*
+   * KANTONIN KOHDEKARTTA (21.8.2026). Rajaus on 6,1 × 6,1 km ja kattaa
+   * vanhan muurikaupungin alueen Yuexiun kukkulalta Helmijoen rantaan.
+   * Kohteet on numeroitu pohjoisesta etelään kuten Medinassa, Kiotossa
+   * ja Varanasissa.
+   *
+   * KAIKKI KAHDEKSAN KOORDINAATTIA OVAT KOHTEIDEN OMISTA
+   * en-Wikipedian infobokseista (haettu 21.8.2026) — yhtään pistettä
+   * ei tarvinnut hakea Overpassista. Faktapohjan
+   * (docs/aasia-tyoaineisto/faktapohja-kanton.md, osio 4) omat arviot
+   * olivat 0,3–1,5 kilometriä pielessä, ja tarkistusraportti
+   * (tarkistus-kanton.md) korvasi ne artikkelien omilla arvoilla;
+   * tässä on käytetty tarkistuksen taulukkoa. Huomaa, että
+   * "Guangxiao Temple" ilman sulkutarkennetta on en-Wikipediassa
+   * TÄSMENNYSSIVU — oikea artikkeli on "Guangxiao Temple
+   * (Guangzhou)" — ja että "Zhenhai Tower" ohjaa artikkeliin
+   * "Zhenhai Tower (Guangzhou)".
+   *
+   * WHAMPOAN ANKKURIPAIKKA (nyk. Pazhou) EI OLE KARTALLA, vaikka se on
+   * lehden oma nosto. Perustelu on kokonaisuudessaan
+   * tools/piirra-kaupunkikartta.mjs:n kanton-lohkossa: en-Wikipedian
+   * Pazhou-artikkelin koordinaatista laskien matkaa on 12,6 kilometriä
+   * itäkaakkoon, eli kauemmas kuin yksikään kainalo tässä kartastossa
+   * (Medinan Quba 3,5 km, Adenin Tawahi 6 km) ja suunnilleen yhtä
+   * kauas kuin Bhaktapur, joka jätettiin pois Kathmandun kartalta.
+   *
+   * CONSOO HALL JÄI POIS, kuten faktapohja ja tarkistusraportti
+   * suosittelivat: hong-kauppiaiden killan kokoontumistalolla ei ole
+   * omaa artikkelia eikä koordinaattia, ja ainoa perusteltu piste
+   * olisi Kolmentoista faktorian oma koordinaatti. Kaksi numeroa
+   * samaan pisteeseen on Petran, Mekan ja Singaporen oppi.
+   *
+   * KAINALOA EI OLE: kaikki kahdeksan kohdetta mahtuvat pääruutuun,
+   * kuten Samarkandissa ja Kathmandussa.
+   */
+  kanton: {
+    polku: 'assets/kartat/kanton-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 23.152, etela: 23.097, lansi: 113.2205, ita: 113.2805 },
+    esittely: 'Kartan alue on Kantonin vanha ydin. Pohjoisessa kohoaa '
+      + 'Yuexiun kukkula Zhenhai-torneineen, keskellä ovat kaupungin '
+      + 'vanhat temppelit ja moskeija, ja etelässä virtaa Helmijoki. '
+      + 'Joen rannassa ovat Kolmentoista faktorian entinen paikka ja '
+      + 'Shamianin saari. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Zhenhai-torni', lat: 23.1407, lon: 113.2605 },
+      { nimi: 'Guangxiao-temppeli', lat: 23.1321, lon: 113.251 },
+      { nimi: 'Chenin suvun sali', lat: 23.1298, lon: 113.2405 },
+      { nimi: 'Liurong-temppeli', lat: 23.128185, lon: 113.260642 },
+      { nimi: 'Huaisheng-moskeija', lat: 23.1253, lon: 113.2536 },
+      { nimi: 'Pyhän sydämen katedraali', lat: 23.1173, lon: 113.2548 },
+      { nimi: 'Kolmentoista faktorian paikka', lat: 23.109743, lon: 113.251607 },
+      { nimi: 'Shamianin saari', lat: 23.1094, lon: 113.2394 },
+    ],
+  },
 };
 
 /*
