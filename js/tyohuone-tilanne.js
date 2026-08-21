@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v965 — SAMARKAND: uusi lehti (kartta 9 kohteella, Registan–Gur-e-Amir–Shah-i-Zinda; 27 kuvaa mm. Prokudin-Gorski ja Verestsagin 1870). HUOM: saarivi puuttuu viela — Open-Meteon paivakiintio taynna, taydennetaan kiintion auettua. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v964 — KAKKOSSIVUJEN OMAT NIMET (vaihtoehto A): kaikilla 90 teemasivulla kaupunkikohtainen osasto-otsikko vakionimen sijasta (esim. Kioto: Tuhat vuotta pääkaupunkina; Mosul: Messinkiin upotettu hopea; Berliini: Aurinkoristi ja Trabantin vaihteisto). Sivu-id:t ja visat ennallaan. Tarkista: avaa muutama kakkossivu',
   'v963 — TEKSTIREMONTTI VALMIS: viimeiset erat E6–E8 (Kiova, Odessa, Sofia, Bukarest, Sarajevo, Venetsia, Firenze, Dublin, Edinburgh, Marseille, Lappi, Kreeta, Sisilia, Alpit, Tromssa, Dubrovnik, Tripoli). KONEELLINEN LOPPUTARKISTUS: kaikkien 91 lehdellisen kaupungin etusivun johdatus on uudessa mitassa (0 alle rajan, 0 puuttuvaa) — kehittajakartalla ei pitaisi nakya enaa yhtaan oranssinruskeaa. Tarkista: kartan varit + pari etusivua',
   'v962 — OPASKUVAT PYSTYYN: 13 kaupungin matkailijalle-kuva vaihdettu tuoreeseen maltilliseen pystyyn (mosul, halab, damaskos, sana, aden, bangkok, peking, jakutsk, magadan, delhi, vladivostok, kamtsatka, sahalin; Aden 0,563 hyvaksytty poikkeus — ainoa moderni pystykuva). MOSULIN ETUSIVU: kansikuvat 2/3 ja avauskuvat 2/3 nyt 2020-luvun kuvia (al-Nurin tyomaa, kuparipaja, Maydanin rauniot, Qantarat al-Jowmard), 1932/1853-kuvat ajankohtineen sailyivat balanssina. Tarkista: Mosulin etusivu ja muutama Matkaopas',
@@ -331,6 +332,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '20.8.2026',
   valmiit: [
+    { id: 'samarkand', nimi: 'Samarkand', versio: 'v965' },
     { id: 'singapore', nimi: 'Singapore', versio: 'v961' },
     { id: 'kioto', nimi: 'Kioto', versio: 'v955' },
     { id: 'isfahan', nimi: 'Isfahan', versio: 'v954' },

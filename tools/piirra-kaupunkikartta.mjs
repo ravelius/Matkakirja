@@ -1999,6 +1999,45 @@ const KAUPUNGIT = {
     palvelutiet: true,
     meri: true,
   },
+  samarkand: {
+    /*
+     * VANHA KAUPUNKI JA AFRASIYABIN KUMPU (21.8.2026). Ruutu on noin
+     * 4,2 × 4,6 km ja se kattaa kaikki yhdeksän lehden kohdetta:
+     * koillisessa Ulugbekin observatorio ja Khoja Doniyorin
+     * mausoleumi, pohjoisessa Afrasiyabin rauniokumpu, keskellä
+     * Shah-i-Zinda, Hazrat Khizr ja Bibi-Khanym, lounaassa Registan
+     * ja Gur-e-Amir ja kaakossa Ishratkhana.
+     *
+     * RUUTU ON KOHTEIDEN RYKELMÄÄ VÄLJEMPI, ja se on harkittu.
+     * Kohteet mahtuvat 3,1 × 3,5 kilometrin alueelle, mutta
+     * Gur-e-Amir jäisi tiukassa rajauksessa vasempaan alakulmaan
+     * mittakaavajanan päälle (Kööpenhaminan oppi: jana on kehyksen
+     * vasemmassa alakulmassa, 3,2 % / 5 %). Eteläreunaa laskettiin
+     * siksi runsaat kolmesataa metriä, ja länsireunaa vastaavasti.
+     * Pohjoisreuna nousi vielä 170 metriä ensimmäisen piirroksen
+     * jälkeen: observatorion numeroympyrä jäi lehdessä kartan oikean
+     * ylänurkan opasteen alle, ja se näkyi vasta valmiissa lehdessä.
+     *
+     * CHORSUN KAUPPAKUPOLI JÄI KARTALTA POIS, vaikka se on lehden
+     * kohde: se on runsaat sata metriä Registanin pisteestä eli noin
+     * kolme prosenttia ruudun leveydestä, ja numeroympyrät menisivät
+     * päällekkäin (Petran, Mekan ja Singaporen oppi). Kupoli
+     * kerrotaan Registanin jutussa, jonka takapihalla se on.
+     *
+     * SIYOB-BASAARI JÄI POIS KAHDESTA SYYSTÄ. Sen ainoa
+     * en-Wikipedian koordinaatti on kahden desimaalin tarkkuudella
+     * (39,662 / 66,980), ja se osuu runsaan sadan metrin päähän
+     * Bibi-Khanymin pisteestä — sama päällekkäisyys kuin Chorsulla.
+     * Basaari kerrotaan Bibi-Khanymin jutussa ja oppaassa.
+     *
+     * Palvelutiet päällä: vanhan kaupungin kujat ja Registanin,
+     * Shah-i-Zindan ja Afrasiyabin ympäristöt ovat OSM:ssä
+     * service-teitä, ja ilman lippua kartan koko itäpuoli jäi
+     * paperin väriseksi (kokeiltu ensin ilman ja katsottu).
+     */
+    rajat: { pohjoinen: 39.68, etela: 39.6385, lansi: 66.9615, ita: 67.011 },
+    palvelutiet: true,
+  },
 };
 
 /*

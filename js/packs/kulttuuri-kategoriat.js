@@ -36920,4 +36920,498 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SAMARKAND (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian raakateksteistä
+   * (action=raw, haettu 21.8.2026): Samarkand, Registan, Gur-e-Amir,
+   * Bibi-Khanym Mosque, Ulugh Beg Observatory, Ulugh Beg, Siege of
+   * Samarkand (1868), Chorsu (Samarkand), Siyob Bazaar, Shah-i-Zinda,
+   * Afrasiyab (Samarkand), Hazrat Khizr Mosque, Khoja Doniyor
+   * Mausoleum, Ishratkhana Mausoleum ja Trans-Caspian railway.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 21.8.2026: Venäjän valloitus 1868
+   * on mukana neutraalina historiallisena tosiasiana ilman nykyaikaista
+   * kehystystä, uskonto kerrotaan historiallis-kulttuurisena ilmiönä
+   * (Shah-i-Zindan legenda, Khoja Doniyorin kolme uskontoa,
+   * kuvakielto), eikä lehdessä ole nyky- eikä etnopolitiikkaa.
+   * Wikipedia-artikkelin laaja tadžikki–uzbekki-väestökeskustelu on
+   * jätetty kokonaan pois, samoin vuoden 1941 hautaustutkimukseen
+   * liittyvä "Timurin kirous" ja Uthmanin Koraanin siirto Pietariin.
+   *
+   * VIISI RISTIRIITAA, JOTKA ON RATKAISTU TÄSSÄ:
+   * 1. NORSUT JA PYLVÄÄT. Bibi-Khanymin oma artikkeli puhuu vain
+   *    galleriakatoksia kannatelleista "yli 400" marmoripylväästä
+   *    eikä mainitse norsuja lainkaan. Luku 450 ja 95 norsua ovat
+   *    pääartikkelissa "Samarkand" (Architecture-osio, lähteenä
+   *    Marefat 1992). Nosto seuraa pääartikkelia ja nimeää luvun
+   *    likiarvona; ero on siis lähteiden välinen, ei keksitty.
+   * 2. MIKSI TIMUR HAUDATTIIN SAMARKANDIIN. Gur-e-Amirin artikkelin
+   *    Background-osio sanoo, että Shahrisabziin johtaneet solat
+   *    olivat lumessa; saman artikkelin History-osio sanoo, että
+   *    pojanpoika Khalil-Sultan vei ruumiin Samarkandiin vastoin
+   *    testamenttia. Nostossa on lumi (se on artikkelin oma
+   *    johtolause), ja toinen selitys on jätetty pois tilan takia.
+   * 3. SHERDORIN NIMI. Sama artikkeli kääntää nimen sekä
+   *    "leijonankantajaksi" että sanoo, että "sher" tarkoittaa
+   *    tiikeriä. Nostossa eläintä ei nimetä lajilleen vaan
+   *    kuvaillaan sellaisena kuin se julkisivussa on.
+   * 4. KAUPUNGIN AUTIOITUMINEN 1720-LUVULLA. Artikkeli liittää sen
+   *    Nadir-shahin hyökkäykseen, vaikka Nadir-shahi nousi valtaan
+   *    vasta myöhemmin ja hänen Gur-e-Amir-yrityksensä ajoitetaan
+   *    samassa artikkelissa vuoteen 1740. Nostossa kerrotaan vain
+   *    autioituminen 1720-luvun alussa ilman syytä.
+   * 5. VARUSKUNNAN KOKO 1868. Pääartikkeli sanoo 500 miestä,
+   *    erillisartikkeli "Siege of Samarkand (1868)" 650–660 (ja
+   *    Kaufmannin jättämäksi joukoksi 685). Teksteissä lukee
+   *    "runsaat kuusisataa", joka kattaa tarkemman lähteen luvut.
+   *
+   * OMA PÄÄTTELY, JOKA ON MERKITTY TÄHÄN: matkaoppaan jaksossa 1
+   * sanotaan, että 1800-luvun matkaaja saapui maanteitse. Se seuraa
+   * suoraan artikkelin päivämääristä (rata rakennettiin 1879–1891,
+   * asema avattiin toukokuussa 1888), mutta Wikipedia ei sano sitä
+   * näin. Sama koskee historia-sivun H3-nostoa, jossa 1800-luvun
+   * matkaajan näkymä johdetaan artikkelin omista lauseista
+   * ("monuments stood empty and forgotten") ja Vereštšaginin
+   * paikan päällä maalaamista töistä.
+   *
+   * H4 JA MATKAOPPAAN JAKSO 4 KÄSITTELEVÄT MOLEMMAT VUOTTA 1868,
+   * mutta ne on jaettu tarkoituksella kahtia: H4 kertoo tapahtuman
+   * (linnoituksen valtaus, piiritys, emiraatin asema) ja jakso 4
+   * kertoo, mitä se teki kaupungin rakenteelle (vanha kaupunki
+   * idässä, uusi lännessä, hallintokeskuksen asema). Yhtään
+   * yksityiskohtaa ei toisteta kahdesti — piirityksen kulku on vain
+   * H4:ssä ja kaupunginosajako vain jaksossa 4.
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY (sama linja kuin Medinassa ja
+   * Singaporessa): Registan esiintyy kannessa (yökuva), avauskuvissa
+   * (päivänäkymä), K1-nostossa (Sherdorin peto) ja nähtävyysjutussa
+   * (Vereštšaginin maalaus) — neljä eri tiedostoa ja neljä eri
+   * näkökulmaa. Gur-e-Amir on kannessa (kupoli), K2-nostossa
+   * (hautakivet) ja jutussa (Vereštšaginin maalaus), Bibi-Khanym
+   * avauskuvassa, K3-nostossa (Prokudin-Gorskin rauniokuva) ja
+   * jutussa (piha), Shah-i-Zinda kannessa, K4-nostossa
+   * (kaakelidetalji) ja jutussa (hautakivet), Afrasiyab
+   * avauskuvassa (kumpu), H1-nostossa ja jutussa (seinämaalaus) ja
+   * observatorio avauskuvassa (kaivanto) ja jutussa (leikkausmalli).
+   *
+   * SELITTEET OVAT YHDEN VIRKKEEN MITTAISIA. Kaksi kuvaa vaatii
+   * pakollisen selityksen, ja se on mahdutettu samaan virkkeeseen:
+   * vuoden 1868 kartta on venäläinen sotakartta omine nimikilpineen,
+   * ja Afrasiyabin seinämaalaus on museon jäljennös.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava.
+   * Talon menetelmä on Open-Meteon arkisto (ERA5, 1991–2020), ja
+   * hakuskripti kirjoitettiin ja ajettiin, mutta rajapinta vastasi
+   * koko työn ajan 429:llä ("Daily API request limit exceeded") —
+   * vuorokausikiintiö oli käytetty jaetusta osoitteesta, eikä se
+   * nollaudu ennen UTC-vuorokauden vaihdetta. Rivi ei ole KEKSITTY
+   * muusta lähteestä, koska vuosigraafin lähderivi lupaa nimenomaan
+   * ERA5:n; ilman riviä lehti näkyy ilman säätä, kuten saatiedot.js:n
+   * alkukommentti sanoo. Matkaoppaan jakso 5 nojaa siksi
+   * en-Wikipedian Samarkand-artikkelin omaan sääruutuun (sama
+   * normaalikausi 1991–2020, pohjadata Pogoda.ru.net), ja se on
+   * sanottu jaksossa ääneen. Kun ERA5-rivi lisätään, jakso 5 on
+   * kirjoitettava rivin omista luvuista.
+   *
+   * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
+   */
+  samarkand: [
+    {
+      id: 'kaupunki',
+      nimi: 'Samarkand',
+      johdanto: 'Silkkitien kuuluisin kaupunki Zeravšan-joen laaksossa, '
+        + 'Timurin valtakunnan pääkaupunki. Sen siniturkoosit kupolit '
+        + 'seisoivat vuosisatoja puolittain raunioina, ennen kuin ne '
+        + 'nostettiin takaisin pystyyn.',
+      kansikuvat: [
+        {
+          tiedosto: 'Самарканд. Площадь-Регистан.jpg',
+          selite: 'Registanin kolme koulurakennusta valaistuina '
+            + 'sinihetkellä: keskellä matalampi Tillakari kupoleineen ja '
+            + 'sivuilla Ulugbekin ja Sherdorin korkeat portaalit.',
+          lahde: 'Kraftabbas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Dome of Gur-e Amir.jpg',
+          selite: 'Gur-e-Amirin uurteinen siniturkoosi kupoli ja sen '
+            + 'vieressä kaakelikuvioinen minareetti, alla paljasta '
+            + 'tiilimuuria.',
+          lahde: 'Bgag, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Shah-i-Zinda, Samarkand (Shohi-Zinda majmuasi, Шахи Зинда).jpg',
+          selite: 'Shah-i-Zindan hautarakennuksia rinteessä: vasemmalla '
+            + 'kaakelittomaksi jäänyt tiilikupoli, oikealla '
+            + 'siniturkoosilla kuviolla peitetty.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: moskeija, observatorio ja vuoden 1872 kaupunki —
+       * Timurin rakennukset, Ulugbekin tiede ja se, minkä 1800-luvun
+       * matkaaja näki. Kolmas on Turkestanin albumin albumiinivedos
+       * vuosilta 1871–1872, ja siinä Registanin medresat näkyvät
+       * raunioina matalien savikattojen takana.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Western iwan of Bibi-Khanym Mosque 01.jpg',
+          selite: 'Bibi-Khanymin läntinen iwan: kaakelikuvioitu seinä, '
+            + 'sen takana turkoosi kupoli ja alaosassa muuria, josta '
+            + 'tiili on murentunut pois.',
+          lahde: 'Bgag, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Ulugh Beg\'s Astronomic Observatory.jpg',
+          selite: 'Ulugbekin observatorion maanalainen kaivanto, jonka '
+            + 'pohjalla nousevat sekstantin marmorikiskot holvatun '
+            + 'katon alla.',
+          lahde: 'Igor Pinigin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Syr-dar\'inskaia oblast\'. G. Samarkand. Chast\' goroda prilegaiushchaia ploshchadi "Registan" LCCN2007682574.jpg',
+          selite: 'Vanha kaupunki vuosina 1871–1872: matalia '
+            + 'savikattoja horisonttiin asti, ja niiden takana '
+            + 'kohoavat Registanin medresat kaakelittomina raunioina.',
+          lahde: 'Miscellaneous Items in High Demand, PPOC, Library of Congress, Wikimedia Commons (PD)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kolme koulua vastatusten',
+          tiedosto: 'Lion(or tiger) on the Sher-dor madrassa.JPG',
+          teksti: 'Registanin aukiota reunustaa kolme medresaa eli '
+            + 'korkeakoulua: Ulugbekin vuosilta 1417–1420, Sherdorin '
+            + 'vuosilta 1619–1636 ja Tillakarin vuosilta 1646–1660. '
+            + 'Aukio oli Timurin valtakunnan sydän. Sinne koottiin väki '
+            + 'kuulemaan hallitsijan julistuksia, jotka kuulutettiin '
+            + 'puhaltamalla jättimäisiin kupariputkiin, ja siellä myös '
+            + 'teloitettiin. Sherdorin portaalissa on kaksi raidallista '
+            + 'petoa, joiden selässä nousee ihmiskasvoinen aurinko — '
+            + 'harvinainen aihe, sillä islamilainen koristetaide karttoi '
+            + 'elävien olentojen kuvaamista. Tillakari oli asuntolan '
+            + 'lisäksi kaupungin päämoskeija, ja sen salin sisus on '
+            + 'kullattu.',
+          selite: 'Sherdorin portaalin mosaiikki: raidallinen peto '
+            + 'ajamassa valkoista kaurista takaa, selässään säteilevä '
+            + 'ihmiskasvoinen aurinko.',
+          lahde: 'Alaexis, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Registan',
+        },
+        {
+          otsikko: 'Timurin hauta ja vihreä kivi',
+          tiedosto: 'Samarcanda, Gur-e Amir 03.jpg',
+          teksti: 'Gur-e-Amir alkoi toisen miehen hautana: Timur '
+            + 'rakennutti sen vuodesta 1403 alkaen pojanpojalleen ja '
+            + 'kruununperijälleen Muhammad Sultanille. Hän itse halusi '
+            + 'tulla haudatuksi Shahrisabziin, mutta kun hän kuoli '
+            + 'helmikuussa 1405 Otrarissa matkalla sotaretkelle Kiinaan, '
+            + 'vuoristosolat olivat lumen peitossa — ja ruumis tuotiin '
+            + 'tänne. Ulugbekin aikana haudan päälle nostettiin '
+            + 'tummanvihreä jadelohkare, joka oli ollut ensin Kiinan '
+            + 'keisarin palatsissa ja sitten kaanikunnan hallitsijan '
+            + 'valtaistuimena. Persian Nadir-shahi yritti viedä sen '
+            + 'vuonna 1740, mutta kivi halkesi matkalla kahtia ja se '
+            + 'palautettiin paikalleen.',
+          selite: 'Gur-e-Amirin hautakivet onyksilattialla: vaaleiden '
+            + 'marmoripaasien keskellä on Timurin tumma jadelohkare.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gur-e Amir',
+        },
+        {
+          otsikko: 'Moskeija, joka oli liian suuri',
+          tiedosto: 'Bibi-Khanym Mosque (1905-1915).jpg',
+          teksti: 'Timur käynnisti Bibi-Khanymin moskeijan rakentamisen '
+            + 'vuonna 1399 Intian-sotaretkeltään palattuaan. Paikalle '
+            + 'tuotiin noin 450 marmoripylvästä, ja niitä raahasi '
+            + 'yhdeksänkymmentäviisi norsua, jotka olivat tulleet '
+            + 'saaliina samalta retkeltä. Ulkokupoli kohosi '
+            + 'neljäänkymmeneen metriin, ja sen sisällä oli toinen, '
+            + 'kolmenkymmenen metrin kupoli. Kunnianhimo ylitti '
+            + 'rakennustaidon rajat: tiiliä alkoi pudota mihrabin '
+            + 'yläpuolisesta kupolista jo muutaman vuoden kuluttua. '
+            + 'Korjaukset lopetettiin 1500-luvun lopulla, ja sen '
+            + 'jälkeen kaupunkilaiset kantoivat raunioista tiiltä ja '
+            + 'marmoria omiin rakennuksiinsa.',
+          selite: 'Bibi-Khanymin murtunut portaalikaari 1900-luvun '
+            + 'alussa: kaaren sisällä kasvaa puita, ja alarinteessä on '
+            + 'kärryjä ja aaseja.',
+          lahde: 'Sergei Prokudin-Gorskii, Wikimedia Commons (PD)',
+          wiki: 'Bibi-Khanym Mosque',
+        },
+        {
+          otsikko: 'Miksi kaupunki on sininen',
+          tiedosto: 'Shah-i-Zinda geometrik koshin naqshi.jpg',
+          teksti: 'Sininen ei ole täällä sattuma vaan valinta, ja sillä '
+            + 'on kolme selitystä. Timurin aikaan sininen oli '
+            + 'Keski-Aasiassa surun väri, ja Gur-e-Amirin sävyt ovat '
+            + 'juuri sitä. Sinisen uskottiin myös torjuvan pahaa '
+            + 'silmää — siitä ovat muistona kaupungin lukemattomat '
+            + 'siniseksi maalatut ovet. Kolmanneksi sininen tarkoitti '
+            + 'vettä, joka on näillä main harvinaista, joten siniseksi '
+            + 'päällystetty muuri kertoi omistajansa varallisuudesta. '
+            + 'Kultaa käytettiin samaan tapaan yltäkylläisesti. '
+            + 'Kupolien meloninmuotoisen uurteisuuden arvellaan '
+            + 'matkivan mongolien telttoja, joissa vainajat pidettiin '
+            + 'esillä ennen hautaamista.',
+          selite: 'Lasitettuja sinisiä ja turkooseja tiilenpaloja '
+            + 'ladottuna kuvioiksi tavallisen poltetun tiilen sekaan, '
+            + 'aukkoja siellä täällä.',
+          lahde: 'AIDEPCUL, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Shah-i-Zinda',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tilya-Kori Madrasah.jpg',
+          selite: 'Tillakarin moskeijan kullattu sisäkupoli alhaalta '
+            + 'kuvattuna: keskellä säteilevä mitali, ympärillä sinistä '
+            + 'ja kultaa kehä kehältä.',
+          lahde: 'WWELNUR, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Samarkand on Uzbekistanin toiseksi suurin kaupunki, '
+          + 'runsaat 880 000 asukasta, ja se jakautuu selvästi kahtia. '
+          + 'Idässä on vanha kaupunki, jossa muistomerkit, basaari ja '
+          + 'kapeat kujat ovat kävelymatkan päässä toisistaan. Lännessä '
+          + 'on Venäjän vallan aikana rakennettu uusi kaupunki leveine '
+          + 'katuineen ja hallintotaloineen. Vanhan kaupungin '
+          + 'muistomerkit kuuluvat maailmanperintöluetteloon nimellä '
+          + 'Samarkand – kulttuurien risteys, eikä niiden välillä ole '
+          + 'kilometriäkään: Registanilta on Bibi-Khanymille noin '
+          + 'kilometri pohjoiseen ja siitä Shah-i-Zindalle vielä '
+          + 'puolisen kilometriä itään.',
+        artikkeli: {
+          nimi: 'Matkailijan Samarkand',
+          taitto: 'opas',
+          teksti: 'Vanha kaupunki idässä, Venäjän aikana rakennettu uusi '
+            + 'kaupunki lännessä ja niiden välissä Registanin aukio.',
+          nosto: 'Ulugbekin sekstantti oli säteeltään 40 metriä — '
+            + 'aikansa suurin tähtitieteen mittalaite, ja sen kaari '
+            + 'jatkui maan alle kaksi metriä leveässä kaivannossa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Rautatie tuli Samarkandiin myöhään. Venäjä '
+                + 'rakensi Transkaspian radan Kaspianmeren rannalta '
+                + 'vuosina 1879–1891, ja kaupungin asema avattiin '
+                + 'toukokuussa 1888. Rata päättyi silloin tänne, ja '
+                + 'vasta vuosikymmentä myöhemmin se jatkettiin itään '
+                + 'Taškentiin ja Andižaniin, jolloin sen nimikin vaihtui '
+                + 'Keski-Aasian radaksi. Sitä ennen ja pitkään sen '
+                + 'jälkeenkin kaupungissa liikuttiin vaunuilla ja '
+                + 'kaksipyöräisillä araba-kärryillä hevosin ja aasein: '
+                + 'ne olivat pääasiallinen kulkuneuvo vielä 1950-luvulle '
+                + 'asti. Höyryraitiotie kulki 1924–1930 ja uudemmat '
+                + 'raitiovaunut 1947–1973; nykyiset avattiin vuonna '
+                + '2017. Lentoasema kaupungin pohjoisosassa avattiin '
+                + '1930-luvulla, ja Taškentista pääsee nyt myös '
+                + 'Afrosiyob-pikajunalla, joka jatkaa Buharaan.',
+              kuva: {
+                tiedosto: 'Afrosiyob Express Train in Station - Samarkand - Uzbekistan (7502824436) (3).jpg',
+                selite: 'Afrosiyob-pikajunan valkoinen keula '
+                  + 'Samarkandin asemalaiturilla, takana aseman '
+                  + 'viuhkamaiset betonipilarit.',
+                lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Samarkand on Uzbekistanin kaakkoisosassa '
+                + 'Zeravšan-joen laaksossa 705 metrin korkeudessa, ja '
+                + 'sen pinta-ala on 120 neliökilometriä. Kaupunki on '
+                + 'keidas: ympärillä on kasteltuja peltoja ja niiden '
+                + 'takana kuivaa aroa. Vettä on johdettu tänne kauan, '
+                + 'sillä Siyobin ja Dargomin kanavat kaivettiin jo '
+                + 'rautakauden alussa 600–400-luvuilla eaa. Etäisyydet '
+                + 'ovat lyhyet moneen suuntaan: Buharaan on 240 '
+                + 'kilometriä M37-tietä, Taškentiin 270 kilometriä '
+                + 'M39-tietä, Qarshiin 135 kilometriä. Tadžikistanin '
+                + 'raja on vain noin 35 kilometrin päässä ja Dušanbe '
+                + '210 kilometrin; Afganistanin Mazar-i-Sharifiin on '
+                + '340 kilometriä.',
+              kuva: {
+                tiedosto: 'ISS-37 Samarkand, Uzbekistan.jpg',
+                selite: 'Samarkand avaruusasemalta kuvattuna: harmaa '
+                  + 'kaupunki peltotilkkujen keskellä ja vasemmassa '
+                  + 'alakulmassa vaaleaa aroa.',
+                lahde: 'NASA, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: paperi ja basaari',
+              teksti: 'Perimätiedon mukaan islamilaisen maailman '
+                + 'ensimmäinen paperitehdas syntyi juuri Samarkandiin. '
+                + 'Kerrotaan, että abbasidien aikana kahdelta Talasjoen '
+                + 'taistelussa vuonna 751 vangitulta kiinalaiselta '
+                + 'saatiin paperinvalmistuksen salaisuus, ja että '
+                + 'keksintö levisi täältä muualle islamilaiseen '
+                + 'maailmaan ja edelleen Eurooppaan. Wikipedia esittää '
+                + 'tämän legendana, ei varmennettuna historiana. '
+                + 'Kaupankäynti sen sijaan on nähtävissä yhä: Siyobin '
+                + 'basaari Bibi-Khanymin kupeessa on kaupungin suurin, '
+                + 'yli seitsemän hehtaaria, ja siellä on seitsemän '
+                + 'katettua hallia. Se on saman kaupan jatke, joka '
+                + 'käytiin ennen Chorsun kauppakupolissa Registanin '
+                + 'takana.',
+            },
+            {
+              otsikko: 'Historian käännekohta: 1868 ja uusi kaupunki',
+              teksti: 'Vuoden 1868 jälkeen Samarkandiin rakennettiin '
+                + 'toinen kaupunki vanhan viereen. Venäläinen '
+                + 'kaupunginosa nousi pääosin vanhan kaupungin '
+                + 'länsipuolelle, ja kenraalimajuri Aleksandr Abramov '
+                + 'tuli Zeravšan-joen varteen perustetun sotilaspiirin '
+                + 'ensimmäiseksi kuvernööriksi Samarkand '
+                + 'hallintokeskuksenaan. Vuonna 1886 kaupungista tuli '
+                + 'juuri perustetun Samarkandin alueen pääkaupunki. '
+                + 'Kahtiajako näkyy kartalla yhä: idässä ovat '
+                + 'muistomerkit, kaupat ja vanhat asuintalot, lännessä '
+                + 'hallintorakennukset, kulttuurikeskukset ja '
+                + 'oppilaitokset leveiden katujen varsilla. Samarkandin '
+                + 'historian tutkimuskin alkoi vasta tästä: '
+                + 'ensimmäiset tutkijat olivat N. Veselovski, V. '
+                + 'Bartold ja V. Vjatkin.',
+              kuva: {
+                tiedosto: 'Медресе Шир-Дор на площади Регистан в Самарканде.jpg',
+                selite: 'Vasili Vereštšaginin maalaus Sherdorin '
+                  + 'medresestä noin vuodelta 1870: julkisivun edessä '
+                  + 'on markiiseja ja kauppiaita, ja minareetit '
+                  + 'kallistuvat kumpikin omaan suuntaansa.',
+                lahde: 'Vasily Vereshchagin, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Samarkandissa on kylmä puolikuiva aroilmasto: '
+                + 'kuumat ja kuivat kesät, viileät ja vaihtelevat '
+                + 'talvet. Kaupungin oman sääruudun mukaan '
+                + '(normaalikausi 1991–2020) heinäkuun keskilämpö on '
+                + '27,2 astetta ja päivien keskiylin 34,5, ja heinä–'
+                + 'elokuussa lämpötila nousee toistuvasti yli '
+                + 'neljänkymmenen. Tammikuun keskilämpö on 2,3 '
+                + 'astetta, keskiylin 7,3 ja yöt pakkasen puolella. '
+                + 'Ääripäät ovat kaukana toisistaan: mittausten '
+                + 'ennätykset ovat 42,4 ja −25,4 astetta. Sade tulee '
+                + 'talvella ja keväällä — maaliskuussa 73 '
+                + 'millimetriä — kun taas heinä- ja elokuussa kertyy '
+                + 'alle kaksi millimetriä; koko vuoden sade on 378 '
+                + 'millimetriä. Kävelijän kuukaudet ovat syyskuu ja '
+                + 'lokakuu: päivät ovat 22–29 asteessa ja sadetta '
+                + 'tuskin lainkaan. Huhtikuu on vihrein mutta myös '
+                + 'sateisimpia kuukausia.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      otsikko: 'Marakandasta Timurin pääkaupungiksi',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki on yksi Keski-Aasian vanhimmista '
+        + 'yhtäjaksoisesti asutuista. Sen historia kulkee Aleksanteri '
+        + 'Suuresta mongolien tuhoon, Timurin työmaalle ja siitä '
+        + 'pitkään hiljaiseen kauteen.',
+      tehtava: {
+        kysymys: 'Millä nimellä kreikkalaiset tunsivat Samarkandin?',
+        vaihtoehdot: [
+          'Marakanda',
+          'Baktra',
+          'Sogdiana',
+          'Zeravšan',
+        ],
+        oikea: 0,
+        fakta: 'Aleksanteri Suuri valtasi kaupungin 329 eaa., ja '
+          + 'kreikkalaisissa lähteissä sen nimi on Marakanda.',
+      },
+      nostot: [
+        {
+          otsikko: 'Marakanda, Aleksanterin kaupunki',
+          tiedosto: 'Samarkand Afrasiab (Marakanda) Citadel Hellenistic.jpg',
+          teksti: 'Samarkandin arkeologian instituutin tutkijat '
+            + 'ajoittavat kaupungin perustamisen noin vuoteen 700 eaa. '
+            + 'Se oli sogdien kulttuurin keskuksia ja Persian '
+            + 'akhaimenidivallan aikaan Sogdianan satraappikunnan '
+            + 'pääkaupunki. Aleksanteri Suuri valtasi kaupungin 329 '
+            + 'eaa., ja kreikkalaisissa lähteissä se on Marakanda. '
+            + 'Valloitus vaurioitti sitä pahoin, mutta kaupunki toipui '
+            + 'nopeasti ja kukoisti hellenistisen vaikutuksen alla: '
+            + 'suorakulmaiset tiilet vaihtuivat neliömäisiin, ja '
+            + 'muuraus- ja rappaustavat paranivat. Kaupunki seisoi '
+            + 'silloin Afrasiyabin kummulla, joka on nyt paljasta '
+            + 'rinnettä vanhan kaupungin pohjoispuolella.',
+          selite: 'Afrasiyabin kumpu kaupungin pohjoislaidalla: '
+            + 'tasalakinen harjanne kuivan rinteen takana, oikeassa '
+            + 'laidassa nykykaupungin taloja.',
+          lahde: 'Bruce Allardice, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Afrasiyab (Samarkand)',
+        },
+        {
+          otsikko: 'Tšingis-kaani ja Timurin työmaa',
+          tiedosto: 'Building of the Great Mosque in Samarkand (right).jpg',
+          teksti: 'Mongolit valtasivat Samarkandin 1220. Historioitsija '
+            + 'Juvaynin mukaan Tšingis-kaani surmasi linnoitukseen ja '
+            + 'moskeijaan paenneet, ryösti kaupungin ja otti '
+            + 'palvelukseensa 30 000 nuorta miestä ja 30 000 '
+            + 'käsityöläistä. Kaupunki pysyi Tšagatai-kaanikunnan '
+            + 'osana vuoteen 1370, jolloin Timur teki siitä '
+            + 'valtakuntansa pääkaupungin. Seuraavien 35 vuoden aikana '
+            + 'hän kutsui parhaat käsityöläiset valtakuntansa joka '
+            + 'kolkasta, kaivatti kaupungin ympärille ojat ja rakensi '
+            + 'sen ympäri kahdeksan kilometrin muurin; asukkaita oli '
+            + 'noin 150 000. Kastilian lähettiläs Ruy González de '
+            + 'Clavijo vieraili 1404 ja kutsui Timurin moskeijaa '
+            + 'jaloimmaksi näkemäkseen.',
+          selite: 'Bihzadin 1400-luvun kuvitus Samarkandin suuren '
+            + 'moskeijan rakentamisesta: muurarit ovat telineillä ja '
+            + 'kantajat tuovat marmorilaattoja työmaalle.',
+          lahde: 'Bihzād, Wikimedia Commons (PD)',
+          wiki: 'Samarkand',
+        },
+        {
+          otsikko: 'Hiljaiset vuosisadat',
+          tiedosto: 'Мавзолей Шах-и-Зинда в Самарканде.jpg',
+          teksti: 'Loistokausi loppui 1600-luvun lopulla. Pääkaupungin '
+            + 'asema siirtyi Buharaan, suuri kauppatie kiersi kaupungin '
+            + 'ohi ja muistomerkit jäivät tyhjilleen. 1720-luvun alussa '
+            + 'kaupunki oli käytännössä autio. Vuosina 1756–1868 sitä '
+            + 'hallitsivat Buharan mangyt-emiirit, ja elpyminen alkoi '
+            + 'Muhammad Rahimin kaudella 1756–1758. 1800-luvun matkaaja '
+            + 'ei siis nähnyt kiiltäviä kupoleita: kaakeli oli pudonnut '
+            + 'laajoilta pinnoilta, ja rakennusten välissä kasvoi '
+            + 'ruohoa. Laaja entisöinti alkoi vasta neuvostoaikana, '
+            + 'Gur-e-Amirissa toisen maailmansodan jälkeen ja '
+            + 'Bibi-Khanymissa vuonna 1974.',
+          selite: 'Vasili Vereštšaginin maalaus Shah-i-Zindasta noin '
+            + 'vuodelta 1870: hautarakennukset seisovat paljaalla '
+            + 'rinteellä, ja kaakelia on jäljellä vain laikkuina.',
+          lahde: 'Vasily Vereshchagin, Wikimedia Commons (PD)',
+          wiki: 'Samarkand',
+        },
+        {
+          otsikko: 'Kun linnoitus vaihtoi omistajaa',
+          tiedosto: 'Siege of Samarkand Summit on May 1, 1868.png',
+          teksti: 'Venäjän joukot ottivat Samarkandin linnoituksen '
+            + 'toukokuussa 1868 Konstantin von Kaufmannin johdolla. '
+            + 'Kaupunki antautui ilman taistelua sen jälkeen, kun '
+            + 'laitamilla Tšupan-atan kukkuloilla oli käyty lyhyt '
+            + 'kahakka. Kun pääjoukko lähti kuukautta myöhemmin '
+            + 'jatkamaan sotaretkeä emiiriä vastaan, linnoitukseen jäi '
+            + 'runsaan kuudensadan miehen varuskunta. Sitä piiritti '
+            + 'kuuden vuorokauden ajan buharalaisten, kokandilaisten ja '
+            + 'liittoutuneiden heimojen joukko, ja myös osa '
+            + 'kaupunkilaisista nousi kapinaan; varuskunta piti '
+            + 'puolensa, kunnes pääjoukko palasi. Sotaretken tuloksena '
+            + 'Buharan emiraatista tuli Venäjän suojeluksessa oleva '
+            + 'alusmaa.',
+          selite: 'Venäläinen sotakartta vuodelta 1868 omine '
+            + 'nimikilpineen: Zeravšan-joen haarat, kylät punaisella '
+            + 'ja keskellä Tšupan-atan kukkula.',
+          lahde: 'Mikhail Afrikanovich Terentyev, Wikimedia Commons (PD)',
+          wiki: 'Siege of Samarkand (1868)',
+        },
+      ],
+    },
+  ],
 };
