@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v972 — TEHTAVALAATIKKO LEHDEN TYYLIIN: minitehtavan ja Tutustuitko-kysymyksen laatikko on nyt tuplaviivakehys paperinsavyisella pohjalla, otsakerivi kapiteelein ja vastaukset aanestyslipukkeen riveina rastiruuduin (ennen keltainen laatikko ja pillerinapit). Tarkista: jonkin lehden kysymys ja minitehtava, myos vastauksen jalkeen',
   'v971 — NAVIGOINTINAPIT: EDELLINEN/SEURAAVA-nappien ja sisallysvalikon sivunimi on nyt sama kuin sivun otsikko (kaupunki-sivulla "X pintaa syvemmalta", ennen pelkka kaupungin nimi). Raamattuun kirjattu uusi kansikuvalinjaus: kansikaruselli on kolme laajaa yleiskuvaa, ei yksityiskohtia (remontti tulossa). Tarkista: jonkin lehden alapalkin napit',
   'v970 — KATHMANDU: uusi lehti (kartta 8 kohteella Swayambhunathista Boudhanathiin; 26 kuvaa; 2015 jaristys kerrotaan jalleenrakennuksen kautta). HUOM: saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: kartta, Matkaopas, Historian tehtava',
   'v969 — ULAN BATOR: uusi lehti (kartta 8 kohteella Gandanista Zaisaniin; 27 kuvaa mm. Jugderin 1913 Urga-panoraama). HUOM: saarivi puuttuu viela (Open-Meteon kiintio), oppaan saajakso nojaa Wikipedian saaruutuun sen aaneen sanoen. Tarkista: kartta, Matkaopas, Historian tehtava',
