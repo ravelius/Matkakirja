@@ -296,6 +296,42 @@ let piiri = null;
 let vahvistin = null;
 let kytketty = false;
 
+/*
+ * SANELUN KOVA TAUKO KOSKEE MYÖS LUKIJAÄÄNTÄ (omistajan havainto
+ * 21.8.2026: "pöllön puhe ei ohjaudu bluetooth-kuulokkeisiin,
+ * lehtisivun luenta kuuluu").
+ *
+ * js/sound.js pysäytti tehostekontekstin sanelun ajaksi jo 13.8.
+ * (saneluTauko), mutta TÄMÄ piiri jäi käyntiin. Käynnissä oleva
+ * WebAudio-konteksti pitää sivun äänisession toistotilassa samaan
+ * aikaan kun mikrofoni on auki, jolloin iOS jää nauhoitusreitille:
+ * Bluetooth-kuuloke putoaa musiikkiprofiilista (A2DP) puhelu-
+ * profiiliin (HFP) eikä palaa ennen kuin sessio oikeasti vapautuu.
+ * Sanelun jälkeen luettu pöllön vastaus soi silloin laitteen
+ * kaiuttimesta, vaikka lehtiluenta (jonka aikana mikrofonia ei ole
+ * avattu) kuuluu kuulokkeista normaalisti.
+ *
+ * Siksi piiri pannaan sanelun ajaksi oikeasti tauolle ja herätetään
+ * vasta sanelun päätyttyä — sama kohtelu kuin tehosteilla.
+ */
+let saneluTauko = false;
+
+/** Lukijaäänen piiri tauolle sanelun ajaksi (js/ambience-stream.js). */
+export function taukoaPuhePiiri() {
+  saneluTauko = true;
+  try {
+    piiri?.suspend?.()?.catch?.(() => {});
+  } catch { /* piiri ei ollut käynnissä */ }
+}
+
+/** Sanelu ohi — piiri takaisin hereille. */
+export function jatkaPuhePiiri() {
+  saneluTauko = false;
+  try {
+    if (piiri?.state === 'suspended') piiri.resume?.()?.catch?.(() => {});
+  } catch { /* piiri syntyy seuraavasta luennasta */ }
+}
+
 /** Lukijaäänen voimakkuus (1 = elementin täysi voima). */
 export function puheenVoima() {
   try {
@@ -466,6 +502,9 @@ if (typeof document !== 'undefined' && typeof document.addEventListener === 'fun
    * enää auttanut.
    */
   document.addEventListener('pointerdown', () => {
+    // Sanelun kova tauko voittaa elvytyksen: mikrofonin ollessa auki
+    // piiriä ei herätetä (ks. taukoaPuhePiiri).
+    if (saneluTauko) return;
     if (!piiri || piiri.state === 'running') return;
     try {
       piiri.resume?.().catch(() => { /* seuraava ele yrittää taas */ });

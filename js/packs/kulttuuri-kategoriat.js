@@ -4028,18 +4028,17 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Galerie Vivienne, 12 March 2015.jpg',
-          selite: 'Galerie Vivienne, lasikattoinen kauppakäytävä vuodelta '
-            + '1826: mosaiikkilattian tähtikuvio, kaarevat holvit ja '
-            + 'antikvariaatin kirjapöydät.',
-          lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: 'Paris skyline from the observation deck of the Montparnasse tower, July 2015.jpg',
+          selite: 'Pariisi Montparnassen tornista auringonlaskussa: Eiffel-torni '
+            + 'ja Marsin kenttä keskellä, taustalla La Défensen pilvenpiirtäjät '
+            + 'usvassa.',
+          lahde: 'Joe deSousa, Wikimedia Commons (CC0)',
         },
         {
-          tiedosto: 'Point Zéro des Routes de France. Centre de la dalle.JPG',
-          selite: 'Notre-Damen edustan katukivissä oleva pronssilaatta '
-            + 'tuuliruusuineen ja tekstillä POINT ZERO on piste, josta '
-            + 'kaikkien Ranskan maanteiden kilometrit mitataan.',
-          lahde: 'Jean-Pierre Bazard, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'The Avenue des Champs-Élysées and the Arc de Triomphe, Paris 27 December 2021.jpg',
+          selite: 'Champs-Élysées jouluvaloissa: puurivit hehkuvat punaisina '
+            + 'bulevardin molemmin puolin ja kadun päässä seisoo Riemukaari.',
+          lahde: 'Pierre Blaché from Paris, France, Wikimedia Commons (CC0)',
         },
       ],
       /*
@@ -4702,12 +4701,11 @@ export const KULTTUURI_KATEGORIAT = {
         + 'vesikantaja voitti maailman ensimmäisen olympiamaratonin.',
       kansikuvat: [
         {
-          tiedosto: 'Parthenon Columns, Acropolis, Athens (10045439306).jpg',
-          selite: 'Parthenonin pylväitä ja niiden yllä lepäävä '
-            + 'marmoripalkisto läheltä; temppelissä ei ole juuri suoria '
-            + 'viivoja, sillä jalusta kaartuu keskeltä ylöspäin ja pylväät '
-            + 'kallistuvat sisäänpäin.',
-          lahde: 'Sharon Mollerus, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'The West Facade of the Parthenon on May 19, 2020.jpg',
+          selite: 'Parthenon kokonaisuudessaan Akropoliin länsipäästä: '
+            + 'temppelin pylväikkö rakennustelineineen kohoaa kalliolla, '
+            + 'ja edessä lepäävät maahan ladotut marmorilohkareet.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Odeon of Herodes Atticus 2019.jpg',
@@ -4718,11 +4716,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Thodorisv, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Anafiotika, Athens, 20240601 0923 0020.jpg',
-          selite: 'Anafiótikan kuja Akropoliin alarinteessä: kalkittu '
-            + 'talo, oranssit ikkunaluukut ja Kreikan lippu parvekkeella, '
-            + 'ja koska kujilla ei ole nimiä, talot on vain numeroitu.',
-          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+          tiedosto: 'The Panathenaic Stadium in Athens on 2 October 2018.jpg',
+          selite: 'Panathenaian stadion eli Kallimármaro kentän päästä '
+            + 'nähtynä: valkoiset marmorikatsomot kaartuvat hevosenkengäksi '
+            + 'kahden metsäisen kukkulan väliin.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC0)',
         },
       ],
       matkailijalle: {
@@ -5539,11 +5537,11 @@ export const KULTTUURI_KATEGORIAT = {
         + 'kadunkulmassa oma kissa.',
       kansikuvat: [
         {
-          tiedosto: 'Istanbul Basilica Cistern 2009.JPG',
-          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
-          selite: 'Yerebatanin vesisäiliö kaupungin alla: pylväsrivit katoavat '
-            + 'hämärään, vesi peilaa holvit ja valaistus värjää kiven '
-            + 'punaiseksi.',
+          tiedosto: 'Hagia Sophia from the Sultanahmet Square 2017 (1).jpg',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+          selite: 'Hagia Sofia Sultanahmetin aukiolta nähtynä: punatiilinen '
+            + 'kirkko-moskeija kupoleineen ja neljine minareetteineen '
+            + 'täyttää aukion pohjoislaidan.',
         },
         {
           tiedosto: 'Ortaköy Mosque and Bosphorus Bridge, Istanbul 2008.jpg',
@@ -5552,11 +5550,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Darwinek, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Istanbul spice bazaar 02.jpg',
-          selite: 'Maustebasaarin koju Eminönüssä: etualalla on kasoittain '
-            + 'kuivattuja taateleita, aprikooseja ja viikunoita ja oikealla '
-            + 'rivi lokumia.',
-          lahde: 'Takeaway, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Istanbul panorama from Galata tower - 1.jpg',
+          selite: 'Näkymä Galatan tornista yli Kultaisen sarven: Galatan '
+            + 'silta halkaisee lahden ja vastarannalla nousee vanhan '
+            + 'kaupungin niemi minareetteineen.',
+          lahde: 'Ilya saffarian Tousi, Wikimedia Commons (CC0)',
         },
       ],
       nostot: [
@@ -5948,11 +5946,11 @@ export const KULTTUURI_KATEGORIAT = {
         + 'yliopiston kirjastossa.',
       kansikuvat: [
         {
-          tiedosto: 'Long Room Interior, Trinity College Dublin, Ireland - Diliff.jpg',
-          selite: 'Trinity Collegen vanhan kirjaston Pitkä huone: kaksi kerrosta '
-            + 'tummia kirjahyllyjä, holvattu puukatto ja käytävän molemmin '
-            + 'puolin rivi valkoisia marmoribysteja.',
-          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Front Square of Trinity College Dublin.jpg',
+          selite: 'Trinity Collegen etupiha ylhäältä nähtynä: keskellä seisoo '
+            + 'kivinen kellotorni Campanile, sen takana harmaat '
+            + 'yliopistorakennukset ja nurmikentät.',
+          lahde: 'Adam McGrath, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Samuel Beckett Bridge, Dublin 20150807 1.jpg',
@@ -5961,11 +5959,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Dublin - Molly Malone.jpg',
-          selite: 'Molly Malonen pronssipatsas Dublinin keskustassa: kalakauppias '
-            + 'seisoo kaksipyöräisten kärryjen vieressä, ja kärryillä on '
-            + 'kolme punottua koria.',
-          lahde: 'Marek Śliwecki, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Dublin - O\'Connell Street - 20200305192622.jpg',
+          selite: 'O\'Connell Street illalla pitkällä valotuksella: keskellä '
+            + 'katua nousee neulamainen Spire-torni ja vasemmalla erottuu '
+            + 'pääpostitalon pylväikkö.',
+          lahde: 'Jonjobaker, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -7455,26 +7453,25 @@ export const KULTTUURI_KATEGORIAT = {
         + 'katolla nukkuu lohikäärme.',
       kansikuvat: [
         {
-          tiedosto: 'Barcelona Parc Güell el drac.jpg',
-          selite: 'Park Güellin porrasaltaan lisko, jota sanotaan nimellä '
-            + 'el drac ja joka on koottu rikotuista kaakelinpaloista: '
-            + 'selkä sinistä ja ruskeaa, tassut vihreitä.',
-          lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Barcelona la rambla ausderluft.jpg',
+          selite: 'La Rambla ylhäältä: puiden reunustama kävelykatu vetää '
+            + 'suoran viivan vanhankaupungin läpi, ja sen takana kaupunki '
+            + 'jatkuu Collserolan vuorten juurelle.',
+          lahde: 'Siegfried Weisenburger, Wikimedia Commons (CC BY-SA 3.0 de)',
         },
         {
-          tiedosto: 'Cavalcada de gegants de la Mercè 2008 - P1210875.jpg',
-          selite: 'Gegant eli jättiläisnukke kruunu päässä ja punainen '
-            + 'viitta harteilla Mercè-juhlan kulkueessa, nuken sisällä '
-            + 'kävelevän yhden ihmisen kannattelemana.',
-          lahde: 'Pere prlpz, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'ES-BCN-pl-espanya-mnac.jpg',
+          selite: 'Plaça d\'Espanya ylhäältä: keskellä suihkulähde, takana '
+            + 'kaksi venetsialaista tiilitornia ja niiden takana Montjuïcin '
+            + 'rinteellä Palau Nacional.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Barcelona Mercat de la Boqueria 08.jpg',
-          selite: 'Boquerian kauppahallin hedelmätiski: banaanit ja ananakset '
-            + 'roikkuvat katosta, hinnat on kirjoitettu liidulla mustille '
-            + 'tauluille ja tiskin reunalla on rivi valmiiksi kaadettuja '
-            + 'mehuja.',
-          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: '2017 Vistes des del Monument a Colom 01.jpg',
+          selite: 'Näkymä Kolumbuksen patsaan huipulta Port Velliin: '
+            + 'satamahallinnon vanha palatsi, aaltoileva Rambla de Mar '
+            + '-kävelysilta ja huvivenesataman mastometsä.',
+          lahde: 'Jordiferrer, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -7837,18 +7834,18 @@ export const KULTTUURI_KATEGORIAT = {
         + 'eri maksua.',
       kansikuvat: [
         {
-          tiedosto: 'Detalle Fuente Patio de los Leones Alhambra Granada.jpg',
-          selite: 'Leijonien pihan suihkulähde Alhambrassa: kaksitoista kulunutta '
-            + 'marmorileijonaa kannattaa selässään matalaa allasta, ja takana '
-            + 'kiertää ohuiden pylväiden kaarikäytävä.',
-          lahde: 'Pcb2mail, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'The whole Alhambra Granada Spain.jpg',
+          selite: 'Koko Alhambra vastapäiseltä rinteeltä iltavalossa: '
+            + 'linnoituksen tornit, palatsisiivet ja punaiset muurit '
+            + 'jonottavat harjanteella, etualalla Albaicínin tiilikattoja.',
+          lahde: 'Jebulon, Wikimedia Commons (CC0)',
         },
         {
-          tiedosto: 'Granada - La Alcaicería 1.jpg',
-          selite: 'Alcaicerían kuja vanhassa kaupungissa: kipsikoristeisia '
-            + 'kaaria, tumma puukatto, katosta riippuva lyhty ja molemmin '
-            + 'puolin pieniä myymälöitä huiveineen ja laattoineen.',
-          lahde: 'Zarateman, Wikimedia Commons (CC0)',
+          tiedosto: 'Granada Cathedral as seen from Alhambra 2014-08-06.jpg',
+          selite: 'Näkymä Alhambran Alcazabalta yli kaupungin: keskeltä '
+            + 'kattomerta nousee tuomiokirkon vihertävä kupoli ja '
+            + 'keskeneräiseksi jäänyt kellotorni.',
+          lahde: 'Slaunger, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Sacromonte-Granada (1).jpg',
@@ -12455,26 +12452,24 @@ export const KULTTUURI_KATEGORIAT = {
         + 'sen tieltä.',
       kansikuvat: [
         {
-          tiedosto: 'RO B Stavropoleos Church 1.jpg',
-          selite: 'Stavropoleoksen luostarikirkko vuodelta 1724 '
-            + 'vanhassakaupungissa: ulkoseinän kaariin on maalattu '
-            + 'pyhimyksiä, kuistin pylväät on veistetty kivestä ja katto on '
-            + 'punaista tiiltä.',
-          lahde: 'Andrei Stroe, Wikimedia Commons (CC BY 3.0)',
+          tiedosto: 'Bucharest-palace-of-parliament-may-2016-001.jpg',
+          selite: 'Parlamenttipalatsi kohoaa valkoisena massana keskellä '
+            + 'kaupunkia, ja oikealla nousee rakennustelineissä Romanian '
+            + 'kansan pelastuksen katedraali.',
+          lahde: 'anisoboy, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
-          tiedosto: 'Pasajul Macca-Villacrosse - Vedere Interior.jpg',
-          selite: 'Macca–Villacrossen kauppakäytävä vanhassakaupungissa: '
-            + 'keltainen lasikatto kaartuu kujan yli, ja alla on kahviloita, '
-            + 'kylttejä ja kaksi Romanian lippua.',
-          lahde: 'Mihai Petre, Wikimedia Commons (CC BY-SA 3.0 ro)',
+          tiedosto: 'Bucuresti Ateneum 2.jpg',
+          selite: 'Romanian Ateneum eli kaupungin konserttitalo vuodelta 1888: '
+            + 'pyöreä kupolisali ja pylväikkö nousevat puistonurmen takaa.',
+          lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Libraria Carturesti Carusel - Interior ziua.jpg',
-          selite: 'Cărturești Carusel -kirjakauppa Lipscanin kadulla: '
-            + 'valkoiset pylväät ja kaarevat parvekkeet nousevat lasikaton '
-            + 'alle, ja kierreportaat vievät hyllyriviltä toiselle.',
-          lahde: 'Mihai Petre, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Bucharest Strada Lipscani.jpg',
+          selite: 'Lipscanin katu vanhassakaupungissa: mukulakivetty '
+            + 'kävelykatu kaartuu 1800-luvun julkisivujen ja terassipöytien '
+            + 'välissä kohti kupolikattoista kulmataloa.',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -21912,18 +21907,18 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          tiedosto: 'Doha Metro station in December 2019.jpg',
-          selite: 'Metroaseman lippuhalli, jossa katto laskeutuu pilarien päälle '
-            + 'valkoisina lehtimäisinä holveina ja oikealla odottavat '
-            + 'lippuportit.',
-          lahde: 'Tim Adams, Wikimedia Commons (CC BY 3.0)',
+          tiedosto: 'Doha Souq Waqif Main Street 05.jpg',
+          selite: 'Souq Waqifin pääkatu vanhassa keskustassa: savilaastilla '
+            + 'rapatut kauppatalot reunustavat kujaa ja kadun päässä kohoaa '
+            + 'Fanarin kierteinen minareetti.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          tiedosto: 'Doha Qatar - Katara Dovecotes.jpg',
-          selite: 'Kaksi viisitoista metriä korkeaa kartiomaista kyyhkystornia '
-            + 'Kataran kulttuurikylässä, savenvärisessä pinnassa rivi pieniä '
-            + 'reikiä ja lintujen istumatikkuja.',
-          lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Museum of Islamic Art Park, Doha.jpg',
+          selite: 'Islamilaisen taiteen museon puisto: palmukujan päässä '
+            + 'seisoo museon vaalea kuutiorakennus, lahdella keinuu '
+            + 'puisia dhow-veneitä ja horisontissa häämöttää West Bay.',
+          lahde: 'Sandra Doha, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       /*
@@ -22314,20 +22309,18 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'PomposPompou, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'A house with a palm tree in the Arab Quarter, North Nicosia, Cyprus.jpg',
-          selite: 'Kivetty kuja Arabahmetin korttelissa: valkoiseksi rapatun '
-            + 'talon ikkunanpuitteet ja säleluukut on maalattu keltaisiksi, '
-            + 'kujan toisella puolella on turkoosi umpierkkeri, ja '
-            + 'tiilikaton takaa nousee palmu.',
-          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Selimiye mosque Nicosia (29852320938).jpg',
+          selite: 'Selimiyen moskeija vanhassakaupungissa: goottilainen '
+            + '1200-luvun katedraali seisoo aukion laidalla, ja sen kylkeen '
+            + 'on lisätty kaksi kivistä minareettia.',
+          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'Izgled-Old House Nicosia-6.jpg',
-          selite: 'Vanhan talon pyöristetty kulma vanhassakaupungissa: '
-            + 'avoimen loggian päälle työntyy parveke valkoisine '
-            + 'pylväskaiteineen kierrekoristeisten kivikonsolien varassa, ja '
-            + 'ikkunoissa on puiset säleluukut.',
-          lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Eleftherias Square 5.jpg',
+          selite: 'Vapaudenaukio ylhäältä: aaltoileva valkobetoninen kansi '
+            + 'kaartuu venetsialaisen muurin vallihaudan yli, ja takana '
+            + 'levittäytyy kaupunki ja Kyrenian vuoret.',
+          lahde: 'Iakovos Hatzistavrou, European Commission, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       /*
@@ -24746,19 +24739,18 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Al-Madina Souq 02.jpg',
-          selite: 'Katettu kivinen kuja Al-Madinan basaarissa vuonna 2005, '
-            + 'ennen sisällissotaa: holvin alla riippuu värikkäitä '
-            + 'paperilippusia ja lamppuja, lihakaupan edessä lihanpaloja.',
-          lahde: 'Folkertherlyn, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Ancient City of Aleppo from the Citadel.jpg',
+          selite: 'Vanhakaupunki linnoituskummulta ennen sisällissotaa: '
+            + 'linnoituksen kalteva vallirinne etualalla, sen takana '
+            + 'aukio ja matalaa kivikaupunkia horisonttiin asti.',
+          lahde: 'Preacher lad, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Aleppo Beit Wakil 9673.jpg',
-          selite: 'Beit Wakilin sisäpiha vuonna 2009, ennen sisällissotaa: '
-            + 'kiviseinässä on kaiverrettuja kaarisyvennyksiä ja '
-            + 'värilasi-ikkunoita, ja pihan keskellä on matala marmorinen '
-            + 'suihkulähde.',
-          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Saadallah al-Jabiri square, Aleppo (3).jpg',
+          selite: 'Saadallah al-Jabirin aukio uudessa keskustassa ennen '
+            + 'sisällissotaa: laaja laatoitettu kenttä, jonka laidoilla '
+            + 'seisovat 1900-luvun toimistotalot ja hotellit.',
+          lahde: 'Preacher lad, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -26784,18 +26776,18 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
-          tiedosto: 'Irán (RPS 10-10-2019) Aprendiendo de los mayores.jpg',
-          selite: 'Ruokakoju Teheranissa: kahdessa suuressa kuparipadassa on '
-            + 'vihreää yrttikeittoa ja vaaleaa keitosta, ja mies nostaa '
-            + 'keitosta kauhalla valkoiseen kulhoon.',
-          lahde: 'Raimundo Pastor y Pilar Pastor, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Milad Tower Under Sun Rays.jpg',
+          selite: 'Teheran ylhäältä pilvien raoista lankeavissa '
+            + 'auringonsäteissä: kaupunki jatkuu horisonttiin ja keskeltä '
+            + 'nousee 435-metrinen Milad-torni.',
+          lahde: 'Salehi1990mohsen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: '30 Tir street in Tehran 2019 by Mardetanha (101).jpg',
-          selite: 'Katukoju 30 Tir -kadulla Teheranissa: esiliinaan pukeutunut '
-            + 'myyjä lappaa leveällä lastalla paistettuja perunanlohkoja '
-            + 'kuviolliseen pahvivuokaan.',
-          lahde: 'Mardetanha, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Azadi Square (2022).jpg',
+          selite: 'Azadin aukio: marmorilla verhottu Azadi-torni seisoo '
+            + 'nurmikentän keskellä, ja sen ympäri kiertää leveä '
+            + 'monikaistainen liikenneympyrä.',
+          lahde: 'Parsa 2au, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -30250,19 +30242,18 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jun Matsuo, Wikimedia Commons (CC BY 3.0)',
         },
         {
-          tiedosto: 'Ameya-yokocho on a March morning, Tokyo, 2016.jpg',
-          selite: 'Ameya-yokochōn kuja Tokiossa maaliskuun aamuna: kapea '
-            + 'katu on täynnä ihmisiä, kalatiskillä on riveittäin '
-            + 'lohifileitä ja pakattuja mereneläviä, ja kujan yli kohoaa '
-            + 'rautainen ratasilta.',
-          lahde: 'DimiTalen, Wikimedia Commons (CC0)',
+          tiedosto: 'Shibuya Crossing, Aerial.jpg',
+          selite: 'Shibuyan risteys ylhäältä illalla: viisi suojatietä '
+            + 'leikkaa aukion ristiin, ja ympäröivien talojen seinät ovat '
+            + 'täynnä valomainoksia.',
+          lahde: 'David Kernan, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          tiedosto: 'Chopsticks for sale in bulk (14163826889).jpg',
-          selite: 'Syömäpuikkoja myynnissä Kappabashi-dōrin varrella, '
-            + 'jokainen nippu omassa kuviollisessa paperivyössään: '
-            + 'kirsikankukkia, vaahteranlehtiä, kurkia ja kaneja.',
-          lahde: 'Steven-L-Johnson, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'Tokyo Skyline20210123.jpg',
+          selite: 'Tokion siluetti auringonlaskun jälkeen: etualalla '
+            + 'valaistut korttelit, keskellä Shinjukun pilvenpiirtäjät ja '
+            + 'vasemmalla horisontissa Fuji-vuoren tumma kartio.',
+          lahde: 'Nryate, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -35482,11 +35473,11 @@ export const KULTTUURI_KATEGORIAT = {
         + 'vaikka moni kanava on sittemmin täytetty kaduiksi.',
       kansikuvat: [
         {
-          tiedosto: 'Lascar Detail of the elaborated central prang - Wat Arun (4509142495).jpg',
-          selite: 'Wat Arunin tornin koristelua läheltä: laastiin '
-            + 'upotetuista posliininpaloista ladottuja kukkia ja '
-            + 'demonipatsaita, jotka kannattelevat tornia käsillään.',
-          lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'Wat Phra Kaew by Ninara TSP edit crop.jpg',
+          selite: 'Wat Phra Kaew Suurpalatsin ulkopihalta: valkoisen '
+            + 'muurin takaa kohoavat kullattu chedi, kirjastopaviljonki '
+            + 'ja temppelisalien monikerroksiset tiilikatot.',
+          lahde: 'Original image: Ninara from Helsinki, Finland. Edit: TSP, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Damnoen Saduak - Marché flottant.jpg',
@@ -35496,11 +35487,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'PA, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'A roof of a building at the Grand Palace, Bangkok, sunrise, 2017.jpg',
-          selite: 'Suurpalatsin katto auringonnousussa: katonharjan '
-            + 'sarvimaiset chofa-koristeet piirtyvät tummina '
-            + 'oranssinkeltaista taivasta vasten.',
-          lahde: 'Bjørn Erik Pedersen, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Chao Phraya River Skyline - panoramio.jpg',
+          selite: 'Bangkok korkealta: Chao Phraya kaartaa kaupungin läpi, '
+            + 'rannoilla vuorottelevat matalat peltikattoiset korttelit ja '
+            + 'valkoiset asuintornit.',
+          lahde: 'Piyatad, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       /*

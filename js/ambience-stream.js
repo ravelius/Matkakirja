@@ -12,6 +12,9 @@ import {
   valittuTaiOletus, jaaAlku, tyyppiKori, kaupunkiKori, maaKori,
 } from './aani-ehdokkaat.js';
 import { aaniOsoite, onPeilista, peiliPetti } from './media.js';
+// Lukijaäänen piiri kuuluu samaan sanelun kovaan taukoon kuin
+// tehosteet ja maisema (ks. taukoaSanelunAjaksi).
+import { jatkaPuhePiiri, taukoaPuhePiiri } from './puhe.js';
 
 // Arvottu ääni pysyy samana koko käynnin ajan: syncAmbience kutsuu
 // playPlaceAmbiencea jokaisella piirrolla, eikä ääni saa vaihtua tai
@@ -989,6 +992,13 @@ export function nollaaHiljennykset() {
  * Sanelun ajaksi ambienssisoitin pysäytetään OIKEASTI ja jatketaan
  * perästä sanelun päätyttyä. Pause-elvytys (ks. pause-kuuntelija)
  * ohittaa tahallisen tauon lipun perusteella.
+ *
+ * MYÖS LUKIJAÄÄNEN PIIRI (omistajan havainto 21.8.2026: "pöllön puhe
+ * ei ohjaudu bluetooth-kuulokkeisiin"). Se jäi tähän asti käyntiin, ja
+ * käynnissä oleva WebAudio-konteksti pitää sivun äänisession kiinni
+ * mikrofonin rinnalla — iOS ei silloin palauta Bluetooth-kuuloketta
+ * musiikkiprofiiliin, ja sanelun jälkeen luettu vastaus soi laitteen
+ * kaiuttimesta (js/puhe.js taukoaPuhePiiri).
  */
 let sanelunTauko = false;
 
@@ -996,6 +1006,7 @@ export function taukoaSanelunAjaksi() {
   if (sanelunTauko) return;
   sanelunTauko = true;
   sfx.taukoaKonteksti?.();
+  taukoaPuhePiiri();
   const oma = nykyinen;
   const audio = oma?.audio;
   if (audio && !audio.paused) {
@@ -1012,6 +1023,7 @@ export function jatkaSanelunJalkeen() {
   if (!sanelunTauko) return;
   sanelunTauko = false;
   sfx.jatkaKonteksti?.();
+  jatkaPuhePiiri();
   const oma = nykyinen;
   if (!oma?.saneluTauolla) return;
   oma.saneluTauolla = false;

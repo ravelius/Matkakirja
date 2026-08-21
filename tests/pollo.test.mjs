@@ -31,6 +31,7 @@ import {
   poimiLohkot,
   poistaKasiteMerkinnat,
   tekstiIlmanSpoilereita,
+  valitseSisainenSyote,
   vastauskuvanAihe,
 } from '../js/pollo.js';
 
@@ -1053,4 +1054,45 @@ test('vastauskuvanAihe: puolikas merkintä ei kelpaa aiheeksi', () => {
 
 test('vastauskuvanAihe: tyhjästä tulee null', () => {
   assert.equal(vastauskuvanAihe('', ''), null);
+});
+
+/*
+ * SANELUN MIKROFONIVALINTA (omistajan tilaus 21.8.2026). Bluetooth-mikin
+ * avaaminen pudottaa kuulokkeet musiikkiprofiilista puheluprofiiliin, ja
+ * silloin pöllön vastaus soi laitteen kaiuttimesta. Valinnan pitää siis
+ * osua sisäänrakennettuun aina kun laitelista sen kertoo — ja pysyä
+ * erossa arvailusta silloin kun se ei kerro.
+ */
+test('mikkivalinta ohittaa bluetoothin ja osuu sisäänrakennettuun', () => {
+  const valinta = valitseSisainenSyote([
+    { kind: 'audioinput', deviceId: 'default', label: 'Default — AirPods Pro (Bluetooth)' },
+    { kind: 'audioinput', deviceId: 'bt1', label: 'AirPods Pro (Bluetooth)' },
+    { kind: 'audioinput', deviceId: 'sisa1', label: 'iPhone-mikrofoni (Built-in)' },
+    { kind: 'audiooutput', deviceId: 'ulos1', label: 'MacBook Pro -kaiuttimet (Built-in)' },
+  ]);
+  assert.equal(valinta?.deviceId, 'sisa1');
+});
+
+test('mikkivalinta hylkää handsfree-kuulokkeen myös ilman sisäistä osumaa', () => {
+  const valinta = valitseSisainenSyote([
+    { kind: 'audioinput', deviceId: 'bt1', label: 'Jabra Elite (hands-free)' },
+    { kind: 'audioinput', deviceId: 'usb1', label: 'Yeti Nano' },
+  ]);
+  assert.equal(valinta?.deviceId, 'usb1');
+});
+
+test('nimettömistä laitteista ei arvata — oletus jää voimaan', () => {
+  // Ennen ensimmäistä mikrofonilupaa selain ei kerro laitteiden nimiä.
+  assert.equal(valitseSisainenSyote([
+    { kind: 'audioinput', deviceId: 'a', label: '' },
+    { kind: 'audioinput', deviceId: 'b', label: '' },
+  ]), null);
+  assert.equal(valitseSisainenSyote([]), null);
+  assert.equal(valitseSisainenSyote(null), null);
+});
+
+test('pelkkä bluetooth-mikki ei kelpaa valinnaksi', () => {
+  assert.equal(valitseSisainenSyote([
+    { kind: 'audioinput', deviceId: 'bt1', label: 'AirPods Pro' },
+  ]), null);
 });
