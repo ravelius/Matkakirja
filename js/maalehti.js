@@ -11,6 +11,7 @@
 
 import { avaaLippuikkuna } from './liput.js';
 import { asetaKuva } from './media.js';
+import { avaaKarttaSuurennos } from './nahtavyydet.js';
 import {
   lippuUrl, lippuVara, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
@@ -288,6 +289,79 @@ export function naytaVdemInfo(ui, demokratia) {
 }
 
 /**
+ * MAAN KARTTA KOKORUUDULLE (omistajan tilaus 21.8.2026: "maan kartta
+ * saisi olla klikattavissa koko näytölle").
+ *
+ * EI OMAA KATSELINTA. Kokoruutu on sama kuin kaupunkilehden
+ * kohdekartassa (js/nahtavyydet.js: avaaKarttaSuurennos): sama tumma
+ * kortti, sama zoom ja panorointi, samat +/−-napit ja sama sulku
+ * pelkästä rastista ja Escapesta. Myös avausele on sama — napautus,
+ * Enter tai väli — ja alakulman "⤢ Kokoruutu" -lappu kertoo sen
+ * ennen napautusta.
+ *
+ * KEHYS RAKENNETAAN VASTA AVATTAESSA. Sivun oma karttakehys ei kelpaa
+ * kokoruudun pohjaksi: sen sisällä on kuvan lisäksi lähderivi, joten
+ * sen laatikko ei ole kartan kuvasuhde, ja v977:n mitoitus (kelluva
+ * tai täysleveä kartta) kuuluu sivulle eikä kokoruudulle. Tässä
+ * tehdään pelkkä ikkuna kartan ympärille: kotelo pisteineen muuttuu
+ * kloonina zoomaavaksi lavaksi, ja kuvasuhde tulee mitatusta
+ * kotelosta. Sivun kartta pysyy koskemattomana.
+ *
+ * ELE EI SAA HÄIRITÄ SIVUN VIERITYSTÄ. Kartta on lehtisivun keskellä
+ * tekstin seassa, ja sen päältä pyyhkäistään sivua kuten muualtakin.
+ * Siksi avaus luetaan osoitintapahtumien MITATUSTA MATKASTA:
+ * paikallaan pysynyt sormi on napautus, liikkunut on vieritys.
+ */
+function kytkeMaakartanSuurennos(ui, kehys, kotelo, kartta, nimi) {
+  kehys.classList.add('kartta-avattava');
+  kehys.tabIndex = 0;
+  kehys.setAttribute('role', 'group');
+  kehys.setAttribute('aria-label', `${nimi} kartalla. Avaa kokoruudulle Enterillä.`);
+  // Lappu kuuluu KUVAN alakulmaan eikä kehyksen: kehyksen alareunassa
+  // on vielä lähderivi, jonka päälle vihje asettuisi.
+  const vihje = html('div', 'kartta-suurennusvihje', '⤢ Kokoruutu');
+  vihje.setAttribute('aria-hidden', 'true');
+  kotelo.appendChild(vihje);
+  const avaa = () => {
+    const mitat = kotelo.getBoundingClientRect();
+    if (!(mitat.width > 0) || !(mitat.height > 0)) return;
+    const iso = html('div', 'kartta-kehys kartta-kuvakehys');
+    // Kehys on container-type: size -kokokontti, joten sen korkeus ei
+    // tule sisällöstä vaan kuvasuhteesta (sama kuin kohdekartassa).
+    iso.style.aspectRatio = `${mitat.width.toFixed(2)} / ${mitat.height.toFixed(2)}`;
+    const lava = kotelo.cloneNode(true);
+    lava.classList.add('kartta-lava');
+    iso.appendChild(lava);
+    avaaKarttaSuurennos(ui, iso, kartta, { mitat });
+  };
+  let napautus = null;
+  kehys.addEventListener('pointerdown', (e) => {
+    if (!e.isPrimary || (e.pointerType === 'mouse' && e.button !== 0)) {
+      napautus = null;
+      return;
+    }
+    napautus = { x: e.clientX, y: e.clientY };
+  });
+  kehys.addEventListener('pointercancel', () => { napautus = null; });
+  kehys.addEventListener('pointerup', (e) => {
+    const alku = napautus;
+    napautus = null;
+    if (!alku || !e.isPrimary) return;
+    if (Math.hypot(e.clientX - alku.x, e.clientY - alku.y) > 6) return;
+    if (e.target.closest?.('button, a')) return;
+    avaa();
+  });
+  // Enter ja väli tekevät näppäimistöllä saman kuin napautus; sama
+  // näppäin myös sulkee, jottei fokus tarvitse siirtyä mihinkään.
+  kehys.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+    e.preventDefault();
+    if (ui.lehtitila.kulttuuriKuvaEl) ui.suljeKulttuuriKuva();
+    else avaa();
+  });
+}
+
+/**
  * Yhden kategorian nostot: johdanto ja sen alla kortit.
  *
  * Kohde on oletuksena aihesivun oma elementti; otsikon ja sitaatin
@@ -362,6 +436,7 @@ export function piirraMaaEtusivu(ui, kategoria) {
     kotelo.appendChild(piste);
   }
   kehys.appendChild(kotelo);
+  kytkeMaakartanSuurennos(ui, kehys, kotelo, kartta, kategoria.nimi);
   kehys.appendChild(html('p', 'lahde', kartta.lahde));
   kohde.appendChild(kehys);
   ui.arrivalMaa.hidden = false;
