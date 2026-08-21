@@ -491,6 +491,16 @@ export const RAAMATTU = {
           + 'kartat ja sovelluksen osat (miniatyyrit, liput, '
           + 'kohdekartat) pysyvät repossa; git-historian purku on '
           + 'erillinen kertapäätös (työjonossa).',
+        'KAIKKI UUSI MEDIA ÄMPÄRIIN, EI REPOON (omistaja 21.8.2026: '
+          + '"Kaikki aina ämpäriin eikä repoon"): tästä eteenpäin '
+          + 'KAIKKI uusi media — myös itse generoitu (julisteet, '
+          + 'äänitallenteet, tulevat kuvasarjat) — viedään R2-'
+          + 'ämpäriin, josta peli hakee sen PEILI_JUUREN kautta; '
+          + 'repoon ei lisätä uusia mediatiedostoja. Tämä tiukentaa '
+          + '19.8. linjausta: myös generoitu aineisto kuuluu '
+          + 'ämpäriin. Olemassaolevat repossa asuvat assetit '
+          + '(kohdekartat, miniatyyrit, liput) siirretään erikseen '
+          + 'jos omistaja niin päättää.',
         'Miniatyyripiirrokset generoidaan yhdellä otolla per kohde '
           + '(kustannuslinjaus 16.8.2026).',
         'MATKAOPAS ON NYKYTIETOA (omistaja 20.8.2026): '
