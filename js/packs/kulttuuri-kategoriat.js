@@ -38261,4 +38261,505 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * HANOI (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei ollut
+   * säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen tätä.
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 21.8.2026): Hanoi, Imperial Citadel of Thăng Long, Flag
+   * Tower of Hanoi, Temple of Literature Hanoi, Hoàn Kiếm Lake, Ngọc
+   * Sơn Temple, Old Quarter Hanoi, Đồng Xuân Market, One Pillar
+   * Pagoda, Long Biên Bridge, St. Joseph's Cathedral Hanoi, Hanoi
+   * Opera House, Battle of Hanoi (1873), Francis Garnier, Hạ Long Bay
+   * ja Pho.
+   *
+   * HẠ LONGIN LAHTI JA PHỞ OVAT LEHDESSÄ VISAN TAKIA. Laudan
+   * kulttuurivisa (asia-questions.js) kysyy Hanoilta viittä asiaa, ja
+   * kolme niistä (Vietnamin pääkaupunki, moottoripyörät,
+   * Kirjallisuuden temppeli maan ensimmäisenä yliopistona) löytyi
+   * lehdestä jo valmiiksi. Kaksi ei: Hạ Longin lahtea eikä phởtä
+   * mainita en-Wikipedian "Hanoi"-artikkelissa lainkaan. Ne haettiin
+   * siksi omista artikkeleistaan ja kirjoitettiin matkaoppaan
+   * jaksoihin 2 ja 3 — lahti sinne, missä puhutaan alueen
+   * rakenteesta, ja keitto sinne, missä puhutaan kantosauvakaupasta,
+   * jonka tuote se alun perin oli. Minitehtävä (nimi Hà Nội, 1831) ei
+   * kosketa kumpaakaan visan aihetta.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 21.8.2026: EI Vietnamin sotaa eikä
+   * nykypolitiikkaa missään muodossa, Ranskan vuoden 1873 valtaus
+   * neutraalina historiana ilman sankarikehystä kummallekaan
+   * osapuolelle, uskonto historiallis-kulttuurisena ilmiönä.
+   * Pois on siksi jätetty kokonaan: Long Biênin sillan pommitukset
+   * 1967 ja 1972, Đồng Xuânin torin taistelu helmikuussa 1947,
+   * katolisen kirkon asema vuoden 1954 jälkeen ja vuoden 2008
+   * mielenosoitukset katedraalin vieressä, keisarilinnan rakennus D67
+   * bunkkereineen sekä Vanhankaupungin kiinalaisväestön poismuutto
+   * 1970-luvun lopulla. Nykytosiasiat (liikenneluvut, hallintoalueen
+   * koko, katukauppatilastot) ovat matkaoppaan jaksoissa eivätkä
+   * nostoissa — sama "Antaa olla" -periaate kuin Nikosiassa.
+   *
+   * KUUSI RISTIRIITAA, JOTKA ON RATKAISTU TÄSSÄ:
+   * 1. VUODEN 1873 PÄIVÄMÄÄRÄ. "Battle of Hanoi (1873)" -artikkelin
+   *    infoboksi, johdanto ja luokitus sanovat 20. marraskuuta 1873,
+   *    mutta saman artikkelin Battle-osion proosa puhuu 19. ja 20.
+   *    lokakuusta. Marraskuuta tukevat riippumattomasti myös
+   *    "Hanoi"-artikkelin infoboksi (established_date1) ja "Francis
+   *    Garnier", jonka päivä päivältä etenevä kertomus on: lähtö
+   *    Saigonista 11. lokakuuta, perillä 5. marraskuuta,
+   *    täydennysjoukot 12. marraskuuta, hyökkäys 20. marraskuuta
+   *    aamunkoitteessa. Nostossa K4 on siksi marraskuu.
+   * 2. VALTAUKSEN LOPPUTULOS. Faktakoosteen luonnos päätti K4:n
+   *    siihen, että kaupunki siirtyi Ranskan haltuun. Lähteet sanovat
+   *    toisin: Garnier kaatui 21. joulukuuta 1873, Philastre lähetettiin
+   *    lopettamaan luvaton sotaretki, joukot poistuivat alkuvuodesta
+   *    1874 ja 15. maaliskuuta 1874 solmittu Saigonin sopimus palautti
+   *    vallatut kaupungit. Nosto on kirjoitettu tämän mukaan.
+   * 3. HÀ NỘIN VÄKILUKU. Artikkelin johdanto sanoo 8 807 523 (2025) ja
+   *    infoboksi 8 855 946 (2025). Oppaassa lukee "runsaat 8,8
+   *    miljoonaa", joka kattaa molemmat.
+   * 4. VUOSIKESKILÄMPÖ. Leipäteksti sanoo 23,6 astetta, sääruutu 23,9.
+   *    Kumpaakaan ei ole nostettu jaksoon 5, jossa käytetään vain
+   *    sääruudun kuukausilukuja.
+   * 5. VUOSISADE JA SADEPÄIVÄT. Sääruutu antaa 1 670,1 mm ja 147,9
+   *    sadepäivää, leipäteksti toisesta lähteestä 1 612 mm ja 114
+   *    sadepäivää. Jaksossa 5 ei ole vuosisummaa lainkaan, vain
+   *    kuukausilukuja samasta sääruudusta.
+   * 6. PAUL DOUMERIN KAUSI. Leipäteksti sanoo 1898–1902, saman
+   *    virkkeen oma lähdeviite (Vann 2007) 1897–1902. Jaksossa 4
+   *    lukee "vuosisadan vaihteessa" ilman vuosilukuja.
+   *
+   * OMA PÄÄTTELY, JOKA ON MERKITTY TÄHÄN: matkaoppaan johdantokappaleen
+   * etäisyydet (järveltä torille runsas kilometri, temppelille pari
+   * kilometriä, katedraalille neljäsataa metriä) on laskettu itse
+   * kohteiden infoboksikoordinaateista, eivät Wikipedian tekstiä.
+   * Wikipedia sanoo suoraan vain Đồng Xuânin torin etäisyyden
+   * (600 metriä pohjoiseen), ja se täsmää omaan laskelmaan.
+   *
+   * K1 JA H2 KOSKEVAT MOLEMMAT KAUPUNGIN NIMIÄ, mutta ne on jaettu
+   * tarkoituksella kahtia: K1 kertoo vuoden 1010 perustamislegendan ja
+   * lohikäärmeen, H2 koko nimiketjun 400-luvulta 1831:een. Vuosi 1010
+   * ja nimi Thăng Long ovat molemmissa, mutta legenda vain K1:ssä ja
+   * muurin mitat vain H2:ssa.
+   *
+   * KUVATOISTO, JOKA ON HYVÄKSYTTY (sama linja kuin Medinassa ja
+   * Samarkandissa): Kirjallisuuden temppeli esiintyy kannessa (Khuê
+   * Vănin paviljonki läheltä), avauskuvissa (steelapaviljonki),
+   * H1-nostossa (steelat) ja nähtävyysjutussa (paviljonki
+   * kaukaa) — neljä eri tiedostoa ja neljä eri näkökulmaa.
+   * Keisarilinna on kannessa (Đoan Môn), K1-nostossa
+   * (lohikäärmeportaan pää), H4-nostossa (Pohjoisportti) ja jutussa
+   * (lohikäärmeportaat kokonaan). Hoàn Kiếm on kannessa
+   * (Kilpikonnatorni läheltä), K3-nostossa (Thê Húc -silta), jakson 5
+   * kuvassa (Kilpikonnatorni ja postitalo kaukaa) ja Ngọc Sơnin
+   * jutussa (temppeli saarellaan); Ngọc Sơnin portin tiikerireliefi
+   * on lisäksi avauskuvana. Lippulinna on matkaoppaan avauskuvana ja
+   * omassa jutussaan (kaksi eri kuvaajaa, eri kuvakulma). Long Biênin
+   * silta on jakson 1 kuvassa (rakentajakilpi) ja omassa jutussaan
+   * (ristikko), Đồng Xuânin tori vain jutussaan ja Pyhän Joosefin
+   * katedraali jakson 4 kuvassa ja jutussaan.
+   *
+   * SELITTEET OVAT YHDEN VIRKKEEN MITTAISIA. Kaksi kuvaa vaatii
+   * pakollisen selityksen, ja se on mahdutettu samaan virkkeeseen:
+   * vuoden 1873 kaiverrus on ranskalaisen kuvalehden oma sivu omine
+   * kuvatekstiriveineen, ja vuoden 1873 kartta on vuonna 1902 piirretty
+   * jäljennös omine nimiöineen.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava.
+   * Talon menetelmä on Open-Meteon arkisto (ERA5, 1991–2020), ja
+   * hakuskripti kirjoitettiin ja ajettiin, mutta rajapinta vastasi
+   * 429:llä ("Daily API request limit exceeded. Please try again
+   * tomorrow") — vuorokausikiintiö oli käytetty jaetusta osoitteesta,
+   * eikä se nollaudu ennen UTC-vuorokauden vaihdetta. Sama tilanne oli
+   * Samarkandissa (v965). Riviä ei ole KEKSITTY muusta lähteestä,
+   * koska vuosigraafin lähderivi lupaa nimenomaan ERA5:n; ilman riviä
+   * lehti näkyy ilman säätä, kuten saatiedot.js:n alkukommentti sanoo.
+   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian Hanoi-artikkelin
+   * omaan sääruutuun (Vietnam Institute for Building Science and
+   * Technology, mittauspiste "downtown Hanoi"), ja se on sanottu
+   * jaksossa ääneen. Kun ERA5-rivi lisätään, jakso 5 on kirjoitettava
+   * rivin omista luvuista.
+   *
+   * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
+   */
+  hanoi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Hanoi',
+      johdanto: 'Lohikäärmekaupunki Punaisenjoen mutkassa. Tuhat vuotta '
+        + 'pääkaupunkina, ja yhä sen kadut kantavat käsityöläiskiltojen '
+        + 'nimiä: bambukatu, kuparikatu, purjekankaiden katu.',
+      kansikuvat: [
+        {
+          tiedosto: 'Hoan Kiem Lake, Turtle Tower, Daytime (20231223) (53489228584).jpg',
+          selite: 'Kilpikonnatorni seisoo ruohoisella saarekkeella keskellä '
+            + 'Hoàn Kiếm -järveä, ja sen takaa nousevat nykykaupungin '
+            + 'lasijulkisivut.',
+          lahde: 'Takeshi Aida from Hong Kong, Hong Kong, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Doan Mon Gate 1.jpg',
+          selite: 'Keisarilinnan eteläinen pääportti Đoan Môn: pitkä '
+            + 'kivimuuri viisine holvikäytävineen ja sen päällä '
+            + 'Nguyễn-kauden paviljonki.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Constellation of Literature pavilion - Temple of Literature, Hanoi - DSC04693.JPG',
+          selite: 'Kirjallisuuden temppelin Khuê Vănin paviljonki alhaalta '
+            + 'kuvattuna: punaiseksi maalattu puuyläkerta, pyöreä ikkuna ja '
+            + 'kaiverretut kaiteet.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: temppelin portin tiikeri, oopperatalo ja
+       * steelapaviljonki — kansanuskoa, ranskalaisaikaa ja
+       * kungfutselaista oppineisuutta samalla rivillä.
+       *
+       * LONG BIÊNIN SILTA JÄI AVAUSKUVISTA POIS, vaikka se oli
+       * ensimmäinen valinta: sillasta on jo kaksi kuvaa lehdessä
+       * (matkaoppaan jakson 1 rakentajakilpi ja sillan oma
+       * nähtävyysjuttu), ja sama tiedosto saa esiintyä kaupungissa
+       * vain kerran.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Ngoc Son Temple, Hanoi (5) (38496236631).jpg',
+          selite: 'Ngọc Sơnin temppelin portin reliefi: raidallinen tiikeri '
+            + 'laskeutuu kalliolta, ja molemmin puolin on pystyrivi '
+            + 'kaiverrettuja merkkejä.',
+          lahde: 'Richard Mortel from Riyadh, Saudi Arabia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Hanoi Opera House - 2003.jpg',
+          selite: 'Oopperatalon keltavalkoinen julkisivu pylväikköineen ja '
+            + 'tummine kupoleineen kadun toiselta puolelta nähtynä.',
+          lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Temple of Literature, Hanoi by Xiquinho Silva 02.jpg',
+          selite: 'Kirjallisuuden temppelin steelapaviljonki tiilikattoineen, '
+            + 'ja sen holvin takaa erottuu kivikilpikonnan selässä lepäävä '
+            + 'steela.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Nouseva lohikäärme',
+          tiedosto: 'Dragon (Le dynasty, Vietnam).jpg',
+          teksti: 'Vuonna 1010 Lý-suvun ensimmäinen hallitsija Lý Thái Tổ '
+            + 'siirsi Đại Việtin pääkaupungin vanhalle Đại La '
+            + '-linnoituspaikalle Punaisenjoen rannalle. Hän kertoi '
+            + 'nähneensä joelta nousevan lohikäärmeen ja antoi paikalle '
+            + 'nimen Thăng Long, nouseva lohikäärme. Lohikäärme ei ollut '
+            + 'oikku: kaupungin vanhemmissakin nimissä toistuu sana long, '
+            + 'ja se viittaa joen kaarteeseen kaupungin ympärillä — '
+            + 'mutkaan, joka nähtiin lohikäärmeen selkänä. Nimi on '
+            + 'vaihtunut sen jälkeen monta kertaa, mutta lisänimi lentävän '
+            + 'lohikäärmeen kaupunki on jäänyt.',
+          selite: 'Kính Thiênin valtaistuinsalin portaan kivilohikäärme '
+            + 'vuodelta 1467: kita auki, harja aaltoilee ja ruumis '
+            + 'laskeutuu portaiden reunaa alas.',
+          lahde: 'Viethavvh, Wikimedia Commons (PD)',
+          wiki: 'Hanoi',
+        },
+        {
+          otsikko: 'Kolmekymmentäkuusi katua',
+          tiedosto: 'Tonkin - Hanoï - Phố Hàng Mắm.jpg',
+          teksti: 'Hoàn Kiếm -järven pohjoispuolella on Vanhakaupunki, jota '
+            + 'sanotaan myös kolmeksikymmeneksikuudeksi kaduksi. '
+            + 'Käsityöläiset tulivat ympäröivistä kylistä ja asettuivat '
+            + 'ammattikunnittain omille kujilleen, ja niin kadut saivat '
+            + 'nimensä: useimmat alkavat sanalla hàng, tavara. Hàng Tre on '
+            + 'bambutavaran katu ja Hàng Đồng kuparitavaran. Osa kaduista '
+            + 'myy yhä sitä, mistä on nimensä saanut; osalla nimi jäi '
+            + 'jäljelle yksin, sillä purjekankaiden Hàng Buồm on nykyään '
+            + 'makeisten ja leivonnaisten katu.',
+          selite: 'Hàng Mắmin katu 1900-luvun alussa: matalia kauppahuoneita '
+            + 'markiiseineen, kantajia kori kummassakin päässä olkapuuta ja '
+            + 'kärryjä katuojan vieressä.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Old Quarter, Hanoi',
+        },
+        {
+          otsikko: 'Miekka joka palautettiin',
+          tiedosto: 'The Huc Bridge 2018.jpg',
+          teksti: 'Legendan mukaan keisari Lê Lợi souti kaupungin keskellä '
+            + 'olevalla järvellä, kun Kim Quy, kultainen kilpikonnajumala, '
+            + 'nousi pinnalle ja pyysi takaisin taikamiekkaa. '
+            + 'Lohikäärmekuningas oli antanut sen Lê Lợille Ming-Kiinaa '
+            + 'vastaan käytyyn sotaan, ja kun sota oli ohi, miekka kuului '
+            + 'takaisin. Lê Lợi luovutti sen, ja järvi sai nimen Hoàn Kiếm, '
+            + 'palautetun miekan järvi. Pienellä saarella keskellä vettä '
+            + 'seisoo yhä Kilpikonnatorni. Järvi on seitsemänsataa metriä '
+            + 'pitkä ja syvimmilläänkin vain kaksi metriä syvä.',
+          selite: 'Punainen Thê Húc -silta kaartuu rannalta Ngọc Sơnin '
+            + 'temppelin saarelle, ja sen paalut heijastuvat tyyneen '
+            + 'vihreään veteen.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hoàn Kiếm Lake',
+        },
+        {
+          otsikko: 'Aamu jolloin portit murtuivat',
+          tiedosto: 'Capture of hanoi 1873.jpg',
+          teksti: 'Marraskuussa 1873 ranskalainen laivastoluutnantti Francis '
+            + 'Garnier saapui Hanoihin kahdella tykkiveneellä. Hänen '
+            + 'tehtävänään oli selvittää kauppias Jean Dupuisin ja '
+            + 'kaupungin viranomaisten riita, mutta neuvottelut eivät '
+            + 'edenneet. Garnier päätti ilman esimiestensä lupaa vallata '
+            + 'linnoituksen. Aamunkoitteessa 20. marraskuuta hänen '
+            + 'sadankahdeksankymmenen miehensä joukko hyökkäsi kahdesta '
+            + 'eteläportista, ja alle tunnissa Ranskan lippu oli tornissa. '
+            + 'Puolustusta johtanut kenraali Nguyễn Tri Phương haavoittui '
+            + 'ja jäi vangiksi. Valtaus jäi lyhyeksi: Pariisi ei ollut sitä '
+            + 'käskenyt, ja kaupunki palautettiin vuoden 1874 sopimuksessa.',
+          selite: 'Ranskalaisen kuvalehden kaiverrus vuoden 1873 '
+            + 'valtauksesta omine kuvatekstiriveineen: hyökkääjät ovat '
+            + 'vallihaudan sillalla ja linnoituksen portti on kiinni.',
+          lahde: 'Alexandre Ferdinandus (1850-1888), Wikimedia Commons (PD)',
+          wiki: 'Battle of Hanoi (1873)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Flag Tower of Hanoi 1.jpg',
+          selite: 'Hanoin lippulinna kohoaa kolmiportaisen jalustansa päältä, '
+            + 'ja sen tiiliseinässä on rivi viuhkanmuotoisia ikkunoita.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Hanoi on Vietnamin pääkaupunki ja maan toiseksi suurin '
+          + 'kaupunki, runsaat 8,8 miljoonaa asukasta. Kävelijälle se on '
+          + 'silti pieni, sillä vanha ydin mahtuu kolmen kilometrin '
+          + 'kaistalle. Idässä on Vanhakaupunki kujineen ja toreineen, '
+          + 'lännessä keisarillinen alue linnoineen ja lippulinnoineen, ja '
+          + 'niiden välissä ranskalaisajan leveät bulevardit ja '
+          + 'huvilakorttelit. Hoàn Kiếm -järveltä on Đồng Xuânin torille '
+          + 'runsas kilometri pohjoiseen, Kirjallisuuden temppelille pari '
+          + 'kilometriä länteen ja Pyhän Joosefin katedraalille vain '
+          + 'neljäsataa metriä.',
+        artikkeli: {
+          nimi: 'Matkailijan Hanoi',
+          taitto: 'opas',
+          teksti: 'Vanhakaupunki idässä, keisarilinna lännessä ja niiden '
+            + 'välissä ranskalaisajan bulevardit — kaikki kolmen kilometrin '
+            + 'sisällä.',
+          nosto: 'Kirjallisuuden temppelin kivikilpikonnat kantavat 1 307 '
+            + 'tohtorin nimeä. Vanhin koe on vuodelta 1442, viimeinen '
+            + 'vuodelta 1779.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Rautatie tuli Hanoihin ranskalaisten mukana. '
+                + 'Reunification Express -radan rakentaminen alkoi vuonna '
+                + '1899 ja valmistui vasta 1936; nykyään samaa rataa pitkin '
+                + 'pääsee Ho Chi Minh Cityyn, 1 726 kilometriä ja noin 33 '
+                + 'tuntia. Kaupungin läpi kulkee kuusi valtakunnallista '
+                + 'rataa. Katuja ja teitä on 1 370 ja niitä yhteensä yli '
+                + '2 300 kilometriä, siltoja 573 ja tunneleita 115. '
+                + 'Liikkuminen tapahtuu valtaosin kahdella pyörällä: '
+                + 'heinäkuussa 2022 rekisterissä oli yli 7,6 miljoonaa '
+                + 'ajoneuvoa, joista runsaat 6,4 miljoonaa oli '
+                + 'moottoripyöriä ja vain miljoona autoja. Metro on '
+                + 'uutuus — ensimmäinen linja avattiin marraskuussa 2021 '
+                + 'ja toinen elokuussa 2024.',
+              kuva: {
+                tiedosto: 'Long Biên bridge, contructor panel.jpg',
+                selite: 'Long Biênin sillan pilarissa on valurautainen '
+                  + 'kilpi, jossa lukee vuodet 1899–1902 ja rakentajan nimi '
+                  + 'Daydé & Pillé, Paris.',
+                lahde: 'joxeankoret, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Hanoi on Punaisenjoen suistotasangolla '
+                + 'Pohjois-Vietnamissa. Vanha ydin jakautuu kahteen '
+                + 'kaupunginosaan: Hoàn Kiếmissä ovat järvi ja '
+                + 'Vanhakaupunki, Ba Đìnhissä keisarilinnan alue ja Yhden '
+                + 'pilarin pagodi. Virallinen vanhakaupunki on vain sata '
+                + 'hehtaaria ja 76 katua kymmenen kaupunginosan alueella. '
+                + 'Hallintoalue on aivan toista kokoluokkaa: elokuun alusta '
+                + '2008 siihen liitettiin Hà Tâyn maakunta ja joukko '
+                + 'naapurikuntia, ja pinta-ala kasvoi 334 470 hehtaariin. '
+                + 'Ero näkyy korkeuslukemissakin — alavimmillaan alue on '
+                + 'merenpinnan tasolla, korkeimmillaan 1 296 metrissä Ba '
+                + 'Vìn vuorilla kaukana ydinkeskustan ulkopuolella. '
+                + 'Suistosta koilliseen, Quảng Ninhin maakunnan '
+                + 'rannikolla, aukeaa Hạ Longin lahti, jonka nimi '
+                + 'tarkoittaa laskeutuvaa lohikäärmettä — vastaparia '
+                + 'kaupungin omalle nousevalle lohikäärmeelle. Lahdesta '
+                + 'kohoaa 1 969 enimmäkseen kalkkikivistä saarta ja '
+                + 'luotoa, ja se on ollut maailmanperintökohde vuodesta '
+                + '1994.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: kantosauva ja kori',
+              teksti: 'Hanoissa myydään yhä liikkeestä. Vuoden 2006 '
+                + 'väestönlaskennassa kaupungissa laskettiin 5 600 '
+                + 'maaseudun tuotteita myyvää katukauppiasta, joista '
+                + 'yhdeksän kymmenestä oli tullut ympäröiviltä '
+                + 'maaseutualueilta ja valtaosa oli naisia. Kaupunki on '
+                + 'suhtautunut heihin kaksijakoisesti: heinäkuussa 2008 '
+                + 'katukauppa kiellettiin osittain 62 kadulla, ja '
+                + 'suunnitelmissa on korvata 67 perinteistä toria '
+                + 'tuhannella supermarketilla vuoteen 2025 mennessä. '
+                + 'Myyjät ovat silti pysyneet katukuvassa, ja moni '
+                + 'matkailija pitää juuri heitä kaupungin tunnusmerkkinä. '
+                + 'Vanhankaupungin kiinteät kiltakadut ovat tästä '
+                + 'erillinen, paljon vanhempi ilmiö. Kuuluisin '
+                + 'kantosauvan tavara on phở, riisinuudelikeitto, joka '
+                + 'sai nykymuotonsa Pohjois-Vietnamissa 1900-luvun '
+                + 'ensi vuosina. Sitä myytiin aluksi nimenomaan '
+                + 'liikkeestä, gánh phở -kantosauvasta; Hanoin kaksi '
+                + 'ensimmäistä kiinteää phở-kojua avattiin Cầu Gỗin '
+                + 'kadulla ja järven raitiovaunupysäkin edessä, ja '
+                + 'kantosauvamyynti väistyi kiinteiden ruokapaikkojen '
+                + 'tieltä 1930- ja 1940-luvulla.',
+            },
+            {
+              otsikko: 'Historian käännekohta: Idän Pariisi',
+              teksti: 'Vuosina 1902–1945 Hanoi oli koko Ranskan Indokiinan '
+                + 'pääkaupunki, ja siltä ajalta on kaupungin toinen ilme. '
+                + 'Puukujaisia bulevardeja vedettiin Vanhankaupungin ja '
+                + 'keisarillisen alueen väliin, ja niiden varsille nousi '
+                + 'huviloita, virastoja ja kouluja. Pyhän Joosefin '
+                + 'katedraali valmistui jo joulukuussa 1886, oopperatalo '
+                + 'rakennettiin 1901–1911 Pariisin Palais Garnier '
+                + '-oopperatalon malliin ja Long Biênin silta 1899–1902. '
+                + 'Kenraalikuvernööri Paul Doumer vaikutti '
+                + 'kaupunkisuunnitteluun vuosisadan vaihteessa. Lisänimi '
+                + 'Idän Pariisi on tältä ajalta, ja se elää yhä '
+                + 'matkailuesitteissä.',
+              kuva: {
+                tiedosto: 'St Joseph Cathedral Hanoi 0386.JPG',
+                selite: 'Pyhän Joosefin katedraalin harmaantunut '
+                  + 'uusgoottilainen julkisivu suippokaari-ikkunoineen ja '
+                  + 'kaksoistorneineen.',
+                lahde: 'Gryffindor, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Hanoissa on neljä selvää vuodenaikaa, mikä on '
+                + 'Kaakkois-Aasiassa harvinaista. Alla olevat luvut ovat '
+                + 'kaupungin oman sääruudun normaaleja (Vietnamin '
+                + 'rakennustieteen laitos, mittauspiste ydinkeskustassa), '
+                + 'eivät pelin muualla käyttämää ERA5-sarjaa. '
+                + 'Touko–syyskuu on kuuma ja märkä: heinäkuun keskilämpö '
+                + 'on 29,4 astetta ja elokuussa sataa 309 millimetriä. '
+                + 'Loka–marraskuu viilenee, joulu–helmikuu on '
+                + 'koillismonsuunin kuivaa ja viileää aikaa — tammikuun '
+                + 'keskilämpö on 16,6 astetta — ja maalis–huhtikuu on '
+                + 'sumuista tihkukevättä. Kävelijän kuukaudet ovat lokakuu '
+                + 'ja marraskuu: keskilämpö on 25,3 ja 21,9 astetta ja '
+                + 'sadetta tulee 141 ja 67 millimetriä eli alle puolet '
+                + 'kesäkuukausien määrästä. Ääripäät ovat kaukana '
+                + 'toisistaan: mittausten ennätykset ovat 42,8 astetta '
+                + 'toukokuulta 1926 ja 2,7 astetta 12. tammikuuta 1955.',
+              kuva: {
+                tiedosto: 'Hanoi - Turtle Tower (Tháp Rùa), Hoàn Kiếm Lake.jpg',
+                selite: 'Kilpikonnatorni saarekkeellaan ja sen takana '
+                  + 'Hanoin postitalo kellotorneineen järven pohjoisrannalla.',
+                lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki on vaihtanut nimeä ja isäntää tuhannen vuoden ajan. '
+        + 'Tarina kulkee kiinalaisesta rajalinnoituksesta keisarien '
+        + 'pääkaupungiksi ja siitä Ranskan Indokiinan hallintokeskukseksi.',
+      tehtava: {
+        kysymys: 'Kuka hallitsija antoi kaupungille nimen Hà Nội vuonna 1831?',
+        vaihtoehdot: [
+          'Minh Mạng',
+          'Lý Thái Tổ',
+          'Lê Lợi',
+          'Gia Long',
+        ],
+        oikea: 0,
+        fakta: 'Nguyễn-suvun Minh Mạng antoi kaupungille nimen Hà Nội '
+          + 'hallintouudistuksessaan 1831. Lý Thái Tổ oli nimennyt sen '
+          + 'Thăng Longiksi 1010 ja Lê Lợi Đông Kinhiksi 1428.',
+      },
+      nostot: [
+        {
+          otsikko: 'Yliopisto temppelin sisällä',
+          tiedosto: 'Stelae of Doctors - Temple of Literature, Hanoi - DSC04571.JPG',
+          teksti: 'Vuonna 1070 kuningas Lý Thánh Tông perusti Kirjallisuuden '
+            + 'temppelin Konfutsen ja kungfutselaisten oppineiden '
+            + 'kunniaksi. Kuusi vuotta myöhemmin sen yhteyteen avattiin '
+            + 'Quốc Tử Giám, maan ensimmäinen yliopisto, joka koulutti '
+            + 'virkamiehiä vuoteen 1779 asti. Vuodesta 1484 alkaen '
+            + 'tutkinnon suorittaneiden nimet ja syntymäpaikat '
+            + 'kaiverrettiin steeloihin, jotka lepäävät kivikilpikonnien '
+            + 'selässä. Niitä pystytettiin 116, ja jäljellä on 82: niissä '
+            + 'on 1 307 nimeä kahdeksastakymmenestäkahdesta kolmen vuoden '
+            + 'välein pidetystä kokeesta.',
+          selite: 'Tohtorinsteeloja rivissä katoksen alla, jokainen omalla '
+            + 'kivikilpikonnallaan ja pinta täynnä kaiverrettuja merkkejä.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+          wiki: 'Temple of Literature, Hanoi',
+        },
+        {
+          otsikko: 'Muuri joka antoi nimen',
+          tiedosto: 'Map of Hanoi, 1873, Phạm Đình Bách.jpg',
+          teksti: 'Nykyisen Hanoin paikalla on ollut monta kaupunkia ja monta '
+            + 'nimeä. 400-luvun puolivälissä siellä oli linnoitettu '
+            + 'hallintopaikka nimeltä Tống Bình; vanhempia nimiä olivat '
+            + 'Long Biên ja Long Đỗ. Vuonna 866 kiinalainen kenraali Gao '
+            + 'Pian rakensi paikalle 6 344 metrin muurin, osin yli '
+            + 'kahdeksan metriä korkean, ja nimesi kaupungin Đại Laksi. '
+            + 'Asukkaita oli noin 25 000, ja kauppiaiden joukossa oli '
+            + 'persialaisia, arabeja, intialaisia ja jaavalaisia. Lý Thái '
+            + 'Tổ nimesi paikan 1010 Thăng Longiksi, Lê Lợi 1428 Đông '
+            + 'Kinhiksi ja Minh Mạng 1831 Hà Nộiksi.',
+          selite: 'Vuoden 1873 Hanoi vuonna 1902 piirretyllä kartalla omine '
+            + 'nimiöineen: nelikulmainen linnoitus vasemmalla, tiivis '
+            + 'kaupunki joen mutkassa ja peltoja joka suuntaan.',
+          lahde: 'Phạm Đình Bách, Wikimedia Commons (PD)',
+          wiki: 'Hanoi',
+        },
+        {
+          otsikko: 'Portti joka jäi pystyyn',
+          tiedosto: 'Đông-Hoa Gate.jpg',
+          teksti: 'Vanhakaupunki kasvoi keisarilinnan itäpuolelle Lý- ja '
+            + 'Trần-sukujen aikaan, ja Lê-kaudella sen ympärille nousi '
+            + 'puolustusmuuri portteineen. Kaupungin kasvaessa portit '
+            + 'purettiin yksi toisensa jälkeen. Jäljellä on enää Ô Quan '
+            + 'Chưởng, toiselta nimeltään Đông Hà môn, joka on '
+            + 'kuvatekstien mukaan vuodelta 1749: matala kivi- ja '
+            + 'tiiliportti holvikäytävineen Vanhankaupungin '
+            + 'koillisreunalla, parisataa metriä Đồng Xuânin torista. Sen '
+            + 'läpi kuljettiin kaupunkiin joen puolelta.',
+          selite: 'Ô Quan Chưởngin sammaloitunut porttirakennus '
+            + 'holvikäytävineen ja vahtihuoneineen keskellä nykykaupungin '
+            + 'kortteleita.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Old Quarter, Hanoi',
+        },
+        {
+          otsikko: 'Kolme kehää ja yksi lippu',
+          tiedosto: 'Bắc Môn, vết đại bác.JPG',
+          teksti: 'Keisarilinna rakennettiin kolmena sisäkkäisenä kehänä: '
+            + 'uloin puolustusmuuri La thành, sen sisällä keisarikaupunki '
+            + 'Hoàng thành ja sisimpänä Kielletty kaupunki, jonne pääsivät '
+            + 'vain hallitsija ja hänen lähipiirinsä. Nguyễn-suvun Gia '
+            + 'Long rakennutti linnan uudelleen 1805 Vaubanin tyyliin, ja '
+            + 'Ranska purki siitä suurimman osan toimistojen ja kasarmien '
+            + 'tieltä. Pystyyn jäivät Pohjoisportti ja lippulinna, joka '
+            + 'säästyi siksi että se otettiin sotilaskäyttöön. Keskusalue '
+            + 'liitettiin maailmanperintöluetteloon 2010.',
+          selite: 'Keisarilinnan Pohjoisportti: tiilimuurissa on kaksi suurta '
+            + 'kolhua, ja portin yläpuolella on kivilaatta portin nimineen.',
+          lahde: 'Nguyễn Thanh Quang, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Imperial Citadel of Thăng Long',
+        },
+      ],
+    },
+  ],
 };

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 968, teksti: 'v968: Hanoi — uusi kaupunkilehti' },
   { v: 967, teksti: 'v967: teemasivujen kuvat kainaloon, teksti vierelle' },
   { v: 966, teksti: 'v966: Xi\'an, Varanasi ja kakkossivujen otsikkouudistus' },
   { v: 965, teksti: 'v965: Samarkand — uusi lehti' },

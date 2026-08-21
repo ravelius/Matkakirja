@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v968 — HANOI: uusi lehti (kartta 8 kohteella Hoan Kiemin ymparilla, Long Bienin silta mukana; 26 kuvaa mm. vuoden 1873 kartta ja valtauksen kaiverrus). HUOM: saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: kartta, Matkaopas, Historian tehtava',
   'v967 — KAINALOKUVAT: teemasivujen nostojen ja gallerioiden kuvat ovat nyt oikeassa kainalossa (42 % palstasta, pystykuvat 30 % + korkeuskatto) ja leipateksti juoksee kuvan vierella; kapealla nakymalla kuvat taysleveina kuten ennen. Tarkista: pari teemasivua levealla ja kannykalla (esim. Ateenan Arki ja tavat)',
   'v966 — XI\'AN JA VARANASI: uudet lehdet (Ming-muurikaupungin kartta 9 kohteella; ghatien kartta 8 kohteella + Sarnathin kainalo). KAKKOSSIVU-UUDISTUS: kaupunki-sivun otsikko on nyt "X pintaa syvemmalta" ja teemasivut palasivat kategoriatason otsikoihin (v964:n omat nimet pois). HUOM: molempien saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: molempien kartta ja Matkaopas, parin lehden kakkossivu',
   'v965 — SAMARKAND: uusi lehti (kartta 9 kohteella, Registan–Gur-e-Amir–Shah-i-Zinda; 27 kuvaa mm. Prokudin-Gorski ja Verestsagin 1870). HUOM: saarivi puuttuu viela — Open-Meteon paivakiintio taynna, taydennetaan kiintion auettua. Tarkista: kartta, Matkaopas, Historian tehtava',
@@ -334,6 +335,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'hanoi', nimi: 'Hanoi', versio: 'v968' },
     { id: 'xian', nimi: 'Xi’an', versio: 'v966' },
     { id: 'varanasi', nimi: 'Varanasi', versio: 'v966' },
     { id: 'samarkand', nimi: 'Samarkand', versio: 'v965' },
@@ -352,6 +354,7 @@ export const TUOREET = {
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
   ],
   tyossa: [
-    { id: 'hanoi', nimi: 'Hanoi' },
+    { id: 'ulanbator', nimi: 'Ulan Bator' },
+    { id: 'kathmandu', nimi: 'Kathmandu' },
   ],
 };

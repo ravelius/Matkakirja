@@ -7030,6 +7030,82 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ramnagarin linnoitus', lat: 25.2697, lon: 83.0245 },
     ],
   },
+  /*
+   * HANOIN KOHDEKARTTA (21.8.2026). Rajaus on noin 3,8 × 2,9 km ja
+   * se on kaupungin oma muoto: kohteet ovat kahdessa rykelmässä,
+   * Vanhankaupungin ja Hoàn Kiếmin ympärillä idässä ja keisarilinnan
+   * ympärillä lännessä, ja niiden välissä on runsas kilometri
+   * ranskalaisajan kortteleita. Kaikki kahdeksan mahtuvat 2,6 × 1,6
+   * kilometrin alueelle, mutta ruutu on sitä väljempi tarkoituksella,
+   * ja marginaalit on MITATTU eikä arvattu:
+   *  - Länsi- ja eteläreuna ovat runsaat kuusisataa metriä kohteiden
+   *    ulkopuolella, koska Kirjallisuuden temppeli on kohteista sekä
+   *    läntisin että eteläisin ja jäisi tiukassa rajauksessa suoraan
+   *    vasempaan alakulmaan mittakaavajanan päälle (Kööpenhaminan
+   *    ennakkotapaus). Nyt se on 20 % leveydestä ja 23 % korkeudesta.
+   *  - Itä- ja pohjoisreunaa väljennettiin saman verran, jotta
+   *    kuvasuhde säilyy ja Punaisenjoen ranta näkyy Long Biênin
+   *    sillan takana.
+   *
+   * KAKSI KOHDETTA JÄI POIS KARTALTA:
+   *  - Ô Quan Chưởngin portti, teemasivun H3-noston aihe. Sillä ei
+   *    ole omaa en-Wikipedian artikkelia eikä siis infoboksi-
+   *    koordinaattia, ja ainoa löytynyt piste (OpenStreetMap,
+   *    21,0373 / 105,8522) on runsaat kaksisataa metriä Đồng Xuânin
+   *    torista eli noin kuusi prosenttia ruudun leveydestä — samaa
+   *    päällekkäisyyttä kuin Samarkandin Chorsulla. Portti kerrotaan
+   *    torin jutussa.
+   *  - Oopperatalo (21°01′27″N 105°51′28″E), joka mahtuisi ruutuun.
+   *    Kahdeksan kohdetta oli täysi määrä, ja ranskalaisajan
+   *    rakennuksista katedraali on lehden kannalta tärkeämpi.
+   *    Oopperatalo mainitaan matkaoppaan jaksossa 4.
+   *
+   * HOÀN KIẾM -JÄRVI EI OLE OMANA PISTEENÄÄN, vaikka se on lehden
+   * tärkein maamerkki. Sen infoboksikoordinaatti (21°01′44″N
+   * 105°51′09″E) osuu keskelle vettä, ja talon sääntö on, että vain
+   * sillat ja majakat saavat olla vedellä
+   * (tools/tarkista-karttapisteet.mjs). Järveä edustaa siksi Ngọc
+   * Sơnin temppeli sen pohjoisosan saarella, ja sen juttu kertoo
+   * järven, Kilpikonnatornin ja Thê Húc -sillan.
+   *
+   * KOORDINAATIT ovat kohteiden omista en-Wikipedian artikkeleista
+   * (haettu 21.8.2026): Long Biên Bridge, Imperial Citadel of Thăng
+   * Long, Đồng Xuân Market, One Pillar Pagoda, Flag Tower of Hanoi,
+   * Ngọc Sơn Temple, St. Joseph's Cathedral, Hanoi ja Temple of
+   * Literature, Hanoi. Kaikki kahdeksan on ajettu
+   * tools/tarkista-karttapisteet.mjs:llä.
+   */
+  hanoi: {
+    polku: 'assets/kartat/hanoi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 21.049, etela: 21.0225, lansi: 105.828, ita: 105.865 },
+    esittely: 'Kartan alue on Hanoin vanha ydin: idässä Vanhakaupunki '
+      + 'ja Hoàn Kiếm -järvi, lännessä keisarilinnan alue ja etelässä '
+      + 'Kirjallisuuden temppeli. Koillisnurkassa Long Biênin silta '
+      + 'ylittää Punaisenjoen. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Samarkandissa. */
+      { nimi: 'Long Biênin silta', lat: 21.04333, lon: 105.85889 },
+      { nimi: 'Thăng Longin keisarilinna', lat: 21.03944, lon: 105.83722 },
+      { nimi: 'Đồng Xuânin tori', lat: 21.038164, lon: 105.850031 },
+      { nimi: 'Yhden pilarin pagodi', lat: 21.03583, lon: 105.83362 },
+      { nimi: 'Hanoin lippulinna', lat: 21.0325, lon: 105.83972 },
+      /*
+       * Ngọc Sơnin piste on SIIRRETTY RANNALLE. Artikkelin oma
+       * koordinaatti on 21,0307 / 105,8520 eli temppelin saarella,
+       * ja tarkista-karttapisteet.mjs luki siitä sata prosenttia
+       * vettä: saari on niin pieni, ettei se piirry OSM-aineistosta
+       * reikänä järven monikulmioon. Piste on siksi runsaat sata
+       * metriä pohjoiseen, järven pohjoisrannalle Thê Húc -sillan
+       * maakorvaan (Lontoon silmän ja Venetsian Arsenaalin
+       * ennakkotapaus).
+       */
+      { nimi: 'Ngọc Sơnin temppeli', lat: 21.0318, lon: 105.8526 },
+      { nimi: 'Pyhän Joosefin katedraali', lat: 21.02861, lon: 105.84889 },
+      { nimi: 'Kirjallisuuden temppeli', lat: 21.02861, lon: 105.83556 },
+    ],
+  },
 };
 
 /*
