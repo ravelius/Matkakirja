@@ -2223,6 +2223,58 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 47.928, etela: 47.879, lansi: 106.8646, ita: 106.9377 },
     palvelutiet: true,
   },
+  kathmandu: {
+    /*
+     * KATHMANDUN LAAKSON YDIN (21.8.2026). Ruutu on noin 8,8 × 7,2 km,
+     * ja siihen mahtuvat kaikki kahdeksan lehden kohdetta: lännessä
+     * Swayambhunathin kukkula, keskellä vanha kaupunki Durbar-aukioineen
+     * ja Rani Pokharin allas, idässä Bagmatin varrella Pashupatinath,
+     * koillisessa Boudhanath ja etelässä joen toisella puolella Patanin
+     * Durbar-aukio.
+     *
+     * RUUTU ON LEVEÄ MUTTA EI LEVEIN. Työkalun oma ohjenuora on 5–8 km
+     * (ks. tiedoston alkukommentti), ja 15.8.2026 kaikkia rajauksia
+     * levennettiin neljänneksellä — Berliini on nyt 10,2 × 7,7 km.
+     * Kathmandun leveyden sanelevat kaksi kohdetta, joita ei voi jättää
+     * pois: Swayambhunath 85,290 ja Boudhanath 85,362 ovat 7,1 km
+     * päässä toisistaan, ja molemmat ovat laakson seitsemästä
+     * maailmanperintökohteesta. Tiukempi ruutu vaatisi kainalon
+     * kummallekin laidalle, mikä olisi huonompi kuin yksi väljä ruutu.
+     *
+     * REUNAT LEVENIVÄT VIELÄ ENSIMMÄISEN PIIRROKSEN JÄLKEEN.
+     * Tiukemmalla rajauksella (7,9 × 6,2 km) Boudhanathin
+     * numeroympyrä osui kohtaan 94,3 % / 7,3 % eli suoraan kartan
+     * oikean ylänurkan opasteen alle (css: .kartta-opaste, top ja
+     * right 0,35rem, enintään 17rem leveä ja kapealla ruudulla
+     * kaksirivinen) — sama vika kuin Samarkandin observatoriolla,
+     * joka näkyi vasta valmiissa lehdessä. Pohjois- ja itäreunaa
+     * siirrettiin siksi runsaat kuusisataa metriä ulospäin, jolloin
+     * piste on 88 % / 16 %. Samalla laskettiin eteläreunaa, jotta
+     * Patanin Durbar-aukio ei jää alalaitaan (nyt 90 %).
+     *
+     * BHAKTAPUR JA CHANGU NARAYAN EIVÄT OLE KARTALLA EIVÄTKÄ
+     * KAINALOSSA, vaikka ne ovat laakson kaksi muuta
+     * maailmanperintökohdetta. Ne ovat kaupungin keskipisteestä 12,5 ja
+     * 12,0 kilometriä itään eli oma kaupunkinsa ja kylänsä, eivät osa
+     * Kathmandun tiivistä kaupunkikuvaa (docs/aasia-tyoaineisto/
+     * tarkistus-kathmandu.md, kohta 3: sitova suositus A). Etäisyys on
+     * lähempänä Kairon pyramideja kuin Medinan Uhud-vuorta. Bhaktapur
+     * on lisäksi riittävän iso kohde omaksi lehdekseen myöhemmin.
+     *
+     * KAINALOA EI OLE, koska sille ei ole tarvetta: kaikki kohteet
+     * mahtuvat pääruutuun. Tämä on sama ratkaisu kuin Samarkandissa.
+     *
+     * PALVELUTIET JA JALKAKÄYTÄVÄT PÄÄLLÄ: vanhankaupungin kujat
+     * Durbar-aukion ympärillä, Asanin ja Indra Chowkin väliset kujat
+     * sekä Swayambhunathin ja Boudhanathin pihat ovat OSM:ssä
+     * jalankulkualueita ja huoltoteitä, ja ilman lippuja kartan tihein
+     * kortteli jäisi tyhjäksi paperiksi (Pekingin, Medinan ja
+     * Samarkandin oppi).
+     */
+    rajat: { pohjoinen: 27.7315, etela: 27.667, lansi: 85.2835, ita: 85.3725 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*
