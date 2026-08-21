@@ -17,6 +17,25 @@
 // eri asiasta kuin mitä kuvassa on.
 //
 // Tuotettu komennolla tools/kirjoita-kategoriat.mjs.
+//
+// ENNEN JA NYT -PARI KAIKKIIN KAUPUNKEIHIN (omistajan tilaus 21.8.2026:
+// "Tee kuvamuutos muihinkin"). Lontoon pilotti (v986) laajennettiin
+// jokaiseen kaupunkiin, jolle matkakirjan valokuvataulussa on valmis
+// pari — vanha vedos ja sama kaupunki nykyään. Kaupunki-lohkon
+// ennenNyt-taulukko on kaksialkioinen ja JÄRJESTYS RATKAISEE: [0] on
+// vasen eli vanha, [1] oikea eli uusi. Malli ja koko taustaselitys ovat
+// Lontoon lohkossa; renderöinti on js/lehti.js piirraLehtiKuvat.
+//
+// Tiedostonimet, vuodet ja lähderivit on kopioitu valokuvatauluista
+// (js/packs/*-valokuvat.js) sellaisinaan, koska ne on jo tarkistettu
+// Commonsista. Selitteet on kirjoitettu tänne omiksi YHDEN VIRKKEEN
+// versioikseen (Raamattu: kuvateksti on yksi virke) ja vanhassa
+// mainitaan ajankohta. Matkakirjan postikortteihin ei koskettu — samat
+// kuvat palvelevat molemmissa paikoissa, ja niiden poisto matkakirjasta
+// on erillinen omistajapäätös.
+//
+// Ilman kenttää lehti taittuu ennallaan; ne kaupungit, joilta pari
+// puuttuu, on lueteltu docs/moduulit/kaupunkilehti.md:ssä.
 export const KULTTUURI_KATEGORIAT = {
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamattu "TEKSTIEN PAINOPISTE",
@@ -708,6 +727,21 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Kairo, marchands ambulants LCCN2017657437.jpg',
+          vuosi: '1890-luku',
+          selite: 'Kiertäviä kauppiaita Kairon kadulla 1890-luvulla: vesimyyjä kantoi '
+            + 'tavaransa selässään ja huusi kaupan kilpaa muiden kanssa.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Cairo-Hilton-Skyline.jpg',
+          selite: 'Nykyinen Kairo nousee Niilin rannalla korkeuksiin, mutta joki '
+            + 'virtaa keskellä yhtä tyynenä kuin isoisän aikaan.',
+          lahde: 'Bluemask, Commons (CC BY-SA 3.0)',
+        },
+      ],
       /*
        * MATKAILIJAN KAIRO (18.8.2026, viimeistely nykystandardiin).
        * Rakenne on Bagdadin ja Tokion mallista: pystykuva, kappale ja
@@ -1235,6 +1269,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'takana erottuvat mustana linnan kattoharja ja katedraalin '
             + 'kaksi kärkitornia matalan auringon vieressä.',
           lahde: 'Szilas, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Entrance to castle, Prague, Bohemia, Austro-Hungary-LCCN2002708487.jpg',
+          vuosi: '1890-luku',
+          selite: 'Prahan linnan portti Hradčanyn aukiolta 1890-luvun '
+            + 'photochrom-vedoksessa, jolloin Pyhän Vituksen katedraali oli yhä kesken '
+            + 'eikä kattojen yllä näkynyt vielä torneja.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Praha Hrad sníh 2010 22.jpg',
+          selite: 'Sama portti tänään: pylväiden päällä taistelevat samat jättiläiset, '
+            + 'vartiokopeissa seisovat linnan vartijat ja katon takaa kohoavat nyt '
+            + 'katedraalin tornit.',
+          lahde: 'Commons (PD)',
         },
       ],
       matkailijalle: {
@@ -1985,6 +2036,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Koalabaer, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Opernring, Vienna, Austro-Hungary-LCCN2002708403.jpg',
+          vuosi: '1890-luku',
+          selite: 'Opernring hevosraitiovaunujen aikaan 1890-luvun '
+            + 'photochrom-vedoksessa — bulevardi on osa Ringstrassea, joka '
+            + 'rakennettiin 1860-luvulla puretun kaupunginmuurin paikalle.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Opernring - panoramio (1).jpg',
+          selite: 'Sama bulevardin osuus nykyään: raitiovaunu kulkee yhä samaa reittiä '
+            + 'mutta sähköllä, ja taustalla seisoo vuonna 1869 valmistunut '
+            + 'valtionooppera, joka antoi kadulle nimensä.',
+          lahde: 'Mister No, Commons (CC BY 3.0)',
+        },
+      ],
     },
     {
       id: 'musiikki',
@@ -2432,6 +2500,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Madrid. Plaza Mayor LCCN2017660767.jpg',
+          vuosi: '1890-luku',
+          selite: 'Plaza Mayor 1890-luvun photochrom-vedoksessa, kun aukiolla oli '
+            + 'vielä puisto käytävineen ja suihkulähteineen ja Filip III:n '
+            + 'ratsastajapatsas seisoi keskellä istutuksia.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Felipe III - Casa de la Panadería - Plaza Mayor de Madrid - 01.jpg',
+          selite: 'Sama aukio tänään kivettynä: puisto poistettiin 1960-luvulla, kun '
+            + 'aukion alle louhittiin pysäköintihalli, ja Casa de la Panaderían '
+            + 'julkisivun maalaukset ovat vuodelta 1992.',
+          lahde: 'Carlos Delgado, Commons (CC BY-SA 3.0)',
+        },
+      ],
     },
     {
       id: 'urheilu',
@@ -2606,6 +2691,23 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Tuomiokirkon kupolit ja Vanhan kansallisgallerian '
             + 'pylväikkö peilautuvat Spreestä Museosaaren rannassa.',
           lahde: 'Ansgar Koreng, Wikimedia Commons (CC BY 3.0 DE)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Berlin - Potsdamer Platz - um 1900.jpg',
+          vuosi: 'noin 1900',
+          selite: 'Potsdamer Platz noin vuonna 1900, kun hevosraitiovaunut, ajurit ja '
+            + 'jalankulkijat kulkivat samassa risteyksessä niin sekaisin, että Saksan '
+            + 'ensimmäinen liikennevalo pystytettiin juuri tähän 1924.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Lascar Fernsehturm (Television tower) (4471645489).jpg',
+          selite: 'Berliinin televisiotorni valaistuna: pallo tornin päässä on 200 '
+            + 'metrin korkeudessa, ja sen alla kaartuu Alexanderplatzin aseman terävä '
+            + 'katos.',
+          lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
         },
       ],
       /*
@@ -3467,6 +3569,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Francesca Lissoni, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Gondolas and Piazzetta di San Marco, Venice, Italy-LCCN2001701072.jpg',
+          vuosi: '1890-luku',
+          selite: 'Gondoliereja Piazzetta di San Marcon edustalla 1890-luvun '
+            + 'käsinväritetyssä photochrom-vedoksessa, taustalla dogen palatsi ja '
+            + 'Markuksen leijona pylväänsä päässä.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Early Morning Gondolas at Piazza San Marco (3500989834).jpg',
+          selite: 'Sama ranta nykyään ylhäältä nähtynä: gondolit odottavat rivissä '
+            + 'sinisten suojapeitteiden alla, ja pylvään päässä seisoo yhä sama '
+            + 'siivekäs leijona.',
+          lahde: 'Rob Young, Commons (CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'rakennukset',
@@ -3968,6 +4087,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Magnus Johansson, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Kungstradgarden, Stockholm, Sweden-LCCN2001700741.jpg',
+          vuosi: '1890-luku',
+          selite: 'Kungsträdgården eli Kuninkaanpuutarha 1890-luvun '
+            + 'photochrom-vedoksessa, kun kuninkaan entisestä kaali- ja yrttitarhasta '
+            + 'oli tullut kaupunkilaisten kävelypaikka.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Stockholm - Kungsträdgården - April 2019 03.jpg',
+          selite: 'Sama puisto huhtikuussa kirsikkapuiden kukkiessa — kukinta kestää '
+            + 'noin kaksi viikkoa ja sitä seurataan uutisissa, jolloin puistossa '
+            + 'pääsee kulkemaan vain hitaasti.',
+          lahde: 'Liridon, Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'rakennukset',
@@ -4112,6 +4248,24 @@ export const KULTTUURI_KATEGORIAT = {
             + 'voitonmuistomerkin marmoripylväät hohtavat auringossa, ja '
             + 'kävelijät kulkevat holvien ali Louvrelle.',
           lahde: 'Thesupermat, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Eiffel Tower, full-view looking toward the Trocadero, Exposition Universal, 1900, Paris, France.jpg',
+          vuosi: 'noin 1900',
+          selite: 'Eiffel-torni Marsin kentältä noin vuoden 1900 '
+            + 'photochrom-vedoksessa, jolloin se oli maailman korkein rakennus ja '
+            + 'kaaren alta näkyi vuoden 1878 maailmannäyttelyyn rakennettu Trocadéron '
+            + 'palatsi.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Eiffel Tower from Champ-de-Mars, Paris 5 February 2019.jpg',
+          selite: 'Sama näkymä tänään: torni on ennallaan, mutta kaaren alta paistaa '
+            + 'nyt Palais de Chaillot, joka nousi puretun Trocadéron tilalle vuoden '
+            + '1937 näyttelyyn.',
+          lahde: 'Alexandre Prévot, Commons (CC BY-SA 2.0)',
         },
       ],
       /*
@@ -5079,6 +5233,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Athènes. L\' Acropole et le Temple de Thesée LCCN2017658103.jpg',
+          vuosi: '1890-luku',
+          selite: 'Akropolis ja etualalla Hefaistoksen temppeli 1890-luvun '
+            + 'photochrom-vedoksessa, kun Ateenassa asui noin 100 000 ihmistä ja '
+            + 'temppelien ympärillä oli peltoa.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'The Acropolis of Athens with the Parthenon, the Erecththeion and the Mycenean Fountain from Monastiraki Square on March 11, 2020.jpg',
+          selite: 'Sama kallio tänään Monastirakin aukiolta: alla kolmen miljoonan '
+            + 'asukkaan kaupunki ja päällä Parthenon telineineen, sillä temppeliä on '
+            + 'korjattu yhtäjaksoisesti vuodesta 1975.',
+          lahde: 'George E, Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -5491,6 +5662,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'RubenVanKuik, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Mint tower, Amsterdam, Holland-LCCN2001697999.jpg',
+          vuosi: '1890-luku',
+          selite: 'Munttoren eli Rahatorni Singel-kanavan päässä 1890-luvun '
+            + 'photochrom-vedoksessa, rantaan sidottuina lastiveneitä ajalta jolloin '
+            + 'kanavat olivat tavaraliikenteen valtatie.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Amsterdam, de Munttoren RM3729 IMG 3346 2024-06-24 11.41.jpg',
+          selite: 'Sama torni vuonna 2024 samalta vesirajalta: alaosa on keskiaikaisen '
+            + 'kaupunginportin jäännös, tornissa soi yhä kellopeli ja ohi kulkee '
+            + 'raitiovaunu.',
+          lahde: 'Michielverbeek, Commons (CC BY 4.0)',
+        },
+      ],
     },
     {
       id: 'taide',
@@ -5694,6 +5882,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaartuu markkinakojujen katos, ja vasemmalla Galatan '
             + 'silta vie lahden yli Galatan tornin kukkulalle.',
           lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'The Golden Horn, Constantinople, Turkey-LCCN2001699446.jpg',
+          vuosi: '1890-luku',
+          selite: 'Kultainen sarvi eli Haliç iltavalossa 1890-luvun '
+            + 'photochrom-vedoksessa, kuvattuna seitsemän kilometriä kaupunkiin '
+            + 'työntyvän merenlahden yläpään kukkulalta.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Galata Tower January 2015.JPG',
+          selite: 'Galatan torni Kultaisen sarven pohjoispuolella: vuonna 1348 '
+            + 'rakennetun kivitornin huipulta näkee koko salmen, ja alhaalla kulkee '
+            + 'jyrkkä katu.',
+          lahde: 'Martin Falbisoner, Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -6307,6 +6512,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Giuseppe Milo, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Sackville Street and O\'Connell Bridge, Dublin. County Dublin, Ireland-LCCN2002717398.jpg',
+          vuosi: '1890-luku',
+          selite: 'Sackville Street O’Connellin sillalta 1890-luvun '
+            + 'photochrom-vedoksessa: kadun päässä Nelsonin pylväs, edessä Daniel '
+            + 'O’Connellin patsas ja kiskoilla hevosraitiovaunuja.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Buses on O\'Connell Bridge, Dublin - geograph.org.uk - 2776449.jpg',
+          selite: 'Sama näkymä samalta sillalta nykyään: katu sai nimen O’Connell '
+            + 'Street vuonna 1924, pylvään paikalla kohoaa vuodesta 2003 asti '
+            + '120-metrinen teräsneula ja patsas on yhä paikallaan.',
+          lahde: 'Richard Humphrey, Commons (CC BY-SA 2.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -6684,6 +6906,22 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Edinburgh from the castle, Scotland, 1890s.jpg',
+          vuosi: '1890-luku',
+          selite: 'Näkymä linnan muurilta koilliseen 1890-luvun photochrom-vedoksessa: '
+            + 'keskellä Walter Scottin muistomerkki, oikealla Waverleyn aseman katot '
+            + 'ja taustalla Calton Hill.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Castle, City of Edinburgh (IMG 20190628 180330).jpg',
+          selite: 'Edinburghin linna jyrkän kalliojyrkänteen päällä, alla Princes '
+            + 'Street Gardensin puistot, joissa kaupunkilaiset istuvat kesäiltana.',
+          lahde: 'Matti Blume, Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -7043,6 +7281,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaari valkoisia moottoriveneitä ja niiden takana kalastajien '
             + 'matalat talot vaaleanpunaisina, keltaisina ja oransseina.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Old Harbor (Vieux-Port), Marseille, France-LCCN2002715100.jpg',
+          vuosi: '1890-luku',
+          selite: 'Vanha satama purjelaivojen aikaan 1890-luvun photochrom-vedoksessa: '
+            + 'laivat makasivat kylki kyljessä laiturissa ja lastit purettiin '
+            + 'käsivoimin suoraan kadulle.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Notre-Dame de la Garde from port Marseille 2026.JPG',
+          selite: 'Notre-Dame de la Garden basilika kukkulallaan sataman yllä, tornin '
+            + 'huipulla kullattu Madonna, jota merimiehet ovat katsoneet satamaan '
+            + 'tullessaan jo isoisän aikaan.',
+          lahde: 'Mike is Michi, Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -7427,6 +7682,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vicuna R from Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Elevador-Sta-Justa 1902 fotoCarris.jpg',
+          vuosi: '1902',
+          selite: 'Santa Justan hissi valmistumisvuonnaan 1902, jolloin valurautaista '
+            + 'tornia käytti vielä höyrykone — se nostaa ihmiset Baixan kaduilta 45 '
+            + 'metriä ylös Chiadoon.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Elevador de Santa Justa - Lisboa - Portugal (51688493041).jpg',
+          selite: 'Sama torni tänään lähes samasta suunnasta, taustalla São Jorgen '
+            + 'linna kukkulallaan; ylätasanne on näköalapaikka ja hissi kuuluu yhä '
+            + 'kaupungin joukkoliikenteeseen.',
+          lahde: 'Vitor Oliveira, Commons (CC BY-SA 2.0)',
+        },
+      ],
     },
     {
       id: 'ruoka',
@@ -7797,6 +8069,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oikealla seisoo valonheittimin valaistu Sagrada Família '
             + 'nostureineen.',
           lahde: 'Jcca76, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Barcelona. Fachada de la Catedral LCCN2017660376.jpg',
+          vuosi: '1890-luku',
+          selite: 'Katedraalin vastavalmistunut julkisivu 1890-luvun '
+            + 'photochrom-vedoksessa: se rakennettiin 1880-luvulla vuonna 1408 '
+            + 'piirretyn suunnitelman mukaan, ja keskeltä puuttuu vielä torni.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: '736 Catedral de la Santa Creu i Santa Eulàlia, façana del pla de la Seu (Barcelona).jpg',
+          selite: 'Sama julkisivu tänään keskitorneineen, joka nousi paikalleen vasta '
+            + '1913 — kirkon alla pääalttarin alapuolella lepää pyhä Eulalia, '
+            + 'kaupungin kanssasuojelija.',
+          lahde: 'Enric, Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -8173,6 +8462,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'alempana palavat Albaicínin katuvalot.',
           lahde: 'Grand Parc - Bordeaux, France from France, Wikimedia '
             + 'Commons (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Court of the Lions, Alhambra by Juan Laurent.jpg',
+          vuosi: '1870-luku',
+          selite: 'Alhambran Leijonapiha Juan Laurentin valokuvaamana 1870-luvulla, '
+            + 'jolloin hän kiersi Espanjaa suurella kamerallaan ja myi vedoksia '
+            + 'matkailijoille.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Court of the Lions, Alhambra de Granada (Spain).jpg',
+          selite: 'Sama piha tänään: kaksitoista leijonaa kannattelevat yhä allasta '
+            + 'keskellä, ja 2000-luvun perusteellisen korjauksen jälkeen suihkulähde '
+            + 'toimii taas.',
+          lahde: 'Heparina1985, Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -8578,6 +8884,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kukkulat.',
           lahde: 'Paul Colin Hennig firstdorsal.eu, Wikimedia Commons '
             + '(CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Budapest, Lánchíd a budai hídfőtől nézve, 1873-1880 között. - Fortepan 82081.jpg',
+          vuosi: '1870-luku',
+          selite: 'Ketjusilta Budan puolelta kuvattuna 1870-luvulla eli isoisän matkan '
+            + 'aikoihin, kun vuonna 1849 valmistunut silta oli Unkarin ensimmäinen '
+            + 'kiinteä Tonavan ylitys.',
+          lahde: 'Fortepan / Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Széchenyi Chain Bridge 2014.jpg',
+          selite: 'Sama näkymä nykyään: tammikuussa 1945 räjäytetty silta rakennettiin '
+            + 'uudelleen alkuperäisten piirustusten mukaan ja avattiin 1949, tasan '
+            + 'sata vuotta ensimmäisten avajaistensa jälkeen.',
+          lahde: 'Commons (CC0)',
         },
       ],
     },
@@ -9099,6 +9422,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'The Colisuem and Meta Sudans, Rome, Italy-LCCN2001700939.jpg',
+          vuosi: '1890-luku',
+          selite: 'Colosseum ja sen edessä antiikin suihkulähteen tynkä Meta Sudans '
+            + '1890-luvun photochrom-vedoksessa — lähde purettiin 1936 kadun tieltä, '
+            + 'joten kuvassa näkyy jotain mitä ei enää ole.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Colosseum on a November Day (45615640574).jpg',
+          selite: 'Colosseumin ulkokehä alhaalta kuvattuna: travertiinikaaret nousevat '
+            + 'kolmessa kerroksessa, ja kivissä näkyvät reiät, joista rautahaat on '
+            + 'aikanaan louhittu pois.',
+          lahde: 'Sonse, Commons (CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -9465,6 +9805,22 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Krakow - Kosciol Maryacki i Sukiennice. 1910 (69699690).jpg',
+          vuosi: '1910',
+          selite: 'Marian kirkko ja Sukiennice torin laidalla vuonna 1910, jolloin '
+            + 'Krakova kuului Itävalta-Unkariin ja aukiolla odotti hevosvaunuja.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Cloth Hall (Sukiennice) in Main Market Square - panoramio.jpg',
+          selite: 'Sukiennice eli vanha kangashalli suurella torilla nykyään: '
+            + 'kaarikäytävien alla on myyntikojuja ja vasemmalla kohoaa vanhan '
+            + 'raatihuoneen torni.',
+          lahde: 'Laima Gūtmane, Commons (CC BY-SA 3.0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -9829,6 +10185,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Old part of town, Warsaw, Russia (i.e. Warsaw, Poland)-LCCN2001697518.jpg',
+          vuosi: '1890-luku',
+          selite: 'Vanhankaupungin tori torimyyntipäivänä 1890-luvun '
+            + 'photochrom-vedoksessa, jonka kylkeen on merkitty "Varsova, Venäjä" — '
+            + 'kaupunki kuului tuolloin Venäjän keisarikuntaan.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: '2018-07-08 Old Town Market Square in Warsaw.jpg',
+          selite: 'Sama tori tänään: sodassa raunioitunut kortteli pystytettiin '
+            + 'uudelleen 1949–1953 vanhojen piirustusten ja Bernardo Bellotton '
+            + '1700-luvun kaupunkimaalausten avulla.',
+          lahde: 'Maksym Kozlenko, Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -9943,6 +10316,23 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Kauppatori kesäiltana: saaristolaiva laiturissa, oranssit '
             + 'torikatokset ja kävelijöitä rantalaiturilla.',
           lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'The new cathedral, Helsingfors, Russia, i.e., Helsinki, Finland-LCCN2001697412.jpg',
+          vuosi: '1890-luku',
+          selite: 'Senaatintori ja Nikolainkirkko 1890-luvun photochrom-vedoksessa, '
+            + 'jonka kylkeen on painettu Russia: Suomi oli tuolloin Venäjän '
+            + 'suuriruhtinaskunta.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg',
+          selite: 'Sama tori tänään: kirkon nimi vaihtui itsenäistymisen jälkeen '
+            + 'Tuomiokirkoksi, ja leveille portaille istuudutaan kesäiltoina kuin '
+            + 'katsomoon.',
+          lahde: 'JIP, Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -10275,6 +10665,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laskee vaahtoavana padon yli, ja oikealla seisoo Tampellan '
             + 'pitkä punatiilinen halli.',
           lahde: 'Jorge Franganillo, Flickr (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Tampere ca 1900-1910. - 14195290548.jpg',
+          vuosi: 'noin 1900–1910',
+          selite: 'Hämeensilta ja Tammerkoski Alex Federleyn kuvaamana noin 1900–1910, '
+            + 'kun silta oli vielä ristikkokaiteinen rautasilta ja kosken takana '
+            + 'avautui Hämeenkatu kivitaloineen.',
+          lahde: 'Åbo Akademi University Library, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Hämeensilta 2021.jpg',
+          selite: 'Sama silta tänään: vuoden 1929 kivisilta korvattiin 2019 vanhan '
+            + 'näköisellä graniittisillalla, jonka kaiteella seisoo yhä yksi Wäinö '
+            + 'Aaltosen neljästä pronssiveistoksesta.',
+          lahde: 'Tiia Monto, Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -10989,6 +11396,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Enel Lepik, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Reval, general view, 1890 - 1900 crop.jpg',
+          vuosi: '1890-luku',
+          selite: 'Reval eli Tallinna 1890-luvun photochrom-vedoksessa: Toompean '
+            + 'kallion päällä valkoinen Stenbockin talo ja tuomiokirkon torni, '
+            + 'alhaalla kaupunginmuurin pyöreät tornit.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Tallinn old town Aug 2019 041.jpg',
+          selite: 'Tallinnan vanhankaupungin taloja Raatihuoneentorin laidalla: '
+            + 'keltainen kauppiaantalo, punatiilinen pääty ja terassien varjot '
+            + 'kesäpäivänä.',
+          lahde: 'Yamen, Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'historia',
@@ -11341,6 +11765,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'julkisivut.',
           lahde: 'Juan Antonio Segal from Madrid, Spain, Wikimedia '
             + 'Commons (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'The Lavra gate, Kiev, Russia, (i.e., Ukraine)-LCCN2001697423.jpg',
+          vuosi: '1890-luku',
+          selite: 'Luolaluostarin porttikirkko 1890-luvun photochrom-vedoksessa: '
+            + 'vuosina 1106–1108 pääportin päälle rakennettu kirkko on koko alueen '
+            + 'vanhin säilynyt rakennus.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Gate Church of the Trinity (Pechersk Lavra) 01.JPG',
+          selite: 'Sama porttikirkko tänään: julkisivun barokkimaalaukset ovat '
+            + '1700-luvulta, kupoli on kullattu ja alla oleva holvikäytävä on yhä '
+            + 'luostarin sisäänkäynti.',
+          lahde: 'Швітланьо, Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -11710,6 +12151,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Igor Abramov, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Alexander\'s Column, St. Petersburg, Russia-LCCN2001697508.jpg',
+          vuosi: '1890-luku',
+          selite: 'Aleksanterin pylväs Palatsiaukiolla 1890-luvun '
+            + 'photochrom-vedoksessa — yhdestä ainoasta graniittilohkareesta veistetty '
+            + 'pylväs seisoo pelkän painonsa varassa ilman kiinnitystä.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'The Winter Palace and Column of Alexander I, Saint Petersburg, Russia.jpg',
+          selite: 'Sama aukio nykyään: taustalla on Talvipalatsi ja sen '
+            + 'Eremitaaši-museo, ja 47,5 metriä korkean pylvään huipulla seisoo '
+            + 'runsaan neljän metrin enkeli.',
+          lahde: 'Vyacheslav Argenberg, Commons (CC BY 4.0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -12070,6 +12528,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Igor Gorshkov, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Church of St. Basil, Red Square Moscow LCCN2017660946.jpg',
+          vuosi: '1890',
+          selite: 'Vasili Autuaan kirkko Punaisen torin laidalla noin vuonna 1890, '
+            + 'etualalla Lobnoje mesto eli pyöreä kivikoroke, jolta luettiin ääneen '
+            + 'tsaarin julistuksia.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Saint Basil\'s Cathedral (Moscow, 2004).jpg',
+          selite: 'Sama kirkko tänään lähes samalta kohdalta: etualalla on yhä Lobnoje '
+            + 'meston kiviympyrä, ja saman katon alla on yhdeksän kappelia, joista '
+            + 'jokaisella on erilainen kupoli.',
+          lahde: 'Andrew Shiva / Wikipedia, Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -12424,6 +12899,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Banya Bashi 1900.jpg',
+          vuosi: 'noin 1900',
+          selite: 'Banya Bashin moskeija noin vuonna 1900, runsaat kaksi vuosikymmentä '
+            + 'sen jälkeen kun Sofiasta tuli vasta itsenäistyneen Bulgarian '
+            + 'pääkaupunki.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Banya Bashi Mosque.jpg',
+          selite: 'Sama moskeija tänään: korttelin matkalla on myös synagoga ja kaksi '
+            + 'kirkkoa, ja kuumat lähteet pulppuavat yhä viereisessä puistossa '
+            + 'julkisiin hanoihin.',
+          lahde: 'Apokats, Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -12776,6 +13268,22 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rivi vaaleita kerrostaloja ja vinoköysisillan valkoinen '
             + 'pyloni.',
           lahde: 'Dan Mihai Pitea, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Postcard from the Belle Époque with the Romanian Athenaeum and its garden.jpg',
+          vuosi: '1900-luvun taite',
+          selite: 'Romanian Ateneum ja sen puutarha 1900-luvun taitteen postikortissa '
+            + '— vuonna 1888 vihitty konserttitalo rahoitettiin osaksi '
+            + 'kansalaiskeräyksellä.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Ateneo Rumano, Bucarest, Rumanía, 2016-05-29, DD 73.jpg',
+          selite: 'Sama rakennus tänään kupoleineen, pylväikköineen ja puistoineen: '
+            + 'sisällä soittaa George Enescun filharmoninen orkesteri.',
+          lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -13150,6 +13658,22 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Sarajevo Sebilj and Bascarsija, ca. 1930.jpg',
+          vuosi: '1930-luku',
+          selite: 'Sebiljin vesikioski ja Baščaršijan basaari 1930-luvulla aukiolla, '
+            + 'joka on ollut kauppapaikkana 1400-luvulta asti.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Sarajevo Bascarsija Sebilj 2007-08-16.jpg',
+          selite: 'Sebilj eli Baščaršijan puinen vesikioski iltavalaistuksessa: '
+            + 'kahdeksankulmaisen katoksen alla on hana, josta ohikulkijat ovat '
+            + 'juoneet vettä 1700-luvulta asti.',
+          lahde: 'Milan Suvajac, Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'urheilu',
@@ -13506,6 +14030,21 @@ export const KULTTUURI_KATEGORIAT = {
             + 'aallonmurtajia, ja rinteessä nousevat huvilat ja punakattoiset '
             + 'matalat talot esikaupungin puutarhakortteleiden edessä.',
           lahde: 'Alexey M., Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Richelieu Stair, Odessa, Russia, (i.e., Ukraine)-LCCN2001697474.jpg',
+          vuosi: '1890-luku',
+          selite: 'Portaat alhaalta kuvattuna 1890-luvulla, kun niitä kutsuttiin '
+            + 'Richelieun portaiksi ja askelmia oli vielä 200.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Odessa Treppe.JPG',
+          selite: 'Sama näkymä nykyään: kahdeksan alinta askelmaa jäi sataman '
+            + 'laajennuksen alle ja ylhäällä siintää herttua Richelieun patsas.',
+          lahde: 'Julian Nyča, Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -14028,6 +14567,24 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Petra. Front view of Temple of el-Khazneh LOC matpc.06878.jpg',
+          vuosi: '1900-luvun alku',
+          selite: 'Khaznen julkisivu 1900-luvun alussa, oviaukossa yksi ihminen '
+            + 'mittakaavana — julkisivua ei muurattu vaan hakattiin ylhäältä alaspäin '
+            + 'umpikallioon.',
+          lahde: 'Matson Collection / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Al Khazneh 2025.jpg',
+          vuosi: '2025',
+          selite: 'Khazne nykyään: pylväät, kaarielementti ja veistokset erottuvat '
+            + 'selvästi, ja ruusunpunainen hiekkakivi vaihtaa sävyä auringon liikkeen '
+            + 'mukana.',
+          lahde: 'ほっきー, Commons (CC0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kapea rotko on ainoa portti kaupunkiin',
@@ -14468,6 +15025,24 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Jousimiesten kukkula ja sen takana suoraan ylös nouseva '
             + 'Uhudin rinne, etualalla kivetty aukio lyhtypylväineen.',
           lahde: 'CR Guru PK, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Khalili Collection Hajj and Arts of Pilgrimage Arc.pp-0254.11.jpg',
+          vuosi: '1880-luku',
+          selite: 'Profeetan moskeijan pihaa 1880-luvulla egyptiläisen upseerin '
+            + 'Muhammad Sadiq Beyn kuvaamana, kaarikäytävän takana kupoli profeetta '
+            + 'Muhammadin haudan päällä.',
+          lahde: 'Muhammad Sadiq Bey / Khalili Collections, Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mezquita del Profeta, Medina, Arabia Saudita, 2025-05-22, DD 02.jpg',
+          vuosi: '2025',
+          selite: 'Profeetan moskeija nykyään: pihaa on laajennettu satojentuhansien '
+            + 'ihmisten mittaiseksi, ja vanha kupoli on jäänyt uusien minareettien '
+            + 'keskelle.',
+          lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
@@ -14926,6 +15501,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Kaliper1, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Khalili Collection Hajj and Arts of Pilgrimage arc.pp 0211.04.jpg',
+          vuosi: '1880',
+          selite: 'Kaaba suuren moskeijan keskellä vuonna 1880, taustalla kapean '
+            + 'laakson rinnettä ylös kiipeävät talot.',
+          lahde: 'Muhammad Sadiq Bey / Khalili Collections, Commons (PD)',
+        },
+        {
+          tiedosto: 'Makkah 550m.jpg',
+          vuosi: '2011',
+          selite: 'Suuri moskeija ja sitä ympäröivä kaupunki 550 metrin korkeudesta '
+            + 'nähtynä: Kaaba on pieni tumma piste keskellä pihaa, jonka ympärille '
+            + 'kaikki muu on kasvanut.',
+          lahde: 'Wurzelgnohm, Commons (CC0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Laakso kerää sateen kaduille',
@@ -15348,6 +15940,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Cappadocia LOC matpc.12157.jpg',
+          vuosi: '1935',
+          selite: 'Kartiomaisia tuhkakivimuodostumia vuonna 1935, kylkiin hakattuina '
+            + 'ovia ja ikkuna-aukkoja — kivi on niin pehmeää, että aukot syntyivät '
+            + 'käsityökaluilla.',
+          lahde: 'Matson Collection / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Goreme Panorama From Southeast.JPG',
+          vuosi: '2009',
+          selite: 'Göremen kylä aamuvalossa: talot, kartiot ja kalliot ovat sekaisin, '
+            + 'ja osa taloista on yhä puoliksi kallion sisällä.',
+          lahde: 'Bjørn Christian Tørrissen, Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Maisema on kovettunutta tuhkaa',
@@ -15713,6 +16322,24 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Groep mannen poserend bij de Poort van alle Naties (Poort van Xerxes) in Persepolis Persepolis (titel op object), RP-F-F01048-AI.jpg',
+          vuosi: 'n. 1880-1895',
+          selite: 'Kaikkien kansojen portti noin 1880–1895: pylväiden ja siivekkään '
+            + 'härkähahmon juurella seisova miesryhmä näyttää, kuinka korkealle raunio '
+            + 'nousee.',
+          lahde: 'Antoin Sevruguin (attribuoitu) / Rijksmuseum, Commons (CC0)',
+        },
+        {
+          tiedosto: 'Persepolis - Apadana 01.jpg',
+          vuosi: '2016',
+          selite: 'Apadanan pylväitä nykyään: setripuinen katto paloi vuonna 330 ennen '
+            + 'ajanlaskun alkua, joten pylväät ovat siitä lähtien kannatelleet vain '
+            + 'taivasta.',
+          lahde: 'Bernard Gagnon, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Neljän kuninkaan terassi',
@@ -16055,6 +16682,25 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Panoraama kattojen yli: etualalla Pyhän haudan kirkon '
             + 'tumma kupoli ja kaukana Öljymäen harjanne.',
           lahde: 'Papierdrache, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'From the Mount of Olives, general view, Jerusalem, Holy Land-LCCN2002725017.jpg',
+          vuosi: '1890-luku',
+          selite: 'Vanhakaupunki Öljymäeltä 1890-luvun photochrom-vedoksessa: muuri '
+            + 'kiertää kaupunkia, keskellä erottuu Kalliomoskeijan kupoli ja etualan '
+            + 'hautausmaan rinne pitää näkymän esteettömänä.',
+          lahde: 'Library of Congress, photochrom-kokoelma (PD)',
+        },
+        {
+          tiedosto: 'Jerusalem, 21 December 2025 192.jpg',
+          vuosi: '2025',
+          selite: 'Kalliomoskeijan kupoli ja minareetti kohoavat vanhankaupungin '
+            + 'kattojen yli iltapäivän valossa, ja koko kaupunki hehkuu samalla '
+            + 'värillä, koska julkisivut on määrätty verhottaviksi paikallisella '
+            + 'vaalealla kivellä.',
+          lahde: 'מקף־עברי, Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
@@ -16401,6 +17047,23 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Kanjonin pohja ylhäältä: kapea hiekkauoma kiemurtelee '
             + 'kerroksellisten hiekkakiviseinien välissä.',
           lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Francis Frith (English - The Convent of Sinai - Google Art Project.jpg',
+          vuosi: '1858',
+          selite: 'Pyhän Katariinan luostari muuriensa sisällä Siinain vuorten '
+            + 'juurella vuonna 1858, etualalla lepäävä kameli ja ympärillä kasviton '
+            + 'rinne.',
+          lahde: 'Francis Frith / J. Paul Getty Museum, Commons (PD)',
+        },
+        {
+          tiedosto: 'Saint Catherine\'s Monastery, Mount Sinai morning.jpg',
+          vuosi: '2010',
+          selite: 'Sama luostari aamuvalossa: muurien sisällä on kirkko ja kellotorni, '
+            + 'ja ympärillä kohoaa paljas kalliorinne.',
+          lahde: 'Abraham, Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
@@ -16814,6 +17477,23 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Aurinko matalalla dyynimeren yllä, ja jokainen harjanne '
             + 'heittää oman varjonsa.',
           lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Sanaw well.jpg',
+          vuosi: '1946',
+          selite: 'Karavaani ohittamassa raunioitunutta linnaketta Sanawin kaivolla '
+            + 'vuonna 1946, kuvaajana Wilfred Thesiger, joka ylitti hiekkameren '
+            + 'kamelien kanssa.',
+          lahde: 'Wilfred Thesiger / Pitt Rivers Museum, Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Saudi Arabia Empty Quarter Nov. 2021 (100).jpg',
+          vuosi: '2021',
+          selite: 'Rub al-Khali nykyään: dyyni toisensa jälkeen ilman kylää, tietä tai '
+            + 'puuta suunnilleen Ranskan kokoisella aavikolla.',
+          lahde: 'Richard Mortel, Commons (CC BY 2.0)',
         },
       ],
       nostot: [
@@ -17418,6 +18098,22 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Harald Groven, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Tromsø, with Tromstind, Troms, Norway-LCCN2001700759.jpg',
+          vuosi: '1890-luku',
+          selite: 'Tromssa 1890-luvun photochrom-vedoksessa: puutaloja rinteessä, '
+            + 'purjelaivoja satamassa ja takana Tromsdalstindin lumihuippu.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Tromsø harbour 01.jpg',
+          selite: 'Sama satama helmikuussa: puiset makasiinit seisovat yhä laiturilla, '
+            + 'mutta veneet ovat terästä ja salmen yli kaartaa vuonna 1960 valmistunut '
+            + 'Tromssan silta.',
+          lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'valo',
@@ -17788,6 +18484,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'edessä kaartuu musta hiekkaranta. Etualalla kasvaa '
             + 'kuivunutta rantaheinää tuppaissa mustassa hiekassa.',
           lahde: 'Eric Kilby, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Reykjavík. Fish drying and shark oil station. (4558216609).jpg',
+          vuosi: '1900-luvun alku',
+          selite: 'Kalankuivauskenttä ja hainmaksaöljyn keittämö Reykjavíkin laidalla '
+            + '1900-luvun alussa, kun kuivattu turska oli Islannin tärkein '
+            + 'vientitavara.',
+          lahde: 'Cornell University Library (ei käyttörajoituksia)',
+        },
+        {
+          tiedosto: 'Hallgrimskirkja church view.jpg',
+          selite: 'Hallgrímskirkjan kirkko Reykjavíkissa aamuhämärissä: betoniset '
+            + 'pilarit nousevat portaittain kuin basalttipatsaat, ja edessä seisoo '
+            + 'Leif Erikssonin patsas.',
+          lahde: 'Alberto Moreno, Commons (CC0)',
         },
       ],
     },
@@ -18162,6 +18875,21 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Htm, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Kultala Ivalojoki.jpg',
+          vuosi: '1900',
+          selite: 'Ivalojoen kulta-aluetta noin vuonna 1900: rannat on kaivettu auki '
+            + 'ja puut kaadettu, ja parhaimmillaan jokivarressa oli noin 600 ihmistä.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Pallastunturi and Hanhijärvi in Muonio, Lapland, Finland, 2023 September.jpg',
+          selite: 'Pallastunturit ja Hanhijärven suolampi syyskuussa, kun ruska on '
+            + 'värjännyt suon oranssiksi ja tunturit nousevat metsän takaa.',
+          lahde: 'Ximonic (Simo Räsänen), Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tunturi',
@@ -18531,6 +19259,23 @@ export const KULTTUURI_KATEGORIAT = {
             + '(CC BY 2.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Cnossus - room of (?), columns - north entrance - DPLA - 156faa906e3d69e9b9c71702853f1b8a.jpg',
+          vuosi: '1900-luvun alku',
+          selite: 'Knossoksen pohjoinen sisäänkäynti kaivausten aikaan 1900-luvun '
+            + 'alussa, kun Arthur Evans oli juuri alkanut kaivaa palatsia ja rakentaa '
+            + 'osaa siitä uudelleen betonista.',
+          lahde: 'Digital Public Library of America (PD)',
+        },
+        {
+          tiedosto: 'Knossos North entrance bull fresco.jpg',
+          selite: 'Sama sisäänkäynti nykyään: punaiset pylväät on pystytetty '
+            + 'uudelleen, ja seinällä on jäljennös härkäfreskosta, jonka alkuperäinen '
+            + 'on Herakleionin museossa.',
+          lahde: 'Jebulon, Commons (CC0)',
+        },
+      ],
     },
     {
       id: 'maasto',
@@ -18890,6 +19635,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kalliosta muodostuva niemi kohoaa jyrkkänä vedestä, ja sen '
             + 'laella seisoo valkoinen majakka.',
           lahde: 'Auregann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Crupi, Giovanni (1861-1925) - n. 0030 B - Teatro Greco - Taormina - DPLA - 51ed756181740204aed046a9302cef1b (page 8).jpg',
+          vuosi: '1890-luku',
+          selite: 'Taorminan kreikkalainen teatteri Giovanni Crupin kuvaamana '
+            + '1890-luvulla, jolloin hän piti kylässä valokuvaamoa ja myi näkymiä '
+            + 'matkailijoille.',
+          lahde: 'Digital Public Library of America (PD)',
+        },
+        {
+          tiedosto: 'Sicily Taormina Teatro Greco Etna.jpg',
+          selite: 'Sama teatteri tänään Etna taustalla: antiikin kreikkalaisten '
+            + 'rakentamassa ja roomalaisten laajentamassa katsomossa pidetään yhä '
+            + 'konsertteja.',
+          lahde: 'Commons (CC0)',
         },
       ],
     },
@@ -19259,6 +20021,22 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jyrkkien kallioseinämien väliin, ja pohjalla näkyy lumisia '
             + 'peltoja ja kylän taloja.',
           lahde: 'Keith Halstead, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'The Rhone Glacier, Glacier Hotel and Furka Road, Valais, Alps of, Switzerland-LCCN2001703310.jpg',
+          vuosi: '1890-luku',
+          selite: 'Rhônen jäätikkö laskeutuu melkein hotellin taakse 1890-luvun '
+            + 'photochrom-vedoksessa, jolloin jäähän louhittiin joka kesä käytävä '
+            + 'matkailijoiden kävellä.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Matterhorn in winter with Zermatt village.jpg',
+          selite: 'Matterhorn talvella Zermattin yläpuolelta nähtynä: kolmikulmainen '
+            + 'huippu erottuu vasemmalla ja laaksossa näkyy kylä lumen keskellä.',
+          lahde: 'Deralpinbergsteiger, Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -19634,6 +20412,22 @@ export const KULTTUURI_KATEGORIAT = {
             + 'matkustajalautta, takana paljas kivinen rinne ja '
             + 'moottoritien silta, oikealla riippusillan valkoinen pyloni.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Ragusa, general view, Dalmatia, Austro-Hungary-LCCN2002710782.jpg',
+          vuosi: '1890-luku',
+          selite: 'Ragusa eli Dubrovnik 1890-luvun photochrom-vedoksessa, kun kaupunki '
+            + 'oli menettänyt itsenäisyytensä ja kuului Itävalta-Unkariin.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Steep coast near the city wall in the Old Town of Dubrovnik, Croatia (48613191222).jpg',
+          selite: 'Vanhankaupungin muuri ja kattotiilet nykyään: osa katoista on '
+            + 'kirkkaan oransseja, koska ne uusittiin 1990-luvun sodan pommitusten '
+            + 'jälkeen.',
+          lahde: 'dronepicr, Commons (CC BY 2.0)',
         },
       ],
     },
@@ -20026,6 +20820,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Theatre and promenade, Riga, Russia, (i.e., Latvia)-LCCN2001697477.jpg',
+          vuosi: '1890-luku',
+          selite: 'Riian kaupunginteatteri ja sen edessä kanavapuisto 1890-luvun '
+            + 'photochrom-vedoksessa — puisto kasvaa vanhan vallihaudan päällä, jonne '
+            + 'istutettiin puita linnoitusten purkamisen jälkeen.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: '20150505 25 Riga - National Opera (16834432564).jpg',
+          selite: 'Sama talo tänään: vuodesta 1919 se on ollut Latvian '
+            + 'kansallisooppera, ja puisto ja kanava sen ympärillä ovat samat kuin '
+            + 'vanhassa kuvassa.',
+          lahde: 'Sjaak Kempe, Commons (CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'vanhakaupunki',
@@ -20410,6 +21221,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'palavat lämpiminä vaaleiden talojen rivin edessä, keskellä '
             + 'kohoaa kirkontorni ja etualalla on laaja mukulakivetys.',
           lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Vilnia, Vostraja Brama. Вільня, Вострая Брама (S. Fleury, 1900).jpg',
+          vuosi: '1900',
+          selite: 'Aamunportti vanhankaupungin puolelta noin vuonna 1900 Stanisław '
+            + 'Filibert Fleuryn kuvaamana, kulkijat pysähtyneinä mukulakivikadulle '
+            + 'portin alle.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Gate of Dawn Exterior, Vilnius, Lithuania - Diliff.jpg',
+          selite: 'Sama portti ja sama katu tänään: kappelin parvekkeella seisoo yhä '
+            + 'ihmisiä, mukulakivet on vaihdettu tasaisempaan kiveykseen ja päädyssä '
+            + 'lukee latinaksi Mater Misericordiae.',
+          lahde: 'Diliff, Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -20799,6 +21627,22 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Chell Hill, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Storthings Bygningen (i.e., Stortingsbygningen) Christiania, Norway-LCCN2001699461.jpg',
+          vuosi: '1890-luku',
+          selite: 'Norjan suurkäräjien talo 1890-luvun photochrom-vedoksessa, kun '
+            + 'kaupunki oli vielä Christiania ja maa unionissa Ruotsin kanssa.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'The parliament of Norway building - Stortingsbygningen (Storting building) - Stortinget (29765743122).jpg',
+          selite: 'Sama talo tänään Karl Johans gaten varrella: keltatiilisessä '
+            + 'puolipyöreässä salissa istuu 169 kansanedustajaa, ja edessä olevaa '
+            + 'nurmirinnettä kutsutaan Leijonakukkulaksi.',
+          lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
+        },
+      ],
     },
     {
       id: 'laivat',
@@ -20967,6 +21811,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Giotton vaalea kellotorni, oikealla kohoaa Badia Fiorentinan '
             + 'kapea kärkitorni, ja taustalla siintävät kukkulat.',
           lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Gezicht op Florence vanaf de Monte alle Croci FIRENZE Panorama preso dal Monte alle Croci. (titel op object), RP-F-F01093-AV.jpg',
+          vuosi: '1800-luvun loppu',
+          selite: 'Firenze Monte alle Crocin rinteeltä 1800-luvun lopun '
+            + 'albumiinivedoksessa: Arno kaartaa kuvan halki, vasemmalla erottuu Ponte '
+            + 'Vecchio ja horisontissa tuomiokirkon kupoli.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Vista de Florencia desde Piazzale Michelangelo, Italia, 2022-09-18, DD 199.jpg',
+          selite: 'Sama näkymä samalta terassilta noin 150 vuotta myöhemmin — sillat, '
+            + 'joen mutka, torni ja kupoli ovat paikoillaan, ja uutta on vain '
+            + 'rantakatujen liikenne ja puiden korkeus.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -21491,6 +22352,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seisovat rivissä rantalaiturin takana, ja kanaalissa on '
             + 'kiinni vanhoja purjelaivoja mastoineen.',
           lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Royal Theatre, Copenhagen, Denmark-LCCN2001697986.jpg',
+          vuosi: '1890-luku',
+          selite: 'Kuninkaallinen teatteri Kongens Nytorvin laidalla 1890-luvun '
+            + 'photochrom-vedoksessa, samaan aikaan kun Carl Nielsen soitti talon '
+            + 'orkesterissa toista viulua.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Kongens Nytorv (The King\'s New Square) and the Royal Danish Theatre.jpg',
+          selite: 'Sama teatteri ja aukio nykyään: Kongens Nytorv kaivettiin '
+            + '2010-luvulla auki metroasemaa varten ja rakennettiin sen jälkeen '
+            + 'uudelleen entiselleen.',
+          lahde: 'European Union, 2026, Commons (CC BY 4.0)',
         },
       ],
       /*
@@ -22377,6 +23255,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'A fortified arched gate, Nicosia, Cyprus Wellcome L0056833.jpg',
+          vuosi: '1878',
+          selite: 'Holvikaarinen portti Nikosian muurissa vuonna 1878, jolloin britit '
+            + 'ottivat saaren hallintaansa — portin edessä seisoo aaseja kuormineen.',
+          lahde: 'John Thomson / Wellcome Collection, Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Along ledras street.JPG',
+          vuosi: '2010',
+          selite: 'Ledran katu muurien sisäpuolella: kävelykatu päättyy muutaman '
+            + 'korttelin päässä tarkastuspisteeseen, jonka läpi on päässyt kaupungin '
+            + 'toiselle puolelle vasta vuodesta 2008.',
+          lahde: 'Andreas2009, Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Tulkin talo vaihtoi omistajaa kahdesti',
@@ -22770,6 +23665,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Salwa Farwaneh Dameh, Wikimedia Commons (CC0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'The Persian problem; an examination of the rival positions of Russia and Great Britain in Persia, with some account of the Persian gulf and the Bagdad railway (1903) (14763432082).jpg',
+          vuosi: '1903',
+          selite: 'Kuwaitilaisia miehiä ja poika vuoden 1903 matkakirjan kuvassa, '
+            + 'aikana jolloin kaupunki eli helmenkalastuksesta ja laivanrakennuksesta.',
+          lahde: 'Internet Archive Book Images, Commons (PD)',
+        },
+        {
+          tiedosto: 'Kuwait City skyline (39710595225).jpg',
+          vuosi: '2018',
+          selite: 'Kuwait Cityn silhuetti mereltä nähtynä: kaupunki on yhä samassa '
+            + 'lahden pohjukassa, mutta lähes kaikki sen juomavesi tehdään nykyään '
+            + 'merivedestä.',
+          lahde: 'Francisco Anzola, Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Laivaa ei ole koskaan laskettu vesille',
@@ -23123,6 +24035,24 @@ export const KULTTUURI_KATEGORIAT = {
             + 'polulta: rinteet ovat paljasta kiveä, ja kaukana laaksossa '
             + 'häämöttää kaupunkia.',
           lahde: 'Daredeep33, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'The Persian problem; an examination of the rival positions of Russia and Great Britain in Persia, with some account of the Persian gulf and the Bagdad railway (1903) (14577292147).jpg',
+          vuosi: '1903',
+          selite: 'Maskat vuoden 1903 matkakirjan kuvalaatassa: kalliolla seisoo '
+            + 'portugalilaisten linnake, ja kaupunki mahtuu juuri ja juuri vuorten ja '
+            + 'veden väliin.',
+          lahde: 'Internet Archive Book Images, Commons (PD)',
+        },
+        {
+          tiedosto: 'Old Muscat City View, Muscat, Oman.jpg',
+          vuosi: '2024',
+          selite: 'Vanha Maskat nykyään samojen vuorten välissä, kun taas uusi '
+            + 'kaupunki on jouduttu kasvattamaan kymmenien kilometrien nauhaksi '
+            + 'rannikkoa pitkin.',
+          lahde: 'Domenico Convertini, Commons (CC BY-SA 2.0)',
         },
       ],
       nostot: [
@@ -23532,6 +24462,24 @@ export const KULTTUURI_KATEGORIAT = {
             + 'talojen ja puiden taakse, taivas hehkuu oranssina ja joki '
             + 'heijastaa värin.',
           lahde: 'Silver mahmoud, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Baghdad, the riverfront, looking north to the Old City from the right bank, near the British Embassy LOC matpc.13270.jpg',
+          vuosi: '1932',
+          selite: 'Tigrisin ranta Bagdadissa vuonna 1932: joen yli vie veneiden varaan '
+            + 'rakennettu silta, jonka keskiosa avattiin laivojen tieltä, ja rannassa '
+            + 'pestään pyykkiä.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'بغداد نهر دجلة.jpg',
+          vuosi: '2015',
+          selite: 'Tigris keskellä Bagdadia nykyään: joki on yhä yhtä leveä ja ruskea, '
+            + 'mutta sen yli vie nyt kymmenkunta kiinteää siltaa siellä missä '
+            + '1930-luvulla kelluivat veneet.',
+          lahde: 'Mustafa Nader, Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -24019,6 +24967,22 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'F Mira, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Smyrna wharf LCCN2014715176.jpg',
+          vuosi: '1900',
+          selite: 'Soutuveneitä Smyrnan sataman edustalla vuonna 1900, rannassa '
+            + 'varastojen rivi ja niiden takana rinnettä ylös nouseva kaupunki.',
+          lahde: 'Bain News Service / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Izmir 2012.jpg',
+          vuosi: '2012',
+          selite: 'Izmirin lahti Kadifekalen linnavuorelta katsottuna: kaupunki '
+            + 'kaartuu veden ympäri ja talot nousevat rinteille joka suunnasta.',
+          lahde: 'Haluxjason, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Hissi rakennettiin kadun jatkoksi',
@@ -24435,6 +25399,24 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Zach1055, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'CH-NB - Türkei, Ankara- Festung - Annemarie Schwarzenbach - SLA-Schwarzenbach-A-5-02-053.jpg',
+          vuosi: '1933-1934',
+          selite: 'Kantajia ja aaseja paljaalla rinteellä Ankaran linnan alapuolella '
+            + 'vuosina 1933–1934, noin kymmenen vuotta sen jälkeen kun kylästä tuli '
+            + 'uuden tasavallan pääkaupunki.',
+          lahde: 'Annemarie Schwarzenbach / Sveitsin kansalliskirjasto, Commons (PD)',
+        },
+        {
+          tiedosto: 'View of Ankara city from the castle.jpg',
+          vuosi: '2021',
+          selite: 'Näkymä linnanmuurilta nykyään: etualalla vanhan kaupungin '
+            + 'tiilikattoja ja kauempana keskusta tornitaloineen, sillä sama kukkula '
+            + 'on nyt keskellä miljoonakaupunkia.',
+          lahde: 'Tsdlnsaıd, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Luostari ensin, moskeija sen viereen',
@@ -24806,6 +25788,24 @@ export const KULTTUURI_KATEGORIAT = {
             + 'länsipuolella: katottomat kiviseinät kaari-ikkunoineen '
             + 'kiertävät nurmista pihaa, jolla makaa kaatuneita pylväitä.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'CH-NB - Syrien, Aleppo- Zitadelle - Annemarie Schwarzenbach - SLA-Schwarzenbach-A-5-03-014.jpg',
+          vuosi: '1933-1934',
+          selite: 'Aleppon linnoitus kukkulallaan vuosina 1933–1934: jyrkkä rinne on '
+            + 'päällystetty sileillä kivilaatoilla juuri siksi, ettei sitä pysty '
+            + 'kiipeämään ylös.',
+          lahde: 'Annemarie Schwarzenbach / Sveitsin kansalliskirjasto, Commons (PD)',
+        },
+        {
+          tiedosto: 'Aleppo Citadel at sunset, October 2024.jpg',
+          vuosi: '2024',
+          selite: 'Linnoituksen porttitorni illan valossa lokakuussa 2024, alla sillan '
+            + 'kaaret ja tornin kyljessä korjaustyömaan teline — linnoitusta '
+            + 'kunnostetaan pala kerrallaan.',
+          lahde: 'Noureddine Attar, Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
@@ -25241,6 +26241,24 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'The street called straight, Damascus, Holy Land, (i.e. Syria)-LCCN2002724979.jpg',
+          vuosi: '1890-luku',
+          selite: 'Suora katu Damaskoksessa 1890-luvun photochrom-vedoksessa: '
+            + 'kävelijöitä, aasin selässä ratsastava mies ja katon rajassa ulos '
+            + 'työntyviä puisia erkkereitä.',
+          lahde: 'Library of Congress, photochrom-kokoelma (PD)',
+        },
+        {
+          tiedosto: 'Bab Sharqi Street, Damascus.jpg',
+          vuosi: '2010',
+          selite: 'Suoran kadun itäpää nykyään: erkkerit ovat yhä paikoillaan, '
+            + 'keskikaistalle on nostettu vanhoja pylväänpätkiä ja katu kulkee samaa '
+            + 'linjaa kuin roomalainen pääkatu kaksituhatta vuotta sitten.',
+          lahde: 'Bernard Gagnon, Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Parturi kirjasi, mistä marmori tuli',
@@ -25660,6 +26678,24 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Kaksi feluccaa Niilillä auringonlaskun aikaan, vaaleat '
             + 'kolmiopurjeet ja niiden kuvajaiset tyynessä vedessä.',
           lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Town Of Luxor LACMA M.2008.40.197.jpg',
+          vuosi: 'noin 1870',
+          selite: 'Luxorin kaupunki Niilin toiselta rannalta noin vuonna 1870 Antonio '
+            + 'Beaton kuvaamana: temppelin pyloni ja pylväsrivi nousevat suoraan '
+            + 'asuintalojen keskeltä.',
+          lahde: 'Antonio Beato / LACMA, Commons (PD)',
+        },
+        {
+          tiedosto: 'Luxor Temple Square R01.jpg',
+          vuosi: '2013',
+          selite: 'Luxorin temppeliaukio nykyään: temppelin päälle rakennetun Abu '
+            + 'Haggagin moskeijan vanha ovi jäi korkealle ilmaan, kun temppeli '
+            + 'kaivettiin ympäriltä esiin.',
+          lahde: 'Marc Ryckaert, Commons (CC BY 3.0)',
         },
       ],
       nostot: [
@@ -26082,6 +27118,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Kayhan ERTUGRUL, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Qaṣr Murabbaʿ.jpg',
+          vuosi: '1930-luku',
+          selite: 'Murabban linna 1930-luvulla: savitiilinen muuri, hammastettu harja '
+            + 'ja neljä kulmatornia keskellä aavikkoa, jonne Riad myöhemmin kasvoi.',
+          lahde: 'Tuntematon kuvaaja, Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Riyadh Skyline showing the King Abdullah Financial District (KAFD) and the famous Kingdom Tower .jpg',
+          vuosi: '2016',
+          selite: 'Riadin keskusta iltahämärässä Kingdom Centre etualalla — kaupunki '
+            + 'jatkuu horisonttiin asti, vaikka vesi on tuotava kaivoista ja putkea '
+            + 'pitkin Persianlahdelta asti.',
+          lahde: 'B. Alotaby, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Aukko nostaa talon määräyksen yli',
@@ -26438,6 +27491,24 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pohjalla vain kapea vesijuova ja oikealla uoman yli kaartuva '
             + 'kupolirivin peittämä rakennus.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Persia past and present; a book of travel and research, with more than two hundred illustrations and a map (1906) (14577156579).jpg',
+          vuosi: '1906',
+          selite: 'Basaarin viereinen piha Tabrizissa vuonna 1906: kamelit odottavat '
+            + 'lastia villa- ja mattopaalien keskellä, ja tästä pihasta tavara lähti '
+            + 'karavaanin selässä länteen.',
+          lahde: 'Internet Archive Book Images, Commons (PD)',
+        },
+        {
+          tiedosto: 'Landscape of Tabriz 01.jpg',
+          vuosi: '2019',
+          selite: 'Tabriz nykyään vuorenrinteeltä katsottuna: basaari on jossain tuon '
+            + 'kattomeren keskellä, ja se on yhä yksi maailman laajimmista katetuista '
+            + 'kauppapaikoista.',
+          lahde: 'Mostafameraji, Commons (CC0)',
         },
       ],
       nostot: [
@@ -26850,6 +27921,24 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kortteleita tummanvihreä puistometsikkö, ja koko näkymän '
             + 'päättää Alborzin luminen rintama.',
           lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Téhéran, le Meydan de l\'Ark.jpg',
+          vuosi: '1850-luku',
+          selite: 'Arkin aukio 1850-luvulla: kaarikäytävärivin edessä on pitkä jono '
+            + 'tykinlavetteja, ja aukiolla liikkuneista ihmisistä jäi vain haaleita '
+            + 'haamuja, koska valotus kesti minuutteja.',
+          lahde: 'Luigi Pesce / Gallica, Ranskan kansalliskirjasto, Commons (PD)',
+        },
+        {
+          tiedosto: 'Tehran skyline- Alborz Mountains on background-20150401.jpg',
+          vuosi: '2015',
+          selite: 'Teheran Tabiat-sillalta katsottuna taustallaan Alborzin harjanne: '
+            + 'kaupungin pohjoisosa on satoja metrejä etelää korkeammalla ja siksi '
+            + 'useita asteita viileämpi.',
+          lahde: 'Mhsheikholeslami, Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -27345,6 +28434,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Phillip Maiwald (Nikopol), Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'ETH-BIB-Isfahan mit Meidan-e Schah Platz-Persienflug 1924-1925-LBS MH02-02-0150-AL-FL.tif',
+          vuosi: '1925',
+          selite: 'Isfahan ilmasta helmikuussa 1925 sveitsiläisen postilentäjän '
+            + 'kuvaamana: suuren aukion kupolit ja pitkä kaarikäytävärivi kohoavat '
+            + 'matalien savikattojen keskeltä.',
+          lahde: 'Walter Mittelholzer, ETH-Bibliothek / Commons (PD)',
+        },
+        {
+          tiedosto: 'Naqsh-e Jahan Square 01.jpg',
+          vuosi: '2018',
+          selite: 'Naqsh-e Jahan nykyään: leikatut nurmikot, pitkä suihkulähdeallas ja '
+            + 'moskeijan kupoli reunustavat yli 500 metriä pitkää aukiota.',
+          lahde: 'Gladiator2714, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Neljätoistatuhatta lintua yhden tornin sisällä',
@@ -27800,6 +28906,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ibrahim Alqousi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Jewish children in Sana\'a, Yemen, circa 1909.jpg',
+          vuosi: 'n. 1909',
+          selite: 'Lapsijoukko Sanaan juutalaiskorttelin hiekkakadulla noin vuonna '
+            + '1909, taustalla korkeita savitiilitaloja pienine ikkuna-aukkoineen.',
+          lahde: 'Hermann Burchardt, Commons (PD)',
+        },
+        {
+          tiedosto: 'Old Sanaa, Yemen (10732756906).jpg',
+          vuosi: '2013',
+          selite: 'Vanhan Sanaan kattoja nykyään: alue on Unescon '
+            + 'maailmanperintökohde, mutta talot eivät ole museo vaan koteja, joissa '
+            + 'asutaan yhä.',
+          lahde: 'Rod Waddington, Commons (CC BY-SA 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kahdeksan kerrosta, yksi suku',
@@ -28222,6 +29345,24 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Tawahin niemi ylhäältä: vasemmalla satama nostureineen ja '
             + 'rahtilaivoineen, oikealla tiivis kaupunginosa vuorenrinteellä.',
           lahde: 'Brian Harrington Spier from Shanghai, China, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'De haven van Aden in Zuid Jemen Aden (titel op object), RP-F-00-5018-14.jpg',
+          vuosi: '1890-1910',
+          selite: 'Adenin satama ja ranta noin vuoden 1900 tienoilla sammuneen '
+            + 'tulivuoren mustien rinteiden alla, kun laivat pysähtyivät täällä '
+            + 'ottamaan hiiltä matkalla Suezista Intiaan.',
+          lahde: 'Rijksmuseum, Commons (CC0)',
+        },
+        {
+          tiedosto: 'Aden - panorama of crater from Tawila Tunks (8739851148).jpg',
+          vuosi: '2013',
+          selite: 'Adenin Crater-kaupunginosa nykyään vesisäiliöiden kohdalta '
+            + 'katsottuna: talot täyttävät kraatterin pohjan ja tummat rinteet '
+            + 'nousevat ympärillä kuin muuri.',
+          lahde: 'JamesGardinerCollection, Commons (CC BY-SA 2.0)',
         },
       ],
       nostot: [
@@ -29130,6 +30271,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Austen Henry Layard, Wikimedia Commons (PD)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Crowded marketplace (Mosul, 1932).jpg',
+          vuosi: '1932',
+          selite: 'Mosulin torikuja vuonna 1932, kojujen yllä kesähelteen varjoksi '
+            + 'pingotettu kangaskatos.',
+          lahde: 'G. Eric ja Edith Matson / Library of Congress (PD)',
+        },
+        {
+          tiedosto: '1I0A9237.jpg',
+          vuosi: '2019',
+          selite: 'Tigrisin länsiranta Mosulissa ja taustalla kaupungin vanha silta; '
+            + 'joen toisella puolella, kuvan yläreunan takana, ovat Niniven raunioiden '
+            + 'kummut.',
+          lahde: 'Goldmansam, Commons (CC BY-SA 4.0)',
+        },
+      ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Fatima Khatun Mosque Entrance Mosul.jpg',
@@ -29473,6 +30631,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuorenharjalla Badalingissa, ja vartiotornit merkitsevät '
             + 'harjanteen käännekohdat.',
           lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Peking - inside view of gateway leading toward the Emperor\'s Palace LCCN2004707954.jpg',
+          vuosi: '1895',
+          selite: 'Portti keisarin palatsin suuntaan vuonna 1895 — käsinväritetty '
+            + 'lyhtykuvalevy William Henry Jacksonilta, joka kiersi tuolloin maailmaa '
+            + 'kuvaamassa liikenneyhteyksiä.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Hall of Supreme Harmony, Forbidden City, from southeast.jpg',
+          selite: 'Kielletyn kaupungin suurin rakennus, Ylimmän sopusoinnun sali, '
+            + 'kohoaa kolminkertaisen marmoriterassin päällä punaisten seinien ja '
+            + 'keltatiilisten kattojen keskellä.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       nostot: [
@@ -29914,6 +31089,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Yann, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Delhi. Chandee Chawk LCCN2017657607.jpg',
+          vuosi: '1890-luku',
+          selite: 'Chandni Chowk Delhissä 1890-luvun photochrom-vedoksessa: kadun nimi '
+            + 'tarkoittaa kuunvalon toria, ja sen keskellä virtasi alun perin kanava.',
+          lahde: 'Photoglob Co. / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Chandni Chowk. Delhi, India (23389084162).jpg',
+          vuosi: '2015',
+          selite: 'Sama katu nykyään: kanava on peitetty jo kauan sitten, mutta '
+            + 'Chandni Chowk on yhä Vanhan Delhin pääväylä ja sen molemmin puolin '
+            + 'aukeaa kauppakujien verkosto.',
+          lahde: 'Juan Antonio Segal, Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Keisarin linnoitus vaihtoi isäntää',
@@ -30303,6 +31495,22 @@ export const KULTTUURI_KATEGORIAT = {
             + 'parvekkeineen ja katolle nostettuine vesisäiliöineen, ja '
             + 'niiden takana nousee toimistotornien seinämä.',
           lahde: "Pom', Flickr (CC BY-SA 2.0)",
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'De Nijûbashi-brug bij het Edo-kasteel van Tokyo Nijûbashi (titel op object), RP-F-F01177-AC.jpg',
+          vuosi: '1870–1900',
+          selite: 'Nijūbashin silta Edon linnan vallihaudan yli 1800-luvun '
+            + 'jälkipuoliskolla, kun linnasta oli tullut keisarin palatsi ja Edon nimi '
+            + 'oli vaihtunut Tokioksi.',
+          lahde: 'Rijksmuseum, Commons (CC0)',
+        },
+        {
+          tiedosto: 'Nijubashi Bridge. Tokyo. (42521677522).jpg',
+          selite: 'Sama silta nykyään: nimi Nijūbashi tarkoittaa kaksoissiltaa ja '
+            + 'tulee paikalla aikoinaan olleesta kaksitasoisesta puusillasta.',
+          lahde: 'Bernard Spragg, Commons (PD)',
         },
       ],
       /*
@@ -30939,6 +32147,22 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Carmine.shot, Flickr (CC BY 2.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'South Korea, Great South Gate in Seoul.jpg',
+          vuosi: 'noin 1884',
+          selite: 'Namdaemun eli Suuri eteläportti noin vuonna 1884, jolloin se oli '
+            + 'yhä kaupunginmuurin eteläinen pääsisäänkäynti.',
+          lahde: 'George Clayton Foulk, Commons (PD)',
+        },
+        {
+          tiedosto: 'Sungnyemun Gate, Seoul, 1394 (1) (26261755967).jpg',
+          selite: 'Sama portti tänään virallisella nimellään Sungnyemun: puinen '
+            + 'porttirakennus tuhoutui tuhopoltossa 2008 ja rakennettiin uudelleen '
+            + 'vanhoin puusepäntekniikoin.',
+          lahde: 'Richard Mortel, Commons (CC BY 2.0)',
+        },
+      ],
       /*
        * MATKAILIJAN SOUL. Rakenne on Bagdadin mallista: pystykuva,
        * kappale ja opastaitto viidellä jaksolla, joista ensimmäisessä
@@ -31481,6 +32705,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kivitalojen rivi, ja niiden takaa nousee tornitalojen meri '
             + 'usvaan asti.',
           lahde: 'Franck Michel, Flickr (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Lai Afong, The Bund, Shanghai, c1870.jpg',
+          vuosi: '1870-luku',
+          selite: 'Bundin rantakatu 1870-luvulla Lai Afongin kuvaamana — hän oli '
+            + '1800-luvun tunnetuin kiinalainen valokuvaaja ja matkusti kuvaamassa '
+            + 'pitkin rannikkoa.',
+          lahde: 'Lai Afong, Commons (PD)',
+        },
+        {
+          tiedosto: 'Shanghai The Bund (22219109059).jpg',
+          selite: 'Sama rantakatu tänään: siirtomaa-ajan pankki- ja kauppahuoneiden '
+            + 'rivi seisoo yhä Huangpun rannassa, mutta konttoreissa toimivat nyt '
+            + 'kiinalaiset pankit, hotellit ja museot.',
+          lahde: 'Gary Todd, Commons (CC0)',
         },
       ],
       /*
@@ -32034,6 +33275,21 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Kayhan ERTUGRUL, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Arabs in Tripoli WDL2444.png',
+          vuosi: '1910-luku',
+          selite: 'Väkeä koolla Tripolin muurien kupeessa 1910-luvulla, valkoiset '
+            + 'viitat suojaamassa sekä auringolta että aavikon hiekalta.',
+          lahde: 'World Digital Library (PD)',
+        },
+        {
+          tiedosto: 'The Green Square at Tripoli, Libya - panoramio.jpg',
+          selite: 'Sama aukio muurien kupeessa nykyään: Marttyyrien aukio on yhä '
+            + 'kaupungin sydän ja vanha linnoitus vartioi sen laitaa.',
+          lahde: 'Cüneyt Türksen, Commons (CC BY 3.0)',
+        },
+      ],
       /*
        * MATKAILIJAN TRIPOLI. Rakenne on Bagdadin mallista: pystykuva,
        * kappale ja opastaitto viidellä jaksolla, joista ensimmäisessä
@@ -32518,6 +33774,24 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Vid na Ekaterinburg ot doma Nachalʹnika Gornago Okruga.jpg',
+          vuosi: '1910',
+          selite: 'Jekaterinburg kaupunginlammen takaa vuonna 1910 — kuva on väreissä, '
+            + 'vaikka värifilmiä ei vielä ollut, sillä kuvaaja otti näkymän kolmesti '
+            + 'eri värisuotimen läpi.',
+          lahde: 'Sergei Prokudin-Gorski, Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Views of Yekaterinburg-2021-1.jpg',
+          vuosi: '2021',
+          selite: 'Jekaterinburg vuonna 2021: Uralin suurimmassa kaupungissa asuu yli '
+            + 'miljoona ihmistä, vaikka se aloitti pelkkänä rautatehtaana joen padon '
+            + 'vieressä.',
+          lahde: 'Vjatšeslav Buharov, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Pato tuli ensin, kaupunki vasta sen jälkeen',
@@ -32879,6 +34153,24 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'P475b Steamboats at Novo Nikolayevsk, taken from the bridge over the Obi.jpg',
+          vuosi: '1913',
+          selite: 'Höyrylaivoja Obilla Novonikolajevskissa lokakuussa 1913 Fridtjof '
+            + 'Nansenin kuvaamana, kun kaupunki oli vasta kahdenkymmenen vuoden '
+            + 'ikäinen.',
+          lahde: 'Fridtjof Nansen, Norjan kansalliskirjasto / Commons (PD)',
+        },
+        {
+          tiedosto: 'Ob River, Novosibirsk 2.jpg',
+          vuosi: '2018',
+          selite: 'Obin ranta Novosibirskissä ja takana keskustan talot: kaupunki on '
+            + 'yhä reilun sadan vuoden ikäinen, mutta siinä asuu jo yli puolitoista '
+            + 'miljoonaa ihmistä.',
+          lahde: 'K. Artjom, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Ainoa kohta, jossa joki on putkessa',
@@ -33222,6 +34514,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joiden yläpuolella on valkoinen päätykolmio ja sen '
             + 'keskellä kaiverrettu ruusuke.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Irkutsk Bolshay.jpg',
+          vuosi: '1890-luku',
+          selite: 'Irkutskin pääkatu 1890-luvulla leveänä ja kaksikerroksisten '
+            + 'kivitalojen reunustamana, sillä kaupungin kautta kulki teetä Kiinasta '
+            + 'ja kultaa Lenan kaivoksilta.',
+          lahde: 'N. A. Tšarušin, Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Irkutsk, Lower Embankment, Russia.jpg',
+          vuosi: '2015',
+          selite: 'Angaran alaranta Irkutskissa nykyään: Angara on ainoa joki, joka '
+            + 'lähtee Baikalista ulos, kun kaikki muut sadat joet laskevat siihen.',
+          lahde: 'Vjatšeslav Argenberg, Commons (CC BY 4.0)',
         },
       ],
       nostot: [
@@ -33652,6 +34961,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'SmallSonMarex, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Yakutsk shore.jpg',
+          vuosi: '1890-luku',
+          selite: 'Jakutskin ranta Lena-joella 1890-luvulla: kaupunkiin ei tullut '
+            + 'maantietä eikä rautatietä, joten kaikki tavara saapui jokea pitkin '
+            + 'kesällä ja jäätä pitkin talvella.',
+          lahde: 'Tuntematon kuvaaja, Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Yakutsk - 190228 DSC 5379.jpg',
+          vuosi: '2019',
+          selite: 'Jakutsk helmikuussa 2019 jääsumun alla: kovassa pakkasessa savu ja '
+            + 'pakokaasujen kosteus jäätyvät heti ilmaan eivätkä nouse pois.',
+          lahde: 'Ilja Varlamov, Commons (CC BY-SA 4.0)',
+        },
+      ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Museum - Permafrost Kingdom (Yakutsk) 09.jpg',
@@ -34051,6 +35377,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Kultbasa 016.jpg',
+          vuosi: '1931',
+          selite: 'Nagajevanlahden kulttuuriasema vuonna 1931: muutama hirsitalo ja '
+            + 'teltta raivatulla rinteellä, ja juuri näistä mökeistä kasvoi Magadan.',
+          lahde: 'Tuntematon kuvaaja, Commons (PD)',
+        },
+        {
+          tiedosto: 'Magadan seen from mountain.jpg',
+          vuosi: '2008',
+          selite: 'Magadan Staritskin niemeltä nähtynä lumisten kukkuloiden edessä: '
+            + 'kaupungista lähtee sisämaahan Kolyman maantie, sen ainoa maayhteys '
+            + 'muualle.',
+          lahde: 'Johannes Rohr, Commons (CC BY-SA 3.0)',
+        },
+      ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Магадан, Ленина, 19 20240901 01.jpg',
@@ -34443,6 +35786,24 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'ФГБУ "ИНФОРМАВТОДОР", Wikimedia Commons (CC BY 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'FMIB 39928 Petropaulski, Kamchatka - From Hill Behind the Town.jpeg',
+          vuosi: '1897',
+          selite: 'Petropavlovsk vuonna 1897: matalia puutaloja rinteessä ja '
+            + 'Avatsanlahti niiden takana, kuvaajana Beringinmeren turkishylkeitä '
+            + 'tutkimaan tullut eläintieteilijä.',
+          lahde: 'Leonhard Stejneger / U.S. Fish Commission, Commons (PD)',
+        },
+        {
+          tiedosto: 'Petropavlovsk-Kamchatsky with Koryaksky Volcano in background.jpg',
+          vuosi: '2007',
+          selite: 'Sama satama nykyään nostureineen ja takanaan Korjakskaja Sopka: '
+            + 'kaupunkiin ei johda maantietä muualta Venäjältä, joten kaikki tulee yhä '
+            + 'laivalla tai lentäen.',
+          lahde: 'Vfp15, Commons (CC BY-SA 3.0)',
+        },
+      ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Никольская сопка.jpg',
@@ -34797,6 +36158,24 @@ export const KULTTUURI_KATEGORIAT = {
             + 'syyskuun lopulla: rannalla on lasten rautatien '
             + 'Komsomolskajan asema, ja tyyni vesi peilaa talot ja ruskan.',
           lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Sakhaline. 23, Alexandrov (Sakhaline) (ville basse - Podol) - (mission) P. Labbé ; (photogr.) P. Labbé ; (photogr. reprod. par) Molteni (pour la conférence donnée par) P. Labbé - btv1b53259017z.jpg',
+          vuosi: '1899',
+          selite: 'Aleksandrovskin alakaupunki Sahalinin länsirannalla vuonna 1899: '
+            + 'matalia hirsitaloja joen suulla aikana, jolloin saari oli Venäjän '
+            + 'rangaistussiirtola.',
+          lahde: 'Paul Labbé / Bibliothèque nationale de France (PD)',
+        },
+        {
+          tiedosto: 'Маяк на мысе Жонкьер.jpg',
+          vuosi: '2018',
+          selite: 'Zonkjerin niemen majakka Aleksandrovsk-Sahalinskin laidalla '
+            + 'nykyään; niemen läpi menee kallioon louhittu tunneli, jonka '
+            + 'pakkotyövangit hakkasivat 1880-luvulla.',
+          lahde: 'Maxim Truhin, Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -35175,6 +36554,24 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Владивосток в начале XX века.jpg',
+          vuosi: '1900-luvun alku',
+          selite: 'Vladivostok kukkulalta katsottuna 1900-luvun alussa: matalia taloja '
+            + 'rinteillä ja Kultaisen sarven lahti vasemmalla, kun rataa vielä '
+            + 'rakennettiin.',
+          lahde: 'Tuntematon kuvaaja, Commons (PD)',
+        },
+        {
+          tiedosto: '20220816 City view from the Eagle\'s nest hill.jpg',
+          vuosi: '2022',
+          selite: 'Sama kaupunki Kotkanpesän kukkulalta nykyään: talot kiipeävät '
+            + 'rinteitä samalla tavalla kuin sata vuotta sitten, mutta puutalojen '
+            + 'tilalla ovat kerrostalot ja huipulla köysirata.',
+          lahde: 'travelling_eidolon, Commons (CC BY 2.0)',
+        },
+      ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Nikcas.jpg',
@@ -35529,6 +36926,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valossa Suurpalatsin muurien sisällä, ja sen takana '
             + 'nousevat mosaiikkitornit ja oranssivihreät katot.',
           lahde: 'Philip Nalangan, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Menam-rivier in Bangkok met gebouwen en boten, gezien vanaf de Royal Dock Yard Menam River from the Royal Dock Yard, B(..)ok (titel op object), RP-F-F01197-X.jpg',
+          vuosi: '1870–1900',
+          selite: 'Chao Phraya -joki Bangkokissa 1800-luvun lopulla kuninkaallisen '
+            + 'telakan puolelta kuvattuna, jolloin eurooppalaiset kutsuivat jokea '
+            + 'nimellä Menam.',
+          lahde: 'G. R. Lambert & Co. / Rijksmuseum, Commons (CC0)',
+        },
+        {
+          tiedosto: 'Chao Phraya in Bangkok 2.jpg',
+          selite: 'Sama joki tänään vesibussin kannelta: proomut ja matkustajaveneet '
+            + 'käyttävät sitä yhä, mutta rantaa reunustavat nyt hotellit ja tornitalot '
+            + 'telakoiden sijaan.',
+          lahde: 'Christophe95, Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
@@ -36476,6 +37890,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Singapore. Collyer Quai LCCN2017657654.jpg',
+          vuosi: '1890-luku',
+          selite: 'Collyer Quay 1890-luvun photochrom-vedoksessa, jollaisia painettiin '
+            + 'sveitsiläisessä Photoglob-yhtiössä mustavalkoisista negatiiveista '
+            + 'kivilaatoilla väri kerrallaan.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Collyer-Quay-skyline-night-2017-Luka-Peternel.jpg',
+          selite: 'Sama rantakatu tänään Marina Bay Sandsilta nähtynä: lahtea on '
+            + 'täytetty niin paljon, ettei meri enää huuhdo laiturin juurta vaan vanha '
+            + 'rantakatu jäi keskelle kaupunkia.',
+          lahde: 'Luka Peternel, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Sopimus, joka avasi saaren',
@@ -36984,6 +38415,24 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Miscellaneous Items in High Demand, PPOC, Library of Congress, Wikimedia Commons (PD)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Gorskii 21756u.jpg',
+          vuosi: '1900-luvun alku',
+          selite: 'Tilla-Karin medresen kaakeloitu julkisivu Registanilta 1900-luvun '
+            + 'alussa kojut aivan seinustalla — kuva on väreissä, koska '
+            + 'Prokudin-Gorski otti näkymästä kolme levyä eri värisuotimen läpi.',
+          lahde: 'Sergei Prokudin-Gorski / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Registan 01.jpg',
+          vuosi: '2023',
+          selite: 'Registan nykyään: vasemmalla Ulug Begin medrese, keskellä '
+            + 'Tilla-Kari ja oikealla Sir-Dor aukiolla, joka oli alun perin '
+            + 'kauppatori.',
+          lahde: 'Bernard Gagnon, Commons (CC0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kolme koulua vastatusten',
@@ -37461,6 +38910,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ohi, ja vallihaudan takaa nousee nykyinen kaupunki '
             + 'sumuun.',
           lahde: 'Ideophagous, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: '西安府安远门.jpg',
+          vuosi: '1906–1909',
+          selite: 'Anyuanmen eli kaupunginmuurin pohjoinen portti vuosien 1906 ja 1909 '
+            + 'välillä, kun saksalainen arkkitehti Ernst Boerschmann kiersi Kiinaa '
+            + 'mittaamassa ja valokuvaamassa rakennuksia.',
+          lahde: 'Ernst Boerschmann, Commons (PD)',
+        },
+        {
+          tiedosto: 'Xi\'an City Wall South Gate (9912144783).jpg',
+          selite: 'Xi’anin kaupunginmuurin eteläportti nykyään: Ming-kaudella '
+            + 'rakennettu muuri kiertää vanhan keskustan runsaan kolmentoista '
+            + 'kilometrin kehänä.',
+          lahde: 'Gary Todd, Commons (CC0)',
         },
       ],
       nostot: [
@@ -38440,6 +39906,21 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Hanoï - Congais au Grand Marché.jpg',
+          vuosi: '1800-luvun loppu',
+          selite: 'Kaupankäyntiä Đồng Xuânin torilla 1800-luvun lopulla, ennen kuin '
+            + 'torialue oli rakennettu valmiiksi.',
+          lahde: 'Tuntematon kuvaaja, Commons (PD)',
+        },
+        {
+          tiedosto: 'Đồng Xuân Market 1.jpg',
+          selite: 'Sama tori tänään: Đồng Xuân on Hanoin suurin katettu tori, ja '
+            + 'nykyinen halli rakennettiin 1990-luvulla vanhan palaneen tilalle.',
+          lahde: 'Christophe95, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Nouseva lohikäärme',
@@ -38929,6 +40410,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Orgio89, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Mongolei, nahe Ulaanbaatar Urga.jpg',
+          vuosi: '1913',
+          selite: 'Urga eli nykyinen Ulaanbaatar Valkoiselta kukkulalta vuonna 1913 '
+            + 'autokromina, varhaisena värivalokuvana, jonka väriaineena oli värjätty '
+            + 'perunatärkkelys.',
+          lahde: 'Stéphane Passet / Archives de la Planète, Commons (PD)',
+        },
+        {
+          tiedosto: 'Panorama Ulan Bator 13.JPG',
+          vuosi: '2009',
+          selite: 'Ulaanbaatarin keskusta nykyään: Suhbaatarin aukio, lasitorni ja '
+            + 'takana kukkulat, joilla gerikaupunginosat alkavat.',
+          lahde: 'Brücke-Osteuropa, Commons (PD)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Talvipalatsi, joka jäi jäljelle',
@@ -39413,6 +40911,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'katsottuna: keskellä kaksikerroksinen kullattu katto ja '
             + 'sen ympärillä valkoisia ja punaisia piharakennuksia.',
           lahde: 'Bijay Chaurasia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Kurt boeck indien nepal 265A.jpg',
+          vuosi: '1898',
+          selite: 'Puuleikkauksin koristeltu newar-temppeli kuninkaanpalatsin '
+            + 'edustalla vuonna 1898, jolloin ulkomaalaisia päästettiin Nepaliin vain '
+            + 'harvoin.',
+          lahde: 'Kurt Boeck, Commons (PD)',
+        },
+        {
+          tiedosto: 'Kathmandu Durbar Square (17830895562).jpg',
+          vuosi: '2014',
+          selite: 'Kathmandun Durbar-aukio eli sama palatsin edusta vuotta ennen '
+            + 'vuoden 2015 maanjäristystä.',
+          lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
         },
       ],
       nostot: [
@@ -41020,6 +42535,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Fytche Square, Rangoon.jpg',
+          vuosi: '1895',
+          selite: 'Fytche Square Rangoonissa vuonna 1895 taustallaan Sulen pagodi — '
+            + 'suoperäiselle tontille raivattu aukio tunnetaan nykyään Mahabandulan '
+            + 'puistona.',
+          lahde: 'Philip Adolphe Klier, Commons (PD)',
+        },
+        {
+          tiedosto: 'Sule Pagoda.jpg',
+          selite: 'Sulen pagodi nykyään Sakura Towerista kuvattuna: kun britit '
+            + 'kaavoittivat Rangoonin ruutukaduiksi, pagodia ei siirretty vaan kadut '
+            + 'vedettiin sen ympäri.',
+          lahde: 'Commonsin käyttäjä Mrsoethuaung (CC BY 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Ruutukaava suistomaalle',
@@ -42119,6 +43651,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Pond before the Banka Longshan Temple.jpg',
+          vuosi: '1800- ja 1900-lukujen vaihde',
+          selite: 'Lampi Bangkan Longshan-temppelin edessä 1800- ja 1900-lukujen '
+            + 'vaihteessa, kun temppeli oli koko kaupunginosan kokoontumis- ja '
+            + 'riidanratkaisupaikka.',
+          lahde: 'Tuntematon kuvaaja, Commons (PD)',
+        },
+        {
+          tiedosto: 'Taipei Taiwan Mengjia-Longshan-Temple-06.jpg',
+          selite: 'Longshan-temppelin portti nykyään: temppeli on rakennettu uudelleen '
+            + 'useaan otteeseen tulipalojen, maanjäristysten ja pommitusten jälkeen ja '
+            + 'on yhä päivittäisessä käytössä.',
+          lahde: 'CEphoto, Uwe Aranas, Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Torni, jonka sisällä riippuu pallo',
@@ -42633,6 +44182,23 @@ export const KULTTUURI_KATEGORIAT = {
             + 'alakerrassa kaupat, ylhäällä asunnot ja julkisivuilla '
             + 'pystysuorat kyltit.',
           lahde: 'Chong Fat, Wikimedia Commons (PD)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Gezicht op de haven van Hongkong, RP-F-F20158.jpg',
+          vuosi: '1863–1900',
+          selite: 'Näkymä Hongkongin satamaan 1800-luvun jälkipuoliskolla '
+            + 'itävaltalaisen Wilhelm Burgerin kuvaamana, kun satama oli brittiläisen '
+            + 'siirtomaan koko olemassaolon syy.',
+          lahde: 'Wilhelm Burger / Rijksmuseum, Commons (CC0)',
+        },
+        {
+          tiedosto: 'Victoria Harbour Hong Kong and Star Ferry.JPG',
+          selite: 'Sama satama nykyään: Victoria Harbour ja etualalla Star Ferryn '
+            + 'laituri, josta lautta on kulkenut saaren ja Kowloonin väliä '
+            + '1880-luvulta asti.',
+          lahde: 'Clark Sui, Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
