@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v987 — AANIRIVIN ENNEN JA NYT (pilotti): Lontoon ja Kairon lehdissa radion vierella on nyt vanha aanitallenne — Lontoo: Florrie Forden lieriolevytys 1913, Kairo: Sheikh El-Saftin gramofonilevy 1907–25 (ENNEN-nappi katkoviivakehyksessa lahderivein, NYT-radio ennallaan). Ulan Batorille ei loytynyt vapaata vanhaa tallennetta — jaa ilman. Tarkista: Lontoon ja Kairon aanirivi, kuuntele molemmat',
   'v986 — ENNEN JA NYT -PILOTTI (Lontoo): etusivun kansikarusellin alla on nyt kuvapari — vasemmalla isoisan ajan kuva (harmaasavy, ENNEN-merkki), oikealla sama nakyma tanaan (NYT). Datavetoinen ennenNyt-kentta, laajenee muihin kaupunkeihin pelkalla datalla. Matkakirjan kuvia EI viela poistettu — odottaa omistajan hyvaksyntaa pilotille. Tarkista: Lontoon etusivu',
   'v985 — MAAN KARTTA KOKORUUDULLE (omistajan tilaus): maalehden korkokarttaa napauttamalla se aukeaa kokoruutuun zoomeineen kuten kaupunkikartta. IPAD-MITOITUS KORJATTU: kokoruutukartta mitoitetaan nyt nakyvasta ruudusta pikseleina (visualViewport), joten kartta tayttaa iPadin ruudun eika jaa pieneksi keskelle. Tarkista: maan kartta ja kaupungin kartta kokoruutuun iPadilla',
   'v984 — TAIPEI JA HONGKONG: uudet lehdet (Taipei: 9 kohdetta + Taipei 101 kainalossa; Hongkong: 9 kohdetta Victoria Peakilta Star Ferrylle, 1868 panoraama historiakuvana). Molemmat ilman nykypolitiikkaa linjausten mukaan. HUOM: saarivit puuttuvat viela (Open-Meteon kiintio). Tarkista: molempien kartta ja Matkaopas',
