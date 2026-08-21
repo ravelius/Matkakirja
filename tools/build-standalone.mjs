@@ -181,6 +181,13 @@ const MODULES = [
   'js/lahteet.js',
   'js/aani-ehdokkaat.js',
   'js/sound.js',
+  /*
+   * Lukijaääni (js/puhe.js) ENNEN ambience-streamia: sanelun kova
+   * tauko (taukoaSanelunAjaksi) pysäyttää 21.8.2026 alkaen myös
+   * lukijaäänen piirin, joten ambience-stream tuo puhe.js:n
+   * staattisesti.
+   */
+  'js/puhe.js',
   'js/ambience-stream.js',
   'js/die.js',
   'js/rules.js',
@@ -194,9 +201,9 @@ const MODULES = [
    * js/pollo.js tuo siitä kaiutinvivun luentafunktiot (lueAaneen,
    * lukijaTuettu, pysaytaLukija). Niputus on yhtä näkyvyysaluetta,
    * joten lukija on turvallisinta ladata ennen sen käyttäjiä.
-   * Lukijaääni (js/puhe.js) ennen lukijaa samasta syystä.
+   * Lukijaääni (js/puhe.js) on listalla jo aiemmin (ambience-
+   * streamin tuonti), eli myös ennen lukijaa.
    */
-  'js/puhe.js',
   'js/lukija.js',
   /*
    * Viisas Pöllö ENNEN ui.js:ää: ui.js tuo polloAnkkurin ja polloSuljen
