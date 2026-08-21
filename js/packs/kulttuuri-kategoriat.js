@@ -44,10 +44,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diliff, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
-          tiedosto: 'Red London Buses - geograph.org.uk - 2792011.jpg',
-          selite: 'Punaiset kaksikerrosbussit ovat kuljettaneet lontoolaisia '
-            + '1950-luvulta asti.',
-          lahde: 'Colin Smith, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: 'London from Primrose Hill May 2013.jpg',
+          selite: 'Primrose Hillin rinteeltä avautuu koko Lontoo: puiston nurmen ja '
+            + 'puurivien takaa nousevat Cityn tornit, Shard ja BT-torni.',
+          lahde: 'Duncan from Nottingham, UK, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       /*
@@ -625,10 +625,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'minareetit ja taustalla keskustan tornit.',
         },
         {
-          tiedosto: 'Khan el-Khalili, Cairo Egypt - panoramio (7).jpg',
-          selite: 'Khan el-Khalilin basaarissa on käyty kauppaa samoilla '
-            + 'kujilla 1300-luvulta asti.',
-          lahde: 'The Erica Chang, Wikimedia Commons (CC BY 3.0)',
+          tiedosto: 'Egypt, Cairo, Panorama of Islamic Cairo.jpg',
+          selite: 'Vanhan islamilaisen Kairon kattomeri: minareetteja ja kupoleita nousee '
+            + 'tiiviin talomassan lomasta, ja taustalla häämöttää autiomaan reuna.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       /*
@@ -2533,11 +2533,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'East side gallery, Berlin Wall (Ank Kumar, Infosys Limited) 07.jpg',
-          selite: 'East Side Gallery: 1,3 kilometriä muuria jätettiin pystyyn, ja '
-            + '118 taiteilijaa 21 maasta maalasi siihen maailman pisimmän '
-            + 'ulkoilmagallerian vuonna 1990.',
-          lahde: 'Ank Kumar, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Brandenburger Tor morgens.jpg',
+          selite: 'Brandenburgin portti Pariser Platzin laidalla aamuhiljaisuudessa, kuusi '
+            + 'pylväsparia ja niiden yllä vaunuja vetävä nelivaljakko.',
+          lahde: 'Thomas Wolf (foto-tw.de), Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       /*
@@ -5130,11 +5129,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jvhertum, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Amsterdam-Begijnhof-Houtenhuys.jpg',
-          selite: 'Het Houten Huys Begijnhofin nurmikentän laidassa: tumma '
-            + 'lautajulkisivu ja valkoiset ikkunankarmit vuodelta 1528, '
-            + 'toinen kahdesta Amsterdamiin jääneestä puujulkisivusta.',
-          lahde: 'Keeshu, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Dam Amsterdam 7308.jpg',
+          selite: 'Damin aukio aamuvalossa: perällä kohoaa entinen kaupungintalo eli '
+            + 'Kuninkaanlinna ja sen oikealla puolella Nieuwe Kerkin harjakatto.',
+          lahde: 'C messier, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -6343,10 +6341,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Mike McBey, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'The crown spire on St Giles Cathedral, Edinburgh.JPG',
-          selite: 'St Gilesin kirkon torninhuippu Royal Milen varrella: '
-            + 'kahdeksan kivikaarta nousee yhteen kruunuksi.',
-          lahde: 'Stephencdickson, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Princes Street Gardens and Edinburgh Castle - geograph.org.uk - 8141306.jpg',
+          selite: 'Edinburghin linna kalliojyrkänteen laella, ja sen juurella levittäytyvät '
+            + 'Princes Street Gardensin nurmikot ja kukkapenkit.',
+          lahde: 'Graham Hogg, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Edinburgh National Monument 20211020.jpg',
@@ -6711,11 +6709,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Marché poisson Marseille 013.jpg',
-          selite: 'Vanhan sataman kalatiskillä kiemurtelee täplikäs murena '
-            + 'punaisten rascasse-kalojen eli skorpionisimppujen seassa, '
-            + 'jotka ovat bouillabaissen tärkein aines.',
-          lahde: 'Arnaud 25, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: '1 marseille vieux port pano.jpg',
+          selite: 'Vanha satama ilmasta nähtynä: venelaiturit täyttävät kapean lahden, ja '
+            + 'sen suuta vartioivat Saint-Jeanin ja Saint-Nicolas’n linnakkeet.',
+          lahde: 'Chensiyuan, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Calanque de Sugiton, 2016.jpg',
@@ -7071,11 +7068,10 @@ export const KULTTUURI_KATEGORIAT = {
         + 'kivinen sarvikuono.',
       kansikuvat: [
         {
-          tiedosto: 'Tram 28 Lisbon.jpg',
-          selite: 'Keltainen raitiovaunu numero 28 kaartaa Alfaman '
-            + 'kulmauksessa, ja kiskojen väli on vain 90 senttiä, sillä '
-            + 'kapealla raiteella vaunu mahtuu vanhankaupungin mutkiin.',
-          lahde: 'Romazur, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Panoramic View from Miradouro da Senhora do Monte in Lisbon (54742879994).jpg',
+          selite: 'Näkymä Senhora do Monten näköalapaikalta yli tiilikattojen kohti Pyhän '
+            + 'Yrjön linnaa ja Tejo-joen leveää suistoa.',
+          lahde: 'Dale Cruse, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Arco Triunfal da Rua Augusta, Plaza del Comercio, Lisboa, Portugal, 2012-05-12, DD 02.JPG',
@@ -8204,12 +8200,10 @@ export const KULTTUURI_KATEGORIAT = {
         + 'Samana vuonna niistä tehtiin yksi ainoa: Budapest.',
       kansikuvat: [
         {
-          tiedosto: 'Matthias Church Budapest Roof Tiles.jpg',
-          selite: 'Matiaksen kirkon torninhuiput Budan linnavuorella: katto '
-            + 'on ladottu värillisistä lasitetuista kaakeleista, ja '
-            + 'vinoruutukuvio on restauroija Frigyes Schulekin oma keksintö '
-            + '1800-luvun lopulta.',
-          lahde: 'D4m1en, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Danube panorama from the Fisherman\'s Bastion Budapest 2026.JPG',
+          selite: 'Näkymä Kalastajabastionilta Tonavalle: Elisabetin ja Vapauden sillat '
+            + 'ylittävät joen, ja etualalla ovat Budan punaiset katot.',
+          lahde: 'Mike is Michi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Budapest Parliament 4604.JPG',
@@ -9505,11 +9499,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Grzegorz Polak, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
-          tiedosto: 'Pomnik Fryderyka Chopina w Łazienkach, Warszawa.jpg',
-          selite: 'Chopin-patsas Łazienki-puistossa: säveltäjä istuu '
-            + 'pronssisen pajun alla, jonka oksat taipuvat tuulessa; '
-            + 'nykyinen valos paljastettiin 1958.',
-          lahde: 'A.Osytek, Wikimedia Commons (CC BY-SA 3.0 pl)',
+          tiedosto: 'Evening skyline Warsaw skyscrapers Vistula River.jpg',
+          selite: 'Varsovan siluetti Veikselin takaa iltavalossa: vanhankaupungin tornit ja '
+            + 'keskustan lasitalot näkyvät samassa kuvassa.',
+          lahde: 'Oleslawlama, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -9871,10 +9864,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Hans Hillewaert, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'HKL HST Nr II 71, Aleksanterinkatu, 2019 (01).jpg',
-          selite: 'Vihreä raitiovaunu Aleksanterinkadulla ja sen takana jo '
-            + 'seuraava — vaunut ovat kulkeneet kaduilla vuodesta 1891.',
-          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Helsinki aerial 2022.jpg',
+          selite: 'Helsinki ilmasta kevätjäiden aikaan: keskustan niemi työntyy merelle, ja '
+            + 'etualalla erottuvat Suomenlinnan bastionit saarillaan.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Passengers of Suomenlinna ferry on an early winter morning; Helsinki, Finland, 2024 January.jpg',
@@ -11032,11 +11025,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Oleh Kushch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: '2019-07-13 Kyiv funicular car.jpg',
-          selite: 'Funikulaarin sinikeltainen vaunu numero 905 kiipeää '
-            + 'jyrkkää rataa puiden välissä: vuonna 1905 avattu 238 metrin '
-            + 'rata vie alakaupungista ylös noin kolmessa minuutissa.',
-          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Maidan Nezalezhnosti 20190505-2.jpg',
+          selite: 'Itsenäisyydenaukio eli Maidan keväisenä päivänä: aukion perällä kohoaa '
+            + 'itsenäisyyden muistopylväs ja sivuilla neuvostoajan monumentaalitalot.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -11401,12 +11393,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Alexxx1979, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'The Bronze Horseman (St. Petersburg, Russia).jpg',
-          selite: 'Vaskiratsastaja jättimäisen graniittilohkareen päällä, '
-            + 'hevonen takajaloillaan ja Pietari Suuri käsi ojossa; kiveen on '
-            + 'kaiverrettu venäjäksi Pietari ensimmäiselle, Katariina '
-            + 'toiselta.',
-          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Петропавловская крепость в Санкт-Петербурге 2H1A6496WI.jpg',
+          selite: 'Pietari-Paavalin linnoitus Nevan takana valkeiden öiden iltavalossa, '
+            + 'katedraalin kullattu torninhuippu piikkinä taivasta vasten.',
+          lahde: 'Kora27, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -11757,11 +11747,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dmitry A. Mottl (cropped by King of Hearts), Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Vostok 8K72K in VDNKh (1).jpg',
-          selite: 'Vostok-kantoraketin täysikokoinen malli VDNH-puistossa; '
-            + 'tällainen raketti vei Juri Gagarinin kiertoradalle vuonna '
-            + '1961.',
-          lahde: 'Dmitry Ivanov, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Saint Basil\'s Cathedral and the GUM in Red Square (19345522243).jpg',
+          selite: 'Punainen tori tyhjänä: oikealla Vasili Autuaan katedraalin kirjavat '
+            + 'kupolit ja vasemmalla GUM-tavaratalon pitkä julkisivu.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       matkailijalle: {
@@ -12816,11 +12805,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Coppersmith at work in Baščaršija (6086857358).jpg',
-          selite: 'Kuparisepän puoti Baščaršijan basaarissa: mies takoo '
-            + 'pientä kahvipannua polvellaan, ja hyllyillä ja seinillä '
-            + 'kiiltää valmiita džezvoja, tarjottimia ja kannuja.',
-          lahde: 'Jennifer Boyer, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'Sarajevo City Panorama.JPG',
+          selite: 'Sarajevo idästä nähtynä: Miljacka-joki halkoo kapean laakson, ja '
+            + 'punakattoiset talot kiipeävät rinteitä vuorten juurelle asti.',
+          lahde: 'Julian Nyča, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Loop Bridge 01 (23776388375).jpg',
@@ -13195,11 +13183,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'George Chernilevsky, Wikimedia Commons (PD)',
         },
         {
-          tiedosto: 'Lion odessa city park.jpg',
-          selite: 'Kaupunginpuiston pronssileijona jalustallaan, käpälän alla '
-            + 'saalis: ranskalaisen Auguste Cainin työ vuodelta 1854, jonka '
-            + 'kyljissä näkyy yhä luodinjälkiä sodan ajoilta.',
-          lahde: 'HOBOPOCC, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Deribasivska-Street-aerial-2.jpg',
+          selite: 'Odessan keskusta ilmasta aamun utuisessa valossa: Deribasivska-katu ja '
+            + 'kaupunginpuisto kulkevat matalien kortteleiden halki merelle päin.',
+          lahde: 'Alexey M., Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -13563,11 +13550,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'iMahesh, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Dubai Gold Souk on 31 May 2007 Pict 1.jpg',
-          selite: 'Deiran kultatorin katettu kuja: näyteikkunat ovat täynnä '
-            + 'kaulakoruja, ja katossa kulkee puinen ristikko, joka pitää '
-            + 'auringon ulkona.',
-          lahde: 'Imre Solt, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Abra @ From Bur Dubai to Deira @ Dubai Creek (15860705846).jpg',
+          selite: 'Dubai Creek vesiltä nähtynä: rannalla vuorottelevat tuulitornit, '
+            + 'minareetti ja kerrostalot, ja vastarannalla odottavat puiset '
+            + 'dhow-rahtialukset.',
+          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       nostot: [
@@ -16002,11 +15989,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'AVRAHAM GRAICER, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Catholicon, Church of the Holy Sepulchre, Jerusalem1.jpg',
-          selite: 'Pyhän haudan kirkon pääkupoli alhaalta: keskellä '
-            + 'kultapohjainen Kristus-mosaiikki ja kaarien väleissä '
-            + 'evankelistat.',
-          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Western Wall Plaza - Jerusalem (1291829327).jpg',
+          selite: 'Länsimuurin aukio keskipäivällä: temppelivuoren tukimuuri kohoaa aukion '
+            + 'laidassa, ja sen juurella rukoilevat ihmiset näyttävät pieniltä.',
+          lahde: 'David King, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       avauskuvat: [
@@ -16343,11 +16329,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Arrecife de coral, parque nacional Ras Muhammad, Egipto, 2022-03-26, DD 170.jpg',
-          selite: 'Koralliriutta Ras Muhammadin kansallispuistossa: '
-            + 'haarautuvia ja pallomaisia koralleja, ja niiden yllä ui parvi '
-            + 'kaloja.',
-          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'South Sinai , Egypt.jpg',
+          selite: 'Eteläisen Siinain karu vuorimaisema: hiekkatasangon takaa nousevat '
+            + 'paljaat kalliohuiput, ja akaasioita kasvaa siellä täällä.',
+          lahde: 'Mohammed Moussa, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Saint Catherine Monastery , Saint Catherine , south Sinai, Egypt.jpg',
@@ -17118,11 +17103,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Virtual-Pano, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Tromsø Hurtigruten Trollfjord 01.jpg',
-          selite: 'Hurtigrutenin laiva Trollfjord Tromssan laiturissa; sama '
-            + 'rannikkoreitti on kulkenut vuodesta 1893, ja laiva tuo yhä '
-            + 'matkustajien lisäksi rahtia.',
-          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Panorama Tromsø from Fjellheisen.jpg',
+          selite: 'Tromssa Fjellheisenin näköalatasanteelta: kaupunki peittää koko '
+            + 'Tromsøyan saaren, ja silta kaartaa salmen yli mantereelle.',
+          lahde: 'Happy Discover, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
@@ -17863,11 +17847,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Reindeer farm, Inari, Suomi - Finland 2013-03-10 f.jpg',
-          selite: 'Poroja valjaissa ahkioiden edessä Inarissa, aidan takana '
-            + 'jono rekiä ja tienvarressa kolmion muotoinen '
-            + 'porovaroituskyltti.',
-          lahde: 'Manfred Werner, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'View to Äkäslompolo and Ylläs fell in Kolari, Lapland, Finland, 2018 September.jpg',
+          selite: 'Näkymä Äkäslompolon järvelle ja Ylläksen tunturille Kolarissa ruskan '
+            + 'aikaan, ja tyyni vesi peilaa iltapilviä.',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       matkailijalle: {
@@ -22676,10 +22659,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Photographer: Mosbatho, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          tiedosto: 'Silver Jewellery in the TRM.jpg',
-          selite: 'Hopeakorusali Tareq Rajab -museossa, jossa vitriineissä on '
-            + 'kaulakoruja ja isoja rintakoruja hopeakiekkoriveineen.',
-          lahde: 'Tnrajab, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Kuwait City (8287172359).jpg',
+          selite: 'Kuwait Cityn keskusta yöllä: valaistut tornitalot nousevat '
+            + 'moottoriteiden ja matalien kortteleiden keskeltä.',
+          lahde: 'Abdullah Alqattan, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'TSCK Kuwait Old Building.jpg',
@@ -23056,11 +23039,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Royal Opera House Muscat, Muscat, Sultanate of Oman.jpg',
-          selite: 'Oopperatalon katsomo permannolta: kolme parvea kaartuu '
-            + 'salin ympäri, puupinnat on jaettu kullattuihin ruutuihin ja '
-            + 'penkit ovat punaiset.',
-          lahde: 'Chief National Guard Bureau, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'Seaside of Muttrah with Mutrah Fort (47953961706).jpg',
+          selite: 'Muttrahin ranta Masqatissa: valkoiset talot reunustavat corniche-katua, '
+            + 'ja niiden yllä kalliolla seisoo portugalilaisten rakentama Muttrahin '
+            + 'linnake.',
+          lahde: 'Eduard Marmet, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Riyam Park with incense burner Mabkhara (47954080007).jpg',
@@ -23460,11 +23443,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'AlKhulafa Mosque in Baghdad 01.jpg',
-          selite: 'Khulafa-moskeijan minareetin huippu alhaalta kuvattuna: vaalea '
-            + 'yläosa lepää kennomaisten syvennysten varassa, ja alempana '
-            + 'kiertää tiiliseinässä arabiankielinen kirjoitusnauha.',
-          lahde: 'Usamasaad, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Tigris river from Al Shohada\' bridge.jpg',
+          selite: 'Tigris virtaa Bagdadin läpi Marttyyrien sillalta katsottuna, ja oikealla '
+            + 'rannalla erottuu vanhan Qishlan kellotorni.',
+          lahde: 'Samir Al-Ibrahem, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'كهرمانة 03.jpg',
@@ -25179,12 +25161,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Mohamad Emad Basha, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Interieur van een woonhuis (SyrieIntérieur de Maison - Damas) Architecture antique Égypte, Grèce, Asie Mineure album de photographies (serietitel), BI-F-B-SCHOLEN-0098-28.jpg',
-          selite: 'Damaskoslaisen talon piha 1800-luvun valokuvassa: '
-            + 'korkea suippokaari on muurattu vuorotellen vaaleasta ja '
-            + 'tummasta kivestä, ja sen sisäseinä on täynnä kaiverrettua '
-            + 'koristelua.',
-          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          tiedosto: 'The Umayyad Mosque, the Courtyard, Damascus, Syria.jpg',
+          selite: 'Umaijadien moskeijan avara marmoripiha: kaksikerroksinen pylväskäytävä '
+            + 'kiertää pihan ja keskellä seisoo mosaiikilla verhottu Aarrekammion '
+            + 'kupoli.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       /*
@@ -26381,12 +26362,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Mostafameraji, Wikimedia Commons (CC0)',
         },
         {
-          tiedosto: 'A street in Tabriz.jpg',
-          selite: 'Hedelmäkoju Taleghanin kadulla: tarjottimilla on '
-            + 'persikoita, omenoita, luumuja ja meloneita, kojua valaisevat '
-            + 'johtojen varassa roikkuvat hehkulamput, ja kadulla odottaa '
-            + 'keltainen taksi.',
-          lahde: 'Monsieur_mahdi, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'El-Goli Park.jpg',
+          selite: 'El Golin puistolammikko Tabrizissa: keskellä vettä seisoo '
+            + 'kaarikäytävällinen paviljonki, ja rantaa reunustavat puurivit ja '
+            + 'kukkapenkit.',
+          lahde: 'Talahemmati, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -27286,12 +27266,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'I, Ondřej Žváček, Wikimedia Commons (CC BY 2.5)',
         },
         {
-          tiedosto: 'Iran Teahouse in Isfahan, Iran (3573969242).jpg',
-          selite: 'Teehuoneen sisusta Isfahanissa: kaaret ja seinät on '
-            + 'verhottu ihmis- ja lintuhahmoriveillä kuvioiduilla '
-            + 'painokankailla, ja pöydillä on teelaseja ja metallisia '
-            + 'teekannuja tarjottimineen.',
-          lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'Plaza Naqsh-e Jahan, Isfahán, Irán, 2016-09-20, DD 59.jpg',
+          selite: 'Naqsh-e Jahanin aukio Isfahanissa: pitkä allas suihkulähteineen jakaa '
+            + 'kentän, ja molemmin puolin jatkuu kaksikerroksinen kaarikäytävä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -27744,11 +27722,9 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
-          tiedosto: 'Façades in the Old City of Sana\'a (2286046989).jpg',
-          selite: 'Kaksi tornitalon julkisivua pilvetöntä taivasta vasten: '
-            + 'valkoiset kipsivyöt kiertävät jokaisen kerroksen, ikkunoiden '
-            + 'yllä on läpimurrettuja puoliympyräikkunoita ja seinissä '
-            + 'pyöreitä medaljonkeja.',
+          tiedosto: 'Vegetable Garden in Old Sana\'a (2286045031).jpg',
+          selite: 'Vanhan Sanaan korttelipuutarha: vihannespenkkien takana nousee rivi '
+            + 'valkokuvioituja tornitaloja, ja palmut kurottavat muurin yli.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -28987,12 +28963,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Traditional Copperware Shop-Mosul 01.jpg',
-          selite: 'Kupariastiakauppa Mosulissa tammikuussa 2025: hyllyt ja '
-            + 'lattia ovat täynnä tinattuja kuparivateja, -pannuja ja '
-            + 'pitkänokkaisia kahvikannuja, ja keskellä hohtaa pieni '
-            + 'kullankeltainen kuppitarjotin.',
-          lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Views of the old city of Mosul along the river Tiger, in summer of 2019 after war with the Islamic State 09.jpg',
+          selite: 'Mosulin vanhakaupunki Tigrisin toiselta rannalta kesällä 2019: '
+            + 'sortuneiden talojen keskellä seisoo yhä muutama ehjä julkisivu, jälkinä '
+            + 'vuoden 2017 taisteluista.',
+          lahde: 'Levi Clancy, Wikimedia Commons (CC0)',
         },
       ],
       nostot: [
@@ -29417,11 +29392,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Bernhard Wintersperger, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'Peking duck by Mr Wabu in Beijing.jpg',
-          selite: 'Peking-ankkaa siivuina valkoisella lautasella, '
-            + 'taustalla ohuet vehnäletut, kurkkutikut ja kevätsipulit, '
-            + 'joihin rapeanahkaiset siivut kääritään.',
-          lahde: 'Mr Wabu, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: 'Jingshan View of Beijing CBD - Flickr.jpg',
+          selite: 'Pekingin liikekeskustan siluetti Jingshanin kukkulalta: vasemmalla '
+            + 'kohoaa CCTV:n silmukkatalo ja oikealla China World Tower.',
+          lahde: 'Gary Todd, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Forbidden City northwest corner tower and moat.jpg',
@@ -30854,11 +30828,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Gwangjang Market, Seoul 2020-02-01.jpg',
-          selite: 'Gwangjangin torin katettu käytävä talvipäivänä täynnä '
-            + 'ihmisiä, kojujen yllä punaisia kylttilaattoja ja tiskeillä '
-            + 'kuivattua kalaa, vihanneksia ja pakattuja tavaroita.',
-          lahde: 'Stck w, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Seoul from Namsan 3.jpg',
+          selite: 'Soul Namsanin vuorelta pohjoiseen: keskustan tornit täyttävät laakson, '
+            + 'ja takana kohoaa Bukhansanin rosoinen graniittiharjanne.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Yeouido Hangang Park from Mapo Bridge 1.jpg',
@@ -31960,11 +31933,11 @@ export const KULTTUURI_KATEGORIAT = {
         + 'roomalaisesta ajasta on pystyssä enää yksi kaari.',
       kansikuvat: [
         {
-          tiedosto: 'Medina Tripoli Libya 2008.jpg',
-          selite: 'Vanhankaupungin kuja Tripolissa: kapean kujan molemmin '
-            + 'puolin on avoimia puoteja, joiden edustat ovat täynnä '
-            + 'kiillotettuja kupari- ja messinkiastioita.',
-          lahde: 'Victor Korniyenko, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'احد زوايا العاصمة طرابلس 10.jpg',
+          selite: 'Tripolin keskusta ilmasta: entisestä katedraalista tehty moskeija '
+            + 'minareetteineen hallitsee Algerian aukiota, jonka ympärillä '
+            + 'levittäytyvät italialaisajan korttelit.',
+          lahde: 'سليمان البرغوثي, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Al-Saraya al-Hamra Fortress, Tripoli (5282695461).jpg',
@@ -33168,12 +33141,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: '130 kvartal Irkutsk 1.jpg',
-          selite: 'Kesäpäivä Irkutskin 130. korttelin kävelykadulla, jossa '
-            + 'tummaksi maalatun hirsitalon ikkunanpielet ja '
-            + 'räystäslistat on koristeltu vaalealla puuleikkauksella ja '
-            + 'päädyssä kohoaa pieni torni.',
-          lahde: 'Trasprd, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Angara River in Irkutsk (September 2025) - 0 7.jpg',
+          selite: 'Angara Irkutskissa Irkut-joen suulla: leveä virta kaartaa vastarannan '
+            + 'talojen ohi, ja etualalla kulkee kivetty rantapromenadi lyhtypylväineen.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -34306,12 +34277,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Nikita Zhuravlev, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Памятник мореплавателю В. Берингу.jpg',
-          selite: 'Vitus Beringin muistomerkki Petropavlovskissa: '
-            + 'tykinputkeksi muotoillun metallipylvään huipulla lepää '
-            + 'tykinkuula, ja jalustan kilvessä on omistus kaupungin '
-            + 'perustajalle ja vuosi 1740.',
-          lahde: 'NadezhdaKhaustova, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Sunset at Petropavlovsk.jpg',
+          selite: 'Petropavlovskin asuinkortteleita rinteessä iltavalossa, alhaalla '
+            + 'Avatšanlahti ja horisontissa tulivuoren kartio.',
+          lahde: 'Nikita Zhuravlev, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Бухта Авачинская Три брата.jpg',
@@ -35041,11 +35010,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Unknown author, Wikimedia Commons (PD)',
         },
         {
-          tiedosto: 'Vladivostok Funicular (October 2024)-0 3.jpg',
-          selite: 'Funikulaarin yläasema Suhanovin kadun päässä; 5. '
-            + 'toukokuuta 1962 avatun radan kaksi vaunua kulkevat 183 '
-            + 'metriä ja nousevat 66,5 metriä puolessatoista minuutissa.',
-          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Russky Bridge 2022-08.jpg',
+          selite: 'Russkin silta kaartaa Itäisen Bosporin salmen yli Russkin saarelle, ja '
+            + 'salmessa kulkevat lautta ja rahtialuksia.',
+          lahde: 'Svetlov Artem, Wikimedia Commons (CC0)',
         },
       ],
       nostot: [
@@ -35937,11 +35905,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'Bamboo Forest, Arashiyama, Kyoto, Japan.jpg',
-          selite: 'Arashiyaman bambumetsä läheltä: harmaanvihreät '
-            + 'rungot nousevat suorina vieri vieressä, nivelet '
-            + 'renkaina, ja valo tulee ylhäältä lehvästön läpi.',
-          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Kinkakuji (Golden Pavilion), Kyoto, Japan.jpg',
+          selite: 'Kultainen paviljonki Kinkaku-ji peilautuu lammen pintaan, ja sen kahta '
+            + 'ylintä kerrosta peittää kultalehti.',
+          lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       /*
@@ -36426,12 +36393,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'chenisyuan, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Traditional shophouses in Upper Cross Street, Chinatown, Singapore (17161367876).jpg',
-          selite: 'Kolme kauppahuonetta Chinatownissa vierekkäin: '
-            + 'keltainen, oranssi ja vaaleanvihreä julkisivu, '
-            + 'säleikköikkunat, tiilikatto ja alakerran katettu '
-            + 'käytävä kadun puolella.',
-          lahde: 'Nicolas Lannuzel from Singapore, Singapore, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: 'Singapore (SG), Gardens by the Bay, Supertree Grove -- 2019 -- 4752.jpg',
+          selite: 'Gardens by the Bayn teräksiset jättipuut nousevat trooppisen puutarhan '
+            + 'yllä, ja niiden välissä kulkee korkealla riippuva kävelysilta.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gopuram monumental ornate tower at the entrance of Sri Mariamman Temple with sculptures of Hindu deities Chinatown Singapore.jpg',
@@ -36934,11 +36899,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Kraftabbas, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Dome of Gur-e Amir.jpg',
-          selite: 'Gur-e-Amirin uurteinen siniturkoosi kupoli ja sen '
-            + 'vieressä kaakelikuvioinen minareetti, alla paljasta '
-            + 'tiilimuuria.',
-          lahde: 'Bgag, Wikimedia Commons (CC0)',
+          tiedosto: 'Samarkand, Bibi-Khanym.jpg',
+          selite: 'Bibi-Khanymin moskeija kadun takaa: Timurin 1400-luvun alussa '
+            + 'rakennuttaman moskeijan portaalit ja siniturkoosit kupolit kohoavat '
+            + 'matalien talojen yllä.',
+          lahde: 'MiroJP, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Shah-i-Zinda, Samarkand (Shohi-Zinda majmuasi, Шахи Зинда).jpg',
