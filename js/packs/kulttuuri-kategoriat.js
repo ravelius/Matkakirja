@@ -37815,4 +37815,450 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * VARANASI (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian raakateksteistä
+   * (action=raw, haettu 21.8.2026): Varanasi, Sarnath, Dhamek Stupa,
+   * Chaukhandi Stupa, Kashi Vishwanath Temple, Manikarnika Ghat,
+   * Dashashwamedh Ghat, Assi Ghat, Ramnagar Fort, Banarasi sari,
+   * Silk industry in Varanasi, Benares State ja Betel nut chewing
+   * (jonne otsikko "Paan" ohjaa).
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 21.8.2026 ja sama kuin Medinassa,
+   * Mekassa ja Jerusalemissa: uskonto kerrotaan historiallis-
+   * kulttuurisena ilmiönä ja kunnioittavasti, ei nykypolitiikkaa.
+   * POIS JÄTETTY KOKONAAN: Kashi Vishwanathin vuoden 1669
+   * tuhoamishistoria ja kaikki Gyanvapi-aiheet, nykyinen
+   * temppelikäytävähanke ja pääministerin vaalipiiri, vuoden 2010
+   * pommi-isku Dashashwamedhilla ja vuoden 2019 lihakauppakielto.
+   * POLTTOHAUTAUS on nostossa K4 ja Manikarnikan jutussa kerrottu
+   * ghatin historian ja moksa-uskomuksen kautta; itse polttamista,
+   * rovioita tai vainajia ei kuvailla, eikä yhdessäkään kuvassa ole
+   * roviota — Manikarnikan kuvissa on ghatin arkkitehtuuri kaukaa.
+   *
+   * KOLME FAKTAPOHJAN VÄITETTÄ, JOTKA EIVÄT PITÄNEET (docs/aasia-
+   * tyoaineisto/faktapohja-varanasi.md), on korjattu tässä:
+   * 1) "Rukoukset ja aartit pidetään päivittäin klo 02:30–23:00" ei
+   *    löydy en-Wikipedian Varanasi-artikkelista eikä Kashi
+   *    Vishwanath Temple -artikkelista. Jätetty kokonaan pois.
+   * 2) "Maharadža seuraa Ramlila-kulkuetta elefantin selässä" EI ole
+   *    Ramnagar Fort -artikkelissa, johon kokoaja viittasi. Väite on
+   *    silti tosi: se löytyy "Benares State" -artikkelista ("the
+   *    Kashi Naresh rides an elephant at the head of the
+   *    procession"), ja lähde on korjattu.
+   * 3) Ganga Aartin kesto. Kokoajan nostoteksti sanoi puolitoista
+   *    tuntia; Dashashwamedh Ghat -artikkeli sanoo noin 45 minuuttia.
+   *    Käytetty jälkimmäistä ("noin kolme varttia").
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat lehden tekstejä:
+   * kultauksen vuosi 1835 vs. 1839 (kirjoitettu auki Kashi
+   * Vishwanathin jutussa), Dhamek-stupan korkeus 43 m vs. 39 m
+   * (lukua ei kirjoiteta täsmällisenä, maakartat.js:n Moreebin dyyni
+   * -sääntö), Manikarnikan Gupta-kirjoituksen vuosisata 300- vs.
+   * 400-luku (sanotaan vain "Gupta-kauden kirjoituksissa") ja
+   * Sarnathin etäisyys (ks. maakartat.js:n varanasi-kommentti).
+   * Lisäksi Faizabadin sopimuksen vuosi: "Varanasi"-artikkelin
+   * johdanto sanoo 1775, "Benares State" sanoo "in the later 1760s".
+   * Käytetty täsmällisempää lukua 1775, koska johdanto nimeää
+   * sopimuksen ja vuoden yhdessä ja koska kaksi muutakin
+   * hallintovaihetta (1805, 1836, 1902) tulee samasta lauseesta.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Ganges (johdanto, K1),
+   * Benares (intro asia-artikkelit.js:ssä, H3, H4), yksi seitsemästä
+   * pyhästä kaupungista (matkailijalle-kappale), Sarnath (H1, H2) ja
+   * Uttar Pradesh (matkailijalle-kappale). Historia-sivun
+   * minitehtävä kysyy leijonapäädyn löytövuotta, jota visa ei kysy,
+   * ja vastaus on samalla sivulla nostossa H2.
+   *
+   * AIHETOISTO, joka on tietoinen: Sarnathin Dhamek-stupa on sekä
+   * kaupunki-sivun avauskuvana (Vinayarajin kuva iltavalossa) että
+   * kohdekartan oman juttunsa kuvana (Hardy Explorerin kuva
+   * sadesäällä). Eri tiedostot ja eri etäisyydet, sama perustelu
+   * kuin Mekan Jabal al-Nourilla ja Tukholman Vasalla.
+   *
+   * SÄÄRIVI PUUTTUU YHÄ js/packs/saatiedot.js:stä, ja se on tietoinen
+   * jättö eikä unohdus. Open-Meteon arkisto (ERA5) vastasi tämän erän
+   * ajan pelkällä 429:llä ja viestillä "Daily API request limit
+   * exceeded. Please try again tomorrow" — kontin vuorokausikiintiö
+   * oli käytetty loppuun, eikä normaaleja voi keksiä. Lehti toimii
+   * ilman riviä täsmälleen kuten tiedoston alkukommentti lupaa.
+   * Rivi haetaan yhdellä ajolla, kun kiintiö on nollautunut; oppaan
+   * sääjakso on kirjoitettu en-Wikipedian ilmasto-osiosta eikä se
+   * riipu rivistä.
+   */
+  varanasi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Varanasi',
+      johdanto: 'Gangesin vasemmalla rannalla laskeutuu veteen ainakin '
+        + '84 kiviportaikkoa, ja niiden takana on temppelien ja '
+        + 'silkkikutomoiden kaupunki. Varanasi tunnetaan yhä myös '
+        + 'niminä Benares ja Kashi.',
+      kansikuvat: [
+        {
+          tiedosto: 'Panorama of Ghat and Ganges (Ganga) River - Varanasi - Uttar Pradesh - India (12480230823).jpg',
+          selite: 'Leveä panoraama jokirannasta: soutuveneet ovat '
+            + 'kiinni portaiden edustalla, lehmä makaa kivetyksellä '
+            + 'ja vastarannalla häämöttää hiekkasärkkä.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Varanasi 127 (34175947074).jpg',
+          selite: 'Rantatörmän julkisivu joelta katsottuna: kerroksittain '
+            + 'taloja ja temppelien torneja, ja kaukana horisontissa '
+            + 'kaartuu ristikkosilta.',
+          lahde: 'juggadery, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Banarasi Sari on viewing wooden blocks 01.jpg',
+          selite: 'Kymmenkunta punaista ja kultakuvioista Banarasi-saria '
+            + 'on kääritty puulevyille ja nostettu näytille tiiliseinää '
+            + 'vasten.',
+          lahde: 'Suyash Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: joki, kuja ja Sarnath — kaupungin kolme kerrosta
+       * siinä järjestyksessä, jossa lehti ne kertoo (rantaportaat,
+       * vanhankaupungin kujaverkko, buddhalainen esikaupunki).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Dashashwamedh Ghat in Varanasi, Uttar Pradesh.jpg',
+          selite: 'Dashashwamedh-ghat joelta päivänvalossa: punainen '
+            + 'rakennus, temppelin torni, rivi oransseja lippuja ja '
+            + 'kymmeniä veneitä rannassa.',
+          lahde: 'Prashant Kharote, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Gali, Varanasi (32987699705).jpg',
+          selite: 'Vanhankaupungin kivetty gali aamuhämärässä: kuja on '
+            + 'kapea, koirat makaavat reunoilla ja etäällä kävelee yksi '
+            + 'ihminen selin.',
+          lahde: 'Eddy Milfort from Sydney, Australia, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Dhamek Stupa, Sarnath and surroundings - IRCTC 2017 (100).jpg',
+          selite: 'Sarnathin Dhamek-stupa iltavalossa nurmikentän takana, '
+            + 'reunalla puita ja rivi rukousviirejä.',
+          lahde: 'Vinayaraj, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kahdeksankymmentäneljä porrasta jokeen',
+          tiedosto: 'Bathing Ghat Banaras India 1890.jpg',
+          teksti: 'Varanasin tunnusmerkki on ghat: kiviporrasrivistö, '
+            + 'joka laskeutuu jyrkkää rantatörmää Gangesin veteen. Niitä '
+            + 'on kaupungissa ainakin 84, ja suurin osa on '
+            + 'kylpypaikkoja, joilla pyhiinvaeltajat tekevät '
+            + 'päivittäiset rituaalinsa; vain muutama on varattu '
+            + 'polttohautaukseen. Suuren osan portaista rakennuttivat '
+            + '1700- ja 1800-luvuilla Maratha-suvut — Scindiat, '
+            + 'Holkarit, Bhonslet ja Peshwat — ja moni ghat on yhä '
+            + 'yksityisomistuksessa. Iltaisin Dashashwamedh-ghatilla '
+            + 'pidetään Ganga aarti, noin kolme varttia kestävä tulen '
+            + 'palvontameno, ja aamuvenematka portaiden ohi on ollut '
+            + 'matkailijan vakio-ohjelmaa jo pitkään.',
+          selite: 'Vuoden 1890 kaiverrus kylpyghatista: portaat '
+            + 'täyttyvät varjoista ja päivänvarjoista, ja niiden takana '
+            + 'kohoaa temppelin korkea torni.',
+          lahde: 'The British Library, Wikimedia Commons (PD)',
+          wiki: 'Varanasi',
+        },
+        {
+          otsikko: 'Kultalanka ja kangaspuut',
+          tiedosto: 'Konia, brocade sari.jpg',
+          teksti: 'Silkinkudonta on Varanasin hallitseva käsiteollisuus, '
+            + 'ja kaupunki tunnetaan koko Intiassa Banarasi-sareistaan: '
+            + 'kulta- ja hopealangalla kudotuista brokadeista, joita '
+            + 'käytetään erityisesti häissä. Kutojat ovat enimmäkseen '
+            + 'Ansari-nimellä tunnettuja muslimeja, ja työ tehdään yhä '
+            + 'kotona huoneen kokoisilla jalkapolkimisilla kangaspuilla '
+            + 'isältä pojalle siirtyneenä taitona. Perinne juontuu '
+            + '1600-luvulle: Gujaratin nälänhädän 1603 jälkeen '
+            + 'silkkikutojia muutti Banarasiin. Yhden sarin kutominen '
+            + 'kestää viidestätoista päivästä puoleen vuoteen kuvion '
+            + 'mukaan, ja vuodesta 2009 nimi on ollut alkuperäsuojattu.',
+          selite: 'Lähikuva purppuranvärisen brokadin kulmasta, jossa '
+            + 'kultalangalla on kudottu paisleykuvio ja tiheät '
+            + 'kukkareunukset.',
+          lahde: 'Anilbhardwajnoida, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Varanasi',
+        },
+        {
+          otsikko: 'Aurinkokello ghatin päällä',
+          tiedosto: 'Samrat Yantram at Observatory of Man Singh.jpg',
+          teksti: 'Man Mandir -ghatin yläpuolella, aivan Dashashwamedhin '
+            + 'naapurissa, seisoo kivinen tähtitorni. Sen rakennutti '
+            + 'vuonna 1737 mogulihallitsija Muhammad Shah, ja tehtävä '
+            + 'oli tarkka: löytää kalenterista virheet ja korjata '
+            + 'käytössä olleet tähtitieteelliset taulukot. Rakennus on '
+            + 'Jaipurin maharadžan Jai Singh II:n palatsin kupeessa, ja '
+            + 'se on varustukseltaan vaatimattomampi kuin observatoriot '
+            + 'Jaipurissa ja Delhissä. Yksi laite on '
+            + 'silti ainutlaatuinen: päiväntasaajan tasoon asetettu '
+            + 'aurinkokello, joka toimii yhä ja jonka lukemat yksi '
+            + 'ihminen ehtii seurata ja kirjata.',
+          selite: 'Observatorion suuri aurinkokello: kaksi kaarevaa '
+            + 'kivikaidetta reunustaa jyrkkiä portaita, jotka nousevat '
+            + 'suoraan taivasta vasten.',
+          lahde: 'Nandanupadhyay, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Varanasi',
+        },
+        {
+          otsikko: 'Suuri polttopaikka',
+          tiedosto: 'Manikarnika Ghat, Varanasi, Uttar Pradesh, India (2011) 5.jpg',
+          teksti: 'Manikarnika on Varanasin tärkein polttohautausghat, ja '
+            + 'hindulaisen perinteen mukaan täällä poltettu saavuttaa '
+            + 'moksan eli vapautuu syntymän ja kuoleman kierteestä. '
+            + 'Ghat on kaupungin vanhimpia — sitä mainitaan jo '
+            + 'Gupta-kauden kirjoituksissa — mutta nykyinen kivinen '
+            + 'rantalaituri rakennettiin vasta vuonna 1302, ja sitä on '
+            + 'sen jälkeen korjattu ainakin kolme kertaa. Nimi tulee '
+            + 'legendasta, jonka mukaan jumalatar Satin korvakoru '
+            + 'putosi juuri tähän kohtaan: mani-karnika tarkoittaa '
+            + 'korvakorun helmeä. Laiturin viereiset korotetut alustat '
+            + 'on varattu kuolinvuosipäivien muistorituaaleille.',
+          selite: 'Manikarnika-ghat joelta kaukaa katsottuna: '
+            + 'rantatörmän talot, portaat ja vinoon vajonnut '
+            + 'kivitemppeli veden rajassa.',
+          lahde: 'Aleksandr Zykov from Russia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Varanasi',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'India - Varanasi boats - 1292.jpg',
+          selite: 'Aurinko nousee usvan takaa Gangesin ylle, ja '
+            + 'etualalla soutuveneet odottavat kiinnitettyinä rantaan.',
+          lahde: 'Jorge Royan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Varanasi on Uttar Pradeshin kaakkoiskulmassa Gangesin '
+          + 'vasemmalla rannalla, ja kaupungissa asui vuoden 2011 '
+          + 'laskennassa runsaat 1,2 miljoonaa ihmistä. Hinduille se on '
+          + 'yksi seitsemästä pyhästä kaupungista, ja matkailu on sen '
+          + 'toiseksi tärkein elinkeino heti silkin jälkeen; sesonki on '
+          + 'loka–maaliskuu. Vanhassa kaupungissa liikutaan kävellen tai '
+          + 'veneellä, sillä kujat ovat niin kapeita, ettei niihin mahdu '
+          + 'ajoneuvoa — jokiranta on käytännössä kaupungin pääkatu.',
+        artikkeli: {
+          nimi: 'Matkailijan Varanasi',
+          taitto: 'opas',
+          teksti: 'Yksi jokiranta, ainakin 84 porrasta veteen ja '
+            + 'kaupunki, jota on asuttu yhtäjaksoisesti pidempään kuin '
+            + 'melkein mitään muuta.',
+          nosto: 'Kaupungissa arvioidaan olevan 23 000 temppeliä — ja '
+            + '1830-luvun laskennassa niitä oli tuhat.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Varanasia palvelee Lal Bahadur Shastrin '
+                + 'kansainvälinen lentoasema, joka on Babatpurissa noin '
+                + '26 kilometriä keskustasta; kansainväliseksi lentoasemaksi '
+                + 'se nimettiin lokakuussa 2012. Rautateitse tullaan '
+                + 'Varanasi Junctionille eli Cantt-asemalle, jonka '
+                + 'yhdentoista laiturin läpi kulkee vuorokaudessa yli '
+                + '240 junaa ja runsaat 360 000 matkustajaa. Delhistä on '
+                + 'matkaa 692 kilometriä kaakkoon ja osavaltion '
+                + 'pääkaupungista Lucknow’sta 320. Kaupungin sisällä '
+                + 'liikutaan taksilla, riksalla ja kolmipyörillä, mutta '
+                + 'vanhimpiin kortteleihin niillä ei ole asiaa — siellä '
+                + 'kuljetaan jalan tai veneellä.',
+              kuva: {
+                tiedosto: 'Varanasi 252c tree shrine (33664791913).jpg',
+                selite: 'Kujan mutkassa on kullattu pikku pyhäkkö '
+                  + 'kellonsa kanssa, ja sen takaa nousee valtavan '
+                  + 'vanhan puun kaksihaarainen runko.',
+                lahde: 'juggadery, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Nimi Varanasi tulee kahdesta Gangesin sivu-uomasta. '
+                + 'Varuna virtaa yhä kaupungin pohjoisosassa, ja Assi on '
+                + 'nykyään pieni puro etelässä samannimisen ghatin luona. '
+                + 'Vanha kaupunki on näiden kahden yhtymäkohdan välissä '
+                + 'joen vasemmalla rannalla, ja väli — noin neljä '
+                + 'kilometriä — on pyhiinvaeltajien perinteinen '
+                + 'kiertoreitti, joka päättyy Sakshi Vinayakin '
+                + 'temppeliin. Kaupunki on Gangesin tasangolla vain '
+                + 'kahdeksankymmenen metrin korkeudessa, ja maa on '
+                + 'hedelmällistä, koska matalat tulvat tuovat rannoille '
+                + 'jatkuvasti uutta lietettä. Ylävirtaan on 121 '
+                + 'kilometriä Prayagrajiin, jossa Yamuna yhtyy '
+                + 'Gangesiin — toiseen suureen pyhiinvaelluspaikkaan.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: paan, mango ja khoa',
+              teksti: 'Seudun tärkeitä maataloustuotteita ovat '
+                + 'betelinlehti, langra-mangot ja khoa eli kokoon '
+                + 'keitetty maito, josta tehdään makeisia. Betelinlehteen '
+                + 'kääritään paan: areca-pähkinän paloista, sammutetusta '
+                + 'kalkista ja mausteista koottu pikku käärö, jota '
+                + 'pureskellaan piristeenä ja tarjotaan vieraille eri '
+                + 'puolilla Etelä-Aasiaa. Sekoitus vaihtelee seudusta '
+                + 'toiseen — mukaan voi tulla kanelia, neilikkaa, '
+                + 'kardemummaa, katekua tai kookosta — ja Banarasi paan '
+                + 'on niistä koko Intiassa tunnetuin. Langra-mango '
+                + 'puolestaan kypsyy kesällä juuri ennen monsuunia.',
+              kuva: {
+                tiedosto: 'Langra Mango farm, Mathurapur, Bhagalpur Bihar.JPG',
+                selite: 'Langra-mangopuun oksat notkuvat vaaleanvihreitä '
+                  + 'hedelmiä tiheän lehvästön keskellä.',
+                lahde: 'Abhishek Priyadarshi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Koulujen ja soittajien kaupunki',
+              teksti: 'Varanasi oli oppineiden kaupunki kauan ennen '
+                + 'brittiaikaa, mutta vuonna 1791 sinne perustettiin '
+                + 'myös Intian vanhin sanskritin oppilaitos, Benares '
+                + 'Sanskrit College. Perustaja oli Itä-Intian kompanian '
+                + 'residentti Jonathan Duncan — sama mies, joka julkaisi '
+                + 'ensimmäisen nykyaikaisen kuvauksen Sarnathin '
+                + 'raunioista. Annie Besant avasi Central Hindu Collegen '
+                + 'vuonna 1898, ja siitä kasvoi 1916 yhdessä Madan Mohan '
+                + 'Malviyan kanssa Banaras Hindu University, Intian '
+                + 'ensimmäinen nykyaikainen kampusyliopisto; sen maat '
+                + 'lahjoitti Kashi Naresh, kaupungin ruhtinas, yli viisi '
+                + 'neliökilometriä. Musiikissa kaupungilla on oma '
+                + 'koulukuntansa: tabla-rummun Benares gharana syntyi '
+                + 'täällä, ja 1900-luvulla kaupunkiin liitettiin '
+                + 'shehnai-soittaja Bismillah Khan.',
+              kuva: {
+                tiedosto: 'Banaras Hindu University, Varanasi.jpg',
+                selite: 'Banaras Hindu Universityn keltainen '
+                  + 'porttirakennus palmujen välissä, edustalla leveä '
+                  + 'katu ja muutama riksa.',
+                lahde: 'Sundrampixel, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Varanasissa on kostea subtrooppinen ilmasto, jossa '
+                + 'kesän ja talven ero on suuri. Kuiva kesä alkaa '
+                + 'huhtikuussa ja jatkuu kesäkuulle: lämpötila liikkuu '
+                + 'silloin kahdenkymmenenkahden ja neljänkymmenenkuuden '
+                + 'asteen välillä, ja päivisin puhaltaa loo, kuiva ja '
+                + 'kuuma tuuli. Heinäkuusta lokakuuhun on monsuunikausi, '
+                + 'ja koko vuoden sade on runsaat 1 100 millimetriä. '
+                + 'Talvella joulu–helmikuussa Himalajalta tulevat kylmät '
+                + 'aallot pudottavat lämpötilan ajoittain alle viiden '
+                + 'asteen, ja aamut ovat usein sumuisia. Matkailun '
+                + 'sesonki osuu näiden väliin, loka–maaliskuuhun.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki tunnettiin muinoin nimellä Kashi, valon '
+        + 'kaupunki, ja sen lähistöllä Buddha piti ensimmäisen '
+        + 'saarnansa. 1800-luvulla brittiläiset kaivajat ja '
+        + 'matkakirjailijat löysivät Benaresin uudelleen.',
+      tehtava: {
+        kysymys: 'Minä vuonna Ashokan pylvään leijonapääty kaivettiin '
+          + 'esiin Sarnathissa?',
+        vaihtoehdot: [
+          '1794',
+          '1836',
+          '1905',
+          '1947',
+        ],
+        oikea: 2,
+        fakta: 'Löytö tehtiin maaliskuussa 1905, yli sata vuotta sen '
+          + 'jälkeen kun Sarnathin rauniot oli ensi kerran kuvattu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Peurapuiston ensimmäinen saarna',
+          tiedosto: 'Sarnath capital.jpg',
+          teksti: 'Kahdeksan kilometriä Varanasista koilliseen on '
+            + 'Sarnath, peurapuisto, jossa Buddha piti valaistumisensa '
+            + 'jälkeen ensimmäisen opetuksensa viidelle oppilaalleen '
+            + 'noin vuonna 528 eaa. Siitä alkoi buddhalainen '
+            + 'munkkiyhteisö. Paikkaa merkitsee yhä Dhamek-stupa, jykevä '
+            + 'tiilestä ja kivestä muurattu lieriö, jonka kivipinnan '
+            + 'kukkakuviot ovat Gupta-kaudelta. Keisari Ashoka pystytti '
+            + 'paikalle noin 250 eaa. pylvään, jonka neljän leijonan '
+            + 'pääty on nykyään Intian valtion tunnus. Kiinalainen munkki '
+            + 'Xuanzang laski täällä 600-luvulla satoja pieniä '
+            + 'pyhäkköjä ja puolentoistatuhannen munkin yhteisön.',
+          selite: 'Ashokan pylvään leijonapääty lähikuvassa: neljä '
+            + 'kiillotetusta hiekkakivestä veistettyä leijonaa selät '
+            + 'vastakkain, alla pyörä- ja eläinkuvioinen jalusta.',
+          lahde: 'Chrisi1964, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sarnath',
+        },
+        {
+          otsikko: 'Kaivetut aarteet',
+          tiedosto: 'India-5162 - Flickr - archer10 (Dennis).jpg',
+          teksti: 'Sarnath ryöstettiin ja tuhottiin vuonna 1194, ja se '
+            + 'unohtui vuosisadoiksi. Tammikuussa 1794 zamindar Jagat '
+            + 'Singhin miehet purkivat paikalta kokonaisen stupan '
+            + 'saadakseen tiiliä rakennusaineeksi ja löysivät sen '
+            + 'reliikkikammiosta hiekkakivilippaan, jonka sisällä oli '
+            + 'vihreä marmoriuurna. Löydöstä julkaisi kuvauksen vuonna '
+            + '1799 Asiatic Societyn jäsen Jonathan Duncan. Nuori '
+            + 'sotilasinsinööri Alexander Cunningham teki ensimmäiset '
+            + 'järjestelmälliset kaivaukset 1835–1836, Markham Kittoe '
+            + 'jatkoi 1851–1852, ja F. O. Oertelin ryhmä nosti '
+            + 'maaliskuussa 1905 esiin Ashokan pylvään alaosan ja sen '
+            + 'leijonapäädyn.',
+          selite: 'Jagat Singhin purkaman stupan tiiliraunio, jonka '
+            + 'tasatulle laelle on jätetty pieni kullattu '
+            + 'Buddha-hahmo ja kukkia.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Sarnath',
+        },
+        {
+          otsikko: 'Vanhempi kuin historia',
+          tiedosto: 'Edward Lear - Benares - Google Art Project.jpg',
+          teksti: 'Benares on vanhempi kuin historia, vanhempi kuin '
+            + 'perimätieto, jopa vanhempi kuin legenda — niin kirjoitti '
+            + 'Mark Twain vuonna 1897. Häntä ennen kaupunkia olivat '
+            + 'kuvanneet toiset. Pastori M. A. Sherring viittasi vuonna '
+            + '1868 ilmestyneessä kirjassaan James Prinsepin '
+            + '1830-luvun laskentaan, jonka mukaan temppeleitä oli '
+            + 'noin tuhat; Prinsep itse oli piirtänyt kaupungista '
+            + 'litografioita. Englantilainen Edward Lear '
+            + 'istui jokirannassa 14. joulukuuta 1873 puoli kolmelta '
+            + 'iltapäivällä ja merkitsi kellonajan akvarellinsa '
+            + 'alalaitaan. Kaupungin oma kunnallishallinto oli '
+            + 'aloittanut kuusi vuotta aiemmin.',
+          selite: 'Edward Learin akvarelli jokirannasta: temppelien '
+            + 'tornit nousevat vaalean rantatörmän päälle, ja '
+            + 'alalaitaan on kirjoitettu käsin päiväys ja kellonaika.',
+          lahde: 'Edward Lear, Wikimedia Commons (PD)',
+          wiki: 'Varanasi',
+        },
+        {
+          otsikko: 'Linnoitus joen toisella puolella',
+          tiedosto: 'Ramnagar Fort, Ramnagar, Varanasi, Uttar Pradesh 05.jpg',
+          teksti: 'Gangesin itärannalla, Tulsi-ghatia vastapäätä, kohoaa '
+            + 'Ramnagarin linnoitus. Sen rakennutti vuonna 1750 Kashi '
+            + 'Naresh Balwant Singh vaaleasta chunar-hiekkakivestä, ja '
+            + 'tyyli on mogulien: veistetyt parvekkeet, avoimet pihat ja '
+            + 'paviljongit. Suku oli noussut Awadhin nawabin '
+            + 'zamindareista omaksi vallakseen, ja Benaresista tuli '
+            + 'vuonna 1911 ruhtinaskunta — lainkäyttövaltaa itse '
+            + 'kaupungissa sillä ei silti ollut, sillä Itä-Intian '
+            + 'kompania oli liittänyt kaupungin itseensä jo 1775. '
+            + 'Ruhtinas käynnisti 1800-luvulla Ramnagarin '
+            + 'Ramlila-perinteen, ja kuukauden mittaisen näytelmäsarjan '
+            + 'avajaiskulkueen kärjessä hän ratsastaa yhä norsulla.',
+          selite: 'Ramnagarin linnoitus joen toiselta rannalta: pitkä '
+            + 'hiekkakivinen muuri ja sen päällä palatsin siivet '
+            + 'heijastuvat tyyneen veteen.',
+          lahde: 'Paramanu Sarkar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Varanasi',
+        },
+      ],
+    },
+  ],
 };

@@ -2323,6 +2323,57 @@ export const ASIA_ARTIKKELIT = {
       + 'hindulaisuuden ja buddhalaisuuden kohtauspaikka, ja '
       + 'Boudhanathin stupa on yksi maailman suurimmista.',
   },
+  /*
+   * VARANASI (21.8.2026, uusi lehti). Intro on tekstiremontin
+   * mukainen etusivun leipäteksti: kolme kappaletta, kolme
+   * lihavointia. Jokainen väite tulee kaupungin omista, samassa
+   * erässä tarkistetuista lehtiteksteistä (kulttuuri-kategoriat.js:n
+   * nostot ja Matkailijan Varanasi, nahtavyysjutut.js, maakartat.js)
+   * tai suoraan en-Wikipedian Varanasi-artikkelista, joka on haettu
+   * raakatekstinä 21.8.2026. Sisältölinjaus on sama kuin lehden
+   * muissakin teksteissä: ei nykypolitiikkaa, ei Gyanvapi-aiheita,
+   * polttohautaus mainitaan arvokkaasti ilman yksityiskohtia.
+   */
+  Varanasi: {
+    intro: 'Varanasi on Pohjois-Intiassa, Uttar Pradeshin '
+      + 'kaakkoiskulmassa, Gangesin vasemmalla rannalla noin 692 '
+      + 'kilometriä Delhistä kaakkoon. Nimi tulee kahdesta '
+      + 'sivu-uomasta, Varunasta ja Assista, joiden välissä vanha '
+      + 'kaupunki on. Se on yksi maailman vanhimmista '
+      + 'yhtäjaksoisesti asutuista kaupungeista: muinainen nimi '
+      + '**Kashi** eli valon kaupunki liittyy samannimiseen '
+      + 'kuningaskuntaan jo ennen ajanlaskun alkua.'
+      + '\n\n'
+      + 'Jokiranta on kaupungin kasvot. Kiviportaikkoja eli **ghatteja** '
+      + 'on ainakin 84, ja niitä pitkin pyhiinvaeltajat laskeutuvat '
+      + 'veteen. Hinduille Varanasi on yksi seitsemästä pyhästä '
+      + 'kaupungista, ja kahdeksan kilometriä koilliseen jäävässä '
+      + 'Sarnathissa Buddha piti ensimmäisen opetuksensa. Toinen '
+      + 'elinkeino on silkinkudonta: Banarasi-sarit kudotaan kulta- ja '
+      + 'hopealangalla yhä kotikutomoissa.'
+      + '\n\n'
+      + 'Britit kutsuivat kaupunkia **Benaresiksi**, ja nimi elää yhä '
+      + 'rinnalla. Itä-Intian kompania sai sen haltuunsa vuonna 1775, '
+      + 'mutta paikallinen ruhtinassuku jatkoi joen toisella rannalla '
+      + 'Ramnagarin linnoituksessa. 1800-luvulla Benares oli '
+      + 'eurooppalaisten matkakirjailijoiden ja arkeologien kohde.',
+    teksti: 'Varanasi on Gangesin varrella Pohjois-Intiassa, ja se on '
+      + 'hindulaisuuden pyhimpiä kaupunkeja. Jokirantaa reunustavat '
+      + 'kiviportaat eli ghatit, joita pitkin pyhiinvaeltajat '
+      + 'laskeutuvat veteen. Vanhan kaupungin kujat ovat niin kapeita, '
+      + 'ettei niihin mahdu ajoneuvoa.'
+      + '\n\n'
+      + 'Kaupunki tunnettiin muinoin nimellä Kashi ja brittiaikana '
+      + 'Benaresina. Kahdeksan kilometrin päässä koilliseen on '
+      + 'Sarnath, jossa Buddha piti ensimmäisen opetuksensa ja jonne '
+      + 'keisari Ashoka pystytti pylvään; sen leijonapääty on nykyään '
+      + 'Intian valtion tunnus. Nykyinen Kashi Vishwanath -temppeli on '
+      + 'vuodelta 1780, ja sen tornit kullattiin 1800-luvulla.'
+      + '\n\n'
+      + 'Varanasin tärkein käsiteollisuus on silkinkudonta. '
+      + 'Banarasi-sarit kudotaan kulta- ja hopealangalla, ja yhden '
+      + 'valmistuminen voi kestää puoli vuotta.',
+  },
   Delhi: {
     intro: 'Delhi on Pohjois-Intiassa Yamuna-joen varrella, ja se on yksi '
       + 'maailman suurimmista kaupunkialueista. Kaupungin halki kulkee '

@@ -6953,6 +6953,83 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri villihanhipagoda', lat: 34.219842, lon: 108.959354 },
     ],
   },
+  /*
+   * VARANASIN KOHDEKARTTA (21.8.2026). Rajaus on 6,1 × 6,1 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Mekassa ja Singaporessa.
+   *
+   * NELIÖRAJAUS ON HARKITTU. Kaupungin kohteet ovat luonnostaan
+   * pohjois–eteläsuuntainen nauha jokirantaa pitkin, ja pelkkä nauha
+   * olisi piirtynyt 1600 × 3600 pikselin pystykaistaleeksi — paketin
+   * korkein kartta on Isfahan 1600 × 1983. Rajausta levennettiin itä-
+   * ja länsisuunnassa, jolloin kuvasuhde on 1,00 (korkeus 1595 px) ja
+   * ruutuun mahtuivat samalla Durga Kundin allas lännessä ja
+   * Ramnagarin linnoitus joen toisella puolella idässä.
+   *
+   * KAINALOSSA SARNATH, Dhamek- ja Chaukhandi-stupat. Kainalon
+   * suuntarivi on 7 km pohjoiseen, ja luku on OMA LASKELMA
+   * en-Wikipedian koordinaateista: kaupungin keskipisteestä
+   * (25,31889 / 83,01278) Dhamek-stupalle (25,3808 / 83,0245) on
+   * 7,0 km suuntimalla 10°, siis käytännössä suoraan pohjoiseen.
+   * en-Wikipedian LEIPÄTEKSTIT antavat kolme eri lukua: Sarnath-
+   * artikkeli "8 km northeast", Varanasi-artikkeli "10 kilometres
+   * north-east" ja Chaukhandi-artikkeli "8 kilometres from Cantt
+   * Railway Station". Viimeinen selittää muut: Cantt-asemalta
+   * (n. 25,327 / 82,990) etäisyys on 7,0 km suuntimalla 30° eli
+   * koilliseen. Kartan piste on keskipiste, joten kainalo seuraa
+   * keskipisteestä laskettua lukua — koordinaatti voittaa
+   * leipätekstin (v925, v932, v937). Nostoteksti käyttää lähteen
+   * omaa lukua "kahdeksan kilometriä koilliseen".
+   *
+   * KAINALON KORKEUS 18,44 on piirtäjän oma kaava
+   * (tools/piirra-kaupunkikartta.mjs: leveys × kuvasuhde(piirto) /
+   * kuvasuhde(kainalon rajat)), ei käsin kirjoitettu — sama sääntö
+   * kuin Mekassa ja Medinassa.
+   *
+   * JANTAR MANTAR JÄI KARTALTA POIS, vaikka se on lehden omana
+   * nostonaan: observatorio on Man Mandir -ghatin päällä noin
+   * 90 metriä Dashashwamedh-ghatin pisteestä eli puolitoista
+   * prosenttia ruudun leveydestä, ja numeroympyrät menisivät
+   * päällekkäin (Petran, Mekan ja Singaporen oppi). Se kerrotaan
+   * Dashashwamedhin jutussa ja nostossa.
+   *
+   * POLTTOHAUTAUSGHATEISTA kartalla on vain Manikarnika, koska se on
+   * lehden nostona; Harishchandra jätettiin pois. Aihe on Fablen
+   * ohjeen mukaisesti arvokas eikä nähtävyys, ja sen juttu kertoo
+   * ghatin historian ja moksa-uskomuksen kuvailematta itse
+   * polttamista.
+   */
+  varanasi: {
+    polku: 'assets/kartat/varanasi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.318, etela: 25.263, lansi: 82.982, ita: 83.043 },
+    kainalot: [
+      { rajat: { pohjoinen: 25.385, etela: 25.37, lansi: 83.0155, ita: 83.0335 },
+        x: 78, y: 2, leveys: 20, korkeus: 18.5, suunta: '7 km pohjoiseen' },
+    ],
+    esittely: 'Kartan alue on Gangesin länsiranta Assi-purolta '
+      + 'Manikarnika-ghatille sekä joen toinen puoli. Rannassa ovat '
+      + 'kaupungin tunnetuimmat kiviportaikot: pohjoisessa '
+      + 'Manikarnika, keskellä Dashashwamedh ja etelässä Assi. '
+      + 'Portaiden yläpuolella kujien takana on Kashi Vishwanath, '
+      + 'kaupungin tärkein temppeli, ja lännempänä Durga Kundin '
+      + 'allas temppeleineen. Oikealla rannalla kohoaa Ramnagarin '
+      + 'linnoitus, Benaresin ruhtinassuvun koti. Oikean ylänurkan '
+      + 'kainalossa on Sarnath, seitsemän kilometrin päässä '
+      + 'pohjoisessa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään; 1–2 ovat kainalossa. */
+      { nimi: 'Dhamek-stupa', lat: 25.3808, lon: 83.0245 },
+      { nimi: 'Chaukhandi-stupa', lat: 25.3741, lon: 83.0237 },
+      { nimi: 'Manikarnika Ghat', lat: 25.31087, lon: 83.01409 },
+      { nimi: 'Kashi Vishwanath -temppeli', lat: 25.31077, lon: 83.01061 },
+      { nimi: 'Dashashwamedh Ghat', lat: 25.30717, lon: 83.01034 },
+      { nimi: 'Assi Ghat', lat: 25.28865, lon: 83.00676 },
+      { nimi: 'Durga Kund -temppeli', lat: 25.28861, lon: 82.99927 },
+      { nimi: 'Ramnagarin linnoitus', lat: 25.2697, lon: 83.0245 },
+    ],
+  },
 };
 
 /*

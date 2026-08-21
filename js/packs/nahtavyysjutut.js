@@ -23365,4 +23365,329 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * VARANASI (Opus 21.8.2026). Kahdeksan kohdetta, joista kaksi
+   * ensimmäistä on kartan kainalossa Sarnathissa. Faktat on
+   * tarkistettu en-Wikipedian raakateksteistä (action=raw, haettu
+   * 21.8.2026): Varanasi, Sarnath, Dhamek Stupa, Chaukhandi Stupa,
+   * Kashi Vishwanath Temple, Manikarnika Ghat, Dashashwamedh Ghat,
+   * Assi Ghat, Ramnagar Fort, Banarasi sari, Silk industry in
+   * Varanasi, Benares State ja Betel nut chewing (johon "Paan"
+   * ohjaa).
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 21.8.2026: uskonto kerrotaan
+   * historiallis-kulttuurisena ilmiönä ja kunnioittavasti,
+   * polttohautaus arvokkaasti ilman kuvausta itse rovioista tai
+   * vainajista. POIS JÄTETTY KOKONAAN: Kashi Vishwanathin vuoden
+   * 1669 tuhoamishistoria ja Gyanvapi-aiheet, nykypolitiikka ja
+   * temppelikäytävähanke, vuoden 2010 pommi-isku Dashashwamedhilla
+   * ja vuoden 2019 lihakauppakielto. Ne eivät esiinny missään
+   * jutussa. Kashi Vishwanathin juttu kertoo positiivisen
+   * rakennushistorian (Ahilyabai Holkar 1780 ja kultaus) ilman
+   * mainintaa siitä, mitä paikalla oli ennen.
+   *
+   * KOLME WIKIPEDIA-SISÄISTÄ RISTIRIITAA on ratkaistu näin:
+   * 1) Kultauksen vuosi. "Kashi Vishwanath Temple" sanoo 1835
+   *    (myös infoboksissa), "Varanasi" sanoo 1839. Ristiriita on
+   *    kirjoitettu auki lukijalle (v925/v932/v937:n tapa) eikä
+   *    valittu puolesta.
+   * 2) Dhamek-stupan korkeus. "Dhamek Stupa" -infoboksi sanoo 43 m,
+   *    "Sarnath"-artikkeli 39 m. Lukua EI kirjoiteta täsmällisenä
+   *    (maakartat.js:n Moreebin dyyni -sääntö) — teksti kuvaa
+   *    stupan ilman metrimäärää.
+   * 3) Chaukhandin tornin tekijä. "Sarnath" sanoo Akbarin
+   *    pystyttäneen sen 1588 muistoksi isästään Humayunista,
+   *    "Chaukhandi Stupa" nimeää Todar Malin pojan Govardhanin.
+   *    Molemmat on kerrottu.
+   *
+   * MANIKARNIKAN 1302-VUOSILUKU on "Varanasi"-artikkelin Ghats-
+   * osiosta, ei omistetusta "Manikarnika Ghat" -artikkelista, joka
+   * ei mainitse vuotta lainkaan. Samat artikkelit ovat eri mieltä
+   * siitä, onko Gupta-kirjoitus 300- vai 400-luvulta, joten teksti
+   * sanoo vain "Gupta-kauden kirjoituksissa".
+   */
+  varanasi: {
+    'Dhamek-stupa': {
+      aika: 'nykyinen hahmo 400–500-luvulta',
+      teksti: 'Dhamek-stupa on Sarnathin massiivisin rakennelma, ja se '
+          + 'merkitsee paikkaa, jossa Buddha piti ensimmäisen '
+          + 'opetuksensa. Nimen arvellaan lyhentyneen sanoista dharma '
+          + 'chakra, dharman pyörä — juuri se pyörä, jonka Buddha '
+          + 'kertomuksen mukaan pani täällä liikkeelle. Alaosa on '
+          + 'ladottu tasaisiksi hakatuista kivilohkareista ja yläosa '
+          + 'tiilestä, ja kivipinnassa kiertää nauha hienoja '
+          + 'kukkakuvioita, jotka ovat Gupta-kauden tyyliä 400–500-'
+          + 'luvulta.'
+          + '\n\n'
+          + 'Rakennelmalla on pidempi historia kuin sen nykyisellä '
+          + 'hahmolla. Perimätiedon mukaan Buddhan tuhkat jaettiin '
+          + 'hänen kuolemansa jälkeen kahdeksaan stupaan, ja Dhamek '
+          + 'oli ilmeisesti yksi niistä; keisari Ashokan arvellaan '
+          + 'teettäneen sen laajennuksen. Sisällä olleet '
+          + 'reliikkilippaat ovat kadonneet, ja aivan vieressä seisoo '
+          + 'Ashokan pylvään kanto, johon on hakattu keisarin oma '
+          + 'määräys.'
+          + '\n\n'
+          + 'Kivivuoraus ei ole enää ehjä. Kun paikallinen zamindar '
+          + 'Jagat Singh purki 1700-luvun lopulla viereistä stupaa '
+          + 'saadakseen tiiliä myyntiin, hänen miehensä irrottivat '
+          + 'samalla suuren osan Dhamekin kivipinnasta. Aukot näkyvät '
+          + 'yhä, ja moni stupan Buddha-veistoksista päätyi Jagat '
+          + 'Singhin omaan taloon.',
+      kuvat: [
+        {
+          tiedosto: 'Dhamek Stupa, 2025.jpg',
+          selite: 'Dhamek-stupan jykevä lieriö nousee nurmikentän '
+            + 'takaa: alaosa on vaaleaa kiveä ja yläosa punertavaa '
+            + 'tiiltä.',
+          lahde: 'Hardy Explorer, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chaukhandi-stupa': {
+      aika: 'terassitemppeli 600–700-luku, torni 1500-luku',
+      teksti: 'Chaukhandi on Sarnathin eteläinen esipiha. Kahdeksansataa '
+          + 'metriä varsinaisen peurapuiston ulkopuolella kohoaa '
+          + 'porrastettu tiilikumpu, jonka päällä on '
+          + 'kahdeksankulmainen torni. Alkuperäinen rakennelma oli '
+          + 'terassitemppeli 600- ja 700-luvuilta, ja se merkitsee '
+          + 'paikkaa, jossa Buddhan kerrotaan kohdanneen viisi entistä '
+          + 'oppilastaan tullessaan Bodh Gayasta Sarnathiin.'
+          + '\n\n'
+          + 'Torni on aivan toista maailmaa ja paljon nuorempi. Se '
+          + 'muurattiin mogulien aikana muistoksi keisari Humayunin '
+          + 'käynnistä paikalla. Sarnathin tutkimuskirjallisuus '
+          + 'ajoittaa sen Akbarin toimeksiannoksi vuoteen 1588, kun '
+          + 'taas Chaukhandin oma artikkeli nimeää toteuttajaksi '
+          + 'Todar Malin pojan Govardhanin — kumpikin voi pitää '
+          + 'paikkansa, sillä Akbar oli hallitsija ja Govardhan '
+          + 'rakennuttaja.'
+          + '\n\n'
+          + 'Nykyään kumpua peittää ruoho ja tiiliterassit on '
+          + 'kunnostettu. Kohde on Intian arkeologisen '
+          + 'tutkimuslaitoksen hoidossa, ja se on Sarnathin '
+          + 'muinaisjäännösalueen oma erillinen kokonaisuutensa: '
+          + 'peurapuiston kaivauskenttä alkaa vasta matkan päästä '
+          + 'pohjoisesta.',
+      kuvat: [
+        {
+          tiedosto: 'Chaukhandi Stupa, Sarnath 2.jpg',
+          selite: 'Porrastettu tiilikumpu nousee nurmelta, ja sen '
+            + 'laella seisoo kahdeksankulmainen tiilitorni '
+            + 'ikkuna-aukkoineen.',
+          lahde: 'Rangan Datta Wiki, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manikarnika Ghat': {
+      aika: 'nykyinen laituri 1302',
+      teksti: 'Ghat sijaitsee Dashashwamedhin ja Scindian portaikkojen '
+          + 'välissä. Se on Mahasmasana, suureksi hautausmaaksi '
+          + 'kutsuttu paikka, eikä kaupungille nähtävyys vaan osa '
+          + 'arkea — vierailija tekee viisaasti pitäessään etäisyyttä '
+          + 'ja jättäessään kameran laukkuun.'
+          + '\n\n'
+          + 'Paikka on myös shaktalaisuuden pyhäkkö. Kertomuksen mukaan '
+          + 'Shiva kantoi puolisonsa Satin ruumista, kunnes Vishnu '
+          + 'jakoi sen viiteenkymmeneenyhteen osaan; jokainen putosi '
+          + 'omaan kohtaansa ja synnytti pyhäkön, ja tähän osui '
+          + 'korvakoru. Sen mukaan on nimetty sekä portaikko että sen '
+          + 'vieressä oleva allas Manikarnika Kund, jonka kaivamisen '
+          + 'tarina antaa Vishnulle. Paikan jumalatar tunnetaan '
+          + 'niminä Vishalakshi ja Manikarni.'
+          + '\n\n'
+          + 'Portaiden juuressa seisoo Ratneshwar Mahadevin temppeli, '
+          + 'joka on vajonnut ja kallistunut niin pahasti, että sen '
+          + 'ovi on suuren osan vuodesta pinnan alla. Ghatilla '
+          + 'säilytetään myös Varanasin sukukirjoja, joihin '
+          + 'brahmiinipapit ovat merkinneet perheiden sukupolvia '
+          + 'vuosisatojen ajan.',
+      kuvat: [
+        {
+          tiedosto: 'Sri Ratneshwar Mahadev temple, Varanasi, Uttar Pradesh, India (2016).jpg',
+          selite: 'Ratneshwar Mahadevin torni kallistuu vedestä '
+            + 'Manikarnika-ghatin edustalla, ja takana kohoavat '
+            + 'rantatörmän talot ja portaat.',
+          lahde: 'Sudhir Herle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kashi Vishwanath -temppeli': {
+      aika: 'nykyinen rakennus 1780',
+      teksti: 'Kashi Vishwanath on Varanasin tärkein temppeli ja yksi '
+          + 'hindulaisuuden kahdestatoista jyotirlinga-pyhäköstä. '
+          + 'Pyhäkön jumaluus tunnetaan nimillä Vishwanath ja '
+          + 'Vishweshwara, maailmankaikkeuden herra, ja perinteen '
+          + 'mukaan juuri Varanasin jyotirlinga ilmestyi kaikista '
+          + 'ensimmäisenä. Kylpy Gangesissa ja käynti temppelissä '
+          + 'yhdistetään moksan tavoitteluun.'
+          + '\n\n'
+          + 'Nykyisen rakennuksen teetti vuonna 1780 Maratha-'
+          + 'kuningatar Ahilyabai Holkar Indoresta. Rakennus '
+          + 'jakautuu kolmeen osaan: viisitoista ja puoli metriä '
+          + 'korkeaan torniin, kullattuun kupoliin ja pyhimmän '
+          + 'kammion yläpuoliseen kultahuippuun. Kullan lahjoitti '
+          + 'Pandžabin hallitsija Ranjit Singh, tonnin verran — '
+          + 'lahjoitusvuodesta lähteet ovat eri mieltä, ja '
+          + 'en-Wikipedia antaa kahdessa artikkelissaan luvun 1835 '
+          + 'ja luvun 1839.'
+          + '\n\n'
+          + 'Kultauksesta tuli temppelin lempinimi. Eurooppalaisissa '
+          + 'matkakirjoissa ja postikorteissa se on 1800-luvulta '
+          + 'lähtien ollut Kultainen temppeli, ja juuri kupolin ja '
+          + 'tornin kimallus on se, mikä kaupungin katoilta '
+          + 'erottuu. Temppeli seisoo Vishwanath Galin kujien varrella '
+          + 'lähellä jokirantaa, ja Dashashwamedhin portaat '
+          + 'laskeutuvat sen alapuolelta veteen.',
+      kuvat: [
+        {
+          tiedosto: 'Benares- The Golden Temple, India, ca. 1915 (IMP-CSCNWW33-OS14-66).jpg',
+          selite: 'Käsin väritetty noin vuoden 1915 taikalyhtylasi '
+            + 'näyttää temppelin kullatun kupolin ja sen vieressä '
+            + 'kohoavan kullatun tornin ylhäältä kuvattuna.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dashashwamedh Ghat': {
+      aika: 'nykyinen ghat 1748',
+      teksti: 'Dashashwamedh on Varanasin pääghat ja luultavasti sen '
+          + 'vanhin. Nimi tulee tarinasta, jonka mukaan Brahma '
+          + 'uhrasi täällä kymmenen hevosta — dasa-ashwamedha — '
+          + 'ottaakseen Shivan vastaan; toisen version mukaan Brahma '
+          + 'loi koko ghatin Shivan tervetuliaisiksi. Portaat ovat '
+          + 'aivan Kashi Vishwanath -temppelin alapuolella, ja '
+          + 'niiden yläpuolella on rivi pyhäkköjä.'
+          + '\n\n'
+          + 'Kivet ovat useammasta kädestä. Rakentamisen aloitti '
+          + 'vuonna 1569 Dhaudharhin raja Dushasan Shah, nykyisen '
+          + 'ghatin muurautti peshwa Balaji Baji Rao 1748, ja '
+          + 'muutamaa vuosikymmentä myöhemmin, 1774, Indoren '
+          + 'kuningatar Ahilyabai Holkar rakennutti sen uudelleen. '
+          + 'Aivan naapurissa, Man Mandir -ghatin päällä, on vuoden '
+          + '1737 tähtitorni.'
+          + '\n\n'
+          + 'Iltaisin täällä pidetään Ganga aarti, tulen palvontameno '
+          + 'joelle. Pappisryhmä heiluttaa palavia öljylamppuja '
+          + 'rytmissä pian auringonlaskun jälkeen noin kolmen '
+          + 'vartin ajan: kesällä alku on noin seitsemältä, talvella '
+          + 'kuudelta. Sadat ihmiset kokoontuvat portaille '
+          + 'katsomaan, ja tiistaisin sekä juhlapäivinä menot ovat '
+          + 'tavallista laajemmat.',
+      kuvat: [
+        {
+          tiedosto: 'Ganga Aarti at Dashashwamedh Ghat 45.jpg',
+          selite: 'Pappi seisoo selin kameraan ja heiluttaa savuavaa '
+            + 'astiaa, ja hänen takanaan hämärä yleisö erottuu vain '
+            + 'tummina hahmoina.',
+          lahde: 'Goutam1962, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Assi Ghat': {
+      aika: 'kaupungin eteläisin ghat',
+      teksti: 'Assi on Varanasin eteläisin ja samalla suurimpia '
+          + 'ghateja. Se on siinä kohdassa, missä Assi-puro yhtyy '
+          + 'Gangesiin, ja juuri tästä alkaa se noin neljän '
+          + 'kilometrin rantakaista, joka päättyy pohjoisessa '
+          + 'Varunan suulle. Kaupungin nimi tulee näistä kahdesta '
+          + 'uomasta, ja väli on pyhiinvaeltajien perinteinen '
+          + 'kiertoreitti.'
+          + '\n\n'
+          + 'Ghatilla on kirjallinen maine. Perinteen mukaan täältä '
+          + 'runoilija Tulsidas lähti viimeiselle matkalleen; hän '
+          + 'kirjoitti Varanasissa suuren osan Ramcharitmanasistaan, '
+          + 'awadhinkielisestä Ramayanasta, jota Ramnagarin Ramlila '
+          + 'yhä näyttelee. Kashinath Singhin romaani Kashi Ka Assi '
+          + 'kertoo juuri tämän ghatin korttelista.'
+          + '\n\n'
+          + 'Assi on nykyään opiskelijoiden ja matkailijoiden ghat. '
+          + 'Aamuohjelma alkaa ennen auringonnousua, ja marras–'
+          + 'joulukuun Dev Deepawali -juhlana, jolloin joelle lasketaan '
+          + 'tuhansia kelluvia öljylamppuja, kävijöitä on yli '
+          + 'kuusisataatuhatta.',
+      kuvat: [
+        {
+          tiedosto: 'Assi Ghat-Varanasi India-Andres Larin.jpg',
+          selite: 'Ilmakuva suoraan ylhäältä: veneet ovat rivissä '
+            + 'rantaviivassa, ja portaat sekä hiekkainen ranta '
+            + 'täyttävät kuvan vasemman puolen.',
+          lahde: 'Saaremees, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Durga Kund -temppeli': {
+      aika: '1700-luku',
+      teksti: 'Durga Kund on kaupungin eteläosassa oleva temppeli ja sen '
+          + 'vieressä oleva suorakaiteen muotoinen allas eli kund. '
+          + 'Temppeli on 1700-luvulta ja rakennettu pohjoisintialaiseen '
+          + 'nagara-tyyliin: torni nousee monena sisäkkäisenä '
+          + 'kerroksena ja kapenee huippua kohti. Rakennus on '
+          + 'maalattu syvän punaiseksi, ja tyynellä säällä se '
+          + 'heijastuu altaan pintaan kokonaisena.'
+          + '\n\n'
+          + 'Varanasissa on kaksi Durgalle omistettua temppeliä. '
+          + 'Vanhempi Durga Mandir on 1500-luvulta, tarkkaa vuotta '
+          + 'ei tiedetä, ja tämä on niistä nuorempi. Navratrin '
+          + 'aikaan altaan reunat täyttyvät kävijöistä, ja Durgan '
+          + 'temppeli on Kashi Vishwanathin ja Sankat Mochanin ohella '
+          + 'kaupungin suosituimpia pyhäkköjä.'
+          + '\n\n'
+          + 'Temppelistä tunnetaan myös sen naapurit. Altaan '
+          + 'ympärillä kasvavissa isoissa puissa asuu apinayhdyskunta, '
+          + 'ja juuri siitä temppeli tunnetaan.',
+      kuvat: [
+        {
+          tiedosto: 'Durga Temple Durga Kund Varanasi India - panoramio.jpg',
+          selite: 'Syvänpunainen temppeli tornirivistöineen seisoo '
+            + 'altaan takana ja heijastuu tyyneen veteen aamuvalossa.',
+          lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ramnagarin linnoitus': {
+      aika: '1750',
+      teksti: 'Linnoitus on yhä kaupungin ruhtinassuvun koti ja samalla '
+          + 'sen muistin säilytyspaikka. Rakennus nousee korkealle '
+          + 'penkereelle tulvarajan yläpuolelle, ja palatsiosassa on '
+          + 'kaksi valkoista tornia, joille noustaan portaita pitkin: '
+          + 'portaiden päässä on holvikäytävä ja sen takana sarja '
+          + 'sisäpihoja. Toisella puolella tornia ovat hallitsijan '
+          + 'yksityistilat, toisella audienssisali ja vastaanottohuoneet. '
+          + 'Muurissa lukee yhä vanha kaiverrus, joka nimeää talon '
+          + 'Benaresin radžan linnoitetuksi taloksi ja mainitsee hänen '
+          + 'valtionveneensä; lippu nostetaan salkoon silloin kun '
+          + 'maharadža on kotona.'
+          + '\n\n'
+          + 'Museo on entisessä yleisöaudienssisalissa eli Durbar '
+          + 'Hallissa ja kantaa nimeä Saraswati Bhawan. Kokoelma on '
+          + 'omalaatuinen: vanhoja luntturipyssyjä, koristeltuja '
+          + 'vesipiippuja, tikareita, maharadžojen muotokuvia ja '
+          + 'käsikirjoituksia, joiden mogulityylisiä kuvituksia on '
+          + 'laskettu viisisataakolmekymmentäviisi.'
+          + '\n\n'
+          + 'Kokoelman kuuluisin esine on kello. Se valmistettiin '
+          + 'vuonna 1852, ja tekijä oli hovin oma tähtitieteilijä. '
+          + 'Kello näyttää kellonajan lisäksi vuoden, kuukauden, '
+          + 'viikon ja päivän sekä auringon, kuun ja planeettojen '
+          + 'asennot — samaa työtä, jota tehtiin joen toisella '
+          + 'puolella Man Mandirin tähtitornissa.',
+      kuvat: [
+        {
+          tiedosto: 'Ramnagar Fort, Varanasi, UP.JPG',
+          selite: 'Linnoituksen sisäpiha nurmineen ja käytävineen, '
+            + 'ympärillä kaksikerroksiset keltaiset kaarigalleriat.',
+          lahde: 'Cpsinghvns, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

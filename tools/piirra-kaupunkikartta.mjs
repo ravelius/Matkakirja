@@ -2090,6 +2090,44 @@ const KAUPUNGIT = {
       },
     ],
   },
+  varanasi: {
+    /*
+     * VARANASI (21.8.2026). Ruutu on 6,1 × 6,1 km ja siihen mahtuu
+     * koko lehden kaupunkipuoli: pohjoisessa Manikarnika Ghat ja
+     * Kashi Vishwanath -temppeli, keskellä Dashashwamedh Ghat,
+     * lännessä Durga Kundin allas, etelässä Assi Ghat ja joen
+     * TOISELLA PUOLELLA idässä Ramnagarin linnoitus.
+     *
+     * RUUTU ON NELIÖ TAHALLAAN. Varanasin kohteet ovat luonnostaan
+     * pohjois–eteläsuuntainen nauha jokirantaa pitkin: pelkkä nauha
+     * (n. 4,6 × 2 km) olisi piirtynyt 1600 × 3600 pikselin
+     * pystykaistaleeksi, korkeampana kuin yksikään paketin kartta
+     * (korkein on Isfahan, 1600 × 1983). Rajausta levennettiin
+     * itään ja länteen niin, että kuvasuhde on 1,00 ja korkeus
+     * 1595 px — samalla ruutuun mahtuivat Durga Kund ja Ramnagar,
+     * jotka olisivat muuten vaatineet oman kainalonsa.
+     *
+     * SARNATH ON KAINALOSSA oikeassa ylänurkassa. Dhamek- ja
+     * Chaukhandi-stupat ovat runsaan seitsemän kilometrin päässä
+     * pohjoisessa; samaan ruutuun otettuna kartta olisi venynyt
+     * kaksitoista kilometriä korkeaksi ja kaupunki kutistunut
+     * läikäksi (Medinan Quban ja Mekan Jabal al-Nourin ratkaisu).
+     *
+     * JALKAKÄYTÄVIÄ EI TARVITA, toisin kuin Vilnassa, Jerusalemissa
+     * ja Sanaassa. Kokeiltu ennen piirtoa Overpassin out count
+     * -kyselyllä: tässä ruudussa on 3 501 tavallista katua ja
+     * jalkakäytävälippu toisi niiden lisäksi vain 202 polkua eli
+     * viisi prosenttia. Vanhankaupungin kujat (gali) on siis merkitty
+     * OSM:ään ajoteiksi, ei footwayksi, ja ne piirtyvät ilman lippua.
+     */
+    rajat: { pohjoinen: 25.318, etela: 25.263, lansi: 82.982, ita: 83.043 },
+    kainalot: [
+      {
+        rajat: { pohjoinen: 25.385, etela: 25.37, lansi: 83.0155, ita: 83.0335 },
+        x: 78, y: 2, leveys: 20, suunta: '7 km pohjoiseen',
+      },
+    ],
+  },
 };
 
 /*
