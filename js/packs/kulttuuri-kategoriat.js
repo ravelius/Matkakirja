@@ -46621,4 +46621,477 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KAŠGAR (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita, kohdekarttaa, juttuja eikä säärivi ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian raakateksteistä
+   * (action=raw, haettu 21.8.2026): Kashgar, Id Kah Mosque, Afaq
+   * Khoja Mausoleum, Chini-Bagh, Mahmud al-Kashgari, Yūsuf
+   * Balasaguni, Kutadgu Bilig, Taklamakan Desert, Yettishar, Yakub
+   * Beg of Yettishar, George Macartney (British consul), Catherine
+   * Macartney, Carl Gustaf Emil Mannerheim, People's Park (Kashgar),
+   * Kashgar railway station, Kashgar Laining International Airport ja
+   * Karakoram Highway. Pohjana ovat docs/aasia-tyoaineiston
+   * faktapohja-kashgar.md ja tarkistus-kashgar.md, ja ristiriidoissa
+   * tarkistusraportti voittaa (Kansanpuiston etäisyys 1,5 km → 0,6 km).
+   *
+   * SISÄLTÖLINJAUS on spec-asia.md:n sitova Kašgar-kohta ja
+   * faktapohjan alkuosa: Silkkitie, basaari, Id Kahin moskeija ja
+   * 1800-luvun Suuri peli konsulaatteineen — EI Xinjiangin
+   * nykypolitiikkaa. Kaikki lehden tapahtumat ovat vuotta 1949
+   * aiemmilta ajoilta lukuun ottamatta neutraaleja
+   * matkustustosiasioita (radat, tiet, aukioloajat, ilmasto).
+   * POIS JÄTETTY KOKONAAN: vuosien 1933–1934 sisällissota ja siihen
+   * liittyvät väkivaltaisuudet, Id Kahin moskeijan uskonnolliset
+   * rajoitukset vuodesta 2016, imaamin surma 2014, vuosien 2008,
+   * 2011 ja 2014 tapahtumat, vanhankaupungin 2009–2012 purku- ja
+   * jälleenrakennuskiista sekä Kansanpuiston Mao-patsas. Uskonto
+   * kerrotaan rakennuksina ja kerrostumina, kuten Jerusalemissa ja
+   * Medinassa.
+   *
+   * KAKSI RISTIRIITAA ON KIRJOITETTU AUKI LUKIJALLE (v925/v932:n
+   * tapa): kaupungin korkeus merenpinnasta on saman en-Wikipedia-
+   * artikkelin infoboksissa 1 270 metriä ja sääruudussa 1 386, ja
+   * ero kerrotaan oppaan jaksossa "Alueen rakenne". Asukasluku on
+   * artikkelin johdannossa 711 300 (2019) ja infoboksissa 782 662
+   * (2020), joten teksteissä puhutaan runsaasta 700 000 asukkaasta —
+   * luku pitää paikkansa kummallakin lähteellä.
+   *
+   * KOLME RISTIRIITAA ON RATKAISTU EIKÄ KERROTTU. (1) Id Kahin
+   * moskeijan minareettien määrä on infoboksissa kolme mutta
+   * arkkitehtuuriosiossa mainitaan kaksi kahdeksantoistametristä
+   * porttitornin sivuilla ja yksi holvin päällä — nosto kertoo
+   * saman jaon, jolloin luvut täsmäävät. (2) Lentokentän
+   * avaamisvuosi on leipätekstissä lokakuu 1953 ja infoboksissa
+   * 10.3.1954; vuosi on jätetty oppaasta kokonaan pois, koska
+   * kumpikaan ei ole toista tarkempi. (3) Moskeijan väitetty vuoden
+   * 996 alkuperä on Wikipediassa itsessään merkitty
+   * {{Citation needed}} -tagilla, ja se on siksi jätetty pois.
+   *
+   * MANNERHEIMIN KUVAT ovat lehden oma löytö eivätkä faktapohjasta.
+   * Museoviraston kansatieteellinen kuvakokoelma on julkaissut
+   * Commonsiin C. G. E. Mannerheimin Aasian-matkan (1906–1908)
+   * lasilevyt CC BY 4.0 -ehdoin, ja niiden joukossa on Kašgarista
+   * muun muassa Britannian pääkonsulin talo, kaupunginmuuri ja
+   * näkymä Venäjän konsulaatin terassilta. Matka itse on tarkistettu
+   * en-Wikipedian Mannerheim-artikkelista, ja se on Suuren pelin
+   * historiaa täsmälleen samalta vuosikymmeneltä kuin lehden
+   * konsulaattinostot — siksi H4 kertoo sen. Mannerheimin
+   * myöhemmistä vaiheista ei sanota mitään.
+   *
+   * KUVAVALINNAN PERIAATE oli faktapohjan osion 6 varoitus: parhaat
+   * Kašgar-kuvat ovat basaarilta ja moskeijan aukiolta, joilla
+   * liikkuu paljon ihmisiä. Jokainen valittu kuva on katsottu
+   * silmin, ja hylättyjä oli kymmenkunta pelkästään luettavien
+   * kasvojen takia (mm. Mannerheimin basaaritori 1906,
+   * sunnuntaimarkkinoiden porttikuvat ja vanhankaupungin
+   * lapsikuvat). Id Kahista on kolme kuvaa (aukio, rukoussali,
+   * portaali alhaalta) ja Afaq Khojasta kolme (hautausmaalta,
+   * julkisivu, kaakelipinta), koska ne ovat kaupungin kaksi
+   * tunnetuinta rakennusta — Xi'anin terrakotta-armeijan ja
+   * Mekan Jabal al-Nourin ennakkotapaus.
+   *
+   * SÄÄRIVI PUUTTUU: Open-Meteon arkisto vastasi koko työn ajan
+   * 429:llä (ks. saatiedot.js:n lohkokommentti), joten oppaan
+   * jakso 5 nojaa en-Wikipedian sääruutuun ja SANOO SEN ÄÄNEEN.
+   */
+  kashgar: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kašgar',
+      johdanto: 'Keidaskaupunki Taklamakanin länsilaidalla, jossa '
+        + 'Silkkitien pohjoinen ja eteläinen haara ovat yhtyneet yli '
+        + 'kahden vuosituhannen ajan. Vanhankaupungin savitiilikukkulan '
+        + 'vieressä seisoo Id Kahin moskeija, Kiinan suurin.',
+      kansikuvat: [
+        {
+          tiedosto: 'Kashgar, China Bebop Drone 2015-09-13T194740+0000 18F943.jpg',
+          selite: 'Id Kahin aukio ilmasta: kyyhkyparvi nousee laatoitukselta, '
+            + 'ja aukion takaa alkaa uuden kaupungin tornitalorivi.',
+          lahde: 'w0zny, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: '2015-09-10-111321 - Blick zur Altstadt vom Kashgar.jpg',
+          selite: 'Vanhankaupungin savitiilikatot nousevat lammen ja '
+            + 'pajurannan takaa, ja vasemmalla siintää televisiotorni.',
+          lahde: 'Zossolino, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2015-09-10-093741 - Mausoleum von Abakh Hodscha vom Friedhof aus.jpg',
+          selite: 'Afaq Khojan mausoleumin vihreä kupoli ja neljä '
+            + 'minareettia kohoavat hautausmaan savikumpujen takaa '
+            + 'kaupungin koillislaidalla.',
+          lahde: 'Zossolino, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kuja, katot ja mausoleumi — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (savitiilinen vanhakaupunki, sen laita uutta kaupunkia
+       * vasten, ja seudun pyhin rakennus).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Kashgar Altstadt 1.jpg',
+          selite: 'Vanhankaupungin kuja katetun holvin alta kuvattuna: '
+            + 'savitiiliseinät kaartuvat molemmin puolin ja katukiveys '
+            + 'jatkuu varjoon.',
+          lahde: 'See58, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: '20250525喀什古城.jpg',
+          selite: 'Vanhankaupungin tasakatot leviävät loessikukkulan '
+            + 'päälle, ja horisontissa erottuu uuden kaupungin '
+            + 'rakennusrivi.',
+          lahde: 'MasaneMiyaPA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kashgar - Afaq Khoja Mausoleum.jpg',
+          selite: 'Afaq Khojan mausoleumi vinosti edestä: vihreä '
+            + 'kaakelikupoli nousee keskeltä ja nurkissa seisoo neljä '
+            + 'raidallista minareettia.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kiinan suurin moskeija',
+          tiedosto: 'Id Kah Mosque Kashgar Xinjiang China 新疆 喀什 喀什清真寺 - panoramio (3).jpg',
+          teksti: 'Id Kahin moskeija valmistui vuonna 1442. Rakennuttaja '
+            + 'oli Saqsiz Mirza, emiiri Sayyid Alin vanhempi poika, ja '
+            + 'hän pystytti sen esi-isiensä muistoksi. Nykyinen '
+            + 'kultatiilinen rakennus nousi vanhemman tilalle 1798, ja '
+            + 'vuonna 1838 se laajennettiin nykymittoihinsa: '
+            + 'satakaksikymmentä metriä pitkä, sataneljäkymmentä leveä '
+            + 'ja alaltaan noin 16 800 neliömetriä. Porttitorni on '
+            + 'seitsemäntoista metriä korkea, ja sen molemmin puolin '
+            + 'nousee kahdeksantoistametrinen minareetti; kolmas seisoo '
+            + 'portin takaisen holvin päällä. Rukoilijoita mahtuu '
+            + 'saliin ja pihoille yhteensä kaksikymmentätuhatta, ja se '
+            + 'tekee Id Kahista Kiinan suurimman moskeijan.',
+          selite: 'Rukoussalin sisällä vihreiksi maalatut puupilarit '
+            + 'kannattavat kattoa, ja perällä erottuvat mihrabin holvi '
+            + 'ja puinen saarnatuoli.',
+          lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Id Kah Mosque',
+        },
+        {
+          otsikko: 'Sunnuntai, jona koko seutu tulee kaupunkiin',
+          tiedosto: 'Kashgar Altstadt.jpg',
+          teksti: 'Kašgarin sunnuntaimarkkinat ovat Keski-Aasian suurin '
+            + 'markkinapaikka, ja vilkkaimpina tunteina paikalla käy '
+            + 'satatuhatta ihmistä. Maanviljelijät tuovat ympäröiviltä '
+            + 'pelloilta hedelmiä ja vihanneksia, karjankasvattajat '
+            + 'esittelevät elukkansa ja antavat ostajien koeajaa '
+            + 'hevosia, ja käsityöläiset myyvät veitsiä, pannuja, '
+            + 'teekannuja ja korurasioita. Suurin osa saapuu '
+            + 'aasinvetoisilla kärryillä. Kysytyin tavara on Iranista '
+            + 'tuotu sahrami, jonka hinta on markkinoilla kolme kertaa '
+            + 'kullan paikallinen arvo. Tori on auki muinakin päivinä, '
+            + 'mutta sunnuntaina se on suurimmillaan.',
+          selite: 'Vanhankaupungin kojussa riippuu rivi käsin sorvattuja '
+            + 'puuastioita ja kurpitsapulloja, ja edessä on pöytä '
+            + 'täynnä sorvattuja aihioita.',
+          lahde: 'See58, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kashgar',
+        },
+        {
+          otsikko: 'Parhaiten säilynyt islamilainen kaupunki',
+          tiedosto: 'Kashgar old town (12).jpg',
+          teksti: 'Kašgarin vanhaakaupunkia on kuvailtu parhaiten '
+            + 'säilyneeksi esimerkiksi perinteisestä islamilaisesta '
+            + 'kaupungista koko Keski-Aasiassa. Sanat ovat '
+            + 'taidehistorioitsija George Michellin kirjasta Kashgar: '
+            + 'Oasis City on China’s Old Silk Road vuodelta 2008. '
+            + 'Kortteleita ei ole kaavoitettu vaan ne ovat kasvaneet '
+            + 'vuosisatojen kuluessa: mutkittelevia kujia, savitiilestä '
+            + 'muurattuja seiniä ja sisäpihan ympärille rakennettuja '
+            + 'taloja loessikukkulan päällä. Kaupunginosa on ollut yli '
+            + 'miljoonan vuosittaisen matkailijan kohde, ja 2000-luvun '
+            + 'alussa siellä asui kaksi viidesosaa koko kaupungin '
+            + 'väestöstä.',
+          selite: 'Vanhankaupungin talon yläkerrassa kiertää kaiverrettu '
+            + 'puuparveke, jonka kaiteiden takaa työntyy köynnöksiä ja '
+            + 'ruukkukasveja.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+          wiki: 'Kashgar',
+        },
+        {
+          otsikko: 'Pyhäkkö, jossa lepää viisi sukupolvea',
+          tiedosto: 'Kashgar-Mausolée d\'Abakh Khoja 1996 façade.jpg',
+          teksti: 'Kolmen ja puolen kilometrin päässä keskustasta '
+            + 'koilliseen seisoo Afaq Khojan mausoleumi, alueen pyhin '
+            + 'muslimikohde. Se rakennettiin noin vuonna 1640 '
+            + 'keskiaasialaisen sufiopettajan Muhammad Yusufin haudaksi, '
+            + 'ja hänen poikansa Afaq Khoja haudattiin sinne 1694. '
+            + 'Kaakeloituun hautaan on aikojen kuluessa laskettu saman '
+            + 'suvun viisi sukupolvea, kaikkiaan seitsemänkymmentäkaksi '
+            + 'vainajaa. Keskellä on seitsemäntoista metriä leveä '
+            + 'kupoli ja nurkissa neljä raidallista minareettia; haudat '
+            + 'on peitetty värikkäillä silkeillä. Afaq Khoja hallitsi '
+            + 'aikanaan Kašgarin lisäksi Khotania, Yarkandia, Korlaa, '
+            + 'Kuchaa ja Aksua.',
+          selite: 'Mausoleumin julkisivu vuonna 1996: vihreä kaakelikupoli '
+            + 'lepää valkoisen kaariportaalin päällä, ja kaakelointi on '
+            + 'paikoin lohjennut.',
+          lahde: 'Ismoon, Wikimedia Commons (CC0)',
+          wiki: 'Afaq Khoja Mausoleum',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Id Kah Mosque (23684453549).jpg',
+          selite: 'Id Kahin porttitorni alhaalta kuvattuna: keltainen '
+            + 'tiiliseinä nousee kaariaukon ylle ja oikeassa reunassa '
+            + 'erottuu kaakeloidun minareetin kylki.',
+          lahde: 'Laika ac from UK, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Kašgar on samannimisen alueen hallinnollinen keskus ja '
+          + 'yksi Kiinan läntisimmistä kaupungeista — Bagdadiin on täältä '
+          + 'lyhyempi matka kuin Pekingiin. Matkailijan Kašgar on silti '
+          + 'pieni: vanhakaupunki, Id Kahin aukio ja basaarikortteli '
+          + 'mahtuvat runsaan kilometrin säteelle, ja Afaq Khojan '
+          + 'mausoleumi on kolmen ja puolen kilometrin päässä '
+          + 'koillisessa. Sunnuntain karjamarkkinat ovat kaupungin '
+          + 'ulkopuolella noin kahdeksan kilometriä luoteessa, eivätkä '
+          + 'ne siksi ole tämän sivun kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Kašgar',
+          taitto: 'opas',
+          teksti: 'Kaksituhatta vuotta karavaanien pysähdyspaikkaa aavikon '
+            + 'reunalla — ja yhä se kohta, jossa Kiina loppuu ja '
+            + 'Keski-Aasia alkaa.',
+          nosto: 'Kašgarissa käy kaksi kelloa. Koko Kiinassa on virallisesti '
+            + 'Pekingin aika, mutta täällä eletään käytännössä kaksi '
+            + 'tuntia jäljessä Xinjiangin aikaa — ja tapaamisesta '
+            + 'sovittaessa kannattaa kysyä, kumpaa tarkoitetaan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kašgarissa on Kiinan läntisin rautatieasema. Se '
+                + 'avattiin vuonna 1999, kun Etelä-Xinjiangin rata '
+                + 'ulotettiin tänne, ja kesäkuussa 2011 avattiin '
+                + 'matkustajaliikenteelle Kašgarista Hotaniin johtava '
+                + 'rata, joka sivuaa Tarimin altaan eteläisiä keitaita '
+                + 'Yarkandia ja Yechengiä. Junamatka Ürümqiin kestää '
+                + 'noin kuusitoista tuntia ja Hotaniin viisi. Asema on '
+                + 'runsaat viisi kilometriä keskustasta koilliseen, '
+                + 'lentokenttä kahdeksan ja puolen kilometrin päässä '
+                + 'pohjoisessa; kentän nimi vaihtui elokuussa 2023 '
+                + 'Kašgarin Laining-lentoasemaksi. Maanteitse '
+                + 'Karakorumin valtatie vie etelään Khunjerabin solan '
+                + 'yli Pakistaniin ja aina Islamabadiin asti. Kirgisian '
+                + 'puolelle pääsee bussilla Torugartin tai Irkeshtamin '
+                + 'solan kautta, ja päätepysäkki on Biškekin läntinen '
+                + 'linja-autoasema.',
+              kuva: {
+                tiedosto: '2015-09-11-061153 - Auf dem Karakorum Highway.JPG',
+                selite: 'Karakorumin valtatie seuraa samean vuorijoen '
+                  + 'uomaa, ja vastarannalla kohoaa paljas '
+                  + 'kivivuoristo.',
+                lahde: 'Zossolino, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kašgar on keidas Tarimin altaan länsilaidalla. '
+                + 'Allas on tuhat kilometriä pitkä ja neljäsataa leveä, '
+                + 'ja sen keskellä leviää Taklamakan: 337 000 '
+                + 'neliökilometriä hiekkaa, hieman Saksaa pienempi alue '
+                + 'ja maailman autiomaiden kokolistalla viidestoista. '
+                + 'Etelässä nousee Kunlun, lännessä Pamir, pohjoisessa '
+                + 'Tien Shan, ja idässä alkaa Gobi. Hiekkameren yli ei '
+                + 'kuljettu vaan sen ympäri: Silkkitien kaksi haaraa '
+                + 'kiersivät autiomaan pohjois- ja eteläreunaa '
+                + 'keitaalta toiselle, ja eteläisen reitin varrella '
+                + 'olivat Kašgarin lisäksi Yarkand, Khotan, Niya ja '
+                + 'Miran, pohjoisen varrella Kucha ja Turpan. Nimeä '
+                + 'Taklamakan on kansanetymologiassa tulkittu paikaksi, '
+                + 'josta ei ole paluuta. Kaupungin korkeudesta '
+                + 'merenpinnasta lähteet antavat kaksi lukua: '
+                + 'en-Wikipedian infoboksi sanoo 1 270 metriä ja saman '
+                + 'artikkelin sääruutu 1 386, eikä eroa selitetä.',
+              kuva: {
+                tiedosto: 'Taklamakan Desert Qarqan Xinjiang China 新疆 且末 塔克拉玛干沙漠 - panoramio.jpg',
+                selite: 'Taklamakanin hiekkadyynit jatkuvat harjanteina '
+                  + 'horisonttiin, ja tuuli on piirtänyt rinteisiin '
+                  + 'aaltokuvion.',
+                lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: turkkilaiskielten sanakirja',
+              teksti: 'Kašgarin seudun perinteinen väestö ovat uiguurit, ja '
+                + 'vuoden 2018 tilaston mukaan heitä on kaupungin '
+                + 'asukkaista 85,8 prosenttia. Kieli on turkkilaiskieli '
+                + 'ja se kirjoitetaan arabialaisin kirjaimin, joten '
+                + 'katukyltit näyttävät persialaisilta mutta kuuluvat '
+                + 'samaan kielikuntaan kuin turkki. Täältä on peräisin '
+                + 'myös näiden kielten ensimmäinen sanakirja. Mahmud '
+                + 'al-Kašgari kokosi Bagdadissa vuosina 1072–1074 '
+                + 'teoksen Diwan Lughat al-Turk, ensimmäisen kattavan '
+                + 'turkkilaiskielten sanakirjan, joka oli tarkoitettu '
+                + 'Abbasidien kalifaatille — turkkilaisten uudelle '
+                + 'liittolaiselle. Kirjassa on vanhinta tunnettua '
+                + 'turkkilaista runoutta nelisäkeinä ja ensimmäinen '
+                + 'tunnettu kartta turkkilaiskansojen asuinalueista; '
+                + 'kartta on nykyään Istanbulin kansalliskirjastossa. '
+                + 'Al-Kašgari itse syntyi Barsganissa nykyisen '
+                + 'Kirgisian puolella ja haudattiin Upaliin Kašgarin '
+                + 'lounaispuolelle, jossa hänen mausoleuminsa on yhä.',
+              kuva: {
+                tiedosto: 'Dīwān Lughāt al-Turk (original).jpg',
+                selite: 'Diwan Lughat al-Turkin pyöreä maailmankartta '
+                  + 'kahdella käsikirjoitussivulla: punaiset viivat '
+                  + 'ovat jokia ja vuoristoja, ympyrät kaupunkeja.',
+                lahde: '13th century author, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: maanjäristys 1902',
+              teksti: 'Vuonna 1902 seutua ravisteli maanjäristys, jonka '
+                + 'magnitudi oli 7,7. Alueella menehtyi jopa '
+                + 'kymmenentuhatta ihmistä, heistä 667 Kašgarissa, ja '
+                + 'muutaman päivän kuluttua tuli vielä 6,8 magnitudin '
+                + 'jälkijäristys. Savitiilestä muurattu keidaskaupunki '
+                + 'oli tärinälle erityisen altis. Järistys kiinnosti '
+                + 'myös Britannian konsulia: George Macartney kirjoitti '
+                + 'siitä Lontoon Geographical Journal -lehteen '
+                + 'lokakuussa 1902 artikkelin nimeltä Earthquakes in '
+                + 'Kashgar. Sama mies oli tuolloin asunut kaupungissa '
+                + 'kaksitoista vuotta ja jäi vielä kuudeksitoista.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kašgarissa on kylmä aavikkoilmasto, ja kesän ja '
+                + 'talven ero on jyrkkä. Vuorokauden keskilämpö nousee '
+                + 'tammikuun runsaasta viidestä pakkasasteesta heinäkuun '
+                + 'vajaaseen kahteenkymmeneenkuuteen, ja koko vuoden '
+                + 'keskiarvo on 12,6 astetta. Kevät on pitkä ja tulee '
+                + 'nopeasti, syksy jää lyhyeksi. Sadetta kertyy 85 '
+                + 'millimetriä vuodessa, mikä tekee Kašgarista yhden '
+                + 'maailman kuivimmista kaupungeista: sateisin kuukausi '
+                + 'toukokuu antaa keskimäärin neljätoista millimetriä, '
+                + 'ja lunta tulee kylmästä talvesta huolimatta harvoin. '
+                + 'Aurinkoa on 2 863 tuntia vuodessa. Ääripäät vuodesta '
+                + '1951 alkaen ovat 24,4 pakkasastetta tammikuussa 1959 '
+                + 'ja 40,1 lämpöastetta heinäkuussa 1958. Luvut ovat '
+                + 'Kiinan ilmatieteen laitoksen normaaleja jaksolta '
+                + '1991–2020 ja mitattu 1 386 metrin korkeudessa; ne '
+                + 'eivät ole tämän lehden vuosigraafin lukuja, sillä '
+                + 'Kašgarilta puuttuu toistaiseksi oma säärivi.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki on ollut vuorollaan kiinalaisten, turkkilaisten, '
+        + 'mongolien ja tiibetiläisten valtakuntien hallussa. '
+        + '1890-luvulta lähtien siellä asui rinnakkain brittiläinen ja '
+        + 'venäläinen virkamiehistö, kumpikin toistaan tarkkailemassa.',
+      tehtava: {
+        kysymys: 'Minkä valtakunnan lippu liehui Kašgarin yllä vuosina '
+          + '1873–1877?',
+        vaihtoehdot: [
+          'Venäjän keisarikunnan',
+          'Osmanien valtakunnan',
+          'Britannian',
+          'Qing-dynastian',
+        ],
+        oikea: 1,
+        fakta: 'Osmanien sulttaani tunnusti Yettisharin vasallikseen ja '
+          + 'Yakub Begin sen emiiriksi vuonna 1873, ja osmanien lippu '
+          + 'liehui kaupungissa vuoteen 1877.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kauppias, joka näki nestoriaanien kirkot',
+          tiedosto: 'Caravane Marco Polo.jpg',
+          teksti: 'Marco Polo saapui Kašgariin noin vuosina 1273–1274 ja '
+            + 'kirjasi kaupungin nimen muotoon Cascar. Hän pani '
+            + 'muistiin, että kaupungissa asui runsaasti '
+            + 'nestoriaanikristittyjä ja että heillä oli omat kirkkonsa. '
+            + 'Kaupunki kuului silloin Tšagatain kaanikuntaan, yhteen '
+            + 'Tšingis-kaanin valtakunnan perillisistä; mongolit olivat '
+            + 'pyyhkäisseet kara-kitaiden vallan pois vuonna 1219. '
+            + 'Vasta 1300-luvulla kaani Tughluq Timur kääntyi islamiin, '
+            + 'ja siitä lähtien islam on ollut seudun hallitseva '
+            + 'uskonto. Sitä ennen alueella oli harjoitettu '
+            + 'zarathustralaisuutta ja buddhalaisuutta.',
+          selite: 'Katalonialaisen atlaksen 1300-luvun kuvitus '
+            + 'Silkkitien karavaanista: kuormakamelit kulkevat jonossa '
+            + 'ja ratsastajat seuraavat perässä.',
+          lahde: 'Abraham Cresques, Atlas catalan, Wikimedia Commons (PD)',
+          wiki: 'Kashgar',
+        },
+        {
+          otsikko: 'Seitsemän kaupungin emiiri',
+          tiedosto: 'Mausoleum of Yusuf Khass Hajib front gate.jpg',
+          teksti: 'Kiinan valta romahti Kašgariassa vuonna 1864, ja '
+            + 'seuraavana vuonna Kokandin kaanikunnasta tullut Yakub Beg '
+            + 'otti kaupungin haltuunsa. Hän valtasi Kašgarin lisäksi '
+            + 'Khotanin, Yarkandin, Yangihissarin, Aksun, Kuchan ja '
+            + 'Korlan ja julistautui Yettisharin eli Seitsemän kaupungin '
+            + 'emiiriksi. Bukharan emiiri antoi hänelle 1866 arvonimen '
+            + 'Athalik Ghazi, ja vuonna 1873 osmanien sulttaani tunnusti '
+            + 'valtion vasallikseen — osmanien lippu liehui Kašgarissa '
+            + 'vuoteen 1877. Yakub Beg solmi sopimukset sekä Britannian '
+            + 'että Venäjän kanssa, mutta kumpikaan ei tullut apuun. Hän '
+            + 'kuoli Korlassa toukokuussa 1877, ja 18. joulukuuta '
+            + 'Qing-joukot marssivat kaupunkiin.',
+          selite: 'Yakub Begin vuonna 1865 runoilija Yusuf Khass Hajibille '
+            + 'pystyttämän mausoleumin sinikaakelinen porttirakennus '
+            + 'seisoo sypressien välissä.',
+          lahde: 'Voidvector, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Yettishar',
+        },
+        {
+          otsikko: 'Kaksi konsulia samassa kaupungissa',
+          tiedosto: 'Näkymä Venäjän konsulaatin terassilta joelle 1906 (VKK269-140).tif',
+          teksti: 'Britannialla oli Kašgarissa konsulaatti vuodesta 1890 '
+            + 'vuoteen 1948. Se oli nimellisesti brittiläinen, mutta '
+            + 'väen ja rahat antoi Brittiläisen Intian poliittinen '
+            + 'osasto; Qing-hallinto tunnusti sen virallisesti vasta '
+            + '1908, ja pääkonsulaatiksi se korotettiin 1911. Konsuli '
+            + 'George Macartney oli tullut Xinjiangiin 1890 Francis '
+            + 'Younghusbandin retkikunnan tulkkina ja jäi kaupunkiin '
+            + 'kahdeksikymmeneksikahdeksaksi vuodeksi. Samaan aikaan '
+            + 'paikalla oli vakiintunut venäläinen virkamiehistö: '
+            + 'tammikuun 1902 välikohtaus, jossa olivat osallisina '
+            + 'venäläiset tullivirkailijat ja kasakat, kertoo siitä. '
+            + 'Tarkkaa perustamisvuotta Venäjän konsulaatille lähteet '
+            + 'eivät anna.',
+          selite: 'Näkymä Venäjän konsulaatin terassilta vuonna 1906: '
+            + 'poppelirivin takaa avautuu jokitasanko ja kaukana '
+            + 'siintävät vuoret.',
+          lahde: 'Carl Gustaf Emil Mannerheim, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Chini-Bagh',
+        },
+        {
+          otsikko: 'Suomalainen, joka valokuvasi Kašgarin',
+          tiedosto: 'Kaupunginmuuri 1906 (VKK269-159).tif',
+          teksti: 'Vuonna 1906 Kašgariin saapui ratsain Venäjän armeijan '
+            + 'upseeri Carl Gustaf Emil Mannerheim. Matkan virallinen '
+            + 'syy oli tieteellinen tutkimusretki ranskalaisen '
+            + 'arkeologin Paul Pelliot’n seurassa, mutta todellinen '
+            + 'tehtävä oli Venäjän yleisesikunnan tiedustelu: mitä '
+            + 'Qing-hallinto puuhasi lännessä ja kuinka Länsi-Kiinaan '
+            + 'pääsisi tarvittaessa marssimaan. Riita Pelliot’n kanssa '
+            + 'erotti miehet Andijanin jälkeen, ja Mannerheim jatkoi '
+            + 'omillaan. Matka kesti kaksi vuotta ja neljätoistatuhatta '
+            + 'kilometriä, päättyi Pekingiin 1908 ja tuotti lähes '
+            + 'kaksitoistasataa esinettä Kansallismuseoon sekä noin '
+            + 'tuhatviisisataa valokuvaa — muutama niistä on tässä '
+            + 'lehdessä.',
+          selite: 'Kašgarin savitiilinen kaupunginmuuri ja sen kulmabastioni '
+            + 'vuonna 1906, edessä hedelmätarhaa ja hiekkatie.',
+          lahde: 'Carl Gustaf Emil Mannerheim, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Carl Gustaf Emil Mannerheim',
+        },
+      ],
+    },
+  ],
 };

@@ -7823,6 +7823,71 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Rizal-puisto', lat: 14.5825, lon: 120.978333 },
     ],
   },
+  /*
+   * KAŠGARIN KOHDEKARTTA (Opus 21.8.2026). Rajaus on 5,4 × 5,0 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa, Xi'anissa
+   * ja Manilassa. Piirtorajaus ja sen perustelut ovat
+   * tools/piirra-kaupunkikartta.mjs:n kashgar-lohkossa.
+   *
+   * KOORDINAATTIEN LÄHTEET ON EROTELTU, koska ne ovat kahdesta eri
+   * paikasta eivätkä yhtä varmoja. en-Wikipedian omat {{coord}}-arvot
+   * ovat Afaq Khojan mausoleumilla (39,49056 / 76,02306), Id Kahin
+   * moskeijalla (39,47227 / 75,984106) ja Kansanpuistolla (39,46335 /
+   * 75,98988). Chini-Bagh, vanhakaupunki, basaari ja Yusuf Khass
+   * Hajibin mausoleumi tulevat Overpassista (peili
+   * maps.mail.ru/osm/tools/overpass/api/interpreter, haettu
+   * 21.8.2026), koska niillä EI OLE Wikipedia-koordinaattia
+   * lainkaan — Chini-Bagh-artikkelin ainoa koordinaattimalline on
+   * tyhjä `{{Coord|display=title}}`. Sama menettely kuin Tokion
+   * kansallismuseossa ja Persepoliksessa: piste haetaan OSM:stä, kun
+   * artikkeli ei anna omaansa.
+   *
+   * CHINI-BAGHIN PISTE ON OSM:N MUISTOMERKKI, ei rakennus. Overpass
+   * antaa samalta tontilta kaksi kohdetta: nykyisen hotellin
+   * (其尼瓦克宾馆, 39,47508 / 75,98040) ja muistomerkin "Site of the
+   * former British consulate" (39,47574 / 75,97980). Kartalla on
+   * jälkimmäinen, koska se osoittaa nimenomaan konsulaatin paikkaa;
+   * ero on 80 metriä eli reilu prosentti ruudun leveydestä, joten
+   * kummalla tahansa numeroympyrä osuisi samaan kortteliin.
+   * Tarkistusraportti (osio 1.1) ehdotti hotellia — ero on kirjattu
+   * tähän avoimuuden vuoksi.
+   *
+   * BASAARIN PISTE ON KESKUSTAN BASAARIKORTTELI, ei sunnuntain
+   * karjamarkkina. Tarkistusraportin Nominatim-piste 39,47469 /
+   * 76,00526 osuu Jiefangin pohjoisen tien basaarikortteliin;
+   * Overpassin "Sunday Bazaar" -piste on 240 metriä lounaaseen.
+   * Kartalla on tarkistusraportin arvo. Varsinainen karjamarkkina on
+   * kahdeksan kilometriä luoteessa (39,52287 / 75,93290) eikä mahdu
+   * ruutuun — ero kerrotaan basaarin jutussa.
+   *
+   * KANSANPUISTON ETÄISYYS KORJATTIIN. Faktapohja ilmoitti sen
+   * 1,5 kilometriksi keskustasta, mutta tarkistusraportin
+   * uusintalaskelma antaa 0,63 kilometriä (osio 5) — ja kartta
+   * vahvistaa saman: puisto on Id Kahin eteläpuolella eikä kilometrien
+   * päässä. Lehden tekstit käyttävät korjattua lukua.
+   *
+   * RAUTATIEASEMA (5,2 km) JA LENTOKENTTÄ (8,6 km) EIVÄT OLE
+   * KARTALLA. Ne kerrotaan matkaoppaan ensimmäisessä jaksossa.
+   */
+  kashgar: {
+    polku: 'assets/kartat/kashgar-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 39.4952, etela: 39.45, lansi: 75.97, ita: 76.033 },
+    esittely: 'Kartan alue on Kašgarin keidas: keskellä vanhankaupungin '
+      + 'savitiilikukkula, sen länsipuolella Id Kahin aukio ja idässä '
+      + 'basaarikortteli. Koillisnurkassa on Afaq Khojan mausoleumi. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Afaq Khojan mausoleumi', lat: 39.49056, lon: 76.02306 },
+      { nimi: 'Chini-Bagh', lat: 39.47574, lon: 75.9798 },
+      { nimi: 'Suuri basaari', lat: 39.47469, lon: 76.00526 },
+      { nimi: 'Id Kahin moskeija', lat: 39.47227, lon: 75.984106 },
+      { nimi: 'Vanhakaupunki', lat: 39.46997, lon: 75.99979 },
+      { nimi: 'Kansanpuisto', lat: 39.46335, lon: 75.98988 },
+      { nimi: 'Yusuf Khass Hajibin mausoleumi', lat: 39.4592, lon: 75.99195 },
+    ],
+  },
 };
 
 /*

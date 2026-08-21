@@ -27817,4 +27817,269 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KAŠGARIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Seitsemän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään.
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (haettu
+   * 21.8.2026): Kashgar, Id Kah Mosque, Afaq Khoja Mausoleum,
+   * Chini-Bagh, George Macartney (British consul), Catherine
+   * Macartney, Yūsuf Balasaguni, Kutadgu Bilig ja People's Park
+   * (Kashgar).
+   *
+   * SISÄLTÖLINJAUS on sama kuin lehden kategorialohkossa: Silkkitie,
+   * basaari, Suuri peli ja Id Kah — ei Xinjiangin nykypolitiikkaa,
+   * ei vuoden 1949 jälkeisiä kiistoja. Kansanpuiston jutusta on
+   * jätetty pois puiston Mao-patsas ja Yusuf Khass Hajibin jutusta
+   * mausoleumin vaiheet kulttuurivallankumouksen aikana; molemmat
+   * ovat en-Wikipediassa, mutta molemmat ovat nykypolitiikkaa.
+   *
+   * KANSANPUISTON JUTTU ON AINOA ILMAN KUVAA (Sulu Hanin ja Riadin
+   * vesitornin ennakkotapaus). Commonsissa ei ole yhtään puistosta
+   * otettua vapaata kuvaa, joka olisi vähintään 1 200 pikseliä leveä
+   * ja jossa ei näy puiston Mao-patsasta — ainoa riittävän suuri on
+   * juuri patsaskuva. Tekstin varassa oleva juttu on parempi kuin
+   * väärä kuva tai linjauksen rikkova kuva.
+   *
+   * CHINI-BAGHIN KUVA ON MANNERHEIMIN, ja se on paras olemassa oleva:
+   * Percy Sykesin vuoden 1915 kuva samasta talosta on Commonsissa
+   * PD-ehdoin, mutta se on skannattu paspartuun kiinnitettynä ja
+   * kehys näkyy kuvassa (talon kuvasääntö kieltää lisätyt kehykset).
+   * Nykyisestä paikasta ei ole yli 1 200 pikselin kuvaa.
+   */
+  kashgar: {
+    'Afaq Khojan mausoleumi': {
+      aika: 'n. 1640, Afaq Khoja haudattu 1694',
+      teksti: 'Hauta sai alkunsa naqshbandi-sufien opettajasta Muhammad '
+          + 'Yusufista, joka saapui Altishahrin seudulle 1600-luvun '
+          + 'alussa ja saarnasi ilmeisesti myös Gansussa ja '
+          + 'Qinghaissa. Hänen kuolinvuodestaan on kaksi arviota, '
+          + '1622 ja 1653, eivätkä lähteet ratkaise asiaa. Rakennus '
+          + 'tunnetaan silti pojan nimellä, koska tämä oli isäänsä '
+          + 'kuuluisampi.'
+          + '\n\n'
+          + 'Rakennuksen keskellä on seitsemäntoista metriä leveä '
+          + 'kupoli, ja sen ympärillä seisoo neljä nurkkaminareettia. '
+          + 'Minareetit on koristeltu vaakaraidoin ja arabeskikuvioin, '
+          + 'ja jokaisen ikkuna on eri geometrista kuviota; huipulla '
+          + 'on käännetyn lootuksen muotoinen kupu ja sakarareuna. '
+          + 'Sisäänkäynnissä on suuri julkisivu ja kaakeloitu '
+          + 'iwan-syvennys, sama muoto kuin Keski-Aasian moskeijoissa. '
+          + 'Haudat on peitetty värikkäillä silkeillä.'
+          + '\n\n'
+          + 'Alue on enemmän kuin yksi rakennus. Siihen kuuluu neljä '
+          + 'rukoussalia, joiden puupalkkeja kannattavissa pylväissä '
+          + 'on muqarnas-koristelu, luentosali, portti sinisine '
+          + 'kaakeleineen, pihalla puhdistautumisallas ja hautausmaa, '
+          + 'jonka savi- ja tiilihaudat ovat yhä käytössä. Keskustasta '
+          + 'on matkaa noin kolme ja puoli kilometriä koilliseen.',
+      kuvat: [
+        {
+          tiedosto: 'Kashgar-Mausolée d\'Abakh Khoja 1996 revêtement céramique 3.jpg',
+          selite: 'Mausoleumin seinäkaakelointia lähikuvassa: keltaiselle '
+            + 'pohjalle on maalattu vihreitä ja ruskeita kasvikiehkuroita '
+            + 'ja ympärillä on lasitettuja yksivärilaattoja.',
+          lahde: 'Ismoon, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chini-Bagh': {
+      aika: 'Britannian konsulaatti 1890–1948',
+      teksti: 'Chini-Bagh oli Britannian Kašgarin-pääkonsulin George '
+          + 'Macartneyn ja hänen vaimonsa Catherine Macartneyn koti '
+          + 'kahdenkymmenenkahdeksan vuoden ajan. Konsulaatti toimi '
+          + 'kaupungissa 1890–1948. Nimellisesti se oli brittiläinen, '
+          + 'mutta väen ja rahat antoi Brittiläisen Intian poliittinen '
+          + 'osasto; Qing-hallinto tunnusti sen vasta 1908, ja '
+          + 'pääkonsulaatiksi se korotettiin 1911.'
+          + '\n\n'
+          + 'Talon ovi kävi tiheään, sillä se oli viimeinen '
+          + 'eurooppalainen osoite ennen autiomaata. Vieraskirjaan '
+          + 'kertyivät muun muassa arkeologi Aurel Stein, '
+          + 'tutkimusmatkailija Sven Hedin, saksalainen '
+          + 'Turfan-tutkija Albert von Le Coq, isä Hendricks ja '
+          + 'A. R. B. Shuttleworth sekä kreivi Otanin '
+          + 'Keski-Aasian-retkikunnan japanilaiset Eizaburo Nomura ja '
+          + 'Zuicho Tachibana, joita on kuvattu yhtä lailla '
+          + 'arkeologeiksi kuin vakoojiksi. Lady Macartney avusti '
+          + 'niitä tutkijoita, jotka löysivät Dunhuangin '
+          + 'käsikirjoituskätkön, ja julkaisi 1931 muistelmansa An '
+          + 'English Lady in Chinese Turkestan.'
+          + '\n\n'
+          + 'Itse talo on yhä pystyssä, mutta sen kuulut puutarhat '
+          + 'purettiin myöhemmin samalle tontille rakennetun Chini '
+          + 'Bagh -hotellin tieltä. Wikipedian oma artikkeli ei anna '
+          + 'talolle koordinaattia lainkaan, joten tämän kartan piste '
+          + 'on OpenStreetMapin muistomerkki entisen konsulaatin '
+          + 'paikalla.',
+      kuvat: [
+        {
+          tiedosto: 'Britannian pääkonsulin George Macartneyn talo 1906 (VKK269-156).tif',
+          selite: 'Britannian pääkonsulin talo vuonna 1906: matala '
+            + 'savitiilirakennus seisoo loessitörmän päällä ja alhaalla '
+            + 'kulkee kuiva uoma.',
+          lahde: 'Carl Gustaf Emil Mannerheim, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri basaari': {
+      aika: 'kauppapaikkana yli 2 000 vuotta',
+      teksti: 'Keskustan basaarikortteli on Kašgarin kaupan ydin ja '
+          + 'jatkoa sille, mitä täällä on tehty yli kahdentuhannen '
+          + 'vuoden ajan: Silkkitien pohjoinen ja eteläinen haara '
+          + 'kohtasivat tällä keitaalla, ja tavara vaihtoi omistajaa '
+          + 'juuri tässä. Uiguuriksi paikka on yekshenbe bazar, '
+          + 'sunnuntaibasaari, ja kiinaksi Keski- ja Länsi-Aasian '
+          + 'markkinat.'
+          + '\n\n'
+          + 'Kortteli on auki viikon jokaisena päivänä, mutta suuri '
+          + 'päivä on viimeinen. Matkailijalle tarjotaan ennen muuta '
+          + 'perinteisiä mattoja ja vaatteita; kallein tavara on '
+          + 'Iranista tuotu mauste, jonka arvo on kolminkertainen '
+          + 'kultaan verrattuna.'
+          + '\n\n'
+          + 'Karja on eri paikassa. Elävien eläinten markkina, jolle '
+          + 'saavutaan aasinvetoisilla kärryillä, on kaupungin '
+          + 'ulkopuolella noin kahdeksan kilometriä luoteessa — se ei '
+          + 'siksi mahdu tämän sivun kartalle.',
+      kuvat: [
+        {
+          tiedosto: 'Sunday market Kashgar IGP4049.jpg',
+          selite: 'Basaarirakennuksen vihreä kaaririvi nousee leveän '
+            + 'liikennekadun takaa, ja etualalla jonottaa keltavihreitä '
+            + 'takseja.',
+          lahde: 'w0zny, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Id Kahin moskeija': {
+      aika: '1442, nykyinen asu 1798 ja 1838',
+      teksti: 'Nimi tulee persian sanasta eidgah, juhlapaikka. Saqsiz '
+          + 'Mirza, emiiri Sayyid Alin vanhempi poika, rakennutti '
+          + 'moskeijan vuonna 1442 esi-isiensä muistoksi. Nykyinen '
+          + 'kultatiilinen rakennus korvasi vanhemman 1798, ja vuonna '
+          + '1838 se laajennettiin nykymittoihinsa. Alaa on noin '
+          + '16 800 neliömetriä, ja kokonaisuuteen kuuluu rukoussali, '
+          + 'kirjoitussali, porttitorni ja joukko sivurakennuksia.'
+          + '\n\n'
+          + 'Portti on keltaista tiiltä: itse oviaukko on 4,7 metriä '
+          + 'korkea ja 4,3 leveä, torni sen päällä noin '
+          + 'seitsemäntoista metriä. Tornin molemmin puolin nousee '
+          + 'kahdeksantoistametrinen minareetti, epäsymmetrisesti '
+          + 'asetettuina, ja huipulla on puolikuu. Portin takana on '
+          + 'suuri holvi, jonka päällä on kolmas minareetti. '
+          + 'Rukoussalin ympärillä on piha molemmin puolin, ja '
+          + 'arkkitehtuuri yhdistelee keskiaasialaisia, '
+          + 'länsiaasialaisia ja vähäisemmässä määrin kiinalaisia '
+          + 'piirteitä.'
+          + '\n\n'
+          + 'Sisä- ja ulkotiloihin mahtuu yhteensä kaksikymmentätuhatta '
+          + 'rukoilijaa, ja se tekee Id Kahista Kiinan suurimman '
+          + 'moskeijan. Rakennus liitettiin valtakunnallisesti '
+          + 'suojeltujen kulttuurikohteiden luetteloon 2001, ja '
+          + 'julkisivu päällystettiin kaakelein 2004–2005. Vierailijat '
+          + 'pääsevät sisään päivittäin kahdeksi tunniksi aamulla ja '
+          + 'kahdeksi iltapäivällä.',
+      kuvat: [
+        {
+          tiedosto: 'Kashgar Id Kah Moschee.jpg',
+          selite: 'Moskeijan keltainen porttitorni ja sen molemmin puolin '
+            + 'nousevat kaakeloidut minareetit nähtynä laajan '
+            + 'kivetyn aukion yli.',
+          lahde: 'See58, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vanhakaupunki: {
+      aika: 'kasvanut vuosisatojen kuluessa',
+      teksti: 'Vanhakaupunki on kaupungin vanhin asuttu osa: '
+          + 'savitiilinen talorykelmä loessikukkulan päällä, aivan '
+          + 'Tuman-joen uoman vieressä. Se on juuri se kaupunki, jonka '
+          + 'ohi Silkkitien karavaanit kulkivat, ja siitä kertoo myös '
+          + 'nimien kaksijakoisuus.'
+          + '\n\n'
+          + 'Kaupungin vanhimmat nimet kertovat kahdesta osasta. '
+          + 'Kiinalaisissa lähteissä Shufu tarkoitti uiguurien asuttamaa '
+          + 'vanhaakaupunkia ja Shule kymmenen kilometrin päähän '
+          + 'rakennettua uutta kaupunkia, jonne han-kiinalaiset '
+          + 'asettuivat. Shule saattaa olla yritys kirjoittaa '
+          + 'kiinalaisin merkein sanskritin nimi Śrīkrīrāti, '
+          + '”onnellinen vieraanvaraisuus”.'
+          + '\n\n'
+          + 'Kaupunginosassa ei ole ruutukaavaa. Kujat mutkittelevat '
+          + 'rinteen mukaan, ovet aukeavat sisäpihalle eivätkä kadulle, '
+          + 'ja katot ovat tasaisia — kuivassa aavikkoilmastossa niiden '
+          + 'päällä voi kuivata hedelmiä. Törmän reunalla talot on '
+          + 'muurattu suoraan loessin päälle, ja alhaalta katsottuna '
+          + 'koko kaupunginosa näyttää yhdeltä yhtenäiseltä seinältä.',
+      kuvat: [
+        {
+          tiedosto: '20250525喀什高台民居.jpg',
+          selite: 'Vanhankaupungin savitiilitalot kiipeävät loessitörmää '
+            + 'ylös tasakatto tasakaton vieressä, ja kaukana takana '
+            + 'pyörii maailmanpyörä.',
+          lahde: 'MasaneMiyaPA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kansanpuisto: {
+      aika: 'kaupungin suurin puisto',
+      teksti: 'Kansanpuisto on Kašgarin keskustan pääpuisto, '
+          + 'Kansanaukion eteläpuolella ja vajaan kilometrin päässä '
+          + 'kaupungin keskipisteestä lounaaseen. Pinta-alaa on '
+          + 'kaksikymmentäneljä hehtaaria, mikä tekee siitä kaupungin '
+          + 'suurimpia viheralueita.'
+          + '\n\n'
+          + 'Puistossa kerrotaan olevan yli kaksikymmentäkuusituhatta '
+          + 'puuta yli viidestäkymmenestä lajista sekä neljä '
+          + 'kilometriä polkuja. Aavikon laidalla se on enemmän kuin '
+          + 'koriste: varjo ja kastelu ovat keitaan koko idea, ja '
+          + 'puistokäytävä on kesäkuumalla se paikka, jossa '
+          + 'kaupunkilaiset viettävät iltapäivän.'
+          + '\n\n'
+          + 'Alueella on tekojärvi, paviljonkeja, uiguurilaistyylinen '
+          + 'kulttuuripalatsi, hedelmätarhoja, lasten leikkipaikkoja, '
+          + 'eläintarha ja rullaluistelurata. Sisäänpääsy on maksuton.',
+      lahde: 'Wikipedia',
+    },
+    'Yusuf Khass Hajibin mausoleumi': {
+      aika: 'runoilija kuoli 1077, mausoleumi 1865',
+      teksti: 'Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, '
+          + 'kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. '
+          + 'Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan '
+          + 'ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun '
+          + 'hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle '
+          + 'arvonimen khass hajib, suunnilleen ylikamariherra.'
+          + '\n\n'
+          + 'Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen '
+          + 'islamilaisten turkkilaisten kielellä kirjoitettu teos. Se '
+          + 'on hallitsijanpeili: neljä päähenkilöä edustavat kukin '
+          + 'yhtä abstraktia periaatetta, ja runomitta on arabialainen '
+          + 'mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen '
+          + 'kerta, kun sitä sovellettiin turkkilaiskieleen. Tekstistä '
+          + 'on säilynyt kolme käsikirjoitusta, ja jokainen tunnetaan '
+          + 'sen kaupungin nimellä, josta se löytyi.'
+          + '\n\n'
+          + 'Yusuf kuoli 1077 ja haudattiin joidenkin lähteiden mukaan '
+          + 'kaupungin eteläosaan; suoria historiallisia lähteitä '
+          + 'kuolinajasta ja -paikasta ei ole. Emiiri Yakub Beg '
+          + 'pystytti haudalle mausoleumin vuonna 1865, ja nykyinen '
+          + 'sinikaakelinen rakennus seisoo samalla paikalla. Haudan '
+          + 'kirjoitukset ovat kiinaksi, arabiaksi ja uiguuriksi.',
+      kuvat: [
+        {
+          tiedosto: 'Mausoleum of Yusuf Khass Hajib main building.jpg',
+          selite: 'Mausoleumin sinikaakelinen julkisivu neljine '
+            + 'pikkuminareetteineen ja kaariportaaleineen aukeaa '
+            + 'hiekkaiselle pihalle.',
+          lahde: 'Voidvector, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

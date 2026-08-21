@@ -101,6 +101,25 @@
 // leirit ja Surun maski pysyvät siinä laajuudessa kuin lehden oma
 // nosto ne jo kertoo.
 //
+// KAŠGAR (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js; säärivi jäi pois Open-Meteon 429:n takia).
+// Jokainen introväite tulee saman erän lehtiteksteistä, jotka on
+// tarkistettu en-Wikipedian raakateksteistä 21.8.2026 — uusia
+// lähdehakuja ei tarvittu. Vanha intro sanoi Kašgarin olevan "Kiinan
+// läntisin kaupunki"; en-Wikipedia sanoo "one of the westernmost
+// cities of China", ja uusi intro käyttää artikkelin omaa muotoilua.
+// Asukasluvusta artikkeli antaa kaksi arvoa (johdanto 711 300 vuonna
+// 2019, infoboksi 782 662 vuonna 2020), joten intro sanoo "runsaat
+// 700 000" — luku pitää kummallakin. Sisältölinjaus on sama kuin
+// lehdessä (spec-asia.md): Silkkitie, basaari, Suuri peli ja Id Kah,
+// EI Xinjiangin nykypolitiikkaa. Teksti-kentän viimeinen virke
+// ("Vanhan savitiilikaupungin rakennuksia on purettu ja rakennettu
+// uudelleen 2000-luvulla") POISTETTIIN poiminnassa (Fable 21.8.2026):
+// vanhankaupungin purkukiista on juuri se aihe, jonka Kašgar-linjaus
+// jättää lehdestä pois, eikä yksittäinen irtovirke ilman asiayhteyttä
+// palvele lukijaa. Muuten teksti-kenttä on ennallaan.
+//
 // XI'AN (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
 // alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
 // nahtavyysjutut.js, saatiedot.js). Jokainen introväite tulee saman
@@ -1897,9 +1916,28 @@ export const ASIA_ARTIKKELIT = {
       + 'sinistä sävyä kutsutaan usein Samarkandin siniseksi.',
   },
   'Kašgar': {
-    intro: 'Kašgar on Kiinan läntisin kaupunki, siellä missä silkkitien '
-      + 'pohjoinen ja eteläinen haara yhtyvät Taklamakanin autiomaan '
-      + 'ympäri kierrettyään.',
+    intro: 'Kašgar on keidaskaupunki Tarimin altaan länsilaidalla, aivan '
+      + 'Taklamakanin autiomaan reunalla, ja yksi Kiinan läntisimmistä '
+      + 'kaupungeista. Se on ollut yli kahdentuhannen vuoden ajan '
+      + '**Silkkitien** tärkein risteys: hiekkameren yli ei kuljettu, '
+      + 'joten reitin pohjoinen ja eteläinen haara kiersivät autiomaan '
+      + 'molemmin puolin ja kohtasivat täällä. Ympärillä nousevat '
+      + 'Pamir, Tien Shan ja Kunlun. Asukkaita on runsaat 700 000, ja '
+      + 'heistä valtaosa on uiguureja.'
+      + '\n\n'
+      + 'Kaupunki on ollut vuorollaan kiinalaisten, turkkilaisten, '
+      + 'mongolien ja tiibetiläisten valtakuntien hallussa. Marco Polo '
+      + 'kävi täällä 1270-luvulla ja pani merkille '
+      + 'nestoriaanikristittyjen omat kirkot. Vuonna 1865 Kokandista '
+      + 'tullut Yakub Beg otti kaupungin haltuunsa ja julistautui '
+      + '**Seitsemän kaupungin emiiriksi**; Qing-dynastia valloitti '
+      + 'alueen takaisin 1877, ja 1890-luvulta lähtien kaupungissa '
+      + 'asuivat rinnakkain Britannian ja Venäjän edustajat.'
+      + '\n\n'
+      + 'Vanhankaupungin savitiilikorttelien laidalla seisoo Id Kahin '
+      + 'moskeija, Kiinan suurin, ja koillisessa kaakeloitu '
+      + 'Afaq Khojan mausoleumi. Sunnuntain '
+      + 'markkinat ovat Keski-Aasian suurimmat.',
     teksti: 'Kašgar on Xinjiangin uiguurien autonomisella alueella, '
       + 'keitaalla Taklamakanin länsireunalla. Ympärillä nousevat '
       + 'Pamir, Tien Shan ja Kunlun — kaikki yli seitsemän kilometrin '
@@ -1915,8 +1953,7 @@ export const ASIA_ARTIKKELIT = {
       + '\n\n'
       + 'Sunnuntain karjatori on yhä käytössä: siellä myydään lampaita, '
       + 'aaseja, hevosia ja kameleita, ja kaupanteko päätetään kättä '
-      + 'lyömällä. Vanhan savitiilikaupungin rakennuksia on purettu ja '
-      + 'rakennettu uudelleen 2000-luvulla.',
+      + 'lyömällä.',
   },
   'Ulan Bator': {
     intro: 'Ulan Bator on Mongolian pääkaupunki ja maan ainoa '

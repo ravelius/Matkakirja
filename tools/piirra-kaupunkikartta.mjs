@@ -2718,6 +2718,47 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  kashgar: {
+    /*
+     * KEIDASKAUPUNKI TAKLAMAKANIN LÄNSILAIDALLA (21.8.2026). Ruutu on
+     * 5,4 × 5,0 km, ja se kattaa vanhankaupungin kukkulan, Id Kahin
+     * aukion, basaarikorttelin ja Afaq Khojan mausoleumin
+     * koillisessa. Rajaus on venytetty juuri niin laajaksi kuin
+     * mausoleumi vaatii: se on lehden toiseksi tunnetuin kohde ja
+     * 3,5 kilometriä keskipisteestä koilliseen (oma laskelma
+     * en-Wikipedian koordinaateista 39,49056 / 76,02306 ja
+     * kaupungin 39,4681 / 75,9938). Kainaloa ei tehty, koska
+     * mausoleumi mahtuu vielä pääruutuun 84 prosentin kohdalle
+     * leveydestä — sama ratkaisu kuin Samarkandissa, Kathmandussa ja
+     * Manilassa.
+     *
+     * RAUTATIEASEMA JA LENTOKENTTÄ JÄIVÄT POIS, ja se on faktapohjan
+     * ja tarkistusraportin yhteinen suositus. Asema on 5,2 ja
+     * lentokenttä 8,6 kilometrin päässä (uusintalasketut luvut), eli
+     * niiden ottaminen mukaan olisi kasvattanut ruudun lähes
+     * kaksinkertaiseksi ja litistänyt vanhankaupungin kortteliverkon
+     * tunnistamattomaksi. Molemmat kerrotaan matkaoppaan jaksossa
+     * "Perille ja liikkeelle".
+     *
+     * SUNNUNTAIN KARJAMARKKINAT OVAT KAUPUNGIN ULKOPUOLELLA eivätkä
+     * siksi kartalla: OSM:n "喀什活畜交易市场" on 39,52287 /
+     * 75,93290 eli kahdeksan kilometriä luoteeseen. Kartalla on sen
+     * sijaan keskustan basaarikortteli, ja markkinapaikkojen ero
+     * kerrotaan basaarin jutussa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kathmandussa ja Manilassa: vanhankaupungin kujat
+     * ovat OSM:ssä lähes kokonaan jalankulkualueita ja huoltoteitä,
+     * ja ilman lippuja kartan tihein ja kiinnostavin osa jäisi
+     * tyhjäksi paperiksi.
+     *
+     * EI meri: true — lähin meri on tuhansien kilometrien päässä.
+     * Vettä ruudussa on vain Tuman-joen uoma ja puistojen tekolammet.
+     */
+    rajat: { pohjoinen: 39.4952, etela: 39.45, lansi: 75.97, ita: 76.033 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*
