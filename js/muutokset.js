@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 990, teksti: 'v990: Borneo ja Sumatra — uudet aluelehdet' },
   { v: 989, teksti: 'v989: Manila — uusi kaupunkilehti' },
   { v: 988, teksti: 'v988: Jakarta, ennen ja nyt -parit ja julistepalkinnot' },
   { v: 987, teksti: 'v987: äänirivin ennen ja nyt — vanha tallenne radiolle' },

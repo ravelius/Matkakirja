@@ -45635,4 +45635,929 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * BORNEO (Opus 21.8.2026). ALUELEHTI Rub al-Khalin, Siinain ja
+   * Kappadokian mallin mukaan: kaksi sivua (kansi + teemasivu `luonto`)
+   * ja matkaopas, EI kohdekarttaa eikä nähtävyysjuttuja — Borneo on
+   * saari, ei kaupunki, ja aluelehtimalli on nimenomaan tälle
+   * tapaukselle (docs/aasia-tyoaineisto/lehtityo-resepti.md,
+   * "ALUELEHTI"). Kohteella oli laudalla jo saapumisrivi, kulttuurivisa
+   * ja valokuvakortit (asia-lisat-valokuvat.js: Banjarmasinin joki ja
+   * kelluvat torit), mutta ei lehteä.
+   *
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä 21.8.2026
+   * (Borneo, Raj of Sarawak, James Brooke, Alfred Russel Wallace,
+   * Dayak people, Bornean orangutan, Mount Kinabalu, Kinabalu Park,
+   * Sandakan, Kota Kinabalu, Kuching) sekä työaineiston parista
+   * faktapohja-borneo.md + tarkistus-borneo.md, jonka huomautuksia on
+   * noudatettu:
+   *  1. Sademetsän ikä on 140 miljoonaa vuotta, ei "yli 100
+   *     miljoonaa" — luku löytyy suoraan Borneo-artikkelin
+   *     Ecology-osiosta ("around 140 million years old"). Pelin oma
+   *     kulttuurivisa (asia-questions.js) sanoo yhä "yli 100
+   *     miljoonaa", mikä ei ole ristiriidassa: 140 on yli 100.
+   *     Visaan ei ole koskettu.
+   *  2. Nepenthes on suomeksi KANNUKASVI. Faktapohjan käyttämä
+   *     "tullilokki" ei ole suomen kielen sana eikä liity
+   *     pyyntikasveihin; tarkistusraportti pyysi korjaamaan sen.
+   *  3. Kinabalun kannukasvitieto tarkennettiin artikkelin omaksi:
+   *     maailman rikkain Nepenthes-kokoelma, viisi kolmestatoista
+   *     lajista vain täällä, ja Nepenthes rajah on maailman
+   *     suurikannuisin.
+   *
+   * KOLME RISTIRIITAA, JOTKA ON KIRJOITETTU AUKI LUKIJALLE:
+   *  - Brooken maanluovutuksen vuosi. Borneo-artikkeli sanoo 1842,
+   *    mutta Raj of Sarawak ja James Brooke antavat molemmat tarkan
+   *    päivän 24. syyskuuta 1841 ja kertovat virallisen julistuksen
+   *    olleen vasta 18. elokuuta 1842. Nosto kertoo molemmat.
+   *  - Saaren pinta-ala. Saman artikkelin infoboksi antaa 748 168
+   *    neliökilometriä ja leipäteksti 743 330. Oppaan jakso "Alueen
+   *    rakenne" kertoo molemmat luvut.
+   *  - Väkiluku. Johdanto-osa sanoo 23 053 723 (vuoden 2020
+   *    väestönlaskennat) ja infoboksi 21 258 000 (2023). Lehti sanoo
+   *    vain "yli kaksikymmentä miljoonaa", mikä pitää paikkansa
+   *    kummallakin luvulla.
+   *
+   * SISÄLTÖLINJAUS (Fablen ohje 21.8.2026, sama linja kuin
+   * Jakartassa). Kolmen maan jako kerrotaan MAANTIETEELLISENÄ
+   * TOSIASIANA ilman nykypolitiikkaa. Brooken Sarawak on
+   * hallinnollinen käänne, ei sotaretki: kapinat, merirosvojen
+   * vastaiset operaatiot ja vuoden 1857 levottomuudet on jätetty
+   * kokonaan pois. Päänmetsästys esiintyy täsmälleen kerran, yhtenä
+   * neutraalina historiallisena mainintana Tumbang Anoin
+   * rauhansopimuksen yhteydessä 1894 — ei esineitä, ei kalloja, ei
+   * yksityiskohtia, ja 1940- ja 1960-lukujen paluu aiheeseen on
+   * jätetty pois. Toinen maailmansota mainitaan yhdellä toteavalla
+   * lauseella (Sandakanin tuhoutuminen pommituksissa ja hallinnon
+   * siirto Jesseltoniin), koska se selittää lukijalle miksi
+   * entisestä pääkaupungista ei ole vanhoja kuvia; sotavankileirit
+   * ja marssit on jätetty kokonaan pois. Nusantara on yksi
+   * neutraali nykytosiasia ilman kannanottoa. Metsäkato kerrotaan
+   * lajien elintilan kaventumisena ilman syyllistämistä.
+   *
+   * KULTTUURIVISAN (asia-questions.js) viisi kysymystä ja niiden
+   * vastaukset löytyvät lehdestä: kolmen maan jako ja maiden nimet
+   * (johdanto, opasjakso 2), trooppinen sademetsä (nosto L1),
+   * Kinabalu saaren korkeimpana (opasjakso 2, nosto L4) ja orankien
+   * tarve laajaan yhtenäiseen metsään (nosto L3). Luontosivun
+   * minitehtävä kysyy luolamaalauksen ikää, jota visa ei kysy, ja
+   * vastaus on samalla sivulla nostossa L2.
+   *
+   * KUVAT. Kansikuvat ovat kolme laajaa yleiskuvaa saaren eri
+   * puolilta kansikaruselliohjeen mukaisesti: Kinabalu-vuori
+   * pohjoisesta Sabahista, Kuchingin jokiranta lännestä Sarawakista
+   * ja Kapuas-joen silta etelästä Pontianakista. Yhtään
+   * yksityiskohta-, sisä- tai esinekuvaa ei ole kannessa.
+   * AIHETOISTO, joka on tietoinen: Kinabalu näkyy sekä kansikuvana
+   * (laaja panoraama auringonnousussa) että oppaan jaksossa "Alueen
+   * rakenne" (pysty, lähempää, sademetsän yltä) ja kolmannen kerran
+   * kannukasvin kasvupaikkana luontosivulla — vuori on koko alueen
+   * maamerkki, ja kuvat ovat eri tiedostoja eri etäisyyksiltä, sama
+   * perustelu kuin Jakartan satamalla ja Xi'anin terrakotta-
+   * armeijalla. Matkaoppaan etusivukuva on tuore maltillinen pysty
+   * (w/h 0,67), ja se on tarkoituksella joki eikä vuori.
+   * HYLÄTYT: KITLV:n Astana-valokuva noin vuodelta 1890 (kuvaan on
+   * kirjoitettu studion oma teksti "The Astana, Kuching, Sarawak" —
+   * lisätty merkintä), Kuchingin jokitaksit (veneiden kyljissä
+   * sponsorimainokset), Kota Kinabalun lentoaseman näkymä
+   * (parkkipaikka), Meratus-vuorten sademetsä (epäterävä
+   * puhelinkuva), ESA:n tutkakuva Kalimantanista (väärävärikuva,
+   * josta lukija ei erota mitään) ja Mahakamin veneilijäkuva
+   * (kasvot erottuvat). James Brookesta ei ole Commonsissa
+   * yhtäkään yli 1200 pikselin levyistä muotokuvaa, joten valkoisten
+   * radžojen kuvana on heidän palatsinsa Astana Kuchingissa
+   * (Wellcome Collection). Wallacen liitosammakon kuva on otettu
+   * Mulun kansallispuistossa Sarawakissa eli saarelta itseltään.
+   *
+   * SÄÄRIVI PUUTTUU js/packs/saatiedot.js:stä, ja se on tietoinen
+   * jättö: Open-Meteon arkisto (ERA5) vastasi koko tämän työn ajan
+   * 429:llä ja viestillä "Daily API request limit exceeded".
+   * Oppaan sääjakso on kirjoitettu en-Wikipedian Kota Kinabalu- ja
+   * Mount Kinabalu -artikkelien ilmasto-osioista ja sanoo sen
+   * ääneen. Perustelu kokonaisuudessaan saatiedot.js:n lopussa.
+   */
+  borneo: [
+    {
+      id: 'kaupunki',
+      nimi: 'Borneo',
+      johdanto: 'Maailman kolmanneksi suurin saari makaa päiväntasaajan '
+        + 'päällä, ja sen jakavat Indonesia, Malesia ja pieni Brunein '
+        + 'sulttaanikunta. Saari sai nimensä juuri siltä sulttaanikunnalta, '
+        + 'joka hallitsi aikoinaan lähes koko sen rannikkoa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Kinabalu Sabah Borneo Kampong Kundasang panorama 4.jpg',
+          selite: 'Kinabalu-vuoren rosoinen huippuharjanne kohoaa '
+            + 'aamuvalossa vihreiden sademetsäkukkuloiden yläpuolelle.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kuching Waterfront and its Parliament building - Sarawak - Borneo - Malaysia - panoramio.jpg',
+          selite: 'Kuchingin jokiranta hämärissä: veden takana kohoaa '
+            + 'Sarawakin osavaltionparlamentin suippokattoinen '
+            + 'rakennus ja '
+            + 'etualalla suihkuaa lohikäärmeveistos.',
+          lahde: 'diego_cue, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Pontianak Kapuas Bridge.jpg',
+          selite: 'Kapuas-joen ristikkosilta kaartuu leveän ruskean veden '
+            + 'yli Pontianakissa iltavalossa.',
+          lahde: 'Liuzhary, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Rainforest cloud forming Kinabalu Sabah Borneo Kampong Kundasang 1.jpg',
+          selite: 'Pilvi syntyy sademetsän yllä: valkoinen usva nousee '
+            + 'metsäisen rinteen poikki ja yksi korkea puu erottuu '
+            + 'latvuston yläpuolelle.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '011107 Langhouse der IBAN.jpg',
+          selite: 'Ibanien pitkätalo seisoo paalujen varassa joen '
+            + 'törmällä, ja sen yhtenäinen katto jatkuu kymmenien '
+            + 'ovien yli.',
+          lahde: 'Matthias Bethke, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kampong Ayer, the world\'s largest water village (17969427934).jpg',
+          selite: 'Bruneissa Kampong Ayerin talot seisovat paaluilla '
+            + 'joen päällä ja niitä yhdistävät puiset kävelysillat.',
+          lahde: 'Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Valkoiset radžat',
+          tiedosto: 'Kuching, Sarawak; the Astana, a partly castellated building. Wellcome V0037394.jpg',
+          teksti: 'Brunein sulttaani luovutti suuren osan Sarawakia '
+            + 'englantilaiselle James Brookelle palkkioksi kapinan '
+            + 'kukistamisesta, ja Brooke otti itselleen radžan arvon. '
+            + 'Vuosiluvusta on kaksi versiota: Borneon yleisartikkeli '
+            + 'sanoo 1842, mutta sekä Sarawakin rajakunnan että Brooken '
+            + 'oma artikkeli antavat luovutukselle päivän 24. syyskuuta '
+            + '1841 ja kertovat virallisen julistuksen tulleen vasta 18. '
+            + 'elokuuta 1842. Yhdysvallat tunnusti rajakunnan '
+            + 'itsenäiseksi valtioksi 1850 ja Britannia 1864. Brooken '
+            + 'suku — veljenpoika ja tämän poika — hallitsi Sarawakia '
+            + 'sata vuotta valkoisina radžoina.',
+          selite: 'Radžojen palatsi Astana Kuchingissa 1800-luvun lopulla: '
+            + 'matalan pylväskuistin päädyssä kohoaa sakaraharjainen '
+            + 'torni.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Yhden nimen alla kaksisataa kansaa',
+          tiedosto: 'Rumah Betang Ensaid Panjang Sintang.jpg',
+          teksti: 'Dajakit eivät ole yksi kansa vaan yhteisnimitys yli '
+            + 'kahdellesadalle jokivarsien ja kukkuloiden kansalle, '
+            + 'joilla kullakin on oma kielensä, tapansa ja lakinsa. Nimi '
+            + 'tulee brunein ja melanaun sanasta, joka tarkoittaa '
+            + 'sisämaan väkeä. Perinteinen asumus on pitkätalo, joskus yli '
+            + 'kahdensadan metrin mittainen rakennus, joka on yhtä aikaa '
+            + 'koti, kylä ja hallinto: talon asukkaat elävät sen omien '
+            + 'tapojen mukaan. Vuonna 1894 Kalimantanin dajakkiheimot '
+            + 'kokoontuivat Tumbang Anoihin ja sopivat rauhasta, joka '
+            + 'lopetti päänmetsästyksen perinteen.',
+          selite: 'Pitkätalon sisägalleria jatkuu hämärään: puinen lattia '
+            + 'ja tiheä pylväsrivi vievät katseen rakennuksen toiseen '
+            + 'päähän.',
+          lahde: 'Zhilal Darma, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kullan maa, kamferttisaari, timanttisaari',
+          tiedosto: 'Gomantong Cave in Borneo Malaysia from inside.JPG',
+          teksti: 'Kiinalaisissa asiakirjoissa saari mainitaan jo vuonna '
+            + '977 nimellä Bo-ni. Arvokkaimmiksi vientitavaroiksi '
+            + 'luetellaan kultaa, kamferttia, kilpikonnankuorta, '
+            + 'sarvinokkien nokkaluuta, mehiläisvahaa, rottinkia, '
+            + 'mausteita ja syötäviä pääskynpesiä. Intialaiset kutsuivat '
+            + 'saarta nimillä Suvarnabhumi eli kullan maa ja Karpuradvipa '
+            + 'eli kamferttisaari, jaavalaiset nimellä Puradvipa eli '
+            + 'timanttisaari. Sarawakin jokisuisto oli 500-luvulta noin '
+            + 'vuoteen 1300 vilkas Intian ja Kiinan välisen kaupan '
+            + 'keskus, ja pääskynpesiä kerätään yhä Gomantongin luolista '
+            + 'Sabahissa.',
+          selite: 'Gomantongin luolan holvi ylhäältä avautuvaa aukkoa '
+            + 'kohti, ja hämärässä erottuvat pesänkerääjien ohuet '
+            + 'köydet.',
+          lahde: 'Tim Denholm, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Sammakko, joka liiti, ja essee, joka odotti',
+          tiedosto: 'Wallace\'s Flying Frog (Rhacophorus nigropalmatus) (23531013696).jpg',
+          teksti: 'Englantilainen luonnontutkija Alfred Russel Wallace '
+            + 'saapui Sarawakiin lokakuussa 1854 James Brooken '
+            + 'järjestämän tuen turvin ja viipyi saarella helmikuuhun '
+            + '1856. Alkuvuoden 1855 sadekauden hän asui pienessä '
+            + 'dajakkitalossa Santubong-vuoren juurella ja kirjoitti '
+            + 'siellä esseen lajien synnystä; se tunnetaan nykyään '
+            + 'Sarawakin lakina ja ennakoi hänen ja Darwinin '
+            + 'evoluutioteoriaa. Simunjonin hiilikaivoksella Wallace '
+            + 'keräsi hyönteisiä maksamalla työläisille sentin '
+            + 'kappaleelta, ja kiinalainen työmies toi hänelle '
+            + 'sammakon, joka hänen mukaansa liiti puusta alas.',
+          selite: 'Wallacen liitosammakko lepää oksalla yöllä: vihreä '
+            + 'selkä, vaalea vatsa ja mustakeltaiset räpylät.',
+          lahde: 'Bernard DUPONT from FRANCE, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sungai Kapuas Kubu Raya, Kalimantan Barat.jpg',
+          selite: 'Puinen lautta odottaa Kapuas-joen rannassa, kannella '
+            + 'muutama moottoripyörä ja takana metsäinen ranta.',
+          lahde: 'Nba.shf, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Borneo ei ole yksi kohde vaan kolme maata ja tuhat '
+          + 'jokea. Rannikolla on lentokenttiä, moottoriteitä ja '
+          + 'satojentuhansien asukkaiden kaupunkeja, mutta sisämaassa '
+          + 'tie loppuu ja matka jatkuu veneellä — joskus tunteja, '
+          + 'joskus vuorokausia. Matkailija valitsee siis joko pohjoisen '
+          + 'vuoret ja kansallispuistot tai etelän ja lännen jokireitit, '
+          + 'ja varaa kumpaankin enemmän aikaa kuin kartta lupaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Borneo',
+          taitto: 'opas',
+          teksti: 'Saari, jolla tie loppuu ja joki jatkuu — kolme maata '
+            + 'ja yksi sademetsä.',
+          nosto: 'Kinabalun huipulle pääsee ilman kiipeilyvarusteita '
+            + 'mutta ei ilman opasta: kansallispuiston säännöt vaativat '
+            + 'hyväksytyn oppaan koko nousun ajaksi.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Saarelle tullaan lentäen: suurimmat kentät ovat '
+                + 'Kota Kinabalu ja Kuching Malesian puolella sekä '
+                + 'Balikpapan ja Pontianak Indonesian puolella. '
+                + 'Rannikolla on maantie, mutta sisämaahan mennään '
+                + 'jokea pitkin, ja pitkäveneet lähtevät jokisatamista '
+                + 'kuten Rajang-joen Kapitista. Kinabalulle noustaan '
+                + 'tavallisesti kahdessa päivässä: Timpohonin portilta '
+                + '1 866 metristä kävellään kolmesta kuuteen tuntia '
+                + 'Laban Ratan majalle 3 270 metriin, ja viimeiset kaksi '
+                + 'kilometriä huipulle tehdään seuraavana aamuna '
+                + 'paljaalla graniitilla. Majalle ei mene tietä, joten '
+                + 'kaikki tavara kannetaan selässä — kantajalla saattaa '
+                + 'olla yli kolmekymmentäviisi kiloa.',
+              kuva: {
+                tiedosto: 'Speedboats and longboats at Kapit wharf.jpg',
+                selite: 'Kapitin laiturissa on kymmeniä kapeita '
+                  + 'pitkäveneitä peräkkäin, osalla värikäs peltikatto.',
+                lahde: 'Michael Goodine from Incheon , Korea, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Borneo on maailman kolmanneksi suurin saari ja '
+                + 'Aasian suurin. Pinta-alasta artikkeli antaa kaksi '
+                + 'lukua, 743 330 ja 748 168 neliökilometriä; asukkaita '
+                + 'on yli kaksikymmentä miljoonaa. Päiväntasaaja '
+                + 'halkaisee saaren suunnilleen kahtia. Noin 73 '
+                + 'prosenttia pinta-alasta on Indonesian Kalimantania, '
+                + 'runsaat 26 prosenttia Malesian Sabahia ja Sarawakia, '
+                + 'ja pohjoisrannikolla on Brunein sulttaanikunta. '
+                + 'Korkein kohta on Kinabalu Sabahissa, 4 095 metriä, ja '
+                + 'toiseksi korkein Trusmadi, 2 642 metriä. Pisin joki '
+                + 'on Kapuas Länsi-Kalimantanissa, 1 143 kilometriä, '
+                + 'sitten Barito 1 090 ja Mahakam 980. Sarawakissa on '
+                + 'myös suuria luolastoja: Clearwater Cavessa virtaa yksi '
+                + 'maailman pisimmistä maanalaisista joista, ja Deer '
+                + 'Cavessa asuu yli kolme miljoonaa lepakkoa.',
+              kuva: {
+                tiedosto: 'Kinabalu Sabah Borneo Kampong Kundasang 6.jpg',
+                selite: 'Kinabalun harmaa graniittiharjanne nousee '
+                  + 'suoraan tummanvihreän sademetsän yltä.',
+                lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: monta kieltä yhdessä talossa',
+              teksti: 'Saaren kieliä on paljon, ja monet niistä ovat '
+                + 'endeemisiä eli niitä ei puhuta missään muualla. '
+                + 'Dajakkien kielet kuuluvat useaan eri haaraan, ja '
+                + 'nykyään lähes kaikki puhuvat oman kielensä lisäksi '
+                + 'indonesiaa tai Malesian malaijia sen mukaan, kummalla '
+                + 'puolella rajaa asuvat. Nimitysten kirjo kertoo '
+                + 'saman: James Brooke halusi käyttää sanaa dajakki vain '
+                + 'kahdesta ryhmästä, maadajakeista eli bidayuheista ja '
+                + 'meridajakeista eli ibaneista, kun taas hollantilaiset '
+                + 'ja saksalaiset käyttivät sitä kaikista sisämaan '
+                + 'kansoista. Tjilik Riwut jaotteli 1954 saaren dajakit '
+                + 'kahdeksaantoista heimoon ja 403 alaryhmään. '
+                + 'Rannikolla puhutaan malaijia, ja kaupungeissa myös '
+                + 'kiinaa: Sandakania kutsuttiin aikoinaan Pikku-'
+                + 'Hongkongiksi.',
+            },
+            {
+              otsikko: 'Historian käännekohta: kolmesta hallinnosta kolme maata',
+              teksti: 'Nykyiset rajat ovat 1800-luvun perua. Brunein '
+                + 'sulttaanikunta hallitsi kukoistuksensa aikana '
+                + '1400-luvulta 1600-luvulle lähes koko saaren '
+                + 'rannikkoa ja antoi saarelle nimen. Hollantilaiset '
+                + 'palasivat etelään 1815 ja asettivat residenttinsä '
+                + 'Banjarmasiniin, Pontianakiin ja Sambasiin. Brooken '
+                + 'Sarawak laajeni pohjoisessa Brunein kustannuksella ja '
+                + 'sai 1861 Rajang-joen vesistön. Koillisosa siirtyi '
+                + 'North Borneo Chartered Companylle, joka rakensi 1879 '
+                + 'Sandakanin ja teki siitä 1884 pääkaupunkinsa; '
+                + 'kaupunki tunnettiin jonkin aikaa myös nimellä '
+                + 'Elopura, kaunis kaupunki. Bruneista tuli 1888 '
+                + 'brittiläinen suojeluvaltio. Sandakan tuhoutui '
+                + 'pommituksissa 1944, ja hallinto siirtyi Jesseltoniin '
+                + '— siksi kaupungin nykyilme on läpeensä uusi. '
+                + 'Indonesia rakentaa nyt Itä-Kalimantaniin uutta '
+                + 'pääkaupunkiaan Nusantaraa.',
+              kuva: {
+                tiedosto: 'Aerial view of Sandakan town 2016 - panoramio.jpg',
+                selite: 'Sandakan ylhäältä: uusi keskusta kapealla '
+                  + 'rantakaistaleella meren ja metsäisen kukkulan '
+                  + 'välissä.',
+                lahde: 'Steven Tung, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Rannikolla on trooppinen sademetsäilmasto, jossa '
+                + 'lämpötila pysyy vuoden ympäri 26 ja 28 asteen '
+                + 'välillä; huhti–toukokuu ovat kuumimmat ja tammikuu '
+                + 'viilein. Sadetta kertyy Kota Kinabalussa noin 2 400 '
+                + 'millimetriä vuodessa, kuivimmat kuukaudet ovat '
+                + 'helmi- ja maaliskuu ja sateisin lokakuu, kun '
+                + 'monsuunien välinen kausi on menossa. Koillismonsuuni '
+                + 'puhaltaa marraskuusta maaliskuuhun ja lounaismonsuuni '
+                + 'toukokuusta syyskuuhun. Vuorilla on toinen ilmasto: '
+                + 'Kinabalun rinne vaihtuu kosteasta tropiikista '
+                + 'huipun alppivyöhykkeeksi, ja huipulla mitataan '
+                + 'joulu–tammikuussa neljästä pakkasasteesta '
+                + 'kahdeksaan lämpöasteeseen. Kuuraa esiintyy '
+                + 'toisinaan, ja lunta on kirjattu kolmesti: 1975, 1993 '
+                + 'ja 2022. Luvut on luettu en-Wikipedian Kota Kinabalu- '
+                + 'ja Mount Kinabalu -artikkelien ilmasto-osioista, '
+                + 'koska pelin oma säärivi Borneolle puuttuu '
+                + 'toistaiseksi.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saaren sademetsä on noin 140 miljoonaa vuotta vanha, ja '
+        + 'siinä elää lajeja joita ei tavata mistään muualta. Saman '
+        + 'saaren luolista on löytynyt maailman vanhinta tunnettua '
+        + 'kuvataidetta.',
+      tehtava: {
+        kysymys: 'Kuinka vanha on Borneon luolista löytynyt maailman '
+          + 'vanhin tunnettu esittävä maalaus?',
+        vaihtoehdot: [
+          'Noin 4 000 vuotta',
+          'Noin 12 000 vuotta',
+          'Yli 40 000 vuotta',
+          'Yli 200 000 vuotta',
+        ],
+        oikea: 2,
+        fakta: 'Lubang Jeriji Saléhin luolasta löytyi vuonna 2018 '
+          + 'tuntemattoman eläimen kuva, jonka iäksi arvioitiin yli '
+          + '40 000 ja mahdollisesti jopa 52 000 vuotta. Se on tiettävästi '
+          + 'maailman vanhin tunnettu esittävä maalaus.',
+      },
+      nostot: [
+        {
+          otsikko: 'Metsä, joka näki dinosaurukset',
+          tiedosto: 'Inside the tropical rainforest (11464713995).jpg',
+          teksti: 'Borneon sademetsän arvioidaan olevan noin 140 '
+            + 'miljoonaa vuotta vanha, mikä tekee siitä yhden maailman '
+            + 'vanhimmista. Alavia osia hallitsevat yhä samat puut kuin '
+            + 'miljoonia vuosia sitten eli dipterokarpit, ja '
+            + 'pelkästään alangon sademetsää on '
+            + '427 500 neliökilometriä. Koko rantaviivaa kiertää '
+            + 'turvesuometsä, ja tuhannen metrin yläpuolella alkaa '
+            + 'vuoristosademetsä. Makean veden kaloja tunnetaan noin 440 '
+            + 'lajia — suunnilleen yhtä paljon kuin Sumatralla ja '
+            + 'Jaavalla yhteensä. Vuoden 2007 Heart of Borneo '
+            + '-sopimuksen jälkeen saarelta oli vuoteen 2010 mennessä '
+            + 'löydetty 123 tieteelle uutta lajia.',
+          selite: 'Sademetsän sisältä: ohuita runkoja, riippuvia '
+            + 'köynnöksiä ja lehtien peittämä pohja himmeässä valossa.',
+          lahde: 'shankar s. from Dubai, united arab emirates, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Luola, joka siirsi taiteen alkua',
+          tiedosto: 'LHFage Bouquet de Mains, Gua Jeriji Saleh, Kalimantan, Indonesie..jpg',
+          teksti: 'Marraskuussa 2018 tutkijat kertoivat löytäneensä '
+            + 'Lubang Jeriji Saléhin luolasta Itä-Kalimantanista '
+            + 'tuntemattoman eläimen kuvan, joka on yli 40 000 ja '
+            + 'mahdollisesti jopa 52 000 vuotta vanha. Se on tiettävästi '
+            + 'maailman vanhin tunnettu esittävä maalaus. Saman saaren '
+            + 'Niah-luolasta Sarawakista on löydetty ihmisen jälkiä noin '
+            + '40 000 vuoden takaa, ja luolaston Trader Cave -osasta '
+            + 'mikroliittityökaluja ja ihmisen jäännöksiä 55 000–65 000 '
+            + 'vuoden takaa. Sabahin Samang Buatin luolassa asuttiin '
+            + 'noin 46 000 vuotta sitten.',
+          selite: 'Luolan seinässä kuusi kättä on jäljennetty vaalealla '
+            + 'tummaan pohjaan niin, että ne muodostavat renkaan.',
+          lahde: 'Lhfage, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Metsän ihminen tarvitsee metsän',
+          tiedosto: 'Bornean Orangutan (Pongo pygmaeus) (14392504610).jpg',
+          teksti: 'Borneonoranki elää luonnossa vain tällä saarella. Se '
+            + 'on läntisen gorillan jälkeen maailman kolmanneksi suurin '
+            + 'ihmisapina ja suurin, joka viettää elämänsä puissa: '
+            + 'urokset painavat keskimäärin 75 kiloa. Laji syö yli 400 '
+            + 'erilaista ravintoa viikunoista durianiin, hunajaan ja '
+            + 'hyönteisiin, ja se tarvitsee siksi laajan yhtenäisen '
+            + 'metsän. Borneonoranki elää yksinäisemmin kuin Sumatran '
+            + 'sukulaisensa, ja aikuiset kohtaavat vain lyhyesti. Kun '
+            + 'metsä pirstoutuu, elintila kapenee: kanta pieneni '
+            + 'vuosina 1999–2015 arviolta 148 500 yksilöllä.',
+          selite: 'Oranki roikkuu pitkillä käsivarsillaan köydessä '
+            + 'metsän yllä Sepilokin kuntoutusasemalla.',
+          lahde: 'Bernard DUPONT from FRANCE, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Vuori, jolla on oma kasvistonsa',
+          tiedosto: 'Kinabalu Mesilau N. rajah 25.jpg',
+          teksti: 'Kinabalu on saaren korkein huippu, 4 095 metriä. Vielä '
+            + 'satatuhatta vuotta sitten sen rinteillä oli jäätiköitä, '
+            + 'jotka kaivoivat pohjoispuolelle 1 800 metriä syvän Low\'s '
+            + 'Gully -rotkon; huipun paljas graniitti on maailman '
+            + 'nuorimpia esiin kuluneita graniitteja. Vuorelta ja sen '
+            + 'ympäristöstä tunnetaan 5 000–6 000 kasvilajia, 326 '
+            + 'lintulajia ja yli sata nisäkäslajia. Kämmekkälajeja on '
+            + '866 ja saniaisia yli 600 eli enemmän kuin koko Afrikassa. '
+            + 'Kannukasveja täällä on maailman rikkain kokoelma, ja '
+            + 'niistä suurikannuisin, Nepenthes rajah, kasvaa vain '
+            + 'täällä.',
+          selite: 'Nepenthes rajahin punaruskea kannu lepää sammalikossa '
+            + 'kansi auki, ja sen sisällä näkyy nestettä.',
+          lahde: 'JeremiahsCPs, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * SUMATRA (Opus 21.8.2026). ALUELEHTI Rub al-Khalin, Siinain ja
+   * Kappadokian mallin mukaan: kaksi sivua (kansi + teemasivu `luonto`)
+   * ja matkaopas, EI kohdekarttaa eikä nähtävyysjuttuja. Sumatra on
+   * saari eikä kaupunki, joten karttakohteita ei ole — sama ratkaisu
+   * kuin Kamtšatkalla ja Sahalinilla (spec-asia.md). Kohteella oli
+   * laudalla jo saapumisrivi, kulttuurivisa ja valokuvakortit
+   * (asia-lisat-valokuvat.js), mutta ei lehteä.
+   *
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 21.8.2026): Sumatra, Lake Toba, Youngest Toba eruption,
+   * Aceh Sultanate, Aceh War, 1883 eruption of Krakatoa, Sumatran
+   * orangutan, Sumatran tiger, Rafflesia arnoldii, Amorphophallus
+   * titanum, Tropical Rainforest Heritage of Sumatra, Batak, Medan,
+   * North Sumatra, Berastagi ja Parapat.
+   *
+   * SISÄLTÖLINJAUS on sama Indonesia-linjaus kuin Jakartassa: ei
+   * nykypolitiikkaa. POIS JÄTETTY kokonaan: Acehin kapina 1976–2005 ja
+   * sen ihmisoikeusraportit, vuoden 2018 lauttaonnettomuus Toballa,
+   * Medanin nykyinen kunnallispolitiikka sekä Sumatra-artikkelin
+   * ekosidi-keskustelu, joka on akateemista kannanottoa eikä
+   * maantiedettä. Acehin sota 1873–1903 kerrotaan hallinnollis-
+   * historiallisena käänteenä (sopimus, sodan alku, antautuminen) ilman
+   * taisteluita, uhrilukuja tai osapuolikehystä — sen vuosiluku on
+   * lehdessä siksi, että se on isoisän oma matkavuosi. Krakatau 1883 ja
+   * vuoden 2004 tsunami ovat luonnonhistoriaa: purkauksen ääni,
+   * paineaalto ja ilmakehävaikutus kerrotaan, uhriluvut eivät ole
+   * lehdessä lainkaan.
+   *
+   * KOLME TARKENNUSTA FAKTAPOHJAAN (docs/aasia-tyoaineisto/
+   * faktapohja-sumatra.md), jotka on tehty tässä:
+   * 1) Tarkistusraportin (tarkistus-sumatra.md, kohta 1) korjaus on
+   *    otettu käyttöön: väite Acehin kauppareiteistä Punaisenmeren
+   *    kautta Välimerelle on Sumatra-artikkelista, ei Aceh Sultanate
+   *    -artikkelista. Sama koskee lausetta pippurikaupan keskuksesta.
+   * 2) Krakataun luvut on tarkennettu tarkistusraportin kohdan 2
+   *    mukaisesti: 3 110 km Perthiin ja 4 800 km Rodriguesille,
+   *    paineaalto kiersi maapallon kolme ja puoli kertaa, aallot
+   *    24 metriä Sumatran etelärannikolla. Faktapohjan varovaiset
+   *    "yli 3000 km" ja "useita kertoja" on korvattu näillä.
+   * 3) Faktapohja ajoitti metsäkadon vuoteen 1980. Sumatra-artikkelin
+   *    johdanto sanoo "in the last 35 years" ja kantaa Clarify-
+   *    merkinnän, mutta saman artikkelin Flora and fauna -osio sanoo
+   *    suoraan "since 1980". Lehti käyttää jälkimmäistä, koska se on
+   *    kiinteä vuosiluku eikä vanhene.
+   *
+   * KAKSI RISTIRIITAA, JOTKA ON KIRJOITETTU AUKI LUKIJALLE:
+   *  - Toban purkauksen ikä. Lake Toba antaa haarukan 69 000–77 000
+   *    vuotta sitten ja tarkennuksen 74 000; Youngest Toba eruption
+   *    antaa 73 700 ± 300. Kansisivun nosto kertoo molemmat.
+   *  - Acehin sodan loppu. Sumatra-artikkeli antaa sodalle vuodet
+   *    1873–1903, Aceh Sultanate -artikkelin infoboksi 1873–1914 ja
+   *    sama artikkelin leipäteksti sulttaanin antautumisen 1903 ja
+   *    hajanaisen vastarinnan loppumisen 1912. Nosto kertoo
+   *    antautumisvuoden ja vastarinnan vuoden erikseen, niin että ero
+   *    näkyy lukijalle.
+   *
+   * SÄÄRIVI PUUTTUU TOISTAISEKSI, ja se on kirjattu tähän, jottei
+   * seuraava tekijä etsi sitä turhaan. saatiedot.js:ään ei tullut
+   * sumatra-riviä, koska Open-Meteon arkistorajapinnan (ERA5)
+   * VUOROKAUSIKIINTIÖ oli tämän kontin ulosmenevällä osoitteella
+   * täynnä koko työvuoron ajan: mittauspisteellä 2,68 / 98,88
+   * (Toba-järvi, Wikipedian infoboksin keskipiste) vastaus oli
+   * kahdeksalla peräkkäisellä yrityksellä "Daily API request limit
+   * exceeded". Sama tilanne oli Xi'anin lehteä tehtäessä samana
+   * päivänä; menettely on Samarkandin malli (v965): lukuja EI keksitä,
+   * rivi haetaan erikseen kiintiön vapauduttua. Oppaan sääjakso on
+   * siksi kirjoitettu en-Wikipedian omista sääluvuista, ja jakso kertoo
+   * itse, että sen luvut ovat Medanin rannikkoaseman normaaleja
+   * (Kualanamu 1991–2020) ja Berastagin ylängön sanallista kuvausta —
+   * Siinain ja Petran ennakkotapaus mittauspisteen selittämisestä.
+   *
+   * KUVAT. Kansikuvat ovat kolme LAAJAA yleiskuvaa saaren eri puolilta
+   * (pohjoinen Toba, keskinen Kerinci, eteläinen Bengkulu), kuten
+   * omistaja linjasi 21.8.2026. Kohteella on jo viisi rekisteröityä
+   * valokuvaa (asia-lisat-valokuvat.js: Karbouwengat 1918, Rumah Gadang
+   * dan Rangkiang, Lake Toba and the surrounding hills, Nasi bungkus
+   * opened, Ngarai Sianok Bukittinggi); yhtäkään niistä ei käytetä
+   * uudelleen täällä. HYLÄTYT kuvat ja syyt ovat erän raportissa;
+   * tärkeimmät: Kerincin parhaat maisemakuvat (Muhamad Izzul Fiqih)
+   * hylättiin kameran polttamasta päivämääräleimasta, Banda Acehin
+   * suurmoskeijan tuoreet kuvat tunnistettavista kasvoista etualalla ja
+   * KITLV:n tupakkaplantaasikuvat kuvaan painetusta studion
+   * signeerauksesta.
+   *
+   * KAKSI LÄHDERIVIÄ POIKKEAA extmetadata.Artist-kentästä yhdellä
+   * merkillä, ja se on tietoinen: Krakataun litografian Artist-kenttä
+   * päättyy puolipisteeseen ("Lithograph: Parker & Coward, Britain;"),
+   * joka on Commonsin sivupohjan jäänne eikä osa tekijänimeä, ja
+   * KITLV:n kuvassa Artist-kentän &amp; on kirjoitettu tähän
+   * &-merkkinä. Muilta osin tekijät ovat sanatarkasti rajapinnan
+   * muodossa. Kaikki kahdeksantoista kuvaa on tarkistettu koneellisesti
+   * Commonsin rajapinnasta: leveys vähintään 1 200 pikseliä, lisenssi
+   * PD / CC0 / CC BY / CC BY-SA, Restrictions tyhjä.
+   *
+   * TOBA-JÄRVI NÄKYY NELJÄSSÄ KUVASSA, ja se on tietoinen valinta
+   * (Mekan Jabal al-Nourin ja Xi'anin terrakotta-armeijan
+   * ennakkotapaus): järvi on saaren tunnetuin kohta, ja kuvat
+   * näyttävät sen neljältä etäisyydeltä — Sipinsurin näköalapaikalta
+   * ylhäältä (kansi), Samosirin rinteiltä (nosto), veneestä
+   * lauttamatkalla (opas) ja kalderan reunalta Bukit Senyumista
+   * (matkailijalle-kuva).
+   */
+  sumatra: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sumatra',
+      johdanto: 'Maailman kuudenneksi suurin saari, jonka keskeltä '
+        + 'päiväntasaaja kulkee. Länsireunaa seuraa Barisan-vuoristo '
+        + 'tulivuorineen, ja sen sisällä lepää Toba — maailman suurin '
+        + 'tulivuorijärvi.',
+      kansikuvat: [
+        {
+          tiedosto: 'Toba Lake from Sipinsur.jpg',
+          selite: 'Toba-järvi Sipinsurin näköalapaikalta saaren '
+            + 'pohjoisosassa: salmi kaartuu Samosirin ja mantereen '
+            + 'välissä, ja rannoilla näkyy kyliä ja peltoja.',
+          lahde: 'Almarams, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kerinci Mountain.jpg',
+          selite: 'Kerinci keskisellä Sumatralla nousee pilvikerroksen '
+            + 'yläpuolelle aamulla Kersik Tuon kylästä nähtynä.',
+          lahde: 'Hendypernando, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Terasering persawahan di bawah gunung daun bukit barisan.jpg',
+          selite: 'Riisiterasseja Gunung Daunin juurella Pohjois-Bengkulussa '
+            + 'saaren eteläosassa, missä Barisan-vuoristo laskee kohti '
+            + 'rannikkoa.',
+          lahde: 'RahmadHimawan Photography, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Pantai Padang Wide View Gunung Padang Pagi Hari West Sumatra 2026.jpg',
+          selite: 'Padangin ranta Länsi-Sumatralla aamulla: ruskea hiekka '
+            + 'kaartuu Intian valtameren rantaan, ja niemellä kohoaa '
+            + 'metsäinen Gunung Padang.',
+          lahde: 'Undeka 11, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Hutan Gunung Leuser Aceh.jpg',
+          selite: 'Gunung Leuserin kansallispuiston sademetsää Acehissa, '
+            + 'jossa sammalen peittämät rungot kaartuvat puron yli.',
+          lahde: 'Ganjarmustika1904, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Musi River.jpg',
+          selite: 'Musi-joki Palembangissa saaren kaakkoiskulmassa: '
+            + 'vastarannalla on satamakaupungin matala talorivi.',
+          lahde: 'Cynthia.veronica, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Järvi, joka on kuoppa',
+          tiedosto: 'A piece of heaven in Samosir Island.jpg',
+          teksti: 'Toba on sata kilometriä pitkä, kolmekymmentä leveä ja '
+            + '505 metriä syvä: maailman suurin tulivuorijärvi. Se ei ole '
+            + 'laakso vaan romahdus. Toban tulivuori purkautui noin '
+            + '74 000 vuotta sitten — Wikipedian haarukka on '
+            + '69 000–77 000 vuotta ja tarkin ajoitus 73 700 — ja purkaus '
+            + 'on suurin tunnettu räjähtävä purkaus kahteenkymmeneenviiteen '
+            + 'miljoonaan vuoteen. Ainesta lensi ilmaan ainakin 2 800 '
+            + 'kuutiokilometriä, ja tuhkaa satoi koko Etelä-Aasian yli. '
+            + 'Magmakammion tyhjennyttyä katto putosi sisään ja kuoppa '
+            + 'täyttyi vedellä. Pohja on sen jälkeen noussut takaisin: '
+            + 'järven keskellä oleva Samosirin saari on kohonnut ainakin '
+            + '450 metriä.',
+          selite: 'Toba-järvi Samosirin saaren rinteiltä: vihreät kukkulat '
+            + 'laskevat peltoina veteen ja vastaranta häviää utuun.',
+          lahde: 'Franklin Daniel Situmorang, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Pippurin sulttaanikunta',
+          tiedosto: 'KITLV - 82486 - Lambert Co., G.R. - Singapore - Aceh River seen from the Peunajung bridge at Banda Aceh (Kotaraja) against the backdrop of the Great Mosque - 1896.jpg',
+          teksti: 'Saaren pohjoiskärki tunnettiin 1500-luvulta pippurista. '
+            + 'Acehista tuli sen kaupan keskus, ja sulttaanikunta avasi '
+            + 'omat reittinsä Punaisenmeren kautta Välimerelle '
+            + 'kilpailemaan portugalilaisten laivalinjojen kanssa. '
+            + '1820-luvulla Aceh tuotti yli puolet koko maailman '
+            + 'pippurista, ja johtaja Tuanku Ibrahim sai pippuriruhtinaat '
+            + 'kuriin pelaamalla heitä toisiaan vastaan. Britannia oli '
+            + 'pitkään suojellut sulttaanikunnan itsenäisyyttä, mutta '
+            + 'vuosien 1870 ja 1871 sopimuksissa se luovutti Sumatran '
+            + 'Alankomaille. Acehin sota alkoi 1873, isoisän omana '
+            + 'matkavuonna; sulttaani antautui 1903, ja hajanainen '
+            + 'vastarinta jatkui vuoteen 1912.',
+          selite: 'Acehjoki Peunajungin sillalta Banda Acehissa vuonna '
+            + '1896, ja paalutalojen takaa nousee suurmoskeijan kupoli.',
+          lahde: 'Lambert & Co., G.R. / Singapore, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kovin ääni, joka on mitattu',
+          tiedosto: 'Krakatoa eruption lithograph.jpg',
+          teksti: 'Sumatran ja Jaavan välisessä Sundan salmessa purkautui '
+            + 'elokuussa 1883 Krakatau. Päivän kolmas ja suurin räjähdys '
+            + 'kello 10.02 kuului 3 110 kilometrin päähän Perthiin ja '
+            + '4 800 kilometrin päähän Rodriguesin saarelle Intian '
+            + 'valtamerellä: se on kovin ääni, joka on koskaan mitattu. '
+            + 'Aallot nousivat Sumatran etelärannikolla 24 metriin. '
+            + 'Paineaalto piirtyi barografeihin ympäri maailman ja kiersi '
+            + 'maapallon kolme ja puoli kertaa. Tuhka jäi ilmakehään '
+            + 'vuosiksi: illat paloivat punaisina, ja kun sään seuraajat '
+            + 'kartoittivat tuhkan kulkeman virran, syntyi ensimmäinen '
+            + 'havainto suihkuvirtauksesta.',
+          selite: 'Vuoden 1888 litografia Krakataun purkauksesta: '
+            + 'tuhkapatsas nousee saaren yllä ja hehku värjää meren.',
+          lahde: 'Lithograph: Parker & Coward, Britain, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Maa, joka vapisee',
+          tiedosto: 'Mount Sinabung 2017 (33117536845).jpg',
+          teksti: 'Saaren länsireunassa on kaksi suurta murtumaa. Suuri '
+            + 'Sumatran siirros kulkee koko saaren pituudelta, ja sen '
+            + 'edustalla merenpohjassa on Sundan valtahauta, jossa Intian '
+            + 'valtameren puoleinen laatta painuu Aasian laatan alle. '
+            + 'Samasta liikkeestä syntyvät sekä Barisan-vuoriston '
+            + 'tulivuoret että järistykset. Vuonna 1797 Länsi-Sumatraa '
+            + 'järisytti 8,9:n järistys ja vuonna 1833 Bengkulua 9,2:n, ja '
+            + 'kumpikin nosti suuren tsunamin. Vuoden 2004 Intian '
+            + 'valtameren järistys on näistä tunnetuin, ja se on samalla '
+            + 'pisin koskaan mitattu järistys: se kesti kahdeksasta '
+            + 'kymmeneen minuuttiin.',
+          selite: 'Sinabungin tulivuori Pohjois-Sumatralla purkaa '
+            + 'tuhkapatsaan huipultaan viljelysten yläpuolella vuonna 2017.',
+          lahde: 'Pavel Kirillov from St.Petersburg, Russia, Wikimedia '
+            + 'Commons (CC BY-SA 2.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'View of Lake Toba from Bukit Senyum Motung, Ajibata, Toba, North Sumatra.jpg',
+          selite: 'Toba-järvi Bukit Senyumin rinteeltä Motungin kylän '
+            + 'kohdalla, ja vastarannalla kaartuu kalderan reuna.',
+          lahde: 'Sophia Guevara, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Sumatra ei ole kohde vaan kymmenen maakuntaa: saari on '
+          + '1 790 kilometriä pitkä, ja päästä päähän matkustaminen vie '
+          + 'päiviä. Useimmat tulevat pohjoiseen Medaniin ja jatkavat '
+          + 'sieltä ylängölle Toba-järvelle tai Gunung Leuserin '
+          + 'sademetsään. Länsipuoli on vuoria ja tulivuoria, itäpuoli '
+          + 'matalaa suo- ja jokitasankoa, jonka läpi ei matkusteta huvin '
+          + 'vuoksi. Suuri osa matalasta maasta on viljelmää, ja metsä '
+          + 'alkaa vasta niiden takaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Sumatra',
+          taitto: 'opas',
+          teksti: 'Kaksi rannikkoa, vuorijono niiden välissä ja tuhat '
+            + 'kilometriä matkaa päästä päähän — matkailijan Sumatra on '
+            + 'muutama tukikohta ja pitkiä välejä.',
+          nosto: 'Sumatra tunnettiin sanskritiksi nimellä Svarnadvipa, '
+            + 'kultasaari, ylänköjen kultaesiintymien takia. Nykyinen nimi '
+            + 'vakiintui vasta 1300-luvulla.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Portti saarelle on Medan, Pohjois-Sumatran '
+                + 'pääkaupunki ja Jaavan ulkopuolisen Indonesian suurin '
+                + 'kaupunki: asukkaita oli vuoden 2025 puolivälissä noin '
+                + '2,5 miljoonaa. Kansainväliset lennot tulevat sen '
+                + 'Kualanamun kentälle. Toba-järvelle mennään maanteitse. '
+                + 'Parapatin lauttasatama on 173 kilometriä Medanista, ja '
+                + 'sinne johtaa Trans-Sumatran valtatie Pematang Siantarin '
+                + 'kautta; Parapatista lautta vie Samosirin saarelle. '
+                + 'Rautateitä on, mutta ne ovat hollantilaisajan '
+                + 'irrallisia pätkiä, jotka eivät liity toisiinsa: yksi '
+                + 'pohjoisessa Medanin ympärillä, yksi Padangin seudulla '
+                + 'ja yksi etelässä Palembangin suunnalla.',
+              kuva: {
+                tiedosto: 'Kapal Penyeberangan Danau Toba Parapat.jpg',
+                selite: 'Lautta ylittää Toba-järven Parapatin ja Samosirin '
+                  + 'väliä, ja taustalla nousee kalderan reunan pitkä '
+                  + 'seinämä.',
+                lahde: 'Herusutimbul, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Sumatra on 1 790 kilometriä pitkä luoteesta '
+                + 'kaakkoon ja leveimmillään 435 kilometriä. Pinta-alaa on '
+                + '482 287 neliökilometriä, mikä tekee siitä maailman '
+                + 'kuudenneksi suurimman saaren ja Indonesian suurimman '
+                + 'kokonaan omalla alueella olevan saaren. Päiväntasaaja '
+                + 'ylittää sen keskeltä Länsi-Sumatran ja Riaun maakuntien '
+                + 'kohdalla. Länsipuolta hallitsee Barisan-vuoristo, jota '
+                + 'on kutsuttu Sumatran Andeiksi ja jonka korkein huippu '
+                + 'Kerinci nousee 3 805 metriin — se on samalla Indonesian '
+                + 'korkein tulivuori. Itäpuoli on matalaa tasankoa, suota '
+                + 'ja mangrovea, ja sen läpi virtaavat suuret joet; pisin '
+                + 'niistä on Musi. Pohjoisessa Malakan salmi erottaa '
+                + 'saaren Malakan niemimaasta ja etelässä Sundan salmi '
+                + 'Jaavasta.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: puunkuoreen taiteltu kirja',
+              teksti: 'Toba-järven ympärillä asuvat batakit, joiden '
+                + 'perinteisen talon katto kaartuu molemmista päistä '
+                + 'ylöspäin kuin veneen runko ja jonka päädyt on maalattu '
+                + 'kirkkain värein. Batakeilla on myös oma '
+                + 'kirjoitusjärjestelmänsä, surat batak, jota käytettiin '
+                + 'ennen kaikkea seremonioissa ja joka siksi muuttui '
+                + 'vähän. Sillä kirjoitettiin pustaha: puusta ja '
+                + 'puunkuoresta taiteltu haitarikirja, johon merkittiin '
+                + 'parannusohjeita, loitsuja, lauluja ja '
+                + 'ennustuskalentereita lyhennetyllä poda-kirjoituksella. '
+                + 'Kirjoitustaito tuli batakeille todennäköisesti '
+                + 'eteläisemmältä Sumatralta.',
+              kuva: {
+                tiedosto: 'Rumah Bolon (Batak Traditional House).jpg',
+                selite: 'Batakkien perinteinen talo eli rumah bolon: '
+                  + 'harjakatto kaartuu molemmista päistä ylös, ja runko '
+                  + 'lepää maalattujen paalujen päällä.',
+                lahde: 'Roberto Marpaung, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: tupakkamaa',
+              teksti: 'Samaan aikaan kun pohjoisessa alkoi Acehin sota, '
+                + 'itärannikolle syntyi kokonaan uusi talous. '
+                + 'Hollantilaiset alkoivat 1860-luvulla avata maata '
+                + 'tupakkaviljelmille Delin sulttaanikunnan alueella, ja '
+                + 'kauppias Jacob Nienhuys siirsi liikkeensä Jaavalta '
+                + 'sinne. De Deli Maatschappij perustettiin 1867, ja sen '
+                + 'pääkonttori muutti Medaniin 1869 — samana vuonna, jona '
+                + 'Suezin kanava avattiin ja matka Eurooppaan lyheni. '
+                + 'Medania alettiin kutsua rahan maaksi. Delin rautatie '
+                + 'rakennettiin viemään tupakkaa, kumia, teetä, puutavaraa, '
+                + 'palmuöljyä ja sokeria Belawanin satamaan. Samat '
+                + 'tuotteet ovat yhä Pohjois-Sumatran vientilistalla, ja '
+                + 'niiden rinnalle ovat nousseet kaakao, kahvi, kookos ja '
+                + 'mausteet.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Sumatran ilmasto on trooppinen, kuuma ja kostea, ja '
+                + 'lämpötila vaihtelee enemmän korkeuden kuin kuukauden '
+                + 'mukaan. Tästä lehdestä puuttuu toistaiseksi '
+                + 'vuosigraafi, joten luvut kerrotaan tässä ja niiden '
+                + 'mittauspiste sanotaan ääneen. Rannikolla, Medanin '
+                + 'Kualanamun asemalla, päivän ylin on kauden 1991–2020 '
+                + 'normaaleissa joka kuukausi 31 ja 33 asteen välissä ja '
+                + 'yön alin runsaat 23 astetta: vuodenaikoja ei lämmössä '
+                + 'juuri ole. Sade sen sijaan vaihtelee, sillä helmikuussa '
+                + 'sitä tulee alle sata millimetriä ja syys-lokakuussa '
+                + 'lähes kolmesataa. Ylängöllä on toinen ilmasto — '
+                + 'Toba-järvi on 900 metrin korkeudessa ja sen '
+                + 'pohjoispuolella Berastagi 1 300 metrissä, missä vuoden '
+                + 'keskilämpö on kahdeksantoista astetta ja yöt painuvat '
+                + 'kahdentoista asteen tienoille.',
+              kuva: {
+                tiedosto: 'Hamparan Sawah Hijau Kelurahan Lubuk Buaya.jpg',
+                selite: 'Riisipeltoja Padangin laidalla Länsi-Sumatralla, '
+                  + 'ja taustalla häämöttää utuinen Barisan-vuoristo.',
+                lahde: 'DahliaDahlia Putri, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Sumatran metsissä elää neljä kriittisesti uhanalaista '
+        + 'suurta nisäkästä, joita ei tavata missään muualla. Samassa '
+        + 'metsässä kasvavat maailman suurin yksittäinen kukka ja maailman '
+        + 'suurin haarautumaton kukinto.',
+      tehtava: {
+        kysymys: 'Miten Rafflesia arnoldii, maailman suurin yksittäinen '
+          + 'kukka, hankkii ravintonsa?',
+        vaihtoehdot: [
+          'Yhteyttämällä lehdissään',
+          'Loisimalla köynnöksen sisällä',
+          'Pyydystämällä hyönteisiä',
+          'Juurillaan suoraan maasta',
+        ],
+        oikea: 1,
+        fakta: 'Rafflesialla ei ole lehtiä, vartta eikä juuria: se elää '
+          + 'rihmastona Tetrastigma-köynnöksen sisällä ja tulee näkyviin '
+          + 'vasta kukkiessaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Metsän ihminen',
+          tiedosto: 'Bukit Lawang, orangutan (6931330003).jpg',
+          teksti: 'Sumatranorangutania tavataan enää saaren pohjoisosassa, '
+            + 'ja vuonna 2017 kanta arvioitiin noin 13 800 yksilöksi. Laji '
+            + 'on kriittisesti uhanalainen ja harvinaisempi kuin Borneon '
+            + 'orangutani. Se on silti selvästi seurallisempi kuin '
+            + 'sukulaisensa: ryhmät kokoontuvat samoihin viikunapuihin '
+            + 'syömään silloin, kun hedelmiä on kerralla paljon, vaikka '
+            + 'aikuiset urokset välttelevät toisiaan. Poikaset pysyvät '
+            + 'emonsa lähellä kolme vuotta, ja uusi poikanen syntyy '
+            + 'keskimäärin 9,3 vuoden välein — pisin tunnettu väli '
+            + 'kaikista ihmisapinoista.',
+          selite: 'Sumatranorangutani poikasineen Bukit Lawangin '
+            + 'ruokintalavalla Gunung Leuserin kansallispuiston laidalla, '
+            + 'jossa metsään palautettuja yksilöitä on tuettu lisäruoalla.',
+          lahde: 'Arian Zwegers, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Sunda-saarten viimeinen tiikeri',
+          tiedosto: 'Harimau Sumatera (Sumatran Tiger).jpg',
+          teksti: 'Sumatran tiikeri on ainoa tiikerikanta, joka on '
+            + 'jäljellä Sunda-saarilla: Jaavan ja Balin tiikerit kuolivat '
+            + 'sukupuuttoon 1900-luvun kuluessa. Se on myös maailman '
+            + 'pienimpiä tiikereitä — urokset painavat sadasta '
+            + 'sataanneljäänkymmeneen kiloon, naaraat vähemmän — ja sen '
+            + 'raidat ovat tiheämmässä kuin muilla tiikereillä. Vuonna '
+            + '1978 kanta arvioitiin tuhanneksi yksilöksi ja vuonna 2017 '
+            + 'enää 618:ksi, ja jälkimmäisen arvion epävarmuus oli lähes '
+            + 'kolmesataa kumpaankin suuntaan. Suurin joukko elää '
+            + 'Kerinci Seblatin kansallispuistossa keskisellä Sumatralla, '
+            + 'jonka alasta 83 prosentilta on löytynyt merkkejä '
+            + 'tiikeristä.',
+          selite: 'Sumatran tiikeri lepää ruohikossa Medanin '
+            + 'eläintarhassa, jossa tämä kuva on otettu.',
+          lahde: 'Iyosswazzo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksi kukkaa, jotka haisevat lihalta',
+          tiedosto: 'A blooming Raflesia arnoldi.jpg',
+          teksti: 'Sumatran sademetsässä kasvaa kaksi kasvimaailman '
+            + 'äärimmäisyyttä, ja kumpaakin kutsutaan raatokukaksi. '
+            + 'Rafflesia arnoldii on maailman suurin yksittäinen kukka: '
+            + 'noin metrin levyinen ja jopa yksitoista kiloa painava. Sen '
+            + 'löysi 1818 kirurgi Joseph Arnold Stamford Rafflesin '
+            + 'retkikunnassa Bengkulussa, ja se sai nimensä molemmilta. '
+            + 'Toinen on jättiraunioyrtti, maailman suurin haarautumaton '
+            + 'kukinto: yli kolme metriä korkea kukinto lämmittää kärkensä '
+            + 'ihmisen ruumiinlämpöön, jotta haju nousisi ilmaan, ja sen '
+            + 'voi haistaa jopa 800 metrin päähän. Italialainen Odoardo '
+            + 'Beccari löysi sen 1878 Priamanin yläpuolisilta kukkuloilta.',
+          selite: 'Rafflesia arnoldii kukkii metsänpohjalla: viisi '
+            + 'punaista, vaaleapilkkuista lehteä aukeaa syvän maljan '
+            + 'ympärille.',
+          lahde: 'Neisyaranifauzia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Metsä, joka kutistuu',
+          tiedosto: 'Riau palm oil 2007.jpg',
+          teksti: 'Sumatra on menettänyt lähes puolet trooppisesta '
+            + 'sademetsästään vuoden 1980 jälkeen, kun maata on raivattu '
+            + 'viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia '
+            + 'ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia '
+            + 'esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla '
+            + 'Mentawaiden ryhmässä. Saarella on yli kymmenen '
+            + 'kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci '
+            + 'Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 '
+            + 'maailmanperintöön 25 000 neliökilometrin kokonaisuutena. '
+            + 'Kohde on ollut vuodesta 2011 uhanalaisten listalla.',
+          selite: 'Raivattua maata öljypalmun viljelyalueella Riaussa: '
+            + 'kantojen välissä kulkee kuivatusoja ja tie.',
+          lahde: 'Hayden, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+  ],
 };
