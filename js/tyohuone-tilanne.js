@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v966 — XI\'AN JA VARANASI: uudet lehdet (Ming-muurikaupungin kartta 9 kohteella; ghatien kartta 8 kohteella + Sarnathin kainalo). KAKKOSSIVU-UUDISTUS: kaupunki-sivun otsikko on nyt "X pintaa syvemmalta" ja teemasivut palasivat kategoriatason otsikoihin (v964:n omat nimet pois). HUOM: molempien saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: molempien kartta ja Matkaopas, parin lehden kakkossivu',
   'v965 — SAMARKAND: uusi lehti (kartta 9 kohteella, Registan–Gur-e-Amir–Shah-i-Zinda; 27 kuvaa mm. Prokudin-Gorski ja Verestsagin 1870). HUOM: saarivi puuttuu viela — Open-Meteon paivakiintio taynna, taydennetaan kiintion auettua. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v964 — KAKKOSSIVUJEN OMAT NIMET (vaihtoehto A): kaikilla 90 teemasivulla kaupunkikohtainen osasto-otsikko vakionimen sijasta (esim. Kioto: Tuhat vuotta pääkaupunkina; Mosul: Messinkiin upotettu hopea; Berliini: Aurinkoristi ja Trabantin vaihteisto). Sivu-id:t ja visat ennallaan. Tarkista: avaa muutama kakkossivu',
   'v963 — TEKSTIREMONTTI VALMIS: viimeiset erat E6–E8 (Kiova, Odessa, Sofia, Bukarest, Sarajevo, Venetsia, Firenze, Dublin, Edinburgh, Marseille, Lappi, Kreeta, Sisilia, Alpit, Tromssa, Dubrovnik, Tripoli). KONEELLINEN LOPPUTARKISTUS: kaikkien 91 lehdellisen kaupungin etusivun johdatus on uudessa mitassa (0 alle rajan, 0 puuttuvaa) — kehittajakartalla ei pitaisi nakya enaa yhtaan oranssinruskeaa. Tarkista: kartan varit + pari etusivua',
@@ -330,8 +331,10 @@ export const TESTATTAVAA = [
  * samasta listasta ilman nimivertailua.
  */
 export const TUOREET = {
-  paivitetty: '20.8.2026',
+  paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'xian', nimi: 'Xi’an', versio: 'v966' },
+    { id: 'varanasi', nimi: 'Varanasi', versio: 'v966' },
     { id: 'samarkand', nimi: 'Samarkand', versio: 'v965' },
     { id: 'singapore', nimi: 'Singapore', versio: 'v961' },
     { id: 'kioto', nimi: 'Kioto', versio: 'v955' },
@@ -348,5 +351,6 @@ export const TUOREET = {
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
   ],
   tyossa: [
+    { id: 'hanoi', nimi: 'Hanoi' },
   ],
 };
