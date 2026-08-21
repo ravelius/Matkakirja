@@ -2320,6 +2320,53 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 51.152, etela: 51.1125, lansi: 71.394, ita: 71.482 },
     palvelutiet: true,
   },
+  kanton: {
+    /*
+     * VANHA MUURIKAUPUNKI JA HELMIJOEN RANTA (21.8.2026). Ruutu on
+     * 6,1 × 6,1 km, ja siihen mahtuvat lehden kaikki kahdeksan
+     * kohdetta: pohjoisessa Zhenhai-torni Yuexiun kukkulalla,
+     * keskellä Guangxiao- ja Liurong-temppelit sekä
+     * Huaisheng-moskeija, lännessä Chenin suvun sali, idässä
+     * Pyhän sydämen katedraali ja etelässä joen rannassa
+     * Kolmentoista faktorian paikka ja Shamianin saari.
+     *
+     * NELIÖRAJAUS ON HARKITTU, kuten Varanasissa. Kohteet ovat
+     * luonnostaan 2,2 × 3,5 kilometrin nauha, joka kulkee kukkulalta
+     * joelle; pelkkä nauha olisi piirtynyt kapeaksi pystykuvaksi.
+     * Ruutua levennettiin itään ja länteen niin, että kuvasuhde on
+     * 1,00 (1600 × 1595 px) — ja samalla mukaan tuli koko se
+     * Helmijoen mutka, jonka varrella kaupungin koko kerrottava
+     * historia tapahtui.
+     *
+     * ETELÄREUNA ON VÄLJÄ TARKOITUKSELLA. Shamian on kartan alalaidan
+     * kohde (77 %), ja jos joki olisi jäänyt kuvan alareunaksi, saari
+     * ei olisi näyttänyt saarelta. Nyt joen eteläpuolelta piirtyy
+     * runsas kilometri Haizhun katuverkkoa, ja kanava saaren
+     * pohjoispuolella erottuu. Samalla eteläreuna pysyy kaukana
+     * lehden mittakaavajanasta vasemmassa alakulmassa (Kööpenhaminan
+     * Tivoli-tapaus).
+     *
+     * WHAMPOAN ANKKURIPAIKKA (nyk. Pazhou) EI OLE KARTALLA EIKÄ
+     * KAINALOSSA, vaikka se on lehden aihe. Se on en-Wikipedian
+     * Pazhou-artikkelin koordinaatista (23,0992 / 113,3767) laskien
+     * 12,6 kilometriä itäkaakkoon Shamianista — kauempana kuin yksikään
+     * kainalo tässä kartastossa (Medinan Quba 3,5 km, Adenin Tawahi
+     * 6 km) ja käytännössä sama etäisyys, jolla Bhaktapur jätettiin
+     * pois Kathmandun kartalta. Artikkelin koordinaatti kattaa
+     * lisäksi koko nykyisen Pazhoun kaupunginosan eikä osoita
+     * historiallista ankkuripaikkaa täsmälleen. Ankkuripaikka
+     * kerrotaan lehden teksteissä ja matkaoppaassa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa ja Kathmandussa: Shamianin puistokadut, Xiguanin
+     * kujat ja Beijing Lun kävelykatu ovat OSM:ssä jalankulkualueita
+     * ja huoltoteitä, ja ilman lippuja kartan tihein kortteli jäisi
+     * tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 23.152, etela: 23.097, lansi: 113.2205, ita: 113.2805 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*

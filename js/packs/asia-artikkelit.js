@@ -149,6 +149,16 @@
 // on muodossa "runsaat puolitoista miljoonaa", koska en-Wikipedia
 // antaa kaksi eri lukua kahdelta eri kuukaudelta. Teksti-kenttä on
 // ennallaan.
+//
+// KANTON (21.8.2026) SAI KOKONAAN UUDEN MERKINNÄN samalla kun
+// kaupungille tehtiin alusta asti oma lehti (kulttuuri-kategoriat.js,
+// maakartat.js, nahtavyysjutut.js). Merkintää ei ollut ennestään
+// lainkaan, joten myös teksti-kenttä on kirjoitettu tässä. Jokainen
+// väite tulee saman erän lehtiteksteistä, jotka on tarkistettu
+// en-Wikipedian raakateksteistä 21.8.2026. Avaimena on laudan oma
+// näyttönimi ”Kanton” eikä en-Wikipedian ”Guangzhou”. Kiina-linjaus:
+// ei nykypolitiikkaa, ja oopiumisodat ovat vain kauppahistorian
+// käännekohta. Perustelut ovat merkinnän omassa kommentissa.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -2049,6 +2059,62 @@ export const ASIA_ARTIKKELIT = {
       + 'Sen tiheimmin asutuissa kortteleissa asukastiheys on '
       + 'maailman suurimpia, ja pienten saarten kalastajakylistä osa '
       + 'on yhä ennallaan.',
+  },
+  /*
+   * KANTON (21.8.2026, uusi lehti). Kaupungilla ei ollut merkintää
+   * lainkaan, joten sekä intro että teksti on kirjoitettu tässä.
+   * Jokainen väite tulee saman erän lehtiteksteistä
+   * (kulttuuri-kategoriat.js:n nostot ja Matkailijan Kanton,
+   * nahtavyysjutut.js, maakartat.js), jotka on tarkistettu
+   * en-Wikipedian raakateksteistä 21.8.2026. Avain on laudan oma
+   * näyttönimi ”Kanton” (js/packs/asia.js), ei en-Wikipedian
+   * ”Guangzhou” — Kappadokian ja Ulan Batorin ennakkotapaus.
+   * Kiina-linjaus: ei nykypolitiikkaa, ja oopiumisodat ovat
+   * pelkkä kauppahistorian käännekohta ilman osapuolikehystä.
+   */
+  Kanton: {
+    intro: 'Kanton on Guangdongin maakunnan pääkaupunki Etelä-Kiinassa, '
+      + 'Helmijoen itärannalla toistasataa kilometriä siitä, missä joki '
+      + 'laskee Etelä-Kiinan mereen. Kaupunki perustettiin Panyun '
+      + 'nimellä vuonna 214 eaa., ja läntisten '
+      + 'kielten **Kanton** on portugalilaisten väännös maakunnan '
+      + 'nimestä Guangdong.'
+      + '\n\n'
+      + 'Satama kaupunki on ollut koko olemassaolonsa ajan. Vuonna '
+      + '1757 keisari Qianlong sulki muut satamat läntisiltä '
+      + 'kauppiailta, ja seuraavat kahdeksankymmentäviisi vuotta lähes '
+      + 'koko lännen Kiinan-kauppa mahtui yhdeksän hehtaarin alalle '
+      + 'joen rantaan: **Kolmentoista faktorian** talorivistöön, jonka '
+      + 'edessä liehuivat kuuden maan liput. Kauppa kulki '
+      + 'kiinalaisen kauppiaskillan kautta, ja ulkomaalaiset '
+      + 'saivat jäädä vain kauppakaudeksi kerrallaan.'
+      + '\n\n'
+      + 'Järjestelmä päättyi vuoden 1842 sopimukseen, ja kauppa siirtyi '
+      + 'lopulta Shamianin hiekkasärkälle, josta tehtiin kanavalla '
+      + 'saari. Nykyinen Kanton on 18,7 miljoonan asukkaan kaupunki, '
+      + 'mutta matkailijan Kanton on pieni: vanhan muurikaupungin '
+      + 'alueella ovat temppelit, moskeijan valotorni ja graniittinen '
+      + 'katedraali, ja Shamianin puistokadut kertovat lopun.',
+    teksti: 'Kanton on Etelä-Kiinassa Helmijoen suistossa. Vanha '
+      + 'kaupunki on joen itärannalla Baiyunin vuoren juurella, ja '
+      + 'yhteys merelle kulkee Humenin salmen kautta. Ilmasto on '
+      + 'lämmin ja kostea, monsuunikausi kestää huhtikuusta syyskuuhun '
+      + 'ja sadetta tulee lähes kaksituhatta millimetriä vuodessa.'
+      + '\n\n'
+      + 'Kaupunki oli 1800-luvulla lähes kokonaan yksi- ja '
+      + 'kaksikerroksinen, ja kattojen yli näkyivät vain Kukkapagodi '
+      + 'ja Yuexiun kukkulan viisikerroksinen vahtitorni. Tiilimuuri '
+      + 'kiersi keskustan, ja sen kahdeksan porttia suljettiin yöksi. '
+      + 'Muuri purettiin vuodesta 1919 alkaen, jotta tilalle saatiin '
+      + 'leveitä katuja ja raitiotie. Vanhan kauppakorttelin paikalla '
+      + 'on nykyään kulttuuripuisto, ja Kolmentoista faktorian katu on '
+      + 'nimeltään Shisanhang Lu.'
+      + '\n\n'
+      + 'Kantonilainen keittiö on yksi Kiinan kahdeksasta suuresta '
+      + 'ruokaperinteestä, ja sen tunnetuin muoto on aamutee, jonka '
+      + 'kanssa tarjotaan dim sumia bambukoreissa. Kaupunki on pitänyt '
+      + 'tuonti- ja vientimessuja kaksi kertaa vuodessa vuodesta 1957, '
+      + 'ja metro avattiin 1997.',
   },
   Taipei: {
     intro: 'Taipei on Taiwanin pääkaupunki saaren pohjoispäässä. Sen '

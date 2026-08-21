@@ -40329,4 +40329,515 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KANTON (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja, artikkelia eikä
+   * kategorioita ennen tätä. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä (action=raw, haettu 21.8.2026): Guangzhou,
+   * Thirteen Factories, Canton System, Cohong, Old China Trade,
+   * Shamian, Pazhou, Howqua, Huaisheng Mosque, Guangxiao Temple
+   * (Guangzhou), Temple of the Six Banyan Trees, Chen Clan Ancestral
+   * Hall, Sacred Heart Cathedral (Guangzhou), Zhenhai Tower
+   * (Guangzhou), Yuexiu Hill, Museum of the Mausoleum of the Nanyue
+   * King, Nanyue, Pearl River, Canton Fair ja Cantonese cuisine.
+   * Pohjana ovat docs/aasia-tyoaineisto/faktapohja-kanton.md ja
+   * tarkistus-kanton.md, jotka luettiin yhdessä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md) ja sama kuin
+   * Pekingissä ja Xi’anissa: EI nykypolitiikkaa eikä nykysotaa.
+   * Vuoden 1873 matkapäiväkirjan näkökulmasta Kanton on Kantonin
+   * kauppajärjestelmän, Kolmentoista faktorian ja Shamianin
+   * kaupunki, ja lehti pysyy siinä. POIS JÄTETTY KOKONAAN: vuoden
+   * 1650 kaupungin valtaus ja sen verilöyly, Punti–Hakka-klaanisodat
+   * 1855–1867 ja niiden uhriluku, vuosien 1895 ja 1911 kapinat,
+   * 1920-luvun puoluepolitiikka ja Whampoan sotakoulu, vuoden 1925
+   * Shakeen tapaus, toisen maailmansodan miehitys, vuoden 1949
+   * jälkeinen politiikka ja kulttuurivallankumouksen aikaiset
+   * temppelituhot. Oopiumisodat kerrotaan tapahtumina ja
+   * kauppahistorian käännekohtana ilman taistelukuvauksia,
+   * osapuolikehystä tai uhrilukuja — samoin kuin oopiumikauppa
+   * itsessään, joka on lehdessä kauppatasapainon ongelma eikä
+   * kuvaus aineen käytöstä. Uskonto on historiallis-kulttuurinen
+   * ilmiö: moskeija ja katedraali ovat rakennuksia ja
+   * kaupunkikuvan maamerkkejä, temppelit kerrostumia.
+   *
+   * KOLME KOHTAA, JOISSA LEHTI POIKKEAA FAKTAPOHJASTA, ja miksi:
+   * 1) Teemasivun aihe on faktapohjan ehdottaman ”kauppa”-sivun
+   *    sijaan vakioaihe `historia`. Faktapohja itse tarjosi tätä
+   *    vaihtoehtoa (osio 1, sivu B), ja sisältö on sama: sivu alkaa
+   *    Panyusta ja Nanyuen kuninkaista ja jatkuu Cohongiin ja
+   *    teekauppaan.
+   * 2) Faktapohjan nosto T1 sanoi Shamianin kanavan kaivetun
+   *    ”toisen oopiumisodan jälkeen vuonna 1859”. Sota päättyi
+   *    vasta 1860, joten lehti sanoo pelkän vuosiluvun.
+   * 3) Faktapohjan nostot K1 ja T1 puhuivat siitä, että Kanton oli
+   *    ”Kiinan ainoa satama”. Tarkistusraportti vahvisti, että
+   *    rajoitus koski nimenomaan läntisiä kauppiaita: korealais-
+   *    japanilainen kauppa hoidettiin Zhapussa ja venäläiset kävivät
+   *    kauppaa maitse Kjahtassa. Lehti sanoo joka kerta ”läntiset
+   *    kauppiaat”, ja historia-sivun nosto H2 kirjoittaa poikkeuksen
+   *    auki lukijalle.
+   *
+   * KAKSI WIKIPEDIAN SISÄISTÄ RISTIRIITAA, jotka koskevat lehden
+   * tekstejä. Guangzhou-artikkelin infoboksin yhteenvetorivi sanoo
+   * ilmastoksi Cfa, mutta artikkelin oma ilmasto-osio ja sen
+   * lähteellinen sääruutu sanovat Cwa; lehti käyttää Cwa:ta
+   * (tarkistusraportin suositus). Etäisyys merelle on
+   * Guangzhou-artikkelissa ”noin 80 mailia” eli 129 kilometriä, kun
+   * pelin oma kulttuurivisa (asia-questions.js) sanoo 145
+   * kilometriä; lehti ei sano kilometrilukua lainkaan vaan
+   * ”toistasataa kilometriä”, jolloin kumpikaan luku ei jää
+   * vastaan sanomaan (Moreebin dyyni -sääntö, maakartat.js).
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Helmijoki (johdanto,
+   * matkailijalle-kappale ja oppaan jakso 2), nimen Kanton alkuperä
+   * portugalilaisten käyttämästä maakunnan nimestä (nosto K4),
+   * Kiina (intro asia-artikkelit.js:ssä ja matkailijalle-kappale),
+   * Britannian Itä-Intian kauppakomppanian tukikohta vuodelta 1699
+   * (nosto H2) ja vuonna 1839 alkanut oopiumisota (nosto H4).
+   * Historia-sivun minitehtävä kysyy vuoden 1757 määräystä, jota
+   * visa ei kysy, ja vastaus on samalla sivulla nostossa H2.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu. Shamian on
+   * lehdessä kolmesti (kansikuvan puistokatu, matkaoppaan
+   * etusivukuvan katunäkymä ja kohdekartan jutun Lai Afongin
+   * valokuva 1870-luvulta joelta päin) — eri tiedostot, kolme eri
+   * etäisyyttä ja kaksi eri vuosisataa, ja saari on se paikka,
+   * johon koko lehden kertoma kauppahistoria päättyy. Sama
+   * ennakkotapaus kuin Mekan Jabal al-Nour, Xi’anin muuri ja
+   * Kathmandun Kasthamandap. Pyhän sydämen katedraali on
+   * kansikuvassa nykyisenä ja kohdekartan jutussa Lai Afongin
+   * kuvassa noin 1880, jolloin se oli vielä ainoa korkea rakennus
+   * matalien kattojen yllä. Kolmetoista faktoriaa on nostossa K1
+   * maalauksena ja kohdekartan jutussa Vroomanin vuoden 1860
+   * karttana, joka näyttää saman paikan sen jälkeen kun rakennukset
+   * olivat palaneet.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi’anin, Varanasin ja Kathmandun malli
+   * v965–v966). Talon menetelmä on Open-Meteon arkisto (ERA5,
+   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn
+   * ajan pelkällä 429:llä ja viestillä ”Daily API request limit
+   * exceeded. Please try again tomorrow” — kontin jaetun
+   * ulosmenevän osoitteen vuorokausikiintiö oli käytetty loppuun,
+   * eikä se nollaudu ennen UTC-vuorokauden vaihdetta. Kokeiltu työn
+   * alussa ja lopussa, sama vastaus kummallakin kerralla. Lukuja ei
+   * ole otettu mistään muusta lähteestä, koska vuosigraafin
+   * lähderivi lupaa lukijalle nimenomaan ERA5:n; ilman riviä lehti
+   * näkyy ilman säätä, kuten saatiedot.js:n alkukommentti lupaa.
+   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian
+   * Guangzhou-artikkelin sääruutuun (1991–2020, mittausasema 71
+   * metrin korkeudessa), ja jakso sanoo sen ääneen. Kun ERA5-rivi
+   * joskus lisätään, jakso 5 on kirjoitettava rivin omista
+   * luvuista. Mittauspiste olisi keskusta 23,13 / 113,26.
+   */
+  kanton: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kanton',
+      johdanto: 'Helmijoen suistokaupunki, joka oli lähes vuosisadan '
+        + 'ajan läntisen maailman ainoa portti Kiinaan. Kauppa käytiin '
+        + 'kapealla rantakaistaleella, jonne ulkomaalaiset saivat jäädä '
+        + 'vain kauppakaudeksi kerrallaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Pearl River White Swan Waterfront.JPG',
+          selite: 'Helmijoki kaartaa leveänä kaupungin läpi, ja '
+            + 'vastarannalla nousee tornitalorivi matalan sillan takaa.',
+          lahde: 'Gzdavidwong, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Sacred Heart Cathedral of Guangzhou 2.jpg',
+          selite: 'Pyhän sydämen katedraalin kaksi tornia päättävät '
+            + 'aukion, jonka molemmin puolin kulkee holvikaarikatu '
+            + 'kauppojen edessä.',
+          lahde: '钉钉, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Liwan, Guangzhou, Guangdong, China - panoramio (6).jpg',
+          selite: 'Shamianin puistokatu jatkuu vanhojen viikunapuiden '
+            + 'alla siirtomaa-ajan talorivien välissä.',
+          lahde: 'Ben Bender, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: torni kukkulalla, pagodi ja minareetti — vanhan
+       * kaupungin kolme maamerkkiä siinä järjestyksessä, jossa lehti
+       * ne kertoo (muurin pohjoiskulma, buddhalainen temppeli,
+       * moskeija). Kaikki kolme näkyivät myös 1800-luvun
+       * kaupunkinäkymissä matalien kattojen yllä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Guangzhou Zhenhai Lou 2013.09.14 09-52-09.jpg',
+          selite: 'Zhenhai-torni Yuexiun kukkulalla: viisi punaista '
+            + 'kerrosta nousee porrasaukion päästä vihreiden '
+            + 'tiilikattojen alla.',
+          lahde: 'Zhangzhugang, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Temple of the Six Banyan Trees pagoda 2.jpg',
+          selite: 'Kukkapagodi alhaalta kuvattuna: punaiset '
+            + 'räystäskerrokset kapenevat ylöspäin, ja alimman katon '
+            + 'alla riippuu rivi punaisia lyhtyjä.',
+          lahde: 'Shujianyang, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'CNGD-020-001怀圣寺光塔.jpg',
+          selite: 'Huaishengin moskeijan valkoinen Guangta-minareetti '
+            + 'nousee puiden lomasta, ja sen takana erottuu vihreä '
+            + 'kupoli.',
+          lahde: '斯巴鲁美乐斯, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kolmetoista faktoriaa',
+          tiedosto: 'Canton factories.jpg',
+          teksti: 'Helmijoen rannalla muurikaupungin lounaispuolella '
+            + 'seisoi rivi kaksi- ja kolmikerroksisia taloja, joiden '
+            + 'edessä liehuivat Tanskan, Espanjan, Yhdysvaltain, '
+            + 'Ruotsin, Britannian ja Alankomaiden liput. Niitä '
+            + 'kutsuttiin faktorioiksi portugalin sanasta feitoria, '
+            + 'kauppapaikka — tehtaita ne eivät olleet vaan varastoja '
+            + 'ja asuntoja: alakerrassa tavara, yläkerrassa '
+            + 'kauppa-asiamiehen huoneet. Julkisivut olivat '
+            + 'länsimaista klassismia, mutta muuten talot olivat '
+            + 'paikallista tiiltä ja tiilikattoa. '
+            + 'Vuonna 1748 faktorioita oli '
+            + 'kahdeksan, vuonna 1770 seitsemäntoista. Koko alue oli '
+            + 'yhdeksän hehtaaria — siihen mahtui läntinen '
+            + 'Kiinan-kauppa.',
+          selite: 'Vientimaalaus noin vuodelta 1805: faktorioiden rivi '
+            + 'lippuineen joen takana, ja edustalla kymmeniä katettuja '
+            + 'lastiveneitä.',
+          lahde: 'Unknown Chinese artist, Wikimedia Commons (PD)',
+          wiki: 'Thirteen Factories',
+        },
+        {
+          otsikko: 'Ankkuripaikka nimeltä Whampoa',
+          tiedosto: 'Whampoa in China.jpg',
+          teksti: 'Suuret purjelaivat eivät päässeet kaupungin rantaan '
+            + 'asti. Ne ankkuroivat runsaan kahdentoista mailin päähän '
+            + 'alavirtaan Whampoan saaren itälahteen — saari tunnetaan '
+            + 'nykyään nimellä Pazhou — ja tavara kulki sieltä '
+            + 'kaupunkiin pienillä lastiveneillä. Ankkuripaikalla oli '
+            + 'kullakin maalla oma paikkansa: sisimpänä amerikkalaiset, '
+            + 'sitten hollantilaiset ja ruotsalaiset, sitten tanskalaiset '
+            + 'ja ranskalaiset, uloimpana britit. Laivan piti tulla '
+            + 'sisään kirjava kangas laidoillaan ja miehistö '
+            + 'juhla-asussa, ja tervehdyslaukauksiin vastattiin aina '
+            + 'samalla mitalla, joten parinkymmenen laivan ankkuripaikka '
+            + 'oli meluisa.',
+          selite: 'Akvarelli Whampoan ankkuripaikalta: eurooppalainen '
+            + 'purjelaiva ja kiinalainen jonkki rinnakkain, ja etualalla '
+            + 'katettu jokivene.',
+          lahde: 'William John Huggins, Wikimedia Commons (PD)',
+          wiki: 'Pazhou',
+        },
+        {
+          otsikko: 'Kaupunki, jossa oli kuusisataa katua',
+          tiedosto: '\'Canton from the Heights\' (Guangzhou, China) RMG PT2083.tiff',
+          teksti: '1800-luvun Kanton oli lähes kokonaan yksi- ja '
+            + 'kaksikerroksinen. Kattojen yli näkyi vain kaksi '
+            + 'rakennusta: Liurong-temppelin Kukkapagodi ja Yuexiun '
+            + 'kukkulan viisikerroksinen vahtitorni. Tiilimuuri kiersi '
+            + 'kaupungin noin kuuden mailin matkalta, oli '
+            + 'kaksikymmentäviisi jalkaa korkea ja kaksikymmentä jalkaa '
+            + 'leveä, ja sen kahdeksan pääporttia ja kaksi vesiporttia '
+            + 'olivat päivällä vartioituja ja yöllä kiinni. Poikkimuuri '
+            + 'jakoi pohjoisen vanhankaupungin ja joenpuoleisen '
+            + 'uudenkaupungin. Katuja oli yli kuusisataa, useimmat '
+            + 'kivettyjä mutta hyvin kapeita, ja rantaa peitti neljän '
+            + 'mailin matkalta kalastajien ja kauppiaiden venekylä.',
+          selite: 'Akvarelli vuodelta 1869 kaupungin yläpuolelta: matalat '
+            + 'katot jatkuvat utuun asti, ja oikealla kohoaa pagodi '
+            + 'puiden yllä.',
+          lahde: 'Lt James Henry Butt, Wikimedia Commons (PD)',
+          wiki: 'Guangzhou',
+        },
+        {
+          otsikko: 'Viisi pässiä ja kukkien kaupunki',
+          tiedosto: '五羊城雕 - Five Rams Sculpture - 2012.04 - panoramio.jpg',
+          teksti: 'Kaupungin nimi on vaihtunut monta kertaa. Se '
+            + 'perustettiin Panyuna, sai vuonna 226 Guang-prefektuurin '
+            + 'pääpaikkana nimen, josta tuli nykyinen Guangzhou, ja '
+            + 'keskiajan persialaiset tunsivat sen nimellä Khanfu. '
+            + 'Suomen ja muiden länsimaiden Kanton tulee '
+            + 'portugalilaisten muodosta Cidade de Cantão, joka on '
+            + 'väännös maakunnan nimestä Guangdong — nimi tarttui '
+            + 'kuitenkin kaupunkiin eikä maakuntaan. Lisänimiä on kaksi. '
+            + 'Pässien kaupunki tulee tarusta, jonka mukaan viisi '
+            + 'kuolematonta ratsasti pässeillä kaupunkiin ja opetti '
+            + 'asukkaat viljelemään riisiä; kukkien kaupunki taas '
+            + 'viittaa yksinkertaisesti seudun vehreyteen.',
+          selite: 'Graniittiin veistetty viiden pässin ryhmä puiston '
+            + 'keskellä kukkapenkin takana.',
+          lahde: 'Yin Jichang / Chen Benzong / Kong Fanwei, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Yuexiu Hill',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Guangzhou Shamian 2012.11.15 09-46-58.jpg',
+          selite: 'Shamianin kadulla nousee tiilipilarien kannattama '
+            + 'parveke puiden alle, ja seinästä työntyy pyöreä punainen '
+            + 'kyltti.',
+          lahde: 'Zhangzhugang, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Kanton on Guangdongin maakunnan pääkaupunki ja '
+          + 'Etelä-Kiinan suurin kaupunki: vuoden 2020 laskennassa '
+          + 'asukkaita oli 18,7 miljoonaa ja kaupunkialueella lähes '
+          + '27 miljoonaa. Matkailijan Kanton on silti pieni. Melkein '
+          + 'kaikki tämän sivun kartan kohteet ovat Yuexiun ja Liwanin '
+          + 'kaupunginosissa, vanhan muurikaupungin alueella ja sen '
+          + 'lounaispuolella Helmijoen rannassa, ja niiden väliä '
+          + 'kävelee. Whampoan vanha ankkuripaikka Pazhoussa on '
+          + 'runsaan kahdentoista kilometrin päässä itäkaakossa, eikä '
+          + 'se siksi ole kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Kanton',
+          taitto: 'opas',
+          teksti: 'Yksi joki, yksi vanhan muurin muotoinen keskusta ja '
+            + 'kaksisataa vuotta kauppaa, joka mahtui yhdeksän '
+            + 'hehtaarin alalle rantaan.',
+          nosto: 'Kanton on pitänyt tuonti- ja vientimessuja joka kevät '
+            + 'ja syksy vuodesta 1957. Ne ovat Kiinan vanhimmat ja '
+            + 'suurimmat, ja niiden nykyinen paikka on Pazhoun saarella '
+            + '— samalla saarella, jonka lahdella purjelaivat aikanaan '
+            + 'ankkuroivat.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Baiyunin kansainvälinen lentoasema avattiin '
+                + '5. elokuuta 2004 kaupungin pohjoispuolelle. Kaupungin '
+                + 'sisällä kulkee metro, jonka ensimmäinen linja avattiin '
+                + 'vuonna 1997 — Kanton oli silloin Manner-Kiinan neljäs '
+                + 'metrokaupunki Pekingin, Tianjinin ja Shanghain '
+                + 'jälkeen. Vuoteen 2025 mennessä linjoja oli '
+                + 'yhdeksäntoista ja rataa yli seitsemänsataa '
+                + 'kilometriä, ja matkustajamäärältään verkko on '
+                + 'maailman kolmanneksi vilkkain. Zhongshanin katua '
+                + 'pitkin kulkee lisäksi vuonna 2010 avattu pikabussilinja, '
+                + 'jonka pysäkit ovat maailman pisimmät, noin '
+                + 'kaksisataakuusikymmentä metriä siltoineen; bussi '
+                + 'lähtee samaan suuntaan keskimäärin kymmenen sekunnin '
+                + 'välein. Hongkongiin pääsee suoralla junalla Kantonin '
+                + 'itäiseltä asemalta: matkaa on 182 kilometriä ja aikaa '
+                + 'alle kaksi tuntia. Moottoripyörät kiellettiin '
+                + 'kaupunkialueelta vuoden 2007 alusta.',
+              kuva: {
+                tiedosto: 'Guangzhou Baiyun International Airport Terminal 1 202209.jpg',
+                selite: 'Lentoaseman lähtötason katos kaartuu tien yli, '
+                  + 'ja sen takana näkyy terminaalin aaltoileva '
+                  + 'kattorivi.',
+                lahde: '钉钉, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Vanha kaupunki on Helmijoen itärannalla Baiyunin '
+                + 'vuoren juurella, toistasataa kilometriä siitä, missä '
+                + 'joki laskee Etelä-Kiinan mereen; yhteys merelle '
+                + 'kulkee Humenin salmen kautta, jota linnoitukset '
+                + 'vartioivat. Kaupunki komentaa Helmijoen suiston '
+                + 'rehevää tulvatasankoa, ja nykyinen hallintoalue on '
+                + '7 434 neliökilometriä joen molemmin puolin. '
+                + 'Keskustan korkeus merenpinnasta on kaksikymmentäyksi '
+                + 'metriä, ja maasto nousee lounaasta koilliseen: '
+                + 'korkein kohta on Tiantangin huippu, 1 210 metriä. '
+                + 'Helmijoki on Kiinan neljänneksi suurin joki. Kaupungin '
+                + 'kohdalla se on vuorovesialuetta, ja ennen ruoppauksia '
+                + 'liete teki väylästä matalan ja arvaamattoman aina '
+                + 'Macaoon asti — siksi laivat tarvitsivat paikallisen '
+                + 'luotsin ja usein hinauksen.',
+              kuva: {
+                tiedosto: 'Guangzhou Haizhu Qiao 2014.01.23 18-04-58.jpg',
+                selite: 'Teräsristikkosilta kaartaa Helmijoen yli '
+                  + 'iltavalossa, ja vastarannalla erottuu tornitalojen '
+                  + 'siluetti.',
+                lahde: 'Zhangzhugang, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: aamutee',
+              teksti: 'Kiinalainen sanonta neuvoo yksinkertaisesti: syö '
+                + 'Kantonissa. Kantonilainen keittiö on yksi Kiinan '
+                + 'kahdeksasta suuresta ruokaperinteestä, ja sen '
+                + 'tunnetuin muoto on aamutee eli yum cha, jonka '
+                + 'yhteydessä pöytään tuodaan dim sumia: pieniä '
+                + 'annoksia bambukoreissa, höyrytettyinä ja paistettuina. '
+                + 'Teehuoneet olivat 1800-luvulla kaupungin julkisia '
+                + 'olohuoneita, ja juuri niissä dim sumin suosio kasvoi; '
+                + 'valikoimaan tarttui vuosien mittaan aineksia '
+                + 'muualtakin Kiinasta ja Kiinan ulkopuolelta. '
+                + 'Ravintolat lopettavat bambukorien tarjoilun aamu- ja '
+                + 'iltapäivän jälkeen ja vaihtavat illaksi kokonaan '
+                + 'toiseen listaan. Keittiön oma kunniakäsite on wok '
+                + 'hay, pannun voima: hyvä kokki saa raaka-aineiden maut '
+                + 'tasapainoon nopeassa paistossa, eikä tuoreita yrttejä '
+                + 'juuri käytetä.',
+              kuva: {
+                tiedosto: 'GZ China Hotel Dim Sum Open Kitchen.jpg',
+                selite: 'Avokeittiön tiskillä höyryävät bambukorit ja '
+                  + 'lasikuvut, ja etualalla seisoo rivi punaisella '
+                  + 'kalligrafialla kirjoitettuja ruokalistakortteja.',
+                lahde: 'MingAi, Wikimedia Commons (CC BY-SA 2.5)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: muuri puretaan',
+              teksti: 'Kanton oli 1800-luvun lopulla yhä muurikaupunki, '
+                + 'jonka yli kuudestasadasta kadusta useimmat olivat '
+                + 'kivettyjä mutta niin kapeita, ettei niillä voinut '
+                + 'ajaa. Kesäkuussa 1919 alkoi työ, joka muutti '
+                + 'kaupunkikuvan lopullisesti: muuri purettiin, jotta '
+                + 'tilalle saatiin leveitä katuja ja raitiotie. Purkaminen '
+                + 'kesti kaikkiaan kolme vuotta. Siksi nykyisessä '
+                + 'keskustassa ei ole muuria vaan kehämäisiä '
+                + 'valtakatuja, ja vanhan kaupungin rajat näkee vain '
+                + 'kartalta ja kadunnimistä. Muurista on jäljellä pätkä '
+                + 'Yuexiun kukkulalla Zhenhai-tornin juurella, ja portin '
+                + 'nimi elää yhä esimerkiksi Ximenkoun eli Länsiportin '
+                + 'suun metroasemassa. Faktorioiden alue on nykyään '
+                + 'kulttuuripuisto, ja Kolmentoista faktorian katu on '
+                + 'nimeltään Shisanhang Lu.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kanton on aivan Kravun kääntöpiirin eteläpuolella, '
+                + 'mutta ilmasto on lämmin ja kostea subtrooppinen '
+                + 'monsuuni-ilmasto — Köppenin luokituksessa Cwa. '
+                + 'Kesät ovat kuumia, kosteita ja sateisia, talvet '
+                + 'leutoja ja verrattain kuivia, ja monsuunikausi kestää '
+                + 'huhtikuusta syyskuuhun. Nämä luvut ovat '
+                + 'en-Wikipedian Guangzhou-artikkelin sääruudusta, joka '
+                + 'perustuu kaupungin oman mittausaseman normaaleihin '
+                + 'vuosilta 1991–2020 seitsemänkymmenenyhden metrin '
+                + 'korkeudessa; lehden vuosigraafia ei ole, koska sen '
+                + 'lupaamaa ERA5-aineistoa ei saatu haettua. '
+                + 'Kuukausikeskilämpö nousee tammikuun neljästätoista '
+                + 'asteesta heinäkuun vajaaseen kahteenkymmeneenyhdeksään, '
+                + 'ja vuoden keskiarvo on 22,4 astetta. Sadetta tulee '
+                + 'lähes kaksituhatta millimetriä vuodessa, ja siitä '
+                + 'valtaosa touko–syyskuussa. Kuivin ja aurinkoisin aika '
+                + 'on loka–joulukuu: lokakuussa paistaa yli puolet '
+                + 'mahdollisesta ajasta, maaliskuussa vain kuudesosa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki perustettiin Panyun nimellä vuonna 214 eaa., '
+        + 'ja satama se on ollut siitä asti. Vuosina 1757–1842 se oli '
+        + 'ainoa paikka, jossa läntiset kauppiaat saivat käydä kauppaa '
+        + 'Kiinan kanssa.',
+      tehtava: {
+        kysymys: 'Minä vuonna keisari Qianlong sulki kaikki muut '
+          + 'satamat läntisiltä kauppiailta?',
+        vaihtoehdot: [
+          '1684',
+          '1757',
+          '1799',
+          '1842',
+        ],
+        oikea: 1,
+        fakta: 'Vuoden 1757 määräys jätti auki vain Kantonin '
+          + 'tullitoimiston, ja järjestelmä kesti vuoteen 1842 asti.',
+      },
+      nostot: [
+        {
+          otsikko: 'Panyu ja Nanyuen kuninkaat',
+          tiedosto: 'Site of King’s Tomb, Nanyue King Museum 2025.06-01.jpg',
+          teksti: 'Ennen kiinalaisia seudulla asui baiyue-heimoja, ja '
+            + 'kaupungin virallinen syntymävuosi on 214 eaa., jolloin '
+            + 'Qin-dynastian sotilaat perustivat Helmijoen itärannalle '
+            + 'Panyun. Se oli Nanhain komentokunnan hallintopaikka ja '
+            + 'tukikohta, josta etelään suuntautuneet retket lähtivät. '
+            + 'Qin-valtakunnan hajottua paikallinen käskynhaltija '
+            + 'perusti Nanyuen kuningaskunnan, ja Panyusta tuli sen '
+            + 'pääkaupunki. Yksi sen hallitsijoista oli Zhao Mo, joka '
+            + 'hallitsi vuosina 137–122 eaa. Hänen hautansa löytyi '
+            + 'keskustasta vuonna 1983 koskemattomana, ja sen päälle '
+            + 'avattiin vuonna 1988 museo. Han-dynastia liitti Nanyuen '
+            + 'itseensä vuonna 111 eaa.',
+          selite: 'Nanyuen kuninkaan hautamuseon punainen kivijulkisivu '
+            + 'katukuvassa, ja sen pintaan on hakattu suuria '
+            + 'kuviolaattoja.',
+          lahde: 'Shujianyang, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Museum of the Mausoleum of the Nanyue King',
+        },
+        {
+          otsikko: 'Yhden sataman laki',
+          tiedosto: 'Nieuhof-Ambassade-vers-la-Chine-1665 0744-2.tif',
+          teksti: 'Keisari Kangxi avasi meret kaupalle vuonna 1684, ja '
+            + 'tullitoimistoja perustettiin useaan satamaan. Britannian '
+            + 'Itä-Intian kauppakomppania sai tukikohdan Kantoniin '
+            + 'vuonna 1699, ja vuoteen 1714 asti se ja ranskalainen '
+            + 'komppania lähettivät laivan tai kaksi vuodessa. '
+            + '1750-luvulla britit huomasivat, että maksut olivat '
+            + 'edullisemmat pohjoisempana Ningbossa, joka oli lisäksi '
+            + 'lähempänä teen ja silkin tuotantoa. Vuonna 1757 keisari '
+            + 'Qianlong sulki muut satamat läntisiltä kauppiailta ja '
+            + 'jätti auki vain Kantonin. Kielto ei koskenut kaikkia: '
+            + 'korealais-japanilainen kauppa jatkui Zhapussa ja '
+            + 'venäläiset kävivät kauppaa maitse Kjahtassa.',
+          selite: 'Vuoden 1665 kaiverrus ”Kanton”-kaupungista: '
+            + 'muurin sisällä kortteleita rivi rivin perään, ja '
+            + 'edustalla joella purjeveneitä.',
+          lahde: 'Jacob van Meurs, Wikimedia Commons (PD)',
+          wiki: 'Canton System',
+        },
+        {
+          otsikko: 'Cohong ja maailman rikkain mies',
+          tiedosto: 'Portrait of Houqua MET DP276513.jpg',
+          teksti: 'Vuonna 1760 kaupungin hong-kauppiaat velvoitettiin '
+            + 'perustamaan kilta, jota ulkomaalaiset kutsuivat '
+            + 'Cohongiksi. Kymmenen kauppiasta liittyi heti, ja kukin '
+            + 'maksoi noin kymmenentuhannen Espanjan dollarin '
+            + 'liittymismaksun ja sitoutui kolmen prosentin veroon '
+            + 'tulevasta liiketoiminnastaan. Kiltalainen takasi '
+            + 'henkilökohtaisesti ulkomaisen laivan verot ja miehistön '
+            + 'käytöksen. Killan tunnetuin jäsen oli Wu Bingjian '
+            + '(1769–1843), jota länsimaalaiset kutsuivat nimellä '
+            + 'Howqua; häntä on sanottu aikansa rikkaimmaksi mieheksi '
+            + 'maailmassa. Vuoden 1822 tulipalosta kerrotaan, että '
+            + 'sulanut hopea juoksi lähes kahden mailin mittaisena '
+            + 'norona.',
+          selite: 'Pienoismuotokuva hong-kauppias Howquasta: vanha mies '
+            + 'sinisessä virkapuvussa, jonka rinnassa on kirjailtu '
+            + 'arvomerkki.',
+          lahde: 'Tingqua, Wikimedia Commons (CC0)',
+          wiki: 'Cohong',
+        },
+        {
+          otsikko: 'Mitä laivoihin lastattiin',
+          tiedosto: 'Shop of Tingqua, the painter.jpg',
+          teksti: 'Länteen lähti teetä, silkkiä, posliinia, '
+            + 'lakkatavaraa, viuhkoja, huonekaluja ja '
+            + 'nankinkangasta — ja '
+            + 'vientimaalauksia, joita tehtiin verstaissa aivan '
+            + 'faktorioiden vieressä. Vastineeksi kiinalaiset ottivat '
+            + 'lähinnä hopeaa, sillä läntisillä tavaroilla ei ollut '
+            + 'kysyntää. Epätasapainosta seurasi kaksi asiaa. '
+            + 'Amerikkalaiset etsivät maksuvälineeksi ginsengiä ja '
+            + 'merisaukonnahkoja, ja Britannian Itä-Intian yhtiö alkoi '
+            + 'myydä Intiassa kasvatettua oopiumia, joka oli Kiinassa '
+            + 'kielletty. Kun viranomaiset yrittivät lopettaa sen, '
+            + 'seurasi ensimmäinen oopiumisota 1839–1842. Vuoden 1842 '
+            + 'sopimus lopetti Kantonin kauppajärjestelmän ja avasi '
+            + 'neljä muuta satamaa.',
+          selite: 'Vientimaalaus vuodelta 1855 maalari Tingquan '
+            + 'myymälästä: seinät ovat täynnä kehystettyjä maalauksia, '
+            + 'ja takahuoneessa työskennellään pöytien ääressä.',
+          lahde: 'Tingqua (Guan Lianchang), photo by Mark Sexton, Wikimedia Commons (PD)',
+          wiki: 'Old China Trade',
+        },
+      ],
+    },
+  ],
 };

@@ -25074,4 +25074,342 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KANTONIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Kahdeksan kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään;
+   * kainaloa ei ole. Faktat on tarkistettu en-Wikipedian
+   * artikkeleista Zhenhai Tower (Guangzhou), Yuexiu Hill, Guangxiao
+   * Temple (Guangzhou), Chen Clan Ancestral Hall, Temple of the Six
+   * Banyan Trees, Huaisheng Mosque, Sacred Heart Cathedral
+   * (Guangzhou), Thirteen Factories, Shamian ja Guangzhou (haettu
+   * 21.8.2026).
+   *
+   * KAKSI RISTIRIITAA on kirjoitettu auki lukijalle (v925/v932:n
+   * tapa). Zhenhai-tornin korkeus on Zhenhai Tower -artikkelissa 92
+   * jalkaa eli 28 metriä, mutta Yuexiu Hill -artikkeli sanoo
+   * nykyisen rakennuksen olevan 28 metriä korkea ja 16 metriä leveä,
+   * kun Zhenhai Tower -artikkelin leveys on 102 jalkaa eli 31
+   * metriä; juttu kertoo korkeuden ja jättää leveyden sanomatta.
+   * Huaishengin moskeijan perustamisvuosi 627 on vanhojen
+   * kiinalaisten käsikirjoitusten tieto, jonka en-Wikipedia itse
+   * asettaa kyseenalaiseksi (varhaisimmat luotettavat ajoitukset
+   * ovat Song-kaudelta); juttu kertoo molemmat.
+   *
+   * USKONNOLLISTEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa,
+   * Medinassa ja Xi’anissa: rakennukset ja kerrostumat, ei
+   * hartauskieltä. Guangxiaon ja Liurongin jutuista on jätetty pois
+   * 1900-luvun temppelituhot ja katedraalin jutusta
+   * kulttuurivallankumouksen aikaiset vauriot — 2000-luvun korjaus
+   * kerrotaan rakennustyönä ilman sen taustaa.
+   *
+   * KOLMESSA JUTUSSA KUVA ON 1800-LUVULTA (Zhenhai-torni,
+   * Liurong-temppeli ja katedraali Lai Afongin valokuvissa,
+   * Kolmentoista faktorian paikka Vroomanin kartassa). Se on
+   * tietoinen valinta eikä tuoreiden kuvien puute: nämä neljä
+   * kohdetta ovat juuri niitä, jotka isoisän matkapäiväkirjan
+   * aikaan näkyivät kaupungissa, ja Lai Afongin kuvat ovat siltä
+   * vuosikymmeneltä. Matkaoppaan ja matkailijalle-osion kuvat ovat
+   * sitä vastoin kaikki tuoreita, kuten linjaus vaatii.
+   */
+  kanton: {
+    'Zhenhai-torni': {
+      aika: 'rakennettu 1380',
+      teksti: 'Yuexiun kukkula oli vanhan muurikaupungin pohjoisnurkka, '
+          + 'ja sen laelle pystytettiin vuonna 1380 vahtitorni. '
+          + 'Rakennuttaja oli Yongjian markiisi Zhu Liangzu. Tarinan '
+          + 'mukaan hän näki kukkulan yllä keltaista ja purppuraista '
+          + 'usvaa ja kuuli sen ennustavan uutta keisaria — torni '
+          + 'rakennettiin osaksi muuria, jotta se muuttaisi kukkulan '
+          + 'feng shuin ja ennuste jäisi toteutumatta.'
+          + '\n\n'
+          + 'Torni on tuhoutunut ja rakennettu uudelleen viisi kertaa, '
+          + 'ja eri versiot esiintyvät kiinalaisessa runoudessa ja '
+          + 'maalauksessa. Nykyinen rakennus on kaksikymmentäkahdeksan '
+          + 'metriä korkea, ja siinä on viisi kerrosta — siitä '
+          + 'länsimainen nimi Five-Story Pagoda ja kiinalainen Wuceng '
+          + 'Lou. 1800-luvun kaupunkinäkymissä se on toinen kahdesta '
+          + 'rakennuksesta, jotka nousivat matalien kattojen yli.'
+          + '\n\n'
+          + 'Kukkulan ympärille on kasvanut Yuexiun puisto, joka on '
+          + '860 000 neliömetriä. Tornissa on toiminut Kantonin museo '
+          + 'siitä asti, kun se avattiin yleisölle vuonna 1928. '
+          + 'Samassa puistossa on myös vuonna 1960 yli sadasta '
+          + 'kolmestakymmenestä graniittilohkareesta veistetty viiden '
+          + 'pässin patsas.',
+      kuvat: [
+        {
+          tiedosto: 'Lai Afong, Five Stories Pagoda Guangzhou, c1880.JPG',
+          selite: 'Noin vuoden 1880 valokuva: viisikerroksinen torni '
+            + 'seisoo paljaan kukkulan laella, ja rinteessä sen alla on '
+            + 'tiilitaloja ja polkuja.',
+          lahde: 'Lai Afong, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Guangxiao-temppeli': {
+      aika: 'perustettu 233',
+      teksti: 'Temppelin paikalla oli alun perin Nanyuen viimeisen '
+          + 'kuninkaan Zhao Jianden asuinpaikka. Kolmen kuningaskunnan '
+          + 'aikana sinne karkotettiin Wun oppinut virkamies Yu Fan, ja '
+          + 'kun hän kuoli vuonna 233, hänen perheensä lahjoitti '
+          + 'talon temppeliksi. Nimiä on ollut monta; nykyisen antoi '
+          + 'Ming-keisari Chenghua vuonna 1482 ja kirjoitti sen omalla '
+          + 'kädellään kivipaateen.'
+          + '\n\n'
+          + 'Neljännen ja kymmenennen vuosisadan välillä temppeliin '
+          + 'saapui munkkeja Etelä-Aasiasta, ja siellä käännettiin '
+          + 'buddhalaisia kirjoituksia kiinaksi. Vuonna 676 '
+          + 'chan-buddhalaisuuden kuudes patriarkka Huineng leikkasi '
+          + 'täällä hiuksensa ja vihittiin munkiksi; apotti hautasi '
+          + 'hiukset ja rakensi niiden päälle kahdeksankulmaisen, '
+          + 'seitsemänkerroksisen ja 7,8 metriä korkean pagodin, joka '
+          + 'seisoo yhä bodhipuun alla.'
+          + '\n\n'
+          + 'Päärakennus Daxiongbao pystytettiin ensi kerran vuonna '
+          + '401 ja rakennettiin nykyiseen asuunsa 1654. Se on 35 '
+          + 'metriä leveä ja 13,6 metriä korkea, ja tiiliseinien '
+          + 'sijaan sitä kiertävät puuikkunat, joista osa on '
+          + 'läpikuultavaa simpukankuorta. Pihalla on vuonna 826 '
+          + 'veistetty vihreä marmoripylväs ja päärakennuksen takana '
+          + 'kaksi rautapagodia vuosilta 963 ja 967 — Kiinan vanhimmat '
+          + 'säilyneet rautatornit.',
+      kuvat: [
+        {
+          tiedosto: 'Guangxiao Temple Bodhi Tree.jpg',
+          selite: 'Temppelin sali harmaan tiilikaton alla, ja pihalla '
+            + 'sen edessä kasvaa suuri bodhipuu.',
+          lahde: '钉钉, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chenin suvun sali': {
+      aika: 'valmistui 1894',
+      teksti: 'Kaksi Amerikasta palannutta kantonilaista, Chen Ruinan '
+          + 'ja Chen Zhaonan, ehdottivat Qing-kauden lopulla, että '
+          + 'Chen-suvut keräisivät rahaa yhteiseen esi-isien '
+          + 'palvontasaliin ja oppilaitokseen, jossa suvun nuoret '
+          + 'valmistautuisivat keisarillisiin virkatutkintoihin. Rahat '
+          + 'tulivat ulkomailla asuvilta ja Guangdongin '
+          + 'seitsemästäkymmenestäkahdesta piirikunnasta, ja talo '
+          + 'valmistui vuonna 1894. Kun virkatutkinnot lakkautettiin '
+          + '1905, salista tuli ammattikoulu.'
+          + '\n\n'
+          + 'Kokonaisuus on 13 200 neliömetriä ja koostuu '
+          + 'yhdeksästätoista rakennuksesta: yhdeksän salia ja kuusi '
+          + 'pihaa, jotka on ladottu symmetrisesti pohjois–'
+          + 'eteläakselille ja yhdistetty käytävillä. Pääakselilla ovat '
+          + 'porttirakennus, Kokoontumissali ja Takasali. Väliin jäävät '
+          + 'kapeat kujat, joita kutsutaan sinisen pilven kujiksi.'
+          + '\n\n'
+          + 'Talo tunnetaan koristelustaan. Katonharjoilla on '
+          + 'yksitoista keramiikkaharjaa, joiden aiheet ovat '
+          + 'kiinalaisia näytelmiä; Kokoontumissalin harja on 27 metriä '
+          + 'pitkä ja siinä on 224 hahmoa. Kipsikoristelua on kaikkiaan '
+          + '1 800 metriä, ja osa siitä työntyy seinästä yli '
+          + 'puolen metrin päähän. Lisäksi on puu-, kivi- ja '
+          + 'tiilikaiverruksia sekä rautakoristeita kaiteissa, mikä on '
+          + 'kantonilaisessa rakennustaiteessa harvinaista. Nykyään '
+          + 'talossa on Guangdongin kansantaiteen museo.',
+      kuvat: [
+        {
+          tiedosto: 'Chen Clan Academy Wall Carving.jpg',
+          selite: 'Tiiliseinään kaiverrettu kohokuvapaneeli, jossa '
+            + 'kymmenet pienet hahmot seisovat kerroksittain '
+            + 'rakennusten ja puiden lomassa.',
+          lahde: 'Chinatravelsavvy, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Liurong-temppeli': {
+      aika: 'perustettu 537, pagodi 1097',
+      teksti: 'Liangin keisari Wu määräsi munkki Tanyun rakentamaan '
+          + 'vuonna 537 temppelin, johon sijoitettiin Kambodžasta '
+          + 'kaupunkiin tuotuja buddhalaisten pyhimysten jäännöksiä. '
+          + 'Temppelin nimi oli aluksi Baozhuangyan. Nykyinen nimi '
+          + 'tulee runosta: Song-kaudella Su Shi vieraili temppelissä '
+          + 'ja kirjoitti runon ”Kuusi banjaania”, ja sen mukaan '
+          + 'paikka nimettiin uudelleen.'
+          + '\n\n'
+          + 'Alueen päärakennus on Kukkapagodi, joka sai nimensä '
+          + 'värikkäästä ulkoasustaan. Se rakennettiin vuonna 1097 '
+          + 'edeltäjänsä paikalle, mutta pohja muutettiin '
+          + 'neliömäisestä kahdeksankulmaiseksi. Ming-kauden alussa '
+          + 'temppeli paloi jälleen, ja pagodi rakennettiin uudelleen '
+          + 'vuonna 1373. Kunnostus tehtiin vuonna 1900.'
+          + '\n\n'
+          + '1800-luvulla pagodi oli kaupungin näkyvin rakennus. Se on '
+          + 'mukana lähes jokaisessa aikakauden kaupunkinäkymässä, ja '
+          + 'länsimaiset kauppiaat tunsivat sen hyvin, koska temppeli '
+          + 'oli lähellä konsulaattien aluetta. Lai Afongin vuoden '
+          + '1863 valokuva näyttää sen rappiotilassa: kerroksilla '
+          + 'kasvoi pensaita ja huipulla puu. Pagodi näkyy myös vuoden '
+          + '1918 setelissä.',
+      kuvat: [
+        {
+          tiedosto: 'Flower Pagoda in Canton.jpg',
+          selite: 'Vuoden 1863 valokuva pagodista ennen kunnostusta: '
+            + 'kerroksien reunoilta työntyy pensaita ja huipulla kasvaa '
+            + 'puu.',
+          lahde: 'Lai Afong, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Huaisheng-moskeija': {
+      aika: 'perinteen mukaan 627',
+      teksti: 'Vanhojen kiinalaisten käsikirjoitusten mukaan moskeijan '
+          + 'perusti vuonna 627 Sa’d ibn Abi Waqqas, profeetta '
+          + 'Muhammadin toveri, jonka kerrotaan saapuneen Kiinaan '
+          + '620-luvulla. Kaikki eivät ole uskoneet tarinaa: '
+          + 'tataarimatkaaja Abdurreshid Ibrahim piti sitä 1900-luvun '
+          + 'alussa erikoisena ajatuksena, koska hadith-oppineet olisivat '
+          + 'hänen mukaansa kirjanneet niin merkittävän lähetystön. '
+          + 'Varhaisimmat luotettavat ajoitukset kiinalaisille '
+          + 'moskeijoille ovat Song-kaudelta.'
+          + '\n\n'
+          + 'Rakennus on tuhoutunut ja noussut uudelleen. Se '
+          + 'rakennettiin 1350 ja jälleen 1695 tulipalon jälkeen. '
+          + 'Moskeijan hautausmaalle haudattiin vuonna 1349 Ramadan ibn '
+          + 'Alauddin, ensimmäinen nimeltä tunnettu korealainen '
+          + 'muslimi. Kaupungilla on ollut yhteyksiä islamilaiseen '
+          + 'maailmaan Tang-kaudelta asti.'
+          + '\n\n'
+          + 'Moskeijan tunnetuin osa on Guangta eli valotorni, '
+          + 'kaksikerroksinen ja kolmenkymmenenkuuden metrin korkuinen '
+          + 'minareetti, joka on vanhempi kuin nykyinen moskeija. Sen '
+          + 'nimi tarkoittaa myös majakkaa, ja keskiajalla se toimi '
+          + 'majakkana, tuuliviirinä ja jokiliikenteen tähystystornina. '
+          + 'Se oli kaupungin korkein rakennus aina 1900-luvun alkuun '
+          + 'asti.',
+      kuvat: [
+        {
+          tiedosto: 'Guangdong Huaisheng Mosque 2024.jpg',
+          selite: 'Moskeijan porttirakennus kahden kaartuvan tiilikaton '
+            + 'alla, ja sen takaa nousee valkoinen minareetti.',
+          lahde: 'Scott Edmunds, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän sydämen katedraali': {
+      aika: '1861–1888',
+      teksti: 'Katedraalin paikalla oli Qing-kaudella Liangguangin '
+          + 'varakuninkaan virka-asunto, joka tuhoutui 1850-luvun '
+          + 'lopulla. Ranskan lähetysseura sai tontin sopimuksella '
+          + 'vuonna 1861. Perustuksia alettiin kaivaa saman vuoden '
+          + 'kesäkuussa, ja 8. joulukuuta 1863 laskettiin kaksi '
+          + 'peruskiveä: itäiseen kaiverrettiin ”Jerusalem 1863” ja '
+          + 'läntiseen ”Roma 1863”, ja niiden alle pantiin kilo multaa '
+          + 'Roomasta ja kivi Jerusalemista.'
+          + '\n\n'
+          + 'Työ oli vaikeaa. Rakennus tehtiin kokonaan graniitista, '
+          + 'käsivoimin ja ilman koneita, eikä kukaan kiinalaisista '
+          + 'työmiehistä ollut nähnyt länsimaista katedraalia. '
+          + 'Kielimuuri hidasti alkuvuosia, kunnes työnjohtajaksi '
+          + 'palkattiin Jiexin piirikunnasta kotoisin oleva Cai Xiao, '
+          + 'joka oli rakentanut kivitaloja kotiseudullaan. Kivet '
+          + 'louhittiin Kowloonin kukkuloilta ja tuotiin purjelaivoilla. '
+          + 'Rahat tulivat pääosin Napoleon III:lta. Rakennus valmistui '
+          + '1888, kaksikymmentäviisi vuotta peruskivistä.'
+          + '\n\n'
+          + 'Julkisivun esikuva on pariisilainen Sainte-Clotilde, '
+          + 'keskilaivan ja kuorin Toulin katedraali. Keskilaiva on '
+          + '28,2 metriä korkea, rakennus 77 metriä pitkä ja tornit '
+          + '52,8 metriä. Läntinen torni on kellotapuli ja itäinen '
+          + 'kellotorni, jonka viidestä Ranskasta tuodusta kellosta on '
+          + 'jäljellä neljä. Paikalliset kutsuvat rakennusta '
+          + 'Kivitaloksi. Katto uusittiin viimeksi vuosina 2004–2006, '
+          + 'ja lasimaalaukset tilattiin Filippiineiltä.',
+      kuvat: [
+        {
+          tiedosto: 'Lai Afong, Sacred Heart Cathedral Guangzhou, c1880.JPG',
+          selite: 'Noin vuoden 1880 valokuva: katedraalin kaksi tornia '
+            + 'nousevat yksikerroksisten tiilikattojen meren yli.',
+          lahde: 'Lai Afong, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kolmentoista faktorian paikka': {
+      aika: 'noin 1684–1856',
+      teksti: 'Faktorioiden kortteli oli Helmijoen rannassa vanhan '
+          + 'muurikaupungin lounaispuolella, läntisessä esikaupungissa '
+          + 'Xiguanissa. Aluetta rajasivat pohjoisessa Kolmentoista '
+          + 'faktorian katu, lännessä Pwantingin katu ja idässä puro. '
+          + 'Korttelien välissä kulki kolme kujaa: Vanha ja Uusi '
+          + 'Kiinankatu sekä Hog Lane. Kaksi ensimmäistä olivat täynnä '
+          + 'kauppoja — Uusi Kiinankatu sai nimensä posliinikauppiaista '
+          + '— ja Hog Lane oli merimiesten kuja, jonka avonaisista '
+          + 'kojuista sai ruokaa, juomaa, vaatteita ja pikkutavaraa.'
+          + '\n\n'
+          + 'Alue paloi kolmesti. Vuoden 1822 tulipalo oli '
+          + 'vahingossa syttynyt, ja se hävitti kortteleista suurimman '
+          + 'osan; vuosien 1841 ja 1856 palot liittyivät oopiumisotiin. '
+          + 'Kolmannen kerran jälkeen faktorioita ei rakennettu '
+          + 'uudelleen. Kauppa siirtyi ensin Honamin saarelle joen '
+          + 'toiselle puolelle ja sitten Shamianin hiekkasärkälle.'
+          + '\n\n'
+          + 'Paikka on nykyään osa Kantonin kulttuuripuistoa, ja '
+          + 'pohjoispuolella kulkenut Kolmentoista faktorian katu on '
+          + 'nimeltään Shisanhang Lu. Korttelin viimeisistä vuosista '
+          + 'on jäänyt yksi erikoisuus: lääkäri-lähetyssaarnaaja Peter '
+          + 'Parker avasi vuonna 1835 Hog Lanen kolmoseen '
+          + 'silmäsairaalan ja teetti potilaistaan muotokuvia '
+          + 'kantonilaisella maalarilla Lam Qualla.',
+      kuvat: [
+        {
+          tiedosto: 'Canton1860.jpg',
+          selite: 'Vroomanin vuoden 1860 kartta Kantonista: '
+            + 'punaviivainen muurikaupunki keskellä, joki alhaalla ja '
+            + 'Shamianin uusi ruutukaava vasemmassa alakulmassa.',
+          lahde: 'Daniel Vrooman, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shamianin saari': {
+      aika: 'konsessio 1859–1943',
+      teksti: 'Shamian tarkoittaa hiekkapintaa. Särkkä oli ollut '
+          + 'kaupungin ulkomaankaupan satama-aluetta Song-kaudelta '
+          + 'Qing-kaudelle asti. Vuonna 1859 Britannia ja Ranska '
+          + 'kaivoivat sen pohjoispuolelle keinotekoisen kanavan, ja '
+          + 'särkästä tuli saari: 0,3 neliökilometriä, yhdeksänsataa '
+          + 'metriä idästä länteen ja kolmesataa metriä pohjoisesta '
+          + 'etelään. Alue jaettiin kahtia niin, että kolme viidesosaa '
+          + 'kuului briteille ja kaksi viidesosaa ranskalaisille.'
+          + '\n\n'
+          + 'Mantereelle pääsi kahta siltaa pitkin, ja ne suljettiin '
+          + 'joka ilta kello kymmeneltä. Pohjoista kaarisiltaa, joka '
+          + 'valmistui 1861 ja jota kutsuttiin Englannin sillaksi, '
+          + 'vartioivat sikhipoliisit; itäistä ranskalaista siltaa '
+          + 'vartioivat vietnamilaiset siirtomaajoukot. Britannian, '
+          + 'Yhdysvaltain, Ranskan, Alankomaiden, Italian, Saksan, '
+          + 'Portugalin ja Japanin kauppahuoneet rakensivat rantaan '
+          + 'kivitaloja, ja saarelle keskittyi valtaosa kaupungin '
+          + 'konsulaateista.'
+          + '\n\n'
+          + 'Saaren kolme itä–länsisuuntaista katua olivat alun perin '
+          + 'Kanavakatu, puiden reunustama Keskuspuistokatu ja '
+          + 'rantapuistojen Etukatu; nykyään ne ovat Shamianin '
+          + 'pohjois-, pää- ja eteläkatu, ja niitä risteää viisi '
+          + 'numeroitua poikkikatua. Kirkkoja on kaksi: brittiläinen '
+          + 'Christ Church Shameen vuodelta 1865 ja ranskalainen '
+          + 'Lourdesin Neitsyt Marian kappeli vuodelta 1892. Saari on '
+          + 'nykyään suojeltu historiallinen alue, jolla on hotelleja, '
+          + 'ravintoloita ja matkamuistokauppoja.',
+      kuvat: [
+        {
+          tiedosto: 'Shameen, Canton.jpg',
+          selite: '1870-luvun valokuva joelta: saaren matala talorivi '
+            + 'ja kirkontorni näkyvät kaukana, ja etualalla kelluu '
+            + 'kolme katettua lastivenettä.',
+          lahde: 'Lai Afong, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

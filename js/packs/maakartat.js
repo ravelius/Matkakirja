@@ -7310,6 +7310,63 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kansallismuseo', lat: 51.1178, lon: 71.4701 },
     ],
   },
+  /*
+   * KANTONIN KOHDEKARTTA (21.8.2026). Rajaus on 6,1 × 6,1 km ja kattaa
+   * vanhan muurikaupungin alueen Yuexiun kukkulalta Helmijoen rantaan.
+   * Kohteet on numeroitu pohjoisesta etelään kuten Medinassa, Kiotossa
+   * ja Varanasissa.
+   *
+   * KAIKKI KAHDEKSAN KOORDINAATTIA OVAT KOHTEIDEN OMISTA
+   * en-Wikipedian infobokseista (haettu 21.8.2026) — yhtään pistettä
+   * ei tarvinnut hakea Overpassista. Faktapohjan
+   * (docs/aasia-tyoaineisto/faktapohja-kanton.md, osio 4) omat arviot
+   * olivat 0,3–1,5 kilometriä pielessä, ja tarkistusraportti
+   * (tarkistus-kanton.md) korvasi ne artikkelien omilla arvoilla;
+   * tässä on käytetty tarkistuksen taulukkoa. Huomaa, että
+   * "Guangxiao Temple" ilman sulkutarkennetta on en-Wikipediassa
+   * TÄSMENNYSSIVU — oikea artikkeli on "Guangxiao Temple
+   * (Guangzhou)" — ja että "Zhenhai Tower" ohjaa artikkeliin
+   * "Zhenhai Tower (Guangzhou)".
+   *
+   * WHAMPOAN ANKKURIPAIKKA (nyk. Pazhou) EI OLE KARTALLA, vaikka se on
+   * lehden oma nosto. Perustelu on kokonaisuudessaan
+   * tools/piirra-kaupunkikartta.mjs:n kanton-lohkossa: en-Wikipedian
+   * Pazhou-artikkelin koordinaatista laskien matkaa on 12,6 kilometriä
+   * itäkaakkoon, eli kauemmas kuin yksikään kainalo tässä kartastossa
+   * (Medinan Quba 3,5 km, Adenin Tawahi 6 km) ja suunnilleen yhtä
+   * kauas kuin Bhaktapur, joka jätettiin pois Kathmandun kartalta.
+   *
+   * CONSOO HALL JÄI POIS, kuten faktapohja ja tarkistusraportti
+   * suosittelivat: hong-kauppiaiden killan kokoontumistalolla ei ole
+   * omaa artikkelia eikä koordinaattia, ja ainoa perusteltu piste
+   * olisi Kolmentoista faktorian oma koordinaatti. Kaksi numeroa
+   * samaan pisteeseen on Petran, Mekan ja Singaporen oppi.
+   *
+   * KAINALOA EI OLE: kaikki kahdeksan kohdetta mahtuvat pääruutuun,
+   * kuten Samarkandissa ja Kathmandussa.
+   */
+  kanton: {
+    polku: 'assets/kartat/kanton-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 23.152, etela: 23.097, lansi: 113.2205, ita: 113.2805 },
+    esittely: 'Kartan alue on Kantonin vanha ydin. Pohjoisessa kohoaa '
+      + 'Yuexiun kukkula Zhenhai-torneineen, keskellä ovat kaupungin '
+      + 'vanhat temppelit ja moskeija, ja etelässä virtaa Helmijoki. '
+      + 'Joen rannassa ovat Kolmentoista faktorian entinen paikka ja '
+      + 'Shamianin saari. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Zhenhai-torni', lat: 23.1407, lon: 113.2605 },
+      { nimi: 'Guangxiao-temppeli', lat: 23.1321, lon: 113.251 },
+      { nimi: 'Chenin suvun sali', lat: 23.1298, lon: 113.2405 },
+      { nimi: 'Liurong-temppeli', lat: 23.128185, lon: 113.260642 },
+      { nimi: 'Huaisheng-moskeija', lat: 23.1253, lon: 113.2536 },
+      { nimi: 'Pyhän sydämen katedraali', lat: 23.1173, lon: 113.2548 },
+      { nimi: 'Kolmentoista faktorian paikka', lat: 23.109743, lon: 113.251607 },
+      { nimi: 'Shamianin saari', lat: 23.1094, lon: 113.2394 },
+    ],
+  },
 };
 
 /*
