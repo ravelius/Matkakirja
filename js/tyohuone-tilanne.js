@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v989 — MANILA: uusi lehti (kartta 10 kohteella Intramuroksesta Binondoon; toinen maailmansota vain rakennusperinnon kautta). HUOM: saarivi puuttuu viela (Open-Meteon kiintio). JATKOTYO: neljalta uusimmalta lehdelta (taipei, hongkong, jakarta, manila) puuttuu ennen/nyt-pari — taydennettava kun vanhat kuvat loytyvat. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v988 — ISO PAKETTI: (1) JAKARTA — uusi lehti (10 kohdetta, Kota Tua + Merdeka-kainalo; saarivi puuttuu viela). (2) ENNEN JA NYT KAIKKIALLE — kuvapari nyt 97/100 lehdessa (ilman jaivat dubai, doha, salalah, astana — vanhaa kuvaa ei loydy vapaana). (3) JULISTEPALKINNOT (pilotti 10 kaupunkia): minitehtavan vierella pieni aikakausjuliste, oikeasta vastauksesta se aukeaa isoksi + punnat, kokoelma matkalaukun Julisteet-osastoon, kehittajakartalla vihrea merkki; julisteet pelkalla alkuperaiskielella ja suomennos kuvan alla. HUOM: julistekuvat nakyvat vasta amparivienti-ajon jalkeen (odottaa R2-arvoja). Tarkista: Jakarta, parin kaupungin ennen/nyt, Istanbulin minitehtava',
   'v987 — AANIRIVIN ENNEN JA NYT (pilotti): Lontoon ja Kairon lehdissa radion vierella on nyt vanha aanitallenne — Lontoo: Florrie Forden lieriolevytys 1913, Kairo: Sheikh El-Saftin gramofonilevy 1907–25 (ENNEN-nappi katkoviivakehyksessa lahderivein, NYT-radio ennallaan). Ulan Batorille ei loytynyt vapaata vanhaa tallennetta — jaa ilman. Tarkista: Lontoon ja Kairon aanirivi, kuuntele molemmat',
   'v986 — ENNEN JA NYT -PILOTTI (Lontoo): etusivun kansikarusellin alla on nyt kuvapari — vasemmalla isoisan ajan kuva (harmaasavy, ENNEN-merkki), oikealla sama nakyma tanaan (NYT). Datavetoinen ennenNyt-kentta, laajenee muihin kaupunkeihin pelkalla datalla. Matkakirjan kuvia EI viela poistettu — odottaa omistajan hyvaksyntaa pilotille. Tarkista: Lontoon etusivu',
@@ -355,6 +356,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'manila', nimi: 'Manila', versio: 'v989' },
     { id: 'jakarta', nimi: 'Jakarta', versio: 'v988' },
     { id: 'taipei', nimi: 'Taipei', versio: 'v984' },
     { id: 'hongkong', nimi: 'Hongkong', versio: 'v984' },
@@ -383,6 +385,7 @@ export const TUOREET = {
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
   ],
   tyossa: [
-    { id: 'manila', nimi: 'Manila' },
+    { id: 'sumatra', nimi: 'Sumatra' },
+    { id: 'borneo', nimi: 'Borneo' },
   ],
 };
