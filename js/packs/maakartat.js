@@ -7578,6 +7578,85 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Taipei 101', lat: 25.0336, lon: 121.5647, wiki: 'Taipei 101' },
     ],
   },
+  /*
+   * HONGKONGIN KOHDEKARTTA (21.8.2026). Rajaus on 4,3 × 3,9 km ja sen
+   * keskellä on vettä: Victoria-satama erottaa Hongkong-saaren
+   * pohjoisrannan ja Kowloonin niemimaan kärjen. Kohteet on numeroitu
+   * pohjoisesta etelään kuten Medinassa, Kiotossa ja Kantonissa, ja
+   * numerointi kulkee siksi kerrankin veden yli: kellotorni on
+   * Kowloonin puolella, kaikki muut saaren puolella.
+   *
+   * SEITSEMÄN YHDEKSÄSTÄ KOORDINAATISTA ON KOHTEIDEN OMISTA
+   * en-Wikipedian artikkeleista (haettu 21.8.2026): Clock Tower, Hong
+   * Kong; Western Market; Man Mo temples in Hong Kong; Tai Kwun;
+   * St John's Cathedral (Hong Kong); Victoria Peak; Blue House (Hong
+   * Kong); Peak Tram. Huomaa kaksi uudelleenohjausta: "Man Mo Temple"
+   * ohjaa artikkeliin "Man Mo temples in Hong Kong" ja "St John's
+   * Cathedral, Hong Kong" artikkeliin "St John's Cathedral (Hong
+   * Kong)" — pelkkä #REDIRECT-rivi ei ole lähde.
+   *
+   * STAR FERRYN LAITURI ON OVERPASSISTA, ja syy on kirjattava tähän.
+   * en-Wikipedian "Star Ferry" -artikkelissa ei ole koordinaattia
+   * lainkaan (faktapohja osio 7, huomio 2, vahvistettu itse), koska
+   * lautta on reitti eikä piste. Kartalla se on silti oltava: lautta
+   * on lehden ensimmäinen nosto ja se, mikä sitoo kartan kaksi rantaa
+   * yhteen. Piste on OSM:n Centralin laiturin polygonin keskipiste
+   * (way 1483823681, man_made=pier, name:en "Central Star Ferry
+   * Pier"): 22,28705 / 114,16116. Tokion kansallismuseon,
+   * Persepoliksen ja Xi'anin Steelametsän ennakkotapaus.
+   *
+   * TSIM SHA TSUIN LAITURI JÄI POIS, vaikka lautan toinen pää on
+   * siellä: OSM:n mukaan (relaatio 14941151) se on 22,29352 /
+   * 114,16842 eli 98 metriä kellotornin pisteestä — runsaat kaksi
+   * prosenttia ruudun leveydestä, ja numeroympyrät menisivät
+   * päällekkäin (Petran, Mekan ja Singaporen oppi). Kellotorni on
+   * kartalla, ja laituri kerrotaan sen jutussa.
+   *
+   * LAITURIPISTE ON VEDEN PUOLELLA JA SE ON OIKEIN.
+   * tools/tarkista-karttapisteet.mjs ilmoittaa Star Ferryn laiturin
+   * vetenä, koska laiturirakennus työntyy rantaviivan ulkopuolelle
+   * satama-altaaseen. Sama tilanne kuin Dubain abra-laitureilla,
+   * Odessan majakalla ja Marseillen satama-altaalla, jotka työkalun
+   * oma alkukommentti listaa oikeiksi osumiksi.
+   *
+   * KAINALOA EI OLE. Victoria Peak mahtuu pääruutuun — se on 12,8 %
+   * ruudun leveydestä vasemmasta reunasta ja 26 % korkeudesta
+   * alareunasta, siis kaukana lehden mittakaavajanasta. Perustelu
+   * kokonaisuudessaan tools/piirra-kaupunkikartta.mjs:n
+   * hongkong-lohkossa.
+   *
+   * KOWLOONIN MUURIKAUPUNGIN PUISTO EI OLE KARTALLA EIKÄ KAINALOSSA.
+   * Se on artikkelin "Kowloon Walled City" koordinaatista (22,33222 /
+   * 114,19028) laskien 6,5 kilometriä koilliseen kartan keskeltä eli
+   * kauempana kuin yksikään kainalo tässä kartastossa (Medinan Quba
+   * 3,5 km, Adenin Tawahi 6 km). Muurikaupunki kerrotaan matkaoppaan
+   * neljännessä jaksossa. Etäisyys on tarkistusraportin
+   * (docs/aasia-tyoaineisto/tarkistus-hongkong.md, osio 4) korjattu
+   * luku, ei faktapohjan oma arvio 7,3 km.
+   */
+  hongkong: {
+    polku: 'assets/kartat/hongkong-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 22.3015, etela: 22.2665, lansi: 114.1385, ita: 114.1805 },
+    esittely: 'Kartan keskellä on Victoria-satama. Pohjoisrannalla on '
+      + 'Tsim Sha Tsuin kärki kellotorneineen, eteläpuolella '
+      + 'Hongkong-saaren rantakaistale: lännessä Sheung Wanin vanhat '
+      + 'korttelit, keskellä Central ja Star Ferryn laituri, idässä '
+      + 'Wan Chai. Rinne nousee sataman takaa Victoria Peakille. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Tsim Sha Tsuin kellotorni', lat: 22.29368, lon: 114.16936 },
+      { nimi: 'Western Market', lat: 22.28723, lon: 114.1504 },
+      { nimi: 'Star Ferryn laituri', lat: 22.28705, lon: 114.16116 },
+      { nimi: 'Man Mo -temppeli', lat: 22.283982, lon: 114.150239 },
+      { nimi: 'Tai Kwun', lat: 22.2813, lon: 114.154 },
+      { nimi: 'Pyhän Johanneksen katedraali', lat: 22.27885, lon: 114.15956 },
+      { nimi: 'Victoria Peak', lat: 22.27556, lon: 114.14389 },
+      { nimi: 'Sininen talo', lat: 22.273897, lon: 114.174146 },
+      { nimi: 'Vaunuradan alaterminaali', lat: 22.27204, lon: 114.15487 },
+    ],
+  },
 };
 
 /*

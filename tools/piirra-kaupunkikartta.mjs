@@ -2537,6 +2537,60 @@ const KAUPUNGIT = {
       },
     ],
   },
+  hongkong: {
+    /*
+     * VICTORIA-SATAMA JA SEN MOLEMMAT RANNAT (21.8.2026). Ruutu on
+     * 4,3 × 3,9 km, ja sen keskellä on vettä: satama erottaa
+     * Hongkong-saaren pohjoisrannan ja Kowloonin niemimaan kärjen.
+     * Rajaus on valittu niin, että lehden kertoma kaupunki mahtuu
+     * kokonaan yhteen kuvaan — lännessä Sheung Wanin vanhat korttelit,
+     * keskellä Centralin pankkikortteli ja Star Ferryn laituri,
+     * idässä Wan Chai, pohjoisessa Tsim Sha Tsuin kärki
+     * kellotorneineen ja etelässä Victoria Peakin rinne.
+     *
+     * meri: true, ja se on sama tilanne kuin Singaporessa ja
+     * Vladivostokissa. Victoria-satama on OSM:ssä valtaosin
+     * natural=coastline-viivaa ilman vesimonikulmiota, ja ilman
+     * lippua kuvan koko keskiosa — se, mikä tekee Hongkongista
+     * satamakaupungin — olisi jäänyt paperin väriseksi. Lippu täyttää
+     * rantaviivan rajaaman merialueen vedeksi.
+     *
+     * VICTORIA PEAK MAHTUU PÄÄRUUTUUN EIKÄ TARVITSE KAINALOA. Sen
+     * en-Wikipedian koordinaatti (22,27556 / 114,14389) on 12,8 %
+     * ruudun leveydestä vasemmasta reunasta ja 26 % korkeudesta
+     * alareunasta, eli selvästi lehden mittakaavajanan yläpuolella
+     * (Kööpenhaminan Tivoli-tapaus). Kainalo olisi ollut turha
+     * ratkaisu kohteelle, joka on linnuntietä vain 1,2 kilometriä
+     * vaunuradan alaterminaalista.
+     *
+     * ETELÄREUNA ON VÄLJÄ TARKOITUKSELLA. Rinne Centralin ja huipun
+     * välissä on Mid-Levelsin mutkatiestöä, ja juuri se tekee
+     * kartalla näkyväksi sen, mitä nostot kertovat: kaupunki nousee
+     * merestä vuoreen muutamassa sadassa metrissä. Tiukka rajaus
+     * olisi leikannut mutkat pois ja jättänyt vaunuradan
+     * alaterminaalin kuvan alalaitaan.
+     *
+     * KAKSI KOHDETTA SATAMAN POHJOISRANNALLA OLISI OLLUT LIIKAA.
+     * Tsim Sha Tsuin Star Ferry -laituri (OSM, relaatio 14941151,
+     * 22,29352 / 114,16842) on vain 98 metriä kellotornin pisteestä
+     * eli runsaat kaksi prosenttia ruudun leveydestä, ja
+     * numeroympyrät menisivät päällekkäin (Petran, Mekan ja
+     * Singaporen oppi). Kartalla on siksi kellotorni, ja lautan
+     * kohde on sataman eteläpuolella Centralin laiturissa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ. Centralin ja Wan Chain
+     * kortteleita yhdistävät kävelysillat, Tsim Sha Tsuin
+     * rantapromenadi ja Sheung Wanin porraskujat ovat OSM:ssä
+     * jalankulkualueita, ja Star Ferryn laiturialueet, Tai Kwunin
+     * sisäpiha ja Peak Roadin pihatiet ovat huoltoteitä. Ilman
+     * lippuja kuvan tihein osa — juuri se kortteli, jota lehti
+     * kertoo — jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 22.3015, etela: 22.2665, lansi: 114.1385, ita: 114.1805 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    meri: true,
+  },
 };
 
 /*

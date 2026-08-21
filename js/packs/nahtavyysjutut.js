@@ -26626,4 +26626,370 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * HONGKONGIN YHDEKSÄN KOHDETTA (Opus 21.8.2026). Jutut vastaavat
+   * js/packs/maakartat.js:n hongkong-kartan kohteita nimestä nimeen ja
+   * samassa järjestyksessä (pohjoisesta etelään). Faktat ovat
+   * kohteiden omista en-Wikipedian raakateksteistä, haettu 21.8.2026:
+   * Clock Tower (Hong Kong), Western Market, Star Ferry, Man Mo
+   * temples in Hong Kong, Tai Kwun, St John's Cathedral (Hong Kong),
+   * Victoria Peak, Blue House (Hong Kong) ja Peak Tram.
+   *
+   * USKONNOLLISTEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa,
+   * Medinassa, Xi’anissa ja Kantonissa: rakennukset ja kerrostumat,
+   * ei hartauskieltä. Man Mo -temppelin juttu kertoo, kenelle temppeli
+   * on omistettu ja miksi virkatutkintoihin valmistautuneet kävivät
+   * siellä; katedraalin juttu kertoo rakennuksen ja tontin.
+   *
+   * VICTORIA PEAKIN JUTUSSA ON WIKIPEDIAN SISÄINEN RISTIRIITA
+   * KIRJOITETTU AUKI. Victoria Peak -artikkeli sanoo yhdessä
+   * kappaleessa, että Peak District Reservation Ordinance oli voimassa
+   * vuosina 1904–1930, ja kaksi kappaletta myöhemmin, että kiinalaiset
+   * eivät saaneet asua rinteellä vuosina 1904–1947. Juttu kertoo
+   * molemmat luvut, koska kumpaakaan ei voi todeta oikeaksi
+   * artikkelin sisältä (v925, v932 ja v937 ennakkotapaukset).
+   *
+   * NELJÄSSÄ JUTUSSA KUVA ON TUORE JA VIIDESSÄ SE ON KOHTEEN
+   * NYKYASU — historiallisia kuvia ei ole näissä jutuissa lainkaan,
+   * koska kartan kohteet ovat niitä, joita pelaaja voi mennä
+   * katsomaan. Lehden 1800-luvun kuvat ovat nostoissa.
+   */
+  hongkong: {
+    'Tsim Sha Tsuin kellotorni': {
+      aika: 'valmistui 1915',
+      teksti: 'Torni on ainoa jäljellä oleva osa Kowloonin '
+          + 'rautatieasemasta, joka oli Kowloonin ja Kantonin välisen '
+          + 'radan eteläpää. Rata vihittiin käyttöön 1. lokakuuta '
+          + '1910, mutta itse asemarakennuksen työt alkoivat vasta '
+          + '1913: ensin piti rakentaa merimuurit ja tasata '
+          + 'täyttömaa, ja ensimmäinen maailmansota viivytti '
+          + 'rakennustarvikkeiden toimituksia. Torni valmistui 1915 ja '
+          + 'koko asema avattiin 28. maaliskuuta 1916.'
+          + '\n\n'
+          + 'Torni on punatiiltä ja graniittia, korkeutta '
+          + 'neljäkymmentäneljä metriä ja sen päällä seitsemän metrin '
+          + 'ukkosenjohdatin. Sisällä on puuportaikko huipulle. Kello '
+          + 'siirrettiin tänne puretusta Pedder Streetin kellotornista, '
+          + 'ja aluksi vain yhdellä sivulla oli kellotaulu; loput '
+          + 'kolme asennettiin 1920, ja ne käynnistyivät 22. '
+          + 'maaliskuuta 1921. Kellon soittokello valettiin 1919 '
+          + 'englantilaisessa Loughborough’n valimossa ja saapui '
+          + 'Hongkongiin 1920.'
+          + '\n\n'
+          + 'Vuonna 1975 asema siirtyi Hung Homiin uudelle '
+          + 'täyttömaalle, ja asemarakennus purettiin 1977. Torni '
+          + 'säilytettiin, ja vanhalle asema-alueelle rakennettiin '
+          + 'kulttuurikeskus, taidemuseo ja avaruusmuseo. Torni on '
+          + 'ollut suojeltu muistomerkki vuodesta 1990, ja sen kello '
+          + 'alkoi soida uudelleen joulukuussa 2021, tunnin välein '
+          + 'aamukahdeksasta keskiyöhön.',
+      kuvat: [
+        {
+          tiedosto: 'Former Kowloon-Canton Railway Clock Tower, Tsim Sha Tsui (Hong Kong).jpg',
+          selite: 'Punatiilinen kellotorni nousee palmurivien '
+            + 'päättämän suihkulähdealtaan takaa.',
+          lahde: 'Mk2010, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Western Market': {
+      aika: 'valmistui 1906',
+      teksti: 'Sheung Wanin kauppahalli oli alun perin kaksiosainen. '
+          + 'Eteläinen osa avattiin 1858 ja pohjoinen 1906; nykyinen '
+          + 'rakennus on juuri se pohjoinen osa, ja se on kaupungin '
+          + 'vanhin säilynyt torirakennus. Paikalla oli sitä ennen '
+          + 'satamakonttori, joka muutti Centralin täyttömaalle '
+          + 'suurempiin tiloihin, ja vanha talo purettiin uuden '
+          + 'hallin tieltä.'
+          + '\n\n'
+          + 'Nelikerroksinen talo edustaa Queen Anne -tyylin '
+          + 'uusintaa, joka oli suosittu Britannian imperiumissa '
+          + '1800-luvun lopulla ja 1900-luvun alussa. Neljässä '
+          + 'kulmatornissa tiilimuuraus on ”sidottu” vaalein '
+          + 'kivinauhoin, mikä antaa julkisivulle raidallisen ilmeen. '
+          + 'Alun perin tiilet olivat sinisiä, mutta ne maalattiin '
+          + 'myöhemmin punaisiksi tyyliin sopiviksi.'
+          + '\n\n'
+          + 'Halli toimi ruokatorina vuoteen 1988, jolloin myyjät '
+          + 'siirtyivät uuteen palvelurakennukseen. Rakennus vaurioitui '
+          + 'Sheung Wanin metroaseman rakennustöissä ja korjattiin '
+          + 'jälkikäteen. Puolet tontista oli jo kaavoitettu Morrison '
+          + 'Streetin leventämiselle, mikä olisi vaatinut talon '
+          + 'purkamista, mutta vuonna 1990 se julistettiin suojelluksi '
+          + 'muistomerkiksi ja avattiin kunnostettuna uudelleen 1991.',
+      kuvat: [
+        {
+          tiedosto: 'HK SW 上環 Sheung Wan 摩利臣街 Morrison Street 紅磚屋 red brick building 西港城 Western Market 干諾道中 Connaught Road Central morning February 2020 SS2 06.jpg',
+          selite: 'Punatiilinen kulmajulkisivu, jossa on '
+            + 'vaaleakivisiä kaaria ja raidallista muurausta, ja '
+            + 'kadussa sen edessä kulkevat raitiovaunun kiskot.',
+          lahde: 'Rumbr Tanmwa Roalooe, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Star Ferryn laituri': {
+      aika: 'lauttayhtiö 1888, nykyinen laituri 2006',
+      teksti: 'Star Ferryn päälinja kulkee Centralin ja Tsim Sha '
+          + 'Tsuin välillä, ja Centralin laituri on kartan piste. '
+          + 'Yhtiö perustettiin 1888 nimellä Kowloon Ferry Company ja '
+          + 'sai nykyisen nimensä 1898. Kymmenessä vuodessa '
+          + 'perustajan laivasto kasvoi neljään alukseen — Morning '
+          + 'Star, Evening Star, Rising Star ja Guiding Star — joista '
+          + 'kuhunkin mahtui sata matkustajaa ja jotka tekivät '
+          + 'keskimäärin sataneljäkymmentäseitsemän ylitystä päivässä.'
+          + '\n\n'
+          + 'Laituri on vaihtanut paikkaa monta kertaa, koska satamaa '
+          + 'on täytetty. Salisbury Roadin päähän valmistui 1906 '
+          + 'mahtava laituri, jossa oli erilliset osastot '
+          + 'ensimmäiselle ja toiselle luokalle, mutta taifuuni '
+          + 'tuhosi sen saman vuoden syyskuussa. Nykyinen kaksoislaituri '
+          + 'rakennettiin 1950-luvun alussa sataman molemmin puolin, '
+          + 'ja se mitoitettiin viidellekymmenelleviidelle miljoonalle '
+          + 'matkalle vuodessa. Centralin puolella laituri siirtyi '
+          + 'marraskuussa 2006 täyttötöiden takia nykyiselle '
+          + 'paikalleen.'
+          + '\n\n'
+          + 'Kiinnitystapa on säilynyt 1800-luvulta: aluksella oleva '
+          + 'merimies heittää köyden laiturilla seisovalle miehelle, '
+          + 'joka nappaa sen pitkävartisella koukulla. Vaikka satama '
+          + 'ylitetään nykyään myös tie- ja rautatietunneleita pitkin, '
+          + 'lautat kuljettavat yhä yli seitsemääkymmentätuhatta '
+          + 'matkustajaa päivässä. Maksuksi kelpaa Octopus-kortti tai '
+          + 'automaatista ostettu poletti.',
+      kuvat: [
+        {
+          tiedosto: 'Central Pier 7 viewed from Hong Kong Maritime Museum.jpg',
+          selite: 'Vihreäkattoinen laiturirakennus työntyy paalujensa '
+            + 'varassa satamaan, ja sen takana nousee Centralin '
+            + 'tornirivistö.',
+          lahde: 'Ceeseven, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Man Mo -temppeli': {
+      aika: 'rakennettu 1847',
+      teksti: 'Man Mo -temppeli on omistettu kahdelle jumalalle: '
+          + 'kirjallisuuden jumalalle Man Cheongille ja soturijumala '
+          + 'Mo Taille eli Kwan Taille. Ming- ja Qing-kausilla juuri '
+          + 'näiden kahden puoleen kääntyivät oppineet ja opiskelijat, '
+          + 'jotka valmistautuivat keisarillisiin virkatutkintoihin. '
+          + 'Hongkongissa on useita saman nimisiä temppeleitä, mutta '
+          + 'suurin ja tunnetuin on tämä Sheung Wanissa, osoitteessa '
+          + 'Hollywood Road 124–126.'
+          + '\n\n'
+          + 'Kokonaisuus on kolme vierekkäistä rakennusta. Man Mo '
+          + '-temppeli on pääsali. Sen vieressä on Lit Shing Kung, '
+          + 'joka on omistettu kaikille taivaan jumalille, ja '
+          + 'länsipuolella Kung So, kokoussali, jossa aikanaan '
+          + 'käsiteltiin yhteisön asioita ja ratkottiin riitoja. '
+          + 'Temppeli rakennettiin vuonna 1847, muutamaa vuotta '
+          + 'siirtokunnan perustamisen jälkeen.'
+          + '\n\n'
+          + 'Vuonna 1908 temppeli siirtyi Tung Wah -sairaalayhtymän '
+          + 'hallintaan, ja se hoitaa sitä yhä. Rakennus sai vuonna '
+          + '1993 ensimmäisen suojeluluokan ja on nykyään suojeltu '
+          + 'muistomerkki. Sisätilan tunnetuin piirre ovat katosta '
+          + 'riippuvat suuret suippenevat suitsukekierukat, jotka '
+          + 'palavat päiväkausia.',
+      kuvat: [
+        {
+          tiedosto: 'Burning incense coils in the Man Mo temple (Hong Kong).jpg',
+          selite: 'Katosta riippuu rivi rivin perään kartiomaisia '
+            + 'suitsukekierukoita, joiden lomassa näkyy punaisia '
+            + 'lyhtyjä ja lappuja.',
+          lahde: 'Aethelfirth, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tai Kwun': {
+      aika: 'rakennukset 1841–1925, avattu uudelleen 2018',
+      teksti: 'Tai Kwun on entinen keskuspoliisiaseman kortteli, joka '
+          + 'sisältää kolme suojeltua muistomerkkiä: vanhan '
+          + 'keskuspoliisiaseman, entisen kihlakunnanoikeuden ja '
+          + 'Victorian vankilan. Kortteli rajautuu Hollywood Roadiin, '
+          + 'Arbuthnot Roadiin, Chancery Laneen ja Old Bailey '
+          + 'Streetiin, ja siinä on kuusitoista historiallista '
+          + 'rakennusta vuosilta 1841–1925.'
+          + '\n\n'
+          + 'Vanhin rakennus on vuonna 1841 rakennettu tuomarin talo '
+          + 'selliosastoineen. Vankila sai nimen Victoria Gaol vuonna '
+          + '1899. Alue laajeni ja rakentui uudelleen useaan kertaan: '
+          + 'jo 1862 vankien määrä oli noussut kuuteensataanviiteen'
+          + 'kymmeneen, ja hallinto päätti ottaa käyttöön viereisen '
+          + 'tontin. Näin syntyi se kortteleiden sarja, joka tunnetaan '
+          + 'nykyään nimellä Tai Kwun eli suuri asema. Vankila '
+          + 'poistui käytöstä vuonna 2006.'
+          + '\n\n'
+          + 'Vuonna 2008 hallinto ja Hongkongin ravikerho sopivat '
+          + 'korttelin säilyttämisestä ja uudesta käytöstä. Työ alkoi '
+          + '2011, kesti kahdeksan vuotta ja maksoi 3,8 miljardia '
+          + 'Hongkongin dollaria; suunnittelusta vastasivat '
+          + 'sveitsiläinen Herzog & de Meuron ja paikallinen Rocco '
+          + 'Design Architects. Kortteli avattiin yleisölle 29. '
+          + 'toukokuuta 2018 kulttuurikeskuksena, ja vanha '
+          + 'paraatikenttä on nyt sen keskusaukio.',
+      kuvat: [
+        {
+          tiedosto: 'Tai Kwun Parade Ground 201806.jpg',
+          selite: 'Kivetty paraatikenttä kaartuvine pylväikköineen, ja '
+            + 'sen yli kohoavat lasiset tornitalot.',
+          lahde: 'Wpcpey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Johanneksen katedraali': {
+      aika: 'rakennettu 1847–1849',
+      teksti: 'Katedraalin peruskivi laskettiin vuonna 1847 ja '
+          + 'rakennus valmistui 1849. Ensimmäinen sunnuntaijumalan'
+          + 'palvelus pidettiin 11. maaliskuuta 1849, jolloin kirkkoa '
+          + 'kutsuttiin vielä nimellä Hongkong Colonial Chapel. '
+          + 'Piispa George Smith vihki sen Pyhän Johanneksen '
+          + 'katedraaliksi vuonna 1852. Se on Hongkongin vanhin '
+          + 'säilynyt länsimainen kirkkorakennus ja Itä-Aasian vanhin '
+          + 'anglikaaninen kirkko.'
+          + '\n\n'
+          + 'Tyyliltään rakennus on uusgotiikkaa, ja materiaaleina on '
+          + 'käytetty rappausta ja puuta. Tontilla on erikoinen '
+          + 'oikeudellinen asema: se on Hongkongin ainoa täysin '
+          + 'omistettu maa-alue, kun kaikki muu maa alueella on '
+          + 'vuokramaata. Järjestely perustuu vuoden 1930 '
+          + 'kirkkosäätiölakiin.'
+          + '\n\n'
+          + 'Katedraali seisoo Garden Roadin varrella hallintokortteli'
+          + 'en keskellä, ja aivan sen vieressä on vaunuradan '
+          + 'alaterminaali — rata alkaa käytännössä kirkon kupeesta. '
+          + 'Rakennus julistettiin suojelluksi muistomerkiksi 5. '
+          + 'tammikuuta 1996.',
+      kuvat: [
+        {
+          tiedosto: 'St John Cathedral Hong Kong.jpg',
+          selite: 'Ylhäältä kuvattuna katedraalin vihreä satulakatto '
+            + 'ja torni erottuvat puiden ja toimistotalojen välissä.',
+          lahde: 'Anthony Ivanoff, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Victoria Peak': {
+      aika: '552 metriä',
+      teksti: 'Victoria Peak on Hongkongin saaren korkein kohta, 552 '
+          + 'metriä, ja koko hallintoalueen mäkien joukossa '
+          + 'kahdeskymmenesyhdeksäs. Kiinalainen nimi on Tai Ping '
+          + 'Shan. Itse huipulla on radiolaitteita eikä sinne pääse; '
+          + 'nimellä ”The Peak” tarkoitetaan yleensä sen alapuolista '
+          + 'aluetta, jossa ovat puistot, näköalapaikat ja rinteen '
+          + 'asuinalue. Lähin julkinen paikka huipun tuntumassa on '
+          + 'Victoria Peakin puutarha, joka on kuvernöörin entisen '
+          + 'kesäasunnon paikalla.'
+          + '\n\n'
+          + 'Jo 1800-luvulla rinne veti puoleensa eurooppalaisia '
+          + 'asukkaita, koska sieltä näki koko kaupungin ja koska '
+          + 'siellä oli viileämpää kuin alhaalla. Kuudes kuvernööri '
+          + 'Sir Richard MacDonnell rakennutti kesäasunnon rinteeseen '
+          + 'noin vuonna 1868. Asukkaat kulkivat koteihinsa '
+          + 'kantotuoleilla, ja se piti rakentamisen vähäisenä siihen '
+          + 'asti, kunnes vaunurata avattiin 1888.'
+          + '\n\n'
+          + 'Radan myötä rinne rakentui nopeasti, ja vuonna 1904 '
+          + 'säädettiin asetus, joka varasi alueen muille kuin '
+          + 'kiinalaisille asukkaille ja varasi vaunuradan heille '
+          + 'ruuhka-aikoina. en-Wikipedian oma artikkeli antaa '
+          + 'asetuksen loppuvuodeksi kahdessa kohdassa eri luvun, '
+          + '1930 ja 1947. Nykyään rinne on yhä kaupungin kallein '
+          + 'asuinalue, ja huipulla käy noin seitsemän miljoonaa '
+          + 'kävijää vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'English Quarter, Hong Kong.jpg',
+          selite: '1800-luvun lopun valokuva rinnetieltä: kaiteen '
+            + 'takana kohoaa suuri vaalea hotellirakennus ja sen '
+            + 'ympärillä huviloita jyrkällä rinteellä.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sininen talo': {
+      aika: 'valmistui 1922',
+      teksti: 'Sininen talo on nelikerroksinen parveketyyppinen '
+          + 'vuokratalo osoitteessa Stone Nullah Lane 72–74A Wan '
+          + 'Chaissa. Se on yksi harvoista säilyneistä '
+          + 'parvekkeellisista tong lau -taloista Hongkongissa ja '
+          + 'kuuluu ensimmäiseen suojeluluokkaan. Nimensä se sai '
+          + 'ulkoseinien väristä: talo siirtyi hallinnon omistukseen '
+          + '1970-luvulla, ja vuonna 1990 seinät maalattiin sinisiksi.'
+          + '\n\n'
+          + 'Tontilla on pidempi historia kuin talolla. Paikalla '
+          + 'toimi 1870-luvulla Wah Ton sairaala, joka tarjosi '
+          + 'kiinalaista lääkintää paikallisille ja oli mahdollisesti '
+          + 'kaupunginosan ensimmäinen sairaala. Sairaalan '
+          + 'lakkautuksen jälkeen 1886 kaksikerroksinen rakennus '
+          + 'toimi Wah Ton temppelinä — Hua Tuo oli kolmen '
+          + 'kuningaskunnan ajan kuuluisa lääkäri. Vanha talo '
+          + 'purettiin 1920, ja tilalle rakennettiin 1922 neljä '
+          + 'nelikerroksista vuokrataloa.'
+          + '\n\n'
+          + 'Yläkerrat ovat yhtä osoitetta lukuun ottamatta '
+          + 'puurakenteisia, ja kaksi vanhaa puuporrasta on säilynyt '
+          + 'alkuperäisosineen. Talo kunnostettiin ja avattiin '
+          + 'uudelleen vuonna 2016 niin, että asukkaat saivat jäädä '
+          + 'taloon; alakerran liiketiloissa toimii muun muassa '
+          + 'kaupunginosan tarinoita kerännyt keskus. Kunnostus sai '
+          + 'arkkitehtuuripalkinnon vuonna 2018.',
+      kuvat: [
+        {
+          tiedosto: 'Blue House in 2020.jpg',
+          selite: 'Kirkkaansininen nelikerroksinen talo parvekkeineen '
+            + 'seisoo katukulmassa vaaleanpunaisen ja keltaisen talon '
+            + 'välissä.',
+          lahde: '方畢可, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vaunuradan alaterminaali': {
+      aika: 'rata avattu 1888',
+      teksti: 'Vaunuradan alapää on Garden Roadilla aivan Pyhän '
+          + 'Johanneksen katedraalin vieressä. Alkuperäinen asema '
+          + 'liitettiin myöhemmin toimistotaloon niin, että laiturit '
+          + 'jäivät katutasoon. Asemalla on yksi raide ja laiturit '
+          + 'sen molemmin puolin: toiselta noustaan vaunuun, toiselta '
+          + 'poistutaan. Valokuvien perusteella Garden Roadin asema '
+          + 'oli aluksi koristeeton rakennus, ja suuri kellotaulu '
+          + 'lisättiin julkisivuun luultavasti 1910- tai 1920-luvulla.'
+          + '\n\n'
+          + 'Radalla on neljä väliasemaa, jotka kaikki ovat '
+          + 'pysähdyksiä pyynnöstä: Kennedy Road, MacDonnell Road, '
+          + 'May Road ja Barker Road. Jokainen on nimetty entisen '
+          + 'kuvernöörin tai sijaishallitsijan mukaan. Ohituskohta, '
+          + 'jossa vaunut kohtaavat, on hieman May Roadin yläpuolella; '
+          + 'siinä radan noin neljänsadan metrin matkalla kiskoja on '
+          + 'ensin neljä ja sitten kolme, ennen kuin niitä on taas '
+          + 'kaksi.'
+          + '\n\n'
+          + 'Vetävä kaapeli toimi aluksi kiinteällä höyrykoneella, '
+          + 'joka korvattiin sähkömoottorilla 1926. Vuonna 1956 '
+          + 'käyttöön tulivat kevyet metallirunkoiset vaunut, joissa '
+          + 'oli kuusikymmentäkaksi istumapaikkaa. Koko järjestelmä '
+          + 'rakennettiin uudelleen 1989 sveitsiläisen Von Rollin '
+          + 'toimesta, ja rata suljettiin pitkäksi kunnostukseksi '
+          + 'ennen 27. elokuuta 2022 tapahtunutta avaamista. Kaksi '
+          + 'vanhaa vaunua seisoo yhä käytöstä poistetulla '
+          + 'sivuraiteella Kennedy Roadin aseman lähellä.',
+      kuvat: [
+        {
+          tiedosto: 'Old Peak Tram 202105.jpg',
+          selite: 'Vanha vihreä vaunu seisoo umpeenkasvaneella '
+            + 'sivuraiteella vaunuhallin edessä puiden keskellä.',
+          lahde: 'Wpcpey, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

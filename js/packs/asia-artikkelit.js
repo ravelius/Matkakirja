@@ -2051,10 +2051,42 @@ export const ASIA_ARTIKKELIT = {
       + 'shikumen-taloja, joissa on kivinen porttikehys ja sisäpiha, '
       + 'on säilynyt korttelikaupungeissa keskustan tuntumassa.',
   },
+  /*
+   * HONGKONGIN INTRO KIRJOITETTU UUSIKSI (Opus 21.8.2026, sama erä kuin
+   * kulttuuri-kategoriat.js:n hongkong-lohko). Merkinnällä oli ennestään
+   * kolmikappaleinen teksti-kenttä, joka on jätetty ennalleen — vain
+   * kahden virkkeen vanha intro on korvattu 20.8.2026 mitalla
+   * (7–10 virkettä, 2–3 kappaletta, 1–3 lihavointia). Väitteet on
+   * tarkistettu en-Wikipedian raakateksteistä 21.8.2026 (Hong Kong,
+   * Star Ferry, Peak Tram, Hong Kong Tramways, History of Hong Kong) ja
+   * ne toistuvat saman erän lehtiteksteissä. Hongkong-linjaus
+   * (docs/aasia-tyoaineisto/spec-asia.md): vuosi 1997 on hallinnollinen
+   * käänne ilman osapuolikehystä, eikä 2010–2020-lukujen tapahtumia
+   * mainita lainkaan.
+   */
   Hongkong: {
-    intro: 'Hongkong on kaupunki kallioilla Etelä-Kiinanmeren rannalla. '
-      + 'Siellä on enemmän pilvenpiirtäjiä kuin missään muualla '
-      + 'maailmassa, koska rakentamiseen kelpaavaa maata on vähän.',
+    intro: 'Hongkong on satamakaupunki Etelä-Kiinan meren rannalla, '
+      + 'Helmijoen suiston itälaidalla. Kaupunki on rakennettu '
+      + 'kapealle kaistaleelle vuorten ja veden väliin, ja '
+      + '**tasaista maata on niin vähän, että se on kasvanut ylöspäin**: '
+      + 'yli sadanviidenkymmenen metrin korkuisia rakennuksia on '
+      + 'enemmän kuin missään muussa maailman kaupungissa. Keskellä on '
+      + 'Victoria-satama, syvä ja luonnostaan suojainen vesi, joka '
+      + 'erottaa Hongkong-saaren ja Kowloonin niemimaan toisistaan.'
+      + '\n\n'
+      + 'Vuonna 1841 saarella asui vajaat seitsemäntuhatta ihmistä, '
+      + 'enimmäkseen kalastajia ja hiilenpolttajia. Britannia sai saaren '
+      + 'seuraavana vuonna, Kowloonin niemimaan 1860 ja laajat Uudet '
+      + 'alueet 99 vuoden vuokralle 1898; vuokra-ajan päätyttyä koko '
+      + 'alue palautui Kiinalle heinäkuussa 1997.'
+      + '\n\n'
+      + '**Arki on rakentunut liikkumisen ympärille.** Lautat ovat '
+      + 'ylittäneet sataman vuodesta 1888 ja kaksikerroksiset '
+      + 'raitiovaunut kulkeneet saaren pohjoisrantaa vuodesta 1904, ja '
+      + 'Victoria Peakille nouseva vaunurata avattiin Aasian '
+      + 'ensimmäisenä funikulaarina. Ruokakulttuuri on kantonilainen, ja '
+      + 'sen tunnetuin muoto on teehuoneen aamutee pienine '
+      + 'annoksineen.',
     teksti: 'Hongkong koostuu Hongkongin saaresta, Kowloonin '
       + 'niemimaasta ja yli kahdestasadasta pienemmästä saaresta. '
       + 'Maasta yli kolme neljäsosaa on liian jyrkkää tai suojeltua '

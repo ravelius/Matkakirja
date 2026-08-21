@@ -42425,4 +42425,525 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * HONGKONG (Opus 21.8.2026). Alusta asti tehty lehti: kohteella oli
+   * ennestään vain kulttuurivisa (asia-questions.js), saapumisteksti,
+   * valokuvakortti (asia-lisat-valokuvat.js) ja lyhyt artikkelimerkintä
+   * (asia-artikkelit.js), jonka intro on tässä erässä kirjoitettu
+   * uusiksi. Kategorioita, kohdekarttaa eikä nähtävyysjuttuja ei ollut.
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 21.8.2026): Hong Kong, History of Hong Kong, Architecture of
+   * Hong Kong, Hong Kong cuisine, Star Ferry, Peak Tram, Hong Kong
+   * Tramways, Victoria Peak, Victoria Harbour, Kowloon Walled City,
+   * 1894 Hong Kong plague, Clock Tower (Hong Kong), Western Market,
+   * Man Mo temples in Hong Kong, Tai Kwun, St John's Cathedral (Hong
+   * Kong) ja Blue House (Hong Kong). Pohjana ovat
+   * docs/aasia-tyoaineisto/faktapohja-hongkong.md ja
+   * tarkistus-hongkong.md, jotka luettiin yhdessä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md, ”Hongkong”): 1800-luvun
+   * satamahistoria, kolonialismi neutraalina historiana, arkkitehtuuri
+   * ja ruoka; EI 2010–2020-lukujen mielenosoituksia eikä
+   * turvallisuuslakia. POIS JÄTETTY KOKONAAN: vuoden 2014 ja vuosien
+   * 2019–2020 mielenosoitukset ja niiden jälkiseuraukset, vuoden 2020
+   * turvallisuuslaki, vuoden 1966 lauttalipun hinnankorotusmellakat
+   * (Star Ferry -artikkelin oma osio), vuoden 1967 levottomuudet,
+   * toisen maailmansodan miehitys, vuoden 1949 pakolaisaalto
+   * poliittisena kysymyksenä ja Kowloonin muurikaupungin rikollisuus.
+   * Vuosi 1997 on lehdessä hallinnollinen käänne — vuokra-aika päättyi
+   * — ilman osapuolikehystä, ja se mainitaan vain kahdesti.
+   * Oopiumisodat kerrotaan kauppahistorian käännekohtina ilman
+   * taistelukuvauksia tai uhrilukuja, samoin kuin Kantonin lehdessä.
+   * Uskonto on historiallis-kulttuurinen ilmiö: Man Mo -temppeli ja
+   * Pyhän Johanneksen katedraali ovat rakennuksia ja kaupunkikuvan
+   * kerrostumia, ei hartauskieltä.
+   *
+   * KAKSI KOHTAA, JOISSA LEHTI POIKKEAA FAKTAPOHJASTA, ja miksi:
+   * 1) Faktapohjan nosto K4 oli ruoka ja H4 vuoden 1894 rutto
+   *    rotuperustaisine asumisrajoituksineen. Kaupunki-sivun neljäs
+   *    nosto on tässä sen sijaan raitiotie (omistajan painotus:
+   *    raitiovaunut ja Star Ferry etusijalla), ja ruoka on siirretty
+   *    matkaoppaan kolmanteen jaksoon, jossa sille on enemmän tilaa.
+   * 2) Historia-sivun nosto H4 kertoo vuoden 1894 epidemian
+   *    TIETEEN JA KAUPUNKIRAKENTEEN kautta: Kitasato ja Yersin,
+   *    Taipingshanin lunastus ja uudelleenrakennus, bakteriologinen
+   *    laitos. Peak District Reservation Ordinance on jätetty pois
+   *    nostosta, koska se on eri asia kuin epidemia (asetus on
+   *    vuodelta 1904, epidemia 1894) ja koska Victoria Peakin oma
+   *    juttu nahtavyysjutut.js:ssä kertoo sen omassa yhteydessään
+   *    neutraalina siirtomaahistoriana.
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA, jotka koskevat lehden
+   * tekstejä, ja miten ne on ratkaistu:
+   *  - Star Ferry -artikkelin johdanto sanoo laivastoksi kaksitoista
+   *    alusta, sen oma Fleet-osio yhdeksän. Lehti ei sano lukua
+   *    lainkaan vaan kertoo matkustajamäärän, joka on molemmissa
+   *    kohdissa sama (yli 70 000 päivässä, n. 26 miljoonaa vuodessa).
+   *    Sama ratkaisu kuin Kantonin etäisyysluvussa.
+   *  - Peak Tram -artikkelin infoboksi sanoo avajaispäiväksi
+   *    30.5.1888, leipäteksti 28.5.1888. Lehti sanoo ”toukokuussa
+   *    1888”, jolloin kumpikaan luku ei jää vastaan sanomaan.
+   *  - Victoria Peak -artikkeli sanoo Peak District Reservation
+   *    Ordinancen olleen voimassa ”1904–1930” ja kaksi kappaletta
+   *    myöhemmin ”1904–1947”. Kohteen juttu kirjoittaa eron auki
+   *    lukijalle.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Britannia vuoteen 1997
+   * (historia-sivun johdanto ja nosto H2), pilvenpiirtäjät (nosto K3),
+   * Star Ferry (nosto K1 ja avauskuva), vuoden 1888 vaunurata (nosto
+   * K2) ja ”yksi maa, kaksi järjestelmää” (asia-artikkelit.js:n
+   * teksti-kenttä). Historia-sivun minitehtävä kysyy Kowloonin
+   * niemimaan liittämisvuotta 1860, jota visa ei kysy, ja vastaus on
+   * samalla sivulla nostossa H2.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu. Star Ferry on
+   * lehdessä kahdessa kuvassa (avauskuvan yksinäinen lautta
+   * aurinkoisena päivänä ja noston K1 kaksi lauttaa sumussa) ja
+   * kolmannen kerran kohdekartan jutussa laiturirakennuksena — eri
+   * tiedostot, kolme eri aihetta, ja lautta on koko lehden selkäranka
+   * samaan tapaan kuin Shamian Kantonissa. Vaunurata on avauskuvassa
+   * (nykyinen vaunu ohituskohdassa) ja nostossa K2 vuoden 1908
+   * asemakuvana; kohdekartan juttu näyttää vuoden 1956 vaunun
+   * museoituna. Victoria-satama näkyy kaikissa kolmessa
+   * kansikuvassa, mutta kolmesta eri suunnasta ja kolmesta eri
+   * kaupunginosasta, mikä on juuri kansikarusellin tarkoitus
+   * (omistajan linjaus 21.8.2026).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi’anin, Varanasin, Kathmandun ja Kantonin
+   * malli v965–v977). Talon menetelmä on Open-Meteon arkisto (ERA5,
+   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn ajan
+   * pelkällä virheellä ”Daily API request limit exceeded. Please try
+   * again tomorrow” — kontin jaetun ulosmenevän osoitteen
+   * vuorokausikiintiö oli käytetty loppuun, eikä se nollaudu ennen
+   * UTC-vuorokauden vaihdetta. Kokeiltu työn alussa ja lopussa, sama
+   * vastaus kummallakin kerralla. Lukuja ei ole otettu mistään muusta
+   * lähteestä, koska vuosigraafin lähderivi lupaa lukijalle
+   * nimenomaan ERA5:n. Matkaoppaan jakso 5 nojaa siksi en-Wikipedian
+   * Hong Kong -artikkelin sääruutuun (Hongkongin observatorio,
+   * normaalit 1991–2020), ja jakso sanoo sen ääneen. Kun ERA5-rivi
+   * joskus lisätään, jakso 5 on kirjoitettava rivin omista luvuista.
+   * Mittauspiste olisi Central 22,282 / 114,158.
+   */
+  hongkong: [
+    {
+      id: 'kaupunki',
+      nimi: 'Hongkong',
+      johdanto: 'Vuorten ja meren väliin puristettu satamakaupunki, '
+        + 'jonka Victoria-satama on syvä ja luonnostaan suojainen. '
+        + 'Kalastajakylästä kasvoi puolessatoista vuosisadassa '
+        + 'pystysuuntaan rakennettu miljoonakaupunki, jonka lautat ja '
+        + 'raitiovaunut kulkevat yhä 1800-luvun reittejä.',
+      /*
+       * KANSIKUVAT: kolme laajaa yleiskuvaa kolmesta eri suunnasta —
+       * ylhäältä Victoria Peakin rinteeltä, sataman poikki Kowloonin
+       * puolelta ja saaren toiselta laidalta Aberdeenin lahdelta.
+       * Yhtään yksityiskohta-, sisä- tai ruokakuvaa ei ole kannessa
+       * (omistajan kansikaruselli-linjaus 21.8.2026).
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Kowloon, Victoria Harbour and Hong Kong from Victoria Gap.jpg',
+          selite: 'Victoria Peakin rinteeltä katsottuna tornitalot '
+            + 'täyttävät koko rannan, ja sataman takana kohoavat '
+            + 'Kowloonin vuoret.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'View of Victoria Harbour from Tsim Sha Tsui.jpg',
+          selite: 'Kowloonin rantapromenadilta saaren siluetti nousee '
+            + 'suoraan veden takaa vihreiden vuorenrinteiden eteen.',
+          lahde: 'Benlisquare, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Aberdeen Harbour in 2016.jpg',
+          selite: 'Saaren eteläpuolella Aberdeenin satama-altaassa on '
+            + 'rivi veneitä, ja molempia rantoja reunustavat '
+            + 'tornitalot.',
+          lahde: 'Ceeseven, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: lautta, vaunurata ja liiketalo — kolme asiaa,
+       * joista lehti kertoo, siinä järjestyksessä jossa se ne kertoo.
+       * Kaksi ensimmäistä ovat kaupungin omia kulkuneuvoja, kolmas
+       * se rakennustyyppi, joka oli täällä kaikkialla ennen
+       * tornitaloja.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Star Ferry Hong Kong. (39837102942).jpg',
+          selite: 'Vihreävalkoinen Star Ferry -lautta ylittää sataman, '
+            + 'ja takana nousee saaren rinne tornitaloineen.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, '
+            + 'Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Hong Kong. Funicular railway to Victoria Peak. Passing point.jpg',
+          selite: 'Punainen vaunuradan vaunu ohituskohdassa jyrkässä '
+            + 'rinteessä, ja kiskojen takana häämöttävät keskustan '
+            + 'tornit.',
+          lahde: 'Anne and David, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'HK ShanghaiStreet CantoneseVerandahTypePrewarShophouses.JPG',
+          selite: 'Sotia edeltävien tong lau -liiketalojen rivi: '
+            + 'alakerrassa kaupat, ylhäällä asunnot ja julkisivuilla '
+            + 'pystysuorat kyltit.',
+          lahde: 'Chong Fat, Wikimedia Commons (PD)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Tähtilautta, joka jäi kulkemaan',
+          tiedosto: 'Star Ferries. Hong Kong. (9061977293).jpg',
+          teksti: 'Ennen höyrylauttoja satama ylitettiin '
+            + 'matalapohjaisilla puuveneillä, sampaneilla. Vuonna 1870 '
+            + 'Grant Smith -niminen mies toi Englannista '
+            + 'kaksipotkurisen puurunkoisen veneen ja alkoi kuljettaa '
+            + 'väkeä epäsäännöllisin väliajoin. Heinäkuussa 1873 '
+            + 'yritettiin aloittaa säännöllinen höyrylauttaliikenne '
+            + 'saaren ja Kowloonin välillä, mutta hanke pysäytettiin '
+            + 'Britannian Kantonin-konsulin pyynnöstä. Vuonna 1888 '
+            + 'parsilainen kauppias Dorabjee Naorojee Mithaiwala '
+            + 'perusti Kowloon Ferry Companyn ja osti Smithin veneen; '
+            + 'yhtiö otti nimen Star Ferry vuonna 1898. Laivojen nimet '
+            + 'Morning Star ja Evening Star ovat Tennysonin runosta.',
+          selite: 'Kaksi vihreävalkoista lauttaa kohtaa sumuisessa '
+            + 'satamassa, ja taustan tornitalot erottuvat vain '
+            + 'haaleina ääriviivoina.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, '
+            + 'Wikimedia Commons (CC0)',
+          wiki: 'Star Ferry',
+        },
+        {
+          otsikko: 'Rata, joka kiipeää lähes pystysuoraan',
+          tiedosto: 'Tcitp d174 hong kong peak tram station.jpg',
+          teksti: 'Victoria Peakille noustiin 1800-luvulla '
+            + 'kantotuolilla, ja se piti rinteen rakentamisen '
+            + 'vähäisenä. Vuonna 1881 Alexander Findlay Smith jätti '
+            + 'kuvernöörille anomuksen vuoristoradasta, ja tarvittava '
+            + 'laki hyväksyttiin kaksi vuotta myöhemmin. Rakennustyöt '
+            + 'alkoivat syyskuussa 1885, ja rata avattiin toukokuussa '
+            + '1888 Aasian ensimmäisenä funikulaarina. Reitti on noin '
+            + 'puolitoista kilometriä ja nousee vajaat neljäsataa '
+            + 'metriä. Kaksi vaunua toimii toistensa vastapainoina ja '
+            + 'kohtaa radan puolivälissä ohituskohdassa. Ensimmäisenä '
+            + 'päivänä matkusti kahdeksansataa ihmistä ja ensimmäisenä '
+            + 'vuonna noin sataviisikymmentätuhatta.',
+          selite: 'Vuoden 1908 valokuva radan yläasemalta: puinen vaunu '
+            + 'seisoo kiskoilla tiilisen konehuoneen vieressä.',
+          lahde: 'Arnold Wright, Wikimedia Commons (PD)',
+          wiki: 'Peak Tram',
+        },
+        {
+          otsikko: 'Kaupunki, joka rakensi ylöspäin',
+          tiedosto: 'Yick Cheong Building View 2015.jpg',
+          teksti: 'Hongkongissa on enemmän yli sadanviidenkymmenen '
+            + 'metrin korkuisia rakennuksia kuin missään muussa '
+            + 'maailman kaupungissa. Syy on maantieteessä: koko '
+            + 'hallintoalue on noin 1 110 neliökilometriä, mutta '
+            + 'rakentamaton maasto on kukkulaista ja jyrkkää, ja siitä '
+            + 'noin neljäkymmentä prosenttia on maastopuistoja ja '
+            + 'luonnonsuojelualueita. Rakentaminen on siksi puristettu '
+            + 'kapeille kaistaleille — ja osin merestä otetulle maalle, '
+            + 'jota on seitsemänkymmentä neliökilometriä eli neljäsosa '
+            + 'rakennetusta alasta. Ennen tornitaloja perusmuoto oli '
+            + 'tong lau: kolmi- tai nelikerroksinen liiketalo, jossa '
+            + 'kauppa oli kadun tasossa ja asunnot parvekkeineen sen '
+            + 'yllä.',
+          selite: 'Alaviistosta kuvattu asuintalojen sisäpiha, jonka '
+            + 'seinät jatkuvat kerros kerroksen jälkeen ylöspäin '
+            + 'parvekkeineen ja ilmastointilaitteineen.',
+          lahde: 'Jonathan Leung, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Architecture of Hong Kong',
+        },
+        {
+          otsikko: 'Kaksikerroksinen raitiovaunu vuodesta 1904',
+          tiedosto: '德輔道中 Des Voeux Road Central, 1960s.jpg',
+          teksti: 'Raitiotietä ehdotettiin ensimmäisen kerran vuonna '
+            + '1881, mutta hanke jäi vaunuradan varjoon, joka '
+            + 'kiinnosti hallintoa enemmän. Laki hyväksyttiin '
+            + 'toukokuussa 1902, ja liikenne alkoi 30. heinäkuuta 1904 '
+            + 'kahdellakymmenelläkuudella yksikerroksisella vaunulla, '
+            + 'jotka tuotiin maahan osissa ja koottiin varikolla. '
+            + 'Kaksikerroksiset vaunut tulivat vuonna 1912 '
+            + 'avokattoisina; kangaskatot lisättiin 1913 ja umpinaiset '
+            + 'vaunut 1925. Rata kulkee yhä saaren pohjoisrantaa '
+            + 'Kennedy Townista Shau Kei Waniin, ja Happy Valleyn '
+            + 'silmukka haarautuu siitä. Hongkongin vaunusto on '
+            + 'maailman suurin käytössä oleva kaksikerroksisten '
+            + 'raitiovaunujen laivue.',
+          selite: '1960-luvun katunäkymä Des Voeux Roadilta: vihreä '
+            + 'kaksikerroksinen raitiovaunu kadun keskellä ja '
+            + 'molemmin puolin rivi pystysuoria mainoskylttejä.',
+          lahde: 'Unknown., Wikimedia Commons (PD)',
+          wiki: 'Hong Kong Tramways',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'View down Central-Mid-Levels escalators from Conduit Road.jpg',
+          selite: 'Keskustan ja rinnekaupunginosien välinen '
+            + 'liukuporrasjono laskeutuu katua alas talojen välissä.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Hongkong on Kiinan erityishallintoalue Etelä-Kiinan '
+          + 'meren rannalla, kuudenkymmenen kilometrin päässä Macaosta '
+          + 'itään. Pinta-alaa on noin 1 110 neliökilometriä, mutta '
+          + 'matkailijan Hongkong on pieni. Melkein kaikki tämän sivun '
+          + 'kartan kohteet ovat Victoria-sataman molemmin puolin '
+          + 'Centralin, Sheung Wanin, Wan Chain ja Tsim Sha Tsuin '
+          + 'kaupunginosissa, ja niiden väliä kuljetaan lautalla, '
+          + 'raitiovaunulla ja kävellen. Kowloonin muurikaupungin '
+          + 'puisto on kuuden ja puolen kilometrin päässä koillisessa, '
+          + 'eikä se siksi ole kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Hongkong',
+          taitto: 'opas',
+          teksti: 'Yksi satama, kaksi rantaa ja kaksi rataa: toinen '
+            + 'kulkee rantaviivaa pitkin, toinen kiipeää suoraan ylös.',
+          nosto: 'Lautat kiinnitetään laituriin yhä samalla tavalla '
+            + 'kuin 1800-luvulla: miehistön jäsen heittää köyden '
+            + 'laiturilla seisovalle miehelle, joka nappaa sen '
+            + 'pitkävartisella koukulla. Matka Centralista Tsim Sha '
+            + 'Tsuihin on yksi kaupungin edullisimmista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Yli yhdeksänkymmentä prosenttia asukkaiden '
+                + 'päivittäisistä matkoista tehdään julkisilla '
+                + 'kulkuneuvoilla — suurempi osuus kuin missään '
+                + 'muualla maailmassa. Metroverkossa on '
+                + 'yhdeksänkymmentäyhdeksän asemaa ja '
+                + 'kuusikymmentäkahdeksan pikaraitiotien pysäkkiä, '
+                + 'matkustajia on lähes viisi miljoonaa päivässä, ja '
+                + 'junista 99,9 prosenttia kulkee aikataulussa. Lipun '
+                + 'sijaan käytetään Octopus-korttia, joka kelpaa '
+                + 'junaan, raitiovaunuun, bussiin ja lauttaan sekä '
+                + 'useimpiin kauppoihin. Star Ferry kuljettaa yhä yli '
+                + 'seitsemääkymmentätuhatta matkustajaa päivässä eli '
+                + 'noin kaksikymmentäkuusi miljoonaa vuodessa, vaikka '
+                + 'sataman ali kulkee sekä tie- että '
+                + 'rautatietunneleita. Vanha Kai Takin lentoasema '
+                + 'lopetti toimintansa vuonna 1998, ja liikenne '
+                + 'siirtyi nykyiselle kansainväliselle lentoasemalle.',
+              kuva: {
+                tiedosto: 'Central Piers Overview 2010.jpg',
+                selite: 'Ilmakuva Centralin lauttalaitureista: rivi '
+                  + 'terminaaleja työntyy satamaan, ja rannalla on '
+                  + 'täyttötyömaa.',
+                lahde: 'WiNG, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Hongkong on Kiinan eteläisellä rannikolla, ja '
+                + 'sen ainoa maaraja on pohjoisessa Shenzheniä vasten '
+                + 'Sham Chun -joen takana. Maapinta-alaa on noin '
+                + '1 110 neliökilometriä, ja se jakautuu Hongkongin '
+                + 'saareen, Kowloonin niemimaahan, Uusiin alueisiin, '
+                + 'Lantauhun ja yli kahteensataan pienempään saareen. '
+                + 'Korkein kohta on Tai Mo Shan, 957 metriä. '
+                + 'Rakentaminen on keskittynyt Kowlooniin, '
+                + 'Hongkongin saarelle ja Uusien alueiden '
+                + 'satelliittikaupunkeihin, ja loput maastosta on '
+                + 'kukkulaista ja vuorista. Makeaa vettä on vähän: '
+                + 'seitsemänkymmentä prosenttia siitä tulee '
+                + 'Guangdongin puolelta Dongjiang-joesta, ja '
+                + 'useimmilla rakennetuilla alueilla vessat '
+                + 'huuhdellaan merivedellä.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: aamutee',
+              teksti: 'Riisi on kotiruoan perusta, ja ruokaostoksia '
+                + 'tehdään usein päivittäin pieninä erinä, koska '
+                + 'keittiöt ovat pieniä ja tuoreus ratkaisee. Ulkona '
+                + 'syöminen ja mukaan ostaminen ovat tavallisia: '
+                + 'keskimääräinen työviikko on lähes '
+                + 'neljäkymmentäseitsemän tuntia. Tunnetuin tapa on '
+                + 'yum cha eli aamutee, jonka yhteydessä pöytään '
+                + 'tuodaan dim sumia — pieniä höyrytettyjä tai '
+                + 'paistettuja annoksia bambukoreissa, joita '
+                + 'tarjoilijat kuljettavat kärryillä salin läpi. '
+                + 'Kaupungin oma keittiöilmiö on cha chaan teng, '
+                + '1940–1950-luvulla syntynyt edullinen ruokala, '
+                + 'jossa syödään ananassämpylää ja juodaan '
+                + 'maitoteetä. 1800-luvun lopulla kantonilaiset '
+                + 'ravintolat tarjosivat liikemiehille juhla-aterioita, '
+                + 'joiden hinta vastasi virkailijan kuukausipalkkaa; '
+                + 'tavallisen väen ruoka oli yksinkertaista ja liha '
+                + 'kuului juhlapäiviin.',
+              kuva: {
+                tiedosto: 'Eight selection of Dim Sum in Hong Kong.jpg',
+                selite: 'Bambukorissa on kahdeksan erilaista dim '
+                  + 'sum -annosta paperin päällä, höyrytettyinä ja '
+                  + 'täytettyinä.',
+                lahde: 'Peachyeung316, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kadonnut muurikaupunki',
+              teksti: 'Kowloonin puolella oli Song-kaudelta peräisin '
+                + 'oleva vartioasema, josta tehtiin vuonna 1847 '
+                + 'muurein varustettu linnoitus. Vuoden 1898 sopimus, '
+                + 'joka vuokrasi Uudet alueet Britannialle, jätti '
+                + 'juuri tämän pienen linnoituksen sopimuksen '
+                + 'ulkopuolelle: se jäi muodollisesti Kiinan '
+                + 'hallintaan keskelle brittiläistä aluetta ja '
+                + 'käytännössä ilman kummankaan tehokasta hallintoa. '
+                + 'Toisen maailmansodan jälkeen alueelle muutti '
+                + 'paljon väkeä, ja 1960-luvulta alkaen sen päälle '
+                + 'rakennettiin ilman suunnittelua kerros kerroksen '
+                + 'perään. Vuoden 1987 selvityksen mukaan 2,6 '
+                + 'hehtaarin alueella asui arviolta kolmekymmentäkolme '
+                + 'tuhatta ihmistä. Rakennukset purettiin maaliskuun '
+                + '1993 ja huhtikuun 1994 välillä, ja tilalle '
+                + 'rakennettiin puutarha, joka avattiin joulukuussa '
+                + '1995; sen keskellä seisoo entisöity yamen eli '
+                + 'vanha virkatalo.',
+              kuva: {
+                tiedosto: '2024-12-28 Kowloon Walled City Park.jpg',
+                selite: 'Puutarhassa kiemurtelee kiveystie leikattujen '
+                  + 'pensaiden lomassa, ja perällä näkyy valkoinen '
+                  + 'muuri kuuportteineen.',
+                lahde: 'Alexkom000, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Ilmasto on kostea subtrooppinen — Köppenin '
+                + 'luokituksessa Cwa — ja sivuaa trooppista '
+                + 'monsuuni-ilmastoa. Nämä luvut ovat en-Wikipedian '
+                + 'Hongkong-artikkelin sääruudusta, joka perustuu '
+                + 'Hongkongin observatorion normaaleihin vuosilta '
+                + '1991–2020; lehden vuosigraafia ei ole, koska sen '
+                + 'lupaamaa ERA5-aineistoa ei saatu haettua. '
+                + 'Kuukausikeskilämpö nousee tammikuun 16,5 asteesta '
+                + 'heinäkuun 28,9 asteeseen, ja vuoden keskiarvo on '
+                + '23,5 astetta. Sadetta tulee 2 431 millimetriä '
+                + 'vuodessa, mutta se jakautuu hyvin epätasaisesti: '
+                + 'kesäkuussa 492 millimetriä, joulukuussa 29. Kesät '
+                + 'ovat pitkiä, kuumia ja kosteita, ja niihin kuuluu '
+                + 'taifuunikausi; talvet ovat lyhyitä ja leutoja. '
+                + 'Syksy on aurinkoisin ja kevät pilvisin vuodenaika, '
+                + 'ja lunta on nähty viimeksi Tai Mo Shanin vuorella '
+                + 'vuonna 1975.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saarella asui vuonna 1841 vajaat seitsemäntuhatta '
+        + 'ihmistä. Britannia hallitsi aluetta vuoteen 1997, ja sinä '
+        + 'aikana kalastajakylistä kasvoi satamakaupunki, jonka '
+        + 'rakenne näkyy yhä katukuvassa.',
+      tehtava: {
+        kysymys: 'Minä vuonna Kowloonin niemimaa liitettiin '
+          + 'Hongkongiin?',
+        vaihtoehdot: [
+          '1842',
+          '1860',
+          '1898',
+          '1997',
+        ],
+        oikea: 1,
+        fakta: 'Pekingin sopimus lokakuussa 1860 siirsi Kowloonin '
+          + 'niemimaan Boundary Streetiin asti. Uudet alueet '
+          + 'vuokrattiin vasta 1898.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lippu Possession Pointissa',
+          tiedosto: 'Album of Hongkong Canton Macao Amoy Foochow 034.jpg',
+          teksti: 'Britannia miehitti Hongkongin saaren 25. tammikuuta '
+            + '1841 ja käytti sitä sotilaallisena tukikohtana; '
+            + 'seuraavana päivänä Union Jack nostettiin Possession '
+            + 'Pointissa Chuenpin sopimuksen nojalla. Saarella asui '
+            + 'tuolloin arviolta 7 450 ihmistä, enimmäkseen '
+            + 'tanka-kalastajia ja hakka-hiilenpolttajia muutamassa '
+            + 'rannikkokylässä. Elokuun 29. päivänä 1842 Nanjingin '
+            + 'sopimus vahvisti luovutuksen ensimmäisen oopiumisodan '
+            + 'päätteeksi, ja saaresta tuli kruununsiirtokunta. '
+            + '1850-luvulla väkiluku kasvoi nopeasti, kun '
+            + 'manner-Kiinan levottomuudet, tulvat, taifuunit ja '
+            + 'nälänhätä ajoivat ihmisiä saarelle.',
+          selite: 'Noin vuoden 1870 valokuva kaupungin yläpuolelta: '
+            + 'puutarhan takana on satama täynnä purjelaivoja ja '
+            + 'vastarannalla Kowloonin vuoret.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'History of Hong Kong',
+        },
+        {
+          otsikko: 'Kolme sopimusta, kolme rajaa',
+          tiedosto: 'Nicholas Belfield Dennys - Map of Hong Kong (1867).jpg',
+          teksti: 'Hongkong ei syntynyt kerralla. Nanjingin sopimus '
+            + 'luovutti Hongkongin saaren vuonna 1842. Pekingin '
+            + 'sopimus 18. lokakuuta 1860 lisäsi siihen Kowloonin '
+            + 'niemimaan Boundary Streetiin asti — katu on yhä '
+            + 'olemassa ja kulkee suorana viivana niemimaan poikki. '
+            + 'Kolmas vaihe oli luonteeltaan toinen: 1. heinäkuuta '
+            + '1898 Britannia vuokrasi Uudet alueet, Shenzhen-joen '
+            + 'eteläpuolisen maan saarineen, yhdeksäksikymmeneksi '
+            + 'yhdeksäksi vuodeksi. Juuri määräaika ratkaisi lopun: '
+            + 'kun vuokra-aika täyttyi vuonna 1997, koko alue '
+            + 'palautui hallinnollisesti Kiinalle yhtenä '
+            + 'kokonaisuutena.',
+          selite: 'Vuoden 1866 kaupunkikartta ”Plan of Victoria”: '
+            + 'korttelit jatkuvat kapeana nauhana rantaa pitkin, ja '
+            + 'sen alapuolella on selitysluettelo.',
+          lahde: 'Nicholas Belfield Dennys (1839–1900), Wikimedia Commons (PD)',
+          wiki: 'History of Hong Kong',
+        },
+        {
+          otsikko: 'Kaasu, sähkö ja pankki',
+          tiedosto: 'Hong Kong 1868.jpg',
+          teksti: '1800-luvun jälkipuoliskolla sotilastukikohdasta '
+            + 'tuli kauppakaupunki. Ensimmäinen kaasuyhtiö aloitti '
+            + 'vuonna 1862 ja ensimmäinen sähköyhtiö 1890. Rikshojen '
+            + 'rinnalle tulivat vähitellen bussit, lautat ja '
+            + 'raitiovaunut. Vuonna 1865 avattu Hongkongin ja '
+            + 'Shanghain pankki loi perustan sille, mistä '
+            + 'kaupungista myöhemmin tuli rahoituskeskus. Samaan '
+            + 'aikaan lähetysseurat perustivat kouluja ja kirkkoja: '
+            + 'St Stephenin kirkko vuonna 1865 ja kiinalaisten '
+            + 'lääketieteellinen korkeakoulu 1887, jonka kahdesta '
+            + 'ensimmäisestä valmistuneesta toinen oli Sun Yat-sen. '
+            + 'Korkeakoulusta kasvoi myöhemmin Hongkongin yliopiston '
+            + 'lääketieteellinen tiedekunta.',
+          selite: 'John Thomsonin valokuva vuodelta 1868: '
+            + 'pylväikköhuviloiden ja tiilikattojen takana avautuu '
+            + 'satama, jossa on kymmeniä purjelaivoja.',
+          lahde: 'John Thomson, Wikimedia Commons (PD)',
+          wiki: 'History of Hong Kong',
+        },
+        {
+          otsikko: 'Kaupunki, jossa ruttobakteeri löytyi',
+          tiedosto: 'Hong Kong Museum of Medical Sciences.jpg',
+          teksti: 'Vuonna 1894 Hongkongiin levisi kolmannen '
+            + 'ruttopandemian aalto. Kesäkuussa kaupunkiin saapui '
+            + 'kaksi tutkijaa: japanilainen Kitasato Shibasaburō '
+            + 'kahdentenatoista ja ranskalais-sveitsiläinen Alexandre '
+            + 'Yersin viidentenätoista päivänä. Molemmat etsivät '
+            + 'taudinaiheuttajaa, ja Yersinin kuvaus osoittautui '
+            + 'täsmällisemmäksi — bakteeri sai myöhemmin hänen '
+            + 'mukaansa nimen Yersinia pestis. Epidemia muutti myös '
+            + 'kaupunkia: tiheään rakennettu Taipingshanin kortteli '
+            + 'lunastettiin, purettiin ja rakennettiin uudelleen '
+            + 'vuosina 1895–1898 viemäreineen ja parvekkeineen. '
+            + 'Vuonna 1906 avattiin bakteriologinen laitos, jossa '
+            + 'toimii nykyään lääketieteen museo.',
+          selite: 'Vuonna 1906 valmistuneen bakteriologisen laitoksen '
+            + 'punatiilinen julkisivu kaarevine ikkunoineen '
+            + 'rinnekortteleiden keskellä.',
+          lahde: 'ystsoi, Wikimedia Commons (CC BY 2.0)',
+          wiki: '1894 Hong Kong plague',
+        },
+      ],
+    },
+  ],
 };
