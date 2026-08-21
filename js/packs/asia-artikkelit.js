@@ -187,6 +187,26 @@
 // vuosien 1965–66 sekä 1998 tapahtumat on jätetty kokonaan pois.
 // Vajoaminen ja tulvat kerrotaan kaupunkirakenteen tosiasiana ilman
 // katastrofikehystä.
+//
+// BORNEO (21.8.2026) SAI UUDEN INTRON samalla kun alueelle tehtiin
+// alusta asti oma ALUELEHTI (kulttuuri-kategoriat.js; aluelehdellä ei
+// ole kohdekarttaa eikä nähtävyysjuttuja, joten maakartat.js ja
+// nahtavyysjutut.js pysyivät ennallaan). Vanha intro oli kahden
+// lauseen mittainen ja kertoi vain saaren koon, sademetsän iän ja
+// kolmen valtion jaon; uusi kertoo lisäksi sijainnin päiväntasaajalla,
+// nimen alkuperän, 900-luvun kauppatavarat, Brooken Sarawakin ja
+// dajakit. Jokainen introväite tulee saman erän lehtiteksteistä, jotka
+// on tarkistettu en-Wikipedian raakateksteistä 21.8.2026 (Borneo, Raj
+// of Sarawak, James Brooke, Alfred Russel Wallace, Dayak people,
+// Bornean orangutan, Mount Kinabalu, Sandakan, Kota Kinabalu).
+// Teksti-kenttä on ennallaan. Brooken maanluovutuksen vuodeksi on
+// valittu 1841, koska Raj of Sarawak ja James Brooke antavat sille
+// tarkan päivän 24.9.1841, kun taas Borneo-artikkeli pyöristää
+// 1842:een — ristiriita on kirjoitettu auki lehden omassa nostossa.
+// INDONESIA- JA MALESIA-LINJAUS on sama kuin Jakartassa: kolmen maan
+// jako on maantieteellinen tosiasia ilman nykypolitiikkaa,
+// päänmetsästys vain yhtenä neutraalina historiallisena mainintana
+// lehden puolella, ei introssa.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -2633,9 +2653,29 @@ export const ASIA_ARTIKKELIT = {
       + '-sarvikuonoja, jotka kaikki ovat uhanalaisia.',
   },
   Borneo: {
-    intro: 'Borneo on maailman kolmanneksi suurin saari, ja sen '
-      + 'sademetsä on noin 140 miljoonaa vuotta vanha — huomattavasti '
-      + 'vanhempi kuin Amazon. Saari on jaettu kolmen valtion kesken.',
+    intro: 'Borneo on maailman kolmanneksi suurin saari ja Aasian '
+      + 'suurin. Päiväntasaaja halkaisee sen suunnilleen kahtia, '
+      + 'rannikolla ovat kaupungit ja sisämaahan noustaan jokia '
+      + 'pitkin. Saaren jakavat kolme maata, '
+      + '**Indonesia, Malesia ja Brunei**, ja jako on peruja '
+      + '1800-luvun hallintorajoista. Nimi Borneo tulee Brunein '
+      + 'sulttaanikunnalta, joka hallitsi kukoistuksensa aikana '
+      + 'lähes koko rannikkoa; indonesiaksi saari on Kalimantan.'
+      + '\n\n'
+      + 'Kiinalaisissa asiakirjoissa saari mainitaan jo vuonna 977, '
+      + 'ja sen arvokkaimpia vientitavaroita olivat kulta, kamfertti, '
+      + 'mausteet ja syötävät pääskynpesät. Vuonna 1841 Brunein '
+      + 'sulttaani luovutti osan Sarawakia englantilaiselle James '
+      + 'Brookelle, ja hänen sukunsa hallitsi aluetta sata vuotta '
+      + 'valkoisina radžoina. Sisämaan jokivarsilla asuu dajakkeja, '
+      + 'joka on yli kahdensadan eri kansan yhteisnimitys; heidän '
+      + 'perinteinen pitkätalonsa on yhtä aikaa koti, kylä ja '
+      + 'hallinto.'
+      + '\n\n'
+      + 'Saaren sademetsä on noin **140 miljoonaa vuotta vanha** eli '
+      + 'yksi maailman vanhimmista, ja siellä elää borneonoranki, '
+      + 'jota ei tavata luonnossa mistään muualta. Korkein huippu on '
+      + 'Kinabalu Sabahissa, 4 095 metriä.',
     teksti: 'Borneo on Kaakkois-Aasiassa päiväntasaajan kohdalla. '
       + 'Saaren eteläosa kuuluu Indonesialle, pohjoisosa Malesialle, '
       + 'ja pohjoisrannikolla on pieni Brunein sulttaanikunta. '
