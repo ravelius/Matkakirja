@@ -1706,11 +1706,40 @@ export const ASIA_ARTIKKELIT = {
       + 'Kaupungissa asuu nyt yli miljoona ihmistä. Sen laidalla aro '
       + 'alkaa ilman esikaupunkia: katu loppuu, ja horisontti on tyhjä.',
   },
+  /*
+   * SAMARKANDIN INTRO KIRJOITETTIIN UUSIKSI 21.8.2026 uuden lehden
+   * yhteydessä (Raamattu, "TEKSTIEN PAINOPISTE"): vanha kahden
+   * lauseen intro korvattiin etusivun leipätekstillä. Jokainen väite
+   * tulee kaupungin omista, samassa erässä tarkistetuista
+   * lehtiteksteistä (kulttuuri-kategoriat.js: nostot ja Matkailijan
+   * Samarkand, nahtavyysjutut.js) — uusia lähteitä ei otettu.
+   * Sisältölinjaus: vuoden 1868 liittäminen Venäjään on neutraali
+   * historiallinen tosiasia, eikä introssa ole nykypolitiikkaa.
+   */
   Samarkand: {
-    intro: 'Samarkand oli Timurin valtakunnan pääkaupunki 1300-luvulla '
-      + 'ja silkkitien kuuluisin kaupunki. Sen Registanin aukiota '
-      + 'reunustaa kolme koulurakennusta, joiden julkisivut ovat '
-      + 'kokonaan sinistä ja kultaista kaakelia.',
+    intro: 'Samarkand on Uzbekistanin kaakkoisosassa Zeravšan-joen '
+      + 'laaksossa 705 metrin korkeudessa, keitaana kasteltujen '
+      + 'peltojen ja kuivan aron välissä. Se on yksi Keski-Aasian '
+      + 'vanhimmista yhtäjaksoisesti asutuista kaupungeista, ja '
+      + 'arkeologit ajoittavat sen perustamisen noin vuoteen 700 eaa. '
+      + 'Aleksanteri Suuri valtasi sen 329 eaa., ja kreikkalaisille se '
+      + 'oli **Marakanda**.'
+      + '\n\n'
+      + 'Mongolit tuhosivat kaupungin vuonna 1220, mutta 1370 Timur '
+      + 'teki siitä pääkaupunkinsa ja kutsui parhaat käsityöläiset '
+      + 'valtakuntansa joka kolkasta. '
+      + 'Silloin syntyivät **Registanin aukio**, Bibi-Khanymin '
+      + 'moskeija ja Gur-e-Amir, Timurin oma hauta. Pojanpoika '
+      + 'Ulugbek rakennutti 1420-luvulla observatorion, jonka '
+      + 'neljänkymmenen metrin sekstantilla mitattiin vuoden pituus '
+      + 'lähes minuutilleen oikein.'
+      + '\n\n'
+      + 'Sitten tuli hiljaisuus: pääkaupungin asema siirtyi Buharaan, '
+      + 'kauppatie kiersi ohi ja muistomerkit rapistuivat vuosisatoja. '
+      + 'Kaupunki liitettiin Venäjään 1868, ja vanhan kaupungin '
+      + 'länsipuolelle nousi uusi. Laaja entisöinti alkoi vasta '
+      + '1900-luvulla — se, mikä nyt hehkuu sinisenä, oli 1800-luvun '
+      + 'matkaajan silmissä paljasta tiiltä.',
     teksti: 'Samarkand on Uzbekistanissa Zarafshan-joen laaksossa. '
       + 'Kaupunki on yli 2 700 vuotta vanha, ja se oli antiikin '
       + 'kreikkalaisille Marakanda. Sijainti silkkitien varrella teki '

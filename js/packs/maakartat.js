@@ -6811,6 +6811,66 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Thian Hock Keng -temppeli', lat: 1.28106, lon: 103.84753 },
     ],
   },
+  /*
+   * SAMARKANDIN KOHDEKARTTA (21.8.2026). Rajaus on noin 4,2 × 4,6 km
+   * ja se on kaupungin oma muoto: kohteet ovat yhdessä kaaressa
+   * Afrasiyabin rauniokummulta lounaaseen Gur-e-Amirille. Kaikki
+   * yhdeksän mahtuvat 3,1 × 3,5 kilometrin alueelle, mutta ruutu on
+   * sitä väljempi tarkoituksella, ja molemmat marginaalit on MITATTU
+   * VALMIISTA LEHDESTÄ eikä arvattu:
+   *  - Eteläreuna on runsaat kolmesataa metriä kohteiden alapuolella,
+   *    koska tiukassa rajauksessa Gur-e-Amir olisi jäänyt vasempaan
+   *    alakulmaan mittakaavajanan päälle (Kööpenhaminan
+   *    ennakkotapaus).
+   *  - Pohjoisreunaa laskettiin 170 metriä ensimmäisestä yrityksestä,
+   *    koska Ulugbekin observatorion numeroympyrä jäi silloin kartan
+   *    oikean ylänurkan opasteen ("Napauta nähtävyyttä…") alle.
+   *    Ensimmäinen rajaus piirrettiin, katsottiin lehdessä ja
+   *    korjattiin.
+   *
+   * KAKSI KOHDETTA JÄI POIS KARTALTA, molemmat päällekkäisyyden
+   * takia (Petran, Mekan ja Singaporen oppi):
+   *  - Chorsun kauppakupoli (1785) on 130 metriä Registanin
+   *    pisteestä eli kolme prosenttia ruudun leveydestä. Se on
+   *    en-Wikipedian Registan-artikkelin mukaan "right behind the
+   *    Sherdar", ja se kerrotaan Registanin jutussa.
+   *  - Siyob-basaari, jonka ainoa en-Wikipedian koordinaatti on
+   *    kahden desimaalin tarkkuudella (39,662 / 66,980) ja osuu
+   *    runsaan sadan metrin päähän Bibi-Khanymista. Basaari
+   *    kerrotaan Bibi-Khanymin jutussa ja Matkailijan Samarkandissa.
+   *
+   * KOORDINAATIT ovat kohteiden omista en-Wikipedian artikkeleista
+   * (haettu 21.8.2026): Ulugh Beg Observatory, Khoja Doniyor
+   * Mausoleum, Afrasiyab (Samarkand), Hazrat Khizr Mosque,
+   * Shah-i-Zinda, Bibi-Khanym Mosque, Registan, Gur-e-Amir ja
+   * Ishratkhana Mausoleum. Kaikki yhdeksän pistettä on ajettu
+   * tools/tarkista-karttapisteet.mjs:llä.
+   */
+  samarkand: {
+    polku: 'assets/kartat/samarkand-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 39.68, etela: 39.6385, lansi: 66.9615, ita: 67.011 },
+    esittely: 'Kartan alue on Samarkandin vanha kaupunki ja sen '
+      + 'pohjoispuolella oleva Afrasiyabin rauniokumpu, jolla kaupunki '
+      + 'seisoi ennen vuotta 1220. Kummun eteläpuolella ovat '
+      + 'Bibi-Khanymin moskeija ja basaari, niiden itäpuolella '
+      + 'Shah-i-Zindan hautakuja ja lounaassa Registanin aukio ja '
+      + 'Timurin hauta Gur-e-Amir. Kaukana koillisessa on Ulugbekin '
+      + 'observatorio, kaakossa Ishratkhanan raunio. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Singaporessa. */
+      { nimi: 'Ulugbekin observatorio', lat: 39.675, lon: 67.005 },
+      { nimi: 'Khoja Doniyorin mausoleumi', lat: 39.67338, lon: 66.99452 },
+      { nimi: 'Afrasiyabin rauniokumpu', lat: 39.67139, lon: 66.98778 },
+      { nimi: 'Hazrat Khizrin moskeija', lat: 39.66343, lon: 66.98324 },
+      { nimi: 'Shah-i-Zindan hautakuja', lat: 39.66306, lon: 66.98778 },
+      { nimi: 'Bibi-Khanymin moskeija', lat: 39.66056, lon: 66.97917 },
+      { nimi: 'Registanin aukio', lat: 39.65472, lon: 66.97556 },
+      { nimi: 'Gur-e-Amir', lat: 39.64833, lon: 66.96889 },
+      { nimi: 'Ishratkhanan mausoleumi', lat: 39.6431, lon: 66.991 },
+    ],
+  },
 };
 
 /*

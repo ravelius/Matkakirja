@@ -22604,4 +22604,390 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * SAMARKANDIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Yhdeksän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään. Faktat
+   * on tarkistettu en-Wikipedian raakateksteistä (haettu 21.8.2026):
+   * Ulugh Beg Observatory, Ulugh Beg, Khoja Doniyor Mausoleum,
+   * Afrasiyab (Samarkand), Hazrat Khizr Mosque, Shah-i-Zinda,
+   * Bibi-Khanym Mosque, Registan, Chorsu (Samarkand), Siyob Bazaar,
+   * Gur-e-Amir ja Ishratkhana Mausoleum.
+   *
+   * USKONNON SÄVY on sama kuin Medinassa ja Jerusalemissa: pyhät
+   * paikat kerrotaan rakennuksina, kerrostumina ja tarinoina, ei
+   * hartauskielellä. Shah-i-Zindan ja Hazrat Khizrin legendat on
+   * merkitty legendoiksi, ja Khoja Doniyorin kolmen uskonnon
+   * yhteinen pyhimys on kerrottu kulttuurihistoriana.
+   *
+   * HAZRAT KHIZRIN JUTUSTA ON JÄTETTY POIS moskeijan alueelle vuonna
+   * 2018 avattu presidentin mausoleumi: se on nykypolitiikkaa, ja
+   * lehden linja on 1873-painotus. Jutun kuvassa sitä ei näy.
+   *
+   * CHORSU JA SIYOB EIVÄT OLE OMINA PISTEINÄÄN (ks. maakartat.js:n
+   * perustelu), joten kupoli kerrotaan Registanin jutussa ja basaari
+   * Bibi-Khanymin jutussa ja matkaoppaassa.
+   *
+   * KAKSI RISTIRIITAA, JOTKA ON RATKAISTU: Chorsun artikkeli sanoo
+   * rakennusta yhtäältä kuusikulmaiseksi ja kuuden pikkukupolin
+   * kruunaamaksi, toisaalta kaksitoistakulmaiseksi ja
+   * neljäkupoliseksi — jutussa on artikkelin oman History-osion
+   * tarkempi kuvaus. Hazrat Khizrin rakennusvuosi on artikkelin
+   * johdannossa 1855 (mihrabin kirjoituksen mukaan) ja
+   * History-osiossa 1854; jutussa lukee 1850-luku.
+   */
+  samarkand: {
+    'Ulugbekin observatorio': {
+      aika: '1420-luku',
+      teksti: 'Ulugbek oli Timurin pojanpoika ja Samarkandin '
+          + 'hallitsija, joka oli ennen kaikkea tähtitieteilijä. Hän '
+          + 'kutsui kaupunkiin yli kuusikymmentä matemaatikkoa ja '
+          + 'tähtitieteilijää, ja observatorion perustukset laskettiin '
+          + '1420-luvun alkupuolella. Rakennus valmistui noin vuonna '
+          + '1428. Se oli lieriön muotoinen, halkaisijaltaan 46 metriä '
+          + 'ja korkeudeltaan kolmisenkymmentä metriä, ja se seisoi '
+          + 'kukkulalla parikymmentä metriä ympäristöään ylempänä.'
+          + '\n\n'
+          + 'Keskellä lieriötä oli Fakhri-sekstantti, jonka säde oli '
+          + '40,04 metriä — aikansa suurin tähtitieteellinen '
+          + 'mittalaite. Niin suuri kaari ei olisi mahtunut rakennuksen '
+          + 'sisään pystysuunnassa, joten se rakennettiin osittain maan '
+          + 'alle noin kahden metrin levyiseen kaivantoon. Kaarelle '
+          + 'yksi aste oli 70,2 senttimetriä, yksi kaariminuutti 11,7 '
+          + 'millimetriä ja yhden millimetrin viiva noin viisi '
+          + 'kaarisekuntia. Tuloksena syntyi tähtiluettelo Zij-i '
+          + 'Sultani, joka valmistui vuonna 1437 ja jonka kokoaminen '
+          + 'kesti seitsemäntoista vuotta; siinä on noin tuhat tähteä. '
+          + 'Ulugbek mittasi vuoden pituudeksi 365 vuorokautta, 5 '
+          + 'tuntia, 49 minuuttia ja 15 sekuntia, mikä on 25 sekuntia '
+          + 'liikaa — tarkemmin kuin Kopernikuksen myöhempi arvio.'
+          + '\n\n'
+          + 'Loppu tuli nopeasti. Ulugbek surmattiin oman poikansa Abd '
+          + 'al-Latifin toimesta noin vuonna 1449, tähtitieteilijät '
+          + 'hajaantuivat ja observatorio tuhoutui. Paikka unohtui '
+          + 'niin tarkkaan, että venäläinen arkeologi Vasili Vjatkin '
+          + 'löysi rauniot vasta vuonna 1908. Nykyään näkyvissä ovat '
+          + 'perustukset ja maan alle jäänyt osa marmorikaarta; '
+          + 'viereen rakennettiin vuonna 1970 museo.',
+      kuvat: [
+        {
+          tiedosto: 'Ulugh Beg Observatory sectional view.jpg',
+          selite: 'Museon leikkausmalli observatoriosta: pyöreä '
+            + 'rakennus on halkaistu, ja sen keskellä kaartuu '
+            + 'sekstantin kisko syvälle maan alle.',
+          lahde: 'Benjamin Goetzinger, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Khoja Doniyorin mausoleumi': {
+      aika: '1900-luvun alku',
+      teksti: 'Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron '
+          + 'varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. '
+          + 'Rakennus on suorakaiteen muotoinen, noin viisitoista metriä '
+          + 'pitkä sali, jonka katolla on viisi kupolia. Se on '
+          + '1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan '
+          + 'teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn '
+          + 'Abbasin seuralaisia, ja perimätiedon mukaan Timur '
+          + 'rakennutti haudan päälle moskeijan.'
+          + '\n\n'
+          + 'Paikan erikoisuus on se, että kolmen uskonnon — islamin, '
+          + 'kristinuskon ja juutalaisuuden — perinteissä esiintyy sama '
+          + 'nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy '
+          + 'kaikkien kolmen perinteen edustajia. Hautakammion vieressä '
+          + 'on lähde, jota pidetään siunattuna, ja pihalla kasvaa '
+          + 'pistaasipuu, jonka ympärille on syntynyt oma '
+          + 'matkailijatarinansa.'
+          + '\n\n'
+          + 'Rakennusta on korjattu monta kertaa. Sen ympärille '
+          + 'rakennettiin muuri ja kolmiosaiset portaat, ja hauta '
+          + 'päällystettiin onyksillä ja mustalla marmorilla. Vanhassa, '
+          + '1900-luvun alun valokuvassa kupoleita on kuusi, nykyään '
+          + 'viisi — yksi lienee sortunut ja rakennettu uudelleen. '
+          + 'Mausoleumi kuuluu vuodesta 2001 Samarkandin '
+          + 'maailmanperintökohteeseen.',
+      kuvat: [
+        {
+          tiedosto: 'Мазар Ходжи-Данияра.JPG',
+          selite: 'Mausoleumin pitkä tiiliseinä umpikaarineen ja '
+            + 'ristikkoikkunoineen, katolla erottuu kupolirivi ja '
+            + 'takana kohoaa kummun rinne.',
+          lahde: 'Alexandronikos, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Afrasiyabin rauniokumpu': {
+      aika: 'n. 500 eaa. – 1220',
+      teksti: 'Afrasiyab on vanha Samarkand. Kumpua asutettiin noin '
+          + 'vuodesta 500 eaa. mongolivalloitukseen 1220 asti, ja '
+          + 'vanhimmat kerrokset ovat ensimmäisen vuosituhannen '
+          + 'puolivälistä ennen ajanlaskun alkua. Aluetta on 220 '
+          + 'hehtaaria ja arkeologisten kerrostumien paksuus on 8–12 '
+          + 'metriä. Kaupunki oli tasakylkisen kolmion muotoinen, '
+          + 'leveimmillään puolitoista kilometriä, ja sitä ympäröivät '
+          + 'korkeat savimuurit torneineen. Vesi tuotiin kanavia, '
+          + 'saviputkia ja kaivoja pitkin, ja eteläisen muurin lähellä '
+          + 'oli allas, johon mahtui miljoona gallonaa eli noin '
+          + 'neljätuhatta kuutiometriä vettä.'
+          + '\n\n'
+          + 'Nimi ei ole alun perin sadun kuningas Afrasiabin. '
+          + 'Tutkijoiden mukaan se on väännös persian sanasta Parsiab, '
+          + 'sogdiksi Parshvab, joka tarkoittaa mustan joen takaista — '
+          + 'joki on Siyob, joka rajaa aluetta pohjoisessa. Nimi '
+          + '"Afrasiabin linna" esiintyy kirjallisissa lähteissä vasta '
+          + '1600-luvun lopulla.'
+          + '\n\n'
+          + 'Ensimmäiset kaivaukset teki Nikolai Veselovski 1800-luvun '
+          + 'lopulla, ja 1920-luvulla Mihail Masson kaivoi alueen '
+          + 'laajalti ja vei löydöt kaupungin museoon. Kuuluisin löytö '
+          + 'on Lähettiläiden maalaus: 600-luvun seinämaalaus '
+          + 'ylhäisötalon salista, jossa kuningas Varkhumanin luo tulee '
+          + 'lähetystöjä useista maista. Yhdessä kohdassa kiinalainen '
+          + 'lähetystö kantaa silkkiä ja silkkiäistoukkien koteloita. '
+          + 'Kummulla itsellään ei ole seisovia rakennuksia — se on '
+          + 'ruohoinen mäki kaupungin pohjoislaidalla.',
+      kuvat: [
+        {
+          tiedosto: 'Ambassadors painting Afrasiyab 01.jpg',
+          selite: 'Museon jäljennös Lähettiläiden maalauksesta: '
+            + 'lapislatsulinsinisellä pohjalla kulkee ratsain saattue '
+            + 'ja sen yllä rivi valkoisia lintuja.',
+          lahde: 'Nassima Chahboun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hazrat Khizrin moskeija': {
+      aika: '1850-luku',
+      teksti: 'Moskeija seisoo kummulla Shah-i-Zindaa vastapäätä, ja '
+          + 'sen nimi tulee Khizristä, islamilaisen perinteen '
+          + 'legendaarisesta profeetasta. Paikan tarina alkaa arabien '
+          + 'valloituksesta: kerrotaan, että kun Qutayba ibn Muslimin '
+          + 'joukot valtasivat Samarkandin vuonna 712, ne yrittivät '
+          + 'hukuttaa kaupungin linnoituksen patoamalla Juy-i Arzizin '
+          + 'kanavan, mutta suuri valkoinen lintu putosi taivaalta ja '
+          + 'rikkoi padon. Tapauksen muistoksi rakennettiin moskeija '
+          + 'Afrasiyabin eteläportille, sogdien arvostaman '
+          + 'zarathustralaisen temppelin paikalle.'
+          + '\n\n'
+          + 'Se moskeija tuhoutui mongolivalloituksessa 1220. Nykyinen '
+          + 'rakennus on 1850-luvulta ja seisoo vanhoilla '
+          + 'perustuksilla; mihrabin kirjoitus antaa vuosiluvuksi 1855. '
+          + 'Se on siis yksi harvoista kaupungin tunnetuista '
+          + 'rakennuksista, jotka olivat 1800-luvun matkaajan silmissä '
+          + 'uusia eivätkä raunioita.'
+          + '\n\n'
+          + 'Rakennusta täydennettiin sen jälkeen kahdesti: veranta '
+          + 'tehtiin uudelleen vuonna 1899 ja portaali vuonna 1919, '
+          + 'jolloin samarkandilainen mestari Abduqodir bin Boqiy '
+          + 'nosti myös itäisen minareetin. Verannalla on viisi '
+          + 'puupylvästä ja maalattu kasettikatto, portaalissa '
+          + 'muqarnas-koristelu ja kulmatorneissa uurteiset kupolit. '
+          + 'Khanqan päällä on korkea kahdeksanripainen kupoli, jonka '
+          + 'huipulla on lyhty.',
+      kuvat: [
+        {
+          tiedosto: 'Mosque Hazrat-Hyzr (1).JPG',
+          selite: 'Moskeija kivimuurin päällä: vasemmalla avoin '
+            + 'pylväsveranta, keskellä kaakeloitu portaali ja oikealla '
+            + 'hoikka minareetti.',
+          lahde: 'Bobyrr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shah-i-Zindan hautakuja': {
+      aika: '1000–1800-luvut',
+      teksti: 'Shah-i-Zinda tarkoittaa elävää kuningasta, ja nimi tulee '
+          + 'legendasta. Sen mukaan Qutham ibn Abbas, Muhammadin '
+          + 'serkku, tuli Samarkandiin arabivalloituksen mukana '
+          + '600-luvulla, ja kun hänet surmattiin kesken rukouksen, hän '
+          + 'nosti päänsä maasta ja käveli syvään kaivoon, jota '
+          + 'kutsutaan Paratiisin puutarhaksi — ja asuu siellä yhä. '
+          + 'Hautakuja on kasvanut hänen hautansa ympärille kahdeksan '
+          + 'vuosisadan aikana, ja siinä on nyt yli kaksikymmentä '
+          + 'rakennusta.'
+          + '\n\n'
+          + 'Kokonaisuus jakautuu kolmeen ryhmään: alempaan, keskimmäiseen '
+          + 'ja ylempään, ja ne yhdistyvät toisiinsa neljän holvikaaren '
+          + 'kupolikäytävillä, joita kutsutaan nimellä chartak. '
+          + 'Vanhimmat rakennukset ovat 1000–1100-luvuilta, mutta niistä '
+          + 'on jäljellä lähinnä perustuksia ja hautakiviä. Suurin osa '
+          + 'on 1300–1400-luvuilta, ja keskimmäisen ryhmän haudat '
+          + 'kuuluvat Timurin lähipiirille, sotilasylimystölle ja '
+          + 'papistolle — yksi niistä on hänen sisarensa Shirin Bika '
+          + 'Agan hauta vuodelta 1385.'
+          + '\n\n'
+          + 'Alemman ryhmän kaunein rakennus on 1400-luvun alun '
+          + 'kaksoiskupolinen mausoleumi, joka on omistettu '
+          + 'tähtitieteilijä Qadi Zada al-Rumille — samalle miehelle, '
+          + 'joka johti Ulugbekin observatoriota. Sen kupolit ovat '
+          + 'yhtä korkeat kuin hallitsijasuvun hautojen. Ulugbek '
+          + 'rakennutti myös pääportin vuosina 1434–1435.',
+      kuvat: [
+        {
+          tiedosto: 'Tombs in Shah-i-Zinda.jpg',
+          selite: 'Harmaita hautapaasia tiilikorokkeella, taustalla '
+            + 'turkoosein ja terrakottaisin ruuduin kuvioitu seinä.',
+          lahde: 'Bgag, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bibi-Khanymin moskeija': {
+      aika: '1399–1404',
+      teksti: 'Moskeija oli valmistuessaan yksi islamilaisen maailman '
+          + 'suurimmista. Ulkomuurien rajaama alue on 167 metriä pitkä '
+          + 'ja 109 metriä leveä, ja se on suunnattu koilliseen–'
+          + 'lounaaseen rukoussuunnan mukaan. Sisäänkäynnin portaali on '
+          + '35 metriä korkea, ja pihan vastakkaisella puolella kohoaa '
+          + 'noin 40 metrin korkuinen kupoli. Kupolit rakennettiin '
+          + 'kaksinkertaisina: sisäkupoli mitoitettiin salin '
+          + 'mittasuhteiden mukaan ja ulkokupoli näkyvyyden mukaan, ja '
+          + 'niiden väliin jäi tyhjä tila. Piha oli tarkoitettu '
+          + 'kaupungin koko miespuoliselle väestölle yhtä aikaa.'
+          + '\n\n'
+          + 'Timur antoi moskeijalle vaimonsa Saray Mulk Khanumin '
+          + 'nimen, vaikka rakennuttaja oli tosiasiassa vaimo itse. '
+          + 'Palatessaan sotaretkeltä vuonna 1404 Timur ei ollut '
+          + 'tyytyväinen työn jälkeen ja teetti heti muutoksia '
+          + 'erityisesti pääkupoliin. Pihan keskellä on jättimäinen '
+          + 'marmorinen Koraani-teline, joka on Timurin ajalta.'
+          + '\n\n'
+          + 'Moskeijan vieressä on Siyobin basaari, kaupungin suurin '
+          + 'tori. Se on yli seitsemän hehtaaria laaja, ja sen '
+          + 'pääsisäänkäynnin kolmoiskaari on päällystetty sinisellä '
+          + 'majolikalla. Basaarin nimi tulee viereisestä Siyob-purosta '
+          + 'ja kaupunginosasta; sana tarkoittaa persiaksi ja tadžikiksi '
+          + 'mustaa vettä. Registanille on basaarilta kilometri etelään '
+          + 'ja Shah-i-Zindalle viisisataa metriä itään.',
+      kuvat: [
+        {
+          tiedosto: 'Bibi-Khanym Mosque, Samarkand.jpg',
+          selite: 'Moskeijan piha: vasemmalla kaakeloitu kupoli, '
+            + 'oikealla portaalin tiilikylki ja etualalla vaaleita '
+            + 'kivilohkareita kiveyksen keskellä.',
+          lahde: 'Bgag, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Registanin aukio': {
+      aika: '1417–1660',
+      teksti: 'Registan on kaupungin vanha keskusaukio, ja sen ympärille '
+          + 'nousi kolme medresaa runsaan kahdensadan vuoden aikana. '
+          + 'Ulugbekin medrese rakennettiin 1417–1420, ja se oli '
+          + '1400-luvulla islamilaisen idän arvostetuimpia '
+          + 'korkeakouluja: siellä opiskeli persialainen runoilija ja '
+          + 'oppinut Jami, ja Ulugbek itse luennoi siellä. Rakennus oli '
+          + 'alun perin kaksikerroksinen, ja sen neljässä nurkassa oli '
+          + 'kupolillinen luentosali. Pihaa kiertävät opiskelijoiden '
+          + 'asuinkopit.'
+          + '\n\n'
+          + 'Sherdorin medresen rakennutti 1619–1636 Samarkandin '
+          + 'uzbekkihallitsija Yalangtoʻsh Bakhodir, ja sen nimi tulee '
+          + 'portaalin eläinkuvioista. Tillakari valmistui 1646–1660, '
+          + 'ja se oli asuntolan lisäksi kaupungin päämoskeija; sen '
+          + 'moskeijasali pihan länsilaidassa on runsaasti kullattu. '
+          + 'Tillakarin itäpuolella on 1500-luvun shaibanidien '
+          + 'mausoleumi.'
+          + '\n\n'
+          + 'Aukion tuntumassa on myös Chorsun kauppakupoli, joka on '
+          + 'aivan Sherdorin takana. Nimi tarkoittaa neljää tietä, ja '
+          + 'rakennus seisoo Samarkandia, Taškentia, Buharaa ja '
+          + 'Shahrisabzia yhdistävien teiden risteyksessä. Ensimmäinen '
+          + 'kauppapaikka syntyi tähän 1400-luvulla; nykyinen '
+          + 'kaksitoistakulmainen rakennus suurine keskuskupoleineen on '
+          + 'emiiri Shohmuradin ajalta vuodelta 1785, ja siinä on '
+          + 'neljä sisäänkäyntiä. Kupolissa myytiin 1900-luvun alkuun '
+          + 'asti vaatteita, päähineitä, kankaita, lääkkeitä ja '
+          + 'kirjoja; nyt siellä on museo ja taidegalleria.',
+      kuvat: [
+        {
+          tiedosto: 'Memorial complex "Registan" in Samarkand (0).jpg',
+          selite: 'Registan päivänvalossa: kolme portaalia avautuu '
+            + 'aukiolle, ja niiden takana kohoavat turkoosit kupolit.',
+          lahde: 'Ziegler175, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gur-e-Amir': {
+      aika: '1403–1404',
+      teksti: 'Gur-e-Amir tarkoittaa persiaksi kuninkaan hautaa. '
+          + 'Kokonaisuuden vanhin osa on 1300-luvun lopulta ja se on '
+          + 'Muhammad Sultanin rakennuttama; siitä on jäljellä vain '
+          + 'medresen ja khanqan perustukset, sisääntuloportaali ja '
+          + 'osa yhdestä neljästä minareetista. Varsinainen mausoleumi '
+          + 'aloitettiin vuonna 1403, kun Timurin kruununperijä '
+          + 'Muhammad Sultan kuoli sotaretkellä, ja se valmistui '
+          + 'seuraavana vuonna. Ulugbek saattoi työn loppuun, ja hänen '
+          + 'aikanaan rakennuksesta tuli koko timuridisuvun '
+          + 'hautakammio.'
+          + '\n\n'
+          + 'Rakennus on kahdeksankulmainen ja sitä kruunaa uurteinen '
+          + 'siniturkoosi kupoli, jonka halkaisija on 15 metriä ja '
+          + 'korkeus 12,5 metriä. Ulkoseinien koristelu on sinisistä, '
+          + 'vaaleansinisistä ja valkoisista kaakeleista ladottua '
+          + 'geometriaa ja kirjoitusta terrakottatiilen taustaa '
+          + 'vasten. Sisällä seinien alaosa on onykslaattaa, sen '
+          + 'yläpuolella kiertää marmorinen tippukivilista, ja holvit '
+          + 'ovat kullattua ja maalattua kohokoristelua. Pääarkkitehti '
+          + 'oli Muhammad ibn Mahmud Isfahanista.'
+          + '\n\n'
+          + 'Salin koristeelliset hautakivet vain osoittavat, missä '
+          + 'haudat ovat: itse haudat ovat kammiossa suoraan lattian '
+          + 'alla. Timurin viereen on haudattu hänen poikansa Miran '
+          + 'Shah ja Shah Rukh sekä pojanpojat Muhammad Sultan ja '
+          + 'Ulugbek, ja lisäksi Timurin opettaja Mir Said Baraka, '
+          + 'jonka jalkopäähän Timur itse haudattiin.',
+      kuvat: [
+        {
+          tiedosto: 'Мавзолей Гур-Эмир. Самарканд.jpg',
+          selite: 'Vasili Vereštšaginin maalaus mausoleumista noin '
+            + 'vuodelta 1870: kupolista on kaakeli enimmäkseen '
+            + 'pudonnut, ja minareetti on katkennut kesken.',
+          lahde: 'Vasily Vereshchagin, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ishratkhanan mausoleumi': {
+      aika: '1463',
+      teksti: 'Ishratkhana on timuridien loppuajan hautarakennus, ja se '
+          + 'valmistui toukokuussa 1463 kolmessa tai neljässä vuodessa. '
+          + 'Vuoden 1464 vakuf-asiakirjan mukaan hallitsija Abu Saidin '
+          + 'puoliso Habiba Sultan rakennutti kupolin varhain kuolleen '
+          + 'tyttärensä haudan päälle. Vähitellen kahdeksankulmaisesta '
+          + 'salista tuli suvun hautapaikka, ja sinne haudattiin 23 '
+          + 'naista ja lasta.'
+          + '\n\n'
+          + 'Nimi tarkoittaa persiaksi ilon ja huvin taloa, ja se on '
+          + '1800-luvun samarkandilaista kansanperinnettä: tarinan '
+          + 'mukaan Timur rakennutti paikalle huvilan. Asiantuntijoiden '
+          + 'mukaan nimi on väännös arabian ilmauksesta, joka tarkoittaa '
+          + 'kymmentä huonetta. Rakennuksen nimestä on kiistelty siitä '
+          + 'asti, kun siitä julkaistiin ensimmäinen kuva vuonna 1869.'
+          + '\n\n'
+          + 'Rakennus ryöstettiin 1500-luvulta alkaen. Ensin siitä '
+          + 'irrotettiin marmoripaneelit, koska Registanille '
+          + 'rakennettavat Sherdor ja Tillakari tarvitsivat suuria '
+          + 'laattoja, ja marmoriset hautakivet vietiin viereiselle '
+          + 'Abdi Darunin hautausmaalle. Korkea kupoli ja sen rumpu '
+          + 'romahtivat vasta vuoden 1903 maanjäristyksessä — '
+          + '1800-luvun matkaaja näki ne siis vielä pystyssä. '
+          + 'Ensimmäiset kaivaukset teki Mihail Masson yhdessä Galina '
+          + 'Pugatšenkovan kanssa vuosina 1939–1940.',
+      kuvat: [
+        {
+          tiedosto: 'Mausoleum Ishrathona07.jpg',
+          selite: 'Ishratkhanan portaalikaari seisoo yksinään '
+            + 'raunioituneen tiilirungon päässä, kaaren huippu on '
+            + 'murtunut auki.',
+          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
