@@ -316,7 +316,7 @@ pakettien otsikkokommentit).
 | Rijksmuseum — vanhat piirrokset ja vedokset | Rijksmuseum, Amsterdam | Public domain |
 | Internet Archive Book Images | Internet Archive | Public domain |
 | Lippukuvat | Wikimedia Commons; nimeämistä vaativat neljä on lueteltu `js/packs/lippu-tekijat.js`:ssä | Public domain sekä CC BY-SA 2.5 ja 3.0 |
-| Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, sovelluskuvakkeet | Sami Reivinen | Copyright © 2026 Sami Reivinen |
+| Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, aikakausjulisteet, sovelluskuvakkeet | Sami Reivinen | Copyright © 2026 Sami Reivinen |
 
 ### Äänet
 

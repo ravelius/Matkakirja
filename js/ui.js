@@ -87,7 +87,7 @@ import {
   lippuUrl, lippuVara, valokuvaSuurennos, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import {
-  asetaKuva, peiliPetti, peilinLaji, aaniOsoite, aaniUrl, onPeilista,
+  asetaKuva, julisteUrl, peiliPetti, peilinLaji, aaniOsoite, aaniUrl, onPeilista,
 } from './media.js';
 import { KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
 import { TARINAKAARI, KAARI_LAUDAT, kaariLuentaSoi } from './packs/tarinakaari.js';
@@ -104,6 +104,9 @@ import {
   MAAKARTAT, KAUPUNKIKARTAT, mittakaava,
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
+// Aikakausjulisteet: minitehtävän palkinto, matkalaukun kokoelma ja
+// kehittäjäkartan vihreä merkintä lukevat kaikki tämän saman taulun.
+import { JULISTEET, JULISTE_LAHDE, kaupunginJuliste } from './packs/julisteet.js';
 import {
   POLLO_AARRE, polloAnkkuri, polloOnnittelu, polloPaivitaNakyvyys, polloSulje, polloVihje,
   polloVihjePois,
@@ -853,6 +856,10 @@ export class UI {
     this.passportAarteet = document.getElementById('passport-aarteet');
     this.passportFinds = document.getElementById('passport-finds');
     this.passportProgress = document.getElementById('passport-progress');
+    // Julistekokoelma: oma kotelonsa, koska koko osasto piiloutuu
+    // ennen ensimmäistä voitettua julistetta (ks. renderJulisteet).
+    this.julisteKotelo = document.getElementById('juliste-kotelo');
+    this.passportJulisteet = document.getElementById('passport-julisteet');
 
     /*
      * Aarnin luettelon i-nappi. Teksti on tarinakaanonia (Fablen
@@ -4309,8 +4316,19 @@ export class UI {
      * työ on tehty. Aloitettu lehti ei siis tee kaupungista valmista —
      * päinvastoin, juuri ne kaupungit omistaja haluaa nähdä keltaisina.
      */
+    /*
+     * JULISTEPILOTTI KATSOTAAN ENSIN (omistajan tilaus 21.8.2026):
+     * kaupunki, jolla on aikakausjuliste, saa vihreän merkinnän.
+     * Vihreä on tässä poikkeus sääntöön "valmis on se, joka ei saa
+     * luokkaa": julistekaupunkeja on kymmenen koko maailmassa, joten
+     * ne eivät värjää karttaa umpeen — ja pilotin ajan omistajan pitää
+     * nähdä yhdellä silmäyksellä, mihin juliste on jo tehty. Lista on
+     * sama datarakenne kuin palkintomekaniikalla (js/packs/julisteet.js),
+     * joten kartta ei voi mennä eri tahtiin pelin kanssa.
+     */
     const valmiusLuokka = (c) => {
       if (!this.kehittajaTila) return '';
+      if (JULISTEET[c.id]) return ' city-juliste';
       if (TYON_ALLA_IDT.has(c.id)) return ' city-tyossa';
       if (!kaupungillaLehti(c.id)) return ' city-kesken';
       const intro = ARTIKKELIT[c.wiki ?? c.name]?.intro ?? '';
@@ -7291,8 +7309,14 @@ export class UI {
        * (ks. valokuvaSuurennos): suurennoksen pitää olla vähintään
        * yhtä iso kuin kuva lehden sivulla. Vara on paikallinen/peili-
        * reitti, jotta kuva näkyy myös yhteydettä.
+       *
+       * VALMIS OSOITE (`osoite`) ohittaa koko portaikon: pelin oma
+       * painotuote — aikakausjuliste — ei ole Commonsissa eikä sillä
+       * ole tiedostonimeä, jota valokuvaSuurennos osaisi kääntää
+       * (js/packs/julisteet.js, js/media.js julisteUrl).
        */
-      asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
+      if (teos.osoite) asetaKuva(kuva, teos.osoite, null);
+      else asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
       kuva.alt = teos.otsikko ?? teos.selite ?? '';
       kuvateksti.textContent = teos.selite ?? '';
       kuvateksti.hidden = !teos.selite;
@@ -7388,7 +7412,16 @@ export class UI {
    */
   suurennosIsanta() {
     const nahtavyys = document.getElementById('nahtavyys-dialog');
-    return nahtavyys?.open ? nahtavyys : this.arrivalDialog;
+    if (nahtavyys?.open) return nahtavyys;
+    /*
+     * Matkalaukku on samasta syystä listalla kuin nähtävyysikkuna:
+     * julistekokoelman pikkukuvasta avautuva suurennos jäisi laukun
+     * TAAKSE, koska laukku on modaali ja elää selaimen ylimmässä
+     * kerroksessa (21.8.2026, julistepalkinnon pilotti). Laukku on
+     * ennen saapumisikkunaa, koska se avataan aina päällimmäiseksi.
+     */
+    if (this.passportDialog?.open) return this.passportDialog;
+    return this.arrivalDialog;
   }
 
   /**
@@ -7631,10 +7664,37 @@ export class UI {
     const aiheAvain = this.lehtitila.tutkiTila === 'maa' && this.lehtitila.tutkiMaaLehti
       ? `${this.lehtitila.tutkiMaaLehti}:${kategoria.id}`
       : kategoria.id;
-    const laatikko = html('div', 'minitehtava');
+    /*
+     * PALKINTOJULISTE (omistajan tilaus 21.8.2026): kaupungeilla, joilla
+     * on aikakausjuliste, tehtävälaatikon kyljessä on siitä pikkuvedos.
+     * Juliste on KAUPUNKILEHDEN palkinto, joten maan yhteinen aihesivu
+     * ei sitä näytä — muuten saman maan jokainen kaupunki tarjoaisi
+     * samaa julistetta uudelleen, ja palkinto kutistuisi koristeeksi.
+     */
+    const juliste = this.lehtitila.tutkiTila === 'maa' ? null : kaupunginJuliste(cityId);
+    const laatikko = html('div', `minitehtava${juliste ? ' minitehtava-palkinnollinen' : ''}`);
     laatikko.appendChild(html('p', 'minitehtava-otsikko', 'Lehden minitehtävä'));
     const avain = `${this.game.pack.id}:${cityId}:${aiheAvain}`;
     if (this.game.minitehtavatVastatut?.has(avain)) {
+      /*
+       * TAKAUTUVA MYÖNTÖ: tehtävä on ratkaistu ennen kuin julisteita
+       * oli olemassa, joten palkinto annetaan nyt. Rahaa ei tule
+       * uudelleen (actionMinitehtava on jo kirjannut avaimen), mutta
+       * vanha pelaaja ei jää ilman julistetta.
+       *
+       * VÄÄRIN VASTANNUT EI SAA JULISTETTA takaoven kautta: myöntö
+       * katsoo oikein vastattujen joukkoa (game.js minitehtavatOikein),
+       * ja vanhassa tallennuksessa se on koko vastattujen joukko.
+       * Voitettu juliste kelpaa myös sellaisenaan — sama kaupunki
+       * toisella laudalla on sama juliste.
+       */
+      const voitettu = Boolean(juliste)
+        && (this.game.minitehtavatOikein?.has(avain) || this.game.julisteet?.has(cityId));
+      if (juliste) {
+        const myonto = voitettu ? this.game.myonnaJuliste(cityId) : { uusi: false };
+        this.piirraJulistepalkinto(laatikko, cityId, juliste, voitettu);
+        if (myonto.uusi) this.onChange?.(this.game);
+      }
       /*
        * "Tämän SIVUN", ei "tämän lehden": palkkioavain on
        * pakka:kaupunki:aihe (game.js actionMinitehtava), eli jokainen
@@ -7648,6 +7708,10 @@ export class UI {
       kohde.appendChild(laatikko);
       return;
     }
+    // Palkinto ensin, jotta teksti kiertää sen (float oikealle, css).
+    const palkinto = juliste
+      ? this.piirraJulistepalkinto(laatikko, cityId, juliste, this.game.julisteet?.has(cityId))
+      : null;
     laatikko.appendChild(html('p', 'minitehtava-kysymys', tehtava.kysymys));
     const vaihtoehdot = html('div', 'kulttuuri-vaihtoehdot');
     const tulos = html('p', 'kulttuuri-tulos');
@@ -7683,6 +7747,23 @@ export class UI {
           });
           setTimeout(() => this.removeToast(box), TOAST_MS.default);
         }
+        /*
+         * JULISTE AUKEAA HETI OIKEASTA VASTAUKSESTA (omistajan tilaus
+         * 21.8.2026: "aueta isommaksi sitten kun tulee oikea vastaus").
+         * Rahapalkkio tuli jo yllä — juliste on sen päälle, ei sen
+         * sijaan. Pikkuvedos jää laatikkoon voitettuna, ja kokoelmaan
+         * juliste tallentuu matkalaukkuun.
+         *
+         * Pieni viive: suurennos avautuisi muuten päälle samalla
+         * hetkellä, kun oikean vastauksen palaute ilmestyy laatikkoon,
+         * eikä pelaaja ehtisi nähdä kumpaakaan.
+         */
+        if (oikein && juliste) {
+          this.game.myonnaJuliste(cityId);
+          palkinto?.merkitseVoitetuksi();
+          this.elavoitaLaukku();
+          setTimeout(() => this.naytaJuliste(cityId), 700);
+        }
         // Koko render() sulkisi Tutki-kortin — riittää tallentaa ja
         // päivittää rahapilleri (sama syy kuin kulttuurivisassa).
         this.onChange?.(this.game);
@@ -7693,6 +7774,82 @@ export class UI {
     laatikko.appendChild(vaihtoehdot);
     laatikko.appendChild(tulos);
     kohde.appendChild(laatikko);
+  }
+
+  /**
+   * PIKKUVEDOS JULISTEESTA tehtävälaatikon kyljessä.
+   *
+   * Ansaitsematon juliste näkyy jo ennen vastausta, mutta himmeänä ja
+   * ilman suurennosta: pelaajan pitää nähdä mistä pelataan, muttei
+   * saada palkintoa katsomalla. Voitettu vedos kirkastuu, saa
+   * "Voitettu"-merkinnän ja aukeaa napautuksesta täydeksi julisteeksi.
+   *
+   * Tiedosto asuu vain peiliämpärissä (js/packs/julisteet.js): jos sitä
+   * ei ole vielä viety, koko kuvapaikka poistuu itsestään eikä laatikkoon
+   * jää rikkinäistä kuvaa. Silloin tehtävä toimii täsmälleen kuten
+   * ennenkin — juuri niin kuin julisteettomassa kaupungissa.
+   *
+   * @returns {{merkitseVoitetuksi: () => void}} kahva, jolla oikea
+   *   vastaus vaihtaa vedoksen voitetuksi ilman koko sivun uudelleen
+   *   piirtoa (render() sulkisi Tutki-kortin).
+   */
+  piirraJulistepalkinto(laatikko, cityId, juliste, voitettu = false) {
+    const kotelo = html('figure', 'juliste-palkinto');
+    const kuva = document.createElement('img');
+    kuva.decoding = 'async';
+    kuva.draggable = false;
+    asetaKuva(kuva, julisteUrl(juliste.tiedosto), null, () => kotelo.remove());
+    kotelo.appendChild(kuva);
+    const merkki = html('figcaption', 'juliste-merkki');
+    kotelo.appendChild(merkki);
+    const avaa = () => this.naytaJuliste(cityId);
+    const asetaTila = (onVoitettu) => {
+      kotelo.classList.toggle('voitettu', onVoitettu);
+      merkki.textContent = onVoitettu ? 'Voitettu' : 'Palkinto';
+      kuva.alt = onVoitettu
+        ? `${juliste.otsikko} — voitettu juliste`
+        : 'Palkintojuliste, vielä voittamatta';
+      if (onVoitettu) {
+        kotelo.tabIndex = 0;
+        kotelo.setAttribute('role', 'button');
+        kotelo.setAttribute('aria-label', `${juliste.otsikko} — katso juliste isona`);
+      } else {
+        kotelo.removeAttribute('tabindex');
+        kotelo.removeAttribute('role');
+        kotelo.removeAttribute('aria-label');
+      }
+    };
+    asetaTila(Boolean(voitettu));
+    // Kuuntelijat kiinnitetään kerran ja ne kysyvät tilan vasta
+    // laukeamishetkellä: sama kotelo vaihtaa tilaa kesken elinkaarensa.
+    this.napautuksesta(kotelo, () => {
+      if (kotelo.classList.contains('voitettu')) avaa();
+    });
+    kotelo.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      if (!kotelo.classList.contains('voitettu')) return;
+      e.preventDefault();
+      avaa();
+    });
+    laatikko.appendChild(kotelo);
+    return { merkitseVoitetuksi: () => asetaTila(true) };
+  }
+
+  /**
+   * Juliste koko ruudulle. Sama katselin kuin kulttuurikuvilla, joten
+   * sulku rastista, taustanapautuksesta ja Escistä tulee sieltä —
+   * osoite vain annetaan valmiina, koska julisteella ei ole Commons-
+   * tiedostonimeä (js/packs/julisteet.js).
+   */
+  naytaJuliste(cityId) {
+    const juliste = kaupunginJuliste(cityId);
+    if (!juliste) return;
+    this.naytaKulttuuriKuva({
+      otsikko: juliste.otsikko,
+      selite: juliste.selite,
+      lahde: JULISTE_LAHDE,
+      osoite: julisteUrl(juliste.tiedosto),
+    });
   }
 
   /**
@@ -9048,6 +9205,7 @@ export class UI {
     this.renderProgress();
     this.renderAarteet();
     this.renderFinds();
+    this.renderJulisteet();
     void this.paivitaLinssit();
     if (!this.passportDialog.open) this.passportDialog.showModal();
     // Kapealla ruudulla alanappirivi väistyy laukun alta, jotta
@@ -9253,6 +9411,53 @@ export class UI {
       const omat = this.linssiTuki?.omistus?.omistetut?.(game, p) ?? new Set(p.linssit ?? []);
       const teksti = omat.size ? 'Ei vielä matkalöytöjä.' : 'Laukku on vielä tyhjä.';
       this.passportFinds.appendChild(html('p', 'muted', teksti));
+    }
+  }
+
+  /**
+   * JULISTEKOKOELMA MATKALAUKUSSA (omistajan tilaus 21.8.2026).
+   *
+   * Kaupunkilehden minitehtävästä voitetut aikakausjulisteet pieninä
+   * vedoksina: napautus avaa julisteen isona (naytaJuliste). Vielä
+   * voittamattomat näkyvät himmeinä paikkoina kysymysmerkillä, jotta
+   * kokoelma kertoo myös sen, että sitä voi täydentää — mutta se ei
+   * paljasta, MISTÄ kaupungista mikin juliste on. Kateissa olevan
+   * määrä näkyy, nimet eivät: sama linjaus kuin Aarnin luettelossa.
+   *
+   * Koko osasto on piilossa, kunnes ensimmäinen juliste on voitettu
+   * (sama sääntö kuin Varusteet-osastolla): tyhjä osasto kertoisi vain
+   * siitä, mitä pelaajalla ei ole.
+   */
+  renderJulisteet() {
+    if (!this.julisteKotelo || !this.passportJulisteet) return;
+    const voitetut = [...(this.game.julisteet ?? [])].filter((id) => JULISTEET[id]);
+    this.julisteKotelo.hidden = voitetut.length === 0;
+    if (!voitetut.length) return;
+    this.passportJulisteet.replaceChildren();
+    for (const cityId of voitetut) {
+      const juliste = JULISTEET[cityId];
+      const nappi = html('button', 'laukku-juliste');
+      nappi.type = 'button';
+      nappi.setAttribute('aria-label', `${juliste.otsikko} — katso juliste isona`);
+      const kuva = document.createElement('img');
+      kuva.decoding = 'async';
+      kuva.alt = '';
+      asetaKuva(kuva, julisteUrl(juliste.tiedosto), null);
+      nappi.appendChild(kuva);
+      nappi.appendChild(html('span', 'laukku-juliste-nimi', juliste.kaupunki));
+      nappi.addEventListener('click', () => this.naytaJuliste(cityId));
+      this.passportJulisteet.appendChild(nappi);
+    }
+    // Voittamatta olevat yhtenä himmeänä rivistönä perässä.
+    const kateissa = Object.keys(JULISTEET).length - voitetut.length;
+    for (let i = 0; i < kateissa; i += 1) {
+      const tyhja = html('div', 'laukku-juliste tyhja', '?');
+      tyhja.setAttribute('aria-hidden', 'true');
+      this.passportJulisteet.appendChild(tyhja);
+    }
+    if (kateissa > 0) {
+      this.passportJulisteet.appendChild(html('p', 'laukku-julisteet-vihje',
+        `Voittamatta ${kateissa} julistetta — lehtien minitehtävät ratkaisevat ne.`));
     }
   }
 

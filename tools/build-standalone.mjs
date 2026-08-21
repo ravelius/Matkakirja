@@ -51,6 +51,7 @@ const MODULES = [
   'js/packs/maakartat.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
+  'js/packs/julisteet.js',
   'js/packs/lipputiedot.js',
   'js/packs/henkilot.js',
   'js/packs/saatiedot.js',

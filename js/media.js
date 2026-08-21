@@ -111,6 +111,26 @@ export function aaniUrl(polku) {
   return `${AANI_JUURI}${AANI_ALIPOLKU}${nimi}`;
 }
 
+/*
+ * AIKAKAUSJULISTEET (21.8.2026): pelin oma painotuote, joka asuu vain
+ * ämpärissä. Omistajan linjaus samalta päivältä on "kaikki aina
+ * ämpäriin eikä repoon", joten julisteille ei ole repokopiota eikä
+ * ulkopuolista alkuperäislähdettä — varareittiä ei siis ole, ja
+ * puuttuva tiedosto tarkoittaa yksinkertaisesti sitä, ettei julistetta
+ * ole vielä viety ämpäriin. Kutsuja piilottaa kuvapaikan silloin
+ * (js/ui.js), eikä mikään muu rikkoudu.
+ *
+ * Nimi on sama molemmin puolin (julisteet/istanbul.png) samasta syystä
+ * kuin repon omilla äänillä: kaksi kopiota nimeämissäännöstä ehtivät
+ * kerran eriytyä, eikä tälle säännölle ole mitään tarvetta.
+ */
+const JULISTE_ALIPOLKU = 'julisteet/';
+
+/** Aikakausjulisteen osoite ämpärissä. */
+export function julisteUrl(tiedosto) {
+  return `${PEILI_JUURI}${JULISTE_ALIPOLKU}${tiedosto}`;
+}
+
 /**
  * Turvallinen tiedostonimi mistä tahansa merkkijonosta.
  *

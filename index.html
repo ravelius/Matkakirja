@@ -637,6 +637,22 @@
     <p class="passport-count">Tavarat</p>
     <div id="passport-finds" class="passport-finds"></div>
     <!--
+      JULISTEKOKOELMA (omistajan tilaus 21.8.2026, päätoimittajan
+      täydennys): kaupunkilehden minitehtävästä voitetut aikakaus-
+      julisteet. Pikkukuvaa napauttamalla juliste aukeaa isona; vielä
+      voittamattomat ovat himmeitä paikkoja kysymysmerkillä, jotta
+      kokoelmasta näkee että sitä voi täydentää.
+
+      Kotelo on piilossa, kunnes ensimmäinen juliste on voitettu —
+      sama sääntö kuin Varusteet-osastolla: tyhjä osasto kertoisi vain
+      siitä, mitä pelaajalla ei ole. Sisältö rakennetaan js/ui.js:ssä
+      (renderJulisteet) taulusta js/packs/julisteet.js.
+    -->
+    <div id="juliste-kotelo" class="juliste-kotelo" hidden>
+      <p class="passport-count">Julisteet</p>
+      <div id="passport-julisteet" class="laukku-julisteet"></div>
+    </div>
+    <!--
       VARUSTEET ELI LINSSIVALITSIN (omistajan päätös 18.8.2026:
       "matkalaukku on jatkossa AINOA paikka, josta linssit kytketään
       päälle ja pois").
