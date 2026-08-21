@@ -39260,4 +39260,511 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KATHMANDU (Opus 21.8.2026). Alusta asti tehty lehti: kohteella oli
+   * ennestään vain visa (asia-questions.js), saapumisteksti
+   * (asia-saapumiset.js) ja valokuvakortit (asia-lisat-valokuvat.js) —
+   * ei kategorioita, ei kohdekarttaa, ei juttuja, ei säätietoja.
+   *
+   * FAKTAT on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 21.8.2026): Kathmandu, Kasthamandap, Kathmandu Durbar
+   * Square, Hanuman Dhoka, History of Nepal, Newar people, Araniko,
+   * Swayambhunath, Boudha Stupa (jonne "Boudhanath" ohjaa), Kora
+   * (pilgrimage), Rani Pokhari, Dharahara, Patan Durbar Square,
+   * Pashupatinath Temple, Changu Narayan Temple, Garden of Dreams,
+   * Thamel, Asan (Kathmandu), Indra Jatra, Kumari (goddess),
+   * Sherpa people, Tribhuvan International Airport, Treaty of Sugauli,
+   * List of British resident ministers in Nepal, Henry Ambrose
+   * Oldfield ja April 2015 Nepal earthquake. Pohjana ovat
+   * docs/aasia-tyoaineisto/faktapohja-kathmandu.md ja saman kansion
+   * tarkistus-kathmandu.md, jonka korjaukset on tehty (ks. alla).
+   *
+   * SISÄLTÖLINJAUS (spec-asia.md + lehtityo-resepti.md). POIS ON
+   * JÄTETTY KOKONAAN: syyskuun 2025 mielenosoitukset ja niitä
+   * seurannut hallituksen vaihdos, vuoden 2006 kansanliike ja
+   * kuningasvallan loppu, vuoden 2001 palatsisurma, maolaissodan
+   * vuodet sekä nykyiset väestö-, ilmanlaatu- ja hallintoluvut —
+   * kaikki nykypolitiikkaa tai sen rajalla, ja lehden painopiste on
+   * isoisän vuoden 1873 laaksossa. Rana-kauden Kot-verilöyly on
+   * mainittu vain vallanvaihdon ajankohtana ilman yksityiskohtia
+   * (väkivalta neutraalina historiana). Uskonto kerrotaan
+   * historiallis-kulttuurisena ilmiönä: myytit myytteinä,
+   * pyhäköt rakennuksina ja kerrostumina, ei hartauskielellä.
+   * Pashupatinathin polttohautausghatit on jätetty pois sekä
+   * teksteistä että kuvista (Varanasin ennakkotapaus), ja
+   * ei-hindujen sisäänpääsyrajoitus kerrotaan neutraalina
+   * käytännön tietona oppaan puolella.
+   *
+   * VUODEN 2015 MAANJÄRISTYS on lehdessä rakennusperinnön ja
+   * jälleenrakennuksen kautta, kuten faktapohja ja spec-asia.md
+   * edellyttävät: mitä kaatui, mitä on nostettu takaisin ja millä
+   * rahalla. Uhrilukuja ei mainita missään, eikä yhdessäkään kuvassa
+   * ole raunioita — matkaoppaan jälleenrakennusjakson kuva on vuoden
+   * 2024 Kasthamandap, siis lopputulos eikä tuho. Tarkistusraportin
+   * sitova huomio (kohta 4) noudatettu: Boudhanath-artikkelin lause
+   * Nepalin hallituksen arvostelusta on jätetty kokonaan pois.
+   *
+   * NELJÄ WIKIPEDIAN SISÄISTÄ RISTIRIITAA, jotka koskevat lehden
+   * tekstejä, ja miten ne on ratkaistu:
+   * 1) Kasthamandapin ikä. "History of Nepal" antaa rakennuttajaksi
+   *    Gunakama Devan (949–994), mutta Kasthamandap-artikkelin
+   *    kaivaustulokset (Durham ja Stirling, radiohiili ja OSL)
+   *    ajoittavat vanhimmat rakenteet 600-luvulle. Lehti kertoo
+   *    kaivaustuloksen, koska se on mittaus eikä kronikka, ja
+   *    vuoden 1596 uudelleenkokoamisen, joka on molemmissa.
+   * 2) Aranikon vuosisata. "History of Nepal" sanoo 1300-lukua,
+   *    mutta Araniko-artikkelin mukaan hän eli 1245–1306 ja lähti
+   *    Kublai-kaanin hoviin Jayabhimadevan (1255–71) aikana.
+   *    Käytetty henkilöartikkelin lukuja eli 1200-lukua.
+   * 3) Kaupungin pinta-ala ja korkeus. Kathmandu-artikkelin
+   *    infoboksi sanoo 49,45 km² ja 1 400 m, johdanto 1 324 m ja
+   *    Geography-osio 50,7 km² ja 1 400 m. Lehti käyttää
+   *    Geography-osion lukuja ja pyöristää korkeuden muotoon
+   *    "noin 1 400 metriä"; tarkkaa pinta-alaa ei sanota missään.
+   * 4) Dharaharan rakennusvuosi. Ks. nahtavyysjutut.js:n
+   *    kathmandu-lohko — torni on tässä lehdessä vain kartalla.
+   *
+   * KULTTUURIVISAN (asia-questions.js) viisi kysymystä ja niiden
+   * vastaukset löytyvät lehdestä: Nepalin pääkaupunki (johdanto ja
+   * matkailijalle-kappale), šerpat (oppaan jakso 1), Himalaja
+   * (johdanto ja jakso 2), stupa myötäpäivään kierrettävänä (nosto
+   * K4) ja vuoden 2015 maanjäristys (oppaan jakso 4). Historia-sivun
+   * minitehtävä kysyy Indra Jatraa, jota visa ei kysy, ja vastaus on
+   * samalla sivulla nostossa H4.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu: Kasthamandap on
+   * kaksi kertaa (nosto K1 koko rakennus vuonna 2023, oppaan
+   * jälleenrakennusjakso lähikuvana 2024), koska kaupunki on
+   * nimetty sen mukaan ja koska juuri se kaatui ja nousi uudelleen —
+   * Mekan Jabal al-Nourin ja Xi'anin muurin ennakkotapaus.
+   * Swayambhunath on avauskuvassa (stupa alhaalta) ja nostossa K4
+   * (rukousmyllyrivi kummun juurella): eri tiedostot, eri aihe.
+   * Boudhanath on kansikuvassa ja kohdekartan omassa jutussaan.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi'anin ja Varanasin malli v965 ja v966).
+   * Talon menetelmä on Open-Meteon arkisto (ERA5, normaalikausi
+   * 1991–2020), mutta rajapinta vastasi koko tämän työn ajan 429:llä
+   * ja viestillä "Daily API request limit exceeded. Please try again
+   * tomorrow" — kontin jaetun ulosmenevän osoitteen vuorokausikiintiö
+   * oli käytetty loppuun, eikä se nollaudu ennen UTC-vuorokauden
+   * vaihdetta. Kokeiltu erikseen työn alussa ja lopussa, sama vastaus.
+   * Lukuja ei ole otettu mistään muusta lähteestä, koska vuosigraafin
+   * lähderivi lupaa lukijalle nimenomaan ERA5:n; ilman riviä lehti
+   * näkyy ilman säätä, kuten saatiedot.js:n alkukommentti lupaa.
+   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian Kathmandu-artikkelin
+   * sääruutuun (WMO:n normaalit 1991–2020, mittausasema Tribhuvanin
+   * lentoasema 1 337 m), ja jakso sanoo sen ääneen. Kun ERA5-rivi
+   * joskus lisätään, jakso 5 on kirjoitettava rivin omista luvuista.
+   * Mittauspiste olisi keskusta 27,70 / 85,31.
+   */
+  kathmandu: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kathmandu',
+      johdanto: 'Laakso noin 1 400 metrin korkeudessa Himalajan '
+        + 'juurella, ja sen tiilikatujen yllä pagodikattoja, '
+        + 'rukouslippuja ja veistettyjä puuikkunoita. Vuosisatoja '
+        + 'kaupunki oli lähes suljettu ulkomaalaisilta.',
+      kansikuvat: [
+        {
+          tiedosto: 'Kathmandu - panoramio (2).jpg',
+          selite: 'Rukouslippujen alta avautuu koko kaupunki, ja '
+            + 'harmaiden vaarojen takana kohoaa Himalajan luminen '
+            + 'harjanne.',
+          lahde: 'Alexey Komarov, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Boudhanath Panorama 2016.jpg',
+          selite: 'Boudhanathin kumpu illan valossa katolta '
+            + 'kuvattuna: kullattu huippu, siitä laskeutuvat '
+            + 'rukouslippunauhat ja ympärillä kiertävä valkoinen '
+            + 'terassi.',
+          lahde: 'Bijay chaurasia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Desay Maru Jhya (Unique and rare traditional carved wooden window).jpg',
+          selite: 'Desay Madu Jhya lähikuvassa: tiiliseinään upotettu '
+            + 'puuikkuna, jonka päädyssä on veistetty kasvokuvio ja '
+            + 'kummallakin puolella lohikäärmepaneeli.',
+          lahde: 'Megh shakya, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: palatsi, buddhalainen kumpu ja hindulainen
+       * temppeli — laakson kolme kerrosta siinä järjestyksessä,
+       * jossa lehti ne kertoo.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Side view of Kathmandu Durbar Square.jpg',
+          selite: 'Hanuman Dhokan palatsin tornit iltavalossa: '
+            + 'punatiilisten seinien päällä nousee kolme veistettyä '
+            + 'puukertaa räystäineen.',
+          lahde: 'Samikchhyabaral, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Swayambhunath temple - an ancient religious architecture of Nepal.jpg',
+          selite: 'Swayambhunathin stupa alhaalta: valkoisen kummun '
+            + 'päällä on kullattu kuutio Buddhan silmineen, ja '
+            + 'huipulta lähtee rukouslippunauhoja joka suuntaan.',
+          lahde: 'Nirmal Dulal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Pashupatinath Temple-2020.jpg',
+          selite: 'Pashupatinathin temppelialue kattojen yli '
+            + 'katsottuna: keskellä kaksikerroksinen kullattu katto ja '
+            + 'sen ympärillä valkoisia ja punaisia piharakennuksia.',
+          lahde: 'Bijay Chaurasia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Puusta rakennettu nimi',
+          tiedosto: 'Kasthamandap 2023.jpg',
+          teksti: 'Kaupunki on saanut nimensä Kasthamandapista, '
+            + 'Durbar-aukion laidalla seisovasta puurakennuksesta: '
+            + 'sanskritin kāṣṭha on puu ja maṇḍapa paviljonki. '
+            + 'Perinne kertoo, että koko kolmikerroksinen talo tehtiin '
+            + 'yhden ainoan puun puusta ilman rautanauloja ja -tukia, '
+            + 'ja se pystytettiin levähdyspaikaksi matkalaisille '
+            + 'kahden vanhan kauppareitin risteykseen. Nykyisen '
+            + 'muotonsa se sai vuonna 1596, kun Biseth-niminen mies '
+            + 'kokosi sen uudelleen kuningas Lakshmi Narasimha Mallan '
+            + 'aikana. Vuoden 2015 maanjäristys pudotti rakennuksen '
+            + 'kokonaan, ja raunioista alkaneet kaivaukset kertoivat '
+            + 'jotain odottamatonta: vanhimmat rakenteet ovat '
+            + '600-luvulta.',
+          selite: 'Jälleenrakennettu Kasthamandap Durbar-aukiolla: '
+            + 'kolme tiilikattoa laskeutuu portaittain, ja alin lepää '
+            + 'tiheässä puupilaririvissä.',
+          lahde: 'MiraclePotato, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kasthamandap',
+        },
+        {
+          otsikko: 'Suljettu kuningaskunta',
+          tiedosto: 'The Kumari jatra. Three temple cars outside the Hanuman Dhoka, or Old Palace, Kathmandu - Oldfield collection (1850-1863) - BL WD 3279.jpg',
+          teksti: 'Rana-suvun pääministerit nousivat valtaan vuonna '
+            + '1846 Hanuman Dhokan lähellä käydyn Kot-verilöylyn '
+            + 'jälkeen, ja he hallitsivat Nepalia vuoteen 1951. '
+            + 'Hallinto eristi maan tarkoituksella ulkomaisilta '
+            + 'vaikutteilta: politiikka auttoi säilyttämään '
+            + 'itsenäisyyden brittiläisen siirtomaakauden keskellä, '
+            + 'mutta se myös hidasti talouden kehitystä. Ainoa pysyvä '
+            + 'ulkomainen edustusto oli brittiläinen residentuuri, '
+            + 'jonka Sugaulin rauhansopimus vuodelta 1816 salli '
+            + 'kahdeksannessa kohdassaan. Residenttejä oli vuosien '
+            + '1802 ja 1923 välillä kaksikymmentä, ja vuonna 1873 '
+            + 'virassa oli Charles Edward Ridgway Girdlestone.',
+          selite: 'Henry Ambrose Oldfieldin akvarelli Kumari '
+            + 'Jatran kolmesta vaunusta Hanuman Dhokan edustalla: '
+            + 'kullatut katokset nousevat väkijoukon yli.',
+          lahde: 'Henry Ambrose Oldfield, Wikimedia Commons (CC0)',
+          wiki: 'Kathmandu',
+        },
+        {
+          otsikko: 'Ikkunat jotka lähtivät matkalle',
+          tiedosto: 'Beijing Baitasi (2017) A.jpg',
+          teksti: 'Newarit, laakson alkuperäisasukkaat, ovat tehneet '
+            + 'suurimman osan Nepalin taiteesta ja rakennustaiteesta. '
+            + 'Tuntomerkkejä ovat hieno tiilityö ja puunveisto, joka '
+            + 'näkyy räystäslaudoissa, kattotuissa ja '
+            + 'ikkunankehyksissä; kuuluisimpia veistettyjä ikkunoita '
+            + 'ovat Kathmandun Desay Madu Jhya ja Bhaktapurin '
+            + 'Riikinkukko-ikkuna. Laakson tunnusmerkki on '
+            + 'monikattoinen pagodi, joka on tiettävästi saanut '
+            + 'alkunsa täältä ja levinnyt Intiaan, Kiinaan, '
+            + 'Indokiinaan ja Japaniin asti. Osaaminen kulki mukana: '
+            + 'newar-nuorukainen Araniko lähti 1200-luvulla '
+            + 'Kublai-kaanin hoviin kahdeksankymmenen taiteilijan '
+            + 'ryhmän kanssa ja rakensi Pekingiin valkoisen stupan.',
+          selite: 'Pekingin Miaoying-temppelin valkoinen stupa '
+            + 'alhaalta: portaittain levenevä kalkittu jalusta ja sen '
+            + 'päällä pyöreä kumpu.',
+          lahde: 'BabelStone, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Araniko',
+        },
+        {
+          otsikko: 'Stupat joiden ympäri kierretään',
+          tiedosto: 'Row of prayer wheels at Swayambhunath (17644367638).jpg',
+          teksti: 'Kaupungin luoteispuolella kukkulalla on '
+            + 'Swayambhunathin stupa, jonka kuutio-osan kyljissä '
+            + 'Buddhan silmät katsovat neljään ilmansuuntaan ja jonka '
+            + 'kolmetoista kullattua rengasta merkitsevät askelia '
+            + 'kohti nirvanaa. Koillisessa on Boudhanath, Nepalin '
+            + 'suurin pallomainen stupa: kolmenkymmenenkuuden metrin '
+            + 'korkuinen kumpu, jonka ympärysmuurissa on 147 '
+            + 'syvennystä ja niissä kussakin neljä tai viisi '
+            + 'rukousmyllyä. Molemmat pääsivät maailmanperintöluetteloon '
+            + 'vuonna 1979. Kiertäminen tehdään perinteisesti '
+            + 'myötäpäivään eli auringon kulkusuuntaan, ja moni pyörittää '
+            + 'samalla myllyjä.',
+          selite: 'Rukousmyllyrivi Swayambhunathin kummun juurella: '
+            + 'messinkiset rummut takorautaisen aidan yläpuolella, ja '
+            + 'edessä vahtii pieni pronssileijona.',
+          lahde: 'Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Boudha Stupa',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Taleju Temple, Kathmandu-5.jpg',
+          selite: 'Kapea tiilikuja vanhassakaupungissa: talojen välistä '
+            + 'nousee Taleju-temppelin kolme kattoa, ja pään päällä '
+            + 'risteilee sähköjohtokimppu.',
+          lahde: 'Immanuelle, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Kathmandu on Nepalin pääkaupunki, ja se on laakson '
+          + 'luoteisosassa Bagmati-joen pohjoispuolella. Etelärannalla '
+          + 'naapurikaupunki Lalitpur eli Patan on kasvanut kiinni '
+          + 'siihen yhdeksi kehätien rajaamaksi kaupunkialueeksi, ja '
+          + 'kaakossa on Bhaktapur omana kaupunkinaan. Matkailijan '
+          + 'Kathmandu on pieni: vanha kaupunki on kujien ja pihojen '
+          + 'verkko Durbar-aukion ympärillä, ja lähes kaikki tämän '
+          + 'sivun kartan kohteet ovat kuuden kilometrin sisällä '
+          + 'aukiosta.',
+        artikkeli: {
+          nimi: 'Matkailijan Kathmandu',
+          taitto: 'opas',
+          teksti: 'Yksi laakso, kolme vanhaa kuninkaankaupunkia ja '
+            + 'seitsemän maailmanperintökohdetta — ja niiden yllä '
+            + 'vuoret, jotka näkyvät vain kirkkaalla säällä.',
+          nosto: 'Tribhuvanin lentoasema oli aluksi nimeltään '
+            + 'Gauchaur, mikä tarkoittaa lehmien laidunta. Ensimmäinen '
+            + 'kone laskeutui sinne 23. huhtikuuta 1949, ja nykyisen '
+            + 'nimensä kenttä sai 1955.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunkiin tullaan Tribhuvanin '
+                + 'kansainväliselle lentoasemalle, joka yhdistää '
+                + 'Nepalin yli neljäänkymmeneen kohteeseen '
+                + 'seitsemässätoista maassa. Sieltä lähtee päivittäin '
+                + 'useita lentoja Luklaan Everestin suuntaan, ja '
+                + 'tarjolla on myös vuoristolentoja, joilla huiput vain '
+                + 'katsotaan koneen ikkunasta. Retkikuntien järjestäminen on '
+                + 'ollut vuosikymmeniä šerpojen työtä: tiibetiläinen '
+                + 'kansa, joka asuu Nepalin vuoristossa ja jonka '
+                + 'nimestä on tullut oppaan ja kantajan ammattinimike '
+                + 'siitä asti, kun Tenzing Norgay nousi Everestin '
+                + 'huipulle vuonna 1953. Matkailijoiden tukikohta on '
+                + 'Thamel, kapeiden kujien kortteli runsaan kilometrin '
+                + 'päässä Durbar-aukiosta pohjoiseen; siellä ovat '
+                + 'majatalot, retkeilyvarustekaupat ja toimistot, '
+                + 'joista vaellukset varataan.',
+              kuva: {
+                tiedosto: 'Tribhuvan International Airport-IMG 1070.jpg',
+                selite: 'Tribhuvanin lentoaseman punatiilinen '
+                  + 'terminaali ja lennonjohtotorni tien takaa '
+                  + 'katsottuna, edustalla nurmikaistale ja '
+                  + 'moottoripyörärivi.',
+                lahde: 'Bijay Chaurasia, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kathmandun laaksoa halkoo kahdeksan jokea. '
+                + 'Pääuoma on Bagmati, ja sen sivujoista tärkeimmät '
+                + 'ovat Bishnumati, Dhobi Khola, Manohara Khola, '
+                + 'Hanumante Khola ja Tukucha Khola. Joet saavat '
+                + 'alkunsa laaksoa ympäröiviltä vuorilta, jotka ovat '
+                + 'tuhannen viidensadan ja kolmentuhannen metrin '
+                + 'välissä, ja niiden solat ovat aina olleet ainoat '
+                + 'kulkureitit laaksoon ja sieltä pois. Kaupunki '
+                + 'kuuluu lehtimetsäiseen monsuunivyöhykkeeseen, joka '
+                + 'ulottuu 1 200 metristä 2 100 metriin: rinteillä '
+                + 'kasvaa tammea, jalavaa, pyökkiä ja vaahteraa, '
+                + 'korkeammalla havupuita. Himalajan varsinainen '
+                + 'muuri on vasta näiden vaarojen takana, eikä se näy '
+                + 'joka päivä — parhaat näkymät ovat kuivan kauden '
+                + 'aamuina.',
+              kuva: {
+                tiedosto: 'Evening view of the mountain range from Patan, Lalitpur.jpg',
+                selite: 'Laakson kattojen yli näkyy iltavalossa '
+                  + 'punertava lumihuippujen jono, ja sen edessä '
+                  + 'kohoaa kaksi tummaa vaararivistöä.',
+                lahde: 'Shadow Ayush, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: tori ja juhlakalenteri',
+              teksti: 'Vanhankaupungin vilkkain paikka on Asanin '
+                + 'aukio, johon yhtyy kuusi katua. Se on ollut '
+                + 'kauppapaikka ikimuistoisista ajoista, koska sen '
+                + 'läpi kulki toinen kahdesta Intian ja Tiibetin '
+                + 'välisestä reitistä: kaupungin sisällä se vie '
+                + 'Durbar-aukiolta Asaniin ja siitä koilliseen. '
+                + 'Aukion suojelija on Annapurna Ajima, viljan '
+                + 'jumalatar, jota ei esitetä hahmona vaan täytenä '
+                + 'viljamittana, ja keskellä kiveystä on '
+                + 'jalustallaan kivinen kala. Juhlat ovat osa arkea: '
+                + 'suurin katujuhla on kahdeksanpäiväinen Indra '
+                + 'Jatra, jonka pääpaikka on Durbar-aukio ja johon '
+                + 'kuuluu naamiotansseja. Sen rinnalla kulkee Kumari '
+                + 'Jatra, kolmen vaunun kulkue, joka on kierretty '
+                + 'kaupungin läpi vuodesta 1756.',
+            },
+            {
+              otsikko: 'Historian käännekohta: maanjäristys ja jälleenrakennus',
+              teksti: 'Laaksoa ravisteli 25. huhtikuuta 2015 '
+                + 'maanjäristys, jonka voimakkuudeksi on arvioitu '
+                + '7,8–7,9. Rakennusperinnölle se oli raskas päivä: '
+                + 'Kasthamandap romahti kokonaan, Dharahara-tornista '
+                + 'jäi jäljelle vain jalusta ja Durbar-aukiot '
+                + 'vaurioituivat pahoin. Palautus on ollut hidasta '
+                + 'mutta se on edennyt. Boudhanathin stupa avattiin '
+                + 'uudelleen 22. marraskuuta 2016 ensimmäisenä '
+                + 'laakson vaurioituneista maailmanperintökohteista, '
+                + 'ja sen korjaus maksettiin kokonaan buddhalaisten '
+                + 'yhteisöjen ja vapaaehtoisten lahjoituksin. Rani '
+                + 'Pokharin allas palautettiin vuoden 1670 asuunsa '
+                + 'lokakuussa 2020, Dharahara avattiin 2021 ja '
+                + 'viimeisteltiin 2024, ja Kasthamandap seisoo taas '
+                + 'aukiolla.',
+              kuva: {
+                tiedosto: 'Kasthamandap, Kathmandu-87.jpg',
+                selite: 'Jälleenrakennetun Kasthamandapin räystäät '
+                  + 'alhaalta: punainen kangaskaistale kiertää '
+                  + 'tiilikattojen reunaa, ja alimman kerroksen '
+                  + 'kaiteessa on veistetty puupaneeli.',
+                lahde: 'Immanuelle, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kathmandu on korkealla laaksossa, ja siksi '
+                + 'kesä on selvästi leudompi kuin Etelä-Aasian '
+                + 'alangoilla. Kuukausikeskilämpö nousee tammikuun '
+                + 'yhdestätoista asteesta heinä–elokuun vajaaseen '
+                + 'kahteenkymmeneenviiteen, ja koko vuoden keskiarvo '
+                + 'on 19,3 astetta; luvut ovat Tribhuvanin '
+                + 'lentoaseman mittausasemalta 1 337 metrin '
+                + 'korkeudesta, ja ne ovat en-Wikipedian sääruudun '
+                + 'julkaisemat maailman ilmatieteen järjestön '
+                + 'normaalit vuosilta 1991–2020. Sateista noin '
+                + 'kaksi kolmasosaa tulee kesä–syyskuun '
+                + 'monsuunikaudella: heinäkuussa kertyy 384 '
+                + 'millimetriä, marraskuussa kuusi. Talvi on kuiva ja '
+                + 'aurinkoinen, mutta yöt ovat kylmiä — tammikuun '
+                + 'keskimääräinen alin on kolmen asteen tienoilla ja '
+                + 'kylmin mitattu lukema on 3,5 pakkasastetta vuodelta '
+                + '1978. Lunta kaupungissa nähdään harvoin, '
+                + 'muistetusti 1945 ja 2007.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Myyttien mukaan laakso oli aluksi järvi, ja '
+        + 'todellisuudessa sen kaupungit rikastuivat Intian ja '
+        + 'Tiibetin välisellä kauppatiellä. Neljästä kilpailevasta '
+        + 'kaupunkivaltiosta tuli yksi kuningaskunta vuosina 1768–1769.',
+      tehtava: {
+        kysymys: 'Minkä juhlan aikana gorkhalaisjoukot marssivat '
+          + 'Kathmanduun vuonna 1768?',
+        vaihtoehdot: [
+          'Indra Jatran',
+          'Holi-värijuhlan',
+          'Dashainin',
+          'Tihar-valojuhlan',
+        ],
+        oikea: 0,
+        fakta: 'Kaupunki juhli Indra Jatraa 25. syyskuuta 1768, kun '
+          + 'Prithvi Narayan Shah asettui valtaistuimelle palatsin '
+          + 'pihalle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Laakso joka oli järvi',
+          tiedosto: 'Nepal, 15th century - Bodhisattva of Wisdom (Manjushri) - 1964.370 - Cleveland Museum of Art.tif',
+          teksti: 'Buddhalaisen Swayambhu-puranan mukaan laakso oli '
+            + 'aikanaan syvä järvi, jossa asuivat käärmejumalat '
+            + 'Karkotaka, Takshaka ja Kulika. Buddha Vipassī kylvi '
+            + 'veteen lootuksen siemenen, ja siitä kasvoi '
+            + 'tuhatlehtinen kukka, joka hehkui valoa. Bodhisattva '
+            + 'Manjushri saapui katsomaan valoa ja mietti, miten '
+            + 'ihmiset pääsisivät sen luo. Hän halkaisi vuoren '
+            + 'särkymättömällä miekallaan, laski järven veden pois ja '
+            + 'kaivoi käärmeille uudet lammet suojaksi; valon '
+            + 'paikalle jäi Swayambhu, itsestään syntynyt. Kertomus '
+            + 'jatkuu niin, että Manjushri perusti laaksoon '
+            + 'ensimmäisen kaupungin.',
+          selite: 'Nepalilainen 1400-luvun kullattu pronssiveistos '
+            + 'Manjushrista: neljä käsivartta, korkea kruunu ja '
+            + 'oikeassa kädessä koholla miekan kahva.',
+          lahde: 'Cleveland Museum of Art, Wikimedia Commons (CC0)',
+          wiki: 'Swayambhunath',
+        },
+        {
+          otsikko: 'Kauppareitti joka teki taiteilijoita',
+          tiedosto: 'Changu Narayan-Manadeva-Saeule-04-2013-gje.jpg',
+          teksti: 'Licchavit tulivat laaksoon nykyisen Biharin '
+            + 'puolelta ja perustivat noin vuonna 400 dynastian, '
+            + 'jonka aikana kaupungista tuli tärkeä välietappi Intian '
+            + 'ja Tiibetin välisessä kaupassa. Kauppa toi mukanaan '
+            + 'rakennustaidon kasvun ja vei laakson osaajia '
+            + 'ulkomaille: prinsessa Bhrikuti naitettiin Tiibetin '
+            + 'hallitsijalle Songtsän Gampolle ja oli keskeisessä '
+            + 'osassa, kun buddhalaisuus tuli Tiibetiin. Kiinalainen '
+            + 'matkaaja Xuanzang kuvasi 600-luvulla kuningas '
+            + 'Amshuvarman Kailaskut Bhawan -palatsia. Kauden omaa '
+            + 'jälkeä on yhä nähtävissä: Changu Narayanin temppelissä '
+            + 'seisoo kuningas Manadevan pystyttämä kivipylväs, jonka '
+            + 'sanskritinkielinen kirjoitus on vuodelta 464.',
+          selite: 'Manadevan pylvään kivikirjoitus Changu '
+            + 'Narayanissa: sanskritin rivit on hakattu tummaan '
+            + 'laattaan, joka nousee kiemuraisen käärmeveistoksen '
+            + 'keskeltä.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Changu Narayan Temple',
+        },
+        {
+          otsikko: 'Neljä kilpailevaa kaupunkia',
+          tiedosto: 'Kathmandu 1811 high (cropped).jpg',
+          teksti: 'Malla-kauden loppupuolella laakso jakautui '
+            + 'neljäksi linnoitetuksi kaupungiksi: Kantipur eli '
+            + 'Kathmandu, Lalitpur, Bhaktapur ja Kirtipur. Ne olivat '
+            + 'Malla-liittouman pääkaupunkeja ja kilpailivat '
+            + 'keskenään taiteessa, arkkitehtuurissa ja kaupassa, ja '
+            + 'kilpailu näkyy yhä aukioina, temppeleinä ja '
+            + 'vesipostoina. Kuninkaat eivät jättäneet työtä muille: '
+            + 'he osallistuivat julkisten rakennusten pystyttämiseen, '
+            + 'säätivät lakeja, perustivat guthi-nimisiä säätiöitä '
+            + 'temppelien ylläpitoon sekä kirjoittivat näytelmiä ja '
+            + 'esittivät niitä kaupunkien aukioilla. Vuodelta 1381 on '
+            + 'säilynyt Amarkosh, sanskritin ja nepal bhasan '
+            + 'sanakirja.',
+          selite: 'Vuonna 1811 julkaistu kaiverrus laaksosta: '
+            + 'monikattoisten temppelien rivistö nousee jokitörmän '
+            + 'päälle, ja takana kaartuu vaarojen jono.',
+          lahde: 'William Kirkpatrick, Wikimedia Commons (PD)',
+          wiki: 'Kathmandu',
+        },
+        {
+          otsikko: 'Gorkha valtaa laakson',
+          tiedosto: 'The Great King Prithivi Narayan Shah.jpg',
+          teksti: 'Gorkhan vuoristoruhtinaskunta lännessä aloitti '
+            + 'laakson saartamisen kuningas Prithvi Narayan Shahin '
+            + 'johdolla. Nuwakot vallattiin 1744, ja noin vuonna 1756 '
+            + 'gorkhalaiset ottivat Kutin solan ja katkaisivat laakson '
+            + 'Tiibetin-kaupan. Kathmandun kuningas Jaya Prakash '
+            + 'Malla pyysi apua briteiltä, mutta Itä-Intian kompanian '
+            + 'lähettämä joukko lyötiin Sindhulissa vuonna 1767. '
+            + 'Kaupunki kaatui 25. syyskuuta 1768 kesken Indra Jatra '
+            + '-juhlan, ja Shah asettui valtaistuimelle palatsin '
+            + 'pihalle. Patan antautui viikkoja myöhemmin ja '
+            + 'Bhaktapur yön aikana 25. marraskuuta 1769; '
+            + 'Kathmandusta tuli yhdistyneen kuningaskunnan pääkaupunki.',
+          selite: 'Prithvi Narayan Shahin pronssipatsas kukkaseppel '
+            + 'kaulassa: hallitsija osoittaa kädellään eteenpäin ja '
+            + 'pitää toisessa kädessä kaarevaa miekkaa.',
+          lahde: 'GB Ryan771, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Prithvi Narayan Shah',
+        },
+      ],
+    },
+  ],
 };

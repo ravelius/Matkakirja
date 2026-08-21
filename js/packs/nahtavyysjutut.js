@@ -24409,4 +24409,355 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KATHMANDUN KOHDEKARTAN JUTUT (Opus 21.8.2026). Kahdeksan kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään; kartalla
+   * ei ole kainaloa. Faktat on tarkistettu en-Wikipedian artikkeleista
+   * Boudha Stupa, Swayambhunath, Garden of Dreams, Pashupatinath
+   * Temple, Rani Pokhari, Kathmandu Durbar Square, Hanuman Dhoka,
+   * Kumari (goddess), Kasthamandap, Dharahara ja Patan Durbar Square
+   * (haettu 21.8.2026).
+   *
+   * YKSI SISÄINEN RISTIRIITA ON KIRJOITETTU AUKI LUKIJALLE
+   * (v925/v932:n tapa): Dharaharan rakennusvuosi on saman artikkelin
+   * johdannossa 1832 ja historiaosiossa 1835, ja kolmas luku 1824
+   * koskee ensimmäistä, vuoden 1834 järistyksessä haljennutta tornia.
+   * Juttu kertoo molemmat vuodet ja sen, mistä ero johtuu.
+   *
+   * TOINEN RISTIRIITA ON RATKAISTU EIKÄ KERROTTU: Kathmandu Durbar
+   * Square -artikkelin infoboksi ajoittaa aukion 300–700-luvuille ja
+   * leipäteksti 200-luvulle. Juttu ei anna aukiolle syntymävuotta
+   * lainkaan vaan kertoo, mistä ajasta rakennukset ovat.
+   *
+   * PYHIEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa, Medinassa ja
+   * Varanasissa: uskonto kerrotaan rakennuksina ja kerrostumina, ei
+   * hartauskielellä. Pashupatinathin polttohautausghatit on jätetty
+   * pois kokonaan (Varanasin ennakkotapaus), ja ei-hindujen
+   * sisäänpääsyrajoitus kerrotaan neutraalina käytännön tietona.
+   * Kumari-perinne kerrotaan Durbar-aukion jutussa asemana ja
+   * rakennuksena; nykyisen viranhaltijan nimeä ei mainita, koska
+   * kyseessä on lapsi.
+   */
+  kathmandu: {
+    Boudhanath: {
+      aika: 'nykyinen rakenne 1300-luvulta',
+      teksti: 'Boudhanath on Nepalin suurin pallomainen stupa ja yksi '
+          + 'maailman suurimmista. Se on laakson koillisosassa, ja sen '
+          + 'ympärillä oli alun perin riisipeltoja. Nykyinen rakenne '
+          + 'on todennäköisesti 1300-luvulta, mutta newarien kronikat '
+          + 'kertovat paikalla olleen stupan jo 400-luvulla. Kumpu on '
+          + 'kolmekymmentäkuusi metriä korkea, ja sen pohjassa on 108 '
+          + 'pientä kuvaa Amitabha-buddhasta.'
+          + '\n\n'
+          + 'Paikka on vanhan kauppatien varrella. Reitti tuli '
+          + 'Tiibetistä laaksoon Sankhun kylän kautta, kulki '
+          + 'Chabahilin pienemmän stupan ohi ja kääntyi sitten etelään '
+          + 'Bagmatin yli Pataniin. Tiibetiläiset kauppiaat ovat '
+          + 'levänneet ja rukoilleet Boudhanathin juurella '
+          + 'vuosisatoja, ja stupan ympärille on sittemmin noussut yli '
+          + 'viisikymmentä tiibetiläistä luostaria. Ympärysmuurissa '
+          + 'on 147 syvennystä, joissa kussakin on neljä tai viisi '
+          + 'rukousmyllyä.'
+          + '\n\n'
+          + 'Vuoden 2015 maanjäristys halkaisi stupan huipun, ja koko '
+          + 'kummun päällinen osa jouduttiin purkamaan ja kokoamaan '
+          + 'uudelleen. Uusi keskuspylväs asetettiin paikalleen 22. '
+          + 'marraskuuta 2015, ja stupa avattiin vuotta myöhemmin '
+          + 'samana päivänä. Työ maksoi 2,1 miljoonaa dollaria ja yli '
+          + 'kolmekymmentä kiloa kultaa, ja se rahoitettiin kokonaan '
+          + 'buddhalaisten yhteisöjen ja vapaaehtoisten lahjoituksin. '
+          + 'Boudhanath oli laakson vaurioituneista '
+          + 'maailmanperintökohteista ensimmäinen, joka valmistui.',
+      kuvat: [
+        {
+          tiedosto: 'Boudhanath Stupa from a different perspective.jpg',
+          selite: 'Boudhanathin kumpu vastavalossa: Buddhan silmät '
+            + 'katsovat kullatusta kuutiosta, ja etualalla palaa '
+            + 'voilampun liekki.',
+          lahde: 'Sakar010, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Swayambhunath: {
+      aika: 'kunnostustyö kirjattu vuonna 640',
+      teksti: 'Swayambhunath on kukkulan laella kaupungin '
+          + 'luoteispuolella, ja sen nimi tarkoittaa tiibetiksi ja '
+          + 'sanskritiksi itsestään syntynyttä. Kumpu on '
+          + 'puolipallo, jonka päällä on kuutio: sen jokaisella '
+          + 'sivulla katsovat Buddhan silmät yhteen ilmansuuntaan. '
+          + 'Kuution yläpuolella on kolmetoista kullattua rengasta, '
+          + 'jotka merkitsevät kolmeatoista askelta ennen nirvanaa, ja '
+          + 'aivan huipulla on gajur-niminen kruunu.'
+          + '\n\n'
+          + 'Paikan historia on kirjoitettu kiveen. Vaurioitunut '
+          + 'kivikirjoitus kertoo kuningas Vrsadevan teettäneen '
+          + 'kunnostustöitä vuonna 640, ja 1400-luvulla intialainen '
+          + 'munkki Śāriputra johti huonokuntoisen stupan '
+          + 'uudelleenrakennuksen yhdessä Malla-kuninkaan kanssa. '
+          + 'Vuonna 1504 tiibetiläinen mestari Tsangnyön Heruka '
+          + 'kutsuttiin kunnostamaan stupa, ja hän sai työn valmiiksi '
+          + 'kolmessa kuukaudessa. Idän puoleiset portaat rakennutti '
+          + '1600-luvulla kuningas Pratap Malla.'
+          + '\n\n'
+          + 'Viimeisin suuri kunnostus tehtiin toukokuussa 2010, ja se '
+          + 'oli ensimmäinen sitten vuoden 1921: pyhäkkö kullattiin '
+          + 'uudelleen kahdellakymmenellä kilolla kultaa. Alue '
+          + 'vaurioitui vuoden 2015 maanjäristyksessä. Kukkulalla asuu '
+          + 'apinalaumoja, ja siitä on tullut paikan toinen nimi — '
+          + 'englanniksi puhutaan usein apinatemppelistä.',
+      kuvat: [
+        {
+          tiedosto: 'Swayabhunath Temple-IMG 3267.jpg',
+          selite: 'Itäiset portaat nousevat jyrkkinä kukkulalle, ja '
+            + 'puiden välistä pilkottaa stupan kullattu huippu.',
+          lahde: 'Bijaya2043, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Unelmien puutarha': {
+      aika: '1920',
+      teksti: 'Kaiser Mahalin muurien sisällä on uusklassinen '
+          + 'puutarha, jonka Rana-suvun kenttämarsalkka Kaiser '
+          + 'Sumsher Rana (1892–1964) rakennutti vuonna 1920. '
+          + 'Alkuperäinen nimi oli Kuuden vuodenajan puutarha, ja '
+          + 'paviljongit omistettiin Nepalin kuudelle vuodenajalle. '
+          + 'Suunnittelija oli Kishore Narshingh, '
+          + 'sama arkkitehti, joka piirsi Singha Durbarin '
+          + 'hallintopalatsin.'
+          + '\n\n'
+          + 'Pinta-alaa on 6 895 neliömetriä. Muodollinen ja '
+          + 'akselille asetettu arkkitehtuuri on tarkoituksellisessa '
+          + 'ristiriidassa vapaasti istutettujen kasvien kanssa — sama '
+          + 'ajatus kuin Edward VII:n aikaisissa englantilaisissa '
+          + 'puutarhoissa. Käytävien varsilla on upotettuja '
+          + 'kukkatarhoja, joiden keskellä on lampi, ja lisäksi '
+          + 'amfiteatteri, pergoloita, kaidepylväikköjä ja maljakoita. '
+          + 'Rakennusten sivistynyt yksityiskohtaisuus viittaa siihen, '
+          + 'että ne on tehty malliteosten mukaan paikallisin '
+          + 'muunnoksin.'
+          + '\n\n'
+          + 'Kaiser Sumsherin kuoleman jälkeen puutarha siirtyi '
+          + 'valtiolle ja jäi vuosikymmeniksi hoitamatta; paviljongit '
+          + 'rapistuivat ja polut kasvoivat umpeen. Vuonna 1998 '
+          + 'alueelle oli määrä rakentaa kauppakeskus, mutta purkutyö '
+          + 'keskeytettiin ja puutarha avattiin yleisölle uudella '
+          + 'nimellä. Kunnostus tehtiin vuosina 2000–2007 Itävallan '
+          + 'kehitysyhteistyön tuella, ja sitä johti itävaltalainen '
+          + 'restaurointiarkkitehti Götz Hagmüller. Alkuperäisestä '
+          + 'puutarhasta on jäljellä noin puolet.',
+      kuvat: [
+        {
+          tiedosto: 'Kathmandu-Garden of Dreams-28-Palazzo-2013-gje.jpg',
+          selite: 'Puutarhan pylväspaviljonki nurmen ja pitkulaisen '
+            + 'altaan takana, etualalla ruukussa kukkiva punainen puu.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Pashupatinath: {
+      aika: 'perustettu 400-luvulla, nykyinen temppeli 1800-luvulta',
+      teksti: 'Pashupatinath on Kathmandun vanhin hindutemppeli ja '
+          + 'omistettu Shivalle olentojen herrana. Se on Bagmatin '
+          + 'rannalla kaupungin itäpuolella ja peräisin 400-luvulta, '
+          + 'mutta alkuperäisestä rakennuksesta ei ole juuri mitään '
+          + 'jäljellä: suuri osa siitä tuhoutui 1300-luvulla, ja '
+          + 'nykyinen temppeli on 1800-luvulta. Härän kuva ja musta '
+          + 'nelipäinen Pashupatin hahmo ovat ainakin kolmesataa '
+          + 'vuotta vanhoja.'
+          + '\n\n'
+          + 'Rakennus on pagodityyliä: kuutiomaisen rungon päällä on '
+          + 'kaksi kattokertaa, jotka on katettu kuparilla ja '
+          + 'kullalla, ja niitä kannattavat veistetyt puiset '
+          + 'kattotuet eli tundalit. Temppelin papit ovat olleet '
+          + 'Etelä-Intian Karnatakasta kotoisin olevia brahmiineja '
+          + 'Malla-kuningas Yaksha Mallan ajoista asti. Alue on '
+          + 'Unescon maailmanperintökohde, ja siihen kuuluu koko '
+          + 'jokivarsi rantaportaineen ja pikkupyhäkköineen.'
+          + '\n\n'
+          + 'Matkailijan kannattaa tietää yksi käytännön asia '
+          + 'etukäteen: temppelipihaan pääsevät vain hindut, ja muut '
+          + 'katsovat rakennusta Bagmatin toiselta rannalta. Sieltä '
+          + 'näkyvät hyvin sekä kullatut katot että vastarannan '
+          + 'terassit. Vuoden suurin tapahtuma on Shivaratri, Shivan '
+          + 'yö, jolloin alueelle saapuu tuhansia kävijöitä.',
+      kuvat: [
+        {
+          tiedosto: 'Bagmati river and Pashupatinath temple.jpg',
+          selite: 'Bagmati virtaa savisena Pashupatinathin '
+            + 'rantaportaiden ohi, ja punaisten pyhäkkörakennusten '
+            + 'takaa kohoaa päätemppelin kullattu katto.',
+          lahde: 'Gaurav Dhwaj Khadka, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rani Pokhari': {
+      aika: '1670',
+      teksti: 'Rani Pokhari eli Kuningattaren allas on nelikulmainen '
+          + 'tekolampi keskellä kaupunkia, mitoiltaan 180 kertaa 140 '
+          + 'metriä. Sen rakennutti vuonna 1670 kuningas Pratap Malla '
+          + 'lohduttaakseen puolisoaan, jonka poika oli kuollut '
+          + 'norsun tallaamana. Kuningas keräsi vettä pyhistä '
+          + 'paikoista ja jokien yhtymäkohdista Nepalista ja Intiasta '
+          + '— muun muassa Gosaikundasta, Muktinathista, '
+          + 'Badrinathista ja Kedarnathista — ja kaatoi ne altaaseen.'
+          + '\n\n'
+          + 'Altaan keskellä on Matrikeshwor Mahadevin temppeli, jonne '
+          + 'pääsee kadulta pengertietä pitkin. Eteläpenkereellä on '
+          + 'suuri kivinorsu, jonka selässä ovat Pratap Malla ja hänen '
+          + 'kaksi poikaansa, ja neljässä kulmassa on pienet '
+          + 'temppelit. Kuningas pystytti paikalle myös kivilaatan, '
+          + 'jonka teksti on kolmella kielellä: sanskritiksi, '
+          + 'nepaliksi ja nepal bhasaksi. Portit avataan yleisölle '
+          + 'kerran vuodessa Tihar-juhlan viimeisenä päivänä.'
+          + '\n\n'
+          + 'Allas on nähty myös ulkopuolisin silmin varhain. '
+          + 'Italialainen jesuiitta Ippolito Desideri kulki '
+          + 'Kathmandun kautta vuonna 1721 ja kirjoitti nähneensä '
+          + 'kaupunginportin ulkopuolella suuren lammen, jonka '
+          + 'penkereet laskeutuvat portaina veteen. Vuoden 2015 '
+          + 'maanjäristyksen jälkeen kunnostus alkoi betonilla, mutta '
+          + 'paikallisten vastustuksen jälkeen päätettiin palata '
+          + 'tiileen ja saveen. Työ valmistui lokakuussa 2020, ja '
+          + 'keskustemppeli sai takaisin vanhan stupamaisen muotonsa '
+          + 'Rana-kauden kupolin tilalle.',
+      kuvat: [
+        {
+          tiedosto: 'Rani Pokhari Jamal Kathmandu-Nepal Rajesh Dhungana (4).jpg',
+          selite: 'Valkoinen keskustemppeli seisoo tiilipenkereen '
+            + 'päässä keskellä allasta, ja vastarannalla näkyy '
+            + 'Tri-Chandra-collegen pitkä vaalea julkisivu.',
+          lahde: 'Rajesh Dhungana, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kathmandun Durbar-aukio': {
+      aika: 'nykyiset rakennukset 1500–1700-luvuilta',
+      teksti: 'Durbar tarkoittaa palatsien paikkaa, ja niitä on '
+          + 'laaksossa kolme. Kathmandun aukiolla seisovat neljän '
+          + 'kuningaskunnan — Kantipurin, Lalitpurin, Bhaktapurin ja '
+          + 'Kirtipurin — perintörakennukset, ja aukio jakautuu '
+          + 'kahteen nelikulmioon. Ulommassa ovat Kasthamandap, '
+          + 'Kumari Ghar ja Shivan ja Parvatin temppeli, sisemmässä '
+          + 'Hanuman Dhokan palatsi. Temppeleitä on kaikkiaan '
+          + 'viisikymmentä, ja useimmat ovat 1500-luvun Malla-kuninkaiden '
+          + 'aikaisia.'
+          + '\n\n'
+          + 'Hanuman Dhoka on nimetty portin vieressä istuvan '
+          + 'Hanuman-patsaan mukaan, joka on vuodelta 1672; dhoka on '
+          + 'nepaliksi ovi. Palatsi kattaa viisi eekkeriä, ja sen '
+          + 'vanhin osa on 1500-luvun puolivälistä. Kuningas Pratap '
+          + 'Malla laajensi sitä 1600-luvulla, ja Prithvi Narayan Shah '
+          + 'lisäsi 1768 neljä vartiotornia — niistä yhdeksänkerroksisen '
+          + 'Basantapurin tornin laelta näkyi koko palatsi ja kaupunki. '
+          + 'Portin '
+          + 'ulkopuolella on kivilaatta, johon on kirjoitettu '
+          + 'viidellätoista kielellä. Kuningasperhe asui palatsissa '
+          + 'vuoteen 1886.'
+          + '\n\n'
+          + 'Aukion eteläreunassa on Kumari Ghar, kolmikerroksinen '
+          + 'Malla-kauden talo, jossa asuu Kumari. Perinne tarkoittaa '
+          + 'sitä, että nuorta tyttöä kunnioitetaan jumalattaren '
+          + 'ruumiillistumana siihen asti, kunnes hän saavuttaa '
+          + 'murrosiän; valinta tehtiin kuningasaikana '
+          + 'astrologisin ja fyysisin perustein. Aukio kärsi pahasti '
+          + 'vuoden 2015 maanjäristyksessä, ja tunnetuin sen '
+          + 'menetyksistä oli Kasthamandap, joka on sittemmin '
+          + 'rakennettu uudelleen.',
+      kuvat: [
+        {
+          tiedosto: 'Top part of one of the temples inside Basantapur Durbar Square.jpg',
+          selite: 'Erään aukion temppelin ylin kerros lehvien takaa: '
+            + 'ristikkoikkunat, veistetyt räystäslaudat ja niistä '
+            + 'riippuva metallireunus.',
+          lahde: 'sat.yamln3.14, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Dharahara: {
+      aika: 'ensimmäinen torni 1824, nykyinen avattu 2021',
+      teksti: 'Dharahara eli Bhimsen Stambha on 72 metriä korkea '
+          + 'torni Sundharan kaupunginosassa. Sisällä kiertää '
+          + 'kierreportaikko, jossa on 213 askelmaa, ja kahdeksannen '
+          + 'kerroksen parvekkeelta näkyy koko laakso; katolla on '
+          + 'runsaan viiden metrin pronssinen masto. Tyyli sekoittaa '
+          + 'mogulien ja eurooppalaista rakennustapaa, ja rakenteessa '
+          + 'käytettiin tiilijauhoa, kalkkia, mustaa linssiä ja '
+          + 'karamellia sementin sijasta.'
+          + '\n\n'
+          + 'Vuosiluvuista Wikipedia antaa kolme, ja ero selittyy '
+          + 'sillä, että torneja on ollut kaksi. Ensimmäisen rakensi '
+          + 'pääministeri Bhimsen Thapa vuonna 1824 omalle pihalleen, '
+          + 'ja se halkesi vuoden 1834 maanjäristyksessä eikä sitä '
+          + 'koskaan korjattu. Toisen, nykyisen paikalla olevan tornin '
+          + 'hän rakennutti kuningatar Lalit Tripurasundarille — '
+          + 'artikkelin johdanto ajoittaa sen vuoteen 1832 ja '
+          + 'historiaosio vuoteen 1835. Torni oli alun perin '
+          + 'vartiotorni: ylimmästä kerroksesta puhallettiin '
+          + 'torvimerkki, jolla väki kutsuttiin Tundikhelin kentälle '
+          + 'kuulemaan tiedotuksia.'
+          + '\n\n'
+          + 'Vuoden 1934 maanjäristys pudotti tornista yhdeksästä '
+          + 'kerroksesta seitsemän, ja pääministeri Juddha Shumsher '
+          + 'rakennutti sen takaisin. Vuoden 2015 järistyksessä jäljelle '
+          + 'jäi vain jalusta. Uusi torni alkoi nousta lokakuussa '
+          + '2018, se avattiin osittain 24. huhtikuuta 2021 ja '
+          + 'valmistui kokonaan syyskuussa 2024.',
+      kuvat: [
+        {
+          tiedosto: 'Cityscape dharahara.jpg',
+          selite: 'Valkoinen Dharahara-torni erottuu kaukaa tiiviin '
+            + 'talomeren keskeltä, ja taustalla nousee laakson '
+            + 'reunavaara.',
+          lahde: 'Sudeep KC, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Patanin Durbar-aukio': {
+      aika: 'nykyinen asu 1600-luvulta',
+      teksti: 'Patanin eli Lalitpurin Durbar-aukio on Bagmatin '
+          + 'eteläpuolella, ja se on laakson kolmesta palatsiaukiosta '
+          + 'toinen Kathmandun rinnalla. Aukio on '
+          + 'kivireunaista punatiiltä, ja päätemppelit on asetettu '
+          + 'riviin palatsin länsijulkisivua vastapäätä niin, että '
+          + 'niiden ovet katsovat itään palatsiin päin. Kaupungissa on '
+          + '136 bahalia eli luostaripihaa ja 55 suurta temppeliä, ja '
+          + 'suurin osa niistä on aukion tuntumassa.'
+          + '\n\n'
+          + 'Nykyinen asu on 1600-luvulta, kuningas Siddhi Narsingh '
+          + 'Mallan ja hänen poikansa Srinivasan ajalta. Aukion '
+          + 'tunnetuin rakennus on Krishna Mandir vuodelta 1667: '
+          + 'kolmikerroksinen kivitemppeli, jossa on 21 kullattua '
+          + 'huippua ja jonka pilarikaistoihin on kaiverrettu '
+          + 'Mahabharatan ja Ramayanan tapahtumia. Vishwanathin '
+          + 'temppelin vuodelta 1627 vartioi kaksi kivinorsua, ja '
+          + 'Bhimsenin temppeli vuodelta 1680 tunnetaan kolmesta '
+          + 'yhteen liitetystä kultaisesta ikkunastaan.'
+          + '\n\n'
+          + 'Palatsissa on kolme suurta pihaa: Mul Chowk, Sundari '
+          + 'Chowk ja Keshav Narayan Chowk, joista viimeisessä toimii '
+          + 'Patanin museo. Taleju Bhawanin temppeli on Malla-suvun '
+          + 'oman suojelusjumalattaren pyhäkkö; se rakennettiin 1640 '
+          + 'ja uudelleen 1667 tulipalon jälkeen. Aukio vaurioitui '
+          + 'pahoin vuoden 2015 maanjäristyksessä — kokonaan '
+          + 'romahtanut Hari Shankarin temppeli oli entisöity '
+          + 'valmiiksi vuoteen 2023 mennessä.',
+      kuvat: [
+        {
+          tiedosto: 'Patandurbar sqaure.jpg',
+          selite: 'Patanin aukio kivetyksen tasolta: keskellä nousee '
+            + 'Krishna Mandirin kivinen huippu ja sen edessä pylväs, '
+            + 'jonka nokassa istuu Garuda.',
+          lahde: 'Nikhil-SREJ, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

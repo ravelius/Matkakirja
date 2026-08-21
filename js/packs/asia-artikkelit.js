@@ -123,6 +123,17 @@
 // (js/packs/asia.js), ei en-Wikipedian "Ulaanbaatar" — Kappadokian
 // ennakkotapaus; nykyasu kerrotaan lehden historia-sivulla. Mongolia-
 // linjaus: ei nykypolitiikkaa. Teksti-kenttä on ennallaan.
+//
+// KATHMANDU (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille
+// tehtiin alusta asti oma lehti (kulttuuri-kategoriat.js,
+// maakartat.js, nahtavyysjutut.js). Vanha intro oli kahden lauseen
+// mittainen ja kertoi vain Himalajan kahdeksantuhatsista; uusi on
+// lehden etusivun leipäteksti. Jokainen väite tulee saman erän
+// lehtiteksteistä, jotka on tarkistettu en-Wikipedian
+// raakateksteistä 21.8.2026 — uusia lähdehakuja ei tarvittu.
+// Sisältölinjaus on sama kuin lehdessä: ei nykypolitiikkaa,
+// vuoden 2015 maanjäristys rakennusperinnön kautta. Teksti-kenttä
+// on ennallaan.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -2359,10 +2370,29 @@ export const ASIA_ARTIKKELIT = {
       + 'rakennettavaan Nusantaraan.',
   },
   Kathmandu: {
-    intro: 'Kathmandu on Nepalin pääkaupunki laaksossa Himalajan '
-      + 'juurella. Maailman neljätoista yli kahdeksankilometristä '
-      + 'huippua ovat kaikki samassa vuoristossa, ja osa niistä näkyy '
-      + 'laaksosta selkeällä säällä.',
+    intro: 'Kathmandu on Nepalin pääkaupunki ja maan suurin kaupunki. '
+      + 'Se on laakson luoteisosassa Bagmati-joen pohjoispuolella '
+      + 'noin 1 400 metrin korkeudessa, ja laaksoon on aina kuljettu '
+      + 'ympäröivien vuorten solien kautta. Kaupunki on saanut nimensä '
+      + '**Kasthamandapista**, Durbar-aukiolla seisovasta puisesta '
+      + 'suojarakennuksesta.'
+      + '\n\n'
+      + 'Laakso oli vuosisatoja Intian ja Tiibetin välisen kaupan '
+      + 'välietappi, ja kauppa teki laakson alkuperäisasukkaista '
+      + 'newareista kysyttyjä taiteilijoita ja rakentajia. '
+      + 'Malla-kauden lopulla laaksossa oli neljä kilpailevaa '
+      + 'kaupunkivaltiota, kunnes gorkhalaiset valloittivat sen 1768 '
+      + 'ja tekivät Kathmandusta yhdistyneen Nepalin pääkaupungin. '
+      + 'Vuodesta 1846 maata hallitsivat Rana-pääministerit, jotka '
+      + 'pitivät sen tarkoituksella suljettuna ulkomaisilta '
+      + 'vaikutteilta.'
+      + '\n\n'
+      + 'Nykyinen kaupunki on Nepalin talouden keskus ja '
+      + '**Himalajan retkikuntien lähtöpiste**. Laakson seitsemän '
+      + 'maailmanperintökohdetta ovat kolme Durbar-aukiota, kaksi '
+      + 'hindutemppeliä ja kaksi buddhalaista stupaa. Vuoden 2015 '
+      + 'maanjäristys vaurioitti niistä monia, ja niitä on sen jälkeen '
+      + 'rakennettu uudelleen vanhoin menetelmin.',
     teksti: 'Kathmandun laakso on noin 1 400 metrin korkeudessa, ja '
       + 'sitä ympäröivät vuoret joka suunnasta. Laakso oli aikoinaan '
       + 'järven pohja, ja siksi maaperä on hedelmällistä. Laaksossa '

@@ -7167,6 +7167,81 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Zaisanin muistomerkki', lat: 47.88417, lon: 106.91583 },
     ],
   },
+  /*
+   * KATHMANDUN KOHDEKARTTA (21.8.2026). Rajaus on 8,8 × 7,2 km ja
+   * kattaa laakson ytimen Swayambhunathin kukkulalta Boudhanathille ja
+   * Bagmatin yli Pataniin. Kohteet on numeroitu pohjoisesta etelään
+   * kuten Medinassa, Kiotossa ja Samarkandissa. Rajauksen leveyden
+   * perustelu ja se, miksi reunat levenivät ensimmäisen piirroksen
+   * jälkeen, ovat tools/piirra-kaupunkikartta.mjs:n kathmandu-lohkossa.
+   *
+   * KOORDINAATIT OVAT KOHTEIDEN OMISTA en-Wikipedian infobokseista
+   * (haettu 21.8.2026) yhtä lukuun ottamatta. Durbar-aukion piste on
+   * Kathmandu Durbar Square -artikkelin {{coord}} 27,70415 / 85,30647,
+   * ja se toimii samalla kartan keskipisteenä, josta alla olevat
+   * etäisyydet on laskettu.
+   *
+   * PASHUPATINATHIN PISTE ON OVERPASSISTA, JA ERO ON MITATTU.
+   * en-Wikipedian Pashupatinath Temple -artikkelin {{coord}} on
+   * 27°42′35″N 85°20′55″E eli 27,70972 / 85,34861, ja se osuu tällä
+   * kartalla keskelle piirrettyä Bagmatia (tools/tarkista-
+   * karttapisteet.mjs: 62 % vettä). Temppeli on joen länsirannalla,
+   * joten piste on väärällä puolella rantaviivaa. OSM:n
+   * temppelipolygonin (way 125634570, name "Pashupatinath")
+   * keskipiste on 27,7106957 / 85,3480682 — 120 metriä
+   * luoteeseen ja kuivalla maalla. Tokion kansallismuseon,
+   * Persepoliksen ja Xi'anin Steelametsän ennakkotapaus: piste
+   * haetaan Overpassista, kun artikkelin oma koordinaatti ei kelpaa.
+   *
+   * RANI POKHARIN PISTE ON VEDESSÄ, JA SE ON OIKEIN. Tarkistin
+   * merkitsee sen (63 % vettä), mutta kohde on tekolampi ja piste on
+   * sen keskellä oleva temppelisaareke — sama tapaus kuin Marseillen
+   * satama-allas ja Dubain abra-laiturit.
+   *
+   * BOUDHANATHIN ETÄISYYS ON KIRJOITETTU AUKI, koska Wikipedia on
+   * itsensä kanssa eri mieltä. Boudha Stupa -artikkelin leipäteksti
+   * sanoo "about 11 km from the centre", mutta saman artikkelin
+   * infoboksin koordinaatti 27°43′17″N 85°21′43″E on Durbar-aukiolta
+   * 5,8 kilometriä koilliseen. Kartta seuraa koordinaattia, ja lehden
+   * teksteissä lukee "koillisessa" ilman kilometrilukua (v925, v932 ja
+   * v937: koordinaatti voittaa leipätekstin etäisyysarvion).
+   *
+   * KASTHAMANDAP JA HANUMAN DHOKA EIVÄT OLE OMINA PISTEINÄÄN, vaikka
+   * molemmat ovat lehden aiheita. Ne ovat Durbar-aukion pisteestä 70 ja
+   * 100 metrin päässä eli reilusti alle prosentin ruudun leveydestä, ja
+   * numeroympyrät olisivat käytännössä sisäkkäin (Petran, Mekan ja
+   * Singaporen oppi). Molemmat kerrotaan Durbar-aukion jutussa, jonka
+   * sisällä ne fyysisesti ovat.
+   *
+   * BHAKTAPUR JA CHANGU NARAYAN JÄIVÄT POIS, ks. perustelu
+   * tools/piirra-kaupunkikartta.mjs:n kathmandu-lohkossa. Kartalla on
+   * siis laakson seitsemästä maailmanperintökohteesta viisi.
+   *
+   * KAINALOA EI OLE: kaikki kohteet mahtuvat pääruutuun.
+   */
+  kathmandu: {
+    polku: 'assets/kartat/kathmandu-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 27.7315, etela: 27.667, lansi: 85.2835, ita: 85.3725 },
+    esittely: 'Kartan alue on Kathmandun laakson ydin. Keskellä on '
+      + 'vanha kaupunki Durbar-aukioineen ja sen pohjoispuolella Rani '
+      + 'Pokharin nelikulmainen allas. Lännessä kohoaa Swayambhunathin '
+      + 'kukkula, idässä on Bagmatin varrella Pashupatinath ja '
+      + 'koillisessa Boudhanath. Etelässä joen toisella puolella on '
+      + 'Patanin Durbar-aukio, ja sen ja keskustan välissä kiertää '
+      + 'kehätie. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Boudhanath', lat: 27.72139, lon: 85.36194 },
+      { nimi: 'Swayambhunath', lat: 27.715, lon: 85.29 },
+      { nimi: 'Unelmien puutarha', lat: 27.71417, lon: 85.31472 },
+      { nimi: 'Pashupatinath', lat: 27.7106957, lon: 85.3480682 },
+      { nimi: 'Rani Pokhari', lat: 27.707847, lon: 85.315447 },
+      { nimi: 'Kathmandun Durbar-aukio', lat: 27.70415, lon: 85.30647 },
+      { nimi: 'Dharahara', lat: 27.7007, lon: 85.3119 },
+      { nimi: 'Patanin Durbar-aukio', lat: 27.6734, lon: 85.325 },
+    ],
+  },
 };
 
 /*

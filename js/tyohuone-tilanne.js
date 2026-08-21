@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v970 — KATHMANDU: uusi lehti (kartta 8 kohteella Swayambhunathista Boudhanathiin; 26 kuvaa; 2015 jaristys kerrotaan jalleenrakennuksen kautta). HUOM: saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: kartta, Matkaopas, Historian tehtava',
   'v969 — ULAN BATOR: uusi lehti (kartta 8 kohteella Gandanista Zaisaniin; 27 kuvaa mm. Jugderin 1913 Urga-panoraama). HUOM: saarivi puuttuu viela (Open-Meteon kiintio), oppaan saajakso nojaa Wikipedian saaruutuun sen aaneen sanoen. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v968 — HANOI: uusi lehti (kartta 8 kohteella Hoan Kiemin ymparilla, Long Bienin silta mukana; 26 kuvaa mm. vuoden 1873 kartta ja valtauksen kaiverrus). HUOM: saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: kartta, Matkaopas, Historian tehtava',
   'v967 — KAINALOKUVAT: teemasivujen nostojen ja gallerioiden kuvat ovat nyt oikeassa kainalossa (42 % palstasta, pystykuvat 30 % + korkeuskatto) ja leipateksti juoksee kuvan vierella; kapealla nakymalla kuvat taysleveina kuten ennen. Tarkista: pari teemasivua levealla ja kannykalla (esim. Ateenan Arki ja tavat)',
@@ -336,6 +337,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'kathmandu', nimi: 'Kathmandu', versio: 'v970' },
     { id: 'ulanbator', nimi: 'Ulan Bator', versio: 'v969' },
     { id: 'hanoi', nimi: 'Hanoi', versio: 'v968' },
     { id: 'xian', nimi: 'Xi’an', versio: 'v966' },
@@ -356,6 +358,6 @@ export const TUOREET = {
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
   ],
   tyossa: [
-    { id: 'kathmandu', nimi: 'Kathmandu' },
+    { id: 'astana', nimi: 'Astana' },
   ],
 };
