@@ -44,32 +44,49 @@ export function naytaMaaTunnusluvut(ui, iso) {
     vaaka: '<path d="M7.3 1.8v11.4M3.6 13.2h7.4M2.4 4.2h9.8"/><path d="M2.4 4.2 1 7.9a2.2 2.2 0 0 0 2.8 0zM12.2 4.2l-1.4 3.7a2.2 2.2 0 0 0 2.8 0z"/>',
     raha: '<circle cx="7.3" cy="7.5" r="5.9"/><path d="M7.3 4.3v6.4M5.5 6.2c0-.9.8-1.6 1.8-1.6s1.8.65 1.8 1.5c0 1.9-3.6 1.05-3.6 2.95 0 .85.8 1.5 1.8 1.5s1.8-.7 1.8-1.6"/>',
   };
-  // Kaksi riviä (omistajan toive): väkiluku ja pinta-ala ylhäällä,
-  // demokratia ja tulot alempana sijoituksineen.
+  /*
+   * Rivijako säilyy DOM:issa (lukija.js ohittaa nämä nimellä), mutta
+   * ladonnasta vastaa nyt laatikon ruudukko: .maa-tunnusrivi on
+   * display: contents, joten kaikki neljä lukua asettuvat samaan
+   * sarakejakoon — kapealla allekkain, leveällä kahteen palstaan.
+   * Järjestys on entinen: väkiluku, pinta-ala, demokratia, tulot.
+   */
   const rivi1 = html('div', 'maa-tunnusrivi');
   const rivi2 = html('div', 'maa-tunnusrivi');
-  // Tulot heti V-Demin alla ilman väliä (omistajan toive) — väli on
-  // vasta tulojen jälkeen ennen tervehdyksiä.
   const rivi3 = html('div', 'maa-tunnusrivi tiivis');
   ui.arrivalMaaTunnusluvut.appendChild(rivi1);
   ui.arrivalMaaTunnusluvut.appendChild(rivi2);
   ui.arrivalMaaTunnusluvut.appendChild(rivi3);
-  const kohta = (emo, ikoni, sisalto, seloste) => {
+  /*
+   * ALMANAKAN RIVI (omistajan toive 21.8.2026: "voisivat olla vähän
+   * isommalla ja ne voisi muotoilla vielä enemmän pelin tyyliin").
+   * Rivi ladotaan kuin vanhan vuosikirjan taulukossa: ikoni, arvo,
+   * pisteviivajohdin ja sen päässä sijoitusluku. Johdin on oma
+   * elementtinsä, koska se venyy täyttämään arvon ja sijoituksen
+   * välin — CSS ei osaa piirtää sitä pelkän tekstin varaan.
+   */
+  const kohta = (emo, ikoni, sisalto, sijaArvo, seloste) => {
     const osa = html('span', 'maa-tunnus');
     osa.title = seloste;
     const kuvake = html('span', 'maa-tunnus-ikoni');
     kuvake.innerHTML = `<svg viewBox="0 0 15 15" aria-hidden="true">${IKONIT[ikoni]}</svg>`;
     osa.appendChild(kuvake);
+    const arvo = html('span', 'maa-tunnus-arvo');
     for (const pala of [].concat(sisalto)) {
-      osa.appendChild(typeof pala === 'string' ? document.createTextNode(pala) : pala);
+      arvo.appendChild(typeof pala === 'string' ? document.createTextNode(pala) : pala);
     }
+    osa.appendChild(arvo);
+    osa.appendChild(html('span', 'maa-tunnus-johdin'));
+    // Suluissa sijoitus maailmassa (omistajan toive).
+    if (sijaArvo) osa.appendChild(html('span', 'maa-sija', `(${sijaArvo})`));
     emo.appendChild(osa);
     return osa;
   };
   // Todella pieni vakiomittainen palkki samalla rivillä (omistajan
   // tarkennus): täyttyvä osa on toteutuva osuus maksimista, ja väri
   // kertoo tason — punainen jos vähän, keltainen keskivaiheilla,
-  // vihreä jos hyvällä mallilla.
+  // vihreä jos hyvällä mallilla. Palkki ladotaan arvon perään ennen
+  // johdinta, jotta sijoitusluvut jäävät omaan suoraan sarakkeeseensa.
   const palkki = (osa, osuus) => {
     const pohja = html('span', 'maa-palkki');
     const tayte = html('span', 'maa-palkki-tayte');
@@ -77,13 +94,11 @@ export function naytaMaaTunnusluvut(ui, iso) {
     tayte.style.width = `${Math.round(rajattu * 100)}%`;
     tayte.style.background = osuus < 1 / 3 ? '#bf3d2d' : osuus < 2 / 3 ? '#d9a41f' : '#3e8f4a';
     pohja.appendChild(tayte);
-    osa.appendChild(pohja);
+    osa.insertBefore(pohja, osa.querySelector('.maa-tunnus-johdin'));
   };
-  // Suluissa sijoitus maailmassa (omistajan toive).
-  const sija = (arvo) => (arvo ? html('span', 'maa-sija', ` (${arvo})`) : '');
-  kohta(rivi1, 'vaki', [tiedot.vakiluku, sija(tiedot.vakilukuSija)],
+  kohta(rivi1, 'vaki', tiedot.vakiluku, tiedot.vakilukuSija,
     'Väkiluku, suluissa sijoitus maailmassa');
-  kohta(rivi1, 'ala', [tiedot.pintaAla, sija(tiedot.pintaAlaSija)],
+  kohta(rivi1, 'ala', tiedot.pintaAla, tiedot.pintaAlaSija,
     'Pinta-ala, suluissa sijoitus maailmassa');
   if (tiedot.demokratia) {
     // Klikkaus avaa ensin pienen infoikkunan, joka selittää miksi
@@ -92,14 +107,14 @@ export function naytaMaaTunnusluvut(ui, iso) {
     const nappi = html('button', 'maa-demokratia', `${tiedot.demokratia.arvo} · V-Dem`);
     nappi.type = 'button';
     nappi.addEventListener('click', () => naytaVdemInfo(ui, tiedot.demokratia));
-    const osa = kohta(rivi2, 'vaaka', [nappi, sija(tiedot.demokratia.sija)],
+    const osa = kohta(rivi2, 'vaaka', nappi, tiedot.demokratia.sija,
       'Demokratiaindeksi (V-Dem, 0–1), suluissa sijoitus maailmassa — avaa selityksen');
     // Indeksin maksimi on 1.
     const arvo = parseFloat(tiedot.demokratia.arvo.replace(',', '.'));
     if (Number.isFinite(arvo)) palkki(osa, arvo);
   }
   if (tiedot.keskitulo) {
-    const osa = kohta(rivi3, 'raha', [tiedot.keskitulo.arvo, sija(tiedot.keskitulo.sija)],
+    const osa = kohta(rivi3, 'raha', tiedot.keskitulo.arvo, tiedot.keskitulo.sija,
       'Bruttokansantulo asukasta kohden vuodessa, suluissa sijoitus maailmassa');
     // Maksimina maailman kärkitulo (noin 100 000 $/v).
     const tulo = parseInt(tiedot.keskitulo.arvo.replace(/[^0-9]/g, ''), 10);
@@ -108,7 +123,20 @@ export function naytaMaaTunnusluvut(ui, iso) {
   for (const t of tiedot.tervehdykset ?? []) {
     const osa = html('span', 'tervehdys');
     osa.title = `"Hyvää päivää" — ${t.kieli}${t.osuus ? `, noin ${t.osuus} puhuu` : ''}`;
-    osa.appendChild(document.createTextNode(`${t.teksti} `));
+    /*
+     * Tervehdys omaan kääreeseensä, jotta ladonta menee oikein
+     * päin. Oikealta vasemmalle kirjoitettu tervehdys (arabian
+     * "السلام عليكم") sekoitti rivin järjestyksen, kun se oli paljaana
+     * tekstisolmuna vasemmalta oikealle latovan rivin sisällä: lippu
+     * ja puhujaosuus saattoivat siirtyä tervehdyksen väärälle
+     * puolelle. dir="auto" päättelee suunnan tekstistä ja
+     * unicode-bidi: isolate (CSS) sulkee sen omaksi saarekkeekseen,
+     * jolloin lippu on aina tervehdyksen jäljessä kielestä
+     * riippumatta.
+     */
+    const teksti = html('span', 'tervehdys-teksti', t.teksti);
+    teksti.dir = 'auto';
+    osa.appendChild(teksti);
     // Lippu voi puuttua tarkoituksella. Vähemmistökielen merkitseminen
     // naapurivaltion lipulla liittäisi puhujat toiseen maahan, vaikka
     // he ovat oman maansa kansalaisia — ja niissä maissa, joihin se
@@ -118,6 +146,7 @@ export function naytaMaaTunnusluvut(ui, iso) {
     if (t.lippu) {
       const lippu = document.createElement('img');
       lippu.alt = t.kieli;
+      lippu.className = 'tervehdys-lippu';
       // Ei loading="lazy": liput ovat repossa ja pikkuruisia, ja laiska
       // lataus jätti ne dialogin sisällä toisinaan kokonaan lataamatta.
       // Poisto vasta kun kumpikin osoite on pettänyt — oma virhekuuntelija
@@ -126,7 +155,7 @@ export function naytaMaaTunnusluvut(ui, iso) {
       osa.appendChild(lippu);
     }
     // Karkea puhujaosuus kielen perässä (omistajan kokeilu).
-    if (t.osuus) osa.appendChild(html('span', 'maa-sija', ` ${t.osuus}`));
+    if (t.osuus) osa.appendChild(html('span', 'maa-sija tervehdys-osuus', t.osuus));
     ui.arrivalMaaTervehdykset.appendChild(osa);
   }
 }

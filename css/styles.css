@@ -2555,67 +2555,160 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 }
 
 /*
- * Maan tunnusluvut kartan alla (pilottimaat): pienet symbolirivit
- * samalla vähäeleisellä otteella kuin karttaselitteessä, ja niiden
- * alla tervehdykset kielilippuineen.
+ * PERUSTIETOLAATIKKO kartan alla (pilottimaat).
+ *
+ * Omistajan palaute 21.8.2026 Omanin maalehden karttasivulta:
+ * "voisivat olla vähän isommalla ja ne voisi muotoilla vielä enemmän
+ * pelin tyyliin kaikilla sivuilla, joissa niitä näkyy". Rivit olivat
+ * 0,74 rem:n symboliriviä, joita kännykällä sai siristellä, ja
+ * mittapalkit näyttivät pyöreine päineen modernilta liukusäätimeltä.
+ *
+ * Nyt lohko on vanhan almanakan faktalaatikko: kaksoisviiva ylle,
+ * harvennettu nimiö, arvot kirjoituskoneella selvästi isompina,
+ * pisteviivajohdin arvosta sijoitukseen ja sijoitusluvut omassa
+ * sarakkeessaan oikeassa reunassa. Mitat ovat em-yksikköinä, joten
+ * ikonit, palkit ja liput kasvavat kirjasimen mukana.
+ *
+ * Sama lohko piirtyy maalehden karttasivulle (js/lehti.js) ja
+ * kaupunkilehden maaosastoon (js/ui.js openArrival) samoihin
+ * #arrival-maa-elementteihin, joten tyyli kattaa kummankin.
  */
 .maa-tunnusluvut {
-  margin: 0.05rem 0 0.15rem;
+  margin: 0.45rem 0 0;
+  padding: 0.45rem 0.55rem 0.4rem;
   font-family: var(--font-type);
-  font-size: 0.74rem;
-  color: #5a4a33;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #4a3c28;
+  background: rgba(120, 96, 60, 0.05);
+  border-top: 3px double rgba(70, 51, 31, 0.55);
+  /*
+   * Kapealla yksi sarake, leveällä kaksi. auto-fit katsoo LOHKON
+   * leveyttä eikä ruudun: sama sääntö osuu oikein niin puhelimen
+   * täysleveään maalehteen kuin kaupunkilehden kapeaan palstaan.
+   */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+  gap: 0.1rem 1.5rem;
 }
 
-.maa-tunnusrivi {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem 0.8rem;
+/* Almanakan nimiöt harvennettuna versaalina — laatikko kertoo itse,
+ * mitä lukuja ja mitä kieliä siinä on. */
+.maa-tunnusluvut::before,
+.maa-tervehdykset::before {
+  grid-column: 1 / -1;
+  flex: 1 0 100%;
+  margin-bottom: 0.15rem;
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.55);
 }
 
-.maa-tunnusrivi + .maa-tunnusrivi { margin-top: 0.2rem; }
+.maa-tunnusluvut::before { content: "Perustiedot"; }
+.maa-tervehdykset::before { content: "Hyvää päivää"; }
 
-/* Tulorivi kiinni V-Dem-riviin (omistajan toive). */
-.maa-tunnusrivi.tiivis { margin-top: 0; }
+/*
+ * Rivit sulautuvat laatikon ruudukkoon (display: contents), jotta
+ * kaikki neljä tunnuslukua asettuvat samaan sarakejakoon. Ennen ne
+ * olivat kolme erillistä riviä, joissa sijoitusluvut sahasivat eri
+ * kohdissa.
+ */
+.maa-tunnusrivi { display: contents; }
 
-/* Sijoitus maailmassa ja puhujaosuus: vaimeampi lisätieto. */
+/* Sijoitus maailmassa ja puhujaosuus: vaimeampi lisätieto, mutta
+ * sekin luettavan kokoista. */
 .maa-sija {
-  color: rgba(90, 74, 51, 0.7);
-  font-size: 0.68rem;
+  color: rgba(70, 51, 31, 0.62);
+  font-size: 0.8em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .maa-tunnus {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.45em;
+  min-width: 0;
+  padding: 0.1rem 0;
 }
 
-/* Todella pieni vakiomittainen palkki tekstin rivillä: täyttyvä osa on
- * toteutuva osuus maksimista, väri kertoo tason (punainen → keltainen →
- * vihreä) — omistajan tarkennus. */
+/*
+ * Arvosarakkeelle vähimmäisleveys, jotta johtimet ja mittapalkit
+ * alkavat samalta viivalta kuin taulukossa. min() jättää kapeimmalle
+ * palstalle varan kutistua, ettei rivi valu reunan yli.
+ */
+.maa-tunnus-arvo {
+  min-width: min(7.6em, 45%);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/*
+ * Pisteviivajohdin arvosta sijoitukseen — vanhan hakuteoksen keino.
+ * Pisteet ovat taustakuvaa, joten johdin venyy vapaasti rivin
+ * mitassa ja pistejako pysyy samana.
+ */
+.maa-tunnus-johdin {
+  flex: 1 1 1.2rem;
+  min-width: 0.6rem;
+  height: 0.5em;
+  margin-top: 0.4em;
+  background-image: radial-gradient(circle at center,
+    rgba(70, 51, 31, 0.5) 1.1px, transparent 1.4px);
+  background-size: 0.45em 0.5em;
+  background-repeat: repeat-x;
+}
+
+/* Mittapalkki musteella painettuna: suorat kulmat, hiusviivakehys,
+ * neljännesasteikko pohjassa ja vinorasteri täytteessä. Väri kertoo
+ * tason kuten ennenkin (punainen → keltainen → vihreä), mutta muoto
+ * ei enää muistuta liukusäädintä (omistajan palaute 21.8.2026). */
 .maa-palkki {
-  display: inline-block;
-  width: 30px;
-  height: 5px;
-  border-radius: 2.5px;
-  background: rgba(90, 74, 51, 0.18);
+  flex: 0 0 auto;
+  display: block;
+  width: 3.6em;
+  height: 0.66em;
+  border: 1px solid rgba(70, 51, 31, 0.6);
+  border-radius: 0;
+  background-color: rgba(255, 252, 244, 0.5);
+  background-image: repeating-linear-gradient(to right,
+    rgba(70, 51, 31, 0.16) 0 1px, transparent 1px 25%);
   overflow: hidden;
-  vertical-align: middle;
-  margin-left: 0.25rem;
+  margin: 0;
 }
 
 .maa-palkki-tayte {
+  position: relative;
   display: block;
   height: 100%;
-  border-radius: 2.5px;
+  border-radius: 0;
+}
+
+.maa-palkki-tayte::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(45deg,
+    rgba(252, 247, 234, 0.42) 0 0.5px, transparent 0.5px 2.5px);
+}
+
+.maa-tunnus-ikoni {
+  flex: 0 0 auto;
+  display: inline-flex;
 }
 
 .maa-tunnus-ikoni svg {
-  width: 13px;
-  height: 13px;
+  width: 1.2em;
+  height: 1.2em;
   display: block;
   fill: none;
-  stroke: rgba(90, 74, 51, 0.9);
-  stroke-width: 1.4;
+  stroke: rgba(70, 51, 31, 0.85);
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -2624,6 +2717,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 .dialog button.maa-demokratia {
   color: inherit;
   text-decoration: underline dotted;
+  text-underline-offset: 0.22em;
   background: none;
   border: 0;
   box-shadow: none;
@@ -2633,6 +2727,8 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
    * näkymättömän tyhjän ylä- ja alapuolelle. */
   min-height: 0;
   font: inherit;
+  font-weight: 600;
+  letter-spacing: inherit;
   cursor: pointer;
 }
 
@@ -2714,30 +2810,57 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   color: #3a2a16;
 }
 
+/*
+ * Tervehdysrivi on saman faktalaatikon alaosasto: sama pohja ja
+ * reunus, hiusviiva erottamassa luvuista ja kaksoisviiva laatikon
+ * pohjaksi. Tervehdykset ladotaan lukukirjasimen kursiivilla, jotta
+ * vieras kieli erottuu numeroiden kirjoituskoneesta.
+ */
 .maa-tervehdykset {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem 0.75rem;
-  /* Väli tulojen jälkeen ennen tervehdyksiä (omistajan toive) ja
-   * hengähdys tervehdysten ja esittelytekstin väliin. */
-  margin: 0.55rem 0 0.8rem;
-  font-size: 0.78rem;
-  color: #5a4a33;
+  align-items: center;
+  gap: 0.3rem 1.35rem;
+  /* Hengähdys tervehdysten ja esittelytekstin väliin. */
+  margin: 0 0 0.85rem;
+  padding: 0.4rem 0.55rem 0.45rem;
+  background: rgba(120, 96, 60, 0.05);
+  border-top: 1px solid rgba(70, 51, 31, 0.22);
+  border-bottom: 3px double rgba(70, 51, 31, 0.55);
+  font-size: 0.95rem;
+  color: #4a3c28;
 }
 
 .tervehdys {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.35em;
+}
+
+/*
+ * Oma kääre tervehdykselle: unicode-bidi eristää oikealta vasemmalle
+ * kirjoitetun tekstin (arabia, heprea) omaksi saarekkeekseen, jolloin
+ * lippu ja puhujaosuus pysyvät sen jäljessä eivätkä liu'u väärälle
+ * puolelle rivin bidi-ladonnassa.
+ */
+.tervehdys-teksti {
+  font-family: var(--font-luku);
   font-style: italic;
+  font-size: 1.1em;
+  line-height: 1.25;
+  unicode-bidi: isolate;
 }
 
 .tervehdys img {
-  height: 0.8rem;
+  height: 1.05em;
   width: auto;
-  border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: 2px;
+  display: block;
+  align-self: center;
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  border-radius: 1px;
 }
+
+.tervehdys-osuus { font-size: 0.78em; }
 
 /* Maan lippu suht pienenä nimen vieressä (omistajan toive). */
 .arrival-lippu {

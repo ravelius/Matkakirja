@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 975, teksti: 'v975: perustiedot almanakan faktalaatikoksi' },
   { v: 974, teksti: 'v974: kansikuvaremontti era 1 — 13 kaupunkia laajoiksi' },
   { v: 973, teksti: 'v973: Astana ja Kanton — uudet kaupunkilehdet' },
   { v: 972, teksti: 'v972: tehtavalaatikko lehden tyyliin' },
