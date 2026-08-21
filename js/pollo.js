@@ -771,6 +771,83 @@ function saneluTuettu() {
   return Boolean(haeNatiiviSanelu() || haePuheTunnistus());
 }
 
+/* ------------------------------------------------------------------ */
+/* Sanelun mikrofonivalinta                                            */
+/* ------------------------------------------------------------------ */
+
+/*
+ * SISÄÄNRAKENNETTU MIKROFONI ENSIN (omistajan tilaus 21.8.2026:
+ * "voiko pöllön sanelun tunnistus käyttää aina pelkästään
+ * sisäänrakennettua mikrofonia ja hylätä bluetooth-mikrofonit").
+ *
+ * MIKSI. Kun laite ottaa Bluetooth-kuulokkeen MIKROFONIN käyttöön,
+ * iOS ja macOS pudottavat kuulokkeen musiikkiprofiilista (A2DP)
+ * puheluprofiiliin (HFP). Samalla TOISTO siirtyy puhelulaatuiseksi
+ * tai laitteen omaan kaiuttimeen — ja juuri se näkyi omistajalle
+ * pöllön puheessa, joka soi kaiuttimesta, vaikka lehden luenta samalla
+ * laitteella kuului kuulokkeista (lehteä luettaessa mikrofonia ei
+ * avata lainkaan). Sisäänrakennettu mikrofoni jättää kuulokkeen
+ * rauhaan.
+ *
+ * RAJA, JOKA ON HYVÄ TIETÄÄ. Selaimen puheentunnistuksesta
+ * (SpeechRecognition / webkitSpeechRecognition) EI voi valita
+ * äänilaitetta — rajapinnassa ei ole sille kenttää, vaan tunnistus
+ * ottaa aina järjestelmän oletussyötteen. Tämä valinta koskee siis
+ * vain niitä virtoja, jotka peli avaa itse getUserMedialla
+ * (uusintayrityksen esiavaus ja vianetsintärivi). iOS-kuoressa sama
+ * asia ratkaistaan äänisession asetuksista, ja siellä se pätee koko
+ * sanelun ajan (ios/Matkakirja/Selain/AaniIstunto.swift).
+ *
+ * HEURISTIIKAN RAJAT. Laitelistan nimet ovat vapaata, kielikohtaista
+ * tekstiä, ja ne näkyvät VASTA kun mikrofonilupa on kertaalleen
+ * annettu — ensimmäisellä kerralla label on tyhjä ja valinta jää
+ * selaimen oletukseksi (seuraavalla kerralla osuu). Siksi: hylätään
+ * tunnetut langattomat, suositaan tunnettuja sisäisiä, ja jos
+ * kumpaakaan ei tunnisteta, ei arvata vaan jätetään oletus voimaan.
+ */
+const MIKKI_LANGATON = /bluetooth|airpod|handsfree|hands[- ]free|headset|kuuloke|beats|wireless|langaton/i;
+const MIKKI_SISAINEN = /built[- ]?in|internal|sisään|sisainen|sisäinen|macbook|imac|iphone|ipad|integrated/i;
+
+/**
+ * Valitsee laitelistalta sisäänrakennetun äänisyötteen.
+ *
+ * Puhdas funktio, jotta heuristiikan voi todistaa ilman selainta
+ * (tests/pollo.test.mjs). Nimettömät laitteet ohitetaan: ilman labelia
+ * ei voi tietää mikä on mikä, ja väärä arvaus olisi pahempi kuin
+ * selaimen oletus. Myös 'default'- ja 'communications'-kahvat
+ * ohitetaan — ne ovat aliaksia järjestelmän valinnalle, joka voi olla
+ * juuri se bluetooth-kuuloke.
+ *
+ * @param {{kind?: string, deviceId?: string, label?: string}[]} laitteet
+ * @returns {object|null} valittu laite tai null (= jätä oletus voimaan)
+ */
+export function valitseSisainenSyote(laitteet) {
+  const syotteet = (Array.isArray(laitteet) ? laitteet : []).filter((l) => l?.kind === 'audioinput'
+    && l.deviceId && l.deviceId !== 'default' && l.deviceId !== 'communications' && l.label);
+  if (!syotteet.length) return null;
+  return syotteet.find((l) => MIKKI_SISAINEN.test(l.label) && !MIKKI_LANGATON.test(l.label))
+    ?? syotteet.find((l) => !MIKKI_LANGATON.test(l.label))
+    ?? null;
+}
+
+/**
+ * Etsii sisäänrakennetun mikrofonin ja palauttaa sille getUserMedia-
+ * rajat. Ilman osumaa palautuu `{ audio: true }` eli selaimen oletus.
+ */
+async function sisainenMikkiRajat() {
+  const oletus = { audio: true };
+  try {
+    const laitteet = await navigator.mediaDevices?.enumerateDevices?.() ?? [];
+    const valinta = valitseSisainenSyote(laitteet);
+    if (!valinta) return oletus;
+    // exact: mieluummin virhe (jolloin kutsuja jatkaa ilman virtaa)
+    // kuin hiljainen paluu bluetooth-mikrofoniin.
+    return { audio: { deviceId: { exact: valinta.deviceId } } };
+  } catch {
+    return oletus;
+  }
+}
+
 class Pollo {
   /**
    * @param {() => object|null} haeUi palauttaa nykyisen UI-olion.
@@ -3259,14 +3336,19 @@ class Pollo {
       }
     };
     if (this.saneluUusittu && navigator.mediaDevices?.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ audio: true }).then((virta) => {
-        if (this.tunnistin !== tunnistin) {
-          for (const raide of virta.getTracks()) raide.stop();
-          return;
-        }
-        this.mikkiKanava = virta;
-        kaynnista();
-      }, () => kaynnista());
+      // Esiavaus sisäänrakennettuun mikrofoniin, ei bluetoothiin
+      // (ks. sisainenMikkiRajat): langaton mikki pudottaisi kuulokkeet
+      // puheluprofiiliin, ja vastauksen luenta soisi kaiuttimesta.
+      sisainenMikkiRajat()
+        .then((rajat) => navigator.mediaDevices.getUserMedia(rajat))
+        .then((virta) => {
+          if (this.tunnistin !== tunnistin) {
+            for (const raide of virta.getTracks()) raide.stop();
+            return;
+          }
+          this.mikkiKanava = virta;
+          kaynnista();
+        }, () => kaynnista());
       return;
     }
     kaynnista();
@@ -3298,7 +3380,9 @@ class Pollo {
       osat.push('laitteita ?');
     }
     try {
-      const virta = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const rajat = await sisainenMikkiRajat();
+      osat.push(rajat.audio === true ? 'mikki oletus' : 'mikki sisäinen');
+      const virta = await navigator.mediaDevices.getUserMedia(rajat);
       for (const raide of virta.getTracks()) raide.stop();
       osat.push('virta ok');
     } catch (virhe) {
