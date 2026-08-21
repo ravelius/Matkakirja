@@ -2591,6 +2591,82 @@ const KAUPUNGIT = {
     palvelutiet: true,
     meri: true,
   },
+  jakarta: {
+    /*
+     * VANHA BATAVIA SATAMASTA GLODOKIIN (21.8.2026). Ruutu on
+     * 2,6 × 2,8 km, ja siihen mahtuvat lehden seitsemän Kota Tuan
+     * kohdetta: pohjoisessa Sunda Kelapan satama ja VOC:n
+     * varastoista tehty merenkulkumuseo, keskellä Kali Besarin
+     * nostosilta ja Toko Merah, sen eteläpuolella Fatahillah-aukio
+     * ja Jakarta Kotan asema ja etelässä Glodokin Kim Tek Ie
+     * -temppeli.
+     *
+     * RUUTU ON PAKETIN PIENIN, JA SE ON MITATTU PÄÄTÖS. Kohteet
+     * ovat pohjois–eteläsuuntainen nauha, jonka pituus on
+     * en-Wikipedian koordinaateista laskien 2,27 kilometriä
+     * (Sunda Kelapa–Kim Tek Ie) ja leveys vain 0,70 kilometriä.
+     * Työkalun oma ohje suosittaa 5–8 kilometrin alaa, mutta se
+     * olisi tässä väärä: Kota Tua on en-Wikipedian mukaan
+     * 1,3 neliökilometrin kokoinen alue, ja viiden kilometrin ruutu
+     * olisi tehnyt siitä pienen läiskän keskelle Jakartan
+     * nykykaupunkia. Nyt vanha muurikaupunki täyttää ruudun, ja
+     * kahden lähimmän kohteen väli (Toko Merah–Fatahillah-aukio,
+     * 262 m) on 10 prosenttia ruudun leveydestä eli sama
+     * erottuvuus kuin Xi'anin Kello- ja Rumpitornilla.
+     *
+     * LÄHES NELIÖRAJAUS ON HARKITTU (Varanasin ja Kantonin tapa).
+     * Pelkkä nauha olisi piirtynyt 1600 × 5000 pikselin kaistaleeksi.
+     * Levennys itään ja länteen toi ruutuun Kali Besarin koko
+     * kanavaosuuden, Ciliwungin suun ja Glodokin kortteliverkon.
+     *
+     * ETELÄREUNAA LASKETTIIN KERRAN. Ensimmäisessä ruudussa
+     * (etela −6,1456) Kim Tek Ie osui 92,7 prosentin korkeudelle ja
+     * sen numeroympyrä hipoi alareunaa; nyt piste on 87 prosentissa.
+     * Ruutu ei ole enää täsmälleen neliö vaan 1600 × 1690 pikseliä.
+     *
+     * WAYANG-MUSEO EI OLE OMANA PISTEENÄÄN, vaikka se on lehden
+     * aihe. Se on en-Wikipedian koordinaatista (−6,1347 /
+     * 106,8124) laskien 103 metrin päässä Fatahillah-aukion
+     * pisteestä ja 80 metrin päässä vanhasta kaupungintalosta:
+     * kolme numeroympyrää menisi päällekkäin (Petran, Mekan,
+     * Singaporen ja Yangonin oppi). Aukion piste kantaa koko
+     * aukion, ja museo kerrotaan sen omassa jutussa ja lehden
+     * historiasivun nostossa.
+     *
+     * KAINALOSSA MERDEKA-AUKION KOLMIKKO: kansallismonumentti
+     * Monas, Istiqlal-moskeija ja Jakartan katedraali. Ne ovat
+     * omista en-Wikipedia-koordinaateistaan laskien 4,4–4,8
+     * kilometriä kaakkoon Kota Tuasta eli täsmälleen samassa
+     * mitassa kuin Xi'anin kainalo (4,5 km) ja lähempänä kuin
+     * Adenin Tawahi (6 km). Kainalo on oikeassa alakulmassa, koska
+     * suunta on kaakko.
+     *
+     * PALVELUTIET PÄÄLLÄ samasta syystä kuin Pekingissä ja
+     * Medinassa: Glodokin kujat (Gang Gloria, Petak Sembilan) ja
+     * sataman laiturialueet ovat OSM:ssä huoltoteitä, ja ilman
+     * lippua kartan tihein kortteli jäisi tyhjäksi paperiksi.
+     * Jalkakäytäviä EI pyydetty, koska Kota Tuan katuverkko on jo
+     * ilman niitä tiheä (2 629 elementtiä 2,6 × 2,8 kilometrin
+     * ruudussa eli tiheämpi kuin Mandalayn 8 024 elementtiä
+     * 8,9 × 8,9 kilometrissä); sama ratkaisu kuin Mandalayssa.
+     *
+     * OVERPASSIN PÄÄPALVELIMET EIVÄT VASTANNEET tämän työn aikana
+     * (overpass-api.de ja overpass.kumi.systems antoivat vuorotellen
+     * 500:n ja 502:n), ja kartta piirrettiin peilipalvelimella
+     * Mandalayn tapaan:
+     *   NODE_USE_ENV_PROXY=1 \
+     *   OVERPASS_PALVELIMET=https://maps.mail.ru/osm/tools/overpass/api/interpreter \
+     *     node tools/piirra-kaupunkikartta.mjs jakarta
+     */
+    rajat: { pohjoinen: -6.1222, etela: -6.147, lansi: 106.7997, ita: 106.8232 },
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: -6.1665, etela: -6.1785, lansi: 106.824, ita: 106.836 },
+        x: 72, y: 62, leveys: 25, suunta: '4,8 km kaakkoon',
+      },
+    ],
+  },
 };
 
 /*

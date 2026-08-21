@@ -211,8 +211,8 @@ export const LAHTEET = [
         lisenssi: 'Public domain sekä CC BY-SA 2.5 ja 3.0',
       },
       {
-        nimi: 'Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset ja '
-          + 'sovelluskuvakkeet',
+        nimi: 'Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, '
+          + 'lehtien minitehtävien aikakausjulisteet ja sovelluskuvakkeet',
         tekija: 'Pelin omaa aineistoa (Sami Reivinen)',
         lisenssi: 'Copyright © 2026 Sami Reivinen',
       },

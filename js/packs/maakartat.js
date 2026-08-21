@@ -7657,6 +7657,105 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vaunuradan alaterminaali', lat: 22.27204, lon: 114.15487 },
     ],
   },
+  /*
+   * JAKARTAN KOHDEKARTTA (21.8.2026). Rajaus on 2,6 × 2,6 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Mekassa, Singaporessa ja Mandalayssa. Kainalon kolme kohdetta
+   * ovat listan lopussa, ja nekin pohjoisesta etelään (Xi'anin ja
+   * Varanasin tapa).
+   *
+   * RUUTU ON PAKETIN PIENIN, JA SE ON MITATTU PÄÄTÖS. Lehden
+   * seitsemän Kota Tuan kohdetta muodostavat kapean nauhan: pisin
+   * pariväli on Sunda Kelapa–Kim Tek Ie 2,27 kilometriä ja koko
+   * ryppään itä–länsileveys vain 0,70 kilometriä (omat haversine-
+   * laskelmat kohteiden omista en-Wikipedia-koordinaateista; sama
+   * luku kuin docs/aasia-tyoaineisto/tarkistus-jakarta.md antaa).
+   * Kota Tua on en-Wikipedian mukaan 1,3 neliökilometrin alue, joten
+   * työkalun tavallinen 5–8 kilometrin ruutu olisi tehnyt siitä
+   * pienen läiskän keskelle nykykaupunkia. Neliörajaus on Varanasin
+   * ja Kantonin tapa: pelkkä nauha olisi piirtynyt kapeaksi
+   * pystykaistaleeksi.
+   *
+   * YKSI KOORDINAATTI ON OVERPASSISTA, JA ERO ON MITATTU. Yhdeksän
+   * kymmenestä pisteestä on kohteen oman en-Wikipedia-artikkelin
+   * infoboksista. Sunda Kelapan sataman artikkelikoordinaatti
+   * (−6,123871 / 106,80861) osuu keskelle satama-allasta, ja
+   * tools/tarkista-karttapisteet.mjs luki siitä "vettä 100 %".
+   * Piste siirrettiin laiturille: OSM:n Jalan Pelabuhan Sunda Kelapa
+   * (way 528084933) kulkee pinisien kiinnityspaikkojen vieressä
+   * −6,125014 / 106,809755, eli 190 metriä artikkelin pisteestä
+   * kaakkoon ja saman satama-alueen sisällä. Tokion
+   * kansallismuseon, Persepoliksen ja Xi'anin Steelametsän
+   * ennakkotapaus: piste haetaan Overpassista, kun artikkelin oma
+   * koordinaatti ei kelpaa. Sataman etäisyydet muihin kohteisiin on
+   * silti laskettu artikkelin koordinaatista.
+   *
+   * FAKTAPOHJAN KOLME ILMANSUUNTAA OLIVAT VÄÄRIN, ja tarkistus
+   * (tarkistus-jakarta.md, osio 1) korjasi ne: Museum Bahari ja
+   * Sunda Kelapa ovat Fatahillah-aukiosta POHJOISESSA/LUOTEESSA
+   * (suuntimat 327° ja 337°) eivätkä lounaassa, ja Kim Tek Ie on
+   * ETELÄSSÄ (183°) eikä luoteessa. Kartan numerointi seuraa
+   * korjattuja suuntia: satama on ylhäällä ja Glodok alhaalla.
+   *
+   * WAYANG-MUSEO EI OLE OMANA PISTEENÄÄN, vaikka se on lehden
+   * historiasivun oma nostonsa. Sen en-Wikipedia-koordinaatti
+   * (−6,1347 / 106,8124) on 103 metrin päässä Fatahillah-aukion
+   * pisteestä ja 80 metrin päässä vanhasta kaupungintalosta eli
+   * kolmen prosentin päässä ruudun leveydestä — kolme numeroympyrää
+   * olisi mennyt lähes sisäkkäin (Petran, Mekan, Singaporen ja
+   * Mandalayn oppi). Museo kerrotaan aukion omassa jutussa.
+   * Samasta syystä kartalla ei ole erikseen Jakartan historiamuseota:
+   * se ON aukion eteläsivun rakennus.
+   *
+   * KAINALOSSA MERDEKA-AUKION KOLMIKKO. Kansallismonumentti Monas,
+   * Istiqlal-moskeija ja Jakartan katedraali ovat kohteiden omista
+   * koordinaateista laskien 4,77, 4,36 ja 4,42 kilometriä
+   * Fatahillah-aukiosta kaakkoon (suuntimat 161°, 154° ja 150°).
+   * Se on täsmälleen sama mitta kuin Xi'anin kainalo (4,5 km) ja
+   * lähempänä kuin Adenin Tawahi (6 km), joten kainalo on oikea
+   * ratkaisu eikä poisjättö. Kainalon suuntariviksi on kirjoitettu
+   * ryppään keskipisteen luku 4,8 km, koska kolme kohdetta ovat
+   * ruudun sisällä eri etäisyyksillä.
+   *
+   * KAINALON KORKEUS 25.11 on piirtäjän oma laskelma
+   * (tools/piirra-kaupunkikartta.mjs), ei käsin kirjoitettu luku.
+   *
+   * TANJUNG PRIOKIN SATAMA EI OLE KARTALLA EIKÄ KAINALOSSA, vaikka
+   * lehti kertoo siitä: se on yhdeksän kilometriä itään vanhasta
+   * satamasta (en-Wikipedia "Sunda Kelapa"), eli kaksi kertaa
+   * kauempana kuin Merdeka-aukion kainalo ja kauempana kuin yksikään
+   * kainalo tässä kartastossa. Se kerrotaan sataman omassa jutussa.
+   */
+  jakarta: {
+    polku: 'assets/kartat/jakarta-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -6.1222, etela: -6.147, lansi: 106.7997, ita: 106.8232 },
+    kainalot: [
+      { rajat: { pohjoinen: -6.1665, etela: -6.1785, lansi: 106.824, ita: 106.836 },
+        x: 72, y: 62, leveys: 25, korkeus: 23.69, suunta: '4,8 km kaakkoon' },
+    ],
+    esittely: 'Kartan alue on vanha Batavia. Ylhäällä Ciliwungin '
+      + 'suulla on Sunda Kelapan satama, keskellä kulkee Kali Besarin '
+      + 'kanava nostosiltoineen, ja sen eteläpuolella on '
+      + 'Fatahillah-aukio. Alhaalla alkaa Glodokin kiinalaiskortteli. '
+      + 'Oikean alakulman kainalossa on Merdeka-aukio, jonne '
+      + 'hallintokaupunki siirtyi. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Sunda Kelapan satama', lat: -6.125014, lon: 106.809755 },
+      { nimi: 'Merenkulkumuseo', lat: -6.126983, lon: 106.8083 },
+      { nimi: 'Kota Intanin nostosilta', lat: -6.1312475, lon: 106.8105445 },
+      { nimi: 'Fatahillah-aukio', lat: -6.1347, lon: 106.8133 },
+      { nimi: 'Toko Merah', lat: -6.135955, lon: 106.811285 },
+      { nimi: 'Jakarta Kotan asema', lat: -6.137579, lon: 106.814634 },
+      { nimi: 'Kim Tek Ie -temppeli', lat: -6.143889, lon: 106.812778 },
+      /* Kainalon kohteet, sekin pohjoisesta etelään. */
+      { nimi: 'Jakartan katedraali', lat: -6.169257, lon: 106.833069 },
+      { nimi: 'Istiqlal-moskeija', lat: -6.169804, lon: 106.830921 },
+      { nimi: 'Kansallismonumentti Monas', lat: -6.175389, lon: 106.827139 },
+    ],
+  },
 };
 
 /*

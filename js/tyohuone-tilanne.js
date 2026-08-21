@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v988 — ISO PAKETTI: (1) JAKARTA — uusi lehti (10 kohdetta, Kota Tua + Merdeka-kainalo; saarivi puuttuu viela). (2) ENNEN JA NYT KAIKKIALLE — kuvapari nyt 97/100 lehdessa (ilman jaivat dubai, doha, salalah, astana — vanhaa kuvaa ei loydy vapaana). (3) JULISTEPALKINNOT (pilotti 10 kaupunkia): minitehtavan vierella pieni aikakausjuliste, oikeasta vastauksesta se aukeaa isoksi + punnat, kokoelma matkalaukun Julisteet-osastoon, kehittajakartalla vihrea merkki; julisteet pelkalla alkuperaiskielella ja suomennos kuvan alla. HUOM: julistekuvat nakyvat vasta amparivienti-ajon jalkeen (odottaa R2-arvoja). Tarkista: Jakarta, parin kaupungin ennen/nyt, Istanbulin minitehtava',
   'v987 — AANIRIVIN ENNEN JA NYT (pilotti): Lontoon ja Kairon lehdissa radion vierella on nyt vanha aanitallenne — Lontoo: Florrie Forden lieriolevytys 1913, Kairo: Sheikh El-Saftin gramofonilevy 1907–25 (ENNEN-nappi katkoviivakehyksessa lahderivein, NYT-radio ennallaan). Ulan Batorille ei loytynyt vapaata vanhaa tallennetta — jaa ilman. Tarkista: Lontoon ja Kairon aanirivi, kuuntele molemmat',
   'v986 — ENNEN JA NYT -PILOTTI (Lontoo): etusivun kansikarusellin alla on nyt kuvapari — vasemmalla isoisan ajan kuva (harmaasavy, ENNEN-merkki), oikealla sama nakyma tanaan (NYT). Datavetoinen ennenNyt-kentta, laajenee muihin kaupunkeihin pelkalla datalla. Matkakirjan kuvia EI viela poistettu — odottaa omistajan hyvaksyntaa pilotille. Tarkista: Lontoon etusivu',
   'v985 — MAAN KARTTA KOKORUUDULLE (omistajan tilaus): maalehden korkokarttaa napauttamalla se aukeaa kokoruutuun zoomeineen kuten kaupunkikartta. IPAD-MITOITUS KORJATTU: kokoruutukartta mitoitetaan nyt nakyvasta ruudusta pikseleina (visualViewport), joten kartta tayttaa iPadin ruudun eika jaa pieneksi keskelle. Tarkista: maan kartta ja kaupungin kartta kokoruutuun iPadilla',
@@ -354,6 +355,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'jakarta', nimi: 'Jakarta', versio: 'v988' },
     { id: 'taipei', nimi: 'Taipei', versio: 'v984' },
     { id: 'hongkong', nimi: 'Hongkong', versio: 'v984' },
     { id: 'yangon', nimi: 'Yangon', versio: 'v978' },
@@ -382,6 +384,5 @@ export const TUOREET = {
   ],
   tyossa: [
     { id: 'manila', nimi: 'Manila' },
-    { id: 'jakarta', nimi: 'Jakarta' },
   ],
 };

@@ -5174,6 +5174,19 @@ body.flight-active .fact-card {
  */
 .city.city-remontoimaton,
 .city-start.city-remontoimaton { fill: #c9773a; stroke: #7a4116; }
+
+/*
+ * Julistepilotti — myös vain kehittäjätilassa (omistajan tilaus
+ * 21.8.2026): kaupunki, jolle on painettu aikakausjuliste, näkyy
+ * vihreänä. Sävy on valittu erottumaan neljästä muusta kartan
+ * merkinnästä: se on ainoa viileä väri keltaisen (#f2cf46), hunajan
+ * (#eec66b), oranssinruskean (#c9773a) ja kuolleen harmaan (#c9c4bb)
+ * joukossa, ja pergamentin päällä (#f3e5c4) se lukee pisteenä eikä
+ * läiskänä. Lista tulee js/packs/julisteet.js:stä (js/ui.js
+ * valmiusLuokka), eli samasta taulusta kuin palkintomekaniikka.
+ */
+.city.city-juliste,
+.city-start.city-juliste { fill: #6a9e54; stroke: #3d6330; }
 .airport { font-size: 14px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */
@@ -9456,6 +9469,168 @@ button.lukija-nappi.lukee,
 .dialog.lehti .arrival-kulttuuri .kulttuuri-tulos.vaarin-tulos {
   border-left: 4px double rgba(74, 124, 58, 0.85);
   background: rgba(106, 158, 84, 0.1);
+}
+
+/*
+ * PALKINTOJULISTE tehtävälaatikon kyljessä (omistajan tilaus
+ * 21.8.2026: "juliste voisi näkyä jo pienenä kysymysten vierellä ja
+ * aueta isommaksi sitten kun tulee oikea vastaus").
+ *
+ * Vedos ladotaan kuin lehden ilmoituskuva: se kelluu oikealle ja
+ * teksti kiertää sen, mustesuikale kehyksenä ja harvennettu
+ * kapiteelimerkintä alla. Väriä ei ole — laatikko on samaa painotyötä
+ * kuin sivun muu sisältö, ja itse juliste on ainoa värillinen asia.
+ *
+ * Voittamaton vedos on haalistettu ja hieman epätarkka: pelaaja näkee
+ * mistä pelataan muttei julisteen yksityiskohtia. Voitettu kirkastuu,
+ * saa musteisen kehyksen ja on napautettava (js/ui.js
+ * piirraJulistepalkinto).
+ */
+/*
+ * Palkinnollinen laatikko ladotaan kahteen palstaan: vasemmalla
+ * kysymys ja vastausrivit, oikeassa kapeassa palstassa juliste.
+ * Kellutus olisi ollut yksinkertaisempi, mutta vastausrivit ovat
+ * täysleveitä lipukkeita — ne olisivat menneet vedoksen ALTA, ja
+ * kellunnan tyhjennys jätti laatikkoon ammottavan aukon (mitattu
+ * 21.8.2026 Istanbulin kakkossivulla). Otsake pysyy koko laatikon
+ * levyisenä, ja vedos ulottuu kysymyksestä palautteeseen.
+ */
+.minitehtava.minitehtava-palkinnollinen {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 0.9rem;
+  align-items: start;
+}
+
+.minitehtava-palkinnollinen > .minitehtava-otsikko { grid-column: 1 / -1; }
+
+.minitehtava-palkinnollinen > .minitehtava-kysymys,
+.minitehtava-palkinnollinen > .kulttuuri-vaihtoehdot,
+.minitehtava-palkinnollinen > .kulttuuri-tulos { grid-column: 1; }
+
+/* Vastausrivit ylsivät kehyksestä kehykseen; palkintopalstan puolella
+ * ne pysähtyvät palstan reunaan, jottei rivi kulje julisteen alta. */
+.minitehtava-palkinnollinen > .kulttuuri-vaihtoehdot { margin-right: 0; }
+
+.minitehtava .juliste-palkinto {
+  grid-column: 2;
+  /* Kysymyksestä palautteeseen: vedos on koko tehtävän palkinto,
+   * ei yhden rivin kuvitus. */
+  grid-row: 2 / span 3;
+  width: 132px;
+  margin: 0.1rem 0 0.6rem;
+  text-align: center;
+}
+
+.minitehtava .juliste-palkinto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(60, 44, 26, 0.55);
+  /* Vedoksen oma varjo: juliste on painettu erikseen ja liimattu
+   * sivulle, toisin kuin tehtävälaatikko itse. */
+  box-shadow: 1px 2px 0 rgba(60, 44, 26, 0.18);
+  opacity: 0.5;
+  filter: grayscale(0.55);
+  transition: opacity 260ms ease, filter 260ms ease;
+}
+
+.minitehtava .juliste-palkinto.voitettu img {
+  opacity: 1;
+  filter: none;
+  border-color: rgba(60, 44, 26, 0.8);
+  cursor: zoom-in;
+}
+
+.minitehtava .juliste-palkinto .juliste-merkki {
+  margin: 0.3rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-indent: 0.24em;
+  text-transform: uppercase;
+  color: rgba(60, 44, 26, 0.72);
+}
+
+.minitehtava .juliste-palkinto.voitettu .juliste-merkki { color: rgba(60, 44, 26, 0.95); }
+
+.minitehtava .juliste-palkinto.voitettu:focus-visible {
+  outline: 2px solid rgba(60, 44, 26, 0.75);
+  outline-offset: 3px;
+}
+
+/* Kapea puhelin: vedos kapenee mutta pysyy kyljessä — ylle nostettuna
+ * se työntäisi kysymyksen alas eikä olisi enää "kysymysten vierellä". */
+@media (max-width: 430px) {
+  .minitehtava.minitehtava-palkinnollinen { column-gap: 0.6rem; }
+  .minitehtava .juliste-palkinto { width: 92px; }
+}
+
+/*
+ * JULISTEKOKOELMA MATKALAUKUSSA. Pikkuvedokset rivistönä kuten
+ * varusteruudukko: kolme mahtuu kapeimmallekin laukulle. Voittamaton
+ * paikka on tyhjä kehys kysymysmerkkeineen — se kertoo että kokoelmaa
+ * voi täydentää, muttei sitä mistä.
+ */
+.laukku-julisteet {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 0.5rem;
+  margin: 0.15rem 0 0.35rem;
+}
+
+.dialog .laukku-julisteet .laukku-juliste {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  text-align: center;
+  cursor: zoom-in;
+}
+
+.dialog .laukku-julisteet .laukku-juliste img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(60, 44, 26, 0.6);
+  box-shadow: 1px 2px 0 rgba(60, 44, 26, 0.2);
+}
+
+.dialog .laukku-julisteet .laukku-juliste-nimi {
+  display: block;
+  margin-top: 0.22rem;
+  font-family: var(--font-type);
+  font-size: 0.54rem;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: rgba(60, 44, 26, 0.8);
+}
+
+.dialog .laukku-julisteet .laukku-juliste.tyhja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Sama 4:5 kuin julisteissa, jotta rivistö ei nyki. */
+  aspect-ratio: 4 / 5;
+  border: 1px dashed rgba(60, 44, 26, 0.4);
+  background: rgba(60, 44, 26, 0.05);
+  font-family: var(--font-type);
+  font-size: 1rem;
+  color: rgba(60, 44, 26, 0.45);
+  cursor: default;
+}
+
+.dialog .laukku-julisteet .laukku-julisteet-vihje {
+  grid-column: 1 / -1;
+  margin: 0.1rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: rgba(60, 44, 26, 0.72);
 }
 
 /*

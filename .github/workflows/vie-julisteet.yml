@@ -1,0 +1,40 @@
+# Vie julisteet R2-ämpäriin. Julistetiedostot asuvat erillisellä
+# claude/julisteet-vienti-haaralla (omistajan linjaus 21.8.2026:
+# media ämpäriin eikä repoon — siksi PNG:t eivät ole mainissa).
+# Ajetaan workflow_dispatchilla; kun vienti on tehty ja uusi
+# julistemedia kulkee peilaa.yml:n kautta, tämän voi poistaa.
+name: Vie julisteet R2:een
+
+on:
+  workflow_dispatch:
+    inputs:
+      haara:
+        description: 'Haara jolla julisteet/-kansio on'
+        type: string
+        default: 'claude/julisteet-vienti'
+
+permissions:
+  contents: read
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.haara }}
+      - name: Vie ämpäriin
+        run: |
+          set -euo pipefail
+          [ -d julisteet ] || { echo "::error::julisteet/-kansiota ei ole haaralla"; exit 1; }
+          aws s3 sync julisteet "s3://${{ secrets.R2_BUCKET }}/julisteet" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --content-type image/png --no-progress
+          echo "Viety $(ls julisteet | wc -l) julistetta."

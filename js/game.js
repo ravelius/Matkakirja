@@ -250,6 +250,20 @@ export class Game {
     // Lehden minitehtävät: vastattu kerran per lehti ja aihe,
     // avaimena 'pakka:kaupunki:aihe'.
     this.minitehtavatVastatut = new Set();
+    /*
+     * OIKEIN vastatut minitehtävät samalla avaimella. Vastattujen
+     * joukko ei riitä julisteen myöntöön: väärin vastannut olisi saanut
+     * palkintonsa takaoven kautta avaamalla saman sivun uudelleen
+     * (ks. ui.js piirraMinitehtava, takautuva myöntö).
+     */
+    this.minitehtavatOikein = new Set();
+    /*
+     * Voitetut aikakausjulisteet: minitehtävän palkinto, avaimena
+     * pelkkä KAUPUNGIN tunnus (js/packs/julisteet.js). Pakan tunnusta
+     * ei ole avaimessa, koska juliste on matkamuisto kaupungista eikä
+     * laudasta — sama kaupunki eri laudalla on sama juliste.
+     */
+    this.julisteet = new Set();
     // Pulmat avautuvat kerran pelissä: avaimena 'pakka:kaupunki'.
     this.puzzlesSeen = new Set();
     this.explored = new Set(); // tutkitut laatattomat kaupungit (pack:city)
@@ -938,10 +952,30 @@ export class Game {
     if (this.minitehtavatVastatut.has(avain)) return { ok: false, error: 'Jo vastattu' };
     this.minitehtavatVastatut.add(avain);
     if (oikein) {
+      this.minitehtavatOikein.add(avain);
       this.player.money += palkkio;
       this.say(this.player.id, `${this.player.name} ratkaisi lehden minitehtävän (+${palkkio} puntaa).`);
     }
     return { ok: true, palkittu: !!oikein };
+  }
+
+  /**
+   * AIKAKAUSJULISTE MATKALAUKKUUN (omistajan tilaus 21.8.2026).
+   *
+   * Julisteen saa kaupungin oman lehden minitehtävästä, ja se jää
+   * laukun julistekokoelmaan koko matkan ajaksi. Myöntö on erillään
+   * actionMinitehtavasta kahdesta syystä: kaikilla kaupungeilla ei ole
+   * julistetta, ja juliste myönnetään myös TAKAUTUVASTI sellaiselle
+   * pelaajalle, joka ratkaisi tehtävän ennen kuin julisteita oli —
+   * silloin rahaa ei tule uudestaan, mutta palkinto ei jää saamatta.
+   *
+   * Vastaus kertoo, oliko juliste uusi: kutsuja näyttää suurennoksen ja
+   * heilauttaa laukkua vain uudesta löydöstä.
+   */
+  myonnaJuliste(cityId) {
+    if (!cityId || this.julisteet.has(cityId)) return { ok: true, uusi: false };
+    this.julisteet.add(cityId);
+    return { ok: true, uusi: true };
   }
 
   /** Lentää porttikaupungista toiselle laudalle. Vie koko vuoron. */
@@ -2460,6 +2494,8 @@ export class Game {
       puzzlesSeen: [...this.puzzlesSeen],
       kulttuuriVastatut: [...this.kulttuuriVastatut],
       minitehtavatVastatut: [...this.minitehtavatVastatut],
+      minitehtavatOikein: [...this.minitehtavatOikein],
+      julisteet: [...this.julisteet],
       explored: [...this.explored],
       scheduleNote: this.scheduleNote,
       scheduleShown: [...this.scheduleShown],
@@ -2561,6 +2597,17 @@ export class Game {
     game.puzzlesSeen = new Set(data.puzzlesSeen ?? []);
     game.kulttuuriVastatut = new Set(data.kulttuuriVastatut ?? []);
     game.minitehtavatVastatut = new Set(data.minitehtavatVastatut ?? []);
+    /*
+     * Vanha tallennus ei erottele oikein ja väärin vastattuja: silloin
+     * jokainen vastattu tehtävä luetaan ratkaistuksi. Se on tarkoituksella
+     * antelias — omistajan linjaus on, ettei vanha pelaaja jää ilman
+     * julistetta, ja mennyttä vastausta ei voi enää tarkistaa.
+     */
+    game.minitehtavatOikein = new Set(data.minitehtavatOikein ?? data.minitehtavatVastatut ?? []);
+    // Vanha tallennus ei tunne julisteita: kokoelma alkaa tyhjänä ja
+    // täyttyy takautuvasti, kun pelaaja avaa ratkaisemansa lehtisivun
+    // uudelleen (js/ui.js piirraMinitehtava).
+    game.julisteet = new Set(data.julisteet ?? []);
     game.explored = new Set(data.explored ?? []);
     /*
      * Istuntokohtaiset kentät on silti ALUSTETTAVA: fromJSON ohittaa
