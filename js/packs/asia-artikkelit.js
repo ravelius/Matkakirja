@@ -159,6 +159,19 @@
 // näyttönimi ”Kanton” eikä en-Wikipedian ”Guangzhou”. Kiina-linjaus:
 // ei nykypolitiikkaa, ja oopiumisodat ovat vain kauppahistorian
 // käännekohta. Perustelut ovat merkinnän omassa kommentissa.
+//
+// TAIPEI (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js). Jokainen introväite tulee saman erän
+// lehtiteksteistä, jotka on tarkistettu en-Wikipedian raakateksteistä
+// 21.8.2026. Vanha intro oli kolmen lauseen mittainen ja kertoi vain
+// yömarkkinoista ja tornista; uusi kertoo lisäksi altaan, joet,
+// Qixing-vuoren, väkiluvun, teekaupan ja hallinnon vaiheet.
+// Taiwan-linjaus (spec-asia.md, ”Taipei”: Antaa olla): hallinnon
+// vaiheet ovat päivämääriä ja hallintomuutoksia ilman kummankaan
+// osapuolen kehystä, eikä saaren nykyistä asemaa käsitellä lainkaan
+// — perustelut ovat kulttuuri-kategoriat.js:n taipei-lohkon
+// kommentissa. Teksti-kenttä on ennallaan.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -2038,10 +2051,42 @@ export const ASIA_ARTIKKELIT = {
       + 'shikumen-taloja, joissa on kivinen porttikehys ja sisäpiha, '
       + 'on säilynyt korttelikaupungeissa keskustan tuntumassa.',
   },
+  /*
+   * HONGKONGIN INTRO KIRJOITETTU UUSIKSI (Opus 21.8.2026, sama erä kuin
+   * kulttuuri-kategoriat.js:n hongkong-lohko). Merkinnällä oli ennestään
+   * kolmikappaleinen teksti-kenttä, joka on jätetty ennalleen — vain
+   * kahden virkkeen vanha intro on korvattu 20.8.2026 mitalla
+   * (7–10 virkettä, 2–3 kappaletta, 1–3 lihavointia). Väitteet on
+   * tarkistettu en-Wikipedian raakateksteistä 21.8.2026 (Hong Kong,
+   * Star Ferry, Peak Tram, Hong Kong Tramways, History of Hong Kong) ja
+   * ne toistuvat saman erän lehtiteksteissä. Hongkong-linjaus
+   * (docs/aasia-tyoaineisto/spec-asia.md): vuosi 1997 on hallinnollinen
+   * käänne ilman osapuolikehystä, eikä 2010–2020-lukujen tapahtumia
+   * mainita lainkaan.
+   */
   Hongkong: {
-    intro: 'Hongkong on kaupunki kallioilla Etelä-Kiinanmeren rannalla. '
-      + 'Siellä on enemmän pilvenpiirtäjiä kuin missään muualla '
-      + 'maailmassa, koska rakentamiseen kelpaavaa maata on vähän.',
+    intro: 'Hongkong on satamakaupunki Etelä-Kiinan meren rannalla, '
+      + 'Helmijoen suiston itälaidalla. Kaupunki on rakennettu '
+      + 'kapealle kaistaleelle vuorten ja veden väliin, ja '
+      + '**tasaista maata on niin vähän, että se on kasvanut ylöspäin**: '
+      + 'yli sadanviidenkymmenen metrin korkuisia rakennuksia on '
+      + 'enemmän kuin missään muussa maailman kaupungissa. Keskellä on '
+      + 'Victoria-satama, syvä ja luonnostaan suojainen vesi, joka '
+      + 'erottaa Hongkong-saaren ja Kowloonin niemimaan toisistaan.'
+      + '\n\n'
+      + 'Vuonna 1841 saarella asui vajaat seitsemäntuhatta ihmistä, '
+      + 'enimmäkseen kalastajia ja hiilenpolttajia. Britannia sai saaren '
+      + 'seuraavana vuonna, Kowloonin niemimaan 1860 ja laajat Uudet '
+      + 'alueet 99 vuoden vuokralle 1898; vuokra-ajan päätyttyä koko '
+      + 'alue palautui Kiinalle heinäkuussa 1997.'
+      + '\n\n'
+      + '**Arki on rakentunut liikkumisen ympärille.** Lautat ovat '
+      + 'ylittäneet sataman vuodesta 1888 ja kaksikerroksiset '
+      + 'raitiovaunut kulkeneet saaren pohjoisrantaa vuodesta 1904, ja '
+      + 'Victoria Peakille nouseva vaunurata avattiin Aasian '
+      + 'ensimmäisenä funikulaarina. Ruokakulttuuri on kantonilainen, ja '
+      + 'sen tunnetuin muoto on teehuoneen aamutee pienine '
+      + 'annoksineen.',
     teksti: 'Hongkong koostuu Hongkongin saaresta, Kowloonin '
       + 'niemimaasta ja yli kahdestasadasta pienemmästä saaresta. '
       + 'Maasta yli kolme neljäsosaa on liian jyrkkää tai suojeltua '
@@ -2117,9 +2162,29 @@ export const ASIA_ARTIKKELIT = {
       + 'ja metro avattiin 1997.',
   },
   Taipei: {
-    intro: 'Taipei on Taiwanin pääkaupunki saaren pohjoispäässä. Sen '
-      + 'yömarkkinat alkavat auringonlaskusta, ja kaupungin yllä '
-      + 'kohoaa torni, joka oli valmistuessaan maailman korkein.',
+    intro: 'Taipei on Taiwanin pääkaupunki saaren pohjoispäässä, '
+      + 'muinaisen järvenpohjan päälle syntyneessä **Taipein '
+      + 'altaassa**. Etelässä sitä rajaa Xindian-joki ja lännessä '
+      + 'Tamsui, ja pohjoisessa maasto nousee 1 120 metrin '
+      + 'Qixing-vuorelle, joka on Taiwanin korkein lepotilassa oleva '
+      + 'tulivuori. Kaupungissa asuu noin kaksi ja puoli miljoonaa '
+      + 'ihmistä.'
+      + '\n\n'
+      + 'Han-uudisraivaajat asettuivat altaaseen vuonna 1709, ja '
+      + '1800-luvun lopulla **teenvienti** teki seudusta rikkaan. '
+      + 'Vuonna 1875 pohjoinen Taiwan erotettiin omaksi '
+      + 'prefektuurikseen, ja uusi hallintokeskus rakennettiin '
+      + 'muureineen vaurastuneiden kauppakylien kylkeen. Vuonna 1895 '
+      + 'saari siirtyi Japanille, ja kaupunki tunnettiin viisikymmentä '
+      + 'vuotta nimellä Taihoku; siltä ajalta ovat monet keskustan '
+      + 'julkiset rakennukset. Vuodesta 1949 Taipei on ollut Kiinan '
+      + 'tasavallan hallinnon kotipaikka.'
+      + '\n\n'
+      + 'Nykyinen Taipei on saaren talouden, koulutuksen ja kulttuurin '
+      + 'keskus ja tekniikan kaupunki. Kansallinen '
+      + 'palatsimuseo säilyttää Kiinan keisarillisen kokoelman parhaat '
+      + 'esineet, Taipei 101 oli valmistuessaan maailman korkein '
+      + 'rakennus, ja illalla kaupunki syö yömarkkinoilla.',
     teksti: 'Taipei on altaassa vuorten ympäröimänä Tamsui-joen '
       + 'laaksossa. Ilmasto on kostea ja lämmin, ja kesällä saarelle '
       + 'iskee taifuuneja. Taiwanin selkäranka on vuoristo, jonka '

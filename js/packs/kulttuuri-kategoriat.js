@@ -41892,4 +41892,1058 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TAIPEI (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä; asia-artikkelit.js:n merkintä oli olemassa, ja siihen
+   * kirjoitettiin uusi intro. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä (action=raw, haettu 21.8.2026): Taipei, Taipei
+   * 101, National Palace Museum, Longshan Temple (Taipei), Shilin
+   * Night Market, Taipei North Gate, Walls of Taipei, Presidential
+   * Office Building (Taipei), Chiang Kai-shek Memorial Hall,
+   * Dalongdong Baoan Temple, Taipei Confucius Temple, Ximending, Red
+   * House Theater, Bopiliao Historic Block, Dadaocheng, Dihua Street,
+   * Taipei Botanical Garden, Beitou District, Beitou Hot Spring
+   * Museum, Yangmingshan, Maokong, Taiwanese tea, Taiwanese tea
+   * culture ja John Dodd (tea merchant). Pohjana ovat
+   * docs/aasia-tyoaineisto/faktapohja-taipei.md ja
+   * tarkistus-taipei.md, jotka luettiin yhdessä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md, "Taipei": Antaa
+   * olla) ja omistajan tarkennus 21.8.2026: EI NYKYPOLITIIKKAA.
+   * Hallinnon vaiheet kerrotaan pelkkinä päivämäärinä ja
+   * hallintomuutoksina ilman kummankaan osapuolen kehystä: 1709
+   * uudisraivaajat, 1875 Taipehin prefektuuri, 1895 luovutus
+   * Japanille, 1945 hallinnon vaihdos ja 1949 muutto. POIS JÄTETTY
+   * KOKONAAN: saaren nykyinen asema ja sitä koskeva kiista
+   * (pääartikkelin oma alaviite "de facto capital" mukaan lukien),
+   * puoluepolitiikka ja pormestarivaalit, sotilaalliset aiheet,
+   * vuoden 1947 tapahtumat ja niitä seurannut sotatilan kausi,
+   * vuoden 1990 mielenosoitukset ja muistosalin nimikiista.
+   * Sotatilan kausi näkyy lehdessä vain siinä, että muistosalin
+   * juttu kertoo salin valmistumisvuoden ja arkkitehtuurin — sen
+   * enempää ei tarvita. Toisen maailmansodan pommitukset ovat mukana
+   * VAIN yhtenä lauseena Presidentinlinnan jutussa, koska rakennuksen
+   * nykyinen ilme selittyy sillä (lehtityo-resepti.md:n linjausmuutos
+   * 20.8.2026: lukijalle kerrotaan, mistä nykyilme johtuu), ilman
+   * uhrilukuja ja ilman osapuolikehystä. Painotus on kulttuurissa,
+   * ruoassa, kuumissa lähteissä ja arkkitehtuurissa, kuten ohje
+   * sanoo.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat lehden tekstejä,
+   * on kirjoitettu auki tai kierretty (v925/v932:n tapa):
+   * 1) Kuinka kauan Taipei 101 oli maailman korkein? Taipei-artikkeli
+   *    sanoo "six years before the Burj Khalifa was completed", tornin
+   *    oma artikkeli "from its opening on 31 December 2004 until it
+   *    was surpassed by the Burj Khalifa in 2009" ja faktapohja viisi
+   *    vuotta. Lehti ei anna vuosilukua lainkaan vaan sanoo tornin
+   *    olleen maailman korkein, kunnes Burj Khalifa ohitti sen
+   *    (maakartat.js:n Moreebin dyyni -sääntö).
+   * 2) Massavaimentimen kerrosväli. Tornin artikkelin leipäteksti
+   *    sanoo pallon riippuvan 92. kerroksesta 88:aan, kerrostaulukko
+   *    kattaa kerrokset 92–87. Tarkistusraportti (osio 1) vahvisti
+   *    molemmat; lehti käyttää leipätekstin lukuja.
+   * 3) Milloin Taipehista tuli provinssin pääkaupunki? Taipei-
+   *    artikkelin johdanto sanoo 1887, historiaosio "In 1886, as work
+   *    commenced to govern the island as a province" ja saman osion
+   *    seuraava lause "formally made the provincial capital in 1894".
+   *    Lehti ei väitä yhtä vuotta vaan sanoo, että hallintokeskus
+   *    nousi 1875 perustetun prefektuurin keskukseksi ja että
+   *    provinssin pääkaupungiksi se vahvistettiin 1800-luvun lopulla.
+   * 4) Milloin muurit purettiin? Walls of Taipei sanoo "In the first
+   *    years of the Japanese colonial rule (ca. 1895)", Ximending-
+   *    artikkeli "torn down in 1905". Lehti sanoo "1900-luvun
+   *    alkuvuosina".
+   * 5) John Doddin kansallisuus ja yhtiön vuosi. Taiwanese tea
+   *    -artikkeli sanoo skotlantilainen ja 1867 (teeyhtiö Wanhuassa),
+   *    Doddin oma artikkeli sanoo lyhyessä kuvauksessaan
+   *    englantilainen ja leipätekstissä skotlantilainen sekä Dodd &
+   *    Co 1865. Lehti käyttää molempien artikkelien leipätekstin
+   *    sanaa skotlantilainen ja vuotta 1867, joka koskee nimenomaan
+   *    Formosa Oolongin vientiä.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viidestä
+   * kysymyksestä kolmen vastaus löytyy lehdestä: Taiwanin saari
+   * (intro asia-artikkelit.js:ssä ja oppaan jakso 2), Taipei 101
+   * pilvenpiirtäjänä (nosto K1, kohdekartan juttu ja kansikuva) ja
+   * yömarkkinoiden katuruoka (nosto K3). KAKSI JÄTETTIIN
+   * TIETOISESTI POIS. Mikrosirukysymys on nykytaloutta, jolle
+   * en-Wikipedian Taipei-artikkeli ei anna kaupunkikohtaista
+   * lähdettä — artikkeli sanoo vain, että kaupunki on tekniikan ja
+   * elektroniikan keskus, ja intro sanoo saman; lukua tai yhtiön
+   * nimeä ei keksitä. Saaren asemaa koskeva kysymys on juuri sitä
+   * nykypolitiikkaa, jota sitova linjaus kieltää, eikä siihen
+   * kirjoiteta vastausta lehteen.
+   *
+   * MINITEHTÄVÄ (historia-sivu) kysyy, miksi muurin rakentaminen
+   * keskeytyi 1879. Visa ei kysy sitä, ja vastaus on samalla sivulla
+   * nostossa H3.
+   *
+   * AIHETOISTO on tietoinen ja perusteltu, ja se noudattaa Xi'anin
+   * mallia (avauskuva ja kohdekartan juttu samasta kohteesta eri
+   * tiedostoina). Pohjoisportti on avauskuvassa vinosti nykykaupungin
+   * keskellä ja kohdekartan jutussa suoraan edestä; Presidentinlinna
+   * on avauskuvassa symmetrisenä julkisivuna ja jutussa
+   * Ketagalan-bulevardin suunnasta; Lungshan-temppelistä näkyy
+   * avauskuvassa kattoharjan koristelu lähietäisyydeltä ja jutussa
+   * koko harja lohikäärmeineen. Chiang Kai-shek -muistosali on
+   * matkaoppaan etusivukuvassa portin kaaren läpi ja jutussa
+   * päinvastaisesta suunnasta salin portailta aukiolle. Taipei 101
+   * on kansikuvassa siluettina, nostossa sisältä (massavaimennin) ja
+   * kohdekartan jutussa uudenvuoden ilotulituksessa — kolme
+   * etäisyyttä samaan tapaan kuin Xi'anin terrakotta-armeija.
+   *
+   * KUVISTA HYLÄTTIIN kuusi: kaksi Lungshan-temppelin pihakuvaa ja
+   * Taiwanin kansallismuseon sisäänkäynti (tunnistettavia kasvoja
+   * etualalla), Taihokun kenraalikuvernöörinviraston 1920-luvun
+   * PD-valokuva (kuvan päälle painetut kirjoitusmerkit eli lisätty
+   * merkintä), Taipein muurin pienoismalli (hämärä vitriinikuva
+   * kauppakäytävässä) ja "09 Street in Bopiliao Taipei" (kuva ei
+   * esitä Bopiliaota vaan Beitoun risteystä).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi'anin, Varanasin, Kathmandun ja Kantonin
+   * malli v965–v966). Talon menetelmä on Open-Meteon arkisto (ERA5,
+   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn
+   * ajan pelkällä viestillä "Daily API request limit exceeded.
+   * Please try again tomorrow" — kontin jaetun ulosmenevän osoitteen
+   * vuorokausikiintiö oli käytetty loppuun, eikä se nollaudu ennen
+   * UTC-vuorokauden vaihdetta. Kokeiltu työn alussa ja lopussa, sama
+   * vastaus kummallakin kerralla. Lukuja ei ole otettu mistään muusta
+   * lähteestä, koska vuosigraafin lähderivi lupaa lukijalle
+   * nimenomaan ERA5:n; ilman riviä lehti näkyy ilman säätä, kuten
+   * saatiedot.js:n alkukommentti lupaa. Matkaoppaan jakso 5 nojaa
+   * siksi en-Wikipedian Taipei-artikkelin sääruutuun (Taiwanin
+   * ilmatieteen laitoksen normaalit 1991–2020), ja jakso sanoo sen
+   * ääneen. Kun ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava
+   * rivin omista luvuista. Mittauspiste olisi keskusta 25,04 /
+   * 121,51.
+   */
+  taipei: [
+    {
+      id: 'kaupunki',
+      nimi: 'Taipei',
+      johdanto: 'Vuoristoaltaan kaupunki kahden joen välissä: '
+        + 'pohjoisessa kohoavat Yangmingshanin tulivuoret, lännessä '
+        + 'virtaa Tamsui-joki. Teekauppa teki 1800-luvulla kylistä '
+        + 'kaupungin ja kaupungista Pohjois-Taiwanin hallintokeskuksen.',
+      kansikuvat: [
+        {
+          tiedosto: 'Taipei Skyline 2022.06.29.jpg',
+          selite: 'Xinyin kaupunginosa Norsuvuoren rinteeltä: Taipei 101 '
+            + 'nousee vasemmalla muiden tornitalojen yli, ja takana '
+            + 'häämöttävät altaan reunavuoret.',
+          lahde: '毛貓大少爺, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Taipei, assorted - TaipeiCityscapes4969.jpg',
+          selite: 'Kaupunki täyttää altaan pohjan, ja sen takana '
+            + 'vuorenharjanteet jatkuvat kerroksittain sinertyen '
+            + 'niin kauas kuin näkyy.',
+          lahde: 'lumoplank, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Aerial panorama of Taipei city\'s west side facing the Tamsui River.jpg',
+          selite: 'Kaupungin länsilaita Tamsui-joen mutkassa: kaksi '
+            + 'siltaa, hiekkasärkkä keskellä uomaa ja matalia '
+            + 'kortteleita molemmin puolin.',
+          lahde: 'Bob Tan, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: portti, virastotalo ja temppelin katto — kaupungin
+       * kolme kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (Qing-ajan muurikaupunki, Japanin ajan hallinto, kylien oma
+       * temppeliperinne).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'North Gate of Taipei City, 2023 (01).jpg',
+          selite: 'Pohjoisportti keskellä nykykaupunkia: punaiseksi '
+            + 'rapattu vahtihuone seisoo harmaalla kivijalustalla, ja '
+            + 'katon räystäät kaartuvat ylös pääskynpyrstöiksi.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Taipei Taiwan Presidential-Office-Building-01.jpg',
+          selite: 'Presidentinlinnan punatiilinen julkisivu palmurivin '
+            + 'takana, ja keskeltä nousee kuusikymmenmetrinen torni.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Taipeh Longshan-Tempel Dachlandschaft.jpg',
+          selite: 'Lungshan-temppelin kattoharjalla kiemurtelee '
+            + 'posliininsiruista koottuja lohikäärmeitä, ja niiden alla '
+            + 'kulkee rivi pieniä ihmishahmoja.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Torni, jonka sisällä riippuu pallo',
+          tiedosto: 'Taipei 101 Tuned Mass Damper 2010.jpg',
+          teksti: 'Taipei 101 avattiin uudenvuodenaattona 2004, ja se '
+            + 'oli maailman korkein rakennus siihen asti, kunnes Dubain '
+            + 'Burj Khalifa ohitti sen. Torni on 508 metriä korkea ja '
+            + 'ensimmäinen pilvenpiirtäjä, joka ylitti puolen '
+            + 'kilometrin rajan. Se seisoo kahdensadan metrin päässä '
+            + 'suuresta siirroksesta, joten sen piti taipua eikä '
+            + 'vastustaa: kahdeksankymmenennestäkahdeksannesta '
+            + 'yhdeksänteenkymmenenteentoiseen kerrokseen on ripustettu '
+            + '660 tonnin teräspallo, joka heilahtaa tuulta ja '
+            + 'järistystä vastaan. Pallo on koottu 41:stä sadan '
+            + 'kahdenkymmenenviiden millimetrin teräslevystä, se on '
+            + 'halkaisijaltaan 5,5 metriä ja se leikkaa tornin '
+            + 'liikkeestä jopa neljäkymmentä prosenttia.',
+          selite: 'Massavaimentimen kullattu pallo riippuu neljän '
+            + 'vaijerin varassa kerrosten välisessä kuilussa, ja sen '
+            + 'alla erottuvat iskunvaimentimet.',
+          lahde: 'Armand du Plessis, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Taipei 101',
+        },
+        {
+          otsikko: 'Kokoelma, joka oli kuusitoista vuotta matkalla',
+          tiedosto: 'National Palace Museum, Taipei.jpg',
+          teksti: 'Kansallinen palatsimuseo perustettiin Pekingin '
+            + 'Kiellettyyn kaupunkiin 10. lokakuuta 1925, kun '
+            + 'viimeinen keisari Puyi oli poistunut palatsista. Kun '
+            + 'sota lähestyi, kokoelma lähti matkaan: keväällä 1933 '
+            + 'pakattiin 13 491 laatikkoa palatsin esineitä ja 6 066 '
+            + 'laatikkoa muista kokoelmista, ja ne vietiin viidessä '
+            + 'erässä Shanghaihin, 1936 Nanjingiin ja sieltä kolmea '
+            + 'reittiä sisämaahan. Vuonna 1947 laatikot palasivat '
+            + 'Nanjingiin, ja joulukuun 1948 ja helmikuun 1949 välillä '
+            + 'niistä 2 972 — noin viidennes — purjehti kolmessa '
+            + 'lastissa Keelungin satamaan. Museo avattiin uudelleen '
+            + 'Shilinissä 12. marraskuuta 1965.',
+          selite: 'Museon keltaiset seinät ja vihreä tiilikatto nousevat '
+            + 'metsäisen rinteen juurella, ja aukiolta johtaa ylös '
+            + 'kaksi valkoista marmoriporrasta.',
+          lahde: 'Jason Zhang, Wikimedia Commons (CC0)',
+          wiki: 'National Palace Museum',
+        },
+        {
+          otsikko: 'Kadut, jotka aukeavat vasta illalla',
+          tiedosto: 'Night markets of Taipei - TaipeiNM4951.jpg',
+          teksti: 'Taipei tunnetaan yömarkkinoistaan, ja tunnetuin '
+            + 'niistä on Shilinin yömarkkina kaupungin pohjoisosassa. '
+            + 'Kojut avautuvat iltapäivän lopulla, ruuhka on '
+            + 'pahimmillaan kahdeksan ja yhdentoista välillä ja '
+            + 'viimeiset menevät kiinni vasta yhden tai kahden aikaan '
+            + 'aamuyöstä. Ruokahallissa on 539 kojua, ja ympäröivillä '
+            + 'kujilla myydään sekaisin ruokaa, vaatteita ja '
+            + 'arkitavaraa. Listalla toistuvat osterimunakas, '
+            + 'osterinuudelikeitto, haiseva tofu, paistettu kanaleike, '
+            + 'papaijamaito ja kuplatee. Markkina syntyi jokilaiturin '
+            + 'viereen, jolta Shilinin viljelijät lähettivät satonsa '
+            + 'Bangkaan ja Dadaochengiin.',
+          selite: 'Kojurivi hehkuu sinisessä iltahämärässä, ja talon '
+            + 'seinällä loistaa pyöreitä neonkilpiä.',
+          lahde: 'lumoplank, Wikimedia Commons (CC0)',
+          wiki: 'Shilin Night Market',
+        },
+        {
+          otsikko: 'Rikin haju ja kuuma vesi',
+          tiedosto: 'Beitou Hot Spring Museum 20150607.jpg',
+          teksti: 'Kaupungin pohjoisreunalla Beitoun laaksossa on yksi '
+            + 'maailman suurimmista kuumien lähteiden keskittymistä. '
+            + 'Vesi nousee Yangmingshanin tulivuorten rikkipitoisesta '
+            + 'maaperästä, ja alkuperäiskansat kylpivät siinä kauan '
+            + 'ennen kuin saksalainen rikkikauppias perusti paikalle '
+            + 'ensimmäisen kylpyläklubinsa. Japanin hallintokaudella '
+            + 'laaksosta tehtiin terveyskylpylä: majataloja, '
+            + 'kivialtaita ja vuonna 1913 valmistunut yleinen kylpylä, '
+            + 'joka oli silloin Itä-Aasian suurin. Rakennus on '
+            + 'nykyisin kuumien lähteiden museo. Asukkaat sanovat, '
+            + 'että rikkihöyryt syövät kodinkoneet ennen aikojaan.',
+          selite: 'Kuumien lähteiden museo on puoliksi punatiiltä ja '
+            + 'puoliksi tummaa puuta, ja alakerran kaari-ikkunat '
+            + 'katsovat nurmikentälle.',
+          lahde: 'ironypoisoning, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Beitou Hot Spring Museum',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Chiang Kai-shek memorial 2 amk.jpg',
+          selite: 'Muistosalin aukiolle johtavan valkoisen portin '
+            + 'kaaresta näkyy sinikattoinen sali aukion toisessa '
+            + 'päässä.',
+          lahde: 'AngMoKio, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Taipei on Taiwanin pohjoispäässä, muinaisen '
+          + 'järvenpohjan päälle syntyneessä altaassa, ja kaupunkia '
+          + 'ympäröi joka suunnalta naapurikaupunki New Taipei. '
+          + 'Matkailijan Taipei on kaksi kaupunkia: lännessä vanha '
+          + 'puoli, jossa ovat Wanhuan kujat, Dadaochengin '
+          + 'kauppahuoneet ja muurikaupungin jäänteet, ja idässä uusi '
+          + 'Xinyi tornitaloineen. Metro yhdistää nämä kaksi puolta. '
+          + 'Kaupungin pinta-ala on 272 neliökilometriä, mutta suurin '
+          + 'osa siitä on vuorta: Yangmingshanin kansallispuisto alkaa '
+          + 'kymmenen kilometrin päässä keskustasta pohjoisessa, ja '
+          + 'Beitoun kuumille lähteille pääsee metrolla.',
+        artikkeli: {
+          nimi: 'Matkailijan Taipei',
+          taitto: 'opas',
+          teksti: 'Kaksi jokea, yksi allas ja vuoret joka suunnalla — '
+            + 'ja niiden välissä kaupunki, joka aukeaa vasta illalla.',
+          nosto: 'Talvet ovat Taipeissa lyhyitä ja sumuisia, mutta '
+            + 'lunta ei ole koskaan mitattu itse kaupunkiin — vain sen '
+            + 'omille vuorille, jotka nousevat kaupungin rajojen '
+            + 'sisällä yli tuhanteen metriin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunkia palvelee kaksi lentokenttää. '
+                + 'Songshanin kenttä on aivan kaupungin sisällä ja '
+                + 'hoitaa kotimaanlennot sekä vuorot Tokion Hanedaan, '
+                + 'Soulin Gimpoon ja noin viiteentoista kohteeseen '
+                + 'Kiinassa; useimmat kansainväliset lennot laskeutuvat '
+                + 'Taoyuanin kentälle naapurikaupunkiin, jonne pääsee '
+                + 'vuonna 2017 avatulla lentokenttäradalla. Kaupungin '
+                + 'sisällä kulkee metro, jolla on kuusi linjaa, ja '
+                + 'kaikkeen käy sama lähimaksukortti EasyCard, joka '
+                + 'kelpaa myös busseissa. Kaikki solmuuntuu Taipein '
+                + 'päärautatieasemalle: sieltä lähtevät metro, bussit, '
+                + 'tavalliset junat ja vuonna 2007 avattu '
+                + 'suurnopeusrata, joka lyhensi matkat länsirannikon '
+                + 'kaupunkeihin yli kuudellakymmenellä prosentilla. '
+                + 'Radat vietiin keskustassa maan alle vuodesta 1983 '
+                + 'alkaen. Vuoden 2022 tutkimuksessa 34,9 prosenttia '
+                + 'kaupunkilaisten matkoista tehtiin joukkoliikenteellä '
+                + '— enemmän kuin missään muualla saarella.',
+              kuva: {
+                tiedosto: 'A Taipei Metro C381 train at Beitou Station.jpg',
+                selite: 'Metrojunan keula laiturilla: sininen aaltokuvio '
+                  + 'juoksee keulan poikki ja ohjaamon ikkunassa '
+                  + 'heijastuvat aseman katosrakenteet.',
+                lahde: 'Lokseng01, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Taipein allas on muinainen järvenpohja, ja '
+                + 'kaupungin läntinen keskiosa lepää sen tasaisella '
+                + 'pohjalla. Etelässä rajana on Xindian-joki ja lännessä '
+                + 'Tamsui-joki, johon Xindian ja pohjoisen Keelung-joki '
+                + 'yhtyvät; Shilinin ja Beitoun kaupunginosat ovat '
+                + 'Keelung-joen pohjoispuolella. Maasto nousee etelään, '
+                + 'itään ja etenkin pohjoiseen: siellä kohoaa 1 120 '
+                + 'metrin Qixing- eli Seitsentähtivuori, Taiwanin '
+                + 'korkein lepotilassa oleva tulivuori, ja aivan sen '
+                + 'vieressä 1 092 metrin Datun. Molemmat kuuluvat '
+                + 'Yangmingshanin kansallispuistoon, joka tunnetaan '
+                + 'kirsikankukista, kuumista lähteistä ja '
+                + 'rikkihöyryistä. Kaakossa nousevat Songshanin kukkulat '
+                + 'ja Qingshuin rotko. Kaupungin pinta-ala on 271,8 '
+                + 'neliökilometriä, ja sen rajojen sisällä asuu noin '
+                + 'kaksi ja puoli miljoonaa ihmistä; koko '
+                + 'Taipei–Keelung-alueella noin seitsemän miljoonaa.',
+              kuva: {
+                tiedosto: '七星山 Qixing Mountain - panoramio.jpg',
+                selite: 'Qixing-vuoren ruohoinen huippu kohoaa metsän '
+                  + 'takaa, ja etualalla lepää kaislainen suolampi.',
+                lahde: 'lienyuan lee, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: tee',
+              teksti: 'Taiwanilainen teekulttuuri on peräisin Kiinasta, '
+                + 'mutta saaren vuoristo ja kostea ilmasto ovat '
+                + 'kehittäneet siitä oman lajinsa — erityisesti korkean '
+                + 'vuoriston oolongin. Perinteistä gongfu-tapaa, jossa '
+                + 'lehdet uutetaan pienessä kannussa monta kertaa '
+                + 'peräkkäin, kutsutaan arkikielessä nimellä laoren '
+                + 'cha, vanhan miehen tee, ja sitä juodaan yhä '
+                + 'teetaloissa. Samasta perinteestä on lähtenyt '
+                + 'maailmalle kuplatee, joka keksittiin Taiwanissa. '
+                + 'Kaupungin oma teenviljelysalue on Maokong '
+                + 'Wenshanin kaupunginosassa: sinne nousee vuonna 2007 '
+                + 'avattu köysirata eläintarhan metroasemalta, rinteillä '
+                + 'kasvaa yhä tieguanyin-teetä, ja mäen päältä näkyy '
+                + 'koko allas. Vanhat polut, joita pitkin teetä '
+                + 'kannettiin alas, ovat nyt vaellusreittejä.',
+              kuva: {
+                tiedosto: 'Tea plantation, Pinglin.jpg',
+                selite: 'Teepensaat kasvavat tiiviinä kaarevina riveinä '
+                  + 'rinteessä, ja niiden takana alkaa metsä.',
+                lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: satama aukeaa',
+              teksti: 'Vuonna 1860 ratifioitiin Tianjinin sopimus, ja '
+                + 'Tamsuin satama joen suussa avattiin '
+                + 'ulkomaankaupalle. Muutamaa vuotta myöhemmin '
+                + 'skotlantilainen kauppias John Dodd alkoi yhdessä '
+                + 'paikallisten kauppiaiden ja viljelijöiden kanssa '
+                + 'kehittää saaren teestä vientitavaraa. Vuonna 1867 '
+                + 'hän perusti teeyhtiön Wanhuaan ja myi saaren '
+                + 'oolongia maailmalle nimellä Formosa Oolong. Kauppa '
+                + 'kasvoi nopeasti: oolongia vietiin vuodesta 1865 ja '
+                + 'baozhong-teetä vuodesta 1881, ja pian tee oli '
+                + 'noussut saaren vientilistan kärkeen sokerin ja '
+                + 'kamferin ohi. Ulkomaiset kauppahuoneet asettuivat '
+                + 'Twatutiaan eli nykyiseen Dadaochengiin vuodesta 1867, '
+                + 'ja vuoteen 1872 mennessä siellä toimi viisi '
+                + 'brittiläistä yhtiötä. Juuri tämä kauppa ratkaisi, '
+                + 'että pohjoisen Taiwanin uusi hallintokeskus '
+                + 'rakennettiin tänne.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Taipein ilmasto on kostea subtrooppinen, jossa on '
+                + 'piirre trooppisesta sademetsäilmastosta. Kesät ovat '
+                + 'pitkiä, hyvin kuumia ja kosteita, ja niihin kuuluvat '
+                + 'rankkasateet; Tyynenmeren taifuunikausi kestää '
+                + 'kesäkuusta lokakuuhun. Talvet ovat lyhyitä ja '
+                + 'yleensä leutoja mutta usein sumuisia, koska '
+                + 'koillistuuli tuo Siperian korkeapaineen viileää ilmaa, '
+                + 'joka kerääntyy altaan pohjalle. Lämmin talvipäivä voi '
+                + 'nousta yli kahdenkymmenenkuuden asteen, ja kesän '
+                + 'iltapäiväkuuro voi pudottaa lämpötilan saman rajan '
+                + 'alle. Nämä luvut ovat en-Wikipedian oman sääruudun '
+                + 'normaaleja vuosilta 1991–2020, eivät lehden muualla '
+                + 'käyttämää ERA5-aineistoa: tammikuun keskilämpö on '
+                + '16,4 astetta ja heinäkuun 29,9, kuivin kuukausi on '
+                + 'marraskuu 89 millimetrillä ja sateisimmat touko–'
+                + 'syyskuu, jolloin kuukausisade on 214–237 millimetriä. '
+                + 'Kylmin mitattu lukema on 0,2 pakkasastetta helmikuulta '
+                + '1901 ja kuumin 39,7 astetta heinäkuulta 2020.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ennen Taipeita altaassa asui Ketagalan-kansaa, ja '
+        + 'han-uudisraivaajat saapuivat vuonna 1709. Sadassa '
+        + 'seitsemässäkymmenessä vuodessa kolmesta kauppakylästä '
+        + 'kasvoi muurein ympäröity prefektuurin pääkaupunki.',
+      tehtava: {
+        kysymys: 'Miksi Taipein kaupunginmuurin rakentaminen '
+          + 'keskeytyi ensimmäisellä yrityksellä vuonna 1879?',
+        vaihtoehdot: [
+          'Rahat loppuivat kesken',
+          'Maaperä oli liian pehmeä kantamaan muuria',
+          'Kivi tuli väärästä louhoksesta',
+          'Työmiehet lähtivät etsimään kultaa',
+        ],
+        oikea: 1,
+        fakta: 'Altaan pohja on vanhaa järvensavea. Uudet mittaukset '
+          + 'tehtiin, perustus siirrettiin ja työ aloitettiin '
+          + 'uudelleen 1882.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolme kylää altaan pohjalla',
+          tiedosto: '2014-02-23 台北 Taipei from 貓空 01.jpg',
+          teksti: 'Ennen 1700-lukua Taipein allas oli Ketagalan-kansan '
+            + 'aluetta. Qing-hallinto alkoi vuosisadan alussa sallia '
+            + 'alueen raivaamisen, ja vuonna 1709 tänne asettuivat '
+            + 'ensimmäiset han-uudisraivaajat Etelä-Fujianista — '
+            + 'Dabusta, Yongdingistä, Anxistä ja Tong\'anista. '
+            + 'Seuraavan sadan vuoden aikana joenrannalle kasvoi kolme '
+            + 'kauppakylää: Bangka nykyisen Wanhuan kohdalle, '
+            + 'Dalongdong pohjoiseen ja Twatutia niiden väliin. '
+            + 'Kylien välit eivät aina olleet hyvät: vuonna 1853 väkeä '
+            + 'siirtyi selkkauksen jälkeen Bangkasta Twatutiaan. Niistä '
+            + 'kolmesta tuli myöhemmin yksi kaupunki.',
+          selite: 'Allas Maokongin rinteiltä katsottuna: matala pohja on '
+            + 'täynnä taloja, ja metsäiset kukkulat reunustavat sitä '
+            + 'joka suunnalta.',
+          lahde: 'othree, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Taipei',
+        },
+        {
+          otsikko: 'Tee nosti kylät kaupungiksi',
+          tiedosto: 'Historic Facades on Dihua Street - Taipei - Taiwan (33996547268).jpg',
+          teksti: 'Twatutian ensimmäinen kauppa avattiin 1851, ja '
+            + 'sen omistaja oli keelungilainen Lin Lan-tian. '
+            + '1850-luvulla Quanzhousta lähtöisin olleet kauppahuoneet '
+            + 'siirtyivät Bangkasta tänne ja rakensivat Keskikadun, '
+            + 'jota nykyään sanotaan Dihua-kaduksi. Kadulla käsiteltiin '
+            + 'teetä, kiinalaisia lääkeyrttejä, kankaita ja '
+            + 'suitsukeaineita. Kun Tamsuin satama avattiin '
+            + 'ulkomaankaupalle 1860, teenvienti teki seudusta rikkaan, '
+            + 'ja vuonna 1875 pohjoinen Taiwan erotettiin omaksi '
+            + 'Taipehin prefektuurikseen. Uusi hallintokeskus '
+            + 'rakennettiin vaurastuneiden kylien kylkeen ja sitä '
+            + 'kutsuttiin nimellä Chengnei, sisäkaupunki.',
+          selite: 'Dihua-kadun kauppahuoneiden julkisivuja: pylväitä, '
+            + 'koristelistoja ja pystysuoria kilpiä katutason '
+            + 'markiisien yllä.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Dihua Street',
+        },
+        {
+          otsikko: 'Muuri, joka ei aluksi pysynyt pystyssä',
+          tiedosto: 'Taipeh Jingfu Gate 7.jpg',
+          teksti: 'Prefekti Chen Hsing-chü määräsi vuonna 1879, että '
+            + 'uusi hallintokeskus ympäröidään muurilla. Työ jouduttiin '
+            + 'keskeyttämään, koska altaan pehmeä maaperä ei kantanut '
+            + 'niin raskasta rakennetta. Fujianin kuvernööri Cen '
+            + 'Yu-ying ja Taiwanin virkamies Liu Ao teettivät uudet '
+            + 'mittaukset perustuksen paikasta, käsityöläiset '
+            + 'palkattiin 1882, ja muuri valmistui 1884. Sitä tuli '
+            + 'lähes viisi kilometriä ja siinä oli viisi porttia. '
+            + 'Japanin hallinto purki muurit ja länsiportin 1900-luvun '
+            + 'alkuvuosina; itä-, etelä- ja pikkueteläportti '
+            + 'rakennettiin myöhemmin uudelleen, mutta ne eivät '
+            + 'palanneet entiselleen. Vain pohjoisportti on säilynyt '
+            + 'sellaisena kuin se tehtiin.',
+          selite: 'Itäportti seisoo liikenneympyrän keskellä: kivijalusta '
+            + 'ja valkoinen rintavarustus ovat vanhat, mutta punaiset '
+            + 'pylväät ja vihreä tiilikatto ovat myöhemmästä '
+            + 'uudelleenrakennuksesta.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Walls of Taipei',
+        },
+        {
+          otsikko: 'Taihoku: uusi nimi ja uusi kaava',
+          tiedosto: 'Control Yuan Building 20141003.jpg',
+          teksti: 'Kun Qing-Kiina luovutti Taiwanin Japanille '
+            + 'Shimonosekin sopimuksessa 1895, kaupunki säilyi '
+            + 'hallintokeskuksena mutta sen nimi kirjoitettiin nyt '
+            + 'japanilaisen ääntämyksen mukaan Taihoku. Kirjoitusmerkit '
+            + 'pysyivät samoina. Uusi hallinto laati laajan '
+            + 'kaupunkisuunnitelman ja rakensi rautatiet, ja samalla '
+            + 'nousi joukko virastotaloja ja virkamiesten asuinalueita '
+            + '— suuri osa Taipein tunnetuista julkisista rakennuksista '
+            + 'on tältä ajalta. Vuonna 1920 Taihoku muodostettiin '
+            + 'kaupungiksi, johon kuuluivat Bangka, Twatutia ja '
+            + 'sisäkaupunki Jōnai; itäinen Matsuyaman kylä, nykyinen '
+            + 'Songshan, liitettiin 1938.',
+          selite: 'Taihokun prefektuurin entinen virastotalo: valkeaksi '
+            + 'rapattu kupolirakennus, jonka parvekkeen kaidetta '
+            + 'kiertää kirjava koristenauha.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Taipei',
+        },
+      ],
+    },
+  ],
+  /*
+   * HONGKONG (Opus 21.8.2026). Alusta asti tehty lehti: kohteella oli
+   * ennestään vain kulttuurivisa (asia-questions.js), saapumisteksti,
+   * valokuvakortti (asia-lisat-valokuvat.js) ja lyhyt artikkelimerkintä
+   * (asia-artikkelit.js), jonka intro on tässä erässä kirjoitettu
+   * uusiksi. Kategorioita, kohdekarttaa eikä nähtävyysjuttuja ei ollut.
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 21.8.2026): Hong Kong, History of Hong Kong, Architecture of
+   * Hong Kong, Hong Kong cuisine, Star Ferry, Peak Tram, Hong Kong
+   * Tramways, Victoria Peak, Victoria Harbour, Kowloon Walled City,
+   * 1894 Hong Kong plague, Clock Tower (Hong Kong), Western Market,
+   * Man Mo temples in Hong Kong, Tai Kwun, St John's Cathedral (Hong
+   * Kong) ja Blue House (Hong Kong). Pohjana ovat
+   * docs/aasia-tyoaineisto/faktapohja-hongkong.md ja
+   * tarkistus-hongkong.md, jotka luettiin yhdessä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md, ”Hongkong”): 1800-luvun
+   * satamahistoria, kolonialismi neutraalina historiana, arkkitehtuuri
+   * ja ruoka; EI 2010–2020-lukujen mielenosoituksia eikä
+   * turvallisuuslakia. POIS JÄTETTY KOKONAAN: vuoden 2014 ja vuosien
+   * 2019–2020 mielenosoitukset ja niiden jälkiseuraukset, vuoden 2020
+   * turvallisuuslaki, vuoden 1966 lauttalipun hinnankorotusmellakat
+   * (Star Ferry -artikkelin oma osio), vuoden 1967 levottomuudet,
+   * toisen maailmansodan miehitys, vuoden 1949 pakolaisaalto
+   * poliittisena kysymyksenä ja Kowloonin muurikaupungin rikollisuus.
+   * Vuosi 1997 on lehdessä hallinnollinen käänne — vuokra-aika päättyi
+   * — ilman osapuolikehystä, ja se mainitaan vain kahdesti.
+   * Oopiumisodat kerrotaan kauppahistorian käännekohtina ilman
+   * taistelukuvauksia tai uhrilukuja, samoin kuin Kantonin lehdessä.
+   * Uskonto on historiallis-kulttuurinen ilmiö: Man Mo -temppeli ja
+   * Pyhän Johanneksen katedraali ovat rakennuksia ja kaupunkikuvan
+   * kerrostumia, ei hartauskieltä.
+   *
+   * KAKSI KOHTAA, JOISSA LEHTI POIKKEAA FAKTAPOHJASTA, ja miksi:
+   * 1) Faktapohjan nosto K4 oli ruoka ja H4 vuoden 1894 rutto
+   *    rotuperustaisine asumisrajoituksineen. Kaupunki-sivun neljäs
+   *    nosto on tässä sen sijaan raitiotie (omistajan painotus:
+   *    raitiovaunut ja Star Ferry etusijalla), ja ruoka on siirretty
+   *    matkaoppaan kolmanteen jaksoon, jossa sille on enemmän tilaa.
+   * 2) Historia-sivun nosto H4 kertoo vuoden 1894 epidemian
+   *    TIETEEN JA KAUPUNKIRAKENTEEN kautta: Kitasato ja Yersin,
+   *    Taipingshanin lunastus ja uudelleenrakennus, bakteriologinen
+   *    laitos. Peak District Reservation Ordinance on jätetty pois
+   *    nostosta, koska se on eri asia kuin epidemia (asetus on
+   *    vuodelta 1904, epidemia 1894) ja koska Victoria Peakin oma
+   *    juttu nahtavyysjutut.js:ssä kertoo sen omassa yhteydessään
+   *    neutraalina siirtomaahistoriana.
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA, jotka koskevat lehden
+   * tekstejä, ja miten ne on ratkaistu:
+   *  - Star Ferry -artikkelin johdanto sanoo laivastoksi kaksitoista
+   *    alusta, sen oma Fleet-osio yhdeksän. Lehti ei sano lukua
+   *    lainkaan vaan kertoo matkustajamäärän, joka on molemmissa
+   *    kohdissa sama (yli 70 000 päivässä, n. 26 miljoonaa vuodessa).
+   *    Sama ratkaisu kuin Kantonin etäisyysluvussa.
+   *  - Peak Tram -artikkelin infoboksi sanoo avajaispäiväksi
+   *    30.5.1888, leipäteksti 28.5.1888. Lehti sanoo ”toukokuussa
+   *    1888”, jolloin kumpikaan luku ei jää vastaan sanomaan.
+   *  - Victoria Peak -artikkeli sanoo Peak District Reservation
+   *    Ordinancen olleen voimassa ”1904–1930” ja kaksi kappaletta
+   *    myöhemmin ”1904–1947”. Kohteen juttu kirjoittaa eron auki
+   *    lukijalle.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Britannia vuoteen 1997
+   * (historia-sivun johdanto ja nosto H2), pilvenpiirtäjät (nosto K3),
+   * Star Ferry (nosto K1 ja avauskuva), vuoden 1888 vaunurata (nosto
+   * K2) ja ”yksi maa, kaksi järjestelmää” (asia-artikkelit.js:n
+   * teksti-kenttä). Historia-sivun minitehtävä kysyy Kowloonin
+   * niemimaan liittämisvuotta 1860, jota visa ei kysy, ja vastaus on
+   * samalla sivulla nostossa H2.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu. Star Ferry on
+   * lehdessä kahdessa kuvassa (avauskuvan yksinäinen lautta
+   * aurinkoisena päivänä ja noston K1 kaksi lauttaa sumussa) ja
+   * kolmannen kerran kohdekartan jutussa laiturirakennuksena — eri
+   * tiedostot, kolme eri aihetta, ja lautta on koko lehden selkäranka
+   * samaan tapaan kuin Shamian Kantonissa. Vaunurata on avauskuvassa
+   * (nykyinen vaunu ohituskohdassa) ja nostossa K2 vuoden 1908
+   * asemakuvana; kohdekartan juttu näyttää vuoden 1956 vaunun
+   * museoituna. Victoria-satama näkyy kaikissa kolmessa
+   * kansikuvassa, mutta kolmesta eri suunnasta ja kolmesta eri
+   * kaupunginosasta, mikä on juuri kansikarusellin tarkoitus
+   * (omistajan linjaus 21.8.2026).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi’anin, Varanasin, Kathmandun ja Kantonin
+   * malli v965–v977). Talon menetelmä on Open-Meteon arkisto (ERA5,
+   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn ajan
+   * pelkällä virheellä ”Daily API request limit exceeded. Please try
+   * again tomorrow” — kontin jaetun ulosmenevän osoitteen
+   * vuorokausikiintiö oli käytetty loppuun, eikä se nollaudu ennen
+   * UTC-vuorokauden vaihdetta. Kokeiltu työn alussa ja lopussa, sama
+   * vastaus kummallakin kerralla. Lukuja ei ole otettu mistään muusta
+   * lähteestä, koska vuosigraafin lähderivi lupaa lukijalle
+   * nimenomaan ERA5:n. Matkaoppaan jakso 5 nojaa siksi en-Wikipedian
+   * Hong Kong -artikkelin sääruutuun (Hongkongin observatorio,
+   * normaalit 1991–2020), ja jakso sanoo sen ääneen. Kun ERA5-rivi
+   * joskus lisätään, jakso 5 on kirjoitettava rivin omista luvuista.
+   * Mittauspiste olisi Central 22,282 / 114,158.
+   */
+  hongkong: [
+    {
+      id: 'kaupunki',
+      nimi: 'Hongkong',
+      johdanto: 'Vuorten ja meren väliin puristettu satamakaupunki, '
+        + 'jonka Victoria-satama on syvä ja luonnostaan suojainen. '
+        + 'Kalastajakylästä kasvoi puolessatoista vuosisadassa '
+        + 'pystysuuntaan rakennettu miljoonakaupunki, jonka lautat ja '
+        + 'raitiovaunut kulkevat yhä 1800-luvun reittejä.',
+      /*
+       * KANSIKUVAT: kolme laajaa yleiskuvaa kolmesta eri suunnasta —
+       * ylhäältä Victoria Peakin rinteeltä, sataman poikki Kowloonin
+       * puolelta ja saaren toiselta laidalta Aberdeenin lahdelta.
+       * Yhtään yksityiskohta-, sisä- tai ruokakuvaa ei ole kannessa
+       * (omistajan kansikaruselli-linjaus 21.8.2026).
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Kowloon, Victoria Harbour and Hong Kong from Victoria Gap.jpg',
+          selite: 'Victoria Peakin rinteeltä katsottuna tornitalot '
+            + 'täyttävät koko rannan, ja sataman takana kohoavat '
+            + 'Kowloonin vuoret.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'View of Victoria Harbour from Tsim Sha Tsui.jpg',
+          selite: 'Kowloonin rantapromenadilta saaren siluetti nousee '
+            + 'suoraan veden takaa vihreiden vuorenrinteiden eteen.',
+          lahde: 'Benlisquare, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Aberdeen Harbour in 2016.jpg',
+          selite: 'Saaren eteläpuolella Aberdeenin satama-altaassa on '
+            + 'rivi veneitä, ja molempia rantoja reunustavat '
+            + 'tornitalot.',
+          lahde: 'Ceeseven, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: lautta, vaunurata ja liiketalo — kolme asiaa,
+       * joista lehti kertoo, siinä järjestyksessä jossa se ne kertoo.
+       * Kaksi ensimmäistä ovat kaupungin omia kulkuneuvoja, kolmas
+       * se rakennustyyppi, joka oli täällä kaikkialla ennen
+       * tornitaloja.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Star Ferry Hong Kong. (39837102942).jpg',
+          selite: 'Vihreävalkoinen Star Ferry -lautta ylittää sataman, '
+            + 'ja takana nousee saaren rinne tornitaloineen.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, '
+            + 'Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Hong Kong. Funicular railway to Victoria Peak. Passing point.jpg',
+          selite: 'Punainen vaunuradan vaunu ohituskohdassa jyrkässä '
+            + 'rinteessä, ja kiskojen takana häämöttävät keskustan '
+            + 'tornit.',
+          lahde: 'Anne and David, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'HK ShanghaiStreet CantoneseVerandahTypePrewarShophouses.JPG',
+          selite: 'Sotia edeltävien tong lau -liiketalojen rivi: '
+            + 'alakerrassa kaupat, ylhäällä asunnot ja julkisivuilla '
+            + 'pystysuorat kyltit.',
+          lahde: 'Chong Fat, Wikimedia Commons (PD)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Tähtilautta, joka jäi kulkemaan',
+          tiedosto: 'Star Ferries. Hong Kong. (9061977293).jpg',
+          teksti: 'Ennen höyrylauttoja satama ylitettiin '
+            + 'matalapohjaisilla puuveneillä, sampaneilla. Vuonna 1870 '
+            + 'Grant Smith -niminen mies toi Englannista '
+            + 'kaksipotkurisen puurunkoisen veneen ja alkoi kuljettaa '
+            + 'väkeä epäsäännöllisin väliajoin. Heinäkuussa 1873 '
+            + 'yritettiin aloittaa säännöllinen höyrylauttaliikenne '
+            + 'saaren ja Kowloonin välillä, mutta hanke pysäytettiin '
+            + 'Britannian Kantonin-konsulin pyynnöstä. Vuonna 1888 '
+            + 'parsilainen kauppias Dorabjee Naorojee Mithaiwala '
+            + 'perusti Kowloon Ferry Companyn ja osti Smithin veneen; '
+            + 'yhtiö otti nimen Star Ferry vuonna 1898. Laivojen nimet '
+            + 'Morning Star ja Evening Star ovat Tennysonin runosta.',
+          selite: 'Kaksi vihreävalkoista lauttaa kohtaa sumuisessa '
+            + 'satamassa, ja taustan tornitalot erottuvat vain '
+            + 'haaleina ääriviivoina.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, '
+            + 'Wikimedia Commons (CC0)',
+          wiki: 'Star Ferry',
+        },
+        {
+          otsikko: 'Rata, joka kiipeää lähes pystysuoraan',
+          tiedosto: 'Tcitp d174 hong kong peak tram station.jpg',
+          teksti: 'Victoria Peakille noustiin 1800-luvulla '
+            + 'kantotuolilla, ja se piti rinteen rakentamisen '
+            + 'vähäisenä. Vuonna 1881 Alexander Findlay Smith jätti '
+            + 'kuvernöörille anomuksen vuoristoradasta, ja tarvittava '
+            + 'laki hyväksyttiin kaksi vuotta myöhemmin. Rakennustyöt '
+            + 'alkoivat syyskuussa 1885, ja rata avattiin toukokuussa '
+            + '1888 Aasian ensimmäisenä funikulaarina. Reitti on noin '
+            + 'puolitoista kilometriä ja nousee vajaat neljäsataa '
+            + 'metriä. Kaksi vaunua toimii toistensa vastapainoina ja '
+            + 'kohtaa radan puolivälissä ohituskohdassa. Ensimmäisenä '
+            + 'päivänä matkusti kahdeksansataa ihmistä ja ensimmäisenä '
+            + 'vuonna noin sataviisikymmentätuhatta.',
+          selite: 'Vuoden 1908 valokuva radan yläasemalta: puinen vaunu '
+            + 'seisoo kiskoilla tiilisen konehuoneen vieressä.',
+          lahde: 'Arnold Wright, Wikimedia Commons (PD)',
+          wiki: 'Peak Tram',
+        },
+        {
+          otsikko: 'Kaupunki, joka rakensi ylöspäin',
+          tiedosto: 'Yick Cheong Building View 2015.jpg',
+          teksti: 'Hongkongissa on enemmän yli sadanviidenkymmenen '
+            + 'metrin korkuisia rakennuksia kuin missään muussa '
+            + 'maailman kaupungissa. Syy on maantieteessä: koko '
+            + 'hallintoalue on noin 1 110 neliökilometriä, mutta '
+            + 'rakentamaton maasto on kukkulaista ja jyrkkää, ja siitä '
+            + 'noin neljäkymmentä prosenttia on maastopuistoja ja '
+            + 'luonnonsuojelualueita. Rakentaminen on siksi puristettu '
+            + 'kapeille kaistaleille — ja osin merestä otetulle maalle, '
+            + 'jota on seitsemänkymmentä neliökilometriä eli neljäsosa '
+            + 'rakennetusta alasta. Ennen tornitaloja perusmuoto oli '
+            + 'tong lau: kolmi- tai nelikerroksinen liiketalo, jossa '
+            + 'kauppa oli kadun tasossa ja asunnot parvekkeineen sen '
+            + 'yllä.',
+          selite: 'Alaviistosta kuvattu asuintalojen sisäpiha, jonka '
+            + 'seinät jatkuvat kerros kerroksen jälkeen ylöspäin '
+            + 'parvekkeineen ja ilmastointilaitteineen.',
+          lahde: 'Jonathan Leung, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Architecture of Hong Kong',
+        },
+        {
+          otsikko: 'Kaksikerroksinen raitiovaunu vuodesta 1904',
+          tiedosto: '德輔道中 Des Voeux Road Central, 1960s.jpg',
+          teksti: 'Raitiotietä ehdotettiin ensimmäisen kerran vuonna '
+            + '1881, mutta hanke jäi vaunuradan varjoon, joka '
+            + 'kiinnosti hallintoa enemmän. Laki hyväksyttiin '
+            + 'toukokuussa 1902, ja liikenne alkoi 30. heinäkuuta 1904 '
+            + 'kahdellakymmenelläkuudella yksikerroksisella vaunulla, '
+            + 'jotka tuotiin maahan osissa ja koottiin varikolla. '
+            + 'Kaksikerroksiset vaunut tulivat vuonna 1912 '
+            + 'avokattoisina; kangaskatot lisättiin 1913 ja umpinaiset '
+            + 'vaunut 1925. Rata kulkee yhä saaren pohjoisrantaa '
+            + 'Kennedy Townista Shau Kei Waniin, ja Happy Valleyn '
+            + 'silmukka haarautuu siitä. Hongkongin vaunusto on '
+            + 'maailman suurin käytössä oleva kaksikerroksisten '
+            + 'raitiovaunujen laivue.',
+          selite: '1960-luvun katunäkymä Des Voeux Roadilta: vihreä '
+            + 'kaksikerroksinen raitiovaunu kadun keskellä ja '
+            + 'molemmin puolin rivi pystysuoria mainoskylttejä.',
+          lahde: 'Unknown., Wikimedia Commons (PD)',
+          wiki: 'Hong Kong Tramways',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'View down Central-Mid-Levels escalators from Conduit Road.jpg',
+          selite: 'Keskustan ja rinnekaupunginosien välinen '
+            + 'liukuporrasjono laskeutuu katua alas talojen välissä.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Hongkong on Kiinan erityishallintoalue Etelä-Kiinan '
+          + 'meren rannalla, kuudenkymmenen kilometrin päässä Macaosta '
+          + 'itään. Pinta-alaa on noin 1 110 neliökilometriä, mutta '
+          + 'matkailijan Hongkong on pieni. Melkein kaikki tämän sivun '
+          + 'kartan kohteet ovat Victoria-sataman molemmin puolin '
+          + 'Centralin, Sheung Wanin, Wan Chain ja Tsim Sha Tsuin '
+          + 'kaupunginosissa, ja niiden väliä kuljetaan lautalla, '
+          + 'raitiovaunulla ja kävellen. Kowloonin muurikaupungin '
+          + 'puisto on kuuden ja puolen kilometrin päässä koillisessa, '
+          + 'eikä se siksi ole kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Hongkong',
+          taitto: 'opas',
+          teksti: 'Yksi satama, kaksi rantaa ja kaksi rataa: toinen '
+            + 'kulkee rantaviivaa pitkin, toinen kiipeää suoraan ylös.',
+          nosto: 'Lautat kiinnitetään laituriin yhä samalla tavalla '
+            + 'kuin 1800-luvulla: miehistön jäsen heittää köyden '
+            + 'laiturilla seisovalle miehelle, joka nappaa sen '
+            + 'pitkävartisella koukulla. Matka Centralista Tsim Sha '
+            + 'Tsuihin on yksi kaupungin edullisimmista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Yli yhdeksänkymmentä prosenttia asukkaiden '
+                + 'päivittäisistä matkoista tehdään julkisilla '
+                + 'kulkuneuvoilla — suurempi osuus kuin missään '
+                + 'muualla maailmassa. Metroverkossa on '
+                + 'yhdeksänkymmentäyhdeksän asemaa ja '
+                + 'kuusikymmentäkahdeksan pikaraitiotien pysäkkiä, '
+                + 'matkustajia on lähes viisi miljoonaa päivässä, ja '
+                + 'junista 99,9 prosenttia kulkee aikataulussa. Lipun '
+                + 'sijaan käytetään Octopus-korttia, joka kelpaa '
+                + 'junaan, raitiovaunuun, bussiin ja lauttaan sekä '
+                + 'useimpiin kauppoihin. Star Ferry kuljettaa yhä yli '
+                + 'seitsemääkymmentätuhatta matkustajaa päivässä eli '
+                + 'noin kaksikymmentäkuusi miljoonaa vuodessa, vaikka '
+                + 'sataman ali kulkee sekä tie- että '
+                + 'rautatietunneleita. Vanha Kai Takin lentoasema '
+                + 'lopetti toimintansa vuonna 1998, ja liikenne '
+                + 'siirtyi nykyiselle kansainväliselle lentoasemalle.',
+              kuva: {
+                tiedosto: 'Central Piers Overview 2010.jpg',
+                selite: 'Ilmakuva Centralin lauttalaitureista: rivi '
+                  + 'terminaaleja työntyy satamaan, ja rannalla on '
+                  + 'täyttötyömaa.',
+                lahde: 'WiNG, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Hongkong on Kiinan eteläisellä rannikolla, ja '
+                + 'sen ainoa maaraja on pohjoisessa Shenzheniä vasten '
+                + 'Sham Chun -joen takana. Maapinta-alaa on noin '
+                + '1 110 neliökilometriä, ja se jakautuu Hongkongin '
+                + 'saareen, Kowloonin niemimaahan, Uusiin alueisiin, '
+                + 'Lantauhun ja yli kahteensataan pienempään saareen. '
+                + 'Korkein kohta on Tai Mo Shan, 957 metriä. '
+                + 'Rakentaminen on keskittynyt Kowlooniin, '
+                + 'Hongkongin saarelle ja Uusien alueiden '
+                + 'satelliittikaupunkeihin, ja loput maastosta on '
+                + 'kukkulaista ja vuorista. Makeaa vettä on vähän: '
+                + 'seitsemänkymmentä prosenttia siitä tulee '
+                + 'Guangdongin puolelta Dongjiang-joesta, ja '
+                + 'useimmilla rakennetuilla alueilla vessat '
+                + 'huuhdellaan merivedellä.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: aamutee',
+              teksti: 'Riisi on kotiruoan perusta, ja ruokaostoksia '
+                + 'tehdään usein päivittäin pieninä erinä, koska '
+                + 'keittiöt ovat pieniä ja tuoreus ratkaisee. Ulkona '
+                + 'syöminen ja mukaan ostaminen ovat tavallisia: '
+                + 'keskimääräinen työviikko on lähes '
+                + 'neljäkymmentäseitsemän tuntia. Tunnetuin tapa on '
+                + 'yum cha eli aamutee, jonka yhteydessä pöytään '
+                + 'tuodaan dim sumia — pieniä höyrytettyjä tai '
+                + 'paistettuja annoksia bambukoreissa, joita '
+                + 'tarjoilijat kuljettavat kärryillä salin läpi. '
+                + 'Kaupungin oma keittiöilmiö on cha chaan teng, '
+                + '1940–1950-luvulla syntynyt edullinen ruokala, '
+                + 'jossa syödään ananassämpylää ja juodaan '
+                + 'maitoteetä. 1800-luvun lopulla kantonilaiset '
+                + 'ravintolat tarjosivat liikemiehille juhla-aterioita, '
+                + 'joiden hinta vastasi virkailijan kuukausipalkkaa; '
+                + 'tavallisen väen ruoka oli yksinkertaista ja liha '
+                + 'kuului juhlapäiviin.',
+              kuva: {
+                tiedosto: 'Eight selection of Dim Sum in Hong Kong.jpg',
+                selite: 'Bambukorissa on kahdeksan erilaista dim '
+                  + 'sum -annosta paperin päällä, höyrytettyinä ja '
+                  + 'täytettyinä.',
+                lahde: 'Peachyeung316, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kadonnut muurikaupunki',
+              teksti: 'Kowloonin puolella oli Song-kaudelta peräisin '
+                + 'oleva vartioasema, josta tehtiin vuonna 1847 '
+                + 'muurein varustettu linnoitus. Vuoden 1898 sopimus, '
+                + 'joka vuokrasi Uudet alueet Britannialle, jätti '
+                + 'juuri tämän pienen linnoituksen sopimuksen '
+                + 'ulkopuolelle: se jäi muodollisesti Kiinan '
+                + 'hallintaan keskelle brittiläistä aluetta ja '
+                + 'käytännössä ilman kummankaan tehokasta hallintoa. '
+                + 'Toisen maailmansodan jälkeen alueelle muutti '
+                + 'paljon väkeä, ja 1960-luvulta alkaen sen päälle '
+                + 'rakennettiin ilman suunnittelua kerros kerroksen '
+                + 'perään. Vuoden 1987 selvityksen mukaan 2,6 '
+                + 'hehtaarin alueella asui arviolta kolmekymmentäkolme '
+                + 'tuhatta ihmistä. Rakennukset purettiin maaliskuun '
+                + '1993 ja huhtikuun 1994 välillä, ja tilalle '
+                + 'rakennettiin puutarha, joka avattiin joulukuussa '
+                + '1995; sen keskellä seisoo entisöity yamen eli '
+                + 'vanha virkatalo.',
+              kuva: {
+                tiedosto: '2024-12-28 Kowloon Walled City Park.jpg',
+                selite: 'Puutarhassa kiemurtelee kiveystie leikattujen '
+                  + 'pensaiden lomassa, ja perällä näkyy valkoinen '
+                  + 'muuri kuuportteineen.',
+                lahde: 'Alexkom000, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Ilmasto on kostea subtrooppinen — Köppenin '
+                + 'luokituksessa Cwa — ja sivuaa trooppista '
+                + 'monsuuni-ilmastoa. Nämä luvut ovat en-Wikipedian '
+                + 'Hongkong-artikkelin sääruudusta, joka perustuu '
+                + 'Hongkongin observatorion normaaleihin vuosilta '
+                + '1991–2020; lehden vuosigraafia ei ole, koska sen '
+                + 'lupaamaa ERA5-aineistoa ei saatu haettua. '
+                + 'Kuukausikeskilämpö nousee tammikuun 16,5 asteesta '
+                + 'heinäkuun 28,9 asteeseen, ja vuoden keskiarvo on '
+                + '23,5 astetta. Sadetta tulee 2 431 millimetriä '
+                + 'vuodessa, mutta se jakautuu hyvin epätasaisesti: '
+                + 'kesäkuussa 492 millimetriä, joulukuussa 29. Kesät '
+                + 'ovat pitkiä, kuumia ja kosteita, ja niihin kuuluu '
+                + 'taifuunikausi; talvet ovat lyhyitä ja leutoja. '
+                + 'Syksy on aurinkoisin ja kevät pilvisin vuodenaika, '
+                + 'ja lunta on nähty viimeksi Tai Mo Shanin vuorella '
+                + 'vuonna 1975.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saarella asui vuonna 1841 vajaat seitsemäntuhatta '
+        + 'ihmistä. Britannia hallitsi aluetta vuoteen 1997, ja sinä '
+        + 'aikana kalastajakylistä kasvoi satamakaupunki, jonka '
+        + 'rakenne näkyy yhä katukuvassa.',
+      tehtava: {
+        kysymys: 'Minä vuonna Kowloonin niemimaa liitettiin '
+          + 'Hongkongiin?',
+        vaihtoehdot: [
+          '1842',
+          '1860',
+          '1898',
+          '1997',
+        ],
+        oikea: 1,
+        fakta: 'Pekingin sopimus lokakuussa 1860 siirsi Kowloonin '
+          + 'niemimaan Boundary Streetiin asti. Uudet alueet '
+          + 'vuokrattiin vasta 1898.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lippu Possession Pointissa',
+          tiedosto: 'Album of Hongkong Canton Macao Amoy Foochow 034.jpg',
+          teksti: 'Britannia miehitti Hongkongin saaren 25. tammikuuta '
+            + '1841 ja käytti sitä sotilaallisena tukikohtana; '
+            + 'seuraavana päivänä Union Jack nostettiin Possession '
+            + 'Pointissa Chuenpin sopimuksen nojalla. Saarella asui '
+            + 'tuolloin arviolta 7 450 ihmistä, enimmäkseen '
+            + 'tanka-kalastajia ja hakka-hiilenpolttajia muutamassa '
+            + 'rannikkokylässä. Elokuun 29. päivänä 1842 Nanjingin '
+            + 'sopimus vahvisti luovutuksen ensimmäisen oopiumisodan '
+            + 'päätteeksi, ja saaresta tuli kruununsiirtokunta. '
+            + '1850-luvulla väkiluku kasvoi nopeasti, kun '
+            + 'manner-Kiinan levottomuudet, tulvat, taifuunit ja '
+            + 'nälänhätä ajoivat ihmisiä saarelle.',
+          selite: 'Noin vuoden 1870 valokuva kaupungin yläpuolelta: '
+            + 'puutarhan takana on satama täynnä purjelaivoja ja '
+            + 'vastarannalla Kowloonin vuoret.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'History of Hong Kong',
+        },
+        {
+          otsikko: 'Kolme sopimusta, kolme rajaa',
+          tiedosto: 'Nicholas Belfield Dennys - Map of Hong Kong (1867).jpg',
+          teksti: 'Hongkong ei syntynyt kerralla. Nanjingin sopimus '
+            + 'luovutti Hongkongin saaren vuonna 1842. Pekingin '
+            + 'sopimus 18. lokakuuta 1860 lisäsi siihen Kowloonin '
+            + 'niemimaan Boundary Streetiin asti — katu on yhä '
+            + 'olemassa ja kulkee suorana viivana niemimaan poikki. '
+            + 'Kolmas vaihe oli luonteeltaan toinen: 1. heinäkuuta '
+            + '1898 Britannia vuokrasi Uudet alueet, Shenzhen-joen '
+            + 'eteläpuolisen maan saarineen, yhdeksäksikymmeneksi '
+            + 'yhdeksäksi vuodeksi. Juuri määräaika ratkaisi lopun: '
+            + 'kun vuokra-aika täyttyi vuonna 1997, koko alue '
+            + 'palautui hallinnollisesti Kiinalle yhtenä '
+            + 'kokonaisuutena.',
+          selite: 'Vuoden 1866 kaupunkikartta ”Plan of Victoria”: '
+            + 'korttelit jatkuvat kapeana nauhana rantaa pitkin, ja '
+            + 'sen alapuolella on selitysluettelo.',
+          lahde: 'Nicholas Belfield Dennys (1839–1900), Wikimedia Commons (PD)',
+          wiki: 'History of Hong Kong',
+        },
+        {
+          otsikko: 'Kaasu, sähkö ja pankki',
+          tiedosto: 'Hong Kong 1868.jpg',
+          teksti: '1800-luvun jälkipuoliskolla sotilastukikohdasta '
+            + 'tuli kauppakaupunki. Ensimmäinen kaasuyhtiö aloitti '
+            + 'vuonna 1862 ja ensimmäinen sähköyhtiö 1890. Rikshojen '
+            + 'rinnalle tulivat vähitellen bussit, lautat ja '
+            + 'raitiovaunut. Vuonna 1865 avattu Hongkongin ja '
+            + 'Shanghain pankki loi perustan sille, mistä '
+            + 'kaupungista myöhemmin tuli rahoituskeskus. Samaan '
+            + 'aikaan lähetysseurat perustivat kouluja ja kirkkoja: '
+            + 'St Stephenin kirkko vuonna 1865 ja kiinalaisten '
+            + 'lääketieteellinen korkeakoulu 1887, jonka kahdesta '
+            + 'ensimmäisestä valmistuneesta toinen oli Sun Yat-sen. '
+            + 'Korkeakoulusta kasvoi myöhemmin Hongkongin yliopiston '
+            + 'lääketieteellinen tiedekunta.',
+          selite: 'John Thomsonin valokuva vuodelta 1868: '
+            + 'pylväikköhuviloiden ja tiilikattojen takana avautuu '
+            + 'satama, jossa on kymmeniä purjelaivoja.',
+          lahde: 'John Thomson, Wikimedia Commons (PD)',
+          wiki: 'History of Hong Kong',
+        },
+        {
+          otsikko: 'Kaupunki, jossa ruttobakteeri löytyi',
+          tiedosto: 'Hong Kong Museum of Medical Sciences.jpg',
+          teksti: 'Vuonna 1894 Hongkongiin levisi kolmannen '
+            + 'ruttopandemian aalto. Kesäkuussa kaupunkiin saapui '
+            + 'kaksi tutkijaa: japanilainen Kitasato Shibasaburō '
+            + 'kahdentenatoista ja ranskalais-sveitsiläinen Alexandre '
+            + 'Yersin viidentenätoista päivänä. Molemmat etsivät '
+            + 'taudinaiheuttajaa, ja Yersinin kuvaus osoittautui '
+            + 'täsmällisemmäksi — bakteeri sai myöhemmin hänen '
+            + 'mukaansa nimen Yersinia pestis. Epidemia muutti myös '
+            + 'kaupunkia: tiheään rakennettu Taipingshanin kortteli '
+            + 'lunastettiin, purettiin ja rakennettiin uudelleen '
+            + 'vuosina 1895–1898 viemäreineen ja parvekkeineen. '
+            + 'Vuonna 1906 avattiin bakteriologinen laitos, jossa '
+            + 'toimii nykyään lääketieteen museo.',
+          selite: 'Vuonna 1906 valmistuneen bakteriologisen laitoksen '
+            + 'punatiilinen julkisivu kaarevine ikkunoineen '
+            + 'rinnekortteleiden keskellä.',
+          lahde: 'ystsoi, Wikimedia Commons (CC BY 2.0)',
+          wiki: '1894 Hong Kong plague',
+        },
+      ],
+    },
+  ],
 };

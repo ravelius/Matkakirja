@@ -26242,4 +26242,754 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TAIPEIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Kymmenen kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään; viimeinen
+   * on kainalokartassa. Faktat on tarkistettu en-Wikipedian artikkeleista
+   * Dalongdong Baoan Temple, Taipei Confucius Temple, Dihua Street,
+   * Dadaocheng, Taipei North Gate, Walls of Taipei, Presidential Office
+   * Building (Taipei), Red House Theater, Ximending, Longshan Temple
+   * (Taipei), Bopiliao Historic Block, Chiang Kai-shek Memorial Hall,
+   * Taipei Botanical Garden ja Taipei 101 (haettu 21.8.2026).
+   *
+   * SISÄLTÖLINJAUS on sama kuin lehdessä (ks. kulttuuri-kategoriat.js:n
+   * taipei-lohkon kommentti): hallinnon vaiheet ovat päivämääriä ja
+   * hallintomuutoksia, ei nykypolitiikkaa. Muistosalin juttu kertoo
+   * rakennuksen ja aukion, ei sen ympärillä käytyä keskustelua.
+   * Presidentinlinnan jutussa on yksi lause toisen maailmansodan
+   * vaurioista, koska rakennuksen korjaushistoria ei muuten olisi
+   * ymmärrettävä; uhrilukuja tai osapuolikehystä ei ole.
+   *
+   * USKONNOLLISET KOHTEET kerrotaan rakennuksina ja kerrostumina,
+   * kuten Jerusalemissa, Medinassa ja Xi'anissa: kuka rakensi, mistä
+   * suvut tulivat, mitä rakennuksessa tehdään.
+   *
+   * KAKSI KOHDETTA KULKEE PARINA. Baoan-temppelin jutussa kerrotaan
+   * myös naapurin Konfutse-temppeli, koska temppelit ovat saman
+   * korttelin vastakkaisilla puolilla eikä niille voi antaa kahta
+   * numeroympyrää ilman että ne menevät päällekkäin (maakartat.js:n
+   * taipei-lohko). Samasta syystä Punaisen talon juttu kertoo koko
+   * Ximendingin.
+   */
+  taipei: {
+    'Baoan-temppeli': {
+      aika: '1804, edeltäjä 1742',
+      teksti: 'Dalongdongin kortteliin muutti 1700- ja 1800-luvulla '
+          + 'väkeä Tong\'anista, Xiamenin seudulta Fujianista. He '
+          + 'pystyttivät ensin puisen pyhäkön vuonna 1742 ja aloittivat '
+          + 'nykyisen temppelin rakentamisen 1804. Nimi Baoan tarkoittaa '
+          + 'sitä, mitä siltä toivottiin: että se suojelisi Tong\'anin '
+          + 'väkeä.'
+          + '\n\n'
+          + 'Temppeliä laajennettiin Japanin hallintokaudella nykyiseen '
+          + 'laajuuteensa, ja se sai 1985 toisen luokan historiallisen '
+          + 'muistomerkin aseman. Vuosien laiminlyönnin jälkeen '
+          + 'rakennukset kunnostettiin 1995 alkaen, ja työstä myönnettiin '
+          + '2003 Unescon Aasian ja Tyynenmeren kulttuuriperintöpalkinto. '
+          + 'Huhtikuun puolivälistä kesäkuun puoliväliin pihalla '
+          + 'vietetään Baoshengin kulttuurijuhlaa.'
+          + '\n\n'
+          + 'Kadun toisella puolella on Taipein Konfutse-temppeli. Se '
+          + 'rakennettiin ensimmäisen kerran 1879, neljä vuotta '
+          + 'prefektuurin perustamisen jälkeen, alkuperäiselle '
+          + 'paikalleen keskustaan; nykyinen rakennus valmistui 1930 '
+          + 'Qufun esikuvan mukaan, ja se on Taiwanin '
+          + 'Konfutse-temppeleistä ainoa, jota koristavat '
+          + 'eteläfujianilaiset keramiikkakoristeet. Joka vuosi '
+          + '28. syyskuuta siellä pidetään seremonia, jossa soitetaan '
+          + 'vanhaa musiikkia ja tanssitaan tarkoin määrätyt kuviot.',
+      kuvat: [
+        {
+          tiedosto: 'Taipeh Dalongdong Baoan Temple Tor 1.jpg',
+          selite: 'Temppelin etusali kaartuvine kattoineen: harjalla '
+            + 'nousee kaksi lohikäärmettä, ja pihalla seisoo rivi '
+            + 'ruukkupensaita.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dihua-katu': {
+      aika: '1850-luvulta',
+      teksti: 'Dihua-katu on Taipein vanhin katu, ja osa siitä on ollut '
+          + 'olemassa jo 1600-luvulla. Nykyinen katu rakennettiin '
+          + '1850-luvulla, kun Quanzhousta lähtöisin olleet '
+          + 'kauppahuoneet siirtyivät Bangkasta Dadaochengiin. Katua '
+          + 'kutsuttiin silloin Keskikaduksi; nimen Dihua se sai vasta '
+          + '1947 Xinjiangin kaupungin mukaan, joka tunnetaan nykyään '
+          + 'nimellä Ürümqi.'
+          + '\n\n'
+          + 'Kadulla käytiin kauppaa kiinalaisilla lääkeyrteillä, '
+          + 'kankailla ja suitsukeaineilla, ja täällä myös '
+          + 'jälkikäsiteltiin saaren teet ennen vientiä. Kauppa jatkuu '
+          + 'yhä: kadun ympäristö on edelleen yksi Taipein vilkkaimmista '
+          + 'kaupankäyntialueista, ja kuivatuotteita ja herkkuja myyviin '
+          + 'liikkeisiin tullaan erityisesti kuunvuoden uudenvuoden '
+          + 'alla. Kadun varrella on myös Xia-Hain kaupunginjumalan '
+          + 'temppeli.'
+          + '\n\n'
+          + 'Ympärillä oleva Dadaocheng — vanhalta nimeltään Twatutia — '
+          + 'oli 1800-luvun tärkeä kauppasatama ja 1900-luvun alussa '
+          + 'Taiwanin toiseksi väkirikkain kaupunki Tainanin jälkeen, '
+          + 'noin kolmenkymmenen tai neljänkymmenentuhannen asukkaan '
+          + 'kokoinen. Siellä asuivat myös eurooppalaiset kauppiaat, ja '
+          + 'sinne valmistui lokakuussa 1891 Taipein ensimmäinen '
+          + 'rautatieasema, kun rata Keelungiin avattiin.',
+      kuvat: [
+        {
+          tiedosto: 'Buildings along Dihua Street 07.23 (6).jpg',
+          selite: 'Kadunkulman kauppahuone koristeltuine päätykolmioineen '
+            + 'on kunnostettu, ja alakerrassa on nyt matkailuneuvonta.',
+          lahde: 'Supanut Arunoprayote, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pohjoisportti': {
+      aika: 'valmistui 1884',
+      teksti: 'Pohjoisportti, viralliselta nimeltään Cheng\'enin portti, '
+          + 'on kaupunginmuurin viidestä portista ainoa, joka on '
+          + 'säilynyt alkuperäisessä asussaan. Se valmistui muurin '
+          + 'kanssa 1884. Rakenne on umpinainen kaksikerroksinen '
+          + 'vahtihuone: paksut kiviseinät, perinteinen kiinalainen '
+          + 'puinen kattotuoli ja virtaviivaiset kaiverrukset, joissa ei '
+          + 'ole mitään ylimääräistä.'
+          + '\n\n'
+          + 'Portti oli Qing-ajan kaupunkisuunnitelmassa tärkeä, ja se '
+          + 'aukeaa pohjoiseen kohti Dadaochengin kauppakortteleita. '
+          + 'Japanin hallinto purki muurit ja länsiportin, ja etelä-, '
+          + 'pikkuetelä- ja itäporttia muokattiin myöhemmin niin paljon, '
+          + 'että ne menettivät suuren osan alkuperäisestä luonteestaan. '
+          + 'Pohjoisportti jäi.'
+          + '\n\n'
+          + 'Portti seisoo keskellä liikennettä, ja vanhemmissa kuvissa '
+          + 'sen takana kaartaa moottoritien estakadi. Portin '
+          + 'nostaminen takaisin näkyville on '
+          + 'ollut viime vuosien kaupunkisuunnittelun tavoite, ja '
+          + 'portista on nimensä saanut myös viereinen metroasema '
+          + 'Beimen.',
+      kuvat: [
+        {
+          tiedosto: '北門 North Gate of Taipei City Wall - panoramio.jpg',
+          selite: 'Portti suoraan edestä: kivijalustan holvikäytävästä '
+            + 'näkyy kadun toiselle puolelle, ja takana kaartuu '
+            + 'estakadi.',
+          lahde: 'lienyuan lee, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Presidentinlinna': {
+      aika: 'rakennettu 1912–1919',
+      teksti: 'Japanin hallinto järjesti uudesta hallintotalostaan '
+          + 'kaksivaiheisen arkkitehtuurikilpailun 1906 ja 1910, ja '
+          + 'voittajaksi valittiin Nagano Uheijin suunnitelma. Tokiossa '
+          + 'sitä muutettiin: keskustorni nostettiin kuudesta kerroksesta '
+          + 'yhteentoista. Työ alkoi 1. kesäkuuta 1912 ja valmistui '
+          + '31. maaliskuuta 1919, ja se maksoi 2,8 miljoonaa jeniä.'
+          + '\n\n'
+          + 'Rakennus on renessanssin ja barokin sekoitusta punatiilestä '
+          + 'ja vaaleasta rappauksesta. Julkisivu on 130 metriä leveä ja '
+          + 'katsoo itään pitkän Ketagalan-bulevardin päähän: '
+          + 'japanilaiset arkkitehdit suuntasivat tärkeät rakennuksensa '
+          + 'nousevaan aurinkoon leveän kadun päätteeksi. Kuusikymmentä '
+          + 'metriä korkea keskustorni oli Japanin kaudella Taipein '
+          + 'altaan korkein rakennelma.'
+          + '\n\n'
+          + 'Rakennus vaurioitui pahoin toisen maailmansodan lopulla, ja '
+          + 'siksi sen sisätilat ovat nykyään yksinkertaisemmat kuin '
+          + 'alkuperäisessä suunnitelmassa. Korjaustyö tehtiin 1947–1948 '
+          + 'lahjoitusvaroin, ja siihen osallistui noin 81 000 '
+          + 'työntekijää. Vuodesta 1950 talo on ollut presidentin '
+          + 'virastorakennus.',
+      kuvat: [
+        {
+          tiedosto: '總統府 The Presidential Office Building - panoramio.jpg',
+          selite: 'Rakennus vinosti Ketagalan-bulevardin suunnasta: '
+            + 'punavalkoinen julkisivu jatkuu korttelin mitan, ja '
+            + 'keskeltä nousee torni.',
+          lahde: 'lienyuan lee, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Punainen talo': {
+      aika: 'rakennettu 1908',
+      teksti: 'Punainen talo valmistui 1908, ja sen suunnitteli '
+          + 'japanilainen arkkitehti Kondo Juro. Se ei ollut alun perin '
+          + 'teatteri vaan markkinahalli, jonka pohjakerroksessa toimi '
+          + 'tavaratalo. Rakennus on kahden osan yhdistelmä: '
+          + 'kahdeksankulmainen etuosa ja sen takana ristin muotoinen '
+          + 'halli. Tyyli sekoittaa länsimaista ja Meiji-kauden '
+          + 'japanilaista rakennustapaa — arkkitehti oli opiskellut '
+          + 'Tokion keisarillisessa yliopistossa.'
+          + '\n\n'
+          + 'Vuodesta 1945 talossa toimi teatteri, jossa esitettiin '
+          + 'pekingiläisoopperaa. Rakennus merkittiin kolmannen luokan '
+          + 'historialliseksi kohteeksi 1997. Ristirakennus kunnostettiin '
+          + '2015 niin, että saaren ensimmäinen markkinahalli tuli taas '
+          + 'näkyviin, ja kahdeksankulmainen osa koki 2016 sadan vuoden '
+          + 'suurimman korjauksen.'
+          + '\n\n'
+          + 'Ympärillä on Ximending, joka sai nimensä Japanin ajan '
+          + 'kaupunginosasta Seimon-chō — "länsiportin kaupunginosa" — '
+          + 'sillä alue oli muurin länsiportin ulkopuolella. Portti ja '
+          + 'muurit purettiin, mutta nimi jäi. Ximendingistä tuli '
+          + '1930-luvulla teatterikatu, jonka yhdellä korttelilla oli '
+          + 'aikanaan yli kymmenen teatteria, ja vuonna 1999 '
+          + 'siitä tehtiin Taipein ensimmäinen ja Taiwanin suurin '
+          + 'kävelykatualue.',
+      kuvat: [
+        {
+          tiedosto: 'Taipei Taiwan Red-House-Theater-01.jpg',
+          selite: 'Punatiilinen halli valkoisine vaakaraitoineen ja '
+            + 'kaari-ikkunoineen kohoaa Ximendingin kattojen keskeltä.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lungshan-temppeli': {
+      aika: '1738, nykyinen rakennus 1919–1924',
+      teksti: 'Bangkan Lungshan-temppeli rakennettiin 1738. Sen '
+          + 'perustivat Fujianin Jinjiangista, Nan\'anista ja '
+          + 'Hui\'anista tulleet uudisasukkaat, jotka nimesivät sen '
+          + 'kotiseutunsa vanhan Lungshan-temppelin mukaan. Temppeli '
+          + 'omistettiin Guanyinille, ja se oli yhtä lailla '
+          + 'kokoontumispaikka kuin pyhäkkö.'
+          + '\n\n'
+          + 'Rakennus on tuhoutunut kokonaan tai osittain useita kertoja '
+          + 'maanjäristyksissä ja tulipaloissa, ja se on rakennettu joka '
+          + 'kerta uudelleen; nykyiset rakennukset tehtiin 1919–1924. '
+          + 'Temppeli on esimerkki eteläkiinalaisesta '
+          + 'rakennusperinteestä, jota näkyy monissa Taiwanin vanhoissa '
+          + 'rakennuksissa: kaartuvat pääskynpyrstökatot ja '
+          + 'posliininsiruista koottu koristelu.'
+          + '\n\n'
+          + 'Kulkusuunta on määrätty. Sisään tullaan Lohikäärmeportista '
+          + 'ja ulos mennään Tiikeriportista. Etusalissa rukoillaan '
+          + 'kolmea bodhisattvaa, päähallissa Guanyinia, ja takasalissa '
+          + 'on joukko kansanuskon jumaluuksia omine erikoisaloineen — '
+          + 'muun muassa Yue Lao, jolta pyydetään apua avioliittoasioissa '
+          + 'punaisin langoin ja kuunsirpin muotoisin arpakappalein. '
+          + 'Yhdessä Qingshui- ja Qingshan-temppelin kanssa Lungshan '
+          + 'muodostaa Bangkan kolme tunnetuinta temppeliä.',
+      kuvat: [
+        {
+          tiedosto: 'Longshan Temple 2010.jpg',
+          selite: 'Kattoharjan päällä kohtaa kaksi lohikäärmettä ja '
+            + 'niiden välissä seisoo kolmas hahmo, ja harjan alla '
+            + 'kulkee rivi valkoisia sotilas- ja hevosfiguureja.',
+          lahde: 'Titoni Thomas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bopiliaon vanha kortteli': {
+      aika: 'Qing-kaudelta, kunnostettu 2009',
+      teksti: 'Bopiliao on Wanhuassa säilynyt katuosuus, jonka talot '
+          + 'ovat yksi- ja kaksikerroksisia tiilirakennuksia. Osa niistä '
+          + 'on yli kahdensadan vuoden ikäisiä, ja kortteli oli aikanaan '
+          + 'yksi pohjoisen Taiwanin varhaisimmista kauppapaikoista. '
+          + 'Kadulla näkyvät päällekkäin Qing-kauden, Japanin ajan ja '
+          + 'sen jälkeisen rakentamisen tavat.'
+          + '\n\n'
+          + 'Japanin ajan kaupunkisuunnitelma muutti korttelin kaavaa, ja '
+          + 'kaupankäynti hiipui. Paradoksaalisesti juuri se säilytti '
+          + 'talot: kun alueelle vuonna 1941 varattiin tontti Laosongin '
+          + 'kansakoululle, rakennuksia ei purettu vaan ne jäivät '
+          + 'seisomaan sellaisina kuin olivat. Korttelissa on myös '
+          + 'aukio, jonka keskellä on palokunnan vesiallas, sekä '
+          + 'puolisuunnikkaan muotoinen tori Japanin ajalta.'
+          + '\n\n'
+          + 'Kaupunki alkoi kunnostaa hylättyä korttelia 1999, ja työ '
+          + 'valmistui 2009. Vuonna 2010 alue merkittiin virallisesti '
+          + 'historialliseksi kohteeksi ja jaettiin itäiseen ja '
+          + 'läntiseen puoliskoon, joilla on eri käyttötarkoitus. '
+          + 'Nykyään taloissa on näyttelyitä, kotiseutuopetuksen keskus '
+          + 'ja pieniä myymälöitä.',
+      kuvat: [
+        {
+          tiedosto: '剝皮寮歷史街區 Bopiliao Historic Block - panoramio (1).jpg',
+          selite: 'Punatiilinen kauppahuoneiden rivi kaartuu kadun '
+            + 'mukana, ja alakerran holvikäytävän edessä on '
+            + 'pysäköityjä skoottereita.',
+          lahde: 'lienyuan lee, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chiang Kai-shek -muistosali': {
+      aika: 'rakennettu 1976–1980',
+      teksti: 'Muistosali rakennettiin vuonna 1975 kuolleen Kiinan '
+          + 'tasavallan presidentin Chiang Kai-shekin muistoksi. '
+          + 'Arkkitehti Yang Cho-chengin suunnitelma valittiin '
+          + 'kilpailulla, ja se lainaa Nanjingin Sun Yat-senin '
+          + 'mausoleumin muotokieltä. Perustuskivi laskettiin '
+          + '31. lokakuuta 1976 ja sali avattiin 5. huhtikuuta 1980.'
+          + '\n\n'
+          + 'Rakennus on neliseinäinen ja valkoinen, ja sen katto on '
+          + 'sininen ja kahdeksankulmainen — kahdeksan on kiinalaisessa '
+          + 'perinteessä runsauden ja onnen luku. Sisään johtaa kahdet '
+          + 'portaat, joissa kummassakin on 89 askelmaa, yksi kutakin '
+          + 'presidentin elinvuotta kohti. Alakerrassa on kirjasto ja '
+          + 'museo, yläkerrassa suuri sali veistoksineen.'
+          + '\n\n'
+          + 'Sali seisoo yli 240 000 neliömetrin puiston itäpäässä. '
+          + 'Aukion pohjoislaidalla on Kansallinen teatteri ja '
+          + 'eteläpuolella Kansallinen konserttitalo, molemmat '
+          + 'oranssikattoisia; länsipäässä on valkoinen porttirakennus, '
+          + 'ja pohjoiseen ja etelään avautuu kaksi pienempää porttia. '
+          + 'Aukio on kaupungin tavallisin kokoontumispaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Liberty Square viewed from Chiang Kai-shek Memorial Hall.jpg',
+          selite: 'Salin portailta katsottuna aukio jatkuu porttiin '
+            + 'asti, ja sen reunoilla seisovat teatteri ja konserttitalo '
+            + 'oranssikattoisina.',
+          lahde: 'Benlisquare, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kasvitieteellinen puutarha': {
+      aika: 'perustettu 1896',
+      teksti: 'Puutarha perustettiin 1896 taimitarhaksi ja nimettiin '
+          + '1921 Taihokun kasvitieteelliseksi puutarhaksi. Vuoteen '
+          + '1930 mennessä siellä kasvoi 1 129 lajia, ja alue palveli '
+          + 'ennen muuta tutkimusta. Hoito keskeytyi toisen '
+          + 'maailmansodan aikana, ja sen jälkeen istutukset '
+          + 'järjestettiin uudelleen. Nykyään kahdeksan hehtaarin '
+          + 'alueella kasvaa yli 2 000 lajia, ja yhdeksään lampeen on '
+          + 'istutettu kuhunkin omat vesikasvinsa.'
+          + '\n\n'
+          + 'Puutarhassa on kaksi suojeltua rakennusta. Toinen on '
+          + 'vuonna 1924 valmistunut kasvimuseo, toinen paljon '
+          + 'vanhempi: keisarillisten lähettiläiden vierastalo vuodelta '
+          + '1888. Se on Qing-kauden virastorakennus vanhan '
+          + 'muurikaupungin ajalta, ja se siirrettiin puutarhaan 1933.'
+          + '\n\n'
+          + 'Vierastalon portin ovipaneeleihin on maalattu kaksi '
+          + 'ovenvartijaa, ja katonrajan koristeltu puurakenne on '
+          + 'maalattu sinisin, vihrein ja punaisin värein. Muurikaupungin '
+          + 'ajan rakennuksista on Taipeissa jäljellä hyvin vähän — '
+          + 'Pohjoisportti ja tämä talo, joka sekään ei enää seiso '
+          + 'omalla paikallaan.',
+      kuvat: [
+        {
+          tiedosto: '欽差行臺 台灣唯一保存的清朝衙門建築.jpg',
+          selite: 'Vierastalon ovipareihin on maalattu kaksi '
+            + 'panssaroitua ovenvartijaa, ja niiden yllä riippuu '
+            + 'kullatuin merkein kirjoitettu kilpi.',
+          lahde: '張欽嵐, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Taipei 101': {
+      aika: 'valmistui 2004',
+      teksti: 'Taipei 101 on 508 metriä korkea ja siinä on 101 '
+          + 'kerrosta. Sen suunnitteli arkkitehtitoimisto C. Y. Lee & '
+          + 'Partners, ja torni avattiin uudenvuodenaattona 2004. '
+          + 'Muoto on tarkoituksella monitulkintainen: kahdeksan '
+          + 'kahdeksankerroksista jaksoa nousee ylöspäin levenevinä '
+          + 'kuin pagodi, kuin bambunvarsi tai kuin päällekkäin '
+          + 'ladotut vanhat rahalippaat. Kahdeksan on kiinalaisessa '
+          + 'perinteessä runsauden luku, ja 101 viittaa uuteen '
+          + 'vuosisataan.'
+          + '\n\n'
+          + 'Rakennus on suunniteltu kestämään 60 metriä sekunnissa '
+          + 'puhaltava myrskytuuli ja kahdentuhannenviidensadan vuoden '
+          + 'välein toistuva maanjäristys. Perustus lepää 380 paalun '
+          + 'varassa, jotka on lyöty 80 metrin syvyyteen ja jotka '
+          + 'ulottuvat kolmenkymmenen metrin matkalta kallioon. Ylhäällä '
+          + 'riippuu 660 tonnin massavaimennin, ja pilarien välissä on '
+          + 'kahdeksan kerroksen välein ristikkokehiä, jotka sitovat '
+          + 'ytimen ulkopilareihin.'
+          + '\n\n'
+          + 'Hissit valmisti japanilainen Toshiba, ja ne olivat '
+          + 'valmistuessaan maailman nopeimmat: viidennestä kerroksesta '
+          + '89:een nousee 37 sekunnissa, mikä on runsaat kuusikymmentä '
+          + 'kilometriä tunnissa. Uudenvuodenyönä torni muuttuu '
+          + 'ilotulitusalustaksi, ja Xinyin kaupunginosaan kokoontuu '
+          + 'tuhansia katsojia keskiyön näytöstä varten. Vuonna 2011 '
+          + 'torni sai LEED-luokituksen maailman korkeimpana '
+          + 'ympäristösertifioituna rakennuksena.',
+      kuvat: [
+        {
+          tiedosto: 'Taipei 101 20230401.jpg',
+          selite: 'Uudenvuoden ilotulitus purkautuu tornin kyljistä '
+            + 'vihreinä viuhkoina, ja huippu häviää valon sisään.',
+          lahde: 'Xiaoanan1207, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * HONGKONGIN YHDEKSÄN KOHDETTA (Opus 21.8.2026). Jutut vastaavat
+   * js/packs/maakartat.js:n hongkong-kartan kohteita nimestä nimeen ja
+   * samassa järjestyksessä (pohjoisesta etelään). Faktat ovat
+   * kohteiden omista en-Wikipedian raakateksteistä, haettu 21.8.2026:
+   * Clock Tower (Hong Kong), Western Market, Star Ferry, Man Mo
+   * temples in Hong Kong, Tai Kwun, St John's Cathedral (Hong Kong),
+   * Victoria Peak, Blue House (Hong Kong) ja Peak Tram.
+   *
+   * USKONNOLLISTEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa,
+   * Medinassa, Xi’anissa ja Kantonissa: rakennukset ja kerrostumat,
+   * ei hartauskieltä. Man Mo -temppelin juttu kertoo, kenelle temppeli
+   * on omistettu ja miksi virkatutkintoihin valmistautuneet kävivät
+   * siellä; katedraalin juttu kertoo rakennuksen ja tontin.
+   *
+   * VICTORIA PEAKIN JUTUSSA ON WIKIPEDIAN SISÄINEN RISTIRIITA
+   * KIRJOITETTU AUKI. Victoria Peak -artikkeli sanoo yhdessä
+   * kappaleessa, että Peak District Reservation Ordinance oli voimassa
+   * vuosina 1904–1930, ja kaksi kappaletta myöhemmin, että kiinalaiset
+   * eivät saaneet asua rinteellä vuosina 1904–1947. Juttu kertoo
+   * molemmat luvut, koska kumpaakaan ei voi todeta oikeaksi
+   * artikkelin sisältä (v925, v932 ja v937 ennakkotapaukset).
+   *
+   * NELJÄSSÄ JUTUSSA KUVA ON TUORE JA VIIDESSÄ SE ON KOHTEEN
+   * NYKYASU — historiallisia kuvia ei ole näissä jutuissa lainkaan,
+   * koska kartan kohteet ovat niitä, joita pelaaja voi mennä
+   * katsomaan. Lehden 1800-luvun kuvat ovat nostoissa.
+   */
+  hongkong: {
+    'Tsim Sha Tsuin kellotorni': {
+      aika: 'valmistui 1915',
+      teksti: 'Torni on ainoa jäljellä oleva osa Kowloonin '
+          + 'rautatieasemasta, joka oli Kowloonin ja Kantonin välisen '
+          + 'radan eteläpää. Rata vihittiin käyttöön 1. lokakuuta '
+          + '1910, mutta itse asemarakennuksen työt alkoivat vasta '
+          + '1913: ensin piti rakentaa merimuurit ja tasata '
+          + 'täyttömaa, ja ensimmäinen maailmansota viivytti '
+          + 'rakennustarvikkeiden toimituksia. Torni valmistui 1915 ja '
+          + 'koko asema avattiin 28. maaliskuuta 1916.'
+          + '\n\n'
+          + 'Torni on punatiiltä ja graniittia, korkeutta '
+          + 'neljäkymmentäneljä metriä ja sen päällä seitsemän metrin '
+          + 'ukkosenjohdatin. Sisällä on puuportaikko huipulle. Kello '
+          + 'siirrettiin tänne puretusta Pedder Streetin kellotornista, '
+          + 'ja aluksi vain yhdellä sivulla oli kellotaulu; loput '
+          + 'kolme asennettiin 1920, ja ne käynnistyivät 22. '
+          + 'maaliskuuta 1921. Kellon soittokello valettiin 1919 '
+          + 'englantilaisessa Loughborough’n valimossa ja saapui '
+          + 'Hongkongiin 1920.'
+          + '\n\n'
+          + 'Vuonna 1975 asema siirtyi Hung Homiin uudelle '
+          + 'täyttömaalle, ja asemarakennus purettiin 1977. Torni '
+          + 'säilytettiin, ja vanhalle asema-alueelle rakennettiin '
+          + 'kulttuurikeskus, taidemuseo ja avaruusmuseo. Torni on '
+          + 'ollut suojeltu muistomerkki vuodesta 1990, ja sen kello '
+          + 'alkoi soida uudelleen joulukuussa 2021, tunnin välein '
+          + 'aamukahdeksasta keskiyöhön.',
+      kuvat: [
+        {
+          tiedosto: 'Former Kowloon-Canton Railway Clock Tower, Tsim Sha Tsui (Hong Kong).jpg',
+          selite: 'Punatiilinen kellotorni nousee palmurivien '
+            + 'päättämän suihkulähdealtaan takaa.',
+          lahde: 'Mk2010, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Western Market': {
+      aika: 'valmistui 1906',
+      teksti: 'Sheung Wanin kauppahalli oli alun perin kaksiosainen. '
+          + 'Eteläinen osa avattiin 1858 ja pohjoinen 1906; nykyinen '
+          + 'rakennus on juuri se pohjoinen osa, ja se on kaupungin '
+          + 'vanhin säilynyt torirakennus. Paikalla oli sitä ennen '
+          + 'satamakonttori, joka muutti Centralin täyttömaalle '
+          + 'suurempiin tiloihin, ja vanha talo purettiin uuden '
+          + 'hallin tieltä.'
+          + '\n\n'
+          + 'Nelikerroksinen talo edustaa Queen Anne -tyylin '
+          + 'uusintaa, joka oli suosittu Britannian imperiumissa '
+          + '1800-luvun lopulla ja 1900-luvun alussa. Neljässä '
+          + 'kulmatornissa tiilimuuraus on ”sidottu” vaalein '
+          + 'kivinauhoin, mikä antaa julkisivulle raidallisen ilmeen. '
+          + 'Alun perin tiilet olivat sinisiä, mutta ne maalattiin '
+          + 'myöhemmin punaisiksi tyyliin sopiviksi.'
+          + '\n\n'
+          + 'Halli toimi ruokatorina vuoteen 1988, jolloin myyjät '
+          + 'siirtyivät uuteen palvelurakennukseen. Rakennus vaurioitui '
+          + 'Sheung Wanin metroaseman rakennustöissä ja korjattiin '
+          + 'jälkikäteen. Puolet tontista oli jo kaavoitettu Morrison '
+          + 'Streetin leventämiselle, mikä olisi vaatinut talon '
+          + 'purkamista, mutta vuonna 1990 se julistettiin suojelluksi '
+          + 'muistomerkiksi ja avattiin kunnostettuna uudelleen 1991.',
+      kuvat: [
+        {
+          tiedosto: 'HK SW 上環 Sheung Wan 摩利臣街 Morrison Street 紅磚屋 red brick building 西港城 Western Market 干諾道中 Connaught Road Central morning February 2020 SS2 06.jpg',
+          selite: 'Punatiilinen kulmajulkisivu, jossa on '
+            + 'vaaleakivisiä kaaria ja raidallista muurausta, ja '
+            + 'kadussa sen edessä kulkevat raitiovaunun kiskot.',
+          lahde: 'Rumbr Tanmwa Roalooe, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Star Ferryn laituri': {
+      aika: 'lauttayhtiö 1888, nykyinen laituri 2006',
+      teksti: 'Star Ferryn päälinja kulkee Centralin ja Tsim Sha '
+          + 'Tsuin välillä, ja Centralin laituri on kartan piste. '
+          + 'Yhtiö perustettiin 1888 nimellä Kowloon Ferry Company ja '
+          + 'sai nykyisen nimensä 1898. Kymmenessä vuodessa '
+          + 'perustajan laivasto kasvoi neljään alukseen — Morning '
+          + 'Star, Evening Star, Rising Star ja Guiding Star — joista '
+          + 'kuhunkin mahtui sata matkustajaa ja jotka tekivät '
+          + 'keskimäärin sataneljäkymmentäseitsemän ylitystä päivässä.'
+          + '\n\n'
+          + 'Laituri on vaihtanut paikkaa monta kertaa, koska satamaa '
+          + 'on täytetty. Salisbury Roadin päähän valmistui 1906 '
+          + 'mahtava laituri, jossa oli erilliset osastot '
+          + 'ensimmäiselle ja toiselle luokalle, mutta taifuuni '
+          + 'tuhosi sen saman vuoden syyskuussa. Nykyinen kaksoislaituri '
+          + 'rakennettiin 1950-luvun alussa sataman molemmin puolin, '
+          + 'ja se mitoitettiin viidellekymmenelleviidelle miljoonalle '
+          + 'matkalle vuodessa. Centralin puolella laituri siirtyi '
+          + 'marraskuussa 2006 täyttötöiden takia nykyiselle '
+          + 'paikalleen.'
+          + '\n\n'
+          + 'Kiinnitystapa on säilynyt 1800-luvulta: aluksella oleva '
+          + 'merimies heittää köyden laiturilla seisovalle miehelle, '
+          + 'joka nappaa sen pitkävartisella koukulla. Vaikka satama '
+          + 'ylitetään nykyään myös tie- ja rautatietunneleita pitkin, '
+          + 'lautat kuljettavat yhä yli seitsemääkymmentätuhatta '
+          + 'matkustajaa päivässä. Maksuksi kelpaa Octopus-kortti tai '
+          + 'automaatista ostettu poletti.',
+      kuvat: [
+        {
+          tiedosto: 'Central Pier 7 viewed from Hong Kong Maritime Museum.jpg',
+          selite: 'Vihreäkattoinen laiturirakennus työntyy paalujensa '
+            + 'varassa satamaan, ja sen takana nousee Centralin '
+            + 'tornirivistö.',
+          lahde: 'Ceeseven, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Man Mo -temppeli': {
+      aika: 'rakennettu 1847',
+      teksti: 'Man Mo -temppeli on omistettu kahdelle jumalalle: '
+          + 'kirjallisuuden jumalalle Man Cheongille ja soturijumala '
+          + 'Mo Taille eli Kwan Taille. Ming- ja Qing-kausilla juuri '
+          + 'näiden kahden puoleen kääntyivät oppineet ja opiskelijat, '
+          + 'jotka valmistautuivat keisarillisiin virkatutkintoihin. '
+          + 'Hongkongissa on useita saman nimisiä temppeleitä, mutta '
+          + 'suurin ja tunnetuin on tämä Sheung Wanissa, osoitteessa '
+          + 'Hollywood Road 124–126.'
+          + '\n\n'
+          + 'Kokonaisuus on kolme vierekkäistä rakennusta. Man Mo '
+          + '-temppeli on pääsali. Sen vieressä on Lit Shing Kung, '
+          + 'joka on omistettu kaikille taivaan jumalille, ja '
+          + 'länsipuolella Kung So, kokoussali, jossa aikanaan '
+          + 'käsiteltiin yhteisön asioita ja ratkottiin riitoja. '
+          + 'Temppeli rakennettiin vuonna 1847, muutamaa vuotta '
+          + 'siirtokunnan perustamisen jälkeen.'
+          + '\n\n'
+          + 'Vuonna 1908 temppeli siirtyi Tung Wah -sairaalayhtymän '
+          + 'hallintaan, ja se hoitaa sitä yhä. Rakennus sai vuonna '
+          + '1993 ensimmäisen suojeluluokan ja on nykyään suojeltu '
+          + 'muistomerkki. Sisätilan tunnetuin piirre ovat katosta '
+          + 'riippuvat suuret suippenevat suitsukekierukat, jotka '
+          + 'palavat päiväkausia.',
+      kuvat: [
+        {
+          tiedosto: 'Burning incense coils in the Man Mo temple (Hong Kong).jpg',
+          selite: 'Katosta riippuu rivi rivin perään kartiomaisia '
+            + 'suitsukekierukoita, joiden lomassa näkyy punaisia '
+            + 'lyhtyjä ja lappuja.',
+          lahde: 'Aethelfirth, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tai Kwun': {
+      aika: 'rakennukset 1841–1925, avattu uudelleen 2018',
+      teksti: 'Tai Kwun on entinen keskuspoliisiaseman kortteli, joka '
+          + 'sisältää kolme suojeltua muistomerkkiä: vanhan '
+          + 'keskuspoliisiaseman, entisen kihlakunnanoikeuden ja '
+          + 'Victorian vankilan. Kortteli rajautuu Hollywood Roadiin, '
+          + 'Arbuthnot Roadiin, Chancery Laneen ja Old Bailey '
+          + 'Streetiin, ja siinä on kuusitoista historiallista '
+          + 'rakennusta vuosilta 1841–1925.'
+          + '\n\n'
+          + 'Vanhin rakennus on vuonna 1841 rakennettu tuomarin talo '
+          + 'selliosastoineen. Vankila sai nimen Victoria Gaol vuonna '
+          + '1899. Alue laajeni ja rakentui uudelleen useaan kertaan: '
+          + 'jo 1862 vankien määrä oli noussut kuuteensataanviiteen'
+          + 'kymmeneen, ja hallinto päätti ottaa käyttöön viereisen '
+          + 'tontin. Näin syntyi se kortteleiden sarja, joka tunnetaan '
+          + 'nykyään nimellä Tai Kwun eli suuri asema. Vankila '
+          + 'poistui käytöstä vuonna 2006.'
+          + '\n\n'
+          + 'Vuonna 2008 hallinto ja Hongkongin ravikerho sopivat '
+          + 'korttelin säilyttämisestä ja uudesta käytöstä. Työ alkoi '
+          + '2011, kesti kahdeksan vuotta ja maksoi 3,8 miljardia '
+          + 'Hongkongin dollaria; suunnittelusta vastasivat '
+          + 'sveitsiläinen Herzog & de Meuron ja paikallinen Rocco '
+          + 'Design Architects. Kortteli avattiin yleisölle 29. '
+          + 'toukokuuta 2018 kulttuurikeskuksena, ja vanha '
+          + 'paraatikenttä on nyt sen keskusaukio.',
+      kuvat: [
+        {
+          tiedosto: 'Tai Kwun Parade Ground 201806.jpg',
+          selite: 'Kivetty paraatikenttä kaartuvine pylväikköineen, ja '
+            + 'sen yli kohoavat lasiset tornitalot.',
+          lahde: 'Wpcpey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Johanneksen katedraali': {
+      aika: 'rakennettu 1847–1849',
+      teksti: 'Katedraalin peruskivi laskettiin vuonna 1847 ja '
+          + 'rakennus valmistui 1849. Ensimmäinen sunnuntaijumalan'
+          + 'palvelus pidettiin 11. maaliskuuta 1849, jolloin kirkkoa '
+          + 'kutsuttiin vielä nimellä Hongkong Colonial Chapel. '
+          + 'Piispa George Smith vihki sen Pyhän Johanneksen '
+          + 'katedraaliksi vuonna 1852. Se on Hongkongin vanhin '
+          + 'säilynyt länsimainen kirkkorakennus ja Itä-Aasian vanhin '
+          + 'anglikaaninen kirkko.'
+          + '\n\n'
+          + 'Tyyliltään rakennus on uusgotiikkaa, ja materiaaleina on '
+          + 'käytetty rappausta ja puuta. Tontilla on erikoinen '
+          + 'oikeudellinen asema: se on Hongkongin ainoa täysin '
+          + 'omistettu maa-alue, kun kaikki muu maa alueella on '
+          + 'vuokramaata. Järjestely perustuu vuoden 1930 '
+          + 'kirkkosäätiölakiin.'
+          + '\n\n'
+          + 'Katedraali seisoo Garden Roadin varrella hallintokortteli'
+          + 'en keskellä, ja aivan sen vieressä on vaunuradan '
+          + 'alaterminaali — rata alkaa käytännössä kirkon kupeesta. '
+          + 'Rakennus julistettiin suojelluksi muistomerkiksi 5. '
+          + 'tammikuuta 1996.',
+      kuvat: [
+        {
+          tiedosto: 'St John Cathedral Hong Kong.jpg',
+          selite: 'Ylhäältä kuvattuna katedraalin vihreä satulakatto '
+            + 'ja torni erottuvat puiden ja toimistotalojen välissä.',
+          lahde: 'Anthony Ivanoff, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Victoria Peak': {
+      aika: '552 metriä',
+      teksti: 'Victoria Peak on Hongkongin saaren korkein kohta, 552 '
+          + 'metriä, ja koko hallintoalueen mäkien joukossa '
+          + 'kahdeskymmenesyhdeksäs. Kiinalainen nimi on Tai Ping '
+          + 'Shan. Itse huipulla on radiolaitteita eikä sinne pääse; '
+          + 'nimellä ”The Peak” tarkoitetaan yleensä sen alapuolista '
+          + 'aluetta, jossa ovat puistot, näköalapaikat ja rinteen '
+          + 'asuinalue. Lähin julkinen paikka huipun tuntumassa on '
+          + 'Victoria Peakin puutarha, joka on kuvernöörin entisen '
+          + 'kesäasunnon paikalla.'
+          + '\n\n'
+          + 'Jo 1800-luvulla rinne veti puoleensa eurooppalaisia '
+          + 'asukkaita, koska sieltä näki koko kaupungin ja koska '
+          + 'siellä oli viileämpää kuin alhaalla. Kuudes kuvernööri '
+          + 'Sir Richard MacDonnell rakennutti kesäasunnon rinteeseen '
+          + 'noin vuonna 1868. Asukkaat kulkivat koteihinsa '
+          + 'kantotuoleilla, ja se piti rakentamisen vähäisenä siihen '
+          + 'asti, kunnes vaunurata avattiin 1888.'
+          + '\n\n'
+          + 'Radan myötä rinne rakentui nopeasti, ja vuonna 1904 '
+          + 'säädettiin asetus, joka varasi alueen muille kuin '
+          + 'kiinalaisille asukkaille ja varasi vaunuradan heille '
+          + 'ruuhka-aikoina. en-Wikipedian oma artikkeli antaa '
+          + 'asetuksen loppuvuodeksi kahdessa kohdassa eri luvun, '
+          + '1930 ja 1947. Nykyään rinne on yhä kaupungin kallein '
+          + 'asuinalue, ja huipulla käy noin seitsemän miljoonaa '
+          + 'kävijää vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'English Quarter, Hong Kong.jpg',
+          selite: '1800-luvun lopun valokuva rinnetieltä: kaiteen '
+            + 'takana kohoaa suuri vaalea hotellirakennus ja sen '
+            + 'ympärillä huviloita jyrkällä rinteellä.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sininen talo': {
+      aika: 'valmistui 1922',
+      teksti: 'Sininen talo on nelikerroksinen parveketyyppinen '
+          + 'vuokratalo osoitteessa Stone Nullah Lane 72–74A Wan '
+          + 'Chaissa. Se on yksi harvoista säilyneistä '
+          + 'parvekkeellisista tong lau -taloista Hongkongissa ja '
+          + 'kuuluu ensimmäiseen suojeluluokkaan. Nimensä se sai '
+          + 'ulkoseinien väristä: talo siirtyi hallinnon omistukseen '
+          + '1970-luvulla, ja vuonna 1990 seinät maalattiin sinisiksi.'
+          + '\n\n'
+          + 'Tontilla on pidempi historia kuin talolla. Paikalla '
+          + 'toimi 1870-luvulla Wah Ton sairaala, joka tarjosi '
+          + 'kiinalaista lääkintää paikallisille ja oli mahdollisesti '
+          + 'kaupunginosan ensimmäinen sairaala. Sairaalan '
+          + 'lakkautuksen jälkeen 1886 kaksikerroksinen rakennus '
+          + 'toimi Wah Ton temppelinä — Hua Tuo oli kolmen '
+          + 'kuningaskunnan ajan kuuluisa lääkäri. Vanha talo '
+          + 'purettiin 1920, ja tilalle rakennettiin 1922 neljä '
+          + 'nelikerroksista vuokrataloa.'
+          + '\n\n'
+          + 'Yläkerrat ovat yhtä osoitetta lukuun ottamatta '
+          + 'puurakenteisia, ja kaksi vanhaa puuporrasta on säilynyt '
+          + 'alkuperäisosineen. Talo kunnostettiin ja avattiin '
+          + 'uudelleen vuonna 2016 niin, että asukkaat saivat jäädä '
+          + 'taloon; alakerran liiketiloissa toimii muun muassa '
+          + 'kaupunginosan tarinoita kerännyt keskus. Kunnostus sai '
+          + 'arkkitehtuuripalkinnon vuonna 2018.',
+      kuvat: [
+        {
+          tiedosto: 'Blue House in 2020.jpg',
+          selite: 'Kirkkaansininen nelikerroksinen talo parvekkeineen '
+            + 'seisoo katukulmassa vaaleanpunaisen ja keltaisen talon '
+            + 'välissä.',
+          lahde: '方畢可, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vaunuradan alaterminaali': {
+      aika: 'rata avattu 1888',
+      teksti: 'Vaunuradan alapää on Garden Roadilla aivan Pyhän '
+          + 'Johanneksen katedraalin vieressä. Alkuperäinen asema '
+          + 'liitettiin myöhemmin toimistotaloon niin, että laiturit '
+          + 'jäivät katutasoon. Asemalla on yksi raide ja laiturit '
+          + 'sen molemmin puolin: toiselta noustaan vaunuun, toiselta '
+          + 'poistutaan. Valokuvien perusteella Garden Roadin asema '
+          + 'oli aluksi koristeeton rakennus, ja suuri kellotaulu '
+          + 'lisättiin julkisivuun luultavasti 1910- tai 1920-luvulla.'
+          + '\n\n'
+          + 'Radalla on neljä väliasemaa, jotka kaikki ovat '
+          + 'pysähdyksiä pyynnöstä: Kennedy Road, MacDonnell Road, '
+          + 'May Road ja Barker Road. Jokainen on nimetty entisen '
+          + 'kuvernöörin tai sijaishallitsijan mukaan. Ohituskohta, '
+          + 'jossa vaunut kohtaavat, on hieman May Roadin yläpuolella; '
+          + 'siinä radan noin neljänsadan metrin matkalla kiskoja on '
+          + 'ensin neljä ja sitten kolme, ennen kuin niitä on taas '
+          + 'kaksi.'
+          + '\n\n'
+          + 'Vetävä kaapeli toimi aluksi kiinteällä höyrykoneella, '
+          + 'joka korvattiin sähkömoottorilla 1926. Vuonna 1956 '
+          + 'käyttöön tulivat kevyet metallirunkoiset vaunut, joissa '
+          + 'oli kuusikymmentäkaksi istumapaikkaa. Koko järjestelmä '
+          + 'rakennettiin uudelleen 1989 sveitsiläisen Von Rollin '
+          + 'toimesta, ja rata suljettiin pitkäksi kunnostukseksi '
+          + 'ennen 27. elokuuta 2022 tapahtunutta avaamista. Kaksi '
+          + 'vanhaa vaunua seisoo yhä käytöstä poistetulla '
+          + 'sivuraiteella Kennedy Roadin aseman lähellä.',
+      kuvat: [
+        {
+          tiedosto: 'Old Peak Tram 202105.jpg',
+          selite: 'Vanha vihreä vaunu seisoo umpeenkasvaneella '
+            + 'sivuraiteella vaunuhallin edessä puiden keskellä.',
+          lahde: 'Wpcpey, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

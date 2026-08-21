@@ -2474,6 +2474,123 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 22.024, etela: 21.944, lansi: 96.0513, ita: 96.1375 },
   },
+  taipei: {
+    /*
+     * TAIPEIN VANHA PUOLI (21.8.2026). Ruutu on 5,2 × 5,5 km ja se
+     * kattaa sen osan kaupunkia, jota lehti kertoo: pohjoisessa
+     * Dalongdongin ja Dadaochengin teekauppakorttelit, keskellä
+     * Qing-ajan muurikaupungin ruutu Pohjoisportilta
+     * Presidentinlinnalle, lännessä Wanhuan (Bangkan) vanhat kujat ja
+     * etelässä Chiang Kai-shek -muistosalin aukio ja
+     * kasvitieteellinen puutarha.
+     *
+     * RUUTU EI OLE KESKITETTY WIKIPEDIAN KAUPUNKIPISTEESEEN, ja se on
+     * tietoinen valinta (docs/aasia-tyoaineisto/faktapohja-taipei.md
+     * osio 4 ja tarkistus-taipei.md osio 3, vaihtoehto A). Wikipedian
+     * infobox-koordinaatti 25,0375 / 121,5625 osuu nykyiseen Xinyin
+     * kaupunginosaan Taipei 101:n viereen, kun taas kaikki lehden
+     * historialliset kohteet ovat 4–6,4 kilometriä siitä länteen.
+     * Keskipisteeksi on siksi otettu vanhan kaupungin puoli
+     * (25,053 / 121,5105), jolloin yhdeksän kohdetta mahtuu ruutuun,
+     * jonka reunoille jää vielä Tamsui-joki lännessä.
+     *
+     * NELIÖMÄINEN RAJAUS ON HARKITTU, kuten Varanasissa ja
+     * Kantonissa. Kohteet ovat luonnostaan 2,2 kilometriä leveä ja
+     * 4,5 kilometriä korkea nauha, joka kulkee Dalongdongista
+     * etelään; pelkkä nauha olisi piirtynyt kapeaksi pystykaistaleeksi
+     * (paketin korkein kartta on Isfahan 1600 × 1983). Ruutua
+     * levennettiin itään ja länteen niin, että kuvasuhde on 0,95 —
+     * ja samalla länsireunaan tuli Tamsui-joki, jota pitkin teetä
+     * vietiin merelle.
+     *
+     * TAIPEI 101 ON KAINALOSSA, EI PÄÄRUUDUSSA. Se on
+     * en-Wikipedian koordinaatista (25,0336 / 121,5647) laskien 5,9
+     * kilometriä itäkaakkoon kartan keskipisteestä — samaa luokkaa
+     * kuin Adenin Tawahi (6 km) ja selvästi lähempänä kuin Kantonin
+     * Whampoa (12,6 km), joka jätettiin kokonaan pois. Pääruudun
+     * venyttäminen Xinyihin asti olisi tehnyt vanhasta kaupungista
+     * kuvan vasemman laidan läiskän. Kainalo on oikeassa
+     * alakulmassa, koska suunta on kaakko (Xi'anin ja Irkutskin
+     * malli).
+     *
+     * SHILININ YÖMARKKINAT JA KANSALLINEN PALATSIMUSEO EIVÄT OLE
+     * KARTALLA EIVÄTKÄ KAINALOSSA. Ne ovat kartan keskipisteestä
+     * laskien 4,0 ja 6,9 kilometriä pohjoiseen ja koilliseen, mutta
+     * kumpikin omaan suuntaansa: kaksi lisäkainaloa kolmannen rinnalle
+     * tekisi kuvasta levottoman (Astanan kahden aseman ratkaisu).
+     * Molemmat kerrotaan lehden nostoissa ja kuvissa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kathmandussa ja Kantonissa: Wanhuan kujat,
+     * Dihua-kadun kauppahuoneiden kulkuaukot ja Ximendingin
+     * kävelykatualue ovat OSM:ssä jalankulkualueita ja huoltoteitä,
+     * ja ilman lippuja kartan tihein kortteli jäisi tyhjäksi
+     * paperiksi.
+     */
+    rajat: { pohjoinen: 25.078, etela: 25.028, lansi: 121.4845, ita: 121.5365 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 25.0405, etela: 25.0275, lansi: 121.558, ita: 121.572 },
+        x: 74, y: 62, leveys: 24, suunta: '5,9 km itäkaakkoon',
+      },
+    ],
+  },
+  hongkong: {
+    /*
+     * VICTORIA-SATAMA JA SEN MOLEMMAT RANNAT (21.8.2026). Ruutu on
+     * 4,3 × 3,9 km, ja sen keskellä on vettä: satama erottaa
+     * Hongkong-saaren pohjoisrannan ja Kowloonin niemimaan kärjen.
+     * Rajaus on valittu niin, että lehden kertoma kaupunki mahtuu
+     * kokonaan yhteen kuvaan — lännessä Sheung Wanin vanhat korttelit,
+     * keskellä Centralin pankkikortteli ja Star Ferryn laituri,
+     * idässä Wan Chai, pohjoisessa Tsim Sha Tsuin kärki
+     * kellotorneineen ja etelässä Victoria Peakin rinne.
+     *
+     * meri: true, ja se on sama tilanne kuin Singaporessa ja
+     * Vladivostokissa. Victoria-satama on OSM:ssä valtaosin
+     * natural=coastline-viivaa ilman vesimonikulmiota, ja ilman
+     * lippua kuvan koko keskiosa — se, mikä tekee Hongkongista
+     * satamakaupungin — olisi jäänyt paperin väriseksi. Lippu täyttää
+     * rantaviivan rajaaman merialueen vedeksi.
+     *
+     * VICTORIA PEAK MAHTUU PÄÄRUUTUUN EIKÄ TARVITSE KAINALOA. Sen
+     * en-Wikipedian koordinaatti (22,27556 / 114,14389) on 12,8 %
+     * ruudun leveydestä vasemmasta reunasta ja 26 % korkeudesta
+     * alareunasta, eli selvästi lehden mittakaavajanan yläpuolella
+     * (Kööpenhaminan Tivoli-tapaus). Kainalo olisi ollut turha
+     * ratkaisu kohteelle, joka on linnuntietä vain 1,2 kilometriä
+     * vaunuradan alaterminaalista.
+     *
+     * ETELÄREUNA ON VÄLJÄ TARKOITUKSELLA. Rinne Centralin ja huipun
+     * välissä on Mid-Levelsin mutkatiestöä, ja juuri se tekee
+     * kartalla näkyväksi sen, mitä nostot kertovat: kaupunki nousee
+     * merestä vuoreen muutamassa sadassa metrissä. Tiukka rajaus
+     * olisi leikannut mutkat pois ja jättänyt vaunuradan
+     * alaterminaalin kuvan alalaitaan.
+     *
+     * KAKSI KOHDETTA SATAMAN POHJOISRANNALLA OLISI OLLUT LIIKAA.
+     * Tsim Sha Tsuin Star Ferry -laituri (OSM, relaatio 14941151,
+     * 22,29352 / 114,16842) on vain 98 metriä kellotornin pisteestä
+     * eli runsaat kaksi prosenttia ruudun leveydestä, ja
+     * numeroympyrät menisivät päällekkäin (Petran, Mekan ja
+     * Singaporen oppi). Kartalla on siksi kellotorni, ja lautan
+     * kohde on sataman eteläpuolella Centralin laiturissa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ. Centralin ja Wan Chain
+     * kortteleita yhdistävät kävelysillat, Tsim Sha Tsuin
+     * rantapromenadi ja Sheung Wanin porraskujat ovat OSM:ssä
+     * jalankulkualueita, ja Star Ferryn laiturialueet, Tai Kwunin
+     * sisäpiha ja Peak Roadin pihatiet ovat huoltoteitä. Ilman
+     * lippuja kuvan tihein osa — juuri se kortteli, jota lehti
+     * kertoo — jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 22.3015, etela: 22.2665, lansi: 114.1385, ita: 114.1805 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    meri: true,
+  },
 };
 
 /*

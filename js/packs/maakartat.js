@@ -7499,6 +7499,164 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Mahamuni-temppeli', lat: 21.951869, lon: 96.078619 },
     ],
   },
+  /*
+   * TAIPEIN KOHDEKARTTA (21.8.2026). Rajaus on 5,2 × 5,5 km ja kattaa
+   * kaupungin vanhan puolen: Dalongdongin ja Dadaochengin
+   * teekauppakorttelit pohjoisessa, Qing-ajan muurikaupungin ruudun
+   * keskellä, Wanhuan eli Bangkan kujat lännessä ja muistosalin aukion
+   * etelässä. Kohteet on numeroitu pohjoisesta etelään kuten
+   * Medinassa, Kiotossa ja Kantonissa; kymmenes on kainalossa.
+   *
+   * RAJAUS EI OLE WIKIPEDIAN KAUPUNKIPISTEEN YMPÄRILLÄ, ja perustelu
+   * on kokonaisuudessaan tools/piirra-kaupunkikartta.mjs:n
+   * taipei-lohkossa: artikkelin infobox-koordinaatti (25,0375 /
+   * 121,5625) osuu nykyiseen Xinyihin, ja lehden historialliset
+   * kohteet ovat siitä 4–6,4 kilometriä länteen. Faktapohja
+   * (docs/aasia-tyoaineisto/faktapohja-taipei.md, osio 4) tarjosi
+   * kaksi vaihtoehtoa ja tarkistusraportti (tarkistus-taipei.md,
+   * osio 3) vahvisti vaihtoehdon A omalla haversine-laskelmallaan:
+   * kartta keskitetään vanhaan kaupunkiin ja Taipei 101 jää
+   * kainaloon.
+   *
+   * KOORDINAATIT OVAT KOHTEIDEN OMISTA en-Wikipedian artikkeleista
+   * (haettu 21.8.2026). Osa on wikitekstin {{coord}}-mallineessa
+   * (Pohjoisportti, Punainen talo, Bopiliao, Lungshan-temppeli), osa
+   * tulee Wikidatasta ja on luettu MediaWikin
+   * prop=coordinates-kutsulla samoista artikkeleista (Taipei 101,
+   * Presidentinlinna, muistosali, kasvitieteellinen puutarha) —
+   * faktapohjan osio 7 varoitti tästä erosta, ja molemmat tavat
+   * antoivat saman arvon niissä kohteissa, joissa kumpikin oli
+   * saatavilla. Dihua-kadun piste on kadun oman artikkelin
+   * koordinaatti eli kadun keskivaiheilta, ei sen päästä.
+   *
+   * DALONGDONGIN KONFUTSE-TEMPPELI JÄI POIS, vaikka se on
+   * en-Wikipedian mukaan Baoan-temppelin naapurissa: kaksi
+   * numeroympyrää olisi mennyt päällekkäin (Petran, Mekan ja
+   * Singaporen oppi). Temppeli kerrotaan Baoanin jutussa.
+   *
+   * SHILININ YÖMARKKINAT JA KANSALLINEN PALATSIMUSEO EIVÄT OLE
+   * KARTALLA EIVÄTKÄ KAINALOSSA. Ne ovat kartan keskipisteestä 4,0 ja
+   * 6,9 kilometriä pohjoiseen ja koilliseen eli eri suuntaan kuin
+   * Taipei 101, ja kolme kainaloa yhdessä kuvassa olisi levotonta
+   * (Astanan kahden rautatieaseman ratkaisu). Molemmat kerrotaan
+   * lehden nostoissa ja kuvissa.
+   *
+   * KAINALON KORKEUS 23.17 on piirtäjän oma laskelma
+   * (tools/piirra-kaupunkikartta.mjs), ei käsin kirjoitettu luku.
+   */
+  taipei: {
+    polku: 'assets/kartat/taipei-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.078, etela: 25.028, lansi: 121.4845, ita: 121.5365 },
+    kainalot: [
+      { rajat: { pohjoinen: 25.0405, etela: 25.0275, lansi: 121.558, ita: 121.572 },
+        x: 74, y: 62, leveys: 24, korkeus: 23.17 },
+    ],
+    esittely: 'Kartan alue on Taipein vanha puoli. Pohjoisessa ovat '
+      + 'Dalongdongin Baoan-temppeli ja Dadaochengin teekauppakortteli '
+      + 'Dihua-katuineen, keskellä muurikaupungin jäänne Pohjoisportti '
+      + 'ja Japanin ajan Presidentinlinna, lännessä Bangkan vanhat '
+      + 'korttelit Lungshan-temppeleineen ja etelässä muistosalin aukio '
+      + 'ja kasvitieteellinen puutarha. Vasemmalla virtaa Tamsui-joki, '
+      + 'jota pitkin teetä vietiin merelle. Kainalossa on Taipei 101 '
+      + 'kuuden kilometrin päässä kaakossa. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään; Taipei 101 on viimeisenä,
+       * koska se on kainalossa eikä pääkuvassa (Bukarestin malli).
+       */
+      { nimi: 'Baoan-temppeli', lat: 25.073173, lon: 121.515562, wiki: 'Dalongdong Baoan Temple' },
+      { nimi: 'Dihua-katu', lat: 25.066552, lon: 121.509948, wiki: 'Dihua Street' },
+      { nimi: 'Pohjoisportti', lat: 25.04772, lon: 121.51121, wiki: 'Taipei North Gate' },
+      { nimi: 'Presidentinlinna', lat: 25.04, lon: 121.511944, wiki: 'Presidential Office Building, Taipei' },
+      { nimi: 'Punainen talo', lat: 25.041987, lon: 121.506739, wiki: 'Red House Theater' },
+      { nimi: 'Lungshan-temppeli', lat: 25.037222, lon: 121.499444, wiki: 'Longshan Temple (Taipei)' },
+      { nimi: 'Bopiliaon vanha kortteli', lat: 25.03693, lon: 121.50214, wiki: 'Bopiliao Historic Block' },
+      { nimi: 'Chiang Kai-shek -muistosali', lat: 25.034444, lon: 121.521667, wiki: 'Chiang Kai-shek Memorial Hall' },
+      { nimi: 'Kasvitieteellinen puutarha', lat: 25.032286, lon: 121.509519, wiki: 'Taipei Botanical Garden' },
+      { nimi: 'Taipei 101', lat: 25.0336, lon: 121.5647, wiki: 'Taipei 101' },
+    ],
+  },
+  /*
+   * HONGKONGIN KOHDEKARTTA (21.8.2026). Rajaus on 4,3 × 3,9 km ja sen
+   * keskellä on vettä: Victoria-satama erottaa Hongkong-saaren
+   * pohjoisrannan ja Kowloonin niemimaan kärjen. Kohteet on numeroitu
+   * pohjoisesta etelään kuten Medinassa, Kiotossa ja Kantonissa, ja
+   * numerointi kulkee siksi kerrankin veden yli: kellotorni on
+   * Kowloonin puolella, kaikki muut saaren puolella.
+   *
+   * SEITSEMÄN YHDEKSÄSTÄ KOORDINAATISTA ON KOHTEIDEN OMISTA
+   * en-Wikipedian artikkeleista (haettu 21.8.2026): Clock Tower, Hong
+   * Kong; Western Market; Man Mo temples in Hong Kong; Tai Kwun;
+   * St John's Cathedral (Hong Kong); Victoria Peak; Blue House (Hong
+   * Kong); Peak Tram. Huomaa kaksi uudelleenohjausta: "Man Mo Temple"
+   * ohjaa artikkeliin "Man Mo temples in Hong Kong" ja "St John's
+   * Cathedral, Hong Kong" artikkeliin "St John's Cathedral (Hong
+   * Kong)" — pelkkä #REDIRECT-rivi ei ole lähde.
+   *
+   * STAR FERRYN LAITURI ON OVERPASSISTA, ja syy on kirjattava tähän.
+   * en-Wikipedian "Star Ferry" -artikkelissa ei ole koordinaattia
+   * lainkaan (faktapohja osio 7, huomio 2, vahvistettu itse), koska
+   * lautta on reitti eikä piste. Kartalla se on silti oltava: lautta
+   * on lehden ensimmäinen nosto ja se, mikä sitoo kartan kaksi rantaa
+   * yhteen. Piste on OSM:n Centralin laiturin polygonin keskipiste
+   * (way 1483823681, man_made=pier, name:en "Central Star Ferry
+   * Pier"): 22,28705 / 114,16116. Tokion kansallismuseon,
+   * Persepoliksen ja Xi'anin Steelametsän ennakkotapaus.
+   *
+   * TSIM SHA TSUIN LAITURI JÄI POIS, vaikka lautan toinen pää on
+   * siellä: OSM:n mukaan (relaatio 14941151) se on 22,29352 /
+   * 114,16842 eli 98 metriä kellotornin pisteestä — runsaat kaksi
+   * prosenttia ruudun leveydestä, ja numeroympyrät menisivät
+   * päällekkäin (Petran, Mekan ja Singaporen oppi). Kellotorni on
+   * kartalla, ja laituri kerrotaan sen jutussa.
+   *
+   * LAITURIPISTE ON VEDEN PUOLELLA JA SE ON OIKEIN.
+   * tools/tarkista-karttapisteet.mjs ilmoittaa Star Ferryn laiturin
+   * vetenä, koska laiturirakennus työntyy rantaviivan ulkopuolelle
+   * satama-altaaseen. Sama tilanne kuin Dubain abra-laitureilla,
+   * Odessan majakalla ja Marseillen satama-altaalla, jotka työkalun
+   * oma alkukommentti listaa oikeiksi osumiksi.
+   *
+   * KAINALOA EI OLE. Victoria Peak mahtuu pääruutuun — se on 12,8 %
+   * ruudun leveydestä vasemmasta reunasta ja 26 % korkeudesta
+   * alareunasta, siis kaukana lehden mittakaavajanasta. Perustelu
+   * kokonaisuudessaan tools/piirra-kaupunkikartta.mjs:n
+   * hongkong-lohkossa.
+   *
+   * KOWLOONIN MUURIKAUPUNGIN PUISTO EI OLE KARTALLA EIKÄ KAINALOSSA.
+   * Se on artikkelin "Kowloon Walled City" koordinaatista (22,33222 /
+   * 114,19028) laskien 6,5 kilometriä koilliseen kartan keskeltä eli
+   * kauempana kuin yksikään kainalo tässä kartastossa (Medinan Quba
+   * 3,5 km, Adenin Tawahi 6 km). Muurikaupunki kerrotaan matkaoppaan
+   * neljännessä jaksossa. Etäisyys on tarkistusraportin
+   * (docs/aasia-tyoaineisto/tarkistus-hongkong.md, osio 4) korjattu
+   * luku, ei faktapohjan oma arvio 7,3 km.
+   */
+  hongkong: {
+    polku: 'assets/kartat/hongkong-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 22.3015, etela: 22.2665, lansi: 114.1385, ita: 114.1805 },
+    esittely: 'Kartan keskellä on Victoria-satama. Pohjoisrannalla on '
+      + 'Tsim Sha Tsuin kärki kellotorneineen, eteläpuolella '
+      + 'Hongkong-saaren rantakaistale: lännessä Sheung Wanin vanhat '
+      + 'korttelit, keskellä Central ja Star Ferryn laituri, idässä '
+      + 'Wan Chai. Rinne nousee sataman takaa Victoria Peakille. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Tsim Sha Tsuin kellotorni', lat: 22.29368, lon: 114.16936 },
+      { nimi: 'Western Market', lat: 22.28723, lon: 114.1504 },
+      { nimi: 'Star Ferryn laituri', lat: 22.28705, lon: 114.16116 },
+      { nimi: 'Man Mo -temppeli', lat: 22.283982, lon: 114.150239 },
+      { nimi: 'Tai Kwun', lat: 22.2813, lon: 114.154 },
+      { nimi: 'Pyhän Johanneksen katedraali', lat: 22.27885, lon: 114.15956 },
+      { nimi: 'Victoria Peak', lat: 22.27556, lon: 114.14389 },
+      { nimi: 'Sininen talo', lat: 22.273897, lon: 114.174146 },
+      { nimi: 'Vaunuradan alaterminaali', lat: 22.27204, lon: 114.15487 },
+    ],
+  },
 };
 
 /*
