@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 985, teksti: 'v985: maan kartta kokoruudulle, iPad-mitoitus kuntoon' },
   { v: 984, teksti: 'v984: Taipei ja Hongkong — uudet kaupunkilehdet' },
   { v: 983, teksti: 'v983: Pollo lukee sen jutun jota pelaaja katsoo' },
   { v: 982, teksti: 'v982: kokoruutukartta zoomaa, sulku vain rastista' },
