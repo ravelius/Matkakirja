@@ -101,6 +101,11 @@ class Solmu {
     return null;
   }
 
+  /** Päällimmäisen jutun otsikko luetaan yhdellä valitsimella. */
+  querySelector(valitsin) {
+    return this.querySelectorAll(valitsin)[0] ?? null;
+  }
+
   cloneNode() {
     const kopio = new Solmu({
       id: this.id,
@@ -173,6 +178,47 @@ function teeLehti({ auki = true, sivuPiilossa = false } = {}) {
   return lehti;
 }
 
+/* Nähtävyysjuttu ja Lue lisää -artikkeli aukeavat lehden PÄÄLLE omiin
+ * dialogeihinsa, ja pöllö siirtyy niiden sisään. Silloin ne ovat myös
+ * se, mistä puhutaan (omistajan bugiraportti 21.8.2026). */
+const JUTUN_OTSIKKO = 'Karpaatit';
+const JUTUN_LEIPA = 'Bram Stoker ei käynyt koskaan Transilvaniassa.';
+const ARTIKKELIN_OTSIKKO = 'Karpaattien vuoristo';
+const ARTIKKELIN_LEIPA = 'Vuoristo kaartuu Slovakiasta Romaniaan.';
+
+/** Nähtävyysjuttu, jonka sisällössä on myös yksi kielletty lohko. */
+function teeJuttu({ auki = true } = {}) {
+  const juttu = new Solmu({
+    id: 'nahtavyys-dialog',
+    lapset: [
+      new Solmu({ id: 'nahtavyys-otsikko', teksti: JUTUN_OTSIKKO }),
+      new Solmu({ id: 'nahtavyys-aika', teksti: 'Kohde 3 · 1800-luku' }),
+      new Solmu({
+        id: 'nahtavyys-sisalto',
+        lapset: [
+          new Solmu({ teksti: JUTUN_LEIPA }),
+          new Solmu({ attrs: { 'data-pollo': 'ei' }, teksti: VISA_VASTAUS }),
+        ],
+      }),
+    ],
+  });
+  juttu.open = auki;
+  return juttu;
+}
+
+/** Lue lisää -artikkeli, joka voi aueta jutunkin päälle. */
+function teeArtikkeli({ auki = true } = {}) {
+  const artikkeli = new Solmu({
+    id: 'wiki-dialog',
+    lapset: [
+      new Solmu({ id: 'wiki-title', teksti: ARTIKKELIN_OTSIKKO }),
+      new Solmu({ id: 'wiki-extract', teksti: ARTIKKELIN_LEIPA }),
+    ],
+  });
+  artikkeli.open = auki;
+  return artikkeli;
+}
+
 /** Peliolio, jonka quiz-kentässä on aktiivinen tehtävä vastauksineen. */
 function teeGame() {
   return {
@@ -200,11 +246,15 @@ function teeGame() {
   };
 }
 
-function teeDoc({ lehti = null, matkakirja = '' } = {}) {
+function teeDoc({
+  lehti = null, matkakirja = '', juttu = null, artikkeli = null,
+} = {}) {
   const fact = new Solmu({ id: 'fact-text', teksti: matkakirja });
   return {
     getElementById(id) {
       if (id === 'arrival-dialog') return lehti;
+      if (id === 'nahtavyys-dialog') return juttu;
+      if (id === 'wiki-dialog') return artikkeli;
       if (id === 'fact-text') return fact;
       return null;
     },
@@ -295,6 +345,62 @@ test('lueNakyma kartalla: ei lehtitekstiä, ei kaatumista ilman peliä', () => {
   assert.ok(kartalla.includes('Näkymä: kartta'));
   assert.ok(!kartalla.includes(JUTUN_TEKSTI));
   assert.equal(lueNakyma({ game: null, doc: teeDoc() }), 'Näkymä: kartta');
+});
+
+/* ---------------------------------------------------------------- */
+/* Avoin juttu voittaa alla olevan lehden                            */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN BUGIRAPORTTI 21.8.2026. Pelaaja luki Karpaattien juttua,
+ * mutta pöllön ehdotukset kysyivät yhä Trevin suihkulähteestä: pöllö
+ * siirtyy jutun sisään (kiinnitysKohde), mutta konteksti luettiin
+ * pelkästä lehdestä jutun ALTA. Nämä testit lukitsevat säännön:
+ * päällimmäinen avoin juttu on se, mistä puhutaan.
+ */
+
+test('avoin nähtävyysjuttu voittaa alla olevan lehden', () => {
+  const konteksti = lueNakyma({
+    game: teeGame(),
+    doc: teeDoc({ lehti: teeLehti(), juttu: teeJuttu() }),
+  });
+  assert.ok(konteksti.includes(`nähtävyysjuttu auki (${JUTUN_OTSIKKO})`), konteksti);
+  assert.ok(konteksti.includes(JUTUN_LEIPA), konteksti);
+  // Alla oleva lehti ei tule mukaan: kaksi aihetta samassa paketissa
+  // olisi juuri se sekaannus, joka tässä korjataan.
+  assert.ok(!konteksti.includes(JUTUN_TEKSTI), konteksti);
+  // Sijainti tulee yhä pelistä, ei jutun otsikosta.
+  assert.ok(konteksti.includes('Kaupunki, jossa pelaaja on: Doha'), konteksti);
+  // Spoilerisuoja pätee myös jutussa.
+  assert.ok(!konteksti.includes(VISA_VASTAUS), konteksti);
+});
+
+test('Lue lisää -artikkeli on pinossa päällimmäisenä', () => {
+  const konteksti = lueNakyma({
+    game: teeGame(),
+    doc: teeDoc({ lehti: teeLehti(), juttu: teeJuttu(), artikkeli: teeArtikkeli() }),
+  });
+  assert.ok(konteksti.includes(`artikkeli auki (${ARTIKKELIN_OTSIKKO})`), konteksti);
+  assert.ok(konteksti.includes(ARTIKKELIN_LEIPA), konteksti);
+  assert.ok(!konteksti.includes(JUTUN_LEIPA), konteksti);
+});
+
+test('suljettu juttu ei jää roikkumaan kontekstiin', () => {
+  const konteksti = lueNakyma({
+    game: teeGame(),
+    doc: teeDoc({ lehti: teeLehti(), juttu: teeJuttu({ auki: false }) }),
+  });
+  assert.ok(konteksti.includes('kaupungin lehti auki'), konteksti);
+  assert.ok(konteksti.includes(JUTUN_TEKSTI), konteksti);
+  assert.ok(!konteksti.includes(JUTUN_LEIPA), konteksti);
+});
+
+test('juttu kartalla ilman lehteä luetaan sekin', () => {
+  const konteksti = lueNakyma({
+    game: teeGame(),
+    doc: teeDoc({ lehti: teeLehti({ auki: false }), juttu: teeJuttu() }),
+  });
+  assert.ok(konteksti.includes(JUTUN_LEIPA), konteksti);
 });
 
 /* ---------------------------------------------------------------- */

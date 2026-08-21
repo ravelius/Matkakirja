@@ -11442,6 +11442,71 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   white-space: nowrap;
 }
 
+/*
+ * KIINTIÖPALKIT Tilastot-lehden viimeisellä sivulla (omistajan tilaus
+ * 21.8.2026: "Siirrä alaosan tilastot tilasto lehdelle"). Palkit
+ * piirrettiin ennen hampurilaisvalikkoon pienellä .palkki-*-tyylillä;
+ * lehdessä ne saavat lukukelpoisemman koon ja saman pergamentti-
+ * paletin kuin taulun muut palkit. Kapealla ruudulla yksi sarake,
+ * leveämmällä siisti 2 × 2 — auto-fit venyttäisi työpöydällä kolmeen
+ * sarakkeeseen ja jättäisi neljännen palkin yksin toiselle riville.
+ */
+.tk-kiintiot {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem 2rem;
+  margin: 0.2rem 0 1.1rem;
+}
+
+@media (min-width: 30rem) {
+  .tk-kiintiot { grid-template-columns: 1fr 1fr; }
+}
+
+.tk-kiintio { min-width: 0; }
+
+.tk-kiintio-rivi {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.tk-kiintio-nimi {
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.72);
+}
+
+.tk-kiintio-arvo {
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  color: rgba(70, 51, 31, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tk-kiintio-ura {
+  height: 7px;
+  margin-top: 0.3rem;
+  border-radius: 999px;
+  background: rgba(70, 51, 31, 0.14);
+  overflow: hidden;
+}
+
+.tk-kiintio-tayte {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.tk-kiintio-tayte.vihrea { background: #6f9e57; }
+.tk-kiintio-tayte.keltainen { background: #c6a23c; }
+.tk-kiintio-tayte.punainen { background: #b0523c; }
+
+.tk-kiintio-tyhja .tk-kiintio-arvo { color: rgba(70, 51, 31, 0.45); }
+
 /* Tilannelehden tuoreet-chipit (omistaja 20.8.2026). */
 .tuoreet { display: flex; flex-direction: column; gap: 0.5em; margin: 0 0 1em; }
 .tuoreet-rivi { display: flex; flex-wrap: wrap; gap: 0.4em; align-items: baseline; }
@@ -15750,61 +15815,6 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
 .tyohuone-nappi .viiva-ikoni svg {
   width: 1.15rem;
   height: 1.15rem;
-}
-
-/* Tilannepalkit vierekkäin (vihreä→keltainen→punainen täytön mukaan):
- * kaksi palkkia rivissä, nimi ylhäällä, ohut ura ja lukema alla. */
-.tyohuone-palkit {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem 0.8rem;
-  margin-top: 0.6rem;
-}
-
-.tyohuone-palkki { min-width: 0; }
-
-.palkki-nimi {
-  display: block;
-  font-family: var(--font-type);
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.75;
-}
-
-.palkki-ura {
-  height: 6px;
-  margin: 0.2rem 0 0.15rem;
-  border-radius: 3px;
-  background: rgba(198, 158, 82, 0.18);
-  overflow: hidden;
-}
-
-.palkki-tayte {
-  height: 100%;
-  border-radius: 3px;
-}
-
-.palkki-tayte.vihrea { background: #6f9e57; }
-.palkki-tayte.keltainen { background: #c6a23c; }
-.palkki-tayte.punainen { background: #b0523c; }
-
-.palkki-arvo {
-  display: block;
-  font-size: 0.68rem;
-  opacity: 0.8;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.palkki-tyhja .palkki-arvo { opacity: 0.45; }
-
-.tyohuone-kulut {
-  grid-column: 1 / -1;
-  margin: 0.15rem 0 0;
-  font-size: 0.68rem;
-  opacity: 0.8;
 }
 
 .puhe-saadin-rivi {

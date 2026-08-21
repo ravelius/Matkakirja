@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v983 — POLLON KONTEKSTI KORJATTU (omistajan bugiraportti): Pollo lukee nyt sen jutun tai artikkelin jota pelaaja katsoo (ennen aina alla olevan lehden — siksi Karpaattien jutussa nakyi Trevi-kysymyksia), ja ehdotuskysymykset seuraavat samaa. KIINTIOPALKIT (R2, Repo, ElevenLabs, Pollo/kk) siirtyivat valikosta Tilastot-lehden Kiintiot-sivulle; valikkoon jai versiorivi. Tarkista: avaa Pollo nahtavyysjutussa; Tilastojen Kiintiot-sivu kehittajatilassa',
   'v982 — KOKORUUTUKARTAN KORJAUS (omistajan palaute): kartta EI enaa sulkeudu napautuksesta — vain rastista tai Escilla — ja kokoruudussa voi nyt zoomata ja panoroida (pyora, nipistys, raahaus, tuplanapautus, +/- -napit kulmassa). Lisaksi lukijan oletusnopeus tarkennettu 1,15x:aan (omistajan saato). Tarkista: kartta kokoruutuun, zoomaa ja raahaa, sulje rastista',
   'v981 — LUKIJAOLETUKSET: puheen oletusnopeus on nyt 1,2x ja oletusvoimakkuus 2,0 kaikilla lukijoilla (pollo, lehdet, matkakirja) — omistajan puhelimella hakemat arvot. Aani ja promptit ennallaan (pollo sage, muut onyx). HUOM: uusi oletusnopeus ohittaa vanhat puhevalimuistit, ensikuuntelu generoi uudelleen. Laitteen omat tallennetut saadot voittavat oletuksen. Tarkista: kuuntele lehti ja pollo',
   'v980 — ANFANGI KAUPUNKILEHTEEN: kaupunkilehden etusivun esittely alkaa nyt samalla isolla alkukirjaimella kuin maalehden paakirjoitus (todennettu kaikilla 98 lehtikaupungilla). Kakkossivun nostoissa anfangi oli jo. Tarkista: parin kaupungin etusivu',
