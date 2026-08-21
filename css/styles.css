@@ -10286,6 +10286,104 @@ button.lukija-nappi.lukee,
 }
 
 /*
+ * ÄÄNIRIVIN KAKSI PUOLTA — ENNEN JA NYT (omistajan tilaus 21.8.2026:
+ * "kaupunkilehden ääniriville kaksi puolta — vasemmalle vanha
+ * äänitallenne, oikealle nykyinen radionappi").
+ *
+ * Pariluokka tulee vasta kun kaupungilla on vanha tallenne
+ * (js/packs/vanhat-aanet.js). Ilman sitä rivi on entinen: yksi
+ * radionappi, samat mitat kuin ennen — juuri siksi puolet ovat oma
+ * luokkansa eivätkä .maa-median oletus.
+ *
+ * Puolet ovat pystysuoria pinoja, koska vasemmalla on nappia enemmän:
+ * rooliotsikko yllä ja lähderivi alla. Oikea puoli saa saman
+ * otsikkorivin, jotta napit ovat samalla korkeudella eikä pari
+ * näytä kallistuvan.
+ */
+.maa-media-pari {
+  align-items: start;
+  column-gap: 0.55rem;
+}
+
+.aani-puoli {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  min-width: 0;
+}
+
+/*
+ * Kumpikin nappi venyy oman puolensa levyiseksi, jotta pari on pari
+ * eikä kaksi eri kokoista lappua. Ilman tätä .kieli-kuuntelen oma
+ * align-self: flex-start jättäisi radionapin tekstinsä mittaiseksi
+ * vanhan tallenteen viereen.
+ */
+.aani-puoli .kulttuuri-kuuntele { align-self: stretch; }
+
+/*
+ * Rooliotsikko ladotaan samalla harvennetulla versaalilla kuin
+ * etusivun kuvaparissa (.lehti-kuva-rooli) — sama merkintä, sama
+ * painotuotteen kieli, olkoon kohde silmälle tai korvalle.
+ */
+.aani-rooli {
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.8);
+}
+
+/*
+ * Vanha nappi on hillitympi kuin suora lähetys: himmeämpi pohja ja
+ * katkoviivakehys kuin arkiston kortissa. Radio on tapahtuma, joka
+ * soi juuri nyt; tallenne on paperia arkistolaatikossa.
+ */
+.vanha-kuuntele {
+  background: rgba(244, 233, 210, 0.75);
+  border-style: dashed;
+}
+
+.vanha-kuuntele:hover { background: rgba(250, 242, 224, 0.95); }
+
+/*
+ * Vuosiluku ei kutistu eikä katkea. Se on tallenteen tärkein tieto —
+ * ilman sitä nappi voisi olla mikä tahansa äänite — joten pitkä nimi
+ * lyhenee kolmeen pisteeseen ja vuosi jää aina näkyviin, samalla
+ * tavalla kuin radionapin live-merkki ja kello.
+ */
+/*
+ * Nimi saa käyttää koko napin leveyden. Radion asemannimille
+ * asetettu 14 rem katkaisi levyn nimen jo puolivälistä, vaikka
+ * napissa oli tilaa — asemannimi on lyhyt tunniste, levyn nimi on
+ * lause.
+ */
+.maa-media .vanha-kuuntele > span:not(.aika):not(.vanha-vuosi) { max-width: none; }
+
+.maa-media .vanha-kuuntele > span.vanha-vuosi {
+  flex: 0 0 auto;
+  overflow: visible;
+  max-width: none;
+  font-variant-numeric: tabular-nums;
+  color: rgba(70, 51, 31, 0.8);
+}
+
+.aani-lahde {
+  font-size: 0.62rem;
+  line-height: 1.35;
+  color: rgba(90, 74, 51, 0.8);
+}
+
+/*
+ * Kapealla näytöllä napit allekkain (omistajan ohje). Kahtena
+ * palstana puhelimessa kummankin napin teksti lyhenisi kolmeen
+ * pisteeseen jo ensimmäisestä sanasta, eikä pelaaja näkisi kumman
+ * tallenteen hän soittaa.
+ */
+@media (max-width: 520px) {
+  .maa-media-pari { grid-template-columns: minmax(0, 1fr); row-gap: 0.5rem; }
+}
+
+/*
  * Kevyt blurrihuntu hunnuttomien popupien (uutinen, vuosisää)
  * taakse: ei tummennusta, vain hento sumennus joka irrottaa kortin
  * lehdestä. Oma elementti kortin alla (z 69 < kortin 70).

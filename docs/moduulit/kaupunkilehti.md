@@ -48,6 +48,20 @@ vaadi koodimuutoksia:
   ovat yhden virkkeen mittaiset kuten muuallakin — vasemmassa myös
   ajankohta, oikeassa nykytila. Uusi kaupunki ei vaadi koodia; ilman
   kenttää etusivu taittuu ennallaan.
+- **Äänirivin ennen ja nyt (pilotti Lontoossa ja Kairossa, omistajan
+  tilaus 21.8.2026):** äänirivi jakautuu kahtia, kun kaupungille on
+  vanha äänitallenne `js/packs/vanhat-aanet.js`:ssä. Vasemmalla on
+  "Ennen"-nappi `▷ Tallenteen nimi · vuosi` ja sen alla lähderivi,
+  oikealla nykyinen radionappi ("Nyt") ennallaan. Avain on kaupunki
+  (`city.id`), varalla maa (`VANHAT_AANET_MAA`, ISO-3) — omistajan
+  linjaus: maan tallenne kelpaa, mutta kaupungin oma on parempi.
+  Kentät: `nimi`, `vuosi`, `esittaja`, `url`, `lahde`, `lisenssi`;
+  `url` osoittaa suoraan Commonsin tiedostoon (ei repoon — 78-levy on
+  megatavuja). Lisenssin perustelu kirjataan lohkokommenttiin
+  tallenne kerrallaan. Ilman tallennetta rivi on entinen täysleveä
+  radio; kapealla näytöllä napit menevät allekkain. Soitin on sama
+  `kulttuuriAaniNapista` kuin radiolla, joten kaksi ääntä ei voi soida
+  päällekkäin. Uusi kaupunki ei vaadi koodia.
 - **Sää (v272):** lehtikaupunki saa mastoon päivän ennusteen ja
   napautuksesta koko vuoden graafin, kun sille on rivi
   `js/packs/saatiedot.js`:ssä (lat/lon + kuukausinormaalit; normaalien

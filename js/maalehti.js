@@ -18,6 +18,7 @@ import {
 import { LIPPUTIEDOT } from './packs/lipputiedot.js';
 import { karttapiste } from './packs/maakartat.js';
 import { radioMaalle } from './packs/radiot.js';
+import { vanhaTallenne } from './packs/vanhat-aanet.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import {
@@ -191,6 +192,10 @@ export function paivitaMediarivit(ui) {
     if (!kohde) continue;
     kohde.replaceChildren();
     kohde.hidden = true;
+    // Pariluokka on rivin sisällön ominaisuus, ei elementin: ilman
+    // nollausta edellisen kaupungin vanha tallenne jättäisi seuraavan
+    // kaupungin yksinäisen radionapin pariladontaan.
+    kohde.classList.remove('maa-media-pari');
   }
   if (city && ui.arrivalMediaKaupunki) {
     naytaKieliNappi(ui, city, ui.arrivalMediaKaupunki);
@@ -208,6 +213,53 @@ export function paivitaMediarivit(ui) {
   naytaKieliNappi(ui, maanIso === iso ? city : null, ui.arrivalMedia, maanIso);
 }
 
+/**
+ * ÄÄNIRIVIN VASEN PUOLI: aikakauden tallenne (omistajan tilaus
+ * 21.8.2026 — "vanhan kuvan alapuolelle" vasemmalle vanha äänitallenne,
+ * oikealle nykyinen radionappi).
+ *
+ * Sama ENNEN ja NYT -ajatus kuin v986:n kuvaparissa, mutta korvalle.
+ * Vasemmalla on gramofonin aika, oikealla suora lähetys tästä
+ * hetkestä — ja koska kumpikin on nappi, pelaaja voi soittaa ne
+ * peräkkäin ja kuulla sadan vuoden eron.
+ *
+ * MERKINTÄ ON PIENI JA PAINETTU: rooliotsikko "Ennen" ladotaan samalla
+ * harvennetulla versaalilla kuin kuvaparin otsikko, ja lähderivi jää
+ * napin alle pienimmällä kirjasimella kuten kulttuurinostojen
+ * lähteet. Painotuotteessa merkintä kertoo mitä katsotaan; se ei ole
+ * oma palkkinsa.
+ *
+ * SOITIN ON SAMA kuin radiolla ja kulttuurinostoilla
+ * (kulttuuriAaniNapista): taustan väistö, aikanäyttö ja soita/tauko
+ * tulevat siitä valmiina, eikä tälle riville synny toista soitinta,
+ * joka voisi soida päällekkäin radion kanssa.
+ */
+function vanhaAaniPuoli(ui, vanha) {
+  const puoli = html('div', 'aani-puoli aani-ennen');
+  puoli.appendChild(html('b', 'aani-rooli', 'Ennen'));
+  const nappi = html('button', 'kulttuuri-kuuntele vanha-kuuntele');
+  nappi.type = 'button';
+  nappi.title = `${vanha.nimi} — ${vanha.esittaja}, ${vanha.vuosi}`;
+  /*
+   * Vuosi on OMA elementtinsä eikä osa nimeä. Nimet ovat pitkiä
+   * ("Hold Your Hand Out, Naughty Boy") ja katkeavat napissa kolmeen
+   * pisteeseen — yhtenä merkkijonona vuosi katkesi ensimmäisenä,
+   * vaikka juuri se erottaa tallenteen radiosta. Nyt vuosi ei kutistu
+   * (ks. .vanha-vuosi), ja pisteet syövät vain nimen häntää.
+   */
+  nappi.innerHTML = `${MERKKI_SOITA}<span>${suojaa(vanha.nimi)}</span>`
+    + `<span class="vanha-vuosi">· ${suojaa(vanha.vuosi)}</span>`
+    + '<span class="aika" hidden></span>';
+  nappi.addEventListener('click', () => ui.kulttuuriAaniNapista({
+    aani: vanha.url,
+    otsikko: vanha.nimi,
+  }, nappi));
+  puoli.appendChild(nappi);
+  puoli.appendChild(html('p', 'kulttuuri-lahde aani-lahde',
+    `${vanha.esittaja} · ${vanha.lahde}`));
+  return puoli;
+}
+
 export function naytaKieliNappi(ui, city, kohde = ui.arrivalMedia, iso = null) {
   const nayte = city ? (KIELET[ui.game.pack.id] ?? {})[city.id] : null;
   /*
@@ -218,8 +270,20 @@ export function naytaKieliNappi(ui, city, kohde = ui.arrivalMedia, iso = null) {
    */
   const maa = iso ?? (city ? ui.game.pack.map?.cityCountry?.[city.id] : null);
   const radio = radioMaalle(maa);
-  if (!radio && !nayte?.url) return;
+  /*
+   * Vanha tallenne on kaupungin oma, maan tallenne vain varalta
+   * (js/packs/vanhat-aanet.js). Ilman tallennetta rivi pysyy
+   * täsmälleen entisenä — pariluokkaa ei lisätä lainkaan, joten
+   * yksinäinen radionappi ei muutu kapeammaksi.
+   */
+  const vanha = vanhaTallenne(city?.id ?? null, maa);
+  if (!radio && !nayte?.url && !vanha) return;
   kohde.hidden = false;
+  if (vanha) {
+    kohde.classList.add('maa-media-pari');
+    kohde.appendChild(vanhaAaniPuoli(ui, vanha));
+  }
+  if (!radio && !nayte?.url) return;
   /*
    * Napissa lukee aseman nimi, ei "Kuuntele kieltä" (omistajan
    * toive). Nimi on se, mikä tekee napista houkuttelevan: "TRT
@@ -247,7 +311,20 @@ export function naytaKieliNappi(ui, city, kohde = ui.arrivalMedia, iso = null) {
     otsikko: nimi,
     suora: Boolean(radio),
   }, nappi));
-  kohde.appendChild(nappi);
+  /*
+   * Parissa radionappi saa oman puolensa ja "Nyt"-otsikon, jotta se
+   * asettuu vanhan tallenteen kanssa samaan latomukseen. Yksin se
+   * menee riville sellaisenaan kuten ennenkin — ylimääräinen kääre
+   * muuttaisi rivin mitat kaupungeissa, joilla tallennetta ei ole.
+   */
+  if (!vanha) {
+    kohde.appendChild(nappi);
+    return;
+  }
+  const puoli = html('div', 'aani-puoli aani-nyt');
+  puoli.appendChild(html('b', 'aani-rooli', 'Nyt'));
+  puoli.appendChild(nappi);
+  kohde.appendChild(puoli);
 }
 
 /**
