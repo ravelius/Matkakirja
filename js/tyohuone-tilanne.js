@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v984 — TAIPEI JA HONGKONG: uudet lehdet (Taipei: 9 kohdetta + Taipei 101 kainalossa; Hongkong: 9 kohdetta Victoria Peakilta Star Ferrylle, 1868 panoraama historiakuvana). Molemmat ilman nykypolitiikkaa linjausten mukaan. HUOM: saarivit puuttuvat viela (Open-Meteon kiintio). Tarkista: molempien kartta ja Matkaopas',
   'v983 — POLLON KONTEKSTI KORJATTU (omistajan bugiraportti): Pollo lukee nyt sen jutun tai artikkelin jota pelaaja katsoo (ennen aina alla olevan lehden — siksi Karpaattien jutussa nakyi Trevi-kysymyksia), ja ehdotuskysymykset seuraavat samaa. KIINTIOPALKIT (R2, Repo, ElevenLabs, Pollo/kk) siirtyivat valikosta Tilastot-lehden Kiintiot-sivulle; valikkoon jai versiorivi. Tarkista: avaa Pollo nahtavyysjutussa; Tilastojen Kiintiot-sivu kehittajatilassa',
   'v982 — KOKORUUTUKARTAN KORJAUS (omistajan palaute): kartta EI enaa sulkeudu napautuksesta — vain rastista tai Escilla — ja kokoruudussa voi nyt zoomata ja panoroida (pyora, nipistys, raahaus, tuplanapautus, +/- -napit kulmassa). Lisaksi lukijan oletusnopeus tarkennettu 1,15x:aan (omistajan saato). Tarkista: kartta kokoruutuun, zoomaa ja raahaa, sulje rastista',
   'v981 — LUKIJAOLETUKSET: puheen oletusnopeus on nyt 1,2x ja oletusvoimakkuus 2,0 kaikilla lukijoilla (pollo, lehdet, matkakirja) — omistajan puhelimella hakemat arvot. Aani ja promptit ennallaan (pollo sage, muut onyx). HUOM: uusi oletusnopeus ohittaa vanhat puhevalimuistit, ensikuuntelu generoi uudelleen. Laitteen omat tallennetut saadot voittavat oletuksen. Tarkista: kuuntele lehti ja pollo',
@@ -350,6 +351,8 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'taipei', nimi: 'Taipei', versio: 'v984' },
+    { id: 'hongkong', nimi: 'Hongkong', versio: 'v984' },
     { id: 'yangon', nimi: 'Yangon', versio: 'v978' },
     { id: 'mandalay', nimi: 'Mandalay', versio: 'v978' },
     { id: 'astana', nimi: 'Astana', versio: 'v973' },
@@ -375,7 +378,7 @@ export const TUOREET = {
     { id: 'peking', nimi: 'Peking', versio: 'v951' },
   ],
   tyossa: [
-    { id: 'taipei', nimi: 'Taipei' },
-    { id: 'hongkong', nimi: 'Hongkong' },
+    { id: 'manila', nimi: 'Manila' },
+    { id: 'jakarta', nimi: 'Jakarta' },
   ],
 };
