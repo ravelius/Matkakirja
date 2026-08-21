@@ -26992,4 +26992,436 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * JAKARTAN KOHDEKARTAN JUTUT (21.8.2026). Kymmenen juttua, yksi
+   * jokaiselle maakartat.js:n kohteelle: seitsemän Kota Tuassa ja
+   * kolme kainalon Merdeka-aukiolla.
+   *
+   * LÄHTEET ovat kohteiden omat en-Wikipedian artikkelit,
+   * raakatekstinä 21.8.2026: Sunda Kelapa, Maritime Museum
+   * (Indonesia), Kota Intan Bridge, Fatahillah Square, Jakarta
+   * History Museum, Wayang Museum, Toko Merah, Jakarta Kota railway
+   * station, Kim Tek Ie Temple, Jakarta Cathedral, Istiqlal Mosque
+   * (Jakarta) ja National Monument (Indonesia).
+   *
+   * KAKSI SISÄISTÄ RISTIRIITAA on kirjoitettu auki tai ratkaistu:
+   * 1) Tanjung Priokin uusi satama. "Sunda Kelapa" sanoo, että
+   *    hallinto päätti rakentaa sen 1885; "Maritime Museum" sanoo,
+   *    että satama avattiin 1886. Luvut kuvaavat eri hetkeä, ja
+   *    jutut käyttävät kumpaakin omassa merkityksessään.
+   * 2) Kim Tek Ie -temppelin vuosiluvut. Temppelin oma infoboksi
+   *    antaa valmistumisvuodeksi 1755 tai 1760, mutta saman
+   *    artikkelin leipäteksti kertoo tarkemmin: temppeli perustettiin
+   *    1650, paloi 1740 ja Kong Koan kunnosti sen 1755. Juttu seuraa
+   *    leipätekstiä ja kertoo tapahtumien järjestyksen.
+   * Istiqlalin minareetin symboliikassa en-Wikipedia merkitsee itse
+   * Koraanin jaemäärän virheelliseksi, joten juttu ei toista lukua
+   * vaan kertoo vain mitat.
+   *
+   * NYKYTILAA EI VÄITETÄ kahdesta kohteesta. Merenkulkumuseo paloi
+   * tammikuussa 2018 eikä lähde kerro, onko se avattu uudelleen;
+   * Kim Tek Ie -temppelin infoboksi sanoo yhä "under restoration"
+   * vuoden 2015 palon jäljiltä. Molemmat jutut kertovat palon
+   * tapahtumana ja kokoelman tai juhlien osalta lähteen omassa
+   * preesensissä.
+   *
+   * PYHIEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa, Medinassa ja
+   * Xi'anissa: moskeija, katedraali ja klenteng kerrotaan
+   * rakennuksina, vuosilukuina ja mittoina. Istiqlalin jutusta on
+   * jätetty pois vuosien 1978 ja 1999 pommi-iskut sekä kaikki
+   * nykypolitiikka; Monasin jutusta vuoden 1965 tapahtumat, jotka
+   * lähde mainitsee rakennustyön viivästyksen syynä.
+   *
+   * WAYANG-MUSEO EI OLE OMA KOHTEENSA vaan osa Fatahillah-aukion
+   * juttua: se on 103 metrin päässä aukion pisteestä, ja kolme
+   * numeroympyrää olisi mennyt päällekkäin (perustelu maakartat.js:n
+   * jakarta-lohkossa). Siksi aukion juttu on paketin tapaan
+   * kaksikuvainen.
+   */
+  jakarta: {
+    'Sunda Kelapan satama': {
+      aika: 'Sundan pääsatama 1200–1500-luvuilla',
+      teksti: 'Sunda Kelapa on Ciliwung-joen suulla, ja siitä Jakarta '
+          + 'alkoi. Se oli Sundan valtakunnan tärkein satama, ja sitä '
+          + 'palveli sisämaan pääkaupunki Pakuan Pajajaran '
+          + 'kuudenkymmenen kilometrin päässä ylävirrassa, nykyisen '
+          + 'Bogorin paikalla. Satama eli pippurikaupasta.'
+          + '\n\n'
+          + 'Portugalilainen Tomé Pires kirjoitti 1510-luvulla, että '
+          + 'Calapan satama on kaikista tärkein ja paras ja että '
+          + 'sinne purjehditaan Sumatralta, Palembangista, Malakasta, '
+          + 'Makassarista, Jaavalta ja Madurasta. Vuonna 1522 '
+          + 'Portugali ja Sundan kuningas sopivat linnoituksesta ja '
+          + 'vapaasta pippurikaupasta; sopimuksesta pystytettiin '
+          + 'kivinen muistopatsas padrão. Viisi vuotta myöhemmin '
+          + 'Demakin joukot valtasivat sataman ja se sai nimen '
+          + 'Jayakarta.'
+          + '\n\n'
+          + 'VOC:n aikana satama oli pienten alusten paikka: ne '
+          + 'pääsivät kanavaa pitkin Kali Besarille, jossa tavara '
+          + 'purettiin ja laivoja korjattiin telakoilla. Isot laivat '
+          + 'eivät mahtuneet kapeaan ja matalaan väylään. Kun Suezin '
+          + 'kanava kasvatti liikennettä, hallinto päätti 1885 '
+          + 'rakentaa uuden sataman Tanjung Priokiin yhdeksän '
+          + 'kilometriä itään. Vanhaan satamaan jäivät pinisit, jotka '
+          + 'hoitavat yhä saarten välistä rahtia.',
+      kuvat: [
+        {
+          tiedosto: 'Jakarta Indonesia Sunda-kelapa-01.jpg',
+          selite: 'Kahden pinisin keulat ja keulapuomit nousevat '
+            + 'laiturin yli, ja kannella on pinottuja puulavoja.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Merenkulkumuseo: {
+      aika: 'varastot 1652–1771, museo 1977',
+      teksti: 'Merenkulkumuseo asuu VOC:n varastoissa. Ciliwungin '
+          + 'länsirannan varastot rakennettiin vuosina 1652–1771, ja '
+          + 'niissä säilytettiin muskottipähkinää, pippuria, kahvia, '
+          + 'teetä ja kangasta ennen laivausta Aasian ja Euroopan '
+          + 'satamiin. Neljästä länsipuolen rakennuksesta kolme on '
+          + 'museona.'
+          + '\n\n'
+          + 'Varastojen ja kaupunginmuurin väliin kertyi kuparia ja '
+          + 'tinaa, ja metalleja suojasi sateelta puinen katos, joka '
+          + 'oli kiinnitetty varastojen toiseen kerrokseen. Katosta '
+          + 'käyttivät myös vartijat, koska muurin päällä kulkeva '
+          + 'polku oli kapea. Katos on aikoja sitten purettu, mutta '
+          + 'sitä kannattaneet isot rautakoukut ovat yhä seinässä. '
+          + 'Museon edessä oleva muurinpätkä on kaikki, mitä '
+          + 'Batavian 1600- ja 1700-luvun muurista on jäljellä: '
+          + 'kahdestakymmenestäkolmesta bastionista jäljellä ovat '
+          + 'Zeeburg ja Culemborg. Culemborgin raunioille nousi 1839 '
+          + 'satamavartiotorni Menara Syahbandar, joka viestitti '
+          + 'laivoille Batavian redillä ja menetti osan '
+          + 'tehtävästään, kun Tanjung Priokin satama avattiin 1886.'
+          + '\n\n'
+          + 'Museo avattiin 7. heinäkuuta 1977, ja sen aiheena on '
+          + 'Indonesian merenkulku: veneenmalleja eri puolilta '
+          + 'saaristoa, Borobudurin reliefin mukaan tehty muinaisen '
+          + 'jaavalaisen laivan malli, purjelaivojen työkaluja, '
+          + 'majakkatietoa ja merikarttoja. Tammikuun 16. päivänä '
+          + '2018 tulipalo poltti suurimman osan rakennuksesta.',
+      kuvat: [
+        {
+          tiedosto: 'Tampak depan bangunan Museum Bahari, Jakarta.jpg',
+          selite: 'VOC:n varastorivi jatkuu kadun vartta pitkälle: '
+            + 'valkoinen muuri, punaiset tiilikatot ja rivi pieniä '
+            + 'kattoikkunoita.',
+          lahde: 'RaymondSutanto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kota Intanin nostosilta': {
+      aika: '1628',
+      teksti: 'Kali Besarin yli kaartuu Indonesian vanhin silta. VOC '
+          + 'rakensi sen vuonna 1628, ja se oli läppäsilta: kaksi '
+          + 'puista lehteä nousi ylös ja päästi veneet ali. '
+          + 'Ensimmäinen nimi oli Engelse Brug, englantilaisten '
+          + 'silta, koska sillan itäpuolella oli rakennusaikaan '
+          + 'englantilaisten tukikohta.'
+          + '\n\n'
+          + 'Nimi on vaihtunut sen jälkeen neljä kertaa. Vuosina '
+          + '1628–1629 silta vaurioitui Bantenin ja Mataramin '
+          + 'joukkojen hyökkäyksessä, ja kun se rakennettiin '
+          + 'uudelleen 1630, siitä tuli Hoenderpasarbrug eli '
+          + 'Kanatorin silta — vastarannalla oli batavialaisten '
+          + 'kanatori. Tulva vei vanhan puusillan, ja vuoden 1655 '
+          + 'korjauksen jälkeen nimi oli De Middelpunt Brug, '
+          + 'Keskisilta. Kuningatar Julianan aikana silta korjattiin '
+          + 'taas ja nimettiin hänen mukaansa.'
+          + '\n\n'
+          + 'Nykyinen nimi Jembatan Kota Intan tulee paikasta: silta '
+          + 'rakennettiin aikanaan aivan Batavian linnan '
+          + 'Timanttibastionin päähän. Muoto ja tyyli ovat samat kuin '
+          + 'alun perin, ja silta kunnostettiin vuoden 2018 '
+          + 'Aasian kisoja varten.',
+      kuvat: [
+        {
+          tiedosto: 'Jembatan Kota Intan 2017-08-22 (2).jpg',
+          selite: 'Nostosillan punainen puukehikko kaartuu kanavan '
+            + 'yli, ja taustalla kulkee rautatiesilta ja '
+            + 'moottoritie.',
+          lahde: 'Magul, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fatahillah-aukio': {
+      aika: '1627, nykyinen muoto 1632',
+      teksti: 'Aukio kirjattiin ensimmäisen kerran noin vuonna 1627 '
+          + 'nimellä Nieuwe Markt, uusi tori. Se oli silloin puolet '
+          + 'nykyisestä: itäpuolella oli kauppahuoneita, ja Ciliwung '
+          + 'mutkitteli aivan länsilaidan ohi. Vuonna 1632 '
+          + 'kenraalikuvernööri Jacques Specx uudisti Batavian '
+          + 'puolustuksen ja piirsi sisäkaupungin ruudukoksi, jonka '
+          + 'halki kaivettiin kanavia; joki suoristettiin '
+          + 'pohjois–eteläväyläksi ja itälaidan kauppahuoneet '
+          + 'purettiin. Aukio sai lopullisen muotonsa ja nimen '
+          + 'Stadhuisplein, kaupungintalon aukio.'
+          + '\n\n'
+          + 'Eteläsivulla on kaupungintalo vuodelta 1710, nykyinen '
+          + 'Jakartan historiamuseo, jonka kokoelmassa on noin 23 500 '
+          + 'esinettä. Länsisivulla on nukketeatterimuseo. Aukion '
+          + 'keskellä on 1700-luvun artesiivipumppu, joka entisöitiin '
+          + '1970, ja portugalilainen Si Jagur -kanuuna, jonka perään '
+          + 'on valettu käsi; paikallinen perimätieto liittää siihen '
+          + 'hedelmällisyyden.'
+          + '\n\n'
+          + 'Nimi vaihtui Taman Fatahillahiksi, kun Indonesiassa '
+          + 'kansallistettiin katujen nimet — Fatahillah oli se '
+          + '1500-luvun päällikkö, joka valtasi sataman '
+          + 'portugalilaisilta. Kuvernööri Ali Sadikin kunnosti '
+          + 'aukion ja sen ympäristön 1970, ja vuodesta 2007 alkaen '
+          + 'ympäröiviä katuja on suljettu autoilta.',
+      kuvat: [
+        {
+          tiedosto: 'Batavia City Hall (Jakarta History Museum) Fatahillah Square (2025) - img 17.jpg',
+          selite: 'Vanha kaupungintalo kellotorneineen aukion perällä '
+            + 'ja sen edessä valkoinen artesiivipumppu suihkualtaan '
+            + 'keskellä.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Museum Wayang, Jakarta (2025) - img 01.jpg',
+          selite: 'Nukketeatterimuseon valkoiset hollantilaispäädyt '
+            + 'aukion länsisivulla.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Toko Merah': {
+      aika: 'noin 1730',
+      teksti: 'Toko Merah on Kali Besarin länsirannalla ja yksi '
+          + 'Jakartan vanhimmista taloista. Se rakennettiin noin 1730 '
+          + 'Gustaaf Willem van Imhoffille, joka oli silloin VOC:n '
+          + 'vesiveron kantaja ja nousi seuraavana vuonna '
+          + 'ensimmäiseksi sihteeriksi ja Intian neuvoston '
+          + 'ylimääräiseksi jäseneksi. Imhoff ei ehtinyt asua talossa '
+          + 'kauan: vuonna 1736 hän lähti Ceylonin kuvernööriksi, ja '
+          + 'kun hän palasi 1743 kenraalikuvernööriksi, hän sai '
+          + 'virka-asunnon Batavian linnasta.'
+          + '\n\n'
+          + 'Talo on varhaisinta hollantilaista siirtomaa-'
+          + 'arkkitehtuuria eli 1600-luvun hollantilaista '
+          + 'kaupunkitaloa tropiikissa. Tunnusmerkkejä ovat korkeat '
+          + 'nostoikkunat kaksiosaisine luukkuineen ja harjakatto. '
+          + 'Rakenne on umpinainen, mikä sopii trooppiseen ilmastoon '
+          + 'huonommin kuin seuraavan kauden ilmavampi rakennustapa.'
+          + '\n\n'
+          + 'Käyttöä on ollut monenlaista: laivastoakatemia, hotelli, '
+          + 'kiinalaisyhteisön kapteenin koti ja kauppa — siitä nimi '
+          + 'ja punainen väri — sekä pankin ja kauppahuoneen '
+          + 'konttori. J. F. van Hoytema kunnosti talon 1920. Yksi '
+          + 'sen kuuluisimmista vieraista oli kapteeni William '
+          + 'Bligh.',
+      kuvat: [
+        {
+          tiedosto: 'Jakarta - Toko Merah (2025) - img 06.jpg',
+          selite: 'Talon suojelukilpi punatiiliseinässä kertoo '
+            + 'rakennusvuoden 1730 ja rakennuttajan nimen, ja sen '
+            + 'molemmin puolin on mustakultaisia puukoristeita.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jakarta Kotan asema': {
+      aika: '1887, nykyinen rakennus 1929',
+      teksti: 'Kota Tuan eteläreunassa on Jakarta Kotan asema, jota '
+          + 'kutsutaan yhä Beosiksi. Yhden selityksen mukaan nimi on '
+          + 'lyhenne yhtiöstä Bataviasche Oosterspoorweg '
+          + 'Maatschappij, joka rakensi ensimmäisen aseman tähän '
+          + '1887; toisen mukaan se tulee sanoista Batavia en '
+          + 'Omstreken, Batavia ja ympäristö. Virallinen nimi oli '
+          + 'Batavia Zuid, Etelä-Batavia, erotukseksi vanhemmasta '
+          + 'Batavia Noordista, joka oli vanhan kaupungintalon takana.'
+          + '\n\n'
+          + 'Vanha asema suljettiin 1923 ja rakennettiin uudelleen '
+          + '1926–1929. Piirustukset teki hollantilainen arkkitehti '
+          + 'Frans Johan Louwrens Ghijsels työtovereineen, ja tulos '
+          + 'on hänen pääteoksensa: art deco yhdistettynä paikalliseen '
+          + 'rakennustapaan. Pääsisäänkäynnin halli on tynnyriholvin '
+          + 'alla, seinät ovat karkeaa ruskeaa keramiikkaa ja '
+          + 'lattiassa on keltaista tiikkiä.'
+          + '\n\n'
+          + 'Rakennus vihittiin 8. lokakuuta 1929, ja vanha pohjoinen '
+          + 'asema purettiin. Asemalla on kuusi laituria ja '
+          + 'kaksitoista raidetta, ja se on kahden lähijunalinjan '
+          + 'päätepysäkki: toinen vie Bogoriin etelään, toinen '
+          + 'Tanjung Priokin satamaan itään. Vuonna 1993 asemasta '
+          + 'tuli suojelukohde.',
+      kuvat: [
+        {
+          tiedosto: 'Jakarta Kota Station (2025) - img 06.jpg',
+          selite: 'Pääsisäänkäynnin tynnyriholvi kaartuu hallin yli, '
+            + 'ja päädyssä on korkea ristikkoikkuna.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kim Tek Ie -temppeli': {
+      aika: '1650',
+      teksti: 'Glodokin kujien takana on Jakartan vanhin kiinalainen '
+          + 'temppeli. Sen rakennutti vuonna 1650 kiinalaisyhteisön '
+          + 'luutnantti Kwee Hoen, ja se omistettiin Guanyinille. '
+          + 'Temppelin nimi oli hokkieniksi Kwan Im Teng, Guanyinin '
+          + 'paviljonki — ja juuri siitä tuli sana klenteng, joka '
+          + 'tarkoittaa Indonesiassa mitä tahansa kiinalaista '
+          + 'temppeliä.'
+          + '\n\n'
+          + 'Temppeli paloi maan tasalle vuoden 1740 levottomuuksissa. '
+          + 'Sen jälkeen kenraalikuvernööri Gustaaf Willem van Imhoff '
+          + 'perusti kullekin väestöryhmälle oman puoli-itsenäisen '
+          + 'neuvoston, ja kiinalaisten neuvosto Kong Koan kunnosti '
+          + 'temppelin 1755 kapteeni Oey Tji Lon johdolla. Uusi nimi '
+          + 'oli Kim Tek Ie. Kong Koan huolehti sen jälkeen myös '
+          + 'kaupungin muista kiinalaisista temppeleistä. Nykyinen '
+          + 'indonesialainen nimi Vihara Dharma Bhakti annettiin '
+          + '1965, kun nimiä kansallistettiin.'
+          + '\n\n'
+          + 'Temppeli on Jakartan kiinalaisten juhlien keskus: '
+          + 'lyhtyjuhla Cap Go Meh ja Zhong Yuan -juhla pidetään sen '
+          + 'pihalla. Siirtomaa-aikana jokaisena vesak-juhlana '
+          + 'esitettiin peranakan-oopperaa batavialaisen '
+          + 'kroncong-musiikin säestyksellä. Maaliskuun 2. päivänä '
+          + '2015 tulipalo tuhosi päärakennuksen koristellut '
+          + 'kattorakenteet ja noin neljäkymmentä vanhaa veistosta.',
+      kuvat: [
+        {
+          tiedosto: 'Klenteng Jin De Yuan, Glodok, Jakarta.jpg',
+          selite: 'Temppelin punainen julkisivu lohikäärmeharjoineen '
+            + 'ja sen edessä kullattu suitsukeastia lootuksen '
+            + 'muotoisella jalustalla.',
+          lahde: 'Gunawan Kartapranata, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jakartan katedraali': {
+      aika: '1891–1901',
+      teksti: 'Katolinen kirkko oli VOC:n Bataviassa kielletty, ja '
+          + 'vasta kun Alankomaat siirtyi 1806 Napoleonin veljen '
+          + 'Ludvigin hallintaan, kirkko sai toimia vapaasti '
+          + 'Itä-Intiassa. Batavian ensimmäinen katolinen kirkko '
+          + 'vihittiin 6. marraskuuta 1829 Weltevredenissä vanhaan '
+          + 'kenraalin taloon ja nimettiin Neitsyt Marian '
+          + 'taivaaseenottamiselle. Se kunnostettiin 1859 ja sortui '
+          + '9. huhtikuuta 1890.'
+          + '\n\n'
+          + 'Nykyinen kirkko rakennettiin sortuneen tilalle vuosina '
+          + '1891–1901 uusgoottilaiseen tyyliin. Suunnittelijaksi '
+          + 'nimitettiin jesuiittaisä Antonius Dijkmans, mutta työ '
+          + 'pysähtyi rahapulaan; piispa Luypen keräsi varat '
+          + 'Alankomaista, ja arkkitehti Marius Hulswit jatkoi työtä '
+          + '1899. Hulswit yksinkertaisti suunnitelmaa niin, että sen '
+          + 'pystyivät toteuttamaan kouluttamattomat rakentajat, ja '
+          + 'lisäsi valurautaiset huiput. Kirkko vihittiin '
+          + '21. huhtikuuta 1901.'
+          + '\n\n'
+          + 'Rakennus on ristin muotoinen, narthexista apsikseen 60 '
+          + 'metriä pitkä ja kymmenen metriä leveä sivulaivoja lukuun '
+          + 'ottamatta. Julkisivun kaksi tornia ovat kuusikymmentä '
+          + 'metriä korkeat, ja kolmas nousee 45 metriin risteyksen '
+          + 'päältä. Seinät ovat paksua punatiiltä rapattuna '
+          + 'kivikuvioiseksi, katto tiikkiä ja huiput rautaa — kevyet '
+          + 'aineet valittiin siksi, että Indonesia on '
+          + 'maanjäristysaluetta.',
+      kuvat: [
+        {
+          tiedosto: 'Jakarta Cathedral Afternoon.JPG',
+          selite: 'Katedraalin kaksi valurautaista tornihuippua '
+            + 'hehkuvat iltapäivän auringossa puiden yläpuolella, ja '
+            + 'julkisivun keskellä on ruusuikkuna.',
+          lahde: 'Gunawan Kartapranata, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Istiqlal-moskeija': {
+      aika: '1961–1978',
+      teksti: 'Istiqlal on arabiaa ja tarkoittaa itsenäisyyttä. '
+          + 'Ajatuksen kansallisesta moskeijasta esitti itsenäisyyden '
+          + 'jälkeen maan ensimmäinen uskontoasiain ministeri Wahid '
+          + 'Hasyim, ja rakennustoimikunta perustettiin 1953. '
+          + 'Paikasta väiteltiin: varapresidentti Hatta olisi '
+          + 'sijoittanut moskeijan asuinalueiden lähelle, mutta '
+          + 'presidentti Sukarno halusi sen Merdeka-aukion laidalle '
+          + 'jaavalaisen kaupunkitavan mukaan — ja nimenomaan '
+          + 'katedraalin viereen merkiksi uskontojen rinnakkaiselosta.'
+          + '\n\n'
+          + 'Suunnittelukilpailun voitti arkkitehti Friedrich '
+          + 'Silaban, batakilaisen protestanttipapin poika. Peruskivi '
+          + 'laskettiin 24. elokuuta 1961, työ kesti seitsemäntoista '
+          + 'vuotta, ja moskeija vihittiin 22. helmikuuta 1978. Se on '
+          + 'Kaakkois-Aasian suurin moskeija.'
+          + '\n\n'
+          + 'Mitat on sidottu itsenäisyyteen. Päärukoussalin kupolin '
+          + 'halkaisija on 45 metriä vuoden 1945 mukaan, '
+          + 'sisäänkäynnin pienempi kupoli 8 metriä elokuun mukaan ja '
+          + 'kerroksia on viisi islamin viiden pilarin mukaan. '
+          + 'Kupolia kannattaa kaksitoista pylvästä. Portteja on '
+          + 'seitsemän, ja jokainen on nimetty yhdellä Jumalan '
+          + 'nimistä. Minareetteja on vain yksi: 66,66 metriä '
+          + 'marmoripintaista tornia ja sen päällä 30 metriä '
+          + 'ruostumatonta terästä. Marmori tuotiin Itä-Jaavan '
+          + 'Tulungagungista italialaisen sijaan.',
+      kuvat: [
+        {
+          tiedosto: 'Masjid Istiqlal.jpg',
+          selite: 'Moskeijan valkoinen kupoli kohoaa kivisen '
+            + 'sisäänkäyntimuurin takaa, ja muuriin on veistetty '
+            + 'moskeijan nimi.',
+          lahde: 'Michael Coghlan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallismonumentti Monas': {
+      aika: '1961–1975',
+      teksti: 'Kun hallinto palasi Yogyakartasta Jakartaan 1950, '
+          + 'presidentti Sukarno alkoi suunnitella Merdeka-aukiolle '
+          + 'monumenttia, joka olisi Eiffel-tornin veroinen. '
+          + 'Suunnittelukilpailu järjestettiin 1955 ja uudelleen '
+          + '1960; ensimmäiseen tuli 51 ehdotusta ja toiseen 136. '
+          + 'Vain yksi ehdotus täytti yhtäkään toimikunnan ehdoista, '
+          + 'Friedrich Silabanin, mutta kun Sukarno pyysi siitä '
+          + 'pienempää versiota, Silaban kieltäytyi ja ehdotti töiden '
+          + 'lykkäämistä siihen asti kunnes talous paranisi. Työn '
+          + 'jatkoi arkkitehti R. M. Soedarsono.'
+          + '\n\n'
+          + 'Soedarsono kirjoitti mittoihin itsenäisyysjulistuksen '
+          + 'päivämäärän: kupin muotoisen jalustan korkeus on 17 '
+          + 'metriä, jalustan leveys pohjalta 8 metriä ja kupin '
+          + 'leveys 45 metriä. Obeliski on 117,7 metriä ja koko '
+          + 'monumentti 132 metriä korkea, ja se on päällystetty '
+          + 'italialaisella marmorilla. Rakennustyö alkoi '
+          + '17. elokuuta 1961 ja monumentti avattiin yleisölle '
+          + '12. heinäkuuta 1975.'
+          + '\n\n'
+          + 'Huipulla on 14 metriä korkea ja 14,5 tonnia painava '
+          + 'pronssinen liekki, jonka sisällä on hissikoneisto. '
+          + 'Liekki päällystettiin alun perin 35 kilolla kultalehteä; '
+          + 'itsenäisyyden viisikymmenvuotisjuhlaan 1995 kultaus '
+          + 'uusittiin ja määrä nostettiin viiteenkymmeneen kiloon. '
+          + 'Näköalatasanne on 115 metrissä. Jalustan alla on '
+          + 'marmorihalli, jonka seinillä on 51 dioraamaa Indonesian '
+          + 'historiasta.',
+      kuvat: [
+        {
+          tiedosto: 'Monas (monumen nasional) di Jakarta.jpg',
+          selite: 'Monasin obeliski nousee kultaisine liekkeineen '
+            + 'aukion laidalta katsottuna, ja sen juurella liehuu '
+            + 'rivi lippuja.',
+          lahde: 'Ayu Saraswati31, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

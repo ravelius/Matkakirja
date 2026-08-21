@@ -1771,4 +1771,30 @@ export const SAATIEDOT = {
    * normaalit 1991–2020, asema 48042) ja sanoo sen ääneen; kun rivi
    * joskus lisätään, jakso kirjoitetaan rivin omista luvuista.
    */
+  /*
+   * JAKARTAN RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Kaupungille
+   * tehtiin samana päivänä alusta asti oma lehti
+   * (kulttuuri-kategoriat.js, maakartat.js, nahtavyysjutut.js,
+   * asia-artikkelit.js), mutta Open-Meteon arkisto (ERA5) vastasi
+   * koko työn ajan 429:llä ja viestillä "Daily API request limit
+   * exceeded. Please try again tomorrow" — kontin jaetun
+   * ulosmenevän osoitteen vuorokausikiintiö oli käytetty loppuun.
+   * Lukuja EI haettu muualta, koska vuosigraafin lähderivi lupaa
+   * lukijalle nimenomaan "Open-Meteo (ERA5), 1991–2020".
+   *
+   * Rivi haetaan yhdellä ajolla, kun kiintiö on vapautunut.
+   * Mittauspiste on vanhakaupunki 6,13°S / 106,81°E (en-Wikipedian
+   * Fatahillah Square -artikkelin koordinaatti −6,1347 / 106,8133),
+   * korkeus 8 metriä — Jakarta-artikkelin infoboksin luku koko
+   * kaupungille. HUOMAA MERKKI: Jakarta on eteläisellä
+   * pallonpuoliskolla, joten lat on NEGATIIVINEN ja vuodenkierto
+   * kääntyy: sateisin kausi osuu joulu–maaliskuulle ja kuivin
+   * heinä–syyskuulle.
+   *
+   * Jakartan lehden oppaan sääjakso ei riipu tästä rivistä: se on
+   * kirjoitettu en-Wikipedian oman sääruudun 1991–2020-normaaleista
+   * (Maailman ilmatieteen järjestö, Kemayoranin asema keskustassa)
+   * ja sanoo sen ääneen. Sama tilanne on Samarkandilla,
+   * Varanasilla, Xi'anilla, Ulan Batorilla, Astanalla ja Mandalaylla.
+   */
 };

@@ -42987,4 +42987,502 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * JAKARTA (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kohdekarttaa, juttuja eikä kategorioita ennen tätä, ja
+   * asia-artikkelit.js:n intro kirjoitettiin samalla uusiksi.
+   *
+   * FAKTAT on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 21.8.2026): Jakarta, Kota Tua Jakarta, Batavia (Dutch East
+   * Indies), Fatahillah Square, Jakarta History Museum, Wayang
+   * Museum, Toko Merah, Sunda Kelapa, Maritime Museum (Indonesia),
+   * Kota Intan Bridge, Jakarta Kota railway station, Kim Tek Ie
+   * Temple, Glodok, National Monument (Indonesia), Istiqlal Mosque
+   * (Jakarta), Jakarta Cathedral ja Java. Pohjana ovat
+   * docs/aasia-tyoaineisto/faktapohja-jakarta.md ja
+   * tarkistus-jakarta.md, ja tarkistuksen korjaukset on tehty.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 21.8.2026. POIS JÄTETTY KOKONAAN:
+   * vuosien 1965–66 tapahtumat, vuoden 1998 mellakat, nykyhallinto
+   * ja kaikki puoluepolitiikka, Istiqlalin pommi-iskut 1978 ja 1999
+   * sekä Glodokia koskevat nykykiistat. Pääkaupungin siirto
+   * Nusantaraan on mukana YHTENÄ neutraalina tosiasiana (vuoden 2022
+   * laki, siirto vahvistetaan presidentin asetuksella) ilman
+   * kannanottoa. Vajoaminen ja tulvat kerrotaan kaupunkirakenteen
+   * tosiasiana ilman katastrofikehystä: syyt luetellaan (sade,
+   * ylävirran vedet, nousuvesi, maaperän vajoaminen, viemäröinti)
+   * eikä yhdessäkään kuvassa ole tulvaa. Vuoden 1740 verilöyly on
+   * kerrottu neutraalina historiana tapahtuman ja sen seurauksen
+   * kautta (Glodokin synty) ilman yksityiskohtia — sama periaate
+   * kuin Medinan Khandaq-taistelussa ja Kantonin oopiumisodissa.
+   * Uskonto on rakennushistoriaa: moskeija, katedraali ja
+   * kiinalainen temppeli kerrotaan rakennuksina ja vuosilukuina.
+   *
+   * TARKISTUSRAPORTIN KORJAUKSET, jotka näkyvät teksteissä:
+   * 1) Fatahillah-aukion ALKUPERÄINEN nimi oli Nieuwe Markt (n. 1627)
+   *    eikä Stadhuisplein, joka tuli vasta kaupungintalon myötä.
+   *    Faktapohja väitti toisin; kohdekartan aukiojuttu kertoo
+   *    molemmat nimet oikeassa järjestyksessä.
+   * 2) Nimenvaihto Taman Fatahillahiksi on IRROTETTU vuodesta 1970:
+   *    lähde sitoo vuoteen 1970 vain Ali Sadikinin kunnostuksen ja
+   *    artesiivipumpun entisöinnin, ei nimenvaihtoa.
+   * 3) Kolme kohdekartan ilmansuuntaa korjattiin (ks. maakartat.js).
+   * 4) Nosto K1 sanoo Jayakartan (1527) ja Batavian (1619) väliksi
+   *    "yhdeksänkymmentäkaksi vuotta" eikä faktapohjan pyöristettyä
+   *    "yhdeksääkymmentä".
+   *
+   * WIKIPEDIAN SISÄINEN RISTIRIITA, joka koskee tekstejä: Tanjung
+   * Priokin uusi satama. "Sunda Kelapa" -artikkeli sanoo, että
+   * hallinto PÄÄTTI rakentaa sen 1885; "Maritime Museum (Indonesia)"
+   * sanoo, että satama AVATTIIN 1886. Luvut eivät ole ristiriidassa
+   * vaan kuvaavat eri hetkeä, ja teksteissä käytetään kumpaakin
+   * omassa merkityksessään (nosto K3: päätös 1885; kohdekartan
+   * merenkulkumuseon juttu ja historiasivun nosto H4: avaus 1886).
+   * Toinen ristiriita on Kim Tek Ie -temppelin vuosiluvuissa: sen
+   * oma artikkeli antaa perustamisvuodeksi 1650 ja kunnostusvuodeksi
+   * 1755 (infoboksissa myös 1760), ja Glodok-artikkeli kutsuu samaa
+   * temppeliä 1650 perustetuksi. Artikkeli selittää eron itse
+   * (alkuperäinen temppeli paloi 1740), ja juttu kertoo sen niin.
+   *
+   * MUSEUM BAHARIN NYKYTILAA EI VÄITETÄ. Museo paloi tammikuussa
+   * 2018, ja en-Wikipedia ei sano, onko se avattu uudelleen;
+   * tarkistusraportti päättelee tammikuun 2025 kuvista, että
+   * kokoelma on taas esillä, mutta päättely ei ole lähde. Juttu
+   * kertoo palon tapahtumana ja kokoelman lähteen omassa
+   * preesensissä. Sama koskee Kim Tek Ie -temppeliä, jonka
+   * infoboksi sanoo yhä "under restoration".
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Indonesian pääkaupunki
+   * (intro, K4), Jaava (intro, opasjakso 2), tulivuoret ja laattojen
+   * työntyminen (opasjakso 2), Nusantara ja vajoaminen (K4,
+   * opasjakso 2) sekä indonesian kieli (opasjakso 3). Historiasivun
+   * minitehtävä kysyy Batavian bastionien määrää, jota visa ei kysy,
+   * ja vastaus on samalla sivulla nostossa H4.
+   *
+   * KUVAT: kansikuvat ovat kolme laajaa yleiskuvaa kaupungin eri
+   * puolilta (keskusta ja Merdeka-aukio ilmasta, Kota Tua ilmasta,
+   * Sunda Kelapan satama-allas illalla) kansikaruselliohjeen
+   * mukaisesti. AIHETOISTO, joka on tietoinen: satama esiintyy
+   * kolmesti (kansikuva, nosto K3 ja kohdekartan oma juttu), koska
+   * se on sekä kaupungin alkupiste, oma nostonsa että kartan kohde —
+   * eri tiedostot, eri kuvakulmat, sama perustelu kuin Xi'anin
+   * terrakotta-armeijalla. Matkaoppaan kuva on tuore pysty
+   * (w/h 0,75). Vanhat kuvat ovat vain historia-aiheissa: kolme
+   * 1700-luvun piirrosta (Rijksmuseum, KITLV) ja yksi 1669
+   * kaupunkikartta.
+   *
+   * SÄÄRIVI PUUTTUU YHÄ js/packs/saatiedot.js:stä, ja se on tietoinen
+   * jättö eikä unohdus: Open-Meteon arkisto (ERA5) vastasi tämän erän
+   * ajan pelkällä 429:llä ja viestillä "Daily API request limit
+   * exceeded". Oppaan sääjakso on kirjoitettu en-Wikipedian oman
+   * sääruudun 1991–2020-normaaleista (Kemayoranin asema) ja sanoo
+   * sen ääneen. Perustelu kokonaisuudessaan saatiedot.js:n lopussa.
+   */
+  jakarta: [
+    {
+      id: 'kaupunki',
+      nimi: 'Jakarta',
+      johdanto: 'Jaavan pohjoisrannikon jokisuu, jossa kaupunki on '
+        + 'vaihtanut nimeä neljästi. Hollantilaisten muurikaupunki '
+        + 'mahtuu yhä kävelymatkalle, ja sen ympärillä on kasvanut '
+        + 'yksi maailman suurimmista kaupunkiseuduista.',
+      kansikuvat: [
+        {
+          tiedosto: 'Jakarta Panorama.jpg',
+          selite: 'Keskustan siluetti puistojen takaa: keskellä kohoaa '
+            + 'kansallismonumentti Monas ja sen molemmin puolin '
+            + 'tornitalojen rivi.',
+          lahde: 'Gunawan Kartapranata, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'DJI 0127 - Kota Tua Jakarta.jpg',
+          selite: 'Vanhakaupunki ylhäältä: Jakarta Kotan aseman '
+            + 'laiturikatokset ja raiteet halkovat tiheää '
+            + 'kortteliverkkoa, ja vasemmalla kulkee kanava.',
+          lahde: 'IndoDroneMan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Sunda Kelapa.jpg',
+          selite: 'Sunda Kelapan satama-allas iltavalossa, laiturissa '
+            + 'puinen rahtialus ja taustalla varastorivi ja kaksi '
+            + 'tornitaloa.',
+          lahde: 'Pocsywe, Wikimedia Commons (CC0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: aukio, kanava ja asema — vanhan Batavian keskus,
+       * sen vesiväylä ja se ovi, josta kaupunkiin nykyään tullaan.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Fatahillah Square 3.jpg',
+          selite: 'Fatahillah-aukio ylhäältä: laaja kivetty kenttä, '
+            + 'keskellä valkoinen artesiivipumppu ja perällä vanha '
+            + 'kaupungintalo.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kali Besar.jpg',
+          selite: 'Kali Besarin kanava kaartuu kivettyjen rantojen '
+            + 'välissä, ja oikealla seisoo rivi vanhoja '
+            + 'kauppahuoneita nykytornien edessä.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Jakarta Kota Station (2025) - img 04.jpg',
+          selite: 'Jakarta Kotan aseman art deco -julkisivu ja sen '
+            + 'tynnyriholvinen pääsisäänkäynti tyhjän aukion takana.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jolla on neljä nimeä',
+          tiedosto: 'Plattegrond van Batavia, RP-P-OB-47.392.jpg',
+          teksti: 'Sundan valtakunnan tärkein satama tunnettiin '
+            + 'nimellä Kalapa eli Sunda Kalapa, ja portugalilaiset '
+            + 'kirjasivat sen Calapaksi. Portugali sopi 1522 '
+            + 'Sundan kuninkaan kanssa vapaasta pippurikaupasta, mutta '
+            + '22. kesäkuuta 1527 Demakin sulttaanikunnan joukot '
+            + 'Fatahillahin johdolla valtasivat sataman ja nimesivät '
+            + 'sen Jayakartaksi, sanskritin "voitollinen teko". '
+            + 'Reilut yhdeksänkymmentä vuotta myöhemmin, toukokuussa '
+            + '1619, hollantilaisen Itä-Intian kauppakomppanian VOC:n '
+            + 'joukot Jan Pieterszoon Coenin johdolla valtasivat '
+            + 'kaupungin ja hävittivät sen. Raunioille nousi Batavia, '
+            + 'nimetty batavien mukaan, joita hollantilaiset pitivät '
+            + 'esi-isinään. Neljäs nimi tuli 1942.',
+          selite: 'Vuoden 1669 kaivertama kartta Bataviasta: muurien '
+            + 'sisällä on suora kanavaruudukko ja edustalla '
+            + 'ankkuroituja purjelaivoja.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Batavia, Dutch East Indies',
+        },
+        {
+          otsikko: 'Kanavakaupunki matalalla maalla',
+          tiedosto: 'Gezicht op landhuis Weltevreden te Batavia Weldt Vried (titel op object), NG-400-Y.jpg',
+          teksti: 'Batavia rakennettiin hollantilaiseen tapaan: muuri, '
+            + 'bastionit ja ruudukoksi kaivetut kanavat Ciliwung-joen '
+            + 'suulle matalalle rantamaalle. Kanavat palvelivat '
+            + 'liikennettä, kuivatusta ja vedenhallintaa, mutta heikko '
+            + 'virtaus ja rannikon liettyminen tekivät tulvista ja '
+            + 'viemäröinnistä pysyvän vaivan, ja 1700-luvulle '
+            + 'tultaessa vanha kaupunki oli saanut maineen sairauden '
+            + 'ja rappion paikkana. 1800-luvulla hallinto ja varakkaat '
+            + 'asukkaat siirtyivät sisämaahan Weltevredenin väljille '
+            + 'kaduille — nykyiseen Keski-Jakartaan — ja alakaupungille '
+            + 'jäivät kauppa, varastot ja kiinalaiskortteli.',
+          selite: 'Weltevredenin huvilan porttien läpi avautuu '
+            + 'puukujanne, jonka päässä häämöttää päärakennus.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Kota Tua Jakarta',
+        },
+        {
+          otsikko: 'Satama, joka ei koskaan lakannut',
+          tiedosto: 'Kapal Pinisi Pelabuhan Sunda Kelapa.jpg',
+          teksti: 'Sunda Kelapa toimii yhä Ciliwungin suulla, mutta '
+            + 'nykyään sinne saapuvat enää pinisit: perinteiset '
+            + 'kaksimastoiset puiset purjelaivat, jotka kuljettavat '
+            + 'rahtia saarelta toiselle. 1800-luvulla väylää '
+            + 'kutsuttiin nimellä Haven Kanaal, ja se oli ainoa '
+            + 'sisääntulo Bataviaan. Kanava oli kapea ja matala, joten '
+            + 'isot alukset ankkuroivat ulos merelle ja tavara tuotiin '
+            + 'rantaan matalilla rautaisilla höyryproomuilla. Kun '
+            + 'Suezin kanava kasvatti liikennettä, siirtomaahallinto '
+            + 'päätti 1885 rakentaa uuden sataman Tanjung Priokiin '
+            + 'yhdeksän kilometriä itään.',
+          selite: 'Kolme pinisiä laiturissa vierekkäin, keskimmäisen '
+            + 'keula sinipunaisena ja köydet vedettyinä rantaan.',
+          lahde: 'Cun Cun, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sunda Kelapa',
+        },
+        {
+          otsikko: 'Itsenäisyys ja uusi pääkaupunki',
+          tiedosto: 'Monumen Nasional, Jakarta, Indonesia.jpg',
+          teksti: 'Indonesian itsenäisyys julistettiin Jakartassa '
+            + '17. elokuuta 1945. Valta kaupungissa oli kiistanalainen '
+            + 'vielä vuosia: tasavallan johto siirsi väliaikaisen '
+            + 'pääkaupungin Yogyakartaan alkuvuodesta 1946, ja '
+            + 'Alankomaat luovutti suvereniteetin vuonna 1949. '
+            + 'Merdeka-aukiolle nousi vuosina 1961–1975 '
+            + 'kansallismonumentti Monas, 132 metriä korkea obeliski, '
+            + 'jonka mitoissa toistuvat luvut 17, 8 ja 45. Vuonna 1964 '
+            + 'Jakartasta tehtiin erityinen pääkaupunkialue, jonka '
+            + 'asema vastaa maakuntaa. Vuoden 2022 lain mukaan '
+            + 'pääkaupunki siirtyy Borneolle rakennettavaan '
+            + 'Nusantaraan, kun presidentin asetus vahvistaa siirron.',
+          selite: 'Merdeka-aukio ilmasta: keskellä nousee Monasin '
+            + 'valkoinen obeliski, ja oikealla erottuu '
+            + 'Istiqlal-moskeijan kupoli.',
+          lahde: 'Ramayoni, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'National Monument (Indonesia)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Museum Bahari (Maritime Museum).jpg',
+          selite: 'VOC:n varastojen valkoinen muuri vartiokojuineen, '
+            + 'ja kaukana kadun päässä punakattoinen '
+            + 'satamavartiotorni.',
+          lahde: 'Cun Cun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Jakarta on Indonesian pääkaupunki ja oma '
+          + 'pääkaupunkialueensa, jonka asema vastaa maakuntaa: viisi '
+          + 'kaupunkia mantereella ja Tuhannen saaren saaristo '
+          + 'pohjoisessa. Matkailijan Jakarta on silti pieni. '
+          + 'Vanhankaupungin eli Kota Tuan kohteet mahtuvat 1,3 '
+          + 'neliökilometriin ja kuljetaan kävellen, ja Merdeka-aukion '
+          + 'monumentit ovat runsaat neljä kilometriä kaakkoon — ne '
+          + 'ovat tämän sivun kartan kainalossa.',
+        artikkeli: {
+          nimi: 'Matkailijan Jakarta',
+          taitto: 'opas',
+          teksti: 'Yksi jokisuu, yksi hollantilainen muurikaupunki ja '
+            + 'kolmetoista jokea, jotka kaikki laskevat saman lahden '
+            + 'pohjukkaan.',
+          nosto: 'Kali Besarin nostosilta on vuodelta 1628 ja '
+            + 'Indonesian vanhin silta. Nimi on vaihtunut viisi '
+            + 'kertaa: Engelse Brug, Hoenderpasarbrug, De Middelpunt '
+            + 'Brug, kuningatar Julianan silta ja lopulta Jembatan '
+            + 'Kota Intan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Suurin osa kansainvälisistä lennoista tulee '
+                + 'Soekarno–Hattan lentoasemalle kaupungin '
+                + 'luoteispuolelle; Halim Perdanakusuma hoitaa '
+                + 'kotimaan ja pienemmät vuorot. Kaupungin sisällä '
+                + 'liikkuu neljä eri raide- ja bussijärjestelmää: '
+                + 'Transjakartan runkobussit omilla kaistoillaan, '
+                + 'metro, kaksi pikaraitiotietä ja KRL Commuterline '
+                + '-lähijunat, joilla kuljetaan myös '
+                + 'naapurikaupunkeihin Bogoriin, Depokiin, '
+                + 'Tangerangiin ja Bekasiin. Lentoasemalle menee oma '
+                + 'junayhteys. Vanhaankaupunkiin pääsee Jakarta Kotan '
+                + 'asemalle, joka on kahden lähijunalinjan '
+                + 'päätepysäkki ja kävelymatkan päässä '
+                + 'Fatahillah-aukiosta. Autoilla Jakarta on tukossa: '
+                + 'ruuhkat ovat vaivanneet kaupunkia ja koko '
+                + 'ympäröivää seutua vuosikymmeniä.',
+              kuva: {
+                tiedosto: 'Transjakarta Buses accompanied by light trails.jpg',
+                selite: 'Kaksi nivelbussia odottaa omalla kaistallaan '
+                  + 'yöllä, ja ohi ajavien autojen valot piirtyvät '
+                  + 'juoviksi märkään asfalttiin.',
+                lahde: 'Adiva Yusuf, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Jakarta on Jaavan luoteisrannikolla '
+                + 'Ciliwung-joen suulla Jakartanlahden pohjukassa, ja '
+                + 'lahti on osa Jaavanmerta. Maa-alaa on noin 662 '
+                + 'neliökilometriä ja merialuetta lähes '
+                + 'seitsemäntuhatta. Eteläisiä kumpuja lukuun '
+                + 'ottamatta kaupunki on matalaa jokien ja kanavien '
+                + 'halkomaa tulvatasankoa: korkeus vaihtelee '
+                + 'merenpinnan alapuolelta noin viiteenkymmeneen '
+                + 'metriin. Kolmetoista jokea virtaa etelästä lahteen, '
+                + 'niiden joukossa Ciliwung, Angke, Sunter ja Grogol. '
+                + 'Tulvat toistuvat, ja niiden takana on monta syytä '
+                + 'yhtä aikaa: rankkasateet, ylävirran vedet, '
+                + 'nousuvesi, maaperän vajoaminen ja rajallinen '
+                + 'viemäröinti. Itse saari on kokonaan '
+                + 'tulivuoriperäinen — Australian mannerlaatta '
+                + 'työntyy Sunda-laatan alle, ja Jaavalla on 112 '
+                + 'tulivuorta, joista 35 on aktiivisia. Se on myös '
+                + 'maailman väkirikkain saari.',
+              kuva: {
+                tiedosto: 'Jakarta Indonesia Ciliwung-River-01.jpg',
+                selite: 'Ciliwung virtaa betonisten tukimuurien '
+                  + 'välissä, ja molemmilla rannoilla kasvaa puita ja '
+                  + 'talorivejä aivan veden partaalle.',
+                lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: Glodok',
+              teksti: 'Glodok on Indonesian suurin kiinalaiskortteli, '
+                + 'ja se alkaa vanhankaupungin eteläpuolelta. Alue '
+                + 'jakautuu kolmeen osaan: Gang Gloria, Jalan Pancoran '
+                + 'ja Petak Sembilan. Kauppiaiden esi-isät tulivat '
+                + '1600-luvulta alkaen Fujianista ja Guangdongista, ja '
+                + 'korttelissa on neljä vanhaa temppeliä sekä '
+                + 'kiinalaistyylinen katolinen kirkko. Kujilta löytyy '
+                + 'sekä kiinalaista että betawilaista ruokaa: '
+                + 'gado-gado on maapähkinäkastikkeessa tarjottua '
+                + 'vihannessekoitusta, soto betawi kookosmaidossa '
+                + 'haudutettua naudanlihaa ja ketupat sayur '
+                + 'riisikakkuja kookoskastikkeessa. Vuonna 1927 '
+                + 'perustettu Kopi Es Tak Kie on erikoistunut '
+                + 'jääkahviin. Yhteinen kieli on indonesia, joka on '
+                + 'maan virallinen kieli ja jota eri taustoista '
+                + 'tulevat asukkaat käyttävät keskenään.',
+              kuva: {
+                tiedosto: 'Soto Betawi Glodok.JPG',
+                selite: 'Soto betawi höyryää valkoisessa kulhossa, ja '
+                  + 'takana on lautasellinen riisiä ja pikkelöityjä '
+                  + 'vihanneksia.',
+                lahde: 'Gunawan Kartapranata, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: 1740',
+              teksti: 'Lokakuussa 1740 VOC:n viranomaisten ja Batavian '
+                + 'kiinalaisyhteisön välinen kiista kärjistyi '
+                + 'verilöylyksi. Selviytyjiä ei enää päästetty asumaan '
+                + 'muurien sisäpuolelle, ja seuraavana vuonna heille '
+                + 'osoitettiin oma alue kaupungin eteläpuolelta, '
+                + 'Diestpoortin portin takaa — se on nykyinen Glodok. '
+                + 'Samassa yhteydessä kenraalikuvernööri Gustaaf '
+                + 'Willem van Imhoff perusti kullekin väestöryhmälle '
+                + 'puoli-itsenäisen neuvoston hoitamaan sen omia '
+                + 'asioita; kiinalaisten neuvosto oli nimeltään Kong '
+                + 'Koan, ja se kunnosti 1755 palaneen Kim Tek Ie '
+                + '-temppelin ja huolehti sen jälkeen kaupungin '
+                + 'kiinalaisista temppeleistä.',
+              kuva: {
+                tiedosto: 'Gouvernement, kasteelkerk en dragonderwacht binnen het Kasteel te Batavia, NG-1985-7-3-145.jpg',
+                selite: '1700-luvun piirros Batavian linnan sisältä: '
+                  + 'oikealla kulkee pitkä hallintorakennus '
+                  + 'holvikäytävineen ja keskellä seisoo pieni '
+                  + 'linnankirkko.',
+                lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Jakartassa on trooppinen monsuuni-ilmasto, ja '
+                + 'lämpötila on sama ympäri vuoden: kuukausikeskiarvo '
+                + 'liikkuu 27,3 ja 28,8 asteen välillä, päivän ylin 31 '
+                + 'ja 33 asteen välillä ja yön alin aina 25 asteen '
+                + 'tuntumassa. Vuodenajan tekee sade. Sadekausi kestää '
+                + 'lokakuusta toukokuuhun ja runsain sade osuu '
+                + 'joulu–maaliskuulle: tammikuussa kertyy 373 ja '
+                + 'helmikuussa 381 millimetriä, ja sadepäiviä on '
+                + 'lähes kaksikymmentä kuukaudessa. Kuivin aika on '
+                + 'kesä–syyskuu, ja elokuussa sataa 52 millimetriä '
+                + 'kolmena päivänä. Vuoden sade on 1 933 millimetriä. '
+                + 'Kävelijälle paras aika on siis heinä–syyskuu, '
+                + 'jolloin aurinkoa on toistasataa tuntia enemmän kuin '
+                + 'tammikuussa. Luvut ovat Maailman ilmatieteen '
+                + 'järjestön normaaleja 1991–2020 Kemayoranin '
+                + 'asemalta keskustassa, ja ne on luettu '
+                + 'en-Wikipedian sääruudusta — pelin oma säärivi '
+                + 'Jakartalle puuttuu toistaiseksi.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vanha Batavia oli muurien ympäröimä kanavakaupunki ja '
+        + 'kauppakomppania VOC:n Aasian-pääkonttori. Sen ytimestä on '
+        + 'jäljellä 1,3 neliökilometrin kortteliverkko, jota kutsutaan '
+        + 'nimellä Kota Tua.',
+      tehtava: {
+        kysymys: 'Kuinka monta bastionia Batavian kaupunginmuurissa oli '
+          + '1600- ja 1700-luvulla?',
+        vaihtoehdot: [
+          'Neljä',
+          'Kaksitoista',
+          'Kaksikymmentäkolme',
+          'Sata',
+        ],
+        oikea: 2,
+        fakta: 'Kahdestakymmenestäkolmesta bastionista on jäljellä '
+          + 'kaksi, Zeeburg ja Culemborg; Culemborgin raunioille '
+          + 'rakennettiin 1839 satamavartiotorni Menara Syahbandar.',
+      },
+      nostot: [
+        {
+          otsikko: 'Talo, joka oli koko hallinto',
+          tiedosto: 'Het stadhuis van Batavia met de fonteyn, de Groote Kerk, Tijgers Gragt en Nieuwpoortstraat 1770-1772, KITLV 51C3.jpg',
+          teksti: 'Fatahillah-aukion eteläreunassa seisoo rakennus, '
+            + 'joka oli aikanaan koko hallinto. Ensimmäinen Stadhuis '
+            + 'eli kaupungintalo valmistui samalle paikalle 1627; '
+            + 'nykyinen rakennus syntyi vuonna 1707 alkaneessa '
+            + 'perusteellisessa uudistuksessa, ja kenraalikuvernööri '
+            + 'Abraham van Riebeeck vihki sen 1710 VOC:n hallinnon '
+            + 'taloksi. Esikuva oli Amsterdamin kaupungintalo, '
+            + 'nykyinen kuninkaanlinna, ja siitä periytyvät sekä '
+            + 'kattokupoli että mittasuhteet. Sisällä on 37 huonetta. '
+            + 'Kuistin alla oli vankikoppeja vuoteen 1846 asti; '
+            + 'jaavalainen prinssi Diponegoro oli niissä 1830 ennen '
+            + 'karkotustaan Manadoon. Kaupungintalona talo toimi '
+            + 'vuoteen 1913 ja museona vuodesta 1974.',
+          selite: 'Johannes Rachin piirroksessa 1770-luvulta '
+            + 'kaupungintalo seisoo puurivien takana ja aukion '
+            + 'keskellä on pieni kupolikattoinen vesipiste.',
+          lahde: 'Presumably by: Rach, Johannes (tekenaar)., Wikimedia Commons (PD)',
+          wiki: 'Jakarta History Museum',
+        },
+        {
+          otsikko: 'Punainen talo Kali Besarin varrella',
+          tiedosto: 'Jakarta - Toko Merah (2025) - img 01.jpg',
+          teksti: 'Toko Merah eli "punainen kauppa" rakennettiin noin '
+            + 'vuonna 1730 nousevalle VOC-virkamiehelle Gustaaf Willem '
+            + 'van Imhoffille, josta tuli myöhemmin Alankomaiden '
+            + 'Itä-Intian kenraalikuvernööri. Talo ehti olla '
+            + 'laivastoakatemia 1743–1755 ja hotelli 1786–1808: isäntä '
+            + 'rakennutti vaunuvajat ja tallit kahdeksalle vaunulle ja '
+            + 'kuudelletoista hevoselle ja piti Kali Besarin kanavassa '
+            + 'kuutta venettä tavaran hakemiseen satamasta. Vuonna '
+            + '1851 talon osti kiinalaisyhteisön kapteeni Oey Liauw '
+            + 'Kong kodikseen ja kaupakseen ja maalasi sen punaiseksi. '
+            + 'Sen jälkeen se on ollut muun muassa pankin konttori '
+            + '1920–1940.',
+          selite: 'Toko Merahin punatiilinen julkisivu korkeine '
+            + 'nostoikkunoineen kadun toiselta puolelta katsottuna.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Toko Merah',
+        },
+        {
+          otsikko: 'Kirkon paikalla nukketeatteri',
+          tiedosto: 'Gezicht op de Nieuwe Hollandse kerk van Batavia Het Gezigt van de Groote Hollandse Kerk tot Batavia Te Sien van de Overkant van de Groote Revier (titel op object), NG-400-T.jpg',
+          teksti: 'Aukion länsipuolella olevan nukketeatterimuseon '
+            + 'paikalla seisoi kirkko. Vanha hollantilainen kirkko '
+            + 'rakennettiin 1640, kunnostettiin 1732 Uudeksi '
+            + 'hollantilaiseksi kirkoksi ja tuhoutui '
+            + 'maanjäristyksessä 1808. Kirkon pihamaalle haudattiin '
+            + 'VOC:n kenraalikuvernööri Jan Pieterszoon Coen, ja hänen '
+            + 'muistolaattansa on yhä museon sisällä. Nykyinen '
+            + 'rakennus nousi 1912 kauppahuone Geo Wehry & Co:n '
+            + 'varastoksi, ja siitä tuli Vanhan Batavian museo 1939. '
+            + 'Wayang-museoksi se vihittiin 13. elokuuta 1975. '
+            + 'Kokoelmassa on sekä jaavalaista nahkanukke- että '
+            + 'sundalaista puunukketeatteria.',
+          selite: 'Kaiverruksessa vuodelta 1769 Batavian suuri '
+            + 'hollantilainen kirkko kupoleineen nousee joen '
+            + 'vastarannan puurivin takaa.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Wayang Museum',
+        },
+        {
+          otsikko: 'Kaksi bastionia kahdestakymmenestäkolmesta',
+          tiedosto: 'De uitkijk (Menara Syahbandar) 10.jpg',
+          teksti: 'Batavian muurissa oli 1600- ja 1700-luvulla '
+            + 'kaksikymmentäkolme bastionia, ja niistä on jäljellä '
+            + 'kaksi: Zeeburg ja Culemborg. Muurinpätkä seisoo yhä '
+            + 'merenkulkumuseon edessä. Museona ovat VOC:n varastot, '
+            + 'jotka rakennettiin Ciliwungin länsirannalle vuosina '
+            + '1652–1771 ja joissa säilytettiin muskottia, pippuria, '
+            + 'kahvia, teetä ja kangasta ennen laivausta. Culemborgin '
+            + 'bastionin raunioille rakennettiin 1839 '
+            + 'satamavartiotorni Menara Syahbandar, joka viestitti '
+            + 'laivoille Batavian redillä. Torni menetti osan '
+            + 'tehtävästään, kun uusi Tanjung Priokin satama avattiin '
+            + '1886.',
+          selite: 'Näkymä satamavartiotornin ikkunasta Ciliwungille: '
+            + 'vasemmalla kulkee VOC:n varastojen pitkä tiilikatto ja '
+            + 'takana kohoavat nykysataman nosturit.',
+          lahde: 'Hanno Lans, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Maritime Museum (Indonesia)',
+        },
+      ],
+    },
+  ],
 };

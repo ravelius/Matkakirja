@@ -172,6 +172,21 @@
 // osapuolen kehystä, eikä saaren nykyistä asemaa käsitellä lainkaan
 // — perustelut ovat kulttuuri-kategoriat.js:n taipei-lohkon
 // kommentissa. Teksti-kenttä on ennallaan.
+//
+// JAKARTA (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js). Vanha intro oli kahden lauseen mittainen ja
+// kertoi vain, että kaupunki on suuri ja vajoaa; uusi kertoo lisäksi
+// sijainnin, nimihistorian, VOC:n Batavian ja itsenäistymisen.
+// Jokainen introväite tulee saman erän lehtiteksteistä, jotka on
+// tarkistettu en-Wikipedian raakateksteistä 21.8.2026 (Jakarta,
+// Kota Tua Jakarta, Sunda Kelapa, Fatahillah Square, Java).
+// Teksti-kenttä on ennallaan. INDONESIA-LINJAUS (Fablen ohje
+// 21.8.2026): ei nykypolitiikkaa — pääkaupungin siirto Nusantaraan
+// on mukana yhtenä neutraalina tosiasiana ilman kannanottoa, ja
+// vuosien 1965–66 sekä 1998 tapahtumat on jätetty kokonaan pois.
+// Vajoaminen ja tulvat kerrotaan kaupunkirakenteen tosiasiana ilman
+// katastrofikehystä.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -2602,9 +2617,29 @@ export const ASIA_ARTIKKELIT = {
       + 'Indonesia rakentaa saarelle uutta pääkaupunkiaan Nusantaraa.',
   },
   Jakarta: {
-    intro: 'Jakarta on Indonesian pääkaupunki ja Kaakkois-Aasian '
-      + 'suurin kaupunki. Se on rakennettu suistoon ja vajoaa: osa '
-      + 'kaupungista on jo merenpinnan alapuolella.',
+    intro: 'Jakarta on Indonesian pääkaupunki ja maan suurin kaupunki, '
+      + 'Jaavan luoteisrannikolla siinä kohdassa, jossa Ciliwung-joki '
+      + 'laskee Jaavanmereen. Kolmetoista jokea virtaa kaupungin läpi '
+      + 'kohti Jakartanlahtea, ja maa on matalaa: osa kaupungista jää '
+      + 'merenpinnan alapuolelle. Paikka on vaihtanut nimeä neljästi — '
+      + '**Kalapa, Jayakarta, Batavia ja Jakarta**, kukin eri vallan '
+      + 'antamana.'
+      + '\n\n'
+      + 'Sundan pippurisatama Kalapa siirtyi vuonna 1527 '
+      + 'Demakin sulttaanikunnan joukoille, ja hollantilainen '
+      + 'Itä-Intian kauppakomppania VOC hävitti kaupungin 1619 ja '
+      + 'rakensi raunioille **Batavian**, Aasian-pääkonttorinsa. '
+      + 'Batavia oli muurien ja kanavien ruudukko; kanavat liettyivät '
+      + 'ja tulvivat, ja 1800-luvulla hallinto siirtyi sisämaahan '
+      + 'Weltevredeniin.'
+      + '\n\n'
+      + 'Nimi Jakarta otettiin käyttöön 1942, ja Indonesian '
+      + 'itsenäisyys julistettiin täällä 17. elokuuta 1945. '
+      + 'Vanhankaupungin eli Kota Tuan talot, kanavat ja varastot '
+      + 'seisovat yhä sataman ja Glodokin kiinalaiskorttelin '
+      + 'välissä, ja Merdeka-aukiolla kohoaa 132-metrinen '
+      + 'kansallismonumentti Monas. Kaupunki vajoaa ja tulvii, ja '
+      + 'Indonesia rakentaa Borneolle uutta pääkaupunkia Nusantaraa.',
     teksti: 'Jakarta on Jaavan saaren luoteisrannikolla, siinä missä '
       + 'kolmetoista jokea laskee mereen. Kaupunkiseudulla asuu yli '
       + 'kolmekymmentä miljoonaa ihmistä. Maaperä on pehmeää, ja '
