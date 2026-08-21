@@ -493,7 +493,6 @@ export const KULTTUURI_KATEGORIAT = {
       // 21.8.2026, vaihtoehto A). Kenttä on valinnainen: aiheenOtsikko
       // näyttää otsikon, jos se on, muuten kategorian nimen. Jokaisen
       // otsikon viittaus löytyy sivun omasta johdannosta tai nostoista.
-      otsikko: 'Tyhjä jalusta ja luvallinen tunneli',
       johdanto: 'Lontoossa nykytaide ei pysy museon seinällä: sitä maalataan '
         + 'junatunnelin kattoon, nostetaan tyhjälle patsasjalustalle ja '
         + 'kiedotaan liukumäeksi olympiapuiston veistoksen ympärille.',
@@ -973,7 +972,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
-      otsikko: 'Telttaleiri, al-Azhar ja Napoleonin kartta',
       johdanto: 'Kairo alkoi telttaleiristä Niilin itärannalla vuonna '
         + '641. Kolmesataa vuotta myöhemmin uuden kaupungin moskeijaan '
         + 'tuli oppilaita koko islamilaisesta maailmasta, ja 1800-luvun '
@@ -1408,7 +1406,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
-      otsikko: 'Kuuro säveltäjä ja kylätanssit',
       johdanto: 'Kaksi säveltäjää teki Prahan joesta ja kylien tansseista '
         + 'musiikkia, jota soitetaan kaikkialla maailmassa.',
       nostot: [
@@ -1951,7 +1948,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
-      otsikko: 'Valssin isku ja esikaupungin ooppera',
       johdanto: 'Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka '
         + 'kirjoitettiin esikaupungin puiselle näyttämölle.',
       nostot: [
@@ -2399,7 +2395,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'urheilu',
       nimi: 'Urheilu',
-      otsikko: 'Kaksi seuraa, kaksi suihkulähdettä',
       johdanto: 'Kaupungissa on kaksi suurta jalkapalloseuraa, ja kummallakin on '
         + 'oma suihkulähde, jonka päälle mestaruus kiivetään juhlimaan.',
       nostot: [
@@ -2454,7 +2449,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'rakennukset',
       nimi: 'Kadut ja talot',
-      otsikko: 'Hopeinen hakku ja palamaton linna',
       johdanto: 'Kaupungin läpi murrettiin katu hopeisella hakulla, ja palaneen '
         + 'linnan tilalle rakennettiin sellainen, joka ei voisi palaa.',
       nostot: [
@@ -2993,7 +2987,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'rakennukset',
       nimi: 'Tornit ja torit',
-      otsikko: 'Aurinkoristi ja Trabantin vaihteisto',
       johdanto: 'Syksyllä 1969 Alexanderplatzille valmistui neljän päivän välein '
         + 'kaksi asiaa: kello, joka näyttää maailman ajat, ja torni, joka '
         + 'näkyy kaikkialle kaupunkiin.',
@@ -3438,7 +3431,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'rakennukset',
       nimi: 'Kaupunki veden varassa',
-      otsikko: 'Paalujen päällä, veden armoilla',
       johdanto: 'Talot eivät seiso kalliolla vaan miljoonien puunrunkojen päällä — '
         + 'ja meri käy joka syksy tarkistamassa, pitävätkö ne yhä.',
       nostot: [
@@ -3501,7 +3493,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kasityo',
       nimi: 'Käsityö',
-      otsikko: 'Muranon uunit ja vino gondoli',
       johdanto: 'Saari, jonne lasinpuhaltajat karkotettiin tulipalon pelossa, ja '
         + 'vene, joka on tahallaan vino.',
       nostot: [
@@ -3941,7 +3932,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'rakennukset',
       nimi: 'Kadut ja sulut',
-      otsikko: 'Mälarenin sulku ja kapein kuja',
       johdanto: 'Tukholma rakennettiin kapeikkoon, jossa järvi purkautuu mereen — '
         + 'siksi täällä nostetaan veneitä sulussa ja kapein kuja on 90 '
         + 'senttiä leveä.',
@@ -4640,7 +4630,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
-      otsikko: 'Kadulta ja asuntovaunusta maailmalle',
       johdanto: 'Kaksi muusikkoa aloitti Pariisin kaduilta ja kaupungin laidan '
         + 'asuntovaunuleiriltä — ja teki lauluja, joita soitetaan yhä '
         + 'kaikkialla maailmassa.',
@@ -5056,7 +5045,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki ja tavat',
-      otsikko: 'Souvlaki kävellen, evzonit hitaasti',
       johdanto: 'Kaupungin halvin kunnon ateria syödään kävellen, ja sen hitain '
         + 'kävely tehdään kengissä, joiden pohjissa on kymmeniä nauloja.',
       nostot: [
@@ -5470,7 +5458,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'taide',
       nimi: 'Taide',
-      otsikko: 'Sahattu Yövartio, röntgenkuvattu Maitotyttö',
       johdanto: 'Kaksi maalausta samassa museossa: toisesta sahattiin palat pois, '
         + 'toisen alta löytyi tavaroita, jotka maalari itse peitti.',
       nostot: [
@@ -5894,7 +5881,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
-      otsikko: 'Kahden valtakunnan jäljet kadulla',
       johdanto: 'Istanbul oli yli tuhat vuotta Rooman valtakunnan pääkaupunki ja '
         + 'sen jälkeen lähes viisisataa vuotta osmanien. Kummastakin jäi '
         + 'jotain, mikä yhä näkyy tai kuuluu kadulla.',
@@ -6288,7 +6274,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'tiede',
       nimi: 'Tiede',
-      otsikko: 'Sillan kaiverrus ja Schrödingerin luento',
       johdanto: 'Kaksi asiaa keksittiin Dublinissa kävelymatkan päässä toisistaan: '
         + 'kaava, joka raapustettiin sillan kiveen, ja luento, joka johti '
         + 'dna:n jäljille.',
@@ -6666,7 +6651,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'tiede',
       nimi: 'Tiede',
-      otsikko: 'Kloroformi-ilta ja Dollyn syntymä',
       johdanto: 'Kaksi maailmaa muuttanutta koetta tehtiin täällä: toinen '
         + 'ruokasalin pöydän ääressä, toinen tutkimuslaitoksen '
         + 'laboratoriossa kaupungin eteläpuolella.',
@@ -7029,7 +7013,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'ruoka',
       nimi: 'Ruoka',
-      otsikko: 'Jätekalan keitto ja veneenmuotoinen keksi',
       johdanto: 'Kaupungin kuuluisin keitto tehtiin kaloista, joita kukaan ei '
         + 'halunnut ostaa, ja sen kuuluisin keksi leivotaan pikkuveneen '
         + 'muotoon.',
@@ -7413,7 +7396,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'ruoka',
       nimi: 'Ruoka',
-      otsikko: 'Luostarin leivos ja kesäkuun sardiinit',
       johdanto: 'Kaksi makua, joita ei saa muualta: luostarin leivos, jonka pinnan '
         + 'pitää olla vähän palanut, ja kesäkuun yön sardiini leivän päältä.',
       tehtava: {
@@ -7787,7 +7769,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'talot',
       nimi: 'Talot',
-      otsikko: 'Lohikäärmeen selkä ja lasinen sali',
       johdanto: 'Sata vuotta sitten Barcelonan rikkaat kilpailivat siitä, kenellä '
         + 'on oudoin talo. Jäljelle jäivät lohikäärmeen selkä ja sali, joka '
         + 'valaistaan auringolla.',
@@ -8164,7 +8145,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
-      otsikko: 'Alhambran naapuri ja luolan flamenco',
       johdanto: 'Säveltäjä muutti sen puutarhan viereen, jonka oli jo ehtinyt '
         + 'säveltää, ja kaupungin oma flamenco tanssitaan yhä mäkeen '
         + 'kaivetussa luolassa.',
@@ -8572,7 +8552,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
-      otsikko: 'Tanssitalo ja vasaroiden soitin',
       johdanto: 'Budapestissa keksittiin soitin, jota lyödään vasaroilla, ja tapa, '
         + 'jolla kansantanssia ei katsota vaan tanssitaan itse.',
       tehtava: {
@@ -9092,7 +9071,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki ja vesi',
-      otsikko: 'Akveduktit ja kadunkulman nenät',
       johdanto: 'Roomassa vesi ei ole koskaan loppunut kesken: sama vuorilta tuleva '
         + 'virta, joka täytti keisarien kylpylät, tulee yhä ilmaiseksi '
         + 'kadunkulman rautapylväästä.',
@@ -9459,7 +9437,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki ja tavat',
-      otsikko: 'Keitetty rinkeli ja pahvikaupunki',
       johdanto: 'Rinkeli, joka keitetään ennen paistamista, ja joulukuinen '
         + 'kilpailu, jossa koko kaupunki rakennetaan uudelleen pahvista ja '
         + 'foliosta.',
@@ -9825,7 +9802,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'tiede',
       nimi: 'Tiede ja keksinnöt',
-      otsikko: 'Salainen yliopisto ja lahjaksi annettu kieli',
       johdanto: 'Varsovassa käytiin yliopistoa salaa vaihtuvissa asunnoissa, ja '
         + 'täällä julkaistiin kieli, jonka keksijä antoi sen ilmaiseksi '
         + 'kaikille.',
@@ -10110,7 +10086,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
-      otsikko: 'Merilinnoitus ja elokuvien Neuvostoliitto',
       johdanto: 'Kaupungin edustalla on 1700-luvun merilinnoitus, ja keskustassa on '
         + 'niin venäläinen ilme, että Neuvostoliittoa on tultu kuvaamaan '
         + 'tänne.',
@@ -10589,7 +10564,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
-      otsikko: 'Pohjolan Manchester ja ensimmäinen sähkövalo',
       johdanto: 'Skotlantilainen osti kosken vuonna 1820, ja sadassa vuodessa '
         + 'kalastajakylästä tuli Pohjolan Manchester. Tehtaat ovat lähteneet, '
         + 'mutta tiiliseinät jäivät paikoilleen.',
@@ -10988,7 +10962,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Vanha kaupunki',
-      otsikko: 'Yhdeksän salamaa ja epäluuloinen torni',
       johdanto: 'Vanhassakaupungissa on torni, johon salama on iskenyt ainakin '
         + 'yhdeksästi, ja toinen, jonka ampuma-aukot osoittavat naapureihin '
         + 'saman mäen päällä.',
@@ -11344,7 +11317,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
-      otsikko: 'Sokeat laulajat ja neljä säveltä',
       johdanto: 'Kiovassa lauloivat sokeat kiertolaislaulajat — ja täällä kuultiin '
         + 'ensi kerran laulu, joka soi nykyään joka joulu ympäri maailmaa.',
       tehtava: {
@@ -11714,7 +11686,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki ja vuodenajat',
-      otsikko: 'Kurkulta tuoksuva kevät, punaiset purjeet',
       johdanto: 'Täällä kevät tunnistetaan hajusta ja lukuvuoden loppu siitä, että '
         + 'Nevalle purjehtii laiva punaisin purjein.',
       tehtava: {
@@ -12076,7 +12047,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki ja tavat',
-      otsikko: 'Metron mosaiikit ja blinien auringot',
       johdanto: 'Moskovalainen kulkee töihin mosaiikkiholvien alitse, ja '
         + 'laskiaisviikolla koko kaupunki syö aurinkoja.',
       tehtava: {
@@ -12431,7 +12401,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki ja tavat',
-      otsikko: 'Lämmin lähde ja kuuma banitsa',
       johdanto: 'Sofialainen aamu alkaa usein kahdesta paikasta: kadunvarren '
         + 'kivennäisvesihanasta ja leipomon luukusta, josta ojennetaan kuumaa '
         + 'juustopiirakkaa paperiin käärittynä.',
@@ -12788,7 +12757,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'tiede',
       nimi: 'Tiede ja keksinnöt',
-      otsikko: 'Dioraama ja ratilla ohjattu lentokone',
       johdanto: 'Bukarestissa aseteltiin maailman ensimmäiset dioraamat museon '
         + 'saliin ja rakennettiin lentokone, jota ohjattiin ratilla.',
       tehtava: {
@@ -13162,7 +13130,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'urheilu',
       nimi: 'Talvikisat',
-      otsikko: 'Kolme kultaa ja vuoren bobirata',
       johdanto: 'Helmikuussa 1984 olympiatuli paloi Sarajevossa, ja kaupungin yllä '
         + 'kohoavalle vuorelle valettiin bobirata — se on siellä yhä.',
       tehtava: {
@@ -13522,7 +13489,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki ja tavat',
-      otsikko: 'Torilla tingitään, aprillina naamioidutaan',
       johdanto: 'Torilla hinta on keskustelu eikä lappu, ja kerran vuodessa koko '
         + 'kaupunki pukeutuu naamiaisasuun.',
       tehtava: {
@@ -13886,7 +13852,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'rakennukset',
-      otsikko: 'Torni, saari ja merivesi',
       nimi: 'Rakennukset',
       johdanto: 'Dubaissa rakennetaan sitä, mitä ei ole: torni joka on korkeampi '
         + 'kuin mikään ennen, saari jota ei ollut kartalla, ja juomavesi, '
@@ -14278,7 +14243,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'tiede',
-      otsikko: 'Vesi kalliossa ja hiiltynyt kirjasto',
       nimi: 'Tiede ja kivi',
       johdanto: 'Aavikkokaupunki eli vedestä, jota ei ollut: padot ja '
         + 'kourut keräsivät kuurot talteen. Kaivaukset ovat nostaneet '
@@ -14702,7 +14666,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Yathribin keitaasta rautatiekaupungiksi',
       nimi: 'Historia',
       johdanto: 'Kaupunki tunnettiin ennen nimellä Yathrib, ja se oli '
         + 'keidas aavikkoreittien varrella. Siitä kasvoi muurein '
@@ -15190,7 +15153,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Valepukuiset vieraat ja kukkulan linnake',
       nimi: 'Historia',
       johdanto: 'Osmanien hallintokaupunki, jossa moskeijaa korjattiin ja '
         + 'linnoitus vartioi kukkulalta. Samaan aikaan kaksi '
@@ -15577,7 +15539,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Maanalaiset kaupungit ja karavaaniseraalit',
       nimi: 'Historia',
       johdanto: 'Kappadokiassa historia on kaivettu näkyviin. Maan alle '
         + 'mahtui kaupunkeja, joiden ovet suljettiin sisältä päin, ja maan '
@@ -15936,7 +15897,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Savitaulut sortuman alla',
       nimi: 'Historia',
       johdanto: 'Savitaulut kertovat, mitä työstä maksettiin. Aleksanterin '
         + 'joukot polttivat palatsit 330 eKr., ja sama sortuma säilytti '
@@ -16279,7 +16239,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'tiede',
-      otsikko: 'Kaupunki ilman omaa jokea',
       nimi: 'Vesi',
       johdanto: 'Kukkulakaupungilla ei ole omaa jokea. Jokainen pisara on '
         + 'pitänyt hakea lähteestä, ohjata kallioon louhitulla tunnelilla '
@@ -16623,7 +16582,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'maasto',
-      otsikko: 'Graniitista koralliriuttaan',
       nimi: 'Maasto',
       johdanto: 'Punaista graniittia, kallioon louhittuja kaivoksia ja '
         + 'koralliriuttoja saman niemimaan sisällä: Siinain maasto vaihtuu '
@@ -17041,7 +16999,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
-      otsikko: 'Tyhjä neljännes ei ole tyhjä',
       nimi: 'Luonto',
       johdanto: 'Hiekan alta on kaivettu virtahepojen luita, ja hiekan '
         + 'päällä kävelee laji, joka ehdittiin julistaa luonnosta '
@@ -17445,7 +17402,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'valo',
       nimi: 'Valo',
-      otsikko: 'Yötön kesä ja revontulten tutkimus',
       johdanto: 'Napapiirin pohjoispuolella valo ei tule ja mene päivittäin vaan '
         + 'vuodenajoittain — ja juuri siksi tästä kaupungista tuli paikka, '
         + 'jossa taivasta tutkitaan.',
@@ -17818,7 +17774,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kirjat',
       nimi: 'Kirjat',
-      otsikko: 'Joulun kirjatulva ja palanneet käsikirjoitukset',
       johdanto: 'Islannissa lukeminen ei ole harrastus vaan tapa: kirjat annetaan '
         + 'lahjaksi samana iltana, vanhat käsikirjoitukset otettiin vastaan '
         + 'kuin kuninkaat, ja pienestä maasta tuli Nobel-palkittu.',
@@ -18192,7 +18147,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'tunturi',
       nimi: 'Tunturi',
-      otsikko: 'Poro, ahkio ja turvekammi',
       johdanto: 'Tunturissa eläminen on aina ollut liikkumista ja lämmön '
         + 'säästämistä: eläin kulkee vapaana mutta on jonkun oma, tavarat '
         + 'kulkivat ahkiossa, ja talo kaivettiin maahan.',
@@ -18562,7 +18516,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'maasto',
       nimi: 'Maasto',
-      otsikko: 'Rotko, tuulimyllyt ja vuoren luola',
       johdanto: 'Kreeta on vuori keskellä merta: sen halki kulkee rotko, jonka läpi '
         + 'kävellään päivässä, ylätasangolla pyöri tuhat purjetuulimyllyä, ja '
         + 'korkeimman huipun kyljessä on luola.',
@@ -18924,7 +18877,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'rauniot',
       nimi: 'Rauniot',
-      otsikko: 'Temppeleitä, mosaiikkeja ja elävä teatteri',
       johdanto: 'Sisiliassa jokainen valloittaja jätti jälkensä kiveen: '
         + 'kreikkalaisten temppelit, roomalaisten mosaiikit ja teatteri, '
         + 'jossa näytelmiä esitetään yhä.',
@@ -19294,7 +19246,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'luonto',
       nimi: 'Luonto',
-      otsikko: 'Murmeli, luunsyöjä ja vetäytyvä jää',
       johdanto: 'Alppien luonto elää jyrkässä maastossa: yksi nisäkäs nukkuu puolet '
         + 'vuodesta, yksi lintu syö luita, ja jää vetäytyy vuosi vuodelta '
         + 'ylemmäs.',
@@ -19670,7 +19621,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'tasavalta',
       nimi: 'Tasavalta',
-      otsikko: 'Kuukausi saarella, kyynärä patsaassa',
       johdanto: 'Pieni tasavalta pysyi pystyssä säännöillä. Se päätti, kuka pääsee '
         + 'sisään ja milloin, mistä juomavesi tulee ja kuinka pitkä on yksi '
         + 'kyynärä.',
@@ -20061,7 +20011,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'vanhakaupunki',
       nimi: 'Vanhakaupunki',
-      otsikko: 'Kissat, killat ja kolme veljestä',
       johdanto: 'Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja '
         + 'katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he '
         + 'olivat riidoissa.',
@@ -20448,7 +20397,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'oppi',
       nimi: 'Oppi',
-      otsikko: 'Kolmetoista sisäpihaa ja kirjankantajat',
       johdanto: 'Vilnassa on opiskeltu ja tutkittu satoja vuosia. Välillä oppiminen '
         + 'oli helppoa, välillä omalla kielellä painettu kirja piti kantaa '
         + 'maahan selässä.',
@@ -20836,7 +20784,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'laivat',
       nimi: 'Laivat',
-      otsikko: 'Kolme laivaa kolmessa museossa',
       johdanto: 'Oslossa on kolme museota ja niissä kolme laivaa. Yksi kaivettiin '
         + 'maasta, yksi rakennettiin jäätä varten ja yksi sidottiin kasaan '
         + 'balsapuun rungoista.',
@@ -21378,7 +21325,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kuvataide',
       nimi: 'Kuvataide',
-      otsikko: 'Sata vuotta, neljä mestaria',
       johdanto: 'Yhdessä pikkukaupungissa työskentelivät sadan vuoden sisällä '
         + 'Donatello, Botticelli, Leonardo ja Michelangelo. Sitä aikaa alettiin '
         + 'myöhemmin kutsua renessanssiksi.',
@@ -21870,7 +21816,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'sadut',
       nimi: 'Sadut',
-      otsikko: 'Nyytti, Nyhavn ja Tivoli',
       johdanto: 'Syyskuussa 1819 kaupunkiin saapui neljätoistavuotias poika, jolla '
         + 'oli nyytti ja muutama kolikko. Hänen saduistaan tuli maailman '
         + 'käännetyimpiä.',
@@ -22233,7 +22178,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'ruoka',
-      otsikko: 'Ateria yhdeltä vadilta',
       nimi: 'Ruoka',
       johdanto: 'Qatarilainen ateria tuodaan pöytään yhdellä isolla vadilla, ja '
         + 'sen ympärille kokoonnutaan yhdessä. Kala ostetaan aamun '
@@ -22631,7 +22575,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Puuton tasanko ja kävelykortteli',
       nimi: 'Arki',
       johdanto: 'Nikosia on Mesaorian tasangolla, jonka nimi tarkoittaa vuorten '
         + 'välistä. Tasanko on lähes puuton, ja kaupungin pinta-alasta on '
@@ -23017,7 +22960,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Kesä sisällä, talvi sumussa',
       nimi: 'Arki',
       johdanto: 'Kuwait Cityn arki jakautuu kahtia vuodenajan mukaan: kesällä '
         + 'päivä vietetään sisällä ja talvella aamut alkavat sumusta. '
@@ -23420,7 +23362,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Kahvi, suitsuke ja dishdasha',
       nimi: 'Arki',
       johdanto: 'Omanilaisen miehen juhlapuvussa on kolme osaa, joilla '
         + 'jokaisella on oma nimensä, ja vieraan vastaanotossa on oma '
@@ -23913,7 +23854,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Leveä katu ja teelasi',
       nimi: 'Arki',
       johdanto: 'Bagdadin arki mahtuu kolmeen osoitteeseen: leveään katuun, '
         + 'jonka pylväskäytävät varjostavat kulkijaa, kahvilaan, jossa '
@@ -24299,7 +24239,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Boyoz, kumru ja lautta',
       nimi: 'Arki',
       johdanto: 'İzmirin aamiainen ostetaan kadulta ja syödään seisaaltaan, ja '
         + 'päivän mittaan tartutaan sämpylään, jota muualla ei myydä '
@@ -24698,7 +24637,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Metro, pavut ja kutojien mäki',
       nimi: 'Arki',
       johdanto: 'Ankaralainen kulkee töihin maan alla, syö lounaaksi '
         + 'lautasellisen pilahvia ja ostaa kuivatut hedelmänsä samasta '
@@ -25135,7 +25073,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Pippuri, pähkinä ja granaattiomena',
       nimi: 'Arki ja keittiö',
       johdanto: 'Aleppon keittiö nojaa kolmeen ainekseen: kaupungin omaan '
         + 'pippuriin, saksanpähkinään ja granaattiomenasiirappiin. Kaikki '
@@ -25557,7 +25494,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Umpipiha, hammam ja aprikoosilevy',
       nimi: 'Arki ja tavat',
       johdanto: 'Damaskoslainen talo kääntää selkänsä kadulle: ovi vie '
         + 'umpipihalle, jossa on allas ja hedelmäpuita. Saman korttelin '
@@ -25944,7 +25880,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Lautta, hevosvaunu ja kapearaide',
       nimi: 'Arki ja kulkeminen',
       johdanto: 'Luxorissa kuljetaan joen yli lautalla tai moottoriveneellä, '
         + 'kaduilla nelipyöräisillä hevosvaunuilla ja peltojen poikki '
@@ -26340,7 +26275,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Metro ilman kuljettajaa',
       nimi: 'Arki ja metro',
       johdanto: 'Riadin metrossa junat kulkevat ilman kuljettajaa. Verkko '
         + 'avattiin osissa joulukuun 2024 ja tammikuun 2025 välillä, ja '
@@ -26742,7 +26676,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
-      otsikko: 'Sahandin ja Eynalin välissä',
       nimi: 'Luonto ja talvi',
       johdanto: 'Tabriz on Quru-joen laaksossa 1 350–1 600 metrin korkeudella '
         + 'merenpinnasta, ja laaksoa reunustavat tulivuorenkartioiden '
@@ -27238,7 +27171,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Chelow kabab ja tahdig',
       nimi: 'Arki ja ruokapöytä',
       johdanto: 'Iranin kansallisruokana pidetään chelow kababia, ja '
         + 'Encyclopaedia Iranican mukaan yhdistelmä syntyi '
@@ -27653,7 +27585,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'taide',
-      otsikko: 'Uuden Julfan maalattu katedraali',
       nimi: 'Taide ja kirjapaino',
       johdanto: 'Isfahanin taide ei ole pelkkää shaahin hovin työtä: osa '
         + 'siitä syntyi joen eteläpuolella, armenialaisten omassa '
@@ -28079,7 +28010,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Korttelin moskeija, kylpylä ja puutarha',
       nimi: 'Arki ja korttelit',
       johdanto: 'Vanhakaupunki jakautui kortteleihin, joissa jokaisessa oli '
         + 'moskeija, kylpylä ja puutarha. Sama vesi käytettiin kahdesti, '
@@ -28511,7 +28441,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'meri',
-      otsikko: 'Hiiliasema Bab el-Mandebin varrella',
       nimi: 'Meri ja satama',
       johdanto: 'Adenin satama on yksi maailman suurimmista luonnonsatamista, '
         + 'ja siitä on Bab el-Mandebin salmelle 170 kilometriä. '
@@ -28888,7 +28817,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'kauppa',
-      otsikko: 'Hartsi, joka rakensi rannikon',
       nimi: 'Kauppa ja suitsuke',
       johdanto: 'Dhofar on suitsukepuun kotiseutua, ja koko rannikon vauraus '
         + 'rakentui yhden hartsin varaan. Puu kasvaa kalliossa, jyvät '
@@ -29345,7 +29273,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'kasityo',
-      otsikko: 'Messinkiin upotettu hopea',
       nimi: 'Käsityö ja metalli',
       johdanto: '1200-luvun Mosulissa messinkiastioiden kuviot upotettiin '
         + 'pintaan toisella metallilla. Kaikista keskiajan islamilaisista '
@@ -29753,7 +29680,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Chang’anin perilliset ja Kielletty kaupunki',
       nimi: 'Historia',
       johdanto: 'Kaupunki on ollut Yanjing, Zhongdu, Dadu, Beiping ja '
         + 'Peking, ennen kuin siitä tuli Beijing. Joka nimenvaihdos '
@@ -30191,7 +30117,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Seitsemän kaupungin kerrostuma',
       nimi: 'Historia',
       johdanto: 'Ennen Punaista linnoitusta paikalla seisoi kuusi muuta '
         + 'kaupunkia, legendoista ensimmäisenä Indraprastha. Sulttaanit '
@@ -30805,7 +30730,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'arki',
-      otsikko: 'Puuta, paperia ja kylpylän piippu',
       nimi: 'Arki ja alakaupunki',
       johdanto: 'Alakaupungin talot olivat puuta ja paperia. Sen arkeen kuului '
         + 'kolme laitosta: kylpylä, jonka piippu näkyy kauas, palokunta, '
@@ -31378,7 +31302,6 @@ export const KULTTUURI_KATEGORIAT = {
      */
     {
       id: 'arki',
-      otsikko: 'Ilta ei lopu illalliseen',
       nimi: 'Arki ja ilta',
       johdanto: 'Soulin ilta ei lopu illalliseen: kadulle nousee '
         + 'telttakoju, kylpylä on auki läpi yön, ja pelihallissa '
@@ -31924,7 +31847,6 @@ export const KULTTUURI_KATEGORIAT = {
      */
     {
       id: 'arki',
-      otsikko: 'Avioliittotori ja oma kieli',
       nimi: 'Arki',
       johdanto: 'Shanghain arki alkaa kadunkulmasta, jossa aamiainen '
         + 'kääritään riisiin. Viikonloppuna puistossa vanhemmat '
@@ -32430,7 +32352,6 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kauppa',
       nimi: 'Kauppa ja karavaanit',
-      otsikko: 'Saharan portti ja palanut fregatti',
       johdanto: 'Tripoli oli Saharan portti Välimerelle: satamaan '
         + 'päättyi karavaanitie aavikon takaa, ja merellä kaupungin '
         + 'kaapparit perivät ohikulkijoilta maksun — kunnes yksi '
@@ -32799,7 +32720,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Šigirin hahmo ja ensimmäinen kulta',
       nimi: 'Historia',
       johdanto: 'Kaupungin museossa seisoo lasikaapissa yli yksitoistatuhatta '
         + 'vuotta vanha lehtikuusesta veistetty hahmo, ja kaupungin '
@@ -33145,7 +33065,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Rautatiesilta ja metsän tiedekaupunki',
       nimi: 'Historia',
       johdanto: 'Kaupungin vanha nimi oli Novonikolajevsk ja sen '
         + 'rautatieaseman nimi pelkkä Ob. Vuonna 1957 kaupungin eteläpuolen '
@@ -33501,7 +33420,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
-      otsikko: 'Maailman vanhin järvi',
       nimi: 'Baikal',
       johdanto: 'Kaupungista 72 kilometriä ylävirtaan Angara lähtee '
         + 'Baikalista ainoana jokena, vaikka järveen laskee jopa 330 jokea. '
@@ -33893,7 +33811,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
-      otsikko: 'Jäässä kahdensadan metrin syvyyteen',
       nimi: 'Ikirouta',
       johdanto: 'Kaupungin alla maa on jäässä yli kahdensadan metrin '
         + 'syvyyteen, ja ikiroudasta nousee mammutinluuta. Ylävirtaan päin '
@@ -34294,7 +34211,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
-      otsikko: 'Kymmenen miljoonaa merilintua',
       nimi: 'Ohotanmeri',
       johdanto: 'Magadanin luonnonsuojelualue perustettiin 1982, ja sen 883 '
         + '817 hehtaaria on jaettu neljään palaan, joiden väli on satoja '
@@ -34667,7 +34583,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
-      otsikko: 'Satoja tulivuoria tulirenkaan reunalla',
       nimi: 'Tulivuoret',
       johdanto: 'Kamtšatkalla on satoja tulivuoria, ja niistä yli '
         + 'kaksikymmentä on toimivia. Niemimaa kuuluu Tyynenmeren '
@@ -35026,7 +34941,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Pakkotyösiirtola ja Tšehovin kortistokortit',
       nimi: 'Historia',
       johdanto: 'Sahalin oli vuodesta 1869 vuoteen 1906 Venäjän '
         + 'pakkotyösiirtola, ja saaren eteläpuolisko kuului välillä '
@@ -35407,7 +35321,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'luonto',
-      otsikko: 'Tiikerin metsä ja Dersu Uzala',
       nimi: 'Ussurin taiga',
       johdanto: 'Vladivostokin takamailla alkaa metsä, jossa pohjoisen '
         + 'havupuut ja etelän köynnökset kasvavat samassa rinteessä. Sen '
@@ -35834,7 +35747,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Kuninkaiden uusi pääkaupunki',
       nimi: 'Historia',
       johdanto: 'Kuningas Chulalongkorn nousi valtaistuimelle 1868, viisi '
         + 'vuotta ennen isoisän matkaa. Hänen kaudellaan Siam sai '
@@ -36309,7 +36221,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Tuhat vuotta pääkaupunkina',
       nimi: 'Historia',
       johdanto: 'Kioton historia alkaa yhdestä päätöksestä: vuonna '
         + '794 keisari Kanmu jätti Naran ja rakennutti uuden '
@@ -36806,7 +36717,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Vapaasatama Malakan salmessa',
       nimi: 'Historia',
       johdanto: 'Kaupunki suunniteltiin kerralla vuonna 1822, ja '
         + 'jokainen kansanryhmä sai oman alueensa. Niiden temppelit, '
@@ -37307,7 +37217,6 @@ export const KULTTUURI_KATEGORIAT = {
     },
     {
       id: 'historia',
-      otsikko: 'Marakandasta Timurin pääkaupungiksi',
       nimi: 'Historia',
       johdanto: 'Kaupunki on yksi Keski-Aasian vanhimmista '
         + 'yhtäjaksoisesti asutuista. Sen historia kulkee Aleksanteri '
@@ -37410,6 +37319,944 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja keskellä Tšupan-atan kukkula.',
           lahde: 'Mikhail Afrikanovich Terentyev, Wikimedia Commons (PD)',
           wiki: 'Siege of Samarkand (1868)',
+        },
+      ],
+    },
+  ],
+  /*
+   * XI'AN (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian artikkeleista Xi'an,
+   * Chang'an, Fortifications of Xi'an, Bell Tower of Xi'an, Drum
+   * Tower of Xi'an, Great Mosque of Xi'an, Giant Wild Goose Pagoda,
+   * Stele Forest, Shaanxi History Museum, Xi'an railway station,
+   * Terracotta Army ja Silk Road (haettu 21.8.2026). Mausoleum of Qin
+   * Shi Huang haettiin myös, mutta siitä on käytetty vain
+   * hautakummun koordinaattia kartan etäisyyslaskuun.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md) ja sama kuin
+   * Kiinan muissa kaupungeissa: ei nykypolitiikkaa eikä nykysotaa.
+   * POIS JÄTETTY kokonaan: vuoden 1936 Xi'an-välikohtaus, vuoden
+   * 1911 mantšuväestön verilöyly ja sen brittilähetyssaarnaajan
+   * silminnäkijäkuvaus, vuoden 2012 mielenosoitukset ja vuoden 2022
+   * sulku. Toisen maailmansodan pommitukset ovat mukana VAIN
+   * kaupunkirakenteen kautta (muurin juureen kaivetut suojat) ilman
+   * uhrilukuja, ja vuoden 1926 tulipalo kerrotaan tapahtumana ilman
+   * sen sotataustaa. Uskonto on historiallis-kulttuurinen ilmiö:
+   * Suuri moskeija arkkitehtuurina ja Hui-yhteisön historiana,
+   * buddhalaisuus Xuanzangin ja pagodin kautta, nestoriaaninen
+   * kristinusko Steelametsän kivenä. Dungan-kapinan jälkeisiä
+   * uskonnollisia rajoituksia ja kulttuurivallankumouksen aikaista
+   * moskeijan sulkemista EI käsitellä (faktapohjan oma suositus).
+   *
+   * KOLME KORJAUSTA AIEMPAAN FAKTAPOHJAAN (docs/aasia-tyoaineisto/
+   * faktapohja-xian.md), jotka on tehty tässä:
+   * 1) "Kolmentoista dynastian pääkaupunki" ei löydy en-Wikipedian
+   *    Xi'an-artikkelista, kuten tarkistusraportti (kohta 1) osoitti.
+   *    Artikkeli nimeää kuusi dynastiaa ja kutsuu kaupunkia yhdeksi
+   *    Kiinan viidestä suuresta muinaisesta pääkaupungista. Luku 13
+   *    on olemassa toisessa artikkelissa mutta MAAKUNNASTA: Shaanxi
+   *    History Museum -artikkeli sanoo Shaanxin olleen "the seat of
+   *    more than 13 feudal dynasties". Ero on kirjoitettu auki
+   *    museon jutussa (v925/v932:n tapa), ja lehden omat tekstit
+   *    puhuvat viidestä suuresta pääkaupungista.
+   * 2) Faktapohjan H2-nosto liitti Tang-kauteen 160 korttelia,
+   *    kahdeksan pääkatua ja yhdeksän lohkoa sekä Yhdeksän toria.
+   *    Chang'an-artikkelissa nuo luvut ovat HAN-kauden kaupungin
+   *    osiossa (kaupungin neljä kasvuvaihetta 200 eaa. – 24 jaa.),
+   *    kun Tang-kaupungin ulkokaupungissa oli noin satakymmenen
+   *    korttelia ja kaksi toria. Lehti kertoo Tang-kaupungin omilla
+   *    luvuillaan.
+   * 3) Faktapohja ajoitti Daxingin perustamisen vuoteen 582
+   *    (Chang'an-artikkeli) mutta Xi'an-artikkeli sanoo 581.
+   *    Käytetty tarkempaa Chang'an-artikkelia, joka kertoo myös
+   *    paikan valinnan; ero on tässä kommentissa.
+   *
+   * KAKSI KESKENERÄISTÄ LUKUA, JOTKA ON KIRJOITETTU AUKI LUKIJALLE.
+   * Kellotornin korkeus on Wikipedian omassa artikkelissa johdannossa
+   * "close to 40 m" ja arkkitehtuuriosiossa 36 metriä; asemalla on
+   * Xi'an-artikkelin mukaan kuusi laituria ja yksitoista raidetta,
+   * aseman omassa artikkelissa yksitoista laituria ja kolmetoista
+   * raidetta. Molemmat erot kerrotaan jutuissa.
+   *
+   * SÄÄRIVI PUUTTUU TOISTAISEKSI, ja se on kirjattu tähän, jotta
+   * seuraava tekijä ei etsi sitä turhaan. saatiedot.js:ään ei tullut
+   * xian-riviä, koska Open-Meteon arkistorajapinnan (ERA5) VUOROKAUSI-
+   * kiintiö oli tämän kontin ulosmenevällä osoitteella jo täynnä koko
+   * työpäivän ajan: sekä proxyn kautta että suoraan, viiden vuoden
+   * paloina ja yhden vuorokauden koepyynnöillä, vastaus oli aina
+   * "Daily API request limit exceeded" (yli 40 yritystä kahden ja
+   * puolen tunnin aikana; sama koski historical-forecast- ja
+   * climate-rajapintoja, kun taas ennusterajapinta vastasi
+   * normaalisti). Wikipedian oma kuukausitaulukko olisi ollut
+   * saatavilla, mutta se on Kiinan sääpalvelun asemadataa eikä
+   * ERA5:tä, ja vuosigraafin lähderivi lupaa lukijalle Open-Meteon
+   * ERA5:n — väärä lähdemerkintä on pahempi kuin puuttuva graafi
+   * (pakettitiedoston oma sääntö: ilman riviä lehti näkyy ilman
+   * säätä). Rivi haetaan siis erikseen, kun kiintiö vapautuu
+   * (UTC-vuorokauden vaihde), mittauspisteenä keskusta 34,26 / 108,94.
+   * Oppaan sääjakso on tämän vuoksi kirjoitettu Xi'an-artikkelin
+   * ilmasto-osion SANALLISISTA tiedoista, ja jakso kertoo itse, että
+   * sen luvut ovat Chang'anin kaupunginosan mittausasemalta 445 metrin
+   * korkeudesta (Siinain ja Petran ennakkotapaus mittauspisteen
+   * selittämisestä).
+   *
+   * KOLME TERRAKOTTAKUVAA on tietoinen valinta ja Mekan Jabal
+   * al-Nourin ennakkotapaus: armeija on kaupungin tunnetuin asia
+   * myös sille, joka ei ehdi kolmenkymmenen kilometrin retkelle, ja
+   * kuvat näyttävät sen kolmelta etäisyydeltä (kansikuvan koko
+   * kuoppa, noston kaksi sotilasta, oppaan yksi kasvo). Samoin
+   * muurista on kolme kuvaa eri kohdista (ulkoa, harjalta,
+   * vallihaudan yli) ja Kellotornista kaksi eri vuorokaudenaikaan.
+   */
+  xian: [
+    {
+      id: 'kaupunki',
+      nimi: 'Xi’an',
+      johdanto: 'Silkkitien itäinen pääte Guanzhongin tasangolla. '
+        + 'Ming-ajan muuri kiertää yhä vanhaakaupunkia, ja sen sisällä '
+        + 'risteävät neljä pääkatua Kellotornin juurella.',
+      kansikuvat: [
+        {
+          tiedosto: 'City wall of Xi\'an 51550-Xian (27959363326).jpg',
+          selite: 'Kaupunginmuuri ulkoapäin: kaksi puista porttitornia '
+            + 'nousee harmaan tiiliverhouksen päältä, ja niiden juurella '
+            + 'kasvaa tiheä puistokaista.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: '51714-Terracota-Army.jpg',
+          selite: 'Terrakotta-armeijan ykköskuoppa katetun hallin alla: '
+            + 'sotilasrivit seisovat maavallien väliin kaivetuissa '
+            + 'käytävissä niin kauas kuin halli jatkuu.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Bell Tower during Sunset in Xi\'an, Jun 21 2023.jpg',
+          selite: 'Kellotorni auringonlaskussa keskellä liikenneympyrää, '
+            + 'ja taustalla vasemmalla erottuu Rumpitornin siluetti.',
+          lahde: 'A Chinese ID, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: Rumpitorni, pagodi ja muurin harja — kaupungin
+       * kolme kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (Ming-ajan keskusta, Tang-ajan pyhäkkö, muurin kehä).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Xi\'an Drum Tower (9912489945).jpg',
+          selite: 'Rumpitorni alhaalta kuvattuna: kolme räystäskerrosta '
+            + 'nousee muuratun jalustan päältä, ja ylimmän päädyn '
+            + 'keskellä on kullattu koriste.',
+          lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Giant Wild Goose Pagoda, Xi\'an, May, 2018-1.jpg',
+          selite: 'Suuri villihanhipagoda alhaalta: seitsemän '
+            + 'tiilikerrosta kapenee ylöspäin, ja jokaisen kerroksen '
+            + 'keskellä on kaareva ikkuna-aukko.',
+          lahde: 'Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Xi\'an city walls (63076).jpg',
+          selite: 'Muurin harja kulkee kivilaatoituksena porttitornin '
+            + 'ohi, ja vallihaudan takaa nousee nykyinen kaupunki '
+            + 'sumuun.',
+          lahde: 'Ideophagous, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Talonpoika, joka löysi armeijan',
+          tiedosto: 'Qin Terracotta Army, Pit 1 18.jpg',
+          teksti: 'Maaliskuun 29. päivänä 1974 Yang Zhifa, hänen viisi '
+            + 'veljeään ja naapuri Wang Puzhi kaivoivat kaivoa '
+            + 'puolentoista kilometrin päässä keisari Qin Shi Huangin '
+            + 'hautakummusta, kun lapio osui poltettuun saveen. Esiin '
+            + 'tuli suurin koskaan löydetty savipatsasjoukko: vuoden '
+            + '2007 arvion mukaan kolmessa kuopassa on yli 8 000 '
+            + 'sotilasta, 130 vaunua ja 520 vaunuhevosta sekä 150 '
+            + 'ratsuhevosta, ja suurin osa on yhä paikoillaan '
+            + 'maan alla. Rivistöt katsovat itään, sinne missä keisarin '
+            + 'valloittamat valtiot olivat. Löytö ei ollut ensimmäinen '
+            + 'merkki: pelloilta oli vuosisatojen ajan noussut '
+            + 'savenpalasia ja tiilenkappaleita, mutta kukaan ei ollut '
+            + 'yhdistänyt niitä hautaan.',
+          selite: 'Kaksi savisotilasta kuopan reunalla: haarniskan levyt '
+            + 'ja niittirivit erottuvat tarkasti, ja etummaisella on '
+            + 'omat kasvot.',
+          lahde: 'Gary Lee Todd, Ph.D., Wikimedia Commons (CC0)',
+          wiki: 'Terracotta Army',
+        },
+        {
+          otsikko: 'Muuri, jonka päällä on tie',
+          tiedosto: 'Moat of Xi\'an City wall 1.jpg',
+          teksti: 'Ming-dynastian ensimmäinen keisari Zhu Yuanzhang sai '
+            + 'neuvon rakentaa kaupungin ympärille korkea muuri, '
+            + 'täyttää viljavarastot ja vasta sitten yhdistää valtakunta. '
+            + 'Työ alkoi 1370 ja kesti kahdeksan vuotta: lännessä ja '
+            + 'etelässä pohjaksi otettiin Sui- ja Tang-ajan vallit, '
+            + 'idässä ja pohjoisessa kehää laajennettiin. Tuloksena on '
+            + 'neljäntoista kilometrin suorakaide, joka on kaksitoista '
+            + 'metriä korkea ja juureltaan viisitoista–kahdeksantoista '
+            + 'metriä leveä. Harjalla kulkee kävelytie, '
+            + 'jonka kierrokseen menee neljä tuntia, ja '
+            + 'ulkopuolella kiertää kahdeksantoista metriä leveä '
+            + 'vallihauta. Muuri oli ensin survottua maata; '
+            + 'siniset tiilet ladottiin päälle 1568.',
+          selite: 'Vallihauta kaartaa muurin kulmatornin ohi, ja '
+            + 'vastarannalla nousee nykyisen kaupungin tornitalorivi.',
+          lahde: 'H2v5o68z, Wikimedia Commons (CC0)',
+          wiki: 'Fortifications of Xi\'an',
+        },
+        {
+          otsikko: 'Kello aamulla, rumpu illalla',
+          tiedosto: '景云钟-西安碑林 2023-09-29 03.jpg',
+          teksti: 'Keskustassa seisoo kaksi Ming-ajan tornia '
+            + 'kolmensadan metrin päässä toisistaan. Rumpitorni '
+            + 'valmistui 1380 ja Kellotorni 1384, ja vuosisatojen ajan ne '
+            + 'pitivät yhdessä kaupungin kelloa: kellot soivat aamun, '
+            + 'rummut illan. Kellotorni ei ole aina ollut nykyisellä '
+            + 'paikallaan. Se pystytettiin kilometrin verran lännemmäksi, '
+            + 'siihen kohtaan, joka oli silloin tarkalleen pohjois- ja '
+            + 'eteläportin välissä; kun kaupunki laajeni Ming-kaudella '
+            + 'itään, koko torni siirrettiin vuonna 1582 nykyiseen '
+            + 'neljän pääkadun risteykseen. Paikallaan ei ole enää '
+            + 'tornin vanha kellokaan: vuonna 711 valettu Jingyun-kello '
+            + 'vietiin 1953 Steelametsän museoon, jossa se on yhä '
+            + 'esillä.',
+          selite: 'Jingyun-kellon kylkeen on valettu kirjoituspaneeli, '
+            + 'jonka ympärillä kiertää pronssiin muotoiltuja '
+            + 'lohikäärmeitä ja pilviä.',
+          lahde: 'Kcx36, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bell Tower of Xi\'an',
+        },
+        {
+          otsikko: 'Moskeija, jossa ei ole minareettia',
+          tiedosto: 'Great Mosque of Xi\'an 20240808 112.jpg',
+          teksti: 'Rumpitornin takana kujien päässä on temppelialue, '
+            + 'joka ei ensi näkemältä näytä siltä mitä se on. '
+            + 'Rakennukset ovat maalattua puuta ja tiiltä, katot '
+            + 'kaartuvat kiinalaisittain harjoiksi, pihat seuraavat '
+            + 'toisiaan puutarhoina — eikä ainuttakaan tornia nouse '
+            + 'kutsumaan rukoukseen. Silti kyseessä on moskeija, ja '
+            + 'yksi Kiinan vanhimmista: se perustettiin Tang-kaudella '
+            + 'noin vuonna 742, ja nykyinen rakennus on pääosin '
+            + 'Ming-kauden vuodelta 1392. Suunta paljastaa lopulta, mistä '
+            + 'on kysymys. Kiinalaiset uskonnolliset rakennukset '
+            + 'asetetaan pohjois–etelä-akselille, mutta täällä '
+            + 'sisäänkäynti on idässä ja sali lännessä — siihen suuntaan, '
+            + 'jossa Mekka on.',
+          selite: 'Rukoussalin julkisivu turkoosin tiilikaton alla: viisi '
+            + 'ovea, kaiverretut puupaneelit ja räystään alla rivi '
+            + 'kultakirjaimisia kilpiä.',
+          lahde: '沈澄心, Wikimedia Commons (CC0)',
+          wiki: 'Great Mosque of Xi\'an',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Qin Terracotta Army, Pit 1 03.jpg',
+          selite: 'Yksi savisotilas lähikuvassa kaivannon varjossa: '
+            + 'panssarilevyt, kaulahuivi ja nyrkkiin puristettu käsi, '
+            + 'joka on aikanaan pitänyt oikeaa asetta.',
+          lahde: 'Gary Lee Todd, Ph.D., Wikimedia Commons (CC0)',
+        },
+        kappale: 'Xi’an on Shaanxin maakunnan pääkaupunki ja Luoteis-Kiinan '
+          + 'suurin kaupunki, mutta matkailijan Xi’an on pieni: melkein '
+          + 'kaikki on joko muurin sisällä tai muutaman kilometrin '
+          + 'päässä sen eteläpuolella. Muurin sisällä kaupunki on '
+          + 'ruutukaava, jonka keskipiste on Kellotornin risteys, ja '
+          + 'ulkopuolella kiertää kehätie vallihaudan vartta. '
+          + 'Terrakotta-armeija on oma retkensä runsaan kolmenkymmenen '
+          + 'kilometrin päässä koillisessa, eikä se siksi ole tämän '
+          + 'sivun kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Xi’an',
+          taitto: 'opas',
+          teksti: 'Yksi muuri, neljä porttia ja niiden väliin ristiin '
+            + 'vedetyt pääkadut — ja kaiken alla kaksituhatta vuotta '
+            + 'kaivamatonta maata.',
+          nosto: 'Suuri villihanhipagoda alkoi kallistua, kun kaupunki '
+            + 'pumppasi pohjavettä: vuoteen 1996 mennessä kallistuma oli '
+            + 'metrin. Sitten neljäsataa kaivoa suljettiin, ja torni '
+            + 'lähti hitaasti takaisin suoraan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Vanha rautatieasema on aivan muurin '
+                + 'pohjoispuolella, ja sinne tulevat yhä tavalliset '
+                + 'junat: yöpikajunat, pikajunat ja hitaat vuorot. '
+                + 'Nopeat junat siirtyivät vuonna 2011 Xi’anin '
+                + 'pohjoiselle asemalle kaupungin laidalle — siinä on '
+                + 'kolmekymmentäneljä laituria, ja avautuessaan se oli '
+                + 'Luoteis-Kiinan suurin asema. Radan vaikutus näkyi '
+                + 'heti: kun Zhengzhoun suurnopeusrata avattiin 6. '
+                + 'helmikuuta 2010, matkustajalennot kahden kaupungin '
+                + 'välillä loppuivat neljässäkymmenessäkahdeksassa '
+                + 'päivässä. Kaupungin sisällä kulkee metro, jonka '
+                + 'ensimmäinen linja avattiin 16. syyskuuta 2011, ja sen '
+                + 'asemat osuvat lähes kaikkiin kohteisiin: Kello- ja '
+                + 'Rumpitorni sekä kaupunginmuuri kakkoslinjalla, '
+                + 'villihanhipagoda kolmos- ja neloslinjalla ja Shaanxin '
+                + 'museo kolmella linjalla. Kellotornin ympäristössä '
+                + 'jalankulkija kulkee ali- ja ylikulkusiltoja pitkin, ja '
+                + 'kaupungissa on yli viisikymmentätuhatta '
+                + 'kaupunkipyörää.',
+              kuva: {
+                tiedosto: 'Train of Line 6, Xi\'an Metro (May 28, 2022).jpg',
+                selite: 'Metrojuna saapuu asemalle tunnelista: keula on '
+                  + 'liikkeessä epätarkka, ja laiturin reunassa kulkee '
+                  + 'keltamusta varoitusraita.',
+                lahde: 'Bob Wehn, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Xi’an on Guanzhongin tasangolla Shaanxin '
+                + 'eteläkeskiosassa, kahdeksan joen ja puron '
+                + 'muodostamalla tulvatasangolla, 405 metrin '
+                + 'korkeudessa. Etelässä nousee Qinling-vuoristo, '
+                + 'pohjoisessa virtaa Wei-joki, ja sen takana alkaa '
+                + 'Loessi-tasanko; taolaisuuden viidestä pyhästä vuoresta '
+                + 'yksi, Hua Shan, on sadan kilometrin päässä idässä. '
+                + 'Paikan valinta oli aikanaan tietoinen. Han-dynastian '
+                + 'alussa neuvonantaja Zhang Liang suositteli keisari Liu '
+                + 'Bangille juuri Guanzhongia: se on Xiao-vuoren ja '
+                + 'Hangun solan takana, se yhdistää Gansun ja Sichuanin, '
+                + 'ja se on kuin rautalinna tuhansien mailien matkalta ja '
+                + 'sadoiltaan rikas kuin taivaan valtakunta. Siitä '
+                + 'lähtien seutua on kutsuttu juuri sillä nimellä.',
+              kuva: {
+                tiedosto: 'Part of the view on Qinling mountains.jpg',
+                selite: 'Qinling-vuoriston harjanteita kerroksittain '
+                  + 'utuun asti, etualalla ruohoinen rinne ja '
+                  + 'pensaikkoa.',
+                lahde: 'Charlie439753, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: muslimikortteli',
+              teksti: 'Rumpitornin länsipuolella alkaa muslimikortteli, '
+                + 'jossa asuu osa kaupungin noin viidestäkymmenestä '
+                + 'tuhannesta hui-muslimista. Moskeijoita Xi’anissa on '
+                + 'seitsemän, ja tunnetuin niistä on Suuri moskeija '
+                + 'korttelin sydämessä. Kortteli tunnetaan silti ennen '
+                + 'kaikkea ruoastaan, ja neljä ruokalajia toistuu joka '
+                + 'listalla. Yangrou paomo on lammaskeitto, johon '
+                + 'murennetaan litteää leipää. Roujiamo on sämpylä, jonka '
+                + 'väliin pannaan haudutettua lihaa. Liangpi ovat kylminä '
+                + 'syötäviä vehnä- tai riisinuudeleita etikan ja '
+                + 'chiliöljyn kanssa. Biangbiang mian taas ovat käsin '
+                + 'vedettyjä paksuja ja pitkiä nuudeleita, jotka '
+                + 'tarjoillaan tulisen paprikan kera.',
+              kuva: {
+                tiedosto: 'Yangrou Paomo.JPG',
+                selite: 'Kuviollisessa kulhossa höyryää lammaskeitto, '
+                  + 'jossa uivat leivänmurut, lasinuudelit ja punainen '
+                  + 'chilitahnanokare.',
+                lahde: 'Danielinblue, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kaupunki, joka purettiin',
+              teksti: 'Vuonna 904 sotapäällikkö Zhu Wen määräsi '
+                + 'Chang’anin rakennukset purettaviksi ja rakennusaineet '
+                + 'siirrettäviksi Luoyangiin, uuteen pääkaupunkiin; '
+                + 'asukkaat ja keisari Zhaozong pakotettiin muuttamaan '
+                + 'mukana. Sen jälkeen käskynhaltija Han Jian rakensi '
+                + 'kaupungin uudelleen vanhan Keisarikaupungin pohjalle, '
+                + 'ja jäljelle jäänyt väki kutsui sitä Xinchengiksi eli '
+                + 'Uudeksi kaupungiksi. Se oli alle kuudestoistaosa '
+                + 'entisestä Chang’anista; muu osa jäi luonnon valtaan ja '
+                + 'otettiin pelloiksi. Pohjois- ja itämuuria laajennettiin '
+                + 'myöhemmin hieman, ja Ming-kaudella kaupungin '
+                + 'virallinen nimi vaihtui Jingzhaosta Xi’aniksi.',
+              kuva: {
+                tiedosto: 'Ancient Chang\'an City Model (9923627634).jpg',
+                selite: 'Pienoismalli Tang-kauden Chang’anista: '
+                  + 'suorakulmaiset korttelit jatkuvat riveinä leveiden '
+                  + 'katujen molemmin puolin niin kauas kuin valo yltää.',
+                lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Xi’an on itäisen monsuunin vaikutuspiirissä, '
+                + 'Köppenin luokituksessa rajatapaus lauhkean '
+                + 'subtrooppisen ja kylmätalvisen mannerilmaston '
+                + 'välillä. Wei-joen laaksossa se tarkoittaa kuumia ja '
+                + 'kosteita kesiä, kylmiä ja kuivia talvia sekä kuivaa '
+                + 'kevättä ja syksyä. Kuukausikeskilämpö nousee '
+                + 'tammikuun nollan tuntumasta heinäkuun '
+                + 'kahteenkymmeneenseitsemään asteeseen, ja koko vuoden '
+                + 'keskiarvo on runsaat neljätoista astetta; luvut ovat '
+                + 'Chang’anin kaupunginosan mittausasemalta, joka on 445 '
+                + 'metrin korkeudessa keskustan eteläpuolella. Suurin '
+                + 'osa vuoden sateesta tulee heinäkuun ja lokakuun lopun '
+                + 'välillä. Talvella lunta tulee toisinaan, mutta '
+                + 'se pysyy harvoin pitkään maassa. Kävelijän kannattaa '
+                + 'varautua kevääseen: maalis–huhtikuussa kaupungin '
+                + 'lämmetessä nopeasti tulee usein hiekkamyrskyjä. '
+                + 'Ääripäät vuodesta 1951 alkaen ovat 20,6 '
+                + 'pakkasastetta tammikuussa 1955 ja 42,3 lämpöastetta '
+                + 'heinäkuussa 2025.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki oli pääkaupunki jo silloin, kun sen nimi oli '
+        + 'Chang’an, ikuinen rauha. Han-kaudella tänne nousi laajin maan '
+        + 'päälle koskaan rakennettu palatsi ja Tang-kaudella yksi '
+        + 'maailman suurimmista kaupungeista.',
+      tehtava: {
+        kysymys: 'Kuinka moninkertainen Han-kauden Weiyang-palatsi oli '
+          + 'nykyiseen Kiellettyyn kaupunkiin verrattuna?',
+        vaihtoehdot: [
+          'Yhtä suuri',
+          'Kaksinkertainen',
+          'Lähes seitsenkertainen',
+          'Satakertainen',
+        ],
+        oikea: 2,
+        fakta: 'Weiyang peitti 4,8 neliökilometriä eli 6,7 kertaa '
+          + 'Kielletyn kaupungin alan ja yksitoista kertaa Vatikaanin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suurin palatsi maan päällä',
+          tiedosto: 'Chang Le Gong and Wei Yang Gong by Bi Yuan.jpg',
+          teksti: 'Vuonna 202 eaa. Han-dynastian perustaja Liu Bang asetti '
+            + 'pääkaupunkinsa Chang’aniin, ja kansleri Xiao He rakennutti '
+            + 'hänelle kaksi palatsia vierekkäin. Weiyang eli Loputon '
+            + 'palatsi on laajin maan päälle koskaan rakennettu palatsi: '
+            + 'muurattu suorakaide, jonka sisällä oli neljäkymmentä salia '
+            + 'ja lähes viisi neliökilometriä rakennuksia — 6,7 kertaa '
+            + 'Kielletyn kaupungin ja yksitoista kertaa Vatikaanin ala. '
+            + 'Liu Bang moitti kansleriaan turhasta loistosta, mutta Xiao '
+            + 'He vastasi, että juuri loisto oli tarpeen kilpailijoiden '
+            + 'vaientamiseksi. Palatsi rakennettiin harjanteen '
+            + 'korkeimmalle kohdalle, ja sitä käytti seitsemän dynastiaa.',
+          selite: 'Qing-kauden puupiirros kahdesta Han-palatsista: '
+            + 'Weiyang vasemmalla ja Changle oikealla, kummankin '
+            + 'ympärillä oma muuri portteineen.',
+          lahde: 'Bi Yuan (1730–1797), Wikimedia Commons (PD)',
+          wiki: 'Chang\'an',
+        },
+        {
+          otsikko: 'Kaupunki kuin ruutupaperi',
+          tiedosto: '隋大興城坊平面圖.png',
+          teksti: 'Sui-keisari Wen valitsi 582 vanhan '
+            + 'Han-Chang’anin raunioiden kaakkoispuolelta paikan uudelle '
+            + 'pääkaupungille ja nimesi sen Daxingiksi, Suureksi '
+            + 'kukoistukseksi. Tang-dynastia palautti nimen Chang’aniksi '
+            + 'vuonna 618, ja kaupungista tuli Konstantinopolin ja '
+            + 'Bagdadin rinnalla yksi maailman suurimmista. Se oli '
+            + 'ruudukko: ulkokaupungissa oli noin satakymmenen '
+            + 'muurin ympäröimää korttelia, pienin 28 ja suurin 94 '
+            + 'hehtaaria, ja muurit olivat kolmisen metriä '
+            + 'korkeat. Pääkatuja oli kuusi. Kapeinkin oli '
+            + 'kaksikymmentäviisi metriä leveä ja Keisarin tie '
+            + 'eteläportilta hallintokaupunkiin sataviisikymmentä. '
+            + 'Vuonna 740 hovi määräsi kaduille istutettavaksi '
+            + 'hedelmäpuita.',
+          selite: 'Kaavakuva Sui-kauden Daxingista: keltaiset ruudut ovat '
+            + 'muurattuja kortteleita ja oranssit palatsi- ja '
+            + 'hallintoalueita.',
+          lahde: 'Jason22, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Chang\'an',
+        },
+        {
+          otsikko: 'Silkkitien itäinen pää',
+          tiedosto: 'Tang Sancai Porcelain- Musicians on a Camel.jpg',
+          teksti: 'Silkkitien pohjoinen reitti alkoi Chang’anista. Reitti '
+            + 'vakiintui suunnilleen ensimmäisellä vuosisadalla eaa., kun '
+            + 'keisari Han Wudi lopetti paimentolaisheimojen häirinnän '
+            + 'lännessä. Länteen kulki silkkibrokadia, lakkatavaraa, '
+            + 'posliinia ja teetä; vastaan tuli hevosia, kameleita, '
+            + 'hunajaa, viiniä ja kultaa. Karavaanit toivat kaupunkiin '
+            + 'myös taateleita, sahramia ja pistaasipähkinöitä Persiasta, '
+            + 'suitsuketta ja mirhamia Somaliasta, santelipuuta Intiasta '
+            + 'ja lasipulloja Egyptistä. Tang-kauden Chang’anissa oli '
+            + 'kaksi suurta toria, ja läntisessä oli persialainen basaari '
+            + 'viinikauppoineen, teehuoneineen ja leipureineen. Samaa '
+            + 'tietä levisivät myös paperi ja ruuti.',
+          selite: 'Tang-kauden kolmivärikeramiikkaa: kamelin selkään on '
+            + 'nostettu soittajaryhmä, ja etummainen näppäilee '
+            + 'kaulakkaista soitinta.',
+          lahde: 'Gary Todd, Wikimedia Commons (CC0)',
+          wiki: 'Silk Road',
+        },
+        {
+          otsikko: 'Munkki, joka toi kirjat kotiin',
+          tiedosto: 'In daci\'en Temple, Xi\'an, May, 2018.jpg',
+          teksti: 'Munkki Xuanzang palasi Intian-pyhiinvaellukseltaan '
+            + 'satojen sanskritinkielisten käsikirjoitusten kanssa ja '
+            + 'perusti Chang’aniin käännöskoulun. Niiden säilyttämiseksi '
+            + 'hän valvoi vuonna 652 pagodin rakentamista Da Ci’enin '
+            + 'temppeliin: viisikerroksinen torni, ulkokuori tiiltä ja '
+            + 'sisäydin maata, kuusikymmentä metriä korkea. Tiilisaumoihin '
+            + 'kasvoi rikkaruohoa, ja rakenne vaurioitui. Keisarinna Wu '
+            + 'Zetian ja hoviväki lahjoittivat rahat, alkuperäinen torni '
+            + 'purettiin ja tilalle nousi seitsenkerroksinen. Sisäseiniin '
+            + 'kaiverrettiin Buddha-kuvia, joiden tekijäksi mainitaan '
+            + 'aikansa kuuluisin maalari Yan Liben.',
+          selite: 'Da Ci’enin temppelin salissa istuu kullattu '
+            + 'Buddha-veistos lootusjalustalla, ja suitsukesavu pehmentää '
+            + 'ympärillä olevat puupaneelit.',
+          lahde: 'Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Giant Wild Goose Pagoda',
+        },
+      ],
+    },
+  ],
+  /*
+   * VARANASI (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian raakateksteistä
+   * (action=raw, haettu 21.8.2026): Varanasi, Sarnath, Dhamek Stupa,
+   * Chaukhandi Stupa, Kashi Vishwanath Temple, Manikarnika Ghat,
+   * Dashashwamedh Ghat, Assi Ghat, Ramnagar Fort, Banarasi sari,
+   * Silk industry in Varanasi, Benares State ja Betel nut chewing
+   * (jonne otsikko "Paan" ohjaa).
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 21.8.2026 ja sama kuin Medinassa,
+   * Mekassa ja Jerusalemissa: uskonto kerrotaan historiallis-
+   * kulttuurisena ilmiönä ja kunnioittavasti, ei nykypolitiikkaa.
+   * POIS JÄTETTY KOKONAAN: Kashi Vishwanathin vuoden 1669
+   * tuhoamishistoria ja kaikki Gyanvapi-aiheet, nykyinen
+   * temppelikäytävähanke ja pääministerin vaalipiiri, vuoden 2010
+   * pommi-isku Dashashwamedhilla ja vuoden 2019 lihakauppakielto.
+   * POLTTOHAUTAUS on nostossa K4 ja Manikarnikan jutussa kerrottu
+   * ghatin historian ja moksa-uskomuksen kautta; itse polttamista,
+   * rovioita tai vainajia ei kuvailla, eikä yhdessäkään kuvassa ole
+   * roviota — Manikarnikan kuvissa on ghatin arkkitehtuuri kaukaa.
+   *
+   * KOLME FAKTAPOHJAN VÄITETTÄ, JOTKA EIVÄT PITÄNEET (docs/aasia-
+   * tyoaineisto/faktapohja-varanasi.md), on korjattu tässä:
+   * 1) "Rukoukset ja aartit pidetään päivittäin klo 02:30–23:00" ei
+   *    löydy en-Wikipedian Varanasi-artikkelista eikä Kashi
+   *    Vishwanath Temple -artikkelista. Jätetty kokonaan pois.
+   * 2) "Maharadža seuraa Ramlila-kulkuetta elefantin selässä" EI ole
+   *    Ramnagar Fort -artikkelissa, johon kokoaja viittasi. Väite on
+   *    silti tosi: se löytyy "Benares State" -artikkelista ("the
+   *    Kashi Naresh rides an elephant at the head of the
+   *    procession"), ja lähde on korjattu.
+   * 3) Ganga Aartin kesto. Kokoajan nostoteksti sanoi puolitoista
+   *    tuntia; Dashashwamedh Ghat -artikkeli sanoo noin 45 minuuttia.
+   *    Käytetty jälkimmäistä ("noin kolme varttia").
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat lehden tekstejä:
+   * kultauksen vuosi 1835 vs. 1839 (kirjoitettu auki Kashi
+   * Vishwanathin jutussa), Dhamek-stupan korkeus 43 m vs. 39 m
+   * (lukua ei kirjoiteta täsmällisenä, maakartat.js:n Moreebin dyyni
+   * -sääntö), Manikarnikan Gupta-kirjoituksen vuosisata 300- vs.
+   * 400-luku (sanotaan vain "Gupta-kauden kirjoituksissa") ja
+   * Sarnathin etäisyys (ks. maakartat.js:n varanasi-kommentti).
+   * Lisäksi Faizabadin sopimuksen vuosi: "Varanasi"-artikkelin
+   * johdanto sanoo 1775, "Benares State" sanoo "in the later 1760s".
+   * Käytetty täsmällisempää lukua 1775, koska johdanto nimeää
+   * sopimuksen ja vuoden yhdessä ja koska kaksi muutakin
+   * hallintovaihetta (1805, 1836, 1902) tulee samasta lauseesta.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Ganges (johdanto, K1),
+   * Benares (intro asia-artikkelit.js:ssä, H3, H4), yksi seitsemästä
+   * pyhästä kaupungista (matkailijalle-kappale), Sarnath (H1, H2) ja
+   * Uttar Pradesh (matkailijalle-kappale). Historia-sivun
+   * minitehtävä kysyy leijonapäädyn löytövuotta, jota visa ei kysy,
+   * ja vastaus on samalla sivulla nostossa H2.
+   *
+   * AIHETOISTO, joka on tietoinen: Sarnathin Dhamek-stupa on sekä
+   * kaupunki-sivun avauskuvana (Vinayarajin kuva iltavalossa) että
+   * kohdekartan oman juttunsa kuvana (Hardy Explorerin kuva
+   * sadesäällä). Eri tiedostot ja eri etäisyydet, sama perustelu
+   * kuin Mekan Jabal al-Nourilla ja Tukholman Vasalla.
+   *
+   * SÄÄRIVI PUUTTUU YHÄ js/packs/saatiedot.js:stä, ja se on tietoinen
+   * jättö eikä unohdus. Open-Meteon arkisto (ERA5) vastasi tämän erän
+   * ajan pelkällä 429:llä ja viestillä "Daily API request limit
+   * exceeded. Please try again tomorrow" — kontin vuorokausikiintiö
+   * oli käytetty loppuun, eikä normaaleja voi keksiä. Lehti toimii
+   * ilman riviä täsmälleen kuten tiedoston alkukommentti lupaa.
+   * Rivi haetaan yhdellä ajolla, kun kiintiö on nollautunut; oppaan
+   * sääjakso on kirjoitettu en-Wikipedian ilmasto-osiosta eikä se
+   * riipu rivistä.
+   */
+  varanasi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Varanasi',
+      johdanto: 'Gangesin vasemmalla rannalla laskeutuu veteen ainakin '
+        + '84 kiviportaikkoa, ja niiden takana on temppelien ja '
+        + 'silkkikutomoiden kaupunki. Varanasi tunnetaan yhä myös '
+        + 'niminä Benares ja Kashi.',
+      kansikuvat: [
+        {
+          tiedosto: 'Panorama of Ghat and Ganges (Ganga) River - Varanasi - Uttar Pradesh - India (12480230823).jpg',
+          selite: 'Leveä panoraama jokirannasta: soutuveneet ovat '
+            + 'kiinni portaiden edustalla, lehmä makaa kivetyksellä '
+            + 'ja vastarannalla häämöttää hiekkasärkkä.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Varanasi 127 (34175947074).jpg',
+          selite: 'Rantatörmän julkisivu joelta katsottuna: kerroksittain '
+            + 'taloja ja temppelien torneja, ja kaukana horisontissa '
+            + 'kaartuu ristikkosilta.',
+          lahde: 'juggadery, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Banarasi Sari on viewing wooden blocks 01.jpg',
+          selite: 'Kymmenkunta punaista ja kultakuvioista Banarasi-saria '
+            + 'on kääritty puulevyille ja nostettu näytille tiiliseinää '
+            + 'vasten.',
+          lahde: 'Suyash Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: joki, kuja ja Sarnath — kaupungin kolme kerrosta
+       * siinä järjestyksessä, jossa lehti ne kertoo (rantaportaat,
+       * vanhankaupungin kujaverkko, buddhalainen esikaupunki).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Dashashwamedh Ghat in Varanasi, Uttar Pradesh.jpg',
+          selite: 'Dashashwamedh-ghat joelta päivänvalossa: punainen '
+            + 'rakennus, temppelin torni, rivi oransseja lippuja ja '
+            + 'kymmeniä veneitä rannassa.',
+          lahde: 'Prashant Kharote, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Gali, Varanasi (32987699705).jpg',
+          selite: 'Vanhankaupungin kivetty gali aamuhämärässä: kuja on '
+            + 'kapea, koirat makaavat reunoilla ja etäällä kävelee yksi '
+            + 'ihminen selin.',
+          lahde: 'Eddy Milfort from Sydney, Australia, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Dhamek Stupa, Sarnath and surroundings - IRCTC 2017 (100).jpg',
+          selite: 'Sarnathin Dhamek-stupa iltavalossa nurmikentän takana, '
+            + 'reunalla puita ja rivi rukousviirejä.',
+          lahde: 'Vinayaraj, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kahdeksankymmentäneljä porrasta jokeen',
+          tiedosto: 'Bathing Ghat Banaras India 1890.jpg',
+          teksti: 'Varanasin tunnusmerkki on ghat: kiviporrasrivistö, '
+            + 'joka laskeutuu jyrkkää rantatörmää Gangesin veteen. Niitä '
+            + 'on kaupungissa ainakin 84, ja suurin osa on '
+            + 'kylpypaikkoja, joilla pyhiinvaeltajat tekevät '
+            + 'päivittäiset rituaalinsa; vain muutama on varattu '
+            + 'polttohautaukseen. Suuren osan portaista rakennuttivat '
+            + '1700- ja 1800-luvuilla Maratha-suvut — Scindiat, '
+            + 'Holkarit, Bhonslet ja Peshwat — ja moni ghat on yhä '
+            + 'yksityisomistuksessa. Iltaisin Dashashwamedh-ghatilla '
+            + 'pidetään Ganga aarti, noin kolme varttia kestävä tulen '
+            + 'palvontameno, ja aamuvenematka portaiden ohi on ollut '
+            + 'matkailijan vakio-ohjelmaa jo pitkään.',
+          selite: 'Vuoden 1890 kaiverrus kylpyghatista: portaat '
+            + 'täyttyvät varjoista ja päivänvarjoista, ja niiden takana '
+            + 'kohoaa temppelin korkea torni.',
+          lahde: 'The British Library, Wikimedia Commons (PD)',
+          wiki: 'Varanasi',
+        },
+        {
+          otsikko: 'Kultalanka ja kangaspuut',
+          tiedosto: 'Konia, brocade sari.jpg',
+          teksti: 'Silkinkudonta on Varanasin hallitseva käsiteollisuus, '
+            + 'ja kaupunki tunnetaan koko Intiassa Banarasi-sareistaan: '
+            + 'kulta- ja hopealangalla kudotuista brokadeista, joita '
+            + 'käytetään erityisesti häissä. Kutojat ovat enimmäkseen '
+            + 'Ansari-nimellä tunnettuja muslimeja, ja työ tehdään yhä '
+            + 'kotona huoneen kokoisilla jalkapolkimisilla kangaspuilla '
+            + 'isältä pojalle siirtyneenä taitona. Perinne juontuu '
+            + '1600-luvulle: Gujaratin nälänhädän 1603 jälkeen '
+            + 'silkkikutojia muutti Banarasiin. Yhden sarin kutominen '
+            + 'kestää viidestätoista päivästä puoleen vuoteen kuvion '
+            + 'mukaan, ja vuodesta 2009 nimi on ollut alkuperäsuojattu.',
+          selite: 'Lähikuva purppuranvärisen brokadin kulmasta, jossa '
+            + 'kultalangalla on kudottu paisleykuvio ja tiheät '
+            + 'kukkareunukset.',
+          lahde: 'Anilbhardwajnoida, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Varanasi',
+        },
+        {
+          otsikko: 'Aurinkokello ghatin päällä',
+          tiedosto: 'Samrat Yantram at Observatory of Man Singh.jpg',
+          teksti: 'Man Mandir -ghatin yläpuolella, aivan Dashashwamedhin '
+            + 'naapurissa, seisoo kivinen tähtitorni. Sen rakennutti '
+            + 'vuonna 1737 mogulihallitsija Muhammad Shah, ja tehtävä '
+            + 'oli tarkka: löytää kalenterista virheet ja korjata '
+            + 'käytössä olleet tähtitieteelliset taulukot. Rakennus on '
+            + 'Jaipurin maharadžan Jai Singh II:n palatsin kupeessa, ja '
+            + 'se on varustukseltaan vaatimattomampi kuin observatoriot '
+            + 'Jaipurissa ja Delhissä. Yksi laite on '
+            + 'silti ainutlaatuinen: päiväntasaajan tasoon asetettu '
+            + 'aurinkokello, joka toimii yhä ja jonka lukemat yksi '
+            + 'ihminen ehtii seurata ja kirjata.',
+          selite: 'Observatorion suuri aurinkokello: kaksi kaarevaa '
+            + 'kivikaidetta reunustaa jyrkkiä portaita, jotka nousevat '
+            + 'suoraan taivasta vasten.',
+          lahde: 'Nandanupadhyay, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Varanasi',
+        },
+        {
+          otsikko: 'Suuri polttopaikka',
+          tiedosto: 'Manikarnika Ghat, Varanasi, Uttar Pradesh, India (2011) 5.jpg',
+          teksti: 'Manikarnika on Varanasin tärkein polttohautausghat, ja '
+            + 'hindulaisen perinteen mukaan täällä poltettu saavuttaa '
+            + 'moksan eli vapautuu syntymän ja kuoleman kierteestä. '
+            + 'Ghat on kaupungin vanhimpia — sitä mainitaan jo '
+            + 'Gupta-kauden kirjoituksissa — mutta nykyinen kivinen '
+            + 'rantalaituri rakennettiin vasta vuonna 1302, ja sitä on '
+            + 'sen jälkeen korjattu ainakin kolme kertaa. Nimi tulee '
+            + 'legendasta, jonka mukaan jumalatar Satin korvakoru '
+            + 'putosi juuri tähän kohtaan: mani-karnika tarkoittaa '
+            + 'korvakorun helmeä. Laiturin viereiset korotetut alustat '
+            + 'on varattu kuolinvuosipäivien muistorituaaleille.',
+          selite: 'Manikarnika-ghat joelta kaukaa katsottuna: '
+            + 'rantatörmän talot, portaat ja vinoon vajonnut '
+            + 'kivitemppeli veden rajassa.',
+          lahde: 'Aleksandr Zykov from Russia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Varanasi',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'India - Varanasi boats - 1292.jpg',
+          selite: 'Aurinko nousee usvan takaa Gangesin ylle, ja '
+            + 'etualalla soutuveneet odottavat kiinnitettyinä rantaan.',
+          lahde: 'Jorge Royan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Varanasi on Uttar Pradeshin kaakkoiskulmassa Gangesin '
+          + 'vasemmalla rannalla, ja kaupungissa asui vuoden 2011 '
+          + 'laskennassa runsaat 1,2 miljoonaa ihmistä. Hinduille se on '
+          + 'yksi seitsemästä pyhästä kaupungista, ja matkailu on sen '
+          + 'toiseksi tärkein elinkeino heti silkin jälkeen; sesonki on '
+          + 'loka–maaliskuu. Vanhassa kaupungissa liikutaan kävellen tai '
+          + 'veneellä, sillä kujat ovat niin kapeita, ettei niihin mahdu '
+          + 'ajoneuvoa — jokiranta on käytännössä kaupungin pääkatu.',
+        artikkeli: {
+          nimi: 'Matkailijan Varanasi',
+          taitto: 'opas',
+          teksti: 'Yksi jokiranta, ainakin 84 porrasta veteen ja '
+            + 'kaupunki, jota on asuttu yhtäjaksoisesti pidempään kuin '
+            + 'melkein mitään muuta.',
+          nosto: 'Kaupungissa arvioidaan olevan 23 000 temppeliä — ja '
+            + '1830-luvun laskennassa niitä oli tuhat.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Varanasia palvelee Lal Bahadur Shastrin '
+                + 'kansainvälinen lentoasema, joka on Babatpurissa noin '
+                + '26 kilometriä keskustasta; kansainväliseksi lentoasemaksi '
+                + 'se nimettiin lokakuussa 2012. Rautateitse tullaan '
+                + 'Varanasi Junctionille eli Cantt-asemalle, jonka '
+                + 'yhdentoista laiturin läpi kulkee vuorokaudessa yli '
+                + '240 junaa ja runsaat 360 000 matkustajaa. Delhistä on '
+                + 'matkaa 692 kilometriä kaakkoon ja osavaltion '
+                + 'pääkaupungista Lucknow’sta 320. Kaupungin sisällä '
+                + 'liikutaan taksilla, riksalla ja kolmipyörillä, mutta '
+                + 'vanhimpiin kortteleihin niillä ei ole asiaa — siellä '
+                + 'kuljetaan jalan tai veneellä.',
+              kuva: {
+                tiedosto: 'Varanasi 252c tree shrine (33664791913).jpg',
+                selite: 'Kujan mutkassa on kullattu pikku pyhäkkö '
+                  + 'kellonsa kanssa, ja sen takaa nousee valtavan '
+                  + 'vanhan puun kaksihaarainen runko.',
+                lahde: 'juggadery, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Nimi Varanasi tulee kahdesta Gangesin sivu-uomasta. '
+                + 'Varuna virtaa yhä kaupungin pohjoisosassa, ja Assi on '
+                + 'nykyään pieni puro etelässä samannimisen ghatin luona. '
+                + 'Vanha kaupunki on näiden kahden yhtymäkohdan välissä '
+                + 'joen vasemmalla rannalla, ja väli — noin neljä '
+                + 'kilometriä — on pyhiinvaeltajien perinteinen '
+                + 'kiertoreitti, joka päättyy Sakshi Vinayakin '
+                + 'temppeliin. Kaupunki on Gangesin tasangolla vain '
+                + 'kahdeksankymmenen metrin korkeudessa, ja maa on '
+                + 'hedelmällistä, koska matalat tulvat tuovat rannoille '
+                + 'jatkuvasti uutta lietettä. Ylävirtaan on 121 '
+                + 'kilometriä Prayagrajiin, jossa Yamuna yhtyy '
+                + 'Gangesiin — toiseen suureen pyhiinvaelluspaikkaan.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: paan, mango ja khoa',
+              teksti: 'Seudun tärkeitä maataloustuotteita ovat '
+                + 'betelinlehti, langra-mangot ja khoa eli kokoon '
+                + 'keitetty maito, josta tehdään makeisia. Betelinlehteen '
+                + 'kääritään paan: areca-pähkinän paloista, sammutetusta '
+                + 'kalkista ja mausteista koottu pikku käärö, jota '
+                + 'pureskellaan piristeenä ja tarjotaan vieraille eri '
+                + 'puolilla Etelä-Aasiaa. Sekoitus vaihtelee seudusta '
+                + 'toiseen — mukaan voi tulla kanelia, neilikkaa, '
+                + 'kardemummaa, katekua tai kookosta — ja Banarasi paan '
+                + 'on niistä koko Intiassa tunnetuin. Langra-mango '
+                + 'puolestaan kypsyy kesällä juuri ennen monsuunia.',
+              kuva: {
+                tiedosto: 'Langra Mango farm, Mathurapur, Bhagalpur Bihar.JPG',
+                selite: 'Langra-mangopuun oksat notkuvat vaaleanvihreitä '
+                  + 'hedelmiä tiheän lehvästön keskellä.',
+                lahde: 'Abhishek Priyadarshi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Koulujen ja soittajien kaupunki',
+              teksti: 'Varanasi oli oppineiden kaupunki kauan ennen '
+                + 'brittiaikaa, mutta vuonna 1791 sinne perustettiin '
+                + 'myös Intian vanhin sanskritin oppilaitos, Benares '
+                + 'Sanskrit College. Perustaja oli Itä-Intian kompanian '
+                + 'residentti Jonathan Duncan — sama mies, joka julkaisi '
+                + 'ensimmäisen nykyaikaisen kuvauksen Sarnathin '
+                + 'raunioista. Annie Besant avasi Central Hindu Collegen '
+                + 'vuonna 1898, ja siitä kasvoi 1916 yhdessä Madan Mohan '
+                + 'Malviyan kanssa Banaras Hindu University, Intian '
+                + 'ensimmäinen nykyaikainen kampusyliopisto; sen maat '
+                + 'lahjoitti Kashi Naresh, kaupungin ruhtinas, yli viisi '
+                + 'neliökilometriä. Musiikissa kaupungilla on oma '
+                + 'koulukuntansa: tabla-rummun Benares gharana syntyi '
+                + 'täällä, ja 1900-luvulla kaupunkiin liitettiin '
+                + 'shehnai-soittaja Bismillah Khan.',
+              kuva: {
+                tiedosto: 'Banaras Hindu University, Varanasi.jpg',
+                selite: 'Banaras Hindu Universityn keltainen '
+                  + 'porttirakennus palmujen välissä, edustalla leveä '
+                  + 'katu ja muutama riksa.',
+                lahde: 'Sundrampixel, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Varanasissa on kostea subtrooppinen ilmasto, jossa '
+                + 'kesän ja talven ero on suuri. Kuiva kesä alkaa '
+                + 'huhtikuussa ja jatkuu kesäkuulle: lämpötila liikkuu '
+                + 'silloin kahdenkymmenenkahden ja neljänkymmenenkuuden '
+                + 'asteen välillä, ja päivisin puhaltaa loo, kuiva ja '
+                + 'kuuma tuuli. Heinäkuusta lokakuuhun on monsuunikausi, '
+                + 'ja koko vuoden sade on runsaat 1 100 millimetriä. '
+                + 'Talvella joulu–helmikuussa Himalajalta tulevat kylmät '
+                + 'aallot pudottavat lämpötilan ajoittain alle viiden '
+                + 'asteen, ja aamut ovat usein sumuisia. Matkailun '
+                + 'sesonki osuu näiden väliin, loka–maaliskuuhun.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki tunnettiin muinoin nimellä Kashi, valon '
+        + 'kaupunki, ja sen lähistöllä Buddha piti ensimmäisen '
+        + 'saarnansa. 1800-luvulla brittiläiset kaivajat ja '
+        + 'matkakirjailijat löysivät Benaresin uudelleen.',
+      tehtava: {
+        kysymys: 'Minä vuonna Ashokan pylvään leijonapääty kaivettiin '
+          + 'esiin Sarnathissa?',
+        vaihtoehdot: [
+          '1794',
+          '1836',
+          '1905',
+          '1947',
+        ],
+        oikea: 2,
+        fakta: 'Löytö tehtiin maaliskuussa 1905, yli sata vuotta sen '
+          + 'jälkeen kun Sarnathin rauniot oli ensi kerran kuvattu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Peurapuiston ensimmäinen saarna',
+          tiedosto: 'Sarnath capital.jpg',
+          teksti: 'Kahdeksan kilometriä Varanasista koilliseen on '
+            + 'Sarnath, peurapuisto, jossa Buddha piti valaistumisensa '
+            + 'jälkeen ensimmäisen opetuksensa viidelle oppilaalleen '
+            + 'noin vuonna 528 eaa. Siitä alkoi buddhalainen '
+            + 'munkkiyhteisö. Paikkaa merkitsee yhä Dhamek-stupa, jykevä '
+            + 'tiilestä ja kivestä muurattu lieriö, jonka kivipinnan '
+            + 'kukkakuviot ovat Gupta-kaudelta. Keisari Ashoka pystytti '
+            + 'paikalle noin 250 eaa. pylvään, jonka neljän leijonan '
+            + 'pääty on nykyään Intian valtion tunnus. Kiinalainen munkki '
+            + 'Xuanzang laski täällä 600-luvulla satoja pieniä '
+            + 'pyhäkköjä ja puolentoistatuhannen munkin yhteisön.',
+          selite: 'Ashokan pylvään leijonapääty lähikuvassa: neljä '
+            + 'kiillotetusta hiekkakivestä veistettyä leijonaa selät '
+            + 'vastakkain, alla pyörä- ja eläinkuvioinen jalusta.',
+          lahde: 'Chrisi1964, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sarnath',
+        },
+        {
+          otsikko: 'Kaivetut aarteet',
+          tiedosto: 'India-5162 - Flickr - archer10 (Dennis).jpg',
+          teksti: 'Sarnath ryöstettiin ja tuhottiin vuonna 1194, ja se '
+            + 'unohtui vuosisadoiksi. Tammikuussa 1794 zamindar Jagat '
+            + 'Singhin miehet purkivat paikalta kokonaisen stupan '
+            + 'saadakseen tiiliä rakennusaineeksi ja löysivät sen '
+            + 'reliikkikammiosta hiekkakivilippaan, jonka sisällä oli '
+            + 'vihreä marmoriuurna. Löydöstä julkaisi kuvauksen vuonna '
+            + '1799 Asiatic Societyn jäsen Jonathan Duncan. Nuori '
+            + 'sotilasinsinööri Alexander Cunningham teki ensimmäiset '
+            + 'järjestelmälliset kaivaukset 1835–1836, Markham Kittoe '
+            + 'jatkoi 1851–1852, ja F. O. Oertelin ryhmä nosti '
+            + 'maaliskuussa 1905 esiin Ashokan pylvään alaosan ja sen '
+            + 'leijonapäädyn.',
+          selite: 'Jagat Singhin purkaman stupan tiiliraunio, jonka '
+            + 'tasatulle laelle on jätetty pieni kullattu '
+            + 'Buddha-hahmo ja kukkia.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Sarnath',
+        },
+        {
+          otsikko: 'Vanhempi kuin historia',
+          tiedosto: 'Edward Lear - Benares - Google Art Project.jpg',
+          teksti: 'Benares on vanhempi kuin historia, vanhempi kuin '
+            + 'perimätieto, jopa vanhempi kuin legenda — niin kirjoitti '
+            + 'Mark Twain vuonna 1897. Häntä ennen kaupunkia olivat '
+            + 'kuvanneet toiset. Pastori M. A. Sherring viittasi vuonna '
+            + '1868 ilmestyneessä kirjassaan James Prinsepin '
+            + '1830-luvun laskentaan, jonka mukaan temppeleitä oli '
+            + 'noin tuhat; Prinsep itse oli piirtänyt kaupungista '
+            + 'litografioita. Englantilainen Edward Lear '
+            + 'istui jokirannassa 14. joulukuuta 1873 puoli kolmelta '
+            + 'iltapäivällä ja merkitsi kellonajan akvarellinsa '
+            + 'alalaitaan. Kaupungin oma kunnallishallinto oli '
+            + 'aloittanut kuusi vuotta aiemmin.',
+          selite: 'Edward Learin akvarelli jokirannasta: temppelien '
+            + 'tornit nousevat vaalean rantatörmän päälle, ja '
+            + 'alalaitaan on kirjoitettu käsin päiväys ja kellonaika.',
+          lahde: 'Edward Lear, Wikimedia Commons (PD)',
+          wiki: 'Varanasi',
+        },
+        {
+          otsikko: 'Linnoitus joen toisella puolella',
+          tiedosto: 'Ramnagar Fort, Ramnagar, Varanasi, Uttar Pradesh 05.jpg',
+          teksti: 'Gangesin itärannalla, Tulsi-ghatia vastapäätä, kohoaa '
+            + 'Ramnagarin linnoitus. Sen rakennutti vuonna 1750 Kashi '
+            + 'Naresh Balwant Singh vaaleasta chunar-hiekkakivestä, ja '
+            + 'tyyli on mogulien: veistetyt parvekkeet, avoimet pihat ja '
+            + 'paviljongit. Suku oli noussut Awadhin nawabin '
+            + 'zamindareista omaksi vallakseen, ja Benaresista tuli '
+            + 'vuonna 1911 ruhtinaskunta — lainkäyttövaltaa itse '
+            + 'kaupungissa sillä ei silti ollut, sillä Itä-Intian '
+            + 'kompania oli liittänyt kaupungin itseensä jo 1775. '
+            + 'Ruhtinas käynnisti 1800-luvulla Ramnagarin '
+            + 'Ramlila-perinteen, ja kuukauden mittaisen näytelmäsarjan '
+            + 'avajaiskulkueen kärjessä hän ratsastaa yhä norsulla.',
+          selite: 'Ramnagarin linnoitus joen toiselta rannalta: pitkä '
+            + 'hiekkakivinen muuri ja sen päällä palatsin siivet '
+            + 'heijastuvat tyyneen veteen.',
+          lahde: 'Paramanu Sarkar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Varanasi',
         },
       ],
     },

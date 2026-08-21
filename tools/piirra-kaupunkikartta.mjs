@@ -2038,6 +2038,96 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 39.68, etela: 39.6385, lansi: 66.9615, ita: 67.011 },
     palvelutiet: true,
   },
+  xian: {
+    /*
+     * MING-AJAN MUURIKAUPUNKI (21.8.2026). Ruutu on 5,4 × 4,1 km ja
+     * sen sisällä on koko Xi'anin kaupunginmuuri: suorakaide, jonka
+     * ulkomitat ovat Overpassin porttien mukaan noin 4,2 × 2,7 km ja
+     * kehä 14 kilometriä (en-Wikipedia "Fortifications of Xi'an").
+     * Rajaus on siis kaupungin oma vanha ääriviiva eikä piirtäjän
+     * valitsema ikkuna — sama ratkaisu kuin Sanaassa ja Vanhassa
+     * Delhissä, ja se on tässä poikkeuksellisen luonteva, koska
+     * muuri on ehjä koko kierroksen.
+     *
+     * POHJOISREUNA ON VÄLJEMPI TARKOITUKSELLA. Xi'anin vanha
+     * rautatieasema on 190 metriä muurin pohjoispuolella
+     * (en-Wikipedia: "located just north of Xi'an's walled city"),
+     * ja se on lehden kohde; ilman lisätilaa sen numeroympyrä
+     * leikkautuisi yläreunaan. Nyt asema osuu 11 prosentin
+     * korkeudelle.
+     *
+     * TERRAKOTTA-ARMEIJA JA QIN SHI HUANGIN HAUTAKUMPU EIVÄT OLE
+     * KARTALLA. Ne ovat runsaat 30 kilometriä koilliseen
+     * (en-Wikipedian koordinaateista laskien 33 ja 32 km), eli
+     * kymmenkertaisesti kauempana kuin mikä tahansa kainalo tässä
+     * kartastossa — Medinan Quba on 3,5 km ja Adenin Tawahi 6 km.
+     * Kolmenkymmenen kilometrin hyppy tekisi kainalon mittakaavasta
+     * aivan toisen kuin pääkartan, ja koko ruudun venyttäminen
+     * sinne asti muuttaisi muurikaupungin pieneksi läiskäksi.
+     * Armeija kerrotaan lehden nostossa ja kuvissa (Medinan
+     * Uhud-vuoren ratkaisu).
+     *
+     * KAINALOSSA VILLIHANHIPAGODA JA SHAANXIN HISTORIALLINEN MUSEO,
+     * noin 4,5 kilometriä etelään. Ne ovat Tang-kauden Chang'anin
+     * alueella eteläpuolella muuria, ja niiden väli on vain
+     * kilometri, joten sama kainalo riittää molemmille (Pekingin
+     * kahden kesäpalatsin malli). Kainalo on oikeassa alakulmassa,
+     * koska suunta on etelä-kaakko.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Pekingissä ja Medinassa: muslimikorttelin kujat Kellotornin ja
+     * Rumpitornin välissä sekä moskeijan pihat ovat OSM:ssä
+     * jalankulkualueita ja huoltoteitä, ja ilman lippuja juuri
+     * kartan tihein kortteli jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 34.284, etela: 34.247, lansi: 108.9145, ita: 108.9735 },
+    jalkakaydat: true,
+    palvelutiet: true,
+    kainalot: [
+      {
+        rajat: { pohjoinen: 34.229, etela: 34.216, lansi: 108.9465, ita: 108.9635 },
+        x: 74, y: 60, leveys: 24, suunta: '4,5 km etelään',
+      },
+    ],
+  },
+  varanasi: {
+    /*
+     * VARANASI (21.8.2026). Ruutu on 6,1 × 6,1 km ja siihen mahtuu
+     * koko lehden kaupunkipuoli: pohjoisessa Manikarnika Ghat ja
+     * Kashi Vishwanath -temppeli, keskellä Dashashwamedh Ghat,
+     * lännessä Durga Kundin allas, etelässä Assi Ghat ja joen
+     * TOISELLA PUOLELLA idässä Ramnagarin linnoitus.
+     *
+     * RUUTU ON NELIÖ TAHALLAAN. Varanasin kohteet ovat luonnostaan
+     * pohjois–eteläsuuntainen nauha jokirantaa pitkin: pelkkä nauha
+     * (n. 4,6 × 2 km) olisi piirtynyt 1600 × 3600 pikselin
+     * pystykaistaleeksi, korkeampana kuin yksikään paketin kartta
+     * (korkein on Isfahan, 1600 × 1983). Rajausta levennettiin
+     * itään ja länteen niin, että kuvasuhde on 1,00 ja korkeus
+     * 1595 px — samalla ruutuun mahtuivat Durga Kund ja Ramnagar,
+     * jotka olisivat muuten vaatineet oman kainalonsa.
+     *
+     * SARNATH ON KAINALOSSA oikeassa ylänurkassa. Dhamek- ja
+     * Chaukhandi-stupat ovat runsaan seitsemän kilometrin päässä
+     * pohjoisessa; samaan ruutuun otettuna kartta olisi venynyt
+     * kaksitoista kilometriä korkeaksi ja kaupunki kutistunut
+     * läikäksi (Medinan Quban ja Mekan Jabal al-Nourin ratkaisu).
+     *
+     * JALKAKÄYTÄVIÄ EI TARVITA, toisin kuin Vilnassa, Jerusalemissa
+     * ja Sanaassa. Kokeiltu ennen piirtoa Overpassin out count
+     * -kyselyllä: tässä ruudussa on 3 501 tavallista katua ja
+     * jalkakäytävälippu toisi niiden lisäksi vain 202 polkua eli
+     * viisi prosenttia. Vanhankaupungin kujat (gali) on siis merkitty
+     * OSM:ään ajoteiksi, ei footwayksi, ja ne piirtyvät ilman lippua.
+     */
+    rajat: { pohjoinen: 25.318, etela: 25.263, lansi: 82.982, ita: 83.043 },
+    kainalot: [
+      {
+        rajat: { pohjoinen: 25.385, etela: 25.37, lansi: 83.0155, ita: 83.0335 },
+        x: 78, y: 2, leveys: 20, suunta: '7 km pohjoiseen',
+      },
+    ],
+  },
 };
 
 /*

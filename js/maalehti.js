@@ -531,14 +531,16 @@ export function piirraVinkkilista(ui, kohde, ryhmat) {
  */
 export function aiheenOtsikko(ui, kategoria) {
   /*
-   * KAKKOSSIVUN OMA NIMI (omistajan tilaus 21.8.2026, vaihtoehto A):
-   * teemasivu saa valinnaisen otsikko-kentän, joka näytetään sivun
-   * otsikkona vakioteeman nimen sijasta — esim. Kioton "Historia"
-   * voi olla "Tuhat vuotta pääkaupunkina". Sivu-id ja nimi säilyvät
-   * ennallaan (visat, kuvakkeet, alapalkki ja Pöllö nojaavat
-   * niihin), joten mikään olemassa oleva ei muutu ilman kenttää.
+   * KAKKOSSIVUN NIMI (omistajan tarkennus 21.8.2026): kaupunki-sivu
+   * eli kansisivun jälkeinen sivu toisti kaupungin nimen otsikkona.
+   * Nyt se saa vakiokaavan "X pintaa syvemmältä"; teemasivut pysyvät
+   * kategoriatason vakionimissään (omistaja: spesifit otsikot olivat
+   * liikaa). Valinnainen otsikko-kenttä voittaa aina kaavan. Sivu-id
+   * ja nimi säilyvät ennallaan (visat, kuvakkeet, alapalkki, Pöllö).
    */
-  const nimi = html('h3', 'aihe-nimi', kategoria.otsikko ?? kategoria.nimi);
+  const oletus = kategoria.id === 'kaupunki'
+    ? `${kategoria.nimi} pintaa syvemmältä` : kategoria.nimi;
+  const nimi = html('h3', 'aihe-nimi', kategoria.otsikko ?? oletus);
   // Kehittäjän liitteissä osion valmiusaste värichippinä
   // otsikon perässä (omistajan tilaus 15.8.2026).
   if (kategoria.tagi) {

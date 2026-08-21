@@ -6871,6 +6871,165 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ishratkhanan mausoleumi', lat: 39.6431, lon: 66.991 },
     ],
   },
+  /*
+   * XI'ANIN KOHDEKARTTA (21.8.2026). Rajaus on Ming-ajan muurikaupunki
+   * kokonaisuudessaan, ja kartan luettavin piirre on siksi kaupunki
+   * itse: suorakaide, jota kiertää vallihauta. Kohteet on numeroitu
+   * pohjoisesta etelään kuten Medinassa ja Kiotossa.
+   *
+   * KOORDINAATIT OVAT KAHDESTA LÄHTEESTÄ, ja jako on kirjattu tähän,
+   * koska se ei ole arvattavissa kohdelistasta. Kellotorni, Rumpitorni,
+   * Suuri moskeija, Shaanxin historiallinen museo ja Suuri
+   * villihanhipagoda ovat kohteiden omista en-Wikipedian
+   * infobokseista (haettu 21.8.2026). Rautatieasema, Anyuan-portti,
+   * Yongning-portti ja Steelametsä ovat Overpassista, koska niillä ei
+   * ole omaa artikkelia lainkaan (portit) tai koska artikkelin oma
+   * koordinaatti ei kelpaa (Steelametsä). Rautatieasemalla on oma
+   * artikkeli ja sen infoboksin koordinaatti on käytössä; se on 150
+   * metriä OSM:n asemapolygonin keskipisteestä etelään eli yhä saman
+   * asema-alueen sisällä.
+   *
+   * STEELAMETSÄN KOORDINAATTI ON OVERPASSISTA, JA ERO ON MITATTU.
+   * en-Wikipedian "Stele Forest" -artikkelin sivunpohjan {{Coord}} on
+   * 34,252459 / 108,952809, mutta OSM:n museopolygonin (way 256711574,
+   * tourism=museum, name:en "Xi'an Stele Forest Museum") keskipiste on
+   * 34,25517 / 108,94812 — 520 metriä luoteeseen. Artikkelin piste
+   * osuu tällä kartalla käytännössä eteläisen muurin päälle, museon
+   * ulkopuolelle, ja 520 metriä on kymmenesosa ruudun leveydestä eli
+   * selvästi näkyvä virhe. Tokion kansallismuseon ja Persepoliksen
+   * ennakkotapaus: piste haetaan Overpassista, kun artikkelin oma
+   * koordinaatti ei kelpaa.
+   *
+   * NELJÄSTÄ PORTISTA KARTALLA ON KAKSI. Anyuan (pohjoinen) ja
+   * Yongning (eteläinen) ovat lehdessä omina juttuinaan, koska
+   * niillä on oma kerrottava: pohjoisportin takana on vanha
+   * rautatieasema ja eteläportti on muurin pääportti, jonka
+   * eteläinen vahtitorni paloi 1926 ja rakennettiin uudelleen 2014.
+   * Anding (läntinen) ja Changle (itäinen) jäivät pois, koska niistä
+   * ei ole en-Wikipediassa omaa tietoa — muuri itse kerrotaan
+   * eteläportin jutussa ja lehden nostossa.
+   *
+   * TERRAKOTTA-ARMEIJA JA HAUTAKUMPU EIVÄT OLE KARTALLA eivätkä
+   * kainalossa: ne ovat kohteiden omien en-Wikipedia-koordinaattien
+   * mukaan 33 ja 32 kilometrin päässä koilliseen (atsimuutti 65°) eli
+   * kymmenkertaisesti kauempana kuin yksikään kainalo tässä
+   * kartastossa. Ne kerrotaan lehden nostossa ja kuvissa (Medinan
+   * Uhud-vuoren ratkaisu). Kainalossa ovat sen sijaan Suuri
+   * villihanhipagoda ja Shaanxin historiallinen museo, jotka ovat
+   * noin 4,5 kilometriä etelään ja kilometrin päässä toisistaan.
+   *
+   * KAINALON KORKEUS 29,25 on piirtäjän oma laskelma
+   * (tools/piirra-kaupunkikartta.mjs), ei käsin kirjoitettu luku.
+   */
+  xian: {
+    polku: 'assets/kartat/xian-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 34.284, etela: 34.247, lansi: 108.9145, ita: 108.9735 },
+    kainalot: [
+      { rajat: { pohjoinen: 34.229, etela: 34.216, lansi: 108.9465, ita: 108.9635 },
+        x: 74, y: 60, leveys: 24, korkeus: 29.25, suunta: '4,5 km etelään' },
+    ],
+    esittely: 'Kartan alue on Xi’anin muurikaupunki, ja muuri näkyy '
+      + 'kokonaan: neljäntoista kilometrin suorakaide vallihautoineen. '
+      + 'Keskellä risteyksessä on Kellotorni, sen länsipuolella '
+      + 'Rumpitorni ja muslimikortteli, jonka kujien takana on Suuri '
+      + 'moskeija. Kaakossa muurin sisällä on Steelametsä, vanha '
+      + 'Kungfutsen temppeli, jossa säilytetään kolmea tuhatta '
+      + 'kivikirjoitusta. Pohjoisportin takana on vuonna 1935 avattu '
+      + 'rautatieasema. Oikean alakulman kainalossa ovat Suuri '
+      + 'villihanhipagoda ja Shaanxin historiallinen museo, neljän ja '
+      + 'puolen kilometrin päässä etelässä. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Xi’anin rautatieasema', lat: 34.27861, lon: 108.95833 },
+      { nimi: 'Anyuan-portti', lat: 34.27757, lon: 108.94263 },
+      { nimi: 'Suuri moskeija', lat: 34.26333, lon: 108.93639 },
+      { nimi: 'Rumpitorni', lat: 34.26167, lon: 108.93861 },
+      { nimi: 'Kellotorni', lat: 34.261, lon: 108.942 },
+      { nimi: 'Steelametsä', lat: 34.25517, lon: 108.94812 },
+      { nimi: 'Yongning-portti', lat: 34.2531, lon: 108.94232 },
+      { nimi: 'Shaanxin historiallinen museo', lat: 34.22528, lon: 108.95139 },
+      { nimi: 'Suuri villihanhipagoda', lat: 34.219842, lon: 108.959354 },
+    ],
+  },
+  /*
+   * VARANASIN KOHDEKARTTA (21.8.2026). Rajaus on 6,1 × 6,1 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Mekassa ja Singaporessa.
+   *
+   * NELIÖRAJAUS ON HARKITTU. Kaupungin kohteet ovat luonnostaan
+   * pohjois–eteläsuuntainen nauha jokirantaa pitkin, ja pelkkä nauha
+   * olisi piirtynyt 1600 × 3600 pikselin pystykaistaleeksi — paketin
+   * korkein kartta on Isfahan 1600 × 1983. Rajausta levennettiin itä-
+   * ja länsisuunnassa, jolloin kuvasuhde on 1,00 (korkeus 1595 px) ja
+   * ruutuun mahtuivat samalla Durga Kundin allas lännessä ja
+   * Ramnagarin linnoitus joen toisella puolella idässä.
+   *
+   * KAINALOSSA SARNATH, Dhamek- ja Chaukhandi-stupat. Kainalon
+   * suuntarivi on 7 km pohjoiseen, ja luku on OMA LASKELMA
+   * en-Wikipedian koordinaateista: kaupungin keskipisteestä
+   * (25,31889 / 83,01278) Dhamek-stupalle (25,3808 / 83,0245) on
+   * 7,0 km suuntimalla 10°, siis käytännössä suoraan pohjoiseen.
+   * en-Wikipedian LEIPÄTEKSTIT antavat kolme eri lukua: Sarnath-
+   * artikkeli "8 km northeast", Varanasi-artikkeli "10 kilometres
+   * north-east" ja Chaukhandi-artikkeli "8 kilometres from Cantt
+   * Railway Station". Viimeinen selittää muut: Cantt-asemalta
+   * (n. 25,327 / 82,990) etäisyys on 7,0 km suuntimalla 30° eli
+   * koilliseen. Kartan piste on keskipiste, joten kainalo seuraa
+   * keskipisteestä laskettua lukua — koordinaatti voittaa
+   * leipätekstin (v925, v932, v937). Nostoteksti käyttää lähteen
+   * omaa lukua "kahdeksan kilometriä koilliseen".
+   *
+   * KAINALON KORKEUS 18,44 on piirtäjän oma kaava
+   * (tools/piirra-kaupunkikartta.mjs: leveys × kuvasuhde(piirto) /
+   * kuvasuhde(kainalon rajat)), ei käsin kirjoitettu — sama sääntö
+   * kuin Mekassa ja Medinassa.
+   *
+   * JANTAR MANTAR JÄI KARTALTA POIS, vaikka se on lehden omana
+   * nostonaan: observatorio on Man Mandir -ghatin päällä noin
+   * 90 metriä Dashashwamedh-ghatin pisteestä eli puolitoista
+   * prosenttia ruudun leveydestä, ja numeroympyrät menisivät
+   * päällekkäin (Petran, Mekan ja Singaporen oppi). Se kerrotaan
+   * Dashashwamedhin jutussa ja nostossa.
+   *
+   * POLTTOHAUTAUSGHATEISTA kartalla on vain Manikarnika, koska se on
+   * lehden nostona; Harishchandra jätettiin pois. Aihe on Fablen
+   * ohjeen mukaisesti arvokas eikä nähtävyys, ja sen juttu kertoo
+   * ghatin historian ja moksa-uskomuksen kuvailematta itse
+   * polttamista.
+   */
+  varanasi: {
+    polku: 'assets/kartat/varanasi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.318, etela: 25.263, lansi: 82.982, ita: 83.043 },
+    kainalot: [
+      { rajat: { pohjoinen: 25.385, etela: 25.37, lansi: 83.0155, ita: 83.0335 },
+        x: 78, y: 2, leveys: 20, korkeus: 18.5, suunta: '7 km pohjoiseen' },
+    ],
+    esittely: 'Kartan alue on Gangesin länsiranta Assi-purolta '
+      + 'Manikarnika-ghatille sekä joen toinen puoli. Rannassa ovat '
+      + 'kaupungin tunnetuimmat kiviportaikot: pohjoisessa '
+      + 'Manikarnika, keskellä Dashashwamedh ja etelässä Assi. '
+      + 'Portaiden yläpuolella kujien takana on Kashi Vishwanath, '
+      + 'kaupungin tärkein temppeli, ja lännempänä Durga Kundin '
+      + 'allas temppeleineen. Oikealla rannalla kohoaa Ramnagarin '
+      + 'linnoitus, Benaresin ruhtinassuvun koti. Oikean ylänurkan '
+      + 'kainalossa on Sarnath, seitsemän kilometrin päässä '
+      + 'pohjoisessa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään; 1–2 ovat kainalossa. */
+      { nimi: 'Dhamek-stupa', lat: 25.3808, lon: 83.0245 },
+      { nimi: 'Chaukhandi-stupa', lat: 25.3741, lon: 83.0237 },
+      { nimi: 'Manikarnika Ghat', lat: 25.31087, lon: 83.01409 },
+      { nimi: 'Kashi Vishwanath -temppeli', lat: 25.31077, lon: 83.01061 },
+      { nimi: 'Dashashwamedh Ghat', lat: 25.30717, lon: 83.01034 },
+      { nimi: 'Assi Ghat', lat: 25.28865, lon: 83.00676 },
+      { nimi: 'Durga Kund -temppeli', lat: 25.28861, lon: 82.99927 },
+      { nimi: 'Ramnagarin linnoitus', lat: 25.2697, lon: 83.0245 },
+    ],
+  },
 };
 
 /*

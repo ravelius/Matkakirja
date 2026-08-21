@@ -100,6 +100,17 @@
 // 1930-luvulla kerrotaan neutraalina rakentamisen historiana; Kolyman
 // leirit ja Surun maski pysyvät siinä laajuudessa kuin lehden oma
 // nosto ne jo kertoo.
+//
+// XI'AN (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js, saatiedot.js). Jokainen introväite tulee saman
+// erän lehtiteksteistä, jotka on tarkistettu en-Wikipedian
+// raakateksteistä 21.8.2026. Vanha intro sanoi Xi'anin olleen
+// "useiden dynastioiden pääkaupunki"; uusi käyttää artikkelin omaa
+// muotoilua viidestä suuresta muinaisesta pääkaupungista, koska luku
+// kolmetoista koskee en-Wikipediassa Shaanxin MAAKUNTAA eikä
+// kaupunkia (ks. kulttuuri-kategoriat.js:n xian-lohkon kommentti).
+// Kiina-linjaus: ei nykypolitiikkaa. Teksti-kenttä on ennallaan.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -1867,9 +1878,28 @@ export const ASIA_ARTIKKELIT = {
       + 'pihataloja.',
   },
   'Xi’an': {
-    intro: 'Xi’an oli Kiinan pääkaupunki useiden dynastioiden aikaan ja '
-      + 'silkkitien itäinen päätepiste. Sen lähellä maassa seisoo '
-      + 'kahdeksantuhatta savisotilasta rivissä, jokainen eri naamalla.',
+    intro: 'Xi’an on Kiinan sisämaassa Guanzhongin tasangolla, kahdeksan '
+      + 'joen muovaamalla tulvatasangolla. Etelässä nousee '
+      + 'Qinling-vuoristo, pohjoisessa virtaa Wei-joki. Kaupunki '
+      + 'tunnettiin suurimman osan historiaansa nimellä **Chang’an**, '
+      + 'ikuinen rauha, ja se on yksi Kiinan viidestä suuresta '
+      + 'muinaisesta pääkaupungista.'
+      + '\n\n'
+      + 'Han-dynastian perustaja Liu Bang asettui tänne 202 eaa. '
+      + 'ja rakennutti Weiyangin, laajimman maan päälle koskaan '
+      + 'rakennetun palatsin. Tang-kaudella kaupunki oli Konstantinopolin '
+      + 'ja Bagdadin rinnalla yksi maailman suurimmista, ja Silkkitien '
+      + 'pohjoinen reitti alkoi täältä. Vuonna 904 sotapäällikkö '
+      + 'Zhu Wen purki kaupungin ja siirrätti rakennusaineet '
+      + 'Luoyangiin, eikä Chang’an enää toipunut entiselleen.'
+      + '\n\n'
+      + 'Nykyisen keskustan piirtää **Ming-ajan kaupunginmuuri**, joka '
+      + 'nousi vuodesta 1370: neljäntoista kilometrin suorakaide, '
+      + 'jonka harjalla kulkee kävelytie ja jonka ympärillä on '
+      + 'vallihauta. Sen sisällä risteävät neljä pääkatua Kellotornin '
+      + 'juurella, ja lännessä on muslimikortteli Suurine moskeijoineen. '
+      + 'Kolmenkymmenen kilometrin päässä koillisessa nukkui vuoteen 1974 '
+      + 'asti terrakotta-armeija.',
     teksti: 'Xi’an on Keski-Kiinassa Wei-joen laaksossa. Vanhalta '
       + 'nimeltään Chang’an, ikuinen rauha, se oli Han- ja '
       + 'Tang-dynastioiden pääkaupunki ja aikanaan maailman suurin '
@@ -2292,6 +2322,57 @@ export const ASIA_ARTIKKELIT = {
       + 'Nepal ei ole koskaan ollut siirtomaana. Laakso on '
       + 'hindulaisuuden ja buddhalaisuuden kohtauspaikka, ja '
       + 'Boudhanathin stupa on yksi maailman suurimmista.',
+  },
+  /*
+   * VARANASI (21.8.2026, uusi lehti). Intro on tekstiremontin
+   * mukainen etusivun leipäteksti: kolme kappaletta, kolme
+   * lihavointia. Jokainen väite tulee kaupungin omista, samassa
+   * erässä tarkistetuista lehtiteksteistä (kulttuuri-kategoriat.js:n
+   * nostot ja Matkailijan Varanasi, nahtavyysjutut.js, maakartat.js)
+   * tai suoraan en-Wikipedian Varanasi-artikkelista, joka on haettu
+   * raakatekstinä 21.8.2026. Sisältölinjaus on sama kuin lehden
+   * muissakin teksteissä: ei nykypolitiikkaa, ei Gyanvapi-aiheita,
+   * polttohautaus mainitaan arvokkaasti ilman yksityiskohtia.
+   */
+  Varanasi: {
+    intro: 'Varanasi on Pohjois-Intiassa, Uttar Pradeshin '
+      + 'kaakkoiskulmassa, Gangesin vasemmalla rannalla noin 692 '
+      + 'kilometriä Delhistä kaakkoon. Nimi tulee kahdesta '
+      + 'sivu-uomasta, Varunasta ja Assista, joiden välissä vanha '
+      + 'kaupunki on. Se on yksi maailman vanhimmista '
+      + 'yhtäjaksoisesti asutuista kaupungeista: muinainen nimi '
+      + '**Kashi** eli valon kaupunki liittyy samannimiseen '
+      + 'kuningaskuntaan jo ennen ajanlaskun alkua.'
+      + '\n\n'
+      + 'Jokiranta on kaupungin kasvot. Kiviportaikkoja eli **ghatteja** '
+      + 'on ainakin 84, ja niitä pitkin pyhiinvaeltajat laskeutuvat '
+      + 'veteen. Hinduille Varanasi on yksi seitsemästä pyhästä '
+      + 'kaupungista, ja kahdeksan kilometriä koilliseen jäävässä '
+      + 'Sarnathissa Buddha piti ensimmäisen opetuksensa. Toinen '
+      + 'elinkeino on silkinkudonta: Banarasi-sarit kudotaan kulta- ja '
+      + 'hopealangalla yhä kotikutomoissa.'
+      + '\n\n'
+      + 'Britit kutsuivat kaupunkia **Benaresiksi**, ja nimi elää yhä '
+      + 'rinnalla. Itä-Intian kompania sai sen haltuunsa vuonna 1775, '
+      + 'mutta paikallinen ruhtinassuku jatkoi joen toisella rannalla '
+      + 'Ramnagarin linnoituksessa. 1800-luvulla Benares oli '
+      + 'eurooppalaisten matkakirjailijoiden ja arkeologien kohde.',
+    teksti: 'Varanasi on Gangesin varrella Pohjois-Intiassa, ja se on '
+      + 'hindulaisuuden pyhimpiä kaupunkeja. Jokirantaa reunustavat '
+      + 'kiviportaat eli ghatit, joita pitkin pyhiinvaeltajat '
+      + 'laskeutuvat veteen. Vanhan kaupungin kujat ovat niin kapeita, '
+      + 'ettei niihin mahdu ajoneuvoa.'
+      + '\n\n'
+      + 'Kaupunki tunnettiin muinoin nimellä Kashi ja brittiaikana '
+      + 'Benaresina. Kahdeksan kilometrin päässä koilliseen on '
+      + 'Sarnath, jossa Buddha piti ensimmäisen opetuksensa ja jonne '
+      + 'keisari Ashoka pystytti pylvään; sen leijonapääty on nykyään '
+      + 'Intian valtion tunnus. Nykyinen Kashi Vishwanath -temppeli on '
+      + 'vuodelta 1780, ja sen tornit kullattiin 1800-luvulla.'
+      + '\n\n'
+      + 'Varanasin tärkein käsiteollisuus on silkinkudonta. '
+      + 'Banarasi-sarit kudotaan kulta- ja hopealangalla, ja yhden '
+      + 'valmistuminen voi kestää puoli vuotta.',
   },
   Delhi: {
     intro: 'Delhi on Pohjois-Intiassa Yamuna-joen varrella, ja se on yksi '
