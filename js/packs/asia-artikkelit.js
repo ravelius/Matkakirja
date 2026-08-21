@@ -2298,11 +2298,47 @@ export const ASIA_ARTIKKELIT = {
       + '1920-luvulla metsä, jonka puut tuotiin lahjoituksina koko '
       + 'maasta — se on nyt yli satatuhatta puuta keskellä kaupunkia.',
   },
+  /*
+   * MANILAN INTRO KIRJOITETTIIN UUSIKSI 21.8.2026 uuden lehden
+   * yhteydessä (Raamattu, "TEKSTIEN PAINOPISTE"): vanha kolmen
+   * lauseen intro korvattiin etusivun leipätekstillä. teksti-kenttä
+   * oli jo olemassa eikä siihen koskettu. Jokainen uuden intron väite
+   * tulee kaupungin omista, samassa erässä tarkistetuista
+   * lehtiteksteistä (kulttuuri-kategoriat.js: johdanto, nostot K1 ja
+   * K2, Matkailijan Manila; nahtavyysjutut.js; maakartat.js) — uusia
+   * lähteitä ei otettu.
+   *
+   * FILIPPIINIT-LINJAUS (Fable 21.8.2026): ei nykypolitiikkaa
+   * missään muodossa, ja toinen maailmansota näkyy VAIN
+   * rakennusperinnön kautta — Intramuroksen tuho ja jälleenrakennus —
+   * ilman uhrilukuja ja ilman osapuolikehystä. Amerikkalaiskausi on
+   * mukana hallinnollisena käänteenä. Perustelut kokonaisuudessaan
+   * kulttuuri-kategoriat.js:n manila-lohkossa.
+   */
   Manila: {
-    intro: 'Manila on Filippiinien pääkaupunki. Sen vanhaakaupunkia '
-      + 'ympäröivät espanjalaisten 1500-luvulla rakentamat muurit, ja '
-      + 'kaduilla ajaa jeepney — kirkasväriseksi maalattu pikkubussi, '
-      + 'jollaista ei ole muualla.',
+    intro: 'Manila on Filippiinien pääkaupunki Luzonin saarella, '
+      + 'Manilanlahden itärannalla Pasig-joen suulla. Lahden '
+      + 'luonnonsatamaa on pidetty Aasian parhaana, ja se on syy '
+      + 'kaupungin olemassaoloon. Ennen espanjalaisia paikalla oli '
+      + 'Maynila, linnoitettu kauppapaikka, joka kävi kauppaa Kiinan '
+      + 'kanssa.'
+      + '\n\n'
+      + 'Vuonna 1571 Miguel López de Legazpi otti kaupungin haltuunsa '
+      + 'ja rakensi joen etelärannalle muurikaupungin, '
+      + '**Intramuroksen**. Sieltä lähti kerran tai kahdesti vuodessa '
+      + 'galleoni Acapulcoon: Aasian silkki ja mausteet menivät itään ja '
+      + 'Amerikan hopea länteen, ja reitti oli käytössä 1565–1815. '
+      + 'Britannia piti kaupunkia hallussaan kaksikymmentä '
+      + 'kuukautta 1762–1764, ja Suezin kanavan avautuminen 1869 '
+      + 'toi Manilan lähemmäs Eurooppaa. Espanjan kausi päättyi 1898, '
+      + 'ja saaret siirtyivät Yhdysvalloille.'
+      + '\n\n'
+      + 'Vuoden 1945 taisteluissa muurikaupunki tuhoutui lähes kokonaan, '
+      + 'ja siksi vanhakaupunki näyttää monin paikoin uudelta: '
+      + '**suuri osa Intramuroksesta on rakennettu takaisin** vasta '
+      + 'sodan jälkeen ja osa vasta 2000-luvulla. Nykyinen Manila on '
+      + 'runsaan 1,9 miljoonan asukkaan kaupunki ja yksi maailman '
+      + 'tiheimmin asutuista.',
     teksti: 'Manila on Luzonin saarella Manilanlahden rannalla. '
       + 'Kaupunkiseutu on yksi maailman tiheimmin asutuista. Ilmasto '
       + 'on trooppinen, ja kesällä alueen yli kulkee taifuuneja.'
