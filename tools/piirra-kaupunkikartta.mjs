@@ -2420,6 +2420,60 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  mandalay: {
+    /*
+     * MUURIKAUPUNKI JA IRRAWADDYN RANTA (21.8.2026). Ruutu on
+     * 8,9 × 8,9 km, ja siihen mahtuvat lehden kaikki yhdeksän
+     * kohdetta: pohjoisessa Mandalay-kukkula ja sen juuren pagodit
+     * (Kuthodaw, Kyauktawgyi, Sandamuni, Shwenandaw), keskellä
+     * palatsin neliö muureineen ja vallihautoineen, sen
+     * eteläpuolella Zegyo-tori ja Setkyathiha ja etelässä
+     * Mahamuni-temppeli.
+     *
+     * TAVALLISTA LAAJEMPI RAJAUS ON HARKITTU. Työkalun oma ohje
+     * suosittaa 5–8 kilometrin alaa, ja tämä on sen ylärajan yli.
+     * Syy on kaupungin muoto: kohteet eivät ole yhdessä rykelmässä
+     * vaan lähes seitsemän kilometrin nauhana pohjoisesta etelään,
+     * ja tiukempi ruutu olisi jättänyt joko kukkulan tai Mahamunin
+     * ulkopuolelle. Neliörajaus (Varanasin ja Kantonin tapa) toi
+     * samalla mukaan kaksi asiaa, jotka selittävät kaupungin
+     * sijainnin: Irrawaddyn länsireunaan ja Shwetachaung-kanavan,
+     * joka kulkee ruudun halki pohjois–eteläsuunnassa keskustan
+     * länsipuolella. Katuverkko kestää laajennuksen, koska
+     * Mandalayn keskusta on Mindonin ruutukaavaa: kadut ovat
+     * suoria ja harvassa, eikä kuva mene puuroksi.
+     *
+     * ETELÄREUNA ON VÄLJÄ TARKOITUKSELLA. Mahamuni on kartan
+     * alalaidan kohde (90 %), ja rajaa laskettiin, jotta
+     * numeroympyrä ei osu lehden mittakaavajanaan vasemmassa
+     * alakulmassa (Kööpenhaminan Tivoli-tapaus). Ero näkyy
+     * tarkista-karttapisteet.mjs:n tulosteessa: jana on 22,5 %
+     * leveydestä eikä yksikään piste peitä sitä.
+     *
+     * U BEIN -SILTA EI OLE KARTALLA EIKÄ KAINALOSSA. Se on
+     * Amarapurassa 12,0 kilometriä palatsista etelään — kauempana
+     * kuin yksikään kainalo tässä kartastossa (Medinan Quba 3,5 km,
+     * Adenin Tawahi 6 km) ja sama etäisyys, jolla Whampoa
+     * jätettiin pois Kantonin ja Bhaktapur Kathmandun kartalta.
+     * Perustelu kokonaisuudessaan js/packs/maakartat.js:n
+     * mandalay-lohkossa.
+     *
+     * JALKAKÄYTÄVIÄ JA PALVELUTEITÄ EI PYYDETTY. Toisin kuin
+     * Xi'anissa, Kathmandussa ja Kantonissa, Mandalayn kujat ovat
+     * OSM:ssä tavallisia katuja, ja koeajo lipuilla teki kuvasta
+     * rakeisen ilman että yksikään kohde olisi erottunut paremmin.
+     *
+     * OVERPASSIN PÄÄPALVELIMET EIVÄT VASTANNEET tämän työn aikana
+     * (overpass-api.de ja overpass.kumi.systems aikakatkaisivat),
+     * ja kartta piirrettiin peilipalvelimella:
+     *   NODE_USE_ENV_PROXY=1 \
+     *   OVERPASS_PALVELIMET=https://maps.mail.ru/osm/tools/overpass/api/interpreter \
+     *     node tools/piirra-kaupunkikartta.mjs mandalay
+     * Peili palautti 8 024 elementtiä eli saman aineiston kuin
+     * päälaitos olisi palauttanut.
+     */
+    rajat: { pohjoinen: 22.024, etela: 21.944, lansi: 96.0513, ita: 96.1375 },
+  },
 };
 
 /*

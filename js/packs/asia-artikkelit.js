@@ -2390,6 +2390,61 @@ export const ASIA_ARTIKKELIT = {
       + 'uusiutunut vuosikymmeniin.',
   },
   /*
+   * MANDALAY (21.8.2026) SAI SEKÄ INTRON ETTÄ TEKSTI-KENTÄN samalla
+   * kun kaupungille tehtiin alusta asti oma lehti
+   * (kulttuuri-kategoriat.js, maakartat.js, nahtavyysjutut.js).
+   * Merkintää ei ollut ennen tätä lainkaan. Jokainen väite tulee
+   * saman erän lehtiteksteistä, jotka on tarkistettu en-Wikipedian
+   * raakateksteistä 21.8.2026 (Mandalay, Mandalay Palace,
+   * Kuthodaw Pagoda, Amarapura). Myanmar-linjaus (spec-asia.md:
+   * "Yangon & Mandalay"): ei nykypolitiikkaa eikä nykysotaa,
+   * painopiste vuosissa 1857–1885. Vuoden 1945 palatsipalo ja
+   * 1990-luvun jälleenrakennus mainitaan, koska muuten lukija ei
+   * ymmärtäisi, miksi nykyinen palatsi on jäljennös (TUHOUTUNEEN
+   * KAUPUNGIN NYKYKUVAT -linjaus).
+   */
+  Mandalay: {
+    intro: 'Mandalay on Myanmarin toiseksi suurin kaupunki ja maan '
+      + 'kuivan keskiosan keskus, Irrawaddyn itärannalla runsaat '
+      + 'kuusisataa kilometriä Yangonista pohjoiseen. Se on nuori '
+      + 'kaupunki mutta vanha pääkaupunki: kuningas Mindon perusti sen '
+      + '13. helmikuuta 1857 asumattomalle pellolle Mandalay-kukkulan '
+      + 'juurelle, ja perusteeksi kerrottiin ennustus suuresta '
+      + 'buddhalaisuuden kaupungista juuri tässä paikassa.'
+      + '\n\n'
+      + 'Kaupunki oli **suunnitelma ennen kuin se oli kaupunki**: 144 '
+      + 'korttelin ruutukaava, jonka keskellä on neliön muotoinen '
+      + 'palatsilinnoitus muureineen ja 64 metriä leveine '
+      + 'vallihautoineen. Kuningaskuntaa kesti täällä vain '
+      + 'kaksikymmentäkuusi vuotta: 28. marraskuuta 1885 kaupunki '
+      + 'vallattiin ja viimeinen kuningas Thibaw lähti maanpakoon '
+      + 'Intiaan. Pääkaupunki siirtyi Yangoniin, mutta Mandalay pysyi '
+      + 'Ylä-Burman kauppa- ja kulttuurikeskuksena.'
+      + '\n\n'
+      + 'Se on myös maan uskonnollinen keskus: luostareita on '
+      + 'lukuisia ja pagodeja yli seitsemänsataa. Kukkulan juurella '
+      + 'seisoo **Kuthodaw-pagodi**, jonka 729 marmorilaattaa '
+      + 'muodostavat maailman suurimmaksi sanotun kirjan.',
+    teksti: 'Mandalay on Myanmarin toiseksi suurin kaupunki, '
+      + 'Irrawaddyn itärannalla maan kuivalla keskivyöhykkeellä. '
+      + 'Kadut ovat numeroituja ja kulkevat ruudukkona, ja keskellä '
+      + 'ruudukkoa on neliön muotoinen muurikaupunki vallihautoineen.'
+      + '\n\n'
+      + 'Kuningas Mindon perusti kaupungin vuonna 1857 ja siirsi '
+      + 'hovinsa tänne Amarapurasta. Vanha palatsi purettiin ja '
+      + 'kuljetettiin norsuilla uudelle paikalleen, ja se valmistui '
+      + 'vuonna 1859. Kaupunki oli Burman pääkaupunki vuoteen 1885, '
+      + 'jolloin se vallattiin kolmannessa Englanti–Burma-sodassa ja '
+      + 'viimeinen kuningas lähetettiin maanpakoon. Tiikkinen palatsi '
+      + 'paloi toisen maailmansodan taisteluissa vuonna 1945, ja '
+      + 'nykyinen rakennus on 1980-luvun lopulla aloitettu jäljennös.'
+      + '\n\n'
+      + 'Mandalay on maan käsityökeskus: täällä kudotaan silkkiä, '
+      + 'hiotaan jadea, veistetään marmoria ja taotaan kultalehteä. '
+      + 'Mandalay-kukkulan juurella on Kuthodaw-pagodi, jonka 729 '
+      + 'marmorilaattaan on kaiverrettu koko buddhalainen kaanoni.',
+  },
+  /*
    * TEKSTIREMONTTI 20.8.2026, sama linja kuin Medinassa ja Mekassa:
    * intro on nyt etusivun leipäteksti kappaleineen ja maltillisine
    * lihavointeineen. Faktat ovat kaupungin omista, tähän erään

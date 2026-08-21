@@ -25826,4 +25826,420 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * MANDALAYN KOHDEKARTAN JUTUT (Opus 21.8.2026). Yhdeksän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään;
+   * kainaloa ei ole. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä Mandalay, Mandalay Palace, Mandalay Hill,
+   * Kuthodaw Pagoda, Fifth Buddhist council, Kyauktawgyi Buddha
+   * Temple (Mandalay), Sandamuni Pagoda, Shwenandaw Monastery,
+   * Atumashi Monastery, Zegyo Market, Setkyathiha Pagoda, Mahamuni
+   * Buddha Temple ja Amarapura (haettu 21.8.2026).
+   *
+   * KOLME RISTIRIITAA on kirjoitettu auki lukijalle (v925/v932:n
+   * tapa).
+   * 1) MANDALAY-KUKKULAN KORKEUS on en-Wikipediassa kolme eri lukua:
+   *    Mandalay Hill -artikkelin infoboksi sanoo 224 metriä
+   *    (lähteenä GoogleEarth), saman artikkelin leipäteksti 240 ja
+   *    Mandalay-artikkelin Cityscape-osio 230. Juttu kertoo kaikki
+   *    kolme; muualla lehdessä lukee vain "runsaat kaksisataa
+   *    metriä".
+   * 2) SHWENANDAW'N SIIRTOVUOSI on Shwenandaw Monastery -artikkelin
+   *    leipätekstissä 1878 päivämäärän tarkkuudella (purettu
+   *    10.10.1878, koottu valmiiksi 31.10.1878), mutta saman
+   *    artikkelin infoboksissa ja Mandalay-artikkelissa 1880.
+   *    Juttu kertoo molemmat.
+   * 3) ENSIMMÄINEN KOLIKKO. Mandalay Palace -artikkeli sanoo
+   *    kuninkaallisen rahapajan lyöneen "ensimmäisen burmalaisen
+   *    kolikon" vuonna 1865, mutta Mindon Min -artikkelissa on kuva
+   *    koneella lyödystä hopeakyatista vuodelta 1214 ME eli
+   *    1852–53. Palatsin juttu ja lehden nostot puhuvat siksi
+   *    rahapajan omasta rahanlyönnistä eivätkä käytä sanaa
+   *    ensimmäinen.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md, Yangon & Mandalay)
+   * ja työn oma tarkennus: EI nykypolitiikkaa eikä nykysotaa.
+   * POIS JÄTETTY KOKONAAN: vuoden 2021 jälkeiset tapahtumat ja
+   * niihin liittyvä palatsin alueen käyttö, palatsin muurien
+   * jälleenrakennuksen työvoimakysymys, kaupungin väestörakenteen
+   * muutosta koskeva keskustelu ja vuoden 2025 järistyksen
+   * uhriluvut. Vuoden 1885 valtaus ja vuoden 1945 palatsin palo
+   * kerrotaan tapahtumina ilman osapuolikehystä ja ilman
+   * taistelukuvauksia, koska muuten lukija ei ymmärtäisi, miksi
+   * nykyinen palatsi on 1990-luvulta ja miksi Kuthodaw'n laattojen
+   * kirjaimet ovat mustia eivätkä kultaisia (TUHOUTUNEEN KAUPUNGIN
+   * NYKYKUVAT -linjaus, resepti 20.8.2026). Vuoden 2025 järistyksen
+   * vauriot näkyvät rakennusperinnön kautta samasta syystä.
+   * Uskonto on historiallis-kulttuurinen ilmiö kuten Jerusalemissa,
+   * Medinassa, Xi'anissa ja Kantonissa: pagodit ovat rakennuksia,
+   * kerrostumia ja kivikirjoituksia, ei hartauskieltä.
+   *
+   * YHDESSÄ JUTUSSA KUVA ON 1970-LUVULTA (Shwenandaw'n
+   * puukaiverrus, Gerd Eichmann 1976). Se on tietoinen valinta:
+   * kaiverrus on juuri se, mistä luostari tunnetaan, ja vanha
+   * diakuva näyttää sen tarkemmin kuin yksikään tuore kuva
+   * Commonsissa. Matkaoppaan ja matkailijalle-osion kuvat ovat
+   * kaikki tuoreita, kuten linjaus vaatii.
+   */
+  mandalay: {
+    'Mandalay-kukkula': {
+      aika: 'pyhä paikka, kaupungin nimen antaja',
+      teksti: 'Kaupunki on saanut nimensä kukkulasta eikä toisin '
+          + 'päin. Nimen juurta ei tiedetä varmasti; arvauksia ovat '
+          + 'palin maṇḍala, pyöreä tasanko, ja hindulaisen '
+          + 'mytologian vuori Mandara. Korkeudesta en-Wikipedia '
+          + 'antaa kolme eri lukua: kukkulan oman artikkelin '
+          + 'infoboksi sanoo 224 metriä, sen leipäteksti 240 ja '
+          + 'kaupungin artikkeli 230. Ylös vie neljä katettua '
+          + 'porrasta eli saungdania — etelästä, kaakosta, lännestä '
+          + 'ja pohjoisesta — ja niiden varrella on muurattuja '
+          + 'penkkejä koko matkan.'
+          + '\n\n'
+          + 'Eteläisen eli pääsisäänkäynnin vartijoina istuu kaksi '
+          + 'jättimäistä chintheä, tyyliteltyä leijonahahmoa. '
+          + 'Puolimatkassa on Shweyattaw, seisova Buddha-kuva, jonka '
+          + 'oikea käsi osoittaa kaupunkia kohti — epätavallinen '
+          + 'asento. Siihen liittyy tarina, jonka mukaan Buddha '
+          + 'ennusti paikalla, että buddhalaisen ajanlaskun vuonna '
+          + '2400 kukkulan juurelle rakennettaisiin suuri kaupunki. '
+          + 'Se vuosi on 1857, jolloin Mindon laski Mandalayn '
+          + 'perustukset.'
+          + '\n\n'
+          + 'Huipulla on Sutaungpyei eli toiveet täyttävä pagodi, ja '
+          + 'sen terassilta näkyy koko tasanko: vanhat muurit ja '
+          + 'vallihauta, Kuthodaw ja Sandamuni pikku stupineen, '
+          + 'lännessä Irrawaddy ja sen takana Minwunin kukkulat, '
+          + 'pohjoisessa Madayan ja Mogokin tie ja idässä Shan '
+          + 'Yoman vuorijono. Kukkulalla kasvaa villinä valkokukkaista '
+          + 'champakia ja tulipunaista liekkipuuta. Nykyään ylös '
+          + 'pääsee myös autotietä, liukuportaita ja hissiä pitkin.',
+      kuvat: [
+        {
+          tiedosto: 'Chinthes guarding Mandalay Hill.JPG',
+          selite: 'Kaksi jättiläismäistä valkoista chintheä istuu '
+            + 'vierekkäin kukkulan eteläisen nousun juurella, ja '
+            + 'niiden takana kimaltaa lasimosaiikilla koristeltu '
+            + 'porrasrakennus.',
+          lahde: 'Wagaung at en.wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuthodaw-pagodi': {
+      aika: '1860–1868',
+      teksti: 'Mindon rakennutti Kuthodaw-pagodin osana uuden '
+          + 'kuninkaankaupungin perustamismenoja vuonna 1857. Nimi '
+          + 'tarkoittaa kuninkaallista ansiotyötä, ja virallinen nimi '
+          + 'on Mahalawka Marazein. Kullattu stupa on 188 jalkaa eli '
+          + 'runsaat viisikymmentäseitsemän metriä korkea, ja sen '
+          + 'esikuva on Shwezigon-pagodi Nyaung-U:ssa Baganin '
+          + 'lähellä. Rakennustyö alkoi 1860, katos eli hti '
+          + 'nostettiin paikalleen 19. heinäkuuta 1862 ja '
+          + 'kivikirjoitukset avattiin yleisölle 4. toukokuuta 1868.'
+          + '\n\n'
+          + 'Pagodia ympäröi 729 pientä valkoista kiviluolaa, '
+          + 'kyauksa gu, ja jokaisessa on marmorilaatta, johon on '
+          + 'kaiverrettu molemmin puolin yksi sivu Tipitakaa eli '
+          + 'theravada-buddhalaisuuden koko palinkielistä kaanonia. '
+          + 'Laatat ovat kolmessa aidatussa kehässä: 42 ensimmäisessä, '
+          + '168 keskimmäisessä ja 519 uloimmassa. Ensimmäisen kehän '
+          + 'kaakkoiskulmassa on vielä yksi laatta, joka kertoo miten '
+          + 'kaikki syntyi — yhteensä siis 730.'
+          + '\n\n'
+          + 'Kirjaimet olivat alun perin kultamustetta. Vuoden 1885 '
+          + 'jälkeen kukkulan ympäristön luostareihin ja pagodeihin '
+          + 'majoitettiin sotaväkeä, eivätkä paikat olleet enää '
+          + 'yleisön käytettävissä; kun joukot vuonna 1890 '
+          + 'määrättiin pois uskonnollisilta alueilta, hti oli '
+          + 'purettu maahan ja laattojen kultamuste kadonnut. '
+          + 'Korjauksissa kulta korvattiin mustalla musteella, joka '
+          + 'on itse asiassa helpompi lukea. Kivikirjoitukset otettiin '
+          + 'vuonna 2013 Unescon Maailman muisti -rekisteriin.',
+      kuvat: [
+        {
+          tiedosto: 'Ku Tho Taw Pagoda & Sandar Muni Pagoda, Mandalay.jpg',
+          selite: 'Ilmakuva näyttää Kuthodaw’n valkoisten '
+            + 'kiviluolarivien täydellisen ruudukon kullatun stupan '
+            + 'ympärillä, ja vasemmalla takana erottuu Sandamunin '
+            + 'samanlainen kenttä.',
+          lahde: 'Heinz_Htetz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kyauktawgyi-pagodi': {
+      aika: '1853–1878',
+      teksti: 'Temppeli seisoo Mandalay-kukkulan eteläisen nousun '
+          + 'kupeessa, vastapäätä vallihaudan koilliskulmaa. Nimi '
+          + 'tarkoittaa suurta kivikuvaa, ja siitä tulee myös '
+          + 'englanninkielinen lisänimi Great Marble Image. Buddha-'
+          + 'kuvan virallinen nimi on Maha Thetkya Mayazein. Huomaa, '
+          + 'että samanniminen Kyauktawgyi-pagodi on myös '
+          + 'Amarapurassa Taungthaman-järven luona: se on Pagan Minin '
+          + 'rakennuttama vuodelta 1847 eikä liity tähän kohteeseen.'
+          + '\n\n'
+          + 'Rakennustyö alkoi kuningas Mindonin suojeluksessa vuonna '
+          + '1853, mutta valmiiksi paikka tuli vasta 1878, koska '
+          + '1860-luvun puolivälin sisäiset selkkaukset keskeyttivät '
+          + 'sen. Esikuvaksi otettiin Baganin Ananda-temppeli, mutta '
+          + 'valmis rakennus ei lopulta muistuta sitä.'
+          + '\n\n'
+          + 'Buddha istuu maankoskettamisen asennossa, ja kuva on '
+          + 'veistetty yhdestä ainoasta vaaleanvihreästä '
+          + 'marmorilohkareesta. Kivi louhittiin Sagyinissa noin '
+          + 'kahdenkymmenen kilometrin päässä pohjoisessa, ja sen '
+          + 'kuljettaminen paikalle kesti kolmetoista päivää ja vaati '
+          + 'kymmenestä kahteentoistatuhatta miestä. Veistäminen '
+          + 'tehtiin vasta perillä, ja kuva pyhitettiin 1865. '
+          + 'Ympärillä on kahdeksankymmenen arahantin patsaat, '
+          + 'kaksikymmentä kullakin sivulla.',
+      kuvat: [
+        {
+          tiedosto: 'Kyauk Taw Ghi Pagoda 02.jpg',
+          selite: 'Temppelin valkoinen porttikaari on täynnä '
+            + 'kipsikoristeita ja riikinkukkohahmoja, ja aukosta '
+            + 'näkyy pihan takana kohoava kultakärkinen torni.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sandamuni-pagodi': {
+      aika: 'valmistui 1874',
+      teksti: 'Sandamuni on Mandalay-kukkulan lounaispuolella, '
+          + 'muutaman sadan metrin päässä Kuthodaw’sta, ja se '
+          + 'näyttää kaukaa katsottuna sen kaksoiselta: sama '
+          + 'valkoisten pikkustupien kenttä ja keskellä kullattu '
+          + 'pagodi. Mindon rakennutti sen vuonna 1874 muistoksi '
+          + 'nuoremmalle veljelleen Kanaungille, joka sai surmansa '
+          + 'vuoden 1866 palatsikapinassa yhdessä kolmen prinssin '
+          + 'kanssa. Heidät kaikki on haudattu tänne.'
+          + '\n\n'
+          + 'Paikka ei ole sattumanvarainen. Pagodi pystytettiin '
+          + 'sille tontille, jolla oli seissyt Nanmyay Bontha, '
+          + 'väliaikainen kuninkaanpalatsi niinä vuosina, kun '
+          + 'varsinaista palatsia vasta rakennettiin Amarapurasta '
+          + 'tuoduista osista.'
+          + '\n\n'
+          + 'Pagodin sisällä on rautainen Buddha-kuva, jonka '
+          + 'kuningas Bodawpaya valatti vuonna 1802. Kuva oli '
+          + 'Amarapurassa, ja Mindon siirrätti sen tänne samana '
+          + 'vuonna 1874. Sen painoksi ilmoitetaan runsaat '
+          + 'kahdeksantoista tonnia — enemmän kuin kuormallinen '
+          + 'norsuja, ja rautaa eikä pronssia, mikä on burmalaisessa '
+          + 'kuvanvalannassa harvinaista.',
+      kuvat: [
+        {
+          tiedosto: 'Sandamuni Pagoda 04.jpg',
+          selite: 'Valkoisten pikkustupien rivit jatkuvat '
+            + 'horisonttiin asti kuin lumikentän kärjet, ja etualalla '
+            + 'kulkee kapea kalkittu käytävä kultakärkisten tornien '
+            + 'väliin.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shwenandaw-luostari': {
+      aika: 'siirretty 1878 tai 1880',
+      teksti: 'Shwenandaw tarkoittaa kultaista palatsia, ja nimi on '
+          + 'kirjaimellinen: rakennus oli aikanaan osa palatsia. Se '
+          + 'kuului alun perin Amarapuran kuninkaanpalatsiin, '
+          + 'siirtyi sen mukana Mandalayhin ja muodosti siellä '
+          + 'Lasipalatsin pohjoisosan ja osan kuninkaan omista '
+          + 'huoneista. Tässä rakennuksessa Mindon asui viimeiset '
+          + 'aikansa.'
+          + '\n\n'
+          + 'Isänsä kuoltua kuningas Thibaw purki huoneiston ja '
+          + 'kokosi sen uudelleen palatsialueen ulkopuolelle '
+          + 'luostariksi isänsä muistoksi. Työ maksoi 120 000 '
+          + 'rupiaa. Siirron ajankohdasta en-Wikipedia antaa kaksi '
+          + 'lukua: artikkelin leipäteksti sanoo purkamisen '
+          + 'tapahtuneen 10. lokakuuta 1878 ja uudelleenkokoamisen '
+          + 'valmistuneen 31. lokakuuta 1878, kun taas saman '
+          + 'artikkelin infoboksi ja kaupungin artikkeli sanovat '
+          + 'vuotta 1880. Uusi paikka valittiin Atumashi-luostarin '
+          + 'viereltä, ja sen kerrotaan olleen Thibaw’n '
+          + 'meditaatiopaikka; hänen meditaatiosohvansa on yhä '
+          + 'nähtävissä.'
+          + '\n\n'
+          + 'Rakennus tunnetaan tiikkikaiverruksistaan, jotka '
+          + 'kertovat buddhalaisia tarinoita ja peittävät seinät ja '
+          + 'katot kerroksittain. Alun perin se oli runsaasti '
+          + 'kullattu ja koristeltu lasimosaiikilla. Shwenandaw on '
+          + 'ainoa alkuperäisen puupalatsin suuri rakennus, joka on '
+          + 'yhä pystyssä — juuri siksi, että se siirrettiin pois '
+          + 'muurien sisältä. Naapurin Atumashi paloi 1890, ja siitä '
+          + 'säilyi vain kivijalusta; nykyinen rakennus on vuosina '
+          + '1995–1996 tehty jäljennös.',
+      kuvat: [
+        {
+          tiedosto: 'Mandalay-Shwenandaw-40-geschnitzte Figur-gje.jpg',
+          selite: 'Tiikkipaneeliin veistetty hahmo istuu '
+            + 'lootuksenlehtien keskellä, ja sen ympärillä kiertyy '
+            + 'syvälle kaiverrettu lehväkuvio.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mandalayn palatsi': {
+      aika: '1857–1859',
+      teksti: 'Palatsi oli yksikerroksinen tiikkirakennusten '
+          + 'kokonaisuus yhdellä ainoalla alustalla. Alusta on '
+          + 'pisimmillään 306 metriä ja leveimmillään 175 metriä, ja '
+          + 'sen päälle nousi kolmekymmentäyksi porrasta. Rakennusten '
+          + 'arvo näkyi kattojen kerrosluvusta: seitsemänkerroksinen '
+          + 'kultakärkinen pyatthat kruunasi Leijonavaltaistuimen '
+          + 'salin, ja se merkitsi samalla koko kaupungin '
+          + 'keskipistettä. Suuri audienssisali oli '
+          + 'seitsemänkymmentäseitsemän metriä pohjoisesta etelään.'
+          + '\n\n'
+          + 'Alueella on kolme rakennusta, jotka kertovat arjesta '
+          + 'muurien sisällä. Kellotorni Bahozin on korkea jalusta, '
+          + 'jonka päällä neljä pylvästä kannattaa kaksoiskattoista '
+          + 'lavaa; siltä lyötiin gongia ja suurta rumpua joka '
+          + 'kolmas tunti, sillä vuorokausi jaettiin neljään '
+          + 'päivä- ja neljään yövahtiin. Aikaa mitattiin '
+          + 'vesikellolla: suuressa ruukussa kellui messinkikulho, '
+          + 'jonka pohjaan oli porattu niin tarkka reikä, että kulho '
+          + 'täyttyi ja upposi aina saman ajan kuluttua. Sen '
+          + 'eteläpuolella on Swedawzin eli hammasjäännöksen torni, '
+          + 'ja aluetta hallitsee 24 metriä korkea vahtitorni '
+          + 'Nanmyintsaung, jolta kuningasperhe katseli kaupunkia.'
+          + '\n\n'
+          + 'Vuonna 1885 palatsi sai uuden nimen Fort Dufferin ja '
+          + 'otettiin varuskuntakäyttöön. Toisen maailmansodan '
+          + 'taisteluissa maaliskuussa 1945 tiikkinen palatsi paloi '
+          + 'maan tasalle; pystyyn jäivät vain kuninkaallinen '
+          + 'rahapaja ja vahtitorni. Jälleenrakennus alkoi '
+          + 'muinaismuistoviraston aloitteesta vuonna 1989. '
+          + 'Kokonaisuus noudattaa alkuperäisiä piirustuksia, mutta '
+          + 'rakennustapa ei ole entinen: useimpien rakennusten katot '
+          + 'ovat aallotettua peltiä ja runkoaineena on käytetty '
+          + 'runsaasti betonia, kun alkuperäinen palatsi oli pelkkää '
+          + 'tiikkiä. Muurit ja portit vaurioituivat 28. maaliskuuta '
+          + '2025 Sagaingin siirroksen järistyksessä.',
+      kuvat: [
+        {
+          tiedosto: 'Mandalay Palace Clock Tower.jpg',
+          selite: 'Kellotornin keltaiseksi maalatun jalustan päällä '
+            + 'neljä valkoista pylvästä kannattaa kaksoiskattoista '
+            + 'puulavaa, jonne nousee kapeat portaat.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zegyo-tori': {
+      aika: 'perustettu 1860-luvulla',
+      teksti: 'Zegyo on kaupungin vanhin ja tärkein tori. Se '
+          + 'perustettiin Mindonin hallituskaudella ja on ollut '
+          + 'siitä asti samalla paikalla 84. kadulla 24. ja 26. '
+          + 'kadun välissä. Aluetta on kaksitoista eekkeriä eli '
+          + 'vajaat viisi hehtaaria.'
+          + '\n\n'
+          + 'Torin kautta kulki Ylä-Burman maatalous: papuja, '
+          + 'sitrushedelmiä, puuvillaa, pähkinöitä, sipulia, riisiä, '
+          + 'tupakkaa ja vehnää. Se oli samalla seudun tärkein '
+          + 'korujen ja käsityön markkinapaikka, ja erityisesti '
+          + 'hopea- ja kultakirjonta myytiin täällä. Tavarapaljous '
+          + 'selittää kaupungin kaksoisroolin: Mandalay on ollut '
+          + 'kuninkaankaupunki mutta ennen kaikkea Ylä-Burman '
+          + 'kauppapaikka.'
+          + '\n\n'
+          + 'Rakennus on vaihtunut kolmesti. Tori paloi vuonna 1897, '
+          + 'ja tilalle nousi 1903 kivirakennus, jonka piirsi '
+          + 'italialainen Conte Calderari. 1990-luvulla '
+          + 'siirtomaa-ajan rakennus purettiin ja tilalle tuli '
+          + 'nelikerroksinen kiinalaistyylinen kauppakeskus. '
+          + 'Torialue itse on yhä sama katujen verkko, jossa myydään '
+          + 'saman verran tavaraa kuin ennenkin.',
+      kuvat: [
+        {
+          tiedosto: 'Zeigyo Market.jpg',
+          selite: 'Torikadun molemmin puolin jatkuu kojurivi '
+            + 'aurinkovarjojen alla, ja etualalla odottaa '
+            + 'puulavallinen sivuvaunupyörä.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Setkyathiha-pagodi': {
+      aika: 'rakennettu 1884',
+      teksti: 'Setkyathiha on Zegyo-torin eteläpuolella '
+          + 'Shwetachaung-kanavan itärannalla, ja pagodin ympärillä '
+          + 'on kaupungin tiheintä keskustaa. Itse rakennus on '
+          + 'vuodelta 1884, mutta sen kuuluisa sisältö on paljon '
+          + 'vanhempi.'
+          + '\n\n'
+          + 'Pagodissa on suuri pronssinen Buddha-kuva, jonka '
+          + 'kuningas Bagyidaw valatti Inwassa vuonna 1824. Kuva on '
+          + 'sen jälkeen matkustanut kolme kertaa: se siirrettiin '
+          + 'Amarapuraan 1852 ja Mandalayhin 1885. Jokainen siirto '
+          + 'osuu samaan kohtaan valtakunnan historiaa kuin '
+          + 'pääkaupungin vaihdos, ja kuvan reitti piirtää siten '
+          + 'Konbaung-kauden viimeiset vuosikymmenet.'
+          + '\n\n'
+          + 'Pagodi kuuluu siihen Mandalayn kerrokseen, jota '
+          + 'matkailija ei yleensä huomaa: kaupungissa on toistasataa '
+          + 'pagodia kortteleiden välissä, ja monessa niistä on '
+          + 'vanhemmasta pääkaupungista tuotu kuva tai kello. '
+          + 'Rakennusten iät hyppivät siksi vuosisadasta toiseen '
+          + 'saman korttelin sisällä.',
+      kuvat: [
+        {
+          tiedosto: '02f-Setkyathiha Paya (NgnL)-10413.jpg',
+          selite: 'Hopeanhohtoiset kattoharjat kaartuvat sinistä '
+            + 'taivasta vasten, ja niiden takaa nousee kullattu '
+            + 'huippu.',
+          lahde: 'No(0)GoodNamesLeft, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mahamuni-temppeli': {
+      aika: 'patsas tuotu 1784, temppeli 1896',
+      teksti: 'Mahamuni on kaupunkia itseään vanhempi. Sen '
+          + 'Buddha-kuva on kotoisin Arakanista, ja se tuotiin '
+          + 'tänne vuonna 1784 — seitsemänkymmentäkolme vuotta ennen '
+          + 'kuin Mandalay perustettiin. Kuva oli liian suuri '
+          + 'kuljetettavaksi kokonaisena, joten se leikattiin osiin '
+          + 'ja koottiin uudelleen perillä Amarapurassa, joka oli '
+          + 'silloin kaksi vuotta vanha pääkaupunki. Istuva kuva on '
+          + 'runsaat kolme ja puoli metriä korkea.'
+          + '\n\n'
+          + 'Kuva on paksuuntunut vuosisatojen mittaan. Miespuoliset '
+          + 'kävijät kiinnittävät siihen kultalehteä, ja kerros on '
+          + 'paikoin viidentoista sentin paksuinen, mikä on tehnyt '
+          + 'ääriviivoista epämääräiset. Oikea käsi, kruunu ja muut '
+          + 'kuninkuuden tunnukset ovat kultalehdettä vailla, mikä '
+          + 'viittaa siihen että ne on lisätty myöhemmin. Alue paloi '
+          + 'vuosina 1879 ja 1884; jälkimmäisessä palossa '
+          + 'seitsenkerroksinen torni ja salit tuhoutuivat mutta '
+          + 'kuva säilyi, ja raunioista talteen saadusta '
+          + 'yhdeksästäkymmenestäyhdestä kilosta kultaa tehtiin '
+          + 'viitta, joka on kuvan yllä yhä.'
+          + '\n\n'
+          + 'Nykyisen temppelin rakennutti ministeri Kinwun Mingyi U '
+          + 'Kaung vuonna 1896 Bodawpayan alkuperäisen pyhäkön '
+          + 'ympärille. Pylväskäytäviä kannattaa 252 kullattua ja '
+          + 'veistettyä pilaria, ja käytävien varrella on kojuja, '
+          + 'teehuoneita ja ruokapaikkoja. Pihan kaakkoiskulmassa on '
+          + 'pitkä galleria Bodawpayan eri puolilta maata keräämiä '
+          + 'kivikirjoituksia. Temppeli vaurioitui pahoin 28. '
+          + 'maaliskuuta 2025 Sagaingin siirroksen järistyksessä.',
+      kuvat: [
+        {
+          tiedosto: 'Mahamuni Buddha Temple 07.jpg',
+          selite: 'Illan sinisessä valossa temppelin kullattu '
+            + 'porraskatto nousee valkoisen kaarikäytävän yläpuolelle, '
+            + 'ja kaarien yllä kiemurtelee kipsikoristelu.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

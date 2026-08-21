@@ -7434,6 +7434,71 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Botataung-pagodi', lat: 16.768449, lon: 96.171973 },
     ],
   },
+  /*
+   * MANDALAYN KOHDEKARTTA (21.8.2026). Rajaus on 8,9 × 8,9 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Kiotossa, Varanasissa ja Kantonissa.
+   *
+   * RUUTU ON TAVALLISTA LAAJEMPI, ja siihen on syy. Mandalayn
+   * kuuluisat kohteet eivät ole yhdessä rykelmässä vaan seitsemän
+   * kilometrin nauhana pohjoisesta etelään: Mandalay-kukkula ja sen
+   * juuren pagodit ylhäällä, muurikaupunki keskellä, Zegyo-tori ja
+   * Setkyathiha sen eteläpuolella ja Mahamuni vasta viiden kilometrin
+   * päässä palatsista lounaassa. Neliörajaus (Varanasin ja Kantonin
+   * tapa) toi samalla mukaan Irrawaddyn länsireunaan ja
+   * Shwetachaung-kanavan, joka kulkee kartan halki pohjois–etelä-
+   * suunnassa keskustan länsipuolella — molemmat selittävät sen,
+   * miksi kaupunki on juuri tässä kohtaa jokea.
+   *
+   * KAIKKI YHDEKSÄN KOORDINAATTIA OVAT KOHTEIDEN OMISTA
+   * en-Wikipedian infobokseista (haettu 21.8.2026). Faktapohjan
+   * (docs/aasia-tyoaineisto/faktapohja-mandalay.md, osio 4) kaksi
+   * arviota korvattiin tarkistusraportin (tarkistus-mandalay.md)
+   * varmennetuilla arvoilla: Mandalay-kukkula 22,005 / 96,101 →
+   * 22,0142 / 96,1075 (ero 1,2 km) ja Kyauktawgyi 22,001 / 96,098 →
+   * 22,004474 / 96,106582. Huomaa nimiristiriita, jonka tarkistus
+   * löysi: oikea artikkeli on "Kyauktawgyi Buddha Temple (Mandalay)"
+   * eikä pelkkä "Kyauktawgyi Pagoda", joka on ERI kohde Amarapurassa
+   * (Pagan Min 1847) Taungthaman-järven luona.
+   *
+   * U BEIN -SILTA EI OLE KARTALLA EIKÄ KAINALOSSA, vaikka se on
+   * lehden kansikuva ja oma nostonsa. Se on Amarapurassa,
+   * 12,0 kilometriä palatsista etelään (tarkistusraportin
+   * haversine-laskelma) — kauempana kuin yksikään kainalo tässä
+   * kartastossa (Medinan Quba 3,5 km, Adenin Tawahi 6 km) ja
+   * käytännössä sama etäisyys, jolla Whampoa jätettiin pois Kantonin
+   * ja Bhaktapur Kathmandun kartalta. Silta kerrotaan lehden
+   * nostossa ja matkaoppaassa.
+   *
+   * ATUMASHI-LUOSTARI JÄI POIS, vaikka se on Shwenandaw'n naapuri ja
+   * oma nähtävyytensä: sen koordinaatti (22,00083 / 96,1125) on vain
+   * 127 metrin päässä Shwenandaw'sta eli puolitoista prosenttia
+   * ruudun leveydestä, ja numeroympyrät olisivat menneet lähes
+   * sisäkkäin (Petran, Mekan ja Singaporen oppi). Se kerrotaan
+   * Shwenandaw'n jutussa.
+   */
+  mandalay: {
+    polku: 'assets/kartat/mandalay-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 22.024, etela: 21.944, lansi: 96.0513, ita: 96.1375 },
+    esittely: 'Kartan keskellä on palatsin neliö muureineen ja '
+      + 'vallihautoineen, ja sen koillispuolella kohoaa Mandalay-'
+      + 'kukkula pagodeineen. Muurin eteläpuolella on ruutukaavainen '
+      + 'keskusta toreineen, ja lännessä virtaa Irrawaddy. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Mandalay-kukkula', lat: 22.014167, lon: 96.1075 },
+      { nimi: 'Kuthodaw-pagodi', lat: 22.004712, lon: 96.112902 },
+      { nimi: 'Kyauktawgyi-pagodi', lat: 22.004474, lon: 96.106582 },
+      { nimi: 'Sandamuni-pagodi', lat: 22.00347, lon: 96.109758 },
+      { nimi: 'Shwenandaw-luostari', lat: 22.000675, lon: 96.113722 },
+      { nimi: 'Mandalayn palatsi', lat: 21.992942, lon: 96.095911 },
+      { nimi: 'Zegyo-tori', lat: 21.9826, lon: 96.0771 },
+      { nimi: 'Setkyathiha-pagodi', lat: 21.9768, lon: 96.075 },
+      { nimi: 'Mahamuni-temppeli', lat: 21.951869, lon: 96.078619 },
+    ],
+  },
 };
 
 /*
