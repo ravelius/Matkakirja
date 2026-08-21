@@ -22990,4 +22990,379 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * XI'ANIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Yhdeksän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään; kaksi
+   * viimeistä ovat kainalokartassa. Faktat on tarkistettu
+   * en-Wikipedian artikkeleista Xi'an, Fortifications of Xi'an, Bell
+   * Tower of Xi'an, Drum Tower of Xi'an, Great Mosque of Xi'an, Stele
+   * Forest, Xi'an Stele, Shaanxi History Museum, Xi'an railway
+   * station ja Giant Wild Goose Pagoda (haettu 21.8.2026).
+   *
+   * KAKSI SISÄISTÄ RISTIRIITAA on kirjoitettu auki lukijalle
+   * (v925/v932:n tapa): Kellotornin korkeus on Wikipedian omassa
+   * artikkelissa sekä lähes 40 että 36 metriä, ja rautatieaseman
+   * laiturimäärä on Xi'an-artikkelissa kuusi ja aseman omassa
+   * artikkelissa yksitoista.
+   *
+   * KOLMAS RISTIRIITA ON RATKAISTU EIKÄ KERROTTU: Great Mosque of
+   * Xi'an -artikkelin johdanto puhuu viidestä pihasta, mutta saman
+   * artikkelin arkkitehtuuriosio erittelee ne neljäksi. Juttu seuraa
+   * tarkempaa osiota (neljä), koska se luettelee pihat yksitellen.
+   *
+   * PORTTIEN NIMET tulevat Overpassista, kuten niiden koordinaatitkin
+   * (ks. maakartat.js:n xian-lohko). en-Wikipedia nimeää vain
+   * pohjoisportin — Xi'an-artikkelin kuvateksti "Anyuan Gate (North
+   * Gate)" — eikä Fortifications of Xi'an -artikkeli nimeä yhtään
+   * porttia; Yongningmen on OSM:n nimi eteläportille.
+   *
+   * PYHIEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa ja Medinassa:
+   * uskonto kerrotaan rakennuksina ja kerrostumina, ei
+   * hartauskielellä. Moskeijan jutusta on jätetty pois Dungan-kapinan
+   * jälkeiset rajoitukset ja kulttuurivallankumouksen aikainen
+   * sulkeminen; Steelametsän jutussa nestoriaaninen kristinusko on
+   * kivenä ja kirjoituksena.
+   */
+  xian: {
+    'Xi’anin rautatieasema': {
+      aika: 'avattu 1935',
+      teksti: 'Asema avattiin kesäkuussa 1935 Longhai-radan varteen '
+          + 'aivan muurikaupungin pohjoispuolelle, ja se oli pitkään '
+          + 'koko seudun pääasema. Se on Xinchengin kaupunginosassa, '
+          + 'osoitteessa Huanchengin pohjoinen tie 44.'
+          + '\n\n'
+          + 'Vuonna 2011 avattiin Xi’anin pohjoinen asema kaupungin '
+          + 'laidalle, ja nopeat junat siirtyivät sinne. Vanhalle '
+          + 'asemalle jäi kaikki muu: yöpikajunat, pikajunat ja hitaat '
+          + 'vuorot. Suorat junat vievät täältä muun muassa Pekingiin, '
+          + 'Zhengzhouhun, Lanzhouhun, Baojiin ja Hua Shanin juurelle.'
+          + '\n\n'
+          + 'Aseman koosta Wikipedia antaa kaksi eri lukua. '
+          + 'Xi’an-artikkelin mukaan asema-alue on 597 000 neliömetriä, '
+          + 'siinä on kuusi matkustajalaituria ja yksitoista raidetta, ja '
+          + 'sen kautta kulkee 112 vuoroa ja 80 000 matkustajaa päivässä; '
+          + 'aseman oma artikkeli laskee yksitoista laituria ja '
+          + 'kolmetoista raidetta. Uusi pohjoinen asemarakennus avattiin '
+          + '31. toukokuuta 2021 ja metroasema 25. syyskuuta 2022.',
+      kuvat: [
+        {
+          tiedosto: '20250911 Xi\'an Railway Station - South side.jpg',
+          selite: 'Aseman pitkä pylväsjulkisivu valaistuna illalla, ja '
+            + 'katolla loistavat punaiset merkit 西安.',
+          lahde: 'Windmemories, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anyuan-portti': {
+      aika: 'muuri 1370-luvulta, kuva noin 1906–1909',
+      teksti: 'Anyuan on muurin pohjoisportti, ja siitä on olemassa '
+          + 'harvinaisen tarkka vanha kuva: Ernst '
+          + 'Boerschmann valokuvasi portin päätornin noin vuosina '
+          + '1906–1909. Kuvassa näkyy se, mitä muurista on vaikea '
+          + 'hahmottaa maasta käsin — että porttitorni on oma '
+          + 'monikerroksinen puurakennus muuratun jalustan päällä.'
+          + '\n\n'
+          + 'Portti on osa puolustusjärjestelmää, joka on suunniteltu '
+          + 'ansaksi. Ulompana on jousiampujien torni, joka on '
+          + 'käytännössä ikkunoilla varustettu kammio: jos hyökkääjä '
+          + 'mursi ensimmäisen portin, hän joutui pienelle pihalle '
+          + 'toisen portin eteen, ja puolustajat ampuivat ylhäältä. '
+          + 'Muurissa on lisäksi joka sadankahdenkymmenen metrin välein '
+          + 'ulos työntyvä valli, kaikkiaan 5 984 ampuma-aukkoa, neljä '
+          + 'kulmatornia ja ympärillä vallihauta nostosiltoineen.'
+          + '\n\n'
+          + 'Portin takaa alkaa uudempi kaupunki. Muuriin puhkaistiin '
+          + '1900-luvun alkupuolella uusia aukkoja liikenteelle, ja '
+          + 'aivan pohjoisportin ulkopuolelle valmistui vuonna 1935 '
+          + 'rautatieasema. Vuonna 1983 kaupunki kunnosti muurin tornit '
+          + 'ja vallihaudan, ja toukokuussa 2005 muurin '
+          + 'kaikki osuudet yhdistettiin taas yhdeksi kierrokseksi.',
+      kuvat: [
+        {
+          tiedosto: '西安府安远门.jpg',
+          selite: 'Sadan vuoden takainen ruskeasävyinen valokuva '
+            + 'pohjoisportin päätornista: kolmikerroksinen puurakennus '
+            + 'seisoo muurin päällä, ja alla ammottaa holvikäytävä.',
+          lahde: '恩斯特·柏石曼（Ernst Boerschmann）, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri moskeija': {
+      aika: '742, nykyinen muoto 1392',
+      teksti: 'Tang-keisari Xuanzong määräsi noin vuonna 742 '
+          + 'rakennettavaksi rukouspaikan kaupungin muslimikauppiaille ja '
+          + 'käsityöläisille. Song-kaudelta on säilynyt keisarillinen '
+          + 'kilpi, joka todistaa paikan olleen silloin käytössä. '
+          + 'Moskeija on rakennettu uudelleen ainakin neljä kertaa; '
+          + '1260-luvulla sen kunnosti Yuan-hallinto, ja nykyinen muoto '
+          + 'on Ming-keisari Hongwun ajalta vuodelta 1392. Qing-kaudella '
+          + 'lisättiin etuportti, kunniaportti ja vesipiste. Alaa '
+          + 'kokonaisuudella on 1,23 hehtaaria ja rakennuksia yli '
+          + 'kaksikymmentä.'
+          + '\n\n'
+          + 'Pohjakaava on kiinalainen: neljä muurein erotettua pihaa '
+          + 'peräkkäin, joista kaksi ensimmäistä ovat puutarhoja ja kaksi '
+          + 'jälkimmäistä rakennusten aluetta. Jokaisen pihan portilla on '
+          + 'paifang eli kunniaportti. Kolmannessa pihassa seisoo '
+          + 'Shengxinlou, Sydämen tutkimisen torni: kolmikerroksinen '
+          + 'kahdeksankulmainen pagodi, jonka sisällä on jopa Tang-kauden '
+          + 'kivikirjoituksia. Minareettia ei ole, ja tutkijat ovat '
+          + 'arvelleet juuri tämän tornin olleen alun perin sen tehtävässä.'
+          + '\n\n'
+          + 'Rukoussali on puurakennus, jolla on turkoosi harjakatto, '
+          + 'maalatut kannatinkorut, kuusipylväinen kuisti ja viisi ovea. '
+          + 'Kattoa ei kannata kupoli vaan perinteinen kiinalainen harja. '
+          + 'Seinäkoristelu noudattaa silti islamilaista tapaa: kuvia '
+          + 'ihmisistä ei ole, vaan kasveja ja kukkia. Takaseinään on '
+          + 'kaiverrettu Koraanin tekstiä sekä arabiaksi että kiinaksi, ja '
+          + 'arabia on kirjoitettu sini-tyylillä, jossa kirjaimet on vedetty '
+          + 'kiinalaisella siveltimellä. Saliin mahtuu yli tuhat rukoilijaa.',
+      kuvat: [
+        {
+          tiedosto: 'Great Mosque of Xi\'an (13).JPG',
+          selite: 'Moskeijan pihassa seisoo kivinen kunniaportti '
+            + 'kaiverrettuine kenttineen, ja sen molemmin puolin nousevat '
+            + 'kiinalaiskattoiset sivurakennukset.',
+          lahde: 'Ovedc, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rumpitorni': {
+      aika: '1380',
+      teksti: 'Rumpitorni valmistui vuonna 1380 Ming-keisari Hongwun '
+          + 'kaudella, ja se on Kellotornin ohella kaupungin tunnus. '
+          + 'Julkisivun kilpeen on kirjoitettu Wenwu Shengdi, kirjallisuuden '
+          + 'ja sotataidon mainio maa. Torni antaa nimen myös ympäröivälle '
+          + 'kaupunginosalle: sitä kutsutaan Rumpitornin '
+          + 'muslimikortteliksi.'
+          + '\n\n'
+          + 'Nimi tulee sisällä olevasta valtavasta rummusta. Ensimmäisen '
+          + 'kerroksen ulkoparvekkeella on lisäksi kaksikymmentäneljä '
+          + 'pientä rumpua tornin pohjois- ja eteläsivulla. '
+          + 'Jokaiseen on kirjoitettu perinteisen '
+          + 'kiinalaisen kalenterin yhden aurinkotermin nimi — ne ovat '
+          + 'vuoden kaksikymmentäneljä jaksoa, joiden mukaan kylvöt ja '
+          + 'sadonkorjuut ajoitettiin.'
+          + '\n\n'
+          + 'Pohjoispuolella on vielä yksi rumpu erikseen: vuonna 1996 '
+          + 'tehty Wentian-rumpu, jota silloin sanottiin maailman '
+          + 'suurimmaksi naudannahkarummuksi. Rumpuja soitetaan päivittäin '
+          + 'osana kello- ja rumputorneille yhteistä esitystä, joka '
+          + 'jatkaa vanhaa ajanilmoituksen perinnettä.',
+      kuvat: [
+        {
+          tiedosto: 'Xi\'An Drums.jpg',
+          selite: 'Rivi punaisia rumpuja tornin parvekkeella: jokaisen '
+            + 'valkoiselle kalvolle on maalattu yhden aurinkotermin '
+            + 'nimi kiinalaisin merkein.',
+          lahde: 'Adi.darkblue, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kellotorni': {
+      aika: '1384',
+      teksti: 'Kellotorni rakennettiin vuonna 1384, Hongwun '
+          + 'seitsemäntenätoista hallitusvuotena, ja se seisoo '
+          + 'keisarillisen tien akselilla kaupungin keskellä siinä '
+          + 'kohdassa, jossa itään, länteen, etelään ja pohjoiseen '
+          + 'johtavat kadut kohtaavat. Jalusta on neliö, jonka sivu on '
+          + '35,5 metriä ja korkeus 8,6 metriä, ja rakennuksen ala on '
+          + '1 377 neliömetriä. Korkeudesta Wikipedia antaa kaksi lukua: '
+          + 'artikkelin alussa lähes neljäkymmentä metriä, '
+          + 'arkkitehtuuriosassa 36.'
+          + '\n\n'
+          + 'Torni ei ole alkuperäisellä paikallaan. Se pystytettiin '
+          + 'Yingxiangin taolaistemppelin luo Guangjin kadulle, noin '
+          + 'kilometrin verran lännemmäksi, ja silloin se oli tarkalleen '
+          + 'pohjois- ja eteläportin välisellä akselilla. Ming-kaudella '
+          + 'kaupunki laajeni itään, portit rakennettiin uusiksi ja torni '
+          + 'jäi sivuun keskustasta. Vuonna 1582 Shaanxin tarkastaja Gong '
+          + 'Yuxian määräsi Xianningin ja Chang’anin piirikuntien '
+          + 'virkamiehet siirtämään tornin nykyiselle paikalleen. Hänen '
+          + 'kirjoittamansa Laulu Kellotornin siirrosta itään on '
+          + 'kaiverrettu kiveen tornin salissa.'
+          + '\n\n'
+          + 'Jalustan läpi on louhittu ristin muotoinen käytävä, jonka '
+          + 'mitta on noin kuusi metriä ja jota pitkin neljä pääkatua kulkivat '
+          + 'ennen. Liikenteen kasvaessa käytävä suljettiin: nyt tornia '
+          + 'kiertää liikenneympyrä ja jalankulkijat menevät alikulusta. '
+          + 'Tornia korjattiin 1699, 1740 ja 1840, ja vuonna 1740 '
+          + 'maaherra Zhang Wei siirsi Jingyun-kellon ulos, koska '
+          + 'umpinainen huone vaimensi äänen niin ettei sitä kuulunut '
+          + 'kadulle. Kello vietiin 1953 Steelametsään, ja tammikuun 30. '
+          + 'päivänä 1997 jalustan luoteiskulmaan ripustettiin jäljennös: '
+          + '2,45 metriä korkea ja 6,5 tonnia painava.',
+      kuvat: [
+        {
+          tiedosto: 'Xi\'an Bell Tower (9912211844).jpg',
+          selite: 'Kellotorni yöllä valaistuna: kolme räystäskerrosta '
+            + 'hehkuu keltaisena, ja jalustan läpi menevä holvikäytävä on '
+            + 'muurattu umpeen.',
+          lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Steelametsä': {
+      aika: 'kokoelma vuodesta 1087',
+      teksti: 'Steelametsä eli Beilinin museo on kivikirjoitusten museo '
+          + 'vanhassa Kungfutsen temppelissä, ja sen kokoelma on karttunut '
+          + 'vuodesta 1087. Alku olivat kaksi Tang-kaudella hakattua '
+          + 'kivisarjaa, Kaicheng-kauden kivistä kaiverretut klassikot ja '
+          + 'Shitai Xiaojing, joita säilytettiin Chang’anin Kungfutsen '
+          + 'temppelissä ja keisarillisessa akatemiassa. Vuonna 1944 '
+          + 'museosta oli tullut Shaanxin päämuseo, ja vuonna 1992 se sai '
+          + 'nykyisen nimensä: kiviä on kuin puita metsässä, kaikkiaan '
+          + 'noin kolmetuhatta seitsemässä salissa.'
+          + '\n\n'
+          + 'Kokoelma on liikkunut kaupungin mukana. Kun kapinallisarmeija '
+          + 'ryösti Chang’anin vuonna 904, kivet evakuoitiin sisäkaupunkiin, '
+          + 'ja vuonna 962 ne palautettiin uudelleen rakennettuun '
+          + 'temppeliin; Song-kaudella niille tehtiin oma sali. Vuoden 1556 '
+          + 'Shaanxin maanjäristys vaurioitti kokoelmaa. Vuonna 1936 '
+          + 'kalligrafi Yu Youren lahjoitti museolle yli kolmesataa '
+          + 'kivipainatetta, ja vuonna 1961 kokoelma sai valtakunnallisen '
+          + 'suojelun. Vuodesta 1953 täällä on ollut myös Kellotornin '
+          + 'vanha Jingyun-kello.'
+          + '\n\n'
+          + 'Kuuluisin yksittäinen kivi on vuonna 781 pystytetty '
+          + 'Xi’anin steela. Se on 279 senttimetriä korkea kalkkikivipaasi, '
+          + 'jonka teksti on sekä kiinaksi että syyriaksi, ja se kertoo '
+          + 'idän kirkon ensimmäisistä sadastaviidestäkymmenestä vuodesta '
+          + 'Kiinassa — siitä alkaen, kun syyriaa puhunut Alopen saapui '
+          + 'Chang’aniin Silkkitietä pitkin vuonna 635. Kivi siirrettiin '
+          + 'Steelametsään vuonna 1907, kun paikallisviranomaiset kuulivat '
+          + 'tanskalaisen seikkailijan Frits Holmin olevan kaupungissa '
+          + 'hankkimassa sitä maasta pois. Kokoelmassa on myös '
+          + '1700-luvun kivi, johon on hakattu Jangtsen tulvasuojelutyö, ja '
+          + 'toinen, joka näyttää bambumetsältä mutta jonka lehdistä '
+          + 'muodostuu runo.',
+      kuvat: [
+        {
+          tiedosto: 'Nestorian Stone, 781 AD (9913487693).jpg',
+          selite: 'Xi’anin steelan kaareva yläosa: kivestä on veistetty '
+            + 'kaksi kietoutuvaa lohikäärmettä, ja niiden väliin jäävään '
+            + 'kenttään on hakattu kivikirjoituksen nimi.',
+          lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Yongning-portti': {
+      aika: 'vahtitorni 1378',
+      teksti: 'Yongning on muurin eteläportti ja sen pääportti. Sen '
+          + 'ampuma-aukkoinen vahtitorni rakennettiin vuonna 1378, '
+          + 'tuhoutui tulipalossa vuonna 1926 ja rakennettiin uudelleen '
+          + 'syyskuussa 2014 sen jälkeen, kun vanhat piirustukset ja '
+          + 'asiakirjat oli käyty huolellisesti läpi. Samalla '
+          + 'tarkastettiin pohjois-, itä- ja länsiportin tornit, ja ne '
+          + 'suojattiin teräksellä, puutyöllä ja vanhanmallisilla '
+          + 'tiilillä muuria rikkomatta.'
+          + '\n\n'
+          + 'Eteläportti poikkeaa muista myös kulkutieltään: muille '
+          + 'suurille porteille noustaan ramppia pitkin, tänne tullaan '
+          + 'muurin ulkopuolelta. Portin edessä on kaksinkertainen '
+          + 'ansa — ulompi jousiampujien torni ja sen takana sisäpiha, '
+          + 'jonka perällä on toinen portti.'
+          + '\n\n'
+          + 'Muuri itse on muuttunut vuosisatojen mittaan. Se oli aluksi '
+          + 'pelkkää survottua maata; Longqing-keisarin aikana vuonna 1568 '
+          + 'harjalle ja ulkopintaan ladottiin siniset tiilet, ja '
+          + 'Qianlongin aikana vuonna 1781 muuria laajennettiin ja siihen '
+          + 'tehtiin vedenpoistot ja ampuma-aukot. Vuosina 1937–1940 '
+          + 'ilmapommitusten aikana muurin yli viisitoista metriä paksuun '
+          + 'juureen kaivettiin noin tuhat suojaa. Vuodesta 2008 muuri on '
+          + 'ollut Unescon maailmanperintökohteiden ehdokaslistalla '
+          + 'nimellä Ming- ja Qing-kauden kaupunginmuurit.',
+      kuvat: [
+        {
+          tiedosto: 'Nan Men (South Gate) - Xi\'an City Wall (4535889314).jpg',
+          selite: 'Eteläportin torni valaistuna yöllä vallihaudan takaa '
+            + 'nähtynä, ja vesi heijastaa valot mustana peilinä.',
+          lahde: 'Will Clayton from Blackburn, UK, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shaanxin historiallinen museo': {
+      aika: 'avattu 1991',
+      teksti: 'Museon rakentaminen aloitettiin vuonna 1983, ja se '
+          + 'avattiin yleisölle 20. kesäkuuta 1991. Ulkoasu on '
+          + 'Tang-tyylinen ja noudattaa vanhaa kaavaa: sali keskellä, '
+          + 'kerrostetut rakennukset kulmissa. Tontti on 65 000 '
+          + 'neliömetriä, rakennus 55 600 ja näyttelysalit 11 000, ja '
+          + 'kokoelmassa on 370 000 esinettä.'
+          + '\n\n'
+          + 'Kokoelma on käytännössä se, mitä maakunnan mullasta on '
+          + 'kaivettu esiin. Shaanxi oli pitkään keisarikunnan ydinaluetta, '
+          + 'ja museon oma artikkeli sanoo maakunnan olleen yli '
+          + 'kolmentoista dynastian istuin — Zhou, Qin, Han ja Tang niiden '
+          + 'joukossa. Kaupungista itsestään en-Wikipedia ei anna samaa '
+          + 'lukua vaan sanoo Xi’anin olevan yksi Kiinan viidestä suuresta '
+          + 'muinaisesta pääkaupungista.'
+          + '\n\n'
+          + 'Näyttelyn tunnetuimpia esineitä ovat Lantianin ihmisen '
+          + 'fossiilit, Qin-kauden räystästiili peurakuvioineen, vuonna '
+          + '1970 löydetty Hejian kylän aarrekätkö, joka on haudattu maahan '
+          + 'noin vuonna 755, vuonna 1977 ensimmäisen keisarin haudasta '
+          + 'kaivettu 120 senttimetrin korkuinen polvistuva jousimies, '
+          + 'Han-kauden keisarinnan jadesinetti ja Tang-kauden seinämaalaus, '
+          + 'jossa pelataan poloa.',
+      kuvat: [
+        {
+          tiedosto: 'Shaanxi History Museum architecture.JPG',
+          selite: 'Museon Tang-tyyliset harjakatot limittyvät '
+            + 'porrastetusti päällekkäin, ja alimman katon takaa nousee '
+            + 'vaaleaksi laatoitettu seinäpinta.',
+          lahde: 'Danielinblue(张之诚), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri villihanhipagoda': {
+      aika: '652, uudelleen 704',
+      teksti: 'Pagodi rakennettiin noin vuonna 652 Da Ci’enin temppeliin '
+          + 'säilyttämään sutria ja Buddha-patsaita, jotka munkki Xuanzang '
+          + 'oli tuonut Intiasta, ja se rakennettiin uudelleen vuonna 704 '
+          + 'keisarinna Wu Zetianin aikana. Ulkokuori on Ming-kaudelta. '
+          + 'Nykyään torni on jalustoineen 64,1 metriä korkea, alimman '
+          + 'kerroksen sivu on 25 metriä, ja ylöspäin kerrokset kapenevat '
+          + 'kartioksi. Tiileen on muurattu pilarit, kaaret ja '
+          + 'kannatinkorut jäljittelemään puurakennusta, ja huipulle '
+          + 'nousee 248 porrasta.'
+          + '\n\n'
+          + 'Eteläisen oven molemmin puolin on kaksi kivilaattaa. '
+          + 'Toisessa on Tang-keisari Taizongin vuonna 648 kirjoittama '
+          + 'esipuhe Xuanzangin kääntämiin pyhiin teksteihin, toisessa '
+          + 'keisari Gaozongin selitys samaan esipuheeseen; molemmat on '
+          + 'kaivertanut kalligrafi Chu Suiliang. Temppeli ja torni '
+          + 'kunnostettiin perusteellisesti vuonna 1466, ja vuonna 1604 '
+          + 'alkuperäisen Tang-rakenteen ympärille muurattiin '
+          + 'kuudenkymmenen sentin paksuinen tiilikuori.'
+          + '\n\n'
+          + 'Vuodesta 1945 alkaen torni alkoi kallistua yhä nopeammin, '
+          + 'koska ympäristöstä pumpattiin pohjavettä liikaa. Vuoteen 1996 '
+          + 'mennessä kallistuma oli 1,01 metriä. Samana vuonna kaupunki '
+          + 'sulki yli neljäsataa kaivoa tornin ympäriltä, ja vuodesta 1997 '
+          + 'pagodi alkoi palata takaisin: vuoden 2006 loppuun mennessä se '
+          + 'oli siirtynyt vastasuuntaan 9,4 millimetriä, noin millimetrin '
+          + 'vuodessa. Vuonna 1988 tornin siluetista tehtiin kaupungin '
+          + 'vaakuna, ja vuonna 2014 se merkittiin maailmanperintöluetteloon '
+          + 'osana Silkkitien Chang’an–Tianshan-käytävää.',
+      kuvat: [
+        {
+          tiedosto: 'Giant Wild Goose Pagoda 20140502.JPG',
+          selite: 'Seitsenkerroksinen tiilipagodi kokonaan alhaalta '
+            + 'kuvattuna, ja etualalla erottuu temppelin räystäs '
+            + 'kellonsoittimineen.',
+          lahde: '颐园新居, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

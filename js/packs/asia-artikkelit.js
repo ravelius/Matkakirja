@@ -100,6 +100,17 @@
 // 1930-luvulla kerrotaan neutraalina rakentamisen historiana; Kolyman
 // leirit ja Surun maski pysyvät siinä laajuudessa kuin lehden oma
 // nosto ne jo kertoo.
+//
+// XI'AN (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js, saatiedot.js). Jokainen introväite tulee saman
+// erän lehtiteksteistä, jotka on tarkistettu en-Wikipedian
+// raakateksteistä 21.8.2026. Vanha intro sanoi Xi'anin olleen
+// "useiden dynastioiden pääkaupunki"; uusi käyttää artikkelin omaa
+// muotoilua viidestä suuresta muinaisesta pääkaupungista, koska luku
+// kolmetoista koskee en-Wikipediassa Shaanxin MAAKUNTAA eikä
+// kaupunkia (ks. kulttuuri-kategoriat.js:n xian-lohkon kommentti).
+// Kiina-linjaus: ei nykypolitiikkaa. Teksti-kenttä on ennallaan.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -1867,9 +1878,28 @@ export const ASIA_ARTIKKELIT = {
       + 'pihataloja.',
   },
   'Xi’an': {
-    intro: 'Xi’an oli Kiinan pääkaupunki useiden dynastioiden aikaan ja '
-      + 'silkkitien itäinen päätepiste. Sen lähellä maassa seisoo '
-      + 'kahdeksantuhatta savisotilasta rivissä, jokainen eri naamalla.',
+    intro: 'Xi’an on Kiinan sisämaassa Guanzhongin tasangolla, kahdeksan '
+      + 'joen muovaamalla tulvatasangolla. Etelässä nousee '
+      + 'Qinling-vuoristo, pohjoisessa virtaa Wei-joki. Kaupunki '
+      + 'tunnettiin suurimman osan historiaansa nimellä **Chang’an**, '
+      + 'ikuinen rauha, ja se on yksi Kiinan viidestä suuresta '
+      + 'muinaisesta pääkaupungista.'
+      + '\n\n'
+      + 'Han-dynastian perustaja Liu Bang asettui tänne 202 eaa. '
+      + 'ja rakennutti Weiyangin, laajimman maan päälle koskaan '
+      + 'rakennetun palatsin. Tang-kaudella kaupunki oli Konstantinopolin '
+      + 'ja Bagdadin rinnalla yksi maailman suurimmista, ja Silkkitien '
+      + 'pohjoinen reitti alkoi täältä. Vuonna 904 sotapäällikkö '
+      + 'Zhu Wen purki kaupungin ja siirrätti rakennusaineet '
+      + 'Luoyangiin, eikä Chang’an enää toipunut entiselleen.'
+      + '\n\n'
+      + 'Nykyisen keskustan piirtää **Ming-ajan kaupunginmuuri**, joka '
+      + 'nousi vuodesta 1370: neljäntoista kilometrin suorakaide, '
+      + 'jonka harjalla kulkee kävelytie ja jonka ympärillä on '
+      + 'vallihauta. Sen sisällä risteävät neljä pääkatua Kellotornin '
+      + 'juurella, ja lännessä on muslimikortteli Suurine moskeijoineen. '
+      + 'Kolmenkymmenen kilometrin päässä koillisessa nukkui vuoteen 1974 '
+      + 'asti terrakotta-armeija.',
     teksti: 'Xi’an on Keski-Kiinassa Wei-joen laaksossa. Vanhalta '
       + 'nimeltään Chang’an, ikuinen rauha, se oli Han- ja '
       + 'Tang-dynastioiden pääkaupunki ja aikanaan maailman suurin '

@@ -37323,4 +37323,496 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * XI'AN (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut säätietoja, kohdekarttaa, juttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian artikkeleista Xi'an,
+   * Chang'an, Fortifications of Xi'an, Bell Tower of Xi'an, Drum
+   * Tower of Xi'an, Great Mosque of Xi'an, Giant Wild Goose Pagoda,
+   * Stele Forest, Shaanxi History Museum, Xi'an railway station,
+   * Terracotta Army ja Silk Road (haettu 21.8.2026). Mausoleum of Qin
+   * Shi Huang haettiin myös, mutta siitä on käytetty vain
+   * hautakummun koordinaattia kartan etäisyyslaskuun.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md) ja sama kuin
+   * Kiinan muissa kaupungeissa: ei nykypolitiikkaa eikä nykysotaa.
+   * POIS JÄTETTY kokonaan: vuoden 1936 Xi'an-välikohtaus, vuoden
+   * 1911 mantšuväestön verilöyly ja sen brittilähetyssaarnaajan
+   * silminnäkijäkuvaus, vuoden 2012 mielenosoitukset ja vuoden 2022
+   * sulku. Toisen maailmansodan pommitukset ovat mukana VAIN
+   * kaupunkirakenteen kautta (muurin juureen kaivetut suojat) ilman
+   * uhrilukuja, ja vuoden 1926 tulipalo kerrotaan tapahtumana ilman
+   * sen sotataustaa. Uskonto on historiallis-kulttuurinen ilmiö:
+   * Suuri moskeija arkkitehtuurina ja Hui-yhteisön historiana,
+   * buddhalaisuus Xuanzangin ja pagodin kautta, nestoriaaninen
+   * kristinusko Steelametsän kivenä. Dungan-kapinan jälkeisiä
+   * uskonnollisia rajoituksia ja kulttuurivallankumouksen aikaista
+   * moskeijan sulkemista EI käsitellä (faktapohjan oma suositus).
+   *
+   * KOLME KORJAUSTA AIEMPAAN FAKTAPOHJAAN (docs/aasia-tyoaineisto/
+   * faktapohja-xian.md), jotka on tehty tässä:
+   * 1) "Kolmentoista dynastian pääkaupunki" ei löydy en-Wikipedian
+   *    Xi'an-artikkelista, kuten tarkistusraportti (kohta 1) osoitti.
+   *    Artikkeli nimeää kuusi dynastiaa ja kutsuu kaupunkia yhdeksi
+   *    Kiinan viidestä suuresta muinaisesta pääkaupungista. Luku 13
+   *    on olemassa toisessa artikkelissa mutta MAAKUNNASTA: Shaanxi
+   *    History Museum -artikkeli sanoo Shaanxin olleen "the seat of
+   *    more than 13 feudal dynasties". Ero on kirjoitettu auki
+   *    museon jutussa (v925/v932:n tapa), ja lehden omat tekstit
+   *    puhuvat viidestä suuresta pääkaupungista.
+   * 2) Faktapohjan H2-nosto liitti Tang-kauteen 160 korttelia,
+   *    kahdeksan pääkatua ja yhdeksän lohkoa sekä Yhdeksän toria.
+   *    Chang'an-artikkelissa nuo luvut ovat HAN-kauden kaupungin
+   *    osiossa (kaupungin neljä kasvuvaihetta 200 eaa. – 24 jaa.),
+   *    kun Tang-kaupungin ulkokaupungissa oli noin satakymmenen
+   *    korttelia ja kaksi toria. Lehti kertoo Tang-kaupungin omilla
+   *    luvuillaan.
+   * 3) Faktapohja ajoitti Daxingin perustamisen vuoteen 582
+   *    (Chang'an-artikkeli) mutta Xi'an-artikkeli sanoo 581.
+   *    Käytetty tarkempaa Chang'an-artikkelia, joka kertoo myös
+   *    paikan valinnan; ero on tässä kommentissa.
+   *
+   * KAKSI KESKENERÄISTÄ LUKUA, JOTKA ON KIRJOITETTU AUKI LUKIJALLE.
+   * Kellotornin korkeus on Wikipedian omassa artikkelissa johdannossa
+   * "close to 40 m" ja arkkitehtuuriosiossa 36 metriä; asemalla on
+   * Xi'an-artikkelin mukaan kuusi laituria ja yksitoista raidetta,
+   * aseman omassa artikkelissa yksitoista laituria ja kolmetoista
+   * raidetta. Molemmat erot kerrotaan jutuissa.
+   *
+   * SÄÄRIVI PUUTTUU TOISTAISEKSI, ja se on kirjattu tähän, jotta
+   * seuraava tekijä ei etsi sitä turhaan. saatiedot.js:ään ei tullut
+   * xian-riviä, koska Open-Meteon arkistorajapinnan (ERA5) VUOROKAUSI-
+   * kiintiö oli tämän kontin ulosmenevällä osoitteella jo täynnä koko
+   * työpäivän ajan: sekä proxyn kautta että suoraan, viiden vuoden
+   * paloina ja yhden vuorokauden koepyynnöillä, vastaus oli aina
+   * "Daily API request limit exceeded" (yli 40 yritystä kahden ja
+   * puolen tunnin aikana; sama koski historical-forecast- ja
+   * climate-rajapintoja, kun taas ennusterajapinta vastasi
+   * normaalisti). Wikipedian oma kuukausitaulukko olisi ollut
+   * saatavilla, mutta se on Kiinan sääpalvelun asemadataa eikä
+   * ERA5:tä, ja vuosigraafin lähderivi lupaa lukijalle Open-Meteon
+   * ERA5:n — väärä lähdemerkintä on pahempi kuin puuttuva graafi
+   * (pakettitiedoston oma sääntö: ilman riviä lehti näkyy ilman
+   * säätä). Rivi haetaan siis erikseen, kun kiintiö vapautuu
+   * (UTC-vuorokauden vaihde), mittauspisteenä keskusta 34,26 / 108,94.
+   * Oppaan sääjakso on tämän vuoksi kirjoitettu Xi'an-artikkelin
+   * ilmasto-osion SANALLISISTA tiedoista, ja jakso kertoo itse, että
+   * sen luvut ovat Chang'anin kaupunginosan mittausasemalta 445 metrin
+   * korkeudesta (Siinain ja Petran ennakkotapaus mittauspisteen
+   * selittämisestä).
+   *
+   * KOLME TERRAKOTTAKUVAA on tietoinen valinta ja Mekan Jabal
+   * al-Nourin ennakkotapaus: armeija on kaupungin tunnetuin asia
+   * myös sille, joka ei ehdi kolmenkymmenen kilometrin retkelle, ja
+   * kuvat näyttävät sen kolmelta etäisyydeltä (kansikuvan koko
+   * kuoppa, noston kaksi sotilasta, oppaan yksi kasvo). Samoin
+   * muurista on kolme kuvaa eri kohdista (ulkoa, harjalta,
+   * vallihaudan yli) ja Kellotornista kaksi eri vuorokaudenaikaan.
+   */
+  xian: [
+    {
+      id: 'kaupunki',
+      nimi: 'Xi’an',
+      johdanto: 'Silkkitien itäinen pääte Guanzhongin tasangolla. '
+        + 'Ming-ajan muuri kiertää yhä vanhaakaupunkia, ja sen sisällä '
+        + 'risteävät neljä pääkatua Kellotornin juurella.',
+      kansikuvat: [
+        {
+          tiedosto: 'City wall of Xi\'an 51550-Xian (27959363326).jpg',
+          selite: 'Kaupunginmuuri ulkoapäin: kaksi puista porttitornia '
+            + 'nousee harmaan tiiliverhouksen päältä, ja niiden juurella '
+            + 'kasvaa tiheä puistokaista.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: '51714-Terracota-Army.jpg',
+          selite: 'Terrakotta-armeijan ykköskuoppa katetun hallin alla: '
+            + 'sotilasrivit seisovat maavallien väliin kaivetuissa '
+            + 'käytävissä niin kauas kuin halli jatkuu.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Bell Tower during Sunset in Xi\'an, Jun 21 2023.jpg',
+          selite: 'Kellotorni auringonlaskussa keskellä liikenneympyrää, '
+            + 'ja taustalla vasemmalla erottuu Rumpitornin siluetti.',
+          lahde: 'A Chinese ID, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: Rumpitorni, pagodi ja muurin harja — kaupungin
+       * kolme kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (Ming-ajan keskusta, Tang-ajan pyhäkkö, muurin kehä).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Xi\'an Drum Tower (9912489945).jpg',
+          selite: 'Rumpitorni alhaalta kuvattuna: kolme räystäskerrosta '
+            + 'nousee muuratun jalustan päältä, ja ylimmän päädyn '
+            + 'keskellä on kullattu koriste.',
+          lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Giant Wild Goose Pagoda, Xi\'an, May, 2018-1.jpg',
+          selite: 'Suuri villihanhipagoda alhaalta: seitsemän '
+            + 'tiilikerrosta kapenee ylöspäin, ja jokaisen kerroksen '
+            + 'keskellä on kaareva ikkuna-aukko.',
+          lahde: 'Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Xi\'an city walls (63076).jpg',
+          selite: 'Muurin harja kulkee kivilaatoituksena porttitornin '
+            + 'ohi, ja vallihaudan takaa nousee nykyinen kaupunki '
+            + 'sumuun.',
+          lahde: 'Ideophagous, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Talonpoika, joka löysi armeijan',
+          tiedosto: 'Qin Terracotta Army, Pit 1 18.jpg',
+          teksti: 'Maaliskuun 29. päivänä 1974 Yang Zhifa, hänen viisi '
+            + 'veljeään ja naapuri Wang Puzhi kaivoivat kaivoa '
+            + 'puolentoista kilometrin päässä keisari Qin Shi Huangin '
+            + 'hautakummusta, kun lapio osui poltettuun saveen. Esiin '
+            + 'tuli suurin koskaan löydetty savipatsasjoukko: vuoden '
+            + '2007 arvion mukaan kolmessa kuopassa on yli 8 000 '
+            + 'sotilasta, 130 vaunua ja 520 vaunuhevosta sekä 150 '
+            + 'ratsuhevosta, ja suurin osa on yhä paikoillaan '
+            + 'maan alla. Rivistöt katsovat itään, sinne missä keisarin '
+            + 'valloittamat valtiot olivat. Löytö ei ollut ensimmäinen '
+            + 'merkki: pelloilta oli vuosisatojen ajan noussut '
+            + 'savenpalasia ja tiilenkappaleita, mutta kukaan ei ollut '
+            + 'yhdistänyt niitä hautaan.',
+          selite: 'Kaksi savisotilasta kuopan reunalla: haarniskan levyt '
+            + 'ja niittirivit erottuvat tarkasti, ja etummaisella on '
+            + 'omat kasvot.',
+          lahde: 'Gary Lee Todd, Ph.D., Wikimedia Commons (CC0)',
+          wiki: 'Terracotta Army',
+        },
+        {
+          otsikko: 'Muuri, jonka päällä on tie',
+          tiedosto: 'Moat of Xi\'an City wall 1.jpg',
+          teksti: 'Ming-dynastian ensimmäinen keisari Zhu Yuanzhang sai '
+            + 'neuvon rakentaa kaupungin ympärille korkea muuri, '
+            + 'täyttää viljavarastot ja vasta sitten yhdistää valtakunta. '
+            + 'Työ alkoi 1370 ja kesti kahdeksan vuotta: lännessä ja '
+            + 'etelässä pohjaksi otettiin Sui- ja Tang-ajan vallit, '
+            + 'idässä ja pohjoisessa kehää laajennettiin. Tuloksena on '
+            + 'neljäntoista kilometrin suorakaide, joka on kaksitoista '
+            + 'metriä korkea ja juureltaan viisitoista–kahdeksantoista '
+            + 'metriä leveä. Harjalla kulkee kävelytie, '
+            + 'jonka kierrokseen menee neljä tuntia, ja '
+            + 'ulkopuolella kiertää kahdeksantoista metriä leveä '
+            + 'vallihauta. Muuri oli ensin survottua maata; '
+            + 'siniset tiilet ladottiin päälle 1568.',
+          selite: 'Vallihauta kaartaa muurin kulmatornin ohi, ja '
+            + 'vastarannalla nousee nykyisen kaupungin tornitalorivi.',
+          lahde: 'H2v5o68z, Wikimedia Commons (CC0)',
+          wiki: 'Fortifications of Xi\'an',
+        },
+        {
+          otsikko: 'Kello aamulla, rumpu illalla',
+          tiedosto: '景云钟-西安碑林 2023-09-29 03.jpg',
+          teksti: 'Keskustassa seisoo kaksi Ming-ajan tornia '
+            + 'kolmensadan metrin päässä toisistaan. Rumpitorni '
+            + 'valmistui 1380 ja Kellotorni 1384, ja vuosisatojen ajan ne '
+            + 'pitivät yhdessä kaupungin kelloa: kellot soivat aamun, '
+            + 'rummut illan. Kellotorni ei ole aina ollut nykyisellä '
+            + 'paikallaan. Se pystytettiin kilometrin verran lännemmäksi, '
+            + 'siihen kohtaan, joka oli silloin tarkalleen pohjois- ja '
+            + 'eteläportin välissä; kun kaupunki laajeni Ming-kaudella '
+            + 'itään, koko torni siirrettiin vuonna 1582 nykyiseen '
+            + 'neljän pääkadun risteykseen. Paikallaan ei ole enää '
+            + 'tornin vanha kellokaan: vuonna 711 valettu Jingyun-kello '
+            + 'vietiin 1953 Steelametsän museoon, jossa se on yhä '
+            + 'esillä.',
+          selite: 'Jingyun-kellon kylkeen on valettu kirjoituspaneeli, '
+            + 'jonka ympärillä kiertää pronssiin muotoiltuja '
+            + 'lohikäärmeitä ja pilviä.',
+          lahde: 'Kcx36, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bell Tower of Xi\'an',
+        },
+        {
+          otsikko: 'Moskeija, jossa ei ole minareettia',
+          tiedosto: 'Great Mosque of Xi\'an 20240808 112.jpg',
+          teksti: 'Rumpitornin takana kujien päässä on temppelialue, '
+            + 'joka ei ensi näkemältä näytä siltä mitä se on. '
+            + 'Rakennukset ovat maalattua puuta ja tiiltä, katot '
+            + 'kaartuvat kiinalaisittain harjoiksi, pihat seuraavat '
+            + 'toisiaan puutarhoina — eikä ainuttakaan tornia nouse '
+            + 'kutsumaan rukoukseen. Silti kyseessä on moskeija, ja '
+            + 'yksi Kiinan vanhimmista: se perustettiin Tang-kaudella '
+            + 'noin vuonna 742, ja nykyinen rakennus on pääosin '
+            + 'Ming-kauden vuodelta 1392. Suunta paljastaa lopulta, mistä '
+            + 'on kysymys. Kiinalaiset uskonnolliset rakennukset '
+            + 'asetetaan pohjois–etelä-akselille, mutta täällä '
+            + 'sisäänkäynti on idässä ja sali lännessä — siihen suuntaan, '
+            + 'jossa Mekka on.',
+          selite: 'Rukoussalin julkisivu turkoosin tiilikaton alla: viisi '
+            + 'ovea, kaiverretut puupaneelit ja räystään alla rivi '
+            + 'kultakirjaimisia kilpiä.',
+          lahde: '沈澄心, Wikimedia Commons (CC0)',
+          wiki: 'Great Mosque of Xi\'an',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Qin Terracotta Army, Pit 1 03.jpg',
+          selite: 'Yksi savisotilas lähikuvassa kaivannon varjossa: '
+            + 'panssarilevyt, kaulahuivi ja nyrkkiin puristettu käsi, '
+            + 'joka on aikanaan pitänyt oikeaa asetta.',
+          lahde: 'Gary Lee Todd, Ph.D., Wikimedia Commons (CC0)',
+        },
+        kappale: 'Xi’an on Shaanxin maakunnan pääkaupunki ja Luoteis-Kiinan '
+          + 'suurin kaupunki, mutta matkailijan Xi’an on pieni: melkein '
+          + 'kaikki on joko muurin sisällä tai muutaman kilometrin '
+          + 'päässä sen eteläpuolella. Muurin sisällä kaupunki on '
+          + 'ruutukaava, jonka keskipiste on Kellotornin risteys, ja '
+          + 'ulkopuolella kiertää kehätie vallihaudan vartta. '
+          + 'Terrakotta-armeija on oma retkensä runsaan kolmenkymmenen '
+          + 'kilometrin päässä koillisessa, eikä se siksi ole tämän '
+          + 'sivun kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Xi’an',
+          taitto: 'opas',
+          teksti: 'Yksi muuri, neljä porttia ja niiden väliin ristiin '
+            + 'vedetyt pääkadut — ja kaiken alla kaksituhatta vuotta '
+            + 'kaivamatonta maata.',
+          nosto: 'Suuri villihanhipagoda alkoi kallistua, kun kaupunki '
+            + 'pumppasi pohjavettä: vuoteen 1996 mennessä kallistuma oli '
+            + 'metrin. Sitten neljäsataa kaivoa suljettiin, ja torni '
+            + 'lähti hitaasti takaisin suoraan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Vanha rautatieasema on aivan muurin '
+                + 'pohjoispuolella, ja sinne tulevat yhä tavalliset '
+                + 'junat: yöpikajunat, pikajunat ja hitaat vuorot. '
+                + 'Nopeat junat siirtyivät vuonna 2011 Xi’anin '
+                + 'pohjoiselle asemalle kaupungin laidalle — siinä on '
+                + 'kolmekymmentäneljä laituria, ja avautuessaan se oli '
+                + 'Luoteis-Kiinan suurin asema. Radan vaikutus näkyi '
+                + 'heti: kun Zhengzhoun suurnopeusrata avattiin 6. '
+                + 'helmikuuta 2010, matkustajalennot kahden kaupungin '
+                + 'välillä loppuivat neljässäkymmenessäkahdeksassa '
+                + 'päivässä. Kaupungin sisällä kulkee metro, jonka '
+                + 'ensimmäinen linja avattiin 16. syyskuuta 2011, ja sen '
+                + 'asemat osuvat lähes kaikkiin kohteisiin: Kello- ja '
+                + 'Rumpitorni sekä kaupunginmuuri kakkoslinjalla, '
+                + 'villihanhipagoda kolmos- ja neloslinjalla ja Shaanxin '
+                + 'museo kolmella linjalla. Kellotornin ympäristössä '
+                + 'jalankulkija kulkee ali- ja ylikulkusiltoja pitkin, ja '
+                + 'kaupungissa on yli viisikymmentätuhatta '
+                + 'kaupunkipyörää.',
+              kuva: {
+                tiedosto: 'Train of Line 6, Xi\'an Metro (May 28, 2022).jpg',
+                selite: 'Metrojuna saapuu asemalle tunnelista: keula on '
+                  + 'liikkeessä epätarkka, ja laiturin reunassa kulkee '
+                  + 'keltamusta varoitusraita.',
+                lahde: 'Bob Wehn, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Xi’an on Guanzhongin tasangolla Shaanxin '
+                + 'eteläkeskiosassa, kahdeksan joen ja puron '
+                + 'muodostamalla tulvatasangolla, 405 metrin '
+                + 'korkeudessa. Etelässä nousee Qinling-vuoristo, '
+                + 'pohjoisessa virtaa Wei-joki, ja sen takana alkaa '
+                + 'Loessi-tasanko; taolaisuuden viidestä pyhästä vuoresta '
+                + 'yksi, Hua Shan, on sadan kilometrin päässä idässä. '
+                + 'Paikan valinta oli aikanaan tietoinen. Han-dynastian '
+                + 'alussa neuvonantaja Zhang Liang suositteli keisari Liu '
+                + 'Bangille juuri Guanzhongia: se on Xiao-vuoren ja '
+                + 'Hangun solan takana, se yhdistää Gansun ja Sichuanin, '
+                + 'ja se on kuin rautalinna tuhansien mailien matkalta ja '
+                + 'sadoiltaan rikas kuin taivaan valtakunta. Siitä '
+                + 'lähtien seutua on kutsuttu juuri sillä nimellä.',
+              kuva: {
+                tiedosto: 'Part of the view on Qinling mountains.jpg',
+                selite: 'Qinling-vuoriston harjanteita kerroksittain '
+                  + 'utuun asti, etualalla ruohoinen rinne ja '
+                  + 'pensaikkoa.',
+                lahde: 'Charlie439753, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: muslimikortteli',
+              teksti: 'Rumpitornin länsipuolella alkaa muslimikortteli, '
+                + 'jossa asuu osa kaupungin noin viidestäkymmenestä '
+                + 'tuhannesta hui-muslimista. Moskeijoita Xi’anissa on '
+                + 'seitsemän, ja tunnetuin niistä on Suuri moskeija '
+                + 'korttelin sydämessä. Kortteli tunnetaan silti ennen '
+                + 'kaikkea ruoastaan, ja neljä ruokalajia toistuu joka '
+                + 'listalla. Yangrou paomo on lammaskeitto, johon '
+                + 'murennetaan litteää leipää. Roujiamo on sämpylä, jonka '
+                + 'väliin pannaan haudutettua lihaa. Liangpi ovat kylminä '
+                + 'syötäviä vehnä- tai riisinuudeleita etikan ja '
+                + 'chiliöljyn kanssa. Biangbiang mian taas ovat käsin '
+                + 'vedettyjä paksuja ja pitkiä nuudeleita, jotka '
+                + 'tarjoillaan tulisen paprikan kera.',
+              kuva: {
+                tiedosto: 'Yangrou Paomo.JPG',
+                selite: 'Kuviollisessa kulhossa höyryää lammaskeitto, '
+                  + 'jossa uivat leivänmurut, lasinuudelit ja punainen '
+                  + 'chilitahnanokare.',
+                lahde: 'Danielinblue, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kaupunki, joka purettiin',
+              teksti: 'Vuonna 904 sotapäällikkö Zhu Wen määräsi '
+                + 'Chang’anin rakennukset purettaviksi ja rakennusaineet '
+                + 'siirrettäviksi Luoyangiin, uuteen pääkaupunkiin; '
+                + 'asukkaat ja keisari Zhaozong pakotettiin muuttamaan '
+                + 'mukana. Sen jälkeen käskynhaltija Han Jian rakensi '
+                + 'kaupungin uudelleen vanhan Keisarikaupungin pohjalle, '
+                + 'ja jäljelle jäänyt väki kutsui sitä Xinchengiksi eli '
+                + 'Uudeksi kaupungiksi. Se oli alle kuudestoistaosa '
+                + 'entisestä Chang’anista; muu osa jäi luonnon valtaan ja '
+                + 'otettiin pelloiksi. Pohjois- ja itämuuria laajennettiin '
+                + 'myöhemmin hieman, ja Ming-kaudella kaupungin '
+                + 'virallinen nimi vaihtui Jingzhaosta Xi’aniksi.',
+              kuva: {
+                tiedosto: 'Ancient Chang\'an City Model (9923627634).jpg',
+                selite: 'Pienoismalli Tang-kauden Chang’anista: '
+                  + 'suorakulmaiset korttelit jatkuvat riveinä leveiden '
+                  + 'katujen molemmin puolin niin kauas kuin valo yltää.',
+                lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Xi’an on itäisen monsuunin vaikutuspiirissä, '
+                + 'Köppenin luokituksessa rajatapaus lauhkean '
+                + 'subtrooppisen ja kylmätalvisen mannerilmaston '
+                + 'välillä. Wei-joen laaksossa se tarkoittaa kuumia ja '
+                + 'kosteita kesiä, kylmiä ja kuivia talvia sekä kuivaa '
+                + 'kevättä ja syksyä. Kuukausikeskilämpö nousee '
+                + 'tammikuun nollan tuntumasta heinäkuun '
+                + 'kahteenkymmeneenseitsemään asteeseen, ja koko vuoden '
+                + 'keskiarvo on runsaat neljätoista astetta; luvut ovat '
+                + 'Chang’anin kaupunginosan mittausasemalta, joka on 445 '
+                + 'metrin korkeudessa keskustan eteläpuolella. Suurin '
+                + 'osa vuoden sateesta tulee heinäkuun ja lokakuun lopun '
+                + 'välillä. Talvella lunta tulee toisinaan, mutta '
+                + 'se pysyy harvoin pitkään maassa. Kävelijän kannattaa '
+                + 'varautua kevääseen: maalis–huhtikuussa kaupungin '
+                + 'lämmetessä nopeasti tulee usein hiekkamyrskyjä. '
+                + 'Ääripäät vuodesta 1951 alkaen ovat 20,6 '
+                + 'pakkasastetta tammikuussa 1955 ja 42,3 lämpöastetta '
+                + 'heinäkuussa 2025.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki oli pääkaupunki jo silloin, kun sen nimi oli '
+        + 'Chang’an, ikuinen rauha. Han-kaudella tänne nousi laajin maan '
+        + 'päälle koskaan rakennettu palatsi ja Tang-kaudella yksi '
+        + 'maailman suurimmista kaupungeista.',
+      tehtava: {
+        kysymys: 'Kuinka moninkertainen Han-kauden Weiyang-palatsi oli '
+          + 'nykyiseen Kiellettyyn kaupunkiin verrattuna?',
+        vaihtoehdot: [
+          'Yhtä suuri',
+          'Kaksinkertainen',
+          'Lähes seitsenkertainen',
+          'Satakertainen',
+        ],
+        oikea: 2,
+        fakta: 'Weiyang peitti 4,8 neliökilometriä eli 6,7 kertaa '
+          + 'Kielletyn kaupungin alan ja yksitoista kertaa Vatikaanin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suurin palatsi maan päällä',
+          tiedosto: 'Chang Le Gong and Wei Yang Gong by Bi Yuan.jpg',
+          teksti: 'Vuonna 202 eaa. Han-dynastian perustaja Liu Bang asetti '
+            + 'pääkaupunkinsa Chang’aniin, ja kansleri Xiao He rakennutti '
+            + 'hänelle kaksi palatsia vierekkäin. Weiyang eli Loputon '
+            + 'palatsi on laajin maan päälle koskaan rakennettu palatsi: '
+            + 'muurattu suorakaide, jonka sisällä oli neljäkymmentä salia '
+            + 'ja lähes viisi neliökilometriä rakennuksia — 6,7 kertaa '
+            + 'Kielletyn kaupungin ja yksitoista kertaa Vatikaanin ala. '
+            + 'Liu Bang moitti kansleriaan turhasta loistosta, mutta Xiao '
+            + 'He vastasi, että juuri loisto oli tarpeen kilpailijoiden '
+            + 'vaientamiseksi. Palatsi rakennettiin harjanteen '
+            + 'korkeimmalle kohdalle, ja sitä käytti seitsemän dynastiaa.',
+          selite: 'Qing-kauden puupiirros kahdesta Han-palatsista: '
+            + 'Weiyang vasemmalla ja Changle oikealla, kummankin '
+            + 'ympärillä oma muuri portteineen.',
+          lahde: 'Bi Yuan (1730–1797), Wikimedia Commons (PD)',
+          wiki: 'Chang\'an',
+        },
+        {
+          otsikko: 'Kaupunki kuin ruutupaperi',
+          tiedosto: '隋大興城坊平面圖.png',
+          teksti: 'Sui-keisari Wen valitsi 582 vanhan '
+            + 'Han-Chang’anin raunioiden kaakkoispuolelta paikan uudelle '
+            + 'pääkaupungille ja nimesi sen Daxingiksi, Suureksi '
+            + 'kukoistukseksi. Tang-dynastia palautti nimen Chang’aniksi '
+            + 'vuonna 618, ja kaupungista tuli Konstantinopolin ja '
+            + 'Bagdadin rinnalla yksi maailman suurimmista. Se oli '
+            + 'ruudukko: ulkokaupungissa oli noin satakymmenen '
+            + 'muurin ympäröimää korttelia, pienin 28 ja suurin 94 '
+            + 'hehtaaria, ja muurit olivat kolmisen metriä '
+            + 'korkeat. Pääkatuja oli kuusi. Kapeinkin oli '
+            + 'kaksikymmentäviisi metriä leveä ja Keisarin tie '
+            + 'eteläportilta hallintokaupunkiin sataviisikymmentä. '
+            + 'Vuonna 740 hovi määräsi kaduille istutettavaksi '
+            + 'hedelmäpuita.',
+          selite: 'Kaavakuva Sui-kauden Daxingista: keltaiset ruudut ovat '
+            + 'muurattuja kortteleita ja oranssit palatsi- ja '
+            + 'hallintoalueita.',
+          lahde: 'Jason22, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Chang\'an',
+        },
+        {
+          otsikko: 'Silkkitien itäinen pää',
+          tiedosto: 'Tang Sancai Porcelain- Musicians on a Camel.jpg',
+          teksti: 'Silkkitien pohjoinen reitti alkoi Chang’anista. Reitti '
+            + 'vakiintui suunnilleen ensimmäisellä vuosisadalla eaa., kun '
+            + 'keisari Han Wudi lopetti paimentolaisheimojen häirinnän '
+            + 'lännessä. Länteen kulki silkkibrokadia, lakkatavaraa, '
+            + 'posliinia ja teetä; vastaan tuli hevosia, kameleita, '
+            + 'hunajaa, viiniä ja kultaa. Karavaanit toivat kaupunkiin '
+            + 'myös taateleita, sahramia ja pistaasipähkinöitä Persiasta, '
+            + 'suitsuketta ja mirhamia Somaliasta, santelipuuta Intiasta '
+            + 'ja lasipulloja Egyptistä. Tang-kauden Chang’anissa oli '
+            + 'kaksi suurta toria, ja läntisessä oli persialainen basaari '
+            + 'viinikauppoineen, teehuoneineen ja leipureineen. Samaa '
+            + 'tietä levisivät myös paperi ja ruuti.',
+          selite: 'Tang-kauden kolmivärikeramiikkaa: kamelin selkään on '
+            + 'nostettu soittajaryhmä, ja etummainen näppäilee '
+            + 'kaulakkaista soitinta.',
+          lahde: 'Gary Todd, Wikimedia Commons (CC0)',
+          wiki: 'Silk Road',
+        },
+        {
+          otsikko: 'Munkki, joka toi kirjat kotiin',
+          tiedosto: 'In daci\'en Temple, Xi\'an, May, 2018.jpg',
+          teksti: 'Munkki Xuanzang palasi Intian-pyhiinvaellukseltaan '
+            + 'satojen sanskritinkielisten käsikirjoitusten kanssa ja '
+            + 'perusti Chang’aniin käännöskoulun. Niiden säilyttämiseksi '
+            + 'hän valvoi vuonna 652 pagodin rakentamista Da Ci’enin '
+            + 'temppeliin: viisikerroksinen torni, ulkokuori tiiltä ja '
+            + 'sisäydin maata, kuusikymmentä metriä korkea. Tiilisaumoihin '
+            + 'kasvoi rikkaruohoa, ja rakenne vaurioitui. Keisarinna Wu '
+            + 'Zetian ja hoviväki lahjoittivat rahat, alkuperäinen torni '
+            + 'purettiin ja tilalle nousi seitsenkerroksinen. Sisäseiniin '
+            + 'kaiverrettiin Buddha-kuvia, joiden tekijäksi mainitaan '
+            + 'aikansa kuuluisin maalari Yan Liben.',
+          selite: 'Da Ci’enin temppelin salissa istuu kullattu '
+            + 'Buddha-veistos lootusjalustalla, ja suitsukesavu pehmentää '
+            + 'ympärillä olevat puupaneelit.',
+          lahde: 'Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Giant Wild Goose Pagoda',
+        },
+      ],
+    },
+  ],
 };

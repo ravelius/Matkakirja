@@ -6871,6 +6871,88 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ishratkhanan mausoleumi', lat: 39.6431, lon: 66.991 },
     ],
   },
+  /*
+   * XI'ANIN KOHDEKARTTA (21.8.2026). Rajaus on Ming-ajan muurikaupunki
+   * kokonaisuudessaan, ja kartan luettavin piirre on siksi kaupunki
+   * itse: suorakaide, jota kiertää vallihauta. Kohteet on numeroitu
+   * pohjoisesta etelään kuten Medinassa ja Kiotossa.
+   *
+   * KOORDINAATIT OVAT KAHDESTA LÄHTEESTÄ, ja jako on kirjattu tähän,
+   * koska se ei ole arvattavissa kohdelistasta. Kellotorni, Rumpitorni,
+   * Suuri moskeija, Shaanxin historiallinen museo ja Suuri
+   * villihanhipagoda ovat kohteiden omista en-Wikipedian
+   * infobokseista (haettu 21.8.2026). Rautatieasema, Anyuan-portti,
+   * Yongning-portti ja Steelametsä ovat Overpassista, koska niillä ei
+   * ole omaa artikkelia lainkaan (portit) tai koska artikkelin oma
+   * koordinaatti ei kelpaa (Steelametsä). Rautatieasemalla on oma
+   * artikkeli ja sen infoboksin koordinaatti on käytössä; se on 150
+   * metriä OSM:n asemapolygonin keskipisteestä etelään eli yhä saman
+   * asema-alueen sisällä.
+   *
+   * STEELAMETSÄN KOORDINAATTI ON OVERPASSISTA, JA ERO ON MITATTU.
+   * en-Wikipedian "Stele Forest" -artikkelin sivunpohjan {{Coord}} on
+   * 34,252459 / 108,952809, mutta OSM:n museopolygonin (way 256711574,
+   * tourism=museum, name:en "Xi'an Stele Forest Museum") keskipiste on
+   * 34,25517 / 108,94812 — 520 metriä luoteeseen. Artikkelin piste
+   * osuu tällä kartalla käytännössä eteläisen muurin päälle, museon
+   * ulkopuolelle, ja 520 metriä on kymmenesosa ruudun leveydestä eli
+   * selvästi näkyvä virhe. Tokion kansallismuseon ja Persepoliksen
+   * ennakkotapaus: piste haetaan Overpassista, kun artikkelin oma
+   * koordinaatti ei kelpaa.
+   *
+   * NELJÄSTÄ PORTISTA KARTALLA ON KAKSI. Anyuan (pohjoinen) ja
+   * Yongning (eteläinen) ovat lehdessä omina juttuinaan, koska
+   * niillä on oma kerrottava: pohjoisportin takana on vanha
+   * rautatieasema ja eteläportti on muurin pääportti, jonka
+   * eteläinen vahtitorni paloi 1926 ja rakennettiin uudelleen 2014.
+   * Anding (läntinen) ja Changle (itäinen) jäivät pois, koska niistä
+   * ei ole en-Wikipediassa omaa tietoa — muuri itse kerrotaan
+   * eteläportin jutussa ja lehden nostossa.
+   *
+   * TERRAKOTTA-ARMEIJA JA HAUTAKUMPU EIVÄT OLE KARTALLA eivätkä
+   * kainalossa: ne ovat kohteiden omien en-Wikipedia-koordinaattien
+   * mukaan 33 ja 32 kilometrin päässä koilliseen (atsimuutti 65°) eli
+   * kymmenkertaisesti kauempana kuin yksikään kainalo tässä
+   * kartastossa. Ne kerrotaan lehden nostossa ja kuvissa (Medinan
+   * Uhud-vuoren ratkaisu). Kainalossa ovat sen sijaan Suuri
+   * villihanhipagoda ja Shaanxin historiallinen museo, jotka ovat
+   * noin 4,5 kilometriä etelään ja kilometrin päässä toisistaan.
+   *
+   * KAINALON KORKEUS 29,25 on piirtäjän oma laskelma
+   * (tools/piirra-kaupunkikartta.mjs), ei käsin kirjoitettu luku.
+   */
+  xian: {
+    polku: 'assets/kartat/xian-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 34.284, etela: 34.247, lansi: 108.9145, ita: 108.9735 },
+    kainalot: [
+      { rajat: { pohjoinen: 34.229, etela: 34.216, lansi: 108.9465, ita: 108.9635 },
+        x: 74, y: 60, leveys: 24, korkeus: 29.25, suunta: '4,5 km etelään' },
+    ],
+    esittely: 'Kartan alue on Xi’anin muurikaupunki, ja muuri näkyy '
+      + 'kokonaan: neljäntoista kilometrin suorakaide vallihautoineen. '
+      + 'Keskellä risteyksessä on Kellotorni, sen länsipuolella '
+      + 'Rumpitorni ja muslimikortteli, jonka kujien takana on Suuri '
+      + 'moskeija. Kaakossa muurin sisällä on Steelametsä, vanha '
+      + 'Kungfutsen temppeli, jossa säilytetään kolmea tuhatta '
+      + 'kivikirjoitusta. Pohjoisportin takana on vuonna 1935 avattu '
+      + 'rautatieasema. Oikean alakulman kainalossa ovat Suuri '
+      + 'villihanhipagoda ja Shaanxin historiallinen museo, neljän ja '
+      + 'puolen kilometrin päässä etelässä. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Xi’anin rautatieasema', lat: 34.27861, lon: 108.95833 },
+      { nimi: 'Anyuan-portti', lat: 34.27757, lon: 108.94263 },
+      { nimi: 'Suuri moskeija', lat: 34.26333, lon: 108.93639 },
+      { nimi: 'Rumpitorni', lat: 34.26167, lon: 108.93861 },
+      { nimi: 'Kellotorni', lat: 34.261, lon: 108.942 },
+      { nimi: 'Steelametsä', lat: 34.25517, lon: 108.94812 },
+      { nimi: 'Yongning-portti', lat: 34.2531, lon: 108.94232 },
+      { nimi: 'Shaanxin historiallinen museo', lat: 34.22528, lon: 108.95139 },
+      { nimi: 'Suuri villihanhipagoda', lat: 34.219842, lon: 108.959354 },
+    ],
+  },
 };
 
 /*
