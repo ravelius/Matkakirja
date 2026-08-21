@@ -726,20 +726,21 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       // kerrallaan DOM:issa, joten määrä pysyy pienenä.
       ui.varustaNostonKuva(kuva, nosto, 900);
       /*
-       * Pystykuva saa tekstin viereensä (omistajan toive 5.8.2026):
-       * korkea kapea kuva jättäisi täysleveänä molemmin puolin
-       * tyhjää ja venyttäisi sivun tarpeettoman pitkäksi. Suunta
-       * selviää vasta kuvan latauduttua. Gallerianostot pidetään
-       * aina täysleveinä — teokset vaihtuvat, eikä taitto saa
-       * hyppiä selatessa.
+       * Pystykuva saa kainalossa oman, kapeamman mittansa (omistajan
+       * palaute 21.8.2026: "pysty joka levittäytyy aivan liian
+       * korkeaksi"): 42 prosentin leveys venyttäisi 2:3-kuvan noin
+       * 500 pikseliin. Suunta selviää vasta kuvan latauduttua.
+       *
+       * Kuuntelija EI ole enää `once`, eikä galleriaa ohiteta
+       * (21.8.2026). Juuri Ateenan evzoni-galleria oli se lohko, josta
+       * omistaja huomautti: sekä sen ensimmäinen kuva että "toinen
+       * vaihtoehto" ovat pystyjä. Nyt luokka lasketaan sille kuvalle,
+       * joka kulloinkin on näkyvissä, ja teosta vaihtaessa mitta
+       * korjautuu mukana.
        */
-      if (!nosto.galleria?.length) {
-        kuva.addEventListener('load', () => {
-          if (kuva.naturalHeight > kuva.naturalWidth * 1.15) {
-            lohko.classList.add('pysty');
-          }
-        }, { once: true });
-      }
+      kuva.addEventListener('load', () => {
+        lohko.classList.toggle('pysty', kuva.naturalHeight > kuva.naturalWidth * 1.15);
+      });
       lohko.appendChild(kuva);
     } else if (nosto.kuvaUrl) {
       /*
@@ -768,12 +769,31 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     // kenttää rivi on tavallista tekstiä kuten ennen.
     const lahde = nosto.lahde
       ? taytaLahderivi(html('p', 'lahde'), lahdemerkinta(nosto.lahde), nosto) : null;
-    if (kuva && (selite || lahde)) {
+    /*
+     * Kehys tehdään AINA kun nostossa on kuva (21.8.2026). Ennen se
+     * jäi tekemättä, jos kuvalla ei ollut selitettä eikä lähdettä, ja
+     * paljas img olisi jäänyt kainalotaiton ulkopuolelle — yksi kuva
+     * sivulla olisi käyttäytynyt eri tavalla kuin muut ilman että
+     * lukija näkee siihen mitään syytä.
+     */
+    if (kuva) {
       const kehys = html('div', 'kuvakehys');
       kehys.appendChild(kuva);
       if (selite) kehys.appendChild(selite);
       if (lahde) kehys.appendChild(lahde);
       lohko.appendChild(kehys);
+      /*
+       * KAINALOKUVA (omistajan palaute 21.8.2026: "ruokakuvat
+       * kannattaisi pienentää pienemmiksi ja laittaa leipäteksti
+       * juoksemaan sen vierelle"). Luokka kertoo taitolle, että
+       * lohkossa on kelluva kuva; itse kellutus ja mitat ovat
+       * CSS:ssä ja voimassa vasta ≥ 700 px:n ruudulla.
+       *
+       * Myös selattava galleria: nuolet ovat kuvan päällä kolmanneksen
+       * levyisinä osuma-alueina, joten ne kutistuvat kuvan mukana eikä
+       * mikään jää tavoittamattomiin.
+       */
+      lohko.classList.add('kainalo');
     } else {
       if (selite) lohko.appendChild(selite);
       if (lahde) lohko.appendChild(lahde);

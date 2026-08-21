@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v967 — KAINALOKUVAT: teemasivujen nostojen ja gallerioiden kuvat ovat nyt oikeassa kainalossa (42 % palstasta, pystykuvat 30 % + korkeuskatto) ja leipateksti juoksee kuvan vierella; kapealla nakymalla kuvat taysleveina kuten ennen. Tarkista: pari teemasivua levealla ja kannykalla (esim. Ateenan Arki ja tavat)',
   'v966 — XI\'AN JA VARANASI: uudet lehdet (Ming-muurikaupungin kartta 9 kohteella; ghatien kartta 8 kohteella + Sarnathin kainalo). KAKKOSSIVU-UUDISTUS: kaupunki-sivun otsikko on nyt "X pintaa syvemmalta" ja teemasivut palasivat kategoriatason otsikoihin (v964:n omat nimet pois). HUOM: molempien saarivi puuttuu viela (Open-Meteon kiintio). Tarkista: molempien kartta ja Matkaopas, parin lehden kakkossivu',
   'v965 — SAMARKAND: uusi lehti (kartta 9 kohteella, Registan–Gur-e-Amir–Shah-i-Zinda; 27 kuvaa mm. Prokudin-Gorski ja Verestsagin 1870). HUOM: saarivi puuttuu viela — Open-Meteon paivakiintio taynna, taydennetaan kiintion auettua. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v964 — KAKKOSSIVUJEN OMAT NIMET (vaihtoehto A): kaikilla 90 teemasivulla kaupunkikohtainen osasto-otsikko vakionimen sijasta (esim. Kioto: Tuhat vuotta pääkaupunkina; Mosul: Messinkiin upotettu hopea; Berliini: Aurinkoristi ja Trabantin vaihteisto). Sivu-id:t ja visat ennallaan. Tarkista: avaa muutama kakkossivu',

@@ -7239,13 +7239,16 @@ body.katselu #newgame-btn { display: none; }
  * pitkä teksti venyttäisi fit-content-kehystä palstan levyiseksi.
  */
 /*
- * Kuvat palstansa täyteen leveyteen KAIKILLA ruuduilla (omistajan
+ * Kuvat palstansa täyteen leveyteen KAPEALLA RUUDULLA (omistajan
  * toive 5.8.2026 + 6.8.2026 "levitä iphonella pystykuvat koko
  * leveyteen"): korkeuskatot jättivät kuvan kellumaan kapeana
- * keskelle. Leveys määrää koon ja korkeus seuraa kuvasuhdetta —
- * pystytaitossa palsta on puolikas, joten pystykuva ei kasva
- * kohtuuttomaksi; puhelimella pystykuva saa olla korkea, se on
- * lehden kuva eikä pikkukuvake.
+ * keskelle. Leveys määrää koon ja korkeus seuraa kuvasuhdetta;
+ * puhelimella pystykuva saa olla korkea, se on lehden kuva eikä
+ * pikkukuvake.
+ *
+ * Tämä on nyt puhelimen sääntö. Leveällä ruudulla kuva kutistuu
+ * kainaloon ja teksti juoksee sen vierellä — ks. "KAINALOKUVA"
+ * alempana (omistajan palaute 21.8.2026).
  */
 .wiki-nosto .kuvakehys {
   width: 100%;
@@ -7278,19 +7281,13 @@ body.katselu #newgame-btn { display: none; }
  * "teksti kahteen palstaan leveissä kohdissa" — ja "muihinkin
  * alisivuihin sama").
  *
- * Yksi malli kaikille ≥ 700 px:n leveyksille: kuva täysleveänä
- * jutun yllä (korkeuskatto 520 px, kuvasuhde säilyy) ja leipäteksti
- * KAHDELLA PALSTALLA sen alla, ohut välipalstaviiva keskellä — kuin
- * sanomalehden juttu. Palstalohko on lyhyt (leipäteksti on 440–660
- * merkkiä), joten molemmat palstat näkyvät ruudulla yhtä aikaa eikä
- * lukija joudu vierittämään edestakaisin.
+ * KUVATON nosto: leipäteksti KAHDELLA PALSTALLA, ohut välipalstaviiva
+ * keskellä — kuin sanomalehden juttu. Palstalohko on lyhyt
+ * (leipäteksti on 440–660 merkkiä), joten molemmat palstat näkyvät
+ * ruudulla yhtä aikaa eikä lukija joudu vierittämään edestakaisin.
+ * Kapea ruutu (alle 700 px) pysyy yhtenä palstana.
  *
- * Tämä KORVASI kelluvan kuvataiton (float 56 % + joka toinen nosto
- * eri puolelle, v220–v299): kellunta vaati kolme erillistä
- * korjausta eri leveyksillä (romahtava prosenttileveys, sanan
- * levyinen tekstisuikale, venyvät pystykuvat) — palstataitossa
- * näitä erikoistapauksia ei ole, ja 700–999 ja ≥ 1000 px käyttäytyvät
- * täsmälleen samoin. Kapea ruutu (alle 700 px) pysyy yhtenä palstana.
+ * KUVALLINEN nosto: kainalokuva, ks. seuraava lohko.
  */
 @media (min-width: 700px) {
   .wiki-nosto img { max-height: 520px; }
@@ -7307,29 +7304,82 @@ body.katselu #newgame-btn { display: none; }
   .wiki-nosto .leipa .teksti { max-width: none; }
 
   /*
-   * PYSTYKUVA SAA TEKSTIN VIEREENSÄ (omistajan toive 5.8.2026):
-   * korkea kapea kuva täysleveänä jättäisi molemmin puolin tyhjää
-   * ja venyttäisi sivun pitkäksi. Luokan .pysty antaa js/ui.js, kun
-   * kuvan luonnollinen korkeus ylittää leveyden selvästi. Vasen
-   * palsta = kuva kuvateksteineen, oikea = leipäteksti YHTENÄ
-   * palstana (kahdelle ei ole tilaa) ja Lue lisää sen alla.
+   * ── KAINALOKUVA (omistajan palaute 21.8.2026) ──
+   *
+   * "ruokakuvat kannattaisi pienentää pienemmiksi ja laittaa
+   * leipäteksti juoksemaan sen vierelle. Sivun alin kuva ja sen
+   * toinen vaihtoehto on pysty joka levittäytyy aivan liian
+   * korkeaksi. nämäkin kuvat voisi ehkä mielummin olla kainalokuvia
+   * niin että teksti juoksee sivussa."
+   *
+   * Kuva kutistuu 42 prosenttiin palstasta, kelluu oikeaan laitaan
+   * ja leipäteksti juoksee sen vierellä. Kuvateksti ja lähderivi
+   * ovat kuvan alla KAINALON SISÄSSÄ (ne ovat kehyksen lapsia),
+   * joten ne eivät irtoa kuvastaan.
+   *
+   * AINA OIKEALLE, ei joka toinen eri puolelle. Kolme syytä:
+   * anfangi kelluu vasemmalla, ja vasen kainalo työntäisi sivun
+   * aloituskirjaimen keskelle palstaa; leipätekstin vasen reuna
+   * pysyy samassa linjassa otsikoiden kanssa, jolloin silmä löytää
+   * rivin alun joka kerta samasta kohdasta; ja vuorottelu on
+   * aukeaman keino — yhdessä alle 900 pikselin arkissa se näyttää
+   * levottomalta, ei lehtimäiseltä.
+   *
+   * Kellunta oli käytössä kerran ennenkin (v220–v299) ja kaatui
+   * kolmeen vikaan. Ne on nyt korjattu nimeltä:
+   *   1. romahtava prosenttileveys → 42 % vasta ≥ 700 px, jolloin
+   *      tekstikaistaa jää vähintään ~330 px eli reilut 40 merkkiä;
+   *   2. sanan levyinen tekstisuikale → sama asia toisin päin: alle
+   *      700 px:n ruudulla kellutusta ei ole lainkaan;
+   *   3. venyvät pystykuvat → oma leveys ja korkeuskatto alla.
+   *
+   * Luokan .kainalo antaa piirto (js/maalehti.js) jokaiselle
+   * kuvalliselle nostolle, myös selattavalle gallerialle: Ateenan
+   * evzoni-galleria oli juuri se lohko, jonka pystykuvista omistaja
+   * huomautti. Nuolet ovat kuvan päällä kolmanneksen levyisinä
+   * osuma-alueina, joten ne kutistuvat kuvan mukana.
    */
-  .wiki-nosto.pysty {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: 2rem;
-    align-items: start;
+  .wiki-nosto.kainalo .kuvakehys {
+    float: right;
+    width: 42%;
+    margin: 0.2rem 0 0.7rem 1.6rem;
   }
 
-  .wiki-nosto.pysty .kulttuuri-otsikkorivi { grid-column: 1 / -1; }
-
-  .wiki-nosto.pysty .kuvakehys { grid-column: 1; }
-
-  .wiki-nosto.pysty .leipa {
-    grid-column: 2;
-    columns: 1;
+  /*
+   * Kelluvan kuvan vieressä teksti on YHDESSÄ palstassa: kaista on
+   * jo puolikas, eikä puolikasta jaeta enää kahtia. `columns: auto`
+   * eikä `columns: 1` — yhden palstan multicol-laatikko on yhä
+   * multicol-laatikko, se muodostaa oman muotoilukontekstinsa eikä
+   * kierrä kellujaa lainkaan, vaan latoisi tekstin kapeaksi
+   * suikaleeksi kuvan viereen koko lohkon matkalta.
+   */
+  .wiki-nosto.kainalo .leipa {
+    columns: auto;
+    column-rule: none;
   }
 
+  /*
+   * PYSTYKUVALLE OMA MITTA. Sama 42 % antaisi 2:3-kuvalle noin 500
+   * pikselin korkeuden — juuri sitä omistaja moitti. 30 prosentissa
+   * 2:3-kuva on noin 400 px ja 3:4-kuva noin 355 px, eli katon alla
+   * ilman että katto ehtii vaikuttaa. Se on tarkoitus: kun katto ei
+   * pure, kuva täyttää kehyksensä eikä kuvatekstin alle jää kuvaa
+   * leveämpää reunusta.
+   *
+   * Katto 420 px on varmistus poikkeuksellisen kapealle kuvalle
+   * (1:2 tai kapeampi). `object-fit: contain` pitää huolen siitä,
+   * ettei katto koskaan litistä kuvaa väärään muotoon — kuva jää
+   * kehyksensä sisään omissa mittasuhteissaan.
+   *
+   * Luokan .pysty antaa piirto kuvan latauduttua, kun luonnollinen
+   * korkeus ylittää leveyden selvästi.
+   */
+  .wiki-nosto.kainalo.pysty .kuvakehys { width: 30%; }
+
+  .wiki-nosto.kainalo.pysty .kuvakehys img {
+    max-height: 420px;
+    object-fit: contain;
+  }
 
   /* Lehtimaan pääkirjoitus etusivulla taittuu samalla tavalla. */
   .dialog.lehti #arrival-maa-intro {
@@ -10877,6 +10927,14 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .wiki-kategoria.yksipalsta .wiki-nosto .leipa {
   columns: 1;
   column-rule: none;
+}
+
+/* Sama sääntö koskee kainalokuvaa (21.8.2026): kelluva kuva on
+ * lehden taittoa, ja liitteessä kuva saa olla siinä missä on. */
+.wiki-kategoria.yksipalsta .wiki-nosto .kuvakehys {
+  float: none;
+  width: 100%;
+  margin: 0 auto 0.6rem;
 }
 
 .wiki-kategoria.yksipalsta .leipa-aloitus {
