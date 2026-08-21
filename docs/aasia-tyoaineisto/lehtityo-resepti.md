@@ -135,3 +135,8 @@ Nämä ovat Raamatussa (Kuvat ja lähteet).
   (Samarkand-malli v965) ja kirjoita oppaan sääjakso en-Wikipedian
   sääruudun varaan sen ääneen sanoen; Fable täydentää rivin
   omana versionaan.
+- KANSIKARUSELLI (omistaja 21.8.2026): etusivun kolme kansikuvaa
+  ovat LAAJOJA YLEISKUVIA kaupungin eri puolilta tunnetuimmista
+  kohdista (siluetti, aukio, ranta, maamerkki ympäristössään).
+  EI yhtään yksityiskohta-, sisä-, reliefi-, ruoka- tai esinekuvaa
+  kannessa — ne kuuluvat nostoihin ja jaksoihin.

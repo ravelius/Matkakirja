@@ -24,6 +24,7 @@ import {
 import {
   naytaMaaTunnusluvut, paivitaMediarivit, piirraKategoria,
   piirraMaaEtusivu, piirraMaaNumerotSivu, rakennaSisallysLista,
+  sivunOtsikko,
 } from './maalehti.js';
 import { asetaKuva } from './media.js';
 import {
@@ -1286,13 +1287,17 @@ export function paivitaTutkiAlapalkki(ui) {
     ei.parentElement?.insertBefore(palkki, ei);
   }
 
-  // Aihe nappien alle: mihin sivulle kumpikin suunta vie.
+  // Aihe nappien alle: mihin sivulle kumpikin suunta vie. Nimi on
+  // sama kuin sivun oma otsikko (sivunOtsikko) — pelkkä nimi-kenttä
+  // näytti kaupunki-sivulle "Rooma", vaikka sivu on "Rooma pintaa
+  // syvemmältä" (omistajan havainto 21.8.2026).
   const sivunNimi = (i) => {
     // Sivu 0 on molemmissa lehdissä nimiö ja esittely. Maalehdessä
     // se luki ennen "Sisällys", koska sisällysluettelo oli oma
     // sivunsa — nyt luettelo on vain alapalkin pop-upissa.
     if (i <= 0) return 'Etusivu';
-    return ui.lehtitila.tutkiSivut?.[i - 1]?.nimi ?? '';
+    const sivu = ui.lehtitila.tutkiSivut?.[i - 1];
+    return sivu ? sivunOtsikko(sivu) : '';
   };
   const nyt = ui.lehtitila.tutkiSivu ?? 0;
   const edellinen = palkki.querySelector('.edellinen');

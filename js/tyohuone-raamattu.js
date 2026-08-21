@@ -505,6 +505,17 @@ export const RAAMATTU = {
           + 'rajoitettua — asiallisesti ja lyhyesti, ilman '
           + 'pelottelua; pelaajaa ei jätetä kuvittelemaan että kohde '
           + 'on tavallinen lomakohde jos se ei ole.',
+        'KANSIKARUSELLI ON KOLME LAAJAA YLEISKUVAA (omistaja '
+          + '21.8.2026: "kolme kuvaa pitäisi olla ennemmin laajoja '
+          + 'yleiskuvia kaupungin eri puolilta tunnetuimmista '
+          + 'kohdista. ei saisi olla ollenkaan yksityiskohtakuvaa '
+          + 'näissä"): kaupunkilehden etusivun ensimmäisen '
+          + 'kuvakarusellin kolme kansikuvaa ovat laajoja näkymiä — '
+          + 'siluetteja, aukioita, rantoja, maamerkki ympäristössään '
+          + '— kaupungin ERI puolilta. Lähikuvat, sisäkuvat, '
+          + 'reliefit, ruoka ja esineet kuuluvat nostoihin ja '
+          + 'jaksoihin, eivät kanteen. Koskee myös vanhoja lehtiä: '
+          + 'yksityiskohtakuvat vaihdetaan laajoihin.',
         'TUHOUTUNEEN KAUPUNGIN NYKYKUVAT (omistaja 20.8.2026): '
           + 'sodassa tai katastrofissa vaurioituneesta kaupungista '
           + 'näytetään MYÖS tuoreita kuvia, vaikka niissä näkyy '
