@@ -2176,6 +2176,53 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 21.049, etela: 21.0225, lansi: 105.828, ita: 105.865 },
     palvelutiet: true,
   },
+  ulanbator: {
+    /*
+     * ULAN BATOR (21.8.2026). Ruutu on 5,5 × 5,4 km ja se kattaa
+     * Tuulin laakson pohjoisrannan koko kaupunkiytimen: luoteessa
+     * Gandantegchinlenin luostarikukkula, keskellä Sükhbaatarin
+     * aukio ja kansallismuseo, lännessä rautatieasema, etelässä
+     * kansallisstadion, Bogd Khanin talvipalatsi ja Zaisanin
+     * muistomerkki Tuulin toisella puolella.
+     *
+     * RUUTU ON NELIÖ SAMASTA SYYSTÄ KUIN VARANASISSA. Kohteet ovat
+     * 4,3 km korkealla ja vain 2,6 km leveällä nauhalla, koska
+     * kaupunki kasvaa laaksoa pitkin; tiukka rajaus olisi piirtynyt
+     * pystykaistaleeksi. Itä- ja länsireunaa levennettiin niin, että
+     * kuvasuhde on 1,00 — samalla ruutuun tuli koko laakson
+     * poikkileikkaus, joka on tämän kaupungin luettavin piirre:
+     * jokilaakso, sen pohjoispuolinen ruutukaava ja etelässä
+     * Bogd Khan -vuoren rinne.
+     *
+     * BOGD KHAN -VUORI JA MANJUSRIN LUOSTARIN RAUNIOT EIVÄT OLE
+     * KARTALLA EIVÄTKÄ KAINALOSSA. Vuoren huippu on en-Wikipedian
+     * koordinaatista laskien 13,8 km ja Manjusri 18 km keskustasta
+     * eli kolmesta viiteen kertaa kauempana kuin yksikään kainalo
+     * tässä kartastossa (Medinan Quba 3,5 km, Varanasin Sarnath
+     * 7 km). Vuori kerrotaan lehden nostossa, oppaassa ja kuvissa —
+     * Medinan Uhud-vuoren ratkaisu. Manjusri jää pois nimenomaan
+     * etäisyyden takia, ei tiedon puutteen: sillä on oma artikkeli
+     * ja infoboksin koordinaatti (ks. tarkistusraportti).
+     *
+     * ETELÄREUNA ON VÄLJÄ TARKOITUKSELLA. Zaisanin muistomerkki on
+     * ruudun eteläisin kohde ja osuu 89 prosentin korkeudelle;
+     * ilman lisätilaa sen numeroympyrä leikkautuisi alareunaan.
+     * Mittakaavajana on vasemmassa alakulmassa eikä Zaisan ole sen
+     * lähelläkään (jana 3,2 % / kohde 70 % leveydestä).
+     *
+     * PALVELUTIET PÄÄLLÄ, JA ERO ON MITATTU. Kartta piirrettiin ensin
+     * ilman lippua: aineistoa tuli 2 982 elementtiä, ja kortteleiden
+     * sisukset sekä jurtta-alueiden khashaa-kujat pohjois- ja
+     * eteläreunalla jäivät tyhjäksi paperiksi. Lipun kanssa
+     * elementtejä on 5 826 ja kaupunki näkyy kaupunkina. Ulan
+     * Batorissa nimenomaan asuinalueiden pikkutiet on merkitty
+     * OSM:ään service-teiksi, samoin luostarin ja talvipalatsin
+     * pihatiet — sama tilanne kuin Pekingissä, Medinassa ja
+     * Samarkandissa.
+     */
+    rajat: { pohjoinen: 47.928, etela: 47.879, lansi: 106.8646, ita: 106.9377 },
+    palvelutiet: true,
+  },
 };
 
 /*

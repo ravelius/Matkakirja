@@ -38762,4 +38762,502 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * ULAN BATOR (Opus 21.8.2026). Alusta asti tehty lehti: kohteella
+   * ei ollut kohdekarttaa, nähtävyysjuttuja eikä kategorioita ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian raakateksteistä
+   * (action=raw, haettu 21.8.2026): Ulaanbaatar, Winter Palace of the
+   * Bogd Khan, Naadam, Ger district, Yurt, Ulaanbaatar railway
+   * station, Sükhbaatar Square, National Museum of Mongolia, Choijin
+   * Lama Temple, Gandantegchinlen Monastery, Zaisan Memorial, Bogd
+   * Khan Mountain, National Sports Stadium (Mongolia), Chinggis Khaan
+   * International Airport ja Bogd Khan. Pohjana ovat Fablen agenttien
+   * faktapohja ja siitä tehty riippumaton tarkistus
+   * (docs/aasia-tyoaineisto/faktapohja-ulanbator.md ja
+   * tarkistus-ulanbator.md); tarkistuksen korjaukset on tehty.
+   *
+   * NÄYTTÖNIMI ON "ULAN BATOR" eikä "Ulaanbaatar". en-Wikipedian
+   * pääartikkeli on nykytransliteraatiolla, mutta laudan oma nimi
+   * (js/packs/asia.js), visa ja saapumisteksti käyttävät vanhaa
+   * suomalaista asua, ja Kappadokian ennakkotapaus sanoo, että
+   * lehti seuraa laudan nimeä. Nykyasu Ulaanbaatar kerrotaan
+   * lukijalle H1-nostossa, jossa se on itse asia.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 21.8.2026 ja sama kuin Samarkandissa
+   * ja Xi'anissa: buddhalaisuus historiallis-kulttuurisena ilmiönä ja
+   * kunnioittavasti, ei nykypolitiikkaa. POIS JÄTETTY KOKONAAN:
+   * vuoden 2008 mellakat ja niiden uhrit, Sükhbaatarin aukion
+   * nimikiista 2013–2016 puolueineen, vuoden 1990 mielenosoitukset
+   * puoluepolitiikkana, kaupungin nykyinen ilmanlaatu- ja
+   * liikennekeskustelu sekä stadionin omistusriidat. 1930-LUVUN
+   * USKONNOLLISET VAINOT mainitaan kahdessa kohdassa yhdellä
+   * lauseella ilman uhrilukuja ja ilman yksityiskohtia (Gandanin
+   * juttu ja H1-nosto); en-Wikipedian mainitsema uhriluku on
+   * tarkoituksella jätetty pois. Vuosien 1911 ja 1921 tapahtumat
+   * kerrotaan hallinnollisina käänteinä ilman taisteluita:
+   * paroni Ungern-Sternbergin valtaus ja siihen liittyneet
+   * väkivallanteot on jätetty pois kokonaan. Zaisanin muistomerkki on
+   * kartalla ja omana juttunaan, mutta se kerrotaan rakennuksena ja
+   * näköalapaikkana — toinen maailmansota mainitaan neutraalina
+   * historiana ilman osapuolikehystä.
+   *
+   * KOLME FAKTAPOHJAN KOHTAA, JOTKA EIVÄT PITÄNEET, on korjattu:
+   * 1) Faktapohja kuvasi gerin kattosauvat kaarevina ja pystytysajan
+   *    "puolesta tunnista pariin tuntiin". en-Wikipedian "Yurt"
+   *    sanoo nimenomaan Mongolian gerista, että sillä on SUORAT
+   *    kattosauvat ja yksi tai useampi tolppa kannattamassa
+   *    kattokehää, ja että koko pystytys kestää noin kaksi tuntia.
+   *    Kaarevat sauvat ovat artikkelin yleiskuvaus muista
+   *    yurttaperinteistä. Oppaan jakso 3 seuraa Mongolia-kohtaa.
+   * 2) Faktapohja sanoi H4-nostossa, että Gandan avattiin uudelleen
+   *    "sodan jälkeen". Artikkeli sanoo tammikuu 1944 eli kesken
+   *    sodan; jutussa lukee vuosiluku eikä ajallista määrettä.
+   * 3) Faktapohja väitti, ettei kansallisstadionilla ja Manjusrin
+   *    luostarilla ole koordinaattia. Molemmilla on: stadionilla
+   *    artikkelin lopun {{Coord}} ja Manjusrilla oma artikkeli
+   *    infoboksikoordinaatteineen. Stadion on siksi kartalla;
+   *    Manjusri jää pois etäisyyden (18 km) takia.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat lehden tekstejä:
+   * 1) KAUPUNGIN KORKEUS. Johdanto sanoo "about 1300 m", Geography-
+   *    osio ja infoboksi 1350 m ja ilmastolaatikko antaa aseman
+   *    korkeudeksi 1303 m. Teksteissä lukee "noin 1 300 metriä",
+   *    joka on kaikkien lukujen yhteinen muoto ja sama kuin visassa.
+   * 2) BOGD KHAN -VUOREN KORKEUS. "Ulaanbaatar" sanoo 2 250 m,
+   *    "Bogd Khan Mountain" 2 261 m. Teksteissä ei ole täsmällistä
+   *    lukua vaan "runsaat kaksituhatta kaksisataa metriä"
+   *    (maakartat.js:n Moreebin dyyni -sääntö).
+   * 3) LUOSTARIN SIIRTOJEN MÄÄRÄ. Artikkelin johdanto sanoo 29
+   *    siirtoa, mutta saman artikkelin oma luettelo antaa 25
+   *    päivättyä sijaintia. Nostossa käytetään artikkelin omaa
+   *    lukua 29, ja minitehtävän vastaus on sama.
+   * 4) JURTTA-ALUEIDEN OSUUS. Demographics-osio sanoo kaksi
+   *    kolmasosaa, Pollution-osio "almost half". Käytetty
+   *    Demographics-osion lukua, joka on artikkelin oma
+   *    väestötilastokohta.
+   * 5) AVALOKITESVARAN PATSAAN KORKEUS. Johdanto sanoo 26 m ja
+   *    historiaosio 26,5 m uudelle (1996) ja 25,6 m vanhalle (1913)
+   *    patsaalle. Gandanin jutussa on historiaosion tarkemmat luvut
+   *    ja ero kerrotaan lukijalle.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Mongolia (johdanto ja
+   * asia-artikkelit.js:n intro), Tšingis-kaani ja 1200-luvun
+   * maaimperiumi (H2-nosto ja Sükhbaatarin aukion juttu), jurtta eli
+   * ger (K2-nosto ja oppaan jakso 3), arot ja vuoret noin 1 300
+   * metrissä (oppaan jakso 2) sekä noin puolet maan väestöstä
+   * pääkaupungissa (matkailijalle-kappale ja intro). Historia-sivun
+   * minitehtävä kysyy luostarikaupungin siirtojen määrää, jota visa
+   * ei kysy, ja vastaus on samalla sivulla nostossa H3.
+   *
+   * AIHETOISTO, JOKA ON TIETOINEN (Mekan Jabal al-Nourin ja Xi'anin
+   * terrakotta-armeijan ennakkotapaus): Gandanista on kolme kuvaa
+   * kolmelta etäisyydeltä — kansikuvassa koko Megzed Janraisegin
+   * temppeli, oppaan etusivukuvassa sen sisällä seisova patsas ja
+   * kohdekartan jutussa pihan rukousmyllyt. Jurtta-alueista on kaksi
+   * kuvaa (kansikuvan laaksonäkymä ja K2-noston rinnekuva) ja
+   * gerista kaksi (K4:n talvikuva ja oppaan runkokuva) — eri
+   * tiedostot, eri etäisyydet ja eri asia kussakin.
+   *
+   * SÄÄRIVI PUUTTUU js/packs/saatiedot.js:stä, ja se on tietoinen
+   * jättö eikä unohdus — sama tilanne kuin Samarkandissa ja
+   * Varanasissa. Open-Meteon arkisto (ERA5) vastasi koko työn ajan
+   * 429:llä ja viestillä "Daily API request limit exceeded. Please
+   * try again tomorrow": kontin jaetun osoitteen vuorokausikiintiö
+   * oli käytetty loppuun eikä se nollaudu ennen UTC-vuorokauden
+   * vaihdetta. Lukuja ei keksitä muusta lähteestä, koska
+   * vuosigraafin lähderivi lupaa nimenomaan ERA5:n. Oppaan jakso 5
+   * nojaa siksi en-Wikipedian oman sääruudun 1991–2020-normaaleihin
+   * (lähteinä Pogoda.ru.net ja NOAA:n WMO-normaalit), ja se on
+   * sanottu jaksossa ääneen. Kun ERA5-rivi lisätään, jakso 5
+   * kirjoitetaan rivin omista luvuista.
+   *
+   * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
+   */
+  ulanbator: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ulan Bator',
+      johdanto: 'Mongolian pääkaupunki Tuul-joen laaksossa, neljän '
+        + 'vuoren keskellä. Kerrostalojen ja lasitornien takana alkavat '
+        + 'jurtta-alueet, joissa asuu kaksi kolmasosaa kaupunkilaisista.',
+      kansikuvat: [
+        {
+          tiedosto: 'Ulaanbaatar, Mongolia (35483549626).jpg',
+          selite: 'Choijin Laman temppelialueen matalat katot ja valkoinen '
+            + 'muuri jäävät keskustan lasitornien eteen kuin oma '
+            + 'saarekkeensa.',
+          lahde: 'Christopher Michel from San Francisco, USA, '
+            + 'Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'UBandGerDistrict.jpg',
+          selite: 'Tuul-joen laakso ylhäältä: etualalla uusia kerrostaloja '
+            + 'joen rannassa ja takana rinteet, joille jurtta-alue nousee '
+            + 'vuorten juurelle asti.',
+          lahde: 'Ulaanbaatour, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Gandantegchinlen Monastery - Gandan - Ulan Bator Ulaanbaatar Mongolia (6249147762).jpg',
+          selite: 'Gandanin luostarin korkein rakennus, Megzed Janraisegin '
+            + 'temppeli, nousee valkoisena ja vihreäkattoisena tyhjän '
+            + 'betonipihan takaa.',
+          lahde: 'David Berkowitz from New York, NY, USA, '
+            + 'Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: aukio, kerrostalot ja vuoren metsä — kaupungin
+       * kolme kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (hallinnon keskus, neuvostoajan ruutukaava, suojeltu vuori).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Sükhbaatar Square.jpg',
+          selite: 'Sükhbaatarin aukio on niin laaja, että sen yli kulkeva '
+            + 'ihminen näkyy vain pisteenä lasitornien ja pylväikköjen '
+            + 'välissä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Ulaanbaatar skyline (2536894811).jpg',
+          selite: 'Neuvostoajan elementtitaloja rivissä, ja niiden takana '
+            + 'kaupunki päättyy vuorenrinteisiin.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Forest in Mongolia, Bogd khaan mountain 20220903.jpg',
+          selite: 'Bogd Khan -vuoren rinteellä kasvaa mäntyä ja '
+            + 'lehtikuusta heti kaupungin eteläpuolella.',
+          lahde: 'Orgio89, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Talvipalatsi, joka jäi jäljelle',
+          tiedosto: 'Winter Palace of the Bogd Khan.jpg',
+          teksti: 'Talvipalatsi rakennettiin vuosina 1893–1903 maan ylimmän '
+            + 'hengellisen johtajan, kahdeksannen Jebtsundamba '
+            + 'Khutuktun, asunnoksi. Kun Qing-dynastia romahti, hänet '
+            + 'julistettiin 29. joulukuuta 1911 Bogd Khaniksi ja '
+            + 'itsenäisen Mongolian hallitsijaksi. Hallitsijalla oli '
+            + 'neljä residenssiä, ja tämä on niistä ainoa jäljellä. '
+            + 'Kokonaisuuteen kuuluu parikymmentä rakennusta, joista '
+            + 'kuusi on temppeleitä, ja museon 8 600 esineen joukossa '
+            + 'ovat valtaistuin, vuode, koristeltu juhlager ja parit '
+            + 'saappaita, jotka Venäjän keisari Nikolai II lahjoitti.',
+          selite: 'Talvipalatsin kaksikerroksinen valkoinen päärakennus '
+            + 'kullattuine ikkunankehyksineen ja vihreine peltikattoineen '
+            + 'seisoo nykyisten kerrostalojen keskellä.',
+          lahde: 'Chongkian, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Winter Palace of the Bogd Khan',
+        },
+        {
+          otsikko: 'Aidan takana ger, aidan takana talo',
+          tiedosto: 'Ger District.jpg',
+          teksti: 'Kaksi kolmasosaa kaupungin asukkaista asuu '
+            + 'jurtta-alueilla. Ne eivät ole telttaleirejä vaan '
+            + 'tonttikaupunkia: jokainen khashaa on aidattu puuaidoin, ja '
+            + 'aidan sisällä seisoo pyöreä ger, kiinteä talo tai '
+            + 'molemmat. Alueet laajenivat nopeasti 1990-luvun jälkeen, '
+            + 'kun maaseudulta muuttaneet perheet saivat oikeuden hakea '
+            + 'omaa tonttia kaupungista. Moni on sittemmin korvannut '
+            + 'gerinsä puu- tai tiilitalolla. Kadut ovat silti usein '
+            + 'sorapintaisia, eikä vesijohtoa ja viemäriä ole kaikkialle '
+            + 'saatu vedettyä.',
+          selite: 'Jurtta-alue peittää kokonaisen kukkulanrinteen: '
+            + 'aidattuja pihoja ja kirjavia peltikattoja niin kauas kuin '
+            + 'sumu antaa nähdä.',
+          lahde: 'Zazaa Mongolia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ger district',
+        },
+        {
+          otsikko: 'Kolme miesten leikkiä',
+          tiedosto: 'Naadam 2023 - Horse racing 02.jpg',
+          teksti: 'Heinäkuun 11. päivä kaupunki siirtyy kansallisstadionille: '
+            + 'silloin alkaa Naadam, jonka kolme lajia on kirjattu jo '
+            + '1200-luvun Mongolien salaiseen historiaan. Painissa 512 tai '
+            + '1 024 painijaa kohtaa toisensa pudotuspelissä ilman '
+            + 'aikarajaa, ja häviää se, joka koskettaa maata muulla kuin '
+            + 'jaloilla tai käsillä. Hevoskilpailut ovat 15–30 kilometrin '
+            + 'maastoajoja, joissa ratsastavat 5–13-vuotiaat lapset ja '
+            + 'joissa mitataan ennen muuta hevosta. Jousella ammutaan '
+            + 'pinottuja sur-sylintereitä, miehet 75 ja naiset 65 metristä.',
+          selite: 'Naadamin hevoskilpailu maalisuoralla: seitsemän hevosta '
+            + 'laukkaa aron poikki katsojarivin ohi.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC0)',
+          wiki: 'Naadam',
+        },
+        {
+          otsikko: 'Maailman kylmin pääkaupunki',
+          tiedosto: 'Ulan Bator - panoramio (13).jpg',
+          teksti: 'Ulan Batorin vuoden keskilämpötila on 0,2 astetta, eikä '
+            + 'yksikään toinen pääkaupunki ole kylmempi. Syitä on neljä: '
+            + 'korkea sijainti, korkea leveysaste, satojen kilometrien '
+            + 'matka lähimmälle rannikolle ja Siperian yli levittäytyvä '
+            + 'kylmä korkeapaine. Tammikuun aamuina lämpötila on '
+            + 'tyypillisesti 36–40 pakkasastetta, koska tyynellä säällä '
+            + 'kylmin ilma painuu laakson pohjalle. Kaupunki on lisäksi '
+            + 'epäjatkuvan ikiroudan vyöhykkeellä: varjoisilla paikoilla '
+            + 'routa ei sula kesälläkään, ja rakentaminen on siellä '
+            + 'vaikeampaa kuin avoimilla tonteilla.',
+          selite: 'Matalalta paistava aurinko lämmittää lumista '
+            + 'lehtikuusikkoa, jonka takana seisoo valkea ger.',
+          lahde: 'AwOiSoAk KaOsIoWa, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ulaanbaatar',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Ulan Bator.- Gandan Monastery (3).JPG',
+          selite: 'Megzed Janraisegin temppelin sisällä seisoo kullattu '
+            + 'Janraiseg-patsas kattoon asti, ja sen jalustalle on '
+            + 'aseteltu kehystettyjä kuvia.',
+          lahde: 'PIERRE ANDRE LECLERCQ, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ulan Bator on Mongolian ainoa suurkaupunki, ja siellä '
+          + 'asuu noin puolet koko maan väestöstä. Matkailijan kaupunki on '
+          + 'silti pieni ja kävellen kierrettävä: Sükhbaatarin aukiolta on '
+          + 'muutama sata metriä kansallismuseoon ja Choijin Laman '
+          + 'temppeliin, ja Gandanin luostari on runsaan kilometrin '
+          + 'luoteessa. Etelässä joen suunnassa ovat kansallisstadion, '
+          + 'Bogd Khanin talvipalatsi ja Zaisanin kukkula. Kaupunki on '
+          + 'hallinnollisesti oma alueensa, jota ympäröi Tövin maakunta, '
+          + 'ja sen laidat jatkuvat rinteille jurtta-alueina.',
+        artikkeli: {
+          nimi: 'Matkailijan Ulan Bator',
+          taitto: 'opas',
+          teksti: 'Neljä vuorta, yksi jokilaakso ja kaupunki, joka muutti '
+            + 'paikkaa 29 kertaa ennen kuin jäi aloilleen.',
+          nosto: 'Bogd Khan -vuorta on suojeltu kauemmin kuin useimpia '
+            + 'maailman kansallispuistoja. Metsästys ja puunkaato '
+            + 'kiellettiin siellä jo 1700-luvun alussa, ja vuodesta 1778 '
+            + 'kaupungin päämies anoi Pekingiltä varat vuotuisiin '
+            + 'juhlamenoihin vuoren kunniaksi.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Tšingis-kaanin kansainvälinen lentoasema avattiin 4. '
+                + 'heinäkuuta 2021 noin viidenkymmenen kilometrin päähän '
+                + 'kaupungista etelään, ja se korvasi vanhan Buyant-Ukhaan '
+                + 'kentän aivan kaupungin laidalla. Kentältä ajetaan '
+                + 'moottoritietä ja Jaarmagin siltaa keskustaan. Junalla '
+                + 'kaupunkiin tullaan Trans-Mongolian rataa, joka '
+                + 'halkaisee kaupungin suunnilleen idästä länteen; '
+                + 'rautatieasemalta lähtee suoria vuoroja sekä Moskovaan '
+                + 'että Pekingiin ja lyhyempiä Irkutskiin, Erdenetiin ja '
+                + 'Sainshandiin. Kaupungin sisällä pääasiallinen '
+                + 'liikenneväline on bussi: vuonna 2021 kaupungissa oli '
+                + '950 bussia, 19 liikennöitsijää, 105 reittiä ja 1 169 '
+                + 'pysäkkiä, ja matkustajia oli puoli miljoonaa päivässä. '
+                + 'Mukana on nelisenkymmentä johdinautoa. Maksuvälineenä '
+                + 'on vuodesta 2015 ollut U Money -kortti. Pääkatu on '
+                + 'Rauhankatu, joka kulkee Sükhbaatarin aukion '
+                + 'eteläreunaa.',
+              kuva: {
+                tiedosto: 'Rear view of Ulaanbaatar JEA-800 trolleybus 2-018 on route 2 in 2017.jpg',
+                selite: 'Sininen johdinauto kaartaa risteyksestä '
+                  + 'lasitornien alla, ja vieressä odottaa vihreä bussi.',
+                lahde: 'Gary Todd from Xinzheng, China, '
+                  + 'Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Tuul-joen laaksossa noin 1 300 metrin '
+                + 'korkeudessa, ja sitä sanotaan neljän huipun '
+                + 'ympäröimäksi: lännessä Songino Khairkhan, pohjoisessa '
+                + 'Chingeltei, idässä Bayanzürkh ja etelässä metsäinen '
+                + 'Bogd Khan -vuori, joka nousee runsaaseen '
+                + 'kahteentuhanteen kahteensataan metriin. Vuori on '
+                + 'samalla raja: sen eteläpuolella alkaa aro ja '
+                + 'pohjoispuolella metsäaro. Ympäröivillä vuorilla kasvaa '
+                + 'mäntyä, lehtikuusta ja koivua, joen rannoilla poppelia, '
+                + 'jalavaa ja pajua. Leveyspiiri on suunnilleen sama kuin '
+                + 'Wienillä, Münchenillä ja Seattlella, mutta merta ei ole '
+                + 'satojen kilometrien säteellä. Hallinnollisesti kaupunki '
+                + 'on oma alueensa, joka jakautuu yhdeksään '
+                + 'kaupunginosaan ja niiden sisällä 204 khorooseen; '
+                + 'ympärillä on Tövin maakunta, jonka pääkaupunki '
+                + 'Zuunmod on 43 kilometrin päässä etelässä.',
+              kuva: {
+                tiedosto: 'Bogd Khan Uul from Ulaanbaatar.jpg',
+                selite: 'Kerrostalorivin takaa nousevat metsäiset '
+                  + 'vuorenharjanteet, jotka sulkevat laakson '
+                  + 'eteläreunan.',
+                lahde: 'Mieresch, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: ger',
+              teksti: 'Ger kootaan laajenevasta puisesta ristikkoseinästä '
+                + 'eli khanasta, ovenkarmista, kattosauvoista eli uneista '
+                + 'ja pyöreästä kattokehästä eli toonosta. Mongolialaisessa '
+                + 'gerissä kattosauvat ovat suoria ja kattokehää kannattaa '
+                + 'yksi tai useampi tolppa. Rungon päälle levitetään huopaa, '
+                + 'joka on huovutettu perheen omien lampaiden villasta, ja '
+                + 'sen päälle sään mukaan kangasta. Naulaa ei tarvita: '
+                + 'rakenne pysyy koossa köysistä ja katteiden painosta, ja '
+                + 'kokonaisuuden pystyttämiseen menee noin kaksi tuntia. '
+                + 'Purettuna ger kulkee kamelin tai jakin selässä. '
+                + 'Buddhalaisessa Mongoliassa kattokehä sai '
+                + 'dharmachakra-pyörän muodon, ja huopamattojen kuvioilla '
+                + 'on oma merkityksensä: alkhan khee eli vasarakuvio '
+                + 'tarkoittaa loputonta liikettä ja ulzii pitkää ikää.',
+              kuva: {
+                tiedosto: 'Yurt-construction-3.JPG',
+                selite: 'Gerin runko pystytysvaiheessa: punaiset '
+                  + 'kattosauvat säteilevät kattokehästä ristikkoseinälle, '
+                  + 'ja aluskate on juuri vedetty päälle.',
+                lahde: 'en:User:Tkn20, Wikimedia Commons (CC BY 2.5)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: rautatie karavaanin tilalle',
+              teksti: 'Vielä 1900-luvun alussa kaupungista lähti pohjoiseen '
+                + 'Kjahtaan ja kaakkoon Kalganiin lennätinlinja ja '
+                + 'viikoittainen posti, ja tavara kulki samoja reittejä '
+                + 'kamelikaravaanina. Rautatieasema avattiin 1949, ja '
+                + 'vuonna 1956 valmistui Trans-Mongolian rata, joka yhdisti '
+                + 'kaupungin sekä Moskovaan että Pekingiin. Karavaanireitin '
+                + 'vuosisadat päättyivät siihen. Samaan aikaan kaupunki '
+                + 'rakennettiin uudelleen: kaavoitus alkoi 1950-luvulla, '
+                + 'vanhat jurtta-alueet keskustassa korvattiin '
+                + 'elementtitaloilla, ja suurin osa nykyisestä ytimestä on '
+                + 'rakennettu vuosien 1960 ja 1985 välillä. Siltä ajalta '
+                + 'ovat myös kaupungin teatterit, elokuvateatterit ja '
+                + 'museot.',
+              kuva: {
+                tiedosto: 'Trans Mongolian Railway.jpg',
+                selite: 'Trans-Mongolian juna kaartaa vaunu vaunulta '
+                  + 'ruohoisen harjanteen ympäri kohti aron reunaa.',
+                lahde: 'User:Enzymes, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Ilmasto on kylmä puolikuiva, ja vuodessa on kaksi '
+                + 'hyvin erilaista puoliskoa. Kaupungin oman sääruudun '
+                + 'mukaan (normaalikausi 1991–2020) tammikuun keskilämpö '
+                + 'on 21,3 pakkasastetta ja päivien keskiylin 15,5 '
+                + 'pakkasastetta, kun taas heinäkuun keskilämpö on 19,0 '
+                + 'astetta ja keskiylin 25,2. Koko vuoden keskiarvo jää '
+                + '0,2 asteeseen. Sade on vähäistä, 267 millimetriä '
+                + 'vuodessa, ja siitä valtaosa tulee touko–syyskuussa; '
+                + 'heinäkuu on sateisin 74 millimetrillä ja tammikuu '
+                + 'kuivin kahdella. Aurinkoisimmat kuukaudet ovat huhti- '
+                + 'ja toukokuu, jolloin aurinko paistaa yli 260 tuntia. '
+                + 'Kävelijän kuukaudet ovat kesäkuu ja elokuu, ja '
+                + 'heinäkuun alkuun osuu Naadam. Mittausten ääripäät ovat '
+                + '39,0 astetta lämmintä heinäkuussa 1988 ja 43,9 astetta '
+                + 'pakkasta tammikuussa 1957.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki oli ensin liikkuva luostari, sitten '
+        + 'karavaanireitin kauppapaikka ja vasta lopuksi pääkaupunki. '
+        + 'Nimiä sillä on ollut viisi.',
+      tehtava: {
+        kysymys: 'Kuinka monta kertaa luostarikaupunkia siirrettiin, ennen '
+          + 'kuin se asettui nykyiselle paikalleen?',
+        vaihtoehdot: [
+          'Kolme kertaa',
+          'Yhdeksän kertaa',
+          '29 kertaa',
+          'Yli sata kertaa',
+        ],
+        oikea: 2,
+        fakta: 'Örgöö vaelsi jokivarsia pitkin 139 vuotta ja asettui '
+          + 'Selben ja Tuulin yhtymäkohtaan vasta vuonna 1778.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nimi, joka vaihtui viidesti',
+          tiedosto: 'Proclamation of Niislel Khuree.jpg',
+          teksti: 'Kaupunki sai perustettaessa 1639 nimen Örgöö eli palatsi, '
+            + 'ja lännessä siitä tuli venäjän kautta Urga. Vuonna 1651 '
+            + 'nimi oli Nomiin Khüree, viisauden khüree, ja 1706 Ikh '
+            + 'Khüree, suuri khüree, jonka kiinalainen vastine Da Kulun '
+            + 'kulkeutui länteen muodossa Kulun. Itsenäistymisen jälkeen '
+            + '1911 nimeksi tuli Niislel Khüree, pääkaupunkikhüree, koska '
+            + 'sekä hallitus että Bogd Khanin palatsi olivat siellä. '
+            + 'Nykyinen nimi annettiin 29. lokakuuta 1924: Ulaanbaatar, '
+            + 'punainen sankari. Länsimaissa käytettiin pitkään venäjän '
+            + 'kautta tullutta asua Ulan Bator, jonka myös Mongolian '
+            + 'posti hyväksyi.',
+          selite: 'Vuoden 1912 julistus, joka nimesi Ikh Khüreen '
+            + 'pääkaupungiksi: mongolinkielistä pystykirjoitusta ja '
+            + 'punaisia sinettileimoja silkillä.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Ulaanbaatar',
+        },
+        {
+          otsikko: 'Reitti, joka kulki tästä ennen kaupunkia',
+          tiedosto: 'Mongolian Ger.jpg',
+          teksti: 'Laakso oli tärkeä jo ennen kuin siinä oli kaupunkia. '
+            + 'Mongoli-imperiumin aikana 1206–1368 — sen perusti '
+            + 'Tšingis-kaani, ja siitä tuli historian suurin yhtenäinen '
+            + 'maavaltakunta — luonnollinen reitti pääkaupungista '
+            + 'Karakorumista kaanien synnyin- ja hautaseudulle Khentein '
+            + 'vuorille kulki juuri tästä. Tuul-joki johtaa Bogd Khan '
+            + '-vuoren pohjoispuolelle, joka erottuu arolla suurena '
+            + 'metsäsaarekkeena, ja vuorta suojeltiin varhain: '
+            + 'metsästys ja puunkaato kiellettiin sillä jo 1100- ja '
+            + '1200-luvulla. Myöhemminkin ylimystö kokoontui vuoren '
+            + 'juurelle vuosittaisiin ja kolmivuotisiin kokouksiinsa.',
+          selite: 'Yksinäinen ger seisoo aron laidalla, ja taustalla '
+            + 'näkyy matala vuorijono.',
+          lahde: 'Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Ulaanbaatar',
+        },
+        {
+          otsikko: 'Luostarikaupunki, joka vaelsi',
+          tiedosto: 'Jugder 001.jpg',
+          teksti: 'Örgöö perustettiin 1639 huopatelttaluostariksi ensimmäisen '
+            + 'Jebtsundamba Khutuktun eli Zanabazarin istuimeksi. '
+            + 'Ensimmäinen paikka oli Shireet Tsagaan -järvellä, runsaat '
+            + 'kaksisataa kilometriä lounaaseen nykyisestä kaupungista. '
+            + 'Sen jälkeen luostarikaupunkia siirrettiin 29 kertaa '
+            + 'Selengen, Orkhonin ja Tuulin jokivarsia pitkin, '
+            + 'kerran Sisä-Mongoliaan asti. Syyt olivat arkisia: laidun, '
+            + 'vesi ja tarvikkeet. Mitä suuremmaksi kaupunki kasvoi, sitä '
+            + 'harvemmin se liikkui, ja vuonna 1778 se asettui '
+            + 'lopullisesti Selben ja Tuulin yhtymäkohtaan Bogd Khan '
+            + '-vuoren juurelle.',
+          selite: 'Vuonna 1913 maalattu panoraama kaupungista: keskellä '
+            + 'Zuun Khüreen pyöreä temppelialue, vasemmalla Gandanin '
+            + 'kukkula ja alalaidassa joen takana Bogd Khanin palatsit.',
+          lahde: 'Jugder (Mongolian painter who painted it in 1913), '
+            + 'Wikimedia Commons (PD)',
+          wiki: 'Ulaanbaatar',
+        },
+        {
+          otsikko: 'Teekaravaanien risteyksessä',
+          tiedosto: 'Jugder 002.jpg',
+          teksti: 'Vuoden 1727 Kjahtan sopimus järjesti Venäjän ja Kiinan '
+            + 'välisen kaupan, ja reitti kulki Kjahtasta Urgan kautta '
+            + 'Gobin poikki Kalganiin ja sieltä vuorten yli Pekingiin. '
+            + 'Etelään vietiin siperialaisia turkiksia, pohjoiseen '
+            + 'kiinalaista kangasta ja myöhemmin teetä. Vuoteen 1908 '
+            + 'mennessä '
+            + 'kaupungissa oli venäläinen kortteli kauppiaineen, vuonna '
+            + '1863 rakennettu konsulaatti kirkkoineen ja postitoimistoineen '
+            + 'sekä kiinalainen kauppakaupunki Maimaicheng. Vuotuisen '
+            + 'kaupan arvoksi arvioitiin 25 miljoonaa ruplaa, siitä '
+            + 'yhdeksän kymmenesosaa kiinalaisilla. Naadamin ja suurten '
+            + 'juhlien aikaan väkeä oli yli satatuhatta.',
+          selite: 'Maalauksen yksityiskohta näyttää aidatut korttelit, '
+            + 'joen mutkat ja etelärannan palatsialueen vuoren juurella.',
+          lahde: 'Jugder (Mongolian painter who painted it in 1913), '
+            + 'Wikimedia Commons (PD)',
+          wiki: 'Ulaanbaatar',
+        },
+      ],
+    },
+  ],
 };

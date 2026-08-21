@@ -24057,4 +24057,356 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * ULAN BATORIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Kahdeksan
+   * kohdetta samassa järjestyksessä kuin kartalla, pohjoisesta
+   * etelään. Faktat on tarkistettu en-Wikipedian artikkeleista
+   * Gandantegchinlen Monastery, National Museum of Mongolia,
+   * Sükhbaatar Square, Choijin Lama Temple, Ulaanbaatar railway
+   * station, National Sports Stadium (Mongolia), Winter Palace of the
+   * Bogd Khan, Zaisan Memorial, Naadam ja Ulaanbaatar (haettu
+   * 21.8.2026).
+   *
+   * YKSI SISÄINEN RISTIRIITA ON KIRJOITETTU AUKI LUKIJALLE (v925:n ja
+   * v932:n tapa): Gandanin Janraiseg-patsaan korkeus on artikkelin
+   * johdannossa 26 metriä ja historiaosiossa 26,5 metriä uudelle ja
+   * 25,6 metriä vanhalle patsaalle. Jutussa on historiaosion
+   * tarkemmat luvut ja ero kerrotaan.
+   *
+   * PYHIEN PAIKKOJEN SÄVY on sama kuin Jerusalemissa, Medinassa ja
+   * Xi'anissa: uskonto kerrotaan rakennuksina ja kerrostumina, ei
+   * hartauskielellä. Gandanin ja Choijin Laman jutuissa 1930-luvun
+   * lopun uskonnollisista vainoista on yksi lause ilman lukuja ja
+   * ilman yksityiskohtia; en-Wikipedian mainitsema uhriluku ja
+   * vanhan patsaan tuhoamisen yksityiskohdat on jätetty pois.
+   *
+   * SÜKHBAATARIN AUKION JUTUSTA ON JÄTETTY POIS kaikki
+   * nykypolitiikka: aukion nimikiista 2013–2016 puolueineen, vuoden
+   * 2008 mellakat ja vuoden 1990 mielenosoitusten puoluekehys.
+   * Aukio kerrotaan paikkana ja rakennuksina, ja sen vanhin kerros
+   * — Zuun Khüreen temppelialue — on jutun pääasia.
+   *
+   * ZAISANIN MUISTOMERKKI on jutussa rakenteena ja näköalapaikkana.
+   * Toinen maailmansota mainitaan neutraalina historiana ilman
+   * osapuolikehystä, ja patsaan yksityiskohdista on jätetty pois ase.
+   * Sama linja kuin Venäjän kaupunkien lehdissä.
+   *
+   * KANSALLISSTADIONIN JUTUSTA on jätetty pois artikkelin pitkä
+   * omistus- ja oikeusriitaosuus, joka on nykypolitiikkaa eikä
+   * kerro paikasta mitään.
+   */
+  ulanbator: {
+    'Gandantegchinlenin luostari': {
+      aika: 'perustettu 1809',
+      teksti: 'Nimi on tiibetiä ja tarkoittaa täydellistä riemua; se '
+          + 'tulee Tiibetin Gandenin luostarista, jonka perusti '
+          + 'gelug-koulukunnan alkuunpanija Tsongkhapa. Ulan Batorin '
+          + 'Gandan sai alkunsa 1809, kun Khüreen länsipuoliselle '
+          + 'kukkulalle rakennettiin Sharin temppeli. Lamrinin sali '
+          + 'nousi 1824, ja viides Jebtsundamba Khutuktu rakennutti '
+          + 'kukkulalle vuosina 1834–1838 palatsin nimeltä '
+          + 'Gandantegchinlen — nimi siirtyi siitä koko luostarille. '
+          + 'Ochirdarin temppeliin vuodelta 1840 sijoitettiin '
+          + 'Zanabazarin vuonna 1683 tekemä hopea- ja kultapatsas.'
+          + '\n\n'
+          + 'Alueen korkein rakennus on Megzed Janraisegin temppeli. '
+          + 'Kahdeksas Jebtsundamba määräsi sen rakennettavaksi '
+          + 'itsenäistymisen kunniaksi, ja se valmistui 1913 maan '
+          + 'korkeimpana luostarirakennuksena. Sisälle pystytettiin '
+          + '25,6-metrinen kullattu pronssipatsas. Luostari suljettiin '
+          + '1939 uskonnollisten vainojen aikana, ja patsas katosi. '
+          + 'Tammikuussa 1944 Gandan avattiin uudelleen, ja se oli '
+          + 'pitkään maan ainoa toimiva luostari — vuonna 1947 siellä '
+          + 'oli 57 munkkia.'
+          + '\n\n'
+          + 'Vuonna 1996 temppeliin pystytettiin uusi patsas vanhan '
+          + 'mallin mukaan. Se on 26,5 metriä korkea ja painaa '
+          + 'yhdeksänkymmentä tonnia: kaksikymmentä tonnia kuparia, '
+          + '25 kiloa hopeaa, 8,6 kiloa kultaa ja yli 2 100 jalokiveä. '
+          + 'Artikkelin johdanto pyöristää korkeuden 26 metriin. '
+          + 'Luostarissa asuu nykyään noin sata munkkia, ja sen '
+          + 'kokoelmissa on 70 000 käsikirjoitusta ja puupiirrosta, '
+          + 'muun muassa 108-osainen Ganjuur ja 226-osainen Danjuur.',
+      kuvat: [
+        {
+          tiedosto: 'Gandantegchinlen Monastery 12.jpg',
+          selite: 'Luostarin pihalla seisoo kaksi rukousmyllytelinettä '
+            + 'punaisen seinän vieressä, toinen sinisen ja toinen '
+            + 'vihreän katoksen alla.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mongolian kansallismuseo': {
+      aika: 'nykyinen rakennus 1971',
+      teksti: 'Kokoelmien kerääminen alkoi vuonna 1924, ja alkuvaiheessa '
+          + 'aineistoa toivat venäläiset tutkijat Pjotr Kozlov, '
+          + 'V. I. Lisovski ja A. D. Simukov sekä yhdysvaltalainen Roy '
+          + 'Chapman Andrews. Sosialistisella kaudella historia, '
+          + 'kansatiede, luonnonhistoria ja paleontologia olivat kaikki '
+          + 'samassa talossa, vuonna 1956 valmistuneessa valtion '
+          + 'keskusmuseossa. Nykyinen rakennus pystytettiin 1971 '
+          + 'vallankumouksen museoksi, ja huhtikuussa 2008 se sai '
+          + 'nimekseen Mongolian kansallismuseo.'
+          + '\n\n'
+          + 'Museo on maan suurin, ja sen kokoelmissa on yli 57 000 '
+          + 'esinettä esihistoriasta 1900-luvun loppuun. Esillä olevat '
+          + 'kymmenen salia kulkevat järjestyksessä: esihistoria, aika '
+          + 'ennen Mongoli-imperiumia, imperiumi, Qing-vallan kausi, '
+          + 'kansatiede ja perinteinen elämä sekä 1900-luku. '
+          + 'Kansatieteellisessä osassa on eri kansanryhmien '
+          + 'perinneasuja ja nuuskapulloja. Selitteet ovat useimmiten '
+          + 'sekä mongoliksi että englanniksi.'
+          + '\n\n'
+          + 'Historiallinen kokoelma jakautuu kolmeen: arkeologiaan, '
+          + 'keskiaikaan sekä uudempaan esineistöön, valokuviin, '
+          + 'äänitteisiin ja asiakirjoihin. Museo julkaisee omaa '
+          + 'vuosijulkaisuaan, jossa on artikkeleita mongoliksi ja '
+          + 'vierailla kielillä. Talo on Sükhbaatarin aukion '
+          + 'luoteiskulman tuntumassa, muutaman sadan metrin päässä '
+          + 'aukion keskeltä.',
+      kuvat: [
+        {
+          tiedosto: 'National Museum of Mongolia im Juli 2019.jpg',
+          selite: 'Museon ruskea betonijulkisivu, jonka yläosassa on '
+            + 'valkoisia reliefipaneeleita ja alla mongolinkielinen '
+            + 'nimikirjoitus.',
+          lahde: 'GerritR, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sükhbaatarin aukio': {
+      aika: 'aukiona 1920-luvulta',
+      teksti: 'Aukion paikalla oli 1800-luvun lopulla ja 1900-luvun alussa '
+          + 'temppelien, luostarin ja palatsin kokonaisuus, Keltainen '
+          + 'palatsi, joka oli maan hengellisen johtajan virka-asunto. '
+          + 'Aluetta kutsuttiin Zuun Khüreeksi eli itäiseksi luostariksi '
+          + 'erotukseksi lännempänä olevasta Gandanista. Temppelien '
+          + 'eteläpuolella oli avoin kenttä, jonka ympärillä kiersivät '
+          + 'karkeatekoiset puuaidat ja rukousmyllyt, ja sen '
+          + 'eteläpäähän pystytettiin 1883 punainen keisarillinen '
+          + 'portti vihreine tiiliräystäineen. Kentällä järjestettiin '
+          + 'painiotteluita ja tsam-naamiotansseja.'
+          + '\n\n'
+          + 'Temppelialue purettiin 1920-luvun alussa, ja aukio sai '
+          + 'nimensä 1923 Damdin Sükhbaatarin mukaan. Vuonna 1926 '
+          + 'raunioiden päälle rakennettiin kansallisteatteri, jota '
+          + 'kutsuttiin vihreäkupoliseksi teatteriksi; siellä esitettiin '
+          + 'mongolialaisia oopperoita ja näytelmiä. Teatteri paloi '
+          + '1949, ja sen paikalle nousi 1951 hallituksen palatsi, joka '
+          + 'seisoo aukion pohjoislaidalla yhä. Aukion keskellä olevan '
+          + 'ratsastajapatsaan veisti 1946 Sonomyn Choimbol.'
+          + '\n\n'
+          + 'Hallituksen palatsin edustalle valmistui 2006 pylväikkö, '
+          + 'jonka keskellä istuu Tšingis-kaani ja sivuilla ratsastavat '
+          + 'hänen sotapäällikkönsä Bo’orchu ja Muqali; portaiden '
+          + 'reunoilla ovat Ögedei ja Kublai. Ajoitus oli tarkka: '
+          + 'kaanin kruunauksesta tuli samana vuonna kuluneeksi '
+          + 'kahdeksansataa vuotta. Aukion eteläreunaa kulkee '
+          + 'Rauhankatu, itälaidalla ovat kulttuuripalatsi ja vuosina '
+          + '1946–1948 rakennettu ooppera- ja balettitalo, ja '
+          + 'nurkissa nousevat 2000-luvun lasitornit.',
+      kuvat: [
+        {
+          /* Nimi on yhdellä rivillä, koska peilaustyökalu poimii vain
+           * ensimmäisen palan (tests/media.test.mjs). */
+          tiedosto: '蒙古國國家宮 (國會與總統-總理辦公室) 正面中央成吉思汗像及麾下大將木華黎(右)與博爾朮(左) Statue of Genghis Khan with Two of His Generals Muqali and Bo\'orchu at the Parliament Building of Mongolia.jpg',
+          selite: 'Hallituksen palatsin marmoriportaiden päässä istuu '
+            + 'Tšingis-kaanin pronssipatsas kaarevassa syvennyksessä, ja '
+            + 'sivuilla seisovat ratsastajapatsaat.',
+          lahde: 'martin_vmorris, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Choijin Laman temppeli': {
+      aika: '1904–1908',
+      teksti: 'Temppelialue rakennettiin vuosina 1904–1908 valtion '
+          + 'oraakkelille Choijin Lama Luvsankhaidaville, joka oli '
+          + 'kahdeksannen Bogd Khanin veli. Kokonaisuudessa on kuusi '
+          + 'temppeliä: yksi päätemppeli ja viisi sivutemppeliä. '
+          + 'Qing-keisari Guangxu antoi paikalle virallisen nimen, joka '
+          + 'kääntyy myötätunnon täydellistymisen temppeliksi. '
+          + 'Arkkitehtuurissa näkyvät sekä kiinalainen, mongolialainen '
+          + 'että tiibetiläinen vaikutus, ja yksi rukoussaleista on '
+          + 'muotoiltu gerin muotoon.'
+          + '\n\n'
+          + 'Temppeli oli käytössä vuoteen 1937, jolloin se suljettiin '
+          + 'uskonnollisten vainojen aikana. Se säilyi, koska se '
+          + 'muutettiin 1938 museoksi. Päätemppelissä on 1700-luvulta '
+          + 'peräisin oleva kullattu Sakjamuni-veistos ja sen oikealla '
+          + 'puolella Luvsankhaidavin oma veistos. Kokoelmiin kuuluu '
+          + 'thangka-maalauksia, silkkikirjontaa, puuveistoksia, '
+          + 'uskonnollisia soittimia ja laaja tsam-tanssinaamioiden '
+          + 'kokoelma.'
+          + '\n\n'
+          + 'Zuun temppeli on omistettu Buddha Sakjamunille, ja siellä '
+          + 'ovat menneen, nykyisen ja tulevan ajan Buddhat '
+          + 'paperimassasta; seinillä on kuusitoista arhattia ja oven '
+          + 'molemmin puolin luoliinsa istutetut neljä suojelijaa. '
+          + 'Yidamin temppeli oli oraakkelin oma rukoushuone eikä ollut '
+          + 'yleisölle avoin, mutta nykyään sinnekin pääsee. Alue on '
+          + 'aivan Sükhbaatarin aukion eteläpuolella, ja sen matalien '
+          + 'kattojen ympärille on noussut lasitorneja.',
+      kuvat: [
+        {
+          tiedosto: 'Choijin lama temple museum (2551098844).jpg',
+          selite: 'Kivipäällysteinen käytävä johtaa kahden '
+            + 'kiviveistoksen välistä puiden takaa kohoavalle '
+            + 'punaiselle temppelille.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Rautatieasema: {
+      aika: 'avattu 1949',
+      teksti: 'Asema avattiin vuonna 1949, seitsemän vuotta ennen kuin '
+          + 'Trans-Mongolian rata valmistui kokonaisuudessaan. Se on '
+          + 'maan suurin asema ja koko maan rautatieliikenteen keskus. '
+          + 'Rata halkaisee kaupungin suunnilleen idästä länteen, ja '
+          + 'asema on Bayangolin kaupunginosassa keskustasta '
+          + 'lounaaseen. Laitureita on kolme ja raiteita kuusi.'
+          + '\n\n'
+          + 'Aseman kautta kulkee sekä kotimaan että kahden naapurimaan '
+          + 'liikenne. Suoria vuoroja on Moskovaan ja Pekingiin, ja '
+          + 'lisäksi Irkutskiin, Erenhotiin ja Hohhotiin. Kotimaassa '
+          + 'junat vievät pohjoiseen Sükhbaatariin ja Darkhaniin, '
+          + 'kaakkoon Sainshandiin ja Zamyn-Üüdiin sekä Erdenetiin ja '
+          + 'Bor-Öndöriin. Pisin vuoro on Moskovan-juna, joka jatkaa '
+          + 'toiseen suuntaan Pekingiin asti.'
+          + '\n\n'
+          + 'Vuonna 2014 asemasta tuli kaupungin kiskobussin '
+          + 'pääteasema. Kokeilu jäi lyhyeksi, ja kaupungin sisäinen '
+          + 'liikenne on edelleen bussien ja johdinautojen varassa. '
+          + 'Aseman edusta toimii käytännössä pysäköintikenttänä, ja '
+          + 'julkisivun päällä lukee kaupungin nimi kyrillisin '
+          + 'kirjaimin.',
+      kuvat: [
+        {
+          tiedosto: 'Ulaanbaatar Railway Station.jpg',
+          selite: 'Aseman vaalea julkisivu talvella: katolla lukee '
+            + 'punaisin kyrillisin kirjaimin Ulaanbaatarin keskusasema, '
+            + 'ja edustalla on lumista pysäköintikenttää.',
+          lahde: 'Chongkian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kansallisstadion: {
+      aika: 'valmistui 1958',
+      teksti: 'Stadion rakennettiin 1958 venäläisenä rakennustyönä '
+          + 'teräsbetonista ja tiilestä, ja mongolialaiset viimeistelivät '
+          + 'keskuskatoksen 1971. Katsomoon mahtuu jalkapallo-otteluissa '
+          + '12 500 katsojaa, ja kenttä on tavanomaiset 105 kertaa 68 '
+          + 'metriä. Stadionyhtiön maat kattavat noin 27 hehtaaria, '
+          + 'joista itse stadion vie kahdeksan.'
+          + '\n\n'
+          + 'Ainoa vuosittainen pakollinen tapahtuma on Naadam, joka '
+          + 'alkaa 11. heinäkuuta. Juhla avataan kulkueella, jossa '
+          + 'Tšingis-kaanin yhdeksän hevosenhäntästandaaria kannetaan '
+          + 'Sükhbaatarin aukiolta stadionille; hännät edustavat '
+          + 'yhdeksää mongoliheimoa. Avajaisissa ja päätöksessä '
+          + 'stadionille marssivat ratsastajat, urheilijat ja munkit. '
+          + 'Katsomon ulkopuolella myydään khuushuur-lihapiirakoita ja '
+          + 'airagia eli hapatettua tammanmaitoa.'
+          + '\n\n'
+          + 'Muina aikoina stadionilla pelataan jalkapalloa: '
+          + 'Mongolian pääsarjan seurat käyttävät sitä kotikenttänään. '
+          + 'Vuonna 2016 täällä ammuttiin opiskelijoiden '
+          + 'jousiammunnan maailmanmestaruudet. Vanhat puupenkit '
+          + 'vaihdettiin muovisiin 2014, ja vuonna 2024 uusittiin '
+          + 'salaojat, saniteettitilat ja valaistus.',
+      kuvat: [
+        {
+          tiedosto: '2019 National Sports Stadium (Mongolia) 01.jpg',
+          selite: 'Tyhjä stadion katsomon lavalta kuvattuna: nurmikenttä, '
+            + 'punainen juoksurata ja niiden takana kaupungin '
+            + 'kerrostalot.',
+          lahde: 'JukoFF, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bogd Khanin talvipalatsi': {
+      aika: '1893–1903',
+      teksti: 'Talvipalatsi oli osa laajempaa Vihreän palatsin '
+          + 'kokonaisuutta, joka oli kahdeksannen Jebtsundamba '
+          + 'Khutuktun eli Bogd Khanin asuinpaikka. Hallitsijalla oli '
+          + 'neljä pääasuntoa, ja kaikki olivat Keski- ja Tuul-joen '
+          + 'välisellä alueella: kesäpalatsi, Valkoinen palatsi, '
+          + 'Pandelinin palatsi ja tämä. Osaa niistä käytettiin myös '
+          + 'uskonnollisiin menoihin. Kolme muuta on kadonnut, ja '
+          + 'talvipalatsi on ainoa jäljellä oleva.'
+          + '\n\n'
+          + 'Alueella on kaikkiaan parikymmentä rakennusta. Portin nimi '
+          + 'on Rauhan ja onnen portti, ja pihalla on jäähdytyspaviljonki '
+          + 'sekä kuusi temppeliä, joissa on buddhalaista taidetta, '
+          + 'kirjoituksia ja thangka-maalauksia; kahden temppelin nimet '
+          + 'ovat Naidan ja Makhranz. Itse talvipalatsi on '
+          + 'kaksikerroksinen valkoinen rakennus, jonka ikkunankehykset '
+          + 'on kullattu ja katto on vihreää peltiä.'
+          + '\n\n'
+          + 'Palatsi on Mongolian vanhin museo ja sen suurin kokoelma: '
+          + 'esineitä on 8 600 ja kävijöitä runsaat 40 000 vuodessa. '
+          + 'Esillä ovat Bogd Khanin valtaistuin ja vuode, hänen '
+          + 'taidekokoelmansa ja täytetyt eläimensä, koristeltu '
+          + 'juhlager sekä parit juhlasaappaita, jotka Venäjän keisari '
+          + 'Nikolai II lahjoitti. Yksi kokoelman erikoisuuksista on '
+          + 'jalokivikoristeinen valjastus, jota kantoi hallitsijan '
+          + 'norsu.',
+      kuvat: [
+        {
+          tiedosto: 'Winter Palace of the Bogd Khan 05.jpg',
+          selite: 'Palatsin ovensuussa istuu vihertävä kiviveistos '
+            + 'jalustallaan, ja takana näkyy keltainen puuovi.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zaisanin muistomerkki': {
+      aika: '1969–1971',
+      teksti: 'Muistomerkin rakentaminen alkoi 1969 pääarkkitehti '
+          + 'A. Khishigtin johdolla, ja se paljastettiin 1971. Se on '
+          + 'kaupungin eteläpuolella Tuulin takana olevalla '
+          + 'kukkulalla. Alhaalta pohjoisrinteen aukiolta nousee '
+          + 'kukkulan laelle 612 porrasta eli kolmesataa metriä '
+          + 'portaita, ja lisäksi 680 metrin pituinen tie vie noin '
+          + 'puoliväliin. Aukion muurissa on mongoliksi ja venäjäksi '
+          + 'kirjoitettu omistusteksti.'
+          + '\n\n'
+          + 'Laella oleva rakennelma on rengas, jonka muoto on otettu '
+          + 'mongolialaisesta tulgasta eli liesijalustasta; se on '
+          + 'elämän vertauskuva. Renkaan sisäpintaa kiertää maalaus, '
+          + 'jonka aiheet ovat neuvostoliittolais-mongolialaisen '
+          + 'yhteistyön vaiheita, ja renkaan vieressä seisoo '
+          + '27-metrinen sotilaspatsas lippuineen. Keskellä on '
+          + 'punaisesta porfyyristä tehty malja, jossa palaa ikuinen '
+          + 'tuli. Muistomerkki on omistettu toisessa maailmansodassa '
+          + 'kaatuneille mongolialaisille ja neuvostoliittolaisille '
+          + 'sotilaille.'
+          + '\n\n'
+          + 'Nykyään kukkula on ennen kaikkea näköalapaikka: sieltä '
+          + 'näkee koko laakson, ja koululaisryhmät ja '
+          + 'valmistujaisjuhlat nousevat portaat ylös. Kukkulan '
+          + 'juurelle siirrettiin 2003 panssarivaunumuistomerkki, joka '
+          + 'oli aiemmin keskustan risteyksessä. Pohjoisrinteen '
+          + 'juurelle avattiin 2017 kulttuuri- ja vapaa-ajankeskus, ja '
+          + 'itse muistomerkki peruskorjattiin puolen vuoden urakassa, '
+          + 'joka valmistui tammikuussa 2025.',
+      kuvat: [
+        {
+          tiedosto: 'Zaisan Memorial in Ulaanbaatar, Mongolia.jpg',
+          selite: 'Ilmakuva muistomerkistä: reliefikoristeinen '
+            + 'betonirengas ja sen keskeltä nouseva pylväs kukkulan '
+            + 'laella, takana koko kaupunki ja vuoret.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
