@@ -2103,10 +2103,41 @@ export const ASIA_ARTIKKELIT = {
       + 'kaupungin tavallisin joukkoliikenneväline, ja jokainen on '
       + 'maalattu omalla tavallaan.',
   },
+  /*
+   * HANOIN INTRO KIRJOITETTIIN UUSIKSI 21.8.2026 uuden lehden
+   * yhteydessä (Raamattu, "TEKSTIEN PAINOPISTE"): vanha kolmen
+   * lauseen intro korvattiin etusivun leipätekstillä. Jokainen väite
+   * tulee kaupungin omista, samassa erässä tarkistetuista
+   * lehtiteksteistä (kulttuuri-kategoriat.js: nostot K1, K2, K4 ja
+   * Matkailijan Hanoi, nahtavyysjutut.js) — uusia lähteitä ei otettu.
+   * Sisältölinjaus: vuoden 1873 valtaus on neutraali historiallinen
+   * tosiasia ilman sankarikehystä, eikä introssa ole Vietnamin sotaa
+   * eikä nykypolitiikkaa. teksti-kenttä on ennallaan.
+   */
   Hanoi: {
-    intro: 'Hanoi on Vietnamin pääkaupunki ja yli tuhat vuotta vanha. '
-      + 'Sen vanhassakaupungissa on 36 katua, ja jokainen niistä oli '
-      + 'aikanaan yhden ammattikunnan katu.',
+    intro: 'Hanoi on Vietnamin pääkaupunki Punaisenjoen '
+      + 'suistotasangolla, ja sitä se on ollut tuhat vuotta. '
+      + 'Vuonna 1010 Lý Thái Tổ siirsi Đại Việtin hallinnon vanhalle '
+      + 'Đại La -linnoituspaikalle ja antoi sille nimen **Thăng '
+      + 'Long**, nouseva lohikäärme. Sitä ennen paikka oli ollut '
+      + 'kiinalaisten rajalinnoitus, ja sen jälkeen se on ehtinyt olla '
+      + 'Đông Kinh ja vuodesta 1831 Hà Nội.'
+      + '\n\n'
+      + 'Keisarilinnan itäpuolelle kasvoi käsityöläisten '
+      + 'kaupunginosa, jota sanotaan **kolmeksikymmeneksikuudeksi '
+      + 'kaduksi**. Kylistä tulleet ammattikunnat asettuivat kukin '
+      + 'omalle kujalleen, ja kadut saivat niistä nimensä: useimmat '
+      + 'alkavat sanalla hàng, tavara. Bambukatu, kuparikatu, '
+      + 'purjekankaiden katu — osa myy yhä samaa tavaraa, osa jotain '
+      + 'aivan muuta.'
+      + '\n\n'
+      + 'Marraskuussa 1873 ranskalainen laivastoluutnantti valtasi '
+      + 'linnoituksen ilman esimiestensä lupaa, ja kaupunki '
+      + 'palautettiin seuraavana vuonna sopimuksella. Ranska palasi '
+      + 'pysyvämmin 1880-luvulla, ja 1902–1945 Hanoi oli koko '
+      + 'Indokiinan pääkaupunki. Siltä ajalta ovat leveät bulevardit, '
+      + 'oopperatalo ja lisänimi **Idän Pariisi** — ja Long Biênin '
+      + 'rautasilta, joka ylittää Punaisenjoen yhä.',
     teksti: 'Hanoi on Punaisenjoen suistossa Pohjois-Vietnamissa. Nimi '
       + 'tarkoittaa jokien väliä. Kaupunki perustettiin vuonna 1010, '
       + 'kun kuningas Lý Thái Tổ siirsi pääkaupungin tänne ja antoi '

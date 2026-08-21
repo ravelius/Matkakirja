@@ -2128,6 +2128,54 @@ const KAUPUNGIT = {
       },
     ],
   },
+  hanoi: {
+    /*
+     * VANHAKAUPUNKI, HOÀN KIẾM JA KEISARILINNA (21.8.2026). Ruutu on
+     * noin 3,8 × 2,9 km, ja se kattaa lehden kaikki kahdeksan
+     * kohdetta: koillisessa Long Biênin silta, pohjoisessa Đồng
+     * Xuânin tori, lännessä keisarilinna, lippulinna ja Yhden pilarin
+     * pagodi, keskellä Hoàn Kiếm ja Ngọc Sơnin temppeli, etelässä
+     * Pyhän Joosefin katedraali ja Kirjallisuuden temppeli.
+     *
+     * RUUTU ON KOHTEIDEN RYKELMÄÄ VÄLJEMPI, ja se on harkittu.
+     * Kohteet mahtuvat 2,6 × 1,6 kilometrin alueelle, mutta
+     * Kirjallisuuden temppeli on niistä sekä läntisin että eteläisin
+     * ja jäisi tiukassa rajauksessa suoraan vasempaan alakulmaan
+     * mittakaavajanan päälle (Kööpenhaminan oppi: jana on kehyksen
+     * vasemmassa alakulmassa, 3,2 % / 5 %). Länsi- ja eteläreunaa
+     * väljennettiin siksi runsaat kuusisataa metriä kumpaakin, ja
+     * itä- ja pohjoisreunaa saman verran, jotta kuvasuhde säilyy.
+     * Temppeli asettuu näin viidennekseen leveydestä ja vajaaseen
+     * neljännekseen korkeudesta — selvästi janan yläpuolelle.
+     *
+     * PUNAINENJOKI on ruudun koillisnurkassa, ja se on syy siihen,
+     * että itäreuna on juuri tässä: Long Biênin silta on lehden
+     * kohde, ja sillan pitää näkyä sekä joen ylittäjänä että
+     * itärannan kanssa. Kauempana idässä on pelkkää hiekkasärkkää.
+     *
+     * Ô QUAN CHƯỞNGIN PORTTI JÄI KARTALTA POIS, vaikka se on
+     * teemasivun noston aihe. Sillä ei ole omaa en-Wikipedian
+     * artikkelia eikä siis infoboksikoordinaattia (ainoa löytynyt
+     * piste on OpenStreetMapista), ja se on runsaat kaksisataa
+     * metriä Đồng Xuânin torista eli noin kuusi prosenttia ruudun
+     * leveydestä — numeroympyrät osuisivat päällekkäin (Petran,
+     * Mekan, Singaporen ja Samarkandin oppi). Portti kerrotaan
+     * noston H3 lisäksi Đồng Xuânin jutussa.
+     *
+     * OOPPERATALO JÄI POIS TOISESTA SYYSTÄ: sillä on koordinaatti
+     * (21°01′27″N 105°51′28″E) ja se mahtuisi ruutuun, mutta
+     * kahdeksan kohdetta oli täysi määrä ja ranskalaisajan
+     * rakennuksista katedraali on lehden kannalta tärkeämpi (se on
+     * matkaoppaan jakson 4 aihe). Oopperatalo mainitaan jaksossa 4.
+     *
+     * Palvelutiet päällä: Vanhankaupungin kujat ovat OSM:ssä
+     * valtaosin service-teitä, ja ilman lippua juuri lehden tärkein
+     * kortteli — Hoàn Kiếmin pohjoispuoli — jäi paperin väriseksi
+     * (kokeiltu ensin ilman ja katsottu).
+     */
+    rajat: { pohjoinen: 21.049, etela: 21.0225, lansi: 105.828, ita: 105.865 },
+    palvelutiet: true,
+  },
 };
 
 /*

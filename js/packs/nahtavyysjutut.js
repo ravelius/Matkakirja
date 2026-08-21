@@ -23690,4 +23690,371 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * HANOIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Kahdeksan kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään. Faktat
+   * on tarkistettu en-Wikipedian raakateksteistä (haettu 21.8.2026):
+   * Long Biên Bridge, Imperial Citadel of Thăng Long, Flag Tower of
+   * Hanoi, Đồng Xuân Market, Old Quarter Hanoi, One Pillar Pagoda,
+   * Ngọc Sơn Temple, Hoàn Kiếm Lake, St. Joseph's Cathedral Hanoi ja
+   * Temple of Literature Hanoi.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 21.8.2026: EI Vietnamin sotaa eikä
+   * nykypolitiikkaa, siirtomaa-aika ja vuoden 1873 valtaus neutraalina
+   * historiana ilman sankarikehystä kummallekaan osapuolelle, uskonto
+   * historiallis-kulttuurisena ilmiönä. Siksi Long Biênin jutusta on
+   * jätetty kokonaan pois artikkelin Vietnam War -osio ja kerrottu
+   * vain se, mitä artikkeli sanoo sillan nykytilasta; Đồng Xuânin
+   * jutusta helmikuun 1947 taistelu torin alueella; katedraalin
+   * jutusta kirkon asema vuoden 1954 jälkeen ja vuoden 2008
+   * mielenosoitukset; keisarilinnan jutusta rakennus D67 ja sen
+   * tunneli.
+   *
+   * NELJÄ RISTIRIITAA, JOTKA ON RATKAISTU TÄSSÄ:
+   * 1. LONG BIÊNIN PITUUS. Infoboksi sanoo 2 290 metriä, leipäteksti
+   *    lainaa toista lähdettä ja sanoo 2,4 kilometriä. Molemmat luvut
+   *    ovat jutussa, ja ero on kirjoitettu auki lukijalle.
+   * 2. LIPPULINNAN VUOSI. Oma artikkeli sanoo "1805 tai 1812",
+   *    keisarilinna-artikkeli ja Commonsin luokitus sanovat 1812.
+   *    Jutussa kerrotaan molemmat, koska kumpikin on Wikipedian omaa
+   *    tekstiä.
+   * 3. YHDEN PILARIN PAGODIN TUHO 1954. Artikkeli sanoo yhtäällä, että
+   *    tuhoaja ei ollut se, jonka yleensä uskotaan, ja toisaalla
+   *    päinvastaista. Jutussa kerrotaan vain, että rakennus tuhoutui
+   *    1954 ja pystytettiin uudelleen 1955 — tekijää ei nimetä, koska
+   *    lähde on itsensä kanssa ristiriidassa.
+   * 4. NGỌC SƠNIN VUOSISATA. Hoàn Kiếm -artikkeli sanoo 1700-lukua,
+   *    temppelin oma artikkeli 1800-luvun alkua. Ristiriita on
+   *    kirjoitettu auki, ja ainoa varma vuosiluku (Nguyễn Văn Siêun
+   *    korjaustyö 1864) on nimetty erikseen. Nostoihin sitä ei ole
+   *    otettu.
+   *
+   * KIRJALLISUUDEN TEMPPELIN PINTA-ALASTA on kaksi lukua samassa
+   * artikkelissa: Layout-osio sanoo yli 54 000 neliömetriä (Vănin
+   * lampi ja Giámin puisto mukaan luettuina) ja viidennen pihan osio
+   * 6 150 neliömetriä koko temppelistä. Jutussa on isompi luku ja sen
+   * selitys.
+   *
+   * Ô QUAN CHƯỞNGIN PORTTI EI OLE OMANA PISTEENÄÄN (ks. maakartat.js:n
+   * perustelu), joten se kerrotaan Đồng Xuânin jutussa. Kirjallisuuden
+   * temppelin ja Ngọc Sơnin jutut eivät toista teemasivun nostoja: H1
+   * kertoo steelat ja juttu pohjakaavan ja paviljongit, K3 kertoo
+   * miekkalegendan ja juttu temppelin omat rakennukset.
+   */
+  hanoi: {
+    'Long Biênin silta': {
+      aika: '1899–1902',
+      teksti: 'Long Biênin silta ylittää Punaisenjoen ja yhdistää Hoàn '
+          + 'Kiếmin ja Long Biênin kaupunginosat. Se rakennettiin vuosina '
+          + '1899–1902 pariisilaisen Daydé & Pillén piirustusten mukaan ja '
+          + 'avattiin liikenteelle vuonna 1903. Nimi tulee Long Biênistä, '
+          + 'joka on yksi kaupungin vanhimmista nimistä ja tarkoittaa '
+          + 'toisiinsa kietoutuvia lohikäärmeitä. Ensimmäiset '
+          + 'vuosikymmenensä silta kantoi kenraalikuvernöörin nimeä ja oli '
+          + 'Paul Doumerin silta.'
+          + '\n\n'
+          + 'Rakenne on terästä ja tyypiltään ulokepalkkisilta: '
+          + 'yhdeksäntoista jännettä, leveyttä 13,5 metriä ja korkeutta '
+          + '43,5 metriä. Pituudesta Wikipedia antaa kaksi lukua, '
+          + 'infoboksin 2 290 metriä ja leipätekstin 2,4 kilometriä, mutta '
+          + 'kummallakin luvulla se oli valmistuessaan Aasian pisimpiä '
+          + 'siltoja. Työmaalla oli vuosina 1899–1902 yli kolmetuhatta '
+          + 'vietnamilaista työntekijää. Siirtomaahallinnolle silta oli '
+          + 'strateginen: se sitoi kaupungin Punaisenjoen pohjoispuoleen '
+          + 'ja edelleen rannikolle.'
+          + '\n\n'
+          + 'Pilarissa on yhä valurautainen kilpi, jossa lukee rakentajan '
+          + 'nimi ja vuodet. Vain puolet sillasta on enää alkuperäisessä '
+          + 'muodossaan, ja loput on rakennettu myöhemmin uudelleen; '
+          + 'kunnostushanke on käynnissä Ranskan tuella. Nykyään siltaa '
+          + 'käyttävät junat, mopot, polkupyörät ja jalankulkijat, ja muu '
+          + 'liikenne on ohjattu viereisille silloille.',
+      kuvat: [
+        {
+          tiedosto: 'LONG BIEN BRIDGE HANOI VIETNAM FEB 2012 (6865862586).jpg',
+          selite: 'Sillan ruostunut teräsristikko kaartuu ajoradan yli, ja '
+            + 'jännevälit jatkuvat kaukaisuudessa toiselle rannalle asti.',
+          lahde: 'calflier001, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Thăng Longin keisarilinna': {
+      aika: '1010',
+      teksti: 'Linnan rakentaminen aloitettiin vuonna 1010 ja se valmistui '
+          + 'alkuvuodesta 1011 Lý Thái Tổin aikana. Pohjakaava oli kolme '
+          + 'sisäkkäistä kehää: uloin puolustusmuuri La thành, sen sisällä '
+          + 'keisarikaupunki Hoàng thành ja sisimpänä Kielletty kaupunki '
+          + 'Tử cấm thành. Kehien välissä asuttiin. Paikalla oli jo ollut '
+          + 'Gao Pianin 800-luvulla rakentama Đại La -linnoitus, ja linna '
+          + 'pysyi hovin istuimena vuoteen 1789, jolloin pääkaupunki '
+          + 'siirtyi Huếhen.'
+          + '\n\n'
+          + 'Nguyễn-suvun Gia Long rakennutti linnan uudelleen 1805 '
+          + 'ranskalaisen Vaubanin linnoitustyyliin, ja siitä on peräisin '
+          + 'suurin osa maan päällä näkyvästä. Ranska purki linnasta '
+          + 'suurimman osan toimistojen ja kasarmien tieltä. Pystyyn jäivät '
+          + 'Pohjoisportti, lippulinna, eteläinen pääportti Đoan Môn '
+          + 'viisine kiviholveineen ja Kính Thiênin valtaistuinsalin '
+          + 'perustukset portaineen. Portaiden molemmin puolin kiemurtaa '
+          + 'kivilohikäärme, ja ne veistettiin vuonna 1467.'
+          + '\n\n'
+          + 'Maan alta on löytynyt enemmän kuin päältä. Vuosina 2002–2004 '
+          + 'tehdyissä kaivauksissa Hoàng Diệun kadun numerossa 18 tuli '
+          + 'esiin terrakottaperustuksia, laaja viemäriverkosto ja suuri '
+          + 'määrä keramiikkaa monelta vuosisadalta; osa löydöistä on '
+          + 'kansallismuseossa. Vasta murto-osa alueesta on kaivettu. '
+          + 'Keskusalue liitettiin Unescon maailmanperintöluetteloon 31. '
+          + 'heinäkuuta 2010: suojeltua aluetta on 18,4 hehtaaria ja sen '
+          + 'ympärillä 108 hehtaarin suojavyöhyke.',
+      kuvat: [
+        {
+          tiedosto: 'Hanoi Citadel 0359.JPG',
+          selite: 'Kính Thiênin valtaistuinsalin portaat: kaksi '
+            + 'kivilohikäärmettä laskeutuu portaikkoa alas pää edellä, ja '
+            + 'salista itsestään ei ole jäljellä mitään.',
+          lahde: 'Gryffindor, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Đồng Xuânin tori': {
+      aika: '1889',
+      teksti: 'Vanhassakaupungissa oli 1800-luvun lopulla kaksi päätoria, '
+          + 'toinen Hàng Đườngin ja toinen Hàng Mãn kadulla. Vuonna 1889 '
+          + 'molemmat suljettiin ja niiden tilalle rakennettiin '
+          + 'ranskalaishallinnon määräyksestä Đồng Xuân, joka oli aikansa '
+          + 'uuden Hanoin päärakennuksia — toinen oli aivan lähellä oleva '
+          + 'Long Biênin silta. Tori on runsaat kuusisataa metriä Hoàn Kiếm '
+          + '-järveltä pohjoiseen, keskellä kauppakatujen verkostoa.'
+          + '\n\n'
+          + 'Katettua alaa oli noin 6 500 neliömetriä, ja katon aaltopelti '
+          + 'tuli urakoitsija Paul-François Leyretiltä. Tunnistettavin osa '
+          + 'oli julkisivun viisi kaarta, jotka vastasivat torin viittä '
+          + 'kupolia: kukin kupoli oli yhdeksäntoista metriä korkea ja '
+          + 'kaksikymmentäviisi metriä leveä. Vuonna 1994 tori paloi lähes '
+          + 'kokonaan, ja tuhoutuneen tavaran arvoksi laskettiin noin 4,5 '
+          + 'miljoonaa dollaria. Se rakennettiin osin entiseen asuunsa, ja '
+          + 'se on yhä Hanoin suurin katettu tori: kolme kerrosta '
+          + 'tukkukauppaa vaatteista taloustavaraan ja ruokaan.'
+          + '\n\n'
+          + 'Parisataa metriä torilta etelään seisoo Ô Quan Chưởng, ainoa '
+          + 'jäljellä oleva Vanhankaupungin kaupunginportti. Sen toinen '
+          + 'nimi on Đông Hà môn, ja pääartikkelin kuvateksti ajoittaa sen '
+          + 'vuoteen 1749. Portilla ei ole omaa englanninkielistä '
+          + 'Wikipedia-artikkelia eikä siis koordinaattia, joten se ei ole '
+          + 'kartalla omana kohteenaan.',
+      kuvat: [
+        {
+          tiedosto: 'Dong Xuan market.jpg',
+          selite: 'Torin vanha viisikaarinen julkisivu ja sen takana '
+            + 'kohoava myöhempi laajennus, edessä aukio ja muistomerkki.',
+          lahde: 'Juliana Ng from Singapore, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Yhden pilarin pagodi': {
+      aika: '1049',
+      teksti: 'Keisari Lý Thái Tông hallitsi vuosina 1028–1054 eikä saanut '
+          + 'poikaa. Kerrotaan, että hän näki unen, jossa bodhisattva Quan '
+          + 'Âm ojensi hänelle poikalapsen istuen lootuksenkukalla. Keisari '
+          + 'nai maalaistytön, ja heille syntyi poika. Kiitokseksi hän '
+          + 'rakennutti vuonna 1049 munkki Thiền Tuện neuvon mukaan '
+          + 'temppelin yhden pilarin varaan keskelle lootuslampea, '
+          + 'samanlaisen kuin unessa.'
+          + '\n\n'
+          + 'Rakennus kuuluu kokonaisuuteen nimeltä Diên Hựu tự, '
+          + 'laajennettujen siunausten pagodi, ja sen kuuluisin osa on Liên '
+          + 'Hoa Đài, lootusjalusta. Lý Nhân Tông kunnosti sen vuonna 1105: '
+          + 'lammen ympärille kaivettiin toinen lampi ja rakennettiin '
+          + 'käytävä ja sillat. Vuonna 1109 valettiin kello, joka '
+          + 'luettiin aikansa neljän suurtyön joukkoon mutta oli liian '
+          + 'suuri ja painava ripustettavaksi. Se jätettiin maahan '
+          + 'pellolle, jolla eli paljon kilpikonnia, ja siitä tuli '
+          + 'kilpikonnapellon kello; vuonna 1426 vetäytyvä Ming-armeija '
+          + 'sulatti sen aseiksi.'
+          + '\n\n'
+          + 'Nguyễn-kaudella pagodi korjattiin 1840-luvulla ja uudelleen '
+          + 'vuonna 1922. Rakennus tuhoutui vuonna 1954 — lähteet ovat eri '
+          + 'mieltä siitä, kuka sen teki — ja se pystytettiin uudelleen '
+          + '1955 Nguyễn-ajan tyylin mukaan. Nykyinen pagodi on puuta yhden '
+          + 'kivipilarin päällä; pilari on 1,25 metriä paksu ja neljä '
+          + 'metriä korkea, ja rakennus on muotoiltu lootuksenkukaksi, joka '
+          + 'on puhtauden vertauskuva siksi, että se kukkii mutaisessa '
+          + 'lammessa.',
+      kuvat: [
+        {
+          tiedosto: 'One Pillar Pagoda - Hanoi, Vietnam - DSC03503.JPG',
+          selite: 'Tumma puinen pagodi seisoo yhden vaalean kivipilarin '
+            + 'varassa keskellä nelikulmaista lampea, ja vasemmalta johtaa '
+            + 'kivinen porras ylös.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hanoin lippulinna': {
+      aika: '1810-luku',
+      teksti: 'Lippulinna on osa vanhaa keisarilinnaa, ja se rakennettiin Gia '
+          + 'Longin Vauban-tyylisen uudistuksen yhteydessä tähystystorniksi. '
+          + 'Rakennusvuodesta Wikipedia antaa kaksi vaihtoehtoa, 1805 tai '
+          + '1812; keisarilinnan oma artikkeli sanoo 1812. Torni on 33,4 '
+          + 'metriä korkea, lipun kanssa 41 ja jalusta mukaan luettuna 60 '
+          + 'metriä, ja se seisoo Lê-kauden Kielletyn kaupungin ulkoportin '
+          + 'perustuksilla.'
+          + '\n\n'
+          + 'Rakenne on kolmiportainen jalusta ja sen päällä pyramidin '
+          + 'muotoinen torni, jonka sisällä nousee kierreportaikko huipulle. '
+          + 'Alin porras on 42,5 metriä leveä ja 3,1 metriä korkea, '
+          + 'keskimmäinen 25 metriä leveä ja 3,7 korkea, ylin 12,8 metriä '
+          + 'leveä ja 5,1 korkea. Keskiportaassa on neljä ovea, ja kolmeen '
+          + 'niistä on kaiverrettu nimi: itäovi on Nghênh Húc, '
+          + 'aamuauringon vastaanottaja, länsiovi Hồi Quang, valon '
+          + 'heijastaja, ja eteläovi Hướng Minh, valoa kohti. Valoa tulee '
+          + 'sisään kolmestakymmenestäkuudesta kukanmuotoisesta ja kuudesta '
+          + 'viuhkamaisesta ikkunasta.'
+          + '\n\n'
+          + 'Toisin kuin useimmat linnan rakennukset lippulinna säästyi '
+          + 'purkamiselta, koska se otettiin sotilaskäyttöön '
+          + 'tähystyspaikkana. Vuosina 1956–2024 se kuului '
+          + 'sotahistoriallisen museon alueeseen ja siirtyi sitten takaisin '
+          + 'keisarilinnan kokonaisuuteen. Se on yksi kaupungin '
+          + 'tunnuskuvista.',
+      kuvat: [
+        {
+          tiedosto: 'Hanoi Flag Tower (9735319302).jpg',
+          selite: 'Lippulinnan kahdeksankulmainen torni jalustansa päällä: '
+            + 'seinässä on rivi pyöreitä ja viuhkamaisia ikkunoita ja '
+            + 'huipulla tähystyskammio.',
+          lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ngọc Sơnin temppeli': {
+      aika: '1700–1800-luku',
+      teksti: 'Temppeli on saarella Hoàn Kiếm -järven pohjoisosassa, ja sinne '
+          + 'johtaa rannalta punaiseksi maalattu Thê Húc -silta, jonka nimi '
+          + 'kääntyy runollisesti aamuauringon orreksi. Rakennusaika on '
+          + 'Wikipedian sisällä riidanalainen: järveä käsittelevä artikkeli '
+          + 'sanoo temppelin olevan 1700-luvulta, temppelin oma artikkeli '
+          + '1800-luvun alusta. Varma vuosiluku on 1864, jolloin kirjailija '
+          + 'ja virkamies Nguyễn Văn Siêu teetti temppelissä laajan '
+          + 'korjauksen — yhdeksän vuotta ennen kuin ranskalaiset saapuivat '
+          + 'kaupunkiin.'
+          + '\n\n'
+          + 'Temppelissä kunnioitetaan useaa hahmoa kerralla. Alun perin se '
+          + 'oli omistettu kolmelle viisaalle, Wenchang Dijunille, Guan '
+          + 'Yulle ja Lü Dongbinille; myöhemmin joukkoon liitettiin Trần '
+          + 'Hưng Đạo, 1200-luvun sotapäällikkö, joka torjui mongolien '
+          + 'hyökkäykset kolmesti. Rakennuksilla on omat nimensä ja '
+          + 'merkityksensä: Tháp Bút on Sivellintorni, Đài Nghiên '
+          + 'mustepadan alusta, Đắc Nguyệt kuunkatselun paviljonki ja Đình '
+          + 'Trấn Ba aaltoja vastaan seisova sali.'
+          + '\n\n'
+          + 'Järvi itse on pieni: pinta-alaa noin kaksitoista hehtaaria, '
+          + 'pituutta seitsemänsataa metriä ja leveyttä '
+          + 'kaksisataaviisikymmentä. Keskisyvyys on 1,2 metriä ja syvinkin '
+          + 'kohta kaksi metriä. Saarekkeella keskellä vettä seisoo '
+          + 'Kilpikonnatorni. Järvessä eli vuosikymmenten ajan suuria '
+          + 'pehmeäkuorisia kilpikonnia, ja viimeinen tunnettu yksilö '
+          + 'löydettiin kuolleena 19. tammikuuta 2016.',
+      kuvat: [
+        {
+          tiedosto: 'Hanoi - Ngoc Son Temple.jpg',
+          selite: 'Temppelin rakennukset ja liput saarellaan järven '
+            + 'pohjoispäässä, ja oikealta johtaa punainen Thê Húc -silta '
+            + 'rannalle.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Joosefin katedraali': {
+      aika: '1886',
+      teksti: 'Katedraali on Hanoin vanhin kirkko ja yksi ensimmäisistä '
+          + 'siirtomaahallinnon rakennuksista. Se valmistui joulukuussa 1886 '
+          + 'ja vihittiin jouluaattona 24. joulukuuta 1886. Rakennuttaja oli '
+          + 'Länsi-Tonkinin apostolinen vikaari Paul-François Puginier, joka '
+          + 'sai luvan ranskalaishallinnolta. Aloitusvuodeksi artikkeli '
+          + 'antaa 1884, mutta toisaalla se sanoo varovaisemmin, että työt '
+          + 'alkoivat todennäköisesti vasta kymmenkunta vuotta vuoden 1873 '
+          + 'jälkeen.'
+          + '\n\n'
+          + 'Paikalla oli ennen Báo Thiênin pagodi, joka oli rakennettu '
+          + 'Lý-suvun aikaan kaupungin perustamisen vuosina. Se oli sortunut '
+          + 'vuonna 1542 eikä sitä ollut korjattu, ja rauniot raivattiin '
+          + 'kirkon tieltä. Alue oli ollut Tonkinin hallinnollista keskustaa '
+          + 'jo ennen siirtomaa-aikaa.'
+          + '\n\n'
+          + 'Tyyli on uusgotiikkaa, ja kaksoistorneja on verrattu Pariisin '
+          + 'Notre-Damen torneihin — rakentajat pyrkivätkin siihen. '
+          + 'Julkisivussa on kaksi neliömäistä tornia, kummassakin viisi '
+          + 'kelloa, ja korkeutta niillä on runsaat kolmekymmentä metriä. '
+          + 'Seinät ovat graniittilaattaa ja tiiltä betonipinnalla, holvit '
+          + 'ovat ristiholveja ja ikkunat teetettiin Ranskassa ja '
+          + 'kuljetettiin paikalle. Kuoriosa on kullattua puuta '
+          + 'keisarityylisin koristein, ja Neitsyt Marian patsas seisoo '
+          + 'kantotuolissa paikallisen tavan mukaan. Ulkopinta oli '
+          + 'tummunut pahoin ilmansaasteista, ja se kunnostettiin heinäkuun '
+          + '2020 ja toukokuun 2022 välillä.',
+      kuvat: [
+        {
+          tiedosto: 'St Joseph Cathedral Hanoi 0385.JPG',
+          selite: 'Katedraalin harmaantunut kivijulkisivu suippokaarineen ja '
+            + 'sen takana kohoava kellotorni, edessä palmuja ja '
+            + 'kaidepylväitä.',
+          lahde: 'Gryffindor, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kirjallisuuden temppeli': {
+      aika: '1070',
+      teksti: 'Văn Miếu perustettiin vuonna 1070 Lý Thánh Tôngin aikana '
+          + 'Konfutsen, hänen neljän parhaan oppilaansa ja Zhoun herttuan '
+          + 'kunniaksi; lisäksi maalattiin 72 kungfutselaisen oppineen '
+          + 'kuvaa. Vuonna 1076 temppelin yhteyteen perustettiin Quốc Tử '
+          + 'Giám, maan ensimmäinen yliopisto, joka koulutti virkamiehiä ja '
+          + 'aatelisia vuoteen 1779 asti. Kun Nguyễn-suku siirsi '
+          + 'pääkaupungin Huếhen, akatemiakin siirtyi sinne, ja Hanoin '
+          + 'temppelistä tuli paikallinen koulu.'
+          + '\n\n'
+          + 'Pohjakaava seuraa Konfutsen syntymäkaupungin Qufun temppeliä. '
+          + 'Aluetta on yli 54 000 neliömetriä, kun mukaan lasketaan Vănin '
+          + 'lampi ja Giámin puisto; pelkkä muurien ympäröimä pihakokonaisuus '
+          + 'on paljon pienempi. Pihoja on viisi, ja kolme kulkuväylää '
+          + 'jatkuu portista toiseen: keskimmäinen oli hallitsijan, vasen '
+          + 'siviilivirkamiesten ja oikea sotilasvirkamiesten. Toisen pihan '
+          + 'Khuê Vănin paviljonki rakennettiin 1805 neljän valkaistun '
+          + 'kivipilarin varaan, ja siitä on tullut Hanoin tunnuskuva: se '
+          + 'on myös sadantuhannen đồngin setelin kääntöpuolella. '
+          + 'Kolmannessa pihassa on Thiên Quangin eli taivaanvalon kaivo.'
+          + '\n\n'
+          + 'Kuuluisimmat esineet ovat tohtorinsteelat. Niiden pystyttäminen '
+          + 'alkoi vuonna 1484 Lê Thánh Tôngin määräyksestä, ja '
+          + 'kivikilpikonnien selässä lepääviä steeloja tehtiin 116. '
+          + 'Jäljellä on 82, ja niissä on 1 307 tutkinnon suorittaneen nimi '
+          + 'ja syntymäpaikka kahdeksastakymmenestäkahdesta kolmen vuoden '
+          + 'välein pidetystä kokeesta; kokeet olivat vuosilta 1442–1779, ja '
+          + 'niistä 81 pidettiin Lê-suvun ja yksi Mạc-suvun aikana. '
+          + 'Kilpikonna on yksi maan neljästä pyhästä eläimestä ja '
+          + 'tarkoittaa pitkää ikää ja viisautta. Steelat liitettiin '
+          + 'Unescon Maailman muisti -rekisteriin vuonna 2011. Juuri ennen '
+          + 'Tếtin uudenvuoden juhlaa kalligrafit kokoontuvat temppelin '
+          + 'ulkopuolelle kirjoittamaan toivotuksia vanhoilla kiinalaisilla '
+          + 'merkeillä.',
+      kuvat: [
+        {
+          tiedosto: 'Constellation of Literature pavilion.jpg',
+          selite: 'Khuê Vănin paviljonki kaukaa nähtynä: punainen puuyläkerta '
+            + 'neljän vaalean kivipilarin päällä, edessä muuri ja kaivon '
+            + 'vihreä vesi.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
