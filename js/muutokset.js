@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 982, teksti: 'v982: kokoruutukartta zoomaa, sulku vain rastista' },
   { v: 981, teksti: 'v981: lukijaoletukset — nopeus 1,2x ja voima 2,0' },
   { v: 980, teksti: 'v980: etusivun anfangi myos kaupunkilehteen' },
   { v: 979, teksti: 'v979: kohdekartta aukeaa napautuksesta kokoruudulle' },

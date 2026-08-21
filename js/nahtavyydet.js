@@ -533,19 +533,29 @@ export function piirraKaupunkiKartta(ui, kohde) {
  * postikorttikatselin, jolla lehden valokuvat, uutiset ja vuosisää jo
  * aukeavat (js/ui.js: naytaKulttuuriKuva, js/lehti.js: naytaVuosiSaa):
  * kortti `postikortti kulttuuri-suurennos`, tumma pohja kortin omasta
- * ::before-kerroksesta, sulku rastista, Escapesta
- * (ui.rekisteroiSuurennosNappaimet) ja mistä tahansa napautuksesta.
+ * ::before-kerroksesta, sulku rastista ja Escapesta
+ * (ui.rekisteroiSuurennosNappaimet).
  * Kortti menee päällimmäiseen avoimeen dialogiin (ui.suurennosIsanta),
  * joten kartta aukeaa yhtä lailla kaupunkilehdestä kuin Matkailijan
  * oppaan ikkunasta.
+ *
+ * SULKU VAIN RASTISTA JA ESCAPESTA (omistajan palaute 21.8.2026: "Se
+ * myös sulkeutuu heti, jos karttaa painaa ... Kartta voisi sulkeutua
+ * vasta X-kirjaimesta"). Muut suurennokset sulkeutuvat mistä tahansa
+ * napautuksesta, mutta kartta ei ole katselukuva vaan käsiteltävä
+ * kartta: sitä zoomataan, panoroidaan ja tuplanapautetaan, ja jokainen
+ * niistä eleistä alkaa napautuksella kortin päällä. Kokoruudun
+ * napautussulku olisi siis suoraan zoomin tiellä.
  *
  * KARTTA KLOONATAAN KEHYKSINEEN, ei näytetä pelkkänä <img>-kuvana.
  * Numeroympyrät, leikatut piirroskohteet ja mittajana ovat
  * DOM-elementtejä kuvan päällä prosenttipaikoissaan, joten pelkkä
  * kuvatiedosto jäisi kokoruudulla ilman numeroita — juuri niitä
- * varten karttaa suurennetaan. Klooni on katselukuva: kuuntelijat
- * eivät seuraa mukana, napit jäävät tabulaattorin ulkopuolelle ja
- * zoomiasento nollataan, jotta koko kartta näkyy kerralla.
+ * varten karttaa suurennetaan. Klooni on katselukuva vain siltä osin
+ * kuin lehden omat kuuntelijat eivät seuraa mukana: zoomiasento
+ * nollataan avattaessa, ja kloonille kytketään OMA karttazoominsa
+ * (kytkeKarttaZoom), joten kokoruudulla pyörä, nipistys, raahaus ja
+ * tuplanapautus toimivat kuten lehden kartassa.
  *
  * ALKUPERÄISEEN KARTTAAN EI KOSKETA. Kehys on container-type: size
  * -kokokontti, jonka kuvasuhde asetetaan kuvan load-tapahtumassa
@@ -635,16 +645,35 @@ export function avaaKarttaSuurennos(ui, kehys, kartta) {
   }
   if (kartta.lahde) kortti.appendChild(html('p', 'kuvalahde', kartta.lahde));
   /*
-   * Sulku mistä tahansa napautuksesta kuten muissakin suurennoksissa
-   * — mutta ei heti. Kartalla on tuplanapautuksen zoom, ja tottunut
-   * sormi ehtii lyödä toisen napautuksen juuri avautuneeseen korttiin;
-   * ilman lyhyttä suoja-aikaa kokoruutu välähtäisi auki ja kiinni.
+   * ZOOMIPAINIKKEET KARTAN PÄÄLLE, eivät omalle riville. Kortin
+   * mitoitus lasketaan kartan kuvasuhteesta (--kartta-suhde) ja
+   * korkeuskatto on jaettu kartan, selitteen ja lähderivin kesken;
+   * uusi rivi ottaisi siitä osansa. Kelluva pilleripari kortin
+   * vasemmassa yläkulmassa jättää mitoituksen ennalleen ja antaa
+   * samalla näppäimistölle ja hiirelle sen, minkä sormi saa
+   * nipistyksestä. Painikkeet ovat kartan päällä sillä puolella, jossa
+   * ei ole sulkurastia.
    */
-  const avattu = performance.now();
-  kortti.addEventListener('click', () => {
-    if (performance.now() - avattu < 400) return;
-    ui.suljeKulttuuriKuva();
-  });
+  const tyokalut = html('div', 'kartta-tyokalut kartta-suurennos-tyokalut');
+  const zoomiRyhma = html('div', 'kartta-zoomi');
+  zoomiRyhma.setAttribute('role', 'group');
+  zoomiRyhma.setAttribute('aria-label', 'Kartan suurennus');
+  const isoZoomiNappi = (merkki, nimi) => {
+    const nappi = html('button', 'kartta-vipu-nappi kartta-zoomi-nappi', merkki);
+    nappi.type = 'button';
+    nappi.setAttribute('aria-label', nimi);
+    nappi.title = nimi;
+    zoomiRyhma.appendChild(nappi);
+    return nappi;
+  };
+  const isoNapit = {
+    loitonna: isoZoomiNappi('−', 'Loitonna karttaa'),
+    lahenna: isoZoomiNappi('+', 'Lähennä karttaa'),
+  };
+  tyokalut.appendChild(zoomiRyhma);
+  // Ilman lavaa ei ole mitään zoomattavaa (vanha kartta ilman
+  // kartta-lava-koteloa) — silloin ei myöskään näytetä säätimiä.
+  if (lava) kortti.appendChild(tyokalut);
   sulku.addEventListener('click', (e) => {
     e.stopPropagation();
     ui.suljeKulttuuriKuva();
@@ -652,6 +681,23 @@ export function avaaKarttaSuurennos(ui, kehys, kartta) {
   ui.suurennosIsanta().appendChild(kortti);
   ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
+  /*
+   * ZOOM KOKORUUDULLE (omistajan palaute 21.8.2026: "sitä pitäisi
+   * pystyä zoomaamaan koko näytöllä"). Sama widget kuin lehden
+   * kartassa, kytkettynä kloonin omaan kehykseen ja lavaan — ei uutta
+   * zoomikoodia, joten pisteiden vastaskaalaus, reunuksen aukeaminen
+   * ja panoroinnin rajat ovat kokoruudulla samat kuin lehdessä.
+   *
+   * KYTKENTÄ VASTA LIITTÄMISEN JÄLKEEN: widget mittaa lavan
+   * offsetWidthin heti alustuksessa, ja irrallisen kloonin mitat
+   * olisivat nollia. Ydinrajaus luetaan samasta kartta-oliosta kuin
+   * lehden kartassa (ydinAla), joten laajennetun kartan reunus
+   * panoroituu kokoruudullakin oikein.
+   *
+   * PAIKALLAAN OLEVAAN KARTTAAN EI KOSKETA: kytkentä osuu vain
+   * klooniin, jonka sulkeminen poistaa kuuntelijoineen päivineen.
+   */
+  if (lava) kytkeKarttaZoom(ui, iso, lava, isoNapit, ydinAla(kartta));
   sfx.play('paper');
 }
 

@@ -12079,7 +12079,13 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 .postikortti.kulttuuri-suurennos.kartta-suurennos {
   width: min(98vw, calc(82dvh * var(--kartta-suhde, 1.4)));
   max-height: 98dvh;
-  cursor: zoom-out;
+  /*
+   * EI ZOOM-OUT-KOHDISTINTA: kokoruutukartta ei sulkeudu napautuksesta
+   * (omistajan palaute 21.8.2026) vaan rastista ja Escapesta, ja
+   * napautus kuuluu kartan omalle zoomille. Kohdistin, joka lupaa
+   * sulkevansa, valehtelisi.
+   */
+  cursor: default;
 }
 
 /*
@@ -12098,9 +12104,51 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   width: 100%;
   margin: 0;
   cursor: inherit;
-  /* Kokoruudulla ei panoroida eikä vieritetä: kortti peittää lehden,
-   * eikä sormi saa liikuttaa sen takana olevaa sivua. */
+  /* Kokoruudulla sormi kuuluu kartalle eikä sivulle: kortti peittää
+   * lehden, eikä pyyhkäisy saa liikuttaa sen takana olevaa sivua.
+   * Nipistys ja panorointi tulevat kartan omalta zoomilta
+   * (kytkeKarttaZoom), joka lukee tapahtumat itse. */
   touch-action: none;
+}
+
+/*
+ * OTEKOHDISTIN ZOOMATULLE KOKORUUTUKARTALLE. Sääntö on kolmiluokkainen
+ * tarkoituksella: yllä oleva `.kartta-suurennos .kartta-kehys`
+ * (0,2,0) voittaisi muuten kehyksen oman `.kartta-kehys.zoomattu`
+ * -säännön, ja zoomattu kartta jäisi kokoruudulla ilman merkkiä siitä,
+ * että sitä voi raahata.
+ */
+.kartta-suurennos .kartta-kehys.zoomattu { cursor: grab; }
+
+.kartta-suurennos .kartta-kehys.zoomattu:active { cursor: grabbing; }
+
+/*
+ * ZOOMIPAINIKKEET KELLUVAT KARTAN PÄÄLLÄ (omistajan palaute
+ * 21.8.2026: kokoruutukarttaa pitää voida zoomata). Rivi on kortissa
+ * absoluuttisesti, koska kortin korkeus on laskettu kartan
+ * kuvasuhteesta — virrassa oleva säädinrivi söisi kartalle varatun
+ * tilan. Vasen yläkulma on vapaa: sulkurasti on oikealla.
+ */
+.dialog .kartta-suurennos .kartta-suurennos-tyokalut {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 4;
+  margin: 0;
+}
+
+/* Sama vaalea lappu kuin sulkurastissa: tumman kokoruudun päällä
+ * lehden paperinsävyinen pilleri jää muuten hailakaksi. */
+.dialog .kartta-suurennos .kartta-suurennos-tyokalut button {
+  background: rgba(247, 240, 222, 0.88);
+  border-color: rgba(70, 51, 31, 0.45);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: rgba(44, 35, 24, 0.92);
+}
+
+.dialog .kartta-suurennos .kartta-suurennos-tyokalut button:hover:not(:disabled) {
+  background: rgba(255, 250, 238, 0.98);
+  border-color: rgba(70, 51, 31, 0.75);
 }
 
 /*
