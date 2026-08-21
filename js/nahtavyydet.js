@@ -526,6 +526,51 @@ export function piirraKaupunkiKartta(ui, kohde) {
 }
 
 /**
+ * KOKORUUTUKARTAN MITOITUS MITATAAN, EI LASKETA CSS-YKSIKÖILLÄ
+ * (omistajan iPad-palaute 21.8.2026: "iPadilla kaupungin kartta liian
+ * pieni koko näytöllä" — kartta jäi pieneksi lapuksi mustan keskelle).
+ *
+ * Ensimmäinen mitoitus oli puhdasta CSS:ää:
+ * `min(98vw, calc(82dvh * var(--kartta-suhde)))`. Kaava on oikea, ja
+ * Chromiumissa se antaa pystyruudulla täyden leveyden — mutta se
+ * nojaa kolmeen asiaan, joista jokainen voi pettää tabletilla:
+ * dvh:n arvoon selaimen palkkien alla, `min()`-lausekkeeseen, jossa
+ * on kahta eri viewport-yksikköä, ja siihen että laskettu ala on
+ * sama kuin se, joka oikeasti näkyy. iPadin Safari näyttää sivua
+ * tarvittaessa omassa mittakaavassaan, jolloin CSS:n ruutu ja
+ * silmän ruutu eivät ole sama asia.
+ *
+ * Siksi luvut luetaan visualViewportista — siitä alasta, joka
+ * KATSOJALLA on näkyvissä juuri nyt — ja kortin leveys asetetaan
+ * pikseleinä. Sääntö on sama kuin ennen, nyt vain mitattuna:
+ * leveyttä enintään 98 % näkyvästä leveydestä ja kartalle korkeutta
+ * enintään 85 % näkyvästä korkeudesta, kumpi tahansa täyttyykin
+ * ensin kartan omalla kuvasuhteella. Pystyruudulla vaakakartta
+ * täyttää siis koko leveyden, ja sen alle jäävä tila on kuvasuhteen
+ * laki eikä mitoituksen puute.
+ *
+ * TOINEN KIERROS ON SELITETTÄ VARTEN. Kartan alle tulevat vielä
+ * numeroiden selite ja lähderivi, ja kapealla ruudulla selite voi
+ * olla monirivinen. Ensimmäisen mitoituksen jälkeen kortin oma
+ * korkeus mitataan, ja jos se ylittää ruudun, leveyttä pienennetään
+ * tarkalleen sen verran kuin ylitys kartan kuvasuhteella vaatii —
+ * arvaamisen sijaan.
+ */
+function mitoitaKarttaSuurennos(kortti, suhde) {
+  const nakyma = window.visualViewport;
+  const vw = Math.round(nakyma?.width || window.innerWidth || 0);
+  const vh = Math.round(nakyma?.height || window.innerHeight || 0);
+  if (!(vw > 0) || !(vh > 0) || !(suhde > 0)) return;
+  const leveys = Math.min(vw * 0.98, vh * 0.85 * suhde);
+  kortti.style.width = `${Math.round(leveys)}px`;
+  kortti.style.maxHeight = `${Math.round(vh * 0.98)}px`;
+  const yli = kortti.scrollHeight - vh * 0.98;
+  // Alaraja puolet ruudusta: yksikään selite ei saa kutistaa karttaa
+  // pienemmäksi kuin se oli lehden sivulla.
+  if (yli > 1) kortti.style.width = `${Math.round(Math.max(leveys - yli * suhde, vw * 0.5))}px`;
+}
+
+/**
  * KOHDEKARTTA KOKORUUDULLE (omistajan tilaus 21.8.2026: "voisiko
  * kaupunkikartan saada klikattua kokoruudulle?").
  *
@@ -564,13 +609,22 @@ export function piirraKaupunkiKartta(ui, kohde) {
  * kehyksestä eikä lueta sen aspect-ratio-arvosta, koska sama kenttä
  * on kirjoitettu kahdessa muodossa (luku ja `leveys / korkeus`) —
  * mitattu laatikko kertoo saman luvun kummassakin tapauksessa.
+ *
+ * KAHDELLE KARTTATYYPILLE (21.8.2026). Sama avaaja palvelee myös
+ * maalehden korkokarttaa (js/maalehti.js): se rakentaa kartastaan
+ * kehyksen, jossa kaupunkipisteet ovat lavalla samaan tapaan kuin
+ * kohdekartan numeroympyrät, ja antaa kuvasuhteen `asetukset.mitat`
+ * -kentässä — sen oma kehys sisältää lähderivin, joten mitattu
+ * laatikko valehtelisi. Kaikki muu on yhteistä: klooni, zoom,
+ * panorointi, mitoitus ja sulku.
  */
-export function avaaKarttaSuurennos(ui, kehys, kartta) {
-  const mitat = kehys.getBoundingClientRect();
+export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
+  const mitat = asetukset.mitat ?? kehys.getBoundingClientRect();
   if (!(mitat.width > 0) || !(mitat.height > 0)) return;
   ui.suljeKulttuuriKuva();
   const kortti = html('div', 'postikortti kulttuuri-suurennos kartta-suurennos');
-  kortti.style.setProperty('--kartta-suhde', (mitat.width / mitat.height).toFixed(4));
+  const suhde = mitat.width / mitat.height;
+  kortti.style.setProperty('--kartta-suhde', suhde.toFixed(4));
   const sulku = html('button', 'uutinen-sulku', '×');
   sulku.type = 'button';
   sulku.setAttribute('aria-label', 'Sulje suurennettu kartta');
@@ -681,6 +735,27 @@ export function avaaKarttaSuurennos(ui, kehys, kartta) {
   ui.suurennosIsanta().appendChild(kortti);
   ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
+  /*
+   * MITOITUS HETI LIITTÄMISEN JÄLKEEN ja uudelleen aina kun näkyvä
+   * ala muuttuu — tabletin kääntö vaihtaa vaakaruudun pystyksi, ja
+   * kartan pitää täyttää uusi ruutu yhtä lailla. Kuuntelijat siivoavat
+   * itsensä ensimmäisellä kerralla, kun kortti ei ole enää sivulla:
+   * suurennoksen sulkeminen poistaa elementin, eikä erillistä
+   * purkukoukkua ole olemassa.
+   */
+  const mitoita = () => {
+    if (!kortti.isConnected) {
+      window.removeEventListener('resize', mitoita);
+      window.removeEventListener('orientationchange', mitoita);
+      window.visualViewport?.removeEventListener('resize', mitoita);
+      return;
+    }
+    mitoitaKarttaSuurennos(kortti, suhde);
+  };
+  mitoitaKarttaSuurennos(kortti, suhde);
+  window.addEventListener('resize', mitoita);
+  window.addEventListener('orientationchange', mitoita);
+  window.visualViewport?.addEventListener('resize', mitoita);
   /*
    * ZOOM KOKORUUDULLE (omistajan palaute 21.8.2026: "sitä pitäisi
    * pystyä zoomaamaan koko näytöllä"). Sama widget kuin lehden

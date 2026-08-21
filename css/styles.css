@@ -10634,8 +10634,18 @@ body.vertailu-tila .pawns { display: none; }
   margin: 0.15rem 0 0.8rem;
 }
 
+/*
+ * MAAN KARTTA AUKEAA KOKORUUDULLE (omistajan tilaus 21.8.2026: "maan
+ * kartta saisi olla klikattavissa koko näytölle"). Sama ele ja sama
+ * katselin kuin kaupunkilehden kohdekartassa; kohdistin kertoo sen
+ * ennen napautusta. Luokan antaa piirto (js/maalehti.js).
+ */
+.maakartta-kehys.kartta-avattava { cursor: zoom-in; }
+
 /* Pisteet asemoidaan prosentteina KUVAN päälle, siksi oma kotelo,
- * jossa ei ole muuta kuin kuva (lähderivi venyttäisi pohjaa). */
+ * jossa ei ole muuta kuin kuva (lähderivi venyttäisi pohjaa).
+ * Kotelo on myös kokoruutuvihjeen sijoituskehys: lappu kuuluu kuvan
+ * kulmaan eikä lähderivin päälle. */
 .maakartta-kotelo { position: relative; }
 
 .maakartta-kotelo img {
@@ -12129,10 +12139,15 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * (js/nahtavyydet.js: avaaKarttaSuurennos), joka mittaa sen
  * paikallaan olevasta kehyksestä.
  *
+ * TÄMÄ ON VARAMITOITUS (21.8.2026). Lopullisen leveyden asettaa
+ * avaaja pikseleinä mitattuaan visualViewportista sen alan, joka
+ * katsojalla oikeasti on näkyvissä — omistajan iPadilla CSS:n ruutu
+ * ja silmän ruutu eivät olleet sama asia, ja kartta jäi pieneksi
+ * mustan keskelle (ks. mitoitaKarttaSuurennos). Sama sääntö kummassakin:
+ * leveyttä enintään 98 % ja kartalle korkeutta enintään 85 %.
+ *
  * dvh eikä vh: puhelimen osoiterivi kutistaa näkyvän ruudun, ja
- * vh-mitta jättäisi kartan alareunan palkin alle. Katto on 82dvh eikä
- * koko ruutu, koska kartan alle tulevat vielä numeroiden selite ja
- * lähderivi.
+ * vh-mitta jättäisi kartan alareunan palkin alle.
  *
  * KORKEUSKATTO PURREE VAIN LEVEÄLLÄ RUUDULLA, ja siellä selite on
  * kahden rivin mittainen — kapealla ruudulla vaakakartta törmää aina
@@ -12142,7 +12157,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * saa sen alta jäävän tilan.
  */
 .postikortti.kulttuuri-suurennos.kartta-suurennos {
-  width: min(98vw, calc(82dvh * var(--kartta-suhde, 1.4)));
+  width: min(98vw, calc(85dvh * var(--kartta-suhde, 1.4)));
   max-height: 98dvh;
   /*
    * EI ZOOM-OUT-KOHDISTINTA: kokoruutukartta ei sulkeudu napautuksesta
@@ -12175,6 +12190,15 @@ button.opas-nauha:hover { filter: brightness(1.06); }
    * (kytkeKarttaZoom), joka lukee tapahtumat itse. */
   touch-action: none;
 }
+
+/*
+ * MAALEHDEN KORKOKARTAN KOKORUUTUKEHYS (21.8.2026). Kehystä ei ole
+ * sivulla lainkaan: se rakennetaan avattaessa pelkäksi ikkunaksi
+ * kartan ympärille (js/maalehti.js), ja kuvasuhde on kuvan oma. Reuna
+ * jää siksi pois — kehyksen reunaviiva veisi kuvasuhteesta kaksi
+ * pikseliä, ja lavan alle jäisi rako, jota kohdekartassa ei ole.
+ */
+.kartta-suurennos .kartta-kehys.kartta-kuvakehys { border: 0; }
 
 /*
  * OTEKOHDISTIN ZOOMATULLE KOKORUUTUKARTALLE. Sääntö on kolmiluokkainen
@@ -12326,8 +12350,12 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * kolminkertaisena se peittäisi juuri sen korttelin, jota katsotaan.
  * Sama koskee mittajanan viivoja ja tekstiä — jana ITSE saa venyä,
  * koska sen pituus on matka, mutta sen musteen ei pidä paksuta.
+ *
+ * Sama sääntö koskee maalehden korkokartan kaupunkitäpliä ja niiden
+ * nimikylttejä (21.8.2026, kokoruutukartta): täplä on merkki kartalla
+ * eikä maasto, ja nimi kuuluu lukea yhtä isona joka kertoimella.
  */
-.kartta-lava .maakartta-piste.kohde-numero {
+.kartta-lava .maakartta-piste {
   transform: translate(-50%, -50%) scale(calc(1 / var(--zoom)));
 }
 
