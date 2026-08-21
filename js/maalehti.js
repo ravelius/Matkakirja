@@ -334,6 +334,21 @@ export function piirraMaaEtusivu(ui, kategoria) {
   const kuva = document.createElement('img');
   kuva.alt = `${kategoria.nimi} — korkokartta`;
   asetaKuva(kuva, valokuvaUrl(kartta.tiedosto, 1000), valokuvaVara(kartta.tiedosto, 1000));
+  /*
+   * KARTAN MITTA TULEE SEN OMASTA KUVASUHTEESTA (omistajan palaute
+   * 21.8.2026: "kartat etusivulla saisi olla isompi"). Kehykselle
+   * riittää tietää suhde: css laskee siitä leveyden korkeuskattoa
+   * vasten, ja hyvin pitkulainen kartta siirtyy omaksi täysleveäksi
+   * lohkokseen. Suunta selviää vasta latauksesta, kuten nostojen
+   * pystykuvilla — eikä kuuntelija ole `once`, koska asetaKuva voi
+   * vaihtaa lähteen varareitille kesken kaiken.
+   */
+  kuva.addEventListener('load', () => {
+    if (!kuva.naturalWidth || !kuva.naturalHeight) return;
+    const suhde = kuva.naturalWidth / kuva.naturalHeight;
+    kehys.style.setProperty('--maakartta-suhde', suhde.toFixed(3));
+    kehys.classList.toggle('kartta-levea', suhde >= 1.6);
+  });
   kotelo.appendChild(kuva);
   for (const k of kartta.kaupungit ?? []) {
     const p = karttapiste(kartta, k.lat, k.lon);
