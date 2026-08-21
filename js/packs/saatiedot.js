@@ -1830,5 +1830,34 @@ export const SAATIEDOT = {
    * noin 2 400 millimetriä vuodessa, monsuunien ajoitus) ja Mount
    * Kinabalu -artikkelin ilmasto-osiosta (huipun lukemat, kuura ja
    * kirjatut lumisateet) ja sanoo sen ääneen.
+   *
+   * SUMATRAN RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Saarelle
+   * tehtiin samana päivänä alusta asti oma ALUELEHTI
+   * (kulttuuri-kategoriat.js, asia-artikkelit.js; aluelehteen ei tule
+   * kohdekarttaa eikä nähtävyysjuttuja), mutta Open-Meteon arkisto
+   * (ERA5) vastasi kahdeksalla peräkkäisellä yrityksellä 429:llä ja
+   * viestillä "Daily API request limit exceeded. Please try again
+   * tomorrow" — kontin jaetun ulosmenevän osoitteen vuorokausikiintiö
+   * oli käytetty loppuun. Lukuja EI haettu muualta, koska
+   * vuosigraafin lähderivi lupaa lukijalle nimenomaan "Open-Meteo
+   * (ERA5), 1991–2020".
+   *
+   * Rivi haetaan yhdellä ajolla, kun kiintiö on vapautunut.
+   * MITTAUSPISTE ON TOBA-JÄRVI 2,68 / 98,88 (en-Wikipedian Lake Toba
+   * -artikkelin infoboksin koordinaatti), korkeus noin 905 metriä.
+   * Piste on alueen tunnetuin kohta, mutta se on YLÄNKÖÄ eikä
+   * rannikkoa: Sumatran rannikko on selvästi lämpimämpi, joten kun
+   * rivi joskus lisätään, luonnehdinta kirjoitetaan rivin omista
+   * luvuista ja mittauspiste kerrotaan ääneen (Siinain ja Petran
+   * ennakkotapaus). Saaren pituus on 1 790 kilometriä, joten yksi
+   * piste ei kuvaa koko aluetta.
+   *
+   * Sumatran lehden oppaan sääjakso ei riipu tästä rivistä: se on
+   * kirjoitettu en-Wikipedian omista luvuista — Medanin Kualanamun
+   * aseman 1991–2020-normaaleista rannikolle ja Berastagi-artikkelin
+   * sanallisesta ylänkökuvauksesta — ja jakso sanoo molemmat
+   * mittauspisteet ääneen. Sama tilanne on Samarkandilla,
+   * Varanasilla, Xi'anilla, Ulan Batorilla, Astanalla, Mandalaylla ja
+   * Jakartalla.
    */
 };

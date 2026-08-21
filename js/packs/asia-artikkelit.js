@@ -207,6 +207,19 @@
 // jako on maantieteellinen tosiasia ilman nykypolitiikkaa,
 // päänmetsästys vain yhtenä neutraalina historiallisena mainintana
 // lehden puolella, ei introssa.
+//
+// SUMATRA (21.8.2026) SAI UUDEN INTRON samalla kun saarelle tehtiin
+// alusta asti oma ALUELEHTI (kulttuuri-kategoriat.js; kohdekarttaa ei
+// aluelehteen tule). Vanha intro oli kolmen lauseen mittainen ja sanoi
+// Toban purkauksen olleen suurin kahteen miljoonaan vuoteen, mikä on
+// väärä luku: en-Wikipedian Lake Toba sanoo kahtakymmentäviittä
+// miljoonaa vuotta, ja uusi intro käyttää sitä. Muut introväitteet
+// tulevat saman erän lehtiteksteistä, jotka on tarkistettu
+// en-Wikipedian raakateksteistä 21.8.2026 (Sumatra, Lake Toba,
+// Aceh Sultanate, Sumatran orangutan, Sumatran tiger). Teksti-kenttä
+// on ennallaan. Indonesia-linjaus on sama kuin Jakartassa: ei
+// nykypolitiikkaa, ja Acehin sota 1873 näkyy vain lehden omassa
+// nostossa hallinnollis-historiallisena käänteenä.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -2631,9 +2644,28 @@ export const ASIA_ARTIKKELIT = {
       + 'veden kierrätyksen, joka kattaa nyt suuren osan kulutuksesta.',
   },
   Sumatra: {
-    intro: 'Sumatra on maailman kuudenneksi suurin saari. Sen '
-      + 'Tobajärvi syntyi purkauksessa 74 000 vuotta sitten — se oli '
-      + 'suurin tunnettu tulivuorenpurkaus kahteen miljoonaan vuoteen.',
+    intro: 'Sumatra on Indonesian länsisin suuri saari ja maailman '
+      + 'kuudenneksi suurin: pituutta on 1 790 kilometriä luoteesta '
+      + 'kaakkoon ja pinta-alaa 482 287 neliökilometriä. Päiväntasaaja '
+      + 'ylittää sen keskeltä. Länsireunaa seuraa koko matkan '
+      + '**Barisan-vuoristo**, jonka korkein tulivuori Kerinci nousee '
+      + '3 805 metriin, kun taas itäpuoli on matalaa suo- ja '
+      + 'jokitasankoa. Saarella asuu runsaat kuusikymmentä miljoonaa '
+      + 'ihmistä kymmenessä maakunnassa, ja suurin kaupunki on Medan.'
+      + '\n\n'
+      + 'Vuorten sisällä lepää **Toba**, maailman suurin '
+      + 'tulivuorijärvi, joka syntyi noin 74 000 vuotta sitten '
+      + 'purkauksessa — se on suurin tunnettu räjähtävä purkaus '
+      + 'kahteenkymmeneenviiteen miljoonaan vuoteen. Saaren '
+      + 'pohjoiskärjessä Aceh nousi 1500-luvulla pippurikaupan '
+      + 'keskukseksi ja tuotti 1820-luvulla yli puolet maailman '
+      + 'pippurista.'
+      + '\n\n'
+      + 'Sumatran sademetsissä elää lajeja, joita ei tavata muualla: '
+      + 'orangutani, tiikeri, sarvikuono ja norsu ovat kaikki '
+      + 'kriittisesti uhanalaisia. Metsästä on kadonnut lähes puolet '
+      + 'vuoden 1980 jälkeen, kun tilalle on raivattu viljelmiä, ja '
+      + 'saarelta viedään nykyään kahvia, palmuöljyä ja kumia.',
     teksti: 'Sumatra on Indonesian länsisin suuri saari, ja '
       + 'päiväntasaaja kulkee sen poikki. Saaren länsireunaa seuraa '
       + 'Barisan-vuoristo, jossa on kymmeniä tulivuoria: Sumatra on '
