@@ -116,3 +116,22 @@ Tämä KORVAA aiemman "kuvat eivät saa näyttää tuhoja" -käytännön.
   varoitustaso saa näkyä yleisellä tasolla ilman viranomaisviittausta:
   "matkailu maahan ei ole tällä hetkellä turvallista").
 Nämä ovat Raamatussa (Kuvat ja lähteet).
+
+## LISÄYKSET 21.8.2026 (uudet lehdet kirjoitetaan näin)
+
+- ETUSIVUN LEIPÄTEKSTI: kirjoita ARTIKKELIT-pakettiin
+  (asia-artikkelit.js) kaupungin intro (7–10 virkettä, ~700–1100 mrk,
+  2–3 kappaletta '\n\n'-rajalla, 1–3 boldausta `**näin**`, ei
+  huutomerkkejä) JA kolmikappaleinen teksti-kenttä (600–1100 mrk),
+  jos merkintää ei ole. Sivujen johdanto-kentät LYHYITÄ (1–2 virkettä).
+- KUVATEKSTIT (selitteet): YKSI virke.
+- TEEMASIVUILLE EI otsikko-kenttää (linjaus kumottu v966:ssa):
+  teemasivu näyttää kategoriatason nimen, ja kaupunki-sivu saa
+  automaattisesti otsikon "X pintaa syvemmältä" renderöinnissä.
+- Kohdekartan esittely lyhyt — ei kartan kuvailua.
+- Matkailijalle-etusivukuva: tuore MALTILLINEN PYSTY (w/h 0,60–0,85).
+- SÄÄRIVI: jos Open-Meteon arkisto vastaa 429 (vuorokausikiintiö),
+  ÄLÄ keksi lukuja — jätä säärivi pois lohkokommentilla
+  (Samarkand-malli v965) ja kirjoita oppaan sääjakso en-Wikipedian
+  sääruudun varaan sen ääneen sanoen; Fable täydentää rivin
+  omana versionaan.
