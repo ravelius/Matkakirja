@@ -2241,46 +2241,10 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 
 /*
  * VISA LEHDESSÄ (omistajan ohje 8.8.2026: "pomppaa ja houkuttelee
- * vastaamaan").
- *
- * Visa oli tähän asti pelkän katkoviivan erottama jatke sivun
- * pohjalla, eli se näytti siltä mitä sivulla oli jäljellä — ei
- * siltä, että siinä on jotain tehtävää. Nyt se on oma kortti:
- * lämmin vaalea pohja, pehmeä kehys ja reilusti ilmaa.
- *
- * Väri on pergamentin lämpimämpi sävy eikä huomioväri: peli on
- * paperinen, ja neon rikkoisi sen. Erottuminen tulee kontrastista
- * taustaan ja tyhjästä tilasta, ei kirkkaudesta.
+ * vastaamaan") on ladottu samaan muottiin kuin lehden minitehtävä —
+ * ks. "LEHDEN TEHTÄVÄLAATIKKO" tämän tiedoston loppupuolella. Sieltä
+ * tulevat kehys, otsake, vastausrivit ja palaute molemmille.
  */
-.dialog.lehti .arrival-kulttuuri {
-  border-top: 0;
-  margin: 1.6rem 0 0.4rem;
-  padding: 1.15rem 1.25rem 1.3rem;
-  background: linear-gradient(180deg, rgba(255, 246, 214, 0.92), rgba(252, 236, 196, 0.82));
-  border: 1px solid rgba(150, 116, 52, 0.4);
-  border-radius: 10px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset,
-    0 2px 8px rgba(70, 51, 31, 0.09);
-}
-
-/* Kysymys isommaksi: se on kortin otsikko, ei väliotsikko. */
-.dialog.lehti .arrival-kulttuuri .kulttuuri-otsikko {
-  font-size: 1.06rem;
-  line-height: 1.35;
-  margin-bottom: 0.35rem;
-}
-
-/* Vastausnapit väljemmin ja valkoisemmalle pohjalle, jotta ne
-   erottuvat kortin lämpimästä taustasta napeiksi eivätkä laatikoiksi. */
-.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot {
-  gap: 0.7rem;
-  margin: 0.9rem 0 0.2rem;
-}
-
-.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot button {
-  padding: 0.62rem 1.25rem;
-  background: rgba(255, 253, 246, 0.92);
-}
 
 .arrival-kulttuuri > summary {
   cursor: pointer;
@@ -9163,34 +9127,196 @@ button.lukija-nappi.lukee,
  * tavallinen nostokuva, ja kuva mitoittuu omilla ehdoillaan. */
 
 /*
- * Lehden minitehtävä: kuponkimainen tehtäväpalsta sivun lopussa —
- * katkoviivakehys kuin "leikkaa talteen" -ilmoituksessa. Vastaus
- * löytyy saman sivun tekstistä; napit ja palaute perivät
- * kulttuurivisan tyylit.
+ * LEHDEN TEHTÄVÄLAATIKKO: minitehtävä (aihesivut) ja kulttuurivisa
+ * (kaupunkisivu) samasta muotista.
+ *
+ * Omistajan palaute 21.8.2026 Rooman kakkossivusta: laatikko "istuu
+ * tyylillisesti vähän huonosti lehteen. saa erottua, mutta saatko
+ * tehtyä paremman tyylisen kaikin puolin?" Vanha visalaatikko oli
+ * kirkas keltainen liukuväri pyörein kulmin ja valkoisin
+ * pillerinapein — verkkolomake keskellä 1870-luvun sanomalehteä — ja
+ * minitehtävällä oli oma katkoviivakehyksensä, eli sama tehtävä
+ * kahdessa eri asussa.
+ *
+ * Nyt molemmat ladotaan lehden omilla keinoilla: tuplaviivakehys kuin
+ * ilmoituspalstassa, harvennettu kapiteeliotsake oman viivansa
+ * päällä, paperin oma sävy ja vastaukset äänestyslipukkeen riveinä
+ * ruutuineen. Erottuminen tulee kehyksestä, otsakkeesta ja tyhjästä
+ * tilasta — ei väristä, joka veisi laatikon eri painotuotteeseen kuin
+ * sivun muu sisältö.
  */
-.minitehtava {
+.minitehtava,
+.dialog.lehti .arrival-kulttuuri {
   clear: both;
-  margin: 1.2rem 0 0.4rem;
-  padding: 0.6rem 0.8rem 0.7rem;
-  border: 1px dashed rgba(70, 51, 31, 0.45);
-  border-radius: 4px;
-  background: rgba(255, 250, 238, 0.55);
+  /* Reunus on muuttuja, koska otsakkeen ja vastausrivien viivat
+   * vedetään kehyksestä kehykseen: ne kumoavat tämän saman mitan
+   * negatiivisella marginaalilla. */
+  --tehtava-reunus: 1.05rem;
+  margin: 1.5rem 0 0.5rem;
+  padding: 0.85rem var(--tehtava-reunus) 0.9rem;
+  border: 3px double rgba(60, 44, 26, 0.6);
+  border-radius: 0;
+  /* Paperin oma sävy hitusen tummempana: laatikko on painettu samalle
+   * arkille, ei liimattu sen päälle. */
+  background: rgba(214, 190, 140, 0.22);
+  box-shadow: none;
 }
 
-.minitehtava-otsikko {
-  margin: 0 0 0.35rem;
+/*
+ * Kapiteeliotsake. Minitehtävällä on oma elementtinsä (ui.js
+ * piirraMinitehtava), visan otsake taas ladotaan viivaksi laatikon
+ * yläreunaan: visan ainoa teksti tulee JS:stä kysymyksenä, eikä
+ * pelilogiikkaan koskettu. Otsake kiinnittyy nimenomaan visalohkoon
+ * eikä koko laatikkoon, jotta se katoaa lohkon mukana — kaupungilla
+ * voi olla kulttuuriosa ilman kysymystä (ui.js naytaKulttuuri).
+ */
+.dialog .minitehtava .minitehtava-otsikko,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa::before {
+  display: block;
+  margin: 0 calc(-1 * var(--tehtava-reunus)) 0.55rem;
+  padding: 0 var(--tehtava-reunus) 0.32rem;
+  border-bottom: 1px solid rgba(60, 44, 26, 0.35);
   font-family: var(--font-type);
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.24em;
+  /* Harvennus jättää viimeisen kirjaimen perään ylimääräisen välin,
+   * joka työntäisi keskitetyn rivin vasemmalle — sisennys kumoaa sen. */
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  text-align: center;
   text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.8);
+  color: rgba(60, 44, 26, 0.78);
 }
 
-.minitehtava-kysymys {
-  margin: 0 0 0.45rem;
-  font-size: 0.92rem;
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa::before {
+  content: 'Lehden kysymys';
+}
+
+/* Kysymys on laatikon otsikko ja se ladotaan lehden lukukirjasimella:
+ * kirjoituskonefontti teki siitä lomakkeen kentän. Valitsin on kaksi
+ * luokkaa pitkä, koska `.dialog p` värittäisi muuten kysymyksen
+ * haaleaksi ruskeaksi. */
+.dialog .minitehtava .minitehtava-kysymys,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-otsikko {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-luku);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #211d18;
+}
+
+/* Ratkaistun tehtävän kuittaus on ilmoitus eikä kysymys: se jää
+ * laatikon viimeiseksi riviksi (ui.js piirraMinitehtava). */
+.dialog .minitehtava .minitehtava-kysymys:last-child {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Vastaukset äänestyslipukkeen riveinä: viivoitettu luettelo, jossa
+ * jokaisella rivillä on oma rastiruutunsa. Viivat kuuluvat riveille
+ * eivätkä luettelolle: vastattaessa rivit poistetaan (ui.js), ja
+ * luettelon oma viiva jäisi roikkumaan tyhjänä palkkina. */
+.minitehtava .kulttuuri-vaihtoehdot,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin: 0.5rem calc(-1 * var(--tehtava-reunus)) 0;
+}
+
+.dialog .minitehtava .kulttuuri-vaihtoehdot button,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  /* Kosketuskoko säilyy, vaikka rivi on litteä eikä nappi. */
+  min-height: 44px;
+  margin: 0;
+  padding: 0.5rem var(--tehtava-reunus);
+  border: 0;
+  border-top: 1px solid rgba(60, 44, 26, 0.28);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  font-family: var(--font-luku);
+  /* Perusvahvuus: lihavointi kuuluu kysymykselle, vaihtoehdot ovat
+   * luetteloa. */
+  font-weight: 400;
+  font-size: 0.98rem;
+  line-height: 1.35;
+  text-align: left;
+  color: #211d18;
+}
+
+/* Rastiruutu rivin edessä kertoo, että riviltä valitaan yksi. */
+.dialog .minitehtava .kulttuuri-vaihtoehdot button::before,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot button::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 0.8em;
+  height: 0.8em;
+  border: 1px solid rgba(60, 44, 26, 0.65);
+  background: none;
+}
+
+.dialog .minitehtava .kulttuuri-vaihtoehdot button:hover:not(:disabled),
+.dialog .minitehtava .kulttuuri-vaihtoehdot button:focus-visible,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot button:hover:not(:disabled),
+.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot button:focus-visible {
+  background: rgba(255, 253, 245, 0.9);
+  color: #16130f;
+}
+
+/* Osoittimen alla ruutu täyttyy musteella — rivi on juuri rastittumassa. */
+.dialog .minitehtava .kulttuuri-vaihtoehdot button:hover:not(:disabled)::before,
+.dialog .minitehtava .kulttuuri-vaihtoehdot button:focus-visible::before,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot button:hover:not(:disabled)::before,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot button:focus-visible::before {
+  border-color: rgba(60, 44, 26, 0.9);
+  background: rgba(60, 44, 26, 0.85);
+  box-shadow: inset 0 0 0 2px rgba(245, 240, 226, 0.95);
+}
+
+.dialog .minitehtava .kulttuuri-vaihtoehdot button:active:not(:disabled),
+.dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot button:active:not(:disabled) {
+  background: rgba(214, 190, 140, 0.35);
+}
+
+/*
+ * Palaute: painettu huomautus laatikon pohjalla, ei pyöreä ruutu.
+ * Perustila (esim. "jo vastattu") on mustetta; oikea vastaus saa
+ * vihreän — myös väärin menneen vastauksen palaute KERTOO oikean
+ * vastauksen, joten sekin on vihreä mutta ohuempana (linjaus
+ * 5.8.2026: punainen pohja näytti virheilmoitukselta).
+ */
+.minitehtava .kulttuuri-tulos,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-tulos {
+  margin: 0.7rem 0 0;
+  padding: 0.5rem 0.7rem;
+  border: 0;
+  border-left: 4px solid rgba(60, 44, 26, 0.55);
+  border-radius: 0;
+  background: rgba(60, 44, 26, 0.07);
+  font-family: var(--font-luku);
+  font-size: 0.95rem;
   line-height: 1.5;
+  color: #211d18;
+}
+
+.minitehtava .kulttuuri-tulos.oikein-tulos,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-tulos.oikein-tulos {
+  border-left-color: rgba(74, 124, 58, 0.9);
+  background: rgba(106, 158, 84, 0.2);
+}
+
+.minitehtava .kulttuuri-tulos.vaarin-tulos,
+.dialog.lehti .arrival-kulttuuri .kulttuuri-tulos.vaarin-tulos {
+  border-left: 4px double rgba(74, 124, 58, 0.85);
+  background: rgba(106, 158, 84, 0.1);
 }
 
 /*
