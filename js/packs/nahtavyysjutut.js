@@ -27424,4 +27424,397 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * MANILAN KOHDEKARTAN JUTUT (21.8.2026). Kymmenen kohdetta, jotka
+   * on numeroitu pohjoisesta etelään; koordinaatit ja rajaus ovat
+   * js/packs/maakartat.js:n manila-lohkossa. Faktat on tarkistettu
+   * en-Wikipedian raakateksteistä 21.8.2026 kohteiden omista
+   * artikkeleista: Binondo Church, Quiapo Church, Escolta Street,
+   * Jones Bridge, Fort Santiago, Manila Cathedral, San Agustin Church
+   * (Manila), National Museum of Fine Arts (Manila), Baluarte de San
+   * Diego ja Rizal Park.
+   *
+   * SISÄLTÖLINJAUS on sama kuin lehden muissa teksteissä
+   * (kulttuuri-kategoriat.js:n manila-lohko): ei nykypolitiikkaa, ja
+   * toinen maailmansota vain rakennusperinnön kautta ilman
+   * osapuolikehystä ja uhrilukuja. Siksi jutut sanovat "vuoden 1944
+   * pommituksissa" ja "vuoden 1945 taisteluissa" eivätkä nimeä
+   * joukkoja, vaikka artikkelit sen tekevät. Rizalin teloitus
+   * mainitaan tapahtumana ilman yksityiskohtia.
+   *
+   * KOLME ARTIKKELIEN SISÄISTÄ RISTIRIITAA, jotka koskevat näitä
+   * juttuja. (a) Jones-sillan infoboksi antaa pituudeksi 115 metriä ja
+   * pääjänteeksi 300 metriä, mikä ei voi pitää yhtä aikaa paikkaansa;
+   * juttu käyttää pituutta ja leveyttä eikä jännemittaa. (b) Quiapon
+   * kirkon jälleenrakennusvuosi on artikkelissa "1864 or 1879";
+   * juttu sanoo vain, että kirkko rakennettiin uudelleen järistyksen
+   * jälkeen ja valmistui 1899. (c) Baluarte de San Diegon vuosiluku on
+   * Intramuros-artikkelissa 1587, Baluarte-artikkelissa muurit
+   * 1591–1594 ja bastionin valmistuminen 1644; juttu kertoo kerrokset
+   * kaivauslöydön kautta eikä lyö vuosilukua lukkoon.
+   */
+  manila: {
+    'Binondon kirkko': {
+      aika: 'perustettu 1596, nykyinen rakennus 1852',
+      teksti: 'Dominikaaniveljet perustivat Binondon kirkon vuonna 1596 '
+          + 'palvelemaan kristinuskoon kääntyneitä kiinalaisia ja '
+          + 'paikallisia filippiiniläisiä. Kirkko oli pystyssä jo ennen '
+          + 'vuotta 1614, ja 1700-luvulla se siirrettiin nykyiselle '
+          + 'paikalleen ja rakennettiin suuremmaksi. Vuonna 1778 katto '
+          + 'jouduttiin vaihtamaan nipapalmuun, koska termiitit olivat '
+          + 'syöneet puun.'
+          + '\n\n'
+          + 'Nykyinen graniittikirkko valmistui 1852. Sen tunnusmerkki on '
+          + 'kahdeksankulmainen kellotorni, joka muistuttaa pagodia ja '
+          + 'kertoo seurakuntalaisten alkuperästä. Torni oli alun perin '
+          + 'viisikerroksinen, ja ylimpänä oli näköaukko; se katto '
+          + 'tuhoutui vuoden 1863 maanjäristyksessä. Kupolin rakentamista '
+          + 'valvoi vuonna 1781 Domingo Cruz y Gonzales.'
+          + '\n\n'
+          + 'Vuoden 1944 pommituksissa kirkosta jäivät jäljelle vain '
+          + 'kiviseinät ja kahdeksankulmainen kellotorni, ja seurakunta '
+          + 'kokoontui vuosia katottomassa kirkossa. Rakennus koottiin '
+          + 'takaisin 1950-luvulla, ja korjaustyöt jatkuivat vuoteen '
+          + '1971. Kirkko on omistettu San Lorenzo Ruizille, '
+          + 'ensimmäiselle filippiiniläiselle pyhimykselle, ja messuja '
+          + 'pidetään tagalogiksi, mandariinikiinaksi, hokkieniksi ja '
+          + 'englanniksi.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de Binondo, Manila, Filipinas, 2023-08-26, DD 16-18 HDR.jpg',
+          selite: 'Binondon kirkon kupoli sisältä: sininen holvi on '
+            + 'maalattu täyteen hahmoja, ja sen ympärillä kiertää '
+            + 'valkoinen koristerengas.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Quiapon kirkko': {
+      aika: 'perustettu 1588, nykyinen rakennus 1935',
+      teksti: 'Quiapon kirkon paikalla oli ensin fransiskaanien '
+          + 'rakentama bambukehikko nipapalmukatolla. Se paloi 1574, ja '
+          + 'seurakunnan perusti nykyiseen muotoonsa fransiskaani Antonio '
+          + 'de Nombella vuonna 1588. Suojeluspyhimykseksi tuli Johannes '
+          + 'Kastaja. Kirkko paloi uudelleen 1603 ja 1791, ja vuoden 1863 '
+          + 'maanjäristys tuhosi sen kokonaan; tilalle rakennettiin ensin '
+          + 'väliaikainen kirkko ja sitten uusi, joka valmistui 1899.'
+          + '\n\n'
+          + 'Vuoden 1929 tulipalo vei puisen sisäkaton ja sakariston, ja '
+          + 'kansallistaiteilija Juan Nakpil suunnitteli rakennuksen '
+          + 'uudelleen. Hän lisäsi kupolin ja toisen kellotornin, jotta '
+          + 'julkisivu olisi symmetrinen. Teräsbetoninen kirkko valmistui '
+          + '1935. Julkisivu on barokkia ja siinä on kierteiset pylväät: '
+          + 'toisen kerroksen korinttilaisissa pylväissä alaosa on '
+          + 'väännetty ja yläosa sileä, ja nelikerroksisten kellotornien '
+          + 'huipuilla kiertää kaidelista ja suuret käppyräkoristeet.'
+          + '\n\n'
+          + 'Kirkossa säilytetään Jesús Nazarenon patsasta, joka tuotiin '
+          + 'maahan espanjalaisella galleonilla 1600-luvulla. Perjantaisin '
+          + 'pidetään novena, ja 9. tammikuuta kulkueessa kannetaan '
+          + 'patsasta muistoksi siitä, kun se siirrettiin Intramuroksesta '
+          + 'tänne. Kirkko sai pikkubasilikan arvon 1988 ja '
+          + 'kansallispyhäkön arvon 2023.',
+      kuvat: [
+        {
+          tiedosto: 'Quiapo Church, Manila, Feb 2025 (1).jpg',
+          selite: 'Quiapon kirkon vaalea julkisivu alhaalta kuvattuna: '
+            + 'kaksi nelikerroksista kellotornia kehystää päätykolmiota, '
+            + 'ja parvekkeilla seisoo pyhimyspatsaita.',
+          lahde: 'Ralff Nestor Nacor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Escolta-katu': {
+      aika: 'raivattu 1594',
+      teksti: 'Escolta on yksi Manilan vanhimmista kaduista ja syntyi '
+          + 'vuonna 1594. Nimi tulee espanjan sanasta escoltar, saattaa. '
+          + 'Muurikaupungin portit suljettiin auringonlaskun aikaan, ja '
+          + 'joen rantaa kulkeva hiekkapolku oli pimeän tultua vaarallinen '
+          + '— kun polulla alkoi kadota ihmisiä, lähetystö pyysi '
+          + 'kuvernööriltä vartiota. Kuvernööri määräsi upseerin '
+          + 'järjestämään saattueen, escoltan, polulle puoleksi vuodeksi, '
+          + 'ja siitä mutkitteleva rantapolku sai nimensä kauan ennen kuin '
+          + 'siitä levennettiin katu.'
+          + '\n\n'
+          + 'Katu kulkee Pasig-joen suuntaisesti Plaza Moragalta Plaza '
+          + 'Lacsoniin. Galleonikaupan aikaan sen varrelle asettui '
+          + 'kauppiaita, enimmäkseen Fujianista, ja liikkeissä myytiin '
+          + 'tavaraa Kiinasta, Euroopasta ja Latinalaisesta Amerikasta '
+          + 'sitä mukaa kuin sitä saapui läheiseen San Nicolasin satamaan.'
+          + '\n\n'
+          + '1800-luvun lopulla Escoltasta tuli maan hienoin '
+          + 'liikekortteli: siinä olivat kaupungin korkeimmat rakennukset '
+          + 'ja Manilan pörssi, puodit vaihtuivat tavarataloiksi ja katua '
+          + 'pitkin kulki sähköraitiovaunu, tranvía. Escolta oli Manilan '
+          + 'tärkein kauppakatu 1960-luvulle asti, jolloin liike-elämä '
+          + 'siirtyi Makatiin.',
+      kuvat: [
+        {
+          tiedosto: 'Escolta Manila.jpg',
+          selite: 'Vuoden 1878 valokuva Escoltasta: raitiotien kiskot '
+            + 'kaartuvat hiekkakadulla, keskellä seisoo kalesa ja '
+            + 'molemmin puolin nousee puuparvekkeisia taloja.',
+          lahde: 'Unknown. older than 100 years., Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jones-silta': {
+      aika: 'valmistui 1920',
+      teksti: 'Samalla kohdalla Pasig-jokea on ollut silta vuodesta 1630. '
+          + 'Viimeinen niistä oli espanjalaiskauden Puente de España, joka '
+          + 'romahti syyskuun 1914 rankkasateissa, kun keskimmäinen '
+          + 'virtapilari petti. Uusi silta rakennettiin kadun verran '
+          + 'alavirtaan vuosina 1919–1920, ja se avattiin 1921. Se on '
+          + '115 metriä pitkä ja 16,7 metriä leveä, ja siinä on kolme '
+          + 'jännettä ja kaksi virtapilaria.'
+          + '\n\n'
+          + 'Sillan suunnitteli filippiiniläinen arkkitehti Juan M. '
+          + 'Arellano. Hän oli käynyt Pariisissa ja otti mallia '
+          + 'Haussmannin kaupunkiuudistuksen silloista ja erityisesti '
+          + 'Pont Alexandre III:sta: virtapilareihin tuli delfiinien '
+          + 'selässä ratsastavia poikia, ja sillan molempiin päihin '
+          + 'nostettiin neljä jalustaa, joille kuvanveistäjä Martinez '
+          + 'teki La Madre Filipina -patsaat.'
+          + '\n\n'
+          + 'Silta tuhoutui helmikuussa 1945, ja se koottiin takaisin '
+          + '1946 samoine kolmine kaarineen mutta ilman koristeita. '
+          + 'Vuonna 2019 aloitettiin kunnostus, jossa silta palautettiin '
+          + 'lähelle alkuperäistä asuaan ja kolme jäljellä olevaa '
+          + 'La Madre Filipina -patsasta tuotiin takaisin paikoilleen; '
+          + 'neljäs jouduttiin veistämään uudestaan.',
+      kuvat: [
+        {
+          tiedosto: 'Jones Bridge (Manila; 01-30-2021).jpg',
+          selite: 'Jones-silta joelta nähtynä: kaideviivan päällä seisoo '
+            + 'rivi mustia kandelaaberilyhtyjä, ja keltainen kaari lepää '
+            + 'kahden virtapilarin varassa.',
+          lahde: 'patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fort Santiago': {
+      aika: 'kivilinnoitus 1590–1593',
+      teksti: 'Joen ja meren kulmauksessa oli ennen espanjalaisia Rajah '
+          + 'Matandan paaluvarustus pronssitykkeineen. Espanjalaiset '
+          + 'aloittivat oman linnoituksensa kaupungin perustamisen '
+          + 'jälkeen vuonna 1571; ensimmäinen versio oli palmurunkoja ja '
+          + 'maata ja tuhoutui merirosvohyökkäyksessä. Kivinen linnoitus '
+          + 'rakennettiin 1590–1593 kuvernööri Gómez Pérez Dasmariñasin '
+          + 'aikana, ja kivi louhittiin Guadalupen vulkaanisesta tuffista.'
+          + '\n\n'
+          + 'Muoto on lähes kolmio, ja kehää on 619 metriä. Muurit ovat '
+          + 'runsaat kuusi metriä korkeat ja pari ja puoli metriä paksut, '
+          + 'ja kaupunkiin päin antava porttijulkisivu nousee '
+          + 'kaksitoistametriseksi. Koristeltu portti pystytettiin 1714, '
+          + 'ja 1730-luvulla Fernándo Valdés y Tamon lisäsi jokirintaan '
+          + 'suuren puoliympyrän muotoisen tykkitasanteen, jota kutsuttiin '
+          + 'nimellä media naranja, puolikas appelsiini. Vuoden 1880 '
+          + 'järistys pudotti portin päällysrakenteen.'
+          + '\n\n'
+          + 'Britannia piti linnoitusta hallussaan syyskuusta 1762 '
+          + 'huhtikuuhun 1764, ja vuonna 1898 siitä tuli Yhdysvaltain '
+          + 'armeijan tukikohta; vallihaudat kuivattiin ja muutettiin '
+          + 'golfkentäksi. Linnoituksen vankilassa oli ennen teloitustaan '
+          + '1896 kansallissankari José Rizal, ja hänen viimeinen '
+          + 'kävelynsä on merkitty maahan pronssisin jalanjäljin. Portti '
+          + 'rakennettiin uudelleen 1982.',
+      kuvat: [
+        {
+          tiedosto: 'Fort Santiago 1880 gate.jpg',
+          selite: 'Vuoden 1880 valokuva linnoituksen portista: järistys on '
+            + 'vienyt koristellun yläosan, ja tilalla on matala '
+            + 'tiilikattoinen rakennus.',
+          lahde: 'Unknown author Unknown author, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manilan katedraali': {
+      aika: 'nykyinen rakennus 1958',
+      teksti: 'Manilan seurakuntakirkko perustettiin 1571 Meksikon '
+          + 'arkkihiippakunnan alaisuuteen, ja paavi Gregorius XIII '
+          + 'perusti Manilan hiippakunnan 6. helmikuuta 1579. '
+          + 'Ensimmäisen katedraalin rakennutti hiippakunnan ensimmäinen '
+          + 'piispa Domingo de Salazar vuonna 1581 nipapalmusta, puusta '
+          + 'ja bambusta. Vuonna 1595 Rooma lähetti kirkolle sadan '
+          + 'viidenkymmenenviiden marttyyrin ja kahdenkymmenen paavin '
+          + 'pyhäinjäännökset, joita varten pääkirkon viereen '
+          + 'rakennettiin oma sivurakennus.'
+          + '\n\n'
+          + 'Rakennuksia on ollut kaikkiaan kahdeksan. Neljännen '
+          + 'pääalttari veistettiin molave-puusta 1662, ja firenzeläinen '
+          + 'munkki Juan de Uguccioni lisäsi 1750 kupolin ja poikkilaivan. '
+          + 'Viides muistutti Rooman Il Gesùa, kuudes sai '
+          + 'uusklassisen julkisivun 1858, ja seitsemäs rakennettiin '
+          + '1873–1879 — sen kupolin risti oli koko saariston '
+          + 'tähtitieteellisten pituusasteiden vertauspiste.'
+          + '\n\n'
+          + 'Nykyisen, kahdeksannen katedraalin suunnitteli kapampangan-'
+          + 'arkkitehti Fernando Ocampo, ja se vihittiin 7. joulukuuta '
+          + '1958. Kellot siirrettiin 2011 maan tasalle, jottei torni '
+          + 'sortuisi järistyksessä kuten aiemmat; 2012 tilalle asennettiin '
+          + 'seitsemän Heidelbergissä vuonna 1958 valettua kelloa, jotka '
+          + 'painavat yhteensä seitsemäntoista tonnia. Kirkko oli kiinni '
+          + 'vahvistustöiden takia 2012–2014.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral de la Inmaculada Concepción, Manila, Filipinas, 2023-08-26, DD 22-24 HDR.jpg',
+          selite: 'Katedraalin keskilaiva alttarille päin: ristiholvit '
+            + 'nousevat pylväsriveiltä, ja seinillä hehkuvat pyöreät '
+            + 'lasimaalaukset.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Agustinin kirkko': {
+      aika: 'valmistui 1607',
+      teksti: 'Kivikirkon suunnitteli Juan Macías, ja kivi hakattiin '
+          + 'Meycauayanin, Binangonanin ja San Mateon adobelouhoksista. '
+          + 'Työ eteni hitaasti, koska rahaa, rakennusaineita ja '
+          + 'kivenveistäjiä oli niukasti. Luostari saatiin käyttöön 1604 '
+          + 'ja kirkko julistettiin valmiiksi 19. tammikuuta 1607 nimellä '
+          + 'Manilan Pyhän Paavalin kirkko. Macías itse ei nähnyt sitä '
+          + 'valmiina.'
+          + '\n\n'
+          + 'Sisätilan maalasi kaksi italialaista, jotka tekivät '
+          + 'holveihin ja seiniin kohokuvia jäljittelevän '
+          + 'silmänlumemaalauksen. Saarnastuoli on barokkia, ja sen '
+          + 'aiheena on paikallinen ananas. Kuoripenkit on veistetty '
+          + 'molave-puusta ja upotukset ovat 1600-luvun norsunluuta, '
+          + 'kuoriaulassa on 1500-luvun krusifiksi, ja katosta riippuu '
+          + 'kuusitoista Pariisista tuotua kruunua. Vuoden 1880 '
+          + 'järistykset halkaisivat toisen kellotornin, joka purettiin; '
+          + 'jäljellä on vain sen jalusta.'
+          + '\n\n'
+          + 'Kirkko on ollut vuodesta 1993 Unescon maailmanperintöluettelossa '
+          + 'yhtenä neljästä Filippiinien barokkikirkosta. Viereinen '
+          + 'luostari tuhoutui 1945, ja arkkitehti Angel Nakpil rakensi '
+          + 'sen 1970-luvulla museoksi. Kirkkoon on haudattu muun muassa '
+          + 'Miguel López de Legazpi, Juan de Salcedo ja maalari Juan '
+          + 'Luna. Kadun toisella puolella on Plaza San Luis, '
+          + 'ulkoilmamuseo, jossa on yhdeksän espanjalaiskauden '
+          + 'bahay na bato -taloa.',
+      kuvat: [
+        {
+          tiedosto: 'Patio de la iglesia de San Agustín, Manila, Filipinas, 2023-08-27, DD 75-77 HDR.jpg',
+          selite: 'Luostarin sisäpiha: kaarikäytävät kiertävät '
+            + 'nurmikentän, jonka keskeltä kohoaa rivi kuninkaanpalmuja.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen taidemuseo': {
+      aika: 'valmistui 1921',
+      teksti: 'Rakennuksen suunnittelivat 1918 Ralph Harrington Doane ja '
+          + 'Antonio Toledo, ja sen piti Daniel Burnhamin '
+          + 'kaupunkisuunnitelman mukaan olla kansalliskirjasto. '
+          + 'Filippiinien lakiasäätävä kokous päätti kuitenkin 1926 '
+          + 'muuttaa siihen itse, ja Juan M. Arellano muutti pohjapiirrokset '
+          + 'sen mukaan. Talo valmistui 1921 ja vihittiin lakiasäätävän '
+          + 'kokouksen taloksi 16. heinäkuuta 1926; kansalliskirjasto '
+          + 'toimi siinä silti vuodet 1928–1944.'
+          + '\n\n'
+          + 'Vuoden 1945 taisteluissa rakennuksesta jäi pystyyn vain '
+          + 'keskiosa. Se rakennettiin uudelleen samoihin mittoihin mutta '
+          + 'vähemmin koristein, ja työ tehtiin suurelta osin muistin '
+          + 'varassa, koska piirustuksista oli säilynyt vain muutama. '
+          + 'Työ alkoi 1949 ja siivet valmistuivat 1950.'
+          + '\n\n'
+          + 'Talo oli kongressin käytössä vuoteen 1972 ja senaatin '
+          + 'vuosina 1987–1997, ja 1998 se luovutettiin Filippiinien '
+          + 'kansallismuseolle. Nyt siinä on kansallinen taidemuseo, jonka '
+          + 'tunnetuin teos on Juan Lunan Spoliarium. Ympärillä oleva '
+          + 'museokortteli on Burnhamin suunnitelman perua: hän kaavaili '
+          + 'Wallace Fieldille kokonaista hallintokeskusta, josta ehdittiin '
+          + 'rakentaa ennen sotaa kolme taloa.',
+      kuvat: [
+        {
+          tiedosto: 'Museo Nacional de Bellas Artes, Manila, Filipinas, 2023-08-27, DD 51.jpg',
+          selite: 'Kansallisen taidemuseon uusklassinen julkisivu '
+            + 'pylväineen ja päätykolmioineen, ja edessä liehuu '
+            + 'Filippiinien lippu.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Baluarte de San Diego': {
+      aika: 'kaivettu esiin 1979–1982',
+      teksti: 'Intramuroksen lounaiskulmassa on bastioni, jonka muoto on '
+          + 'kuin pataässä. Kuvernööri Gómez Pérez Dasmariñas liitti '
+          + 'vanhemman linnoituksen osaksi muurirengasta, ja väliseinät '
+          + 'rakennettiin 1591–1594. Bastionin kärki työntyy ulospäin, '
+          + 'jotta tykkimiehet näkisivät muurin viertä pitkin, ja '
+          + 'juureen lisättiin myöhemmin puoliympyrän muotoiset '
+          + 'ulokkeet — orillonit eli pikkukorvat — joista ässän muoto '
+          + 'syntyi.'
+          + '\n\n'
+          + 'Antonio de Morga kirjoitti vuonna 1609, että rakennelma oli '
+          + 'vasta torni suuremman Nuestra Señora de Guía -linnoituksen '
+          + 'sisällä. Sitä rakennutti jesuiittapappi Antonio Sedeño, ja '
+          + 'siihen kuului sisäpiha, vesisäiliö, asuintiloja ja pajoja, '
+          + 'mutta työ keskeytyi kerta toisensa jälkeen eikä linnoitus '
+          + 'valmistunut koskaan.'
+          + '\n\n'
+          + 'Intramuroksen hallinto ja kansallismuseo kaivoivat paikan '
+          + 'esiin vuosina 1979–1982. Alta paljastui kolme sisäkkäistä '
+          + 'kivikehää. Sisin on halkaisijaltaan kahdeksan metriä ja '
+          + 'seisoo kolme ja puoli metriä nykyisen kadun alapuolella; sen '
+          + 'seinät on rapattu vaaleanpunaisella terrakotalla. Keskimmäinen '
+          + 'on kaksikymmentäyksi metriä leveä, ja uloin, '
+          + 'kolmenkymmenenkahden metrin kehä on vanhin: siinä on '
+          + 'yksitoista kammiota ja seinät ovat adobea.',
+      kuvat: [
+        {
+          tiedosto: 'Bastion de San Diego - Intramuros, Manila.jpg',
+          selite: 'Bastionin kaivettu sisus ylhäältä: kolme sammaloitunutta '
+            + 'kivikehää kiertää sisäkkäin, ja alimman seinässä on '
+            + 'kaarevia aukkoja.',
+          lahde: 'Edwin Juen Jr., Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rizal-puisto': {
+      aika: 'Paseo de Luneta 1820',
+      teksti: 'Muurien eteläpuolella oli 1601 perustettu kylä nimeltä '
+          + 'Bagumbayan, Uusi kaupunginosa. Se purettiin brittimiehityksen '
+          + 'jälkeen, koska muurien kupeessa olevat talot olivat antaneet '
+          + 'hyökkääjille suojaa. Kylän kirkossa oli säilytetty Jesús '
+          + 'Nazarenon patsasta, ja se siirrettiin Intramurokseen; '
+          + 'jäljennös vietiin Quiapon kirkkoon, ja siitä on peräisin '
+          + 'tammikuun yhdeksännen kulkue.'
+          + '\n\n'
+          + 'Tyhjennetylle suoalueelle valmistui vuonna 1820 Paseo de '
+          + 'Luneta. Nimi tuli muurin edustan puolikuunmuotoisesta '
+          + 'etuvarustuksesta, joka oli oman vallihautansa ympäröimä. '
+          + 'Kävelyalue oli sadan metrin levyinen ja kolmensadan metrin '
+          + 'pituinen suorakaide, jonka päät oli pyöristetty, ja sen '
+          + 'ympäri kiersi La Calzada -niminen ajotie vaunuja varten. '
+          + 'Iltahämärissä paikka oli manilalaisten seuraelämän keskus.'
+          + '\n\n'
+          + 'Puisto on nyt 58 hehtaaria ja kantaa José Rizalin nimeä. '
+          + 'Monumentti hänelle päätettiin pystyttää 28. syyskuuta 1901, '
+          + 'ja se vihittiin 30. joulukuuta 1913. Nimi vaihtui '
+          + 'Luneta-kansallispuistosta Rizal-puistoksi 1967. Alueella on '
+          + 'muun muassa kiinalainen ja japanilainen puutarha sekä '
+          + '1960-luvulla rakennettu musiikkisuihkulähde, jonka sen '
+          + 'alkuperäinen tekijä kunnosti vuoden 2011 remontissa.',
+      kuvat: [
+        {
+          tiedosto: 'Manila, Rizal Park skyline, Philippines.jpg',
+          selite: 'Rizal-puiston nurmikenttä ja palmuja, ja niiden takaa '
+            + 'kohoaa utuun häipyvä tornitalorivi.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

@@ -7756,6 +7756,73 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kansallismonumentti Monas', lat: -6.175389, lon: 106.827139 },
     ],
   },
+  /*
+   * MANILAN KOHDEKARTTA (21.8.2026). Rajaus on 4,5 × 4,5 km ja kohteet
+   * on numeroitu pohjoisesta etelään kuten Medinassa, Kiotossa,
+   * Varanasissa ja Kantonissa. Piirtoperustelut, meri-lipun syy ja
+   * rajauksen mitoitus ovat tools/piirra-kaupunkikartta.mjs:n
+   * manila-lohkossa.
+   *
+   * KAIKKI KYMMENEN KOORDINAATTIA OVAT KOHTEIDEN OMISTA
+   * en-Wikipedian {{Coord}}-arvoista, jotka luettiin MediaWiki-APIn
+   * prop=coordinates-kutsulla 21.8.2026 (raakateksti käyttää
+   * Filippiineillä {{PH wikidata}}-mallinetta eikä sisällä suoria
+   * lukuja). Faktapohja (docs/aasia-tyoaineisto/faktapohja-manila.md,
+   * osio 4) ja tarkistusraportti (tarkistus-manila.md, osio 4) antavat
+   * samat arvot; tarkistuksen ainoa korjaus koski faktapohjan omaa
+   * ETÄISYYSARVIOTA (Fort Santiago 0,8 km eikä 0,5 km keskustasta),
+   * ei koordinaattia.
+   *
+   * INTRAMUROS EI OLE OMANA PISTEENÄÄN, vaikka se on koko lehden
+   * aihe. Syy on kirjattava, koska sen huomaa muuten puutteeksi:
+   * en-Wikipedian Intramuros-artikkelin ja Manila Cathedral
+   * -artikkelin {{Coord}} on TÄSMÄLLEEN SAMA luku (14,59147 /
+   * 120,97356), joten kaksi numeroympyrää osuisi samaan pisteeseen
+   * (Petran, Mekan ja Singaporen oppi). Muurikaupunki on kartalla
+   * joka tapauksessa silmin nähtävissä — muurirengas piirtyy koko
+   * ruudun keskelle — ja sen sisällä on viisi numeroitua kohdetta.
+   *
+   * MALACAÑANGIN PALATSI JÄTETTIIN POIS SISÄLTÖSYISTÄ eikä
+   * etäisyyden vuoksi: se on vain 1,9 kilometriä itään ja mahtuisi
+   * kainaloon vaivatta, mutta se on nykyisen presidentin virka-asunto
+   * ja laudan linjaus on "ei nykypolitiikkaa". Sekä faktapohja
+   * (osio 4 ja huomio 9) että tarkistusraportti (osio 5) suosittelivat
+   * poisjättöä. Palatsin espanjalaiskautinen syntysyy — vuoden 1863
+   * maanjäristys, joka tuhosi kenraalikuvernöörin asunnon
+   * Intramuroksessa — kerrotaan katedraalin jutussa.
+   *
+   * CASA MANILA JA RIZAL-MONUMENTTI JÄIVÄT POIS PÄÄLLEKKÄISYYDEN
+   * TAKIA: Casa Manila (14,58966 / 120,97514) on 86 metriä San
+   * Agustinin kirkosta ja Rizal-monumentti (14,581669 / 120,976694)
+   * 200 metriä Rizal-puiston pisteestä. Molemmat kerrotaan
+   * naapurikohteensa jutussa.
+   *
+   * KAINALOA EI OLE: kaikki kymmenen kohdetta mahtuvat pääruutuun,
+   * kuten Samarkandissa, Kathmandussa ja Kantonissa.
+   */
+  manila: {
+    polku: 'assets/kartat/manila-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 14.6118, etela: 14.5712, lansi: 120.9526, ita: 120.9944 },
+    esittely: 'Kartan keskellä erottuu Intramuroksen muurirengas '
+      + 'Pasig-joen eteläpuolella, ja lännessä avautuu Manilanlahti '
+      + 'satama-altaineen. Joen pohjoispuolella ovat Binondo ja '
+      + 'Escolta, etelässä Rizal-puisto. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Binondon kirkko', lat: 14.60021, lon: 120.9747 },
+      { nimi: 'Quiapon kirkko', lat: 14.598782, lon: 120.983783 },
+      { nimi: 'Escolta-katu', lat: 14.59778, lon: 120.97851 },
+      { nimi: 'Jones-silta', lat: 14.595833, lon: 120.977306 },
+      { nimi: 'Fort Santiago', lat: 14.595, lon: 120.969444 },
+      { nimi: 'Manilan katedraali', lat: 14.59147, lon: 120.97356 },
+      { nimi: 'San Agustinin kirkko', lat: 14.588889, lon: 120.975278 },
+      { nimi: 'Kansallinen taidemuseo', lat: 14.5869, lon: 120.9812 },
+      { nimi: 'Baluarte de San Diego', lat: 14.5854, lon: 120.9756 },
+      { nimi: 'Rizal-puisto', lat: 14.5825, lon: 120.978333 },
+    ],
+  },
 };
 
 /*

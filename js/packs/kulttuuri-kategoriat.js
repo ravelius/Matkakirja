@@ -45121,4 +45121,518 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MANILA (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita, kohdekarttaa, juttuja, artikkelia eikä
+   * säätietoja ennen tätä. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä (action=raw, haettu 21.8.2026): Manila,
+   * Intramuros, Manila galleon, Fort Santiago, San Agustin Church
+   * (Manila), Manila Cathedral, Binondo, Binondo Church, Escolta
+   * Street, Jones Bridge, Quiapo Church, Rizal Park, Pasig River,
+   * Baluarte de San Diego, National Museum of Fine Arts (Manila),
+   * Manila Bay, Metro Manila, Jeepney, Earthquake Baroque ja
+   * Philippines. Pohjana ovat docs/aasia-tyoaineisto/
+   * faktapohja-manila.md ja tarkistus-manila.md, jotka luettiin
+   * yhdessä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje 21.8.2026, ja se on Filippiineillä
+   * tavallista tiukempi. EI NYKYPOLITIIKKAA missään muodossa: pois
+   * on jätetty kokonaan sotatilalain aika 1972–1981, Marcosin
+   * hallinto, People Power -vallankumous 1986, nykyinen hallinto ja
+   * presidentin virka-asunto Malacañang (myös kohdekartalta, ks.
+   * maakartat.js), huumesota, Manilanlahden nykyiset täyttöhankkeet
+   * ja niiden kiistat sekä Binondon vuoden 2020 poliittinen
+   * välikohtaus. TOINEN MAAILMANSOTA NÄKYY VAIN RAKENNUSPERINNÖN
+   * KAUTTA — Intramuroksen tuho ja jälleenrakennus — ilman
+   * uhrilukuja ja ilman osapuolikehystä: lehti sanoo, että vuoden
+   * 1945 taisteluissa muurikaupunki tuhoutui lähes kokonaan ja mitä
+   * siitä on sen jälkeen rakennettu takaisin, eikä nimeä joukkoja
+   * eikä kerro tuhon yksityiskohtia. Manilan verilöyly ja
+   * pääartikkelin uhriluku on jätetty pois. Espanjalaiskausi
+   * 1571–1898 ja 1800-luvun Manila ovat lehden ydin (1873-
+   * matkapäiväkirjan aika), amerikkalaiskausi näkyy hallinnollisena
+   * käänteenä ja kaupunkisuunnitelmana. Uskonto on historiallis-
+   * kulttuurinen ilmiö: kirkot ovat rakennuksia, maanjäristysten
+   * kestäjiä ja kaupunkikuvan maamerkkejä. Orjuus, kiinalaisten
+   * kapinat ja niiden uhriluvut sekä Rizalin teloitus yksityis-
+   * kohtineen on jätetty pois; Rizal mainitaan puiston nimen ja
+   * Fort Santiagon vankilan kautta neutraalisti.
+   *
+   * NELJÄ KOHTAA, JOISSA LEHTI POIKKEAA FAKTAPOHJASTA, ja miksi:
+   * 1) Faktapohjan nosto H3 sanoi San Agustinin olleen "ainoa
+   *    Intramuroksen RAKENNUS, joka selvisi EHJÄNÄ" vuoden 1945
+   *    taistelusta. Tarkistusraportti (osio 1) luki kirkon oman
+   *    artikkelin ja löysi tarkemman lauseen: "It was the only one
+   *    among seven churches of Intramuros to survive a leveling",
+   *    ja kirkon katto vaurioitui. Lehti sanoo siis "ainoa
+   *    seitsemästä kirkosta" ja kertoo katon vaurion.
+   * 2) Faktapohjan nosto K2 sanoi Intramuroksen tykkien osoittaneen
+   *    Pariánia kohti. en-Wikipedian Manila-artikkeli sanoo
+   *    nimenomaan Binondoa ("kept its cannons pointed at Binondo,
+   *    the world's oldest Chinatown"). Käytetty artikkelin omaa
+   *    sanamuotoa.
+   * 3) Faktapohjan nosto K2 sanoi muurien sisällä asuneen 1 200
+   *    espanjalaisperhettä. Manila-artikkeli sanoo niin, mutta
+   *    Intramuros-artikkeli on tarkempi: 1 200 perhettä yhteensä,
+   *    joista 600 muurien sisällä ja 600 esikaupungeissa, plus 400
+   *    sotilasta. Lehti käyttää tarkempaa lukua, ja ero on tässä.
+   * 4) Faktapohjan jakso 2 antoi saariluvun 7 640 pelin oman
+   *    kulttuurivisan faktakentästä eikä Wikipediasta (faktapohjan
+   *    oma huomio 3). en-Wikipedian Philippines-artikkeli sanoo
+   *    "about 7,641 islands"; lehti käyttää sitä. Asuttujen saarten
+   *    lukua (visan vihjeessä noin 2 000) EI löytynyt artikkelista,
+   *    joten sitä ei ole lehdessä lainkaan.
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA, jotka koskevat lehden
+   * tekstejä. (a) Binondon perustamisvuosi: Manila-artikkelin
+   * matkailuosio sanoo 1521, Binondo-artikkelin infoboksi ja
+   * leipäteksti sanovat 1594 ja nimeävät perustajan (Luis Pérez
+   * Dasmariñas); tarkistusraportti (osio 2) vahvisti jälkimmäisen, ja
+   * lehti käyttää sitä. (b) Rizal-puiston koko: Manila-artikkeli
+   * sanoo sitä Aasian suurimmaksi kaupunkipuistoksi, puiston oma
+   * artikkeli vain "yhdeksi maan suurimmista"; lehti käyttää
+   * varovaisempaa omaa artikkelia ja kertoo pinta-alan (58 ha).
+   * (c) San Agustinin kivikirkon aloitusvuosi on samassa artikkelissa
+   * sekä 1586 (History) että 1587 (Architecture); lehti sanoo
+   * "1580-luvun lopulla" (Moreebin dyyni -sääntö, maakartat.js).
+   * Neljäs, pienempi: Baluarte de San Diegon vuosiluku on
+   * Intramuros-artikkelissa 1587 ja 1644 kahdessa eri lauseessa —
+   * lehti kertoo bastionin kerrokset kaivauslöydön kautta eikä
+   * lyö vuosilukua lukkoon.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Filippiinit (intro
+   * asia-artikkelit.js:ssä ja matkailijalle-kappale), saarten määrä
+   * (oppaan jakso 2), Luzonin saari ja Manilanlahti (johdanto, intro
+   * ja jakso 2), viralliset kielet filipino ja englanti (jakso 3) ja
+   * jeepney (jakso 1). Historia-sivun minitehtävä kysyy, monesko
+   * rakennus nykyinen katedraali on samalla paikalla — lukua visa ei
+   * kysy, ja vastaus on samalla sivulla nostossa H4.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu. Intramuros on
+   * kansikuvassa ilmasta, avauskuvassa Fort Santiagon porttina,
+   * nostossa H2 muurina ja vallihaudan pohjalta ja kohdekartan
+   * jutuissa viitenä eri kohteena — eri tiedostot, eri etäisyydet ja
+   * eri vuosisadat, ja muurikaupunki on koko lehden aihe (sama
+   * ennakkotapaus kuin Mekan Jabal al-Nour, Xi'anin muuri ja
+   * Kantonin Shamian). San Agustinin kirkko on avauskuvassa
+   * julkisivuna, nostossa H3 sisätilana ja kohdekartan jutussa
+   * luostarin pihana; Manilan katedraali on avauskuvassa nykyisenä,
+   * nostossa H4 vuoden 1899 valokuvana ja kohdekartan jutussa
+   * sisältä. Binondo on nostossa K3 esterona ja kohdekartan jutussa
+   * kirkon kupolina. Rizal-puisto on kansikuvassa ilmasta, nostossa
+   * K4 monumentin edestä ja kohdekartan jutussa palmujen takaa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi'anin, Varanasin, Kathmandun ja Kantonin
+   * malli v965–v983). Talon menetelmä on Open-Meteon arkisto (ERA5,
+   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn ajan
+   * pelkällä virheellä "Daily API request limit exceeded. Please try
+   * again tomorrow" — kontin jaetun ulosmenevän osoitteen
+   * vuorokausikiintiö oli käytetty loppuun, eikä se nollaudu ennen
+   * UTC-vuorokauden vaihdetta. Kokeiltu työn alussa ja lopussa, sama
+   * vastaus kummallakin kerralla. Lukuja ei ole otettu mistään muusta
+   * lähteestä, koska vuosigraafin lähderivi lupaa lukijalle
+   * nimenomaan ERA5:n; ilman riviä lehti näkyy ilman säätä, kuten
+   * saatiedot.js:n alkukommentti lupaa. Matkaoppaan jakso 5 nojaa
+   * siksi en-Wikipedian Manila-artikkelin sääruutuun (PAGASA, Port
+   * Area, normaalit 1991–2020) ja SANOO SEN ÄÄNEEN. Kun ERA5-rivi
+   * joskus lisätään, jakso 5 on kirjoitettava rivin omista luvuista.
+   * Mittauspiste olisi keskusta 14,60 / 120,98.
+   */
+  manila: [
+    {
+      id: 'kaupunki',
+      nimi: 'Manila',
+      johdanto: 'Manilanlahden itärannalla, Pasig-joen suulla makaava '
+        + 'satamakaupunki, jonka espanjalaiset perustivat vuonna 1571 '
+        + 'vanhan Maynilan paikalle. Muurien sisältä lähtivät '
+        + 'hopealaivat Acapulcoon.',
+      kansikuvat: [
+        {
+          tiedosto: 'Intramuros, Plaza Roma, Ermita skyline drone (Manila; 09-06-2025).jpg',
+          selite: 'Muurikaupunki ilmasta: katedraalin vihertävä kupoli ja '
+            + 'kellotorni nousevat punaisten kattojen keskeltä, ja '
+            + 'taustalla siintää Manilanlahti.',
+          lahde: 'Patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Intramuros, Binondo skyline, Rizal Park, Maria Orosa drone (Manila; 12-25-2025).jpg',
+          selite: 'Rizal-puisto ylhäältä: leveä puistokatu halkoo '
+            + 'nurmikenttiä, oikealla seisoo pylväikköinen '
+            + 'kansallismuseo ja vasemmalla erottuvat sataman nosturit.',
+          lahde: 'Patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Manila Bay sunset from Malate district (002) 2023-11-15.jpg',
+          selite: 'Aurinko laskee Manilanlahdelle, ja ankkurissa olevat '
+            + 'laivat piirtyvät tummina viivoina vaaleaa vettä vasten.',
+          lahde: 'LMP 2001, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: linnoitus, vanhin kirkko ja katedraali — ne
+       * kolme rakennusta, joiden ympärille koko lehti kietoutuu ja
+       * jotka lehti kertoo tässä järjestyksessä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Manila, Fort Santiago, Walled city of Intramuros, Philippines.jpg',
+          selite: 'Fort Santiagon koristeltu pääportti muurin keskellä, ja '
+            + 'sen edessä kulkee tiilireunainen vallihaudan penger.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'San Agustin Church Intramuros 2023-05-28.jpg',
+          selite: 'San Agustinin kirkon julkisivu: oikealla kohoaa ainoa '
+            + 'jäljellä oleva kellotorni, ja vasemmalla on tyhjä kohta, '
+            + 'josta toinen purettiin.',
+          lahde: 'LMP 2001, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Manila Cathedral, Plaza Roma (Intramuros, Manila; 12-31-2021).jpg',
+          selite: 'Manilan katedraali Plaza Roman takana: kellotorni '
+            + 'vasemmalla, vihertävä kupoli keskellä ja edessä puiden '
+            + 'varjostama aukio.',
+          lahde: 'patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Hopealaivat kohti Acapulcoa',
+          tiedosto: 'AMH-6763-NA Bird\'s eye view of Manila.jpg',
+          teksti: 'Vuonna 1565 augustinolaismunkki Andrés de Urdaneta '
+            + 'löysi paluureitin Filippiineiltä Meksikoon: hän purjehti '
+            + 'pohjoiseen Japanin itäpuolelle ja tarttui siellä '
+            + 'länsituuliin. Matka kesti 129 päivää ja '
+            + 'avasi reitin, jota kuljettiin kaksisataaviisikymmentä '
+            + 'vuotta. Galleoni lähti Cavitesta kesäkuun lopulla ja saapui '
+            + 'Acapulcoon vasta seuraavan vuoden maalis–huhtikuussa. '
+            + 'Lastina oli kiinalaista silkkiä ja posliinia, intialaisia '
+            + 'jalokiviä ja Molukkien mausteita; vastaan tuli Meksikon ja '
+            + 'Perun hopeaa, jonka arvo oli Aasiassa Amerikkaa korkeampi. '
+            + 'Laivat rakennettiin Cavitessa paikallisesta puusta, purjeet '
+            + 'kudottiin Ilocosissa ja köydet punottiin manillahampusta.',
+          selite: 'Noin vuoden 1665 vesivärikuva Manilasta: muurikaupunki '
+            + 'on niemellä joen suulla, lahdella on purjelaivoja ja '
+            + 'oikealla erottuu Caviten niemi.',
+          lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
+          wiki: 'Manila galleon',
+        },
+        {
+          otsikko: 'Kaupunki, joka rakennettiin kahdesti',
+          tiedosto: 'The Ayuntamiento de Manila.jpg',
+          teksti: 'Manilassa käyty helmi–maaliskuun taistelu vuonna 1945 '
+            + 'tasoitti muurikaupungin: Intramuroksen rakennuksista jäi '
+            + 'pystyyn viisi prosenttia ja muureista tuhoutui neljäkymmentä. '
+            + 'Siksi matkailija kävelee vanhassakaupungissa uusien '
+            + 'rakennusten keskellä eikä 1600-luvun keskellä. Jälleenrakennus '
+            + 'alkoi heti sodan jälkeen ja jatkuu yhä: katedraali avattiin '
+            + 'uudelleen 1958, kaupungintalo Ayuntamiento nousi entiselleen '
+            + 'vasta 2013, ja San Ignacion kirkkoa kootaan museoksi. Jo '
+            + 'vuonna 1936 oli säädetty, että kaikki uudet talot '
+            + 'Intramuroksessa on rakennettava espanjalaiskauden tyyliin.',
+          selite: 'Vuonna 2013 entiselleen rakennettu Ayuntamiento: '
+            + 'valkoinen pylväsjulkisivu, kaarevat oviaukot ja neljä '
+            + 'Filippiinien lippua parvekkeella.',
+          lahde: 'Joemill Veloso Flordelis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Intramuros',
+        },
+        {
+          otsikko: 'Maailman vanhin kiinalaiskortteli',
+          tiedosto: 'Estero de Magdalena, Binondo, Manila, May 2025.jpg',
+          teksti: 'Kenraalikuvernööri Luis Pérez Dasmariñas perusti 1594 '
+            + 'Pasig-joen pohjoisrannalle Binondon, asuinalueen '
+            + 'kristinuskoon kääntyneille kiinalaiskauppiaille. Se on '
+            + 'maailman vanhin kiinalaiskortteli. Maa annettiin ikuisiksi '
+            + 'ajoiksi, verovapaana ja rajoitetulla itsehallinnolla — mutta '
+            + 'juuri joen vastarannalle, jotta hallinto näkisi sinne: '
+            + 'Intramuroksen tykit pidettiin Binondon suuntaan '
+            + 'osoitettuina. Dominikaanit ottivat korttelin seurakunnakseen, '
+            + 'ja kiinalaisten ja filippiiniläisten avioliitoista syntyi '
+            + 'oma mestizo-väestönsä. Alueen halki kaivettiin '
+            + 'espanjalaiskaudella kanavia, esteroja, jotka laskivat '
+            + 'Pasigiin.',
+          selite: 'Estero de Magdalenan kanava Binondossa: vesi heijastaa '
+            + 'rantaan nousseita tornitaloja, ja etualalla kasvaa '
+            + 'pensaikkoa.',
+          lahde: 'Ralff Nestor Nacor, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Binondo',
+        },
+        {
+          otsikko: 'Puisto, josta kilometrit lasketaan',
+          tiedosto: 'Rizal Park (Manila; 12-31-2022).jpg',
+          teksti: 'Muurien eteläpuolella oli suoalue nimeltä Bagumbayan, '
+            + 'ja sen laidalle valmistui 1820 Paseo de Luneta — '
+            + 'sadan metrin levyinen ja kolmensadan metrin pituinen '
+            + 'kävelyalue, jonka ympäri kiersi ajotie nimeltä La Calzada. '
+            + 'Siellä manilalaiset kävelivät ja ajoivat vaunuillaan '
+            + 'iltahämärissä, ja paikka oli 1800-luvun kaupungin '
+            + 'seurapiirien keskus. Nimi tuli muurien edustan '
+            + 'puolikuunmuotoisesta etuvarustuksesta. Nykyään puisto on '
+            + '58 hehtaaria ja kantaa José Rizalin nimeä, ja hänen '
+            + 'monumenttinsa länsipuolella oleva lipputanko on '
+            + 'nollakilometri, josta koko maan etäisyydet mitataan.',
+          selite: 'Rizal-monumentti obeliskeineen puiston keskellä, ja sen '
+            + 'edessä nousee valkoinen lipputanko lippurivin keskeltä.',
+          lahde: 'Patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Rizal Park',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '08743 jfIntramuros Landmarks Churches Manilafvf 17.jpg',
+          selite: 'Kalesa odottaa kyytiläisiä Intramuroksen kadulla: '
+            + 'keltaiset pinnapyörät, mustaksi maalattu kuomu ja hevonen '
+            + 'valjaissa.',
+          lahde: 'Judgefloro, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Manila on Filippiinien pääkaupunki ja Luzonin saarella '
+          + 'Manilanlahden rannalla, mutta matkailijan Manila on pieni: '
+          + 'lähes kaikki on Intramuroksen muurien sisällä tai '
+          + 'kävelymatkan päässä niistä. Kaupunki itse on vain 43 '
+          + 'neliökilometriä ja yksi maailman tiheimmin asutuista, ja se '
+          + 'on yksi Metro Manilan kuudestatoista kaupungista. Pasig-joki '
+          + 'jakaa alueen pohjoiseen ja eteläiseen puoliskoon; muurit ja '
+          + 'puistot ovat etelärannalla, Binondo ja Escolta pohjoisella.',
+        artikkeli: {
+          nimi: 'Matkailijan Manila',
+          taitto: 'opas',
+          teksti: 'Yksi muurirengas, yksi joki ja yksi lahti — ja niiden '
+            + 'väliin ahdettuna neljä ja puoli vuosisataa, joista suurin '
+            + 'osa on rakennettu kahdesti.',
+          nosto: 'Manilanlahden luonnonsatamaa on pidetty Aasian parhaana. '
+            + 'Kaupunki on lahden itärannalla, 1 300 kilometrin päässä '
+            + 'Aasian mantereesta, ja lähes koko sen maapohja on '
+            + 'Pasig-joen tuomaa liejua ja lahdelta täytettyä maata.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupungin tunnetuin kulkuneuvo on jeepney, kirkkaaksi '
+                + 'maalattu pikkubussi, joka kulkee kiinteää reittiä '
+                + 'kiinteällä hinnalla. Sen esi-isä oli auto calesa eli '
+                + '"autokalesa", 1910-luvulla halvoista tuontiautoista '
+                + 'tehty yhteistaksi, joka sai nimensä hevosvetoisesta '
+                + 'kalesasta; nykyinen muoto syntyi sodan jälkeen, kun '
+                + 'amerikkalaisten jättämiä maastoautoja alettiin muuttaa '
+                + 'matkustajakäyttöön. Katto lisättiin varjoksi, kylkiin '
+                + 'kromilistat ja väriä, ja perään kaksi pitkää penkkiä '
+                + 'vastakkain. Nimi on yhdistelmä sanoista jeep ja '
+                + 'jitney. Metro Manilassa jeepneyllä kulkee arviolta '
+                + 'yhdeksän miljoonaa matkaa päivässä. Muut vaihtoehdot '
+                + 'ovat tricycle eli sivuvaunullinen moottoripyörä, '
+                + 'polkupyöräriksa, taksi ja kaksi kaupunkirataa, LRT-1 '
+                + 'Taft Avenuen ja LRT-2 Recton suunnassa. Intramuroksessa '
+                + 'ja Binondossa liikkuu yhä hevosvetoinen kalesa, ja '
+                + 'Pasig-joella kulkee jokilauttalinja.',
+              kuva: {
+                tiedosto: 'Fairview Cubao Jeepney.jpg',
+                selite: 'Oranssi jeepney kääntyy risteyksessä: keulassa on '
+                  + 'maalattu nimikilpi ja tuulilasin yllä rivi '
+                  + 'reittitauluja.',
+                lahde: 'Ganmatthew, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Manila on Luzonin saarella, Filippiinien suurimmalla, '
+                + 'ja Luzon on yksi maan noin 7 641 saaresta. Kaupunki on '
+                + 'Manilanlahden itärannalla, ja lahden suojaisaa satamaa '
+                + 'on pidetty Aasian parhaana. Maasto on tasaista: melkein '
+                + 'koko kaupunki seisoo Pasig-joen kerrostamalla liejulla '
+                + 'ja lahdelta täytetyllä maalla, ja luonnolliset '
+                + 'korkeuserot on suurelta osin tasattu. Pasig-joki on '
+                + 'vain 25 kilometriä pitkä ja yhdistää sisämaan '
+                + 'Laguna de Bay -järven mereen. Se ei ole tavallinen '
+                + 'joki vaan vuorovesisuisto: kuivalla kaudella virtaus '
+                + 'seuraa vuorovettä, ja sadekaudella, kun järven pinta '
+                + 'nousee, vesi juoksee lahdelle päin. Manila on yksi '
+                + 'Metro Manilan kuudestatoista kaupungista; alueeseen '
+                + 'kuuluu lisäksi yksi kunta, Pateros.',
+              kuva: {
+                tiedosto: 'Pasig River in Intramuros side, Manila, June 2025.jpg',
+                selite: 'Pasig-joki Intramuroksen rantakadulta: vedessä '
+                  + 'ajelehtii vesihyasinttilauttoja, ja taustalla '
+                  + 'kaartuu kaarisilta pohjoisrannalle.',
+                lahde: 'Ralff Nestor Nacor, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kaksi kieltä ja kolme keittiötä',
+              teksti: 'Filippiineillä on kaksi virallista kieltä. Filipino '
+                + 'pohjautuu Manilan ja sen ympäristön tagalogiin, ja juuri '
+                + 'manilalainen puhetapa on levinnyt koko saariston '
+                + 'yleiskieleksi tiedotusvälineiden ja viihteen mukana. '
+                + 'Englanti on toinen virallinen kieli ja käytössä '
+                + 'koulutuksessa ja liike-elämässä. Binondossa kuulee '
+                + 'kolmatta: filippiiniläistä hokkienia, jota puhutaan '
+                + 'nimellä lan-nang-oe. Sama kerroksellisuus näkyy '
+                + 'ruoassa. Kolmen vuosisadan espanjalaiskausi ja vielä '
+                + 'pidempi kiinalainen kauppasuhde ovat jättäneet '
+                + 'jälkensä keittiöön, ja Binondon ruokapaikat ovat '
+                + 'kaupungin tunnetuimpia. Aterian ympärillä oleva sanasto '
+                + 'kertoo saman tarinan kuin kadut: osa sanoista on '
+                + 'malaijilaisia, osa espanjalaisia, osa kiinalaisia.',
+              kuva: {
+                tiedosto: 'Chuan Kee Restaurant Meals, Binondo, Manila, May 2025.jpg',
+                selite: 'Binondolaisen ruokapaikan pöydällä on kaksi '
+                  + 'riisikulhoa haudutettuine lihoineen ja lautasellinen '
+                  + 'kirkasta wonton-keittoa.',
+                lahde: 'Ralff Nestor Nacor, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: hopean ja silkin risteysasema',
+              teksti: 'Espanjalaisen Manilan nousu oli ensimmäinen kerta, '
+                + 'jolloin kaikki mantereet olivat kiinni samassa '
+                + 'kauppaverkossa, ja kaupunkia pidetään Mexico Cityn ja '
+                + 'Madridin rinnalla maailman ensimmäisenä globaalina '
+                + 'kaupunkina. Yksi syy oli kielto: Ming-hovi katkaisi '
+                + 'vuonna 1549 suoran kaupan japanilaisten kanssa, ja '
+                + 'sen jälkeen Manila oli ainoa paikka, jossa kiinalaiset '
+                + 'ja japanilaiset saattoivat käydä avointa kauppaa '
+                + 'keskenään. Amerikasta tulevasta lastista noin neljä '
+                + 'viidesosaa oli Uuden maailman satoa — hopeaa, maissia, '
+                + 'bataattia, tomaattia, tupakkaa, kaakaota — ja loput '
+                + 'Euroopan viiniä, oliiviöljyä ja metallitavaraa. '
+                + 'Jesuiittapappi Juan de Cobo kirjoitti 1600-luvun alussa '
+                + 'veljilleen Meksikoon, ettei hän kykene edes '
+                + 'luettelemaan kaikkia kaupungissa kohtaamiaan kansoja.',
+              kuva: {
+                tiedosto: '1748 Anson Map of Baja California and the Pacific with Trade Routes from Acapulco to Manila - Geographicus - Pacific-anson-1748.jpg',
+                selite: 'Vuoden 1748 merikartassa Tyynenmeren yli kulkevat '
+                  + 'vaaleat viivat ovat kartantekijän omia merkintöjä '
+                  + 'Manilan ja Acapulcon välisistä galleonireiteistä.',
+                lahde: 'Creator:George Anson, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Manila on kokonaan tropiikissa, ja Köppenin '
+                + 'luokituksessa se on trooppinen monsuuni-ilmasto aivan '
+                + 'savanni-ilmaston rajalla. Lämpötila pysyy ympäri vuoden '
+                + 'korkeana eikä juuri käy alle yhdeksäntoista tai yli '
+                + 'kolmenkymmenenkahdeksan asteen. Kuiva kausi kestää '
+                + 'joulukuun lopusta huhtikuun alkuun, ja loput vuodesta '
+                + 'on sadekautta: sade tulee harvoin koko päivän mittaan '
+                + 'vaan lyhyinä ja hyvin rankkoina ryöppyinä. Taifuunit '
+                + 'osuvat tyypillisesti kesä–syyskuulle. Kosteus on '
+                + 'ympäri vuoden korkea, mikä saa ilman tuntumaan '
+                + 'lämpimämmältä kuin mittari näyttää. Nämä luvut ovat '
+                + 'poikkeuksellisesti en-Wikipedian oman sääruudun '
+                + 'lukuja Manilan satama-alueen mittausasemalta '
+                + '(normaalit 1991–2020) — lehden vuosigraafin lähde '
+                + 'olisi Open-Meteon ERA5, jota ei tähän saatu.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ennen espanjalaisia paikalla oli Maynila, joen suulla '
+        + 'sijainnut linnoitettu kauppapaikka. Vuonna 1571 Miguel López de '
+        + 'Legazpi otti sen haltuunsa ja rakensi muurien sisään Espanjan '
+        + 'Aasian pääkaupungin.',
+      tehtava: {
+        kysymys: 'Monesko rakennus nykyinen Manilan katedraali on '
+          + 'samalla paikalla?',
+        vaihtoehdot: [
+          'Toinen',
+          'Neljäs',
+          'Kuudes',
+          'Kahdeksas',
+        ],
+        oikea: 3,
+        fakta: 'Ensimmäinen kirkko nousi 1571, ja nykyinen valmistui 1958. '
+          + 'Väliin mahtuu kuusi muuta, jotka veivät tulipalot, '
+          + 'maanjäristykset ja sota.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuparilevy, jossa lukee Tondo',
+          tiedosto: 'Laguna Copperplate Inscription in the National Museum of Anthropology.jpg',
+          teksti: 'Vanhin tunnettu filippiiniläinen asiakirja on ohut '
+            + 'kuparilevy, johon on takomalla lyöty teksti vuoden 900 '
+            + 'tienoilla. Siinä mainitaan ensimmäisen kerran Tondo, '
+            + 'Maynilan naapurikaupunki Pasig-joen suulla. Maynila ja '
+            + 'Tondo kävivät kauppaa Kiinan Song- ja Yuan-dynastioiden '
+            + 'kanssa ja kukoistivat vielä Ming-kaudella, ja 1200-luvulla '
+            + 'Maynila oli linnoitettu asutus ja kauppapaikka joen '
+            + 'rannalla. Kun Brunein sulttaanikunta kääntyi hindulaisuudesta '
+            + 'islamiin, sama tapahtui Manilassa: kaupungin hallitsija '
+            + 'Rajah Matanda oli samaan aikaan Manilan kuningas ja Brunein '
+            + 'sulttaanin Bolkiahin lapsenlapsenlapsi.',
+          selite: 'Laguna Copperplate -kirjoitus vitriinissä: tummuneeseen '
+            + 'kuparilevyyn on lyöty kymmenen riviä pyöreitä '
+            + 'kirjoitusmerkkejä.',
+          lahde: 'Chipmunkdavis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Manila',
+        },
+        {
+          otsikko: 'Muurit, jotka korttipeli maksoi',
+          tiedosto: 'Puerta Real, Manila, Filipinas, 2023-08-27, DD 56.jpg',
+          teksti: 'Kun kiinalainen merirosvolaivasto poltti kaupungin '
+            + 'vuonna 1574, espanjalaiset päättivät rakentaa kiveä. '
+            + 'Kuninkaan määräys kuului: ympäröikää kaupunki kivimuurilla '
+            + 'ja pystyttäkää sopiva linnoitus siihen, missä meri ja joki '
+            + 'kohtaavat. Työ alkoi 1590 ja jatkui vuoteen 1872, aina eri '
+            + 'kuvernöörien aikana ja ilman yhtenäistä suunnitelmaa — '
+            + 'siksi bastionit ovat keskenään erinäköisiä. Rahat tulivat '
+            + 'pelikorttien myyntimonopolista ja liiallisesta pelaamisesta '
+            + 'määrätyistä sakoista, ja muurit ladottiin kiinalaisin ja '
+            + 'filippiiniläisin käsin. Tulos kiertää 64 hehtaarin alan: '
+            + 'kuutisen metriä korkea ja pari ja puoli metriä paksu kehä '
+            + 'vallihautoineen.',
+          selite: 'Intramuroksen muuri ulkoapäin Puerta Realin kohdalta, ja '
+            + 'sen juurella levittäytyy entisen vallihaudan nurmikenttä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Intramuros',
+        },
+        {
+          otsikko: 'Kirkko, joka jäi seisomaan',
+          tiedosto: 'Iglesia de San Agustín, Manila, Filipinas, 2023-08-26, DD 36-38 HDR.jpg',
+          teksti: 'San Agustinin kirkko on kolmas samalla tontilla. '
+            + 'Ensimmäinen oli bambua ja nipapalmua ja paloi 1574; toinen '
+            + 'oli puuta ja paloi 1583, kun kynttilä sytytti verhon '
+            + 'hautajaisissa. Kolmas tehtiin kivestä 1580-luvun lopulta '
+            + 'alkaen ja valmistui 19. tammikuuta 1607. Se on '
+            + 'maan vanhin kivikirkko ja yhä pystyssä. Filippiineillä '
+            + 'kehitettiin oma tyyli, maanjäristysbarokki, '
+            + 'jossa rakennus on matala ja leveä, seinät paksut ja '
+            + 'tukipilarein vahvistetut ja kellotornit tanakoita. Vuoden '
+            + '1863 järistyksessä se oli kaupungin ainoa '
+            + 'vahingoittumaton julkinen rakennus. Vuonna 1945 se oli '
+            + 'ainoa Intramuroksen seitsemästä kirkosta, joka jäi '
+            + 'pystyyn — katto tosin vaurioitui.',
+          selite: 'San Agustinin pääsali holvikaton alla: seinämaalaukset '
+            + 'jäljittelevät kohokuvia, ja keskikäytävällä palaa '
+            + 'kristallikruunu.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'San Agustin Church (Manila)',
+        },
+        {
+          otsikko: 'Kahdeksan katedraalia samalla paikalla',
+          tiedosto: 'Manila Cathedral (1899).jpg',
+          teksti: 'Manilan katedraali on rakennettu kahdeksan kertaa. '
+            + 'Ensimmäinen oli vuoden 1571 seurakuntakirkko, toinen '
+            + 'nipaa, puuta ja bambua ja paloi 1583. Kivinen kolmas kaatui '
+            + 'maanjäristyksessä viimeisenä päivänä vuotta 1600, '
+            + 'seuraavat kaksi järistyksissä 1645 ja 1852. Kuudes vaurioitui '
+            + '3. kesäkuuta 1863 niin pahoin, että se purettiin — samassa '
+            + 'järistyksessä tuhoutui kenraalikuvernöörin asunto, ja '
+            + 'hallitsijan koti siirtyi pysyvästi kolme kilometriä joen '
+            + 'yläjuoksulle Malacañangiin. Seitsemäs rakennettiin '
+            + '1873–1879, ja jo seuraavana vuonna järistys kaatoi sen '
+            + 'kellotornin. Kahdeksas ja nykyinen vihittiin 1958.',
+          selite: 'Vuoden 1899 valokuva katedraalista: kupoli ja julkisivu '
+            + 'ovat ehjät, mutta vasemmalla seisoo kellotornin murtunut '
+            + 'tynkä.',
+          lahde: 'Jose de Olivares (1867-1942), author Walter B. Townsend, photographer, Wikimedia Commons (PD)',
+          wiki: 'Manila Cathedral',
+        },
+      ],
+    },
+  ],
 };

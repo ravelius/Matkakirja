@@ -2667,6 +2667,57 @@ const KAUPUNGIT = {
       },
     ],
   },
+  manila: {
+    /*
+     * MUURIKAUPUNKI PASIG-JOEN SUULLA (21.8.2026). Ruutu on
+     * 4,5 × 4,5 km, ja siihen mahtuvat lehden kaikki kymmenen
+     * kohdetta: pohjoisessa Binondon kirkko ja Escolta, idässä
+     * Quiapon kirkko, keskellä Jones-silta ja joen eteläpuolella
+     * Intramuros (Fort Santiago, katedraali, San Agustin, Baluarte
+     * de San Diego, taidemuseo) ja etelässä Rizal-puisto.
+     *
+     * NELIÖRAJAUS ON HARKITTU, kuten Varanasissa ja Kantonissa.
+     * Kohteet ovat luonnostaan 1,6 × 2,0 kilometrin rykelmä joen
+     * molemmin puolin, ja tiukka rajaus olisi jättänyt kuvan
+     * reunoiksi juuri ne kaksi vesirajaa, joiden takia kaupunki on
+     * olemassa: Manilanlahti lännessä ja Pasig-joki keskellä. Nyt
+     * lahti piirtyy koko länsilaidalle ja joki kulkee ruudun halki
+     * itä–länsisuunnassa, ja Intramuroksen muurirengas erottuu
+     * niiden kulmauksessa. Alue on työkalun oman ohjeen
+     * (5–8 km) alapuolella, ja se on mitattu päätös: espanjalais-
+     * kauden ydin on fyysisesti pieni, ja laajempi ruutu olisi
+     * pudottanut muurirenkaan tunnistamattomaksi täpläksi.
+     *
+     * MALACAÑANGIN PALATSI JÄI RAJAUKSEN ULKOPUOLELLE, ja se on
+     * tietoinen valinta eikä rajauksen sivuvaikutus. Palatsi on
+     * 1,9 kilometriä itään (14,5939 / 120,9945) eli juuri ruudun
+     * itäreunan takana, mutta se on nykyisen presidentin
+     * virka-asunto — laudan sisältölinjaus on "ei nykypolitiikkaa",
+     * ja sekä faktapohja (osio 4) että tarkistusraportti (osio 5)
+     * suosittelivat sen jättämistä pois. Lehti kertoo sen sijaan
+     * sen espanjalaiskautisen syyn, miksi kenraalikuvernööri
+     * ylipäätään muutti joen yläjuoksulle (vuoden 1863
+     * maanjäristys), Intramuroksen ja katedraalin jutuissa.
+     *
+     * CASA MANILA JA RIZAL-MONUMENTTI JÄIVÄT POIS, koska molemmat
+     * osuvat käytännössä toisen kohteen päälle: Casa Manila on 86
+     * metriä San Agustinin kirkosta ja Rizal-monumentti 200 metriä
+     * Rizal-puiston pisteestä. Kaksi numeroympyrää noin lyhyelle
+     * välille ei mahdu (Petran, Mekan ja Singaporen oppi), ja
+     * molemmat kerrotaan naapurikohteensa jutussa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kathmandussa ja Kantonissa: Intramuroksen
+     * muurinpäälliset kävelyreitit, Rizal-puiston polkuverkko ja
+     * Binondon kapeat kujat ovat OSM:ssä jalankulkualueita ja
+     * huoltoteitä, ja ilman lippuja kartan tihein osa jäisi
+     * tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 14.6118, etela: 14.5712, lansi: 120.9526, ita: 120.9944 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*
