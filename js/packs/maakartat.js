@@ -7823,6 +7823,136 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Rizal-puisto', lat: 14.5825, lon: 120.978333 },
     ],
   },
+  /*
+   * KAŠGARIN KOHDEKARTTA (Opus 21.8.2026). Rajaus on 5,4 × 5,0 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa, Xi'anissa
+   * ja Manilassa. Piirtorajaus ja sen perustelut ovat
+   * tools/piirra-kaupunkikartta.mjs:n kashgar-lohkossa.
+   *
+   * KOORDINAATTIEN LÄHTEET ON EROTELTU, koska ne ovat kahdesta eri
+   * paikasta eivätkä yhtä varmoja. en-Wikipedian omat {{coord}}-arvot
+   * ovat Afaq Khojan mausoleumilla (39,49056 / 76,02306), Id Kahin
+   * moskeijalla (39,47227 / 75,984106) ja Kansanpuistolla (39,46335 /
+   * 75,98988). Chini-Bagh, vanhakaupunki, basaari ja Yusuf Khass
+   * Hajibin mausoleumi tulevat Overpassista (peili
+   * maps.mail.ru/osm/tools/overpass/api/interpreter, haettu
+   * 21.8.2026), koska niillä EI OLE Wikipedia-koordinaattia
+   * lainkaan — Chini-Bagh-artikkelin ainoa koordinaattimalline on
+   * tyhjä `{{Coord|display=title}}`. Sama menettely kuin Tokion
+   * kansallismuseossa ja Persepoliksessa: piste haetaan OSM:stä, kun
+   * artikkeli ei anna omaansa.
+   *
+   * CHINI-BAGHIN PISTE ON OSM:N MUISTOMERKKI, ei rakennus. Overpass
+   * antaa samalta tontilta kaksi kohdetta: nykyisen hotellin
+   * (其尼瓦克宾馆, 39,47508 / 75,98040) ja muistomerkin "Site of the
+   * former British consulate" (39,47574 / 75,97980). Kartalla on
+   * jälkimmäinen, koska se osoittaa nimenomaan konsulaatin paikkaa;
+   * ero on 80 metriä eli reilu prosentti ruudun leveydestä, joten
+   * kummalla tahansa numeroympyrä osuisi samaan kortteliin.
+   * Tarkistusraportti (osio 1.1) ehdotti hotellia — ero on kirjattu
+   * tähän avoimuuden vuoksi.
+   *
+   * BASAARIN PISTE ON KESKUSTAN BASAARIKORTTELI, ei sunnuntain
+   * karjamarkkina. Tarkistusraportin Nominatim-piste 39,47469 /
+   * 76,00526 osuu Jiefangin pohjoisen tien basaarikortteliin;
+   * Overpassin "Sunday Bazaar" -piste on 240 metriä lounaaseen.
+   * Kartalla on tarkistusraportin arvo. Varsinainen karjamarkkina on
+   * kahdeksan kilometriä luoteessa (39,52287 / 75,93290) eikä mahdu
+   * ruutuun — ero kerrotaan basaarin jutussa.
+   *
+   * KANSANPUISTON ETÄISYYS KORJATTIIN. Faktapohja ilmoitti sen
+   * 1,5 kilometriksi keskustasta, mutta tarkistusraportin
+   * uusintalaskelma antaa 0,63 kilometriä (osio 5) — ja kartta
+   * vahvistaa saman: puisto on Id Kahin eteläpuolella eikä kilometrien
+   * päässä. Lehden tekstit käyttävät korjattua lukua.
+   *
+   * RAUTATIEASEMA (5,2 km) JA LENTOKENTTÄ (8,6 km) EIVÄT OLE
+   * KARTALLA. Ne kerrotaan matkaoppaan ensimmäisessä jaksossa.
+   */
+  kashgar: {
+    polku: 'assets/kartat/kashgar-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 39.4952, etela: 39.45, lansi: 75.97, ita: 76.033 },
+    esittely: 'Kartan alue on Kašgarin keidas: keskellä vanhankaupungin '
+      + 'savitiilikukkula, sen länsipuolella Id Kahin aukio ja idässä '
+      + 'basaarikortteli. Koillisnurkassa on Afaq Khojan mausoleumi. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Afaq Khojan mausoleumi', lat: 39.49056, lon: 76.02306 },
+      { nimi: 'Chini-Bagh', lat: 39.47574, lon: 75.9798 },
+      { nimi: 'Suuri basaari', lat: 39.47469, lon: 76.00526 },
+      { nimi: 'Id Kahin moskeija', lat: 39.47227, lon: 75.984106 },
+      { nimi: 'Vanhakaupunki', lat: 39.46997, lon: 75.99979 },
+      { nimi: 'Kansanpuisto', lat: 39.46335, lon: 75.98988 },
+      { nimi: 'Yusuf Khass Hajibin mausoleumi', lat: 39.4592, lon: 75.99195 },
+    ],
+  },
+  /*
+   * LHASAN KOHDEKARTTA (21.8.2026). Rajaus on 5,6 × 3,7 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Mekassa ja Manilassa.
+   *
+   * RUUTU ON KAUPUNGIN OMA MUOTO eikä valittu ikkuna: vanha Lhasa on
+   * itä–länsisuuntainen nauha Kyichun laakson pohjalla, ja ruudun
+   * päät ovat kaupungin omia päätepisteitä — lännessä Norbulingkan
+   * puisto, idässä Barkhorin korttelit. Eteläreuna on vedetty joen
+   * rantaan asti, koska Kyichu on syy kaupungin sijaintiin.
+   *
+   * JOKHANGIN KOORDINAATTI EI OLE WIKIPEDIAN. en-Wikipedian
+   * Jokhang-artikkelin infoboksissa lukee 29°39′11″N 91°02′51″E,
+   * jonka pituusaste on sama kuin Drepung-luostarilla ja jonka
+   * mukaan temppeli olisi Potalasta 6,7 km LÄNTEEN — vaikka saman
+   * artikkelin oma leipäteksti sanoo sen olevan kilometrin verran
+   * Potalasta ITÄÄN. Kyseessä on kopiointivirhe kahden artikkelin
+   * välillä. Riippumaton tarkistus (docs/aasia-tyoaineisto/
+   * tarkistus-lhasa.md osio 1.1) mittasi todellisen sijainnin sekä
+   * Nominatimista että Overpassista, ja kolme lähdettä osuvat
+   * kahdenkymmenen metrin sisään toisistaan: kartalla on Overpassin
+   * arvo 29,65287 / 91,13184 (relaatio 2358701). Drepungin oma
+   * koordinaatti sen sijaan tarkistettiin oikeaksi (ero Overpassiin
+   * 65 m), eli virhe oli vain Jokhangin rivillä.
+   *
+   * KOLME SUURTA LUOSTARIA JÄIVÄT POIS KARTALTA. Sera on 5,1 km
+   * pohjoiseen, Drepung 7,2 km luoteeseen ja Ganden 36 km
+   * koilliseen. Kolme kohdetta kolmeen ilmansuuntaan vaatisi kolme
+   * kainaloa, eikä yhdelläkään tämän kartaston kartalla ole edes
+   * kahta; Serasta piirrettiin koekainalo, mutta Overpass palautti
+   * sen ruudusta yhdeksän elementtiä eli tyhjän paperin. Luostarit
+   * kerrotaan nostossa K4 ja Chagporin jutussa; sama ratkaisu kuin
+   * Xi'anin terrakotta-armeijalla ja Medinan Uhud-vuorella.
+   *
+   * RAUTATIEASEMA JÄI POIS, koska se on 5,7 km lounaaseen ja siis
+   * kartan ainoa kohde etelässä: ruutuun venytettynä sen
+   * numeroympyrä osuisi mittakaavajanan päälle (Kööpenhaminan
+   * Tivoli, Masqatin hindutemppeli). Asema on matkaoppaan
+   * ensimmäisessä jaksossa.
+   *
+   * MURU NYINGBA, TSOMON LING JA TSAMKHUNGIN NUNNALUOSTARI
+   * jätettiin pois, koska ne ovat 95, 220 ja 358 metrin päässä
+   * naapurikohteestaan eivätkä kaksi numeroympyrää mahdu niin
+   * lyhyelle välille (Petran, Mekan ja Singaporen oppi).
+   */
+  lhasa: {
+    polku: 'assets/kartat/lhasa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 29.672, etela: 29.639, lansi: 91.084, ita: 91.142 },
+    esittely: 'Kartan keskellä kohoaa Potala Punaisen kummun päällä, '
+      + 'ja sen kaakkoispuolella alkaa Barkhorin vanhakaupunki '
+      + 'Jokhangin ympärillä. Lännessä on Norbulingkan puisto ja '
+      + 'etelässä virtaa Kyichu. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Manilassa. */
+      { nimi: 'Ramoche-temppeli', lat: 29.658611, lon: 91.130278 },
+      { nimi: 'Potala-palatsi', lat: 29.657778, lon: 91.116944 },
+      { nimi: 'Norbulingka', lat: 29.653889, lon: 91.091667 },
+      { nimi: 'Jokhang-temppeli', lat: 29.65287, lon: 91.13184 },
+      { nimi: 'Chagpori', lat: 29.65227, lon: 91.1103 },
+      { nimi: 'Tiibetin museo', lat: 29.65146, lon: 91.09762 },
+      { nimi: 'Lhasan suuri moskeija', lat: 29.65084, lon: 91.13671 },
+    ],
+  },
 };
 
 /*

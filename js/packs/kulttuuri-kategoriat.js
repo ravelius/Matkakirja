@@ -46621,4 +46621,1008 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KAŠGAR (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita, kohdekarttaa, juttuja eikä säärivi ennen
+   * tätä. Faktat on tarkistettu en-Wikipedian raakateksteistä
+   * (action=raw, haettu 21.8.2026): Kashgar, Id Kah Mosque, Afaq
+   * Khoja Mausoleum, Chini-Bagh, Mahmud al-Kashgari, Yūsuf
+   * Balasaguni, Kutadgu Bilig, Taklamakan Desert, Yettishar, Yakub
+   * Beg of Yettishar, George Macartney (British consul), Catherine
+   * Macartney, Carl Gustaf Emil Mannerheim, People's Park (Kashgar),
+   * Kashgar railway station, Kashgar Laining International Airport ja
+   * Karakoram Highway. Pohjana ovat docs/aasia-tyoaineiston
+   * faktapohja-kashgar.md ja tarkistus-kashgar.md, ja ristiriidoissa
+   * tarkistusraportti voittaa (Kansanpuiston etäisyys 1,5 km → 0,6 km).
+   *
+   * SISÄLTÖLINJAUS on spec-asia.md:n sitova Kašgar-kohta ja
+   * faktapohjan alkuosa: Silkkitie, basaari, Id Kahin moskeija ja
+   * 1800-luvun Suuri peli konsulaatteineen — EI Xinjiangin
+   * nykypolitiikkaa. Kaikki lehden tapahtumat ovat vuotta 1949
+   * aiemmilta ajoilta lukuun ottamatta neutraaleja
+   * matkustustosiasioita (radat, tiet, aukioloajat, ilmasto).
+   * POIS JÄTETTY KOKONAAN: vuosien 1933–1934 sisällissota ja siihen
+   * liittyvät väkivaltaisuudet, Id Kahin moskeijan uskonnolliset
+   * rajoitukset vuodesta 2016, imaamin surma 2014, vuosien 2008,
+   * 2011 ja 2014 tapahtumat, vanhankaupungin 2009–2012 purku- ja
+   * jälleenrakennuskiista sekä Kansanpuiston Mao-patsas. Uskonto
+   * kerrotaan rakennuksina ja kerrostumina, kuten Jerusalemissa ja
+   * Medinassa.
+   *
+   * KAKSI RISTIRIITAA ON KIRJOITETTU AUKI LUKIJALLE (v925/v932:n
+   * tapa): kaupungin korkeus merenpinnasta on saman en-Wikipedia-
+   * artikkelin infoboksissa 1 270 metriä ja sääruudussa 1 386, ja
+   * ero kerrotaan oppaan jaksossa "Alueen rakenne". Asukasluku on
+   * artikkelin johdannossa 711 300 (2019) ja infoboksissa 782 662
+   * (2020), joten teksteissä puhutaan runsaasta 700 000 asukkaasta —
+   * luku pitää paikkansa kummallakin lähteellä.
+   *
+   * KOLME RISTIRIITAA ON RATKAISTU EIKÄ KERROTTU. (1) Id Kahin
+   * moskeijan minareettien määrä on infoboksissa kolme mutta
+   * arkkitehtuuriosiossa mainitaan kaksi kahdeksantoistametristä
+   * porttitornin sivuilla ja yksi holvin päällä — nosto kertoo
+   * saman jaon, jolloin luvut täsmäävät. (2) Lentokentän
+   * avaamisvuosi on leipätekstissä lokakuu 1953 ja infoboksissa
+   * 10.3.1954; vuosi on jätetty oppaasta kokonaan pois, koska
+   * kumpikaan ei ole toista tarkempi. (3) Moskeijan väitetty vuoden
+   * 996 alkuperä on Wikipediassa itsessään merkitty
+   * {{Citation needed}} -tagilla, ja se on siksi jätetty pois.
+   *
+   * MANNERHEIMIN KUVAT ovat lehden oma löytö eivätkä faktapohjasta.
+   * Museoviraston kansatieteellinen kuvakokoelma on julkaissut
+   * Commonsiin C. G. E. Mannerheimin Aasian-matkan (1906–1908)
+   * lasilevyt CC BY 4.0 -ehdoin, ja niiden joukossa on Kašgarista
+   * muun muassa Britannian pääkonsulin talo, kaupunginmuuri ja
+   * näkymä Venäjän konsulaatin terassilta. Matka itse on tarkistettu
+   * en-Wikipedian Mannerheim-artikkelista, ja se on Suuren pelin
+   * historiaa täsmälleen samalta vuosikymmeneltä kuin lehden
+   * konsulaattinostot — siksi H4 kertoo sen. Mannerheimin
+   * myöhemmistä vaiheista ei sanota mitään.
+   *
+   * KUVAVALINNAN PERIAATE oli faktapohjan osion 6 varoitus: parhaat
+   * Kašgar-kuvat ovat basaarilta ja moskeijan aukiolta, joilla
+   * liikkuu paljon ihmisiä. Jokainen valittu kuva on katsottu
+   * silmin, ja hylättyjä oli kymmenkunta pelkästään luettavien
+   * kasvojen takia (mm. Mannerheimin basaaritori 1906,
+   * sunnuntaimarkkinoiden porttikuvat ja vanhankaupungin
+   * lapsikuvat). Id Kahista on kolme kuvaa (aukio, rukoussali,
+   * portaali alhaalta) ja Afaq Khojasta kolme (hautausmaalta,
+   * julkisivu, kaakelipinta), koska ne ovat kaupungin kaksi
+   * tunnetuinta rakennusta — Xi'anin terrakotta-armeijan ja
+   * Mekan Jabal al-Nourin ennakkotapaus.
+   *
+   * SÄÄRIVI PUUTTUU: Open-Meteon arkisto vastasi koko työn ajan
+   * 429:llä (ks. saatiedot.js:n lohkokommentti), joten oppaan
+   * jakso 5 nojaa en-Wikipedian sääruutuun ja SANOO SEN ÄÄNEEN.
+   */
+  kashgar: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kašgar',
+      johdanto: 'Keidaskaupunki Taklamakanin länsilaidalla, jossa '
+        + 'Silkkitien pohjoinen ja eteläinen haara ovat yhtyneet yli '
+        + 'kahden vuosituhannen ajan. Vanhankaupungin savitiilikukkulan '
+        + 'vieressä seisoo Id Kahin moskeija, Kiinan suurin.',
+      kansikuvat: [
+        {
+          tiedosto: 'Kashgar, China Bebop Drone 2015-09-13T194740+0000 18F943.jpg',
+          selite: 'Id Kahin aukio ilmasta: kyyhkyparvi nousee laatoitukselta, '
+            + 'ja aukion takaa alkaa uuden kaupungin tornitalorivi.',
+          lahde: 'w0zny, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: '2015-09-10-111321 - Blick zur Altstadt vom Kashgar.jpg',
+          selite: 'Vanhankaupungin savitiilikatot nousevat lammen ja '
+            + 'pajurannan takaa, ja vasemmalla siintää televisiotorni.',
+          lahde: 'Zossolino, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2015-09-10-093741 - Mausoleum von Abakh Hodscha vom Friedhof aus.jpg',
+          selite: 'Afaq Khojan mausoleumin vihreä kupoli ja neljä '
+            + 'minareettia kohoavat hautausmaan savikumpujen takaa '
+            + 'kaupungin koillislaidalla.',
+          lahde: 'Zossolino, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kuja, katot ja mausoleumi — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (savitiilinen vanhakaupunki, sen laita uutta kaupunkia
+       * vasten, ja seudun pyhin rakennus).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Kashgar Altstadt 1.jpg',
+          selite: 'Vanhankaupungin kuja katetun holvin alta kuvattuna: '
+            + 'savitiiliseinät kaartuvat molemmin puolin ja katukiveys '
+            + 'jatkuu varjoon.',
+          lahde: 'See58, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: '20250525喀什古城.jpg',
+          selite: 'Vanhankaupungin tasakatot leviävät loessikukkulan '
+            + 'päälle, ja horisontissa erottuu uuden kaupungin '
+            + 'rakennusrivi.',
+          lahde: 'MasaneMiyaPA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kashgar - Afaq Khoja Mausoleum.jpg',
+          selite: 'Afaq Khojan mausoleumi vinosti edestä: vihreä '
+            + 'kaakelikupoli nousee keskeltä ja nurkissa seisoo neljä '
+            + 'raidallista minareettia.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kiinan suurin moskeija',
+          tiedosto: 'Id Kah Mosque Kashgar Xinjiang China 新疆 喀什 喀什清真寺 - panoramio (3).jpg',
+          teksti: 'Id Kahin moskeija valmistui vuonna 1442. Rakennuttaja '
+            + 'oli Saqsiz Mirza, emiiri Sayyid Alin vanhempi poika, ja '
+            + 'hän pystytti sen esi-isiensä muistoksi. Nykyinen '
+            + 'kultatiilinen rakennus nousi vanhemman tilalle 1798, ja '
+            + 'vuonna 1838 se laajennettiin nykymittoihinsa: '
+            + 'satakaksikymmentä metriä pitkä, sataneljäkymmentä leveä '
+            + 'ja alaltaan noin 16 800 neliömetriä. Porttitorni on '
+            + 'seitsemäntoista metriä korkea, ja sen molemmin puolin '
+            + 'nousee kahdeksantoistametrinen minareetti; kolmas seisoo '
+            + 'portin takaisen holvin päällä. Rukoilijoita mahtuu '
+            + 'saliin ja pihoille yhteensä kaksikymmentätuhatta, ja se '
+            + 'tekee Id Kahista Kiinan suurimman moskeijan.',
+          selite: 'Rukoussalin sisällä vihreiksi maalatut puupilarit '
+            + 'kannattavat kattoa, ja perällä erottuvat mihrabin holvi '
+            + 'ja puinen saarnatuoli.',
+          lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Id Kah Mosque',
+        },
+        {
+          otsikko: 'Sunnuntai, jona koko seutu tulee kaupunkiin',
+          tiedosto: 'Kashgar Altstadt.jpg',
+          teksti: 'Kašgarin sunnuntaimarkkinat ovat Keski-Aasian suurin '
+            + 'markkinapaikka, ja vilkkaimpina tunteina paikalla käy '
+            + 'satatuhatta ihmistä. Maanviljelijät tuovat ympäröiviltä '
+            + 'pelloilta hedelmiä ja vihanneksia, karjankasvattajat '
+            + 'esittelevät elukkansa ja antavat ostajien koeajaa '
+            + 'hevosia, ja käsityöläiset myyvät veitsiä, pannuja, '
+            + 'teekannuja ja korurasioita. Suurin osa saapuu '
+            + 'aasinvetoisilla kärryillä. Kysytyin tavara on Iranista '
+            + 'tuotu sahrami, jonka hinta on markkinoilla kolme kertaa '
+            + 'kullan paikallinen arvo. Tori on auki muinakin päivinä, '
+            + 'mutta sunnuntaina se on suurimmillaan.',
+          selite: 'Vanhankaupungin kojussa riippuu rivi käsin sorvattuja '
+            + 'puuastioita ja kurpitsapulloja, ja edessä on pöytä '
+            + 'täynnä sorvattuja aihioita.',
+          lahde: 'See58, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kashgar',
+        },
+        {
+          otsikko: 'Parhaiten säilynyt islamilainen kaupunki',
+          tiedosto: 'Kashgar old town (12).jpg',
+          teksti: 'Kašgarin vanhaakaupunkia on kuvailtu parhaiten '
+            + 'säilyneeksi esimerkiksi perinteisestä islamilaisesta '
+            + 'kaupungista koko Keski-Aasiassa. Sanat ovat '
+            + 'taidehistorioitsija George Michellin kirjasta Kashgar: '
+            + 'Oasis City on China’s Old Silk Road vuodelta 2008. '
+            + 'Kortteleita ei ole kaavoitettu vaan ne ovat kasvaneet '
+            + 'vuosisatojen kuluessa: mutkittelevia kujia, savitiilestä '
+            + 'muurattuja seiniä ja sisäpihan ympärille rakennettuja '
+            + 'taloja loessikukkulan päällä. Kaupunginosa on ollut yli '
+            + 'miljoonan vuosittaisen matkailijan kohde, ja 2000-luvun '
+            + 'alussa siellä asui kaksi viidesosaa koko kaupungin '
+            + 'väestöstä.',
+          selite: 'Vanhankaupungin talon yläkerrassa kiertää kaiverrettu '
+            + 'puuparveke, jonka kaiteiden takaa työntyy köynnöksiä ja '
+            + 'ruukkukasveja.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+          wiki: 'Kashgar',
+        },
+        {
+          otsikko: 'Pyhäkkö, jossa lepää viisi sukupolvea',
+          tiedosto: 'Kashgar-Mausolée d\'Abakh Khoja 1996 façade.jpg',
+          teksti: 'Kolmen ja puolen kilometrin päässä keskustasta '
+            + 'koilliseen seisoo Afaq Khojan mausoleumi, alueen pyhin '
+            + 'muslimikohde. Se rakennettiin noin vuonna 1640 '
+            + 'keskiaasialaisen sufiopettajan Muhammad Yusufin haudaksi, '
+            + 'ja hänen poikansa Afaq Khoja haudattiin sinne 1694. '
+            + 'Kaakeloituun hautaan on aikojen kuluessa laskettu saman '
+            + 'suvun viisi sukupolvea, kaikkiaan seitsemänkymmentäkaksi '
+            + 'vainajaa. Keskellä on seitsemäntoista metriä leveä '
+            + 'kupoli ja nurkissa neljä raidallista minareettia; haudat '
+            + 'on peitetty värikkäillä silkeillä. Afaq Khoja hallitsi '
+            + 'aikanaan Kašgarin lisäksi Khotania, Yarkandia, Korlaa, '
+            + 'Kuchaa ja Aksua.',
+          selite: 'Mausoleumin julkisivu vuonna 1996: vihreä kaakelikupoli '
+            + 'lepää valkoisen kaariportaalin päällä, ja kaakelointi on '
+            + 'paikoin lohjennut.',
+          lahde: 'Ismoon, Wikimedia Commons (CC0)',
+          wiki: 'Afaq Khoja Mausoleum',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Id Kah Mosque (23684453549).jpg',
+          selite: 'Id Kahin porttitorni alhaalta kuvattuna: keltainen '
+            + 'tiiliseinä nousee kaariaukon ylle ja oikeassa reunassa '
+            + 'erottuu kaakeloidun minareetin kylki.',
+          lahde: 'Laika ac from UK, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Kašgar on samannimisen alueen hallinnollinen keskus ja '
+          + 'yksi Kiinan läntisimmistä kaupungeista — Bagdadiin on täältä '
+          + 'lyhyempi matka kuin Pekingiin. Matkailijan Kašgar on silti '
+          + 'pieni: vanhakaupunki, Id Kahin aukio ja basaarikortteli '
+          + 'mahtuvat runsaan kilometrin säteelle, ja Afaq Khojan '
+          + 'mausoleumi on kolmen ja puolen kilometrin päässä '
+          + 'koillisessa. Sunnuntain karjamarkkinat ovat kaupungin '
+          + 'ulkopuolella noin kahdeksan kilometriä luoteessa, eivätkä '
+          + 'ne siksi ole tämän sivun kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Kašgar',
+          taitto: 'opas',
+          teksti: 'Kaksituhatta vuotta karavaanien pysähdyspaikkaa aavikon '
+            + 'reunalla — ja yhä se kohta, jossa Kiina loppuu ja '
+            + 'Keski-Aasia alkaa.',
+          nosto: 'Kašgarissa käy kaksi kelloa. Koko Kiinassa on virallisesti '
+            + 'Pekingin aika, mutta täällä eletään käytännössä kaksi '
+            + 'tuntia jäljessä Xinjiangin aikaa — ja tapaamisesta '
+            + 'sovittaessa kannattaa kysyä, kumpaa tarkoitetaan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kašgarissa on Kiinan läntisin rautatieasema. Se '
+                + 'avattiin vuonna 1999, kun Etelä-Xinjiangin rata '
+                + 'ulotettiin tänne, ja kesäkuussa 2011 avattiin '
+                + 'matkustajaliikenteelle Kašgarista Hotaniin johtava '
+                + 'rata, joka sivuaa Tarimin altaan eteläisiä keitaita '
+                + 'Yarkandia ja Yechengiä. Junamatka Ürümqiin kestää '
+                + 'noin kuusitoista tuntia ja Hotaniin viisi. Asema on '
+                + 'runsaat viisi kilometriä keskustasta koilliseen, '
+                + 'lentokenttä kahdeksan ja puolen kilometrin päässä '
+                + 'pohjoisessa; kentän nimi vaihtui elokuussa 2023 '
+                + 'Kašgarin Laining-lentoasemaksi. Maanteitse '
+                + 'Karakorumin valtatie vie etelään Khunjerabin solan '
+                + 'yli Pakistaniin ja aina Islamabadiin asti. Kirgisian '
+                + 'puolelle pääsee bussilla Torugartin tai Irkeshtamin '
+                + 'solan kautta, ja päätepysäkki on Biškekin läntinen '
+                + 'linja-autoasema.',
+              kuva: {
+                tiedosto: '2015-09-11-061153 - Auf dem Karakorum Highway.JPG',
+                selite: 'Karakorumin valtatie seuraa samean vuorijoen '
+                  + 'uomaa, ja vastarannalla kohoaa paljas '
+                  + 'kivivuoristo.',
+                lahde: 'Zossolino, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kašgar on keidas Tarimin altaan länsilaidalla. '
+                + 'Allas on tuhat kilometriä pitkä ja neljäsataa leveä, '
+                + 'ja sen keskellä leviää Taklamakan: 337 000 '
+                + 'neliökilometriä hiekkaa, hieman Saksaa pienempi alue '
+                + 'ja maailman autiomaiden kokolistalla viidestoista. '
+                + 'Etelässä nousee Kunlun, lännessä Pamir, pohjoisessa '
+                + 'Tien Shan, ja idässä alkaa Gobi. Hiekkameren yli ei '
+                + 'kuljettu vaan sen ympäri: Silkkitien kaksi haaraa '
+                + 'kiersivät autiomaan pohjois- ja eteläreunaa '
+                + 'keitaalta toiselle, ja eteläisen reitin varrella '
+                + 'olivat Kašgarin lisäksi Yarkand, Khotan, Niya ja '
+                + 'Miran, pohjoisen varrella Kucha ja Turpan. Nimeä '
+                + 'Taklamakan on kansanetymologiassa tulkittu paikaksi, '
+                + 'josta ei ole paluuta. Kaupungin korkeudesta '
+                + 'merenpinnasta lähteet antavat kaksi lukua: '
+                + 'en-Wikipedian infoboksi sanoo 1 270 metriä ja saman '
+                + 'artikkelin sääruutu 1 386, eikä eroa selitetä.',
+              kuva: {
+                tiedosto: 'Taklamakan Desert Qarqan Xinjiang China 新疆 且末 塔克拉玛干沙漠 - panoramio.jpg',
+                selite: 'Taklamakanin hiekkadyynit jatkuvat harjanteina '
+                  + 'horisonttiin, ja tuuli on piirtänyt rinteisiin '
+                  + 'aaltokuvion.',
+                lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: turkkilaiskielten sanakirja',
+              teksti: 'Kašgarin seudun perinteinen väestö ovat uiguurit, ja '
+                + 'vuoden 2018 tilaston mukaan heitä on kaupungin '
+                + 'asukkaista 85,8 prosenttia. Kieli on turkkilaiskieli '
+                + 'ja se kirjoitetaan arabialaisin kirjaimin, joten '
+                + 'katukyltit näyttävät persialaisilta mutta kuuluvat '
+                + 'samaan kielikuntaan kuin turkki. Täältä on peräisin '
+                + 'myös näiden kielten ensimmäinen sanakirja. Mahmud '
+                + 'al-Kašgari kokosi Bagdadissa vuosina 1072–1074 '
+                + 'teoksen Diwan Lughat al-Turk, ensimmäisen kattavan '
+                + 'turkkilaiskielten sanakirjan, joka oli tarkoitettu '
+                + 'Abbasidien kalifaatille — turkkilaisten uudelle '
+                + 'liittolaiselle. Kirjassa on vanhinta tunnettua '
+                + 'turkkilaista runoutta nelisäkeinä ja ensimmäinen '
+                + 'tunnettu kartta turkkilaiskansojen asuinalueista; '
+                + 'kartta on nykyään Istanbulin kansalliskirjastossa. '
+                + 'Al-Kašgari itse syntyi Barsganissa nykyisen '
+                + 'Kirgisian puolella ja haudattiin Upaliin Kašgarin '
+                + 'lounaispuolelle, jossa hänen mausoleuminsa on yhä.',
+              kuva: {
+                tiedosto: 'Dīwān Lughāt al-Turk (original).jpg',
+                selite: 'Diwan Lughat al-Turkin pyöreä maailmankartta '
+                  + 'kahdella käsikirjoitussivulla: punaiset viivat '
+                  + 'ovat jokia ja vuoristoja, ympyrät kaupunkeja.',
+                lahde: '13th century author, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: maanjäristys 1902',
+              teksti: 'Vuonna 1902 seutua ravisteli maanjäristys, jonka '
+                + 'magnitudi oli 7,7. Alueella menehtyi jopa '
+                + 'kymmenentuhatta ihmistä, heistä 667 Kašgarissa, ja '
+                + 'muutaman päivän kuluttua tuli vielä 6,8 magnitudin '
+                + 'jälkijäristys. Savitiilestä muurattu keidaskaupunki '
+                + 'oli tärinälle erityisen altis. Järistys kiinnosti '
+                + 'myös Britannian konsulia: George Macartney kirjoitti '
+                + 'siitä Lontoon Geographical Journal -lehteen '
+                + 'lokakuussa 1902 artikkelin nimeltä Earthquakes in '
+                + 'Kashgar. Sama mies oli tuolloin asunut kaupungissa '
+                + 'kaksitoista vuotta ja jäi vielä kuudeksitoista.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kašgarissa on kylmä aavikkoilmasto, ja kesän ja '
+                + 'talven ero on jyrkkä. Vuorokauden keskilämpö nousee '
+                + 'tammikuun runsaasta viidestä pakkasasteesta heinäkuun '
+                + 'vajaaseen kahteenkymmeneenkuuteen, ja koko vuoden '
+                + 'keskiarvo on 12,6 astetta. Kevät on pitkä ja tulee '
+                + 'nopeasti, syksy jää lyhyeksi. Sadetta kertyy 85 '
+                + 'millimetriä vuodessa, mikä tekee Kašgarista yhden '
+                + 'maailman kuivimmista kaupungeista: sateisin kuukausi '
+                + 'toukokuu antaa keskimäärin neljätoista millimetriä, '
+                + 'ja lunta tulee kylmästä talvesta huolimatta harvoin. '
+                + 'Aurinkoa on 2 863 tuntia vuodessa. Ääripäät vuodesta '
+                + '1951 alkaen ovat 24,4 pakkasastetta tammikuussa 1959 '
+                + 'ja 40,1 lämpöastetta heinäkuussa 1958. Luvut ovat '
+                + 'Kiinan ilmatieteen laitoksen normaaleja jaksolta '
+                + '1991–2020 ja mitattu 1 386 metrin korkeudessa; ne '
+                + 'eivät ole tämän lehden vuosigraafin lukuja, sillä '
+                + 'Kašgarilta puuttuu toistaiseksi oma säärivi.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki on ollut vuorollaan kiinalaisten, turkkilaisten, '
+        + 'mongolien ja tiibetiläisten valtakuntien hallussa. '
+        + '1890-luvulta lähtien siellä asui rinnakkain brittiläinen ja '
+        + 'venäläinen virkamiehistö, kumpikin toistaan tarkkailemassa.',
+      tehtava: {
+        kysymys: 'Minkä valtakunnan lippu liehui Kašgarin yllä vuosina '
+          + '1873–1877?',
+        vaihtoehdot: [
+          'Venäjän keisarikunnan',
+          'Osmanien valtakunnan',
+          'Britannian',
+          'Qing-dynastian',
+        ],
+        oikea: 1,
+        fakta: 'Osmanien sulttaani tunnusti Yettisharin vasallikseen ja '
+          + 'Yakub Begin sen emiiriksi vuonna 1873, ja osmanien lippu '
+          + 'liehui kaupungissa vuoteen 1877.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kauppias, joka näki nestoriaanien kirkot',
+          tiedosto: 'Caravane Marco Polo.jpg',
+          teksti: 'Marco Polo saapui Kašgariin noin vuosina 1273–1274 ja '
+            + 'kirjasi kaupungin nimen muotoon Cascar. Hän pani '
+            + 'muistiin, että kaupungissa asui runsaasti '
+            + 'nestoriaanikristittyjä ja että heillä oli omat kirkkonsa. '
+            + 'Kaupunki kuului silloin Tšagatain kaanikuntaan, yhteen '
+            + 'Tšingis-kaanin valtakunnan perillisistä; mongolit olivat '
+            + 'pyyhkäisseet kara-kitaiden vallan pois vuonna 1219. '
+            + 'Vasta 1300-luvulla kaani Tughluq Timur kääntyi islamiin, '
+            + 'ja siitä lähtien islam on ollut seudun hallitseva '
+            + 'uskonto. Sitä ennen alueella oli harjoitettu '
+            + 'zarathustralaisuutta ja buddhalaisuutta.',
+          selite: 'Katalonialaisen atlaksen 1300-luvun kuvitus '
+            + 'Silkkitien karavaanista: kuormakamelit kulkevat jonossa '
+            + 'ja ratsastajat seuraavat perässä.',
+          lahde: 'Abraham Cresques, Atlas catalan, Wikimedia Commons (PD)',
+          wiki: 'Kashgar',
+        },
+        {
+          otsikko: 'Seitsemän kaupungin emiiri',
+          tiedosto: 'Mausoleum of Yusuf Khass Hajib front gate.jpg',
+          teksti: 'Kiinan valta romahti Kašgariassa vuonna 1864, ja '
+            + 'seuraavana vuonna Kokandin kaanikunnasta tullut Yakub Beg '
+            + 'otti kaupungin haltuunsa. Hän valtasi Kašgarin lisäksi '
+            + 'Khotanin, Yarkandin, Yangihissarin, Aksun, Kuchan ja '
+            + 'Korlan ja julistautui Yettisharin eli Seitsemän kaupungin '
+            + 'emiiriksi. Bukharan emiiri antoi hänelle 1866 arvonimen '
+            + 'Athalik Ghazi, ja vuonna 1873 osmanien sulttaani tunnusti '
+            + 'valtion vasallikseen — osmanien lippu liehui Kašgarissa '
+            + 'vuoteen 1877. Yakub Beg solmi sopimukset sekä Britannian '
+            + 'että Venäjän kanssa, mutta kumpikaan ei tullut apuun. Hän '
+            + 'kuoli Korlassa toukokuussa 1877, ja 18. joulukuuta '
+            + 'Qing-joukot marssivat kaupunkiin.',
+          selite: 'Yakub Begin vuonna 1865 runoilija Yusuf Khass Hajibille '
+            + 'pystyttämän mausoleumin sinikaakelinen porttirakennus '
+            + 'seisoo sypressien välissä.',
+          lahde: 'Voidvector, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Yettishar',
+        },
+        {
+          otsikko: 'Kaksi konsulia samassa kaupungissa',
+          tiedosto: 'Näkymä Venäjän konsulaatin terassilta joelle 1906 (VKK269-140).tif',
+          teksti: 'Britannialla oli Kašgarissa konsulaatti vuodesta 1890 '
+            + 'vuoteen 1948. Se oli nimellisesti brittiläinen, mutta '
+            + 'väen ja rahat antoi Brittiläisen Intian poliittinen '
+            + 'osasto; Qing-hallinto tunnusti sen virallisesti vasta '
+            + '1908, ja pääkonsulaatiksi se korotettiin 1911. Konsuli '
+            + 'George Macartney oli tullut Xinjiangiin 1890 Francis '
+            + 'Younghusbandin retkikunnan tulkkina ja jäi kaupunkiin '
+            + 'kahdeksikymmeneksikahdeksaksi vuodeksi. Samaan aikaan '
+            + 'paikalla oli vakiintunut venäläinen virkamiehistö: '
+            + 'tammikuun 1902 välikohtaus, jossa olivat osallisina '
+            + 'venäläiset tullivirkailijat ja kasakat, kertoo siitä. '
+            + 'Tarkkaa perustamisvuotta Venäjän konsulaatille lähteet '
+            + 'eivät anna.',
+          selite: 'Näkymä Venäjän konsulaatin terassilta vuonna 1906: '
+            + 'poppelirivin takaa avautuu jokitasanko ja kaukana '
+            + 'siintävät vuoret.',
+          lahde: 'Carl Gustaf Emil Mannerheim, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Chini-Bagh',
+        },
+        {
+          otsikko: 'Suomalainen, joka valokuvasi Kašgarin',
+          tiedosto: 'Kaupunginmuuri 1906 (VKK269-159).tif',
+          teksti: 'Vuonna 1906 Kašgariin saapui ratsain Venäjän armeijan '
+            + 'upseeri Carl Gustaf Emil Mannerheim. Matkan virallinen '
+            + 'syy oli tieteellinen tutkimusretki ranskalaisen '
+            + 'arkeologin Paul Pelliot’n seurassa, mutta todellinen '
+            + 'tehtävä oli Venäjän yleisesikunnan tiedustelu: mitä '
+            + 'Qing-hallinto puuhasi lännessä ja kuinka Länsi-Kiinaan '
+            + 'pääsisi tarvittaessa marssimaan. Riita Pelliot’n kanssa '
+            + 'erotti miehet Andijanin jälkeen, ja Mannerheim jatkoi '
+            + 'omillaan. Matka kesti kaksi vuotta ja neljätoistatuhatta '
+            + 'kilometriä, päättyi Pekingiin 1908 ja tuotti lähes '
+            + 'kaksitoistasataa esinettä Kansallismuseoon sekä noin '
+            + 'tuhatviisisataa valokuvaa — muutama niistä on tässä '
+            + 'lehdessä.',
+          selite: 'Kašgarin savitiilinen kaupunginmuuri ja sen kulmabastioni '
+            + 'vuonna 1906, edessä hedelmätarhaa ja hiekkatie.',
+          lahde: 'Carl Gustaf Emil Mannerheim, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Carl Gustaf Emil Mannerheim',
+        },
+      ],
+    },
+  ],
+  /*
+   * LHASA (Opus 21.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita, kohdekarttaa, juttuja eikä säätietoja ennen
+   * tätä. ARTIKKELIT-merkintä oli olemassa, ja sen intro
+   * kirjoitettiin uusiksi samassa erässä (asia-artikkelit.js);
+   * teksti-kenttään ei koskettu. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä (action=raw, haettu 21.8.2026): Lhasa, Potala
+   * Palace, Jokhang, Barkhor, Norbulingka, Ramoche Temple, Chagpori,
+   * Sera Monastery, Drepung Monastery, Ganden Monastery, Lhasa Great
+   * Mosque, Tibet Museum (Lhasa), Lhasa Zhol Pillar, Lingkhor,
+   * Sho Dun Festival, History of Tibet, British expedition to Tibet,
+   * Thomas Manning (sinologist), Évariste Régis Huc, Tibet, Tibetan
+   * Plateau, Tsampa, Butter tea ja Lhasa railway station. Pohjana
+   * ovat docs/aasia-tyoaineisto/faktapohja-lhasa.md ja
+   * tarkistus-lhasa.md, jotka luettiin yhdessä.
+   *
+   * SISÄLTÖLINJAUS on Fablen ohje (spec-asia.md, "Lhasa") ja
+   * faktapohjan oma sitova rajaus: Tiibet on tässä lehdessä
+   * historiallis-kulttuurinen aihe, ja KAIKKI SISÄLTÖ ON VUOTTA 1959
+   * VANHEMPAA. Pois on jätetty kokonaan vuoden 1959 kansannousu ja
+   * Potalan, Norbulingkan ja Chagporin vauriot, kulttuurivallankumous
+   * ja Jokhangin vuoden 1966 tapahtumat, Seran ja Ganden tuhoutuminen
+   * ja jälleenrakennus, museoituminen ja kävijäkiintiöt, vuoden 2008
+   * levottomuudet, munkkimäärien nykyrajoitukset sekä kaikki
+   * hallintoaseman kiistanalaisuutta koskeva aineisto. Hallinnollinen
+   * nykyasema mainitaan vain neutraalina tosiasiana kahdesti
+   * (matkailijalle-kappale ja artikkelin intro) — Nikosian ja
+   * Taipein "Antaa olla" -ennakkotapaus. Uskonto kerrotaan
+   * historiallis-kulttuurisena ilmiönä ja kunnioittavasti: temppelit
+   * ovat rakennuksia, reittejä ja kaupunkikuvan maamerkkejä.
+   * Younghusbandin retkikunta 1903–04 on lehden myöhäisin tapahtuma,
+   * ja se kerrotaan päivämäärinä ja kulkuna ilman uhrilukuja,
+   * taistelukuvauksia ja osapuolikehystä (tarkistusraportin osio 4
+   * hyväksyi sen "1873-hengen" aiheeksi).
+   *
+   * NELJÄ KOHTAA, JOISSA LEHTI POIKKEAA FAKTAPOHJASTA, ja miksi:
+   * 1) Faktapohjan nosto K2 sanoi Barkhorin kierroksen vievän "kolme
+   *    neljäsosaa tunnista". Lukua ei ole Barkhor- eikä
+   *    Jokhang-artikkelissa; Jokhang-artikkeli sanoo kierroksen
+   *    vievän "about 20 minutes". Lehti käyttää sitä.
+   * 2) Faktapohja käytti korkeutena "n. 3 600 m" (Lhasa-artikkelin
+   *    leipäteksti). Saman artikkelin infoboksi sanoo 3 656 m,
+   *    säälaatikko 3 649 m ja Chengguanin piiriä koskeva kohta
+   *    3 650 m. Tarkistusraportin osio 1.3 suositteli haarukkaa
+   *    3 650–3 656 m, koska kolme mittaustapaa osuvat yhteen ja
+   *    leipätekstin luku on karkea pyöristys yleisatlaksesta. Lehti
+   *    sanoo "noin 3 650 metriä" (sama luku kuin laudan visassa).
+   * 3) Faktapohjan nosto K1 sanoi Potalaa "maailman korkeimmaksi
+   *    linnoitetuksi palatsiksi". Faktapohja merkitsi sen itse omaksi
+   *    päätelmäkseen eikä Wikipedia-sitaatiksi (osio 7 kohta 5).
+   *    Väite on jätetty pois, ja tilalla ovat rakennuksen omat mitat.
+   * 4) Faktapohjan jakso 3 sanoi voiteestä vain, että siihen
+   *    "sekoitetaan jakinvoita". Butter tea -artikkeli on tarkempi:
+   *    juoma tehdään teestä, jakinvoista, vedestä, tsampasta ja
+   *    suolasta ja sen tiibetinkielinen nimi tarkoittaa kirnuttua
+   *    teetä. Lehti käyttää tarkempaa lähdettä, koska laudan visa
+   *    kysyy juuri tästä juomasta.
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA, jotka koskevat lehden
+   * tekstejä. (a) Jokhangin rakennusvuosi: Lhasa-artikkeli sanoo
+   * kuninkaan rakennuttaneen Jokhangin ja Ramochen vuonna 641,
+   * Jokhang-artikkeli sanoo temppelin vanhimman osan olevan vuodelta
+   * 652. Lehti sanoo "600-luvun puolivälissä" (Moreebin dyyni
+   * -sääntö, maakartat.js). (b) Norbulingkan aloitusvuosi on
+   * artikkelissa sekä 1755 (infoboksi ja valtaosa tekstistä) että
+   * "1740-luvulla" yhdessä lauseessa; lehti käyttää lukua 1755, kuten
+   * faktapohjakin. (c) Shoton-juhlan ajankohta on Lhasa-artikkelissa
+   * "seitsemäs tiibetiläinen kuukausi, heinä–elokuu", Norbulingka-
+   * artikkelissa "elokuun alku" ja juhlan omassa artikkelissa
+   * "5. kuukauden 15.–24. päivä, yleensä elokuun puoliväli". Lehti
+   * sanoo "loppukesällä" eikä lyö päivää lukkoon.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Tiibet (johdanto, intro ja
+   * matkailijalle-kappale), ylängön lempinimi "maailman katto"
+   * (oppaan jakso 2), korkeus noin 3 650 metriä (jakso 2 ja intro),
+   * Potala (nosto K1 ja kansikuva) ja suolainen jakkivoitee (jakso
+   * 3). Historia-sivun minitehtävä kysyy, mitä vanha nimi Rasa
+   * tarkoitti — sitä visa ei kysy, ja vastaus on samalla sivulla
+   * nostossa H1.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu. Potala on
+   * kansikuvassa etelästä koko kalliolla, avauskuvassa alhaalta
+   * portaikkoineen, nostossa K1 Punaisen ja Valkoisen palatsin
+   * rajapintana, matkaoppaan pystykuvassa seinänä alhaalta ja
+   * kohdekartan jutussa Chagporilta nähtynä — viisi eri tiedostoa,
+   * viisi eri etäisyyttä ja kuvakulmaa, ja palatsi on koko lehden
+   * aihe (sama ennakkotapaus kuin Manilan Intramuros, Mekan Jabal
+   * al-Nour ja Xi'anin muuri). Jokhang on avauskuvassa kultaisina
+   * kattoina, nostossa K2 rukousmyllykäytävänä ja kohdekartan jutussa
+   * vuoden 1902 pohjapiirroksena ja munkkien kattopihana. Ramoche on
+   * nostossa H1 julkisivuna ja kohdekartan jutussa kokoussalina.
+   * Norbulingka on nostossa K3 lampipaviljonkina ja kohdekartan
+   * jutussa kesäpalatsin julkisivuna.
+   *
+   * KUVISSA EI OLE TUNNISTETTAVIA KASVOJA. Tämä oli Lhasassa työn
+   * vaikein kohta, koska parhaat Barkhorin ja Jokhangin kuvat on
+   * otettu keskeltä pyhiinvaeltajajoukkoa. Hylättyjä: Barkhorin
+   * katunäkymät (kolme eri kuvaa), Barkhorin suitsutusastia,
+   * Jokhangin aukio illalla, Potalan portaikko ja sisäpiha,
+   * tsampan valmistus teltassa ja moskeijan pääportti — kaikissa
+   * etualalla luettavat kasvot. Tilalle valittiin kuvakulmia, joissa
+   * ihmisiä ei ole lainkaan tai he ovat selin ja kaukana.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
+   * tähän (Samarkandin, Xi'anin, Varanasin, Kathmandun, Kantonin ja
+   * Manilan malli v965–v983). Talon menetelmä on Open-Meteon arkisto
+   * (ERA5, normaalikausi 1991–2020), mutta rajapinta vastasi tämän
+   * työn ajan pelkällä virheellä "Daily API request limit exceeded.
+   * Please try again tomorrow" — kontin jaetun ulosmenevän osoitteen
+   * vuorokausikiintiö oli käytetty loppuun. Lukuja ei ole otettu
+   * mistään muusta lähteestä, koska vuosigraafin lähderivi lupaa
+   * lukijalle nimenomaan ERA5:n. Matkaoppaan jakso 5 nojaa siksi
+   * en-Wikipedian Lhasa-artikkelin sääruutuun (CMA, mittausasema
+   * 3 649 metrissä, normaalit 1991–2020) ja SANOO SEN ÄÄNEEN. Kun
+   * ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava rivin omista
+   * luvuista. Mittauspiste olisi keskusta 29,65 / 91,12.
+   */
+  lhasa: [
+    {
+      id: 'kaupunki',
+      nimi: 'Lhasa',
+      johdanto: 'Kyichun laakson pohjalla runsaan kolmen ja puolen '
+        + 'kilometrin korkeudessa makaava kaupunki, jonka yllä Potala '
+        + 'kohoaa kalliolta. Kadut kiertyvät Jokhangin ympärille, ja '
+        + 'vanhinta niistä kuljetaan yhä myötäpäivään.',
+      kansikuvat: [
+        {
+          tiedosto: 'Lhasa-Potala-04-Suedseite-2014-gje.jpg',
+          selite: 'Potala etelästä: valkoinen ja punainen palatsi '
+            + 'seisovat kallion päällä, ja niiden juurella kulkee '
+            + 'muuri niityn takana.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Lhasa seen from Drepung Temple.jpg',
+          selite: 'Laakso lännestä Drepungin luostarin katolta: '
+            + 'etualalla kultainen pyörä, takana kaupunki ja sen '
+            + 'ympärillä kiertävät vuorenharjanteet.',
+          lahde: 'GrandCeres, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Lhasa-from-Sera4.JPG',
+          selite: 'Kaupunki pohjoisesta Seran rinteiltä: vasemmalla '
+            + 'Potala kalliollaan, keskellä Chagporin kukkula ja '
+            + 'edessä puiden peittämä laakso.',
+          lahde: 'ignat, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: palatsi, temppeli ja ylänkö — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (vallan kallio, uskonnon sydän, se maasto jonka keskellä
+       * molemmat ovat).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Palacio de Potala - 02.JPG',
+          selite: 'Potala alhaalta: siksakkina nousevat portaikot '
+            + 'kulkevat valkoisen palatsin ohi punaiseen keskusosaan.',
+          lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Jokhang-1235.jpg',
+          selite: 'Jokhangin kullatut katot rukousviirien takaa, ja '
+            + 'alemman harjan päällä seisoo kaksi kultaista kaurista '
+            + 'pyörän molemmin puolin.',
+          lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Lhasa-von Yakhotel-12-beschneite Berge-2014-gje.jpg',
+          selite: 'Lumihuiput nousevat laakson reunalta pilviin, ja '
+            + 'etualalla kulkee kattoterassin kaide.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Talvipalatsi Punaisella kummulla',
+          tiedosto: 'Lhasa-Potala-16-Roter Palast-2014-gje.jpg',
+          teksti: 'Marpo Rilla eli Punaisella kummulla oli seissyt '
+            + 'linna jo 600-luvulta, kun Viides dalai-lama määräsi '
+            + '1645 rakennettavaksi uuden palatsin. Ulkoseinät '
+            + 'nousivat kolmessa vuodessa, mutta sisustus vei '
+            + 'neljäkymmentäviisi vuotta lisää. Dalai-lama muutti '
+            + 'Valkoiseen palatsiin 1649, ja Punainen palatsi nousi '
+            + 'vasta 1690–1694, kaksitoista vuotta hänen kuolemansa '
+            + 'jälkeen. Tuloksena on kolmetoista kerrosta, '
+            + 'yli tuhat huonetta, kymmenentuhatta pyhäkköä ja noin '
+            + 'kaksisataatuhatta patsasta; korkeutta on 119 metriä '
+            + 'kukkulan päältä ja yli kolmesataa laakson pohjalta. '
+            + 'Kaltevat kiviseinät ovat kolmisen metriä paksut, ja '
+            + 'perustuksiin valettiin kuparia järistysten varalta.',
+          selite: 'Punainen palatsi kohoaa valkoisen takaa, ja niiden '
+            + 'rajalla kulkee keltaisin verhoin varjostettu '
+            + 'parvekerivi.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Potala Palace',
+        },
+        {
+          otsikko: 'Jumalten talo ja kaupungin vanhin katu',
+          tiedosto: 'Jokhang prayer wheels in 2007.jpg',
+          teksti: 'Songtsen Gampo rakennutti Jokhangin 600-luvun '
+            + 'puolivälissä majoittamaan buddhapatsasta, jonka hänen '
+            + 'nepalilainen vaimonsa Bhrikuti oli tuonut myötäjäisinään. '
+            + 'Tarinan mukaan kuningas heitti hattunsa eteensä ja lupasi '
+            + 'rakentaa temppelin sinne, minne se putoaisi; hattu putosi '
+            + 'järveen, järvi täytettiin, ja täytön päälle nousi '
+            + 'temppeli. Suunnittelu ja rakentaminen luetaan '
+            + 'nepalilaisten käsityöläisten ansioksi, ja pääportti '
+            + 'osoittaa yhä länteen Nepalia kohti. Temppeliä kiertää '
+            + 'Barkhor, 600-luvulta peräisin oleva kilometrin mittainen '
+            + 'kehäkatu, jota kuljetaan myötäpäivään ja johon kuluu '
+            + 'noin kaksikymmentä minuuttia.',
+          selite: 'Kullattujen rukousmyllyjen rivi jatkuu temppeliä '
+            + 'kiertävässä katetussa käytävässä niin kauas kuin valoa '
+            + 'riittää.',
+          lahde: '段修刚, Wikimedia Commons (PD)',
+          wiki: 'Jokhang',
+        },
+        {
+          otsikko: 'Jalokivipuisto, joka oli ennen joutomaata',
+          tiedosto: 'JARDINES DE NORGBULINKA - panoramio.jpg',
+          teksti: 'Kun Seitsemäs dalai-lama alkoi vuonna 1755 '
+            + 'rakennuttaa kesäasuntoa läntiseen Lhasaan, paikka oli '
+            + 'pensaikkoa ja joutomaata villieläimineen; hän oli tullut '
+            + 'sinne alun perin lähteen takia, jonka veden uskottiin '
+            + 'parantavan. Norbulingka eli Jalokivipuisto valmistui '
+            + '1783 Kahdeksannen dalai-laman aikana ja kasvoi '
+            + 'kolmenkymmenenkuuden hehtaarin puistoksi, Tiibetin '
+            + 'suurimmaksi ihmisen tekemäksi puutarhaksi. Penkeissä '
+            + 'kasvoi ruusuja, samettikukkia ja krysanteemeja, ja '
+            + 'omena-, persikka- ja aprikoosipuita istutettiin, vaikka '
+            + 'hedelmät eivät Lhasassa kypsy. Lammissa ui '
+            + 'riikinkukkoja, ja kolmelle saarelle rakennettiin '
+            + 'paviljongit lyhyiden siltojen päähän.',
+          selite: 'Lampipaviljonki seisoo kivireunuksen päällä, ja sen '
+            + 'edessä on rivi ruukkuihin istutettuja krysanteemeja.',
+          lahde: 'Manuel Velazquez, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Norbulingka',
+        },
+        {
+          otsikko: 'Kolme suurta munkkiyliopistoa',
+          tiedosto: 'Drepung monastery view.jpg',
+          teksti: 'Kaupungin liepeille perustettiin 1400-luvun alussa '
+            + 'kolme gelug-luostaria, joita sanotaan suuriksi: Ganden '
+            + 'vuonna 1409, Drepung 1416 ja Sera 1419. Ne olivat '
+            + 'munkkiyliopistoja. Serassa filosofian opinto-ohjelma '
+            + 'kesti kaksikymmentä vuotta ja päättyi geshe-tutkintoon, '
+            + 'ja oppilaita otettiin kahdeksanvuotiaista '
+            + 'seitsemänkymppisiin asti. Drepung — nimeltään Riisikasa '
+            + '— oli niistä suurin: brittiläinen Freddie Spencer '
+            + 'Chapman kertoi vuosien 1936–37 matkansa jälkeen sen '
+            + 'olleen maailman suurin luostari, jossa asui 7 700 ja '
+            + 'ajoittain jopa kymmenentuhatta munkkia. Ganden seisoo '
+            + 'Wangbur-vuorella 4 300 metrin korkeudessa neljänkymmenen '
+            + 'kilometrin päässä koillisessa.',
+          selite: 'Drepungin valkoiset rakennukset nousevat rinnettä '
+            + 'ylös kuin oma pikkukaupunkinsa vuoren juurella.',
+          lahde: 'Maris Burbergs, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Drepung Monastery',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Lhasa-Potala-60-Aufblick-2014-gje.jpg',
+          selite: 'Potalan valkoinen seinä alhaalta katsottuna: kalteva '
+            + 'muuri kapenee ylöspäin, ja sen harjalla porrastuvat '
+            + 'punaruskeat räystäskerrokset.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Lhasa on Tiibetin autonomisen alueen pääkaupunki ja '
+          + 'Xiningin jälkeen ylängön väkirikkain kaupunkialue, mutta '
+          + 'matkailijan Lhasa on pieni: melkein kaikki on parin '
+          + 'kilometrin nauhalla Kyichun pohjoisrannalla. Lännessä on '
+          + 'Norbulingkan puisto, keskellä Potala kalliollaan ja idässä '
+          + 'Barkhorin kortteli Jokhangin ympärillä. Kolme suurta '
+          + 'luostaria ovat omia retkiään viiden, seitsemän ja '
+          + 'kolmenkymmenenkuuden kilometrin päässä, eivätkä ne siksi '
+          + 'ole tämän sivun kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Lhasa',
+          taitto: 'opas',
+          teksti: 'Yksi kallio, yksi temppeli ja yksi kehäkatu — ja '
+            + 'kaiken yllä ilma, jossa on kolmannes vähemmän happea '
+            + 'kuin merenpinnalla.',
+          nosto: 'Kaupunkia sanotaan aurinkoiseksi kaupungiksi. Aurinko '
+            + 'paistaa lähes kolmetuhatta tuntia vuodessa, ja '
+            + 'marraskuussa se on esillä 84 prosenttia siitä ajasta, '
+            + 'jona se voisi paistaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Junalla Lhasaan on päässyt vasta vuodesta 2006, '
+                + 'jolloin Qinghai–Tiibet-rata avattiin '
+                + 'matkustajaliikenteelle. Se on maailman korkein '
+                + 'rautatie: korkeimmillaan rata kulkee 5 072 metrissä, '
+                + 'ja koska korkeus aiheuttaa matkustajille helposti '
+                + 'vuoristotautia, vaunuihin pumpataan ilmastoinnin '
+                + 'kautta lisähappea ja jokaisella makuupaikalla on oma '
+                + 'happiliitäntänsä. Rata yhdistää Lhasan Qinghain '
+                + 'pääkaupunkiin Xiningiin kahdentuhannen kilometrin '
+                + 'päässä, ja sitä kautta muuhun Kiinaan: asemalle '
+                + 'saapuu ja siltä lähtee viisi junaa päivässä, ja '
+                + 'Pekingistä matka kestää neljäkymmentä tuntia ja '
+                + 'runsaan tunnin päälle. Vuodesta 2014 on ollut myös '
+                + 'rata Šigatseen. Gonggarin lentokenttä rakennettiin '
+                + 'jo 1965 kaupungin eteläpuolelle; sinne meni ennen '
+                + 'yli tunti, mutta vuonna 2011 valmistui moottoritie, '
+                + 'ja nyt matka taittuu puolessa tunnissa. Maanteitse '
+                + 'tullaan koillisesta Xiningin tietä, idästä Chengdun '
+                + 'tietä ja lännestä Nepalin rajalta.',
+              kuva: {
+                tiedosto: 'Z6802 25T train at Lhasa Railway Station.jpg',
+                selite: 'Vihreä-keltainen makuuvaunujuna odottaa '
+                  + 'lähtöä Lhasan aseman laiturilla korkean '
+                  + 'lasikaton alla.',
+                lahde: 'Baycrest, Wikimedia Commons (CC BY-SA 2.5)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Lhasa on keskellä Tiibetin ylänköä, jota '
+                + 'sanotaan maailman katoksi. Ylänkö on maailman '
+                + 'suurin ja korkein: kaksi ja puoli miljoonaa '
+                + 'neliökilometriä, keskikorkeus yli 4 500 metriä, ja '
+                + 'sitä reunustavilla vuoristoilla ovat maailman kaksi '
+                + 'korkeinta huippua. Ylängöltä saavat alkunsa Aasian '
+                + 'kolme pisintä jokea, Keltainenjoki, Jangtse ja '
+                + 'Mekong, ja lännessä Manasarovar-järven tienoilta '
+                + 'lähtee Indus. Kaupunki itse on noin 3 650 metrin '
+                + 'korkeudessa, ympäröivät vuoret nousevat 5 500 '
+                + 'metriin, ja ilmassa on vain 68 prosenttia siitä '
+                + 'hapesta, jota merenpinnalla hengitetään. Eteläosan '
+                + 'halki virtaa Lhasan joki eli Kyichu, jota '
+                + 'paikallisesti sanotaan iloisiksi sinisiksi '
+                + 'aalloiksi: se tulee Nyainqêntanglhan lumihuippujen '
+                + 'rotkoista, kulkee 315 kilometriä ja laskee Yarlung '
+                + 'Tsangpoon Qüxüssä. Keskuskaupunkipiiri on '
+                + 'kahdenkymmenenkahdeksan kilometrin levyinen ja '
+                + 'kolmenkymmenenyhden kilometrin korkuinen, mutta '
+                + 'siitä on rakennettua vain kuusikymmentä '
+                + 'neliökilometriä — loppu on vuorta.',
+              kuva: {
+                tiedosto: 'Dissected alluvial fan and Lhasa River - panoramio.jpg',
+                selite: 'Vuorten juurelta laskeutuu uomien uurtama '
+                  + 'sorakeila, ja sen alla levittäytyvät joen '
+                  + 'vaaleat somerikot.',
+                lahde: 'Raymond M. Coveney, …, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: ohraa, voita ja suolaista teetä',
+              teksti: 'Ohra on Tiibetin tärkein vilja, ja siitä '
+                + 'paahdetaan tsampa: valmiiksi kypsä jauho, jota ei '
+                + 'tarvitse keittää. Juuri siksi se on ollut '
+                + 'paimentolaisten ja matkalaisten ruokaa — jauhot '
+                + 'kulkevat pussissa ja ateria syntyy kulhossa. '
+                + 'Tsampasta tehdään myös puuroa ja keittoa, ja vehnä- '
+                + 'tai ohrataikinasta höyrytetään momo-nyyttejä. '
+                + 'Jogurtti, voi ja juusto kuuluvat arkeen samoin, ja '
+                + 'hyvin tehty jogurtti on arvostuksen kohde. Yleisin '
+                + 'juoma on voitee, jonka tiibetinkielinen nimi '
+                + 'tarkoittaa kirnuttua teetä: teelehdistä, jakinvoista, '
+                + 'vedestä, tsampasta ja suolasta vatkattu suolainen '
+                + 'juoma. Teetä on juotu Tiibetissä 700-luvulta lähtien, '
+                + 'mutta voitee yleistyi vasta 1200-luvulla, ja '
+                + 'nykyään myös lehmänvoi käy, koska sitä saa helpommin.',
+              kuva: {
+                tiedosto: 'Tsampa being blended with yak butter tea.jpg',
+                selite: 'Tummassa kulhossa on kasa vaaleaa ohrajauhoa, '
+                  + 'jota sekoitetaan lusikalla voiteehen puupöydän '
+                  + 'päällä.',
+                lahde: 'Jpatokal, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kolmestatoista osasta yksi valtio',
+              teksti: 'Vuoden 1642 kolmantena kuukautena '
+                + 'mongolipäällikkö Gushri Khan kukisti Tsangin '
+                + 'hallinnon ja luovutti Tiibetin kolmetoista osaa eli '
+                + 'koko maan Viidennelle dalai-lamalle, joka nostettiin '
+                + 'kultaiselle pelottomalle lumileijonan '
+                + 'valtaistuimelle. Hallinto sai nimensä Ganden '
+                + 'Phodrangista, kartanosta Drepungin luostarissa: sen '
+                + 'oli rakennuttanut vuonna 1518 Toinen dalai-lama, ja '
+                + 'siellä dalai-lamat olivat asuneet siihen asti. '
+                + 'Vuonna 1642 hallinnon keskus siirtyi Lhasaan, ja '
+                + 'kaupungista tuli sekä uskonnollinen että '
+                + 'hallinnollinen pääkaupunki. Kolme vuotta myöhemmin '
+                + 'alkoi Potalan rakentaminen — palatsin paikan valitsi '
+                + 'dalai-laman neuvonantaja Konchog Chophel sillä '
+                + 'perusteella, että kallio on tarkalleen Drepungin, '
+                + 'Seran ja vanhankaupungin välissä.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Korkeutensa vuoksi Lhasa on Köppenin '
+                + 'luokituksessa viileä puolikuiva alue, joka on '
+                + 'kolmen ilmastotyypin rajalla: talvet ovat pakkasia '
+                + 'ja kesät leutoja, mutta laakson suoja pitää sään '
+                + 'poissa ääripäistä eikä tuuli yllä sinne kovana. '
+                + 'Kylmin kuukausi on tammikuu keskilämmöltään 0,6 '
+                + 'astetta, lämpimimmät kesä- ja heinäkuu 17,5 '
+                + 'asteella, ja koko vuoden keskiarvo on 9,9 astetta. '
+                + 'Sadetta kertyy 458 millimetriä vuodessa, ja se tulee '
+                + 'lähes kokonaan heinä-, elo- ja syyskuussa: kuivin '
+                + 'kuukausi on joulukuu kolmella kymmenyksellä '
+                + 'millimetriä ja sateisin elokuu 133 millimetrillä. '
+                + 'Kesää pidetään silti parhaana aikana, koska sade '
+                + 'tulee enimmäkseen öisin ja päivät ovat aurinkoisia. '
+                + 'Nämä luvut ovat poikkeuksellisesti en-Wikipedian '
+                + 'oman sääruudun lukuja Lhasan mittausasemalta 3 649 '
+                + 'metristä (normaalit 1991–2020) — lehden vuosigraafin '
+                + 'lähde olisi Open-Meteon ERA5, jota ei tähän saatu.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1792 Tiibet sulkeutui eurooppalaisilta lähes '
+        + 'kokonaan, ja seuraavan sadan vuoden aikana Lhasaan pääsi '
+        + 'vain kourallinen vieraita. Sitä ennen kaupunki oli ollut '
+        + 'valtakunnan pääkaupunki jo tuhat vuotta.',
+      tehtava: {
+        kysymys: 'Mitä Lhasan vanha nimi Rasa tarkoitti?',
+        vaihtoehdot: [
+          'Jumalten paikkaa',
+          'Vuohten paikkaa',
+          'Kolmea vuorta',
+          'Iloisia aaltoja',
+        ],
+        oikea: 1,
+        fakta: 'Vuohia käytettiin tarinan mukaan maansiirtoon temppelin '
+          + 'rakennustyömaalla. Lhasaksi eli jumalten paikaksi kaupunkia '
+          + 'alettiin sanoa vasta kuninkaan kuoleman jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki syntyy kalliolle',
+          tiedosto: 'Lhasa-Ramoche-02-2014-gje.jpg',
+          teksti: '600-luvun puolivälissä Songtsen Gampo nousi Yarlung '
+            + 'Tsangpon laaksossa syntyneen Tiibetin valtakunnan '
+            + 'johtoon. Valloitettuaan Zhangzhungin lännessä hän '
+            + 'siirsi pääkaupunkinsa Yarlungista Rasaan ja '
+            + 'pystytti vuonna 637 ensimmäiset rakennukset Marpo Rin '
+            + 'kukkulalle — samalle kalliolle, jolla Potala nyt seisoo. '
+            + 'Rasa tarkoitti vuohten paikkaa: niitä kerrotaan '
+            + 'käytetyn maansiirtoon temppelin työmaalla. Kuningas nai '
+            + 'vuosina 639 ja 641 nepalilaisen prinsessa Bhrikutin ja '
+            + 'Tang-hovin prinsessa Wenchengin, ja kummankin '
+            + 'myötäjäisinä tuli buddhapatsas: toista varten '
+            + 'rakennettiin Jokhang, toista varten Ramoche. Kuninkaan '
+            + 'kuoltua kaupunkia alettiin sanoa Lhasaksi.',
+          selite: 'Ramochen punainen julkisivu kultaisine '
+            + 'kattokoristeineen, ja katon harjalla seisoo pyörä '
+            + 'kahden kauriin välissä.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lhasa',
+        },
+        {
+          otsikko: 'Kielletty kaupunki',
+          tiedosto: 'The National Geographic Magazine Vol 16 1905 - The Outskirts of Lhasa.jpg',
+          teksti: 'Ensimmäiset eurooppalaiset olivat portugalilaisia '
+            + 'lähetyssaarnaajia, jotka saapuivat Tiibetiin 1624 ja '
+            + 'saivat luvan rakentaa kirkon; heidän seuraajansa '
+            + 'karkotettiin 1745. Vuonna 1792, kun Qing-armeija oli '
+            + 'ajanut gurkhajoukot pois Tiibetistä, maa sulkeutui '
+            + 'ulkopuolisilta lähes kokonaan, ja koko 1800-luvun aikana '
+            + 'vain kolme länsimaalaista pääsi Lhasaan asti. '
+            + 'Englantilainen Thomas Manning sai joulukuussa 1811 '
+            + 'audienssin seitsenvuotiaan Yhdeksännen dalai-laman luona '
+            + 'Potalassa ja odotti lähtölupaa huhtikuuhun 1812. '
+            + 'Ranskalaiset lähetyssaarnaajat Évariste Huc ja Joseph '
+            + 'Gabet saapuivat 29. tammikuuta 1846 ja saivat '
+            + 'lähtökäskyn kuukautta myöhemmin.',
+          selite: 'Vuoden 1901 valokuvassa ohrapellot ulottuvat '
+            + 'kaupungin laidalle asti, ja niiden takaa erottuu '
+            + 'muurien ympäröimä temppelialue vuorten juurella.',
+          lahde: 'Gombojab Tsybikov Ovshe Norzunov, Wikimedia Commons (PD)',
+          wiki: 'History of Tibet',
+        },
+        {
+          otsikko: 'Pyhiinvaeltajaksi pukeutunut mittamies',
+          tiedosto: 'Lhasa map in 1878, Plan of Lhasa by A-K- in his report of 1878, from the book entitled Journey to Lhasa and Central Tibet (page 178 crop).jpg',
+          teksti: 'Vuonna 1865 Britannia aloitti Tiibetin salaisen '
+            + 'kartoituksen. Laillisia tutkimusmatkoja ei sallittu, '
+            + 'joten työhön koulutettiin intialaisia maanmittareita, '
+            + 'jotka ylittivät rajan pyhiinvaeltajiksi tai kauppiaiksi '
+            + 'pukeutuneina; heitä sanottiin panditeiksi. He laskivat '
+            + 'askeleensa matkan mitaksi ja tekivät tähtihavaintonsa '
+            + 'öisin. Kuuluisin heistä, Nain Singh, mittasi Lhasan '
+            + 'pituus- ja leveysasteen sekä korkeuden ja jäljitti '
+            + 'Yarlung Tsangpon kulkua — tiedot, joita Britannia ei '
+            + 'olisi muuten saanut kartoilleen. Näin syntyi myös '
+            + 'kaupungin ensimmäinen tarkka pohjakaava, jossa on '
+            + 'nimettynä kaksikymmentä rakennusta.',
+          selite: 'Vuoden 1878 raporttiin piirretyssä pohjakaavassa '
+            + 'kaupunki on pieni ruutu peltojen keskellä, ja sen '
+            + 'kohteet on numeroitu yhdestä kahteenkymmeneen.',
+          lahde: 'Das, Sarat Chandra, 1849-1917, Wikimedia Commons (PD)',
+          wiki: 'Nain Singh',
+        },
+        {
+          otsikko: 'Ison pelin viimeinen näytös',
+          tiedosto: 'Sketch map of Younghusband expedition to Tibet with date.jpg',
+          teksti: 'Joulukuussa 1903 brittiläisen Intian joukot '
+            + 'ylittivät Tiibetin rajan eversti Francis Younghusbandin '
+            + 'johdolla: yli kolmetuhatta sotilasta ja seitsemäntuhatta '
+            + 'kantajaa ja huoltoväkeä. Syynä oli Intian varakuninkaan '
+            + 'lordi Curzonin pelko siitä, että Venäjä oli saamassa '
+            + 'jalansijaa Tiibetissä burjaattilaisen lamaneuvonantajan '
+            + 'Agvan Dorzhievin kautta. Huonosti varustetut '
+            + 'tiibetiläisjoukot eivät kyenneet pysäyttämään '
+            + 'retkikuntaa, ja se saapui Lhasaan 3. elokuuta 1904 — '
+            + 'kolmastoista dalai-lama oli jo lähtenyt Urgaan eli '
+            + 'nykyiseen Ulan Batoriin. Lhasan sopimus allekirjoitettiin '
+            + 'Potalassa 7. syyskuuta, ja retkikunta lähti paluumatkalle '
+            + 'saman kuun lopulla.',
+          selite: 'Vuoden 1904 karttaan on merkitty punaisella '
+            + 'retkikunnan reitti Darjeelingista Lhasaan ja jokaisen '
+            + 'etapin päivämäärä.',
+          lahde: 'Candler, Edmund (1874-1926), Wikimedia Commons (PD)',
+          wiki: 'British expedition to Tibet',
+        },
+      ],
+    },
+  ],
 };

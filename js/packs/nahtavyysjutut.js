@@ -27817,4 +27817,550 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KAŠGARIN KOHDEKARTAN JUTUT (Opus 21.8.2026). Seitsemän kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään.
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (haettu
+   * 21.8.2026): Kashgar, Id Kah Mosque, Afaq Khoja Mausoleum,
+   * Chini-Bagh, George Macartney (British consul), Catherine
+   * Macartney, Yūsuf Balasaguni, Kutadgu Bilig ja People's Park
+   * (Kashgar).
+   *
+   * SISÄLTÖLINJAUS on sama kuin lehden kategorialohkossa: Silkkitie,
+   * basaari, Suuri peli ja Id Kah — ei Xinjiangin nykypolitiikkaa,
+   * ei vuoden 1949 jälkeisiä kiistoja. Kansanpuiston jutusta on
+   * jätetty pois puiston Mao-patsas ja Yusuf Khass Hajibin jutusta
+   * mausoleumin vaiheet kulttuurivallankumouksen aikana; molemmat
+   * ovat en-Wikipediassa, mutta molemmat ovat nykypolitiikkaa.
+   *
+   * KANSANPUISTON JUTTU ON AINOA ILMAN KUVAA (Sulu Hanin ja Riadin
+   * vesitornin ennakkotapaus). Commonsissa ei ole yhtään puistosta
+   * otettua vapaata kuvaa, joka olisi vähintään 1 200 pikseliä leveä
+   * ja jossa ei näy puiston Mao-patsasta — ainoa riittävän suuri on
+   * juuri patsaskuva. Tekstin varassa oleva juttu on parempi kuin
+   * väärä kuva tai linjauksen rikkova kuva.
+   *
+   * CHINI-BAGHIN KUVA ON MANNERHEIMIN, ja se on paras olemassa oleva:
+   * Percy Sykesin vuoden 1915 kuva samasta talosta on Commonsissa
+   * PD-ehdoin, mutta se on skannattu paspartuun kiinnitettynä ja
+   * kehys näkyy kuvassa (talon kuvasääntö kieltää lisätyt kehykset).
+   * Nykyisestä paikasta ei ole yli 1 200 pikselin kuvaa.
+   */
+  kashgar: {
+    'Afaq Khojan mausoleumi': {
+      aika: 'n. 1640, Afaq Khoja haudattu 1694',
+      teksti: 'Hauta sai alkunsa naqshbandi-sufien opettajasta Muhammad '
+          + 'Yusufista, joka saapui Altishahrin seudulle 1600-luvun '
+          + 'alussa ja saarnasi ilmeisesti myös Gansussa ja '
+          + 'Qinghaissa. Hänen kuolinvuodestaan on kaksi arviota, '
+          + '1622 ja 1653, eivätkä lähteet ratkaise asiaa. Rakennus '
+          + 'tunnetaan silti pojan nimellä, koska tämä oli isäänsä '
+          + 'kuuluisampi.'
+          + '\n\n'
+          + 'Rakennuksen keskellä on seitsemäntoista metriä leveä '
+          + 'kupoli, ja sen ympärillä seisoo neljä nurkkaminareettia. '
+          + 'Minareetit on koristeltu vaakaraidoin ja arabeskikuvioin, '
+          + 'ja jokaisen ikkuna on eri geometrista kuviota; huipulla '
+          + 'on käännetyn lootuksen muotoinen kupu ja sakarareuna. '
+          + 'Sisäänkäynnissä on suuri julkisivu ja kaakeloitu '
+          + 'iwan-syvennys, sama muoto kuin Keski-Aasian moskeijoissa. '
+          + 'Haudat on peitetty värikkäillä silkeillä.'
+          + '\n\n'
+          + 'Alue on enemmän kuin yksi rakennus. Siihen kuuluu neljä '
+          + 'rukoussalia, joiden puupalkkeja kannattavissa pylväissä '
+          + 'on muqarnas-koristelu, luentosali, portti sinisine '
+          + 'kaakeleineen, pihalla puhdistautumisallas ja hautausmaa, '
+          + 'jonka savi- ja tiilihaudat ovat yhä käytössä. Keskustasta '
+          + 'on matkaa noin kolme ja puoli kilometriä koilliseen.',
+      kuvat: [
+        {
+          tiedosto: 'Kashgar-Mausolée d\'Abakh Khoja 1996 revêtement céramique 3.jpg',
+          selite: 'Mausoleumin seinäkaakelointia lähikuvassa: keltaiselle '
+            + 'pohjalle on maalattu vihreitä ja ruskeita kasvikiehkuroita '
+            + 'ja ympärillä on lasitettuja yksivärilaattoja.',
+          lahde: 'Ismoon, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chini-Bagh': {
+      aika: 'Britannian konsulaatti 1890–1948',
+      teksti: 'Chini-Bagh oli Britannian Kašgarin-pääkonsulin George '
+          + 'Macartneyn ja hänen vaimonsa Catherine Macartneyn koti '
+          + 'kahdenkymmenenkahdeksan vuoden ajan. Konsulaatti toimi '
+          + 'kaupungissa 1890–1948. Nimellisesti se oli brittiläinen, '
+          + 'mutta väen ja rahat antoi Brittiläisen Intian poliittinen '
+          + 'osasto; Qing-hallinto tunnusti sen vasta 1908, ja '
+          + 'pääkonsulaatiksi se korotettiin 1911.'
+          + '\n\n'
+          + 'Talon ovi kävi tiheään, sillä se oli viimeinen '
+          + 'eurooppalainen osoite ennen autiomaata. Vieraskirjaan '
+          + 'kertyivät muun muassa arkeologi Aurel Stein, '
+          + 'tutkimusmatkailija Sven Hedin, saksalainen '
+          + 'Turfan-tutkija Albert von Le Coq, isä Hendricks ja '
+          + 'A. R. B. Shuttleworth sekä kreivi Otanin '
+          + 'Keski-Aasian-retkikunnan japanilaiset Eizaburo Nomura ja '
+          + 'Zuicho Tachibana, joita on kuvattu yhtä lailla '
+          + 'arkeologeiksi kuin vakoojiksi. Lady Macartney avusti '
+          + 'niitä tutkijoita, jotka löysivät Dunhuangin '
+          + 'käsikirjoituskätkön, ja julkaisi 1931 muistelmansa An '
+          + 'English Lady in Chinese Turkestan.'
+          + '\n\n'
+          + 'Itse talo on yhä pystyssä, mutta sen kuulut puutarhat '
+          + 'purettiin myöhemmin samalle tontille rakennetun Chini '
+          + 'Bagh -hotellin tieltä. Wikipedian oma artikkeli ei anna '
+          + 'talolle koordinaattia lainkaan, joten tämän kartan piste '
+          + 'on OpenStreetMapin muistomerkki entisen konsulaatin '
+          + 'paikalla.',
+      kuvat: [
+        {
+          tiedosto: 'Britannian pääkonsulin George Macartneyn talo 1906 (VKK269-156).tif',
+          selite: 'Britannian pääkonsulin talo vuonna 1906: matala '
+            + 'savitiilirakennus seisoo loessitörmän päällä ja alhaalla '
+            + 'kulkee kuiva uoma.',
+          lahde: 'Carl Gustaf Emil Mannerheim, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri basaari': {
+      aika: 'kauppapaikkana yli 2 000 vuotta',
+      teksti: 'Keskustan basaarikortteli on Kašgarin kaupan ydin ja '
+          + 'jatkoa sille, mitä täällä on tehty yli kahdentuhannen '
+          + 'vuoden ajan: Silkkitien pohjoinen ja eteläinen haara '
+          + 'kohtasivat tällä keitaalla, ja tavara vaihtoi omistajaa '
+          + 'juuri tässä. Uiguuriksi paikka on yekshenbe bazar, '
+          + 'sunnuntaibasaari, ja kiinaksi Keski- ja Länsi-Aasian '
+          + 'markkinat.'
+          + '\n\n'
+          + 'Kortteli on auki viikon jokaisena päivänä, mutta suuri '
+          + 'päivä on viimeinen. Matkailijalle tarjotaan ennen muuta '
+          + 'perinteisiä mattoja ja vaatteita; kallein tavara on '
+          + 'Iranista tuotu mauste, jonka arvo on kolminkertainen '
+          + 'kultaan verrattuna.'
+          + '\n\n'
+          + 'Karja on eri paikassa. Elävien eläinten markkina, jolle '
+          + 'saavutaan aasinvetoisilla kärryillä, on kaupungin '
+          + 'ulkopuolella noin kahdeksan kilometriä luoteessa — se ei '
+          + 'siksi mahdu tämän sivun kartalle.',
+      kuvat: [
+        {
+          tiedosto: 'Sunday market Kashgar IGP4049.jpg',
+          selite: 'Basaarirakennuksen vihreä kaaririvi nousee leveän '
+            + 'liikennekadun takaa, ja etualalla jonottaa keltavihreitä '
+            + 'takseja.',
+          lahde: 'w0zny, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Id Kahin moskeija': {
+      aika: '1442, nykyinen asu 1798 ja 1838',
+      teksti: 'Nimi tulee persian sanasta eidgah, juhlapaikka. Saqsiz '
+          + 'Mirza, emiiri Sayyid Alin vanhempi poika, rakennutti '
+          + 'moskeijan vuonna 1442 esi-isiensä muistoksi. Nykyinen '
+          + 'kultatiilinen rakennus korvasi vanhemman 1798, ja vuonna '
+          + '1838 se laajennettiin nykymittoihinsa. Alaa on noin '
+          + '16 800 neliömetriä, ja kokonaisuuteen kuuluu rukoussali, '
+          + 'kirjoitussali, porttitorni ja joukko sivurakennuksia.'
+          + '\n\n'
+          + 'Portti on keltaista tiiltä: itse oviaukko on 4,7 metriä '
+          + 'korkea ja 4,3 leveä, torni sen päällä noin '
+          + 'seitsemäntoista metriä. Tornin molemmin puolin nousee '
+          + 'kahdeksantoistametrinen minareetti, epäsymmetrisesti '
+          + 'asetettuina, ja huipulla on puolikuu. Portin takana on '
+          + 'suuri holvi, jonka päällä on kolmas minareetti. '
+          + 'Rukoussalin ympärillä on piha molemmin puolin, ja '
+          + 'arkkitehtuuri yhdistelee keskiaasialaisia, '
+          + 'länsiaasialaisia ja vähäisemmässä määrin kiinalaisia '
+          + 'piirteitä.'
+          + '\n\n'
+          + 'Sisä- ja ulkotiloihin mahtuu yhteensä kaksikymmentätuhatta '
+          + 'rukoilijaa, ja se tekee Id Kahista Kiinan suurimman '
+          + 'moskeijan. Rakennus liitettiin valtakunnallisesti '
+          + 'suojeltujen kulttuurikohteiden luetteloon 2001, ja '
+          + 'julkisivu päällystettiin kaakelein 2004–2005. Vierailijat '
+          + 'pääsevät sisään päivittäin kahdeksi tunniksi aamulla ja '
+          + 'kahdeksi iltapäivällä.',
+      kuvat: [
+        {
+          tiedosto: 'Kashgar Id Kah Moschee.jpg',
+          selite: 'Moskeijan keltainen porttitorni ja sen molemmin puolin '
+            + 'nousevat kaakeloidut minareetit nähtynä laajan '
+            + 'kivetyn aukion yli.',
+          lahde: 'See58, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vanhakaupunki: {
+      aika: 'kasvanut vuosisatojen kuluessa',
+      teksti: 'Vanhakaupunki on kaupungin vanhin asuttu osa: '
+          + 'savitiilinen talorykelmä loessikukkulan päällä, aivan '
+          + 'Tuman-joen uoman vieressä. Se on juuri se kaupunki, jonka '
+          + 'ohi Silkkitien karavaanit kulkivat, ja siitä kertoo myös '
+          + 'nimien kaksijakoisuus.'
+          + '\n\n'
+          + 'Kaupungin vanhimmat nimet kertovat kahdesta osasta. '
+          + 'Kiinalaisissa lähteissä Shufu tarkoitti uiguurien asuttamaa '
+          + 'vanhaakaupunkia ja Shule kymmenen kilometrin päähän '
+          + 'rakennettua uutta kaupunkia, jonne han-kiinalaiset '
+          + 'asettuivat. Shule saattaa olla yritys kirjoittaa '
+          + 'kiinalaisin merkein sanskritin nimi Śrīkrīrāti, '
+          + '”onnellinen vieraanvaraisuus”.'
+          + '\n\n'
+          + 'Kaupunginosassa ei ole ruutukaavaa. Kujat mutkittelevat '
+          + 'rinteen mukaan, ovet aukeavat sisäpihalle eivätkä kadulle, '
+          + 'ja katot ovat tasaisia — kuivassa aavikkoilmastossa niiden '
+          + 'päällä voi kuivata hedelmiä. Törmän reunalla talot on '
+          + 'muurattu suoraan loessin päälle, ja alhaalta katsottuna '
+          + 'koko kaupunginosa näyttää yhdeltä yhtenäiseltä seinältä.',
+      kuvat: [
+        {
+          tiedosto: '20250525喀什高台民居.jpg',
+          selite: 'Vanhankaupungin savitiilitalot kiipeävät loessitörmää '
+            + 'ylös tasakatto tasakaton vieressä, ja kaukana takana '
+            + 'pyörii maailmanpyörä.',
+          lahde: 'MasaneMiyaPA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kansanpuisto: {
+      aika: 'kaupungin suurin puisto',
+      teksti: 'Kansanpuisto on Kašgarin keskustan pääpuisto, '
+          + 'Kansanaukion eteläpuolella ja vajaan kilometrin päässä '
+          + 'kaupungin keskipisteestä lounaaseen. Pinta-alaa on '
+          + 'kaksikymmentäneljä hehtaaria, mikä tekee siitä kaupungin '
+          + 'suurimpia viheralueita.'
+          + '\n\n'
+          + 'Puistossa kerrotaan olevan yli kaksikymmentäkuusituhatta '
+          + 'puuta yli viidestäkymmenestä lajista sekä neljä '
+          + 'kilometriä polkuja. Aavikon laidalla se on enemmän kuin '
+          + 'koriste: varjo ja kastelu ovat keitaan koko idea, ja '
+          + 'puistokäytävä on kesäkuumalla se paikka, jossa '
+          + 'kaupunkilaiset viettävät iltapäivän.'
+          + '\n\n'
+          + 'Alueella on tekojärvi, paviljonkeja, uiguurilaistyylinen '
+          + 'kulttuuripalatsi, hedelmätarhoja, lasten leikkipaikkoja, '
+          + 'eläintarha ja rullaluistelurata. Sisäänpääsy on maksuton.',
+      lahde: 'Wikipedia',
+    },
+    'Yusuf Khass Hajibin mausoleumi': {
+      aika: 'runoilija kuoli 1077, mausoleumi 1865',
+      teksti: 'Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, '
+          + 'kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. '
+          + 'Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan '
+          + 'ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun '
+          + 'hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle '
+          + 'arvonimen khass hajib, suunnilleen ylikamariherra.'
+          + '\n\n'
+          + 'Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen '
+          + 'islamilaisten turkkilaisten kielellä kirjoitettu teos. Se '
+          + 'on hallitsijanpeili: neljä päähenkilöä edustavat kukin '
+          + 'yhtä abstraktia periaatetta, ja runomitta on arabialainen '
+          + 'mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen '
+          + 'kerta, kun sitä sovellettiin turkkilaiskieleen. Tekstistä '
+          + 'on säilynyt kolme käsikirjoitusta, ja jokainen tunnetaan '
+          + 'sen kaupungin nimellä, josta se löytyi.'
+          + '\n\n'
+          + 'Yusuf kuoli 1077 ja haudattiin joidenkin lähteiden mukaan '
+          + 'kaupungin eteläosaan; suoria historiallisia lähteitä '
+          + 'kuolinajasta ja -paikasta ei ole. Emiiri Yakub Beg '
+          + 'pystytti haudalle mausoleumin vuonna 1865, ja nykyinen '
+          + 'sinikaakelinen rakennus seisoo samalla paikalla. Haudan '
+          + 'kirjoitukset ovat kiinaksi, arabiaksi ja uiguuriksi.',
+      kuvat: [
+        {
+          tiedosto: 'Mausoleum of Yusuf Khass Hajib main building.jpg',
+          selite: 'Mausoleumin sinikaakelinen julkisivu neljine '
+            + 'pikkuminareetteineen ja kaariportaaleineen aukeaa '
+            + 'hiekkaiselle pihalle.',
+          lahde: 'Voidvector, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * LHASAN KOHDEKARTAN JUTUT (Opus 21.8.2026). Lähteet ovat
+   * en-Wikipedian raakatekstit (action=raw, haettu 21.8.2026):
+   * Ramoche Temple, Potala Palace, Norbulingka, Jokhang, Chagpori,
+   * Tibet Museum (Lhasa), Lhasa Great Mosque, Lhasa, Lhasa Zhol
+   * Pillar, Lingkhor ja Sho Dun Festival.
+   *
+   * SISÄLTÖLINJAUS on sama kuin kulttuuri-kategoriat.js:n
+   * lhasa-lohkossa: kaikki sisältö on vuotta 1959 vanhempaa.
+   * Ramochen, Chagporin ja moskeijan artikkeleissa on runsaasti
+   * aineistoa vuosilta 1959–2008, eikä siitä ole käytetty mitään.
+   * Chagporin juttu kertoo kukkulan lääketieteellisen koulun sen
+   * omana historiana eikä mainitse, mitä paikalla on nyt; museon
+   * juttu kertoo rakennuksen ja kokoelman eikä koske näyttelyn
+   * historiaosastoon.
+   */
+  lhasa: {
+    'Ramoche-temppeli': {
+      aika: '600-luvun puoliväli, nykyinen rakennus 1474',
+      teksti: 'Ramoche on Jokhangin jälkeen kaupungin tärkein '
+          + 'temppeli, ja se on yhtä vanha: molemmat pystytettiin '
+          + '600-luvun puolivälissä yhtä ainoaa pronssista '
+          + 'buddhankuvaa varten.'
+          + '\n\n'
+          + 'Temppeli on kaupungin luoteisosassa, Potalasta itään ja '
+          + 'Jokhangista pohjoiseen, ja sen tontti on neljätuhatta '
+          + 'neliömetriä. Alkuperäinen rakennus tuhoutui tulipalossa, '
+          + 'ja tilalle nousi 1474 kolmikerroksinen talo. Pian sen '
+          + 'jälkeen siitä tuli Gyuto-koulukunnan eli Lhasan ylemmän '
+          + 'tantrisen korkeakoulun kokoushalli, ja talossa asui '
+          + 'viisisataa munkkia.'
+          + '\n\n'
+          + 'Kaksi kuvaa vaihtoi aikanaan paikkaa. Kertomuksen mukaan '
+          + 'idästä saapunut patsas siirrettiin täältä Jokhangiin '
+          + 'turvaan, ja etelästä saapunut tuli tilalle — siksi '
+          + 'Jokhangin pääkuva on nykyään se, joka tuli Kiinasta, ja '
+          + 'täällä on se, joka tuli Nepalista.',
+      kuvat: [
+        {
+          tiedosto: 'Ramoche temple.jpg',
+          selite: 'Kokoussalin penkkiriveille on levitetty '
+            + 'viininpunaiset viitat ja niiden päälle keltaiset '
+            + 'päähineet, mutta sali itse on tyhjä.',
+          lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Potala-palatsi': {
+      aika: '1645–1694',
+      teksti: 'Potala on rakennettu dzong-tyyliin eli tiibetiläisen '
+          + 'linnoituksen tapaan: seinät kaartuvat sisäänpäin ylöspäin '
+          + 'mentäessä, ikkunarivit ovat vasta ylimmissä kerroksissa ja '
+          + 'katot ovat tasaisia ja eri korkeuksilla. Rakennus on '
+          + 'neljäsataa metriä idästä länteen ja kolmesataaviisikymmentä '
+          + 'pohjoisesta etelään, ja se seisoo noin 3 700 metrin '
+          + 'korkeudessa keskellä Lhasan laaksoa.'
+          + '\n\n'
+          + 'Nimi tulee Potalaka-vuoresta, joka on buddhalaisessa '
+          + 'perinteessä Avalokiteśvara-bodhisattvan asuinsija Intian '
+          + 'eteläkärjessä. Sama ajatus toistuu kaupungin kolmessa '
+          + 'kukkulassa, joita sanotaan Tiibetin kolmeksi suojelijaksi: '
+          + 'Marpo Ri on Avalokiteśvaran, Chagpori Vajrapanin ja '
+          + 'Pongwari Manjushrin vuori. Punainen keskusosa on Punainen '
+          + 'palatsi, ja siinä ovat pääsalit ja aiempien dalai-lamojen '
+          + 'pyhäköt; valkoinen osa oli asuin- ja hallintosiipi. Värit '
+          + 'syntyvät kalkkikivestä.'
+          + '\n\n'
+          + 'Palatsin alapuolella Zholin kylässä seisoo kivipilari, '
+          + 'joka on pystytetty 700-luvun jälkipuolella kuningas '
+          + 'Trisong Detsenin aikana. Siihen on hakattu mahdollisesti '
+          + 'vanhin säilynyt tiibetinkielinen kirjoitus: kertomus '
+          + 'kenraali Nganlam Takdra Lukhongin palveluksista '
+          + 'kuninkaalle. Pilarin ikä ilmoitetaan Wikipediassa kahdella '
+          + 'tavalla, Lhasa-artikkelissa "noin 764" ja pilarin omassa '
+          + 'artikkelissa vuoden 783 rajasopimuksen muistoksi '
+          + 'pystytettynä.',
+      kuvat: [
+        {
+          tiedosto: 'Potala Palace view Chakpori Hill.jpg',
+          selite: 'Chagporilta katsottuna Punainen palatsi kultaisine '
+            + 'kattoineen kohoaa Valkoisen palatsin ja paljaan kallion '
+            + 'yläpuolelle.',
+          lahde: 'Rene Heise, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Norbulingka: {
+      aika: '1755–1783',
+      teksti: 'Norbulingka on kolmen kilometrin päässä Potalasta '
+          + 'länteen, Kyichun rannalla. Puistossa on 374 huonetta ja '
+          + 'kolmekymmentäkuusi hehtaaria maata, ja se on Tiibetin '
+          + 'suurin ihmisen tekemä puutarha. Ensimmäisen palatsin '
+          + 'rakennutti Seitsemäs dalai-lama ja se kantaa hänen '
+          + 'nimeään; Kahdeksas dalai-lama lisäsi kolme temppeliä, '
+          + 'eteläisen ja itäisen muurin ja suuren joukon puita, ja '
+          + 'sen jälkeen paikka oli kesäasunto.'
+          + '\n\n'
+          + 'Sana lingka tarkoittaa Tiibetissä puistoa yleensä. Lhasaa '
+          + 'ympäröi aikanaan kaksikymmentäkaksi lingkaa, useimmat yli '
+          + 'kahdeksansataa metriä pitkiä, ja kaupunkilaiset kävivät '
+          + 'niissä eväsretkillä. Norbulingka on niistä suurin ja '
+          + 'säilynein.'
+          + '\n\n'
+          + 'Puistossa vietetään Shoton- eli jogurttijuhlaa, jonka nimi '
+          + 'tulee sanoista sho, jogurtti, ja dun, pidot. Juhla alkoi '
+          + '1000-luvulla siitä, että maallikot tarjosivat munkeille '
+          + 'jogurttia kuukauden mittaisen sisällä pysyttelyn jälkeen — '
+          + 'munkit viettivät kesäkuukauden luostarissa, jotta he eivät '
+          + 'astuisi maasta nousevien hyönteisten päälle. Myöhemmin '
+          + 'juhlaan liitettiin lhamo-oopperat, jotka kestävät koko '
+          + 'päivän symbaalien, kellojen ja rumpujen säestyksellä. '
+          + 'Ajankohta on loppukesällä.',
+      kuvat: [
+        {
+          tiedosto: 'Lhasa - Norbulingka - letní palác dalajlámů - panoramio.jpg',
+          selite: 'Kesäpalatsin keltainen julkisivu kultaisen katon '
+            + 'alla sulkee puistokäytävän pään, ja käytävää reunustavat '
+            + 'keltaiset kaiteet ja kukkapenkit.',
+          lahde: 'Pavel Špindler, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jokhang-temppeli': {
+      aika: '600-luvun puoliväli, laajennettu 1610',
+      teksti: 'Jokhang on nelikerroksinen ja peittää kaksi ja puoli '
+          + 'hehtaaria. Katot on päällystetty kullatuilla '
+          + 'pronssitiilillä, ja harjoilla seisovat kultaiset kauriit '
+          + 'opinkehrän kummallakin puolella, voitonliput ja '
+          + 'kalahahmot. Pohjakaava on intialaisen vihara-luostarin '
+          + 'mallia, ja siihen on myöhemmin sekoittunut nepalilaista ja '
+          + 'Tang-kauden kiinalaista rakennustapaa. Ovenpielet, pylväät '
+          + 'ja huiput ovat 600- ja 700-luvun newar-työtä Kathmandun '
+          + 'laaksosta, ja kattopalkkien on radiohiiliajoituksella '
+          + 'todettu olevan alkuperäisiä.'
+          + '\n\n'
+          + 'Sisällä kierretään ympyrää: uloimmalla kehällä on rivi '
+          + 'suuria rukousmyllyjä, ja sen sisäpuolella on päähalli '
+          + 'kappeleineen. Päähallissa on puolitoista metriä korkea '
+          + 'kullattu pronssipatsas, joka esittää Buddhaa '
+          + 'kaksitoistavuotiaana. Temppelin kokoelmiin kuuluu yli '
+          + 'kolmetuhatta patsasta sekä käsikirjoituksia; seinillä on '
+          + 'uskonnollisia ja historiallisia seinämaalauksia, joista '
+          + 'yksi kuvaa prinsessa Wenchengin saapumista.'
+          + '\n\n'
+          + 'Ulkopuolella temppelin pohjois- ja eteläsisäänkäynnin '
+          + 'vieressä on kaksi kivipilaria. Vanhempi on viisi ja puoli '
+          + 'metriä korkea, sen huippu on muotoiltu palatsiksi, ja '
+          + 'siinä on vuodelle 821 tai 822 ajoitettu kirjoitus '
+          + 'tiibetiksi ja kiinaksi. Nuorempi on maaliskuulta 1794, ja '
+          + 'siihen on kaiverrettu ohjeita isorokon torjumiseksi — '
+          + 'kiveä on paikoin veistetty pois, koska sillä uskottiin '
+          + 'itsellään olevan parantava voima.',
+      kuvat: [
+        {
+          tiedosto: 'Cho-Khang The Grand Temple of Buddha at Lhasa 1902.jpg',
+          selite: 'Vuoden 1902 kirjaan piirretyssä lintuperspektiivissä '
+            + 'temppeli on tiivis kortteli litteäkattoisia taloja, ja '
+            + 'sen sisäänkäynti ja pilari on merkitty nimillä.',
+          lahde: 'Sarat Chandra Das, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Jokhang temple monk\'s rooftop house.jpg',
+          selite: 'Temppelin kattopihalla kuivuu narulla kaksi viittaa, '
+            + 'punainen ja oranssi, valkoiseksi kalkitun seinän '
+            + 'edessä.',
+          lahde: 'Maris Burbergs, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Chagpori: {
+      aika: 'lääketieteen koulu 1696',
+      teksti: 'Chagpori tarkoittaa rautavuorta. Se on kallioinen '
+          + 'kukkula aivan Potalan eteläpuolella ja yksi Keski-Tiibetin '
+          + 'neljästä pyhästä vuoresta; kahden muun lhasalaisen '
+          + 'kukkulan kanssa se muodostaa Tiibetin kolme suojelijaa. '
+          + 'Kukkulan ja Potalan välissä kulki ennen kaupungin '
+          + 'länsiportti, suuri Pargo Kaling -chorten, jonka läpi tie '
+          + 'meni holvikäytävänä.'
+          + '\n\n'
+          + 'Kukkulan päällä oli Tiibetin tunnetuin lääketieteellinen '
+          + 'koulu. Sen rakennutti vuonna 1696 sijaishallitsija Sangye '
+          + 'Gyatso Viidennen dalai-laman toiveesta, ja siellä '
+          + 'opetettiin Neljän tantran nimellä tunnettua '
+          + 'lääkintäkirjallisuutta, joka oli koottu Samye-luostarissa '
+          + '700-luvulla ja toimitettu uudelleen 1100-luvulla. '
+          + 'Koululla oli omat tulonsa maista, ja luostarit oli '
+          + 'velvoitettu lähettämään sinne oppilaita.'
+          + '\n\n'
+          + 'Kukkulan juurella kalliopintaan on maalattu ja veistetty '
+          + 'buddhakuvia. Chagporin ohi kulkee myös Lingkhor, kaupungin '
+          + 'ulompi pyhiinvaellustie: kahdeksan kilometrin kierros, '
+          + 'joka sulki sisäänsä vanhankaupungin, Potalan ja tämän '
+          + 'kukkulan. Reitin varrella oli pajujen varjostamia '
+          + 'puistoja, joissa istuttiin kesäisin eväillä ja katsottiin '
+          + 'ulkoilmaoopperaa juhlapäivinä.',
+      kuvat: [
+        {
+          tiedosto: 'Lhasa-von Yakhotel-04-Schneeberge-2014-gje.jpg',
+          selite: 'Chagporin kallioharja mastoineen nousee kaupungin '
+            + 'kattojen takaa, ja sen takana kohoavat lumiset vuoret.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tiibetin museo': {
+      aika: 'avattu 1999',
+      teksti: 'Museo avattiin 5. lokakuuta 1999, ja se on alueen '
+          + 'ensimmäinen suuri nykyaikainen museo. Rakennus on '
+          + 'L-kirjaimen muotoinen ja seisoo Potalan alapuolella '
+          + 'Norbulingkan tien kulmassa. Julkisivu on harmaata tiiltä, '
+          + 'räystäät tummanruskeat ja valkoiset ja katto kullattu — '
+          + 'yhdistelmä perinteistä tiibetiläistä rakennustapaa ja '
+          + 'nykyarkkitehtuuria.'
+          + '\n\n'
+          + 'Tontti on runsaat viisi hehtaaria ja rakennettua alaa on '
+          + '23 508 neliömetriä, josta näyttelytilaa 10 451. '
+          + 'Kokonaisuus jakautuu kolmeen osaan: päänäyttelyhalliin, '
+          + 'kansankulttuurin puutarhaan ja hallinto-osaan. Keskellä on '
+          + 'sisäpiha, jonka valkoinen lattia ja kattoikkunat '
+          + 'jäljittelevät luostarien pihoja.'
+          + '\n\n'
+          + 'Kokoelmassa on yli puoli miljoonaa esinettä, joista noin '
+          + 'tuhat on kerrallaan esillä. Esihistorian osastossa on '
+          + 'kivityökaluja, keramiikkaa, luu- ja metalliesineitä '
+          + 'Karuon ja Qugongin kaivauksilta: vanhimmat ovat '
+          + 'viidenkymmenentuhannen vuoden takaa ja nuorimmat kolmen '
+          + 'vuosituhannen. Muissa saleissa on thangka-maalauksia, '
+          + 'soittimia, lääketieteen ja tähtitieteen taulukoita sekä '
+          + 'pattralehdille ja tuohelle kirjoitettuja sutria.',
+      kuvat: [
+        {
+          tiedosto: 'Tibet Museum Lhasa Tibet China 西藏 拉萨 西藏博物館 - panoramio.jpg',
+          selite: 'Museon sisäänkäynti nousee portaita kivijulkisivun '
+            + 'ja maalattujen räystäiden alla, ja portaiden edessä '
+            + 'seisoo pronssinen suitsutusastia.',
+          lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lhasan suuri moskeija': {
+      aika: '1716, laajennettu 1793',
+      teksti: 'Lhasassa on ollut muslimiyhteisö 1000-luvulta lähtien. '
+          + 'Kaupungissa ja sen ympäristössä on neljä moskeijaa: '
+          + 'vanhin, Khache Lingka, on vuodelta 1650 kaupungin '
+          + 'länsipuolella, Dokdén moskeija pohjoisessa vuodelta 1716, '
+          + 'pieni moskeija 1900-luvun alusta ja tämä, Suuri moskeija, '
+          + 'joka tunnetaan myös Hebalinin moskeijana.'
+          + '\n\n'
+          + 'Moskeija rakennettiin 1716 ja laajennettiin 1793. Sen '
+          + 'rakensivat pääosin Kashmirista tulleet kauppiaat, jotka '
+          + 'olivat asettuneet Lhasaan — samaan aikaan Barkhorin '
+          + 'kauppapaikalla kävivät jesuiitta Ippolito Desiderin '
+          + 'vuonna 1716 luettelemat mongolit, kiinalaiset, '
+          + 'moskovalaiset, armenialaiset, kashmirilaiset, '
+          + 'nepalilaiset ja pohjoisintialaiset.'
+          + '\n\n'
+          + 'Piha on 2 600 neliömetriä ja siihen johtaa kolme '
+          + 'sisäänkäyntiä. Rakennettua alaa on 1 300 neliömetriä: '
+          + 'rukoushuone lännessä, pesuhuone ja muut tilat. '
+          + 'Rakennustapa on tiibetiläinen, ja siihen on sovitettu '
+          + 'islamilaisen rakennusperinteen omat osat — kaksi '
+          + 'valotornia ja arabiankieliset kirjoituskentät kultaisten '
+          + 'räystäiden alla.',
+      kuvat: [
+        {
+          tiedosto: 'Mosques in Lhasa3.jpg',
+          selite: 'Kaksi vihreäkupolista valotornia nousee kultaisten '
+            + 'räystäiden takaa, ja seinäpaneeleissa on arabialaista '
+            + 'kirjoitusta tiibetiläisten koristekuvioiden keskellä.',
+          lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
