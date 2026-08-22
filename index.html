@@ -645,20 +645,23 @@
     <p class="passport-count">Tavarat</p>
     <div id="passport-finds" class="passport-finds"></div>
     <!--
-      JULISTEKOKOELMA (omistajan tilaus 21.8.2026, päätoimittajan
-      täydennys): kaupunkilehden minitehtävästä voitetut aikakaus-
-      julisteet. Pikkukuvaa napauttamalla juliste aukeaa isona; vielä
-      voittamattomat ovat himmeitä paikkoja kysymysmerkillä, jotta
-      kokoelmasta näkee että sitä voi täydentää.
+      JULISTERIVI (omistajan tilaus 22.8.2026: "Julisteet voisi olla
+      oma rivi laukussa mutta kuvakkeet todella pieniä, sama korkeus
+      kuin tekstillä ja näkyisi vain kolme viimeisintä. Perässä olisi
+      numeromäärä ja >> merkki. Riviä klikkaamalla aukeaisi oma juliste
+      popup galleria...").
 
-      Kotelo on piilossa, kunnes ensimmäinen juliste on voitettu —
-      sama sääntö kuin Varusteet-osastolla: tyhjä osasto kertoisi vain
-      siitä, mitä pelaajalla ei ole. Sisältö rakennetaan js/ui.js:ssä
-      (renderJulisteet) taulusta js/packs/julisteet.js.
+      Tilaus KUMOAA 21.8.2026 aloitetun ruudukon, jossa laukussa oli
+      otsikkorivi, kaikki voitetut pikkuvedokset ja loput himmeinä
+      ?-paikkoina: sama tieto on nyt gallerian sisällä, ja laukkuun jää
+      yksi rivi. Rivi on kokonaan yksi nappi.
+
+      Rivi on piilossa, kunnes ensimmäinen juliste on voitettu — sama
+      sääntö kuin Varusteet-osastolla, ks. js/ui.js renderJulisteet.
+      Sisältö rakennetaan siellä taulusta js/packs/julisteet.js.
     -->
     <div id="juliste-kotelo" class="juliste-kotelo" hidden>
-      <p class="passport-count">Julisteet</p>
-      <div id="passport-julisteet" class="laukku-julisteet"></div>
+      <button type="button" id="passport-julisteet" class="laukku-julisterivi"></button>
     </div>
     <!--
       VARUSTEET ELI LINSSIVALITSIN (omistajan päätös 18.8.2026:
