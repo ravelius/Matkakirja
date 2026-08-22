@@ -9153,9 +9153,18 @@ button.lukija-nappi.lukee,
  * rajataan samaan suhteeseen, jotta rivi pysyy tasakorkuisena. */
 .lehti-paakuva .lehti-kuva img { max-height: 360px; object-fit: cover; }
 
-/* Avauskuvakaruselli etusivun isossa kuvapaikassa (omistajan tilaus
- * 15.8.2026): panoraama saa olla pääkuvaa korkeampi muttei viedä koko
- * ruutua — leveys täyteen ja korkeus katossa kuten pääkuvallakin.
+/* Avauskuvakaruselli etusivun isossa kuvapaikassa (omistajan linjaus
+ * 22.8.2026): kuvapaikka on herokuvien 3:2-suhteessa, joten generoitu
+ * hero (1536×1024) täyttää sen tarkalleen ja näkyy RAJAAMATTOMANA.
+ * Tätä leveämmät kuvat (panoraamat) rajautuvat sivuilta ja korkeammat
+ * ylä- ja alareunasta, jolloin karusellin kaikki diat ovat saman
+ * kokoisia eikä laatikko hypi kuvaa vaihdettaessa. Kokoruudun
+ * suurennostila näyttää kuvan edelleen oikeassa koossaan.
+ * (Korvaa 15.8.2026 linjauksen "panoraama saa olla pääkuvaa korkeampi
+ * muttei viedä koko ruutua, katto 430 px".)
+ * Kuvasuhde annetaan KUVALLE eikä kehykselle, koska kehys on figure,
+ * jonka sisällä on kuvaikkunan lisäksi figcaption (selite ja lähde) —
+ * kehyksen pakottaminen 3:2:een leikkaisi selitteen.
  * Kehyksen 300 px:n katto kuuluu nähtävyysikkunaan, EI etusivulle
  * (omistajan havainto 15.8.2026: "galleria etusivulla on väärän
  * kokoinen" — karuselli kutistui palstaa kapeammaksi). */
@@ -9167,7 +9176,9 @@ button.lukija-nappi.lukee,
 
 .lehti-paakuva .nahtavyys-kuva {
   width: 100%;
-  max-height: 430px;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 

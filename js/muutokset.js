@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1031, teksti: 'Julisteet 112 kaupunkiin ja etusivun kuvat herokokoon' },
   { v: 1030, teksti: 'Kuvatekstiremontti valmis: selitteet kertovat kohteesta' },
   { v: 1029, teksti: 'Kokoruudulla piirros suurenee kartan päällä, ei korttia' },
   { v: 1028, teksti: 'Aasian kuvatekstit uusittu: 19 kaupunkia kertoo kohteesta' },
