@@ -7832,21 +7832,23 @@ export class UI {
           setTimeout(() => this.removeToast(box), TOAST_MS.default);
         }
         /*
-         * JULISTE AUKEAA HETI OIKEASTA VASTAUKSESTA (omistajan tilaus
-         * 21.8.2026: "aueta isommaksi sitten kun tulee oikea vastaus").
-         * Rahapalkkio tuli jo yllä — juliste on sen päälle, ei sen
-         * sijaan. Pikkuvedos jää laatikkoon voitettuna, ja kokoelmaan
-         * juliste tallentuu matkalaukkuun.
-         *
-         * Pieni viive: suurennos avautuisi muuten päälle samalla
-         * hetkellä, kun oikean vastauksen palaute ilmestyy laatikkoon,
-         * eikä pelaaja ehtisi nähdä kumpaakaan.
+         * JULISTE LUNASTETAAN NAPISTA (omistajan tilaus 22.8.2026:
+         * "Kun vastaus on oikein, niin pitäisi olla nappi 'lunasta
+         * juliste', koska muuten oikean vastauksen tekstiä ei ehdi
+         * lukea"). Kumoaa 21.8.2026 automaattiavauksen: 700 ms:n
+         * viivekään ei riittänyt, koska suurennos peitti faktarivin
+         * kesken lukemisen. Juliste myönnetään kokoelmaan silti heti
+         * — nappi avaa vain katselun, eikä lunastus jää saamatta
+         * vaikka pelaaja sulkisi lehden nappia painamatta.
          */
         if (oikein && juliste) {
           this.game.myonnaJuliste(cityId);
           palkinto?.merkitseVoitetuksi();
           this.elavoitaLaukku();
-          setTimeout(() => this.naytaJuliste(cityId), 700);
+          const lunasta = html('button', 'minitehtava-lunastus', 'Lunasta juliste');
+          lunasta.type = 'button';
+          lunasta.addEventListener('click', () => this.naytaJuliste(cityId));
+          laatikko.appendChild(lunasta);
         }
         // Koko render() sulkisi Tutki-kortin — riittää tallentaa ja
         // päivittää rahapilleri (sama syy kuin kulttuurivisassa).
