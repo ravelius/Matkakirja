@@ -32,6 +32,16 @@
  * sitä ajo saa 429:n kahdeksannen pyynnön jälkeen ja jää odottamaan
  * seuraavaa tuntia turhaan.
  *
+ * Paketin kasvaessa koko ajo maksaa yhä enemmän, ja kun lisättävänä
+ * on vain muutama uusi kaupunki, --vain rajaa ajon niihin:
+ *
+ *   node tools/hae-saanormaalit.mjs --vain lhasa,kashgar
+ *
+ * Hinta putoaa samassa suhteessa (kahdeksantoista kaupunkia painaa
+ * 1 296 kutsua koko paketin runsaan 7 000 sijaan), eivätkä jo
+ * kirjoitetut rivit muutu: tiedostoon kirjoitetaan vain ne kaupungit,
+ * joille kaista tällä ajolla laskettiin.
+ *
  * Otos ei silti siirry kuvaan sellaisenaan, koska yksittäiset vuodet
  * ovat lämpimämpiä tai kylmempiä kuin kolmenkymmenen vuoden keskiarvo.
  * Otoksesta luetaan vain VUOROKAUDEN VAIHTELUVÄLI (ylin miinus alin),
@@ -67,6 +77,7 @@
  * uudelleen, jos muuttuja puuttuu.
  */
 import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
@@ -123,13 +134,35 @@ const ASETUKSET = {
    * otos olisi ilmaiseksi huonompi.
    */
   paivat: Number(valitsin('paivat', 14)),
+  /*
+   * Vain nämä kaupungit (pilkulla erotetut avaimet), oletuksena
+   * kaikki. Pyynnön hinta on paikkojen määrä kertaa muuttujat kertaa
+   * vuorokaudet, joten uusien kaupunkien lisäys ei saa maksaa koko
+   * paketin verran: kahdeksantoista kaupunkia painaa 1 296 kutsua,
+   * kun koko paketti painaa yli 7 000. Vanhat rivit eivät muutu,
+   * koska tiedostoon kirjoitetaan vain ne kaupungit, joille kaista
+   * laskettiin.
+   */
+  vain: valitsin('vain', ''),
 };
+
+/*
+ * Rajattu ajo saa oman välimuistikansionsa: välimuistin tiedostot on
+ * nimetty vuoden ja kuukauden mukaan, mutta niiden sisältö riippuu
+ * paikkalistasta. Ilman omaa kansiota rajattu ajo jättäisi jälkeensä
+ * palasia, joita seuraava koko paketin ajo ei voisi käyttää.
+ */
+const VAIN = String(ASETUKSET.vain || '').split(',').map((s) => s.trim()).filter(Boolean);
+const VAINTUNNUS = VAIN.length
+  ? 'vain-' + VAIN.length + '-' + createHash('sha1').update(VAIN.join(',')).digest('hex').slice(0, 8)
+  : '';
+const VALIMUISTIKANSIO = VAINTUNNUS ? join(VALIMUISTI, VAINTUNNUS) : VALIMUISTI;
 
 // -------------------------------------------------------------------- lataus
 
 async function haeJakso(kaupungit, vuosi, kuukausi) {
   const nimi = `${vuosi}-${String(kuukausi + 1).padStart(2, '0')}.json`;
-  const kohde = join(VALIMUISTI, nimi);
+  const kohde = join(VALIMUISTIKANSIO, nimi);
   // tuore=false kertoo kutsujalle, ettei tätä palaa haettu verkosta —
   // silloin kiintiötä ei kulunut eikä tahtia tarvitse odottaa.
   if (existsSync(kohde)) return { data: JSON.parse(readFileSync(kohde, 'utf8')), tuore: false };
@@ -197,7 +230,7 @@ async function haeJakso(kaupungit, vuosi, kuukausi) {
     if (!Array.isArray(data) || data.length !== kaupungit.length) {
       throw new Error(`vastauksessa ${data.length ?? '?'} paikkaa, odotettiin ${kaupungit.length}`);
     }
-    mkdirSync(VALIMUISTI, { recursive: true });
+    mkdirSync(VALIMUISTIKANSIO, { recursive: true });
     writeFileSync(kohde, JSON.stringify(data));
     return { data, tuore: true };
   }
@@ -244,8 +277,13 @@ function kirjoitaPakettiin(teksti, kaistat) {
      * jotta ajo on toistettava: toinen ajo antaa saman tiedoston eikä
      * kasvata riviparia joka kerralla. Otsikon kommenttirivit alkavat
      * tähdellä eivätkä osu tähän kaavaan.
+     *
+     * VAIN NE KAUPUNGIT, JOILLE TÄLLÄ AJOLLA LASKETTIIN KAISTA:
+     * --vain-ajossa muut kaupungit eivät ole mukana laskennassa, ja
+     * ilman tätä ehtoa niiden vanhat rivit putoaisivat pois eikä
+     * mitään tulisi tilalle.
      */
-    if (kaupunki && /^ {4}(ylin|alin): \[[^\]]*\],$/.test(rivi)) continue;
+    if (kaupunki && kaistat[kaupunki] && /^ {4}(ylin|alin): \[[^\]]*\],$/.test(rivi)) continue;
     ulos.push(rivi);
     if (kaupunki && !tehdyt.has(kaupunki) && /^ {4}keskilampo: \[[^\]]*\],$/.test(rivi)) {
       const k = kaistat[kaupunki];
@@ -263,14 +301,17 @@ function kirjoitaPakettiin(teksti, kaistat) {
 async function main() {
   const { SAATIEDOT } = await import(PAKETTI);
   const kaupungit = Object.entries(SAATIEDOT)
-    .filter(([, t]) => Array.isArray(t.keskilampo) && t.keskilampo.length === 12
-      && Number.isFinite(t.lat) && Number.isFinite(t.lon))
+    .filter(([id, t]) => Array.isArray(t.keskilampo) && t.keskilampo.length === 12
+      && Number.isFinite(t.lat) && Number.isFinite(t.lon)
+      && (!VAIN.length || VAIN.includes(id)))
     .map(([id, t]) => ({ id, lat: t.lat, lon: t.lon, keskilampo: t.keskilampo }));
+  const tuntemattomat = VAIN.filter((id) => !kaupungit.some((k) => k.id === id));
+  if (tuntemattomat.length) throw new Error('--vain: paketista puuttuu ' + tuntemattomat.join(', '));
 
   const pyyntoja = ASETUKSET.vuodet.length * 12;
   process.stderr.write(`${kaupungit.length} kaupunkia, otosvuodet ${ASETUKSET.vuodet.join(', ')}, `
     + `${ASETUKSET.paivat} vrk/kk -> ${pyyntoja} pyyntöä\n`);
-  process.stderr.write(`välimuisti ${VALIMUISTI}\n\n`);
+  process.stderr.write(`välimuisti ${VALIMUISTIKANSIO}\n\n`);
 
   // kaupunki -> 12 kuukautta, kussakin otoksen päivittäiset ylimmät ja alimmat
   const otokset = new Map(kaupungit.map((k) => [k.id,

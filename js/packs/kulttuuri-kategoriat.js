@@ -38355,19 +38355,12 @@ export const KULTTUURI_KATEGORIAT = {
    * vuoden 1868 kartta on venäläinen sotakartta omine nimikilpineen,
    * ja Afrasiyabin seinämaalaus on museon jäljennös.
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava.
-   * Talon menetelmä on Open-Meteon arkisto (ERA5, 1991–2020), ja
-   * hakuskripti kirjoitettiin ja ajettiin, mutta rajapinta vastasi
-   * koko työn ajan 429:llä ("Daily API request limit exceeded") —
-   * vuorokausikiintiö oli käytetty jaetusta osoitteesta, eikä se
-   * nollaudu ennen UTC-vuorokauden vaihdetta. Rivi ei ole KEKSITTY
-   * muusta lähteestä, koska vuosigraafin lähderivi lupaa nimenomaan
-   * ERA5:n; ilman riviä lehti näkyy ilman säätä, kuten saatiedot.js:n
-   * alkukommentti sanoo. Matkaoppaan jakso 5 nojaa siksi
-   * en-Wikipedian Samarkand-artikkelin omaan sääruutuun (sama
-   * normaalikausi 1991–2020, pohjadata Pogoda.ru.net), ja se on
-   * sanottu jaksossa ääneen. Kun ERA5-rivi lisätään, jakso 5 on
-   * kirjoitettava rivin omista luvuista.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: samarkand, ERA5 1991–2020, mittauspiste
+   * 39,655 / 66,976). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
@@ -38658,19 +38651,19 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Samarkandissa on kylmä puolikuiva aroilmasto: '
                 + 'kuumat ja kuivat kesät, viileät ja vaihtelevat '
-                + 'talvet. Kaupungin oman sääruudun mukaan '
-                + '(normaalikausi 1991–2020) heinäkuun keskilämpö on '
-                + '27,2 astetta ja päivien keskiylin 34,5, ja heinä–'
-                + 'elokuussa lämpötila nousee toistuvasti yli '
-                + 'neljänkymmenen. Tammikuun keskilämpö on 2,3 '
-                + 'astetta, keskiylin 7,3 ja yöt pakkasen puolella. '
+                + 'talvet. Lehden sääriviltä heinäkuun keskilämpö on '
+                + '26,5 astetta ja päivän tyypillinen ylin 34, ja '
+                + 'tammikuussa keskilämpö on nollan tuntumassa, päivän '
+                + 'ylin neljä astetta ja yöt neljä astetta pakkasen '
+                + 'puolella. '
                 + 'Ääripäät ovat kaukana toisistaan: mittausten '
                 + 'ennätykset ovat 42,4 ja −25,4 astetta. Sade tulee '
-                + 'talvella ja keväällä — maaliskuussa 73 '
-                + 'millimetriä — kun taas heinä- ja elokuussa kertyy '
-                + 'alle kaksi millimetriä; koko vuoden sade on 378 '
-                + 'millimetriä. Kävelijän kuukaudet ovat syyskuu ja '
-                + 'lokakuu: päivät ovat 22–29 asteessa ja sadetta '
+                + 'talvella ja keväällä — maaliskuussa 89 '
+                + 'millimetriä — kun taas heinä-, elo- ja syyskuussa '
+                + 'kertyy yhteensä neljätoista; koko vuoden sade on '
+                + '507 millimetriä. Kävelijän kuukaudet ovat syyskuu '
+                + 'ja lokakuu: päivät ovat kahdenkymmenen ja '
+                + 'kahdenkymmenenkahdeksan asteen välissä ja sadetta '
                 + 'tuskin lainkaan. Huhtikuu on vihrein mutta myös '
                 + 'sateisimpia kuukausia.',
             },
@@ -38842,27 +38835,12 @@ export const KULTTUURI_KATEGORIAT = {
    * aseman omassa artikkelissa yksitoista laituria ja kolmetoista
    * raidetta. Molemmat erot kerrotaan jutuissa.
    *
-   * SÄÄRIVI PUUTTUU TOISTAISEKSI, ja se on kirjattu tähän, jotta
-   * seuraava tekijä ei etsi sitä turhaan. saatiedot.js:ään ei tullut
-   * xian-riviä, koska Open-Meteon arkistorajapinnan (ERA5) VUOROKAUSI-
-   * kiintiö oli tämän kontin ulosmenevällä osoitteella jo täynnä koko
-   * työpäivän ajan: sekä proxyn kautta että suoraan, viiden vuoden
-   * paloina ja yhden vuorokauden koepyynnöillä, vastaus oli aina
-   * "Daily API request limit exceeded" (yli 40 yritystä kahden ja
-   * puolen tunnin aikana; sama koski historical-forecast- ja
-   * climate-rajapintoja, kun taas ennusterajapinta vastasi
-   * normaalisti). Wikipedian oma kuukausitaulukko olisi ollut
-   * saatavilla, mutta se on Kiinan sääpalvelun asemadataa eikä
-   * ERA5:tä, ja vuosigraafin lähderivi lupaa lukijalle Open-Meteon
-   * ERA5:n — väärä lähdemerkintä on pahempi kuin puuttuva graafi
-   * (pakettitiedoston oma sääntö: ilman riviä lehti näkyy ilman
-   * säätä). Rivi haetaan siis erikseen, kun kiintiö vapautuu
-   * (UTC-vuorokauden vaihde), mittauspisteenä keskusta 34,26 / 108,94.
-   * Oppaan sääjakso on tämän vuoksi kirjoitettu Xi'an-artikkelin
-   * ilmasto-osion SANALLISISTA tiedoista, ja jakso kertoo itse, että
-   * sen luvut ovat Chang'anin kaupunginosan mittausasemalta 445 metrin
-   * korkeudesta (Siinain ja Petran ennakkotapaus mittauspisteen
-   * selittämisestä).
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: xian, ERA5 1991–2020, mittauspiste
+   * 34,26 / 108,94). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    *
    * KOLME TERRAKOTTAKUVAA on tietoinen valinta ja Mekan Jabal
    * al-Nourin ennakkotapaus: armeija on kaupungin tunnetuin asia
@@ -39171,11 +39149,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kevättä ja syksyä. Kuukausikeskilämpö nousee '
                 + 'tammikuun nollan tuntumasta heinäkuun '
                 + 'kahteenkymmeneenseitsemään asteeseen, ja koko vuoden '
-                + 'keskiarvo on runsaat neljätoista astetta; luvut ovat '
-                + 'Chang’anin kaupunginosan mittausasemalta, joka on 445 '
-                + 'metrin korkeudessa keskustan eteläpuolella. Suurin '
-                + 'osa vuoden sateesta tulee heinäkuun ja lokakuun lopun '
-                + 'välillä. Talvella lunta tulee toisinaan, mutta '
+                + 'keskiarvo on runsaat neljätoista astetta. Suurin '
+                + 'osa vuoden 784 millimetristä tulee touko–lokakuussa, '
+                + 'ja sateisimmat kuukaudet ovat syyskuu ja heinäkuu '
+                + 'runsaalla 140 millimetrillä; joulu–helmikuussa vettä '
+                + 'kertyy yhteensä 41. Talvella lunta tulee toisinaan, '
+                + 'mutta '
                 + 'se pysyy harvoin pitkään maassa. Kävelijän kannattaa '
                 + 'varautua kevääseen: maalis–huhtikuussa kaupungin '
                 + 'lämmetessä nopeasti tulee usein hiekkamyrskyjä. '
@@ -39358,15 +39337,12 @@ export const KULTTUURI_KATEGORIAT = {
    * sadesäällä). Eri tiedostot ja eri etäisyydet, sama perustelu
    * kuin Mekan Jabal al-Nourilla ja Tukholman Vasalla.
    *
-   * SÄÄRIVI PUUTTUU YHÄ js/packs/saatiedot.js:stä, ja se on tietoinen
-   * jättö eikä unohdus. Open-Meteon arkisto (ERA5) vastasi tämän erän
-   * ajan pelkällä 429:llä ja viestillä "Daily API request limit
-   * exceeded. Please try again tomorrow" — kontin vuorokausikiintiö
-   * oli käytetty loppuun, eikä normaaleja voi keksiä. Lehti toimii
-   * ilman riviä täsmälleen kuten tiedoston alkukommentti lupaa.
-   * Rivi haetaan yhdellä ajolla, kun kiintiö on nollautunut; oppaan
-   * sääjakso on kirjoitettu en-Wikipedian ilmasto-osiosta eikä se
-   * riipu rivistä.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: varanasi, ERA5 1991–2020, mittauspiste
+   * 25,32 / 83,01). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   varanasi: [
     {
@@ -39638,14 +39614,17 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Varanasissa on kostea subtrooppinen ilmasto, jossa '
                 + 'kesän ja talven ero on suuri. Kuiva kesä alkaa '
-                + 'huhtikuussa ja jatkuu kesäkuulle: lämpötila liikkuu '
-                + 'silloin kahdenkymmenenkahden ja neljänkymmenenkuuden '
-                + 'asteen välillä, ja päivisin puhaltaa loo, kuiva ja '
-                + 'kuuma tuuli. Heinäkuusta lokakuuhun on monsuunikausi, '
-                + 'ja koko vuoden sade on runsaat 1 100 millimetriä. '
-                + 'Talvella joulu–helmikuussa Himalajalta tulevat kylmät '
-                + 'aallot pudottavat lämpötilan ajoittain alle viiden '
-                + 'asteen, ja aamut ovat usein sumuisia. Matkailun '
+                + 'huhtikuussa ja jatkuu kesäkuulle: toukokuun '
+                + 'keskilämpö on 33,6 astetta ja päivän tyypillinen '
+                + 'ylin neljäkymmentä, ja päivisin puhaltaa loo, kuiva '
+                + 'ja kuuma tuuli. Heinäkuusta lokakuuhun on '
+                + 'monsuunikausi, jolloin sataa 742 millimetriä eli '
+                + 'valtaosa koko vuoden 946:sta; maalis–toukokuussa '
+                + 'kertyy yhteensä 25. Talvella joulu–helmikuussa '
+                + 'Himalajalta tulevat kylmät aallot pudottavat '
+                + 'lämpötilan ajoittain alle viiden asteen, ja aamut '
+                + 'ovat usein sumuisia — tammikuun keskilämpö on 15,7 '
+                + 'astetta ja yöt kymmenen tienoilla. Matkailun '
                 + 'sesonki osuu näiden väliin, loka–maaliskuuhun.',
             },
           ],
@@ -39861,20 +39840,12 @@ export const KULTTUURI_KATEGORIAT = {
    * kuvatekstiriveineen, ja vuoden 1873 kartta on vuonna 1902 piirretty
    * jäljennös omine nimiöineen.
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava.
-   * Talon menetelmä on Open-Meteon arkisto (ERA5, 1991–2020), ja
-   * hakuskripti kirjoitettiin ja ajettiin, mutta rajapinta vastasi
-   * 429:llä ("Daily API request limit exceeded. Please try again
-   * tomorrow") — vuorokausikiintiö oli käytetty jaetusta osoitteesta,
-   * eikä se nollaudu ennen UTC-vuorokauden vaihdetta. Sama tilanne oli
-   * Samarkandissa (v965). Riviä ei ole KEKSITTY muusta lähteestä,
-   * koska vuosigraafin lähderivi lupaa nimenomaan ERA5:n; ilman riviä
-   * lehti näkyy ilman säätä, kuten saatiedot.js:n alkukommentti sanoo.
-   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian Hanoi-artikkelin
-   * omaan sääruutuun (Vietnam Institute for Building Science and
-   * Technology, mittauspiste "downtown Hanoi"), ja se on sanottu
-   * jaksossa ääneen. Kun ERA5-rivi lisätään, jakso 5 on kirjoitettava
-   * rivin omista luvuista.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: hanoi, ERA5 1991–2020, mittauspiste
+   * 21,03 / 105,85). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
@@ -40154,18 +40125,18 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Hanoissa on neljä selvää vuodenaikaa, mikä on '
-                + 'Kaakkois-Aasiassa harvinaista. Alla olevat luvut ovat '
-                + 'kaupungin oman sääruudun normaaleja (Vietnamin '
-                + 'rakennustieteen laitos, mittauspiste ydinkeskustassa), '
-                + 'eivät pelin muualla käyttämää ERA5-sarjaa. '
-                + 'Touko–syyskuu on kuuma ja märkä: heinäkuun keskilämpö '
-                + 'on 29,4 astetta ja elokuussa sataa 309 millimetriä. '
+                + 'Kaakkois-Aasiassa harvinaista. '
+                + 'Touko–syyskuu on kuuma ja märkä: kesäkuun '
+                + 'keskilämpö '
+                + 'on 29,1 astetta ja elokuussa sataa 289 millimetriä; '
+                + 'näiden viiden kuukauden osuus vuoden 1 689 '
+                + 'millimetristä on 1 272. '
                 + 'Loka–marraskuu viilenee, joulu–helmikuu on '
                 + 'koillismonsuunin kuivaa ja viileää aikaa — tammikuun '
-                + 'keskilämpö on 16,6 astetta — ja maalis–huhtikuu on '
+                + 'keskilämpö on 15,7 astetta — ja maalis–huhtikuu on '
                 + 'sumuista tihkukevättä. Kävelijän kuukaudet ovat lokakuu '
-                + 'ja marraskuu: keskilämpö on 25,3 ja 21,9 astetta ja '
-                + 'sadetta tulee 141 ja 67 millimetriä eli alle puolet '
+                + 'ja marraskuu: keskilämpö on 24,7 ja 20,4 astetta ja '
+                + 'sadetta tulee 114 ja 51 millimetriä eli alle puolet '
                 + 'kesäkuukausien määrästä. Ääripäät ovat kaukana '
                 + 'toisistaan: mittausten ennätykset ovat 42,8 astetta '
                 + 'toukokuulta 1926 ja 2,7 astetta 12. tammikuuta 1955.',
@@ -40372,18 +40343,12 @@ export const KULTTUURI_KATEGORIAT = {
    * gerista kaksi (K4:n talvikuva ja oppaan runkokuva) — eri
    * tiedostot, eri etäisyydet ja eri asia kussakin.
    *
-   * SÄÄRIVI PUUTTUU js/packs/saatiedot.js:stä, ja se on tietoinen
-   * jättö eikä unohdus — sama tilanne kuin Samarkandissa ja
-   * Varanasissa. Open-Meteon arkisto (ERA5) vastasi koko työn ajan
-   * 429:llä ja viestillä "Daily API request limit exceeded. Please
-   * try again tomorrow": kontin jaetun osoitteen vuorokausikiintiö
-   * oli käytetty loppuun eikä se nollaudu ennen UTC-vuorokauden
-   * vaihdetta. Lukuja ei keksitä muusta lähteestä, koska
-   * vuosigraafin lähderivi lupaa nimenomaan ERA5:n. Oppaan jakso 5
-   * nojaa siksi en-Wikipedian oman sääruudun 1991–2020-normaaleihin
-   * (lähteinä Pogoda.ru.net ja NOAA:n WMO-normaalit), ja se on
-   * sanottu jaksossa ääneen. Kun ERA5-rivi lisätään, jakso 5
-   * kirjoitetaan rivin omista luvuista.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: ulanbator, ERA5 1991–2020, mittauspiste
+   * 47,92 / 106,92). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
@@ -40667,15 +40632,16 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Ilmasto on kylmä puolikuiva, ja vuodessa on kaksi '
-                + 'hyvin erilaista puoliskoa. Kaupungin oman sääruudun '
-                + 'mukaan (normaalikausi 1991–2020) tammikuun keskilämpö '
-                + 'on 21,3 pakkasastetta ja päivien keskiylin 15,5 '
-                + 'pakkasastetta, kun taas heinäkuun keskilämpö on 19,0 '
-                + 'astetta ja keskiylin 25,2. Koko vuoden keskiarvo jää '
-                + '0,2 asteeseen. Sade on vähäistä, 267 millimetriä '
-                + 'vuodessa, ja siitä valtaosa tulee touko–syyskuussa; '
-                + 'heinäkuu on sateisin 74 millimetrillä ja tammikuu '
-                + 'kuivin kahdella. Aurinkoisimmat kuukaudet ovat huhti- '
+                + 'hyvin erilaista puoliskoa. Lehden säärivillä '
+                + 'tammikuun keskilämpö on 18,8 pakkasastetta ja päivän '
+                + 'tyypillinen ylin kolmetoista pakkasastetta, kun taas '
+                + 'heinäkuun keskilämpö on 17,8 astetta ja päivän ylin '
+                + '23. Koko vuoden keskiarvo jää '
+                + '0,6 asteeseen. Sade on vähäistä, 331 millimetriä '
+                + 'vuodessa, ja siitä 247 tulee touko–elokuussa; '
+                + 'elokuu on sateisin 72 millimetrillä ja tammi- ja '
+                + 'joulukuu kuivimmat kahdella. Aurinkoisimmat '
+                + 'kuukaudet ovat huhti- '
                 + 'ja toukokuu, jolloin aurinko paistaa yli 260 tuntia. '
                 + 'Kävelijän kuukaudet ovat kesäkuu ja elokuu, ja '
                 + 'heinäkuun alkuun osuu Naadam. Mittausten ääripäät ovat '
@@ -40871,22 +40837,12 @@ export const KULTTUURI_KATEGORIAT = {
    * (rukousmyllyrivi kummun juurella): eri tiedostot, eri aihe.
    * Boudhanath on kansikuvassa ja kohdekartan omassa jutussaan.
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
-   * tähän (Samarkandin, Xi'anin ja Varanasin malli v965 ja v966).
-   * Talon menetelmä on Open-Meteon arkisto (ERA5, normaalikausi
-   * 1991–2020), mutta rajapinta vastasi koko tämän työn ajan 429:llä
-   * ja viestillä "Daily API request limit exceeded. Please try again
-   * tomorrow" — kontin jaetun ulosmenevän osoitteen vuorokausikiintiö
-   * oli käytetty loppuun, eikä se nollaudu ennen UTC-vuorokauden
-   * vaihdetta. Kokeiltu erikseen työn alussa ja lopussa, sama vastaus.
-   * Lukuja ei ole otettu mistään muusta lähteestä, koska vuosigraafin
-   * lähderivi lupaa lukijalle nimenomaan ERA5:n; ilman riviä lehti
-   * näkyy ilman säätä, kuten saatiedot.js:n alkukommentti lupaa.
-   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian Kathmandu-artikkelin
-   * sääruutuun (WMO:n normaalit 1991–2020, mittausasema Tribhuvanin
-   * lentoasema 1 337 m), ja jakso sanoo sen ääneen. Kun ERA5-rivi
-   * joskus lisätään, jakso 5 on kirjoitettava rivin omista luvuista.
-   * Mittauspiste olisi keskusta 27,70 / 85,31.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: kathmandu, ERA5 1991–2020, mittauspiste
+   * 27,70 / 85,31). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   kathmandu: [
     {
@@ -41181,19 +41137,18 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Kathmandu on korkealla laaksossa, ja siksi '
                 + 'kesä on selvästi leudompi kuin Etelä-Aasian '
-                + 'alangoilla. Kuukausikeskilämpö nousee tammikuun '
-                + 'yhdestätoista asteesta heinä–elokuun vajaaseen '
-                + 'kahteenkymmeneenviiteen, ja koko vuoden keskiarvo '
-                + 'on 19,3 astetta; luvut ovat Tribhuvanin '
-                + 'lentoaseman mittausasemalta 1 337 metrin '
-                + 'korkeudesta, ja ne ovat en-Wikipedian sääruudun '
-                + 'julkaisemat maailman ilmatieteen järjestön '
-                + 'normaalit vuosilta 1991–2020. Sateista noin '
-                + 'kaksi kolmasosaa tulee kesä–syyskuun '
-                + 'monsuunikaudella: heinäkuussa kertyy 384 '
-                + 'millimetriä, marraskuussa kuusi. Talvi on kuiva ja '
-                + 'aurinkoinen, mutta yöt ovat kylmiä — tammikuun '
-                + 'keskimääräinen alin on kolmen asteen tienoilla ja '
+                + 'alangoilla. Lehden säärivillä kuukausikeskilämpö '
+                + 'nousee tammikuun 10,8 asteesta heinäkuun 22,4 '
+                + 'asteeseen, ja koko vuoden keskiarvo on 17,9 '
+                + 'astetta. Sateesta valtaosa tulee kesä–syyskuun '
+                + 'monsuunikaudella: heinäkuussa kertyy 851 '
+                + 'millimetriä, marraskuussa 36. Rivin luvut ovat '
+                + 'ERA5-hilaruudusta, joka on kymmeniä kilometrejä '
+                + 'leveä ja ulottuu laakson reunan rinteille, joilla '
+                + 'monsuuni sataa rajusti — laakson pohjalla '
+                + 'Tribhuvanin lentoaseman mittausasema saa '
+                + 'heinäkuussa noin puolet tästä. Talvi on kuiva ja '
+                + 'aurinkoinen, mutta yöt ovat kylmiä, ja '
                 + 'kylmin mitattu lukema on 3,5 pakkasastetta vuodelta '
                 + '1978. Lunta kaupungissa nähdään harvoin, '
                 + 'muistetusti 1945 ja 2007.',
@@ -41469,17 +41424,12 @@ export const KULTTUURI_KATEGORIAT = {
    * leveitä. Sen tilalla historia-sivulla on vuoden 1796 venäläinen
    * atlaskartta aroista ja säilynyt 1800-luvun tiilinen kauppiastalo.
    *
-   * SÄÄRIVI PUUTTUU js/packs/saatiedot.js:stä, ja se on tietoinen
-   * jättö eikä unohdus — sama tilanne kuin Samarkandissa, Varanasissa
-   * ja Ulan Batorissa. Open-Meteon arkisto (ERA5) vastasi koko työn
-   * ajan 429:llä ja viestillä "Daily API request limit exceeded.
-   * Please try again tomorrow". Lukuja ei keksitä muusta lähteestä,
-   * koska vuosigraafin lähderivi lupaa nimenomaan ERA5:n. Oppaan
-   * jakso 5 nojaa siksi en-Wikipedian oman sääruudun
-   * 1991–2020-normaaleihin (lähteinä pogodaiklimat.ru sekä
-   * auringonpaisteessa NOAA ja DWD 1961–1990), ja se on sanottu
-   * jaksossa ääneen. Kun ERA5-rivi lisätään, jakso 5 kirjoitetaan
-   * rivin omista luvuista.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: astana, ERA5 1991–2020, mittauspiste
+   * 51,13 / 71,43). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
@@ -41751,14 +41701,16 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Ilmasto on äärimmäisen mannermainen, Köppenin '
                 + 'luokituksessa Dfb: pitkä, kuiva ja hyvin kylmä talvi '
-                + 'ja lyhyt, lämmin kesä. Kaupungin oman sääruudun '
-                + 'mukaan (normaalikausi 1991–2020) vuoden keskilämpö on '
-                + '3,9 astetta. Tammikuussa keskilämpö on 14,5 '
-                + 'pakkasastetta ja päivien keskiylin 10,3 '
-                + 'pakkasastetta; heinäkuussa vastaavat luvut ovat 20,6 '
-                + 'ja 26,6 astetta. Sadetta tulee vuodessa vain 337 '
-                + 'millimetriä, ja se painottuu kesään: heinäkuussa 56 '
-                + 'ja helmikuussa 17 millimetriä. Sadepäiviä on koko '
+                + 'ja lyhyt, lämmin kesä. Lehden säärivillä vuoden '
+                + 'keskilämpö on 4,1 astetta. Tammi- ja helmikuussa '
+                + 'keskilämpö on kahdentoista ja kolmentoista '
+                + 'pakkasasteen välissä ja päivän tyypillinen ylin '
+                + 'yhdeksän pakkasastetta; heinäkuussa vastaavat luvut '
+                + 'ovat kaksikymmentä ja kaksikymmentäviisi astetta. '
+                + 'Sadetta tulee vuodessa vain 359 '
+                + 'millimetriä, ja se painottuu kesään: heinäkuussa 75 '
+                + 'ja helmikuussa neljätoista millimetriä. Sadepäiviä on '
+                + 'koko '
                 + 'vuonna 72. Aurinkoisimmat kuukaudet ovat kesä- ja '
                 + 'heinäkuu, jolloin aurinko paistaa 336 tuntia, '
                 + 'pimeimmät marras- ja joulukuu 100 ja 94 tunnilla. '
@@ -41961,23 +41913,12 @@ export const KULTTUURI_KATEGORIAT = {
    * karttana, joka näyttää saman paikan sen jälkeen kun rakennukset
    * olivat palaneet.
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
-   * tähän (Samarkandin, Xi’anin, Varanasin ja Kathmandun malli
-   * v965–v966). Talon menetelmä on Open-Meteon arkisto (ERA5,
-   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn
-   * ajan pelkällä 429:llä ja viestillä ”Daily API request limit
-   * exceeded. Please try again tomorrow” — kontin jaetun
-   * ulosmenevän osoitteen vuorokausikiintiö oli käytetty loppuun,
-   * eikä se nollaudu ennen UTC-vuorokauden vaihdetta. Kokeiltu työn
-   * alussa ja lopussa, sama vastaus kummallakin kerralla. Lukuja ei
-   * ole otettu mistään muusta lähteestä, koska vuosigraafin
-   * lähderivi lupaa lukijalle nimenomaan ERA5:n; ilman riviä lehti
-   * näkyy ilman säätä, kuten saatiedot.js:n alkukommentti lupaa.
-   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian
-   * Guangzhou-artikkelin sääruutuun (1991–2020, mittausasema 71
-   * metrin korkeudessa), ja jakso sanoo sen ääneen. Kun ERA5-rivi
-   * joskus lisätään, jakso 5 on kirjoitettava rivin omista
-   * luvuista. Mittauspiste olisi keskusta 23,13 / 113,26.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: kanton, ERA5 1991–2020, mittauspiste
+   * 23,13 / 113,26). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   kanton: [
     {
@@ -42275,17 +42216,14 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'monsuuni-ilmasto — Köppenin luokituksessa Cwa. '
                 + 'Kesät ovat kuumia, kosteita ja sateisia, talvet '
                 + 'leutoja ja verrattain kuivia, ja monsuunikausi kestää '
-                + 'huhtikuusta syyskuuhun. Nämä luvut ovat '
-                + 'en-Wikipedian Guangzhou-artikkelin sääruudusta, joka '
-                + 'perustuu kaupungin oman mittausaseman normaaleihin '
-                + 'vuosilta 1991–2020 seitsemänkymmenenyhden metrin '
-                + 'korkeudessa; lehden vuosigraafia ei ole, koska sen '
-                + 'lupaamaa ERA5-aineistoa ei saatu haettua. '
-                + 'Kuukausikeskilämpö nousee tammikuun neljästätoista '
-                + 'asteesta heinäkuun vajaaseen kahteenkymmeneenyhdeksään, '
-                + 'ja vuoden keskiarvo on 22,4 astetta. Sadetta tulee '
-                + 'lähes kaksituhatta millimetriä vuodessa, ja siitä '
-                + 'valtaosa touko–syyskuussa. Kuivin ja aurinkoisin aika '
+                + 'huhtikuusta syyskuuhun. '
+                + 'Kuukausikeskilämpö nousee tammikuun 13,5 '
+                + 'asteesta heinä–elokuun 28,1 asteeseen, '
+                + 'ja vuoden keskiarvo on 22,3 astetta. Sadetta tulee '
+                + '2 086 millimetriä vuodessa, ja siitä 1 452 kertyy '
+                + 'huhti–elokuussa; sateisin kuukausi on kesäkuu 369 '
+                + 'millimetrillä ja kuivin joulukuu 32:lla. '
+                + 'Vähäsateisin ja aurinkoisin aika '
                 + 'on loka–joulukuu: lokakuussa paistaa yli puolet '
                 + 'mahdollisesta ajasta, maaliskuussa vain kuudesosa.',
             },
@@ -42510,23 +42448,12 @@ export const KULTTUURI_KATEGORIAT = {
    * jutun reliikkipyhäkkö) — kaksi kolmesta on sisäkuvaa, koska
    * pagodin koko erikoisuus on se, että siitä pääsee sisään.
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
-   * tähän (Samarkandin, Xi’anin, Varanasin, Kathmandun ja Kantonin
-   * malli v965–v973). Talon menetelmä on Open-Meteon arkisto (ERA5,
-   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn
-   * ajan pelkällä viestillä ”Daily API request limit exceeded.
-   * Please try again tomorrow” — kontin jaetun ulosmenevän
-   * osoitteen vuorokausikiintiö oli käytetty loppuun, eikä se
-   * nollaudu ennen UTC-vuorokauden vaihdetta. Kokeiltu työn alussa
-   * ja lopussa, sama vastaus kummallakin kerralla. Lukuja ei ole
-   * otettu mistään muusta lähteestä, koska vuosigraafin lähderivi
-   * lupaa lukijalle nimenomaan ERA5:n; ilman riviä lehti näkyy
-   * ilman säätä, kuten saatiedot.js:n alkukommentti lupaa.
-   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian Yangon-artikkelin
-   * sääruutuun (Maailman ilmatieteen järjestön normaalit
-   * 1991–2020, Kaba Ayen mittausasema), ja jakso sanoo sen ääneen.
-   * Kun ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava rivin
-   * omista luvuista. Mittauspiste olisi keskusta 16,80 / 96,15.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: yangon, ERA5 1991–2020, mittauspiste
+   * 16,79 / 96,16). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   yangon: [
     {
@@ -42841,19 +42768,18 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Yangonin ilmasto on Köppenin luokituksessa '
                 + 'trooppinen monsuuni-ilmasto. Sadekausi kestää '
                 + 'toukokuusta lokakuuhun ja kuiva kausi marraskuusta '
-                + 'huhtikuuhun, ja ero on jyrkkä. Nämä luvut ovat '
-                + 'en-Wikipedian Yangon-artikkelin sääruudusta, joka '
-                + 'perustuu Maailman ilmatieteen järjestön '
-                + 'normaaleihin vuosilta 1991–2020 Kaba Ayen '
-                + 'mittausasemalla; lehden vuosigraafia ei ole, koska '
-                + 'sen lupaamaa ERA5-aineistoa ei saatu haettua. '
-                + 'Kuukausikeskilämpö vaihtelee tammikuun vajaasta '
+                + 'huhtikuuhun, ja ero on jyrkkä. '
+                + 'Lehden säärivillä kuukausikeskilämpö vaihtelee '
+                + 'tammikuun vajaasta '
                 + 'kahdestakymmenestäviidestä asteesta huhtikuun '
                 + 'runsaaseen kolmeenkymmeneen, ja koko vuoden '
-                + 'keskiarvo on 27,4 astetta. Sadetta tulee vuodessa '
-                + '2 841 millimetriä, mutta se ei jakaudu tasan: '
-                + 'heinäkuussa sataa 624 millimetriä ja helmikuussa '
-                + 'kolme. Ääripäät ovat 42,2 lämpöastetta huhtikuussa '
+                + 'keskiarvo on 26,7 astetta. Sadetta tulee vuodessa '
+                + '2 326 millimetriä, mutta se ei jakaudu tasan: '
+                + 'touko–lokakuussa kertyy 2 230 millimetriä, '
+                + 'heinäkuussa yksin 497, kun taas joulu–maaliskuussa '
+                + 'sataa yhteensä 21 eikä helmikuussa kirjaudu '
+                + 'lainkaan. Ääripäät ovat 42,2 lämpöastetta '
+                + 'huhtikuussa '
                 + 'ja 9,2 astetta joulukuussa. Kuivalla kaudella '
                 + 'marraskuusta maaliskuuhun vietetään pagodijuhlia, '
                 + 'ja niistä suurin on Shwedagonin juhla '
@@ -43087,20 +43013,12 @@ export const KULTTUURI_KATEGORIAT = {
    * kivilaatta, Amarapuran portti) ovat samasta migraatiosta ja
    * ilmoittavat rajapinnassa lisenssikseen CC BY-SA 3.0.
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
-   * tähän (Samarkandin, Xi'anin, Varanasin, Kathmandun ja Kantonin
-   * malli v965–v966). Talon menetelmä on Open-Meteon arkisto (ERA5,
-   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn
-   * ajan pelkällä 429:llä ja viestillä "Daily API request limit
-   * exceeded. Please try again tomorrow" — kontin jaetun
-   * ulosmenevän osoitteen vuorokausikiintiö oli käytetty loppuun.
-   * Lukuja ei ole otettu mistään muusta lähteestä, koska
-   * vuosigraafin lähderivi lupaa lukijalle nimenomaan ERA5:n.
-   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian
-   * Mandalay-artikkelin sääruutuun (Maailman ilmatieteen järjestön
-   * normaalit 1991–2020, asema 48042), ja jakso sanoo sen ääneen.
-   * Kun ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava rivin
-   * omista luvuista. Mittauspiste olisi keskusta 21,98 / 96,08.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: mandalay, ERA5 1991–2020, mittauspiste
+   * 21,98 / 96,08). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
@@ -43404,19 +43322,16 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'aluetta, Köppenin luokituksessa Aw, ja se hipoo '
                 + 'kuumaa puolikuivaa BSh-luokkaa, koska Arakanin '
                 + 'vuoret jäävät sen ja meren väliin sadevarjoksi. '
-                + 'Nämä luvut ovat en-Wikipedian sääruudusta, joka '
-                + 'perustuu Maailman ilmatieteen järjestön '
-                + 'normaaleihin vuosilta 1991–2020; lehden '
-                + 'vuosigraafia ei ole, koska sen lupaamaa '
-                + 'ERA5-aineistoa ei saatu haettua. Kuukausikeskilämpö '
-                + 'nousee tammikuun kahdestakymmenestäkahdesta '
-                + 'asteesta huhtikuun kolmeenkymmeneenkahteen, ja '
-                + 'vuoden keskiarvo on 28,2 astetta; huhti- ja '
-                + 'toukokuussa päivän ylin on keskimäärin lähes '
-                + 'neljäkymmentä astetta. Sadetta tulee 894 '
+                + 'Lehden säärivillä kuukausikeskilämpö '
+                + 'nousee tammikuun kahdestakymmenestäyhdestä '
+                + 'asteesta huhtikuun 31,5 asteeseen, ja '
+                + 'vuoden keskiarvo on 26,5 astetta; huhti- ja '
+                + 'toukokuussa päivän tyypillinen ylin on '
+                + 'kolmenkymmenenviiden ja kolmenkymmenenkahdeksan '
+                + 'välissä. Sadetta tulee 1 119 '
                 + 'millimetriä vuodessa, ja se osuu touko–lokakuulle: '
-                + 'syyskuussa kertyy 177 millimetriä, helmikuussa '
-                + 'kolme. Kuiva kausi on marraskuusta huhtikuuhun, ja '
+                + 'syyskuussa kertyy 211 millimetriä, helmikuussa ei '
+                + 'lainkaan. Kuiva kausi on marraskuusta huhtikuuhun, ja '
                 + 'silloin myös aurinko paistaa eniten. Matkustaminen '
                 + 'maahan on nykyisin rajoitettua, ja useat '
                 + 'ulkoministeriöt kehottavat välttämään matkoja '
@@ -43644,23 +43559,12 @@ export const KULTTUURI_KATEGORIAT = {
    * kauppakäytävässä) ja "09 Street in Bopiliao Taipei" (kuva ei
    * esitä Bopiliaota vaan Beitoun risteystä).
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
-   * tähän (Samarkandin, Xi'anin, Varanasin, Kathmandun ja Kantonin
-   * malli v965–v966). Talon menetelmä on Open-Meteon arkisto (ERA5,
-   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn
-   * ajan pelkällä viestillä "Daily API request limit exceeded.
-   * Please try again tomorrow" — kontin jaetun ulosmenevän osoitteen
-   * vuorokausikiintiö oli käytetty loppuun, eikä se nollaudu ennen
-   * UTC-vuorokauden vaihdetta. Kokeiltu työn alussa ja lopussa, sama
-   * vastaus kummallakin kerralla. Lukuja ei ole otettu mistään muusta
-   * lähteestä, koska vuosigraafin lähderivi lupaa lukijalle
-   * nimenomaan ERA5:n; ilman riviä lehti näkyy ilman säätä, kuten
-   * saatiedot.js:n alkukommentti lupaa. Matkaoppaan jakso 5 nojaa
-   * siksi en-Wikipedian Taipei-artikkelin sääruutuun (Taiwanin
-   * ilmatieteen laitoksen normaalit 1991–2020), ja jakso sanoo sen
-   * ääneen. Kun ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava
-   * rivin omista luvuista. Mittauspiste olisi keskusta 25,04 /
-   * 121,51.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: taipei, ERA5 1991–2020, mittauspiste
+   * 25,04 / 121,56). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   taipei: [
     {
@@ -43962,12 +43866,11 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joka kerääntyy altaan pohjalle. Lämmin talvipäivä voi '
                 + 'nousta yli kahdenkymmenenkuuden asteen, ja kesän '
                 + 'iltapäiväkuuro voi pudottaa lämpötilan saman rajan '
-                + 'alle. Nämä luvut ovat en-Wikipedian oman sääruudun '
-                + 'normaaleja vuosilta 1991–2020, eivät lehden muualla '
-                + 'käyttämää ERA5-aineistoa: tammikuun keskilämpö on '
-                + '16,4 astetta ja heinäkuun 29,9, kuivin kuukausi on '
-                + 'marraskuu 89 millimetrillä ja sateisimmat touko–'
-                + 'syyskuu, jolloin kuukausisade on 214–237 millimetriä. '
+                + 'alle. Lehden säärivillä tammikuun keskilämpö on '
+                + '15,1 astetta ja heinäkuun 28,4, kuivin kuukausi on '
+                + 'helmikuu 68 millimetrillä ja sateisin kesäkuu '
+                + '344:llä; koko vuoden sade on 1 899 millimetriä eikä '
+                + 'yksikään kuukausi jää kuivaksi. '
                 + 'Kylmin mitattu lukema on 0,2 pakkasastetta helmikuulta '
                 + '1901 ja kuumin 39,7 astetta heinäkuulta 2020.',
             },
@@ -44170,21 +44073,12 @@ export const KULTTUURI_KATEGORIAT = {
    * kaupunginosasta, mikä on juuri kansikarusellin tarkoitus
    * (omistajan linjaus 21.8.2026).
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
-   * tähän (Samarkandin, Xi’anin, Varanasin, Kathmandun ja Kantonin
-   * malli v965–v977). Talon menetelmä on Open-Meteon arkisto (ERA5,
-   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn ajan
-   * pelkällä virheellä ”Daily API request limit exceeded. Please try
-   * again tomorrow” — kontin jaetun ulosmenevän osoitteen
-   * vuorokausikiintiö oli käytetty loppuun, eikä se nollaudu ennen
-   * UTC-vuorokauden vaihdetta. Kokeiltu työn alussa ja lopussa, sama
-   * vastaus kummallakin kerralla. Lukuja ei ole otettu mistään muusta
-   * lähteestä, koska vuosigraafin lähderivi lupaa lukijalle
-   * nimenomaan ERA5:n. Matkaoppaan jakso 5 nojaa siksi en-Wikipedian
-   * Hong Kong -artikkelin sääruutuun (Hongkongin observatorio,
-   * normaalit 1991–2020), ja jakso sanoo sen ääneen. Kun ERA5-rivi
-   * joskus lisätään, jakso 5 on kirjoitettava rivin omista luvuista.
-   * Mittauspiste olisi Central 22,282 / 114,158.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: hongkong, ERA5 1991–2020, mittauspiste
+   * 22,28 / 114,16). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   hongkong: [
     {
@@ -44492,16 +44386,15 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Ilmasto on kostea subtrooppinen — Köppenin '
                 + 'luokituksessa Cwa — ja sivuaa trooppista '
-                + 'monsuuni-ilmastoa. Nämä luvut ovat en-Wikipedian '
-                + 'Hongkong-artikkelin sääruudusta, joka perustuu '
-                + 'Hongkongin observatorion normaaleihin vuosilta '
-                + '1991–2020; lehden vuosigraafia ei ole, koska sen '
-                + 'lupaamaa ERA5-aineistoa ei saatu haettua. '
-                + 'Kuukausikeskilämpö nousee tammikuun 16,5 asteesta '
-                + 'heinäkuun 28,9 asteeseen, ja vuoden keskiarvo on '
-                + '23,5 astetta. Sadetta tulee 2 431 millimetriä '
+                + 'monsuuni-ilmastoa. '
+                + 'Lehden säärivillä kuukausikeskilämpö nousee '
+                + 'tammikuun 15,2 asteesta '
+                + 'heinäkuun 27,8 asteeseen, ja vuoden keskiarvo on '
+                + '22,8 astetta. Sadetta tulee 1 763 millimetriä '
                 + 'vuodessa, mutta se jakautuu hyvin epätasaisesti: '
-                + 'kesäkuussa 492 millimetriä, joulukuussa 29. Kesät '
+                + 'touko–syyskuussa 1 376 millimetriä eli neljä '
+                + 'viidesosaa koko vuodesta, kesäkuussa yksin 340 ja '
+                + 'joulukuussa 24. Kesät '
                 + 'ovat pitkiä, kuumia ja kosteita, ja niihin kuuluu '
                 + 'taifuunikausi; talvet ovat lyhyitä ja leutoja. '
                 + 'Syksy on aurinkoisin ja kevät pilvisin vuodenaika, '
@@ -44708,12 +44601,12 @@ export const KULTTUURI_KATEGORIAT = {
    * 1700-luvun piirrosta (Rijksmuseum, KITLV) ja yksi 1669
    * kaupunkikartta.
    *
-   * SÄÄRIVI PUUTTUU YHÄ js/packs/saatiedot.js:stä, ja se on tietoinen
-   * jättö eikä unohdus: Open-Meteon arkisto (ERA5) vastasi tämän erän
-   * ajan pelkällä 429:llä ja viestillä "Daily API request limit
-   * exceeded". Oppaan sääjakso on kirjoitettu en-Wikipedian oman
-   * sääruudun 1991–2020-normaaleista (Kemayoranin asema) ja sanoo
-   * sen ääneen. Perustelu kokonaisuudessaan saatiedot.js:n lopussa.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: jakarta, ERA5 1991–2020, mittauspiste
+   * −6,13 / 106,81). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   jakarta: [
     {
@@ -45021,22 +44914,22 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Jakartassa on trooppinen monsuuni-ilmasto, ja '
                 + 'lämpötila on sama ympäri vuoden: kuukausikeskiarvo '
-                + 'liikkuu 27,3 ja 28,8 asteen välillä, päivän ylin 31 '
-                + 'ja 33 asteen välillä ja yön alin aina 25 asteen '
-                + 'tuntumassa. Vuodenajan tekee sade. Sadekausi kestää '
+                + 'liikkuu 25,7 ja 27,3 asteen välillä, päivän '
+                + 'tyypillinen ylin 28 ja 31 asteen välillä ja yön '
+                + 'alin 23 asteen tuntumassa. Vuodenajan tekee sade. '
+                + 'Sadekausi kestää '
                 + 'lokakuusta toukokuuhun ja runsain sade osuu '
-                + 'joulu–maaliskuulle: tammikuussa kertyy 373 ja '
-                + 'helmikuussa 381 millimetriä, ja sadepäiviä on '
+                + 'joulu–maaliskuulle: joulukuussa kertyy 278 ja '
+                + 'tammikuussa 272 millimetriä, ja sadepäiviä on '
                 + 'lähes kaksikymmentä kuukaudessa. Kuivin aika on '
-                + 'kesä–syyskuu, ja elokuussa sataa 52 millimetriä '
-                + 'kolmena päivänä. Vuoden sade on 1 933 millimetriä. '
+                + 'kesä–syyskuu, ja elokuussa sataa 39 millimetriä. '
+                + 'Vuoden sade on 1 916 millimetriä. '
                 + 'Kävelijälle paras aika on siis heinä–syyskuu, '
                 + 'jolloin aurinkoa on toistasataa tuntia enemmän kuin '
-                + 'tammikuussa. Luvut ovat Maailman ilmatieteen '
-                + 'järjestön normaaleja 1991–2020 Kemayoranin '
-                + 'asemalta keskustassa, ja ne on luettu '
-                + 'en-Wikipedian sääruudusta — pelin oma säärivi '
-                + 'Jakartalle puuttuu toistaiseksi.',
+                + 'tammikuussa. Vuodenkierto on eteläisen '
+                + 'pallonpuoliskon oma: kun pohjoisessa on kesä, '
+                + 'Jakartassa on kuivin ja aurinkoisin aika, ja '
+                + 'joulukuun sateet vastaavat pohjoisen heinäkuuta.',
             },
           ],
         },
@@ -45253,22 +45146,12 @@ export const KULTTUURI_KATEGORIAT = {
    * kirkon kupolina. Rizal-puisto on kansikuvassa ilmasta, nostossa
    * K4 monumentin edestä ja kohdekartan jutussa palmujen takaa.
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
-   * tähän (Samarkandin, Xi'anin, Varanasin, Kathmandun ja Kantonin
-   * malli v965–v983). Talon menetelmä on Open-Meteon arkisto (ERA5,
-   * normaalikausi 1991–2020), mutta rajapinta vastasi tämän työn ajan
-   * pelkällä virheellä "Daily API request limit exceeded. Please try
-   * again tomorrow" — kontin jaetun ulosmenevän osoitteen
-   * vuorokausikiintiö oli käytetty loppuun, eikä se nollaudu ennen
-   * UTC-vuorokauden vaihdetta. Kokeiltu työn alussa ja lopussa, sama
-   * vastaus kummallakin kerralla. Lukuja ei ole otettu mistään muusta
-   * lähteestä, koska vuosigraafin lähderivi lupaa lukijalle
-   * nimenomaan ERA5:n; ilman riviä lehti näkyy ilman säätä, kuten
-   * saatiedot.js:n alkukommentti lupaa. Matkaoppaan jakso 5 nojaa
-   * siksi en-Wikipedian Manila-artikkelin sääruutuun (PAGASA, Port
-   * Area, normaalit 1991–2020) ja SANOO SEN ÄÄNEEN. Kun ERA5-rivi
-   * joskus lisätään, jakso 5 on kirjoitettava rivin omista luvuista.
-   * Mittauspiste olisi keskusta 14,60 / 120,98.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: manila, ERA5 1991–2020, mittauspiste
+   * 14,60 / 120,98). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   manila: [
     {
@@ -45572,18 +45455,18 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Manila on kokonaan tropiikissa, ja Köppenin '
                 + 'luokituksessa se on trooppinen monsuuni-ilmasto aivan '
                 + 'savanni-ilmaston rajalla. Lämpötila pysyy ympäri vuoden '
-                + 'korkeana eikä juuri käy alle yhdeksäntoista tai yli '
-                + 'kolmenkymmenenkahdeksan asteen. Kuiva kausi kestää '
+                + 'korkeana: lehden säärivillä kuukausikeskilämpö on '
+                + '24,8 ja 28,5 asteen välissä ja päivän tyypillinen '
+                + 'ylin 28 ja 32 asteen välissä. Kuiva kausi kestää '
                 + 'joulukuun lopusta huhtikuun alkuun, ja loput vuodesta '
                 + 'on sadekautta: sade tulee harvoin koko päivän mittaan '
                 + 'vaan lyhyinä ja hyvin rankkoina ryöppyinä. Taifuunit '
                 + 'osuvat tyypillisesti kesä–syyskuulle. Kosteus on '
                 + 'ympäri vuoden korkea, mikä saa ilman tuntumaan '
-                + 'lämpimämmältä kuin mittari näyttää. Nämä luvut ovat '
-                + 'poikkeuksellisesti en-Wikipedian oman sääruudun '
-                + 'lukuja Manilan satama-alueen mittausasemalta '
-                + '(normaalit 1991–2020) — lehden vuosigraafin lähde '
-                + 'olisi Open-Meteon ERA5, jota ei tähän saatu.',
+                + 'lämpimämmältä kuin mittari näyttää. Vuoden sade on '
+                + '1 731 millimetriä, ja siitä 1 037 kertyy heinä–'
+                + 'syyskuussa; sateisin kuukausi on syyskuu 393 '
+                + 'millimetrillä ja kuivin helmikuu yhdeksällä.',
             },
           ],
         },
@@ -45790,12 +45673,19 @@ export const KULTTUURI_KATEGORIAT = {
    * (Wellcome Collection). Wallacen liitosammakon kuva on otettu
    * Mulun kansallispuistossa Sarawakissa eli saarelta itseltään.
    *
-   * SÄÄRIVI PUUTTUU js/packs/saatiedot.js:stä, ja se on tietoinen
-   * jättö: Open-Meteon arkisto (ERA5) vastasi koko tämän työn ajan
-   * 429:llä ja viestillä "Daily API request limit exceeded".
-   * Oppaan sääjakso on kirjoitettu en-Wikipedian Kota Kinabalu- ja
-   * Mount Kinabalu -artikkelien ilmasto-osioista ja sanoo sen
-   * ääneen. Perustelu kokonaisuudessaan saatiedot.js:n lopussa.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: borneo, ERA5 1991–2020, mittauspiste
+   * 5,98 / 116,07). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
+   *
+   * MITTAUSPISTE ON FABLEN PÄÄTÖS 22.8.2026: rannikon Kota Kinabalu
+   * eikä Kinabalu-vuoren huippu, koska ERA5:n ruutu on kymmeniä
+   * kilometrejä leveä eikä voi toistaa 4 095 metrin huippua — ja
+   * rannikko vastaa sitä ilmastoa, jossa matkailija liikkuu. Jakso 5
+   * sanoo mittauspisteen ääneen, ja huipun lukemat ovat siinä yhä
+   * en-Wikipedian Mount Kinabalu -artikkelista.
    */
   borneo: [
     {
@@ -46041,24 +45931,30 @@ export const KULTTUURI_KATEGORIAT = {
             },
             {
               otsikko: 'Milloin kannattaa tulla',
-              teksti: 'Rannikolla on trooppinen sademetsäilmasto, jossa '
-                + 'lämpötila pysyy vuoden ympäri 26 ja 28 asteen '
-                + 'välillä; huhti–toukokuu ovat kuumimmat ja tammikuu '
-                + 'viilein. Sadetta kertyy Kota Kinabalussa noin 2 400 '
-                + 'millimetriä vuodessa, kuivimmat kuukaudet ovat '
-                + 'helmi- ja maaliskuu ja sateisin lokakuu, kun '
+              teksti: 'Lehden säärivin mittauspiste on rannikon Kota '
+                + 'Kinabalu eikä Kinabalu-vuoren huippu: ERA5:n '
+                + 'hilaruutu on kymmeniä kilometrejä leveä eikä voi '
+                + 'toistaa neljän kilometrin korkeudessa olevan huipun '
+                + 'lukemia, ja rannikko vastaa sitä ilmastoa, jossa '
+                + 'matkailija liikkuu. Rannikolla on trooppinen '
+                + 'sademetsäilmasto, jossa kuukausikeskilämpö pysyy '
+                + '25,6 ja 26,9 asteen '
+                + 'välillä; touko–kesäkuu ovat kuumimmat ja tammi–'
+                + 'helmikuu viileimmät. Sadetta kertyy 1 906 '
+                + 'millimetriä vuodessa, kuivin kuukausi on '
+                + 'maaliskuu 67 millimetrillä '
+                + 'ja sateisin lokakuu 256:lla, kun '
                 + 'monsuunien välinen kausi on menossa. Koillismonsuuni '
                 + 'puhaltaa marraskuusta maaliskuuhun ja lounaismonsuuni '
                 + 'toukokuusta syyskuuhun. Vuorilla on toinen ilmasto: '
                 + 'Kinabalun rinne vaihtuu kosteasta tropiikista '
                 + 'huipun alppivyöhykkeeksi, ja huipulla mitataan '
                 + 'joulu–tammikuussa neljästä pakkasasteesta '
-                + 'kahdeksaan lämpöasteeseen. Kuuraa esiintyy '
+                + 'kahdeksaan lämpöasteeseen. Nämä huipun lukemat ovat '
+                + 'en-Wikipedian Mount Kinabalu -artikkelista, sillä '
+                + 'lehden säärivi kertoo rannikosta. Kuuraa esiintyy '
                 + 'toisinaan, ja lunta on kirjattu kolmesti: 1975, 1993 '
-                + 'ja 2022. Luvut on luettu en-Wikipedian Kota Kinabalu- '
-                + 'ja Mount Kinabalu -artikkelien ilmasto-osioista, '
-                + 'koska pelin oma säärivi Borneolle puuttuu '
-                + 'toistaiseksi.',
+                + 'ja 2022.',
             },
           ],
         },
@@ -46218,20 +46114,16 @@ export const KULTTUURI_KATEGORIAT = {
    *    antautumisvuoden ja vastarinnan vuoden erikseen, niin että ero
    *    näkyy lukijalle.
    *
-   * SÄÄRIVI PUUTTUU TOISTAISEKSI, ja se on kirjattu tähän, jottei
-   * seuraava tekijä etsi sitä turhaan. saatiedot.js:ään ei tullut
-   * sumatra-riviä, koska Open-Meteon arkistorajapinnan (ERA5)
-   * VUOROKAUSIKIINTIÖ oli tämän kontin ulosmenevällä osoitteella
-   * täynnä koko työvuoron ajan: mittauspisteellä 2,68 / 98,88
-   * (Toba-järvi, Wikipedian infoboksin keskipiste) vastaus oli
-   * kahdeksalla peräkkäisellä yrityksellä "Daily API request limit
-   * exceeded". Sama tilanne oli Xi'anin lehteä tehtäessä samana
-   * päivänä; menettely on Samarkandin malli (v965): lukuja EI keksitä,
-   * rivi haetaan erikseen kiintiön vapauduttua. Oppaan sääjakso on
-   * siksi kirjoitettu en-Wikipedian omista sääluvuista, ja jakso kertoo
-   * itse, että sen luvut ovat Medanin rannikkoaseman normaaleja
-   * (Kualanamu 1991–2020) ja Berastagin ylängön sanallista kuvausta —
-   * Siinain ja Petran ennakkotapaus mittauspisteen selittämisestä.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: sumatra, ERA5 1991–2020, mittauspiste
+   * 2,68 / 98,88). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
+   *
+   * MITTAUSPISTE ON TOBA-JÄRVI, joka on YLÄNKÖÄ (ERA5-ruudun korkeus
+   * 901 metriä): rannikko on selvästi lämpimämpi, ja jakso 5 sanoo
+   * sen ääneen.
    *
    * KUVAT. Kansikuvat ovat kolme LAAJAA yleiskuvaa saaren eri puolilta
    * (pohjoinen Toba, keskinen Kerinci, eteläinen Bengkulu), kuten
@@ -46499,18 +46391,21 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Sumatran ilmasto on trooppinen, kuuma ja kostea, ja '
                 + 'lämpötila vaihtelee enemmän korkeuden kuin kuukauden '
-                + 'mukaan. Tästä lehdestä puuttuu toistaiseksi '
-                + 'vuosigraafi, joten luvut kerrotaan tässä ja niiden '
-                + 'mittauspiste sanotaan ääneen. Rannikolla, Medanin '
-                + 'Kualanamun asemalla, päivän ylin on kauden 1991–2020 '
-                + 'normaaleissa joka kuukausi 31 ja 33 asteen välissä ja '
-                + 'yön alin runsaat 23 astetta: vuodenaikoja ei lämmössä '
-                + 'juuri ole. Sade sen sijaan vaihtelee, sillä helmikuussa '
-                + 'sitä tulee alle sata millimetriä ja syys-lokakuussa '
-                + 'lähes kolmesataa. Ylängöllä on toinen ilmasto — '
-                + 'Toba-järvi on 900 metrin korkeudessa ja sen '
-                + 'pohjoispuolella Berastagi 1 300 metrissä, missä vuoden '
-                + 'keskilämpö on kahdeksantoista astetta ja yöt painuvat '
+                + 'mukaan. Lehden säärivin mittauspiste on Toba-järvi '
+                + '900 metrin korkeudessa, siis ylänköä eikä '
+                + 'rannikkoa: siellä kuukausikeskilämpö pysyy 21,7 ja '
+                + '23,3 asteen välissä, päivän tyypillinen ylin 24 ja '
+                + '26 asteen välissä ja yön alin kahdenkymmenen '
+                + 'tienoilla — vuodenaikoja ei lämmössä juuri ole. '
+                + 'Rannikko on selvästi lämpimämpi: Medanin '
+                + 'Kualanamun asemalla päivän ylin on joka kuukausi 31 '
+                + 'ja 33 asteen välissä. Sadetta Toballa kertyy 2 812 '
+                + 'millimetriä vuodessa eikä yksikään kuukausi jää '
+                + 'kuivaksi — vähitenkin sataa kesäkuussa 154 '
+                + 'millimetriä ja eniten marraskuussa 304. Saaren '
+                + 'pituus on 1 790 kilometriä, joten yksi mittauspiste '
+                + 'ei kuvaa koko aluetta: Toban pohjoispuolella '
+                + 'Berastagi on 1 300 metrissä, ja siellä yöt painuvat '
                 + 'kahdentoista asteen tienoille.',
               kuva: {
                 tiedosto: 'Hamparan Sawah Hijau Kelurahan Lubuk Buaya.jpg',
@@ -46691,9 +46586,12 @@ export const KULTTUURI_KATEGORIAT = {
    * tunnetuinta rakennusta — Xi'anin terrakotta-armeijan ja
    * Mekan Jabal al-Nourin ennakkotapaus.
    *
-   * SÄÄRIVI PUUTTUU: Open-Meteon arkisto vastasi koko työn ajan
-   * 429:llä (ks. saatiedot.js:n lohkokommentti), joten oppaan
-   * jakso 5 nojaa en-Wikipedian sääruutuun ja SANOO SEN ÄÄNEEN.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: kashgar, ERA5 1991–2020, mittauspiste
+   * 39,47 / 75,99). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   kashgar: [
     {
@@ -46966,20 +46864,20 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Kašgarissa on kylmä aavikkoilmasto, ja kesän ja '
                 + 'talven ero on jyrkkä. Vuorokauden keskilämpö nousee '
                 + 'tammikuun runsaasta viidestä pakkasasteesta heinäkuun '
-                + 'vajaaseen kahteenkymmeneenkuuteen, ja koko vuoden '
-                + 'keskiarvo on 12,6 astetta. Kevät on pitkä ja tulee '
-                + 'nopeasti, syksy jää lyhyeksi. Sadetta kertyy 85 '
+                + 'kahteenkymmeneenseitsemään, ja koko vuoden '
+                + 'keskiarvo on 12,3 astetta. Kevät on pitkä ja tulee '
+                + 'nopeasti, syksy jää lyhyeksi. Sadetta kertyy 151 '
                 + 'millimetriä vuodessa, mikä tekee Kašgarista yhden '
-                + 'maailman kuivimmista kaupungeista: sateisin kuukausi '
-                + 'toukokuu antaa keskimäärin neljätoista millimetriä, '
-                + 'ja lunta tulee kylmästä talvesta huolimatta harvoin. '
+                + 'maailman kuivimmista kaupungeista: sateisinkaan '
+                + 'kuukausi ei ylitä kahtakymmentäneljää millimetriä ja '
+                + 'kuivin lokakuu antaa viisi. '
+                + 'Lunta tulee kylmästä talvesta huolimatta harvoin. '
                 + 'Aurinkoa on 2 863 tuntia vuodessa. Ääripäät vuodesta '
                 + '1951 alkaen ovat 24,4 pakkasastetta tammikuussa 1959 '
-                + 'ja 40,1 lämpöastetta heinäkuussa 1958. Luvut ovat '
-                + 'Kiinan ilmatieteen laitoksen normaaleja jaksolta '
-                + '1991–2020 ja mitattu 1 386 metrin korkeudessa; ne '
-                + 'eivät ole tämän lehden vuosigraafin lukuja, sillä '
-                + 'Kašgarilta puuttuu toistaiseksi oma säärivi.',
+                + 'ja 40,1 lämpöastetta heinäkuussa 1958. '
+                + 'Kuukausiluvut ovat lehden omalta sääriviltä, joka '
+                + 'on laskettu ERA5-hilaruudusta 1 301 metrin '
+                + 'korkeudelta.',
             },
           ],
         },
@@ -47198,19 +47096,12 @@ export const KULTTUURI_KATEGORIAT = {
    * etualalla luettavat kasvot. Tilalle valittiin kuvakulmia, joissa
    * ihmisiä ei ole lainkaan tai he ovat selin ja kaukana.
    *
-   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, ja syy on kirjattava
-   * tähän (Samarkandin, Xi'anin, Varanasin, Kathmandun, Kantonin ja
-   * Manilan malli v965–v983). Talon menetelmä on Open-Meteon arkisto
-   * (ERA5, normaalikausi 1991–2020), mutta rajapinta vastasi tämän
-   * työn ajan pelkällä virheellä "Daily API request limit exceeded.
-   * Please try again tomorrow" — kontin jaetun ulosmenevän osoitteen
-   * vuorokausikiintiö oli käytetty loppuun. Lukuja ei ole otettu
-   * mistään muusta lähteestä, koska vuosigraafin lähderivi lupaa
-   * lukijalle nimenomaan ERA5:n. Matkaoppaan jakso 5 nojaa siksi
-   * en-Wikipedian Lhasa-artikkelin sääruutuun (CMA, mittausasema
-   * 3 649 metrissä, normaalit 1991–2020) ja SANOO SEN ÄÄNEEN. Kun
-   * ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava rivin omista
-   * luvuista. Mittauspiste olisi keskusta 29,65 / 91,12.
+   * SÄÄRIVI SAATIIN 22.8.2026, kun Open-Meteon vuorokausikiintiö
+   * vapautui (saatiedot.js: lhasa, ERA5 1991–2020, mittauspiste
+   * 29,65 / 91,12). Matkaoppaan jakso 5 on kirjoitettu uusiksi
+   * rivin omista luvuista, eivätkä sen kuukausiluvut enää tule
+   * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
+   * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
   lhasa: [
     {
@@ -47496,19 +47387,20 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kolmen ilmastotyypin rajalla: talvet ovat pakkasia '
                 + 'ja kesät leutoja, mutta laakson suoja pitää sään '
                 + 'poissa ääripäistä eikä tuuli yllä sinne kovana. '
-                + 'Kylmin kuukausi on tammikuu keskilämmöltään 0,6 '
-                + 'astetta, lämpimimmät kesä- ja heinäkuu 17,5 '
-                + 'asteella, ja koko vuoden keskiarvo on 9,9 astetta. '
-                + 'Sadetta kertyy 458 millimetriä vuodessa, ja se tulee '
-                + 'lähes kokonaan heinä-, elo- ja syyskuussa: kuivin '
-                + 'kuukausi on joulukuu kolmella kymmenyksellä '
-                + 'millimetriä ja sateisin elokuu 133 millimetrillä. '
+                + 'Lehden säärivillä kylmin kuukausi on tammikuu 5,3 '
+                + 'pakkasasteella, lämpimin heinäkuu 15,1 '
+                + 'lämpöasteella, ja koko vuoden keskiarvo on 6,0 '
+                + 'astetta. Sadetta kertyy 756 millimetriä vuodessa, ja '
+                + 'se tulee lähes kokonaan heinä-, elo- ja syyskuussa, '
+                + 'joiden osuus on 435 millimetriä; kuivimmissa '
+                + 'kuukausissa tammi-, helmi- ja joulukuussa kertyy '
+                + 'kahdeksan millimetriä kussakin. '
                 + 'Kesää pidetään silti parhaana aikana, koska sade '
                 + 'tulee enimmäkseen öisin ja päivät ovat aurinkoisia. '
-                + 'Nämä luvut ovat poikkeuksellisesti en-Wikipedian '
-                + 'oman sääruudun lukuja Lhasan mittausasemalta 3 649 '
-                + 'metristä (normaalit 1991–2020) — lehden vuosigraafin '
-                + 'lähde olisi Open-Meteon ERA5, jota ei tähän saatu.',
+                + 'Säärivi on ERA5-hilaruudusta 3 655 metristä, ja '
+                + 'ruutuun kuuluu laakson lisäksi ympäröiviä vuoria: '
+                + 'siksi se on viileämpi ja sateisempi kuin kaupungin '
+                + 'oma mittausasema laakson pohjalla.',
             },
           ],
         },

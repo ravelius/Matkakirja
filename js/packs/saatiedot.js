@@ -1737,180 +1737,455 @@ export const SAATIEDOT = {
       + 'metsäpalojen savusumu voi laskea näkyvyyttä.',
   },
   /*
-   * ASTANAN RIVI PUUTTUU TÄSTÄ, JA SE ON TIETOINEN JÄTTÖ (21.8.2026).
-   * Kaupungille tehtiin samana päivänä alusta asti oma lehti
-   * (kulttuuri-kategoriat.js, maakartat.js, nahtavyysjutut.js), mutta
-   * Open-Meteon arkisto (ERA5) vastasi koko työn ajan 429:llä ja
-   * viestillä "Daily API request limit exceeded. Please try again
-   * tomorrow": kontin jaetun ulosmenevän osoitteen vuorokausikiintiö
-   * oli käytetty loppuun eikä se nollaudu ennen UTC-vuorokauden
-   * vaihdetta. Lukuja EI haettu muualta, koska vuosigraafin lähderivi
-   * lupaa lukijalle nimenomaan "Open-Meteo (ERA5), 1991–2020" — väärä
-   * lähdemerkintä on pahempi kuin puuttuva graafi, ja tämän tiedoston
-   * alkukommentin lupaus pitää: ilman riviä lehti näkyy ilman säätä.
+   * AASIAN KAHDEKSANTOISTA RIVIÄ (22.8.2026) haettiin yhdellä ajolla
+   * Open-Meteon arkistosta (ERA5), normaalikausi 1991–2020, heti kun
+   * edellisen vuorokauden kiintiö oli nollautunut. Kaikki nämä lehdet
+   * oli tehty 21.8.2026 ilman säätä, koska rajapinta vastasi silloin
+   * koko päivän 429:llä. Kunkin rivin mittauspiste perusteluineen on
+   * rivin omassa kommentissa.
    *
-   * Rivi haetaan yhdellä ajolla, kun kiintiö on vapautunut:
-   *   NODE_USE_ENV_PROXY=1 node tools/hae-saanormaalit.mjs
-   * Mittauspiste on keskusta 51,13 / 71,43 (en-Wikipedian infoboksin
-   * koordinaatti 51°08′N 71°26′E), korkeus 347 metriä. Sama tilanne
-   * on Samarkandilla, Varanasilla, Xi'anilla ja Ulan Batorilla.
-   * Astanan lehden oppaan sääjakso ei riipu tästä rivistä: se on
-   * kirjoitettu en-Wikipedian oman sääruudun 1991–2020-normaaleista
-   * ja sanoo sen ääneen.
+   * MENETELMÄ ON OTOS, JA SE SANOTAAN TÄSSÄ ÄÄNEEN. Arkisto laskee
+   * pyynnön hinnan paikkojen, muuttujien ja vuorokausien tulona: yhden
+   * kaupungin kolmekymmentä vuotta kahdella muuttujalla maksaa 1 566
+   * kutsua, joten kahdeksantoista kaupunkia olisi 28 188 eli lähes
+   * kolme vuorokausikiintiötä (10 000/vrk). Koko jaksolta olisi siis
+   * ehditty kuusi kaupunkia päivässä ja kaksitoista lehteä olisi
+   * jäänyt yhä ilman säätä. Tilalle otettiin otos, jonka henki on sama
+   * kuin tools/hae-saanormaalit.mjs:n kaistaotoksessa:
+   *
+   *   - viisitoista vuotta tasavälein yli normaalikauden (1991, 1993,
+   *     ..., 2019), jolloin El Niñon kaltaiset heilahtelut osuvat
+   *     otokseen eri vaiheissa
+   *   - jokaisesta kuukaudesta neljätoista vuorokautta, VUOROTELLEN
+   *     kuun alkupuoli (1.–14.) ja loppupuoli (15.–28.), jottei
+   *     kuukauden sisäinen kehitys — monsuunin alku, kevään
+   *     lämpeneminen — kallista keskiarvoa
+   *   - keskiarvo siirretään vielä kuukauden keskipisteeseen otoksen
+   *     oman päivätrendin mukaan, koska päivät 29–31 jäävät otoksen
+   *     ulkopuolelle
+   *   - kaikki kaksikymmentä paikkaa samassa pyynnössä ja pyyntöjen
+   *     väli 30 sekuntia eli alle 4 700 kutsua tunnissa (tuntikatto on
+   *     5 000); ajo kesti kaksi tuntia eikä saanut yhtään 429:ää
+   *
+   * OTOKSEN VIRHE MITATTIIN EIKÄ ARVATTU. Samassa ajossa haettiin
+   * kaksi VERTAILUKAUPUNKIA, delhi ja irkutsk, joiden rivit on
+   * laskettu koko jaksosta 1991–2020. Otoksen ja julkaistun rivin ero
+   * oli kuukausikeskilämmössä keskimäärin 0,3 (delhi) ja 0,5 astetta
+   * (irkutsk), enimmillään 1,1 astetta, ja kuukausisateessa 11 ja 6
+   * millimetriä; vuosisade heitti +2,6 ja +0,4 prosenttia. Lämpötila
+   * on siis kymmenyksen tarkkuudella oikeansuuntainen mutta ei
+   * kymmenyksen tarkka, ja sade on kuukausitasolla likiarvo.
+   *
+   * KAKSI KUUKAUTTA TARKISTETTIIN ERIKSEEN KOKO JAKSOLTA, koska ne
+   * näyttivät otoksessa epäuskottavan kuivilta: Hongkongin ja Kantonin
+   * lokakuu. Koko jakson 1991–2020 päiväaineisto (sama ruutu, sama
+   * lähde) antaa niille 70 ja 61 millimetriä, kun otos antoi 25 ja 25.
+   * Ero on Etelä-Kiinan lokakuun luonne: sade tulee harvoista rajuista
+   * tapahtumista, jolloin puolet vuorokausista kattava otos osuu
+   * useimmiten kuiviin päiviin (koko jakson mediaani on 48 ja 44 mm,
+   * suurin 252 ja 214). Näissä kahdessa kuukaudessa riveillä on
+   * tarkistettu luku eikä otoksen luku. Samalla tavalla tarkistettiin
+   * Kathmandun heinäkuu, jonka otos antoi 851 ja koko jakso 794
+   * millimetriä — ero on seitsemän prosenttia, joten otoksen luku jäi
+   * riville. Muita kuukausia ei tarkistettu, joten korjaus koskee vain
+   * niitä kohtia, joita katsottiin.
+   *
+   * ylin ja alin on laskettu tavalliseen tapaan
+   * tools/hae-saanormaalit.mjs:llä (--vain, sama 18 kaupungin lista).
    */
   /*
-   * MANDALAYN RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Kaupungille
-   * tehtiin alusta asti oma lehti (kulttuuri-kategoriat.js,
-   * maakartat.js, nahtavyysjutut.js, asia-artikkelit.js), ja
-   * Open-Meteon arkisto vastasi tämän työn ajan samalla 429:llä ja
-   * samalla viestillä kuin Astanan, Kantonin ja Kathmandun kohdalla.
-   * Lukuja ei ole otettu muualta. Mittauspiste on keskusta
-   * 21,98 / 96,08 (en-Wikipedian Mandalay-artikkelin oma koordinaatti
-   * 21°58′59″N 96°05′04″E), korkeus 80 metriä. Oppaan sääjakso nojaa
-   * en-Wikipedian sääruutuun (Maailman ilmatieteen järjestön
-   * normaalit 1991–2020, asema 48042) ja sanoo sen ääneen; kun rivi
-   * joskus lisätään, jakso kirjoitetaan rivin omista luvuista.
+   * SAMARKAND. Mittauspiste on Fablen antama 39,655 / 66,976 eli
+   * Registanin aukion kulma; en-Wikipedian Samarkand-infoboksin oma
+   * koordinaatti 39,6506 / 66,9653 on siitä alle kilometrin lounaaseen
+   * ja samassa ERA5-ruudussa. Ruutu asettui kohtaan 39,68 / 67,00,
+   * korkeus 716 metriä (artikkeli sanoo kaupungille 705).
    */
+  samarkand: {
+    lat: 39.655,
+    lon: 66.976,
+    keskilampo: [0.1, 2.1, 7, 12.8, 18.9, 23.7, 26.5, 24.8, 20.3, 13.3, 6.6, 1.1],
+    ylin: [4, 8, 13, 19, 25, 31, 34, 32, 28, 20, 14, 6],
+    alin: [-4, -4, 1, 7, 13, 17, 19, 17, 13, 6, 0, -4],
+    sade: [52, 82, 89, 84, 46, 23, 6, 3, 5, 19, 48, 50],
+    luonnehdinta: 'Samarkandissa on neljä selvää vuodenaikaa: tammikuun '
+      + 'keskilämpö on nollan tuntumassa ja heinäkuun kaksikymmentäkuusi '
+      + 'ja puoli astetta. Sade tulee talvella ja keväällä — maalis- ja '
+      + 'huhtikuussa yhteensä 173 millimetriä — kun taas heinä–syyskuun '
+      + 'kolmessa kuukaudessa kertyy neljätoista. Vuoden sade on 507 '
+      + 'millimetriä, ja kuivin kuukausi on elokuu kolmella.',
+  },
   /*
-   * JAKARTAN RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Kaupungille
-   * tehtiin samana päivänä alusta asti oma lehti
-   * (kulttuuri-kategoriat.js, maakartat.js, nahtavyysjutut.js,
-   * asia-artikkelit.js), mutta Open-Meteon arkisto (ERA5) vastasi
-   * koko työn ajan 429:llä ja viestillä "Daily API request limit
-   * exceeded. Please try again tomorrow" — kontin jaetun
-   * ulosmenevän osoitteen vuorokausikiintiö oli käytetty loppuun.
-   * Lukuja EI haettu muualta, koska vuosigraafin lähderivi lupaa
-   * lukijalle nimenomaan "Open-Meteo (ERA5), 1991–2020".
-   *
-   * Rivi haetaan yhdellä ajolla, kun kiintiö on vapautunut.
-   * Mittauspiste on vanhakaupunki 6,13°S / 106,81°E (en-Wikipedian
-   * Fatahillah Square -artikkelin koordinaatti −6,1347 / 106,8133),
-   * korkeus 8 metriä — Jakarta-artikkelin infoboksin luku koko
-   * kaupungille. HUOMAA MERKKI: Jakarta on eteläisellä
-   * pallonpuoliskolla, joten lat on NEGATIIVINEN ja vuodenkierto
-   * kääntyy: sateisin kausi osuu joulu–maaliskuulle ja kuivin
-   * heinä–syyskuulle.
-   *
-   * Jakartan lehden oppaan sääjakso ei riipu tästä rivistä: se on
-   * kirjoitettu en-Wikipedian oman sääruudun 1991–2020-normaaleista
-   * (Maailman ilmatieteen järjestö, Kemayoranin asema keskustassa)
-   * ja sanoo sen ääneen. Sama tilanne on Samarkandilla,
-   * Varanasilla, Xi'anilla, Ulan Batorilla, Astanalla ja Mandalaylla.
+   * XI'AN. Mittauspiste on keskusta 34,26 / 108,94 (en-Wikipedian
+   * Xi'an-artikkelin oma koordinaatti 34,26111 / 108,94222). ERA5-ruutu
+   * on 407 metrissä, käytännössä artikkelin ilmoittamassa kaupungin
+   * korkeudessa (n. 405 m). Ruudun sade on runsaampi kuin Chang'anin
+   * kaupunginosan mittausaseman normaaleissa, ja ero on ruudun
+   * leveyttä: se ulottuu Wei-joen laaksosta etelän kukkuloille.
    */
+  xian: {
+    lat: 34.26,
+    lon: 108.94,
+    keskilampo: [0.3, 4.7, 9.2, 15.3, 19.9, 24.3, 26.8, 25.6, 20.3, 14.6, 7.1, 1.4],
+    ylin: [5, 10, 15, 22, 25, 30, 32, 30, 25, 19, 13, 6],
+    alin: [-4, -1, 3, 9, 14, 18, 22, 21, 16, 11, 1, -3],
+    sade: [8, 19, 26, 50, 71, 96, 144, 91, 146, 80, 39, 14],
+    luonnehdinta: 'Xi’anin vuosi jakautuu kylmään ja kuivaan talveen ja '
+      + 'kuumaan ja sateiseen kesään: tammikuun keskilämpö on nollan '
+      + 'tuntumassa ja heinäkuun lähes kaksikymmentäseitsemän astetta. '
+      + 'Sateesta valtaosa tulee touko–lokakuussa, 628 millimetriä '
+      + 'vuoden 784:stä, ja sateisimmat kuukaudet ovat syyskuu ja '
+      + 'heinäkuu 146 ja 144 millimetrillä. Joulu–helmikuussa vettä '
+      + 'kertyy yhteensä 41 millimetriä.',
+  },
   /*
-   * BORNEON RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Alueelle
-   * tehtiin samana päivänä alusta asti oma aluelehti
-   * (kulttuuri-kategoriat.js, asia-artikkelit.js), mutta Open-Meteon
-   * arkisto (ERA5) vastasi koko työn ajan 429:llä ja viestillä
-   * "Daily API request limit exceeded. Please try again tomorrow" —
-   * kontin jaetun ulosmenevän osoitteen vuorokausikiintiö oli
-   * käytetty loppuun. Lukuja EI haettu muualta, koska vuosigraafin
-   * lähderivi lupaa lukijalle nimenomaan "Open-Meteo (ERA5),
-   * 1991–2020".
-   *
-   * MITTAUSPISTE, KUN RIVI JOSKUS HAETAAN, VAATII PÄÄTÖKSEN, ja se
-   * kannattaa tehdä tietoisesti. Borneo on alue eikä kaupunki, ja
-   * työaineiston faktapohja (docs/aasia-tyoaineisto/
-   * faktapohja-borneo.md) ehdotti sääpisteeksi alueen tunnetuinta
-   * kohtaa Kinabalu-vuorta, 6,075°N / 116,558°E (en-Wikipedian
-   * Mount Kinabalu -artikkelin koordinaatti 06°04′30″N 116°33′31″E),
-   * huippu 4 095 metriä. ERA5:n ruutu on kymmeniä kilometrejä leveä
-   * eikä se voi toistaa huipun lukemia: ruudun korkeus jää selvästi
-   * huippua matalammaksi ja lämpötila vastaavasti korkeammaksi.
-   * Sama pulma on jo ratkaistu Siinailla, Petralla ja Singaporella —
-   * ero kerrotaan sekä tässä kommentissa että oppaan sääjaksossa.
-   * Toinen vaihtoehto on rannikkopiste Kota Kinabalu, joka vastaa
-   * sitä ilmastoa, jossa matkailija tosiasiassa liikkuu. Fable
-   * päättää kumpi, ja luonnehdinta kirjoitetaan sen jälkeen rivin
-   * omista luvuista.
-   *
-   * Borneon lehden oppaan sääjakso ei riipu tästä rivistä: se on
-   * kirjoitettu en-Wikipedian Kota Kinabalu -artikkelin
-   * ilmasto-osiosta (trooppinen sademetsäilmasto, 26–28 astetta,
-   * noin 2 400 millimetriä vuodessa, monsuunien ajoitus) ja Mount
-   * Kinabalu -artikkelin ilmasto-osiosta (huipun lukemat, kuura ja
-   * kirjatut lumisateet) ja sanoo sen ääneen.
-   *
-   * SUMATRAN RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Saarelle
-   * tehtiin samana päivänä alusta asti oma ALUELEHTI
-   * (kulttuuri-kategoriat.js, asia-artikkelit.js; aluelehteen ei tule
-   * kohdekarttaa eikä nähtävyysjuttuja), mutta Open-Meteon arkisto
-   * (ERA5) vastasi kahdeksalla peräkkäisellä yrityksellä 429:llä ja
-   * viestillä "Daily API request limit exceeded. Please try again
-   * tomorrow" — kontin jaetun ulosmenevän osoitteen vuorokausikiintiö
-   * oli käytetty loppuun. Lukuja EI haettu muualta, koska
-   * vuosigraafin lähderivi lupaa lukijalle nimenomaan "Open-Meteo
-   * (ERA5), 1991–2020".
-   *
-   * Rivi haetaan yhdellä ajolla, kun kiintiö on vapautunut.
-   * MITTAUSPISTE ON TOBA-JÄRVI 2,68 / 98,88 (en-Wikipedian Lake Toba
-   * -artikkelin infoboksin koordinaatti), korkeus noin 905 metriä.
-   * Piste on alueen tunnetuin kohta, mutta se on YLÄNKÖÄ eikä
-   * rannikkoa: Sumatran rannikko on selvästi lämpimämpi, joten kun
-   * rivi joskus lisätään, luonnehdinta kirjoitetaan rivin omista
-   * luvuista ja mittauspiste kerrotaan ääneen (Siinain ja Petran
-   * ennakkotapaus). Saaren pituus on 1 790 kilometriä, joten yksi
-   * piste ei kuvaa koko aluetta.
-   *
-   * Sumatran lehden oppaan sääjakso ei riipu tästä rivistä: se on
-   * kirjoitettu en-Wikipedian omista luvuista — Medanin Kualanamun
-   * aseman 1991–2020-normaaleista rannikolle ja Berastagi-artikkelin
-   * sanallisesta ylänkökuvauksesta — ja jakso sanoo molemmat
-   * mittauspisteet ääneen. Sama tilanne on Samarkandilla,
-   * Varanasilla, Xi'anilla, Ulan Batorilla, Astanalla, Mandalaylla ja
-   * Jakartalla.
-   *
-   * KAŠGARIN RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Kaupungille
-   * tehtiin samana päivänä alusta asti oma lehti
-   * (kulttuuri-kategoriat.js, maakartat.js, nahtavyysjutut.js,
-   * asia-artikkelit.js), mutta Open-Meteon arkisto (ERA5) vastasi
-   * työn alussa ja lopussa samalla virheellä "Daily API request limit
-   * exceeded. Please try again tomorrow" — kontin jaetun ulosmenevän
-   * osoitteen vuorokausikiintiö oli käytetty loppuun eikä se nollaudu
-   * ennen UTC-vuorokauden vaihdetta. Lukuja EI haettu muualta, koska
-   * vuosigraafin lähderivi lupaa lukijalle nimenomaan "Open-Meteo
-   * (ERA5), 1991–2020".
-   *
-   * Rivi haetaan yhdellä ajolla, kun kiintiö on vapautunut:
-   *   NODE_USE_ENV_PROXY=1 node tools/hae-saanormaalit.mjs
-   * Mittauspiste on keskusta 39,47 / 75,99 (en-Wikipedian
-   * Kashgar-artikkelin oma koordinaatti 39,4681 / 75,9938).
-   * KORKEUS ON RISTIRIITAINEN: saman artikkelin infoboksi sanoo
-   * 1 270 metriä ja sen sääruutu 1 386, eikä eroa selitetä; lehti
-   * kertoo molemmat luvut oppaan jaksossa "Alueen rakenne".
-   *
-   * Kašgarin oppaan sääjakso ei riipu tästä rivistä: se on
-   * kirjoitettu en-Wikipedian oman sääruudun normaaleista (Kiinan
-   * ilmatieteen laitos, 1991–2020, ääriarvot vuodesta 1951) ja sanoo
-   * sen ääneen. Kun rivi joskus lisätään, jakso on kirjoitettava
-   * rivin omista luvuista.
-   *
-   * LHASAN RIVI PUUTTUU SAMASTA SYYSTÄ (21.8.2026). Kaupungille
-   * tehtiin samana päivänä alusta asti oma lehti
-   * (kulttuuri-kategoriat.js, maakartat.js, nahtavyysjutut.js,
-   * asia-artikkelit.js), mutta Open-Meteon arkisto (ERA5) vastasi
-   * koko työn ajan 429:llä ja viestillä "Daily API request limit
-   * exceeded. Please try again tomorrow" — kontin jaetun
-   * ulosmenevän osoitteen vuorokausikiintiö oli käytetty loppuun.
-   * Lukuja EI haettu muualta, koska vuosigraafin lähderivi lupaa
-   * lukijalle nimenomaan "Open-Meteo (ERA5), 1991-2020".
-   *
-   * Rivi haetaan yhdellä ajolla, kun kiintiö on vapautunut.
-   * Mittauspiste on keskusta 29,65 / 91,12 (en-Wikipedian
-   * Lhasa-artikkelin koordinaattirajapinnan arvo 29,6539 / 91,1175).
-   * KORKEUS ON HAARUKKA EIKÄ YKSI LUKU: sama artikkeli antaa
-   * leipätekstissä "noin 3 600 m", infoboksissa 3 656 m,
-   * säälaatikossa 3 649 m ja Chengguanin piirille 3 650 m;
-   * tarkistusraportti (docs/aasia-tyoaineisto/tarkistus-lhasa.md
-   * osio 1.3) suositteli kolmea jälkimmäistä, ja lehti sanoo
-   * "noin 3 650 metriä".
-   *
-   * Lhasan lehden oppaan sääjakso ei riipu tästä rivistä: se on
-   * kirjoitettu en-Wikipedian oman sääruudun 1991-2020-normaaleista
-   * (Kiinan ilmatieteen laitos, mittausasema 3 649 metrissä) ja sanoo
-   * sen ääneen. Kun rivi joskus lisätään, jakso on kirjoitettava
-   * rivin omista luvuista. Sama tilanne on Samarkandilla,
-   * Varanasilla, Xi'anilla, Ulan Batorilla, Astanalla, Mandalaylla
-   * ja Jakartalla.
+   * VARANASI. Mittauspiste on keskusta 25,32 / 83,01 (en-Wikipedian
+   * Varanasi-artikkelin infobox 25,31889 / 83,01278). ERA5-ruutu on 82
+   * metrissä, sama kuin artikkelin 80,71 metriä.
    */
+  varanasi: {
+    lat: 25.32,
+    lon: 83.01,
+    keskilampo: [15.7, 19.7, 24.6, 30.6, 33.6, 32.4, 29.2, 28.4, 27.9, 25.7, 21.6, 17.1],
+    ylin: [22, 27, 31, 39, 40, 37, 32, 31, 31, 30, 27, 23],
+    alin: [10, 13, 18, 23, 27, 27, 26, 26, 25, 21, 16, 11],
+    sade: [15, 12, 11, 6, 8, 123, 293, 215, 173, 61, 15, 14],
+    luonnehdinta: 'Varanasin kuumin aika on ennen monsuunia: toukokuun '
+      + 'keskilämpö on 33,6 astetta, ja kesäkuussa se kääntyy laskuun, '
+      + 'kun sateet alkavat. Heinä–syyskuussa sataa 681 millimetriä eli '
+      + 'lähes kolme neljäsosaa vuoden 946:sta, kun taas maalis–'
+      + 'toukokuussa kertyy yhteensä 25. Talvi on lyhyt ja leuto — '
+      + 'tammikuun keskilämpö on lähes kuusitoista astetta.',
+  },
+  /*
+   * HANOI. Mittauspiste on Hoàn Kiếm -järvi 21,03 / 105,85
+   * (tarkistusraportin koordinaatti 21,02889 / 105,85250), ei
+   * hallintoalueen karkea 21,00 / 105,85. ERA5-ruutu on 24 metrissä.
+   */
+  hanoi: {
+    lat: 21.03,
+    lon: 105.85,
+    keskilampo: [15.7, 19.2, 21.7, 24.6, 26.8, 29.1, 28.5, 28, 26.6, 24.7, 20.4, 17.4],
+    ylin: [19, 22, 25, 28, 31, 33, 32, 31, 30, 28, 25, 21],
+    alin: [13, 16, 18, 21, 23, 26, 25, 25, 24, 22, 16, 14],
+    sade: [38, 28, 55, 99, 225, 224, 269, 289, 265, 114, 51, 32],
+    luonnehdinta: 'Hanoissa on neljä vuodenaikaa, mikä on '
+      + 'Kaakkois-Aasiassa harvinaista: tammikuun keskilämpö on 15,7 '
+      + 'astetta ja kesäkuun 29,1. Sade painottuu touko–syyskuuhun, '
+      + 'jolloin kertyy 1 272 millimetriä eli kolme neljäsosaa vuoden '
+      + '1 689 millimetristä; sateisin kuukausi on elokuu 289 '
+      + 'millimetrillä. Kuivinta on joulu–helmikuussa, jolloin '
+      + 'kuukausisade jää alle neljänkymmenen.',
+  },
+  /*
+   * ULAN BATOR. Mittauspiste on Sükhbaatarin aukio 47,92 / 106,92
+   * (en-Wikipedian oma koordinaatti 47,9189 / 106,9175). ERA5-ruutu on
+   * 1 302 metrissä eli samalla korkeudella kuin kaupungin sääasema
+   * (1 303 m), mutta ruutu on talvella leudompi kuin aseman normaalit:
+   * kylmä ilma valuu laakson pohjalle, jota kymmenien kilometrien
+   * levyinen ruutu ei erota.
+   */
+  ulanbator: {
+    lat: 47.92,
+    lon: 106.92,
+    keskilampo: [-18.8, -14.2, -5.9, 2.4, 9, 15.6, 17.8, 16.2, 8.9, 1.3, -8.6, -16.2],
+    ylin: [-13, -8, 0, 8, 16, 22, 23, 22, 15, 7, -4, -12],
+    alin: [-24, -20, -12, -3, 2, 9, 12, 11, 3, -4, -13, -21],
+    sade: [2, 4, 5, 14, 47, 68, 60, 72, 37, 15, 5, 2],
+    luonnehdinta: 'Ulan Batorin vuosi on jakautunut kahtia: tammikuun '
+      + 'keskilämpö on lähes yhdeksäntoista pakkasastetta ja heinäkuun '
+      + 'lähes kahdeksantoista lämpöastetta, ja koko vuoden keskiarvo '
+      + 'jää 0,6 asteeseen. Marraskuusta maaliskuuhun keskilämpö on '
+      + 'pakkasen puolella joka kuukausi. Sadetta tulee vain 331 '
+      + 'millimetriä, ja siitä 247 osuu touko–elokuuhun; joulu–'
+      + 'maaliskuussa kertyy yhteensä kolmetoista millimetriä.',
+  },
+  /*
+   * KATHMANDU. Mittauspiste on Durbar Square 27,70 / 85,31, ja
+   * ERA5-ruutu asettui 1 303 metriin — käytännössä laakson korkeuteen.
+   * MONSUUNISADE ON RIVILLÄ YLI KAKSINKERTAINEN laakson pohjan aseman
+   * normaaleihin verrattuna (heinäkuu 851 mm, Tribhuvanin lentoasema
+   * 384), ja se on ruudun leveyden seuraus: kymmenien kilometrien
+   * levyiseen ruutuun mahtuu laakson reunan rinteitä, joilla monsuuni
+   * sataa rajusti. Ero tarkistettiin: koko jakson 1991–2020
+   * päiväaineisto antaa samalle ruudulle heinäkuulle 794 millimetriä,
+   * eli luku on ruudun oma eikä otoksen harha. Sama pulma on
+   * Singaporella ja Kiotolla, ja se kerrotaan myös oppaan
+   * sääjaksossa.
+   */
+  kathmandu: {
+    lat: 27.7,
+    lon: 85.31,
+    keskilampo: [10.8, 13, 15.8, 19.6, 21.1, 22.3, 22.4, 22.3, 21.7, 18.9, 15.3, 12.2],
+    ylin: [15, 17, 21, 25, 25, 26, 25, 25, 25, 22, 20, 17],
+    alin: [6, 9, 11, 14, 17, 19, 20, 19, 19, 15, 11, 8],
+    sade: [52, 46, 55, 69, 195, 457, 851, 830, 313, 133, 36, 42],
+    luonnehdinta: 'Kathmandun laaksossa lämpötila pysyy koko vuoden '
+      + 'leutona: kylmimmän tammikuun keskilämpö on 10,8 astetta ja '
+      + 'lämpimimmän heinäkuun 22,4 — ero on vajaat kaksitoista astetta, '
+      + 'kun Etelä-Aasian alangoilla se on suurempi. Monsuuni tuo veden '
+      + 'kesä–syyskuussa: heinä- ja elokuussa kertyy yhteensä 1 681 '
+      + 'millimetriä, kun marras–maaliskuussa sataa 231. Rivin '
+      + 'ERA5-ruutu ulottuu laakson reunan rinteille, joten sen '
+      + 'monsuunisade on selvästi runsaampi kuin laakson pohjalla '
+      + 'mitattu.',
+  },
+  /*
+   * ASTANA. Mittauspiste on keskusta 51,13 / 71,43 (en-Wikipedian
+   * infoboksin 51°08′N 71°26′E). ERA5-ruutu asettui 347 metriin eli
+   * täsmälleen artikkelin ilmoittamaan korkeuteen.
+   */
+  astana: {
+    lat: 51.13,
+    lon: 71.43,
+    keskilampo: [-12.3, -13.2, -5.6, 6.1, 14.5, 19.2, 20, 19.1, 13.5, 5.1, -4.6, -12.1],
+    ylin: [-9, -9, -2, 12, 21, 25, 25, 24, 19, 9, -1, -10],
+    alin: [-15, -17, -9, 1, 8, 14, 15, 14, 8, 1, -8, -14],
+    sade: [22, 14, 17, 21, 31, 51, 75, 35, 20, 31, 23, 19],
+    luonnehdinta: 'Astanan talvi on pitkä ja kylmä: joulukuusta '
+      + 'helmikuuhun keskilämpö on kahdentoista ja kolmentoista '
+      + 'pakkasasteen välissä, ja marraskuusta maaliskuuhun se pysyy '
+      + 'pakkasen puolella. Kesä on lyhyt ja lämmin — heinäkuussa '
+      + 'kaksikymmentä astetta — ja koko vuoden keskiarvo on 4,1. '
+      + 'Sadetta tulee 359 millimetriä, ja se painottuu kesään: '
+      + 'heinäkuussa 75 millimetriä ja helmikuussa neljätoista.',
+  },
+  /*
+   * KANTON. Mittauspiste on keskusta 23,13 / 113,26, joka on
+   * en-Wikipedian Guangzhou-artikkelin oma koordinaatti. ERA5-ruutu on
+   * 21 metrissä; kaupungin oma mittausasema on 71 metrissä. LOKAKUUN
+   * LUKU 61 ON TARKISTETTU KOKO JAKSOLTA (ks. erän lohkokommentti):
+   * otos antoi 25 millimetriä, koska lokakuun sade tulee harvoista
+   * rajuista tapahtumista.
+   */
+  kanton: {
+    lat: 23.13,
+    lon: 113.26,
+    keskilampo: [13.5, 17, 19.4, 22.9, 25.4, 27.5, 28.1, 28.1, 27.2, 24.3, 19.2, 15.5],
+    ylin: [17, 21, 23, 26, 29, 30, 31, 31, 30, 28, 24, 20],
+    alin: [10, 13, 16, 20, 22, 25, 25, 25, 24, 21, 14, 11],
+    sade: [49, 72, 185, 199, 340, 369, 252, 292, 199, 61, 36, 32],
+    luonnehdinta: 'Kantonissa sataa paljon ja epätasaisesti: vuoden '
+      + '2 086 millimetristä 1 452 tulee huhti–elokuussa, ja sateisin '
+      + 'kuukausi on kesäkuu 369 millimetrillä. Loka–joulukuu on kuivin '
+      + 'jakso, yhteensä 129 millimetriä. Lämpötila ei putoa '
+      + 'talvellakaan: tammikuun keskilämpö on 13,5 astetta ja heinä–'
+      + 'elokuun 28,1.',
+  },
+  /*
+   * YANGON. Mittauspiste on ruutukaava-alue 16,79 / 96,16, joka on
+   * en-Wikipedian Yangon-artikkelin oma koordinaatti (16,795 / 96,16)
+   * ja samalla kohdekartan keskipiste. ERA5-ruutu on 15 metrissä.
+   */
+  yangon: {
+    lat: 16.79,
+    lon: 96.16,
+    keskilampo: [24.2, 26.2, 28.4, 30.4, 28.4, 26.6, 26.1, 26, 26.1, 27, 26.2, 24.7],
+    ylin: [30, 33, 35, 37, 33, 29, 28, 28, 29, 30, 30, 30],
+    alin: [19, 20, 21, 24, 24, 24, 24, 24, 24, 24, 22, 19],
+    sade: [7, 0, 10, 29, 293, 463, 497, 451, 397, 129, 46, 4],
+    luonnehdinta: 'Yangonissa vuoden jakaa sade eikä lämpötila: touko–'
+      + 'lokakuussa kertyy 2 230 millimetriä eli lähes koko vuoden '
+      + '2 326 millimetriä, kun joulu–maaliskuun neljässä kuukaudessa '
+      + 'sataa yhteensä 21 — helmikuussa ei kirjaudu lainkaan. Kuumin '
+      + 'kuukausi on huhtikuu 30,4 asteella, ja monsuunin alettua '
+      + 'keskilämpö laskee kahdenkymmenenkuuden tienoille.',
+  },
+  /*
+   * MANDALAY. Mittauspiste on keskusta 21,98 / 96,08 (en-Wikipedian
+   * Mandalay-artikkelin koordinaatti 21°58′59″N 96°05′04″E).
+   * ERA5-ruutu on 81 metrissä, sama kuin artikkelin 80.
+   */
+  mandalay: {
+    lat: 21.98,
+    lon: 96.08,
+    keskilampo: [20.9, 23.9, 28, 31.5, 30.1, 28.7, 28.4, 27.5, 27.3, 26.6, 24.1, 21.4],
+    ylin: [26, 31, 35, 38, 35, 32, 32, 30, 30, 30, 28, 27],
+    alin: [16, 17, 21, 25, 25, 25, 25, 25, 24, 24, 20, 16],
+    sade: [7, 0, 3, 27, 148, 132, 117, 201, 211, 173, 88, 12],
+    luonnehdinta: 'Mandalayn kuumin aika on juuri ennen sateita: '
+      + 'huhtikuun keskilämpö on 31,5 astetta, ja monsuunin alettua se '
+      + 'laskee kahdenkymmenenseitsemän ja kolmenkymmenen väliin. '
+      + 'Sadetta tulee 1 119 millimetriä, ja siitä 982 osuu touko–'
+      + 'lokakuulle; sateisimmat kuukaudet ovat elo- ja syyskuu, '
+      + 'yhteensä 412 millimetriä. Joulu–maaliskuussa kertyy yhteensä '
+      + 'kaksikymmentäkaksi millimetriä.',
+  },
+  /*
+   * TAIPEI. Mittauspiste on keskusta 25,04 / 121,56 (en-Wikipedian
+   * Taipei-artikkelin infobox 25,0375 / 121,5625). ERA5-ruutu on 10
+   * metrissä eli Taipein altaan pohjalla. Luonnehdinnan maininta
+   * taifuuneista on en-Wikipedian Taipei-artikkelin ilmasto-osiosta
+   * (taifuunikausi kesäkuusta lokakuuhun); kaikki luvut ovat rivin
+   * omia.
+   */
+  taipei: {
+    lat: 25.04,
+    lon: 121.56,
+    keskilampo: [15.1, 16.7, 18.3, 21.3, 24.3, 27.1, 28.4, 28.1, 26.7, 23.3, 20.3, 17.1],
+    ylin: [17, 19, 21, 24, 27, 30, 31, 31, 29, 25, 23, 19],
+    alin: [13, 14, 15, 18, 21, 24, 25, 25, 24, 21, 18, 15],
+    sade: [88, 68, 121, 114, 212, 344, 193, 242, 158, 157, 119, 83],
+    luonnehdinta: 'Taipeissa sataa joka kuukausi: vähitenkin '
+      + 'helmikuussa 68 millimetriä ja eniten kesäkuussa 344, ja vuoden '
+      + 'sade on 1 899 millimetriä. Kesä on pitkä ja kuuma — heinäkuun '
+      + 'keskilämpö on 28,4 astetta — ja talvi lyhyt ja leuto, '
+      + 'tammikuussa 15,1. Kesän ja alkusyksyn sateisiin kuuluvat '
+      + 'taifuunit, joiden kausi kestää kesäkuusta lokakuuhun.',
+  },
+  /*
+   * HONGKONG. Mittauspiste on Central 22,28 / 114,16 (en-Wikipedian
+   * "Central, Hong Kong" 22,28194 / 114,15806) eikä koko
+   * hallintoalueen karkea 22,3 / 114,2, jonka faktapohja erikseen
+   * hylkäsi. ERA5-ruutu on 30 metrissä. LOKAKUUN LUKU 70 ON
+   * TARKISTETTU KOKO JAKSOLTA (ks. erän lohkokommentti): otos antoi 25
+   * millimetriä, koska lokakuun sade tulee harvoista taifuuneista.
+   */
+  hongkong: {
+    lat: 22.28,
+    lon: 114.16,
+    keskilampo: [15.2, 18, 20.1, 22.8, 25.3, 27.3, 27.8, 27.7, 27.1, 24.7, 20.6, 17.2],
+    ylin: [18, 20, 22, 25, 27, 29, 29, 29, 29, 27, 23, 20],
+    alin: [13, 16, 18, 21, 23, 26, 26, 26, 25, 23, 18, 14],
+    sade: [26, 35, 112, 88, 258, 340, 248, 302, 228, 70, 32, 24],
+    luonnehdinta: 'Hongkongin vuosi jakautuu jyrkästi: touko–syyskuussa '
+      + 'sataa 1 376 millimetriä eli neljä viidesosaa vuoden 1 763 '
+      + 'millimetristä, kun marras–helmikuussa kertyy yhteensä 117. '
+      + 'Kesä on pitkä, kuuma ja kostea — heinäkuun keskilämpö on 27,8 '
+      + 'astetta — ja talvi lyhyt ja leuto, tammikuussa 15,2. Sateisin '
+      + 'kuukausi on kesäkuu 340 millimetrillä.',
+  },
+  /*
+   * JAKARTA. Mittauspiste on vanhankaupungin Fatahillah-aukio
+   * −6,13 / 106,81. HUOMAA MERKKI: Jakarta on eteläisellä
+   * pallonpuoliskolla, joten lat on negatiivinen ja vuodenkierto
+   * kääntyy — sateisin kausi osuu joulu–maaliskuulle. ERA5-ruutu on 3
+   * metrissä.
+   */
+  jakarta: {
+    lat: -6.13,
+    lon: 106.81,
+    keskilampo: [25.8, 25.7, 26.1, 26.3, 26.5, 26.5, 26.3, 26.7, 27.3, 27.2, 26.4, 26.1],
+    ylin: [28, 28, 29, 29, 29, 30, 30, 30, 31, 31, 30, 29],
+    alin: [23, 23, 23, 23, 24, 23, 23, 23, 24, 24, 23, 23],
+    sade: [272, 252, 212, 202, 132, 88, 68, 39, 44, 112, 217, 278],
+    luonnehdinta: 'Jakartassa lämpötila ei tee vuodenaikoja: '
+      + 'kuukausikeskiarvot mahtuvat 25,7 ja 27,3 asteen väliin. '
+      + 'Vuodenajan tekee sade, ja eteläisellä pallonpuoliskolla se '
+      + 'kääntyy toisin päin kuin pohjoisessa: sateisimmat kuukaudet '
+      + 'ovat joulukuu 278 ja tammikuu 272 millimetriä, kuivimmat '
+      + 'elo- ja syyskuu 39 ja 44. Vuodessa sataa 1 916 millimetriä.',
+  },
+  /*
+   * MANILA. Mittauspiste on keskusta 14,60 / 120,98 (en-Wikipedian
+   * Manila-artikkelin infobox 14,5958 / 120,9772). ERA5-ruutu on 12
+   * metrissä.
+   */
+  manila: {
+    lat: 14.6,
+    lon: 120.98,
+    keskilampo: [24.8, 25.4, 26.6, 28.4, 28.5, 27.6, 26.7, 26.5, 26.3, 26.6, 26.3, 25.4],
+    ylin: [28, 29, 30, 32, 32, 31, 29, 29, 29, 29, 29, 28],
+    alin: [22, 22, 23, 25, 25, 25, 24, 24, 24, 24, 24, 23],
+    sade: [24, 9, 28, 11, 99, 185, 301, 343, 393, 164, 65, 109],
+    luonnehdinta: 'Manilassa kuivan ja märän kauden ero on jyrkkä: '
+      + 'joulu–huhtikuussa sataa yhteensä 181 millimetriä, kun heinä–'
+      + 'syyskuussa kertyy 1 037 eli kolme viidesosaa vuoden 1 731 '
+      + 'millimetristä. Sateisin kuukausi on syyskuu 393 millimetrillä '
+      + 'ja kuivin helmikuu yhdeksällä. Lämpötila pysyy tasaisena, '
+      + 'tammikuun 24,8 ja toukokuun 28,5 asteen välissä.',
+  },
+  /*
+   * BORNEO. MITTAUSPISTE ON FABLEN PÄÄTÖS 22.8.2026: rannikon Kota
+   * Kinabalu 5,98 / 116,07 (en-Wikipedian oma koordinaatti 5,975 /
+   * 116,0725) EIKÄ Kinabalu-vuoren huippu, jota työaineisto ehdotti.
+   * Perustelu on kaksiosainen: ERA5:n ruutu on kymmeniä kilometrejä
+   * leveä eikä voi toistaa 4 095 metrin huipun lukemia, ja rannikko
+   * vastaa sitä ilmastoa, jossa matkailija tosiasiassa liikkuu.
+   * ERA5-ruutu asettui kohtaan 5,94 / 116,10 ja sen korkeus on 0
+   * metriä, eli ruutuun kuuluu myös merta — vuorokausivaihtelu on
+   * siksi pienempi kuin maalla, kuten Singaporella.
+   */
+  borneo: {
+    lat: 5.98,
+    lon: 116.07,
+    keskilampo: [25.6, 25.6, 26.2, 26.6, 26.9, 26.9, 26.6, 26.7, 26.5, 25.9, 25.8, 25.8],
+    ylin: [28, 28, 29, 29, 29, 29, 29, 29, 29, 28, 28, 28],
+    alin: [23, 23, 24, 24, 25, 25, 24, 24, 24, 24, 24, 23],
+    sade: [160, 89, 67, 154, 148, 131, 166, 162, 147, 256, 218, 208],
+    luonnehdinta: 'Rivin mittauspiste on rannikon Kota Kinabalu eikä '
+      + 'Kinabalu-vuoren huippu, ja rannikolla vuodenaikoja ei ole: '
+      + 'kuukausikeskilämpö liikkuu 25,6 ja 26,9 asteen välissä. Sadetta '
+      + 'kertyy 1 906 millimetriä vuodessa eikä yksikään kuukausi jää '
+      + 'kuivaksi — vähitenkin sataa maaliskuussa 67 millimetriä. '
+      + 'Sateisin jakso on loka–joulukuu, jolloin kertyy 682 '
+      + 'millimetriä eli runsas kolmasosa koko vuoden sateesta.',
+  },
+  /*
+   * SUMATRA. Mittauspiste on Toba-järvi 2,68 / 98,88 (en-Wikipedian
+   * Lake Toba -infoboksi), ja se on ALUEEN TUNNETUIN KOHTA MUTTA
+   * YLÄNKÖÄ: ERA5-ruutu asettui 901 metriin, kun järven pinta on 905.
+   * Saaren pituus on 1 790 kilometriä eikä yksi piste kuvaa koko
+   * aluetta; rannikko on selvästi lämpimämpi, ja se sanotaan sekä
+   * luonnehdinnassa että oppaan sääjaksossa ääneen.
+   */
+  sumatra: {
+    lat: 2.68,
+    lon: 98.88,
+    keskilampo: [21.7, 22, 22.5, 22.8, 23.3, 23.2, 22.9, 22.7, 22.7, 22.2, 22, 21.8],
+    ylin: [24, 24, 25, 25, 26, 26, 25, 26, 25, 25, 24, 24],
+    alin: [19, 20, 20, 20, 21, 21, 20, 20, 20, 20, 20, 20],
+    sade: [294, 191, 189, 249, 207, 154, 160, 223, 248, 290, 304, 303],
+    luonnehdinta: 'Rivin mittauspiste on Toba-järvi 900 metrin '
+      + 'korkeudessa, ja se näkyy luvuissa: kuukausikeskilämpö pysyy '
+      + '21,7 ja 23,3 asteen välissä eli useita asteita viileämpänä kuin '
+      + 'Sumatran rannikolla. Sadetta kertyy 2 812 millimetriä vuodessa '
+      + 'eikä yksikään kuukausi jää kuivaksi — vähitenkin sataa '
+      + 'kesäkuussa 154 millimetriä. Sateisimmat ovat marras- ja '
+      + 'joulukuu, yhteensä 607 millimetriä.',
+  },
+  /*
+   * KAŠGAR. Mittauspiste on keskusta 39,47 / 75,99 (en-Wikipedian
+   * Kashgar-artikkelin oma koordinaatti 39,4681 / 75,9938). Artikkelin
+   * korkeusluvut ovat ristiriitaiset (infobox 1 270 m, sääruutu
+   * 1 386); ERA5-ruutu asettui 1 301 metriin, siis niiden väliin.
+   */
+  kashgar: {
+    lat: 39.47,
+    lon: 75.99,
+    keskilampo: [-5.4, -0.1, 6.9, 15.4, 20.9, 25.1, 27, 25.5, 20.3, 13.1, 3.1, -4.3],
+    ylin: [-1, 5, 12, 22, 27, 31, 33, 31, 26, 19, 9, -1],
+    alin: [-9, -6, 1, 9, 15, 19, 21, 20, 15, 8, -3, -8],
+    sade: [3, 9, 15, 12, 23, 16, 15, 15, 24, 5, 8, 6],
+    luonnehdinta: 'Kašgar on aavikon laidalla, ja se näkyy sateessa: '
+      + 'koko vuoden sade on 151 millimetriä eikä yksikään kuukausi '
+      + 'ylitä kahtakymmentäneljää millimetriä. Vuodenaikojen ero on '
+      + 'silti jyrkkä — tammikuun keskilämpö on 5,4 pakkasastetta ja '
+      + 'heinäkuun 27 lämpöastetta. Kuivin kuukausi on lokakuu viidellä '
+      + 'millimetrillä.',
+  },
+  /*
+   * LHASA. Mittauspiste on keskusta 29,65 / 91,12 (en-Wikipedian
+   * koordinaattirajapinnan 29,6539 / 91,1175). ERA5-ruutu asettui
+   * 3 655 metriin eli kaupungin omaan korkeuteen (lehti sanoo "noin
+   * 3 650 metriä"). RIVI ON SILTI VIILEÄMPI JA SATEISEMPI KUIN
+   * KAUPUNGIN OMA MITTAUSASEMA (tammikuu −5,3 astetta ja vuosisade 756
+   * mm, kun aseman normaalit ovat 0,6 astetta ja 458 mm): kymmenien
+   * kilometrien levyiseen ruutuun kuuluu laakson lisäksi ympäröiviä
+   * vuoria. Ero kerrotaan oppaan sääjaksossa.
+   */
+  lhasa: {
+    lat: 29.65,
+    lon: 91.12,
+    keskilampo: [-5.3, -1.7, 1.8, 6.2, 10.7, 14.5, 15.1, 14.3, 12.6, 7.7, -0.8, -2.7],
+    ylin: [1, 5, 8, 12, 17, 20, 20, 19, 18, 13, 5, 3],
+    alin: [-12, -8, -4, 0, 4, 9, 10, 9, 7, 2, -7, -9],
+    sade: [8, 8, 21, 40, 60, 97, 163, 159, 113, 57, 22, 8],
+    luonnehdinta: 'Lhasan vuosi on kylmä ja kuiva mutta ei ääripäiden: '
+      + 'tammikuun keskilämpö on 5,3 pakkasastetta ja heinäkuun 15,1 '
+      + 'lämpöastetta. Sade tulee kesällä — heinä–syyskuussa kertyy 435 '
+      + 'millimetriä eli kolme viidesosaa vuoden 756:sta — ja marras–'
+      + 'helmikuussa yhteensä 46. Rivi on ERA5-ruudusta 3 655 metrin '
+      + 'korkeudelta, ja ruutuun kuuluu laakson lisäksi vuoria, joten se '
+      + 'on viileämpi ja sateisempi kuin kaupungin oma mittausasema.',
+  },
 };
