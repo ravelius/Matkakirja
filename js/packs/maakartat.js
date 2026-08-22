@@ -8089,6 +8089,64 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Darul Amanin palatsi', lat: 34.465217, lon: 69.119297 },
     ],
   },
+  /*
+   * CHENNAIN KOHDEKARTTA (22.8.2026). Rajaus on 6,6 × 7,4 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Xi'anissa, Kantonissa ja Kolkatassa. Piirtoperustelut, meri-lipun
+   * syy ja poisjätöt ovat tools/piirra-kaupunkikartta.mjs:n
+   * chennai-lohkossa.
+   *
+   * KOORDINAATIT OVAT KAHDESTA LÄHTEESTÄ, ja jako on kirjattu tähän,
+   * koska sitä ei näe kohdelistasta. Fort St. George, Marina Beach,
+   * Government Museum, Chennai Egmore, Ripon Building, Chepaukin
+   * palatsi ja Kapaleeshwararin temppeli ovat artikkelien omista
+   * {{Coord}}-arvoista desimaaleina (haettu en-Wikipediasta
+   * 22.8.2026). Ylin oikeus on saman artikkelin {{Coord}}-arvo
+   * asteina, minuutteina ja sekunteina, ja se on muunnettu
+   * desimaaleiksi tässä: 13°05'12,8"N 80°17'16,4"E = 13,086889 /
+   * 80,287889. San Thomen basilikan arvo on samoin asteista
+   * muunnettu: 13°2'1"N 80°16'40"E = 13,033611 / 80,277778.
+   *
+   * CHENNAI CENTRALIN KOORDINAATTI EI OLE WIKIPEDIASTA, ja se on
+   * ainoa poikkeus. Aseman artikkelin infoboksi antaa 13,0825 /
+   * 80,2750, joka on TÄSMÄLLEEN sama piste kuin Chennai-artikkelin
+   * kaupungin keskipiste — ilmeinen kopiovirhe Wikidatassa.
+   * docs/aasia-tyoaineisto/tarkistus-chennai.md haki oikean arvon
+   * Overpassista (way 217845073, railway=station, ref=MAS,
+   * keskipiste 13,0866 / 80,2745), ja se on 460 metriä pohjoiseen
+   * virheellisestä pisteestä. Kartalla on Overpassin arvo.
+   *
+   * CONNEMARAN KIRJASTO EI OLE KARTALLA: se on Government Museumin
+   * kanssa samassa Pantheonin korttelissa 57 metrin päässä, eli
+   * numeroympyrät olisivat menneet päällekkäin. Kirjasto kerrotaan
+   * museon omassa jutussa.
+   *
+   * KAINALOA EI OLE: kaikki kymmenen kohdetta mahtuvat pääruutuun,
+   * kuten Kantonissa, Samarkandissa, Kathmandussa ja Kolkatassa.
+   */
+  chennai: {
+    polku: 'assets/kartat/chennai-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 13.094, etela: 13.027, lansi: 80.242, ita: 80.303 },
+    esittely: 'Kartan itälaidalla on Bengalinlahti ja sen rannalla '
+      + 'Marina. Pohjoisessa on George Townin hallintokortteli '
+      + 'linnoituksineen, keskellä Egmoren asema ja museokortteli, '
+      + 'etelässä Mylaporen temppelikaupunki. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kolkatassa. */
+      { nimi: 'Madrasin ylin oikeus', lat: 13.086889, lon: 80.287889 },
+      { nimi: 'Chennai Centralin asema', lat: 13.0866, lon: 80.2745 },
+      { nimi: 'Ripon Building', lat: 13.0817, lon: 80.2716 },
+      { nimi: 'Fort St. George', lat: 13.079722, lon: 80.286944 },
+      { nimi: 'Chennai Egmoren asema', lat: 13.078, lon: 80.2616 },
+      { nimi: 'Government Museum', lat: 13.0711, lon: 80.2569 },
+      { nimi: 'Chepaukin palatsi', lat: 13.063363, lon: 80.281713 },
+      { nimi: 'Marina Beach', lat: 13.05418, lon: 80.28368 },
+      { nimi: 'Kapaleeshwararin temppeli', lat: 13.0337, lon: 80.2699 },
+      { nimi: 'San Thomen basilika', lat: 13.033611, lon: 80.277778 },
+    ],
+  },
 };
 
 /*

@@ -48623,4 +48623,497 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * CHENNAI (Opus 22.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kohdekarttaa, nähtävyysjuttuja eikä kategorioita ennen tätä.
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 22.8.2026): Chennai, Fort St. George (haku "Fort St.
+   * George, India" ohjaa tänne), Marina Beach, Madras Railway,
+   * Government Museum Chennai, Madras Presidency, Madras High Court,
+   * Chennai Central railway station, Chennai Egmore railway station,
+   * Ripon Building, Chepauk Palace, Kapaleeshwarar Temple,
+   * St. Thomas Cathedral Basilica Chennai, Connemara Public Library,
+   * Chennai Port ja Madras Music Season. Työaineistona
+   * docs/aasia-tyoaineisto/faktapohja-chennai.md ja
+   * tarkistus-chennai.md.
+   *
+   * SISÄLTÖLINJAUS on spec-asia.md:n kohta "Karachi/Kolkata/Mumbai
+   * ym.": siirtomaahistoria kerrotaan neutraalina historiana eikä
+   * nykypolitiikkaa käsitellä lainkaan. Painopiste on 1873-henkisessä
+   * aineistossa: Fort St. George 1644, Etelä-Intian ensimmäinen
+   * rautatie 1837, Chennai Centralin avaaminen 1873, sataman
+   * rakentaminen 1875–1881 ja Marinan promenadi 1884.
+   *
+   * POIS JÄTETTY KOKONAAN, ja faktapohja jätti nämä samoin:
+   * vuoden 1965 kielimielenosoitukset ja kaikki puolueet (poliittisesti
+   * herkkä nykyaihe), vuoden 2004 tsunami sekä vuosien 2015 ja 2023
+   * tulvat (nykykatastrofeja, eivät kuulu 1873-painotukseen),
+   * puolustusteollisuus ja panssarivaunutehdas, sekä SMS Emdenin
+   * vuoden 1914 pommitus, jonka Madras High Court- ja Chennai
+   * Port -artikkelit mainitsevat uhrilukuineen.
+   *
+   * FAKTAPOHJAN KAKSI VÄITETTÄ EI OLE OTETTU MUKAAN, koska ne eivät
+   * ole en-Wikipedian nykyisessä raakatekstissä:
+   * 1) "Linkki länsirannikolle (Beypur) valmistui 1862" — Madras
+   *    Railway -artikkeli sanoo vain, että yhtiön tavoite oli yhdistää
+   *    itä- ja länsirannikko, ei vuosilukua. Nosto C3 kertoo tavoitteen
+   *    ilman vuotta.
+   * 2) "Meri väistyi noin kahden ja puolen kilometrin päähän vanhoista
+   *    muureista" — Marina Beach -artikkeli sanoo vain, että ranta
+   *    ulottui lähelle nykyistä rantatietä ennen sataman valmistumista
+   *    1881. Nosto C2 sanoo sen näin.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat näitä tekstejä:
+   * 1) Marinan pituus. Marina Beach -artikkelin johdanto sanoo kuutta
+   *    kilometriä, sama artikkelin mittaosio kolmeatoista, ja
+   *    infoboksi erottaa ne: hiekkaa 13 km, promenadia 6 km. Nosto C2
+   *    kirjoittaa molemmat luvut auki.
+   * 2) Marinan sija. Marina Beach -artikkeli sanoo sitä Intian
+   *    pisimmäksi luonnolliseksi kaupunkirannaksi, Chennai-artikkeli
+   *    maailman toiseksi pisimmäksi kaupunkirannaksi. Marina Beachin
+   *    juttu sanoo molemmat.
+   * 3) Museon ikä. Chennai-artikkelin taideosio sanoo Government
+   *    Museumin perustetun "1700-luvun alussa", museon oma artikkeli
+   *    vuonna 1851. Käytetty tarkempaa artikkelia (v925:n sääntö).
+   * 4) Pitt's India Actin vuosi. Madras Presidency -artikkelin johdanto
+   *    sanoo 1785, sama artikkelin leipäteksti syyskuuta 1784. Nosto H3
+   *    kertoo lain nimen ilman vuotta.
+   * 5) Chepaukin palatsin siivet. Sama artikkeli sanoo Humayun Mahalia
+   *    sekä pohjois- että eteläsiiveksi. Juttu ei nimeä siipiä.
+   * 6) Kapaleeshwararin gopuramin korkeus. Sama artikkeli sanoo
+   *    itäisestä gopuramista "noin 40 metriä" ja toisaalla
+   *    "120 jalkaa". Juttu käyttää metrilukua ja kertoo eron.
+   * 7) Rantaviivan pituus. Chennai-artikkelin maantieto-osio sanoo
+   *    24,87 kilometriä ja saman artikkelin matkailuosio 19. Oppaan
+   *    jakso 2 käyttää tarkempaa lukua (v925:n sääntö), koska
+   *    maantieto-osio antaa myös eroosio- ja kertymäosuudet samasta
+   *    mittauksesta.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, eikä sitä ole tässä
+   * työssä lisätty: rinnakkainen säätoimittaja täydentää rivin.
+   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian Chennai-artikkelin
+   * ilmasto-osioon ja SANOO SEN ÄÄNEEN (Samarkandin, Lhasan ja
+   * Kolkatan malli v965–v993). Kun ERA5-rivi lisätään, jakso 5 on
+   * kirjoitettava rivin omista luvuista. Mittauspiste olisi keskusta
+   * 13,08 / 80,27.
+   *
+   * KUVAT. Kansikarusellissa on kolme LAAJAA yleiskuvaa kaupungin eri
+   * puolilta (omistajan linjaus 21.8.2026): ilmakuva Marinasta ja
+   * Cooumin mutkasta keskellä, ylimmän oikeuden porttitorni George
+   * Townissa pohjoisessa ja Mylaporen temppelialtaan aamunäkymä
+   * etelässä. Viisi vanhaa kuvaa on kirjan- tai postikorttisivuja,
+   * joissa on julkaisijan oma painettu kuvateksti (Chelingue-litografia,
+   * San Thomen postikortti, Van Rynen kaiverrus, The Graphicin
+   * satamatyömaa ja Egmoren asema) — jokaisessa se on sanottu
+   * kuvatekstissä, kuten reseptin poikkeus vaatii. Kaupungin
+   * valokuvakorteissa (asia-lisat-valokuvat.js) jo käytettyjä
+   * tiedostoja ei ole otettu uudelleen.
+   *
+   * KAKSI PERUSTELTUA AIHETOISTOA. Chennai Central näkyy oppaan
+   * ensimmäisessä jaksossa panoraamana ja aseman omassa jutussa
+   * lähempää, ja Marina näkyy oppaan kolmannessa jaksossa iltahämärän
+   * tyhjänä hiekkana ja rannan omassa jutussa aallokkona — molemmissa
+   * kuva kertoo eri asian kuin toinen, eikä sama tiedostonimi esiinny
+   * kahdesti.
+   *
+   * KUVATEKIJÄ, JOTA EI VOI KIRJOITTAA SELLAISENAAN. Mylaporen
+   * altaan panoraaman extmetadata.Artist on kokonainen
+   * lisenssitaulukko, jossa tekijä pyytää krediitin muodossa
+   * "PlaneMad/Wikimedia"; lähderiviin on siksi kirjoitettu PlaneMad.
+   * Kaikkien muiden 27 kuvan tekijä on rajapinnan Artist-kentästä
+   * sellaisenaan.
+   */
+  chennai: [
+    {
+      id: 'kaupunki',
+      nimi: 'Chennai',
+      johdanto: 'Kalastajakylän rannalle valmistui 1644 englantilainen '
+        + 'linnoitus, ja sen ympärille kasvoi Madras. Bengalinlahden '
+        + 'rannalla on yhä maan pisin luonnollinen kaupunkiranta ja '
+        + 'täältä lähti Etelä-Intian ensimmäinen rautatie.',
+      kansikuvat: [
+        {
+          tiedosto: 'Aerial SE Island Grounds Chennai Jul25 R16 07919.jpg',
+          selite: 'Ilmakuvassa Marinan hiekka täyttää alalaidan, sen '
+            + 'takana Cooum-joki kaartaa Island Groundsin ympäri ja '
+            + 'kaupunki jatkuu utuiseen taivaanrantaan asti.',
+          lahde: 'Timothy A. Gonsalves, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Madras High Court-3-North fort road-chennai-India.jpg',
+          selite: 'Ylimmän oikeuden punatiilinen porttirakennus kohoaa '
+            + 'George Townin kadun päässä kahtena sipulikupolisena '
+            + 'tornina.',
+          lahde: 'Yercaud-elango, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Mylapore tank at dawn panorama.jpg',
+          selite: 'Aamun valossa Mylaporen temppelialtaan takaa '
+            + 'piirtyvät Kapaleeshwararin gopuram ja korttelin matalat '
+            + 'katot.',
+          lahde: 'PlaneMad, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: linnoitus, museokortteli ja satama — kaupungin
+       * kolme kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (kauppakomppanian muurit, keräilyn ja opin laitokset, se meri
+       * jonka takia kaikki on tässä).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Fort St. George, Chennai 2.jpg',
+          selite: 'Linnoituksen sisällä kohoaa valkoinen hallintotalo, '
+            + 'jonka tummat pylväsrivit kannattelevat kahta '
+            + 'kolmiopäätyä.',
+          lahde: 'L.vivian.richard at English Wikipedia, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Madras museum theatre in October 2007.jpg',
+          selite: 'Museum Theatren puolipyöreä tiilijulkisivu kaartuu '
+            + 'puiden takana, ja kaarikäytävän yläpuolelle on '
+            + 'kirjoitettu rakennuksen nimi.',
+          lahde: 'L.vivian.richard at English Wikipedia, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Chennai Port aerial view.jpg',
+          selite: 'Ilmakuvassa sataman laiturit ja konttikentät '
+            + 'työntyvät aallonmurtajien suojaan aivan kaupungin '
+            + 'kortteleiden viereen.',
+          lahde: 'Saiphani02, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Linnoitus, joka valmistui Pyhän Yrjön päivänä',
+          tiedosto: 'Plan of Fort St George and the City of Madras 1726.jpg',
+          teksti: 'Elokuussa 1639 kauppias Francis Day tapasi '
+            + 'Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan '
+            + 'ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta '
+            + 'ja varastoa varten. Lupa annettiin 22. elokuuta, ja '
+            + 'paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. '
+            + 'Englannin Itä-Intian kauppakomppania rakensi rantaan '
+            + 'linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän '
+            + 'Yrjön päivänä noin kolmentuhannen punnan kustannuksin. '
+            + 'Muurien sisään jäi White Town, ulkopuolelle kasvoi George '
+            + 'Town, ja näistä kahdesta tuli Madras. Muurien sisällä on '
+            + 'myös St. Mary’s, Intian vanhin anglikaaninen kirkko, '
+            + 'rakennettu 1678–1680.',
+          selite: 'Vuoden 1726 painetussa pohjakaavassa linnoitus on '
+            + 'rannassa alhaalla vasemmalla, sen pohjoispuolella '
+            + 'ruutukaavainen Black Town ja alareunassa Madrasin redi '
+            + 'purjelaivoineen.',
+          lahde: 'Herman Moll, London, Wikimedia Commons (PD)',
+          wiki: 'Fort St. George',
+        },
+        {
+          otsikko: 'Mutakaistaleesta kaupungin olohuone',
+          tiedosto: 'Chelingue sur la côte de Coromandel à Madras dans la première moitié du XIXeme siècle.jpg',
+          teksti: 'Ennen satamaa Marina oli mutainen kaistale, joka '
+            + 'kuhisi mutahyppääjiä, ja meri löi lähelle nykyistä '
+            + 'rantatietä. Kun satama valmistui 1881, sen aallonmurtaja '
+            + 'pysäytti rannansuuntaisen hiekkavirran, ja pohjoiseen '
+            + 'kulkeva virtaus levitti rannan vähitellen nykyiseen '
+            + 'mittaansa. Madrasin kuvernööri Mount Stuart Elphinstone '
+            + 'Grant Duff oli ihastunut rantaan jo 1870-luvun lopun '
+            + 'vierailullaan ja rakennutti sinne 1884 hiekalla vuoratun '
+            + 'promenadin, jolle antoi nimen Madras Marina. Hiekkaa on '
+            + 'nyt kolmetoista kilometriä ja promenadia kuusi, ja ranta '
+            + 'kasvaa yhä noin neljäkymmentä neliömetriä vuodessa.',
+          selite: 'Ranskalaiseen kivipiirrokseen on painettu julkaisijan '
+            + 'oma kuvateksti, ja kuvassa aallokkoon jäänyttä '
+            + 'masula-venettä puretaan hiekalle kantajien ja '
+            + 'kantotuolien keskellä.',
+          lahde: 'François-Edmond Pâris (1806-1893), Wikimedia Commons (PD)',
+          wiki: 'Marina Beach',
+        },
+        {
+          otsikko: 'Etelä-Intian ensimmäinen rautatie',
+          tiedosto: 'Beyer Peacock - Madras Railway No 425.jpg',
+          teksti: 'Intian ensimmäistä rautatietä ehdotettiin Madrasiin '
+            + '1832. Rata Little Mountin ja Chintadripetin välille '
+            + 'rakennettiin 1835 ja avattiin liikenteelle 1837. Madras '
+            + 'Railway -yhtiö perustettiin 1845, ja sen ensimmäinen '
+            + 'päärata Madrasista Arcotiin alkoi rakentua 1853 ja avautui '
+            + '1856; Etelä-Intian ensimmäinen asema oli Royapuram, joka '
+            + 'valmistui 1853 ja toimi yhtiön pääkonttorina. Tavoitteena '
+            + 'oli yhdistää itärannikko länsirannikkoon. Raichurin kautta '
+            + 'syntyi 1871 yhteys Bombayhin ja Vijayawadan kautta 1899 '
+            + 'Kalkuttaan. Vuoden 1877 loppuun mennessä yhtiöllä oli 150 '
+            + 'höyryveturia, 391 matkustajavaunua ja 3 223 tavaravaunua.',
+          selite: 'Vuoden 1860 valokuvassa Madras Railwaylle tilattu '
+            + 'säiliöveturi seisoo tehtaan pihalla kiskoilla, ja sen '
+            + 'kylkilaatikossa on valmistajan oma numerolaatta.',
+          lahde: 'James Mudd (1821 - 1906), Wikimedia Commons (PD)',
+          wiki: 'Madras Railway',
+        },
+        {
+          otsikko: 'Intian toiseksi vanhin museo',
+          tiedosto: 'CONNEMARA PUBLIC LIBRARY 01.jpg',
+          teksti: 'Government Museum perustettiin 1851 College Roadille '
+            + 'Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle '
+            + 'Egmoreen, jossa se on yhä. Vanhempi museo Intiassa on vain '
+            + 'Kalkutan Intian museo. Kokoelmassa on 1,7 miljoonaa '
+            + 'esinettä, ja siihen kuuluu yksi Euroopan ulkopuolen '
+            + 'laajimmista roomalaisten rahojen kokoelmista sekä '
+            + 'viisisataa pronssiveistosta. Samassa korttelissa ovat '
+            + 'Museum Theatre, kansallinen taidegalleria ja Connemaran '
+            + 'kirjasto, jonka peruskiven kuvernööri lordi Connemara '
+            + 'laski 1890 ja joka avattiin yleisölle 1896.',
+          selite: 'Connemaran kirjaston lukusalin puinen kattoholvi '
+            + 'jatkuu kaarena salin päästä päähän, ja sen keskellä on '
+            + 'värillistä lasia.',
+          lahde: 'Dr. Narayanan Hariharan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Government Museum, Chennai',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Marina Beach (8321253501).jpg',
+          selite: 'Marinan hiekalle vedetyn kalastajaveneen keulaan on '
+            + 'maalattu jumalhahmoja ja silmäpari, ja takana lyö '
+            + 'aallokko.',
+          lahde: 'Ashwin Kumar from Bangalore, India, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Chennai on Tamil Nadun pääkaupunki ja Etelä-Intian '
+          + 'suurin kaupunki, mutta matkailijan Chennai on kapea kaistale '
+          + 'rannan suuntaisesti. Kaikki kohteet ovat kuuden kilometrin '
+          + 'nauhalla, joka alkaa pohjoisesta George Townin '
+          + 'hallintokorttelista ja linnoituksesta, jatkuu Egmoren aseman '
+          + 'ja museokorttelin kautta ja päättyy etelässä Mylaporen '
+          + 'temppelikaupunkiin. Itäpuolella on koko matkan Marina ja '
+          + 'Bengalinlahti, länsipuolella liikekeskustan korttelit. '
+          + 'Kaupungin pääkieli on tamili, ja englannilla pärjää '
+          + 'toimistoissa ja asemilla.',
+        artikkeli: {
+          nimi: 'Matkailijan Chennai',
+          taitto: 'opas',
+          teksti: 'Kaupunki syntyi linnoituksesta ja levisi rantaa pitkin '
+            + 'etelään — ja sen olohuone on kolmentoista kilometrin '
+            + 'hiekkakaistale, jossa ei uida.',
+          nosto: 'Intian suuri kolmiomittaus alkoi Madrasista 10. '
+            + 'huhtikuuta 1802: kaupunki oli koko Etelä-Aasian '
+            + 'kartoituksen perusviiva.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Junalla saavutaan useimmiten Chennai Centraliin, '
+                + 'joka avattiin 1873 toiseksi pääteasemaksi purkamaan '
+                + 'Royapuramin ruuhkaa. Aluksi laitureita oli neljä, '
+                + 'nykyään seitsemäntoista, ja aseman kautta kulkee noin '
+                + '730 000 matkustajaa päivässä. Etelään lähtevät junat '
+                + 'käyttävät Egmoren asemaa, ja lisäksi kaupungissa ovat '
+                + 'Beachin ja Tambaramin päätepisteet. Lentoasema on '
+                + 'Tirusulamissa noin kahdenkymmenen kilometrin päässä '
+                + 'lounaassa. Kaupungin sisällä kulkevat 1928 aloitettu '
+                + 'lähijunaverkko, 1995 avattu korkealla kulkeva MRTS '
+                + 'Beachin ja Velacheryn välillä sekä 2015 avattu metro, '
+                + 'jolla on kaksi linjaa, 54 kilometriä rataa ja 41 '
+                + 'asemaa. Kadulla liikutaan keltaisilla '
+                + 'moottoririksoilla ja kaupungin omilla busseilla.',
+              kuva: {
+                tiedosto: 'Chennai Central D.jpg',
+                selite: 'Chennai Centralin punainen julkisivu jatkuu '
+                  + 'päädystä päätyyn, ja oikeassa reunassa kohoaa '
+                  + 'nelitauluinen kellotorni.',
+                lahde: 'Augustus Binu/ facebook, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Chennai on Koromandelin rannikolla Bengalinlahden '
+                + 'rannalla, tasaisella itärannikon rannikkotasangolla. '
+                + 'Keskikorkeus merenpinnasta on vajaat seitsemän metriä ja '
+                + 'korkein kohta kuusikymmentä. Kaupungin halki virtaa '
+                + 'kaksi jokea: Cooum keskeltä ja Adyar etelämpää, ja '
+                + 'niitä yhdistää rannan suuntainen Buckinghamin kanava, '
+                + 'joka kaivettiin 1877–78. Rantaviivaa on lähes '
+                + 'kaksikymmentäviisi kilometriä. Kaupunki on lähellä '
+                + 'lämpöekvaattoria, joten vuodenaikojen lämpötilaerot '
+                + 'jäävät pieniksi. Adyarin suistossa on suojeltu '
+                + 'lintualue, kaupungin rajojen sisällä Guindyn '
+                + 'kansallispuisto, ja eteläisellä rannalla munivat '
+                + 'oliivinvihreät ridley-merikilpikonnat loka–huhtikuussa. '
+                + 'Kaupungin lintulajeja on kirjattu yli sataakolmeakymmentä.',
+              kuva: {
+                tiedosto: 'Guindy Railway Bridge Adyar River Chennai Jul18 DSC05379.jpg',
+                selite: 'Ilmakuvassa juna ylittää Adyar-joen matalaa '
+                  + 'ristikkosiltaa pitkin, ja molemmin puolin jokea '
+                  + 'leviää tiivis matala kaupunki.',
+                lahde: 'Timothy A. Gonsalves, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: musiikkikausi ja rannan illat',
+              teksti: 'Marraskuun puolivälistä tammikuuhun kaupungissa '
+                + 'vietetään musiikkikautta, joka alkoi 1927 ja jonka '
+                + 'perustajat perustivat myöhemmin Madras Music Academyn. '
+                + 'Konsertit järjestävät sabhat eli musiikkiyhdistykset, '
+                + 'joilla kullakin on oma salinsa; suurimpiin mahtuu noin '
+                + 'kolmesataa kuulijaa ja pienimpiin seitsemänkymmentäviisi, '
+                + 'ja saleissa on kauden ajan omat ruokalansa. Kausi '
+                + 'alkoi karnaattisen musiikin juhlana, mutta siihen on '
+                + 'tullut mukaan tanssia ja teatteria: kaudella 2004–2005 '
+                + 'esityksiä oli yli 1 200 ja esiintyjiä noin 600. '
+                + 'Kaupunki on myös bharatanatyam-tanssin tärkeimpiä '
+                + 'keskuksia. Iltaisin väki siirtyy Marinalle, jonne '
+                + 'kävelee arkisin noin 30 000 ja viikonloppuisin jopa '
+                + '50 000 ihmistä.',
+              kuva: {
+                tiedosto: 'Chennai Marina Beach in 2022, October 03.jpg',
+                selite: 'Iltahämärässä Marinan hiekka jatkuu tyhjänä '
+                  + 'horisonttiin, jossa rantabulevardin valot muodostavat '
+                  + 'yhtenäisen nauhan.',
+                lahde: 'Pinakpani, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kartan perusviiva',
+              teksti: 'Intian suuri kolmiomittaus käynnistyi Madrasista '
+                + '10. huhtikuuta 1802, ja kaupunki toimi koko '
+                + 'mittausoperaation perusviivana — siitä eteenpäin '
+                + 'Etelä-Aasia piirrettiin kartalle mittaamalla eikä '
+                + 'arvioimalla. Samaan aikaan Madrasista tuli brittien '
+                + 'tärkein laivastotukikohta ja Etelä-Intian '
+                + 'hallintokeskus. Rautateiden myötä kaupunki kytkeytyi '
+                + '1800-luvun jälkipuoliskolla Bombayhin ja Kalkuttaan, '
+                + 'ja tavara alkoi liikkua sisämaahan asti. Kahden '
+                + 'sataman, kahden pääradan ja lentoaseman takia '
+                + 'kaupunkia sanotaan yhä Etelä-Intian portiksi. '
+                + 'Vanhimmat kaupungin rakennukset ovat kuitenkin '
+                + 'eurooppalaisia vanhempia: Mylaporen ja Triplicanen '
+                + 'temppelit ovat 600–800-luvuilta.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Chennaista puuttuu vielä, joten nämä '
+                + 'luvut ovat en-Wikipedian Chennai-artikkelin '
+                + 'ilmasto-osiosta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Ilmasto on kuivan kesän trooppinen '
+                + 'savanni-ilmasto aivan kuivan talven tyypin rajalla: '
+                + 'helmikuun keskimääräinen sademäärä on vain 4,7 '
+                + 'millimetriä. Kuuminta on huhti–kesäkuussa, jolloin '
+                + 'keskilämpötila on kolmenkymmenenviiden ja '
+                + 'neljänkymmenen asteen välillä; korkein mitattu lukema '
+                + 'on 45 astetta 31. toukokuuta 2003. Viileintä on '
+                + 'joulu–tammikuussa, yhdeksäntoista ja '
+                + 'kahdenkymmenenviiden asteen välillä, ja matalin '
+                + 'mitattu lukema 13,9 astetta on vuosilta 1895 ja 1905. '
+                + 'Sateista valtaosa tulee koillismonsuunista '
+                + 'loka–joulukuussa ja pienempi osa lounaismonsuunista '
+                + 'kesä–syyskuussa; kuivin kuukausi on maaliskuu 3,4 '
+                + 'millimetrillä ja vuoden sademäärä noin sata '
+                + 'kaksikymmentä senttimetriä.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Portugalilaiset, hollantilaiset ja englantilaiset '
+        + 'kilpailivat samasta rannikosta, ja voittaja rakensi '
+        + 'linnoituksen, josta kasvoi presidenssin pääkaupunki. Nimi '
+        + 'vaihtui Madrasista Chennaiksi vasta heinäkuussa 1996.',
+      tehtava: {
+        kysymys: 'Minkä maan kauppiaat rakensivat São Tomén sataman 1522?',
+        vaihtoehdot: [
+          'Portugalin',
+          'Hollannin',
+          'Englannin',
+          'Ranskan',
+        ],
+        oikea: 0,
+        fakta: 'Portugalilaiset saapuivat rannikolle 1522, hollantilaiset '
+          + 'perustivat kauppapaikkansa Pulicatiin 1612 ja englantilaiset '
+          + 'saivat oman kaistaleensa vasta 1639.',
+      },
+      nostot: [
+        {
+          otsikko: 'Ennen englantilaisia',
+          tiedosto: '51 - St. Thome \' Cathedral - Madras, KITLV 1403016.tiff',
+          teksti: 'Rannikolla oli eurooppalaisia jo ennen '
+            + 'kauppakomppaniaa. Portugalilaiset saapuivat 1522 ja '
+            + 'rakensivat São Tomén sataman sen haudan viereen, jossa '
+            + 'perimätiedon mukaan lepää apostoli Tuomas — hänen '
+            + 'uskotaan saarnanneen seudulla vuosien 52 ja 70 välillä. '
+            + 'Hollantilaiset perustivat kauppapaikkansa 1612 Pulicatiin '
+            + 'hieman pohjoiseen. Englantilaiset saivat oman kaistaleensa '
+            + 'vasta 1639. Kaupungin nykyinen nimi juontuu Chennappa '
+            + 'Nayakasta, Vijayanagaran keisarin sotapäälliköstä, ja se '
+            + 'esiintyy jo elokuun 1639 kauppakirjassa; osa tutkijoista '
+            + 'pitää nimen ensimmäisenä käyttönä vasta vuoden 1646 '
+            + 'maalahjoitusta Chennapatnamin temppelille.',
+          selite: 'Noin 1920 painettuun postikorttiin on lisätty '
+            + 'julkaisijan oma numeroitu kuvateksti, ja kuvassa San '
+            + 'Thomen uusgoottilainen katedraali nousee puurivin takaa.',
+          lahde: 'Higginbothams Ltd. (Madras & Bangalore), Wikimedia Commons (PD)',
+          wiki: 'Chennai',
+        },
+        {
+          otsikko: 'Ranskalaisten kolme vuotta',
+          tiedosto: 'Fort St. George, Chennai.jpg',
+          teksti: 'Vuonna 1746 ranskalaiset valtasivat Madrasin ja Fort '
+            + 'St. Georgen kenraali La Bourdonnais’n johdolla; hän oli '
+            + 'tuolloin Mauritiuksen kuvernööri. Britit saivat kaupungin '
+            + 'takaisin 1749 Aix-la-Chapellen rauhassa, joka päätti '
+            + 'Itävallan perimyssodan. Sen jälkeen kuusimetrisiä muureja '
+            + 'vahvistettiin yhä uudelleen: ranskalaiset yrittivät '
+            + 'piiritystä 1759, ja 1769 Mysoren Hyder Ali uhkasi '
+            + 'kaupunkia ensimmäisessä Anglo-Mysore-sodassa, joka päättyi '
+            + 'Madrasin sopimukseen. Linnoituksessa on yhä museo, jonka '
+            + 'kokoelmissa on komppanian ajan esineistöä.',
+          selite: 'Vuoden 1754 väritettyyn kaiverrukseen on painettu '
+            + 'julkaisijan omat englannin- ja ranskankieliset '
+            + 'kuvatekstit, ja siinä linnoitus näkyy mereltä päin '
+            + 'ankkurissa olevien purjelaivojen takaa.',
+          lahde: 'Jan Van Ryne (1712–60); Publisher: Robert Sayer, Wikimedia Commons (PD)',
+          wiki: 'Chennai',
+        },
+        {
+          otsikko: 'Presidenssi, joka nousi, laski ja nousi',
+          tiedosto: 'KITLV 92070 - Unknown - Port at Madras, India, seen from the lighthouse - Around 1870.tif',
+          teksti: 'Fort St. Georgen agentuuri korotettiin presidenssiksi '
+            + '1652, palautettiin entiseen asemaansa 1655 ja korotettiin '
+            + 'uudelleen 1684; presidentiksi nimitettiin Elihu Yale, '
+            + 'josta tuli myöhemmin Yalen yliopiston ensimmäinen '
+            + 'lahjoittaja. Pitt’s India Act teki Madrasista yhden '
+            + 'kauppakomppanian kolmesta presidenssistä. Talvipääkaupunki '
+            + 'oli Madras ja kesäpääkaupunki vuoristossa sijaitseva '
+            + 'Udhagamandalam eli Ooty. Ensimmäinen eurooppalaistyylinen '
+            + 'pankki koko Intiassa, Madras Bank, perustettiin täällä 21. '
+            + 'kesäkuuta 1683; siitä polveutuvat myöhemmät '
+            + 'presidenssipankit.',
+          selite: 'Noin vuoden 1870 valokuvassa presidenssin pääkaupunki '
+            + 'leviää majakalta katsottuna matalana kattomerenä, ja '
+            + 'oikealla näkyvät sataman ensimmäiset laiturit.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Madras Presidency',
+        },
+        {
+          otsikko: 'Satama, joka rakennettiin aallokkoon',
+          tiedosto: '"The New Harbour Works at Madras," from The Graphic, 1880.jpg',
+          teksti: 'Madrasilla ei ollut luonnonsatamaa. Laivat ankkuroivat '
+            + 'yli kilometrin päähän rannasta, ja lasti tuotiin maihin '
+            + 'masula-veneillä ja katamaraaneilla aallokon läpi. Satamaa '
+            + 'ehdotti Warren Hastings jo 1770, mutta ensimmäisiin '
+            + 'laituritöihin ryhdyttiin vasta 1850-luvulla '
+            + 'kauppakamarin aloitteesta, ja vuosien 1868 ja 1872 myrskyt '
+            + 'tekivät laitureista käyttökelvottomia. Uuden sataman '
+            + 'peruskiven laski 1875 Britannian tuleva kuningas Edward '
+            + 'VII, ja aallonmurtajien kivityöt alkoivat 1876. Kun '
+            + 'poikittaispadot romahtivat 1877, eteläistä laituria '
+            + 'alettiin rakentaa kolmenkymmenenkolmen tonnin '
+            + 'betoniharkoista.',
+          selite: 'Vuoden 1880 lehtikuvitukseen on painettu julkaisijan '
+            + 'omat numerot ja kuvatekstit, ja sen neljässä ruudussa '
+            + 'näkyvät betoniharkkojen valupiha, nostolaitteet ja koko '
+            + 'työmaa majakalta katsottuna.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Chennai Port',
+        },
+      ],
+    },
+  ],
 };

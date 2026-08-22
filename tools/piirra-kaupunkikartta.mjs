@@ -2938,6 +2938,66 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  chennai: {
+    /*
+     * KOROMANDELIN RANTAKAISTALE GEORGE TOWNISTA MYLAPOREEN
+     * (22.8.2026). Ruutu on 6,6 × 7,4 km, ja siihen mahtuvat lehden
+     * kaikki kymmenen kohdetta: pohjoisessa ylin oikeus, Chennai
+     * Central ja Ripon Building, keskellä Fort St. George, Egmoren
+     * asema ja Government Museum, etelässä Chepaukin palatsi, Marina
+     * ja Mylaporen temppelikortteli San Thomen basilikan kanssa.
+     *
+     * RUUTU ON PYSTY, JA SE ON KAUPUNGIN OMA MUOTO eikä piirtäjän
+     * valinta. Kohteet ovat luonnostaan 5,9 kilometrin mittainen
+     * pohjois–eteläsuuntainen nauha rantaviivan suuntaisesti ja vain
+     * 3,4 kilometriä leveä — Madras kasvoi linnoituksesta etelään
+     * rantaa pitkin. Tiukka rajaus olisi piirtynyt kapeaksi
+     * kaistaleeksi, joten ruutua on levennetty molempiin suuntiin
+     * yhtä paljon: idässä näkyy Bengalinlahti ja sataman
+     * aallonmurtajat, lännessä Egmoren ja Nungambakkamin katuverkko.
+     * Kuvasuhde on 0,89 eli 1600 × 1804 pikseliä, mikä on Varanasin
+     * (1600 × 1595) ja Isfahanin (1600 × 1983) välissä.
+     *
+     * meri: true, koska Bengalinlahti on OSM:ssä avomerta eikä
+     * sulkeutuvaa vesimonikulmiota: ilman merentäyttöä kartan koko
+     * itälaita jäisi paperin väriseksi ja Marina-ranta näyttäisi
+     * päättyvän tyhjyyteen. Sama ratkaisu kuin Adenissa, Manilassa ja
+     * Yangonissa. Kaksi jokea, Cooum ja Adyar, piirtyvät omina
+     * uominaan.
+     *
+     * MARINA-RANNAN PISTE ON HIEKALLA, EI VEDESSÄ, ja se tarkistettiin
+     * erikseen: en-Wikipedian {{Coord}} 13,05418 / 80,28368 osuu
+     * OSM:n natural=beach-alueelle rantaviivan länsipuolelle.
+     * Sillat ja majakat saavat olla vedellä, ranta ei —
+     * tarkista-karttapisteet.mjs vahvistaa tämän.
+     *
+     * CONNEMARAN KIRJASTO EI OLE PISTELISTALLA, vaikka se on lehden
+     * teksteissä. Se on Government Museumin kanssa samassa Pantheonin
+     * korttelissa: en-Wikipedian koordinaatit ovat 13,0706 / 80,2567
+     * ja 13,0711 / 80,2569 eli 57 metrin päässä toisistaan, mikä on
+     * kolme kymmenesosaa prosenttia ruudun leveydestä. Numeroympyrät
+     * olisivat menneet täysin päällekkäin (Petran, Mekan ja
+     * Singaporen oppi), joten kirjasto kerrotaan museon omassa
+     * jutussa.
+     *
+     * SUUR-CHENNAIN KOHTEET JÄIVÄT ULKOPUOLELLE eivätkä kainaloon:
+     * lentoasema on 20 km lounaaseen, Guindyn kansallispuisto 8 km
+     * ja Mahabalipuramin maailmanperintökohde 55 km etelään. Kaikki
+     * ovat kauempana kuin yksikään kainalo tässä kartastossa (Medinan
+     * Quba 3,5 km, Adenin Tawahi 6 km), ja ne kerrotaan matkaoppaassa
+     * (Medinan Uhud-vuoren ratkaisu).
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kantonissa ja Kolkatassa: Marinan promenadi,
+     * Mylaporen temppelialtaan kiertokatu ja George Townin
+     * kauppakujat ovat OSM:ssä jalankulkualueita ja huoltoteitä, ja
+     * ilman lippuja kartan tihein osa jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 13.094, etela: 13.027, lansi: 80.242, ita: 80.303 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*
