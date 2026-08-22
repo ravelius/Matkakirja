@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1029 — KOKORUUDUN PIIRROSSUURENNUS V2 (omistajan palaute 23.8.2026: "pitaisi suurentua samalla tavalla kuin muuten... tulee tallainen lappu turhaan"): v1027:n kermakortti poistettu — kokoruutukartalla piirroksen napautus suurentaa nyt saman lapinakyvan piirroksen kartan paalle nimikylttineen, tasmalleen kuten lehden kartassa. Kuva/kyltti avaa jutun, napautus muualle tai Escape purkaa valinnan, toinen Escape sulkee kartan. Tarkista: Helsingin ja Tokion kokoruutukartta',
   'v1028 — AASIAN KUVATEKSTIREMONTTI ERA 1 (KT1): 19 kaupunkia astana → kioto, ~300 selitetta uusittu kohde-ei-kuva-linjaan (rakennuksen historia ja merkitys, ei kuvailua). Jaljella 21 Aasian kaupunkia kolkata → yangon, jatkoagentti tyossa. Tarkista: Bangkokin ja Hongkongin kuvatekstit',
   'v1027 — KOKORUUDUN PIIRROSKORTTI (omistajan raportti 23.8.2026): kokoruutukartalla piirroskohteen napautus nayttaa nyt ensin piirroksen isompana korttina kartan paalla (kartta jaa auki) — juttuun paasee kortin piirroksesta tai Lue juttu -napista; Escape sulkee kerrokset jarjestyksessa kortti → kartta → lehti. Numeroympyrat ilman piirrosta avaavat jutun suoraan kuten ennen. Tarkista: Helsingin ja Tokion kokoruutukartta',
   'v1026 — LEIKKAUSKORJAUS (omistajan havainto 23.8.2026: "Ei nay lapinakyvina"): Helsingin akvarelliminiatyyrien kermatausta leikattu pois tulvataytolla (reunoilta, pehmennetty sauma) — kuvat ovat taas lapinakyvia kuten seepiaversiot. Tarkista: Helsingin kohdekartan kortit',
