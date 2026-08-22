@@ -710,20 +710,23 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-kairo-aamu.png',
-          selite: 'Gizan pyramidit ja sfinksi aamuauringossa, ja Kairo '
-            + 'häämöttää horisontissa.',
+          selite: 'Gizan suuri pyramidi oli maailman korkein rakennus '
+            + 'lähes neljätuhatta vuotta, ja se on antiikin seitsemästä '
+            + 'ihmeestä ainoa jäljellä oleva.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-kairo-keskipaiva.png',
-          selite: 'Muhammad Alin moskeija sitadellilla kirkkaassa '
-            + 'keskipäivässä, ja kaupunki levittäytyy muurien alla.',
+          selite: 'Muhammad Ali rakennutti alabasterimoskeijansa '
+            + '1800-luvulla Saladinin sitadellille, josta Egyptiä '
+            + 'hallittiin lähes seitsemänsataa vuotta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-kairo-ilta.png',
-          selite: 'Kairon torni Geziran saarella ilta-auringossa, ja '
-            + 'felukat lipuvat leveällä Niilillä.',
+          selite: 'Kairon torni (1961) oli valmistuessaan Afrikan '
+            + 'korkein rakennelma, ja sen betoniristikko jäljittelee '
+            + 'lootuskasvin vartta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -10331,26 +10334,30 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero7-tuomiokirkko.png',
-          selite: 'Tuomiokirkko ilta-auringossa Senaatintorin yllä '
-            + 'kattotason kuvakulmasta.',
+          selite: 'Carl Ludvig Engelin piirtämä Tuomiokirkko valmistui '
+            + '1852, ja siitä tuli merelle näkyvä Helsingin tunnus jo '
+            + 'purjelaivojen aikana.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero7-tuomiokirkko-keskipaiva.png',
-          selite: 'Sama näkymä keskipäivän valossa — kirkas julkisivu ja lyhyet '
-            + 'varjot.',
+          selite: 'Senaatintorin empirekeskusta rakennettiin 1800-luvun '
+            + 'alussa nuoren pääkaupungin näyteikkunaksi, ja kirkko, '
+            + 'yliopisto ja valtioneuvosto reunustavat toria yhä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero7-uspenski.png',
-          selite: 'Uspenskin katedraali aamuauringossa, ohut usva sataman '
-            + 'yllä.',
+          selite: 'Uspenskin katedraali (1868) on Länsi-Euroopan suurin '
+            + 'ortodoksinen kirkko ja muistuttaa ajasta, jolloin Suomi '
+            + 'oli Venäjän suuriruhtinaskunta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero7-oodi.png',
-          selite: 'Oodin puinen aalto ilta-auringossa, Eduskuntatalo '
-            + 'Kansalaistorin takana.',
+          selite: 'Keskustakirjasto Oodi (2018) valittiin pian '
+            + 'valmistumisensa jälkeen maailman parhaaksi uudeksi '
+            + 'yleiseksi kirjastoksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -30674,19 +30681,23 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-peking-aamu.png',
-          selite: 'Kielletty kaupunki aamuauringossa, usva vallihaudan '
-            + 'yllä.',
+          selite: 'Kielletty kaupunki oli Ming- ja Qing-keisarien '
+            + 'palatsi lähes viisisataa vuotta, eikä sinne päässyt '
+            + 'ilman keisarin lupaa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-peking-keskipaiva.png',
-          selite: 'Taivaan temppelin sininen katto kirkkaassa keskipäivässä.',
+          selite: 'Taivaan temppelissä keisari rukoili joka vuosi hyvää '
+            + 'satoa, ja sen pyöreä rukoushalli on rakennettu puusta '
+            + 'ilman ainuttakaan naulaa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-peking-ilta.png',
-          selite: 'Kesäpalatsi ja Seitsemäntoista kaaren silta ilta-auringossa '
-            + 'Kunming-järvellä.',
+          selite: 'Kesäpalatsi oli keisarihovin pakopaikka kaupungin '
+            + 'helteestä, ja sen Kunming-järvi on suurelta osin '
+            + 'ihmisvoimin kaivettu.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -31558,20 +31569,23 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-tokio-aamu.png',
-          selite: 'Senso-jin temppeli ja pagodi aamuauringossa '
-            + 'Asakusassa, ja suitsukkeen savu nousee esipihalta.',
+          selite: 'Senso-ji on Tokion vanhin temppeli: perimätiedon '
+            + 'mukaan se perustettiin vuonna 628 paikalle, jossa '
+            + 'kalastajaveljesten verkkoon tarttui Kannonin patsas.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-tokio-keskipaiva.png',
-          selite: 'Tokion torni punavalkoisena kirkkaassa keskipäivässä '
-            + 'Shiba-puiston vihreyden yllä.',
+          selite: 'Tokion torni (1958) otti mallinsa Eiffel-tornista ja '
+            + 'nousi sodanjälkeisen jälleenrakennuksen Japanin '
+            + 'tunnukseksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-tokio-ilta.png',
-          selite: 'Tokion aseman punatiilinen julkisivu hehkuu '
-            + 'ilta-auringossa Marunouchin tornien edessä.',
+          selite: 'Tokion aseman punatiilinen asemapalatsi avattiin '
+            + '1914, ja sotapommituksissa vaurioituneet kupolit '
+            + 'palautettiin alkuperäiseen asuunsa vasta 2012.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -38995,20 +39009,23 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-xian-aamu.png',
-          selite: 'Suuri villihanhipagoda aamuauringossa, ja usva leijuu '
-            + 'temppelin esipihan yllä.',
+          selite: 'Suuri villihanhipagoda rakennettiin vuonna 652 '
+            + 'säilyttämään kirjoituksia, jotka munkki Xuanzang toi '
+            + 'Intiasta silkkitietä pitkin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-xian-keskipaiva.png',
-          selite: 'Eteläportti ja kaupunginmuurin harja kirkkaassa '
-            + 'keskipäivässä, ja pyöräilijät kulkevat muurin päällä.',
+          selite: 'Eteläportti on Ming-ajan kaupunginmuurin pääportti, '
+            + 'ja neljäntoista kilometrin kehä on Kiinan parhaiten '
+            + 'säilynyt kaupunginmuuri.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-xian-ilta.png',
-          selite: 'Kellotorni ilta-auringossa liikenneympyränsä keskellä, '
-            + 'ja vanha keskusta hehkuu lämpimässä valossa.',
+          selite: 'Kellotorni (1384) ilmoitti aikaa koko Ming-ajan '
+            + 'kaupungille, ja se on Kiinan suurin ja parhaiten '
+            + 'säilynyt kellotorni.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {

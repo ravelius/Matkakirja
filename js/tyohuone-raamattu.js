@@ -557,6 +557,19 @@ export const RAAMATTU = {
           + 'ole oleellista tietoa. Korvaa vanhat mitat (johdanto '
           + '154–232 mrk); vanhat lehdet kirjoitetaan uusiksi tähän '
           + 'asuun erissä.',
+        'KUVATEKSTI KERTOO KOHTEESTA, EI KUVASTA (omistaja '
+          + '22.8.2026: "Kuvatekstit pitää kertoa rakennuksesta, sen '
+          + 'historiasta ja merkityksestä ei kuvailla kuvaa '
+          + 'visuaalisesti. Tämä koskee kaikkia kuvatekstejä"): '
+          + 'kuvateksti kertoo mitä kuvattu rakennus tai paikka ON — '
+          + 'historian, merkityksen tai kiinnostavan faktan — eikä '
+          + 'luettele mitä kuvassa näkyy (valoa, värejä, '
+          + 'sommittelua, "vasemmalla kohoaa..."). Visuaalinen '
+          + 'kuvailu sallitaan vain kun se itse on asia, kuten '
+          + 'tuhoutuneen kaupungin nykytila (ks. TUHOUTUNEEN '
+          + 'KAUPUNGIN NYKYKUVAT). Yksivirkesääntö pysyy (TEKSTIEN '
+          + 'PAINOPISTE). Koskee KAIKKIA kuvatekstejä; vanhat '
+          + 'kuvailevat selitteet kirjoitetaan uusiksi erissä.',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
           + 'koskaan repoon eikä lokiin.',
       ],
