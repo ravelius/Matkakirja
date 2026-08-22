@@ -31,11 +31,15 @@
 		<string>Taustavari</string>
 	</dict>
 
-	<!-- Peli on suunniteltu pystyasentoon (manifest.webmanifest: portrait).
-	     iPadilla sallitaan kaikki asennot, koska siellä pystylukko tuntuu rikkinäiseltä. -->
+	<!-- Vaakasuuntalukitus purettu (omistajan päätös 22.8.2026, v1033):
+	     peliä saa pelata myös vaakasuunnassa, joten myös iPhonella
+	     sallitaan vaaka-asennot. Ylösalainen pysty vain iPadilla —
+	     iPhonet eivät sitä tue. -->
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
