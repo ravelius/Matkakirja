@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v997 — SAARIVIT KAIKKIALLE: 18 puuttuvaa saarivia taydennetty (samarkand, xian, varanasi, hanoi, ulanbator, kathmandu, astana, kanton, yangon, mandalay, taipei, hongkong, jakarta, manila, borneo, sumatra, kashgar, lhasa) — vuosigraafi ja luonnehdinta joka lehdessa, oppaiden saajaksot oikaistu rivien omista luvuista. JATKOTYO: neljan uusimman lehden rivit (kolkata, kabul, chennai, mumbai + tulevat colombo/karachi) haetaan omana eranaan. Tarkista: parin kaupungin saa-graafi (esim. Lhasa, Borneo)',
   'v996 — MUMBAI: uusi lehti (kartta 10 kohteella Fort-alueen ympärillä; Elephanta nostona). Vanhan tekstin kolme kohtaa oikaistu (pengerrysvuodet, matkustajaluku, Dharavi-virke pois linjauksen mukaan). Saarivi puuttuu viela. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v995 — CHENNAI: uusi lehti (kartta 10 kohteella Fort St. Georgesta Mylaporeen, pystyrajaus rannan nauhaa pitkin; siirtomaahistoria neutraalina). Saarivi puuttuu viela. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v994 — KABUL: uusi lehti (kartta 8 kohteella, kainalossa Darulaman; 1873-painotus, kaikki ennen 1978; oppaan ainoa nykytoteamus koskee matkustusturvallisuutta). Vanhan tekstin sotakappale korvattu lehden aineistolla. Saarivi puuttuu viela. Tarkista: kartta, Matkaopas, Historian tehtava',
