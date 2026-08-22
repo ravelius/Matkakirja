@@ -869,7 +869,6 @@ export function avaaTilanneLehti(ui) {
     id: 'tilanne-taulu',
     nimi: 'Tilanne',
     yksipalsta: true,
-    sitaatti: false,
     rakenna: piirraTuoreetChipit,
     rakennaJatka: true,
     nostot: [{
@@ -884,7 +883,6 @@ export function avaaTilanneLehti(ui) {
     id: 'tilanne-testattavaa',
     nimi: 'Testattavaa',
     yksipalsta: true,
-    sitaatti: false,
     // Äärimmäisen minimalistinen (omistajan linjaus 15.8.2026):
     // pelkkiä viivarivejä, rivi per kappale.
     nostot: [{

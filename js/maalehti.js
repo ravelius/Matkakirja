@@ -22,7 +22,7 @@ import { vanhaTallenne } from './packs/vanhat-aanet.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import {
-  html, lahdemerkinta, MERKKI_SOITA, piirraLeipa, poimiNostoVirke,
+  html, lahdemerkinta, MERKKI_SOITA, piirraLeipa,
   suojaa,
 } from './ui-apurit.js';
 
@@ -441,8 +441,8 @@ function kytkeMaakartanSuurennos(ui, kehys, kotelo, kartta, nimi) {
 /**
  * Yhden kategorian nostot: johdanto ja sen alla kortit.
  *
- * Kohde on oletuksena aihesivun oma elementti; otsikon ja sitaatin
- * voi jättää pois, jos sama piirto taittaa sisältöä muualle.
+ * Kohde on oletuksena aihesivun oma elementti; otsikon voi jättää
+ * pois, jos sama piirto taittaa sisältöä muualle.
  */
 /**
  * "Maa numeroina" -arkkisivu: moduuli ja aineisto haetaan vasta
@@ -528,7 +528,7 @@ export function piirraMaaEtusivu(ui, kategoria) {
   ui.arrivalMaa.querySelector(':scope > .maa-etusivu-nosto')?.remove();
   if (kartta.nosto) {
     const nostoKotelo = html('div', 'maa-etusivu-nosto');
-    piirraKategoria(ui, { nostot: [kartta.nosto] }, nostoKotelo, { otsikko: false, sitaatti: false });
+    piirraKategoria(ui, { nostot: [kartta.nosto] }, nostoKotelo, { otsikko: false });
     ui.arrivalMaa.insertBefore(nostoKotelo, ui.arrivalOikea);
   }
   /*
@@ -782,7 +782,7 @@ export function aiheenOtsikko(ui, kategoria) {
   return nimi;
 }
 
-export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { otsikko = true, sitaatti = true } = {}) {
+export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { otsikko = true } = {}) {
   kohde.replaceChildren();
   if (!kategoria) return;
   // Kehittäjän liitteet taitetaan yhdelle palstalle ilman lehden
@@ -886,30 +886,19 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     return;
   }
   /*
-   * Sitaattinosto sivun alkupuolelle: lehdessä se on aukeaman
-   * hengähdyspaikka, ei koriste. Yksi per sivu, ks. poimiNostoVirke.
-   */
-  // Kansiosio on lyhyt, ja sitaatti toistaisi viereisen virkkeen
-  // melkein kiinni alkuperäisessä — siksi se voidaan jättää pois.
-  /*
-   * Sitaatti otetaan siitä nostosta, jonka ALLE se joutuu (indeksi 1),
-   * ei siitä, jonka perään se ladotaan.
+   * SITAATTINOSTO POISTETTU KOKONAAN (omistajan päätös 23.8.2026:
+   * "Nämä nostot ovat turhia koska kappaleet ovat itsessään niin
+   * lyhyitä. Voi ottaa pois.").
    *
-   * Ensimmäisestä nostosta poimittuna se toisti sanasta sanaan
-   * virkkeen, joka oli juuri luettu parikymmentä pikseliä ylempänä —
-   * Lontoon Menovinkit-sivulla ne olivat samassa ruudussa (mitattu
-   * 8.8.2026, 834 px). Lehdessä nostositaatti kuuluu sen jutun
-   * yhteyteen, jota se houkuttelee lukemaan, ja seuraavasta
-   * nostosta poimittuna se tekee juuri sen.
+   * Nosto poimi virkkeen SEURAAVASTA jutusta, ja koska aihesivujen
+   * jutut ovat lyhyitä, sama virke luettiin heti sen alta uudestaan
+   * — Istanbulin "Pintaa syvemmältä" -sivulla Yerebatan-virke näkyi
+   * kahdesti samassa ruudussa. Ei siis omaa hengähdyspaikkaa vaan
+   * toistoa. Sitaatti oli myös luennassa (blockquoten kappale on
+   * lukijan valkolistalla), joten se poistuu nyt myös kuunneltavasta
+   * sivusta.
    */
-  // Sivu voi kieltää sitaattinoston itse (kategoria.sitaatti: false):
-  // kehittäjän liitteet ovat työkaluja, ei taittoa (omistaja 20.8.2026:
-  // "näitä ei ole tarkoitus taittaa lehden muotoon vaan mahdollisimman
-  // käytettävään muotoon").
-  const sitaattiSallittu = sitaatti && kategoria.sitaatti !== false;
-  const nostoVirke = sitaattiSallittu ? poimiNostoVirke((kategoria.nostot ?? []).slice(1, 2)) : null;
   let ensimmainen = true;
-  let nostoSijoitettu = false;
   for (const nosto of kategoria.nostot ?? []) {
     const lohko = html('div', 'wiki-nosto');
     // Otsikko ja kuuntelu-/musiikkinapit samalla rivillä — sama
@@ -1037,30 +1026,6 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       leipa.appendChild(nappi);
     }
     ui.lisaaNostonLinkki(leipa, nosto);
-    /*
-     * SITAATTINOSTO LEIPÄTEKSTIN JATKOKSI, EI NOSTOJEN VÄLIIN
-     * (omistajan tilaus 22.8.2026: "siirrä nostot osaksi tekstiä niin
-     * että tyhjätila ja pitkät vaakaviivat häviävät").
-     *
-     * Ennen nosto ladottiin omana lohkonaan kahden noston VÄLIIN
-     * (kohde.appendChild). Kainalokuvallisessa nostossa se tarkoitti
-     * pahinta mahdollista paikkaa: leipäteksti loppui kelluvan kuvan
-     * puoliväliin, kuvan viereen jäi puolen ruudun aukko, ja nosto
-     * alkoi vasta sen alta omine vaakaviivoineen.
-     *
-     * Nyt nosto menee SAMAAN palstavirtaan leipätekstin kanssa —
-     * ensimmäisen noston .leipa-lohkon viimeiseksi — jolloin se
-     * juoksee kainalokuvan vierellä ja täyttää juuri sen aukon.
-     * Sisältö ja valinta eivät muutu: virke on yhä seuraavasta
-     * nostosta (nostoVirke), eli se houkuttelee lukemaan sitä juttua,
-     * jonka edellä se on. Ulkoasu on css/styles.css .wiki-sitaatti.
-     */
-    if (!nostoSijoitettu && nostoVirke) {
-      const sitaattiLohko = html('blockquote', 'wiki-sitaatti');
-      sitaattiLohko.appendChild(html('p', '', nostoVirke));
-      leipa.appendChild(sitaattiLohko);
-      nostoSijoitettu = true;
-    }
     // Selattava teosgalleria noston kuvan ympärille (pilottina
     // Venetsian Canaletto): nuolet vaihtavat teosta, selite ja
     // lähderivi seuraavat mukana.
