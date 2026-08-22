@@ -9475,6 +9475,32 @@ export const KULTTUURI_KATEGORIAT = {
        * silmin.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 4 (omistajan tilaus 22.8.2026):
+         * pelin omia havainnekuvia peiliämpäristä, kolme
+         * vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-rooma-aamu.png',
+          selite: 'Colosseum valmistui vuonna 80, ja noin '
+            + 'viidenkymmenentuhannen katsojan amfiteatteri on yhä '
+            + 'antiikin suurin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-rooma-keskipaiva.png',
+          selite: 'Pietarinkirkkoa rakennettiin yli sata vuotta '
+            + '(1506–1626), ja Michelangelon kupoli on yhä Rooman '
+            + 'korkein rakennelma.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-rooma-ilta.png',
+          selite: 'Pantheonin kupoli on ollut maailman suurin '
+            + 'raudoittamaton betonikupoli lähes kaksituhatta vuotta, '
+            + 'ja sen ainoa valonlähde on katon avoin silmä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: "Roma da Castel Sant'Angelo.jpg",
           selite: 'Vanhankaupungin katot aamun autereessa: vasemmalla '
@@ -16801,6 +16827,33 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 4 (omistajan tilaus 22.8.2026):
+         * pelin omia havainnekuvia peiliämpäristä, kolme
+         * vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-jerusalem-aamu.png',
+          selite: 'Kalliomoskeija valmistui 691 ja on islamin '
+            + 'vanhimpia rakennuksia; kultakupoli sai nykyisen '
+            + 'pinnoitteensa 1993.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-jerusalem-keskipaiva.png',
+          selite: 'Daavidin tornin sitadelli on vartioinut Jaffa-portin '
+            + 'sisäänkäyntiä yli kaksituhatta vuotta, ja nimensä se '
+            + 'sai Bysantin munkeilta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-jerusalem-ilta.png',
+          selite: 'Pyhän haudan kirkko rakennettiin 300-luvulla '
+            + 'paikalle, jota perimätieto pitää Jeesuksen hautana, ja '
+            + 'kuusi kirkkokuntaa jakaa sen hallinnan tarkoin '
+            + 'säännöin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'JERUSALEM THE OLD CITY & THE TEMPLE MOUNT.JPG',
           selite: 'Laaja ilmakuva: vanhakaupunki keskellä, ympärillä laaksot '
@@ -38110,6 +38163,32 @@ export const KULTTUURI_KATEGORIAT = {
        * ydin, sen koillinen kaupunginosa ja sen nykysymboli.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 4 (omistajan tilaus 22.8.2026):
+         * pelin omia havainnekuvia peiliämpäristä, kolme
+         * vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-singapore-aamu.png',
+          selite: 'Marina Bay Sands avattiin 2010, ja sen kolmen '
+            + 'tornin katolla lepää 340-metrinen laivamainen SkyPark '
+            + 'uima-altaineen.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-singapore-keskipaiva.png',
+          selite: 'Gardens by the Bayn superpuut (2012) ovat jopa '
+            + 'viisikymmenmetrisiä pystypuutarhoja, jotka keräävät '
+            + 'aurinkoenergiaa ja sadevettä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-singapore-ilta.png',
+          selite: 'Sulttaanin moskeija sai nykyasunsa 1932, ja sen '
+            + 'kupolien juuria kiertävät lasipullonpohjat, jotta '
+            + 'köyhimmätkin saattoivat lahjoittaa rakennukseen.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Boat quay sct.JPG',
           selite: 'Singapore-joen mutka ylhäältä: eteläisellä '
