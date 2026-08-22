@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1006 — COLOMBO: kaupunkilehti alusta asti (kaupunki + historia, 8 nostoa, 9 nahtavyysjuttua kohdekartalla, matkaopas 5 jaksoa, 27 kuvaa) — kaikki kuvatekstit jo uuden kohde-ei-kuva-linjauksen mukaan; sisallissota jatetty pois linjauksen mukaisesti; vanhan teksti-kentan satamavirke korjattu tekosatamaksi (Fable). Saarivi tulee erillisessa erassa. Tarkista: Colombon lehti kannesta oppaaseen',
   'v1005 — KUVATEKSTILINJAUS (omistaja 22.8.2026): Raamattuun kirjattu KUVATEKSTI KERTOO KOHTEESTA, EI KUVASTA — historia ja merkitys, ei visuaalista kuvailua; koskee kaikkia kuvatekstejä, vanhat korjataan erissä. Kaikki 16 herokuvatekstia (helsinki, peking, kairo, tokio, xian) kirjoitettu uusiksi linjaukseen. Tarkista: Xianin lehden karusellin kuvatekstit',
   'v1004 — VIOLETIT HEROMERKIT (omistajan tilaus 22.8.2026): kehittajatilassa laudalla violetti piste kaupungeissa, joilla on generoidut herokuvat (nyt helsinki, peking, kairo, tokio, xian) — katsotaan ennen julistevihreaa; joukko johdetaan lehtidatan ampari-kentista, ei kasin. Tarkista: laudan kartta kehittajatilassa',
   'v1003 — KOKORUUTUKARTTA KORJATTU (omistajan palaute 22.8.2026): kohteen numeroympyra, piirros ja selitelistan rivi avaavat jutun myos kokoruudulla (suurennos sulkeutuu ensin), ja zoomattaessa karttaikkuna kasvaa mustan tyhjan paalle kohti koko ruutua; loitonnus palauttaa entisen mitoituksen. Maalehden korkokartta ennallaan. Tarkista: kaupunkilehden kartta kokoruudulla — klikkaa kohdetta, zoomaa',
@@ -370,8 +371,9 @@ export const TESTATTAVAA = [
  * samasta listasta ilman nimivertailua.
  */
 export const TUOREET = {
-  paivitetty: '21.8.2026',
+  paivitetty: '22.8.2026',
   valmiit: [
+    { id: 'colombo', nimi: 'Colombo', versio: 'v1006' },
     { id: 'mumbai', nimi: 'Mumbai', versio: 'v996' },
     { id: 'chennai', nimi: 'Chennai', versio: 'v995' },
     { id: 'kabul', nimi: 'Kabul', versio: 'v994' },
@@ -384,13 +386,8 @@ export const TUOREET = {
     { id: 'jakarta', nimi: 'Jakarta', versio: 'v988' },
     { id: 'taipei', nimi: 'Taipei', versio: 'v984' },
     { id: 'hongkong', nimi: 'Hongkong', versio: 'v984' },
-    { id: 'yangon', nimi: 'Yangon', versio: 'v978' },
-    { id: 'mandalay', nimi: 'Mandalay', versio: 'v978' },
-    { id: 'astana', nimi: 'Astana', versio: 'v973' },
-    { id: 'kanton', nimi: 'Kanton', versio: 'v973' },
   ],
   tyossa: [
-    { id: 'colombo', nimi: 'Colombo' },
     { id: 'karachi', nimi: 'Karachi' },
   ],
 };

@@ -49666,4 +49666,523 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * COLOMBO (Opus 22.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kohdekarttaa, nähtävyysjuttuja eikä kategorioita ennen tätä.
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 22.8.2026): Colombo, Fort (Colombo), Galle Face Green,
+   * Galle Face Hotel, Tea production in Sri Lanka, Coffee production
+   * in Sri Lanka, James Taylor (tea planter) (ohjaus otsikosta James
+   * Taylor (Ceylon)), Beira Lake, Old Colombo Lighthouse, Colombo
+   * Lighthouse, Port of Colombo, Wolvendaal Church, Cinnamon Gardens,
+   * Old Colombo Dutch Hospital, Gangaramaya Temple, Fort railway
+   * station (ohjaus otsikosta Colombo Fort railway station), Jami
+   * Ul-Alfar Mosque, Khan Clock Tower, Colombo National Museum,
+   * Pettah, Sri Lanka (ohjaus otsikosta Pettah, Colombo) ja Sigiriya.
+   * Työaineistona docs/aasia-tyoaineisto/faktapohja-colombo.md ja
+   * tarkistus-colombo.md.
+   *
+   * SISÄLTÖLINJAUS on spec-asia.md:n kohta "Karachi/Kolkata/Mumbai
+   * ym.": siirtomaahistoria kerrotaan neutraalina historiana eikä
+   * nykypolitiikkaa käsitellä lainkaan. Painopiste on 1873-henkisessä
+   * aineistossa: muurien purku 1869–1871, Galle Facen promenadi 1859,
+   * Galle Face Hotel 1864, kaupunginvaltuuston ensimmäinen kokous
+   * 16.1.1866, kahviruoste 1869 ja teen läpimurto, Fortin kellotorni
+   * 1857 ja kansallismuseo 1877.
+   *
+   * POIS JÄTETTY KOKONAAN: sisällissota 1983–2009. Faktapohja oli
+   * rajannut sen yhteen neutraaliin lauseeseen H4-nostossa, mutta
+   * urakan tilaus tiukensi linjausta — tietoisesti pois jätetyt aiheet
+   * pysyvät poissa myös lehtitekstistä, joten lause on poistettu ja
+   * tilalle on kirjoitettu kellotorninosto. Samoin ovat poissa vuoden
+   * 2022 mielenosoitukset ja Galle Facen leiri (Galle Face Green
+   * -artikkelin oma osio), vuosien 1996 ja 2008 iskut (mainitaan Old
+   * Colombo Dutch Hospitalin ja Fort railway stationin artikkeleissa),
+   * pääkaupunkiaseman siirron puoluetausta ja teeplantaasien
+   * kansallistaminen 1971. Hallinnollinen nykyasema on mukana
+   * neutraalina tosiasiana (Nikosian "Antaa olla").
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat näitä tekstejä ja
+   * jotka on siksi KIRJOITETTU AUKI LUKIJALLE (v925/v932:n tapa):
+   * 1) Milloin kahvi kuoli. Tea production in Sri Lanka sanoo, että
+   *    kahviplantaasit tuhoutuivat 1869, mutta Coffee production in
+   *    Sri Lanka sanoo, että ala oli suurimmillaan vasta 1870
+   *    (111 400 ha) ja että tuho tuli "shortly afterwards". Nosto CO4
+   *    kertoo molemmat ja sen, että romahdus oli vuosien mittainen.
+   * 2) Milloin majakan valo siirtyi kellotorniin. Old Colombo
+   *    Lighthouse -artikkelin leipäteksti sanoo 1867, tietolaatikko
+   *    1865. Historiasivun nosto sanoo molemmat.
+   * 3) Milloin hallinto siirtyi Sri Jayawardenepura Kotteen. Colombo-
+   *    artikkelin johdanto sanoo 1978, sen oma "After independence"
+   *    -osio "in the 1980s". Oppaan neljäs jakso sanoo vain, että
+   *    hallinto istuu naapurikaupungissa — vuotta ei väitetä.
+   *
+   * KOHDEKARTAN KESKIPISTE EI OLLUT ONGELMA kuten Mumbaissa:
+   * Wikidatan "Colombo" (6,9344 / 79,8428) osuu käytännössä Fortin
+   * kellotornille eli suoraan lehden ydinalueelle. Rajauksen
+   * perustelut ovat tools/piirra-kaupunkikartta.mjs:n ja
+   * js/packs/maakartat.js:n colombo-lohkoissa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, eikä sitä ole tässä
+   * työssä lisätty: säärivit haetaan erillisenä eränä. Matkaoppaan
+   * jakso 5 nojaa siksi en-Wikipedian Colombo-artikkelin sääruutuun ja
+   * SANOO SEN ÄÄNEEN (Samarkandin, Lhasan, Kolkatan ja Mumbain malli
+   * v965–v983). Poikkeuksellisesti tämä sääruutu on itse merkitty
+   * normaalikaudelle 1991–2020 (ääriarvot 1961–2020) eli samalle
+   * jaksolle kuin pelin oma ERA5-rivi; se on sanottu jaksossa ääneen.
+   * Mittauspiste olisi keskusta 6,93 / 79,84.
+   *
+   * KUVAT. Kansikarusellissa on kolme LAAJAA yleiskuvaa kaupungin eri
+   * puolilta (omistajan linjaus 21.8.2026): Galle Facen nurmikenttä
+   * lännessä, satama ja niemen kärki pohjoisessa, Beira-järvi
+   * keskellä. Matkaoppaan ja sen jaksojen kuvat ovat kaikki tuoreita
+   * (2011–2020) ja historialliset kuvat vain nostoissa, kuten
+   * 20.8.2026 linjattiin. Aihetoistoa on kaksi ja molemmat ovat
+   * tietoisia: kellotornista on kaksi kuvaa kahdelta aikakaudelta
+   * (nostossa noin 1900, kartan jutussa nykyinen) ja punaisesta
+   * moskeijasta kaksi kahdelta etäisyydeltä (matkaoppaan kannessa
+   * julkisivu kadulta, kartan jutussa alaviistosta). Kaupungin
+   * valokuvakorteissa (asia-lisat-valokuvat.js) jo käytettyjä
+   * tiedostoja ei ole otettu uudelleen.
+   *
+   * KUVATEKSTIT KERTOVAT KOHTEESTA EIVÄTKÄ KUVAA KUVAA (omistajan
+   * sitova linjaus 22.8.2026, Raamattu): "Kuvatekstit pitää kertoa
+   * rakennuksesta, sen historiasta ja merkityksestä ei kuvailla kuvaa
+   * visuaalisesti." Lehden kaikki 27 selitettä kirjoitettiin uusiksi
+   * heti ensimmäisen version jälkeen: yksi virke, joka kertoo kohteen
+   * historian, merkityksen tai yhden kiinnostavan faktan, ei valoa,
+   * värejä, sommittelua eikä sitä missä kohtaa kuvaa mikin on.
+   * Faktat ovat samoista lähteistä kuin lehden muu teksti; uusia
+   * väitteitä ei otettu. Vanhojen selitteiden tehtävä selittää
+   * kuvaan painetut julkaisijan omat kuvatekstit (kuvasäännön
+   * poikkeus) hoituu nyt sillä, että selite nimeää kohteen
+   * julkaisumuodon: kartta, matka-albumin kuva, postikortti,
+   * kaiverrus.
+   */
+  colombo: [
+    {
+      id: 'kaupunki',
+      nimi: 'Colombo',
+      johdanto: 'Kolmen eurooppalaisen kauppamahdin satama kasvoi ensin '
+        + 'kanelin ja sitten teen ympärille. Linnoituksen muurit '
+        + 'purettiin 1869–1871, juuri kun saaren ylängöt vihertyivät '
+        + 'ensimmäisistä teepensaista.',
+      kansikuvat: [
+        {
+          tiedosto: 'LK-colombo-galleface.jpg',
+          selite: 'Galle Facen kentän raivasivat hollantilaiset '
+            + 'tykkiensä ampuma-alaksi, ja viiden hehtaarin '
+            + 'nurmikaistale on yhä kaupungin suurin avoin tila.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'An ariel view of the Port of Colombo from the Lotus Tower.jpg',
+          selite: 'Colombon satama tunnettiin roomalaisille, arabeille '
+            + 'ja kiinalaisille kauppiaille jo yli kaksituhatta '
+            + 'vuotta sitten, ja se on nykyään Intian valtameren '
+            + 'vilkkain satama.',
+          lahde: 'Mohamed Ansaf, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Beira Lake and Gangaramaya Temple.jpg',
+          selite: 'Beira-järven kaivoivat portugalilaiset 1500-luvulla '
+            + 'linnoituksen vallihaudaksi, ja sen päälle rakennettu '
+            + 'Seema Malaka on Gangaramayan temppelin munkkien '
+            + 'kokoontumissali.',
+          lahde: 'Adbar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: hollantilainen sairaala, brittiläinen kauppatalo
+       * ja ylängön teerivit — kaupungin kolme kerrosta siinä
+       * järjestyksessä, jossa lehti ne kertoo (kauppakomppanian
+       * paksuseinäinen 1600-luku, 1800-luvun kauppakaupunki ja se
+       * kasvi, joka maksoi jälkimmäisen).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Dutch Hospital.jpg',
+          selite: 'Hollantilainen sairaala on Fortin vanhin rakennus ja '
+            + 'tiedetään olleen olemassa jo 1681; sen kuuluisin '
+            + 'kirurgi Paul Hermann työskenteli siellä 1672–1679 ja '
+            + 'häntä kutsutaan saaren kasvitieteen isäksi.',
+          lahde: 'Kanatonian, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Red Building - panoramio (1).jpg',
+          selite: 'Cargillsin ja Millersin kauppatalo on yksi Fortin '
+            + 'brittiajan liikerakennuksista, ja se on suojeltu '
+            + 'historiallisesti merkittävänä rakennuksena.',
+          lahde: 'Pol van den Scheetek…, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Ceylon Tee Sri Lanka (29446719583).jpg',
+          selite: 'Teenviljely alkoi saarella 1867 yhdeksäntoista '
+            + 'eekkerin koealalta, ja keskiylängön viileys, kosteus '
+            + 'ja sade tekivät teestä maan tärkeimmän vientikasvin.',
+          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Muurit purettiin juuri sopivasti',
+          tiedosto: 'Map of Colombo Fort.jpg',
+          teksti: 'Portugalilaiset aloittivat linnoituksen 1517, '
+            + 'hollantilaiset purkivat sen ja rakensivat uuden meren ja '
+            + 'järven väliin, ja britit perivät sen 1796. 1800-luvun '
+            + 'lopulla satamaa ei enää uhannut kukaan, ja pohjois-, '
+            + 'itä- ja eteläpuolen muurit purettiin 1869–1871: ne olivat '
+            + 'käyneet tarpeettomiksi, ja tilaa tarvittiin uusille '
+            + 'sotilasparakeille eli Echelon Barracksille sekä '
+            + 'kaupunkisuunnittelulle. Vallituksista ei ole enää mitään '
+            + 'jäljellä, mutta alue on yhä nimeltään Fort, ja kun satama '
+            + 'laajeni 1870-luvulta alkaen, hallinnon keskuksesta tuli '
+            + 'myös kaupan keskus.',
+          selite: 'J. L. K. van Dortin vuoden 1888 kartta on kopio '
+            + 'vanhimmasta tunnetusta Colombon linnoituksen '
+            + 'kartasta, ja siihen on merkitty ne portit ja '
+            + 'bastionit, jotka purettiin 1869–1871.',
+          lahde: 'J. L. K. van Dort, Wikimedia Commons (PD)',
+          wiki: 'Fort (Colombo)',
+        },
+        {
+          otsikko: 'Nurmikenttä oli ensin kilparata',
+          tiedosto: 'Gezicht op Galle Face in Colombo op Brits Ceylon, RP-F-AA3188-BR.jpg',
+          teksti: 'Galle Facen kentän raivasivat hollantilaiset, jotta '
+            + 'heidän tykkinsä saisivat suoran ampumalinjan '
+            + 'portugalilaisia kohti. 1820-luvulla kuvernööri Edward '
+            + 'Barnesin aikana linnoituksen edustan soinen esplanadi '
+            + 'täytettiin ja tasattiin runsaan kahden kilometrin '
+            + 'kilparadaksi, joka tunnettiin nimellä Colpetty Race '
+            + 'Course; ensimmäinen virallisesti kirjattu kilpailu '
+            + 'ajettiin 1821. Kuvernööri Henry George Ward määräsi 1856 '
+            + 'rakennettavaksi mailin mittaisen promenadin meren '
+            + 'puolelle naisten ja lasten iltakävelyjä varten, ja se '
+            + 'valmistui 1859. Kilpailut siirtyivät omalle radalleen '
+            + 'vasta 1893.',
+          selite: 'Matka-albumin kuva on noin vuodelta 1880 eli '
+            + 'parikymmentä vuotta sen jälkeen, kun kuvernööri '
+            + 'Wardin määräämä mailin mittainen promenadi valmistui '
+            + 'Galle Facelle 1859.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Galle Face Green',
+        },
+        {
+          otsikko: 'Hotelli hollantilaisen huvilan paikalle',
+          tiedosto: 'Galle Face Hotel, Colombo (NYPL Hades-2359784-4044549).jpg',
+          teksti: 'Neljä brittiläistä yrittäjää perusti 1864 hotellin '
+            + 'vanhan hollantilaisen huvilan paikalle nurmikentän '
+            + 'eteläpäähän; huvilan nimi oli Galle Face House, ja siitä '
+            + 'tuli myös hotellin nimi. Talosta kasvoi yksi Suezin '
+            + 'itäpuolen vanhimmista hotelleista. Maata laajennuksia '
+            + 'varten ostettiin vuosina 1870–1894, ja arkkitehti Edward '
+            + 'Skinnerin suunnittelema eteläsiipi valmistui 1894; sen '
+            + 'jälkeen rakennus on säilynyt pääpiirteissään ennallaan. '
+            + 'Se on yhä ainoa Colombon hotelli, jolla on oma '
+            + 'rantaviivansa — perintöä ajalta ennen kuin rannikko '
+            + 'rakennettiin täyteen.',
+          selite: 'Vuoden 1907 postikortin aiheena on hotelli, joka '
+            + 'perustettiin 1864 hollantilaisen huvilan paikalle ja '
+            + 'jonka eteläsiipi valmistui Edward Skinnerin '
+            + 'suunnitelmien mukaan 1894.',
+          lahde: 'Scan by NYPL, Wikimedia Commons (PD)',
+          wiki: 'Galle Face Hotel',
+        },
+        {
+          otsikko: 'Kun kahvi kuoli, tee syntyi',
+          tiedosto: 'Ceylon tea estate albumen print c.1880.jpg',
+          teksti: 'Skotlantilainen James Taylor saapui saarelle 1852 ja '
+            + 'istutti 1867 Loolecondera-tilalle Kandyn lähelle teetä '
+            + 'yhdeksäntoista eekkerin alalle. Kahvi oli tuolloin yhä '
+            + 'saaren tärkein vientikasvi, ja sen ala oli suurimmillaan '
+            + 'vasta 1870: yli 111 000 hehtaaria. Sitten tuli '
+            + 'kahviruoste, Hemileia vastatrix. Teeartikkeli ajoittaa '
+            + 'tuhon vuoteen 1869, kahviartikkeli sanoo kahvin '
+            + 'kukoistaneen vielä 1869 ja romahtaneen pian sen jälkeen. '
+            + 'Viljelijät kääntyivät teehen, jolle keskiylängön viileys, '
+            + 'kosteus ja sade sopivat. Taylor rakensi 1872 kunnollisen '
+            + 'tehtaan ja lähetti 1875 ensimmäisen lastin Lontoon '
+            + 'teehuutokauppaan.',
+          selite: 'Valokuva ceyloninteetilalta on noin vuodelta 1880 '
+            + 'eli ajalta, jolloin kahviruoste oli juuri ajanut '
+            + 'saaren viljelijät vaihtamaan kahvin teehen.',
+          lahde: 'Unknown author Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Tea production in Sri Lanka',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Jami ul-Alfar Mosque.jpg',
+          selite: 'Pettahin punaisen moskeijan rakensi 1908–1909 Habibu '
+            + 'Lebbe Saibu Lebbe, joka ei ollut opiskellut '
+            + 'arkkitehtuuria vaan työskenteli eteläintialaisten '
+            + 'kauppiaiden tuomien kuvien varassa.',
+          lahde: 'Ketheeswaran sujiv, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Colombo on Sri Lankan suurin kaupunki ja maan talouden '
+          + 'keskus, mutta matkailijan Colombo on kapea nauha rannan '
+          + 'suuntaisesti. Kohteet ovat noin neljän kilometrin matkalla, '
+          + 'joka alkaa pohjoisessa satamasta, jatkuu Pettahin '
+          + 'basaarikortteleiden ja Fortin liikekeskustan kautta ja '
+          + 'päättyy etelässä Beira-järvelle ja Cinnamon Gardensin '
+          + 'puutarhakaupunginosaan. Länsipuolella on koko matkan Intian '
+          + 'valtameri, itäpuolella kanavia ja järvi. Maan viralliset '
+          + 'kielet ovat sinhala ja tamili, ja englanti toimii '
+          + 'yhdistävänä asiointikielenä.',
+        artikkeli: {
+          nimi: 'Matkailijan Colombo',
+          taitto: 'opas',
+          teksti: 'Kaupunki syntyi linnoituksesta, jota ei enää ole — ja '
+            + 'sen olohuone on viiden hehtaarin nurmikenttä meren '
+            + 'rannalla.',
+          nosto: 'Colombon satama oli roomalaisten, arabien ja '
+            + 'kiinalaisten kauppiaiden tiedossa jo yli kaksituhatta '
+            + 'vuotta sitten.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentäen saavutaan Bandaranaiken kansainväliselle '
+                + 'lentoasemalle kaupungin pohjoispuolelle; kaupungin '
+                + 'oma kenttä Ratmalanassa viidentoista kilometrin '
+                + 'päässä etelässä avattiin 1935 ja oli maan ensimmäinen '
+                + 'kansainvälinen lentoasema vuoteen 1967, jolloin '
+                + 'Bandaranaike korvasi sen. Junat lähtevät Fortin '
+                + 'asemalta, joka on saaren tärkein rautatiesolmu: '
+                + 'yksitoista raidetta, ja sieltä lähtevät sekä päärata '
+                + 'Kandyyn, Badullaan ja pohjoiseen että rannikkorata '
+                + 'Gallen ja Mataran suuntaan. Kaupungin sisällä juna ei '
+                + 'juuri auta, koska vuorot on tehty kaupunkiin tuloa '
+                + 'varten; sen sijaan bussit lähtevät Pettahin kolmelta '
+                + 'terminaalilta, joista Bastian Mawatha hoitaa pitkät '
+                + 'matkat ja Gunasinghapura ja Central paikallisvuorot. '
+                + 'Kaduilla kiertävät kolmipyöräiset moottoririksat, '
+                + 'joita sanotaan kolmipyöriksi; raitiovaunut '
+                + 'lakkautettiin 1970-luvulla.',
+              kuva: {
+                tiedosto: 'Fort Railway Station.jpg',
+                selite: 'Fortin asema avattiin 1917 Beira-järvestä '
+                  + 'kuivatulle maalle, ja siihen päättyy yhä '
+                  + 'suurin osa saaren kaukojunista.',
+                lahde: 'Azeez Abubakr, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Colombo on saaren länsirannikolla, ja '
+                + 'kaupunkialuetta on vain runsaat '
+                + 'kolmekymmentäseitsemän neliökilometriä; korkeus '
+                + 'merenpinnasta on noin metri. Keskellä kaupunkia lepää '
+                + 'Beira-järvi, kuusikymmentäviisi hehtaaria vettä, ja '
+                + 'siitä lähtee kanavia moneen suuntaan. Pohjois- ja '
+                + 'koillisrajan muodostaa Kelani-joki, joka laskee '
+                + 'mereen kaupunginosassa, jonka nimi Modera tarkoittaa '
+                + 'juuri joen suistoa. Saari Colombon takana on toinen '
+                + 'maa: keskiylängöllä ilma viilenee ja teeviljelmät '
+                + 'nousevat tuhannen ja kahdentuhannen metrin '
+                + 'korkeuteen, ja kuivemmassa sisämaassa kohoaa '
+                + 'Sigiriyan kalliolinnoitus, jonka noin kahdensadan '
+                + 'metrin korkuiselle huipulle rakennettiin 400-luvulla '
+                + 'palatsi ja puutarhat. Colombosta se on junamatkan '
+                + 'päässä.',
+              kuva: {
+                tiedosto: 'UG-LK Photowalk - Canal from Beira Lake to Galle Face - 2017-03-12.jpg',
+                selite: 'Beira-järvestä lähtee kanavia moneen suuntaan, '
+                  + 'ja niitä pitkin kuljetettiin vuosisatoja '
+                  + 'tavaraa kaupungissa ja sen esikaupungeissa.',
+                lahde: 'Rehman Abubakr, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: Pettah ja rannan illat',
+              teksti: 'Fortin ulkopuolella alkaa Pettah, jonka '
+                + 'sinhalankielinen nimi piṭa koṭuva tarkoittaa '
+                + 'ulkolinnoitusta. Kaupunginosa on saaren vilkkaimpia '
+                + 'kauppa-alueita, ja sen katuverkkoa on kuvattu '
+                + 'jättimäiseksi ristisanatehtäväksi: kujilta toisille '
+                + 'pääsee aamusta iltaan kiertämättä samaa kohtaa '
+                + 'kahdesti. Sisäänkäynnin merkkinä on Khanin '
+                + 'kellotorni, jonka Bombaysta muuttanut parsisuku '
+                + 'pystytti isänsä muistoksi ja lahjoitti kaupungille '
+                + 'tammikuussa 1923; torniin kuului aikanaan myös '
+                + 'toimiva suihkulähde. Illalla väki siirtyy Galle '
+                + 'Facelle, viiden hehtaarin ja viidensadan metrin '
+                + 'nurmikaistaleelle meren rannalle: se on kaupungin '
+                + 'suurin avoin tila, ja viikonloppuisin kojuista '
+                + 'myydään keitettyä rapua, katkarapuja ja '
+                + 'mangoviipaleita pippurin ja suolan kanssa.',
+              kuva: {
+                tiedosto: 'Khan Clock Tower (5439875749).jpg',
+                selite: 'Bombaysta muuttanut parsisuku pystytti '
+                  + 'kellotornin Framjee Bhikhajee Khanin muistoksi '
+                  + 'ja lahjoitti sen kaupungille tammikuussa 1923.',
+                lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kaupunki saa valtuustonsa',
+              teksti: 'Vuosisatojen siirtomaahallinto oli näivettänyt '
+                + 'paikallisen itsehallinnon, ja 1865 Ceylonin '
+                + 'lakiasäätävä neuvosto perusti Colombon '
+                + 'kaupunginvaltuuston nimenomaan opettaakseen '
+                + 'asukkaille itsehallintoa. Valtuusto kokoontui '
+                + 'ensimmäisen kerran 16. tammikuuta 1866, ja seudulla '
+                + 'asui tuolloin noin 80 000 ihmistä. Seuraavat '
+                + 'vuosikymmenet muuttivat kaupungin: muurit kaatuivat '
+                + '1869–1871, satama laajeni 1870-luvulta alkaen, '
+                + 'avoimesta redistä tehtiin 1912 suojaisa satama ja '
+                + 'sitä varten perustettiin 1913 oma satamakomissio. '
+                + 'Samaan aikaan nousi museo. Kuvernööri William Henry '
+                + 'Gregory sai hankkeelle luvan vuoden kuluessa '
+                + 'nimityksestään 1872, valtion arkkitehti James George '
+                + 'Smither piirsi italialaistyylisen talon, ja '
+                + 'rakennusurakoitsija Arasi Marikar Wapchie Marikar — '
+                + 'sama mies, joka rakensi Fortin kellotornin, '
+                + 'pääpostitalon ja Galle Face Hotellin — pyysi '
+                + 'palkkioksi vain sen, että museo pidettäisiin '
+                + 'perjantaisin suljettuna. Nykyään hallinto istuu '
+                + 'naapurikaupungissa Sri Jayawardenepura Kottessa, '
+                + 'mutta useimmat maat pitävät lähetystönsä yhä '
+                + 'Colombossa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Colombosta puuttuu vielä, joten '
+                + 'nämä luvut ovat en-Wikipedian Colombo-artikkelin '
+                + 'sääruudusta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit; ruutu on kuitenkin itse merkitty '
+                + 'normaalikaudelle 1991–2020 ja sen ääriarvot vuosille '
+                + '1961–2020. Ilmasto on trooppinen sademetsäilmasto, ja '
+                + 'lämpötila on käytännössä sama ympäri vuoden: vuoden '
+                + 'keskilämpötila on kaksikymmentäseitsemän ja '
+                + 'yhdeksän kymmenesosaa astetta, keskimääräinen ylin '
+                + 'kolmekymmentäyksi ja alin kaksikymmentäviisi. '
+                + 'Kuuminta on maalis–huhtikuussa, jolloin ylin '
+                + 'keskilämpötila on kolmekymmentäkaksi astetta, '
+                + 'viileintä heinä–elokuussa kolmessakymmenessä. Sade '
+                + 'ratkaisee ajankohdan: vettä tulee vuodessa noin '
+                + '2 400 millimetriä ja sadepäiviä on 141, ja sateet '
+                + 'jakautuvat kahteen monsuuniin, huhti–kesäkuuhun ja '
+                + 'syys–marraskuuhun. Kuivinta on tammi–helmikuussa, '
+                + 'jolloin sadetta kertyy alle kahdeksankymmentä '
+                + 'millimetriä kuussa ja sadepäiviä on viisi; sateisin '
+                + 'kuukausi on lokakuu, 359 millimetriä ja lähes '
+                + 'yhdeksäntoista sadepäivää. Ääripäät ovat 36,4 '
+                + 'astetta helmikuussa ja 16,4 astetta tammikuussa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Portugali, Hollanti ja Britannia hallitsivat samaa '
+        + 'satamaa vuorotellen lähes neljän vuosisadan ajan. Saari '
+        + 'itsenäistyi rauhanomaisesti 1948, ja kaikkien kolmen jälki '
+        + 'näkyy yhä kaduilla, nimissä ja ruoassa.',
+      tehtava: {
+        kysymys: 'Kuinka moni portugalilainen selvisi hengissä, kun '
+          + 'hollantilaisten piiritys päättyi Colombossa 1656?',
+        vaihtoehdot: [
+          '93',
+          '930',
+          '9 300',
+          'Ei yksikään',
+        ],
+        oikea: 0,
+        fakta: 'Eloonjääneille annettiin turvallinen poistumislupa, ja '
+          + 'linnoitus siirtyi Hollannin Itä-Intian kauppakomppanialle, '
+          + 'joka hallitsi sitä vuoteen 1796.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kanelisopimus, joka johti valloitukseen',
+          tiedosto: 'Cinnamomum verum - Köhler–s Medizinal-Pflanzen-182.jpg',
+          teksti: 'Dom Lourenço de Almeidan johtamat portugalilaiset '
+            + 'saapuivat saarelle 1505 ja solmivat sopimuksen Kotten '
+            + 'kuninkaan Parakramabahu VIII:n kanssa: he saivat oikeuden '
+            + 'käydä kauppaa saaren kanelilla ja täyden vallan '
+            + 'rannikolla, ja vastineeksi he lupasivat vartioida '
+            + 'rannikkoa hyökkääjiltä. Colomboon perustettiin '
+            + 'kauppa-asema, ja 1517 alkoi linnoituksen rakentaminen. '
+            + 'Sen jälkeen portugalilaiset laajensivat valtaansa '
+            + 'käyttämällä hyväkseen Kotten kuningassuvun riitoja, ja '
+            + 'kun kuningaskunta kaatui 1593, Colombosta tuli heidän '
+            + 'pääkaupunkinsa saarella.',
+          selite: 'Ceyloninkaneli oli se kauppatavara, jonka takia '
+            + 'portugalilaiset solmivat 1505 sopimuksen Kotten '
+            + 'kuninkaan kanssa ja saivat samalla vallan koko '
+            + 'saaren rannikolla.',
+          lahde: 'Franz Eugen Köhler, Köhler\'s Medizinal-Pflanzen, Wikimedia Commons (PD)',
+          wiki: 'Colombo',
+        },
+        {
+          otsikko: 'Järvi kaivettiin puolustukseksi',
+          tiedosto: 'Fort Colombo te Ceylon, gezien vanaf bolwerk De Beer (..) Casteel Colombo van de Beer (titel op object), RP-T-1902-A-4662.jpg',
+          teksti: 'Portugalilaiset alkoivat kaivaa linnoituksen '
+            + 'ympärille vallihautaa, mutta suomaassa ei ollut '
+            + 'tarpeeksi vettä sen täyttämiseen. Kapteeni Lopo de Brito '
+            + 'löysi kahden kukkulan välistä puron, se johdettiin '
+            + 'hautaan, ja niin syntyi Beira-järvi. Vesi kiersi '
+            + 'linnoituksen niin, että mantereelle pääsi vain veneellä. '
+            + 'Sitawakan Rajasinha I onnistui 1587 laskemaan '
+            + 'krokotiilien asuttaman järven kuiviin katkomalla '
+            + 'kanavia, mutta portugalilaiset saivat merta myöten '
+            + 'apujoukkoja Intiasta. Hollantilaiset laajensivat järveä '
+            + 'ja tekivät siihen saaria, britit hävittivät krokotiilit '
+            + 'ja alkoivat soutaa ja purjehtia. Järvi oli alun perin '
+            + '1,6 neliökilometriä, nyt 0,65.',
+          selite: 'Cornelis Steiger piirsi näkymän noin vuonna 1710 De '
+            + 'Beerin bastionilta ja nimesi sen itse; vesi kiersi '
+            + 'silloin linnoituksen niin, että mantereelle pääsi '
+            + 'vain veneellä.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Beira Lake',
+        },
+        {
+          otsikko: 'Piiritys päättyi 93 hengen turvamarssiin',
+          tiedosto: 'AMH-6689-KB View of Colombo.jpg',
+          teksti: 'Hollantilaiset solmivat 1638 liiton Kandyn kuninkaan '
+            + 'Rajasinha II:n kanssa: he auttaisivat tätä '
+            + 'portugalilaisia vastaan, ja vastineeksi he saisivat '
+            + 'saaren tärkeimpien kauppatavaroiden monopolin. '
+            + 'Portugalilaiset menettivät tukikohtansa yksi kerrallaan '
+            + 'vuodesta 1639 alkaen, ja pitkän piirityksen päätteeksi '
+            + 'Colombo antautui 1656 — vain yhdeksänkymmentäkolme '
+            + 'portugalilaista jäi henkiin, ja heidät päästettiin '
+            + 'turvallisesti pois linnoituksesta. Vallatut alueet '
+            + 'luvattiin ensin palauttaa sinhalilaiskuninkaille, mutta '
+            + 'Hollannin Itä-Intian kauppakomppania piti ne itsellään ja '
+            + 'hallitsi Colomboa merialueidensa pääkaupunkina vuoteen '
+            + '1796.',
+          selite: 'Noin vuonna 1676 tehty kaiverrus esittää Colomboa '
+            + 'parikymmentä vuotta sen jälkeen, kun hollantilaiset '
+            + 'valtasivat linnoituksen portugalilaisilta.',
+          lahde: 'Jan Kip / Jacob van Meurs, Wikimedia Commons (PD)',
+          wiki: 'Colombo',
+        },
+        {
+          otsikko: 'Kello, joka odotti varastossa neljäkymmentäkolme vuotta',
+          tiedosto: 'KITLV A574 - Vuurtoren in Colombo, KITLV 51566.tiff',
+          teksti: 'Kuvernööri Robert Brownrigg tilasi 1814 kaupungille '
+            + 'kellon 1 200 punnalla, mutta rahapula pani sen '
+            + 'varastoon. Se otettiin esiin vasta 1857, kun Chatham '
+            + 'Streetin ja Queen Streetin kulmaan valmistui torni: sen '
+            + 'suunnitteli kuvernööri Henry George Wardin puoliso Emily '
+            + 'Elizabeth Ward, ja 29-metrinen rakennus oli tuolloin '
+            + 'Colombon korkein. Koneiston teki lontoolainen Dent, sama '
+            + 'paja joka oli tehnyt Westminsterin Big Benin viisi vuotta '
+            + 'aiemmin. Majakan valo siirrettiin torniin 1867 — '
+            + 'artikkelin tietolaatikko sanoo 1865 — ja se sammutettiin '
+            + '1952, kun ympäröivät talot peittivät sen. Kello käy yhä.',
+          selite: 'Torni valmistui 1857 kuvernöörin puolison Emily '
+            + 'Elizabeth Wardin suunnitelmien mukaan, ja '
+            + 'kymmenkunta vuotta myöhemmin siihen siirrettiin '
+            + 'kaupungin majakan valo.',
+          lahde: 'Anonymous Unknown author, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Old Colombo Lighthouse',
+        },
+      ],
+    },
+  ],
 };
