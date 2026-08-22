@@ -24,7 +24,11 @@ import {
   LUKIJAN_OHITETTAVAT,
   kokoaLuettavaTeksti,
   kokoaLuettavatKohdat,
+  lueAaneen,
+  lueVirtana,
+  lukijaLukee,
 } from '../js/lukija.js';
+import { sfx } from '../js/sound.js';
 
 /* ---------------------------------------------------------------- */
 /* Pieni DOM-malli                                                   */
@@ -487,4 +491,56 @@ test('ohituslista kattaa pöllön spoilerilohkot', () => {
     .filter((v) => v !== '#quiz-dialog');
   const puuttuu = valitsimet.filter((v) => !LUKIJAN_OHITETTAVAT.includes(v));
   assert.deepEqual(puuttuu, [], 'lukijan ohituslistalta puuttuu pöllön spoilerilohkoja');
+});
+
+/*
+ * PELIN MYKISTYS KOSKEE KAIKKEA LUENTAA (omistajan bugiraportti
+ * 22.8.2026: "vaikka pelin oma mykistys on päällä niin peli lukee
+ * silti matkakirjaa ääneen mutta vain jos ääni on striimi
+ * generoitu").
+ *
+ * Vika ei ollut striimipolussa vaan siinä, että mykistystarkistus
+ * asui KUTSUJISSA: äänitepolku kysyi sitä (js/luenta.js
+ * playDiaryVoice), lukijaäänen kutsujat (lueMerkinta, lueKertojana)
+ * eivät. Portti on nyt lukijan molemmissa sisäänkäynneissä, ja näitä
+ * vartioidaan kahdelta puolelta: käytöksestä ja lähdetekstistä.
+ * Lähdevartio on tarpeen, koska mykkä peli palauttaa Nodessa false
+ * myös ilman porttia (taustajärjestelmiä ei ole) — pelkkä
+ * käytöstesti ei siis huomaisi portin katoamista.
+ */
+test('mykkä peli ei lue mitään kummallakaan sisäänkäynnillä', () => {
+  const oli = sfx.enabled;
+  try {
+    sfx.enabled = false;
+    assert.equal(lueAaneen('Tokiossa astuin risteykseen.'), false);
+    assert.equal(lueVirtana(), null);
+    assert.equal(lukijaLukee(), false);
+  } finally {
+    sfx.enabled = oli;
+  }
+});
+
+test('mykistysportti on molempien sisäänkäyntien ensimmäinen ehto', () => {
+  const lahde = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  for (const nimi of ['lueAaneen', 'lueVirtana']) {
+    const kohta = lahde.indexOf(`export function ${nimi}(`);
+    assert.ok(kohta > 0, `${nimi} ei löytynyt`);
+    // Portin on oltava rungon alussa, ennen kuin mitään
+    // taustajärjestelmää kysytään.
+    const runko = lahde.slice(kohta, kohta + 900);
+    assert.match(runko, /if \(!aanetPaalla\(\)\)/, `${nimi} ei kysy pelin äänivalintaa`);
+    const portti = runko.indexOf('aanetPaalla()');
+    const tausta = runko.indexOf('puheTuettu()');
+    assert.ok(tausta < 0 || portti < tausta, `${nimi} kysyy taustajärjestelmää ennen mykistystä`);
+  }
+});
+
+test('mykistys lähettää tapahtuman, jota lukija kuuntelee', () => {
+  const aani = readFileSync(new URL('../js/sound.js', import.meta.url), 'utf8');
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  // Sama vakio molemmissa päissä: tapahtuman nimi ei saa erkaantua.
+  assert.match(aani, /export const AANIVALINTA_TAPAHTUMA = 'matkakirja-aanivalinta'/);
+  assert.match(aani, /setEnabled\(enabled\)\s*\{[\s\S]*?ilmoitaAaniValinta\(enabled\)/);
+  assert.match(lukija, /addEventListener\(AANIVALINTA_TAPAHTUMA/);
+  assert.match(lukija, /detail\?\.enabled === false\) pysaytaLukija\(\)/);
 });

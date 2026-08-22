@@ -38,6 +38,7 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |
 | savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
+| savuke-mediakanava | Pelin äänet mediakanavassa (hiljainen ankkuri + audioSession, sanelun tauko) ja pelin oma mykistys myös striimatulla lukijaäänellä |
 
 **Savukevartija** (`node tools/tarkista-savukkeet.mjs`, CI:ssä joka
 PR:lle): vertaa kaikkien savukkeiden `ui.X`-kutsut ja -luvut UI:n

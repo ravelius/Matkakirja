@@ -96,9 +96,42 @@ import {
  * ristiin.
  */
 import { puheAlkoi, puheLoppui } from './ambience-stream.js';
+import { AANIVALINTA_TAPAHTUMA, sfx } from './sound.js';
 
 /** Luennan kieli. Sama luku laitteen omilla taustajärjestelmillä. */
 export const LUENNAN_KIELI = 'fi-FI';
+
+/*
+ * ── PELIN MYKISTYS KOSKEE KAIKKEA LUENTAA ────────────────────────────
+ *
+ * OMISTAJAN BUGIRAPORTTI 22.8.2026: "Nyt vaikka pelin oma mykistys on
+ * päällä niin peli lukee silti matkakirjaa ääneen mutta vain jos ääni
+ * on striimi generoitu. Normaalia generoitua peli ei lue, mikä on
+ * oikein."
+ *
+ * SYY: mykistystarkistus (sfx.enabled) oli hajallaan KUTSUJISSA eikä
+ * lukijassa. Äänitepolku kysyi sitä (js/luenta.js playDiaryVoice ja
+ * playIntroVoice), mutta lukijaäänen polut eivät: js/luenta.js
+ * lueMerkinta ja lueKertojana kutsuivat suoraan lueAaneen-funktiota,
+ * joka ei tiennyt pelin äänivalinnasta mitään. Mykistys pysäytti
+ * soivan luennan (js/main.js valitseKertoja → pysaytaLukija), mutta
+ * seuraava merkintä lähti taas lukemaan.
+ *
+ * KORJAUS: portti on TÄSSÄ, molempien aloitusfunktioiden ensimmäisenä
+ * rivinä (lueAaneen ja lueVirtana). Ne ovat lukijan ainoat sisäänkäynnit
+ * — kaikki taustajärjestelmät (lukijaääni, laitteen ääni, selaimen
+ * syntetisaattori, natiivisilta) kulkevat niiden läpi — joten uusi
+ * kutsuja ei voi vahingossa ohittaa tarkistusta niin kuin lueMerkinta
+ * teki.
+ *
+ * MYÖS KESKEN LUENNAN: sound.js:n setEnabled lähettää tapahtuman, ja
+ * mykistys pysäyttää soivan luennan tässä. Aiemmin pysäytys nojasi
+ * siihen, että jokainen mykistyksen kytkevä paikka muistaa kutsua
+ * pysaytaLukija() erikseen.
+ */
+function aanetPaalla() {
+  return sfx?.enabled !== false;
+}
 
 /**
  * Luettavan tekstin katto merkkeinä.
@@ -1025,6 +1058,18 @@ export function pysaytaLukija() {
   nyt.kunLoppuu?.();
 }
 
+/*
+ * Mykistys kesken luennan hiljentää soivan luennan heti — sama
+ * käytös kuin äänitepolulla (js/main.js valitseKertoja pysäyttää
+ * luennat ja striimit). Kuuntelija on tässä eikä kutsujissa, jotta
+ * mykistys tehoaa mistä tahansa se kytketäänkin.
+ */
+if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+  document.addEventListener(AANIVALINTA_TAPAHTUMA, (tapahtuma) => {
+    if (tapahtuma?.detail?.enabled === false) pysaytaLukija();
+  });
+}
+
 /** Kääre, joka takaa että loppukoukku laukeaa korkeintaan kerran. */
 function kerran(fn) {
   if (typeof fn !== 'function') return null;
@@ -1068,6 +1113,9 @@ export function lueAaneen(teksti, nappi = null, {
   persoona = 'kertoja', sailio, onLoppu, kohdat = null, aloitusKappale = 0, jatko = null,
 } = {}) {
   pysaytaLukija();
+  // Pelin mykistys ensin: mykkä peli ei lue mitään, millään
+  // taustajärjestelmällä (ks. aanetPaalla).
+  if (!aanetPaalla()) return false;
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava) return false;
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
@@ -1306,6 +1354,10 @@ function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null) {
  */
 export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
   pysaytaLukija();
+  // Sama mykistysportti kuin lueAaneenissa: mykkä peli ei lue
+  // virtanakaan. null kertoo kutsujalle, ettei virtaluentaa ole —
+  // sama paluuarvo kuin silloin, kun taustajärjestelmä ei tue sitä.
+  if (!aanetPaalla()) return null;
   // Sama pehmeä taustan väistö kuin valmiin tekstin luennassa
   // (lueAaneen) — kerran-kääre kattaa kaikki loppupolut.
   const vapautaVaisto = kerran(puheLoppui);
