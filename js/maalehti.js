@@ -868,8 +868,9 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       /*
        * Kuvateksti on lukijalle, kreditti lisenssille — omistajan
        * palaute 10.8.2026: "Kuvan kreditit pienemmällä ja isommalla
-       * kuvateksti." Selite siis omalla rivillään leipätekstikoossa
-       * ja lähde sen alla pienellä.
+       * kuvateksti." Selite siis leipätekstikoossa ja kreditti sen
+       * JATKEENA samalla rivillä hennolla pienellä (omistajan tilaus
+       * 23.8.2026; ks. css/styles.css "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
        */
       if (eka.selite || eka.lahde) {
         const teksti = html('figcaption', 'vinkki-hero-teksti');
@@ -968,6 +969,11 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     // Kuva ja sen tekstit kääritään yhteiseen kehykseen, joka
     // kutistuu kuvan mittoihin: kuvateksti ei saa ylittää kuvan
     // reunaa (omistajan toive).
+    //
+    // KUVAN ALLA nämä kaksi kappaletta ovat inline-virrassa, eli lähde
+    // jatkaa selitettä samalla rivillä pienemmällä (omistajan tilaus
+    // 23.8.2026). Muutos on kokonaan CSS:ssä — ks. css/styles.css
+    // "LÄHDERIVI KUVATEKSTIN JATKEEKSI" ja .wiki-nosto .kuvakehys.
     const selite = nosto.selite ? html('p', 'selite', nosto.selite) : null;
     // Pro-tuottajan kuvassa (`tekijaId`) tekijän nimi on lähderivillä
     // painike, joka avaa tekijäsivun (js/tekijakortti.js). Ilman

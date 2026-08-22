@@ -5824,11 +5824,22 @@ export class UI {
       if (onVanhaKuva(kuvaTiedot, oletusVanha)) kuva.classList.add('vanha-vedos');
       kuva.alt = altTeksti;
       osa.appendChild(kuva);
-      // Parin lauseen selite kertoo mitä kuvassa näkyy; lähde ja vuosi
-      // jäävät omalle pienemmälle rivilleen (omistajan toive).
-      if (kuvaTiedot.selite) osa.appendChild(html('p', 'kuvateksti', kuvaTiedot.selite));
-      osa.appendChild(html('p', 'kuvalahde',
+      /*
+       * Parin lauseen selite kertoo mitä kuvassa näkyy, ja paikka,
+       * vuosi ja lähde jatkavat sitä SAMALLA RIVILLÄ pienemmällä
+       * (omistajan tilaus 23.8.2026; ennen ne olivat oma kappaleensa
+       * selitteen alla). Lähde on osa kuvatekstiä eikä sen sisar,
+       * jotta rivitys hoituu inline-virtana — ks. css/styles.css
+       * "LÄHDERIVI KUVATEKSTIN JATKEEKSI".
+       *
+       * Kuvateksti tehdään aina: lähde on lisenssiehto ja näkyy myös
+       * silloin, kun kuvalla ei ole selitettä.
+       */
+      const teksti = html('p', 'kuvateksti');
+      if (kuvaTiedot.selite) teksti.appendChild(document.createTextNode(kuvaTiedot.selite));
+      teksti.appendChild(html('span', 'kuvalahde',
         [tiedot.paikka, kuvaTiedot.vuosi, kuvaTiedot.lahde].filter(Boolean).join(' · ')));
+      osa.appendChild(teksti);
       return osa;
     };
     /*
@@ -7371,12 +7382,22 @@ export class UI {
     kuva.draggable = false;
     kotelo.appendChild(kuva);
     kortti.appendChild(kotelo);
-    // Parin lauseen selite teoksesta kuvan alla (omistajan toive);
-    // otsikko ja lähde jäävät pienemmälle riville.
+    /*
+     * Parin lauseen selite teoksesta kuvan alla (omistajan toive), ja
+     * otsikko ja lähde sen JATKEENA samalla rivillä pienemmällä
+     * (omistajan tilaus 23.8.2026).
+     *
+     * Molemmat ovat saman kappaleen sisällä eivätkä sisaruksia: 36 rem:n
+     * lukupalsta (omistajan havainto 23.8.2026 julistesuurennoksesta) on
+     * tämän kappaleen max-width, ja inline-laatikko ei ottaisi sitä
+     * vastaan omanaan. Selite on oma span, koska nayta() kirjoittaa sen
+     * joka kuvanvaihdossa — kappaleen textContent pyyhkisi lähteen.
+     */
     const kuvateksti = html('p', 'kuvateksti');
-    const kuvalahde = html('p', 'kuvalahde');
+    const kuvaselite = html('span', 'kuvateksti-selite');
+    const kuvalahde = html('span', 'kuvalahde');
+    kuvateksti.append(kuvaselite, kuvalahde);
     kortti.appendChild(kuvateksti);
-    kortti.appendChild(kuvalahde);
     const lista = (teokset?.length ?? 0) > 1 ? teokset : null;
     let indeksi = Math.max(0, Math.min(kohdalla, (lista?.length ?? 1) - 1));
     let laskuri = null;
@@ -7403,10 +7424,9 @@ export class UI {
         asetaKuva(kuva, teos.osoite ?? julisteUrl(teos.ampari), null);
       } else asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
       kuva.alt = teos.otsikko ?? teos.selite ?? '';
-      kuvateksti.textContent = teos.selite ?? '';
-      kuvateksti.hidden = !teos.selite;
+      kuvaselite.textContent = teos.selite ?? '';
       kuvalahde.textContent = [teos.otsikko, teos.lahde].filter(Boolean).join(' · ');
-      kuvalahde.hidden = !kuvalahde.textContent;
+      kuvateksti.hidden = !kuvaselite.textContent && !kuvalahde.textContent;
       if (laskuri) laskuri.textContent = `${indeksi + 1} / ${lista.length}`;
     };
     if (lista) {
@@ -8364,8 +8384,8 @@ export class UI {
    * artikkelin lisenssin alla, ja se lukee jo ikkunan lopussa
    * ("Lähde: Wikipedia (CC BY-SA)"); Commonsista käsin poimittu kuva
    * on oma teoksensa, jonka tekijä ja lisenssi on mainittava siinä,
-   * missä kuva näytetään. Sama kahden rivin muoto kuin
-   * nähtävyysjutuissa: selite ensin, lähde perään pienemmällä.
+   * missä kuva näytetään. Sama muoto kuin nähtävyysjutuissa: selite
+   * ensin ja lähde sen jatkeena samalla rivillä pienemmällä.
    */
   paivitaWikiKuvateksti() {
     if (!this.wikiKuvateksti) return;
@@ -8513,8 +8533,9 @@ export class UI {
       lataus.textContent = 'Ladataan…';
       portaat = suurennusportaat(kohde.src);
       img.src = portaat.shift();
-      // Lähde omalle rivilleen kuvatekstin alle: CC BY vaatii tekijän
-      // maininnan myös suurennoksessa, jossa kuva on isoimmillaan.
+      // Lähde kuvatekstin jatkeeksi samalle riville pienemmällä
+      // (23.8.2026): CC BY vaatii tekijän maininnan myös
+      // suurennoksessa, jossa kuva on isoimmillaan.
       kuvateksti.textContent = kohde.caption ?? '';
       if (kohde.lahde) kuvateksti.appendChild(html('span', 'lightbox-lahde', kohde.lahde));
       kuvateksti.hidden = !kohde.caption && !kohde.lahde;

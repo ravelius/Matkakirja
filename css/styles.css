@@ -2095,7 +2095,10 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 }
 
 .postikortti .kuvateksti {
-  margin: 0.35rem 0.1rem 0.15rem;
+  /* Alamarginaali 0,15 → 0,25 rem (23.8.2026): lähde on nyt tämän
+   * sisällä eikä oma kappaleensa, joten sen 0,1 rem:n alamarginaali
+   * siirtyy tänne ja kortin alareuna pysyy ennallaan. */
+  margin: 0.35rem 0.1rem 0.25rem;
   font-family: var(--font-type);
   /* Isompi selite (omistajan toive). */
   font-size: 0.86rem;
@@ -7333,30 +7336,47 @@ body.katselu #newgame-btn { display: none; }
  * Tämä on nyt puhelimen sääntö. Leveällä ruudulla kuva kutistuu
  * kainaloon ja teksti juoksee sen vierellä — ks. "KAINALOKUVA"
  * alempana (omistajan palaute 21.8.2026).
+ *
+ * ALAMARGINAALI 0,6 → 0,85 rem (23.8.2026): lähderivi on nyt kuvan
+ * alla inline-virrassa, joten sen oma 0,85 rem:n alamarginaali ei enää
+ * erota kuvatekstiä sen alta alkavasta leipätekstistä. Sama väli
+ * siirtyy kehykselle, jolloin taitto pysyy ennallaan.
  */
 .wiki-nosto .kuvakehys {
   width: 100%;
-  margin: 0 auto 0.6rem;
+  margin: 0 auto 0.85rem;
 }
 
+/* Kuva omalle rivilleen lohkona: sen alta alkava kuvateksti on nyt
+ * inline-virtaa, ja inline-kuva imisi tekstin ensimmäisen rivin
+ * viereensä. */
 .wiki-nosto .kuvakehys img,
 .wiki-nosto .kuvakehys .nosto-galleria {
+  display: block;
   width: 100%;
   max-height: none;
 }
 
+/*
+ * Selite ja lähde SAMAAN inline-virtaan (23.8.2026, ks. "LÄHDERIVI
+ * KUVATEKSTIN JATKEEKSI"). Tässä ne ovat kaksi erillistä p-elementtiä
+ * kehyksen sisällä; inline-arvo sulattaa ne yhdeksi anonyymiksi
+ * lohkoksi, jolloin lähde jatkaa selitettä ja rivittyy sen mukana.
+ *
+ * Aiempi `width: 0; min-width: 100%` esti kuvatekstiä venyttämästä
+ * kehystä kuvaa leveämmäksi. Sitä ei tarvita: kehyksellä on aina
+ * täsmällinen leveys (100 %, kainalossa 42 % / 30 %), eikä inline-laatikko
+ * ota leveyttä vastaan muutenkaan.
+ */
 .wiki-nosto .kuvakehys .selite,
 .wiki-nosto .kuvakehys .lahde {
-  width: 0;
-  min-width: 100%;
+  display: inline;
 }
 
-/* Lähdemaininta on lisenssiehto, ei koriste: se näkyy aina.
- * Alamarginaali erottaa kuvatekstirivit niiden alta alkavasta
- * leipätekstistä (kuvatekstit ovat kuvan alla, v301). */
+/* Lähdemaininta on lisenssiehto, ei koriste: se näkyy aina. */
 .wiki-nosto .lahde {
   margin: 0 0 0.85rem;
-  font-size: 0.74rem;
+  font-size: 0.66rem;
   color: rgba(70, 51, 31, 0.68);
 }
 
@@ -7747,22 +7767,19 @@ body.katselu #newgame-btn { display: none; }
 
 /*
  * Kuratoidun karusellikuvan teksti Lue lisää -ikkunassa: selite ja sen
- * alla tekijä ja lisenssi. Samat luokat kuin nähtävyysjutun kuvalla
+ * jatkeena tekijä ja lisenssi. Samat luokat kuin nähtävyysjutun kuvalla
  * (.nahtavyys-selite, .nahtavyys-lahde), joten ilme on sama molemmissa
  * paikoissa — vain kehys on eri.
  */
 .wiki-kuvateksti {
   margin: 0.35rem 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
 }
 
-/* Tekijä ja lisenssi suurennoksen kuvatekstin alle, omalle rivilleen. */
+/* Tekijä ja lisenssi suurennoksen kuvatekstin JATKEEKSI samalle
+ * riville, pienellä ja himmeällä (23.8.2026). */
 .lightbox-lahde {
-  display: block;
-  margin-top: 0.15rem;
-  font-size: 0.74rem;
+  display: inline;
+  font-size: 0.66rem;
   opacity: 0.78;
 }
 
@@ -9165,8 +9182,55 @@ button.lukija-nappi.lukee,
 }
 
 .lehti-kuvalahde {
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   color: rgba(70, 51, 31, 0.55);
+}
+
+/* ------------------------------------------------------------------ *
+ * LÄHDERIVI KUVATEKSTIN JATKEEKSI (omistajan tilaus 23.8.2026,
+ * kuvakaappaus Jerusalemin lehdestä)
+ *
+ * Lähderivi — "Matkakirjan havainnekuva", "Canaletto, Wikimedia
+ * Commons (PD)" — oli oma kappaleensa kuvatekstin alla ja vei kuvan
+ * alta oman rivinsä, vaikka se on lisenssimerkintä eikä juttua. Nyt se
+ * juoksee kuvatekstin perässä SAMALLA RIVILLÄ ja entistä pienemmällä:
+ * silmä lukee kuvatekstin loppuun ja ohittaa krediitin, mutta
+ * krediitti on yhä näkyvissä niin kuin lisenssi vaatii.
+ *
+ * TOTEUTUS ON PÄÄOSIN CSS:SSÄ, koska DOM-rakenne vaihtelee kohteittain
+ * (figcaption + kaksi spania, kuvakehys + kaksi p:tä). Kuvatekstin emo
+ * palautetaan tavalliseksi lohkoksi — osa oli flex-pylväitä, ja
+ * flex-lapsi on aina omalla rivillään riippumatta display-arvostaan —
+ * ja molemmat osat asetetaan inline-virtaan. Rivitys hoituu silloin
+ * itsestään: kun pari ei mahdu yhdelle riville, lähde jatkaa tekstin
+ * tavoin seuraavalle eikä jää orvoksi omalle rivilleen.
+ *
+ * VÄLILYÖNTI TULEE ::before-SISÄLLÖSTÄ eikä DOM:ista. Osa lähderiveistä
+ * kirjoitetaan uudestaan joka kuvanvaihdossa (js/tekijakortti.js
+ * taytaLahderivi tyhjentää elementin), joten DOM:iin ujutettu
+ * välilyönti katoaisi ensimmäisestä nuolenpainalluksesta. Tavallinen
+ * välilyönti on samalla se rivinvaihtokohta, jota inline-virtaus
+ * tarvitsee — ilman sitä selain pitäisi kuvatekstin viimeistä sanaa ja
+ * lähteen ensimmäistä yhtenä katkeamattomana pötkönä.
+ *
+ * LUENTA EI MUUTU: sekä kuvateksti- että lähdeluokat ovat jo
+ * LUKIJAN_OHITETTAVAT-listassa (js/lukija.js), ja ohitus koskee koko
+ * alipuuta — lähteen siirtyminen kuvatekstin sisään ei tuo sitä
+ * luentaan, eikä yksikään lähde päädy leipätekstielementin sisään.
+ * ------------------------------------------------------------------ */
+.lehti-kuvalahde::before,
+.nahtavyys-lahde::before,
+.lightbox-lahde::before,
+.kuvateksti .kuvalahde::before,
+.wiki-nosto .kuvakehys .lahde::before,
+.vinkki-hero .lahde::before { content: ' '; }
+
+/* Postikortin ja suurennoksen lähde on nyt kuvatekstin sisällä
+ * (js/ui.js): inline-virtaan ja kortin omaa lähdekokoa pienemmäksi. */
+.kuvateksti .kuvalahde {
+  display: inline;
+  margin: 0;
+  font-size: 0.56rem;
 }
 
 /*
@@ -11742,7 +11806,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .wiki-kategoria.yksipalsta .wiki-nosto .kuvakehys {
   float: none;
   width: 100%;
-  margin: 0 auto 0.6rem;
+  margin: 0 auto 0.85rem;
 }
 
 .wiki-kategoria.yksipalsta .leipa-aloitus {
@@ -12096,17 +12160,19 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 .vinkki-hero-selite {
-  display: block;
   font-size: 0.98rem;
   line-height: 1.45;
 }
 
+/* Kreditti selitteen JATKEEKSI samalle riville (23.8.2026, ks.
+ * "LÄHDERIVI KUVATEKSTIN JATKEEKSI"). Oikea tasaus lähti mukana: se
+ * oli oman rivin tapa erottua, ja inline-virrassa se vain repisi
+ * krediitin irti siitä lauseesta, jonka perään se kuuluu. */
 .vinkki-hero .lahde {
-  display: block;
-  margin-top: 0.15rem;
-  font-size: 0.68rem;
+  display: inline;
+  margin: 0;
+  font-size: 0.62rem;
   color: rgba(70, 51, 31, 0.68);
-  text-align: right;
 }
 
 /*
@@ -13790,7 +13856,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 .nahtavyys-taittokuva.oikea { float: right; margin-left: 1.1rem; }
 .nahtavyys-taittokuva.vasen { float: left; margin-right: 1.1rem; }
 .nahtavyys-taittokuva .nahtavyys-selite { font-size: 0.76rem; }
-.nahtavyys-taittokuva .nahtavyys-lahde { font-size: 0.6rem; }
+.nahtavyys-taittokuva .nahtavyys-lahde { font-size: 0.56rem; }
 
 /* Kellunta ei saa vuotaa jutun lopun nappien tai lähderivin alle. */
 .nahtavyys-kortti .wiki-btn,
@@ -13807,11 +13873,11 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   cursor: zoom-in;
 }
 
+/* Selite ja lähde SAMAAN inline-virtaan (23.8.2026, ks. "LÄHDERIVI
+ * KUVATEKSTIN JATKEEKSI"). Flex-pylväs oli juuri se, joka pakotti
+ * lähteen omalle rivilleen. */
 .nahtavyys-kuvateksti {
   margin: 0.3rem 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
 }
 
 .nahtavyys-selite {
@@ -13821,7 +13887,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 
 .nahtavyys-lahde {
   font-family: var(--font-type);
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   color: rgba(70, 51, 31, 0.66);
 }
 
