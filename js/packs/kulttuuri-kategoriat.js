@@ -30499,6 +30499,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   peking: [
     {
       id: 'kaupunki',
@@ -30510,22 +30512,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Hall of Prayer for Good Harvests 2013.jpg',
-          selite: 'Sadonkorjuurukoushalli Taivaan temppelissä: kolme '
-            + 'sinistä lasitettua kattoa kapenee kullattuun huippuun, ja '
-            + 'halli seisoo kolmiportaisen marmoriterassin päällä.',
+          selite: 'Sadonkorjuurukoushallissa neljä sisintä pilaria '
+            + 'vastaavat vuodenaikoja, kaksitoista keskimmäistä '
+            + 'kuukausia ja kaksitoista uloimmaista perinteisiä '
+            + 'kiinalaisia tunteja.',
           lahde: 'Bernhard Wintersperger, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Jingshan View of Beijing CBD - Flickr.jpg',
-          selite: 'Pekingin liikekeskustan siluetti Jingshanin kukkulalta: vasemmalla '
-            + 'kohoaa CCTV:n silmukkatalo ja oikealla China World Tower.',
+          selite: 'Jingshanin keinotekoinen kukkula oli keisarillinen '
+            + 'yksityispuutarha, ja sen 23 hehtaarin puisto avattiin '
+            + 'yleisölle vuonna 1928.',
           lahde: 'Gary Todd, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Forbidden City northwest corner tower and moat.jpg',
-          selite: 'Kielletyn kaupungin luoteinen monikattoinen kulmatorni '
-            + 'harmaan muurin takana ja sen edessä leveä vallihauta, '
-            + 'jonka rannalla riippuu pajuja veden ylle.',
+          selite: 'Kiellettyä kaupunkia kiertää 7,9 metriä korkea muuri '
+            + 'ja 52 metriä leveä vallihauta, jonka kulmia vartioivat '
+            + 'monikattoiset kulmatornit.',
           lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -30564,23 +30568,22 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Views of the Forbidden City from Jingshan Park 3.jpg',
-          selite: 'Kielletty kaupunki Jingshanin kukkulalta: kultaiset '
-            + 'katot jatkuvat riveinä etelään, ja etualalla on '
-            + 'palatsin pohjoisportti aukioineen.',
+          selite: 'Kielletyn kaupungin palatsialue on suorakaide, 961 '
+            + 'metriä pohjoisesta etelään ja 753 metriä idästä länteen.',
           lahde: 'EditQ, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hutong, Gasse in Peking, alley in Beijing (44042315480).jpg',
-          selite: 'Hutong-kuja harmaine tiilimuureineen ja ovien päälle '
-            + 'rakennettuine pienine katoksineen, ja yksi kulkija '
-            + 'etääntyy kujaa pitkin selin.',
+          selite: 'Hutong tulee mongolin vesikaivoa tarkoittavasta '
+            + 'sanasta, ja termi ilmestyi Yuan-dynastian aikana '
+            + '1200-luvulla.',
           lahde: 'FLASHPACKER TRAVELGUIDE, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Peking Grosse Mauer-20071019-RM-115708.jpg',
-          selite: 'Kiinan muuri nousee ja laskee syksyn värittämällä '
-            + 'vuorenharjalla Badalingissa, ja vartiotornit merkitsevät '
-            + 'harjanteen käännekohdat.',
+          selite: 'Kiinan muuria on kaikkine haaroineen 21 196 '
+            + 'kilometriä Liaodongin niemimaalta Lop Nurin järvelle '
+            + 'asti.',
           lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -30595,9 +30598,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Hall of Supreme Harmony, Forbidden City, from southeast.jpg',
-          selite: 'Kielletyn kaupungin suurin rakennus, Ylimmän sopusoinnun sali, '
-            + 'kohoaa kolminkertaisen marmoriterassin päällä punaisten seinien ja '
-            + 'keltatiilisten kattojen keskellä.',
+          selite: 'Ylimmän sopusoinnun sali on Kielletyn kaupungin '
+            + 'suurin rakennus, ja Ming- ja Qing-keisarit pitivät siellä '
+            + 'valtaistuimelle nousun ja häidensä seremoniat.',
           lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -30615,10 +30618,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maailman suurin säilynyt puurakenteinen '
             + 'palatsikokonaisuus. Alueella asui 24 keisaria, 14 '
             + 'Mingin ja 10 Qingin sukua.',
-          selite: 'Meridiaaniportti, Kielletyn kaupungin '
-            + 'pääsisäänkäynti etelästä: portin kaksi siipeä työntyvät '
-            + 'aukiolle niin, että tulija on kolmelta sivulta muurien '
-            + 'ympäröimä.',
+          selite: 'Meridiaaniportti on Kielletyn kaupungin eteläinen '
+            + 'pääsisäänkäynti, ja muurien sisällä asui aikanaan 24 '
+            + 'keisaria, 14 Mingin ja 10 Qingin sukua.',
           lahde: 'Morio, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Peking',
         },
@@ -30635,9 +30637,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'koristelluin kattopalkein, kauempana tavalliset '
             + 'kaupunkilaiset ahtaammissa ja vaatimattomammissa '
             + 'kujissa.',
-          selite: 'Siheyuan-piha prinssi Gongin residenssissä: '
-            + 'harmaakattoiset siipirakennukset, punaiset ovet ja '
-            + 'ikkunaristikot kiertävät pihan pientä puutarhaa.',
+          selite: 'Prinssi Gongin residenssi rakennettiin alun perin '
+            + 'virkamies Heshenille, ja se on Pekingin laajimpia '
+            + 'siheyuan-pihojen ja puutarhojen kokonaisuuksia.',
           lahde: 'Caitriana Nicholson from 北京 ~ Beijing, 中国 ~ China, '
             + 'Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Peking',
@@ -30655,9 +30657,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lasimaisena. Toinen perinne, suljetussa uunissa '
             + 'paistettu tyyli, on peräisin Bianyifang-ravintolasta, '
             + 'jonka nimi on merkitty vuoteen 1416 asti.',
-          selite: 'Ankkoja kypsymässä riippu-uunissa: linnut roikkuvat '
-            + 'koukuissa liekkien yllä, ja tulen hehku valaisee '
-            + 'hämärän paistohuoneen.',
+          selite: 'Quanjuden perustaja Yang Quanren kehitti '
+            + 'riippu-uunin, jossa ankka paahtuu avotulella hedelmäpuun '
+            + 'oksien lämmössä, kunnes nahka rutisee lasimaisena.',
           lahde: 'ZhengZhou, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Peking',
         },
@@ -30675,9 +30677,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kilometrin päässä keskustasta luoteeseen: se '
             + 'rakennettiin 1504 ja avattiin matkailijoille 1957, '
             + 'ensimmäisenä koko muurista.',
-          selite: 'Badalingin osuus syksyllä: muuri seuraa harjannetta '
-            + 'vartiotornilta toiselle, kävijät näkyvät sen päällä '
-            + 'pieninä pisteinä ja vuoret jatkuvat usvaan asti.',
+          selite: 'Badalingin osuus rakennettiin 1504, ja se avattiin '
+            + 'matkailijoille 1957 ensimmäisenä koko muurista.',
           lahde: 'Reinhold Möller Ermell, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Peking',
         },
@@ -30685,10 +30686,10 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Beijing Swiatynia Harmonii i Pokoju 30.jpg',
-          selite: 'Rukousmylly Yonghen lamatemppelissä Pekingissä '
-            + 'syyskuussa 2023: punaiseksi maalatun katoksen alla lepää '
-            + 'vihertävä pronssirumpu, jonka kylkeen on valettu suuria '
-            + 'tiibetiläisiä kirjaimia.',
+          selite: 'Yonghen lamatemppeli on Kiinan varsinaisen alueen '
+            + 'suurimpia tiibetinbuddhalaisia luostareita, ja sen '
+            + 'rakennukset yhdistävät han-kiinalaista ja tiibetiläistä '
+            + 'tyyliä.',
           lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Peking on Kiinan pääkaupunki ja lähes 22 miljoonan '
@@ -30726,9 +30727,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'suoraan muurin juurelle.',
               kuva: {
                 tiedosto: 'Beijing Daxing International Airport Terminal 20191005.jpg',
-                selite: 'Daxingin lentoaseman halli: valkoinen '
-                  + 'kattorakenne aaltoilee korkealla liukukäytävien '
-                  + 'yllä, ja matkustajat näkyvät kaukana pieninä.',
+                selite: 'Daxingin lentoasema avattiin Pekingin '
+                  + 'eteläpuolelle, ja sen terminaali on maailman suurin '
+                  + 'yhtenäinen asemarakennus.',
                 lahde: 'Tyg728, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -30747,11 +30748,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'satelliittikaupunkeja.',
               kuva: {
                 tiedosto: 'Beijing ast 2007220 lrg.jpg',
-                selite: 'Satelliittikuva Pekingistä: harmaa '
-                  + 'kaupunki leviää tasangolle joka suuntaan '
-                  + 'vihreiden peltojen keskellä, ja oikeassa '
-                  + 'yläkulmassa erottuvat lentoaseman vaaleat '
-                  + 'kiitotiet.',
+                selite: 'Peking sijaitsee Pohjois-Kiinan tasangon '
+                  + 'pohjoisreunalla 40–60 metrin korkeudessa, ja vuoret '
+                  + 'suojaavat sitä pohjoisessa, luoteessa ja lännessä.',
                 lahde: 'NASA, Wikimedia Commons (PD)',
               },
             },
@@ -30769,9 +30768,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pihatalot ja uudet kahvilat elävät rinnakkain.',
               kuva: {
                 tiedosto: 'Hutong, BJ (2917986982).jpg',
-                selite: 'Arkinen hutong-kuja: pyykkiä kuivumassa '
-                  + 'narulla, polkupyöriä seinustalla ja matalien '
-                  + 'tiilitalojen kattoja vieri vieressä.',
+                selite: 'Siheyuan-pihatalot ja hutong-kujat olivat '
+                  + 'aikoinaan kaikkialla Pekingissä, mutta ne katoavat '
+                  + 'nopeasti korkeiden talojen tieltä.',
                 lahde: 'Caitriana Nicholson from 北京 ~ Beijing, '
                   + '中国 ~ China, Wikimedia Commons (CC BY-SA 2.0)',
               },
@@ -30846,9 +30845,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Yongle-keisari aloitti myös Kielletyn kaupungin ja '
             + 'Taivaan temppelin rakentamisen; molemmat valmistuivat '
             + '1420.',
-          selite: 'Kiinan-kartta Martino Martinin kartastosta Novus Atlas '
-            + 'Sinensis (1655), jossa maakunnat on rajattu värivyöhykkein '
-            + 'ja yläkulmassa on koristeellinen nimikilpi.',
+          selite: 'Martino Martinin Amsterdamissa 1655 julkaisemasta '
+            + 'kartastosta Novus Atlas Sinensis levisi läntinen '
+            + 'kirjoitusasu Peking Euroopan kieliin.',
           lahde: 'Martino Martini and Joan Blaeu, Wikimedia Commons (PD)',
           wiki: 'Peking',
         },
@@ -30866,9 +30865,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'neljä sisintä pilaria ovat vuodenajat, kaksitoista '
             + 'keskimmäistä kuukaudet ja kaksitoista uloimmaista '
             + 'perinteiset kiinalaiset tunnit.',
-          selite: 'Pyöreä alttari iltavalossa: valkoiset marmorikaiteet '
-            + 'kiertävät porrastettua tasannetta kolmena kehänä, ja '
-            + 'portaat nousevat suoraan ylimmälle tasolle.',
+          selite: 'Taivaan temppelin pyöreällä alttarilla keskimmäistä '
+            + 'marmorilaattaa ympäröi yhdeksän laatan rengas, ja '
+            + 'renkaita on yhdeksän, joista uloimmassa on 9 × 9 laattaa.',
           lahde: 'Zcm11, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Peking',
         },
@@ -30886,10 +30885,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nähnyt rikkinäisiä pylväitä, marmoriportaita ja '
             + 'kesken jääneen työmaan — ei loistavaa palatsia. Myös '
             + 'naapurin kesäpalatsi oli tuolloin vielä rauniona.',
-          selite: 'Ernst Ohlmerin valokuva 1870-luvulta: Xieqiqun '
-            + 'eurooppalaistyylisen palatsin raunio Vanhassa '
-            + 'kesäpalatsissa, koristeellinen julkisivu yhä pystyssä '
-            + 'mutta katto poissa ja pensaat portailla.',
+          selite: 'Ernst Ohlmerin 1870-luvun valokuvat Xieqiqun '
+            + 'raunioista ovat harvoja todisteita Vanhasta '
+            + 'kesäpalatsista, jonka anglo-ranskalaiset joukot polttivat '
+            + 'vuonna 1860.',
           lahde: 'Ernst Ohlmer, Wikimedia Commons (PD)',
           wiki: 'Peking',
         },
@@ -30906,10 +30905,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1670-luvulta lähtien — mutta 1870-luvulla naiset '
             + 'alkoivat epävirallisesti ilmestyä lavalle mieshahmoja '
             + 'esittäen. Virallinen kielto purettiin vasta 1912.',
-          selite: 'Peking-oopperan naishahmo eli dan täydessä '
-            + 'asussa: kasvot on maalattu valkoisiksi ja punaisiksi '
-            + 'naamion tavoin, päähine on koristeltu tupsuin ja '
-            + 'helmin, ja kirjailtu puku laskeutuu lattiaan asti.',
+          selite: 'Peking-oopperan dan- eli naisrooleja esittivät '
+            + 'pitkään vain miehet, sillä naisten esiintymiskielto '
+            + 'purettiin vasta 1912.',
           lahde: 'Joseph Lazer, Wikimedia Commons (CC BY-SA 2.5 in)',
           wiki: 'Peking',
         },
@@ -31397,6 +31395,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   tokio: [
     {
       id: 'kaupunki',
@@ -31408,23 +31408,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '言問橋 - panoramio.jpg',
-          selite: 'Turkoosiksi maalattu Kototoi-silta Sumida-joen yli '
-            + 'kahden kivipäällysteisen pilarin varassa, palkin kylkeen '
-            + 'kiinnitettynä sillan nimi kolmena isona mustana merkkinä.',
+          selite: 'Kototoi-silta ylittää Sumida-joen, jonka rannoille '
+            + 'jää shitamachi eli Tokion vanha alakaupunki.',
           lahde: 'Jun Matsuo, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Shibuya Crossing, Aerial.jpg',
-          selite: 'Shibuyan risteys ylhäältä illalla: viisi suojatietä '
-            + 'leikkaa aukion ristiin, ja ympäröivien talojen seinät ovat '
-            + 'täynnä valomainoksia.',
+          selite: 'Shibuyan risteystä pidetään maailman vilkkaimpana '
+            + 'suojatienä: yhden vihreän aikana sen yli kulkee jopa 3 '
+            + '000 ihmistä.',
           lahde: 'David Kernan, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Tokyo Skyline20210123.jpg',
-          selite: 'Tokion siluetti auringonlaskun jälkeen: etualalla '
-            + 'valaistut korttelit, keskellä Shinjukun pilvenpiirtäjät ja '
-            + 'vasemmalla horisontissa Fuji-vuoren tumma kartio.',
+          selite: 'Tokio on Japanin pääkaupunki, ja sen kaupunkiseutu on '
+            + 'asukasluvultaan maailman suurin.',
           lahde: 'Nryate, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31466,26 +31464,20 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'flickr-15047197338.jpg',
-          selite: 'Kaupunki merenlahden takana kirkkaana kesäpäivänä: '
-            + 'vastarannalla kulkee satamalaitureiden ja varastohallien '
-            + 'rivi, sen takana nousee tornitalojen seinämä, ja edessä '
-            + 'sinisellä vedellä kulkee valkoinen matkustajalaiva.',
+          selite: 'Tokion satama on Japanin suurimpia ja käsittelee '
+            + 'vuodessa noin sata miljoonaa tonnia rahtia.',
           lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-24802871038.jpg',
-          selite: 'Joen suu talvisena päivänä: veden yli kaartuu kaksi '
-            + 'valkoista teräskaarta saman sillan päissä, ja molemmilla '
-            + 'rannoilla kohoaa tornitaloja — vasemmalla ruskeaksi '
-            + 'laatoitettu toimistotalo, oikealla vaalea asuintorni.',
+          selite: 'Sumida-joki laskee Tokionlahteen, ja sen alajuoksun '
+            + 'ylittää tiheä sarja siltoja.',
           lahde: 'Dr. Matthias Ripp, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-54125112487.jpg',
-          selite: 'Pilvenpiirtäjien rivi alakaupungin kattojen yli '
-            + 'katsottuna: etualalla on matalia asuin- ja liiketaloja '
-            + 'parvekkeineen ja katolle nostettuine vesisäiliöineen, ja '
-            + 'niiden takana nousee toimistotornien seinämä.',
+          selite: 'Yamanote-lenkin pohjois- ja itäpuolelle jää '
+            + 'shitamachi, matalien korttelien vanha alakaupunki.',
           lahde: "Pom', Flickr (CC BY-SA 2.0)",
         },
       ],
@@ -31540,8 +31532,9 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Five-storied Pagoda, Sensoji, Tokyo, 20240824 1103 5616.jpg',
-          selite: 'Sensō-jin viisikerroksinen pagodi Asakusassa: Tokion '
-            + 'vanhimman temppelin punainen maamerkki.',
+          selite: 'Sensō-jin temppelialueella käy yli 30 miljoonaa '
+            + 'kävijää vuodessa, enemmän kuin missään muussa maailman '
+            + 'pyhäkössä.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Tokio ei ole yksi kaupunki vaan kolmenkymmenen aseman '
@@ -31586,8 +31579,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Along Yamanote line between Harajuku and Shibuya.jpg',
-                  selite: 'Yamanote-radan raiteet Harajukun ja Shibuyan '
-                    + 'välillä; lenkki kiertää koko keskustan.',
+                  selite: 'Yamanote-linja kiertää 34,5 kilometrin lenkin '
+                    + 'kolmenkymmenen aseman kautta, ja koko kierros '
+                    + 'kestää 59–65 minuuttia.',
                   lahde: 'Syced, Wikimedia Commons (CC0)',
                 },
                 {
@@ -31598,25 +31592,23 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Kappabashi Street with Tokyo Skytree in Background, Tokyo 130810 1.jpg',
-                  selite: 'Kappabashi-dōrin katukyltti ja kadun päässä '
-                    + 'siintävä Skytree-torni.',
+                  selite: 'Kappabashin kauppiaat ovat ottaneet '
+                    + 'maskotikseen vesihiisi kappan, jonka hahmoja on '
+                    + 'kylteissä pitkin katua.',
                   lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
                 },
                 {
                   tiedosto: 'flickr-24537021080.jpg',
-                  selite: 'Kaupunki ylhäältä auringonlaskun aikaan: talomeri '
-                    + 'jatkuu tasaisena taivaanrantaan asti, oikeassa '
-                    + 'laidassa kaartuu kaupunkimoottoritie kattojen '
-                    + 'yläpuolella, ja pilvien raosta paistaa aurinko '
-                    + 'keltaisena.',
+                  selite: 'Tokion kaupunkiseudulla asuu yli 35 miljoonaa '
+                    + 'ihmistä, ja rakennettu alue jatkuu '
+                    + 'naapuriprefektuurien puolelle.',
                   lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-51334303085.jpg',
-                  selite: 'Linnan vallihauta ja sen takana kaltevan '
-                    + 'kivimuurin päällä seisova valkoinen kulmatorni '
-                    + 'kahtine mustine tiilikattoineen, torni ja muuri '
-                    + 'veteen heijastuen.',
+                  selite: 'Keisarin palatsi seisoo Edon linnan paikalla, '
+                    + 'ja linnan vallihaudat ja kivimuurit ovat '
+                    + 'säilyneet sen ympärillä.',
                   lahde: 'Bernard Spragg. NZ, Flickr (Public Domain Mark)',
                 },
               ],
@@ -31646,10 +31638,9 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-54184684642.jpg',
-                  selite: 'Kalatiskiltä pöytään: kaksi nigiriä '
-                    + 'puulaudalla, etummaisessa paksu vaaleanpunaiseksi '
-                    + 'juovikas tonnikalaviipale riisipaakun yli kaartuen '
-                    + 'ja takana annos valkoista kalaa.',
+                  selite: 'Ameya-yokochōn kalatiskit ovat parhaimmillaan '
+                    + 'aamulla, ja vuoden viimeiset päivät ovat kujan '
+                    + 'vilkkaimmat.',
                   lahde: "Pom', Flickr (CC BY-SA 2.0)",
                 },
               ],
@@ -31681,41 +31672,37 @@ export const KULTTUURI_KATEGORIAT = {
                 {
                   tiedosto: 'Coffee cup-shaped balconies, Niimi Tableware, Kappabashi Dougu Street, Tokyo, Japan (side view).jpg',
                   asettelu: 'kapea',
-                  selite: 'Kahvikupin muotoiset parvekkeet keittiötavaratalon '
-                    + 'kulmassa Kappabashi-dōrin päässä.',
+                  selite: 'Kappabashin nimi selitetään joko sillalla '
+                    + 'kuivuneilla kappa-sadetakeilla tai kauppias '
+                    + 'Kihachi Kappayalla, joka rahoitti kanavatyön.',
                   lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-16200454374.jpg',
-                  selite: 'Nuudelikulho sinikuvioisessa kupissa: '
-                    + 'vaaleassa sameassa liemessä kelluu lihaviipale, '
-                    + 'puolikas kananmuna, vaaleanpunainen '
-                    + 'kalamassakiekko ja silputtua kevätsipulia, ja '
-                    + 'laidassa törröttää merileväliuska.',
+                  selite: 'Näyteikkunoiden muoviruoka eli shokuhin '
+                    + 'sampuru tehtiin 1920-luvun lopulta parafiinista, '
+                    + 'kunnes 1980-luvun puolivälissä siirryttiin '
+                    + 'PVC-muoviin.',
                   lahde: 'Zengame, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-10626604003.jpg',
-                  selite: 'Nuudeliravintolan pyöreä paperilyhty katon '
-                    + 'rajassa, valkoiseen paperiin maalattuna mustalla '
-                    + 'siveltimellä liikkeen nimi tavumerkein ja alle '
-                    + 'punainen nelikulmainen leimamerkki.',
+                  selite: 'Ravintolan koko muoviruokalista voi maksaa '
+                    + 'Kappabashissa yli miljoona jeniä.',
                   lahde: 'Zengame, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-47492986562.jpg',
-                  selite: 'Grilliravintolan valkoisella neliölautasella '
-                    + 'ohuita naudanlihaviipaleita, joiden rasva kulkee '
-                    + 'lihassa hienona valkoisena verkkona, aseteltuina '
-                    + 'vihreän bambunlehden kahden puolen.',
+                  selite: '1800-luvulla ravintolan myyjä asetti oven '
+                    + 'eteen joka päivä lautasellisen oikeaa ruokaa '
+                    + 'kirjoitetun listan sijasta.',
                   lahde: 'Kanesue, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-40579744563.jpg',
-                  selite: 'Lounastarjotin grilliravintolassa: keskellä '
-                    + 'pöytää on upotettu hiiligrilli, sen ympärillä '
-                    + 'kulho riisiä, kulho keittoa, lautasellinen kimchiä '
-                    + 'ja kurkkua sekä kolmiosainen kastikelautanen.',
+                  selite: 'Kappabashi-dōri kulkee Uenon ja Asakusan '
+                    + 'välissä, ja sen liikkeet myyvät ravintoloille '
+                    + 'veitsiä, astioita, uuneja ja kalusteita.',
                   lahde: 'Kanesue, Flickr (CC BY 2.0)',
                 },
               ],
@@ -31739,8 +31726,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: '広尾湯の煙突.jpg',
                 asettelu: 'kapea',
-                selite: 'Hiroo-yun savupiippu Tokiossa: kylpylän nimi on '
-                  + 'maalattu piippuun pystyriviin.',
+                selite: 'Sentōn kattilahuoneen korkea piippu on helpoin '
+                  + 'tapa löytää lähin kylpylä, sillä se erottuu '
+                  + 'kortteleiden päähän.',
                 lahde: 'Syced, Wikimedia Commons (CC0)',
               },
             },
@@ -31767,33 +31755,28 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Nakamise, Asakusa, Tokyo as seen from the Asakusa Culture Tourist Information Center 20190420 1.jpg',
-                  selite: 'Kaminarimon-portti ja Nakamise-dōrin kojurivi '
-                    + 'ylhäältä nähtynä Asakusassa.',
+                  selite: 'Nakamise-dōri johtaa Kaminarimon-portilta '
+                    + 'Sensō-jin päärakennukselle, ja sen kojuista '
+                    + 'ostetaan viuhkoja, kampoja ja leivoksia.',
                   lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-15204166021.jpg',
-                  selite: 'Temppelin portti kadun toiselta puolen '
-                    + 'iltapäivällä: leveän valkoisen suojatien takana '
-                    + 'odottaa väkeä jalkakäytävällä, ja portin punaisen '
-                    + 'katoksen alla riippuu iso paperilyhty.',
+                  selite: 'Sensō-ji paloi 10. maaliskuuta 1945 '
+                    + 'pommituksessa, ja päärakennus tehtiin uudelleen '
+                    + '1950-luvulla.',
                   lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-25880389523.jpg',
-                  selite: 'Katukojun makeisia tikkujen nokassa: '
-                    + 'turkoosiin ja tummanruskeaan kuorrutteeseen '
-                    + 'kastettuja banaaneja, jotka on koristeltu '
-                    + 'pinkeillä raidoilla ja värillisillä '
-                    + 'nonparelleilla.',
+                  selite: 'Kalastajaveljesten vuonna 628 löytämää '
+                    + 'Kannonin patsasta ei näytetä yleisölle koskaan.',
                   lahde: 'Jon Connell, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-16339556998.jpg',
-                  selite: 'Lähetystorni valaistuna illalla kanavan takaa '
-                    + 'katsottuna: runko hehkuu alhaalta kullankeltaisena '
-                    + 'ja vaihtuu ylempänä turkoosiksi ja violetiksi, ja '
-                    + 'värit heijastuvat mustasta vedestä.',
+                  selite: 'Tokyo Skytree valmistui 634 metriin vuonna '
+                    + '2012, ja se on maailman korkein torni.',
                   lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
                 },
               ],
@@ -31886,10 +31869,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yli 500. Puoliskoja yhdisti maan ensimmäinen '
             + 'yksikiskorata, joka suljettiin lopullisesti 2023 '
             + 'vanhentuneiden rakenteiden takia.',
-          selite: 'Uenon eläintarhan pääportti talvella: turkoosin '
-            + 'katoksen päällä lukee eläintarhan nimi punaisin merkein ja '
-            + 'perässä sana ZOO, ja lippuluukkujen mainostauluissa on '
-            + 'pandoja ja jääkarhuja.',
+          selite: 'Uenon eläintarha avattiin 20. maaliskuuta 1882, ja se '
+            + 'on Japanin vanhin eläintarha.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -31906,10 +31887,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sana on Amerika, sillä kadulla myytiin Yhdysvaltain '
             + 'armeijan ylijäämätavaraa. Lyhenne ameyoko sopii '
             + 'kumpaankin.',
-          selite: 'Kalakoju Ameya-yokochōssa: metallivuoissa on '
-            + 'punaiseksi keitettyä mustekalaa, lonkero imukuppeineen ja '
-            + 'muovipusseihin nypittyjä paloja, ja väleissä hintakylttejä '
-            + 'kiinalaisin numeroin.',
+          selite: 'Ameya-yokochōn ulkoilmatorilla on yli 250 liikettä '
+            + 'runsaan 15 000 neliömetrin alueella.',
           lahde: 'Kamasakizaki, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -31926,10 +31905,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'auringossa, joten 1980-luvun puolivälissä siirryttiin '
             + 'PVC-muoviin. Ravintolan koko lista voi maksaa yli miljoona '
             + 'jeniä.',
-          selite: 'Muoviruokakaupan näyteikkuna Kappabashissa: '
-            + 'lasikaappien hyllyt ovat täynnä vaahtopäisiä olutlaseja '
-            + 'kellertävää muovia sekä muovista tehtyjä leipiä, sushia ja '
-            + 'pikkuannoksia.',
+          selite: 'Muoviruoan muotti tehdään upottamalla oikea annos '
+            + 'silikoniin.',
           lahde: 'Maarten Heerlien from Voorschoten, The Netherlands, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -31956,10 +31933,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laattamaalaus, useimmiten Fuji-vuori. Takana on '
             + 'kattilahuone, jonka korkea piippu erottuu kauas kattojen '
             + 'ylle.',
-          selite: 'Tatsuno-yu-kylpylä Nerimassa, jonka julkisivu on tehty '
-            + 'pyhäkön tapaan harmaine tiilikattoineen ja '
-            + 'päätykolmioineen ja jonka takaa nousee korkea '
-            + 'vaaleansininen savupiippu.',
+          selite: 'Sentōn sisäänkäynti muistuttaa temppeliä, ja '
+            + 'oviaukossa roikkuu noren-verho, jossa lukee yu eli kuuma '
+            + 'vesi.',
           lahde: 'Kurihaya, Wikimedia Commons (CC0)',
         },
         {
@@ -31976,10 +31952,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kullakin oli oma matoi: pitkä tanko, jonka päässä on '
             + 'ryhmän tunnus ja nippu nauhoja. Se nostettiin katolle '
             + 'palavan talon viereen.',
-          selite: 'Kuusi ruudullisiin puuvillatakkeihin pukeutunutta '
-            + 'miestä Ikegamissa Tokiossa matoin ympärillä: pitkän tangon '
-            + 'päässä on valkoinen levy mustin merkein ja nippu valkoisia '
-            + 'suikaleita.',
+          selite: 'Edon vapaaehtoisilla palokunnilla oli kullakin oma '
+            + 'matoi, pitkä tanko ryhmän tunnuksineen, joka nostettiin '
+            + 'katolle palavan talon viereen.',
           lahde: '湯越慶太, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -31995,10 +31970,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on rakugo eli tarina jolla on putous. Kertoja istuu '
             + 'korokkeella polvillaan. Välineitä on kaksi: viuhka ja '
             + 'liina.',
-          selite: 'Asakusa Engei Hallin julkisivu illansuussa: katoksen '
-            + 'yläpuolella on rivi valkoisia kylttilaatikoita mustin '
-            + 'merkein, ylimpänä kellertäviä paperilyhtyjä ja katoksen '
-            + 'reunalla punaiset lyhdyt.',
+          selite: 'Yose on puhutun teatterin talo, ja sen sali vetää '
+            + 'tavallisesti 200 katsojaa.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -32050,6 +32023,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   soul: [
     {
       id: 'kaupunki',
@@ -32062,23 +32037,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Traditional hanok houses at golden hour in Bukchon Hanok Village in Seoul.jpg',
-          selite: 'Hanok-taloja Bukchonin kortteleissa aamuauringossa: '
-            + 'puurunkoisten talojen harjakatot on katettu harmailla '
-            + 'tiilillä, ja pihoja kiertää muuri, jonka alaosa on '
-            + 'mukulakiveä ja yläosa punatiiltä.',
+          selite: 'Hanok on korealainen puutalo, jonka lattian alla '
+            + 'kulkee ondol-lämmityskanava.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Seoul from Namsan 3.jpg',
-          selite: 'Soul Namsanin vuorelta pohjoiseen: keskustan tornit täyttävät laakson, '
-            + 'ja takana kohoaa Bukhansanin rosoinen graniittiharjanne.',
+          selite: 'Soulissa asuu yli yhdeksän miljoonaa ihmistä, ja '
+            + 'Han-joki jakaa kaupungin pohjoiseen Gangbukiin ja '
+            + 'eteläiseen Gangnamiin.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Yeouido Hangang Park from Mapo Bridge 1.jpg',
-          selite: 'Yeouidon rantapuisto Han-joen varrella Mapo-sillalta '
-            + 'kuvattuna: etualalla puistokenttä ja lehdettömiä puita, '
-            + 'takana joki siltoineen ja vastarannan talorivit.',
+          selite: 'Yeouidon saari Han-joessa on Soulin rahoituksen ja '
+            + 'tiedotusvälineiden keskus, ja sen pinta-ala on 8,4 '
+            + 'neliökilometriä.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         /*
@@ -32090,18 +32064,16 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           tiedosto: 'flickr-48968719746.jpg',
-          selite: 'Vanha kaupunginportti keskellä liikennettä: '
-            + 'kaksikerroksinen puinen porttitalo seisoo harmaan '
-            + 'kivijalustan päällä, jonka läpi vie musta holvikäytävä, ja '
-            + 'takana kohoaa lasisia toimistotaloja.',
+          selite: 'Soulia kiersi 1300-luvulla 18,2 kilometrin muuri ja '
+            + 'kahdeksan porttia, joista osa seisoo yhä liikenteen '
+            + 'keskellä.',
           lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-48966437893.jpg',
-          selite: 'Hopeanharmaa metallipintainen rakennus yöllä: '
-            + 'pyöristetty seinämä kaartuu maasta ylös ja jatkuu '
-            + 'vaakasuorana aallonharjana kuvan poikki, ja alhaalla '
-            + 'nousee valaistu kävelyramppi.',
+          selite: 'Vanhan itäportin kupeeseen valmistui Zaha Hadidin ja '
+            + 'Samoon suunnittelema Dongdaemun Design Plaza, jonka '
+            + 'katolla kulkee kävelypuisto.',
           lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
         },
       ],
@@ -32115,27 +32087,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'flickr-48753082278.jpg',
-          selite: 'Kaupunki kukkulan laelta kirkkaana syyspäivänä: '
-            + 'etualalla laskeutuu metsäinen rinne, sen takana leviää '
-            + 'matalien talojen meri laaksoon, ja taustalla kohoaa '
-            + 'sinertävä vuorijono rantaan asti.',
+          selite: 'Soulin keskellä on Namsanin kukkula, ja kaupunkia '
+            + 'ympäröivät joka suunnalta graniittivuoret.',
           lahde: 'cafuego, Flickr (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'flickr-14775785519.jpg',
-          selite: 'Aurinko nousee usvan läpi kaupungin yllä: oikeassa '
-            + 'laidassa kohoaa punavalkoinen ristikkomasto, alhaalla '
-            + 'levittäytyy matalien talojen kortteleita ja kaukana '
-            + 'kimaltaa joki siltoineen.',
+          selite: 'Namsanin laella seisova 236-metrinen Soulin torni oli '
+            + 'maan ensimmäinen useaa tv- ja radiokanavaa palvellut '
+            + 'masto.',
           lahde: 'Kristoffer Trolle, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-23010178486.jpg',
-          selite: 'Joen takainen kaupunginosa auringonlaskun aikaan: '
-            + 'kerrostalorivistön yllä kaartuu raidallinen pilviverho, '
-            + 'taivas hehkuu oranssina pilvien alla, ja keskeltä nousee '
-            + 'yksinäinen kapeneva torni, jonka huipulla on vielä '
-            + 'nostureita.',
+          selite: 'Han-joen eteläpuolinen Gangnam on rakennettu pääosin '
+            + '1970-luvun jälkeen.',
           lahde: 'Carmine.shot, Flickr (CC BY 2.0)',
         },
       ],
@@ -32170,8 +32136,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Water reflection of Hyangwonjeong Pavilion at Gyeongbokgung Palace in Seoul.jpg',
-          selite: 'Hyangwonjeongin kuusikulmainen paviljonki heijastuu '
-            + 'lammesta Gyeongbokgungin palatsissa.',
+          selite: 'Hyangwonjeongin kuusikulmainen paviljonki seisoo '
+            + 'Gyeongbokgungin pohjoisosan lammen saarella.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Soul on yli yhdeksän miljoonan asukkaan pääkaupunki, '
@@ -32221,22 +32187,22 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Insadong Alley, Seoul, Korea.jpg',
-                  selite: 'Insadong-gilin sivukuja: osoitekilpi kertoo '
-                    + 'korttelin numeron talon kulmassa.',
+                  selite: 'Insadong on Soulin antiikki- ja '
+                    + 'käsityökauppojen katu, ja sen kujat lähtevät '
+                    + 'Gwanghwamunin aukiolta.',
                   lahde: 'Ken Eckert, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Korea-Seoul-Namdaemun-Sungnyemun-16.jpg',
-                  selite: 'Sungnyemunin portti valaistuna: kaupunki on '
-                    + 'kasvanut sen ympärille joka suunnalta.',
+                  selite: 'Sungnyemun valmistui vuonna 1398 ja '
+                    + 'rakennettiin uudelleen 1447, ja se oli pitkään '
+                    + 'Soulin vanhin puurakennus.',
                   lahde: 'tylerdurden1, Wikimedia Commons (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-30596173403.jpg',
-                  selite: 'Joen eteläpuoli yöllä: sillan kaide kaartuu '
-                    + 'oikealle, katuvalot jatkuvat rivissä kauas, ja '
-                    + 'keskellä kohoaa kapeneva lasitorni, jonka kylkeen '
-                    + 'on juovitettu valonauhoja.',
+                  selite: 'Soulin metro on matkustajamäärältään maailman '
+                    + 'suurimpia, ja lyhin matka maksaa 1 250 wonia.',
                   lahde: 'Tony, Flickr (CC BY 2.0)',
                 },
               ],
@@ -32260,8 +32226,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jonkun kotikatuja.',
               kuva: {
                 tiedosto: 'Traditional hanok houses on the corner of a steeply sloping street in Bukchon Hanok Village Seoul.jpg',
-                selite: 'Hanok-talo jyrkän kadun kulmassa Bukchonissa; '
-                  + 'muurin alaosa on mukulakiveä.',
+                selite: 'Bukchonissa asuu noin 6 100 ihmistä, ja vuonna '
+                  + '2024 korttelissa kävi 6,4 miljoonaa vierailijaa.',
                 lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -32286,17 +32252,16 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Korean pancakes and pan-fried foods at Gwangjang Market.jpg',
-                  selite: 'Jeon-lettuja ja paistettuja pikkuannoksia '
-                    + 'Gwangjangin torin kojun tiskillä.',
+                  selite: 'Gwangjangin torin bindaetteok on mungpavuista '
+                    + 'jauhettu paksu lettu, joka paistetaan öljyssä '
+                    + 'asiakkaan silmien edessä.',
                   lahde: 'Bo Park, US Army, Wikimedia Commons (PD)',
                 },
                 {
                   tiedosto: 'flickr-41646399301.jpg',
-                  selite: 'Katukojun tiski illalla: myyjä pitää kudotuin '
-                    + 'käsinein kaasupoltinta padan reunalla ja liekki '
-                    + 'osuu ritilän päällä olevaan annokseen, ja oikealla '
-                    + 'on kuorittuja kastanjoita ja paahdettuja '
-                    + 'bataatteja.',
+                  selite: 'Gwangjangin tori perustettiin 5. heinäkuuta '
+                    + '1905 ensimmäisenä torina, joka oli auki joka '
+                    + 'päivä eikä vain markkinapäivinä.',
                   lahde: 'Marc DUPUY, Flickr (CC BY-SA 2.0)',
                 },
               ],
@@ -32319,8 +32284,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kävelyreitti, joka kulkee katutason alapuolella.',
               kuva: {
                 tiedosto: 'KOCIS Cheonggyecheon (stream) in Seoul (7085882037).jpg',
-                selite: 'Cheonggyecheonin uoma keskikaupungilla: vesi '
-                  + 'pulppuaa suihkuina kivetyn puron poikki.',
+                selite: 'Cheonggyecheonin uoma kaivettiin esiin '
+                  + 'moottoritien alta vuosina 2003–2005, ja siihen '
+                  + 'pumpataan päivittäin 120 000 tonnia vettä.',
                 lahde: 'Korea.net / Korean Culture and Information Service, '
                   + 'Wikimedia Commons (CC BY-SA 2.0)',
               },
@@ -32350,25 +32316,21 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg',
-                  selite: 'Gyeonghoerun juhlasali seisoo kivipilareiden '
-                    + 'varassa palatsin lammessa.',
+                  selite: 'Gyeonghoeru on Gyeongbokgungin juhlasali, '
+                    + 'jossa hovi otti vastaan vieraita.',
                   lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-45979304321.jpg',
-                  selite: 'Sama juhlasali syksyllä lammen toiselta '
-                    + 'puolelta: kaksikerroksinen sali seisoo '
-                    + 'kivipilaririvin päällä kivetyllä saarekkeella ja '
-                    + 'heijastuu kokonaan tyynestä vedestä.',
+                  selite: 'Joseon-dynastia rakensi Souliin viisi suurta '
+                    + 'palatsia, joista Gyeongbokgung on ensimmäinen ja '
+                    + 'suurin.',
                   lahde: 'wikiphotographer, Flickr (CC BY-SA 2.0)',
                 },
                 {
                   tiedosto: 'flickr-48977306141.jpg',
-                  selite: 'Palatsin piha alkusyksystä: hiekkakäytävä johtaa '
-                    + 'valkoiseen muuriin ja sen pieneen porttiin, käytävän '
-                    + 'reunoilla on punalehtisiä pensaita ja kallistuneita '
-                    + 'mäntyjä, ja muurin takaa kohoaa jyrkkä vuori, jonka '
-                    + 'rinteessä näkyy paljasta kalliota.',
+                  selite: 'Gyeongbokgungin palatsialueella toimivat myös '
+                    + 'Joseonin palatsimuseo ja kansanperinteen museo.',
                   lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
                 },
               ],
@@ -32457,10 +32419,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'perinteisessä uunissa Buyeossa, ja työtä ohjasivat '
             + 'piirustukset, jotka oli tehty edellisen korjauksen '
             + 'yhteydessä 2005 juuri tällaisen tilanteen varalle.',
-          selite: 'Sungnyemunin portti Soulissa: kaksikerroksinen puinen '
-            + 'porttirakennus tiilikattoineen seisoo kivijalustan päällä, '
-            + 'jonka läpi vie holvikäytävä, ja vasemmalla kohoaa lasinen '
-            + 'toimistotalo.',
+          selite: 'Sungnyemunin ennallistus alkoi helmikuussa 2010 ja '
+            + 'päättyi huhtikuussa 2013, ja katon 22 000 tiiltä '
+            + 'poltettiin perinteisessä uunissa Buyeossa.',
           lahde: 'm-louis, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -32479,10 +32440,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rahoitti muun muassa korean kielen seuraa, ja vuoden 1942 '
             + 'kielikahakassa hänet vangittiin ja kidutettiin ja omaisuutta '
             + 'takavarikoitiin.',
-          selite: 'Kuja Bukchonin hanok-korttelissa aamuauringossa: '
-            + 'vasemmalla nousee punatiilinen muuri, jonka yli kaartuu '
-            + 'punaisia ruusuja, ja oikealla on hanok-talon puinen '
-            + 'julkisivu ja tiilikaton räystäs.',
+          selite: 'Bukchonin nykyiset hanokit rakensi 1920-luvulta '
+            + 'alkaen Chŏng Segwŏn, joka perusti ensimmäisen '
+            + 'korealaisomisteisen rakennusliikkeen.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -32500,10 +32460,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'suurta palatsia ovat Changdeokgung salaisine puutarhoineen, '
             + 'Changgyeonggung, Gyeonghuigung ja monarkian viimeisinä '
             + 'vuosina käytetty Deoksugung.',
-          selite: 'Vartijaksi pukeutunut esiintyjä Gwanghwamunin '
-            + 'portilla: punaisessa hatussa on kaksi pystyyn nostettua '
-            + 'riikinkukon sulkaa, viitta on punainen ja hihat keltaiset, '
-            + 'ja käsissä on vaakasuora sauva.',
+          selite: 'Gwanghwamunin portilla esitetään päivittäin '
+            + 'vartionvaihto, jossa esiintyjillä on punainen viitta ja '
+            + 'hattu kahden riikinkukon sulan kera.',
           lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -32542,10 +32501,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jakkaralla. Illan pimetessä moni koju muuttuu '
             + 'pikkuravintolaksi, jossa istutaan soju-lasin ääressä '
             + 'pitkään; tunnetuimmat kojurivit ovat Jongnon varrella.',
-          selite: 'Pojangmacha-koju iltapimeällä Soulissa: punaisen '
-            + 'pressukatoksen kirkas ikkuna avautuu tiskille, jolla on '
-            + 'vartaita ja kastikepulloja, ja myyjä nostaa annosta '
-            + 'paistoaltaasta.',
+          selite: 'Pojangmacha tarkoittaa katettua vaunua, ja vuonna '
+            + '2012 kojuja laskettiin Soulissa noin 3 100.',
           lahde: 'LinasD, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -32563,10 +32520,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'buddhalaismunkit. Moni kylpylä palvelee läpi yön, ja '
             + 'makuusaliin voi jäädä nukkumaan — perheille se on halpa '
             + 'viikonlopunvietto.',
-          selite: 'Dragon Hill -kylpylän talo Yongsanissa Soulissa: '
-            + 'vaalean palatsimaisen julkisivun katolla lukee sinisin '
-            + 'kirjaimin kylpylän nimi ja 24H, ja kadun puolella on '
-            + 'koristeellinen portti kylttirivistöineen.',
+          selite: 'Jjimjilbang on korealainen kylpylä, joka palvelee '
+            + 'usein läpi yön ja jonka makuusaliin voi jäädä nukkumaan.',
           lahde: 'Matt Kieffer from London, United Kingdom, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -32585,10 +32540,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hallit ovat auki vuorokauden ympäri. Suuret turnaukset '
             + 'katsotaan yhdessä hallin ruuduilta kuin urheilua — mitä '
             + 'kilpapelaaminen Etelä-Koreassa onkin.',
-          selite: 'Pelihalli Hongdaen kaupunginosassa Soulissa: matalien '
-            + 'väliseinien lokeroissa on rivikaupalla näyttöjä ja '
-            + 'punavalkoisia pelituoleja, ja käytävän lattiaa reunustaa '
-            + 'valonauha.',
+          selite: 'PC bang -hallien määrä nousi sadasta noin 25 000:een '
+            + 'vuosina 1997–2011 StarCraft-pelin vanavedessä.',
           lahde: 'Wvdp, Wikimedia Commons (CC0)',
         },
       ],
@@ -32634,6 +32587,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   shanghai: [
     {
       id: 'kaupunki',
@@ -32646,24 +32601,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Shanghai-Bund-56-Kolonialstil-2012-gje.jpg',
-          selite: 'Rantakadun eli Bundin taloja aamuauringossa: '
-            + 'punatiilinen kolmikerroksinen kauppahuone on koristeltu '
-            + 'valkoisin pylväin ja päätykolmioin, ja sen edessä aukiolla '
-            + 'seisoo pronssinen härkäpatsas.',
+          selite: 'Bundin rantakatu on rivi 1800- ja 1900-luvun vaihteen '
+            + 'kauppahuoneita ja pankkipalatseja Huangpu-joen '
+            + 'länsirannalla.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Yu Garden Shanghai November 2017 012.jpg',
-          selite: 'Yun puutarhan lampi ja sen takana kaksikerroksinen '
-            + 'sali tummanpunaisine puujulkisivuineen, rantaa reunustavat '
-            + 'harmaat kalkkikivikasat ja lammen yli vievä matala silta.',
+          selite: 'Yun puutarhan rakennutti vuodesta 1559 alkaen Pan '
+            + 'Yunduan isälleen, ja nimi yu tarkoittaa vanhempien '
+            + 'mieliksi olemista.',
           lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2014.11.15.184711 East Nanjing Road Pedestrian Zone Shanghai.jpg',
-          selite: 'Itäisen Nanjing-kadun kävelykatu illalla: molemmin '
-            + 'puolin katua kohoaa neonkylttien rivi, katulyhdyt palavat '
-            + 'keskikaistalla ja väkeä kulkee ristiin rastiin.',
+          selite: 'Itäisen Nanjing-kadun kävelykatuosuus on 1 200 metriä '
+            + 'pitkä ja 28 metriä leveä.',
           lahde: 'Hermann Luyken, Wikimedia Commons (CC0)',
         },
         /*
@@ -32674,10 +32627,9 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           tiedosto: 'flickr-30366279333.jpg',
-          selite: 'Kullattu temppelikatto lasitornien välissä '
-            + 'auringonlaskun aikaan: vasemmalla kaartuu sininen '
-            + 'lasijulkisivu ja oikealla punaiseksi hehkuva tornitalo, ja '
-            + 'niiden välissä nousee monikerroksinen kultainen stupa.',
+          selite: 'Shanghaissa on 24 miljoonaa asukasta, ja vanhat '
+            + 'temppelit ovat jääneet 1990-luvulta alkaen nousseiden '
+            + 'tornitalojen väliin.',
           lahde: 'lwtt93, Flickr (CC BY 2.0)',
         },
       ],
@@ -32720,10 +32672,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'flickr-32354797618.jpg',
-          selite: 'Vanha keskusta ylhäältä sinisenä hetkenä: alareunassa '
-            + 'kaartuu leveä joki, sen rannassa kulkee valaistu '
-            + 'kivitalojen rivi, ja niiden takaa nousee tornitalojen meri '
-            + 'usvaan asti.',
+          selite: 'Huangpu-joki jakaa Shanghain: länsipuoli Puxi on '
+            + 'vanha keskusta ja itäpuoli Pudong uusi.',
           lahde: 'Franck Michel, Flickr (CC BY 2.0)',
         },
       ],
@@ -32759,8 +32709,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Shanghai Shanghai Tower 5166304.jpg',
-          selite: 'Shanghain torni alhaalta kuvattuna: 632 metriä korkea '
-            + 'lasirunko kiertyy ylöspäin kierteeksi.',
+          selite: 'Shanghain torni on 632 metriä korkea ja Kiinan '
+            + 'korkein rakennus.',
           lahde: 'Ermell, Wikimedia Commons (CC0)',
         },
         kappale: 'Shanghain jakaa kahtia Huangpu-joki: länsipuoli on Puxi '
@@ -32801,29 +32751,28 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'East Nanjing Pedestrian Shopping Street.jpg',
-                  selite: 'Itäinen Nanjing-katu on kävelykatua 1 200 metrin '
-                    + 'matkalta.',
+                  selite: 'Itäinen Nanjing-katu vie Bundin rantakadulta '
+                    + 'Kansanaukiolle.',
                   lahde: 'HeroicLife, Wikimedia Commons (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'Guilin Road Station Train.jpg',
-                  selite: 'Metrojuna Guilin-kadun asemalla; laituri on '
-                    + 'erotettu radasta lasiseinällä.',
+                  selite: 'Shanghain metroverkko on maailman laajimpia, '
+                    + 'ja matka maksaa etäisyyden mukaan 3–10 juania.',
                   lahde: 'Baycrest, Wikimedia Commons (CC BY-SA 2.5)',
                 },
                 {
                   tiedosto: 'The Bund 20150914-10.jpg',
-                  selite: 'Rantakadun kävelytaso ja tullitalon kellotorni '
-                    + 'Huangpun rannassa.',
+                  selite: 'Bundin kävelytaso rakennettiin '
+                    + 'taifuunitulvien jälkeen padon päälle, joten se on '
+                    + 'noin kymmenen metriä katutasoa ylempänä.',
                   lahde: 'そらみみ, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-44705397404.jpg',
-                  selite: 'Kävelykadun neonkylttejä lähietäisyydeltä '
-                    + 'yöllä: talon kyljessä laskeutuu kaksi pystyriviä '
-                    + 'valoputkikirjoitusta, toinen sinisenä punaisissa '
-                    + 'kehyksissä ja toinen vaaleanvihreänä punaisella '
-                    + 'pohjalla.',
+                  selite: 'Pudongin lentoasemalta keskustan laitaan '
+                    + 'pääsee magneettijunalla, joka kulki vuoteen 2021 '
+                    + 'asti 430 kilometrin tuntinopeudella.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
@@ -32848,8 +32797,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'luettelossa.',
               kuva: {
                 tiedosto: '2019-05-02 Lilong in Shanghai.jpg',
-                selite: 'Kujakorttelin katot ylhäältä: rivi toisensa '
-                  + 'perään samanlaisia taloja.',
+                selite: 'Shikumen-talojen kujakortteleita oli '
+                  + 'parhaimmillaan 9 000, ja niissä asui 60 prosenttia '
+                  + 'kaupunkilaisista.',
                 lahde: 'Mussi Katz, Wikimedia Commons (CC0)',
               },
             },
@@ -32874,16 +32824,16 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Yu Garden Shanghai November 2017 009.jpg',
-                  selite: 'Yun puutarhan salin sisustus: lyhdyt, maisemamaalaus '
-                    + 'ja veistetyt jalopuutuolit.',
+                  selite: 'Yun puutarha on kahden hehtaarin kokoinen, ja '
+                    + 'siihen on laskettu yli neljäkymmentä katseltavaa '
+                    + 'kohtaa.',
                   lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-50101388983.jpg',
-                  selite: 'Puutarhan laidan lampi illalla: '
-                    + 'kaksikerroksisten puutalojen ylöskaartuvat '
-                    + 'räystäät on ääriviivoitettu kullankeltaisin '
-                    + 'valoin, ja koko rivi heijastuu tummasta vedestä.',
+                  selite: 'Yun puutarhan laidalla lammen päällä seisoo '
+                    + 'teehuone, jonne johtaa yhdeksän kertaa kääntyvä '
+                    + 'silta.',
                   lahde: 'Steve FUNG, Flickr (CC BY-SA 2.0)',
                 },
               ],
@@ -32912,24 +32862,23 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Yuyuan Street xiaolongbao.JPG',
-                  selite: 'Xiaolongbao-nyyttejä bambukorissa Yun puutarhan '
-                    + 'kulmalla vanhassakaupungissa.',
+                  selite: 'Xiaolongbaon täytteeseen kääritään '
+                    + 'jähmettynyttä lihahyytelöä, joka sulaa höyryssä '
+                    + 'liemeksi.',
                   lahde: 'Drew Lietzow, Wikimedia Commons (PD)',
                 },
                 {
                   tiedosto: 'flickr-42164576345.jpg',
-                  selite: 'Korttelin ruokapaikka yöllä: julkisivun yllä '
-                    + 'palaa musta valotaulu, jonka kiinalaiset merkit on '
-                    + 'tehty valkoisista lampuista, ja ikkunaan on '
-                    + 'teipattu kuvallisia ruokalistoja.',
+                  selite: 'Xiaolongbaon shanghailainen tyyli syntyi '
+                    + 'Nanxiangin kylässä, joka on nykyään kaupungin '
+                    + 'esikaupunki.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-44774108052.jpg',
-                  selite: 'Aamiaispuodin ovi illalla: sisäänkäynnin yli '
-                    + 'kaartuu valkoinen holvi värillisine '
-                    + 'lamppuriveineen, ja alla hehkuvat vihreät ja '
-                    + 'punaiset neonmerkit sekä piirretty possunkuva.',
+                  selite: 'Xiaolongbao on Shanghaissa tavallisin '
+                    + 'aamiaisruoka, ja korin viereen tulee mustaa '
+                    + 'etikkaa ja silputtua inkivääriä.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
@@ -32952,16 +32901,15 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Shanghai skyline waterfront pudong 5166168 69 70.jpg',
-                  selite: 'Pudongin siluetti Huangpun yli: Helmitorni, Jin Mao '
-                    + 'ja Shanghain torni.',
+                  selite: 'Pudong oli 1990-luvun alkuun asti pääosin '
+                    + 'varastoja ja peltoa, kunnes siitä tehtiin '
+                    + 'rahoituskeskuksen kehitysalue.',
                   lahde: 'Ermell, Wikimedia Commons (CC0)',
                 },
                 {
                   tiedosto: 'flickr-45493688424.jpg',
-                  selite: 'Sama torni kadun tasalta yöllä: kierteinen '
-                    + 'lasijulkisivu nousee matalan valkoisen '
-                    + 'toimistotalon takaa ja jatkuu ulos kuvasta, ja '
-                    + 'kadun poikki venyy ohi ajaneen auton valojuova.',
+                  selite: 'Shanghain tornin näköalataso 121. kerroksessa '
+                    + 'oli avatessaan maailman korkein.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
@@ -33051,9 +32999,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerrosta ja nykyaikaiset saniteettitilat. Rakennustapa '
             + 'merkittiin Kiinan aineettoman kulttuuriperinnön '
             + 'luetteloon vuonna 2010.',
-          selite: 'Shikumen-portti Shanghaissa: tummaa puuovea kehystävät '
-            + 'harmaat kivipielet simpukkakuvioisine koristeineen, ja '
-            + 'oven päällä on kivipalkki ja koristelaatta.',
+          selite: 'Shikumen tarkoittaa kiven ympäröimää ovea: oviaukon '
+            + 'molemmin puolin ovat kivipielet ja päällä koristeltu '
+            + 'palkki.',
           lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -33071,9 +33019,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'salissa 1853–1855, ja sen jälkeen alkuperäisistä '
             + 'rakennuksista oli jäljellä vain vähän. Puutarha '
             + 'kunnostettiin 1956–1961 ja avattiin yleisölle 1961.',
-          selite: 'Yun puutarhan kivikkoa ja lampi: rantaa reunustavat '
-            + 'pystyyn ladotut harmaat kalkkikivet, joiden välissä kasvaa '
-            + 'muotoon leikattuja mäntyjä ja vaahteroita.',
+          selite: 'Yun puutarhan kuuluisin esine on Hienohko jadekivi, '
+            + '3,3 metriä korkea ja noin viisi tonnia painava huokoinen '
+            + 'lohkare.',
           lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -33089,10 +33037,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puiset edeltäjänsä mutta kestävämpiä ja niistä sai '
             + 'korkeamman vuokran. Suuri osa kortteleista on purettu '
             + 'uudisrakentamisen tieltä, ja jäljellä olevissa asutaan yhä.',
-          selite: 'Kujakorttelin porttikäytävä Shanhaiguan-kadulla '
-            + 'Shanghaissa: vaalean julkisivun keskellä on kaita '
-            + 'porttiaukko, jonka yli on pingotettu pyykkinaruja '
-            + 'vaatteineen.',
+          selite: 'Kujakorttelin nimi on lilong ja kuja longtang, ja '
+            + 'kortteliin mennään kadulta porttikäytävän läpi.',
           lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -33133,10 +33079,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'toiminut vuodesta 2004, ja moni käy siellä vuosikausia: '
             + 'osumia syntyy harvoin, ja osa vanhemmista ei ole '
             + 'kertonut ilmoituksesta lapselleen lainkaan.',
-          selite: 'Avioliittotorin ilmoituksia Kansanpuistossa '
-            + 'Shanghaissa: katetun käytävän seinälle on ripustettu '
-            + 'narujen varaan rivikaupalla valkoisia ja punaisia '
-            + 'paperiarkkeja käsin kirjoitettuine tietoineen.',
+          selite: 'Kansanpuiston avioliittotori on toiminut vuodesta '
+            + '2004, ja vanhemmat ripustavat sinne lastensa tiedot '
+            + 'paperiarkeille.',
           lahde: 'Jpbowen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -33154,10 +33099,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kansallissankarina pidetyn kenraali Yue Fein tuhoksi. '
             + 'Kansa on siitä asti paistanut petturit öljyssä joka '
             + 'aamu uudelleen.',
-          selite: 'Cifantuan lähikuvassa: tahmeista riisinjyvistä '
-            + 'puristetun pötkön sisältä pilkistää rapeaksi paistetun '
-            + 'youtiao-tangon kullanruskea kierre, ja pötköä pidellään '
-            + 'muovipussin läpi.',
+          selite: 'Cifantuan tehdään taputtelemalla tahmea riisi '
+            + 'levyksi, jonka keskelle kääritään pätkä rapeaa '
+            + 'youtiao-tankoa.',
           lahde: 'Galaxyharrylion, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -33174,9 +33118,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kääntyi: ensimmäinen shanghainkielinen romaani ilmestyi '
             + '2011, bussit alkoivat kuuluttaa pysäkkejä shanghaiksi '
             + '2013, ja 2017 kieltä oppi myös puhelimen ääniavustaja.',
-          selite: 'Linjan 14 sinivalkoinen johdinauto Dalian-kadulla '
-            + 'Shanghaissa: kyljessä on kiinalaisin merkein teksti sadan '
-            + 'vuoden bussiliikenteestä ja katolla virroitintangot.',
+          selite: 'Shanghain bussit alkoivat kuuluttaa pysäkkejä '
+            + 'shanghainkielellä vuonna 2013.',
           lahde: '4084470 0.smil, Wikimedia Commons (CC BY 4.0)',
         },
       ],
