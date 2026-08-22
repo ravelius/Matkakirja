@@ -132,6 +132,58 @@ test('pelin äänet voi vaientaa asetuksesta', async () => {
   assert.equal(ctx.aloitetut.length, 0, 'vaimennettuna ei saa soida mitään');
 });
 
+/*
+ * MEDIAKANAVAN ANKKURI (omistajan bugiraportit 22.8.2026).
+ *
+ * Ankkuri itse on selainasia — se mitataan oikealla mediaelementillä
+ * savukkeessa (tools/savukkeet/savuke-mediakanava.mjs). Täällä
+ * vartioidaan ne EHDOT, joiden varassa iOS:n luokkapäättely lepää ja
+ * jotka katoaisivat huomaamatta yhden rivin siivouksessa: elementin on
+ * oltava silmukka, täydellä volumella eikä mykkä (WebKitin
+ * computeCanProduceAudio katsoo täsmälleen näitä), ja sen lähteessä on
+ * oltava oikea ääniraita — nollan mittainen data-lohko ei kelpaa.
+ */
+test('mediakanavan ankkuri täyttää kuuluvuuden ehdot', () => {
+  const lahde = readFileSync(new URL('../js/sound.js', import.meta.url), 'utf8');
+  const kohta = lahde.indexOf('function haeAnkkuri()');
+  assert.ok(kohta > 0, 'ankkuria ei löydy');
+  const runko = lahde.slice(kohta, kohta + 1200);
+  assert.match(runko, /\.loop = true/, 'ankkuri ei ole silmukka');
+  assert.match(runko, /\.volume = 1/, 'ankkurin volume ei ole täysi');
+  assert.match(runko, /\.muted = false/, 'ankkuria ei varmisteta mykistämättömäksi');
+  // Ääniraidan on oltava aito: data-lohkon pituus tulee näytemäärästä.
+  assert.match(lahde, /nakyma\.setUint32\(40, naytteita, true\)/, 'wavin data-lohko on tyhjä');
+  assert.match(lahde, /tavut\.fill\(128, 44\)/, 'hiljaisuuden nollataso puuttuu');
+});
+
+test('mediakanavaa ei oteta ilman käyttäjän elettä', () => {
+  /*
+   * Mediakanava on yksinoikeusluokka: latauksessa otettuna se
+   * katkaisisi pelaajan oman musiikin. ensureContext ajetaan jo sivun
+   * latauksessa (js/ui.js syncAmbience), joten portin on oltava
+   * varmistuksessa itsessään eikä kutsujissa.
+   */
+  const lahde = readFileSync(new URL('../js/sound.js', import.meta.url), 'utf8');
+  const kohta = lahde.indexOf('export function varmistaAaniIstunto()');
+  assert.ok(kohta > 0, 'varmistaAaniIstunto puuttuu');
+  const runko = lahde.slice(kohta, kohta + 300);
+  assert.match(runko, /if \(saneluKaynnissa \|\| !eleNahty\) return false;/,
+    'mediakanavan voi ottaa ilman elettä tai kesken sanelun');
+  // Ele nostaa lipun; kuuntelija ei saa olla kertaluonteinen, koska
+  // ankkuri voi pysähtyä ulkopuolelta (Ohjauskeskus, puhelu).
+  assert.match(lahde, /eleNahty = true;/);
+  assert.doesNotMatch(lahde.slice(lahde.indexOf('const ele = ()')), /once: true/);
+});
+
+test('sanelun tauko purkaa mediakanavan ja jatko palauttaa sen', () => {
+  const lahde = readFileSync(new URL('../js/sound.js', import.meta.url), 'utf8');
+  const tauko = lahde.slice(lahde.indexOf('taukoaKonteksti() {'), lahde.indexOf('jatkaKonteksti() {'));
+  assert.match(tauko, /asetaAaniIstunto\('auto'\)/, 'äänisession luokka jää lukkoon sanelun ajaksi');
+  assert.match(tauko, /pysaytaAnkkuri\(\)/, 'ankkuri jää soimaan mikrofonin päälle');
+  const jatko = lahde.slice(lahde.indexOf('jatkaKonteksti() {'));
+  assert.match(jatko.slice(0, 400), /varmistaAaniIstunto\(\)/, 'mediakanava ei palaa sanelun jälkeen');
+});
+
 test('masteriketjuun kuuluu kaiku ja kompressori', async () => {
   const { sfx, ctx } = await lataaSfx();
   sfx.play('dieLand');

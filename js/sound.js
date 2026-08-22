@@ -52,62 +52,99 @@ const AMBIENCE_EVENT_MAX = 30000;
  */
 
 /*
- * ── LAITTEEN ÄÄNENVOIMAKKUUSSÄÄDIN ───────────────────────────────────
+ * ── PELIN ÄÄNET MEDIAKANAVAAN ────────────────────────────────────────
  *
- * OMISTAJAN BUGIRAPORTTI 22.8.2026 (iPad, Safari): "Peli ei kunnioita
- * laitteen äänenvoimakkuus säädintä." Kyljen napit eivät säätäneet
- * peliä — tai säätivät vain osaa äänistä.
+ * OMISTAJAN BUGIRAPORTIT:
+ *  - 22.8.2026 aamu (iPad, Safari): "Peli ei kunnioita laitteen
+ *    äänenvoimakkuus säädintä." → v1007 asetti
+ *    navigator.audioSession.type = 'playback'.
+ *  - 22.8.2026 ilta (iPad, v1007 asennettuna): "Pelin pitäisi totella
+ *    aina tuota äänisäädintä. Nyt ääntä pystyi muuttamaan iPadin
+ *    napeista mutta tuo säädin pysyi paikallaan vaikka äänentaso
+ *    muuttui." Ohjauskeskuksen mediasäädin ei siis liikkunut pelin
+ *    mukana: peli ei ollut siinä kanavassa, jota säädin näyttää.
+ *    v1007 EI riittänyt.
  *
- * SYY EI OLE VOIMAKKUUKSISSA VAAN ÄÄNISESSION LUOKASSA. iOS ei anna
- * sivulle omaa liukusäädintä vaan äänisession, ja session luokka
- * ratkaisee, MIKÄ laitteen voimakkuus nappeja seuraa. WebKitin oletus
- * on 'auto': selain päättelee luokan siitä, mitä ääni-API:a sivu
- * käyttää, ja pelkän WebAudio-kontekstin sivu päätyy Ambient-luokkaan
- * (AVAudioSessionCategoryAmbient — WebKit AudioSessionIOS.mm). Ambient
- * roikkuu soittoäänen voimakkuudessa ja tottelee hiljaisuuskytkintä:
- * napit säätävät soittoääntä, eivät peliä. Sama juuri on tunnetussa
- * WebKit-viassa 237322 ("webaudio api is muted when the iOS ringer is
- * muted").
+ * MITÄ iOS OIKEASTI TEKEE. Prosessilla on tasan YKSI AVAudioSession,
+ * ja sen luokka ratkaisee kaiken: mediakanava (MediaPlayback) seuraa
+ * Ohjauskeskuksen mediasäädintä ja sen mykistystä, Ambient roikkuu
+ * soittoäänessä ja hiljaisuuskytkimessä. Luokan valitsee WebKit itse,
+ * ja valintasääntö on luettavissa lähteestä
+ * (Source/WebCore/platform/audio/cocoa/MediaSessionManagerCocoa.mm,
+ * updateSessionState):
  *
- * Siitä syntyy myös havainnon "vain osa äänistä" -puoli: pelin
- * <audio>-polut (js/luenta.js, js/ambience-stream.js,
- * js/linssit/radio.js) nostavat session mediatoistoon ja tottelevat
- * nappeja, mutta syntetisoidut tehosteet (tämä moduuli) ja
- * WebAudio-puskureina soitettu lukijaääni (js/puhe.js) eivät.
+ *     ... else if (hasAudibleVideoMediaType)  category = MediaPlayback;
+ *     else if (hasAudibleAudioOrVideoMediaType) category = MediaPlayback;
+ *     else if (webAudioCount)                category = AmbientSound;
  *
- * KORJAUS: Safari 17 antaa sivun kertoa luokan itse
- * (navigator.audioSession, W3C Audio Session; WebKitissä oletuksena
- * päällä juuri type-ominaisuuden osalta). 'playback' vastaa
- * AVAudioSessionCategoryPlaybackia: mediaääni, jota kyljen napit
- * säätävät.
+ * Eli: KUULUVA <audio>- tai <video>-elementti nostaa koko prosessin
+ * mediakanavaan; pelkkä WebAudio putoaa Ambientiin. Juuri siksi pelin
+ * äänimaisema (js/ambience-stream.js) näkyi omistajan kuvakaappauksessa
+ * Ohjauskeskuksen "Nyt toistetaan" -ikkunassa, mutta tehosteet (tämä
+ * moduuli) ja lukijaäänen puskurit (js/puhe.js) eivät totelleet
+ * mediasäädintä.
  *
- * MIKSI JUURI 'playback':
- *  - 'ambient' on täsmälleen se rikkinäinen nykytila, jonka 'auto'
- *    tälle sivulle valitsee. Se ei siis korjaisi mitään.
- *  - 'transient' ja 'transient-solo' ovat ilmoitusäänille ja lyhyille
- *    ohjeille (navigaattorin puhe): ne duckaavat tai keskeyttävät muut
- *    äänet joka kerta. Peli soittaa minuuttikaupalla luentaa ja
- *    äänimaisemaa, ei piippauksia.
- *  - 'play-and-record' kuuluu mikrofonille — ks. sanelun tauko alla.
+ * MIKSI v1007 EI RIITTÄNYT. navigator.audioSession.type on oikea ja
+ * standardinmukainen tapa ohittaa tuo päättely (WebKit
+ * Modules/audiosession/DOMAudioSession.cpp: setType → AudioSession::
+ * setCategoryOverride(MediaPlayback)), mutta se on yksi ainoa,
+ * kokeellinen ja vain Safarin polku, jolla on lähdekoodista näkyviä
+ * hiljaisia epäonnistumistapoja:
+ *  - setType palaa ÄÄNETTÖMÄSTI (ei poikkeusta, ei vaikutusta), jos
+ *    dokumentin mikrofonin permissions-policy ei ole päällä;
+ *  - override on prosessinlaajuinen singleton, jonka WebKit itse voi
+ *    nollata (MediaSessionManagerInterface: setCategoryOverride(None)),
+ *    ja jonka pelin oma sanelutauko käy välillä 'auto'-tilassa;
+ *  - vanhemmassa Safarissa navigator.audioSessionia ei ole lainkaan,
+ *    jolloin koko v1007 oli tyhjä käsky.
+ * Yhdelläkään näistä ei ole selainpuolelta havaittavaa merkkiä, joten
+ * pelkän tyypin varaan ei voi jäädä.
  *
- * HINTA, JOKA MAKSETAAN TIETOISESTI: Playback ei tottele
- * hiljaisuuskytkintä, joten kytkin ei enää vaienna peliä. Se on sama
- * valinta, jonka selaimen videotoisto ja Applen omat mediasovellukset
- * tekevät, ja pelille oikea: ääni ei ala koskaan ilman käyttäjän
- * elettä, ja sen saa pois pelin omasta asetuksesta (setEnabled).
- * Playback on lisäksi yksinoikeusluokka, joka keskeyttää muiden
- * sovellusten toiston — juuri siksi luokkaa EI aseteta sivun
- * latauksessa vaan vasta kun ääntä ollaan oikeasti aloittamassa
- * (ensimmäinen ele tai ensureContext). Pelkkä sivun avaaminen ei saa
- * katkaista pelaajan musiikkia.
+ * KORJAUS: MEDIAKANAVAN ANKKURI. Peli pitää soimassa yhtä hiljaista
+ * <audio>-silmukkaa aina kun se voi tuottaa ääntä. WebKit laskee
+ * elementin kuuluvaksi ILMAN näytteiden tarkastelua
+ * (HTMLMediaElement.h: isAudible() = canProduceAudio(), ja
+ * computeCanProduceAudio() katsoo vain ääniraitaa, volumea ja
+ * mykistystä), joten digitaalinen hiljaisuus riittää: luokaksi tulee
+ * MediaPlayback. Ja koska sessio on prosessikohtainen, sama luokka
+ * koskee SAMALLA kaikkea muutakin pelin ääntä — tehosteita, lukijan
+ * puskureita, äänimaisemaa ja radiota. Yksi ankkuri, kaikki äänet.
  *
- * Muissa selaimissa navigator.audioSessionia ei ole. Silloin tämä ei
- * tee mitään eikä kirjoita konsoliin — asetus on puhdas lisä, ei
- * riippuvuus.
+ * Tämä on sama mekanismi, jolla jokainen videopalvelu iOS:ssä toimii,
+ * ei kokeellinen rajapinta. audioSession.type jätetään paikalleen
+ * rinnalle: siellä missä se toimii, se on täsmällisempi ja nopeampi.
+ * Kaksi riippumatonta polkua samaan lopputulokseen.
+ *
+ * HYLÄTTY VAIHTOEHTO: WebAudion reititys mediakanavaan
+ * MediaStreamAudioDestinationNodella ja <audio srcObject>:lla. Se ei
+ * tekisi luokalle mitään, mitä hiljainen ankkuri ei jo tee (kummassakin
+ * kyse on kuuluvasta mediaelementistä), mutta se veisi KAIKEN pelin
+ * äänen sillan läpi — ja juuri se silta on iOS:n Safarissa tunnetusti
+ * mykkä (WebAudio/web-audio-api#1722, #2293). Nollahyöty, koko äänen
+ * menettämisen riski.
+ *
+ * HINTA, JOKA MAKSETAAN TIETOISESTI: mediakanava ei tottele
+ * hiljaisuuskytkintä (sama valinta kuin videotoistossa), ja se on
+ * yksinoikeusluokka, joka keskeyttää muiden sovellusten toiston.
+ * Siksi KUMPIKAAN puoli ei lähde sivun latauksesta vaan vasta
+ * käyttäjän eleestä (ks. eleNahty alla) — autoplay-säännöt pysyvät
+ * ennallaan eikä pelkkä sivun avaaminen katkaise pelaajan musiikkia.
+ * Pelin oma äänivalinta (setEnabled) vaientaa pelin entiseen tapaan.
+ *
+ * Muissa selaimissa ja testitynkien alla molemmat polut ovat pelkkiä
+ * ei-operaatioita: navigator.audioSessionia ei ole eikä window.Audiota
+ * välttämättä ole. Mitään ei kaadu eikä kirjoiteta konsoliin.
  */
 let aaniIstunnonLuokka = null;
 
-/** Asettaa äänisession luokan kerran; palauttaa true jos se muuttui. */
+/*
+ * Sanelun aikana mediakanavaa ei pidetä yllä: mikrofoni tarvitsee
+ * session itselleen (ks. taukoaKonteksti). Lippu on moduulitasolla,
+ * koska myös eleen kuuntelija tarvitsee sen.
+ */
+let saneluKaynnissa = false;
+
+/** Asettaa äänisession luokan; palauttaa true jos se muuttui. */
 function asetaAaniIstunto(tyyppi) {
   if (aaniIstunnonLuokka === tyyppi) return false;
   if (typeof navigator === 'undefined' || !navigator) return false;
@@ -122,29 +159,181 @@ function asetaAaniIstunto(tyyppi) {
   }
 }
 
-/**
- * Varmistaa, että sivun äänet ovat mediatoistoluokassa — eli että
- * laitteen äänenvoimakkuusnapit säätävät peliä (ks. selitys yllä).
- * Turvallinen kutsua monta kertaa: luokka asetetaan vain kerran.
+/*
+ * MIKSI 'playback' eikä jokin muu tyyppi:
+ *  - 'ambient' on täsmälleen se rikkinäinen nykytila, jonka 'auto'
+ *    pelkälle WebAudio-sivulle valitsee. Se ei korjaisi mitään.
+ *  - 'transient' ja 'transient-solo' ovat ilmoitusäänille ja lyhyille
+ *    ohjeille: ne duckaavat tai keskeyttävät muut äänet joka kerta.
+ *    Peli soittaa minuuttikaupalla luentaa ja äänimaisemaa.
+ *  - 'play-and-record' kuuluu mikrofonille — ks. sanelun tauko alla.
  */
-export function varmistaAaniIstunto() {
-  return asetaAaniIstunto('playback');
+const ISTUNNON_LUOKKA = 'playback';
+
+/*
+ * Ankkurin lähde tehdään koodissa: 0,5 s 8-bittistä hiljaisuutta
+ * 8 kHz:llä on 4 kt dataa eikä vaadi verkkoa, service workeria eikä
+ * tiedostoa repossa. Ääniraidan PITÄÄ olla oikea (ei nollan mittainen
+ * data-lohko kuten js/puhe.js:n virityswav): WebKit lukee raidan
+ * olemassaolon, ei näytteitä.
+ */
+let ankkurinLahde = null;
+
+function hiljainenLahde() {
+  if (ankkurinLahde !== null) return ankkurinLahde;
+  if (typeof btoa !== 'function') {
+    ankkurinLahde = '';
+    return ankkurinLahde;
+  }
+  const taajuus = 8000;
+  const naytteita = taajuus / 2;
+  const tavut = new Uint8Array(44 + naytteita);
+  const nakyma = new DataView(tavut.buffer);
+  const teksti = (kohta, arvo) => {
+    for (let i = 0; i < arvo.length; i += 1) tavut[kohta + i] = arvo.charCodeAt(i);
+  };
+  teksti(0, 'RIFF');
+  nakyma.setUint32(4, 36 + naytteita, true);
+  teksti(8, 'WAVEfmt ');
+  nakyma.setUint32(16, 16, true); // fmt-lohkon koko
+  nakyma.setUint16(20, 1, true); // pakkaamaton PCM
+  nakyma.setUint16(22, 1, true); // mono
+  nakyma.setUint32(24, taajuus, true);
+  nakyma.setUint32(28, taajuus, true); // tavua sekunnissa
+  nakyma.setUint16(32, 1, true); // lohkon tasaus
+  nakyma.setUint16(34, 8, true); // bittiä näytteessä
+  teksti(36, 'data');
+  nakyma.setUint32(40, naytteita, true);
+  tavut.fill(128, 44); // 8-bittisen näytteen nollataso on 128
+  let merkit = '';
+  for (let i = 0; i < tavut.length; i += 1) merkit += String.fromCharCode(tavut[i]);
+  ankkurinLahde = `data:audio/wav;base64,${btoa(merkit)}`;
+  return ankkurinLahde;
 }
 
 /*
- * Luokka asetetaan myös ENSIMMÄISESTÄ ELEESTÄ, ei pelkästään tämän
- * moduulin kontekstista. Syy: kaikki äänipolut eivät kulje täältä —
- * lukijan oma WebAudio-piiri (js/puhe.js) ja <audio>-luennat
- * syntyvät omissa moduuleissaan. Yksi kuuntelija kattaa ne kaikki,
- * eikä yhdenkään moduulin tarvitse tietää äänisessiosta mitään
- * (sama viritysmalli kuin js/puhe.js:n virita()). Ele on myös
- * aikaisin hetki, jolloin ääntä ylipäätään voi syntyä, joten
- * autoplay-säännöt eivät muutu.
+ * null = ei vielä yritetty, false = ei saatavilla (ei window.Audiota),
+ * muu = elementti. Yritys tehdään tasan kerran.
+ */
+let ankkuri = null;
+
+function haeAnkkuri() {
+  if (ankkuri !== null) return ankkuri;
+  ankkuri = false;
+  if (typeof window === 'undefined' || typeof window.Audio !== 'function') return ankkuri;
+  const lahde = hiljainenLahde();
+  if (!lahde) return ankkuri;
+  try {
+    const soitin = new window.Audio();
+    soitin.src = lahde;
+    soitin.loop = true;
+    soitin.preload = 'auto';
+    // Volume ja mykistys ovat ainoat asiat, joita WebKit kuuluvuudesta
+    // katsoo — kumpaakaan ei saa säätää pois.
+    soitin.volume = 1;
+    soitin.muted = false;
+    // playsinline pitää iOS:n avaamasta omaa soitinta; airplay-kielto
+    // pitää hiljaisuuden pois AirPlay-valikosta.
+    soitin.setAttribute?.('playsinline', '');
+    soitin.setAttribute?.('x-webkit-airplay', 'deny');
+    ankkuri = soitin;
+  } catch {
+    ankkuri = false;
+  }
+  return ankkuri;
+}
+
+/** Käynnistää mediakanavan ankkurin, jos se ei jo soi. */
+function soitaAnkkuri() {
+  if (saneluKaynnissa) return false;
+  const soitin = haeAnkkuri();
+  if (!soitin || soitin.paused === false) return false;
+  try {
+    soitin.play?.()?.catch?.(() => {
+      /* Ele puuttui tai laite kieltäytyi: seuraava ele yrittää uudestaan. */
+    });
+  } catch {
+    return false;
+  }
+  return true;
+}
+
+/** Pysäyttää ankkurin (sanelu tarvitsee session mikrofonille). */
+function pysaytaAnkkuri() {
+  const soitin = ankkuri;
+  if (!soitin) return;
+  try {
+    soitin.pause?.();
+  } catch {
+    /* elementti oli jo pysähtynyt */
+  }
+}
+
+/*
+ * MEDIAKANAVAA EI OTETA ENNEN KÄYTTÄJÄN ELETTÄ. Mediakanava on
+ * yksinoikeusluokka: sen ottaminen katkaisee pelaajan oman musiikin.
+ * ensureContext ajetaan kuitenkin jo sivun latauksessa (js/ui.js
+ * syncAmbience → js/ambience-stream.js liitaKompressori), joten
+ * v1007:n lupaus "vasta eleestä" ei pitänyt: luokka asetettiin
+ * latauksessa. Tämä lippu palauttaa lupauksen. Ankkuri ei olisi
+ * lähtenytkään soimaan (autoplay-esto), mutta luokka olisi.
+ */
+let eleNahty = false;
+
+/**
+ * Varmistaa, että pelin äänet ovat mediakanavassa — eli että
+ * Ohjauskeskuksen äänisäädin, sen mykistys ja kyljen napit hallitsevat
+ * peliä (ks. selitys yllä). Turvallinen kutsua joka eleestä: luokka
+ * asetetaan kerran ja soiva ankkuri jätetään rauhaan.
+ */
+export function varmistaAaniIstunto() {
+  if (saneluKaynnissa || !eleNahty) return false;
+  const muuttui = asetaAaniIstunto(ISTUNNON_LUOKKA);
+  soitaAnkkuri();
+  return muuttui;
+}
+
+/*
+ * Mediakanava varmistetaan JOKAISESTA eleestä, ei pelkästään tämän
+ * moduulin kontekstista. Kolme syytä:
+ *  - Ele on se hetki, josta lähtien mediakanavan saa ottaa (ks. yllä).
+ *  - Kaikki äänipolut eivät kulje täältä: lukijan oma WebAudio-piiri
+ *    (js/puhe.js) ja <audio>-luennat syntyvät omissa moduuleissaan.
+ *    Yksi kuuntelija kattaa ne kaikki, eikä yhdenkään moduulin tarvitse
+ *    tietää mediakanavasta mitään (sama viritysmalli kuin js/puhe.js:n
+ *    virita()).
+ *  - Ankkuri voi pysähtyä ilman että peli tietää: Ohjauskeskuksen
+ *    tauko, puhelu tai muu keskeytys. Kertaluonteinen kuuntelija
+ *    (v1007:n once) ei olisi silloin herättänyt sitä enää koskaan.
+ * Kuuntelija on halpa: jos luokka on jo asetettu ja ankkuri soi, se
+ * palaa heti. Kaappausvaiheessa se ehtii ennen sovelluksen omia
+ * käsittelijöitä, joten eleessä alkava ääni ehtii mediakanavaan.
  */
 if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
-  document.addEventListener('pointerdown', () => varmistaAaniIstunto(), {
-    once: true, capture: true, passive: true,
-  });
+  const ele = () => {
+    eleNahty = true;
+    varmistaAaniIstunto();
+  };
+  for (const nimi of ['pointerdown', 'keydown']) {
+    document.addEventListener(nimi, ele, { capture: true, passive: true });
+  }
+}
+
+/**
+ * Tapahtuma, jonka setEnabled lähettää documentille: detail.enabled
+ * kertoo uuden valinnan. Kuuntelija on js/lukija.js:ssä — mykistys
+ * pysäyttää soivan luennan (omistajan bugiraportti 22.8.2026).
+ */
+export const AANIVALINTA_TAPAHTUMA = 'matkakirja-aanivalinta';
+
+function ilmoitaAaniValinta(enabled) {
+  if (typeof document === 'undefined' || typeof document.dispatchEvent !== 'function') return;
+  if (typeof CustomEvent !== 'function') return;
+  try {
+    document.dispatchEvent(new CustomEvent(AANIVALINTA_TAPAHTUMA, { detail: { enabled } }));
+  } catch {
+    /* tapahtumaa ei voitu lähettää — valinta on silti voimassa */
+  }
 }
 
 class Sound {
@@ -181,6 +370,14 @@ class Sound {
     }
     if (enabled) this.play('click');
     else this.setAmbience(null);
+    /*
+     * Tieto valinnasta ulos tapahtumana (omistajan bugiraportti
+     * 22.8.2026, ks. js/lukija.js aanetPaalla). Näin jo soiva luenta
+     * hiljenee mykistyksestä ilman että jokainen mykistyksen kytkevä
+     * paikka muistaa pysäyttää sen erikseen — eikä tämän moduulin
+     * tarvitse tuntea lukijaa (tuonti tänne olisi kehä).
+     */
+    ilmoitaAaniValinta(enabled);
   }
 
   /**
@@ -209,11 +406,12 @@ class Sound {
    */
   ensureContext({ pakota = false } = {}) {
     /*
-     * Äänisession luokka kuntoon ENNEN enabled-porttia (omistajan
-     * bugiraportti 22.8.2026, ks. varmistaAaniIstunto yllä): kertoja,
+     * Mediakanava kuntoon ENNEN enabled-porttia (omistajan
+     * bugiraportit 22.8.2026, ks. varmistaAaniIstunto yllä): kertoja,
      * äänimaisema ja radio soivat myös silloin, kun pelin omat
-     * tehosteet on vaiennettu, ja laitteen napit koskevat niitäkin.
-     * Sanelun aikana ei kosketa — silloin sessio kuuluu mikrofonille.
+     * tehosteet on vaiennettu, ja Ohjauskeskuksen säädin koskee
+     * niitäkin. Sanelun aikana ei kosketa — silloin sessio kuuluu
+     * mikrofonille.
      */
     if (!this.saneluTauko) varmistaAaniIstunto();
     if (!this.enabled && !pakota) return null;
@@ -274,16 +472,21 @@ class Sound {
    */
   taukoaKonteksti() {
     this.saneluTauko = true;
+    saneluKaynnissa = true;
     /*
-     * Äänisession luokka takaisin selaimen omaan päättelyyn sanelun
-     * ajaksi (22.8.2026). Playback ei ole äänitysluokka: jos se
-     * jätettäisiin lukkoon, WebKit ei saisi siirtää sessiota
-     * mikrofonille eikä kaappaus lähtisi käyntiin — sama este, jonka
-     * takia kontekstikin viedään kylmäksi (js/pollo.js sanelu).
-     * 'auto' palauttaa päätöksen selaimelle; jatkaKonteksti nostaa
-     * mediatoiston takaisin heti sanelun jälkeen.
+     * Mediakanava puretaan sanelun ajaksi (22.8.2026). Kumpikin osa on
+     * pakko purkaa, ja samasta syystä: mikrofoni ei lähde käyntiin,
+     * jos sivu pitää äänisessiota toistossa.
+     *  - Luokka takaisin selaimen omaan päättelyyn ('auto'). Playback
+     *    ei ole äänitysluokka: lukkoon jätettynä WebKit ei saisi
+     *    siirtää sessiota mikrofonille.
+     *  - Ankkuri kiinni. Soiva mediaelementti on juuri se este, jonka
+     *    takia äänimaisemakin pysäytetään oikeasti sanelun ajaksi
+     *    (js/ambience-stream.js taukoaSanelunAjaksi).
+     * jatkaKonteksti nostaa molemmat takaisin heti sanelun jälkeen.
      */
     asetaAaniIstunto('auto');
+    pysaytaAnkkuri();
     try {
       this.ctx?.suspend?.().catch?.(() => {});
     } catch {
@@ -293,7 +496,9 @@ class Sound {
 
   jatkaKonteksti() {
     this.saneluTauko = false;
-    // Mediatoisto takaisin, jotta laitteen napit säätävät taas peliä.
+    saneluKaynnissa = false;
+    // Mediakanava takaisin, jotta Ohjauskeskuksen säädin ja kyljen
+    // napit hallitsevat taas peliä.
     varmistaAaniIstunto();
     try {
       if (this.ctx?.state === 'suspended') this.ctx.resume().catch(() => {});
