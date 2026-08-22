@@ -30499,6 +30499,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   peking: [
     {
       id: 'kaupunki',
@@ -30510,22 +30512,24 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Hall of Prayer for Good Harvests 2013.jpg',
-          selite: 'Sadonkorjuurukoushalli Taivaan temppelissä: kolme '
-            + 'sinistä lasitettua kattoa kapenee kullattuun huippuun, ja '
-            + 'halli seisoo kolmiportaisen marmoriterassin päällä.',
+          selite: 'Sadonkorjuurukoushallissa neljä sisintä pilaria '
+            + 'vastaavat vuodenaikoja, kaksitoista keskimmäistä '
+            + 'kuukausia ja kaksitoista uloimmaista perinteisiä '
+            + 'kiinalaisia tunteja.',
           lahde: 'Bernhard Wintersperger, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Jingshan View of Beijing CBD - Flickr.jpg',
-          selite: 'Pekingin liikekeskustan siluetti Jingshanin kukkulalta: vasemmalla '
-            + 'kohoaa CCTV:n silmukkatalo ja oikealla China World Tower.',
+          selite: 'Jingshanin keinotekoinen kukkula oli keisarillinen '
+            + 'yksityispuutarha, ja sen 23 hehtaarin puisto avattiin '
+            + 'yleisölle vuonna 1928.',
           lahde: 'Gary Todd, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Forbidden City northwest corner tower and moat.jpg',
-          selite: 'Kielletyn kaupungin luoteinen monikattoinen kulmatorni '
-            + 'harmaan muurin takana ja sen edessä leveä vallihauta, '
-            + 'jonka rannalla riippuu pajuja veden ylle.',
+          selite: 'Kiellettyä kaupunkia kiertää 7,9 metriä korkea muuri '
+            + 'ja 52 metriä leveä vallihauta, jonka kulmia vartioivat '
+            + 'monikattoiset kulmatornit.',
           lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -30564,23 +30568,22 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Views of the Forbidden City from Jingshan Park 3.jpg',
-          selite: 'Kielletty kaupunki Jingshanin kukkulalta: kultaiset '
-            + 'katot jatkuvat riveinä etelään, ja etualalla on '
-            + 'palatsin pohjoisportti aukioineen.',
+          selite: 'Kielletyn kaupungin palatsialue on suorakaide, 961 '
+            + 'metriä pohjoisesta etelään ja 753 metriä idästä länteen.',
           lahde: 'EditQ, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hutong, Gasse in Peking, alley in Beijing (44042315480).jpg',
-          selite: 'Hutong-kuja harmaine tiilimuureineen ja ovien päälle '
-            + 'rakennettuine pienine katoksineen, ja yksi kulkija '
-            + 'etääntyy kujaa pitkin selin.',
+          selite: 'Hutong tulee mongolin vesikaivoa tarkoittavasta '
+            + 'sanasta, ja termi ilmestyi Yuan-dynastian aikana '
+            + '1200-luvulla.',
           lahde: 'FLASHPACKER TRAVELGUIDE, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Peking Grosse Mauer-20071019-RM-115708.jpg',
-          selite: 'Kiinan muuri nousee ja laskee syksyn värittämällä '
-            + 'vuorenharjalla Badalingissa, ja vartiotornit merkitsevät '
-            + 'harjanteen käännekohdat.',
+          selite: 'Kiinan muuria on kaikkine haaroineen 21 196 '
+            + 'kilometriä Liaodongin niemimaalta Lop Nurin järvelle '
+            + 'asti.',
           lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -30595,9 +30598,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Hall of Supreme Harmony, Forbidden City, from southeast.jpg',
-          selite: 'Kielletyn kaupungin suurin rakennus, Ylimmän sopusoinnun sali, '
-            + 'kohoaa kolminkertaisen marmoriterassin päällä punaisten seinien ja '
-            + 'keltatiilisten kattojen keskellä.',
+          selite: 'Ylimmän sopusoinnun sali on Kielletyn kaupungin '
+            + 'suurin rakennus, ja Ming- ja Qing-keisarit pitivät siellä '
+            + 'valtaistuimelle nousun ja häidensä seremoniat.',
           lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -30615,10 +30618,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maailman suurin säilynyt puurakenteinen '
             + 'palatsikokonaisuus. Alueella asui 24 keisaria, 14 '
             + 'Mingin ja 10 Qingin sukua.',
-          selite: 'Meridiaaniportti, Kielletyn kaupungin '
-            + 'pääsisäänkäynti etelästä: portin kaksi siipeä työntyvät '
-            + 'aukiolle niin, että tulija on kolmelta sivulta muurien '
-            + 'ympäröimä.',
+          selite: 'Meridiaaniportti on Kielletyn kaupungin eteläinen '
+            + 'pääsisäänkäynti, ja muurien sisällä asui aikanaan 24 '
+            + 'keisaria, 14 Mingin ja 10 Qingin sukua.',
           lahde: 'Morio, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Peking',
         },
@@ -30635,9 +30637,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'koristelluin kattopalkein, kauempana tavalliset '
             + 'kaupunkilaiset ahtaammissa ja vaatimattomammissa '
             + 'kujissa.',
-          selite: 'Siheyuan-piha prinssi Gongin residenssissä: '
-            + 'harmaakattoiset siipirakennukset, punaiset ovet ja '
-            + 'ikkunaristikot kiertävät pihan pientä puutarhaa.',
+          selite: 'Prinssi Gongin residenssi rakennettiin alun perin '
+            + 'virkamies Heshenille, ja se on Pekingin laajimpia '
+            + 'siheyuan-pihojen ja puutarhojen kokonaisuuksia.',
           lahde: 'Caitriana Nicholson from 北京 ~ Beijing, 中国 ~ China, '
             + 'Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Peking',
@@ -30655,9 +30657,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lasimaisena. Toinen perinne, suljetussa uunissa '
             + 'paistettu tyyli, on peräisin Bianyifang-ravintolasta, '
             + 'jonka nimi on merkitty vuoteen 1416 asti.',
-          selite: 'Ankkoja kypsymässä riippu-uunissa: linnut roikkuvat '
-            + 'koukuissa liekkien yllä, ja tulen hehku valaisee '
-            + 'hämärän paistohuoneen.',
+          selite: 'Quanjuden perustaja Yang Quanren kehitti '
+            + 'riippu-uunin, jossa ankka paahtuu avotulella hedelmäpuun '
+            + 'oksien lämmössä, kunnes nahka rutisee lasimaisena.',
           lahde: 'ZhengZhou, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Peking',
         },
@@ -30675,9 +30677,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kilometrin päässä keskustasta luoteeseen: se '
             + 'rakennettiin 1504 ja avattiin matkailijoille 1957, '
             + 'ensimmäisenä koko muurista.',
-          selite: 'Badalingin osuus syksyllä: muuri seuraa harjannetta '
-            + 'vartiotornilta toiselle, kävijät näkyvät sen päällä '
-            + 'pieninä pisteinä ja vuoret jatkuvat usvaan asti.',
+          selite: 'Badalingin osuus rakennettiin 1504, ja se avattiin '
+            + 'matkailijoille 1957 ensimmäisenä koko muurista.',
           lahde: 'Reinhold Möller Ermell, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Peking',
         },
@@ -30685,10 +30686,10 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Beijing Swiatynia Harmonii i Pokoju 30.jpg',
-          selite: 'Rukousmylly Yonghen lamatemppelissä Pekingissä '
-            + 'syyskuussa 2023: punaiseksi maalatun katoksen alla lepää '
-            + 'vihertävä pronssirumpu, jonka kylkeen on valettu suuria '
-            + 'tiibetiläisiä kirjaimia.',
+          selite: 'Yonghen lamatemppeli on Kiinan varsinaisen alueen '
+            + 'suurimpia tiibetinbuddhalaisia luostareita, ja sen '
+            + 'rakennukset yhdistävät han-kiinalaista ja tiibetiläistä '
+            + 'tyyliä.',
           lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Peking on Kiinan pääkaupunki ja lähes 22 miljoonan '
@@ -30726,9 +30727,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'suoraan muurin juurelle.',
               kuva: {
                 tiedosto: 'Beijing Daxing International Airport Terminal 20191005.jpg',
-                selite: 'Daxingin lentoaseman halli: valkoinen '
-                  + 'kattorakenne aaltoilee korkealla liukukäytävien '
-                  + 'yllä, ja matkustajat näkyvät kaukana pieninä.',
+                selite: 'Daxingin lentoasema avattiin Pekingin '
+                  + 'eteläpuolelle, ja sen terminaali on maailman suurin '
+                  + 'yhtenäinen asemarakennus.',
                 lahde: 'Tyg728, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -30747,11 +30748,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'satelliittikaupunkeja.',
               kuva: {
                 tiedosto: 'Beijing ast 2007220 lrg.jpg',
-                selite: 'Satelliittikuva Pekingistä: harmaa '
-                  + 'kaupunki leviää tasangolle joka suuntaan '
-                  + 'vihreiden peltojen keskellä, ja oikeassa '
-                  + 'yläkulmassa erottuvat lentoaseman vaaleat '
-                  + 'kiitotiet.',
+                selite: 'Peking sijaitsee Pohjois-Kiinan tasangon '
+                  + 'pohjoisreunalla 40–60 metrin korkeudessa, ja vuoret '
+                  + 'suojaavat sitä pohjoisessa, luoteessa ja lännessä.',
                 lahde: 'NASA, Wikimedia Commons (PD)',
               },
             },
@@ -30769,9 +30768,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pihatalot ja uudet kahvilat elävät rinnakkain.',
               kuva: {
                 tiedosto: 'Hutong, BJ (2917986982).jpg',
-                selite: 'Arkinen hutong-kuja: pyykkiä kuivumassa '
-                  + 'narulla, polkupyöriä seinustalla ja matalien '
-                  + 'tiilitalojen kattoja vieri vieressä.',
+                selite: 'Siheyuan-pihatalot ja hutong-kujat olivat '
+                  + 'aikoinaan kaikkialla Pekingissä, mutta ne katoavat '
+                  + 'nopeasti korkeiden talojen tieltä.',
                 lahde: 'Caitriana Nicholson from 北京 ~ Beijing, '
                   + '中国 ~ China, Wikimedia Commons (CC BY-SA 2.0)',
               },
@@ -30846,9 +30845,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Yongle-keisari aloitti myös Kielletyn kaupungin ja '
             + 'Taivaan temppelin rakentamisen; molemmat valmistuivat '
             + '1420.',
-          selite: 'Kiinan-kartta Martino Martinin kartastosta Novus Atlas '
-            + 'Sinensis (1655), jossa maakunnat on rajattu värivyöhykkein '
-            + 'ja yläkulmassa on koristeellinen nimikilpi.',
+          selite: 'Martino Martinin Amsterdamissa 1655 julkaisemasta '
+            + 'kartastosta Novus Atlas Sinensis levisi läntinen '
+            + 'kirjoitusasu Peking Euroopan kieliin.',
           lahde: 'Martino Martini and Joan Blaeu, Wikimedia Commons (PD)',
           wiki: 'Peking',
         },
@@ -30866,9 +30865,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'neljä sisintä pilaria ovat vuodenajat, kaksitoista '
             + 'keskimmäistä kuukaudet ja kaksitoista uloimmaista '
             + 'perinteiset kiinalaiset tunnit.',
-          selite: 'Pyöreä alttari iltavalossa: valkoiset marmorikaiteet '
-            + 'kiertävät porrastettua tasannetta kolmena kehänä, ja '
-            + 'portaat nousevat suoraan ylimmälle tasolle.',
+          selite: 'Taivaan temppelin pyöreällä alttarilla keskimmäistä '
+            + 'marmorilaattaa ympäröi yhdeksän laatan rengas, ja '
+            + 'renkaita on yhdeksän, joista uloimmassa on 9 × 9 laattaa.',
           lahde: 'Zcm11, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Peking',
         },
@@ -30886,10 +30885,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nähnyt rikkinäisiä pylväitä, marmoriportaita ja '
             + 'kesken jääneen työmaan — ei loistavaa palatsia. Myös '
             + 'naapurin kesäpalatsi oli tuolloin vielä rauniona.',
-          selite: 'Ernst Ohlmerin valokuva 1870-luvulta: Xieqiqun '
-            + 'eurooppalaistyylisen palatsin raunio Vanhassa '
-            + 'kesäpalatsissa, koristeellinen julkisivu yhä pystyssä '
-            + 'mutta katto poissa ja pensaat portailla.',
+          selite: 'Ernst Ohlmerin 1870-luvun valokuvat Xieqiqun '
+            + 'raunioista ovat harvoja todisteita Vanhasta '
+            + 'kesäpalatsista, jonka anglo-ranskalaiset joukot polttivat '
+            + 'vuonna 1860.',
           lahde: 'Ernst Ohlmer, Wikimedia Commons (PD)',
           wiki: 'Peking',
         },
@@ -30906,10 +30905,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1670-luvulta lähtien — mutta 1870-luvulla naiset '
             + 'alkoivat epävirallisesti ilmestyä lavalle mieshahmoja '
             + 'esittäen. Virallinen kielto purettiin vasta 1912.',
-          selite: 'Peking-oopperan naishahmo eli dan täydessä '
-            + 'asussa: kasvot on maalattu valkoisiksi ja punaisiksi '
-            + 'naamion tavoin, päähine on koristeltu tupsuin ja '
-            + 'helmin, ja kirjailtu puku laskeutuu lattiaan asti.',
+          selite: 'Peking-oopperan dan- eli naisrooleja esittivät '
+            + 'pitkään vain miehet, sillä naisten esiintymiskielto '
+            + 'purettiin vasta 1912.',
           lahde: 'Joseph Lazer, Wikimedia Commons (CC BY-SA 2.5 in)',
           wiki: 'Peking',
         },
@@ -31397,6 +31395,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   tokio: [
     {
       id: 'kaupunki',
@@ -31408,23 +31408,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '言問橋 - panoramio.jpg',
-          selite: 'Turkoosiksi maalattu Kototoi-silta Sumida-joen yli '
-            + 'kahden kivipäällysteisen pilarin varassa, palkin kylkeen '
-            + 'kiinnitettynä sillan nimi kolmena isona mustana merkkinä.',
+          selite: 'Kototoi-silta ylittää Sumida-joen, jonka rannoille '
+            + 'jää shitamachi eli Tokion vanha alakaupunki.',
           lahde: 'Jun Matsuo, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Shibuya Crossing, Aerial.jpg',
-          selite: 'Shibuyan risteys ylhäältä illalla: viisi suojatietä '
-            + 'leikkaa aukion ristiin, ja ympäröivien talojen seinät ovat '
-            + 'täynnä valomainoksia.',
+          selite: 'Shibuyan risteystä pidetään maailman vilkkaimpana '
+            + 'suojatienä: yhden vihreän aikana sen yli kulkee jopa 3 '
+            + '000 ihmistä.',
           lahde: 'David Kernan, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Tokyo Skyline20210123.jpg',
-          selite: 'Tokion siluetti auringonlaskun jälkeen: etualalla '
-            + 'valaistut korttelit, keskellä Shinjukun pilvenpiirtäjät ja '
-            + 'vasemmalla horisontissa Fuji-vuoren tumma kartio.',
+          selite: 'Tokio on Japanin pääkaupunki, ja sen kaupunkiseutu on '
+            + 'asukasluvultaan maailman suurin.',
           lahde: 'Nryate, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31466,26 +31464,20 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'flickr-15047197338.jpg',
-          selite: 'Kaupunki merenlahden takana kirkkaana kesäpäivänä: '
-            + 'vastarannalla kulkee satamalaitureiden ja varastohallien '
-            + 'rivi, sen takana nousee tornitalojen seinämä, ja edessä '
-            + 'sinisellä vedellä kulkee valkoinen matkustajalaiva.',
+          selite: 'Tokion satama on Japanin suurimpia ja käsittelee '
+            + 'vuodessa noin sata miljoonaa tonnia rahtia.',
           lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-24802871038.jpg',
-          selite: 'Joen suu talvisena päivänä: veden yli kaartuu kaksi '
-            + 'valkoista teräskaarta saman sillan päissä, ja molemmilla '
-            + 'rannoilla kohoaa tornitaloja — vasemmalla ruskeaksi '
-            + 'laatoitettu toimistotalo, oikealla vaalea asuintorni.',
+          selite: 'Sumida-joki laskee Tokionlahteen, ja sen alajuoksun '
+            + 'ylittää tiheä sarja siltoja.',
           lahde: 'Dr. Matthias Ripp, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-54125112487.jpg',
-          selite: 'Pilvenpiirtäjien rivi alakaupungin kattojen yli '
-            + 'katsottuna: etualalla on matalia asuin- ja liiketaloja '
-            + 'parvekkeineen ja katolle nostettuine vesisäiliöineen, ja '
-            + 'niiden takana nousee toimistotornien seinämä.',
+          selite: 'Yamanote-lenkin pohjois- ja itäpuolelle jää '
+            + 'shitamachi, matalien korttelien vanha alakaupunki.',
           lahde: "Pom', Flickr (CC BY-SA 2.0)",
         },
       ],
@@ -31540,8 +31532,9 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Five-storied Pagoda, Sensoji, Tokyo, 20240824 1103 5616.jpg',
-          selite: 'Sensō-jin viisikerroksinen pagodi Asakusassa: Tokion '
-            + 'vanhimman temppelin punainen maamerkki.',
+          selite: 'Sensō-jin temppelialueella käy yli 30 miljoonaa '
+            + 'kävijää vuodessa, enemmän kuin missään muussa maailman '
+            + 'pyhäkössä.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Tokio ei ole yksi kaupunki vaan kolmenkymmenen aseman '
@@ -31586,8 +31579,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Along Yamanote line between Harajuku and Shibuya.jpg',
-                  selite: 'Yamanote-radan raiteet Harajukun ja Shibuyan '
-                    + 'välillä; lenkki kiertää koko keskustan.',
+                  selite: 'Yamanote-linja kiertää 34,5 kilometrin lenkin '
+                    + 'kolmenkymmenen aseman kautta, ja koko kierros '
+                    + 'kestää 59–65 minuuttia.',
                   lahde: 'Syced, Wikimedia Commons (CC0)',
                 },
                 {
@@ -31598,25 +31592,23 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Kappabashi Street with Tokyo Skytree in Background, Tokyo 130810 1.jpg',
-                  selite: 'Kappabashi-dōrin katukyltti ja kadun päässä '
-                    + 'siintävä Skytree-torni.',
+                  selite: 'Kappabashin kauppiaat ovat ottaneet '
+                    + 'maskotikseen vesihiisi kappan, jonka hahmoja on '
+                    + 'kylteissä pitkin katua.',
                   lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
                 },
                 {
                   tiedosto: 'flickr-24537021080.jpg',
-                  selite: 'Kaupunki ylhäältä auringonlaskun aikaan: talomeri '
-                    + 'jatkuu tasaisena taivaanrantaan asti, oikeassa '
-                    + 'laidassa kaartuu kaupunkimoottoritie kattojen '
-                    + 'yläpuolella, ja pilvien raosta paistaa aurinko '
-                    + 'keltaisena.',
+                  selite: 'Tokion kaupunkiseudulla asuu yli 35 miljoonaa '
+                    + 'ihmistä, ja rakennettu alue jatkuu '
+                    + 'naapuriprefektuurien puolelle.',
                   lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-51334303085.jpg',
-                  selite: 'Linnan vallihauta ja sen takana kaltevan '
-                    + 'kivimuurin päällä seisova valkoinen kulmatorni '
-                    + 'kahtine mustine tiilikattoineen, torni ja muuri '
-                    + 'veteen heijastuen.',
+                  selite: 'Keisarin palatsi seisoo Edon linnan paikalla, '
+                    + 'ja linnan vallihaudat ja kivimuurit ovat '
+                    + 'säilyneet sen ympärillä.',
                   lahde: 'Bernard Spragg. NZ, Flickr (Public Domain Mark)',
                 },
               ],
@@ -31646,10 +31638,9 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-54184684642.jpg',
-                  selite: 'Kalatiskiltä pöytään: kaksi nigiriä '
-                    + 'puulaudalla, etummaisessa paksu vaaleanpunaiseksi '
-                    + 'juovikas tonnikalaviipale riisipaakun yli kaartuen '
-                    + 'ja takana annos valkoista kalaa.',
+                  selite: 'Ameya-yokochōn kalatiskit ovat parhaimmillaan '
+                    + 'aamulla, ja vuoden viimeiset päivät ovat kujan '
+                    + 'vilkkaimmat.',
                   lahde: "Pom', Flickr (CC BY-SA 2.0)",
                 },
               ],
@@ -31681,41 +31672,37 @@ export const KULTTUURI_KATEGORIAT = {
                 {
                   tiedosto: 'Coffee cup-shaped balconies, Niimi Tableware, Kappabashi Dougu Street, Tokyo, Japan (side view).jpg',
                   asettelu: 'kapea',
-                  selite: 'Kahvikupin muotoiset parvekkeet keittiötavaratalon '
-                    + 'kulmassa Kappabashi-dōrin päässä.',
+                  selite: 'Kappabashin nimi selitetään joko sillalla '
+                    + 'kuivuneilla kappa-sadetakeilla tai kauppias '
+                    + 'Kihachi Kappayalla, joka rahoitti kanavatyön.',
                   lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-16200454374.jpg',
-                  selite: 'Nuudelikulho sinikuvioisessa kupissa: '
-                    + 'vaaleassa sameassa liemessä kelluu lihaviipale, '
-                    + 'puolikas kananmuna, vaaleanpunainen '
-                    + 'kalamassakiekko ja silputtua kevätsipulia, ja '
-                    + 'laidassa törröttää merileväliuska.',
+                  selite: 'Näyteikkunoiden muoviruoka eli shokuhin '
+                    + 'sampuru tehtiin 1920-luvun lopulta parafiinista, '
+                    + 'kunnes 1980-luvun puolivälissä siirryttiin '
+                    + 'PVC-muoviin.',
                   lahde: 'Zengame, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-10626604003.jpg',
-                  selite: 'Nuudeliravintolan pyöreä paperilyhty katon '
-                    + 'rajassa, valkoiseen paperiin maalattuna mustalla '
-                    + 'siveltimellä liikkeen nimi tavumerkein ja alle '
-                    + 'punainen nelikulmainen leimamerkki.',
+                  selite: 'Ravintolan koko muoviruokalista voi maksaa '
+                    + 'Kappabashissa yli miljoona jeniä.',
                   lahde: 'Zengame, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-47492986562.jpg',
-                  selite: 'Grilliravintolan valkoisella neliölautasella '
-                    + 'ohuita naudanlihaviipaleita, joiden rasva kulkee '
-                    + 'lihassa hienona valkoisena verkkona, aseteltuina '
-                    + 'vihreän bambunlehden kahden puolen.',
+                  selite: '1800-luvulla ravintolan myyjä asetti oven '
+                    + 'eteen joka päivä lautasellisen oikeaa ruokaa '
+                    + 'kirjoitetun listan sijasta.',
                   lahde: 'Kanesue, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-40579744563.jpg',
-                  selite: 'Lounastarjotin grilliravintolassa: keskellä '
-                    + 'pöytää on upotettu hiiligrilli, sen ympärillä '
-                    + 'kulho riisiä, kulho keittoa, lautasellinen kimchiä '
-                    + 'ja kurkkua sekä kolmiosainen kastikelautanen.',
+                  selite: 'Kappabashi-dōri kulkee Uenon ja Asakusan '
+                    + 'välissä, ja sen liikkeet myyvät ravintoloille '
+                    + 'veitsiä, astioita, uuneja ja kalusteita.',
                   lahde: 'Kanesue, Flickr (CC BY 2.0)',
                 },
               ],
@@ -31739,8 +31726,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: '広尾湯の煙突.jpg',
                 asettelu: 'kapea',
-                selite: 'Hiroo-yun savupiippu Tokiossa: kylpylän nimi on '
-                  + 'maalattu piippuun pystyriviin.',
+                selite: 'Sentōn kattilahuoneen korkea piippu on helpoin '
+                  + 'tapa löytää lähin kylpylä, sillä se erottuu '
+                  + 'kortteleiden päähän.',
                 lahde: 'Syced, Wikimedia Commons (CC0)',
               },
             },
@@ -31767,33 +31755,28 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Nakamise, Asakusa, Tokyo as seen from the Asakusa Culture Tourist Information Center 20190420 1.jpg',
-                  selite: 'Kaminarimon-portti ja Nakamise-dōrin kojurivi '
-                    + 'ylhäältä nähtynä Asakusassa.',
+                  selite: 'Nakamise-dōri johtaa Kaminarimon-portilta '
+                    + 'Sensō-jin päärakennukselle, ja sen kojuista '
+                    + 'ostetaan viuhkoja, kampoja ja leivoksia.',
                   lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-15204166021.jpg',
-                  selite: 'Temppelin portti kadun toiselta puolen '
-                    + 'iltapäivällä: leveän valkoisen suojatien takana '
-                    + 'odottaa väkeä jalkakäytävällä, ja portin punaisen '
-                    + 'katoksen alla riippuu iso paperilyhty.',
+                  selite: 'Sensō-ji paloi 10. maaliskuuta 1945 '
+                    + 'pommituksessa, ja päärakennus tehtiin uudelleen '
+                    + '1950-luvulla.',
                   lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-25880389523.jpg',
-                  selite: 'Katukojun makeisia tikkujen nokassa: '
-                    + 'turkoosiin ja tummanruskeaan kuorrutteeseen '
-                    + 'kastettuja banaaneja, jotka on koristeltu '
-                    + 'pinkeillä raidoilla ja värillisillä '
-                    + 'nonparelleilla.',
+                  selite: 'Kalastajaveljesten vuonna 628 löytämää '
+                    + 'Kannonin patsasta ei näytetä yleisölle koskaan.',
                   lahde: 'Jon Connell, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-16339556998.jpg',
-                  selite: 'Lähetystorni valaistuna illalla kanavan takaa '
-                    + 'katsottuna: runko hehkuu alhaalta kullankeltaisena '
-                    + 'ja vaihtuu ylempänä turkoosiksi ja violetiksi, ja '
-                    + 'värit heijastuvat mustasta vedestä.',
+                  selite: 'Tokyo Skytree valmistui 634 metriin vuonna '
+                    + '2012, ja se on maailman korkein torni.',
                   lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
                 },
               ],
@@ -31886,10 +31869,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yli 500. Puoliskoja yhdisti maan ensimmäinen '
             + 'yksikiskorata, joka suljettiin lopullisesti 2023 '
             + 'vanhentuneiden rakenteiden takia.',
-          selite: 'Uenon eläintarhan pääportti talvella: turkoosin '
-            + 'katoksen päällä lukee eläintarhan nimi punaisin merkein ja '
-            + 'perässä sana ZOO, ja lippuluukkujen mainostauluissa on '
-            + 'pandoja ja jääkarhuja.',
+          selite: 'Uenon eläintarha avattiin 20. maaliskuuta 1882, ja se '
+            + 'on Japanin vanhin eläintarha.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -31906,10 +31887,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sana on Amerika, sillä kadulla myytiin Yhdysvaltain '
             + 'armeijan ylijäämätavaraa. Lyhenne ameyoko sopii '
             + 'kumpaankin.',
-          selite: 'Kalakoju Ameya-yokochōssa: metallivuoissa on '
-            + 'punaiseksi keitettyä mustekalaa, lonkero imukuppeineen ja '
-            + 'muovipusseihin nypittyjä paloja, ja väleissä hintakylttejä '
-            + 'kiinalaisin numeroin.',
+          selite: 'Ameya-yokochōn ulkoilmatorilla on yli 250 liikettä '
+            + 'runsaan 15 000 neliömetrin alueella.',
           lahde: 'Kamasakizaki, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -31926,10 +31905,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'auringossa, joten 1980-luvun puolivälissä siirryttiin '
             + 'PVC-muoviin. Ravintolan koko lista voi maksaa yli miljoona '
             + 'jeniä.',
-          selite: 'Muoviruokakaupan näyteikkuna Kappabashissa: '
-            + 'lasikaappien hyllyt ovat täynnä vaahtopäisiä olutlaseja '
-            + 'kellertävää muovia sekä muovista tehtyjä leipiä, sushia ja '
-            + 'pikkuannoksia.',
+          selite: 'Muoviruoan muotti tehdään upottamalla oikea annos '
+            + 'silikoniin.',
           lahde: 'Maarten Heerlien from Voorschoten, The Netherlands, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -31956,10 +31933,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laattamaalaus, useimmiten Fuji-vuori. Takana on '
             + 'kattilahuone, jonka korkea piippu erottuu kauas kattojen '
             + 'ylle.',
-          selite: 'Tatsuno-yu-kylpylä Nerimassa, jonka julkisivu on tehty '
-            + 'pyhäkön tapaan harmaine tiilikattoineen ja '
-            + 'päätykolmioineen ja jonka takaa nousee korkea '
-            + 'vaaleansininen savupiippu.',
+          selite: 'Sentōn sisäänkäynti muistuttaa temppeliä, ja '
+            + 'oviaukossa roikkuu noren-verho, jossa lukee yu eli kuuma '
+            + 'vesi.',
           lahde: 'Kurihaya, Wikimedia Commons (CC0)',
         },
         {
@@ -31976,10 +31952,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kullakin oli oma matoi: pitkä tanko, jonka päässä on '
             + 'ryhmän tunnus ja nippu nauhoja. Se nostettiin katolle '
             + 'palavan talon viereen.',
-          selite: 'Kuusi ruudullisiin puuvillatakkeihin pukeutunutta '
-            + 'miestä Ikegamissa Tokiossa matoin ympärillä: pitkän tangon '
-            + 'päässä on valkoinen levy mustin merkein ja nippu valkoisia '
-            + 'suikaleita.',
+          selite: 'Edon vapaaehtoisilla palokunnilla oli kullakin oma '
+            + 'matoi, pitkä tanko ryhmän tunnuksineen, joka nostettiin '
+            + 'katolle palavan talon viereen.',
           lahde: '湯越慶太, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -31995,10 +31970,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on rakugo eli tarina jolla on putous. Kertoja istuu '
             + 'korokkeella polvillaan. Välineitä on kaksi: viuhka ja '
             + 'liina.',
-          selite: 'Asakusa Engei Hallin julkisivu illansuussa: katoksen '
-            + 'yläpuolella on rivi valkoisia kylttilaatikoita mustin '
-            + 'merkein, ylimpänä kellertäviä paperilyhtyjä ja katoksen '
-            + 'reunalla punaiset lyhdyt.',
+          selite: 'Yose on puhutun teatterin talo, ja sen sali vetää '
+            + 'tavallisesti 200 katsojaa.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -32050,6 +32023,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   soul: [
     {
       id: 'kaupunki',
@@ -32062,23 +32037,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Traditional hanok houses at golden hour in Bukchon Hanok Village in Seoul.jpg',
-          selite: 'Hanok-taloja Bukchonin kortteleissa aamuauringossa: '
-            + 'puurunkoisten talojen harjakatot on katettu harmailla '
-            + 'tiilillä, ja pihoja kiertää muuri, jonka alaosa on '
-            + 'mukulakiveä ja yläosa punatiiltä.',
+          selite: 'Hanok on korealainen puutalo, jonka lattian alla '
+            + 'kulkee ondol-lämmityskanava.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Seoul from Namsan 3.jpg',
-          selite: 'Soul Namsanin vuorelta pohjoiseen: keskustan tornit täyttävät laakson, '
-            + 'ja takana kohoaa Bukhansanin rosoinen graniittiharjanne.',
+          selite: 'Soulissa asuu yli yhdeksän miljoonaa ihmistä, ja '
+            + 'Han-joki jakaa kaupungin pohjoiseen Gangbukiin ja '
+            + 'eteläiseen Gangnamiin.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Yeouido Hangang Park from Mapo Bridge 1.jpg',
-          selite: 'Yeouidon rantapuisto Han-joen varrella Mapo-sillalta '
-            + 'kuvattuna: etualalla puistokenttä ja lehdettömiä puita, '
-            + 'takana joki siltoineen ja vastarannan talorivit.',
+          selite: 'Yeouidon saari Han-joessa on Soulin rahoituksen ja '
+            + 'tiedotusvälineiden keskus, ja sen pinta-ala on 8,4 '
+            + 'neliökilometriä.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         /*
@@ -32090,18 +32064,16 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           tiedosto: 'flickr-48968719746.jpg',
-          selite: 'Vanha kaupunginportti keskellä liikennettä: '
-            + 'kaksikerroksinen puinen porttitalo seisoo harmaan '
-            + 'kivijalustan päällä, jonka läpi vie musta holvikäytävä, ja '
-            + 'takana kohoaa lasisia toimistotaloja.',
+          selite: 'Soulia kiersi 1300-luvulla 18,2 kilometrin muuri ja '
+            + 'kahdeksan porttia, joista osa seisoo yhä liikenteen '
+            + 'keskellä.',
           lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-48966437893.jpg',
-          selite: 'Hopeanharmaa metallipintainen rakennus yöllä: '
-            + 'pyöristetty seinämä kaartuu maasta ylös ja jatkuu '
-            + 'vaakasuorana aallonharjana kuvan poikki, ja alhaalla '
-            + 'nousee valaistu kävelyramppi.',
+          selite: 'Vanhan itäportin kupeeseen valmistui Zaha Hadidin ja '
+            + 'Samoon suunnittelema Dongdaemun Design Plaza, jonka '
+            + 'katolla kulkee kävelypuisto.',
           lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
         },
       ],
@@ -32115,27 +32087,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'flickr-48753082278.jpg',
-          selite: 'Kaupunki kukkulan laelta kirkkaana syyspäivänä: '
-            + 'etualalla laskeutuu metsäinen rinne, sen takana leviää '
-            + 'matalien talojen meri laaksoon, ja taustalla kohoaa '
-            + 'sinertävä vuorijono rantaan asti.',
+          selite: 'Soulin keskellä on Namsanin kukkula, ja kaupunkia '
+            + 'ympäröivät joka suunnalta graniittivuoret.',
           lahde: 'cafuego, Flickr (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'flickr-14775785519.jpg',
-          selite: 'Aurinko nousee usvan läpi kaupungin yllä: oikeassa '
-            + 'laidassa kohoaa punavalkoinen ristikkomasto, alhaalla '
-            + 'levittäytyy matalien talojen kortteleita ja kaukana '
-            + 'kimaltaa joki siltoineen.',
+          selite: 'Namsanin laella seisova 236-metrinen Soulin torni oli '
+            + 'maan ensimmäinen useaa tv- ja radiokanavaa palvellut '
+            + 'masto.',
           lahde: 'Kristoffer Trolle, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-23010178486.jpg',
-          selite: 'Joen takainen kaupunginosa auringonlaskun aikaan: '
-            + 'kerrostalorivistön yllä kaartuu raidallinen pilviverho, '
-            + 'taivas hehkuu oranssina pilvien alla, ja keskeltä nousee '
-            + 'yksinäinen kapeneva torni, jonka huipulla on vielä '
-            + 'nostureita.',
+          selite: 'Han-joen eteläpuolinen Gangnam on rakennettu pääosin '
+            + '1970-luvun jälkeen.',
           lahde: 'Carmine.shot, Flickr (CC BY 2.0)',
         },
       ],
@@ -32170,8 +32136,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Water reflection of Hyangwonjeong Pavilion at Gyeongbokgung Palace in Seoul.jpg',
-          selite: 'Hyangwonjeongin kuusikulmainen paviljonki heijastuu '
-            + 'lammesta Gyeongbokgungin palatsissa.',
+          selite: 'Hyangwonjeongin kuusikulmainen paviljonki seisoo '
+            + 'Gyeongbokgungin pohjoisosan lammen saarella.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Soul on yli yhdeksän miljoonan asukkaan pääkaupunki, '
@@ -32221,22 +32187,22 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Insadong Alley, Seoul, Korea.jpg',
-                  selite: 'Insadong-gilin sivukuja: osoitekilpi kertoo '
-                    + 'korttelin numeron talon kulmassa.',
+                  selite: 'Insadong on Soulin antiikki- ja '
+                    + 'käsityökauppojen katu, ja sen kujat lähtevät '
+                    + 'Gwanghwamunin aukiolta.',
                   lahde: 'Ken Eckert, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Korea-Seoul-Namdaemun-Sungnyemun-16.jpg',
-                  selite: 'Sungnyemunin portti valaistuna: kaupunki on '
-                    + 'kasvanut sen ympärille joka suunnalta.',
+                  selite: 'Sungnyemun valmistui vuonna 1398 ja '
+                    + 'rakennettiin uudelleen 1447, ja se oli pitkään '
+                    + 'Soulin vanhin puurakennus.',
                   lahde: 'tylerdurden1, Wikimedia Commons (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-30596173403.jpg',
-                  selite: 'Joen eteläpuoli yöllä: sillan kaide kaartuu '
-                    + 'oikealle, katuvalot jatkuvat rivissä kauas, ja '
-                    + 'keskellä kohoaa kapeneva lasitorni, jonka kylkeen '
-                    + 'on juovitettu valonauhoja.',
+                  selite: 'Soulin metro on matkustajamäärältään maailman '
+                    + 'suurimpia, ja lyhin matka maksaa 1 250 wonia.',
                   lahde: 'Tony, Flickr (CC BY 2.0)',
                 },
               ],
@@ -32260,8 +32226,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jonkun kotikatuja.',
               kuva: {
                 tiedosto: 'Traditional hanok houses on the corner of a steeply sloping street in Bukchon Hanok Village Seoul.jpg',
-                selite: 'Hanok-talo jyrkän kadun kulmassa Bukchonissa; '
-                  + 'muurin alaosa on mukulakiveä.',
+                selite: 'Bukchonissa asuu noin 6 100 ihmistä, ja vuonna '
+                  + '2024 korttelissa kävi 6,4 miljoonaa vierailijaa.',
                 lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -32286,17 +32252,16 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Korean pancakes and pan-fried foods at Gwangjang Market.jpg',
-                  selite: 'Jeon-lettuja ja paistettuja pikkuannoksia '
-                    + 'Gwangjangin torin kojun tiskillä.',
+                  selite: 'Gwangjangin torin bindaetteok on mungpavuista '
+                    + 'jauhettu paksu lettu, joka paistetaan öljyssä '
+                    + 'asiakkaan silmien edessä.',
                   lahde: 'Bo Park, US Army, Wikimedia Commons (PD)',
                 },
                 {
                   tiedosto: 'flickr-41646399301.jpg',
-                  selite: 'Katukojun tiski illalla: myyjä pitää kudotuin '
-                    + 'käsinein kaasupoltinta padan reunalla ja liekki '
-                    + 'osuu ritilän päällä olevaan annokseen, ja oikealla '
-                    + 'on kuorittuja kastanjoita ja paahdettuja '
-                    + 'bataatteja.',
+                  selite: 'Gwangjangin tori perustettiin 5. heinäkuuta '
+                    + '1905 ensimmäisenä torina, joka oli auki joka '
+                    + 'päivä eikä vain markkinapäivinä.',
                   lahde: 'Marc DUPUY, Flickr (CC BY-SA 2.0)',
                 },
               ],
@@ -32319,8 +32284,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kävelyreitti, joka kulkee katutason alapuolella.',
               kuva: {
                 tiedosto: 'KOCIS Cheonggyecheon (stream) in Seoul (7085882037).jpg',
-                selite: 'Cheonggyecheonin uoma keskikaupungilla: vesi '
-                  + 'pulppuaa suihkuina kivetyn puron poikki.',
+                selite: 'Cheonggyecheonin uoma kaivettiin esiin '
+                  + 'moottoritien alta vuosina 2003–2005, ja siihen '
+                  + 'pumpataan päivittäin 120 000 tonnia vettä.',
                 lahde: 'Korea.net / Korean Culture and Information Service, '
                   + 'Wikimedia Commons (CC BY-SA 2.0)',
               },
@@ -32350,25 +32316,21 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg',
-                  selite: 'Gyeonghoerun juhlasali seisoo kivipilareiden '
-                    + 'varassa palatsin lammessa.',
+                  selite: 'Gyeonghoeru on Gyeongbokgungin juhlasali, '
+                    + 'jossa hovi otti vastaan vieraita.',
                   lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-45979304321.jpg',
-                  selite: 'Sama juhlasali syksyllä lammen toiselta '
-                    + 'puolelta: kaksikerroksinen sali seisoo '
-                    + 'kivipilaririvin päällä kivetyllä saarekkeella ja '
-                    + 'heijastuu kokonaan tyynestä vedestä.',
+                  selite: 'Joseon-dynastia rakensi Souliin viisi suurta '
+                    + 'palatsia, joista Gyeongbokgung on ensimmäinen ja '
+                    + 'suurin.',
                   lahde: 'wikiphotographer, Flickr (CC BY-SA 2.0)',
                 },
                 {
                   tiedosto: 'flickr-48977306141.jpg',
-                  selite: 'Palatsin piha alkusyksystä: hiekkakäytävä johtaa '
-                    + 'valkoiseen muuriin ja sen pieneen porttiin, käytävän '
-                    + 'reunoilla on punalehtisiä pensaita ja kallistuneita '
-                    + 'mäntyjä, ja muurin takaa kohoaa jyrkkä vuori, jonka '
-                    + 'rinteessä näkyy paljasta kalliota.',
+                  selite: 'Gyeongbokgungin palatsialueella toimivat myös '
+                    + 'Joseonin palatsimuseo ja kansanperinteen museo.',
                   lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
                 },
               ],
@@ -32457,10 +32419,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'perinteisessä uunissa Buyeossa, ja työtä ohjasivat '
             + 'piirustukset, jotka oli tehty edellisen korjauksen '
             + 'yhteydessä 2005 juuri tällaisen tilanteen varalle.',
-          selite: 'Sungnyemunin portti Soulissa: kaksikerroksinen puinen '
-            + 'porttirakennus tiilikattoineen seisoo kivijalustan päällä, '
-            + 'jonka läpi vie holvikäytävä, ja vasemmalla kohoaa lasinen '
-            + 'toimistotalo.',
+          selite: 'Sungnyemunin ennallistus alkoi helmikuussa 2010 ja '
+            + 'päättyi huhtikuussa 2013, ja katon 22 000 tiiltä '
+            + 'poltettiin perinteisessä uunissa Buyeossa.',
           lahde: 'm-louis, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -32479,10 +32440,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rahoitti muun muassa korean kielen seuraa, ja vuoden 1942 '
             + 'kielikahakassa hänet vangittiin ja kidutettiin ja omaisuutta '
             + 'takavarikoitiin.',
-          selite: 'Kuja Bukchonin hanok-korttelissa aamuauringossa: '
-            + 'vasemmalla nousee punatiilinen muuri, jonka yli kaartuu '
-            + 'punaisia ruusuja, ja oikealla on hanok-talon puinen '
-            + 'julkisivu ja tiilikaton räystäs.',
+          selite: 'Bukchonin nykyiset hanokit rakensi 1920-luvulta '
+            + 'alkaen Chŏng Segwŏn, joka perusti ensimmäisen '
+            + 'korealaisomisteisen rakennusliikkeen.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -32500,10 +32460,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'suurta palatsia ovat Changdeokgung salaisine puutarhoineen, '
             + 'Changgyeonggung, Gyeonghuigung ja monarkian viimeisinä '
             + 'vuosina käytetty Deoksugung.',
-          selite: 'Vartijaksi pukeutunut esiintyjä Gwanghwamunin '
-            + 'portilla: punaisessa hatussa on kaksi pystyyn nostettua '
-            + 'riikinkukon sulkaa, viitta on punainen ja hihat keltaiset, '
-            + 'ja käsissä on vaakasuora sauva.',
+          selite: 'Gwanghwamunin portilla esitetään päivittäin '
+            + 'vartionvaihto, jossa esiintyjillä on punainen viitta ja '
+            + 'hattu kahden riikinkukon sulan kera.',
           lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -32542,10 +32501,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jakkaralla. Illan pimetessä moni koju muuttuu '
             + 'pikkuravintolaksi, jossa istutaan soju-lasin ääressä '
             + 'pitkään; tunnetuimmat kojurivit ovat Jongnon varrella.',
-          selite: 'Pojangmacha-koju iltapimeällä Soulissa: punaisen '
-            + 'pressukatoksen kirkas ikkuna avautuu tiskille, jolla on '
-            + 'vartaita ja kastikepulloja, ja myyjä nostaa annosta '
-            + 'paistoaltaasta.',
+          selite: 'Pojangmacha tarkoittaa katettua vaunua, ja vuonna '
+            + '2012 kojuja laskettiin Soulissa noin 3 100.',
           lahde: 'LinasD, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -32563,10 +32520,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'buddhalaismunkit. Moni kylpylä palvelee läpi yön, ja '
             + 'makuusaliin voi jäädä nukkumaan — perheille se on halpa '
             + 'viikonlopunvietto.',
-          selite: 'Dragon Hill -kylpylän talo Yongsanissa Soulissa: '
-            + 'vaalean palatsimaisen julkisivun katolla lukee sinisin '
-            + 'kirjaimin kylpylän nimi ja 24H, ja kadun puolella on '
-            + 'koristeellinen portti kylttirivistöineen.',
+          selite: 'Jjimjilbang on korealainen kylpylä, joka palvelee '
+            + 'usein läpi yön ja jonka makuusaliin voi jäädä nukkumaan.',
           lahde: 'Matt Kieffer from London, United Kingdom, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -32585,10 +32540,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hallit ovat auki vuorokauden ympäri. Suuret turnaukset '
             + 'katsotaan yhdessä hallin ruuduilta kuin urheilua — mitä '
             + 'kilpapelaaminen Etelä-Koreassa onkin.',
-          selite: 'Pelihalli Hongdaen kaupunginosassa Soulissa: matalien '
-            + 'väliseinien lokeroissa on rivikaupalla näyttöjä ja '
-            + 'punavalkoisia pelituoleja, ja käytävän lattiaa reunustaa '
-            + 'valonauha.',
+          selite: 'PC bang -hallien määrä nousi sadasta noin 25 000:een '
+            + 'vuosina 1997–2011 StarCraft-pelin vanavedessä.',
           lahde: 'Wvdp, Wikimedia Commons (CC0)',
         },
       ],
@@ -32634,6 +32587,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   shanghai: [
     {
       id: 'kaupunki',
@@ -32646,24 +32601,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Shanghai-Bund-56-Kolonialstil-2012-gje.jpg',
-          selite: 'Rantakadun eli Bundin taloja aamuauringossa: '
-            + 'punatiilinen kolmikerroksinen kauppahuone on koristeltu '
-            + 'valkoisin pylväin ja päätykolmioin, ja sen edessä aukiolla '
-            + 'seisoo pronssinen härkäpatsas.',
+          selite: 'Bundin rantakatu on rivi 1800- ja 1900-luvun vaihteen '
+            + 'kauppahuoneita ja pankkipalatseja Huangpu-joen '
+            + 'länsirannalla.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Yu Garden Shanghai November 2017 012.jpg',
-          selite: 'Yun puutarhan lampi ja sen takana kaksikerroksinen '
-            + 'sali tummanpunaisine puujulkisivuineen, rantaa reunustavat '
-            + 'harmaat kalkkikivikasat ja lammen yli vievä matala silta.',
+          selite: 'Yun puutarhan rakennutti vuodesta 1559 alkaen Pan '
+            + 'Yunduan isälleen, ja nimi yu tarkoittaa vanhempien '
+            + 'mieliksi olemista.',
           lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2014.11.15.184711 East Nanjing Road Pedestrian Zone Shanghai.jpg',
-          selite: 'Itäisen Nanjing-kadun kävelykatu illalla: molemmin '
-            + 'puolin katua kohoaa neonkylttien rivi, katulyhdyt palavat '
-            + 'keskikaistalla ja väkeä kulkee ristiin rastiin.',
+          selite: 'Itäisen Nanjing-kadun kävelykatuosuus on 1 200 metriä '
+            + 'pitkä ja 28 metriä leveä.',
           lahde: 'Hermann Luyken, Wikimedia Commons (CC0)',
         },
         /*
@@ -32674,10 +32627,9 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           tiedosto: 'flickr-30366279333.jpg',
-          selite: 'Kullattu temppelikatto lasitornien välissä '
-            + 'auringonlaskun aikaan: vasemmalla kaartuu sininen '
-            + 'lasijulkisivu ja oikealla punaiseksi hehkuva tornitalo, ja '
-            + 'niiden välissä nousee monikerroksinen kultainen stupa.',
+          selite: 'Shanghaissa on 24 miljoonaa asukasta, ja vanhat '
+            + 'temppelit ovat jääneet 1990-luvulta alkaen nousseiden '
+            + 'tornitalojen väliin.',
           lahde: 'lwtt93, Flickr (CC BY 2.0)',
         },
       ],
@@ -32720,10 +32672,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'flickr-32354797618.jpg',
-          selite: 'Vanha keskusta ylhäältä sinisenä hetkenä: alareunassa '
-            + 'kaartuu leveä joki, sen rannassa kulkee valaistu '
-            + 'kivitalojen rivi, ja niiden takaa nousee tornitalojen meri '
-            + 'usvaan asti.',
+          selite: 'Huangpu-joki jakaa Shanghain: länsipuoli Puxi on '
+            + 'vanha keskusta ja itäpuoli Pudong uusi.',
           lahde: 'Franck Michel, Flickr (CC BY 2.0)',
         },
       ],
@@ -32759,8 +32709,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Shanghai Shanghai Tower 5166304.jpg',
-          selite: 'Shanghain torni alhaalta kuvattuna: 632 metriä korkea '
-            + 'lasirunko kiertyy ylöspäin kierteeksi.',
+          selite: 'Shanghain torni on 632 metriä korkea ja Kiinan '
+            + 'korkein rakennus.',
           lahde: 'Ermell, Wikimedia Commons (CC0)',
         },
         kappale: 'Shanghain jakaa kahtia Huangpu-joki: länsipuoli on Puxi '
@@ -32801,29 +32751,28 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'East Nanjing Pedestrian Shopping Street.jpg',
-                  selite: 'Itäinen Nanjing-katu on kävelykatua 1 200 metrin '
-                    + 'matkalta.',
+                  selite: 'Itäinen Nanjing-katu vie Bundin rantakadulta '
+                    + 'Kansanaukiolle.',
                   lahde: 'HeroicLife, Wikimedia Commons (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'Guilin Road Station Train.jpg',
-                  selite: 'Metrojuna Guilin-kadun asemalla; laituri on '
-                    + 'erotettu radasta lasiseinällä.',
+                  selite: 'Shanghain metroverkko on maailman laajimpia, '
+                    + 'ja matka maksaa etäisyyden mukaan 3–10 juania.',
                   lahde: 'Baycrest, Wikimedia Commons (CC BY-SA 2.5)',
                 },
                 {
                   tiedosto: 'The Bund 20150914-10.jpg',
-                  selite: 'Rantakadun kävelytaso ja tullitalon kellotorni '
-                    + 'Huangpun rannassa.',
+                  selite: 'Bundin kävelytaso rakennettiin '
+                    + 'taifuunitulvien jälkeen padon päälle, joten se on '
+                    + 'noin kymmenen metriä katutasoa ylempänä.',
                   lahde: 'そらみみ, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-44705397404.jpg',
-                  selite: 'Kävelykadun neonkylttejä lähietäisyydeltä '
-                    + 'yöllä: talon kyljessä laskeutuu kaksi pystyriviä '
-                    + 'valoputkikirjoitusta, toinen sinisenä punaisissa '
-                    + 'kehyksissä ja toinen vaaleanvihreänä punaisella '
-                    + 'pohjalla.',
+                  selite: 'Pudongin lentoasemalta keskustan laitaan '
+                    + 'pääsee magneettijunalla, joka kulki vuoteen 2021 '
+                    + 'asti 430 kilometrin tuntinopeudella.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
@@ -32848,8 +32797,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'luettelossa.',
               kuva: {
                 tiedosto: '2019-05-02 Lilong in Shanghai.jpg',
-                selite: 'Kujakorttelin katot ylhäältä: rivi toisensa '
-                  + 'perään samanlaisia taloja.',
+                selite: 'Shikumen-talojen kujakortteleita oli '
+                  + 'parhaimmillaan 9 000, ja niissä asui 60 prosenttia '
+                  + 'kaupunkilaisista.',
                 lahde: 'Mussi Katz, Wikimedia Commons (CC0)',
               },
             },
@@ -32874,16 +32824,16 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Yu Garden Shanghai November 2017 009.jpg',
-                  selite: 'Yun puutarhan salin sisustus: lyhdyt, maisemamaalaus '
-                    + 'ja veistetyt jalopuutuolit.',
+                  selite: 'Yun puutarha on kahden hehtaarin kokoinen, ja '
+                    + 'siihen on laskettu yli neljäkymmentä katseltavaa '
+                    + 'kohtaa.',
                   lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'flickr-50101388983.jpg',
-                  selite: 'Puutarhan laidan lampi illalla: '
-                    + 'kaksikerroksisten puutalojen ylöskaartuvat '
-                    + 'räystäät on ääriviivoitettu kullankeltaisin '
-                    + 'valoin, ja koko rivi heijastuu tummasta vedestä.',
+                  selite: 'Yun puutarhan laidalla lammen päällä seisoo '
+                    + 'teehuone, jonne johtaa yhdeksän kertaa kääntyvä '
+                    + 'silta.',
                   lahde: 'Steve FUNG, Flickr (CC BY-SA 2.0)',
                 },
               ],
@@ -32912,24 +32862,23 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Yuyuan Street xiaolongbao.JPG',
-                  selite: 'Xiaolongbao-nyyttejä bambukorissa Yun puutarhan '
-                    + 'kulmalla vanhassakaupungissa.',
+                  selite: 'Xiaolongbaon täytteeseen kääritään '
+                    + 'jähmettynyttä lihahyytelöä, joka sulaa höyryssä '
+                    + 'liemeksi.',
                   lahde: 'Drew Lietzow, Wikimedia Commons (PD)',
                 },
                 {
                   tiedosto: 'flickr-42164576345.jpg',
-                  selite: 'Korttelin ruokapaikka yöllä: julkisivun yllä '
-                    + 'palaa musta valotaulu, jonka kiinalaiset merkit on '
-                    + 'tehty valkoisista lampuista, ja ikkunaan on '
-                    + 'teipattu kuvallisia ruokalistoja.',
+                  selite: 'Xiaolongbaon shanghailainen tyyli syntyi '
+                    + 'Nanxiangin kylässä, joka on nykyään kaupungin '
+                    + 'esikaupunki.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'flickr-44774108052.jpg',
-                  selite: 'Aamiaispuodin ovi illalla: sisäänkäynnin yli '
-                    + 'kaartuu valkoinen holvi värillisine '
-                    + 'lamppuriveineen, ja alla hehkuvat vihreät ja '
-                    + 'punaiset neonmerkit sekä piirretty possunkuva.',
+                  selite: 'Xiaolongbao on Shanghaissa tavallisin '
+                    + 'aamiaisruoka, ja korin viereen tulee mustaa '
+                    + 'etikkaa ja silputtua inkivääriä.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
@@ -32952,16 +32901,15 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Shanghai skyline waterfront pudong 5166168 69 70.jpg',
-                  selite: 'Pudongin siluetti Huangpun yli: Helmitorni, Jin Mao '
-                    + 'ja Shanghain torni.',
+                  selite: 'Pudong oli 1990-luvun alkuun asti pääosin '
+                    + 'varastoja ja peltoa, kunnes siitä tehtiin '
+                    + 'rahoituskeskuksen kehitysalue.',
                   lahde: 'Ermell, Wikimedia Commons (CC0)',
                 },
                 {
                   tiedosto: 'flickr-45493688424.jpg',
-                  selite: 'Sama torni kadun tasalta yöllä: kierteinen '
-                    + 'lasijulkisivu nousee matalan valkoisen '
-                    + 'toimistotalon takaa ja jatkuu ulos kuvasta, ja '
-                    + 'kadun poikki venyy ohi ajaneen auton valojuova.',
+                  selite: 'Shanghain tornin näköalataso 121. kerroksessa '
+                    + 'oli avatessaan maailman korkein.',
                   lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
@@ -33051,9 +32999,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerrosta ja nykyaikaiset saniteettitilat. Rakennustapa '
             + 'merkittiin Kiinan aineettoman kulttuuriperinnön '
             + 'luetteloon vuonna 2010.',
-          selite: 'Shikumen-portti Shanghaissa: tummaa puuovea kehystävät '
-            + 'harmaat kivipielet simpukkakuvioisine koristeineen, ja '
-            + 'oven päällä on kivipalkki ja koristelaatta.',
+          selite: 'Shikumen tarkoittaa kiven ympäröimää ovea: oviaukon '
+            + 'molemmin puolin ovat kivipielet ja päällä koristeltu '
+            + 'palkki.',
           lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -33071,9 +33019,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'salissa 1853–1855, ja sen jälkeen alkuperäisistä '
             + 'rakennuksista oli jäljellä vain vähän. Puutarha '
             + 'kunnostettiin 1956–1961 ja avattiin yleisölle 1961.',
-          selite: 'Yun puutarhan kivikkoa ja lampi: rantaa reunustavat '
-            + 'pystyyn ladotut harmaat kalkkikivet, joiden välissä kasvaa '
-            + 'muotoon leikattuja mäntyjä ja vaahteroita.',
+          selite: 'Yun puutarhan kuuluisin esine on Hienohko jadekivi, '
+            + '3,3 metriä korkea ja noin viisi tonnia painava huokoinen '
+            + 'lohkare.',
           lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -33089,10 +33037,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puiset edeltäjänsä mutta kestävämpiä ja niistä sai '
             + 'korkeamman vuokran. Suuri osa kortteleista on purettu '
             + 'uudisrakentamisen tieltä, ja jäljellä olevissa asutaan yhä.',
-          selite: 'Kujakorttelin porttikäytävä Shanhaiguan-kadulla '
-            + 'Shanghaissa: vaalean julkisivun keskellä on kaita '
-            + 'porttiaukko, jonka yli on pingotettu pyykkinaruja '
-            + 'vaatteineen.',
+          selite: 'Kujakorttelin nimi on lilong ja kuja longtang, ja '
+            + 'kortteliin mennään kadulta porttikäytävän läpi.',
           lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -33133,10 +33079,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'toiminut vuodesta 2004, ja moni käy siellä vuosikausia: '
             + 'osumia syntyy harvoin, ja osa vanhemmista ei ole '
             + 'kertonut ilmoituksesta lapselleen lainkaan.',
-          selite: 'Avioliittotorin ilmoituksia Kansanpuistossa '
-            + 'Shanghaissa: katetun käytävän seinälle on ripustettu '
-            + 'narujen varaan rivikaupalla valkoisia ja punaisia '
-            + 'paperiarkkeja käsin kirjoitettuine tietoineen.',
+          selite: 'Kansanpuiston avioliittotori on toiminut vuodesta '
+            + '2004, ja vanhemmat ripustavat sinne lastensa tiedot '
+            + 'paperiarkeille.',
           lahde: 'Jpbowen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -33154,10 +33099,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kansallissankarina pidetyn kenraali Yue Fein tuhoksi. '
             + 'Kansa on siitä asti paistanut petturit öljyssä joka '
             + 'aamu uudelleen.',
-          selite: 'Cifantuan lähikuvassa: tahmeista riisinjyvistä '
-            + 'puristetun pötkön sisältä pilkistää rapeaksi paistetun '
-            + 'youtiao-tangon kullanruskea kierre, ja pötköä pidellään '
-            + 'muovipussin läpi.',
+          selite: 'Cifantuan tehdään taputtelemalla tahmea riisi '
+            + 'levyksi, jonka keskelle kääritään pätkä rapeaa '
+            + 'youtiao-tankoa.',
           lahde: 'Galaxyharrylion, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -33174,9 +33118,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kääntyi: ensimmäinen shanghainkielinen romaani ilmestyi '
             + '2011, bussit alkoivat kuuluttaa pysäkkejä shanghaiksi '
             + '2013, ja 2017 kieltä oppi myös puhelimen ääniavustaja.',
-          selite: 'Linjan 14 sinivalkoinen johdinauto Dalian-kadulla '
-            + 'Shanghaissa: kyljessä on kiinalaisin merkein teksti sadan '
-            + 'vuoden bussiliikenteestä ja katolla virroitintangot.',
+          selite: 'Shanghain bussit alkoivat kuuluttaa pysäkkejä '
+            + 'shanghainkielellä vuonna 2013.',
           lahde: '4084470 0.smil, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -34081,6 +34024,8 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   novosibirsk: [
     {
       id: 'kaupunki',
@@ -34092,27 +34037,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Novosibirsk morning. road bridge across the Ob river (9250673741).jpg',
-          selite: 'Aamu Obin rannalla Novosibirskissa, missä betoninen '
-            + 'maantiesilta kaartuu joen yli loivin holvikaarin ja '
-            + 'rannalla kohoaa kaupungin siluetti kerrostaloineen ja '
-            + 'rakennusnostureineen.',
+          selite: 'Obin ylittää Novosibirskissä kuusi siltaa: kolme '
+            + 'maantiesiltaa, kaksi rautatiesiltaa ja yksi metrosilta.',
           lahde: 'Dmitry Karyshev from Novosibirsk, Russia, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
         {
           tiedosto: 'Transib Novosibirsk.jpg',
-          selite: 'Novosibirsk-Glavnyin vaaleanvihreä asemarakennus '
-            + 'ratapihan yli katsottuna: keskellä on korkea '
-            + 'puoliympyräinen kaari-ikkuna ja katon harjalla '
-            + 'kohokirjaimin NOVOSIBIRSK.',
+          selite: 'Novosibirsk-Glavnyi on Transsiperian radan suurimpia '
+            + 'asemia, ja Moskovaan on sieltä 2 811 kilometriä.',
           lahde: 'User:Aladux, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Novosibirsk traditional-house-at-city-crossing.JPG',
-          selite: 'Yksikerroksinen hirsitalo katujen kulmassa keskellä '
-            + 'talvea: salvotut hirret ovat tummuneet, ikkunoiden '
-            + 'koristepielet on maalattu vaaleansinisiksi, ja kadun '
-            + 'reunassa on korkea auratun lumen valli.',
+          selite: 'Novosibirsk sai alkunsa vuonna 1893 rautatiesillan '
+            + 'työmaasta, eikä kaupungissa siksi ole vanhaa keskustaa.',
           lahde: 'Stesso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -34128,26 +34067,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Streets in Novosibirsk (May 2025) - 0 29.jpg',
-          selite: 'Punainen valtakatu aamuauringossa: leveä ajorata '
-            + 'kaartuu tyhjänä okrankeltaisten 1900-luvun puolivälin '
-            + 'kerrostalojen välissä, ja oikealla erottuu pieni valkoinen '
-            + 'kappeli kullattuine kupoleineen.',
+          selite: 'Punainen valtakatu on Novosibirskin selkäranka, ja '
+            + 'keskustan ydin on 1900-luvun alun ja 1930-luvun '
+            + 'rakennettu.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Novosibirsk Metro Bridge (May 2025).jpg',
-          selite: 'Obin ranta keväällä: puistoon jätetty musta teräksinen '
-            + 'siltakaari seisoo nurmikoiden ja kävelyteiden keskellä, ja '
-            + 'joen yli kulkee kaksi pitkää siltaa kerrostalojen '
-            + 'reunustamalle vastarannalle.',
+          selite: 'Novosibirskin metrosilta on 2 145 metriä pitkä ja '
+            + 'maailman pisin katettu metrosilta.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Novosibirsk from plane (December 2022) - 1.jpg',
-          selite: 'Kaupunki lentokoneesta joulukuussa: lumen peittämä '
-            + 'tasanko jatkuu horisonttiin, Ob mutkittelee sen halki '
-            + 'tummana nauhana jäätyneen tekojärven alapuolella, ja '
-            + 'katuvalot piirtyvät hämärässä vaaleina ruudukkoina.',
+          selite: 'Novosibirsk on Länsi-Siperian tasangolla Obin '
+            + 'molemmin puolin, ja lumi tulee marraskuussa ja lähtee '
+            + 'huhtikuussa.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -34184,10 +34119,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kylässä pidettiin maastokokous, jossa ylityspaikka lyötiin '
             + 'lukkoon. Osa tutkijoista antaa kunnian retkikunnan '
             + 'kenttäinsinöörille Vikenti Roetskille.',
-          selite: 'Vanha ruskeansävyinen valokuva Obin rautatiesillasta, '
-            + 'jonka päässä seisoo höyryveturi vaunuineen ja jonka '
-            + 'ristikot kaartuvat joen yli yhä pienemmiksi kivipilarien '
-            + 'varassa.',
+          selite: 'Obin rautatiesilta rakennettiin vuosina 1893–1897, ja '
+            + 'siinä oli yhdeksän jännettä ja pituutta noin 795 metriä.',
           lahde: 'Иван Робертович Томашкевич, Wikimedia Commons (PD)',
         },
         {
@@ -34203,10 +34136,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'konserttisaliin 375 ja pieneen saliin 150. Tilojen '
             + 'yhteispinta-ala on 40 663 neliömetriä ja rakennuksen '
             + 'tilavuus 294 340 kuutiometriä.',
-          selite: 'Teatterin matala kupoli alaviistosta ilta-auringossa: '
-            + 'pinta on jaettu tiheään vinoruutukuvioon, kupolin alla '
-            + 'kiertää kapea ikkunarivi ja leveä kaareva räystäslista, ja '
-            + 'pylväikkö hehkuu keltaisena harmaata taivasta vasten.',
+          selite: 'Novosibirskin oopperatalon kupoli on 60 metriä leveä '
+            + 'ja 35 metriä korkea.',
           lahde: 'Alexander Klink, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -34223,10 +34154,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'opetti Novosibirskin konservatoriossa vuodesta 1974, ja '
             + 'hänen oppilaisiinsa kuului myös Maksim Vengerov. Vuodesta '
             + '2015 Repin soittaa vuonna 1733 valmistunutta Stradivariusta.',
-          selite: 'Kaksi frakkipukuista miestä ottaa vastaan '
-            + 'suosionosoituksia näyttämöllä Tel Avivissa vuonna 2011: '
-            + 'toinen pitelee viulua ja jousta, ja korokkeella seisova '
-            + 'kapellimestari Zubin Mehta ojentaa kätensä häntä kohti.',
+          selite: 'Novosibirskissä 1971 syntynyt Vadim Repin oli '
+            + 'seitsemäntoistavuotiaana Kuningatar Elisabetin kilpailun '
+            + 'viuluosuuden nuorin voittaja.',
           lahde: 'Levg, Wikimedia Commons (CC BY-SA 3.0)',
           musiikki: 'https://music.apple.com/fi/album/violin-concerto-in-d-op-35-i-allegro-moderato/1452575214?i=1452575811',
           musiikkiNimi: 'Vadim Repinin levytyksiä Apple Musicissa',
@@ -34236,10 +34166,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Novosibirsk opera and ballet theatre (May 2025) - 0.jpg',
-          selite: 'Oopperatalo aukion puolelta: vaalean pylväikön takana '
-            + 'kohoaa harmaa matalakaarinen kupoli ikkunarivin '
-            + 'ympäröimänä, ja talon edessä on nurmikaistaleita ja '
-            + 'kivetty aukio.',
+          selite: 'Oopperatalon työt alkoivat 1931, talo valmistui '
+            + 'helmikuussa 1944 ja ensimmäinen esitys nähtiin 12. '
+            + 'toukokuuta 1945.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Novosibirsk on Siperian suurin kaupunki ja Moskovan ja '
@@ -34276,10 +34205,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vesibussiliikenne.',
               kuva: {
                 tiedosto: 'Novosibirsk Metro (May 2025) - 0 5.jpg',
-                selite: 'Metroaseman laituri ja sen seinän mittainen '
-                  + 'kivimosaiikki, johon on ladottu eri sävyisistä '
-                  + 'kivilaatoista mäntymetsä, lintuja ja hevosta '
-                  + 'taluttava mies.',
+                selite: 'Novosibirskin metro avattiin 1985 neljäntenä '
+                  + 'Venäjällä ja ensimmäisenä Siperiassa, ja siinä on '
+                  + 'kaksi linjaa ja kolmetoista asemaa.',
                 lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -34298,9 +34226,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'keskituulen. Voimalan teho on 400 megawattia.',
               kuva: {
                 tiedosto: 'ObskoyeSea 012 7910.jpg',
-                selite: 'Obin meri harmaana päivänä: vesi jatkuu '
-                  + 'horisonttiin ilman vastarantaa, ja etualalla ui '
-                  + 'kaksi sorsaa juovikkaiden pilvien alla.',
+                selite: 'Novosibirskin tekojärvi syntyi 1950-luvulla '
+                  + 'rakennetun vesivoimalan padosta, ja sitä kutsutaan '
+                  + 'Obin mereksi.',
                 lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -34318,10 +34246,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lasten kanssa käyville yhtä tärkeä kohde kuin eläimet.',
               kuva: {
                 tiedosto: 'Novosibirsk Zoo (May 2025) - 0.jpg',
-                selite: 'Eläintarhan mäntymetsässä lammen rannalla seisoo '
-                  + 'kaksi suurta betonista dinosaurusta: etualalla '
-                  + 'sininen suomukylkinen käärmehahmo ja sen takana '
-                  + 'puiden lomasta kurkottava pitkäkaulainen jättiläinen.',
+                selite: 'Novosibirskin eläintarha on rakennettu suoraan '
+                  + 'mäntymetsään, ja siellä on yli 11 000 eläintä 738 '
+                  + 'lajista.',
                 lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -34379,10 +34306,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jo yli 47 000. 1910-luvun alussa se oli maan ensimmäisiä '
             + 'paikkoja, joissa alkeisopetuksesta tehtiin pakollista. '
             + 'Nykyisen nimensä kaupunki sai vuonna 1926.',
-          selite: 'Aseman puinen matkustajarakennus vanhassa valokuvassa: '
-            + 'pitkän yksikerroksisen talon vaaleissa seinissä on tiheä '
-            + 'rivi ikkunoita koristeellisin pielilaudoin, ja keskellä '
-            + 'kohoaa koristeleikattu päätykolmio.',
+          selite: 'Aseman nimi oli aikatauluissa pelkkä Ob vuoteen 1909 '
+            + 'asti, vaikka paikka oli nimetty Novonikolajevskiksi jo '
+            + '1895.',
           lahde: 'Иван Робертович Томашкевич, Wikimedia Commons (PD)',
         },
         {
@@ -34400,10 +34326,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'purkaminen alkoi 2000. Yksi jänteistä säästettiin '
             + 'museoesineeksi rantapuistoon, jonka nimi on Gorodskoje '
             + 'natšalo.',
-          selite: 'Vanhan sillan harmaa teräsristikko pystytettynä '
-            + 'muistomerkiksi joen rantaan kahden betonipilarin päälle, '
-            + 'tukien laakerit punaisiksi maalattuina ja alla kivetty '
-            + 'aukio laattakivineen.',
+          selite: 'Vanhan sillan liikenne loppui 1991, ja yksi jänteistä '
+            + 'säästettiin museoesineeksi Gorodskoje natšalo '
+            + '-rantapuistoon.',
           lahde: 'К.Артём.1, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -34421,10 +34346,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kybernetiikka ja genetiikka, joiden maine oli Moskovassa '
             + 'pilalla, ja kulttuuritalossa nähtiin taidetta, jota muualla '
             + 'ei olisi asetettu näytteille.',
-          selite: 'Leveä katu Akademgorodokissa talvella: keltaisen '
-            + 'kerrostalon julkisivua jakavat punatiiliset pystyraidat, '
-            + 'ja sen edessä kasvaa rivi korkeita lumisia koivuja ja '
-            + 'mäntyjä kapean jalkakäytävän varrella.',
+          selite: 'Akademgorodok perustettiin 1957 metsään '
+            + 'kolmisenkymmentä kilometriä keskustasta etelään, ja '
+            + 'siellä asui parhaimmillaan 65 000 tutkijaa perheineen.',
           lahde: 'Pather alexiy, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -35184,6 +35108,8 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   magadan: [
     {
       id: 'kaupunki',
@@ -35196,25 +35122,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'The Bay of Nagaev, Magadan.jpg',
-          selite: 'Nagajevanlahden ranta syyspäivänä: nurmikummulla seisoo '
-            + 'valkoinen majakkatorni, ja lahden takana kohoavat '
-            + 'siniharmaat vaarat.',
+          selite: 'Nagajevanlahti on 14,5 kilometriä pitkä ja suultaan '
+            + '6,4 kilometriä leveä, ja sitä on kutsuttu Ohotanmeren '
+            + 'parhaaksi ankkuripaikaksi.',
           lahde: 'Евгений Пиманов, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Trinity Cathedral in Magadan.jpg',
-          selite: 'Pyhän Kolminaisuuden katedraali matalassa '
-            + 'talviauringossa: valkoisesta rakennuksesta nousee kolme '
-            + 'kullattua sipulikupolia risteineen ja sisäänkäyntikatoksen '
-            + 'päällä neljäs, pienempi.',
+          selite: 'Pyhän Kolminaisuuden katedraali on Magadanin '
+            + 'ortodoksisen hiippakunnan pääkirkko.',
           lahde: 'Евгений Пиманов, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Lenin Avenue in Magadan.jpg',
-          selite: 'Leninin valtakatu Magadanissa aurinkoisena päivänä: '
-            + 'kadun varrella seisoo pitkä rivi vaaleankeltaisia '
-            + 'nelikerroksisia taloja, joiden edessä kasvaa havupuita '
-            + 'toiseen kerrokseen asti.',
+          selite: 'Magadanin asukasluku on laskenut pitkään: vuoden 1989 '
+            + 'väenlaskussa asukkaita oli 151 652 ja vuoden 2024 '
+            + 'arviossa 89 193.',
           lahde: 'Евгений Пиманов, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -35234,10 +35157,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'telttakatu nimettiin armeijan komentajan Vasili Bljuherin '
             + 'mukaan; nykyään se on Nagajevan katu. Kaupunkioikeudet '
             + 'tulivat 14. heinäkuuta 1939.',
-          selite: 'Magadan kukkulalta nähtynä kesäpäivänä: matalien '
-            + 'talojen ja kerrostalojen meri levittäytyy rantaan asti, ja '
-            + 'kaupungin takana kohoaa pitkä loivarinteinen vaara '
-            + 'lumilaikkuineen.',
+          selite: 'Magadan istuu Staritskin niemimaan kannaksella kahden '
+            + 'lahden välissä: lounaassa on Nagajevanlahti ja '
+            + 'koillisessa Gertnerinlahti.',
           lahde: 'frage23, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Magadan',
         },
@@ -35256,9 +35178,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'monumentin sisään on tehty vankisellin jäljennös. '
             + 'Kozajevilta on peräisin myös ajatus muuttaa muistomerkki '
             + 'museoksi.',
-          selite: 'Surun maski alhaalta kuvattuna: harmaa kulmikas '
-            + 'ihmiskasvo kohoaa taivasta vasten, ja poskella valuu jono '
-            + 'pieniä naamioita.',
+          selite: 'Viisitoistametrinen Surun maski paljastettiin 12. '
+            + 'kesäkuuta 1996 Krutaja-kukkulalla, jossa oli aikanaan '
+            + 'toiminut vankisaattueiden kauttakulkupaikka.',
           lahde: 'Сергей Ковалев, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ernst Neizvestny',
         },
@@ -35277,10 +35199,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Vapauduttuaan hän jäi kaupunkiin ja kuoli siellä 1994. '
             + 'Lauluja hän sävelsi noin kolmesataa, tunnetuimpina Osen ja '
             + 'Ljubuška.',
-          selite: 'Magadanin musiikki- ja draamateatteri iltavalossa: '
-            + 'kolmikerroksisen talon hiekankeltaisia seiniä jäsentävät '
-            + 'valkoiset pilasterit, ja sisäänkäynnin edessä on neljän '
-            + 'pilarin rivi.',
+          selite: 'Magadanin musiikki- ja draamateatterissa työskenteli '
+            + 'laulaja Vadim Kozin, joka jäi kaupunkiin vapauduttuaan ja '
+            + 'kuoli siellä 1994.',
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
           musiikki: 'https://music.apple.com/fi/album/%D0%BE%D1%81%D0%B5%D0%BD%D1%8C/1707574060?i=1707574190',
           musiikkiNimi: 'Vadim Kozin: Osen Apple Musicissa',
@@ -35316,24 +35237,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Magadan, Gertner Bay.jpg',
-          selite: 'Gertnerinlahti kesäpäivänä: hiekkatie laskee loivaa '
-            + 'rinnettä kohti rannan matalia rakennuksia, ja niiden takaa '
-            + 'avautuu tyyni meri ja lumitäpläinen vuorijono.',
+          selite: 'Gertnerinlahti erottaa yhdessä Nagajevanlahden kanssa '
+            + 'Staritskin niemimaan mantereesta.',
           lahde: 'frage23, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Огни Магадана.jpg',
-          selite: 'Magadanin valot hämärässä: katulyhtyjen rivi kaartaa '
-            + 'rantaa pitkin, ja niiden takana kimaltaa Nagajevanlahden '
-            + 'tumma vesi.',
+          selite: 'Magadanin läpi virtaa 192 kilometrin mittainen '
+            + 'Magadanka, joka laskee Ohotanmereen.',
           lahde: 'Vladislava21, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Магадан, Транспортная-Речная, 20240831 01.jpg',
-          selite: 'Vaaleankeltainen kaksikerroksinen talo Transportnajan '
-            + 'ja Retšnajan kulmassa: julkisivua jäsentävät leveät '
-            + 'pystypilasterit, ja takaosassa kohoaa pieni nelikulmainen '
-            + 'torni.',
+          selite: 'Magadanissa alettiin rakentaa asuintaloja, koulua ja '
+            + 'sairaalaa 22. kesäkuuta 1929, ja kaupunkioikeudet tulivat '
+            + '14. heinäkuuta 1939.',
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -35357,10 +35275,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Магадан, Ленина, 19 20240901 01.jpg',
-          selite: 'Gorniak-elokuvateatteri Magadanissa syyskuussa 2024: '
-            + 'vaaleanvihreän pylväsjulkisivun katolla lukee '
-            + 'vaaleanpunaisin kaarikirjaimin teatterin nimi, ja etualalla '
-            + 'pihlaja notkuu punaisia marjaterttuja.',
+          selite: 'Magadan on Magadanin alueen hallinnollinen keskus ja '
+            + 'Kolyman portti.',
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Magadan on Magadanin alueen hallinnollinen keskus ja '
@@ -35407,10 +35323,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muutoin se on soraa.',
               kuva: {
                 tiedosto: 'Новый терминал "Аэропорта Магадан".jpg',
-                selite: 'Sokolin lentoaseman uusi terminaali talvi-iltana: '
-                  + 'katto on muotoiltu loivaksi aaltoviivaksi, koko '
-                  + 'julkisivu on lasia ja yläreunassa palaa valkoinen '
-                  + 'kyrillinen teksti.',
+                selite: 'Sokolin lentoasema avattiin 12. tammikuuta '
+                  + '1961, ja nykyinen terminaali otettiin käyttöön 20. '
+                  + 'joulukuuta 2024.',
                 lahde: 'Магадан 2001, Wikimedia Commons (CC0)',
               },
             },
@@ -35455,9 +35370,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Toinen elinkeino on kalastus, toinen kullankaivuu.',
               kuva: {
                 tiedosto: 'Magadan-port.jpg',
-                selite: 'Rahtilaiva Magadanin sataman laiturissa sumuisena '
-                  + 'päivänä: mustan rungon kylkeen on maalattu kyrillinen '
-                  + 'nimi, ja laiturilla seisoo vihreä satamanosturi.',
+                selite: 'Magadanin satama toimii ympäri vuoden '
+                  + 'jäänmurtajien avulla, ja siinä on kolmetoista '
+                  + 'laituripaikkaa.',
                 lahde: 'Andrey dementev, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -35504,10 +35419,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'näkyy yhtenä kuvana.',
               kuva: {
                 tiedosto: 'Чаша. Марчеканская сопка.jpg',
-                selite: 'Näkymä Martšekanin vaaran pohjoisrinteeltä '
-                  + 'talvella: alhaalla levittäytyy kaupunki, ja sen '
-                  + 'takana nousevat lumiset vaarajonot kerroksittain '
-                  + 'horisonttiin.',
+                selite: 'Martšekanin vaara on Staritskin niemimaan '
+                  + 'korkein kohta, 694 metriä.',
                 lahde: 'Странник 18, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -35538,9 +35451,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metriin. Matykil nousee noin 700 metriin, ja sen rannalla on '
             + 'Ohotanmeren pohjoisin paikka, jossa stellerinmerileijonat '
             + 'saavat poikasensa.',
-          selite: 'Kallioinen saari nousee merestä usvan keskeltä: terävät '
-            + 'huiput hohtavat matalassa auringossa kullanruskeina, ja '
-            + 'seinämien edessä liitelee pieniä vaaleita lintuja.',
+          selite: 'Jamskin saarilla pesii yli kymmenen miljoonaa '
+            + 'merilintua, ja saarista korkein Matykil nousee noin 700 '
+            + 'metriin.',
           lahde: 'Екатерина Васягина, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ohotanmeri',
         },
@@ -35558,9 +35471,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'alle. Poikaset kuoriutuvat marras–tammikuussa ja laskeutuvat '
             + 'mereen touko–kesäkuussa kolmisenttisinä. Kudun jälkeen '
             + 'emokala kuolee.',
-          selite: 'Lohia tiiviissä parvessa kirkkaan veden alla, selät '
-            + 'vihertävän harmaat ja täynnä suuria mustia soikeita täpliä '
-            + 'ja kyljet hopeanvalkoiset.',
+          selite: 'Kyttyrälohi on tyynenmerenlohista pienin ja '
+            + 'levinnein, ja sen keskipaino on 2,2 kiloa.',
           lahde: 'Кирилл Уютнов, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kyttyrälohi',
         },
@@ -35579,10 +35491,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'saaliista, sillä ravinto on enimmäkseen kalaa, etenkin '
             + 'lohikaloja. Pesä kasvaa vuosien korjailussa kolme metriä '
             + 'leveäksi ja kaksi metriä korkeaksi.',
-          selite: 'Kuningasmerikotka lennossa: höyhenpuku on tummanruskea '
-            + 'mutta siiven etureunassa on leveä valkoinen kaistale, ja '
-            + 'suurine oranssinkeltaisine nokkineen lintu kantaa '
-            + 'varpaissaan saalista.',
+          selite: 'Kuningasmerikotkan siipiväli yltää yli kahteen '
+            + 'metriin, ja sen nokka on luultavasti järein kaikista '
+            + 'nykyisistä kotkista.',
           lahde: 'Кирилл Уютнов, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kuningasmerikotka',
         },
@@ -35969,6 +35880,8 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   sahalin: [
     {
       id: 'kaupunki',
@@ -35980,25 +35893,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Скалы мыса Великан.jpg',
-          selite: 'Velikanin niemen kalliot Sahalinin kaakkoisrannikolla '
-            + 'Toninon–Anivan niemimaalla: merestä kohoaa vaalea '
-            + 'kekurikallio, jonka peilikuva näkyy laskuveden jättämässä '
-            + 'altaassa.',
+          selite: 'Velikanin niemen kekurikalliot ovat Sahalinin '
+            + 'kaakkoisrannikolla Toninon–Anivan niemimaalla.',
           lahde: 'Rost.galis, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The frozen southeastern coast of Russia’s Sakhalin Island (iss074e0312749).jpg',
-          selite: 'Jäätynyt Terpenijanlahti Sahalinin kaakkoisrannikolla '
-            + 'kansainväliseltä avaruusasemalta kuvattuna helmikuussa '
-            + '2026: lahtea peittää rikkonainen ajojää ja vuoriselänteet '
-            + 'ovat lumen alla.',
+          selite: 'Terpenijanlahti on Sahalinin kaakkoisrannikon suuri '
+            + 'lahti, ja Ohotanmeren jää peittää sen talvella.',
           lahde: 'NASA Johnson Space Center, Wikimedia Commons (PD)',
         },
         {
           tiedosto: '2024-09-29-Sakhalin-panorama.jpg',
-          selite: 'Južno-Sahalinsk syyskuussa 2024 Bolševikin vuoren '
-            + 'rinteeltä nähtynä: kaupunki täyttää vuorten väliin jäävän '
-            + 'laakson, ja rinteellä seisoo köysiradan pylväs.',
+          selite: 'Južno-Sahalinsk istuu Susujajoen laaksossa vuorten '
+            + 'välissä sisämaassa, ja merelle on joka suuntaan tunnin '
+            + 'ajomatka.',
           lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -36036,9 +35945,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '7,5 metriä, jonka seinät tuettiin pystypuilla ja katettiin '
             + 'maalla ja heinällä. Metsässä ja matkoilla kuljettiin '
             + 'koiravaljakolla.',
-          selite: 'Nivkhien paaluille nostettu aitta vuonna 1903: '
-            + 'lautaseinäisen rakennuksen räystäiltä riippuu kuivumaan '
-            + 'ripustettua tavaraa, ja lattian alle jää avoin tila.',
+          selite: 'Nivkhit säilöivät saaliinsa jukolaksi, joka '
+            + 'kuivattiin pakkasilmassa kokonaan ilman suolaa.',
           lahde: 'Internet Archive Book Images, Wikimedia Commons (CC0)',
           wiki: 'Nivkhit',
         },
@@ -36055,9 +35963,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'opetti lapsille venäjää ja laskentoa. Vuonna 1903 hän äänitti '
             + 'ainun kieltä vahasylintereille. Hän oli Józef Piłsudskin '
             + 'vanhempi veli.',
-          selite: 'Bronisław Piłsudskin ottama valokuva Sahalinin '
-            + 'ainuista: neljä nuorta istuu maassa inau-rivin ääressä, ja '
-            + 'inaut ovat vuolluista lastuista tehtyjä uhripuikkoja.',
+          selite: 'Bronisław Piłsudski laati ainun kielen 10 000 sanan '
+            + 'sanakirjan ja äänitti ainun kieltä vahasylintereille '
+            + 'vuonna 1903.',
           lahde: 'Pilsudski, Bronislaw, Wikimedia Commons (PD)',
           wiki: 'Ainut',
         },
@@ -36096,16 +36004,15 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Сахалин, Чертов мост, 2023-10-07 02.jpg',
-          selite: 'Pirunsilta eli Tšortov most Holmskin takamailla on '
-            + 'käytöstä poistuneen vuoristoradan silta, jonka ruostuneet '
-            + 'kiskot jatkuvat lokakuun ruskassa kohti tunnelin suuaukkoa.',
+          selite: 'Pirunsilta eli Tšortov most on Holmskin vuorissa '
+            + 'kulkeneen, käytöstä poistetun kapearaiteisen radan silta.',
           lahde: 'Bok, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2024-10-03-Sakhalin-park-lake.jpg',
-          selite: 'Gagarinin puiston Ylempi lampi Južno-Sahalinskissa '
-            + 'syyskuun lopulla: rannalla on lasten rautatien '
-            + 'Komsomolskajan asema, ja tyyni vesi peilaa talot ja ruskan.',
+          selite: 'Gagarinin puistossa Južno-Sahalinskissa kulkee lasten '
+            + 'rautatie, jonka Komsomolskajan asema on Ylemmän lammen '
+            + 'rannalla.',
           lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -36130,10 +36037,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: '2025-06-07-ys-mosaic-komm-avenue.jpg',
-          selite: 'Seinämosaiikki Južno-Sahalinskin keskustassa kesäkuussa '
-            + '2025: haalaripukuinen mies kohottaa kädessään porankruunua, '
-            + 'ja hänen ympärillään aaltoilevat meri, kalaparvi ja '
-            + 'auringonsäteet.',
+          selite: 'Južno-Sahalinsk alkoi vuonna 1882 pakkotyöläisten '
+            + 'perustamana Vladimirovkan kylänä ja oli välillä Japanin '
+            + 'Karafuton pääkaupunki Toyohara.',
           lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Sahalinin portti on Južno-Sahalinsk, saaren ainoa '
@@ -36173,10 +36079,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lähteistä ennen matkan suunnittelua.',
               kuva: {
                 tiedosto: '2M62U-0082 with train, Yuzhno-Sakhalinsk.jpg',
-                selite: 'Matkustajajuna Južno-Sahalinskin asemalla '
-                  + 'syyskuussa: puna-harmaa dieselveturi vetää sinisiä '
-                  + 'vaunuja, ja raideleveys on ollut venäläinen vuodesta '
-                  + '2019.',
+                selite: 'Sahalinin rautatiet muutettiin japanilaisesta '
+                  + 'kapeasta raideleveydestä venäläiseen leveyteen '
+                  + 'elokuussa 2019.',
                 lahde: 'Koshekans, Wikimedia Commons (CC BY 4.0)',
               },
             },
@@ -36199,10 +36104,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'paljain silmin.',
               kuva: {
                 tiedosto: 'Sea port and town of Kholmsk, Sakhalin oblast.jpg',
-                selite: 'Holmskin satamakaupunki Tatarinsalmen rannalla '
-                  + 'kesäkuussa: nosturit ja laiturit ovat etualalla, '
-                  + 'kerrostalot kiipeävät vihreille rinteille, ja tänne '
-                  + 'junalautta mantereelta saapuu.',
+                selite: 'Holmsk on Tatarinsalmen rannalla oleva '
+                  + 'satamakaupunki, johon junalautta saapuu mantereen '
+                  + 'Vaninosta.',
                 lahde: 'Vasilii Martynov, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -36224,10 +36128,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kysyntä pitää saaren kalan ja kaasun liikkeessä.',
               kuva: {
                 tiedosto: 'Японский паровоз D51-22 Южно-Сахалинск.jpg',
-                selite: 'Japanilainen D51-höyryveturi muistomerkkinä '
-                  + 'Južno-Sahalinskin asema-aukiolla: musta veturi '
-                  + 'punaisine vetopyörineen on Karafuton rautateiden ajan '
-                  + 'muisto keskellä nykykaupunkia.',
+                selite: 'Južno-Sahalinskin asema-aukiolla seisoo '
+                  + 'japanilainen D51-höyryveturi muistomerkkinä '
+                  + 'Karafuton rautateiden ajasta.',
                 lahde: 'Апатинаити, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -36289,10 +36192,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kieltoa. Matkasta syntyi kirja Sahalin, jonka luvut '
             + 'ilmestyivät Russkaja mysl -lehdessä 1893–1894 ja kokonaisena '
             + 'teoksena 1895.',
-          selite: 'Tšehovin Sahalinilta mukanaan tuoma valokuva eteläisen '
-            + 'Sahalinin ainuista: neljä aikuista ja kaksi lasta '
-            + 'lautaseinän edustalla, miehillä pitkä parta ja paksusta '
-            + 'kankaasta ommeltu kaapu.',
+          selite: 'Anton Tšehov kiersi Sahalinilla kolme kuukautta '
+            + 'vuonna 1890 ja täytti saaren asukkaista noin '
+            + 'kymmenentuhatta kortistokorttia.',
           lahde: 'Tschechow, Anton, Wikimedia Commons (PD)',
           wiki: 'Anton Tšehov',
         },
@@ -36309,9 +36211,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rautamalmia, taloja ja teitä, lennätinlinjoja, soiden '
             + 'kuivatusta ja talvista metsänkaatoa. Kaikkiaan järjestelmän '
             + 'läpi kulki yli kolmekymmentätuhatta tuomittua.',
-          selite: 'Sahalinin pakkotyövankeja työssä: parikymmentä miestä '
-            + 'lapioi maata ja työntää kottikärryjä juuri raivatulla '
-            + 'tienpohjalla.',
+          selite: 'Sahalinin pakkotyöjärjestelmän läpi kulki kaikkiaan '
+            + 'yli kolmekymmentätuhatta tuomittua.',
           lahde: 'Pavlovskij, I.I., Wikimedia Commons (PD)',
           wiki: 'Katorga',
         },
@@ -36353,6 +36254,8 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   vladivostok: [
     {
       id: 'kaupunki',
@@ -36364,10 +36267,9 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Golden Horn bay and Egersheld peninsula.jpg',
-          selite: 'Kultaisen sarven lahti ja Egeršeldin niemi ilmasta '
-            + 'nähtynä: kapea vesiväylä, jossa vettä on suuaukolla 20–27 '
-            + 'metriä ja laitureiden edustalla viidestä viiteentoista, '
-            + 'johtaa nosturien reunustamille satamalaitureille.',
+          selite: 'Kultaisen sarven lahdessa on vettä suuaukolla 20–27 '
+            + 'metriä ja laitureiden edustalla viidestä viiteentoista '
+            + 'metriin.',
           lahde: 'Russian.dissident, Wikimedia Commons (PD)',
         },
         {
@@ -36398,10 +36300,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Vladivostok annettiin ensin lahdelle ja siirtyi asutukselle, '
             + 'kun kuljetusalus Mandžur toi Aleksei Šefnerin komennossa '
             + 'rantaan sotilasosaston 20. kesäkuuta 1860 vanhaa lukua.',
-          selite: 'Näkymä Vladivostokin satamaredille 1870-luvulla '
-            + 'Vladimir Laninin albumissa Amurin ja Ussurin seudulta: '
-            + 'vastarannalla on rivi matalia rakennuksia lähes puuttomien '
-            + 'kukkuloiden juurella ja lahdella höyrylaiva.',
+          selite: 'Vladivostokin asutus alkoi 20. kesäkuuta 1860, kun '
+            + 'kuljetusalus Mandžur toi rantaan sotilasosaston Aleksei '
+            + 'Šefnerin komennossa.',
           lahde: 'Владимир Васильевич Ланин, Wikimedia Commons (PD)',
           wiki: 'Vladivostok',
         },
@@ -36439,9 +36340,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jälkeläinen, vaikka sukututkimus ei ole sitä vahvistanut, ja '
             + 'levytti 1967 Aljoša Dimitrijevitšin kanssa levyn The Gypsy '
             + 'and I.',
-          selite: 'Muistolaatta Brynnerin syntymätalon seinässä '
-            + 'Vladivostokissa, pronssiin valettuina näyttelijän kasvot '
-            + 'ja teksti venäjäksi ja englanniksi.',
+          selite: 'Yul Brynner syntyi Vladivostokissa 11. heinäkuuta '
+            + '1920 sveitsiläisperäiseen kauppiassukuun.',
           lahde: 'Michael Goodine from Incheon, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Yul Brynner',
           musiikki: 'https://music.apple.com/fi/album/two-guitars/351069215?i=351069234',
@@ -36488,10 +36388,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Vladivostok Sportivnaya bay 2024-09 23.jpg',
-          selite: 'Sportivnajan poukama ja keskustan rantabulevardi '
-            + 'mereltä nähtynä maailmanpyörineen ja tornitaloriveineen — '
-            + 'tämä on kaupungin Amurinlahden puoleinen, huvittelulle '
-            + 'varattu ranta.',
+          selite: 'Sportivnajan poukama on Vladivostokin Amurinlahden '
+            + 'puoleinen ranta, joka on varattu huvittelulle.',
           lahde: 'Artyom Svetlov, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -36507,27 +36405,24 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Владивосток в начале XX века.jpg',
           vuosi: '1900-luvun alku',
-          selite: 'Vladivostok kukkulalta katsottuna 1900-luvun alussa: matalia taloja '
-            + 'rinteillä ja Kultaisen sarven lahti vasemmalla, kun rataa vielä '
-            + 'rakennettiin.',
+          selite: 'Vladivostok 1900-luvun alussa, kun Transsiperian '
+            + 'rataa vielä rakennettiin ja rinteiden talot olivat puuta.',
           lahde: 'Tuntematon kuvaaja, Commons (PD)',
         },
         {
           tiedosto: '20220816 City view from the Eagle\'s nest hill.jpg',
           vuosi: '2022',
-          selite: 'Sama kaupunki Kotkanpesän kukkulalta nykyään: talot kiipeävät '
-            + 'rinteitä samalla tavalla kuin sata vuotta sitten, mutta puutalojen '
-            + 'tilalla ovat kerrostalot ja huipulla köysirata.',
+          selite: 'Kotkanpesän kukkulalle nousee köysirata, ja rinteiden '
+            + 'puutalojen tilalla ovat nykyään kerrostalot.',
           lahde: 'travelling_eidolon, Commons (CC BY 2.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Nikcas.jpg',
-          selite: 'Nikolain riemuportti Vladivostokissa elokuussa 2011: '
-            + 'kaksiaukkoinen portti kantaa punavalkoruudullista '
-            + 'telttakattoa, jonka huipulla on kaksipäinen kotka, ja '
-            + 'pilarien jalustat ovat punaista graniittia.',
+          selite: 'Vladivostok istuu Muravjov-Amurskin niemimaan '
+            + 'eteläkärjessä kahden veden välissä: lännessä on '
+            + 'Amurinlahti ja idässä Kultaisen sarven satamalahti.',
           lahde: 'Dudergofer, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Vladivostok istuu Muravjov-Amurskin niemimaan '
@@ -36619,10 +36514,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'reittikilpi.',
               kuva: {
                 tiedosto: 'Vladivostok Aleutskaya Street 2008-01 1199468390.jpg',
-                selite: 'Iltapäiväruuhkaa Aleutskajalla tammikuussa: '
-                  + 'autojono ja raitiotien kiskot kulkevat lumisen '
-                  + 'kadun täydeltä, mutta lunta on vain ohuelti — '
-                  + 'Vladivostokin talvi on kuiva.',
+                selite: 'Vladivostokin talvi on kuiva ja usein '
+                  + 'aurinkoinen, ja lunta on maassa enimmillään vain '
+                  + 'senttejä.',
                 lahde: 'Ivan Z., Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -36686,9 +36580,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Amurin itä- ja eteläpuolelle. Tärkeintä elinympäristöä ovat '
             + 'Sihote-Alinin koreansembrametsät, joissa naaraan reviiri voi '
             + 'olla 450 neliökilometriä ja uroksen sitäkin laajempi.',
-          selite: 'Amurintiikeri lumisen havumetsän reunassa eläintarhassa '
-            + 'kuvattuna; aikuinen uros painaa luonnossa nykyisin '
-            + 'keskimäärin noin 176 kilogrammaa.',
+          selite: 'Amurintiikerin uros painaa luonnossa nykyisin '
+            + 'keskimäärin 176 kilogrammaa ja naaras 118 kilogrammaa.',
           lahde: 'albinfo, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Amurintiikeri',
         },
@@ -36704,9 +36597,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kiinanlimppuköynnös, joka yltää tavallisesti 8–10 metriin ja '
             + 'kantaa hedelmiä, joita kutsutaan viiden maun marjoiksi. '
             + 'Aluetta pidetään Pohjois-Aasian lajirikkaimpana.',
-          selite: 'Sihote-Alinin vuoristoa keskiosastaan, rinteitä '
-            + 'peittämässä yhtenäinen hakkaamaton havu- ja sekametsä, '
-            + 'juuri sitä amurintiikerin tärkeintä elinaluetta.',
+          selite: 'Sihote-Alinin koreansembrametsät ovat amurintiikerin '
+            + 'tärkeintä elinaluetta, ja siellä naaraan reviiri voi olla '
+            + '450 neliökilometriä.',
           lahde: 'Olga Ukhvatkina, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Koreansembra',
         },
@@ -36724,9 +36617,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjat Po Ussurijskomu kraju 1921 ja Dersu Uzala 1923. '
             + 'Arsenjev kuoli kotonaan Vladivostokissa, ja talo on nykyään '
             + 'museo.',
-          selite: 'Arsenjevin retkikunta Takeman jokilaaksossa: Arsenjev, '
-            + 'Dersu Uzala, tunnistamaton henkilö ja Tšžan Bao seisovat '
-            + 'kantamuksineen leiripaikalla keskellä taigaa.',
+          selite: 'Vladimir Arsenjev teki Sihote-Alinille retkiä 1906 ja '
+            + '1907–1908, ja hänen oppaanaan kulki nanaimetsästäjä Dersu '
+            + 'Uzala.',
           lahde: 'Владимир Клавдиевич Арсеньев., Wikimedia Commons (PD)',
           wiki: 'Dersu Uzala',
         },
@@ -37777,6 +37670,8 @@ export const KULTTUURI_KATEGORIAT = {
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   singapore: [
     {
       id: 'kaupunki',
@@ -37788,23 +37683,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '1 singapore city skyline dusk panorama 2011.jpg',
-          selite: 'Kaupungin ydin iltahämärissä ylhäältä katsottuna: '
-            + 'Singapore-joen suu kaartaa keskellä, torniryhmä nousee '
-            + 'sen takaa, ja etualalla on kaksi valaistua '
-            + 'nurmikenttää.',
+          selite: 'Singapore on kaupunkivaltio, jonka pinta-ala on 744 '
+            + 'neliökilometriä ja asukasluku runsaat kuusi miljoonaa.',
           lahde: 'chenisyuan, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Singapore (SG), Gardens by the Bay, Supertree Grove -- 2019 -- 4752.jpg',
-          selite: 'Gardens by the Bayn teräksiset jättipuut nousevat trooppisen puutarhan '
-            + 'yllä, ja niiden välissä kulkee korkealla riippuva kävelysilta.',
+          selite: 'Gardens by the Bayn puutarha rakennettiin merestä '
+            + 'täytetylle maalle Marina Bayn rannalle.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gopuram monumental ornate tower at the entrance of Sri Mariamman Temple with sculptures of Hindu deities Chinatown Singapore.jpg',
-          selite: 'Sri Mariammanin porttitorni alhaalta kuvattuna: '
-            + 'kuusi kapenevaa kerrosta täynnä värillisiä '
-            + 'kipsipatsaita, ja harjalla on rivi kultaisia huippuja.',
+          selite: 'Sri Mariammanin temppeli sai nykyisen paikkansa South '
+            + 'Bridge Roadin varrelta 1823, ja sen vanhimmat tiiliosat '
+            + 'ovat vuodelta 1843.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -37841,25 +37734,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Boat quay sct.JPG',
-          selite: 'Singapore-joen mutka ylhäältä: eteläisellä '
-            + 'rannalla on tiivis rivi matalia kauppahuoneita '
-            + 'punaisine kattoineen, ja niiden takaa nousee '
-            + 'pankkitorneja.',
+          selite: 'Kiinalaiset kauppiaat asettuivat Singapore-joen '
+            + 'alajuoksulle ja englantilaiset yläjuoksulle.',
           lahde: 'chensiyuan, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Sultan Mosque, Singapore.jpg',
-          selite: 'Sultan-moskeija Kampong Glamissa: kullattu kupoli '
-            + 'lepää tumman rengasvyön päällä, kulmissa on '
-            + 'pikkutornit, ja aidan varressa liehuu lippurivi.',
+          selite: 'Sulttaanin moskeija seisoo Kampong Glamissa, joka '
+            + 'annettiin vuoden 1822 kaavassa sulttaani Husseinille ja '
+            + 'malaijiyhteisölle.',
           lahde: 'Johan Jönsson (Julle), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Singapore (SG), Merlion -- 2019 -- 4496.jpg',
-          selite: 'Joen suu vastarannalta: valkoinen Merlion-patsas '
-            + 'seisoo laiturilla, sen takana on Fullertonin entinen '
-            + 'postitalo pylväineen ja niiden yllä nykykeskustan '
-            + 'lasitorneja.',
+          selite: 'Singapore-joen suu suljettiin padolla vuonna 2008, ja '
+            + 'suistosta tuli makean veden allas.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -37896,10 +37785,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sai luvan perustaa kauppa-aseman. Sopimus '
             + 'allekirjoitettiin 6. helmikuuta 1819, ja vuonna 1824 '
             + 'uusi sopimus toi koko saaren Britannian alaisuuteen.',
-          selite: 'Charles Dycen akvarelli vuodelta 1846 näyttää '
-            + 'Government Hillin eli nykyisen Fort Canningin: '
-            + 'kukkulan laella on kuvernöörin talo lipputankoineen ja '
-            + 'sen juurella matalia tiilikattoisia varastoja.',
+          selite: 'Charles Dycen vuoden 1846 akvarelli esittää '
+            + 'Government Hilliä eli nykyistä Fort Canningia, jonka '
+            + 'laella seisoi kuvernöörin talo.',
           lahde: 'Charles Andrew Dyce, Wikimedia Commons (PD)',
           wiki: 'Singapore',
         },
@@ -37918,11 +37806,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kanssa osa Straitsin siirtokuntia, vuodesta 1836 '
             + 'niiden pääkaupunki ja vuonna 1867 osa suoraan '
             + 'Lontoosta hallittua kruununsiirtokuntaa.',
-          selite: 'Noin vuonna 1900 otetussa kuvassa Singapore-joki '
-            + 'on täynnä tongkang-lastiveneitä rannasta rantaan, '
-            + 'takana ovat kaksikerroksiset kauppahuoneet, ja kuvan '
-            + 'alalaitaan on painettu julkaisijan oma numero ja nimi '
-            + '"River Scene".',
+          selite: 'Vuoteen 1860 mennessä Singaporen väkiluku oli noussut '
+            + 'yli kahdeksaankymmeneentuhanteen, ja yli puolet '
+            + 'asukkaista oli kiinalaisia.',
           lahde: 'Lambert & Co., G.R. / Singapore, Wikimedia Commons (PD)',
           wiki: 'Singapore',
         },
@@ -37943,11 +37829,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rajusti: vuonna 1880 satamasta kulki jo yli puolitoista '
             + 'miljoonaa tonnia tavaraa vuodessa, neljä viidesosaa '
             + 'siitä höyrylaivoilla.',
-          selite: 'Amiraliteetin merikartta Singaporen redistä '
-            + 'näyttää kaupungin ruutukaavan vasemmassa ylänurkassa '
-            + 'ja ankkuripaikkojen syvyysluvut tuhansina pisteinä '
-            + 'sen edustalla, ja nurkkiin on painettu kartan omat '
-            + 'julkaisunumerot.',
+          selite: 'Amiraliteetin merikartta Singaporen redistä pohjautuu '
+            + 'J. W. Reedin vuosina 1864–1892 tekemiin '
+            + 'syvyysmittauksiin.',
           lahde: 'British Admiralty, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Port of Singapore',
         },
@@ -37966,10 +37850,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Anderson-silta, ja ajoneuvoliikenne siirtyi sinne. '
             + 'Cavenagh on yhä Singaporen vanhin alkuperäisessä '
             + 'muodossaan säilynyt silta.',
-          selite: 'Cavenagh-silta joen tasalta: matala '
-            + 'riippuvaijerikaari ulottuu rannalta rannalle, '
-            + 'graniittipylonit seisovat sen päissä, ja alitse ujuttaa '
-            + 'itsensä keltakattoinen lastivene.',
+          selite: 'Cavenagh-silta avattiin marraskuussa 1869, ja se on '
+            + 'Singaporen vanhin alkuperäisessä muodossaan säilynyt '
+            + 'silta.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Cavenagh Bridge',
         },
@@ -37977,10 +37860,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Singapore Downtown - Telok Ayer Street IMG 9994.jpg',
-          selite: 'Kauppahuoneen sisäänkäynti Telok Ayer -kadulla: '
-            + 'katetun käytävän takana on tummanpunainen ovipari, '
-            + 'yläpuolella kullattu kilpi ja seinän alaosassa '
-            + 'kukkakuvioiset laatat.',
+          selite: 'Raffles määräsi kauppahuoneiden kadunpuoleiselle '
+            + 'sivulle yhtenäisen katetun käytävän, joka tunnetaan '
+            + 'viiden jalan tienä.',
           lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Singapore on kaupunkivaltio: koko maa on yhden '
@@ -38021,9 +37903,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jo 1975, ensimmäisenä maailmassa.',
               kuva: {
                 tiedosto: 'Empty Singapore-Malaysia Causeway 2.jpg',
-                selite: 'Johorin pengertie iltavalaistuksessa: suora '
-                  + 'penger kulkee salmen yli valonauhana, ja sen '
-                  + 'toisessa päässä hohtaa Johor Bahrun kaupunki.',
+                selite: 'Johorin pengertie on toinen Singaporen kahdesta '
+                  + 'maayhteydestä Malesiaan; toinen on Tuasin yhteys '
+                  + 'lännessä.',
                 lahde: 'Lionel Lim, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -38044,9 +37926,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'täytöillä yhteen, kuten Jurong.',
               kuva: {
                 tiedosto: 'Bukit Timah Hill.jpg',
-                selite: 'Bukit Timahin kukkula kaukaa: metsäinen '
-                  + 'harjanne kohoaa loivana matalan kaupungin yllä, '
-                  + 'ja laella seisoo ristikkomasto.',
+                selite: 'Bukit Timahin kukkula on Singaporen korkein '
+                  + 'luonnollinen kohta, 163,6 metriä.',
                 lahde: 'Mx. Granger, Wikimedia Commons (CC0)',
               },
             },
@@ -38068,9 +37949,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'suistosta tuli makean veden allas.',
               kuva: {
                 tiedosto: 'Marina Barrage Dam 11Jul2026 01.jpg',
-                selite: 'Marina Barrage sulkee joen suun matalana '
-                  + 'patoketjuna, ja sen takana salmen ulapalla on '
-                  + 'rivi ankkurissa odottavia rahtilaivoja.',
+                selite: 'Singaporen vesi tulee neljästä lähteestä, joita '
+                  + 'kutsutaan neljäksi kansalliseksi hanaksi.',
                 lahde: 'RFNirmala, Wikimedia Commons (CC BY 4.0)',
               },
             },
@@ -38153,10 +38033,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennustavan: tulipalojen varalta muurattua kiveä ja '
             + 'tiilikatto, ja kadun puolelle yhtenäinen katettu '
             + 'käytävä, joka tunnetaan viiden jalan tienä.',
-          selite: 'Vuoden 1825 käsin väritetyssä kartassa näkyvät '
-            + 'joen suun ruutukaava, Kampong Glam oikeassa '
-            + 'ylänurkassa ja kiinalaisten kampong joen '
-            + 'lounaispuolella.',
+          selite: 'Vuoden 1822 Jackson-suunnitelma jakoi kaupungin '
+            + 'alueisiin: eurooppalaisten kaupunginosa, kiinalaisten '
+            + 'alue joen lounaispuolella sekä arabien ja bugien '
+            + 'kampongit.',
           lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
           wiki: 'Chinatown, Singapore',
         },
@@ -38177,9 +38057,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kattotiilistä oli laivojen painolastia. Myös '
             + 'Chulia-kadun intialaisyhteisö auttoi työssä. Temppeli '
             + 'valmistui 1842.',
-          selite: 'Temppelin pääovet kadulta: kullatut '
-            + 'lohikäärmeovet, niiden molemmin puolin maalatut '
-            + 'ovenvartijat ja edessä vaaleanvihreä valurauta-aita.',
+          selite: 'Thian Hock Keng rakennettiin uudelleen vuodesta 1839 '
+            + 'kerätyin varoin ja valmistui 1842.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Thian Hock Keng Temple',
         },
@@ -38199,10 +38078,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'temppeli. Nykyisen tiilirakennuksen vanhimmat osat '
             + 'ovat vuodelta 1843, ja viereiset kadut saivat sen '
             + 'mukaan nimensä Pagoda Street ja Temple Street.',
-          selite: 'Sri Mariamman ylhäältä katsottuna: matalan '
-            + 'muurin päällä on rivi valkoisia Nandi-härkiä, pihan '
-            + 'takana vihreät kupolit ja oikealla porttitorni '
-            + 'Chinatownin kattojen keskellä.',
+          selite: 'Sri Mariammanin temppelin mukaan on nimetty viereiset '
+            + 'kadut Pagoda Street ja Temple Street.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Sri Mariamman Temple, Singapore',
         },
@@ -38222,9 +38099,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'päärakennus valmistui 1899, ja siihen tulivat '
             + 'sähkövalot ja sähköiset kattotuulettimet — '
             + 'ensimmäisenä hotellina koko alueella.',
-          selite: 'Hotellin valkoinen julkisivu keskeltä: '
-            + 'kolmikerroksinen pylväsrivi, säleikköikkunat ja '
-            + 'ylimmällä listalla kohokirjaimin nimi Raffles Hotel.',
+          selite: 'Sarkies-veljekset avasivat kymmenen huoneen Raffles '
+            + 'Hotelin 1. joulukuuta 1887 ja nimesivät sen Stamford '
+            + 'Rafflesin mukaan.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Raffles Hotel',
         },
@@ -38320,6 +38197,8 @@ export const KULTTUURI_KATEGORIAT = {
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   samarkand: [
     {
       id: 'kaupunki',
@@ -38331,23 +38210,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Самарканд. Площадь-Регистан.jpg',
-          selite: 'Registanin kolme koulurakennusta valaistuina '
-            + 'sinihetkellä: keskellä matalampi Tillakari kupoleineen ja '
-            + 'sivuilla Ulugbekin ja Sherdorin korkeat portaalit.',
+          selite: 'Registanin aukiota reunustaa kolme medresaa: '
+            + 'Ulugbekin vuosilta 1417–1420, Sherdorin 1619–1636 ja '
+            + 'Tillakarin 1646–1660.',
           lahde: 'Kraftabbas, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Samarkand, Bibi-Khanym.jpg',
-          selite: 'Bibi-Khanymin moskeija kadun takaa: Timurin 1400-luvun alussa '
-            + 'rakennuttaman moskeijan portaalit ja siniturkoosit kupolit kohoavat '
-            + 'matalien talojen yllä.',
+          selite: 'Timur käynnisti Bibi-Khanymin moskeijan rakentamisen '
+            + 'vuonna 1399 Intian-sotaretkeltään palattuaan.',
           lahde: 'MiroJP, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Shah-i-Zinda, Samarkand (Shohi-Zinda majmuasi, Шахи Зинда).jpg',
-          selite: 'Shah-i-Zindan hautarakennuksia rinteessä: vasemmalla '
-            + 'kaakelittomaksi jäänyt tiilikupoli, oikealla '
-            + 'siniturkoosilla kuviolla peitetty.',
+          selite: 'Shah-i-Zinda on rinteeseen rakennettu '
+            + 'hautarakennusten ryhmä vanhan kaupungin pohjoislaidalla.',
           lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -38361,23 +38238,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Western iwan of Bibi-Khanym Mosque 01.jpg',
-          selite: 'Bibi-Khanymin läntinen iwan: kaakelikuvioitu seinä, '
-            + 'sen takana turkoosi kupoli ja alaosassa muuria, josta '
-            + 'tiili on murentunut pois.',
+          selite: 'Bibi-Khanymin korjaukset lopetettiin 1500-luvun '
+            + 'lopulla, ja kaupunkilaiset kantoivat raunioista tiiltä ja '
+            + 'marmoria omiin rakennuksiinsa.',
           lahde: 'Bgag, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Ulugh Beg\'s Astronomic Observatory.jpg',
-          selite: 'Ulugbekin observatorion maanalainen kaivanto, jonka '
-            + 'pohjalla nousevat sekstantin marmorikiskot holvatun '
-            + 'katon alla.',
+          selite: 'Ulugbekin sekstantti oli säteeltään 40 metriä ja '
+            + 'aikansa suurin tähtitieteen mittalaite.',
           lahde: 'Igor Pinigin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Syr-dar\'inskaia oblast\'. G. Samarkand. Chast\' goroda prilegaiushchaia ploshchadi "Registan" LCCN2007682574.jpg',
-          selite: 'Vanha kaupunki vuosina 1871–1872: matalia '
-            + 'savikattoja horisonttiin asti, ja niiden takana '
-            + 'kohoavat Registanin medresat kaakelittomina raunioina.',
+          selite: 'Turkestanin albumin vedos vuosilta 1871–1872 ajoittuu '
+            + 'aikaan, jolloin Registanin medresat seisoivat '
+            + 'kaakelittomina raunioina.',
           lahde: 'Miscellaneous Items in High Demand, PPOC, Library of Congress, Wikimedia Commons (PD)',
         },
       ],
@@ -38393,9 +38269,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Registan 01.jpg',
           vuosi: '2023',
-          selite: 'Registan nykyään: vasemmalla Ulug Begin medrese, keskellä '
-            + 'Tilla-Kari ja oikealla Sir-Dor aukiolla, joka oli alun perin '
-            + 'kauppatori.',
+          selite: 'Registanin aukio oli alun perin kauppatori, ja sitä '
+            + 'reunustavat Ulug Begin, Tilla-Karin ja Sir-Dorin '
+            + 'medresat.',
           lahde: 'Bernard Gagnon, Commons (CC0)',
         },
       ],
@@ -38415,9 +38291,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'elävien olentojen kuvaamista. Tillakari oli asuntolan '
             + 'lisäksi kaupungin päämoskeija, ja sen salin sisus on '
             + 'kullattu.',
-          selite: 'Sherdorin portaalin mosaiikki: raidallinen peto '
-            + 'ajamassa valkoista kaurista takaa, selässään säteilevä '
-            + 'ihmiskasvoinen aurinko.',
+          selite: 'Sherdorin portaalin raidalliset pedot ja niiden '
+            + 'selässä säteilevä ihmiskasvoinen aurinko ovat harvinainen '
+            + 'aihe, sillä islamilainen koristetaide karttoi elävien '
+            + 'olentojen kuvaamista.',
           lahde: 'Alaexis, Wikimedia Commons (CC BY-SA 2.5)',
           wiki: 'Registan',
         },
@@ -38436,8 +38313,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valtaistuimena. Persian Nadir-shahi yritti viedä sen '
             + 'vuonna 1740, mutta kivi halkesi matkalla kahtia ja se '
             + 'palautettiin paikalleen.',
-          selite: 'Gur-e-Amirin hautakivet onyksilattialla: vaaleiden '
-            + 'marmoripaasien keskellä on Timurin tumma jadelohkare.',
+          selite: 'Timurin haudan päälle nostettiin Ulugbekin aikana '
+            + 'tummanvihreä jadelohkare, joka oli ollut ensin Kiinan '
+            + 'keisarin palatsissa ja sitten kaanikunnan valtaistuimena.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Gur-e Amir',
         },
@@ -38456,9 +38334,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Korjaukset lopetettiin 1500-luvun lopulla, ja sen '
             + 'jälkeen kaupunkilaiset kantoivat raunioista tiiltä ja '
             + 'marmoria omiin rakennuksiinsa.',
-          selite: 'Bibi-Khanymin murtunut portaalikaari 1900-luvun '
-            + 'alussa: kaaren sisällä kasvaa puita, ja alarinteessä on '
-            + 'kärryjä ja aaseja.',
+          selite: 'Bibi-Khanymin kupolista alkoi pudota tiiliä jo '
+            + 'muutaman vuoden kuluttua rakentamisesta, ja 1900-luvun '
+            + 'alussa moskeija oli raunio.',
           lahde: 'Sergei Prokudin-Gorskii, Wikimedia Commons (PD)',
           wiki: 'Bibi-Khanym Mosque',
         },
@@ -38477,9 +38355,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kupolien meloninmuotoisen uurteisuuden arvellaan '
             + 'matkivan mongolien telttoja, joissa vainajat pidettiin '
             + 'esillä ennen hautaamista.',
-          selite: 'Lasitettuja sinisiä ja turkooseja tiilenpaloja '
-            + 'ladottuna kuvioiksi tavallisen poltetun tiilen sekaan, '
-            + 'aukkoja siellä täällä.',
+          selite: 'Samarkandissa sininen tarkoitti surun väriä, pahan '
+            + 'silmän torjuntaa ja vettä, joka on näillä main '
+            + 'harvinaista.',
           lahde: 'AIDEPCUL, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Shah-i-Zinda',
         },
@@ -38487,9 +38365,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Tilya-Kori Madrasah.jpg',
-          selite: 'Tillakarin moskeijan kullattu sisäkupoli alhaalta '
-            + 'kuvattuna: keskellä säteilevä mitali, ympärillä sinistä '
-            + 'ja kultaa kehä kehältä.',
+          selite: 'Tillakari oli asuntolan lisäksi kaupungin '
+            + 'päämoskeija, ja sen salin sisus on kullattu.',
           lahde: 'WWELNUR, Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Samarkand on Uzbekistanin toiseksi suurin kaupunki, '
@@ -38531,9 +38408,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Afrosiyob-pikajunalla, joka jatkaa Buharaan.',
               kuva: {
                 tiedosto: 'Afrosiyob Express Train in Station - Samarkand - Uzbekistan (7502824436) (3).jpg',
-                selite: 'Afrosiyob-pikajunan valkoinen keula '
-                  + 'Samarkandin asemalaiturilla, takana aseman '
-                  + 'viuhkamaiset betonipilarit.',
+                selite: 'Afrosiyob-pikajuna kulkee Taškentista '
+                  + 'Samarkandin kautta Buharaan.',
                 lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -38554,9 +38430,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + '340 kilometriä.',
               kuva: {
                 tiedosto: 'ISS-37 Samarkand, Uzbekistan.jpg',
-                selite: 'Samarkand avaruusasemalta kuvattuna: harmaa '
-                  + 'kaupunki peltotilkkujen keskellä ja vasemmassa '
-                  + 'alakulmassa vaaleaa aroa.',
+                selite: 'Samarkand on Zeravšan-joen laaksossa 705 metrin '
+                  + 'korkeudessa keidas, jota ympäröivät kastellut '
+                  + 'pellot ja niiden takana kuiva aro.',
                 lahde: 'NASA, Wikimedia Commons (PD)',
               },
             },
@@ -38596,10 +38472,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Bartold ja V. Vjatkin.',
               kuva: {
                 tiedosto: 'Медресе Шир-Дор на площади Регистан в Самарканде.jpg',
-                selite: 'Vasili Vereštšaginin maalaus Sherdorin '
-                  + 'medresestä noin vuodelta 1870: julkisivun edessä '
-                  + 'on markiiseja ja kauppiaita, ja minareetit '
-                  + 'kallistuvat kumpikin omaan suuntaansa.',
+                selite: 'Vasili Vereštšagin maalasi Sherdorin medresen '
+                  + 'noin vuonna 1870, jolloin sen minareetit olivat jo '
+                  + 'kallistuneet.',
                 lahde: 'Vasily Vereshchagin, Wikimedia Commons (PD)',
               },
             },
@@ -38662,9 +38537,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muuraus- ja rappaustavat paranivat. Kaupunki seisoi '
             + 'silloin Afrasiyabin kummulla, joka on nyt paljasta '
             + 'rinnettä vanhan kaupungin pohjoispuolella.',
-          selite: 'Afrasiyabin kumpu kaupungin pohjoislaidalla: '
-            + 'tasalakinen harjanne kuivan rinteen takana, oikeassa '
-            + 'laidassa nykykaupungin taloja.',
+          selite: 'Samarkand seisoi antiikin aikana Afrasiyabin '
+            + 'kummulla, joka on nykyään paljasta rinnettä vanhan '
+            + 'kaupungin pohjoispuolella.',
           lahde: 'Bruce Allardice, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Afrasiyab (Samarkand)',
         },
@@ -38684,9 +38559,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'noin 150 000. Kastilian lähettiläs Ruy González de '
             + 'Clavijo vieraili 1404 ja kutsui Timurin moskeijaa '
             + 'jaloimmaksi näkemäkseen.',
-          selite: 'Bihzadin 1400-luvun kuvitus Samarkandin suuren '
-            + 'moskeijan rakentamisesta: muurarit ovat telineillä ja '
-            + 'kantajat tuovat marmorilaattoja työmaalle.',
+          selite: 'Bihzadin 1400-luvun kuvitus esittää Samarkandin '
+            + 'suuren moskeijan rakennustyömaata.',
           lahde: 'Bihzād, Wikimedia Commons (PD)',
           wiki: 'Samarkand',
         },
@@ -38704,9 +38578,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ruohoa. Laaja entisöinti alkoi vasta neuvostoaikana, '
             + 'Gur-e-Amirissa toisen maailmansodan jälkeen ja '
             + 'Bibi-Khanymissa vuonna 1974.',
-          selite: 'Vasili Vereštšaginin maalaus Shah-i-Zindasta noin '
-            + 'vuodelta 1870: hautarakennukset seisovat paljaalla '
-            + 'rinteellä, ja kaakelia on jäljellä vain laikkuina.',
+          selite: '1800-luvun matkaaja ei nähnyt Samarkandissa kiiltäviä '
+            + 'kupoleita: kaakeli oli pudonnut laajoilta pinnoilta ja '
+            + 'rakennusten välissä kasvoi ruohoa.',
           lahde: 'Vasily Vereshchagin, Wikimedia Commons (PD)',
           wiki: 'Samarkand',
         },
@@ -38726,9 +38600,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puolensa, kunnes pääjoukko palasi. Sotaretken tuloksena '
             + 'Buharan emiraatista tuli Venäjän suojeluksessa oleva '
             + 'alusmaa.',
-          selite: 'Venäläinen sotakartta vuodelta 1868 omine '
-            + 'nimikilpineen: Zeravšan-joen haarat, kylät punaisella '
-            + 'ja keskellä Tšupan-atan kukkula.',
+          selite: 'Venäjän joukot ottivat Samarkandin linnoituksen '
+            + 'toukokuussa 1868 Konstantin von Kaufmannin johdolla.',
           lahde: 'Mikhail Afrikanovich Terentyev, Wikimedia Commons (PD)',
           wiki: 'Siege of Samarkand (1868)',
         },
@@ -38806,6 +38679,8 @@ export const KULTTUURI_KATEGORIAT = {
    * muurista on kolme kuvaa eri kohdista (ulkoa, harjalta,
    * vallihaudan yli) ja Kellotornista kaksi eri vuorokaudenaikaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   xian: [
     {
       id: 'kaupunki',
@@ -38816,22 +38691,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'City wall of Xi\'an 51550-Xian (27959363326).jpg',
-          selite: 'Kaupunginmuuri ulkoapäin: kaksi puista porttitornia '
-            + 'nousee harmaan tiiliverhouksen päältä, ja niiden juurella '
-            + 'kasvaa tiheä puistokaista.',
+          selite: 'Xi’anin kaupunginmuuri on kaksitoista metriä korkea '
+            + 'ja juureltaan viidestätoista kahdeksaantoista metriin '
+            + 'leveä.',
           lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: '51714-Terracota-Army.jpg',
-          selite: 'Terrakotta-armeijan ykköskuoppa katetun hallin alla: '
-            + 'sotilasrivit seisovat maavallien väliin kaivetuissa '
-            + 'käytävissä niin kauas kuin halli jatkuu.',
+          selite: 'Terrakotta-armeijan kolmessa kuopassa arvioidaan '
+            + 'olevan yli 8 000 sotilasta, 130 vaunua ja 520 '
+            + 'vaunuhevosta.',
           lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Bell Tower during Sunset in Xi\'an, Jun 21 2023.jpg',
-          selite: 'Kellotorni auringonlaskussa keskellä liikenneympyrää, '
-            + 'ja taustalla vasemmalla erottuu Rumpitornin siluetti.',
+          selite: 'Kellotorni siirrettiin vuonna 1582 kilometrin verran '
+            + 'idemmäksi neljän pääkadun risteykseen.',
           lahde: 'A Chinese ID, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -38870,23 +38745,22 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Xi\'an Drum Tower (9912489945).jpg',
-          selite: 'Rumpitorni alhaalta kuvattuna: kolme räystäskerrosta '
-            + 'nousee muuratun jalustan päältä, ja ylimmän päädyn '
-            + 'keskellä on kullattu koriste.',
+          selite: 'Rumpitorni valmistui 1380, neljä vuotta ennen '
+            + 'Kellotornia, ja rummut ilmoittivat kaupungille illan '
+            + 'tulon.',
           lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Giant Wild Goose Pagoda, Xi\'an, May, 2018-1.jpg',
-          selite: 'Suuri villihanhipagoda alhaalta: seitsemän '
-            + 'tiilikerrosta kapenee ylöspäin, ja jokaisen kerroksen '
-            + 'keskellä on kaareva ikkuna-aukko.',
+          selite: 'Villihanhipagodan alkuperäinen viisikerroksinen torni '
+            + 'purettiin, ja tilalle nousi nykyinen seitsenkerroksinen.',
           lahde: 'Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Xi\'an city walls (63076).jpg',
-          selite: 'Muurin harja kulkee kivilaatoituksena porttitornin '
-            + 'ohi, ja vallihaudan takaa nousee nykyinen kaupunki '
-            + 'sumuun.',
+          selite: 'Muurin harjalla kulkee kävelytie, jonka kierrokseen '
+            + 'menee neljä tuntia, ja ulkopuolella kiertää '
+            + 'kahdeksantoista metriä leveä vallihauta.',
           lahde: 'Ideophagous, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -38924,9 +38798,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'merkki: pelloilta oli vuosisatojen ajan noussut '
             + 'savenpalasia ja tiilenkappaleita, mutta kukaan ei ollut '
             + 'yhdistänyt niitä hautaan.',
-          selite: 'Kaksi savisotilasta kuopan reunalla: haarniskan levyt '
-            + 'ja niittirivit erottuvat tarkasti, ja etummaisella on '
-            + 'omat kasvot.',
+          selite: 'Terrakotta-armeijan rivistöt katsovat itään, sinne '
+            + 'missä keisarin valloittamat valtiot olivat.',
           lahde: 'Gary Lee Todd, Ph.D., Wikimedia Commons (CC0)',
           wiki: 'Terracotta Army',
         },
@@ -38946,8 +38819,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ulkopuolella kiertää kahdeksantoista metriä leveä '
             + 'vallihauta. Muuri oli ensin survottua maata; '
             + 'siniset tiilet ladottiin päälle 1568.',
-          selite: 'Vallihauta kaartaa muurin kulmatornin ohi, ja '
-            + 'vastarannalla nousee nykyisen kaupungin tornitalorivi.',
+          selite: 'Xi’anin muuri oli ensin survottua maata, ja siniset '
+            + 'tiilet ladottiin sen päälle vuonna 1568.',
           lahde: 'H2v5o68z, Wikimedia Commons (CC0)',
           wiki: 'Fortifications of Xi\'an',
         },
@@ -38967,9 +38840,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tornin vanha kellokaan: vuonna 711 valettu Jingyun-kello '
             + 'vietiin 1953 Steelametsän museoon, jossa se on yhä '
             + 'esillä.',
-          selite: 'Jingyun-kellon kylkeen on valettu kirjoituspaneeli, '
-            + 'jonka ympärillä kiertää pronssiin muotoiltuja '
-            + 'lohikäärmeitä ja pilviä.',
+          selite: 'Vuonna 711 valettu Jingyun-kello vietiin 1953 '
+            + 'Steelametsän museoon, jossa se on yhä esillä.',
           lahde: 'Kcx36, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Bell Tower of Xi\'an',
         },
@@ -38989,9 +38861,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asetetaan pohjois–etelä-akselille, mutta täällä '
             + 'sisäänkäynti on idässä ja sali lännessä — siihen suuntaan, '
             + 'jossa Mekka on.',
-          selite: 'Rukoussalin julkisivu turkoosin tiilikaton alla: viisi '
-            + 'ovea, kaiverretut puupaneelit ja räystään alla rivi '
-            + 'kultakirjaimisia kilpiä.',
+          selite: 'Xi’anin Suuri moskeija perustettiin Tang-kaudella '
+            + 'noin vuonna 742, ja nykyinen rakennus on pääosin vuodelta '
+            + '1392.',
           lahde: '沈澄心, Wikimedia Commons (CC0)',
           wiki: 'Great Mosque of Xi\'an',
         },
@@ -38999,9 +38871,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Qin Terracotta Army, Pit 1 03.jpg',
-          selite: 'Yksi savisotilas lähikuvassa kaivannon varjossa: '
-            + 'panssarilevyt, kaulahuivi ja nyrkkiin puristettu käsi, '
-            + 'joka on aikanaan pitänyt oikeaa asetta.',
+          selite: 'Terrakotta-armeija löytyi 29. maaliskuuta 1974, kun '
+            + 'Yang Zhifa veljineen kaivoi kaivoa Qin Shi Huangin '
+            + 'hautakummun lähellä.',
           lahde: 'Gary Lee Todd, Ph.D., Wikimedia Commons (CC0)',
         },
         kappale: 'Xi’an on Shaanxin maakunnan pääkaupunki ja Luoteis-Kiinan '
@@ -39047,9 +38919,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaupunkipyörää.',
               kuva: {
                 tiedosto: 'Train of Line 6, Xi\'an Metro (May 28, 2022).jpg',
-                selite: 'Metrojuna saapuu asemalle tunnelista: keula on '
-                  + 'liikkeessä epätarkka, ja laiturin reunassa kulkee '
-                  + 'keltamusta varoitusraita.',
+                selite: 'Xi’anin metron ensimmäinen linja avattiin 16. '
+                  + 'syyskuuta 2011, ja sen asemat osuvat lähes kaikkiin '
+                  + 'kaupungin kohteisiin.',
                 lahde: 'Bob Wehn, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -39071,9 +38943,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lähtien seutua on kutsuttu juuri sillä nimellä.',
               kuva: {
                 tiedosto: 'Part of the view on Qinling mountains.jpg',
-                selite: 'Qinling-vuoriston harjanteita kerroksittain '
-                  + 'utuun asti, etualalla ruohoinen rinne ja '
-                  + 'pensaikkoa.',
+                selite: 'Xi’anin eteläpuolella nousee Qinling-vuoristo, '
+                  + 'ja kaupunki itse on Guanzhongin tasangolla 405 '
+                  + 'metrin korkeudessa.',
                 lahde: 'Charlie439753, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -39094,9 +38966,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tarjoillaan tulisen paprikan kera.',
               kuva: {
                 tiedosto: 'Yangrou Paomo.JPG',
-                selite: 'Kuviollisessa kulhossa höyryää lammaskeitto, '
-                  + 'jossa uivat leivänmurut, lasinuudelit ja punainen '
-                  + 'chilitahnanokare.',
+                selite: 'Yangrou paomo on lammaskeitto, johon '
+                  + 'murennetaan litteää leipää.',
                 lahde: 'Danielinblue, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -39116,9 +38987,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'virallinen nimi vaihtui Jingzhaosta Xi’aniksi.',
               kuva: {
                 tiedosto: 'Ancient Chang\'an City Model (9923627634).jpg',
-                selite: 'Pienoismalli Tang-kauden Chang’anista: '
-                  + 'suorakulmaiset korttelit jatkuvat riveinä leveiden '
-                  + 'katujen molemmin puolin niin kauas kuin valo yltää.',
+                selite: 'Tang-kauden Chang’anin ulkokaupungissa oli noin '
+                  + 'satakymmenen muurin ympäröimää korttelia ja kuusi '
+                  + 'pääkatua.',
                 lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
               },
             },
@@ -39184,9 +39055,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'He vastasi, että juuri loisto oli tarpeen kilpailijoiden '
             + 'vaientamiseksi. Palatsi rakennettiin harjanteen '
             + 'korkeimmalle kohdalle, ja sitä käytti seitsemän dynastiaa.',
-          selite: 'Qing-kauden puupiirros kahdesta Han-palatsista: '
-            + 'Weiyang vasemmalla ja Changle oikealla, kummankin '
-            + 'ympärillä oma muuri portteineen.',
+          selite: 'Weiyang ja Changle olivat Han-kauden Chang’anin kaksi '
+            + 'palatsia, ja Weiyang on laajin maan päälle koskaan '
+            + 'rakennettu palatsi.',
           lahde: 'Bi Yuan (1730–1797), Wikimedia Commons (PD)',
           wiki: 'Chang\'an',
         },
@@ -39207,9 +39078,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'eteläportilta hallintokaupunkiin sataviisikymmentä. '
             + 'Vuonna 740 hovi määräsi kaduille istutettavaksi '
             + 'hedelmäpuita.',
-          selite: 'Kaavakuva Sui-kauden Daxingista: keltaiset ruudut ovat '
-            + 'muurattuja kortteleita ja oranssit palatsi- ja '
-            + 'hallintoalueita.',
+          selite: 'Sui-keisari Wen perusti Daxingin vanhan '
+            + 'Han-Chang’anin raunioiden kaakkoispuolelle, ja '
+            + 'Tang-dynastia palautti nimen Chang’aniksi vuonna 618.',
           lahde: 'Jason22, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Chang\'an',
         },
@@ -39228,9 +39099,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaksi suurta toria, ja läntisessä oli persialainen basaari '
             + 'viinikauppoineen, teehuoneineen ja leipureineen. Samaa '
             + 'tietä levisivät myös paperi ja ruuti.',
-          selite: 'Tang-kauden kolmivärikeramiikkaa: kamelin selkään on '
-            + 'nostettu soittajaryhmä, ja etummainen näppäilee '
-            + 'kaulakkaista soitinta.',
+          selite: 'Silkkitien pohjoinen reitti alkoi Chang’anista, ja '
+            + 'karavaanit toivat sinne taateleita, sahramia ja '
+            + 'lasipulloja.',
           lahde: 'Gary Todd, Wikimedia Commons (CC0)',
           wiki: 'Silk Road',
         },
@@ -39248,9 +39119,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'purettiin ja tilalle nousi seitsenkerroksinen. Sisäseiniin '
             + 'kaiverrettiin Buddha-kuvia, joiden tekijäksi mainitaan '
             + 'aikansa kuuluisin maalari Yan Liben.',
-          selite: 'Da Ci’enin temppelin salissa istuu kullattu '
-            + 'Buddha-veistos lootusjalustalla, ja suitsukesavu pehmentää '
-            + 'ympärillä olevat puupaneelit.',
+          selite: 'Munkki Xuanzang perusti Chang’aniin käännöskoulun ja '
+            + 'valvoi vuonna 652 pagodin rakentamista Da Ci’enin '
+            + 'temppeliin.',
           lahde: 'Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Giant Wild Goose Pagoda',
         },
@@ -39327,6 +39198,8 @@ export const KULTTUURI_KATEGORIAT = {
    * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
    * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   varanasi: [
     {
       id: 'kaupunki',
@@ -39338,23 +39211,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Panorama of Ghat and Ganges (Ganga) River - Varanasi - Uttar Pradesh - India (12480230823).jpg',
-          selite: 'Leveä panoraama jokirannasta: soutuveneet ovat '
-            + 'kiinni portaiden edustalla, lehmä makaa kivetyksellä '
-            + 'ja vastarannalla häämöttää hiekkasärkkä.',
+          selite: 'Varanasissa laskeutuu Gangesin vasempaan rantaan '
+            + 'ainakin 84 kiviportaikkoa eli ghatia.',
           lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Varanasi 127 (34175947074).jpg',
-          selite: 'Rantatörmän julkisivu joelta katsottuna: kerroksittain '
-            + 'taloja ja temppelien torneja, ja kaukana horisontissa '
-            + 'kaartuu ristikkosilta.',
+          selite: 'Suuren osan Varanasin rantaportaista rakennuttivat '
+            + '1700- ja 1800-luvuilla Maratha-suvut, ja moni ghat on yhä '
+            + 'yksityisomistuksessa.',
           lahde: 'juggadery, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Banarasi Sari on viewing wooden blocks 01.jpg',
-          selite: 'Kymmenkunta punaista ja kultakuvioista Banarasi-saria '
-            + 'on kääritty puulevyille ja nostettu näytille tiiliseinää '
-            + 'vasten.',
+          selite: 'Banarasi-sarit ovat kulta- ja hopealangalla kudottuja '
+            + 'brokadeja, ja nimi on ollut alkuperäsuojattu vuodesta '
+            + '2009.',
           lahde: 'Suyash Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -39366,22 +39238,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Dashashwamedh Ghat in Varanasi, Uttar Pradesh.jpg',
-          selite: 'Dashashwamedh-ghat joelta päivänvalossa: punainen '
-            + 'rakennus, temppelin torni, rivi oransseja lippuja ja '
-            + 'kymmeniä veneitä rannassa.',
+          selite: 'Dashashwamedh-ghatilla pidetään iltaisin Ganga aarti, '
+            + 'noin kolme varttia kestävä tulen palvontameno.',
           lahde: 'Prashant Kharote, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Gali, Varanasi (32987699705).jpg',
-          selite: 'Vanhankaupungin kivetty gali aamuhämärässä: kuja on '
-            + 'kapea, koirat makaavat reunoilla ja etäällä kävelee yksi '
-            + 'ihminen selin.',
+          selite: 'Varanasin vanhankaupungin kujia kutsutaan galeiksi, '
+            + 'eivätkä ne ole ajoneuvoille tarpeeksi leveitä.',
           lahde: 'Eddy Milfort from Sydney, Australia, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Dhamek Stupa, Sarnath and surroundings - IRCTC 2017 (100).jpg',
-          selite: 'Sarnathin Dhamek-stupa iltavalossa nurmikentän takana, '
-            + 'reunalla puita ja rivi rukousviirejä.',
+          selite: 'Dhamek-stupa merkitsee Sarnathissa paikkaa, jossa '
+            + 'Buddha piti ensimmäisen opetuksensa viidelle '
+            + 'oppilaalleen.',
           lahde: 'Vinayaraj, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -39397,9 +39268,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Varanasi, India, Varanasi eternal, Panorama.jpg',
           vuosi: '2007',
-          selite: 'Samat ghatit tänään katolta kuvattuna: talot ja temppelit '
-            + 'laskeutuvat yhä portaina veteen, ja vastaranta on edelleen tyhjää '
-            + 'hiekkaa.',
+          selite: 'Varanasin ghatit laskeutuvat yhä portaina veteen, ja '
+            + 'Gangesin vastaranta on edelleen tyhjää hiekkaa.',
           lahde: 'Vyacheslav Argenberg, Commons (CC BY 4.0)',
         },
       ],
@@ -39419,9 +39289,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pidetään Ganga aarti, noin kolme varttia kestävä tulen '
             + 'palvontameno, ja aamuvenematka portaiden ohi on ollut '
             + 'matkailijan vakio-ohjelmaa jo pitkään.',
-          selite: 'Vuoden 1890 kaiverrus kylpyghatista: portaat '
-            + 'täyttyvät varjoista ja päivänvarjoista, ja niiden takana '
-            + 'kohoaa temppelin korkea torni.',
+          selite: 'Varanasin ghateista suurin osa on kylpypaikkoja, '
+            + 'joilla pyhiinvaeltajat tekevät päivittäiset rituaalinsa.',
           lahde: 'The British Library, Wikimedia Commons (PD)',
           wiki: 'Varanasi',
         },
@@ -39439,9 +39308,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'silkkikutojia muutti Banarasiin. Yhden sarin kutominen '
             + 'kestää viidestätoista päivästä puoleen vuoteen kuvion '
             + 'mukaan, ja vuodesta 2009 nimi on ollut alkuperäsuojattu.',
-          selite: 'Lähikuva purppuranvärisen brokadin kulmasta, jossa '
-            + 'kultalangalla on kudottu paisleykuvio ja tiheät '
-            + 'kukkareunukset.',
+          selite: 'Yhden Banarasi-sarin kutominen kestää viidestätoista '
+            + 'päivästä puoleen vuoteen kuvion mukaan.',
           lahde: 'Anilbhardwajnoida, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Varanasi',
         },
@@ -39459,9 +39327,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'silti ainutlaatuinen: päiväntasaajan tasoon asetettu '
             + 'aurinkokello, joka toimii yhä ja jonka lukemat yksi '
             + 'ihminen ehtii seurata ja kirjata.',
-          selite: 'Observatorion suuri aurinkokello: kaksi kaarevaa '
-            + 'kivikaidetta reunustaa jyrkkiä portaita, jotka nousevat '
-            + 'suoraan taivasta vasten.',
+          selite: 'Man Mandir -ghatin tähtitornin rakennutti vuonna 1737 '
+            + 'mogulihallitsija Muhammad Shah kalenterin virheiden '
+            + 'löytämiseksi.',
           lahde: 'Nandanupadhyay, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Varanasi',
         },
@@ -39479,9 +39347,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'putosi juuri tähän kohtaan: mani-karnika tarkoittaa '
             + 'korvakorun helmeä. Laiturin viereiset korotetut alustat '
             + 'on varattu kuolinvuosipäivien muistorituaaleille.',
-          selite: 'Manikarnika-ghat joelta kaukaa katsottuna: '
-            + 'rantatörmän talot, portaat ja vinoon vajonnut '
-            + 'kivitemppeli veden rajassa.',
+          selite: 'Manikarnikan nykyinen kivinen rantalaituri '
+            + 'rakennettiin vuonna 1302, ja ghatia mainitaan jo '
+            + 'Gupta-kauden kirjoituksissa.',
           lahde: 'Aleksandr Zykov from Russia, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Varanasi',
         },
@@ -39489,8 +39357,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'India - Varanasi boats - 1292.jpg',
-          selite: 'Aurinko nousee usvan takaa Gangesin ylle, ja '
-            + 'etualalla soutuveneet odottavat kiinnitettyinä rantaan.',
+          selite: 'Aamuvenematka Varanasin ghattien ohi on ollut '
+            + 'matkailijan vakio-ohjelmaa jo pitkään.',
           lahde: 'Jorge Royan, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Varanasi on Uttar Pradeshin kaakkoiskulmassa Gangesin '
@@ -39526,9 +39394,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuljetaan jalan tai veneellä.',
               kuva: {
                 tiedosto: 'Varanasi 252c tree shrine (33664791913).jpg',
-                selite: 'Kujan mutkassa on kullattu pikku pyhäkkö '
-                  + 'kellonsa kanssa, ja sen takaa nousee valtavan '
-                  + 'vanhan puun kaksihaarainen runko.',
+                selite: 'Varanasissa arvioidaan olevan 23 000 temppeliä, '
+                  + 'kun niitä 1830-luvun laskennassa oli tuhat.',
                 lahde: 'juggadery, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -39563,8 +39430,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'puolestaan kypsyy kesällä juuri ennen monsuunia.',
               kuva: {
                 tiedosto: 'Langra Mango farm, Mathurapur, Bhagalpur Bihar.JPG',
-                selite: 'Langra-mangopuun oksat notkuvat vaaleanvihreitä '
-                  + 'hedelmiä tiheän lehvästön keskellä.',
+                selite: 'Langra-mango kypsyy Varanasin seudulla kesällä '
+                  + 'juuri ennen monsuunia.',
                 lahde: 'Abhishek Priyadarshi, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -39587,9 +39454,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'shehnai-soittaja Bismillah Khan.',
               kuva: {
                 tiedosto: 'Banaras Hindu University, Varanasi.jpg',
-                selite: 'Banaras Hindu Universityn keltainen '
-                  + 'porttirakennus palmujen välissä, edustalla leveä '
-                  + 'katu ja muutama riksa.',
+                selite: 'Banaras Hindu University perustettiin vuonna '
+                  + '1916, ja se oli Intian ensimmäinen nykyaikainen '
+                  + 'kampusyliopisto.',
                 lahde: 'Sundrampixel, Wikimedia Commons (CC0)',
               },
             },
@@ -39649,9 +39516,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pääty on nykyään Intian valtion tunnus. Kiinalainen munkki '
             + 'Xuanzang laski täällä 600-luvulla satoja pieniä '
             + 'pyhäkköjä ja puolentoistatuhannen munkin yhteisön.',
-          selite: 'Ashokan pylvään leijonapääty lähikuvassa: neljä '
-            + 'kiillotetusta hiekkakivestä veistettyä leijonaa selät '
-            + 'vastakkain, alla pyörä- ja eläinkuvioinen jalusta.',
+          selite: 'Keisari Ashokan noin 250 eaa. pystyttämän pylvään '
+            + 'neljän leijonan pääty on nykyään Intian valtion tunnus.',
           lahde: 'Chrisi1964, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Sarnath',
         },
@@ -39670,9 +39536,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jatkoi 1851–1852, ja F. O. Oertelin ryhmä nosti '
             + 'maaliskuussa 1905 esiin Ashokan pylvään alaosan ja sen '
             + 'leijonapäädyn.',
-          selite: 'Jagat Singhin purkaman stupan tiiliraunio, jonka '
-            + 'tasatulle laelle on jätetty pieni kullattu '
-            + 'Buddha-hahmo ja kukkia.',
+          selite: 'Jagat Singhin miehet purkivat tammikuussa 1794 '
+            + 'Sarnathin stupan tiilien takia ja löysivät sen '
+            + 'reliikkikammiosta hiekkakivilippaan.',
           lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Sarnath',
         },
@@ -39691,9 +39557,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'iltapäivällä ja merkitsi kellonajan akvarellinsa '
             + 'alalaitaan. Kaupungin oma kunnallishallinto oli '
             + 'aloittanut kuusi vuotta aiemmin.',
-          selite: 'Edward Learin akvarelli jokirannasta: temppelien '
-            + 'tornit nousevat vaalean rantatörmän päälle, ja '
-            + 'alalaitaan on kirjoitettu käsin päiväys ja kellonaika.',
+          selite: 'Edward Lear istui Varanasin jokirannassa 14. '
+            + 'joulukuuta 1873 ja merkitsi kellonajan akvarellinsa '
+            + 'alalaitaan.',
           lahde: 'Edward Lear, Wikimedia Commons (PD)',
           wiki: 'Varanasi',
         },
@@ -39712,9 +39578,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Ruhtinas käynnisti 1800-luvulla Ramnagarin '
             + 'Ramlila-perinteen, ja kuukauden mittaisen näytelmäsarjan '
             + 'avajaiskulkueen kärjessä hän ratsastaa yhä norsulla.',
-          selite: 'Ramnagarin linnoitus joen toiselta rannalta: pitkä '
-            + 'hiekkakivinen muuri ja sen päällä palatsin siivet '
-            + 'heijastuvat tyyneen veteen.',
+          selite: 'Ramnagarin linnoituksen rakennutti vuonna 1750 Kashi '
+            + 'Naresh Balwant Singh vaaleasta chunar-hiekkakivestä.',
           lahde: 'Paramanu Sarkar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Varanasi',
         },
@@ -40333,6 +40198,8 @@ export const KULTTUURI_KATEGORIAT = {
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   ulanbator: [
     {
       id: 'kaupunki',
@@ -40343,24 +40210,23 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Ulaanbaatar, Mongolia (35483549626).jpg',
-          selite: 'Choijin Laman temppelialueen matalat katot ja valkoinen '
-            + 'muuri jäävät keskustan lasitornien eteen kuin oma '
-            + 'saarekkeensa.',
+          selite: 'Choijin Laman temppeli on muutaman sadan metrin '
+            + 'päässä Sükhbaatarin aukiosta keskellä nykykaupunkia.',
           lahde: 'Christopher Michel from San Francisco, USA, '
             + 'Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'UBandGerDistrict.jpg',
-          selite: 'Tuul-joen laakso ylhäältä: etualalla uusia kerrostaloja '
-            + 'joen rannassa ja takana rinteet, joille jurtta-alue nousee '
-            + 'vuorten juurelle asti.',
+          selite: 'Kaksi kolmasosaa Ulan Batorin asukkaista asuu '
+            + 'jurtta-alueilla, jotka jatkuvat rinteille vuorten '
+            + 'juurelle asti.',
           lahde: 'Ulaanbaatour, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gandantegchinlen Monastery - Gandan - Ulan Bator Ulaanbaatar Mongolia (6249147762).jpg',
-          selite: 'Gandanin luostarin korkein rakennus, Megzed Janraisegin '
-            + 'temppeli, nousee valkoisena ja vihreäkattoisena tyhjän '
-            + 'betonipihan takaa.',
+          selite: 'Gandanin luostari on runsaan kilometrin luoteessa '
+            + 'Sükhbaatarin aukiolta, ja sen korkein rakennus on Megzed '
+            + 'Janraisegin temppeli.',
           lahde: 'David Berkowitz from New York, NY, USA, '
             + 'Wikimedia Commons (CC BY 2.0)',
         },
@@ -40373,15 +40239,15 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Sükhbaatar Square.jpg',
-          selite: 'Sükhbaatarin aukio on niin laaja, että sen yli kulkeva '
-            + 'ihminen näkyy vain pisteenä lasitornien ja pylväikköjen '
-            + 'välissä.',
+          selite: 'Sükhbaatarin aukio on Ulan Batorin hallinnollinen '
+            + 'keskus, ja sen eteläreunaa kulkee kaupungin pääkatu '
+            + 'Rauhankatu.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Ulaanbaatar skyline (2536894811).jpg',
-          selite: 'Neuvostoajan elementtitaloja rivissä, ja niiden takana '
-            + 'kaupunki päättyy vuorenrinteisiin.',
+          selite: 'Suurin osa Ulan Batorin nykyisestä ytimestä '
+            + 'rakennettiin vuosien 1960 ja 1985 välillä.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -40422,9 +40288,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuusi on temppeleitä, ja museon 8 600 esineen joukossa '
             + 'ovat valtaistuin, vuode, koristeltu juhlager ja parit '
             + 'saappaita, jotka Venäjän keisari Nikolai II lahjoitti.',
-          selite: 'Talvipalatsin kaksikerroksinen valkoinen päärakennus '
-            + 'kullattuine ikkunankehyksineen ja vihreine peltikattoineen '
-            + 'seisoo nykyisten kerrostalojen keskellä.',
+          selite: 'Talvipalatsi rakennettiin 1893–1903 Bogd Khanin '
+            + 'asunnoksi, ja se on hänen neljästä residenssistään ainoa '
+            + 'jäljellä oleva.',
           lahde: 'Chongkian, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Winter Palace of the Bogd Khan',
         },
@@ -40441,9 +40307,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'gerinsä puu- tai tiilitalolla. Kadut ovat silti usein '
             + 'sorapintaisia, eikä vesijohtoa ja viemäriä ole kaikkialle '
             + 'saatu vedettyä.',
-          selite: 'Jurtta-alue peittää kokonaisen kukkulanrinteen: '
-            + 'aidattuja pihoja ja kirjavia peltikattoja niin kauas kuin '
-            + 'sumu antaa nähdä.',
+          selite: 'Jurtta-alueen jokainen khashaa on aidattu puuaidoin, '
+            + 'ja aidan sisällä seisoo ger, kiinteä talo tai molemmat.',
           lahde: 'Zazaa Mongolia, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ger district',
         },
@@ -40459,8 +40324,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maastoajoja, joissa ratsastavat 5–13-vuotiaat lapset ja '
             + 'joissa mitataan ennen muuta hevosta. Jousella ammutaan '
             + 'pinottuja sur-sylintereitä, miehet 75 ja naiset 65 metristä.',
-          selite: 'Naadamin hevoskilpailu maalisuoralla: seitsemän hevosta '
-            + 'laukkaa aron poikki katsojarivin ohi.',
+          selite: 'Naadamin hevoskilpailut ovat 15–30 kilometrin '
+            + 'maastoajoja, joissa ratsastavat 5–13-vuotiaat lapset.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC0)',
           wiki: 'Naadam',
         },
@@ -40477,8 +40342,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'epäjatkuvan ikiroudan vyöhykkeellä: varjoisilla paikoilla '
             + 'routa ei sula kesälläkään, ja rakentaminen on siellä '
             + 'vaikeampaa kuin avoimilla tonteilla.',
-          selite: 'Matalalta paistava aurinko lämmittää lumista '
-            + 'lehtikuusikkoa, jonka takana seisoo valkea ger.',
+          selite: 'Ulan Batorin vuoden keskilämpötila on 0,2 astetta, '
+            + 'eikä yksikään toinen pääkaupunki ole kylmempi.',
           lahde: 'AwOiSoAk KaOsIoWa, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Ulaanbaatar',
         },
@@ -40486,9 +40351,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Ulan Bator.- Gandan Monastery (3).JPG',
-          selite: 'Megzed Janraisegin temppelin sisällä seisoo kullattu '
-            + 'Janraiseg-patsas kattoon asti, ja sen jalustalle on '
-            + 'aseteltu kehystettyjä kuvia.',
+          selite: 'Megzed Janraisegin kullattu patsas ulottuu Gandanin '
+            + 'luostarin korkeimmassa temppelissä kattoon asti.',
           lahde: 'PIERRE ANDRE LECLERCQ, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Ulan Bator on Mongolian ainoa suurkaupunki, ja siellä '
@@ -40532,8 +40396,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'eteläreunaa.',
               kuva: {
                 tiedosto: 'Rear view of Ulaanbaatar JEA-800 trolleybus 2-018 on route 2 in 2017.jpg',
-                selite: 'Sininen johdinauto kaartaa risteyksestä '
-                  + 'lasitornien alla, ja vieressä odottaa vihreä bussi.',
+                selite: 'Ulan Batorissa oli vuonna 2021 950 bussia ja '
+                  + 'nelisenkymmentä johdinautoa, ja matkustajia oli '
+                  + 'puoli miljoonaa päivässä.',
                 lahde: 'Gary Todd from Xinzheng, China, '
                   + 'Wikimedia Commons (CC0)',
               },
@@ -40558,9 +40423,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Zuunmod on 43 kilometrin päässä etelässä.',
               kuva: {
                 tiedosto: 'Bogd Khan Uul from Ulaanbaatar.jpg',
-                selite: 'Kerrostalorivin takaa nousevat metsäiset '
-                  + 'vuorenharjanteet, jotka sulkevat laakson '
-                  + 'eteläreunan.',
+                selite: 'Bogd Khan -vuori nousee runsaaseen '
+                  + 'kahteentuhanteen kahteensataan metriin ja sulkee '
+                  + 'laakson eteläreunan.',
                 lahde: 'Mieresch, Wikimedia Commons (CC0)',
               },
             },
@@ -40582,9 +40447,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tarkoittaa loputonta liikettä ja ulzii pitkää ikää.',
               kuva: {
                 tiedosto: 'Yurt-construction-3.JPG',
-                selite: 'Gerin runko pystytysvaiheessa: punaiset '
-                  + 'kattosauvat säteilevät kattokehästä ristikkoseinälle, '
-                  + 'ja aluskate on juuri vedetty päälle.',
+                selite: 'Ger pysyy koossa ilman nauloja, ja sen '
+                  + 'pystyttämiseen menee noin kaksi tuntia.',
                 lahde: 'en:User:Tkn20, Wikimedia Commons (CC BY 2.5)',
               },
             },
@@ -40605,8 +40469,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'museot.',
               kuva: {
                 tiedosto: 'Trans Mongolian Railway.jpg',
-                selite: 'Trans-Mongolian juna kaartaa vaunu vaunulta '
-                  + 'ruohoisen harjanteen ympäri kohti aron reunaa.',
+                selite: 'Trans-Mongolian rata valmistui vuonna 1956 ja '
+                  + 'yhdisti Ulan Batorin sekä Moskovaan että Pekingiin.',
                 lahde: 'User:Enzymes, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -40667,9 +40531,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'punainen sankari. Länsimaissa käytettiin pitkään venäjän '
             + 'kautta tullutta asua Ulan Bator, jonka myös Mongolian '
             + 'posti hyväksyi.',
-          selite: 'Vuoden 1912 julistus, joka nimesi Ikh Khüreen '
-            + 'pääkaupungiksi: mongolinkielistä pystykirjoitusta ja '
-            + 'punaisia sinettileimoja silkillä.',
+          selite: 'Vuonna 1911 kaupungin nimeksi tuli Niislel Khüree eli '
+            + 'pääkaupunkikhüree, koska sekä hallitus että Bogd Khanin '
+            + 'palatsi olivat siellä.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
           wiki: 'Ulaanbaatar',
         },
@@ -40687,8 +40551,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metsästys ja puunkaato kiellettiin sillä jo 1100- ja '
             + '1200-luvulla. Myöhemminkin ylimystö kokoontui vuoren '
             + 'juurelle vuosittaisiin ja kolmivuotisiin kokouksiinsa.',
-          selite: 'Yksinäinen ger seisoo aron laidalla, ja taustalla '
-            + 'näkyy matala vuorijono.',
+          selite: 'Mongoli-imperiumin aikaan reitti pääkaupungista '
+            + 'Karakorumista kaanien hautaseudulle Khentein vuorille '
+            + 'kulki Tuulin laakson kautta.',
           lahde: 'Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Ulaanbaatar',
         },
@@ -40706,9 +40571,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'harvemmin se liikkui, ja vuonna 1778 se asettui '
             + 'lopullisesti Selben ja Tuulin yhtymäkohtaan Bogd Khan '
             + '-vuoren juurelle.',
-          selite: 'Vuonna 1913 maalattu panoraama kaupungista: keskellä '
-            + 'Zuun Khüreen pyöreä temppelialue, vasemmalla Gandanin '
-            + 'kukkula ja alalaidassa joen takana Bogd Khanin palatsit.',
+          selite: 'Jugderin vuonna 1913 maalaama panoraama esittää Zuun '
+            + 'Khüreen temppelialuetta, Gandanin kukkulaa ja Bogd Khanin '
+            + 'palatseja.',
           lahde: 'Jugder (Mongolian painter who painted it in 1913), '
             + 'Wikimedia Commons (PD)',
           wiki: 'Ulaanbaatar',
@@ -40728,8 +40593,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupan arvoksi arvioitiin 25 miljoonaa ruplaa, siitä '
             + 'yhdeksän kymmenesosaa kiinalaisilla. Naadamin ja suurten '
             + 'juhlien aikaan väkeä oli yli satatuhatta.',
-          selite: 'Maalauksen yksityiskohta näyttää aidatut korttelit, '
-            + 'joen mutkat ja etelärannan palatsialueen vuoren juurella.',
+          selite: 'Vuoden 1727 Kjahtan sopimus järjesti Venäjän ja '
+            + 'Kiinan kaupan, ja reitti kulki Kjahtasta Urgan kautta '
+            + 'Kalganiin.',
           lahde: 'Jugder (Mongolian painter who painted it in 1913), '
             + 'Wikimedia Commons (PD)',
           wiki: 'Ulaanbaatar',
@@ -42423,6 +42289,8 @@ export const KULTTUURI_KATEGORIAT = {
    * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
    * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   yangon: [
     {
       id: 'kaupunki',
@@ -42434,23 +42302,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Sunrise of Yangon.jpg',
-          selite: 'Auringonnousu kaupungin yllä: Shwedagon-pagodin '
-            + 'siluetti erottuu matalien kattojen takaa '
-            + 'taivaanrannassa.',
+          selite: 'Yangonin kaavoitussääntö rajaa rakennusten korkeuden '
+            + '127 metriin merenpinnasta, joten kaupungissa ei ole '
+            + 'pilvenpiirtäjiä.',
           lahde: 'Yarzaryeni, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Yangon Port.jpg',
-          selite: 'Yangon-joki kaupungin kohdalla: rahtilaivoja '
-            + 'laiturissa punakattoisten varastojen edessä, ja '
-            + 'etualalla lipuu pitkä puuvene.',
+          selite: 'Yangon on jokisatama siinä, missä Yangon- ja '
+            + 'Bago-joet yhtyvät, noin kolmenkymmenen kilometrin päässä '
+            + 'Martabaninlahdelta.',
           lahde: 'Milei.vencel, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Central Business District 04.jpg',
-          selite: 'Sule-pagodin kullattu stupa päättää keskustan '
-            + 'valtakadun, jonka reunoilla ovat siirtomaa-ajan talot '
-            + 'ja kaupungintalon kellotorni.',
+          selite: 'Sule-pagodi on Yangonin ruutukaavan keskipiste, ja '
+            + 'sen jalustaa kiertää liikenneympyrä.',
           lahde: 'Go-Myanmar, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -42464,21 +42331,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Yangon - Shwedagon Pagoda 03.jpg',
-          selite: 'Shwedagonin kullattu stupa nousee kultakoristeisten '
-            + 'pyhäkkösalien kattojen takaa.',
+          selite: 'Shwedagonin stupa seisoo 51 metriä korkealla '
+            + 'Singuttaran kukkulalla ja on itse '
+            + 'yhdeksänkymmentäyhdeksän metriä korkea.',
           lahde: 'Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: '2016 Rangun, Pagoda Sule (01).jpg',
-          selite: 'Sule-pagodin kultainen kärki kohoaa niiden pienten '
-            + 'myymälöiden yltä, jotka kiertävät pagodin jalustaa '
-            + 'liikenneympyrän keskellä.',
+          selite: 'Sule-pagodin kerrotaan olevan yli kaksituhatta vuotta '
+            + 'vanha, samoin kuin Shwedagonin ja Botataungin.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2016 Rangun, Pagoda Botahtaung (52).jpg',
-          selite: 'Botataung-pagodin kultainen stupa marmoritasanteen '
-            + 'keskellä kirkkaan sinistä taivasta vasten.',
+          selite: 'Botataungin alkuperäinen pagodi tuhoutui 8. '
+            + 'marraskuuta 1943, kun läheisiä satamalaitureita '
+            + 'pommitettiin.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -42486,16 +42354,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Fytche Square, Rangoon.jpg',
           vuosi: '1895',
-          selite: 'Fytche Square Rangoonissa vuonna 1895 taustallaan Sulen pagodi — '
-            + 'suoperäiselle tontille raivattu aukio tunnetaan nykyään Mahabandulan '
+          selite: 'Fytche Square raivattiin suoperäiselle tontille Sulen '
+            + 'pagodin viereen, ja aukio tunnetaan nykyään Mahabandulan '
             + 'puistona.',
           lahde: 'Philip Adolphe Klier, Commons (PD)',
         },
         {
           tiedosto: 'Sule Pagoda.jpg',
-          selite: 'Sulen pagodi nykyään Sakura Towerista kuvattuna: kun britit '
-            + 'kaavoittivat Rangoonin ruutukaduiksi, pagodia ei siirretty vaan kadut '
-            + 'vedettiin sen ympäri.',
+          selite: 'Kun britit kaavoittivat Rangoonin ruutukaduiksi, '
+            + 'Sulen pagodia ei siirretty vaan kadut vedettiin sen '
+            + 'ympäri.',
           lahde: 'Commonsin käyttäjä Mrsoethuaung (CC BY 4.0)',
         },
       ],
@@ -42515,9 +42383,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tuli koko brittihallitun Burman pääkaupunki, ja '
             + '1890-luvulla kasvava kauppa synnytti vauraita '
             + 'esikaupunkeja Kandawgyi- ja Inya-järvien pohjoispuolelle.',
-          selite: '1800-luvun lopun valokuva satamasta: purjelaivoja ja '
-            + 'höyrylaiva laiturissa, ja rannalla lastivenerivi '
-            + 'palmujen alla.',
+          selite: 'Rangoonista tuli vuonna 1885 koko brittihallitun '
+            + 'Burman pääkaupunki, ja kasvava kauppa synnytti '
+            + '1890-luvulla vauraita esikaupunkeja.',
           lahde: 'Probably Philip Adolphe Klier, Wikimedia Commons (PD)',
           wiki: 'Yangon',
         },
@@ -42537,8 +42405,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pagodin korkeudesta — siksi Yangonissa ei ole '
             + 'pilvenpiirtäjiä toisin kuin muissa Aasian '
             + 'suurkaupungeissa.',
-          selite: 'Stupan alaosa hohtaa kultalevyillä, ja yläosaa '
-            + 'kiertää bambuteline kultauksen uusimista varten.',
+          selite: 'Shwedagonin kruunussa on 5 448 timanttia ja 2 317 '
+            + 'rubiinia, ja aivan kärjessä on 76 karaatin timantti.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Shwedagon Pagoda',
         },
@@ -42556,9 +42424,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarjoutuivat nostamaan sen ja sitoivat kellon alle '
             + 'satoja bambupaaluja, jotka kelluttivat sen pintaan. '
             + 'Kello on yhä pagodilla omassa paviljongissaan.',
-          selite: 'Suuri pronssikello riippuu kaiverretun tiikkikaton '
-            + 'alla kultaisten pylväiden välissä, ja sen yläpuolella '
-            + 'kaartuu kaksi naga-käärmettä.',
+          selite: 'Kuningas Singun vuonna 1779 lahjoittama '
+            + 'kahdenkymmenenkolmen tonnin pronssikello nostettiin '
+            + 'joesta satojen bambupaalujen varassa.',
           lahde: 'Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Shwedagon Pagoda',
         },
@@ -42578,9 +42446,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'torstailla hiiri, perjantailla marsu ja lauantailla '
             + 'naga. Syntymäpäivänsä pisteellä kaadetaan vettä Buddhan '
             + 'kuvan päälle.',
-          selite: 'Valkoinen chinthe-leijona vartioi portaiden suuta '
-            + 'kultakattoisen salin edessä, ja oikealla siintää '
-            + 'pagodin kärki.',
+          selite: 'Shwedagonin kukkulalle nousee neljät portaat, ja '
+            + 'jokaisen suulla istuu pari jättimäistä chinthe-leijonaa.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Shwedagon Pagoda',
         },
@@ -42588,9 +42455,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Downtown Yangon (View from Junction City).jpg',
-          selite: 'Keskustan leveä valtakatu suoraan ylhäältä: '
-            + 'pysäköityjä autoja molemmin puolin, kultakupolinen '
-            + 'moskeija keskellä ja joki taivaanrannassa.',
+          selite: 'Yangonin keskustassa idästä länteen kulkevat leveät '
+            + 'kadut ovat neljäkymmentäyhdeksän metriä leveitä.',
           lahde: 'Guanghui1991, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Yangon on Myanmarin suurin kaupunki: vuoden 2014 '
@@ -42643,9 +42509,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Botahtaungin ja Inseinin väliä.',
               kuva: {
                 tiedosto: 'Yangon Water Bus 2.jpg',
-                selite: 'Keltainen vesibussi laiturissa jokirannassa, '
-                  + 'ja kannelle johtavan luiskan vieressä seisoo kaksi '
-                  + 'miestä selin kameraan.',
+                selite: 'Yangonin vesibussi aloitti vuonna 2017 ja '
+                  + 'kulkee jokea pitkin Botahtaungin ja Inseinin väliä.',
                 lahde: 'Paingpeace, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -42671,9 +42536,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'neliökilometristä lähes kuuteensataan.',
               kuva: {
                 tiedosto: 'Jetty on the Yangon river (8436534903).jpg',
-                selite: 'Laituri laskuveden aikaan: teräskaarinen '
-                  + 'kulkusilta laskeutuu paljastuneelle mutatasangolle, '
-                  + 'ja sen päässä on kiinnitettynä lautta.',
+                selite: 'Yangon on Irrawaddyn suistossa, ja sen kupeessa '
+                  + 'on vuorovesitasankoja, jotka paljastuvat laskuveden '
+                  + 'aikaan.',
                 lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -42699,9 +42564,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jälkeen mohingaa on saanut kaiket päivät.',
               kuva: {
                 tiedosto: 'Mohinga (83848).jpg',
-                selite: 'Kuvioidussa kulhossa on riisinuudeleita '
-                  + 'sameassa kalaliemessä, ja päällä on limetinlohko, '
-                  + 'korianteria ja sipulinpaloja.',
+                selite: 'Mohingaa pidetään Myanmarin kansallisruokana: '
+                  + 'riisinuudeleita kalaliemessä, joka sakeutetaan '
+                  + 'kikhernejauholla tai paahdetulla riisillä.',
                 lahde: 'SarKaLay စာကလေး, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -42791,8 +42656,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuolemaansa 1471 asti. Hän myös kullautti Shwedagonin '
             + 'ja aloitti perinteen, jossa pagodille lahjoitetaan '
             + 'kultaa.',
-          selite: 'Jalokivin koristeltu kultainen päähine vitriinissä; '
-            + 'sen uskotaan olleen prinsessa Shin Saw Pun.',
+          selite: 'Shin Saw Pu oli Burman historian ainoa '
+            + 'hallitsijakuningatar, ja hän kullautti Shwedagonin.',
           lahde: 'Jononmac46, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Yangon',
         },
@@ -42811,9 +42676,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kolmekymmentätuhatta. Britit valtasivat kaupungin '
             + 'ensimmäisessä sodassaan 1824 mutta palauttivat sen '
             + 'rauhanteossa; vuonna 1841 tulipalo tuhosi sen.',
-          selite: 'Klierin valokuvassa iso puinen riisivene korkeine '
-            + 'keuloineen odottaa joella, ja vastarannalla savuaa '
-            + 'riisimyllyn piippu.',
+          selite: 'Itä-Intian kauppakomppania avasi Yangoniin '
+            + 'kauppapaikan 1790-luvulla, ja vuoden 1823 arvion mukaan '
+            + 'asukkaita oli noin kolmekymmentätuhatta.',
           lahde: 'Philip Adolphe Klier, Wikimedia Commons (PD)',
           wiki: 'Yangon',
         },
@@ -42832,8 +42697,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tammikuuta 1948. Kaivauksissa paljastui koskematon '
             + 'reliikkikammio, josta nostettiin seitsemänsataa kulta-, '
             + 'hopea-, pronssi- ja terrakottaesinettä.',
-          selite: 'Uuden pagodin sisällä kulkee kullattu käytävä, jonka '
-            + 'seinillä on lasivitriinejä ja lattiana kalanruotoparketti.',
+          selite: 'Botataungin jälleenrakennus alkoi 4. tammikuuta 1948, '
+            + 'ja kaivauksissa paljastui koskematon reliikkikammio.',
           lahde: 'C1815, Wikimedia Commons (CC0)',
           wiki: 'Botataung Pagoda',
         },
@@ -42852,9 +42717,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kaakkois-Aasiassa, ja niistä noin kaksisataa '
             + 'merkittävintä liitettiin vuonna 1996 suojeltujen '
             + 'luetteloon.',
-          selite: 'Hotellin aula kattotuulettimien alla: '
-            + 'rottinkituoleja, palmuja ja iso kukka-asetelma '
-            + 'pöydällä.',
+          selite: 'Strand-hotelli avattiin jokirannassa vuonna 1901, ja '
+            + 'sitä mainostettiin hienoimpana majatalona Suezista itään.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Strand Hotel',
         },
@@ -42990,6 +42854,8 @@ export const KULTTUURI_KATEGORIAT = {
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   mandalay: [
     {
       id: 'kaupunki',
@@ -43001,23 +42867,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Mandalay Hill and Mandalay Palace. (15476239190).jpg',
-          selite: 'Vallihauta kaartuu punatiilisen muurin editse, '
-            + 'muurilla kohoaa kaksi tummaa pyatthat-tornia ja '
-            + 'taustalla nousee Mandalay-kukkula kultaisine '
-            + 'pagodeineen.',
+          selite: 'Palatsia ympäröi neljä kahden kilometrin muuria '
+            + 'täsmällisenä neliönä ja 64 metriä leveä, 4,5 metriä syvä '
+            + 'vallihauta.',
           lahde: 'Clay Gilliland, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Mandalay Cityscape.jpg',
-          selite: 'Kukkulan rinteeltä katsottuna Kuthodaw’n ja '
-            + 'Sandamunin valkoiset pikkustupat levittäytyvät kahtena '
-            + 'kenttänä kaupungin edessä.',
+          selite: 'Kuthodaw-pagodin 729 marmorilaattaa seisovat kukin '
+            + 'omassa pienessä valkoisessa kiviluolassaan.',
           lahde: 'Mrsoethuaung, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Myanmar-U Bein-Bruecke-04-2006-gje.jpg',
-          selite: 'U Bein -silta jatkuu tiikkipylväiden varassa yli '
-            + 'kuivan järvenpohjan aina vastarannan puurivistöön asti.',
+          selite: 'U Bein -silta on 1 209 metriä pitkä, ja siinä on 482 '
+            + 'jännettä.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -43031,23 +42895,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Mandalay Palace from Watch Tower.jpg',
-          selite: 'Vahtitornista katsottuna palatsin punaiset katot '
-            + 'jatkuvat riveinä nurmiruutujen ympärillä, ja keskellä '
-            + 'seisoo valkoinen holvikäytävä.',
+          selite: 'Nykyinen Mandalayn palatsi on vuonna 1989 aloitettu '
+            + 'jäljennös, sillä tiikkinen alkuperäinen paloi '
+            + 'maaliskuussa 1945.',
           lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mandalay-Shwenandaw-02-gje.jpg',
-          selite: 'Shwenandaw’n tumma tiikkiluostari kohoaa kalkitun '
-            + 'muurin takana, ja sen räystäät ovat kauttaaltaan '
-            + 'veistettyä koristelua.',
+          selite: 'Shwenandaw on ainoa kuninkaanpalatsista säilynyt '
+            + 'puurakennus, ja se siirrettiin muurien ulkopuolelle jo '
+            + '1870-luvun lopulla.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mahamuni Buddha Temple 04.jpg',
-          selite: 'Mahamunin kullattu porraskatto nousee valkoisen '
-            + 'pylväskäytävän yläpuolelle, jonka kaaria kiertävät '
-            + 'värilliset kipsihahmot.',
+          selite: 'Mahamunin temppeli oli paikallaan jo ennen kaupungin '
+            + 'perustamista, ja 28. maaliskuuta 2025 järistys vaurioitti '
+            + 'sitä.',
           lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -43084,9 +42948,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuninkaallinen smaragdipalatsi. Paikka oli asumatonta '
             + 'peltoa neljän joen välissä, ja alue oli kuutisenkymmentä '
             + 'neliökilometriä.',
-          selite: 'Kukkulan rinnettä nousee katettuja portaita ja '
-            + 'kultakärkisiä paviljonkeja aina laella kimaltavaan '
-            + 'pagodiin asti.',
+          selite: 'Mandalay-kukkula nousee runsaaseen kahteensataan '
+            + 'metriin, ja sen rinnettä ylös vie katettuja portaita.',
           lahde: 'Myrmux, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mandalay Hill',
         },
@@ -43105,8 +42968,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'eläinradan merkkinsä. Keskiporttien yllä on '
             + 'seitsemänkerroksinen pyatthat-katos, muiden '
             + 'viisikerroksinen.',
-          selite: 'Man Oon portin valkoisen muurin päällä lepää '
-            + 'tummanpunainen monikerroksinen pyatthat-katos.',
+          selite: 'Palatsin muurissa on kaksitoista porttia, ja kukin '
+            + 'niistä kantaa oman eläinradan merkkinsä.',
           lahde: 'Kantabon, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mandalay Palace',
         },
@@ -43125,9 +42988,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'palautettiin Burmaan hyväntahdon eleenä vasta 1964. '
             + 'Kahdeksasta valtaistuimesta suurin, Leijonavaltaistuin, '
             + 'on nykyään Yangonin kansallismuseossa.',
-          selite: 'Felice Beaton valokuva Leijonavaltaistuimen '
-            + 'salista: portaittain levenevä valtaistuinjalusta '
-            + 'seisoo kaiverretun oviaukon edessä.',
+          selite: 'Kahdeksasta valtaistuimesta suurin, '
+            + 'Leijonavaltaistuin, on nykyään Yangonin '
+            + 'kansallismuseossa.',
           lahde: 'Felice Beato, Wikimedia Commons (PD)',
           wiki: 'Mandalay Palace',
         },
@@ -43145,8 +43008,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ehdoilla. Vuosien 1904–1905 rutto ajoi kolmanneksen '
             + 'asukkaista pois kaupungista. Suuri osa maan Kiinan- ja '
             + 'Intian-kaupasta kulkee yhä täältä.',
-          selite: 'Keskusaseman laiturilla seisoo veturi vaunuineen '
-            + 'yön valoissa, ja katoksen alla odottaa tyhjä käsikärry.',
+          selite: 'Rautatie saapui Mandalayhin vuonna 1889, alle neljä '
+            + 'vuotta kaupungin valtauksen jälkeen.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mandalay',
         },
@@ -43154,9 +43017,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Kuthodaw Pagoda 2018.jpg',
-          selite: 'Kuthodaw’n kullattu stupa kohoaa punaisella matolla '
-            + 'verhottujen portaiden takaa, joita reunustavat '
-            + 'naga-kaiteet.',
+          selite: 'Kuthodaw-pagodin työ alkoi vuonna 1860, ja '
+            + 'marmorilaatat avattiin yleisölle 4. toukokuuta 1868.',
           lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Mandalay on Myanmarin toiseksi suurin kaupunki ja '
@@ -43204,9 +43066,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'keskustasta.',
               kuva: {
                 tiedosto: 'MANDALAY RAILWAY STATION MYANMAR FEB 2013 (8582611196).jpg',
-                selite: 'Keskusaseman ratapihalla seisoo rinnakkain '
-                  + 'useita vaunurivejä, ja laiturikatto jatkuu '
-                  + 'vasemmalla kuvan reunaan.',
+                selite: 'Mandalayn keskusasema on Yangonin-radan '
+                  + 'pääteasema ja lähtöpiste haaroille Lashioon, '
+                  + 'Monywaan ja Myitkyinaan.',
                 lahde: 'calflier001, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -43230,9 +43092,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pohjoispuolella.',
               kuva: {
                 tiedosto: 'Bridges over Irawadi (42122965250).jpg',
-                selite: 'Irrawaddyn yli kaartuu kaksi siltaa, ja '
-                  + 'rannan puiden lomasta pistää esiin valkoisia '
-                  + 'stupia.',
+                selite: 'Irrawaddyn toisella rannalla ovat Sagaingin '
+                  + 'kukkulat, ja niiden suuntaan menee kaksi siltaa.',
                 lahde: 'Radek Kucharski from Warsaw, Poland, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -43255,9 +43116,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'puuvillaa ja valetaan pronssia yhä.',
               kuva: {
                 tiedosto: 'Silk designs, Mandalay, Myanmar.jpg',
-                selite: 'Kudottuja silkkikankaita on pinottu myyntiin '
-                  + 'niin, että jokaisesta näkyy vain kuviollinen '
-                  + 'reuna.',
+                selite: 'Mandalayn perinteisiä aloja ovat silkinkudonta, '
+                  + 'jaden hionta, kiven ja puun veisto sekä kulta- ja '
+                  + 'hopeasepäntyö.',
                 lahde: 'exfordy, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -43348,9 +43209,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarkistaakseen, ettei mitään ollut muutettu, '
             + 'vääristetty tai kadonnut. Lausuminen kesti viisi '
             + 'kuukautta ja kolme päivää.',
-          selite: 'Marmorilaattaan kaiverrettu burmalainen teksti on '
-            + 'korostettu kullalla valkoisen kiviluolan holvikaaren '
-            + 'sisällä.',
+          selite: 'Mindon halusi kirjoituttaa koko Tipitaka-kaanonin '
+            + 'kiveen, jotta se kestäisi viisi vuosituhatta Buddhan '
+            + 'jälkeen.',
           lahde: 'Wagaung at English Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Kuthodaw Pagoda',
         },
@@ -43369,8 +43230,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tiikkirakennukset seisoivat yhdellä alustalla, joka on '
             + '306 metriä pitkä ja 175 metriä leveä ja jolle nousi '
             + 'kolmekymmentäyksi porrasta.',
-          selite: 'Suuren audienssisalin seitsenkerroksinen kultainen '
-            + 'pyatthat kohoaa punaisten kattojen keskeltä.',
+          selite: 'Mandalayn palatsialue valmistui virallisesti 23. '
+            + 'toukokuuta 1859, ja sen ala oli 413 hehtaaria.',
           lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mandalay Palace',
         },
@@ -43390,8 +43251,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valtakunnan omaa hopearahaa. Kanaung kävi tehtailla '
             + 'varhain talviaamuina huopa harteillaan kyselemässä '
             + 'koneenkäyttäjiltä, miten laitteet toimivat.',
-          selite: 'Kullattu istuva patsas esittää kuningas Mindonia '
-            + 'koristellun katoksen alla.',
+          selite: 'Mindon Min hallitsi 18. helmikuuta 1853 alkaen '
+            + 'kuolemaansa 1. lokakuuta 1878 ja lähetti oppineita '
+            + 'Eurooppaan katsomaan teollistumista.',
           lahde: 'Yarzaryeni, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Mindon Min',
         },
@@ -43410,8 +43272,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kartioiksi, jotta sadevesi valuisi pois. Alun perin '
             + 'niitä oli 984; nykyään lasketaan 1 086 tai 1 089 '
             + 'laskutavasta riippuen, ja osa on korvattu betonilla.',
-          selite: 'Amarapuran vanhan kaupunginmuurin tiilinen kulmapala '
-            + 'seisoo kylätien varressa puiden alla.',
+          selite: 'Amarapuran vanhan kaupungin muurit revittiin teiden '
+            + 'ja ratojen rakennusaineeksi, kun pääkaupunki siirtyi '
+            + 'Mandalayhin.',
           lahde: 'Wagaung ( talk ), Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'U Bein Bridge',
         },
@@ -43534,6 +43397,8 @@ export const KULTTUURI_KATEGORIAT = {
    * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
    * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   taipei: [
     {
       id: 'kaupunki',
@@ -43545,23 +43410,20 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Taipei Skyline 2022.06.29.jpg',
-          selite: 'Xinyin kaupunginosa Norsuvuoren rinteeltä: Taipei 101 '
-            + 'nousee vasemmalla muiden tornitalojen yli, ja takana '
-            + 'häämöttävät altaan reunavuoret.',
+          selite: 'Taipei 101 on 508 metriä korkea ja ensimmäinen '
+            + 'pilvenpiirtäjä, joka ylitti puolen kilometrin rajan.',
           lahde: '毛貓大少爺, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Taipei, assorted - TaipeiCityscapes4969.jpg',
-          selite: 'Kaupunki täyttää altaan pohjan, ja sen takana '
-            + 'vuorenharjanteet jatkuvat kerroksittain sinertyen '
-            + 'niin kauas kuin näkyy.',
+          selite: 'Taipein allas on muinainen järvenpohja, ja kaupungin '
+            + 'läntinen keskiosa lepää sen tasaisella pohjalla.',
           lahde: 'lumoplank, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Aerial panorama of Taipei city\'s west side facing the Tamsui River.jpg',
-          selite: 'Kaupungin länsilaita Tamsui-joen mutkassa: kaksi '
-            + 'siltaa, hiekkasärkkä keskellä uomaa ja matalia '
-            + 'kortteleita molemmin puolin.',
+          selite: 'Tamsui-jokeen yhtyvät etelässä Xindian-joki ja '
+            + 'pohjoisessa Keelung-joki.',
           lahde: 'Bob Tan, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -43574,22 +43436,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'North Gate of Taipei City, 2023 (01).jpg',
-          selite: 'Pohjoisportti keskellä nykykaupunkia: punaiseksi '
-            + 'rapattu vahtihuone seisoo harmaalla kivijalustalla, ja '
-            + 'katon räystäät kaartuvat ylös pääskynpyrstöiksi.',
+          selite: 'Pohjoisportti on Taipein viidestä kaupunginportista '
+            + 'ainoa, joka on säilynyt sellaisena kuin se tehtiin.',
           lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Taipei Taiwan Presidential-Office-Building-01.jpg',
-          selite: 'Presidentinlinnan punatiilinen julkisivu palmurivin '
-            + 'takana, ja keskeltä nousee kuusikymmenmetrinen torni.',
+          selite: 'Presidentinlinna on Japanin hallintokauden '
+            + 'virastotaloja, ja sen keskeltä nousee kuusikymmenmetrinen '
+            + 'torni.',
           lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Taipeh Longshan-Tempel Dachlandschaft.jpg',
-          selite: 'Lungshan-temppelin kattoharjalla kiemurtelee '
-            + 'posliininsiruista koottuja lohikäärmeitä, ja niiden alla '
-            + 'kulkee rivi pieniä ihmishahmoja.',
+          selite: 'Lungshan-temppelin kattoharjan lohikäärmeet on koottu '
+            + 'posliininsiruista.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -43627,9 +43488,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kahdenkymmenenviiden millimetrin teräslevystä, se on '
             + 'halkaisijaltaan 5,5 metriä ja se leikkaa tornin '
             + 'liikkeestä jopa neljäkymmentä prosenttia.',
-          selite: 'Massavaimentimen kullattu pallo riippuu neljän '
-            + 'vaijerin varassa kerrosten välisessä kuilussa, ja sen '
-            + 'alla erottuvat iskunvaimentimet.',
+          selite: 'Taipei 101:n 660 tonnin teräspallo riippuu kerrosten '
+            + '88 ja 92 välissä ja leikkaa tornin liikkeestä jopa '
+            + 'neljäkymmentä prosenttia.',
           lahde: 'Armand du Plessis, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Taipei 101',
         },
@@ -43648,9 +43509,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'niistä 2 972 — noin viidennes — purjehti kolmessa '
             + 'lastissa Keelungin satamaan. Museo avattiin uudelleen '
             + 'Shilinissä 12. marraskuuta 1965.',
-          selite: 'Museon keltaiset seinät ja vihreä tiilikatto nousevat '
-            + 'metsäisen rinteen juurella, ja aukiolta johtaa ylös '
-            + 'kaksi valkoista marmoriporrasta.',
+          selite: 'Kansallinen palatsimuseo avattiin Shilinissä 12. '
+            + 'marraskuuta 1965, kun kokoelma oli ollut vuosikymmeniä '
+            + 'matkalla.',
           lahde: 'Jason Zhang, Wikimedia Commons (CC0)',
           wiki: 'National Palace Museum',
         },
@@ -43669,8 +43530,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'papaijamaito ja kuplatee. Markkina syntyi jokilaiturin '
             + 'viereen, jolta Shilinin viljelijät lähettivät satonsa '
             + 'Bangkaan ja Dadaochengiin.',
-          selite: 'Kojurivi hehkuu sinisessä iltahämärässä, ja talon '
-            + 'seinällä loistaa pyöreitä neonkilpiä.',
+          selite: 'Shilinin yömarkkinan ruokahallissa on 539 kojua, ja '
+            + 'viimeiset menevät kiinni vasta aamuyöllä.',
           lahde: 'lumoplank, Wikimedia Commons (CC0)',
           wiki: 'Shilin Night Market',
         },
@@ -43688,9 +43549,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joka oli silloin Itä-Aasian suurin. Rakennus on '
             + 'nykyisin kuumien lähteiden museo. Asukkaat sanovat, '
             + 'että rikkihöyryt syövät kodinkoneet ennen aikojaan.',
-          selite: 'Kuumien lähteiden museo on puoliksi punatiiltä ja '
-            + 'puoliksi tummaa puuta, ja alakerran kaari-ikkunat '
-            + 'katsovat nurmikentälle.',
+          selite: 'Beitoun yleinen kylpylä valmistui 1913 ja oli silloin '
+            + 'Itä-Aasian suurin; rakennus on nykyisin kuumien lähteiden '
+            + 'museo.',
           lahde: 'ironypoisoning, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Beitou Hot Spring Museum',
         },
@@ -43698,9 +43559,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Chiang Kai-shek memorial 2 amk.jpg',
-          selite: 'Muistosalin aukiolle johtavan valkoisen portin '
-            + 'kaaresta näkyy sinikattoinen sali aukion toisessa '
-            + 'päässä.',
+          selite: 'Taipein pinta-ala on 272 neliökilometriä, mutta '
+            + 'suurin osa siitä on vuorta.',
           lahde: 'AngMoKio, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Taipei on Taiwanin pohjoispäässä, muinaisen '
@@ -43746,9 +43606,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + '— enemmän kuin missään muualla saarella.',
               kuva: {
                 tiedosto: 'A Taipei Metro C381 train at Beitou Station.jpg',
-                selite: 'Metrojunan keula laiturilla: sininen aaltokuvio '
-                  + 'juoksee keulan poikki ja ohjaamon ikkunassa '
-                  + 'heijastuvat aseman katosrakenteet.',
+                selite: 'Taipein metrossa on kuusi linjaa, ja samaa '
+                  + 'EasyCard-korttia käytetään myös busseissa.',
                 lahde: 'Lokseng01, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -43773,8 +43632,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Taipei–Keelung-alueella noin seitsemän miljoonaa.',
               kuva: {
                 tiedosto: '七星山 Qixing Mountain - panoramio.jpg',
-                selite: 'Qixing-vuoren ruohoinen huippu kohoaa metsän '
-                  + 'takaa, ja etualalla lepää kaislainen suolampi.',
+                selite: 'Qixing- eli Seitsentähtivuori on 1 120 metriä '
+                  + 'korkea ja Taiwanin korkein lepotilassa oleva '
+                  + 'tulivuori.',
                 lahde: 'lienyuan lee, Wikimedia Commons (CC BY 3.0)',
               },
             },
@@ -43797,8 +43657,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kannettiin alas, ovat nyt vaellusreittejä.',
               kuva: {
                 tiedosto: 'Tea plantation, Pinglin.jpg',
-                selite: 'Teepensaat kasvavat tiiviinä kaarevina riveinä '
-                  + 'rinteessä, ja niiden takana alkaa metsä.',
+                selite: 'Maokongin rinteillä Wenshanin kaupunginosassa '
+                  + 'kasvaa yhä tieguanyin-teetä.',
                 lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -43882,9 +43742,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kylien välit eivät aina olleet hyvät: vuonna 1853 väkeä '
             + 'siirtyi selkkauksen jälkeen Bangkasta Twatutiaan. Niistä '
             + 'kolmesta tuli myöhemmin yksi kaupunki.',
-          selite: 'Allas Maokongin rinteiltä katsottuna: matala pohja on '
-            + 'täynnä taloja, ja metsäiset kukkulat reunustavat sitä '
-            + 'joka suunnalta.',
+          selite: 'Taipein altaassa asui Ketagalan-kansa, ja ensimmäiset '
+            + 'han-uudisraivaajat saapuivat vuonna 1709.',
           lahde: 'othree, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Taipei',
         },
@@ -43903,9 +43762,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Taipehin prefektuurikseen. Uusi hallintokeskus '
             + 'rakennettiin vaurastuneiden kylien kylkeen ja sitä '
             + 'kutsuttiin nimellä Chengnei, sisäkaupunki.',
-          selite: 'Dihua-kadun kauppahuoneiden julkisivuja: pylväitä, '
-            + 'koristelistoja ja pystysuoria kilpiä katutason '
-            + 'markiisien yllä.',
+          selite: 'Dihua-kadulla käsiteltiin teetä, kiinalaisia '
+            + 'lääkeyrttejä, kankaita ja suitsukeaineita.',
           lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Dihua Street',
         },
@@ -43925,10 +43783,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin myöhemmin uudelleen, mutta ne eivät '
             + 'palanneet entiselleen. Vain pohjoisportti on säilynyt '
             + 'sellaisena kuin se tehtiin.',
-          selite: 'Itäportti seisoo liikenneympyrän keskellä: kivijalusta '
-            + 'ja valkoinen rintavarustus ovat vanhat, mutta punaiset '
-            + 'pylväät ja vihreä tiilikatto ovat myöhemmästä '
-            + 'uudelleenrakennuksesta.',
+          selite: 'Taipein muuri valmistui vuonna 1884 lähes viiden '
+            + 'kilometrin mittaisena, ja siinä oli viisi porttia.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Walls of Taipei',
         },
@@ -43947,9 +43803,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupungiksi, johon kuuluivat Bangka, Twatutia ja '
             + 'sisäkaupunki Jōnai; itäinen Matsuyaman kylä, nykyinen '
             + 'Songshan, liitettiin 1938.',
-          selite: 'Taihokun prefektuurin entinen virastotalo: valkeaksi '
-            + 'rapattu kupolirakennus, jonka parvekkeen kaidetta '
-            + 'kiertää kirjava koristenauha.',
+          selite: 'Kaupungin nimi kirjoitettiin vuodesta 1895 '
+            + 'japanilaisen ääntämyksen mukaan Taihoku, ja '
+            + 'kirjoitusmerkit pysyivät samoina.',
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Taipei',
         },
@@ -45143,6 +44999,8 @@ export const KULTTUURI_KATEGORIAT = {
    * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
    * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   manila: [
     {
       id: 'kaupunki',
@@ -45154,22 +45012,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Intramuros, Plaza Roma, Ermita skyline drone (Manila; 09-06-2025).jpg',
-          selite: 'Muurikaupunki ilmasta: katedraalin vihertävä kupoli ja '
-            + 'kellotorni nousevat punaisten kattojen keskeltä, ja '
-            + 'taustalla siintää Manilanlahti.',
+          selite: 'Espanjalaiset perustivat Manilan vuonna 1571 vanhan '
+            + 'Maynilan paikalle Pasig-joen suulle.',
           lahde: 'Patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Intramuros, Binondo skyline, Rizal Park, Maria Orosa drone (Manila; 12-25-2025).jpg',
-          selite: 'Rizal-puisto ylhäältä: leveä puistokatu halkoo '
-            + 'nurmikenttiä, oikealla seisoo pylväikköinen '
-            + 'kansallismuseo ja vasemmalla erottuvat sataman nosturit.',
+          selite: 'Rizal-puisto on 58 hehtaaria, ja José Rizalin '
+            + 'monumentin vieressä oleva lipputanko on koko maan '
+            + 'nollakilometri.',
           lahde: 'Patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Manila Bay sunset from Malate district (002) 2023-11-15.jpg',
-          selite: 'Aurinko laskee Manilanlahdelle, ja ankkurissa olevat '
-            + 'laivat piirtyvät tummina viivoina vaaleaa vettä vasten.',
+          selite: 'Manilanlahden suojaisaa luonnonsatamaa on pidetty '
+            + 'Aasian parhaana.',
           lahde: 'LMP 2001, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -45181,22 +45038,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Manila, Fort Santiago, Walled city of Intramuros, Philippines.jpg',
-          selite: 'Fort Santiagon koristeltu pääportti muurin keskellä, ja '
-            + 'sen edessä kulkee tiilireunainen vallihaudan penger.',
+          selite: 'Kuninkaan määräys oli pystyttää linnoitus siihen, '
+            + 'missä meri ja joki kohtaavat, ja Fort Santiago seisoo '
+            + 'Pasigin suulla.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'San Agustin Church Intramuros 2023-05-28.jpg',
-          selite: 'San Agustinin kirkon julkisivu: oikealla kohoaa ainoa '
-            + 'jäljellä oleva kellotorni, ja vasemmalla on tyhjä kohta, '
-            + 'josta toinen purettiin.',
+          selite: 'San Agustinin kirkko valmistui 19. tammikuuta 1607, '
+            + 'ja se on Filippiinien vanhin kivikirkko.',
           lahde: 'LMP 2001, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Manila Cathedral, Plaza Roma (Intramuros, Manila; 12-31-2021).jpg',
-          selite: 'Manilan katedraali Plaza Roman takana: kellotorni '
-            + 'vasemmalla, vihertävä kupoli keskellä ja edessä puiden '
-            + 'varjostama aukio.',
+          selite: 'Manilan katedraali on kahdeksas rakennus samalla '
+            + 'paikalla, ja nykyinen vihittiin vuonna 1958.',
           lahde: 'patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -45215,10 +45071,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Escolta, Manila, P. I. LCCN2013646443.jpg',
           vuosi: '1910',
-          selite: 'Escolta-katu vuonna 1910 manilalaisen Photo Supply Co:n '
-            + 'vedoksessa: raitiovaunu tulee kiskoillaan kohti kuvaajaa, ja '
-            + 'kadun molemmin puolin roikkuvat kauppojen, ravintoloiden ja '
-            + 'apteekkien kyltit.',
+          selite: 'Escolta oli 1910-luvulla Manilan liike-elämän '
+            + 'pääkatu, ja sitä pitkin kulki raitiovaunulinja.',
           lahde: 'Library of Congress (PD)',
         },
         {
@@ -45247,9 +45101,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Perun hopeaa, jonka arvo oli Aasiassa Amerikkaa korkeampi. '
             + 'Laivat rakennettiin Cavitessa paikallisesta puusta, purjeet '
             + 'kudottiin Ilocosissa ja köydet punottiin manillahampusta.',
-          selite: 'Noin vuoden 1665 vesivärikuva Manilasta: muurikaupunki '
-            + 'on niemellä joen suulla, lahdella on purjelaivoja ja '
-            + 'oikealla erottuu Caviten niemi.',
+          selite: 'Johannes Vingboonsin noin vuoden 1665 kuva esittää '
+            + 'muurikaupunkia joen suulla ja Caviten niemeä, josta '
+            + 'galleonit lähtivät.',
           lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
           wiki: 'Manila galleon',
         },
@@ -45266,9 +45120,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vasta 2013, ja San Ignacion kirkkoa kootaan museoksi. Jo '
             + 'vuonna 1936 oli säädetty, että kaikki uudet talot '
             + 'Intramuroksessa on rakennettava espanjalaiskauden tyyliin.',
-          selite: 'Vuonna 2013 entiselleen rakennettu Ayuntamiento: '
-            + 'valkoinen pylväsjulkisivu, kaarevat oviaukot ja neljä '
-            + 'Filippiinien lippua parvekkeella.',
+          selite: 'Kaupungintalo Ayuntamiento rakennettiin entiselleen '
+            + 'vasta vuonna 2013.',
           lahde: 'Joemill Veloso Flordelis, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Intramuros',
         },
@@ -45287,9 +45140,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oma mestizo-väestönsä. Alueen halki kaivettiin '
             + 'espanjalaiskaudella kanavia, esteroja, jotka laskivat '
             + 'Pasigiin.',
-          selite: 'Estero de Magdalenan kanava Binondossa: vesi heijastaa '
-            + 'rantaan nousseita tornitaloja, ja etualalla kasvaa '
-            + 'pensaikkoa.',
+          selite: 'Binondon halki kaivettiin espanjalaiskaudella '
+            + 'kanavia, esteroja, jotka laskivat Pasig-jokeen.',
           lahde: 'Ralff Nestor Nacor, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Binondo',
         },
@@ -45307,8 +45159,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '58 hehtaaria ja kantaa José Rizalin nimeä, ja hänen '
             + 'monumenttinsa länsipuolella oleva lipputanko on '
             + 'nollakilometri, josta koko maan etäisyydet mitataan.',
-          selite: 'Rizal-monumentti obeliskeineen puiston keskellä, ja sen '
-            + 'edessä nousee valkoinen lipputanko lippurivin keskeltä.',
+          selite: 'José Rizalin monumentti seisoo Bagumbayanin entisellä '
+            + 'suoalueella, jonne valmistui vuonna 1820 Paseo de Luneta.',
           lahde: 'Patrickroque01, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Rizal Park',
         },
@@ -45316,9 +45168,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: '08743 jfIntramuros Landmarks Churches Manilafvf 17.jpg',
-          selite: 'Kalesa odottaa kyytiläisiä Intramuroksen kadulla: '
-            + 'keltaiset pinnapyörät, mustaksi maalattu kuomu ja hevonen '
-            + 'valjaissa.',
+          selite: 'Intramuroksessa ja Binondossa liikkuu yhä '
+            + 'hevosvetoinen kalesa.',
           lahde: 'Judgefloro, Wikimedia Commons (CC0)',
         },
         kappale: 'Manila on Filippiinien pääkaupunki ja Luzonin saarella '
@@ -45361,9 +45212,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Pasig-joella kulkee jokilauttalinja.',
               kuva: {
                 tiedosto: 'Fairview Cubao Jeepney.jpg',
-                selite: 'Oranssi jeepney kääntyy risteyksessä: keulassa on '
-                  + 'maalattu nimikilpi ja tuulilasin yllä rivi '
-                  + 'reittitauluja.',
+                selite: 'Jeepney kulkee kiinteää reittiä kiinteällä '
+                  + 'hinnalla, ja Metro Manilassa niillä tehdään '
+                  + 'arviolta yhdeksän miljoonaa matkaa päivässä.',
                 lahde: 'Ganmatthew, Wikimedia Commons (CC BY 4.0)',
               },
             },
@@ -45385,9 +45236,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuuluu lisäksi yksi kunta, Pateros.',
               kuva: {
                 tiedosto: 'Pasig River in Intramuros side, Manila, June 2025.jpg',
-                selite: 'Pasig-joki Intramuroksen rantakadulta: vedessä '
-                  + 'ajelehtii vesihyasinttilauttoja, ja taustalla '
-                  + 'kaartuu kaarisilta pohjoisrannalle.',
+                selite: 'Pasig-joki on vain 25 kilometriä pitkä ja '
+                  + 'yhdistää sisämaan Laguna de Bay -järven mereen.',
                 lahde: 'Ralff Nestor Nacor, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -45409,9 +45259,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'malaijilaisia, osa espanjalaisia, osa kiinalaisia.',
               kuva: {
                 tiedosto: 'Chuan Kee Restaurant Meals, Binondo, Manila, May 2025.jpg',
-                selite: 'Binondolaisen ruokapaikan pöydällä on kaksi '
-                  + 'riisikulhoa haudutettuine lihoineen ja lautasellinen '
-                  + 'kirkasta wonton-keittoa.',
+                selite: 'Binondon ruokapaikat ovat Manilan tunnetuimpia, '
+                  + 'ja keittiössä näkyvät sekä espanjalaiskausi että '
+                  + 'pitkä kiinalainen kauppasuhde.',
                 lahde: 'Ralff Nestor Nacor, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -45434,9 +45284,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'luettelemaan kaikkia kaupungissa kohtaamiaan kansoja.',
               kuva: {
                 tiedosto: '1748 Anson Map of Baja California and the Pacific with Trade Routes from Acapulco to Manila - Geographicus - Pacific-anson-1748.jpg',
-                selite: 'Vuoden 1748 merikartassa Tyynenmeren yli kulkevat '
-                  + 'vaaleat viivat ovat kartantekijän omia merkintöjä '
-                  + 'Manilan ja Acapulcon välisistä galleonireiteistä.',
+                selite: 'George Ansonin vuoden 1748 merikarttaan on '
+                  + 'merkitty Manilan ja Acapulcon väliset '
+                  + 'galleonireitit.',
                 lahde: 'Creator:George Anson, Wikimedia Commons (PD)',
               },
             },
@@ -45498,9 +45348,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'islamiin, sama tapahtui Manilassa: kaupungin hallitsija '
             + 'Rajah Matanda oli samaan aikaan Manilan kuningas ja Brunein '
             + 'sulttaanin Bolkiahin lapsenlapsenlapsi.',
-          selite: 'Laguna Copperplate -kirjoitus vitriinissä: tummuneeseen '
-            + 'kuparilevyyn on lyöty kymmenen riviä pyöreitä '
-            + 'kirjoitusmerkkejä.',
+          selite: 'Laguna Copperplate -kirjoitus on vanhin tunnettu '
+            + 'filippiiniläinen asiakirja, ja siinä mainitaan '
+            + 'ensimmäisen kerran Tondo.',
           lahde: 'Chipmunkdavis, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Manila',
         },
@@ -45519,8 +45369,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'filippiiniläisin käsin. Tulos kiertää 64 hehtaarin alan: '
             + 'kuutisen metriä korkea ja pari ja puoli metriä paksu kehä '
             + 'vallihautoineen.',
-          selite: 'Intramuroksen muuri ulkoapäin Puerta Realin kohdalta, ja '
-            + 'sen juurella levittäytyy entisen vallihaudan nurmikenttä.',
+          selite: 'Intramuroksen muuri kiertää 64 hehtaarin alan ja on '
+            + 'kuutisen metriä korkea ja pari ja puoli metriä paksu.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Intramuros',
         },
@@ -45540,9 +45390,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vahingoittumaton julkinen rakennus. Vuonna 1945 se oli '
             + 'ainoa Intramuroksen seitsemästä kirkosta, joka jäi '
             + 'pystyyn — katto tosin vaurioitui.',
-          selite: 'San Agustinin pääsali holvikaton alla: seinämaalaukset '
-            + 'jäljittelevät kohokuvia, ja keskikäytävällä palaa '
-            + 'kristallikruunu.',
+          selite: 'San Agustin oli vuonna 1945 ainoa Intramuroksen '
+            + 'seitsemästä kirkosta, joka jäi pystyyn.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'San Agustin Church (Manila)',
         },
@@ -45560,9 +45409,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yläjuoksulle Malacañangiin. Seitsemäs rakennettiin '
             + '1873–1879, ja jo seuraavana vuonna järistys kaatoi sen '
             + 'kellotornin. Kahdeksas ja nykyinen vihittiin 1958.',
-          selite: 'Vuoden 1899 valokuva katedraalista: kupoli ja julkisivu '
-            + 'ovat ehjät, mutta vasemmalla seisoo kellotornin murtunut '
-            + 'tynkä.',
+          selite: 'Vuoden 1863 järistys vaurioitti katedraalia niin '
+            + 'pahoin, että se purettiin, ja seuraavan kellotornin '
+            + 'kaatoi järistys vuonna 1880.',
           lahde: 'Jose de Olivares (1867-1942), author Walter B. Townsend, photographer, Wikimedia Commons (PD)',
           wiki: 'Manila Cathedral',
         },
@@ -46150,6 +45999,8 @@ export const KULTTUURI_KATEGORIAT = {
    * lauttamatkalla (opas) ja kalderan reunalta Bukit Senyumista
    * (matkailijalle-kuva).
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   sumatra: [
     {
       id: 'kaupunki',
@@ -46161,15 +46012,14 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Toba Lake from Sipinsur.jpg',
-          selite: 'Toba-järvi Sipinsurin näköalapaikalta saaren '
-            + 'pohjoisosassa: salmi kaartuu Samosirin ja mantereen '
-            + 'välissä, ja rannoilla näkyy kyliä ja peltoja.',
+          selite: 'Toba on sata kilometriä pitkä, kolmekymmentä leveä ja '
+            + '505 metriä syvä, maailman suurin tulivuorijärvi.',
           lahde: 'Almarams, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Kerinci Mountain.jpg',
-          selite: 'Kerinci keskisellä Sumatralla nousee pilvikerroksen '
-            + 'yläpuolelle aamulla Kersik Tuon kylästä nähtynä.',
+          selite: 'Kerinci nousee 3 805 metriin ja on Barisan-vuoriston '
+            + 'korkein huippu sekä Indonesian korkein tulivuori.',
           lahde: 'Hendypernando, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -46183,9 +46033,8 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Pantai Padang Wide View Gunung Padang Pagi Hari West Sumatra 2026.jpg',
-          selite: 'Padangin ranta Länsi-Sumatralla aamulla: ruskea hiekka '
-            + 'kaartuu Intian valtameren rantaan, ja niemellä kohoaa '
-            + 'metsäinen Gunung Padang.',
+          selite: 'Padang on Länsi-Sumatran pääkaupunki Intian '
+            + 'valtameren rannalla Barisan-vuoriston juurella.',
           lahde: 'Undeka 11, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -46196,8 +46045,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Musi River.jpg',
-          selite: 'Musi-joki Palembangissa saaren kaakkoiskulmassa: '
-            + 'vastarannalla on satamakaupungin matala talorivi.',
+          selite: 'Musi on Sumatran pisin joki, ja Palembangin '
+            + 'satamakaupunki on sen varrella saaren kaakkoisosassa.',
           lahde: 'Cynthia.veronica, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -46217,8 +46066,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'täyttyi vedellä. Pohja on sen jälkeen noussut takaisin: '
             + 'järven keskellä oleva Samosirin saari on kohonnut ainakin '
             + '450 metriä.',
-          selite: 'Toba-järvi Samosirin saaren rinteiltä: vihreät kukkulat '
-            + 'laskevat peltoina veteen ja vastaranta häviää utuun.',
+          selite: 'Samosirin saari Toba-järven keskellä on kohonnut '
+            + 'kalderan pohjan mukana ainakin 450 metriä.',
           lahde: 'Franklin Daniel Situmorang, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -46254,8 +46103,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuosiksi: illat paloivat punaisina, ja kun sään seuraajat '
             + 'kartoittivat tuhkan kulkeman virran, syntyi ensimmäinen '
             + 'havainto suihkuvirtauksesta.',
-          selite: 'Vuoden 1888 litografia Krakataun purkauksesta: '
-            + 'tuhkapatsas nousee saaren yllä ja hehku värjää meren.',
+          selite: 'Krakataun purkaus elokuussa 1883 kuului 4 800 '
+            + 'kilometrin päähän Rodriguesin saarelle ja on kovin '
+            + 'koskaan mitattu ääni.',
           lahde: 'Lithograph: Parker & Coward, Britain, Wikimedia Commons (PD)',
         },
         {
@@ -46319,9 +46169,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja yksi etelässä Palembangin suunnalla.',
               kuva: {
                 tiedosto: 'Kapal Penyeberangan Danau Toba Parapat.jpg',
-                selite: 'Lautta ylittää Toba-järven Parapatin ja Samosirin '
-                  + 'väliä, ja taustalla nousee kalderan reunan pitkä '
-                  + 'seinämä.',
+                selite: 'Parapatin lauttasatama on 173 kilometriä '
+                  + 'Medanista, ja sieltä lautta vie Toba-järven yli '
+                  + 'Samosirin saarelle.',
                 lahde: 'Herusutimbul, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -46358,9 +46208,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'eteläisemmältä Sumatralta.',
               kuva: {
                 tiedosto: 'Rumah Bolon (Batak Traditional House).jpg',
-                selite: 'Batakkien perinteinen talo eli rumah bolon: '
-                  + 'harjakatto kaartuu molemmista päistä ylös, ja runko '
-                  + 'lepää maalattujen paalujen päällä.',
+                selite: 'Batakkien perinteisen talon eli rumah bolonin '
+                  + 'katto kaartuu molemmista päistä ylös kuin veneen '
+                  + 'runko, ja päädyt on maalattu kirkkain värein.',
                 lahde: 'Roberto Marpaung, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -46403,8 +46253,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kahdentoista asteen tienoille.',
               kuva: {
                 tiedosto: 'Hamparan Sawah Hijau Kelurahan Lubuk Buaya.jpg',
-                selite: 'Riisipeltoja Padangin laidalla Länsi-Sumatralla, '
-                  + 'ja taustalla häämöttää utuinen Barisan-vuoristo.',
+                selite: 'Suuri osa Sumatran matalasta maasta on '
+                  + 'viljelmää, ja metsä alkaa vasta viljelysten takaa.',
                 lahde: 'DahliaDahlia Putri, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -46467,8 +46317,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kerinci Seblatin kansallispuistossa keskisellä Sumatralla, '
             + 'jonka alasta 83 prosentilta on löytynyt merkkejä '
             + 'tiikeristä.',
-          selite: 'Sumatran tiikeri lepää ruohikossa Medanin '
-            + 'eläintarhassa, jossa tämä kuva on otettu.',
+          selite: 'Sumatran tiikeri on maailman pienimpiä tiikereitä: '
+            + 'urokset painavat sadasta sataanneljäänkymmeneen kiloon.',
           lahde: 'Iyosswazzo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -46485,9 +46335,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ihmisen ruumiinlämpöön, jotta haju nousisi ilmaan, ja sen '
             + 'voi haistaa jopa 800 metrin päähän. Italialainen Odoardo '
             + 'Beccari löysi sen 1878 Priamanin yläpuolisilta kukkuloilta.',
-          selite: 'Rafflesia arnoldii kukkii metsänpohjalla: viisi '
-            + 'punaista, vaaleapilkkuista lehteä aukeaa syvän maljan '
-            + 'ympärille.',
+          selite: 'Rafflesia arnoldii on maailman suurin yksittäinen '
+            + 'kukka, noin metrin levyinen ja jopa yksitoista kiloa '
+            + 'painava.',
           lahde: 'Neisyaranifauzia, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -46503,8 +46353,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 '
             + 'maailmanperintöön 25 000 neliökilometrin kokonaisuutena. '
             + 'Kohde on ollut vuodesta 2011 uhanalaisten listalla.',
-          selite: 'Raivattua maata öljypalmun viljelyalueella Riaussa: '
-            + 'kantojen välissä kulkee kuivatusoja ja tie.',
+          selite: 'Sumatra on menettänyt lähes puolet trooppisesta '
+            + 'sademetsästään vuoden 1980 jälkeen, kun maata on raivattu '
+            + 'viljelmiksi.',
           lahde: 'Hayden, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -47093,6 +46944,8 @@ export const KULTTUURI_KATEGORIAT = {
    * en-Wikipedian sääruudusta; rivin hakutapa ja sen otos on
    * selitetty saatiedot.js:n omassa lohkokommentissa.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   lhasa: [
     {
       id: 'kaupunki',
@@ -47104,23 +46957,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Lhasa-Potala-04-Suedseite-2014-gje.jpg',
-          selite: 'Potala etelästä: valkoinen ja punainen palatsi '
-            + 'seisovat kallion päällä, ja niiden juurella kulkee '
-            + 'muuri niityn takana.',
+          selite: 'Potalassa on kolmetoista kerrosta, yli tuhat '
+            + 'huonetta, kymmenentuhatta pyhäkköä ja noin '
+            + 'kaksisataatuhatta patsasta.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Lhasa seen from Drepung Temple.jpg',
-          selite: 'Laakso lännestä Drepungin luostarin katolta: '
-            + 'etualalla kultainen pyörä, takana kaupunki ja sen '
-            + 'ympärillä kiertävät vuorenharjanteet.',
+          selite: 'Lhasa on Kyichun laakson pohjalla noin 3 650 metrin '
+            + 'korkeudessa, ja ympäröivät vuoret nousevat 5 500 metriin.',
           lahde: 'GrandCeres, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Lhasa-from-Sera4.JPG',
-          selite: 'Kaupunki pohjoisesta Seran rinteiltä: vasemmalla '
-            + 'Potala kalliollaan, keskellä Chagporin kukkula ja '
-            + 'edessä puiden peittämä laakso.',
+          selite: 'Matkailijan Lhasa on parin kilometrin nauha Kyichun '
+            + 'pohjoisrannalla: lännessä Norbulingka, keskellä Potala ja '
+            + 'idässä Barkhor.',
           lahde: 'ignat, Wikimedia Commons (CC BY 2.5)',
         },
       ],
@@ -47133,21 +46985,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Palacio de Potala - 02.JPG',
-          selite: 'Potala alhaalta: siksakkina nousevat portaikot '
-            + 'kulkevat valkoisen palatsin ohi punaiseen keskusosaan.',
+          selite: 'Potalan kaltevat kiviseinät ovat kolmisen metriä '
+            + 'paksut, ja perustuksiin valettiin kuparia järistysten '
+            + 'varalta.',
           lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Jokhang-1235.jpg',
-          selite: 'Jokhangin kullatut katot rukousviirien takaa, ja '
-            + 'alemman harjan päällä seisoo kaksi kultaista kaurista '
-            + 'pyörän molemmin puolin.',
+          selite: 'Jokhangin rakennutti 600-luvun puolivälissä Songtsen '
+            + 'Gampo majoittamaan buddhapatsasta, jonka Bhrikuti oli '
+            + 'tuonut myötäjäisinään.',
           lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Lhasa-von Yakhotel-12-beschneite Berge-2014-gje.jpg',
-          selite: 'Lumihuiput nousevat laakson reunalta pilviin, ja '
-            + 'etualalla kulkee kattoterassin kaide.',
+          selite: 'Lhasan ilmassa on vain 68 prosenttia siitä hapesta, '
+            + 'jota merenpinnalla hengitetään.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -47168,9 +47021,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kukkulan päältä ja yli kolmesataa laakson pohjalta. '
             + 'Kaltevat kiviseinät ovat kolmisen metriä paksut, ja '
             + 'perustuksiin valettiin kuparia järistysten varalta.',
-          selite: 'Punainen palatsi kohoaa valkoisen takaa, ja niiden '
-            + 'rajalla kulkee keltaisin verhoin varjostettu '
-            + 'parvekerivi.',
+          selite: 'Punainen palatsi rakennettiin vasta 1690–1694, '
+            + 'kaksitoista vuotta Viidennen dalai-laman kuoleman '
+            + 'jälkeen.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Potala Palace',
         },
@@ -47189,9 +47042,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Barkhor, 600-luvulta peräisin oleva kilometrin mittainen '
             + 'kehäkatu, jota kuljetaan myötäpäivään ja johon kuluu '
             + 'noin kaksikymmentä minuuttia.',
-          selite: 'Kullattujen rukousmyllyjen rivi jatkuu temppeliä '
-            + 'kiertävässä katetussa käytävässä niin kauas kuin valoa '
-            + 'riittää.',
+          selite: 'Jokhangia kiertää Barkhor, 600-luvulta peräisin oleva '
+            + 'kilometrin mittainen kehäkatu, jota kuljetaan '
+            + 'myötäpäivään.',
           lahde: '段修刚, Wikimedia Commons (PD)',
           wiki: 'Jokhang',
         },
@@ -47211,8 +47064,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hedelmät eivät Lhasassa kypsy. Lammissa ui '
             + 'riikinkukkoja, ja kolmelle saarelle rakennettiin '
             + 'paviljongit lyhyiden siltojen päähän.',
-          selite: 'Lampipaviljonki seisoo kivireunuksen päällä, ja sen '
-            + 'edessä on rivi ruukkuihin istutettuja krysanteemeja.',
+          selite: 'Norbulingka valmistui 1783 ja kasvoi '
+            + 'kolmenkymmenenkuuden hehtaarin puistoksi, Tiibetin '
+            + 'suurimmaksi ihmisen tekemäksi puutarhaksi.',
           lahde: 'Manuel Velazquez, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Norbulingka',
         },
@@ -47232,8 +47086,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ajoittain jopa kymmenentuhatta munkkia. Ganden seisoo '
             + 'Wangbur-vuorella 4 300 metrin korkeudessa neljänkymmenen '
             + 'kilometrin päässä koillisessa.',
-          selite: 'Drepungin valkoiset rakennukset nousevat rinnettä '
-            + 'ylös kuin oma pikkukaupunkinsa vuoren juurella.',
+          selite: 'Drepung oli 1930-luvulla maailman suurin luostari, '
+            + 'jossa asui 7 700 ja ajoittain jopa kymmenentuhatta '
+            + 'munkkia.',
           lahde: 'Maris Burbergs, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Drepung Monastery',
         },
@@ -47241,9 +47096,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Lhasa-Potala-60-Aufblick-2014-gje.jpg',
-          selite: 'Potalan valkoinen seinä alhaalta katsottuna: kalteva '
-            + 'muuri kapenee ylöspäin, ja sen harjalla porrastuvat '
-            + 'punaruskeat räystäskerrokset.',
+          selite: 'Potala on 119 metriä korkea kukkulan päältä mitattuna '
+            + 'ja yli kolmesataa metriä laakson pohjalta.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Lhasa on Tiibetin autonomisen alueen pääkaupunki ja '
@@ -47289,9 +47143,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tietä ja lännestä Nepalin rajalta.',
               kuva: {
                 tiedosto: 'Z6802 25T train at Lhasa Railway Station.jpg',
-                selite: 'Vihreä-keltainen makuuvaunujuna odottaa '
-                  + 'lähtöä Lhasan aseman laiturilla korkean '
-                  + 'lasikaton alla.',
+                selite: 'Qinghai–Tiibet-rata avattiin '
+                  + 'matkustajaliikenteelle 2006, ja se kulkee '
+                  + 'korkeimmillaan 5 072 metrissä.',
                 lahde: 'Baycrest, Wikimedia Commons (CC BY-SA 2.5)',
               },
             },
@@ -47320,9 +47174,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'neliökilometriä — loppu on vuorta.',
               kuva: {
                 tiedosto: 'Dissected alluvial fan and Lhasa River - panoramio.jpg',
-                selite: 'Vuorten juurelta laskeutuu uomien uurtama '
-                  + 'sorakeila, ja sen alla levittäytyvät joen '
-                  + 'vaaleat somerikot.',
+                selite: 'Kyichu tulee Nyainqêntanglhan lumihuippujen '
+                  + 'rotkoista, kulkee 315 kilometriä ja laskee Yarlung '
+                  + 'Tsangpoon.',
                 lahde: 'Raymond M. Coveney, …, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -47345,9 +47199,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'nykyään myös lehmänvoi käy, koska sitä saa helpommin.',
               kuva: {
                 tiedosto: 'Tsampa being blended with yak butter tea.jpg',
-                selite: 'Tummassa kulhossa on kasa vaaleaa ohrajauhoa, '
-                  + 'jota sekoitetaan lusikalla voiteehen puupöydän '
-                  + 'päällä.',
+                selite: 'Tsampa on paahdetusta ohrasta jauhettu '
+                  + 'valmiiksi kypsä jauho, jota ei tarvitse keittää.',
                 lahde: 'Jpatokal, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -47433,9 +47286,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'myötäjäisinä tuli buddhapatsas: toista varten '
             + 'rakennettiin Jokhang, toista varten Ramoche. Kuninkaan '
             + 'kuoltua kaupunkia alettiin sanoa Lhasaksi.',
-          selite: 'Ramochen punainen julkisivu kultaisine '
-            + 'kattokoristeineen, ja katon harjalla seisoo pyörä '
-            + 'kahden kauriin välissä.',
+          selite: 'Ramoche rakennettiin prinsessa Wenchengin '
+            + 'myötäjäisinään tuomaa buddhapatsasta varten.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lhasa',
         },
@@ -47455,9 +47307,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Ranskalaiset lähetyssaarnaajat Évariste Huc ja Joseph '
             + 'Gabet saapuivat 29. tammikuuta 1846 ja saivat '
             + 'lähtökäskyn kuukautta myöhemmin.',
-          selite: 'Vuoden 1901 valokuvassa ohrapellot ulottuvat '
-            + 'kaupungin laidalle asti, ja niiden takaa erottuu '
-            + 'muurien ympäröimä temppelialue vuorten juurella.',
+          selite: 'Gombojab Tsybikov otti vuosina 1900–1901 ensimmäisiä '
+            + 'valokuvia Lhasasta, joka oli ulkopuolisilta lähes '
+            + 'suljettu.',
           lahde: 'Gombojab Tsybikov Ovshe Norzunov, Wikimedia Commons (PD)',
           wiki: 'History of Tibet',
         },
@@ -47476,9 +47328,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'olisi muuten saanut kartoilleen. Näin syntyi myös '
             + 'kaupungin ensimmäinen tarkka pohjakaava, jossa on '
             + 'nimettynä kaksikymmentä rakennusta.',
-          selite: 'Vuoden 1878 raporttiin piirretyssä pohjakaavassa '
-            + 'kaupunki on pieni ruutu peltojen keskellä, ja sen '
-            + 'kohteet on numeroitu yhdestä kahteenkymmeneen.',
+          selite: 'Panditit laativat vuoden 1878 raporttiin Lhasan '
+            + 'ensimmäisen tarkan pohjakaavan, jossa on nimettynä '
+            + 'kaksikymmentä rakennusta.',
           lahde: 'Das, Sarat Chandra, 1849-1917, Wikimedia Commons (PD)',
           wiki: 'Nain Singh',
         },
@@ -47498,9 +47350,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nykyiseen Ulan Batoriin. Lhasan sopimus allekirjoitettiin '
             + 'Potalassa 7. syyskuuta, ja retkikunta lähti paluumatkalle '
             + 'saman kuun lopulla.',
-          selite: 'Vuoden 1904 karttaan on merkitty punaisella '
-            + 'retkikunnan reitti Darjeelingista Lhasaan ja jokaisen '
-            + 'etapin päivämäärä.',
+          selite: 'Younghusbandin retkikunta saapui Lhasaan 3. elokuuta '
+            + '1904, ja Lhasan sopimus allekirjoitettiin Potalassa 7. '
+            + 'syyskuuta.',
           lahde: 'Candler, Edmund (1874-1926), Wikimedia Commons (PD)',
           wiki: 'British expedition to Tibet',
         },
@@ -47572,6 +47424,8 @@ export const KULTTUURI_KATEGORIAT = {
    * vaatii. Kaupungin valokuvakorteissa (asia-lisat-valokuvat.js) jo
    * käytettyjä tiedostoja ei ole otettu uudelleen.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   kolkata: [
     {
       id: 'kaupunki',
@@ -47582,23 +47436,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Howrah Bridge view 01.jpg',
-          selite: 'Howrah-silta kaartuu Hooghlyn yli yhtenä jänteenä, ja '
-            + 'sen molemmissa päissä näkyvät kaksoiskaupungin rannat '
-            + 'laitureineen.',
+          selite: 'Howrah-silta ylittää Hooghlyn yhtenä jänteenä ja '
+            + 'yhdistää Kolkatan kaksoiskaupunkiinsa Howrahiin.',
           lahde: 'Indrajit Das, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Victoria Memorial situated in Kolkata.jpg',
-          selite: 'Victoria Memorialin valkoinen marmorirakennus '
-            + 'levittäytyy puutarhojensa taakse, ja kupolin päällä '
-            + 'seisoo siivekäs voitonhahmo.',
+          selite: 'Victoria Memorial avattiin yleisölle joulukuussa '
+            + '1921, ja sen suunnitteli William Emerson '
+            + 'Makrana-marmorista.',
           lahde: 'Subhrajyoti07, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Kolkata skyline as seen from the Maidan, Kolkata, India.jpg',
-          selite: 'Maidanin nurmi jatkuu yksinäisen puun ohi niin kauas, '
-            + 'että kaupungin tornitalot erottuvat vasta utuisella '
-            + 'taivaanrannalla.',
+          selite: 'Maidan on Kolkatan keskellä leviävä avoin '
+            + 'nurmikenttä, jota kutsutaan kaupungin keuhkoiksi.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -47611,22 +47463,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Writer\'s Building (14837276474).jpg',
-          selite: 'Writers\' Buildingin punatiilinen kulma nousee puiden '
-            + 'takaa, ja sen vieressä kohoaa St. Andrew\'n kirkon '
-            + 'valkoinen torni.',
+          selite: 'Writers’ Building sai nimensä Itä-Intian '
+            + 'kauppakomppanian kirjureista ja seisoo B. B. D. Baghin '
+            + 'hallintokorttelissa.',
           lahde: 'Paul Hamilton, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Indian Museum Building with Quadrangle - Inside North View - Indian Museum - Kolkata 2014-02-14 9248.JPG',
-          selite: 'Intian museon sisäpiha on nurmikenttä, jota kiertää '
-            + 'kaksikerroksinen valkoinen kaariholvikäytävä.',
+          selite: 'Aasian seuran vuonna 1814 perustama Intian museo on '
+            + 'kokoelmaltaan Aasian vanhin ja suurin museo.',
           lahde: 'Biswarup Ganguly, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Prinsep Memorial at the Prinsep Ghat, with the Vidyasagar Setu in the backdrop.jpg',
-          selite: 'Prinsepin muistomerkin pylväsrivistö seisoo '
-            + 'jokirannassa, ja sen takaa nousevat Vidyasagar-sillan '
-            + 'vaijerit.',
+          selite: 'Prinsep Ghatin pylväsrivi rakennettiin 1843 oppineen '
+            + 'James Prinsepin muistoksi Hooghlyn rannalle.',
           lahde: 'Sudhir Narayana, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -47645,9 +47496,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kantta irrotettiin säännöllisesti, jotta laivat pääsivät '
             + 'ohi. Elokuusta 1879 alkaen siltaa valaisivat sähkölamput, '
             + 'joiden virran antoi Mullick Ghatin pumppuaseman dynamo.',
-          selite: 'Vanhaan värjättyyn postikorttiin on painettu '
-            + 'julkaisijan oma kuvateksti, ja itse kuvassa ponttonisilta '
-            + 'on täynnä kärryjä, kantajia ja päivänvarjoja.',
+          selite: 'Hooghlyn ponttonisilta avattiin liikenteelle 17. '
+            + 'lokakuuta 1874, ja sen kantta irrotettiin säännöllisesti '
+            + 'laivojen tieltä.',
           lahde: 'F. Hartmann London, Wikimedia Commons (PD)',
           wiki: 'Howrah Bridge',
         },
@@ -47665,9 +47516,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kolmekymmentä kilometriä rataa. Sähkö tuli 1902, verkko '
             + 'kasvoi 1960-luvulla 37 linjaan, ja nykyään liikennöitäviä '
             + 'linjoja on kaksi.',
-          selite: 'Kaksi vanhaa sinistä raitiovaunua odottaa päätepysäkin '
-            + 'kiskoilla, ja etummaisen reittikilvessä on linjan numero '
-            + 'ja päätepysäkkien nimet.',
+          selite: 'Intian ensimmäinen hevosvetoinen raitiovaunu lähti '
+            + 'liikkeelle 24. helmikuuta 1873, ja sähkö tuli '
+            + 'raitiotielle vuonna 1902.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Trams in Kolkata',
         },
@@ -47687,8 +47538,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Makrana-marmorirakennus avattiin yleisölle joulukuussa '
             + '1921, ja keskussali tehtiin tahallaan hitusen Taj Mahalia '
             + 'suuremmaksi.',
-          selite: 'Muistomerkin länsijulkisivu kaartuu pylväikkönä kupolin '
-            + 'alla, ja kupolin huipulla seisoo pronssinen voiton enkeli.',
+          selite: 'Victoria Memorialin keskussali tehtiin tahallaan '
+            + 'hitusen Taj Mahalia suuremmaksi.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Victoria Memorial, Kolkata',
         },
@@ -47706,9 +47557,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '-kojujen verkko, jota sanotaan Boi Paraksi eli '
             + 'kirjakortteliksi. Valikoima ulottuu kahdensadanviidenkymmenen '
             + 'vuoden takaisista teoksista tuoreisiin oppikirjoihin.',
-          selite: 'Lääketieteellisen opiston pääjulkisivussa on korkea '
-            + 'pylväskuisti ja kolmiopääty, jonka alle on kirjoitettu '
-            + 'oppilaitoksen nimi.',
+          selite: 'Calcutta Medical College perustettiin 1835, ja se oli '
+            + 'Aasian ensimmäinen eurooppalaisen lääketieteen opinahjo.',
           lahde: 'Pinakpani, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'College Street (Kolkata)',
         },
@@ -47716,9 +47566,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Victoria Memorial Kolkata India 05.jpg',
-          selite: 'Sumuisena aamuna Victoria Memorialin puistossa '
-            + 'etualalla seisoo pronssipatsas jalustallaan ja taustalla '
-            + 'häämöttää marmorikupoli.',
+          selite: 'Victoria Memorialin rahat koottiin vapaaehtoisina '
+            + 'lahjoituksina, ja niitä kertyi runsaat kymmenen miljoonaa '
+            + 'rupiaa.',
           lahde: 'Philip Nalangan, Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Kolkata on Länsi-Bengalin pääkaupunki ja Itä-Intian '
@@ -47760,9 +47610,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja jokea ylitetään lautoilla siltojen ohella.',
               kuva: {
                 tiedosto: 'Yellow taxi at Esplanade in Kolkata.jpg',
-                selite: 'Keltainen Ambassador-taksi odottaa Esplanaden '
-                  + 'pitkän pylväskäytävän edessä, jonka holvien alle on '
-                  + 'levitetty vaatekojuja.',
+                selite: 'Kolkatan kaduilla kulkevat keltaiset '
+                  + 'Ambassador-taksit, moottoririksat ja paikoin yhä '
+                  + 'käsin vedettävät riksat.',
                 lahde: 'Mettle30, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -47785,8 +47635,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ovat vuosilta 1737 ja 1864.',
               kuva: {
                 tiedosto: 'Mangrove Vegetation of Sundarban, West Bengal, India 03.jpg',
-                selite: 'Sundarbansin mangrovemetsässä juuret nousevat '
-                  + 'mudasta tiheänä piikkimattona vesirajan yläpuolelle.',
+                selite: 'Gangesin suisto jatkuu Kolkatan eteläpuolella '
+                  + 'Sundarbansin mangrovemetsinä.',
                 lahde: 'Kingshuk Mondal, Wikimedia Commons (CC BY 4.0)',
               },
             },
@@ -47808,8 +47658,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kerhossa istutaan pitkiä juttutuokioita nimeltä adda.',
               kuva: {
                 tiedosto: 'Making of Durga idol in Kumartuli 04.jpg',
-                selite: 'Kumortulin verstaassa odottaa rivi maalaamattomia '
-                  + 'savihahmoja, joista suurimmalla on kymmenen kättä.',
+                selite: 'Durga Pujan savipatsaiden teko alkaa jo kesällä '
+                  + 'Kumortulin savenvalajakorttelissa, jossa runko '
+                  + 'kootaan oljesta ja bambusta.',
                 lahde: 'Pinakpani, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -47831,9 +47682,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lautat kulkevat edelleen.',
               kuva: {
                 tiedosto: 'M.V.Kasturi, a ferry boat sailing on Hooghly river, image captured from Nimtala burning ghat.jpg',
-                selite: 'Sinivalkoinen lautta kulkee tyhjänä Hooghlyllä, '
-                  + 'ja vastarannalla näkyvät sataman nosturit ja '
-                  + 'telakkarakennukset.',
+                selite: 'Kolkatan satamalaitos perustettiin 1870, ja se '
+                  + 'on yhä Intian vanhin ja ainoa suuri jokisatama.',
                 lahde: 'Subhrajyoti07, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -47895,9 +47745,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'komppanialle 1698. Nimi juontuu Kalikatasta, ja sen '
             + 'taustalla arvellaan olevan jumalatar Kalille pyhitetty '
             + 'kenttä.',
-          selite: 'Vanhassa puupiirroksessa kaupunki näkyy matalana '
-            + 'rivistönä joen takana, ja etualalla makaa jokiveneitä '
-            + 'palmujen juurella.',
+          selite: 'Kolkata kasvoi kolmesta kylästä: kalastajien '
+            + 'Kalikatasta, kutojien Sutanutista ja kauppiaiden '
+            + 'Gobindapurista.',
           lahde: 'Sears, Robert, 1810-1892, Wikimedia Commons (PD)',
           wiki: 'Kolkata',
         },
@@ -47916,9 +47766,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'komppaniasta mogulikeisarin verottajan Bengalissa, '
             + 'Biharissa ja Orissassa, ja 1773 Kalkutasta tuli '
             + 'komppanian pääkonttori.',
-          selite: 'Vuoden 1735 kaiverruksessa komppanian purjelaivat '
-            + 'ovat ankkurissa Fort Williamin edustalla, ja alalaitaan on '
-            + 'kaiverrettu painajan oma omistuskirjoitus.',
+          selite: 'Komppania rakensi Fort Williamin Hooghlyn itärannalle '
+            + 'vuonna 1712 suojaamaan kauppahuonettaan.',
           lahde: 'Elisha Kirkall (c. 1682–1742), Wikimedia Commons (PD)',
           wiki: 'Fort William, West Bengal',
         },
@@ -47936,9 +47785,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'saapui rajan takaa kaupunkiin. Väkiluku kasvoi nopeammin '
             + 'kuin asunnot ja vesijohdot, ja siitä on kirjoitettu '
             + 'bengalilaisessa kirjallisuudessa siitä lähtien.',
-          selite: '1850-luvun valokuvassa pääkaupungin talot leviävät '
-            + 'Ochterlonyn muistomerkin huipulta katsottuna tasaisena '
-            + 'kattomerenä horisonttiin asti.',
+          selite: 'Kalkutta oli Brittiläisen Intian pääkaupunki, kunnes '
+            + 'Yrjö V julisti vuonna 1911 pääkaupungin siirtyvän '
+            + 'Delhiin.',
           lahde: 'Creator:Captain R. B. Hill, Wikimedia Commons (CC0)',
           wiki: 'Kolkata',
         },
@@ -47958,9 +47807,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ammatinharjoittajat ja sanomalehtien tilaajat, ja '
             + 'bengalilainen renessanssi teki kaupungista Intian '
             + 'älyllisen keskuksen.',
-          selite: 'Vanhaan postikorttiin on painettu julkaisijan oma '
-            + 'kuvateksti, ja kuvassa härkävankkurit tuovat raakaa '
-            + 'juuttia pitkän tehdasrakennuksen portille.',
+          selite: 'Tekstiili- ja juuttiteollisuus kasvattivat Kalkuttaa '
+            + 'nopeasti 1850-luvulta alkaen.',
           lahde: 'Thacker Spink & Co. Kolkata, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Kolkata',
         },
@@ -49060,6 +48908,8 @@ export const KULTTUURI_KATEGORIAT = {
    * Trimurti). Kaupungin valokuvakorteissa (asia-lisat-valokuvat.js)
    * jo käytettyjä tiedostoja ei ole otettu uudelleen.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   mumbai: [
     {
       id: 'kaupunki',
@@ -49071,23 +48921,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Mumbai Skyline from Marine Drive.JPG',
-          selite: 'Back Bayn kaari Marine Driven rannalta: oikealla '
-            + 'kasautuvat aallonmurtajan betonijalat, ja vastarannalla '
-            + 'kaupungin tornirivi häämöttää utuun.',
+          selite: 'Marine Driven rantabulevardi rakennettiin Back Bayn '
+            + 'kaarelle 1900-luvun täyttömaalle.',
           lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'View of Gateway of India Along with the Taj Palace Hotel from the Sea.JPG',
-          selite: 'Satamasta katsottuna rannassa seisovat Taj-hotellin '
-            + 'punainen kupoli, sen tornirakennus ja basalttinen Gateway '
-            + 'of India, ja edustalla kulkee matkustajalautta.',
+          selite: 'Gateway of India valmistui vuonna 1924 ja avattiin '
+            + 'yleisölle joulukuun neljäntenä päivänä.',
           lahde: 'HoneyB (Agra), Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Bombay High Court and Rajabai Clock Tower from Oval Maidan, Mumbai.jpg',
-          selite: 'Oval Maidanin nurmen takaa nousevat palmurivin yli '
-            + 'korkeimman oikeuden punaiset katot ja Rajabain '
-            + 'kellotorni.',
+          selite: 'Oval Maidanin laidalla seisovat Bombayn korkein '
+            + 'oikeus ja Rajabain kellotorni, osa purettujen muurien '
+            + 'tilalle noussutta goottilaista rivistöä.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -49100,15 +48948,15 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Main mandapa and pillars in Cave 1 of Elephanta Caves.jpg',
-          selite: 'Elephantan pääluolan sali on hakattu yhtenäiseen '
-            + 'basalttiin, ja sen paksut pylväät kannattavat koko mäen '
-            + 'painoa.',
+          selite: 'Elephantan temppelit on hakattu yhtenäiseen '
+            + 'basalttiin, ja ne ajoitetaan useimmin 500- ja '
+            + '600-luvuille.',
           lahde: 'Saankav, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Crawford Market 03.jpg',
-          selite: 'Crawford Marketin torni kohoaa keltaisesta Kurlan '
-            + 'kivestä, ja sen huipulla on peltikatteinen puinen lyhty.',
+          selite: 'Crawford Market muurattiin keltaisesta Kurlan kivestä '
+            + '1800-luvun kauppakaupungin markkinahalliksi.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -49136,9 +48984,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jälkeen paaleille rakennettiin katokset ja varastot. '
             + 'Vanha asema purettiin, ja tilalle nousi kymmenessä '
             + 'vuodessa Victoria Terminus.',
-          selite: 'Clifton & Co:n valokuvassa uusi Victoria Terminus '
-            + 'levittäytyy puiden takana hevosvaunujen aikaan, ja kuvan '
-            + 'yläkulmaan on merkitty albumin oma järjestysnumero.',
+          selite: 'Victoria Terminus nousi kymmenessä vuodessa vanhan '
+            + 'Bori Bunderin aseman tilalle.',
           lahde: 'Clifton & Co, Wikimedia Commons (PD)',
           wiki: 'Chhatrapati Shivaji Terminus',
         },
@@ -49158,9 +49005,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yleisölle joulukuun neljäntenä päivänä. Rahat loppuivat '
             + 'kesken, eikä sille johtavaa juhlakatua koskaan rakennettu: '
             + 'portti seisoo siksi vinossa kulmassa katuun nähden.',
-          selite: 'Kaaren yläpuolelle on hakattu kiveen, että portti on '
-            + 'pystytetty muistoksi hallitsijaparin maihinnoususta '
-            + 'joulukuun toisena päivänä vuonna MCMXI.',
+          selite: 'Gateway of India pystytettiin muistoksi Yrjö V:n ja '
+            + 'kuningatar Maryn maihinnoususta 2. joulukuuta 1911.',
           lahde: 'iMahesh, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Gateway of India',
         },
@@ -49180,9 +49026,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'portugalilaisiin sotilaisiin. Norsu yritettiin viedä 1864 '
             + 'Englantiin, se hajosi matkalla ja koottiin uudelleen '
             + '1914.',
-          selite: 'Trimurtin kolmet kasvot on veistetty luolan '
-            + 'takaseinään, ja keskimmäisen päähine ulottuu lähes '
-            + 'kattoon asti.',
+          selite: 'Trimurti Sadashiva on seitsemän metriä korkea '
+            + 'Shiva-kuva, jonka kolmet kasvot esittävät luomista, '
+            + 'säilyttämistä ja hävittämistä.',
           lahde: 'Ricardo Martins, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Elephanta Caves',
         },
@@ -49202,9 +49048,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laatikon, valkoisen puvun ja lakin. Nykyään noin '
             + 'viisituhatta miestä liikuttaa lähes kaksisataatuhatta '
             + 'rasiaa päivässä.',
-          selite: 'Dabbawalan polkupyörä nojaa aitaan täyteen lastattuna: '
-            + 'teräsrasioita, kangaskasseja ja hihnoja riippuu molemmin '
-            + 'puolin takapyörää.',
+          selite: 'Dabbawalat kuljettavat lounasrasioita junilla ja '
+            + 'polkupyörillä: noin viisituhatta miestä liikuttaa lähes '
+            + 'kaksisataatuhatta rasiaa päivässä.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Dabbawala',
         },
@@ -49212,9 +49058,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Close-up of Chhatrapati Shivaji Terminus.jpg',
-          selite: 'Aseman keskuskupolin päällä seisoo naishahmo, joka '
-            + 'esittää Edistystä soihtu kädessään, ja alhaalla portin '
-            + 'pielissä makaa kaksi kivileijonaa.',
+          selite: 'Chhatrapati Shivaji Terminuksen keskuskupolin päällä '
+            + 'seisoo Edistystä esittävä naishahmo soihtu kädessään.',
           lahde: 'Joe Ravi, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Mumbai on Maharashtran pääkaupunki ja Intian talouden '
@@ -49259,9 +49104,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'maanantaisin, jolloin luolat ovat kiinni.',
               kuva: {
                 tiedosto: 'Local train leaving CST.jpg',
-                selite: 'Central Railwayn violettivalkoinen lähijuna '
-                  + 'lähtee asemalta ovet auki, ja yhden oven kylkeen on '
-                  + 'maalattu naisille varatun vaunun merkki.',
+                selite: 'Mumbain lähijunaverkko on 319 kilometriä pitkä '
+                  + 'ja on kaupungin liikenteen selkäranka.',
                 lahde: 'Shishirdasika, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -49286,9 +49130,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'säännöllisesti matalimpiin kortteleihin.',
               kuva: {
                 tiedosto: 'Mumbai Bandra-Worli Sea Link.jpg',
-                selite: 'Vinoköysisilta kaartuu matalan kivirannan yli, '
-                  + 'ja sen takana erottuu kaupungin länsirannan '
-                  + 'tornirivi.',
+                selite: 'Bandra–Worlin vinoköysisilta ylittää meren '
+                  + 'kaupungin länsirannalla.',
                 lahde: 'Rutiknatekar, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -49313,9 +49156,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kortteleita polkupyörillä.',
               kuva: {
                 tiedosto: 'Vada pav and Misal pav.jpg',
-                selite: 'Kahdella lautasella on vada pav eli '
-                  + 'perunapyörykkä sämpylän välissä ja misal pav eli '
-                  + 'tulinen papukastike oman sämpylänsä kanssa.',
+                selite: 'Vada pav on mausteinen perunapyörykkä '
+                  + 'pav-sämpylän välissä, ja sitä myydään kaupungissa '
+                  + 'yli kahdessakymmenessätuhannessa kojussa.',
                 lahde: 'आशीष भटनागर, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -49341,9 +49184,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'takia kaupunkiin tullaan katsomaan arkkitehtuuria.',
               kuva: {
                 tiedosto: 'Flora fountain, Mumbai 01.jpg',
-                selite: 'Suihkulähteen huipulla seisoo kukkien jumalatar '
-                  + 'Flora, ja alemman altaan kulmissa istuu '
-                  + 'vuodenaikoja esittäviä hahmoja.',
+                selite: 'Flora Fountain pystytettiin 1864 puretun Kirkon '
+                  + 'portin paikalle, ja sen veisti Portlandin kiveen '
+                  + 'James Forsythe.',
                 lahde: 'Pratishkhedekar, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -49414,10 +49257,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kauppakomppanialle kymmenen punnan vuosivuokralla, ja '
             + 'väkiluku nousi kymmenestätuhannesta '
             + 'kuuteenkymmeneentuhanteen vuoteen 1675 mennessä.',
-          selite: 'Noin vuoden 1665 käsinväritetyssä kaiverruksessa '
-            + 'englantilainen kauppahuone näkyy kahdesta suunnasta, ja '
-            + 'painaja on kirjoittanut alalaitaan hollanniksi '
-            + '"Englantilainen konttori Bombaijssa".',
+          selite: 'Englannin kruunu vuokrasi Bombayn saaret Itä-Intian '
+            + 'kauppakomppanialle vuonna 1668 kymmenen punnan '
+            + 'vuosivuokralla.',
           lahde: 'Anoniem / Anonymous (engraver / etcher), Wikimedia Commons (PD)',
           wiki: 'Mumbai',
         },
@@ -49436,9 +49278,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pengertie 1803, Colaban 1838 ja Mahim–Bandran 1845. Milloin '
             + 'saaret olivat lopulta yhtä maata, riippuu artikkelista — '
             + 'Hornby Vellard sanoo 1838 ja Seven Islands of Bombay 1845.',
-          selite: 'Vuoden 1764 ranskalaisessa merikartassa Bombayn saari, '
-            + 'Salsette ja Elefantin saari ovat vielä toisistaan erillään, '
-            + 'ja kartan oma nimikilpi on vasemmassa alakulmassa.',
+          selite: 'Bombayn saaret olivat 1700-luvulla vielä erillään '
+            + 'toisistaan, ja pengertiet yhdistivät ne vasta '
+            + '1800-luvulla.',
           lahde: 'Jacques-Nicolas Bellin, Wikimedia Commons (PD)',
           wiki: 'Hornby Vellard',
         },
@@ -49457,9 +49299,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '1896 kaupunkiin iski buboninen rutto, joka vaati yli '
             + '20 000 kuollutta ja ajoi suuren osan asukkaista pois; '
             + 'tekstiiliteollisuus toipui hitaasti.',
-          selite: 'Noin vuoden 1870 valokuvassa Elphinstone Circlen '
-            + 'puisto suihkulähteineen on vasta istutettu, ja sen takana '
-            + 'kohoaa St. Thomasin katedraalin torni.',
+          selite: 'Puuvillabuumin rahoilla Bombay rakensi 1860-luvulla '
+            + 'kokonaan uuden keskustan vanhan linnoituksen paikalle.',
           lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
           wiki: 'Mumbai',
         },
@@ -49479,9 +49320,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'väärä: jumalattarella on saarella oma temppelinsä. '
             + 'Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi '
             + 'marraskuussa 1995.',
-          selite: 'Vuoden 1890 photochrom-vedoksessa hindutemppelin '
-            + 'veistoksellinen julkisivu reunustaa Kalbadevi Roadia, ja '
-            + 'kadulla kulkee härkävankkureita ja kantajia.',
+          selite: 'Kaupungin nimi tulee Mumbadevistä, koli-kalastajien '
+            + 'suojelusjumalattaresta, jolla on saarella oma '
+            + 'temppelinsä.',
           lahde: 'Photoglob Co., publisher, Wikimedia Commons (PD)',
           wiki: 'Mumbai',
         },
