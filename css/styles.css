@@ -12861,6 +12861,103 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 /*
+ * PIIRROSKORTTI KOKORUUTUKARTAN PÄÄLLE (omistajan bugiraportti
+ * 23.8.2026: "Kokoruudun näkymä avaa vieläkin suoraan juttuun
+ * klikatessa vaikka pitäisi näyttää vain piirros isompana").
+ *
+ * Kerros on kartan oman kortin lapsi (js/nahtavyydet.js:
+ * naytaKohdekortti), mutta kiinnitettynä se kattaa koko ruudun:
+ * .postikortti.kulttuuri-suurennos on nimenomaan transformiton, joten
+ * kiinnitetyn jälkeläisen sijoituskehys on yhä ikkuna. Z-indeksi on
+ * kortin OMASSA pinossa (kortti itse on 70), joten pieni luku riittää
+ * nostamaan piirroksen kartan ja sen zoomipainikkeiden (4) päälle.
+ *
+ * Pohja on kartan pohjaa kevyempi: kartta saa näkyä alta, koska tämä
+ * on kartan välivaihe eikä uusi näkymä — ja koska sulku palauttaa
+ * juuri siihen karttaan.
+ */
+.kartta-suurennos .kartta-kohdekerros {
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(11, 8, 5, 0.72);
+  cursor: zoom-out;
+}
+
+.kartta-suurennos .kartta-kohdekortti {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: min(92vw, 620px);
+  padding: 1.1rem 1.1rem 0.9rem;
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  border-radius: 4px;
+  background: #efe7d4;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+  cursor: default;
+}
+
+/*
+ * Piirros on nappi, ei kuva kehyksessä: koko kuva vie juttuun samoin
+ * kuin lehden suurennetussa piirroksessa (omistajan linjaus
+ * 15.8.2026). Läpinäkyvä leikkauskuva näytetään paperinvärisellä
+ * pohjalla ilman omaa kehystä.
+ */
+.dialog .kartta-suurennos button.kartta-kohdekortti-kuva {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.kartta-suurennos .kartta-kohdekortti-kuva img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(84vw, 560px);
+  /* Kortin nimi ja nappi mahtuvat kuvan alle myös matalalla
+   * vaakaruudulla. */
+  max-height: 62dvh;
+  margin-inline: auto;
+  object-fit: contain;
+  background: none;
+  border: 0;
+}
+
+.kartta-suurennos .kartta-kohdekortti-nimi {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 0.8rem;
+  text-align: center;
+  color: #2c1e07;
+}
+
+.dialog .kartta-suurennos button.kartta-kohdekortti-linkki {
+  min-height: 0;
+  padding: 0.24rem 0.8rem;
+  border: 1px solid rgba(70, 51, 31, 0.5);
+  border-radius: 3px;
+  background: rgba(232, 211, 160, 0.7);
+  font-family: var(--font-type);
+  font-size: 0.7rem;
+  color: #2c1e07;
+  cursor: pointer;
+}
+
+.dialog .kartta-suurennos button.kartta-kohdekortti-linkki:hover,
+.dialog .kartta-suurennos button.kartta-kohdekortti-linkki:focus-visible {
+  background: rgba(232, 211, 160, 0.95);
+}
+
+/*
  * VASTASKAALAUS. Kaikki lavalla suurenisi zoomin mukana, myös se, mikä
  * ei ole karttaa: numeroympyrä on merkki eikä maisema, ja
  * kolminkertaisena se peittäisi juuri sen korttelin, jota katsotaan.
