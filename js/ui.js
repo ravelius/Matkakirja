@@ -9524,9 +9524,23 @@ export class UI {
    * ensimmäinen juliste tulee lehden minitehtävästä, ja juuri se
    * paljastaa rivin.
    */
+  /**
+   * Voitettujen julisteiden lista rivin ja gallerian tarpeisiin.
+   * KEHITTÄJÄTILASSA KAIKKI JULISTEET NÄKYVÄT VOITETTUINA (omistajan
+   * tilaus 22.8.2026: "Laita kaikki julisteet matkalaukkuun kun
+   * kehittäjä tila") — koko kokoelman voi katselmoida pelaamatta
+   * minitehtäviä. Pelitilaan (game.julisteet) ei kosketa: tämä on
+   * pelkkä näkymä, ja kehittäjätilan sammuttaminen palauttaa oikean
+   * tilanteen.
+   */
+  julisteVoitot() {
+    if (this.kehittajaTila) return Object.keys(JULISTEET);
+    return [...(this.game.julisteet ?? [])].filter((id) => JULISTEET[id]);
+  }
+
   renderJulisteet() {
     if (!this.julisteKotelo || !this.passportJulisteet) return;
-    const voitetut = [...(this.game.julisteet ?? [])].filter((id) => JULISTEET[id]);
+    const voitetut = this.julisteVoitot();
     this.julisteKotelo.hidden = voitetut.length === 0;
     if (!voitetut.length) return;
     const kaikki = Object.keys(JULISTEET).length;
@@ -9569,7 +9583,8 @@ export class UI {
    */
   avaaJulisteGalleria() {
     this.suljeJulisteGalleria();
-    const voitetut = new Set([...(this.game.julisteet ?? [])].filter((id) => JULISTEET[id]));
+    // Kehittäjätilassa koko kokoelma on auki (ks. julisteVoitot).
+    const voitetut = new Set(this.julisteVoitot());
     const ryhmat = julisteMantereet();
     const kortti = html('div', 'julistegalleria');
     kortti.setAttribute('role', 'dialog');
