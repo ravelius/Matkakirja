@@ -29108,4 +29108,431 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * CHENNAIN KOHDEKARTAN JUTUT (Opus 22.8.2026). Kymmenen kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään.
+   * Faktat on tarkistettu en-Wikipedian artikkeleista Madras High
+   * Court, Chennai Central railway station, Ripon Building, Fort St.
+   * George, Chennai Egmore railway station, Government Museum Chennai,
+   * Connemara Public Library, Chepauk Palace, Marina Beach,
+   * Kapaleeshwarar Temple ja St. Thomas Cathedral Basilica Chennai
+   * (haettu 22.8.2026).
+   *
+   * KOLME SISÄISTÄ RISTIRIITAA on kirjoitettu auki lukijalle
+   * (v925/v932:n tapa): Ripon Buildingin peruskiven laskupäivä on
+   * samassa artikkelissa sekä 11. että 12. joulukuuta 1909; Marinan
+   * pituus on Marina Beach -artikkelin johdannossa kuusi kilometriä ja
+   * mittaosiossa kolmetoista (infoboksi erottaa hiekan ja promenadin);
+   * Kapaleeshwararin itäinen gopuram on samassa artikkelissa sekä noin
+   * neljäkymmentä metriä että sataakaksikymmentä jalkaa.
+   *
+   * CHEPAUKIN PALATSIN SIIPIÄ EI NIMETÄ, koska artikkeli sanoo
+   * Humayun Mahalia sekä pohjois- että eteläsiiveksi. Juttu kertoo
+   * vain, että siipiä on kaksi ja että toinen rakennettiin uudelleen
+   * 1868–1871.
+   *
+   * POIS JÄTETTY: SMS Emdenin vuoden 1914 pommitus, jonka Madras High
+   * Court- ja Chennai Port -artikkelit mainitsevat uhrilukuineen; se
+   * on sotatapahtuma eikä tuo rakennuksen omaan tarinaan mitään.
+   * Chennai Centralin vuoden 2019 uusi virallinen nimi mainitaan
+   * hallinnollisena tosiasiana ilman poliitikon nimeä ja taustaa,
+   * samalla tavalla kuin Madras–Chennai-nimenvaihdos.
+   */
+  chennai: {
+    'Madrasin ylin oikeus': {
+      aika: 'perustettu 1862, rakennus 1892',
+      teksti: 'Madrasin ylin oikeus perustettiin 26. kesäkuuta 1862 '
+          + 'yhtenä kolmesta Britannian kruunun peruskirjalla '
+          + 'perustetusta ylimmästä oikeudesta. Se korvasi Madrasin '
+          + 'korkeimman oikeuden, joka oli hoitanut kaupungin '
+          + 'lainkäyttöä vuodesta 1817, ja on yhä yksi Intian '
+          + 'vanhimmista tuomioistuimista. Ensimmäiset kolmekymmentä '
+          + 'vuotta se toimi Periametissa väliaikaisissa tiloissa.'
+          + '\n\n'
+          + 'Uuden oikeuskorttelin rakentaminen George Towniin alkoi '
+          + 'lokakuussa 1888, ja rakennus vihittiin käyttöön 12. '
+          + 'heinäkuuta 1892. Sen suunnitteli indo-saraseeniseen tyyliin '
+          + 'J. W. Brassington, ja työtä jatkoi Henry Irwin. '
+          + 'Alkuperäisessä suunnitelmassa saleja oli yksitoista: kuusi '
+          + 'ylimmälle oikeudelle, neljä pienten riita-asioiden '
+          + 'tuomioistuimelle ja yksi siviilioikeudelle. Kokonaisuus on '
+          + 'yksi maailman suurimmista oikeustaloista.'
+          + '\n\n'
+          + 'Talossa on kaksi omaa erikoisuutta. Madras Law Journal '
+          + 'perustettiin 1891 joukon madrasilaisia asianajajia '
+          + 'aloitteesta, ja se on Intian vanhin oikeustieteellinen '
+          + 'aikakauslehti. Tuomarien edellä kulkee yhä vahtimestari '
+          + 'hopeinen seremonianuija kädessään — brittiajan tapa, josta '
+          + 'useimmat muut ylimmät oikeudet ovat luopuneet. Madurain '
+          + 'sivuistunto perustettiin 2004.',
+      kuvat: [
+        {
+          tiedosto: '04High Court Madras.jpg',
+          selite: 'Vanhaan kirjankuvaan on painettu julkaisijan oma '
+            + 'kuvateksti ja negatiivin tekijä, ja kuvassa oikeustalon '
+            + 'tornit ja majakkakupoli nousevat aukion takaa.',
+          lahde: 'W.A. Cross, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chennai Centralin asema': {
+      aika: '1873, kellotorni 1900',
+      teksti: 'Asema avattiin 1873 kaupungin toiseksi pääteasemaksi '
+          + 'purkamaan Royapuramin ruuhkaa; Royapuram jäi sataman '
+          + 'liikenteelle. Laitureita oli aluksi neljä, ja asema '
+          + 'rakennettiin Park Towniin Periametin rinteille joutomaalle, '
+          + 'joka oli aikanaan kuulunut 1600-luvulla Madrasiin '
+          + 'asettuneelle portugalilaiselle kauppiaalle Joao Pereiralle. '
+          + 'Vuonna 1907 Madras Central korvasi Royapuramin Madras '
+          + 'Railwayn pääteasemana, ja 1922 sen viereen nousi '
+          + 'rautatieyhtiön pääkonttori.'
+          + '\n\n'
+          + 'Rakennuksen suunnitteli George Harding uusgoottilaiseen ja '
+          + 'romaaniseen tyyliin. Robert Fellowes Chisholm muokkasi sitä '
+          + 'myöhemmin: hän lisäsi keskelle kellotornin ja tornien huiput, '
+          + 'ja uudistus valmistui 1900. Kellotorni on rakennuksen korkein '
+          + 'osa, sataakolmeakymmentäkuutta jalkaa korkea, ja siinä on '
+          + 'neljä kellotaulua, jotka lyövät neljännestunnein.'
+          + '\n\n'
+          + 'Asemalla on nyt seitsemäntoista laituria, joista viisi '
+          + 'lähijunaterminaalissa. Laiturit yhdestä yhteentoista ovat '
+          + 'noin kuudensadan metrin mittaisia, eli niille mahtuu '
+          + 'kahdenkymmenenneljän vaunun juna. Matkustajia on noin '
+          + '730 000 päivässä. Viereisen Moore Marketin rakennus tuhoutui '
+          + 'tulipalossa 1985, ja sen paikalle valmistui 1986 '
+          + 'kolmetoistakerroksinen lähijunaterminaali. Vuonna 2005 '
+          + 'julkisivu maalattiin vaaleanruskeaksi, mutta yleisön '
+          + 'vaatimuksesta se palautettiin pian tiilenpunaiseksi. Aseman '
+          + 'virallinen nimi on ollut vuodesta 2019 pidempi, mutta '
+          + 'puheessa se on yhä Chennai Central.',
+      kuvat: [
+        {
+          tiedosto: 'Chennai Dr MGR Central railway station.jpg',
+          selite: 'Illan valossa aseman tiilenpunainen julkisivu jatkuu '
+            + 'päätykolmioineen koko kuvan poikki, ja oikeassa reunassa '
+            + 'kohoaa kellotorni.',
+          lahde: 'Thamizhpparithi Maari, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ripon Building': {
+      aika: '1909–1913',
+      teksti: 'Kaupunginhallinnon talo tilattiin 1909, ja sen '
+          + 'suunnitteli G. T. S. Harris. Peruskiven laski Intian '
+          + 'varakuningas lordi Minto joulukuussa 1909 — artikkeli antaa '
+          + 'päiväksi sekä yhdennentoista että kahdennentoista. '
+          + 'Rakennuksen teki Loganatha Mudaliar, työ kesti neljä vuotta '
+          + 'ja maksoi 750 000 rupiaa. Nimi tuli lordi Riponista, Intian '
+          + 'kenraalikuvernööristä, jota on sanottu paikallishallinnon '
+          + 'isäksi.'
+          + '\n\n'
+          + 'Madrasin kaupunginvaltuusto muutti taloon 1913 oltuaan sitä '
+          + 'ennen useassa eri osoitteessa, ja avajaisiin kutsuttiin yli '
+          + 'kolmetuhatta vierasta. Talo on täysin valkoinen '
+          + 'uusklassinen rakennus, jossa on sekä joonialaisia että '
+          + 'korinttilaisia piirteitä. Pituutta on 85 metriä ja leveyttä '
+          + '32, ja keskeltä nousee 43 metriä korkea torni, jonka '
+          + 'kellotaulun halkaisija on kaksi ja puoli metriä.'
+          + '\n\n'
+          + 'Kello on talon oma nähtävyys. Oakes and Co. asensi 1913 '
+          + 'Westminsterin sävelmää soittavan koneiston, joka on '
+          + 'vedettävä käsin joka päivä, ja sen neljä kelloa valoi samana '
+          + 'vuonna Gillett & Johnston. Seinät ovat tiiltä ja '
+          + 'kalkkilaastia, kattoa kannattavat tiikkipalkit, ja '
+          + 'alakerran alkuperäinen cuddapah-liuskekivilattia on '
+          + 'sittemmin vaihdettu marmoriin.',
+      kuvat: [
+        {
+          tiedosto: 'Ripon Building aerial view.jpg',
+          selite: 'Ilmakuvassa valkoinen kaupungintalo kellotorneineen '
+            + 'seisoo puistoaukion takana keskellä tiivistä '
+            + 'kaupunginosaa.',
+          lahde: 'Saiphani02, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fort St. George': {
+      aika: '1639–1644',
+      teksti: 'Linnoitus perustettiin 1639 ja se valmistui 23. '
+          + 'huhtikuuta 1644 kolmentuhannen punnan kustannuksin. Se oli '
+          + 'ensimmäinen englantilainen linnoitus Intiassa, ja sen '
+          + 'kuusimetriset muurit kestivät koko 1700-luvun hyökkäykset '
+          + 'lukuun ottamatta ranskalaisten vuosia 1746–1749. Nykyään '
+          + 'muurien sisällä toimivat Tamil Nadun lakiasäätävä kokous ja '
+          + 'osavaltion virastot, ja aluetta hoitaa Intian arkeologinen '
+          + 'tutkimuslaitos armeijan hallinnollisella tuella.'
+          + '\n\n'
+          + 'Linnoituksen museo on vuonna 1795 valmistuneessa talossa, '
+          + 'jossa toimi ensin Madras Bank. Yläkerran sali oli '
+          + 'julkinen pörssisali, jossa pidettiin kokouksia ja '
+          + 'arvontoja. Kokoelmissa on aseita, rahoja, mitaleita ja '
+          + 'univormuja Englannista, Skotlannista, Ranskasta ja '
+          + 'Intiasta, Robert Cliven ja lordi Cornwallisin omakätisiä '
+          + 'kirjeitä sekä Cornwallisin suuri patsas. Kolmannessa '
+          + 'kerroksessa säilytetään ensimmäistä lippua, joka nostettiin '
+          + 'salkoon itsenäistymisen jälkeen; sitä saa katsoa mutta ei '
+          + 'koskea eikä valokuvata. Wellesley Housen juhlasalissa on '
+          + 'kuvernöörien muotokuvia, ja museon vallilla seisovat Tipu '
+          + 'Sultanin tykit.'
+          + '\n\n'
+          + 'Pihalla on kaksi asiaa, joita ei muualta löydy. Lipputanko '
+          + 'on tiikkiä ja sataviisikymmentä jalkaa korkea eli maan '
+          + 'korkeimpia. St. Mary’sin kirkko rakennettiin 1678–1680 '
+          + 'silloisen Madrasin agentin Streynsham Masterin käskystä, ja '
+          + 'se on Intian vanhin anglikaaninen kirkko; sen hautausmaan '
+          + 'kivet ovat maan vanhimmat englanninkieliset hautakivet. '
+          + 'Kirkossa vihittiin aikanaan sekä Robert Clive että '
+          + 'kuvernööri Elihu Yale.',
+      kuvat: [
+        {
+          tiedosto: 'Fort St. George George Town Chennai India - panoramio (1).jpg',
+          selite: 'Linnoituksen valkoisen ulkomuurin takaa nousee '
+            + 'harustettu lipputanko, jonka huipussa liehuu lippu.',
+          lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chennai Egmoren asema': {
+      aika: 'pääteasema 1880-luvulta, rakennus 1908',
+      teksti: 'Aseman tontilla oli 1700-luvun alussa linnoitettu '
+          + 'etuvarustus, myöhemmin parantola ja orpokoti. Osa maasta '
+          + 'kuului 1800-luvun lopulla Pulney Andylle (1831–1909), '
+          + 'joka oli ensimmäisiä Britanniassa lääkärintutkinnon '
+          + 'suorittaneita intialaisia. South Indian Railway syntyi 1874, '
+          + 'kun kolme Madrasin presidenssissä toiminutta rautatieyhtiötä '
+          + 'yhdistettiin, ja Egmoresta tuli 1880-luvulla sen '
+          + 'madrasilainen pääteasema.'
+          + '\n\n'
+          + 'Kun liikenne kasvoi, päätettiin rakentaa kunnollinen '
+          + 'terminaali. Sen suunnittelivat Henry Irwin ja E. C. Bird, ja '
+          + 'sen rakensi T. Samynada Pillai. Rakennus on kolmesataa '
+          + 'jalkaa pitkä ja seitsemänkymmentä leveä, tyyliltään '
+          + 'indo-saraseeninen. Työ alkoi syyskuussa 1905 ja valmistui '
+          + '1908 miljoonan seitsemänsadantuhannen rupian hintaan. '
+          + 'Yleisölle asema avattiin 11. kesäkuuta 1908, ja sähkönsä se '
+          + 'sai aluksi omista dieselgeneraattoreistaan.'
+          + '\n\n'
+          + 'Asema kuului 1931 avattuun ensimmäiseen sähköistettyyn '
+          + 'lähijunayhteyteen, ja opastinkoju rakennettiin 1935, '
+          + 'kun Beachin ja Tambaramin väli sähköistettiin. Laitureita on '
+          + 'yksitoista ja raiteita kaksitoista. Etelään, Tamil Nadun '
+          + 'sisämaahan ja rannikkoa alaspäin lähtevät junat käyttävät '
+          + 'yhä tätä asemaa.',
+      kuvat: [
+        {
+          tiedosto: '02Madras Egmore Station.jpg',
+          selite: 'Vuoden 1913 kirjankuvaan on painettu julkaisijan oma '
+            + 'kuvateksti, ja siinä uusi asemarakennus kupoleineen '
+            + 'kaartuu tyhjän ajotien takana.',
+          lahde: 'Wiele & Klein, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Government Museum': {
+      aika: '1851, nykyisellä paikalla 1854',
+      teksti: 'Museo perustettiin 1851 College Roadille Nungambakkamiin '
+          + 'ja siirtyi 1854 Pantheonin alueelle Egmoreen. Alue on '
+          + 'vanhempi kuin museo: elokuussa 1778 kuvernööri myönsi '
+          + 'neljäkymmentäkolme eekkeriä eräälle virkamiehelle, joka '
+          + 'luovutti maat 1793 kahdenkymmenenneljän hengen '
+          + 'toimikunnalle, joka järjesti kaupungin julkiset huvit. '
+          + 'Päätalo ja puutarha myytiin 1821 armenialaiselle '
+          + 'kauppiaalle E. S. Mooratille, joka myi ne takaisin '
+          + 'hallitukselle 1830.'
+          + '\n\n'
+          + 'Rakennuksia laajennettiin 1864–1890. Vanhan museorakennuksen '
+          + 'ytimessä ovat Pantheonin ainoat säilyneet osat, jotka '
+          + 'tunnistaa pohjoispuolen leveistä portaista. Kokoelmassa on '
+          + '1,7 miljoonaa esinettä, muun muassa yksi Euroopan '
+          + 'ulkopuolen laajimmista roomalaisten rahojen kokoelmista ja '
+          + 'viisisataa pronssiveistosta. Samassa korttelissa ovat '
+          + 'kansallinen taidegalleria, jonka kokoelmissa on eurooppalaista '
+          + 'ja aasialaista maalaustaidetta, sekä lastenmuseo.'
+          + '\n\n'
+          + 'Connemaran kirjaston alku on vuodessa 1860, jolloin kapteeni '
+          + 'Jesse Mitchell perusti museon yhteyteen pienen kirjaston '
+          + 'Haileybury Collegen ylimääräisistä kirjoista. Kuvernööri '
+          + 'lordi Connemara laski uuden rakennuksen peruskiven 22. '
+          + 'maaliskuuta 1890, ja kirjasto avattiin 1896. Sen suunnitteli '
+          + 'Henry Irwin ja rakensi Namberumal Chetty: lukusalissa on '
+          + 'puinen kattoholvi kahden kaarevan värilasirivin välissä, '
+          + 'akantuslehdin koristellut pylväät ja tiikkikalusteet. '
+          + 'Kirjasto on yksi Intian neljästä vapaakappalekirjastosta, ja '
+          + 'sen harvinaisuuksiin kuuluu vuoden 1608 raamattu.',
+      kuvat: [
+        {
+          tiedosto: 'EGMORE GOVERNMENT MUSEUM.jpg',
+          selite: 'Museokorttelin Victoria Memorial Hallin '
+            + 'hiekkakivijulkisivu kohoaa suoraan edestä kuvattuna, ja '
+            + 'sen suippokaarinen pääportaali on täynnä veistettyä '
+            + 'koristelua.',
+          lahde: 'VigneshSvasan, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chepaukin palatsi': {
+      aika: '1768',
+      teksti: 'Chepaukin palatsi oli Arcotin nawabin virka-asunto '
+          + 'vuodesta 1768 vuoteen 1855. Nawab Muhammed Ali Khan Wallajah '
+          + 'suunnitteli 1764 palatsia Fort St. Georgen muurien sisään, '
+          + 'mutta tilaa ei ollut, joten hän rakensi sen linnoituksesta '
+          + 'muutaman kilometrin etelään Chepaukiin. Rakennus on '
+          + 'indo-saraseeninen, ja sitä pidetään tyylin varhaisimpina '
+          + 'esimerkkeinä Intiassa.'
+          + '\n\n'
+          + 'Kun Karnaattinen ruhtinaskunta lakkautettiin 1855, palatsi '
+          + 'huutokaupattiin nawabin velkojen maksuksi ja Madrasin '
+          + 'hallitus osti sen. Talosta tuli veroviraston ja '
+          + 'yleisten töiden viraston toimitilat. Nawabin perhe muutti '
+          + 'vuodesta 1876 alkaen Amir Mahaliin, jonka kauppakomppania '
+          + 'oli rakennuttanut 1798 omiksi konttoreikseen ja jossa suvun '
+          + 'jälkeläiset asuvat yhä.'
+          + '\n\n'
+          + 'Palatsissa on kaksi siipeä. Toisen niistä rakensi '
+          + 'käytännössä kokonaan uudelleen 1868–1871 arkkitehti Robert '
+          + 'Chisholm, jolle kuvernööri lordi Napier antoi tehtäväksi '
+          + 'uuden arkiston ja verolautakunnan talon. Talossa toimi '
+          + 'pitkään myös insinöörioppilaitos, joka sai 1861 nimekseen '
+          + 'College of Engineering ja jonka esitettiin 1904 siirtyvän '
+          + 'Guindyyn. Vuonna 2010 toisen siiven katto romahti, ja '
+          + 'rakennus todettiin tarkastuksessa käyttöön kelpaamattomaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Chepauk Palace, the heritage building and former official residence of the Nawab of Arcot in Chennai 06.jpg',
+          selite: 'Palatsin punaiseksi maalattu siipi kaarikäytävineen ja '
+            + 'valkoisine kupoleineen nousee kadun toiselta puolelta '
+            + 'kuvattuna palmujen takaa.',
+          lahde: 'Pinakpani, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marina Beach': {
+      aika: 'promenadi 1884',
+      teksti: 'Marina on luonnollinen hiekkaranta Koromandelin '
+          + 'rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu '
+          + 'etelään Besant Nagariin asti. Hiekkaa on kolmetoista '
+          + 'kilometriä ja promenadia kuusi; Marina Beach -artikkeli '
+          + 'sanoo sitä Intian pisimmäksi luonnolliseksi '
+          + 'kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi '
+          + 'pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin '
+          + 'kolmesataa metriä ja leveimmillään 437.'
+          + '\n\n'
+          + 'Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri '
+          + 'tulvi toistuvasti maalle, ja vetäytyessään se jätti '
+          + 'jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki '
+          + 'Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja '
+          + 'juuri sen päällä ranta on. Promenadin valmistumisen 1884 '
+          + 'jälkeen rannalle tuli lisää: maan ensimmäinen akvaario '
+          + 'avattiin 1909, ja 1968 pystytettiin ensimmäisen '
+          + 'maailmanlaajuisen tamilikonferenssin kunniaksi joukko '
+          + 'tamilirunoilijoiden patsaita, muiden muassa Avvaiyar, '
+          + 'Tiruvalluvar ja Kambar.'
+          + '\n\n'
+          + 'Uiminen ja kylpeminen ovat rannalla laissa kielletty, koska '
+          + 'alivirta on hyvin voimakas. Se ei estä väkeä tulemasta: '
+          + 'kävijöitä on arkisin noin 30 000 ja viikonloppuisin ja '
+          + 'pyhinä 50 000, kuumimpina kesäkuukausina 15 000–20 000. '
+          + 'Hiekassa on magnetiittia ja muita raskaita mineraaleja, ja '
+          + 'rannalla munivat oliivinvihreät ridley-merikilpikonnat '
+          + 'loka–huhtikuussa. Rannan maamerkkejä ovat majakka ja '
+          + 'Napier-silta.',
+      kuvat: [
+        {
+          tiedosto: 'Chennai, Beach.jpg',
+          selite: 'Aallot murtuvat vaahtona märälle hiekalle, jonka '
+            + 'pinnalla näkyy pelkkiä jalanjälkiä.',
+          lahde: 'B Balaji from Chennai, India, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kapaleeshwararin temppeli': {
+      aika: '600-luvulta',
+      teksti: 'Shivalle omistettu temppeli on Mylaporessa, ja sen '
+          + 'arvellaan olevan 600-luvulta ja pallavien rakennuttama. '
+          + 'Päätelmä perustuu siihen, että temppeli mainitaan '
+          + 'nayanar-pyhimysten hymneissä; 600-luvun Tevaram-kokoelma '
+          + 'ylistää sen jumalaa, ja temppeli luetaan Paadal Petra '
+          + 'Sthalam -pyhäkköjen joukkoon. Runoilijat Sambandar ja '
+          + 'Arunagirinathar kuitenkin sijoittavat temppelin selvästi '
+          + 'meren rantaan, kun nykyinen rakennus on kortteleiden '
+          + 'sisällä.'
+          + '\n\n'
+          + 'Nimi tulee sanoista kapala eli pää ja Ishvara, Shivan '
+          + 'lisänimi. Puraanien mukaan Brahma jätti Kailasvuorella '
+          + 'osoittamatta Shivalle kunnioitusta, jolloin Shiva irrotti '
+          + 'yhden hänen viidestä päästään; katumuksekseen Brahma tuli '
+          + 'Mylaporeen ja pystytti lingamin. Kaupunginosan nimi tulee '
+          + 'toisesta tarinasta: Shivan puoliso Parvati palvoi häntä '
+          + 'riikinkukkonaaraan hahmossa, ja riikinkukko on tamiliksi '
+          + 'mayil.'
+          + '\n\n'
+          + 'Temppelialueelle johtaa kaksi porttia. Itäinen gopuram on '
+          + 'artikkelin mukaan noin neljäkymmentä metriä korkea, joskin '
+          + 'sama artikkeli sanoo toisaalla sataakahtakymmentä jalkaa; '
+          + 'pienempi läntinen portti avautuu pyhälle altaalle. Rituaaleja '
+          + 'on kuusi päivässä puoli kuudesta aamulla kymmeneen illalla '
+          + 'ja juhlia neljä vuodessa, joista suurin on '
+          + 'panguni-kuukauden Arupathimoovar. Jumalankuvia kuljetetaan '
+          + 'kulkueissa vahanoilla eli kantovälineillä, joita ovat muun '
+          + 'muassa härkä, '
+          + 'norsu, riikinkukko, vuohi ja papukaija; kultaiset vaunut '
+          + 'ovat myöhempi lisä.',
+      kuvat: [
+        {
+          tiedosto: 'KAPALEESHWARAR TEMPLE MYLAPORE CHENNAI INDIA +91.jpg',
+          selite: 'Illalla valaistun gopuramin jokainen kerros erottuu '
+            + 'sinisenä hahmorivistönä, ja tornin yli on ripustettu '
+            + 'lamppunauhoja.',
+          lahde: '0091SSS, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Thomen basilika': {
+      aika: '1523, nykyinen rakennus 1896',
+      teksti: 'Portugalilaiset lähettivät 1521 lähetyssaarnaajia '
+          + 'etsimään apostoli Tuomaan hautaa, jonka perimätieto sijoitti '
+          + 'seudulle. Paikka löytyi hoitamattomana, ja kuningas Juhana '
+          + 'III:n tuella sinne rakennettiin kirkko, joka vihittiin '
+          + 'käyttöön 1523. Fransiscus Xaverius vieraili pyhäkössä 1545 '
+          + 'ja asui noin vuoden sen pappilassa. Paavi Paavali V teki '
+          + 'kirkosta katedraalin 1606.'
+          + '\n\n'
+          + 'Nykyinen rakennus on vuodelta 1896, jolloin britit '
+          + 'rakensivat kirkon uudelleen uusgoottilaiseen tyyliin '
+          + 'kapteeni J. A. Powerin piirustusten mukaan. Se vihittiin '
+          + 'juhlallisesti 1. huhtikuuta 1896. Pituutta on 64 metriä, '
+          + 'leveyttä 12 ja korkeutta 41. Holvikatto on tiikkiä, ja '
+          + 'ikkunoita on kuusitoista ja värilasiruutuja '
+          + 'kolmekymmentäneljä; alttarin yläpuolisessa ikkunassa Tuomas '
+          + 'koskettaa Kristuksen haavaa. Seinillä kiertää neljätoista '
+          + 'ristintien asemaa.'
+          + '\n\n'
+          + 'Kirkossa on kaksi tornia. Sisäänkäynnin vasemmalla puolella '
+          + 'oleva päätorni on sataneljänkymmenenseitsemän jalan korkuinen '
+          + 'ja toimii kellotornina; toinen nousee kirkon keskeltä ja '
+          + 'merkitsee kohtaa, jossa haudan uskotaan olevan. Lehterillä '
+          + 'on kaksisataa vuotta vanha brittiläinen pilliurku. Paavi '
+          + 'Pius XII korotti kirkon pikkubasilikaksi 1956, ja Intian '
+          + 'piispainkokous julisti sen kansalliseksi pyhäköksi 2004.',
+      kuvat: [
+        {
+          tiedosto: 'Santhome Basilica.jpg',
+          selite: 'Valkoiseksi maalattu uusgoottilainen kirkko '
+            + 'huippukaarineen ja korkeine torneineen nousee tyhjän '
+            + 'risteyksen takaa.',
+          lahde: 'w:user:PlaneMad, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

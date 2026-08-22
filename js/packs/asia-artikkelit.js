@@ -282,6 +282,27 @@
 // nähtävyysjuttu. Luku KORJATTIIN poiminnassa
 // (Fable 22.8.2026) artikkelin mukaiseksi: noin 100 000 ajoneuvoa ja
 // yli 150 000 jalankulkijaa.
+//
+// CHENNAI (22.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js; säärivi jäi rinnakkaisen säätoimittajan
+// tehtäväksi). Avain on 'Chennai', koska laudan js/packs/asia.js antaa
+// kaupungille sekä wiki-nimen että näyttönimen Chennai. Vanha intro oli
+// kolme lausetta rannasta ja rantavirrasta; uusi kertoo lisäksi
+// linnoituksen synnyn 1639–1644, presidenssin talvipääkaupungin,
+// sataman puuttumisen ja rakentamisen, rautatien 1837, kolmiomittauksen
+// perusviivan 1802, tamilin ja nimenvaihdoksen 1996. Jokainen
+// introväite tulee saman erän lehtiteksteistä, jotka on tarkistettu
+// en-Wikipedian raakateksteistä 22.8.2026. Sisältölinjaus on
+// spec-asia.md:n mukainen: siirtomaahistoria neutraalina historiana,
+// ei nykypolitiikkaa.
+//
+// TEKSTI-KENTTÄ ON ENNALLAAN, ja se luettiin läpi linjauksen kannalta:
+// siitä ei löytynyt virheellisiä eikä linjauksen vastaisia virkkeitä,
+// joten Fablelle ei jää tästä kaupungista ratkaistavaa. Kentän maininnat
+// autoteollisuudesta ja tamilinkielisestä elokuvasta ovat tarkoituksella
+// ennallaan: ne ovat kaupungin kulttuurivisan (asia-questions.js)
+// vastausten tausta, eikä niitä ole toistettu lehden nostoissa.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -3076,9 +3097,27 @@ export const ASIA_ARTIKKELIT = {
       + 'vilkas käsityö- ja kierrätysalue.',
   },
   Chennai: {
-    intro: 'Chennai on Etelä-Intian suurin kaupunki Koromandelin '
-      + 'rannikolla. Sen Marina Beach on lähes kolmetoista kilometriä '
-      + 'pitkä, mutta siellä ei uida: virta on liian kova.',
+    intro: 'Chennai on Tamil Nadun pääkaupunki ja Etelä-Intian suurin '
+      + 'kaupunki, ja se kasvoi kalastajakylän rannalle rakennetun '
+      + 'linnoituksen ympärille. Itä-Intian kauppakomppania sai '
+      + 'kaistaleen Koromandelin rannikkoa elokuussa 1639, ja '
+      + '**Fort St. George valmistui Pyhän Yrjön päivänä 1644** — se oli '
+      + 'yhtiön ensimmäinen linnoitus Intiassa. Muurien ulkopuolelle '
+      + 'kasvoi George Town, ja kokonaisuudesta tuli Madras, Madrasin '
+      + 'presidenssin talvipääkaupunki.'
+      + '\n\n'
+      + 'Luonnonsatamaa kaupungilla ei ollut. Laivat ankkuroivat kauas '
+      + 'rannasta, ja lasti tuotiin maihin soutuveneillä aallokon läpi, '
+      + 'kunnes satama valmistui 1881. Sama satama teki rannasta rannan: '
+      + 'aallonmurtaja pysäytti hiekkavirran, ja kaupungin eteen levisi '
+      + '**kolmentoista kilometrin hiekkakaistale**, Marina. Etelä-Intian '
+      + 'ensimmäinen rautatie kulki jo 1837, ja Madrasista mitattiin '
+      + 'vuodesta 1802 alkaen koko Etelä-Aasian kartta.'
+      + '\n\n'
+      + 'Kaupungin kieli on tamili, yksi maailman vanhimmista yhä '
+      + 'puhutuista kirjakielistä, ja sen vanhimmat rakennukset ovat '
+      + '600–800-luvun temppeleitä Mylaporessa ja Triplicanessa. Nimi '
+      + 'vaihtui Madrasista Chennaiksi heinäkuussa 1996.',
     teksti: 'Chennai on Bengalinlahden rannalla Tamil Nadun '
       + 'osavaltiossa. Kaupunki syntyi Fort St. Georgen ympärille, '
       + 'jonka Britannian Itä-Intian kauppakomppania rakensi 1644 — '
