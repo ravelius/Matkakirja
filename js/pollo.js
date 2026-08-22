@@ -3620,6 +3620,76 @@ export function polloSulje() {
   nykyinenPollo?.sulje();
 }
 
+/** Valinnasta muodostetun kysymyksen enimmäispituus (kentän raja on 300). */
+export const VALINNAN_ENIMMAISPITUUS = 200;
+
+/**
+ * Maalatusta tekstistä luonteva kysymys pöllölle.
+ *
+ * Lyhyt valinta on sana tai sanapari — silloin kysytään suoraan mitä se
+ * tarkoittaa. Pitkä valinta on lause tai kappale, jolloin "mitä
+ * tarkoittaa" kuulostaisi oudolta; siitä pyydetään selitys. Liian pitkä
+ * valinta katkaistaan, koska kysymysrivikin on rajattu (300 merkkiä).
+ *
+ * @param {string} valinta pelaajan maalaama teksti.
+ * @returns {string} kysymys, tai '' jos valinnassa ei ollut mitään.
+ */
+export function polloValintakysymys(valinta) {
+  // Rivinvaihdot ja tuplavälit pois: valinta voi kulkea kahden palstan
+  // yli, ja rivinvaihdot tekisivät kysymyksestä lukukelvottoman.
+  const teksti = String(valinta ?? '').replace(/\s+/g, ' ').trim();
+  if (!teksti) return '';
+  const lyhyt = teksti.length <= VALINNAN_ENIMMAISPITUUS
+    ? teksti
+    : `${teksti.slice(0, VALINNAN_ENIMMAISPITUUS).trimEnd()}…`;
+  // Yksi sana tai lyhyt sanaliitto → sanakirjakysymys; pidempi pätkä on
+  // lause, josta pyydetään selitys.
+  const sanoja = lyhyt.split(' ').length;
+  return sanoja <= 5 && lyhyt.length <= 60
+    ? `Mitä tarkoittaa "${lyhyt}"?`
+    : `Mitä tämä tarkoittaa: "${lyhyt}"`;
+}
+
+/**
+ * "KYSY PÖLLÖLTÄ" TEKSTIVALINNAN PIKAVALIKOSTA (omistajan tilaus
+ * 23.8.2026).
+ *
+ * iOS-kuori lisää WKWebView'n valintavalikon kärkeen oman toimintonsa
+ * (ios/Matkakirja/Selain/PolloValikko.swift): se lukee valinnan
+ * `window.getSelection()`illa ja kutsuu tätä funktiota. Peli avaa
+ * pöllöpaneelin ja lähettää kysymyksen TÄSMÄLLEEN samaa reittiä kuin
+ * pelaajan itse kirjoittama kysymys (Pollo.kysy) — striimi, luenta,
+ * historia ja jatkokysymykset toimivat siis sellaisenaan.
+ *
+ * SELAIMESSA TÄTÄ EI KUTSU MIKÄÄN. Safarin omaan valintavalikkoon ei
+ * pääse web-sivulta käsiksi, eikä tähän erään kuulu omaa kelluvaa
+ * nappia. Funktio on silti olemassa: se on kuoren rajapinta, ja
+ * savukkeet ajavat sitä konsolista.
+ *
+ * @param {string} valinta pelaajan maalaama teksti.
+ * @returns {boolean} lähtikö kysymys. Epätosi kertoo kuorelle, ettei
+ *   pöllö ollut käytettävissä (peliä ei ole, pöllöä ei ole vielä
+ *   löydetty, tai edellinen vastaus on kesken).
+ */
+export function kysyPollolta(valinta) {
+  const pollo = nykyinenPollo;
+  if (!pollo) return false;
+  // Pöllö on aarre: ennen löytöä sitä ei ole olemassa pelaajalle, eikä
+  // valikkotoiminto saa paljastaa sitä etuajassa (ks. nakyyko).
+  if (!pollo.nakyyko()) return false;
+  const kysymys = polloValintakysymys(valinta);
+  if (!kysymys) return false;
+  // Kesken oleva vastaus voittaa: kysy hylkäisi tämän joka tapauksessa,
+  // ja paneelin avaaminen kysymyksettä olisi pelaajalle arvoitus.
+  if (pollo.kesken) return false;
+  if (!pollo.auki) pollo.avaa();
+  // kysy on asynkroninen (verkkopyyntö); lupausta ei odoteta, koska
+  // kuoren valikkotoiminto on jo mennyt. Hylkäys niellään samalla
+  // opilla kuin muissakin kuorikutsuissa (js/natiivi.js nielaise).
+  Promise.resolve(pollo.kysy(kysymys)).catch(() => {});
+  return true;
+}
+
 /**
  * Näyttää pöllönapin vieressä kiinteän vihjekuplan (js/ui.js
  * paivitaValintavihje). Ei tekoälykutsua eikä keskustelun avausta —
@@ -3689,5 +3759,11 @@ export function asennaPollo(haeUi, asetukset = {}) {
   if (paikka) nykyinenPollo.ankkuroi(paikka);
   // Savukkeet ja kehitys tarvitsevat kahvan; peli itse ei käytä tätä.
   window.matkakirjaPollo = nykyinenPollo;
+  /*
+   * iOS-kuoren valintavalikon sisäänkäynti (ks. kysyPollolta). Nimi on
+   * osa kuoren rajapintaa — PolloValikko.swift kutsuu täsmälleen tätä —
+   * eikä sitä saa vaihtaa vanhaa kuorta päivittämättä.
+   */
+  window.matkakirjaKysyPollolta = kysyPollolta;
   return nykyinenPollo;
 }

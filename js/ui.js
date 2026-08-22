@@ -185,10 +185,10 @@ import { puheTuettu } from './puhe.js';
  */
 import { RAAMATTU } from './tyohuone-raamattu.js';
 import { TILANNE, TESTATTAVAA, TUOREET } from './tyohuone-tilanne.js';
-// Kartan kehittäjävärit lukevat lehtitiedon samasta funktiosta kuin
-// Tilastot-taulun Lehti-sarake, ja tekstiremontin tilan samasta
-// ARTIKKELIT-taulusta kuin lehden etusivu (drawBoard, valmiusLuokka).
-import { kaupungillaLehti } from './tyohuone-tilastot.js';
+// Kartan kehittäjävärit lukevat valmiusasteen samasta moduulista kuin
+// Tilastot-taulu (drawBoard, valmiusLuokka) — yksi määritelmä, jottei
+// kartta ja taulu voi kertoa eri tarinaa samasta kaupungista.
+import { lehtiValmius } from './tyohuone-tilastot.js';
 import {
   el,
   hash01,
@@ -365,51 +365,15 @@ const OIKAISUN_HILJAISUUS_MS = 250;
 const PALUU_TAHTI_MS = 300;
 const PALUU_KESTO_MS = 8000;
 /*
- * KEHITTÄJÄN VALMIUSVÄRIT KARTALLA (omistajan tilaus 20.8.2026:
- * "kehittäjätilassa keskeneräiset kaupungit saisi näkyä kartalla
- * harmaalla ja työn alla olevat keltaisella ja valmiit nykyisellä
- * värillä").
- *
- * Työn alla olevat luetaan TUOREET-taulusta (js/tyohuone-tilanne.js,
- * jota vain Fable päivittää) ja lehden olemassaolo Tilastot-taulun
- * omasta funktiosta (kaupungillaLehti) — sama määritelmä molemmissa,
- * jottei kartta ja taulu voi kertoa eri tarinaa samasta kaupungista.
+ * TUOREET LEHDET KARTALLE (omistajan tilaus 23.8.2026): juuri
+ * valmistuneet kaupungit erottuvat kirkkaammalla vihreällä muista
+ * valmiista, jotta viime julkaisujen sato näkyy laudalta yhdellä
+ * silmäyksellä. Lista on TUOREET.valmiit (js/tyohuone-tilanne.js,
+ * jota vain Fable päivittää) — sama taulu, josta Tilastot-taulu
+ * merkitsee tuoreet rivit. Aikaleimoja paketeissa ei ole, joten
+ * tuoreutta ei voi päätellä datasta.
  */
-const TYON_ALLA_IDT = new Set((TUOREET?.tyossa ?? []).map((k) => k.id));
-/*
- * GENEROIDUT HEROKUVAT KARTALLE (omistajan tilaus 22.8.2026:
- * "Merkkaa violetilla ne kaupungit joissa uudet generoidut
- * herokuvat"). Joukko johdetaan suoraan lehtidatasta: kaupunki on
- * violetti täsmälleen silloin, kun jokin sen kategorian avauskuvista
- * osoittaa peiliämpäriin (ampari-kenttä eli pelin oma havainnekuva).
- * Käsin ylläpidettävää listaa ei ole, joten herolaajennus näkyy
- * kartalla samalla julkaisulla, jolla kuvat tulevat lehteen.
- */
-const HEROKUVA_IDT = new Set(Object.entries(KULTTUURI_KATEGORIAT)
-  .filter(([, kategoriat]) => (kategoriat ?? []).some(
-    (k) => (k.avauskuvat ?? []).some((kuva) => kuva.ampari),
-  ))
-  .map(([id]) => id));
-/*
- * TEKSTIREMONTIN RAJA (omistajan tilaus 20.8.2026: "korjatut ja
- * korjaamattomat kaupungit voisi erottaa toisistaan kartalla
- * kehittäjätilassa").
- *
- * Lehden olemassaolo ei enää riitä kertomaan, onko kaupunki tehty:
- * remontissa etusivun ARTIKKELIT-intro kirjoitetaan 7–10 virkkeen
- * johdatukseksi (Raamattu, "TEKSTIEN PAINOPISTE"), kun vanha nosto on
- * pari virkettä. Ero näkyy merkkimäärässä niin selvästi, ettei
- * erillistä tilannetaulua tarvita: remontoidut introt ovat noin
- * 1000–1100 merkkiä ja remontoimattomat 160–270. Kynnys 600 osuu
- * keskelle tyhjää väliä, joten sen kummallakaan puolella ei ole
- * rajatapauksia — ja se on tarkoituksella väliaikainen tunniste, joka
- * poistetaan sitten kun kaikki lehdet ovat läpi remontista.
- *
- * Merkkiraja luetaan samasta ARTIKKELIT-taulusta ja samalla avaimella
- * (wiki-otsikko, varalla nimi) kuin lehden etusivu itse — pelkkä id ei
- * kelpaa avaimeksi.
- */
-const REMONTIN_INTRO_RAJA = 600;
+const TUORE_VALMIS_IDT = new Set((TUOREET?.valmiit ?? []).map((k) => k.id));
 // Kirjoituskoneen tahti: avaus saa naksua rauhassa, muut tekstit ripeästi.
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
@@ -1903,6 +1867,48 @@ export class UI {
     document.addEventListener('visibilitychange', this.nakymaVahti);
     window.visualViewport?.addEventListener('resize', this.nakymaVahti);
     /*
+     * ALAREUNAN KAISTA SOVELLUSVAIHDON JÄLKEEN (omistajan bugiraportti
+     * 23.8.2026 iPadilta: *"kun käyn toisessa sovelluksessa —
+     * näppäimistö auki — ja palaan peliin, sivun alareunaan jää väärin
+     * mitoitettu kaista; laitteen kääntäminen vaakaan ja takaisin
+     * korjaa sen"*). EI TOISTETTAVISSA KONTISSA: tämä on
+     * todennäköisin syy, ei mitattu.
+     *
+     * Kokovahti kuuntelee jo sekä visibilitychangea että
+     * visualViewportin resizea (yllä), mutta tarkistaNakyma on
+     * EROVERTAILU: paluun hetkellä leveys on ennallaan ja korkeusero
+     * jää alle 8 %:n kynnyksen — juuri sen kokoinen kuin näppäimistön
+     * jättämä kaista — joten elvytystä ei ajeta ja vanha mitoitus jää
+     * voimaan. Laitteen kääntö korjaa nimenomaan siksi, että se
+     * muuttaa LEVEYTTÄ: silloin vertailu näkee muutoksen.
+     *
+     * Siksi paluu näkyviin ja asettunut visualViewportin resize
+     * merkitsevät mitan EPÄVARMAKSI ennen tarkistusta. `nakymaEpavarma`
+     * on tarkistaNakyman oma, jo olemassa oleva lippu ("lukuun ei voi
+     * luottaa, aja elvytys silti"), joten uutta logiikkaa ei synny —
+     * vahti päätyy samaan lopputulokseen kuin käännöstä. Harvennus
+     * (OIKAISUN_HILJAISUUS_MS) pitää näppäimistöanimaation kymmenet
+     * tapahtumat yhtenä tarkistuksena.
+     *
+     * Fokusoitu tekstikenttä on poikkeus: silloin näppäimistö on
+     * pelaajan oma ja elää juuri nyt (pöllön kysymysrivi), eikä
+     * avoimen lehden uudelleensivutus kuulu kirjoittamisen väliin.
+     * Kentän jättö ajaa oman sovituksensa (kenttaVahti).
+     */
+    this.mitoitusVahti = () => {
+      clearTimeout(this.mitoitusAjastin);
+      this.mitoitusAjastin = setTimeout(() => {
+        if (this.dead || document.hidden) return;
+        const el = document.activeElement;
+        if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA'
+          || el.isContentEditable)) return;
+        this.nakymaEpavarma = true;
+        this.tarkistaNakyma();
+      }, OIKAISUN_HILJAISUUS_MS);
+    };
+    document.addEventListener('visibilitychange', this.mitoitusVahti);
+    window.visualViewport?.addEventListener('resize', this.mitoitusVahti);
+    /*
      * TAUSTAPALUUN SOVITUS (18.8.2026, kartan taustapaluuperheen
      * rakenteellinen korjaus — omistajan kuvakaappaus 18.8.2026:
      * Afrikka-näkymässä kartan vasempaan reunaan jäi pergamentin-
@@ -2439,6 +2445,14 @@ export class UI {
       this.nakymaVahti = null;
     }
     clearTimeout(this.nakymaAjastin);
+    // Paluun pakotettu uudelleenmitoitus kuuntelee dokumenttia ja
+    // visualViewporttia — sama sääntö.
+    if (this.mitoitusVahti) {
+      document.removeEventListener('visibilitychange', this.mitoitusVahti);
+      window.visualViewport?.removeEventListener('resize', this.mitoitusVahti);
+      this.mitoitusVahti = null;
+    }
+    clearTimeout(this.mitoitusAjastin);
     // Taustapaluun sovitus kuuntelee dokumenttia ja ikkunaa — sama sääntö.
     if (this.paluuVahti) {
       document.removeEventListener('visibilitychange', this.paluuVahti);
@@ -4355,54 +4369,43 @@ export class UI {
     // Kaupunkilaudalla solmut ovat pienempiä: mittakaava on kortteleissa.
     const nodeScale = pack.style === 'city' ? 0.82 : 1;
     /*
-     * Rakennustyön väri kartalle — VAIN kehittäjätilassa (omistajan
-     * tilaus 20.8.2026, ks. TYON_ALLA_IDT).
+     * LEHTIVALMIUS VÄREINÄ — VAIN KEHITTÄJÄTILASSA (omistajan tilaus
+     * 23.8.2026: kartan värit ovat nyt neliportainen valmiusasteikko).
      *
-     * Neljä luokkaa: työn alla oleva saa keltaisen, koskematon jää
-     * harmaaksi, ja lehdelliset kaupungit jakautuvat kahtia sen mukaan,
-     * onko lehti käynyt tekstiremontissa (omistajan tilaus 20.8.2026,
-     * ks. REMONTIN_INTRO_RAJA): remontoimaton saa oranssinruskean,
-     * remontoitu pitää nykyisen värinsä eikä saa luokkaa lainkaan.
-     * Pelaajan laudalle ei lisätä edes luokkaa, joten tavallinen näkymä
-     * on tismalleen entisensä.
+     * Tämä KORVAA aiemmat merkinnät: julistevihreän (21.8.), violetit
+     * herokuvat (22.8.), keltaisen työn alla olevan ja oranssinruskean
+     * tekstiremontin (20.8.). Ne kertoivat kukin yhdestä yksittäisestä
+     * urakasta, ja päällekkäin ladottuina ne peittivät toisensa —
+     * neljä väriä yhdellä asteikolla vastaa yhteen kysymykseen: missä
+     * kunnossa tämän kaupungin lehti on?
      *
-     * VALMIS ON SE, JOKA EI SAA LUOKKAA. Vihreä korostus remontoiduille
-     * olisi kääntänyt merkinnän ympäri: kun jokainen piste olisi
-     * värjätty, laudan oma pergamentinvaalea katoaisi kartalta eikä
-     * silmä enää poimisi poikkeamia. Nyt jäljellä oleva työ hohtaa
-     * kartalta (Euroopassa lähes kaikki oranssinruskeita, Lähi-idässä
-     * enää muutama) ja tehty työ palaa hiljaa taustaan.
+     *   kirkkaan vihreä  juuri valmistunut (TUOREET.valmiit)
+     *   vihreä           valmis
+     *   valkoinen        lähes valmis: lehti on, jokin osa puuttuu
+     *   harmaa           ei lehteä lainkaan
      *
-     * TYÖN ALLA KATSOTAAN ENSIN, vaikka kaupungilla jo olisi lehden
-     * kansiosio: TUOREET.tyossa on nimenomaan lista siitä, mikä on
-     * kesken juuri nyt, ja Fable siirtää kaupungin valmiisiin vasta kun
-     * työ on tehty. Aloitettu lehti ei siis tee kaupungista valmista —
-     * päinvastoin, juuri ne kaupungit omistaja haluaa nähdä keltaisina.
-     */
-    /*
-     * JULISTEPILOTTI KATSOTAAN ENSIN (omistajan tilaus 21.8.2026):
-     * kaupunki, jolla on aikakausjuliste, saa vihreän merkinnän.
-     * Vihreä on tässä poikkeus sääntöön "valmis on se, joka ei saa
-     * luokkaa": julistekaupunkeja on kymmenen koko maailmassa, joten
-     * ne eivät värjää karttaa umpeen — ja pilotin ajan omistajan pitää
-     * nähdä yhdellä silmäyksellä, mihin juliste on jo tehty. Lista on
-     * sama datarakenne kuin palkintomekaniikalla (js/packs/julisteet.js),
-     * joten kartta ei voi mennä eri tahtiin pelin kanssa.
+     * TUOREUS KATSOTAAN ENSIN ja voittaa muut luokat: tuore kaupunki
+     * on määritelmän mukaan juuri se, jonka omistaja haluaa löytää
+     * laudalta — myös silloin, kun sen viimeinen osa (esimerkiksi
+     * säärivi) tulee vasta seuraavassa erässä.
+     *
+     * Aste tulee js/tyohuone-tilastot.js:n lehtiValmius-funktiosta eli
+     * samasta määritelmästä kuin Tilastot-taulun sarakkeet.
+     *
+     * NYT JOKAINEN PISTE SAA LUOKAN. Vanha sääntö "valmis on se, joka
+     * ei saa luokkaa" säästi laudan oman pergamentinvaalean, mutta
+     * asteikolla se olisi sokea kohta: pergamentti ei ole yksi neljästä
+     * väristä vaan taustan väri, eikä katsoja tietäisi, onko piste
+     * valmis vai jäikö se värjäämättä. Pelaajan laudalle ei lisätä
+     * edelleenkään yhtään luokkaa, joten tavallinen näkymä on
+     * tismalleen entisensä.
      */
     const valmiusLuokka = (c) => {
       if (!this.kehittajaTila) return '';
-      /*
-       * HEROKUVAT ENNEN JULISTETTA (omistajan tilaus 22.8.2026, ks.
-       * HEROKUVA_IDT): neljä viidestä ensimmäisestä herokaupungista on
-       * myös julistekaupunkeja, joten julistevihreä ensin peittäisi
-       * violetin kokonaan.
-       */
-      if (HEROKUVA_IDT.has(c.id)) return ' city-herokuva';
-      if (JULISTEET[c.id]) return ' city-juliste';
-      if (TYON_ALLA_IDT.has(c.id)) return ' city-tyossa';
-      if (!kaupungillaLehti(c.id)) return ' city-kesken';
-      const intro = ARTIKKELIT[c.wiki ?? c.name]?.intro ?? '';
-      return intro.length >= REMONTIN_INTRO_RAJA ? '' : ' city-remontoimaton';
+      if (TUORE_VALMIS_IDT.has(c.id)) return ' city-tuore';
+      const aste = lehtiValmius(c.id);
+      if (aste === 'valmis') return ' city-valmis';
+      return aste === 'lahes' ? ' city-lahes' : ' city-kesken';
     };
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;

@@ -5144,63 +5144,37 @@ body.flight-active .fact-card {
 .city { fill: #f3e5c4; stroke: #6b5230; stroke-width: 2.4; }
 .city-start { fill: #eec66b; stroke: #6d4d12; stroke-width: 3.4; }
 
-/*
- * Rakennustyön väri kaupunkipisteissä — vain kehittäjätilassa
- * (omistajan tilaus 20.8.2026: keskeneräiset harmaalla, työn alla
- * keltaisella, valmiit nykyisellä värillä). Luokat lisätään vain
- * kehittäjätilassa (js/ui.js drawBoard, valmiusLuokka), joten
- * pelaajan kartta ei muutu näistä säännöistä millään tavalla.
+/* ------------------------------------------------------------------
+ * KEHITTÄJÄKARTAN VALMIUSASTEIKKO (omistajan tilaus 23.8.2026)
  *
- * Keltainen on Tilastot-taulun .tk-tuore-tyossa-sävystä (#f7ecd2)
- * kirkastettu: laudan oma pergamentinvaalea (#f3e5c4) on jo niin
- * lähellä sitä, ettei ero erottuisi kartan päältä.
- */
-.city.city-tyossa,
-.city-start.city-tyossa { fill: #f2cf46; stroke: #8a6a12; }
+ * Neljä väriä, yksi kysymys: missä kunnossa tämän kaupungin lehti on?
+ * Asteikko korvaa aiemmat yhden urakan merkinnät — julistevihreän,
+ * violetit herokuvat, työn alla olevan keltaisen ja tekstiremontin
+ * oranssinruskean — jotka peittivät toisensa päällekkäin ladottuina.
+ *
+ * Luokat lisätään VAIN kehittäjätilassa (js/ui.js drawBoard,
+ * valmiusLuokka), joten pelaajan kartta ei muutu näistä säännöistä
+ * millään tavalla.
+ *
+ * Sävyt on valittu erottumaan toisistaan JA laudan omasta
+ * pergamentista (#f3e5c4 kaupunki, #eec66b lähtökaupunki):
+ *   - valmis on sammaleen vihreä, ainoa viileä perusväri;
+ *   - tuore on selvästi kirkkaampi ja kylläisempi vihreä, ja saa
+ *     tummemman reunuksen, jotta se erottuu valmiista myös pienenä
+ *     pisteenä ja mustavalkoisena;
+ *   - lähes valmis on melkein valkoinen — kermaisen pergamentin
+ *     päällä se lukee vaaleana pisteenä vasta tumman reunuksen
+ *     kanssa, joten reunus on tarkoituksella muita paksumpi;
+ *   - puutteellinen on kuollut harmaa, ainoa täysin kylläisyydetön.
+ * ------------------------------------------------------------------ */
+.city.city-valmis,
+.city-start.city-valmis { fill: #6a9e54; stroke: #3d6330; }
+.city.city-tuore,
+.city-start.city-tuore { fill: #3fcf5a; stroke: #14561f; stroke-width: 3.4; }
+.city.city-lahes,
+.city-start.city-lahes { fill: #fdfcf7; stroke: #3a3128; stroke-width: 3.4; }
 .city.city-kesken,
 .city-start.city-kesken { fill: #c9c4bb; stroke: #78736b; }
-
-/*
- * Tekstiremontin tila lehdellisissä kaupungeissa — myös vain
- * kehittäjätilassa (omistajan tilaus 20.8.2026: "korjatut ja
- * korjaamattomat kaupungit voisi erottaa toisistaan kartalla
- * kehittäjätilassa"). Remontoitu lehti ei saa luokkaa lainkaan eli
- * pitää laudan oman pergamentinvaalean; remontoimaton saa tämän.
- *
- * Oranssinruskea on valittu erottumaan kolmesta jo kartalla olevasta
- * sävystä yhtä aikaa: se on selvästi tummempi ja punaisempi kuin työn
- * alla olevan keltainen (#f2cf46) ja lähtökaupungin hunaja (#eec66b),
- * kylläinen siinä missä koskemattoman harmaa (#c9c4bb) on kuollut, ja
- * pergamentin päällä (#f3e5c4) se lukee pisteenä eikä läiskänä.
- * Kynnys 600 merkkiä on js/ui.js:n REMONTIN_INTRO_RAJA.
- */
-.city.city-remontoimaton,
-.city-start.city-remontoimaton { fill: #c9773a; stroke: #7a4116; }
-
-/*
- * Julistepilotti — myös vain kehittäjätilassa (omistajan tilaus
- * 21.8.2026): kaupunki, jolle on painettu aikakausjuliste, näkyy
- * vihreänä. Sävy on valittu erottumaan neljästä muusta kartan
- * merkinnästä: se on ainoa viileä väri keltaisen (#f2cf46), hunajan
- * (#eec66b), oranssinruskean (#c9773a) ja kuolleen harmaan (#c9c4bb)
- * joukossa, ja pergamentin päällä (#f3e5c4) se lukee pisteenä eikä
- * läiskänä. Lista tulee js/packs/julisteet.js:stä (js/ui.js
- * valmiusLuokka), eli samasta taulusta kuin palkintomekaniikka.
- */
-.city.city-juliste,
-.city-start.city-juliste { fill: #6a9e54; stroke: #3d6330; }
-
-/*
- * Generoidut herokuvat — myös vain kehittäjätilassa (omistajan tilaus
- * 22.8.2026): kaupunki, jonka avauskaruselliin on tehty pelin omat
- * havainnekuvat, näkyy violettina. Violetti on kartan merkinnöistä
- * ainoa sinipunainen, joten se ei sekoitu julistevihreään (#6a9e54)
- * eikä lämpimiin keltaruskeisiin, ja pergamentin päällä (#f3e5c4) se
- * lukee pisteenä. Joukko johdetaan lehtidatan ampari-kentistä
- * (js/ui.js: HEROKUVA_IDT) — ei käsin ylläpidettävää listaa.
- */
-.city.city-herokuva,
-.city-start.city-herokuva { fill: #8a5da8; stroke: #563775; }
 .airport { font-size: 14px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */
@@ -13186,7 +13160,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * täsmennykset: 40 % → 65 % → 70 % → "75 koko"; keskitys ja paluu
  * paikalleen hoidetaan ui.js:ssä). Napautus lisää .valittu-luokan: piirros kasvaa
  * 65 %:iin KARTTAIKKUNAN korkeudesta (65cqh kehyskontista) ja nimikyltti aukeaa sen alle
- * (tai ylle alareunassa, .kyltti-ylle); uusi napautus palauttaa —
+ * (aina alle, ks. .kohde-kyltti); uusi napautus palauttaa —
  * ikkunaa ei avata. Jako zoomilla kumoaa lavan skaalan, joten
  * näkyvä koko on sama joka zoomiasennossa.
  */
@@ -13231,12 +13205,22 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   display: none;
   position: absolute;
   left: 50%;
-  /* Limittäin KUVAN alaosaan: leikatun kuvan reunoilla on
-   * läpinäkyvää tyhjää, ja 100 %:n kohdalla kyltin ja rakennuksen
-   * väliin jäi iso rako (omistajan palaute 15.8.2026; syvennetty
-   * 87 % → 79 % → 73 %, kun rako näkyi yhä). Laatikko on nyt puolet
-   * kuvasta, joten kuvan 73 % on laatikon 96 % (p×2 − 50). */
-  top: 96%;
+  /*
+   * KYLTTI RAKENNUKSEN JALAN ALLE (omistajan tilaus 23.8.2026:
+   * kyltti istui suurennetun piirroksen päällä ja peitti kuvaa).
+   *
+   * Paikka tulee mitattuna piirroksesta: js/nahtavyydet.js etsii
+   * kuvan alimman läpinäkymättömän rivin ja kirjoittaa sen tähän
+   * muuttujaan laatikon koordinaatistossa (kuva vuotaa laatikon yli
+   * −50 %:sta 150 %:iin, joten kuvan alareuna on laatikon 150 %).
+   * Varapaikka on koko kuvan alareuna: kyltti ei silloinkaan peitä
+   * rakennusta, korkeintaan jää siitä hitusen irralleen.
+   *
+   * Kiinteä luku (aiemmin kuvan 73 %) ei voi toimia: neliön
+   * kokoisissa miniatyyreissä korkea torni yltää alareunaan asti ja
+   * matala rakennus jättää alleen leveän tyhjän kaistan.
+   */
+  top: var(--kyltti-top, 153%);
   transform: translateX(-50%) scale(calc(1 / var(--zoom, 1)));
   transform-origin: top center;
   padding: 0.2rem 0.55rem;
@@ -13257,12 +13241,6 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 .kohde-piirros.valittu .kohde-kyltti { display: block; }
-
-.kohde-piirros.kyltti-ylle .kohde-kyltti {
-  top: auto;
-  bottom: 96%;
-  transform-origin: bottom center;
-}
 
 /*
  * Kohteen nimi hiiren alla — VAIN osoitinlaitteella.

@@ -141,6 +141,62 @@ export function kaupungillaLehti(id) {
   return (KULTTUURI_KATEGORIAT[id] ?? []).some((k) => k.id === 'kaupunki');
 }
 
+/* ------------------------------------------------------------------
+ * ALUEET — lehtikohteet, jotka eivät ole kaupunkeja
+ *
+ * Saari, tunturiseutu, vuoristo tai viidakko on laudalla samanlainen
+ * piste kuin kaupunki, mutta sen lehti on rakenteeltaan eri: alueella
+ * EI kuulu olla kohdekarttaa eikä matkaopasta (omistajan linjaukset
+ * 17.8.2026), koska kartoitettavaa korttelia ei ole. Ilman tätä
+ * poikkeusta valmiusasteikko merkitsisi jokaisen valmiin alueen
+ * ikuisesti puutteelliseksi ja pyytäisi työtä, jota ei ole tarkoitus
+ * tehdä.
+ *
+ * Lista on käsin ylläpidetty tarkoituksella: alue ei eroa datassa
+ * kaupungista millään kentällä, joten koneellista tunnistetta ei ole.
+ * Afrikan tulevat alueet lisätään tähän sitten kun ne saavat lehtensä.
+ * ------------------------------------------------------------------ */
+export const ALUEET = new Set([
+  'islanti', 'lappi', 'kreeta', 'sisilia', 'alpit',
+  'sumatra', 'borneo', 'kamtsatka', 'sahalin',
+  // Lähi-idän aluekohteet (Fablen päätös 23.8.2026): ylänkö, niemimaa
+  // ja hiekka-aavikko eivät saa kohdekarttaa koskaan.
+  'kapadokia', 'siinai', 'rubalkhali',
+]);
+
+/**
+ * Onko kaupungilla O6-mallin matkaopas: kansiosion Matkailijalle-lohkon
+ * artikkeli, joka on taitettu oppaaksi ja jaettu jaksoihin. Sama ehto
+ * kuin lehden oma taitto käyttää (js/nahtavyydet.js: opas).
+ */
+function kaupungillaOpas(id) {
+  const kansi = (KULTTUURI_KATEGORIAT[id] ?? []).find((k) => k.id === 'kaupunki');
+  const artikkeli = kansi?.matkailijalle?.artikkeli;
+  return artikkeli?.taitto === 'opas' && Boolean(artikkeli.jaksot?.length);
+}
+
+/**
+ * Kaupungin lehtivalmius kolmena portaana — 'valmis', 'lahes' tai
+ * 'puutteellinen' (omistajan tilaus 23.8.2026: kehittäjäkartan värit
+ * kertovat lehtien valmiusasteen, eivät enää julistetta ja herokuvia).
+ *
+ * VALMIS = kansiosio, matkaopas, säätiedot ja kohdekartta. Nämä neljä
+ * ovat lehden runko: ilman jotakin niistä sivu on vielä kesken, vaikka
+ * se aukeaisi. ALUEILLA riittää kansiosio ja säätiedot (ks. ALUEET).
+ * LÄHES VALMIS = kansiosio on, jokin muu puuttuu.
+ * PUUTTEELLINEN = ei kansiosiota eli ei lehteä lainkaan.
+ *
+ * Aste luetaan pelidatasta ajonaikaisesti — käsin ylläpidettävää
+ * listaa ei ole, joten kartta ei voi jäädä jälkeen sisällöstä.
+ */
+export function lehtiValmius(id) {
+  if (!kaupungillaLehti(id)) return 'puutteellinen';
+  const osat = ALUEET.has(id)
+    ? [Boolean(SAATIEDOT[id])]
+    : [kaupungillaOpas(id), Boolean(SAATIEDOT[id]), Boolean(KAUPUNKIKARTAT[id])];
+  return osat.every(Boolean) ? 'valmis' : 'lahes';
+}
+
 const KAUPUNGIN_OSAT = [
   {
     avain: 'lehti',
