@@ -1699,8 +1699,7 @@
 }
 
 /*
- * Puhelimen pystyasento (peli ei näy kosketuslaitteen vaakatilassa
- * lainkaan, ks. css/styles.css @media pointer: coarse and landscape).
+ * Puhelimen pystyasento (kapea ruutu).
  *
  * Tästä alkaen jokainen pikseli on pois kartasta, joten laitteen osat
  * pienenevät. Rivitys on jo tehty ylempänä.
