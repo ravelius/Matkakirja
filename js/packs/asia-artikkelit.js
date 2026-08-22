@@ -359,6 +359,31 @@
 // täsmäävät lähteisiin (1505, 1600-luku, 1796, itsenäistyminen 1948,
 // nimenmuutos 1972, hallinnollinen pääkaupunki Sri Jayawardenepura
 // Kotte).
+//
+// KARACHI (22.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js; säärivi jäi erillisen säätoimittajan tehtäväksi).
+// Avain on 'Karachi', koska laudan js/packs/asia.js antaa kaupungille
+// sekä wiki-nimen että näyttönimen Karachi. Vanha intro oli kolme
+// lausetta, ja se kirjoitettiin uusiksi myös siksi, että ensimmäinen
+// niistä oli VÄÄRÄ: "Karachi oli sata vuotta sitten pieni
+// kalastajakylä" — vuonna 1926 kaupunki oli jo runsaan kahdensadan
+// tuhannen asukkaan satamakaupunki, ja kalastajakylä se oli 1700-luvun
+// alussa. Uusi intro kertoo sijainnin, väkiluvun, luonnonsataman,
+// Kolachin kylän 1729, vuoden 1839 vallanvaihdon, sataman 1854,
+// vehnänviennin ja vuoden 1947 pääkaupunkiaseman. Jokainen introväite
+// tulee saman erän lehtiteksteistä, jotka on tarkistettu en-Wikipedian
+// raakateksteistä 22.8.2026. Sisältölinjaus on spec-asia.md:n
+// mukainen: siirtomaahistoria neutraalina historiana, ei
+// nykypolitiikkaa, ja vuoden 1947 jako vain väestönsiirtona lehden
+// puolella (ei introssa).
+//
+// TEKSTI-KENTÄN PÄÄKAUPUNKIVIRKE KORJATTU POIMINNASSA (Fable
+// 22.8.2026): kenttä sanoi "hallinto siirtyi Islamabadiin
+// 1960-luvulla", mutta en-Wikipedian Karachi-artikkelin, lehden noston
+// H4 ja laudan visan ("asema 1947–1959") mukaan pääkaupunki
+// siirrettiin Rawalpindiin 1958 uuden Islamabadin rakentamisen ajaksi.
+// Virke sanoo nyt molemmat vaiheet, samassa linjassa lehden kanssa.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -3253,9 +3278,26 @@ export const ASIA_ARTIKKELIT = {
       + 'yhä maan talouden keskus.',
   },
   Karachi: {
-    intro: 'Karachi oli sata vuotta sitten pieni kalastajakylä. Nyt '
-      + 'siinä asuu yli kaksikymmentä miljoonaa ihmistä — enemmän kuin '
-      + 'koko Skandinaviassa.',
+    intro: 'Karachi on Pakistanin suurin kaupunki ja Sindin maakunnan '
+      + 'pääkaupunki, ja se sijaitsee maan eteläkärjessä Arabianmeren '
+      + 'rannalla. Asukkaita on yli kaksikymmentä miljoonaa, ja kaupunki '
+      + 'on maan teollisuuden ja rahoituksen keskus. Sen olemassaolon syy '
+      + 'on luonnonsatama: Manoran niemi sulkee lahden avomereltä, ja '
+      + 'lahden ympärille kasvoi ensin kalastajakylä ja sitten '
+      + 'satamakaupunki.'
+      + '\n\n'
+      + 'Kylä oli Kolachi, joka perustettiin 1729 ja jonka ympärille '
+      + 'nousi savimuuri ja kaksi porttia. Britit valtasivat paikan 1839, '
+      + 'ja komissaari Bartle Freren aikana **Karachin satama '
+      + 'perustettiin 1854**. Rautatie, Suezin kanava ja Punjabin uudet '
+      + 'kastelualueet tekivät kaupungista vuosisadan loppuun mennessä '
+      + 'idän suurimman vehnänvientisataman.'
+      + '\n\n'
+      + 'Vuonna 1947 **Karachista tuli itsenäistyneen Pakistanin '
+      + 'ensimmäinen pääkaupunki**, ja se pysyi hallinnon keskuksena '
+      + 'vuoteen 1958. Siirtomaa-ajasta ovat jäljellä Frere Hall, '
+      + 'Empress Market ja Merewetherin kellotorni, ja meren rannalla '
+      + 'Cliftonissa seisoo 1920-luvun Mohatta Palace.',
     teksti: 'Karachi on Pakistanin etelärannikolla Arabianmeren '
       + 'äärellä, lähellä Indus-joen suistoa. Satama on maan tärkein '
       + 'ja käsittelee valtaosan sen ulkomaankaupasta. Ilmasto on '
@@ -3264,7 +3306,8 @@ export const ASIA_ARTIKKELIT = {
       + 'Britit kehittivät Karachista sataman 1840-luvulta alkaen, ja '
       + 'siitä tuli Indus-laakson vientisatama. Kun Pakistan '
       + 'itsenäistyi 1947, Karachi oli sen ensimmäinen pääkaupunki; '
-      + 'hallinto siirtyi Islamabadiin 1960-luvulla. Kaupunkiin muutti '
+      + 'hallinto siirtyi 1958 Rawalpindiin ja sieltä uuteen '
+      + 'Islamabadiin. Kaupunkiin muutti '
       + 'jaon yhteydessä suuri määrä ihmisiä Intian puolelta, ja '
       + 'väkiluku moninkertaistui muutamassa vuosikymmenessä.'
       + '\n\n'

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1008 — KARACHI, AASIAN LAUTA VALMIS 28/28: kaupunkilehti alusta asti (kaupunki + historia, 8 nostoa, 10 nahtavyysjuttua kohdekartalla, matkaopas 5 jaksoa, 28 kuvaa kohde-ei-kuva-linjauksella) — 1947 jako vain vaestonsiirtona, 1958 jalkeinen politiikka pois; Fable korjasi vanhan teksti-kentan paakaupunkivirkkeen (Rawalpindi 1958). Saarivi erillisessa erassa. Tarkista: Karachin lehti kannesta oppaaseen',
   'v1007 — AANENVOIMAKKUUS KORJATTU (omistajan bugiraportti 22.8.2026): iOS reititti pelkat WebAudio-aanet (tehosteet, lukijaaanen puskurit) soittoaanen luokkaan, jota kyljen napit eivat saada — nyt sivu asettaa audioSession-luokan playback ensimmaisesta eleesta. TIETOINEN MUUTOS: hiljaisuuskytkin ei enaa vaienna pelia (sama kuin videotoistossa). Tarkista iPadilla: paina kyljen nappeja tehosteen ja luennan aikana (pitaisi lukea Aani, ei Soittoaani); sanelu toimii yha',
   'v1006 — COLOMBO: kaupunkilehti alusta asti (kaupunki + historia, 8 nostoa, 9 nahtavyysjuttua kohdekartalla, matkaopas 5 jaksoa, 27 kuvaa) — kaikki kuvatekstit jo uuden kohde-ei-kuva-linjauksen mukaan; sisallissota jatetty pois linjauksen mukaisesti; vanhan teksti-kentan satamavirke korjattu tekosatamaksi (Fable). Saarivi tulee erillisessa erassa. Tarkista: Colombon lehti kannesta oppaaseen',
   'v1005 — KUVATEKSTILINJAUS (omistaja 22.8.2026): Raamattuun kirjattu KUVATEKSTI KERTOO KOHTEESTA, EI KUVASTA — historia ja merkitys, ei visuaalista kuvailua; koskee kaikkia kuvatekstejä, vanhat korjataan erissä. Kaikki 16 herokuvatekstia (helsinki, peking, kairo, tokio, xian) kirjoitettu uusiksi linjaukseen. Tarkista: Xianin lehden karusellin kuvatekstit',
@@ -374,6 +375,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '22.8.2026',
   valmiit: [
+    { id: 'karachi', nimi: 'Karachi', versio: 'v1008' },
     { id: 'colombo', nimi: 'Colombo', versio: 'v1006' },
     { id: 'mumbai', nimi: 'Mumbai', versio: 'v996' },
     { id: 'chennai', nimi: 'Chennai', versio: 'v995' },
@@ -388,7 +390,5 @@ export const TUOREET = {
     { id: 'taipei', nimi: 'Taipei', versio: 'v984' },
     { id: 'hongkong', nimi: 'Hongkong', versio: 'v984' },
   ],
-  tyossa: [
-    { id: 'karachi', nimi: 'Karachi' },
-  ],
+  tyossa: [],
 };
