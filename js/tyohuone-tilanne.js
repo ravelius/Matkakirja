@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1017 — HEROKIERROS 5: Moskovan, Mekan ja Hongkongin karuselleihin 3 havainnekuvaa kullekin (Vasilin katedraali/Kreml/Moskovan yliopisto, Suuri moskeija/Abraj Al-Bait/Jabal al-Nour, Victoria Peak/Tian Tan/Star Ferry). Herokaupunkeja 17. Tarkista: kolmen kaupungin etusivukaruselli',
   'v1016 — MAALEHTIEN KUVATEKSTIT (KT1): 30 maan maa-kategoriat kaytiin lapi — 688 selitetta uusiksi kohde-ei-kuva-linjaan en-Wikipedia-faktatarkistuksin, seulan 23 jaannososumaa perusteltuja (korkeusluvut, maantiede, varjoteatteri). Jaljella 24 maata (Lahi-ita + Aasia). Tarkista: parin maalehden kuvatekstit (esim. Italia, Turkki)',
   'v1015 — KUVATEKSTIREMONTTI KT1 ERA 2: Euroopan 12 seuraavaa kaupunkia (bukarest, granada, helsinki, islanti, istanbul, kiova, kobenhavn, krakova, kreeta, lappi, lissabon, lontoo) — 163 selitetta kohde-ei-kuva-linjaan faktatarkistuksin, seula 0 osumaa. Jaljella Euroopasta 21 kaupunkia. Tarkista: Helsingin ja Lontoon kuvatekstit',
   'v1014 — HEROKIERROS 4: Rooman, Jerusalemin ja Singaporen karuselleihin 3 havainnekuvaa kullekin (Colosseum/Pietarinkirkko/Pantheon, Kalliomoskeija/Daavidin torni/Pyhan haudan kirkko, Marina Bay Sands/superpuut/Sulttaanin moskeija). Herokaupunkeja 14. Tarkista: kolmen kaupungin etusivukaruselli',
