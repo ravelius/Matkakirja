@@ -37,11 +37,19 @@ if (!palvelin) {
   ({ POLLOPALVELIN: palvelin } = await import('../../js/packs/pollo-asetukset.js'));
 }
 
+/*
+ * Worker hylkää pyynnöt ilman sallittua Originia (väärinkäytön
+ * karsinta ennen varsinaista lukkoa eli kehittäjäkoodia). Eräajo ei
+ * ole selain, joten otsake annetaan käsin — pelin oma osoite kelpaa.
+ */
+const origin = process.env.POLLO_ORIGIN || 'https://ravelius.github.io';
+
 const vastaus = await fetch(palvelin, {
   method: 'POST',
   headers: {
     'content-type': 'application/json',
     'x-pollo-kehittaja': koodi,
+    origin,
   },
   body: JSON.stringify({ tehtava: 'kuva', prompti, koko: koko || 'pysty' }),
 });
