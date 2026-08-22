@@ -1,5 +1,15 @@
 # Viisaan Pöllön käyttöönotto (omistajalle, n. 10 min puhelimella)
 
+> **Päivitys 22.8.2026 (kuvagenerointi):** sama worker osaa nyt myös
+> generoida pelitaiteen kuvia (`tehtava: 'kuva'`, OpenAI gpt-image-2)
+> — mutta VAIN kehittäjäkoodilla: pelaajille haaraa ei ole, ja ilman
+> `OPENAI_API_KEY`-salaisuutta se vastaa 503:lla. Näin OpenAI-avain
+> pysyy yhdessä paikassa eikä sitä kopioida kehityskonttiin. Eräajot
+> kutsuvat komennolla `node tools/pollo/generoi-kuva.mjs` (koodi
+> ympäristömuuttujasta POLLO_KEHITTAJAKOODI). Turvaraja 60 kuvaa/vrk
+> (`KUVA_PAIVARAJA`). Käyttöönotto: aja "Pöllön julkaisu" -ajo
+> uudelleen, jotta uusi worker-versio menee Cloudflareen.
+>
 > **Päivitys 14.8.2026 (lukijaääni):** sama worker välittää nyt myös
 > pelin lukijaäänen (OpenAI gpt-4o-mini-tts, `tehtava: 'puhe'`).
 > Se tarvitsee neljännen salaisuuden `OPENAI_API_KEY`

@@ -27,6 +27,15 @@ export const PUHE_TEKSTIN_KATTO = 1000;
 export const PUHE_PAIVARAJA_OLETUS = 60000;
 export const PUHE_KUUKAUSIRAJA_OLETUS = 900000;
 
+/*
+ * KUVAGENEROINNIN RAJAT (kehittäjän eräajot, tehtava: 'kuva').
+ * Promptin katto on väljä, koska julistepromptit ovat pitkiä
+ * tyylikuvauksia; päiväraja on turvaraja karanneelle silmukalle,
+ * ei kiintiö — haara on joka tapauksessa vain kehittäjäkoodilla.
+ */
+export const KUVA_PROMPTIN_KATTO = 4000;
+export const KUVA_PAIVARAJA_OLETUS = 60;
+
 /** Kontekstipaketin katto merkkeinä (sama luku kuin pelin puolella). */
 export const KONTEKSTIN_KATTO = 5000;
 

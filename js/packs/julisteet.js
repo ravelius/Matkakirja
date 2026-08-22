@@ -52,25 +52,22 @@ export const JULISTEET = {
     tiedosto: 'istanbul.png',
     kaupunki: 'Istanbul',
     otsikko: 'Konstantinopoli — Orient Express',
-    selite: 'Kansainvälinen makuuvaunuyhtiö — Orient Express. Pariisi — Wien — '
-      + 'Konstantinopoli, ensimmäinen suora yhteys 1883; makuu- ja '
-      + 'ravintolavaunut Sirkecin asemalta kahdesti viikossa.',
+    selite: 'Orient Express — makuuvaunujunan palvelu Sirkecin asemalta, '
+      + 'vuonna 1883.',
   },
   tokio: {
     tiedosto: 'tokio.png',
     kaupunki: 'Tokio',
     otsikko: 'Tokio — keisarikunnan ensimmäinen rautatie',
-    selite: 'Japanin keisarillinen valtionrautatie. Shinbashi (Tokio) — Yokohama, '
-      + 'keisarikunnan ensimmäinen rautatie, avattu Meijin 5. vuonna (1872); '
-      + 'yhdeksän junaa päivässä, matka 53 minuuttia.',
+    selite: 'Valtion rautatie. Shinbashi (Tokio) — Yokohama, avattu Meijin '
+      + '5. vuonna (1872); yhdeksän edestakaista vuoroa päivässä.',
   },
   moskova: {
     tiedosto: 'moskova.png',
     kaupunki: 'Moskova',
     otsikko: 'Moskova — Nikolain rautatie',
     selite: 'Nikolain rautatie. Moskova — Pietari, 604 virstaa, avattu vuonna '
-      + '1851; pikajunat päivittäin Nikolain asemalta, ensimmäisen luokan '
-      + 'makuuvaunut.',
+      + '1851; kuriirijunat päivittäin, ensimmäisen luokan makuuvaunut.',
   },
   lontoo: {
     tiedosto: 'lontoo.png',
@@ -84,15 +81,15 @@ export const JULISTEET = {
     tiedosto: 'kairo.png',
     kaupunki: 'Kairo',
     otsikko: 'Kairo — Niilin höyrylaivat',
-    selite: 'Niilin höyrylaivat. Viikoittaiset matkat Kairosta Assuaniin ja '
-      + 'ensimmäiselle kataraktille kaudesta 1869 alkaen.',
+    selite: 'Ilmoitus: viikoittaiset Niilin-matkat höyrylaivalla Kairosta '
+      + 'Assuaniin — vuonna 1869.',
   },
   xian: {
     tiedosto: 'xian.png',
     kaupunki: 'Xi’an',
     otsikko: 'Xi’an — Silkkitien vekselipankki',
-    selite: 'Rishengchangin vekselipankki, perustettu 1823. Vekselit lunastetaan '
-      + 'keisarikunnan joka maakunnassa — Silkkitien kaupan rahanvaihto.',
+    selite: 'Rishengchangin vekselipankki, perustettu Daoguangin kaudella '
+      + '(1823) — vekselit lunastetaan keisarikunnan joka maakunnassa.',
   },
   pariisi: {
     tiedosto: 'pariisi.png',
@@ -105,23 +102,25 @@ export const JULISTEET = {
     tiedosto: 'delhi.png',
     kaupunki: 'Delhi',
     otsikko: 'Delhi — East Indian Railway',
-    selite: 'East Indian Railway. Delhin risteysasema avattu 1864 — vaunut '
-      + 'Kalkuttaan asti, 954 mailia; lipunmyynti Chandni Chowkin '
-      + 'konttorissa.',
+    selite: 'East Indian Railway -yhtiön yhteys Delhistä Kalkuttaan, avattu '
+      + 'vuonna 1864; matkustaja- ja tavarajunat päivittäin, liput '
+      + 'asemalta.',
   },
   peking: {
     tiedosto: 'peking.png',
     kaupunki: 'Peking',
     otsikko: 'Peking — Tong Ren Tangin apteekki',
-    selite: 'Tong Ren Tangin apteekki, perustettu 1669. Keisarillisen hovin '
-      + 'lääkkeiden toimittaja — Dashilanin kadulla Qianmenin ulkopuolella.',
+    selite: 'Tong Ren Tangin apteekki Dashilanin kadulla, perustettu Kangxin '
+      + '8. vuonna (1669); aidot rohdokset, pillerit ja voiteet, tilaukset '
+      + 'myös kirjeitse läheltä ja kaukaa — rehellinen kauppa vanhalle ja '
+      + 'nuorelle.',
   },
   samarkand: {
     tiedosto: 'samarkand.png',
     kaupunki: 'Samarkand',
     otsikko: 'Samarkand — Taka-Kaspian rautatie',
-    selite: 'Taka-Kaspian rautatie. Krasnovodsk — Samarkand, pääteasema '
-      + 'saavutettu 1888; kahdesti viikossa, yhteys Kaspian höyrylaivoihin.',
+    selite: 'Taka-Kaspian rautatie. Krasnovodskista Samarkandiin, pääteasema '
+      + 'saavutettu vuonna 1888; kahdesti viikossa.',
   },
 };
 

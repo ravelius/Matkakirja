@@ -26,6 +26,8 @@ import {
   PAIVARAJA_OLETUS,
   PUHE_KUUKAUSIRAJA_OLETUS,
   PUHE_PAIVARAJA_OLETUS,
+  KUVA_PAIVARAJA_OLETUS,
+  KUVA_PROMPTIN_KATTO,
   PUHE_TEKSTIN_KATTO,
   kuukausiAvain,
   lueLista,
@@ -751,6 +753,82 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
   });
 }
 
+/*
+ * KUVAGENEROINTI VAIN KEHITTÄJÄLLE (omistajan päätös 22.8.2026:
+ * OpenAI-avain pysyy yhdessä paikassa eli tässä workerissa, eikä sitä
+ * kopioida kehityskonttiin). Pelitaiteen eräajot — aikakausjulisteet
+ * ynnä muut — kutsuvat tätä kehittäjäkoodilla; pelaajille haaraa ei
+ * ole (403 ilman koodia, eikä pelin koodi kutsu sitä koskaan).
+ * Kutsuja: tools/pollo/generoi-kuva.mjs.
+ */
+const KUVA_KOOT = { pysty: '1024x1536', vaaka: '1536x1024', nelio: '1024x1024' };
+const KUVA_MALLI_OLETUS = 'gpt-image-2';
+
+async function hoidaKuva(pyynto, env, kors, runko) {
+  if (!kehittajaOhitus(pyynto, env)) {
+    return vastaa({ virhe: 'koodi', viesti: 'Vain kehittäjälle.' }, { status: 403, ...kors });
+  }
+  if (!env.OPENAI_API_KEY) {
+    return vastaa({
+      virhe: 'asetus',
+      viesti: 'Kuvagenerointi ei ole käytössä.',
+    }, { status: 503, ...kors });
+  }
+  const prompti = siivoaTeksti(runko?.prompti, KUVA_PROMPTIN_KATTO);
+  if (!prompti) {
+    return vastaa({ virhe: 'kysely', viesti: 'Prompti puuttuu.' }, { status: 400, ...kors });
+  }
+  // Yksi yhteinen päivälaskuri: haara on kehittäjän, joten IP-kohtaista
+  // erottelua ei tarvita — turvaraja koskee kokonaiskäyttöä.
+  const kv = env.POLLO_KV ?? null;
+  const raja = Number(env.KUVA_PAIVARAJA || KUVA_PAIVARAJA_OLETUS);
+  const laskuriAvain = `kuva:${paivaAvain('kehittaja')}`;
+  if (kv) {
+    const kaytetty = await lueLaskuri(kv, laskuriAvain);
+    if (kaytetty >= raja) {
+      return vastaa({
+        virhe: 'raja',
+        viesti: `Päivän kuvaraja (${raja}) on täynnä.`,
+      }, { status: 429, ...kors });
+    }
+  }
+  const koko = KUVA_KOOT[runko?.koko] ?? KUVA_KOOT.pysty;
+  const laatu = ['low', 'medium', 'high'].includes(runko?.laatu) ? runko.laatu : 'high';
+  const vastausOAI = await fetch('https://api.openai.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      authorization: `Bearer ${env.OPENAI_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: env.KUVA_MALLI || KUVA_MALLI_OLETUS,
+      prompt: prompti,
+      size: koko,
+      quality: laatu,
+    }),
+  });
+  if (!vastausOAI.ok) {
+    // Virherunkoja ei lokiteta eikä välitetä — sama sääntö kuin
+    // puheessa ja pöllön chat-kutsuissa.
+    return vastaa({
+      virhe: 'openai',
+      viesti: `Generointi epäonnistui (HTTP ${vastausOAI.status}).`,
+    }, { status: 502, ...kors });
+  }
+  const data = await vastausOAI.json();
+  const b64 = data?.data?.[0]?.b64_json ?? null;
+  if (!b64) {
+    return vastaa({ virhe: 'openai', viesti: 'Vastauksessa ei ollut kuvaa.' }, { status: 502, ...kors });
+  }
+  if (kv) await kasvataLaskuri(kv, laskuriAvain, 2 * 24 * 3600);
+  return vastaa({
+    kuva: b64,
+    muoto: 'png',
+    koko,
+    malli: env.KUVA_MALLI || KUVA_MALLI_OLETUS,
+  }, kors);
+}
+
 /* ------------------------------------------------------------------ */
 /* Työhuoneen tilannepalkit                                            */
 /* ------------------------------------------------------------------ */
@@ -968,6 +1046,11 @@ export default {
      */
     if (runko?.tehtava === 'puhe') {
       return hoidaPuhe(pyynto, env, kors, runko, ctx);
+    }
+
+    // Kuvagenerointi: kehittäjän eräajot (ks. hoidaKuva yllä).
+    if (runko?.tehtava === 'kuva') {
+      return hoidaKuva(pyynto, env, kors, runko);
     }
 
     /*

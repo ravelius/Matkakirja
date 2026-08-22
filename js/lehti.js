@@ -34,7 +34,7 @@ import {
 import {
   lippuUrl, lippuVara, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
-import { JULISTEET, JULISTE_LAHDE } from './packs/julisteet.js';
+import { JULISTE_LAHDE } from './packs/julisteet.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
@@ -904,46 +904,98 @@ export function avaaTilastoLehti(ui) {
 }
 
 /**
- * Grafiikka-lehti (omistajan tilaus 22.8.2026): kaikki generoidut
- * aikakausjulisteet yhtenä katselmuksena työhuoneessa — yksi juliste
- * sivua kohti, kuva ämpäristä täydessä koossa (julisteUrl) ja alla
- * sama suomennos, jonka pelaaja näkee palkintonäkymässä. Täältä
- * omistaja selaa koko sarjan tyylin yhdellä silmäyksellä ennen
- * massalaajennusta; pelaajille julisteet näkyvät vain minitehtävien
- * palkintoina ja matkalaukussa.
+ * Grafiikka-lehti (omistajan tilaus 22.8.2026, suunta tarkennettu
+ * samana päivänä): TYYLIKOKEEN KATSELMUS. Aiempi versio listasi
+ * pelin palkintojulisteet, mutta niiden mainostekstit eivät
+ * vastanneet kuvia ("Tekstit ja kuvat eivät vastaa toisiaan"), joten
+ * lehdessä ovat nyt VAIN uuden suunnan luonnokset: X-postauksen
+ * esimerkkiprompti (pienoismaailma, päämaamerkki keskellä ja 4–6
+ * kohdetta ympärillä) yhdistettynä pelin kivipainotyyliin, tekstinä
+ * pelkkä kaupungin nimi alkuperäiskielellä. Viimeisenä sivuna on
+ * käytetty promptipohja. Kuvat ladataan ämpäristä (luonnokset eivät
+ * ole pelin palkintomekaniikassa — js/packs/julisteet.js ennallaan).
  */
 export function avaaGrafiikkaLehti(ui) {
-  const kaupungit = Object.keys(JULISTEET);
+  const luonnokset = [
+    { id: 'istanbul', nimi: 'Istanbul', kuvaus: 'Hagia Sofia keskellä; ympärillä '
+      + 'Sininen moskeija, Galata-torni, basaarin katot ja Kultaisen sarven '
+      + 'veneliikenne. Nimi osmaninturkiksi (thuluth).' },
+    { id: 'tokio', nimi: 'Tokio', kuvaus: 'Asakusan pagodi ja temppeliportti '
+      + 'keskellä; ympärillä Shinbashin höyryjuna, machiya-puotirivi, '
+      + 'kaarisilta, kirsikkapuut ja Fuji horisontissa. Nimi kanjeilla.' },
+    { id: 'pariisi', nimi: 'Pariisi', kuvaus: 'Eiffel-torni keskellä; ympärillä '
+      + 'Notre-Dame, Riemukaari, Trocadéron kupolit, Seinen sillat, '
+      + 'bukinistit ja hevosomnibussit.' },
+  ];
   const etusivu = {
     id: 'grafiikka-etusivu',
     nimi: 'Grafiikka',
     yksipalsta: true,
     nostot: [{
-      otsikko: `${kaupungit.length} aikakausjulistetta`,
-      teksti: 'Minitehtävien palkintojulisteet: 1890-luvun '
-        + 'kivipainotyyli, teksti pelkällä alkuperäiskielellä ja '
-        + 'suomennos pelissä kuvan alla. Yksi juliste sivua kohti — '
-        + 'kuvat ladataan ämpäristä alkuperäislaadussa, joten sivu '
-        + 'voi aueta hitaasti hitaalla yhteydellä.\n\n'
-        + `Lähdemerkintä jokaisessa: ${JULISTE_LAHDE}.`,
+      otsikko: 'Tyylikoe: pienoismaailma kivipainona',
+      teksti: 'Kolme luonnosta uudesta julistesuunnasta (22.8.2026): '
+        + 'pohjana omistajan antama esimerkkiprompti — päämaamerkki '
+        + 'keskellä, 4–6 tunnistettavaa kohdetta ympärillä, pienet '
+        + 'mittakaavahahmot — mutta tyyli vaihdettu pelin 1890-luvun '
+        + 'kivipainoon ja tekstinä VAIN kaupungin nimi '
+        + 'alkuperäiskielellä. Ei mainostekstiä, jonka kuva voisi '
+        + 'pettää.\n\n'
+        + 'Yksi luonnos sivua kohti; viimeisellä sivulla on käytetty '
+        + 'promptipohja. Kuvat ladataan ämpäristä täydessä koossa. '
+        + 'Pelin palkintojulisteisiin ei ole koskettu.',
     }],
   };
-  const sivut = kaupungit.map((cityId) => {
-    const juliste = JULISTEET[cityId];
-    return {
-      id: `grafiikka-${cityId}`,
-      nimi: juliste.kaupunki,
-      yksipalsta: true,
-      nostot: [{
-        otsikko: juliste.otsikko,
-        kuvaUrl: julisteUrl(juliste.tiedosto),
-        selite: juliste.selite,
-        lahde: JULISTE_LAHDE,
-        teksti: '',
-      }],
-    };
-  });
-  avaaKehittajaLehti(ui, 'Grafiikka', [etusivu, ...sivut]);
+  const sivut = luonnokset.map((luonnos) => ({
+    id: `grafiikka-${luonnos.id}`,
+    nimi: luonnos.nimi,
+    yksipalsta: true,
+    nostot: [{
+      otsikko: `${luonnos.nimi} — luonnos`,
+      kuvaUrl: julisteUrl(`${luonnos.id}-luonnos.png`),
+      selite: luonnos.kuvaus,
+      lahde: JULISTE_LAHDE,
+      teksti: '',
+    }],
+  }));
+  const promptisivu = {
+    id: 'grafiikka-prompti',
+    nimi: 'Promptipohja',
+    yksipalsta: true,
+    nostot: [{
+      otsikko: 'Generointiprompti (Gemini, gemini-3-pro-image)',
+      teksti: 'Kaupunkikohtaiset kohdat hakasulkeissa; muu teksti on '
+        + 'jokaisessa luonnoksessa sama.\n\n'
+        + 'Create a premium vertical 4:5 travel poster of [CITY], '
+        + 'designed as a beautiful miniature world in the manner of a '
+        + 'late 19th century stone lithograph.\n\n'
+        + 'Make [MAIN LANDMARK] the dominant central feature, '
+        + 'surrounded by 4-6 other recognizable landmarks and local '
+        + 'details of the era that instantly represent the city: '
+        + '[LANDMARKS]. Add [GEOGRAPHY] as the geographical anchor. '
+        + 'Include tiny period-appropriate people, carriages, boats '
+        + 'and street details to create scale and storytelling, while '
+        + 'keeping the composition clean and sophisticated with '
+        + 'generous quiet sky.\n\n'
+        + 'Style, strictly: authentic 1890s advertising lithograph a '
+        + 'real printing house could have produced — disciplined, '
+        + 'almost technical lithographic linework, layered depth like '
+        + 'a staged miniature scene, muted two-to-three colour stone '
+        + 'lithograph palette only (faded sepia, dull brick red, '
+        + 'desaturated slate blue) on unbleached cream paper; heavy '
+        + 'paper grain, worn edges, slightly uneven ink coverage. No '
+        + 'bright or saturated colour anywhere.\n\n'
+        + 'Typography: at the top, [CITY NAME IN LOCAL SCRIPT] — and '
+        + 'NO OTHER TEXT ANYWHERE on the poster. No country name, no '
+        + 'tagline, no advertisement, no translations, no place-name '
+        + 'labels on water or streets, no engineering measurement '
+        + 'lines or dimension annotations on buildings.\n\n'
+        + 'Avoid: photorealism, plastic or glossy CGI look, pastel '
+        + 'colours, modern objects, distorted landmarks, any text '
+        + 'beyond the city name, any language other than the local '
+        + 'one.',
+    }],
+  };
+  avaaKehittajaLehti(ui, 'Grafiikka', [etusivu, ...sivut, promptisivu]);
 }
 
 /* ------------------------------------------------------------------ *
