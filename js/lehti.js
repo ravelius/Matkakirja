@@ -1701,7 +1701,9 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
           rooli === 'ennen' ? 'Ennen ' : 'Nyt '));
       }
       teksti.appendChild(document.createTextNode(teos.selite));
-      if (teos.lahde) teksti.appendChild(html('span', 'lehti-kuvalahde', ` ${teos.lahde}`));
+      // Väli tulee CSS:n ::before-sisällöstä, ei tekstistä
+      // (css/styles.css "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
+      if (teos.lahde) teksti.appendChild(html('span', 'lehti-kuvalahde', teos.lahde));
       kotelo.appendChild(teksti);
     }
     return kotelo;
