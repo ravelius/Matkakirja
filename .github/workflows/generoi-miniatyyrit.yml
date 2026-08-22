@@ -16,6 +16,12 @@
 # kobenhavn-rosenborgin-linna"). Uusinta: lisää kenttään myös
 # --uusiksi. Tulos on miniatyyrit-artefakti (jpg + leikattu webp),
 # elää 3 päivää.
+#
+# AKVARELLI: rasti "akvarelli"-valinta, niin työkalu ajaa akvarellityylin
+# (seepiaviiva + kevyet laveeraukset, omistajan hyväksymä Helsingin
+# pilotti v1025/v1026) seepian sijaan. Vanhan seepiakuvan korvaaminen
+# akvarellilla vaatii lisäksi --uusiksi avainkentässä — muuten valmis
+# kuva ohitetaan kustannussäännön mukaisesti.
 
 name: Generoi miniatyyrit
 
@@ -26,6 +32,11 @@ on:
         description: 'Kohdeavaimet välilyönnein (esim. kobenhavn-kastellet); lisää --uusiksi uusintaan'
         required: true
         type: string
+      akvarelli:
+        description: 'Akvarellityyli (seepiaviiva + kevyet laveeraukset) seepian sijaan'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -57,6 +68,7 @@ jobs:
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           AVAIMET: ${{ inputs.avaimet }}
+          AKVARELLI: ${{ inputs.akvarelli }}
         run: |
           set -euo pipefail
           if [ -z "${GOOGLE_API_KEY:-}" ]; then
@@ -68,8 +80,13 @@ jobs:
             CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' | head -1)
             export CHROMIUM
           fi
+          # Tyylilippu: valintaruutu tulee merkkijonona "true"/"false".
+          TYYLILIPPU=""
+          if [ "${AKVARELLI:-false}" = "true" ]; then
+            TYYLILIPPU="--akvarelli"
+          fi
           # shellcheck disable=SC2086
-          node tools/generoi-miniatyyrit.mjs $AVAIMET
+          node tools/generoi-miniatyyrit.mjs $TYYLILIPPU $AVAIMET
           uudet=$(git status --porcelain assets/kartat/miniatyyrit/ | awk '{print $2}' | grep '\.jpg$' || true)
           if [ -z "$uudet" ]; then
             echo "Ei uusia kuvia (kaikki pyydetyt oli jo tehty?)."

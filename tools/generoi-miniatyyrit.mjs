@@ -16,6 +16,9 @@
  *          Avain on muotoa berliini-tv-torni; ilman argumentteja
  *          generoidaan kaikki listatut. KATSO JOKAINEN KUVA SILMIN
  *          ennen peliin kytkemistä (js/packs/miniatyyrit.js).
+ *          --akvarelli vaihtaa tyylin akvarelliksi (omistajan hyväksymä
+ *          Helsingin pilotti v1025/v1026); vanhan kuvan uusinta samalla
+ *          avaimella vaatii lisäksi --uusiksi.
  * Ulos:    assets/kartat/miniatyyrit/<avain>.jpg
  *
  * KUSTANNUSSÄÄNTÖ (omistajan päätös 16.8.2026, kun 30 €:n raja
@@ -81,7 +84,7 @@ if (!avain) {
  *   3. Ei karttaa rakennuksen ympärille: pienoiskuva istutetaan
  *      OIKEALLE kartalle, joten kuvan oma katuverkko valehtelisi.
  */
-const TYYLI = (aihe) => 'A tiny landmark sketch for a vintage '
+const TYYLI_SEEPIA = (aihe) => 'A tiny landmark sketch for a vintage '
   + `hand-drawn city map: ${aihe}. `
   + 'Drawn as a SIMPLE MONOCHROME ink sketch in one single color only — '
   + 'dark sepia brown ink — with no other colors, no watercolor, no '
@@ -109,6 +112,86 @@ const TYYLI = (aihe) => 'A tiny landmark sketch for a vintage '
   + 'Do NOT paint any white halo, glow or watercolor wash around the '
   + 'building: the flat cream background color continues completely '
   + 'unchanged right up to the building outline on every side.';
+
+/*
+ * AKVARELLITYYLI (--akvarelli). Omistaja hyväksyi Helsingin
+ * akvarellipilotin (v1025 + leikkauskorjaus v1026, js/tyohuone-tilanne.js:
+ * "seepiaviiva + kevyet laveeraukset, sama kermapaperi") ja tilasi
+ * kaikkien nähtävyysminiatyyrien uusinnan samalla reseptillä.
+ *
+ * REKONSTRUKTIO 22.8.2026: pilotin muokattu tyyliprompti EI PÄÄTYNYT
+ * REPOON — v1025/v1026 committoivat vain valmiit .webp-kuvat. Tämä
+ * kääre on kirjoitettu takaisin hyväksyttyjä Helsingin kuvia
+ * (assets/kartat/miniatyyrit/helsinki-*.webp) katsomalla: ohut
+ * seepiamusteviiva pohjalla, sen päällä muutama läpikuultava
+ * laveeraus rakennuksen omissa haaleissa väreissä (patinoitunut
+ * kuparinvihreä, lämmin kivenkerma, murrettu tiilenpunainen), suuri
+ * osa paperista jää maalaamatta, ja rakennuksen alla on pieni pehmeä
+ * varjolaveeraus. Jos alkuperäinen sanamuoto joskus löytyy, se voittaa
+ * tämän rekonstruktion.
+ *
+ * Sommittelu-, karikatyyri- ja kanvaasirunko on sama kuin seepiassa,
+ * ja kaikki kolme vartiota säilyvät (tausta koko kanvaasi reunasta
+ * reunaan, ei tekstiä, ei karttaa tai katuja, ei paperiarkkia
+ * varjoineen, ei valkoista hehkua rakennuksen ympärillä) — vain
+ * varjovartio on muotoiltu niin, ettei sallittu akvarellivarjo
+ * rakennuksen ALLA kumoa kieltoa hehkusta sen YMPÄRILLÄ.
+ *
+ * Viimeinen lause kumoaa aiheen omat yksivärisyysvaatimukset: osassa
+ * kohdekuvauksia (esim. tripoli-punainen-linna, tokio-shitamachi-museo)
+ * lukee "one-colour dark sepia ink", koska seepiatyylissä malli lipsui
+ * väreihin. Akvarelliajossa niitä ei saa noudattaa.
+ */
+const TYYLI_AKVARELLI = (aihe) => 'A tiny landmark illustration for a '
+  + `vintage hand-drawn city map: ${aihe}. `
+  + 'Drawn FIRST as a fine dark sepia-brown ink line sketch, and then '
+  + 'tinted on top with LIGHT TRANSPARENT WATERCOLOR WASHES: soft, '
+  + 'natural, muted colors — the building in its own real material '
+  + 'colors but pale and watered down (weathered copper green, warm '
+  + 'pale stone, muted brick red, soft slate grey, dusty foliage '
+  + 'green) — laid on as a few loose washes that let the ink lines and '
+  + 'the paper show through everywhere. Watercolor only: never '
+  + 'saturated, never poster colors, no gouache, no flat digital fill, '
+  + 'no colored outlines, no black shading. Paint sparingly — LARGE '
+  + 'AREAS OF THE PAPER ARE LEFT COMPLETELY UNPAINTED, and here and '
+  + 'there a wash stops short of the ink outline. The ink drawing '
+  + 'carries the picture; the color is only a hint. Slightly '
+  + 'caricatured and playful: its most recognizable features gently '
+  + 'exaggerated, proportions charmingly squashed, like a quick '
+  + 'confident sketch by a travel illustrator. As simple as possible: '
+  + 'just a few clean confident ink lines, minimal detail. A small '
+  + 'charming three-quarter aerial view. The building stands alone on '
+  + 'a plain warm cream paper background (like aged map paper, '
+  + '#f2ecd8) that fills the ENTIRE square canvas edge to edge; under '
+  + 'the building at most a small soft pale watercolor shadow wash '
+  + 'right at its foot. No surrounding streets or map, no text, no '
+  + 'letters, no signs, no frame, no border, no people in front. '
+  + 'Square 1:1. '
+  // Sama paperivartio kuin seepiassa: tausta on koko kanvaasi, EI
+  // pöydällä makaava paperiarkki varjoineen.
+  + 'The cream paper fills the whole canvas edge to edge: do NOT paint '
+  + 'a sheet of paper lying on a surface, no paper edges, no drop '
+  + 'shadow around the background, no rectangular panel. '
+  // Taustanpoisto (tools/leikkaa-miniatyyrit.mjs) vaatii TASAISEN
+  // taustan: vaalea hehku rakennuksen ympärillä estäisi tulvatäytön.
+  // Varjolaveeraus rakennuksen ALLA on sallittu ja säilyy leikkauksessa,
+  // koska se on taustaa selvästi tummempi (mitattu v1025-kuvista).
+  + 'Apart from that small shadow wash at the foot of the building, do '
+  + 'NOT paint any white halo, glow, vignette or colored wash around '
+  + 'the building and do NOT lighten the paper near it: the flat cream '
+  + 'background color continues completely unchanged right up to the '
+  + 'building outline on every side, and no sky is painted. '
+  + 'If the subject description above asks for a one-color, monochrome '
+  + 'or colorless ink drawing, IGNORE that wording: this is the '
+  + 'watercolor version of the very same sketch.';
+
+/*
+ * Tyylivalinta: seepia on oletus, --akvarelli vaihtaa akvarelliin.
+ * Lippu luetaan tässä, koska TYYLI on vakio; argumenttien siivous
+ * (lippu ei ole kohdeavain) tehdään jonon rakennuksen yhteydessä.
+ */
+const AKVARELLI = process.argv.includes('--akvarelli');
+const TYYLI = AKVARELLI ? TYYLI_AKVARELLI : TYYLI_SEEPIA;
 
 /*
  * Kohteet kaupungeittain. AVAIMEN ALKUOSA on kaupungin tunnus ja
@@ -1116,7 +1199,9 @@ const KUVAT = [
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
-const pyydetyt = process.argv.slice(2).filter((a) => a !== '--uusiksi');
+const LIPUT = new Set(['--uusiksi', '--akvarelli']);
+const pyydetyt = process.argv.slice(2).filter((a) => !LIPUT.has(a));
+console.log(`Tyyli: ${AKVARELLI ? 'akvarelli (seepiaviiva + kevyet laveeraukset)' : 'seepia'}.`);
 const { existsSync } = await import('node:fs');
 let jono = KUVAT.filter(([k]) => !pyydetyt.length || pyydetyt.includes(k));
 if (!jono.length) {

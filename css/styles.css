@@ -2174,10 +2174,13 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 }
 
 /* Selite ja lähde jäävät kuvan alle kapeana rivinä, eivät levene
- * kortin täyteen leveyteen isolla ruudulla. */
+ * kortin täyteen leveyteen isolla ruudulla. 60rem oli iPadin
+ * vaakanäytöllä yhä lähes koko ruutu (omistajan havainto 23.8.2026
+ * julistesuurennoksesta: "lado alaosan teksti kapeammalle alalle") —
+ * 36rem on lukupalsta, joka vastaa pystyjulisteen leveyttä. */
 .postikortti.kulttuuri-suurennos .kuvateksti,
 .postikortti.kulttuuri-suurennos .kuvalahde {
-  max-width: 60rem;
+  max-width: 36rem;
   margin-inline: auto;
   text-align: center;
   /* Vaalea teksti tummalla pohjalla. */
