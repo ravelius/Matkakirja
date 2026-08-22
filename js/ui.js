@@ -7194,9 +7194,17 @@ export class UI {
      * kuvan päältä — juuri siitä mistä se useimmiten alkaa.
      */
     kuva.draggable = false;
-    const osoitteet = [...new Set([
-      valokuvaUrl(nosto.tiedosto, leveys), valokuvaVara(nosto.tiedosto, leveys),
-    ])].filter(Boolean);
+    /*
+     * ÄMPÄRIKUVA (omistajan koe 22.8.2026): pelin oma generoitu
+     * kuvitus asuu peiliämpärissä eikä Commonsissa, joten sillä on
+     * `ampari`-polku tiedostonimen sijaan. Varareittiä ei ole —
+     * ämpäri on ainoa lähde, kuten julisteillakin.
+     */
+    const osoitteet = nosto.ampari
+      ? [julisteUrl(nosto.ampari)]
+      : [...new Set([
+        valokuvaUrl(nosto.tiedosto, leveys), valokuvaVara(nosto.tiedosto, leveys),
+      ])].filter(Boolean);
     let yritys = 0;
     const YRITYKSIA = 3;
     const seuraava = () => {
@@ -7302,7 +7310,10 @@ export class UI {
     let laskuri = null;
     // Sarjan kaikki suurennokset latautuvat taustalla heti, jotta
     // selaus ei odota verkkoa (omistajan tilaus 14.8.2026).
-    if (lista) esilataaKuvat(lista.map((t) => valokuvaSuurennos(t.tiedosto, 1600)));
+    if (lista) {
+      esilataaKuvat(lista.map((t) => (t.osoite
+        ?? (t.ampari ? julisteUrl(t.ampari) : valokuvaSuurennos(t.tiedosto, 1600)))));
+    }
     const nayta = () => {
       const teos = lista ? lista[indeksi] : nosto;
       /*
@@ -7316,8 +7327,9 @@ export class UI {
        * ole tiedostonimeä, jota valokuvaSuurennos osaisi kääntää
        * (js/packs/julisteet.js, js/media.js julisteUrl).
        */
-      if (teos.osoite) asetaKuva(kuva, teos.osoite, null);
-      else asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
+      if (teos.osoite || teos.ampari) {
+        asetaKuva(kuva, teos.osoite ?? julisteUrl(teos.ampari), null);
+      } else asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
       kuva.alt = teos.otsikko ?? teos.selite ?? '';
       kuvateksti.textContent = teos.selite ?? '';
       kuvateksti.hidden = !teos.selite;

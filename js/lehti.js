@@ -1685,7 +1685,9 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
     kuva.alt = teos.selite ?? '';
     // Harmaasävy vain aidosti vanhoille (sama sääntö kuin postikortissa).
     if (onVanhaKuva(teos)) kuva.classList.add('vanha-vedos');
-    asetaKuva(kuva, valokuvaUrl(teos.tiedosto, leveys), valokuvaVara(teos.tiedosto, leveys));
+    // Ämpärikuvalla (`ampari`) ei ole Commons-polkua eikä varareittiä.
+    if (teos.ampari) asetaKuva(kuva, julisteUrl(teos.ampari), null);
+    else asetaKuva(kuva, valokuvaUrl(teos.tiedosto, leveys), valokuvaVara(teos.tiedosto, leveys));
     ui.napautuksesta(kuva, () => ui.naytaKulttuuriKuva(teos, {
       teokset: sarja, kohdalla: indeksi,
     }));

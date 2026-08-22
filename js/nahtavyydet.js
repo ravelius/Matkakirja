@@ -13,7 +13,7 @@
 import { kytkeKarttaZoom } from './karttazoom.js';
 import { liitaLukija, pysaytaLukija } from './lukija.js';
 import { el } from './mapart.js';
-import { asetaKuva } from './media.js';
+import { asetaKuva, julisteUrl } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { HENKILOLINKIT, HENKILOT } from './packs/henkilot.js';
 import {
@@ -1555,7 +1555,7 @@ export function nahtavyydenKaruselli(ui, kuvat) {
   const teksti = html('figcaption', 'nahtavyys-kuvateksti');
   // Sarjan kaikki kuvat latautuvat taustalla heti — sama osoite ja
   // leveys kuin varustaNostonKuvassa, jotta välimuisti osuu.
-  esilataaKuvat(kuvat.map((k) => valokuvaUrl(k.tiedosto, 900)));
+  esilataaKuvat(kuvat.map((k) => (k.ampari ? julisteUrl(k.ampari) : valokuvaUrl(k.tiedosto, 900))));
   let kohta = 0;
   let el = null;
 

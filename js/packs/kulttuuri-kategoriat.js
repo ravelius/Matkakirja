@@ -10297,6 +10297,38 @@ export const KULTTUURI_KATEGORIAT = {
        * tarkistettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /*
+         * GENEROITU HEROKOE (omistajan tilaus 22.8.2026: "Lisää nuo
+         * kaksi settiä peliin niin katson miten toimii siellä").
+         * Kuvat ovat pelin OMAA tekoälykuvitusta peiliämpärissä
+         * (ampari-kenttä, js/media.js julisteUrl) — eivät Commonsista.
+         * Jos koe hylätään, nämä lohkot poistetaan ja karuselli
+         * palaa ennalleen.
+         */
+        {
+          ampari: 'herokoe/hero7-tuomiokirkko.png',
+          selite: 'Tuomiokirkko ilta-auringossa Senaatintorin yllä — pelin oma '
+            + 'koekuvitus kattotason kuvakulmasta.',
+          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+        },
+        {
+          ampari: 'herokoe/hero7-tuomiokirkko-keskipaiva.png',
+          selite: 'Sama näkymä keskipäivän valossa — kirkas julkisivu ja lyhyet '
+            + 'varjot.',
+          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+        },
+        {
+          ampari: 'herokoe/hero7-uspenski.png',
+          selite: 'Uspenskin katedraali aamuauringossa, ohut usva sataman '
+            + 'yllä.',
+          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+        },
+        {
+          ampari: 'herokoe/hero7-oodi.png',
+          selite: 'Oodin puinen aalto ilta-auringossa, Eduskuntatalo '
+            + 'Kansalaistorin takana.',
+          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+        },
         {
           tiedosto: 'Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg',
           selite: 'Ilmakuva keskustasta merelle: Tuomiokirkko ja Senaatintori '
@@ -30611,6 +30643,28 @@ export const KULTTUURI_KATEGORIAT = {
        * raja, jota vasten kaupunki rakennettiin).
        */
       avauskuvat: [
+        /*
+         * GENEROITU HEROKOE (omistajan tilaus 22.8.2026) — sama koe
+         * kuin Helsingissä: pelin omaa tekoälykuvitusta ämpäristä,
+         * kolme vuorokaudenaikaa. Poistetaan jos koe hylätään.
+         */
+        {
+          ampari: 'herokoe/hero-peking-aamu.png',
+          selite: 'Kielletty kaupunki aamuauringossa, usva vallihaudan yllä — '
+            + 'pelin oma koekuvitus.',
+          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+        },
+        {
+          ampari: 'herokoe/hero-peking-keskipaiva.png',
+          selite: 'Taivaan temppelin sininen katto kirkkaassa keskipäivässä.',
+          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+        },
+        {
+          ampari: 'herokoe/hero-peking-ilta.png',
+          selite: 'Kesäpalatsi ja Seitsemäntoista kaaren silta ilta-auringossa '
+            + 'Kunming-järvellä.',
+          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+        },
         {
           tiedosto: 'Views of the Forbidden City from Jingshan Park 3.jpg',
           selite: 'Kielletty kaupunki Jingshanin kukkulalta: kultaiset '
