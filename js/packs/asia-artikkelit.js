@@ -303,6 +303,39 @@
 // autoteollisuudesta ja tamilinkielisestä elokuvasta ovat tarkoituksella
 // ennallaan: ne ovat kaupungin kulttuurivisan (asia-questions.js)
 // vastausten tausta, eikä niitä ole toistettu lehden nostoissa.
+//
+// MUMBAI (22.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js; säärivi jäi rinnakkaisen säätoimittajan
+// tehtäväksi). Avain on 'Mumbai', koska laudan js/packs/asia.js antaa
+// kaupungille sekä wiki-nimen että näyttönimen Mumbai. Vanha intro oli
+// kolme lausetta talouden keskuksesta ja seitsemästä saaresta; uusi
+// kertoo lisäksi Portugalin ja Englannin kaupat, kymmenen punnan
+// vuosivuokran, puuvillabuumin, Suezin kanavan, linnoituksen muurien
+// purkamisen ja nimenmuutoksen 1995. Jokainen introväite tulee saman
+// erän lehtiteksteistä, jotka on tarkistettu en-Wikipedian
+// raakateksteistä 22.8.2026. Sisältölinjaus on spec-asia.md:n
+// mukainen: siirtomaahistoria neutraalina historiana, ei
+// nykypolitiikkaa.
+//
+// TEKSTI-KENTÄN KOLME KOHTAA RATKAISTIIN poiminnassa (Fable
+// 22.8.2026): 1) vuosisataväite korvattiin "vuosikymmenten
+// pengerrystöillä", 2) matkustajaluku siirrettiin lähijunaverkolle,
+// 3) Dharavi-virke korvattiin Marine Driven kaulanauhalla
+// (linjaus). Kirjoittajan alkuperäiset perustelut alla:
+//   1) "Työ kesti yli sata vuotta" saarten yhdistämisestä. Hornby
+//      Vellard -pengertyö alkoi 1782 ja valmistui 1784, ja
+//      pengertiet jatkuivat 1803, 1838 ja 1845 — eli kuutisenkymmentä
+//      vuotta, ei yli sataa. (en-Wikipedia: Hornby Vellard, Seven
+//      Islands of Bombay.)
+//   2) "Aseman kautta kulkee päivittäin miljoonia matkustajia."
+//      en-Wikipedian Chhatrapati Shivaji Terminus -artikkeli ei anna
+//      asemakohtaista matkustajamäärää lainkaan; miljoonaluku koskee
+//      koko lähijunaverkkoa (6,3 miljoonaa matkustajaa päivässä
+//      vuonna 2007, Mumbai Suburban Railway).
+//   3) Dharavia ja asuinoloja koskeva virke. Tämän erän oma
+//      sisältölinjaus jättää aiheen lehden puolelta kokonaan pois,
+//      joten teksti-kenttä ja lehti eivät ole tässä samalla linjalla.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -3075,26 +3108,47 @@ export const ASIA_ARTIKKELIT = {
       + 'metro avattiin 1984 Intian ensimmäisenä.',
   },
   Mumbai: {
-    intro: 'Mumbai on Intian suurin kaupunki ja sen rahoituskeskus. Se '
-      + 'on rakennettu seitsemälle saarelle, jotka yhdistettiin '
-      + 'yhdeksi maakielekkeeksi täyttämällä välit.',
+    intro: 'Mumbai on Intian suurin kaupunki ja sen talouden keskus: '
+      + 'täällä ovat maan pörssi ja keskuspankki, vaikka hallitus istuu '
+      + 'Delhissä. Se on rakennettu seitsemälle matalalle '
+      + 'saarelle, jotka yhdistettiin padoilla ja täyttömaalla yhdeksi '
+      + 'kapeaksi niemeksi. **Portugalilaiset saivat saaret 1534, ja ne '
+      + 'siirtyivät 1661 Englannin kruunulle myötäjäisinä** — kruunu '
+      + 'vuokrasi ne seitsemän vuotta myöhemmin kauppakomppanialle '
+      + 'kymmenen punnan vuosivuokralla.'
+      + '\n\n'
+      + 'Rikkaus tuli puuvillasta ja merestä. Yhdysvaltain sisällissota '
+      + '1861–1865 teki Bombaysta maailman johtavan puuvillan '
+      + 'kauppapaikan, ja **Suezin kanavan avautuminen 1869 '
+      + 'teki siitä yhden Arabianmeren suurimmista satamista**. Samalla '
+      + 'vuosikymmenellä linnoituksen muurit purettiin, ja '
+      + 'vapautuneelle maalle nousi goottilainen korttelirivi: '
+      + 'markkinahalli, kirjasto, oikeustalo ja kellotorni.'
+      + '\n\n'
+      + 'Mumbai on Maharashtran pääkaupunki ja Intian '
+      + 'elokuvateollisuuden koti. Kaupungin tunnetuin rakennus on '
+      + '1888 valmistunut rautatieasema, ja sataman rannasta '
+      + 'lähtevät lautat Elephantan luolatemppeleille. '
+      + 'Englanninkielinen nimi vaihtui Mumbaiksi marraskuussa 1995.',
     teksti: 'Mumbai on Intian länsirannikolla Arabianmeren äärellä. '
       + 'Portugalilaiset luovuttivat saaret Britannialle 1661 osana '
       + 'kuninkaallisia myötäjäisiä, ja britit alkoivat yhdistää '
-      + 'niitä pengerryksillä. Työ kesti yli sata vuotta.'
+      + 'niitä pengerryksillä; seitsemästä saaresta kasvoi '
+      + 'vuosikymmenten pengerrystöiden myötä yksi niemi.'
       + '\n\n'
       + 'Chhatrapati Shivaji Maharajin rautatieasema valmistui 1888 ja '
       + 'näyttää katedraalilta; se kuuluu Unescon maailmanperintöön. '
-      + 'Aseman kautta kulkee päivittäin miljoonia matkustajia. '
+      + 'Se on yhä kaupungin lähijunaverkon sydän, ja verkossa '
+      + 'matkustaa päivittäin miljoonia ihmisiä. '
       + 'Kaupungin oma erikoisuus ovat dabbawalat, jotka noutavat '
       + 'lounasruokia kodeista ja toimittavat ne työpaikoille junilla '
       + 'ja polkupyörillä — merkintätapa on värikoodi, ja perille '
       + 'löytäminen onnistuu lähes aina.'
       + '\n\n'
-      + 'Mumbai on myös Intian elokuvateollisuuden keskus. Sen '
-      + 'väestöstä suuri osa asuu tiheästi rakennetuilla alueilla, ja '
-      + 'Dharavi on yksi Aasian suurimmista slummeista — ja samalla '
-      + 'vilkas käsityö- ja kierrätysalue.',
+      + 'Mumbai on myös Intian elokuvateollisuuden keskus, ja '
+      + 'iltaisin Marine Driven rantabulevardin valorivi kaartuu '
+      + 'Back Bayn ympäri niin, että sitä kutsutaan kuningattaren '
+      + 'kaulanauhaksi.',
   },
   Chennai: {
     intro: 'Chennai on Tamil Nadun pääkaupunki ja Etelä-Intian suurin '

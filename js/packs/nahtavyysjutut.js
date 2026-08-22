@@ -29535,4 +29535,415 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * MUMBAIN KOHDEKARTAN JUTUT (Opus 22.8.2026). Kymmenen kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään.
+   * Faktat on tarkistettu en-Wikipedian artikkeleista Crawford Market,
+   * Marine Drive Mumbai, Chhatrapati Shivaji Terminus, St. Thomas
+   * Cathedral Mumbai, The Asiatic Society of Mumbai, Asiatic Society
+   * of Mumbai Town Hall, Bombay High Court, Rajabai Clock Tower,
+   * David Sassoon Library, Chhatrapati Shivaji Maharaj Vastu
+   * Sangrahalaya ja Gateway of India (haettu 22.8.2026).
+   *
+   * YKSI SISÄINEN RISTIRIITA on kirjoitettu auki lukijalle
+   * (v925/v932:n tapa): linnoituksen muurien purkuvuosi on Flora
+   * Fountainin artikkelissa 1860, St. Thomasin katedraalin
+   * artikkelissa 1862 ja David Sassoonin kirjaston artikkelissa vain
+   * "1860-luku". Katedraalin juttu sanoo sen vuosikymmenenä, ja
+   * matkaoppaan neljäs jakso kertoo kaikki kolme lukua.
+   *
+   * VUODEN 2008 ISKUT ON JÄTETTY POIS KOKONAAN, vaikka ne ovat sekä
+   * CST:n että Marine Driven artikkeleissa omana lukunaan: aihe on
+   * nykyväkivaltaa eikä kuulu tähän lehteen missään muodossa
+   * (Varanasin ja Lhasan ennakkotapaus poisjätöistä). Sama koskee
+   * vuoden 1993 pommeja ja katukaupan lupakiistoja. Rakennukset
+   * kerrotaan rakennuksina.
+   *
+   * TOWN HALLIN ARTIKKELISSA ON KAKSI ILMEISTÄ VIRHETTÄ, joita ei ole
+   * käytetty: leipäteksti sanoo talon valmistuneen "vuonna 1" (luku
+   * puuttuu) ja lainaa kuvernööri Sir John Malcolmia vuodelta 1930,
+   * vaikka Malcolm oli kuvernööri 1827–1830. Juttu käyttää vain
+   * infoboksin ja rakenneosion lukuja, jotka ovat keskenään
+   * ristiriidattomia.
+   */
+  mumbai: {
+    'Crawford Market': {
+      aika: '1869',
+      teksti: 'Markkinahalli valmistui 1869, ja sen lahjoitti kaupungille '
+          + 'kauppias Cowasji Jehangir. Nimen se sai Arthur Crawfordilta, '
+          + 'kaupungin ensimmäiseltä kunnalliskomissaarilta; myöhemmin '
+          + 'halli nimettiin uudelleen yhteiskunnallisen uudistajan '
+          + 'Jyotirao Phulen mukaan, ja virallinen nimi on nyt Mahatma '
+          + 'Jyotiba Phule Mandai. Halli on aivan aseman pohjoispuolella '
+          + 'vilkkaassa risteyksessä.'
+          + '\n\n'
+          + 'Suunnittelija oli brittiarkkitehti William Emerson, ja talo '
+          + 'oli varhainen yritys sovittaa viktoriaaninen gotiikka '
+          + 'paikallisiin aiheisiin. Tonttia on 22 471 neliömetriä ja '
+          + 'rakennusta 5 515. Kivi on karkeaa kellertävää Kurlan kiveä ja '
+          + 'punaista Basseinin kiveä, ja viidentoista metrin korkeudessa '
+          + 'kulkee kattoikkuna, joka päästää auringonvalon koko halliin. '
+          + 'Sisäänkäynnissä oli alun perin kolme ovea pylväiden '
+          + 'erottamina, ja niiden yläpuolelle veistettiin arjen työtä '
+          + 'esittävät paneelit. Kaksi niistä teki John Lockwood Kipling, '
+          + 'kirjailija Rudyard Kiplingin isä; kolmas jäi häneltä kesken, '
+          + 'kun hän lähti Intiasta.'
+          + '\n\n'
+          + 'Vuonna 1882 halli oli ensimmäinen rakennus koko Intiassa, '
+          + 'joka valaistiin sähköllä. Se toimi kaupungin hedelmien '
+          + 'tukkutorina maaliskuuhun 1996 asti, jolloin tukkukauppiaat '
+          + 'siirrettiin Navi Mumbaihin.',
+      kuvat: [
+        {
+          tiedosto: 'Frieze on the exterior of Crawford Market, Mumbai.jpg',
+          selite: 'Sisäänkäynnin kaaren alle on veistetty vaalea paneeli, '
+            + 'jossa työtä tekevät ihmiset kantavat hedelmä- ja '
+            + 'viljakoreja.',
+          lahde: 'DesiBoy101, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marine Drive': {
+      aika: '1940',
+      teksti: 'Marine Drive on kolmen kilometrin pituinen rantabulevardi '
+          + 'Back Bayn kaaressa; virallinen nimi on Netaji Subhash '
+          + 'Chandra Bose Road. Katu ja sen kävelypromenadi rakennettiin '
+          + '1940, ja rakentajana oli Pallonji Mistry. Koko kaistale on '
+          + 'täyttömaata, ja tie kaartuu banaanin muotoisena kuusi '
+          + 'kaistaa leveänä. Pohjoispäässä on Girgaon Chowpattyn '
+          + 'hiekkaranta ja eteläpäässä Nariman Pointin toimistokortteli.'
+          + '\n\n'
+          + 'Kadun toinen nimi on Kuningattaren kaulanauha. Se tulee '
+          + 'siitä, että ylhäältä katsottuna kadun valaisimet piirtävät '
+          + 'yöllä helminauhan kaaren pimeän lahden reunaan.'
+          + '\n\n'
+          + 'Itälaidalla seisoo yhtenäinen rivi 1930-luvun art deco '
+          + '-taloja pyöristettyine parvekkeineen ja pystyraitoineen. '
+          + 'Marine Drive ja Oval Maidanin länsipuoli ovat kaupungin '
+          + 'kaksi art deco -aluetta, ja Mumbaissa on maailman toiseksi '
+          + 'eniten art deco -rakennuksia Miamin jälkeen; kaupungin '
+          + 'kolmesta Unescon maailmanperintökohteesta yksi on juuri '
+          + 'viktoriaaninen ja art deco -kokonaisuus. Kadun varrella on '
+          + 'myös urheiluseurojen kenttiä ja krikettistadioneita.',
+      kuvat: [
+        {
+          tiedosto: 'View of Chowpatty Beach from Kamala Nehru Park 01.jpg',
+          selite: 'Malabar Hillin puiston puiden yli näkyy Chowpattyn '
+            + 'ranta, ja lahden vastarannalla jatkuu kaupungin tornirivi.',
+          lahde: 'Shishirdasika, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chhatrapati Shivaji Maharaj Terminus': {
+      aika: 'rakennettu 1878–1888',
+      teksti: 'Asema rakennettiin vanhan Bori Bunderin tilalle Suuren '
+          + 'Intian niemimaan rautatien pääkonttoriksi, ja se nimettiin '
+          + 'Victoria Terminukseksi kuningatar Victorian '
+          + 'hallitsijajuhlan muistoksi. Suunnittelija oli brittiläinen '
+          + 'insinööriarkkitehti Frederick William Stevens, joka sai '
+          + 'tehtävän piirtäjä Axel Haigin akvarellin ansiosta ja jolle '
+          + 'maksettiin työstä 1 614 000 rupiaa. Työ alkoi toukokuussa '
+          + '1878 ja rakennus valmistui 20. toukokuuta 1888 — kymmenen '
+          + 'vuotta, pisin rakennusaika millekään sen ajan talolle '
+          + 'kaupungissa.'
+          + '\n\n'
+          + 'Tyyli on goottilaista uusrenessanssia, johon on sekoitettu '
+          + 'romaanisia ja intialaisia aiheita. Keskellä kohoaa korkea '
+          + 'kupoli, jonka huipulla seisoo Edistystä esittävä naishahmo '
+          + 'soihtu oikeassa ja pinnapyörä vasemmassa kädessä. Pääportin '
+          + 'pielissä ovat leijona ja tiikeri. Runko on intialaista '
+          + 'hiekka- ja kalkkikiveä, koristeet italialaista marmoria. '
+          + 'Veistokset, puuleikkaukset, lippuluukkujen ristikot ja '
+          + 'portaiden kaiteet tekivät Sir J. J. -taidekoulun oppilaat '
+          + 'John Lockwood Kiplingin ohjauksessa — saman miehen, jonka '
+          + 'veistämät paneelit ovat Crawford Marketin portissa.'
+          + '\n\n'
+          + 'Asema on ollut Unescon maailmanperintökohde vuodesta 2004. '
+          + 'Laitureita on kahdeksantoista: seitsemän lähijunille ja '
+          + 'yksitoista kaukojunille. Nimi vaihtui 1996 Chhatrapati '
+          + 'Shivaji Terminukseksi ja 2017 Chhatrapati Shivaji Maharaj '
+          + 'Terminukseksi, mutta puheessa kulkevat yhä kaikki kolme '
+          + 'lyhennettä VT, CST ja CSMT.',
+      kuvat: [
+        {
+          tiedosto: 'Partial wide angle exterior view of Chhatrapati Shivaji Maharaj Terminus.jpg',
+          selite: 'Alhaalta kuvattu julkisivun siipi näyttää kerroksittain '
+            + 'kaariparvekkeet, raidalliset kivipylväät ja pyöreän '
+            + 'kulmatornin.',
+          lahde: 'Shashank Mehendale, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'St. Thomasin katedraali': {
+      aika: 'peruskivi 1676, vihitty 1718',
+      teksti: 'Kaupungin vanhin kirkko sai alkunsa kuvernööri Gerald '
+          + 'Aungierin aikana. Hän rakennutti Bombay Greenin laidalle '
+          + 'sairaalan, oikeussalin ja kirkon, ja kirkon peruskivi '
+          + 'laskettiin 1676 — mutta rakentaminen keskeytyi yli '
+          + 'neljäksikymmeneksi vuodeksi. Pappi Richard Cobbe sai työn '
+          + 'valmiiksi vuosina 1715–1718, ja kirkko avattiin '
+          + 'jumalanpalvelukseen jouluna 1718. Pyhälle Tuomaalle se '
+          + 'omistettiin 1816 ja katedraaliksi vihittiin heinäkuussa '
+          + '1837; torni ja kello lisättiin 1838, ja kuoria laajennettiin '
+          + 'vuoteen 1865 mennessä.'
+          + '\n\n'
+          + 'Linnoituksen portti, joka johti kirkolle, sai nimen '
+          + 'Churchgate. Portti ja muurit purettiin 1860-luvulla, ja '
+          + 'portin paikalle nousi Flora Fountain — mutta nimi jäi '
+          + 'elämään sekä kaupunginosassa että rautatieasemassa. Kirkon '
+          + 'pihalla seisova juomavesilähde on parsikauppias Cowasji '
+          + 'Jehangir Readymoneyn kustantama, George Gilbert Scottin '
+          + 'suunnittelema ja pystytetty 1870-luvulla.'
+          + '\n\n'
+          + 'Katedraalin seinissä on kymmeniä kaiverrettuja '
+          + 'muistolaattoja kauppakomppanian ja siirtomaa-ajalta; yksi on '
+          + 'kapteenille, joka kaatui Ceylonin edustalla 1808, toinen '
+          + 'kaupungin ensimmäiselle piispalle. Pihamaalla on lisäksi '
+          + 'nollapisteen laatta: kaupungin etäisyydet on perinteisesti '
+          + 'mitattu juuri tästä kohdasta.',
+      kuvat: [
+        {
+          tiedosto: 'St. Thomas Cathedral, Mumbai (40188).jpg',
+          selite: 'Valkoinen kellotorni nousee kookospalmun takaa, ja sen '
+            + 'juurella seisoo goottilainen kivinen juomavesilähde.',
+          lahde: 'DesiBoy101, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Town Hall': {
+      aika: '1833',
+      teksti: 'Bombayn kirjallisuusseura kokoontui ensi kerran 26. '
+          + 'marraskuuta 1804 Sir James Mackintoshin aloitteesta, ja sen '
+          + 'tarkoitukseksi kirjattiin hyödyllisen tiedon edistäminen. '
+          + 'Kun Lontooseen perustettiin 1823 Kuninkaallinen Aasian '
+          + 'seura, Bombayn seurasta tuli 1830 sen haaraosasto. Bombayn '
+          + 'maantieteellinen seura sulautui siihen 1873 ja '
+          + 'antropologinen seura 1896. Nykyinen nimi Aasian seura on '
+          + 'vuodelta 2002.'
+          + '\n\n'
+          + 'Talon suunnitelma tehtiin 1811, mutta rahat loppuivat kesken: '
+          + 'ensin rakennettiin vain kirjasto ja museo, ja niihin kerättiin '
+          + 'kymmenentuhatta rupiaa arpajaisilla. Rakennus valmistui '
+          + 'lopulta 1833. Sen suunnitteli eversti Thomas Cowper Bombayn '
+          + 'insinöörijoukoista, tyyli on uusklassinen ja kivet tuotiin '
+          + 'Englannista. Korkeutta on kolmekymmentä metriä ja leveyttä '
+          + 'kuusikymmentäyksi, ja sisäänkäynnille nousee kolmekymmentä '
+          + 'porrasta doorilaisen pylväikön juurelle. Sisällä on '
+          + 'puulattioita, kierreportaita ja takoraudalla koristeltuja '
+          + 'terasseja.'
+          + '\n\n'
+          + 'Seuran kirjastossa on yli satatuhatta kirjaa, joista 15 000 '
+          + 'luokitellaan harvinaisiksi, sekä kolmetuhatta käsikirjoitusta '
+          + 'persiaksi, sanskritiksi ja prakritiksi — useimmat paperilla, '
+          + 'osa palmunlehdillä. Kolikkokokoelmassa on 11 829 rahaa, '
+          + 'joukossa Kumaragupta I:n kultaraha ja harvinainen Akbarin '
+          + 'mohur, ja karttoja on 1 300. Samassa talossa toimivat myös '
+          + 'osavaltion keskuskirjasto ja museo.',
+      kuvat: [
+        {
+          tiedosto: 'The Asiatic Society of Mumbai.jpg',
+          selite: 'Leveä porrasjono nousee doorilaisen pylväikön juurelle, '
+            + 'ja päätykolmioon on kirjoitettu seuran nimi ja vuosiluku '
+            + '1804.',
+          lahde: 'Anurag Vijay 03, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bombayn korkein oikeus': {
+      aika: 'perustettu 1862, rakennus 1871–1878',
+      teksti: 'Oikeus vihittiin 14. elokuuta 1862 kuningatar Victorian '
+          + 'kesäkuussa antamalla avoimella valtakirjalla. Se oli yksi '
+          + 'kolmesta presidenssikaupunkeihin perustetusta korkeimmasta '
+          + 'oikeudesta; kaksi muuta olivat Kalkutassa ja Madrasissa. '
+          + 'Tuomiovalta ulottuu yhä Maharashtraan, Goaan ja kahteen '
+          + 'liittohallintoalueeseen.'
+          + '\n\n'
+          + 'Nykyisen talon työt alkoivat huhtikuussa 1871 ja valmistuivat '
+          + 'marraskuussa 1878; ensimmäinen istunto pidettiin siellä 10. '
+          + 'tammikuuta 1879. Suunnittelija oli eversti James A. Fuller, '
+          + 'ja tyyli on goottilaista uusrenessanssia varhaisen '
+          + 'englantilaisen kauden mukaan. Pituutta on 562 jalkaa ja '
+          + 'leveyttä 187. Keskustornin länsipuolella on kaksi '
+          + 'kahdeksankulmaista tornia, ja rakennuksen harjalla seisovat '
+          + 'Oikeutta ja Armoa esittävät veistokset.'
+          + '\n\n'
+          + 'Talo on Oval Maidanin itälaidalla, avoimen nurmikentän '
+          + 'reunassa. M. C. Chagla oli itsenäistymisen jälkeen '
+          + 'ensimmäinen intialainen vakinainen presidentti vuosina '
+          + '1948–1958. Kaupungin englanninkielisen nimen vaihduttua 1995 '
+          + 'oikeuden oma nimi jäi ennalleen, ja se on yhä Bombayn '
+          + 'korkein oikeus.',
+      kuvat: [
+        {
+          tiedosto: 'Bombay High Court - Maidan - Mumbai - Maharashtra - India (25805018874).jpg',
+          selite: 'Rauta-aidan takaa nousevat oikeustalon suippokaariset '
+            + 'ikkunarivit, ja aitaan on kiinnitetty kyltti, jossa lukee '
+            + 'rakennuksen nimi.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rajabain kellotorni': {
+      aika: '1869–1878',
+      teksti: 'Yliopiston Fort-kampuksen kellotorni on 85 metriä eli 280 '
+          + 'jalkaa korkea, mikä vastaa kahtakymmentäviittä kerrosta. '
+          + 'Peruskivi laskettiin 1. maaliskuuta 1869, ja torni valmistui '
+          + 'marraskuussa 1878. Suunnittelija oli englantilainen Sir '
+          + 'George Gilbert Scott, joka otti esikuvakseen Lontoon Big '
+          + 'Benin. Rakentaminen maksoi 550 000 rupiaa, aikaan nähden '
+          + 'suuren summan.'
+          + '\n\n'
+          + 'Osan rahoista antoi pörssimeklari Premchand Roychand, joka '
+          + 'oli perustanut Bombayn pörssin. Hän asetti ehdon: torni oli '
+          + 'nimettävä hänen äitinsä Rajabain mukaan. Äiti oli sokea ja '
+          + 'tarkka jainalainen, jonka piti syödä iltaruokansa ennen '
+          + 'pimeän tuloa, ja tarinan mukaan tornin iltakello auttoi häntä '
+          + 'tietämään ajan ilman toisen apua.'
+          + '\n\n'
+          + 'Kivi on kellertävää Kurlan kiveä ja tyyli venetsialaista '
+          + 'gotiikkaa. Alaosa on nelikulmainen ensimmäisen tason '
+          + 'kaiteeseen asti 68 jalan korkeudella, ja siitä ylöspäin muoto '
+          + 'vaihtuu kahdeksankulmaiseksi. 1800-luvulla kello soitti '
+          + 'kuudestatoista sävelmästä neljää kerrallaan ja vaihtoi '
+          + 'ohjelmaansa neljästi päivässä; joukossa olivat "Home! Sweet '
+          + 'Home!" ja Händel-sinfonia. Nykyään se soittaa yhtä sävelmää '
+          + 'vartin välein. Aikanaan torni oli kaupungin korkein '
+          + 'rakennus, ja se kuuluu Unescon maailmanperintöluetteloon '
+          + 'osana Mumbain viktoriaanista ja art deco -kokonaisuutta.',
+      kuvat: [
+        {
+          tiedosto: 'Rajabai Clock Tower in Mumbai University 01.jpg',
+          selite: 'Monsuunisateen märällä kadulla heijastuvat autojen '
+            + 'takavalot, ja puurivin päässä kohoaa kellotorni '
+            + 'huippukoristeineen.',
+          lahde: 'Pinakpani, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'David Sassoonin kirjasto': {
+      aika: '1867–1870',
+      teksti: 'Alku on vuodessa 1847, jolloin rahapajan ja telakan '
+          + 'eurooppalaiset työntekijät perustivat Mechanics’ '
+          + 'Institutionin antamaan aikuisille teknistä opetusta ja '
+          + 'pitämään luentoja. Aluksi toimittiin vuokratiloissa. '
+          + 'Bagdadista muuttaneen juutalaisen kauppiassuvun päämies '
+          + 'David Sassoon rahoitti laitokselle oman talon, ja ajatus '
+          + 'kaupungin keskelle sijoitettavasta kirjastosta tuli hänen '
+          + 'pojaltaan Albert Sassoonilta. Nimeksi tuli David Sassoon '
+          + 'Library and Reading Room.'
+          + '\n\n'
+          + 'Talo rakennettiin 1867–1870 arkkitehtien J. Campbellin ja '
+          + 'G. E. Goslingin piirustusten mukaan, ja se maksoi 125 000 '
+          + 'rupiaa: Sassoon lahjoitti 60 000 ja loput maksoi Bombayn '
+          + 'presidenssin hallinto. Kivi on keltaista Maladin kiveä, samaa '
+          + 'kuin naapureissa Elphinstone Collegessa ja Army and Navy '
+          + '-talossa. Tyyli on venetsialaista uusgotiikkaa: suippokaaria, '
+          + 'eläinaiheilla koristeltuja pylväitä ja Burman tiikistä tehdyt '
+          + 'kattoristikot. Sisäänkäynnin päällä on David Sassoonin '
+          + 'marmorinen rintakuva ja portaiden edessä hänen '
+          + 'kokovartalopatsaansa, jonka Thomas Woolner veisti 1865.'
+          + '\n\n'
+          + 'Talo on Rampart Row’lla vastapäätä Kala Ghodan aukiota, '
+          + 'ja se on yksi ensimmäisistä rakennuksista, jotka nousivat '
+          + 'linnoituksen muurien purkamisen jälkeen. Kirjasto '
+          + 'peruskorjattiin 2023: 1960-luvun jälkeen lisätty betonilaatta '
+          + 'purettiin ja alkuperäinen viistokatto palautettiin, koska '
+          + 'laatta oli vuotanut ja vaurioittanut sekä rakennusta että '
+          + 'kirjoja.',
+      kuvat: [
+        {
+          tiedosto: 'David Sassoon Library IMG 20230915 084305 (2) 01.jpg',
+          selite: 'Kirjaston kaksikerroksinen kaariparveke ja kellotapuli '
+            + 'kohoavat kadun toiselta puolelta katsottuna, ja julkisivun '
+            + 'edessä riippuu kaksi banderollia.',
+          lahde: 'Dr. Raju Kasambe, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Prince of Walesin museo': {
+      aika: 'peruskivi 1905, avattu 1922',
+      teksti: 'Vuonna 1904 joukko kaupungin vaikuttajia päätti pystyttää '
+          + 'museon Walesin prinssin — tulevan kuningas Yrjö V:n — '
+          + 'vierailun muistoksi. Peruskiven laski prinssi itse 11. '
+          + 'marraskuuta 1905, ja laitos sai nimen Prince of Wales Museum '
+          + 'of Western India. Rahat tulivat vierailun muistorahastosta '
+          + 'sekä hallinnon, kaupungin ja yksityisten lahjoituksista; '
+          + 'museo perustettiin lailla 1909.'
+          + '\n\n'
+          + 'Rakennuksen suunnitteli George Wittet, sama arkkitehti kuin '
+          + 'Gateway of Indian. Tyyli on indosaraseeninen: keskellä on '
+          + 'valkosinisin laatoin katettu kupoli, jonka esikuva on '
+          + 'Golcondan linnassa, ja sisällä holvikaaret Bijapurin Gol '
+          + 'Gumbazin mukaan. Sisätiloissa on 1700-luvun maratalaistalon '
+          + 'pylväitä, kaiteita ja parveke sekä jaina-tyylisiä pylväitä. '
+          + 'Talo valmistui 1915, mutta sitä käytettiin ensimmäisen '
+          + 'maailmansodan aikana lastenhoitokeskuksena ja '
+          + 'sotilassairaalana; museo avattiin yleisölle vasta 10. '
+          + 'tammikuuta 1922.'
+          + '\n\n'
+          + 'Kokoelmissa on noin 50 000 esinettä, ja ne jakautuvat '
+          + 'taiteeseen, arkeologiaan ja luonnonhistoriaan: Indus-'
+          + 'kulttuurin löytöjä, Maurya-, Gupta-, Chalukya- ja '
+          + 'Rashtrakuta-kausien veistoksia, käsikirjoituksia ja '
+          + 'kolikoita. Osa Elephantan luolista irronneista veistoksista '
+          + 'on täällä. Nimi vaihtui 1998 Chhatrapati Shivaji Maharaj '
+          + 'Vastu Sangrahalayaksi. Rakennusta ympäröi palmupuutarha '
+          + 'kukkapenkkeineen.',
+      kuvat: [
+        {
+          tiedosto: 'Prince of Wales Museum, Mumbai 01.jpg',
+          selite: 'Museon valkoinen kupoli nousee palmurivin takaa, ja '
+            + 'etualan nurmella lepää vanha rautatykki.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gateway of India': {
+      aika: '1913–1924',
+      teksti: 'Kaari seisoo Apollo Bunderissa siinä kohdassa rantaa, '
+          + 'jossa kuningas Yrjö V ja kuningatar Mary nousivat maihin 2. '
+          + 'joulukuuta 1911; ennen rakennustöitä paikka oli kalastajien '
+          + 'rantaa. Rakenne on keltaista basalttia ja teräsbetonia, '
+          + 'muodoltaan suorakaide, jonka pitkillä sivuilla on kolme '
+          + 'kaariaukkoa ja lyhyillä yksi. Keskimmäinen kaari on muita '
+          + 'korkeampi ja leveämpi, ja sen päällä on ylimääräinen kerros, '
+          + 'josta kohoaa neljä pientä tornia.'
+          + '\n\n'
+          + 'Tyyli on indosaraseeninen, ja skotlantilainen arkkitehti '
+          + 'George Wittet otti yksityiskohtansa Gujaratin 1400- ja '
+          + '1500-luvun rakennusperinteestä: julkisivu muistuttaa '
+          + 'Ahmedabadin vuoden 1424 Jaman moskeijaa. Kivi louhittiin '
+          + 'lähiseudulta, mutta reikäiset kiviristikot eli jalit tuotiin '
+          + 'Gwaliorista. Kaaren molemmin puolin on salit, joihin mahtuu '
+          + 'kuusisataa ihmistä kumpaankin.'
+          + '\n\n'
+          + 'Kaaren takaa laskeutuu portaat merelle, ja laiturilta '
+          + 'lähtevät lautat Elephantan luolasaarelle. Portti kääntyy '
+          + 'satamaan päin, ja se on yhä ensimmäisiä rakennuksia, jotka '
+          + 'mereltä saapuva näkee. Intian itsenäistyttyä viimeiset '
+          + 'brittijoukot — Somerset Light Infantryn ensimmäinen '
+          + 'pataljoona — marssivat portin läpi 28. helmikuuta 1948. '
+          + 'Vuonna 2019 monumentti mitattiin ja arkistoitiin '
+          + 'digitaalisesti kolmiulotteista mallia varten.',
+      kuvat: [
+        {
+          tiedosto: 'Gateway ofIndia sea view.jpg',
+          selite: 'Portin edustan laiturilta katsottuna satama on täynnä '
+            + 'ankkurissa olevia veneitä, ja lähimpänä odottavat '
+            + 'matkustajalautat.',
+          lahde: 'Awadheshj, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
