@@ -220,4 +220,30 @@ export const MINIATYYRIT = {
     'Khan el-Khalili': 'assets/kartat/miniatyyrit/kairo-khan-el-khalili.webp',
     'Al-Azhar-puisto': 'assets/kartat/miniatyyrit/kairo-al-azhar-puisto.webp',
   },
+  // Akvarellierä (23.8.2026): Dubain ja Istanbulin kohdekartat saivat
+  // ensimmäiset miniatyyrinsä suoraan akvarelleina.
+  dubai: {
+    'Kultasuuk': 'assets/kartat/miniatyyrit/dubai-kultasuuk.webp',
+    'Dhow-satama': 'assets/kartat/miniatyyrit/dubai-dhow-satama.webp',
+    'Al Shindagha': 'assets/kartat/miniatyyrit/dubai-al-shindagha.webp',
+    'Abra-laiturit': 'assets/kartat/miniatyyrit/dubai-abra-laiturit.webp',
+    'Bastakian kaupunginosa': 'assets/kartat/miniatyyrit/dubai-bastakian-kaupunginosa.webp',
+    'Al Fahidin linnoitus': 'assets/kartat/miniatyyrit/dubai-al-fahidin-linnoitus.webp',
+    'Al Ahmadiyan koulu': 'assets/kartat/miniatyyrit/dubai-al-ahmadiyan-koulu.webp',
+    'Maustesuuk': 'assets/kartat/miniatyyrit/dubai-maustesuuk.webp',
+    'Suuri moskeija': 'assets/kartat/miniatyyrit/dubai-suuri-moskeija.webp',
+    'Tekstiilisuuk': 'assets/kartat/miniatyyrit/dubai-tekstiilisuuk.webp',
+  },
+  istanbul: {
+    'Suuri basaari': 'assets/kartat/miniatyyrit/istanbul-suuri-basaari.webp',
+    'Sininen moskeija': 'assets/kartat/miniatyyrit/istanbul-sininen-moskeija.webp',
+    'Hagia Sofia': 'assets/kartat/miniatyyrit/istanbul-hagia-sofia.webp',
+    'Topkapın palatsi': 'assets/kartat/miniatyyrit/istanbul-topkapin-palatsi.webp',
+    'Galatan torni': 'assets/kartat/miniatyyrit/istanbul-galatan-torni.webp',
+    'Üsküdar': 'assets/kartat/miniatyyrit/istanbul-uskudar.webp',
+    'Süleymaniyen moskeija': 'assets/kartat/miniatyyrit/istanbul-suleymaniyen-moskeija.webp',
+    'Galatan silta': 'assets/kartat/miniatyyrit/istanbul-galatan-silta.webp',
+    'Sirkecin asema': 'assets/kartat/miniatyyrit/istanbul-sirkecin-asema.webp',
+    'Neitsyttorni': 'assets/kartat/miniatyyrit/istanbul-neitsyttorni.webp',
+  },
 };
