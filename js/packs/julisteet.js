@@ -194,6 +194,412 @@ export const JULISTEET = {
       + '11. helmikuuta 1873 Espanjan ensimmäinen tasavalta — se kesti vajaat '
       + 'kaksi vuotta.',
   },
+  /*
+   * ERÄ 4 (22.8.2026): Euroopan ja Lähi-idän laudat loppuun, 49 uutta
+   * kohdetta. Mukana on myös alueita (Alpit, Islanti, Lappi, Kreeta,
+   * Sisilia, Siinai, Kappadokia, Rub al-Khali) — juliste on laatan
+   * palkinto, ja laatta voi olla alue yhtä hyvin kuin kaupunki.
+   *
+   * NIMI ON AIKAKAUDEN NIMI silloin kun kohde on sittemmin nimetty
+   * uudelleen: Konstantinopolin ennakkotapaus koskee myös Kristianiaa
+   * (Oslo), Ragusaa (Dubrovnik), Revalia (Tallinna) ja Smyrnaa (Izmir).
+   * Pelkkä translitteraation muutos ei riitä siihen — Kiova on Kyiv ja
+   * Vilna Vilnius. Kentän `kaupunki` lyhyt nimi on aina se nimi, jolla
+   * paikka pelin kartalla on, jotta pelaaja tunnistaa palkintonsa.
+   *
+   * Sommittelut ja aikakausitarkistukset: tools/juliste-tyolista-1.mjs.
+   */
+  praha: {
+    tiedosto: 'tuotanto/tuot-praha.png',
+    kaupunki: 'Praha',
+    otsikko: 'Praha 1883',
+    selite: 'Tšekkien kansallisteatteri paloi kaksi kuukautta avajaistensa '
+      + 'jälkeen kesällä 1881, ja se rakennettiin uudelleen kansalaiskeräyksellä '
+      + 'niin nopeasti, että ovet aukesivat taas 18. marraskuuta 1883.',
+  },
+  berliini: {
+    tiedosto: 'tuotanto/tuot-berliini.png',
+    kaupunki: 'Berliini',
+    otsikko: 'Berliini 1873',
+    selite: 'Voitonpylväs vihittiin 2. syyskuuta 1873 kolmen sodan muistoksi, '
+      + 'ja se seisoi tuolloin Königsplatzilla — nykyiselle paikalleen Suureen '
+      + 'tähteen se siirrettiin vasta 1930-luvun lopulla.',
+  },
+  tukholma: {
+    tiedosto: 'tuotanto/tuot-tukholma.png',
+    kaupunki: 'Tukholma',
+    otsikko: 'Tukholma 1891',
+    selite: 'Artur Hazelius avasi Djurgårdenilla 11. lokakuuta 1891 Skansenin, '
+      + 'maailman ensimmäisen ulkoilmamuseon, johon siirrettiin kokonaisia '
+      + 'taloja eri puolilta Ruotsia.',
+  },
+  amsterdam: {
+    tiedosto: 'tuotanto/tuot-amsterdam.png',
+    kaupunki: 'Amsterdam',
+    otsikko: 'Amsterdam 1885',
+    selite: 'Pierre Cuypersin suunnittelema Rijksmuseum avattiin vuonna 1885, '
+      + 'ja vasta silloin Alankomaiden hajallaan olleet valtion kokoelmat '
+      + 'saatiin saman katon alle.',
+  },
+  dublin: {
+    tiedosto: 'tuotanto/tuot-dublin.png',
+    kaupunki: 'Dublin',
+    otsikko: 'Dublin 1873',
+    selite: 'Isaac Buttin löyhä yhdistys järjestäytyi Dublinissa vuonna 1873 '
+      + 'Home Rule Leagueksi, ja jo seuraavan vuoden vaaleissa kotihallintoa '
+      + 'vaatinut puolue vei enemmistön Irlannin paikoista.',
+  },
+  edinburgh: {
+    tiedosto: 'tuotanto/tuot-edinburgh.png',
+    kaupunki: 'Edinburgh',
+    otsikko: 'Edinburgh 1883',
+    selite: 'Edinburghissa syntynyt Robert Louis Stevenson julkaisi '
+      + '14. marraskuuta 1883 kirjana Aarresaaren — kartan, jossa risti '
+      + 'merkitsee aarteen, opetti lukemaan koko maailma.',
+  },
+  marseille: {
+    tiedosto: 'tuotanto/tuot-marseille.png',
+    kaupunki: 'Marseille',
+    otsikko: 'Marseille 1873',
+    selite: 'Isoisän matkavuonna kukkulan Notre-Dame de la Garde oli vihitty '
+      + 'vasta yhdeksän vuotta aiemmin 1864, ja vuonna 1869 avattu Suezin '
+      + 'kanava oli juuri tehnyt satamasta Ranskan portin itään.',
+  },
+  lissabon: {
+    tiedosto: 'tuotanto/tuot-lissabon.png',
+    kaupunki: 'Lissabon',
+    otsikko: 'Lissabon 1873',
+    selite: 'Isoisän matkavuonna Lissabonin hevosraitiovaunut olivat aivan '
+      + 'uusi asia: Carris aloitti liikenteen 18. syyskuuta 1872, vain vuotta '
+      + 'aiemmin.',
+  },
+  barcelona: {
+    tiedosto: 'tuotanto/tuot-barcelona.png',
+    kaupunki: 'Barcelona',
+    otsikko: 'Barcelona 1888',
+    selite: 'Maailmannäyttely avattiin 8. huhtikuuta 1888 Ciutadellan puistossa, '
+      + 'ja sitä varten rakennettiin niin näyttelyn tiiliportti Arc de Triomf '
+      + 'kuin Rambla-kadun päähän pystytetty Kolumbuksen pylväs.',
+  },
+  granada: {
+    tiedosto: 'tuotanto/tuot-granada.png',
+    kaupunki: 'Granada',
+    otsikko: 'Granada 1870',
+    selite: 'Alhambra julistettiin vuonna 1870 Espanjan kansallismonumentiksi '
+      + 'ja sai valtiolta ensimmäisen oman korjausmäärärahansa — sitä ennen '
+      + 'palatsi oli saanut rapistua vuosisatoja.',
+  },
+  budapest: {
+    tiedosto: 'tuotanto/tuot-budapest.png',
+    kaupunki: 'Budapest',
+    otsikko: 'Budapest 1873',
+    selite: 'Buda, Pest ja Óbuda yhdistettiin 17. marraskuuta 1873 yhdeksi '
+      + 'kaupungiksi, ja vasta siitä päivästä lähtien on ollut olemassa '
+      + 'Budapest.',
+  },
+  krakova: {
+    tiedosto: 'tuotanto/tuot-krakova.png',
+    kaupunki: 'Krakova',
+    otsikko: 'Krakova 1873',
+    selite: 'Isoisän matkavuonna Puolan kuninkaiden Wawel oli itävaltalainen '
+      + 'kasarmi: keisari Frans Joosef käski sotaväen pois linnasta vasta '
+      + 'vuonna 1905.',
+  },
+  varsova: {
+    tiedosto: 'tuotanto/tuot-varsova.png',
+    kaupunki: 'Varsova',
+    otsikko: 'Varsova 1873',
+    selite: 'Isoisän matkavuonna Veiksel ylitettiin Kierbedźin siltaa pitkin: '
+      + '474 metriä pitkä ristikkosilta avattiin 22. marraskuuta 1864 ja oli '
+      + 'Varsovan ensimmäinen teräksinen jokisilta.',
+  },
+  helsinki: {
+    tiedosto: 'tuotanto/tuot-helsinki.png',
+    kaupunki: 'Helsinki',
+    otsikko: 'Helsinki 1873',
+    selite: 'Isoisän matkavuonna Helsinki oli ollut kolme vuotta kiinni '
+      + 'keisarikunnan pääkaupungissa: Riihimäen ja Pietarin välinen rata '
+      + 'valmistui 1870.',
+  },
+  tampere: {
+    tiedosto: 'tuotanto/tuot-tampere.png',
+    kaupunki: 'Tampere',
+    otsikko: 'Tampere 1882',
+    selite: 'Finlaysonin Plevna-kutomossa sytytettiin 15. maaliskuuta 1882 '
+      + 'Edisonin hehkulamput — se oli ensimmäinen sähkövalo Pohjoismaissa ja '
+      + 'koko Venäjän keisarikunnassa.',
+  },
+  tallinna: {
+    tiedosto: 'tuotanto/tuot-tallinna.png',
+    kaupunki: 'Tallinna',
+    otsikko: 'Reval 1873',
+    selite: 'Isoisän matkavuonna kaupungin virallinen nimi oli Reval ja '
+      + 'Toompea oli yhä oma erillinen kaupunkinsa — se liitettiin alakaupunkiin '
+      + 'vasta vuonna 1877.',
+  },
+  kiova: {
+    tiedosto: 'tuotanto/tuot-kiova.png',
+    kaupunki: 'Kiova',
+    otsikko: 'Kiova 1892',
+    selite: 'Kiovan jyrkille rinteille avattiin vuonna 1892 sähköraitiotie, '
+      + 'ensimmäinen koko Venäjän keisarikunnassa ja kolmas maailmassa.',
+  },
+  pietari: {
+    tiedosto: 'tuotanto/tuot-pietari.png',
+    kaupunki: 'Pietari',
+    otsikko: 'Pietari 1873',
+    selite: 'Katariina Suuren muistomerkki vihittiin Nevski Prospektin varrella '
+      + '24. marraskuuta 1873 vanhan lukukalenterin mukaan; sitä oli veistetty '
+      + 'yksitoista vuotta.',
+  },
+  sofia: {
+    tiedosto: 'tuotanto/tuot-sofia.png',
+    kaupunki: 'Sofia',
+    otsikko: 'Sofia 1873',
+    selite: 'Bulgarian kansallissankari Vasil Levski hirtettiin Sofiassa '
+      + '18. helmikuuta 1873; kaupunki oli tuolloin yhä osmanien pikkukaupunki '
+      + 'eikä pääkaupunki, joksi se tuli vasta 1879.',
+  },
+  bukarest: {
+    tiedosto: 'tuotanto/tuot-bukarest.png',
+    kaupunki: 'Bukarest',
+    otsikko: 'Bukarest 1888',
+    selite: 'Kansalaiskeräyksellä rahoitettu kupolisali Ateneul Român vihittiin '
+      + 'vuonna 1888, vaikka koristelutyöt jatkuivat vielä vuoteen 1897.',
+  },
+  sarajevo: {
+    tiedosto: 'tuotanto/tuot-sarajevo.png',
+    kaupunki: 'Sarajevo',
+    otsikko: 'Sarajevo 1878',
+    selite: 'Berliinin kongressi antoi Bosnian Itävalta-Unkarin hallintaan '
+      + 'vuonna 1878, ja neljäsataa vuotta kestänyt osmanivalta päättyi '
+      + 'Sarajevossa yhdessä kesässä.',
+  },
+  odessa: {
+    tiedosto: 'tuotanto/tuot-odessa.png',
+    kaupunki: 'Odessa',
+    otsikko: 'Odessa 1873',
+    selite: 'Kaupungin vuonna 1810 avattu ensimmäinen teatteri tuhoutui '
+      + 'tulipalossa vuonna 1873, ja nykyinen oopperatalo valmistui sen tilalle '
+      + 'vasta 1887.',
+  },
+  dubai: {
+    tiedosto: 'tuotanto/tuot-dubai.png',
+    kaupunki: 'Dubai',
+    otsikko: 'Dubai 1873',
+    selite: 'Isoisän matkavuonna Dubai oli helmenkalastajakylä lahden '
+      + 'molemmin puolin, ja sen talot olivat palmunlehvistä (barasti) — '
+      + 'puolet Bur Dubaista paloi maan tasalle vuoden 1896 tulipalossa.',
+  },
+  petra: {
+    tiedosto: 'tuotanto/tuot-petra.png',
+    kaupunki: 'Petra',
+    otsikko: 'Petra 1873',
+    selite: 'Isoisän matkavuonna Petra oli ollut länsimaiden tiedossa vasta '
+      + 'kuusikymmentä vuotta: sveitsiläinen Johann Ludwig Burckhardt pääsi '
+      + 'beduiinioppaan kanssa kalliokaupunkiin vuonna 1812.',
+  },
+  medina: {
+    tiedosto: 'tuotanto/tuot-medina.png',
+    kaupunki: 'Medina',
+    otsikko: 'Medina 1873',
+    selite: 'Isoisän matkavuonna Profeetan moskeija oli vasta kaksitoista '
+      + 'vuotta vanha uudisrakennus: sulttaani Abdülmecidin uudistus alkoi 1849 '
+      + 'ja kesti kolmetoista vuotta, ja Vihreä kupoli oli maalattu vihreäksi '
+      + 'vuonna 1837.',
+  },
+  mekka: {
+    tiedosto: 'tuotanto/tuot-mekka.png',
+    kaupunki: 'Mekka',
+    otsikko: 'Mekka 1873',
+    selite: 'Isoisän matkavuonna Pyhä moskeija oli yhä siinä asussa, jonka '
+      + 'sulttaani Murad IV:n korjaus antoi sille vuonna 1629: kivipylväikkö ja '
+      + 'seitsemän minareettia säilyivät lähes kolmesataa vuotta muuttumatta.',
+  },
+  kapadokia: {
+    tiedosto: 'tuotanto/tuot-kapadokia.png',
+    kaupunki: 'Kappadokia',
+    otsikko: 'Kappadokia 1873',
+    selite: 'Isoisän matkavuonna tuffikartioiden asunnoissa ja kalliokirkoissa '
+      + 'elettiin yhä, mutta suuret maanalaiset kaupungit olivat unohtuneet — '
+      + 'Derinkuyu löytyi vasta 1963, kun talon seinän takaa paljastui huone.',
+  },
+  persepolis: {
+    tiedosto: 'tuotanto/tuot-persepolis.png',
+    kaupunki: 'Persepolis',
+    otsikko: 'Persepolis 1873',
+    selite: 'Isoisän matkavuonna Dareioksen terassilla kävi vain matkalaisia, '
+      + 'jotka kaiversivat nimensä pylväisiin: ensimmäiset tieteelliset '
+      + 'kaivaukset alkoivat vasta 1931.',
+  },
+  jerusalem: {
+    tiedosto: 'tuotanto/tuot-jerusalem.png',
+    kaupunki: 'Jerusalem',
+    otsikko: 'Jerusalem 1873',
+    selite: 'Jerusalemista tehtiin vuonna 1872 oma erillinen piirikuntansa, '
+      + 'joka raportoi suoraan Konstantinopoliin eikä enää Damaskokseen — '
+      + 'merkki siitä, kuinka tarkasti suurvallat kaupunkia seurasivat.',
+  },
+  siinai: {
+    tiedosto: 'tuotanto/tuot-siinai.png',
+    kaupunki: 'Siinai',
+    otsikko: 'Siinai 1859',
+    selite: 'Constantin von Tischendorf vei Pyhän Katariinan luostarista vuonna '
+      + '1859 Venäjälle Codex Sinaiticuksen, tuolloin maailman vanhimman lähes '
+      + 'täydellisen Raamatun käsikirjoituksen.',
+  },
+  rubalkhali: {
+    tiedosto: 'tuotanto/tuot-rubalkhali.png',
+    kaupunki: 'Rub al-Khali',
+    otsikko: 'Rub al-Khali 1873',
+    selite: 'Isoisän matkavuonna hiekkameren yli olivat kulkeneet vain siellä '
+      + 'asuvat beduiinit: ensimmäiset ulkopuolisten dokumentoidut ylitykset '
+      + 'tehtiin vasta 1930-luvun alussa.',
+  },
+  tromssa: {
+    tiedosto: 'tuotanto/tuot-tromssa.png',
+    kaupunki: 'Tromssa',
+    otsikko: 'Tromssa 1873',
+    selite: 'Isoisän matkavuonna Tromssa oli ohittanut Hammerfestin arktisen '
+      + 'pyynnin pääpaikkana ja saanut edellisenä vuonna 1872 oman museonsa; '
+      + 'sen jäämerimiehiä värvättiin myöhemmin lähes joka retkikuntaan.',
+  },
+  islanti: {
+    tiedosto: 'tuotanto/tuot-islanti.png',
+    kaupunki: 'Islanti',
+    otsikko: 'Islanti 1874',
+    selite: 'Tuhat vuotta ensimmäisestä asutuksesta täyttyi vuonna 1874, ja '
+      + 'Tanska antoi saarelle juhlavuoden kunniaksi oman perustuslain ja '
+      + 'rajatun itsehallinnon sisäisissä asioissa.',
+  },
+  lappi: {
+    tiedosto: 'tuotanto/tuot-lappi.png',
+    kaupunki: 'Lappi',
+    otsikko: 'Lappi 1873',
+    selite: 'Ivalojoen kultaryntäys täytti 1870-luvulla erämaan huuhtojilla, '
+      + 'ja valtio rakensi joen varteen Kultalan aseman jakamaan valtauslupia '
+      + 'ja lunastamaan kullan — ryntäys hiipui 1880-luvun lopulla.',
+  },
+  kreeta: {
+    tiedosto: 'tuotanto/tuot-kreeta.png',
+    kaupunki: 'Kreeta',
+    otsikko: 'Kreeta 1878',
+    selite: 'Halepan sopimus antoi Kreetalle vuonna 1878 osmanien alaisuudessa '
+      + 'oman edustajakokouksen ja laajan itsehallinnon kymmenen vuoden '
+      + 'kapinoiden jälkeen.',
+  },
+  sisilia: {
+    tiedosto: 'tuotanto/tuot-sisilia.png',
+    kaupunki: 'Sisilia',
+    otsikko: 'Sisilia 1860',
+    selite: 'Giuseppe Garibaldi nousi maihin Marsalassa toukokuussa 1860 '
+      + 'runsaan tuhannen punapaidan kanssa, ja saari irtosi Molempain Sisiliain '
+      + 'kuningaskunnasta yhden kesän aikana.',
+  },
+  alpit: {
+    tiedosto: 'tuotanto/tuot-alpit.png',
+    kaupunki: 'Alpit',
+    otsikko: 'Alpit 1865',
+    selite: 'Edward Whymperin retkikunta nousi Matterhornin huipulle ensi '
+      + 'kertaa 14. heinäkuuta 1865, mutta laskeutumisella katkennut köysi vei '
+      + 'seitsemästä miehestä neljän hengen.',
+  },
+  dubrovnik: {
+    tiedosto: 'tuotanto/tuot-dubrovnik.png',
+    kaupunki: 'Dubrovnik',
+    otsikko: 'Ragusa 1873',
+    selite: 'Isoisän matkavuonna kaupungin virallinen nimi oli Ragusa ja se oli '
+      + 'Itävallan Dalmatian kuningaskunnan pikkukaupunki — oma kauppatasavalta '
+      + 'oli lakkautettu vuonna 1808.',
+  },
+  riika: {
+    tiedosto: 'tuotanto/tuot-riika.png',
+    kaupunki: 'Riika',
+    otsikko: 'Riika 1873',
+    selite: 'Ensimmäiset latvialaiset laulujuhlat pidettiin Riiassa vuonna '
+      + '1873, ja niistä kasvoi perinne, joka toistuu yhä noin viiden vuoden '
+      + 'välein.',
+  },
+  vilna: {
+    tiedosto: 'tuotanto/tuot-vilna.png',
+    kaupunki: 'Vilna',
+    otsikko: 'Vilna 1873',
+    selite: 'Isoisän matkavuonna liettuan kielen painaminen latinalaisin '
+      + 'kirjaimin oli kielletty — kielto oli voimassa 1865–1904, ja kirjat '
+      + 'kannettiin rajan yli salaa kirjankantajien selässä.',
+  },
+  oslo: {
+    tiedosto: 'tuotanto/tuot-oslo.png',
+    kaupunki: 'Oslo',
+    otsikko: 'Kristiania 1873',
+    selite: 'Isoisän matkavuonna kaupungin nimi oli Kristiania, ja kuningas '
+      + 'Oscar II lakkautti samana vuonna 1873 Norjan sijaishallitsijan viran — '
+      + 'askel kohti maan omaa hallitusta.',
+  },
+  firenze: {
+    tiedosto: 'tuotanto/tuot-firenze.png',
+    kaupunki: 'Firenze',
+    otsikko: 'Firenze 1887',
+    selite: 'Firenzen tuomiokirkko sai monivärisen marmorijulkisivunsa vasta '
+      + 'vuonna 1887 — Brunelleschin kupoli oli silloin ollut valmiina jo yli '
+      + 'neljäsataa vuotta.',
+  },
+  kobenhavn: {
+    tiedosto: 'tuotanto/tuot-kobenhavn.png',
+    kaupunki: 'Kööpenhamina',
+    otsikko: 'Kööpenhamina 1873',
+    selite: 'Tanska ja Ruotsi perustivat vuonna 1873 Skandinaavisen rahaliiton '
+      + 'ja vaihtoivat hopeariikintaalerin kultakantaiseen kruunuun; Norja '
+      + 'liittyi mukaan 1875.',
+  },
+  doha: {
+    tiedosto: 'tuotanto/tuot-doha.png',
+    kaupunki: 'Doha',
+    otsikko: 'Doha 1873',
+    selite: 'Osmanit toivat joulukuussa 1871 sata sotilasta Dohan linnakkeeseen, '
+      + 'ja komentajan raportti seuraavalta vuodelta kertoo noin tuhannesta '
+      + 'talosta ja neljästätuhannesta asukkaasta.',
+  },
+  nikosia: {
+    tiedosto: 'tuotanto/tuot-nikosia.png',
+    kaupunki: 'Nikosia',
+    otsikko: 'Nikosia 1878',
+    selite: 'Kypros siirtyi Kyproksen sopimuksella brittihallintoon, ja '
+      + 'Nikosiassa vaihtui isäntä 5. heinäkuuta 1878 — saari pysyi silti '
+      + 'muodollisesti osmanien aluetta vielä vuosikymmeniä.',
+  },
+  kuwait: {
+    tiedosto: 'tuotanto/tuot-kuwait.png',
+    kaupunki: 'Kuwait',
+    otsikko: 'Kuwait 1873',
+    selite: 'Isoisän matkavuonna Kuwait oli Persianlahden tärkein dhow-veneiden '
+      + 'veistämö, ja sen rannalla rakennetut alukset kuljettivat suuren osan '
+      + 'Intian, Itä-Afrikan ja Punaisenmeren satamien välisestä kaupasta.',
+  },
+  masqat: {
+    tiedosto: 'tuotanto/tuot-masqat.png',
+    kaupunki: 'Masqat',
+    otsikko: 'Masqat 1873',
+    selite: 'Isoisän matkavuonna Masqat oli menettänyt valtakuntansa rikkaimman '
+      + 'puolen: sulttaani Saidin kuoltua 1856 Sansibarista tuli oma '
+      + 'sulttaanikuntansa, ja Omanin merivalta hiipui.',
+  },
+  bagdad: {
+    tiedosto: 'tuotanto/tuot-bagdad.png',
+    kaupunki: 'Bagdad',
+    otsikko: 'Bagdad 1873',
+    selite: 'Kuvernööri Midhat Pasha muutti Bagdadia vuosina 1869–1872 enemmän '
+      + 'kuin kukaan sitä ennen: kouluja, sairaaloita, teitä ja Irakin '
+      + 'ensimmäinen sanomalehti al-Zawra.',
+  },
+  izmir: {
+    tiedosto: 'tuotanto/tuot-izmir.png',
+    kaupunki: 'Izmir',
+    otsikko: 'Smyrna 1873',
+    selite: 'Isoisän matkavuonna kaupungin nimi oli lännessä Smyrna ja sieltä '
+      + 'lähti nykyisen Turkin ensimmäinen rautatie: Aydınin rata aloitettiin '
+      + '1856 ja saatiin valmiiksi 1867.',
+  },
 };
 
 /** Kaupungin juliste tai null. Yksi kysely, jotta tarkistus on samanlainen kaikkialla. */
