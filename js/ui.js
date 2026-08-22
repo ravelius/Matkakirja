@@ -32,6 +32,7 @@ import {
 } from './ui-apurit.js';
 // Remontin M5a: lehden sivukoneisto.
 import {
+  avaaGrafiikkaLehti,
   avaaKehittajaLehti, avaaLukijoiltaLehti, avaaMaalehti, avaaRaamattuLehti,
   avaaSisallysvalikko,
   avaaTilanneLehti, avaaTilastoLehti, jatkaLehdenLuentaa, kytkeTutkiSelaus, naytaMaaUutiset,
@@ -7646,6 +7647,8 @@ export class UI {
   avaaTilanneLehti() { return avaaTilanneLehti(this); }
 
   avaaTilastoLehti() { return avaaTilastoLehti(this); }
+
+  avaaGrafiikkaLehti() { return avaaGrafiikkaLehti(this); }
 
   avaaLukijoiltaLehti() { return avaaLukijoiltaLehti(this); }
 

@@ -1108,8 +1108,8 @@ const PUHE_NAYTTEET = {
 function paivitaPuheSaadin() {
   if (puheSaadinNappi) puheSaadinNappi.hidden = !kehittajaTilaPaalla();
   // Työhuone (omistajan tilaus 15.8.2026, laajennettu 18.8.2026):
-  // Raamattu, Tilannelehti, Tilastot, Lukijoilta ja Lukijaääni
-  // tyylinappeina — vain vivun takana. Erillistä työhuonesivustoa ei
+  // Raamattu, Tilannelehti, Tilastot, Grafiikka, Lukijoilta ja
+  // Lukijaääni tyylinappeina — vain vivun takana. Erillistä työhuonesivustoa ei
   // enää ole. Kiintiöpalkit olivat nappien alla v982 asti; ne ovat
   // nyt Tilastot-lehden Kiintiöt-sivulla (omistaja 21.8.2026).
   const kehittajaKotelo = document.getElementById('kehittaja-kotelo');
@@ -1127,6 +1127,9 @@ document.getElementById('tilastot-lehti-btn')?.addEventListener('click', () => {
 });
 document.getElementById('lukijoilta-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaLukijoiltaLehti();
+});
+document.getElementById('grafiikka-lehti-btn')?.addEventListener('click', () => {
+  window.matkakirja?.ui?.avaaGrafiikkaLehti();
 });
 
 /** Täyttää kentät valitun lukijan tallennetuista säädöistä. */
