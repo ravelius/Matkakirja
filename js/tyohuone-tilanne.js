@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v993 — KOLKATA: uusi lehti (kartta 10 kohteella Howrahista Kalighatiin, 10 nahtavyysjuttua; jako 1947 vain vaestonsiirtona). Vanhan tekstin Howrah-luku korjattu (150 000 jalankulkijaa). Saarivi puuttuu viela — saatoimittaja tekee kaikki 18 puuttuvaa rivia parhaillaan. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v992 — KASGAR JA LHASA: kaksi uutta kaupunkilehtea (kartat 7 kohteella, 7 nahtavyysjuttua kummassakin). Kasgar: Silkkitie ja Suuri peli, kaikki ennen 1949; historia-sivulla Mannerheimin 1906-lasilevyja. Lhasa: 1873-ajan suljettu kaupunki, kaikki ennen 1959. Saarivit puuttuvat viela (Open-Meteon kiintio). Tarkista: molempien kartta, historia-sivu ja Matkaopas',
   'v991 — ENNEN/NYT-TAYDENNYS: Jakarta (Batavian raatihuone n. 1900 vs. 2025) ja Manila (Escolta-katu 1910 vs. 2023) saivat kuvaparin. Pari on nyt 99/102 lehdessa — ilman vain dubai, doha, salalah ja astana (ei vapaata vanhaa kuvaa). Tarkista: Jakartan ja Manilan etusivu',
   'v990 — BORNEO JA SUMATRA: kaksi uutta ALUELEHTEA (kansi + Luonto-teemasivu + matkaopas; ei kohdekarttaa — aluelehtimalli). Molemmilta puuttuu saarivi viela (Open-Meteon kiintio). Sumatran intron vanha Toba-virhe korjattu (25 milj. vuotta). Tarkista: molempien kansi, Luonto-sivu ja Matkaopas',
@@ -359,6 +360,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'kolkata', nimi: 'Kolkata', versio: 'v993' },
     { id: 'kashgar', nimi: 'Kašgar', versio: 'v992' },
     { id: 'lhasa', nimi: 'Lhasa', versio: 'v992' },
     { id: 'borneo', nimi: 'Borneo', versio: 'v990' },
@@ -374,6 +376,5 @@ export const TUOREET = {
   ],
   tyossa: [
     { id: 'kabul', nimi: 'Kabul' },
-    { id: 'kolkata', nimi: 'Kolkata' },
   ],
 };
