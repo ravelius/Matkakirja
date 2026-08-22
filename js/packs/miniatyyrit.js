@@ -5,10 +5,11 @@
  * sekä samat kolmeen kaupunkiin hki. Pariisi. Lontoo").
  *
  * Avaimet ovat samat kuin NAHTAVYYSJUTUT-taulussa: kaupungin tunnus →
- * kohteen NIMI → piirroksen polku. Numeropisteen napautus avaa kartan
- * päälle kortin (piirros + jutun alku), ja piirroksen napautus vie
- * itse juttuun (js/ui.js naytaMiniatyyri). Kaupunki tai kohde ilman
- * miniatyyriä toimii entiseen tapaan: napautus suoraan juttuun.
+ * kohteen NIMI → piirroksen polku. Miniatyyrikohde piirtyy kartalle
+ * leikattuna kuvana numeron sijaan, ja napautus on kaksivaiheinen:
+ * ensin piirros isona (lehdessä paikallaan, kokoruudulla omana
+ * korttinaan — js/nahtavyydet.js), sitten juttu. Kaupunki tai kohde
+ * ilman miniatyyriä toimii entiseen tapaan: napautus suoraan juttuun.
  *
  * Kuvat generoidaan tools/generoi-miniatyyrit.mjs:llä ja KATSOTAAN
  * SILMIN ennen tähän tauluun lisäämistä — tests/miniatyyrit.test.mjs
