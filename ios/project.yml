@@ -33,7 +33,7 @@ settings:
     # 0.2.0: kuusi uutta natiivisiltaa (tallennussynkka, haptiikka, jako,
     # Game Center, widget-data, ilmoitusrekisteröinti), kotinäyttöwidget ja
     # Siri-aikeet.
-    MARKETING_VERSION: "0.2.0"
+    MARKETING_VERSION: "0.3.0"
     # Buildnumero. Tämä on vain paikallista käännöstä varten: TestFlight-ajo
     # korvaa sen GitHub-ajon numerolla (CURRENT_PROJECT_VERSION=<ajon numero>),
     # koska App Store Connect hylkää saman version+buildnumeron kahdesti.
