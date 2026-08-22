@@ -25,6 +25,97 @@ import { sfx } from './sound.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { esilataaKuvat, html, lahdemerkinta, vuosiluku } from './ui-apurit.js';
 
+/*
+ * NIMIKYLTTI PIIRROKSEN ALLE, EI SEN PÄÄLLE (omistajan tilaus
+ * 23.8.2026 kuvakaappauksesta: kyltti "8 · Johanneksenkirkko" istui
+ * suurennetun piirroksen päällä keskikorkeudella ja peitti kirkon).
+ *
+ * Vanha ratkaisu oli kiinteä prosenttiluku (kuvan 73 % korkeudesta),
+ * ja se on väistämättä väärässä jommallakummalla suunnalla: leikatut
+ * miniatyyrit ovat kaikki samaa neliötä (1024 × 1024), mutta itse
+ * rakennus täyttää siitä eri osan. Korkea torni ulottuu neliön
+ * alareunaan asti, matala rakennus jättää alle leveän läpinäkyvän
+ * kaistan — kiinteä kyltti peittää edellisen ja jää jälkimmäisestä
+ * kauas irralleen (juuri siksi lukua hienosäädettiin 87 → 79 → 73).
+ *
+ * Nyt kyltin paikka MITATAAN kuvasta: piirros piirretään pienelle
+ * apukankaalle ja alin rivi, jolla on läpinäkymätöntä mustetta, on
+ * rakennuksen jalka. Kyltti asetetaan sen alle. Mittaus tehdään kerran
+ * kuvaa kohti (välimuisti alla) ja vasta kun piirros valitaan, joten
+ * kartan piirtoon se ei koske.
+ */
+/** Mitatut alareunat: kuvan polku → lupaus osuudesta 0–1. */
+const KYLTTIRAJAT = new Map();
+/** Apukankaan sivu. 64 riviä on 1,6 % tarkkuus — kylttiin riittää. */
+const MITTARUUTU = 64;
+/** Kynnys: pakkauksen jättämä hyvin vaalea usva ei ole vielä mustetta. */
+const MUSTEEN_RAJA = 24;
+/** Kyltin ja rakennuksen jalan väli, prosenttia LAATIKON korkeudesta. */
+const KYLTIN_RAKO = 3;
+
+/**
+ * Kuvan alin läpinäkymätön rivi osuutena kuvan korkeudesta (0–1).
+ * Mittaamaton tai mittaamiskelvoton kuva palauttaa 1 eli kyltti menee
+ * koko kuvan alle — sama paikka kuin ennen mittausta.
+ */
+function mittaaAlareuna(kuva) {
+  try {
+    const kangas = document.createElement('canvas');
+    kangas.width = MITTARUUTU;
+    kangas.height = MITTARUUTU;
+    const piirto = kangas.getContext('2d', { willReadFrequently: true });
+    if (!piirto) return 1;
+    piirto.drawImage(kuva, 0, 0, MITTARUUTU, MITTARUUTU);
+    const { data } = piirto.getImageData(0, 0, MITTARUUTU, MITTARUUTU);
+    for (let y = MITTARUUTU - 1; y >= 0; y--) {
+      for (let x = 0; x < MITTARUUTU; x++) {
+        if (data[((y * MITTARUUTU) + x) * 4 + 3] > MUSTEEN_RAJA) {
+          return (y + 1) / MITTARUUTU;
+        }
+      }
+    }
+  } catch {
+    /* Kangas ei aina ole käytettävissä (vanha selain, tiukka tila). */
+  }
+  return 1;
+}
+
+/**
+ * Kyltin paikka LAATIKON koordinaatistossa prosentteina.
+ *
+ * Valittu piirros on laatikko, jonka päällä kuva vuotaa yli: kuva
+ * alkaa laatikon −50 %:sta ja päättyy 150 %:iin (ks. CSS
+ * .kohde-piirros.valittu .kohde-piirros-kuva). Kuvan oma osuus f
+ * osuu siis laatikon kohtaan −50 + 200 f.
+ *
+ * Ei-neliömäinen kuva vielä kirjeenä: object-fit: contain kutistaa
+ * leveän kuvan laatikon sisään ja keskittää sen pystysuunnassa, joten
+ * osuus lasketaan silloin kutistetun kuvan sisällä.
+ */
+function kylttiKohta(kuva, alareuna) {
+  const suhde = (kuva.naturalWidth ?? 0) / (kuva.naturalHeight ?? 1);
+  const s = Number.isFinite(suhde) && suhde > 1 ? suhde : 1;
+  const laatikossa = ((1 - (1 / s)) / 2) + (alareuna / s);
+  return -50 + (200 * laatikossa) + KYLTIN_RAKO;
+}
+
+/** Mittaa piirroksen (välimuistista) ja kirjoittaa --kyltti-top. */
+function asetaKylttiRaja(piste, polku) {
+  if (!piste || !polku) return;
+  if (!KYLTTIRAJAT.has(polku)) {
+    KYLTTIRAJAT.set(polku, new Promise((valmis) => {
+      const kuva = new Image();
+      kuva.decoding = 'async';
+      kuva.onload = () => valmis(kylttiKohta(kuva, mittaaAlareuna(kuva)));
+      kuva.onerror = () => valmis(150 + KYLTIN_RAKO);
+      kuva.src = polku;
+    }));
+  }
+  KYLTTIRAJAT.get(polku).then((kohta) => {
+    piste.style.setProperty('--kyltti-top', `${kohta.toFixed(1)}%`);
+  });
+}
+
 /**
  * Kaupunkisivun lopun kohdekartta. Omistajan taittopäätös 7.8.2026:
  * "Kartta kannattaakin tehdä isoksi ja merkata siihen
@@ -267,6 +358,10 @@ export function piirraKaupunkiKartta(ui, kohde) {
       const kyltti = html('span', 'kohde-kyltti', `${numero} · ${k.nimi}`);
       kyltti.setAttribute('aria-hidden', 'true');
       piste.appendChild(kyltti);
+      // Kyltin paikka mitataan piirroksesta (ks. asetaKylttiRaja):
+      // kuva on jo kartalla eli selaimen välimuistissa, joten mittaus
+      // ei aiheuta uutta latausta.
+      asetaKylttiRaja(piste, miniatyyri);
       piirrosPisteet.push({ piste, x: p.x, y: p.y });
     }
     piste.style.left = `${p.x.toFixed(1)}%`;
@@ -824,6 +919,9 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     const kyltti = html('span', 'kohde-kyltti', `${tieto.numero} · ${tieto.nimi}`);
     kyltti.setAttribute('aria-hidden', 'true');
     suurennos.appendChild(kyltti);
+    // Kyltti piirroksen jalan alle myös kokoruudulla: suurennos on oma
+    // elementtinsä, joten se ei peri lehden kartalle mitattua arvoa.
+    asetaKylttiRaja(suurennos, tieto.piirros);
     suurennos.addEventListener('click', (e) => {
       e.stopPropagation();
       avaaKohde(tieto.avaa);
@@ -1252,10 +1350,16 @@ export function hajautaPiirrospisteet(kotelo, pisteet, ydin) {
       m.Y = Math.min(Math.max(m.Y, y0), y1);
       m.piste.style.left = `${((m.X / W) * 100).toFixed(2)}%`;
       m.piste.style.top = `${((m.Y / K) * 100).toFixed(2)}%`;
-      // Vihje ja kyltti valitsevat puolensa siirtyneen paikan mukaan.
+      /*
+       * Hover-vihje valitsee puolensa siirtyneen paikan mukaan.
+       * NIMIKYLTTI EI ENÄÄ VALITSE (23.8.2026): kyltti näkyy vain
+       * valitusta piirroksesta, ja valinta siirtää piirroksen aina
+       * karttaikkunan keskelle (ks. avaa) — alareunan kohteellakin on
+       * silloin tilaa kyltille kuvan alla. Vanha .kyltti-ylle nosti
+       * kyltin kuvan päälle juuri siellä, missä sitä ei tarvittu.
+       */
       const osuus = (((m.Y / K) * 100 - ydin.y) / ydin.korkeus) * 100;
       m.piste.classList.toggle('vihje-alle', osuus < 14);
-      m.piste.classList.toggle('kyltti-ylle', osuus > 84);
     }
     return true;
   };
