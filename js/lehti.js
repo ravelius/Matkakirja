@@ -26,7 +26,7 @@ import {
   piirraMaaEtusivu, piirraMaaNumerotSivu, rakennaSisallysLista,
   sivunOtsikko,
 } from './maalehti.js';
-import { asetaKuva } from './media.js';
+import { asetaKuva, julisteUrl } from './media.js';
 import {
   nahtavyydenKaruselli, nahtavyydenKuva, piirraKaupunkiKartta,
   piirraMatkailijalle,
@@ -34,6 +34,7 @@ import {
 import {
   lippuUrl, lippuVara, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
+import { JULISTEET, JULISTE_LAHDE } from './packs/julisteet.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
@@ -900,6 +901,49 @@ export function avaaTilanneLehti(ui) {
  */
 export function avaaTilastoLehti(ui) {
   avaaKehittajaLehti(ui, 'Tilastot', tilastoSivut());
+}
+
+/**
+ * Grafiikka-lehti (omistajan tilaus 22.8.2026): kaikki generoidut
+ * aikakausjulisteet yhtenä katselmuksena työhuoneessa — yksi juliste
+ * sivua kohti, kuva ämpäristä täydessä koossa (julisteUrl) ja alla
+ * sama suomennos, jonka pelaaja näkee palkintonäkymässä. Täältä
+ * omistaja selaa koko sarjan tyylin yhdellä silmäyksellä ennen
+ * massalaajennusta; pelaajille julisteet näkyvät vain minitehtävien
+ * palkintoina ja matkalaukussa.
+ */
+export function avaaGrafiikkaLehti(ui) {
+  const kaupungit = Object.keys(JULISTEET);
+  const etusivu = {
+    id: 'grafiikka-etusivu',
+    nimi: 'Grafiikka',
+    yksipalsta: true,
+    nostot: [{
+      otsikko: `${kaupungit.length} aikakausjulistetta`,
+      teksti: 'Minitehtävien palkintojulisteet: 1890-luvun '
+        + 'kivipainotyyli, teksti pelkällä alkuperäiskielellä ja '
+        + 'suomennos pelissä kuvan alla. Yksi juliste sivua kohti — '
+        + 'kuvat ladataan ämpäristä alkuperäislaadussa, joten sivu '
+        + 'voi aueta hitaasti hitaalla yhteydellä.\n\n'
+        + `Lähdemerkintä jokaisessa: ${JULISTE_LAHDE}.`,
+    }],
+  };
+  const sivut = kaupungit.map((cityId) => {
+    const juliste = JULISTEET[cityId];
+    return {
+      id: `grafiikka-${cityId}`,
+      nimi: juliste.kaupunki,
+      yksipalsta: true,
+      nostot: [{
+        otsikko: juliste.otsikko,
+        kuvaUrl: julisteUrl(juliste.tiedosto),
+        selite: juliste.selite,
+        lahde: JULISTE_LAHDE,
+        teksti: '',
+      }],
+    };
+  });
+  avaaKehittajaLehti(ui, 'Grafiikka', [etusivu, ...sivut]);
 }
 
 /* ------------------------------------------------------------------ *
