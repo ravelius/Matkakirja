@@ -4255,6 +4255,34 @@ export const KULTTUURI_KATEGORIAT = {
        * katsottu silmin.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 2 (omistajan tilaus 22.8.2026:
+         * "jatka herokuvien tekoa eri maanosia vuorotellen"): pelin
+         * omia havainnekuvia peiliämpäristä, kolme vuorokaudenaikaa
+         * ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-pariisi-aamu.png',
+          selite: 'Eiffel-torni rakennettiin vuoden 1889 '
+            + 'maailmannäyttelyyn väliaikaiseksi, ja siitä tuli '
+            + 'maailman korkein rakennelma neljäksi vuosikymmeneksi.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-pariisi-keskipaiva.png',
+          selite: 'Notre-Damen katedraalia rakennettiin lähes '
+            + 'kaksisataa vuotta vuodesta 1163, ja vuoden 2019 '
+            + 'tulipalon jälkeen se entisöitiin ja avattiin uudelleen '
+            + '2024.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-pariisi-ilta.png',
+          selite: 'Sacré-Cœurin basilikaa rakennettiin Montmartren '
+            + 'kukkulalle 1875–1914, ja sen travertiinikivi valkaisee '
+            + 'itsensä sateessa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Eiffel Tower and Pont Alexandre III at night.jpg',
           selite: 'Sininen hetki Seinen yllä: Eiffel-torni hehkuu '
@@ -5886,6 +5914,32 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 2 (omistajan tilaus 22.8.2026):
+         * pelin omia havainnekuvia peiliämpäristä, kolme
+         * vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-istanbul-aamu.png',
+          selite: 'Hagia Sofia oli valmistuessaan 537 maailman suurin '
+            + 'kirkko, ja se on ehtinyt olla katedraali, moskeija, '
+            + 'museo ja jälleen moskeija.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-istanbul-keskipaiva.png',
+          selite: 'Genovalaiset rakensivat Galatan tornin 1348 '
+            + 'siirtokuntansa vartiotorniksi, ja se hallitsi Kultaisen '
+            + 'sarven pohjoisrantaa vuosisatoja.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-istanbul-ilta.png',
+          selite: 'Sulttaani Ahmedin moskeija valmistui 1616, ja '
+            + 'lempinimensä se sai rukoussalin yli kahdestakymmenestä '
+            + 'tuhannesta sinisestä Iznik-laatasta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Cuerno de Oro, Estambul, Turquía, 2024-09-28, DD 141-143 HDR.jpg',
           selite: 'Kultainen sarvi auringonlaskun jälkeen: lahden '
@@ -31155,6 +31209,32 @@ export const KULTTUURI_KATEGORIAT = {
        * 1900-luvun New Delhi).
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 2 (omistajan tilaus 22.8.2026):
+         * pelin omia havainnekuvia peiliämpäristä, kolme
+         * vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-delhi-aamu.png',
+          selite: 'Humayunin hauta valmistui 1570-luvulla ensimmäisenä '
+            + 'suurena mogulien puutarhahautana, ja se toimi myöhemmin '
+            + 'Taj Mahalin esikuvana.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-delhi-keskipaiva.png',
+          selite: 'Shah Jahan rakennutti Punaisen linnoituksen '
+            + '1639–1648 uuden pääkaupunkinsa sydämeksi, ja sen '
+            + 'muurien takaa mogulit hallitsivat vuoteen 1857.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-delhi-ilta.png',
+          selite: 'Jama Masjid valmistui 1656 mogulivaltakunnan '
+            + 'suurimmaksi moskeijaksi, jonka pihalle mahtuu '
+            + 'kaksikymmentäviisituhatta rukoilijaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Red Fort Front.jpg',
           selite: 'Punaisen linnoituksen julkisivu koko leveydeltään: '
