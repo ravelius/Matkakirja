@@ -5187,6 +5187,18 @@ body.flight-active .fact-card {
  */
 .city.city-juliste,
 .city-start.city-juliste { fill: #6a9e54; stroke: #3d6330; }
+
+/*
+ * Generoidut herokuvat — myös vain kehittäjätilassa (omistajan tilaus
+ * 22.8.2026): kaupunki, jonka avauskaruselliin on tehty pelin omat
+ * havainnekuvat, näkyy violettina. Violetti on kartan merkinnöistä
+ * ainoa sinipunainen, joten se ei sekoitu julistevihreään (#6a9e54)
+ * eikä lämpimiin keltaruskeisiin, ja pergamentin päällä (#f3e5c4) se
+ * lukee pisteenä. Joukko johdetaan lehtidatan ampari-kentistä
+ * (js/ui.js: HEROKUVA_IDT) — ei käsin ylläpidettävää listaa.
+ */
+.city.city-herokuva,
+.city-start.city-herokuva { fill: #8a5da8; stroke: #563775; }
 .airport { font-size: 14px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */

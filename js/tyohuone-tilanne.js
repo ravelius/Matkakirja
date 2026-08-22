@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1004 — VIOLETIT HEROMERKIT (omistajan tilaus 22.8.2026): kehittajatilassa laudalla violetti piste kaupungeissa, joilla on generoidut herokuvat (nyt helsinki, peking, kairo, tokio, xian) — katsotaan ennen julistevihreaa; joukko johdetaan lehtidatan ampari-kentista, ei kasin. Tarkista: laudan kartta kehittajatilassa',
   'v1003 — KOKORUUTUKARTTA KORJATTU (omistajan palaute 22.8.2026): kohteen numeroympyra, piirros ja selitelistan rivi avaavat jutun myos kokoruudulla (suurennos sulkeutuu ensin), ja zoomattaessa karttaikkuna kasvaa mustan tyhjan paalle kohti koko ruutua; loitonnus palauttaa entisen mitoituksen. Maalehden korkokartta ennallaan. Tarkista: kaupunkilehden kartta kokoruudulla — klikkaa kohdetta, zoomaa',
   'v1002 — HEROLAAJENNUS: Kairon, Tokion ja Xianin avauskaruselleihin 3 generoitua herokuvaa kullekin (eri paakohteet ja vuorokaudenajat), ja KAIKKIEN generoitujen kuvien lahderivi omistajan linjauksella muotoon "Matkakirjan havainnekuva" (tekoaly-sana pois, myos Helsinki ja Peking). Tarkista: Kairon, Tokion ja Xianin lehden etusivukaruselli + Helsingin lahderivi',
   'v1001 — TEKNINEN: pollon kuvageneroinnin paivaraja nostettu 60:sta 150:een (wrangler-vars, worker julkaistaan automaattisesti) — ei pelinakyvaa muutosta. Tarkista: ei mitaan',
