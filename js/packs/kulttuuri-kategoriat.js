@@ -2061,6 +2061,33 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 6 (omistaja 23.8.2026: "Jatka
+         * herokuvia"): pelin omia havainnekuvia peiliämpäristä,
+         * kolme vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-wien-aamu.png',
+          selite: 'Stephansdomin etelätorni valmistui 1433 ja oli '
+            + 'vuosisatoja Euroopan korkeimpia; kirkon kirjava '
+            + 'tiilikatto on ladottu yli 230 000 laatasta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-wien-keskipaiva.png',
+          selite: 'Schönbrunn oli Habsburgien kesäpalatsi, jonka 1441 '
+            + 'huonetta ja puutarhat rakennettiin kilpailemaan '
+            + 'Versailles\'n kanssa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-wien-ilta.png',
+          selite: 'Valtionooppera avasi 1869 Ringstrassen '
+            + 'loistorakennusten sarjan, ja sen lavalla on esiinnytty '
+            + 'joka ilta pommituksista 1945 vain kymmenen vuoden '
+            + 'tauolla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Wien, Stephansdom, Blick vom Südturm -- 2018 -- 3268.jpg',
           selite: 'Stephansdomin nykyinen romaanis-goottilainen muoto sai '
@@ -14658,6 +14685,33 @@ export const KULTTUURI_KATEGORIAT = {
        * takaisin rotkon varjoon — eikä sattuma.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 6 (omistaja 23.8.2026): pelin
+         * omia havainnekuvia peiliämpäristä, kolme vuorokaudenaikaa
+         * ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-petra-aamu.png',
+          selite: 'Al-Khazneh eli Aarrekammio hakattiin kallioon '
+            + 'nabatealaisten kuninkaiden haudaksi ajanlaskun alun '
+            + 'tienoilla, ja nimensä se sai beduiinien '
+            + 'aarretarinoista.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-petra-keskipaiva.png',
+          selite: 'Ad-Deir eli Luostari on Petran suurin kalliojulkisivu '
+            + '— lähes 50 metriä korkea — ja sen luo noustaan noin 800 '
+            + 'kallioporrasta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-petra-ilta.png',
+          selite: 'Kuningashautojen rivistö hakattiin länsijyrkänteeseen '
+            + 'ensimmäisellä vuosisadalla, kun Petra eli '
+            + 'suitsukekaravaanien rikkaimpia vuosiaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Petra Siq, entrance to the ancient Nabatean city of Petra, Jordan.jpg',
           selite: 'Siqin viimeinen mutka: kapean raon takaa näkyy pala '
