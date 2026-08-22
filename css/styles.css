@@ -51,8 +51,7 @@
 
 /* Pelin oma runko pysyy piilossa, kunnes se on rakennettu: puoliksi
    valmis näkymä ei saa vilkkua latausruudun alta. */
-body.paivittyy .app,
-body.paivittyy .rotate-guard { visibility: hidden; }
+body.paivittyy .app { visibility: hidden; }
 
 /*
  * Häivytys valmiin näkymän päältä (js/main.js paataPaivitysruutu).
@@ -6623,44 +6622,9 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
 /* Maailmankartta */
 
 /*
- * Vaakalukko. Kosketuslaitteella peli näkyy vain pystyasennossa: kartta on
- * pystysuora ja vaakataitto tekisi siitä kaistaleen. Työpöydällä (pointer:
- * fine) tätä ei sovelleta, koska siellä ikkuna on aina "vaakassa".
- */
-.rotate-guard { display: none; }
-
-@media (pointer: coarse) and (orientation: landscape) {
-  .rotate-guard {
-    display: flex;
-    position: fixed;
-    inset: 0;
-    z-index: 200;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    padding: 1.5rem;
-    text-align: center;
-    background: var(--bg, #1d1610);
-    color: #e8d9b8;
-  }
-
-  .rotate-guard .rotate-glyph {
-    font-size: 2.6rem;
-    transform: rotate(90deg);
-  }
-
-  .app { display: none; }
-}
-
-/*
  * Katselutila (?lauta=): työhuoneen Maanosat-välilehden karttaikkuna.
- * Kääntökehote ei koske kehystä — leveä ikkuna on siinä tarkoituksellinen
- * myös iPadilla — ja Uusi peli on piilossa, ettei se tyhjentäisi oikean
- * pelin tallennusta.
+ * Uusi peli on piilossa, ettei se tyhjentäisi oikean pelin tallennusta.
  */
-body.katselu .rotate-guard { display: none; }
-body.katselu .app { display: grid; }
 body.katselu #newgame-btn { display: none; }
 
 /*

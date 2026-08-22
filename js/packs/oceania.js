@@ -226,6 +226,49 @@ const OC_EDGES = [
   { a: 'brisbane', b: 'noumea', steps: 6, type: 'sea', via: [[653, 545], [726, 507]] },
 ];
 
+// map.cityCountry: kaupunki (id) → ISO-3166-1 alpha-3 -maatunnus.
+// Tekninen esivaihe uusien mantereiden lehtityölle (docs/mantereen-resepti.md
+// vaihe 2, Dubai-oppi): ilman tätä taulua menovinkit, liput ja "maa
+// numeroina" eivät syty lehdissä, vaikka aineisto olisi muuten valmis.
+// countryShapes (maiden rajat, korkokartat) tulee myöhemmin sisältöagentin
+// erässä samaan tapaan kuin middleeast.js:ssä ja africa.js:ssä — puuttuva
+// countryShapes ei riko mitään, ks. niiden kommentit.
+const OC_CITY_COUNTRY = {
+  sydney: 'AUS',
+  perth: 'AUS',
+  melbourne: 'AUS',
+  brisbane: 'AUS',
+  cairns: 'AUS',
+  darwin: 'AUS',
+  adelaide: 'AUS',
+  alicesprings: 'AUS',
+  uluru: 'AUS',
+  broome: 'AUS',
+  kalgoorlie: 'AUS',
+  townsville: 'AUS',
+  hobart: 'AUS',
+  nullarbor: 'AUS',
+  birdsville: 'AUS',
+  exmouth: 'AUS',
+  mountisa: 'AUS',
+  cooberpedy: 'AUS',
+  geraldton: 'AUS',
+  portmoresby: 'PNG',
+  sepik: 'PNG',
+  honiara: 'SLB',
+  portvila: 'VUT',
+  noumea: 'NCL',
+  norfolk: 'NFK',
+  suva: 'FJI',
+  auckland: 'NZL',
+  wellington: 'NZL',
+  christchurch: 'NZL',
+  milfordsound: 'NZL',
+  dunedin: 'NZL',
+  dili: 'TLS',
+  bali: 'IDN',
+};
+
 // Lentoreitit kulkevat suoraan kaupungista toiseen yhdellä vuorolla.
 const OC_AIR_ROUTES = [
   { a: 'perth', b: 'adelaide' },
@@ -248,6 +291,7 @@ export const OCEANIA = {
 
   map: {
     ...OC_MAP,
+    cityCountry: OC_CITY_COUNTRY,
     outlines: [
       OC_MAP.australiaPoints, OC_MAP.tasmaniaPoints, OC_MAP.newGuineaPoints,
       OC_MAP.nzNorthPoints, OC_MAP.nzSouthPoints, OC_MAP.timorPoints,

@@ -237,6 +237,54 @@ const NA_EDGES = [
   { a: 'havanna', b: 'panama', steps: 5, type: 'sea', via: [[812, 780], [840, 838]] },
 ];
 
+// map.cityCountry: kaupunki (id) → ISO-3166-1 alpha-3 -maatunnus.
+// Tekninen esivaihe uusien mantereiden lehtityölle (docs/mantereen-resepti.md
+// vaihe 2, Dubai-oppi): ilman tätä taulua menovinkit, liput ja "maa
+// numeroina" eivät syty lehdissä, vaikka aineisto olisi muuten valmis.
+// countryShapes (maiden rajat, korkokartat) tulee myöhemmin sisältöagentin
+// erässä samaan tapaan kuin middleeast.js:ssä ja africa.js:ssä — puuttuva
+// countryShapes ei riko mitään, ks. niiden kommentit.
+const NA_CITY_COUNTRY = {
+  newyork: 'USA',
+  sanfrancisco: 'USA',
+  nome: 'USA',
+  anchorage: 'USA',
+  whitehorse: 'CAN',
+  yellowknife: 'CAN',
+  sitka: 'USA',
+  vancouver: 'CAN',
+  yellowstone: 'USA',
+  mountrushmore: 'USA',
+  winnipeg: 'CAN',
+  churchill: 'CAN',
+  iqaluit: 'CAN',
+  nuuk: 'GRL',
+  labrador: 'CAN',
+  stjohns: 'CAN',
+  halifax: 'CAN',
+  montreal: 'CAN',
+  toronto: 'CAN',
+  chicago: 'USA',
+  appalakit: 'USA',
+  bermuda: 'BMU',
+  denver: 'USA',
+  santafe: 'USA',
+  grandcanyon: 'USA',
+  losangeles: 'USA',
+  hawaii: 'USA',
+  houston: 'USA',
+  neworleans: 'USA',
+  miami: 'USA',
+  havanna: 'CUB',
+  sanjuan: 'PRI',
+  monterrey: 'MEX',
+  mexico: 'MEX',
+  merida: 'MEX',
+  guatemala: 'GTM',
+  managua: 'NIC',
+  panama: 'PAN',
+};
+
 // Lentoreitit kulkevat suoraan kaupungista toiseen yhdellä vuorolla.
 const NA_AIR_ROUTES = [
   { a: 'newyork', b: 'chicago' },
@@ -261,6 +309,7 @@ export const NORTHAMERICA = {
 
   map: {
     ...NA_MAP,
+    cityCountry: NA_CITY_COUNTRY,
     outlines: [
       NA_MAP.mainlandPoints, NA_MAP.greenlandPoints, NA_MAP.newfoundlandPoints,
       NA_MAP.cubaPoints, NA_MAP.puertoRicoPoints, NA_MAP.bermudaPoints,

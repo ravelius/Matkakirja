@@ -70,7 +70,50 @@ siirretään arkistoon. Uudet paketit lisää omistaja tai Fable.
 Valmiit paketit ja koko vanha historia:
 docs/arkisto/tyolista-opukselle-2026-08.md.
 
-## Paketti O8: Aasian lehtiurakka (tilattu 20.8.2026) 🟡 KESKEN
+## Paketti O9: kaikki lehdet valmiiksi + uudet mantereet (tilattu 22.8.2026) 🟡 KESKEN
+
+**Omistajan tilaus 22.8.2026 illalla (kumoaa LEHTITAUKO-huomautuksen
+kokonaan):** *"pyritään tekemään siis kaikki kaupunki- ja maalehdet
+valmiiksi yhteneväisesti toteutettuna"* — julkaisu erissä sitä mukaa
+kuin valmistuu, token-kulutus kurissa. Samassa tilauksessa:
+
+1. **Uudet mantereet ensin:** maanosiin, joissa ei ole yhtään valmista
+   kaupunkia (P-Amerikka, E-Amerikka, Oseania), kaksi kaupunkia
+   kuhunkin KOKONAAN valmiiksi lehtien osalta + herokuvat niihin.
+   Fablen kaupunkivalinnat: New York + San Francisco (USA), Rio de
+   Janeiro (BRA) + Buenos Aires (ARG), Sydney (AUS) + Auckland (NZL).
+   Tekninen esivaihe: cityCountry-taulut kolmelle laudalle
+   (mantereen-resepti, Dubai-oppi). Työmalli ja putki kuin O8:ssa;
+   työaineisto docs/mantereet-tyoaineisto/. Avauskaruselli
+   (omistajan tarkennus 22.8.2026): kolmen herokuvan LISÄKSI kolme
+   aitoa Commons-valokuvaa samaan karuselliin (laajoja yleiskuvia
+   kansikuvakaavan mukaan) — sama malli kuin Helsingissä.
+2. **Yhtenäisyysurakka kaikkiin lehtiin:** ennen–nyt-kuvapari
+   etusivun pikkukuviin ja vanhan ajan äänite radionapin rinnalle
+   KAIKKIIN lehtiin joista puuttuu (äänitteitä nyt vain Lontoo ja
+   Kairo); oppaat, kohdekartat, miniatyyrit ja säärivit puuttuvilta
+   (J-velat). Inventaario: docs/mantereet-tyoaineisto/
+   yhtenaisyysinventaario-2026-08-22.md.
+3. **Akvarellihyväksyntä:** Helsingin tyyli hyväksytty → kaikkien
+   nykyisten nähtävyysminiatyyrien uusinta akvarelleina + uudet
+   kaupungit suoraan akvarellina. Generointi Actions-ajurilla
+   (generoi-miniatyyrit.yml), pilotti yhdellä kaupungilla ennen
+   skaalaa (tyyliblokki rekonstruoidaan — v1025:n muokattu prompti
+   ei päätynyt repoon).
+4. **Herokuvat jatkuvat** kaupunkeihin joista puuttuvat (Pöllö-
+   worker; jonossa julisteiden 28 loppukuvan jälkeen).
+5. **Vaakasuuntalukituksen purku** (omistaja: "vaatimus siitä että
+   peliä ei voi pelata vaakasuunnassa voi kumota").
+
+Afrikka (O7) jatkuu tuotantosuunnitelman erärungolla uusien
+mantereiden pilottien jälkeen — sama tilaus kattaa sen ("jatka
+myös lehtien tekemistä kaupunkeihin ja maihin joista ne puuttuvat").
+
+## Paketti O8: Aasian lehtiurakka (tilattu 20.8.2026) ✅ VALMIS (v1008, 22.8.2026)
+
+**Kuittaus (Fable 22.8.2026):** Aasian lauta valmis 28/28 (Karachi
+v1008 viimeisenä); kuvatekstiremontti KT1 kattoi Aasian v1028+v1030.
+Alkuperäinen speksi säilytetty alla työmallin dokumentaationa.
 
 **Tämä paketti kumoaa LEHTITAUKO-huomautuksen Aasian osalta:**
 omistaja tilasi Lähi-idän ja Aasian lehtiurakat 20.8.2026 ja ne

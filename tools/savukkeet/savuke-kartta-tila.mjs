@@ -112,9 +112,8 @@ await sivu.evaluate(() => {
 });
 await sivu.waitForTimeout(600);
 // Näkymän koko muuttuu lehden ollessa auki (Stage Manager / split
-// view / näppäimistö). PYSTYSUUNTAINEN koko: vaakasuunta laukaisisi
-// vaakalukon (.rotate-guard piilottaa koko pelin), eikä se ole tämän
-// savukkeen aihe.
+// view / näppäimistö). Pystysuuntainen koko on savukkeen vakio, jotta
+// mitatut geometriat pysyvät vertailukelpoisina ajosta toiseen.
 await sivu.setViewportSize({ width: 768, height: 1024 });
 // Odotus yli kaikkien resize-ajastimien (elvytys 120 ms + lehden
 // mittavarmistus 400/1600 ms): korruption jälkeen ainoa siivooja on
