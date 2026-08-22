@@ -55,7 +55,10 @@ final class PeliSelain: NSObject, ObservableObject {
             asetukset.preferences.isElementFullscreenEnabled = true
         }
 
-        webNakyma = WKWebView(frame: .zero, configuration: asetukset)
+        // Aliluokka, ei pelkkä WKWebView: tekstivalinnan pikavalikkoon
+        // tulee "Kysy pöllöltä" (ks. PolloValikko.swift). Muuten selain
+        // on tavallinen — aliluokka ei koske mihinkään muuhun.
+        webNakyma = PolloValikkoSelain(frame: .zero, configuration: asetukset)
         super.init()
 
         silta.selain = webNakyma

@@ -1867,6 +1867,48 @@ export class UI {
     document.addEventListener('visibilitychange', this.nakymaVahti);
     window.visualViewport?.addEventListener('resize', this.nakymaVahti);
     /*
+     * ALAREUNAN KAISTA SOVELLUSVAIHDON JÄLKEEN (omistajan bugiraportti
+     * 23.8.2026 iPadilta: *"kun käyn toisessa sovelluksessa —
+     * näppäimistö auki — ja palaan peliin, sivun alareunaan jää väärin
+     * mitoitettu kaista; laitteen kääntäminen vaakaan ja takaisin
+     * korjaa sen"*). EI TOISTETTAVISSA KONTISSA: tämä on
+     * todennäköisin syy, ei mitattu.
+     *
+     * Kokovahti kuuntelee jo sekä visibilitychangea että
+     * visualViewportin resizea (yllä), mutta tarkistaNakyma on
+     * EROVERTAILU: paluun hetkellä leveys on ennallaan ja korkeusero
+     * jää alle 8 %:n kynnyksen — juuri sen kokoinen kuin näppäimistön
+     * jättämä kaista — joten elvytystä ei ajeta ja vanha mitoitus jää
+     * voimaan. Laitteen kääntö korjaa nimenomaan siksi, että se
+     * muuttaa LEVEYTTÄ: silloin vertailu näkee muutoksen.
+     *
+     * Siksi paluu näkyviin ja asettunut visualViewportin resize
+     * merkitsevät mitan EPÄVARMAKSI ennen tarkistusta. `nakymaEpavarma`
+     * on tarkistaNakyman oma, jo olemassa oleva lippu ("lukuun ei voi
+     * luottaa, aja elvytys silti"), joten uutta logiikkaa ei synny —
+     * vahti päätyy samaan lopputulokseen kuin käännöstä. Harvennus
+     * (OIKAISUN_HILJAISUUS_MS) pitää näppäimistöanimaation kymmenet
+     * tapahtumat yhtenä tarkistuksena.
+     *
+     * Fokusoitu tekstikenttä on poikkeus: silloin näppäimistö on
+     * pelaajan oma ja elää juuri nyt (pöllön kysymysrivi), eikä
+     * avoimen lehden uudelleensivutus kuulu kirjoittamisen väliin.
+     * Kentän jättö ajaa oman sovituksensa (kenttaVahti).
+     */
+    this.mitoitusVahti = () => {
+      clearTimeout(this.mitoitusAjastin);
+      this.mitoitusAjastin = setTimeout(() => {
+        if (this.dead || document.hidden) return;
+        const el = document.activeElement;
+        if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA'
+          || el.isContentEditable)) return;
+        this.nakymaEpavarma = true;
+        this.tarkistaNakyma();
+      }, OIKAISUN_HILJAISUUS_MS);
+    };
+    document.addEventListener('visibilitychange', this.mitoitusVahti);
+    window.visualViewport?.addEventListener('resize', this.mitoitusVahti);
+    /*
      * TAUSTAPALUUN SOVITUS (18.8.2026, kartan taustapaluuperheen
      * rakenteellinen korjaus — omistajan kuvakaappaus 18.8.2026:
      * Afrikka-näkymässä kartan vasempaan reunaan jäi pergamentin-
@@ -2403,6 +2445,14 @@ export class UI {
       this.nakymaVahti = null;
     }
     clearTimeout(this.nakymaAjastin);
+    // Paluun pakotettu uudelleenmitoitus kuuntelee dokumenttia ja
+    // visualViewporttia — sama sääntö.
+    if (this.mitoitusVahti) {
+      document.removeEventListener('visibilitychange', this.mitoitusVahti);
+      window.visualViewport?.removeEventListener('resize', this.mitoitusVahti);
+      this.mitoitusVahti = null;
+    }
+    clearTimeout(this.mitoitusAjastin);
     // Taustapaluun sovitus kuuntelee dokumenttia ja ikkunaa — sama sääntö.
     if (this.paluuVahti) {
       document.removeEventListener('visibilitychange', this.paluuVahti);
