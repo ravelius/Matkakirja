@@ -30,12 +30,14 @@
     "POLLO_MALLI": "claude-sonnet-5",
     /*
      * Kuvageneroinnin päiväraja (omistajan tuotantojaksot 22.8.2026:
-     * herokuvat + julistesarjat ylittävät 60 kuvan oletuksen).
-     * Turvakatto säilyy: 150 × ~0,20 $ ≈ 30 $ on pahimman päivän
-     * enimmäisvahinko, ja raja koskee vain kehittäjäkoodilla
-     * avattua reittiä.
+     * herokuvat + julistesarjat; illalla tilaus "Generoi kaikki
+     * julisteet" — 97 julistetta + herokierrokset eivät mahdu
+     * 150:een). Turvakatto säilyy: 300 × ~0,20 $ ≈ 60 $ on pahimman
+     * päivän enimmäisvahinko, ja raja koskee vain kehittäjäkoodilla
+     * avattua reittiä. Lasketaan takaisin arkitasolle kun
+     * massatuotanto on ohi.
      */
-    "KUVA_PAIVARAJA": "150"
+    "KUVA_PAIVARAJA": "300"
   }
   /*
    * KV-säilö käyttörajojen laskureille. Ota käyttöön poistamalla

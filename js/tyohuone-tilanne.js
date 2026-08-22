@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1021 — TEKNINEN: kuvageneroinnin paivaraja 150 → 300 julistemassatuotannon ajaksi (97 julistetta + herot eivat mahdu 150:een; katto ~60 $/vrk) — lasketaan takaisin kun urakka on ohi. Ei pelinakyvaa muutosta. Tarkista: ei mitaan',
   'v1020 — HEROKIERROS 6 (osa): Wienin ja Petran karuselleihin 3 havainnekuvaa kullekin (Stephansdom/Schonbrunn/Valtionooppera, Al-Khazneh/Ad-Deir/kuningashaudat) — Bangkok jai paivarajan taakse ja tulee seuraavassa erassa. Herokaupunkeja 19. Tarkista: Wienin ja Petran etusivukaruselli',
   'v1019 — EUROOPAN KAUPUNKIEN KUVATEKSTIREMONTTI VALMIS (KT1 era 3): loput 21 kaupunkia (madrid..wien), 385 selitetta uusiksi — koko Euroopan laudan 43 kaupunkia on nyt kohde-ei-kuva-linjassa. Jaljella kaupungeista Lahi-ita ja Aasia. Tarkista: Wienin ja Tampereen kuvatekstit',
   'v1018 — MAALEHTIEN KUVATEKSTIREMONTTI VALMIS: loput 22 maata (Lahi-ita + Aasia, 401 selitetta) — koko maa-kategoriat.js:n 1092 selitetta on nyt kohde-ei-kuva-linjassa. Tuhoutuneet kohteet (SYR, IRQ, YEM) neutraalisti ilman osapuolikehysta. Tarkista: parin Lahi-idan ja Aasian maalehden kuvatekstit',

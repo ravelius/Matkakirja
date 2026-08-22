@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1021, teksti: 'Kuvageneroinnin päiväraja 300:aan massatuotantoon' },
   { v: 1020, teksti: 'Herokuvat: Wien ja Petra' },
   { v: 1019, teksti: 'Euroopan kaupunkien kuvatekstiremontti valmis' },
   { v: 1018, teksti: 'Maalehtien kuvatekstiremontti valmis (52 maata)' },
