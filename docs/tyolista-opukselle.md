@@ -89,11 +89,14 @@ kuin valmistuu, token-kulutus kurissa. Samassa tilauksessa:
    aitoa Commons-valokuvaa samaan karuselliin (laajoja yleiskuvia
    kansikuvakaavan mukaan) — sama malli kuin Helsingissä.
 2. **Yhtenäisyysurakka kaikkiin lehtiin:** ennen–nyt-kuvapari
-   etusivun pikkukuviin ja vanhan ajan äänite radionapin rinnalle
-   KAIKKIIN lehtiin joista puuttuu (äänitteitä nyt vain Lontoo ja
-   Kairo); oppaat, kohdekartat, miniatyyrit ja säärivit puuttuvilta
-   (J-velat). Inventaario: docs/mantereet-tyoaineisto/
-   yhtenaisyysinventaario-2026-08-22.md.
+   etusivun pikkukuviin kaikkiin lehtiin joista puuttuu (14 kpl);
+   kohdekartat, miniatyyrit ja säärivit puuttuvilta (J-velat);
+   Bahrain-datakorjaus (countryShapes + RADIOT + MAAKARTAT).
+   Inventaario: docs/mantereet-tyoaineisto/
+   yhtenaisyysinventaario-2026-08-22.md. VANHAT ÄÄNITTEET TAUOLLE
+   (omistaja 22.8.2026: "mietitään vielä yhdessä onko miten iso
+   urakka ja järkevää toteuttaa" — 110 kaupungilta puuttuu; EI
+   aloiteta ennen yhteistä arviota).
 3. **Akvarellihyväksyntä:** Helsingin tyyli hyväksytty → kaikkien
    nykyisten nähtävyysminiatyyrien uusinta akvarelleina + uudet
    kaupungit suoraan akvarellina. Generointi Actions-ajurilla
