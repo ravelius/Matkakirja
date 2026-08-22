@@ -9416,6 +9416,35 @@ button.lukija-nappi.lukee,
   color: #211d18;
 }
 
+/*
+ * Lunasta juliste -nappi oikean vastauksen alle (omistajan tilaus
+ * 22.8.2026): juliste ei enää aukea itsestään faktarivin päälle, vaan
+ * pelaaja avaa sen luettuaan. Nappi on tehtävälaatikon ainoa
+ * painikkeen näköinen painike, joten se saa erottua vaihtoehtoriveistä:
+ * täysi leveys, musterajaus ja paperia vaaleampi pohja.
+ */
+.dialog .minitehtava .minitehtava-lunastus {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 0.5rem;
+  padding: 0.5rem var(--tehtava-reunus);
+  border: 1px solid rgba(60, 44, 26, 0.65);
+  border-radius: 4px;
+  background: rgba(255, 253, 245, 0.9);
+  font-family: var(--font-luku);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: #211d18;
+  cursor: pointer;
+}
+
+.dialog .minitehtava .minitehtava-lunastus:hover,
+.dialog .minitehtava .minitehtava-lunastus:focus-visible {
+  background: #fffdf5;
+  color: #16130f;
+}
+
 /* Rastiruutu rivin edessä kertoo, että riviltä valitaan yksi. */
 .dialog .minitehtava .kulttuuri-vaihtoehdot button::before,
 .dialog.lehti .arrival-kulttuuri .kulttuuri-vaihtoehdot button::before {
