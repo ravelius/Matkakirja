@@ -27,7 +27,15 @@
     "POLLO_ORIGINIT": "",
     "POLLO_PAIVARAJA": "30",
     "POLLO_KUUKAUSIRAJA": "1500",
-    "POLLO_MALLI": "claude-sonnet-5"
+    "POLLO_MALLI": "claude-sonnet-5",
+    /*
+     * Kuvageneroinnin päiväraja (omistajan tuotantojaksot 22.8.2026:
+     * herokuvat + julistesarjat ylittävät 60 kuvan oletuksen).
+     * Turvakatto säilyy: 150 × ~0,20 $ ≈ 30 $ on pahimman päivän
+     * enimmäisvahinko, ja raja koskee vain kehittäjäkoodilla
+     * avattua reittiä.
+     */
+    "KUVA_PAIVARAJA": "150"
   }
   /*
    * KV-säilö käyttörajojen laskureille. Ota käyttöön poistamalla

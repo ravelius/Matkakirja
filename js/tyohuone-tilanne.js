@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1001 — TEKNINEN: pollon kuvageneroinnin paivaraja nostettu 60:sta 150:een (wrangler-vars, worker julkaistaan automaattisesti) — ei pelinakyvaa muutosta. Tarkista: ei mitaan',
   'v1000 — HEROKUVAKOE: Helsingin ja Pekingin avauskaruselleissa pelin omaa tekoälykuvitusta (Helsinki 4 kuvaa, Peking 3 — kattotason kulma, eri vuorokaudenajat; lahderivi "Matkakirjan oma kuvitus (tekoäly)"). Uusi ampari-kentta ohjaa kuvan peiliampariin Commons-putken ohi. Tarkista: Helsingin ja Pekingin lehden etusivukaruselli',
   'v999 — GRAFIIKKA-LEHTI UUSIKSI: lehdessa nyt vain tyylikokeen 3 luonnosta (Istanbul, Tokio, Pariisi — pienoismaailma kivipainona, tekstina pelkka kaupungin nimi) + promptipohja-sivu. Lisaksi 8 palkintojulisteen selite oikaistu vastaamaan kuvan todellista tekstia. Tarkista: valikko → Grafiikka; parin julisteen selite pelissa (esim. Istanbulin minitehtava)',
   'v998 — GRAFIIKKA-LEHTI tyohuoneeseen: kehittajavalikon uusi nappi avaa julistekatselmuksen — kaikki 10 generoitua aikakausjulistetta, yksi per sivu, kuva amparista taydessa koossa + suomennos + lahderivi. Tarkista: valikko → Grafiikka, selaa sarja lapi',
