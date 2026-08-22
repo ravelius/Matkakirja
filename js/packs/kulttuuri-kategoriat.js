@@ -47625,4 +47625,464 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KOLKATA (Opus 22.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kohdekarttaa, nähtävyysjuttuja eikä kategorioita ennen tätä.
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 22.8.2026): Kolkata, Howrah Bridge, Trams in Kolkata,
+   * Victoria Memorial Kolkata, College Street (Kolkata), Howrah
+   * railway station, Howrah, Writers' Building, Indian Museum,
+   * St. John's Church Kolkata, Shaheed Minar Kolkata, Nakhoda Masjid
+   * (ohjaa artikkeliin Nakhoda Mosque), Marble Palace (Kolkata),
+   * Dalhousie Square (ohjaa artikkeliin B. B. D. Bagh), Fort William
+   * India (ohjaa artikkeliin Fort William, West Bengal), Durga Puja
+   * ja Maidan (Kolkata). Työaineistona docs/aasia-tyoaineisto/
+   * faktapohja-kolkata.md ja tarkistus-kolkata.md.
+   *
+   * SISÄLTÖLINJAUS on spec-asia.md:n kohta "Karachi/Kolkata/Mumbai
+   * ym.": siirtomaahistoria kerrotaan neutraalina historiana eikä
+   * nykypolitiikkaa käsitellä lainkaan. Intian jako 1947 on mukana
+   * VAIN väestönsiirron tasolla ilman väkivallan kuvausta, ja vuoden
+   * 1946 levottomuudet on jätetty kokonaan pois. Painopiste on
+   * 1873-henkisessä aineistossa: Howrahin asema 1854, raitiotie 1873,
+   * ponttonisilta 1874, kauppa ja arkkitehtuuri.
+   *
+   * POIS JÄTETTY KOKONAAN: vuoden 1943 nälänhätä ja toisen
+   * maailmansodan pommitukset (eivät kuulu 1873-painotukseen),
+   * Writers' Buildingin vuoden 1930 salamurha (väkivalta ilman
+   * tarpeellista opetusta), naksaliittiliike ja kaikki puolueiden
+   * nimet, oopiumisotien kulku (kauppa mainitaan, sota ei) sekä
+   * raitiotien nykyisen aseman ympärillä käyty julkinen kiista.
+   *
+   * TARKISTUSRAPORTIN KORJAUS ON TEHTY. Faktapohja väitti Victoria
+   * Memorialin rungon valmistuneen 1910–1911; en-Wikipedian
+   * raakateksti sanoo "work on the superstructure began in 1910. In
+   * 1911, before construction was finished, George V... announced the
+   * transfer of the capital". Nosto K3 sanoo siksi, että rakennus oli
+   * yhä kesken, kun siirto julistettiin.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat näitä tekstejä:
+   * 1) Raitiolinjojen määrä nyt. Kolkata-artikkeli sanoo kolme
+   *    linjaa, Trams in Kolkata -artikkeli kaksi (Route 5 ja 25).
+   *    Käytetty tarkempaa artikkelia eli kahta (v925:n sääntö:
+   *    tarkempi lähde voittaa).
+   * 2) Howrahin laiturimäärä. Aseman infoboksi sanoo 24 laituria ja
+   *    johdanto 22 toiminnassa olevaa; oppaassa sanotaan molemmat.
+   * 3) Nakhodan moskeijan valmistumisvuosi. Infoboksi sanoo 1926,
+   *    leipäteksti "reconstruction work started in 1926 and was
+   *    completed in 1935". Juttu kertoo molemmat vuodet.
+   * 4) Shaheed Minarin porrasmäärä on samassa artikkelissa sekä 223
+   *    että 218; juttu kirjoittaa eron auki.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, eikä sitä ole tässä
+   * työssä lisätty: rinnakkainen säätoimittaja täydentää rivin.
+   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian Kolkata-artikkelin
+   * ilmasto-osioon ja SANOO SEN ÄÄNEEN (Samarkandin ja Lhasan malli
+   * v965–v983). Kun ERA5-rivi lisätään, jakso 5 on kirjoitettava
+   * rivin omista luvuista. Mittauspiste olisi keskusta 22,57 / 88,37.
+   *
+   * KUVAT. Kansikarusellissa on kolme LAAJAA yleiskuvaa kaupungin eri
+   * puolilta (omistajan linjaus 21.8.2026): Howrah-silta joen yli
+   * pohjoisessa, Victoria Memorial puutarhoineen etelässä ja Maidanin
+   * nurmi keskellä. Kaksi kuvaa on vanhaa postikorttia, joissa on
+   * julkaisijan oma painettu kuvateksti (ponttonisilta ja juuttitehdas)
+   * — molemmissa se on sanottu kuvatekstissä, kuten reseptin poikkeus
+   * vaatii. Kaupungin valokuvakorteissa (asia-lisat-valokuvat.js) jo
+   * käytettyjä tiedostoja ei ole otettu uudelleen.
+   */
+  kolkata: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kolkata',
+      johdanto: 'Kolmesta kylästä kasvoi Gangesin suistoon Brittiläisen '
+        + 'Intian pääkaupunki, jonka satamasta lähti juuttia ja teetä. '
+        + 'Hooghlyn itärannalla kulkee yhä Intian ainoa raitiotie.',
+      kansikuvat: [
+        {
+          tiedosto: 'Howrah Bridge view 01.jpg',
+          selite: 'Howrah-silta kaartuu Hooghlyn yli yhtenä jänteenä, ja '
+            + 'sen molemmissa päissä näkyvät kaksoiskaupungin rannat '
+            + 'laitureineen.',
+          lahde: 'Indrajit Das, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Victoria Memorial situated in Kolkata.jpg',
+          selite: 'Victoria Memorialin valkoinen marmorirakennus '
+            + 'levittäytyy puutarhojensa taakse, ja kupolin päällä '
+            + 'seisoo siivekäs voitonhahmo.',
+          lahde: 'Subhrajyoti07, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kolkata skyline as seen from the Maidan, Kolkata, India.jpg',
+          selite: 'Maidanin nurmi jatkuu yksinäisen puun ohi niin kauas, '
+            + 'että kaupungin tornitalot erottuvat vasta utuisella '
+            + 'taivaanrannalla.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: hallintokortteli, museo ja jokiranta — kaupungin
+       * kolme kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (komppanian virastot, keräilyn ja opin laitokset, se joki
+       * jonka takia kaikki on tässä).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Writer\'s Building (14837276474).jpg',
+          selite: 'Writers\' Buildingin punatiilinen kulma nousee puiden '
+            + 'takaa, ja sen vieressä kohoaa St. Andrew\'n kirkon '
+            + 'valkoinen torni.',
+          lahde: 'Paul Hamilton, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Indian Museum Building with Quadrangle - Inside North View - Indian Museum - Kolkata 2014-02-14 9248.JPG',
+          selite: 'Intian museon sisäpiha on nurmikenttä, jota kiertää '
+            + 'kaksikerroksinen valkoinen kaariholvikäytävä.',
+          lahde: 'Biswarup Ganguly, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Prinsep Memorial at the Prinsep Ghat, with the Vidyasagar Setu in the backdrop.jpg',
+          selite: 'Prinsepin muistomerkin pylväsrivistö seisoo '
+            + 'jokirannassa, ja sen takaa nousevat Vidyasagar-sillan '
+            + 'vaijerit.',
+          lahde: 'Sudhir Narayana, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Silta, joka kellui',
+          tiedosto: 'Pontoon Bridge - Calcutta.jpg',
+          teksti: 'Ennen nykyistä terässiltaa Hooghlyn ylitti kelluva '
+            + 'ponttonisilta. Sen osat valettiin Englannissa ja koottiin '
+            + 'Kalkutassa Bradford Leslien johdolla, ja kokoaminen oli '
+            + 'täynnä vastoinkäymisiä: maaliskuun 1874 suursykloni irrotti '
+            + 'höyrylaiva Egerian ankkuristaan, ja törmäys upotti kolme '
+            + 'ponttonia ja vaurioitti siltaa lähes kahdensadan jalan '
+            + 'matkalta. Liikenteelle silta avattiin silti jo saman vuoden '
+            + '17. lokakuuta. Pituutta tuli 1 528 jalkaa ja leveyttä 62, ja '
+            + 'kantta irrotettiin säännöllisesti, jotta laivat pääsivät '
+            + 'ohi. Elokuusta 1879 alkaen siltaa valaisivat sähkölamput, '
+            + 'joiden virran antoi Mullick Ghatin pumppuaseman dynamo.',
+          selite: 'Vanhaan värjättyyn postikorttiin on painettu '
+            + 'julkaisijan oma kuvateksti, ja itse kuvassa ponttonisilta '
+            + 'on täynnä kärryjä, kantajia ja päivänvarjoja.',
+          lahde: 'F. Hartmann London, Wikimedia Commons (PD)',
+          wiki: 'Howrah Bridge',
+        },
+        {
+          otsikko: 'Yhdeksän kuukautta ja sata vuotta',
+          tiedosto: 'Calcutta blue trams, Kolkata, India.jpg',
+          teksti: 'Intian ensimmäinen hevosvetoinen raitiovaunu lähti '
+            + 'liikkeelle 24. helmikuuta 1873 ja kulki vajaan neljän '
+            + 'kilometrin matkan Sealdahista Armenian Ghat Streetille. '
+            + 'Kokeilu kesti yhdeksän kuukautta ja päättyi marraskuussa. '
+            + 'Pysyvä verkko avattiin 1880, kun varakuningas Ripon vihki '
+            + 'reitin käyttöön ja Calcutta Tramway Company rekisteröitiin '
+            + 'Lontoossa. Vuosisadan lopulla yhtiöllä oli 166 vaunua, '
+            + 'tuhat hevosta, seitsemän höyryveturia ja runsaat '
+            + 'kolmekymmentä kilometriä rataa. Sähkö tuli 1902, verkko '
+            + 'kasvoi 1960-luvulla 37 linjaan, ja nykyään liikennöitäviä '
+            + 'linjoja on kaksi.',
+          selite: 'Kaksi vanhaa sinistä raitiovaunua odottaa päätepysäkin '
+            + 'kiskoilla, ja etummaisen reittikilvessä on linjan numero '
+            + 'ja päätepysäkkien nimet.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Trams in Kolkata',
+        },
+        {
+          otsikko: 'Muistomerkki kesken jääneelle pääkaupungille',
+          tiedosto: 'Victoria Memorial, Kolkata - West facade 01.jpg',
+          teksti: 'Kuningatar Victorian kuoltua tammikuussa 1901 '
+            + 'varakuningas Curzon esitti kaupunkiin suurta '
+            + 'muistorakennusta. Rahat koottiin vapaaehtoisina '
+            + 'lahjoituksina ruhtinailta, virkamiehiltä ja tavallisilta '
+            + 'kansalaisilta, ja niitä kertyi runsaat kymmenen miljoonaa '
+            + 'rupiaa. Peruskiven laski 4. tammikuuta 1906 tuleva '
+            + 'kuningas Yrjö V, mutta rungon työt alkoivat vasta 1910. '
+            + 'Rakennus oli yhä kesken, kun sama Yrjö V julisti 1911 '
+            + 'pääkaupungin siirtyvän Delhiin — muistomerkki jäi siis '
+            + 'maakuntakeskukseen. William Emersonin suunnittelema '
+            + 'Makrana-marmorirakennus avattiin yleisölle joulukuussa '
+            + '1921, ja keskussali tehtiin tahallaan hitusen Taj Mahalia '
+            + 'suuremmaksi.',
+          selite: 'Muistomerkin länsijulkisivu kaartuu pylväikkönä kupolin '
+            + 'alla, ja kupolin huipulla seisoo pronssinen voiton enkeli.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Victoria Memorial, Kolkata',
+        },
+        {
+          otsikko: 'Katu, jolla kirjat makaavat jalkakäytävällä',
+          tiedosto: 'Main building of Calcutta Medical College and Hospital 06.jpg',
+          teksti: 'College Streetin yhdeksänsataa metriä kasvoi '
+            + 'oppilaitosten ympärille. Hindoo College perustettiin 1817 '
+            + 'ja on nykyään Presidency University, Sanskrit College '
+            + 'seurasi 1824 ja Calcutta Medical College 1835 — se oli '
+            + 'Aasian ensimmäinen eurooppalaisen lääketieteen opinahjo. '
+            + 'Vuonna 1857 perustettu Calcutta-yliopisto oli puolestaan '
+            + 'Etelä-Aasian ensimmäinen monialainen yliopisto. Kadun '
+            + 'laidoille kertyi vuosikymmenten mittaan kirjakauppojen ja '
+            + '-kojujen verkko, jota sanotaan Boi Paraksi eli '
+            + 'kirjakortteliksi. Valikoima ulottuu kahdensadanviidenkymmenen '
+            + 'vuoden takaisista teoksista tuoreisiin oppikirjoihin.',
+          selite: 'Lääketieteellisen opiston pääjulkisivussa on korkea '
+            + 'pylväskuisti ja kolmiopääty, jonka alle on kirjoitettu '
+            + 'oppilaitoksen nimi.',
+          lahde: 'Pinakpani, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'College Street (Kolkata)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Victoria Memorial Kolkata India 05.jpg',
+          selite: 'Sumuisena aamuna Victoria Memorialin puistossa '
+            + 'etualalla seisoo pronssipatsas jalustallaan ja taustalla '
+            + 'häämöttää marmorikupoli.',
+          lahde: 'Philip Nalangan, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Kolkata on Länsi-Bengalin pääkaupunki ja Itä-Intian '
+          + 'talouden keskus, mutta matkailijan Kolkata on kapea kaistale '
+          + 'joen vartta. Kaupunki on idästä länteen vain yhdeksän tai '
+          + 'kymmenen kilometriä leveä, ja lähes kaikki kohteet ovat '
+          + 'Hooghlyn ja Maidanin välissä: pohjoisessa vanhat korttelit '
+          + 'ja kirjakauppakadut, keskellä hallintokortteli B. B. D. '
+          + 'Baghin ympärillä, etelässä nurmen laidalla Victoria '
+          + 'Memorial. Joen länsipuolella on Howrah, kaksoiskaupunki, '
+          + 'jonne mennään siltaa tai lauttaa pitkin.',
+        artikkeli: {
+          nimi: 'Matkailijan Kolkata',
+          taitto: 'opas',
+          teksti: 'Yksi joki, kaksi kaupunkia ja niiden väliin ripustettu '
+            + 'silta — ja kaiken keskellä nurmikenttä, joka on suurempi '
+            + 'kuin moni vanhakaupunki.',
+          nosto: 'Vuoden 1946 liikennelaskennassa sillan yli kulki '
+            + 'yhdessä päivässä 27 400 ajoneuvoa, 121 100 jalankulkijaa '
+            + 'ja 2 997 nautaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Junalla saavutaan useimmiten Howrahiin, joen '
+                + 'länsirannalle. Ensimmäinen yleisöjuna lähti sieltä 15. '
+                + 'elokuuta 1854, ja asemasta kasvoi Intian suurin ja '
+                + 'vilkkain rautatiekokonaisuus: laitureita on '
+                + 'kaksikymmentäneljä, joista kaksikymmentäkaksi '
+                + 'liikennekäytössä, ja niiltä lähtee noin kuusisataa '
+                + 'junaa päivässä. Toinen suuri asema on Sealdah joen '
+                + 'itäpuolella. Lentokenttä eli Netaji Subhas Chandra '
+                + 'Bosen kansainvälinen lentoasema on Dum Dumissa noin '
+                + 'kuudentoista kilometrin päässä koillisessa. Kaupungin '
+                + 'sisällä liikutaan metrolla, joka avattiin 1984 Intian '
+                + 'ensimmäisenä maanalaisena; sen sinisen linjan lisäksi '
+                + 'käytössä ovat vihreä, violetti ja oranssi linja. '
+                + 'Kadulla kulkevat keltaiset Ambassador-taksit, '
+                + 'moottoririksat ja paikoin yhä käsin vedettävät riksat, '
+                + 'ja jokea ylitetään lautoilla siltojen ohella.',
+              kuva: {
+                tiedosto: 'Yellow taxi at Esplanade in Kolkata.jpg',
+                selite: 'Keltainen Ambassador-taksi odottaa Esplanaden '
+                  + 'pitkän pylväskäytävän edessä, jonka holvien alle on '
+                  + 'levitetty vaatekojuja.',
+                lahde: 'Mettle30, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki makaa Gangesin suiston alaosassa Hooghlyn '
+                + 'itärannalla, ja sen korkeus merenpinnasta on vain '
+                + 'puolentoista ja yhdeksän metrin välillä. Bangladeshin '
+                + 'rajalle on lännestä laskien noin seitsemänkymmentäviisi '
+                + 'kilometriä. Suuri osa kaupungin alasta oli alun perin '
+                + 'kosteikkoa, joka kuivattiin rakennusmaaksi; jäljelle '
+                + 'jäänyt Itä-Kolkatan kosteikkoalue merkittiin '
+                + 'kansainvälisesti arvokkaaksi Ramsarin sopimuksessa. '
+                + 'Etelässä suisto jatkuu Sundarbansin mangrovemetsinä. '
+                + 'Kaupunki jaetaan pohjois-, keski-, etelä- ja '
+                + 'itäosaan, ja vanhinta on pohjoinen kapeine kujineen. '
+                + 'Keskellä leviää Maidan, avoin nurmikenttä, jota '
+                + 'kutsutaan kaupungin keuhkoiksi. Matala sijainti tekee '
+                + 'seudusta altiin sykloneille: pahimmat kirjatut myrskyt '
+                + 'ovat vuosilta 1737 ja 1864.',
+              kuva: {
+                tiedosto: 'Mangrove Vegetation of Sundarban, West Bengal, India 03.jpg',
+                selite: 'Sundarbansin mangrovemetsässä juuret nousevat '
+                  + 'mudasta tiheänä piikkimattona vesirajan yläpuolelle.',
+                lahde: 'Kingshuk Mondal, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: syksyn juhla',
+              teksti: 'Syys–lokakuussa vietettävä Durga Puja on '
+                + 'kaupungin vuoden suurin tapahtuma. Kortteleihin '
+                + 'pystytetään pandaleita eli väliaikaisia bambu- ja '
+                + 'kangasrakennelmia, joiden sisään asetetaan '
+                + 'savipatsaita; niiden tekeminen alkaa jo kesällä '
+                + 'Kumortulin savenvalajakorttelissa, jossa runko '
+                + 'kootaan oljesta ja bambusta ja päälle muotoillaan '
+                + 'savi. Juhla kestää kymmenen päivää, joista viisi '
+                + 'viimeistä ovat tärkeimmät, ja päättyy kulkueeseen, '
+                + 'jossa patsaat viedään jokeen. Unesco merkitsi '
+                + 'Kolkatan Durga Pujan aineettoman kulttuuriperinnön '
+                + 'luetteloonsa 2021. Juhlan ulkopuolellakin kaupungin '
+                + 'sosiaalinen perusyksikkö on para eli kortteli, jonka '
+                + 'kerhossa istutaan pitkiä juttutuokioita nimeltä adda.',
+              kuva: {
+                tiedosto: 'Making of Durga idol in Kumartuli 04.jpg',
+                selite: 'Kumortulin verstaassa odottaa rivi maalaamattomia '
+                  + 'savihahmoja, joista suurimmalla on kymmenen kättä.',
+                lahde: 'Pinakpani, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: satama',
+              teksti: 'Kaupunki on olemassa joen takia. Hooghly oli '
+                + 'purjelaivakaudella se väylä, jota myöten Bengalin '
+                + 'tavara pääsi merelle, ja 1700- ja 1800-luvulla '
+                + 'Kalkuta oli kauppakomppanian oopiumikaupan keskus: '
+                + 'Bengalissa viljelty oopiumi lastattiin täällä '
+                + 'laivoihin Kiinaa varten. Samaa reittiä kulkivat myös '
+                + 'juutti, tee ja puuvilla. Satamalaitos perustettiin '
+                + '1870, ja se on yhä Intian vanhin ja ainoa suuri '
+                + 'jokisatama; nykyisin sen laiturit ovat sekä Kolkatassa '
+                + 'että Haldiassa alempana jokisuussa. Joen matalikot ja '
+                + 'liettyminen ovat aina rajoittaneet suurten alusten '
+                + 'kulkua, ja siksi rautatie ja myöhemmin syvemmät '
+                + 'satamat veivät osan liikenteestä. Jokea ylittävät '
+                + 'lautat kulkevat edelleen.',
+              kuva: {
+                tiedosto: 'M.V.Kasturi, a ferry boat sailing on Hooghly river, image captured from Nimtala burning ghat.jpg',
+                selite: 'Sinivalkoinen lautta kulkee tyhjänä Hooghlyllä, '
+                  + 'ja vastarannalla näkyvät sataman nosturit ja '
+                  + 'telakkarakennukset.',
+                lahde: 'Subhrajyoti07, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Kolkatasta puuttuu vielä, joten '
+                + 'nämä luvut ovat en-Wikipedian Kolkata-artikkelin '
+                + 'ilmasto-osiosta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Ilmasto on trooppinen savanni-ilmasto: '
+                + 'vuoden keskilämpötila on lähes kaksikymmentäseitsemän '
+                + 'astetta ja kuukausikeskiarvot liikkuvat '
+                + 'yhdeksäntoista ja kolmenkymmenen välillä. Talvi '
+                + 'kestää runsaat kaksi kuukautta, ja joulu–tammikuussa '
+                + 'lämpötila laskee öisin yhdeksään tai yhteentoista '
+                + 'asteeseen — se on vuoden miellyttävin aika kävellä. '
+                + 'Toukokuu on kuumin kuukausi, ja kuivina jaksoina '
+                + 'touko–kesäkuussa mitataan yli neljänkymmenen asteen '
+                + 'lukemia. Lounaismonsuuni tuo kesäkuusta syyskuuhun '
+                + 'valtaosan vuoden noin 1 850 millimetrin sateesta. '
+                + 'Huhti–kesäkuussa kaupungin yli käy usein '
+                + 'ukkospuuskia, joita sanotaan täällä luoteistuuliksi.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kolme kylää muuttui vuosisadassa imperiumin toiseksi '
+        + 'suurimmaksi kaupungiksi ja sitten takaisin maakuntakeskukseksi. '
+        + 'Väliin mahtuu linnoitus, kauppakomppania, juuttiteollisuus ja '
+        + 'lukeva keskiluokka.',
+      tehtava: {
+        kysymys: 'Kuinka monesta kylästä Kolkata kasvoi?',
+        vaihtoehdot: [
+          'Yhdestä',
+          'Kolmesta',
+          'Seitsemästä',
+          'Kahdestatoista',
+        ],
+        oikea: 1,
+        fakta: 'Kalikata, Sutanuti ja Gobindapur olivat kalastajien, '
+          + 'kutojien ja kauppiaiden kyliä Hooghlyn rannalla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolme kylää ja kiistelty perustaja',
+          tiedosto: 'Calcutta 12.jpg',
+          teksti: 'Ennen kaupunkia joen rannalla oli kolme kylää: '
+            + 'kalastajien Kalikata, kutojien Sutanuti ja kauppiaiden '
+            + 'Gobindapur. Ne kuuluivat Sabarna Roy Choudhuryn suvun '
+            + 'zamindari-tiluksiin. Englannin Itä-Intian kauppakomppania '
+            + 'vakiinnutti kauppansa alueella 1690, ja kaupungin '
+            + 'perustajaksi on perinteisesti mainittu komppanian '
+            + 'kauppias Job Charnock — Kalkutan korkein oikeus kuitenkin '
+            + 'totesi vuonna 2003 julkisen vetoomuksen johdosta, ettei '
+            + 'kaupungilla ole yhtä perustajaa. Kylien tilukset myytiin '
+            + 'komppanialle 1698. Nimi juontuu Kalikatasta, ja sen '
+            + 'taustalla arvellaan olevan jumalatar Kalille pyhitetty '
+            + 'kenttä.',
+          selite: 'Vanhassa puupiirroksessa kaupunki näkyy matalana '
+            + 'rivistönä joen takana, ja etualalla makaa jokiveneitä '
+            + 'palmujen juurella.',
+          lahde: 'Sears, Robert, 1810-1892, Wikimedia Commons (PD)',
+          wiki: 'Kolkata',
+        },
+        {
+          otsikko: 'Linnoitus ja verottajan virka',
+          tiedosto: 'Fort William, Calcutta, 1735.jpg',
+          teksti: 'Komppania rakensi 1712 Hooghlyn itärannalle Fort '
+            + 'Williamin suojaamaan kauppahuonettaan. Kun linnoitusta '
+            + 'alettiin vahvistaa 1756, Bengalin nawab Siraj-ud-Daulah '
+            + 'vastusti sekä varustautumista että verojen kiertämistä ja '
+            + 'valtasi linnoituksen; valtaukseen liittyy Kalkutan mustana '
+            + 'reikänä tunnettu tapaus, jossa kuoli komppanian '
+            + 'virkamiehiä. Robert Clive valtasi kaupungin takaisin '
+            + 'seuraavana vuonna komppanian sotilailla ja intialaisilla '
+            + 'sepoy-joukoilla. Vuoden 1765 Allahabadin sopimus teki '
+            + 'komppaniasta mogulikeisarin verottajan Bengalissa, '
+            + 'Biharissa ja Orissassa, ja 1773 Kalkutasta tuli '
+            + 'komppanian pääkonttori.',
+          selite: 'Vuoden 1735 kaiverruksessa komppanian purjelaivat '
+            + 'ovat ankkurissa Fort Williamin edustalla, ja alalaitaan on '
+            + 'kaiverrettu painajan oma omistuskirjoitus.',
+          lahde: 'Elisha Kirkall (c. 1682–1742), Wikimedia Commons (PD)',
+          wiki: 'Fort William, West Bengal',
+        },
+        {
+          otsikko: 'Pääkaupunki lähtee Delhiin',
+          tiedosto: '-View of the City from the Ochterlony Monument, Calcutta- MET DP147437.jpg',
+          teksti: 'Bengalin jakaminen uskontokuntien mukaan 1905 herätti '
+            + 'Kalkutassa laajat protestit, ja hallinnolle kaupungista '
+            + 'tuli hankala paikka. Kuningas Yrjö V julisti 1911 '
+            + 'pääkaupungin siirtyvän New Delhiin, ja Kalkutasta tuli '
+            + 'maakuntakeskus. Kaupunki pysyi silti itsenäisyysliikkeen '
+            + 'ja kaupan solmuna. Intian jako 1947 muutti väestöpohjan '
+            + 'pysyvästi: monet muslimit lähtivät Itä-Bengaliin, josta '
+            + 'tuli myöhemmin Bangladesh, ja satojatuhansia hinduja '
+            + 'saapui rajan takaa kaupunkiin. Väkiluku kasvoi nopeammin '
+            + 'kuin asunnot ja vesijohdot, ja siitä on kirjoitettu '
+            + 'bengalilaisessa kirjallisuudessa siitä lähtien.',
+          selite: '1850-luvun valokuvassa pääkaupungin talot leviävät '
+            + 'Ochterlonyn muistomerkin huipulta katsottuna tasaisena '
+            + 'kattomerenä horisonttiin asti.',
+          lahde: 'Creator:Captain R. B. Hill, Wikimedia Commons (CC0)',
+          wiki: 'Kolkata',
+        },
+        {
+          otsikko: 'Juuttia, kahta kaupunkia ja babuja',
+          tiedosto: 'Raw Jute Mill - Calcutta.jpg',
+          teksti: '1850-luvulta alkaen tekstiili- ja juuttiteollisuus '
+            + 'kasvattivat kaupunkia nopeasti, ja brittiyhtiöt '
+            + 'rahoittivat lennätinlinjoja ja rautateitä. Kaupunki '
+            + 'jakautui kahtia: Chowringheen ja Dalhousie Squaren '
+            + 'ympärille syntyi eurooppalainen White Town ja pohjoiseen '
+            + 'intialainen Black Town. Vuoden 1837 väenlaskennassa '
+            + 'varsinaisessa kaupungissa oli 229 700 asukasta, joista '
+            + 'brittejä 3 138; esikaupungit mukaan lukien väkeä oli '
+            + 'runsaat neljäsataatuhatta. Kulttuurien kohtaamisesta '
+            + 'syntyi babu-luokka eli lukeneet virkamiehet, '
+            + 'ammatinharjoittajat ja sanomalehtien tilaajat, ja '
+            + 'bengalilainen renessanssi teki kaupungista Intian '
+            + 'älyllisen keskuksen.',
+          selite: 'Vanhaan postikorttiin on painettu julkaisijan oma '
+            + 'kuvateksti, ja kuvassa härkävankkurit tuovat raakaa '
+            + 'juuttia pitkän tehdasrakennuksen portille.',
+          lahde: 'Thacker Spink & Co. Kolkata, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Kolkata',
+        },
+      ],
+    },
+  ],
 };

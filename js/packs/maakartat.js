@@ -7953,6 +7953,71 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Lhasan suuri moskeija', lat: 29.65084, lon: 91.13671 },
     ],
   },
+  /*
+   * KOLKATAN KOHDEKARTTA (22.8.2026). Rajaus on 6,1 × 6,1 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Xi'anissa ja Kantonissa. Piirtoperustelut, meri-lipun syy ja
+   * poisjätöt ovat tools/piirra-kaupunkikartta.mjs:n kolkata-lohkossa.
+   *
+   * KOORDINAATIT OVAT KAHDESTA LÄHTEESTÄ, ja jako on kirjattu tähän,
+   * koska sitä ei näe kohdelistasta. Howrah-silta, Howrahin
+   * rautatieasema, Marble Palace, College Street, Writers' Building,
+   * St. John'sin kirkko ja Shaheed Minar ovat artikkelien omista
+   * {{Coord}}-arvoista desimaaleina (haettu en-Wikipediasta
+   * 22.8.2026). Nakhodan moskeija ja Intian museo ovat samojen
+   * artikkelien {{Coord}}-arvoja asteina, minuutteina ja sekunteina,
+   * ja ne on muunnettu desimaaleiksi tässä: 22°34'35"N 88°21'21"E =
+   * 22,57639 / 88,35583 ja 22°33'29"N 88°21'03"E = 22,55806 /
+   * 88,35083. Victoria Memorialin luku on artikkelin sivunpohjan
+   * {{Coord|display=title|22.5449|88.3425}}.
+   *
+   * KOLKATAN OMA ARTIKKELI EI ANNA KOORDINAATTIAAN RAAKATEKSTISSÄ
+   * (infoboksin {{Coord}} on ilman lukuja ja hakee ne Wikidatasta),
+   * joten kaupungin keskipiste 22,5675 / 88,3700 on haettu MediaWikin
+   * action=query&prop=coordinates -rajapinnasta. Sama koski
+   * College Streetiä ja Marble Palacea, joiden arvot rajapinta ja
+   * raakateksti antoivat identtisinä — se on tämän menetelmän
+   * ristiintarkistus. Keskipistettä ei ole kartalla omana pisteenään;
+   * se on vain kainalo- ja etäisyyslaskujen nollakohta.
+   *
+   * DAKSHINESWARIN KALI-TEMPPELI (22,6550 / 88,3578) JA BELUR MATH
+   * (22,6325 / 88,3564) EIVÄT OLE KARTALLA eivätkä kainalossa: ne
+   * ovat 9,8 ja 7,4 kilometriä pohjoiseen keskipisteestä eli
+   * kauempana kuin yksikään kainalo tässä kartastossa (Medinan Quba
+   * 3,5 km, Adenin Tawahi 6 km) ja suunnilleen yhtä kaukana kuin
+   * Bhaktapur, joka jätettiin pois Kathmandun kartalta. Molemmat
+   * kerrotaan matkaoppaassa (Medinan Uhud-vuoren ratkaisu).
+   *
+   * HOWRAH-SILLAN PISTE ON VEDESSÄ, ja se on oikein: silta on
+   * määritelmän mukaan joen päällä, kuten Rialto Venetsiassa ja
+   * Ketjusilta Budapestissa. Muut yhdeksän pistettä osuvat maalle.
+   *
+   * KAINALOA EI OLE: kaikki kymmenen kohdetta mahtuvat pääruutuun,
+   * kuten Kantonissa, Samarkandissa ja Kathmandussa.
+   */
+  kolkata: {
+    polku: 'assets/kartat/kolkata-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 22.5925, etela: 22.5375, lansi: 88.3175, ita: 88.3775 },
+    esittely: 'Kartan halki virtaa Hooghly, ja sen länsirannalla on '
+      + 'Howrah asemineen. Itärannalla kulkee kaupunki pohjoisen '
+      + 'kirjakortteleista hallintokorttelin kautta Maidanin nurmelle, '
+      + 'jonka eteläpäässä on Victoria Memorial. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Howrah-silta', lat: 22.5851, lon: 88.3469 },
+      { nimi: 'Howrahin rautatieasema', lat: 22.5829, lon: 88.3428 },
+      { nimi: 'Marble Palace', lat: 22.582378, lon: 88.360143 },
+      { nimi: 'Nakhodan moskeija', lat: 22.57639, lon: 88.35583 },
+      { nimi: 'College Street', lat: 22.575514, lon: 88.363354 },
+      { nimi: 'Writers’ Building', lat: 22.57369, lon: 88.349634 },
+      { nimi: 'St. John’sin kirkko', lat: 22.5699, lon: 88.3459 },
+      { nimi: 'Shaheed Minar', lat: 22.56286, lon: 88.34923 },
+      { nimi: 'Intian museo', lat: 22.55806, lon: 88.35083 },
+      { nimi: 'Victoria Memorial', lat: 22.5449, lon: 88.3425 },
+    ],
+  },
 };
 
 /*

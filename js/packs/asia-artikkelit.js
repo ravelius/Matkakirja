@@ -239,6 +239,29 @@
 // on ennallaan. Indonesia-linjaus on sama kuin Jakartassa: ei
 // nykypolitiikkaa, ja Acehin sota 1873 näkyy vain lehden omassa
 // nostossa hallinnollis-historiallisena käänteenä.
+//
+// KOLKATA (22.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js; säärivi jäi rinnakkaisen säätoimittajan tehtäväksi).
+// Avain on 'Kalkutta', koska laudan js/packs/asia.js antaa kaupungille
+// wiki-nimen Kalkutta ja näyttönimen Kolkata. Vanha intro oli kaksi
+// lausetta pääkaupunkiasemasta ja raitiotiestä; uusi kertoo lisäksi
+// sijainnin suistossa, kolmen kylän alun, sataman tavarat, kaupungin
+// jakautumisen kahtia, rautatien 1854 ja College Streetin. Jokainen
+// introväite tulee saman erän lehtiteksteistä, jotka on tarkistettu
+// en-Wikipedian raakateksteistä 22.8.2026. Sisältölinjaus on
+// spec-asia.md:n mukainen: siirtomaahistoria neutraalina historiana,
+// ei nykypolitiikkaa, ja vuoden 1947 jako vain väestönsiirtona lehden
+// puolella (ei introssa).
+//
+// TEKSTI-KENTTÄ ON ENNALLAAN, JA SIINÄ ON YKSI LUKU FABLEN
+// RATKAISTAVAKSI. Kenttä sanoo Howrah-sillasta "arviolta miljoona
+// jalankulkijaa" päivässä; en-Wikipedian Howrah Bridge -artikkeli
+// sanoo nykyään "more than 150,000 pedestrians" (ja noin 100 000
+// ajoneuvoa), ja saman luvun antaa myös tämän erän oma
+// nähtävyysjuttu. Luku KORJATTIIN poiminnassa
+// (Fable 22.8.2026) artikkelin mukaiseksi: noin 100 000 ajoneuvoa ja
+// yli 150 000 jalankulkijaa.
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -2973,9 +2996,26 @@ export const ASIA_ARTIKKELIT = {
       + 'Intian vilkkaimmista kauppakaduista.',
   },
   Kalkutta: {
-    intro: 'Kolkata oli Brittiläisen Intian pääkaupunki vuoteen 1911. '
-      + 'Sen raitiotie aloitti liikennöinnin 1873 ja on Aasian vanhin '
-      + 'yhä toiminnassa oleva.',
+    intro: 'Kolkata on Länsi-Bengalin pääkaupunki Hooghly-joen '
+      + 'itärannalla, matalalla Gangesin ja Brahmaputran yhteisessä '
+      + 'suistossa. Kaupunki kasvoi kolmesta kylästä, joiden tiluksille '
+      + 'Englannin Itä-Intian kauppakomppania asettui 1690-luvulla, ja '
+      + 'siitä tuli sadassa vuodessa koko valtakunnan hallinnon keskus. '
+      + '**Vuoteen 1911 asti se oli Brittiläisen Intian pääkaupunki**, '
+      + 'minkä jälkeen hallinto siirtyi Delhiin.'
+      + '\n\n'
+      + 'Rikkaus tuli joelta. Satamasta lähti juuttia, teetä ja '
+      + 'oopiumia, ja rantavarastojen taakse nousi kaksi kaupunkia: '
+      + 'eurooppalainen Chowringheen ympärille, intialainen '
+      + 'pohjoiseen. Rautatie ylsi joen länsirannalle Howrahiin jo '
+      + '1854, ja **hevosvetoinen raitiovaunu lähti liikkeelle '
+      + 'helmikuussa 1873** — verkko on yhä Intian ainoa toimiva.'
+      + '\n\n'
+      + 'Nykyinen Kolkata on Itä-Intian talouden keskus ja Intian '
+      + 'kirjallinen pääkaupunki, jonka College Streetillä myydään '
+      + 'kirjoja lähes kilometrin matkalta. Keskellä kaupunkia leviää '
+      + 'Maidanin nurmikenttä, ja sen eteläpäässä seisoo Victoria '
+      + 'Memorial.',
     teksti: 'Kolkata on Hooghly-joen varrella Bengalin suistossa. '
       + 'Kaupunki kasvoi Brittiläisen Itä-Intian kauppakomppanian '
       + 'kauppapaikasta 1690-luvulta alkaen, ja siitä tuli koko '
@@ -2985,7 +3025,7 @@ export const ASIA_ARTIKKELIT = {
       + 'Howrahin silta valmistui 1943 ja yhdistää kaupungin '
       + 'rautatieasemaan joen toisella puolella. Se on kokonaan '
       + 'niitattu — pultteja ei käytetty lainkaan — ja sen yli kulkee '
-      + 'päivittäin yli sata tuhatta ajoneuvoa ja arviolta miljoona '
+      + 'päivittäin noin sata tuhatta ajoneuvoa ja yli 150 000 '
       + 'jalankulkijaa. Kaupunki on ollut bengalilaisen kirjallisuuden '
       + 'ja elokuvan keskus: Rabindranath Tagore sai kirjallisuuden '
       + 'Nobelin 1913, ensimmäisenä eurooppalaisten ulkopuolelta.'

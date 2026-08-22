@@ -28363,4 +28363,428 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KOLKATAN KOHDEKARTAN JUTUT (Opus 22.8.2026). Kymmenen kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään.
+   * Faktat on tarkistettu en-Wikipedian artikkeleista Howrah Bridge,
+   * Howrah railway station, Marble Palace (Kolkata), Nakhoda Masjid
+   * (ohjaa artikkeliin Nakhoda Mosque), College Street (Kolkata),
+   * Writers' Building, St. John's Church Kolkata, Shaheed Minar
+   * Kolkata, Indian Museum ja Victoria Memorial Kolkata (haettu
+   * 22.8.2026).
+   *
+   * KOLME SISÄISTÄ RISTIRIITAA on kirjoitettu auki lukijalle
+   * (v925/v932:n tapa): Howrahin aseman laiturimäärä on aseman omassa
+   * artikkelissa sekä 24 (infoboksi) että 22 toiminnassa olevaa
+   * (johdanto); Nakhodan moskeijan valmistumisvuosi on infoboksissa
+   * 1926 ja leipätekstissä 1935; Shaheed Minarin porrasmäärä on
+   * samassa kappaleessa sekä 223 että 218.
+   *
+   * WRITERS' BUILDINGIN VUODEN 1930 SALAMURHA ON JÄTETTY POIS
+   * kokonaan, samoin aukion nykyisen nimen taustatarina yksityis-
+   * kohtineen: aihe on väkivaltainen eikä tuo lehteen mitään, mitä
+   * rakennuksen oma historia ei jo kerro (Varanasin ja Lhasan
+   * ennakkotapaus poisjätöistä). Sama koskee kaikkia puolueita ja
+   * nykyhallintoa: rakennus kerrotaan rakennuksena.
+   *
+   * ST. JOHN'SIN KIRKON HAUTAUSMAA on mukana vain Job Charnockin
+   * mausoleumin ja charnockiitti-kiven osalta, koska ne selittävät
+   * kaupungin perustamiskiistan ja kivilajin nimen. Hautausmaata
+   * itseään ei kuvailla, ja kirkon kuvassa on pelkkä rakennus.
+   */
+  kolkata: {
+    'Howrah-silta': {
+      aika: 'ponttonisilta 1874, nykyinen 1943',
+      teksti: 'Nykyinen Howrah-silta korvasi samalla paikalla olleen '
+          + 'ponttonisillan, ja siksi sen alkuperäinen nimi oli New '
+          + 'Howrah Bridge. Rakennustyö alkoi 1936 ja valmistui 1942; '
+          + 'liikenteelle silta avattiin 3. helmikuuta 1943. Nimi vaihtui '
+          + '14. kesäkuuta 1965 Rabindra Setuksi runoilija Rabindranath '
+          + 'Tagoren mukaan, mutta puheessa se on yhä Howrah-silta.'
+          + '\n\n'
+          + 'Sillassa ei ole yhtään mutteria eikä pulttia: koko rakenne '
+          + 'on niitattu. Terästä kului 26 500 tonnia, ja siitä 23 000 '
+          + 'tonnia oli Tata Steelin kehittämää Tiscrom-lujuusterästä. '
+          + 'Perustuksia varten upotettiin valtavat kaivinkaivot, ja '
+          + 'yhtenä yönä maa niiden alla petti niin että koko massa '
+          + 'vajosi kerralla kaksi jalkaa — tärähdys kirjautui '
+          + 'Kidderporen seismografiin maanjäristyksenä. Kaivannoista '
+          + 'nousi ankkureita, tykkejä, tykinkuulia, messinkiastioita ja '
+          + 'kauppakomppanian aikaisia kolikoita. Päähanko on 457 metriä, '
+          + 'silta kaikkiaan 705 metriä ja tornit 82 metriä korkeat.'
+          + '\n\n'
+          + 'Sillan yli kulkee arviolta satatuhatta ajoneuvoa ja yli '
+          + 'sataviisikymmentätuhatta jalankulkijaa päivässä, mikä tekee '
+          + 'siitä maailman vilkkaimman ulokesillan. Raitiovaunut '
+          + 'kulkivat sen yli vuoteen 1993, jolloin liikenne lopetettiin '
+          + 'rakenteen kuormituksen vuoksi, ja ylikuormatut rekat '
+          + 'ohjattiin toiselle sillalle 2007. Vuonna 2003 selvisi, että '
+          + 'lintujen jätökset olivat syövyttäneet niittiliitoksia; '
+          + 'siitä lähtien silta on puhdistettu säännöllisesti, ja '
+          + 'vuoden 2004 maalaukseen kului 26 500 litraa maalia.',
+      kuvat: [
+        {
+          tiedosto: 'Howrah Bridge, Foggy.jpg',
+          selite: 'Sumuisena aamuna sillan teräsristikko piirtyy harmaata '
+            + 'vasten, ja joen yllä lentää parvi lintuja.',
+          lahde: 'Dey.sandip, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Howrahin rautatieasema': {
+      aika: 'ensimmäinen juna 1854, nykyinen rakennus 1905',
+      teksti: 'Itä-Intian rautatieyhtiö ja kauppakomppania sopivat '
+          + 'ensimmäisestä radasta 1849, ja pääteasemaksi valittiin '
+          + 'Howrah joen länsirannalla — silta olisi vaatinut yli '
+          + 'viidensadan metrin jännevälin, mitä pidettiin silloin '
+          + 'mahdottomana. Alku oli kömpelö: vaunuja tuonut laiva upposi '
+          + 'ja veturi päätyi Australiaan, joten vaunut tehtiin lopulta '
+          + 'paikan päällä. Ensimmäinen yleisöjuna lähti 15. elokuuta '
+          + '1854 Hooghlyyn, ja neljässä kuukaudessa radalla matkusti yli '
+          + '109 000 ihmistä. Asemana oli tuolloin yksi raide, yksi '
+          + 'laituri, lippuluukku ja pieni rakennus.'
+          + '\n\n'
+          + 'Liikenne kasvoi niin nopeasti, että uutta asemaa esitettiin '
+          + 'jo 1901. Brittiarkkitehti Halsey Ricardon suunnittelema '
+          + 'punatiilinen rakennus avattiin yleisölle 1. joulukuuta 1905 '
+          + 'ja valmistui kokonaan 1911. Laitureita lisättiin 1980-luvulla '
+          + 'viiteentoista, 1992 yhdeksääntoista ja 2009 vielä neljä. '
+          + 'Nykyinen määrä ilmoitetaan kahdella tavalla: aseman tiedoissa '
+          + 'laitureita on kaksikymmentäneljä ja tekstissä '
+          + 'kaksikymmentäkaksi liikennekäytössä.'
+          + '\n\n'
+          + 'Howrah on Intian suurin ja vilkkain asemakokonaisuus. Sen '
+          + 'kautta kulkee noin kuusisataa junaa ja yli miljoona '
+          + 'matkustajaa päivässä, ja kymmenen laituria on niin pitkiä, '
+          + 'että niille mahtuu yli kahdenkymmenenneljän vaunun juna. '
+          + 'Aseman edustalla oli raitiovaunujen päätepysäkki vuoteen 1992. '
+          + 'Vuosina 1909–1943 asemahallissa seisoi jalustalla Fairy '
+          + 'Queen, maailman vanhin yhä toimiva höyryveturi; nykyään sen '
+          + 'tarina kerrotaan viereisessä rautatiemuseossa, joka avattiin '
+          + '2006.',
+      kuvat: [
+        {
+          tiedosto: 'Howrah Railway Station 01.jpg',
+          selite: 'Punatiilinen asemarakennus tornirivistöineen levittäytyy '
+            + 'joen länsirannalle, ja edessä virtaa leveä Hooghly.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marble Palace': {
+      aika: '1835',
+      teksti: 'Pohjois-Kolkatan kapeiden katujen varrella seisoo '
+          + 'marmoritalo, jonka rakennutti 1835 varakas bengalilainen '
+          + 'kauppias Raja Rajendra Mullick. Hän oli intohimoinen '
+          + 'taiteen keräilijä, ja talo on säilynyt suvun kotina tähän '
+          + 'päivään asti. Pihapiirissä on myös vanhempi Jagannath-'
+          + 'temppeli, jonka rakennutti Mullickin kasvatusisä Nilmoni '
+          + 'Mullick ennen palatsia.'
+          + '\n\n'
+          + 'Talo on tyyliltään uusklassinen, mutta pohjakaava on '
+          + 'perinteinen bengalilainen: avoimia sisäpihoja peräkkäin, ja '
+          + 'yhden laidalla thakur-dalan eli suvun oma rukoushuone. '
+          + 'Kolmikerroksisessa rakennuksessa on korkeat uurretut '
+          + 'korinttilaiset pylväät ja koristeellisilla ristikoilla '
+          + 'varustetut kuistit, joiden viistot katot on tehty '
+          + 'kiinalaisen paviljongin tapaan. Puutarhassa on nurmikenttiä, '
+          + 'kivipuutarha, lampi ja pieni eläintarha.'
+          + '\n\n'
+          + 'Sisällä on länsimaista veistotaidetta, viktoriaanista '
+          + 'huonekalustoa, kattokruunuja, lattiasta kattoon ulottuvia '
+          + 'peilejä ja maalauksia. Kokoelmaan kuuluu kaksi Peter Paul '
+          + 'Rubensin työtä, ja siihen on liitetty myös Joshua '
+          + 'Reynoldsin, Titianin ja Murillon nimiä. Valikoima on runsas '
+          + 'mutta epätasainen: arvokkaiden teosten vieressä on '
+          + 'vähäpätöisiä esineitä, ja kirjailija Geoffrey Moorhouse '
+          + 'kuvasi kokonaisuutta kuin se olisi kerätty Lontoon '
+          + 'kirpputorilta sateisina lauantai-iltapäivinä. Talo on '
+          + 'yksityiskoti, joten valokuvaaminen on kielletty ja opas '
+          + 'kiertää mukana.',
+      kuvat: [
+        {
+          tiedosto: 'Marble Palace- Kolkata- West Bengal- DSC 0006.jpg',
+          selite: 'Rautaportin takana avautuu pylväikköinen julkisivu, '
+            + 'jonka edessä on suihkulähde ja nurmikentän reunoilla '
+            + 'kivileijonia.',
+          lahde: 'Souvik pal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nakhodan moskeija': {
+      aika: '1926–1935',
+      teksti: 'Burrabazarin kauppakortteleiden keskellä, Zakaria '
+          + 'Streetin ja Rabindra Saranin kulmassa, on kaupungin '
+          + 'päämoskeija. Paikalla oli ennen vuotta 1854 kaksi pienempää '
+          + 'moskeijaa. Kauppias Haji Zakariah, joka kuului '
+          + 'Kutchista muuttaneeseen memon-yhteisöön ja omisti '
+          + 'laivoja, osti niiden välissä olevan tontin ja kustansi '
+          + 'tilalle yhden suuren rakennuksen. Nimi tulee persian sanasta '
+          + 'nakhoda, merenkulkija — se viittaa rakennuttajan '
+          + 'laivanvarustamoon.'
+          + '\n\n'
+          + 'Uudisrakennuksen vuosiluvusta Wikipedia antaa kaksi tietoa: '
+          + 'artikkelin tietolaatikko sanoo valmistumisvuodeksi 1926, '
+          + 'leipäteksti taas kertoo työn alkaneen 1926 ja päättyneen '
+          + '1935. Kustannus oli puolitoista miljoonaa rupiaa, ja urakan '
+          + 'teki brittiläinen insinööritoimisto Mackintosh Burn.'
+          + '\n\n'
+          + 'Rakennus jäljittelee mogulikeisari Akbarin mausoleumia '
+          + 'Sikandrassa, ja portti on kopio Fatehpur Sikrin Buland '
+          + 'Darwazasta; graniitti tuotiin Tolepurista. Kupoleita on '
+          + 'kolme ja minareetteja kaksi, korkeudeltaan '
+          + 'neljäkymmentäkuusi metriä; niiden lisäksi kattoa reunustaa '
+          + 'kaksikymmentäviisi pienempää tornia, jotka ovat kolmestakymmenestä '
+          + 'kolmeenkymmeneenkuuteen metriin. Rukoussaliin mahtuu '
+          + 'kymmenentuhatta ihmistä, ja moskeija on Länsi-Bengalin ja '
+          + 'koko Itä-Intian suurin.',
+      kuvat: [
+        {
+          tiedosto: 'Nakhoda Masjid - Front.jpg',
+          selite: 'Punaisen hiekkakivijulkisivun keskellä kohoaa korkea '
+            + 'kaariportti, ja sen molemmin puolin nousevat valkoiset '
+            + 'minareetit.',
+          lahde: 'Sumitsurai, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'College Street': {
+      aika: 'oppilaitoksia vuodesta 1817',
+      teksti: 'College Street on yhdeksänsataa metriä pitkä katu, joka '
+          + 'kulkee Bidhan Saranilta Bowbazariin. Nimi tulee '
+          + 'oppilaitoksista, joita sen varrella on poikkeuksellisen '
+          + 'tiheässä: Presidency University, Sanskrit College, '
+          + 'lääketieteellinen opisto ja Calcutta-yliopisto. Kadun '
+          + 'keskellä kulkevat yhä raitiovaunun kiskot.'
+          + '\n\n'
+          + 'Oppilaitosten ympärille kasvoi kirjakauppa. Katua sanotaan '
+          + 'Boi Paraksi eli kirjakortteliksi, ja se on Intian ja koko '
+          + 'Aasian suurin kirjamarkkina sekä maailman suurin '
+          + 'käytettyjen kirjojen tori. Isot bengalilaiset kustantamot '
+          + 'ovat täällä, ja niiden välissä on lukemattomia pieniä '
+          + 'kojuja, joissa myydään uutta ja vanhaa sekaisin: '
+          + 'oppikirjoja, ensipainoksia, muistiinpanoilla täytettyjä '
+          + 'käytettyjä niteitä ja teoksia, jotka ovat jopa '
+          + 'kahdensadanviidenkymmenen vuoden takaa. Hinnasta '
+          + 'tingitään aina.'
+          + '\n\n'
+          + 'Erään aikakauslehden kuvaus kadusta on jäänyt elämään: '
+          + 'puoli mailia kirjakauppoja ja kirjakojuja, jotka valuvat '
+          + 'jalkakäytävälle ja joilta löytyy ensipainoksia, '
+          + 'pamfletteja ja pehmeäkantisia kaikilla Intian kielillä sekä '
+          + 'kohtuullinen määrä painossa olevia ja painosta poistuneita '
+          + 'kirjoja Ranskasta, Saksasta, Venäjältä ja Englannista. '
+          + 'Kadun varrella on myös Indian Coffee House, jonka '
+          + 'kahvipöydissä kaupungin lukeneisto on istunut vuosikymmeniä.',
+      kuvat: [
+        {
+          tiedosto: 'College Street - Kolkata 7391.JPG',
+          selite: 'Raitiotien kiskot kulkevat leveää katua pitkin '
+            + 'kirjakojujen ohi, ja puiden alla odottaa käsivetoinen '
+            + 'riksa.',
+          lahde: 'Biswarup Ganguly, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Writers’ Building': {
+      aika: '1777–1780, nykyinen ilme 1880-luvulta',
+      teksti: 'Kauppakomppanian nuorimpia virkamiehiä sanottiin '
+          + 'kirjureiksi, writers, ja heille rakennettiin oma talo. '
+          + 'Thomas Lyon suunnitteli sen 1777, ja kenraalikuvernööri '
+          + 'Warren Hastings valvoi hanketta; päärakennus valmistui 1780 '
+          + 'ja oli Kalkutan ensimmäinen kolmikerroksinen talo. '
+          + 'Rakennuspaikka oli osa sitä tonttia, jolla alkuperäinen Fort '
+          + 'William seisoi vuoteen 1756. Ensimmäisessä vaiheessa taloon '
+          + 'tehtiin yhdeksäntoista asuinhuoneistoa, ja aikalaiset '
+          + 'pitivät sitä rumana.'
+          + '\n\n'
+          + 'Talon käyttö vaihtui vuosisadan mittaan monta kertaa. '
+          + 'Vuonna 1800 sinne muutti Fort Williamin oppilaitos, jossa '
+          + 'kirjureille opetettiin itämaisia kieliä, ja sen tarpeisiin '
+          + 'rakennettiin asuntola, luentosali ja neljä kirjastoa. Vuonna '
+          + '1821 julkisivuun lisättiin lähes neljänkymmenen metrin '
+          + 'pituinen pylväskuisti, jonka joonialaiset pylväät ovat '
+          + 'kymmenmetrisiä. Talo ehti olla myös varastona, kauppoina ja '
+          + 'rautatieyhtiön konttorina, ennen kuin siitä tehtiin '
+          + '1877–1882 Bengalin hallinnon päätalo.'
+          + '\n\n'
+          + 'Nykyinen ilme syntyi 1800-luvun lopun laajennuksissa: '
+          + 'punatiilinen julkisivu sai keskelle pylväsportikon ja '
+          + 'katonreunaan patsasrivin, jonka veisti William Frederick '
+          + 'Woodington ja joka asennettiin 1883. Keskellä seisoo '
+          + 'Minerva, ja sen ympärillä on neljä patsasryhmää nimiltään '
+          + 'Oikeus, Kauppa, Tiede ja Maatalous. Rakennus on '
+          + 'sataviisikymmentä metriä pitkä ja rajaa Lal Dighin eli '
+          + 'Punaisen lammen pohjoislaidan B. B. D. Baghissa.',
+      kuvat: [
+        {
+          tiedosto: 'Facade of Writers Building - Central Kolkata.jpg',
+          selite: 'Punatiilinen julkisivu nousee alaviistosta katsottuna '
+            + 'kolmessa kerroksessa, ja jokaisen ikkunan yllä kaartuu '
+            + 'vaalea kipsikoriste.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'St. John’sin kirkko': {
+      aika: '1787',
+      teksti: 'Kirkko oli kauppakomppanian ensimmäisiä julkisia '
+          + 'rakennuksia sen jälkeen, kun Kalkutasta oli tullut '
+          + 'hallinnon keskus. Peruskiven laski kenraalikuvernööri '
+          + 'Warren Hastings 6. huhtikuuta 1784, ja rakentaminen '
+          + 'kustannettiin julkisella arpajaisella, joka tuotti '
+          + 'kolmekymmentätuhatta rupiaa. Tontin lahjoitti maharadža '
+          + 'Nabo Kishen Bahadur. Rakennus valmistui 1787, ja se on '
+          + 'kaupungin kolmanneksi vanhin kirkko. Esikuvana oli Lontoon '
+          + 'St Martin-in-the-Fields.'
+          + '\n\n'
+          + 'Kansanomainen nimi on Pathure Girja, kivikirkko. Kivi oli '
+          + '1700-luvun lopun Kalkutassa harvinaista tavaraa, ja se '
+          + 'haettiin keskiaikaisen Gaurin raunioista ja tuotiin jokea '
+          + 'alas. Samasta paikasta on lattian harvinainen siniharmaa '
+          + 'marmori. Kirkko on suuri neliömäinen uusklassinen rakennus, '
+          + 'jonka tunnusmerkki on runsaan viidenkymmenen metrin '
+          + 'kivitorni; sen kellon jouset vedetään joka päivä. '
+          + 'Anglikaanisen hiippakunnan tuomiokirkko se oli vuoteen 1847, '
+          + 'jolloin istuin siirtyi St. Paulin katedraaliin.'
+          + '\n\n'
+          + 'Alttarin vasemmalla puolella riippuu Johann Zoffanyn '
+          + 'maalaama Pyhä ehtoollinen. Se ei ole jäljennös Leonardon '
+          + 'teoksesta, vaan Zoffany maalasi hahmot kaupungin omista '
+          + 'asukkaista: Jeesuksena on kreikkalainen pappi Constantinos '
+          + 'Parthenios ja Juudaksena huutokauppias William Tulloh. '
+          + 'Maalaus kunnostettiin 2010. Pihalla on Job Charnockin '
+          + 'kahdeksankulmainen hautarakennus, jonka pystytti hänen '
+          + 'vävynsä Charles Eyre; siihen käytetty kivi tuotiin '
+          + 'Pallavaramista Etelä-Intiasta, ja kivilajia ruvettiin '
+          + 'myöhemmin sanomaan charnockiitiksi.',
+      kuvat: [
+        {
+          tiedosto: 'St Johns Church - Kolkata 2015-05-09 6615.JPG',
+          selite: 'Vaaleankeltainen kirkko ja sen harmaa kivitorni '
+            + 'näkyvät puiden lomasta hoidetun puutarhan takaa.',
+          lahde: 'Biswarup Ganguly, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shaheed Minar': {
+      aika: '1828',
+      teksti: 'Maidanin koillisnurkassa Esplanadella seisoo '
+          + 'neljänkymmenenkahdeksan metrin torni, joka pystytettiin '
+          + '1828 kauppakomppanian kenraalimajuri David Ochterlonyn '
+          + 'muistoksi. Sen suunnitteli J. P. Parker, se maksettiin '
+          + 'julkisista varoista ja sen rakensi Burn & Company. Elokuussa '
+          + '1969 torni omistettiin uudelleen '
+          + 'itsenäisyysliikkeen marttyyreille, ja nimi vaihtui Shaheed '
+          + 'Minariksi eli marttyyrien muistomerkiksi.'
+          + '\n\n'
+          + 'Torni on kolmen tyylin yhdistelmä. Jalusta on egyptiläinen, '
+          + 'itse pylväs uurrettu klassiseen tapaan mutta yläosaltaan '
+          + 'syyrialainen, ja huipulla on osmanien tapaan muotoiltu '
+          + 'kupoli. Parvekkeita on kaksi. Ylös noustaan kiemurtelevia '
+          + 'portaita, joiden lukumääräksi sama lähde antaa kaksi eri '
+          + 'lukua: kaikkiaan 223 askelmaa, tornin huipulle asti 218.'
+          + '\n\n'
+          + 'Mark Twain kutsui rakennelmaa pilviä suutelevaksi '
+          + 'muistomerkiksi. Näköala oli aikanaan kaupungin paras: sen huipulta otettiin '
+          + '1850-luvulla kaupungin varhaisia yleiskuvia. Nykyisin torniin noustaan vain '
+          + 'poliisin luvalla, ja ympärillä oleva nurmi on kaupungin '
+          + 'suurin kokoontumispaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Shahid Minar Full view.jpg',
+          selite: 'Valkoinen uurrettu pylväs nousee puiden yläpuolelle, '
+            + 'ja sen huipulla on kaksi parveketta ja punertava kupoli.',
+          lahde: 'Discovery Kolkata, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Intian museo': {
+      aika: 'perustettu 1814, nykyinen rakennus 1875',
+      teksti: 'Museon juuret ovat Aasialaisessa seurassa, jonka William '
+          + 'Jones perusti 1784. Ajatus kokoelmien näyttämisestä yleisölle '
+          + 'esitettiin 1796, ja 2. helmikuuta 1814 tanskalainen '
+          + 'kasvitieteilijä Nathaniel Wallich kirjoitti seuran '
+          + 'neuvostolle ehdotuksen museosta, joka kokoaisi yhteen hänen '
+          + 'omat ja seuran kokoelmansa. Hän tarjoutui hoitajaksi ilman '
+          + 'palkkaa ja esitti viittä osastoa: arkeologia, kansatiede, '
+          + 'tekniikka, geologia ja eläintiede. Neuvosto suostui, ja '
+          + 'museo perustettiin.'
+          + '\n\n'
+          + 'Ensimmäinen museolaki säädettiin 1866 ja peruskivi laskettiin '
+          + '1867. Nykyinen rakennus Chowringheellä valmistui 1875 W. L. '
+          + 'Granvillen piirustusten mukaan, ja siihen liitettiin uusia '
+          + 'siipiä 1888 ja 1894. Museon eläintieteellisestä ja '
+          + 'antropologisesta osastosta kasvoi 1916 oma laitos, Intian '
+          + 'eläintieteellinen tutkimuslaitos. Museo on Intian vanhin, ja '
+          + 'kokoelmissa on noin kaksi ja puoli miljoonaa esinettä.'
+          + '\n\n'
+          + 'Tunnetuin esine on Bharhutin buddhalaisen stupan kivinen '
+          + 'kaidejärjestelmä porttiholveineen; se tuotiin tänne '
+          + 'kokonaisena, ja itse stupan kumpu jäi paikalleen '
+          + 'Madhya Pradeshiin. Bharhutin paneelit ovat harvinaisia '
+          + 'siksi, että niihin on kaiverrettu selittävät tekstit '
+          + 'brahmi-kirjaimin. Museossa on myös Amaravatin stupan '
+          + 'jäänteitä, jäljennös Ashokan pylvään leijonakruunusta, '
+          + 'egyptiläinen muumio, meteoriitteja ja esihistoriallisten '
+          + 'eläinten luurankoja.',
+      kuvat: [
+        {
+          tiedosto: '003 The Only Surviving Torana.jpg',
+          selite: 'Bharhutin stupan punainen kiviportti kaartuu museon '
+            + 'salissa, ja sen palkkeihin on kaiverrettu eläinrivistöjä '
+            + 'ja pieniä hahmoja.',
+          lahde: 'Anandajoti, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Victoria Memorial': {
+      aika: '1906–1921',
+      teksti: 'Rakennuksen on suunnitellut William Emerson, ja tyyli on '
+          + 'indosaraseeninen: brittiläistä ja mogulilaista '
+          + 'rakennustapaa yhdistellään venetsialaisiin, egyptiläisiin '
+          + 'ja dekkanilaisiin aiheisiin. Mitat ovat 103 kertaa 69 '
+          + 'metriä ja korkeus 56 metriä, ja materiaali on valkoinen '
+          + 'Makrana-marmori. Muoto '
+          + 'kaikuukin Tajia: kupoli, neljä pienempää kupolia, '
+          + 'kahdeksankulmaiset kattopaviljongit, korkeat porttiaukot ja '
+          + 'kulmatornit. Puutarhat suunnittelivat lordi Redesdale ja '
+          + 'David Prain.'
+          + '\n\n'
+          + 'Kupolin huipulla seisoo viiden metrin korkuinen voiton '
+          + 'enkeli, jonka valoi H. H. Martyn & Co. Cheltenhamissa ja '
+          + 'joka on Emersonin apulaisen Vincent Eschin käsialaa. Kupolia '
+          + 'ympäröivät vertauskuvalliset veistokset Taide, '
+          + 'Arkkitehtuuri, Oikeus ja Hyväntekeväisyys, ja '
+          + 'pohjoiskuistin yllä ovat Äitiys, Harkinta ja Oppineisuus.'
+          + '\n\n'
+          + 'Sisällä on kaksikymmentäviisi näyttelysalia. Kokoelmassa on '
+          + 'maailman suurin yhtenäinen joukko Thomas Daniellin ja hänen '
+          + 'veljenpoikansa William Daniellin töitä — juuri heidän '
+          + 'akvarelleistaan Eurooppa näki Intian 1700-luvun lopussa. '
+          + 'Rotundan seinillä kiertää kaksitoista Frank Owen '
+          + 'Salisburyn maalaamaa kaarikenttää, ja kirjastossa on '
+          + 'harvinaisia laitoksia Shakespearesta Omar Khaijamin '
+          + 'runoihin. Uusin osasto on Kolkata-galleria, joka kertoo '
+          + 'kaupungin oman historian.',
+      kuvat: [
+        {
+          tiedosto: 'Victoria Memorial, Iconic view of Victoria Memorial on the lake, Kolkata, India.jpg',
+          selite: 'Marmorirakennus ja sen kupoli heijastuvat kokonaan '
+            + 'tyyneen lampeen, jonka takana kulkee puurivi.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
