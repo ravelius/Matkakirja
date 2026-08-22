@@ -13,7 +13,7 @@ import {
 } from './ai.js';
 import {
   DUEL_PRIZE, FLIGHT_PRICE,
-  HINT_PRICE, MANNERLENTO_NAPPI, SEA_FARE,
+  HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, SEA_FARE,
 } from './game.js';
 import {
   factSource, factText, factVoice, isSourceUrl, PACKS, packById, sourceLabel, voiceTitle,
@@ -843,6 +843,41 @@ function peliVersio() {
   return document.getElementById('app-version')?.textContent?.trim() ?? '?';
 }
 
+/**
+ * Julisteet maanosittain julistegalleriaa varten (omistajan tilaus
+ * 22.8.2026: galleria "maanosien mukaan jaoteltuna").
+ *
+ * JAKO JOHDETAAN PELIN OMASTA DATASTA, ei käsin kirjoitetusta
+ * rinnakkaislistasta: maailmankartan cityManner kertoo, mistä
+ * lähdepakasta kukin kaupunki on peritty (js/packs/maailmankartta.js),
+ * ja MANNER_NIMET antaa maanosalle suomenkielisen nimen sekä
+ * ryhmien järjestyksen (js/game.js). Uusi juliste asettuu siis oikeaan
+ * ryhmään heti kun se lisätään JULISTEET-tauluun — tässä ei ole mitään
+ * ylläpidettävää, eikä lista voi eriytyä pelin muusta jaosta.
+ *
+ * Kaupunki, joka on kahdessa lähdepakassa (esimerkiksi Istanbul ja
+ * Kairo), saa cityMannerin oman deterministisen valinnan — sama
+ * maanosa kuin pelin linssijaossa, ei tässä erikseen päätettyä.
+ *
+ * @returns {{id: string, nimi: string, kaupungit: string[]}[]}
+ */
+function julisteMantereet() {
+  const manner = packById('maailmankartta').map?.cityManner ?? {};
+  const jarjestys = Object.keys(MANNER_NIMET);
+  const ryhmat = new Map();
+  for (const cityId of Object.keys(JULISTEET)) {
+    const avain = manner[cityId] ?? 'muu';
+    if (!ryhmat.has(avain)) ryhmat.set(avain, []);
+    ryhmat.get(avain).push(cityId);
+  }
+  // Tuntematon maanosa (uusi lauta ennen MANNER_NIMET-riviä) menee
+  // loppuun omana ryhmänään sen sijaan että juliste katoaisi.
+  const sija = (id) => (jarjestys.indexOf(id) + 1 || jarjestys.length + 1);
+  return [...ryhmat.entries()]
+    .sort(([a], [b]) => sija(a) - sija(b))
+    .map(([id, kaupungit]) => ({ id, nimi: MANNER_NIMET[id]?.nimi ?? 'Muualla', kaupungit }));
+}
+
 const FACT_WIDTH = 340; // pidettävä samana kuin .fact-card css:ssä
 const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 
@@ -871,10 +906,19 @@ export class UI {
     this.passportAarteet = document.getElementById('passport-aarteet');
     this.passportFinds = document.getElementById('passport-finds');
     this.passportProgress = document.getElementById('passport-progress');
-    // Julistekokoelma: oma kotelonsa, koska koko osasto piiloutuu
-    // ennen ensimmäistä voitettua julistetta (ks. renderJulisteet).
+    // Julisterivi: oma kotelonsa, koska koko rivi piiloutuu ennen
+    // ensimmäistä voitettua julistetta (ks. renderJulisteet).
     this.julisteKotelo = document.getElementById('juliste-kotelo');
     this.passportJulisteet = document.getElementById('passport-julisteet');
+    /*
+     * Rivin sisältö rakennetaan uusiksi joka renderissä, mutta rivi
+     * itse on sama nappi koko pelin ajan — kuuntelija kiinnitetään
+     * siksi kerran tässä eikä renderJulisteetissa, jossa se
+     * kertautuisi joka avauksella.
+     */
+    this.passportJulisteet?.addEventListener('click', () => this.avaaJulisteGalleria());
+    /** Avoin julistegalleria: { kortti, huntu, nappaimet } tai null. */
+    this.julisteGalleria = null;
 
     /*
      * Aarnin luettelon i-nappi. Teksti on tarinakaanonia (Fablen
@@ -928,6 +972,10 @@ export class UI {
     // muuten se jäisi leijumaan kartan päälle ilman ankkuriaan.
     this.passportDialog?.addEventListener('close', () => {
       this.suljePikkuseloste();
+      // Julistegalleria on laukun lapsi (suurennosIsanta): ilman tätä
+      // se jäisi suljetun dialogin sisään roikkumaan ja avautuisi
+      // seuraavan avauksen mukana ilman että kukaan sitä pyysi.
+      this.suljeJulisteGalleria();
       document.body.classList.remove('laukku-auki');
     });
 
@@ -9451,50 +9499,175 @@ export class UI {
   }
 
   /**
-   * JULISTEKOKOELMA MATKALAUKUSSA (omistajan tilaus 21.8.2026).
+   * JULISTERIVI MATKALAUKUSSA (omistajan tilaus 22.8.2026: "Julisteet
+   * voisi olla oma rivi laukussa mutta kuvakkeet todella pieniä, sama
+   * korkeus kuin tekstillä ja näkyisi vain kolme viimeisintä. Perässä
+   * olisi numeromäärä ja >> merkki.").
    *
-   * Kaupunkilehden minitehtävästä voitetut aikakausjulisteet pieninä
-   * vedoksina: napautus avaa julisteen isona (naytaJuliste). Vielä
-   * voittamattomat näkyvät himmeinä paikkoina kysymysmerkillä, jotta
-   * kokoelma kertoo myös sen, että sitä voi täydentää — mutta se ei
-   * paljasta, MISTÄ kaupungista mikin juliste on. Kateissa olevan
-   * määrä näkyy, nimet eivät: sama linjaus kuin Aarnin luettelossa.
+   * TILAUS KUMOAA 21.8.2026 TEHDYN RUUDUKON. Siinä laukussa oli
+   * otsikkorivi, kaikki voitetut pikkuvedokset ja loput himmeinä
+   * ?-paikkoina — eli osasto kasvoi sitä pidemmäksi mitä paremmin peli
+   * sujui, ja loppupelissä se peitti laukun muun sisällön. Nyt rivi on
+   * aina yhtä korkea: kolme tuoreinta vedosta tekstirivin korkuisina,
+   * perässä määrä ja ». Kaikki muu — myös voittamattomat paikat —
+   * asuu gallerian sisällä (avaaJulisteGalleria).
    *
-   * Koko osasto on piilossa, kunnes ensimmäinen juliste on voitettu
-   * (sama sääntö kuin Varusteet-osastolla): tyhjä osasto kertoisi vain
-   * siitä, mitä pelaajalla ei ole.
+   * TUOREIN ENSIN: game.julisteet on Set, johon myönnöt lisätään
+   * voittohetkellä (js/game.js myonnaJuliste), joten listan loppupää on
+   * tuorein. Siksi kolme viimeistä otetaan lopusta ja käännetään.
+   *
+   * RIVI ON PIILOSSA ENNEN ENSIMMÄISTÄ JULISTETTA. Vaihtoehto olisi
+   * himmeä "Julisteet 0/15 »", joka avaisi gallerian pelkkine
+   * lukkopaikkoineen, mutta valinta on piilotus samasta syystä kuin
+   * Varusteet-osastolla: tyhjä osasto kertoisi pelaajalle vain sen,
+   * mitä hänellä ei ole. Galleria ei jää saavuttamattomaksi —
+   * ensimmäinen juliste tulee lehden minitehtävästä, ja juuri se
+   * paljastaa rivin.
    */
   renderJulisteet() {
     if (!this.julisteKotelo || !this.passportJulisteet) return;
     const voitetut = [...(this.game.julisteet ?? [])].filter((id) => JULISTEET[id]);
     this.julisteKotelo.hidden = voitetut.length === 0;
     if (!voitetut.length) return;
-    this.passportJulisteet.replaceChildren();
-    for (const cityId of voitetut) {
-      const juliste = JULISTEET[cityId];
-      const nappi = html('button', 'laukku-juliste');
-      nappi.type = 'button';
-      nappi.setAttribute('aria-label', `${juliste.otsikko} — katso juliste isona`);
+    const kaikki = Object.keys(JULISTEET).length;
+    const rivi = this.passportJulisteet;
+    rivi.replaceChildren();
+    rivi.setAttribute('aria-label',
+      `Julisteet: ${voitetut.length}/${kaikki} voitettu — avaa julistegalleria`);
+    rivi.appendChild(html('span', 'laukku-julisterivi-nimio', 'Julisteet'));
+    const vedokset = html('span', 'laukku-julisterivi-vedokset');
+    for (const cityId of voitetut.slice(-3).reverse()) {
       const kuva = document.createElement('img');
       kuva.decoding = 'async';
       kuva.alt = '';
-      asetaKuva(kuva, julisteUrl(juliste.tiedosto), null);
-      nappi.appendChild(kuva);
-      nappi.appendChild(html('span', 'laukku-juliste-nimi', juliste.kaupunki));
-      nappi.addEventListener('click', () => this.naytaJuliste(cityId));
-      this.passportJulisteet.appendChild(nappi);
+      // Puuttuva tiedosto (ämpärivienti kesken) vie vain vedoksen:
+      // rivi, luku ja galleria jäävät paikoilleen.
+      asetaKuva(kuva, julisteUrl(JULISTEET[cityId].tiedosto), null, () => kuva.remove());
+      vedokset.appendChild(kuva);
     }
-    // Voittamatta olevat yhtenä himmeänä rivistönä perässä.
-    const kateissa = Object.keys(JULISTEET).length - voitetut.length;
-    for (let i = 0; i < kateissa; i += 1) {
-      const tyhja = html('div', 'laukku-juliste tyhja', '?');
-      tyhja.setAttribute('aria-hidden', 'true');
-      this.passportJulisteet.appendChild(tyhja);
+    rivi.appendChild(vedokset);
+    rivi.appendChild(html('span', 'laukku-julisterivi-luku', `${voitetut.length}/${kaikki} »`));
+  }
+
+  /**
+   * JULISTEGALLERIA (omistajan tilaus 22.8.2026: "Riviä klikkaamalla
+   * aukeaisi oma juliste popup galleria jossa julisteet vähän
+   * isommalla maanosien mukaan jaoteltuna ja klikattavissa täyteen
+   * kokoon kuvagalleriaksi").
+   *
+   * Galleria elää samassa kerroksessa kuin muutkin laukun päälle
+   * avautuvat popupit: isäntä on päällimmäinen avoin dialogi
+   * (suurennosIsanta), koska modaali <dialog> on selaimen top
+   * layerissa eikä sen päälle pääse z-indexillä ulkopuolelta. Oma
+   * huntu kortin alle, rasti ja Escape sulkevat.
+   *
+   * Kerroksia on kaksi: galleria (z 66) ja sen päälle avautuva täysi
+   * koko (kulttuurisuurennos, z 70). Escape purkaa ne oikeassa
+   * järjestyksessä ilman erillistä pinologiikkaa: gallerian kuuntelija
+   * väistää, jos suurennos on auki, ja suurennoksen oma kuuntelija
+   * sulkee sen ensin.
+   */
+  avaaJulisteGalleria() {
+    this.suljeJulisteGalleria();
+    const voitetut = new Set([...(this.game.julisteet ?? [])].filter((id) => JULISTEET[id]));
+    const ryhmat = julisteMantereet();
+    const kortti = html('div', 'julistegalleria');
+    kortti.setAttribute('role', 'dialog');
+    kortti.setAttribute('aria-label', 'Julistekokoelma');
+    const ylapalkki = html('div', 'julistegalleria-ylapalkki');
+    ylapalkki.appendChild(html('h2', 'julistegalleria-otsikko', 'Julisteet'));
+    ylapalkki.appendChild(html('span', 'julistegalleria-luku',
+      `${voitetut.size}/${Object.keys(JULISTEET).length}`));
+    const rasti = html('button', 'julistegalleria-rasti', '×');
+    rasti.type = 'button';
+    rasti.setAttribute('aria-label', 'Sulje julistegalleria');
+    rasti.addEventListener('click', () => this.suljeJulisteGalleria());
+    ylapalkki.appendChild(rasti);
+    kortti.appendChild(ylapalkki);
+    /*
+     * Täyden koon selailu seuraa gallerian omaa järjestystä (maanosa
+     * kerrallaan): nuoli vie siihen julisteeseen, joka on ruudulla
+     * seuraavana, eikä johonkin muuhun voittojärjestykseen.
+     */
+    const selattavat = ryhmat.flatMap((r) => r.kaupungit.filter((id) => voitetut.has(id)));
+    const teokset = selattavat.map((cityId) => ({
+      otsikko: JULISTEET[cityId].otsikko,
+      selite: JULISTEET[cityId].selite,
+      lahde: JULISTE_LAHDE,
+      // Valmis osoite ohittaa Commons-portaikon (ks. naytaKulttuuriKuva).
+      osoite: julisteUrl(JULISTEET[cityId].tiedosto),
+    }));
+    for (const ryhma of ryhmat) {
+      const osio = html('section', 'julistegalleria-ryhma');
+      const saatu = ryhma.kaupungit.filter((id) => voitetut.has(id)).length;
+      osio.appendChild(html('h3', 'julistegalleria-ryhma-otsikko',
+        `${ryhma.nimi} ${saatu}/${ryhma.kaupungit.length}`));
+      const ruudukko = html('div', 'julistegalleria-ruudukko');
+      for (const cityId of ryhma.kaupungit) {
+        /*
+         * Voittamaton paikka näkyy himmeänä kysymysmerkkinä omassa
+         * ryhmässään: kokoelma kertoo että sitä voi täydentää ja mistä
+         * päin maailmaa, muttei sitä mistä kaupungista — sama linjaus
+         * kuin Aarnin luettelossa.
+         */
+        if (!voitetut.has(cityId)) {
+          const lukossa = html('div', 'julistegalleria-vedos lukossa', '?');
+          lukossa.setAttribute('aria-hidden', 'true');
+          ruudukko.appendChild(lukossa);
+          continue;
+        }
+        const juliste = JULISTEET[cityId];
+        const nappi = html('button', 'julistegalleria-vedos');
+        nappi.type = 'button';
+        nappi.setAttribute('aria-label', `${juliste.otsikko} — katso juliste isona`);
+        const kuva = document.createElement('img');
+        kuva.decoding = 'async';
+        kuva.alt = '';
+        // Viemättä oleva tiedosto jättää nimen ja kehyksen paikalleen,
+        // jottei ryhmästä katoaisi kokonainen ruutu.
+        asetaKuva(kuva, julisteUrl(juliste.tiedosto), null, () => {
+          kuva.remove();
+          nappi.classList.add('kuvaton');
+        });
+        nappi.appendChild(kuva);
+        nappi.appendChild(html('span', 'julistegalleria-nimi', juliste.kaupunki));
+        const kohdalla = selattavat.indexOf(cityId);
+        nappi.addEventListener('click', () => {
+          sfx.play('paper');
+          this.naytaKulttuuriKuva(teokset[kohdalla], { teokset, kohdalla });
+        });
+        ruudukko.appendChild(nappi);
+      }
+      osio.appendChild(ruudukko);
+      kortti.appendChild(osio);
     }
-    if (kateissa > 0) {
-      this.passportJulisteet.appendChild(html('p', 'laukku-julisteet-vihje',
-        `Voittamatta ${kateissa} julistetta — lehtien minitehtävät ratkaisevat ne.`));
-    }
+    const huntu = html('div', 'julistegalleria-huntu');
+    huntu.addEventListener('click', () => this.suljeJulisteGalleria());
+    const nappaimet = (e) => {
+      if (e.key !== 'Escape') return;
+      // Täysi koko on kerrosta ylempänä ja sulkee itsensä omalla
+      // kuuntelijallaan — galleria odottaa vuoroaan.
+      if (this.lehtitila.kulttuuriKuvaEl) return;
+      e.preventDefault();
+      e.stopPropagation();
+      this.suljeJulisteGalleria();
+    };
+    const isanta = this.suurennosIsanta();
+    isanta.appendChild(huntu);
+    isanta.appendChild(kortti);
+    document.addEventListener('keydown', nappaimet, { capture: true });
+    this.julisteGalleria = { kortti, huntu, nappaimet };
+    rasti.focus({ preventScroll: true });
+  }
+
+  /** Sulkee julistegallerian ja purkaa sen näppäinkuuntelijan. */
+  suljeJulisteGalleria() {
+    const auki = this.julisteGalleria;
+    if (!auki) return;
+    this.julisteGalleria = null;
+    auki.kortti.remove();
+    auki.huntu.remove();
+    document.removeEventListener('keydown', auki.nappaimet, { capture: true });
   }
 
   /**

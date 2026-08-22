@@ -9580,19 +9580,175 @@ button.lukija-nappi.lukee,
 }
 
 /*
- * JULISTEKOKOELMA MATKALAUKUSSA. Pikkuvedokset rivistönä kuten
- * varusteruudukko: kolme mahtuu kapeimmallekin laukulle. Voittamaton
- * paikka on tyhjä kehys kysymysmerkkeineen — se kertoo että kokoelmaa
- * voi täydentää, muttei sitä mistä.
+ * JULISTERIVI MATKALAUKUSSA (omistajan tilaus 22.8.2026: "Julisteet
+ * voisi olla oma rivi laukussa mutta kuvakkeet todella pieniä, sama
+ * korkeus kuin tekstillä ja näkyisi vain kolme viimeisintä. Perässä
+ * olisi numeromäärä ja >> merkki.").
+ *
+ * Tämä KUMOAA 21.8.2026 tehdyn ruudukon (.laukku-julisteet), jossa
+ * osasto kasvoi kokoelman mukana ja peitti loppupelissä laukun muun
+ * sisällön. Rivi on nyt vakiokorkuinen: yksi tekstirivi, jonka päällä
+ * kolme tuoreinta vedosta ratsastaa saman korkuisina kuin kirjaimet.
  */
-.laukku-julisteet {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
-  gap: 0.5rem;
-  margin: 0.15rem 0 0.35rem;
+.dialog .laukku-julisterivi {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  margin: 0.15rem 0 0.4rem;
+  padding: 0.2rem 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  font-family: var(--font-type);
+  font-size: 0.82rem;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  color: rgba(60, 44, 26, 0.9);
+  text-align: left;
+  cursor: pointer;
 }
 
-.dialog .laukku-julisteet .laukku-juliste {
+.dialog .laukku-julisterivi:hover .laukku-julisterivi-luku,
+.dialog .laukku-julisterivi:focus-visible .laukku-julisterivi-luku {
+  color: rgba(60, 44, 26, 0.95);
+}
+
+.laukku-julisterivi-nimio {
+  /* Sama nimiötyyli kuin muilla laukun osastoilla (.passport-count). */
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: rgba(60, 44, 26, 0.72);
+}
+
+.laukku-julisterivi-vedokset {
+  display: flex;
+  align-items: center;
+  gap: 0.22rem;
+  min-width: 0;
+}
+
+.laukku-julisterivi-vedokset img {
+  display: block;
+  /* Todella pieni: sama korkeus kuin tekstirivillä, leveys tulee
+   * julisteen omasta 2:3-suhteesta. Suhde on myös kiinteänä, jottei
+   * rivi nyi kuvan latautuessa. */
+  height: 1.25em;
+  width: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(60, 44, 26, 0.55);
+  box-shadow: 1px 1px 0 rgba(60, 44, 26, 0.18);
+}
+
+.laukku-julisterivi-luku {
+  margin-left: auto;
+  white-space: nowrap;
+  color: rgba(60, 44, 26, 0.8);
+}
+
+/*
+ * JULISTEGALLERIA: laukun rivistä avautuva popup (omistajan tilaus
+ * 22.8.2026: "julisteet vähän isommalla maanosien mukaan jaoteltuna").
+ *
+ * Kerrokset: huntu 65, galleria 66, ja gallerian päälle avautuva täysi
+ * koko on tavallinen .postikortti.kulttuuri-suurennos (69/70). Näin
+ * suurennos jää aina gallerian PÄÄLLE ilman erillistä pinologiikkaa.
+ * Kortti asuu avoimen <dialog>-elementin sisällä (js/ui.js
+ * suurennosIsanta), koska modaali elää selaimen top layerissa.
+ */
+.julistegalleria-huntu {
+  position: fixed;
+  inset: 0;
+  z-index: 65;
+  background: rgba(26, 18, 8, 0.28);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.julistegalleria {
+  position: fixed;
+  inset: 0;
+  z-index: 66;
+  margin: auto;
+  width: min(94vw, 760px);
+  height: fit-content;
+  max-height: 88dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.6rem 0.9rem 1rem;
+  background: #f8f3e6;
+  border: 1px solid rgba(60, 44, 26, 0.35);
+  border-radius: 3px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+}
+
+.julistegalleria-ylapalkki {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0 0 0.4rem;
+  padding: 0.25rem 0 0.35rem;
+  background: #f8f3e6;
+  border-bottom: 1px solid rgba(60, 44, 26, 0.22);
+}
+
+.julistegalleria-otsikko {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(60, 44, 26, 0.92);
+}
+
+.julistegalleria-luku {
+  font-family: var(--font-type);
+  font-size: 0.8rem;
+  color: rgba(60, 44, 26, 0.65);
+}
+
+.dialog .julistegalleria-rasti {
+  margin: 0 0 0 auto;
+  padding: 0 0.3rem;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: rgba(60, 44, 26, 0.7);
+  cursor: pointer;
+}
+
+.julistegalleria-ryhma { margin: 0.6rem 0 0; }
+
+.julistegalleria-ryhma-otsikko {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-type);
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(60, 44, 26, 0.7);
+}
+
+/*
+ * Ruudukko täyttyy itsestään: kapealla puhelimella kaksi tai kolme
+ * saraketta, leveällä useampi — ryhmät pinoutuvat allekkain eikä
+ * mitään tarvitse mediakyselyillä siirtää.
+ */
+.julistegalleria-ruudukko {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+  gap: 0.6rem;
+}
+
+.dialog .julistegalleria-vedos {
   display: block;
   width: 100%;
   margin: 0;
@@ -9605,45 +9761,43 @@ button.lukija-nappi.lukee,
   cursor: zoom-in;
 }
 
-.dialog .laukku-julisteet .laukku-juliste img {
+.dialog .julistegalleria-vedos img {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
   border: 1px solid rgba(60, 44, 26, 0.6);
   box-shadow: 1px 2px 0 rgba(60, 44, 26, 0.2);
 }
 
-.dialog .laukku-julisteet .laukku-juliste-nimi {
+.julistegalleria-nimi {
   display: block;
-  margin-top: 0.22rem;
+  margin-top: 0.25rem;
   font-family: var(--font-type);
-  font-size: 0.54rem;
+  font-size: 0.6rem;
   line-height: 1.25;
   letter-spacing: 0.02em;
   color: rgba(60, 44, 26, 0.8);
 }
 
-.dialog .laukku-julisteet .laukku-juliste.tyhja {
+/* Voittamaton paikka ja vielä ämpäriin viemätön kuva: sama tyhjä
+ * kehys, jotta ryhmästä ei katoa ruutua kummassakaan tapauksessa. */
+.dialog .julistegalleria-vedos.lukossa,
+.dialog .julistegalleria-vedos.kuvaton {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Sama 4:5 kuin julisteissa, jotta rivistö ei nyki. */
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 2 / 3;
   border: 1px dashed rgba(60, 44, 26, 0.4);
   background: rgba(60, 44, 26, 0.05);
   font-family: var(--font-type);
   font-size: 1rem;
   color: rgba(60, 44, 26, 0.45);
-  cursor: default;
 }
 
-.dialog .laukku-julisteet .laukku-julisteet-vihje {
-  grid-column: 1 / -1;
-  margin: 0.1rem 0 0;
-  font-size: 0.72rem;
-  line-height: 1.35;
-  color: rgba(60, 44, 26, 0.72);
-}
+.dialog .julistegalleria-vedos.lukossa { cursor: default; }
 
 /*
  * Päivän sää lehden mastossa: hillitty rivi kuvakkeineen heti
