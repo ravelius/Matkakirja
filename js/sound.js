@@ -51,6 +51,102 @@ const AMBIENCE_EVENT_MAX = 30000;
  * kulkevat omia reittejään eivätkä play():n kautta.
  */
 
+/*
+ * ── LAITTEEN ÄÄNENVOIMAKKUUSSÄÄDIN ───────────────────────────────────
+ *
+ * OMISTAJAN BUGIRAPORTTI 22.8.2026 (iPad, Safari): "Peli ei kunnioita
+ * laitteen äänenvoimakkuus säädintä." Kyljen napit eivät säätäneet
+ * peliä — tai säätivät vain osaa äänistä.
+ *
+ * SYY EI OLE VOIMAKKUUKSISSA VAAN ÄÄNISESSION LUOKASSA. iOS ei anna
+ * sivulle omaa liukusäädintä vaan äänisession, ja session luokka
+ * ratkaisee, MIKÄ laitteen voimakkuus nappeja seuraa. WebKitin oletus
+ * on 'auto': selain päättelee luokan siitä, mitä ääni-API:a sivu
+ * käyttää, ja pelkän WebAudio-kontekstin sivu päätyy Ambient-luokkaan
+ * (AVAudioSessionCategoryAmbient — WebKit AudioSessionIOS.mm). Ambient
+ * roikkuu soittoäänen voimakkuudessa ja tottelee hiljaisuuskytkintä:
+ * napit säätävät soittoääntä, eivät peliä. Sama juuri on tunnetussa
+ * WebKit-viassa 237322 ("webaudio api is muted when the iOS ringer is
+ * muted").
+ *
+ * Siitä syntyy myös havainnon "vain osa äänistä" -puoli: pelin
+ * <audio>-polut (js/luenta.js, js/ambience-stream.js,
+ * js/linssit/radio.js) nostavat session mediatoistoon ja tottelevat
+ * nappeja, mutta syntetisoidut tehosteet (tämä moduuli) ja
+ * WebAudio-puskureina soitettu lukijaääni (js/puhe.js) eivät.
+ *
+ * KORJAUS: Safari 17 antaa sivun kertoa luokan itse
+ * (navigator.audioSession, W3C Audio Session; WebKitissä oletuksena
+ * päällä juuri type-ominaisuuden osalta). 'playback' vastaa
+ * AVAudioSessionCategoryPlaybackia: mediaääni, jota kyljen napit
+ * säätävät.
+ *
+ * MIKSI JUURI 'playback':
+ *  - 'ambient' on täsmälleen se rikkinäinen nykytila, jonka 'auto'
+ *    tälle sivulle valitsee. Se ei siis korjaisi mitään.
+ *  - 'transient' ja 'transient-solo' ovat ilmoitusäänille ja lyhyille
+ *    ohjeille (navigaattorin puhe): ne duckaavat tai keskeyttävät muut
+ *    äänet joka kerta. Peli soittaa minuuttikaupalla luentaa ja
+ *    äänimaisemaa, ei piippauksia.
+ *  - 'play-and-record' kuuluu mikrofonille — ks. sanelun tauko alla.
+ *
+ * HINTA, JOKA MAKSETAAN TIETOISESTI: Playback ei tottele
+ * hiljaisuuskytkintä, joten kytkin ei enää vaienna peliä. Se on sama
+ * valinta, jonka selaimen videotoisto ja Applen omat mediasovellukset
+ * tekevät, ja pelille oikea: ääni ei ala koskaan ilman käyttäjän
+ * elettä, ja sen saa pois pelin omasta asetuksesta (setEnabled).
+ * Playback on lisäksi yksinoikeusluokka, joka keskeyttää muiden
+ * sovellusten toiston — juuri siksi luokkaa EI aseteta sivun
+ * latauksessa vaan vasta kun ääntä ollaan oikeasti aloittamassa
+ * (ensimmäinen ele tai ensureContext). Pelkkä sivun avaaminen ei saa
+ * katkaista pelaajan musiikkia.
+ *
+ * Muissa selaimissa navigator.audioSessionia ei ole. Silloin tämä ei
+ * tee mitään eikä kirjoita konsoliin — asetus on puhdas lisä, ei
+ * riippuvuus.
+ */
+let aaniIstunnonLuokka = null;
+
+/** Asettaa äänisession luokan kerran; palauttaa true jos se muuttui. */
+function asetaAaniIstunto(tyyppi) {
+  if (aaniIstunnonLuokka === tyyppi) return false;
+  if (typeof navigator === 'undefined' || !navigator) return false;
+  if (!('audioSession' in navigator) || !navigator.audioSession) return false;
+  try {
+    navigator.audioSession.type = tyyppi;
+    aaniIstunnonLuokka = tyyppi;
+    return true;
+  } catch {
+    // Vanha tai osittainen toteutus: peli soi entiseen tapaan.
+    return false;
+  }
+}
+
+/**
+ * Varmistaa, että sivun äänet ovat mediatoistoluokassa — eli että
+ * laitteen äänenvoimakkuusnapit säätävät peliä (ks. selitys yllä).
+ * Turvallinen kutsua monta kertaa: luokka asetetaan vain kerran.
+ */
+export function varmistaAaniIstunto() {
+  return asetaAaniIstunto('playback');
+}
+
+/*
+ * Luokka asetetaan myös ENSIMMÄISESTÄ ELEESTÄ, ei pelkästään tämän
+ * moduulin kontekstista. Syy: kaikki äänipolut eivät kulje täältä —
+ * lukijan oma WebAudio-piiri (js/puhe.js) ja <audio>-luennat
+ * syntyvät omissa moduuleissaan. Yksi kuuntelija kattaa ne kaikki,
+ * eikä yhdenkään moduulin tarvitse tietää äänisessiosta mitään
+ * (sama viritysmalli kuin js/puhe.js:n virita()). Ele on myös
+ * aikaisin hetki, jolloin ääntä ylipäätään voi syntyä, joten
+ * autoplay-säännöt eivät muutu.
+ */
+if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+  document.addEventListener('pointerdown', () => varmistaAaniIstunto(), {
+    once: true, capture: true, passive: true,
+  });
+}
+
 class Sound {
   constructor() {
     this.ctx = null;
@@ -112,6 +208,14 @@ class Sound {
    * kysyvät `enabled`-lippua erikseen eivätkä muutu tästä.
    */
   ensureContext({ pakota = false } = {}) {
+    /*
+     * Äänisession luokka kuntoon ENNEN enabled-porttia (omistajan
+     * bugiraportti 22.8.2026, ks. varmistaAaniIstunto yllä): kertoja,
+     * äänimaisema ja radio soivat myös silloin, kun pelin omat
+     * tehosteet on vaiennettu, ja laitteen napit koskevat niitäkin.
+     * Sanelun aikana ei kosketa — silloin sessio kuuluu mikrofonille.
+     */
+    if (!this.saneluTauko) varmistaAaniIstunto();
     if (!this.enabled && !pakota) return null;
     if (!this.ctx) {
       const Ctx = window.AudioContext || window.webkitAudioContext;
@@ -170,6 +274,16 @@ class Sound {
    */
   taukoaKonteksti() {
     this.saneluTauko = true;
+    /*
+     * Äänisession luokka takaisin selaimen omaan päättelyyn sanelun
+     * ajaksi (22.8.2026). Playback ei ole äänitysluokka: jos se
+     * jätettäisiin lukkoon, WebKit ei saisi siirtää sessiota
+     * mikrofonille eikä kaappaus lähtisi käyntiin — sama este, jonka
+     * takia kontekstikin viedään kylmäksi (js/pollo.js sanelu).
+     * 'auto' palauttaa päätöksen selaimelle; jatkaKonteksti nostaa
+     * mediatoiston takaisin heti sanelun jälkeen.
+     */
+    asetaAaniIstunto('auto');
     try {
       this.ctx?.suspend?.().catch?.(() => {});
     } catch {
@@ -179,6 +293,8 @@ class Sound {
 
   jatkaKonteksti() {
     this.saneluTauko = false;
+    // Mediatoisto takaisin, jotta laitteen napit säätävät taas peliä.
+    varmistaAaniIstunto();
     try {
       if (this.ctx?.state === 'suspended') this.ctx.resume().catch(() => {});
     } catch {
