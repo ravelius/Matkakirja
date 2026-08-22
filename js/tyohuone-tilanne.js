@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1028 — AASIAN KUVATEKSTIREMONTTI ERA 1 (KT1): 19 kaupunkia astana → kioto, ~300 selitetta uusittu kohde-ei-kuva-linjaan (rakennuksen historia ja merkitys, ei kuvailua). Jaljella 21 Aasian kaupunkia kolkata → yangon, jatkoagentti tyossa. Tarkista: Bangkokin ja Hongkongin kuvatekstit',
   'v1027 — KOKORUUDUN PIIRROSKORTTI (omistajan raportti 23.8.2026): kokoruutukartalla piirroskohteen napautus nayttaa nyt ensin piirroksen isompana korttina kartan paalla (kartta jaa auki) — juttuun paasee kortin piirroksesta tai Lue juttu -napista; Escape sulkee kerrokset jarjestyksessa kortti → kartta → lehti. Numeroympyrat ilman piirrosta avaavat jutun suoraan kuten ennen. Tarkista: Helsingin ja Tokion kokoruutukartta',
   'v1026 — LEIKKAUSKORJAUS (omistajan havainto 23.8.2026: "Ei nay lapinakyvina"): Helsingin akvarelliminiatyyrien kermatausta leikattu pois tulvataytolla (reunoilta, pehmennetty sauma) — kuvat ovat taas lapinakyvia kuten seepiaversiot. Tarkista: Helsingin kohdekartan kortit',
   'v1025 — AKVARELLIPILOTTI (omistajan tilaus 23.8.2026: "Tee akvarelli vaikka Helsinkiin niin tarkistan"): Helsingin kohdekartan 9 miniatyyripiirrosta korvattu akvarelliversioilla (seepiaviiva + kevyet laveeraukset, sama kermapaperi) — samat tiedostonimet, data ennallaan. Jos tyyli hyvaksytaan, loput 18 kaupunkia (141 kuvaa) ajetaan samalla reseptilla. Tarkista: Helsingin kohdekartan numeropisteiden kortit',
