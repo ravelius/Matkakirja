@@ -8018,6 +8018,77 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Victoria Memorial', lat: 22.5449, lon: 88.3425 },
     ],
   },
+  /*
+   * KABULIN KOHDEKARTTA (Opus 22.8.2026). Pääruutu on 4,2 × 3,4 km
+   * ja kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Xi'anissa ja Manilassa; kaksi viimeistä ovat kainalokartassa.
+   * Piirtorajaus ja sen perustelut ovat
+   * tools/piirra-kaupunkikartta.mjs:n kabul-lohkossa.
+   *
+   * KOORDINAATTIEN LÄHTEET ON EROTELTU, koska ne ovat kahdesta eri
+   * paikasta. en-Wikipedian omat {{coord}}-arvot ovat Timur Shahin
+   * mausoleumilla (34,516401 / 69,175368), Shah-Do Shamshiran
+   * moskeijalla (34,515556 / 69,171389), Bala Hissarilla (34,505556
+   * / 69,191667) ja Baburin puutarhoilla (34,503 / 69,158). Ka
+   * Faroshin lintutori, vanha kaupunginmuuri ja Chihil Sutun tulevat
+   * Overpassista (peili maps.mail.ru/osm/tools/overpass/api/
+   * interpreter, haettu 22.8.2026), koska niillä ei ole
+   * käyttökelpoista Wikipedia-koordinaattia lainkaan — sama
+   * menettely kuin Tokion kansallismuseossa, Persepoliksessa ja
+   * Kašgarin Chini-Baghissa.
+   *
+   * DARUL AMANIN ARTIKKELIN OMA ETÄISYYSLUKU ON VÄÄRÄ, ja lehti
+   * käyttää koordinaateista laskettua. en-Wikipedian "Darul Aman
+   * Palace" sanoo palatsin olevan "about 16 km south-west of the
+   * center of Kabul", mutta saman artikkelin infoboksin koordinaatti
+   * (34,465217 / 69,119297) ja Kabul-artikkelin keskipiste
+   * (34,52528 / 69,17833) antavat 8,6 kilometriä. Koordinaatti
+   * voittaa leipätekstin etäisyysarvion (v925, v932, v937), ja
+   * riippumaton tarkistus (docs/aasia-tyoaineisto/tarkistus-kabul.md
+   * osio 2) päätyi samaan lukuun.
+   *
+   * VANHAN KAUPUNGINMUURIN PISTE ON YHDEN OSM-VIIVAN KESKIKOHTA.
+   * Muuri ei ole yksi rakennus vaan Sher Darwazan harjanteelle
+   * nouseva vallirivi, ja Overpassin "Kabul Old City Wall" (way
+   * 199518021) on siitä säilynyt eteläinen osuus; sen keskipiste
+   * 34,501497 / 69,172033 on kartalla juuri siinä, missä tumma
+   * muuriviiva kulkee. Muurin toinen pää on Bala Hissarissa, joka on
+   * kartalla omana kohteenaan.
+   *
+   * PUL-E KHISHTIN MOSKEIJA EI OLE KARTALLA, vaikka se on lehden
+   * nostona: sen paikka (34,51556 / 69,18028) on 150 metriä Ka
+   * Faroshin lintutorista, eivätkä kaksi numeroympyrää mahdu niin
+   * lyhyelle välille. Lisäksi Commonsissa ei ole moskeijasta
+   * yhtäkään kuvaa, joka ylittäisi lehden 1200 pikselin alarajan.
+   *
+   * KAINALON KORKEUS 25,24 on piirtäjän oma laskelma
+   * (tools/piirra-kaupunkikartta.mjs), ei käsin kirjoitettu luku.
+   */
+  kabul: {
+    polku: 'assets/kartat/kabul-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 34.526, etela: 34.4955, lansi: 69.1515, ita: 69.1975 },
+    kainalot: [
+      { rajat: { pohjoinen: 34.482, etela: 34.452, lansi: 69.114, ita: 69.157 },
+        x: 3, y: 4, leveys: 24, korkeus: 25.24, suunta: '7–9 km lounaaseen' },
+    ],
+    esittely: 'Kartan alue on Kabulin vanhakaupunki joen molemmin '
+      + 'puolin, ja etelässä nousee Sher Darwazan harjanne vanhoine '
+      + 'muureineen. Vasemman yläkulman kainalossa ovat Darulamanin '
+      + 'palatsit. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Timur Shahin mausoleumi', lat: 34.516401, lon: 69.175368 },
+      { nimi: 'Shah-Do Shamshiran moskeija', lat: 34.515556, lon: 69.171389 },
+      { nimi: 'Ka Faroshin lintutori', lat: 34.514286, lon: 69.179718 },
+      { nimi: 'Bala Hissar', lat: 34.505556, lon: 69.191667 },
+      { nimi: 'Baburin puutarhat', lat: 34.503, lon: 69.158 },
+      { nimi: 'Kabulin vanha kaupunginmuuri', lat: 34.501497, lon: 69.172033 },
+      { nimi: 'Chihil Sutunin palatsi', lat: 34.468506, lon: 69.152186 },
+      { nimi: 'Darul Amanin palatsi', lat: 34.465217, lon: 69.119297 },
+    ],
+  },
 };
 
 /*

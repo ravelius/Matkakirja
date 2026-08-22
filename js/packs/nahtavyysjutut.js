@@ -28787,4 +28787,325 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KABULIN KOHDEKARTAN JUTUT (Opus 22.8.2026). Kahdeksan kohdetta
+   * samassa järjestyksessä kuin kartalla, pohjoisesta etelään; kaksi
+   * viimeistä ovat kainalokartassa. Faktat on tarkistettu
+   * en-Wikipedian raakateksteistä (action=raw, haettu 22.8.2026):
+   * Kabul, Mausoleum of Timur Shah Durrani, Shah-Do Shamshira
+   * Mosque, Bala Hissar (Kabul), Gardens of Babur, Chihil Sutun,
+   * Darul Aman Palace, National Museum of Afghanistan ja Char Chatta
+   * Bazaar.
+   *
+   * SISÄLTÖLINJAUS on spec-asia.md:n sitova Kabul-kohta: 1873-
+   * painotus, ei nykysisältöä, ei uutisaiheita. Jokainen tapahtuma
+   * näissä jutuissa on vuotta 1978 aiemmalta ajalta; ainoat
+   * nykyhetken lauseet ovat neutraaleja tosiasioita rakennusten
+   * käytöstä. POIS ON JÄTETTY se, mitä lähdeartikkelit kertovat
+   * vuoden 1978 jälkeen: Bala Hissarin vuoden 1994 taistelut ja
+   * miinat, kansallismuseon ryöstöt ja kokoelman menetykset, Darul
+   * Amanin ja Chihil Sutunin sisällissodan vauriot, Shah-Do
+   * Shamshiran vuosien 2015 ja 2024 tapahtumat sekä kaikki
+   * jälleenrakennushankkeiden rahoitus- ja politiikkakysymykset.
+   *
+   * KAKSI RISTIRIITAA ON KIRJOITETTU AUKI LUKIJALLE (v925/v932:n
+   * tapa). (1) Baburin puutarhojen marmorimoskeija: en-Wikipedian
+   * "Gardens of Babur" -artikkelin johdanto sanoo Shah Jahanin
+   * rakennuttaneen sen vierailullaan 1638, mutta saman artikkelin
+   * kunnostusosio sanoo sen olevan Aurangzebin vuonna 1675 Balkhin
+   * valloituksen muistoksi pystyttämä; ero kerrotaan puutarhojen
+   * jutussa. (2) Bala Hissarin loppu: artikkelin johdanto sanoo
+   * brittien tuhonneen linnoituksen 1880, mutta saman artikkelin
+   * historiaosio kertoo, että Frederick Roberts halusi purkaa sen
+   * mutta se päinvastoin vahvistettiin keväällä 1880 ja vain osa
+   * mogulien ja durranien rakennuksista purettiin. Juttu seuraa
+   * yksityiskohtaisempaa osiota ja kertoo eron.
+   *
+   * YKSI RISTIRIITA ON RATKAISTU EIKÄ KERROTTU: Darul Amanin
+   * palatsin huonemäärä on Wikipedian artikkelissa 150 kahdessa eri
+   * kohdassa, mutta kuvan lataajan Commons-kuvaus sanoo 155.
+   * Wikipedian oma luku on käytössä.
+   *
+   * YKSI LÄHDERIVI ON KOKOELMAN NIMISSÄ. Chihil Sutunin jutun kuvan
+   * ('Hendaki Palace, the Emir's residence, Kabul Wellcome
+   * L0025004.jpg') extmetadata.Artist on Commonsissa TYHJÄ, vaikka
+   * kuvauskentässä lukee Lillias Anna Hamilton. Lähderiviksi on
+   * kirjoitettu 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)'
+   * eli sama muoto, jota tässä paketissa on käytetty ennenkin
+   * Wellcomen tekijättömille kuville — nimeä ei keksitä
+   * lähderiville, jos rajapinta ei sitä anna.
+   */
+  kabul: {
+    'Timur Shahin mausoleumi': {
+      aika: 'rakennettu vuoden 1793 jälkeen',
+      teksti: 'Timur Shah Durrani hallitsi Durranien valtakuntaa '
+          + 'isänsä Ahmad Shahin jälkeen, ja hänen tekonsa Kabulin '
+          + 'kannalta oli yksi: vuonna 1776 hän siirsi valtakunnan '
+          + 'pääkaupungin Kandaharista tänne. Kaupunki oli siihen '
+          + 'mennessä kutistunut kymmeneen tuhanteen asukkaaseen, ja '
+          + 'päätös käänsi sen uudelleen kasvuun.'
+          + '\n\n'
+          + 'Kun Timur Shah kuoli 1793, hänen poikansa Zaman Shah '
+          + 'rakennutti haudan Kabul-joen rannalle. Se on '
+          + 'kahdeksankulmainen tiilirakennus kupolin alla, ja '
+          + 'Morgenstiernen kuvaluettelo vuodelta 1924 kuvailee sen '
+          + 'tyyliä Delhin varhaisten mogulien ja afgaanikuninkaiden '
+          + 'perinteeksi. Rakennuksen ympärillä on hehtaarin '
+          + 'puistoalue.'
+          + '\n\n'
+          + 'Paikka on keskellä kaupungin vilkkainta kauppa-aluetta '
+          + 'Timur Shahin tien varrella, ja naapurissa on Ayesha '
+          + 'Durranin koulu. Mausoleumi näkyy myös vanhoissa '
+          + 'kaupunkinäkymissä: kun Kabulia kuvattiin 1920-luvulla '
+          + 'Khwaja Safan rinteeltä, kupoli erottui joen mutkassa '
+          + 'yhtenä harvoista tunnistettavista rakennuksista.',
+      kuvat: [
+        {
+          tiedosto: 'Tomb of Timur Shah.jpg',
+          selite: 'Kahdeksankulmainen tiilimausoleumi holvikaarineen '
+            + 'ja lyijynharmaine kupoleineen, ja takana nousee '
+            + 'rinnetalojen peittämä vuori.',
+          lahde: 'Christan Richers, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shah-Do Shamshiran moskeija': {
+      aika: 'rakennettu 1919–1929',
+      teksti: 'Nimi tarkoittaa Kahden miekan kuningasta, ja moskeija '
+          + 'on kaupungin poikkeavin: keltainen kaksikerroksinen '
+          + 'rakennus Andarabin tiellä aivan Kabul-joen ja '
+          + 'Shah-Do Shamshiran sillan vieressä. Se rakennettiin '
+          + 'Amanullah Khanin hallituskaudella, ja esikuva haettiin '
+          + 'kaukaa: Istanbulin Ortaköyn moskeijasta.'
+          + '\n\n'
+          + 'Lopputulos ei muistuta juuri mitään muuta islamilaista '
+          + 'rakennusta. Italialainen koristestukko antaa julkisivulle '
+          + 'ilmeen, jota on kuvailtu afgaanibarokiksi, ja kahden '
+          + 'minareetin kärjet on kaakeloitu turkoosiksi. Moskeijan '
+          + 'edessä olevalla aukiolla elää suuri kyyhkyparvi.'
+          + '\n\n'
+          + 'Rakennuksen vieressä on mogulikenraali Chin Timur Khanin '
+          + 'hauta. Hän oli Baburin serkku, osallistui Etelä-Aasian '
+          + 'valloitukseen ja johti joukkoja Khanwan taistelussa. '
+          + 'Baburin oma hauta ja monen muun mogulipäällikön leposija '
+          + 'ovat parin kilometrin päässä lounaassa.',
+      kuvat: [
+        {
+          tiedosto: 'Shah do shamsheera.jpg',
+          selite: 'Keltainen kaksikerroksinen moskeija kaarevine '
+            + 'räystäineen ja kahtena turkoosikärkisenä minareettina, '
+            + 'ja aukiolla ruokitaan kyyhkyparvea.',
+          lahde: 'AhmadElhan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ka Faroshin lintutori': {
+      aika: 'osa vanhankaupungin basaareja',
+      teksti: 'Vanhaakaupunkia täyttävät basaarit, jotka kiemurtelevat '
+          + 'kapeita ja mutkaisia katuja pitkin. Kaksi niistä '
+          + 'mainitaan nimeltä useimmin: Mandawi ja Ka Faroshi eli '
+          + 'lintutori. Jälkimmäinen on kuja moskeijakorttelin '
+          + 'kupeessa, ja siellä myydään laululintuja ja peltopyitä.'
+          + '\n\n'
+          + 'Kaupan olevat linnut säilytetään käsin punotuissa '
+          + 'pajuhäkeissä, joita ladotaan kojujen eteen kerroksittain '
+          + 'katolle asti. Häkit ovat itsessään kauppatavaraa: '
+          + 'kupolinmuotoisia, pitkulaisia ja matalia malleja on '
+          + 'rinnakkain, ja punonta vaihtelee myyjän mukaan.'
+          + '\n\n'
+          + 'Basaarikortteleiden mitta on vanha. Mogulikaudella '
+          + 'kaupungissa oli Char Chattan katettu basaari, jonka '
+          + 'neljä holvikäytävää kulkivat yli kahdensadan metrin '
+          + 'matkan; se tuhoutui 1842 eikä sitä rakennettu uudelleen. '
+          + 'Nykyinen basaarialue on kasvanut samojen kujien varsille '
+          + 'ilman kaavaa.',
+      kuvat: [
+        {
+          tiedosto: 'Ka Farushi Kabul.jpg',
+          selite: 'Käsin punottuja pajuhäkkejä ladottuna kojun eteen '
+            + 'kolmeen kerrokseen, kupolinmuotoisia ja pitkulaisia '
+            + 'sekaisin.',
+          lahde: 'PoojaRathod, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bala Hissar': {
+      aika: 'linnoituksena ainakin 400-luvulta',
+      teksti: 'Bala Hissar tarkoittaa korkeaa linnaa, ja se seisoo '
+          + 'vanhankaupungin eteläpuolella Sher Darwazan vuoren '
+          + 'kärjessä. Paikan käyttö linnoituksena on ajoitettu '
+          + 'ainakin 400-luvulle, mutta alkuperää ei tunneta: '
+          + 'lähistöltä on löytynyt kušanikautta vanhempaa '
+          + 'keramiikkaa sekä indokreikkalaisia ja akhaimenidien '
+          + 'kolikoita.'
+          + '\n\n'
+          + 'Linnoituksesta lähtevät Kabulin muurit, jotka ovat kuusi '
+          + 'metriä korkeat ja lähes neljä metriä paksut ja seuraavat '
+          + 'vuorenharjaa kaarevana viivana alas joelle. Babur valtasi '
+          + 'linnoituksen 1504, ja mogulit tekivät siitä palatsin: '
+          + 'Jahangir purki vanhoja rakennuksia ja rakennutti tilalle '
+          + 'saleja ja nelijakoisen puutarhan, Shah Jahan asui täällä '
+          + 'Keski-Aasian sotaretkillään ja Aurangzeb rakennutti '
+          + 'moskeijan.'
+          + '\n\n'
+          + 'Loppu tuli 1800-luvulla, ja siitä Wikipedia antaa kaksi '
+          + 'versiota. Artikkelin johdannon mukaan britit tuhosivat '
+          + 'linnoituksen 1880, mutta saman artikkelin historiaosio '
+          + 'kertoo tarkemmin: kenraali Frederick Roberts halusi '
+          + 'purkaa sen kokonaan, mutta linnoitus vahvistettiinkin '
+          + 'keväällä 1880, ja purkaminen koski vain osaa mogulien ja '
+          + 'durranien rakennuksista. Hallinnollisen tehtävänsä Bala '
+          + 'Hissar menetti kokonaan 1890-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Bala Hisar.jpg',
+          selite: 'Linnoituskukkula veden takaa: muurit ja pyöreät '
+            + 'bastionit kiertävät paljasta rinnettä, ja ylimpänä '
+            + 'kulkee harjan myötäinen valli.',
+          lahde: 'AhmadElhan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Baburin puutarhat': {
+      aika: 'perustettu noin 1504',
+      teksti: 'Babur otti Kabulin haltuunsa 1504 ja alkoi kehittää '
+          + 'rinteessä olevaa puutarhaa vieraidensa majapaikaksi '
+          + 'erityisesti kesäisin. Alue on 11,5 hehtaaria ja jakautuu '
+          + 'kolmeentoista terassiin, joiden välissä kulkee portaita '
+          + 'ja vesiuria; kaivauksissa on löytynyt esineitä aina '
+          + '200-luvulta eaa.'
+          + '\n\n'
+          + 'Terassien ylin osa on hautausmaa. Baburin itsensä lisäksi '
+          + 'sinne on haudattu hänen sisarensa Khanzada Begum, hänen '
+          + 'nuorin poikansa Hindal Mirza, tyttärensä Gulbadan Begum, '
+          + 'joka kirjoitti Humayun-nama-teoksen, sekä useita muita '
+          + 'suvun jäseniä. Marmoriaidan Baburin haudan ympärille '
+          + 'pystytti Shah Jahan vierailullaan 1638.'
+          + '\n\n'
+          + 'Terassilla haudan alapuolella seisoo pieni valkoinen '
+          + 'marmorimoskeija, ja sen rakennuttajasta Wikipedia antaa '
+          + 'kaksi eri tietoa. Artikkelin johdannon mukaan moskeija '
+          + 'nousi Shah Jahanin vierailun yhteydessä 1638, saman '
+          + 'artikkelin kunnostusosion mukaan sen rakennutti Aurangzeb '
+          + '1675 Balkhin valloituksen muistoksi; kumpaakaan ei '
+          + 'perustella tarkemmin. Puutarhaan on istutettu plataaneja, '
+          + 'sypressejä, orapihlajaa ja hapankirsikkaa, jonka kerrotaan '
+          + 'olevan Baburin itsensä pohjoisesta tuoma laji.',
+      kuvat: [
+        {
+          tiedosto: 'Kabul Baghe Babur mosque.jpg',
+          selite: 'Valkoinen marmorimoskeija terassilla: kolme '
+            + 'kaariaukkoa, kaiverrettu räystäslista ja nurkissa '
+            + 'sipulipäiset pylväät.',
+          lahde: 'Sven Dirks, Wien, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kabulin vanha kaupunginmuuri': {
+      aika: 'portteja seitsemän, viimeinen purettiin 1930',
+      teksti: 'Vanhankaupungin eteläpuolella nousee Sher Darwazan '
+          + 'vuori, ja sen harjaa pitkin kulkee muinainen '
+          + 'kaupunginmuuri. Muuri alkaa Bala Hissarin linnoituksesta '
+          + 'ja seuraa harjannetta laajana kaarena alas joelle. '
+          + 'Korkeutta sillä on kuusi metriä ja paksuutta lähes '
+          + 'neljä.'
+          + '\n\n'
+          + 'Portteja muurissa oli seitsemän. Viimeinen niistä '
+          + 'purettiin vuonna 1930, ja sen jälkeen muurista on '
+          + 'jäljellä vain vallirivi rinteessä. Vuoren nimi tarkoittaa '
+          + 'leijonan ovea, ja sen takana on Shuhadayi Salihinin '
+          + 'hautausmaa.'
+          + '\n\n'
+          + 'Rinne muurin alla on täynnä taloja. Ne on rakennettu '
+          + 'terasseiksi kallioon kiinni, tie kerrallaan ylöspäin, ja '
+          + 'talvella lumi tekee kerrostumista näkyvämmät kuin '
+          + 'kesällä. Ylhäältä harjalta näkee koko laakson: '
+          + 'pohjoisessa Kabul-joen, idässä Bala Hissarin ja lännessä '
+          + 'Baburin puutarhojen puurivit.',
+      kuvat: [
+        {
+          tiedosto: 'Old City Wall – Sher Darwaza, Kabul, Afghanistan.JPG',
+          selite: 'Sher Darwazan rinne talvella: tasakattoiset talot '
+            + 'nousevat terasseina kallion päälle aina harjanteelle '
+            + 'asti.',
+          lahde: 'Christopher Killalea, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chihil Sutunin palatsi': {
+      aika: 'perustettu 1796',
+      teksti: 'Nimi tarkoittaa neljääkymmentä pylvästä, ja paikka on '
+          + 'kolmenkymmenen hehtaarin muurattu puisto Kabulin '
+          + 'eteläosassa, aivan Kabul-joen itäpuolella. Puiston '
+          + 'perusti Zaman Shah Durrani vuonna 1796, ja vanhoissa '
+          + 'kartoissa sekä palatsi että ympäröivä alue kulkevat myös '
+          + 'nimellä Hendaki.'
+          + '\n\n'
+          + 'Nykyinen palatsi ja sen paviljonki eivät ole Zaman Shahin '
+          + 'vaan emiiri Abdur Rahman Khanin 1800-luvun lopulla '
+          + 'samalle paikalle rakennuttamia. Muistolaatta asetettiin '
+          + '1888. Hänen seuraajansa Habibullah Khan laajensi aluetta '
+          + 'kivetyillä kävelyteillä ja marmorisilla suihkulähteillä.'
+          + '\n\n'
+          + 'Kohde on runsaan kuuden kilometrin päässä keskustasta '
+          + 'lounaaseen, Baburin puutarhoista muutama kilometri '
+          + 'etelään ja Darulamanin alueelta kolmisen kilometriä '
+          + 'itään. Kun Baburin puutarhoista otettiin kuva tähän '
+          + 'suuntaan vuonna 1924, väliin jäi pelkkää tasankoa ja '
+          + 'hedelmätarhoja.',
+      kuvat: [
+        {
+          tiedosto: 'Hendaki Palace, the Emir\'s residence, Kabul Wellcome L0025004.jpg',
+          selite: 'Pyöreä pylväikköpalatsi terassin päällä, ja edessä '
+            + 'on kivireunainen suihkulähdeallas kukkapenkkien '
+            + 'keskellä.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Darul Amanin palatsi': {
+      aika: 'valmistui 1927',
+      teksti: 'Nimi tarkoittaa rauhan asuinsijaa, ja siinä on samalla '
+          + 'sanaleikki rakennuttajan nimestä. Amanullah Khan aloitti '
+          + '1920-luvun alussa kokonaan uuden pääkaupunginosan, '
+          + 'Darulamanin, jonka piti liittyä vanhaan Kabuliin '
+          + 'kapearaiteisella rautatiellä. Palatsi valmistui 1927.'
+          + '\n\n'
+          + 'Suunnittelijoita haettiin Euroopasta: Amanullah kutsui '
+          + 'kaksikymmentäkaksi arkkitehtia Saksasta ja Ranskasta, ja '
+          + 'työtä johti saksalainen insinööri Walter Harten '
+          + 'ranskalaisten A. ja M. Godardin kanssa. Rakennus on U:n '
+          + 'muotoinen uusklassinen tiilitalo: kolme kerrosta, 150 '
+          + 'huonetta, puoliympyrän muotoinen juhlasali, marmoriset '
+          + 'kierreportaat, korkeimmillaan 33 metriä ja katolla neljä '
+          + 'kupolitornia. Se oli maan ensimmäisiä rakennuksia, joissa '
+          + 'oli keskuslämmitys ja juokseva vesi.'
+          + '\n\n'
+          + 'Palatsin piti olla tulevan parlamentin istuntopaikka, '
+          + 'mutta se jäi vuosikymmeniksi vajaakäyttöön: myöhemmin '
+          + 'siinä toimi Kabulin yliopiston lääketieteellinen '
+          + 'tiedekunta, varasto ja useita pieniä ministeriöitä. '
+          + 'Rakennus paloi 14. joulukuuta 1968 ja kunnostettiin sen '
+          + 'jälkeen. Kadun toisella puolella on Afganistanin '
+          + 'kansallismuseo, ja palatsi on nykyisin avoinna '
+          + 'kävijöille.',
+      kuvat: [
+        {
+          tiedosto: 'Darulaman palace.jpg',
+          selite: 'Valkoinen uusklassinen palatsi kukkulan päällä: '
+            + 'kolme kerrosta, pylväsjulkisivu ja katolla neljä '
+            + 'oranssikattoista tornia.',
+          lahde: 'Qasimmirzaie, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
