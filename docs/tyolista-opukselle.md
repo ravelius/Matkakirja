@@ -84,7 +84,10 @@ kuin valmistuu, token-kulutus kurissa. Samassa tilauksessa:
    Janeiro (BRA) + Buenos Aires (ARG), Sydney (AUS) + Auckland (NZL).
    Tekninen esivaihe: cityCountry-taulut kolmelle laudalle
    (mantereen-resepti, Dubai-oppi). Työmalli ja putki kuin O8:ssa;
-   työaineisto docs/mantereet-tyoaineisto/.
+   työaineisto docs/mantereet-tyoaineisto/. Avauskaruselli
+   (omistajan tarkennus 22.8.2026): kolmen herokuvan LISÄKSI kolme
+   aitoa Commons-valokuvaa samaan karuselliin (laajoja yleiskuvia
+   kansikuvakaavan mukaan) — sama malli kuin Helsingissä.
 2. **Yhtenäisyysurakka kaikkiin lehtiin:** ennen–nyt-kuvapari
    etusivun pikkukuviin ja vanhan ajan äänite radionapin rinnalle
    KAIKKIIN lehtiin joista puuttuu (äänitteitä nyt vain Lontoo ja
