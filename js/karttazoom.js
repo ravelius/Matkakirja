@@ -69,6 +69,8 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
   let nipistys = null;
   let elettaKesken = false;
   let edellinenNapautus = null;
+  // Viimeksi kutsujalle ilmoitettu kerroin (ks. ohjain.zoomMuuttui).
+  let ilmoitettu = 1;
 
   const rajaa = (arvo, ala, yla) => Math.min(yla, Math.max(ala, arvo));
 
@@ -103,8 +105,25 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
     const y0 = (ydin.y / 100) * H;
     const kW = (ydin.leveys / 100) * W;
     const kH = (ydin.korkeus / 100) * H;
-    tx = rajaa(tx, x0 + kW - k * (x0 + kW + reunus * (W - x0 - kW)), x0 - k * (x0 * (1 - reunus)));
-    ty = rajaa(ty, y0 + kH - k * (y0 + kH + reunus * (H - y0 - kH)), y0 - k * (y0 * (1 - reunus)));
+    /*
+     * IKKUNAN OMA KOKO, ei lavasta johdettu (22.8.2026). Kaavassa
+     * ydinrajauksen mitta (kW, kH) esiintyy kahdessa eri roolissa:
+     * sallitun alan reunana JA näkyvän ikkunan leveytenä. Ne ovat
+     * sama luku niin kauan kuin kehys on lavan mitoittama — mutta
+     * kokoruudulla kehys kasvaa zoomatessa kartan ympärillä olevan
+     * tyhjän päälle (js/nahtavyydet.js: levita), ja silloin ikkuna on
+     * suurempi kuin kW. Ilman tätä eroa panorointi päästäisi kartan
+     * reunan sisään ruudulle.
+     *
+     * Mitattu arvo otetaan vain, jos se on lavasta johdettua SUUREMPI:
+     * pyöristys ja reunaviiva tekevät kiinteässä kehyksessä pienen
+     * eron kumpaankin suuntaan, eikä lehden kartan panorointi saa
+     * muuttua pikselinkään verran.
+     */
+    const iW = Math.max(kW, kehys.clientWidth || 0);
+    const iH = Math.max(kH, kehys.clientHeight || 0);
+    tx = rajaa(tx, x0 + iW - k * (x0 + kW + reunus * (W - x0 - kW)), x0 - k * (x0 * (1 - reunus)));
+    ty = rajaa(ty, y0 + iH - k * (y0 + kH + reunus * (H - y0 - kH)), y0 - k * (y0 * (1 - reunus)));
     const zoomattu = k > 1.001;
     lava.classList.toggle('silea', silea && !ui.reducedMotion);
     lava.style.transform = zoomattu
@@ -116,6 +135,17 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
     kehys.classList.toggle('zoomattu', zoomattu);
     napit.lahenna.disabled = k >= SUURIN - 0.001;
     napit.loitonna.disabled = !zoomattu;
+    /*
+     * KERTOIMEN MUUTOS KUTSUJALLE (22.8.2026, kokoruudun levitys).
+     * Kutsuja saa muuttaa kehyksen kokoa, joten rajat lasketaan sen
+     * jälkeen uudelleen. Toinen kierros ei kierrä kolmatta: ilmoitettu
+     * on jo päivitetty, joten sisempi piirto ei enää laukaise kutsua.
+     */
+    if (ohjain.zoomMuuttui && Math.abs(k - ilmoitettu) > 0.0005) {
+      ilmoitettu = k;
+      ohjain.zoomMuuttui(k);
+      piirra();
+    }
   };
 
   /**

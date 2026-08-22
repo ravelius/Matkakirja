@@ -222,6 +222,17 @@ export function piirraKaupunkiKartta(ui, kohde) {
   const kaupunki = ui.lehtitila.arrivalShownFor;
   // Piirrospisteet kerätään hajautusta varten (ks. metodin loppu).
   const piirrosPisteet = [];
+  /*
+   * KOHTEEN AVAAJA TALTEEN KOKORUUTUA VARTEN (omistajan tilaus
+   * 22.8.2026: "Ei pysty klikkaamaan kohteita"). Kokoruutunäkymä
+   * kloonaa kartan, eivätkä kuuntelijat seuraa kloonissa mukana —
+   * avaajat annetaan sille siksi tässä kerättynä listana
+   * (avaaKarttaSuurennos). Listaan tulee alkio JOKAISESTA kohteesta,
+   * myös avaamattomasta, jotta indeksi on aina kohteen
+   * järjestysnumero miinus yksi — sama numero, joka on kartan
+   * ympyrässä ja selitelistassa.
+   */
+  const avaajat = [];
   (kartta.kohteet ?? []).forEach((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
     const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
@@ -274,6 +285,8 @@ export function piirraKaupunkiKartta(ui, kohde) {
      */
     const avaaJuttu = k.teksti ? () => avaaNahtavyys(ui, k, numero)
       : (k.wiki ? () => ui.openWikiArticle(k.wiki, k.nimi) : null);
+    const otsikko = k.teksti ? `${k.nimi} — lue lisää` : `${k.nimi} — avaa artikkelin`;
+    avaajat.push(avaaJuttu ? { avaa: avaaJuttu, otsikko } : null);
     /*
      * NAPAUTUS SUURENTAA, KYLTTI AVAA JUTUN (omistajan linjaukset
      * 15.8.2026: "Riittää kun saa klikattua isommaksi (kasvaa vain
@@ -336,7 +349,6 @@ export function piirraKaupunkiKartta(ui, kohde) {
      * avaa jutun täsmälleen kuten ennen.
      */
     if (avaa) {
-      const otsikko = k.teksti ? `${k.nimi} — lue lisää` : `${k.nimi} — avaa artikkelin`;
       piste.type = 'button';
       piste.addEventListener('click', avaa);
       selite.type = 'button';
@@ -416,7 +428,7 @@ export function piirraKaupunkiKartta(ui, kohde) {
     if (Math.hypot(e.clientX - alku.x, e.clientY - alku.y) > 6) return;
     if (e.target.closest?.('button, a')) return;
     if (kehys.classList.contains('zoomattu')) return;
-    avaaKarttaSuurennos(ui, kehys, kartta);
+    avaaKarttaSuurennos(ui, kehys, kartta, { avaajat });
   });
   kehys.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { tyhjennaValinta(); return; }
@@ -426,7 +438,7 @@ export function piirraKaupunkiKartta(ui, kohde) {
     if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
     e.preventDefault();
     if (ui.lehtitila.kulttuuriKuvaEl) ui.suljeKulttuuriKuva();
-    else avaaKarttaSuurennos(ui, kehys, kartta);
+    else avaaKarttaSuurennos(ui, kehys, kartta, { avaajat });
   });
   hajautaPiirrospisteet(kotelo, piirrosPisteet, ydin);
   /*
@@ -526,6 +538,19 @@ export function piirraKaupunkiKartta(ui, kohde) {
 }
 
 /**
+ * Katsojalle juuri nyt näkyvä ala pikseleinä. Sama mittaus kahdessa
+ * paikassa (lepomitoitus ja zoomin levitys), joten se on omana
+ * apunaan eikä kopiona.
+ */
+function nakyvaAla() {
+  const nakyma = window.visualViewport;
+  return {
+    vw: Math.round(nakyma?.width || window.innerWidth || 0),
+    vh: Math.round(nakyma?.height || window.innerHeight || 0),
+  };
+}
+
+/**
  * KOKORUUTUKARTAN MITOITUS MITATAAN, EI LASKETA CSS-YKSIKÖILLÄ
  * (omistajan iPad-palaute 21.8.2026: "iPadilla kaupungin kartta liian
  * pieni koko näytöllä" — kartta jäi pieneksi lapuksi mustan keskelle).
@@ -557,9 +582,7 @@ export function piirraKaupunkiKartta(ui, kohde) {
  * arvaamisen sijaan.
  */
 function mitoitaKarttaSuurennos(kortti, suhde) {
-  const nakyma = window.visualViewport;
-  const vw = Math.round(nakyma?.width || window.innerWidth || 0);
-  const vh = Math.round(nakyma?.height || window.innerHeight || 0);
+  const { vw, vh } = nakyvaAla();
   if (!(vw > 0) || !(vh > 0) || !(suhde > 0)) return;
   const leveys = Math.min(vw * 0.98, vh * 0.85 * suhde);
   kortti.style.width = `${Math.round(leveys)}px`;
@@ -596,11 +619,22 @@ function mitoitaKarttaSuurennos(kortti, suhde) {
  * Numeroympyrät, leikatut piirroskohteet ja mittajana ovat
  * DOM-elementtejä kuvan päällä prosenttipaikoissaan, joten pelkkä
  * kuvatiedosto jäisi kokoruudulla ilman numeroita — juuri niitä
- * varten karttaa suurennetaan. Klooni on katselukuva vain siltä osin
- * kuin lehden omat kuuntelijat eivät seuraa mukana: zoomiasento
- * nollataan avattaessa, ja kloonille kytketään OMA karttazoominsa
+ * varten karttaa suurennetaan. Klooni saa oman karttazoominsa
  * (kytkeKarttaZoom), joten kokoruudulla pyörä, nipistys, raahaus ja
- * tuplanapautus toimivat kuten lehden kartassa.
+ * tuplanapautus toimivat kuten lehden kartassa; zoomiasento nollataan
+ * avattaessa.
+ *
+ * KOKORUUTU EI OLE KATSELUTILA (omistajan tilaus 22.8.2026:
+ * "Kaupungin kartta ei toimi levitettynä koko näytölle. Ei pysty
+ * klikkaamaan kohteita"). Aiempi linjaus 21.8.2026 mykisti kloonin
+ * napit, koska kuuntelijat eivät seuraa cloneNodessa mukana. Nyt
+ * kutsuja antaa avaajat listana (`asetukset.avaajat`, ks.
+ * piirraKaupunkiKartta), ja klooni kytkee ne uudelleen kohteen
+ * järjestysnumeron kautta — sama juttu aukeaa kokoruudulta kuin
+ * lehden kartasta, sekä numeroympyrästä, piirroksesta että
+ * selitelistan riviltä. Piirroskohteen kaksivaiheinen suurennus jää
+ * kokoruudulta pois: kartta on jo isona, joten napautus avaa jutun
+ * suoraan.
  *
  * ALKUPERÄISEEN KARTTAAN EI KOSKETA. Kehys on container-type: size
  * -kokokontti, jonka kuvasuhde asetetaan kuvan load-tapahtumassa
@@ -616,11 +650,14 @@ function mitoitaKarttaSuurennos(kortti, suhde) {
  * kohdekartan numeroympyrät, ja antaa kuvasuhteen `asetukset.mitat`
  * -kentässä — sen oma kehys sisältää lähderivin, joten mitattu
  * laatikko valehtelisi. Kaikki muu on yhteistä: klooni, zoom,
- * panorointi, mitoitus ja sulku.
+ * panorointi, mitoitus ja sulku. Avaajalistaa se ei anna, joten
+ * korkokartan kaupunkitäplät pysyvät merkkeinä kuten ennen.
  */
 export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
   const mitat = asetukset.mitat ?? kehys.getBoundingClientRect();
   if (!(mitat.width > 0) || !(mitat.height > 0)) return;
+  const avaajat = asetukset.avaajat ?? null;
+  const ydin = ydinAla(kartta);
   ui.suljeKulttuuriKuva();
   const kortti = html('div', 'postikortti kulttuuri-suurennos kartta-suurennos');
   const suhde = mitat.width / mitat.height;
@@ -637,8 +674,12 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
   iso.removeAttribute('role');
   iso.removeAttribute('aria-label');
   iso.classList.remove('zoomattu', 'kartta-avattava');
-  // Ohjekyltit koskevat paikallaan olevaa karttaa: kokoruudulla ei ole
-  // enää kokoruutua avattavana eikä napautettavia kohteita.
+  /*
+   * Ohjekyltit koskevat paikallaan olevaa karttaa: kokoruudulla ei ole
+   * enää kokoruutua avattavana. Napautusopaste jää sekin pois vaikka
+   * kohteet ovat 22.8.2026 alkaen napautettavia myös täällä — kyltti
+   * on kartan oikeassa yläkulmassa, jossa on nyt sulkurasti.
+   */
   iso.querySelector('.kartta-opaste')?.remove();
   iso.querySelector('.kartta-suurennusvihje')?.remove();
   const lava = iso.querySelector('.kartta-lava');
@@ -656,13 +697,43 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     if (valittu.dataset.alkuLeft) valittu.style.left = valittu.dataset.alkuLeft;
     if (valittu.dataset.alkuTop) valittu.style.top = valittu.dataset.alkuTop;
   }
-  for (const nappi of iso.querySelectorAll('button')) nappi.tabIndex = -1;
+  /*
+   * KOHTEEN NAPAUTUS SULKEE SUURENNOKSEN JA AVAA JUTUN. Kortti ja
+   * nähtävyysikkuna asuvat samassa päällimmäisessä dialogissa
+   * (ui.suurennosIsanta), ja kortin z-index 70 jättäisi jutun alleen —
+   * mitattuna: ilman sulkua juttu aukesi kartan taakse näkymättömiin.
+   * Sulku ensin on myös luettavuutta: koko ruudun kartta ja koko
+   * ruudun juttu eivät kuulu päällekkäin.
+   */
+  const avaaKohde = (avaa) => {
+    ui.suljeKulttuuriKuva();
+    avaa();
+  };
+  /*
+   * Klooni saa kuuntelijansa avaajalistasta (ks. metodin kommentti).
+   * Ilman listaa — maalehden korkokartta — napit mykistetään kuten
+   * ennen 22.8.2026: siellä ei ole juttuja avattavana.
+   */
+  for (const nappi of iso.querySelectorAll('button')) {
+    const tieto = avaajat?.[Number(nappi.dataset.numero) - 1];
+    if (!tieto) {
+      nappi.tabIndex = -1;
+      continue;
+    }
+    nappi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      avaaKohde(tieto.avaa);
+    });
+    // Piirroskohteen lehtiselite lupasi suurennusta; kokoruudulla
+    // napautus avaa jutun, joten nimi kertoo sen.
+    nappi.setAttribute('aria-label', tieto.otsikko);
+  }
   /*
    * NUMEROLAPPU PIIRROSKOHTEILLE. Numeroympyrä kertoo itse, monesko
-   * kohde on kyseessä, mutta leikattu piirros ei — lehdessä numeron
-   * näkee vasta napauttamalla piirroksen nimikylttiin, eikä
-   * kokoruudulla napauteta mitään. Ilman lappua alla oleva selitelista
-   * jäisi piirroskaupungeissa (Tokio, Kioto, Peking...) irralliseksi
+   * kohde on kyseessä, mutta leikattu piirros ei — sen numeron näkee
+   * vasta napauttamalla nimikylttiin, ja kokoruudulla napautus avaa
+   * suoraan jutun. Ilman lappua alla oleva selitelista jäisi
+   * piirroskaupungeissa (Tokio, Kioto, Peking...) irralliseksi
    * nimiluetteloksi. Numero tulee samasta lähteestä kuin listakin:
    * kohteen järjestysnumero datassa (dataset.numero).
    */
@@ -677,10 +748,15 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
    * NUMEROIDEN SELITE KARTAN ALLE. Kokoruudulla numeroympyrät jäisivät
    * muuten arvoituksiksi: selitelista on lehdessä kartan alapuolella,
    * eikä sitä näy suurennoksen takaa. Lista rakennetaan datasta eikä
-   * kloonata lehdestä, koska tässä se on nimenomaan KARTAN SELITE eikä
-   * linkkirivi — kokoruutu on katselutila, ja avattava rivi houkuttelisi
-   * napautukseen, joka sulkisi suurennoksen. Numerointi on sama kuin
-   * kartalla ja lehden listassa: kohteiden järjestys datassa.
+   * kloonata lehdestä, koska lehden rivit ovat kiinni omissa
+   * kuuntelijoissaan; numerointi on sama kuin kartalla ja lehden
+   * listassa eli kohteiden järjestys datassa.
+   *
+   * RIVI AVAA JUTUN kuten lehdessäkin (omistajan tilaus 22.8.2026 teki
+   * kohteista napautettavia myös kokoruudulla). Vanha peruste jättää
+   * rivi merkiksi — napautus sulkisi suurennoksen — ei ole enää voimassa
+   * kahdesta syystä: kortti ei sulkeudu napautuksesta lainkaan, ja
+   * kohteen avaus sulkee sen nyt itse tarkoituksella.
    *
    * Kapealla ruudulla lista täyttää samalla sen pystytilan, joka jää
    * vaakakuvan alle — puhelimen pystyruudulla koko kartta ja koko
@@ -690,9 +766,18 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
   if (kohteet.length) {
     const selite = html('div', 'kartta-selitteet kartta-suurennos-selitteet');
     kohteet.forEach((k, i) => {
-      const rivi = html('span', 'kartta-selite');
+      const tieto = avaajat?.[i];
+      const rivi = html(tieto ? 'button' : 'span', 'kartta-selite');
       rivi.appendChild(html('span', 'kartta-selite-numero', String(i + 1)));
       rivi.appendChild(document.createTextNode(k.nimi));
+      if (tieto) {
+        rivi.type = 'button';
+        rivi.title = tieto.otsikko;
+        rivi.addEventListener('click', (e) => {
+          e.stopPropagation();
+          avaaKohde(tieto.avaa);
+        });
+      }
       selite.appendChild(rivi);
     });
     kortti.appendChild(selite);
@@ -736,6 +821,85 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
   ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
   /*
+   * ZOOMI LEVIÄÄ TYHJÄN PÄÄLLE (omistajan tilaus 22.8.2026: "jos
+   * karttaa zoomaa se saisi levittyä tyhjän tilan päälle koko
+   * näytöllä").
+   *
+   * Lepotilassa kortti mitoitetaan kartan kuvasuhteella, joten
+   * pystyruudulla vaakakartan ylle ja alle jää mustaa. Se on
+   * kuvasuhteen laki niin kauan kuin koko kartta halutaan näkyviin —
+   * mutta zoomattaessa koko karttaa EI enää näytetä, joten
+   * leikkausikkuna saa kasvaa mustan päälle.
+   *
+   * Kaksi kattoa, kumpikin välttämätön:
+   *   - näkyvä ala (98 %), jottei kortti karkaa ruudun ulkopuolelle;
+   *   - kerroin × ydinrajauksen mitta lavalla, eli se, kuinka paljon
+   *     zoomattua karttaa ylipäätään riittää. Ilman tätä ikkuna
+   *     kasvaisi kartan ohi ja reunaan jäisi taas mustaa — nyt vain
+   *     kartan sisäpuolelle.
+   *
+   * LAVA NAULATAAN PIKSELEIHIN levityksen ajaksi. Lava mitoittuu
+   * prosentteina kehyksestä (leveys, ja laajennetulla kartalla myös
+   * reunuksen negatiivinen siirto), joten kasvava kehys venyttäisi ja
+   * siirtäisi sitä. Zoomin koko laskenta on lavan pikseleissä
+   * (kytkeKarttaZoom: siirto ja panoroinnin rajat), ja kesken eleen
+   * muuttuva koordinaatisto näkyisi nykäyksenä. Mitat otetaan
+   * lepotilasta eli ennen ensimmäistä kasvatusta; kertoimen palatessa
+   * ykköseen naulat irrotetaan ja kortti palaa kuvasuhdemitoitukseen.
+   */
+  const lavanTyyli = lava
+    ? {
+      width: lava.style.width, height: lava.style.height,
+      left: lava.style.left, top: lava.style.top,
+    }
+    : null;
+  let naulattu = false;
+  const naulaaLava = () => {
+    if (naulattu || !lava) return;
+    const leveys = lava.offsetWidth;
+    const korkeus = lava.offsetHeight;
+    if (!(leveys > 0) || !(korkeus > 0)) return;
+    naulattu = true;
+    lava.style.width = `${leveys}px`;
+    lava.style.height = `${korkeus}px`;
+    if (lava.classList.contains('kartta-laajennettu')) {
+      lava.style.left = `${(-(ydin.x / 100) * leveys).toFixed(1)}px`;
+      lava.style.top = `${(-(ydin.y / 100) * korkeus).toFixed(1)}px`;
+    }
+  };
+  const irrotaLava = () => {
+    if (!naulattu || !lava) return;
+    naulattu = false;
+    lava.style.width = lavanTyyli.width;
+    lava.style.height = lavanTyyli.height;
+    lava.style.left = lavanTyyli.left;
+    lava.style.top = lavanTyyli.top;
+  };
+  let zoomKerroin = 1;
+  const levita = (kerroin) => {
+    zoomKerroin = kerroin;
+    const { vw, vh } = nakyvaAla();
+    if (kerroin > 1.001 && lava) naulaaLava();
+    /*
+     * Levitys vaatii naulatun lavan. Ilman mittoja — kuva on jäänyt
+     * lataamatta — ikkuna laskettaisiin nollaan, joten silloin
+     * pidetään kuvasuhdemitoitus ja kartta näkyy kuten ennen.
+     */
+    const levitetty = kerroin > 1.001 && naulattu && vw > 0 && vh > 0;
+    kortti.classList.toggle('kartta-levitetty', levitetty);
+    if (!levitetty) {
+      irrotaLava();
+      iso.style.height = '';
+      mitoitaKarttaSuurennos(kortti, suhde);
+      return;
+    }
+    const kartanLeveys = (ydin.leveys / 100) * lava.offsetWidth;
+    const kartanKorkeus = (ydin.korkeus / 100) * lava.offsetHeight;
+    kortti.style.width = `${Math.round(Math.min(vw * 0.98, kartanLeveys * kerroin))}px`;
+    kortti.style.maxHeight = `${Math.round(vh * 0.98)}px`;
+    iso.style.height = `${Math.round(Math.min(vh * 0.98, kartanKorkeus * kerroin))}px`;
+  };
+  /*
    * MITOITUS HETI LIITTÄMISEN JÄLKEEN ja uudelleen aina kun näkyvä
    * ala muuttuu — tabletin kääntö vaihtaa vaakaruudun pystyksi, ja
    * kartan pitää täyttää uusi ruutu yhtä lailla. Kuuntelijat siivoavat
@@ -750,7 +914,10 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
       window.visualViewport?.removeEventListener('resize', mitoita);
       return;
     }
-    mitoitaKarttaSuurennos(kortti, suhde);
+    // Levitetyn kartan koko tulee kertoimesta; kuvasuhdemitoitus
+    // koskee vain lepotilaa.
+    if (zoomKerroin > 1.001) levita(zoomKerroin);
+    else mitoitaKarttaSuurennos(kortti, suhde);
   };
   mitoitaKarttaSuurennos(kortti, suhde);
   window.addEventListener('resize', mitoita);
@@ -771,8 +938,13 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
    *
    * PAIKALLAAN OLEVAAN KARTTAAN EI KOSKETA: kytkentä osuu vain
    * klooniin, jonka sulkeminen poistaa kuuntelijoineen päivineen.
+   *
+   * `zoomMuuttui` on widgetin ainoa uusi kahva (22.8.2026): se
+   * ilmoittaa kertoimen muutoksen, ja levitys kasvattaa kehyksen
+   * ennen kuin panoroinnin rajat lasketaan uudelleen. Lehden kartta
+   * ei anna kahvaa, joten sen kehys pysyy kiinteänä kuten ennen.
    */
-  if (lava) kytkeKarttaZoom(ui, iso, lava, isoNapit, ydinAla(kartta));
+  if (lava) kytkeKarttaZoom(ui, iso, lava, isoNapit, ydin, { zoomMuuttui: levita });
   sfx.play('paper');
 }
 

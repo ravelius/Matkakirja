@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1003 — KOKORUUTUKARTTA KORJATTU (omistajan palaute 22.8.2026): kohteen numeroympyra, piirros ja selitelistan rivi avaavat jutun myos kokoruudulla (suurennos sulkeutuu ensin), ja zoomattaessa karttaikkuna kasvaa mustan tyhjan paalle kohti koko ruutua; loitonnus palauttaa entisen mitoituksen. Maalehden korkokartta ennallaan. Tarkista: kaupunkilehden kartta kokoruudulla — klikkaa kohdetta, zoomaa',
   'v1002 — HEROLAAJENNUS: Kairon, Tokion ja Xianin avauskaruselleihin 3 generoitua herokuvaa kullekin (eri paakohteet ja vuorokaudenajat), ja KAIKKIEN generoitujen kuvien lahderivi omistajan linjauksella muotoon "Matkakirjan havainnekuva" (tekoaly-sana pois, myos Helsinki ja Peking). Tarkista: Kairon, Tokion ja Xianin lehden etusivukaruselli + Helsingin lahderivi',
   'v1001 — TEKNINEN: pollon kuvageneroinnin paivaraja nostettu 60:sta 150:een (wrangler-vars, worker julkaistaan automaattisesti) — ei pelinakyvaa muutosta. Tarkista: ei mitaan',
   'v1000 — HEROKUVAKOE: Helsingin ja Pekingin avauskaruselleissa pelin omaa tekoälykuvitusta (Helsinki 4 kuvaa, Peking 3 — kattotason kulma, eri vuorokaudenajat; lahderivi "Matkakirjan oma kuvitus (tekoäly)"). Uusi ampari-kentta ohjaa kuvan peiliampariin Commons-putken ohi. Tarkista: Helsingin ja Pekingin lehden etusivukaruselli',
