@@ -30979,6 +30979,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   delhi: [
     {
       id: 'kaupunki',
@@ -30990,23 +30992,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Jama Masjid during Sunset.jpg',
-          selite: 'Jama Masjid vastavalossa auringonlaskun aikaan: kupolit, '
-            + 'kaarimuuri ja kaksi minareettia piirtyvät mustana siluettina, '
-            + 'ja aurinko hehkuu keskikupolin takana.',
+          selite: 'Jama Masjidin kahdessa 41-metrisessä minareetissa on '
+            + 'kummassakin 130 porrasta.',
           lahde: 'Sreejit Ghosh, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Shahjahanabad or Modern Delhi 1911 map.jpg',
-          selite: 'Painettu kartta vuodelta 1911: muurikaupunki Shahjahanabad '
-            + 'on punainen läiskä Yamunan länsirannalla, linnoitus sen '
-            + 'itäreunassa ja ympärillä puutarhoja ja kasarmialueita.',
+          selite: 'Shahjahanabad rakennettiin Yamunan länsirannalle muurien '
+            + 'sisään neljänneskaaren muotoon, Punainen linnoitus '
+            + 'painopisteenään.',
           lahde: 'Internet Archive Book Images, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Qutb Minar with Neem Tree.jpg',
-          selite: 'Qutb Minar alhaalta kuvattuna: uurrettu punainen '
-            + 'hiekkakivitorni kapenee kohti taivasta, ja etualalla '
-            + 'neempuun lehvästö kaartuu sen ylle.',
+          selite: 'Qutb Minar on 72,5 metriä korkea ja yhä maailman korkein '
+            + 'tiiliminareetti.',
           lahde: 'Shikhers, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31045,24 +31045,22 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Red Fort Front.jpg',
-          selite: 'Punaisen linnoituksen julkisivu koko leveydeltään: '
-            + 'hiekkakivimuuri, kulmatornit ja keskellä Lahori-portin '
-            + 'katos, jonka yllä liehuu Intian lippu.',
+          selite: 'Punaisesta linnoituksesta tuli maailmanperintökohde vuonna '
+            + '2007, ja sen arkkitehtina pidetään Ustad Ahmad Lahoria.',
           lahde: 'Ayushjainr, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Shahjahanabad City Wall - Side View -2.jpg',
-          selite: 'Säilynyt pätkä Shahjahanabadin kaupunginmuuria: '
-            + 'sammaloitunut kiviharja jatkuu puiden alla, ja muurin '
-            + 'juurella kadun varressa on autoja puskuri puskurissa.',
+          selite: 'Shahjahanabadin muuri oli kaksitoista jalkaa leveä ja '
+            + 'kaksikymmentäkuusi korkea, ja vuonna 1657 sen savi '
+            + 'korvattiin punaisella kivellä.',
           lahde: 'IshiSenpai, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'India Gate, New Delhi.jpg',
-          selite: 'India Gate -muistoportin yläosa New Delhissä, '
-            + 'hiekkakiveen hakattuna sana INDIA, vuosiluvut 1914 ja 1919 '
-            + 'roomalaisin numeroin sekä omistus kaatuneille '
-            + 'intialaissotilaille.',
+          selite: 'India Gate on Edwin Lutyensin suunnittelema muistomerkki '
+            + 'ensimmäisessä maailmansodassa kaatuneille intialaissotilaille, '
+            + 'ja se vihittiin 12. helmikuuta 1931.',
           lahde: 'Yann, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -31070,16 +31068,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Delhi. Chandee Chawk LCCN2017657607.jpg',
           vuosi: '1890-luku',
-          selite: 'Chandni Chowk Delhissä 1890-luvun photochrom-vedoksessa: kadun nimi '
-            + 'tarkoittaa kuunvalon toria, ja sen keskellä virtasi alun perin kanava.',
+          selite: 'Chandni Chowkin suunnitteli 1650 Shah Jahanin tytär Jahanara '
+            + 'Begum, ja kadun keskellä virranneet kanavat tuhoutuivat vuoden '
+            + '1857 jälkeen.',
           lahde: 'Photoglob Co. / Library of Congress (PD)',
         },
         {
           tiedosto: 'Chandni Chowk. Delhi, India (23389084162).jpg',
           vuosi: '2015',
-          selite: 'Sama katu nykyään: kanava on peitetty jo kauan sitten, mutta '
-            + 'Chandni Chowk on yhä Vanhan Delhin pääväylä ja sen molemmin puolin '
-            + 'aukeaa kauppakujien verkosto.',
+          selite: 'Chandni Chowk on yhä Vanhan Delhin pääväylä, ja sen molemmin '
+            + 'puolin aukeaa kauppakujien verkosto.',
           lahde: 'Juan Antonio Segal, Commons (CC BY 2.0)',
         },
       ],
@@ -31099,10 +31097,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'marmoripaviljongit säilyivät, nekin vaurioituneina, mutta '
             + 'puolustusmuurit jäivät pystyyn. Maailmanperintökohde '
             + 'linnoituksesta tuli vuonna 2007.',
-          selite: 'Mazhar Ali Khanin akvarelli vuodelta 1846: Punaisen '
-            + 'linnoituksen Lahori-portti kupoleineen yksitoista vuotta '
-            + 'ennen kapinaa, jonka jälkeen suurin osa linnoituksen '
-            + 'sisäosista purettiin.',
+          selite: 'Vuoden 1857 kapinan jälkeen linnoituksesta tehtiin '
+            + 'varuskunta ja noin neljä viidesosaa sen rakennuksista '
+            + 'purettiin, mutta puolustusmuurit jäivät pystyyn.',
           lahde: 'Mazhar Ali Khan, Wikimedia Commons (PD)',
           wiki: 'Delhi',
         },
@@ -31120,10 +31117,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ehdolla, että sitä käytetään vain uskonnollisiin menoihin. '
             + 'Pihalle mahtuu 25 000 rukoilijaa, ja kahdessa '
             + '41-metrisessä minareetissa on kummassakin 130 porrasta.',
-          selite: 'Moskeijan sisäpiha minareetista kuvattuna: punaista '
-            + 'hiekkakiveä oleva piha peseytymisaltaineen jatkuu kauas '
-            + 'alhaalla, ihmiset näkyvät pieninä pisteinä ja taustalla '
-            + 'erottuu Punaisen linnoituksen muuri.',
+          selite: 'Jama Masjidin vanha nimi Masjid-i-Jehan-Numa tarkoittaa '
+            + 'koko maailman peilaavaa moskeijaa.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Delhi',
         },
@@ -31140,10 +31135,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'allas sai väistyä kellotornin tieltä; tornia kutsuttiin '
             + 'Ghantaghariksi, ja vaikka sekin on jo purettu, torin '
             + 'keskustaa kutsutaan yhä sillä nimellä.',
-          selite: 'Vanha painettu postikortti, jossa '
-            + 'Ghantaghar-kellotorni kohoaa Chandni Chowkin torin '
-            + 'laidalla kaupungintalon vieressä ja alalaidan tekstirivi '
-            + 'on kustantajan oma otsikko.',
+          selite: 'Chandni Chowkin allas sai väistyä kellotornin tieltä, ja '
+            + 'vaikka Ghantaghar on jo purettu, torin keskustaa kutsutaan '
+            + 'yhä sillä nimellä.',
           lahde: 'H.A. Mirza & Sons, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Delhi',
         },
@@ -31159,9 +31153,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarkoituksella naapurinsa Punaisen linnoituksen tyyliin. '
             + 'Delhi Junction pysyi kaupungin pääasemana, kunnes New '
             + 'Delhin asema valmistui vuosina 1926–1931.',
-          selite: 'Delhi Junctionin punainen asemarakennus '
-            + 'sakaraharjaisine torneineen, julkisivussa kello ja '
-            + 'DELHI-kyltti kolmella kirjoituksella.',
+          selite: 'Delhi Junctionin nykyinen asemarakennus valmistui 1903, ja '
+            + 'se tehtiin tarkoituksella naapurinsa Punaisen linnoituksen '
+            + 'tyyliin.',
           lahde: 'Lovedeepsingh, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Delhi',
         },
@@ -31169,10 +31163,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Agrasen Ki Baoli 1.jpg',
-          selite: 'Agrasen ki Baolin porraskaivo Delhissä lokakuussa 2023: '
-            + 'kapean kuilun molemmilla seinillä on kolme kerrosta '
-            + 'holvikaaria, ja puiden yli näkyy Connaught Placen '
-            + 'valkoinen tornitalo.',
+          selite: 'Agrasen ki Baoli on 60 metriä pitkä ja 15 metriä leveä '
+            + 'porraskaivo Connaught Placen lähellä, eikä sen rakentajasta '
+            + 'ole säilynyt asiakirjoja.',
           lahde: 'Astari28, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Delhi on yksi maailman suurimmista kaupunkialueista: '
@@ -31208,9 +31201,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pääasema New Delhi on muurikaupungin eteläpuolella.',
               kuva: {
                 tiedosto: 'Delhi Metro train red line at Shaheed Sthal metro station.jpg',
-                selite: 'Punaisen linjan hopeanharmaa metrojuna '
-                  + 'asemalaiturilla, kyljessä punainen raita ja '
-                  + 'laiturilla uuden polven lasiset laituriovet.',
+                selite: 'Delhin metron ensimmäinen osuus avattiin joulupäivänä '
+                  + '2002, ja verkosta on kasvanut Intian suurin ja '
+                  + 'vilkkain.',
                 lahde: 'Ravi Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -31230,10 +31223,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + '1931, ja se on nykyään Intian pääkaupunki.',
               kuva: {
                 tiedosto: 'Delhi Aerial View, Satellite Image, India September 2003.jpg',
-                selite: 'NASAn satelliittikuva Delhistä: Yamuna '
-                  + 'mutkittelee kuvan halki, kaupunkialue on '
-                  + 'harmaata ja keskellä erottuu Delhi Ridgen '
-                  + 'tummanvihreä metsäkaistale.',
+                selite: 'Delhin halki kulkee Delhi Ridge, Aravalli-vuoriston '
+                  + 'metsäinen jatke, joka nousee 318 metriin.',
                 lahde: 'NASA, Wikimedia Commons (PD)',
               },
             },
@@ -31252,10 +31243,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'juuri siitä kadun tunnistaa.',
               kuva: {
                 tiedosto: 'Shop selling spices, at Khari Baoli, Old Delhi.jpg',
-                selite: 'Maustekaupan pöytä Khari Baolilla: vadeissa ja '
-                  + 'säkeissä kohoaa keiloja teetä, pähkinöitä ja '
-                  + 'kuivattuja hedelmiä, ja jokaisessa on käsin '
-                  + 'kirjoitettu hintalappu.',
+                selite: 'Khari Baoli avattiin 1850 ja on kasvanut Aasian '
+                  + 'suurimmaksi maustetoriksi.',
                 lahde: 'Michael Vito from South Orange, NJ, USA, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -31327,9 +31316,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Qila Rai Pithoraksi. Sulttaanikunnan linnoituskaupunkien '
             + 'jälkeen Shah Jahanin Shahjahanabad täydensi sarjan '
             + 'seitsemänteen — se on nykyinen Vanha Delhi.',
-          selite: 'Robert Smithin 1800-luvun maalaus: Purana Qilan '
-            + 'Qila-i-Kuhna-moskeija kupoleineen rauniokumpujen '
-            + 'keskellä, ja etualalla kulkee pieni norsusaattue.',
+          selite: 'Perimätieto sijoittaa legendaarisen Indraprasthan Purana '
+            + 'Qilan paikalle, mutta kaivauksista on löytynyt vain vanhaa '
+            + 'maalattua keramiikkaa.',
           lahde: 'Robert Smith (1787 - 1873) – Artist (British) Details on Google Art Project, Wikimedia Commons (PD)',
           wiki: 'Delhi',
         },
@@ -31348,9 +31337,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'epäonnistuneeksi, ja katos purettiin 1848; se seisoo yhä '
             + 'maassa tornin vieressä nimellä Smithin hulluus. '
             + 'Maailmanperintökohde tornista tuli 1993.',
-          selite: 'Smithin hulluus nykyään: pyöreä huvimajamainen katos '
-            + 'seisoo nurmella Qutb Minarin puistossa lähellä tornia, '
-            + 'jonka huipulla se ehti olla kaksikymmentä vuotta.',
+          selite: 'Robert Smith kunnosti Qutb Minarin 1828 ja lisäsi huipulle '
+            + 'katoksen, joka purettiin 1848 ja tunnetaan nimellä Smithin '
+            + 'hulluus.',
           lahde: 'Rangan Datta Wiki, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Delhi',
         },
@@ -31367,9 +31356,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Muurista on nykyään jäljellä vain katkelmia, mutta osa '
             + 'porteista — kuten Kashmiri Gate, Ajmeri Gate ja Turkman '
             + 'Gate — seisoo yhä keskellä liikennettä.',
-          selite: 'Kashmiri Gate sisäpuolelta: kaksi tiilistä '
-            + 'porttiholvia vierekkäin sakaraharjoineen, ja nurmella '
-            + 'porttien edessä istuskelee apinoita.',
+          selite: 'Shahjahanabadin muurissa oli neljätoista porttia, ja osa '
+            + 'niistä, kuten Kashmiri Gate, seisoo yhä keskellä '
+            + 'liikennettä.',
           lahde: 'Anupamg, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Delhi',
         },
@@ -31385,10 +31374,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja hänet karkotettiin Rangooniin. Delhi siirtyi vuonna '
             + '1858 suoraan Britannian kruunun hallintaan ja liitettiin '
             + 'Punjabin provinssiin — Mughal-valtakunta oli päättynyt.',
-          selite: 'Metcalfen albumin miniatyyrimaalaus vuodelta 1843, '
-            + 'jossa Bahadur Shah II:n id-juhlakulkue kulkee norsuineen '
-            + 'ja lippuineen ja alalaidan käsinkirjoitetut rivit ovat '
-            + 'albumin omia nimiöitä.',
+          selite: 'Bahadur Shah II oli viimeinen mogulikeisari, ja hänen '
+            + 'id-juhlakulkueensa kulki norsuineen Delhissä vielä vuonna '
+            + '1843.',
           lahde: 'Sir Thomas Metcalfe, 4th Baronet, Wikimedia Commons (PD)',
           wiki: 'Delhi',
         },
@@ -36901,6 +36889,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   bangkok: [
     {
       id: 'kaupunki',
@@ -36912,23 +36902,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Wat Phra Kaew by Ninara TSP edit crop.jpg',
-          selite: 'Wat Phra Kaew Suurpalatsin ulkopihalta: valkoisen '
-            + 'muurin takaa kohoavat kullattu chedi, kirjastopaviljonki '
-            + 'ja temppelisalien monikerroksiset tiilikatot.',
+          selite: 'Wat Phra Kaew\'n rakentaminen alkoi 1783 Rama I:n käskystä, '
+            + 'ja jokainen seuraava kuningas on täydentänyt temppeliä omalla '
+            + 'kaudellaan.',
           lahde: 'Original image: Ninara from Helsinki, Finland. Edit: TSP, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Damnoen Saduak - Marché flottant.jpg',
-          selite: 'Kelluvan torin veneitä ylhäältä: pitkä vene on '
-            + 'lastattu täyteen banaaneja ja kookospähkinöitä, ja '
-            + 'myyjä istuu keulassa hattu päässä kasvot poispäin.',
+          selite: 'Damnoen Saduakin kelluva tori syntyi kanavalle, jonka '
+            + 'Rama IV käski kaivaa vuosina 1866–1868 Mae Klong- ja Tha '
+            + 'Chin -jokien välille.',
           lahde: 'PA, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Chao Phraya River Skyline - panoramio.jpg',
-          selite: 'Bangkok korkealta: Chao Phraya kaartaa kaupungin läpi, '
-            + 'rannoilla vuorottelevat matalat peltikattoiset korttelit ja '
-            + 'valkoiset asuintornit.',
+          selite: 'Bangkok on rakennettu Chao Phrayan suistotasangolle, jonka '
+            + 'keskikorkeus on vain puolitoista metriä merenpinnasta.',
           lahde: 'Piyatad, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -36966,24 +36955,22 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Chao Phraya and Wat Arun (7997321494).jpg',
-          selite: 'Chao Phraya leveänä väylänä: veneitä kulkee joella, '
-            + 'ja länsirannalla Wat Arunin torni nousee puiden '
-            + 'ylle vaaleana siluettina.',
+          selite: 'Wat Arunin torni oli 1800-luvun matkakirjojen mukaan '
+            + 'ensimmäinen merkki pääkaupungista merestä tulevalle.',
           lahde: 'Fabio Achilli from Milano, Italy, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: '(2023) คลองด่าน กรุงเทพมหานคร (1).jpg',
-          selite: 'Khlong Danin kanava Thonburin puolella: vene kyntää '
-            + 'vettä kaiteen reunustamana, ja rannalla kohoavat '
-            + 'valkoinen suurchedi ja jättimäinen kullattu '
-            + 'buddhapatsas takaapäin kuvattuna.',
+          selite: 'Bangkokin kanavia eli khlongeja laskettiin vuonna 2019 '
+            + 'yhteensä 1 682 ja niiden yhteispituudeksi 2 604 '
+            + 'kilometriä.',
           lahde: 'กสิณธร ราชโอรส, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Grand Palace Bangkok 1.jpg',
-          selite: 'Wat Phra Kaew\'n kullattu chedi hehkuu iltapäivän '
-            + 'valossa Suurpalatsin muurien sisällä, ja sen takana '
-            + 'nousevat mosaiikkitornit ja oranssivihreät katot.',
+          selite: 'Suurpalatsin rakentaminen alkoi toukokuussa 1782, eikä se '
+            + 'valmistunut kerralla, sillä jokainen hallitsija lisäsi omat '
+            + 'rakennuksensa.',
           lahde: 'Philip Nalangan, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -36991,16 +36978,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Menam-rivier in Bangkok met gebouwen en boten, gezien vanaf de Royal Dock Yard Menam River from the Royal Dock Yard, B(..)ok (titel op object), RP-F-F01197-X.jpg',
           vuosi: '1870–1900',
-          selite: 'Chao Phraya -joki Bangkokissa 1800-luvun lopulla kuninkaallisen '
-            + 'telakan puolelta kuvattuna, jolloin eurooppalaiset kutsuivat jokea '
-            + 'nimellä Menam.',
+          selite: 'Eurooppalaiset kutsuivat jokea 1800-luvulla nimellä Menam, '
+            + 'joka on thain kielen yleissana joelle.',
           lahde: 'G. R. Lambert & Co. / Rijksmuseum, Commons (CC0)',
         },
         {
           tiedosto: 'Chao Phraya in Bangkok 2.jpg',
-          selite: 'Sama joki tänään vesibussin kannelta: proomut ja matkustajaveneet '
-            + 'käyttävät sitä yhä, mutta rantaa reunustavat nyt hotellit ja tornitalot '
-            + 'telakoiden sijaan.',
+          selite: 'Chao Phrayalla kulkee yhä säännöllinen jokibussiliikenne, joka '
+            + 'pysähtyy kolmellakymmenelläneljällä laiturilla.',
           lahde: 'Christophe95, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -37019,10 +37004,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yhä: vuonna 2019 niitä laskettiin 1 682 ja '
             + 'yhteispituudeksi 2 604 kilometriä, vaikka moni on '
             + 'täytetty maalla tai muutettu viemäriksi.',
-          selite: 'Illustrated London Newsin kaiverrus vuodelta 1865: '
-            + 'venekulkue soutaa jokea ylös rantojen paalutalojen '
-            + 'välissä, ja kuvien välissä olevat tekstipalkit ovat lehden '
-            + 'omia kuvatekstejä.',
+          selite: 'Vuonna 1865, jolloin Illustrated London News kaiversi '
+            + 'Bangkokin venekulkueen, vesiväylät olivat yhä kaupungin '
+            + 'pääasiallinen kulkutapa.',
           lahde: 'Engraving of a sketch by Mr. R. Campbell Bates. From '
             + '"Illustrated London News", 1865., Wikimedia Commons (PD)',
           wiki: 'Bangkok',
@@ -37040,11 +37024,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ulkomaalaiset jäivät käyttämään sitä silloinkin, kun '
             + 'uusi pääkaupunki oli jo perustettu ja saanut oman, '
             + 'pidemmän nimensä.',
-          selite: 'Kaiverrettu kartta John Crawfurdin matkakirjasta '
-            + 'vuodelta 1828, otsikkonaan "Sketch of the Town of '
-            + 'Bang-Kok, by a Native": muurikaupunki kanavineen joen '
-            + 'itärannalla, ja nimet on kirjoitettu niin kuin '
-            + 'ulkomaalaiset ne kuulivat.',
+          selite: 'Rattanakosinin muurikaupunki kanavineen oli joen itärannalla '
+            + 'jo vuonna 1828, jolloin John Crawfurdin matkakirja julkaisi '
+            + 'siitä kartan.',
           lahde: 'John Crawfurd, Wikimedia Commons (PD)',
           wiki: 'Bangkok',
         },
@@ -37061,10 +37043,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Bangkokin virallisena perustamispäivänä pääkaupunkina. '
             + 'Thonburi jäi joen taakse omaksi kaupunginosakseen, '
             + 'jonka ylle kohoaa Wat Arunin torni.',
-          selite: 'Kaupunginpylvään pyhäkkö: valkoinen '
-            + 'marmorirakennus, jonka katolta nousee Ayutthayan '
-            + 'tyyliin tehty huippu ja jonka harjoja koristavat '
-            + 'naga-käärmeet.',
+          selite: 'Kaupunginpylväs pystytettiin 21. huhtikuuta 1782 '
+            + 'aamukuudelta, ja päivää pidetään Bangkokin virallisena '
+            + 'perustamispäivänä pääkaupunkina.',
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Bangkok',
         },
@@ -37081,9 +37062,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kauppiaat asettuivat alueelle jo 1780-luvulla, kun '
             + 'Rama I siirsi yhteisön pois Suurpalatsin rakennustyön '
             + 'tieltä.',
-          selite: 'Katukeittiön paistolevy täynnä täytettyjä ohukaisia ja '
-            + 'paistoksia, vieressä pinottuina kulhoja, ämpäreitä ja '
-            + 'kauhoja — koko keittiö mahtuu kärryyn.',
+          selite: 'Bangkokin kojut ja kärryt ovat tarjoilleet riisi- ja '
+            + 'nuudeliannoksia ohikulkijoille vuosikymmenten ajan, ja '
+            + 'katuruoka on kaupungin tunnetuimpia puolia.',
           lahde: 'David McKelvey from Brisbane, Australia, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Bangkok',
         },
@@ -37091,10 +37072,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: '(2023) วัดพระเชตุพนวิมลมังคลารามราชวรมหาวิหาร เขตพระนคร กรุงเทพมหานคร (11).jpg',
-          selite: 'Kullattu istuva Buddha Wat Pho -temppelissä Bangkokissa '
-            + 'heinäkuussa 2023: oikea käsi laskeutuu polven yli maata '
-            + 'koskettamaan, ja jalusta on koristeltu vihrein ja punaisin '
-            + 'peililasikuvioin.',
+          selite: 'Wat Pho seisoo Rattanakosinin saarella heti Suurpalatsin '
+            + 'eteläpuolella, ja Rama I rakennutti temppelin uudelleen '
+            + 'vuoteen 1801 mennessä.',
           lahde: 'กสิณธร ราชโอรส, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Bangkok on Thaimaan pääkaupunki ja selvästi maan suurin '
@@ -37130,9 +37110,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kanaville pääsee pitkähäntäveneellä.',
               kuva: {
                 tiedosto: 'Bangkok skytrain sunset.jpg',
-                selite: 'BTS-ilmaradan juna kiitää betonisilloalla '
-                  + 'auringonlaskussa, ja alla katu on täynnä autoja '
-                  + 'puolittain pysähtyneessä ruuhkassa.',
+                selite: 'Ilmarata BTS aloitti liikennöinnin vuonna 1999 ja on '
+                  + 'metron ohella kaupungin nopein kulkutapa.',
                 lahde: 'User:Diliff, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -37153,10 +37132,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'suurkaupunki on kasvanut.',
               kuva: {
                 tiedosto: 'Astronaut Photography of Earth - Bangkok-Gulf of Thailand - ISS006-E-49922.JPG',
-                selite: 'Bangkok avaruudesta: Chao Phraya kiemurtelee '
-                  + 'S-kirjaimena harmaan kaupunkimaton halki kohti '
-                  + 'Siaminlahtea, ja alakulman tunnus on NASAn oma '
-                  + 'kuvausnumero.',
+                selite: 'Chao Phraya mutkittelee kaupungin halki etelään ja '
+                  + 'laskee Siaminlahteen noin kaksikymmentäviisi '
+                  + 'kilometriä keskustan eteläpuolella.',
                 lahde: 'Image Science and Analysis Laboratory, '
                   + 'NASA-Johnson Space Center (astronaut not stated), '
                   + 'Wikimedia Commons (PD)',
@@ -37176,9 +37154,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'yhdeksi suureksi ruokakaduksi.',
               kuva: {
                 tiedosto: 'Mango sticy rice (3859549574).jpg',
-                selite: 'Khao niao mamuang eli mangoa ja tahmeaa '
-                  + 'riisiä banaaninlehdellä — jälkiruoka, jossa '
-                  + 'riisi on makea pääosan esittäjä.',
+                selite: 'Khao niao mamuang eli mango ja tahmea riisi on '
+                  + 'jälkiruoka, jossa riisi on makeana pääosassa.',
                 lahde: 'Dennis Wong from Hong Kong, Hong Kong, '
                   + 'Wikimedia Commons (CC BY 2.0)',
               },
@@ -37254,10 +37231,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuningas kuvataan yhä vapauttamassa orjia. Isoisän '
             + 'matkavuonna 1873 kuningas kielsi myös alamaisten maahan '
             + 'heittäytymisen: kumarrus riitti vastedes.',
-          selite: 'Chulalongkornin ratsastajapatsas Kuninkaallisella '
-            + 'aukiolla: pronssinen kuningas istuu hevosen selässä '
-            + 'univormussa, ja patsas valettiin Pariisissa ja '
-            + 'paljastettiin 1908 hallitsijakauden 40-vuotisjuhlaan.',
+          selite: 'Chulalongkornin ratsastajapatsas valettiin Pariisissa ja '
+            + 'paljastettiin Kuninkaallisella aukiolla 1908 '
+            + 'hallitsijakauden 40-vuotisjuhlaan.',
           lahde: 'กสิณธร ราชโอรส, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Bangkok',
         },
@@ -37275,9 +37251,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Lamphong rakennettiin sekin Rama V:n aikana, joskin se '
             + 'ehti valmiiksi vasta hänen kuolemansa jälkeen, vuonna '
             + '1916.',
-          selite: 'Vanha höyryveturi Hua Lamphongin asemahallin '
-            + 'kaarikaton alla iltavalaistuksessa, hallin '
-            + 'lasimaalauspääty hehkuen veturin takana.',
+          selite: 'Hua Lamphongin päärautatieasema rakennettiin Rama V:n aikana '
+            + 'ja valmistui vasta hänen kuolemansa jälkeen vuonna 1916.',
           lahde: 'Kriengsak Jirasirirojanakorn, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Bangkok',
         },
@@ -37295,10 +37270,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'menetelmin — ja niin Siam säilyikin ainoana '
             + 'Kaakkois-Aasian maana, jota ei koskaan alistettu '
             + 'siirtomaaksi.',
-          selite: 'Ananta Samakhomin valtaistuinsali, jonka Rama V '
-            + 'tilasi italialaisilta arkkitehdeilta: valkoinen '
-            + 'marmoripalatsi kupoleineen näyttää enemmän Roomalta '
-            + 'kuin Siamilta — ja juuri se oli tarkoitus.',
+          selite: 'Ananta Samakhomin valtaistuinsalin tilasi Rama V '
+            + 'italialaisilta arkkitehdeilta, ja marmoripalatsi kupoleineen '
+            + 'rakennettiin eurooppalaiseen tyyliin.',
           lahde: 'Supanut Arunoprayote, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Bangkok',
         },
@@ -37314,10 +37288,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tasan sata vuotta. Vuoteen 1925 mennessä hovi oli '
             + 'muuttanut uudempiin asuinpaikkoihin, mutta Suurpalatsi '
             + 'säilyi seremonioiden näyttämönä — ja on sitä yhä.',
-          selite: 'Chakri Maha Prasat edestä: eurooppalainen kivipalatsi, '
-            + 'jonka katoksi on nostettu kolme thaimaalaista kultahuippua '
-            + '— yhdistelmää on verrattu viktoriaaniseen rouvaan '
-            + 'thaimaalaisessa kruunussa.',
+          selite: 'Chakri Maha Prasat -valtaistuinsali valmistui 1882, kun '
+            + 'Chakri-suku oli hallinnut tasan sata vuotta.',
           lahde: 'Supanut Arunoprayote, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Bangkok',
         },
@@ -41545,6 +41517,8 @@ export const KULTTUURI_KATEGORIAT = {
    *
    * Etusivun leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   astana: [
     {
       id: 'kaupunki',
@@ -41555,20 +41529,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Вид на Бульвар Нуржол.jpg',
-          selite: 'Nurjol-bulevardin kaksi kullanväristä tornia kehystävät '
-            + 'iltahämärässä valaistua Bajterekiä.',
+          selite: 'Nurjol-bulevardi on uuden hallintokeskuksen pääakseli, joka '
+            + 'kulkee Khan Shatyrista Akordaan ja jonka varrella Bajterek '
+            + 'seisoo.',
           lahde: 'Шалкер Гам, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Nur-Sultan - 190217 DSC 3461.jpg',
-          selite: 'Akorda seisoo sinikupolisena lumisen aukion perällä, ja '
-            + 'sen takana kaupunki häviää pakkassumuun.',
+          selite: 'Akorda on Kazakstanin presidentin virallinen työpaikka, joka '
+            + 'rakennettiin vuosina 2001–2004 ja jonka harja on 80 metrin '
+            + 'korkeudessa.',
           lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Astana-Ishim-River-embankment-7797.jpg',
-          selite: 'Padottu Esil kaartaa kivetyn rantamuurin ohi, ja '
-            + 'iltavalossa hehkuvat asuintalot heijastuvat veteen.',
+          selite: 'Esiliä on padottu keskustan alapuolelta vuodesta 1998, jotta '
+            + 'joen pinta pysyisi kaupungin kohdalla korkealla.',
           lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -41581,21 +41557,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Another view of Downtown Astana (6245921591).jpg',
-          selite: 'Bulevardin kukkapenkkien takaa avautuu suora näkymä '
-            + 'kahden kultatornin välistä Akordan siniselle kupolille.',
+          selite: 'Uuden pääkaupungin kaavan ratkaisi kansainvälinen kilpailu, '
+            + 'jonka voitti 6. lokakuuta 1998 japanilainen arkkitehti Kisho '
+            + 'Kurokawa.',
           lahde: 'Ken and Nyetta, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Kazakhstan P9130207 (28302919819).jpg',
-          selite: 'Rakentamattoman rinteen takana nousevat vasemmalta '
-            + 'lukien moskeijan minareetit, lasipyramidi ja kultainen '
-            + 'Samruk-lintu pylväänsä päässä.',
+          selite: 'Rauhan ja sovinnon palatsi on Foster and Partnersin '
+            + 'suunnittelema 62 metriä korkea pyramidi, joka valmistui '
+            + 'vuonna 2006.',
           lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Horses in Ishim basin near Novoishimskoye.jpg',
-          selite: 'Kaksi hevosta laiduntaa Esilin altaan aroniityllä, jonka '
-            + 'takana ei näy muuta kuin horisontti.',
+          selite: 'Astana sijaitsee Esil-joen varrella hyvin tasaisella '
+            + 'puoliaroalueella 347 metrin korkeudessa.',
           lahde: 'TheGreatSteppeWiki, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -41612,9 +41589,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Myös näköalatasanteen korkeus on valittu tarkoituksella. '
             + 'Se on 97 metriä, ja vuonna 1997 pääkaupunki siirtyi '
             + 'Almatysta tänne — torni pystytettiin juuri sen muistoksi.',
-          selite: 'Yön yli katsottuna Bajterek on ainoa valaistu esine '
-            + 'keskustan siluetissa, ja sen alla kaartuu autojen '
-            + 'valojuova.',
+          selite: 'Bajterekin näköalatasanne on 97 metrin korkeudessa, koska '
+            + 'pääkaupunki siirtyi Almatysta tänne vuonna 1997.',
           lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Baiterek (monument)',
         },
@@ -41632,9 +41608,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ei rakennettu hallia vaan kaupunki: yli kymmenen '
             + 'jalkapallokentän verran puistoa, mukulakivikatuja, '
             + 'aukioita, kauppoja, minigolf ja sisäranta hiekkoineen.',
-          selite: 'Bajterekin ikkunasta katsottuna bulevardi päättyy '
-            + 'Khan Shatyrin valkoiseen telttaan, jonka takana alkaa '
-            + 'tyhjä aro.',
+          selite: 'Khan Shatyrin suunnitteli Norman Fosterin toimisto, ja '
+            + 'heinäkuussa 2010 avatun teltan kate nousee 90 metrin '
+            + 'korkeuteen.',
           lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Khan Shatyr Entertainment Center',
         },
@@ -41651,8 +41627,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'voi nousta 35 asteeseen. Kaupunki tunnetaan myös '
             + 'tuulisuudestaan, joka tuntuu erityisesti avoimella '
             + 'Vasemmalla rannalla.',
-          selite: 'Jäätynyt Esil on tammikuussa tasainen lumikenttä, jonka '
-            + 'yli kävellään, ja rannan puut ovat paksussa huurteessa.',
+          selite: 'Esil jäätyy marraskuun toisella viikolla ja pysyy jäässä '
+            + 'huhtikuun alkuun, jolloin joen yli kävellään rannalta '
+            + 'toiselle.',
           lahde: 'Ken and Nyetta, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Astana',
         },
@@ -41669,8 +41646,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'säilytettäisiin ja kunnostettaisiin, ja uusi nousisi joen '
             + 'etelä- ja itäpuolelle. Niin kävi, ja siksi rannat ovat '
             + 'nyt kahta eri vuosisataa.',
-          selite: 'Kaarisilta ylittää Esilin keskustassa, ja molemmilla '
-            + 'rannoilla nousee uusia asuintorneja aivan veden ääreen.',
+          selite: 'Esil jakaa kaupungin niin, että pohjoispuolella ovat '
+            + 'vanhemmat kaupunginosat ja eteläpuolella vuoden 1998 kaavan '
+            + 'mukainen hallintokeskus.',
           lahde: 'Nikolamikovic82, Wikimedia Commons (CC0)',
           wiki: 'Ishim (river)',
         },
@@ -41678,9 +41656,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Kazakhstan P9130255 (39373641624).jpg',
-          selite: 'Pronssinen ratsastaja pitää kädessään tankoa, jonka '
-            + 'päässä istuu metsästyslintu, ja hänen takanaan kohoavat '
-            + 'Kazak Elin pylväs ja moskeijan minareetit.',
+          selite: 'Hazrat Sultanin moskeija valmistui 6. heinäkuuta 2012, ja '
+            + 'siihen mahtuu kymmenentuhatta rukoilijaa.',
           lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
         },
         kappale: 'Astana on Kazakstanin pääkaupunki ja maan toiseksi suurin '
@@ -41726,9 +41703,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'aseman lentokentälle: 22,4 kilometriä ja 18 asemaa.',
               kuva: {
                 tiedosto: 'Astana light metro (2026-07-18) - 4.jpg',
-                selite: 'Kevytraidelinjan betoniviadukti kulkee kaupungin '
-                  + 'yli suorana, ja vasemmalla erottuu lasipyramidin '
-                  + 'kärki puiden takana.',
+                selite: 'Kevytraidelinja avattiin toukokuussa 2026, ja se '
+                  + 'yhdistää Nurly Zholin aseman lentokentälle 22,4 '
+                  + 'kilometrin ja 18 aseman matkalla.',
                 lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -41757,9 +41734,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja se näkyy tuulessa.',
               kuva: {
                 tiedosto: 'Astana-steppe-7748.jpg',
-                selite: 'Kaupungin laidalla aro jatkuu tasaisena '
-                  + 'ruoholakeutena horisonttiin asti ilman ainuttakaan '
-                  + 'puuta.',
+                selite: 'Astanan ympärillä ei ole vuoria eikä metsää missään '
+                  + 'päin, ja kaupunki tunnetaan tuulisuudestaan.',
                 lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -41780,9 +41756,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Ylävirtaan on kaavailtu toista patoa tulvien varalle.',
               kuva: {
                 tiedosto: 'Astana-Ishim-pedalos-7808.jpg',
-                selite: 'Kaksi poljinvenettä liikkuu tyynellä joella '
-                  + 'iltavalossa, ja rannan tornitalot heijastuvat '
-                  + 'pintaan koko leveydeltä.',
+                selite: 'Kesällä joella vuokrataan poljinveneitä, ja '
+                  + 'vuodesta 2008 kaupunki on järjestänyt Esilillä '
+                  + 'veneliikennettä.',
                 lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -41803,9 +41779,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'noussut tyhjälle arolle parissa vuosikymmenessä.',
               kuva: {
                 tiedosto: 'Nur-Sultan - 190217 DSC 3715.jpg',
-                selite: 'Talvisen työmaa-aidan takaa nousee valmis '
-                  + 'kerrostalorivi, ja aidan edessä seisoo kaksi '
-                  + 'betonipilaria vailla siltaa.',
+                selite: 'Vuoden 2009 laskennassa asukkaita oli 613 006 ja '
+                  + 'vuoden 2021 laskennassa 1 234 042, ja kokonaisia '
+                  + 'kaupunginosia on noussut tyhjälle arolle parissa '
+                  + 'vuosikymmenessä.',
                 lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -41869,9 +41846,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'linnoitus poltettiin 1838, mutta se rakennettiin '
             + 'uudelleen, ja 16. heinäkuuta 1863 Akmolinskista tuli '
             + 'virallisesti ujesdikaupunki.',
-          selite: 'Vuoden 1796 venäläisessä atlaskartassa aro on väritetty '
-            + 'vihreäksi, ja sen laidoille on merkitty Omsk, Semipalatinsk '
-            + 'ja Aral-järvi.',
+          selite: 'Vuoden 1796 venäläinen atlaskartta esittää Kazakstanin aron '
+            + 'runsaat kolme vuosikymmentä ennen kuin Akmoly perustettiin '
+            + 'Esil-joen varrelle.',
           lahde: 'publisher:Sytin\'s print shop, Wikimedia Commons (PD)',
           wiki: 'Astana',
         },
@@ -41890,8 +41867,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuodesta 2022 Astanalla on Guinnessin ennätys '
             + 'pääkaupungista, joka on vaihtanut nimeään useimmin '
             + 'nykyaikana.',
-          selite: 'Kaksikerroksinen punatiilinen kauppiastalo koristeltuine '
-            + 'ikkunakaarineen seisoo yhä keskustan kadunkulmassa.',
+          selite: 'Akmolinskista tuli 16. heinäkuuta 1863 ujesdikaupunki, ja '
+            + 'tiiliset kauppiastalot ovat jäänne sen ajan aron '
+            + 'kauppapaikasta.',
           lahde: 'Alexander Yampolsky from Ekaterinburg, Russia, '
             + 'Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Astana',
@@ -41911,9 +41889,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerrostaloaluetta, ja niiden rinnalle nousivat '
             + 'Uudisviljelysten palatsi, Nuorison palatsi, Neuvostojen '
             + 'talo, uusi lentokenttä ja urheilupaikkoja.',
-          selite: 'Vanhemman puolen matala asuintalo on maalattu '
-            + 'kirkkaansiniseksi, ja sen seinälle on ripustettu rivi '
-            + 'kehystettyjä tauluja.',
+          selite: 'Uudisviljelyskampanjan kesänä 1954 aroille matkusti 300 000 '
+            + 'komsomol-vapaaehtoista, ja Akmolinskin väkiluku ja kokoonpano '
+            + 'muuttuivat pysyvästi.',
           lahde: 'Ilya Varlamov, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Virgin Lands campaign',
         },
@@ -41931,9 +41909,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'täältä lähes tuhat kilometriä. Unesco myönsi Astanalle '
             + '16. heinäkuuta 1999 Rauhan kaupungin mitalin ja '
             + 'arvonimen.',
-          selite: 'Kaivinkoneet ja pinotut betoniteräsniput täyttävät '
-            + 'keskeneräisen kadun, jonka takana seisoo juuri valmistunut '
-            + 'kerrostalorivi.',
+          selite: 'Muutto Almatysta Akmolaan tehtiin 10. joulukuuta 1997, ja '
+            + 'uutta pääkaupunkia on rakennettu siitä lähtien.',
           lahde: 'Vmenkov, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Astana',
         },
@@ -45825,6 +45802,8 @@ export const KULTTUURI_KATEGORIAT = {
    * sanoo mittauspisteen ääneen, ja huipun lukemat ovat siinä yhä
    * en-Wikipedian Mount Kinabalu -artikkelista.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   borneo: [
     {
       id: 'kaupunki',
@@ -45836,44 +45815,43 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Kinabalu Sabah Borneo Kampong Kundasang panorama 4.jpg',
-          selite: 'Kinabalu-vuoren rosoinen huippuharjanne kohoaa '
-            + 'aamuvalossa vihreiden sademetsäkukkuloiden yläpuolelle.',
+          selite: 'Kinabalu on saaren korkein huippu, 4 095 metriä, ja sen '
+            + 'paljas graniitti on maailman nuorimpia esiin kuluneita '
+            + 'graniitteja.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Kuching Waterfront and its Parliament building - Sarawak - Borneo - Malaysia - panoramio.jpg',
-          selite: 'Kuchingin jokiranta hämärissä: veden takana kohoaa '
-            + 'Sarawakin osavaltionparlamentin suippokattoinen '
-            + 'rakennus ja '
-            + 'etualalla suihkuaa lohikäärmeveistos.',
+          selite: 'Kuching oli valkoisten radžojen Sarawakin keskus, ja '
+            + 'Brooken suku hallitsi aluetta sata vuotta.',
           lahde: 'diego_cue, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Pontianak Kapuas Bridge.jpg',
-          selite: 'Kapuas-joen ristikkosilta kaartuu leveän ruskean veden '
-            + 'yli Pontianakissa iltavalossa.',
+          selite: 'Kapuas on Borneon pisin joki, 1 143 kilometriä, ja se '
+            + 'virtaa Länsi-Kalimantanissa Pontianakin kaupungin halki.',
           lahde: 'Liuzhary, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       avauskuvat: [
         {
           tiedosto: 'Rainforest cloud forming Kinabalu Sabah Borneo Kampong Kundasang 1.jpg',
-          selite: 'Pilvi syntyy sademetsän yllä: valkoinen usva nousee '
-            + 'metsäisen rinteen poikki ja yksi korkea puu erottuu '
-            + 'latvuston yläpuolelle.',
+          selite: 'Borneon sademetsän arvioidaan olevan noin 140 miljoonaa '
+            + 'vuotta vanha, mikä tekee siitä yhden maailman '
+            + 'vanhimmista.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '011107 Langhouse der IBAN.jpg',
-          selite: 'Ibanien pitkätalo seisoo paalujen varassa joen '
-            + 'törmällä, ja sen yhtenäinen katto jatkuu kymmenien '
-            + 'ovien yli.',
+          selite: 'Pitkätalo on joskus yli kahdensadan metrin mittainen ja '
+            + 'toimii yhtä aikaa kotina, kylänä ja hallintona.',
           lahde: 'Matthias Bethke, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Kampong Ayer, the world\'s largest water village (17969427934).jpg',
-          selite: 'Bruneissa Kampong Ayerin talot seisovat paaluilla '
-            + 'joen päällä ja niitä yhdistävät puiset kävelysillat.',
+          selite: 'Kampong Ayer on Brunein pääkaupungin kupeessa Brunei-joen '
+            + 'päälle paaluille rakennettu asutus, jossa on asuintalojen '
+            + 'lisäksi kouluja ja moskeijoita.',
           lahde: 'Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -45892,9 +45870,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'itsenäiseksi valtioksi 1850 ja Britannia 1864. Brooken '
             + 'suku — veljenpoika ja tämän poika — hallitsi Sarawakia '
             + 'sata vuotta valkoisina radžoina.',
-          selite: 'Radžojen palatsi Astana Kuchingissa 1800-luvun lopulla: '
-            + 'matalan pylväskuistin päädyssä kohoaa sakaraharjainen '
-            + 'torni.',
+          selite: 'Kuchingin Astana oli valkoisten radžojen palatsi '
+            + 'Sarawakissa, jonka Brunein sulttaani luovutti James '
+            + 'Brookelle 1840-luvun alussa.',
           lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -45910,9 +45888,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tapojen mukaan. Vuonna 1894 Kalimantanin dajakkiheimot '
             + 'kokoontuivat Tumbang Anoihin ja sopivat rauhasta, joka '
             + 'lopetti päänmetsästyksen perinteen.',
-          selite: 'Pitkätalon sisägalleria jatkuu hämärään: puinen lattia '
-            + 'ja tiheä pylväsrivi vievät katseen rakennuksen toiseen '
-            + 'päähän.',
+          selite: 'Dajakit ovat yhteisnimitys yli kahdellesadalle jokivarsien '
+            + 'ja kukkuloiden kansalle, joilla kullakin on oma kielensä, '
+            + 'tapansa ja lakinsa.',
           lahde: 'Zhilal Darma, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -45929,9 +45907,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuoteen 1300 vilkas Intian ja Kiinan välisen kaupan '
             + 'keskus, ja pääskynpesiä kerätään yhä Gomantongin luolista '
             + 'Sabahissa.',
-          selite: 'Gomantongin luolan holvi ylhäältä avautuvaa aukkoa '
-            + 'kohti, ja hämärässä erottuvat pesänkerääjien ohuet '
-            + 'köydet.',
+          selite: 'Gomantongin luolista Sabahissa kerätään yhä syötäviä '
+            + 'pääskynpesiä, jotka olivat saaren vanhimpia '
+            + 'vientitavaroita.',
           lahde: 'Tim Denholm, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -45948,16 +45926,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keräsi hyönteisiä maksamalla työläisille sentin '
             + 'kappaleelta, ja kiinalainen työmies toi hänelle '
             + 'sammakon, joka hänen mukaansa liiti puusta alas.',
-          selite: 'Wallacen liitosammakko lepää oksalla yöllä: vihreä '
-            + 'selkä, vaalea vatsa ja mustakeltaiset räpylät.',
+          selite: 'Wallacen liitosammakon toi Simunjonin hiilikaivoksella '
+            + 'kiinalainen työmies Alfred Russel Wallacelle, joka kertoi '
+            + 'sen liitäneen puusta alas.',
           lahde: 'Bernard DUPONT from FRANCE, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Sungai Kapuas Kubu Raya, Kalimantan Barat.jpg',
-          selite: 'Puinen lautta odottaa Kapuas-joen rannassa, kannella '
-            + 'muutama moottoripyörä ja takana metsäinen ranta.',
+          selite: 'Borneon sisämaassa tie loppuu ja matka jatkuu joella, '
+            + 'joskus tunteja ja joskus vuorokausia.',
           lahde: 'Nba.shf, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Borneo ei ole yksi kohde vaan kolme maata ja tuhat '
@@ -45993,8 +45972,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'olla yli kolmekymmentäviisi kiloa.',
               kuva: {
                 tiedosto: 'Speedboats and longboats at Kapit wharf.jpg',
-                selite: 'Kapitin laiturissa on kymmeniä kapeita '
-                  + 'pitkäveneitä peräkkäin, osalla värikäs peltikatto.',
+                selite: 'Sisämaahan lähtevät pitkäveneet liikennöivät '
+                  + 'jokisatamista, joista yksi on Rajang-joen Kapit.',
                 lahde: 'Michael Goodine from Incheon , Korea, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -46017,8 +45996,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Cavessa asuu yli kolme miljoonaa lepakkoa.',
               kuva: {
                 tiedosto: 'Kinabalu Sabah Borneo Kampong Kundasang 6.jpg',
-                selite: 'Kinabalun harmaa graniittiharjanne nousee '
-                  + 'suoraan tummanvihreän sademetsän yltä.',
+                selite: 'Kinabalulta ja sen ympäristöstä tunnetaan '
+                  + '5 000–6 000 kasvilajia, 326 lintulajia ja yli sata '
+                  + 'nisäkäslajia.',
                 lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -46061,9 +46041,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pääkaupunkiaan Nusantaraa.',
               kuva: {
                 tiedosto: 'Aerial view of Sandakan town 2016 - panoramio.jpg',
-                selite: 'Sandakan ylhäältä: uusi keskusta kapealla '
-                  + 'rantakaistaleella meren ja metsäisen kukkulan '
-                  + 'välissä.',
+                selite: 'Sandakan rakennettiin 1879 ja tuhoutui '
+                  + 'pommituksissa 1944, minkä vuoksi kaupungin nykyilme '
+                  + 'on läpeensä uusi.',
                 lahde: 'Steven Tung, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -46136,8 +46116,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Jaavalla yhteensä. Vuoden 2007 Heart of Borneo '
             + '-sopimuksen jälkeen saarelta oli vuoteen 2010 mennessä '
             + 'löydetty 123 tieteelle uutta lajia.',
-          selite: 'Sademetsän sisältä: ohuita runkoja, riippuvia '
-            + 'köynnöksiä ja lehtien peittämä pohja himmeässä valossa.',
+          selite: 'Alavia osia hallitsevat yhä dipterokarpit, ja pelkästään '
+            + 'alangon sademetsää on 427 500 neliökilometriä.',
           lahde: 'shankar s. from Dubai, united arab emirates, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -46153,8 +46133,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mikroliittityökaluja ja ihmisen jäännöksiä 55 000–65 000 '
             + 'vuoden takaa. Sabahin Samang Buatin luolassa asuttiin '
             + 'noin 46 000 vuotta sitten.',
-          selite: 'Luolan seinässä kuusi kättä on jäljennetty vaalealla '
-            + 'tummaan pohjaan niin, että ne muodostavat renkaan.',
+          selite: 'Lubang Jeriji Saléhin luolasta löytyi 2018 tuntemattoman '
+            + 'eläimen kuva, joka on tiettävästi maailman vanhin tunnettu '
+            + 'esittävä maalaus.',
           lahde: 'Lhfage, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -46170,8 +46151,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sukulaisensa, ja aikuiset kohtaavat vain lyhyesti. Kun '
             + 'metsä pirstoutuu, elintila kapenee: kanta pieneni '
             + 'vuosina 1999–2015 arviolta 148 500 yksilöllä.',
-          selite: 'Oranki roikkuu pitkillä käsivarsillaan köydessä '
-            + 'metsän yllä Sepilokin kuntoutusasemalla.',
+          selite: 'Borneonoranki elää luonnossa vain tällä saarella ja on '
+            + 'suurin ihmisapina, joka viettää elämänsä puissa.',
           lahde: 'Bernard DUPONT from FRANCE, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -46188,8 +46169,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kannukasveja täällä on maailman rikkain kokoelma, ja '
             + 'niistä suurikannuisin, Nepenthes rajah, kasvaa vain '
             + 'täällä.',
-          selite: 'Nepenthes rajahin punaruskea kannu lepää sammalikossa '
-            + 'kansi auki, ja sen sisällä näkyy nestettä.',
+          selite: 'Nepenthes rajah on kannukasveista suurikannuisin ja kasvaa '
+            + 'vain Kinabalulla ja sen ympäristössä.',
           lahde: 'JeremiahsCPs, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -48753,6 +48734,8 @@ export const KULTTUURI_KATEGORIAT = {
    * Kaikkien muiden 27 kuvan tekijä on rajapinnan Artist-kentästä
    * sellaisenaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   chennai: [
     {
       id: 'kaupunki',
@@ -48764,23 +48747,20 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Aerial SE Island Grounds Chennai Jul25 R16 07919.jpg',
-          selite: 'Ilmakuvassa Marinan hiekka täyttää alalaidan, sen '
-            + 'takana Cooum-joki kaartaa Island Groundsin ympäri ja '
-            + 'kaupunki jatkuu utuiseen taivaanrantaan asti.',
+          selite: 'Marinan hiekkaa on kolmetoista kilometriä, ja ranta kasvaa '
+            + 'yhä noin neljäkymmentä neliömetriä vuodessa.',
           lahde: 'Timothy A. Gonsalves, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Madras High Court-3-North fort road-chennai-India.jpg',
-          selite: 'Ylimmän oikeuden punatiilinen porttirakennus kohoaa '
-            + 'George Townin kadun päässä kahtena sipulikupolisena '
-            + 'tornina.',
+          selite: 'Madrasin ylioikeus perustettiin 26. kesäkuuta 1862 yhtenä '
+            + 'kolmesta perustamiskirjalla luodusta ylioikeudesta.',
           lahde: 'Yercaud-elango, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Mylapore tank at dawn panorama.jpg',
-          selite: 'Aamun valossa Mylaporen temppelialtaan takaa '
-            + 'piirtyvät Kapaleeshwararin gopuram ja korttelin matalat '
-            + 'katot.',
+          selite: 'Mylaporen ja Triplicanen temppelit ovat 600–800-luvuilta '
+            + 'eli kaupungin eurooppalaisia rakennuksia vanhempia.',
           lahde: 'PlaneMad, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -48793,23 +48773,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Fort St. George, Chennai 2.jpg',
-          selite: 'Linnoituksen sisällä kohoaa valkoinen hallintotalo, '
-            + 'jonka tummat pylväsrivit kannattelevat kahta '
-            + 'kolmiopäätyä.',
+          selite: 'Fort St. George valmistui 23. huhtikuuta 1644 eli Pyhän '
+            + 'Yrjön päivänä noin kolmentuhannen punnan kustannuksin.',
           lahde: 'L.vivian.richard at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Madras museum theatre in October 2007.jpg',
-          selite: 'Museum Theatren puolipyöreä tiilijulkisivu kaartuu '
-            + 'puiden takana, ja kaarikäytävän yläpuolelle on '
-            + 'kirjoitettu rakennuksen nimi.',
+          selite: 'Government Museum siirtyi 1854 Pantheonin alueelle '
+            + 'Egmoreen, ja samassa korttelissa ovat Museum Theatre, '
+            + 'kansallinen taidegalleria ja Connemaran kirjasto.',
           lahde: 'L.vivian.richard at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Chennai Port aerial view.jpg',
-          selite: 'Ilmakuvassa sataman laiturit ja konttikentät '
-            + 'työntyvät aallonmurtajien suojaan aivan kaupungin '
-            + 'kortteleiden viereen.',
+          selite: 'Madrasilla ei ollut luonnonsatamaa, ja nykyisen sataman '
+            + 'valmistuttua 1881 sen aallonmurtaja pysäytti rannansuuntaisen '
+            + 'hiekkavirran.',
           lahde: 'Saiphani02, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -48829,10 +48808,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Town, ja näistä kahdesta tuli Madras. Muurien sisällä on '
             + 'myös St. Mary’s, Intian vanhin anglikaaninen kirkko, '
             + 'rakennettu 1678–1680.',
-          selite: 'Vuoden 1726 painetussa pohjakaavassa linnoitus on '
-            + 'rannassa alhaalla vasemmalla, sen pohjoispuolella '
-            + 'ruutukaavainen Black Town ja alareunassa Madrasin redi '
-            + 'purjelaivoineen.',
+          selite: 'Linnoituksen muurien sisään jäi White Town ja ulkopuolelle '
+            + 'kasvoi George Town, ja näistä kahdesta tuli Madras.',
           lahde: 'Herman Moll, London, Wikimedia Commons (PD)',
           wiki: 'Fort St. George',
         },
@@ -48850,10 +48827,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'promenadin, jolle antoi nimen Madras Marina. Hiekkaa on '
             + 'nyt kolmetoista kilometriä ja promenadia kuusi, ja ranta '
             + 'kasvaa yhä noin neljäkymmentä neliömetriä vuodessa.',
-          selite: 'Ranskalaiseen kivipiirrokseen on painettu julkaisijan '
-            + 'oma kuvateksti, ja kuvassa aallokkoon jäänyttä '
-            + 'masula-venettä puretaan hiekalle kantajien ja '
-            + 'kantotuolien keskellä.',
+          selite: 'Ennen sataman valmistumista laivat ankkuroivat yli '
+            + 'kilometrin päähän rannasta ja lasti tuotiin maihin '
+            + 'masula-veneillä aallokon läpi.',
           lahde: 'François-Edmond Pâris (1806-1893), Wikimedia Commons (PD)',
           wiki: 'Marina Beach',
         },
@@ -48871,9 +48847,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'syntyi 1871 yhteys Bombayhin ja Vijayawadan kautta 1899 '
             + 'Kalkuttaan. Vuoden 1877 loppuun mennessä yhtiöllä oli 150 '
             + 'höyryveturia, 391 matkustajavaunua ja 3 223 tavaravaunua.',
-          selite: 'Vuoden 1860 valokuvassa Madras Railwaylle tilattu '
-            + 'säiliöveturi seisoo tehtaan pihalla kiskoilla, ja sen '
-            + 'kylkilaatikossa on valmistajan oma numerolaatta.',
+          selite: 'Madras Railwaylla oli vuoden 1877 loppuun mennessä 150 '
+            + 'höyryveturia, 391 matkustajavaunua ja 3 223 tavaravaunua.',
           lahde: 'James Mudd (1821 - 1906), Wikimedia Commons (PD)',
           wiki: 'Madras Railway',
         },
@@ -48890,9 +48865,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Museum Theatre, kansallinen taidegalleria ja Connemaran '
             + 'kirjasto, jonka peruskiven kuvernööri lordi Connemara '
             + 'laski 1890 ja joka avattiin yleisölle 1896.',
-          selite: 'Connemaran kirjaston lukusalin puinen kattoholvi '
-            + 'jatkuu kaarena salin päästä päähän, ja sen keskellä on '
-            + 'värillistä lasia.',
+          selite: 'Connemaran kirjaston peruskiven laski kuvernööri lordi '
+            + 'Connemara 1890, ja kirjasto avattiin yleisölle 1896.',
           lahde: 'Dr. Narayanan Hariharan, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Government Museum, Chennai',
         },
@@ -48900,9 +48874,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Marina Beach (8321253501).jpg',
-          selite: 'Marinan hiekalle vedetyn kalastajaveneen keulaan on '
-            + 'maalattu jumalhahmoja ja silmäpari, ja takana lyö '
-            + 'aallokko.',
+          selite: 'Marina on maan pisin luonnollinen kaupunkiranta, mutta '
+            + 'siellä ei uida.',
           lahde: 'Ashwin Kumar from Bangalore, India, Wikimedia Commons (CC BY-SA 2.0)',
         },
         kappale: 'Chennai on Tamil Nadun pääkaupunki ja Etelä-Intian '
@@ -48943,9 +48916,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'moottoririksoilla ja kaupungin omilla busseilla.',
               kuva: {
                 tiedosto: 'Chennai Central D.jpg',
-                selite: 'Chennai Centralin punainen julkisivu jatkuu '
-                  + 'päädystä päätyyn, ja oikeassa reunassa kohoaa '
-                  + 'nelitauluinen kellotorni.',
+                selite: 'Chennai Central avattiin 1873 purkamaan Royapuramin '
+                  + 'ruuhkaa, ja aseman kautta kulkee nykyään noin '
+                  + '730 000 matkustajaa päivässä.',
                 lahde: 'Augustus Binu/ facebook, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -48967,9 +48940,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Kaupungin lintulajeja on kirjattu yli sataakolmeakymmentä.',
               kuva: {
                 tiedosto: 'Guindy Railway Bridge Adyar River Chennai Jul18 DSC05379.jpg',
-                selite: 'Ilmakuvassa juna ylittää Adyar-joen matalaa '
-                  + 'ristikkosiltaa pitkin, ja molemmin puolin jokea '
-                  + 'leviää tiivis matala kaupunki.',
+                selite: 'Adyar virtaa kaupungin eteläosan halki, ja sen '
+                  + 'suistossa on suojeltu lintualue.',
                 lahde: 'Timothy A. Gonsalves, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -48991,9 +48963,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + '50 000 ihmistä.',
               kuva: {
                 tiedosto: 'Chennai Marina Beach in 2022, October 03.jpg',
-                selite: 'Iltahämärässä Marinan hiekka jatkuu tyhjänä '
-                  + 'horisonttiin, jossa rantabulevardin valot muodostavat '
-                  + 'yhtenäisen nauhan.',
+                selite: 'Marinalle kävelee iltaisin arkisin noin 30 000 ja '
+                  + 'viikonloppuisin jopa 50 000 ihmistä.',
                 lahde: 'Pinakpani, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -49075,9 +49046,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'esiintyy jo elokuun 1639 kauppakirjassa; osa tutkijoista '
             + 'pitää nimen ensimmäisenä käyttönä vasta vuoden 1646 '
             + 'maalahjoitusta Chennapatnamin temppelille.',
-          selite: 'Noin 1920 painettuun postikorttiin on lisätty '
-            + 'julkaisijan oma numeroitu kuvateksti, ja kuvassa San '
-            + 'Thomen uusgoottilainen katedraali nousee puurivin takaa.',
+          selite: 'Portugalilaiset rakensivat São Tomén sataman 1522 sen '
+            + 'haudan viereen, jossa perimätiedon mukaan lepää apostoli '
+            + 'Tuomas.',
           lahde: 'Higginbothams Ltd. (Madras & Bangalore), Wikimedia Commons (PD)',
           wiki: 'Chennai',
         },
@@ -49094,10 +49065,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunkia ensimmäisessä Anglo-Mysore-sodassa, joka päättyi '
             + 'Madrasin sopimukseen. Linnoituksessa on yhä museo, jonka '
             + 'kokoelmissa on komppanian ajan esineistöä.',
-          selite: 'Vuoden 1754 väritettyyn kaiverrukseen on painettu '
-            + 'julkaisijan omat englannin- ja ranskankieliset '
-            + 'kuvatekstit, ja siinä linnoitus näkyy mereltä päin '
-            + 'ankkurissa olevien purjelaivojen takaa.',
+          selite: 'Ranskalaiset valtasivat Fort St. Georgen 1746, ja britit '
+            + 'saivat sen takaisin 1749 Aix-la-Chapellen rauhassa.',
           lahde: 'Jan Van Ryne (1712–60); Publisher: Robert Sayer, Wikimedia Commons (PD)',
           wiki: 'Chennai',
         },
@@ -49115,9 +49084,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pankki koko Intiassa, Madras Bank, perustettiin täällä 21. '
             + 'kesäkuuta 1683; siitä polveutuvat myöhemmät '
             + 'presidenssipankit.',
-          selite: 'Noin vuoden 1870 valokuvassa presidenssin pääkaupunki '
-            + 'leviää majakalta katsottuna matalana kattomerenä, ja '
-            + 'oikealla näkyvät sataman ensimmäiset laiturit.',
+          selite: 'Madras oli presidenssin talvipääkaupunki, ja '
+            + 'kesäpääkaupunkina toimi vuoristossa sijaitseva Ooty.',
           lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
           wiki: 'Madras Presidency',
         },
@@ -49136,10 +49104,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'poikittaispadot romahtivat 1877, eteläistä laituria '
             + 'alettiin rakentaa kolmenkymmenenkolmen tonnin '
             + 'betoniharkoista.',
-          selite: 'Vuoden 1880 lehtikuvitukseen on painettu julkaisijan '
-            + 'omat numerot ja kuvatekstit, ja sen neljässä ruudussa '
-            + 'näkyvät betoniharkkojen valupiha, nostolaitteet ja koko '
-            + 'työmaa majakalta katsottuna.',
+          selite: 'Uuden sataman peruskiven laski 1875 Britannian tuleva '
+            + 'kuningas Edward VII, ja aallonmurtajien kivityöt alkoivat '
+            + '1876.',
           lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
           wiki: 'Chennai Port',
         },
@@ -49754,6 +49721,8 @@ export const KULTTUURI_KATEGORIAT = {
    * julkaisumuodon: kartta, matka-albumin kuva, postikortti,
    * kaiverrus.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   colombo: [
     {
       id: 'kaupunki',
