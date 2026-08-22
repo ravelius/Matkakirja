@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1025, teksti: 'Akvarellipilotti: Helsingin miniatyyrit värillisinä' },
   { v: 1024, teksti: 'Lähi-idän kaupunkien kuvatekstiremontti valmis' },
   { v: 1023, teksti: 'Julistekokoelma laajeni 64 kaupunkiin (välijulkaisu)' },
   { v: 1022, teksti: 'Herokuvat: Bangkok — kierros 6 valmis' },
