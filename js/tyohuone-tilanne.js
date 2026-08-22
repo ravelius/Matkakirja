@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1024 — LAHI-IDAN KAUPUNKIEN KUVATEKSTIREMONTTI VALMIS (KT1): kaikki 29 laudan kaupunkia, ~400 selitetta kohde-ei-kuva-linjaan; tuhoutuneet kohteet neutraalisti, pyhat kohteet kunnioittavasti. KT1:sta jaljella enaa Aasian kaupungit. Tarkista: Bagdadin ja Teheranin kuvatekstit',
   'v1023 — JULISTEET VALIJULKAISU (omistajan tilaus 23.8.2026): JULISTEET-taulu laajeni 15 → 64 kaupunkiin (tyolista 1: Eurooppa + Lahi-ita, aikakausisommittelut ja merkitykselliset vuodet, esim. Edinburgh 1883 = Aarresaari, Dubai 1873 = helmikyla). Kuvia synkataan amparille sita mukaa kun generointi etenee — puuttuva kuva nakyy galleriassa katkoviivapaikkana ja taydentyy itsestaan ilman uutta julkaisua. Tyolista 2 (Aasia, 48 kohdetta) tulee seuraavassa erassa. Tarkista: laukun julistegalleria kehittajatilassa',
   'v1022 — HEROKIERROS 6 VALMIS: Bangkokin karuselliin 3 havainnekuvaa (Wat Arun/Suuri palatsi/Wat Pho). Herokaupunkeja 20. Tarkista: Bangkokin etusivukaruselli',
   'v1021 — TEKNINEN: kuvageneroinnin paivaraja 150 → 300 julistemassatuotannon ajaksi (97 julistetta + herot eivat mahdu 150:een; katto ~60 $/vrk) — lasketaan takaisin kun urakka on ohi. Ei pelinakyvaa muutosta. Tarkista: ei mitaan',
