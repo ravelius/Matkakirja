@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1035, teksti: 'Maalehden nostot palstaan, linkkisisennys pienemmäksi' },
   { v: 1034, teksti: 'Kuvasuurennoksen selite kapeammalle palstalle' },
   { v: 1033, teksti: 'Peliä voi nyt pelata myös vaakasuunnassa' },
   { v: 1032, teksti: 'Helsingin karusellista pois toisteinen herokuva' },
