@@ -12610,11 +12610,43 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   cursor: inherit;
 }
 
+/*
+ * SELITERIVI AVAA JUTUN MYÖS KOKORUUDULLA (omistajan tilaus
+ * 22.8.2026). Kortin oma `cursor: default` periytyisi yllä olevan
+ * rivisäännön kautta myös avattavalle riville, ja osoitin lupaisi
+ * vähemmän kuin rivi tekee. Valitsin on rivisääntöä tarkempi, jotta se
+ * voittaa sen paikasta riippumatta.
+ */
+.dialog .kartta-suurennos .kartta-selitteet button.kartta-selite { cursor: pointer; }
+
+.dialog .kartta-suurennos .kartta-selitteet button.kartta-selite:hover,
+.dialog .kartta-suurennos .kartta-selitteet button.kartta-selite:focus-visible {
+  color: #f0d9a4;
+}
+
 /* Lähderivi kartan alle kapeaksi riviksi, samaan vaaleaan sävyyn kuin
  * muissa suurennoksissa. */
 .kartta-suurennos .kuvalahde {
   margin: 0.3rem 0 0;
   text-align: center;
+}
+
+/*
+ * ZOOMATTU KARTTA LEVIÄÄ TYHJÄN PÄÄLLE (omistajan tilaus 22.8.2026:
+ * "jos karttaa zoomaa se saisi levittyä tyhjän tilan päälle koko
+ * näytöllä"). Kehyksen leveys ja korkeus tulevat silloin pikseleinä
+ * avaajalta (js/nahtavyydet.js: levita), eikä kuvasuhde enää mitoita
+ * korttia.
+ *
+ * Selite ja lähderivi väistyvät levityksen ajaksi. Ne veisivät juuri
+ * sen pystytilan, joka kartalle annetaan, ja niiden tehtävä on
+ * selittää KOKO kartan numerot — lähietäisyydeltä katsottaessa
+ * näkyvissä on vain osa niistä. Lepotilaan palatessa molemmat
+ * palaavat, joten mitään ei menetetä.
+ */
+.kartta-suurennos.kartta-levitetty .kartta-suurennos-selitteet,
+.kartta-suurennos.kartta-levitetty .kuvalahde {
+  display: none;
 }
 
 /*
