@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v996 — MUMBAI: uusi lehti (kartta 10 kohteella Fort-alueen ympärillä; Elephanta nostona). Vanhan tekstin kolme kohtaa oikaistu (pengerrysvuodet, matkustajaluku, Dharavi-virke pois linjauksen mukaan). Saarivi puuttuu viela. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v995 — CHENNAI: uusi lehti (kartta 10 kohteella Fort St. Georgesta Mylaporeen, pystyrajaus rannan nauhaa pitkin; siirtomaahistoria neutraalina). Saarivi puuttuu viela. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v994 — KABUL: uusi lehti (kartta 8 kohteella, kainalossa Darulaman; 1873-painotus, kaikki ennen 1978; oppaan ainoa nykytoteamus koskee matkustusturvallisuutta). Vanhan tekstin sotakappale korvattu lehden aineistolla. Saarivi puuttuu viela. Tarkista: kartta, Matkaopas, Historian tehtava',
   'v993 — KOLKATA: uusi lehti (kartta 10 kohteella Howrahista Kalighatiin, 10 nahtavyysjuttua; jako 1947 vain vaestonsiirtona). Vanhan tekstin Howrah-luku korjattu (150 000 jalankulkijaa). Saarivi puuttuu viela — saatoimittaja tekee kaikki 18 puuttuvaa rivia parhaillaan. Tarkista: kartta, Matkaopas, Historian tehtava',
@@ -362,6 +363,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '21.8.2026',
   valmiit: [
+    { id: 'mumbai', nimi: 'Mumbai', versio: 'v996' },
     { id: 'chennai', nimi: 'Chennai', versio: 'v995' },
     { id: 'kabul', nimi: 'Kabul', versio: 'v994' },
     { id: 'kolkata', nimi: 'Kolkata', versio: 'v993' },
@@ -379,6 +381,7 @@ export const TUOREET = {
     { id: 'kanton', nimi: 'Kanton', versio: 'v973' },
   ],
   tyossa: [
-    { id: 'mumbai', nimi: 'Mumbai' },
+    { id: 'colombo', nimi: 'Colombo' },
+    { id: 'karachi', nimi: 'Karachi' },
   ],
 };
