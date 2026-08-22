@@ -37197,6 +37197,33 @@ export const KULTTUURI_KATEGORIAT = {
        * kerrosta siinä järjestyksessä, jossa lehti ne kertoo.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 6 (omistaja 23.8.2026): pelin
+         * omia havainnekuvia peiliämpäristä, kolme vuorokaudenaikaa
+         * ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-bangkok-aamu.png',
+          selite: 'Wat Arun, Aamunkoiton temppeli, sai posliinilla '
+            + 'koristellun keskustorninsa 1800-luvun alkupuolella, ja '
+            + 'sen kuviot on ladottu kiinalaislaivojen '
+            + 'painolastiposliinin sirpaleista.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-bangkok-keskipaiva.png',
+          selite: 'Suuri palatsi rakennettiin 1782, kun Rama I siirsi '
+            + 'pääkaupungin Chao Phrayan itärannalle, ja sen '
+            + 'temppelissä asuu Thaimaan pyhin Smaragdi-Buddha.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-bangkok-ilta.png',
+          selite: 'Wat Pho on Bangkokin vanhimpia temppeleitä ja '
+            + 'thaimaalaisen hieronnan opetuksen kehto, jonka 46-metrinen '
+            + 'lepäävä Buddha valmistui 1832.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Chao Phraya and Wat Arun (7997321494).jpg',
           selite: 'Chao Phraya leveänä väylänä: veneitä kulkee joella, '
