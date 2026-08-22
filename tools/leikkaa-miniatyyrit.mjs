@@ -9,13 +9,24 @@
  * väri pysyy taustan toleranssissa. Rakennuksen SISÄLLÄ olevat
  * paperinväriset alueet säilyvät, koska tulva ei pääse musteviivan
  * yli — ja maalattu varjo säilyy, koska se on taustaa selvästi
- * tummempi. Rajapikselit saavat puolittaisen alfan, ettei reuna ole
+ * tummempi. Rajapikselit saavat liukuvan alfan, ettei reuna ole
  * veitsellä leikattu.
+ *
+ * AKVARELLIT (22.8.2026): sama tulvatäyttö kelpaa myös
+ * akvarelliminiatyyreille (tools/generoi-miniatyyrit.mjs --akvarelli).
+ * V1025-pilotin kuvista mitattuna paperi on tasainen (kynnys 26…40
+ * antaa saman tulva-alueen ±0,4 % pikseleistä) ja rakennuksen alla
+ * oleva varjolaveeraus on 50–85 päässä paperista eli säilyy. Kaksi
+ * asiaa täsmennettiin akvarellia varten: taustan sävy mitataan nyt
+ * KULMIEN mediaanina (laveeraus voi yltää lähelle reunaa ja vetäisi
+ * koko reunakehän keskiarvoa maalin suuntaan) ja sauma pehmennetään
+ * liukuvasti kahdella kynnyksellä kiinteän puolialfan sijaan, jotta
+ * haipuva laveeraus häviää paperiin eikä jätä terävää reunaa.
  *
  * Käyttö:  node tools/leikkaa-miniatyyrit.mjs [tiedosto.jpg …]
  *          Ilman argumentteja leikkaa kaikki assets/kartat/
  *          miniatyyrit/-kansion .jpg-kuvat.
- * Ulos:    samanniminen .webp (läpinäkyvyys, pienempi kuin PNG).
+ * Ulos:    samanniminen .webp (läpinäkyvä RGBA, pienempi kuin PNG).
  *          KATSO KUVAT SILMIN — vaalea rakennus ilman ääriviivaa
  *          voisi haljeta tulvalle.
  */
@@ -57,15 +68,26 @@ for (const nimi of tiedostot) {
     const kuvadata = piirto.getImageData(0, 0, L, K);
     const d = kuvadata.data;
 
-    // Taustan sävy: reunakehän keskiarvo.
-    let sr = 0; let sg = 0; let sb = 0; let n = 0;
-    const lisaa = (x, y) => {
-      const i = (y * L + x) * 4;
-      sr += d[i]; sg += d[i + 1]; sb += d[i + 2]; n += 1;
+    /*
+     * Taustan sävy: NELJÄN KULMAN mediaani. Kulmiin ei tyylikäskyn
+     * mukaan piirretä mitään, ja mediaani sietää yhdenkin sotkuisen
+     * kulman; koko reunakehän keskiarvo taas vinoutuisi, jos akvarellin
+     * laveeraus yltää reunaan asti. Seepiakuvilla mediaani ja vanha
+     * keskiarvo osuvat yhteen (mitattu ero ≤ 1 sävyaskel).
+     */
+    const P = Math.max(8, Math.round(Math.min(L, K) * 0.06));
+    const kulmat = [[0, 0], [L - P, 0], [0, K - P], [L - P, K - P]];
+    const mediaani = (k) => {
+      const arvot = [];
+      for (const [x0, y0] of kulmat) {
+        for (let y = y0; y < y0 + P; y++) {
+          for (let x = x0; x < x0 + P; x++) arvot.push(d[(y * L + x) * 4 + k]);
+        }
+      }
+      arvot.sort((a, b) => a - b);
+      return arvot[arvot.length >> 1];
     };
-    for (let x = 0; x < L; x++) { lisaa(x, 0); lisaa(x, K - 1); }
-    for (let y = 0; y < K; y++) { lisaa(0, y); lisaa(L - 1, y); }
-    const tr = sr / n; const tg = sg / n; const tb = sb / n;
+    const tr = mediaani(0); const tg = mediaani(1); const tb = mediaani(2);
     const etaisyys = (i) => Math.hypot(d[i] - tr, d[i + 1] - tg, d[i + 2] - tb);
 
     /*
@@ -95,14 +117,27 @@ for (const nimi of tiedostot) {
       if (y < K - 1) tyonna(x, y + 1);
     }
 
-    // Alfa: tausta pois, rajapikselit (taustan naapurit) pehmeiksi.
+    /*
+     * Alfa: tulva-alue pois, sauma liukuvasti pehmeäksi. Rajapikseli
+     * (tulvan naapuri) saa alfan sen mukaan, kuinka kaukana se on
+     * paperista: TOL (34) → läpinäkyvä, TAYSIN (55) → peittävä, väliltä
+     * lineaarisesti. Näin akvarellivarjon haipuva reuna sulaa paperiin,
+     * kun taas musteviivan reuna pysyy terävänä. (Ennen 22.8.2026
+     * rajapikseli sai kiinteän alfan 140, mikä puolestaan haalensi
+     * musteviivaa ja jätti haipuvan laveerauksen tasaisen näkyväksi.)
+     * Pehmennys koskee VAIN rajapikseleitä — rakennuksen sisällä oleva
+     * paperinvärinen ala pysyy peittävänä, kuten seepiakuvissa.
+     */
+    const TAYSIN = 55;
     for (let p = 0; p < L * K; p++) {
       if (tausta[p]) { d[p * 4 + 3] = 0; continue; }
       const x = p % L;
       const y = (p / L) | 0;
       const rajalla = (x > 0 && tausta[p - 1]) || (x < L - 1 && tausta[p + 1])
         || (y > 0 && tausta[p - L]) || (y < K - 1 && tausta[p + L]);
-      if (rajalla) d[p * 4 + 3] = 140;
+      if (!rajalla) continue;
+      const osuus = (etaisyys(p * 4) - TOL) / (TAYSIN - TOL);
+      d[p * 4 + 3] = Math.max(0, Math.min(255, Math.round(osuus * 255)));
     }
 
     /*
