@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 998, teksti: 'v998: Grafiikka-lehti — julistekatselmus työhuoneeseen' },
   { v: 997, teksti: 'v997: 18 puuttuvaa sääriviä täydennetty' },
   { v: 996, teksti: 'v996: Mumbai — uusi kaupunkilehti' },
   { v: 995, teksti: 'v995: Chennai — uusi kaupunkilehti' },
