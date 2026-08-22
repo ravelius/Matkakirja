@@ -49116,4 +49116,519 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MUMBAI (Opus 22.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kohdekarttaa, nähtävyysjuttuja eikä kategorioita ennen tätä.
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 22.8.2026): Mumbai, Chhatrapati Shivaji Terminus, Bori
+   * Bunder railway station, Gateway of India, Elephanta Caves,
+   * Dabbawala, Vada pav, Street food of Mumbai, Crawford Market,
+   * Seven Islands of Bombay, Hornby Vellard, Fort (Mumbai precinct),
+   * Flora Fountain, St. Thomas Cathedral Mumbai, Asiatic Society of
+   * Mumbai (ohjaa artikkeliin The Asiatic Society of Mumbai), Asiatic
+   * Society of Mumbai Town Hall, Bombay High Court, Rajabai Clock
+   * Tower, David Sassoon Library, Chhatrapati Shivaji Maharaj Vastu
+   * Sangrahalaya, Marine Drive Mumbai ja Mumbai Suburban Railway.
+   * Työaineistona docs/aasia-tyoaineisto/faktapohja-mumbai.md ja
+   * tarkistus-mumbai.md.
+   *
+   * SISÄLTÖLINJAUS on spec-asia.md:n kohta "Karachi/Kolkata/Mumbai
+   * ym.": siirtomaahistoria kerrotaan neutraalina historiana eikä
+   * nykypolitiikkaa käsitellä lainkaan. Painopiste on 1873-henkisessä
+   * aineistossa: ensimmäinen juna 1853, puuvillabuumi 1861–1865,
+   * linnoituksen muurien purku 1860-luvun alussa, Suezin kanava 1869,
+   * Crawford Market 1869, David Sassoonin kirjasto 1870 ja
+   * kolmentoista vuoden gotiikkaurakka, joka päättyi 1878.
+   *
+   * POIS JÄTETTY KOKONAAN: vuoden 2008 iskut (mainitaan sekä
+   * CST-artikkelissa että Marine Driven artikkelissa; nykyväkivalta ei
+   * kuulu lehteen millään muodolla), vuoden 1993 pommit, Intian jaon
+   * 1947 väestönsiirrot, Quit India -liike 1942 ja laivaston kapina
+   * 1946 (jälkimmäiset olisivat sinänsä neutraalia historiaa, mutta
+   * ne veisivät tilaa 1873-painotukselta ja faktapohja merkitsi ne
+   * itse ohuesti lähteistetyiksi), nimenmuutoksen 1995 puoluetausta,
+   * Dharavi ja asuinolot, katukaupan lupakiistat ja Vada pav
+   * -artikkelin puoluepolitiikka. Nimenmuutos itse on mukana
+   * neutraalina hallinnollisena tosiasiana (Nikosian "Antaa olla").
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, jotka koskevat näitä tekstejä ja
+   * jotka on siksi KIRJOITETTU AUKI LUKIJALLE (v925/v932:n tapa):
+   * 1) Milloin seitsemän saarta olivat yhtä maata. Hornby Vellard
+   *    -artikkeli sanoo "all islands were linked by 1838", Seven
+   *    Islands of Bombay -artikkeli "by 1845". Nosto H2 kertoo
+   *    molemmat vuodet ja sen, kummasta artikkelista kumpikin on.
+   * 2) Milloin linnoituksen muurit purettiin. Flora Fountain
+   *    -artikkeli sanoo 1860, St. Thomas Cathedral -artikkeli 1862 ja
+   *    David Sassoon Library -artikkeli vain "1860s". Oppaan neljäs
+   *    jakso sanoo kaikki kolme.
+   * 3) Milloin vanha Bori Bunderin asema purettiin. Aseman oma
+   *    artikkeli sanoo infoboksissa "Demolished in January 1882"
+   *    mutta leipätekstissä "after 1877, it was demolished"; sama
+   *    "after 1877" on CST-artikkelissa. Nosto M1 sanoo vain, että
+   *    asema purettiin ja tilalle nousi kymmenessä vuodessa uusi —
+   *    kumpaakaan vuotta ei väitetä, koska ne ovat ristiriidassa.
+   * 4) Elephantan veistosten vaurioittaja. Artikkeli sanoo suoraan,
+   *    että tutkijat ovat eri mieltä: osa ajoittaa vahingot
+   *    sulttaanikunnan aikaan, osa portugalilaisiin sotilaisiin.
+   *    Nosto M3 kertoo erimielisyyden eikä valitse puolta.
+   *
+   * TARKISTUSRAPORTIN KORJAUS ON TEHTY. Faktapohjan kohdekarttakohde
+   * "University of Mumbai (Fort-kampus)" oli virheellinen: sen
+   * koordinaatti tuli en-Wikipedian oman viallisen Coord-mallineen
+   * kautta ja osoitti Bycullaan viiden kilometrin päähän. Kampus on
+   * kartalla Rajabain kellotornina, jonka oma artikkeli antaa oikean
+   * pisteen. Perustelu maakartat.js:n mumbai-lohkossa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, eikä sitä ole tässä
+   * työssä lisätty: rinnakkainen säätoimittaja täydentää rivin.
+   * Matkaoppaan jakso 5 nojaa siksi en-Wikipedian Mumbai-artikkelin
+   * ilmasto-osioon ja SANOO SEN ÄÄNEEN (Samarkandin, Lhasan ja
+   * Kolkatan malli v965–v983). Jakso kertoo lisäksi, että artikkelin
+   * kuukausitaulukko on Santacruzin lentoaseman asemalta pohjoisissa
+   * lähiöissä eikä niemen kärjestä, ja että ero näkyy suoraan
+   * sademäärässä (2 502 mm lähiöissä, 2 213 mm kaupunkialueella) —
+   * mittauspisteen selittäminen on Siinain ja Petran ennakkotapaus.
+   * Kun ERA5-rivi lisätään, jakso 5 on kirjoitettava rivin omista
+   * luvuista. Mittauspiste olisi keskusta 18,94 / 72,83.
+   *
+   * KUVAT. Kansikarusellissa on kolme LAAJAA yleiskuvaa kaupungin eri
+   * puolilta (omistajan linjaus 21.8.2026): Back Bayn kaari lännessä,
+   * satama ja Gateway of India kaakossa, Oval Maidanin gotiikkarivi
+   * keskellä. Kolme aihetoistoa on tietoinen ja Xi'anin terrakotta-
+   * kuvien ennakkotapaus: asemasta on kolme kuvaa kolmelta
+   * etäisyydeltä (kartan jutussa julkisivun siipi, oppaan kannessa
+   * koko kupoli, nostossa 1890-luvun valokuva), Gateway of Indiasta
+   * kolme (kansikuva mereltä, noston kaiverrus, kartan jutussa
+   * laituri) ja Elephantasta kaksi (avauskuvana sali, nostossa
+   * Trimurti). Kaupungin valokuvakorteissa (asia-lisat-valokuvat.js)
+   * jo käytettyjä tiedostoja ei ole otettu uudelleen.
+   */
+  mumbai: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mumbai',
+      johdanto: 'Seitsemästä matalasta saaresta kuroutui täyttötöillä '
+        + 'yksi kapea niemi, ja sen kärkeen nousi puuvillan ja sataman '
+        + 'kauppakaupunki. Goottilaiset korttelit seisovat yhä, mutta '
+        + 'nimi on ollut vuodesta 1995 Mumbai.',
+      kansikuvat: [
+        {
+          tiedosto: 'Mumbai Skyline from Marine Drive.JPG',
+          selite: 'Back Bayn kaari Marine Driven rannalta: oikealla '
+            + 'kasautuvat aallonmurtajan betonijalat, ja vastarannalla '
+            + 'kaupungin tornirivi häämöttää utuun.',
+          lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'View of Gateway of India Along with the Taj Palace Hotel from the Sea.JPG',
+          selite: 'Satamasta katsottuna rannassa seisovat Taj-hotellin '
+            + 'punainen kupoli, sen tornirakennus ja basalttinen Gateway '
+            + 'of India, ja edustalla kulkee matkustajalautta.',
+          lahde: 'HoneyB (Agra), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Bombay High Court and Rajabai Clock Tower from Oval Maidan, Mumbai.jpg',
+          selite: 'Oval Maidanin nurmen takaa nousevat palmurivin yli '
+            + 'korkeimman oikeuden punaiset katot ja Rajabain '
+            + 'kellotorni.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: luola, markkinahalli ja rantabulevardi — kaupungin
+       * kolme kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (kallioon hakatut temppelit, 1800-luvun kauppakaupunki,
+       * 1900-luvun täyttömaa).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Main mandapa and pillars in Cave 1 of Elephanta Caves.jpg',
+          selite: 'Elephantan pääluolan sali on hakattu yhtenäiseen '
+            + 'basalttiin, ja sen paksut pylväät kannattavat koko mäen '
+            + 'painoa.',
+          lahde: 'Saankav, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Crawford Market 03.jpg',
+          selite: 'Crawford Marketin torni kohoaa keltaisesta Kurlan '
+            + 'kivestä, ja sen huipulla on peltikatteinen puinen lyhty.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Seksaria (left) and other Art Deco buildings at Marine Drive, Mumbai.jpg',
+          selite: 'Marine Driven varrella seisoo rivi 1930-luvun art '
+            + 'deco -taloja pyöristettyine parvekkeineen ja '
+            + 'pystyraitoineen.',
+          lahde: 'DesiBoy101, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Puuvillapaalit ja kuusitoista tulipaloa',
+          tiedosto: 'KITLV A742 - Treinstation Victoria Terminus te Bombay in India, KITLV 90283.tiff',
+          teksti: 'Intian ensimmäinen matkustajajuna lähti 16. huhtikuuta '
+            + '1853 Bori Bunderin asemalta Thanaan. Asema oli vaatimaton: '
+            + 'yksi raidepari ja puisia rakennuksia, joita pääinsinööri '
+            + 'piti 1860 yhä väliaikaisina, ja meri löi aaltoja '
+            + 'laitureille asti. Yhdysvaltain sisällissodan aikana '
+            + 'Britannian puuvillan tarve kääntyi Intiaan, ja '
+            + 'asemasta tuli varastopiha, jossa paalit odottivat maassa '
+            + 'laivausta. Alueella syttyi 28. maaliskuuta 1864 '
+            + 'saman aamun aikana kuusitoista erillistä tulipaloa, '
+            + 'jotka sammutettiin kahdella paloruiskulla; vasta sen '
+            + 'jälkeen paaleille rakennettiin katokset ja varastot. '
+            + 'Vanha asema purettiin, ja tilalle nousi kymmenessä '
+            + 'vuodessa Victoria Terminus.',
+          selite: 'Clifton & Co:n valokuvassa uusi Victoria Terminus '
+            + 'levittäytyy puiden takana hevosvaunujen aikaan, ja kuvan '
+            + 'yläkulmaan on merkitty albumin oma järjestysnumero.',
+          lahde: 'Clifton & Co, Wikimedia Commons (PD)',
+          wiki: 'Chhatrapati Shivaji Terminus',
+        },
+        {
+          otsikko: 'Riemuportti, jolle ei rakennettu tietä',
+          tiedosto: 'Commemorative Inscription for the Landing of King George V and Queen Mary at Gateway of India, 1911.jpg',
+          teksti: 'Kuningas Yrjö V ja kuningatar Mary nousivat maihin '
+            + 'Apollo Bunderissa 2. joulukuuta 1911, ja heitä varten '
+            + 'paikalle pystytettiin pahvinen malli — oikeaa '
+            + 'muistomerkkiä ei ollut alettu rakentaa. Peruskivi '
+            + 'laskettiin 31. maaliskuuta 1913, George Wittetin '
+            + 'lopullinen suunnitelma '
+            + 'hyväksyttiin elokuussa 1914, ja rantaa piti täyttää ja '
+            + 'meriseinää rakentaa vuosina 1915–1919 ennen kuin '
+            + 'keltaisesta basaltista voitiin muurata kaksikymmentäkuusi '
+            + 'metriä korkea kaari. Portti valmistui 1924 ja avattiin '
+            + 'yleisölle joulukuun neljäntenä päivänä. Rahat loppuivat '
+            + 'kesken, eikä sille johtavaa juhlakatua koskaan rakennettu: '
+            + 'portti seisoo siksi vinossa kulmassa katuun nähden.',
+          selite: 'Kaaren yläpuolelle on hakattu kiveen, että portti on '
+            + 'pystytetty muistoksi hallitsijaparin maihinnoususta '
+            + 'joulukuun toisena päivänä vuonna MCMXI.',
+          lahde: 'iMahesh, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gateway of India',
+        },
+        {
+          otsikko: 'Norsu, joka lähti saarelta',
+          tiedosto: 'Trimurti Elephanta Caves.jpg',
+          teksti: 'Gharapurin saarella yksitoista kilometriä sataman '
+            + 'poikki on kallioon hakattuja temppeleitä, jotka ajoitetaan '
+            + 'useimmin 500- ja 600-luvuille. Kuuluisin niistä on '
+            + 'kolmikasvoinen Trimurti Sadashiva, seitsemän metriä korkea '
+            + 'Shiva-kuva, jonka kasvot esittävät luomista, säilyttämistä '
+            + 'ja hävittämistä. Saaren nimen antoivat portugalilaiset, '
+            + 'jotka löysivät rannalta kivisen norsun ja kutsuivat '
+            + 'paikkaa Elefanteksi. Veistokset ovat pahoin '
+            + 'vaurioituneet, ja tutkijat ovat eri mieltä syystä: osa '
+            + 'ajoittaa vahingot sulttaanikunnan aikaan, osa '
+            + 'portugalilaisiin sotilaisiin. Norsu yritettiin viedä 1864 '
+            + 'Englantiin, se hajosi matkalla ja koottiin uudelleen '
+            + '1914.',
+          selite: 'Trimurtin kolmet kasvot on veistetty luolan '
+            + 'takaseinään, ja keskimmäisen päähine ulottuu lähes '
+            + 'kattoon asti.',
+          lahde: 'Ricardo Martins, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Elephanta Caves',
+        },
+        {
+          otsikko: 'Lounasrasia, joka löytää perille',
+          tiedosto: 'Dabbawallah bicycle.jpg',
+          teksti: '1800-luvun lopulla kaupunkiin muutti väkeä joka '
+            + 'puolelta Intiaa, pikaruokaloita ei ollut, ja jokainen '
+            + 'halusi syödä oman yhteisönsä ruokaa. Vuonna 1890 Mahadeo '
+            + 'Havaji Bachche perusti noin sadan miehen voimin palvelun, '
+            + 'joka nouti kotona keitetyt ateriat aamupäivällä ja vei ne '
+            + 'konttoreihin ennen lounasaikaa. Rasiaan merkitään '
+            + 'keräyspisteen lyhenne, lähtöaseman väri ja määräaseman '
+            + 'numero, ja loput merkit kertovat kantajan, talon ja '
+            + 'kerroksen. Kuljetus kulkee junilla ja polkupyörillä, ja '
+            + 'jokainen kantaja hankkii itse kaksi pyörää, puisen '
+            + 'laatikon, valkoisen puvun ja lakin. Nykyään noin '
+            + 'viisituhatta miestä liikuttaa lähes kaksisataatuhatta '
+            + 'rasiaa päivässä.',
+          selite: 'Dabbawalan polkupyörä nojaa aitaan täyteen lastattuna: '
+            + 'teräsrasioita, kangaskasseja ja hihnoja riippuu molemmin '
+            + 'puolin takapyörää.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dabbawala',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Close-up of Chhatrapati Shivaji Terminus.jpg',
+          selite: 'Aseman keskuskupolin päällä seisoo naishahmo, joka '
+            + 'esittää Edistystä soihtu kädessään, ja alhaalla portin '
+            + 'pielissä makaa kaksi kivileijonaa.',
+          lahde: 'Joe Ravi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Mumbai on Maharashtran pääkaupunki ja Intian talouden '
+          + 'keskus, mutta matkailijan Mumbai on pieni: melkein kaikki on '
+          + 'eteläisen niemen kärjessä kolmen kilometrin matkalla '
+          + 'Crawford Marketilta Gateway of Indialle. Niemi on kapea, '
+          + 'kilometrin tai kahden levyinen, ja sen molemmin puolin on '
+          + 'merta — lännessä Back Bay ja Marine Drive, idässä satama '
+          + 'laitureineen. Elephantan luolasaari on oma retkensä '
+          + 'yhdentoista kilometrin päässä sataman toisella puolella, '
+          + 'eikä se siksi ole tämän sivun kartalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Mumbai',
+          taitto: 'opas',
+          teksti: 'Kaksi merta, yksi kapea niemi ja niiden väliin ahdettu '
+            + 'goottilainen kortteli — ja kaiken alla saaria, joita ei '
+            + 'enää ole.',
+          nosto: 'Lähijunien kaksitoistavaunuiset rungot on mitoitettu '
+            + '1 700 matkustajalle. Ruuhka-aikaan niissä kulkee lähes '
+            + '4 500.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentäen saavutaan Chhatrapati Shivaji Maharajin '
+                + 'kansainväliselle lentoasemalle, joka on Intian '
+                + 'toiseksi vilkkain: vuosina 2023–2024 sen kautta kulki '
+                + '52,8 miljoonaa matkustajaa. Toinen kansainvälinen '
+                + 'kenttä avattiin metropolialueelle joulukuussa 2025. '
+                + 'Kaukojunat lähtevät viideltä asemalta, joista '
+                + 'tunnetuin on Chhatrapati Shivaji Maharaj Terminus '
+                + 'niemen kärjessä; siinä on kahdeksantoista laituria, '
+                + 'joista seitsemän lähiliikenteelle ja yksitoista '
+                + 'kaukojunille. Kaupungin sisällä liikutaan '
+                + 'lähijunilla, joita sanotaan localeiksi. Verkko on 319 '
+                + 'kilometriä pitkä, sillä ajettiin vuonna 2010 runsaat '
+                + '2 200 vuoroa päivässä, ja se on kaupungin '
+                + 'liikenteen selkäranka. Yksiraiteinen monorail '
+                + 'avattiin helmikuussa 2014 ja metron ensimmäinen linja '
+                + 'kesäkuussa 2014. Elephantan luolille mennään lautalla '
+                + 'Gateway of Indian laiturilta: matka kestää noin '
+                + 'tunnin, ja lautat kulkevat päivittäin paitsi '
+                + 'maanantaisin, jolloin luolat ovat kiinni.',
+              kuva: {
+                tiedosto: 'Local train leaving CST.jpg',
+                selite: 'Central Railwayn violettivalkoinen lähijuna '
+                  + 'lähtee asemalta ovet auki, ja yhden oven kylkeen on '
+                  + 'maalattu naisille varatun vaunun merkki.',
+                lahde: 'Shishirdasika, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on 603 neliökilometriä ja jakautuu '
+                + 'kahteen piirikuntaan. Eteläinen niemi eli Mumbai City '
+                + 'on niistä pienempi, 157 neliökilometriä, ja sitä '
+                + 'sanotaan yhä saarikaupungiksi, vaikka saaria ei enää '
+                + 'ole. Suurin osa kaupungista makaa kymmenen ja '
+                + 'viidentoista metrin välissä merenpinnan yläpuolella, '
+                + 'ja keskikorkeus on neljätoista metriä; pohjoisessa '
+                + 'maasto nousee mäkiseksi, ja korkein kohta on '
+                + 'Powai–Kanherin harjulla 450 metrissä. Rannikko on '
+                + 'rosoinen: idässä lahtia ja mangrovesoita, lännessä '
+                + 'hiekkaa ja kalliota. Peruskallio on Deccanin mustaa '
+                + 'basalttia, samaa kiveä, johon Elephantan temppelit on '
+                + 'hakattu. '
+                + 'Kaupungin sisällä on Sanjay Gandhin kansallispuisto, '
+                + 'runsaat sata neliökilometriä metsää. Matalalla '
+                + 'maalla on hintansa: monsuunisateet tulvivat '
+                + 'säännöllisesti matalimpiin kortteleihin.',
+              kuva: {
+                tiedosto: 'Mumbai Bandra-Worli Sea Link.jpg',
+                selite: 'Vinoköysisilta kaartuu matalan kivirannan yli, '
+                  + 'ja sen takana erottuu kaupungin länsirannan '
+                  + 'tornirivi.',
+                lahde: 'Rutiknatekar, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: katuruoka',
+              teksti: 'Mumbai tunnetaan katuruoastaan, ja syöjät tulevat '
+                + 'kaikista tuloluokista: kojut ovat tiheimmillään '
+                + 'oppilaitosten ja rautatieasemien kulmilla, ja koko '
+                + 'kortteliin keskittynyttä myyntikujaa sanotaan '
+                + 'marathiksi khau galliksi eli ruokakujaksi. Kaupungin '
+                + 'kuuluisin suupala on vada pav: mausteinen '
+                + 'perunapyörykkä paistetaan kikhernejauhotaikinassa ja '
+                + 'pannaan pehmeän pav-sämpylän väliin chutneyn ja '
+                + 'paistetun vihreän chilin kanssa. Sitä myydään '
+                + 'kaupungissa yli kahdessakymmenessätuhannessa kojussa, '
+                + 'ja sen toinen nimi on bombayburgeri. Muita '
+                + 'vakiovalikoiman lajeja ovat idätetyistä '
+                + 'mattipavuista keitetty tulinen misal pav, pav bhaji '
+                + 'sekä bhel puri ja pani puri. Girgaon Chowpattyn '
+                + 'ranta tunnetaan bhel purista ja kulfista, jäädytetystä '
+                + 'maitojälkiruoasta, ja teenmyyjät kiertävät '
+                + 'kortteleita polkupyörillä.',
+              kuva: {
+                tiedosto: 'Vada pav and Misal pav.jpg',
+                selite: 'Kahdella lautasella on vada pav eli '
+                  + 'perunapyörykkä sämpylän välissä ja misal pav eli '
+                  + 'tulinen papukastike oman sämpylänsä kanssa.',
+                lahde: 'आशीष भटनागर, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: muurit kaatuvat',
+              teksti: 'Vanhan kaupungin ympärillä oli linnoitus, jonka '
+                + 'kauppakomppania rakensi vuosina 1686–1743: muuri, '
+                + 'vallihauta, avoin esplanadi ja kolme porttia — Apollo '
+                + 'Gate, Church Gate ja Bazaar Gate. Kuvernööri Bartle '
+                + 'Freren aikana muurit purettiin, jotta kasvava '
+                + 'kaupunki saisi tilaa ja terveellisemmät kadut; '
+                + 'purkuvuodesta Wikipedia on eri mieltä itsensä kanssa, '
+                + 'sillä Flora Fountainin artikkeli sanoo 1860, St. '
+                + 'Thomasin katedraalin artikkeli 1862 ja David '
+                + 'Sassoonin kirjaston artikkeli vain 1860-lukua. Kirkon '
+                + 'portin paikalle pystytettiin 1864 suihkulähde, jonka '
+                + 'suunnitteli Richard Norman Shaw ja veisti Portlandin '
+                + 'kiveen James Forsythe; se maksoi 47 000 rupiaa eli '
+                + '9 000 puntaa, josta 20 000 rupiaa oli Cursetjee '
+                + 'Fardoonjee Parekhin lahjoitus. Kadut levennettiin, ja '
+                + 'seuraavan neljäntoista vuoden aikana vapautuneelle '
+                + 'maalle nousi koko se goottilainen rivistö, jonka '
+                + 'takia kaupunkiin tullaan katsomaan arkkitehtuuria.',
+              kuva: {
+                tiedosto: 'Flora fountain, Mumbai 01.jpg',
+                selite: 'Suihkulähteen huipulla seisoo kukkien jumalatar '
+                  + 'Flora, ja alemman altaan kulmissa istuu '
+                  + 'vuodenaikoja esittäviä hahmoja.',
+                lahde: 'Pratishkhedekar, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Mumbaista puuttuu vielä, joten nämä '
+                + 'luvut ovat en-Wikipedian Mumbai-artikkelin '
+                + 'ilmasto-osiosta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Artikkelin kuukausitaulukko on lisäksi '
+                + 'Santacruzin lentoaseman mittausasemalta pohjoisista '
+                + 'lähiöistä eikä niemen kärjestä, ja ero näkyy heti '
+                + 'sateessa: lähiöissä vettä tulee vuodessa runsaat '
+                + '2 500 millimetriä ja eteläisellä kaupunkialueella '
+                + 'noin 2 200. Ilmasto on trooppinen savanni-ilmasto, '
+                + 'lähiöissä sateisempi monsuuni-ilmasto. Vuoden '
+                + 'keskilämpötila on kaksikymmentäseitsemän astetta, '
+                + 'keskimääräinen ylin kaupungissa kolmekymmentäyksi ja '
+                + 'alin kaksikymmentäneljä. Lokakuusta toukokuuhun '
+                + 'kaupunki on käytännössä sateeton. Lounaismonsuuni '
+                + 'kestää kesäkuusta syyskuun loppuun, ja heinäkuussa '
+                + 'vettä tulee mittausasemalla yli yhdeksänsataa '
+                + 'millimetriä. Kävelijälle paras aika on '
+                + 'joulu–helmikuu, jolloin on viileintä; maalis–toukokuu '
+                + 'on vuoden kuumin jakso. Ääripäät vuodesta 1951 '
+                + 'alkaen ovat 42,2 astetta huhtikuussa ja 7,4 astetta '
+                + '27. tammikuuta 1962.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Portugalin myötäjäisistä Englannin kruunulle ja kruunulta '
+        + 'kauppakomppanialle kymmenen punnan vuosivuokralla. Väliin '
+        + 'mahtuu seitsemän saaren yhdistäminen, puuvillabuumi ja nimi, '
+        + 'joka palasi.',
+      tehtava: {
+        kysymys: 'Kuinka suurella vuosivuokralla Englannin kruunu '
+          + 'vuokrasi Bombayn saaret Itä-Intian kauppakomppanialle '
+          + 'vuonna 1668?',
+        vaihtoehdot: [
+          'Kymmenellä punnalla',
+          'Sadalla punnalla',
+          'Tuhannella punnalla',
+          'Kymmenellätuhannella punnalla',
+        ],
+        oikea: 0,
+        fakta: 'Kuninkaallinen valtakirja 27. maaliskuuta 1668 antoi '
+          + 'saaret komppanialle kymmenen punnan vuosivuokraa vastaan, ja '
+          + 'väkiluku kuusinkertaistui neljässätoista vuodessa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Myötäjäiset ja kymmenen punnan vuokra',
+          tiedosto: 'AMH-6748-NA Two views of the English fort in Bombay.jpg',
+          teksti: 'Gujaratin sulttaani Bahadur Shah pelkäsi mogulikeisari '
+            + 'Humayunia ja allekirjoitti 23. joulukuuta 1534 Portugalin '
+            + 'kanssa Basseinin sopimuksen; seitsemän Bombayn saarta '
+            + 'luovutettiin 25. lokakuuta 1535. Portugalilaiset '
+            + 'rakensivat saarille kirkkoja ja linnoituksia ja '
+            + 'kirjoittivat nimen muotoon Bombaim. '
+            + 'Toukokuun 11. päivänä 1661 saarten enemmistö siirtyi '
+            + 'Englannin kruunulle osana Catherine of Braganzan '
+            + 'myötäjäisiä, kun hän avioitui Kaarle II:n kanssa. Seitsemän '
+            + 'vuotta myöhemmin kruunu vuokrasi ne Itä-Intian '
+            + 'kauppakomppanialle kymmenen punnan vuosivuokralla, ja '
+            + 'väkiluku nousi kymmenestätuhannesta '
+            + 'kuuteenkymmeneentuhanteen vuoteen 1675 mennessä.',
+          selite: 'Noin vuoden 1665 käsinväritetyssä kaiverruksessa '
+            + 'englantilainen kauppahuone näkyy kahdesta suunnasta, ja '
+            + 'painaja on kirjoittanut alalaitaan hollanniksi '
+            + '"Englantilainen konttori Bombaijssa".',
+          lahde: 'Anoniem / Anonymous (engraver / etcher), Wikimedia Commons (PD)',
+          wiki: 'Mumbai',
+        },
+        {
+          otsikko: 'Seitsemästä saaresta yksi',
+          tiedosto: '1764 Bellin Map of Bombay (Mumbai) India - Geographicus - Bombay-bellin-1750.jpg',
+          teksti: 'Kauppakomppania siirsi pääkonttorinsa Suratista '
+            + 'Bombayhin 1687, ja kaupungista tuli Bombayn presidenssin '
+            + 'keskus. Saaret olivat silti yhä erillään, ja nousuvesi '
+            + 'tulvi niiden välisille matalikoille. Vuonna 1782 kuvernööri '
+            + 'William Hornby aloitti padon, joka sulki Worlin salmen eli '
+            + 'Suuren murtuman; työ maksoi arviolta satatuhatta puntaa ja '
+            + 'valmistui 1784, ja kerrotaan, ettei Hornby välittänyt '
+            + 'komppanian kiellosta eikä keskeytyskäskystä. '
+            + 'Pengertä seurasivat muut: Sionin '
+            + 'pengertie 1803, Colaban 1838 ja Mahim–Bandran 1845. Milloin '
+            + 'saaret olivat lopulta yhtä maata, riippuu artikkelista — '
+            + 'Hornby Vellard sanoo 1838 ja Seven Islands of Bombay 1845.',
+          selite: 'Vuoden 1764 ranskalaisessa merikartassa Bombayn saari, '
+            + 'Salsette ja Elefantin saari ovat vielä toisistaan erillään, '
+            + 'ja kartan oma nimikilpi on vasemmassa alakulmassa.',
+          lahde: 'Jacques-Nicolas Bellin, Wikimedia Commons (PD)',
+          wiki: 'Hornby Vellard',
+        },
+        {
+          otsikko: 'Puuvillabuumi ja sen laskut',
+          tiedosto: 'KITLV 92018 - Unknown - Elphinstone Circle, seen from the town hall, at Bombay in India - Around 1870.tiff',
+          teksti: 'Yhdysvaltain sisällissota 1861–1865 katkaisi Britannian '
+            + 'puuvillantuonnin Amerikasta, ja Bombaysta tuli hetkessä '
+            + 'maailman johtava puuvillan kauppapaikka. Rahaa tuli niin '
+            + 'nopeasti, että kaupunki rakensi samalla vuosikymmenellä '
+            + 'itselleen kokonaan uuden keskustan vanhan linnoituksen '
+            + 'paikalle. Vuonna 1869 avattu Suezin kanava vakiinnutti '
+            + 'aseman: Bombaysta tuli yksi Arabianmeren suurimmista '
+            + 'satamista, kun Euroopasta ei enää tarvinnut purjehtia '
+            + 'Afrikan ympäri. Nousu ei ollut katkeamaton. Syyskuussa '
+            + '1896 kaupunkiin iski buboninen rutto, joka vaati yli '
+            + '20 000 kuollutta ja ajoi suuren osan asukkaista pois; '
+            + 'tekstiiliteollisuus toipui hitaasti.',
+          selite: 'Noin vuoden 1870 valokuvassa Elphinstone Circlen '
+            + 'puisto suihkulähteineen on vasta istutettu, ja sen takana '
+            + 'kohoaa St. Thomasin katedraalin torni.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Mumbai',
+        },
+        {
+          otsikko: 'Nimi, joka palasi',
+          tiedosto: 'Bombay. Hindoo-temple in the Kalkadevi Road LCCN2017658170.jpg',
+          teksti: 'Kaupungin nimi tulee Mumbadevistä, koli-kalastajien '
+            + 'suojelusjumalattaresta, ja marathin sanasta aai eli äiti. '
+            + 'Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden '
+            + '1512 jälkeen muistiin muodon Bombaim, ja 1500- ja '
+            + '1600-luvun asiakirjoissa nimi esiintyy toistakymmentä '
+            + 'kertaa eri asussa. Englantilaiset '
+            + 'muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä '
+            + 'syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää '
+            + 'lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi '
+            + 'kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan '
+            + 'väärä: jumalattarella on saarella oma temppelinsä. '
+            + 'Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi '
+            + 'marraskuussa 1995.',
+          selite: 'Vuoden 1890 photochrom-vedoksessa hindutemppelin '
+            + 'veistoksellinen julkisivu reunustaa Kalbadevi Roadia, ja '
+            + 'kadulla kulkee härkävankkureita ja kantajia.',
+          lahde: 'Photoglob Co., publisher, Wikimedia Commons (PD)',
+          wiki: 'Mumbai',
+        },
+      ],
+    },
+  ],
 };

@@ -2998,6 +2998,73 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  mumbai: {
+    /*
+     * ETELÄISEN NIEMEN KÄRKI CRAWFORD MARKETILTA GATEWAYLLE
+     * (22.8.2026). Ruutu on 4,0 × 4,0 km ja se on koko niemi
+     * poikkisuunnassa: läntisenä reunana Back Bay ja Marine Drive,
+     * itäisenä satama-allas. Sen sisään mahtuvat lehden kaikki
+     * kymmenen kohdetta — pohjoisessa Crawford Market, keskellä
+     * Fortin gotiikkakortteli CST:stä korkeimman oikeuden ja
+     * Rajabain tornin kautta museolle, etelässä Gateway of India.
+     *
+     * KESKIPISTE EI OLE WIKIDATAN "MUMBAI", ja se on työn tärkein
+     * karttapäätös. Wikidatan piste (19,0761 / 72,8775) osuu
+     * nykyisen suurkaupunkialueen hallinnolliseen keskustaan
+     * kaksitoista–kahdeksantoista kilometriä lehden kohteista
+     * pohjoiseen, eli 1873-ajan kaupunki jäisi sen ympärille
+     * piirretyn ruudun ulkopuolelle kokonaan. Faktapohja ja
+     * tarkistus (docs/aasia-tyoaineisto/faktapohja-mumbai.md ja
+     * tarkistus-mumbai.md, osiot 4 ja 1) päätyivät molemmat samaan:
+     * keskipisteeksi otetaan Fort-alue. Ruudun keskus on siksi
+     * 18,9355 / 72,8330, joka on runsaan sadan metrin päässä
+     * tarkistusraportin ehdottamasta kuuden ydinpisteen keskiarvosta.
+     *
+     * NELIÖRAJAUS ON HARKITTU, kuten Kolkatassa ja Varanasissa.
+     * Kohteet ovat luonnostaan vain 2,8 × 0,7 kilometrin kaistale
+     * pohjois–etelä-suunnassa, ja niiden ympärille vedetty tiukka
+     * rajaus olisi piirtynyt kapeaksi pystynauhaksi, jossa meri ei
+     * näkyisi kummallakaan puolella. Nyt ruutu ylettyy molemmille
+     * rannoille, ja kartta kertoo sen mitä siitä pitää nähdä:
+     * Mumbai on kapea niemi, jonka molemmin puolin on merta.
+     *
+     * meri: true, koska Arabianmeri ja satama-allas ovat OSM:ssä
+     * avoimia vesialueita, jotka eivät sulkeudu rajauksen sisällä:
+     * vesi tulee kuvaan lännestä ja idästä ja jatkuu etelään, jolloin
+     * pelkkä monikulmiotäyttö jättäisi meren paperin väriseksi. Sama
+     * ratkaisu kuin Kolkatan Hooghlyllä ja Yangonin joella.
+     *
+     * ELEPHANTA-LUOLAT EIVÄT OLE KARTALLA EIVÄTKÄ KAINALOSSA, vaikka
+     * ne ovat kaupungin toinen maailmanperintökohde. Ne ovat
+     * en-Wikipedian koordinaateista (18,9633 / 72,9314) laskien
+     * yksitoista kilometriä itään keskipisteestä eli kauempana kuin
+     * yksikään kainalo tässä kartastossa (Medinan Quba 3,5 km,
+     * Adenin Tawahi 6 km), ja ruudun venyttäminen niin pitkälle
+     * puristaisi kaikki kymmenen ydinkohdetta läntiseen reunaan.
+     * Luolat kerrotaan kaupunkisivun nostossa ja matkaoppaassa
+     * (Medinan Uhud-vuoren ja Kolkatan Dakshineswarin ratkaisu).
+     *
+     * FLORA FOUNTAIN JA TAJ MAHAL PALACE JÄIVÄT POIS PISTELISTALTA.
+     * Suihkulähde on en-Wikipedian koordinaateista (18,9325 /
+     * 72,8317) laskien 220 metrin päässä St. Thomasin katedraalista
+     * ja hotelli 150 metrin päässä Gateway of Indiasta, eli
+     * numeroympyrät olisivat menneet lähes sisäkkäin (Petran, Mekan
+     * ja Singaporen oppi). Molemmat ovat silti ruudun sisällä ja
+     * näkyvät kartalla aukiona ja korttelina; suihkulähde kerrotaan
+     * matkaoppaan neljännessä jaksossa ja hotelli kansikuvassa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kantonissa ja Kolkatassa: Oval Maidanin ja Cross
+     * Maidanin polut, Kala Ghodan aukio, Horniman Circlen puisto ja
+     * Gateway of Indian laiturialue ovat OSM:ssä jalankulkualueita ja
+     * huoltoteitä, ja ilman lippuja kartan tihein osa jäisi tyhjäksi
+     * paperiksi.
+     */
+    rajat: { pohjoinen: 18.9535, etela: 18.9175, lansi: 72.8140, ita: 72.8520 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*

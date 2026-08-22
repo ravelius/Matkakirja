@@ -8147,6 +8147,73 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'San Thomen basilika', lat: 13.033611, lon: 80.277778 },
     ],
   },
+  /*
+   * MUMBAIN KOHDEKARTTA (22.8.2026). Rajaus on 4,0 × 4,0 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Xi'anissa, Kantonissa ja Kolkatassa. Piirtoperustelut,
+   * meri-lipun syy ja poisjätöt ovat tools/piirra-kaupunkikartta.mjs:n
+   * mumbai-lohkossa.
+   *
+   * KESKIPISTE ON FORT-ALUE EIKÄ WIKIDATAN "MUMBAI", ja se on tämän
+   * kartan tärkein päätös. Wikidatan kaupunkipiste (19,0761 /
+   * 72,8775) osoittaa nykyisen suurkaupunkialueen hallinnolliseen
+   * keskustaan, joka on kaikista näistä kymmenestä kohteesta
+   * kahdentoista–kahdeksantoista kilometrin päässä pohjoisessa;
+   * riippumaton tarkistus vahvisti saman ilmiön OSM:n Nominatimista
+   * (19,0550 / 72,8692). 1873-ajan kaupunki on eteläisen niemen
+   * kärjessä, ja rajaus on siksi vedetty sinne.
+   *
+   * KOORDINAATIT OVAT KAHDESSA MUODOSSA, ja jako on kirjattu tähän,
+   * koska sitä ei näe kohdelistasta. Crawford Market, Marine Drive,
+   * CSMT, Town Hall, Rajabain kellotorni, David Sassoonin kirjasto,
+   * Prince of Walesin museo ja Gateway of India ovat artikkelien
+   * omista {{Coord}}-arvoista desimaaleina (haettu en-Wikipediasta
+   * 22.8.2026). St. Thomasin katedraali ja korkein oikeus ovat
+   * asteina, minuutteina ja sekunteina, ja ne on muunnettu
+   * desimaaleiksi tässä: 18°55'54"N 72°50'1"E = 18,931667 /
+   * 72,833611 ja 18°55'52,26"N 72°49'49,66"E = 18,931183 /
+   * 72,830461.
+   *
+   * YKSI VIRHEELLINEN KOORDINAATTI ON KORJATTU. Faktapohja antoi
+   * yliopiston Fort-kampukselle arvon 18,9750 / 72,8258, joka on
+   * peritty suoraan en-Wikipedian "University of Mumbai" -artikkelin
+   * omasta Coord-mallineesta; riippumaton tarkistus osoitti sen
+   * käänteisgeokoodauksella Bycullaan, runsaan viiden kilometrin
+   * päähän kampukselta. Kampus on kartalla sen tunnetuimmalla
+   * maamerkillä eli Rajabain kellotornilla, jonka oma artikkeli antaa
+   * 18,92964 / 72,82999 — sama piste kymmenen metrin tarkkuudella
+   * kuin tarkistuksen OSM-haku (18,9297 / 72,8300).
+   *
+   * MARINE DRIVE ON PISTEENÄ POIKKEUS, koska se on kolmen kilometrin
+   * mittainen katu eikä rakennus. Sen artikkelin {{Coord}} (18,944 /
+   * 72,823) osoittaa kaaren keskikohtaan, ja se on kartalla juuri
+   * siellä missä kadun pitääkin olla — meren ja korttelirivin
+   * välissä. Kadun päät kerrotaan jutussa.
+   *
+   * KAINALOA EI OLE: kaikki kymmenen kohdetta mahtuvat pääruutuun,
+   * kuten Kantonissa, Samarkandissa, Kathmandussa ja Kolkatassa.
+   */
+  mumbai: {
+    polku: 'assets/kartat/mumbai-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 18.9535, etela: 18.9175, lansi: 72.814, ita: 72.852 },
+    esittely: 'Kohteet ovat kaikki eteläisen niemen kärjessä, Crawford '
+      + 'Marketin ja Gateway of Indian välisellä kolmen kilometrin '
+      + 'matkalla. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Crawford Market', lat: 18.947414, lon: 72.83471 },
+      { nimi: 'Marine Drive', lat: 18.944, lon: 72.823 },
+      { nimi: 'Chhatrapati Shivaji Maharaj Terminus', lat: 18.93985, lon: 72.83544 },
+      { nimi: 'St. Thomasin katedraali', lat: 18.931667, lon: 72.833611 },
+      { nimi: 'Town Hall', lat: 18.931589, lon: 72.836131 },
+      { nimi: 'Bombayn korkein oikeus', lat: 18.931183, lon: 72.830461 },
+      { nimi: 'Rajabain kellotorni', lat: 18.92964, lon: 72.82999 },
+      { nimi: 'David Sassoonin kirjasto', lat: 18.927976, lon: 72.831105 },
+      { nimi: 'Prince of Walesin museo', lat: 18.926667, lon: 72.832222 },
+      { nimi: 'Gateway of India', lat: 18.921983, lon: 72.834658 },
+    ],
+  },
 };
 
 /*
