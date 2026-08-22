@@ -702,6 +702,30 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT (omistajan tilaus 22.8.2026: "Laajenna
+         * xian, Tokio, Kairo suoraan peliin"): pelin omia
+         * havainnekuvia peiliämpärissä (ampari-kenttä), kolme
+         * vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-kairo-aamu.png',
+          selite: 'Gizan pyramidit ja sfinksi aamuauringossa, ja Kairo '
+            + 'häämöttää horisontissa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kairo-keskipaiva.png',
+          selite: 'Muhammad Alin moskeija sitadellilla kirkkaassa '
+            + 'keskipäivässä, ja kaupunki levittäytyy muurien alla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kairo-ilta.png',
+          selite: 'Kairon torni Geziran saarella ilta-auringossa, ja '
+            + 'felukat lipuvat leveällä Niilillä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Cairo skyline, Panoramic view, Egypt.jpg',
           selite: 'Niili virtaa leveänä kohti keskustaa: vasemmalla '
@@ -10298,36 +10322,36 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         /*
-         * GENEROITU HEROKOE (omistajan tilaus 22.8.2026: "Lisää nuo
-         * kaksi settiä peliin niin katson miten toimii siellä").
-         * Kuvat ovat pelin OMAA tekoälykuvitusta peiliämpärissä
-         * (ampari-kenttä, js/media.js julisteUrl) — eivät Commonsista.
-         * Jos koe hylätään, nämä lohkot poistetaan ja karuselli
-         * palaa ennalleen.
+         * GENEROIDUT HEROT (omistajan tilaus 22.8.2026, koe
+         * hyväksytty 22.8.2026: "Todella hyviä"): pelin omia
+         * havainnekuvia peiliämpärissä (ampari-kenttä, js/media.js
+         * julisteUrl) — eivät Commonsista. Lähderivi omistajan
+         * linjauksella muodossa "havainnekuva", ei muuta
+         * tekoälymainintaa.
          */
         {
           ampari: 'herokoe/hero7-tuomiokirkko.png',
-          selite: 'Tuomiokirkko ilta-auringossa Senaatintorin yllä — pelin oma '
-            + 'koekuvitus kattotason kuvakulmasta.',
-          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+          selite: 'Tuomiokirkko ilta-auringossa Senaatintorin yllä '
+            + 'kattotason kuvakulmasta.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero7-tuomiokirkko-keskipaiva.png',
           selite: 'Sama näkymä keskipäivän valossa — kirkas julkisivu ja lyhyet '
             + 'varjot.',
-          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero7-uspenski.png',
           selite: 'Uspenskin katedraali aamuauringossa, ohut usva sataman '
             + 'yllä.',
-          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero7-oodi.png',
           selite: 'Oodin puinen aalto ilta-auringossa, Eduskuntatalo '
             + 'Kansalaistorin takana.',
-          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg',
@@ -30644,26 +30668,26 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         /*
-         * GENEROITU HEROKOE (omistajan tilaus 22.8.2026) — sama koe
-         * kuin Helsingissä: pelin omaa tekoälykuvitusta ämpäristä,
-         * kolme vuorokaudenaikaa. Poistetaan jos koe hylätään.
+         * GENEROIDUT HEROT (omistajan tilaus 22.8.2026, koe
+         * hyväksytty) — sama sarja kuin Helsingissä: pelin omia
+         * havainnekuvia ämpäristä, kolme vuorokaudenaikaa.
          */
         {
           ampari: 'herokoe/hero-peking-aamu.png',
-          selite: 'Kielletty kaupunki aamuauringossa, usva vallihaudan yllä — '
-            + 'pelin oma koekuvitus.',
-          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+          selite: 'Kielletty kaupunki aamuauringossa, usva vallihaudan '
+            + 'yllä.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-peking-keskipaiva.png',
           selite: 'Taivaan temppelin sininen katto kirkkaassa keskipäivässä.',
-          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-peking-ilta.png',
           selite: 'Kesäpalatsi ja Seitsemäntoista kaaren silta ilta-auringossa '
             + 'Kunming-järvellä.',
-          lahde: 'Matkakirjan oma kuvitus (tekoäly)',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Views of the Forbidden City from Jingshan Park 3.jpg',
@@ -31526,6 +31550,30 @@ export const KULTTUURI_KATEGORIAT = {
        * mereltä, joen suulta ja alakaupungin kattojen yli.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT (omistajan tilaus 22.8.2026: "Laajenna
+         * xian, Tokio, Kairo suoraan peliin"): pelin omia
+         * havainnekuvia peiliämpärissä, kolme vuorokaudenaikaa ja
+         * kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-tokio-aamu.png',
+          selite: 'Senso-jin temppeli ja pagodi aamuauringossa '
+            + 'Asakusassa, ja suitsukkeen savu nousee esipihalta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tokio-keskipaiva.png',
+          selite: 'Tokion torni punavalkoisena kirkkaassa keskipäivässä '
+            + 'Shiba-puiston vihreyden yllä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tokio-ilta.png',
+          selite: 'Tokion aseman punatiilinen julkisivu hehkuu '
+            + 'ilta-auringossa Marunouchin tornien edessä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'flickr-15047197338.jpg',
           selite: 'Kaupunki merenlahden takana kirkkaana kesäpäivänä: '
@@ -38939,6 +38987,30 @@ export const KULTTUURI_KATEGORIAT = {
        * (Ming-ajan keskusta, Tang-ajan pyhäkkö, muurin kehä).
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT (omistajan tilaus 22.8.2026: "Laajenna
+         * xian, Tokio, Kairo suoraan peliin"): pelin omia
+         * havainnekuvia peiliämpärissä, kolme vuorokaudenaikaa ja
+         * kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-xian-aamu.png',
+          selite: 'Suuri villihanhipagoda aamuauringossa, ja usva leijuu '
+            + 'temppelin esipihan yllä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-xian-keskipaiva.png',
+          selite: 'Eteläportti ja kaupunginmuurin harja kirkkaassa '
+            + 'keskipäivässä, ja pyöräilijät kulkevat muurin päällä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-xian-ilta.png',
+          selite: 'Kellotorni ilta-auringossa liikenneympyränsä keskellä, '
+            + 'ja vanha keskusta hehkuu lämpimässä valossa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Xi\'an Drum Tower (9912489945).jpg',
           selite: 'Rumpitorni alhaalta kuvattuna: kolme räystäskerrosta '
