@@ -650,19 +650,27 @@ function mitoitaKarttaSuurennos(kortti, suhde) {
  * klikatessa vaikka pitäisi näyttää vain piirros isompana"). Tämä
  * kumoaa 22.8.2026 kirjatun linjauksen, jonka mukaan kokoruudulla
  * napautus avaa jutun suoraan: piirroskohteen napautus näyttää nyt
- * ensin PIIRROKSEN ISONA kartan päällä (naytaKohdekortti), ja vasta
- * kortista edetään juttuun. Kartta EI sulkeudu tässä välivaiheessa —
- * kortin sulku palauttaa kokoruutukarttaan sellaisenaan.
+ * ensin PIIRROKSEN ISONA kartan päällä, ja vasta siitä edetään
+ * juttuun. Kartta EI sulkeudu tässä välivaiheessa — valinnan purku
+ * palauttaa kokoruutukarttaan sellaisenaan.
  *
- * KORTTI, EI KLOONIN VALITTU-LUOKKA. Lehdessä piirros suurenee
- * paikallaan (.kohde-piirros.valittu), mutta kloonissa sama
- * mekanismi olisi zoomin ja panoroinnin tiellä: valinta siirtää
- * pistettä kehyksen keskelle, ja kokoruudun lava on naulattu
- * pikseleihin levityksen ajaksi. Kortti on myös ainoa muoto, joka
- * toimii yhtä lailla kaikille piirroskohteille — nykydatassa
- * miniatyyri JA leikattu piirros ovat sama asia (MINIATYYRIT-taulun
- * kohde piirtyy kartalle leikkauskuvana), joten kaksi eri
- * suurennustapaa olisi kaksi tapaa samaan asiaan.
+ * SUURENNUS, EI KORTTIA (omistajan palaute 23.8.2026: "Koko näytöllä
+ * pitäisi suurentua samalla tavalla kuin muuten. Nyt kuitenkin tulee
+ * tällainen lappu turhaan"). Tämä KUMOAA saman päivän ensimmäisen
+ * ratkaisun, jossa napautus avasi kermanvärisen kortin — kehyksen,
+ * nimirivin ja "Lue juttu" -napin — kartan päälle. Kokoruudulla
+ * piirroksen pitää kasvaa TÄSMÄLLEEN kuten lehden kartassa:
+ * läpinäkyvä leikattu kuva kartan päällä ilman kehystä, taustalappua
+ * ja nappeja, nimikyltti sen alla.
+ *
+ * KEHYKSEN KOORDINAATISTOON, EI LAVALLE. Kortin peruste — lavan
+ * koordinaatisto elää kokoruudulla, koska lava naulataan pikseleihin
+ * levityksen ajaksi ja zoomi muuttaa sen mittoja — pitää yhä
+ * paikkansa, mutta ratkaisu on kevyempi kuin kortti: suurennos on oma
+ * elementtinsä KEHYKSEN lapsena, keskitettynä absoluuttisesti (ks.
+ * naytaSuurennus). Kehys on kiinteä ikkuna, joten sen keskikohta on
+ * aina kartan keskikohta, ja lehden omat luokat
+ * (.kohde-piirros.valittu, .kohde-kyltti) antavat saman ulkoasun.
  *
  * Kohde ilman piirrosta (numeroympyrä) avaa jutun suoraan kuten
  * ennenkin: sillä ei ole mitään näytettävää isompana.
@@ -729,28 +737,37 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     if (valittu.dataset.alkuTop) valittu.style.top = valittu.dataset.alkuTop;
   }
   /*
-   * PIIRROSKORTTI KOKORUUTUKARTAN PÄÄLLE (omistajan bugiraportti
-   * 23.8.2026, ks. metodin kommentti). Kerros on KOKORUUTUKORTIN
-   * LAPSI eikä sisaruksena isännässä: kortilla ei ole transformia
-   * (css: .postikortti.kulttuuri-suurennos { transform: none }),
-   * joten kiinnitetty kerros kattaa yhä koko ruudun — ja kartan
-   * sulkeminen mistä tahansa vie kerroksen mukanaan, joten
-   * orpokerrosta ei voi jäädä ruudulle.
+   * PIIRROS SUURENEE KEHYKSEN KESKELLE — EI KORTTIA (omistajan
+   * palaute 23.8.2026, ks. metodin kommentti).
+   *
+   * Suurennos on OMA ELEMENTTINSÄ KEHYKSEN LAPSENA. Lehdessä sama
+   * piirros kasvaa paikallaan lavalla, mutta kokoruudulla lavan
+   * koordinaatisto elää: lava naulataan pikseleihin levityksen ajaksi
+   * ja zoomiasento muuttaa sen mittoja. Kehys sen sijaan on kiinteä
+   * ikkuna, joten sen keskikohta on aina kartan keskikohta.
+   *
+   * Luokat ovat lehden omat (.kohde-piirros.valittu + .kohde-kyltti),
+   * joten ulkoasu tulee samoista säännöistä: läpinäkyvä leikattu kuva
+   * 75 %:n kokoisena karttaikkunan korkeudesta ja nimikyltti sen alle.
+   * Vastaskaalausta zoomilla ei tarvita, koska --zoom asuu lavalla.
    */
-  let avoinKohdekortti = null;
-  const suljeKohdekortti = (palautaFokus = true) => {
-    if (!avoinKohdekortti) return;
-    window.removeEventListener('keydown', avoinKohdekortti.nappaimet, { capture: true });
-    const { paluu } = avoinKohdekortti;
-    avoinKohdekortti.kerros.remove();
-    avoinKohdekortti = null;
-    // Näppäimistö palaa siihen kohteeseen, josta kortti avattiin — ei
+  let avoinValinta = null;
+  const puraValinta = (palautaFokus = true) => {
+    if (!avoinValinta) return;
+    window.removeEventListener('keydown', avoinValinta.nappaimet, { capture: true });
+    const { suurennos, lahde } = avoinValinta;
+    avoinValinta = null;
+    suurennos.remove();
+    // Kartalla oleva pieni piirros palaa näkyviin: se oli piilossa,
+    // jottei sama rakennus näy kahtena (lehdessä kasvaa sama elementti).
+    lahde?.classList.remove('kohde-piirros-piilossa');
+    // Näppäimistö palaa siihen kohteeseen, josta suurennos avattiin — ei
     // kartan alkuun. Juttuun siirryttäessä fokus kuuluu jutulle, joten
     // silloin sitä ei palauteta.
-    if (palautaFokus && paluu?.isConnected) paluu.focus({ preventScroll: true });
+    if (palautaFokus && lahde?.isConnected) lahde.focus({ preventScroll: true });
   };
   /*
-   * ESCAPE SULKEE KERROKSET JÄRJESTYKSESSÄ: piirroskortti →
+   * ESCAPE SULKEE KERROKSET JÄRJESTYKSESSÄ: piirrosvalinta →
    * kokoruutukartta → lehti. Kuuntelija on WINDOWISSA
    * kaappausvaiheessa, koska kartan oma Escape-sulku on documentissa
    * samassa vaiheessa (ui.rekisteroiSuurennosNappaimet) ja se on
@@ -758,15 +775,15 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
    * ohittaa. Kaappausreitti alkaa windowista, joten tämä ehtii ensin
    * ja pysäyttää tapahtuman ennen kartan sulkua.
    */
-  const kohdekortinNappaimet = (e) => {
-    if (!avoinKohdekortti) return;
-    // Kartta ehti sulkeutua kortin alta: kuuntelija siivoaa itsensä
+  const valinnanNappaimet = (e) => {
+    if (!avoinValinta) return;
+    // Kartta ehti sulkeutua valinnan alta: kuuntelija siivoaa itsensä
     // eikä nielaise Escapea keneltäkään.
-    if (!avoinKohdekortti.kerros.isConnected) { suljeKohdekortti(); return; }
+    if (!avoinValinta.suurennos.isConnected) { puraValinta(); return; }
     if (e.key !== 'Escape') return;
     e.preventDefault();
     e.stopPropagation();
-    suljeKohdekortti();
+    puraValinta();
   };
   /*
    * KOHTEEN NAPAUTUS SULKEE SUURENNOKSEN JA AVAA JUTUN. Kortti ja
@@ -777,66 +794,59 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
    * ruudun juttu eivät kuulu päällekkäin.
    */
   const avaaKohde = (avaa) => {
-    suljeKohdekortti(false);
+    puraValinta(false);
     ui.suljeKulttuuriKuva();
     avaa();
   };
   /*
-   * PIIRROS ISONA, JUTTU VASTA SEURAAVASTA NAPAUTUKSESTA. Kortissa on
-   * piirros, kohteen numero ja nimi sekä nappi juttuun; piirros itse
-   * on nappi kuten lehdenkin suurennetussa piirroksessa (omistajan
-   * linjaus 15.8.2026: "Muuta koko kuva kyltin lisäksi viemään pop up
-   * juttuun"). Sulku: rasti, Escape tai napautus kortin ohi.
+   * PIIRROS ISONA, JUTTU VASTA SEURAAVASTA NAPAUTUKSESTA. Suurennos on
+   * nappi kuten lehdenkin valittu piirros: kuvan keskiosa ja nimikyltti
+   * vievät juttuun (omistajan linjaus 15.8.2026: "Muuta koko kuva kyltin
+   * lisäksi viemään pop up juttuun"). Läpinäkyvälle reunalle osuva
+   * napautus menee laatikon ohi kartalle ja purkaa valinnan.
    */
-  const naytaKohdekortti = (tieto, paluu = null) => {
-    suljeKohdekortti();
-    const kerros = html('div', 'kartta-kohdekerros');
-    const kohdekortti = html('div', 'kartta-kohdekortti');
-    const sulje = html('button', 'uutinen-sulku', '×');
-    sulje.type = 'button';
-    sulje.setAttribute('aria-label', 'Sulje piirros');
-    sulje.title = 'Sulje';
-    sulje.addEventListener('click', (e) => {
-      e.stopPropagation();
-      suljeKohdekortti();
-    });
-    kohdekortti.appendChild(sulje);
-    const kuvanappi = html('button', 'kartta-kohdekortti-kuva');
-    kuvanappi.type = 'button';
-    kuvanappi.title = tieto.otsikko;
-    kuvanappi.setAttribute('aria-label', tieto.otsikko);
+  const naytaSuurennus = (tieto, lahde = null) => {
+    puraValinta();
+    const suurennos = html('button',
+      'maakartta-piste kaupunki-kohde kohde-numero kohde-piirros valittu kartta-kohdevalinta');
+    suurennos.type = 'button';
+    suurennos.title = tieto.otsikko;
+    suurennos.setAttribute('aria-label', tieto.otsikko);
     const kuva = document.createElement('img');
+    kuva.className = 'kohde-piirros-kuva';
     kuva.src = tieto.piirros;
     kuva.alt = tieto.nimi;
     kuva.decoding = 'async';
     kuva.draggable = false;
-    kuvanappi.appendChild(kuva);
-    kuvanappi.addEventListener('click', (e) => {
+    suurennos.appendChild(kuva);
+    // Nimikyltti numeroineen kuten lehdessä — numero kytkee kohteen
+    // kartan alla olevaan selitelistaan.
+    const kyltti = html('span', 'kohde-kyltti', `${tieto.numero} · ${tieto.nimi}`);
+    kyltti.setAttribute('aria-hidden', 'true');
+    suurennos.appendChild(kyltti);
+    suurennos.addEventListener('click', (e) => {
       e.stopPropagation();
       avaaKohde(tieto.avaa);
     });
-    kohdekortti.appendChild(kuvanappi);
-    kohdekortti.appendChild(html('p', 'kartta-kohdekortti-nimi',
-      `${tieto.numero} · ${tieto.nimi}`));
-    const juttuun = html('button', 'kartta-kohdekortti-linkki', 'Lue juttu');
-    juttuun.type = 'button';
-    juttuun.addEventListener('click', (e) => {
-      e.stopPropagation();
-      avaaKohde(tieto.avaa);
-    });
-    kohdekortti.appendChild(juttuun);
-    // Napautus kortin ohi palaa karttaan; kortin sisällä napautus
-    // kuuluu sen omille napeille (stopPropagation yllä).
-    kerros.addEventListener('click', () => suljeKohdekortti());
-    kerros.appendChild(kohdekortti);
-    kortti.appendChild(kerros);
-    avoinKohdekortti = { kerros, nappaimet: kohdekortinNappaimet, paluu };
-    window.addEventListener('keydown', kohdekortinNappaimet, { capture: true });
-    // Fokus kortin sisään: muuten sarkain kiertäisi kartan nappeja
-    // peittävän kerroksen alla.
-    kuvanappi.focus({ preventScroll: true });
-    sfx.play('paper');
+    lahde?.classList.add('kohde-piirros-piilossa');
+    iso.appendChild(suurennos);
+    avoinValinta = { suurennos, lahde, nappaimet: valinnanNappaimet };
+    window.addEventListener('keydown', valinnanNappaimet, { capture: true });
+    // Fokus suurennokseen: lähde on piilossa, eikä näppäimistö saa jäädä
+    // näkymättömään nappiin.
+    suurennos.focus({ preventScroll: true });
   };
+  /*
+   * NAPAUTUS MUUALLE PURKAA VALINNAN, KARTTA JÄÄ — sama sääntö kuin
+   * lehden kartassa (piirraKaupunkiKartta: tyhjennaValinta).
+   * Kaappausvaiheessa, jotta myös kartan panorointiote purkaa valinnan
+   * ennen kuin zoom ottaa eleen omakseen.
+   */
+  kortti.addEventListener('pointerdown', (e) => {
+    if (!avoinValinta) return;
+    if (e.target.closest?.('.kartta-kohdevalinta')) return;
+    puraValinta();
+  }, true);
   /*
    * Klooni saa kuuntelijansa avaajalistasta (ks. metodin kommentti).
    * Ilman listaa — maalehden korkokartta — napit mykistetään kuten
@@ -852,7 +862,7 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     const piirroskohde = Boolean(tieto.piirros);
     nappi.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (piirroskohde) naytaKohdekortti(tieto, nappi);
+      if (piirroskohde) naytaSuurennus(tieto, nappi);
       else avaaKohde(tieto.avaa);
     });
     nappi.setAttribute('aria-label',

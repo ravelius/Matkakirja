@@ -12861,101 +12861,54 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 /*
- * PIIRROSKORTTI KOKORUUTUKARTAN PÄÄLLE (omistajan bugiraportti
- * 23.8.2026: "Kokoruudun näkymä avaa vieläkin suoraan juttuun
- * klikatessa vaikka pitäisi näyttää vain piirros isompana").
+ * PIIRROS SUURENEE KOKORUUDULLAKIN KARTAN PÄÄLLÄ (omistajan palaute
+ * 23.8.2026: "Koko näytöllä pitäisi suurentua samalla tavalla kuin
+ * muuten. Nyt kuitenkin tulee tällainen lappu turhaan").
  *
- * Kerros on kartan oman kortin lapsi (js/nahtavyydet.js:
- * naytaKohdekortti), mutta kiinnitettynä se kattaa koko ruudun:
- * .postikortti.kulttuuri-suurennos on nimenomaan transformiton, joten
- * kiinnitetyn jälkeläisen sijoituskehys on yhä ikkuna. Z-indeksi on
- * kortin OMASSA pinossa (kortti itse on 70), joten pieni luku riittää
- * nostamaan piirroksen kartan ja sen zoomipainikkeiden (4) päälle.
+ * Tämä KUMOAA saman päivän ensimmäisen ratkaisun, jossa napautus avasi
+ * kermanvärisen kortin (.kartta-kohdekerros/.kartta-kohdekortti, nyt
+ * poistettu) kartan päälle. Tilalla on täsmälleen sama läpinäkyvä
+ * leikattu kuva kuin lehden valitussa piirroksessa: ei kehystä, ei
+ * taustalappua, ei nappeja.
  *
- * Pohja on kartan pohjaa kevyempi: kartta saa näkyä alta, koska tämä
- * on kartan välivaihe eikä uusi näkymä — ja koska sulku palauttaa
- * juuri siihen karttaan.
+ * Suurennos on KEHYKSEN lapsi (js/nahtavyydet.js: naytaSuurennus),
+ * koska lavan koordinaatisto elää zoomin ja levityksen mukana —
+ * kehyksessä se on aina kartan keskellä. Mitat ovat lehden mitat:
+ * laatikko 37,5 cqh karttaikkunan korkeudesta ja kuva 200 % laatikosta
+ * eli näkyvä 75 %. Jakoa zoomilla ei ole, koska --zoom asuu lavalla.
+ * Valitsimessa on viisi luokkaa, jotta se voittaa myöhemmän
+ * `.maakartta-piste.kohde-numero.kohde-piirros` -säännön 40 px:n koon.
  */
-.kartta-suurennos .kartta-kohdekerros {
-  position: fixed;
-  inset: 0;
-  z-index: 6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  background: rgba(11, 8, 5, 0.72);
-  cursor: zoom-out;
-}
-
-.kartta-suurennos .kartta-kohdekortti {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  max-width: min(92vw, 620px);
-  padding: 1.1rem 1.1rem 0.9rem;
-  border: 1px solid rgba(70, 51, 31, 0.45);
-  border-radius: 4px;
-  background: #efe7d4;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
-  cursor: default;
+.kartta-suurennos .kartta-kehys > .maakartta-piste.kohde-piirros.kartta-kohdevalinta {
+  left: 50%;
+  top: 50%;
+  width: 37.5cqh;
+  height: 37.5cqh;
+  min-height: 0;
+  z-index: 5;
+  cursor: pointer;
 }
 
 /*
- * Piirros on nappi, ei kuva kehyksessä: koko kuva vie juttuun samoin
- * kuin lehden suurennetussa piirroksessa (omistajan linjaus
- * 15.8.2026). Läpinäkyvä leikkauskuva näytetään paperinvärisellä
- * pohjalla ilman omaa kehystä.
+ * Kuvan ylivuoto laatikon yli kuten lehdessä. Oma sääntö tarvitaan,
+ * koska kokoruudun kuvasääntö (.kartta-suurennos .kartta-kehys
+ * img.kohde-piirros-kuva, 0-3-1) on lehden .valittu-säännön (0-3-0)
+ * jälkeen ja kutistaisi piirroksen takaisin laatikon kokoon.
  */
-.dialog .kartta-suurennos button.kartta-kohdekortti-kuva {
-  display: block;
-  padding: 0;
-  border: 0;
-  background: none;
-  box-shadow: none;
-  cursor: pointer;
+.kartta-suurennos .kartta-kehys .kohde-piirros.valittu img.kohde-piirros-kuva {
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  max-width: none;
 }
 
-.kartta-suurennos .kartta-kohdekortti-kuva img {
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: min(84vw, 560px);
-  /* Kortin nimi ja nappi mahtuvat kuvan alle myös matalalla
-   * vaakaruudulla. */
-  max-height: 62dvh;
-  margin-inline: auto;
-  object-fit: contain;
-  background: none;
-  border: 0;
-}
-
-.kartta-suurennos .kartta-kohdekortti-nimi {
-  margin: 0;
-  font-family: var(--font-type);
-  font-size: 0.8rem;
-  text-align: center;
-  color: #2c1e07;
-}
-
-.dialog .kartta-suurennos button.kartta-kohdekortti-linkki {
-  min-height: 0;
-  padding: 0.24rem 0.8rem;
-  border: 1px solid rgba(70, 51, 31, 0.5);
-  border-radius: 3px;
-  background: rgba(232, 211, 160, 0.7);
-  font-family: var(--font-type);
-  font-size: 0.7rem;
-  color: #2c1e07;
-  cursor: pointer;
-}
-
-.dialog .kartta-suurennos button.kartta-kohdekortti-linkki:hover,
-.dialog .kartta-suurennos button.kartta-kohdekortti-linkki:focus-visible {
-  background: rgba(232, 211, 160, 0.95);
-}
+/*
+ * Kartalla oleva pieni piirros pois näkyvistä suurennuksen ajaksi.
+ * Lehdessä sama elementti kasvaa paikallaan, joten rakennus ei näy
+ * kahtena; visibility (ei display) pitää kartan asettelun ennallaan.
+ */
+.kartta-suurennos .kohde-piirros.kohde-piirros-piilossa { visibility: hidden; }
 
 /*
  * VASTASKAALAUS. Kaikki lavalla suurenisi zoomin mukana, myös se, mikä
