@@ -684,6 +684,8 @@ export const KULTTUURI_KATEGORIAT = {
    * Nostot, oppaat, johdannot, kuvatiedostot ja lähderivit ovat
    * ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   kairo: [
     {
       id: 'kaupunki',
@@ -706,14 +708,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Cairo Citadel P1020127.jpg',
           lahde: 'Nikolay Chakrakchiev, Wikimedia Commons (CC BY 3.0)',
-          selite: 'Näkymä Kairon linnoitukselta kaupungin ylle: etualalla '
-            + 'kohoavat Sulttaani Hassanin ja al-Rifa\'in moskeijoiden '
-            + 'minareetit ja taustalla keskustan tornit.',
+          selite: 'Sulttaani Hassanin ja al-Rifa\'in moskeijat seisovat '
+            + 'vastakkain Kairon linnoituskukkulan juurella.',
         },
         {
           tiedosto: 'Egypt, Cairo, Panorama of Islamic Cairo.jpg',
-          selite: 'Vanhan islamilaisen Kairon kattomeri: minareetteja ja kupoleita nousee '
-            + 'tiiviin talomassan lomasta, ja taustalla häämöttää autiomaan reuna.',
+          selite: 'Kairoa sanotaan tuhannen minareetin kaupungiksi, ja sen '
+            + 'vanhan islamilaisen osan monumentit ovat tuhannen vuoden '
+            + 'ajalta.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -757,26 +759,20 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Cairo skyline, Panoramic view, Egypt.jpg',
-          selite: 'Niili virtaa leveänä kohti keskustaa: vasemmalla '
-            + 'rannalla kasvaa kaislikkoa ja palmuja, oikea ranta on '
-            + 'kerrostalojen reunustama, ja utuisesta kaupungista '
-            + 'erottuu Kairon tornin hoikka siluetti.',
+          selite: 'Niili virtaa Kairon läpi etelästä pohjoiseen, ja '
+            + 'keskusta ja museot ovat sen itärannalla.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Flickr - Bakar 88 - Cairo, Egypt (HDR).jpg',
-          selite: 'Keskustan ranta iltapäivällä: joella on valkoisia '
-            + 'jokilaivoja laitureissa ja veneitä poijuissa, vasemmalla '
-            + 'kohoaa pyöreäkulmainen hotellitorni palmujen takaa ja '
-            + 'vastarannalla jatkuu keskustan talorivistö.',
+          selite: 'Kairon rantabulevardit täyttyvät kävelijöistä vasta '
+            + 'illalla, kun päivän kuumin hetki on ohi.',
           lahde: 'Andrew A. Shenouda, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Egypt, Cairo, Panorama of Islamic Cairo, also Medieval Cairo.jpg',
-          selite: 'Vanhankaupungin katot: tasakattojen, '
-            + 'lautasantennien ja pyykkinarujen merestä nousee '
-            + 'minareetteja ja kupoleita, ja talojen välistä pilkottaa '
-            + 'kapea markkinakatu aurinkovarjoineen.',
+          selite: 'Kairon vanhassakaupungissa liikutaan jalan, sillä kujat '
+            + 'ovat niin kapeita, ettei autolla ole niille asiaa.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -784,14 +780,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Kairo, marchands ambulants LCCN2017657437.jpg',
           vuosi: '1890-luku',
-          selite: 'Kiertäviä kauppiaita Kairon kadulla 1890-luvulla: vesimyyjä kantoi '
-            + 'tavaransa selässään ja huusi kaupan kilpaa muiden kanssa.',
+          selite: 'Kairon kaduilla kiersi 1800-luvun lopulla vesimyyjiä, '
+            + 'jotka kantoivat tavaransa selässään ja huusivat kaupan '
+            + 'kilpaa keskenään.',
           lahde: 'Library of Congress (PD)',
         },
         {
           tiedosto: 'Cairo-Hilton-Skyline.jpg',
-          selite: 'Nykyinen Kairo nousee Niilin rannalla korkeuksiin, mutta joki '
-            + 'virtaa keskellä yhtä tyynenä kuin isoisän aikaan.',
+          selite: 'Kairo on kasvanut yli kahdenkymmenen miljoonan ihmisen '
+            + 'suurkaupungiksi Niilin molemmin puolin.',
           lahde: 'Bluemask, Commons (CC BY-SA 3.0)',
         },
       ],
@@ -829,9 +826,9 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Cairo Tower, al-Qāhirah, CG, EGY (47119632244).jpg',
-          selite: 'Kairon torni Geziran saarella: betonitornin '
-            + 'ristikkokuori avautuu huipulla lootuskukan '
-            + 'terälehdiksi.',
+          selite: 'Kairon torni seisoo Geziran saaren eteläkärjessä, ja sen '
+            + 'näköalatasanteelta erottuvat kirkkaalla säällä lännen '
+            + 'pyramidit.',
           lahde: 'Warren LeMay, Wikimedia Commons (CC0)',
         },
         kappale: 'Kairo on arabimaailman suurin kaupunki, mutta '
@@ -878,24 +875,22 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Ramses Station.JPG',
-                  selite: 'Ramsesin rautatieaseman halli, jossa junat ovat '
-                    + 'pysähtyneet 1850-luvulta asti: pylväät avautuvat '
-                    + 'kattoon papyrusviuhkoina ja keskellä riippuu '
-                    + 'kerroksittainen valaisin.',
+                  selite: 'Junat ovat tuoneet matkustajia Kairoon vuodesta '
+                    + '1856, jolloin rata Aleksandriasta valmistui Afrikan '
+                    + 'ensimmäisenä rautatienä.',
                   lahde: 'Faris El-Gwely, Wikimedia Commons (CC BY-SA 3.0)',
                 },
                 {
                   tiedosto: 'Passengers get off a train at El Mar Girgis station in Cairo.jpg',
-                  selite: 'Metrojunia Mar Girgisin asemalla mustavalkokuvassa: '
-                    + 'Vanhan Kairon koptilaiskortteleiden pysäkin laiturin '
-                    + 'yllä kohoaa Pyhän Yrjön kirkon pyöreä torni.',
+                  selite: 'Kairon metro avattiin 1987 Afrikan ensimmäisenä, '
+                    + 'ja jokaisen junan keskellä on kaksi naisille '
+                    + 'varattua vaunua.',
                   lahde: 'Jim Joel, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Cairo street scenes, Dec 2008.jpg',
-                  selite: 'Aamuaurinko värjää joen: autojono ylittää '
-                    + 'Niilin siltaa, laitureissa on jokilaivoja ja '
-                    + 'vasemmalla joen takana erottuu Kairon torni.',
+                  selite: 'Kairon metrolinjat alittavat Niilin, mutta '
+                    + 'autoliikenne ylittää joen siltoja pitkin.',
                   lahde: 'Ed Yourdon, Wikimedia Commons (CC BY-SA 2.0)',
                 },
               ],
@@ -921,17 +916,16 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Muizz Street and minaret of Sulayman Agha al-Silahdar Mosque Cairo.jpg',
-                  selite: 'Al-Muizz-katu pohjoispäästään: kadun ylle '
-                    + 'kohoaa Sulayman Aghan moskeijan hoikka '
-                    + 'minareetti, ja taloissa on puisia '
-                    + 'ristikkoerkkereitä.',
+                  selite: 'Al-Muizz-katu on ollut paikallaan kaupungin '
+                    + 'perustamisesta eli vuodesta 970, ja se kulkee Bab '
+                    + 'al-Futuhilta Bab Zuweilalle noin kilometrin.',
                   lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
                 },
                 {
                   tiedosto: 'Islamic-cairo-street.jpg',
-                  selite: 'Mashrabiya-erkkerit varjostavat katua '
-                    + 'puuristikoillaan, ja kadun päässä on Katkhudan sabil, '
-                    + 'vesitarjoilupaviljonki vuodelta 1744.',
+                  selite: 'Katkhudan sabil eli vesitarjoilupaviljonki '
+                    + 'valmistui vuonna 1744, ja mashrabiya-erkkerit '
+                    + 'varjostavat kadun puuristikoillaan.',
                   lahde: 'Joonas Plaan, Wikimedia Commons (CC BY 2.0)',
                 },
               ],
@@ -955,10 +949,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'päivä.',
               kuva: {
                 tiedosto: 'View of the Qasr al-Nil Bridge (Zamalek) from the Cairo Tower (14819978313).jpg',
-                selite: 'Ilta Kairon tornista: alhaalla Geziran '
-                  + 'urheilukentät ja uima-allas, oikealla autojen '
-                  + 'valojono ylittää Niilin siltaa, ja vastarannalla '
-                  + 'syttyvät keskustan valot.',
+                selite: 'Qasr al-Nilin sillan päitä vartioivat '
+                  + 'pronssileijonat ovat perua 1800-luvun '
+                  + 'alkuperäissillalta.',
                 lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -980,9 +973,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pidempään, kello kahteen yöhön.',
               kuva: {
                 tiedosto: 'Egypt, Cairo, Muizz Market Street, Islamic Cairo.jpg',
-                selite: 'Keskipäivä basaarikadulla: aurinkovarjot ja '
-                  + 'markiisit varjostavat kujan, ja väki kulkee '
-                  + 'niiden alla.',
+                selite: 'Kairon kadut ovat vilkkaimmillaan vasta pimeän '
+                  + 'tultua, ja kaupat palvelevat myöhään iltaan.',
                 lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
               },
             },
@@ -998,9 +990,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Litografioiksi painetut kuvat olivat monelle '
             + 'eurooppalaiselle ensimmäinen näkymä kaupunkiin, josta oli '
             + 'siihen asti vain kuultu tarinoita.',
-          selite: 'Kairo lännestä katsottuna (1849): minareettien metsä '
-            + 'täyttää kaupungin, ja taivaanrannassa siintävät Gizan '
-            + 'pyramidit.',
+          selite: 'David Roberts piirsi Kairoa kuukausien ajan vuodesta '
+            + '1838, ja hänen litografiansa olivat monelle eurooppalaiselle '
+            + 'ensimmäinen näkymä kaupunkiin.',
           lahde: 'David Roberts / Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
           wiki: 'David Roberts',
           /*
@@ -1011,33 +1003,31 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Metwaleyn portti',
               tiedosto: 'Gateway of the Metwaleys with minarets, Cairo, Egypt. Colour Wellcome V0049383.jpg',
-              selite: 'Bab Zuweilan portti kaksoisminareetteineen: portin '
-                + 'varjossa käy basaarikauppa kuten Robertsin aikaan — '
-                + 'portti on yhä pystyssä.',
+              selite: 'Bab Zuweilan portti kaksoisminareetteineen on yhä '
+                + 'pystyssä, ja sen minareetteihin voi kiivetä katsomaan '
+                + 'al-Muizz-kadun yli.',
               lahde: 'David Roberts / Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
             },
             {
               otsikko: 'Linnoitus',
               tiedosto: 'Cairo with the residence of Mehemet Ali in the citadel, Egyp Wellcome V0049375.jpg',
-              selite: 'Kairon linnoituskukkula Muhammad Alin aikana: '
-                + 'kamelikaravaani lepää muurin juurella, ja kukkulalla '
-                + 'rakennetaan juuri sitä moskeijaa, joka nyt hallitsee '
-                + 'siluettia.',
+              selite: 'Muhammad Ali rakennutti alabasterimoskeijansa '
+                + 'linnoituskukkulalle 1800-luvulla, ja se hallitsee yhä '
+                + 'Kairon siluettia.',
               lahde: 'David Roberts / Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
             },
             {
               otsikko: 'Kalifien haudat',
               tiedosto: 'Mosque of Ayed Bey, with other tombs of the caliphs, Cairo, Wellcome V0049368.jpg',
-              selite: 'Kalifien hautakaupunki muurien ulkopuolella: '
-                + 'kupolien ja minareettien kaupunginosa, jossa asutaan '
-                + 'yhä — hautojen keskellä.',
+              selite: 'Kalifien hautakaupunki nousi Kairon muurien '
+                + 'ulkopuolelle, ja siellä asutaan yhä hautojen keskellä.',
               lahde: 'David Roberts / Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
             },
             {
               otsikko: 'Vesijohto Niililtä',
               tiedosto: 'The aqueduct seen from the the Island of Rhoda, Cairo, Egypt Wellcome V0012305.jpg',
-              selite: 'Keskiaikainen vesijohto kantoi Niilin vettä linnoitukselle '
-                + 'asti; etualalla on joen veneitä Rhodan saaren rannassa.',
+              selite: 'Keskiaikainen vesijohto kantoi Niilin vettä Rhodan '
+                + 'saaren kohdalta linnoitukselle asti.',
               lahde: 'David Roberts / Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
             },
           ],
@@ -1052,9 +1042,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'iltojaan myös Naguib Mahfouz, joka sai Kairon kujista '
             + 'kirjoittamistaan romaaneista Nobelin 1988, ensimmäisenä '
             + 'arabiaksi kirjoittavana kirjailijana.',
-          selite: 'El-Fishawin kahvilan ovi Khan el-Khalilin kujalla: '
-            + 'kullattu peili, puiset ristikkoseinät ja teelasit '
-            + 'odottamassa.',
+          selite: 'El-Fishawin kahvila Khan el-Khalilissa on tarjoillut '
+            + 'teetä yli kaksisataa vuotta, ja sen peilisalissa istui myös '
+            + 'Naguib Mahfouz.',
           lahde: 'Djehouty, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Naguib Mahfouz',
         },
@@ -1073,9 +1063,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'torstaina, Kairon kadut hiljenivät ja kahvilat täyttyivät '
             + 'kuuntelijoista. Yksi laulu saattoi kestää tunnin, eikä '
             + 'kukaan pitänyt sitä pitkänä.',
-          selite: 'Umm Kulthum mikrofonin äärellä uransa alkupuolella '
-            + 'tunnusmerkkeineen: tummat lasit, nenäliina kädessä ja '
-            + 'orkesteri takana.',
+          selite: 'Umm Kulthumin radiokonsertin alkaessa kuun ensimmäisenä '
+            + 'torstaina Kairon kadut hiljenivät ja kahvilat täyttyivät '
+            + 'kuuntelijoista.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Umm Kulthum',
           musiikki: 'https://music.apple.com/fi/album/enta-oumry-remastered/922753882?i=922753943',
@@ -1119,9 +1109,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuotta. Ensimmäisestä moskeijasta ei ole jäljellä '
             + 'mitään: sali on rakennettu uudelleen kerta toisensa '
             + 'jälkeen.',
-          selite: 'Amr ibn al-Asin moskeijan rukoussali nykyään: marmoripylväiden '
-            + 'rivit kantavat teräväkärkisiä kaaria ja puisia vetopalkkeja, '
-            + 'ja lattialla on punainen matto.',
+          selite: 'Egyptin ensimmäinen moskeija nousi al-Fustatiin vuonna '
+            + '642, mutta siitä ei ole jäljellä mitään: sali on rakennettu '
+            + 'uudelleen kerta toisensa jälkeen.',
           lahde: 'Protious, Wikimedia Commons (CC0)',
         },
         {
@@ -1138,9 +1128,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskimäärin kuusi vuotta, ja yksittäinen opettaja '
             + 'päätti itse, milloin oppilas oli valmis. Opiskelijat '
             + 'asuivat riwaq-osastoissa kotiseutunsa mukaan.',
-          selite: 'Kaksi al-Azharin oppinutta keskustelee moskeijan pylväiden '
-            + 'kiertämällä marmoripihalla, ja taustalla istuu oppilaita '
-            + 'lattialla puisen ristikkoseinän edessä.',
+          selite: 'Al-Azharin rakentaminen alkoi vuonna 970, ja opinnot '
+            + 'kestivät siellä keskimäärin kuusi vuotta ilman '
+            + 'tutkintotodistusta.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -1162,9 +1152,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pellot ovat katuja. Vertaa etusivun ilmakuvaan: '
             + 'pyramidit seisovat yhä paikallaan, kaupunki tuli niiden '
             + 'luo.',
-          selite: 'Kairon seudun yleiskartta Description de l\'Égypte '
-            + '-sarjasta (1809): Bulaq, Kairo, Rodan saari, Vanha '
-            + 'Kairo ja Giza.',
+          selite: 'Napoleonin retkikunnan tutkijat mittasivat Kairon kadut '
+            + 'ja piirsivät kaupungin karttaan, joka painettiin Description '
+            + 'de l\'Égypte -teossarjaan.',
           lahde: 'Imprimerie impériale / NYPL, Wikimedia Commons (PD)',
           wiki: 'Description de l\'Égypte',
         },
@@ -14222,6 +14212,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kentässä (js/packs/asia-artikkelit.js), ja se kirjoitettiin
    * samassa erässä uusiksi.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   dubai: [
     {
       id: 'kaupunki',
@@ -14232,24 +14224,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Sheikh Zayed Road Skyline from Satwa on 16 May 2007.jpg',
-          selite: 'Sheikh Zayed Roadin pilvenpiirtäjät kohoavat matalien '
-            + 'kattojen takaa, joilla on vesisäiliöitä ja '
-            + 'satelliittiantenneja — vanha ja uusi kaupunki ovat korttelin '
-            + 'päässä toisistaan.',
+          selite: 'Sheikh Zayed Road on Dubain osuus E 11 -valtatiestä, '
+            + 'joka on emiraattien pisin tie ja seuraa Persianlahden '
+            + 'rannikkoa.',
           lahde: 'Imre Solt, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'People riding camels on Dubai Dunes.jpg',
-          selite: 'Kameliratsastajia hiekkasärkän harjalla auringonlaskun '
-            + 'keltaisessa valossa; kaupungin laidalta pääsee aavikolle '
-            + 'puolessa tunnissa.',
+          selite: 'Aavikko alkaa aivan Dubain laidalta, ja kaupungista '
+            + 'sinne pääsee puolessa tunnissa.',
           lahde: 'iMahesh, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Abra @ From Bur Dubai to Deira @ Dubai Creek (15860705846).jpg',
-          selite: 'Dubai Creek vesiltä nähtynä: rannalla vuorottelevat tuulitornit, '
-            + 'minareetti ja kerrostalot, ja vastarannalla odottavat puiset '
-            + 'dhow-rahtialukset.',
+          selite: 'Dubai Creek ei ole joki vaan Persianlahden '
+            + 'suolavesilahti, joka työntyy noin neljätoista kilometriä '
+            + 'sisämaahan.',
           lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -14279,9 +14269,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ei tiedetä, eikä hän luultavasti ollut paikalla: kuva on '
             + 'tehty matkakertomusten mukaan, ja siksi se kertoo yhtä '
             + 'paljon lukijoistaan kuin lahdesta.',
-          selite: 'The Graphicin kaiverrus vuodelta 1881: purjeveneitä '
-            + 'ankkurissa, sukeltajia menossa alas ja pohjassa työssä, ja '
-            + 'reunakuvissa sukeltajan nenäpuristin ja simpukkakori.',
+          selite: 'Lontoolainen The Graphic julkaisi 1. lokakuuta 1881 koko '
+            + 'sivun kaiverruksen lahden helmenpyynnistä, vaikka piirtäjä '
+            + 'ei luultavasti ollut koskaan käynyt paikalla.',
           lahde: 'Tuntematon kaivertaja, Wikimedia Commons (public domain)',
         },
         {
@@ -14294,8 +14284,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'astetta. Rata kulkee suurimmaksi osaksi katujen yläpuolella '
             + 'pilareilla. Ensimmäisessä vaunussa on osa, johon saavat mennä '
             + 'vain naiset ja lapset, ja väärästä vaunusta saa sakon.',
-          selite: 'Metrojuna saapuu asemalle korkealla kaupungin yllä '
-            + 'laiturin lasiseinän takana.',
+          selite: 'Dubain metro avattiin 9. syyskuuta 2009, ja sen junat '
+            + 'kulkevat ilman kuljettajaa tietokoneen ohjaamina.',
           lahde: 'Shahroozporia, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Dubain metro',
         },
@@ -14309,9 +14299,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maailman painavin sormus: se painoi lähes kuusikymmentä kiloa, '
             + 'eikä sitä voinut pitää sormessa vaan vitriinissä. '
             + 'Kaupankäynnissä tinkiminen kuuluu asiaan.',
-          selite: 'Kultakaupan näyteikkuna täynnä kaulakoruja ja '
-            + 'rannerenkaita niin tiheissä riveissä, että ikkuna hohtaa '
-            + 'keltaisena.',
+          selite: 'Deiran kultatorilla koru punnitaan asiakkaan edessä, ja '
+            + 'hinta lasketaan päivän kultakurssista ja työn osuudesta.',
           lahde: 'Saaremees, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -14351,33 +14340,29 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Dubai Creek with Abras by Vincent Eisfeld.jpg',
-          selite: 'Creek vedenpinnan tasolta: kaksi abraa lipuu poikki '
-            + 'lahden, vastarannalla on Bur Dubain matala talorivistö, '
-            + 'ja siitä kohoaa Suuren moskeijan minareetti sekä '
-            + 'oikeammalla kupoli ja toinen minareetti.',
+          selite: 'Abrat olivat Dubain ensimmäinen julkinen liikenne, ja ne '
+            + 'kulkevat yhä samaa reittiä lahden yli.',
           lahde: 'Vincent Eisfeld, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Dhows on Dubai Creek (8722991951).jpg',
-          selite: 'Iltapäivän valo lahdella: etualalla dhow-veneitä '
-            + 'laiturissa pressukatoksineen ja keltainen pelastusrengas, '
-            + 'vastarannalla vanhan Dubain talot ja minareetti.',
+          selite: 'Dubai Creekin kautta kulkee nykyään yli 13 000 alusta '
+            + 'vuodessa.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Al Fahidi Historical Neighbourhood, Dubai.jpg',
-          selite: 'Vanhankaupungin kattojen yllä: kaksi tuulitornia '
-            + 'hiekanvärisinä utuisessa iltavalossa, ja niiden ylitse '
-            + 'nousee juuri lähtenyt matkustajakone.',
+          selite: 'Al Fahidin kortteli on Bur Dubain vanhinta '
+            + 'rakennuskantaa, ja sen talot jäähdytettiin tuulitorneilla jo '
+            + 'ennen sähköä.',
           lahde: 'Delta.jpg, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Bastakia Windtower.JPG',
-          selite: 'Tuulitorni Al Fahidin korttelissa: nelisivuinen '
-            + 'torni nousee korallikivimuurin päältä, ja sen jokainen '
-            + 'sivu on auki tuulelle.',
+          selite: 'Tuulitorni on nelisivuinen ja avoin joka suuntaan, joten '
+            + 'se ottaa tuulen sisään puhalsi se mistä tahansa.',
           lahde: 'Jpatokal, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Dubaista puhutaan tornien kaupunkina, mutta '
@@ -14419,18 +14404,16 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Dubai Metro Al Ras station.JPG',
-                  selite: 'Al Rasin metroaseman lippuhalli aivan '
-                    + 'kultasuukin vieressä: seinäpaneeleissa toistuvat '
-                    + 'kaari- ja ristikkoaiheet, ja lippuporttien '
-                    + 'takana on suuri seinäkuva dhow-purjeesta.',
+                  selite: 'Metron vihreä linja kulkee vanhan Dubain läpi ja '
+                    + 'pysähtyy museon, kultasuukin ja maustesuukin '
+                    + 'kohdalla.',
                   lahde: 'Adbar, Wikimedia Commons (CC BY-SA 3.0)',
                 },
                 {
                   tiedosto: 'A boat on the Dubai Creek 20240605.jpg',
-                  selite: 'Abra ponttonilaiturissa: puinen avovene, '
-                    + 'jonka keskellä kulkee penkki litteän '
-                    + 'varjokaton alla, kyljessä rekisterikilpi ja '
-                    + 'katoksessa pelastusrengas.',
+                  selite: 'Abra ylittää lahden muutaman minuutin välein, ja '
+                    + 'matka maksaa yhden dirhamin, joka ojennetaan '
+                    + 'kuljettajalle veneessä.',
                   lahde: 'Steven Sun, Wikimedia Commons (CC BY-SA 4.0)',
                 },
               ],
@@ -14456,10 +14439,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + '13 000 alusta vuodessa.',
               kuva: {
                 tiedosto: 'Well-laden dhow (3981420270).jpg',
-                selite: 'Täyteen lastattu puinen dhow lahdella: lasti on '
-                  + 'peitetty pressuilla keulasta perään, perässä kohoaa '
-                  + 'sinivalkoinen ohjaamo, ja takana näkyy Deiran '
-                  + 'rantarivistö.',
+                selite: 'Dhow-purjealukset toivat Dubai Creekiin tavaraa '
+                  + 'Intiasta ja Itä-Afrikasta asti.',
                 lahde: 'Peter Dowley from Dubai, United Arab Emirates, '
                   + 'Wikimedia Commons (CC BY 2.0)',
               },
@@ -14483,16 +14464,14 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Dubai gold market.jpg',
-                  selite: 'Kultasuukin näyteikkuna läheltä: telineillä '
-                    + 'on rivi rivin perään kultarannekkeita, ja '
-                    + 'taustalla riippuu ketjuja.',
+                  selite: 'Deiran kultasuukissa on yli kolmesataa '
+                    + 'kauppiasta.',
                   lahde: 'Joi, Wikimedia Commons (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'Colourful spices in Dubai Spice Souk 2018.jpg',
-                  selite: 'Maustesuukin tiski: kekoja kuivattuja '
-                    + 'ruusunnuppuja, minttua, hibiskusta, kamomillaa ja '
-                    + 'saflorin oransseja kukkia vieri vieressä.',
+                  selite: 'Maustesuukissa suitsuke, shishatupakka ja yrtit '
+                    + 'ovat esillä kujalle asti.',
                   lahde: 'Frodlekis, Wikimedia Commons (CC BY-SA 4.0)',
                 },
               ],
@@ -14515,10 +14494,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Deiraan.',
               kuva: {
                 tiedosto: 'Windtower Dubai.jpg',
-                selite: 'Tuulitornin yläosa lähikuvassa: kaariaukot '
-                  + 'ottavat tuulen sisään joka suunnasta, ja seinien '
-                  + 'läpi työntyvät puiset poikkipuut, jotka toimivat '
-                  + 'rakennustelineinä korjaustöissä.',
+                selite: 'Sheikh Saeed bin Maktoum asui Shindaghan talossaan '
+                  + 'vuodesta 1912 vuoteen 1958, ja talon nurkissa on '
+                  + 'tuulitornit.',
                 lahde: 'Thomas Schoch, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -14542,10 +14520,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'aamuun ja iltaan, niin kuin dubailaiset tekevät.',
               kuva: {
                 tiedosto: 'Al Bastakiya-Dubai8888.JPG',
-                selite: 'Kapea kuja Al Fahidissa keskipäivällä: korkeat '
-                  + 'savenväriset muurit varjostavat käytävän lähes '
-                  + 'kokonaan, ja kujan päässä kohoaa tuulitorni '
-                  + 'sinistä taivasta vasten.',
+                selite: 'Dubaissa ylin lämpötila on heinä- ja elokuussa '
+                  + 'keskimäärin yli 43 astetta, ja vanhan kaupungin kapeat '
+                  + 'kujat on rakennettu varjoisiksi.',
                 lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -14583,9 +14560,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerroksissa paastotaan hetken pidempään kuin alhaalla. '
             + 'Rakennuksen muoto kapenee portaittain, jotta tuuli ei saisi '
             + 'siitä otetta.',
-          selite: 'Burj Khalifa kohoaa muiden pilvenpiirtäjien yli '
-            + 'kirkkaassa auringonpaisteessa, kapenee portaittain ja päättyy '
-            + 'ohueen piikkiin.',
+          selite: 'Burj Khalifa valmistui vuonna 2010, siinä on 163 '
+            + 'kerrosta, ja sen muoto kapenee portaittain, jottei tuuli '
+            + 'saisi siitä otetta.',
           lahde: 'Laika ac, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Burj Khalifa',
         },
@@ -14600,8 +14577,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'otetuissa kuvissa. Hiekka tiivistettiin täryttämällä, jotta se '
             + 'kestäisi rakennukset, ja aallonmurtajaan ladottiin miljoonia '
             + 'tonneja louhittua kiveä.',
-          selite: 'Ilmakuva Palm Jumeirahin lehdistä: kapeita hiekkakaistoja '
-            + 'turkoosissa vedessä, ja jokaisella talorivi ja oma ranta.',
+          selite: 'Palm Jumeirah ruopattiin merenpohjan hiekasta ja kivestä '
+            + 'palmun muotoon: runko, seitsemäntoista lehteä ja kaareva '
+            + 'aallonmurtaja.',
           lahde: 'Imre Solt, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Palm Jumeirah',
         },
@@ -14616,9 +14594,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jäljelle jäävä väkevä suolaliuos palautetaan mereen — se '
             + 'lämmittää ja suolaa lahtea, mikä on alueen isoja '
             + 'ympäristökysymyksiä.',
-          selite: 'Merivedenpuhdistamon putkistoa ja säiliöitä meren '
-            + 'rannalla, siniseksi maalatut putket rakennuksen kylkeä '
-            + 'pitkin.',
+          selite: 'Jebel Alin laitoksessa merivesi kuumennetaan ja höyry '
+            + 'tiivistetään juomavedeksi, ja jäljelle jäävä väkevä '
+            + 'suolaliuos palautetaan mereen.',
           lahde: 'Starsend, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -14645,6 +14623,8 @@ export const KULTTUURI_KATEGORIAT = {
    * ennallaan. Etusivun leipäteksti on asia-artikkelit.js:n
    * intro-kentässä ja kohdekartan esittely maakartat.js:ssä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   petra: [
     {
       id: 'kaupunki',
@@ -14656,26 +14636,20 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Al-Khazneh (Treasury) Petra.JPG',
-          selite: 'Al-Khazneh alhaalta: kaksikerroksinen julkisivu '
-            + 'pylväineen ja päätykolmioineen on louhittu suoraan '
-            + 'kallioseinään, ja ylätasolla seisoo pyöreä pylvästemppeli '
-            + 'uurna huipullaan.',
+          selite: 'Al-Khazneh louhittiin 100-luvun alussa jKr. kuningas '
+            + 'Aretas IV:n aikana hautamonumentiksi ja kryptaksi.',
           lahde: 'Kfoulk, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'The Monastery, Petra, Jordan8.jpg',
-          selite: 'Ad Deir, Petran suurin monumentti, on louhittu vuoren '
-            + 'kylkeen: julkisivu on oviaukkoon nähden valtava, ja sen '
-            + 'yläosassa toistuu sama pyöreä pylvästemppeli kuin '
-            + 'Aarrekammiossa.',
+          selite: 'Ad Deir on Petran suurin monumentti, ja sen luo noustaan '
+            + 'kallioon hakattuja portaita tunnin verran.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'THE ROYAL TOMBS by Strzelecki.JPG',
-          selite: 'Kuninkaanhautojen rivistö laakson pohjoisreunassa: '
-            + 'julkisivut on hakattu vierekkäin yhtenäiseen '
-            + 'kalliojyrkänteeseen, ja etualalla kukkii keväinen punainen '
-            + 'kasvusto.',
+          selite: 'Kuninkaanhaudat on hakattu vierekkäin laakson '
+            + 'pohjoisrinteen yhtenäiseen kalliojyrkänteeseen.',
           lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -14714,24 +14688,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Petra Siq, entrance to the ancient Nabatean city of Petra, Jordan.jpg',
-          selite: 'Siqin viimeinen mutka: kapean raon takaa näkyy pala '
-            + 'Aarrekammion julkisivua auringossa, kun rotko itse on '
-            + 'varjossa.',
+          selite: 'Siq on Petran ainoa portti, ja rotkon päässä avautuu '
+            + 'Aarrekammion julkisivu.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'City center and the so called colonnaded street, upper view. Petra.jpg',
-          selite: 'Laakson pohja ylhäältä: pylväskatu kulkee kuvan halki '
-            + 'suorana viivana, sen vasemmalla puolella näkyy '
-            + 'kaivausalueiden pylväsrivi ja ympärillä polkuja, jotka '
-            + 'haarautuvat joka suuntaan kallioihin.',
+          selite: 'Laakson pohjaa seuraa pylväskatu, jonka roomalaiset '
+            + 'kavensivat jalkakäytävää varten ja jonka varteen lisättiin '
+            + '72 pylvästä.',
           lahde: 'Qais Tweissi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Petra, Siq, Canyon, Jordan.jpg',
-          selite: 'Rotko vastavalossa: etualan seinämät ovat lähes mustia, '
-            + 'ja kaukana hehkuu valaistu kalliopinta, jonka edessä kulkijat '
-            + 'näkyvät siluetteina.',
+          selite: 'Siq on kapeimmillaan noin kolme metriä leveä, kun seinät '
+            + 'kohoavat yhdeksästäkymmenestä lähes kahteensataan metriin.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -14739,17 +14710,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Petra. Front view of Temple of el-Khazneh LOC matpc.06878.jpg',
           vuosi: '1900-luvun alku',
-          selite: 'Khaznen julkisivu 1900-luvun alussa, oviaukossa yksi ihminen '
-            + 'mittakaavana — julkisivua ei muurattu vaan hakattiin ylhäältä alaspäin '
-            + 'umpikallioon.',
+          selite: 'Al-Khaznen julkisivua ei muurattu vaan hakattiin '
+            + 'ylhäältä alaspäin umpikallioon.',
           lahde: 'Matson Collection / Library of Congress (PD)',
         },
         {
           tiedosto: 'Al Khazneh 2025.jpg',
           vuosi: '2025',
-          selite: 'Khazne nykyään: pylväät, kaarielementti ja veistokset erottuvat '
-            + 'selvästi, ja ruusunpunainen hiekkakivi vaihtaa sävyä auringon liikkeen '
-            + 'mukana.',
+          selite: 'Al-Khaznen julkisivu on 37 metriä korkea ja 24 metriä '
+            + 'leveä, ja se lainaa muotonsa Aleksandrian hellenistiseltä '
+            + 'arkkitehtuurilta.',
           lahde: 'ほっきー, Commons (CC0)',
         },
       ],
@@ -14768,9 +14738,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaksinkertaisessa koossa veistettyä kauppiasta, kumpikin '
             + 'taluttamassa kahta kamelia. Rotkon suulla ollut '
             + 'holvikaari romahti maanjäristyksessä 1896.',
-          selite: 'Siqin korkein kohta: pystysuorat seinämät kaartuvat '
-            + 'molemmin puolin ja jättävät väliinsä kapean käytävän, '
-            + 'jonka pohjalla kulkijat ovat pieniä.',
+          selite: 'Siq ei ole veden kaivama vaan luonnollinen murros, jonka '
+            + 'maankuoren liike halkaisi ja jonka vesi vasta myöhemmin hioi '
+            + 'sileäksi.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Petra',
         },
@@ -14788,10 +14758,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'toisen kerroksen koristeuurnassa olisi faaraon aarre. '
             + 'Uurna on täyttä hiekkakiveä, mutta siinä näkyy yhä '
             + 'luodinjälkiä niiltä, jotka uskoivat tarinan.',
-          selite: 'Aarrekammion yläosa lähikuvassa: keskellä pyöreä '
-            + 'pylvästemppeli uurnineen, sen molemmin puolin '
-            + 'katkaistut päätykolmiot ja seinäsyvennyksissä kuluneita '
-            + 'ihmishahmoja.',
+          selite: 'Aarrekammion koristeuurna on täyttä hiekkakiveä, mutta '
+            + 'siihen on jäänyt luodinjälkiä niiltä, jotka uskoivat sen '
+            + 'kätkevän faaraon aarteen.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Petra',
         },
@@ -14811,9 +14780,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Newdigate-palkinnon ja antoi kaupungille nimen, joka on '
             + 'jäänyt: ruusunpunainen kaupunki, puoliksi yhtä vanha '
             + 'kuin aika.',
-          selite: 'David Robertsin litografia 8. maaliskuuta 1839: '
-            + 'kuninkaanhautojen julkisivut kohoavat kallioseinässä, ja '
-            + 'niiden edessä kulkee kamelisaattue.',
+          selite: 'David Roberts piirsi Petran vuonna 1839, ja hänen '
+            + 'litografiansa veivät kaupungin eurooppalaisiin '
+            + 'olohuoneisiin.',
           lahde: 'David Roberts ja Louis Haghe, Wikimedia Commons (PD)',
           wiki: 'Petra',
         },
@@ -14833,9 +14802,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Rakennustyössä leikattiin useiden vanhempien hautojen '
             + 'läpi. Rooma liitti kuningaskunnan valtakuntaansa vuonna '
             + '106 jKr.',
-          selite: 'Teatterin katsomo on kokonaan kalliosta louhittu: '
-            + 'istuinrivit kaartuvat puoliympyräksi, ja niiden yläpuolella '
-            + 'ammottavat aiempien hautakammioiden suuaukot.',
+          selite: 'Petran teatteri louhittiin rinteeseen niin, että '
+            + 'katsomosta näkyi mahdollisimman monta hautaa, ja siihen '
+            + 'mahtui arviolta 8 500 katsojaa.',
           lahde: 'Pieter van Eekeren, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Petra',
         },
@@ -14843,9 +14812,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Petra View from High Place of Sacrifice 1935.jpg',
-          selite: 'Näkymä uhripaikalta laaksoon: kalliorinteessä on '
-            + 'hautajulkisivuja päällekkäisinä kerroksina, ja alhaalla '
-            + 'kiemurtelee vaalea polku kaupungin keskustaan.',
+          selite: 'Uhripaikalle Jebel Madbahin laelle noustaan tunti, ja '
+            + 'sieltä avautuu näkymä, jota laaksosta ei näe.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Petraan ei ajeta vaan kävellään. Portti on Wadi Musan '
@@ -14884,9 +14852,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'hautapaikkana ja vahvana ehdokkaana Raamatun Hor-vuoreksi.',
               kuva: {
                 tiedosto: 'Wadi Musa, Jordan.jpg',
-                selite: 'Wadi Musan kaupunki nousee rinnettä ylös: '
-                  + 'vaaleita betonitaloja terasseittain, ja ylimpänä '
-                  + 'paljas kalliokumpare ilman puita.',
+                selite: 'Wadi Musassa oli vuoden 2009 laskennassa 17 085 '
+                  + 'asukasta, ja kaupunki elää nykyään matkailusta.',
                 lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -14908,9 +14875,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'laaksosta ei näe.',
               kuva: {
                 tiedosto: 'The Royal Tombs in Petra.jpg',
-                selite: 'Kuninkaanhaudat laakson yli katsottuna: etualalla '
-                  + 'seisoo paljas kuollut puu, ja vastarinteen yläpuolella '
-                  + 'siintää Wadi Musan kaupunki.',
+                selite: 'Kuninkaanhaudat ovat laakson pohjoisrinteessä, ja '
+                  + 'pylväskadun päässä on Qasr al-Bint.',
                 lahde: 'Dudva, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -14932,10 +14898,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuvassa, jos katsoo tarkkaan.',
               kuva: {
                 tiedosto: 'Jordan 2021 P186 Petra Theater Necropolis.jpg',
-                selite: 'Hautojen katua teatterin lähellä: '
-                  + 'kalliojyrkänteessä on rivi julkisivuja ja niiden '
-                  + 'takana kammioita, joiden mustat oviaukot avautuvat '
-                  + 'suoraan rinteeseen.',
+                selite: 'Petran hautakammioissa asuivat bdul-beduiinit '
+                  + '1980-luvulle asti, kunnes heidät siirrettiin Umm '
+                  + 'Seyhounin kylään.',
                 lahde: 'Fallaner, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -14956,9 +14921,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kirjoittivat alueesta, Petraa ei enää mainittu.',
               kuva: {
                 tiedosto: 'Qasr al-Bint (Petra) 01.jpg',
-                selite: 'Qasr al-Bintin temppeli laakson päässä: massiivinen '
-                  + 'muuri seisoo yhä pystyssä holvikaarineen, ja sen edessä '
-                  + 'maassa on rivi katkenneita pylväitä.',
+                selite: 'Vuoden 363 maanjäristys rikkoi Petran rakennuksia '
+                  + 'ja kaupungin vesijärjestelmän, ja kauppa oli jo '
+                  + 'siirtynyt merireiteille.',
                 lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -14979,9 +14944,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'yli 1,2 miljoonaa.',
               kuva: {
                 tiedosto: 'Ad Deir, Petra.jpg',
-                selite: 'Ad Deir ylhäältä katsottuna: monumentti on kallion '
-                  + 'kyljessä aukion laidalla, ja ympärillä aukeaa paljasta '
-                  + 'vuoristoa niin kauas kuin näkyy.',
+                selite: 'Petra on 810 metrin korkeudessa, ja kävijöitä oli '
+                  + 'vuonna 2019 yli 1,2 miljoonaa.',
                 lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -15023,9 +14987,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskellä ollutta aluetta pidettiin pitkään torina, mutta '
             + 'kaivaukset paljastivat sen puutarhaksi, jossa oli suuri '
             + 'uima-allas ja keskellä saaripaviljonki.',
-          selite: 'Siqin suu ulkoapäin: aukko kallioseinässä on kapea, '
-            + 'ja sen edessä kulkee poikittain matala patomuuri, joka '
-            + 'kääntää uoman vedet sivuun.',
+          selite: 'Siqin suulla oleva pato ohjaa Wadi Musan tulvavedet pois '
+            + 'rotkosta, ja se on rakennettu uudelleen vuosina 1963 ja '
+            + '1991.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Petra',
         },
@@ -15044,9 +15008,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kierukan tilalla on neljä norsunpäätä — kaikkiaan '
             + 'norsunpääosien katkenneita paloja on kertynyt 328. '
             + 'Rakennuksen käyttötarkoituksesta kiistellään yhä.',
-          selite: 'Suuren temppelin ylätaso: leveä porrasnousu keskellä, '
-            + 'ja sen vasemmalla puolella rivi kaatuneita pylväiden '
-            + 'kiekkoja siinä järjestyksessä, jossa ne vierivät maahan.',
+          selite: 'Suuren temppelin kompleksi kattaa noin 7 560 '
+            + 'neliömetriä, ja sen portaat ovat seitsemäntoista metriä '
+            + 'leveät.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -15064,9 +15028,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin 400-luvun jälkipuoliskolla, ja se paloi '
             + '600-luvun alussa. Sivulaivojen mosaiikeissa on '
             + 'vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.',
-          selite: 'Kirkon mosaiikkilattiaa: pyöreässä kehyksessä ui '
-            + 'harmaa kala, ja sen ympärillä kulkee vaaleista ja '
-            + 'tummista kuutioista ladottu punos.',
+          selite: 'Petran bysanttilaisen kirkon sivulaivojen mosaiikeissa '
+            + 'on vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.',
           lahde: 'Odilia, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -15084,9 +15047,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nabatealaisajalta tunnettua hahmomaalausta. Kasvien ja '
             + 'lintujen kuvista on myös luettu, mitä alueella '
             + 'siihen aikaan viljeltiin.',
-          selite: 'Siq al-Baridin suu: kapean kanjonin edessä kohoaa '
-            + 'pyöreitä hiekkakivikumpuja, ja rotkon seinään on '
-            + 'louhittu pieni pylväsjulkisivu.',
+          selite: 'Siq al-Barid eli Pieni Petra on kolme avointa tilaa, '
+            + 'jotka yhdistää 450 metrin kanjoni.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15136,6 +15098,8 @@ export const KULTTUURI_KATEGORIAT = {
    * lähderivit ovat ennallaan; etusivun leipäteksti on
    * asia-artikkelit.js:n intro-kentässä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   medina: [
     {
       id: 'kaupunki',
@@ -15147,24 +15111,19 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Al-Masjid An-Nabawi (Bird\'s Eye View).jpg',
-          selite: 'Ilmakuva Profeetan moskeijasta iltahämärissä: vihreä '
-            + 'kupoli erottuu laajan kattopinnan reunalta, minareetit '
-            + 'nousevat kulmista, ja takana kaupunki jatkuu vuorten '
-            + 'juurelle asti.',
+          selite: 'Profeetan moskeija aukioineen on Medinan keskipiste, ja '
+            + 'hotellit, kadut ja kehätiet asettuvat sen mukaan.',
           lahde: 'Konevi, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Wide shot of the Green Dome at The Prophet\'s Mosque (Al Masjid-e-Nabawi).jpg',
-          selite: 'Moskeijan muurilinja sivulta katsottuna: pitkä '
-            + 'julkisivu, sen päällä minareettirivi ja keskellä vihreä '
-            + 'kupoli kirkkaan sinistä taivasta vasten.',
+          selite: 'Profeetan moskeijan vihreän kupolin alla on Muhammadin '
+            + 'hauta.',
           lahde: 'TheHadiRahim, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Mount Uhud.JPG',
-          selite: 'Uhudin punaruskea vuorimassa kohoaa kaupungin reunalla, '
-            + 'ja sen edustalla on rivi valkoisia matalia taloja ja '
-            + 'moskeija minareetteineen.',
+          selite: 'Uhud-vuori on Medinan korkein kohta, 1 077 metriä.',
           lahde: 'Adiput (talk), Wikimedia Commons (PD)',
         },
       ],
@@ -15176,22 +15135,20 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Medium shot of the Green Dome at The Prophet\'s Mosque (Al Masjid-e-Nabawi).jpg',
-          selite: 'Vihreä kupoli lähempää: sen vieressä on hopeanharmaa '
-            + 'sivukupoli ja kaksi minareettia, ja etualalle nousee '
-            + 'koristeellinen lyhtypylväs.',
+          selite: 'Medina on Mekan jälkeen islamin toiseksi pyhin '
+            + 'kaupunki.',
           lahde: 'TheHadiRahim, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Madinah Museum.JPG',
-          selite: 'Vanhan rautatieaseman julkisivu iltavalossa: muuri on '
-            + 'ladottu vuorotellen tummasta basaltista ja vaaleasta '
-            + 'hiekkakivestä, ja ihmisiä kävelee kuvasta poispäin selin.',
+          selite: 'Hidžaz-radan pääteaseman rakennukset entisöitiin, ja '
+            + 'niihin avattiin vuonna 2006 radan museo.',
           lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Jabal al Rumah جبل الرماه.jpg',
-          selite: 'Jousimiesten kukkula ja sen takana suoraan ylös nouseva '
-            + 'Uhudin rinne, etualalla kivetty aukio lyhtypylväineen.',
+          selite: 'Uhudin juurella on jousimiesten kukkula, jonka '
+            + 'tyhjentyminen ratkaisi vuoden 625 taistelun.',
           lahde: 'CR Guru PK, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15199,17 +15156,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Khalili Collection Hajj and Arts of Pilgrimage Arc.pp-0254.11.jpg',
           vuosi: '1880-luku',
-          selite: 'Profeetan moskeijan pihaa 1880-luvulla egyptiläisen upseerin '
-            + 'Muhammad Sadiq Beyn kuvaamana, kaarikäytävän takana kupoli profeetta '
-            + 'Muhammadin haudan päällä.',
+          selite: 'Vanha Medina oli soikea muurikaupunki, jonka keskellä '
+            + 'moskeija seisoi neljän portin sisäpuolella.',
           lahde: 'Muhammad Sadiq Bey / Khalili Collections, Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mezquita del Profeta, Medina, Arabia Saudita, 2025-05-22, DD 02.jpg',
           vuosi: '2025',
-          selite: 'Profeetan moskeija nykyään: pihaa on laajennettu satojentuhansien '
-            + 'ihmisten mittaiseksi, ja vanha kupoli on jäänyt uusien minareettien '
-            + 'keskelle.',
+          selite: 'Profeetan moskeijaa on laajennettu satojentuhansien '
+            + 'ihmisten mittaiseksi, ja vanha kupoli on jäänyt uusien '
+            + 'minareettien keskelle.',
           lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15228,9 +15184,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Abdullah Road ja King Khalid Road. Vanhan kaupungin '
             + 'soikea ääriviiva elää siis yhä katuverkossa, vaikka '
             + 'muurikiveä ei ole jäljellä.',
-          selite: '1800-luvun kaiverrettu asemakaava Medinasta: soikea '
-            + 'muurikaupunki portteineen keskellä, ja sen ympärille on '
-            + 'merkitty taatelitarhoja.',
+          selite: 'Muurien paikalle vedettiin Saudi-Arabian aikana kolme '
+            + 'kehätietä, joten vanhan kaupungin soikea ääriviiva elää yhä '
+            + 'katuverkossa.',
           lahde: 'John Lewis Burckhardt, Wikimedia Commons (PD)',
           wiki: 'Medina',
         },
@@ -15247,8 +15203,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'al-Aqiqin rannat vihertyivät viljelyksistä. Kaivoista '
             + 'kuuluisimpia on Ruman kaivo, jonka kalifi Uthman osti ja '
             + 'lahjoitti yhteiseksi, niin ettei vedestä tarvinnut maksaa.',
-          selite: 'Taatelipalmun latvus alhaalta kuvattuna: lehtien alta '
-            + 'riippuu keltaisia hedelmätertuja tiheinä ryppäinä.',
+          selite: 'Kalifi Muawiyan käskyläiset kaivoivat 600-luvulla Ayn '
+            + 'az-Zarqan lähteen ja rakensivat maanalaisia kanavia peltojen '
+            + 'kasteluun.',
           lahde: 'Kerina yin, Wikimedia Commons (CC0)',
           wiki: 'Medina',
         },
@@ -15267,9 +15224,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laskettiin väliaikaisille penkereille wadien yli. Mekkaan '
             + 'rataa ei jatkettu, sillä Harb-heimo nousi vuonna 1907 '
             + 'vastustamaan jatkoa.',
-          selite: 'Hidžaz-radan raide kulkee suorana aavikon halki radan '
-            + 'Jordanian-osuudella Wadi Rumissa, jossa kiskot ovat yhä '
-            + 'paikoillaan hiekan keskellä.',
+          selite: 'Hidžaz-rata saavutti Medinan 1. syyskuuta 1908, ja päivä '
+            + 'oli valittu sulttaanin valtaannousun vuosipäiväksi.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Medina',
         },
@@ -15286,8 +15242,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'entisöitiin, ja niihin avattiin vuonna 2006 Hidžaz-radan '
             + 'museo. Aseman kortteli on siis yhä olemassa, vaikka '
             + 'raiteet eivät enää vie mihinkään.',
-          selite: 'Entisöity tumma tavaravaunu museoraiteella: kylki on '
-            + 'peltiä, ja sen alla erottuvat jouset ja teräspyörät.',
+          selite: 'Hidžaz-rata ehti palvella runsaat kymmenen vuotta, ja '
+            + 'vuoteen 1920 mennessä se oli käytännössä hylätty.',
           lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Medina',
         },
@@ -15295,9 +15251,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Al-Masjid al-Nabawi, Medina - panoramio.jpg',
-          selite: 'Moskeijan aukion jättimäiset varjostimet avattuina: '
-            + 'valo siivilöityy vaaleiden kankaiden läpi, ja pylväät '
-            + 'nousevat kivetyltä pihalta suorina riveinä.',
+          selite: 'Medinaan tulee yli seitsemän miljoonaa vierailijaa '
+            + 'vuodessa.',
           lahde: 'Vebra, Wikimedia Commons (CC BY 3.0)',
         },
         kappale: 'Medina on aavikon keskellä oleva suurkaupunki, jossa on '
@@ -15335,8 +15290,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jotka kiertävät keskustan renkaina.',
               kuva: {
                 tiedosto: 'قطار الحرمين 2023.jpg',
-                selite: 'Valkoinen ja matala Haramain-pikajuna kaartaa '
-                  + 'loivassa kaarteessa vihertävän rinnemaiseman halki.',
+                selite: 'Haramain-pikajuna avattiin 11. lokakuuta 2018, ja '
+                  + 'se kulkee Mekasta Medinaan noin 450 kilometriä '
+                  + 'kahdessa tunnissa.',
                 lahde: 'وكالة الأنباء السعودية, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -15359,10 +15315,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + '293.',
               kuva: {
                 tiedosto: 'Harrat Rahat.jpg',
-                selite: 'NASAn satelliittikuva laavakentästä: musta '
-                  + 'kivipinta peittää maan laajoina läikkinä, ja '
-                  + 'kentän pohjoislaidalla erottuu Medinan vaalea '
-                  + 'kaupunkialue.',
+                selite: 'Harrat Rahat on Saudi-Arabian suurin laavakenttä, '
+                  + 'ja se purkautui viimeksi vuonna 1256.',
                 lahde: 'NASA Space Shuttle image (http://eol.jsc.nasa.gov/), Wikimedia Commons (PD)',
               },
             },
@@ -15381,9 +15335,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vahva perinneyhteys profeetta Muhammadiin.',
               kuva: {
                 tiedosto: 'Ajwa dates.JPG',
-                selite: 'Tummia ajwa-taateleita kasassa lasikulhossa: '
-                  + 'pinta on ryppyinen ja kiiltävä ja koko tasainen '
-                  + 'taatelista toiseen.',
+                selite: 'Ajwa on Medinan tunnetuin taatelilajike: soikea, '
+                  + 'keskikokoinen ja mustakuorinen.',
                 lahde: 'Miansari66, Wikimedia Commons (PD)',
               },
             },
@@ -15404,9 +15357,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'moskeija ja vanha rautatieasema.',
               kuva: {
                 tiedosto: 'Mosque of Al-Ghamama 2026-05-13.jpg',
-                selite: 'Al-Ghamaman moskeija ylhäältä: matala '
-                  + 'kivirakennus, jonka katolla on rivi kupoleita, ja '
-                  + 'sen ympärillä kohoavat hotellitornit.',
+                selite: 'Al-Ghamaman moskeija on yksi keskustan vanhemmista '
+                  + 'rakennuksista hotellitornien keskellä.',
                 lahde: 'FaysaLBinDaruL, Wikimedia Commons (CC BY 4.0)',
               },
             },
@@ -15465,9 +15417,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kahdelle heistä, Awsille ja Khazrajille. Quban kylä '
             + 'keitaan eteläreunalla pysyi omana yhdyskuntanaan vielä '
             + 'pitkään.',
-          selite: 'Quban valkoinen moskeija auringossa neljine '
-            + 'kulmaminareetteineen ja kupolirypäineen — Quba oli oma '
-            + 'kylänsä keitaan laidalla, kunnes kaupunki kasvoi sen '
+          selite: 'Quban kylä keitaan eteläreunalla pysyi omana '
+            + 'yhdyskuntanaan pitkään, kunnes kaupunki kasvoi sen '
             + 'ympärille.',
           lahde: 'يحيى الزعبي 2025, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Medina',
@@ -15486,9 +15437,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sitä alettiin kutsua yksinkertaisesti al-Madinaksi, '
             + 'kaupungiksi. Jälkimmäisestä ovat lähtöisin pidemmät '
             + 'muodot Profeetan kaupunki ja Valaistu kaupunki.',
-          selite: 'Naboniduksen Harranista löytyneen steelan yläosa '
-            + 'lähikuvassa: kuningas seisoo sauva kädessä, ja hänen '
-            + 'edessään kiveen on hakattu taivaankappaleiden symbolit.',
+          selite: 'Nimi Yathrib esiintyy Harranista löytyneessä '
+            + 'kirjoituksessa, joka kuuluu babylonialaiselle kuninkaalle '
+            + 'Nabonidukselle 500-luvulla eKr.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Medina',
         },
@@ -15507,9 +15458,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'riidat vietiin Muhammadin ratkaistaviksi. Tutkijat '
             + 'kiistelevät yhä siitä, oliko kyseessä yksi asiakirja vai '
             + 'kokoelma sopimuksia.',
-          selite: 'Kaksi varhaista käsikirjoituslehteä pergamentilla '
-            + 'ruskealla musteella — ei perustuslaki vaan Birminghamin '
-            + 'Koraani-fragmentti, näyte aikakauden kirjoituksesta.',
+          selite: 'Birminghamin Koraani-fragmentti on näyte aikakauden '
+            + 'kirjoituksesta eikä Medinan perustuslain asiakirja.',
           lahde: 'AnonymousUnknown author, Wikimedia Commons (PD)',
           wiki: 'Medina',
         },
@@ -15527,9 +15477,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kestänyt neljäkymmentä päivää, lyheni viiteen, ja '
             + 'vuosikymmenessä kaupungin väkiluku nousi '
             + 'kahdeksaankymmeneentuhanteen.',
-          selite: 'Anbariyan osmanimoskeija vanhan rautatieaseman '
-            + 'kupeessa: vaalea kivirakennus kupoleineen ja kaksi hoikkaa '
-            + 'minareettia, rakennettu radan yhteydessä vuonna 1908.',
+          selite: 'Anbariyan osmanimoskeija rakennettiin vanhan '
+            + 'rautatieaseman kupeeseen radan yhteydessä vuonna 1908.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Medina',
         },
@@ -15606,6 +15555,8 @@ export const KULTTUURI_KATEGORIAT = {
    * johdannot, kuvatiedostot ja lähderivit ovat ennallaan; etusivun
    * leipäteksti on asia-artikkelit.js:n intro-kentässä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   mekka: [
     {
       id: 'kaupunki',
@@ -15617,24 +15568,20 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Masjid al-Haram 2022.jpg',
-          selite: 'Ilmakuva Suuresta moskeijasta: musta Kaaba on '
-            + 'keskellä pyöreää pihaa, väki näkyy sen ympärillä pieninä '
-            + 'pisteinä, ja reunoilla seisovat nostokurjet kertovat '
-            + 'yhä jatkuvasta laajennustyöstä.',
+          selite: 'Suuri moskeija on Mekan laakson pohjalla, ja sen '
+            + 'ympärillä kulkee neljä kehätietä.',
           lahde: 'مريم محمد الغلبان, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'المسجد الحرام٣.jpg',
-          selite: 'Sama moskeija yöllä ylhäältä: rakennus hehkuu '
-            + 'valaistuna laakson pohjalla, ja kellotornin huipusta '
-            + 'nousee suora valokiila pilviin.',
+          selite: 'Mekassa kävi vuonna 2024 yli yhdeksäntoista miljoonaa '
+            + 'ulkomaista vierailijaa.',
           lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mount Arafat3.jpg',
-          selite: 'Arafatin kukkula pyhiinvaelluksen aikaan: rinne on '
-            + 'täynnä valkopukuisia ihmisiä pieninä hahmoina, ja laella '
-            + 'erottuu valkoinen obeliskimerkki.',
+          selite: 'Arafatin kukkula on yksi hadžin riittien paikoista '
+            + 'kaupungin ulkopuolella.',
           lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15673,25 +15620,20 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Mecca at night.jpg',
-          selite: 'Laakso yöllä valomerenä: kellotorni kohoaa oikealla '
-            + 'kirkkaimpana pisteenä, ja reunoilla vuoret ovat mustia '
-            + 'aukkoja valojen keskellä.',
+          selite: 'Mekka on 277 metrin korkeudessa vuorten välisessä '
+            + 'käytävässä, jota kutsutaan Mekan kuopaksi.',
           lahde: 'عباد ديرانية, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Masjid Haram 1889 Snouck Hurgronje.jpg',
-          selite: 'Moskeijan piha ja Kaaba vuonna 1889, takana kukkulalla '
-            + 'sittemmin purettu Ajyadin linnoitus; kuvan pienet numerot '
-            + 'ovat alkuperäisen julkaisun omia litteroita, joilla kohteet '
-            + 'nimettiin kirjan tekstissä.',
+          selite: 'Ajyadin linnoitus peitti moskeijan eteläpuolisella '
+            + 'kukkulalla noin kaksikymmentäkolmetuhatta neliömetriä ja '
+            + 'rakennettiin suojaamaan pyhäkköä.',
           lahde: 'C. Snouck Hurgronje, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Jabbal An-Nour (2024).jpg',
-          selite: 'Jabal al-Nour tieltä kuvattuna: kaksihuippuinen vuori, '
-            + 'jonka laki näyttää siltä kuin sen päälle olisi nostettu '
-            + 'toinen vuori, ja etualan ajoneuvot ovat pieniä rinteen '
-            + 'mittakaavassa.',
+          selite: 'Jabal al-Nour on Mekan korkein huippu, 642 metriä.',
           lahde: 'Kaliper1, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15699,16 +15641,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Khalili Collection Hajj and Arts of Pilgrimage arc.pp 0211.04.jpg',
           vuosi: '1880',
-          selite: 'Kaaba suuren moskeijan keskellä vuonna 1880, taustalla kapean '
-            + 'laakson rinnettä ylös kiipeävät talot.',
+          selite: 'Mekan talot kiipesivät 1800-luvulla kapean laakson '
+            + 'rinteitä ylös aivan moskeijan reunalle asti.',
           lahde: 'Muhammad Sadiq Bey / Khalili Collections, Commons (PD)',
         },
         {
           tiedosto: 'Makkah 550m.jpg',
           vuosi: '2011',
-          selite: 'Suuri moskeija ja sitä ympäröivä kaupunki 550 metrin korkeudesta '
-            + 'nähtynä: Kaaba on pieni tumma piste keskellä pihaa, jonka ympärille '
-            + 'kaikki muu on kasvanut.',
+          selite: 'Suuri moskeija on Mekan keskus, jonka ympärille kaikki '
+            + 'muu on kasvanut.',
           lahde: 'Wurzelgnohm, Commons (CC0)',
         },
       ],
@@ -15729,10 +15670,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pysyisi kuivana. Tutkija al-Kurdin mukaan tulvia oli '
             + 'vuoteen 1965 mennessä tullut kahdeksankymmentä'
             + 'yhdeksän, pahin niistä vuonna 1942.',
-          selite: 'Mekan asemakaava Snouck Hurgronjen teoksesta vuodelta '
-            + '1888, pohjana Burckhardtin mittaukset: laakson uoma '
-            + 'haarautuu sinisenä kaupungin läpi, korttelit seuraavat sen '
-            + 'mutkia, ja molemmin puolin nousevat viivoitetut vuoret.',
+          selite: 'Mekan laakson uoma ohjaa rankkasateen vedet suoraan '
+            + 'kaduille, ja jo kalifien aikana kaupunkiin rakennettiin '
+            + 'patoja ja penkereitä.',
           lahde: 'The British Library, Wikimedia Commons (PD)',
           wiki: 'Mekka',
         },
@@ -15752,9 +15692,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vettä koko matkan. '
             + 'Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä '
             + 'katsellaan lasin takaa.',
-          selite: 'Zamzamin vanha kaivonkehä museonäyttelyssä '
-            + 'rauta-aitauksen takana, yllä vedennostoon käytetty '
-            + 'messinkiämpäri ja vanha nostoväkipyörä.',
+          selite: 'Zamzamin kaivo on noin kolmekymmentä metriä syvä, ja '
+            + 'vuonna 1964 sen suu siirrettiin kellariin.',
           lahde: 'Mohammad Bahareth, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Mekka',
         },
@@ -15775,9 +15714,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1800-luvun alussa kiswan kulut valtion kassasta, ja '
             + 'silloin työ annettiin Kairon Dar '
             + 'al-Khoronfoshin verstaalle.',
-          selite: 'Mamelukkiaikainen Kaaban oviverho Bursan Ulu Camiissa '
-            + 'Turkissa: mustalle silkille on kirjottu kullalla '
-            + 'kalligrafiaa ja köynnöskuviota.',
+          selite: 'Kaaban musta peite eli kiswa valmistettiin ajjubidien '
+            + 'ajoista lähtien Egyptissä; tämä mamelukkiaikainen oviverho '
+            + 'on Bursan Ulu Camiissa.',
           lahde: 'Yahia.Mokhtar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mekka',
         },
@@ -15797,9 +15736,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nykyään seitsemän tai kahdeksan sirpaletta '
             + 'hopeakehyksessä, ja näkyvää pintaa on noin 20 kertaa 16 '
             + 'senttiä.',
-          selite: 'Kaaba vuonna 1910: oviverho on nostettu ylös, kankaan '
-            + 'kultakirjailu erottuu mustaa vasten, ja ympärillä liikkuu '
-            + 'ihmisiä aikakauden asuissa pieninä hahmoina.',
+          selite: 'Kaaba on kivinen kuutio, 13,1 metriä korkea ja '
+            + 'pohjaltaan 12,86 kertaa 11,03 metriä.',
           lahde: 'G. Eric or Edith Matson, for American Colony Jerusalem, '
             + 'Wikimedia Commons (PD)',
           wiki: 'Mekka',
@@ -15808,9 +15746,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Jabbal An-Nour - Makkah (2241558560).jpg',
-          selite: 'Jabal al-Nourin huippu läheltä: rinteen polku erottuu '
-            + 'valkoisena pistejonona, joka on jono ihmisiä matkalla Hiran '
-            + 'luolalle ja näyttää vuoren mittakaavan.',
+          selite: 'Jabal al-Nourin huipulle vie polku, jota pitkin '
+            + 'kävijät nousevat Hiran luolalle.',
           lahde: 'Wal N., Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Mekka on Saudi-Arabian kolmanneksi suurin kaupunki, ja '
@@ -15853,9 +15790,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lukuisia tunneleita pitkin.',
               kuva: {
                 tiedosto: 'Haramain High Speed Railway Station Interior 2022.jpg',
-                selite: 'Haramain-radan asemahalli sisältä: katto '
-                  + 'kaartuu valkoisina palkkeina korkealla, ja '
-                  + 'matkustajat erottuvat vastavalossa siluetteina.',
+                selite: 'Haramain-pikajunan rata on 449 kilometriä pitkä, '
+                  + 'ja junat kulkevat 300 kilometrin tuntinopeudella.',
                 lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -15879,9 +15815,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'välissä.',
               kuva: {
                 tiedosto: 'Roof of Masjid al-Haram 03.jpg',
-                selite: 'Suuren moskeijan kattotaso: rukousmatot on '
-                  + 'ladottu pitkiksi suoriksi riveiksi laattapinnalle, '
-                  + 'ja kyyhkysiä kävelee rivien välissä.',
+                selite: 'Mekan haram-alue on selvästi laajempi kuin '
+                  + 'Medinassa, ja sen keskus on al-Haramin alue.',
                 lahde: 'Mondephile, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -15904,9 +15839,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'keskuudessa 27 kertaa vuosien 1830 ja 1930 välillä.',
               kuva: {
                 tiedosto: 'Mina\'s tents.JPG',
-                selite: 'Minan telttameri yöllä: valkoisia telttoja jatkuu '
-                  + 'riveissä horisonttiin asti, ja niiden välissä palavat '
-                  + 'korkeat valonpylväät.',
+                selite: 'Vuonna 2019 hadžille tuli 2 489 406 ihmistä, ja '
+                  + 'riittien ajaksi väki majoittuu Minan '
+                  + 'telttalaaksoon.',
                 lahde: 'Arisdp, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -15930,10 +15865,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaupunkiin vali Osman Nuri Pasha vuonna 1885.',
               kuva: {
                 tiedosto: 'Zemzem takımı.jpg',
-                selite: 'Zamzam-astiasto Adanan museossa Turkissa: '
-                  + '1800–1900-luvun hopeoitu kannu ja maljat, joilla '
-                  + 'Zamzamin vettä kannettiin ja tarjoiltiin '
-                  + 'osmanivaltakunnassa.',
+                selite: 'Zamzamin vettä kannettiin ja tarjoiltiin '
+                  + 'osmanivaltakunnassa hopeoiduilla kannuilla ja '
+                  + 'maljoilla.',
                 lahde: 'Tpinar, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -15997,9 +15931,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muslimi ja pääsi Mekkaan, jossa vietti useita kuukausia ja '
             + 'teki pyhiinvaelluksen riitit. Muistiinpanot julkaistiin '
             + 'vasta kuoleman jälkeen, vuonna 1829.',
-          selite: 'Öljyvärimuotokuva Burckhardtista tummaa tyhjää taustaa '
-            + 'vasten: vaalea turbaani punaisine lakkeineen, tuuhea parta '
-            + 'ja vaalea viitta.',
+          selite: 'Sveitsiläinen Johann Ludwig Burckhardt otti nimen šeikki '
+            + 'Ibrahim ibn Abdallah ja pääsi Mekkaan vuonna 1814.',
           lahde: 'Maurice Babey, Wikimedia Commons (PD)',
           wiki: 'Mekka',
         },
@@ -16019,9 +15952,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjoitti: "Mekassa ei ole mitään teatraalista, mikään ei '
             + 'muistuta oopperaa, vaan kaikki on yksinkertaista ja '
             + 'vaikuttavaa."',
-          selite: 'Burton valepuvussaan valkoisessa turbaanissa ja '
-            + 'pitkässä viitassa, ase vyöllä — kuva on hänen vaimonsa '
-            + 'elämäkerran kuvituksesta.',
+          selite: 'Richard Francis Burton matkusti Mekkaan vuonna 1853 '
+            + 'valepuvussa ja kantoi muistiinpanovälineitä '
+            + 'koraanikotelossa.',
           lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
           wiki: 'Mekka',
         },
@@ -16040,8 +15973,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'osa kukkulasta tasoitettiin kellotornikompleksin tieltä. '
             + 'Rakennuksesta on jäljellä 1:25-kokoinen pienoismalli '
             + 'Istanbulin Miniatürk-puistossa.',
-          selite: 'Kellotornikompleksi nykyään sillä kukkulalla, jolla '
-            + 'linnoitus seisoi, kellotaulu keskimmäisen tornin kyljessä.',
+          selite: 'Ajyadin linnoitus purettiin tammikuussa 2002 '
+            + 'kellotornikompleksin tieltä, ja siitä on jäljellä '
+            + 'pienoismalli Istanbulin Miniatürk-puistossa.',
           lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mekka',
         },
@@ -16059,9 +15993,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Mekasta sen keskus, ja vuonna 1885 vali Osman Nuri Pasha '
             + 'toi kaupunkiin ensimmäisen kirjapainon. Samana vuonna '
             + 'väkiluvuksi arvioitiin neljäkymmentäviisi tuhatta.',
-          selite: 'Egyptiä osmanisulttaanin varakuninkaana hallinneen '
-            + 'Muhammad Alin muotokuva: valkoinen turbaani, tumma viitta '
-            + 'ja miekka sylissä.',
+          selite: 'Osmanit antoivat Mekan takaisinvaltauksen Egyptin '
+            + 'varakuninkaalle Muhammad Ali Pashalle, joka onnistui siinä '
+            + 'vuonna 1813.',
           lahde: 'Auguste Couder, Wikimedia Commons (PD)',
           wiki: 'Mekka',
         },
@@ -16079,6 +16013,8 @@ export const KULTTUURI_KATEGORIAT = {
    * 85:tä metriä. Uusi intro käyttää noston lukuja; teksti-kenttä ei
    * kuulunut erän piiriin, joten se odottaa omaa korjaustaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   kapadokia: [
     {
       id: 'kaupunki',
@@ -16090,23 +16026,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Light in Goreme Valley.jpg',
-          selite: 'Rivi tuffikartioita vastavalossa: etualan piiput ovat '
-            + 'lähes mustia, niiden takana laakson seinämä hohtaa vaaleana, '
-            + 'ja sama muoto toistuu laaksosta toiseen.',
+          selite: 'Tuuli ja vesi ovat veistäneet Keski-Anatolian tuffista '
+            + 'piikkejä, joita turkiksi sanotaan peribacalariksi eli '
+            + 'keijupiipuiksi.',
           lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Uçhisar Castle 02.jpg',
-          selite: 'Uçhisarin kuusikymmenmetrinen kalliolinnake, jonka '
-            + 'kylkeen on louhittu ikkuna-aukkoja ja huoneita, ja sen edessä '
-            + 'kartio, johon on kaiverrettu ovia kolmeen kerrokseen.',
+          selite: 'Uçhisarin kuusikymmenmetrisen kalliolinnakkeen sisään '
+            + 'louhittuihin huoneisiin arvellaan mahtuneen tuhatkunta '
+            + 'ihmistä.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Sultanhani Caravanserai, Turkey (23944555856).jpg',
-          selite: 'Sultanhanın karavaaniseraalin piha: keskellä kohoaa '
-            + 'kaarien päälle rakennettu rukoushuone, oikealla holvikaarten '
-            + 'rivi ja edessä kulunut kivilaatoitus.',
+          selite: 'Sultanhanın karavaaniseraali rakennettiin vuonna 1229 '
+            + 'seldžukkisulttaani Kayqubad I:n käskystä.',
           lahde: 'Robert Cutts from Bristol, England, UK, Wikimedia Commons '
             + '(CC BY-SA 2.0)',
         },
@@ -16114,23 +16049,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Cappadocia Aktepe Panorama.JPG',
-          selite: 'Laaja panoraama Aktepen laaksosta: ylhäällä vaaleiden '
-            + 'kerrosten reunustama tasanko, alempana ruusunpunaista '
-            + 'tuffia terävinä harjanteina, ja pohjalla vihreitä pensaita.',
+          selite: 'Kappadokian tuffi ja ignimbriitti kerrostuivat '
+            + 'tulivuorten purkauksista noin yhdeksän ja kolmen miljoonan '
+            + 'vuoden välillä.',
           lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Sunset at GoremeValley with View of Uchisar.jpg',
-          selite: 'Iltavalo laakson yllä: etualalla kymmeniä tuffikartioita '
-            + 'peräkkäin usvassa, ja harjanteen päällä siintää Uçhisarin '
-            + 'kylä linnakallioineen.',
+          selite: 'Matkailijan Kappadokia on Göremen, Uçhisarin, Avanosin '
+            + 'ja Ürgüpin väliin jäävä muutaman kymmenen kilometrin '
+            + 'kolmio.',
           lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Sunset at Goreme Valley.jpg',
-          selite: 'Göremen laakso kultaisessa vastavalossa: teräviä '
-            + 'kivipiikkejä rinne rinteeltä, syksyn ruskeat pensaat '
-            + 'etualalla ja kylän talot sumun takana.',
+          selite: 'Kansainvälinen geologian liitto valitsi Kappadokian '
+            + 'ignimbriittisarjan lokakuussa 2022 sadan geologisen '
+            + 'perintökohteen joukkoon.',
           lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16138,16 +16073,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Cappadocia LOC matpc.12157.jpg',
           vuosi: '1935',
-          selite: 'Kartiomaisia tuhkakivimuodostumia vuonna 1935, kylkiin hakattuina '
-            + 'ovia ja ikkuna-aukkoja — kivi on niin pehmeää, että aukot syntyivät '
-            + 'käsityökaluilla.',
+          selite: 'Tuffi on niin pehmeää, että kartioiden kylkien ovet ja '
+            + 'ikkuna-aukot syntyivät käsityökaluilla.',
           lahde: 'Matson Collection / Library of Congress (PD)',
         },
         {
           tiedosto: 'Goreme Panorama From Southeast.JPG',
           vuosi: '2009',
-          selite: 'Göremen kylä aamuvalossa: talot, kartiot ja kalliot ovat sekaisin, '
-            + 'ja osa taloista on yhä puoliksi kallion sisällä.',
+          selite: 'Göremen kylässä osa taloista on yhä puoliksi kallion '
+            + 'sisällä.',
           lahde: 'Bjørn Christian Tørrissen, Commons (CC BY-SA 3.0)',
         },
       ],
@@ -16164,9 +16098,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kansainvälinen geologian liitto valitsi Kappadokian '
             + 'mioseenikautisen ignimbriittisarjan lokakuussa 2022 sadan '
             + 'geologisen perintökohteen joukkoon.',
-          selite: 'Erciyes-vuori siintää ylätasangon takana: sammunut '
-            + 'tulivuori on alueen korkein kohta, ja sen purkaukset '
-            + 'kerrostivat tuhkan, josta koko maisema on veistetty.',
+          selite: 'Sammunut Erciyes on alueen korkein kohta, ja sen '
+            + 'purkaukset kerrostivat tuhkan, josta koko maisema on '
+            + 'veistetty.',
           lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Kappadokia',
         },
@@ -16182,9 +16116,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'värejä. Laakson yllä kohoaa Uçhisarin kuusikymmenmetrinen '
             + 'kalliolinnake, jonka sisään louhittuihin huoneisiin arvellaan '
             + 'mahtuneen tuhatkunta ihmistä.',
-          selite: 'Kyyhkyslaakso Uçhisarin alapuolella: pehmeän tuffin '
-            + 'seinämiin on louhittu aukkoja rivi rivin päälle, ja '
-            + 'harjanteella näkyy kylän taloja.',
+          selite: 'Kyyhkysten lantaa käytettiin peltojen lannoitteena '
+            + '1970-luvulle asti, ja samaa ainetta sekoitettiin '
+            + 'luolakirkkojen maaleihin.',
           lahde: 'Claude Valette, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16199,9 +16133,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein '
             + 'kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, '
             + 'joita savipajat käyttävät yhä varastoinaan.',
-          selite: 'Keramiikkasali kallioon louhitussa huoneessa: kattoon '
-            + 'ripustettuja maalattuja astioita ja pöydillä satoja kulhoja '
-            + 'riveissä.',
+          selite: 'Kızılırmakin punainen siltti on Avanosin savenvalajien '
+            + 'raaka-aine, ja perinteen arvellaan ulottuvan '
+            + 'heettiläisaikaan asti.',
           lahde: 'Slyronit, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16216,18 +16150,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kapinallisten käsiin Istanbulissa vuonna 1730, mutta kaupunki '
             + 'oli silloin jo vakiintunut. Vuonna 2015 keskustan alta '
             + 'paljastui purkutöissä tuntematon maanalainen kaupunki.',
-          selite: 'Kurşunlu-moskeija Nevşehirin keskustassa ylhäältä '
-            + 'nähtynä: lyijykupoli ja kaksi minareettia nykyisten '
-            + 'kerrostalojen keskellä.',
+          selite: 'Nevşehir oli 1700-luvun alussa kahdeksantoista talon '
+            + 'kylä, kunnes suurvisiiri Nevşehirli Damad İbrahim Paşa '
+            + 'rakennutti kotiseudulleen moskeijoita, kouluja ja '
+            + 'kylpylöitä.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Göreme town and valley 2015.JPG',
-          selite: 'Göremen kylä laakson pohjalla: talojen lomassa kohoaa '
-            + 'tuffikartioita, joiden kylkiin on louhittu ovia ja ikkunoita, '
-            + 'ja takana levittäytyy laakso vaaleine kallioseinineen.',
+          selite: 'Göremen kansallispuisto hyväksyttiin Unescon '
+            + 'maailmanperintöluetteloon vuonna 1985.',
           lahde: 'MusikAnimal, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Kappadokia ei ole kaupunki eikä maakunta vaan '
@@ -16262,9 +16196,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'maakunnan hallintokaupunki.',
               kuva: {
                 tiedosto: 'The Roads to Cappadocia.jpg',
-                selite: 'Ylätasangon reunaa: etualalla viljelysaukeaa ja '
-                  + 'puurivejä, keskellä vaaleita kalliomuodostumia ja '
-                  + 'taustalla loivia vuoria.',
+                selite: 'Kappadokia on historiallinen alue kuuden maakunnan '
+                  + 'päällä, ja Nevşehiristä on Ankaraan 290 kilometriä.',
                 lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -16284,9 +16217,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kohta ja aivan toisen näköinen kuin kuivat laaksot.',
               kuva: {
                 tiedosto: 'Ihlara Valley in summer.jpg',
-                selite: 'Ihlaran laakson reuna: pystysuora tuffiseinä, jonka '
-                  + 'kylkeen on louhittu aukkoja, ja edessä irtolohkareita '
-                  + 'kuivassa rinteessä.',
+                selite: 'Ihlaran laakson pohjalla virtaa joki jyrkkien '
+                  + 'tuffiseinien välissä, ja se on alueen vihrein kohta.',
                 lahde: 'Andrada Boldis, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -16305,9 +16237,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'koko alueella: mitä tarvitaan, se kaivetaan.',
               kuva: {
                 tiedosto: 'The Rock formations.jpg',
-                selite: 'Kalliokukkula, jonka kylkeen on louhittu huoneita '
-                  + 'ja ikkuna-aukkoja useaan kerrokseen, ympärillä laaksoa '
-                  + 'ja kaukana minareetti.',
+                selite: 'Tuffi kovettuu ilmassa, joten Kappadokiassa ei ole '
+                  + 'rakennettu vaan louhittu: talot, tallit, kirkot ja '
+                  + 'varastot on kaiverrettu kallioon.',
                 lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -16330,10 +16262,8 @@ export const KULTTUURI_KATEGORIAT = {
                 // peilaustyökalu poimisi vain ensimmäisen palan
                 // (tests/media.test.mjs valvoo tätä).
                 tiedosto: 'Medieval Fresco in Cave Church - Open-Air Museum - Goreme - Cappadocia - Turkey (5761507026).jpg',
-                selite: 'Luolakirkon holviin punamullalla maalattuja '
-                  + 'pyhimyshahmoja: ristit käsissä, kaavut '
-                  + 'ruutukuvioituina, ja tausta jaettu ohuilla viivoilla '
-                  + 'ruutuihin.',
+                selite: 'Kappadokian luolakirkkojen freskot ajoittuvat '
+                  + '500-luvulta 1100-luvulle.',
                 lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia '
                   + 'Commons (CC BY-SA 2.0)',
               },
@@ -16353,9 +16283,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja korkeuden takia yöt viilenevät myös keskikesällä.',
               kuva: {
                 tiedosto: 'Winter at Cappadocia.jpg',
-                selite: 'Lumipeitteinen laakso talvella: valkoiset rinteet ja '
-                  + 'niiden lomassa paljaita ruskeita kallioita, ja '
-                  + 'harjanteella Uçhisarin kylä iltavalossa.',
+                selite: 'Tuhannen metrin ylätasangolla tammi- ja helmikuun '
+                  + 'keskilämpö on nollan tuntumassa, ja lunta tulee.',
                 lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -16395,9 +16324,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerroksen kirkkoon. Ilmanvaihto oli suunniteltu: pystykuiluja '
             + 'on runsaasti, ja pääkuilun aukot on porrastettu niin, etteivät '
             + 'kahden kerroksen aukot ole koskaan päällekkäin.',
-          selite: 'Kallioon louhittu käytävä Derinkuyussa: holvikatto, '
-            + 'kulunut lattia ja perällä matala oviaukko, jonka takaa näkyy '
-            + 'valoa seuraavaan huoneeseen.',
+          selite: 'Derinkuyun maanalainen kaupunki ulottuu noin '
+            + 'kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen.',
           lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -16413,9 +16341,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaivoivat fryygialaiset 700–600-luvulla eKr., kun taas '
             + 'artikkelin toinen lähde katsoo kristittyjen aloittaneen työn '
             + 'vasta 700-luvulla jKr.',
-          selite: 'Suuri louhittu sali Kaymaklıssa: matala holvikatto, '
-            + 'seinissä syvennyksiä ja oviaukkoja, ja lattiassa metallinen '
-            + 'ritilä portaiden päällä.',
+          selite: 'Kaymaklın käytävien pyöreät kivilaatat aukesivat vain '
+            + 'sisäpuolelta, joten jokainen kerros voitiin sulkea '
+            + 'erikseen.',
           lahde: 'MusikAnimal, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16430,9 +16358,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Unescon maailmanperintöluetteloon vuonna 1985. Ensimmäinen '
             + 'kirjallinen maininta paikasta on Khalkedonin kirkolliskokouksen '
             + 'pöytäkirjoissa vuodelta 451.',
-          selite: 'Rapautunut kalliokirkko Göremessä: ulkoseinä on pudonnut '
-            + 'pois, ja sisään louhitut holvit, kaaret ja apsidit ovat '
-            + 'paljaana taivasta vasten.',
+          selite: 'Osa Göremen kalliokirkoista on paljastunut, kun ulompi '
+            + 'kallio on rapautunut pois, ja silloin holvit ja apsidit '
+            + 'erottuvat kuin poikkileikkauksena.',
           lahde: 'prilfish, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -16447,9 +16375,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'neliömetriä, mikä tekee siitä Turkin suurimman keskiaikaisen '
             + 'karavaaniseraalin: kauppiaat, eläimet ja tavarat yöpyivät '
             + 'saman portin takana.',
-          selite: 'Sultanhanın portti ja piha: paksut kivimuurit, terävä '
-            + 'kaariportti ja pihan keskellä holvien päälle nostettu '
-            + 'rukoushuone.',
+          selite: 'Sultanhanın muurien sisään jää 4 900 neliömetriä, mikä '
+            + 'tekee siitä Turkin suurimman keskiaikaisen '
+            + 'karavaaniseraalin.',
           lahde: 'zolakoma, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -16466,6 +16394,8 @@ export const KULTTUURI_KATEGORIAT = {
    * ARTIKKELIT-paketin intro-kentässä (js/packs/asia-artikkelit.js),
    * jonne 7–10 virkkeen johdatus kirjoitettiin samassa erässä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   persepolis: [
     {
       id: 'kaupunki',
@@ -16476,43 +16406,42 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Persepolis – Gate of All Nations 01.jpg',
-          selite: 'Kaikkien kansojen portti alaviistosta: kaksi siivekästä '
-            + 'härkä-ihmishahmoa vartioi oviaukkoa, jonka takaa nousee yksi '
-            + 'pylväs.',
+          selite: 'Kaikkien kansojen portin rakennutti Xerxes I, ja sen '
+            + 'oviaukkoja vartioivat lamassut eli siivekkäät '
+            + 'härkä-ihmishahmot.',
           lahde: 'Skot, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hall of Hundred Columns (Throne Hall), Persepolis.jpg',
-          selite: 'Sadan pylvään salin pohja: pylväänjalustat riveissä '
-            + 'ruohikossa ja taustalla kalliorinne, johon on louhittu hauta.',
+          selite: 'Valtaistuinsali eli Sadan pylvään sali on '
+            + 'seitsemänkymmentä metriä kumpaankin suuntaan.',
           lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Persepolis - Tachara 03.jpg',
-          selite: 'Tachara, Dareios I:n oma palatsi: kaksoisportaikko '
-            + 'reliefeineen ja sen takana ovenpielet pystyssä ilman kattoa.',
+          selite: 'Tachara on Dareios I:n oma palatsi ja terassin parhaiten '
+            + 'säilynyt rakennus.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       avauskuvat: [
         {
           tiedosto: '2009-11-24 Persepolis 03.jpg',
-          selite: 'Terassi sivulta koko leveydeltään: reliefein koristeltu '
-            + 'muuri etualalla, sen päällä ovenpieliä ja pylväitä ja takana '
-            + 'vuoret.',
+          selite: 'Persepoliksen terassi on 125 000 neliömetriä, ja osa '
+            + 'siitä on louhittu suoraan Rahmat-vuoren kylkeen.',
           lahde: 'Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Approach to Persepolis The Great Double Staircase (4670082050).jpg',
-          selite: 'Näkymä tasangolta terassille: kivimuuri kohoaa maasta, ja '
-            + 'sen päällä siintää Kaikkien kansojen portti.',
+          selite: 'Terassille noustaan leveää kaksoisportaikkoa, ja ylhäällä '
+            + 'odottaa Kaikkien kansojen portti.',
           lahde: 'A.Davey from Portland, Oregon, EE UU, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
         {
           tiedosto: 'Persépolis, Irán, 2016-09-24, DD 53.jpg',
-          selite: 'Pylvässalin porrasreliefi viistosti: hahmorivi katoaa '
-            + 'perspektiivissä kauas, jokainen kädet samassa asennossa.',
+          selite: 'Pylvässalin portaiden kylkeen on veistetty kulkue, jossa '
+            + 'valtakunnan eri kansat tuovat lahjoja kuninkaalle.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16520,17 +16449,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Groep mannen poserend bij de Poort van alle Naties (Poort van Xerxes) in Persepolis Persepolis (titel op object), RP-F-F01048-AI.jpg',
           vuosi: 'n. 1880-1895',
-          selite: 'Kaikkien kansojen portti noin 1880–1895: pylväiden ja siivekkään '
-            + 'härkähahmon juurella seisova miesryhmä näyttää, kuinka korkealle raunio '
-            + 'nousee.',
+          selite: 'Persepolis on ollut matkailukohde ainakin 1600-luvulta, '
+            + 'ja portin kivipinnoissa on yli kaksisataa kävijän '
+            + 'kaivertamaa nimeä.',
           lahde: 'Antoin Sevruguin (attribuoitu) / Rijksmuseum, Commons (CC0)',
         },
         {
           tiedosto: 'Persepolis - Apadana 01.jpg',
           vuosi: '2016',
-          selite: 'Apadanan pylväitä nykyään: setripuinen katto paloi vuonna 330 ennen '
-            + 'ajanlaskun alkua, joten pylväät ovat siitä lähtien kannatelleet vain '
-            + 'taivasta.',
+          selite: 'Apadanan setripuinen katto paloi vuonna 330 eKr., joten '
+            + 'pylväät ovat siitä lähtien kannatelleet vain taivasta.',
           lahde: 'Bernard Gagnon, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16546,9 +16474,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valmiiksi, ja Artakserkses III jätti oman porttinsa kesken. '
             + 'Terassi on 125 000 neliömetriä: osa siitä on louhittu suoraan '
             + 'Rahmat-vuoren kylkeen, osa muurattu tasangolle päin.',
-          selite: 'Tachara-palatsi sivusta: ovenpielet ja ikkuna-aukot '
-            + 'seisovat rivissä terassin päällä, mutta katto ja seinät ovat '
-            + 'kadonneet.',
+          selite: 'Persepolis ei ole yhden hallitsijan työ vaan neljän, ja '
+            + 'vanhimmat jäänteet ajoittuvat vuoteen 515 eKr.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Persepolis',
         },
@@ -16563,8 +16490,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vartioivat lamassut, siivekkäät härkä-ihmishahmot. Portin '
             + 'oma piirtokirjoitus antaa sille nimen kaikkien kansojen '
             + 'portti, ja teksti on kaiverrettu kolmella kielellä.',
-          selite: 'Lamassu läheltä: parrakas ihmispää, kiharat hiukset ja '
-            + 'sulkakuvioinen siipi kiven kyljessä.',
+          selite: 'Portin kivipylväät kohoavat noin kuudentoista ja puolen '
+            + 'metrin korkeuteen, ja sen piirtokirjoitus on kaiverrettu '
+            + 'kolmella kielellä.',
           lahde: 'dynamosquito, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -16579,9 +16507,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kulkueen matkan samanlaisena. Kivi on paikoin kulunut '
             + 'sileäksi kosketuksesta, mutta partojen kiharat ja kankaan '
             + 'poimut erottuvat yhä terävinä.',
-          selite: 'Kaksi parrakasta hahmoa lähikuvassa, toinen ojentaa '
-            + 'kaksikorvaista amforaa, ja parrat on veistetty tiukoiksi '
-            + 'kiharoiksi.',
+          selite: 'Kulkueen ryhmät on erotettu toisistaan tyylitellyllä '
+            + 'sypressillä, joka toistuu samanlaisena koko matkan.',
           lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons '
             + '(CC BY-SA 2.0)',
         },
@@ -16597,17 +16524,16 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pylväänjalusta British Museumissa Lontoossa — sali on siis '
             + 'kaivausten ja keräilyn myötä jakautunut kolmelle '
             + 'mantereelle.',
-          selite: 'Ovenpieli valtaistuinsalissa: aukon reliefissä kuningas '
-            + 'istuu valtaistuimella, jota kantaa rivi pieniä hahmoja.',
+          selite: 'Valtaistuinsalin kivihärän pää on nykyään Chicagossa ja '
+            + 'yksi salin pylväänjalusta British Museumissa.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Tribute Bearers on the Apadana Staircase 22 (Best Viewed Size "Large") (4688831503).jpg',
-          selite: 'Porrasreliefi läheltä: hahmo taluttaa hevosta, ja '
-            + 'oikeassa laidassa kasvaa tyylitelty sypressi, joka erottaa '
-            + 'kulkueen ryhmät.',
+          selite: 'Kulkueen hahmot kantavat maljoja, kankaita, astioita ja '
+            + 'eläimiä, kukin omassa asussaan ja omine päähineineen.',
           lahde: 'A.Davey from Portland, Oregon, EE UU, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
@@ -16642,9 +16568,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tavallisesti samalla matkalla.',
               kuva: {
                 tiedosto: 'Naqsh-e Rustam 02.jpg',
-                selite: 'Naqsh-e Rustamin kallioseinä: kaksi ristinmuotoista '
-                  + 'hautajulkisivua jyrkässä kalliossa ja niiden alla '
-                  + 'myöhempiä reliefejä.',
+                selite: 'Naqsh-e Rustamin kallioseinään on louhittu neljä '
+                  + 'kuninkaanhautaa noin kolmentoista kilometrin päähän '
+                  + 'Persepoliksesta.',
                 lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -16663,9 +16589,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'keräämiseen.',
               kuva: {
                 tiedosto: 'General view of the ruins of Persepolis.jpg',
-                selite: '1800-luvun kaiverrus terassista ylhäältä: '
-                  + 'suorakaiteen muotoinen alusta vuoren juurella keskellä '
-                  + 'tyhjää tasankoa.',
+                selite: 'Terassin alle louhittiin viemärikanavia, ja '
+                  + 'alueella oli kalliosäiliö veden keräämiseen.',
                 lahde: 'Maspero, G. (Gaston), 1846-1916; Sayce, A. H. '
                   + '(Archibald Henry), 1845-1933, Wikimedia Commons '
                   + '(public domain)',
@@ -16685,9 +16610,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'intialaisia, ja mukana on yksi unkarilainen nimi.',
               kuva: {
                 tiedosto: 'Troisième Vue de Persepolis - Quatrième Vue de Persepolis - Bruyn Cornelis De - 1725.jpg',
-                selite: 'Kaksi kaiverrettua näkymää vuoden 1725 '
-                  + 'matkakirjasta: terassi tasangon takana ja etualalla '
-                  + 'matkalaisia lepäämässä kivillä.',
+                selite: 'Persepoliksen kivipintoihin on kirjattu 222 '
+                  + 'ulkomaisen kävijän nimeä, ja ensimmäiset kaiverrettiin '
+                  + '1600-luvulla.',
                 lahde: 'Cornelis de Bruijn, Wikimedia Commons '
                   + '(public domain)',
               },
@@ -16707,9 +16632,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kulkee nuolenpääkirjoitusta.',
               kuva: {
                 tiedosto: 'Persepolis stairs of the Apadana relief.jpg',
-                selite: 'Kolme hahmoa porrasreliefissä: ensimmäinen ojentaa '
-                  + 'maljaa, toinen kantaa amforaa ja kolmas pitää kädet '
-                  + 'kaavun sisällä.',
+                selite: 'Reliefien kivi on tummunut ja paikoin kiillottunut '
+                  + 'kosketuksesta, mutta hiusten kiharat ja kankaan '
+                  + 'laskokset ovat yhä teräviä.',
                 lahde: 'Phillip Maiwald (Nikopol), Wikimedia Commons '
                   + '(CC BY-SA 3.0)',
               },
@@ -16729,9 +16654,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kävelyn kannalta selvästi helpoimmat.',
               kuva: {
                 tiedosto: 'Persepolis east side at spring.jpg',
-                selite: 'Terassin itäsivu keväällä: kivimuuri kohoaa '
-                  + 'kirkkaanvihreältä nurmelta, ja sen päältä näkyy '
-                  + 'pylväitä ja ovenpieliä.',
+                selite: 'Persepolis on Iranin ylängöllä puolentoista '
+                  + 'kilometrin korkeudessa, eikä terassilla ole varjoa.',
                 lahde: 'Masoudkhalife, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -16772,9 +16696,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'karjaa. Tauluihin on kirjattu yhtä paljon naisia kuin '
             + 'miehiä, ja osa naisista sai suuremman annoksen kuin kukaan '
             + 'saman työryhmän mies.',
-          selite: 'Elaminkielinen savitaulu museon vitriinissä: kämmenen '
-            + 'kokoinen tiili, jonka pintaan on painettu tiheää '
-            + 'nuolenpääkirjoitusta.',
+          selite: 'Persepoliksesta löytyi vuonna 1933 kymmeniätuhansia '
+            + 'savitauluja, jotka ovat hallinnon kirjanpitoa vuosilta '
+            + '509–493 eKr.',
           lahde: 'Dorieo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16789,8 +16713,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seisoo keihäs kädessä samassa asennossa kuin edellinen — '
             + 'ja kirjoitus alkaa suoraan rivin vierestä, ilman kehystä '
             + 'tai erillistä taulua.',
-          selite: 'Vartijoiden reliefirivi: viisi keihäsmiestä peräkkäin, ja '
-            + 'vasemmassa laidassa kulkee palsta nuolenpääkirjoitusta.',
+          selite: 'Persepoliksen piirtokirjoitukset kaiverrettiin '
+            + 'tavallisesti kolmella kielellä samaan seinään, ja juuri se '
+            + 'teki niistä avaimen kielten lukemiseen.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16806,8 +16731,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'teosta. Lähteet eivät edes kerro varmasti, oliko palo '
             + 'vahinko vai tahallinen. Sen jälki näkyy yhä: puu paloi, '
             + 'kivi jäi.',
-          selite: 'Pylvässalin pylväät: yksi kohoaa täyteen korkeuteensa '
-            + 'koristeltuine pylväänpäineen, kauempana kaksi katkennutta.',
+          selite: 'Vuoden 330 eKr. tulipalo tuhosi rakennusten puuosat, '
+            + 'mutta kivi jäi pystyyn.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16823,13 +16748,15 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjoittajien Persepolis. Italialainen Pietro Della Valle '
             + 'laski 1621, että alkuperäisestä 72 pylväästä oli pystyssä '
             + 'enää 25.',
-          selite: 'Kaksi kaiverrettua näkymää vuoden 1725 matkakirjasta: '
-            + 'terassi tasangon takana ja etualalla matkalaisia kameleineen.',
+          selite: 'Italialainen Pietro Della Valle laski vuonna 1621, että '
+            + 'alkuperäisestä 72 pylväästä oli pystyssä enää 25.',
           lahde: 'Cornelis de Bruijn, Wikimedia Commons (public domain)',
         },
       ],
     },
   ],
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   jerusalem: [
     {
       id: 'kaupunki',
@@ -16840,20 +16767,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Jerusalem Dome of the rock BW 2010-09-21 07-01-06.JPG',
-          selite: 'Kalliomoskeija kaariholvien takaa: kullattu kupoli kohoaa '
-            + 'sinisen laattapinnan päältä oliivipuiden lomassa.',
+          selite: 'Kalliomoskeija on kahdeksankulmainen pyhäkkö Peruskallion '
+            + 'päällä, ja se on islamilaisen rakennustaiteen vanhin '
+            + 'säilynyt työ.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'JERUSALEM OLD CITY WALLS.JPG',
-          selite: 'Vanhakaupunki ilmasta: muuri kiertää koko alueen, ja sen '
-            + 'sisällä katot ovat niin tiheässä, ettei katuja erota.',
+          selite: 'Jerusalemin muurit rakennettiin uudelleen vuosina '
+            + '1537–1541, ja kiveä on 4 018 metrin matkalla.',
           lahde: 'AVRAHAM GRAICER, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Western Wall Plaza - Jerusalem (1291829327).jpg',
-          selite: 'Länsimuurin aukio keskipäivällä: temppelivuoren tukimuuri kohoaa aukion '
-            + 'laidassa, ja sen juurella rukoilevat ihmiset näyttävät pieniltä.',
+          selite: 'Länsimuuri on temppelivuoren läntinen tukimuuri, jota on '
+            + 'kaikkiaan 488 metriä, ja sen alimmat kivikerrokset ovat '
+            + 'toisen temppelin ajalta.',
           lahde: 'David King, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -16887,21 +16816,22 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'JERUSALEM THE OLD CITY & THE TEMPLE MOUNT.JPG',
-          selite: 'Laaja ilmakuva: vanhakaupunki keskellä, ympärillä laaksot '
-            + 'vihreinä juovina ja oikealla Öljymäen kuiva rinne.',
+          selite: 'Muurien sisäinen vanhakaupunki on vain 0,9 '
+            + 'neliökilometriä, eli sen kävelee laidasta laitaan vartissa.',
           lahde: 'AVRAHAM GRAICER, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Jerusalem-2013(2)-View of the Dome of the Rock & Temple Mount 02.jpg',
-          selite: 'Näkymä Öljymäeltä: etualalla itämuuri, sen takana '
-            + 'temppelivuoren puut ja kullattu kupoli ja kaukana '
-            + 'nykykaupungin tornit.',
+          selite: 'Öljymäki on vanhankaupungin itäpuolella kohoava noin '
+            + 'kolmen ja puolen kilometrin pituinen kolmihuippuinen '
+            + 'harjanne.',
           lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'East Jerusalem, Old City, East.jpg',
-          selite: 'Panoraama kattojen yli: etualalla Pyhän haudan kirkon '
-            + 'tumma kupoli ja kaukana Öljymäen harjanne.',
+          selite: 'Jerusalem on vuoristokaupunki kolmen laakson välissä '
+            + 'lähes kahdeksansadan metrin korkeudessa, eikä sillä ole omaa '
+            + 'jokea.',
           lahde: 'Papierdrache, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -16909,18 +16839,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'From the Mount of Olives, general view, Jerusalem, Holy Land-LCCN2002725017.jpg',
           vuosi: '1890-luku',
-          selite: 'Vanhakaupunki Öljymäeltä 1890-luvun photochrom-vedoksessa: muuri '
-            + 'kiertää kaupunkia, keskellä erottuu Kalliomoskeijan kupoli ja etualan '
-            + 'hautausmaan rinne pitää näkymän esteettömänä.',
+          selite: 'Vielä 1800-luvun lopulla lähes koko Jerusalem mahtui '
+            + 'muurien sisään.',
           lahde: 'Library of Congress, photochrom-kokoelma (PD)',
         },
         {
           tiedosto: 'Jerusalem, 21 December 2025 192.jpg',
           vuosi: '2025',
-          selite: 'Kalliomoskeijan kupoli ja minareetti kohoavat vanhankaupungin '
-            + 'kattojen yli iltapäivän valossa, ja koko kaupunki hehkuu samalla '
-            + 'värillä, koska julkisivut on määrätty verhottaviksi paikallisella '
-            + 'vaalealla kivellä.',
+          selite: 'Jerusalemin julkisivut on määrätty verhottaviksi '
+            + 'paikallisella vaalealla kivellä, joten koko kaupunki on '
+            + 'samanvärinen.',
           lahde: 'מקף־עברי, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16937,8 +16865,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'portteja on seitsemän; arkeologit ovat lisäksi avanneet kaksi '
             + 'pientä porttia. Muurit ja vanhakaupunki hyväksyttiin Unescon '
             + 'maailmanperintöluetteloon vuonna 1981.',
-          selite: 'Vanhakaupunki läheltä ylhäältä: temppelivuoren aukea '
-            + 'erottuu suorakaiteena tiheän kattomeren keskellä.',
+          selite: 'Muuria kiertää 34 tornia ja liikennöityjä portteja on '
+            + 'seitsemän, ja vanhakaupunki hyväksyttiin Unescon '
+            + 'maailmanperintöluetteloon vuonna 1981.',
           lahde: 'Neukoln, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Jerusalem',
         },
@@ -16953,9 +16882,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja hautoja arvioidaan olevan noin satviisikymmentätuhatta. '
             + 'Näköala teki mäestä myös tähystyspaikan: toisen temppelin '
             + 'aikana täältä tarkkailtiin, milloin uusi kuu nousi.',
-          selite: 'Öljymäen rinne täynnä vaaleita hautakiviä, ja '
-            + 'alarinteessä on kallioon louhittuja hautamonumentteja '
-            + 'pyramidikattoineen.',
+          selite: 'Öljymäen länsirinne on ollut hautausmaana yli '
+            + 'kolmetuhatta vuotta, ja hautoja arvioidaan olevan noin '
+            + 'satviisikymmentätuhatta.',
           lahde: 'Bukvoed, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -16970,9 +16899,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin usein omalta tontilta louhitusta kivestä, ja '
             + 'kuoppa, joka louhinnasta jäi, muurattiin talon alle '
             + 'sadevesisäiliöksi.',
-          selite: 'Vanhankaupungin kattoja: kivikupoleita, mustia '
-            + 'vesisäiliöitä ja pyykkinaru, ja taustalla kullattu kupoli '
-            + 'usvassa.',
+          selite: 'Jerusalemin talot rakennettiin usein omalta tontilta '
+            + 'louhitusta kivestä, ja louhinnasta jäänyt kuoppa muurattiin '
+            + 'talon alle sadevesisäiliöksi.',
           lahde: 'Askii, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -16987,18 +16916,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuonna 1857 valmistunut tuulimylly, jonka piti antaa '
             + 'asukkaille leipä — mutta tuulta riittää seudulla enintään '
             + 'parinakymmenenä päivänä vuodessa.',
-          selite: 'Montefioren tuulimylly hämärtyvässä illassa: valkoinen '
-            + 'torni ja neljä siipeä kohoavat tiilikattojen ja sypressien '
-            + 'yli.',
+          selite: 'Montefioren tuulimylly valmistui vuonna 1857 antamaan '
+            + 'uudelle korttelille leivän, mutta tuulta seudulla riittää '
+            + 'enintään parinakymmenenä päivänä vuodessa.',
           lahde: 'Gabrielw.tour, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Jerusalem Mount of Olives BW 2010-09-20 07-57-31.JPG',
-          selite: 'Näkymä Öljymäeltä vanhaankaupunkiin: etualalla '
-            + 'hautakivien rivistöt ja vastapäätä kaupungin muuri '
-            + 'temppelivuoren aukeineen.',
+          selite: 'Öljymäen läntisellä huipulla 818 metrin korkeudessa on '
+            + 'pieni kappeli.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Matkailijan Jerusalem on pieni: muurien sisäinen '
@@ -17031,9 +16959,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muurien ulkopuolella.',
               kuva: {
                 tiedosto: 'Raffaele Mainella. Äusere mauern von Jerusalem. 1895. P.164.jpg',
-                selite: 'Vuoden 1895 kuvitus Jerusalemin ulkomuureista: '
-                  + 'korkea muurirakennelma rinteen päällä ja sen alla '
-                  + 'kulkeva polku.',
+                selite: 'Jaffan tie päällystettiin ajokelpoiseksi vuonna '
+                  + '1861, ja vasta sen ansiosta oli järkevää asua muurien '
+                  + 'ulkopuolella.',
                 lahde: 'Raffaele Mainella, Wikimedia Commons (public domain)',
               },
             },
@@ -17051,10 +16979,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'nykyään kadun tasolla nähtävissä.',
               kuva: {
                 tiedosto: '1650 Fuller Map of Jerusalem ( Israel, Palestine, Holy Land) - Geographicus - jerusalem-fuller-1650.jpg',
-                selite: 'Vuoden 1650 kartta ei kuvaa Jerusalemia sellaisena '
-                  + 'kuin se oli vaan sellaisena kuin eurooppalainen '
-                  + 'kuvitteli sen Salomon aikaan: suora ruutukaava ja '
-                  + 'temppeli keskellä.',
+                selite: 'Vuoden 1650 kartta kuvaa Jerusalemin sellaisena '
+                  + 'kuin eurooppalainen kuvitteli sen Salomon aikaan, '
+                  + 'suorana ruutukaavana ja temppeli keskellä.',
                 lahde: 'Geographicus Rare Antique Maps, Wikimedia Commons '
                   + '(public domain)',
               },
@@ -17072,9 +16999,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'mitä kujalta ei näe — kuinka lähellä kaikki on toisiaan.',
               kuva: {
                 tiedosto: 'Rooftops of the Old City of Jerusalem 3.jpg',
-                selite: 'Kattojen meri: valkoisia kupoleita, mustia '
-                  + 'vesisäiliöitä ja antenneja vieri vieressä, ja keskellä '
-                  + 'kohoaa minareetti.',
+                selite: 'Vanhankaupungin holvatut kivikatot kantavat itsensä '
+                  + 'ilman palkkeja ja pysyvät viileinä.',
                 lahde: 'Askii, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -17094,9 +17020,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'bysanttilaiselle ajalle asti.',
               kuva: {
                 tiedosto: 'Jerusalem Kidron Valley Tombs.JPG',
-                selite: 'Vanha painokuva Kidronin laaksosta: kallioon '
-                  + 'louhittuja hautamonumentteja ja ylempänä rinteessä '
-                  + 'muuri ja sypressirivi.',
+                selite: 'Keisari Hadrianus perusti Jerusalemin uudelleen '
+                  + 'roomalaisena siirtokuntana vuosina 129–130 ja antoi '
+                  + 'sille nimen Aelia Capitolina.',
                 lahde: 'Lehnert and Landrock, Cairo, Wikimedia Commons '
                   + '(public domain)',
               },
@@ -17116,8 +17042,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kävelijälle helpoimmat.',
               kuva: {
                 tiedosto: 'Kidron Valley and Surrounding Landscape East of Jerusalem.jpg',
-                selite: 'Kidronin laakson pohja kesällä: sorapolku kulkee '
-                  + 'kuivan rinteen välissä, ja ruoho on kellastunut.',
+                selite: 'Jerusalemin kesä on pitkä ja täysin kuiva: heinä- '
+                  + 'ja elokuussa sadetta ei tule lainkaan.',
                 lahde: 'Ywpark2003 Prof. Yong Woo Park, Wikimedia Commons '
                   + '(CC0)',
               },
@@ -17158,8 +17084,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seudun toisen lähteen. Juuri epäsäännöllisyys pakotti '
             + 'rakentamaan altaan, johon vesi varastoitiin niiksi ajoiksi '
             + 'kun lähde ei virrannut.',
-          selite: 'Vanha valokuva Kidronin laaksosta: vasemmalla kaupungin '
-            + 'muuri, oikealla kylä rinteessä ja pohjalla oliivipuita.',
+          selite: 'Kidronin laakson kalliossa pulppuava Gihonin lähde '
+            + 'tuottaa vuodessa noin 600 000 kuutiometriä vettä.',
           lahde: 'Lehnert and Landrock, Cairo, Wikimedia Commons '
             + '(public domain)',
         },
@@ -17176,9 +17102,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sen verran että vesi virtaa. Tunnelin seinästä löytyi '
             + '1800-luvun lopulla Siiloan kirjoitus, joka kertoo '
             + 'louhinnasta ja kaivajien kohtaamisesta.',
-          selite: 'Vanha valokuva: vasemmalla temppelivuoren eteläseinä, '
-            + 'keskellä Kidronin laakso ja oikealla Daavidin kaupungin '
-            + 'harjanne.',
+          selite: 'Hiskian tunneli louhittiin kallioon 533 metrin matkalle '
+            + 'kahdesta päästä yhtä aikaa, ja ryhmät kohtasivat keskellä.',
           lahde: 'Matson Collection, Wikimedia Commons (public domain)',
         },
         {
@@ -17193,9 +17118,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sivulla ja eri syvyyksillä, joten veteen pääsi omalle '
             + 'tasolleen riippumatta siitä, kuinka korkealla vedenpinta '
             + 'sillä hetkellä oli.',
-          selite: 'Näkymä vanhastakaupungista alas Kidronin laaksoon, jonka '
-            + 'pohjalla allas on; oikealla erottuu Daavidin kaupungin '
-            + 'kaivausalue.',
+          selite: 'Siiloan allas on loivan puolisuunnikkaan muotoinen, ja '
+            + 'kaivaukset ovat paljastaneet sen leveydeksi noin '
+            + 'kuusikymmentäyhdeksän metriä.',
           lahde: 'Wilson44691, Wikimedia Commons (public domain)',
         },
         {
@@ -17211,15 +17136,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'etelämpää Arrubin altailta. Altaista alin on paljon '
             + 'nuorempi kuin kaksi muuta: se rakennettiin vasta vuonna '
             + '1483.',
-          selite: 'Kallioon louhittu vesitunneli sisältä: pyöreä käytävä '
-            + 'jatkuu kaarena pimeään, ja pohjalla on irronneita '
-            + 'kivenlohkareita.',
+          selite: 'Salomon altailta vesi johdettiin Jerusalemiin maaston '
+            + 'korkeuskäyriä myötäillen niin loivasti, ettei pumppuja '
+            + 'tarvittu.',
           lahde: 'American Colony Photo Department / Matson Photo Service, '
             + 'Wikimedia Commons (public domain)',
         },
       ],
     },
   ],
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   siinai: [
     {
       id: 'kaupunki',
@@ -17231,42 +17158,43 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Katharinenkloster Sinai BW 2.jpg',
-          selite: 'Pyhän Katariinan luostari graniittirinteen juurella: '
-            + 'muurien keskeltä nousevat kirkon kellotorni ja moskeijan '
-            + 'minareetti.',
+          selite: 'Pyhän Katariinan luostari rakennettiin vuosina 548–565, '
+            + 'ja se on maailman vanhin yhtäjaksoisesti asuttu kristillinen '
+            + 'luostari.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'South Sinai , Egypt.jpg',
-          selite: 'Eteläisen Siinain karu vuorimaisema: hiekkatasangon takaa nousevat '
-            + 'paljaat kalliohuiput, ja akaasioita kasvaa siellä täällä.',
+          selite: 'Siinain pohjoisosa on aavikkoa ja eteläosa punaista '
+            + 'graniittia.',
           lahde: 'Mohammed Moussa, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Saint Catherine Monastery , Saint Catherine , south Sinai, Egypt.jpg',
-          selite: 'Luostari ylhäältä nähtynä: muuri kiertää koko '
-            + 'rakennusryhmän, ja ympärillä on pelkkää louhikkoa ja '
-            + 'graniittirinnettä.',
+          selite: 'Luostari on Siinain tunnetuin yksittäinen kohde, ja Pyhän '
+            + 'Katariinan kylä on lähes puolentoista kilometrin '
+            + 'korkeudessa.',
           lahde: 'Ibrahimelbatout, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       avauskuvat: [
         {
           tiedosto: 'Mount Moses.jpg',
-          selite: 'Auringonnousu Siinainvuoren huipulta: graniittiharjanteet '
-            + 'jatkuvat horisonttiin punaisina ja violetteina.',
+          selite: 'Vuoristonousut tehdään perinteisesti yöllä, jotta '
+            + 'huipulla ollaan auringonnousun aikaan.',
           lahde: 'Mohammed Moussa, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Katharinenkloster Sinai BW 4.jpg',
-          selite: 'Luostari laakson pohjalla: muurattu kortteli '
-            + 'puutarhoineen, ja takana nousee paljas vuorenrinne.',
+          selite: 'Luostarin kirjasto on maailman vanhin yhä toimiva, ja sen '
+            + 'kokoelma on varhaisten koodeksien määrässä maailman toiseksi '
+            + 'suurin.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Sinai Coloured Canyon - panoramio.jpg',
-          selite: 'Kanjonin pohja ylhäältä: kapea hiekkauoma kiemurtelee '
-            + 'kerroksellisten hiekkakiviseinien välissä.',
+          selite: 'Siinain kanjonit ovat vesiuomia, jotka ovat kuivia lähes '
+            + 'koko vuoden mutta täyttyvät sadekuuron aikana nopeasti.',
           lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -17274,16 +17202,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Francis Frith (English - The Convent of Sinai - Google Art Project.jpg',
           vuosi: '1858',
-          selite: 'Pyhän Katariinan luostari muuriensa sisällä Siinain vuorten '
-            + 'juurella vuonna 1858, etualalla lepäävä kameli ja ympärillä kasviton '
-            + 'rinne.',
+          selite: 'Luostari on toiminut samojen muurien sisällä 1500 vuotta '
+            + 'keskellä kasvitonta graniittirinnettä.',
           lahde: 'Francis Frith / J. Paul Getty Museum, Commons (PD)',
         },
         {
           tiedosto: 'Saint Catherine\'s Monastery, Mount Sinai morning.jpg',
           vuosi: '2010',
-          selite: 'Sama luostari aamuvalossa: muurien sisällä on kirkko ja kellotorni, '
-            + 'ja ympärillä kohoaa paljas kalliorinne.',
+          selite: 'Luostarin muurien sisällä ovat kirkko, kellotorni ja '
+            + 'moskeija, joka on yhä käytössä.',
           lahde: 'Abraham, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17300,8 +17227,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'suurin — vain Vatikaanin kirjastossa on enemmän. Kuuluisin '
             + 'löytö on 300-luvulla kirjoitettu Codex Sinaiticus, jonka '
             + 'lehdet ovat nykyään hajallaan neljässä maassa.',
-          selite: 'Codex Sinaiticus vitriinissä: teksti on ladottu neljään '
-            + 'kapeaan palstaan kreikkalaisin suuraakkosin ilman sanavälejä.',
+          selite: 'Codex Sinaiticus kirjoitettiin 300-luvulla, ja sen lehdet '
+            + 'ovat nykyään hajallaan neljässä maassa.',
           lahde: 'PotatoCow25, Wikimedia Commons (CC0)',
         },
         {
@@ -17316,9 +17243,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'moskeija, joka on yhä käytössä. Vuori itse on '
             + 'kaksituhatta kaksisataakahdeksankymmentäviisi metriä korkea '
             + 'ja koostuu emäksisestä graniitista.',
-          selite: 'Vuoden 1839 litografia nousureitistä: kiveen hakatut '
-            + 'portaat kiemurtelevat rotkossa ylöspäin kohti kiviholvin '
-            + 'muotoista porttia.',
+          selite: 'Jyrkempi nousureitti on hakattu kiveen 3 750 askelmaksi, '
+            + 'joita kutsutaan katumuksen portaiksi.',
           lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -17333,8 +17259,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'eikä sanoja — juuri se on aakkoskirjoituksen periaate. '
             + 'Ajoituksesta kiistellään: varhainen arvio on noin 1850 eKr. '
             + 'ja myöhäinen noin 1550 eKr.',
-          selite: 'Satelliittikuva turkoosin louhinta-alueesta: tummat '
-            + 'vuoret uomineen erottuvat vaaleasta hiekkatasangosta.',
+          selite: 'Serabit el-Khadimin turkoosikaivosten läheltä löytyi '
+            + 'talvella 1904–1905 varhaisimpia aakkoskirjoituksen jälkiä.',
           lahde: 'NASA Earth Observatory, Wikimedia Commons (public domain)',
         },
         {
@@ -17349,16 +17275,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja se on 193 kilometriä pitkä. Sen jälkeen Siinai on ollut '
             + 'käytännössä oma saarensa: kanava vetää rajan Afrikan ja '
             + 'Aasian väliin, ja Siinai jää Aasian puolelle.',
-          selite: 'Huipun kivikappeli vuodelta 1934: karkeaa punertavaa '
-            + 'graniittia, jyrkkä katto ja yksi ovi.',
+          selite: 'Siinainvuoren huipun kreikkalais-ortodoksinen kappeli '
+            + 'rakennettiin vuonna 1934 1500-luvun kirkon raunioille.',
           lahde: 'Mcstafford, Wikimedia Commons (public domain)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Formación de coral, parque nacional Ras Muhammad, Egipto, 2022-03-26, DD 02.jpg',
-          selite: 'Korallimuodostelma Ras Muhammadissa: pystysuora seinämä '
-            + 'nousee hiekkapohjalta, ja vesi syvenee sen ympärillä.',
+          selite: 'Punaisenmeren riutat ovat poikkeuksellisen lajirikkaita, '
+            + 'koska vesi on lämmintä ja kirkasta eivätkä joet tuo siihen '
+            + 'sameutta.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Siinai on kahta maata samassa kolmiossa. Etelässä on '
@@ -17391,8 +17318,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'niemimaan tunnetuin yksittäinen kohde.',
               kuva: {
                 tiedosto: 'A full view of Saint Catherine\'s Monastery.jpg',
-                selite: 'Luostari koko laajuudessaan: muurit, kirkon katto, '
-                  + 'puutarha ja sypressit keskellä pelkkää kiveä.',
+                selite: 'Suezin kanava erottaa Siinain muusta Egyptistä, '
+                  + 'joten niemimaa on käytännössä oma saarensa.',
                 lahde: 'Dr. Ondřej Havelka (cestovatel), Wikimedia Commons '
                   + '(CC BY 4.0)',
               },
@@ -17413,9 +17340,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'aakkoskirjoituksen jäljet.',
               kuva: {
                 tiedosto: 'Serabit el-Khadim, Egypt (ASTER).jpg',
-                selite: 'Satelliittikuva Serabit el-Khadimin seudulta; '
-                  + 'punainen nuoli on julkaisijan lisäämä ja osoittaa '
-                  + 'kaivosalueen paikan.',
+                selite: 'Serabit el-Khadimin ylängöllä on Hathorin temppeli, '
+                  + 'ja jumalatarta palvottiin siellä turkoosin '
+                  + 'valtiattarena.',
                 lahde: 'NASA/METI/AIST/Japan Space Systems, Wikimedia '
                   + 'Commons (public domain)',
               },
@@ -17434,9 +17361,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuin itse Siinainvuori.',
               kuva: {
                 tiedosto: 'WEBSTER(1830) 2.210 WADY FARAN.jpg',
-                selite: 'Vuoden 1830 kaiverrus Wadi Feiranista: '
-                  + 'palmumetsikkö laakson pohjalla ja taustalla '
-                  + 'sahalaitainen vuoristo.',
+                selite: 'Wadi Feiran on Siinain suurin keidas ja '
+                  + 'matkalaisten pysähdyspaikka niin kauan kuin reitti on '
+                  + 'ollut olemassa.',
                 lahde: 'W. H. Newnham (piirros), J. Clark (kaiverrus), '
                   + 'Wikimedia Commons (public domain)',
               },
@@ -17455,9 +17382,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joka jää hiekkaan.',
               kuva: {
                 tiedosto: 'Sinai Coloured Canyon - panoramio (7).jpg',
-                selite: 'Kanjonin seinämä läheltä: hiekkakivi on '
-                  + 'kerroksittain punaista, oranssia ja vaaleaa, ja '
-                  + 'kalliosta kasvaa yksi pensas.',
+                selite: 'Kanjonin seinämien värit vaihtelevat keltaisesta '
+                  + 'punaiseen ja violettiin sen mukaan, mitä mineraaleja '
+                  + 'kussakin kerroksessa on.',
                 lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
               },
             },
@@ -17475,9 +17402,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'auringonnousun aikaan.',
               kuva: {
                 tiedosto: 'Ras mohammed coral reef landscape.jpg',
-                selite: 'Ras Muhammadin rannikko: karu kalkkikiviniemi '
-                  + 'työntyy mereen, ja riutta näkyy vaaleana vyöhykkeenä '
-                  + 'ennen syvyyttä.',
+                selite: 'Punaisenmeren vesi pysyy Siinain rannikolla '
+                  + 'sukelluskelpoisena talvellakin.',
                 lahde: 'Sovernigo, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -17516,9 +17442,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Katariinanvuoren oma tietolaatikko 2 653 metriä. Ero on '
             + 'pieni mutta todellinen, ja se on hyvä muistutus siitä, '
             + 'ettei korkeuslukema ole aina yksiselitteinen.',
-          selite: 'Vuoristo Siinainvuoren huipulta: harjanteet jatkuvat '
-            + 'kerroksittain horisonttiin, ja etualalla on kappelin '
-            + 'kivijalka.',
+          selite: 'Siinainvuori on 2 285 metriä korkea ja koostuu '
+            + 'emäksisestä graniitista, joka on työntynyt vanhempien '
+            + 'kivilajien läpi.',
           lahde: 'Florian Prischl, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -17533,8 +17459,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jokia tuo siihen sameutta — samasta syystä, josta rannikko '
             + 'on autiomaata. Riutan vieressä ei siis ole viljelysmaata '
             + 'vaan kalliota ja hiekkaa.',
-          selite: 'Matala riutta ylhäältä: kymmeniä korallilajeja haarukka-, '
-            + 'pallo- ja pöytämuodoissa vieri vieressä.',
+          selite: 'Ras Muhammadin kansallispuistossa autiomaa ja '
+            + 'koralliriutta ovat muutaman metrin päässä toisistaan.',
           lahde: 'Sovernigo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17549,9 +17475,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vaatii myös suojaa, ja korallien haarojen väliin mahtuu '
             + 'piiloon — siksi kalat pysyttelevät lähellä pohjaa eivätkä '
             + 'avoveden puolella.',
-          selite: 'Keisarikala sivulta: keltainen ruumis, sinireunaiset '
-            + 'pystyraidat, tummansininen selkäevä ja kirkkaankeltainen '
-            + 'pyrstö.',
+          selite: 'Keisarikalan voimakkaat kuviot toimivat kirkkaassa '
+            + 'vedessä sekä tunnistusmerkkinä lajitovereille että '
+            + 'varoituksena.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17566,8 +17492,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seinistä on irronnut. Kuivuus on kuitenkin vain tavallinen '
             + 'tila eikä pysyvä: kuuron aikana kapea rotko täyttyy '
             + 'nopeasti, ja juuri se tekee niistä yhä syvempiä.',
-          selite: 'Kanjonin pohja: hiekkainen käytävä kaartuu kahden korkean '
-            + 'hiekkakiviseinämän välissä.',
+          selite: 'Kanjonin pohjan hiekka on sitä, mitä seinistä on '
+            + 'irronnut harvinaisten mutta rajujen sadekuurojen aikana.',
           lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -17652,6 +17578,8 @@ export const KULTTUURI_KATEGORIAT = {
    * kuvana on ASTER-satelliittikuva samasta dyynikentästä, jonka
    * kiintopisteettömyys on osa juttua.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   rubalkhali: [
     {
       id: 'kaupunki',
@@ -17663,40 +17591,39 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Ar-Rub\' Al-Khali (Oman) kz01.jpg',
-          selite: 'Dyyniselänne iltavalossa: tuulen kampaamat aallot '
-            + 'juoksevat harjanteen yli kohti tasaista lakeutta.',
+          selite: 'Rub al-Khali on maailman suurin yhtenäinen '
+            + 'hiekka-aavikko, noin 650 000 neliökilometriä.',
           lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Crest of dune in Abu Dhabi.jpg',
-          selite: 'Näkymä dyynin harjalta: terävä harjanne jatkuu kauas, ja '
-            + 'dyynien välissä näkyy vaalea, kova pohja.',
+          selite: 'Valtaosa Rub al-Khalista on hiekkamerta eli ergiä, jonka '
+            + 'dyynien väliin jää sora- ja kipsitasankoja.',
           lahde: 'Slywire, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Liwa Oasis palm trees with the desert view.jpg',
-          selite: 'Liwan keidas ylhäältä: taatelipalmulehto peittää laakson '
-            + 'pohjan, ja sen takana alkaa hiekka.',
+          selite: 'Liwan keidas on noin sata kilometriä pitkä vyöhyke, jossa '
+            + 'on viitisenkymmentä kylää.',
           lahde: 'Josephyousry, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       avauskuvat: [
         {
           tiedosto: 'Ar-Rub\' Al-Khali (Oman) kz03.jpg',
-          selite: 'Dyyniharjanne jakaa kuvan kahtia: vasen rinne on varjossa '
-            + 'ja oikea auringossa.',
+          selite: 'Rub al-Khalin dyynit yltävät jopa '
+            + 'kahteensataanviiteenkymmeneen metriin.',
           lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Rub al Khali 002.JPG',
-          selite: 'Punaisenoranssia hiekkamerta: dyynit nousevat '
-            + 'kerroksittain toistensa taakse jyrkkine rinteineen.',
+          selite: 'Hiekan punaisenoranssi väri tulee maasälvästä.',
           lahde: 'Nepenthes, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Ar-Rub\' Al-Khali (Oman) kz05.jpg',
-          selite: 'Aurinko matalalla dyynimeren yllä, ja jokainen harjanne '
-            + 'heittää oman varjonsa.',
+          selite: 'Aavikko jakautuu neljän maan kesken: Saudi-Arabian, '
+            + 'Omanin, Arabiemiirikuntien ja Jemenin.',
           lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17704,16 +17631,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Sanaw well.jpg',
           vuosi: '1946',
-          selite: 'Karavaani ohittamassa raunioitunutta linnaketta Sanawin kaivolla '
-            + 'vuonna 1946, kuvaajana Wilfred Thesiger, joka ylitti hiekkameren '
-            + 'kamelien kanssa.',
+          selite: 'Wilfred Thesiger ylitti hiekkameren kameleilla kahdesti '
+            + 'vuosina 1946–1948 heinäsirkkojen torjuntayksikön lukuun.',
           lahde: 'Wilfred Thesiger / Pitt Rivers Museum, Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Saudi Arabia Empty Quarter Nov. 2021 (100).jpg',
           vuosi: '2021',
-          selite: 'Rub al-Khali nykyään: dyyni toisensa jälkeen ilman kylää, tietä tai '
-            + 'puuta suunnilleen Ranskan kokoisella aavikolla.',
+          selite: 'Rub al-Khalin keskellä ei ole kylää, peltoa eikä puuta '
+            + 'suunnilleen Ranskan kokoisella alueella.',
           lahde: 'Richard Mortel, Commons (CC BY 2.0)',
         },
       ],
@@ -17732,9 +17658,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kohoavat jopa kahteensataanviiteenkymmeneen metriin, ja '
             + 'niiden väliin jää sora- ja kipsitasankoja. Hiekan '
             + 'punaisenoranssi väri tulee maasälvästä.',
-          selite: 'Astronautin kuva Tyhjän neljänneksen kaakkoisreunalta: '
-            + 'pitkät ruskeanpunaiset dyyniselänteet vuorottelevat '
-            + 'vaaleampien välialtaiden kanssa.',
+          selite: 'Tyhjä neljännes on tuhat kilometriä idästä länteen ja '
+            + 'viisisataa pohjoisesta etelään.',
           lahde: 'ISS Expedition 27 crew, Wikimedia Commons (PD)',
         },
         {
@@ -17752,8 +17677,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Työ venyi kahdeksi kamelilla tehdyksi ylitykseksi vuosina '
             + '1946–1948, ja samalla kartoittui suuri osa aavikkoa. Kirja '
             + 'Arabian Sands ilmestyi 1959.',
-          selite: 'Mustavalkoinen kuva Abu Dhabin aavikolta: dyynien harjat '
-            + 'kaartuvat toistensa lomitse terävinä aaltokuvioina.',
+          selite: 'Bertram Thomas ylitti hiekkameren talvella 1930–1931 '
+            + 'Rashid-heimon beduiinien opastamana.',
           lahde: 'Clint Ian Pinto, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17771,9 +17696,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lähteen ehdyttyä. Samastus Ubariin ei silti ole tutkijoiden '
             + 'hyväksymä, ja sen esittänyt Nicholas Clapp kumosi sen '
             + 'itsekin myöhemmin.',
-          selite: 'Shisrin kaivauspaikka Omanissa: kalkkikivilohkare on '
-            + 'romahtanut kaivon päälle, ja sen yllä seisovat muurin ja '
-            + 'tornin jäänteet.',
+          selite: 'Shisrin kaivolla oli sisämaan kauppa-asema, joka '
+            + 'rakennettiin 300-luvulla ja hylättiin 1400–1500-luvuilla '
+            + 'lähteen ehdyttyä.',
           lahde: 'Armatus1995, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17791,8 +17716,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'suurin on 116 metriä leveä. Aramcon nostoryhmä punnitsi '
             + 'lokakuussa 1966 suurimman talteen saadun kappaleen: '
             + '2 045 kiloa.',
-          selite: 'Satelliittikuva samasta hiekkamerestä, jonka keskellä '
-            + 'Wabarin kraatterit ovat — yhtään kiintopistettä ei näy.',
+          selite: 'Wabarin meteoriittikraattereista suurin on 116 metriä '
+            + 'leveä.',
           lahde: 'NASA/GSFC/METI/ERSDAC/JAROS, and U.S./Japan ASTER Science '
             + 'Team, Wikimedia Commons (PD)',
         },
@@ -17800,8 +17725,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Saudi Arabia Empty Quarter Nov. 2021 (3).jpg',
-          selite: 'Loiva dyyni auringonnousun aikaan: hiekka on '
-            + 'vaaleanpunaista eikä horisontissa näy mitään.',
+          selite: 'Hiekkameren syvimpiin osiin ei mennä tavallisella autolla '
+            + 'eikä yksin.',
           lahde: 'Prof. Mortel, Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Rub al-Khali ei ole kohde vaan väli. Sen reunoilla on '
@@ -17833,8 +17758,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kiitorata, jolta lennetään vain yhtiön omia vuoroja.',
               kuva: {
                 tiedosto: 'Road to Ubar.jpg',
-                selite: 'Uusi asfalttitie Omanin aavikolla: kaistaviivat '
-                  + 'jatkuvat suoraan usvaan, ja tiellä näkyy yksi auto.',
+                selite: 'Ensimmäinen aavikon poikki kulkeva maantie '
+                  + 'valmistui syyskuussa 2021 Omanin Ibristä '
+                  + 'Saudi-Arabian Al-Ahsaan.',
                 lahde: 'Griebi 01, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -17855,9 +17781,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'paikan.',
               kuva: {
                 tiedosto: 'Liwa Oasis - panoramio (2).jpg',
-                selite: 'Liwan keitaan reuna: tien vieressä kulkee kapea '
-                  + 'vyöhyke pensaita ja palmuja, ja heti sen takana nousee '
-                  + 'hiekkaseinämä.',
+                selite: 'Liwan keitaan eteläpuolella on Moreeb-dyyni, '
+                  + 'Arabiemiirikuntien korkein.',
                 lahde: 'Xiaotong Gao, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -17891,8 +17816,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + '1 494 metrin syvyydestä.',
               kuva: {
                 tiedosto: 'Oman, Wadi Dawkah, Land of Frankincense.jpg',
-                selite: 'Wadi Dawkahin suitsukepuita Omanissa: matalia, '
-                  + 'kiertyneitä puita kivisellä tasangolla.',
+                selite: 'Suitsuke kerättiin Dhofarissa ja kuljetettiin '
+                  + 'karavaaneilla Petraan ja Gazaan, ja Rooman maailmassa '
+                  + 'se oli kultaa kalliimpaa.',
                 lahde: 'Dr. Thomas Liptak, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -17910,8 +17836,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'hiekassa raskas myös tammikuussa.',
               kuva: {
                 tiedosto: 'Saudi Arabia Empty Quarter Nov. 2021 (101).jpg',
-                selite: 'Laakea dyynikenttä sinisen taivaan alla, ja kaukana '
-                  + 'harjanteella erottuu yksi pensas.',
+                selite: 'Shaybahin öljykentällä talviyöt painuvat noin '
+                  + 'kymmeneen asteeseen ja kesäpäivät noin '
+                  + 'viiteenkymmeneen.',
                 lahde: 'Prof. Mortel, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -17956,8 +17883,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, '
             + 'etanoita ja makean veden simpukoita — ja piikivityökaluja, '
             + 'mutta ei yhtään ihmisen luuta.',
-          selite: 'Vaalea, kova tasanko dyynien välissä, ja taustalla nousee '
-            + 'punaista hiekkaa.',
+          selite: 'Aavikon kovettuneet vaaleat laikut ovat matalien järvien '
+            + 'pohjia kahdelta kaudelta, 6 000–5 000 ja 3 000–2 000 vuotta '
+            + 'sitten.',
           lahde: 'Nepenthes, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -17974,8 +17902,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '2011 arabianoryks oli ensimmäinen laji, joka nostettiin '
             + 'punaisella listalla luokasta hävinnyt luonnosta takaisin '
             + 'vaarantuneisiin; 2016 luonnossa eli noin 1 220 yksilöä.',
-          selite: 'Arabianoryks kävelee kameraa kohti: valkoinen turkki, '
-            + 'tummat jalat, kasvojen mustat juovat ja pitkät suorat sarvet.',
+          selite: 'Arabianoryks oli vuonna 2011 ensimmäinen laji, joka '
+            + 'nostettiin punaisella listalla luokasta hävinnyt luonnosta '
+            + 'takaisin vaarantuneisiin.',
           lahde: 'Josephyousry, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17992,9 +17921,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oudon havainnon: dyynit eivät vaella. Pintahiekka lentää '
             + 'tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta '
             + 'dyynin juureen.',
-          selite: 'Uruq Bani Ma\'aridin suojelualue: punaisen dyyniselänteen '
-            + 'juurella kulkee vihreä käytävä, jolla liikkuu kaksi '
-            + 'kauriseläintä.',
+          selite: 'Uruq Bani Ma\'arid otettiin vuonna 2023 '
+            + 'maailmanperintöluetteloon Saudi-Arabian ensimmäisenä '
+            + 'luontokohteena.',
           lahde: 'Saudi Press Agency (SPA), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -18009,8 +17938,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'neljänneksestä 31 tieteelle uutta kasvilajia ja -muotoa sekä '
             + '24 alueella elävää lintulajia. Tutkijoita hämmästytti eniten '
             + 'se, miten linnut ylipäätään selviävät näissä oloissa.',
-          selite: 'Kukkiva aavikkokasvi hiekalla: vaaleanvihreät lehdet ja '
-            + 'keltaiset kukat, ja matala aurinko piirtää pitkän varjon.',
+          selite: 'Saudi-Arabian geologisen tutkimuslaitoksen retkikunta '
+            + 'löysi vuonna 2006 Tyhjästä neljänneksestä 31 tieteelle uutta '
+            + 'kasvilajia ja -muotoa.',
           lahde: 'Prof. Mortel, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -22978,6 +22908,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   doha: [
     {
       id: 'kaupunki',
@@ -22988,23 +22920,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Doha Corniche Skyline View 1.jpg',
-          selite: 'Cornichen kivetyltä rantapenkereeltä katsottuna lahden takana '
-            + 'nousee West Bayn torniryhmä, ja vastarannalla on keltaisia '
-            + 'telttakatoksia ja rivi valkoisia veneitä.',
+          selite: 'Dohan rantaviivaa on jatkettu merestä täytetyllä maalla '
+            + 'neljäsataa hehtaaria ja kolmekymmentä kilometriä.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Doha Souq Waqif Main Street 05.jpg',
-          selite: 'Souq Waqifin pääkatu vanhassa keskustassa: savilaastilla '
-            + 'rapatut kauppatalot reunustavat kujaa ja kadun päässä kohoaa '
-            + 'Fanarin kierteinen minareetti.',
+          selite: 'Souq Waqifin alkuperäiset rakennukset ovat 1800-luvun '
+            + 'lopulta tai 1900-luvun alusta, ja kortteli kunnostettiin '
+            + 'vuonna 2006 vanhaa muotoaan kunnioittaen.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Museum of Islamic Art Park, Doha.jpg',
-          selite: 'Islamilaisen taiteen museon puisto: palmukujan päässä '
-            + 'seisoo museon vaalea kuutiorakennus, lahdella keinuu '
-            + 'puisia dhow-veneitä ja horisontissa häämöttää West Bay.',
+          selite: 'Islamilaisen taiteen museo rakennettiin I. M. Pein '
+            + 'vaatimuksesta omalle keinosaarelleen vanhan dhow-sataman '
+            + 'viereen.',
           lahde: 'Sandra Doha, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -23045,22 +22976,20 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Highrises in The Pearl Qatar.jpg',
-          selite: 'Helmi-saaren taloja yöllä: kahden lähimmän huipulla on '
-            + 'valaistu kupolimainen kruunu, ja niiden takana häämöttää West '
-            + 'Bayn tornirivi.',
+          selite: 'Helmi-saaren ensimmäinen osa avattiin vuonna 2004 West '
+            + 'Bayn edustalle täytetylle maalle.',
           lahde: 'Christine und Hagen Graf @ Flickr.com, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Al Aaliya Street in Al Mirqab Doha.jpg',
-          selite: 'Al Mirqabin asuintorneja illalla, ja niiden keskellä seisoo '
-            + 'vihreä tulppaanin muotoinen vesitorni.',
+          selite: 'Dohassa oli 1900-luvun alussa yhdeksän kaupunginosaa ja '
+            + 'vuoden 2010 väestönlaskennassa yli kuusikymmentä.',
           lahde: 'Isabell Schulz @ Flickr.com, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Villas in Onaiza Doha.jpg',
-          selite: 'Onaizan kaupunginosa ylhäältä: hiekanvärisiä huviloita '
-            + 'muurien ja palmujen takana, ja leveän kadun toisella puolen '
-            + 'jatkuu tiheämpi valkoinen talorivistö.',
+          selite: 'Dohan ala on 132 neliökilometriä ja asukkaita on '
+            + '1 186 023.',
           lahde: 'Alex Sergeev (www.asergeev.com), Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -23080,8 +23009,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vakinaisesti asuva. Perintökokoelmassa on noin 2 400 '
             + 'käsikirjoitusta sekä karttoja ja matkakertomuksia, joita '
             + 'Persianlahdelle tulleet kirjoittivat vuosisatojen mittaan.',
-          selite: 'Kansalliskirjaston sali ylhäältä, jossa pitkät valkoiset '
-            + 'hyllyrivit jatkuvat läpi salin kirjoja reunaa myöten täynnä.',
+          selite: 'Qatarin kansalliskirjaston piirsi Rem Koolhaas, ja '
+            + 'avausvuonna 2018 sen hyllyillä oli yli 800 000 kirjaa.',
           lahde: 'En Merker, Wikimedia Commons (CC0)',
         },
         {
@@ -23099,9 +23028,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nähtiin täällä lokakuussa 2012, kun ohjelmassa oli Verdin '
             + 'Aida. Kylässä on lisäksi maan ainoa oopperatalo, jossa on '
             + '550 paikkaa.',
-          selite: 'Amfiteatterin vaaleaa kiveä oleva ulkoseinä, jossa '
-            + 'kreikkalaisten pylväiden välissä syvennykset päättyvät '
-            + 'ylöspäin teräväksi kaareksi.',
+          selite: 'Kataran marmorinen amfiteatteri on alaltaan 3 275 '
+            + 'neliömetriä, ja siihen mahtuu 5 000 katsojaa.',
           lahde: 'Paul Trafford, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -23117,17 +23045,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seinänä on reikäkuvioitua lasia, joka päästää valon läpi '
             + 'mutta pitää auringon ulkona. Pimeällä kaaret valaistaan '
             + 'sisältä, ja asema hehkuu kadulle lyhtynä.',
-          selite: 'Al Saddin metroaseman sisäänkäynti illalla: kullanruskeat '
-            + 'kaaret nousevat holviksi reikäkuvioidun lasiseinän yllä.',
+          selite: 'Dohan metro avattiin 8. toukokuuta 2019, ja sen kolmella '
+            + 'linjalla on rataa noin 76 kilometriä ja asemia 37.',
           lahde: 'Thameur Belghith, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'ISS-33 Nighttime view of Qatar.jpg',
-          selite: 'Qatarin niemimaa yöllä avaruusasemalta kuvattuna, ja Doha '
-            + 'hehkuu itärannikolla valkoisena läiskänä, josta tiet lähtevät '
-            + 'oransseina viivoina pimeään.',
+          selite: 'Doha on Qatarin niemimaan itärannikolla, ja sen matalaan '
+            + 'lahteen isot laivat pääsivät vasta 1970-luvulla '
+            + 'valmistuneen syväsataman jälkeen.',
           lahde: 'NASA, Wikimedia Commons (PD)',
         },
         kappale: 'Doha on Qatarin pääkaupunki niemimaan itärannikolla. '
@@ -23170,9 +23098,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja kierrätysvedellä kasteltuina aavikkokasveina.',
               kuva: {
                 tiedosto: 'Aerial view of Hamad Airport, May 2014.jpg',
-                selite: 'Hamadin lentoasema ilmasta pölysumun läpi, ja '
-                  + 'terminaalin katto aaltoilee rinnakkaisina kaarina '
-                  + 'täyttömaan reunalla.',
+                selite: 'Hamadin lentoasema levittäytyy 36 '
+                  + 'neliökilometrille, josta puolet on merestä täytettyä '
+                  + 'maata.',
                 lahde: 'Chris Hoare, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -23208,8 +23136,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'toisaalta kaupungin uusiin erikoiskahviloihin.',
               kuva: {
                 tiedosto: 'Karak Tea.jpg',
-                selite: 'Karak-teetä pahvimukissa: neste on vaaleanruskeaa ja '
-                  + 'reunoilla on rengas hienoa vaahtoa.',
+                selite: 'Karak on mausteiden kanssa haudutettua teetä, johon '
+                  + 'lisätään haihdutettua maitoa, kardemummaa, sahramia ja '
+                  + 'sokeria.',
                 lahde: 'Gaurav Dhwaj Khadka, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -23232,9 +23161,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja tulijoista kaksi kolmasosaa oli ulkomaalaisia.',
               kuva: {
                 tiedosto: 'Doha Dhow Harbour 07.jpg',
-                selite: 'Puinen dhow-purjelaiva ankkurissa tyynessä satamassa, '
-                  + 'ja takana kulkee palmurivi matalien talojen ja '
-                  + 'kullanvärisen lasijulkisivun edessä.',
+                selite: 'Vuonna 1907 Dohassa oli '
+                  + 'kolmesataaviisikymmentä helmivenettä ja niiden '
+                  + 'miehistöissä 6 300 miestä.',
                 lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
               },
             },
@@ -23278,8 +23207,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskelle, ja siitä syödään yhdessä käsin. Ruokaa tehdään '
             + 'aina enemmän kuin syöjiä riittää: sen loppuminen kesken '
             + 'olisi isännälle nolo asia.',
-          selite: 'Iso metallivati keskellä katettua pöytää: keltaisen riisin '
-            + 'päällä on kokonaisia paistettuja kanoja ja lihapaloja.',
+          selite: 'Madžbus on Qatarin kansallisruoka, jossa riisi, liha, '
+            + 'sipuli ja tomaatti kypsennetään puristettuina samaan '
+            + 'pataan.',
           lahde: 'Dana Club Doha @ YouTube, Wikimedia Commons (CC BY 3.0)',
         },
         {
@@ -23295,8 +23225,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mitassa ja seitsemän ja puolen vuoden iässä. Kutuaika osuu '
             + 'lahdella maaliskuun ja kesäkuun väliin, ja pyynti on ollut '
             + 'niin kovaa, että isot yksilöt ovat käyneet harvinaisiksi.',
-          selite: 'Kalakauppias pitelee kahta nuorta hamouria Dohan kalatorilla, '
-            + 'ja kylkien vaaleanruskealla pinnalla on tummia pilkkuja.',
+          selite: 'Hamour aloittaa elämänsä usein naaraana ja vaihtaa '
+            + 'koiraaksi noin 67 senttimetrin mitassa ja seitsemän ja '
+            + 'puolen vuoden iässä.',
           lahde: 'Abedwayyad, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -23313,8 +23244,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Tytöillä on illassa usein kultaketjuinen päähine, ja '
             + 'nykyään myös kauppakeskukset järjestävät omia '
             + 'garangao-tilaisuuksiaan.',
-          selite: 'Sinisiä ja violetteja harsopusseja rivissä kultanauhalla '
-            + 'solmittuina odottamassa jakoa garangao-illassa Dohassa.',
+          selite: 'Garangao vietetään paastokuukauden viidentenätoista '
+            + 'yönä, ja lapset saavat ovilla laulamisesta pussiin makeisia '
+            + 'ja pähkinöitä.',
           lahde: 'Dana Club Doha @ YouTube, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -23380,6 +23312,8 @@ export const KULTTUURI_KATEGORIAT = {
    * "Antaa olla" -linjan mukaan: hallinnollinen tilanne tosiasiana,
    * ilman kannanottoja ja ilman jaon syiden erittelyä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   nikosia: [
     {
       id: 'kaupunki',
@@ -23390,23 +23324,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Nicosia\'s skyline 2024.jpg',
-          selite: 'Näkymä yli keskustan kattojen auringonlaskun aikaan: '
-            + 'etualalla matalia tiili- ja tasakattoja vesisäiliöineen, '
-            + 'takana muutama lasitorni ja horisontissa vuorijono.',
+          selite: 'Nikosiassa ovat saaren kaikkien pankkien pääkonttorit, '
+            + 'viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.',
           lahde: 'PomposPompou, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Selimiye mosque Nicosia (29852320938).jpg',
-          selite: 'Selimiyen moskeija vanhassakaupungissa: goottilainen '
-            + '1200-luvun katedraali seisoo aukion laidalla, ja sen kylkeen '
-            + 'on lisätty kaksi kivistä minareettia.',
+          selite: 'Selimiyen moskeija on 1200-luvun goottilainen katedraali, '
+            + 'jonka kylkeen lisättiin kaksi kivistä minareettia.',
           lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Eleftherias Square 5.jpg',
-          selite: 'Vapaudenaukio ylhäältä: aaltoileva valkobetoninen kansi '
-            + 'kaartuu venetsialaisen muurin vallihaudan yli, ja takana '
-            + 'levittäytyy kaupunki ja Kyrenian vuoret.',
+          selite: 'Vapaudenaukion kansi kaartuu venetsialaisen muurin '
+            + 'vallihaudan yli, joka on nykyään puistoja ja '
+            + 'urheilukenttiä.',
           lahde: 'Iakovos Hatzistavrou, European Commission, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -23419,24 +23351,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'CY-nikosia-stadtmauer.jpg',
-          selite: 'Näkymä muurin harjalta pitkin vallihautaa: vasemmalla '
-            + 'viettää kalkkikivinen muurinrinne, oikealla kaartuu seuraavan '
-            + 'bastionin kylki, ja välissä hauta on nurmea ja palmuja.',
+          selite: 'Venetsialaiset rakensivat vuosina 1567–1570 kaupungin '
+            + 'ympärille muurin, jonka kehä on noin viisi kilometriä ja '
+            + 'jossa on yksitoista viisikulmaista bastionia.',
           lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Samanbahçe in North Nicosia.jpg',
-          selite: 'Kivetty kuja Samanbahçen korttelissa: molemmin puolin '
-            + 'jatkuu rivi matalia, valkoiseksi kalkittuja taloja vihreine '
-            + 'säleluukkuineen, ja kujan päässä erottuu kupolikattoinen '
-            + 'suihkulähde.',
+          selite: 'Muurin sisällä Nikosian kadut ovat kapeita ja '
+            + 'mutkittelevia, ulkopuolella suoria ja leveitä.',
           lahde: 'muffinn, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Kyrenia Gate, Nicosia, Cyprus.jpg',
-          selite: 'Kyrenian portti seisoo keskellä katua: hiekankeltaisen '
-            + 'kivimassan päällä on nelisivuinen vartiokamari ja matala '
-            + 'kupoli, ja holvikaaren yläpuolella on kivitauluja.',
+          selite: 'Kyrenian portti jäi seisomaan yksin keskelle katua, kun '
+            + 'muurit sen molemmilta puolilta purettiin vuonna 1931.',
           lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -23444,16 +23373,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'A fortified arched gate, Nicosia, Cyprus Wellcome L0056833.jpg',
           vuosi: '1878',
-          selite: 'Holvikaarinen portti Nikosian muurissa vuonna 1878, jolloin britit '
-            + 'ottivat saaren hallintaansa — portin edessä seisoo aaseja kuormineen.',
+          selite: 'Vielä 1800-luvun lopulla koko Nikosia mahtui muurin '
+            + 'sisään, ja ulos päästiin vain kolmesta portista.',
           lahde: 'John Thomson / Wellcome Collection, Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Along ledras street.JPG',
           vuosi: '2010',
-          selite: 'Ledran katu muurien sisäpuolella: kävelykatu päättyy muutaman '
-            + 'korttelin päässä tarkastuspisteeseen, jonka läpi on päässyt kaupungin '
-            + 'toiselle puolelle vasta vuodesta 2008.',
+          selite: 'Ledran kadun tarkastuspisteen läpi on päässyt kaupungin '
+            + 'toiselle puolelle vuodesta 2008.',
           lahde: 'Andreas2009, Commons (CC BY-SA 3.0)',
         },
       ],
@@ -23472,9 +23400,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuruşilla; nuorin poika osti sen takaisin vuonna 1830. '
             + 'Viimeinen asukas kuoli 1979, ja nyt talossa on etnologinen '
             + 'museo. Kunnostuksesta myönnettiin Europa Nostra -palkinto.',
-          selite: 'Kartanon katujulkisivu: ylhäällä työntyy ulos umpinainen '
-            + 'puinen erkkeri luukut kiinni, alempana on ristikkoikkunoita, '
-            + 'ja oikealla erottuu teräväkaarinen oviaukko.',
+          selite: 'Hadjigeorgakis Kornesios toimi Kyproksen dragomaanina '
+            + '1779–1809, ja hänen kartanossaan on nykyään etnologinen '
+            + 'museo.',
           lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -23493,10 +23421,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oli jauhovarasto. Kunnostus kesti 2004–2009, ja sen '
             + 'suunnittelutyö sai Europa Nostra -palkinnon; nyt talossa '
             + 'on kulttuurikeskus.',
-          selite: 'Bedestenin hunajanvärinen kaaririvi, jonka '
-            + 'teräväkärkisistä kaarista osa on suljettu lasilla ja jonka '
-            + 'yläpuolelle kunnostuksessa lisättiin säleikköinen peltikatto '
-            + '— talo oli katettu kangaskauppa ja on nyt kulttuurikeskus.',
+          selite: 'Bedesten annettiin vuonna 1573 katetuksi kangaskaupaksi, '
+            + 'ja sen sisällä on paloja 500-luvulle ajoitetusta '
+            + 'bysanttilaisesta basilikasta.',
           lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -23512,9 +23439,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Itse palatsiin ei pääse sisään, mutta samalla tontilla '
             + 'ovat yleisölle avoimet bysanttilainen museo, '
             + 'arkkipiispanistuimen kirjasto ja kansantaiteen museo.',
-          selite: 'Palatsin pitkä julkisivu hämärtyvässä valossa: '
-            + 'kummassakin kerroksessa on rivi kaariaukkoja, kivi on '
-            + 'hiekankeltaista ja katto tiiltä.',
+          selite: 'Arkkipiispan palatsi rakennettiin vuosina 1956–1960 '
+            + 'uusbysanttilaiseen tyyliin vanhan arkkipiispantalon '
+            + 'viereen.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -23534,10 +23461,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Nicosia - Camocio Giovanni Francesco - 1574.jpg',
-          selite: 'Venetsialainen kuparipiirros vuodelta 1574: kaupunki on '
-            + 'piirretty yhdentoista kärjen tähdeksi bastionien nimineen, '
-            + 'keskellä kohoaa S. Sofia -katedraali, joki kulkee kehän ohi, '
-            + 'ja vasemmassa alanurkassa on julkaisijan oma mitta-asteikko.',
+          selite: 'Venetsialainen kuparipiirros vuodelta 1574 esittää '
+            + 'Nikosian yhdentoista kärjen tähtenä bastionien nimineen.',
           lahde: 'Giovanni Francesco Camocio, Wikimedia Commons (PD)',
         },
         kappale: 'Nikosia on Kyproksen pääkaupunki ja saaren ainoa suuri '
@@ -23576,10 +23501,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vasemmalla. Kaupunkipyöriä on ollut vuodesta 2011.',
               kuva: {
                 tiedosto: 'Empfangsgebäude Evrychou.jpg',
-                selite: 'Kyproksen valtionrautateiden entinen asemarakennus '
-                  + 'Evrychoussa, nykyään rautatiemuseo: vaaleista '
-                  + 'kivilohkareista ladotut seinät, vihreät ikkunaluukut ja '
-                  + 'eteen palautettu pätkä raidetta.',
+                selite: 'Kyproksen ainoa rautatie kulki vuosina 1905–1951, '
+                  + 'ja Evrychoun asemarakennus on nykyään '
+                  + 'rautatiemuseo.',
                 lahde: 'Liebjens, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -23620,9 +23544,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'juustoa.',
               kuva: {
                 tiedosto: 'Fromage Halloumi (Chypre) en juin 2023.jpg',
-                selite: 'Pala tuoretta halloumia harmaalla alustalla: juusto '
-                  + 'on taitettu kaksin kerroin, pinta on kostea ja '
-                  + 'kiiltävä, ja siihen on tarttunut minttusilppua.',
+                selite: 'Halloumi keitetään omassa herassaan vähintään puoli '
+                  + 'tuntia, ja siksi se ruskistuu pannulla sulamatta.',
                 lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
               },
             },
@@ -23644,10 +23567,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + '23 324 ja vuonna 1960 45 629.',
               kuva: {
                 tiedosto: 'NIVOSIA(1881) p035 THE TAHTA GALA FROM THE FAMAGOSTA GATE.jpg',
-                selite: 'Kivipiirros vuodelta 1881: näkymä Famagustan portin '
-                  + 'holvikaaren läpi Tahtakalen korttelia kohti, aukossa '
-                  + 'kolme palmua ja taempana minareetti; alareunan tekstit '
-                  + 'ovat kirjan painolaitoksen merkintöjä.',
+                selite: 'Nikosiassa oli vuonna 1881 asukkaita 11 536, vuonna '
+                  + '1931 jo 23 324 ja vuonna 1960 kaikkiaan 45 629.',
                 lahde: 'Archduke Ludwig Salvator of Austria, Wikimedia Commons (PD)',
               },
             },
@@ -23692,10 +23613,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupungin tärkein matkailuneuvonta, ja opastetut '
             + 'kävelykierrokset lähtevät sieltä maanantaisin, torstaisin '
             + 'ja perjantaisin.',
-          selite: 'Kapea kuja korttelissa: keskellä kasvaa appelsiinipuita '
-            + 'hedelmineen, vasemmalla on talo, jonka nurkat on ladottu '
-            + 'hiekkakivestä, ja seinässä roikkuu lyhty ja takorautainen '
-            + 'kylttivarsi.',
+          selite: 'Laiki Geitonia on vanhankaupungin noin 300 metrin '
+            + 'kävelykortteli, jonka talot ovat 1700-luvun lopulta.',
           lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
         },
         {
@@ -23711,9 +23630,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'syyskuuta 2020 lämpötila 46,2 astetta, koko Kyproksen '
             + 'korkein lukema. Jokivartta on muutettu kävelyreitiksi 18 '
             + 'kilometrin matkalta.',
-          selite: 'Uoma keskellä eukalyptuslehtoa: vettä on vain kapea nauha '
-            + 'betonikourun pohjalla, rannat ovat hiekkaa ja kuivia '
-            + 'oksia, ja yläreunassa erottuu kulkupolku.',
+          selite: 'Pedieos on Kyproksen pisin joki, 98 kilometriä, ja '
+            + 'suurin osa saaren joista kuivuu kesäksi.',
           lahde: 'Fry72, Karel Frydrýšek, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -23729,9 +23647,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kyprokselle ja jossa on saaren monumentteja. Esillä on '
             + 'myös kirjeiden varmistamista sinettivahasta koneisiin, '
             + 'vaakoja ja alan kirjallisuutta.',
-          selite: 'Punaiseksi maalattu valurautainen pylväspostilaatikko '
-            + 'kujan varressa, takana matkailuneuvonnan kyltti ja '
-            + 'kunnostettuja taloja puisine ikkunaluukkuineen.',
+          selite: 'Kyproksen postimuseo avattiin vuonna 1981 vanhan '
+            + 'kartanon pohjakerrokseen Laiki Geitonian kortteleissa.',
           lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -23763,6 +23680,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   kuwait: [
     {
       id: 'kaupunki',
@@ -23774,22 +23693,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Al-Hashemi-II (ship).jpg',
-          selite: 'Al-Hashemi-II mereltä nähtynä: kaksimastoinen puulaiva seisoo '
-            + 'kivisen rantamuurin takana kuivalla maalla, ja kaiverrettu '
-            + 'punaruskea perä kohoaa muuta runkoa korkeammalle.',
+          selite: 'Al-Hashemi-II on rakennettu dhow-laivan muotoon, mutta '
+            + 'se ei ole koskaan ollut vedessä.',
           lahde: 'Photographer: Mosbatho, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Kuwait City (8287172359).jpg',
-          selite: 'Kuwait Cityn keskusta yöllä: valaistut tornitalot nousevat '
-            + 'moottoriteiden ja matalien kortteleiden keskeltä.',
+          selite: 'Kuwait Cityn kaupunkiseudulla asui vuonna 2018 noin kolme '
+            + 'miljoonaa ihmistä eli yli seitsemänkymmentä prosenttia maan '
+            + 'väestöstä.',
           lahde: 'Abdullah Alqattan, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'TSCK Kuwait Old Building.jpg',
-          selite: 'Tieteen keskus Salmiyassa ilmasta nähtynä: valkoiset '
-            + 'purjemaiset katokset peittävät rakennuksen, ja viereiseen '
-            + 'satamaan on ankkuroitu puisia purjelaivoja.',
+          selite: 'Salmiyan Tieteen keskus avattiin vuonna 2000, ja sen '
+            + 'viereisessä satamassa seisoo vanhoja puulaivoja.',
           lahde: 'TSCKuwait, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -23831,22 +23749,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Kuwait City Skyline 1.jpg',
-          selite: 'Kuwait Cityn liikekeskustan lasitornit nousevat matalien '
-            + 'talojen, minareettien ja hiekkaisten tyhjien tonttien takaa.',
+          selite: 'Kuwait Cityllä ei ole omaa hallinnollista rajaa: kaikkiin '
+            + 'maan kuuteen kuvernoraattiin kuuluu paloja samasta '
+            + 'taajamasta.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Antiquities of Failaka island 01.JPG',
-          selite: 'Kaivausalue Failakan saarella, jossa matalat savi- ja '
-            + 'kivimuurit muodostavat huoneiden pohjia hiekkaan ja takana '
-            + 'siintää merenpinta.',
+          selite: 'Failakan saarelle kreikkalaiset antoivat nimen Ikaros, ja '
+            + 'Aleksanteri Suuren aikaan se oli viidentoista kilometrin '
+            + 'päässä Eufratin suusta.',
           lahde: 'Bo hessin, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Al Shaheed Park, Kuwait.jpg',
-          selite: 'Al Shaheedin puisto illalla: kivetyllä aukiolla seisoo rivi '
-            + 'hoikkia valaisinmastoja, ja puiden takana loistavat valaistut '
-            + 'tornit.',
+          selite: 'Kuwaitin kesässä päivä vietetään sisällä, ja puistoihin '
+            + 'lähdetään vasta illalla.',
           lahde: 'Salwa Farwaneh Dameh, Wikimedia Commons (CC0)',
         },
       ],
@@ -23854,16 +23772,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The Persian problem; an examination of the rival positions of Russia and Great Britain in Persia, with some account of the Persian gulf and the Bagdad railway (1903) (14763432082).jpg',
           vuosi: '1903',
-          selite: 'Kuwaitilaisia miehiä ja poika vuoden 1903 matkakirjan kuvassa, '
-            + 'aikana jolloin kaupunki eli helmenkalastuksesta ja laivanrakennuksesta.',
+          selite: 'Kuwait eli 1900-luvun alussa helmenkalastuksesta ja '
+            + 'laivanrakennuksesta.',
           lahde: 'Internet Archive Book Images, Commons (PD)',
         },
         {
           tiedosto: 'Kuwait City skyline (39710595225).jpg',
           vuosi: '2018',
-          selite: 'Kuwait Cityn silhuetti mereltä nähtynä: kaupunki on yhä samassa '
-            + 'lahden pohjukassa, mutta lähes kaikki sen juomavesi tehdään nykyään '
-            + 'merivedestä.',
+          selite: 'Kuwait City on yhä samassa lahden pohjukassa, mutta '
+            + 'lähes kaikki sen juomavesi tehdään nykyään merivedestä.',
           lahde: 'Francisco Anzola, Commons (CC BY 2.0)',
         },
       ],
@@ -23881,9 +23798,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seisoo rantahotellin vieressä, ja sisällä on juhlasali ja '
             + 'merenkulkumuseo. Peräpeiliin on veistetty kukkakiehkuroita '
             + 'ja rivi kaari-ikkunoita, ja niiden yläpuolella on silmä.',
-          selite: 'Al-Hashemi-II:n perä alhaalta katsottuna: punaruskeaan puuhun '
-            + 'on kaiverrettu kasviaiheita ja kaari-ikkunoita, ja nimi on '
-            + 'maalattu kullalla.',
+          selite: 'Al-Hashemi-II:n pituudeksi kirjattiin Guinnessin '
+            + 'ennätysluetteloon 80,4 metriä, ja työ maksoi yli '
+            + 'kolmekymmentä miljoonaa dollaria.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -23900,9 +23817,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja yksi maailman laajimmista hopeakorukokoelmista. Museota '
             + 'rahoittaa yhä sama perhe, ja kalligrafialle avattiin 2007 '
             + 'oma talo samaan kaupunginosaan.',
-          selite: 'Käsikirjoitussali museon alakerrassa: lasivitriinit '
-            + 'muodostavat pitkiä rivejä, ja seinillä on kehystettyjä '
-            + 'käsikirjoituslehtiä tummansinistä taustaa vasten.',
+          selite: 'Tareq Rajab -museo avattiin 1980 Persianlahden alueen '
+            + 'ensimmäisenä islamilaisen taiteen museona, ja sen kokoelma '
+            + 'on kokonaan maanpinnan alapuolella.',
           lahde: 'Tnrajab, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -23919,18 +23836,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Betoniosia valettiin valmiiksi 12 800 kappaletta 150 '
             + 'perusmallista. Meren puolella katto nousee ylöspäin kuin '
             + 'teltan kangas.',
-          selite: 'Kansalliskokouksen talo Arabianlahden rantakadun varrella, ja '
-            + 'valkoisen betonisiiven viisto katto päättyy laskostettuun '
-            + 'reunaan.',
+          selite: 'Kansalliskokouksen talon suunnitteli Jørn Utzon, ja sen '
+            + 'betoniosia valettiin valmiiksi 12 800 kappaletta 150 '
+            + 'perusmallista.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Kuwait International Airport.jpg',
-          selite: 'Lentoaseman pyöreä halli sisältä: vihreiksi verhotut pilarit '
-            + 'kannattavat kaarevaa kattoa, ja liukuportaiden ympärillä on '
-            + 'rengas punaisia istuimia.',
+          selite: 'Kuwaitin lentoaseman ykkösterminaalin piirsi japanilainen '
+            + 'Kenzo Tange, ja se avattiin vuonna 1979.',
           lahde: 'Dhaval Surana, Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Kuwait City on Kuwaitinlahden eteläisellä rannalla '
@@ -23992,9 +23908,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pohjasta on yhä arkeologisesti tutkimatta.',
               kuva: {
                 tiedosto: 'Sulaibikhat District (Aerial view).jpg',
-                selite: 'Kuwaitinlahden ranta suoraan ylhäältä Sulaibikhatin '
-                  + 'kohdalla, jossa okranruskea lieju halkeaa '
-                  + 'mutkittelevaksi uomaksi ja ohuiksi sivu-uomiksi.',
+                selite: 'Kuwaitinlahti on Tigrisin ja Eufratin tuoman '
+                  + 'aineksen muodostama suisto, joka piirsi rantaviivat '
+                  + 'sellaisiksi kuin ne nyt ovat.',
                 lahde: 'Di7ane, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -24038,8 +23954,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'itsenäinen.',
               kuva: {
                 tiedosto: 'Kuwait City Dhow Harbour 05.jpg',
-                selite: 'Puisia dhow-kalastusaluksia rivissä kiinni laiturissa, '
-                  + 'ja lähimmän rungon punaruskea maali on kulunut.',
+                selite: 'Kuwaitista tuli Persianlahden laivanveiston keskus, '
+                  + 'ja sen aluksilla kulki suuri osa Intian ja Itä-Afrikan '
+                  + 'satamien kaupasta.',
                 lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
               },
             },
@@ -24063,8 +23980,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'millimetriä, ja se tulee marras–maaliskuussa.',
               kuva: {
                 tiedosto: 'Great sunset view from gulf street - July 2025.jpg',
-                selite: 'Ilta rantakadulla, jossa kävelytien ja meren takana '
-                  + 'erottuu kaupungin siluetti oranssia taivasta vasten.',
+                selite: 'Kuwaitissa tammikuun keskilämpö on runsaat '
+                  + 'kolmetoista astetta, ja koko vuoden sade tulee '
+                  + 'marras–maaliskuussa.',
                 lahde: 'Zs.84, Wikimedia Commons (CC0)',
               },
             },
@@ -24092,9 +24010,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuodenajan mukana: tammikuussa se on 65 prosenttia, '
             + 'kesäkuussa 16. Aurinkoa paistaa vuodessa noin kolmetuhatta '
             + 'tuntia, eli keskimäärin runsaat kahdeksan tuntia päivässä.',
-          selite: 'Sumuinen tammikuun aamu kaupungin laidalla, jossa tienvarren '
-            + 'pensasrivi häviää sumuun ja hiekan päällä kasvaa talven '
-            + 'vihreä ruoho.',
+          selite: 'Kuwait Cityn ilmankosteus on tammikuussa 65 prosenttia '
+            + 'ja kesäkuussa 16.',
           lahde: 'irvin calicut, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -24110,9 +24027,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'parvekkeet seuraavat toisiaan kuin talorivit. Katto on '
             + 'läpikuultavaa muovikalvoa, jota tähän yhteen kattoon meni '
             + '74 500 neliömetriä.',
-          selite: 'Grand Avenuen sisäkatu ylhäältä: läpikuultava valkoinen '
-            + 'kattoholvi kaartuu käytävän yllä, ja alla kasvaa palmu '
-            + 'punaisten päivänvarjojen keskellä.',
+          selite: 'The Avenuesin käytävistä osa on tehty kadun näköisiksi, '
+            + 'ja Grand Avenuen läpikuultavaan kattoon meni 74 500 '
+            + 'neliömetriä muovikalvoa.',
           lahde: 'EnGxBaDeR, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -24130,8 +24047,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1994, ja kahden vuoden kunnostuksen jälkeen se on ainoa '
             + 'jäljellä oleva kuwaitilainen purjelaiva öljyä edeltävältä '
             + 'ajalta.',
-          selite: 'Kaksi haita akvaarion ikkunan takana katsojan yläpuolella, ja '
-            + 'valo lankeaa pinnasta juovina siniseen veteen.',
+          selite: 'Tieteen keskuksen akvaariossa elää yli sata eläinlajia, '
+            + 'ja suuren kaarevan ikkunan takaa hait erottuvat '
+            + 'alhaaltapäin.',
           lahde: 'TSCKuwait, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -24161,6 +24079,8 @@ export const KULTTUURI_KATEGORIAT = {
    * ole täällä vaan asia-artikkelit.js:n Masqat-intro, joka
    * kirjoitettiin samassa erässä uuteen mittaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   masqat: [
     {
       id: 'kaupunki',
@@ -24171,23 +24091,20 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 29.jpg',
-          selite: 'Al Alamin palatsi aukion perällä: molemmin puolin jatkuu '
-            + 'valkoinen kaarikäytävä, keskellä on kivetty ajotie '
-            + 'puurivistöineen, ja takana erottuu paljas vuorenharjanne.',
+          selite: 'Al Alamin seremoniapalatsi valmistui vanhaan Masqatiin '
+            + 'vuonna 1972.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Seaside of Muttrah with Mutrah Fort (47953961706).jpg',
-          selite: 'Muttrahin ranta Masqatissa: valkoiset talot reunustavat corniche-katua, '
-            + 'ja niiden yllä kalliolla seisoo portugalilaisten rakentama Muttrahin '
-            + 'linnake.',
+          selite: 'Mutrahin linnakkeen rakensivat portugalilaiset, jotka '
+            + 'pitivät Masqatia yli vuosisadan.',
           lahde: 'Eduard Marmet, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Riyam Park with incense burner Mabkhara (47954080007).jpg',
-          selite: 'Suitsukeastian muotoinen monumentti kalliokummun laella '
-            + 'Riyamin puistossa, valkoisen astian kuvussa kaarevat aukot ja '
-            + 'alhaalla kukkapenkkejä ja palmuja.',
+          selite: 'Riyamin puiston monumentti on veistetty mabkharan eli '
+            + 'omanilaisen suitsutusastian muotoon.',
           lahde: 'Eduard Marmet, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -24201,24 +24118,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Muttrah Corniche 2.jpg',
-          selite: 'Mutrahin lahti mereltä: rannassa rivi valkoisia taloja, '
-            + 'laiturissa kaksi puista dhow-alusta ja kallionkielekkeellä '
-            + 'linnake lippusalkoineen.',
+          selite: 'Mutrahin lahti on toinen Masqatin kahdesta '
+            + 'luonnonsatamasta, sillä vesi käy rannan tuntumassa syvänä.',
           lahde: 'Juozas Šalna, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Old Muscat City View, Muscat, Oman2.jpg',
-          selite: 'Vanhan Masqatin yllä olevalta rinteeltä: etualalla on '
-            + 'rosoista kalliota, keskellä vihreä laakso ja valkoisia '
-            + 'taloja minareetteineen, ja lahden takana näkyy satama '
-            + 'siiloineen ja laivoineen.',
+          selite: 'Vanha Masqat on yhä pieni: sen omassa wilajassa asuu '
+            + 'runsaat kolmekymmentätuhatta ihmistä.',
           lahde: 'Domenico Convertini, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Mountain Vista.jpg',
-          selite: 'Hajar-vuoriston harjanteita Masqatin lähellä olevalta '
-            + 'polulta: rinteet ovat paljasta kiveä, ja kaukana laaksossa '
-            + 'häämöttää kaupunkia.',
+          selite: 'Hajar-vuoriston kukkulat ovat syväkivilajeja — '
+            + 'serpentiniittiä, vihreäkiveä ja basalttia — eikä '
+            + 'kasvillisuutta rinteillä ole juuri lainkaan.',
           lahde: 'Daredeep33, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -24226,17 +24140,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The Persian problem; an examination of the rival positions of Russia and Great Britain in Persia, with some account of the Persian gulf and the Bagdad railway (1903) (14577292147).jpg',
           vuosi: '1903',
-          selite: 'Maskat vuoden 1903 matkakirjan kuvalaatassa: kalliolla seisoo '
-            + 'portugalilaisten linnake, ja kaupunki mahtuu juuri ja juuri vuorten ja '
-            + 'veden väliin.',
+          selite: 'Ptolemaios merkitsi Masqatin jo ensimmäisellä '
+            + 'vuosisadalla nimellä Cryptus Portus, kätketty satama.',
           lahde: 'Internet Archive Book Images, Commons (PD)',
         },
         {
           tiedosto: 'Old Muscat City View, Muscat, Oman.jpg',
           vuosi: '2024',
-          selite: 'Vanha Maskat nykyään samojen vuorten välissä, kun taas uusi '
-            + 'kaupunki on jouduttu kasvattamaan kymmenien kilometrien nauhaksi '
-            + 'rannikkoa pitkin.',
+          selite: 'Masqatin kaupunkiseutu levittäytyy kuuteen wilajaan noin '
+            + '6 500 neliökilometrille nauhaksi rannikkoa pitkin.',
           lahde: 'Domenico Convertini, Commons (CC BY-SA 2.0)',
         },
       ],
@@ -24255,9 +24167,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vitriiniin. Museo oli ensimmäinen Lähi-idässä, jonka '
             + 'opasteissa on näkövammaisille tarkoitettua arabiankielistä '
             + 'pistekirjoitusta.',
-          selite: 'Omanin kansallismuseon vaaleakivinen julkisivu: keskellä '
-            + 'korkea teräväkärkinen kaari, sivuilla holvikäytävät, katolla '
-            + 'Omanin lippu ja takana paljas vuorenrinne.',
+          selite: 'Omanin kansallismuseo avattiin 30. heinäkuuta 2016, ja se '
+            + 'oli ensimmäinen Lähi-idässä, jonka opasteissa on '
+            + 'arabiankielistä pistekirjoitusta.',
           lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -24273,9 +24185,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lavalla nähtiin Domingon lisäksi Andrea Bocelli ja Renée '
             + 'Fleming, myöhemmin muun muassa sellisti Yo-Yo Ma ja '
             + 'Mariinski-teatterin Joutsenlampi.',
-          selite: 'Oopperatalon aula ennen esitystä: marmoriportaat nousevat '
-            + 'kahtaalle punaista mattoa pitkin, seinissä on tummapuisia '
-            + 'teräväkärkisiä kaaria ja alhaalla odottaa yleisöä.',
+          selite: 'Masqatin oopperatalo avattiin 12. lokakuuta 2011 Puccinin '
+            + 'Turandotilla, ja saliin mahtuu enintään 1 100 kuulijaa.',
           lahde: 'Juozas Šalna, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -24290,10 +24201,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kruunu, jossa on 600 000 kristallia ja 1 122 lamppua, ja '
             + 'kruunun sisällä on portaat, joita pitkin lamput '
             + 'vaihdetaan. Samanlaisia pienempiä kruunuja on talossa 34.',
-          selite: 'Suurmoskeijan päärukoussali: kupolin keskeltä riippuu '
-            + 'jättimäinen kristallikruunu, holvit on peitetty vihreällä ja '
-            + 'kullalla, ja kävijät kulkevat maton yli levitettyä sinistä '
-            + 'kaistaa pitkin.',
+          selite: 'Suurmoskeijan rukoussalin lattian peittää yksi ainoa '
+            + 'matto, jossa on 1,7 miljoonaa solmua ja joka painaa 21 '
+            + 'tonnia.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -24341,10 +24251,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Corniche Streetscape Muttrah.jpg',
-          selite: 'Mutrahin rantakatu: valkoisia taloja, joissa on '
-            + 'siniseksi maalatut kaari-ikkunat ja veistetyt kaiteet, '
-            + 'vasemmalla sinikaakelinen minareetti ja palmu, edessä rivi '
-            + 'pysäköityjä autoja ja takana paljas vuorenrinne.',
+          selite: 'Masqat ei ole yksi keskusta vaan nauha lahtia ja '
+            + 'laaksoja, jotka Sultan Qaboos -katu sitoo yhteen lännestä '
+            + 'itään.',
           lahde: 'Izeberg007, Wikimedia Commons (CC0)',
         },
         kappale: 'Masqat on puristuksissa Hajar-vuorten ja Omaninlahden '
@@ -24384,9 +24293,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tavan mukaan hotellista etukäteen.',
               kuva: {
                 tiedosto: 'Sur 002 (30932766735).jpg',
-                selite: 'Dhow rakenteilla Surin telakalla: vaalea puurunko '
-                  + 'seisoo tukipuiden varassa, ja veneenrakentaja istuu '
-                  + 'selin telineen alla.',
+                selite: 'Dhow-aluksia on rakennettu vuosisatoja Surissa '
+                  + 'rannikon eteläpuolella, ja niitä seisoo yhä Port '
+                  + 'Sultan Qaboosin laiturissa.',
                 lahde: 'John Crane from Prague, Czech Republic, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -24411,10 +24320,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'eivät pääkaupungin kaduilla.',
               kuva: {
                 tiedosto: 'FalajDaris.JPG',
-                selite: 'Falaj Daris, yksi viidestä maailmanperintöön '
-                  + 'merkitystä falajista: vesi juoksee kapeassa uomassa '
-                  + 'korkeiden ladottujen kivimuurien välissä akasiapensaikon '
-                  + 'alla.',
+                selite: 'Falaj-kanavassa vesi juoksee painovoimalla '
+                  + 'lähteeltä taloihin ja pelloille, ja Unesco merkitsi '
+                  + 'viisi falajia maailmanperintöluetteloon vuonna 2006.',
                 lahde: 'Paolotacchi, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -24439,9 +24347,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'mukana.',
               kuva: {
                 tiedosto: 'Omani Kummahs in a shop.jpg',
-                selite: 'Kummah-lakkeja pinossa Mutrahin basaarin myymälässä: '
-                  + 'valkoiseen kankaaseen on kirjailtu ruskealla, vihreällä '
-                  + 'ja sinisellä kuhunkin oma kuvionsa.',
+                selite: 'Mutrahin basaarin sivukujilla myydään omanilaista '
+                  + 'hopeaa, kirjailtuja kummah-lakkeja ja '
+                  + 'khanjar-tikareita.',
                 lahde: 'Riyadh Al Balushi, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -24465,10 +24373,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'on siis ulkoa katsottava rakennus.',
               kuva: {
                 tiedosto: 'Mascate.png',
-                selite: 'Masqat 1600-luvun portugalilaisessa puupiirroksessa '
-                  + 'nimellä MASCATE: hevosenkengän muotoisen lahden '
-                  + 'molemmilla niemekkeillä on tornillinen linnake, ja '
-                  + 'lahdelle on piirretty ankkuri.',
+                selite: 'Portugalilaiset linnoittivat sataman suun: '
+                  + 'al-Jalali nousi 1580-luvulla ja vastarannalle tuli '
+                  + 'al-Mirani.',
                 lahde: 'Manuel de Faria y Sousa, Wikimedia Commons (PD)',
               },
             },
@@ -24512,9 +24419,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'huhmaressa. Huhmaren kalkkeesta naapurit tiesivät, että '
             + 'kahvia on tulossa ja että vieraat ovat tervetulleita. '
             + 'Kuppi, finjan, on pieni ja korvaton.',
-          selite: 'Kuparinen dallah Bait al-Zubairin museossa: pinta on '
-            + 'kaiverrettu täyteen kukka- ja köynnöskuvioita, kansi päättyy '
-            + 'piikkiin ja nokka kaartuu alaspäin kuin linnun nokka.',
+          selite: 'Kahwa keitetään vaaleiksi paahdetuista pavuista ja '
+            + 'maustetaan kardemummalla, ja keittoastian nimi on dallah.',
           lahde: 'Reda Kerbush, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -24531,10 +24437,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'käteen, ja jokainen ohjaa savua vaatteidensa alle ja '
             + 'hiuksiinsa. Illan päätteeksi sama kierros on kohtelias '
             + 'merkki siitä, että vierailu on ohi.',
-          selite: 'Veneeksi muotoiltu savinen suitsutusastia '
-            + 'museovitriinissä: kokka ja perä nousevat ylös, kannella seisoo '
-            + 'kaksi kupolitornia, ja kylkiin on leikattu kolmiomaisia '
-            + 'reikiä.',
+          selite: 'Mabkharan pohjalle pannaan hehkuvaa puuhiiltä ja sen '
+            + 'päälle muutama jyvä lubania, joten liekkiä ei tarvita.',
           lahde: 'Mohammed90m, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -24549,9 +24453,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kankaasta sidottu turbaani; omanilaiset eivät käytä sen '
             + 'pitämiseen mustaa agal-rengasta, joka on tavallinen '
             + 'muualla Persianlahdella.',
-          selite: 'Kaksi omanilaispoikaa Masqatin kirjamessuilla valkoisissa '
-            + 'dishdashoissa ja kirjailluissa kummah-lakeissa, kirjapinojen '
-            + 'takaa heille ojennetaan sinistä paperia.',
+          selite: 'Omanilaisessa dishdashassa ei ole kaulusta lainkaan, '
+            + 'vaan pääntien sulkevat nyörilenkit ja kaulasta roikkuu lyhyt '
+            + 'tupsu.',
           lahde: 'Mostafameraji, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -24582,6 +24486,8 @@ export const KULTTUURI_KATEGORIAT = {
    * Nostot, oppaat, johdannot, kuvatiedostot ja lähderivit ovat
    * ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   bagdad: [
     {
       id: 'kaupunki',
@@ -24593,22 +24499,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '001124-Alkadhemiya-Baghdad-IMG 7802-2.jpg',
-          selite: 'Al-Kadhimiyan pyhäkkö Bagdadin pohjoisosassa: kaksi kullattua '
-            + 'kupolia, neljä kullattua minareettia ja siniseen ja valkoiseen '
-            + 'kaakeliin verhottu portti.',
+          selite: 'Al-Kadhimiyan pyhäkkö on shiialaisuuden seitsemännen ja '
+            + 'yhdeksännen imaamin, Musa al-Kadhimin ja hänen pojanpoikansa '
+            + 'Muhammad al-Jawadin, hautamausoleumi.',
           lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tigris river from Al Shohada\' bridge.jpg',
-          selite: 'Tigris virtaa Bagdadin läpi Marttyyrien sillalta katsottuna, ja oikealla '
-            + 'rannalla erottuu vanhan Qishlan kellotorni.',
+          selite: 'Tigris jakaa Bagdadin kahtia: itäpuoli on Rusafa ja '
+            + 'länsipuoli Karkh.',
           lahde: 'Samir Al-Ibrahem, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'كهرمانة 03.jpg',
-          selite: 'Kahramana-suihkulähde katuaukiolla: pronssinen naishahmo '
-            + 'kallistaa ruukkua noin neljänkymmenen patinoituneen '
-            + 'pronssiruukun rivistön yläpuolella.',
+          selite: 'Mohammed Ghani Hikmatin Kahramana-suihkulähde vuodelta '
+            + '1971 kertoo Ali Baban tarinan kohdan, jossa orjatyttö kaataa '
+            + 'kuumaa öljyä rosvojen piiloruukkuihin.',
           lahde: 'Hussein A.Al-mukhtar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -24625,27 +24531,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: '160731-D-PB383-021 Tigris River flows through Baghdad, July 2016.JPG',
-          selite: 'Tigris kaartaa kaupungin halki ilmasta katsottuna: joki tekee '
-            + 'leveän silmukan, jonka niemellä on matalaa rakennuskantaa ja '
-            + 'rannoilla palmulehtoja ja viljelypalstoja.',
+          selite: 'Tigris on Bagdadin keskiviiva, ja vuonna 762 perustettu '
+            + 'pyöreä kaupunki oli sen länsirannalla.',
           lahde: 'DoD photo by Navy Petty Officer 2nd Class Dominique A. '
             + 'Pineiro, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'The city of Baghdad is seen from the air.jpg',
-          selite: 'Kaupunginosa ilmasta iltapäivävalossa: tasakattoisten '
-            + 'talojen keskeltä nousee kaakeloitu minareetti ja '
-            + 'kupolikattoinen moskeija, kortteleiden välissä kasvaa '
-            + 'palmuja, ja takana kaartuu moottoritien ylikulku '
-            + 'liikenneympyrän yli.',
+          selite: 'Bagdad on rakennettu tiilestä, koska tasangolla ei ole '
+            + 'rakennuskiveä.',
           lahde: 'Chairman of the Joint Chiefs of Staff, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
         {
           tiedosto: 'Mesopotamian sunset.jpg',
-          selite: 'Auringonlasku Tigrisin yllä: aurinko painuu vastarannan '
-            + 'talojen ja puiden taakse, taivas hehkuu oranssina ja joki '
-            + 'heijastaa värin.',
+          selite: 'Bagdadissa heinä- ja elokuun keskilämpötila on yli 38 '
+            + 'astetta, joten joen rannalle tullaan vasta illalla.',
           lahde: 'Silver mahmoud, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -24653,17 +24554,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Baghdad, the riverfront, looking north to the Old City from the right bank, near the British Embassy LOC matpc.13270.jpg',
           vuosi: '1932',
-          selite: 'Tigrisin ranta Bagdadissa vuonna 1932: joen yli vie veneiden varaan '
-            + 'rakennettu silta, jonka keskiosa avattiin laivojen tieltä, ja rannassa '
-            + 'pestään pyykkiä.',
+          selite: 'Vuonna 1932 Tigrisin yli vei Bagdadissa veneiden varaan '
+            + 'rakennettu silta, jonka keskiosa avattiin laivojen tieltä.',
           lahde: 'Library of Congress (PD)',
         },
         {
           tiedosto: 'بغداد نهر دجلة.jpg',
           vuosi: '2015',
-          selite: 'Tigris keskellä Bagdadia nykyään: joki on yhä yhtä leveä ja ruskea, '
-            + 'mutta sen yli vie nyt kymmenkunta kiinteää siltaa siellä missä '
-            + '1930-luvulla kelluivat veneet.',
+          selite: 'Nykyään Tigrisin yli vie Bagdadissa kymmenkunta kiinteää '
+            + 'siltaa siellä, missä 1930-luvulla kelluivat veneet.',
           lahde: 'Mustafa Nader, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -24694,9 +24593,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Alqushla tower.jpg',
-          selite: 'Ottomaanien rakennuttama Qushlan kellotorni kohoaa '
-            + 'kasarmiaukion palmujen yli, ja aukiolla luetaan yhä runoja '
-            + 'ääneen.',
+          selite: 'Qushlan kasarmiaukion rakennuttivat ottomaanit, ja sen '
+            + 'kellotornin juurella luetaan yhä runoja ääneen.',
           lahde: 'Yasin Alqaisy, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Bagdad on kahdeksan miljoonan asukkaan pääkaupunki, '
@@ -24743,23 +24641,24 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'شارع الرشيد 7.jpg',
-                  selite: 'Al-Rashid-katu pylväskäytävineen, joiden varaan '
-                    + 'nousevat ulkonevat parvekkeet ja jotka varjostavat '
-                    + 'kulkijaa koko matkan.',
+                  selite: 'Al-Rashid-kadun jalkakäytävien päälle tehtiin '
+                    + 'pylväskäytävät, jotka varjostavat kulkijaa koko '
+                    + 'matkan.',
                   lahde: 'Ali.tinbo, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Al-Mutanabbi Street Gate.png',
-                  selite: 'Mutanabbin kadun kaariportti, jota vastapäätä kadun '
-                    + 'toisessa päässä seisoo runoilijan patsas Tigrisin '
-                    + 'rannalla.',
+                  selite: 'Mutanabbin katu on nimetty runoilija Abu '
+                    + 'at-Tayyib al-Mutanabbin (n. 915–965) mukaan, ja kadun '
+                    + 'toisessa päässä Tigrisin rannalla seisoo hänen '
+                    + 'patsaansa.',
                   lahde: 'Ayham4002, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'An Iraqi man sells fruit at a market in Al Rashid, Baghdad, Iraq.jpg',
-                  selite: 'Hedelmäkauppias al-Rashidin torilla: appelsiinit ja '
-                    + 'granaattiomenat ovat laatikoissa myyjän edessä ja '
-                    + 'banaanit riippuvat katoksesta.',
+                  selite: 'Bagdadin torikauppa keskittyy Rusafan puolelle '
+                    + 'al-Rashid-kadun tuntumaan, jossa Shorjan '
+                    + 'kauppakorttelit ovat katua vanhemmat.',
                   lahde: 'James (Jim) Gordon, Wikimedia Commons (CC BY 2.0)',
                 },
               ],
@@ -24783,9 +24682,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja nykyään vihkoja, paperia ja koulukirjoja.',
               kuva: {
                 tiedosto: 'مشهد للكتب وهي تفترش الارض في شارع المتنبي.jpg',
-                selite: 'Kirjat levitettyinä katukiveykselle Mutanabbin kadulla '
-                  + 'niin pitkälle kuin kuja jatkuu, ja ostajat kävelevät '
-                  + 'rivien välissä.',
+                selite: 'Mutanabbin katu on alle kilometrin mittainen ja '
+                  + 'autoton, ja kauppojen edessä kirjat ladotaan riveihin '
+                  + 'suoraan katukiveykseen.',
                 lahde: 'Mondalawy, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -24807,9 +24706,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'مقهى الشابندر في بغداد.jpg',
                 asettelu: 'kapea',
-                selite: 'Tee Shabandarin kahvilassa: kuulanmuotoinen '
-                  + 'istikan-lasi sinisellä lautasella, sokeri pohjalla '
-                  + 'ja lusikka lasissa.',
+                selite: 'Shabandarin kahvila on Bagdadin vanhimpia yhä '
+                  + 'toimivia, ja tee tarjotaan siellä istikan-lasissa '
+                  + 'puisella takht-penkillä.',
                 lahde: 'Mohammdaon, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -24831,10 +24730,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'huonetta eikä lainkaan avointa keskuspihaa.',
               kuva: {
                 tiedosto: 'المدرسة المستنصرية في بغداد (3).jpg',
-                selite: 'Mustansiriya-koulun sisäpiha ja vesiallas, johon '
-                  + 'tiiliseinien kaarikäytävät ja palmut heijastuvat — talo '
-                  + 'on yksi maailman vanhimpia yhä seisovia '
-                  + 'korkeakoulurakennuksia.',
+                selite: 'Mustansiriya-koulussa oli saman katon alla hammam, '
+                  + 'sairaala, apteekki ja keittiö, ja sen porttihallissa '
+                  + 'seisoi vuonna 1235 valmistunut vesikello.',
                 lahde: 'Taisir Mahdi, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -24856,10 +24754,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tullaan vasta, kun päivän kuumin hetki on ohi.',
               kuva: {
                 tiedosto: 'The famed masgouf - Flickr - Al Jazeera English.jpg',
-                selite: 'Masgouf valmistumassa: Tigrisistä pyydetyt kalat '
-                  + 'on halkaistu selästä ja pystytetty vartaisiin '
-                  + 'avotulen sivuun, jolloin ne kypsyvät savussa ja '
-                  + 'säteilylämmössä.',
+                selite: 'Masgoufia varten kala halkaistaan selästä ja '
+                  + 'pystytetään avotulen sivuun tunniksi, joten työn '
+                  + 'tekee savu ja säteilylämpö eikä liekki.',
                 lahde: 'Al Jazeera English, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -24957,9 +24854,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tähtikuvioita ja kasviaiheita, ja oviaukkojen molemmin '
             + 'puolin on pieniä leijonakaiverruksia. Kulkutie ei mene '
             + 'suoraan läpi vaan kaartaa.',
-          selite: 'Bab al-Wastani, Bagdadin keskiaikaisen muurin ainoa jäljellä '
-            + 'oleva portti, sisäpihan puolelta: teräväkärkisen holvikaaren '
-            + 'yläpuolella harjaa kiertävät hammastetut lohkot.',
+          selite: 'Bab al-Wastani on ainoa jäljellä oleva portti Bagdadin '
+            + 'keskiaikaisesta muurista, ja sen lieriötorni on 14,5 metriä '
+            + 'korkea.',
           lahde: 'Aboalhasan Ayad, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -24975,9 +24872,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kupuun. Kennoja on kuusitoista, ja jokaisessa on pieni '
             + 'aukko paksun lasin takana. Sisähuone on noin kolme metriä '
             + 'pitkä ja seitsemän leveä.',
-          selite: 'Zumurrud Khatunin hauta Bagdadin Karkhin puolella: '
-            + 'kahdeksankulmaisen tiilirungon päällä kohoaa kartiomainen '
-            + 'kennokatto, joka näyttää alhaalta kuusenkävyltä.',
+          selite: 'Zumurrud Khatunin hauta valmistui vuonna 1202, ja sen '
+            + 'kahdeksankulmaisen pohjan päällä on yhdeksästä '
+            + 'kennokerroksesta ladottu kartio.',
           lahde: 'Moshtakmoshtak, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -24994,9 +24891,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'viittaa babylonialaisiin ja assyrialaisiin kaiverruksiin. '
             + 'Salim kuoli tammikuussa 1961, ja työn saattoivat valmiiksi '
             + 'hänen puolisonsa Lorna Selim ja Mohammed Ghani Hikmat.',
-          selite: 'Vapauden monumentti Tahririn aukiolla, tehty Irakin '
-            + 'itsenäisyysjulistuksen muistoksi: maasta irti nostetun '
-            + 'travertiiniseinän pinnassa on rivi tummia pronssihahmoja.',
+          selite: 'Vapauden monumentin travertiiniseinä on 50 metriä pitkä, '
+            + 'ja sen 14 pronssivalua luetaan kuin arabialainen runosäe '
+            + 'oikealta vasemmalle.',
           lahde: 'Hussein A.Al-mukhtar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -25022,10 +24919,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Jawad ehdotti sitä abbasidikalifin mukaan. 1930-luvulla '
             + 'kadulle avattiin elokuvateattereita, ja torstai-ilta oli '
             + 'perheiden elokuvailta.',
-          selite: 'Talo al-Rashid-kadun varrella: kolmen kerroksen ulkonevien '
-            + 'parvekkeiden valetut kaiteet on maalattu vaaleanpunaisella ja '
-            + 'turkoosilla, ja katutasossa niitä kannattavat valkoiset '
-            + 'pylväät.',
+          selite: 'Al-Rashid-kadun pylväiden varaan nousivat ulkonevat '
+            + 'parvekkeet, ja kadun nykyinen nimi vahvistui 1936 '
+            + 'kielentutkija Mustafa Jawadin ehdotuksesta.',
           lahde: 'Ayham4002, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -25042,9 +24938,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sai nimensä runoilija Jamil Sidqi al-Zahawista. '
             + '1930-luvulla siellä kävi bengalilainen runoilija '
             + 'Rabindranath Tagore.',
-          selite: 'Al-Zahawin kahvila al-Rashid-kadun kulmassa illalla: puinen '
-            + 'kaariruuduiksi jaettu julkisivu, lyhtyjä seinillä ja kadulle '
-            + 'nostettuja pöytiä, joissa istuu vieraita.',
+          selite: 'Al-Zahawin kahvila avattiin al-Rashid-kadulle vuonna '
+            + '1917, ja 1930-luvulla siellä kävi runoilija Rabindranath '
+            + 'Tagore.',
           lahde: 'Ayham4002, Wikimedia Commons (CC0)',
         },
         {
@@ -25059,9 +24955,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'katua: samalla alueella olivat mandealaisten hopeaseppien '
             + 'pajat, ja vuonna 1866 sinne valmistui Pyhän Joosefin '
             + 'latinalainen katedraali.',
-          selite: 'Shorjan torikuja täynnä ihmisiä niin pitkälle kuin näkyy: '
-            + 'tiskeillä on avonaisia laatikoita makeisia, kuivattuja '
-            + 'hedelmiä ja pähkinöitä.',
+          selite: 'Shorja on Bagdadin suurin ja vanhin tori, ja sen nimi '
+            + 'tulee persian sanasta shurchah, suolainen kaivo.',
           lahde: 'Chinese Horse From Kaso Mall, Wikimedia Commons (CC0)',
         },
       ],
@@ -25119,6 +25014,8 @@ export const KULTTUURI_KATEGORIAT = {
    * ennallaan. Etusivun leipäteksti on asia-artikkelit.js:n
    * intro-kentässä ja kohdekartan esittely maakartat.js:ssä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   izmir: [
     {
       id: 'kaupunki',
@@ -25129,26 +25026,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Izmir Ferry ride from Pasaport terminal to Bostanlı terminal 2592.jpg',
-          selite: 'İzmirin lahti lautan kannelta: aallokossa purjehtii kuusi '
-            + 'pientä valkoista jollaa lapsijoukkoineen, ja vastarannan '
-            + 'rantabulevardi on täynnä kävelijöitä ja palmuja rinteen '
-            + 'kerrostalojen alla.',
+          selite: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren '
+            + 'suurin kaupunkialue.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Izmir aerial.jpg',
-          selite: 'İzmir lentokoneesta: vasemmalla on satama kontteineen, '
-            + 'keskellä suorien korttelien ruudukko ja mutkitteleva '
-            + 'moottoritie, ja oikealla laaja Kültürparkin puistoalue '
-            + 'messuhalleineen.',
+          selite: 'İzmirin rakennettu alue jatkuu pohjoiseen Gedizin '
+            + 'suistoon, idässä purojen kasaamalle tasangolle ja etelässä '
+            + 'jyrkille rinteille.',
           lahde: 'Coderenius, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Konak Mosque, 2008.jpg',
-          selite: 'Konakin aukion pieni kahdeksankulmainen Yalı-moskeija '
-            + 'pilvisenä päivänä: ikkunoita kehystävät sinivihreät '
-            + 'laattapaneelit, kattona on lyijynharmaa kupoli ja vieressä '
-            + 'nousee ohut minareetti.',
+          selite: 'Konakin aukion kahdeksankulmainen Yalı-moskeija '
+            + 'rakennettiin vuonna 1755 Ayşe Hanımin kustantamana, ja sen '
+            + 'ulkoseinien laatat tuotiin Kütahyasta.',
           lahde: 'F Mira, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -25156,15 +25049,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Smyrna wharf LCCN2014715176.jpg',
           vuosi: '1900',
-          selite: 'Soutuveneitä Smyrnan sataman edustalla vuonna 1900, rannassa '
-            + 'varastojen rivi ja niiden takana rinnettä ylös nouseva kaupunki.',
+          selite: 'İzmirin vanha nimi Smyrna elää yhä englannin kielessä ja '
+            + 'viikunalajikkeiden nimissä.',
           lahde: 'Bain News Service / Library of Congress (PD)',
         },
         {
           tiedosto: 'Izmir 2012.jpg',
           vuosi: '2012',
-          selite: 'Izmirin lahti Kadifekalen linnavuorelta katsottuna: kaupunki '
-            + 'kaartuu veden ympäri ja talot nousevat rinteille joka suunnasta.',
+          selite: 'Kaupungin muoto tulee lahdesta: İzmir on merenpinnan '
+            + 'tasossa, ja rakennettu alue leviää veden ympäri.',
           lahde: 'Haluxjason, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -25182,9 +25075,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Nimi tarttui myös alla kulkevaan kujaan. Kujalla asui '
             + '1940-luvulla laulaja Dario Moreno, joka teki myöhemmin '
             + 'uran Ranskassa, ja katu on nimetty hänen mukaansa.',
-          selite: 'Asansörin tiilitornin yläosa ja sen kylkeen rakennettu '
-            + 'terassi valettuine koristekaiteineen, jonka ääressä seisoo '
-            + 'ihmisiä katsomassa alas rantatielle ja lahdelle.',
+          selite: 'Pankkiiri Nesim Levi Bayraklıoğlu rakennutti vuonna 1907 '
+            + 'kallioseinämään tornin, jonka hissi nostaa ihmiset ja '
+            + 'tavarat rannalta ylätasolle.',
           lahde: 'Yabancı, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -25201,9 +25094,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '1937 ja eläintarha 1938; eläimet siirrettiin muualle 2008. '
             + 'Nykyään siellä pidetään İzmirin kansainväliset messut ja '
             + 'kirjamessut.',
-          selite: 'Kültürpark ylhäältä: puiden latvusten seassa erottuu '
-            + 'palmurivi, leikattuja pensasaitoja, valkokattoinen messuhalli '
-            + 'ja teräksinen ristikkotorni kaupungin tornitalojen keskellä.',
+          selite: 'Kültürpark avattiin yleisölle 1. syyskuuta 1936, ja sen '
+            + 'ala kasvoi vuonna 1939 420 000 neliömetriin.',
           lahde: 'BSRF, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -25219,31 +25111,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metsästysretkellä plataanin alle ja näki unessa kaksi '
             + 'jumalatarta, jotka käskivät perustaa kaupungin juuri sille '
             + 'kukkulalle. Nykyiset muurit ovat keskiajalta.',
-          selite: 'Kadifekalen ulkomuuri alhaalta: karkeasta kivestä ladotun '
-            + 'muurin päällä on hammastettu harja, kyljessä pyöreä torni ja '
-            + 'kapea nuoliaukko, ja juurella kasvaa mäntyjä.',
+          selite: 'Kadifekale seisoo Pagos-vuoren laella 186 metrin '
+            + 'korkeudessa, ja ensimmäiset tunnetut muurit rakennutti '
+            + 'Lysimakhos.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
           avauskuvat: [
         {
           tiedosto: 'Izmir Kadifekale view from wall 5677.jpg',
-          selite: 'Näkymä linnoituksen muurinaukosta alas kaupunkiin: etualalla on karkeaa kivimuuria ja tumma mänty, alhaalla levittäytyy tiivis matalien talojen meri, ja sen takana kaartuu leveä sininen lahti vuorten reunustamana.',
+          selite: 'Smyrna siirrettiin Pagos-vuorelle vanhalta paikaltaan '
+            + 'kummulta, jolle mahtui vain muutama tuhat asukasta.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'flickr-45404137562.jpg',
-          selite: 'Auringonlasku lahden yllä mereltä kuvattuna: aurinko '
-            + 'painuu utuisten vuorten taakse ja värjää taivaan oranssiksi, '
-            + 'ja vasemmalla kaartuu rannan talorivistö tummana siluettina.',
+          selite: 'Kesällä İzmirin lahdella puhaltaa säännöllisesti '
+            + 'Egeanmeren etesiantuuli, jota täällä kutsutaan nimellä '
+            + 'meltem.',
           lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-44541665545.jpg',
-          selite: 'Laituri mereltä nähtynä: vaaleassa '
-            + 'terminaalirakennuksessa on kuparinvihreä katto ja kyljessä '
-            + 'rivi mustia auton renkaita lepuuttajiksi, ja vasemmalta '
-            + 'lähtee valkoinen matkustajalautta.',
+          selite: 'İzmirin lautoilla on yhdeksän laituria, ja matkustajia '
+            + 'kertyy päivässä yli 50 000.',
           lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
         },
       ],
@@ -25260,9 +25151,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Izmir Alsancak Kordon 6339.jpg',
-          selite: 'Kordonin nurmikenttä Alsancakin kohdalla: etualalla '
-            + 'seisoo yksinäinen sypressi, keskellä kaartuu punainen '
-            + 'juoksurata, ja lahden takana nousee vuorijono utuun.',
+          selite: 'İzmirin yhdessätoista kaupunkipiirissä asuu lähes kolme '
+            + 'miljoonaa ihmistä ja koko maakunnassa yli neljä ja puoli '
+            + 'miljoonaa.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren '
@@ -25300,10 +25191,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Karşıyaka 2017, Konak 2018 ja Çiğli 2024.',
               kuva: {
                 tiedosto: 'İzban E 22031 Bayraklı.jpg',
-                selite: 'İZBANin lähijuna seisoo Bayraklın laiturilla: keula '
-                  + 'on pyöristetty ja tummansininen, kyljessä kulkee '
-                  + 'punainen ja sininen raita, ja takana rinne on täynnä '
-                  + 'kerrostaloja.',
+                selite: 'İZBAN on Turkin vilkkain lähijunaverkko: rataa on '
+                  + '136 kilometriä, asemia 41 ja matkustajia keskimäärin '
+                  + '185 000 päivässä.',
                 lahde: 'ToprakM, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -25324,9 +25214,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'meltem.',
               kuva: {
                 tiedosto: 'Flamingos from Gediz Delta.jpg',
-                selite: 'Pitkä jono vaaleanpunaisia flamingoja seisoo '
-                  + 'matalassa vedessä Gedizin suistossa, taustallaan '
-                  + 'utuiset vuoret.',
+                selite: 'Gedizin suisto on 14 900 hehtaarin kosteikko, jossa '
+                  + 'on yli 250 lintulajia ja jolle turvautuu kymmenesosa '
+                  + 'maailman flamingoista.',
                 lahde: 'Emoboy1331, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -25349,9 +25239,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'California ja Smyrna.',
               kuva: {
                 tiedosto: 'Figs - İlek 01.jpg',
-                selite: 'Koirasviikunan eli ilekin oksa pieninä vihreine '
-                  + 'hedelmineen — kuva on Adanan seudulta, mutta sama laji '
-                  + 'kasvaa myös Egeanmeren viikunatarhoissa.',
+                selite: 'Smyrnan tyypin viikuna tarvitsee pölytyksen, jonka '
+                  + 'hoitaa koirasviikunassa eli ilekissä elävä ampiainen '
+                  + 'Blastophaga psenes.',
                 lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -25374,10 +25264,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'se oli İzmirin ensimmäinen kellotorni.',
               kuva: {
                 tiedosto: 'Ottoman Railway 1st class exterior.jpg',
-                selite: 'Ottomaanien rautatieyhtiön ensimmäisen luokan vaunu '
-                  + 'tehtaan ottamassa kuvassa: pitkä ja tumma vaunu tiheine '
-                  + 'ikkunariveineen, ja seinään on maalattu arabialaisin '
-                  + 'kirjaimin yhtiön nimi.',
+                selite: 'Ottomaanien rautatieyhtiön rata İzmiristä '
+                  + 'Seydiköyhyn avattiin 30. lokakuuta 1858, ja se oli '
+                  + 'nykyisen Turkin alueen ensimmäinen rautatie.',
                 lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
               },
             },
@@ -25425,10 +25314,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hyvin kuuma, ja pinnasta tulee kerroksinen. Seuraksi '
             + 'otetaan tummaa teetä ja kovaksi keitetty muna, jonka '
             + 'päälle ripotellaan runsaasti mustapippuria.',
-          selite: 'Viisi paistettua boyozia valkoisella paperilla: kämmenen '
-            + 'kokoisia ja pyöreitä, pinta kellertävä ja ryppyinen kuin '
-            + 'rutistettu lehtitaikina, ja kolmen keskeltä pilkottaa tumma '
-            + 'täyte.',
+          selite: 'Boyozin nimi tulee ladinon sanasta boyo, ja '
+            + 'sefardijuutalaiset toivat leivonnaisen İzmiriin Espanjasta '
+            + 'karkotuksensa jälkeen 1492.',
           lahde: 'BSRF, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -25444,10 +25332,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Leipä on pehmeää, ja osa leipomoista ja ravintoloista '
             + 'nostattaa taikinan kikhernejuurella. Kumrua myydään '
             + 'katuruokana.',
-          selite: 'Kumruja rivissä myyntitiskin metallipellillä: jokaisen '
-            + 'sämpylän kuori on seesaminsiementen peitossa, ja välistä '
-            + 'työntyy valkoista juustoa, punaisia tomaattiviipaleita ja '
-            + 'kokonaisia vaaleanvihreitä paprikoita.',
+          selite: 'Kumru tarkoittaa turkiksi kyyhkystä, ja voileipä sai '
+            + 'nimensä alkuperäisestä renkaan muodostaan.',
           lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -25463,10 +25349,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Bostanlı, Göztepe, Güzelbahçe, Karantina, Karşıyaka, '
             + 'Konak, Pasaport ja Üçkuyular. Matkustajia kertyy päivässä '
             + 'yli 50 000 ja ajoneuvoja yli 1 500.',
-          selite: 'Karşıyakan lauttalaituri lahdelta kuvattuna: laiturissa '
-            + 'on kiinni valkoinen lautta Turkin lippu perässään ja vieressä '
-            + 'kaksi muuta, ja yläpuolella rinne on täynnä kerrostaloja ja '
-            + 'minareetteja.',
+          selite: 'Lautoista vastaava İzdeniz perustettiin 1992, ja sillä '
+            + 'on nyt 26 alusta, jotka ajavat päivässä 210 vuoroa.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -25522,6 +25406,8 @@ export const KULTTUURI_KATEGORIAT = {
    * ennallaan. Etusivun leipäteksti on asia-artikkelit.js:n
    * intro-kentässä ja kohdekartan esittely maakartat.js:ssä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   ankara: [
     {
       id: 'kaupunki',
@@ -25531,25 +25417,23 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Kocatepe Camii, Sheraton, Atakule.jpg',
-          selite: 'Ankaran keskusta kattojen yli: keskellä kohoaa Kocatepen '
-            + 'moskeija harmaine kupoleineen ja neljine minareetteineen, '
-            + 'kauempana näkyy Atakulen lasipallo, ja rinteet ovat täynnä '
-            + 'punakattoisia kerrostaloja.',
+          selite: 'Kocatepen moskeija on Ankaran suurin, se rakennettiin '
+            + 'vuosina 1967–1987, ja sen neljä minareettia ovat 88 metriä '
+            + 'korkeita.',
           lahde: 'schweinalp, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Kızılay meydanı-Ankara - panoramio.jpg',
-          selite: 'Kızılayn aukio pilvisenä päivänä: reunassa odottaa rivi '
-            + 'keltaisia takseja ja kaksi POLİS-moottoripyörää, ja takana '
-            + 'nousevat valkoinen toimistotorni ja lasiseinäinen '
-            + 'kauppakeskus.',
+          selite: 'Kızılayn aukio sai nimensä Turkin Punaisen Puolikuun '
+            + 'päämajasta, joka rakennettiin sen luoteiskulmaan vuonna '
+            + '1929.',
           lahde: 'HALUK COMERTEL, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Ankara Garı, Ankara (24.03.2023) 79.jpg',
-          selite: 'Ankaran rautatieasema: vaalean kivijulkisivun edessä on '
-            + 'rivi neliskulmaisia pilareita, katolla punainen kyltti ANKARA '
-            + 'GARI ja kulmatornissa valtionrautateiden TCDD:n lippu.',
+          selite: 'Ankaran rautatieasema avattiin vuonna 1892, ja sen art '
+            + 'deco -rakennus valmistui 1937 Şekip Akalınin piirustusten '
+            + 'mukaan.',
           lahde: 'Gargarapalvin, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -25561,26 +25445,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Ankara Castle Outer wall from outside at west side in 2017 01.jpg',
-          selite: 'Linnan ulkomuuri lännestä: muuriin on ladottu tummaa ja '
-            + 'vaaleaa kiveä sekaisin, kulmassa nousee nelisivuinen torni, '
-            + 'ja portin holvikaaresta johtavat kiviportaat ylös '
-            + 'sisälinnaan.',
+          selite: 'Ankaran linnan muurit muurattiin uusiokäytetystä kivestä, '
+            + 'ja paikan ensimmäisen linnoituksen rakensivat fryygialaiset '
+            + '700-luvulla eaa.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tarihi Hamamönü Evleri, Ankara.jpg',
-          selite: 'Kapea kuja Hamamönün kunnostetussa korttelissa: talot '
-            + 'ovat valkoiseksi rapattuja, ikkunanpuitteet ja räystäslaudat '
-            + 'ruskeaa puuta, alaosa tummaa kiveä, ja ylin kerros työntyy '
-            + 'kujan ylle.',
+          selite: 'Hamamönü on Ankaran vanhan kaupungin kortteli, jonka '
+            + 'perinteiset ottomaaniajan talot on kunnostettu.',
           lahde: 'BIG-K006, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ankara Central from Ankara Kalesi, Ankara Turkey 2024.jpg',
-          selite: 'Näkymä linnavuorelta uuteen keskustaan: etualalla kaartuu '
-            + 'suurnopeusaseman pitkä aaltokatto, sen takana kohoavat '
-            + 'toimistotornit, ja horisontissa erottuu Kocatepen moskeijan '
-            + 'minareettinelikko.',
+          selite: 'Uusi kaupunki Kızılayn ja Çankayan suunnalla piirrettiin '
+            + 'kartalle vasta sen jälkeen, kun Ankarasta tuli 13. lokakuuta '
+            + '1923 pääkaupunki.',
           lahde: 'Zach1055, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -25588,17 +25468,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'CH-NB - Türkei, Ankara- Festung - Annemarie Schwarzenbach - SLA-Schwarzenbach-A-5-02-053.jpg',
           vuosi: '1933-1934',
-          selite: 'Kantajia ja aaseja paljaalla rinteellä Ankaran linnan alapuolella '
-            + 'vuosina 1933–1934, noin kymmenen vuotta sen jälkeen kun kylästä tuli '
-            + 'uuden tasavallan pääkaupunki.',
+          selite: 'Ankarassa asui pääkaupungiksi tulon jälkeen vuonna 1924 '
+            + 'noin 35 000 ihmistä ja kolme vuotta myöhemmin 44 553.',
           lahde: 'Annemarie Schwarzenbach / Sveitsin kansalliskirjasto, Commons (PD)',
         },
         {
           tiedosto: 'View of Ankara city from the castle.jpg',
           vuosi: '2021',
-          selite: 'Näkymä linnanmuurilta nykyään: etualalla vanhan kaupungin '
-            + 'tiilikattoja ja kauempana keskusta tornitaloineen, sillä sama kukkula '
-            + 'on nyt keskellä miljoonakaupunkia.',
+          selite: 'Sama linnavuori on nykyään keskellä kaupunkia, jonka '
+            + 'keskustaajamassa asuu yli 5,3 miljoonaa ihmistä.',
           lahde: 'Tsdlnsaıd, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -25618,10 +25496,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yläkerrassa 263 neliömetriä. 1500-luvulla Mimar Sinan teki '
             + 'rakennukseen kunnostustöitä, ja 1700-luvulla seiniin '
             + 'lisättiin Kütahyan laattoja.',
-          selite: 'Hacı Bayramin moskeija Ulusissa: punatiilisen rakennuksen '
-            + 'vieressä nousee tiiliminareetti kahtine parvekkeineen ja '
-            + 'harmaine kartiohuippuineen, ja sen juurella on lyijykattoinen '
-            + 'hautarakennus koristeltuine kuisteineen.',
+          selite: 'Hacı Bayram Velin moskeija valmistui 1427–28 '
+            + 'seldžukkityyliin, ja 1500-luvulla Mimar Sinan teki siihen '
+            + 'kunnostustöitä.',
           lahde: 'Dursun Sülük, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -25638,10 +25515,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ravintola, Dome, joka pysyy paikallaan, ja terassin '
             + 'alapuolella kahvila nimeltä UFO. Nimi tulee sanoista ata, '
             + 'esi-isä, ja kule, torni.',
-          selite: 'Atakule alhaalta: valkoinen betonipylväs nousee suoraan '
-            + 'ylös tumma lasikaista kyljessään, ja huippu levenee '
-            + 'kartioksi, jossa on lasitettu ravintolakerros ja sen päällä '
-            + 'avoin terassi.',
+          selite: 'Atakule on 125 metriä korkea viestintä- ja näkötorni, '
+            + 'joka avattiin 13. lokakuuta 1989, ja sen ravintola kiertää '
+            + 'täyden ympyrän tunnissa.',
           lahde: 'Gargarapalvin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -25658,9 +25534,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pimeällä altaalla esitetään valonäytöksiä. Gençlik Parkı '
             + 'oli kuvana sadan liiran setelin kääntöpuolella vuosina '
             + '1952–1976.',
-          selite: 'Gençlik Parkı syyspäivänä: ihmisiä istuu penkeillä '
-            + 'plataanien katveessa pitkän altaan rannalla, ja vastarannalla '
-            + 'näkyy telttakatoksia, kioskeja ja maailmanpyörä.',
+          selite: 'Gençlik Parkı avattiin kuivatulle suolle 19. toukokuuta '
+            + '1943, ja sen pääallas on 42 000 neliömetriä.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -25676,10 +25551,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Anıtkabir, Ankara, Turquía, 2024-10-03, DD 20.jpg',
-          selite: 'Anıtkabirin seremonia-aukio: kiveys on ladottu '
-            + 'mattokuvioiksi vaaleasta, mustasta ja punertavasta '
-            + 'travertiinista, ja perällä kohoaa portaiden päässä '
-            + 'suorakulmainen pylväikkörakennus.',
+          selite: 'Anıtkabir rakennettiin Rasattepen kukkulalle vuosina '
+            + '1944–1953, ja sen suunnittelukilpailuun tuli 49 ehdotusta '
+            + 'kuudesta maasta.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Ankara on Anatolian ylängöllä 938 metrin korkeudessa, ja '
@@ -25717,9 +25591,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'avattiin oma terminaali vuonna 2016.',
               kuva: {
                 tiedosto: 'TCDD Taşımacılık HT65000 at Ankara Tren Gari.jpg',
-                selite: 'Valkoinen suurnopeusjuna odottaa lähtöä Ankaran '
-                  + 'aseman lasi- ja teräskatteisella laiturilla, keula '
-                  + 'pyöristettynä ja kyljessä sininen ja punainen raita.',
+                selite: 'Turkin ensimmäinen suurnopeusrata avattiin '
+                  + 'Ankarasta Eskişehiriin 13. maaliskuuta 2009, ja '
+                  + 'Istanbuliin päästiin 25. heinäkuuta 2014.',
                 lahde: 'NicholasNCE, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -25740,10 +25614,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'metsää on lähinnä eteläreunalla.',
               kuva: {
                 tiedosto: 'Ankara, Turkey.jpg',
-                selite: 'Astronautin ottama kuva Ankarasta: punaruskeat '
-                  + 'kattopinnat täyttävät laaksot ja työntyvät rinteille, '
-                  + 'väleissä kiemurtelevat vihertävät kukkulanharjat, ja '
-                  + 'keskellä erottuu vaalea aukioiden ja puistojen ketju.',
+                selite: 'Ankara on Keski-Anatolian ylängöllä 938 metrin '
+                  + 'korkeudessa, ja sitä ympäröi aro, jossa metsää kasvaa '
+                  + 'lähinnä eteläreunalla.',
                 lahde: 'This image was taken by the NASA Expedition 19 crew, Wikimedia Commons (PD)',
               },
             },
@@ -25765,9 +25638,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vuosina 1938–1952.',
               kuva: {
                 tiedosto: 'Angora goat flickr.jpg',
-                selite: 'Nuori angoravuohi nurmella kyljittäin: villa on '
-                  + 'paksua, valkoista ja kihartuvaa sorkkiin asti, ja '
-                  + 'päässä on pienet taaksepäin kaartuvat sarvet.',
+                selite: 'Angoravuohi on kotoisin Ankaran maakunnasta, sen '
+                  + 'villa on mohair, ja yksi eläin tuottaa vuodessa '
+                  + 'viidestä kahdeksaan kiloa karvaa.',
                 lahde: 'Tim Green, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -25791,9 +25664,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ehdotusta kuudesta maasta.',
               kuva: {
                 tiedosto: 'Anıtkabir, Ankara, Turquía, 2024-10-03, DD 26.jpg',
-                selite: 'Anıtkabirin Leijonatie: kivetyn kävelytien molemmin '
-                  + 'puolin makaa matalilla jalustoilla rivi '
-                  + 'travertiinileijonia, jotka on veistetty heettiläisten '
+                selite: 'Anıtkabirin Leijonatie johtaa seremonia-aukiolle, '
+                  + 'ja sen travertiinileijonat on veistetty heettiläisten '
                   + 'kivileijonien malliin.',
                 lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
               },
@@ -25839,10 +25711,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '2025 linjoilla tehtiin 173,2 miljoonaa matkaa. Arkipäivänä '
             + 'ankaralainen viettää joukkoliikenteessä keskimäärin 71 '
             + 'minuuttia ja odottaa pysäkillä 16 minuuttia.',
-          selite: 'Sıhhiyen aseman laituri M1-linjalla: '
-            + 'mosaiikkilaatoitetussa seinässä on punainen kyltti SIHHİYE, '
-            + 'laiturin reunassa kulkee keltainen varoitusraita, ja raide '
-            + 'katoaa pimeään tunneliin.',
+          selite: 'Ankaran metron M1-linja avattiin 29. joulukuuta 1997 '
+            + 'Kızılayn ja Batıkentin välille, ja vuonna 2025 kaupungin '
+            + 'raideliikenteessä tehtiin 173,2 miljoonaa matkaa.',
           lahde: 'Kayra, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -25858,10 +25729,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'bulguria ja kulhollinen cacıkia, jogurttia ja kurkkua. '
             + 'Ankaran seudulta tulee toreille lisäksi päärynöitä, '
             + 'hunajaa ja muskottirypäleitä.',
-          selite: 'Lautasellinen Ankara tavaa ja vieressä kulhollinen '
-            + 'cacıkia: pilahvin seassa erottuu lihanpaloja ja punaisen '
-            + 'paprikan siruja, kulhossa jogurttia, kurkkukuutioita ja '
-            + 'kuivattua minttua.',
+          selite: 'Ankara tava on lampaanlihalla höystetty pilahvi, ja sen '
+            + 'seurana tarjottava cacık tehdään jogurtista ja kurkusta.',
           lahde: 'E4024, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -25878,10 +25747,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Hilmi -kadun varrelle, missä erään kauppakeskuksen nimi '
             + 'Karum viittaa assyrialaisten kauppasiirtoloihin, joita '
             + 'Keski-Anatoliassa oli jo 2000-luvun eaa. alussa.',
-          selite: 'Kuivattujen hedelmien myyntipöytä Çıkrıkçılar Yokuşulla: '
-            + 'pahvilaatikoissa on nauhoiksi ladottuja viikunoita, '
-            + 'aprikooseja, taateleita ja luumuja sekä mustia '
-            + 'johanneksenleipäpuun paloja.',
+          selite: 'Çıkrıkçılar Yokuşun ylemmät puodit linnanporttia kohti '
+            + 'myyvät mausteita, kuivattuja hedelmiä ja pähkinöitä.',
           lahde: 'E4024, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -25912,6 +25779,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   halab: [
     {
       id: 'kaupunki',
@@ -25922,24 +25791,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Aleppo 03.jpg',
-          selite: 'Aleppon kattoja korkealta vuonna 2010, ennen '
-            + 'sisällissotaa: matalien kivitalojen katoilla on '
-            + 'lautasantenneja ja pieniä kupoleita, ja keskellä kohoaa '
-            + 'kivinen minareetti.',
+          selite: 'Aleppon vanhassakaupungissa asui ennen vuosien '
+            + '2012–2016 sotaa yli 120 000 ihmistä 350 hehtaarin '
+            + 'alueella.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Ancient City of Aleppo from the Citadel.jpg',
-          selite: 'Vanhakaupunki linnoituskummulta ennen sisällissotaa: '
-            + 'linnoituksen kalteva vallirinne etualalla, sen takana '
-            + 'aukio ja matalaa kivikaupunkia horisonttiin asti.',
+          selite: 'Aleppon vanhakaupunki otettiin Unescon '
+            + 'maailmanperintöluetteloon vuonna 1986.',
           lahde: 'Preacher lad, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Saadallah al-Jabiri square, Aleppo (3).jpg',
-          selite: 'Saadallah al-Jabirin aukio uudessa keskustassa ennen '
-            + 'sisällissotaa: laaja laatoitettu kenttä, jonka laidoilla '
-            + 'seisovat 1900-luvun toimistotalot ja hotellit.',
+          selite: 'Saadallah al-Jabirin aukiota reunustavat Aleppon uuden '
+            + 'keskustan 1900-luvulla rakennetut toimistotalot ja '
+            + 'hotellit.',
           lahde: 'Preacher lad, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -25953,25 +25820,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Aleppo Citadel 01.jpg',
-          selite: 'Aleppon linnoituksen porttitorni kummun juurella vuonna '
-            + '2010, ennen sisällissotaa: vaaleaan kivitorniin noustaan '
-            + 'leveitä kiviportaita, ja kummun harjalla jatkuu muurilinja '
-            + 'torneineen.',
+          selite: 'Aleppossa kaikki kiertää yhtä kumpua: linnoituksen '
+            + 'kukkulan ympärille kasvoi muurikaupunki ja sen ympärille '
+            + 'kaupunginosat.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Aleppo Khan al-Jumruk 9158.jpg',
-          selite: 'Tullikhanin portin holvi alhaalta vuonna 2009, ennen '
-            + 'sisällissotaa: kivi on ladottu vuorotellen vaaleana ja '
-            + 'tummana, ja keskellä on kaksi keltaista ristikkoikkunaa ja '
-            + 'kaiverrettu kirjoituslaatta.',
+          selite: 'Aleppossa risteää kaksi kauppatietä, ja niitä myöten on '
+            + 'tullut tavaraa Intiasta, Tigrisin ja Eufratin varsilta ja '
+            + 'Damaskoksen suunnasta.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Church of Saint Simeon Stylites 17.jpg',
-          selite: 'Pyhän Simeon Pylväspyhimyksen kirkon rauniot Aleppon '
-            + 'länsipuolella: katottomat kiviseinät kaari-ikkunoineen '
-            + 'kiertävät nurmista pihaa, jolla makaa kaatuneita pylväitä.',
+          selite: 'Pyhän Simeon Pylväspyhimyksen kirkko valmistui vuonna '
+            + '490 munkin pylvään paikalle, ja se oli kristikunnan suurin '
+            + 'kirkko Hagia Sofian valmistumiseen asti.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -25979,17 +25844,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'CH-NB - Syrien, Aleppo- Zitadelle - Annemarie Schwarzenbach - SLA-Schwarzenbach-A-5-03-014.jpg',
           vuosi: '1933-1934',
-          selite: 'Aleppon linnoitus kukkulallaan vuosina 1933–1934: jyrkkä rinne on '
-            + 'päällystetty sileillä kivilaatoilla juuri siksi, ettei sitä pysty '
-            + 'kiipeämään ylös.',
+          selite: 'Linnoituskummun jyrkkä rinne päällystettiin sileillä '
+            + 'kivilaatoilla juuri siksi, ettei sitä pysty kiipeämään '
+            + 'ylös.',
           lahde: 'Annemarie Schwarzenbach / Sveitsin kansalliskirjasto, Commons (PD)',
         },
         {
           tiedosto: 'Aleppo Citadel at sunset, October 2024.jpg',
           vuosi: '2024',
-          selite: 'Linnoituksen porttitorni illan valossa lokakuussa 2024, alla sillan '
-            + 'kaaret ja tornin kyljessä korjaustyömaan teline — linnoitusta '
-            + 'kunnostetaan pala kerrallaan.',
+          selite: 'Linnoitusta kunnostetaan vuosien 2012–2016 sodan '
+            + 'jäljiltä pala kerrallaan.',
           lahde: 'Noureddine Attar, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -26009,9 +25873,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'purettu kaikkea: vanhan katedraalin pylväät seisovat yhä '
             + 'salissa, ja niiden päissä ovat akantinlehdiksi veistetyt '
             + 'kapiteelit.',
-          selite: 'Pylvään kapiteeli al-Halawiyyan salissa: kiveen on '
-            + 'veistetty kaksi kerrosta akantinlehtiä, jotka kaartuvat '
-            + 'kaikki samaan suuntaan kuin tuulessa.',
+          selite: 'Al-Halawiyyan koulun salissa seisovat yhä 400-luvun '
+            + 'bysanttilaisen katedraalin pylväät akantinlehdiksi '
+            + 'veistettyine kapiteeleineen.',
           lahde: 'Frank Kidner, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -26029,9 +25893,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yksitoista kupolia. Rukoussalin mihrab on ladottu '
             + 'suonikkaasta valkoisesta marmorista, punaisesta '
             + 'porfyyristä ja vihreästä dioriitista.',
-          selite: 'Al-Firdawsin mihrab, jonka kaaren yläpuolelle on '
-            + 'ladottu marmorista ja punaisista ja vihreistä kivistä leveä '
-            + 'itsensä ympäri kiertyvä punos.',
+          selite: 'Al-Firdawsin madrasan mihrab on ladottu suonikkaasta '
+            + 'valkoisesta marmorista, punaisesta porfyyristä ja vihreästä '
+            + 'dioriitista.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -26049,9 +25913,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valtaannoususta oli kulunut 25 vuotta. Muoto lainattiin '
             + 'vanhoista minareeteista: neljä samanlaista julkisivua ja '
             + 'huipulla itämainen kennokoriste.',
-          selite: 'Bab al-Farajin kellotorni aukiollaan tammikuussa 2011, '
-            + 'ennen sisällissotaa: ylöspäin kapeneva kivitorni, jonka '
-            + 'ylimmässä kerroksessa on kaksi valkoista kellotaulua.',
+          selite: 'Bab al-Farajin kellotorni rakennettiin vuosina '
+            + '1898–1899, ja sen muoto lainattiin vanhoista '
+            + 'minareeteista.',
           lahde: 'Preacher lad, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -26069,9 +25933,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Khan al-Haririn portti oli kunnostettu vuonna 2020, ja '
             + '1600-luvun Beit Wakilia on korjattu sodan jäljiltä. Siksi '
             + 'osa tämän lehden kuvista on ajalta ennen sotaa.',
-          selite: 'Khan al-Haririn kunnostettu portti lokakuussa 2020: '
-            + 'suippokaari on muurattu vuorotellen keltaisesta ja mustasta '
-            + 'kivestä, ja aukossa on kaksi nuppinaulattua rautaovea.',
+          selite: 'Silkkikhanin eli Khan al-Haririn portti oli kunnostettu '
+            + 'vuonna 2020, ja basaarin korjaustyö on edennyt khan '
+            + 'kerrallaan.',
           lahde: 'Anas Badawi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -26122,10 +25986,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Part of Aleppo Citadel.jpg',
-          selite: 'Aleppon linnoituskummun rinne toukokuussa 2026: '
-            + 'ruohottuneen ja vaaleaksi paljastuneen töyrään päällä '
-            + 'jatkuu hammastettu muuri, ja vasemmalla nousee telineiden '
-            + 'peittämä korjattava torni.',
+          selite: 'Aleppon vanhakaupunki oli Unescon vaarantuneiden '
+            + 'maailmanperintökohteiden luettelossa vuosina 2013–2020.',
           lahde: 'Shahdddddddd, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Aleppo on Syyrian pohjoinen suurkaupunki 380 metrin '
@@ -26172,9 +26034,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'turvallista.',
               kuva: {
                 tiedosto: 'M5 Motorway - Aleppo.jpg',
-                selite: 'M5-moottoritie Aleppon maakunnassa heinäkuussa '
-                  + '2026: kaksi ajorataa erottaa matala betonikaide, ja '
-                  + 'halkeillut asfaltti jatkuu kuivan tasangon halki.',
+                selite: 'M5-moottoritie vie Alepposta etelään Homsin ja '
+                  + 'Haman kautta Damaskokseen, ja sodan jäljiltä yhteydet '
+                  + 'ovat osin vasta korjattuja.',
                 lahde: 'PersuadingPassion, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -26213,10 +26075,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pidetään parempana.',
               kuva: {
                 tiedosto: 'Zanabili factory in Aleppo.jpg',
-                selite: 'Saippuavarasto aleppolaisessa tehtaassa '
-                  + 'tammikuussa 2025: holvatun kivisalin lattialla ja '
-                  + 'seinustoilla seisoo tuhansia vaaleanvihreitä '
-                  + 'saippuakuutioita riveinä ja pinoina.',
+                selite: 'Aleppon saippua kypsytetään kuutioina '
+                  + 'maanalaisessa kammiossa puolesta vuodesta vuoteen, '
+                  + 'jolloin pinta muuttuu vaaleankullaksi mutta sisus '
+                  + 'pysyy vihreänä.',
                 lahde: 'Dorfbroicher, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -26243,10 +26105,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kunnostettu takaisin käyttöön.',
               kuva: {
                 tiedosto: 'Khan al-Tahan in Aleppo.jpg',
-                selite: 'Khan al-Tahanin piha joulukuussa 2023: valaistun '
-                  + 'kivitalon julkisivussa on kolme kaari-ikkunaa, ja '
-                  + 'molemmilta sivuilta nousee kaidetta myötäilevä '
-                  + 'porras.',
+                selite: 'Khan al-Tahan on yksi Aleppon '
+                  + 'karavaanimajataloista, jotka jäivät kauppareitin '
+                  + 'siirryttyä merelle ja joita on kunnostettu takaisin '
+                  + 'käyttöön.',
                 lahde: 'Shahdddddddd, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -26293,9 +26155,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuin tavallinen chilirouhe. Turkissa sama mauste on '
             + 'nimeltään pul biber, ja se on maan kolmanneksi käytetyin '
             + 'mauste heti suolan ja mustapippurin jälkeen.',
-          selite: 'Kasa Aleppon pippurirouhetta puisella laudalla: '
-            + 'hiutaleet ovat tummanpunaisia ja epätasaisen kokoisia, ja '
-            + 'joukossa kiiltää kirkkaanpunaisia kuorenpaloja.',
+          selite: 'Aleppon pippuri kuivataan suolan kanssa vain '
+            + 'puolikuivaksi, ja sen polttavuus on Scovillen asteikolla '
+            + 'noin 10 000.',
           lahde: 'Veganbaking.net, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -26312,9 +26174,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jää hieman karkeaksi. Damaskoksessa mukaan lisätään '
             + 'toisinaan tahinia, ja läntisessä Turkissa tahna tunnetaan '
             + 'nimellä acuka.',
-          selite: 'Muhammaraa soikealla lautasella: punaruskean tahnan '
-            + 'pinta on vedetty uriin, joissa kiiltää oliiviöljy, ja '
-            + 'päälle on aseteltu saksanpähkinöitä ja mintunlehtiä.',
+          selite: 'Muhammara tarkoittaa arabiaksi punaiseksi muuttunutta, '
+            + 'ja se survotaan huhmareessa paprikasta, saksanpähkinöistä '
+            + 'ja granaattiomenasiirapista.',
           lahde: 'Bazel, Wikimedia Commons (Public domain)',
         },
         {
@@ -26331,9 +26193,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lampaanlihan pariksi, ja kypsyessään kastike värjää '
             + 'annoksen kirkkaan purppuranpunaiseksi. Armeniaksi ruoka on '
             + 'fishnah kabab.',
-          selite: 'Tummanpunaisia, kiiltäviä lihapyöryköitä paksussa '
-            + 'kirsikkakastikkeessa, joka on valunut lautasen laidalle '
-            + 'asetelluille leipäpaloille.',
+          selite: 'Kebab karaz haudutetaan lampaan jauhelihasta ja '
+            + 'happamista kirsikoista, ja kastike värjää annoksen '
+            + 'purppuranpunaiseksi.',
           lahde: 'طارق مناديلي, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -26364,6 +26226,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   damaskos: [
     {
       id: 'kaupunki',
@@ -26374,23 +26238,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Panorama de Damas - Bonfils. LCCN2004670447.jpg',
-          selite: 'Damaskoksen kattomeri 1800-luvun valokuvassa: matalien '
-            + 'tasakattojen keskeltä kohoaa suuren moskeijan kupoli ja '
-            + 'kolme minareettia, ja takana nousee karu vuorijono.',
+          selite: 'Damaskoksen vanhakaupunki on Barada-joen eteläpuolella, '
+            + 'ja sen ulkopuolella ovat keskiaikaiset esikaupungit Midan, '
+            + 'Sarouja ja Imara.',
           lahde: 'Maison Bonfils (Beirut, Lebanon), photographer, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'View of Mount Qasioun from Damascus Orchards.jpg',
-          selite: 'Damaskoksen hedelmätarhoja ja niiden takana '
-            + 'Qasioun-vuori, jonka rinnettä peittää tiiviisti rakennettu '
-            + 'kaupunginosa.',
+          selite: 'Damaskosta ympäröi Ghouta, Barada-joen kastelema '
+            + 'viljelysalue.',
           lahde: 'Mohamad Emad Basha, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The Umayyad Mosque, the Courtyard, Damascus, Syria.jpg',
-          selite: 'Umaijadien moskeijan avara marmoripiha: kaksikerroksinen pylväskäytävä '
-            + 'kiertää pihan ja keskellä seisoo mosaiikilla verhottu Aarrekammion '
-            + 'kupoli.',
+          selite: 'Umaijadien moskeijan paikalla on ollut pyhäkkö '
+            + 'rautakaudesta asti: ensin aramealaisten sadejumalan Hadadin '
+            + 'temppeli ja roomalaisaikana Jupiterin temppeli.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -26405,24 +26268,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Umayyad Mosque, Mount Qasioun, Old Damascus.jpg',
-          selite: 'Damaskoksen vanhakaupunki ylhäältä: tiiviin kattomeren '
-            + 'keskeltä nousee suuren moskeijan harmaa kupoli ja sen '
-            + 'kulmilla kolme erinäköistä minareettia.',
+          selite: 'Roomalaiset kaavoittivat Damaskoksen uudelleen, ja '
+            + 'vanhakaupunki on yhä suorakaide, jonka itä–länsi-akseli on '
+            + 'yli 1 500 metriä pitkä.',
           lahde: 'Mohamad Emad Basha, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Damascus alley 9779.jpg',
-          selite: 'Vanhankaupungin kujan yläkerta alhaalta vuonna 2010, '
-            + 'ennen sisällissotaa: puukehyksiset ikkunat työntyvät '
-            + 'ulokkeena kadun päälle, ja rappaus on lohkeillut.',
+          selite: 'Vanhankaupungin taloissa ikkunoiden edessä ovat puiset '
+            + 'ristikot eli mashrabiyat, jotka päästävät ilman läpi mutta '
+            + 'pitävät katseet ulkona.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Damascus Al-Salihiyah - Madrasa Atabakiye (farthest) Madrasa Murshidiye (medium) Mausoleum al- Faranti (near) 1593.jpg',
-          selite: 'Al-Salihiyan kortteli Qasioun-vuoren rinteellä vuonna '
-            + '2010, ennen sisällissotaa: kaksi punaruskeaa kupolia lepää '
-            + 'kahdeksankulmaisten rumpujen päällä kahden minareetin '
-            + 'edessä.',
+          selite: 'Al-Salihiyan kaupunginosa on Qasioun-vuoren rinteillä '
+            + 'kahden ja kolmen kilometrin päässä vanhastakaupungista '
+            + 'pohjoiseen.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -26430,17 +26292,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The street called straight, Damascus, Holy Land, (i.e. Syria)-LCCN2002724979.jpg',
           vuosi: '1890-luku',
-          selite: 'Suora katu Damaskoksessa 1890-luvun photochrom-vedoksessa: '
-            + 'kävelijöitä, aasin selässä ratsastava mies ja katon rajassa ulos '
-            + 'työntyviä puisia erkkereitä.',
+          selite: 'Suora katu oli Damaskoksen roomalainen pääkatu, ja se on '
+            + 'ollut vanhankaupungin itä–länsi-akseli kaksituhatta vuotta.',
           lahde: 'Library of Congress, photochrom-kokoelma (PD)',
         },
         {
           tiedosto: 'Bab Sharqi Street, Damascus.jpg',
           vuosi: '2010',
-          selite: 'Suoran kadun itäpää nykyään: erkkerit ovat yhä paikoillaan, '
-            + 'keskikaistalle on nostettu vanhoja pylväänpätkiä ja katu kulkee samaa '
-            + 'linjaa kuin roomalainen pääkatu kaksituhatta vuotta sitten.',
+          selite: 'Suoran kadun itäpäässä keskikaistalle on nostettu '
+            + 'vanhoja pylväänpätkiä roomalaisen pylväikön muistoksi.',
           lahde: 'Bernard Gagnon, Commons (CC BY-SA 3.0)',
         },
       ],
@@ -26460,9 +26320,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuuli harvinaisesta marmorista tai posliinista, hän '
             + 'lähetti hakemaan sen omistajan luvalla tai ilman. Talossa '
             + 'on nykyään kansanperinteen museo.',
-          selite: 'Azm-palatsin julkisivu pihan puolelta: kivi on ladottu '
-            + 'vuorotellen vaaleana ja mustana, ja ikkunarivien väliin on '
-            + 'upotettu erivärisistä kivistä geometrisia paneeleja.',
+          selite: 'Azm-palatsissa on pinta-alaa 6 400 neliömetriä, ja sen '
+            + 'rakensi vuodesta 1749 alkaen 800 työmiestä kolmessa '
+            + 'vuodessa.',
           lahde: 'Bassel Khabbaz, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -26480,9 +26340,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1566–1567 medrese. Ryhmästä tuli Mekkaan matkaavien '
             + 'pyhiinvaeltajien kokoontumispaikka: karavaani varustettiin '
             + 'täällä ennen lähtöä etelään.',
-          selite: 'Tekkiye Süleymaniyen majoitussiipi, jonka kaarikäytävän '
-            + 'päällä on rivi matalia kivikupoleja ja takana kaksi ohutta '
-            + 'lyijykärkistä minareettia.',
+          selite: 'Tekkiye Süleymaniye rakennettiin vuosina 1554–1559 Mimar '
+            + 'Sinanin piirustusten mukaan, ja siitä tuli Mekkaan '
+            + 'matkaavien pyhiinvaeltajien kokoontumispaikka.',
           lahde: 'Khaled ajlani, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -26499,10 +26359,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ikkunakaaret suippoja, ja sisällä on koristeltu katto. '
             + 'Rakennuksen edessä on näytteillä sveitsiläisvalmisteinen '
             + 'höyryveturi.',
-          selite: 'Hijaz-aseman matkustajarakennus kadun toiselta '
-            + 'puolelta: symmetrisen julkisivun keskellä on kello ja sen '
-            + 'alla rivi suippokaari-ikkunoita, ja vieressä seisoo '
-            + 'tummanvihreä höyryveturi.',
+          selite: 'Hijaz-aseman matkustajarakennus tilattiin vuonna 1913, '
+            + 'ja sen suunnitteli espanjalainen arkkitehti Fernando de '
+            + 'Aranda.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -26556,10 +26415,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Sayyida Ruqayya\'s shrine in Damascus 01.jpg',
-          selite: 'Sayyida Ruqayyan pyhäkön kupoli Damaskoksessa huhtikuussa '
-            + '2023: kupolin sisäpinta on peitetty tuhansilla peilinsiruilla, '
-            + 'ja sen alla riippuu vihreä ja kullanvärinen kruunukynttilä '
-            + 'kaiverretun hautakehikon yllä.',
+          selite: 'Sayyida Ruqayyan moskeija Al-Amaran kaupunginosassa on '
+            + 'shiialaisten pyhiinvaelluskohde, ja siihen on haudattu '
+            + 'Husayn ibn Alin nuori tytär Ruqayya.',
           lahde: 'Emir Ghazi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Damaskos on 680 metrin tasangolla, 80 kilometriä '
@@ -26629,10 +26487,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pidempi.',
               kuva: {
                 tiedosto: 'Traditional Damascene buildings with Mount Qasioun in the background, Syria.jpg',
-                selite: 'Vanhankaupungin kattoja ja niiden takana '
-                  + 'Qasioun-vuori syyskuussa 2021: valkoiset julkisivut '
-                  + 'työntyvät ulokkeina kadun päälle, ja katoilla on '
-                  + 'aurinkokeräimiä ja vesisäiliöitä.',
+                selite: 'Damaskos on sadevarjossa, sillä Anti-Libanonin yli '
+                  + 'kolmentuhannen metrin huiput pysäyttävät Välimereltä '
+                  + 'tulevan kosteuden.',
                 lahde: 'Abd Alsattar Ardati, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -26657,10 +26514,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tuotiin useimmiten muualta.',
               kuva: {
                 tiedosto: 'Damask with floral sprigs, Italy, Baroque, 1600-1650, silk two-tone damask - Royal Ontario Museum - DSC04376.JPG',
-                selite: 'Kaksisävyistä silkkidamastia lähietäisyydeltä, '
-                  + 'punaista pohjaa vasten vaaleankeltainen kukka-aihe; '
-                  + 'kappale ei ole damaskoslainen vaan italialainen '
-                  + '1600-luvun alkupuolelta.',
+                selite: 'Damastin nimi tulee Damaskoksesta, joka oli '
+                  + 'Silkkitien läntisiä päätepisteitä; tämä kappale ei ole '
+                  + 'damaskoslainen vaan italialainen 1600-luvun '
+                  + 'alkupuolelta.',
                 lahde: 'Daderot, Wikimedia Commons (CC0)',
               },
             },
@@ -26682,10 +26539,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joka katosi kirjallisista lähteistä vuosisadaksi.',
               kuva: {
                 tiedosto: 'Gold dinar of Abd al-Malik b. Marwan, dated AH 78 (697-98), The David Collection, Copenhagen (36240895662).jpg',
-                selite: 'Abd al-Malikin kultadinaari museovitriinissä: '
-                  + 'kolikon keskellä on kolme riviä arabialaista tekstiä '
-                  + 'ja reunaa kiertää kirjoitusnauha, eikä kuvia '
-                  + 'ihmisistä tai eläimistä ole.',
+                selite: 'Abd al-Malik otti vuonna 685 valtaan noustuaan '
+                  + 'käyttöön oman islamilaisen rahajärjestelmän, jonka '
+                  + 'kultadinaareissa ei ole kuvia ihmisistä eikä '
+                  + 'eläimistä.',
                 lahde: 'Richard Mortel from Riyadh, Saudi Arabia, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -26731,9 +26588,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ilman kiertämään. Ikkunoiden edessä on puiset ristikot, '
             + 'mashrabiyat, jotka päästävät ilman läpi mutta pitävät '
             + 'katseet ulkona.',
-          selite: 'Damaskoslaisen talon umpipiha: alaseinät ovat '
-            + 'vuorotellen vaaleaa ja mustaa kiveä, ylempi kerros on '
-            + 'rapattu valkoiseksi, ja pihalla kasvaa sitrushedelmäpuita.',
+          selite: 'Damaskoslaisen talon huoneet kiertävät avointa '
+            + 'hosh-pihaa, jonka suihkulähde ja hedelmäpuut panevat ilman '
+            + 'kiertämään.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -26750,9 +26607,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'uunista seinän takaa, ja kuuma ilma kiertää lattian alla. '
             + 'Polttoaineena on käytetty puusepiltä saatuja lastuja ja '
             + 'öljypuristamoiden oliivinkiviä.',
-          selite: 'Nur al-Dinin kylpylän etusali, jossa riisuudutaan ja '
-            + 'levätään: kupolia kannattavat mustavalkoraidalliset kaaret, '
-            + 'ja miehiä istuu pyyhkeet vyötäröllä.',
+          selite: 'Nur al-Din al-Shahidin kylpylä Buzurijjan kujalla on '
+            + 'ollut käytössä noin vuodesta 1160, ja kylpijä kulkee sen '
+            + 'huoneet aina samassa järjestyksessä.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -26769,9 +26626,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Lajike, josta levy tehdään, kasvoi ensimmäisenä '
             + 'Damaskoksen ympäristön viljelyksillä. Reseptin kirjasi '
             + 'lääkäri Dawud al-Antaki vuonna 1599.',
-          selite: 'Kuivattua aprikoosipastaa myyntipakkauksissa, joiden '
-            + 'vihreässä etiketissä on kuva neljästä aprikoosista sekä '
-            + 'teksti Dried Apricot Paste, Made in Syria ja paino 500 g.',
+          selite: 'Qamar al-din on aprikoosista keitetty ja auringossa '
+            + 'kuivattu levy, jonka reseptin kirjasi lääkäri Dawud '
+            + 'al-Antaki vuonna 1599.',
           lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -26804,6 +26661,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   luxor: [
     {
       id: 'kaupunki',
@@ -26815,24 +26674,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Rivier met wadende buffels aan de rand van Luxor E 71. Het plaatsje Luxor (Arabisch kwartier). Opper-Egypte. (titel op object), RP-F-1997-28-6.jpg',
-          selite: 'Ruskeasävyinen 1800-luvun valokuva Luxorin laidalta: '
-            + 'vesipuhveli seisoo matalassa uomassa polviaan myöten, ja '
-            + 'vastarannalla on savitiilitaloja ja tiheä palmulehto.',
+          selite: 'Luxorin ala on 416 neliökilometriä, ja asukkaita '
+            + 'arvioitiin vuonna 2023 olevan 284 952.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Gezicht op de bouw van een boot langs de Nijl te Luxor Louqsor (titel op object) Egypte (serietitel), RP-F-2001-7-1540-7.jpg',
-          selite: 'Luxorin ranta 1800-luvun painokuvassa: keskellä on '
-            + 'rakenteilla oleva vene, jonka rungon kaaret törröttävät '
-            + 'ylöspäin kuin kylkiluut, ja rannassa on kolme purjevenettä.',
+          selite: 'Luxorista on Kairoon 670 kilometriä ja Assuaniin etelään '
+            + '220, ja välillä on kuljettu jokea pitkin.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Luxor New Corniche R02.jpg',
-          selite: 'Luxorin uusi rantapromenadi keskipäivällä: laatoitettu '
-            + 'kävelytie kulkee Niiliä reunustavan matalan kivimuurin '
-            + 'vieressä, ja usvassa erottuu risteilylaivan valkoinen '
-            + 'kylki.',
+          selite: 'Luxoria sanotaan usein maailman suurimmaksi '
+            + 'ulkoilmamuseoksi, ja vierailijoita tulee vuodessa noin viisi '
+            + 'miljoonaa.',
           lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -26846,22 +26702,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Colossi of Memnon R02.jpg',
-          selite: 'Memnonin kolossit Luxorin länsirannalla: kaksi istuvaa '
-            + 'kivipatsasta on kulunut kasvottomiksi, ja takana kohoaa '
-            + 'Theban vaalea kalliojono palmuriveineen.',
+          selite: 'Memnonin kolossit seisovat länsirannalla, jonne muinaisen '
+            + 'Theban nekropoli rakennettiin.',
           lahde: 'Marc Ryckaert ( MJJR ), Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Luxor Souq R01.jpg',
-          selite: 'Luxorin tori kangaskatosten alla: kujan yli pingotetut '
-            + 'raidalliset ja kukalliset kankaat värjäävät valon '
-            + 'punaiseksi ja oranssiksi mekkojen ja tomaattikorien yllä.',
+          selite: 'Luxorin seudun vanhoja käsitöitä ovat alabasterin veisto, '
+            + 'keramiikka ja kudonta, joiden keskus on länsirannan Kurnan '
+            + 'kylä.',
           lahde: 'Marc Ryckaert ( MJJR ), Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Luxor Nile R09.jpg',
-          selite: 'Kaksi feluccaa Niilillä auringonlaskun aikaan, vaaleat '
-            + 'kolmiopurjeet ja niiden kuvajaiset tyynessä vedessä.',
+          selite: 'Luxorin itä- ja länsirannan väli ylitetään yhä veneellä, '
+            + 'ja maitse kierretään vuonna 1998 avattua siltaa pitkin.',
           lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -26869,17 +26724,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Town Of Luxor LACMA M.2008.40.197.jpg',
           vuosi: 'noin 1870',
-          selite: 'Luxorin kaupunki Niilin toiselta rannalta noin vuonna 1870 Antonio '
-            + 'Beaton kuvaamana: temppelin pyloni ja pylväsrivi nousevat suoraan '
-            + 'asuintalojen keskeltä.',
+          selite: 'Luxorin temppelin päälle oli kertynyt keskiajalta lähtien '
+            + 'asutusta niin paljon, että syntyi lähes viisitoista metriä '
+            + 'korkea keinotekoinen kukkula.',
           lahde: 'Antonio Beato / LACMA, Commons (PD)',
         },
         {
           tiedosto: 'Luxor Temple Square R01.jpg',
           vuosi: '2013',
-          selite: 'Luxorin temppeliaukio nykyään: temppelin päälle rakennetun Abu '
-            + 'Haggagin moskeijan vanha ovi jäi korkealle ilmaan, kun temppeli '
-            + 'kaivettiin ympäriltä esiin.',
+          selite: 'Abu al-Haggagin moskeijan vanha ovi jäi korkealle ilmaan, '
+            + 'kun temppeli kaivettiin sen ympäriltä esiin.',
           lahde: 'Marc Ryckaert, Commons (CC BY 3.0)',
         },
       ],
@@ -26899,10 +26753,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Abu al-Haggagin (1150–1245) hauta, ja savitiilisiä '
             + 'minareetteja on kaksi. Moulid-juhlassa suvun jäsenet '
             + 'kantavat veneitä temppelin ympäri kolmen päivän ajan.',
-          selite: 'Abu al-Haggagin moskeija Luxorin temppelin kyljessä: '
-            + 'valkoiseksi rapatun minareetin huipulla on kuunsirppi, ja '
-            + 'vanha ruskea tiiliminareetti nousee kiinni temppelin '
-            + 'pyloniin.',
+          selite: 'Luxorin temppelin Ramses II:n piha muutettiin vuonna 395 '
+            + 'kirkoksi ja vuonna 640 moskeijaksi.',
           lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
         },
         {
@@ -26921,10 +26773,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tiedotteitaan talon ilmoitustaululle, ja hänen '
             + 'rahoittajansa lordi Carnarvon oli vakioasiakas vuodesta '
             + '1907.',
-          selite: 'Winter Palace -hotelli mustavalkoisessa '
-            + 'lasinegatiivissa: vaalean rakennuksen päätykilvessä lukee '
-            + 'WINTER PALACE, ja pääovelle nousee kaksi kaartuvaa '
-            + 'portaikkoa.',
+          selite: 'Winter Palace -hotelli avattiin lauantaina 19. '
+            + 'tammikuuta 1907, ja lordi Carnarvon oli sen vakioasiakas.',
           lahde: 'Matson Collection, Wikimedia Commons (PD)',
         },
         {
@@ -26942,9 +26792,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yhä pystyssä oleva muinainen obeliski; pari makaa järven '
             + 'rannalla kahtena kappaleena. Lähellä on myös Thutmosis I:n '
             + 'obeliski, 21,20 metriä ja lähes 150 tonnia.',
-          selite: 'Karnakin pyhä järvi keskipäivän valossa: vaaleista '
-            + 'kivilohkareista muurattu allas heijastaa takana kohoavan '
-            + 'viiston pylonin seinän.',
+          selite: 'Karnakin kivireunaisessa pyhässä järvessä papit '
+            + 'peseytyivät ennen temppelimenoja.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -26980,9 +26829,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Luxor West Bank R01.jpg',
-          selite: 'Luxorin länsiranta joen yli katsottuna: matala '
-            + 'kaksikerroksinen lautta kulkee kohti palmujen reunustamaa '
-            + 'rantaa, ja takana kohoaa vaalea kalliojono.',
+          selite: 'Aurinko laski lännessä, ja sille rannalle haudattiin: '
+            + 'Theban nekropoliin kuuluvat Kuninkaiden ja Kuningattarien '
+            + 'laaksot.',
           lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
         },
         kappale: 'Luxoria sanotaan usein maailman suurimmaksi '
@@ -27020,10 +26869,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'väli on runsaat kaksi kilometriä.',
               kuva: {
                 tiedosto: 'Luxor Train Station R09.jpg',
-                selite: 'Luxorin asema laiturin päästä: keltaharmaita '
-                  + 'matkustajavaunuja seisoo raiteella hiekkakivisen '
-                  + 'asemarakennuksen vieressä, ja etualalla kaartuu '
-                  + 'useita raiteita.',
+                selite: 'Luxorin rautatieasema on noin 400 metrin päässä '
+                  + 'temppeliltä, ja junat vievät pohjoiseen Kairoon ja '
+                  + 'etelään Assuaniin.',
                 lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
               },
             },
@@ -27061,9 +26909,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja kudonta, joiden keskus on länsirannan Kurnan kylä.',
               kuva: {
                 tiedosto: 'Balloon over Luxor - Egypt.jpg',
-                selite: 'Kuumailmapallo näkyy mustana siluettina oranssia '
-                  + 'aamutaivasta vasten, ja oikealla nousee aurinko '
-                  + 'matalan pilvivyön yläpuolelle.',
+                selite: 'Luxor on vuodesta 1988 ainoa Egyptin kaupunki, '
+                  + 'jossa tarjotaan kuumailmapallolentoja, ja lento '
+                  + 'tehdään auringonnousun aikaan.',
                 lahde: 'Marcosleal, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -27087,9 +26935,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lienee ollut enemmän aarteita.',
               kuva: {
                 tiedosto: 'KV62, Egypt 01.jpg',
-                selite: 'Tutankhamonin hautakammion maalattu seinä: '
-                  + 'kultakeltaista pohjaa vasten kulkee rivi valkoisiin '
-                  + 'puettuja hahmoja ja niiden yllä hieroglyfirivejä.',
+                selite: 'Howard Carter löysi Tutankhamonin haudan KV62:n 4. '
+                  + 'marraskuuta 1922, ja sen tyhjennys ja konservointi '
+                  + 'jatkuivat vuoteen 1932.',
                 lahde: 'ولاء, Wikimedia Commons (PD)',
               },
             },
@@ -27135,9 +26983,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'avattua siltaa pitkin, joka rakennettiin muutama kilometri '
             + 'kaupungin yläpuolelle. Itärannalla on lisäksi useita '
             + 'bussilinjoja, joita käyttävät lähinnä paikalliset.',
-          selite: 'Lautta ylittää Niiliä hämärässä: matalan puurunkoisen '
-            + 'aluksen keltaisen katoksen alla seisoo tiiviissä rivissä '
-            + 'kymmeniä matkustajia.',
+          selite: 'Suuret lautat vievät Luxorissa rannalta toiselle '
+            + 'nimellistä maksua vastaan, ja niiden rinnalla päivystää '
+            + 'nopeampia moottoriveneitä.',
           lahde: 'Bernard DUPONT from FRANCE, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -27154,10 +27002,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pyörien päällä on leveät kaarevat lokasuojat, jotka '
             + 'suojaavat matkustajia mudalta ja roiskeilta. Egyptissä ja '
             + 'Levantissa hantour on vuokra-ajoneuvo.',
-          selite: 'Kaksi hevosvaunua odottaa ruokokattoisen katoksen alla: '
-            + 'etummaisessa on siniset ja violetit pinnapyörät ja taakse '
-            + 'taitettu kuomu, ja eteen on valjastettu kaksi valkoista '
-            + 'hevosta.',
+          selite: 'Luxorin hevosvaunun malli on englantilainen victoria, '
+            + 'joka nimettiin vuonna 1869 kuningatar Victorian mukaan.',
           lahde: 'Güldem Üstün from Istanbul, TURKEY, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -27173,9 +27019,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'luxorilainen työskentelee maataloudessa, ja seudun tärkein '
             + 'viljelykasvi on juuri se. Valtion rata saapui Luxoriin '
             + 'vuonna 1898, kun linjaa oli jatkettu Qenasta etelään.',
-          selite: 'Kapearaiteinen rata ylittää hiekkaisen kadun Luxorin '
-            + 'länsirannalla ja jatkuu kapean betonisillan yli ojan poikki '
-            + 'savitiilitalojen keskellä.',
+          selite: 'Luxorin kapearaiteisilla radoilla ajetaan sokeriruokoa '
+            + 'pelloilta tehtaille, ja niiden raideleveys on 610 '
+            + 'millimetriä.',
           lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -27207,6 +27053,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   riad: [
     {
       id: 'kaupunki',
@@ -27218,23 +27066,20 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '413 of \'Narrative of a Year\'s Journey through Central and Eastern Arabia (1862-63), etc. (With maps and plans.)\' (11069861105).jpg',
-          selite: 'Riadin pohjapiirros 1800-luvun matkakirjasta: muurin sisällä '
-            + 'kulkee Great Street kauppoineen, ja ulkopuolelle on merkitty '
-            + 'puutarhoja ja tiet Deraiyaan, Melhaan, Hasaan ja Jemamaan.',
+          selite: 'Riadia kiersi 1740-luvulta lähtien savimuuri, jossa oli '
+            + 'vartiotorneja ja portteja.',
           lahde: 'The British Library, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Downtown Riyadh through a dusty windshield (12753645435).jpg',
-          selite: 'Riadilainen katu illansuun matalassa auringossa auton '
-            + 'tuulilasin läpi kuvattuna, ja kadun poikki työntää '
-            + 'polkupyörää raidalliseen paitaan pukeutunut mies.',
+          selite: 'Riad on Arabian niemimaan suurin kaupunki, ja asukkaita '
+            + 'oli vuonna 2022 seitsemän miljoonaa.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'King Fahd Road, Riyadh.jpg',
-          selite: 'King Fahd Road sillalta katsottuna: maan tason alle painetun '
-            + 'moottorikadun kaistojen välissä kasvaa matalia viuhkapalmuja '
-            + 'lasitornien juurella.',
+          selite: 'Riadin kaupallinen keskus on al-Olaya, jonka läpi kulkee '
+            + 'King Fahd Road.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -27284,22 +27129,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'At-Turaif District in ad-Dir\'iyah (5).jpg',
-          selite: 'Savitiilistä muurattuja seiniä At-Turaifin raunioalueella, '
-            + 'harjat suojattuina pyöreäksi muotoillulla vaalealla '
-            + 'rappauksella.',
+          selite: 'At-Turaifin kortteli liitettiin maailmanperintöluetteloon '
+            + '31. heinäkuuta 2010, ja raunioiden kunnostus oli alkanut '
+            + 'vuonna 2000.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Lake at Wadi Hanifah (5218227168).jpg',
-          selite: 'Wadi Hanifan pohjalle sateiden jälkeen jäänyt vesi, ja '
-            + 'laakson yli kulkee pitkä pilarien varassa lepäävä silta.',
+          selite: 'Wadi Hanifa on sadankahdenkymmenen kilometrin mittainen '
+            + 'kausiuoma, joka tulvii lyhyiden rankkasateiden jälkeen.',
           lahde: 'Peter Dowley from Dubai, United Arab Emirates, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'KING KHALED INTL.TER.1 - panoramio.jpg',
-          selite: 'Kuningas Khalidin lentoaseman ykkösterminaali asematasolta '
-            + 'nähtynä, katto laskeutuu peräkkäisinä holvikaarina ja '
-            + 'matkustajasillat työntyvät ulos punaisin raidoin.',
+          selite: 'Kuningas Khalidin lentoasema avattiin 16. marraskuuta '
+            + '1983, ja siinä on neljä terminaalia.',
           lahde: 'Kayhan ERTUGRUL, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -27307,16 +27151,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Qaṣr Murabbaʿ.jpg',
           vuosi: '1930-luku',
-          selite: 'Murabban linna 1930-luvulla: savitiilinen muuri, hammastettu harja '
-            + 'ja neljä kulmatornia keskellä aavikkoa, jonne Riad myöhemmin kasvoi.',
+          selite: 'Murabban linna rakennettiin savitiilestä aavikolle, jonne '
+            + 'Riad myöhemmin kasvoi.',
           lahde: 'Tuntematon kuvaaja, Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Riyadh Skyline showing the King Abdullah Financial District (KAFD) and the famous Kingdom Tower .jpg',
           vuosi: '2016',
-          selite: 'Riadin keskusta iltahämärässä Kingdom Centre etualalla — kaupunki '
-            + 'jatkuu horisonttiin asti, vaikka vesi on tuotava kaivoista ja putkea '
-            + 'pitkin Persianlahdelta asti.',
+          selite: 'Riadin nykyinen muoto syntyi 1950-luvulla, kun vanhan '
+            + 'kaupungin ympäriltä purettiin puolustusvarustukset.',
           lahde: 'B. Alotaby, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -27336,8 +27179,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on toinenkin tehtävä. Paikallinen määräys rajaa '
             + 'käyttökerrosten määrän kolmeenkymmeneen, ja tyhjä kaari '
             + 'nostaa talon sen rajan yläpuolelle.',
-          selite: 'Kingdom Centre yöllä, kun tumman tornin yläosassa loistaa '
-            + 'valaistu kaari, jonka poikki kulkee silta.',
+          selite: 'Kingdom Centren yläosan kaaren yli kulkee 65 metrin '
+            + 'pituinen silta, jonka teräsrakenne painaa 300 tonnia.',
           lahde: 'Hamza A. Durrani, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27354,8 +27197,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ravintola. Hotellin ja tornin väliseen aulaan tilattiin '
             + 'vuonna 1999 Brian Clarken lasitaideseinä, jonka pinta-ala '
             + 'on 22 000 neliöjalkaa eli noin 2 000 neliömetriä.',
-          selite: 'Al Faisaliah -torni keskipäivän valossa: neljä sivua kapenee '
-            + 'ylöspäin kärjeksi, ja huipun alla on kultainen lasipallo.',
+          selite: 'Al Faisaliah on 267 metriä korkea, ja kahdensadan metrin '
+            + 'korkeudella olevan näköalatason yläpuolisen lasipallon '
+            + 'sisällä on ravintola.',
           lahde: 'Hamza A. Durrani, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27372,18 +27216,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joka on persian portin darvaza arabialaistettu monikko. '
             + 'Muuri purettiin vuonna 1950, jotta kaupunki pääsi '
             + 'kasvamaan sen ulkopuolelle.',
-          selite: 'Vanhan kaupunginmuurin säilynyt pätkä nykyisen Riadin talojen '
-            + 'keskellä: pyöreässä tornissa on kolmiohampainen harja, ja '
-            + 'siihen liittyy ylöspäin kapeneva savipintainen muuri.',
+          selite: 'Riadin savimuuri purettiin vuonna 1950, jotta kaupunki '
+            + 'pääsi kasvamaan sen ulkopuolelle.',
           lahde: 'Hamza A. Durrani, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Tuwaiq Escarpment (2981960802).jpg',
-          selite: 'Tuwaiqin jyrkänteen reuna Riadin länsipuolella, jossa kivinen '
-            + 'maa katkeaa äkisti ja alapuolella aukeava laakso häviää '
-            + 'pölysumuun.',
+          selite: 'Tuwaiqin jyrkänne halkoo Najdin ylätasangon noin '
+            + 'kahdeksansadan kilometrin matkalla, ja sen korkeus yltää '
+            + 'kuuteensataan metriin.',
           lahde: 'Peter Dowley from Dubai, United Arab Emirates, Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Riad on Saudi-Arabian pääkaupunki ja Arabian niemimaan '
@@ -27430,9 +27273,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'rautatieyhtiötä yhdistettiin.',
               kuva: {
                 tiedosto: 'SAR passenger train near Dhahran, Saudi Arabia August 2025 (1).jpg',
-                selite: 'Saudi-Arabian rautateiden matkustajajuna kiitää aavikon '
-                  + 'halki Dammamin ja Riadin välisen radan itäpäässä '
-                  + 'Dhahranin luona.',
+                selite: 'Riadista pääsee junalla pohjoiseen Qurayyatiin ja '
+                  + 'itään Hofufin ja Abqaiqin kautta Dammamiin.',
                 lahde: 'Zach1055, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27472,9 +27314,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'keskus on al-Olaya, vanhin osa al-Bat\'ha ja al-Deerah.',
               kuva: {
                 tiedosto: 'Riyadh, Saudi Arabia\'s capital and largest city (iss072e445326).jpg',
-                selite: 'Riad yöllä avaruusasemalta kuvattuna: katuvalot '
-                  + 'piirtävät kaupungin ruudukon näkyviin, ja sen reunoilta '
-                  + 'lähtee oransseja teitä pimeään aavikkoon.',
+                selite: 'Riadin ruudukko on peräisin vuonna 1972 hyväksytystä '
+                  + 'yleiskaavasta, jonka mukaan kaupunki jakautuu kahden '
+                  + 'kertaa kahden kilometrin kortteleihin.',
                 lahde: 'NASA Johnson Space Center, Wikimedia Commons (PD)',
               },
             },
@@ -27499,9 +27341,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + '2010.',
               kuva: {
                 tiedosto: 'At-Turaif District in ad-Dir\'iyah (1).jpg',
-                selite: 'At-Turaif laakson toiselta puolelta katsottuna: kivetyn '
-                  + 'puiston ja taatelipalmujen takana kohoaa hiekanvärinen '
-                  + 'savitiilikaupunki muita korkeampine palatseineen.',
+                selite: 'Diriyah perustettiin vuosina 1446–1447, ja vuodesta '
+                  + '1727 se oli oman ruhtinaskuntansa pääkaupunki.',
                 lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
               },
             },
@@ -27546,9 +27387,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjasi verkon vuonna 2025 maailman pisimmäksi täysin '
             + 'automaattiseksi metroksi. Rakentaminen maksoi 22,5 '
             + 'miljardia dollaria.',
-          selite: 'Metroaseman laituri maan alla, jossa lasinen laituriovien '
-            + 'seinä kulkee koko pituudelta ja opasteissa lukee arabiaksi ja '
-            + 'englanniksi muun muassa To Airport T1-2 ja Exit.',
+          selite: 'Riadin metrossa on rataa 176 kilometriä ja asemia 85, ja '
+            + 'Guinness kirjasi verkon 2025 maailman pisimmäksi täysin '
+            + 'automaattiseksi metroksi.',
           lahde: 'Virtual trip, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -27565,9 +27406,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tuuli piirtää hiekkaan. Vuonna 2019 rakennus oli '
             + 'kaupunkikuvassa vielä paljas teräsrunko, ja asema avattiin '
             + 'joulukuussa 2024.',
-          selite: 'KAFD-aseman sisäseinä: valkoisen holvin keskellä on soikea '
-            + 'aukko, joka on täytetty pyöristettyjen vinoneliöiden '
-            + 'betoniverkolla.',
+          selite: 'KAFD-aseman suunnittelukilpailun voitti Zaha Hadid '
+            + 'Architects, ja julkisivun kuvioinnin aiheiksi kerrotaan '
+            + 'mashrabiya-ristikot ja tuulen jäljet hiekassa.',
           lahde: 'Kolaiel, Wikimedia Commons (CC0)',
         },
         {
@@ -27583,9 +27424,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on neljä raidetta, ja se on yksi metron neljästä '
             + 'vaihtoasemasta: siinä kohtaavat sininen ja oranssi linja. '
             + 'Matkustajille asema avattiin 26. helmikuuta 2025.',
-          selite: 'Qasr al-Hukmin metroasema illalla: soikea teräskatos kelluu '
-            + 'maanpinnan yläpuolella, ja sen kiiltävä alapinta heijastaa '
-            + 'valot pitkinä juovina.',
+          selite: 'Qasr al-Hukmin aseman piirsi norjalainen Snøhetta, ja sen '
+            + 'teräskatos lepää suuren vinon seinän varassa.',
           lahde: 'Kolaiel, Wikimedia Commons (CC0)',
         },
       ],
@@ -27615,6 +27455,8 @@ export const KULTTUURI_KATEGORIAT = {
    * pitää: intro kertoo maantieteen, basaarin, matot ja
    * pääkaupunkikaudet eikä koske nykypolitiikkaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   tabriz: [
     {
       id: 'kaupunki',
@@ -27626,25 +27468,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '11 Chardin Tabriz 1673.png',
-          selite: 'Jean Chardinin piirros Tabrizista vuodelta 1673 nimellä '
-            + 'TAURIS: matalan kaupungin yllä kohoavat kupolit ja minareetit, '
-            + 'ja reunan luettelo nimeää muun muassa kuninkaan aarrekammion '
-            + 'ja kymmenkunta moskeijaa.',
+          selite: 'Jean Chardin kuvasi Tabrizin vuonna 1673 nimellä Tauris, '
+            + 'ja hänen luettelossaan ovat kuninkaan aarrekammio ja '
+            + 'kymmenkunta moskeijaa.',
           lahde: 'Jean Chardin, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Landscape of Tabriz 03.jpg',
-          selite: 'Tabriz iltapäivän matalassa valossa kaupungin yllä '
-            + 'seisovan tuulivoimalan vierestä: talojen lomassa erottuu '
-            + 'urheilukenttä ja sinikupolinen rakennus, ja ylhäällä talot '
-            + 'loppuvat paljaisiin kukkuloihin.',
+          selite: 'Tabrizin pinta-ala on 325 neliökilometriä, ja vuoden 2016 '
+            + 'laskennassa kaupungissa oli 1 558 693 asukasta.',
           lahde: 'Mostafameraji, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'El-Goli Park.jpg',
-          selite: 'El Golin puistolammikko Tabrizissa: keskellä vettä seisoo '
-            + 'kaarikäytävällinen paviljonki, ja rantaa reunustavat puurivit ja '
-            + 'kukkapenkit.',
+          selite: 'El Golin tekoallas on noin 55 000 neliömetriä, ja sen '
+            + 'paviljonkiin johtaa pengertie.',
           lahde: 'Talahemmati, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -27658,23 +27496,20 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Tabriz Bazaar Carpet Corner.jpg',
-          selite: 'Basaarin mattokäytävä: punatiilinen holvi kaartuu korkeana '
-            + 'käytävän yllä valoaukkoineen, ja lattialle on levitetty ja '
-            + 'kääritty mattoja rivistä toiseen.',
+          selite: 'Basaari ei ole yksi halli vaan rivistö käytäviä, joista '
+            + 'Mozaffariehissa myydään käsin solmittuja mattoja.',
           lahde: 'Nasser Ghassembaglou, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Saat Tower - 4R9A0823.jpg',
-          selite: 'Tabrizin kaupungintalo eli Saat-torni iltavalaistuksessa: '
-            + 'tiiliseinäisen rakennuksen keskeltä nousee kellotorni, ja '
-            + 'kadun yli on pingotettu lamppuketju.',
+          selite: 'Saat-tornin rakennus on Tabrizin kaupungintalo, ja '
+            + 'kaupunki on Itä-Azerbaidžanin maakunnan pääkaupunki.',
           lahde: 'Monaesfandiar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tabriz Bazaar Bridge.jpg',
-          selite: 'Kaupungin halki kulkeva kivetty jokiuoma keväällä, '
-            + 'pohjalla vain kapea vesijuova ja oikealla uoman yli kaartuva '
-            + 'kupolirivin peittämä rakennus.',
+          selite: 'Tabriz on Quru-joen laaksossa 1 350–1 600 metrin '
+            + 'korkeudella merenpinnasta.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -27682,17 +27517,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Persia past and present; a book of travel and research, with more than two hundred illustrations and a map (1906) (14577156579).jpg',
           vuosi: '1906',
-          selite: 'Basaarin viereinen piha Tabrizissa vuonna 1906: kamelit odottavat '
-            + 'lastia villa- ja mattopaalien keskellä, ja tästä pihasta tavara lähti '
-            + 'karavaanin selässä länteen.',
+          selite: 'Tabrizin basaarista tavara lähti karavaanien selässä '
+            + 'länteen, ja 1800-luvulla kaupunki oli Iranin lähin portti '
+            + 'Eurooppaan.',
           lahde: 'Internet Archive Book Images, Commons (PD)',
         },
         {
           tiedosto: 'Landscape of Tabriz 01.jpg',
           vuosi: '2019',
-          selite: 'Tabriz nykyään vuorenrinteeltä katsottuna: basaari on jossain tuon '
-            + 'kattomeren keskellä, ja se on yhä yksi maailman laajimmista katetuista '
-            + 'kauppapaikoista.',
+          selite: 'Tabrizin katettu basaari on maailman suurin, ja Unesco '
+            + 'merkitsi sen maailmanperintöluetteloon heinäkuussa 2010.',
           lahde: 'Mostafameraji, Commons (CC0)',
         },
       ],
@@ -27712,9 +27546,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '(1906–1988), jonka runoelma Heydar Babaya Salam on '
             + 'käännetty yli kolmellekymmenelle kielelle. Nykyinen '
             + 'muistorakennus on pystytetty paikalle 1970-luvulta alkaen.',
-          selite: 'Runoilijoiden mausoleumin muistorakennus: vaaleista '
-            + 'kivilaatoista ladotut teräväkärkiset kaaret lomittuvat '
-            + 'toisiinsa ja kasvavat reunoilta keskelle päin.',
+          selite: 'Maqbarat-o-shoaraan on haudattu kolmetoista nimeä, ja '
+            + 'vanhimman ja tuoreimman väli on yli tuhat vuotta.',
           lahde: 'Arashk rp2, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27732,10 +27565,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nykyään ravintola. Länsirinteen lähde syöttää altaaseen '
             + 'vettä viittä terassia pitkin. Puistolla on kaksi nimeä: '
             + 'Shah Goli on kuninkaan lampi, El Goli kansan järvi.',
-          selite: 'El Golin paviljonki: keltaisesta tiilestä muurattu '
-            + 'monikulmainen kaksikerroksinen rakennus, jonka molemmissa '
-            + 'kerroksissa kiertää rivi teräväkärkisiä kaaria ja jonka '
-            + 'katolla on uurteinen kupoli.',
+          selite: 'El Golin altaan pohjoispuoli on rakennettu korkeammaksi, '
+            + 'joten allas näyttää kelluvan laakson yllä.',
           lahde: 'Meysem, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -27752,10 +27583,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja merkittiin kansallisesti suojelluksi kohteeksi. '
             + 'Vuodesta 2006 siinä on toiminut museo, jonka aihe on '
             + 'qajar-kausi 1781–1925.',
-          selite: 'Amir Nezamin talon piha: kaksikerroksisen rakennuksen '
-            + 'keskellä on tiilikuvioinen kolmiopääty ja sen alla rivi '
-            + 'valkoisia pylväitä, ja holvikaariset siivet reunustavat pihan '
-            + 'kahta vesiallasta.',
+          selite: 'Amir Nezamin talo kunnostettiin vuosina 1993–2006, ja '
+            + 'siinä on vuodesta 2006 toiminut qajar-kauden museo.',
           lahde: 'Farzad Karimnijad, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -27803,9 +27632,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Tabriz Bazaar Mozaffariyeh Arcade (10).jpg',
-          selite: 'Mozaffariehin käytävä basaarissa: punatiilisen ristiholvin '
-            + 'laesta putoaa valokiila lattialle asti, ja käytävän molemmin '
-            + 'puolin on kaarevaikkunaisia myymälöitä parvekkeineen.',
+          selite: 'Basaarin suojeltua ydinaluetta on lähes 29 hehtaaria ja '
+            + 'suojavyöhykettä 75.',
           lahde: 'AmirAK, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Tabriz on Iranin kuudenneksi suurin kaupunki ja '
@@ -27844,10 +27672,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'moottoritietä 2.',
               kuva: {
                 tiedosto: 'Tabriz Metro 2018.jpg',
-                selite: 'Metrojuna laiturissa: valkoinen vaunusarja on '
-                  + 'raidoitettu sinisellä ja punaisella, keulassa palaa '
-                  + 'numero 101, ja katon opastekyltissä lukee Line 1 - El '
-                  + 'Goli.',
+                selite: 'Tabrizin metron ensimmäinen osuus avattiin elokuun '
+                  + 'lopussa 2015, ja linja valmistui helmikuussa 2020 17,2 '
+                  + 'kilometrin pituisena.',
                 lahde: 'NicholasNCE, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27890,9 +27717,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kanssa vaihdetaan persiaan.',
               kuva: {
                 tiedosto: 'Fəraqan xalçası, Təbriz xalçaçılıq məktəbi.jpg',
-                selite: 'Tabrizin mattokoulun matto kokonaisuudessaan: '
-                  + 'tummalla pohjalla toistuu tiheä vinoneliöverkko, jonka '
-                  + 'jokaisessa silmässä on pieni kukka tai kaareva lehti.',
+                selite: 'Tabrizin maton hienous ilmoitetaan rajina eli '
+                  + 'solmujen määränä seitsemän senttimetrin matkalla.',
                 lahde: 'Sefer azeri, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27917,10 +27743,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'maan lähin portti Eurooppaan.',
               kuva: {
                 tiedosto: 'Kabood (Blue) mosque, Tabriz, Iran.jpg',
-                selite: 'Sinisen moskeijan tiilinen pylväskäytävä: '
-                  + 'teräväkärkiset kaaret jatkuvat peräkkäin kauas, ja '
-                  + 'tiilikuvioon on ladottu turkoosinvihreitä paloja '
-                  + 'vinoneliöiksi.',
+                selite: 'Sininen moskeija valmistui lokakuussa 1465, ja sen '
+                  + 'kustansi hallitsija Jahan Shahin puoliso Khatun Jan '
+                  + 'Begom.',
                 lahde: 'Hameddaeipic, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -27965,9 +27790,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuoden väliin; vuorta pidetään uinuvana, eikä viimeisintä '
             + 'purkausta tunneta. Kasvien ja eläinten runsauden takia '
             + 'vuoristoa kutsutaan Iranissa vuorten morsiameksi.',
-          selite: 'Sahandin lumihuippu keväällä: leveää kartiomaista huippua '
-            + 'peittää lumi tummine sulaneine läiskineen, ja juurella '
-            + 'levittäytyy vihreitä laidunmaita.',
+          selite: 'Sahandin korkein huippu Kamal on 3 707 metriä ja samalla '
+            + 'Itä-Azerbaidžanin maakunnan korkein kohta.',
           lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -27983,9 +27807,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Rinteille on istutettu metsää, ja alue on valtion '
             + 'metsäpuisto. Tabrizissa on kaikkiaan 132 puistoa, joista '
             + '97 on pieniä, 31 alueellisia ja 4 koko kaupungin puistoja.',
-          selite: 'Eynalin rinne aamun vastavalossa: paljaaseen ruskeaan '
-            + 'maahan istutetun nuoren metsän pikkupuut kasvavat riveissä, ja '
-            + 'rinteen poikki kulkee polku, jonka varrella liikkuu ihmisiä.',
+          selite: 'Eynalin huipulle vie 3,3 kilometrin päällystetty polku, '
+            + 'ja rinteille on istutettu valtion metsäpuisto.',
           lahde: 'User:Abdossamad Talebpour, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -28001,9 +27824,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja kuumin 42,0 astetta 26. heinäkuuta 1966. Ranskalainen '
             + 'matkaaja Jean Chardin kirjoitti 1600-luvulla, että lumi '
             + 'pysyy seudun vuorilla yhdeksän kuukautta vuodessa.',
-          selite: 'El Golin puisto lumisateen jälkeen: lehdettömien puiden '
-            + 'oksat ovat lumen peitossa, ja altaan rannalla seisoo '
-            + 'paviljonki, jonka keltainen kupoli on sekin valkoinen.',
+          selite: 'Tabrizissa sataa lunta tai räntää tammikuussa keskimäärin '
+            + '9,3 päivänä, mutta touko- ja syyskuun välillä ei lainkaan.',
           lahde: 'Faridb89, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -28034,6 +27856,8 @@ export const KULTTUURI_KATEGORIAT = {
    * Nostot, oppaat, johdannot, kuvatiedostot ja lähderivit ovat
    * ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   teheran: [
     {
       id: 'kaupunki',
@@ -28046,24 +27870,19 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'National Garden Gate Tehran.jpg',
-          selite: 'Bagh-e Mellin portti Teheranissa sateen jälkeen: tiilisen '
-            + 'porttirakennuksen kaarevan puuoven yläpuolella on värillisiä '
-            + 'kaakelitauluja ja persiankielisiä kirjoituksia, ja ylhäällä '
-            + 'kohoaa kaksi tornia.',
+          selite: 'Teheran on nuori pääkaupunki vanhassa maassa, ja sen '
+            + 'vanha ydin on kaupungin eteläosassa.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Milad Tower Under Sun Rays.jpg',
-          selite: 'Teheran ylhäältä pilvien raoista lankeavissa '
-            + 'auringonsäteissä: kaupunki jatkuu horisonttiin ja keskeltä '
-            + 'nousee 435-metrinen Milad-torni.',
+          selite: 'Milad-torni on 435 metriä korkea.',
           lahde: 'Salehi1990mohsen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Azadi Square (2022).jpg',
-          selite: 'Azadin aukio: marmorilla verhottu Azadi-torni seisoo '
-            + 'nurmikentän keskellä, ja sen ympäri kiertää leveä '
-            + 'monikaistainen liikenneympyrä.',
+          selite: 'Azadin torni on verhottu marmorilla, ja sen ympäri '
+            + 'kiertää leveä monikaistainen liikenneympyrä.',
           lahde: 'Parsa 2au, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -28084,27 +27903,20 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'North of tehran.jpg',
-          selite: 'Pohjois-Teheran Milad-tornista kuvattuna kirkkaana '
-            + 'kevätpäivänä: talomeri jatkuu lumihuippuisen '
-            + 'Alborz-vuoriston juurelle asti, pilvet heittävät '
-            + 'kaupungin ylle suuria varjolaikkuja, ja korttelien väliin '
-            + 'jää vihreitä puistokaistoja.',
+          selite: 'Teheran on rakennettu Elbursin etelärinteelle noin '
+            + '1 200 metrin korkeuteen.',
           lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'A clean day in -Tehran . East of city. (4184590177).jpg',
-          selite: 'Itäistä kaupunkia kattojen yli: etualalla tasakattoja '
-            + 'ilmastointilaitteineen, vasemmalla harmaa tornitalo ja '
-            + 'keskeneräinen teräsrunko, ja taustalla kohoaa lumen '
-            + 'peittämä vuorimuuri pilvien alla.',
+          selite: 'Vuoret estävät Teheranissa ilman vaihtumisen, joten '
+            + 'kaupungin ylle laskeutuu ajoittain saastesumu.',
           lahde: 'Jadi from Iran, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: '971009-AVAN-NorthView.jpg',
-          selite: 'Pohjoiset kaupunginosat talvipäivänä: vaaleiden '
-            + 'kerrostalojen välissä seisoo nostureita, keskellä '
-            + 'kortteleita tummanvihreä puistometsikkö, ja koko näkymän '
-            + 'päättää Alborzin luminen rintama.',
+          selite: 'Teheranissa suunnistaminen on helppoa, sillä vuoret ovat '
+            + 'aina pohjoisessa.',
           lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -28112,17 +27924,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Téhéran, le Meydan de l\'Ark.jpg',
           vuosi: '1850-luku',
-          selite: 'Arkin aukio 1850-luvulla: kaarikäytävärivin edessä on pitkä jono '
-            + 'tykinlavetteja, ja aukiolla liikkuneista ihmisistä jäi vain haaleita '
-            + 'haamuja, koska valotus kesti minuutteja.',
+          selite: 'Vielä 1870-luvulla koko Teheran oli muurien ympäröimä '
+            + 'linnake, katettu basaari ja kolme asuinkorttelia.',
           lahde: 'Luigi Pesce / Gallica, Ranskan kansalliskirjasto, Commons (PD)',
         },
         {
           tiedosto: 'Tehran skyline- Alborz Mountains on background-20150401.jpg',
           vuosi: '2015',
-          selite: 'Teheran Tabiat-sillalta katsottuna taustallaan Alborzin harjanne: '
-            + 'kaupungin pohjoisosa on satoja metrejä etelää korkeammalla ja siksi '
-            + 'useita asteita viileämpi.',
+          selite: 'Teheranin pohjoisosa on satoja metrejä etelää '
+            + 'korkeammalla ja siksi useita asteita viileämpi.',
           lahde: 'Mhsheikholeslami, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -28142,8 +27952,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Azadibybagtash01.jpg',
-          selite: 'Azadin torni alhaalta: valkoinen marmoriholvi kaartuu '
-            + 'ristikkokuvioksi, jonka läpi näkyy taivas.',
+          selite: 'Azadin torni on Teheranin tunnetuin maamerkki, ja sen '
+            + 'holvit on muurattu valkoisesta marmorista.',
           lahde: 'Zahrabagtash, Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Teheran on nuori pääkaupunki vanhassa maassa, ja se '
@@ -28185,22 +27995,21 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Tehran Subway.jpg',
-                  selite: 'Metrojuna saapuu asemalle — vuonna 1999 avattu verkko '
-                    + 'on kaupungin nopein tapa päästä päästä päähän.',
+                  selite: 'Teheranin metro avattiin vuonna 1999, ja vuonna '
+                    + '2011 sillä tehtiin runsaat neljäkymmentä miljoonaa '
+                    + 'matkaa kuukaudessa.',
                   lahde: 'Mehrraz, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Estacionamiento de motocicletas, Teherán, Irán, 2016-09-17, DD 56.jpg',
-                  selite: 'Moottoripyöriä jalkakäytävän reunassa pitkänä '
-                    + 'rivinä — kaupungin oma kulkuneuvo, joka mahtuu '
-                    + 'ruuhkan läpi.',
+                  selite: 'Moottoripyörä on Teheranin oma kulkuneuvo, joka '
+                    + 'mahtuu ruuhkan läpi.',
                   lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Tabi\'at Bridge - panoramio.jpg',
-                  selite: 'Tabiat-silta vie jalankulkijat moottoritien yli kahden '
-                    + 'puiston välillä, ja taustalla näkyy Elburs, joka on '
-                    + 'aina pohjoisessa.',
+                  selite: 'Tabiat-silta vie jalankulkijat moottoritien yli '
+                    + 'kahden puiston välillä.',
                   lahde: 'Ali Safdarian, Wikimedia Commons (CC BY 3.0)',
                 },
               ],
@@ -28224,9 +28033,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'päivänvalo tulee sisään niiden aukoista.',
               kuva: {
                 tiedosto: 'Bazar de Téhéran (2).jpg',
-                selite: 'Basaarin holvikatto sisältä: tiiliholvit seuraavat '
-                  + 'toisiaan kujan yllä, ja päivänvalo putoaa sisään niiden '
-                  + 'aukoista.',
+                selite: 'Teheranin basaarissa on kujaa yhteensä yli '
+                  + 'kymmenen kilometriä, ja päivänvalo tulee sisään '
+                  + 'tiiliholvien aukoista.',
                 lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -28252,9 +28061,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kansallismuseo.',
               kuva: {
                 tiedosto: 'Golestan door.JPG',
-                selite: 'Golestanin palatsin ovet ja niitä kehystävä '
-                  + 'kaakelikenttä, jonka turkoosin ja keltaisen kuvioissa '
-                  + 'toistuu leijona ja sen takaa nouseva aurinko.',
+                selite: 'Golestanin palatsin ovissa ja kaakelikentissä '
+                  + 'toistuu keltainen leijona ja sen takaa nouseva '
+                  + 'aurinko.',
                 lahde: 'مانفی, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -28279,9 +28088,8 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Sangak bread in Tehran, national bread of Iran. (42426069272).jpg',
                 asettelu: 'kapea',
-                selite: 'Sangak-leipä tulee uunista: taikina paistetaan kuumien '
-                  + 'pikkukivien päällä, ja kivet jättävät leipään kuoppaisen '
-                  + 'pinnan.',
+                selite: 'Sangak paistetaan kuumien pikkukivien päällä, ja '
+                  + 'nimi tulee persian kiveä tarkoittavasta sanasta sang.',
                 lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -28305,9 +28113,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Darband, Teherán, Irán, 2016-09-18, DD 13.jpg',
                 asettelu: 'kapea',
-                selite: 'Darbandin puro ja sen ylle rakennetut teehuoneet: '
-                  + 'rinteeseen on ladottu porrasmainen rivi terasseja, '
-                  + 'joilla istutaan matoilla veden yläpuolella.',
+                selite: 'Darbandissa polku nousee puron vartta pitkin, ja '
+                  + 'rinteeseen on rakennettu porrasmainen rivi ravintoloita '
+                  + 'ja teehuoneita.',
                 lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -28407,10 +28215,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Itse rakennusta ei ole enää: sen paikalle nousi '
             + '1940-luvulla pankkitalo. Qajar-kaudella koko Teheranissa '
             + 'kerrotaan olleen jopa viisikymmentä takyeh-taloa.',
-          selite: 'Takyeh Dowlatin sisusta 1800-luvun lopulla: kaartuvassa '
-            + 'seinässä on kolme kerrosta kuviolaatoin peitettyjä '
-            + 'kaariaukkoja, ja leveillä kiviportailla seisoo pitkätakkisia '
-            + 'miehiä.',
+          selite: 'Takyeh Dowlatiin mahtui 20 000 ihmistä, ja se oli Iranin '
+            + 'historian suurin teatterirakennus.',
           lahde: 'Antoin Sevruguin, Wikimedia Commons (PD)',
         },
         {
@@ -28428,9 +28234,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'poikkileikkaus on kolmisakarainen tähti; pylväät '
             + 'kannattavat kaartuvia palkkeja, jotka muodostavat '
             + 'ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.',
-          selite: 'Kaupunginteatteri päivänvalossa: pyöreää, vaalean ja turkoosin '
-            + 'laatan peittämää rakennusta kiertää pylväsrivi, jonka '
-            + 'kärjekkäät kaaret kannattavat ulkonevaa katosta.',
+          selite: 'Kaupunginteatterin lieriössä on halkaisijaa 34 metriä ja '
+            + 'korkeutta 15 metriä, ja sen pylväiden poikkileikkaus on '
+            + 'kolmisakarainen tähti.',
           lahde: 'A 1999 2, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -28448,10 +28254,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Mellin alueelle kuusikerroksiseen taloon. Kadun varrella '
             + 'on kaksi kirkkoa, tulitemppeli sekä synagoga moskeijan '
             + 'vieressä, ja siksi sitä sanotaan uskontojen kaduksi.',
-          selite: 'Malekin kirjaston ja museon rakennus Mashqin kentän laidalla: '
-            + 'keltatiilisessä julkisivussa vuorottelevat kärjekkäät ikkunat '
-            + 'ja sinivalkoiset kaakelitaulut, ja kaariportti on peitetty '
-            + 'sinisellä ja turkoosilla laatalla.',
+          selite: 'Malekin kirjastossa ja museossa on 19 000 '
+            + 'käsikirjoitusta ja 70 000 kirjaa, ja se on Iranin '
+            + 'ensimmäinen yksityinen museo.',
           lahde: 'Wojciech Kocot, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -28478,10 +28283,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'varras vedetään nopeasti pois. Lihaa on monta lajia: barg '
             + 'on marinoitua kokolihaa, koobideh jauhettua lihaa sipulin '
             + 'ja persiljan kanssa ja jujeh kanaa.',
-          selite: 'Ateria levitettynä punaiselle matolle teheranilaisessa '
-            + 'ravintolassa: lautasella on pitkä jauhelihavarras, grillattuja '
-            + 'tomaatteja ja pikkelssejä, vieressä kivinen ruukku keitosta ja '
-            + 'ympärillä teelaseja, yrttejä ja leipää.',
+          selite: 'Chelow kababissa varras lasketaan riisin päälle, liha '
+            + 'painetaan paikalleen lavash-leivällä ja varras vedetään '
+            + 'nopeasti pois.',
           lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -28497,10 +28301,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'survottuna. Survoksen nimi on gusht-e kubideh eli survottu '
             + 'liha, ja se syödään leivän, sipulin ja pikkelssien kanssa. '
             + 'Kaukasuksen ja Keski-Aasian piti on saman ruoan muunnelma.',
-          selite: 'Abgusht-ateria metallitarjottimella ylhäältä kuvattuna: '
-            + 'kuparipadassa on punaista lientä, lihanpaloja, kikherneitä ja '
-            + 'peruna, ja ympärillä kulhoja säilykkeineen ja jogurtteineen '
-            + 'sekä korillinen ohutta leipää.',
+          selite: 'Abgusht syödään kahdessa vaiheessa: ensin liemi, johon '
+            + 'revitään leipää, sitten kiinteä osa survottuna.',
           lahde: 'Mardetanha, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -28517,9 +28319,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'munakoisoa tai hapankirsikoita. Samaa keinoa sovelletaan '
             + 'Iranissa myös spagettiin, joka saa pohjalleen kovan '
             + 'kannen.',
-          selite: 'Riisiannos lautasella: kukkurallisen valkoisen riisin laella '
-            + 'on kirkkaan keltaiseksi värjätty läiskä, ja keon ympärillä '
-            + 'kiertää rivi ruskistuneita perunanviipaleita.',
+          selite: 'Tahdig on riisipadan pohjalle paistunut rapea kuori, ja '
+            + 'perinteisesti se tarjotaan vieraalle.',
           lahde: 'Roozitaa, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -28558,6 +28359,8 @@ export const KULTTUURI_KATEGORIAT = {
    * selitteitä ei enää ole. Intro, johdannot ja kartan esittely
    * jäivät ennalleen.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   isfahan: [
     {
       id: 'kaupunki',
@@ -28568,22 +28371,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Isfahan to the north side by Eugène Flandin.jpg',
-          selite: 'Isfahan pohjoisesta Eugène Flandinin piirroksessa '
-            + 'vuodelta 1840: savimuurin ja puurivistön takaa nousee '
-            + 'ohuita minareetteja ja matalia kupoleita.',
+          selite: 'Persialainen sananlasku kuuluu Esfahan nesf-e jahan '
+            + 'ast, Isfahan on puoli maailmaa, ja se on ajalta, jolloin '
+            + 'kaupunki oli Persian pääkaupunki.',
           lahde: 'Eugène Flandin, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Esfahán.jpg',
-          selite: 'Isfahan panoraamana korkealta: kaupunkia ympäröivät '
-            + 'hedelmätarhat, poppelirivit ja peltokaistaleet, ja '
-            + 'horisontissa on rivi paljaita vuoria.',
+          selite: 'Isfahan on Zayandeh-joen tasangolla 1 574 metrin '
+            + 'korkeudessa Zagros-vuoriston juurella.',
           lahde: 'I, Ondřej Žváček, Wikimedia Commons (CC BY 2.5)',
         },
         {
           tiedosto: 'Plaza Naqsh-e Jahan, Isfahán, Irán, 2016-09-20, DD 59.jpg',
-          selite: 'Naqsh-e Jahanin aukio Isfahanissa: pitkä allas suihkulähteineen jakaa '
-            + 'kentän, ja molemmin puolin jatkuu kaksikerroksinen kaarikäytävä.',
+          selite: 'Naqsh-e Jahanin aukiota reunustavat moskeija, palatsi ja '
+            + 'basaarin portti.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -28597,25 +28399,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Naqsh-e Jahan Square from the gheisariye Vault.jpg',
-          selite: 'Naqsh-e Jahanin aukio Qeysarie-portin muqarnas-holvin '
-            + 'alta: kaaren läpi näkyvät nurmikentät, suorakaiteen '
-            + 'muotoinen allas, kaksikerroksiset kaarikäytävät ja perällä '
-            + 'moskeijan kupoli.',
+          selite: 'Aukio rakennettiin vuosina 1598–1629 osana Sheikh Bahain '
+            + 'laatimaa kaupunkisuunnitelmaa.',
           lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Si-o-se Pol, Isfahan, Irán, 2016-09-19, DD 04-06 HDR.jpg',
-          selite: 'Si-o-se-pol iltavalaistuksessa vinosti sivulta: kaksi '
-            + 'päällekkäistä kaaririviä jatkuu suorana kauas, ja sillan '
-            + 'vieressä jokiuoma on kuiva.',
+          selite: 'Si-o-se-pol rakennettiin 1599–1602, se on 297,76 metriä '
+            + 'pitkä, ja sen 33 kaarta toimivat samalla patona.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Isfahan Lotfollah mosque ceiling symmetric.jpg',
-          selite: 'Sheikh Lotfollahin moskeijan kupoli sisältä: '
-            + 'kullanruskealla pohjalla kiertää kehä kehän perään '
-            + 'tummansinisiä vinoneliömedaljonkeja, jotka pienenevät '
-            + 'kohti keskustaa.',
+          selite: 'Sheikh Lotfollahin moskeija Naqsh-e Jahanin itälaidalla '
+            + 'on pääarkkitehti Muhammad Rezan suunnittelema, ja se '
+            + 'kunnostettiin 1920-luvulla.',
           lahde: 'Phillip Maiwald (Nikopol), Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -28623,16 +28421,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'ETH-BIB-Isfahan mit Meidan-e Schah Platz-Persienflug 1924-1925-LBS MH02-02-0150-AL-FL.tif',
           vuosi: '1925',
-          selite: 'Isfahan ilmasta helmikuussa 1925 sveitsiläisen postilentäjän '
-            + 'kuvaamana: suuren aukion kupolit ja pitkä kaarikäytävärivi kohoavat '
-            + 'matalien savikattojen keskeltä.',
+          selite: 'Abbas Suuri siirsi pääkaupunkinsa Qazvinista Isfahaniin '
+            + 'vuonna 1598, ja aukiosta tuli uuden kaupungin keskus.',
           lahde: 'Walter Mittelholzer, ETH-Bibliothek / Commons (PD)',
         },
         {
           tiedosto: 'Naqsh-e Jahan Square 01.jpg',
           vuosi: '2018',
-          selite: 'Naqsh-e Jahan nykyään: leikatut nurmikot, pitkä suihkulähdeallas ja '
-            + 'moskeijan kupoli reunustavat yli 500 metriä pitkää aukiota.',
+          selite: 'Naqsh-e Jahanin aukio on 160 metriä leveä ja 560 metriä '
+            + 'pitkä eli 89 600 neliömetriä.',
           lahde: 'Gladiator2714, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -28651,9 +28448,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Isfahanin maakunnasta on nykyään tunnistettu yli 300 '
             + 'vanhaa kyyhkystornia, ja niistä 65 on merkitty Iranin '
             + 'kansalliseen kulttuuriperintöluetteloon.',
-          selite: 'Kaksi savitiilistä kyyhkystornia vihreällä pellolla: '
-            + 'etummaisen kylkiin on liitetty kapeampia puolilieriöitä, ja '
-            + 'seinissä on tasavälein pieniä neliömäisiä reikiä.',
+          selite: 'Isfahanin kyyhkystornit rakennettiin puutarhaviljelmien '
+            + 'tarvitseman lannan takia, ja suurimpiin niistä mahtui '
+            + '14 000 lintua.',
           lahde: 'Ziegler175, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -28671,10 +28468,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mutta niitä käyttää nykyään vain talon hoitaja, joka käy '
             + 'keinuttamassa minareetteja. Kohde merkittiin suojeltujen '
             + 'luetteloon 10. kesäkuuta 1942.',
-          selite: 'Monar Jonbanin julkisivu alaviistosta: keltatiilistä '
-            + 'seinää halkoo suuri teräväkärkinen holvikaari '
-            + 'tummansinisine laattanauhoineen, ja kummastakin päästä '
-            + 'nousee kapea minareetti avoimine lyhtyineen.',
+          selite: 'Monar Jonbanin kumpikin minareetti on 17,5 metriä '
+            + 'korkea, ja kun toista keinutetaan, myös toinen alkaa liikkua '
+            + 'samaan tahtiin.',
           lahde: 'آرش, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -28692,9 +28488,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sasanidikaudelle 1937, mutta Alireza Jafari Zand esitti '
             + '2002 radiohiiliajoituksiin nojaten, että paikka on sitäkin '
             + 'vanhempi, elamilainen.',
-          selite: 'Kukkulan laen pyöreä raunio: savitiilestä muurattu '
-            + 'lieriö kolmine kapeine pystyaukkoineen seisoo paljaalla '
-            + 'kalliolla sortuneiden muurien ja perustusten keskellä.',
+          selite: 'Atashgahin kukkulan laella on pyöreä torni, joka oli '
+            + 'kerran ainakin kaksikymmentä metriä korkea.',
           lahde: 'Ivan Mlinaric from Slovenia, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -28735,10 +28530,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Palacio Aali Qapu, Isfahán, Irán, 2016-09-20, DD 56.jpg',
-          selite: 'Mustia hevosvaunuja punaisine pyörineen odottamassa '
-            + 'Naqsh-e Jahanin aukion laidalla, takana Ali Qapun '
-            + 'pylväikköinen parveke ja sen oikealla puolella '
-            + 'kaksikerroksinen kaarikäytävä.',
+          selite: 'Ali Qapun parvekkeelta shaahi seurasi aukiolla '
+            + 'pelattuja poolo-otteluita.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Isfahan on Zayandeh-joen tasangolla 1 574 metrin '
@@ -28776,9 +28569,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joten metrolla pääsee suoraan sillan viereen.',
               kuva: {
                 tiedosto: 'Platform-Azadi Metro Station in Esfahan-Iran 2018.jpg',
-                selite: 'Azadin metroaseman laituri: seinät ovat '
-                  + 'paljasta punatiiltä, ja penkillä istuu yksi '
-                  + 'matkustaja pää painuksissa.',
+                selite: 'Isfahanin metron linja 1 avattiin 15. lokakuuta '
+                  + '2015, ja sen kaksikymmentä asemaa jakautuvat '
+                  + 'yhdentoista kilometrin matkalle.',
                 lahde: 'Meysam Eftekhari, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -28804,10 +28597,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja uoma jää tyhjäksi.',
               kuva: {
                 tiedosto: 'Khaju Bridge, Isfahan 04.jpg',
-                selite: 'Khajun sillan keskiosa kuivan jokiuoman puolelta: '
-                  + 'alarivin kaarien alla on kivinen patokynnys, keskellä '
-                  + 'kohoaa kaksikerroksinen paviljonki ja edustalla on '
-                  + 'pelkkää hiekkaa.',
+                selite: 'Khajun silta valmistui noin 1650 vanhemman sillan '
+                  + 'perustuksille, ja sen 133 metrissä on 23 kaarta ja '
+                  + 'keskellä paviljonki.',
                 lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -28830,10 +28622,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'miljoonaa.',
               kuva: {
                 tiedosto: 'Haft-rang tilework. Shah Mosque (Isfahan).jpg',
-                selite: 'Kaakeloitu holvikaaren kärki lähikuvassa: '
-                  + 'tummansinisellä pohjalla kiemurtelee vaaleita '
-                  + 'köynnöksiä ja turkoosia medaljonkia, ja laattojen '
-                  + 'saumat näkyvät suorina ruutuina kuvion läpi.',
+                selite: 'Haft rang eli seitsemän väriä tarkoittaa laattaa, '
+                  + 'joka maalataan monella värillä kerralla ja poltetaan '
+                  + 'vasta sitten.',
                 lahde: 'Kimiakardani, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -28858,11 +28649,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Konstantinopolissa eikä missään kristikunnassa.',
               kuva: {
                 tiedosto: 'Naqsh-e Jahan Square by Pascal Coste 1 edited.jpg',
-                selite: 'Pascal Costen värillinen kivipiirros aukiosta: '
-                  + 'kenttä on paljasta hiekkaa, laidoilla kiertää '
-                  + 'kaksikerroksinen kaarikäytävä, perällä on moskeija '
-                  + 'turkoosikupoleineen ja etualalla pieniä ratsastajia '
-                  + 'ja kulkijoita.',
+                selite: 'Italialainen Pietro Della Valle kirjoitti vuonna '
+                  + '1617, ettei aukion veroista ole Konstantinopolissa '
+                  + 'eikä missään kristikunnassa.',
                 lahde: 'Pascal Coste, Wikimedia Commons (PD)',
               },
             },
@@ -28924,10 +28713,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Manilaan. Korttelissa on kuusitoista kirkkoa ja '
             + 'armenialainen koulu, ja siellä puhutaan omaa Uuden Julfan '
             + 'murretta.',
-          selite: 'Uuden Julfan aukiolla seisoo suuri aurinkokello: '
-            + 'kivijalustan päällä on musta kaareva malja ja valkoinen '
-            + 'viuhkamainen taulu persialaisine numeroineen, ja niiden '
-            + 'läpi kulkee vino metallivarsi.',
+          selite: 'Uusi Julfa perustettiin vuonna 1606 armenialaisten '
+            + 'kaupunginosaksi, ja korttelissa on kuusitoista kirkkoa ja '
+            + 'armenialainen koulu.',
           lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -28945,10 +28733,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on luomiskertomus, holvikulmissa kerubin pää siipien '
             + 'välissä ja seinillä kaksi kuvanauhaa päällekkäin. Pihalla '
             + 'seisoo erillinen kellotorni.',
-          selite: 'Katedraalin katto suoraan alhaalta: vierekkäin on '
-            + 'kaksi kupolia, kullanruskea täynnä kasviornamenttia ja '
-            + 'kuvakenttiä ihmishahmoineen sekä tummansininen '
-            + 'säteittäisine kiilakuvioineen.',
+          selite: 'Vankin katedraali perustettiin 1606 ja sai lopullisen '
+            + 'muotonsa 1655–1664, ja sen kupolin keskiössä on '
+            + 'luomiskertomus.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -28965,10 +28752,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kesaratsin mukaan; siellä ovat esillä vanha painokone ja '
             + 'Iranissa ensimmäisenä painettu kirja. Kirjastossa on yli '
             + '700 käsin kirjoitettua kirjaa.',
-          selite: 'Vuoden 1638 psalttari auki tummalla kankaalla: '
-            + 'yläosassa on puupiirroskehys, sen alla kolmetoista riviä '
-            + 'tekstiä armenialaisin kirjaimin ja koristealkukirjain '
-            + 'piirrettynä kahdeksi linnuksi.',
+          selite: 'Uuden Julfan kirjapainon ensimmäinen kirja valmistui '
+            + 'vuonna 1638, ja se oli Saghmosaran eli psalttari.',
           lahde: 'digital.bodleian.ox.ac.uk, Wikimedia Commons (PD)',
         },
       ],
@@ -29036,6 +28821,8 @@ export const KULTTUURI_KATEGORIAT = {
    * kappale sanoo nykytilanteen samalla tavalla neutraalisti kuin
    * oppaan turvallisuusjakso, osapuolia nimeämättä.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   sana: [
     {
       id: 'kaupunki',
@@ -29047,47 +28834,40 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Rooftops of Old Sana\'a (2286011017).jpg',
-          selite: 'Vanhankaupungin kattoja ylhäältä: ruskeatiilisten talojen '
-            + 'yläosat on kuvioitu valkoisella kalkilla, tasakatoilla on '
-            + 'vesisäiliöitä ja pyykkiä, ja keskellä kohoaa valkoinen '
-            + 'minareetti.',
+          selite: 'Sanan vanhassakaupungissa on yli sata moskeijaa, '
+            + 'kaksitoista hammamia ja 6 500 taloa.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Vegetable Garden in Old Sana\'a (2286045031).jpg',
-          selite: 'Vanhan Sanaan korttelipuutarha: vihannespenkkien takana nousee rivi '
-            + 'valkokuvioituja tornitaloja, ja palmut kurottavat muurin yli.',
+          selite: 'Jokaisen korttelin ytimenä oli moskeija, hammam ja '
+            + 'maqshama eli viljelypuutarha.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Beside Bab Al-Yemen (10874332564).jpg',
-          selite: 'Aukio Jemenin portin vieressä illalla: tornitalojen '
-            + 'katutasossa on valaistuja kauppoja markiiseineen, keskellä '
-            + 'palaa kolmilamppuinen katulyhty ja aukiolla liikkuu tiheä '
-            + 'ihmisjoukko.',
+          selite: 'Bab al-Yaman on vanhankaupungin pääportti, ja siitä '
+            + 'lähtivät etelään Ma\'bariin ja Dhamariin matkaavat.',
           lahde: 'Julian-G. Albert, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       avauskuvat: [
         {
           tiedosto: 'Bab-ul-Yemen, Sana\'a (2286823122).jpg',
-          selite: 'Bab al-Yaman ylhäältä: kaariaukon kummallakin puolella on '
-            + 'pyöreä tiilitorni, ja muurin takana nousee tornitalojen rinne, '
-            + 'jonka yllä kohoaa kaksi valkoista minareettia.',
+          selite: 'Vanhaakaupunkia kiertää savimuuri, jonka korkeus on 9–14 '
+            + 'metriä.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Street, Sanaá, Yemen - Flickr - Rod Waddington.jpg',
-          selite: 'Kivetty kuja vanhassakaupungissa: molemmin puolin nousee '
-            + 'tiiliseiniä valkoisine siksakkivöineen ja medaljonkeineen, ja '
-            + 'perällä kaartuu kahdeksankulmainen tornitalo.',
+          selite: 'Julkisivujen kuviot syntyvät ulos työntyvistä tiilistä, '
+            + 'jotka kalkitaan valkoisiksi.',
           lahde: 'Rod Waddington from Kergunyah, Australia, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Old Sana\'a City - Yemen.jpg',
-          selite: 'Vanhankaupungin kattomeri iltavalossa: satoja '
-            + 'litteäkattoisia tornitaloja, joiden ruskeaa tiiltä jaksottavat '
-            + 'valkoiset kaaret, ja takana häämöttävät vuoret.',
+          selite: 'Sanan vanhakaupunki on ollut Unescon '
+            + 'maailmanperintökohde vuodesta 1986.',
           lahde: 'Ibrahim Alqousi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -29095,15 +28875,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Jewish children in Sana\'a, Yemen, circa 1909.jpg',
           vuosi: 'n. 1909',
-          selite: 'Lapsijoukko Sanaan juutalaiskorttelin hiekkakadulla noin vuonna '
-            + '1909, taustalla korkeita savitiilitaloja pienine ikkuna-aukkoineen.',
+          selite: 'Sanaassa oli oma juutalaiskorttelinsa, ja sen '
+            + 'käsityöläiset takoivat muun muassa Bab al-Yamanin pylväiden '
+            + 'messinkirenkaat.',
           lahde: 'Hermann Burchardt, Commons (PD)',
         },
         {
           tiedosto: 'Old Sanaa, Yemen (10732756906).jpg',
           vuosi: '2013',
-          selite: 'Vanhan Sanaan kattoja nykyään: alue on Unescon '
-            + 'maailmanperintökohde, mutta talot eivät ole museo vaan koteja, joissa '
+          selite: 'Vanhankaupungin talot eivät ole museo vaan koteja, joissa '
             + 'asutaan yhä.',
           lahde: 'Rod Waddington, Commons (CC BY-SA 2.0)',
         },
@@ -29123,9 +28903,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jonka al-Hamdani kuvasi 900-luvulla '
             + 'kaksikymmenkerroksiseksi; useimmat arviot jäävät kuuden ja '
             + 'kymmenen kerroksen välille.',
-          selite: 'Tornitaloja kadulta: tiilipintaa jaksottavat valkoiset '
-            + 'vaakavyöt ja siksakkinauhat, ja ylimmällä katolla on erillinen '
-            + 'pieni huone samoin kuvioituine seinineen.',
+          selite: 'Tornitalon pohja on kivilohkareita ja yläkerrat '
+            + 'poltettua tiiltä, ja ylin kerros on mafraj eli '
+            + 'vastaanottohuone.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -29142,9 +28922,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'aqd mulawwan, jonka lasit pysyvät paikoillaan '
             + 'kipsiritilässä. Tiiliseinä suojataan kalkkirappauksella ja '
             + 'qadad-laastilla.',
-          selite: 'Värilasinen kaariaukko sisältä: kipsiritilän jokaisessa '
-            + 'aukossa on lasi — keskellä kaksi suurta sinistä ristiä, '
-            + 'ympärillä keltaisia, oransseja ja valkoisia soikioita.',
+          selite: 'Aqd mulawwan on värilasinen kaariaukko, jonka lasit '
+            + 'pysyvät paikoillaan kipsiritilässä.',
           lahde: 'Rod Waddington from Kergunyah, Australia, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -29160,20 +28939,16 @@ export const KULTTUURI_KATEGORIAT = {
             + 'es-Sha\'ub. Portin pylväiden messinkirenkaat tekivät '
             + 'juutalaiset käsityöläiset imaamien hallitsijakaudella. '
             + 'Suurelle moskeijalle on portilta noin 300 jaardia.',
-          selite: 'Bab al-Yaman vuonna 1986: harmaakivisen kaariaukon '
-            + 'kummallakin puolella on pyöreä tiilitorni ja sahalaitainen '
-            + 'muurinharja, ja portin edessä seisoo kymmeniä ihmisiä.',
+          selite: 'Saksalainen maantieteilijä Carl Rathjens ajoitti Bab '
+            + 'al-Yamanin nykyisen asun 1600-luvulle.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'تناغم المباني البرجية في صنعاء القديمة، اليمن oHarmony of traditional tower houses in Old Sana\'a, Yemen.jpg',
-          selite: 'Vanhan Sanan tornitaloja tammikuussa 2024: '
-            + 'ruskeatiilisten julkisivujen kuviot on vedetty valkoisella '
-            + 'kipsillä, ylimmissä kerroksissa hohtavat puoliympyräiset '
-            + 'värilasi-ikkunat, ja talojen alla kulkee Saylan '
-            + 'kivireunainen uoma.',
+          selite: 'Muurien sisään mahtuu noin kymmenesosa Sanan asukkaista, '
+            + 'ja loput asuvat uudessa kaupungissa al-Jadidissa.',
           lahde: 'Ayah Alakwaa, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Sana on vuoristokaupunki, jonka vanhakaupunki on vain '
@@ -29223,8 +28998,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'naisista 56 prosenttia kävelee.',
               kuva: {
                 tiedosto: 'Sana\'a (2286828534).jpg',
-                selite: 'Dabab-pikkubusseja kymmenittäin rivissä '
-                  + 'hiekkakentällä, kaikki valkoisia ja keltaraitaisia.',
+                selite: 'Dabab-minibusseja arvioitiin vuonna 2005 olevan '
+                  + 'Sanaassa 4 000–7 000, eikä niillä ole aikatauluja.',
                 lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -29246,9 +29021,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'laavakenttiä pohjoiseen menevän tien varressa.',
               kuva: {
                 tiedosto: 'Sana\'a3.JPG',
-                selite: 'Vanhankaupungin kattoja ja kaksi minareettia, joista '
-                  + 'toisen ympärillä on rakennusteline, ja taustalla '
-                  + 'vuorijono koko kuvan leveydeltä.',
+                selite: 'Sana on tasangon kapeimmassa kohdassa kahden '
+                  + 'vuoriston puristuksessa, joten se on voinut kasvaa vain '
+                  + 'pohjois–eteläakselilla.',
                 lahde: 'Scastellsf, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -29274,9 +29049,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaivoista ja käytetty pesuvesi johdettiin puutarhoihin.',
               kuva: {
                 tiedosto: 'Wadi highway, Sana\'a Yemen.jpg',
-                selite: 'Kivinen holvisilta, jonka kolmen leveän kaaren '
-                  + 'alitse kulkee autotie kuivan uoman pohjaa pitkin ja '
-                  + 'jonka takaa näkyy tornitaloja.',
+                selite: 'Sanan pohjavesi tulee pääosin ympäröivien wadien '
+                  + 'tulvista tasangolle, sateesta suoraan hyvin vähän.',
                 lahde: 'Step, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -29347,9 +29121,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vanhassakaupungissa lasketaan olleen yli sata moskeijaa, '
             + '12 hammamia ja 6 500 taloa, toisaalla 103 moskeijaa, 14 '
             + 'hammamia ja yli 6 000 taloa.',
-          selite: 'Muurin rajaama viljelypalsta keskellä vanhaakaupunkia: '
-            + 'kaistoihin jaettu vihreä kasvusto, muutama palmu ja lehtipuu, '
-            + 'ja muurin takana rivi tornitaloja.',
+          selite: 'Moskeijan pesualtaasta jäänyt vesi johdettiin korttelin '
+            + 'viljelypuutarhan kasteluun.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -29364,9 +29137,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'olemassa olleen torin viereen. Torit ovat ohjanneet koko '
             + 'kaupungin kasvua myöhemminkin, sillä uudet kaupunginosat '
             + 'ovat syntyneet niiden ympärille.',
-          selite: 'Vanhankaupungin torikuja hämärissä: märkä katukiveys, '
-            + 'valaistuja myymälöitä kyltteineen ja vaatekaupan edessä rivi '
-            + 'värikkäitä pitkiä pukuja.',
+          selite: 'Suq al-Milh eli suolatori on vanhempi kuin sen viereen '
+            + '600-luvulla rakennettu suuri moskeija.',
           lahde: 'Rod Waddington from Kergunyah, Australia, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -29382,10 +29154,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kannatellaan peukaloilla ja lyödään kevyesti kahdeksalla '
             + 'muulla sormella. Tyyli on yksi noin viidestä '
             + 'jemeniläisestä sävystä, joita sanotaan sanalla lawn.',
-          selite: 'Tornitalon ylempi kerros lähikuvassa: kolmen ikkunan '
-            + 'yläpuolella on rivi puoliympyräisiä valoaukkoja kipsisine '
-            + 'tähtiristikkoineen, ja seinän yläreunassa kulkee läpimurrettu '
-            + 'kaide.',
+          selite: 'Ylimmän kerroksen mafrajissa kokoonnutaan iltapäivisin, '
+            + 'ja kokoontumista sanotaan nimellä magyal.',
           lahde: 'Rod Waddington from Kergunyah, Australia, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -29479,6 +29249,8 @@ export const KULTTUURI_KATEGORIAT = {
    * erässä uuteen mittaan; nykytilanne on siinä yhtenä virkkeenä
    * ilman osapuolia.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   aden: [
     {
       id: 'kaupunki',
@@ -29489,46 +29261,43 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Aden Crater.jpg',
-          selite: 'Craterin kaupunginosa ylhäältä: matalat vaaleat talot '
-            + 'täyttävät kraatterin pohjan, takana kohoaa kasviton harjanne '
-            + 'ja lahdella kelluu kapeita veneitä.',
+          selite: 'Adenin vanhin kaupunginosa on sammuneen tulivuoren '
+            + 'kraatterin pohjalla, ja sen brittien antama nimi Crater on '
+            + 'kirjaimellinen; virallinen nimi on Seera.',
           lahde: 'Christina Hecker @ Deutsch-Jemenitische Gesellschaft, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gebouwen aan de kust van Aden in Jemen Aden. French & English consulates (titel op object), RP-F-00-5018-15.jpg',
-          selite: 'Adenin rantaviivaa 1800-luvun lopulla: matalien valkoisten '
-            + 'rakennusten rivissä on kaksikerroksinen talo, jossa kiertää '
-            + 'avoin veranta molemmissa kerroksissa, ja kuvan alle on '
-            + 'kirjoitettu käsin French & English Consulates.',
+          selite: 'Aden julistettiin vapaakauppasatamaksi vuonna 1850, ja '
+            + '1800-luvun lopulla sen rannalla toimivat Ranskan ja Englannin '
+            + 'konsulaatit.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: '24 Aden (6) cisterne.jpg',
-          selite: 'Tawilan altaille johtava kuru: jyrkkien kallioseinämien '
-            + 'välissä on kivestä muurattu terassi valkoisine kaiteineen, ja '
-            + 'kurun perällä erottuu poikittainen muuri.',
+          selite: 'Wadi Tawilan uomaan hakattiin sadeveden talteenottoon alun '
+            + 'perin noin 53 porrastettua allasta, joista on jäljellä 13.',
           lahde: 'Ljuba brank, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       avauskuvat: [
         {
           tiedosto: 'Aden, Yemen Port.jpg',
-          selite: 'Adenin satama mereltä: rannassa matalia vaaleita '
-            + 'rakennuksia ja laituri veneineen, ja takana paljas '
-            + 'vuorenrinne, jonka päällä erottuu kapea torni.',
+          selite: 'Adenin luonnonsatama on yksi maailman suurimmista, ja '
+            + 'Bab el-Mandebin salmelle on sieltä 170 kilometriä.',
           lahde: 'T3n60, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Old Town Aden Yemen.jpg',
-          selite: 'Kaksi valkoista minareettia kraatterin kaupungissa, '
-            + 'takanaan lähes pystysuora tumma kallioseinämä, jonka juurella '
-            + 'talot kiipeävät rinnettä ylös.',
+          selite: 'Craterin vanhaa kaupunkia ympäröi Jabal Shamsanin '
+            + 'vuoristo, jonka korkeimmat huiput ylittävät 500 metriä.',
           lahde: 'Jialiang Gao www.peace-on-earth.org, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Aden. Steamer Point. Aug 2013 (9727325813).jpg',
-          selite: 'Tawahin niemi ylhäältä: vasemmalla satama nostureineen ja '
-            + 'rahtilaivoineen, oikealla tiivis kaupunginosa vuorenrinteellä.',
+          selite: 'Tawahiin eli Steamer Pointiin siirtyi hiiliasema ja '
+            + 'matkustajaliikenne, kun kraatterin puoleinen vanha satama '
+            + 'mataloitui liettymällä.',
           lahde: 'Brian Harrington Spier from Shanghai, China, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -29536,17 +29305,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'De haven van Aden in Zuid Jemen Aden (titel op object), RP-F-00-5018-14.jpg',
           vuosi: '1890-1910',
-          selite: 'Adenin satama ja ranta noin vuoden 1900 tienoilla sammuneen '
-            + 'tulivuoren mustien rinteiden alla, kun laivat pysähtyivät täällä '
-            + 'ottamaan hiiltä matkalla Suezista Intiaan.',
+          selite: 'Höyrylaivat pysähtyivät Adenissa ottamaan hiiltä matkalla '
+            + 'Suezista Intiaan, ja Suezin kanavan avaaminen 1869 '
+            + 'moninkertaisti sataman liikenteen.',
           lahde: 'Rijksmuseum, Commons (CC0)',
         },
         {
           tiedosto: 'Aden - panorama of crater from Tawila Tunks (8739851148).jpg',
           vuosi: '2013',
-          selite: 'Adenin Crater-kaupunginosa nykyään vesisäiliöiden kohdalta '
-            + 'katsottuna: talot täyttävät kraatterin pohjan ja tummat rinteet '
-            + 'nousevat ympärillä kuin muuri.',
+          selite: 'Craterissa asui vuoden 2003 laskennassa 76 723 ihmistä, ja '
+            + 'kaupunginosa täyttää yhä koko kraatterin pohjan.',
           lahde: 'JamesGardinerCollection, Commons (CC BY-SA 2.0)',
         },
       ],
@@ -29564,10 +29332,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muodostuu kahdesta niemestä, ja meri molemmin puolin '
             + 'tasoittaa lämpötilaa: vuoden keskilämpötila on 29,1 '
             + 'astetta ja ilma on kostea ympäri vuoden.',
-          selite: 'Puupiirros Adenista markkinapäivänä vuodelta 1885: '
-            + 'kivisellä kentällä makaa kymmeniä kameleita, ja '
-            + 'holvikaarikäytävien reunustaman talorivin yllä kohoaa jyrkkä '
-            + 'vuorenseinämä.',
+          selite: 'Vapaakauppasatamaksi julistaminen vei Adeniin vuodesta '
+            + '1850 alkaen Mokhalta koko Jemenin kahvikaupan.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
         },
         {
@@ -29585,10 +29351,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jaa., toiset lukevat altaat rasulideille, jotka '
             + 'kunnostivat niitä vuosina 1229-1454. Paikalla oleva kyltti '
             + 'myöntää, ettei rakentamisesta tiedetä varmaa.',
-          selite: 'Puupiirros Adenin porrasaltaista, alareunassa teksti '
-            + 'TERRACE-CISTERNS, ADEN: tyhjän altaan sileäksi rapatun '
-            + 'reunamuurin takana altaat jatkuvat porrastuen ylös kurua '
-            + 'kohti.',
+          selite: 'Altaiden seinät vuorattiin stukilla, johon sekoitettu '
+            + 'tulivuorentuhka teki pinnasta vettä läpäisemättömän '
+            + 'luonnonsementin.',
           lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -29606,18 +29371,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Hadramautiin. Moskeija rakennettiin 1400-luvun lopulla tai '
             + '1500-luvun alussa, ja nykyinen rakennus on vuoden 1859 '
             + 'jälkeiseltä ajalta.',
-          selite: 'Aidrus-moskeija Craterissa: valkoisen kupolin huipulla on '
-            + 'kolme päällekkäistä vihreää palloa, ja minareetissa kaksi '
-            + 'puuparveketta ja uritettu huippukupoli.',
+          selite: 'Aidrus-moskeija on nimetty Abu Bakr al-Aydarusin '
+            + '(1447–1508) mukaan, ja nykyinen rakennus on vuoden 1859 '
+            + 'jälkeiseltä ajalta.',
           lahde: 'Manfred Steffen @ Deutsch-Jemenitische Gesellschaft, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Cisterns of Aden.jpg',
-          selite: 'Adenin Tawilan vesisäiliöt marraskuussa 2022: kahden '
-            + 'tumman laavaseinämän välissä kaartaa kivinen silta, ja sen '
-            + 'alla levittäytyy vaaleaksi rapattu tyhjä säiliöallas.',
+          selite: 'Tawilan altaat hillitsevät yhä Shamsanin rinteiltä '
+            + 'valuvia tulvavesiä, vaikka niiden rakentamisajasta lähteet '
+            + 'ovat eri mieltä.',
           lahde: 'Enas 1st, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Aden ei ole yksi kaupunki vaan ketju kaupunginosia '
@@ -29669,10 +29434,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'liikenteeseen naapurimaiden tavoin.',
               kuva: {
                 tiedosto: 'مطار عدن الدولي (محمدناصر مهدي القميشي - panoramio.jpg',
-                selite: 'Adenin lentoaseman terminaali vuonna 2007 '
-                  + 'laskeutuvan koneen siiven yli kuvattuna, julkisivussa '
-                  + 'rivi korkeita kaari-ikkunoita ja edessä kaksi '
-                  + 'matkustajabussia.',
+                selite: 'Adenin kansainvälinen lentoasema rakennettiin '
+                  + 'vuonna 1927 perustetun brittiläisen sotilaskentän '
+                  + 'viereen, ja se on Jemenin toiseksi suurin.',
                 lahde: 'محمد ناصر مهدي القمي…, Wikimedia Commons (CC BY 3.0)',
               },
             },
@@ -29695,9 +29459,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuuden kilometrin kokoiseksi.',
               kuva: {
                 tiedosto: 'ISS-47 Port of Aden, Yemen.jpg',
-                selite: 'Avaruusaseman kuva Adenista: keskellä tumma '
-                  + 'uurteinen vuoristoniemi, ympärillä sininen merenlahti ja '
-                  + 'pohjoisessa kiitotien suora valkoinen viiva.',
+                selite: 'Aden rakentuu kahdelle niemelle, ja antiikin aikaan '
+                  + 'sen mantereeseen yhdistävä kannas oli paljon nykyistä '
+                  + 'kapeampi.',
                 lahde: 'NASA, Wikimedia Commons (PD)',
               },
             },
@@ -29763,10 +29527,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'keskilämpö 24–25 astetta ja sade muutama millimetri.',
               kuva: {
                 tiedosto: 'Yémen-209.JPG',
-                selite: 'Gold Mohurin lahden norsukallio vuonna 2004: '
-                  + 'tummasta laavakivestä kulunut kaari työntyy mereen kuin '
-                  + 'norsun kärsä, ja takana rinteessä on vaaleita '
-                  + 'kerrostaloja.',
+                selite: 'Gold Mohurin lahden rantakalliot ovat koko Adenin '
+                  + 'kallioperän tavoin tulivuoriperäisiä.',
                 lahde: 'BluesyPete, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -29797,10 +29559,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Bombayhin menevä laiva saattoi jättää Adeniin sen postin, '
             + 'joka oli menossa Mombasaan. Suezin kanavan avaaminen 1869 '
             + 'moninkertaisti liikenteen.',
-          selite: 'Käsin väritetty postikortti Steamer Pointista noin '
-            + 'vuodelta 1910: ulapalla on ankkurissa punarunkoinen '
-            + 'kaksisavupiippuinen matkustajahöyrylaiva, jonka yläreunan '
-            + 'teksti nimeää Persiaksi.',
+          selite: 'Steamer Pointin satamasta tuli myös postin vaihtopaikka, '
+            + 'jossa Suezista Bombayhin menevä laiva saattoi jättää '
+            + 'Mombasaan matkaavan postin.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
         },
         {
@@ -29817,9 +29578,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'edellä oli vain New York. Raha vaihtui sataman mukana: kun '
             + 'Intia itsenäistyi vuonna 1947, Adenissa käytetyt Intian '
             + 'rupiat korvattiin Itä-Afrikan shillingeillä.',
-          selite: 'Adenin satama veneestä vuonna 1949: rannan matalien '
-            + 'rakennusten takana nousee paljas kukkula kapeine torneineen, '
-            + 'ja lahdella kelluu toistakymmentä pientä venettä.',
+          selite: 'Adenin satama oli 1950-luvulla maailman toiseksi vilkkain '
+            + 'polttoainetäydennyspaikka, ja edellä oli vain New York.',
           lahde: 'Taks, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -29837,9 +29597,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Craterissa on siitä pienempi jäljennös Arwan kadun '
             + 'varrella. Kello pysäytettiin kunnostusta varten vuonna '
             + '1986.',
-          selite: 'Adenin sisäsatama pilvisenä päivänä: keskellä on matala '
-            + 'tumma kallioluoto, ja rinteeseen nousevan kaupunginosan yllä '
-            + 'erottuu kapea terävähuippuinen torni.',
+          selite: 'Sataman rannan 22-metrinen kellotorni valmistui vuonna '
+            + '1890, ja lontoolaisen esikuvansa mukaan sitä kutsutaan '
+            + 'nimellä Big Ben Aden.',
           lahde: 'Грищук ЮН, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -29898,6 +29658,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   salalah: [
     {
       id: 'kaupunki',
@@ -29908,23 +29670,20 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Al Baleed Archaeological Park.jpg',
-          selite: 'Al-Baleedin kaivausalue iltavalossa: hiekasta nousee matalia '
-            + 'kivimuureja ja perustusrivejä, ja niiden takana on '
-            + 'palmunlehtikatos ja tiheä palmurivistö.',
+          selite: 'Al-Baleedissa on kaivettu vuodesta 1952 lähtien, ja alue '
+            + 'on ollut Unescon maailmanperintöluettelossa vuodesta 2000.',
           lahde: 'Juozas Šalna, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Darbat Waterfalls, Dhofar.jpg',
-          selite: 'Wadi Darbatin putoukset heinäkuussa khareef-kauden aikaan, '
-            + 'kun vesi valuu leveinä verhoina kalkkikiviportaiden yli '
-            + 'turkoosiin altaaseen.',
+          selite: 'Wadi Darbatin putoukset ovat 35–40 kilometrin päässä '
+            + 'Salalahista itään, ja ne saavat vetensä khareef-kaudesta.',
           lahde: 'Shobiha, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Oman, Wadi Dawkah, Land of Frankincense.jpg',
-          selite: 'Wadi Dawkahin suitsukepuisto, jossa vaalealla sorakentällä '
-            + 'kasvaa harvassa kymmeniä matalia leveälatvuksisia '
-            + 'suitsukepuita horisonttiin asti.',
+          selite: 'Dhofarin suitsukepuu kasvaa kivisillä kalkkipitoisilla '
+            + 'rinteillä enintään 1 200 metrin korkeudessa.',
           lahde: 'Dr. Thomas Liptak, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -29943,9 +29702,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rannikolle tulivat portugalilaiset, osmanit ja mamelukit. '
             + 'Kaivauksia on tehty vuodesta 1952 lähtien, ja alue on '
             + 'ollut Unescon maailmanperintöluettelossa vuodesta 2000.',
-          selite: 'Al-Baleedin raunioalue vedestä katsottuna: viiston tukimuurin '
-            + 'takana kohoaa kaksi matalaa kumpua paksuine muurinjäänteineen '
-            + 'ja porrasmaisine kivikerroksineen.',
+          selite: 'Keskiaikainen Zafar rakennettiin 500-luvulla ja jäi '
+            + 'autioksi 1600-luvulla, ja siitä koko Dhofarin maakunta sai '
+            + 'nimensä.',
           lahde: 'https://www.flickr.com/photos/pukomuko/, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -29962,9 +29721,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '20,6 ja elokuussa 18,6 millimetriä. Aurinko sen sijaan '
             + 'katoaa lähes kokonaan — toukokuun 335 paistetunnista '
             + 'jäljelle jää heinäkuussa 44.',
-          selite: 'Salalahin yläpuolinen rinne khareefin aikaan, kun betonitien '
-            + 'reunasta alkaa yhtenäinen vihreä ruohorinne ja laakson takana '
-            + 'kohoaa matala vihreä ylänkö.',
+          selite: 'Khareef tarkoittaa Dhofarissa kesämonsuunia kesäkuun ja '
+            + 'syyskuun alun välillä, ja se vihertää rinteet.',
           lahde: 'Poojaryroshan, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -29981,9 +29739,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1993, kielitietokanta Ethnologue 89 300 vuodelta 2024. '
             + 'Unescon uhanalaisten kielten atlas luokitteli kielen '
             + 'vuonna 2010 vakavasti uhanalaiseksi.',
-          selite: 'Ihminen seisoo selin katsojaan pitkässä heinikossa '
-            + 'ruudullinen huivi pään ja hartioiden yli, ja edessä laiduntaa '
-            + 'toistakymmentä vuohta.',
+          selite: 'Shehrin eli jibbalin oma nimi Śḥɛrɛ̄t tarkoittaa vuorten '
+            + 'kieltä, ja sen puhujat asuvat vuorilla, ylängöillä ja '
+            + 'rannikon kaupungeissa.',
           lahde: 'Erfan.arafat, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -29997,32 +29755,31 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Salalah, orti 01.jpg',
-          selite: 'Vihannespenkkejä ja kookospalmuja keskellä kaupunkia, ja '
-            + 'ruskeaan multaan on muotoiltu matalia kasteluvalleja '
-            + 'ruuduiksi.',
+          selite: 'Salalahin kortteleiden välisissä tarhoissa kasvaa '
+            + 'kookosta, banaania ja vihanneksia, jotka myydään '
+            + 'tienvarsikojuissa muutaman sadan metrin päässä pellosta.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Foggy afternoon, Dahreez beach, Dhofar, Salalah, Sultanate of Oman.jpg',
-          selite: 'Mustavalkoinen kuva Ad-Dahrizin rannalta sumuisena '
-            + 'iltapäivänä, kun kookospalmujen rungot kaartuvat meren ylle '
-            + 'eikä horisonttia erota lainkaan.',
+          selite: 'Khareefin sumu syntyy, kun mereltä puhaltava lämmin ilma '
+            + 'jäähtyy syvyydestä nousevan kylmän veden yllä.',
           lahde: 'Erfan.arafat, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Salalah, spiaggia al tramonto (presso hotel al-mansur) 01.jpg',
-          selite: 'Salalahin ranta auringonlaskun aikaan: märkä hiekka heijastaa '
-            + 'oranssia taivasta, ja rantaviivalla erottuu rivi matalia '
-            + 'hotellirakennuksia palmujen seassa.',
+          selite: 'Salalahin rantatasanko jää meren ja Dhofarin vuorten '
+            + 'väliin, ja koko kaupunki mahtuu sille.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Salalah, ad-dahariz street, 01.jpg',
-          selite: 'Katu Ad-Dahrizin kaupunginosassa, jossa molemmin puolin '
-            + 'nousee hiekanvärisiä taloja teräväkärkisine '
-            + 'kaari-ikkunoineen.',
+          selite: 'Salalahissa on runsaat '
+            + 'kolmesataakolmekymmentätuhatta asukasta, ja suuri osa heistä '
+            + 'on tullut Intiasta, Pakistanista, Bangladeshista ja '
+            + 'Filippiineiltä.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Salalah on Omanin eteläkärjessä, ja sen pääsuunta on '
@@ -30061,8 +29818,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'sovitaan ennen matkaa.',
               kuva: {
                 tiedosto: 'Salalah Airport.jpg',
-                selite: 'Salalahin lentoaseman lennonjohtotorni vastavalossa, ja '
-                  + 'oikealla jatkuu terminaalin sahalaitainen kattolinja.',
+                selite: 'Salalahin uusi lentoasema avattiin 15. kesäkuuta '
+                  + '2015, ja vanha jäi kotimaan ja hätätilanteiden '
+                  + 'käyttöön.',
                 lahde: 'Silvio Taverna, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -30083,9 +29841,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'putoukset.',
               kuva: {
                 tiedosto: 'Khor Salalah Dhofar.jpg',
-                selite: 'Rannikon khawr eli laguuni hämärän aikaan: soraikon '
-                  + 'takana levittäytyy laaja tasainen vesialue, jonka '
-                  + 'reunaa kiertää tiheä kookospalmurivi.',
+                selite: 'Khawr Salalahin laguunissa käy marras–huhtikuussa '
+                  + 'flamingoja, kalasääskiä ja muuttolintuja.',
                 lahde: 'Silvio Taverna, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -30123,9 +29880,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vapaakauppa-alue.',
               kuva: {
                 tiedosto: 'Salalah Port - panoramio.jpg',
-                selite: 'Salalahin sataman laituri: betonilaiturin reunassa on '
-                  + 'rivi mustia kiinnityspollareita, ja oikealla kohoaa '
-                  + 'kolme oranssia konttinosturia.',
+                selite: 'Raysutin syväsatamaan mahtuu kahdeksantoista metrin '
+                  + 'syväyksellä kulkeva alus, ja se on maailman '
+                  + 'yhdenneksitoista vilkkain jälleenlaivaussatama.',
                 lahde: 'ismo, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -30171,9 +29928,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Dhofarissa se kasvaa Salalahista pohjoiseen. '
             + 'Kansainvälinen luonnonsuojeluliitto merkitsi puun vuonna '
             + '1998 silmälläpidettäväksi.',
-          selite: 'Suitsukepuu jyrkässä kalkkikivirinteessä: rungot haarautuvat '
-            + 'useaksi jo maan tasalta, ja vaalea kuori kuoriutuu ohuina '
-            + 'liuskoina.',
+          selite: 'Boswellia sacran kuori on ohut kuin paperi, ja jyrkässä '
+            + 'rinteessä puu kasvattaa rungon tyveen juuripullistuman, joka '
+            + 'pitää sen paikallaan.',
           lahde: 'Mileli, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -30190,9 +29947,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paakkuja. Paremmuudesta ei olla yksimielisiä — laajimmin '
             + 'hyväksytty näkemys on, että Somalian metsien hartsi on '
             + 'laadukkainta.',
-          selite: 'Suitsukejyviä avatussa uurretussa metallirasiassa, väriltään '
-            + 'kellanruskeasta lähes valkoiseen ja pinnaltaan jauhemaisen '
-            + 'huurteisia.',
+          selite: 'Suitsukejyvät lajitellaan käsin laadun mukaan, ja Najdin '
+            + 'kapean sumuvyöhykkeen hitaasti kasvavat puut antavat suuria '
+            + 'valkoisia paakkuja.',
           lahde: 'Andygriffith at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
@@ -30210,9 +29967,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Palmyraan. Al-Baleedin puistossa avattiin vuonna 2007 '
             + 'suitsukemuseo, jonka kaksi salia kertovat merenkulusta ja '
             + 'historiasta.',
-          selite: 'Suitsukemuseon meriosasto Al-Baleedin puistossa, jossa salin '
-            + 'täyttää suuren puulaivan kaiverrettu takaosa kaiteineen ja '
-            + 'purjeineen.',
+          selite: 'Al-Baleedin puistossa avattiin vuonna 2007 suitsukemuseo, '
+            + 'jonka kaksi salia kertovat merenkulusta ja historiasta.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -30291,6 +30047,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/asia-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   mosul: [
     {
       id: 'kaupunki',
@@ -30315,25 +30073,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Iraq. Mosul. Mosul bazaars and river scenes on the Tigris. The Tigris. Construction of river rafts on inflated goatskins. Mosul bridge seen in distance LOC matpc.16216.jpg',
-          selite: 'Tigrisin ranta Mosulissa vuonna 1932: rannalla sidotaan '
-            + 'puuriu\'uista lauttaa täyteen puhallettujen nahkasäkkien '
-            + 'päälle, ja taustalla joen ylittää veneiden varassa lepäävä '
-            + 'silta.',
+          selite: 'Tigriillä liikuttiin kelekeillä: puurunko ladottiin '
+            + 'täyteen puhallettujen vuohennahkojen päälle ja annettiin '
+            + 'virran viedä alavirtaan.',
           lahde: 'Matson Collection, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Great Mosque of al-Nuri Reconstruction.jpg',
-          selite: 'Al-Nurin suurmoskeijan jälleenrakennustyömaa helmikuussa '
-            + '2024: vihreäkupolisen rukoushuoneen ympärille on valettu '
-            + 'uudet betonipilarit ja -palkit, ja edustalla on hiekkakasoja '
-            + 'ja raudoitusteräksiä.',
+          selite: 'Al-Nurin moskeijan jälleenrakennuksen peruskivi '
+            + 'laskettiin joulukuussa 2018, ja moskeija vihittiin uudelleen '
+            + '1. syyskuuta 2025.',
           lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Views of the old city of Mosul along the river Tiger, in summer of 2019 after war with the Islamic State 09.jpg',
-          selite: 'Mosulin vanhakaupunki Tigrisin toiselta rannalta kesällä 2019: '
-            + 'sortuneiden talojen keskellä seisoo yhä muutama ehjä julkisivu, jälkinä '
-            + 'vuoden 2017 taisteluista.',
+          selite: 'Mosulin vanhakaupunki vaurioitui eniten vuosien '
+            + '2014–2017 sotatoimissa, ja korjaustyöt jatkuvat siellä yhä.',
           lahde: 'Levi Clancy, Wikimedia Commons (CC0)',
         },
       ],
@@ -30353,9 +30108,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'samaan tapaan kuin calico on saanut nimensä Calicutista ja '
             + 'denim Nîmesistä. Kangasta itseään kudottiin eniten '
             + 'Bengalissa.',
-          selite: 'Valkoinen musliinipuku mallinuken päällä: hameessa on '
-            + 'kolme volangikerrosta, ja kangas on niin ohutta, että '
-            + 'alempi volangi näkyy ylemmän läpi.',
+          selite: 'Hobson-Jobson-sanakirja johtaa musliinin nimen '
+            + 'Mosulista, mutta osa tutkijoista johtaa sen Masulipatnamin '
+            + 'satamasta.',
           lahde: 'Unknown author, Wikimedia Commons (PD)',
         },
         {
@@ -30371,9 +30126,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'varrelle. Hän rakennutti Sinjarin portin, Imam Yahyan ja '
             + 'Awn al-Dinin hautapyhäköt sekä Tigrisin länsirannalle Qara '
             + 'Sarayn eli Mustan palatsin.',
-          selite: 'Käsikirjoituksen kokosivun kuva kultapohjalle '
-            + 'maalattuna: parrakas mies istuu seuralaistensa keskellä '
-            + 'kaavussa, jonka peittää tiheä sininen kiehkurakirjoitus.',
+          selite: 'Vapautettu orja Badr al-Din Lu\'lu\' rakennutti Mosuliin '
+            + 'Sinjarin portin, kaksi hautapyhäkköä ja Tigrisin '
+            + 'länsirannalle Mustan palatsin.',
           lahde: '13th century painter, Wikimedia Commons (PD)',
         },
         {
@@ -30390,9 +30145,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'savitiiliseinän pintaan lyijytapeilla ja -haoilla niin, '
             + 'että alareuna lepäsi bitumipedillä, ja huoneet vuorattiin '
             + 'yhtenäisillä noin 2,1 metrin korkuisilla kuvasarjoilla.',
-          selite: 'Kipsikivinen seinälaatta Niniven pohjoisesta '
-            + 'palatsista: parrakas mies lepää sohvalla, hahmo istuu '
-            + 'tuolilla malja koholla ja palvelija seisoo viuhka kädessä.',
+          selite: 'Mosulin marmori on kipsikiveä, josta tehtiin '
+            + 'assyrialaisten palatsien seinälaatat 800–600-luvuilla eaa.',
           lahde: 'Allan Gluck, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -30410,9 +30164,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'huippuun nostettiin lippu marraskuussa 2024, ja moskeija '
             + 'vihittiin uudelleen 1. syyskuuta 2025. Siksi osa lehden '
             + 'kuvista on sotaa edeltävältä ajalta.',
-          selite: 'Uudelleen rakennettu Hadba-minareetti marraskuussa 2025 '
-            + 'alta kuvattuna: neliömäisen tiilijalustan päältä nousee '
-            + 'lieriö, jota kiertää vyöhykkeittäin eri tiilikuvio.',
+          selite: 'Hadba-minareetin huippuun nostettiin lippu marraskuussa '
+            + '2024, kun Unescon ja Irakin kulttuuriministeriön hanke oli '
+            + 'edennyt siihen asti.',
           lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -30432,27 +30186,20 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Ruins Maydan Mosul.jpg',
-          selite: 'Vanhankaupungin Maydanin kortteli Mosulissa huhtikuussa '
-            + '2025: katottomien kivitalojen rivit ja soraläjät jatkuvat '
-            + 'näköpiirin päähän, ja horisontissa kohoaa kaksi '
-            + 'rakennusnosturia uuden kaupungin talojen yllä.',
+          selite: 'Vanhankaupungin Maydanin kortteli odottaa yhä korjausta, '
+            + 'kun uusia katuja ja rantapuistoja on jo valmiina.',
           lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Qantarat al-jowmard.jpg',
-          selite: 'Al-Jowmardin holvikuja Mosulin vanhassakaupungissa '
-            + 'tammikuussa 2024: valkoiseksi rapatun talon alitse johtaa '
-            + 'harmaakivinen kaksoiskaari, jonka yläpuolella on '
-            + 'arabiankielinen kivitaulu, ja käytävän päässä on vielä '
-            + 'soraa ja purettua muuria.',
+          selite: 'Al-Jowmardin holvikuja kuuluu Mosulin vanhankaupungin '
+            + 'kujaverkkoon, joka syntyi ennen autoja.',
           lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Artist’s impression of Assyrian palaces from The Monuments of Nineveh by Sir Austen Henry Layard, 1853.jpg',
-          selite: 'Layardin vuoden 1853 väritetty kuvitelma Assyrian '
-            + 'palatseista joen rannalla — porrastettu torni, pylväiköitä '
-            + 'terasseilla ja siivekkäitä härkähahmoja portilla — eli '
-            + 'rekonstruktio, ei havainto.',
+          selite: 'Layardin vuoden 1853 väritetty kuva Assyrian palatseista '
+            + 'on rekonstruktio eikä havainto.',
           lahde: 'Austen Henry Layard, Wikimedia Commons (PD)',
         },
       ],
@@ -30460,26 +30207,23 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Crowded marketplace (Mosul, 1932).jpg',
           vuosi: '1932',
-          selite: 'Mosulin torikuja vuonna 1932, kojujen yllä kesähelteen varjoksi '
-            + 'pingotettu kangaskatos.',
+          selite: 'Mosulia kehuttiin osmanivallan alussa katetusta '
+            + 'basaaristaan ja kankaistaan.',
           lahde: 'G. Eric ja Edith Matson / Library of Congress (PD)',
         },
         {
           tiedosto: '1I0A9237.jpg',
           vuosi: '2019',
-          selite: 'Tigrisin länsiranta Mosulissa ja taustalla kaupungin vanha silta; '
-            + 'joen toisella puolella, kuvan yläreunan takana, ovat Niniven raunioiden '
-            + 'kummut.',
+          selite: 'Niniven raunioiden kummut ovat Tigrisin itärannalla '
+            + 'vastapäätä vanhaakaupunkia.',
           lahde: 'Goldmansam, Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Fatima Khatun Mosque Entrance Mosul.jpg',
-          selite: 'Fatima Khatunin moskeijan portti Mosulissa joulukuussa '
-            + '2025: harmaaseen marmoriin veistetyn teräväkärkisen kaaren '
-            + 'reunoja kiertää kullattu köynnöskuvio, ja avoimesta ovesta '
-            + 'näkyy pikkukivillä laskettu sisäpiha.',
+          selite: 'Mosul on Irakin toiseksi suurin kaupunki, ja sen nimi '
+            + 'al-Mawsil tarkoittaa liitoskohtaa.',
           lahde: 'الدبوني, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Mosul on Irakin toiseksi suurin kaupunki, ja se on '
@@ -30527,9 +30271,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'osa aivan viime vuosilta.',
               kuva: {
                 tiedosto: 'The Old Bridge and The Tigris River-Mosul 02.jpg',
-                selite: 'Tigris Vanhalta sillalta tammikuussa 2025: joki '
-                  + 'levittäytyy leveänä ja vaaleansinisenä, ja sen yllä '
-                  + 'kaartaa parikymmentä lokkia.',
+                selite: 'Tigrisin yli menee Mosulissa nykyään viisi siltaa, '
+                  + 'ja ne ovat sodan jäljiltä korjattuja tai kokonaan '
+                  + 'uusia.',
                 lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -30550,10 +30294,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kumpu, eteläpuolella Nabi Yunusin kumpu.',
               kuva: {
                 tiedosto: 'Mosul Wall-Nineveh 02.jpg',
-                selite: 'Niniven muurilinjaa tammikuussa 2025: vaaleista '
-                  + 'kivilohkoista uudelleen muurattu seinä jatkuu '
-                  + 'porrastettujen harjahampaiden alla, ja siitä työntyy '
-                  + 'ulos kolme nelikulmaista tornia.',
+                selite: 'Niniven muuri oli kaksitoista kilometriä pitkä ja '
+                  + 'kiersi seitsemänsataaviisikymmentä hehtaaria.',
                 lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -30576,10 +30318,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'painaa kirjoja.',
               kuva: {
                 tiedosto: 'Ibn al-Atheer Printing House-University of Mosul.jpg',
-                selite: 'Mosulin yliopiston painotalo tammikuussa 2025: '
-                  + 'symmetrisen julkisivun keskellä on korkea '
-                  + 'sisäänkäynti neljän paksun pylvään takana, ja '
-                  + 'edustalla kasvaa nuoria oliivipuita.',
+                selite: 'Mosulin kirjapainon perustivat vuonna 1873 '
+                  + 'kaupunkiin tulleet dominikaanisisaret koulujen, '
+                  + 'terveysasemien ja pajojen ohella.',
                 lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -30643,10 +30384,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Mosulissa tehtyjä on kaksi: Shuja\' ibn Man\'an kannu '
             + 'vuodelta 1232 ja Ali ibn Yahyan kynälaatikko vuodelta '
             + '1255–56.',
-          selite: 'Yksityiskohta Shuja\' ibn Man\'an kannun kyljestä: '
-            + 'medaljongissa istuu kaksi soittajaa, ja heidän kasvonsa ja '
-            + 'vaatteensa erottuvat vaaleina, koska ne on upotettu '
-            + 'hopealla.',
+          selite: 'Varmuudella Mosulissa tehtyjä upote-esineitä on kaksi: '
+            + 'Shuja\' ibn Man\'an kannu vuodelta 1232 ja Ali ibn Yahyan '
+            + 'kynälaatikko vuosilta 1255–56.',
           lahde: 'Unknown artist, April 1232, Mosul, Iraq, Wikimedia Commons (PD)',
         },
         {
@@ -30663,9 +30403,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'soittajia. Kuvioihin oli upotettu hopeaa ja se erottui '
             + 'messingistä vaaleana, mutta suurin osa upotuksesta on ajan '
             + 'mittaan irronnut.',
-          selite: 'Messinkikannu, jonka päärynänmuotoista runkoa kiertävät '
-            + 'arabiankieliset kirjoitusnauhat ja pienten ihmishahmojen '
-            + 'vyöhyke; vaaleaa upotusta on jäljellä siellä täällä.',
+          selite: 'Ahmad al-Dhaki al-Mawsilin messinkikannussa vuodelta '
+            + '1223 on kolmessa kerroksessa 30 medaljonkia, ja suurin osa '
+            + 'hopeaupotuksesta on ajan mittaan irronnut.',
           lahde: 'Ahmad al-Dhaki al-Mawsili, Wikimedia Commons (CC0)',
         },
         {
@@ -30683,9 +30423,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Salama ja Yunus ibn Yusuf. Toinen merkki on 10- tai '
             + '12-lehtinen ruusuke esineen pohjassa, kohdassa jota ei '
             + 'tavallisesti näe.',
-          selite: 'Lähikuva Yunus ibn Yusufin kannun kyljestä: '
-            + 'kahdeksankulmion sisus on täytetty sokkelomaisella '
-            + 'murtoviivakuviolla, joka on upotettu vaalealla metallilla.',
+          selite: 'Kahdeksankulmiomerkki esiintyy ainakin 13 '
+            + 'mosulilaisessa esineessä 1220-luvulta 1240-luvulle, ja sitä '
+            + 'pidetään pajan tai ammattikunnan tunnuksena.',
           lahde: 'Yunus ibn Yusuf, "al-naqqash al-Mawsili" (Iraqi or Syrian), Wikimedia Commons (PD)',
         },
       ],
