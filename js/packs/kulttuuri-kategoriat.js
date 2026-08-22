@@ -44,6 +44,8 @@ export const KULTTUURI_KATEGORIAT = {
    * olennaisin sisältö ja pakolliset selitykset säilyivät; lahde-rivit,
    * nostot, oppaat ja kuvatiedostot eivät muuttuneet.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   lontoo: [
     {
       id: 'kaupunki',
@@ -53,19 +55,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Tower Bridge from Shad Thames.jpg',
-          selite: 'Tower Bridge on avattu laivoille yli 130 vuotta — taustalla '
-            + 'kohoaa Cityn lasinen siluetti.',
+          selite: 'Tower Bridgen suunnitteli Horace Jones ja rakensi John '
+            + 'Wolfe Barry, ja Walesin prinssi vihki sillan käyttöön 30. '
+            + 'kesäkuuta 1894.',
           lahde: 'Colin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Palace of Westminster, London - Feb 2007.jpg',
-          selite: 'Westminsterin palatsi ja Big Ben iltavalossa Thamesin takaa.',
+          selite: 'Westminsterin palatsissa kokoontuvat Britannian parlamentin '
+            + 'molemmat kamarit, ja Charles Barry ja Augustus Pugin '
+            + 'suunnittelivat sen vuoden 1834 palon jälkeen.',
           lahde: 'Diliff, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
           tiedosto: 'London from Primrose Hill May 2013.jpg',
-          selite: 'Primrose Hillin rinteeltä avautuu koko Lontoo: puiston nurmen ja '
-            + 'puurivien takaa nousevat Cityn tornit, Shard ja BT-torni.',
+          selite: 'Primrose Hillin puisto avattiin yleisölle 1842, ja sen laki on '
+            + 'Camdenin kaupunginosan korkeimpia kohtia.',
           lahde: 'Duncan from Nottingham, UK, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -105,23 +110,22 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'London, Greenwich, Blick vom Hügel des Royal Greenwich Observatory -- 2016 -- 4730.jpg',
-          selite: 'Näkymä Greenwichin observatorion mäeltä: alhaalla vanhan '
-            + 'laivastoakatemian valkoiset paviljongit ja Queen\'s House, '
-            + 'takana Canary Wharfin tornit myrskypilvien alla.',
+          selite: 'Greenwichin observatorion läpi kulki nollameridiaani, ja '
+            + 'siitä sai nimensä Greenwichin aika, nykyisen '
+            + 'maailmanajan edeltäjä.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Red London Buses - geograph.org.uk - 2792011.jpg',
-          selite: 'Kaksi punaista kaksikerrosbussia Regent Streetillä '
-            + 'kivijulkisivujen välissä — lontoolainen katunäkymä '
-            + 'tiiviimmillään.',
+          selite: 'Lontoossa ajetaan tien vasenta puolta, ja monessa '
+            + 'risteyksessä ohje katsoa ensin oikealle on maalattu '
+            + 'asfalttiin.',
           lahde: 'Colin Smith, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'More London Office Development at Dusk, London, UK - Diliff.jpg',
-          selite: 'Sinisen hetken Lontoo Thamesin etelärannalla: lasiset '
-            + 'toimistotalot hehkuvat keltaisina, Shard-torni nousee niiden '
-            + 'takaa ja oikealla häämöttää Tower Bridge.',
+          selite: 'Lontoo ei ole yksi kaupunki vaan kokoelma kyliä, jotka ovat '
+            + 'kasvaneet kiinni toisiinsa.',
           lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -152,17 +156,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Tower Bridge, II. (open), London, England-LCCN2002696928.jpg',
           vuosi: '1890-luku',
-          selite: 'Tower Bridge auki höyrylaivalle 1890-luvun käsinväritetyssä '
-            + 'photochrom-vedoksessa, muutama vuosi sillan vihkiäisten jälkeen — '
-            + 'oikealla häämöttää Lontoon Tower.',
+          selite: '1890-luvun photochrom-vedos on muutaman vuoden takaa sillan '
+            + 'vihkiäisistä: Tower Bridge rakennettiin 1886–1894, jotta laivat '
+            + 'pääsisivät yhä Pool of Londoniin.',
           lahde: 'Photochrom Print Collection, Library of Congress (PD)',
         },
         {
           tiedosto: 'Tower bridge Mars 2014 03.jpg',
           vuosi: '2014',
-          selite: 'Sama silta samasta suunnasta tänään: läpät ovat kiinni, '
-            + 'punainen bussi ylittää jokea ja taustalla erottuu Pyhän Paavalin '
-            + 'kupoli.',
+          selite: 'Tower Bridgen nostosillan puoliskot kohotetaan yhä laivojen '
+            + 'tieltä satoja kertoja vuodessa.',
           lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -188,8 +191,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Elizabeth Tower 2014-09-21 205MP.jpg',
-          selite: 'Elizabeth Tower eli Big Ben Westminsterin sillan '
-            + 'takana; kellotorni on 96 metriä korkea.',
+          selite: 'Elizabeth Towerin kellotorni on 96 metriä korkea, ja sen '
+            + 'kello Big Ben on lyönyt tunteja vuodesta 1859.',
           lahde: 'Colin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Lontoo ei ole yksi kaupunki vaan kokoelma kyliä, jotka ovat '
@@ -243,22 +246,23 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'London, Piccadilly Circus -- 2016 -- 4866.jpg',
-                  selite: 'Piccadilly Circus keskipäivällä: väkeä istuu '
-                    + 'Shaftesburyn muistolähteen portailla, ja lähteen '
+                  selite: 'Piccadilly Circusin Shaftesburyn muistolähteen '
                     + 'huipun siivekäs hahmo tunnetaan Erosina, vaikka se '
                     + 'esittää tämän veljeä Anterosta.',
                   lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Temple Station underground train City of Westminster London England 01.jpg',
-                  selite: 'Metrojuna Temple-asemalla — laiturissa tuttu '
-                    + 'varoitus: mind the gap.',
+                  selite: 'Lontoon metro avattiin 10. tammikuuta 1863 '
+                    + 'maailman ensimmäisenä maanalaisena '
+                    + 'matkustajaratana, ja nykyään asemia on 272.',
                   lahde: 'Acabashi, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'London (UK), Bus -- 2010 -- 6.jpg',
-                  selite: 'Punainen kaksikerrosbussi kadun varressa; kuvan '
-                    + 'vaunu kuuluu vanhaan Routemaster-mallistoon.',
+                  selite: 'Routemaster on Lontoon vanha kaksikerrosbussimalli, '
+                    + 'ja bussin yläkerran etupenkkiä sanotaan kaupungin '
+                    + 'halvimmaksi näköalapaikaksi.',
                   lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
                 },
               ],
@@ -278,9 +282,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'London, St. James\'s Park -- 2016 -- 4820.jpg',
                 asettelu: 'kapea',
-                selite: 'St James\'s Parkin lampi lokakuussa: nokikanoja '
-                  + 'vedessä, riippapajut rannalla ja puiden takana '
-                  + 'Whitehallin tornit.',
+                selite: 'St James\'s Parkin lammella on pidetty pelikaaneja '
+                  + '1660-luvulta lähtien, ja ensimmäiset olivat Venäjän '
+                  + 'suurlähettilään lahja.',
                 lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -297,9 +301,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'asiaan.',
               kuva: {
                 tiedosto: 'Dishing out the paella, Borough Market, London 2024-01-30.jpg',
-                selite: 'Borough Marketin kojulla annostellaan paellaa '
-                  + 'metrin levyisestä pannusta: simpukoita, katkarapuja ja '
-                  + 'herneitä keltaisen riisin seassa.',
+                selite: 'Borough Marketilla myydään juustoa, ostereita ja '
+                  + 'paellaa metrin levyisestä pannusta.',
                 lahde: 'Alaskan Dude, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -318,9 +321,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Princess Louise pub interior, High Holborn - London 13 Mar 2013.jpg',
                 asettelu: 'kapea',
-                selite: 'Princess Louise -pubin tiski Holbornissa: tumma '
-                  + 'puu, kaiverretut lasiseinäkkeet ja painokuvioitu '
-                  + 'kattopelti ovat 1890-luvulta.',
+                selite: 'Princess Louise -pubissa Holbornissa on kaiverretut '
+                  + 'lasit, koristepeilit ja painokuvioitu kattopelti '
+                  + '1890-luvulta.',
                 lahde: 'David, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -337,9 +340,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'näyttää parhaimmillaan.',
               kuva: {
                 tiedosto: 'Covent Garden in the evening. - geograph.org.uk - 7428887.jpg',
-                selite: 'Covent Garden iltavalaistuksessa: lasikattoisen '
-                  + 'kauppahallin kaaret hehkuvat, ja märät liuskekivet '
-                  + 'heijastavat lyhtyjen valon.',
+                selite: 'Covent Garden on entinen vihannestori, joka on nyt '
+                  + 'lasikattoinen kauppahalli katutaiteilijoineen.',
                 lahde: 'Peter Evans, Wikimedia Commons (CC BY-SA 2.0)',
               },
             },
@@ -470,41 +472,39 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman '
             + 'tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun '
             + 'Lontoo tunnetaan parhaiten venetsialaisen silmin.',
-          selite: 'Westminster Bridge ja lordimayorin juhlakulkue (1747): upouusi '
-            + 'silta, jota pidettiin aikansa ihmeenä, ja juhlaveneet kuin '
-            + 'Venetsian regatassa.',
+          selite: 'Canaletton vuoden 1747 maalauksessa lordimayorin juhlakulkue '
+            + 'kulkee Thamesilla vastavalmistuneen Westminster Bridgen editse.',
           lahde: 'Canaletto, Wikimedia Commons (PD)',
           wiki: 'Canaletto',
           galleria: [
             {
               otsikko: 'Thames ja Pyhän Paavalin katedraali',
               tiedosto: 'The Thames and the City Canaletto 46-47 National Gallery Prague.jpg',
-              selite: 'Thames ja City (1746–47): Pyhän Paavalin kupoli hallitsee '
-                + 'kaupunkia, ja joki kuhisee veneitä kuin laguuni.',
+              selite: 'Canaletto muutti Lontooseen vuonna 1746 ja maalasi '
+                + 'kaupunkia yhdeksän vuoden ajan.',
               lahde: 'Canaletto, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'City sillan kaaren läpi',
               tiedosto: 'Canaletto - The City Seen Through an Arch of Westminster Bridge.JPG',
-              selite: 'City rakenteilla olevan Westminster Bridgen kaaren läpi '
-                + '(1747) — puutelineiltä katsottu kehys, jonka moderniutta '
-                + 'ihmetellään yhä.',
+              selite: 'Vuoden 1747 maalaus on tehty rakenteilla olleen '
+                + 'Westminster Bridgen puutelineiltä.',
               lahde: 'Canaletto, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'Northumberland House',
               tiedosto: 'Northumberland House by Canaletto (1752).JPG',
-              selite: 'Northumberland House Charing Crossilla (1752) — '
-                + 'palatsi purettiin 1874, ja Canaletton maalaus on sen '
-                + 'tarkin muistikuva.',
+              selite: 'Charing Crossin Northumberland House purettiin 1874, '
+                + 'ja Canaletton vuoden 1752 maalaus on sen tarkin '
+                + 'muistikuva.',
               lahde: 'Canaletto, Wikimedia Commons (PD)',
             },
             {
               otsikko: 'Ranelaghin rotunda',
               tiedosto: 'Canaletto Ranelegh 1754.jpg',
-              selite: 'Ranelagh Gardensin rotundan sisänäkymä (1754): '
-                + 'hienosto kierteli valtavan pyörösalin lattialla musiikin '
-                + 'soidessa, ja Mozart esiintyi täällä kahdeksanvuotiaana.',
+              selite: 'Ranelagh Gardensin rotundassa hienosto kierteli '
+                + 'pyörösalin lattialla musiikin soidessa, ja Mozart '
+                + 'esiintyi siellä kahdeksanvuotiaana.',
               lahde: 'Canaletto, Wikimedia Commons (PD)',
             },
           ],
@@ -518,9 +518,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sen penkeillä istui aikanaan Charles Dickens, joka mainitsee '
             + 'pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että '
             + 'sen omistaa National Trust — olutta myydään silti joka päivä.',
-          selite: 'The Georgen parvekekäytävät Southwarkissa: kyltissä '
-            + 'ratsastaa Yrjö-pyhimys, ja kello on käynyt pihalla '
-            + '1600-luvulta.',
+          selite: 'The George Southwarkissa on Lontoon viimeinen '
+            + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on '
+            + 'vuodelta 1677.',
           lahde: 'It\'s No Game, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Charles Dickens',
         },
@@ -534,8 +534,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. '
             + 'Ylityksellä on virallinen suojelumerkintä — ja taustan '
             + 'studiossa äänitetään musiikkia edelleen.',
-          selite: 'Abbey Roadin suojatie St John\'s Woodissa hiljaisena hetkenä — '
-            + 'ilman jonoa levynkansikävelijöitä.',
+          selite: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja '
+            + 'viereisessä studiossa äänitetään musiikkia edelleen.',
           lahde: 'Misterweiss, Wikimedia Commons (PD)',
           wiki: 'The Beatles',
           musiikki: 'https://music.apple.com/fi/album/come-together-2019-mix/1474815798?i=1474815799',
@@ -562,10 +562,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun '
             + 'pinnassa muistuttaa yhä pronssilaatta, jonka London Transport '
             + 'pystytti sadan vuoden kunniaksi vuonna 1963.',
-          selite: 'Pronssilaatta jalkakäytävän kiveyksessä kertoo, että sen '
-            + 'alla kulkee maailman ensimmäinen maanalainen matkustajarata, '
-            + 'jonka Metropolitan Railway Company avasi yleisölle 10. '
-            + 'tammikuuta 1863.',
+          selite: 'London Transport pystytti pronssilaatan vuonna 1963 sadan '
+            + 'vuoden kunniaksi maailman ensimmäisestä maanalaisesta '
+            + 'matkustajaradasta, jonka Metropolitan Railway Company avasi '
+            + 'yleisölle 10. tammikuuta 1863.',
           lahde: 'Simon Harriyott from Uckfield, England, Wikimedia Commons '
             + '(CC BY 2.0)',
           wiki: 'Lontoon metro',
@@ -594,9 +594,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. '
             + 'Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu '
             + 'teos voi olla iltaan mennessä kadonnut toisen alle.',
-          selite: 'Leake Streetin tunneli syyskuussa 2024 mustavalkoisena: '
-            + 'maali peittää seinät, pilarit ja kattopalkit, mutta '
-            + 'asfalttilattia on jäänyt lähes paljaaksi.',
+          selite: 'Leake Streetin noin kolmesataa metriä pitkässä tunnelissa '
+            + 'seinien maalaaminen on sallittua, ja se avautui taiteelle '
+            + 'toukokuussa 2008 Banksyn Cans Festivalissa.',
           lahde: 'Ted Potters, Wikimedia Commons (PD)',
           wiki: 'Banksy',
         },
@@ -611,9 +611,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, '
             + 'yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin '
             + 'jalustan päällä ja teki siellä mitä halusi.',
-          selite: 'Neljäs jalusta One & Other -teoksen avauspäivän iltana 6. '
-            + 'heinäkuuta 2009: jalustan päällä seisova osallistuja lukee '
-            + 'papereistaan turvaverkon ympäröimänä.',
+          selite: 'One & Other -teoksessa 2 400 tavallista ihmistä sai kukin '
+            + 'tunnin Trafalgar Squaren neljännellä jalustalla sadan päivän '
+            + 'ajan kesällä 2009.',
           lahde: 'Simon Lee, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Antony Gormley',
         },
@@ -628,9 +628,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 '
             + 'käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi '
             + 'vuotta. Museoon pääsee sisään ilmaiseksi.',
-          selite: 'Turbiinihalli huhtikuussa 2023, ja katosta riippuu '
-            + 'Cecilia Vicuñan Brain Forest Quipu, kaksi 27-metristä '
-            + 'villasta ja kasvikuidusta kudottua veistosta.',
+          selite: 'Tate Modernin turbiinihalli on 155 metriä pitkä ja 35 '
+            + 'metriä korkea, ja museo tilaa siihen kerrallaan yhden '
+            + 'jättimäisen teoksen.',
           lahde: 'Mr Ignavy, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Tate Modern',
         },
@@ -646,9 +646,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Höllerin 178 metriä pitkä liukumäki, maailman pisin '
             + 'tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja '
             + 'kestää noin 40 sekuntia.',
-          selite: 'ArcelorMittal Orbit tammikuussa 2020: punaisen '
-            + 'teräsristikon ympäri kiertyy harmaa liukumäkiputki, ja '
-            + 'ylempänä erottuu näköalatasanteen lasiseinä.',
+          selite: 'ArcelorMittal Orbit on 114,5 metriä korkea ja Britannian '
+            + 'suurin julkinen taideteos, ja sen ympäri kiertyy maailman '
+            + 'pisin tunneliliukumäki.',
           lahde: 'Ian S, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Anish Kapoor',
         },
@@ -5816,6 +5816,8 @@ export const KULTTUURI_KATEGORIAT = {
    * Nostot, oppaat, johdannot, kuvatiedostot ja lähderivit ovat
    * ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   istanbul: [
     {
       id: 'kaupunki',
@@ -5827,21 +5829,21 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Hagia Sophia from the Sultanahmet Square 2017 (1).jpg',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
-          selite: 'Hagia Sofia Sultanahmetin aukiolta nähtynä: punatiilinen '
-            + 'kirkko-moskeija kupoleineen ja neljine minareetteineen '
-            + 'täyttää aukion pohjoislaidan.',
+          selite: 'Hagia Sofia oli ortodoksinen katedraali vuoteen 1204 ja '
+            + 'jälleen 1261–1453, ja välissä se toimi ristiretkeläisten '
+            + 'katolisena kirkkona.',
         },
         {
           tiedosto: 'Ortaköy Mosque and Bosphorus Bridge, Istanbul 2008.jpg',
-          selite: 'Ortaköyn moskeija Bosporin rannassa, ja takana kaartuu '
-            + 'riippusilta, joka vie salmen yli Aasian puolelle.',
+          selite: 'Ortaköyn moskeijan rakennutti sulttaani Abdülmecid I, ja se '
+            + 'valmistui Bosporin rantaan noin vuosina 1854–1856.',
           lahde: 'Darwinek, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Istanbul panorama from Galata tower - 1.jpg',
-          selite: 'Näkymä Galatan tornista yli Kultaisen sarven: Galatan '
-            + 'silta halkaisee lahden ja vastarannalla nousee vanhan '
-            + 'kaupungin niemi minareetteineen.',
+          selite: 'Kultainen sarvi on Bosporinsalmen tärkein lahti, ja Galatan '
+            + 'silta yhdistää sen rannat siinä kohdassa, jossa lahti '
+            + 'kohtaa salmen.',
           lahde: 'Ilya saffarian Tousi, Wikimedia Commons (CC0)',
         },
       ],
@@ -5856,8 +5858,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'syntyi Hagia Sofiassa vuonna 2004 ja asui siellä kuudentoista '
             + 'vuoden ajan. Presidentti Barack Obama pysähtyi silittämään sitä '
             + 'vierailullaan 2009. Gli haudattiin Hagia Sofian pihaan.',
-          selite: 'Gli Hagia Sofian marmorilattialla ruokakuppinsa vieressä — '
-            + 'kissa syntyi rakennuksessa, joka oli silloin museo.',
+          selite: 'Gli syntyi Hagia Sofiassa vuonna 2004 ja asui siellä '
+            + 'kuudentoista vuoden ajan; presidentti Barack Obama pysähtyi '
+            + 'silittämään sitä vierailullaan 2009.',
           lahde: 'Kadı, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Hagia Sofia',
         },
@@ -5874,9 +5877,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kahden pylvään jalustaksi on pantu kivi, johon on veistetty '
             + 'Medusan kasvot. Toinen on kyljellään, toinen ylösalaisin, eikä '
             + 'kukaan tiedä miksi.',
-          selite: 'Toinen Medusan päistä pylvään alla Yerebatanin holvissa, '
-            + 'ylösalaisin käännettynä ja silmät kiinni käärmehiusten '
-            + 'keskellä.',
+          selite: 'Yerebatanin vesisäiliössä kahden pylvään jalustaksi on '
+            + 'pantu kivi, johon on veistetty Medusan kasvot — toinen '
+            + 'kyljellään, toinen ylösalaisin, eikä kukaan tiedä miksi.',
           lahde: 'Ank Kumar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Yerebatan Sarayı',
         },
@@ -5892,18 +5895,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jalustaan hakattiin kaksi kertomusta pystyttämisestä: '
             + 'latinankielinen kehuu työn kestäneen kolmekymmentä päivää, '
             + 'kreikankielisessä lukee kolmekymmentäkaksi.',
-          selite: 'Obeliski Sultanahmetin aukiolla: jokaisella sivulla kulkee '
-            + 'yksi pystyrivi hieroglyfejä, ja huippu on hakattu pieneksi '
-            + 'pyramidiksi.',
+          selite: 'Obeliski veistettiin Egyptissä faarao Thutmosis III:n '
+            + 'aikana noin 1450 eaa., ja keisari Theodosius toi sen '
+            + 'Konstantinopoliin vuonna 390.',
           lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Konstantinopolin hippodromi',
           galleria: [
             {
               otsikko: 'Hieroglyfit läheltä',
               tiedosto: 'Obelisk of Thutmosis III, Istanbul, Turkey 001.jpg',
-              selite: 'Obeliskin kylkeä läheltä: soikion sisällä on faaraon nimi, '
-                + 'jossa erottuu kovakuoriainen, ja soikion alla haukka ja '
-                + 'aaltoviivat.',
+              selite: 'Obeliskin jalustaan hakattiin kaksi kertomusta '
+                + 'pystyttämisestä: latinankielinen kehuu työn kestäneen '
+                + 'kolmekymmentä päivää, kreikankielisessä lukee '
+                + 'kolmekymmentäkaksi.',
               lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
             },
           ],
@@ -5948,26 +5952,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Cuerno de Oro, Estambul, Turquía, 2024-09-28, DD 141-143 HDR.jpg',
-          selite: 'Kultainen sarvi auringonlaskun jälkeen: lahden '
-            + 'takana kohoaa kukkula, jonka laella Süleymaniyen '
-            + 'moskeija on valaistu keltaiseksi, rannassa on '
-            + 'jokilaivoja laitureissa, ja taivas hehkuu vielä '
-            + 'oranssina länsihorisontissa.',
+          selite: 'Süleymaniyen moskeija seisoo vanhankaupungin '
+            + 'kolmannen kukkulan laella Kultaisen sarven yllä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Sultanahmet ferry on the Bosphorus in Istanbul, Turkey 001.jpg',
-          selite: 'Lauttoja rantalaiturissa vanhankaupungin kupeessa, '
-            + 'harjanteella kohoavan Hagia Sofian alla; etualan lautan '
-            + 'kyljessä lukee SULTANAHMET.',
+          selite: 'Lautta on Istanbulissa yhtä tavallinen kulkuneuvo '
+            + 'kuin raitiovaunu ja samalla halvin näköalapaikka, jonka '
+            + 'kaupunki tarjoaa.',
           lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Panoramic view of Istanbul- Yeni Cami (The New Mosque), Galata Bridge. Turkey, Southeastern Europe.jpg',
-          selite: 'Eminönün rantatori ylhäältä: oikealla kohoaa Uusi '
-            + 'moskeija kahtena minareettina ja kupolikasana, keskellä '
-            + 'kaartuu markkinakojujen katos, ja vasemmalla Galatan '
-            + 'silta vie lahden yli Galatan tornin kukkulalle.',
+          selite: 'Eminönün rantatorilla myydään balık ekmekiä suoraan '
+            + 'veneistä, joissa kala kypsennetään laiturin kupeessa.',
           lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -5975,16 +5974,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The Golden Horn, Constantinople, Turkey-LCCN2001699446.jpg',
           vuosi: '1890-luku',
-          selite: 'Kultainen sarvi eli Haliç iltavalossa 1890-luvun '
-            + 'photochrom-vedoksessa, kuvattuna seitsemän kilometriä kaupunkiin '
-            + 'työntyvän merenlahden yläpään kukkulalta.',
+          selite: '1890-luvun photochrom-vedoksen Kultainen sarvi eli Haliç on '
+            + 'Bosporin päälahti, joka erottaa vanhankaupungin niemen Galatan '
+            + 'puolesta.',
           lahde: 'Library of Congress (PD)',
         },
         {
           tiedosto: 'Galata Tower January 2015.JPG',
-          selite: 'Galatan torni Kultaisen sarven pohjoispuolella: vuonna 1348 '
-            + 'rakennetun kivitornin huipulta näkee koko salmen, ja alhaalla kulkee '
-            + 'jyrkkä katu.',
+          selite: 'Galatan torni oli valmistuessaan 1348 kaupungin korkein '
+            + 'rakennus, ja se pystytettiin Galatan muurien korkeimmalle kohdalle '
+            + 'nimellä Christea Turris.',
           lahde: 'Martin Falbisoner, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -6030,9 +6029,9 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: "Maiden's Tower (Istanbul) - May 22, 2023.jpg",
-          selite: 'Neitsyttorni omalla luodollaan Bosporinsalmessa: '
-            + 'kivitorni, lyijykupoli ja lipputanko, ja takana '
-            + 'vanhankaupungin harjanne.',
+          selite: 'Neitsyttorni seisoo luodollaan Bosporinsalmessa '
+            + 'Üsküdarin edustalla, ja se on merkitty jo Cristoforo '
+            + 'Buondelmontin vuoden 1422 Konstantinopolin karttaan.',
           lahde: 'HuseynAZE99, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Istanbul on kaupunki kahdella mantereella, ja juuri '
@@ -6079,24 +6078,24 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'T1 Istanbul Tram with Hagia Sophia in the background, March 2024.jpg',
-                  selite: 'Puna-valkoinen nivelraitiovaunu kaartaa Sultanahmetin '
-                    + 'pysäkille, ja taustalla kohoaa Hagia Sofia kupoleineen '
-                    + 'ja minareetteineen.',
+                  selite: 'Maan päällä kulkeva raitiovaunulinja ylittää '
+                    + 'Galatan sillan ja pysähtyy Sultanahmetissa '
+                    + 'vanhankaupungin niemellä.',
                   lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
                   tiedosto: 'Karaköy Mars 2013 02.jpg',
-                  selite: 'Kaupunkilautta kiinni Karaköyn laiturissa, jonka '
-                    + 'kyltissä lukee KARAKÖY İSKELESİ, ja vastarannalla '
-                    + 'häämöttää Aasian puoli.',
+                  selite: 'Karaköystä lähtee lauttoja Aasian puolelle pitkin '
+                    + 'päivää, ja samasta korttelista nousee mäen sisään '
+                    + 'Tünelin köysirata.',
                   lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
                 },
                 {
                   tiedosto: 'Karaköy Taksim Tüneli.jpg',
-                  selite: 'Tünelin tiiliholvinen tunneli sisältä: '
-                    + 'kaksi kiskoparia nousee mäkeä ylös, seinillä '
-                    + 'palaa loisteputkirivi ja tunneli katoaa '
-                    + 'pisteeksi kaukaisuuteen.',
+                  selite: 'Tünel on Karaköystä Beyoğluun nouseva 573 '
+                    + 'metrin köysirata, joka vihittiin 17. tammikuuta '
+                    + '1875 ja on maailman toiseksi vanhin maanalainen '
+                    + 'kaupunkirata.',
                   lahde: 'Hamdigumus, Wikimedia Commons (CC0)',
                 },
               ],
@@ -6120,10 +6119,9 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: "21 Gran Basar d'Istanbul (Kapalıçarşı), botiga de llums.jpg",
-                  selite: 'Lampukauppa Suuren basaarin holvikäytävässä: '
-                    + 'kymmeniä lasi- ja metallilyhtyjä riippuu '
-                    + 'ketjuissa palamassa, ja niiden yllä näkyy '
-                    + 'holvin maalattu kuviointi.',
+                  selite: 'Suuressa basaarissa on 61 katettua katua ja '
+                    + 'lähes neljätuhatta kauppaa saman holvikaton '
+                    + 'alla.',
                   lahde: 'Enric, Wikimedia Commons (CC BY-SA 4.0)',
                 },
               ],
@@ -6146,11 +6144,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jolloin vanhankaupungin siluetti syttyy valoihin.',
               kuva: {
                 tiedosto: 'Kadikoey, Istanbul (P1100156).jpg',
-                selite: 'Kadıköyn lauttalaituri Aasian puolella: matala '
-                  + 'vaaleanpunertava terminaali, jonka kyljessä on '
-                  + 'kaari-ikkunarivi ja kyltti KADIKÖY İSKELESİ; '
-                  + 'laiturin reunassa roikkuu autonrenkaita '
-                  + 'lepuuttajina.',
+                selite: 'Kadıköy on Aasian puolen tavallinen '
+                  + 'kaupunginosa, jossa on monumenttien sijaan toreja, '
+                  + 'kalakauppoja, kirjakauppoja ja ravintolakatuja.',
                 lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -6171,9 +6167,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tavalla: veden pinnan tasalta.',
               kuva: {
                 tiedosto: 'Balik ekmek Galata Bridge.JPG',
-                selite: 'Balık ekmek kädessä paperin päällä: puolikas '
-                  + 'patonki auki, sisällä grillattu kalafilee ruotoineen, '
-                  + 'suikaloitua salaattia ja valkosipulirenkaita.',
+                selite: 'Balık ekmek eli "kala leipä" on paistettua tai '
+                  + 'grillattua makrillifileetä leivän välissä salaatin '
+                  + 'ja sipulin kanssa.',
                 lahde: 'Benreis, Wikimedia Commons (CC BY 3.0)',
               },
             },
@@ -6198,8 +6194,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joka huhtikuu kansainvälinen tulppaanijuhla.',
               kuva: {
                 tiedosto: 'Tulips from 8th Istanbul tulip festival,Emirgan.JPG',
-                selite: 'Pinkkejä tulppaaneja puunrungon vierellä Emirganin '
-                  + 'puistossa, kukat vielä tiukassa nupussa.',
+                selite: 'Tulppaani antoi nimensä koko aikakaudelle '
+                  + '1718–1730, ja Emirganin puistoon istutettiin '
+                  + '1960-luvulla tulppaanitarha perinteen '
+                  + 'herättämiseksi.',
                 lahde: 'MustafaAslanbay, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -6225,9 +6223,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaikki musiikkia, joka matkii sitä. Soittokunta lakkautettiin '
             + '1826, mutta Istanbulin sotilasmuseon johtaja herätti sen '
             + 'henkiin 1911. Museossa se marssii yhä.',
-          selite: 'Mehter-soittokunta esiintyy Istanbulin sotilasmuseossa '
-            + 'Harbiyessä: tummansiniviittaiset rumpalit kantavat hihnoilla '
-            + 'kullalla koristeltuja davul-rumpuja.',
+          selite: 'Mehter on osmanien sotilassoittokunta ja vanhin tunnettu '
+            + 'marssiva soittokunta maailmassa; täydessä kokoonpanossa '
+            + 'jokaista soitinta oli yhdeksän.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mehter',
           musiikki: 'https://music.apple.com/fi/search?term=mehter',
@@ -6247,8 +6245,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaikkiaan yli 250 kilometriä — antiikin pisin. Vesi '
             + 'varastoitiin maan alle, muun muassa siihen säiliöön, jossa '
             + 'Medusa nukkuu.',
-          selite: 'Bozdoğan Kemeri Atatürk-bulevardin yllä: alempi kaaririvi '
-            + 'kannattaa ylempää, ja autot ajavat kaarien alitse.',
+          selite: 'Valensin vesijohto vihittiin käyttöön vuonna 373, ja sitä '
+            + 'on jäljellä 921 metriä.',
           lahde: 'Laima Gūtmane, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Akvedukti',
         },
@@ -7440,6 +7438,8 @@ export const KULTTUURI_KATEGORIAT = {
    * virkkeeseen. Nostot, oppaat, johdannot, kuvatiedostot ja
    * lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   lissabon: [
     {
       id: 'kaupunki',
@@ -7450,21 +7450,22 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Panoramic View from Miradouro da Senhora do Monte in Lisbon (54742879994).jpg',
-          selite: 'Näkymä Senhora do Monten näköalapaikalta yli tiilikattojen kohti Pyhän '
-            + 'Yrjön linnaa ja Tejo-joen leveää suistoa.',
+          selite: 'Lissabon on rakennettu kukkuloille, ja Pyhän Yrjön linnan ja '
+            + 'Tejo-joen väliselle rinteelle leviää kaupungin vanhin '
+            + 'kaupunginosa Alfama.',
           lahde: 'Dale Cruse, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Arco Triunfal da Rua Augusta, Plaza del Comercio, Lisboa, Portugal, 2012-05-12, DD 02.JPG',
-          selite: 'Rua Augustan riemukaari Kauppatorin laidalla, ja sen '
-            + 'alta lähtee suora katu: koko alakaupunki vedettiin '
-            + 'maanjäristyksen jälkeen ristikoksi.',
+          selite: 'Rua Augustan riemukaari seisoo Kauppatorin laidalla '
+            + 'Baixan ruudukon päässä, ja ruudukko vedettiin vuoden 1755 '
+            + 'maanjäristyksen jälkeen suoriksi kaduiksi.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Torre Belém April 2009-4a.jpg',
-          selite: 'Belémin torni Tejo-joen rannassa, parvekkeiden alla '
-            + 'kiveen veistetty köysi ja vartiotornien huippuina kupolit.',
+          selite: 'Belémin torni valmistui vuonna 1519 vartioimaan Tejo-joen '
+            + 'suuta.',
           lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -7482,9 +7483,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Lisbon (Lisboa) historic elevator Santa Justa Luca Galuzzi 2006.jpg',
-          selite: 'Santa Justan hissi illalla alhaalta katsottuna: '
-            + 'valurautainen torni nousee kapean kadun päässä valaistuna, '
-            + 'ja ylimpänä kulkee silta yläkaupungin puolelle.',
+          selite: 'Santa Justan hissi on Lissabonin ainoa jäljellä oleva '
+            + 'pystysuora hissi — Glórian ja Bican elevadorit ovat '
+            + 'oikeasti köysiratoja.',
           lahde: 'Luca Galuzzi (Lucag), Wikimedia Commons (CC BY-SA 2.5)',
         },
         kappale: 'Lissabon on rakennettu kukkuloille, ja se näkyy '
@@ -7511,7 +7512,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jotka kiipeävät jyrkimmät kadut. Lisäksi liikenteessä '
                 + 'on kahdeksan Ligeiro-vaunua ja kymmenen nivelvaunua. '
                 + 'Varikko on Santo Amarossa Alcântarassa.',
-              kuva: { tiedosto: 'flickr-45028823084.jpg', selite: 'Keltainen raitiovaunu ylittää Baixan suoran kadun liike-epäterävänä, ja kadun päässä kaartuu Rua Augustan riemukaari veistosryhmineen.', lahde: 'Michael Kuhn, Flickr (CC BY 2.0)' },
+              kuva: { tiedosto: 'flickr-45028823084.jpg', selite: 'Lissabonin raitiotie on ollut käytössä vuodesta 1873, ja 63 vaunusta 45 on vanhoja Remodelado-vaunuja.', lahde: 'Michael Kuhn, Flickr (CC BY 2.0)' },
             },
             {
               otsikko: 'Hissi, joka ei ole köysirata',
@@ -7524,7 +7525,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'insinööri Raoul Mesnier du Ponsard kesäkuussa 1882, ja '
                 + 'vuonna 1899 perustettiin yhtiö, joka sai '
                 + 'yhdeksänkymmenenyhdeksän vuoden käyttöoikeuden.',
-              kuva: { tiedosto: 'Santa Justa Lift (14921007025).jpg', selite: 'Hissin rautarakenne alhaalta mustavalkoisessa kuvassa: niitatut pilarit, kaariaiheiset koristepaneelit ja ylimmällä tasolla ulos työntyvä kävelysilta.', lahde: 'Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)' },
+              kuva: { tiedosto: 'Santa Justa Lift (14921007025).jpg', selite: 'Rakentamisluvan Santa Justan hissille sai insinööri Raoul Mesnier du Ponsard kesäkuussa 1882.', lahde: 'Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)' },
             },
             {
               otsikko: 'Ruudukko, joka rakennettiin tärisemään',
@@ -7537,7 +7538,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joka tärisee muttei kaadu, ja epävakaan maan alle '
                 + 'lyötiin metsällinen paaluja. Suolavedessä paalut '
                 + 'säilyttävät kimmoisuutensa eivätkä lahoa.',
-              kuva: { tiedosto: 'Baixa Pombalina (Lisboa).jpg', selite: 'Baixan ruudukko ylhäältä: suorat kadut laskeutuvat punatiilikattojen välissä kohti jokea, ja korttelit ovat samankokoisia suorakaiteita.', lahde: 'Miguel Torres, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Baixa Pombalina (Lisboa).jpg', selite: 'Baixan kadut ja jalkakäytävät ovat kahdentoista metrin levyisiä, ja piirustukset tekivät sotilasinsinöörit Manuel da Maia, Eugénio dos Santos ja Elias Sebastião Pope.', lahde: 'Miguel Torres, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Alfama, kaupungin vanhin kortteli',
@@ -7550,7 +7551,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'de Foran seurakunnat sekä osa tuomiokirkon '
                 + 'seurakunnasta, ja sen kujilla on poikkeuksellisen '
                 + 'tiheässä fado-baareja ja ravintoloita.',
-              kuva: { tiedosto: 'Alfama (3903814530).jpg', selite: 'Alfaman katot rinteeltä kohti Tejoa: tiheä terrakottakattojen meri laskeutuu portaittain alas, ja niiden takana levittäytyy leveä joki satamanostureineen.', lahde: 'Bernt Rostad from Oslo, Norway, Wikimedia Commons (CC BY 2.0)' },
+              kuva: { tiedosto: 'Alfama (3903814530).jpg', selite: 'Alfaman nimi tulee arabian sanasta al-hamma, kuumat lähteet, ja sama sanajuuri on myös kylpylää tarkoittavassa sanassa hammam.', lahde: 'Bernt Rostad from Oslo, Norway, Wikimedia Commons (CC BY 2.0)' },
             },
             {
               otsikko: 'Silta joen yli',
@@ -7564,7 +7565,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaista ja vuonna 1999 alempi taso rautatielle. Nykyään '
                 + 'ylätaso kantaa kuutta ajokaistaa ja alataso '
                 + 'kaksiraiteista rautatietä.',
-              kuva: { tiedosto: '"25 de Abril" bridge (Tagus River) (6710786181).jpg', selite: 'Riippusilta iltahämärässä: punaiset pylonit ja kaartuva kannatinvaijeri piirtyvät oranssia auringonlaskua vasten, ja etualalla seisovat venesataman mastot rivissä.', lahde: 'Pedro Ribeiro Simões from Lisboa, Portugal, Wikimedia Commons (CC BY 2.0)' },
+              kuva: { tiedosto: '"25 de Abril" bridge (Tagus River) (6710786181).jpg', selite: 'Tejon riippusillan pääjänne on 1 013 metriä, silta vihittiin 1966, ja se sai nimensä huhtikuun 25. päivän mukaan vuoden 1974 jälkeen.', lahde: 'Pedro Ribeiro Simões from Lisboa, Portugal, Wikimedia Commons (CC BY 2.0)' },
             },
           ],
           matkailu: {
@@ -7692,9 +7693,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sisään piilotettiin puinen häkki, jonka piti joustaa '
             + 'tärinässä. Kehikkoa kokeiltiin pienoismalleilla: sotilaat '
             + 'marssivat mallin ympärillä, jotta maa tärisisi.',
-          selite: 'Karmeliittikirkon runko keskellä Lissabonia ilman '
-            + 'kivikattoa, jäljellä vain suippokaaret pilarien välissä ja '
-            + 'niiden välistä näkyvä sininen taivas.',
+          selite: 'Karmeliittikirkon kivikatto romahti 1. marraskuuta 1755 '
+            + 'maanjäristyksessä eikä sitä rakennettu enää koskaan '
+            + 'takaisin.',
           lahde: 'Chris Adams, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Lissabonin maanjäristys 1755',
         },
@@ -7710,9 +7711,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paaville, mutta laiva haaksirikkoutui Italian rannikolla ja '
             + 'kannelle kahlittu eläin hukkui. Albrecht Dürer teki siitä '
             + 'kuuluisan puupiirroksen näkemättä eläintä koskaan.',
-          selite: 'Sarvikuonon pää kiveen veistettynä; se työntyy tornin '
-            + 'seinästä ulos vartiotornin alapuolelta, ja takana siintää '
-            + 'Tejo-joki.',
+          selite: 'Belémin tornin vartiotornin juuressa olevaa '
+            + 'sarvikuononpäätä pidetään ensimmäisenä sarvikuonoveistoksena '
+            + 'Länsi-Euroopan taiteessa.',
           lahde: 'RimerMoshe, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Belémin torni',
         },
@@ -7725,10 +7726,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laatta torjuu sadetta ja pitää sisällä viileämpää helteellä. '
             + 'Nimi ei tule espanjan sinistä tarkoittavasta sanasta azul vaan '
             + 'arabian sanasta az-zulayj, kiillotettu pikkukivi.',
-          selite: 'Lissabonilaisen talon laattajulkisivu läheltä: sama '
-            + 'kuvio toistuu laatasta toiseen ja neljä laattaa muodostaa '
-            + 'yhden suuremman kuvion, joten ladonnan on osuttava '
-            + 'kohdalleen.',
+          selite: 'Tavallisen azulejon sivu on neljätoista senttiä, ja nimi '
+            + 'tulee arabian sanasta az-zulayj, kiillotettu pikkukivi.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Azulejo',
         },
@@ -7744,26 +7743,24 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Castelo de São Jorge and 25 de Abril Bridge Over Lisbon Rooftops (54739478432).jpg',
-          selite: 'Kukkulan rinteeltä yli kattojen: vasemmalla kohoaa São '
-            + 'Jorgen linnan kukkula muureineen, edessä laskeutuvat '
-            + 'tiilikatot kohti keskustaa ja takana Tejo levittäytyy '
-            + 'leveänä.',
+          selite: 'Alakaupungin talojen seiniin, lattioihin ja kattoihin '
+            + 'rakennettiin joustava puuhäkki, joka tärisee muttei kaadu, '
+            + 'ja epävakaan maan alle lyötiin metsällinen paaluja.',
           lahde: 'Dale Cruse - 10M views from San Francisco, CA, USA, '
             + 'Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Lisbon Cityscape with 25 de Abril Bridge (55260752373).jpg',
-          selite: 'Kattojen tasalta alas kadulle, jossa kulkevat '
-            + 'raitiotiekiskot ja ajorata, ja vasemmalla kaukana näkyy '
-            + 'Tejo ja sen yli kaartuva silta.',
+          selite: 'Lissabonin metro avattiin joulukuussa 1959 Portugalin '
+            + 'ensimmäisenä, ja siinä on neljä linjaa ja 56 asemaa.',
           lahde: 'Michael Gaylard from Horsham, UK, Wikimedia Commons '
             + '(CC BY 4.0)',
         },
         {
           tiedosto: 'Blue Hour over Lisbon (43257906392).jpg',
-          selite: 'Sininen hetki São Jorgen linnan muurilta: etualalla on '
-            + 'karkea kivimuuri ja oliivipuun oksia, alhaalla Baixan '
-            + 'suorat katulinjat ja valaistu Rossion aukio.',
+          selite: 'São Jorgen linnan kukkulan ja Tejo-joen väliin leviää '
+            + 'Alfama, jonka kujilla on poikkeuksellisen tiheässä '
+            + 'fado-baareja ja ravintoloita.',
           lahde: 'Vicuna R from Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -7778,9 +7775,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Elevador de Santa Justa - Lisboa - Portugal (51688493041).jpg',
-          selite: 'Sama torni tänään lähes samasta suunnasta, taustalla São Jorgen '
-            + 'linna kukkulallaan; ylätasanne on näköalapaikka ja hissi kuuluu yhä '
-            + 'kaupungin joukkoliikenteeseen.',
+          selite: 'Santa Justan hissin ylätasanne on näköalapaikka, ja hissi kuuluu '
+            + 'yhä kaupungin joukkoliikenteeseen.',
           lahde: 'Vitor Oliveira, Commons (CC BY-SA 2.0)',
         },
       ],
@@ -7807,9 +7803,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa '
             + 'niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis '
             + 'de belém — muualla ne ovat pastel de nata.',
-          selite: 'Leivoskoju torilla: korillinen pastel de nata -tortuja, '
-            + 'joiden pinnassa on tummia läiskiä, ja ympärillä sokeroituja '
-            + 'munkkeja ja muita leivonnaisia.',
+          selite: 'Pastel de nata on Jerónimosin luostarin munkkien resepti, '
+            + 'ja Pastéis de Belém on myynyt leivosta vuodesta 1837.',
           lahde: 'ProtoplasmaKid, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -7823,9 +7818,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kannetaan grillit, ja sardiinit paistetaan hiilillä ja syödään '
             + 'leipäviipaleen päältä. Torilta ostetaan basilikaruukku, jonka '
             + 'paperilipussa lukee nelisäkeinen runo.',
-          selite: 'Neljä grillattua sardiinia soikealla metallivadilla '
-            + 'keitettyjen perunoiden ja salaattikulhon vieressä, kylkiin '
-            + 'jääneet grillin ritilän mustat raidat näkyvissä.',
+          selite: 'Sardiinit paistetaan hiilillä ja syödään leipäviipaleen '
+            + 'päältä Antoniuksen päivän aattona kesäkuun 12. yönä.',
           lahde: 'Duarte Briz, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Antonius Padovalainen',
         },
@@ -8229,6 +8223,8 @@ export const KULTTUURI_KATEGORIAT = {
    * virkkeeseen. Nostot, oppaat, johdannot, kuvatiedostot ja
    * lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   granada: [
     {
       id: 'kaupunki',
@@ -8239,33 +8235,31 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'The whole Alhambra Granada Spain.jpg',
-          selite: 'Koko Alhambra vastapäiseltä rinteeltä iltavalossa: '
-            + 'linnoituksen tornit, palatsisiivet ja punaiset muurit '
-            + 'jonottavat harjanteella, etualalla Albaicínin tiilikattoja.',
+          selite: 'Alhambra oli Granadan emiirikunnan hallintokeskus ja Iberian '
+            + 'niemimaan viimeisen muslimivaltion sydän.',
           lahde: 'Jebulon, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Granada Cathedral as seen from Alhambra 2014-08-06.jpg',
-          selite: 'Näkymä Alhambran Alcazabalta yli kaupungin: keskeltä '
-            + 'kattomerta nousee tuomiokirkon vihertävä kupoli ja '
-            + 'keskeneräiseksi jäänyt kellotorni.',
+          selite: 'Granadan tuomiokirkon peruskivi laskettiin 25. maaliskuuta '
+            + '1523, ja rakennustyöt saatiin päätökseen vasta jouluaattona '
+            + '1704.',
           lahde: 'Slaunger, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Sacromonte-Granada (1).jpg',
-          selite: 'Sacromonten rinnettä: valkoiseksi kalkittu talo on '
-            + 'rakennettu kiinni kallioon, seinään on ripustettu rivi '
-            + 'kukkaruukkuja ja maalattu isoin kirjaimin flamencoluolan ja '
-            + 'ravintolan nimi.',
+          selite: 'Sacromonte on Granadan romanien perinteinen kaupunginosa, '
+            + 'jonka asunnot on kaivettu suoraan Valparaíson laakson '
+            + 'rinteeseen.',
           lahde: 'Alberto-g-rovi, Wikimedia Commons (CC BY 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Gran Vía de Colón (2973320148).jpg',
-          selite: 'Leveä suora bulevardi hämärissä: molemmin puolin nousee '
-            + 'viisikerroksisia koristeellisia julkisivuja parvekkeineen, '
-            + 'ja katua reunustavat korkeat lyhtypylväät ja nuoret puut.',
+          selite: 'Gran Vía de Colón murrettiin vanhankaupungin läpi vuosina '
+            + '1895–1934 kauppakamarin tilauksesta, ja työ vaati '
+            + 'viidesosan silloisen vanhankaupungin purkamista.',
           lahde: 'monicat81, Wikimedia Commons (CC BY-SA 2.0)',
         },
         kappale: 'Granadan pääkatu ei ole vanha. Se murrettiin vanhan '
@@ -8292,7 +8286,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lännessä, kaukana kaupungista, ja se nimettiin '
                 + 'runoilija Federico García Lorcan mukaan 2006. Nopea '
                 + 'junayhteys Madridiin avattiin vasta kesäkuussa 2019.',
-              kuva: { tiedosto: 'Metro de Granada por Maracena.jpg', selite: 'Vihreävalkoinen matalalattiaraitiovaunu ajaa katua pitkin aurinkoisena talvipäivänä punatiilisten kerrostalojen välissä.', lahde: 'Lopezsuarez, Wikimedia Commons (CC0)' },
+              kuva: { tiedosto: 'Metro de Granada por Maracena.jpg', selite: 'Granadan raitiotie avattiin 21. syyskuuta 2017, ja sen lähes kuudentoista kilometrin linjalla on 26 asemaa.', lahde: 'Lopezsuarez, Wikimedia Commons (CC0)' },
             },
             {
               otsikko: 'Katu, joka murrettiin läpi',
@@ -8463,10 +8457,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjoitukset ovat yhä paikoillaan. Sama lause toistuu seinillä '
             + 'uudestaan ja uudestaan: se oli hallitsijasuvun tunnuslause, ja '
             + 'se kuuluu "ei ole voittajaa paitsi Jumala".',
-          selite: 'Alhambra kukkulallaan ja takana Sierra Nevada, jonka '
-            + 'toukokuuhun asti lumiset huiput ovat myös syy palatsin '
-            + 'puutarhoihin: sulamisvesi tuotiin kanavaa pitkin suoraan '
-            + 'suihkulähteisiin.',
+          selite: 'Kun Alhambra luovutettiin vuonna 1492, voittajat eivät '
+            + 'purkaneet palatsia vaan muuttivat siihen, ja siksi sen '
+            + 'kipsikoristelu ja arabiankieliset kirjoitukset ovat yhä '
+            + 'paikoillaan.',
           lahde: 'Adam Jones, Ph.D., Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Alhambra',
         },
@@ -8482,10 +8476,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'katsoi siitä taakseen ja itki, ja hänen äitinsä sanoi, ettei '
             + 'kannata itkeä kuin nainen sitä, mitä ei osannut puolustaa kuin '
             + 'mies.',
-          selite: 'Francisco Pradillan maalaus vuodelta 1882: vasemmalla '
-            + 'Boabdil mustan hevosen selässä, oikealla punapukuinen '
-            + 'Ferdinand ja hänen takanaan Isabella, ja taustan kukkulalla '
-            + 'kohoaa Alhambra.',
+          selite: 'Francisco Pradillan vuoden 1882 maalaus esittää hetkeä, '
+            + 'jona Boabdil luovutti Granadan avaimet Ferdinandille ja '
+            + 'Isabellalle 2. tammikuuta 1492.',
           lahde: 'Francisco Pradilla y Ortiz, Wikimedia Commons (Public domain)',
           wiki: 'Reconquista',
         },
@@ -8500,9 +8493,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '479 metriä, Iberian niemimaan korkein huippu. Lunta ei silti '
             + 'ole taattu: alppihiihdon MM-kisat oli määrä pitää täällä 1995, '
             + 'mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.',
-          selite: 'Tuolihissi Borreguilesin rinteillä Sierra Nevadassa: '
-            + 'etualalla riippuu tyhjä tuoli, oikealla nousee tuoli '
-            + 'laskettelijoineen ja taustalla näkyy lumisia kumpuja.',
+          selite: 'Sierra Nevadan hiihtokeskus on Euroopan eteläisin, ja sen '
+            + 'hissit nousevat yli kolmen kilometrin korkeuteen aivan '
+            + 'Iberian korkeimman huipun Mulhacénin kupeessa.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Sierra Nevada (Espanja)',
         },
@@ -8518,26 +8511,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Calles Granada 02.jpg',
-          selite: 'Albaicínin kattojen tasalta kaakkoon kesäpäivänä: '
-            + 'Darron laakson tiheän puuston takana levittäytyy Alhambra '
-            + 'torneineen, ja kauimpana kohoavat Sierra Nevadan harjat '
-            + 'lumilaikkuineen.',
+          selite: 'Darron laakso erottaa Albaicínin kukkulan Alhambrasta, ja '
+            + 'joen nimen arvellaan juontuvan sen kultapitoisista '
+            + 'sedimenteistä.',
           lahde: 'Felvalen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Blick auf Granada.jpg',
-          selite: 'Albaicínin rinne täyttää koko kuvan kevätpäivänä: '
-            + 'valkoisia taloja ja vaaleita tiilikattoja porrastuu '
-            + 'ylöspäin sypressien ja palmujen välissä, ja laella erottuu '
-            + 'San Nicolásin valkoinen kellotorni.',
+          selite: 'Albaicín on säilyttänyt pitkälti nasridiajan keskiaikaisen '
+            + 'katuverkkonsa, ja se liitettiin Alhambran '
+            + 'maailmanperintökohteeseen vuonna 1994.',
           lahde: 'Chrisi1964, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Night view from Alhambra de Granada, Andalousia Spain - Image Picture Photography (14691952077).jpg',
-          selite: 'Alhambran muurien sisältä länteen auringonlaskun '
-            + 'jälkeen: vasemmalla pyöreä vallitorni ja kaksi sypressiä '
-            + 'siluettina, oikealla valaistu nelikulmainen torni, ja '
-            + 'alempana palavat Albaicínin katuvalot.',
+          selite: 'Alhambra on palatsien, puutarhojen ja varustusten '
+            + 'muodostama linnoitettu kokonaisuus ja Unescon '
+            + 'maailmanperintökohde.',
           lahde: 'Grand Parc - Bordeaux, France from France, Wikimedia '
             + 'Commons (CC BY 2.0)',
         },
@@ -8546,16 +8536,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Court of the Lions, Alhambra by Juan Laurent.jpg',
           vuosi: '1870-luku',
-          selite: 'Alhambran Leijonapiha Juan Laurentin valokuvaamana 1870-luvulla, '
-            + 'jolloin hän kiersi Espanjaa suurella kamerallaan ja myi vedoksia '
-            + 'matkailijoille.',
+          selite: '1870-luvun vedoksen otti ranskalainen Jean Laurent, joka muutti '
+            + 'Espanjaan 1843 ja avasi Madridiin valokuvaamon 1856.',
           lahde: 'Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Court of the Lions, Alhambra de Granada (Spain).jpg',
-          selite: 'Sama piha tänään: kaksitoista leijonaa kannattelevat yhä allasta '
-            + 'keskellä, ja 2000-luvun perusteellisen korjauksen jälkeen suihkulähde '
-            + 'toimii taas.',
+          selite: 'Leijonapihan rakennutti nasridisulttaani Muhammad V, ja työt '
+            + 'alkoivat hänen toisella hallituskaudellaan vuosien 1362 ja 1391 '
+            + 'välillä.',
           lahde: 'Heparina1985, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -8587,9 +8576,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paikallaan. Vuonna 1922 hän järjesti Alhambran pihalla '
             + 'kilpailun, joka pelasti vanhan cante jondo -laulun '
             + 'unohdukselta.',
-          selite: 'Manuel de Falla (1876–1946) aikakauslehden pyöreässä '
-            + 'kuvassa: knalli päässä, paksut viikset ja turkiskauluksinen '
-            + 'päällystakki, solmio jälkikäteen vihreäksi väritettynä.',
+          selite: 'Manuel de Falla (1876–1946) sävelsi "Öitä Espanjan '
+            + 'puutarhoissa" vuosina 1909–1915 ja muutti vasta sen jälkeen '
+            + 'Granadaan Alhambran kukkulan rinteeseen.',
           lahde: 'A. Ciarán, Wikimedia Commons (PD)',
           wiki: 'Manuel de Falla',
           musiikki: 'https://music.apple.com/fi/artist/manuel-de-falla/319270',
@@ -8606,9 +8595,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'häissä. Helmikuun 1963 rankkasateet romahduttivat luolia ja '
             + 'ajoivat suuren osan asukkaista pois, mutta osassa luolia '
             + 'tanssitaan yhä.',
-          selite: 'Zambra Sacromonten luolassa: kalkittu holvikatto, siihen '
-            + 'ripustettuja kuparipannuja, kaksi tanssijaa keskellä kapeaa '
-            + 'käytävää ja yleisö istumassa molemmilla seinustoilla.',
+          selite: 'Zambra on Sacromonten luolien oma flamencomuoto, joka '
+            + 'kuului alun perin hääpäivään eikä esitykseen.',
           lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Flamenco',
         },
@@ -9604,6 +9592,8 @@ export const KULTTUURI_KATEGORIAT = {
   ],
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa:
   // monivirkkeiset kuvatekstit tiivistetty yhteen virkkeeseen.
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   krakova: [
     {
       id: 'kaupunki',
@@ -9613,16 +9603,14 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Wawel Cathedral Front.jpg',
-          selite: 'Wawelin katedraali kukkulan päällä: korkea punatiilinen '
-            + 'kellotorni ja sen oikealla puolella Sigismundin kappelin '
-            + 'kullattu kupoli — täällä kruunattiin Puolan kuninkaat.',
+          selite: 'Wawelin katedraali on omistettu pyhille Stanislaukselle ja '
+            + 'Venceslaukselle, ja siellä kruunattiin Puolan kuninkaat.',
           lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '20200512 Kościół Mariacki w Krakowie 1735 9920.jpg',
-          selite: 'Mariankirkon kaksi eri korkuista tornia torin laidalla: '
-            + 'vasemmalla korkeampi teräväkärkinen torni, josta hejnał '
-            + 'soitetaan, oikealla matalampi kellotorni kupolikattoineen.',
+          selite: 'Mariankirkon korkeammasta tornista soitetaan joka tunti '
+            + 'torvella hejnał, joka katkeaa aina kesken sävelen.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -9635,10 +9623,9 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Planty Park, autumn, Old Town, Krakow, Poland.jpg',
-          selite: 'Leveä lehtipuukujanne syksyllä: latvat kaartuvat holviksi '
-            + 'keltaisena ja ruosteenruskeana, ja hiekkakäytävän molemmin '
-            + 'puolin on rivi vihreitä valurautapenkkejä ja mustia '
-            + 'lyhtypylväitä.',
+          selite: 'Planty-puisto perustettiin 1822–1830 puretun '
+            + 'kaupunginmuurin paikalle, ja se on neljä kilometriä pitkä ja '
+            + '21 hehtaarin laajuinen.',
           lahde: 'Zygmunt Put Zetpe0202, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Krakovan vanhaakaupunkia ei ympäröi muuri vaan puisto. '
@@ -9665,7 +9652,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'noin seitsemässätoista minuutissa. Raitiovaunut '
                 + 'aloittivat 1882 hevosvetoisina, ja verkko '
                 + 'sähköistettiin maaliskuussa 1901. Linjoja on nyt 27.',
-              kuva: { tiedosto: 'Kraków - tram Bombardier NGT6 twisting from Nowosądecka street to Wielicka street.JPG', selite: 'Keltavalkoinen nivelraitiovaunu kaartaa risteyksessä omalla radallaan leveän tyhjän kadun keskellä.', lahde: 'Wuhazet (Henryk Żychowski), Wikimedia Commons (CC BY 3.0)' },
+              kuva: { tiedosto: 'Kraków - tram Bombardier NGT6 twisting from Nowosądecka street to Wielicka street.JPG', selite: 'Krakovan raitiovaunut aloittivat 1882 hevosvetoisina, verkko sähköistettiin maaliskuussa 1901, ja linjoja on nyt 27.', lahde: 'Wuhazet (Henryk Żychowski), Wikimedia Commons (CC BY 3.0)' },
             },
             {
               otsikko: 'Puisto muurin paikalla',
@@ -9699,7 +9686,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kasvoi maan suurimmaksi. 1980-luvulla alueesta tuli '
                 + 'Solidaarisuus-liikkeen keskus: tehtaan 38 000 '
                 + 'työntekijästä lähes 29 000 kuului liittoon.',
-              kuva: { tiedosto: 'Plac Centralny - Nowa Huta.jpg', selite: 'Ilmakuva säteittäisestä aukiosta: keskellä on suorakaiteen muotoinen nurmikenttä ja sen ympäriltä lähtee viisi leveää puistokatua eri suuntiin.', lahde: 'TomRollauer, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Plac Centralny - Nowa Huta.jpg', selite: 'Nowa Huta perustettiin 1949 omaksi kaupungikseen ihanteelliseksi sosialistiseksi kaupungiksi ja liitettiin Krakovaan 1951.', lahde: 'TomRollauer, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -9836,8 +9823,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'syötin, sai kauhean janon ja joi Veiksel-jokea niin kauan, '
             + 'että halkesi. Kuningas antoi pojalle palkinnoksi tyttärensä.',
           selite: 'Bronisław Chromyn veistämä Smok Wawelski vuodelta 1972 '
-            + 'seisoo kalliolla Wawelin tiilimuurien alla, liekki juuri '
-            + 'suusta puhallettuna.',
+            + 'puhaltaa oikeaa tulta muutaman minuutin välein Wawelin '
+            + 'kukkulan juurella.',
           lahde: 'Milena Bielecka-Sujak, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Wawelin linna',
         },
@@ -9852,9 +9839,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskipäivän soitto kuullaan radiossa koko Puolassa. Tornissa '
             + 'päivystetään ympäri vuorokauden, joten soitto ei jää väliin '
             + 'yhtenäkään yönä.',
-          selite: 'Torvensoittaja puhaltaa hejnałia Mariankirkon korkean '
-            + 'tornin kaari-ikkunasta, jonka seinässä vuorottelevat '
-            + 'punatiili ja vaalea kalkkikivi.',
+          selite: 'Mariankirkon tornissa päivystetään ympäri vuorokauden, ja '
+            + 'keskipäivän hejnał kuullaan radiossa koko Puolassa.',
           lahde: 'Jadwiga, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Mariankirkko (Krakova)',
           musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ac/Cracow_trumpet_signal.ogg/Cracow_trumpet_signal.ogg.mp3',
@@ -9869,9 +9855,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'halliin tuotiin mausteita, silkkiä ja nahkaa, ja täältä lähti '
             + 'kangasta, lyijyä ja suolaa. Yläkerta on nykyään taidemuseo, '
             + 'jossa on Puolan 1800-luvun maalauksia.',
-          selite: 'Sukiennice Rynek Głównyn keskellä: alakerrassa '
-            + 'holvikäytävä myyntikojuineen, ylhäällä koristeellinen '
-            + 'renessanssiattika.',
+          selite: 'Sukiennice on seissyt torin keskellä keskiajalta asti, ja '
+            + 'sen holvikäytävässä myydään yhä tavaraa.',
           lahde: 'Igor123121, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -9885,25 +9870,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Main Market Square, view from S, Old Town, Kraków, Poland.jpg',
-          selite: 'Suuri tori etelästä: vasemmalla raatihuoneen tiilitorni '
-            + 'kelloineen, keskellä matala ja pitkä kangashalli '
-            + 'kaarikäytävineen ja oikealla pieni valkoinen kirkko vihreine '
-            + 'kupoleineen.',
+          selite: 'Rynek Główny on peräisin 1200-luvulta, ja sitä sanotaan '
+            + 'yhdeksi Euroopan suurimmista keskiaikaisista toreista.',
           lahde: 'Zygmunt Put, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '20200808 Widok z Kopca Krakusa na Stare Miasto w Krakowie wczesnym rankiem 0557 3430.jpg',
-          selite: 'Vanhakaupunki aamu-usvassa: kattojen yli nousevat '
-            + 'vasemmalla nelisivuinen tiilitorni, keskellä jyrkkä '
-            + 'kirkonlaivan katto ja oikealla kaksitorninen tiilikirkko.',
+          selite: 'Krakova sijaitsee laaksossa, ja kivihiilen poltto teki '
+            + 'talvi-ilmasta ajoittain Euroopan huonointa — kaupunki kielsi '
+            + 'sen kotitalouksien lämmityksessä 2019.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Krakow - Wawel and Old Town from balloon.jpg',
-          selite: 'Vanhakaupunki ylhäältä syysiltapäivällä: vasemmassa '
-            + 'laidassa Wawelin kukkula ja Veiksel, keskellä tiivis '
-            + 'kattomeri kapeine katuineen, ja ympärillä ruskanvärinen '
-            + 'puistovyöhyke.',
+          selite: 'Wawelin kukkula sijaitsee Veikselin rannalla '
+            + 'vanhankaupungin eteläpuolella, ja sen juurella on '
+            + 'lohikäärmetarun luola.',
           lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -9917,9 +9899,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Cloth Hall (Sukiennice) in Main Market Square - panoramio.jpg',
-          selite: 'Sukiennice eli vanha kangashalli suurella torilla nykyään: '
-            + 'kaarikäytävien alla on myyntikojuja ja vasemmalla kohoaa vanhan '
-            + 'raatihuoneen torni.',
+          selite: 'Sukiennicen yläkerta on nykyään taidemuseo, jossa on Puolan '
+            + '1800-luvun maalauksia.',
           lahde: 'Laima Gūtmane, Commons (CC BY-SA 3.0)',
         },
       ],
@@ -9949,9 +9930,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'obwarzanek-renkaita yhdellä grossilla. Kaduilla on nykyään '
             + '170–180 sinistä kärryä, ja rinkeleitä myydään lähes 150 000 '
             + 'päivässä.',
-          selite: 'Sininen rinkelikärry kadulla: myyjä valkoisessa takissa '
-            + 'kärryn takana ja edessä pinoittain punottuja '
-            + 'obwarzanek-rinkeleitä siemenillä siroteltuina.',
+          selite: 'Obwarzanek on punottu rinkeli, jonka taikina keitetään '
+            + 'ennen uuniin panoa — nimi tulee verbistä obwarzać, keittää.',
           lahde: 'Stefan Källroos, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -9965,9 +9945,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ensimmäisenä torstaina Adam Mickiewiczin patsaalle '
             + 'keskustorille kilpailuun. Unesco otti tavan '
             + 'kulttuuriperintöluetteloonsa 2018.',
-          selite: 'Kilpailupäivän szopkia kivisillä portailla vuonna 2019: '
-            + 'etualalla monitorninen seimi, jossa on kimaltavia kupoleita, '
-            + 'parvekkeita ja pieniä hahmoja, ja takana odottaa lisää seimiä.',
+          selite: 'Szopka rakennetaan pahvista ja värillisestä foliosta '
+            + 'oikeiden krakovalaisten rakennusten mukaan, ja Unesco otti '
+            + 'tavan kulttuuriperintöluetteloonsa 2018.',
           lahde: 'JagaKRA, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10365,6 +10345,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/europe-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   helsinki: [
     {
       id: 'kaupunki',
@@ -10375,21 +10357,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Lutheran Cathedral Helsinki.jpg',
-          selite: 'Helsingin tuomiokirkko Senaatintorin portaiden yläpäässä, '
-            + 'katollaan kaksitoista sinkistä apostolipatsasta.',
+          selite: 'Carl Ludvig Engel suunnitteli tuomiokirkon Senaatintorin '
+            + 'sommitelmansa huipennukseksi, ja se rakennettiin vuosina '
+            + '1830–1852.',
           lahde: 'Hans Hillewaert, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Helsinki aerial 2022.jpg',
-          selite: 'Helsinki ilmasta kevätjäiden aikaan: keskustan niemi työntyy merelle, ja '
-            + 'etualalla erottuvat Suomenlinnan bastionit saarillaan.',
+          selite: 'Helsingin keskusta on rakennettu niemelle, ja sen edustan '
+            + 'saarille alettiin muurata Suomenlinnan merilinnoitusta vuonna 1748.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Passengers of Suomenlinna ferry on an early winter morning; Helsinki, Finland, 2024 January.jpg',
-          selite: 'Suomenlinnan lautan matkustajat kävelevät Kauppatorin '
-            + 'lumiselle rannalle talviaamuna, takanaan Uspenskin '
-            + 'katedraalin vihreät kupolit.',
+          selite: 'Kauppatorilta lähtevä Suomenlinnan lautta kulkee ympäri '
+            + 'vuoden ja kuuluu tavalliseen joukkoliikennelippuun.',
           lahde: 'Pekka Vyhtinen, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -10437,22 +10419,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg',
-          selite: 'Ilmakuva keskustasta merelle: Tuomiokirkko ja Senaatintori '
-            + 'keskellä, oikealla Esplanadin vihreä nauha ja edessä '
-            + 'Eteläsatama laivoineen.',
+          selite: 'Esplanadin puiston nurmella on istuttu 1800-luvun alusta '
+            + 'asti, ja sen toisessa päässä odottavat Kauppatori ja '
+            + 'Eteläsatama.',
           lahde: 'Suomen Ilmakuva Oy, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Helsingin Tuomiokirkko ja Senaatintori - D672 - hkm.HKMS000005-km002mzn.jpg',
-          selite: 'Vanha ilmakuva Tuomiokirkosta ja Senaatintorista: torin '
-            + 'laidalla pysäköi menneiden vuosikymmenten autoja, ja takana '
-            + 'näkyvät Uspenskin katedraali ja satama nosturirivistöineen.',
+          selite: 'Senaatintori määrättiin uuden pääkaupungin pääaukioksi '
+            + 'vuonna 1812 Johan Albrecht Ehrenströmin asemakaavassa.',
           lahde: 'SKY-FOTO Möller, Helsingin kaupunginmuseo, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Market Square in Helsinki, Finland, 2024 May.jpg',
-          selite: 'Kauppatori kesäiltana: saaristolaiva laiturissa, oranssit '
-            + 'torikatokset ja kävelijöitä rantalaiturilla.',
+          selite: 'Kauppatorilta ostetaan kesällä herneitä ja mansikoita ja '
+            + 'lokakuussa silakkaa suoraan veneistä.',
           lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -10460,16 +10441,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The new cathedral, Helsingfors, Russia, i.e., Helsinki, Finland-LCCN2001697412.jpg',
           vuosi: '1890-luku',
-          selite: 'Senaatintori ja Nikolainkirkko 1890-luvun photochrom-vedoksessa, '
-            + 'jonka kylkeen on painettu Russia: Suomi oli tuolloin Venäjän '
-            + 'suuriruhtinaskunta.',
+          selite: '1890-luvun vedoksen kirkko tunnettiin Nikolainkirkkona, sillä se '
+            + 'rakennettiin kunnianosoituksena Suomen suuriruhtinaalle, '
+            + 'keisari Nikolai I:lle, ja nimi vaihtui vasta itsenäistymisessä 1917.',
           lahde: 'Library of Congress (PD)',
         },
         {
           tiedosto: 'Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg',
-          selite: 'Sama tori tänään: kirkon nimi vaihtui itsenäistymisen jälkeen '
-            + 'Tuomiokirkoksi, ja leveille portaille istuudutaan kesäiltoina kuin '
-            + 'katsomoon.',
+          selite: 'Kirkko on nykyään Helsingin hiippakunnan luterilainen tuomiokirkko, '
+            + 'ja Senaatintorin ympärillä seisovat yhä Engelin piirtämät '
+            + 'yliopisto ja valtioneuvoston linna.',
           lahde: 'JIP, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10501,8 +10482,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Catedral Uspenski, Helsinki, Finlandia, 2012-08-14, DD 05.JPG',
-          selite: 'Uspenskin katedraali Katajanokan kalliolla: punatiilinen '
-            + 'julkisivu, vihertävät katot ja kullatut sipulikupolit.',
+          selite: 'Uspenskin katedraali valmistui Katajanokan kalliolle 1868, '
+            + 'ja se on Länsi-Euroopan suurin ortodoksinen kirkko.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Helsinki on merikaupunki, jonka keskustan kiertää '
@@ -10549,9 +10530,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'nurmilla istutaan eväiden kanssa iltaan asti.',
               kuva: {
                 tiedosto: 'Kings-gate-A12.jpg',
-                selite: 'Suomenlinnan Kuninkaanportti ja Kustaanmiekan '
-                  + 'kivimuurit — portti rakennettiin 1750-luvulla '
-                  + 'linnoituksen juhlasisäänkäynniksi.',
+                selite: 'Suomenlinnan Kuninkaanportti rakennettiin '
+                  + '1750-luvulla linnoituksen juhlasisäänkäynniksi.',
                 lahde: 'Jisis, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -10564,9 +10544,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jonne poiketaan yhtä luontevasti kuin kahville.',
               kuva: {
                 tiedosto: 'Allas Sea Pool in September 2019.jpg',
-                selite: 'Merikylpylän kannet ja altaat sataman laidalla; '
-                  + 'taustalla pyörii maailmanpyörä ja laituriin on '
-                  + 'kiinnittynyt matkustajalaiva.',
+                selite: 'Keskustan satamassa toimivan merikylpylän altaisiin '
+                  + 'voi pulahtaa keskellä kaupunkia, ja löylyn jälkeen '
+                  + 'mennään mereen talvellakin.',
                 lahde: 'WanderingTrad, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -10604,8 +10584,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'matkan ja hoitaa jarrutuksen. Kesässä rataa kierretään noin '
             + '47 000 kertaa. Huvipuiston omistaa Lasten Päivän Säätiö, ja '
             + 'tuotto jaetaan kuudelle lastensuojelujärjestölle.',
-          selite: 'Vuoristoradan sininen juna kiipeää ylös täydessä lastissa '
-            + 'puisten pylväiden ja kaiteiden välissä.',
+          selite: 'Linnanmäen puinen Vuoristorata avattiin 13. heinäkuuta '
+            + '1951, ja sen vauhtia hidastaa yhä käsin jarrumestari junan '
+            + 'takaosassa.',
           lahde: 'Oona Räisänen, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Vuoristorata (Linnanmäki)',
         },
@@ -10619,8 +10600,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'silakkamarkkinat. Joka lokakuu Eteläsataman rantaan purjehtii '
             + 'kalastajia myymään suolattua ja maustettua silakkaa suoraan '
             + 'veneen kannelta, ja raati valitsee vuoden parhaan maustekalan.',
-          selite: 'Syys- eli silakkamarkkinat Kauppatorilla 1890-luvulla, '
-            + 'kojuissa silakan lisäksi villasukkia ja kangaspakkoja.',
+          selite: 'Silakkamarkkinat jäivät jäljelle, kun syysmarkkinoilta '
+            + 'lakkautettiin vuonna 1891 kaikki muu kauppa paitsi suolatun '
+            + 'kalan myynti.',
           lahde: 'Unknown author, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Silakkamarkkinat',
         },
@@ -10635,8 +10617,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hahmoista 2000-luvulla Kivimiehet, ja niille on puettu '
             + 'jääkiekkomaajoukkueen pelipaidat, kasvomaskit ja Käärijän '
             + 'vihreä bolero.',
-          selite: 'Kaksi aseman neljästä kivimiehestä alaviistosta: punertavat '
-            + 'graniittihahmot pitelevät valkoisia pallolamppuja.',
+          selite: 'Emil Wikström veisti päärautatieaseman neljä '
+            + 'graniittimiestä vuonna 1914 saman kipsimallin mukaan, joten '
+            + 'kaikki neljä ovat sama mies.',
           lahde: 'Ethan Doyle White, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Lyhdynkantajat',
         },
@@ -10668,8 +10651,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kauppatorilta kuuluu joukkoliikenteeseen ja kulkee ympäri '
             + 'vuoden. Kirkontornin majakka välähtää neljä lyhyttä kertaa — '
             + 'se on morseaakkosten H niin kuin Helsinki.',
-          selite: 'Vanha rannikkotykki Suomenlinnan Kustaanmiekassa, pitkä '
-            + 'musta piippu ruostuneella rautalavetilla.',
+          selite: 'Kustaanmiekan rannikkotykit kuuluvat Suomenlinnaan, jota '
+            + 'kutsuttiin vuoteen 1918 asti Viaporiksi.',
           lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)',
           wiki: 'Suomenlinna',
         },
@@ -10684,8 +10667,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Helsingissä, ja Kaisaniemen puisto sai esittää Moskovan '
             + 'nimikkopuistoa. Reds-elokuvan ryhmä taas odotti Helsingissä '
             + 'lunta.',
-          selite: 'Uspenskin katedraali Katajanokan kalliolla: punatiiliset '
-            + 'seinät ja kullatut sipulikupolit — tiilet tuotiin puretusta '
+          selite: 'Uspenskin katedraalin punatiilet tuotiin puretusta '
             + 'Bomarsundin linnoituksesta.',
           lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Uspenskin katedraali',
@@ -11604,6 +11586,8 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   kiova: [
     {
       id: 'kaupunki',
@@ -11613,31 +11597,28 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Golden Gate Kiev 2018 G1.jpg',
-          selite: 'Kultainen portti: punatiilinen porttitorni kullattuine '
-            + 'kupoleineen on vuodelta 1982 ja pelkkä arvaus, sillä '
-            + '1000-luvun portista ei ole säilynyt yhtään kuvaa — aidot '
-            + 'muurinpätkät ovat sen sisällä.',
+          selite: 'Kultaisen portin porttitorni on vuodelta 1982 ja pelkkä '
+            + 'arvaus, sillä 1000-luvun portista ei ole säilynyt yhtään '
+            + 'kuvaa — aidot muurinpätkät ovat sen sisällä.',
           lahde: 'George Chernilevsky, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Saint Andrew\'s Church, Kyiv.jpg',
-          selite: 'Andreaksen kirkko mäen päällä Kiovassa: turkoosinvihreiden '
-            + 'seinien yllä on tumma sipulikupoli ja sen ympärillä pienempiä '
-            + 'torneja kultaisine huippuineen, Bartolomeo Rastrellin '
-            + 'piirustusten mukaan 1750-luvulla valmistuneena.',
+          selite: 'Andreaksen kirkko valmistui Kiovan mäen laelle '
+            + '1750-luvulla Bartolomeo Rastrellin piirustusten mukaan.',
           lahde: 'Oleh Kushch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Maidan Nezalezhnosti 20190505-2.jpg',
-          selite: 'Itsenäisyydenaukio eli Maidan keväisenä päivänä: aukion perällä kohoaa '
-            + 'itsenäisyyden muistopylväs ja sivuilla neuvostoajan monumentaalitalot.',
+          selite: 'Itsenäisyydenaukio eli Maidan avautuu Kiovan 1,2 kilometrin '
+            + 'mittaisen pääkadun Hreshtshatykin varrelle.',
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Kiev-WalkingBridge.JPG',
-          selite: 'Näkymä korkealta rantatörmältä leveän joen yli syksyllä: etualalla on lehdettömiä oksia ja keltaista vaahteraa, joen keskellä kulkee valkoinen matkustaja-alus, ja oikealla kaartuu kevyen liikenteen riippusilta metsäiselle saarelle.',
+          selite: 'Dneprin yli Truhaniv-saarelle vievä kävelysilta valmistui vasta 1957; sitä ennen 4,5 neliökilometrin saarelle pääsi vain veneellä tai talvella jäätä pitkin.',
           lahde: 'Vincent de Groot, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Kiova on rakennettu Dneprin molemmille rannoille, ja '
@@ -11685,7 +11666,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Albaniaan, Bulgariaan, Kreikan mantereelle ja '
                 + 'Pohjois-Makedoniaan. Kiovan päivää vietetään '
                 + 'toukokuun lopulla, juuri kukinnan aikaan.',
-              kuva: { tiedosto: '2010.05.09 Horse chestnut blossom, Kyiv, Ukraine 001c.jpg', selite: 'Lähikuva hevoskastanjan kukista: valkoiset, poimureunaiset terälehdet on täplitetty kirkkaanpunaisella ja keltaisella, ja kukista työntyy pitkiä kaarevia heteitä.', lahde: 'William N. Beckon, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: '2010.05.09 Horse chestnut blossom, Kyiv, Ukraine 001c.jpg', selite: 'Hevoskastanja on Kiovan tunnetuimpia epävirallisia symboleja, vaikka lajin luontainen levinneisyys rajoittuu Balkanille.', lahde: 'William N. Beckon, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Pääkatu, joka rakennettiin uudelleen',
@@ -11834,9 +11815,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys '
             + 'ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja '
             + 'asema on kaivettu törmän sisään.',
-          selite: 'Arsenalnan liukuportaat ylhäältä kuvattuna: tunnelin pää '
-            + 'katoaa näkyvistä, ja matka pinnalta laiturille kestää useita '
-            + 'minuutteja.',
+          selite: 'Arsenalnan metroasema on 105,5 metriä maanpinnan '
+            + 'alapuolella, ja se oli maailman syvin metroasema vuoteen 2022 '
+            + 'asti.',
           lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Kiovan metro',
         },
@@ -11850,9 +11831,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja ruhtinas Vladimir Monomah kirjoitti seinään oman nimensä. '
             + 'Tutkijat lukevat seiniä kuin ilmoitustaulua, jolle on '
             + 'kirjoitettu seitsemänsadan vuoden ajan.',
-          selite: 'Sofian katedraali kellotornista kuvattuna: vihreitä '
-            + 'kattoja ja kupoliryhmä, jonka keskimmäinen kupoli on kullattu, '
-            + 'ja takana nykyinen kaupunki kerrostaloineen.',
+          selite: 'Pyhän Sofian katedraali rakennettiin 1000-luvulla, ja sen '
+            + 'seinistä on löydetty yli 7 000 kävijöiden raapimaa piirrosta '
+            + 'ja tekstiä 1000–1700-luvuilta.',
           lahde: 'Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Pyhän Sofian katedraali (Kiova)',
         },
@@ -11867,9 +11848,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tehtiin kovassa tuulessa ja sateessa ja keskeytyi '
             + 'ilmahälytyksiin, mutta kilpi oli valmis ennen '
             + 'itsenäisyyspäivää 24. elokuuta.',
-          selite: 'Patsas alhaalta kuvattuna: teräsnainen kohottaa oikeassa '
-            + 'kädessään miekkaa ja vasemmassa kilpeä, jossa erottuu Ukrainan '
-            + 'kolmikärki.',
+          selite: 'Teräksinen naispatsas on 62 metriä korkea, ja sen '
+            + 'kilvestä irrotettiin Neuvostoliiton vaakuna elokuussa 2023 '
+            + 'Ukrainan kolmikärjen tieltä.',
           lahde: 'Світлана 743, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11883,24 +11864,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Aerial view kyiv.jpg',
-          selite: 'Podilin kaupunginosa ja Dnepri ylhäältä syysaamuna: ruskan '
-            + 'värisen rinteen takaa avautuu matalien kortteleiden ruudukko, '
-            + 'ja oikealla levittäytyy leveä joki kahden siltansa kanssa.',
+          selite: 'Kiovan pinta-ala on 839 neliökilometriä, ja sen sisällä on '
+            + '448 vesialuetta lähes kahdeksantuhannen hehtaarin alalla.',
           lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 DE)',
         },
         {
           tiedosto: '2017 - Київ - Світанок над Дніпром.jpg',
-          selite: 'Jokiranta auringon noustessa: kivetyllä terassilla on rivi '
-            + 'valurautaisia katulyhtyjä, ja niiden takana kaartuu joen yli '
-            + 'jalankulkusilta riippuvine köysineen.',
+          selite: 'Kiovan läntinen oikea ranta on jyrkkä ja kukkulainen, ja '
+            + 'siellä ovat kaupungin vanhimmat kaupunginosat.',
           lahde: 'Moahim, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Khreshchatyk Street, Kiev. Ukraine (45935065521).jpg',
-          selite: 'Hreshtshatykin bulevardi yöllä sumussa: leveä kiveys '
-            + 'jatkuu suoraan pimeään, katulyhdyt hehkuvat oransseina '
-            + 'utuisina palloina ja molemmin puolin nousevat valaistut '
-            + 'julkisivut.',
+          selite: 'Hreshtshatyk tuhoutui vuonna 1941, ja sodan jälkeen se '
+            + 'rakennettiin uudelleen sadan metrin levyisenä entisen '
+            + 'seitsemänkymmenenviiden sijaan.',
           lahde: 'Juan Antonio Segal from Madrid, Spain, Wikimedia '
             + 'Commons (CC BY 2.0)',
         },
@@ -11909,16 +11887,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The Lavra gate, Kiev, Russia, (i.e., Ukraine)-LCCN2001697423.jpg',
           vuosi: '1890-luku',
-          selite: 'Luolaluostarin porttikirkko 1890-luvun photochrom-vedoksessa: '
-            + 'vuosina 1106–1108 pääportin päälle rakennettu kirkko on koko alueen '
+          selite: '1890-luvun photochrom-vedoksen porttikirkko rakennettiin vuosina '
+            + '1106–1108 Luolaluostarin pääportin päälle, ja se on koko alueen '
             + 'vanhin säilynyt rakennus.',
           lahde: 'Library of Congress (PD)',
         },
         {
           tiedosto: 'Gate Church of the Trinity (Pechersk Lavra) 01.JPG',
-          selite: 'Sama porttikirkko tänään: julkisivun barokkimaalaukset ovat '
-            + '1700-luvulta, kupoli on kullattu ja alla oleva holvikäytävä on yhä '
-            + 'luostarin sisäänkäynti.',
+          selite: 'Porttikirkon julkisivun barokkimaalaukset ovat 1700-luvulta, ja '
+            + 'sen alla oleva holvikäytävä on yhä luostarin sisäänkäynti.',
           lahde: 'Швітланьо, Commons (CC BY-SA 3.0)',
         },
       ],
@@ -11948,9 +11925,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seuran jäsentä ja 60 kutsuvierasta. Seuraavana vuonna hän '
             + 'lauloi Kiovan arkeologisessa kongressissa, ja lontoolainen '
             + 'Athenaeum-lehti vertasi häntä antiikin Kreikan runonlaulajiin.',
-          selite: 'Ostap Veresai vaimonsa kanssa vuonna 1873, bandura '
-            + 'polvella ja kävelykeppi seinää vasten — kobzarit kulkivat '
-            + 'kylästä kylään oppaan kanssa.',
+          selite: 'Kobzari Ostap Veresai kutsuttiin Kiovaan vuonna 1873 '
+            + 'maantieteellisen seuran kokoukseen laulamaan dumia banduran '
+            + 'säestyksellä.',
           lahde: 'Joseph Kordysch, Wikimedia Commons (PD)',
           wiki: 'Bandura',
           musiikki: 'https://music.apple.com/fi/search?term=bandura%20kobzar',
@@ -11970,9 +11947,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sävelmään uudet englanninkieliset sanat kelloista. Niin syntyi '
             + 'Carol of the Bells, joka kuullaan myös Yksin kotona '
             + '-elokuvassa.',
-          selite: 'Mykola Leontovytš mustavalkoisessa muotokuvassa: lyhyt parta '
-            + 'ja pystykauluksinen takki, jonka kauluksessa on vaalea '
-            + 'koristenauha.',
+          selite: 'Mykola Leontovytš sovitti Štšedrykin vanhasta '
+            + 'uudenvuodenlaulusta, ja teos esitettiin ensi kerran Kiovassa '
+            + '29. joulukuuta 1916.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Carol of the Bells',
           musiikki: 'https://music.apple.com/fi/search?term=shchedryk%20leontovych',
@@ -13103,6 +13080,8 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   bukarest: [
     {
       id: 'kaupunki',
@@ -13113,29 +13092,30 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Bucharest-palace-of-parliament-may-2016-001.jpg',
-          selite: 'Parlamenttipalatsi kohoaa valkoisena massana keskellä '
-            + 'kaupunkia, ja oikealla nousee rakennustelineissä Romanian '
-            + 'kansan pelastuksen katedraali.',
+          selite: 'Parlamenttipalatsi on maailman painavin rakennus, noin 4,1 '
+            + 'miljoonaa tonnia, ja sen rakentaminen alkoi Nicolae '
+            + 'Ceaușescun määräyksestä vuonna 1984.',
           lahde: 'anisoboy, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Bucuresti Ateneum 2.jpg',
-          selite: 'Romanian Ateneum eli kaupungin konserttitalo vuodelta 1888: '
-            + 'pyöreä kupolisali ja pylväikkö nousevat puistonurmen takaa.',
+          selite: 'Romanian Ateneum avattiin konserttitaloksi 1888 ranskalaisen '
+            + 'Albert Galleronin piirustusten mukaan, ja osa rakennusrahoista '
+            + 'kerättiin 28 vuotta kestäneellä kansalaiskeräyksellä.',
           lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Bucharest Strada Lipscani.jpg',
-          selite: 'Lipscanin katu vanhassakaupungissa: mukulakivetty '
-            + 'kävelykatu kaartuu 1800-luvun julkisivujen ja terassipöytien '
-            + 'välissä kohti kupolikattoista kulmataloa.',
+          selite: 'Lipscanin katu sai nimensä Leipzigistä, jonka tavaroita sen '
+            + 'kauppiaat toivat, ja alue oli keskiajalta 1800-luvun alkuun '
+            + 'Bukarestin ja koko Valakian tärkein kauppapaikka.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Bucharest - Gara de Nord (2023) - img 04.jpg',
-          selite: 'Rautatieaseman edusta iltapäivällä: vaalea asemarakennus kellotorneineen levittäytyy taustalle, sen edessä suihkuaa matala suihkulähderivi ja etualalla odottaa jono keltaisia takseja.',
+          selite: 'Bukarestin päärautatieaseman peruskivi laskettiin 10. syyskuuta 1868 kuningas Carol I:n läsnä ollessa, ja nykyisen nimensä asema sai vuonna 1888.',
           lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
         },
         kappale: 'Bukarest on iso kaupunki, jonka nykyinen muoto on '
@@ -13161,7 +13141,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'siinä on viisi linjaa, 64 asemaa ja 80 kilometriä '
                 + 'rataa. Päärautatieaseman peruskivi laskettiin '
                 + 'syyskuussa 1868 ja asema avattiin 1872.',
-              kuva: { tiedosto: 'Grivița Metro Station, Bucharest, Romania - 1.jpg', selite: 'Täysin tyhjä metrolaituri suoraan päädystä kuvattuna: tummanpunaiset seinät kaartuvat molemmin puolin, keskellä laituria on yksi punainen penkkirivi ja perällä nousevat portaat ja liukuportaat.', lahde: 'Mihnea L, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Grivița Metro Station, Bucharest, Romania - 1.jpg', selite: 'Grivițan metroasema avattiin 1. maaliskuuta 2000 neloslinjan ensimmäisellä osuudella Gara de Nordin ja 1 Main välillä.', lahde: 'Mihnea L, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Kuusi sektoria',
@@ -13336,9 +13316,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kymmenettuhannet asukkaat muuttivat muualle. Nyt talossa '
             + 'kokoontuu Romanian parlamentti, mutta noin 70 prosenttia '
             + 'huoneista on yhä tyhjillään.',
-          selite: 'Parlamenttipalatsin pääjulkisivu puiden takaa, ja edessä '
-            + 'seisova bussirivi näyttää mittakaavan: taloa jatkuu kuvan '
-            + 'molempien reunojen yli ja korkeutta on 84 metriä.',
+          selite: 'Parlamenttipalatsissa on lattiapinta-alaa 365 000 '
+            + 'neliömetriä, ja se on maailman suurin siviilihallinnon '
+            + 'rakennus.',
           lahde: 'Rakoon, Wikimedia Commons (CC0)',
           wiki: 'Casa Poporului',
         },
@@ -13353,9 +13333,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Schitul Maicilor: kesäkuussa 1982 se matkasi 245 metriä uusien '
             + 'talojen taakse. Iordăchescu siirsi kaikkiaan 29 rakennusta, '
             + 'joista 13 oli kirkkoja tai luostareita.',
-          selite: 'Schitul Maicilorin pieni valkoinen kirkko punaisine '
-            + 'tiilikattoineen nykyisellä paikallaan ison toimistotalon ja '
-            + 'kerrostalojen välissä.',
+          selite: 'Vuonna 1725 rakennettu Schitul Maicilor siirrettiin '
+            + 'kesäkuussa 1982 kiskoilla 245 metriä sivuun, jotta se '
+            + 'säästyisi keskustan purkutöiltä.',
           lahde: 'Biruitorul, Wikimedia Commons (CC0)',
           wiki: 'Bukarest',
         },
@@ -13369,9 +13349,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'loppuivat makkarankuoret kesken illan ja hän paistoi massan '
             + 'sellaisenaan. Vappuna niitä grillataan koko maassa pihoilla ja '
             + 'puistoissa.',
-          selite: 'Micejä hiiligrillissä: kuoreton massa puristetaan '
-            + 'sormenpaksuisiksi pötköiksi ja käännellään hiilloksella '
-            + 'muutaman minuutin ajan.',
+          selite: 'Mici eli mititei ovat kuorettomia jauhelihamakkaroita, '
+            + 'joihin tulee valkosipulia, timjamia ja ruokasoodaa — sooda '
+            + 'tekee niistä kuohkeita.',
           lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Mititei',
         },
@@ -13386,25 +13366,23 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Bucharest - Dambovita view 01.jpg',
-          selite: 'Dâmbovița sillalta katsottuna auringonlaskun aikaan: joki '
-            + 'kulkee suorassa betonisessa uomassa, ja sen tyyni pinta '
-            + 'heijastaa oranssin taivaan ja rannan lehdettömät puut.',
+          selite: 'Dâmbovița oli vuosisatojen ajan Bukarestin tärkein '
+            + 'juomavesilähde, ja joen nimi juontuu tammea tarkoittavasta '
+            + 'slaavilaisesta sanasta.',
           lahde: 'Joe Mabel, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Bucharest-Skyline-01.jpg',
-          selite: 'Yliopiston aukio ylhäältä: keskellä kaartuu vaaleaharmaa '
-            + '1900-luvun alun palatsi mansardikattoineen, sen editse kulkee '
-            + 'leveä bulevardi ja kaukana horisontissa kohoaa parlamentin '
-            + 'palatsi.',
+          selite: 'Yliopiston aukio merkitsee Bukarestin vanhan keskustan '
+            + 'koillisrajaa, ja yliopiston edessä seisoo neljä patsasta, '
+            + 'joista vanhin on vuodelta 1874.',
           lahde: 'seisdeagosto, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Bucharest Skyline.jpg',
-          selite: 'Kaupunki matalien kattojen yli iltaruskossa: '
-            + 'tiilikattoisten omakotitalojen ja pihapuiden takana nousee '
-            + 'rivi vaaleita kerrostaloja ja vinoköysisillan valkoinen '
-            + 'pyloni.',
+          selite: 'Vuoden 1977 maanjäristyksessä Bukarestissa romahti noin 33 '
+            + 'suurta kerrostaloa, ja sen jälkeen kaupungin '
+            + 'rakennusmääräyksiä tiukennettiin tuntuvasti.',
           lahde: 'Dan Mihai Pitea, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13412,15 +13390,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Postcard from the Belle Époque with the Romanian Athenaeum and its garden.jpg',
           vuosi: '1900-luvun taite',
-          selite: 'Romanian Ateneum ja sen puutarha 1900-luvun taitteen postikortissa '
-            + '— vuonna 1888 vihitty konserttitalo rahoitettiin osaksi '
-            + 'kansalaiskeräyksellä.',
+          selite: '1900-luvun taitteen postikortin Ateneum oli tuolloin vielä uusi '
+            + 'talo: konserttisali vihittiin 1888, mutta rakennustyöt jatkuivat '
+            + 'vuoteen 1897.',
           lahde: 'Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Ateneo Rumano, Bucarest, Rumanía, 2016-05-29, DD 73.jpg',
-          selite: 'Sama rakennus tänään kupoleineen, pylväikköineen ja puistoineen: '
-            + 'sisällä soittaa George Enescun filharmoninen orkesteri.',
+          selite: 'Ateneum on nykyään George Enescun filharmonisen orkesterin koti ja '
+            + 'vuonna 1958 perustetun George Enescu -festivaalin päänäyttämö.',
           lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13449,9 +13427,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja pian muidenkin maiden museot pyysivät Antipalta neuvoja. '
             + 'Samassa talossa seisoo dinoteriumin luuranko: norsun '
             + 'sukulainen, jonka syöksyhampaat kaartuvat alaleuasta alaspäin.',
-          selite: 'Dinoteriumin luuranko museon salissa: alaleuasta kaartuu '
-            + 'kaksi syöksyhammasta alaspäin kuin koukut, ja takana lasin '
-            + 'takana on vihreä Afrikan dioraama.',
+          selite: 'Dinoterium oli norsujen kaltainen kärsäkäs, jonka '
+            + 'syöksyhampaat kasvoivat alaleuasta alas- ja taaksepäin, ja '
+            + 'Antipan museon yksilö on lajin ainoa ehjä luuranko '
+            + 'maailmassa.',
           lahde: 'Britchi Mirela, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Dioraama',
         },
@@ -13466,9 +13445,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaksi, toinen ohjaamon edessä ja toinen siiven takana, ja ne '
             + 'pyörivät vastakkaisiin suuntiin. Wienin lentoviikolla 1912 '
             + 'Vlaicu voitti palkinnot muun muassa tarkkuuslaskusta.',
-          selite: 'Vlaicu-kone Cotrocenin kentällä vuonna 1912, peräsimessä '
-            + 'maalaus A. VLAICU Nr II, keskellä potkuri ja moottori ja '
-            + 'vieressä sotilaita lippalakeissa.',
+          selite: 'Aurel Vlaicun koneessa ei ollut siivekkeitä lainkaan, vaan '
+            + 'ohjaajalla oli ratti kuin autossa ja käännös tehtiin '
+            + 'kallistamalla rattitankoa sivulle.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Lentokone',
         },
@@ -18376,6 +18355,8 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   islanti: [
     {
       id: 'kaupunki',
@@ -18386,29 +18367,28 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Gullfoss, Suðurland, Islandia, 2014-08-16, DD 119.JPG',
-          selite: 'Gullfossin putous syöksyy kahdessa portaassa kapeaan rotkoon. '
-            + 'Vesipölyyn on noussut sateenkaari, ja reunoilla on ruskeaa '
-            + 'sammalta.',
+          selite: 'Gullfoss syöksyy kahdessa portaassa Hvítá-joen rotkoon, '
+            + 'joka kulkee kohtisuoraan joen virtaussuuntaan nähden.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'View of Reykjavík from Hallgrímskirkja, 20230507 1229 5733.jpg',
-          selite: 'Reykjavík kirkontornista nähtynä: värikkäitä peltikattoja '
-            + 'tiiviisti vierekkäin, takana satama ja meren takana '
-            + 'lumihuippuinen vuori.',
+          selite: 'Reykjavík on maailman pohjoisin itsenäisen valtion '
+            + 'pääkaupunki, ja se perustettiin kauppakaupungiksi vasta '
+            + 'vuonna 1786.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Reynisfjara and Reynisdrangar, Iceland.jpg',
-          selite: 'Reynisfjaran musta hiekkaranta ja siitä merestä nousevat '
-            + 'basalttipilarit. Aallot lyövät rantaan valkoisina vaahtoina.',
+          selite: 'Reynisfjaran musta hiekkaranta kuuluu Katlan geopuistoon, '
+            + 'ja sen edustan basalttipaadet ovat nimeltään Reynisdrangar.',
           lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Fjallsárlón Glacier Lagoon.jpg',
-          selite: 'Sinivalkoinen jäävuori kelluu harmaassa, sameassa lagunissa. Sen pinta on uurteinen ja paikoin syvän turkoosi, ja taustalla erottuu sumun takaa jäätikön reuna ja tumma vuorenrinne.',
+          selite: 'Fjallsárlón on jäätikköjärvi Vatnajökullin eteläreunassa, ja siihen poikiva Fjallsjökull ulottuu suoraan veden rajaan.',
           lahde: 'Bernd Thaller, Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Islannin sisämaa on lähes asumaton. Ylänkö on lumen '
@@ -18459,7 +18439,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'allaskompleksissa kävi vuonna 2010 noin 800 000 '
                 + 'ihmistä. Unesco lisäsi allaskulttuurin aineettoman '
                 + 'kulttuuriperinnön luetteloon 2025.',
-              kuva: { tiedosto: 'Sundhöll Reykjavíkur 1.jpg', selite: 'Valkoinen funktionalistinen uimahallirakennus kadunkulmassa: seinässä on rivi kapeita pystyikkunoita ja pyöreitä ikkunoita, ja pääsisäänkäynnin ruskean oven yllä lukee talon nimi. Edessä on kukkalaatikoita ja suojatien merkkejä.', lahde: 'Akigka, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Sundhöll Reykjavíkur 1.jpg', selite: 'Sundhöll Reykjavíkur on kaupungin vanhin uimahalliksi rakennettu talo: Guðjón Samúelssonin suunnittelema rakennus avattiin 1937 ja lämpeni alusta asti maalämmöllä.', lahde: 'Akigka, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Kolme sotaa kalasta',
@@ -18605,9 +18585,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ollut kirjoitettu mihinkään. Paikka sattuu olemaan kohdassa, '
             + 'jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat — '
             + 'rotko levenee pari senttiä vuodessa.',
-          selite: 'Almannagjá, Þingvellirin suurin repeämä. Kalliolta lainlukija '
-            + 'esitti kolmasosan laeista joka vuosi, jotta koko lakikokoelma '
-            + 'tuli luetuksi kolmen vuoden välein.',
+          selite: 'Almannagjá on Þingvellirin suurin repeämä, ja sen kalliolta '
+            + 'lainlukija esitti joka vuosi kolmasosan laeista, jotta koko '
+            + 'lakikokoelma tuli luetuksi kolmen vuoden välein.',
           lahde: 'Marine SABRES, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Þingvellir',
         },
@@ -18619,9 +18599,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lainata sanoja vaan tehdään omat: tietokone on tölva, "lukujen '
             + 'ennustaja", ja kaikille islantilaisille tuttu sana yhtä '
             + 'lailla.',
-          selite: 'Aukeama Flateyjarbókista, Islannin suurimmasta keskiaikaisesta '
-            + 'käsikirjoituksesta (1387–1394). Se sisältää Norjan kuninkaiden '
-            + 'saagoja ja kertomuksen Vinlandin löytämisestä.',
+          selite: 'Flateyjarbók on Islannin suurin keskiaikainen käsikirjoitus, '
+            + '225 kirjoitettua ja kuvitettua pergamenttilehteä Norjan '
+            + 'kuninkaiden saagoja.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Flateyjarbók',
         },
@@ -18633,9 +18613,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'aloitti kotimaassaan jo lapsitähtenä ja löi läpi maailmalla '
             + '1990-luvulla; hänen jälkeensä tulivat muun muassa Sigur Rós ja '
             + 'Of Monsters and Men.',
-          selite: 'Björk esiintymässä. Hän on levyttänyt sekä islanniksi että '
-            + 'englanniksi ja tehnyt yhteistyötä muusikoiden ja '
-            + 'kuvataiteilijoiden kanssa ympäri maailman.',
+          selite: 'Björk aloitti Islannissa lapsitähtenä ja löi läpi maailmalla '
+            + '1990-luvulla.',
           lahde: 'Paul Familetti, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Björk',
         },
@@ -18651,28 +18630,24 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Kirkjufell in winter.jpg',
-          selite: 'Kirkjufell talvella: kerroksellinen vuori nousee '
-            + 'yksinään vuonon takaa, ja sen rinteitä juovittavat '
-            + 'vaakasuorat tummat kalliokerrokset lumen alla. Etualalla '
-            + 'on lumen peittämä laavakivimuuri ja sen takana tumma '
-            + 'meri.',
+          selite: 'Kirkjufell on 463 metriä korkea nunatak Snæfellsnesin '
+            + 'pohjoisrannikolla — jääkauden jäätiköiden yli jäänyt '
+            + 'huippu, jota sanotaan Islannin valokuvatuimmaksi '
+            + 'vuoreksi.',
           lahde: 'Beardhatcode, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Colorful mountain slope in Landmannalaugar.jpg',
-          selite: 'Landmannalaugarin rinteet kesällä: riolliitti värjää '
-            + 'maan keltaiseksi, oranssiksi ja tummanharmaaksi, ja '
-            + 'sammal tuo laikkuja kirkasta vihreää. Laaksossa alempana '
-            + 'kiemurtelee palmikoituva jokiuoma harmaalla '
-            + 'hiekkatasangolla.',
+          selite: 'Landmannalaugar on Fjallabakin luonnonsuojelualueella '
+            + 'noin vuonna 1477 syntyneen Laugahraun-laavakentän '
+            + 'reunalla, ja se tunnetaan kuumista lähteistään.',
           lahde: 'Syony, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Vestrahorn After Sunrise - Iceland.jpg',
-          selite: 'Vestrahorn pian auringonnousun jälkeen: sahalaitainen '
-            + 'vuorijono hehkuu ruskeana matalassa valossa, ja sen '
-            + 'edessä kaartuu musta hiekkaranta. Etualalla kasvaa '
-            + 'kuivunutta rantaheinää tuppaissa mustassa hiekassa.',
+          selite: 'Vestrahorn kuuluu Stokksnesin niemeen Islannin '
+            + 'kaakkoisrannikolla, ja niemen kärjessä toimii maan '
+            + 'ilmavalvonnan tutka-asema.',
           lahde: 'Eric Kilby, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -18687,9 +18662,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Hallgrimskirkja church view.jpg',
-          selite: 'Hallgrímskirkjan kirkko Reykjavíkissa aamuhämärissä: betoniset '
-            + 'pilarit nousevat portaittain kuin basalttipatsaat, ja edessä seisoo '
-            + 'Leif Erikssonin patsas.',
+          selite: 'Hallgrímskirkja valmistui 1986 Islannin suurimmaksi kirkoksi, ja '
+            + 'Guðjón Samúelsson suunnitteli sen muistuttamaan maan '
+            + 'basalttikallioita, vuoria ja jäätiköitä.',
           lahde: 'Alberto Moreno, Commons (CC0)',
         },
       ],
@@ -18724,9 +18699,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'suklaan kanssa. Asukasta kohti Islannissa julkaistaan enemmän '
             + 'kirjoja kuin missään muussa maassa, ja sanotaan että joka '
             + 'kymmenes islantilainen julkaisee elämänsä aikana kirjan.',
-          selite: 'Mies seisoo reykjavíkilaisen kirjakaupan hyllyjen edessä. '
-            + 'Hyllyt ovat lattiasta kattoon täynnä kirjoja, ja niiden '
-            + 'reunoissa on hintakylttejä.',
+          selite: 'Islannissa julkaistaan asukasta kohti enemmän kirjoja kuin '
+            + 'missään muussa maassa, ja sanotaan että joka kymmenes '
+            + 'islantilainen julkaisee elämänsä aikana kirjan.',
           lahde: 'Helgi Halldórsson, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -18740,9 +18715,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jota oli vastassa satamassa väkijoukko ja televisiokamerat. '
             + 'Koulut pidettiin kiinni, jotta lapset pääsivät katsomaan. '
             + 'Palautus jatkui vuosikymmeniä.',
-          selite: 'Sivu 1500-luvun islantilaisesta käsikirjoituksesta. Tekstin '
-            + 'alla on piirros, jossa ihmiset paloittelevat valasta rannalla '
-            + 'ja hevonen kantaa koria.',
+          selite: 'Sivu on 1500-luvun islantilaisesta käsikirjoituksesta, '
+            + 'jollaisia vietiin 1600- ja 1700-luvuilla Tanskaan '
+            + 'tutkittaviksi ja jotka alkoivat palata vasta 1971.',
           lahde: 'Tuntematon kirjuri, Wikimedia Commons (public domain)',
         },
         {
@@ -18756,9 +18731,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ottamaan apua keneltäkään. Kun palkinto tuli, maassa oli alle '
             + 'sataseitsemänkymmentätuhatta asukasta — pienin maa, josta '
             + 'kirjallisuuden Nobel oli siihen asti tullut.',
-          selite: 'Mustavalkoinen muotokuva Halldór Laxnessista vuodelta 1955. '
-            + 'Kirjailija katsoo sivulle, hiukset kammattuna taakse ja puvun '
-            + 'kaulus auki.',
+          selite: 'Halldór Laxness sai kirjallisuuden Nobelin vuonna 1955, '
+            + 'jolloin Islannissa oli alle sataseitsemänkymmentätuhatta '
+            + 'asukasta.',
           lahde: 'Nobel-säätiö, Wikimedia Commons (public domain)',
           wiki: 'Halldór Laxness',
         },
@@ -18770,6 +18745,8 @@ export const KULTTUURI_KATEGORIAT = {
    * tiivistettiin yhteen virkkeeseen (ks. tromssa-lohkon perustelu).
    * Nostot, oppaat, johdannot, kuvatiedostot ja lahde-rivit ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   lappi: [
     {
       id: 'kaupunki',
@@ -18779,30 +18756,29 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Gentle but wide green aurora display over Levi, Kittilä, Lapland, Finland, 2023 September - 2.jpg',
-          selite: 'Revontulet leviävät vihreinä juovina tunturin yllä '
-            + 'Kittilässä, ja alhaalla erottuu matalaa männikköä ja '
-            + 'jäkäläpeitteistä maata.',
+          selite: 'Revontulet syntyvät, kun Auringosta tulevat varautuneet '
+            + 'hiukkaset törmäävät yläilmakehän happi- ja typpiatomeihin ja '
+            + 'saavat ne hehkumaan.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Betula pubescens czerepanovii in autumn colors on the lower peak of Sallatunturit in Salla, Lapland, Finland.jpg',
-          selite: 'Tunturikoivu hehkuu oranssina ruskan aikaan Sallassa, ja '
-            + 'takana aukeaa metsäinen laakso ja seuraavat tunturit.',
+          selite: 'Tunturikoivu kasvaa Lapin puurajalla, ja ruska värittää '
+            + 'maiseman syyskuussa.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'View to Äkäslompolo and Ylläs fell in Kolari, Lapland, Finland, 2018 September.jpg',
-          selite: 'Näkymä Äkäslompolon järvelle ja Ylläksen tunturille Kolarissa ruskan '
-            + 'aikaan, ja tyyni vesi peilaa iltapilviä.',
+          selite: 'Ylläs kuuluu Pallas–Yllästunturin kansallispuiston noin sadan '
+            + 'kilometrin mittaiseen tunturiketjuun.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Landscape from Kultakero, Pyhätunturi, Pelkosenniemi, Lapland, Finland, 2021 September.jpg',
-          selite: 'Tunturin laelta avautuva ruskamaisema: matalaa '
-            + 'varpukasvillisuutta punaisena ja vihreänä, keskellä vaalea '
-            + 'kivikkorinne ja horisontissa loiva tunturinselkä.',
+          selite: 'Lappi on Suomen suurin maakunta, 100 366 neliökilometriä, '
+            + 'mutta väestöntiheys on 1,9 asukasta neliökilometrillä.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Lappi on Suomen suurin maakunta, sata tuhatta '
@@ -18850,7 +18826,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'harvakseltaan väkeä. Kruunu perusti joen varteen '
                 + 'oman valvonta-asemansa. Isoisän matkan aikaan 1873 '
                 + 'ryntäys oli vielä käynnissä.',
-              kuva: { tiedosto: 'Kultala 1874.jpg', selite: 'Käsin väritetty kartta vuodelta 1874: mutkitteleva joki kulkee vaaleansinisenä kuvan halki, ja sen rannoille on merkitty rakennuksia, teitä ja työmaita.', lahde: 'Geologian tutkimuskeskus, Wikimedia Commons (PD)' },
+              kuva: { tiedosto: 'Kultala 1874.jpg', selite: 'Vuoden 1874 kartta esittää Ivalojoen kulta-aluetta, jossa ryntäys alkoi 1870 kaivoslain hyväksymisen jälkeen.', lahde: 'Geologian tutkimuskeskus, Wikimedia Commons (PD)' },
             },
             {
               otsikko: 'Kaupunki poronpään muotoon',
@@ -18996,9 +18972,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muuteta, ja se voi periytyä suvussa. Kirkko piti joikaamista '
             + 'syntinä, ja vielä 1950-luvulla se oli kielletty '
             + 'saamelaisalueen kouluissa.',
-          selite: 'Wimme Saari joikaa gákti eli saamenpuku yllään '
-            + 'Etno-Espan lavalla Helsingissä elokuussa 2006 — joikaaja '
-            + 'tulee toimeen ilman soittimia.',
+          selite: 'Joiku on saamelaisten laulutapa, jossa ihmiselle, paikalle '
+            + 'tai eläimelle tehdään oma sävelmä — ihmisestä ei lauleta, '
+            + 'vaan hänet joikataan.',
           lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Joiku',
         },
@@ -19011,10 +18987,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'poronhoitoalue on 122 936 neliökilometriä eli 36 prosenttia '
             + 'Suomen maapinta-alasta, ja suurin sallittu poromäärä on ollut '
             + '203 700 eloporoa.',
-          selite: 'Poronkäristystä perunamuusin, puolukan ja suolakurkun '
-            + 'kanssa Muonion Jeriksellä — liha on ulkona koko elämänsä '
-            + 'olleesta porosta, joten lastut ovat tummia ja lähes '
-            + 'rasvattomia.',
+          selite: 'Poronkäristykseen liha höylätään jäätyneenä ohuiksi '
+            + 'lastuiksi, kuullotetaan rasvassa ja haudutetaan pehmeäksi.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Poronkäristys',
         },
@@ -19027,10 +19001,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat '
             + 'lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja '
             + 'osa kielipesän lapsista opettaa kieltä itse.',
-          selite: 'Sajos-talon opastaulu Inarissa: samat asiat '
-            + 'pohjoissaameksi, inarinsaameksi, koltansaameksi ja suomeksi, '
-            + 'alimmalla rivillä inarinsaamen kieliyhdistys Anarâškielâ '
-            + 'servi.',
+          selite: 'Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä, ja '
+            + '1990-luvun puolivälissä kieltä puhui lapsilleen enää kaksi '
+            + 'perhettä.',
           lahde: 'Kimberli Mäkäräinen, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Inarinsaame',
         },
@@ -19045,23 +19018,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Saana at Kilpisjärvi, 2012 March.jpg',
-          selite: 'Saana maaliskuussa: laakeahuippuinen tunturi kohoaa '
-            + 'kokonaan lumen peitossa jäätyneen Kilpisjärven takana, ja '
-            + 'sen laella erottuu ohut masto.',
+          selite: 'Saana on Enontekiön tunturi Kilpisjärven rannalla, ja se '
+            + 'kuuluu geologisesti Skandeihin samoine liuske- ja '
+            + 'gneissikivilajeineen.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Kevo canyon from Bođosroadjá.JPG',
-          selite: 'Kevon kanjoni kesällä: jyrkät rinteet laskeutuvat '
-            + 'kapeaan uomaan lohkarekivikon ja tunturikoivikon peittäminä, '
-            + 'ja pohjalla kasvaa tiheä vihreä puusto.',
+          selite: 'Kevon luonnonpuisto perustettiin Utsjoelle 1956, ja sen '
+            + 'kanjonilaaksossa saa kulkea vain kahta merkittyä reittiä.',
           lahde: 'Antti Leppänen, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Pallastunturi peaks in september 2021.jpg',
-          selite: 'Pallastunturit syyskuussa: etualan suolla ja '
-            + 'kangasmetsässä palaa ruska, ja taustalla kohoaa '
-            + 'tunturiselänne, jonka lakea peittää jo ohut lumi.',
+          selite: 'Pallastunturit kuuluvat Pallas–Yllästunturin '
+            + 'kansallispuistoon, joka on Suomen kolmanneksi suurin ja '
+            + 'kävijämäärältään suosituin.',
           lahde: 'Htm, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19075,8 +19047,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Pallastunturi and Hanhijärvi in Muonio, Lapland, Finland, 2023 September.jpg',
-          selite: 'Pallastunturit ja Hanhijärven suolampi syyskuussa, kun ruska on '
-            + 'värjännyt suon oranssiksi ja tunturit nousevat metsän takaa.',
+          selite: 'Pallas–Yllästunturin kansallispuiston tunturiketju jatkuu noin '
+            + 'sadan kilometrin matkan Länsi-Lapissa Enontekiön, Kittilän, '
+            + 'Kolarin ja Muonion alueella.',
           lahde: 'Ximonic (Simo Räsänen), Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19111,8 +19084,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'porot kootaan erotukseen, jossa ne lajitellaan omistajille ja '
             + 'osa erotetaan teuraaksi. Aidan sisällä pyörii tuhansia eläimiä '
             + 'samaan aikaan.',
-          selite: 'Neljä poroa kulkee lumisella rinteellä Utsjoella, jossa '
-            + 'maassa on lunta laikuittain ja takana näkyy tunturin rinne.',
+          selite: 'Poro kulkee kesät vapaana tuntureilla, mutta jokaisella on '
+            + 'omistaja, joka tunnistetaan vasan korvaan leikatusta suvun '
+            + 'merkistä.',
           lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Poro',
         },
@@ -19127,9 +19101,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'samaan aikaan kun isoisä kirjoitti omaa päiväkirjaansa. '
             + 'Nykyään ahkiota vedetään kelkalla, mutta poroajot ovat yhä '
             + 'laji: kilpaa ajetaan jäällä suksilla perässä.',
-          selite: 'Vanha kaiverrus vuodelta 1894: poroja ja ahkioita lepäämässä '
-            + 'lumikentällä, edessä turkkiin pukeutunut mies pitelemässä '
-            + 'poroa.',
+          selite: 'Gunnar Berndtsonin vuoden 1894 kuvan porokaravaanissa eläimet '
+            + 'kulkivat jonossa toisiinsa sidottuina ja vetivät ahkioita, '
+            + 'kapeita venemäisiä rekiä.',
           lahde: 'Gunnar Berndtson, Wikimedia Commons (public domain)',
         },
         {
@@ -19143,9 +19117,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin siksi, että pitkän matkan takaa tulleet saivat '
             + 'yöpyä kirkonmenojen ajan. Osaa käytettiin vielä 1900-luvun '
             + 'puolella.',
-          selite: 'Turvekammi, jonka katto ja seinät ovat paksun ruohon '
-            + 'peitossa; keskellä on pieni ikkuna ja ympärillä kasvaa '
-            + 'heinää ja kukkia.',
+          selite: 'Turvekammin runko tehtiin puusta ja päälle ladottiin '
+            + 'turvetta, joka eristää lämpöä paremmin kuin lauta.',
           lahde: 'EerikLehto, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19156,6 +19129,8 @@ export const KULTTUURI_KATEGORIAT = {
    * tiivistettiin yhteen virkkeeseen (ks. tromssa-lohkon perustelu).
    * Nostot, oppaat, johdannot, kuvatiedostot ja lahde-rivit ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   kreeta: [
     {
       id: 'kaupunki',
@@ -19166,31 +19141,30 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Chania Old Harbour in Crete, Greece 004.jpg',
-          selite: 'Chanian vanha satama iltavalossa: venetsialaisajan talot '
-            + 'kaartuvat rannan mukana, ja veden pinnassa näkyy niiden '
-            + 'peilikuva.',
+          selite: 'Chania on Kreetan luoteisrannikon kaupunki, joka oli jo '
+            + 'minolaisella ajalla asutettu ja tunnettiin Knossoksen '
+            + 'lineaari-B-tauluissa nimellä Kydonia.',
           lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Ruins of the Minoan Palace in Knossos.jpg',
-          selite: 'Knossoksen palatsin raunioita — punaisia pylväitä, '
-            + 'portaita ja kivimuureja; palatsissa oli satoja huoneita '
-            + 'käytävien varrella.',
+          selite: 'Knossos oli minolaisen sivilisaation suurin keskus, ja sitä '
+            + 'sanotaan usein Euroopan vanhimmaksi kaupungiksi.',
           lahde: 'Annatsach, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Elafonisi pink sand beach - panoramio.jpg',
-          selite: 'Elafonisin matala lahti, jossa vesi on turkoosia ja hiekassa '
-            + 'on vaaleanpunaista sävyä murskautuneista simpukankuorista.',
+          selite: 'Elafonisin vaaleanpunainen hiekka syntyy levän kanssa '
+            + 'elävistä värillisistä pieneliöistä, ja saari on '
+            + 'luonnonsuojelualuetta.',
           lahde: 'trolvag, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Psiloritis view from Thronos 01.JPG',
-          selite: 'Saaren korkein vuori kohoaa loivana harmaana kupuna '
-            + 'kirkkaan sinisen taivaan alle, ja sen edessä on matalampia '
-            + 'kallioharjanteita ja vihreää pensaikkoa.',
+          selite: 'Psiloritis on Kreetan korkein huippu, 2 456 metriä, ja sen '
+            + 'kyljessä noin 1 500 metrin korkeudessa aukeaa Idan luola.',
           lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Kreeta on 260 kilometriä pitkä mutta kapea, ja sen '
@@ -19217,7 +19191,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Heraklioniin. Pohjoisrannikon moottoritiestä on '
                 + 'valmiina vasta noin 310 kilometriä suunnitellusta '
                 + '557:stä.',
-              kuva: { tiedosto: 'Minoan Lines, Ariadne Palace 1.jpg', selite: 'Iso puna-valkoinen matkustaja-autolautta liukuu tyynellä merellä iltahämärässä ikkunarivit valaistuina, kyljessä varustamon nimi.', lahde: 'Dnalor 01, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Minoan Lines, Ariadne Palace 1.jpg', selite: 'Pireuksesta kulkee lauttoja Heraklioniin, jonka lentokenttä on Kreikan toiseksi vilkkain.', lahde: 'Dnalor 01, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Pitkä ja kapea',
@@ -19384,9 +19358,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sarviin ja heittävät kuperkeikan sen selän yli. Tutkijat '
             + 'kiistelevät yhä siitä, oliko se urheilua, uskonnon meno vai '
             + 'molempia — eikä kukaan tiedä, onnistuiko se oikeasti koskaan.',
-          selite: 'Härkähyppyfreskon jäänteet Herakleionin arkeologisessa '
-            + 'museossa noin vuodelta 1500 eaa.: vaaleat hahmot ovat naisia '
-            + 'ja tumma mies, minolainen tapa merkitä sukupuoli värillä.',
+          selite: 'Härkähyppyfresko on noin vuodelta 1500 eaa., ja siinä '
+            + 'vaaleat hahmot ovat naisia ja tumma mies — minolainen tapa '
+            + 'merkitä sukupuoli värillä.',
           lahde: 'Wikimedia Commons (CC0)',
           wiki: 'Knossos',
         },
@@ -19397,9 +19371,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pystyssä polvella eikä leuan alla. Sitä soitetaan häissä ja '
             + 'kylän juhlissa, usein läpi yön: tanssi kestää niin kauan kuin '
             + 'soittajaa jaksaa.',
-          selite: 'Kreetalainen lyyra, jonka kieliä painetaan kynsien '
-            + 'kyljellä eikä sormenpäillä — siitä tulee soittimen erikoinen '
-            + 'liukuva ääni.',
+          selite: 'Kreetalainen lyyra on kolmikielinen jousisoitin, jota '
+            + 'pidetään pystyssä polvella eikä leuan alla.',
           lahde: 'Lemur12, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Psarantónis',
         },
@@ -19410,9 +19383,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '600 000 ihmistä — puita on siis viisikymmentä kertaa enemmän. '
             + 'Osa puista on tuhansia vuosia vanhoja ja tuottaa yhä satoa. '
             + 'Sato korjataan talvella, usein koko suvun voimin.',
-          selite: 'Oliivinkorjuuta Sitiassa Itä-Kreetalla: verkot '
-            + 'levitetään puun alle ja oksat ravistellaan tai kammataan '
-            + 'tyhjiksi.',
+          selite: 'Kreetalla kasvaa noin 30 miljoonaa oliivipuuta, ja sato '
+            + 'korjataan talvella usein koko suvun voimin.',
           lahde: 'Petro Stelte, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Oliivi',
         },
@@ -19428,23 +19400,22 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Lefka Ori 01.jpg',
-          selite: 'Lefka Ori eli Valkoiset vuoret kesäpäivänä: paljaat '
-            + 'kalkkikivihuiput nousevat vaaleina syvänsinistä taivasta '
-            + 'vasten, ja alhaalla vasemmalla näkyy kylän valkoisia taloja.',
+          selite: 'Lefka Ori eli Valkoiset vuoret on yksi Kreetan kuudesta '
+            + 'vuoristoryhmästä, ja Samarian rotko halkaisee sen.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Kourtaliotiko Gorge 01.JPG',
-          selite: 'Kourtaliotikon rotko: kaksi jyrkkää kalkkikiviseinämää '
-            + 'sulkeutuu kapeaksi kuruksi, jonka pohjalla kasvaa tummaa '
-            + 'vihreää ja rinteellä kiemurtelee kapea tie.',
+          selite: 'Kourtaliotikon rotko kulkee Kouroupa- ja Xiron-vuorten '
+            + 'välissä, ja sen kalliot ovat partakorppikotkan '
+            + 'levähdyspaikka.',
           lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Omalos Plateau.jpg',
-          selite: 'Omalosin tasanko ylhäältä: vuorten ympäröimä laakea '
-            + 'ylänkö on jaettu vaaleiksi peltokuvioiksi, joiden poikki '
-            + 'kulkee mutkitteleva tie.',
+          selite: 'Omalosin 15 neliökilometrin tasanko on Valkoisissa '
+            + 'vuorissa 38 kilometriä Chaniasta etelään, ja sen '
+            + 'eteläreunasta laskeudutaan Samarian rotkoon.',
           lahde: 'Emmanuel Eragne from Tokyo, Japan, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
@@ -19460,9 +19431,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Knossos North entrance bull fresco.jpg',
-          selite: 'Sama sisäänkäynti nykyään: punaiset pylväät on pystytetty '
-            + 'uudelleen, ja seinällä on jäljennös härkäfreskosta, jonka alkuperäinen '
-            + 'on Herakleionin museossa.',
+          selite: 'Pohjoisen sisäänkäynnin punaiset pylväät on pystytetty uudelleen, '
+            + 'ja seinän härkäfresko on jäljennös — alkuperäinen on Herakleionin '
+            + 'museossa.',
           lahde: 'Jebulon, Commons (CC0)',
         },
       ],
@@ -19497,9 +19468,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja siellä kalliot nousevat molemmin puolin satoja metrejä. '
             + 'Alue on ollut kansallispuisto vuodesta 1962, ja kesällä siellä '
             + 'kulkee tuhansia kävijöitä päivässä.',
-          selite: 'Näkymä Samarian rotkon suulle sumuisena päivänä: jyrkät '
-            + 'kalliorinteet sukeltavat alas laaksoon, ja etualalla '
-            + 'mutkittelee polku.',
+          selite: 'Samarian rotko laskee kuudentoista kilometrin matkalla noin '
+            + '1 200 metrin korkeudesta merenrantaan, ja se on ollut '
+            + 'kansallispuisto vuodesta 1962.',
           lahde: 'C messier, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19513,9 +19484,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'noin kymmenentuhatta. Nykyään useimmat on korvattu '
             + 'moottoripumpuilla, mutta osa on kunnostettu ja purjeet '
             + 'nostetaan kesäksi paikoilleen.',
-          selite: 'Metallinen tuulimylly Lassithin tasangolla: pyörässä on '
-            + 'kymmenen valkoista kangaspurjetta ja alla betoninen '
-            + 'vesisäiliö.',
+          selite: 'Lassithin tasangon tuulimyllyt eivät jauhaneet vaan '
+            + 'pumppasivat kasteluvettä pellolle, ja parhaimmillaan niitä '
+            + 'oli noin kymmenentuhatta.',
           lahde: 'Lourakis, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -19528,9 +19499,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä '
             + 'kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään '
             + 'mennään taskulampun kanssa.',
-          selite: 'Idan luolan tumma ja leveä suu kalliorinteessä, ja sen '
-            + 'eteen on rakennettu kapea kiskoilla kulkeva ratayhteys '
-            + 'kaivauksia varten.',
+          selite: 'Idan luolaan on tuotu uhrilahjoja tuhansia vuosia, ja '
+            + 'kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen '
+            + 'ajanlaskua.',
           lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -22455,6 +22426,8 @@ export const KULTTUURI_KATEGORIAT = {
    * intro-kenttä (js/packs/europe-artikkelit.js). Nostot, oppaan
    * tekstit, kuvatiedostot ja lähderivit ovat ennallaan.
    */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
   kobenhavn: [
     {
       id: 'kaupunki',
@@ -22465,9 +22438,9 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Kopenhagen (DK), Runder Turm -- 2017 -- 1633.jpg',
-          selite: 'Pyöreä torni alhaalta: punatiilinen sylinteri nousee suoraan '
-            + 'taivasta vasten, seinässään kapeita ikkunoita eri '
-            + 'korkeuksilla.',
+          selite: 'Pyöreä torni rakennettiin 1600-luvulla tähtitorniksi, ja sen '
+            + 'laelle 34,8 metriin noustaan seitsemän ja puolen kierroksen '
+            + 'ratsastusramppia pitkin.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
         // Henkivartijakuva poistettu (omistajan palaute 15.8.2026:
@@ -22475,8 +22448,9 @@ export const KULTTUURI_KATEGORIAT = {
         // oli varjo, ei kaupunki). Kanaalivene nousi tilalle.
         {
           tiedosto: 'Canal Tours at Christianshavn.jpg',
-          selite: 'Matala kanaalivene täynnä matkustajia kulkee leveällä '
-            + 'satama-altaalla vanhojen tiilisten makasiinien ohi.',
+          selite: 'Christianshavnin perusti 1600-luvun alussa Christian IV '
+            + 'hollantilaiskaupunkien malliin, ja kanavat hallitsevat sitä '
+            + 'yhä.',
           lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -22490,9 +22464,9 @@ export const KULTTUURI_KATEGORIAT = {
            * API:sta, kuva katsottu silmin.
            */
           tiedosto: "The Gefion Fountain against background of St. Alban's Church. Copenhagen, Denmark, Northern Europe.jpg",
-          selite: 'Gefionin lähde alaviistosta: valtava pronssihärkä painaa '
-            + 'päänsä alas, takana Gefjon ohjaa valjakkoa ja vesi ryöppyää '
-            + 'valkoisena patsaan takaa.',
+          selite: 'Gefionin lähteen lahjoitti kaupungille Carlsberg-säätiö '
+            + 'panimon 50-vuotisjuhlan kunniaksi, ja se esittää jumalatar '
+            + 'Gefjonia härkävaljakkoineen.',
           lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -22507,23 +22481,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Panorama view on Copenhagen from Church of Our Saviour (2).jpg',
-          selite: 'Ilta-aurinko kattojen yllä Vapahtajan kirkon tornista '
-            + 'katsottuna, keskellä Christiansborgin torni ja talorivit '
-            + 'tasaisina horisonttiin.',
+          selite: 'Vapahtajan kirkko tunnetaan ulkopuolisesta kierreportaastaan, '
+            + 'ja sen kellopeli soittaa sävelmiä joka tunti aamukahdeksasta '
+            + 'keskiyöhön.',
           lahde: 'Erwin Verbruggen, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Copenhagen, view from Rundetårn with Rosenborg Castle, 20220617 1004 6716.jpg',
-          selite: 'Näkymä Rundetårnin huipulta: punatiilikattojen takana '
-            + 'Rosenborgin linna vihreine kupolikattoineen ja Kuninkaan '
-            + 'puutarhan puut.',
+          selite: 'Rosenborgin linna rakennettiin 1606 maaseutuhuvilaksi ja '
+            + 'laajennettiin nykyiseen muotoonsa vuoteen 1624 mennessä.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Panorama of Nyhavn (24047322088).jpg',
-          selite: 'Nyhavnin kanaali: siniset, keltaiset ja punaiset talot '
-            + 'seisovat rivissä rantalaiturin takana, ja kanaalissa on '
-            + 'kiinni vanhoja purjelaivoja mastoineen.',
+          selite: 'Nyhavn kaivettiin 1670-luvulla kanavaksi, jotta laivat '
+            + 'pääsisivät purkamaan lastinsa keskelle kaupunkia.',
           lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -22538,9 +22510,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Kongens Nytorv (The King\'s New Square) and the Royal Danish Theatre.jpg',
-          selite: 'Sama teatteri ja aukio nykyään: Kongens Nytorv kaivettiin '
-            + '2010-luvulla auki metroasemaa varten ja rakennettiin sen jälkeen '
-            + 'uudelleen entiselleen.',
+          selite: 'Kongens Nytorv kaivettiin 2010-luvulla auki metroasemaa varten '
+            + 'ja rakennettiin sen jälkeen uudelleen entiselleen.',
           lahde: 'European Union, 2026, Commons (CC BY 4.0)',
         },
       ],
@@ -22571,8 +22542,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Nyhavn 9-11, København.jpg',
-          selite: 'Nyhavnin värikkäät talot ja niiden edessä puinen '
-            + 'purjevene — kanaalin ranta on kaupungin tunnetuin näkymä.',
+          selite: 'Nyhavnin varrella asui H. C. Andersen kolmessa eri '
+            + 'talossa yhteensä toistakymmentä vuotta.',
           lahde: 'Liberaler Humanist, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Kööpenhamina on rento kaupunki, joka koetaan parhaiten '
@@ -22622,20 +22593,22 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Copenhagen Cyclists (19200075809).jpg',
-                  selite: 'Aamuruuhka pyöräkaistalla: yli puolet '
-                    + 'kaupunkilaisten matkoista taittuu pyörällä.',
+                  selite: 'Kööpenhaminassa on noin 385 kilometriä '
+                    + 'autoliikenteestä erotettuja pyöräteitä, ja noin '
+                    + 'puolet työ- ja koulumatkoista tehdään pyörällä.',
                   lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'Cykelslangen (Dybbøls Bro).JPG',
-                  selite: 'Cykelslangen eli pyöräkäärme: oranssi kansi kaartaa '
-                    + 'satama-altaan yli pelkästään pyöriä varten.',
+                  selite: 'Cykelslangen eli pyöräkäärme on pelkästään pyörille '
+                    + 'rakennettu silta, joka avattiin 28. kesäkuuta 2014 '
+                    + 'Gasværkshavnenin yli.',
                   lahde: 'Orf3us, Wikimedia Commons (CC BY 3.0)',
                 },
                 {
                   tiedosto: 'København Metro 20100507 0317F (8455266869).jpg',
-                  selite: 'Metrovaunun sisällä Islands Bryggen asemalla '
-                    + 'matkustaja työntää pyörän mukanaan ovesta.',
+                  selite: 'Kööpenhaminan kuljettajaton metro paikkaa sateiset '
+                    + 'päivät, ja pyörän saa työntää mukaan vaunuun.',
                   lahde: 'Johan Wessman / News Øresund, Wikimedia Commons (CC BY 2.0)',
                 },
               ],
@@ -22653,9 +22626,8 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Strøget, Copenhagen, Denmark (9280358703).jpg',
                 asettelu: 'kapea',
-                selite: 'Kävelykadun päässä häämöttää Rundetårnin pyöreä '
-                  + 'torni — Strøgetin seudulla nähtävyydet odottavat '
-                  + 'kulman takana.',
+                selite: 'Strøget avattiin kävelykaduksi vuonna 1962, ja se '
+                  + 'halkoo koko vanhan keskustan.',
                 lahde: 'Aram Zucker-Scharff, Wikimedia Commons (CC BY 2.0)',
               },
             },
@@ -22671,17 +22643,16 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Harbour Bath, Islands Brygge.jpg',
-                  selite: 'Islands Bryggen satamakylpylä kesäpäivänä: '
-                    + 'puiset laiturikannet, punavalkoinen '
-                    + 'hengenpelastajien torni ja uimareita sataman '
-                    + 'vedessä keskellä kaupunkia.',
+                  selite: 'Sataman vesi on puhdistettu niin, että '
+                    + 'keskellä kaupunkia voi uida yleisissä '
+                    + 'satamakylvyissä kesäisin.',
                   lahde: 'milgrammer, Wikimedia Commons (CC BY 2.0)',
                 },
                 {
                   tiedosto: 'Havnebad Islands Brygge summer Copenhagen.jpg',
-                  selite: 'Rohkein hyppää: sukeltaja kiepsahtaa '
-                    + 'satamakylvyn puiselta korokkeelta ilta-auringossa, '
-                    + 'ja jono seuraavia odottaa vuoroaan kaiteen takana.',
+                  selite: 'Islands Bryggen satamakylpylä on kaupungin '
+                    + 'tunnetuin uimapaikka, ja paikalliset pitävät '
+                    + 'keskustassa uimista aivan tavallisena.',
                   lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
                 },
               ],
@@ -22697,8 +22668,8 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Smørrebrød at Kastrup IMG 8275 C.JPG',
                 asettelu: 'kapea',
-                selite: 'Kaksi klassikkoa odottaa veistä ja haarukkaa: '
-                  + 'paahtopaistia raasteella ja katkarapuja munalla.',
+                selite: 'Smørrebrødin syömisjärjestys on tarkka: ensin '
+                  + 'kala, sitten liha ja viimeisenä juusto.',
                 lahde: 'Anneli Salo, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -22715,8 +22686,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joka laskee ikänsä vuodesta 1448.',
               kuva: {
                 tiedosto: 'Tivoli at night - Tivoli Søen.JPG',
-                selite: 'Tivolin järvi illalla: pagodin ja vuoristoradan '
-                  + 'valot heijastuvat veteen lyhtyketjujen alla.',
+                selite: 'Tivoli avattiin elokuussa 1843 kaupungin vanhan '
+                  + 'vallihaudan viereen.',
                 lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -22842,9 +22813,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskenään kaksintaistelun. Nielsen kirjoitti myös satoja '
             + 'lauluja, joita tanskalaiset laulavat yhdessä koulussa ja '
             + 'juhlissa.',
-          selite: 'Carl Nielsen (1865–1931) noin vuonna 1908 — hän kasvoi '
-            + 'köyhässä perheessä Fynin saarella ja tuli Kööpenhaminaan '
-            + 'opiskelemaan.',
+          selite: 'Carl Nielsen (1865–1931) soitti kuninkaallisen teatterin '
+            + 'orkesterissa toista viulua kuusitoista vuotta ja sävelsi '
+            + 'samaan aikaan kaksi ensimmäistä sinfoniaansa.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Carl Nielsen',
           musiikki: 'https://music.apple.com/fi/search?term=Carl%20Nielsen',
@@ -22860,9 +22831,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sekoiteta keskenään. Vanhoissa lounasravintoloissa listalla '
             + 'voi olla yli kaksikymmentä eri leipää, ja jokaisella on oma '
             + 'nimensä ja vakiintunut kuormansa.',
-          selite: 'Kaksi smørrebrødiä kööpenhaminalaisella lautasella tummalla '
-            + 'ruisleivällä, jonka päälle levitetystä voista nimi tulee: '
-            + 'smør on voi ja brød leipä.',
+          selite: 'Smørrebrødin nimi tulee leivälle levitetystä voista: smør '
+            + 'on voi ja brød leipä.',
           lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Smørrebrød',
         },
@@ -22876,8 +22846,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'koulumatkoista tehdään pyörällä. Risteyksissä pyörillä on omat '
             + 'liikennevalonsa, ja talvella pyörätiet aurataan ensimmäisten '
             + 'teiden joukossa.',
-          selite: 'Pyöräilijöitä odottamassa vihreää valoa korotetulla '
-            + 'pyöräkaistalla ajoradan ja jalkakäytävän välissä.',
+          selite: 'Kööpenhaminan risteyksissä pyörillä on omat '
+            + 'liikennevalonsa, ja talvella pyörätiet aurataan ensimmäisten '
+            + 'teiden joukossa.',
           lahde: 'heb@Wikimedia Commons (mail), Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Pyöräily',
         },
@@ -22913,8 +22884,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'koulupaikan, ja koulussa Andersen istui monta vuotta itseään '
             + 'paljon nuorempien kanssa. Ensimmäinen ohut satuvihko ilmestyi '
             + 'vuonna 1835, ja satuja on käännetty yli sadalle kielelle.',
-          selite: 'Vanha ruskeasävyinen valokuva Hans Christian Andersenista '
-            + 'tuolilla istumassa, tumma rusetti kaulassa.',
+          selite: 'Hans Christian Andersen syntyi Odensessa suutarin '
+            + 'perheeseen vuonna 1805, ja hänen satujaan on käännetty yli '
+            + 'sadalle kielelle.',
           lahde: 'Thora Hallager, Wikimedia Commons (public domain)',
           wiki: 'H. C. Andersen',
         },
@@ -22928,9 +22900,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yhteensä toistakymmentä vuotta, ja numerossa 20 hän '
             + 'kirjoitti ensimmäiset satunsa. Nykyään talot on maalattu '
             + 'kirkkaanvärisiksi ja kanavassa on vanhoja puulaivoja.',
-          selite: 'Nyhavnin kanava: keltaisia, punaisia ja sinisiä kapeita taloja '
-            + 'rivissä rannan takana, kanavassa vanhoja puuveneitä ja '
-            + 'terassien varjoja.',
+          selite: 'Nyhavnin varsi oli pitkään merimiesten kapakoiden ja halpojen '
+            + 'vuokrahuoneiden aluetta, ja numerossa 20 Andersen kirjoitti '
+            + 'ensimmäiset satunsa.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -22944,9 +22916,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'istuu jarrumies, joka hidastaa vauhtia alamäissä, koska rata '
             + 'ei muuten pysyisi hallinnassa. Myös Walt Disney kävi Tivolissa '
             + 'ennen kuin rakensi oman huvipuistonsa.',
-          selite: 'Tivolin puisen vuoristoradan lähtöpaikka illalla, katon yllä '
-            + 'lamppukyltti RUTSCHEBANEN ja avovaunuissa matkustajia '
-            + 'talvitakeissa.',
+          selite: 'Rutschebanen on vuodelta 1914, ja sen junassa istuu '
+            + 'jarrumies, joka hidastaa vauhtia alamäissä.',
           lahde: 'Stefan Scheer, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],

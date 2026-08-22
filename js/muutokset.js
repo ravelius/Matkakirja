@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1015, teksti: 'Kuvatekstiremontin erä 2: 12 Euroopan kaupunkia' },
   { v: 1014, teksti: 'Herokuvat: Rooma, Jerusalem ja Singapore' },
   { v: 1013, teksti: 'Lunasta juliste -nappi oikean vastauksen alle' },
   { v: 1012, teksti: 'Herot: Lontoo, Dubai, Shanghai; tekstiremontti alkoi' },
