@@ -7132,39 +7132,70 @@ body.katselu #newgame-btn { display: none; }
 }
 
 /*
- * SITAATTINOSTO: lehden hengähdyspaikka aukeaman keskellä.
+ * SITAATTINOSTO PALSTAN SISÄSSÄ (omistajan tilaus 22.8.2026: "siirrä
+ * nostot osaksi tekstiä niin että tyhjätila ja pitkät vaakaviivat
+ * häviävät").
  *
- * Viivat ylä- ja alapuolella samaan tapaan kuin osastootsikossa, mutta
- * ohuempina — nosto on tekstin sisällä eikä sen yläpuolella. Lainausmerkki
- * on koristeena omalla rivillään, ei virkkeen edessä: virkkeen alkuun
- * liitettynä se sotkisi ensimmäisen sanan luettavuuden.
+ * MIKÄ OLI VIKANA. Nosto oli oma täysleveä lohkonsa nostojen VÄLISSÄ:
+ * ohut viiva ylä- ja alapuolella, keskitetty teksti ja lähes kolme
+ * senttiä pystytyhjää. Kainalokuvallisessa nostossa (kuva kelluu
+ * oikealla) leipäteksti loppui kuvan puoliväliin, ja koska nosto tuli
+ * vasta lohkon jälkeen, kuvan viereen jäi ammottava aukko — kaksi
+ * pitkää vaakaviivaa lisää alleviivasivat sen (mitattu 22.8.2026,
+ * Venäjän Taide ja teatteri: nosto 888 px leveä, 161 px korkea).
+ *
+ * MIKÄ ON NYT. Nosto ladotaan leipätekstin jatkoksi SAMAAN
+ * palstavirtaan (js/maalehti.js), joten se juoksee kainalokuvan
+ * vierellä ja täyttää juuri sen aukon, joka ennen jäi tyhjäksi.
+ * Korostus on kirjasintyön varassa eikä viivojen: kapea sisennys
+ * molemmin puolin, hieman isompi kursiivi lukukirjasimella ja
+ * antiikvan iso lainausmerkki riippumassa sisennyksessä kuten
+ * vanhassa kirjaladonnassa. Perään jää lyhyt häntäviiva (2,4 rem)
+ * kertomaan, mihin nosto loppuu ja leipäteksti jatkuu — se on
+ * ornamentti, ei erotin, eikä ylitä sisennystä juuri lainkaan.
+ *
+ * Lainausmerkki on absoluuttisesti sijoitettu, joten se ei vie
+ * riviltä tilaa eikä siirrä ensimmäistä sanaa; luennalle se ei näy
+ * lainkaan, koska pseudoelementin sisältö ei ole DOM-tekstiä.
  */
 .wiki-sitaatti {
-  margin: 1.3rem 0 1.5rem;
-  padding: 0.9rem 0 0.9rem;
-  border-top: 1px solid rgba(70, 51, 31, 0.5);
-  border-bottom: 1px solid rgba(70, 51, 31, 0.5);
-  text-align: center;
+  position: relative;
+  margin: 0.85rem 0 0.4rem;
+  padding: 0 0.8rem 0 2.4rem;
+  border: 0;
+  text-align: left;
+  /* Nosto ei saa katketa kahden palstan väliin (kuvaton nosto
+     taittuu kahdelle palstalle ≥ 700 px). */
+  break-inside: avoid;
 }
 
 .wiki-sitaatti::before {
-  content: '\201D';
-  display: block;
+  content: '\201C';
+  position: absolute;
+  left: 0.1rem;
+  top: 0;
   font-family: var(--font-luku);
-  font-size: 2.2rem;
-  line-height: 0.5;
-  margin-bottom: 0.45rem;
-  color: rgba(70, 51, 31, 0.45);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: rgba(70, 51, 31, 0.42);
+}
+
+.wiki-sitaatti::after {
+  content: '';
+  display: block;
+  width: 2.4rem;
+  height: 1px;
+  margin: 0.5rem 0 0;
+  background: rgba(70, 51, 31, 0.45);
 }
 
 .wiki-sitaatti p {
   margin: 0;
   font-family: var(--font-luku);
   font-style: italic;
-  font-size: 1.16rem;
-  line-height: 1.42;
-  max-width: 34ch;
-  margin-inline: auto;
+  font-size: 1.08rem;
+  line-height: 1.45;
+  max-width: none;
   color: rgba(58, 42, 26, 0.95);
 }
 
@@ -12105,17 +12136,48 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 /*
- * Lista kulkee oikeassa reunassa hieman palstaa kapeampana
- * (omistajan palaute 10.8.2026: "Kavenna linkkikirjastoa
- * vaakasuunnassa hieman ja siirrä oikeaan reunaan") — vasempaan
- * laitaan jäävä tyhjä kaista rytmittää sivua kuten lehden marginaali.
+ * Lista kulkee palstan levyisenä pienen sisennyksen takana (omistajan
+ * tilaus 22.8.2026: "pienennä linkkien sisennystä").
+ *
+ * Ennen tässä oli 38 rem:n katto ja `margin-left: auto`, jolloin
+ * sisennys ei ollut sisennys vaan jäännös: 888 pikselin arkissa lista
+ * alkoi 280 pikselin päästä palstan vasemmasta reunasta eli lähes
+ * puolivälistä (mitattu 22.8.2026, Venäjän Menovinkit), ja ryhmän
+ * otsikkoviiva alkoi samasta kohdasta. Mitä leveämpi ruutu, sitä
+ * suurempi aukko — juuri väärin päin.
+ *
+ * Nyt sisennys on KIINTEÄ ja pieni, samaa luokkaa kuin lehden
+ * sisennetty luettelo: rivi alkaa 1,4 rem:n päästä palstan reunasta
+ * riippumatta ruudun leveydestä, ja loppu rivistä on listan käytössä.
+ * Rivin PITUUS rajataan siellä, missä se on lukemisen kysymys eli
+ * selitystekstissä (.vinkki-selitys) — ei koko listan mitassa, jolloin
+ * myös pikkukuvat ja nimet olisivat siirtyneet keskelle sivua.
  */
 .vinkkisivu .vinkkilista,
 .vinkkisivu .vinkki-ryhma {
-  max-width: 38rem;
-  margin-left: auto;
+  max-width: none;
+  margin-left: 0;
   margin-right: 0;
 }
+
+/*
+ * Sisennys on LEVEÄN ruudun asia. Puhelimessa (390 px) listalla ei
+ * ollut sisennystä ennenkään — 38 rem oli leveämpi kuin koko palsta —
+ * eikä pikkukuvan ja nimen edestä ole siellä varaa antaa pois
+ * kahtakymmentä pikseliä. Raja on sama 700 px, jolla lehden muukin
+ * taitto vaihtaa leveään malliin.
+ */
+@media (min-width: 700px) {
+  .vinkkisivu .vinkkilista,
+  .vinkkisivu .vinkki-ryhma { margin-left: 1.4rem; }
+}
+
+/*
+ * Selityksen rivimitta pysyy luettavana, vaikka rivi on nyt palstan
+ * levyinen: leveällä arkilla ilman kattoa selitys venyisi yli sadan
+ * merkin riveiksi, ja hakemistoa on tarkoitus silmäillä.
+ */
+.vinkkisivu .vinkki-selitys { max-width: 46em; }
 
 /* Ajankohta noston otsikkorivillä: pieni konekirjoitusleima. */
 .nosto-aika {
