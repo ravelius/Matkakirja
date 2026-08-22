@@ -30319,4 +30319,379 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KARACHIN KOHDEKARTAN JUTUT (Opus 22.8.2026). Kymmenen kohdetta
+   * pohjoisesta etelään, sama järjestys kuin js/packs/maakartat.js:n
+   * karachi-lohkossa. Faktat en-Wikipedian raakateksteistä (haettu
+   * 22.8.2026): Empress Market, Karachi Metropolitan Corporation
+   * Building, Denso Hall, Holy Trinity Cathedral, Karachi, Wazir
+   * Mansion, Merewether Clock Tower, Karachi City railway station,
+   * Frere Hall, Karachi Port Trust Building ja Mohatta Palace.
+   * Sisältölinjaus, ristiriitojen ratkaisut ja kuvahylkäykset ovat
+   * js/packs/kulttuuri-kategoriat.js:n karachi-lohkon alussa.
+   *
+   * PYHÄN KOLMINAISUUDEN KATEDRAALIN TYYLIMÄÄRE ON ARTIKKELISSA
+   * RISTIRIITAINEN: infoboksi sanoo goottilaista, leipäteksti sanoo
+   * pohjakaavan noudattavan romaanista mallia. Juttu kertoo sen mitä
+   * leipäteksti sanoo pohjakaavasta eikä ota kantaa tyylinimeen.
+   *
+   * JOKAINEN KOHDE ESIINTYY LEHDESSÄ ENINTÄÄN KAHDESTI JA AINA ERI
+   * TIEDOSTOLLA; poikkeus on Merewetherin kellotorni, jonka
+   * kolminkertaisuus on perusteltu kategorialohkon kommentissa.
+   */
+  karachi: {
+    'Empress Market': {
+      aika: '1884–1889',
+      teksti: 'Saddarin sydämessä seisova kauppahalli rakennettiin '
+          + '1884–1889 ja nimettiin Victorian mukaan, joka oli julistettu '
+          + 'Intian keisarinnaksi. Peruskiven laski Bombayn kuvernööri '
+          + 'James Fergusson 1884, sama mies joka laski samana vuonna myös '
+          + 'Merewetherin kellotornin peruskiven. Suunnittelija oli '
+          + 'kaupungininsinööri James Strachan, perustukset teki '
+          + 'englantilainen A. J. Attfield ja rakennuksen paikallinen '
+          + 'Mahoomed Niwanin ja Dulloo Khejoon liike. Tontti valittiin '
+          + 'niin, että halli näkyy kauas — ja niin, ettei samaan paikkaan '
+          + 'voitu enää pystyttää vuoden 1857 kapinaan liittyvää '
+          + 'muistomerkkiä.'
+          + '\n\n'
+          + 'Tyyli on indogoottinen: holvikattoja, monilehtisiä kaaria ja '
+          + '140 jalan korkuinen kellotorni, jonka koristeina on '
+          + 'leopardinpäitä. Rakennus kiertää 130 jalkaa pitkän ja sata '
+          + 'jalkaa leveän sisäpihan, ja neljässä 46 jalkaa leveässä '
+          + 'galleriassa oli tilaa 280 kauppiaalle. Kun halli valmistui, '
+          + 'koko Karachissa oli vain seitsemän markkinapaikkaa.'
+          + '\n\n'
+          + 'Vuonna 1954 kaupunki nosti paikkamäärän 405:een ja rakensi '
+          + 'hallin ulkopuolelle vielä 1 390 kojua ja koppia. Marraskuussa '
+          + '2018 niistä purettiin korkeimman oikeuden päätöksellä yli '
+          + 'tuhat: julkisivut tulivat taas näkyviin, mutta samalla moni '
+          + 'pienkauppias menetti vuosikymmeniä vanhan paikkansa. Hallissa '
+          + 'myydään mausteita, hedelmiä, vihanneksia, lihaa, kankaita ja '
+          + 'paperitavaraa, ja se on yhä yksi kaupungin vilkkaimmista '
+          + 'kauppapaikoista.',
+      kuvat: [
+        {
+          tiedosto: 'Empress Market, Karachi.jpg',
+          selite: 'Kellotorni on 140 jalkaa korkea, ja sen koristeina on '
+            + 'leopardinpäitä.',
+          lahde: 'Furqanlw, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Karachin kaupungintalo': {
+      aika: '1927–1930',
+      teksti: 'Peruskivi uudelle kunnantalolle laskettiin jo 1895 ja '
+          + 'pohjatyöt saatiin valmiiksi 1915, mutta varsinainen '
+          + 'rakentaminen alkoi vasta 5. marraskuuta 1927. Talo valmistui '
+          + '31. joulukuuta 1930 ja vihittiin käyttöön 1932. Hinnaksi tuli '
+          + '1 775 000 rupiaa. Se seisoo M. A. Jinnah Roadin varrella; '
+          + 'talpurien aikaan samaa linjaa kulki Rah-i-Bandar, tie sataman '
+          + 'ja karavaanien lastauspaikkojen välillä, ja britit kehittivät '
+          + 'siitä Bandar Roadin.'
+          + '\n\n'
+          + 'Suunnittelija oli edinburghilainen James S. C. Wynnes. Tyyli '
+          + 'sekoittaa brittiläistä ja mogulien perinnettä, ja mukaan on '
+          + 'otettu myös egyptiläisiä ja espanjalaisia aiheita. Julkisivu '
+          + 'on Jodhpurin hiekkakiveä ja muu talo verhottu paikallisella '
+          + 'keltaisella Gizrin kivellä. Kupolit ja niiden väliin jäävä '
+          + 'kaarikäytävärivi antavat rakennukselle sen tunnistettavan '
+          + 'siluetin.'
+          + '\n\n'
+          + 'Kellotorni lisättiin vasta 1935 kuningas Yrjö V:n '
+          + 'hallitsijakauden hopeajuhlan muistoksi, ja kellotaulun kehälle '
+          + 'kirjoitettiin, mitä juhlittiin. Tornin kupoli on '
+          + 'maurilaistyylinen. Talossa ovat yhä pormestarin ja '
+          + 'apulaispormestarin työhuoneet sekä kaupunginvaltuuston sali; '
+          + 'vuonna 2007 vietettiin rakennuksen 75-vuotisjuhlaa ja '
+          + 'kellotorni korjattiin.',
+      kuvat: [
+        {
+          tiedosto: 'Karachi Municipal Corporation (KMC) Karachi.jpg',
+          selite: 'Kellotorni lisättiin taloon 1935 kuningas Yrjö V:n '
+            + 'hallitsijakauden hopeajuhlan muistoksi.',
+          lahde: 'Furqanlw, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Denso Hall': {
+      aika: '1886',
+      teksti: 'Kolmion muotoisessa kulmassa M. A. Jinnah Roadin, Murad '
+          + 'Khan Roadin ja Marriott Roadin välissä seisoo pieni '
+          + 'hiekkakivinen talo, joka valmistui 1886. Se oli Karachin '
+          + 'ensimmäinen kirjasto, joka oli tarkoitettu kaupungin omalle '
+          + 'väestölle: siirtomaahallinnon aiemmat kirjastot, Frere Hallin '
+          + 'kokoelma niiden joukossa, oli varattu virkamiehille ja heidän '
+          + 'perheilleen. Nimensä talo sai Max Densosta, joka johti '
+          + 'Karachin kauppakamaria 1870-luvulla.'
+          + '\n\n'
+          + 'Arkkitehti oli James Strachan, sama kaupungininsinööri joka '
+          + 'piirsi Empress Marketin ja Merewetherin kellotornin. Tyyli on '
+          + 'venetsialaisgoottia, ja ylimmässä kerroksessa on tudor-aiheita; '
+          + 'kivi on paikallista Gizrin hiekkakiveä. Pääkadun puolella on '
+          + 'parvekkeita, joiden kaiteet on veistetty kivestä.'
+          + '\n\n'
+          + 'Valmistuessaan talossa oli alakerrassa kirjasto ja lukusali ja '
+          + 'yläkerrassa juhlasali. Katolla olevan kellon lahjoitti '
+          + 'parsikauppias Rao Sahib Ramdas Morarji, joka antoi kirjastolle '
+          + 'myös 1 800 kirjaa; khoja-yhteisö lahjoitti 1 200 lisää. Talo '
+          + 'otettiin kunnostettavaksi 2010, ja 2019 puhdistettiin sen ja '
+          + 'naapurikorttelin julkisivut.',
+      kuvat: [
+        {
+          tiedosto: 'Denso Hall, Karachi 01.jpg',
+          selite: 'Denso Hall oli Karachin ensimmäinen kirjasto, joka oli '
+            + 'tarkoitettu kaupungin omalle väestölle.',
+          lahde: 'Kabir118, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Kolminaisuuden katedraali': {
+      aika: '1855',
+      teksti: 'Seurakunta perustettiin 1844 ja kirkko rakennettiin 1855 '
+          + 'brittivaruskunnan kirkoksi. Suunnittelija oli Bombayn '
+          + 'pioneerijoukkojen kapteeni John Hill, ja kirkkosalista tuli '
+          + '115 jalkaa pitkä; sinne mahtui kahdeksansataa kävijää. '
+          + 'Rakennusaine on vaaleaa Gizrin hiekkakiveä samoin kuin '
+          + 'monessa muussa saman ajan karachilaisessa talossa.'
+          + '\n\n'
+          + 'Torni oli alun perin 150 jalkaa korkea, ja sen huipulla '
+          + 'pidettiin merkkivaloja: Karachin satamaan ei vielä ollut '
+          + 'majakkaa, ja kirkko oli kaupungin korkein rakennus. Vuonna '
+          + '1904 kapteeni Hill ja pääinsinööri John Brunton tarkastivat '
+          + 'rakennuksen ja totesivat perustukset heikoiksi, joten kaksi '
+          + 'ylintä kerrosta purettiin. Torni jäi 115 jalan korkuiseksi. '
+          + 'Ensimmäisen maailmansodan aikana sitä käytettiin '
+          + 'merkinantoasemana.'
+          + '\n\n'
+          + 'Pohjakaava noudattaa romaanista mallia, mikä erotti kirkon '
+          + 'ympäristöstään. Alkuperäinen harjakatto vaihdettiin 1970 '
+          + 'tynnyriholviksi. Kirkko on Pakistanin kirkon Karachin '
+          + 'hiippakunnan katedraali, ja sen seinillä on muistolaattoja '
+          + 'brittiläisistä sotilaista, joiden kotiseurakunta se oli.',
+      kuvat: [
+        {
+          tiedosto: 'Trinity church Karachi.JPG',
+          selite: 'Tornin kaksi ylintä kerrosta purettiin 1904, kun '
+            + 'perustusten todettiin heikentyneen.',
+          lahde: 'Kabeer Khusroo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wazir Mansion': {
+      aika: '1860-luku',
+      teksti: 'Kharadarin kaupunginosassa Chagla Streetin — nykyisen '
+          + 'Barkati Streetin — kulmassa seisoo kolmikerroksinen kivitalo, '
+          + 'joka muurattiin kalkki- ja juuttilaastilla vuosien 1860 ja '
+          + '1870 välillä. Laastin resepti valittiin Karachin oikukkaan '
+          + 'meri-ilmaston takia. Talon nimi tulee Wazir Ali Ponawalasta, '
+          + 'joka osti sen 1904 ja jonka mukaan sitä on siitä lähtien '
+          + 'kutsuttu.'
+          + '\n\n'
+          + 'Jinnah Bhai Poonja muutti Karachiin liikekumppanuuden takia ja '
+          + 'vuokrasi talon 1874. Suvun kotikylä oli Paneli Kathiawarissa. '
+          + 'Talossa syntyi 25. joulukuuta 1876 Muhammad Ali Jinnah, ja '
+          + 'hän asui siinä kuusitoista vuotta; perhe palasi Gujaratiin '
+          + 'vuoden 1900 tienoilla. Pitkään syntymäpaikkana pidettiin '
+          + 'Jhirkin pikkukaupunkia Karachin lähellä, kunnes Fatima '
+          + 'Jinnahin muistelmateos My Brother 1960-luvulla selvitti asian.'
+          + '\n\n'
+          + 'Valtio hankki talon 1953 ja suojeli sen muinaismuistolain '
+          + 'nojalla; museona se avattiin 14. elokuuta 1953. Suuri '
+          + 'vahvistus- ja kunnostushanke valmistui 2010, ja nykyään '
+          + 'kolmessa kerroksessa on kirjasto, näyttelysaleja ja '
+          + 'kansallinen arkisto. Talon vieressä oli aikanaan myös '
+          + 'kehäradan Wazir Mansion -niminen asema.',
+      kuvat: [
+        {
+          tiedosto: 'Wazir Mansion, Kharadar 10.jpg',
+          selite: 'Talo muurattiin kalkki- ja juuttilaastilla 1860-luvulla, '
+            + 'ja laastin resepti valittiin meri-ilmaston takia.',
+          lahde: 'Ghazala Shah, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Merewetherin kellotorni': {
+      aika: '1884–1892',
+      teksti: 'Torni seisoo siinä kohdassa, jossa Karachin kaksi tärkeintä '
+          + 'katua, M. A. Jinnah Road ja I. I. Chundrigar Road, päättyvät '
+          + 'samaan risteykseen. Se merkitsi ennen kahta rajaa: kaupungin '
+          + 'eteläistä laitaa, kun satamasta Keamarista saavuttiin Napier '
+          + 'Mole Roadia pitkin, ja rajaa vanhankaupungin ja sen '
+          + 'itäpuolelle rakennetun eurooppalaisen Serai-korttelin välillä. '
+          + 'Nykyään risteys on yksi kaupungin vilkkaimmista '
+          + 'bussipysäkeistä.'
+          + '\n\n'
+          + 'Torni pystytettiin kansalaiskeräyksellä sir William Lockyer '
+          + 'Merewetherin muistoksi; hän oli Sindin komissaari 1867–1877. '
+          + 'Suunnittelija oli kaupungininsinööri James Strachan, '
+          + 'peruskiven laski 1884 Bombayn kuvernööri sir James Fergusson '
+          + 'ja yleisölle rakennuksen avasi 1892 komissaari sir Evan '
+          + 'James. Kokonaishinnaksi tuli 37 178 rupiaa.'
+          + '\n\n'
+          + 'Strachan piirsi tornin uusgotiikassa ja otti mallin '
+          + 'keskiaikaisista englantilaisista muistoristeistä. Pohja on '
+          + '44 jalan neliö, korkeutta on 102 jalkaa ja neljä kellotaulua '
+          + 'ovat 70 jalan korkeudella. Täydet tunnit lyö kolmensadan '
+          + 'naulan kello, neljännestunnit sadan naulan pienemmät. Kivi on '
+          + 'Gizrin hiekkakiveä, julkisivussa on kuusisakarainen tähti, ja '
+          + 'hienon kivityön tekivät silawat- eli gazdar-suvun '
+          + 'kivenhakkaajat.',
+      kuvat: [
+        {
+          tiedosto: 'Merewether Tower.jpg',
+          selite: 'Torni avattiin yleisölle 1892, ja sen rakentaminen '
+            + 'maksoi 37 178 rupiaa.',
+          lahde: 'Nabeelak85, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Karachi Cityn rautatieasema': {
+      aika: '1861–1864',
+      teksti: 'Scinde Railway -yhtiö perustettiin maaliskuussa 1855, ja '
+          + 'työt Karachin pääteasemalla alkoivat huhtikuussa 1858. Rata '
+          + 'vei Kotriin, 174 kilometrin päähän Induksen varteen, ja se '
+          + 'avattiin yleisölle 13. toukokuuta 1861 — seudun ensimmäinen '
+          + 'yleisölle avattu rautatie. Itse asemarakennus valmistui '
+          + 'toukokuussa 1864.'
+          + '\n\n'
+          + 'Asema oli aluksi nimeltään McLeod Station sen kadun mukaan, '
+          + 'jonka eteläreunalle se rakennettiin; katu on nykyään I. I. '
+          + 'Chundrigar Road. 1880-luvulla asemasta rakennettiin uusi '
+          + 'versio hieman lännemmäksi, ja vuoteen 1905 mennessä '
+          + 'brittihallinnon papereissa puhuttiin Karachi Cityn asemasta. '
+          + 'Ratapihat järjestettiin uusiksi 1908.'
+          + '\n\n'
+          + 'Nykyinen keltaisesta Gizrin hiekkakivestä muurattu '
+          + 'asemarakennus on vuodelta 1935. Asema on Pakistanin '
+          + 'rautateiden Karachin piirin päämaja ja kaupungin kehäradan '
+          + 'solmukohta, josta rata haarautuu teollisuus- ja '
+          + 'asuinalueille. Tilanpuutteen takia suurin osa kaukojunista '
+          + 'lähtee nykyään Cantonmentin asemalta.',
+      kuvat: [
+        {
+          tiedosto: 'Karachi City railway station 02.jpg',
+          selite: 'Asemalta lähti 13. toukokuuta 1861 seudun ensimmäinen '
+            + 'yleisölle avattu juna Kotriin.',
+          lahde: 'Adnanrail, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Frere Hall': {
+      aika: '1863–1865',
+      teksti: 'Talo seisoo Saddarin Civil Linesissä konsulaattien keskellä, '
+          + 'Abdullah Haroon Roadin ja Fatima Jinnah Roadin välissä ja '
+          + 'aivan siirtomaa-aikaisen Sind Clubin naapurissa. Tontti '
+          + 'ostettiin kahdellatuhannella rupialla, jotka lahjoittivat '
+          + 'Scinde Railwayn W. P. Andrew ja sir Frederick Arthur '
+          + 'Bartholomew.'
+          + '\n\n'
+          + 'Työ alkoi elokuussa 1863 ja rakennus vihittiin 10. lokakuuta '
+          + '1865, vaikkei se ollut aivan valmis. Se oli tarkoitettu '
+          + 'kaupungintaloksi, ja piirustukset teki Henry Saint Clair '
+          + 'Wilkins, joka valittiin kahdentoista ehdokkaan joukosta; '
+          + 'hinnaksi tuli noin 180 000 rupiaa. Nimi vaihtui Frere '
+          + 'Halliksi 1884, kun sir Henry Bartle Edward Frere kuoli — sama '
+          + 'komissaari, joka oli tehnyt sindistä hallinnon kielen persian '
+          + 'tilalle.'
+          + '\n\n'
+          + 'Tyyli on venetsialaisgoottia: suippokaaria, ristiholveja, '
+          + 'neliapilakuvioita ja tukikaaria. Runko on paikallista '
+          + 'keltaista kalkkikiveä, koristeet Bholarin valkoista oolittia '
+          + 'sekä Jungshahin puna- ja harmaahiekkakiveä; katto on '
+          + 'päällystetty Muntzin metallilla, ja yhdessä kulmassa kohoaa '
+          + 'kahdeksankulmainen torni rautahäkin kruunaamana. Ympärillä on '
+          + 'kaksi nurmikenttää, jotka tunnettiin ennen niminä Queen’s Lawn '
+          + 'ja King’s Lawn ja nykyään Bagh-e-Jinnahina. Sisällä on '
+          + 'kirjasto ja Sadequainin 1980-luvulla maalaamat kattomaalaukset, '
+          + 'joista yksi jäi taiteilijan kuollessa kesken.',
+      kuvat: [
+        {
+          tiedosto: 'Frere Hall, Fatima Jinnah road, Karachi.jpg',
+          selite: 'Frere Hall on venetsialaisgoottia, ja sen kaarissa '
+            + 'toistuvat neliapilakuviot.',
+          lahde: 'Ghazala Shah, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Satamahallinnon talo': {
+      aika: '1912–1916',
+      teksti: 'Karachin satamalaitoksen pääkonttori seisoo Kharadarissa M. '
+          + 'A. Jinnah Roadin varrella, lähellä Native Jetty -siltaa ja '
+          + 'Merewetherin kellotornia, vastapäätä Qamar Housea. Se '
+          + 'suunniteltiin näyttäväksi tarkoituksella: talon piti tehdä '
+          + 'vaikutus jokaiseen, joka nousi maihin Karachin satamassa. '
+          + 'Napier Mole Road jatkettiin tontille asti 1914, ja sen pää sai '
+          + 'nimen Willingdon Place.'
+          + '\n\n'
+          + 'Arkkitehti oli George Wittet, sama skotlantilainen joka piirsi '
+          + 'Bombayhin Gateway of Indian ja nykyisen Chhatrapati Shivajin '
+          + 'museon. Työ alkoi 1912 ja talo maksoi 974 990 rupiaa. Bombayn '
+          + 'kuvernööri, markiisi Willingdon, vihki sen 5. tammikuuta 1916, '
+          + 'ensimmäinen kokous pidettiin 12. tammikuuta ja satamalaitos '
+          + 'sai talon haltuunsa 7. helmikuuta. Heti sen jälkeen sinne '
+          + 'sijoitettiin viidensadan vuodepaikan sotilassairaala, joka '
+          + 'toimi toukokuuhun 1919.'
+          + '\n\n'
+          + 'Julkisivu on Jaipurista tuotua keltaista kiveä ja kaartuu '
+          + 'kadun mukana; keskellä kohoaa kupoli, joka on tehty roomalaisen '
+          + 'eikä islamilaisen mallin mukaan. Sisällä on korkeita huoneita, '
+          + 'tiikkiä ovissa, ikkunoissa ja jopa hississä, mustavalkoinen '
+          + 'sementtilaattalattia ja avoin häkkihissi, jonka koneisto näkyy '
+          + 'matkustajalle. Kupolin alla toisessa kerroksessa on hallituksen '
+          + 'sali, ja viereisessä arkistohuoneessa säilytetään pöytäkirjoja '
+          + 'vuodesta 1893 alkaen.',
+      kuvat: [
+        {
+          tiedosto: 'KPT Building, Karachi.jpg',
+          selite: 'Talon suunnitteli George Wittet, sama arkkitehti joka '
+            + 'piirsi Bombayhin Gateway of Indian.',
+          lahde: 'Zak Kazi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mohatta Palace': {
+      aika: '1927',
+      teksti: 'Cliftonin meren puoleiseen kaupunginosaan rakennettiin 1927 '
+          + 'kesäasunto Shivratan Chandraratan Mohattalle, marwarilaiselle '
+          + 'liikemiehelle. Suvun juuret olivat Bikanerissa Rajasthanissa, '
+          + 'ja sen ensimmäinen jäsen muutti Karachiin 1883; Shivratan '
+          + 'rikastui palmuöljysaippuan valmistuksesta. Suunnittelija oli '
+          + 'Ahmed Hussain Agha.'
+          + '\n\n'
+          + 'Talo jatkaa Rajasthanin kivipalatsien perinnettä: julkisivussa '
+          + 'on Jodhpurin vaaleanpunaista kiveä yhdistettynä läheisen '
+          + 'Gizrin keltaiseen. Pinta-alaa on 18 500 neliöjalkaa. Kupoleita '
+          + 'on yhdeksän, keskimmäinen muita suurempi, ja jokaisessa '
+          + 'kulmassa kohoaa kahdeksankulmainen torni chhatri-katoksen '
+          + 'kruunaamana. Kivityössä toistuvat riikinkukot, kehäkukat ja '
+          + 'hibiskukat, ja ylimmän kerroksen parvekkeelta näkyy '
+          + 'Arabianmerelle.'
+          + '\n\n'
+          + 'Mohattan perhe ehti asua talossa parikymmentä vuotta ja lähti '
+          + 'Intiaan 1947, minkä jälkeen valtio otti sen ulkoministeriön '
+          + 'käyttöön. Fatima Jinnah muutti taloon 1964 ja hänen sisarensa '
+          + 'Shireen asui alakerrassa vuoteen 1980 asti, jonka jälkeen talo '
+          + 'suljettiin. Sindin maakunta osti sen 1995, ja museona se '
+          + 'avattiin 1999. Päärakennuksen vieressä on rivi vanhoja '
+          + 'patsaita, jotka seisoivat aikanaan kaupungin aukioilla.',
+      kuvat: [
+        {
+          tiedosto: 'The Mohatta Palace.JPG',
+          selite: 'Palatsin yhdeksän kupolia ja kulmatornit on tehty '
+            + 'Jodhpurin vaaleanpunaisesta ja Gizrin keltaisesta kivestä.',
+          lahde: 'Iqra Khalid Zakaria, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

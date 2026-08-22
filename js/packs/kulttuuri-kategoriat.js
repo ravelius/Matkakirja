@@ -50185,4 +50185,552 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KARACHI (Opus 22.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita, kohdekarttaa eikä nähtävyysjuttuja ennen
+   * tätä. ARTIKKELIT-merkintä oli olemassa, ja sen intro
+   * kirjoitettiin uusiksi samassa erässä (asia-artikkelit.js);
+   * teksti-kenttään ei koskettu. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä (action=raw, haettu 22.8.2026): Karachi, Frere
+   * Hall, Empress Market, Merewether Clock Tower, Wazir Mansion,
+   * Port of Karachi, Karachi Port Trust Building, Mohatta Palace,
+   * Manora, Karachi, Karachi Metropolitan Corporation Building,
+   * Holy Trinity Cathedral, Karachi, Karachi City railway station,
+   * Denso Hall, Jinnah International Airport, Mohenjo-daro ja Truck
+   * art in South Asia. Pohjana ovat
+   * docs/aasia-tyoaineisto/faktapohja-karachi.md ja
+   * tarkistus-karachi.md, jotka luettiin yhdessä; ristiriidoissa
+   * tarkistusraportti voittaa.
+   *
+   * TARKISTUSRAPORTIN KORJAUS ON TEHTY. Faktapohjan nosto K2 sanoi
+   * Empress Marketin kellotornin olevan koristeltu leijonanpäillä;
+   * en-Wikipedian "Empress Market" sanoo leopardinpäitä
+   * ("a 140-foot-high clock tower studded with leopard heads"), ja
+   * lehti sanoo leopardinpäät. Tarkistus vahvisti myös faktapohjan
+   * kolme kohdennettua lukuparia sanatarkasti oikeiksi: Napierin
+   * valtaus 1839–1843 ja 93 vuotta Bombayn presidenssissä, Freren
+   * satamatyöt (1854, 855 103 puntaa, 57 000 asukasta) ja jaon
+   * väestöluvut (yli 400 000, 470 000 muhajiria, väestön
+   * kolminkertaistuminen 1941–1951).
+   *
+   * SISÄLTÖLINJAUS on spec-asia.md:n sitova kohta
+   * "Karachi/Kolkata/Mumbai ym.: siirtomaahistoria neutraalina; jaon
+   * 1947 väkivalta vain maininnan tasolla ilman yksityiskohtia" sekä
+   * faktapohjan oma rajaus. Käytännössä: siirtomaa-aika kerrotaan
+   * rakennuksina, satamana ja kauppana, ei hallinnon oikeutuksena
+   * eikä sen vastustuksena. POIS ON JÄTETTY KOKONAAN vuoden 1948
+   * tammikuun mellakat (en-Wikipedia mainitsee ne ilman uhrilukua),
+   * kaikki vuoden 1958 jälkeinen politiikka, 1970-luvun
+   * työtaistelut, 1980–1990-lukujen etniset ja poliittiset konfliktit
+   * ja niihin liittyvät turvallisuusoperaatiot, rikostilastot sekä
+   * vuoden 2026 kauppakeskuspalo. H4-nosto kertoo jaon vain
+   * väestönsiirron laajuutena: kuinka moni tuli ja kuinka moni lähti.
+   * Uskonto kerrotaan rakennuksina ja kerrostumina kuten
+   * Jerusalemissa, Medinassa ja Kašgarissa: Pyhän Kolminaisuuden
+   * katedraali on kartalla varuskuntakirkkona ja majakkatornina, ei
+   * uskontokuntien vertailuna.
+   *
+   * VUODEN 1857 KAPINA MAINITAAN KAHDESTI JA MOLEMMAT KERRAT
+   * NEUTRAALISTI. Empress Marketin paikka valittiin niin, ettei
+   * samalle tontille voitu pystyttää kapinaan liittyvää
+   * muistomerkkiä; en-Wikipedia kertoo, keiden muistomerkistä oli
+   * kyse ja mitä heille tapahtui, mutta lehti ei toista sitä
+   * (resepti: väkivalta vain neutraalina historiana ilman
+   * yksityiskohtien korostusta). Karachissa asemapaikkaansa pitäneen
+   * 21. jalkaväkirykmentin kapina syyskuussa 1857 jäi kokonaan pois:
+   * se ei mahtunut mihinkään nostoon ilman, että siitä olisi pitänyt
+   * kertoa myös tukahduttaminen.
+   *
+   * KOLME RISTIRIITAA ON KIRJOITETTU AUKI LUKIJALLE (v925/v932:n
+   * tapa). (1) Sademäärä: en-Wikipedian Karachi-artikkelin
+   * LEIPÄTEKSTI sanoo vuosisateeksi noin 296 mm, mutta saman
+   * artikkelin SÄÄRUUDUN (normaalikausi 1991–2020) kuukausiluvut
+   * antavat yhteenlaskettuna noin 318 mm. Eroa ei selitetä, ja
+   * oppaan jakso 5 kertoo molemmat. (2) Wazir Mansionin
+   * rakennusvuosi: infoboksi sanoo 1866, artikkelin leipäteksti
+   * "built during 1860-1870" ja luokitus 1886; lehti sanoo vain
+   * "vuosien 1860 ja 1870 välillä", mikä pitää paikkansa kahdella
+   * kolmesta eikä ole ristiriidassa infoboksin kanssa. (3) Talpurien
+   * valtaantulo: Karachi-artikkeli sanoo 1795 ja Manora Fortin
+   * rakennusvuodeksi 1797, kun taas Port of Karachi -artikkeli sanoo
+   * kaupungin kaatuneen talpureille 1783; lehti käyttää
+   * Karachi-artikkelin vuosilukuja, koska ne toistuvat myös
+   * Manora-artikkelissa.
+   *
+   * KAKSI RISTIRIITAA ON RATKAISTU EIKÄ KERROTTU. (1) Väkiluku:
+   * artikkelin johdanto sanoo yli 20 miljoonaa ja infoboksi
+   * 18 868 021; lehti sanoo "yli kaksikymmentä miljoonaa" kuten
+   * johdanto ja kuten laudan visa. (2) Sataman osuus
+   * ulkomaankaupasta: Karachi-artikkeli sanoo Karachin ja Port
+   * Qasimin yhdessä hoitavan 95 prosenttia, Port of Karachi
+   * -artikkeli sanoo yksin noin 60 prosenttia; lehti sanoo
+   * nimenomaan kahden sataman yhteisen luvun, jolloin ristiriitaa ei
+   * synny.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Pakistan (johdanto,
+   * matkailijalle-kappale ja intro), Indus-joen laakson
+   * kaupunkikulttuuri ja sen viemärit (oppaan jakso 2), Arabianmeri
+   * (johdanto ja jakso 2), asema 1947–1959 (nosto H4 ja intro) sekä
+   * satama ja ulkomaankauppa (jakso 1). Historiasivun minitehtävä
+   * kysyy kylän vanhaa nimeä — sitä visa ei kysy, ja vastaus on
+   * samalla sivulla nostossa H1.
+   *
+   * AIHETOISTO ON PIDETTY KURISSA: jokainen kohde esiintyy lehdessä
+   * enintään kahdesti ja aina eri tiedostolla. Poikkeus on
+   * Merewetherin kellotorni, joka on nostossa K3, matkaoppaan
+   * etusivukuvana ja kohdekartan jutussa — kolme eri tiedostoa ja
+   * kolme eri kuvakulmaa. Perustelu on sama kuin Xi'anin muurilla ja
+   * Mekan Jabal al-Nourilla: torni on kaupungin tunnetuin maamerkki
+   * ja se on myös matkailijan kiintopiste, koska se merkitsi rajaa
+   * vanhan kaupungin ja uuden kaupunginosan välillä.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, eikä sitä lisätty
+   * tässä erässä: säärivit haetaan erillisenä eränä (Fablen ohje
+   * 22.8.2026), ja siksi tämä lohko ei koske saatiedot.js:ään
+   * lainkaan. Matkaoppaan jakso 5 nojaa siis en-Wikipedian
+   * Karachi-artikkelin sääruutuun (normaalikausi 1991–2020) ja SANOO
+   * SEN ÄÄNEEN — Samarkandin, Kašgarin, Lhasan ja Kabulin malli. Kun
+   * ERA5-rivi joskus lisätään, jakso 5 on kirjoitettava rivin omista
+   * luvuista; mittauspiste olisi keskusta 24,86 / 67,01 ja noin
+   * kymmenen metrin korkeus.
+   *
+   * ENNEN JA NYT -PARIA EI LISÄTTY, vaikka matkakirjan
+   * valokuvataulussa (js/packs/asia-lisat-valokuvat.js) on Karachille
+   * valmis pari (1897 Rampart Row ja 2019 Clifton Beach). Syy on
+   * sama kuin Kabulissa, Chennaissa ja Mumbaissa: ennenNyt korvaa
+   * etusivun pikkurivillä kaksi kansikuvaa kolmesta, ja omistajan
+   * 21.8.2026 kansikaruselli-linjaus haluaa etusivulle nimenomaan
+   * kolme laajaa yleiskuvaa kaupungin eri puolilta. Pari on valmiina
+   * odottamassa, jos Fable haluaa sen tänne.
+   *
+   * KUVAHYLKÄYKSET on kirjattu raporttiin. Yleisimmät syyt: A.
+   * Savinin laaja ja teknisesti paras Karachi-sarja on FAL-lisenssi
+   * eikä siksi kelpaa lainkaan (Empress Market, Merewetherin torni,
+   * Wazir Mansion, Denso Hall, City-asema, Mohatta, St. Patrick,
+   * Clifton — kaikki hylättiin lisenssin takia), valokuvaajan oma
+   * vesileima kuvan päällä (Do Darya, Empress Marketin kellotorni,
+   * Truck art Pakistan, Dawn Of New Time), kuvan päälle lisätty
+   * kehys (KPT:n pääkonttori Fahad Saeedin kuvaamana) ja
+   * tunnistettavat kasvot etualalla (Empress Market ja KMC Aliraza
+   * Khatrin ja Kabir118:n katukuvissa, Wazir Mansion 01 ja 08).
+   * Karachin rautatieaseman JULKISIVUSTA ei ole Commonsissa
+   * yhtäkään kelvollista kuvaa (suurimmat ovat FAL-sarjaa tai alle
+   * 900 px), ja siksi aseman juttu on kuvitettu laiturikuvalla.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 ANTAMAA UUTTA
+   * LINJAUSTA: selite kertoo kohteesta, sen historiasta tai
+   * merkityksestä, EIKÄ kuvaile kuvaa visuaalisesti. Kaikki tämän
+   * lohkon kaksitoista selitettä (kolme kansikuvaa, kolme
+   * avauskuvaa, neljä nostoa, matkaoppaan etusivukuva ja kolme
+   * jaksokuvaa) sekä kohdekartan juttujen kymmenen selitettä
+   * (js/packs/nahtavyysjutut.js) on kirjoitettu tässä asussa. Yhden
+   * virkkeen sääntö pysyy ennallaan, ja jokainen selitteen väite
+   * tulee samoista en-Wikipedian raakateksteistä kuin muukin lehti.
+   *
+   * YKSI LÄHDERIVI ON NORMALISOITU, ja se kerrotaan tässä, koska
+   * talon sääntö on kirjoittaa tekijä täsmälleen extmetadata.
+   * Artist-muodossa. Wellcome Collectionin vuoden 1897 kuvassa
+   * 'A street in Old Town, Karachi…' Artist-kenttä on Commonsissa
+   * TYHJÄ, ja kuvauksessa lukee "Photograph probably by Jalbhoy, R."
+   * Lähderivi noudattaa sitä muotoa, jolla sama tiedosto on jo
+   * matkakirjan valokuvataulussa (js/packs/asia-lisat-valokuvat.js)
+   * ja jolla muut Wellcome-kuvat on merkitty tässä tiedostossa.
+   */
+  karachi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Karachi',
+      johdanto: 'Arabianmeren rannalla, Induksen suiston länsipuolella, '
+        + 'kasvoi kalastajakylästä Pakistanin suurin kaupunki ja tärkein '
+        + 'satama. Vanhankaupungin kujilta on kilometri Saddarin '
+        + 'siirtomaakortteleihin ja viisi meren rannalle Cliftoniin.',
+      kansikuvat: [
+        {
+          tiedosto: 'Karachi from above.jpg',
+          selite: 'Karachissa asuu nykyään yli kaksikymmentä miljoonaa '
+            + 'ihmistä, vaikka vuonna 1856 väkiluvuksi arvioitiin vasta '
+            + '57 000.',
+          lahde: 'Bilalhassan88, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'KarachiSkyline-View from Hill Park-Panorama.jpg',
+          selite: 'Kaupunki on rakennettu rannikkotasangolle noin kymmenen '
+            + 'metriä merenpinnan yläpuolelle, ja sen läpi kulkevat '
+            + 'Malirin ja Lyarin jokiuomat.',
+          lahde: 'Nomi887, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Clifton Beach karachi.jpg',
+          selite: 'Cliftonin ranta oli vielä siirtomaa-aikaan kaupungin '
+            + 'ulkopuolella ja on nykyään yksi Karachin arvostetuimmista '
+            + 'kaupunginosista.',
+          lahde: 'Humayun Hasan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: satamalaitos, kaupungintalo ja huvila — kaupungin
+       * kolme kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (se satama jonka takia kaikki on tässä, siirtomaa-ajan
+       * hallintokortteli M. A. Jinnah Roadin varrella ja meren
+       * rannalle 1920-luvulla noussut Clifton). Yksikään näistä
+       * kolmesta ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Karachi Port Trust Building.jpg',
+          selite: 'Satamalaitoksen pääkonttori valmistui 1916, ja se '
+            + 'suunniteltiin näyttäväksi, jotta se tekisi vaikutuksen '
+            + 'satamaan saapuvaan matkustajaan.',
+          lahde: 'Nabeelak85, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Karachi Municipal Corporation (KMC) Head Office at M.A Jinnah Road - Photo By Aliraza Khatri.jpg',
+          selite: 'Kaupungintalon peruskivi laskettiin jo 1895, mutta talo '
+            + 'valmistui vasta 1930 ja kellotorni lisättiin siihen 1935.',
+          lahde: 'Aliraza Khatri, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mohatta Palace Clifton.jpg',
+          selite: 'Palatsi rakennettiin 1927 marwarilaisen liikemiehen '
+            + 'kesäasunnoksi Rajasthanin kivipalatsien tapaan, ja siinä on '
+            + 'toiminut museo vuodesta 1999.',
+          lahde: 'Asfandmajeed, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupungintalo, joka ei koskaan ollut kaupungintalo',
+          tiedosto: 'Frere Hall Karachi. Pakistan.jpg',
+          teksti: 'Frere Hall valmistui 10. lokakuuta 1865 ja oli '
+            + 'tarkoitettu Karachin kaupungintaloksi. Piirustukset teki '
+            + 'Henry Saint Clair Wilkins, joka valittiin kahdentoista '
+            + 'ehdokkaan joukosta; työ alkoi elokuussa 1863 eikä ollut '
+            + 'aivan valmis vihkiäisiin mennessä. Hinnaksi tuli noin '
+            + '180 000 rupiaa, josta hallitus maksoi kymmenentuhatta ja '
+            + 'loput kaupunki. Nimensä talo sai vasta 1884, kun sir Henry '
+            + 'Bartle Edward Frere kuoli. Vuonna 1877 salissa yritettiin '
+            + 'ensimmäisen kerran kirjoittaa sulkapallolle yhtenäiset '
+            + 'säännöt. Nykyään sisällä on näyttelytila ja kirjasto, jonka '
+            + 'kokoelmassa on yli 70 000 nidettä.',
+          selite: 'Talon runko on paikallista keltaista kalkkikiveä ja '
+            + 'koristeet Bholarin valkoista oolittia sekä Jungshahin '
+            + 'hiekkakiveä.',
+          lahde: 'Asim Iftikhar Nagi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Frere Hall',
+        },
+        {
+          otsikko: 'Halli keisarinnan nimellä',
+          tiedosto: 'Empress Market at Sunset.jpg',
+          teksti: 'Empress Market rakennettiin 1884–1889 ja nimettiin '
+            + 'Intian keisarinnaksi julistetun Victorian mukaan. '
+            + 'Peruskiven laski Bombayn kuvernööri James Fergusson, '
+            + 'suunnittelijana oli kaupungininsinööri James Strachan, '
+            + 'perustukset teki englantilainen A. J. Attfield ja '
+            + 'rakennuksen paikallinen Mahoomed Niwanin ja Dulloo Khejoon '
+            + 'liike. Tontti valittiin tarkoituksella kaukaa näkyväksi, ja '
+            + 'samalla valinta esti vuoden 1857 kapinaan liittyvän '
+            + 'muistomerkin pystyttämisen samaan paikkaan. Halli '
+            + 'nousi 130 × 100 jalan sisäpihan ympärille, ja neljässä '
+            + '46 jalkaa leveässä galleriassa oli tilaa 280 kauppiaalle. '
+            + 'Kellotorni on 140 jalkaa korkea ja koristeltu '
+            + 'leopardinpäillä.',
+          selite: 'Hallissa oli valmistuessaan 280 kauppapaikkaa, ja vuonna '
+            + '1954 kaupunki nosti niiden määrän 405:een.',
+          lahde: 'Cyclops1789, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Empress Market',
+        },
+        {
+          otsikko: 'Torni, joka muistaa komissaarin',
+          tiedosto: 'Merewether Clock Tower 01.jpg',
+          teksti: 'Kellotorni pystytettiin kansalaiskeräyksellä sir William '
+            + 'Lockyer Merewetherin muistoksi. Hän oli Sindin komissaari '
+            + '1867–1877 eli juuri niinä vuosina, kun satama kasvoi '
+            + 'nopeimmin. Suunnittelija oli sama James Strachan kuin '
+            + 'Empress Marketissa, peruskiven laski 1884 kuvernööri James '
+            + 'Fergusson, ja yleisölle torni avattiin 1892 — hinnaksi tuli '
+            + '37 178 rupiaa. Se on uusgotiikkaa keskiaikaisen Englannin '
+            + 'malliin: 44 jalan neliöpohja, 102 jalan korkeus ja neljä '
+            + 'kelloa 70 jalan korkeudella. Tunnit lyö kolmensadan '
+            + 'naulan kello ja neljännestunnit sadan naulan pienemmät. Kivi '
+            + 'on paikallista Gizrin hiekkakiveä, ja veistotyön tekivät '
+            + 'silawat-suvun kivenhakkaajat.',
+          selite: 'Torni merkitsi rajaa vanhankaupungin ja sen itäpuolelle '
+            + 'rakennetun eurooppalaisen korttelin välillä.',
+          lahde: 'Fahad Saeed, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Merewether Clock Tower',
+        },
+        {
+          otsikko: 'Talo, jossa perustaja syntyi',
+          tiedosto: 'Quaid-e-Azam Muhammad Ali Jinnah Birth Place exterior.JPG',
+          teksti: 'Kharadarin kulmassa seisoo kolmikerroksinen kivitalo, '
+            + 'joka on muurattu kalkki- ja juuttilaastilla vuosien 1860 ja '
+            + '1870 välillä. Muhammad Ali Jinnahin isä vuokrasi sen 1874 '
+            + 'muutettuaan Kathiawarin Panelista Karachiin kauppa-asioissa, '
+            + 'ja talossa syntyi 25. joulukuuta 1876 poika, josta tuli '
+            + 'Pakistanin perustaja; hän vietti siellä kuusitoista '
+            + 'ensimmäistä vuottaan. Nimensä talo sai vasta 1904 '
+            + 'ostajaltaan Wazir Ali Ponawalalta. Valtio lunasti sen 1953 '
+            + 'ja avasi museoksi saman vuoden elokuussa, ja nykyään talossa '
+            + 'on kirjasto ja näyttelysalit.',
+          selite: 'Talossa toimii nykyään museo, jonka tiloissa on myös '
+            + 'kirjasto ja kansallinen arkisto.',
+          lahde: 'Sanaullah Sasoli, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Wazir Mansion',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'MerewetherClock Tower Karachi2.jpg',
+          selite: 'Tornin risteys on nykyään yksi kaupungin vilkkaimmista '
+            + 'bussipysäkeistä.',
+          lahde: 'King Eliot, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Karachi on Sindin maakunnan pääkaupunki, Pakistanin '
+          + 'suurin kaupunki ja maan talouden keskus: asukkaita on yli '
+          + 'kaksikymmentä miljoonaa. Matkailijan Karachi on silti kapea '
+          + 'kaistale rannikkoa. Pohjoisessa ovat vanhankaupungin '
+          + 'korttelit Kharadarissa ja Mithadarissa, niiden itäpuolella '
+          + 'siirtomaa-ajan Saddar Empress Marketin ympärillä ja etelässä '
+          + 'meren rannalla Clifton. Väliin jää sataman iso allas, jonka '
+          + 'ympäri on ajettava. Merewetherin kellotorni on hyvä '
+          + 'kiintopiste: se merkitsi ennen rajaa vanhan kaupungin ja '
+          + 'uuden eurooppalaisen korttelin välillä.',
+        artikkeli: {
+          nimi: 'Matkailijan Karachi',
+          taitto: 'opas',
+          teksti: 'Luonnonsatama, sen ympärille kasvanut kaupunki ja kaksi '
+            + 'pääkatua, joiden risteyksessä vanha ja uusi Karachi '
+            + 'kohtaavat.',
+          nosto: 'Vuonna 1856 Karachin kautta kulkeneen tavaran arvo oli '
+            + '855 103 puntaa ja kaupungissa asui arviolta 57 000 ihmistä; '
+            + 'nykyään asukkaita on yli kaksikymmentä miljoonaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentäen saavutaan Jinnahin kansainväliselle '
+                + 'lentoasemalle, joka avattiin 30. maaliskuuta 1929, kun '
+                + 'Imperial Airwaysin kone laskeutui silloiselle Drigh '
+                + 'Roadin kentälle. Kentän viereen rakennettiin 1927–1929 '
+                + 'ilmalaivahalli brittien R101-alukselle — sellaisia '
+                + 'tehtiin maailmassa vain kolme — mutta alus ei koskaan '
+                + 'saapunut, ja halli purettiin 1961. Nykyinen '
+                + 'terminaalirakennus on vuodelta 1992. Junalla tullaan '
+                + 'joko Karachi Cityn tai Cantonmentin asemalle; '
+                + 'jälkimmäiseltä lähtee myös kansainvälinen juna Intian '
+                + 'Jodhpuriin. Kaupungin sisällä liikutaan busseilla, ja '
+                + 'pikabussien vihreä ja oranssi linja ovat käytössä. '
+                + 'Kehärata kulki 1969–1999 ja on herätetty osittain '
+                + 'henkiin vuodesta 2020; raitiovaunuja kaduilla oli '
+                + '1884–1975. Sataman ja sen naapurin Port Qasimin kautta '
+                + 'kulkee 95 prosenttia Pakistanin ulkomaankaupan '
+                + 'tavarasta.',
+              kuva: {
+                tiedosto: 'Karachi Circular Railway.jpg',
+                selite: 'Kehäradan solmukohta on Karachi Cityn asema, joka '
+                  + 'on ollut käytössä vuodesta 1864.',
+                lahde: 'Adnanrail, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on rannikkotasangolla noin kymmenen metriä '
+                + 'merenpinnan yläpuolella, ja sen läpi kulkevat Malirin ja '
+                + 'Lyarin jokiuomat; Lyarin ranta on se paikka, johon '
+                + 'Kolachin kylä aikanaan perustettiin. Luoteessa nousevat '
+                + 'Khasan ja Mulrin matalat kukkulat, jotka kuuluvat '
+                + 'Kirthar-vuoriston reunaan ja yltävät korkeimmillaan 528 '
+                + 'metriin; lännessä rannikko muuttuu Ras Muarin eli Cape '
+                + 'Monzen kalliojyrkänteiksi. Satamaa suojaa Manoran niemi, '
+                + 'joka oli vielä siirtomaa-aikaan saari ja on liettymisen '
+                + 'myötä kiinnittynyt mantereeseen kahdentoista kilometrin '
+                + 'hiekkakannaksella; niemen kärjessä on 1889 valmistunut '
+                + 'majakka ja lahden rannoilla kasvaa mangrovemetsiä. '
+                + 'Idässä alkaa Induksen tulvatasanko. Saman joen laaksossa '
+                + 'kukoisti neljä ja puoli vuosituhatta sitten '
+                + 'kaupunkikulttuuri, jonka Mohenjo-daroon oli kaivettu yli '
+                + 'seitsemänsataa kaivoa — yksi kolmea taloa kohti — ja '
+                + 'jonka suorien katujen viertä kulkivat katetut viemärit.',
+              kuva: {
+                tiedosto: 'Lighthouse, Manora, Karachi. 01.JPG',
+                selite: 'Manoran majakka valmistui 1889 opastamaan Karachin '
+                  + 'satamaan tulevia laivoja, ja sen torni on 38 metriä '
+                  + 'korkea.',
+                lahde: 'Zunairaghaffar, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: maalattu kuorma-auto',
+              teksti: 'Pakistanissa kuorma-autot maalataan täyteen kukkia, '
+                + 'lintuja, maisemia ja runonsäkeitä, ja puskureista '
+                + 'roikkuu ketjuja, jotka helisevät ajaessa; siitä tulee '
+                + 'englanninkielinen lempinimi jingle truck. Tapa syntyi '
+                + '1920-luvulla, kun ensimmäiset kuorma-autot tuotiin '
+                + 'maahan ja paikalliset koristelijat siirsivät niihin '
+                + 'vanhan kansantaiteen kuviot. General Motors toi '
+                + 'kuorma-autoja Karachiin 1930-luvulla, ja kaupungista '
+                + 'kasvoi koristelun keskus, kun väkeä muutti tänne töiden '
+                + 'perässä. Karachin tyyliä sanotaan diskotaiteeksi: siihen '
+                + 'kuuluvat vilkkuvat lamput, lasi ja peilit. Sindille '
+                + 'ovat tunnusomaisia punaiset sävyt ja kamelinluusta '
+                + 'veistetyt koristeet, ja samalla tavalla koristellaan '
+                + 'riksoja, pakettiautoja ja linja-autoja. Ala työllistää '
+                + 'maan koristelukeskuksissa satojatuhansia.',
+              kuva: {
+                tiedosto: 'Truck Art of Pakistan.jpg',
+                selite: 'Kuorma-autojen koristelu alkoi 1920-luvulla, ja '
+                  + 'Karachin omaan tyyliin kuuluvat lamput, lasi ja '
+                  + 'peilit.',
+                lahde: 'Baharwassan, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kanava ja vehnä',
+              teksti: 'Suezin kanavan avaaminen 1869 lyhensi matkan '
+                + 'Euroopasta Arabianmerelle, ja Karachin asema satamana '
+                + 'vahvistui kertaheitolla. Vuonna 1878 kaupunki kytkettiin '
+                + 'Brittiläisen Intian rautatieverkkoon, ja 1887 satamaa '
+                + 'syvennettiin ja laajennettiin ja sen suulle rakennettiin '
+                + 'aallonmurtaja. Punjabin ja Sindin uudet kastelualueet '
+                + 'lähettivät satonsa juuri tänne, ja vuoteen 1899 mennessä '
+                + 'Karachi oli idän suurin vehnänvientisatama. Vuonna 1901 '
+                + 'kaupungissa asui 117 000 ihmistä ja sen ympärillä '
+                + 'olevassa kunnassa toiset 109 000. Laiturityöt jatkuivat '
+                + 'pitkälle seuraavalle vuosisadalle: laiturien rakentaminen '
+                + 'alkoi 1882, itälaituri ja Napier Molen venelaituri '
+                + 'valmistuivat 1914 ja länsilaituri korjaustelakoineen '
+                + 'vuosina 1927–1944.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Karachista puuttuu vielä, joten nämä '
+                + 'luvut ovat en-Wikipedian Karachi-artikkelin sääruudusta '
+                + '(normaalikausi 1991–2020) eivätkä samasta lähteestä kuin '
+                + 'lehden vuosigraafit. Ilmasto on trooppinen puolikuiva, '
+                + 'entinen aavikkoilmasto, jota Arabianmeri lientää. '
+                + 'Tammikuu on vuoden viilein kuukausi: keskilämpötila on '
+                + 'lähes yhdeksäntoista astetta ja yöt laskevat '
+                + 'kahteentoista. Kesäkuu on kuumin, keskilämpötila runsaat '
+                + 'kolmekymmentäkaksi astetta ja päivälämpötila lähes '
+                + 'kolmekymmentäkuusi. Sade tulee lyhyessä ryöpsähdyksessä: '
+                + 'heinä- ja elokuussa mitataan 86 ja 105 millimetriä, '
+                + 'marraskuussa alle millimetri. Sama artikkeli sanoo '
+                + 'leipätekstissään vuosisateeksi noin 296 millimetriä, '
+                + 'mutta sääruudun kuukausiluvut antavat yhteenlaskettuna '
+                + 'noin 318 — ero on artikkelin sisäinen eikä sitä '
+                + 'selitetä. Miellyttävintä on joulu–helmikuussa, jolloin '
+                + 'on kuivaa ja kuukausikeskiarvot pysyvät kahdenkymmenen '
+                + 'tienoilla. Kuumin mitattu lukema on 48,0 astetta '
+                + '22.–23. huhtikuuta 2017 ja kylmin nolla astetta '
+                + '21. tammikuuta 1934.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kalastajakylä Kolachi linnoitettiin 1729, ja sadassa '
+        + 'vuodessa siitä kasvoi imperiumin vilkkain vehnäsatama. Vuonna '
+        + '1947 kaupungista tuli uuden valtion ensimmäinen pääkaupunki.',
+      tehtava: {
+        kysymys: 'Millä nimellä Karachin paikalla ollut kylä tunnettiin ennen brittejä?',
+        vaihtoehdot: [
+          'Kolachi',
+          'Keamari',
+          'Mithadar',
+          'Manora',
+        ],
+        oikea: 0,
+        fakta: 'Kolachi-jo-Goth perustettiin 1729 vanhemman Dibro-nimisen '
+          + 'kalastajakylän paikalle, ja nimi kirjattiin ensimmäisen kerran '
+          + 'hollantilaiseen asiakirjaan 1742 muodossa Karachee.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaksikymmentä majaa ja kaksi porttia',
+          tiedosto: 'A street in Old Town, Karachi, India. Photograph, 1897. Wellcome V0029261.jpg',
+          teksti: 'Ennen kaupunkia rannalla oli Dibro-niminen parinkymmenen '
+            + 'majan kylä vesialtaan äärellä, ja 1725 sinne asettui '
+            + 'balutšisiirtolaisia Makranista ja Kalatista. Kun Kharak '
+            + 'Banderin satama liettyi rankkasateissa 1728, kauppiaat '
+            + 'siirtyivät tänne ja rakensivat 1729 uuden kylän nimeltä '
+            + 'Kolachi-jo-Goth. Kylä oli neljänkymmenen hehtaarin kokoinen, '
+            + 'ja sen ympäri nousi kuudentoista jalan korkuinen savi- ja '
+            + 'puumuuri tykkitorneineen. Portteja oli kaksi: merelle päin '
+            + 'Kharadar eli suolaportti ja Lyari-joelle päin Mithadar eli '
+            + 'makea portti. Puolustukseen tuotiin tykkejä Muskatista.',
+          selite: 'Rampart Row on vanhankaupungin katu Mithadarissa, ja '
+            + 'vuoden 1897 vedos kuuluu Karachin ruttokomitean teettämään '
+            + 'kuvasarjaan.',
+          lahde: 'R. Jalbhoy / Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Karachi',
+        },
+        {
+          otsikko: 'Kolme päivää helmikuussa 1839',
+          tiedosto: 'Sir Charles James Napier by Edwin Williams.jpg',
+          teksti: 'Brittiläinen sotalaiva Wellesley '
+            + 'ankkuroitui Manoran saaren edustalle 1. helmikuuta 1839 ja '
+            + 'avasi kahta päivää myöhemmin tulen Talpurien 1797 rakentamaa '
+            + 'Manora Fortia vastaan. Linnoitus antautui nopeasti, ja '
+            + 'kaupunki siirtyi kauppakomppanialle. Kaupungissa asui arviolta '
+            + '8 000–14 000 ihmistä, ja se mahtui yhä muurien sisään '
+            + 'Mithadariin. Sindin keskus siirtyi '
+            + 'Hyderabadista Karachiin 1840, ja kenraalimajuri Charles '
+            + 'James Napier valtasi loput maakunnasta 1843. Sen jälkeen '
+            + 'Sind liitettiin Bombayn presidenssiin, jossa se pysyi '
+            + 'seuraavat 93 vuotta. Vuoden 1846 koleraepidemia synnytti '
+            + 'Karachin koleralautakunnan, kaupungin ensimmäisen '
+            + 'hallintoelimen.',
+          selite: 'Muotokuvan maalasi Edwin Williams, joka työskenteli '
+            + 'vuosina 1843–1875, ja se kuuluu Lontoon kansallisen '
+            + 'muotokuvagallerian kokoelmaan.',
+          lahde: 'Edwin Williams, Wikimedia Commons (PD)',
+          wiki: 'Karachi',
+        },
+        {
+          otsikko: 'Frere avaa sataman',
+          tiedosto: 'Kurrachee. (1886) (Indes). 4e Série. Pl. XV. Ministère des Travaux Publics. Ecole des Ponts et Chaussées. Lith. A. Simon, 13 (IA dr kurrachee-1886-indes-4e-srie-pl-xv-ministre-des-travaux-publics-14306105).jpg',
+          teksti: 'Henry Bartle Edward Frere nimitettiin komissaariksi '
+            + '1850-luvulla, ja hänen aikanaan Karachin satama perustettiin '
+            + '1854: väylä ruopattiin ja satama yhdistettiin kaupunkiin '
+            + 'pengertiellä, jota seurasivat aallonmurtaja ja kaksi '
+            + 'siltaa. Vuoteen 1856 mennessä kaupungin kautta kulkevan '
+            + 'tavaran arvo oli 855 103 puntaa ja asukkaita oli arviolta '
+            + '57 000. Rautatie Kotriin avattiin yleisölle 13. toukokuuta '
+            + '1861. Yhdysvaltain sisällissodan aikana Sindin puuvilla '
+            + 'korvasi amerikkalaisen Englannin kehräämöissä, ja '
+            + 'kuljetuksia varten perustettiin kaksi höyrylaivayhtiötä. '
+            + 'Samaan aikaan kaupunkiin muutti kauppiaita ympäri Intiaa, ja '
+            + 'Saddariin syntyi uusi liikekortteli.',
+          selite: 'Ranskan tie- ja siltalaitoksen satama-atlas mittasi '
+            + 'Karachin sataman vuonna 1886, seitsemäntoista vuotta Suezin '
+            + 'kanavan avaamisen jälkeen.',
+          lahde: 'France. Ministère des travaux publics. Administration des routes France. Direction des cartes, plans et archives et de la statistique graphique École nationale des ponts et chaussées (France) Simon, A., Wikimedia Commons (PD)',
+          wiki: 'Port of Karachi',
+        },
+        {
+          otsikko: 'Ensimmäinen pääkaupunki',
+          tiedosto: 'PkKaratschiMazar-e-Quaid.jpg',
+          teksti: 'Elokuun 15. päivänä 1947 Karachista tehtiin '
+            + 'itsenäistyneen Pakistanin pääkaupunki. Kaupunki oli Sindin '
+            + 'suurin, ja siinä asui yli 400 000 ihmistä. Intian jako '
+            + 'muutti väestöpohjan nopeasti: toukokuuhun 1948 mennessä '
+            + 'kaupunkiin oli saapunut 470 000 muhajir-pakolaista, ja suuri '
+            + 'osa aiemmasta hinduväestöstä muutti Intian puolelle. '
+            + 'Väkiluku kolminkertaistui vuosien 1941 ja 1951 välillä, ja '
+            + 'urdu ohitti sindin puhutuimpana äidinkielenä. Pääkaupunkina '
+            + 'Karachi oli vuoteen 1958, jolloin hallinto siirtyi '
+            + 'Rawalpindiin uuden Islamabadin rakentamisen ajaksi. '
+            + 'Kaupungin tunnetuin 1900-luvun rakennus on Jinnahin '
+            + 'mausoleumi.',
+          selite: 'Jinnahin mausoleumi rakennettiin 1960-luvulla, jolloin '
+            + 'Karachi ei ollut enää pääkaupunki.',
+          lahde: 'Ziegler175, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Karachi',
+        },
+      ],
+    },
+  ],
 };

@@ -3125,6 +3125,73 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  karachi: {
+    /*
+     * VANHASTAKAUPUNGISTA CLIFTONIIN SATAMAN YLI (22.8.2026). Ruutu
+     * on 7,1 × 7,0 km ja se on kolmiosainen: pohjoisreunassa Saddarin
+     * ja vanhankaupungin korttelit Empress Marketista Kharadariin,
+     * keskellä Karachin satama-allas ja Chinna Creekin mangroverannat
+     * ja eteläreunassa Cliftonin huvila-alue Mohatta Palacen
+     * ympärillä. Lehden kaikki kymmenen kohdetta mahtuvat sisään.
+     *
+     * RUUTU ON MELKEIN NELIÖ, ja se on harkittu kuten Kolkatassa,
+     * Mumbaissa ja Varanasissa. Kohteet ovat luonnostaan kahdessa
+     * rykelmässä: kahdeksan niistä on 1,7 × 4,0 kilometrin nauhassa
+     * pohjoisessa ja kaksi viiden kilometrin päässä etelässä
+     * Cliftonissa. Tiukka rajaus olisi joko jättänyt Cliftonin pois
+     * tai piirtynyt kapeaksi pystynauhaksi, jossa satama ei näkyisi
+     * lainkaan — ja satama on koko lehden juoni. Nyt ruudun keskellä
+     * on vesi, ja kartta kertoo sen mitä siitä pitää nähdä: Karachi
+     * kasvoi luonnonsataman ympärille.
+     *
+     * meri: true, koska Arabianmeri, Karachin satama-allas ja Chinna
+     * Creek ovat OSM:ssä avoimia vesialueita, jotka eivät sulkeudu
+     * rajauksen sisällä: vesi tulee kuvaan lännestä ja etelästä eikä
+     * pelkkä monikulmiotäyttö riitä. Sama ratkaisu kuin Kolkatan
+     * Hooghlyllä, Mumbain satama-altaalla ja Adenin lahdella.
+     *
+     * MANORA JA MANORA FORT EIVÄT OLE KARTALLA EIVÄTKÄ KAINALOSSA,
+     * vaikka niistä kerrotaan sekä historiasivulla että
+     * matkaoppaassa. Manoran niemi on en-Wikipedian koordinaateista
+     * (24,79406 / 66,97753) laskien kahdeksan kilometriä lounaaseen
+     * kaupungin keskipisteestä (24,86 / 67,01), eli kauempana kuin
+     * yksikään kainalo tässä kartastossa (Medinan Quba 3,5 km,
+     * Adenin Tawahi 6 km), ja ruudun venyttäminen sinne asti tekisi
+     * kartasta yhdeksän kilometriä korkean ja puristaisi
+     * vanhankaupungin kahdeksan kohdetta yläreunaan. Manora kerrotaan
+     * matkaoppaan toisessa jaksossa majakkakuvan kanssa (Medinan
+     * Uhud-vuoren, Kolkatan Dakshineswarin ja Mumbain Elephantan
+     * ratkaisu).
+     *
+     * MAZAR-E-QUAID JA KARACHIN ELÄINTARHA JÄIVÄT RUUDUN
+     * ULKOPUOLELLE, ja se on rajauksen hinta. Molemmat ovat runsaan
+     * kilometrin pohjoisreunan yläpuolella (24,8754 ja 24,8762), ja
+     * niiden mukaan ottaminen olisi vaatinut ruudun venyttämistä
+     * pohjoiseen samalla kun Clifton pitää eteläreunan paikallaan.
+     * Mausoleumi on lehdessä historiasivun noston kuvana.
+     *
+     * SIND CLUB, QUAID-E-AZAM HOUSE JA ST. PATRICKIN KATEDRAALI OVAT
+     * RUUDUSSA MUTTA EIVÄT PISTELISTALLA. Sind Club on
+     * en-Wikipedian koordinaateista (24,84929 / 67,031968) laskien
+     * 205 metrin päässä Frere Hallista, Quaid-e-Azam House 300
+     * metrin päässä Pyhän Kolminaisuuden katedraalista ja St.
+     * Patrick 300 metriä Empress Marketista pohjoiseen — kaikilla
+     * numeroympyrä olisi mennyt naapurinsa päälle (Petran, Mekan ja
+     * Singaporen oppi). Frere Hallin naapuruus Sind Clubin kanssa
+     * kerrotaan kohteen omassa jutussa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kantonissa ja Kolkatassa: Empress Marketin
+     * ympärysaukio, Kharadarin ja Mithadarin kujat ja Cliftonin
+     * rantapuiston polut ovat OSM:ssä jalankulkualueita ja
+     * huoltoteitä, ja ilman lippuja kartan tihein osa jäisi tyhjäksi
+     * paperiksi.
+     */
+    rajat: { pohjoinen: 24.8700, etela: 24.8060, lansi: 66.9780, ita: 67.0480 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*

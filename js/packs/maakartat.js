@@ -8284,6 +8284,70 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Colombon kansallismuseo', lat: 6.91, lon: 79.860833 },
     ],
   },
+  /*
+   * KARACHIN KOHDEKARTTA (Opus 22.8.2026). Ruutu on 7,1 × 7,0 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Xi'anissa, Kantonissa ja Kolkatassa. Piirtorajaus, meri-lipun syy
+   * ja poisjätöt (Manora, Mazar-e-Quaid, Sind Club) ovat
+   * tools/piirra-kaupunkikartta.mjs:n karachi-lohkossa.
+   *
+   * KOORDINAATIT OVAT KAIKKI EN-WIKIPEDIASTA, haettu 22.8.2026, mutta
+   * kahdesta eri paikasta, ja jako on kirjattu tähän, koska sitä ei
+   * näe kohdelistasta. Artikkelien omista {{Coord}}-malineista tulevat
+   * Empress Market (24°51'45"N 67°1'46"E = 24,8625 / 67,029444),
+   * Karachin kaupungintalo (24°51'19,4"N 67°00'27,8"E = 24,855389 /
+   * 67,007722), Denso Hall (24,8530 / 67,0041), Pyhän Kolminaisuuden
+   * katedraali (24,852 / 67,030), Wazir Mansion (24°51'3"N 66°59'51"E
+   * = 24,850833 / 66,9975), Merewetherin kellotorni (24°50,936'N
+   * 66°59,845'E = 24,848933 / 66,997417), Karachi Cityn asema
+   * (24,8482 / 67,0064), satamahallinnon talo (24,847377 / 66,993269)
+   * ja Mohatta Palace (24°48,877'N 67°01,950'E = 24,814617 /
+   * 67,0325). Frere Hallin arvo (24,8475 / 67,0328) tulee MediaWikin
+   * coordinates-rajapinnasta, koska artikkelin oma {{Coord}}-malline
+   * on tyhjä — sama menettely kuin Tokion kansallismuseossa,
+   * Persepoliksessa ja Kašgarin Chini-Baghissa. Riippumaton tarkistus
+   * (docs/aasia-tyoaineisto/tarkistus-karachi.md osio 4) sai samat
+   * arvot kaikille faktapohjan yhdeksälle kohteelle.
+   *
+   * MOHATTA PALACEN ARTIKKELISSA ON KAKSI KOORDINAATTIA, ja ne
+   * täsmäävät: infoboksin pyöristetty 24,814 / 67,032 ja artikkelin
+   * lopun tarkempi 24°48,877'N 67°01,950'E. Kartalla on jälkimmäinen.
+   *
+   * WAZIR MANSION JA MEREWETHERIN KELLOTORNI OVAT 210 METRIN PÄÄSSÄ
+   * TOISISTAAN, ja niiden numeroympyrät menevät osittain päällekkäin.
+   * Tämä on tietoinen: molemmat ovat lehden omia nostoja (Jinnahin
+   * syntymäkoti ja kaupungin tunnetuin maamerkki), ja
+   * tarkista-karttapisteet.mjs pitää tämän verran peittoa
+   * tavallisena — Istanbulin Hagia Sofia ja Sininen moskeija sekä
+   * Bagdadin Mutanabbin katu ja museo ovat kartastossa syvemmällä
+   * toistensa alla. Koordinaattia ei siirretä.
+   *
+   * SATAMAHALLINNON TALON PISTE ON RANNAN TUNTUMASSA mutta kuivalla
+   * maalla: se seisoo M. A. Jinnah Roadin varrella Native Jetty
+   * -sillan kupeessa, ja tarkista-karttapisteet.mjs vahvistaa tämän
+   * valmiista PNG:stä.
+   */
+  karachi: {
+    polku: 'assets/kartat/karachi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 24.87, etela: 24.806, lansi: 66.978, ita: 67.048 },
+    esittely: 'Pohjoisreunassa ovat vanhakaupunki ja Saddar, keskellä '
+      + 'sataman iso allas ja etelässä Clifton. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Empress Market', lat: 24.8625, lon: 67.029444 },
+      { nimi: 'Karachin kaupungintalo', lat: 24.855389, lon: 67.007722 },
+      { nimi: 'Denso Hall', lat: 24.853, lon: 67.0041 },
+      { nimi: 'Pyhän Kolminaisuuden katedraali', lat: 24.852, lon: 67.03 },
+      { nimi: 'Wazir Mansion', lat: 24.850833, lon: 66.9975 },
+      { nimi: 'Merewetherin kellotorni', lat: 24.848933, lon: 66.997417 },
+      { nimi: 'Karachi Cityn rautatieasema', lat: 24.8482, lon: 67.0064 },
+      { nimi: 'Frere Hall', lat: 24.8475, lon: 67.0328 },
+      { nimi: 'Satamahallinnon talo', lat: 24.847377, lon: 66.993269 },
+      { nimi: 'Mohatta Palace', lat: 24.814617, lon: 67.0325 },
+    ],
+  },
 };
 
 /*
