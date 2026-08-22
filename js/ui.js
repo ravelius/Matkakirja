@@ -377,6 +377,20 @@ const PALUU_KESTO_MS = 8000;
  */
 const TYON_ALLA_IDT = new Set((TUOREET?.tyossa ?? []).map((k) => k.id));
 /*
+ * GENEROIDUT HEROKUVAT KARTALLE (omistajan tilaus 22.8.2026:
+ * "Merkkaa violetilla ne kaupungit joissa uudet generoidut
+ * herokuvat"). Joukko johdetaan suoraan lehtidatasta: kaupunki on
+ * violetti täsmälleen silloin, kun jokin sen kategorian avauskuvista
+ * osoittaa peiliämpäriin (ampari-kenttä eli pelin oma havainnekuva).
+ * Käsin ylläpidettävää listaa ei ole, joten herolaajennus näkyy
+ * kartalla samalla julkaisulla, jolla kuvat tulevat lehteen.
+ */
+const HEROKUVA_IDT = new Set(Object.entries(KULTTUURI_KATEGORIAT)
+  .filter(([, kategoriat]) => (kategoriat ?? []).some(
+    (k) => (k.avauskuvat ?? []).some((kuva) => kuva.ampari),
+  ))
+  .map(([id]) => id));
+/*
  * TEKSTIREMONTIN RAJA (omistajan tilaus 20.8.2026: "korjatut ja
  * korjaamattomat kaupungit voisi erottaa toisistaan kartalla
  * kehittäjätilassa").
@@ -4329,6 +4343,13 @@ export class UI {
      */
     const valmiusLuokka = (c) => {
       if (!this.kehittajaTila) return '';
+      /*
+       * HEROKUVAT ENNEN JULISTETTA (omistajan tilaus 22.8.2026, ks.
+       * HEROKUVA_IDT): neljä viidestä ensimmäisestä herokaupungista on
+       * myös julistekaupunkeja, joten julistevihreä ensin peittäisi
+       * violetin kokonaan.
+       */
+      if (HEROKUVA_IDT.has(c.id)) return ' city-herokuva';
       if (JULISTEET[c.id]) return ' city-juliste';
       if (TYON_ALLA_IDT.has(c.id)) return ' city-tyossa';
       if (!kaupungillaLehti(c.id)) return ' city-kesken';
