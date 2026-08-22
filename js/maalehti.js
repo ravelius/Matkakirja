@@ -905,12 +905,6 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
   let ensimmainen = true;
   let nostoSijoitettu = false;
   for (const nosto of kategoria.nostot ?? []) {
-    if (!ensimmainen && !nostoSijoitettu && nostoVirke) {
-      const sitaatti = html('blockquote', 'wiki-sitaatti');
-      sitaatti.appendChild(html('p', '', nostoVirke));
-      kohde.appendChild(sitaatti);
-      nostoSijoitettu = true;
-    }
     const lohko = html('div', 'wiki-nosto');
     // Otsikko ja kuuntelu-/musiikkinapit samalla rivillä — sama
     // toiminnallisuus kuin litteissä nostoissa, ettei monistaminen
@@ -1032,6 +1026,30 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       leipa.appendChild(nappi);
     }
     ui.lisaaNostonLinkki(leipa, nosto);
+    /*
+     * SITAATTINOSTO LEIPÄTEKSTIN JATKOKSI, EI NOSTOJEN VÄLIIN
+     * (omistajan tilaus 22.8.2026: "siirrä nostot osaksi tekstiä niin
+     * että tyhjätila ja pitkät vaakaviivat häviävät").
+     *
+     * Ennen nosto ladottiin omana lohkonaan kahden noston VÄLIIN
+     * (kohde.appendChild). Kainalokuvallisessa nostossa se tarkoitti
+     * pahinta mahdollista paikkaa: leipäteksti loppui kelluvan kuvan
+     * puoliväliin, kuvan viereen jäi puolen ruudun aukko, ja nosto
+     * alkoi vasta sen alta omine vaakaviivoineen.
+     *
+     * Nyt nosto menee SAMAAN palstavirtaan leipätekstin kanssa —
+     * ensimmäisen noston .leipa-lohkon viimeiseksi — jolloin se
+     * juoksee kainalokuvan vierellä ja täyttää juuri sen aukon.
+     * Sisältö ja valinta eivät muutu: virke on yhä seuraavasta
+     * nostosta (nostoVirke), eli se houkuttelee lukemaan sitä juttua,
+     * jonka edellä se on. Ulkoasu on css/styles.css .wiki-sitaatti.
+     */
+    if (!nostoSijoitettu && nostoVirke) {
+      const sitaattiLohko = html('blockquote', 'wiki-sitaatti');
+      sitaattiLohko.appendChild(html('p', '', nostoVirke));
+      leipa.appendChild(sitaattiLohko);
+      nostoSijoitettu = true;
+    }
     // Selattava teosgalleria noston kuvan ympärille (pilottina
     // Venetsian Canaletto): nuolet vaihtavat teosta, selite ja
     // lähderivi seuraavat mukana.
