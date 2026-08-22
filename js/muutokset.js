@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1039, teksti: 'Akvarellit valmiit: 24 kaupunkia, Dubai ja Istanbul uusina' },
   { v: 1038, teksti: 'Valmiusvärit kehittäjäkartalle, kohdekyltti alemmas' },
   { v: 1037, teksti: 'Pöllön valmiskysymykset kaikkiin 112 kaupunkiin' },
   { v: 1036, teksti: 'Menovinkkien taitto ei enää vuoda muille aihesivuille' },

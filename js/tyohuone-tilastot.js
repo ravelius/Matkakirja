@@ -180,20 +180,30 @@ function kaupungillaOpas(id) {
  * 'puutteellinen' (omistajan tilaus 23.8.2026: kehittäjäkartan värit
  * kertovat lehtien valmiusasteen, eivät enää julistetta ja herokuvia).
  *
- * VALMIS = kansiosio, matkaopas, säätiedot ja kohdekartta. Nämä neljä
- * ovat lehden runko: ilman jotakin niistä sivu on vielä kesken, vaikka
- * se aukeaisi. ALUEILLA riittää kansiosio ja säätiedot (ks. ALUEET).
+ * VALMIS = kansiosio, matkaopas, säätiedot, kohdekartta JA generoidut
+ * herokuvat (omistajan tarkennus 23.8.2026: "Kaupunkia ei voi merkata
+ * vihreäksi jos heroja ei ole generoitu sinne vielä"). Ilman jotakin
+ * näistä sivu on vielä kesken, vaikka se aukeaisi. ALUEILLA riittää
+ * kansiosio, säätiedot ja herot (ks. ALUEET).
  * LÄHES VALMIS = kansiosio on, jokin muu puuttuu.
  * PUUTTEELLINEN = ei kansiosiota eli ei lehteä lainkaan.
  *
  * Aste luetaan pelidatasta ajonaikaisesti — käsin ylläpidettävää
  * listaa ei ole, joten kartta ei voi jäädä jälkeen sisällöstä.
  */
+
+/** Onko avauskuvissa generoituja herokuvia (ampari-kenttä). */
+function kaupungillaHerot(id) {
+  const kansi = (KULTTUURI_KATEGORIAT[id] ?? []).find((k) => k.id === 'kaupunki');
+  return (kansi?.avauskuvat ?? []).some((kuva) => kuva.ampari);
+}
+
 export function lehtiValmius(id) {
   if (!kaupungillaLehti(id)) return 'puutteellinen';
   const osat = ALUEET.has(id)
-    ? [Boolean(SAATIEDOT[id])]
-    : [kaupungillaOpas(id), Boolean(SAATIEDOT[id]), Boolean(KAUPUNKIKARTAT[id])];
+    ? [Boolean(SAATIEDOT[id]), kaupungillaHerot(id)]
+    : [kaupungillaOpas(id), Boolean(SAATIEDOT[id]), Boolean(KAUPUNKIKARTAT[id]),
+       kaupungillaHerot(id)];
   return osat.every(Boolean) ? 'valmis' : 'lahes';
 }
 
