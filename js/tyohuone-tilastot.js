@@ -159,6 +159,9 @@ export function kaupungillaLehti(id) {
 export const ALUEET = new Set([
   'islanti', 'lappi', 'kreeta', 'sisilia', 'alpit',
   'sumatra', 'borneo', 'kamtsatka', 'sahalin',
+  // Lähi-idän aluekohteet (Fablen päätös 23.8.2026): ylänkö, niemimaa
+  // ja hiekka-aavikko eivät saa kohdekarttaa koskaan.
+  'kapadokia', 'siinai', 'rubalkhali',
 ]);
 
 /**
