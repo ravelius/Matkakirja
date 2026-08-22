@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1006, teksti: 'Colombon kaupunkilehti alusta asti' },
   { v: 1005, teksti: 'Kuvatekstilinjaus Raamattuun; herotekstit uusiksi' },
   { v: 1004, teksti: 'Kehittäjäkartta: herokuvakaupungit violetilla' },
   { v: 1003, teksti: 'Kokoruutukartta: kohteet aukeavat, zoomi levenee' },

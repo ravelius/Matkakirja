@@ -336,6 +336,29 @@
 //   3) Dharavia ja asuinoloja koskeva virke. Tämän erän oma
 //      sisältölinjaus jättää aiheen lehden puolelta kokonaan pois,
 //      joten teksti-kenttä ja lehti eivät ole tässä samalla linjalla.
+// COLOMBO (22.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js; säärivi jäi erilliseen erään). Jokainen
+// introväite tulee saman erän lehtiteksteistä, jotka on tarkistettu
+// en-Wikipedian raakateksteistä 22.8.2026 — uusia lähdehakuja ei
+// tarvittu. Vanha intro oli kahden lauseen mittainen ja sanoi sataman
+// olleen käytössä "noin kaksituhatta vuotta"; uusi käyttää artikkelin
+// omaa muotoilua siitä, että satama tunnettiin roomalaisille, arabeille
+// ja kiinalaisille yli kaksituhatta vuotta sitten. Sisältölinjaus on
+// sama kuin lehdessä (spec-asia.md:n kohta Karachi/Kolkata/Mumbai ym.):
+// siirtomaahistoria neutraalina, ei nykypolitiikkaa, ja sisällissota
+// jää kokonaan pois.
+//
+// TEKSTI-KENTÄN SATAMAVIRKE KORJATTU POIMINNASSA (Fable 22.8.2026):
+// vanha kenttä väitti "Satama on luonnostaan suojaisa", mutta
+// en-Wikipedian Port of Colombo sanoo päinvastaista — satama on "one
+// of the biggest artificial harbours in the world", ja avoin redi
+// muutettiin suojaisaksi vasta 1912 (satamakomissio 1913). Virke
+// vaihdettiin tekosatamamuotoon, samaan linjaan lehden
+// nähtävyysjutun "Colombon satama" kanssa. Muut kentän väitteet
+// täsmäävät lähteisiin (1505, 1600-luku, 1796, itsenäistyminen 1948,
+// nimenmuutos 1972, hallinnollinen pääkaupunki Sri Jayawardenepura
+// Kotte).
 export const ASIA_ARTIKKELIT = {
   İzmir: {
     intro: 'İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin '
@@ -3190,13 +3213,32 @@ export const ASIA_ARTIKKELIT = {
       + 'elokuvan koti.',
   },
   Colombo: {
-    intro: 'Colombo on Sri Lankan suurin kaupunki ja sen satama on '
-      + 'ollut käytössä noin kaksituhatta vuotta. Kanelia on viety '
-      + 'täältä siitä asti, kun sitä alettiin kuljettaa Eurooppaan.',
-    teksti: 'Colombo on saaren länsirannikolla. Satama on luonnostaan '
-      + 'suojaisa, ja se on ollut arabikauppiaiden pysähdyspaikka jo '
-      + 'ennen eurooppalaisten tuloa. Portugalilaiset saapuivat 1505, '
-      + 'hollantilaiset 1600-luvulla ja britit 1796.'
+    intro: 'Colombo on Sri Lankan suurin kaupunki ja saaren talouden '
+      + 'keskus, ja sen satama tunnettiin roomalaisille, arabeille ja '
+      + 'kiinalaisille kauppiaille jo yli kaksituhatta vuotta sitten. '
+      + 'Portugalilaiset saapuivat 1505 ja saivat Kotten kuninkaalta '
+      + 'oikeuden käydä kauppaa saaren kanelilla; **linnoitusta he '
+      + 'alkoivat rakentaa 1517**. Hollantilaiset valtasivat sen 1656 '
+      + 'pitkän piirityksen jälkeen ja britit 1796.'
+      + '\n\n'
+      + 'Muurien sisäpuolista aluetta sanotaan yhä nimellä Fort, vaikka '
+      + 'muureja ei enää ole: ne purettiin 1869–1871 tarpeettomina, ja '
+      + 'tilalle nousi kasarmeja ja liiketaloja. Ulkopuolella leviää '
+      + 'Pettahin basaarikaupunginosa, ja keskellä kaupunkia lepää '
+      + 'Beira-järvi, jonka portugalilaiset kaivoivat linnoituksen '
+      + 'vallihaudaksi.'
+      + '\n\n'
+      + 'Saaren rikkaus vaihtui 1800-luvun lopulla: kahviruoste tuhosi '
+      + 'plantaasit, ja tilalle tuli tee, jolle keskiylängön viileys ja '
+      + 'sade sopivat. **Ceylon-tee** kulkee yhä maailmalle Colombon '
+      + 'sataman kautta. Hallinto siirtyi myöhemmin naapurikaupunkiin '
+      + 'Sri Jayawardenepura Kotteen, mutta useimmat maat pitävät '
+      + 'lähetystönsä Colombossa.',
+    teksti: 'Colombo on saaren länsirannikolla. Satama on ollut '
+      + 'arabikauppiaiden pysähdyspaikka jo ennen eurooppalaisten '
+      + 'tuloa, ja aallonmurtajat tekivät avoimesta redistä yhden '
+      + 'maailman suurimmista tekosatamista. Portugalilaiset '
+      + 'saapuivat 1505, hollantilaiset 1600-luvulla ja britit 1796.'
       + '\n\n'
       + 'Kaneli on Sri Lankan vanha vientituote. Aito ceyloninkaneli '
       + 'kuoritaan puun nuorista oksista ohuina kerroksina, jotka '

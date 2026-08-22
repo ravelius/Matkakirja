@@ -29946,4 +29946,377 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  colombo: {
+    'Colombon satama': {
+      aika: 'käytössä yli 2 000 vuotta',
+      teksti: 'Satama tunnettiin roomalaisten, arabien ja kiinalaisten '
+          + 'kauppiaiden keskuudessa jo yli kaksituhatta vuotta sitten, '
+          + 'ja 700-luvulta alkaen arabikauppiaat asettuivat Colomboon '
+          + 'tukikohdakseen. Kotten kuningaskunnan aikaan paikkaa '
+          + 'kutsuttiin nimellä Kolomtota. Portugalilaiset saapuivat '
+          + '1505, ja kanelikaupasta tehty sopimus toi heille myös '
+          + 'vallan rannikolla; kauppa-aseman ympärille alkoi 1517 '
+          + 'nousta linnoitus.'
+        + '\n\n'
+        + 'Hollantilaiset valtasivat sataman 1656 ja pitivät sen '
+          + 'merialueidensa pääkaupunkina vuoteen 1796, jolloin se '
+          + 'siirtyi briteille. Vasta 1912 avoin redi muutettiin '
+          + 'suojaisaksi satamaksi, ja seuraavana vuonna perustettiin '
+          + 'sen hallintoa varten oma satamakomissio. Itsenäistymisen '
+          + 'jälkeen rakennettiin uusia laitureita ja varastoja, ja '
+          + '1980-luvun alussa satama muutettiin konttiliikenteelle.'
+        + '\n\n'
+        + 'Colombo on nykyään Sri Lankan ja koko Intian valtameren '
+          + 'vilkkain satama ja yksi maailman suurimmista '
+          + 'keinotekoisista satamista: yli kahdeksantoista metriä '
+          + 'syvää vettä, viisikymmentäyksi kiinnityspaikkaa ja '
+          + 'kaksikymmentäseitsemän laituria noin viiden '
+          + 'neliökilometrin alueella. Sen kautta kulkee valtaosa maan '
+          + 'ulkomaankaupasta.',
+      kuvat: [
+        {
+          tiedosto: 'Breakwater Colombo-Ceylon, KITLV 1401648.tiff',
+          selite: 'Colombon satama oli pitkään avoin redi, jota vasta '
+            + 'aallonmurtajat suojasivat, ja suojaisaksi satamaksi '
+            + 'se muutettiin 1912.',
+          lahde: 'A.W.A. Plâté & Co, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wolvendaalin kirkko': {
+      aika: '1749–1757',
+      teksti: 'Kuvernööri Gustaaf Willem van Imhoff pyysi 1736 '
+          + 'kauppakomppanialta lupaa purkaa linnoituksen sisällä ollut '
+          + 'Kasteel Kerk ja rakentaa tilalle uusi kirkko. Lupaa ei '
+          + 'tullut, ja pattitilanne aukesi vasta kuvernööri Julius '
+          + 'Valentyn Stein van Gollenessen tultua virkaan 1743: hän '
+          + 'päätti, että uusi kirkko nousee muurien ulkopuolelle '
+          + 'suomaalle. Eurooppalaiset luulivat seudun sakaaleja '
+          + 'susiksi, ja alue sai nimen Wolvendaal eli suden laakso.'
+        + '\n\n'
+        + 'Perustukset laskettiin 1749, ja rakentaminen kesti '
+          + 'kahdeksan vuotta. Kirkko vihittiin 6. maaliskuuta 1757, ja '
+          + 'paikalla oli kaksi kuvernööriä, väistyvä ja tuleva. '
+          + 'Rakennus on doorilainen ja pohjaltaan tasavartinen risti. '
+          + 'Seinät ovat lähes puolitoista metriä paksut ja tehty '
+          + 'poikkeuksellisen suurista kabok-savirautakivistä koralli- '
+          + 'ja kalkkilaastilla. Kupolimainen korkea katto oli alun '
+          + 'perin tiiliholvi ja sen huipulla seisoi messinkileijona, '
+          + 'jolla oli kruunu, miekka ja seitsemän nuolta Hollannin '
+          + 'seitsemän maakunnan merkiksi; salama tuhosi leijonan ja '
+          + 'vaurioitti kupolia 1856.'
+        + '\n\n'
+        + 'Sisällä on kuvernöörin oma penkki, eebenpuisia ja '
+          + 'kalamanderipuisia kirkontuoleja 1600- ja 1700-luvuilta ja '
+          + 'vuoden 1667 kastemalja. Lattia on graniittilaattaa ja sen '
+          + 'seassa on hautakiviä, joissa lukee hollantilaisia, '
+          + 'burgherilaisia, sinhalilaisia, tamileja ja englantilaisia '
+          + 'nimiä kolmensadan vuoden ajalta; kirkkoon on haudattu '
+          + 'viisi hollantilaista kuvernööriä, viimeisenä Johan Gerard '
+          + 'van Angelbeek, joka kuoli Colombossa 1799. Urut ovat '
+          + 'saaren vanhimmat. Wolvendaal on ainoa saaren '
+          + 'hollantilaisista kirkoista, joka on ollut '
+          + 'yhtäjaksoisesti käytössä; jumalanpalvelukset pidetään '
+          + 'tamiliksi, sinhalaksi ja englanniksi.',
+      kuvat: [
+        {
+          tiedosto: 'Wolvendaalse Kerk, voorgevel - 20652234 - RCE.jpg',
+          selite: 'Wolvendaalin kirkko vihittiin 6. maaliskuuta 1757, '
+            + 'ja se on ainoa saaren hollantilaisista kirkoista, '
+            + 'joka on ollut yhtäjaksoisesti käytössä.',
+          lahde: 'Anonymous Unknown author, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Punainen moskeija': {
+      aika: '1908–1909',
+      teksti: 'Jami Ul-Alfarin moskeija Pettahin Second Cross '
+          + 'Streetillä on Colombon vanhimpia moskeijoita. Sen tilasi '
+          + 'kaupunginosan intialaistaustainen muslimiyhteisö omia '
+          + 'päivittäisiä rukoushetkiään ja perjantairukousta varten. '
+          + 'Rakentaminen alkoi 1908 ja rakennus valmistui 1909.'
+        + '\n\n'
+        + 'Suunnittelija ja rakentaja oli Habibu Lebbe Saibu Lebbe, '
+          + 'joka ei ollut käynyt koulua eikä opiskellut '
+          + 'arkkitehtuuria: hän työskenteli niiden kuvien varassa, '
+          + 'joita eteläintialaiset kauppiaat toivat hänelle '
+          + 'indo-saraseenisista rakennuksista. Lopputulos on '
+          + 'sekoitus: pohjana on indo-islamilainen ja intialainen '
+          + 'perinne, ja siihen on yhdistetty uusgotiikkaa ja '
+          + 'uusklassisia piirteitä. Talo on kaksikerroksinen, '
+          + 'punavalkoisin raidoin ja ruuduin maalattu, ja siinä on '
+          + 'oma kellotorninsa. Sitä on verrattu Kuala Lumpurin Jamek-'
+          + 'moskeijaan, joka valmistui vuotta myöhemmin.'
+        + '\n\n'
+        + 'Alun perin taloon mahtui puolitoista tuhatta rukoilijaa, '
+          + 'vaikka kävijöitä oli noin viisisataa. Kerrotaan, että '
+          + 'ennen kuin kaupunkiin nousi korkeampia rakennuksia, '
+          + 'satamaan saapuvat merenkulkijat tunnistivat Colombon juuri '
+          + 'tästä moskeijasta. Vuonna 1975 viereisiä tontteja '
+          + 'ostettiin ja moskeijaa laajennettiin niin, että siihen '
+          + 'mahtuu kymmenentuhatta ihmistä.',
+      kuvat: [
+        {
+          tiedosto: 'Redmosque.jpg',
+          selite: 'Moskeijaan mahtui valmistuessaan 1909 puolitoista '
+            + 'tuhatta rukoilijaa ja vuoden 1975 laajennuksen '
+            + 'jälkeen kymmenentuhatta.',
+          lahde: 'Kyassin75, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fortin kellotorni': {
+      aika: '1856–1857',
+      teksti: 'Torni seisoo Chatham Streetin ja Janadhipathi Mawathan '
+          + 'eli entisen Queen Streetin kulmassa. Se rakennettiin '
+          + 'kellotorniksi 1856–57 ja valmistui 25. helmikuuta 1857; '
+          + 'sen suunnitteli kuvernööri Henry George Wardin puoliso '
+          + 'Emily Elizabeth Ward, ja työn teki yleisten töiden virasto '
+          + 'John Flemming Churchillin valvonnassa. '
+          + 'Kaksikymmentäyhdeksän metriä korkea rakennus oli '
+          + 'valmistuessaan Colombon korkein.'
+        + '\n\n'
+        + 'Kello oli vanhempi kuin torni. Kuvernööri Robert Brownrigg '
+          + 'tilasi sen 1814 tuhannella kahdellasadalla punnalla, mutta '
+          + 'säästösyistä se pantiin varastoon ja asennettiin vasta '
+          + '1857. Koneiston teki lontoolainen Dent, sama paja joka oli '
+          + 'valmistanut Westminsterin palatsin Big Benin 1852. '
+          + 'Pääkello painaa noin kaksisataaviisikymmentä kiloa ja '
+          + 'kaksi sivukelloa sataviisikymmentäkaksi. Nykyinen kello '
+          + 'asennettiin lokakuussa 1913, ja torni vihittiin uudelleen '
+          + 'käyttöön 4. huhtikuuta 1914; sen kellotaulun halkaisija on '
+          + 'kuusi jalkaa eli vajaat kaksi metriä ja se on lasitettu '
+          + 'opaalilasilla valaistusta varten.'
+        + '\n\n'
+        + 'Majakka on tornia nuorempi ja vanhempi yhtä aikaa. '
+          + 'Ensimmäinen Colombon majakka oli 1829 pystytetty '
+          + 'kaksikymmentäkolmemetrinen puinen valotorni linnoituksen '
+          + 'bastionilla, ja se purettiin muurien mukana 1869–1871. '
+          + 'Valo siirrettiin kellotorniin 1867 — artikkelin '
+          + 'tietolaatikko sanoo 1865 — ja se paloi ensin '
+          + 'petrolilla, 1907 alkaen kaasulla ja 1933 alkaen sähköllä. '
+          + 'Majakka sammutettiin 12. heinäkuuta 1952, kun ympäröivät '
+          + 'talot peittivät sen, ja tilalle rakennettiin uusi majakka '
+          + 'rantatielle. Runsaan sadan metrin päässä tornista seisoo '
+          + 'Fortin vanhin rakennus, hollantilainen sairaala, joka '
+          + 'tiedetään olleen olemassa jo 1681; sen kuuluisin kirurgi '
+          + 'Paul Hermann työskenteli siellä 1672–1679 ja häntä '
+          + 'kutsutaan saaren kasvitieteen isäksi.',
+      kuvat: [
+        {
+          tiedosto: 'Old Fort Lighthouse Clock Tower Colombo Ceylon.jpg',
+          selite: 'Kaksikymmentäyhdeksän metriä korkea torni oli '
+            + 'valmistuessaan 1857 Colombon korkein rakennus, ja '
+            + 'sen koneiston teki lontoolainen Dent.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fortin rautatieasema': {
+      aika: 'nykyinen rakennus 1917',
+      teksti: 'Rautatieliikenne alkoi Ceylonilla 1864, ja junat '
+          + 'päättyivät silloin Colombo Terminus -asemalle Maradanan '
+          + 'lähelle. Ensimmäinen Fort-niminen asema oli pieni ja '
+          + 'rakennettiin 1877, kun rannikkorata avattiin; se sijaitsi '
+          + 'nykyisen Secretariat Haltin kohdalla vähän nykyisestä '
+          + 'asemasta länteen.'
+        + '\n\n'
+        + 'Vuonna 1906 alkoi hanke, jossa Colombon rautatiet '
+          + 'järjestettiin uudelleen: vanha pääteasema suljettiin ja '
+          + 'sen korvasi uusi Maradanan asema. Nykyinen Fortin asema '
+          + 'avattiin 1917 kaupungin keskusasemaksi. Se rakennettiin '
+          + 'Beira-järvestä kuivatulle maalle, ja esikuvana oli '
+          + 'Manchesterin Victoria-asema.'
+        + '\n\n'
+        + 'Asemalla on yksitoista raidetta, ja useimmat maan '
+          + 'kaukojunat päättyvät siihen. Idästä tulee päärata, joka '
+          + 'haarautuu Kandyyn, Badullaan, Anuradhapuraan ja pohjoiseen '
+          + 'Jaffnaan asti; lounaasta tulee rannikkorata, joka jatkuu '
+          + 'Gallen kautta Mataraan. Lisäksi asemalta lähtevät '
+          + 'Puttalamin ja Kelanin laakson radat. Pettahin puolella '
+          + 'aivan vieressä on kaupungin keskusbussiasema, joten '
+          + 'junasta pääsee bussiin kävelemällä.',
+      kuvat: [
+        {
+          tiedosto: 'Colombo Fort Railway station - panoramio.jpg',
+          selite: 'Asemalla on yksitoista raidetta, ja sieltä lähtevät '
+            + 'sekä päärata Kandyyn ja pohjoiseen että rannikkorata '
+            + 'Gallen ja Mataran suuntaan.',
+          lahde: 'Alexey Komarov, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Beira-järvi': {
+      aika: 'kaivettu 1500-luvulla',
+      teksti: 'Beira on tekojärvi keskellä kaupunkia. Portugalilaiset '
+          + 'kaivoivat linnoituksen ympärille vallihautaa, mutta '
+          + 'suomaassa ei ollut tarpeeksi vettä; kapteeni Lopo de Brito '
+          + 'löysi kahden kukkulan välistä puron, se yhdistettiin '
+          + 'hautaan, ja niin syntyi järvi. Vesi kiersi linnoituksen, '
+          + 'ja mantereelle pääsi vain veneellä. Alun perin vettä oli '
+          + 'runsas puolitoista neliökilometriä, nykyään noin '
+          + 'kuusikymmentäviisi hehtaaria; syvimmillään järvi on '
+          + 'viisi ja puoli metriä.'
+        + '\n\n'
+        + 'Nimi on arvoitus. Se ilmestyi karttoihin vasta 1927; sitä '
+          + 'ennen puhuttiin Colombon järvestä tai vain Järvestä. Yhden '
+          + 'selityksen mukaan nimi tulee portugalilaiselta insinööriltä '
+          + 'nimeltä Beira, toisen mukaan hollantilaiselta insinööriltä '
+          + 'nimeltä De Beer — tätä tukee sulkuportista löytynyt '
+          + 'graniittilaatta, johon on hakattu "De Beer 1700". Kolmas '
+          + 'selitys on portugalin sana beira, järven ranta tai reuna, '
+          + 'neljäs samanniminen Portugalin maakunta.'
+        + '\n\n'
+        + 'Järvi on nelialtainen, ja siihen tulee vettä Kelani-joesta '
+          + 'St. Bastianin kanavaa pitkin; ulos vesi laskee merelle '
+          + 'sataman sulkuporteista ja puolikaaren muotoisesta '
+          + 'ylivuotokynnyksestä. Hollantilaiset laajensivat järveä ja '
+          + 'tekivät siihen saaria, joista suurimmilla oli kylä ja '
+          + 'kuudensadan kookospalmun viljelmä. Slave Islandin saarelle '
+          + 'avattiin 1810 Ceylonin ensimmäinen kasvitieteellinen '
+          + 'puutarha, jossa kasvatettiin Lontoon Kew Gardensista '
+          + 'saatuja taimia Peradeniyan puutarhaa varten. Britit '
+          + 'hävittivät järven krokotiilit ja alkoivat soutaa ja '
+          + 'purjehtia siinä.',
+      kuvat: [
+        {
+          tiedosto: 'South Beira Lake Colombo (Childrens Park).jpg',
+          selite: 'Beira-järvi oli alun perin runsas puolitoista '
+            + 'neliökilometriä, mutta maantäytöt ovat kutistaneet '
+            + 'sen noin kuudeksikymmeneksiviideksi hehtaariksi.',
+          lahde: 'Kondephy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Galle Face Hotel': {
+      aika: '1864',
+      teksti: 'Neljä brittiläistä yrittäjää perusti hotellin 1864 '
+          + 'vanhan hollantilaisen Galle Face House -huvilan paikalle '
+          + 'nurmikentän eteläpäähän, ja kenttä antoi talolle nimen. '
+          + 'Siitä tuli yksi Suezin itäpuolen vanhimmista hotelleista. '
+          + 'Maata laajennuksia varten ostettiin 1870–1894, ja '
+          + 'arkkitehti Edward Skinnerin suunnittelema eteläsiipi '
+          + 'valmistui 1894. Pohjoissiipi peruskorjattiin 2010-luvulla '
+          + 'ja avattiin uudelleen lokakuussa 2015; huoneita on '
+          + 'sataviisikymmentäkuusi.'
+        + '\n\n'
+        + 'Talon oma museo on Regency-siivessä. Siellä on esillä muun '
+          + 'muassa Edinburghin herttuan Philipin ensimmäinen auto ja '
+          + 'galleria kuuluisista vieraista. Hotellin uima-allas on '
+          + 'Colombon ainoa suolavesiallas, ja terassin '
+          + 'mustavalkoruudulle mennään katsomaan auringonlaskua. '
+          + 'Kirjailijoista talossa ovat työskennelleet muun muassa '
+          + 'Arthur Conan Doyle, Mark Twain, Anton Tšehov ja Arthur C. '
+          + 'Clarke, joka kirjoitti täällä viimeisen romaaninsa '
+          + 'loppuluvut.'
+        + '\n\n'
+        + 'Museon kummallisin esine on tykinkuula. Vuonna 1840 '
+          + 'brittiläisen tykistön harjoitusammunta epäonnistui Galle '
+          + 'Facen kentällä, kuula lensi Galle Face Boarding Housen '
+          + 'katon läpi ja pysähtyi olohuoneen lattialle. Kuula on '
+          + 'säilytetty eteläsiiven museossa, ja tapauksen muistoksi '
+          + 'juostiin vuosia kilpailu, joka alkoi kentän tykiltä ja '
+          + 'päättyi kuulalle. Ovimies Kottarapattu Chattu Kuttan '
+          + 'aloitti talossa hotellipoikana 1942 ja palveli '
+          + 'kuolemaansa asti marraskuussa 2014.',
+      kuvat: [
+        {
+          tiedosto: 'LK-colombo-galleface-hotel.jpg',
+          selite: 'Galle Face Hotel on ainoa Colombon hotelli, jolla on '
+            + 'oma rantaviivansa, ja se on perintöä ajalta ennen '
+            + 'kuin rannikko rakennettiin täyteen.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gangaramayan temppeli': {
+      aika: '1800-luvun loppu',
+      teksti: 'Gangaramaya on Colombon tärkeimpiä buddhalaisia '
+          + 'temppeleitä, ja se valmistui 1800-luvun lopulla '
+          + 'Beira-järven rannalle. Perustajia olivat oppineet munkit '
+          + 'Hikkaduwe Sri Sumangala ja Devundera Sri Jinaratana. '
+          + 'Laivanvarustaja Don Bastian de Silva Jayasuriya '
+          + 'Goonewardane etsi sopivaa tonttia ja osti kolmelta '
+          + 'omistajalta soisen kaistaleen, jonka hän täytätti ja '
+          + 'kunnosti omalla kustannuksellaan.'
+        + '\n\n'
+        + 'Hän rakennutti alueelle suuren stupan, koristeellisen '
+          + 'porttikaaren ja kuukiven, joiden esikuvat haettiin '
+          + 'Anuradhapurasta, sekä kolmikerroksisen saarnasalin, muurit '
+          + 'ja vallihaudan. Bodhipuun taimi tuotiin Anuradhapuran '
+          + 'suuresta Sri Maha Bodhista, ja hän istutti sen omin '
+          + 'käsin. Alueella on nykyään myös museo, kirjasto, '
+          + 'asuinrakennus, kolmikerroksinen munkkikoulu, opetussaleja '
+          + 'ja almusali.'
+        + '\n\n'
+        + 'Arkkitehtuuri on sekoitus srilankalaista, thaimaalaista, '
+          + 'intialaista ja kiinalaista tyyliä. Tunnetuin osa on Seema '
+          + 'Malaka, munkkien kokoontumissali, joka rakennettiin '
+          + 'järven päälle muslimilahjoittajan varoilla arkkitehti '
+          + 'Geoffrey Bawan suunnitelmien mukaan. Temppeli ylläpitää '
+          + 'vanhainkotia, ammattikoulua ja orpokotia, ja se on ollut '
+          + 'mukana perustamassa buddhalaisia keskuksia New Yorkiin, '
+          + 'Staten Islandille ja Tansaniaan.',
+      kuvat: [
+        {
+          tiedosto: 'Gangaramaya Temple (outdoor pagoda).jpg',
+          selite: 'Gangaramayan temppelin arkkitehtuuri sekoittaa '
+            + 'srilankalaista, thaimaalaista, intialaista ja '
+            + 'kiinalaista perinnettä.',
+          lahde: 'Dan arndt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Colombon kansallismuseo': {
+      aika: '1877',
+      teksti: 'Museo perustettiin 1. tammikuuta 1877, ja sen isä oli '
+          + 'kuvernööri William Henry Gregory. Kuninkaallinen '
+          + 'aasialainen seura oli tuonut julkisen museon tarpeen '
+          + 'hänen tietoonsa heti hänen nimityksensä jälkeen 1872, ja '
+          + 'lakiasäätävän neuvoston lupa saatiin vuoden kuluessa, '
+          + 'vaikkakin vaivoin. Yleisten töiden viraston arkkitehti '
+          + 'James George Smither piirsi italialaistyylisen talon; se '
+          + 'valmistui 1876 ja avattiin seuraavan vuoden tammikuussa.'
+        + '\n\n'
+        + 'Rakentaja oli Arasi Marikar Wapchie Marikar, joka rakensi '
+          + 'myös pääpostitalon, tullirakennuksen, Pettahin '
+          + 'kaupungintalon, Galle Face Hotellin, Victoria Arcaden, '
+          + 'Fortin kellotornin ja Battenburgin patterin. Avajaisissa '
+          + 'kuvernööri kysyi häneltä, minkä kunnianosoituksen hän '
+          + 'haluaisi työstään. Marikar pyysi, että museo pidettäisiin '
+          + 'perjantaisin suljettuna, ja niin tehtiin pitkään; '
+          + 'myöhemmin museo avattiin kaikkina päivinä juhlapyhiä '
+          + 'lukuun ottamatta.'
+        + '\n\n'
+        + 'Museo on Sri Lankan suurin. Sen kokoelmiin kuuluvat Kandyn '
+          + 'viimeisen kuninkaan valtaistuin ja kruununjalokivet, jotka '
+          + 'Britannia palautti saarelle, sekä jäljennös Tara-'
+          + 'patsaasta, jonka alkuperäinen on British Museumissa. '
+          + 'Alakerran salit on järjestetty aikajärjestykseen ja '
+          + 'yläkerran salit aiheittain. Samana päivänä museon kanssa '
+          + 'perustettiin kirjasto, johon liitettiin vuoden 1870 '
+          + 'valtion orientaalinen kirjasto; se on toiminut maan '
+          + 'epävirallisena kansalliskirjastona. Museo sai '
+          + 'kansallismuseon aseman ja oman virastonsa 1942, ja '
+          + 'sivumuseoita avattiin lopulta yhdeksän.',
+      kuvat: [
+        {
+          tiedosto: 'Colombo National Museum Sri Lanka.JPG',
+          selite: 'Museo avattiin 1877, ja sen rakentaja Arasi Marikar '
+            + 'Wapchie Marikar pyysi palkkioksi vain sen, että talo '
+            + 'pidettäisiin perjantaisin suljettuna.',
+          lahde: 'Hasindu2008, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

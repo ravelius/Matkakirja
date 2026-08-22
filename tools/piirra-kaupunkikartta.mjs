@@ -3065,6 +3065,66 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  colombo: {
+    /*
+     * SATAMASTA KANELIPUUTARHOIHIN (22.8.2026). Ruutu on 4,7 × 5,9 km
+     * ja sen sisään mahtuvat lehden kaikki yhdeksän kohdetta:
+     * pohjoisessa satama, sitten Pettahin Wolvendaalin kirkko ja
+     * punainen moskeija, keskellä Fortin kellotorni ja rautatieasema,
+     * etelässä Beira-järvi, Galle Face Hotel, Gangaramayan temppeli ja
+     * Cinnamon Gardensin kansallismuseo.
+     *
+     * RUUTU ON PYSTY, JA SE ON KAUPUNGIN OMA MUOTO. Kohteet ovat
+     * luonnostaan 4,1 kilometrin mittainen pohjois–eteläsuuntainen
+     * nauha rantaviivan suuntaisesti ja vain 2,0 kilometriä leveä:
+     * Colombo kasvoi linnoituksesta etelään Galle Roadia pitkin.
+     * Tiukka rajaus olisi piirtynyt kapeaksi kaistaleeksi, joten
+     * ruutua on levennetty molempiin suuntiin. Kuvasuhde on 0,80 eli
+     * 1600 × 2000 pikseliä, mikä on Isfahanin (1600 × 1983) luokkaa.
+     *
+     * RUUTU ON SIIRRETTY HIEMAN ITÄÄN kohteiden keskipisteestä
+     * (79,8546 vs. 79,8508). Symmetrinen rajaus olisi vienyt läntisen
+     * neljänneksen avomerelle; nyt lännessä näkyy sataman
+     * aallonmurtaja ja Galle Facen rantaviiva, idässä Maradanan ja
+     * Cinnamon Gardensin katuverkko.
+     *
+     * meri: true, koska Intian valtameri on OSM:ssä avomerta eikä
+     * sulkeutuvaa vesimonikulmiota: ilman merentäyttöä kartan koko
+     * länsilaita jäisi paperin väriseksi ja Galle Facen ranta
+     * näyttäisi päättyvän tyhjyyteen. Sama ratkaisu kuin Chennaissa,
+     * Adenissa, Manilassa ja Yangonissa. Beira-järvi ja sen kanavat
+     * piirtyvät omina vesialueinaan.
+     *
+     * KESKIPISTE EI OLE ONGELMA KUTEN MUMBAISSA. Wikidatan
+     * "Colombo" (6,9344 / 79,8428) osuu käytännössä Fortin
+     * kellotornille eli suoraan lehden ydinalueelle, joten rajaus on
+     * voitu vetää sen ympärille ilman siirtoa.
+     *
+     * VANHA HOLLANTILAINEN SAIRAALA EI OLE PISTELISTALLA, vaikka se
+     * on lehden teksteissä ja avauskuvassa. Sen koordinaatti
+     * (6,93356 / 79,84356) on 150 metrin päässä kellotornista eli
+     * kolme prosenttia ruudun leveydestä; numeroympyrät olisivat
+     * menneet päällekkäin (Petran, Mekan ja Singaporen oppi), joten
+     * sairaala kerrotaan kellotornin omassa jutussa (Chennain
+     * Connemara-kirjaston ratkaisu).
+     *
+     * SAAREN SISÄMAA JÄI ULKOPUOLELLE eikä kainaloon: Sigiriya on
+     * 150 km ja teeylängön viljelmät 100–200 km itään, eli kertaluokan
+     * kauempana kuin yksikään kainalo tässä kartastossa (Medinan Quba
+     * 3,5 km, Adenin Tawahi 6 km). Ne kerrotaan nostoissa ja
+     * matkaoppaassa (Medinan Uhud-vuoren ratkaisu).
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kantonissa, Kolkatassa ja Chennaissa: Galle Facen
+     * promenadi, Beira-järven rantapolut ja Pettahin kauppakujat ovat
+     * OSM:ssä jalankulkualueita ja huoltoteitä, ja ilman lippuja
+     * kartan tihein osa jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 6.9570, etela: 6.9040, lansi: 79.8340, ita: 79.8767 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*

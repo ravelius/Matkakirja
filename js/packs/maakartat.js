@@ -8214,6 +8214,76 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Gateway of India', lat: 18.921983, lon: 72.834658 },
     ],
   },
+  /*
+   * COLOMBON KOHDEKARTTA (22.8.2026). Rajaus on 4,7 × 5,9 km ja
+   * kohteet on numeroitu pohjoisesta etelään kuten Medinassa,
+   * Xi'anissa, Kantonissa, Kolkatassa, Chennaissa ja Mumbaissa.
+   * Piirtoperustelut, meri-lipun syy ja poisjätöt ovat
+   * tools/piirra-kaupunkikartta.mjs:n colombo-lohkossa.
+   *
+   * KOORDINAATIT OVAT KAHDESSA MUODOSSA, ja jako on kirjattu tähän,
+   * koska sitä ei näe kohdelistasta. Colombon satama, Wolvendaalin
+   * kirkko, punainen moskeija, Fortin kellotorni, Beira-järvi,
+   * Galle Face Hotel, Gangaramayan temppeli ja kansallismuseo ovat
+   * en-Wikipedian MediaWiki-rajapinnan koordinaateista (haettu
+   * 22.8.2026). Fortin rautatieasemalla ei ole Wikidata-pistettä,
+   * joten sen arvo on artikkelin oman {{Coord}}-mallineen asteista,
+   * minuuteista ja sekunneista muunnettu tässä: 6°56'01"N
+   * 79°51'03"E = 6,933611 / 79,850833. Riippumaton OSM-haku antoi
+   * samalle asemalle 6,9337 / 79,8501 eli eron on kymmeniä metrejä.
+   *
+   * WOLVENDAALIN KIRKOLLAKAAN EI OLE WIKIDATA-PISTETTÄ, ja sen arvo
+   * on artikkelin desimaalimuotoisesta {{coord}}-mallineesta
+   * (6,9421 / 79,8590). Tarkistusraportti vahvisti sen OSM:stä
+   * kymmenen metrin tarkkuudella.
+   *
+   * KELLOTORNI ON KARTALLA "COLOMBON" WIKIDATA-PISTEEN KOHDALLA, ja
+   * se on tämän kartan hauskin yksityiskohta: en-Wikipedian
+   * Colombo-artikkelin oma koordinaatti (6,93444 / 79,84278) osuu
+   * kolmenkymmenen metrin päähän Old Colombo Lighthouse -artikkelin
+   * pisteestä (6,93472 / 79,84278). Kaupungin virallinen keskipiste
+   * on siis käytännössä vanha majakka. Kartalle on merkitty
+   * kellotorni, koska se on kohde jolla on juttu.
+   *
+   * VANHA HOLLANTILAINEN SAIRAALA JÄI POIS PISTELISTALTA, vaikka se
+   * on lehden avauskuvassa: sen koordinaatti (6,93356 / 79,84356) on
+   * 150 metrin päässä kellotornista eli kolme prosenttia ruudun
+   * leveydestä, ja numeroympyrät olisivat menneet päällekkäin
+   * (Petran, Mekan ja Singaporen oppi). Sairaala kerrotaan
+   * kellotornin omassa jutussa (Chennain Connemara-kirjaston
+   * ratkaisu).
+   *
+   * BEIRA-JÄRVEN PISTE ON VEDESSÄ, JA SE ON OIKEIN. Kohde on järvi,
+   * joten sen koordinaatti osoittaa määritelmän mukaan altaaseen —
+   * sama tapaus kuin Marseillen Vanhasatama ja Odessan majakka
+   * (tools/tarkista-karttapisteet.mjs:n oma lista hyväksytyistä
+   * vesiosumista). Tarkistin merkitsee sen VESI-lipulla, eikä sitä
+   * pidä siirtää rannalle: rannalla se osoittaisi johonkin taloon.
+   *
+   * KAINALOA EI OLE: kaikki yhdeksän kohdetta mahtuvat pääruutuun,
+   * kuten Kantonissa, Samarkandissa, Kathmandussa, Kolkatassa ja
+   * Mumbaissa.
+   */
+  colombo: {
+    polku: 'assets/kartat/colombo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 6.957, etela: 6.904, lansi: 79.834, ita: 79.8767 },
+    esittely: 'Kohteet ovat rannan suuntaisella neljän kilometrin '
+      + 'nauhalla sataman ja Cinnamon Gardensin välissä. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Colombon satama', lat: 6.952778, lon: 79.844722 },
+      { nimi: 'Wolvendaalin kirkko', lat: 6.9421, lon: 79.859 },
+      { nimi: 'Punainen moskeija', lat: 6.9385, lon: 79.8518 },
+      { nimi: 'Fortin kellotorni', lat: 6.934722, lon: 79.842778 },
+      { nimi: 'Fortin rautatieasema', lat: 6.933611, lon: 79.850833 },
+      { nimi: 'Beira-järvi', lat: 6.929434, lon: 79.854182 },
+      { nimi: 'Galle Face Hotel', lat: 6.92, lon: 79.8462 },
+      { nimi: 'Gangaramayan temppeli', lat: 6.916389, lon: 79.856389 },
+      { nimi: 'Colombon kansallismuseo', lat: 6.91, lon: 79.860833 },
+    ],
+  },
 };
 
 /*
