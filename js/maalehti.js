@@ -839,6 +839,12 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
    * kuvaakin, koska kelvollista vapaata kuvaa ei ole jokaisesta
    * museosta eikä puuttuva kuva saa karsia hyvää kohdetta.
    */
+  /*
+   * Luokka togglena eikä add-kutsuna (omistajan tilaus 23.8.2026):
+   * add jätti vinkkisivu-luokan päälle Menovinkit-käynnin jälkeen,
+   * jolloin SEURAAVIENKIN aihesivujen johdanto kasvoi ingressiksi.
+   */
+  kohde.classList.toggle('vinkkisivu', Boolean(kategoria.lista));
   if (kategoria.lista) {
     /*
      * Taitto pois tasapaksusta pötköstä (omistajan palaute
@@ -849,7 +855,6 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
      * avauskuvaksi täyteen leveyteen. Kohde jää silti listaan —
      * hero on taittoa, ei uusi sisältöpaikka.
      */
-    kohde.classList.add('vinkkisivu');
     const eka = (kategoria.lista ?? [])
       .flatMap((r) => r.kohteet ?? [])
       .find((k) => k.tiedosto);
