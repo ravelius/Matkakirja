@@ -2808,6 +2808,66 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  kolkata: {
+    /*
+     * HOOGHLYN ITÄRANTA HOWRAH-SILLALTA MAIDANIN ETELÄPÄÄHÄN
+     * (22.8.2026). Ruutu on 6,1 × 6,1 km, ja siihen mahtuvat lehden
+     * kaikki kymmenen kohdetta: pohjoisessa Howrah-silta ja sen
+     * länsipäässä Howrahin rautatieasema, sitten Pohjois-Kalkutan
+     * Marble Palace, Nakhodan moskeija ja College Street, keskellä
+     * hallintokortteli Writers' Buildingista St. John'sin kirkkoon ja
+     * etelässä Maidanin nurmi Shaheed Minarista Intian museon kautta
+     * Victoria Memorialille.
+     *
+     * NELIÖRAJAUS ON HARKITTU, kuten Kantonissa ja Varanasissa.
+     * Kohteet ovat luonnostaan 4,5 × 2,4 kilometrin nauha, joka
+     * kulkee sillalta etelään; tiukka rajaus olisi piirtynyt kapeaksi
+     * pystykuvaksi ja jättänyt Hooghlyn kuvan vasemmaksi reunaksi
+     * eikä joeksi. Nyt ruutua on levennetty länteen niin, että joen
+     * molemmat rannat näkyvät koko matkalta ja Howrahin puolelta
+     * piirtyy runsas kilometri katuverkkoa — Howrah ja Kalkuta ovat
+     * kaksoiskaupungit, ja se on kartan koko juoni.
+     *
+     * meri: true, koska Hooghly on OSM:ssä leveä vesimonikulmio
+     * (riverbank), joka ei sulkeudu rajauksen sisällä: joki tulee
+     * kuvaan pohjoisreunasta ja lähtee eteläreunasta, jolloin
+     * pelkkä monikulmiotäyttö jättäisi uoman paperin väriseksi.
+     * Sama ratkaisu kuin Novosibirskin Obilla ja Yangonin
+     * Yangon-joella.
+     *
+     * DAKSHINESWARIN KALI-TEMPPELI JA BELUR MATH EIVÄT OLE KARTALLA
+     * EIVÄTKÄ KAINALOSSA, vaikka ne ovat kaupungin tunnetuimpia
+     * kohteita. Ne ovat en-Wikipedian koordinaateista laskien 9,8 ja
+     * 7,4 kilometriä suoraan pohjoiseen keskipisteestä, eli
+     * ruutu olisi pitänyt venyttää yli kymmenen kilometrin
+     * korkuiseksi (Varanasi 1600 × 1595, Isfahan 1600 × 1983 ovat
+     * kartaston ääripäät) ja kaikki kymmenen ydinkohdetta olisivat
+     * puristuneet alalaitaan. Kainalokin olisi väärä ratkaisu: ne
+     * ovat kauempana kuin yksikään kainalo tässä kartastossa
+     * (Medinan Quba 3,5 km, Adenin Tawahi 6 km). Molemmat kerrotaan
+     * matkaoppaassa (Medinan Uhud-vuoren ratkaisu).
+     *
+     * ST. PAULIN KATEDRAALI JA FORT WILLIAM JÄIVÄT POIS
+     * PISTELISTALTA. Katedraali on en-Wikipedian koordinaateista
+     * (22,54417 / 88,34667) laskien 420 metrin päässä Victoria
+     * Memorialista eli seitsemän prosenttia ruudun leveydestä, ja
+     * numeroympyrät olisivat menneet päällekkäin (Petran, Mekan ja
+     * Singaporen oppi). Fort William on yhä varuskunta-aluetta eikä
+     * matkailukohde; linnoituksen historia kerrotaan lehden
+     * historiasivun nostossa. Molemmat ovat silti ruudun sisällä ja
+     * näkyvät kartalla nurmen ja korttelien muotona.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kantonissa ja Yangonissa: Maidanin polut, College
+     * Streetin kirjakujat ja BBD Baghin hallintokorttelin
+     * sisäkäytävät ovat OSM:ssä jalankulkualueita ja huoltoteitä,
+     * ja ilman lippuja kartan tihein osa jäisi tyhjäksi paperiksi.
+     */
+    rajat: { pohjoinen: 22.5925, etela: 22.5375, lansi: 88.3175, ita: 88.3775 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*
