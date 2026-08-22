@@ -12618,6 +12618,32 @@ export const KULTTUURI_KATEGORIAT = {
        * jokainen kuva katsottu silmin.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 5 (omistajan tilaus 22.8.2026):
+         * pelin omia havainnekuvia peiliämpäristä, kolme
+         * vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-moskova-aamu.png',
+          selite: 'Vasilin katedraali rakennettiin 1555–1561 Kazanin '
+            + 'valloituksen muistoksi, ja sen yhdeksän kirkkoa '
+            + 'kiertyy yhden keskustornin ympärille.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-moskova-keskipaiva.png',
+          selite: 'Kremlin punatiiliset muurit rakensivat italialaiset '
+            + 'mestarit 1400-luvun lopulla, ja niiden sisällä on ollut '
+            + 'vallan keskus yli viisisataa vuotta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-moskova-ilta.png',
+          selite: 'Moskovan yliopiston päärakennus (1953) oli '
+            + 'valmistuessaan Euroopan korkein rakennus ja on Stalinin '
+            + 'ajan seitsemästä tornista suurin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Moscow skyline.jpg',
           selite: 'Varpusvuorilta talvi-iltahämärässä: huurteisten '
@@ -15619,6 +15645,32 @@ export const KULTTUURI_KATEGORIAT = {
        * ja se maasto, joka on ollut paikallaan koko ajan).
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 5 (omistajan tilaus 22.8.2026):
+         * pelin omia havainnekuvia peiliämpäristä, kolme
+         * vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-mekka-aamu.png',
+          selite: 'Suuren moskeijan keskellä on Kaaba, jota kohti '
+            + 'maailman muslimit rukoilevat, ja pyhiinvaellus sen '
+            + 'luo on islamin viides peruspilari.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-mekka-keskipaiva.png',
+          selite: 'Abraj Al-Bait -tornin kellotaulut ovat maailman '
+            + 'suurimmat, ja 601-metrinen torni nousee suoraan Suuren '
+            + 'moskeijan vierestä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-mekka-ilta.png',
+          selite: 'Jabal al-Nourin huipulla on Hiran luola, jossa '
+            + 'perimätiedon mukaan profeetta Muhammad sai ensimmäisen '
+            + 'ilmestyksensä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Mecca at night.jpg',
           selite: 'Laakso yöllä valomerenä: kellotorni kohoaa oikealla '
@@ -44430,6 +44482,32 @@ export const KULTTUURI_KATEGORIAT = {
        * tornitaloja.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 5 (omistajan tilaus 22.8.2026):
+         * pelin omia havainnekuvia peiliämpäristä, kolme
+         * vuorokaudenaikaa ja kolme eri pääkohdetta.
+         */
+        {
+          ampari: 'herokoe/hero-hongkong-aamu.png',
+          selite: 'Victoria Peakin rinnettä on noustu köysiraitiovaunulla '
+            + 'vuodesta 1888, jolloin Peak Tram oli Aasian ensimmäinen '
+            + 'laatuaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-hongkong-keskipaiva.png',
+          selite: 'Tian Tanin pronssinen jättibuddha (1993) painaa 250 '
+            + 'tonnia, ja sen luo Lantaunsaarella noustaan 268 '
+            + 'porrasta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-hongkong-ilta.png',
+          selite: 'Star Ferry on kuljettanut matkustajia '
+            + 'Victoriansataman yli vuodesta 1888, ja ylitys on yhä '
+            + 'yksi maailman halvimmista nähtävyysmatkoista.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Star Ferry Hong Kong. (39837102942).jpg',
           selite: 'Vihreävalkoinen Star Ferry -lautta ylittää sataman, '
