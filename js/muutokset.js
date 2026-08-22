@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1005, teksti: 'Kuvatekstilinjaus Raamattuun; herotekstit uusiksi' },
   { v: 1004, teksti: 'Kehittäjäkartta: herokuvakaupungit violetilla' },
   { v: 1003, teksti: 'Kokoruutukartta: kohteet aukeavat, zoomi levenee' },
   { v: 1002, teksti: 'Herokuvat: Kairo, Tokio ja Xi\'an; havainnekuva-tekstit' },
