@@ -10397,13 +10397,6 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero7-tuomiokirkko-keskipaiva.png',
-          selite: 'Senaatintorin empirekeskusta rakennettiin 1800-luvun '
-            + 'alussa nuoren pääkaupungin näyteikkunaksi, ja kirkko, '
-            + 'yliopisto ja valtioneuvosto reunustavat toria yhä.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
           ampari: 'herokoe/hero7-uspenski.png',
           selite: 'Uspenskin katedraali (1868) on Länsi-Euroopan suurin '
             + 'ortodoksinen kirkko ja muistuttaa ajasta, jolloin Suomi '
