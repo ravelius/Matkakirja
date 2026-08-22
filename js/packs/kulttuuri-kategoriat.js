@@ -48085,4 +48085,542 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KABUL (Opus 22.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita, kohdekarttaa, juttuja eikä säätietoja ennen
+   * tätä. ARTIKKELIT-merkintä oli olemassa, ja sen intro
+   * kirjoitettiin uusiksi samassa erässä (asia-artikkelit.js);
+   * teksti-kenttään ei koskettu. Faktat on tarkistettu en-Wikipedian
+   * raakateksteistä (action=raw, haettu 22.8.2026): Kabul, Gardens
+   * of Babur, Bala Hissar (Kabul), Pul-e Khishti Mosque, National
+   * Museum of Afghanistan, Char Chatta Bazaar, Chihil Sutun, Darul
+   * Aman Palace, Shah-Do Shamshira Mosque, Mausoleum of Timur Shah
+   * Durrani, Bagh-e Bala Palace, Arg (Kabul), Kabul River, Timur
+   * Shah Durrani ja Ahmad Shah Durrani. Pohjana ovat
+   * docs/aasia-tyoaineisto/faktapohja-kabul.md ja tarkistus-kabul.md,
+   * jotka luettiin yhdessä; ristiriidoissa tarkistusraportti voittaa
+   * (Chihil Sutunin koordinaatti, Darulamanin etäisyydet).
+   *
+   * SISÄLTÖLINJAUS on spec-asia.md:n sitova Kabul-kohta ja
+   * faktapohjan oma rajaus: 1873-painotus, EI nykysisältöä, EI
+   * uutisaiheita. Käytännössä KAIKKI LEHDEN TAPAHTUMAT OVAT VUOTTA
+   * 1978 VANHEMPIA. Pois on jätetty kokonaan vuoden 1978 Saurin
+   * vallankumous, Neuvostoliiton väliintulo ja sitä seurannut sota,
+   * 1990-luvun sisällissodat, Talibanin kaudet, vuosien 2001–2021
+   * kansainvälinen väliintulo ja vuoden 2021 vallanvaihto sekä
+   * kaikki näihin liittyvät vauriot, ryöstöt ja jälleenrakennus-
+   * hankkeet. Myös "kultakausi" (1919–1978, "Keski-Aasian Pariisi",
+   * hippireitti) on jätetty pois faktapohjan suosituksesta: se on
+   * lähempänä nykyaikaa kuin 1873-henkeä. Amanullah Khanin ajan
+   * RAKENNUKSET (Darul Aman, Shah-Do Shamshira, kansallismuseo) ovat
+   * mukana arkkitehtuurina, koska ne ovat kaupungin tunnetuimpia
+   * ja koska niiden kertominen ei vaadi ajan politiikkaa.
+   * Uskonto kerrotaan rakennuksina ja kerrostumina kuten
+   * Jerusalemissa, Medinassa ja Kašgarissa.
+   *
+   * POIKKEUS RESEPTIN 20.8.2026 LINJAUKSEEN, ja se on tietoinen.
+   * Yhteisreseptin mukaan tuhoutuneesta kaupungista näytetään myös
+   * tuoreita kuvia vaurioineen JA lehti kertoo lukijalle, mistä
+   * nykyilme johtuu. Kabulin oma speksi kieltää nimenomaan sen
+   * selityksen (ei nykysisältöä), joten kahdesta säännöstä
+   * kaupunkikohtainen voittaa (resepti sanoo tämän itse). Ratkaisu:
+   * yhdessäkään tämän lehden kuvassa EI näy raunioita, työmaita
+   * eikä sotilaskalustoa, ja tuoreet kuvat ovat aiheista, joiden
+   * nykyilme ei vaadi selitystä — puutarhoja, moskeijoita, vuoria,
+   * linnoituskukkula veden takaa. Matkaoppaan jakso 1 sanoo suoraan,
+   * ettei matkailu maahan ole nykyisin turvallista; se on ainoa
+   * nykyhetkeä koskeva kannanotto koko lehdessä.
+   *
+   * KUVIEN AIKAJAKAUMA on siksi poikkeuksellinen ja sekin tietoinen.
+   * Kolmestatoista tämän lohkon kuvasta seitsemän on vuodelta 1924
+   * tai vanhempia. Syy on aineistossa: Kabulista on Commonsissa
+   * poikkeuksellisen hyvä varhainen kokoelma (Norjan
+   * kansalliskirjaston julkaisemat Georg Morgenstiernen vuoden 1924
+   * lasilevyt PD-ehdoin, Wellcome Collectionin 1890-luvun kuvat
+   * CC BY 4.0 ja James Atkinsonin vuoden 1842 litografiat), ja se
+   * osuu tarkalleen siihen aikaan, josta lehti kertoo. Tuoreita
+   * kuvia on silti joka sivulla: kansikuva kukkulalta 2016,
+   * Baburin puutarhat 2015, Shah-Do Shamshira 2018, Bala Hissar
+   * 2018, kansallismuseo 2013 ja matkaoppaan katukuva 2018.
+   *
+   * KAKSI RISTIRIITAA ON KIRJOITETTU AUKI LUKIJALLE (v925/v932:n
+   * tapa). (1) Ilmastoluvut: en-Wikipedian Kabul-artikkelin
+   * LEIPÄTEKSTI sanoo tammikuun keskilämmöksi −2,3 °C ja vuoden
+   * keskiarvoksi 12,1 °C, mutta saman artikkelin SÄÄRUUTU
+   * (normaalikausi 1991–2020) antaa −0,5 ja 12,8. Eroa ei selitetä,
+   * ja tarkistusraportin osio 3 nosti sen esiin; oppaan jakso 5
+   * kertoo molemmat. (2) Kansallismuseon perustamisvuosi: artikkelin
+   * leipäteksti sanoo museon avatun 1919, infoboksi sanoo 1922
+   * (jolloin kokoelma muutti Bagh-e Balan palatsista). Nosto K4
+   * kertoo molemmat vuodet ja sen, mitä kumpanakin tapahtui.
+   *
+   * KAKSI RISTIRIITAA ON RATKAISTU EIKÄ KERROTTU. (1) Kabulin ikä on
+   * artikkelin johdannossa "over 3,500 years" mutta laudan visa ja
+   * saapumistekstit sanovat kolmea vuosituhatta; lehti sanoo
+   * "kolmen vuosituhannen ajan", mikä pitää paikkansa kummallakin
+   * luvulla. (2) Timur Shahin valtaannousuvuosi on Bala Hissar
+   * -artikkelissa 1773 ja Timur Shah Durrani -artikkelissa 1772;
+   * lehti käyttää vain riidatonta vuotta 1776, jolloin pääkaupunki
+   * siirrettiin Kandaharista Kabuliin.
+   *
+   * KULTTUURIVISAN (js/packs/asia-questions.js) viisi kysymystä ja
+   * niiden vastaukset löytyvät lehdestä: Afganistan (matkailijalle-
+   * kappale ja intro), Hindukuš (johdanto ja oppaan jakso 2),
+   * vuorten ympäröimä laakso (johdanto ja jakso 2), Intian ja
+   * Keski-Aasian karavaanireitit (nostot K3 ja H3 sekä intro) ja
+   * dari ja pashtu (jakso 3). Historia-sivun minitehtävä kysyy,
+   * millä nimellä Rigveda ja Avesta tuntevat Kabul-joen — sitä visa
+   * ei kysy, ja vastaus on samalla sivulla nostossa H4.
+   *
+   * AIHETOISTO, joka on tietoinen ja perusteltu. Baburin puutarhat
+   * ovat avauskuvassa kesäisenä puistona, nostossa K1
+   * marmoriaitana lumisen vuoren alla ja kohdekartan jutussa
+   * marmorimoskeijana — kolme eri tiedostoa ja kolme eri etäisyyttä,
+   * ja puutarha on kaupungin tunnetuin kohde (sama ennakkotapaus
+   * kuin Mekan Jabal al-Nour ja Xi'anin muuri). Bala Hissar on
+   * nostossa K2 muureina vuodelta 1924, nostossa H2 raunioituneena
+   * vallirivinä 1890-luvulta ja kohdekartan jutussa kukkulana veden
+   * takaa. Timur Shahin mausoleumi on oppaan jaksossa 4 vuoden 1924
+   * kuvana ja kohdekartan jutussa nykyisenä.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, eikä sitä lisätty
+   * tässä erässä: rinnakkainen säätoimittaja täydentää sen erikseen
+   * (Fablen ohje 22.8.2026), ja siksi tämä lohko ei koske
+   * saatiedot.js:ään lainkaan. Matkaoppaan jakso 5 nojaa siis
+   * en-Wikipedian Kabul-artikkelin sääruutuun (normaalikausi
+   * 1991–2020) ja SANOO SEN ÄÄNEEN — Samarkandin, Kašgarin ja
+   * Lhasan malli. Kun ERA5-rivi joskus lisätään, jakso 5 on
+   * kirjoitettava rivin omista luvuista; mittauspiste olisi keskusta
+   * 34,53 / 69,18 ja 1 791 metrin korkeus.
+   *
+   * KUVAHYLKÄYKSIÄ oli tavallista enemmän, ja syyt on kirjattu
+   * raporttiin. Yleisimmät: 1800-luvun litografioihin ja
+   * albumilehtiin painettu otsikko tai koristekehys (Atkinsonin
+   * Balla Hissar ja Baburin hauta, John Burken albumisivut, The
+   * Graphicin vuoden 1880 kaiverrus), nykyvalokuvaajan oma
+   * vesileima kuvan päällä (kolme CC0-kuvaa samalta kuvaajalta),
+   * vaalikuvajuliste kuvassa, näkyvät kasvot joukkokuvissa ja alle
+   * 1200 pikselin leveys. Pul-e Khishtin moskeijasta EI OLE
+   * Commonsissa yhtäkään kelvollista kuvaa (suurin 800 × 521), ja
+   * siksi nosto K3 on kuvitettu joen penkereellä vuonna 1924
+   * kulkeneella kamelikaravaanilla — moskeija seisoo juuri sen
+   * sillan päässä, josta se on saanut nimensä.
+   *
+   * YKSI LÄHDERIVI ON NORMALISOITU, ja se kerrotaan tässä, koska
+   * talon sääntö on kirjoittaa tekijä täsmälleen extmetadata.
+   * Artist-muodossa. Kansikuvan 'NO-NB BLDSA GM2a272n.jpg'
+   * Artist-kenttä on Commonsissa rikkinäinen mallineen jäänne
+   * "Creator:Georg morgenstierne", kun saman kokoelman viidellä
+   * muulla tässä lehdessä käytetyllä kuvalla se on siististi
+   * "Georg Morgenstierne". Lähderivillä on jälkimmäinen muoto, jotta
+   * lehden kuudessa Morgenstierne-kuvassa lukee sama nimi.
+   */
+  kabul: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kabul',
+      johdanto: 'Kapea laakso Hindukušin juurella, ja sen pohjalla '
+        + 'Kabul-joki vanhankaupungin halki. Karavaanit ovat kulkeneet '
+        + 'täältä Intian ja Keski-Aasian väliä kolmen vuosituhannen '
+        + 'ajan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Caubul, from a burying ground on the mountain ridge, north-east of the city LCCN2016647841 (cropped).jpg',
+          selite: 'Kaupunki koillisen harjanteelta vuonna 1842: '
+            + 'matalien talojen rivi jatkuu laakson poikki, ja '
+            + 'vasemmalla kiipeää kaupunginmuuri vuorenrinnettä ylös.',
+          lahde: 'Haghe, Louis, 1806-1885, lithographer; Atkinson, James, 1780-1852, artist; Haghe, Charles, -1888, lithographer, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'NO-NB BLDSA GM2a272n.jpg',
+          selite: 'Näkymä Khwaja Safan rinteeltä vuonna 1924: '
+            + 'Kabul-joki mutkittelee tasakattoisten korttelien läpi, '
+            + 'ja keskellä erottuu Timur Shahin mausoleumin kupoli.',
+          lahde: 'Georg Morgenstierne, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Kabul City von einem Hügel aus.jpg',
+          selite: 'Kaupunki kukkulalta etelään: matala rakennusmatto '
+            + 'täyttää laakson pohjan, ja takana kohoaa paljas '
+            + 'vuorijono.',
+          lahde: 'BellalKhan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: puutarha, basaarikatu ja rinne — kaupungin kolme
+       * kerrosta siinä järjestyksessä, jossa lehti ne kertoo
+       * (mogulien puutarhakaupunki, joenvarren basaarit ja
+       * vuorenrinteille noussut asutus).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'باغ بابر.jpg',
+          selite: 'Baburin puutarhat kesällä: tiilinen polku kaartuu '
+            + 'nurmen halki, ja puiston muurin takaa nousee '
+            + 'rinnetalojen kortteli.',
+          lahde: 'Dania, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'NO-NB BLDSA GM2a275n.jpg',
+          selite: 'Basaarikatu joen penkereen vartta vuonna 1924: '
+            + 'kaksikerroksisten talojen puiset erkkerit työntyvät '
+            + 'kadun päälle molemmin puolin.',
+          lahde: 'Georg Morgenstierne, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Panorama miasta - Kabul - 001095n.jpg',
+          selite: 'Vuorenrinne täynnä taloja vuonna 1976, ja alhaalla '
+            + 'kiemurtelee joenuoma peltojen ja puurivien välissä.',
+          lahde: 'Marek Gawęcki, Wikimedia Commons (CC BY-SA 3.0 pl)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Puutarha, johon hallitsija halusi haudata itsensä',
+          tiedosto: 'Kabul Baghe Babur hill.jpg',
+          teksti: 'Vuonna 1504 Babur, tulevan Mogulivaltakunnan '
+            + 'perustaja, otti Kabulin haltuunsa ja alkoi kunnostaa '
+            + 'rinteessä olevaa puutarhaa vieraidensa kesäasunnoksi. '
+            + 'Mogulien ruhtinaiden tapa oli rakentaa itselleen '
+            + 'huvipaikkoja elinaikanaan ja valita niistä yksi '
+            + 'viimeiseksi leposijaksi. Babur valitsi tämän. Hänen '
+            + 'poikansa Jahangir teki haudalle pyhiinvaelluksen 1607 '
+            + 'ja määräsi kaikki Kabulin puutarhat ympäröitäviksi '
+            + 'muurein; Shah Jahan pystytti haudan ympärille '
+            + 'marmoriaidan vierailullaan 1638. Puutarha on 11,5 '
+            + 'hehtaaria ja yli viisisataa vuotta vanha, ja sillä käy '
+            + 'vuosittain jopa miljoona kävijää.',
+          selite: 'Baburin haudan marmoriaita terassin päällä, ja '
+            + 'takana nousee luminen Sher Darwazan vuori rinnetaloineen.',
+          lahde: 'Sven Dirks, Wien, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gardens of Babur',
+        },
+        {
+          otsikko: 'Linnoitus, jolla oli kaksi puoliskoa',
+          tiedosto: 'NO-NB BLDSA GM2a287n.jpg',
+          teksti: 'Bala Hissar eli Korkea linna kohoaa vanhankaupungin '
+            + 'eteläpuolella Sher Darwazan vuoren kärjessä, ja sen '
+            + 'käyttö linnoituksena on ajoitettu ainakin 400-luvulle. '
+            + 'Kokonaisuus jakautui kahteen: alalinnoitukseen, jossa '
+            + 'olivat tallit, kasarmit ja kolme kuninkaanpalatsia, ja '
+            + 'ylälinnoitukseen, jossa olivat asevarasto ja Mustaksi '
+            + 'kuopaksi kutsuttu vankityrmä. Mogulikaudella siitä '
+            + 'kasvoi palatsilinnoitus, jota on verrattu kokoluokaltaan '
+            + 'Agran ja Lahoren linnoihin: Akbar teki siitä Kabulin '
+            + 'maakunnan käskynhaltijan päämajan ja Aurangzeb '
+            + 'rakennutti sinne moskeijan.',
+          selite: 'Bala Hissarin muurit vuonna 1924: pyöreät bastionit '
+            + 'ja hammastettu harja kiertävät paljasta rinnettä, jonka '
+            + 'juurella kasvaa yksi puu.',
+          lahde: 'Georg Morgenstierne, Wikimedia Commons (PD)',
+          wiki: 'Bala Hissar, Kabul',
+        },
+        {
+          otsikko: 'Moskeija, jonka imaami saattoi olla englantilainen',
+          tiedosto: 'NO-NB BLDSA GM2a297n.jpg',
+          teksti: 'Kabulin suurin moskeija on Pul-e Khishti aivan '
+            + 'vanhankaupungin keskellä, ja sen tunnistaa suuresta '
+            + 'sinisestä kupolistaan. Nimi tarkoittaa tiilisiltaa: '
+            + 'moskeija seisoo sen sillan päässä, joka vie Kabul-joen '
+            + 'yli. Rakennus nousi 1700-luvun lopulla, samaan aikaan '
+            + 'kun kaupungista tuli Durranien pääkaupunki. '
+            + 'Kaupunkilaisten keskuudessa on kulkenut tarina, jonka '
+            + 'mukaan moskeijan imaamina toimi 1900-luvun alkupuolella '
+            + 'vuosien ajan englantilainen mies, joka oli kääntynyt '
+            + 'islamiin ja palasi lopulta Englantiin. Sitä ei ole '
+            + 'voitu vahvistaa, ja lähteetkin kertovat sen nimenomaan '
+            + 'kaupunkilaisten puheena — mutta puhe elää yhä.',
+          selite: 'Kamelikaravaani kulkee Kabul-joen penkerettä pitkin '
+            + 'vuonna 1924, ja takana nousee vanhankaupungin '
+            + 'erkkeritaloja rivissä.',
+          lahde: 'Georg Morgenstierne, Wikimedia Commons (PD)',
+          wiki: 'Pul-e Khishti Mosque',
+        },
+        {
+          otsikko: 'Museo, jota pidettiin maailman parhaiden joukossa',
+          tiedosto: 'National Museum of Afghanistan in Kabul.jpg',
+          teksti: 'Afganistanin kansallismuseo avattiin 1919 kuningas '
+            + 'Amanullah Khanin aikana. Kokoelma oli aluksi Bagh-e '
+            + 'Balan palatsissa ja muutti 1922 omiin tiloihinsa — '
+            + 'museon oma infoboksi laskee perustamisvuodeksi juuri '
+            + 'tuon — ja sai nykyisen paikkansa Darulamanin alueelta '
+            + '1931. Museota pidettiin aikanaan yhtenä maailman '
+            + 'hienoimmista. Vuoteen 1978 mennessä kokoelmassa oli yli '
+            + 'satatuhatta esinettä: Bagramin norsunluukaiverruksia '
+            + 'ensimmäiseltä vuosisadalta, Ai-Khanoumin kreikkalaisia '
+            + 'pylväänpäitä, Tepe Fullolin hopeamaljan sirpaleita '
+            + 'kolmannelta vuosituhannelta eaa. ja Surkh Kotalin '
+            + 'kreikkalaisin kirjaimin kirjoitettu bakriankielinen '
+            + 'piirtokirjoitus.',
+          selite: 'Museon harmaa julkisivu ja puoliympyräinen pääty '
+            + 'nurmikentän takana, ja seinustalla kukkii kapea '
+            + 'ruusupenkki.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'National Museum of Afghanistan',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Colors of Hope & Joy Passing by the Sidewalk in Kabul.jpg',
+          selite: 'Ilmapallokauppias polkee pyörällään puistokadun '
+            + 'ohi, ja tavara nousee satulan takaa kirjavana pallona.',
+          lahde: 'EDrozdik, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kabul on Afganistanin pääkaupunki ja maan suurin '
+          + 'kaupunki, ja se on yksi maailman korkeimmalla '
+          + 'sijaitsevista pääkaupungeista. Matkailijan Kabul on '
+          + 'silti pieni: vanhakaupunki, basaarikorttelit ja Baburin '
+          + 'puutarhat mahtuvat parin kilometrin säteelle Kabul-joen '
+          + 'molemmin puolin, ja Bala Hissar on kaupungin '
+          + 'kaakkoisreunalla. Darulamanin palatsit ovat oma retkensä '
+          + 'seitsemän ja yhdeksän kilometrin päässä lounaassa, ja '
+          + 'siksi ne ovat tämän sivun kartalla omassa kainalossaan.',
+        artikkeli: {
+          nimi: 'Matkailijan Kabul',
+          taitto: 'opas',
+          teksti: 'Kapea laakso kahden vuoriston välissä — ja se '
+            + 'kohta, jossa Intian tie ja Keski-Aasian tie ovat '
+            + 'kohdanneet kolmen vuosituhannen ajan.',
+          nosto: 'Kabul on 1 791 metrin korkeudessa, ja se näkyy '
+            + 'säässä: tammikuun keskilämpötila on pakkasen puolella, '
+            + 'vaikka Etelä-Aasian tasangot alkavat parinsadan '
+            + 'kilometrin päässä kaakossa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Matkailu Afganistaniin ei ole tällä hetkellä '
+                + 'turvallista, eikä tämä jakso siksi ole '
+                + 'matkasuunnitelma vaan kuvaus siitä, missä Kabul '
+                + 'on. Ja se on hyvässä paikassa. Kaupunki sijaitsee '
+                + 'Aasian risteyksessä suunnilleen puolimatkassa '
+                + 'Istanbulin ja Hanoin välillä, ja lähimmät '
+                + 'ulkomaiden pääkaupungit linnuntietä ovat '
+                + 'Islamabad, Dušanbe, Taškent, New Delhi ja Biškek. '
+                + 'Vanhojen karavaanireittien varrella tämä tarkoitti '
+                + 'yhtä ja samaa asiaa: kuka tahansa, joka halusi '
+                + 'Keski-Aasiasta Intiaan tai päinvastoin, kulki '
+                + 'näiden solien kautta. Kabul oli Silkkitien '
+                + 'avainkohteita, ja sitä on perinteisesti pidetty '
+                + 'paikkana, jossa Tartaria, Hindustan ja Persia '
+                + 'kohtaavat. '
+                + 'Kaupungin oma pinta-ala on 1 049 neliökilometriä, '
+                + 'mikä tekee siitä ylivoimaisesti maan laajimman.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kabul on 1 791 metrin korkeudessa kapeassa '
+                + 'laaksossa Hindukušin vuorten välissä, Kabul-joen '
+                + 'varrella. Heti vanhankaupungin eteläpuolella '
+                + 'kohoaa Sher Darwazan vuori muinaisine muureineen, '
+                + 'ja sen takana on Shuhadayi Salihinin hautausmaa; '
+                + 'hieman idempänä on Bala Hissarin linnoitus ja sen '
+                + 'takana Hashmat Khanin järvi. Etelästä laaksoon '
+                + 'virtaava Logar-joki yhtyy Kabul-jokeen lähellä '
+                + 'keskustaa. Lännessä kahden asuinalueen välissä '
+                + 'kohoavat Koh-e Asamai, jota kutsutaan '
+                + 'televisiovuoreksi, ja Ali Abad; kaupungin sisällä '
+                + 'on lisäksi matalampia kumpuja, muun muassa Bagh-e '
+                + 'Bala, Bibi Mahro ja Maranjan. Vuoria kutsutaan '
+                + 'darin kielellä nimellä koh ja pashtuksi ghar, '
+                + 'kumpuja tapa on kutsua nimillä tapa ja ghondai.',
+              kuva: {
+                tiedosto: 'NO-NB BLDSA GM2a362n.jpg',
+                selite: 'Paghmanin yläpuoliset vuoret Kabulin '
+                  + 'länsipuolella vuonna 1924, ja etualalla on '
+                  + 'kivikkoinen rinne pensaineen.',
+                lahde: 'Georg Morgenstierne, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: monen kansan laakso',
+              teksti: 'Vuonna 1525 Babur kuvaili muistelmissaan '
+                + 'Kabulin laakson väkeä kirjavaksi sekoitukseksi: '
+                + 'laaksoissa ja tasangoilla asui turkkilaisia, '
+                + 'klaaniheimoja ja arabeja, kaupungissa ja monissa '
+                + 'kylissä sartteja, piireittäin pašaita, paratšeja, '
+                + 'tadžikkeja, birkejä ja afgaaniheimoja. Läntisillä '
+                + 'vuorilla asuivat hazarat ja nikdirit, joista osa '
+                + 'puhui mongolikieltä, ja koillisen vuorilla '
+                + 'kafirien kansat. Babur laski, että Kabulissa '
+                + 'puhuttiin yksitoista tai kaksitoista kieltä, ja '
+                + 'lisäsi ettei hän tiedä toista maata, jossa olisi '
+                + 'näin monta heimoa ja kieltä. Nykyään alueen '
+                + 'pääkielet ovat dari ja pashtu. Dari on persian '
+                + 'muoto ja se on pitkään ollut seudun yhteiskieli; '
+                + 'useamman kielen taito on tavallista.',
+              kuva: {
+                tiedosto: 'NO-NB BLDSA GM2a360n.jpg',
+                selite: 'Kamelikaravaani lähestyy Kabulia vuonna 1924 '
+                  + 'hedelmätarhojen välistä kulkevaa tietä pitkin.',
+                lahde: 'Georg Morgenstierne, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: pääkaupunki vaihtaa paikkaa',
+              teksti: 'Vuonna 1747 Ahmad Shah Durrani, neljäntuhannen '
+                + 'abdali-afgaanin komentaja, julistautui '
+                + 'hallitsijaksi ja laajensi uutta valtakuntaansa; '
+                + 'sitä hetkeä pidetään nykyisen Afganistanin '
+                + 'alkuna. Kabul oli tuolloin menettänyt asemansa '
+                + 'suurkaupunkina, ja väkiluku oli painunut '
+                + 'kymmeneen tuhanteen. Muutos tuli hänen poikansa '
+                + 'aikana: Timur Shah Durrani siirsi valtakunnan '
+                + 'pääkaupungin Kandaharista Kabuliin vuonna 1776. '
+                + 'Kaupunki rakennettiin uudelleen hänen ja hänen '
+                + 'seuraajansa Zaman Shahin hallituskausina — nousi '
+                + 'uskonnollisia ja julkisia rakennuksia, ja sufeja, '
+                + 'oikeusoppineita ja kirjallisia sukuja houkuteltiin '
+                + 'muuttamaan kaupunkiin maalahjoituksin ja '
+                + 'apurahoin. Vuoteen 1878 mennessä asukkaita oli '
+                + '65 000 ja vuoteen 1940 mennessä 120 000.',
+              kuva: {
+                tiedosto: 'NO-NB BLDSA GM2a273n.jpg',
+                selite: 'Timur Shahin mausoleumi vuonna 1924: matala '
+                  + 'kupolirakennus muurin takana, ja sen oikealla '
+                  + 'puolella on avoin soittajapaviljonki.',
+                lahde: 'Georg Morgenstierne, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Kabulin ilmasto on mannermainen ja kylmä '
+                + 'puolikuiva. Sateet keskittyvät talveen ja '
+                + 'kevääseen ja tulevat talvella lähes aina lumena; '
+                + 'kevät on vuoden sateisin aika ja kesät hyvin '
+                + 'kuivia. Syksyn iltapäivät ovat lämpimiä ja illat '
+                + 'jyrkästi viileämpiä, ja aurinko paistaa läpi '
+                + 'vuoden. Talvi on Etelä-Aasian mittapuulla kylmä, '
+                + 'ja syy on korkeus. Luvut ovat en-Wikipedian '
+                + 'Kabul-artikkelin sääruudusta normaalikaudelta '
+                + '1991–2020, eivät tämän lehden vuosigraafista — '
+                + 'Kabulilta puuttuu toistaiseksi oma säärivi. Sama '
+                + 'artikkeli antaa lisäksi kaksi eri lukua samoista '
+                + 'suureista: sääruudussa tammikuun keskilämpö on '
+                + '0,5 pakkasastetta ja vuoden keskiarvo 12,8 '
+                + 'lämpöastetta, leipätekstissä 2,3 pakkasastetta ja '
+                + '12,1 lämpöastetta. Eroa ei selitetä. Heinäkuun '
+                + 'keskilämpö on 24,9 astetta ja sadetta kertyy '
+                + 'vuodessa 346 millimetriä, josta kolme neljäsosaa '
+                + 'tammi–huhtikuussa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupungin nimi on vaihtunut moneen kertaan: sanskritin '
+        + 'Kubha, kreikan Kophes, kiinalaisten Gaofu. Mogulit kutsuivat '
+        + 'sitä yhdeksi Hindustanin kahdesta portista.',
+      tehtava: {
+        kysymys: 'Millä nimellä Rigveda ja Avesta tuntevat Kabul-joen '
+          + 'ja sen varren asutuksen?',
+        vaihtoehdot: [
+          'Kubha',
+          'Kophes',
+          'Kabura',
+          'Gaofu',
+        ],
+        oikea: 0,
+        fakta: 'Kubha on nimistä vanhin. Kreikkalaiset kirjoittivat '
+          + 'Kophen tai Kophes, Ptolemaios muodon Kabura ja '
+          + 'kiinalainen munkki Xuanzang 600-luvulla Gaofu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Basaari, joka ei noussut takaisin',
+          tiedosto: 'Explanation of a view of Cabul, the capital of Afghanistan, now exhibiting at the Panorama, Leicester Square, 1842 (IA cityofcapul00burf) (page 1 crop).jpg',
+          teksti: 'Mogulien Kabulin ylpeys oli Char Chatta, katettu '
+            + 'basaari, jonka rakennutti 1600-luvulla Ali Mardan Khan, '
+            + 'Shah Jahanin aikainen maaherra. Se oli yli '
+            + 'kaksisataa metriä pitkä ja koostui neljästä '
+            + 'holvikäytävästä, joiden seinät oli päällystetty '
+            + 'peileillä koristellulla stukolla ja kalkittu liuoksella, '
+            + 'johon oli sekoitettu kiillehiutaleita, jotta ne '
+            + 'kimaltaisivat. Vuonna 1839 britit asettivat Shah Shuja '
+            + 'Durranin takaisin valtaan; 1841 kansannousussa surmattiin '
+            + 'brittiläinen asuinvirkamies, ja seuraavana vuonna '
+            + 'perääntyminen Jalalabadiin päättyi katastrofiin. Britit '
+            + 'palasivat 1842 ja purkivat basaarin kostotoimena ennen '
+            + 'lähtöään. Sitä ei rakennettu uudelleen.',
+          selite: 'Vuoden 1842 selitelehti Lontoon Leicester Squarella '
+            + 'esitettyyn Kabul-panoraamaan: julkaisijan omat numerot '
+            + '1–77 nimeävät kaupungin kukkulat, puutarhat ja '
+            + 'rakennukset.',
+          lahde: 'Burford, Robert, 1791-1861 Panorama (Leicester Square, London, England), Wikimedia Commons (PD)',
+          wiki: 'Char Chatta Bazaar',
+        },
+        {
+          otsikko: 'Lähettilään loppu ja linnoituksen loppu',
+          tiedosto: 'View of Bala Hissar from the north Wellcome L0038120.jpg',
+          teksti: 'Syyskuussa 1879 Britannian lähettiläs Kabuliin, Sir '
+            + 'Pierre Louis Napoleon Cavagnari, surmattiin Bala '
+            + 'Hissarin sisällä. Teko laukaisi yleisen kansannousun ja '
+            + 'Toisen anglo-afgaanisodan toisen vaiheen. Linnoitus '
+            + 'vaurioitui pahoin: brittiläinen residenssi paloi ja '
+            + 'asevarasto räjähti. Wikipedian oma artikkeli kertoo '
+            + 'lopusta kahdella tavalla — johdannon mukaan britit '
+            + 'tuhosivat linnoituksen 1880, mutta historiaosion mukaan '
+            + 'kenraali Frederick Roberts halusi purkaa sen kokonaan, '
+            + 'ja lopulta se päinvastoin vahvistettiin keväällä 1880. '
+            + 'Emiiri Abdur Rahman Khan laski samana vuonna uuden '
+            + 'linnakkeen perustukset, ja Bala Hissar hylättiin '
+            + '1890-luvulla.',
+          selite: 'Bala Hissarin vallirivi pohjoisesta 1890-luvulla: '
+            + 'muurin harjasta on jäljellä murentunut savivalli, ja '
+            + 'yhdellä kohdalla seisoo vielä tornin tynkä.',
+          lahde: 'Lillias Anna Hamilton (1858–1925), Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Bala Hissar, Kabul',
+        },
+        {
+          otsikko: 'Hindustanin portti',
+          tiedosto: 'Folio 34v. Enthronement of Timur at Kabul. Zafarnama, 1533 (British Library, I.O. Islamic 137).jpg',
+          teksti: '1300-luvun lopulla Kabulista tuli merkittävä '
+            + 'kauppakaupunki Timurin valtakunnassa. '
+            + 'Vuonna 1504 Babur valtasi kaupungin ja teki siitä '
+            + 'päämajansa, ja mogulien hallussa se pysyi kaksisataa '
+            + 'vuotta. Akbarin kronikoitsija Abul Fazl kutsui Kabulia '
+            + 'yhdeksi Hindustanin kahdesta portista — toinen oli '
+            + 'Kandahar. Kaupungista tuli maakunnan hallintokeskus ja '
+            + 'vauras kauppapaikka, jonka väkiluku oli noin '
+            + 'kuusikymmentätuhatta, ja siellä toimi rahapaja, joka löi '
+            + 'kulta- ja hopearahaa Alamgir II:n hallituskauteen asti. '
+            + '1700-luvun lopulla englantilainen matkaaja George '
+            + 'Forster kutsui Kabulia Aasian parhaaksi ja '
+            + 'puhtaimmaksi kaupungiksi.',
+          selite: 'Vuoden 1533 persialainen miniatyyri Timurin '
+            + 'valtaistuimelle nousemisesta Kabulissa: hallitsija '
+            + 'istuu puutarhassa kukkivien puiden alla soittajien ja '
+            + 'hoviväen ympäröimänä.',
+          lahde: '1533, Baghdad, Wikimedia Commons (PD)',
+          wiki: 'Kabul',
+        },
+        {
+          otsikko: 'Kaupunki, jolla oli monta nimeä',
+          tiedosto: '1747 Cabul detail New and Accurate Map of Persia by Emanuel Bowen.png',
+          teksti: 'Rigveda ja Avesta, hindulaisuuden ja '
+            + 'zarathustralaisuuden pyhät tekstit, tuntevat '
+            + 'Kabul-joen ja sen varren asutuksen nimellä Kubha. '
+            + 'Antiikin kreikkalaiset kirjoittajat käyttivät muotoja '
+            + 'Kophen, Kophes ja Koa, Ptolemaios kirjasi Kabura, ja '
+            + 'kiinalainen munkki Xuanzang kirjoitti 600-luvulla '
+            + 'Gaofu. Nimi Kabul liitettiin ensin jokeen ja vasta '
+            + 'sitten Hindukušin ja Khyberin solan väliseen seutuun, '
+            + 'jota kutsuttiin myös Kabulistaniksi; milloin se '
+            + 'annettiin itse kaupungille, ei tiedetä. Nimen '
+            + 'alkuperästä kerrotaan sekin tarina, että laaksossa oli '
+            + 'ennen järvi ja sen keskellä Onnen saari, jonne '
+            + 'kuningas käski rakentaa oljista sillan — persiaksi kah '
+            + 'ja pul.',
+          selite: 'Emanuel Bowenin vuoden 1747 Persian-kartan '
+            + 'itäreuna: Cabul on merkitty oikeaan laitaan sen '
+            + 'alueen rajalle, jonka kartantekijä nimeää mogulien '
+            + 'valtakunnan osaksi.',
+          lahde: 'Emanuel Bowen, Wikimedia Commons (PD)',
+          wiki: 'Kabul',
+        },
+      ],
+    },
+  ],
 };

@@ -131,6 +131,26 @@
 // kaupunkia (ks. kulttuuri-kategoriat.js:n xian-lohkon kommentti).
 // Kiina-linjaus: ei nykypolitiikkaa. Teksti-kenttä on ennallaan.
 //
+// KABUL (22.8.2026) SAI UUDEN INTRON samalla kun kaupungille tehtiin
+// alusta asti oma lehti (kulttuuri-kategoriat.js, maakartat.js,
+// nahtavyysjutut.js; säärivi jäi rinnakkaisen säätoimittajan
+// tehtäväksi). Jokainen introväite tulee saman erän lehtiteksteistä,
+// jotka on tarkistettu en-Wikipedian raakateksteistä 22.8.2026 —
+// uusia lähdehakuja ei tarvittu. Vanha intro sanoi korkeudeksi
+// "1 800 metriä"; uusi käyttää artikkelin omaa lukua 1 791 metriä ja
+// kertoo, että kaupunki on yksi maailman korkeimmalla sijaitsevista
+// pääkaupungeista. Sisältölinjaus on sama kuin lehdessä
+// (spec-asia.md:n sitova Kabul-kohta): 1873-painotus, ei
+// nykysisältöä, ei uutisaiheita.
+//
+// KABULIN TEKSTI-KENTÄN KOLMAS KAPPALE KORVATTIIN poiminnassa
+// (Fable 22.8.2026): vanha kappale (neljä vuosikymmentä sotaa,
+// kansallismuseon 1990-luvun ryöstöt) oli täsmälleen sitä aineistoa,
+// jonka sitova Kabul-linjaus jättää lehden ulkopuolelle, ja
+// ristiriidassa uuden intron kanssa. Tilalla on lehden omaa
+// aineistoa: basaarikorttelit, Ka Faroshin lintutori, Timur Shahin
+// mausoleumi ja Darulamanin palatsit (kaikki kohdekartalla).
+//
 // ULAN BATOR (21.8.2026) SAI UUDEN INTRON samalla kun kaupungille
 // tehtiin alusta asti oma lehti (kulttuuri-kategoriat.js,
 // maakartat.js, nahtavyysjutut.js). Jokainen introväite tulee saman
@@ -3119,9 +3139,28 @@ export const ASIA_ARTIKKELIT = {
       + 'paikka.',
   },
   Kabul: {
-    intro: 'Kabul on Afganistanin pääkaupunki vuorten ympäröimässä '
-      + 'laaksossa 1 800 metrin korkeudessa. Sen kautta ovat kulkeneet '
-      + 'kaikki, jotka ovat halunneet Intiaan.',
+    intro: 'Kabul on Afganistanin pääkaupunki ja maan suurin kaupunki. '
+      + 'Se on kapeassa laaksossa **Hindukušin vuorten välissä** '
+      + '1 791 metrin korkeudessa, ja siksi se on yksi maailman '
+      + 'korkeimmalla sijaitsevista pääkaupungeista. Laakson pohjaa '
+      + 'myöten virtaa Kabul-joki, ja aivan vanhankaupungin '
+      + 'eteläpuolella kohoaa Sher Darwazan vuori muinaisine '
+      + 'muureineen.'
+      + '\n\n'
+      + 'Kaupunki on ollut asuttuna kolmen vuosituhannen ajan, ja se '
+      + 'on aina ollut risteysasema: **karavaanireitit Intian ja '
+      + 'Keski-Aasian välillä** kulkivat näiden solien kautta, ja '
+      + 'matka Istanbuliin on suunnilleen yhtä pitkä kuin Hanoihin. '
+      + 'Mogulien perustaja Babur otti kaupungin haltuunsa 1504 ja '
+      + 'halusi haudata itsensä sen rinnepuutarhaan; keisari Akbarin '
+      + 'kronikoitsija kutsui Kabulia yhdeksi Hindustanin kahdesta '
+      + 'portista.'
+      + '\n\n'
+      + 'Pääkaupunki siitä tuli vuonna 1776, kun Timur Shah Durrani '
+      + 'siirsi valtaistuimensa Kandaharista tänne. 1800-luvulla '
+      + 'brittiläiset joukot marssivat kaupunkiin kahdesti, ja '
+      + 'kummallakin kerralla vuoret ja muurit osoittautuivat '
+      + 'vaikeammiksi kuin kukaan oli osannut odottaa.',
     teksti: 'Kabul on Kabul-joen varrella Hindukush-vuoriston eteläpuolella. '
       + 'Laaksoon johtavat solat ovat kapeita, ja niiden hallinta on '
       + 'ratkaissut, kuka pääsee läpi. Talvet ovat kylmiä ja lumisia, '
@@ -3135,9 +3174,10 @@ export const ASIA_ARTIKKELIT = {
       + 'porrastetun puutarhan, jonne hänet myös haudattiin. Puutarha '
       + 'on kunnostettu ja avattu yleisölle.'
       + '\n\n'
-      + 'Kaupunki on kärsinyt neljästä vuosikymmenestä sotaa. '
-      + 'Kansallismuseon kokoelmista suuri osa ryöstettiin 1990-luvulla, '
-      + 'mutta osa esineistä oli piilotettu ja löytyi myöhemmin '
-      + 'tallelokerosta koskemattomana.',
+      + 'Vanhankaupungin basaarikorttelit ovat yhä kaupungin sydän: '
+      + 'Ka Faroshin kujilla käydään lintukauppaa kuten sata vuotta '
+      + 'sitten, ja joen rannalla lepää Timur Shahin kupolimausoleumi. '
+      + 'Lounaassa leveän puistokadun päässä kohoavat 1920-luvun '
+      + 'Darulamanin palatsit.',
   },
 };

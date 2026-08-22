@@ -2868,6 +2868,76 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  kabul: {
+    /*
+     * KABUL-JOEN LAAKSO HINDUKUŠIN JUURELLA (22.8.2026). Pääruutu on
+     * 4,2 × 3,4 km ja se kattaa vanhankaupungin: Shah-Do Shamshiran
+     * moskeijan ja Timur Shahin mausoleumin joen varrella, Ka
+     * Faroshin lintutorin kujien puolella, Baburin puutarhat
+     * lounaassa ja Bala Hissarin kaakossa. Ruutu on työkalun oman
+     * ohjeen (5–8 km) alarajan alapuolella, ja se on harkittu:
+     * vanhankaupungin kohteet mahtuvat runsaan kilometrin alalle
+     * joen molemmin puolin, ja laajemmassa ruudussa kolmen
+     * lähimmän numeroympyrä menisi päällekkäin (Petran, Mekan ja
+     * Singaporen oppi).
+     *
+     * KAINALO ON POIKKEUKSELLISEN LEVEÄ (3,9 × 3,3 km), ja se on
+     * mitattu päätös eikä huolimattomuus. Kaupungin kaukokohteet
+     * ovat kaikki lounaassa: Chihil Sutunin palatsi 6,7 kilometriä
+     * ja Darul Amanin palatsi 8,6 kilometriä keskipisteestä
+     * (docs/aasia-tyoaineisto/tarkistus-kabul.md osio 2:n
+     * uusintalasketut luvut — alkuperäinen faktapohja aliarvioi nämä
+     * kahdella–kolmella kilometrillä). Ne ovat kolmen kilometrin
+     * päässä toisistaan, joten kainalon on oltava niin leveä että
+     * molemmat mahtuvat; kapeampi ruutu jättäisi toisen ulos.
+     *
+     * AFGANISTANIN KANSALLISMUSEO EI OLE KARTALLA, vaikka se on
+     * Darul Amanin palatsin naapurissa. Etäisyys palatsiin on vain
+     * 260 metriä, ja tässä kainalossa se on kuusi prosenttia ruudun
+     * leveydestä eli selvästi vähemmän kuin kahden numeroympyrän
+     * halkaisija (Petran, Mekan ja Singaporen oppi). Museo on
+     * kaupunki-sivun nostona K4, ja sen sijainti kerrotaan Darul
+     * Amanin jutussa. Ensin kokeiltiin tiukkaa 1,0 × 0,8 kilometrin
+     * kainaloa pelkän Darulamanin ympärille: Overpass palautti siitä
+     * 45 elementtiä eli käytännössä tyhjän paperin kahdella tiellä
+     * (sama syy kuin Lhasan hylätyssä Sera-kainalossa).
+     *
+     * CHIHIL SUTUNIN KOORDINAATTI ON OVERPASSISTA. en-Wikipedian
+     * artikkelin infoboksissa arvo on HTML-kommentoitu pois
+     * (34,468712 / 69,152097) eikä siis näy sivulla, ja artikkelin
+     * lopussa oleva näkyvä {{coord}} on karkea GNS-arvo 1,35
+     * kilometrin päässä oikeasta paikasta. Tarkistusraportin osio 1
+     * mittasi todellisen sijainnin sekä Nominatimista että
+     * Overpassista (way 387447673): 34,46851 / 69,15219, eli
+     * kommentoitu arvo osui alle sadan metrin päähän. Kartalla on
+     * Overpassin arvo.
+     *
+     * PUL-E KHISHTIN MOSKEIJA JÄI POIS KARTALTA, mutta syy ei ole
+     * maantieteellinen vaan kuvallinen: Commonsissa ei ole
+     * yhtäkään moskeijan kuvaa, joka täyttäisi lehden 1200 pikselin
+     * alarajan (suurin on 800 × 521), eikä kohdekartan jutulle voi
+     * panna toisen rakennuksen kuvaa. Moskeija on kaupunki-sivun
+     * nostona K3. Sen paikka on 34,51556 / 69,18028 eli 150 metriä
+     * Ka Faroshin lintutorista, joten kumpikin ei olisi mahtunut
+     * kartalle joka tapauksessa.
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Kašgarissa, Lhasassa ja Manilassa: vanhankaupungin kujat ja
+     * Baburin puutarhojen polkuverkko ovat OSM:ssä jalankulku-
+     * alueita ja huoltoteitä, ja ilman lippuja kartan tihein osa
+     * jäisi tyhjäksi paperiksi.
+     *
+     * EI meri: true — lähin meri on tuhansien kilometrien päässä.
+     * Vettä ruudussa on vain Kabul-joen uoma.
+     */
+    rajat: { pohjoinen: 34.526, etela: 34.4955, lansi: 69.1515, ita: 69.1975 },
+    kainalot: [
+      { rajat: { pohjoinen: 34.482, etela: 34.452, lansi: 69.114, ita: 69.157 },
+        x: 3, y: 4, leveys: 24, suunta: '7–9 km lounaaseen' },
+    ],
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*
