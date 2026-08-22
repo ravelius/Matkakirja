@@ -80,3 +80,24 @@ tarkistus (sonnet, eri agentti) → kirjoitus (opus) → Fablen pistokoe.)*
 - Alkuperäiskansakuvissa sama arki- ja ylpeyskuvasto kuin muuallakin —
   ei kurjuuskuvastoa, ei pelkkiä seremoniaklišeitä.
 - Uluru ja muut pyhät paikat: vain ulkopuolelta, ei kiipeäjäkuvia.
+
+## Fablen päätökset USA-faktapohjan avoimiin kysymyksiin (22.8.2026)
+
+1. **Intron koti:** kirjoittaja luo `js/packs/northamerica-artikkelit.js`
+   samalla mallilla kuin africa-artikkelit.js (ja vastaavat E-Amerikalle
+   ja Oseanialle, kun niiden vuoro tulee).
+2. **USA:n korkokartta:** RUS-ennakkotapauksen mukaan — manner-USA
+   ilman Alaskaa ja Havaijia, ei uutta projektiohaaraa
+   karttapiste()-funktioon. Puute todetaan MAAKARTAT-rivin
+   lohkokommentissa.
+3. **Maalehden aiheet hyväksytty:** Historia, Luonto ja
+   kansallispuistot, Musiikki, Tiede ja keksinnöt, Ruoka (5 × 4).
+4. **Musiikkisivun sävy:** mustan musiikin saavutukset kerrotaan
+   omana kulttuurina (Fisk Jubilee Singers, banjon afrikkalaiset
+   juuret, spirituaalit); minstrel-perinnettä EI nosteta viihteenä —
+   jos Foster-nosto ei istu tähän sävyyn ilman selittelyä, se
+   korvataan (esim. spirituaalit tai varhainen blues-perintö).
+5. **Yellowstone/Grand Canyon:** saavat olla maalehdessä NYT;
+   mahdollinen päällekkäisyys tulevien nähtävyysjuttujen kanssa
+   ratkaistaan siinä vaiheessa (maalehti kertoo maasta, juttu
+   kohteesta — eri mittakaava).
