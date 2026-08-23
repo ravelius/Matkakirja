@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1049 — E-AMERIKAN JA OSEANIAN PILOTIT (omistajan yotilaus, sama putki kuin P-Amerikassa: faktapohja + riippumaton tarkistus + opus-kirjoittaja + Fablen pistokoe): neljä uutta kaupunkilehtea — Rio de Janeiro, Buenos Aires, Sydney ja Auckland (kansi, nostot, historia-teemasivu, matkaopas, ennen-nyt-pari) — seka nelja maalehtea: Brasilia, Argentiina, Australia ja Uusi-Seelanti (5 aihetta x 4 nostoa + minitehtavat + korkokartat maakartat.js:aan). Tarkistusputki nappasi ja korjasi mm. Sydneyn nelja faktavirhetta ja Argentiinan malbec-vuoden. Tango- ja Harbour Bridge -anakronismit vahdittu. Saarivit puuttuvat uusilta kaupungeilta (Open-Meteon paivakiintio tayttyi — taydennetaan kun kiintio vapautuu). Maalehdet aukeavat toistaiseksi vain maailmankartalla (lautojen countryShapes tekematta, kirjattu inventaarioon). Tarkista: Rion, Buenos Airesin, Sydneyn ja Aucklandin lehdet; BRA/ARG/AUS/NZL maalehdet maailmankartalla',
   'v1048 — HEROKIERROS 9 JA SF:N VALOKUVAT: New Yorkin ja San Franciscon avauskaruselleihin kolme generoitua herokuvaa kummallekin (Brooklynin silta, Vapaudenpatsas, Empire State; Golden Gate, kaapelivaunu Hyde Streetilla 1873-silmukalla, Painted Ladies) — kaikki katselmoitu silmin ja viety R2:een. SF sai lisaksi kolme aitoa Commons-valokuvaa (Golden Gate rantatasolta, Coit Tower, Alcatraz), lisenssit tarkistettu extmetadatasta. Kaupungit ovat yha lahes-tilassa koska kohdekartat puuttuvat (kirjattu inventaarioon). Tarkista: New Yorkin ja San Franciscon etusivukarusellit',
   'v1047 — P-AMERIKAN PILOTTI (omistajan yotilaus 23.8.2026): New Yorkin ja San Franciscon kaupunkilehdet seka USA:n maalehti (Historia, Luonto ja kansallispuistot, Musiikki, Tiede ja keksinnot, Ruoka — 5x4 nostoa, faktapohja ja riippumaton tarkistus ennen kirjoitusta). Karuselleissa 3 generoitua heroa + 3 aitoa Commons-valokuvaa Helsinki-mallin mukaan. USA:n korkokartta location map -pohjalta ilman Alaskaa ja Havaijia (kirjattu MAAKARTAT-kommenttiin). HUOM: P-Amerikan laudalta puuttuu viela countryShapes, joten USA-maalehti aukeaa toistaiseksi vain maailmankartalla — kirjattu tyolistalle. Lisaksi Tampereen julisteen selite tasmennetty (kaarilamppu vs hehkulamppu) ja kuvaa-maalehti-tyokalu korjattu. Tarkista: New Yorkin ja San Franciscon lehdet kannesta loppuun, USA-maalehti maailmankartalla (i-nappi kaupunkilehdesta), Tampereen juliste',
   'v1046 — POLLOPOIMINNAT (omistajan idea 23.8.2026): kehittajatilassa pollon vastauksen voi tallentaa artikkeliin (Tallenna juttuun) — pari nakyy heti pillerina jutun lopussa, klikkaus avaa minipopupin vastauksineen; Tilannelehden Pollopoiminnat-sivu antaa valmiin lohkon pakettiin kuratointia varten. Pelitilassa pelaajilla Ehdota tallennettavaksi -nappi (menee ehdotuskanavaan). Pelaajille pillerit nakyvat vasta kun parit on kuratoitu pakettiin. LISAKSI aihesivujen taitto (omistajan paatos): kuvatekstit pois, leipateksti kiertaa kuvaa — sivut ~20% lyhyemmat, tekija+lisenssi-rivi sailyy kuvan alla (lisenssiehto). Tarkista: kysy pollolta jutussa ja tallenna (pilleri + Tilannelehti), Istanbul pintaa syvemmalta ja maalehden Historia-sivu',
@@ -413,8 +414,12 @@ export const TESTATTAVAA = [
  * samasta listasta ilman nimivertailua.
  */
 export const TUOREET = {
-  paivitetty: '23.8.2026',
+  paivitetty: '23.8.2026 ilta',
   valmiit: [
+    { id: 'rio', nimi: 'Rio de Janeiro', versio: 'v1049' },
+    { id: 'buenosaires', nimi: 'Buenos Aires', versio: 'v1049' },
+    { id: 'sydney', nimi: 'Sydney', versio: 'v1049' },
+    { id: 'auckland', nimi: 'Auckland', versio: 'v1049' },
     { id: 'newyork', nimi: 'New York', versio: 'v1047' },
     { id: 'sanfrancisco', nimi: 'San Francisco', versio: 'v1047' },
     { id: 'karachi', nimi: 'Karachi', versio: 'v1008' },
@@ -425,8 +430,6 @@ export const TUOREET = {
     { id: 'kolkata', nimi: 'Kolkata', versio: 'v993' },
     { id: 'kashgar', nimi: 'Kašgar', versio: 'v992' },
     { id: 'lhasa', nimi: 'Lhasa', versio: 'v992' },
-    { id: 'borneo', nimi: 'Borneo', versio: 'v990' },
-    { id: 'sumatra', nimi: 'Sumatra', versio: 'v990' },
   ],
   tyossa: [],
 };
