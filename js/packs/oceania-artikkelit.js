@@ -79,4 +79,76 @@ export const OCEANIA_ARTIKKELIT = {
       + 'kaupungin tunnetuimmat maamerkit — satamansilta ja '
       + 'oopperatalo — ovat molemmat isoisän matkaa myöhempiä.',
   },
+  /* Aucklandin ja Uuden-Seelannin lohkot liitetty fragmenteista
+   * 23.8.2026 (docs/mantereet-tyoaineisto/*-intro-fragmentti.js) —
+   * kolme kirjoittajaa tyoskenteli rinnakkain ja Sydneyn agentti loi
+   * taman tiedoston. */
+  Auckland: {
+    intro: 'Auckland on Uuden-Seelannin suurin kaupunki, ja siinä asuu noin '
+      + 'kolmasosa koko maan väestöstä. Se on rakennettu kapealle '
+      + 'kannakselle kahden sataman väliin: pohjoisessa Waitematā avautuu '
+      + 'Hauraki-lahdelle ja Tyynellemerelle, etelässä Manukau '
+      + 'Tasmaninmerelle. Kannaksen alla on **Aucklandin '
+      + 'tulivuorikenttä, jolla on purkautunut ainakin 53 tulivuorta** '
+      + 'viimeisten 193 000 vuoden aikana.'
+      + '\n\n'
+      + 'Maorit asettuivat kannakselle noin 1350, ja sen maorinimi on '
+      + 'Tāmaki Makaurau, "Tāmaki jota moni halusi". Linnoitettuja pā-kyliä '
+      + 'nousi tulivuorenhuipuille. Ngāti Whātua Ōrākein ylipäällikkö '
+      + 'Āpihai Te Kawau allekirjoitti Waitangin sopimuksen maaliskuussa '
+      + '1840 ja lahjoitti pian sen jälkeen maata Waitematān rannalta '
+      + 'kuvernööri William Hobsonille uuden pääkaupungin paikaksi. '
+      + 'Kaupunki perustettiin 18. syyskuuta 1840.'
+      + '\n\n'
+      + 'Auckland oli Uuden-Seelannin pääkaupunki 1841–1865, kunnes '
+      + 'hallinto siirtyi Eteläsaarta lähemmäksi Wellingtoniin. **Isoisän '
+      + 'saapuessa 1873 menetyksestä oli kulunut kahdeksan vuotta**, mutta '
+      + 'kaupunki kasvoi yhä satamansa varassa: kauri-pihka oli sen '
+      + 'tärkein vientitavara vuosisadan jälkipuoliskon.',
+    teksti: 'Auckland sijaitsee Uuden-Seelannin Pohjoissaaren yläosassa '
+      + 'kapealla kannaksella, joka on Māngere Inletin ja Tāmaki-joen '
+      + 'kohdalla alle kahden kilometrin levyinen. Kaupunkia ympäröivät '
+      + 'sademetsän peittämät kukkulat, lännessä Waitākeren ja kaakossa '
+      + 'Hunuan vuoret, ja idässä ovat Hauraki-lahden saaret.'
+      + '\n\n'
+      + 'Kannaksesta käytiin kauan kamppailua sen hyvän maan takia: '
+      + '1700-luvun alussa aluetta hallitsi Te Waiohua -heimoliitto ja '
+      + '1740-luvulta lähtien Ngāti Whātua Ōrākei. Britit perustivat '
+      + 'kaupungin 1840 ja tekivät siitä pääkaupungin 1841. 1860-luvun '
+      + 'alussa kaupunkiin sijoitettiin 12 000 imperiumin sotilasta ja '
+      + 'etelään rakennettiin Great South Road; väkiluku kasvoi 1 500:sta '
+      + 'vuonna 1841 yli 12 000:een vuonna 1864.'
+      + '\n\n'
+      + 'Nykyään Auckland on maan talouden keskus, ja sen satama käsitteli '
+      + 'vuonna 2015 kolmanneksen koko maan konttiliikenteestä. Kaupunkia '
+      + 'sanotaan purjeiden kaupungiksi: veneitä on rekisteröity 135 000 ja '
+      + 'noin joka kolmas kotitalous omistaa sellaisen. Ilmasto on lauhkea '
+      + 'ja merellinen, ja Auckland on Uuden-Seelannin lämpimin suuri '
+      + 'keskus.',
+  },
+  'Uusi-Seelanti': {
+    intro: 'Uusi-Seelanti on kaksi pitkää, vuorista saarta eteläisellä '
+      + 'Tyynellämerellä. Polynesialaiset '
+      + 'purjehtijat löysivät ne avomeren yli satoja vuosia ennen '
+      + 'eurooppalaisia ja antoivat maalle nimen Aotearoa, pitkän '
+      + 'valkoisen pilven maa. Eristys teki luonnosta ainutlaatuisen: '
+      + 'maanisäkkäitä ei ollut lepakoita lukuun ottamatta, ja linnut '
+      + 'ottivat niiden paikat.'
+      + '\n\n'
+      + 'Vuonna 1840 kruunu ja yli viisisataa päällikköä allekirjoittivat '
+      + 'Waitangin sopimuksen, jonka englannin- ja māorinkielinen teksti '
+      + 'lupasivat eri asiat — ja juuri siitä syntyivät Uuden-Seelannin '
+      + 'sodat, jotka päättyivät vasta vuonna 1872. Vuonna 1873 rauha on '
+      + 'siis vuoden vanha ja maakysymys yhä auki. **Māorikulttuuri elää '
+      + 'vahvana**: kaiverretut kanootit, kokoontumispaikat ja kasvojen '
+      + 'kuviot ovat arkea, eivät museotavaraa.'
+      + '\n\n'
+      + 'Etelässä Otagon kultaryntäys muutti maakunnan vuosikymmenessä, '
+      + 'pohjoisessa Rotoruan geysirit ja Vaaleanpunaiset ja Valkoiset '
+      + 'Terassit vetävät matkailijoita, ja lampaat kantavat taloutta. '
+      + 'Isoisän matka osuu tähän hetkeen tarkasti: tulivuori vie '
+      + 'terassit kolmentoista vuoden päästä, ja yhdeksän vuoden päästä '
+      + 'laiva nimeltä Dunedin vie ensimmäisen jäähdytetyn lihalastin '
+      + 'Lontooseen.',
+  },
 };
