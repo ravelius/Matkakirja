@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1062, teksti: 'Herot Dublinista Ulan Batoriin — kuusi kaupunkia' },
   { v: 1061, teksti: 'P-Amerikan laudalle maiden rajat' },
   { v: 1060, teksti: 'Astanan keskipäivän hero uusiksi' },
   { v: 1059, teksti: 'Herot Lissabonista Astanaan — kuusi kaupunkia' },
