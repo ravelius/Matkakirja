@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1071 — VANCOUVERIN KAUPUNKILEHTI: kaupunki, historia ja alkuperaiskansat; 12 nostoa ja 22 kuvaa. Tarkista: Vancouverin lehti ja alkuperaiskansat-sivu',
   'v1070 — MELBOURNEN KAUPUNKILEHTI: kaupunki, historia, kuvataide ja luonto; 16 nostoa ja 26 kuvaa. Tarkista: Melbournen lehti kannesta oppaaseen',
   'v1069 — NEW YORKIN MINIATYYRIT: yhdeksan kohdetta kymmenesta sai akvarellipiirroksen kartalle; Times Square jai numeroympyraksi, koska kuva ei lukenut aukiona. Tarkista: New Yorkin kohdekartta ja piirrosten avaus',
   'v1068 — KOLME UUTTA KAUPUNKILEHTEA: Sevilla, Bergen ja Montreal (yhteensa kahdeksan sivua, 32 nostoa ja 61 Commons-kuvaa). Tarkista: kolmen lehden etusivut, teemasivut ja matkaoppaat',
@@ -437,6 +438,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '23.8.2026 ilta',
   valmiit: [
+    { id: 'vancouver', nimi: 'Vancouver', versio: 'v1071' },
     { id: 'melbourne', nimi: 'Melbourne', versio: 'v1070' },
     { id: 'sevilla', nimi: 'Sevilla', versio: 'v1068' },
     { id: 'bergen', nimi: 'Bergen', versio: 'v1068' },
