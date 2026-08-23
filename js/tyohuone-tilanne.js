@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1072 — HEROKIERROS 19: Wellington, Sevilla, Bergen, Montreal, Tampere ja Tallinna; 18/18 hyvaksyttiin, Nasilinna uusittiin kerran. Tarkista: kuuden kaupungin etusivukarusellit',
   'v1071 — VANCOUVERIN KAUPUNKILEHTI: kaupunki, historia ja alkuperaiskansat; 12 nostoa ja 22 kuvaa. Tarkista: Vancouverin lehti ja alkuperaiskansat-sivu',
   'v1070 — MELBOURNEN KAUPUNKILEHTI: kaupunki, historia, kuvataide ja luonto; 16 nostoa ja 26 kuvaa. Tarkista: Melbournen lehti kannesta oppaaseen',
   'v1069 — NEW YORKIN MINIATYYRIT: yhdeksan kohdetta kymmenesta sai akvarellipiirroksen kartalle; Times Square jai numeroympyraksi, koska kuva ei lukenut aukiona. Tarkista: New Yorkin kohdekartta ja piirrosten avaus',
