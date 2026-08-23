@@ -52717,4 +52717,586 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * RIO DE JANEIRO on Etelä-Amerikan laudan ensimmäinen kaupunkilehti
+   * (23.8.2026) ja laudan lähtökaupunki (js/packs/southamerica.js:
+   * start: true), joten tämä on todennäköisesti pelaajan ensimmäinen
+   * lehti koko laudalla. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-rio.md ja sen riippumaton tarkistus tarkistus-rio.md
+   * (tuomio "kelpaa sellaisenaan", nolla asiavirhettä nosto- ja
+   * jaksoteksteissä); sisältölinjaukset spec-mantereet.md, yleisresepti
+   * docs/aasia-tyoaineisto/lehtityo-resepti.md. Jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 23.8.2026 (artikkelit "Rio de
+   * Janeiro", "Rio Branco Law", "Lei Áurea", "Tijuca National Park",
+   * "Candelária Church", "Corcovado", "Sugarloaf Cable Car",
+   * "Royal Portuguese Cabinet of Reading", "Corcovado Rack Railway").
+   *
+   * 1873-KULMA ON RAKENTEELLINEN, EI TAPAHTUMAKOHTAINEN. Toisin kuin
+   * New Yorkissa, jossa isoisän vuosi on täynnä päivämääriä, Riossa
+   * neljä käännekohtaa kestivät koko vuoden: kaupunki OLI
+   * keisarikunnan pääkaupunki, vapaan kohdun laki OLI voimassa,
+   * Candelárian kupoli OLI kesken ja Tijucan metsitys OLI kesken.
+   * Lehti on rakennettu tämän varaan, ei yksittäisten päivien.
+   *
+   * SISÄLTÖLINJAUS on spec-mantereet.md:n E-Amerikka-osio ja sen
+   * kolme yleisperiaatetta. Orjuus kerrotaan kaunistelematta, koska se
+   * oli isoisän vierailun aikaan Brasiliassa yhä laillista: nostot K1,
+   * K4 ja H4 käsittelevät sitä lukuina, lakeina ja tehtynä työnä,
+   * EIVÄT ruumiillisen kohtelun kuvauksena. Ranska Antarktikan sota
+   * (1555–1567) on yksi lause tapahtumana ilman taistelukuvausta.
+   * Nykyfavelaväkivaltaa, huumekauppaa ja nykypolitiikkaa EI ole
+   * lainkaan, vaikka Wikipedian oma teksti mainitsee ne sivulauseina.
+   * Favelat itse ovat mukana oppaan jaksossa 2 tavallisina
+   * asuinalueina — kaupunginosina, köysiratana ja pikkubussilinjoina,
+   * ei kurjuutena eikä rikollisuutena — koska kaupungin kulttuurivisa
+   * kysyy niitä ja vastaus on löydyttävä lehdestä. Samasta syystä
+   * vuoden 2016 kesäolympialaiset mainitaan noston K1 kuvatekstissä:
+   * juuri niiden valmistelu paljasti Valongon laiturin.
+   * Tijucan metsityksen tehneet kuusi orjuutettua henkilöä on nimetty
+   * omilla nimillään (Eleutério, Constantino, Manuel, Mateus,
+   * Leopoldo, Maria) — sama periaate kuin alkuperäiskansojen omissa
+   * nimissä: ihminen ennen roolia.
+   *
+   * ANAKRONISMIT ON SANOTTU ÄÄNEEN. Kristus-patsasta (1922–1931),
+   * Sokerileivän köysirataa (27.10.1912), Corcovadon hammasratasrataa
+   * (1884) eikä Candelárian kupolia (1877) ollut olemassa 1873, ja
+   * nostot K3 ja H3 kertovat sen. Real Gabinete Português de Leitura
+   * on jätetty lehdestä KOKONAAN pois, vaikka se on kohdekartan
+   * kävelymatkalla: instituutio on vuodelta 1837, mutta se näyttävä
+   * neo-manueliininen rakennus, joka näkyy jokaisessa kuvassa,
+   * valmistui vasta 1880–1887 — kuva olisi väistämättä esittänyt
+   * jotain, mitä isoisä ei nähnyt (faktapohjan huomio 2).
+   *
+   * KAKSI WIKIPEDIAN SISÄISTÄ RISTIRIITAA:
+   *
+   * 1. Valongon laiturin kautta kulkeneiden ihmisten määrä. Wikipedia
+   *    antaa haarukan "between 500 thousand and one million", eikä
+   *    kumpaakaan päätä valita: nosto K1 kirjoittaa haarukan auki
+   *    lukijalle sellaisenaan (reseptin ohje ristiriidoista).
+   * 2. Corcovadon hammasratasradan avauspäivä. Artikkelin
+   *    "Corcovado Rack Railway" infoboksi sanoo 10.7.1884 ja saman
+   *    artikkelin leipäteksti 9.10.1884. Oppaan jakso 1 sanoo siksi
+   *    vain vuoden 1884 eikä päivämäärää.
+   * 3. Corcovadon korkeus. Artikkeli "Corcovado" sanoo 710 m ja
+   *    artikkeli "Christ the Redeemer (statue)" 700 m. Lehti käyttää
+   *    vuorta itseään käsittelevän artikkelin lukua 710 m (sama luku
+   *    kuin kaupungin kulttuurivisassa).
+   *
+   * ENNEN JA NYT -PARI on siirretty sellaisenaan matkakirjan
+   * valokuvataulusta (js/packs/southamerica-valokuvat.js, avain rio):
+   * tiedostonimet ja vuosi on kopioitu, ja kumpaankin on kirjoitettu
+   * uusi YHDEN VIRKKEEN selite. Vanha vedos on vuodelta 1895 eli
+   * reilusti harmaasävyrajan (1960) alapuolella. Lähderivit on
+   * NORMALISOITU talon muotoon: valokuvataulussa lukee "Commons
+   * (public domain)", tässä "(PD)" reseptin vaatimuksen mukaisesti.
+   * Ferrezin vedoksen paperikehykseen on painettu otsikko
+   * "Copacabana." ja valokuvaajan signeeraus; ne ovat 1800-luvun
+   * vedoksen omia julkaisijamerkintöjä eivätkä vesileimoja, ja ne
+   * hyväksytään samalla perusteella kuin Currier & Ivesin arkin
+   * painettu otsikko New Yorkin lehdessä.
+   *
+   * KUVIEN TEKIJÄT: Instituto Moreira Sallesin kokoelmasta tulevissa
+   * PD-kuvissa Commonsin extmetadata.Artist antaa DIGITOIJAN nimen
+   * ("Núcleo de digitalização / IMS"), koska kuvasivu käyttää Art
+   * Photo -mallinetta, jossa photographer-kenttä tarkoittaa teoksen
+   * kuvaajaa eikä teoksen tekijää. Molempien tässä käytettyjen
+   * IMS-kuvien kuvasivu on kategoriassa "Photographs by Marc Ferrez
+   * at Moreira Salles Institute" (tarkistettu action=raw 23.8.2026),
+   * joten lähderiviksi on kirjoitettu "Marc Ferrez / Instituto Moreira
+   * Salles" — sama muoto, jota repon oma valokuvataulu jo käyttää.
+   * Tämä on tietoinen poikkeus reseptin "täsmälleen Artist-kentän
+   * mukaan" -säännöstä, ja se on tehty samalla perusteella kuin
+   * CNG-lyhenteen avaaminen: kirjaimellinen kenttä olisi ollut
+   * tekijänoikeudellisesti väärä.
+   *
+   * KUVAHYLKÄYKSET (kaikki katsottu silmin 900 px:n esikatselusta):
+   * "Cais do Valongo.jpg" ja "Cais do Valongo 2.jpg" — molemmat ovat
+   * pystykuvia armillaaripallolla kruunatusta pylväästä taivasta
+   * vasten, eivät laiturista; "Caminho de coqueiros.JPG" (palmukuja,
+   * hieno pystykuva) — kameran polttama päiväysleima 04/21/2015 kuvan
+   * päällä; "Ipanema, RJ, 1870.jpg" — 776 × 432 px; "Rio de Janeiro
+   * Cume do Corcovado" (Marc Ferrez, CC0) — 497 × 800 px; kaikki
+   * Isabel-prinsessan muotokuvat — suurin löytyi 1024 px:n leveydellä;
+   * "Gilberto Ferrez, Getty Museum, Abolition of slavery..." (Marc
+   * Ferrezin kuva 13.5.1888 Paço Imperialin edustan väkijoukosta) —
+   * vedoksessa on valokuvaajan signeeraus, ja toisin kuin
+   * ennen–nyt-parissa tälle oli olemassa merkitsemätön vaihtoehto;
+   * "Preparations for victory celebration.jpg" — Paraguayn sodan
+   * aiheinen, ei sovi sisältölinjaukseen.
+   *
+   * AIHETOISTO: Guanabaran ja Botafogon lahti näkyy kaikissa kolmessa
+   * kansikuvassa, koska se on se maisema, jonka takia kaupunki on
+   * olemassa — mutta kuvauspaikat ovat kolme eri suuntaa (Corcovadolta
+   * itään, Santa Teresasta pohjoiseen, Sokerileivältä länteen), ja
+   * juuri sitä kansikaruselli-linjaus pyytää. Copacabana esiintyy
+   * kahdesti ennen–nyt-parissa (eri tiedostot, eri vuosisadat) eikä
+   * missään muualla lehdessä. Corcovado esiintyy K3:n 1800-luvun
+   * vedoksessa paljaana huippuna ja matkaoppaan kuvassa patsaineen —
+   * juuri tämä ero on koko K3:n asia.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 23.8.2026 kaikkiin
+   * pyyntöihin "Daily API request limit exceeded" (myös yhden
+   * vuorokauden koekutsuun), joten js/packs/saatiedot.js:ään EI
+   * kirjoitettu rio-riviä eikä lukuja keksitty — Samarkandin
+   * ennakkotapaus (v965). Matkaoppaan jakso 5 on siksi kirjoitettu
+   * en-Wikipedian sääruudun varaan ja SANOO SEN ITSE: luvut ovat
+   * Rio de Janeiron (Saúde) aseman normaaleja jaksolta 1981–2010,
+   * eivät pelin oman ERA5-hilan lukuja. Asema on 11 metrissä
+   * merenpinnan yläpuolella eli samalla matalalla rantavyöhykkeellä
+   * kuin 1873-ajan ydinkeskusta, joten Petran ja Siinain
+   * vuoristo–rannikko-ristiriitaa ei tässä ole. Fable voi lisätä
+   * rivin omana versionaan, kun kiintiö vapautuu.
+   *
+   * MINITEHTÄVÄ ei toista kaupungin kulttuurivisaa
+   * (js/packs/southamerica-questions.js, avain rio: patsas, nimen
+   * merkitys, pääkaupunkikausi 1763–1960, Copacabana, favelat,
+   * vuoden 2016 kisat). Tehtävä kysyy vuoden 1871 vapaan kohdun lain
+   * sisältöä, ja vastaus on saman sivun nostossa H4.
+   *
+   * Etusivun leipäteksti on js/packs/southamerica-artikkelit.js:n
+   * intro-kentässä (avain "Rio de Janeiro" = laudan wiki-otsikko).
+   */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
+  rio: [
+    {
+      id: 'kaupunki',
+      nimi: 'Rio de Janeiro',
+      johdanto: 'Guanabaran lahden rannalle Sokerileivän ja Corcovadon '
+        + 'vuorten väliin kasvanut satamakaupunki oli isoisän vuonna 1873 '
+        + 'keisari Pedro II:n Brasilian pääkaupunki ja kahvitalouden sydän '
+        + '— vaikka orjuus oli yhä laillista.',
+      /*
+       * KANSIKUVAT: kolme laajaa yleiskuvaa kolmesta eri suunnasta
+       * (omistajan kansikaruselli-linjaus 21.8.2026 — ei yhtään
+       * yksityiskohtaa, sisäkuvaa eikä esinettä kannessa). Koska
+       * ennenNyt-pari korvaa etusivun pikkurivin (js/lehti.js
+       * piirraLehtiKuvat), näistä ensimmäinen on etusivun iso kuva ja
+       * loput kaksi näkyvät suurennossarjassa. Kaikki kolme on katsottu
+       * silmin: ei tunnistettavia kasvoja (rannoilla ja aukioilla
+       * näkyvät ihmiset ovat kaukaisia pisteitä), ei vesileimoja eikä
+       * lisättyjä merkintöjä. Lisenssit, tekijät ja koot Commonsin
+       * extmetadatasta 23.8.2026; pienin on 3 888 px leveä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Rio de Janeiro, Pão de Açúcar from Cristo Redentor (15744316848).jpg',
+          selite: 'Sokerileipä kohoaa 396 metriä Guanabaran lahden suulla '
+            + 'niemekkeellä, joka työntyy Atlantille.',
+          lahde: 'Arian Zwegers from Brussels, Belgium, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Panorama do Rio de Janeiro a partir do Parque das Ruínas 2024 11 24.jpg',
+          selite: 'Santa Teresan kukkula nousee heti vanhan keskustan takaa, '
+            + 'ja sen rinteeltä näkyy sama lahti, jonka rannalle kaupunki '
+            + 'perustettiin 1565.',
+          lahde: 'Tet, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Enseada de Botafogo vista do Pão de Açúcar.jpg',
+          selite: 'Botafogon poukama on suojaisa satama-allas, jonka takana '
+            + 'kaupunki kiipeää graniittikukkuloiden väliin.',
+          lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Copacabana, Acervo do Instituto Moreira Salles.jpg',
+          vuosi: '1895',
+          selite: 'Copacabanan ranta oli 1800-luvun lopulla kaupungin '
+            + 'ulkopuolinen hiekkakaari, jonne pääsi vain vuorten yli.',
+          lahde: 'Marc Ferrez / Instituto Moreira Salles, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'BrunaPrado Praia de Copacabana Praia do Leme Rio de Janeiro RJ (40070449945).jpg',
+          selite: 'Sama kaari on nyt neljän kilometrin mittainen '
+            + 'kaupunginranta, jonka takana on yhtenäinen tornitalorivi ja '
+            + 'jonka rinteet jäivät rakentamatta kansallispuiston takia.',
+          lahde: 'Bruna Prado / MTur Destinos, Wikimedia Commons (PD)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Amerikan suurin orjasatama',
+          teksti: 'Valongon laiturille Rion keskustassa nousi 1811–1831 '
+            + 'arviolta puolesta miljoonasta miljoonaan orjuutettua '
+            + 'afrikkalaista — kaupungin satama oli koko Amerikan mantereen '
+            + 'vilkkain orjakauppapaikka. Vuonna 1871 keisarikunta sääti '
+            + 'niin sanotun vapaan kohdun lain: orjuutettujen naisten uudet '
+            + 'lapset julistettiin vapaiksi, mutta heidän piti silti '
+            + 'palvella äitinsä omistajaa 21-vuotiaaksi asti. Isoisän '
+            + 'saapuessa 1873 laki oli kaksi vuotta voimassa ja yli miljoona '
+            + 'ihmistä oli yhä orjia — Brasilia lakkautti orjuuden kokonaan '
+            + 'vasta 1888, viimeisenä maana koko Amerikassa.',
+          tiedosto: 'Cais do Valongo e da Imperatriz.jpg',
+          selite: 'Laiturin kiveys löytyi 2011 kaivauksissa, joita tehtiin '
+            + 'vuoden 2016 kesäolympialaisia valmisteltaessa, ja kohde '
+            + 'otettiin maailmanperintöluetteloon heinäkuussa 2017.',
+          lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Valongo Wharf',
+        },
+        {
+          otsikko: 'Ainoa Euroopan pääkaupunki Euroopan ulkopuolella',
+          teksti: 'Vuonna 1808 Portugalin kuninkaallinen hovi pakeni '
+            + 'Napoleonin joukkoja ja siirtyi kokonaisuudessaan Rio de '
+            + 'Janeiroon — ainoa kerta uuden ajan historiassa, kun '
+            + 'siirtomaita hallinneen maan pääkaupunki muutti omaan '
+            + 'siirtomaahansa. Rio oli hetken koko Portugalin valtakunnan '
+            + 'pääkaupunki, sitten 1822 itsenäisen Brasilian keisarikunnan. '
+            + 'Hovin mukana tulleille aatelisille tehtiin tilaa häätämällä '
+            + 'tavallisia asukkaita kodeistaan. Kaupunkiin syntyi samalla '
+            + 'vuosikymmenellä kansalliskirjasto ja kasvitieteellinen '
+            + 'puutarha, molemmat yhä toiminnassa.',
+          tiedosto: 'Arboreto do Jardim Botânico, Rio de Janeiro.jpg',
+          selite: 'Kasvitieteellinen puutarha perustettiin hovin ensimmäisenä '
+            + 'vuonna 1808, ja se on yhä tutkimuslaitos.',
+          lahde: 'Tania Freire, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Rio de Janeiro Botanical Garden',
+        },
+        {
+          otsikko: 'Vuori ilman patsasta',
+          teksti: 'Isoisän 1873 näkemä Corcovado oli paljas graniittihuippu '
+            + 'ilman patsasta — Kristus-patsas rakennettiin vasta 1922–1931, '
+            + 'puoli vuosisataa myöhemmin. Sokerileivän huipulle ei myöskään '
+            + 'päässyt köysiradalla: se avattiin 27. lokakuuta 1912. '
+            + 'Valokuvaaja Marc Ferrez kuvasi juuri tätä aikakauden Riota '
+            + 'lasilevyilleen, ja hänen otoksensa Corcovadosta ennen '
+            + 'patsasta ovat säilyneet. Vuoret olivat jo tuolloin kaupungin '
+            + 'tunnusmerkki, mutta niiden huiput olivat vielä '
+            + 'koskemattomia.',
+          tiedosto: 'Vista do centro do Rio, vendo-se ao fundo o Corcovado, Acervo do Instituto Moreira Salles.jpg',
+          selite: 'Corcovadon huippu on 710 metriä korkea, ja sen '
+            + 'Kristus-patsas vihittiin vasta 12. lokakuuta 1931.',
+          lahde: 'Marc Ferrez / Instituto Moreira Salles, Wikimedia Commons (PD)',
+          wiki: 'Corcovado',
+        },
+        {
+          otsikko: 'Metsä joka istutettiin uudelleen orjatyöllä',
+          teksti: 'Kahvipeltojen raivaama metsä oli syönyt Rion juomaveden '
+            + 'lähteet, ja keisari Pedro II määräsi 1861 Tijucan vuorten '
+            + 'metsittämisen uudelleen. Metsänvartija majuri Manuel Gomes '
+            + 'Archer johti työtä, jota teki kuusi orjuutettua henkilöä '
+            + 'nimeltä Eleutério, Constantino, Manuel, Mateus, Leopoldo ja '
+            + 'Maria. Vuosina 1861–1887 he istuttivat yli 100 000 puuta — '
+            + 'työ oli siis kesken juuri isoisän vierailun aikaan 1873. '
+            + 'Nykyinen Tijucan kansallispuisto on tämän orjatyöllä tehdyn '
+            + 'istutuksen tulosta.',
+          tiedosto: 'Floresta da Tijuca e Pedra da Gávea ao fundo.jpg',
+          selite: 'Tijucan metsä julistettiin kansallispuistoksi 1961, ja '
+            + 'sen takana kohoava Pedra da Gávea on kaupungin korkeimpia '
+            + 'huippuja.',
+          lahde: 'Marc Ferrez / Instituto Moreira Salles, Wikimedia Commons (PD)',
+          wiki: 'Tijuca National Park',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Christ the Redeemer - Cristo Redentor.jpg',
+          selite: 'Kristus-patsas on 30 metriä korkea ilman kahdeksan '
+            + 'metrin jalustaansa, ja se valittiin 7. heinäkuuta 2007 '
+            + 'uusien maailman seitsemän ihmeen joukkoon.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+        kappale: 'Rio on São Paulon jälkeen Brasilian toiseksi suurin '
+          + 'kaupunki, ja siinä asuu kuusi miljoonaa ihmistä. Matkailijan '
+          + 'Rio jakautuu kahteen osaan, jotka ovat aivan eri-ikäisiä. '
+          + 'Vanha keskusta lahden rannalla on isoisän kaupunki: Praça '
+          + 'Quinze de Novembro, Paço Imperial, Candelárian kirkko ja '
+          + 'Valongon laituri mahtuvat kaikki alle kahden kilometrin '
+          + 'kävelylle. Etelässä ovat rantakaupunginosat Copacabana, '
+          + 'Ipanema ja Leblon, jotka olivat 1873 vielä kaupungin '
+          + 'ulkopuolella. Niiden väliin jää Tijucan sademetsä, ja '
+          + 'vuorille noustaan kahdella laitteella: Corcovadolle '
+          + 'hammasratasjunalla ja Sokerileivälle köysiradalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Rio de Janeiro',
+          taitto: 'opas',
+          teksti: 'Satamakaupunki graniittivuorten ja meren välissä, jossa '
+            + 'keisarikunnan keskusta ja maailman tunnetuimmat rannat ovat '
+            + 'saman metrolinjan varrella.',
+          nosto: 'Kaupungin maisema itsessään on Unescon '
+            + 'maailmanperintökohde: vuonna 2012 listalle otettiin '
+            + '"Rio de Janeiro: Carioca Landscapes between the Mountain and '
+            + 'the Sea" eli vuorten ja meren väliin jäävä kaupunkimaisema, '
+            + 'ei yksittäinen rakennus.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Rio kohoaa Guanabaran lahden suulla graniittivuorten '
+                + 'ja meren välissä — Sokerileipä on kaupungin '
+                + 'käyntikortti, josta laivat tunnistivat sataman jo '
+                + 'kaukaa. Lentokoneella tullaan kahdelle kentälle: '
+                + 'Galeão–Antônio Carlos Jobim hoitaa kaikki '
+                + 'kansainväliset ja useimmat kotimaan lennot, ja '
+                + 'keskustan rannassa oleva Santos Dumont on lähinnä São '
+                + 'Paulon pikalinjan kenttä. Kaupungin sisällä liikutaan '
+                + 'metrolla, jolla on 41 asemaa ja 58 kilometriä rataa, '
+                + 'ja sen jatkeena kulkevat lähijunat, raitiovaunu ja '
+                + 'lautat lahden yli Niteróihin. Corcovadolle nousee '
+                + 'hammasratasrata Cosme Velhon asemalta: se on 3,8 '
+                + 'kilometriä pitkä, avattiin 1884 ja sähköistettiin 1910 '
+                + 'ensimmäisenä Brasiliassa. Sokerileivän köysirata on '
+                + 'vuodelta 1912.',
+              kuva: {
+                tiedosto: 'Bondinho do Pão de Açúcar by Diego Baravelli.jpg',
+                selite: 'Köysirata nousee Praia Vermelhalta Urcan kukkulan '
+                  + 'kautta Sokerileivän huipulle ja avattiin 27. lokakuuta '
+                  + '1912.',
+                lahde: 'Diego Baravelli, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunki, jonka keskellä kasvaa sademetsä',
+              teksti: 'Kaupunki on ahtautunut kapeille rannoille jyrkkien '
+                + 'graniittikukkuloiden väliin — tila on aina ollut '
+                + 'niukkaa, ja se näkyy yhä kaupunkikuvassa. Keskellä '
+                + 'kaupunkia kohoaa Tijucan sademetsä, maailman toiseksi '
+                + 'suurin kaupungin ympäröimä metsäalue: se on kokonaan '
+                + 'ihmisen 1860-luvulta lähtien uudelleen istuttamaa, '
+                + 'koska alkuperäinen metsä oli kaadettu kahvi- ja '
+                + 'polttopuupelloiksi. Maailman suurin kaupunkimetsä on '
+                + 'saman kaupungin toisessa laidassa: Pedra Brancan metsä '
+                + 'Rion länsivyöhykkeellä. Molemmat ovat kaupungin rajojen '
+                + 'sisällä, ja niiden väliin mahtuu miljoonakaupunki. '
+                + 'Kukkuloiden rinteille on kasvanut tiiviitä asuinalueita, '
+                + 'faveloita: Riossa asuu Brasilian kaupungeista toiseksi '
+                + 'eniten favela-asukkaita, mutta osuutena koko väestöstä '
+                + 'kaupunki on vasta yhdestoista. Vanhimmalle niistä, '
+                + 'keskustan takana kohoavalle Morro da Providêncialle, '
+                + 'nousee köysirata Central do Brasilin asemalta, ja '
+                + 'kapeimmilla ja jyrkimmillä kaduilla liikennettä hoitavat '
+                + 'bussien sijaan pikkubussit.',
+              kuva: {
+                tiedosto: 'Cascatinha Taunay do Rio Cachoeira 01.jpg',
+                selite: 'Cascatinha Taunay on noin 30 metriä korkea putous '
+                  + 'aivan Tijucan metsän sisääntulon tuntumassa.',
+                lahde: 'Ricardo Wagner e Silva, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: naamiaiset ennen sambaa',
+              teksti: 'Rion karnevaali juontuu naamiaistanssiaisista, joita '
+                + 'alettiin järjestää 1840 — vuosikymmeniä ennen '
+                + 'sambakouluja ja afrobrasilialaisten rumpujen tuloa '
+                + 'juhlan keskiöön 1900-luvulla. Isoisän vierailun aikaan '
+                + 'karnevaali oli siis yhä eurooppalaishenkinen '
+                + 'naamiaisperinne, jota juhlivat lähinnä kaupungin '
+                + 'yläluokka ja valkoinen väestö. Wikipedia arvelee tavan '
+                + 'tulleen Ranskan tai Saksan hoveista Portugalin ja '
+                + 'Brasilian keisariperheen mukana; varmaa tietoa ei ole. '
+                + 'Afrobrasilialaisen musiikin ja rumpujen vaikutus alkoi '
+                + 'näkyä vasta 1900-luvun ensimmäisellä puoliskolla, ja '
+                + 'siitä kasvoi se karnevaali, joka nykyään paraatii '
+                + 'Sambódromon katsomoiden välissä.',
+            },
+            {
+              otsikko: 'Historian käännekohta: kahvi joka rahoitti valtakunnan',
+              teksti: 'Kahvi oli 1870-luvun Brasilian tärkein vientituote, '
+                + 'ja sen viljely levisi Paraíban laaksoon Rion '
+                + 'pohjoispuolelle sitä mukaa kuin sokeriruoko väistyi. '
+                + 'Kahviplantaasien nälkä työvoimaan piti orjakauppaa '
+                + 'hengissä pitkään sen jälkeen, kun Atlantin yli tuonti '
+                + 'oli jo kielletty — samat plantaasien omistajat, jotka '
+                + 'rikastuivat kahvista, olivat myös niitä, jotka '
+                + 'vastustivat orjuuden lakkauttamista pisimpään. Sama '
+                + 'kahviraha rakensi sen kaupungin, jonka isoisä näki: '
+                + 'sataman, hallintotalot ja rautatiet. Kun orjuus 1888 '
+                + 'lakkautettiin, plantaasien omistajat siirsivät tukensa '
+                + 'tasavaltalaisille, ja keisarikunta kaatui seuraavana '
+                + 'vuonna.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat Rio de Janeiron (Saúde) '
+                + 'sääaseman normaaleja jaksolta 1981–2010, sellaisina '
+                + 'kuin en-Wikipedian Rio de Janeiro -artikkelin sääruutu '
+                + 'ne antaa — lehdellä ei ole tällä kertaa omaa '
+                + 'vuosigraafia, koska säädatan hakukiintiö oli täynnä '
+                + 'lehteä kirjoitettaessa. Asema on 11 metrin korkeudessa '
+                + 'merenpinnasta eli samalla matalalla rantavyöhykkeellä '
+                + 'kuin vanha keskusta. Ilmasto on Köppenin luokituksessa '
+                + 'trooppinen kuiva-kostea (Aw). Kylmää vuodenaikaa ei '
+                + 'ole lainkaan: kylmin kuukausi on heinäkuu, jonka '
+                + 'keskilämpötila on 22,6 astetta, ja lämpimin helmikuu '
+                + 'jonka keskilämpötila on 28,3 astetta. Vuoden keskiarvo '
+                + 'on 25,3 astetta. Sadetta tulee vuodessa 1 069 '
+                + 'millimetriä, ja se jakautuu epätasaisesti: joulukuusta '
+                + 'maaliskuuhun sataa 130–137 millimetriä kuukaudessa ja '
+                + 'rankkasadejaksot ovat pitkiä, kun taas kesä- ja '
+                + 'heinäkuussa jäädään runsaaseen neljäänkymmeneen '
+                + 'millimetriin. Talvi on siis lauha, aurinkoinen ja '
+                + 'kuivin vuodenaika — eteläisellä pallonpuoliskolla se '
+                + 'osuu kesä–elokuulle.',
+              kuva: {
+                tiedosto: 'Lagoa Rodrigo de Freitas, sob névoa - Rio (4912179180).jpg',
+                selite: 'Lagoa Rodrigo de Freitas on merestä kuroutunut '
+                  + 'laguuni Ipaneman ja Tijucan rinteiden välissä.',
+                lahde: 'Cyro A. Silva from Rio de Janeiro, Brasil, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Corcovado',
+                tahdet: 3,
+                selite: 'Hammasratasrata vie 710 metrin huipulle, jolla '
+                  + 'isoisän aikaan ei ollut mitään.',
+              },
+              {
+                mita: 'Sokerileipä',
+                tahdet: 3,
+                selite: 'Köysirata vuodelta 1912 nousee Urcan kautta 396 '
+                  + 'metrin huipulle lahden suulla.',
+              },
+              {
+                mita: 'Vanha keskusta',
+                tahdet: 3,
+                selite: 'Praça XV, Paço Imperial ja Candelárian kirkko ovat '
+                  + 'parin korttelin kävelyllä.',
+              },
+              {
+                mita: 'Valongon laituri',
+                tahdet: 2,
+                selite: 'Maailmanperintökohde, jonka kiveys kaivettiin esiin '
+                  + 'vasta 2011.',
+              },
+              {
+                mita: 'Tijucan metsä',
+                tahdet: 2,
+                selite: 'Kaupungin keskellä kasvava sademetsä, joka on '
+                  + 'kokonaan uudelleen istutettu.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sää- ja sadeluvut ovat en-Wikipedian
+             * Rio de Janeiro -artikkelin sääruudusta, sama lähde kuin
+             * jaksossa 5 — eivät pelin omasta säärivistä, jota tällä
+             * kaupungilla ei vielä ole.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Vuodenajat ovat toisin päin',
+                teksti: 'Eteläisellä pallonpuoliskolla kesä on joulukuusta '
+                  + 'maaliskuuhun ja talvi kesäkuusta elokuuhun.',
+              },
+              {
+                otsikko: 'Kesä on kuuma ja märkä',
+                teksti: 'Helmikuun keskilämpötila on 28,3 astetta, ja '
+                  + 'joulu–maaliskuussa sataa 130–137 millimetriä '
+                  + 'kuukaudessa pitkinä rankkasadejaksoina.',
+              },
+              {
+                otsikko: 'Talvikin on lämmin',
+                teksti: 'Kylmimmän kuukauden heinäkuun keskilämpötila on '
+                  + '22,6 astetta — kylmää vuodenaikaa ei ole.',
+              },
+              {
+                otsikko: 'Vuorille jonotetaan',
+                teksti: 'Corcovadon hammasratasradalla kulkee kolme kahden '
+                  + 'vaunun junaa, joten huipulle pääsee 540 matkustajaa '
+                  + 'tunnissa ja odotus voi venyä.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Rio oli kolme kertaa pääkaupunki: ensin siirtomaan, sitten '
+        + 'koko Portugalin valtakunnan ja lopulta itsenäisen keisarikunnan. '
+        + 'Vuonna 1873 kaupunki eli murroskohtaa, jossa vapaus eteni '
+        + 'hitaasti ja vain osittain.',
+      tehtava: {
+        kysymys: 'Mitä vuoden 1871 vapaan kohdun laki teki?',
+        vaihtoehdot: [
+          'Julisti orjuutettujen naisten uudet lapset vapaiksi',
+          'Lakkautti orjuuden kokonaan',
+          'Kielsi orjien tuonnin Atlantin yli',
+          'Vapautti kaikki yli 60-vuotiaat',
+        ],
+        oikea: 0,
+        fakta: 'Laki koski vain sen jälkeen syntyneitä lapsia, ja hekin '
+          + 'olivat velvollisia palvelemaan äitinsä omistajaa 21 ikävuoteen '
+          + 'asti. Yli miljoona ihmistä pysyi orjuutettuna, ja orjuus '
+          + 'lakkautettiin kokonaan vasta 1888.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tammikuun joki joka ei ollut joki',
+          teksti: 'Portugalilaiset purjehtivat Guanabaran lahdelle '
+            + '1. tammikuuta 1502 ja luulivat sitä joen suuksi — siitä nimi '
+            + 'Rio de Janeiro, "tammikuun joki". Ranskalaiset siirtolaiset '
+            + 'ehtivät perustaa lahden saarelle oman siirtokuntansa 1555, ja '
+            + 'portugalilaiset karkottivat heidät vasta vuosien sotimisen '
+            + 'jälkeen 1567. Estácio de Sá perusti varsinaisen kaupungin '
+            + '1. maaliskuuta 1565 ja nimesi sen São Sebastião do Rio de '
+            + 'Janeiroksi silloisen kuninkaan suojeluspyhimyksen mukaan.',
+          tiedosto: 'MHN Leandro Joaquim - Cena Marítima.jpg',
+          selite: 'Villegagnonin saari, jolle ranskalaiset rakensivat '
+            + 'siirtokuntansa 1555, sai myöhemmin linnoituksen ja on yhä '
+            + 'lahden suulla.',
+          lahde: 'Leandro Joaquim, Wikimedia Commons (PD)',
+          wiki: 'Rio de Janeiro',
+        },
+        {
+          otsikko: 'Pääkaupunki kolme kertaa',
+          teksti: 'Rio nousi Brasilian siirtomaahallinnon pääkaupungiksi '
+            + '1763, kun Minas Geraisin kulta- ja timanttilöydöt tekivät '
+            + 'siitä Salvadoria käytännöllisemmän vientisataman. Vuonna '
+            + '1808 koko Portugalin hovi muutti tänne, ja 1815 kaupungista '
+            + 'tuli Portugalin, Brasilian ja Algarven yhdistyneen '
+            + 'kuningaskunnan pääkaupunki. Itsenäistymisen 1822 jälkeen Rio '
+            + 'jatkoi Brasilian keisarikunnan pääkaupunkina isoisän koko '
+            + 'vierailun ajan — asema säilyi tasavallankin alla aina vuoteen '
+            + '1960.',
+          tiedosto: 'Paço Imperial ao entardecer.jpg',
+          selite: 'Paço Imperial Praça XV:n laidalla oli vuorollaan '
+            + 'siirtomaan kuvernöörien, kuninkaallisen hovin ja '
+            + 'keisarikunnan hallintotalo.',
+          lahde: 'Guilherme Soares, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Paço Imperial',
+        },
+        {
+          otsikko: 'Kupoli joka valmistui neljä vuotta myöhässä',
+          teksti: 'Candelárian kirkon rakentaminen alkoi 1775, ja sen '
+            + 'barokkijulkisivu vihittiin käyttöön jo 1811 kuningas João '
+            + 'VI:n läsnä ollessa, vaikka kirkko oli sisältä yhä kesken. '
+            + 'Keskikupu jäi vuosikymmeniksi valmistumatta: se saatiin '
+            + 'lopulta pystyyn vasta 1877, neljä vuotta isoisän vierailun '
+            + 'jälkeen. Kupolin kivet veistettiin valkoisesta '
+            + 'portugalilaisesta lioz-kivestä Lissabonissa ja kuljetettiin '
+            + 'laivalla Rioon. Isoisä näki siis kirkon vielä ilman kupolia '
+            + '— myöhemmin siitä tuli hetkeksi kaupungin korkein '
+            + 'rakennelma.',
+          tiedosto: 'Igreja da Candelária - Rio de Janeiro (5617801438).jpg',
+          selite: 'Kirkon holvit valmistuivat noin 1856, mutta kupoli ja sen '
+            + 'kahdeksan patsasta saatiin paikoilleen vasta 1877.',
+          lahde: 'Marinelson Almeida - Traveling through Brazil from Niteroi, Brasil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Candelária Church',
+        },
+        {
+          otsikko: 'Vapaa kohtu, orja edelleen',
+          teksti: 'Vuoden 1871 vapaan kohdun laki oli vasta ensimmäinen '
+            + 'askel: se vapautti orjuutettujen äitien tulevat lapset mutta '
+            + 'ei ketään jo orjuutettua. Paraguayn sota 1864–1870 muutti '
+            + 'monen upseerin asennetta, kun he olivat taistelleet rinta '
+            + 'rinnan orjuutettujen sotilaiden kanssa. Vasta 1888 prinsessa '
+            + 'Isabel allekirjoitti niin sanotun kultaisen lain ja lakkautti '
+            + 'orjuuden kokonaan isänsä Pedro II:n ollessa Euroopassa — '
+            + 'Brasiliasta tuli viimeinen maa Amerikassa, joka luopui '
+            + 'orjuudesta.',
+          tiedosto: 'Visconde do Rio Branco 1879.jpg',
+          selite: 'Vuoden 1871 laki tunnetaan myös Rio Branco -lakina sitä '
+            + 'ajaneen pääministerin José Paranhosin arvonimen mukaan.',
+          lahde: 'Alberto Henschel (1827-1882), Wikimedia Commons (PD)',
+          wiki: 'Rio Branco Law',
+        },
+      ],
+    },
+  ],
 };
