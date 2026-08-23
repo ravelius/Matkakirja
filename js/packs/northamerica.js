@@ -14,6 +14,7 @@
 // ovat omia saariaan, joihin pääsee vain laivalla.
 
 import { NORTHAMERICA_QUESTIONS, NORTHAMERICA_FACTS } from './northamerica-questions.js';
+import { NORTH_AMERICA_COUNTRY_SHAPES, NORTH_AMERICA_CITY_COUNTRY } from './northamerica-countries.js';
 import { themedTokenTypes } from '../tokens.js';
 
 const NA_MAP = {
@@ -237,53 +238,16 @@ const NA_EDGES = [
   { a: 'havanna', b: 'panama', steps: 5, type: 'sea', via: [[812, 780], [840, 838]] },
 ];
 
-// map.cityCountry: kaupunki (id) → ISO-3166-1 alpha-3 -maatunnus.
-// Tekninen esivaihe uusien mantereiden lehtityölle (docs/mantereen-resepti.md
-// vaihe 2, Dubai-oppi): ilman tätä taulua menovinkit, liput ja "maa
-// numeroina" eivät syty lehdissä, vaikka aineisto olisi muuten valmis.
-// countryShapes (maiden rajat, korkokartat) tulee myöhemmin sisältöagentin
-// erässä samaan tapaan kuin middleeast.js:ssä ja africa.js:ssä — puuttuva
-// countryShapes ei riko mitään, ks. niiden kommentit.
-const NA_CITY_COUNTRY = {
-  newyork: 'USA',
-  sanfrancisco: 'USA',
-  nome: 'USA',
-  anchorage: 'USA',
-  whitehorse: 'CAN',
-  yellowknife: 'CAN',
-  sitka: 'USA',
-  vancouver: 'CAN',
-  yellowstone: 'USA',
-  mountrushmore: 'USA',
-  winnipeg: 'CAN',
-  churchill: 'CAN',
-  iqaluit: 'CAN',
-  nuuk: 'GRL',
-  labrador: 'CAN',
-  stjohns: 'CAN',
-  halifax: 'CAN',
-  montreal: 'CAN',
-  toronto: 'CAN',
-  chicago: 'USA',
-  appalakit: 'USA',
-  bermuda: 'BMU',
-  denver: 'USA',
-  santafe: 'USA',
-  grandcanyon: 'USA',
-  losangeles: 'USA',
-  hawaii: 'USA',
-  houston: 'USA',
-  neworleans: 'USA',
-  miami: 'USA',
-  havanna: 'CUB',
-  sanjuan: 'PRI',
-  monterrey: 'MEX',
-  mexico: 'MEX',
-  merida: 'MEX',
-  guatemala: 'GTM',
-  managua: 'NIC',
-  panama: 'PAN',
-};
+// KAUPUNKI -> MAA JA MAIDEN MUODOT ASUVAT NYT OMASSA TIEDOSTOSSAAN.
+//
+// Taulu NA_CITY_COUNTRY oli tässä 23.8.2026 asti. Se siirtyi
+// sellaisenaan js/packs/northamerica-countries.js:ään nimellä
+// NORTH_AMERICA_CITY_COUNTRY, kun laudalle tehtiin countryShapes —
+// samaan tapaan kuin middleeast.js pitää molemmat taulut
+// middleeast-countries.js:ssä ja tuo ne yhtenä parina. Alkuperäinen
+// peruste taululle pätee yhä: ilman kaupunki->maa-tietoa menovinkit,
+// liput ja "maa numeroina" eivät syty lehdissä, vaikka aineisto olisi
+// muuten valmis (docs/mantereen-resepti.md vaihe 2, Dubai-oppi).
 
 // Lentoreitit kulkevat suoraan kaupungista toiseen yhdellä vuorolla.
 const NA_AIR_ROUTES = [
@@ -307,9 +271,21 @@ export const NORTHAMERICA = {
   tagline: 'Etsi Montezuman kadonnut aarre Kalliovuorilta, preerialta, Karibian saarilta ja Alaskan tundralta.',
   ariaLabel: 'Pohjois-Amerikan aarrekartta',
 
+  /*
+   * countryShapes ja cityCountry kytkettiin 23.8.2026 (ks.
+   * northamerica-countries.js). Ennen sitä laudalla oli vain
+   * cityCountry, ja USA:n maalehti aukesi pelkästään maailmankartalla.
+   *
+   * Kymmenellä maalla on muoto, ja ne ovat täsmälleen ne maat, joihin
+   * laudan 38 kohdetta kuuluvat. Havaijilla ei ole omaa rengasta —
+   * lauta on siirtänyt saariketjun 150 yksikköä idemmäs, joten
+   * Natural Earthin tosipaikan rengas jäisi rannikkorajauksen
+   * ulkopuolelle; kohde osoittaa silti USA:han cityCountryssa.
+   */
   map: {
     ...NA_MAP,
-    cityCountry: NA_CITY_COUNTRY,
+    countryShapes: NORTH_AMERICA_COUNTRY_SHAPES,
+    cityCountry: NORTH_AMERICA_CITY_COUNTRY,
     outlines: [
       NA_MAP.mainlandPoints, NA_MAP.greenlandPoints, NA_MAP.newfoundlandPoints,
       NA_MAP.cubaPoints, NA_MAP.puertoRicoPoints, NA_MAP.bermudaPoints,
