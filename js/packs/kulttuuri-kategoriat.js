@@ -51735,6 +51735,34 @@ export const KULTTUURI_KATEGORIAT = {
        * samalla tiedostolla.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 10 (23.8.2026,
+         * tools/hero-tyolista-5.mjs) karusellin kärjessä Helsingin
+         * mallin mukaan. Sky Tower on lehden 1873-kehyksessä
+         * anakronismi, mutta herot kuvaavat NYKYISTÄ kaupunkia.
+         */
+        {
+          ampari: 'herokoe/hero-auckland-aamu.png',
+          selite: 'Aucklandin Sky Tower valmistui 1997, ja 328-metrisenä '
+            + 'se on eteläisen pallonpuoliskon korkeimpia vapaasti '
+            + 'seisovia rakenteita.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-auckland-keskipaiva.png',
+          selite: 'Rangitoto kohosi merestä tulivuorenpurkauksissa noin '
+            + '600 vuotta sitten ja on Aucklandin tulivuorikentän nuorin '
+            + 'ja suurin keila.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-auckland-ilta.png',
+          selite: 'Maungawhau eli Mount Eden on Aucklandin korkein '
+            + 'tulivuorenkeila, jonka rinteillä on yhä maorien '
+            + 'pā-linnoituksen pengerryksiä — kraatteri on pyhä eikä '
+            + 'sinne saa laskeutua.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Auckland Skyline as seen from Devonport 20100128 3.jpg',
           selite: 'Aucklandin satama käsitteli vuonna 2015 kolmanneksen koko '
@@ -52278,6 +52306,33 @@ export const KULTTUURI_KATEGORIAT = {
        * tiedostolla, eikä yksikään ole yksityiskohta- tai sisäkuva.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 10 (23.8.2026,
+         * tools/hero-tyolista-5.mjs) karusellin kärjessä Helsingin
+         * mallin mukaan.
+         */
+        {
+          ampari: 'herokoe/hero-buenosaires-aamu.png',
+          selite: 'Avenida 9 de Julion Obeliski pystytettiin 1936 '
+            + 'kaupungin perustamisen nelisataavuotisjuhlaan, ja se on '
+            + '67,5 metriä korkea.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-buenosaires-keskipaiva.png',
+          selite: 'Casa Rosada sai nykyhahmonsa 1880-luvulla, kun '
+            + 'presidentinlinna ja sen viereinen postipalatsi yhdistettiin '
+            + 'suurella kaariportilla — vaaleanpunainen väri on talon '
+            + 'tunnus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-buenosaires-ilta.png',
+          selite: 'Puerto Maderon Puente de la Mujer on Santiago '
+            + 'Calatravan suunnittelema kääntyvä kävelysilta vuodelta '
+            + '2001, ja sen vino masto kuvaa tangoparia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Buenos Aires aerial 1.jpg',
           selite: 'Kaupunki on rakennettu tasaiselle pampalle, ja '
@@ -52899,6 +52954,57 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * AVAUSKARUSELLI (lisätty 23.8.2026): kierroksen 10 generoidut
+       * herot (tools/hero-tyolista-5.mjs) + samat kolme laajaa
+       * yleiskuvaa kuin kansikuvissa. Toisto on tietoinen: ennenNyt-pari
+       * korvaa pikkurivin, jolloin kansikuvat eivät muuten näy
+       * etusivulla lainkaan — karusellissa ne pääsevät oikeuksiinsa.
+       * Kristus-patsas ja köysirata ovat lehden 1873-kehyksessä
+       * anakronismeja, mutta herot kuvaavat NYKYISTÄ kaupunkia.
+       */
+      avauskuvat: [
+        {
+          ampari: 'herokoe/hero-rio-aamu.png',
+          selite: 'Corcovadon huipulla seisova Kristus Vapahtaja '
+            + 'valmistui 1931: 30-metrinen art deco -veistos verhottiin '
+            + 'vuolukivilaatoin, ja sen jalusta on kahdeksan metriä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-rio-keskipaiva.png',
+          selite: 'Sokerileivän köysirata avattiin 27. lokakuuta 1912, '
+            + 'ja se nousee kahdessa osuudessa Morro da Urcan kautta 396 '
+            + 'metrin graniittikuvulle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-rio-ilta.png',
+          selite: 'Copacabanan neljän kilometrin hiekkakaarta reunustaa '
+            + 'Roberto Burle Marxin suunnittelema mustavalkoinen '
+            + 'aaltomosaiikkipromenaadi, joka valmistui nykyasuunsa 1970.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          tiedosto: 'Rio de Janeiro, Pão de Açúcar from Cristo Redentor (15744316848).jpg',
+          selite: 'Sokerileipä kohoaa 396 metriä Guanabaran lahden '
+            + 'suulla niemekkeellä, joka työntyy Atlantille.',
+          lahde: 'Arian Zwegers from Brussels, Belgium, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Panorama do Rio de Janeiro a partir do Parque das Ruínas 2024 11 24.jpg',
+          selite: 'Santa Teresan kukkulalta näkyy Flamengon ranta, lahti '
+            + 'ja Sokerileipä — kaupunki rakentuu vuorten ja meren '
+            + 'väliin.',
+          lahde: 'Tet, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Enseada de Botafogo vista do Pão de Açúcar.jpg',
+          selite: 'Botafogon poukama on suojaisa satama-allas, jonka '
+            + 'takana kaupunki kiipeää graniittikukkuloiden väliin.',
+          lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       ennenNyt: [
         {
           tiedosto: 'Copacabana, Acervo do Instituto Moreira Salles.jpg',
@@ -53471,6 +53577,34 @@ export const KULTTUURI_KATEGORIAT = {
        * ole minkään noston aiheena samalla tiedostolla.
        */
       avauskuvat: [
+        /*
+         * GENEROIDUT HEROT, KIERROS 10 (23.8.2026,
+         * tools/hero-tyolista-5.mjs) karusellin kärjessä Helsingin
+         * mallin mukaan. Oopperatalo ja Harbour Bridge ovat lehden
+         * 1873-kehyksessä anakronismeja, mutta herot kuvaavat NYKYISTÄ
+         * kaupunkia kuten muuallakin.
+         */
+        {
+          ampari: 'herokoe/hero-sydney-aamu.png',
+          selite: 'Jørn Utzonin suunnittelema Sydneyn oopperatalo '
+            + 'avattiin 1973, ja sen purjekatot on verhottu yli '
+            + 'miljoonalla ruotsalaisella keraamisella laatalla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sydney-keskipaiva.png',
+          selite: 'Sydney Harbour Bridge valmistui 1932: sen teräskaari '
+            + 'jännittää 503 metriä, ja kannella kulkevat sekä junat '
+            + 'että kahdeksan autokaistaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sydney-ilta.png',
+          selite: 'Bondin rannan eteläkallioon rakennettu '
+            + 'Icebergs-meriallas on ollut talviuimareiden koti vuodesta '
+            + '1929, ja aallot huuhtovat sen reunan yli.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Sydney as seen from an airplane (28480748074).jpg',
           selite: 'Port Jackson on yksi maailman suurimmista '
