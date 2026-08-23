@@ -52,6 +52,13 @@ const MITTARUUTU = 64;
 const MUSTEEN_RAJA = 24;
 /** Kyltin ja rakennuksen jalan väli, prosenttia LAATIKON korkeudesta. */
 const KYLTIN_RAKO = 3;
+/**
+ * Karttanimen ja rakennuksen jalan väli LEPOTILASSA, prosenttia
+ * laatikon korkeudesta. Sama mittaus kuin kyltillä, mutta lepotilassa
+ * kuva täyttää laatikon (ei ylivuotoa), joten rako on laatikon
+ * mittakaavassa kaksi kertaa kyltin rako — näkyvä väli on sama.
+ */
+const NIMEN_RAKO = 6;
 
 /**
  * Kuvan alin läpinäkymätön rivi osuutena kuvan korkeudesta (0–1).
@@ -81,38 +88,48 @@ function mittaaAlareuna(kuva) {
 }
 
 /**
- * Kyltin paikka LAATIKON koordinaatistossa prosentteina.
+ * Rakennuksen jalka osuutena LAATIKON korkeudesta lepotilassa (0–1).
  *
- * Valittu piirros on laatikko, jonka päällä kuva vuotaa yli: kuva
- * alkaa laatikon −50 %:sta ja päättyy 150 %:iin (ks. CSS
- * .kohde-piirros.valittu .kohde-piirros-kuva). Kuvan oma osuus f
- * osuu siis laatikon kohtaan −50 + 200 f.
+ * Lepotilassa kuva täyttää laatikon (CSS .kohde-piirros-kuva: inset 0),
+ * joten kuvan oma osuus f on suoraan laatikon osuus f. Valittuna kuva
+ * vuotaa laatikon yli −50 %:sta 150 %:iin (ks. CSS
+ * .kohde-piirros.valittu .kohde-piirros-kuva), ja sama osuus osuu
+ * silloin laatikon kohtaan −50 + 200 f — kumpikin luku lasketaan
+ * tästä samasta osuudesta (asetaKylttiRaja).
  *
  * Ei-neliömäinen kuva vielä kirjeenä: object-fit: contain kutistaa
  * leveän kuvan laatikon sisään ja keskittää sen pystysuunnassa, joten
  * osuus lasketaan silloin kutistetun kuvan sisällä.
  */
-function kylttiKohta(kuva, alareuna) {
+function jalanOsuus(kuva, alareuna) {
   const suhde = (kuva.naturalWidth ?? 0) / (kuva.naturalHeight ?? 1);
   const s = Number.isFinite(suhde) && suhde > 1 ? suhde : 1;
-  const laatikossa = ((1 - (1 / s)) / 2) + (alareuna / s);
-  return -50 + (200 * laatikossa) + KYLTIN_RAKO;
+  return ((1 - (1 / s)) / 2) + (alareuna / s);
 }
 
-/** Mittaa piirroksen (välimuistista) ja kirjoittaa --kyltti-top. */
+/**
+ * Mittaa piirroksen (välimuistista) ja kirjoittaa kaksi paikkaa:
+ * --kyltti-top valitun piirroksen nimikyltille ja --nimi-top
+ * lepotilan pienelle karttanimelle (23.8.2026, ks. .kohde-nimi).
+ * Kumpikin on laatikon koordinaatistossa, ja kumpikin osuu
+ * rakennuksen jalan alle — mitattuna, ei arvattuna.
+ */
 function asetaKylttiRaja(piste, polku) {
   if (!piste || !polku) return;
   if (!KYLTTIRAJAT.has(polku)) {
     KYLTTIRAJAT.set(polku, new Promise((valmis) => {
       const kuva = new Image();
       kuva.decoding = 'async';
-      kuva.onload = () => valmis(kylttiKohta(kuva, mittaaAlareuna(kuva)));
-      kuva.onerror = () => valmis(150 + KYLTIN_RAKO);
+      kuva.onload = () => valmis(jalanOsuus(kuva, mittaaAlareuna(kuva)));
+      // Mittaamaton kuva: molemmat paikat koko kuvan alle eli sinne,
+      // missä ne olivat ennen mittauksen valmistumista.
+      kuva.onerror = () => valmis(1);
       kuva.src = polku;
     }));
   }
-  KYLTTIRAJAT.get(polku).then((kohta) => {
-    piste.style.setProperty('--kyltti-top', `${kohta.toFixed(1)}%`);
+  KYLTTIRAJAT.get(polku).then((osuus) => {
+    piste.style.setProperty('--kyltti-top', `${(-50 + (200 * osuus) + KYLTIN_RAKO).toFixed(1)}%`);
+    piste.style.setProperty('--nimi-top', `${((100 * osuus) + NIMEN_RAKO).toFixed(1)}%`);
   });
 }
 
@@ -122,10 +139,13 @@ function asetaKylttiRaja(piste, polku) {
  * yksinkertaisesti pelkkiä ympyröitä, joissa on numero sisällä, ja
  * sitten tehdä selitteet tekstimuodossa kartan ulkopuolelle."
  *
+ * Numerot väistyivät nimien tieltä 23.8.2026 (omistajan tilaus): kartta
+ * on nyt piirroksia ja täpliä, joiden alla lukee kohteen nimi pienellä,
+ * ja kartan alla oleva lista on pelkkiä nimiä.
+ *
  * Järjestys: otsikko, esittely, koko palstan levyinen kartta,
- * numeroidut selitteet ja lähderivi. Numerointi tulee kohteiden
- * järjestyksestä datassa. Kohde, jolla on tarkistettu fi.wikipedian
- * artikkeli, aukeaa sekä kartan ympyrästä että selitteestä; muut
+ * nimiselitteet ja lähderivi. Kohde, jolla on tarkistettu fi.wikipedian
+ * artikkeli, aukeaa sekä kartan merkistä että selitteestä; muut
  * ovat pelkkiä merkkejä. Data: js/packs/maakartat.js
  * (KAUPUNKIKARTAT).
  */
@@ -320,8 +340,8 @@ export function piirraKaupunkiKartta(ui, kohde) {
    * avaajat annetaan sille siksi tässä kerättynä listana
    * (avaaKarttaSuurennos). Listaan tulee alkio JOKAISESTA kohteesta,
    * myös avaamattomasta, jotta indeksi on aina kohteen
-   * järjestysnumero miinus yksi — sama numero, joka on kartan
-   * ympyrässä ja selitelistassa.
+   * järjestysnumero miinus yksi — sama numero, joka kirjoitetaan
+   * pisteen dataset.numero-kenttään.
    */
   const avaajat = [];
   (kartta.kohteet ?? []).forEach((raaka, i) => {
@@ -337,13 +357,21 @@ export function piirraKaupunkiKartta(ui, kohde) {
      * "Piirrokset kartalla saisi näkyä numeroiden paikalla" ja
      * "Ota numerot pois kartalta ja tee piirroksista leikattuja").
      * Kohde, jolla on miniatyyri, piirtyy kartalle taustattomana
-     * leikkauskuvana ilman numeroa; selitelistan numerointi riittää
-     * kytkemään listan ja kartan. Kohde ilman miniatyyriä on
-     * entinen numeroympyrä. Nimikyltti näkyy vain valittuna
+     * leikkauskuvana; kohde ilman miniatyyriä on pieni täplä, jotta
+     * se ylipäätään näkyy. Nimikyltti näkyy vain valittuna
      * (suurennettuna) — ks. valintalogiikka alempana.
+     *
+     * NUMEROT POIS, NIMET TILALLE (omistajan tilaus 23.8.2026: "Ota
+     * numerot pois kartalta myös kokosivun näkymässä mutta lisää
+     * kohteiden nimet näkyviin yksinkertaisella tekstillä"). Merkissä
+     * ei lue enää mitään: jokainen kohde saa nimensä pienenä tekstinä
+     * merkin alle (.kohde-nimi), ja kartan alla oleva lista on
+     * numeroiden sijaan pelkkiä nimiä. Järjestysnumero jää dataan
+     * (dataset.numero), koska kokoruutunäkymä kytkee sillä kloonatun
+     * napin oikeaan avaajaan.
      */
     const piste = html(avattava ? 'button' : 'span',
-      'maakartta-piste kaupunki-kohde kohde-numero', miniatyyri ? '' : numero);
+      'maakartta-piste kaupunki-kohde kohde-numero');
     if (miniatyyri) {
       piste.classList.add('kohde-piirros');
       const pikku = document.createElement('img');
@@ -366,12 +394,34 @@ export function piirraKaupunkiKartta(ui, kohde) {
     }
     piste.style.left = `${p.x.toFixed(1)}%`;
     piste.style.top = `${p.y.toFixed(1)}%`;
-    // Numero talteen myös piirroskohteelta: kokoruutunäkymä merkitsee
-    // sillä piirrokset selitelistan numeroihin (avaaKarttaSuurennos).
+    // Numero talteen: kokoruutunäkymä kytkee sillä kloonatun napin
+    // oikeaan avaajaan (avaaKarttaSuurennos). Kartalla se ei näy.
     piste.dataset.numero = numero;
-    const selite = html(avattava ? 'button' : 'span', 'kartta-selite');
-    selite.appendChild(html('span', 'kartta-selite-numero', numero));
-    selite.appendChild(document.createTextNode(k.nimi));
+    /*
+     * KOHTEEN NIMI KARTALLE (omistajan tilaus 23.8.2026). Nimi on
+     * merkin lapsi, joten se kulkee mukana kaikkialle, missä piste
+     * kulkee: hajautukseen, zoomiin, panorointiin ja kokoruudun
+     * kloonaukseen. Teksti on tarkoituksella pieni (ks. CSS
+     * .kohde-nimi) — omistaja: "Koko voi olla sen verran pieni että
+     * pitää vähän zoomata että näkee". Piirroskohteella nimi menee
+     * rakennuksen jalan alle mitattuun kohtaan (--nimi-top), täplällä
+     * täplän alle.
+     *
+     * EI aria-hidden: napilla saavutettava nimi tulee aria-labelista
+     * eikä sisällöstä, ja avaamattomalla kohteella tämä teksti on
+     * ainoa, joka kertoo ruudunlukijalle paikan nimen. Ääneen lukija
+     * ohittaa koko pisteen (js/lukija.js: .maakartta-piste).
+     */
+    const nimilappu = html('span', 'kohde-nimi', k.nimi);
+    piste.appendChild(nimilappu);
+    /*
+     * SELITELISTA ON PELKKIÄ NIMIÄ (omistajan tilaus 23.8.2026).
+     * Numeropallo kytki listan kartan numeroympyrään; kun kartalla
+     * ei ole enää numeroita, pallo osoittaisi tyhjään. Nimi on nyt
+     * sekä kartalla että listassa, joten ne löytävät toisensa ilman
+     * välikieltä.
+     */
+    const selite = html(avattava ? 'button' : 'span', 'kartta-selite', k.nimi);
     /*
      * Oma juttu voittaa wikin (omistajan toive 7.8.2026: "kirjoita
      * itse nähtävyyksien tekstit"). Ilman omaa tekstiä napautus avaa
@@ -401,7 +451,7 @@ export function piirraKaupunkiKartta(ui, kohde) {
      * kasvattaa piirroksen ja näyttää nimikyltin (CSS: .valittu);
      * uusi napautus kuvaan palauttaa koon, mutta napautus KYLTTIIN
      * avaa jutun. Juttuun pääsee myös selitelistasta kuten ennen.
-     * Numeroympyrä (kohde ilman piirrosta) avaa jutun suoraan.
+     * Kohdetäplä (kohde ilman piirrosta) avaa jutun suoraan.
      */
     const avaa = (miniatyyri && avaaJuttu)
       ? () => {
@@ -722,10 +772,10 @@ function mitoitaKarttaSuurennos(kortti, suhde) {
  * napautussulku olisi siis suoraan zoomin tiellä.
  *
  * KARTTA KLOONATAAN KEHYKSINEEN, ei näytetä pelkkänä <img>-kuvana.
- * Numeroympyrät, leikatut piirroskohteet ja mittajana ovat
- * DOM-elementtejä kuvan päällä prosenttipaikoissaan, joten pelkkä
- * kuvatiedosto jäisi kokoruudulla ilman numeroita — juuri niitä
- * varten karttaa suurennetaan. Klooni saa oman karttazoominsa
+ * Kohdetäplät, leikatut piirroskohteet, niiden nimitekstit ja
+ * mittajana ovat DOM-elementtejä kuvan päällä prosenttipaikoissaan,
+ * joten pelkkä kuvatiedosto jäisi kokoruudulla ilman kohteita — juuri
+ * niitä varten karttaa suurennetaan. Klooni saa oman karttazoominsa
  * (kytkeKarttaZoom), joten kokoruudulla pyörä, nipistys, raahaus ja
  * tuplanapautus toimivat kuten lehden kartassa; zoomiasento nollataan
  * avattaessa.
@@ -737,7 +787,7 @@ function mitoitaKarttaSuurennos(kortti, suhde) {
  * kutsuja antaa avaajat listana (`asetukset.avaajat`, ks.
  * piirraKaupunkiKartta), ja klooni kytkee ne uudelleen kohteen
  * järjestysnumeron kautta — sama juttu aukeaa kokoruudulta kuin
- * lehden kartasta, sekä numeroympyrästä, piirroksesta että
+ * lehden kartasta, sekä kohdetäplästä, piirroksesta että
  * selitelistan riviltä.
  *
  * KAKSIVAIHEISUUS PÄTEE MYÖS KOKORUUDULLA (omistajan bugiraportti
@@ -767,7 +817,7 @@ function mitoitaKarttaSuurennos(kortti, suhde) {
  * aina kartan keskikohta, ja lehden omat luokat
  * (.kohde-piirros.valittu, .kohde-kyltti) antavat saman ulkoasun.
  *
- * Kohde ilman piirrosta (numeroympyrä) avaa jutun suoraan kuten
+ * Kohde ilman piirrosta (pelkkä täplä) avaa jutun suoraan kuten
  * ennenkin: sillä ei ole mitään näytettävää isompana.
  *
  * ALKUPERÄISEEN KARTTAAN EI KOSKETA. Kehys on container-type: size
@@ -781,7 +831,7 @@ function mitoitaKarttaSuurennos(kortti, suhde) {
  * KAHDELLE KARTTATYYPILLE (21.8.2026). Sama avaaja palvelee myös
  * maalehden korkokarttaa (js/maalehti.js): se rakentaa kartastaan
  * kehyksen, jossa kaupunkipisteet ovat lavalla samaan tapaan kuin
- * kohdekartan numeroympyrät, ja antaa kuvasuhteen `asetukset.mitat`
+ * kohdekartan kohdetäplät, ja antaa kuvasuhteen `asetukset.mitat`
  * -kentässä — sen oma kehys sisältää lähderivin, joten mitattu
  * laatikko valehtelisi. Kaikki muu on yhteistä: klooni, zoom,
  * panorointi, mitoitus ja sulku. Avaajalistaa se ei anna, joten
@@ -956,7 +1006,7 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
       nappi.tabIndex = -1;
       continue;
     }
-    // Piirroskohde suurentuu ensin, numeroympyrä avaa jutun suoraan.
+    // Piirroskohde suurentuu ensin, pelkkä täplä avaa jutun suoraan.
     const piirroskohde = Boolean(tieto.piirros);
     nappi.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -967,28 +1017,24 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
       piirroskohde ? `${tieto.nimi} — suurenna piirros` : tieto.otsikko);
   }
   /*
-   * NUMEROLAPPU PIIRROSKOHTEILLE. Numeroympyrä kertoo itse, monesko
-   * kohde on kyseessä, mutta leikattu piirros ei — sen numeron näkee
-   * vasta napauttamalla (lehdessä nimikyltistä, kokoruudulla
-   * piirroskortista). Ilman lappua alla oleva selitelista jäisi
-   * piirroskaupungeissa (Tokio, Kioto, Peking...) irralliseksi
-   * nimiluetteloksi. Numero tulee samasta lähteestä kuin listakin:
-   * kohteen järjestysnumero datassa (dataset.numero).
+   * NUMEROLAPPU PIIRROSKOHTEILTA POIS (omistajan tilaus 23.8.2026:
+   * "Ota numerot pois kartalta myös kokosivun näkymässä mutta lisää
+   * kohteiden nimet näkyviin yksinkertaisella tekstillä").
+   *
+   * Kokoruudulla jokaisen piirroksen nurkassa oli 22.8.2026 alkaen
+   * pieni numeropallo, joka kytki piirroksen kartan alla olevaan
+   * numeroituun listaan. Nyt kytkentä on nimi eikä numero: nimi lukee
+   * sekä kartalla (.kohde-nimi, klooni tuo sen mukanaan) että listassa,
+   * eikä lappua tarvita mihinkään. Kokoruutu ei siis tee kartalle enää
+   * mitään, mitä lehden kartassa ei ole.
    */
-  for (const piirros of iso.querySelectorAll('.kohde-piirros')) {
-    if (!piirros.dataset.numero) continue;
-    const lappu = html('span', 'kohde-numerolappu', piirros.dataset.numero);
-    lappu.setAttribute('aria-hidden', 'true');
-    piirros.appendChild(lappu);
-  }
   kortti.appendChild(iso);
   /*
-   * NUMEROIDEN SELITE KARTAN ALLE. Kokoruudulla numeroympyrät jäisivät
-   * muuten arvoituksiksi: selitelista on lehdessä kartan alapuolella,
-   * eikä sitä näy suurennoksen takaa. Lista rakennetaan datasta eikä
-   * kloonata lehdestä, koska lehden rivit ovat kiinni omissa
-   * kuuntelijoissaan; numerointi on sama kuin kartalla ja lehden
-   * listassa eli kohteiden järjestys datassa.
+   * NIMILISTA KARTAN ALLE. Kartalla nimet ovat pieniä ja piirrosten
+   * alla; lista on sama luettelo kerralla luettavassa koossa, ja se on
+   * lehdessä kartan alapuolella, mistä se ei näy kokoruudun takaa.
+   * Lista rakennetaan datasta eikä kloonata lehdestä, koska lehden
+   * rivit ovat kiinni omissa kuuntelijoissaan.
    *
    * RIVI AVAA JUTUN kuten lehdessäkin (omistajan tilaus 22.8.2026 teki
    * kohteista napautettavia myös kokoruudulla). Vanha peruste jättää
@@ -1011,9 +1057,9 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     const selite = html('div', 'kartta-selitteet kartta-suurennos-selitteet');
     kohteet.forEach((k, i) => {
       const tieto = avaajat?.[i];
-      const rivi = html(tieto ? 'button' : 'span', 'kartta-selite');
-      rivi.appendChild(html('span', 'kartta-selite-numero', String(i + 1)));
-      rivi.appendChild(document.createTextNode(k.nimi));
+      // Pelkkä nimi, ei numeropalloa (23.8.2026) — sama linjaus kuin
+      // lehden selitelistassa.
+      const rivi = html(tieto ? 'button' : 'span', 'kartta-selite', k.nimi);
       if (tieto) {
         rivi.type = 'button';
         rivi.title = tieto.otsikko;

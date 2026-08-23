@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1045, teksti: 'Kohdekartalle nimet numeroiden tilalle' },
   { v: 1044, teksti: 'Vaakunan ruskea napautuskorostus pois iPadilla' },
   { v: 1043, teksti: 'Tilastoihin Herot- ja Juliste-sarakkeet' },
   { v: 1042, teksti: 'Herokuvat kuuteen kaupunkiin Ateenasta Luxoriin' },
