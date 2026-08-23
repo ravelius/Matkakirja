@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1055, teksti: 'Herot Venetsiasta Kantoniin — kuusi kaupunkia' },
   { v: 1054, teksti: 'Leveät vaakakuvat täysleveinä nostosivuilla' },
   { v: 1053, teksti: 'Poistonappi avattuun pöllöpoimintaan' },
   { v: 1052, teksti: 'Poiminnat-oikotie valikkoon; tallennus kuratointijonoon' },
