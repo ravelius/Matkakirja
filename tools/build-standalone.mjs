@@ -169,6 +169,10 @@ const MODULES = [
   'js/packs/northamerica-countries.js',
   'js/packs/northamerica.js',
   'js/packs/southamerica-questions.js',
+  // Sama järjestyssääntö kuin middleeastissa ja northamericassa:
+  // southamerica.js lukee SOUTH_AMERICA_COUNTRY_SHAPESin heti
+  // moduulitasolla, joten muodot niputetaan ennen lautaa.
+  'js/packs/southamerica-countries.js',
   'js/packs/southamerica.js',
   // Sama syy kuin edellä: maailmankartta.js lukee MAAILMANKARTAN_MAASTOn
   // moduulitasolla, joten maasto on niputettava ensin.

@@ -91,6 +91,7 @@ const MAAN_GENETIIVIT = {
   Alankomaat: 'Alankomaiden',
   Arabiemiirikunnat: 'Arabiemiirikuntien',
   'Etelä-Afrikka': 'Etelä-Afrikan',
+  Falklandinsaaret: 'Falklandinsaarten',
   Filippiinit: 'Filippiinien',
   Grönlanti: 'Grönlannin',
   Irlanti: 'Irlannin',

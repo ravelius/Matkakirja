@@ -60,6 +60,10 @@ const GENETIIVIT = {
   'Etelä-Korea': 'Etelä-Korean',
   'Etelä-Sudan': 'Etelä-Sudanin',
   Etiopia: 'Etiopian',
+  // Monikkonimi kuten Salomonsaaret: sääntö antaisi
+  // "Falklandinsaaretin", joten oikea muoto on maa-kategoriat.js:n
+  // poikkeustaulussa.
+  Falklandinsaaret: 'Falklandinsaarten',
   Fidži: 'Fidžin',
   Filippiinit: 'Filippiinien',
   Georgia: 'Georgian',
@@ -128,6 +132,8 @@ const GENETIIVIT = {
   Puola: 'Puolan',
   Qatar: 'Qatarin',
   Ranska: 'Ranskan',
+  // Määrite on jo genetiivissä, joten vain jälkiosa taipuu.
+  'Ranskan Guayana': 'Ranskan Guayanan',
   Romania: 'Romanian',
   Ruotsi: 'Ruotsin',
   'Saint Helena': 'Saint Helenan',

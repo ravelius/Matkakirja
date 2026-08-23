@@ -162,6 +162,7 @@ export const LIPUT_PAIKALLISET = new Map([
   ["Flag of the Crimean Tatar people.svg", 'crimean-tatar-people.png'],
   ["Flag of the Czech Republic.svg", 'czech-republic.png'],
   ["Flag of the Democratic Republic of the Congo.svg", 'democratic-republic-of-the-congo.png'],
+  ["Flag of the Falkland Islands.svg", 'falkland-islands.png'],
   ["Flag of the Faroe Islands.svg", 'faroe-islands.png'],
   ["Flag of the Kven people.svg", 'kven-people.png'],
   ["Flag of the Netherlands.svg", 'netherlands.png'],
