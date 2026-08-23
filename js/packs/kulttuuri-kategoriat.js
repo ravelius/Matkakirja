@@ -62883,4 +62883,575 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * QUITO (23.8.2026). Lauta southamerica, kaupunki-id quito, wiki-nimi
+   * "Quito" (js/packs/southamerica.js rivi 111). Lähdeaineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-quito.md ja sen RIIPPUMATON
+   * TARKISTUS docs/mantereet-tyoaineisto/tarkistus-quito.md, joka
+   * voittaa ristiriidassa. Jokainen tekstiin mennyt väite on lisäksi
+   * luettu itse en-Wikipedian raakatekstistä (action=raw, "Quito",
+   * "Cotopaxi", "Quito Astronomical Observatory", "French Geodesic
+   * Mission to the Equator", "Gabriel García Moreno") 23.8.2026.
+   *
+   * TARKISTUKSEN PAKOLLISET KORJAUKSET, KAIKKI TOTEUTETTU:
+   * 1. Sivun `kaupunki` johdanto oli faktapohjassa 251 merkkiä eli yli
+   *    kaupunkilehti.md:n rajan (154–232). Johdanto kirjoitettiin
+   *    uudestaan lyhyempänä.
+   * 2. Perustajan kirjoitusasu on "Sebastián de BELALCÁZAR", ei
+   *    "Benalcázar". Faktapohjan perustelu N-muodolle oli virheellinen:
+   *    henkilön oma en-Wikipedia-artikkeli on nimeltään "Sebastián de
+   *    Belalcázar", ja "Sebastián de Benalcázar" on pelkkä
+   *    uudelleenohjaus siihen. Wikipedian sisäinen ero on todellinen —
+   *    "Quito"-artikkelin infobox (founder=) kirjoittaa Belalcázar ja
+   *    Colonial period -leipäteksti Benalcázar, kumpikin kerran — mutta
+   *    lehti käyttää artikkelin omaa otsikkomuotoa Belalcázar.
+   * 3. Nosto "Vanhakaupunki joka pääsi listalle ensimmäisenä" sanoo
+   *    tasan 5 000 rekisteröityä kiinteistöä. Faktapohjan nostoteksti
+   *    lisäsi sanan "yli", jota lähde ei tue: "Quito" (Points of
+   *    interest § Historic center) sanoo "5,000 properties registered
+   *    in the municipal inventory".
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, KERROTTU LUKIJALLE AUKI (ei
+   * valittu puolesta, tarkistus vahvisti molemmat aidoiksi):
+   * - Cotopaxin purkaus, jonka retkikunta näki: "Cotopaxi" sanoo
+   *   19.6.1742, "French Geodesic Mission to the Equator" sanoo kaksi
+   *   purkausta "1743 and 1744". Nosto T3 sanoo molemmat vaihtoehdot.
+   * - Toinen ranskalainen retkikunta: "French Geodesic Mission to the
+   *   Equator" ajoittaa sen Ecuadoriin 1901–1906, "Quito Astronomical
+   *   Observatory" sanoo laitteiden olleen käytössä 1902–1914. Nosto T4
+   *   antaa molemmat vuosivälit.
+   * - Korkeuslukema: infobox 2 850 m, Geography-osion leipäteksti
+   *   2 820 m. Lehti käyttää infoboxin lukua 2 850 (sama kuin visassa
+   *   ja valtaosassa lähteitä); eroa ei toisteta teksteissä.
+   * - Säälukemat: lentokentän 1991–2020-taulukko (14,1 / 20,7 / 8,5 °C)
+   *   ja Climate-osion leipäteksti (15,6 / 21,4 / 9,8 °C) eroavat, koska
+   *   taulukko mittaa Tababelan lentokenttää ja leipäteksti keskustaa.
+   *   Oppaan jakso 5 kertoo molemmat ja sanoo kumpaa käyttää.
+   *
+   * VAHVISTETUT HELMET (tarkistus luki molemmat sanasta sanaan):
+   * Quiton observatorio avattiin presidentti García Morenon toimesta
+   * 1873 — samana vuonna kuin isoisän matka — ja Cotopaxin toinen
+   * onnistunut nousu tehtiin niin ikään 1873 (Moritz Alphons Stübel ja
+   * neljä nimeltä mainittua ecuadorilaista). Molemmat ovat tiede-sivun
+   * ja historia-sivun kantavia nostoja.
+   *
+   * SISÄLTÖLINJAUS (pilarit 3 ja 4): kichwat ja otavaleñot esiintyvät
+   * elävänä nykykansana — oppaan jakso 3 kertoo El Ejidon markkinoista
+   * nykypäivän elinkeinona, ei museotavarana. Siirtomaa-aika kerrotaan
+   * tapahtumina neutraalisti: Rumiñahuin vangitseminen ja teloitus,
+   * vuoden 1810 kukistettu itsenäisyysliike ja García Morenon murha
+   * mainitaan päivämäärineen mutta ilman raakuuksien yksityiskohtia
+   * (murha-asetta ja tekijää ei kerrota, vaikka "Gabriel García Moreno"
+   * -artikkeli ne sisältää). Alkuperäisväestön käännyttäminen ja
+   * käyttäminen rakennustyön voimana sanotaan suoraan, kaunistelematta
+   * ja korostamatta. Ei nykypolitiikkaa.
+   *
+   * KULTTUURIVISA (js/packs/southamerica-questions.js, avain quito)
+   * kysyy viisi asiaa: Ecuadorin pääkaupunki, päiväntasaajan yhtä
+   * pitkät päivät, 2 850 metrin korkeus, Unescon 1978-listaus ja
+   * Cotopaxi. Lehti käsittelee neljä näistä eri näkökulmasta ja
+   * tarkemmilla luvuilla kuin visan lyhyt vastaus (korkeus La Pazin ja
+   * Sucren vertailun kautta, Unesco päivämäärällä ja Krakovan kanssa,
+   * Cotopaxi kiipeilyhistorian kautta). Päivän ja yön yhtä pitkää
+   * kestoa EI käsitellä missään: faktapohja ei ollut tarkistanut sitä,
+   * eikä keksittyä tähtitiedettä lisätty. Kumpikaan minitehtävä ei
+   * toista visaa — historian tehtävä kysyy La Compañían rakennusaikaa
+   * ja tieteen tehtävä pohjoisen retkikunnan kohdetta, ja molempien
+   * vastaus on samalla sivulla.
+   *
+   * KUVAT: 21 kuvaa, haettu Commonsin rajapinnasta kategorioilla (Views
+   * of Quito, Panoramic views of the Historic Center Quito, El Panecillo
+   * Quito, Church of Saint Francis Quito, Exterior (Iglesia de La
+   * Compañía Quito), Quito Astronomical Observatory, Quito in the 19th
+   * century, Views of Cotopaxi, Mitad del Mundo, TeleferiQo, El Ejido
+   * Quito, Otavalo Artisan Market). Lisenssi ja tekijä on luettu
+   * rajapinnan extmetadatasta, ja JOKAINEN kuva on katsottu silmin 900
+   * pikselin esikatseluna. Avauskuvat ovat kolme laajaa yleiskuvaa
+   * kaupungin eri puolilta: vanhakaupunki El Panecillolta pohjoiseen
+   * (etelä), koko laakso Puengasí-kukkulalta (itä) ja pohjoisen
+   * kerrostalokorttelit Pichinchan edessä (pohjoinen). Kansikuvat ovat
+   * kolme pikkunostoa: Basílica del Voto Nacional kattojen yllä,
+   * vanhankaupungin kirkontornit rinteen alla ja Plaza de San Francisco
+   * ylhäältä.
+   *
+   * KUVAHYLKÄYKSET (syyt): "Hand Craft Market in Parque El Ejido Quito
+   * Ecuador" olisi ollut jakson 3 luonnollisin kuva, mutta torikäytävällä
+   * on useita ihmisiä kasvot kameraan päin (4000 px alkuperäisessä
+   * selvästi tunnistettavia) — tilalle valittiin Otavalon torin
+   * tavarapöytä, jossa ei ole ihmisiä; "Quito pl de la Independencia
+   * 2006 01" ja "Plaza Grande - Quito" hylättiin samasta syystä
+   * (etualalla lähellä kameraa olevia ihmisiä); "Historic Center of
+   * Quito - ... Photo 036" on mustavalkoinen ja etualalla kävelee
+   * ihminen; "Independence Square Historic Center - Plaza de la
+   * Independencia en Quito Ecuador" on puskan takaa otettu eikä näytä
+   * aukiota; "Mirador de los Volcanes Quito" on käytännössä kuva
+   * opastekyltistä ja siinä on TelefériQon logo; "Compañía de Jesús,
+   * Quito 01" osoittautui kuvaksi pelkästä seinään upotetusta
+   * kivitaulusta; "Telar manual de madera" on aulaan pystytetty
+   * museokappale eikä kerro torista; "Carte de la Province de Quito au
+   * Pérou ... btv1b8492959w" on sisällöltään täydellinen (La Condaminen
+   * ja Maldonadon havainnoista piirretty vuoden 1751 kartta), mutta sen
+   * marginaaleissa on kirjaston lyijykynähyllytunnuksia eli arkistomerkintöjä
+   * kuvan päällä; "Altstadt Quito Ecuador 869" on tavallinen
+   * asuinrinne ilman maamerkkiä; "Study of Cotopaxi (1862) Frederic
+   * Edwin Church" on kaunis mutta niin vaalea luonnos, ettei se erotu
+   * noston kokoisena.
+   *
+   * KUVAPOIKKEUS: historia-sivun nosto "Taistelu joka päätti
+   * siirtomaa-ajan" käyttää aikalaismaalausta, jonka yläreunassa on
+   * maalarin oma kirjainluettelo kuvan kohteista ja jonka museokehys
+   * näkyy reunoilla. Sama poikkeus kuin Vancouverin palokartassa ja
+   * Liman 1744-kartassa: teoksen oma litera kelpaa, kun se selitetään
+   * kuvatekstissä.
+   *
+   * AIHETOISTO: El Panecillon kukkula näkyy neljässä kuvassa (avauskuva
+   * kukkulan laelta, nostot QC1 ja QC3 kadun päätteenä, oppaan
+   * etusivun pystykuva) ja Pichincha kahdessa (avauskuva kaupungin
+   * takaa, nosto QC4 huippukraaterina) — eri tiedostot, eri kuvakulmat
+   * ja eri jutut. Observatorio esiintyy sekä historia- että tiede-
+   * sivulla, mutta eri kuvina (rakennus ulkoa / museon mittalaitteet)
+   * ja eri näkökulmasta (perustaminen 1873 / retkikunnan perintö).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian Quito-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN (Samarkandin, Vancouverin ja
+   * Liman malli). Mittauspiste olisi keskusta 0,2201 S / 78,5125 W.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   */
+  quito: [
+    {
+      id: 'kaupunki',
+      nimi: 'Quito',
+      johdanto: 'Andien rinteillä lähes päiväntasaajalla, 2 850 metrissä, '
+        + 'on maailman ylimpiä pääkaupunkeja. Espanjalaiset perustivat sen '
+        + 'uudelleen 1534, ja vanhakaupunki pääsi Unescon listalle '
+        + 'ensimmäisten joukossa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Quito as from panecillo Basilica.jpg',
+          selite: 'Basílica del Voto Nacionalin uusgoottilaiset tornit '
+            + 'kohoavat vanhankaupungin tiilikattojen yli, ja niiden takana '
+            + 'alkaa modernin keskustan tornitalojen alue.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Quito Panorama of the historic center from Casa Bella Vista 01.jpg',
+          selite: 'Vanhankaupungin kirkontornit ja kupolit jäävät rinteille '
+            + 'kiipeävien asuintalojen ja sumuisen vuorenharjan alle.',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Plaza de San Francisco (Quito).jpg',
+          selite: 'Plaza de San Franciscon avoin kivipinta erottuu ylhäältä '
+            + 'katsottuna vanhankaupungin yhtenäisestä tiilikattomerestä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Touring around Quito, Ecuador - Quito city from the historic center of Quito at the Virgin del Panecillo monument (16039061083).jpg',
+          selite: 'El Panecillon laelta vanhakaupunki avautuu pohjoiseen aina '
+            + 'modernin keskustan tornitaloihin asti.',
+          lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Vista de Quito desde la Loma de Puengasi.jpg',
+          selite: 'Idän puoleiselta Puengasí-kukkulalta näkyy, miten kaupunki '
+            + 'täyttää koko laakson Pichinchan harjanteen juurella.',
+          lahde: 'Josuadaniel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '20180813-Panoramic view of Quito with the Pichincha Volcano (0514).jpg',
+          selite: 'Pohjoisen Quiton kerrostalokorttelit päättyvät Pichinchan '
+            + 'rinteeseen, joka nousee suoraan kaupungin länsilaidalta.',
+          lahde: '© Nicolas Völcker, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki jonka inkat valtasivat ja espanjalaiset perustivat uudelleen',
+          tiedosto: 'Quito Cathedral.jpg',
+          teksti: 'Quitu-kansa oli seudun alkuperäisväestö, kunnes inkakeisari '
+            + 'Huayna Capac valloitti sen 1400-luvun lopulla ja teki Quitosta '
+            + 'valtakuntansa pohjoisen alueen pääkaupungin. Espanjalainen '
+            + 'Sebastián de Belalcázar perusti kaupungin uudelleen nykyiselle '
+            + 'paikalleen 6. joulukuuta 1534 kahdensadanneljän siirtolaisen '
+            + 'kanssa ja vangitsi inkasotapäällikkö Rumiñahuin, joka lopetti '
+            + 'järjestäytyneen vastarinnan ja teloitettiin 10. tammikuuta '
+            + '1535. Koska juuri vuoden 1534 valloitus lasketaan viralliseksi '
+            + 'perustamiseksi, Quito on Etelä-Amerikan vanhin pääkaupunki.',
+          selite: 'Tuomiokirkon valaistu torni kohoaa vanhankaupungin ytimessä, '
+            + 'ja sen ohi kulkeva katu jatkuu suoraan El Panecillon kukkulalle.',
+          lahde: 'szeke, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Quito',
+        },
+        {
+          otsikko: 'Ylin pääkaupunki päiväntasaajan kainalossa',
+          tiedosto: 'Quito from heights.jpg',
+          teksti: 'Quito nousee Andien rinteille 2 850 metrin korkeuteen, mikä '
+            + 'tekee siitä joko maailman ylimmän tai toiseksi ylimmän valtion '
+            + 'pääkaupungin – järjestys riippuu siitä, lasketaanko Bolivian '
+            + 'pääkaupungiksi hallinnollinen La Paz vai perustuslaillinen '
+            + 'Sucre. Korkeus ja sijainti aivan päiväntasaajan tuntumassa '
+            + 'pitävät ilman tasaisen viileänä ympäri vuoden, mutta '
+            + 'altistavat kaupungin myös maailman voimakkaimmalle auringon '
+            + 'säteilylle: kirkkaana keskipäivänä UV-indeksi voi nousta '
+            + 'lukemaan 24.',
+          selite: 'Pichinchan ylärinteen heinikosta katsottuna kaupunki jää '
+            + 'syvälle laakson pohjalle vuoren juureen.',
+          lahde: 'L0garitmic0, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Quito',
+        },
+        {
+          otsikko: 'Vanhakaupunki joka pääsi listalle ensimmäisenä',
+          tiedosto: 'Centro Histórico de Quito.jpg',
+          teksti: 'Quiton vanhakaupunki on Amerikan mantereen laajin, vähiten '
+            + 'muuttunut ja parhaiten säilynyt historiallinen keskusta: 320 '
+            + 'hehtaarin alueella on noin 130 monumentaalirakennusta ja '
+            + '5 000 kaupungin omaan suojeluluetteloon merkittyä kiinteistöä. '
+            + 'Syyskuun 18. päivänä 1978 se julistettiin Unescon '
+            + 'maailmanperintökohteeksi yhdessä Puolan Krakovan kanssa – '
+            + 'ensimmäisten joukossa koko listalla. Vuodesta 2002 kaupunki on '
+            + 'uudistanut vanhaakaupunkia järjestelmällisesti.',
+          selite: 'Vanhankaupungin parvekkeiden takaa kohoaa El Panecillon '
+            + 'kukkula, jonka laella seisoo Neitsyt Marian patsas.',
+          lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Quito',
+        },
+        {
+          otsikko: 'Ainoa pääkaupunki näin lähellä toimivaa tulivuorta',
+          tiedosto: 'Cráter Volcán Guagua Pichincha.jpg',
+          teksti: 'Quito on ainoa pääkaupunki, joka on kasvanut näin lähelle '
+            + 'aktiivista tulivuorta: kaupungin länsilaidalla kohoaa '
+            + 'Pichincha, jonka huiput Ruku Pichincha ja Guagua Pichincha '
+            + 'yltävät 4 700 ja 4 794 metriin. Vuoren suurin tunnettu purkaus '
+            + 'vuonna 1660 peitti kaupungin yli 25 senttimetrin '
+            + 'tuhkakerroksella. Idässä laakson toisella puolella kohoavat '
+            + 'Cotopaxi, Sincholagua, Antisana ja Cayambe, lännessä Illiniza, '
+            + 'Atacazo ja Pululahua – laakso on rajattu tulivuorilla '
+            + 'molemmin puolin.',
+          selite: 'Guagua Pichinchan hevosenkengän muotoinen huippukraateri '
+            + 'avautuu pilvirajan yläpuolella, ja sen sisäseinämät ovat '
+            + 'rikinkeltaiset.',
+          lahde: 'Josuadaniel, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pichincha (volcano)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'El Panecillo en Quito visto desde la Basílica del Voto Nacional.jpg',
+          selite: 'Basílica del Voto Nacionalin tornista katsottuna '
+            + 'vanhankaupungin katot jatkuvat suoraan El Panecillon kukkulan '
+            + 'juurelle asti.',
+          lahde: 'Martin.vascovinueza, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Quito jakautuu matkailijan kannalta kahteen osaan. Etelässä '
+          + 'on vanhakaupunki, jonka kirkot, luostarit ja aukiot mahtuvat '
+          + 'runsaan kilometrin säteelle Plaza Grandesta, pohjoisessa moderni '
+          + 'keskusta puistoineen ja korkeine taloineen. Kaupunki on vain '
+          + 'viitisen kilometriä leveä mutta neljäkymmentä kilometriä pitkä, '
+          + 'joten pääväylät kulkevat pohjoisesta etelään ja seuraavat laakson '
+          + 'suuntaa. Ensimmäisinä päivinä kannattaa varautua siihen, että '
+          + '2 850 metrin korkeus väsyttää: vanhankaupungin portaat tuntuvat '
+          + 'jyrkemmiltä kuin ne ovat. Aurinko on täällä poikkeuksellisen '
+          + 'voimakas, joten päähine ja aurinkosuoja kuuluvat mukaan myös '
+          + 'viileänä päivänä.',
+        artikkeli: {
+          nimi: 'Matkailijan Quito',
+          taitto: 'opas',
+          teksti: 'Vuoristokaupunki päiväntasaajalla, jossa siirtomaa-ajan '
+            + 'vanhakaupunki ja lumihuippuiset tulivuoret näkyvät samasta '
+            + 'ikkunasta.',
+          nosto: 'Päiväntasaaja kulkee kaupungin pohjoisosan halki San '
+            + 'Antonion pitäjässä – ja silti illat ovat viileitä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja korkeuteen tottuminen',
+              teksti: 'Quitoon saavutaan Mariscal Sucren kansainvälisen '
+                + 'lentoaseman kautta. Nykyinen kenttä avattiin liikenteelle '
+                + '20. helmikuuta 2013, päivä sen jälkeen kun vanha kenttä '
+                + 'keskellä kaupunkia suljettiin; matkaa keskustaan on noin '
+                + '45 minuuttia autolla, ja vanhan kentän paikalle '
+                + 'rakennettiin Parque Bicentenario -puisto. Korkeus tuntuu '
+                + 'ensimmäisinä päivinä väsymyksenä, ja sitä kannattaa '
+                + 'kunnioittaa. Halukkaat pääsevät vielä ylemmäs: heinäkuusta '
+                + '2005 asti käytössä ollut TelefériQo-köysirata vie '
+                + 'keskustasta Pichinchan itärinteelle Cruz Loman asemalle '
+                + 'noin 4 100 metriin, missä tuuli on selvästi viileämpi kuin '
+                + 'alhaalla.',
+              kuva: {
+                tiedosto: 'Quito y su teleférico - panoramio.jpg',
+                selite: 'TelefériQon gondoli ylittää pohjoisen Quiton matkalla '
+                  + 'Pichinchan rinteelle Cruz Loman asemalle.',
+                lahde: 'diego_cue, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Quito on rakennettu pitkälle ylätasangolle Pichinchan '
+                + 'itärinteille, Guayllabamba-joen valuma-alueelle. Kaupunki '
+                + 'on noin 40 kilometriä pitkä ja leveimmilläänkin vain viisi '
+                + 'kilometriä, joten lähes kaikki tärkeät väylät kulkevat '
+                + 'pohjoisesta etelään: idässä reunakukkuloita seuraa Avenida '
+                + 'Oriental, lännessä Pichinchan rinnettä Avenida Occidental, '
+                + 'ja keskeltä halkoo 10 de Agosto -katu. Vanhankaupungin '
+                + 'kadut on kukkuloista huolimatta ladottu ruutukaavaan, ja '
+                + 'sen tärkeimmät kadut ovat Venezuela, Chile, García Moreno '
+                + 'ja Guayaquil. Laaksoa reunustavat molemmin puolin '
+                + 'tulivuoret, joista osa on lumihuippuisia ja näkyy '
+                + 'kirkkaalla säällä kaupunkiin.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: viikonlopun käsityötori',
+              teksti: 'El Ejido on Quiton neljänneksi suurin puisto, ja se '
+                + 'erottaa vanhankaupungin uudemmasta keskustasta. Joka '
+                + 'lauantai ja sunnuntai sen laidalla avautuu käsityömarkkina, '
+                + 'jossa hinnoista tingitään. Paikalliset maalarit myyvät '
+                + 'kopioita Oswaldo Guayasamínin, Eduardo Kingmanin ja '
+                + 'Gonzalo Endara Crow\'n teoksista, ja Otavalon seudulta '
+                + 'saapuneet otavaleñot myyvät perinteisiä villapaitoja, '
+                + 'ponchoja, mattoja ja koruja. Otavaleñot ovat kichwaa '
+                + 'puhuva kansa, jonka käsityö tunnetaan kaukana Ecuadorin '
+                + 'ulkopuolella – kyse on nykypäivän elinkeinosta, ei '
+                + 'museotavarasta.',
+              kuva: {
+                tiedosto: 'Otavalo Market.jpg',
+                selite: 'Otavalon torin pöydillä on neulottuja villapaitoja, '
+                  + 'huiveja ja käsin kudottuja vöitä.',
+                lahde: 'Paulzuri, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: Mitad del Mundo',
+              teksti: 'Noin 35 kilometriä Quitosta pohjoiseen, San Antonion '
+                + 'pitäjässä, on Ciudad Mitad del Mundo: monumentti ja sen '
+                + 'ympärille rakennettu kylä, joka merkitsee päiväntasaajaa. '
+                + 'Monumentti pystytettiin 1936 juhlistamaan '
+                + 'ranskalais-espanjalaisen astemittausretkikunnan saapumisen '
+                + '200-vuotispäivää. Ironista kyllä, satelliittipaikannus on '
+                + 'sittemmin osoittanut todellisen päiväntasaajan kulkevan '
+                + 'noin 240 metriä monumenttialueen pohjoispuolella – '
+                + 'tarkkuus, johon 1700-luvun tiedemiehillä ei ollut '
+                + 'välineitä. Lähistöllä on Intiñanin aurinkomuseo, joka '
+                + 'saattaa olla lähempänä oikeaa viivaa.',
+              kuva: {
+                tiedosto: 'Mitad del mundo - Ecuador - panoramio.jpg',
+                selite: 'Mitad del Mundon monumentin huipulta näkyy alas '
+                  + 'päiväntasaajakylän paviljonkeihin ja nurmelle ladottuihin '
+                  + 'N- ja S-kirjaimiin.',
+                lahde: 'diego_cue, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Quitosta puuttuu, joten nämä luvut ovat '
+                + 'en-Wikipedian Quito-artikkelin Climate-osiosta eivätkä '
+                + 'samasta lähteestä kuin lehtien vuosigraafit. Ilmasto on '
+                + 'subtrooppista ylänköilmastoa (Köppen: Cfb), ja vuodessa on '
+                + 'käytännössä kaksi vuodenaikaa: kuiva "kesä" kesäkuusta '
+                + 'elokuuhun ja sateinen "talvi" syyskuusta toukokuuhun. '
+                + 'Sadetta kertyy sijainnista riippuen yli 1 000 millimetriä '
+                + 'vuodessa. Lentokentän mittausasemalla vuosien 1991–2020 '
+                + 'keskilämpötila on 14,1 astetta, iltapäivän keskimääräinen '
+                + 'ylin 20,7 ja yön alin 8,5; artikkelin leipäteksti antaa '
+                + 'keskustalle hieman lämpimämmät luvut 21,4 ja 9,8 astetta. '
+                + 'Ero vuodenaikojen välillä on joka tapauksessa pienempi '
+                + 'kuin vuorokauden sisällä.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Espanjalaiset rakensivat inkojen valtaaman kaupungin päälle '
+        + 'uuden Quiton, jonka kirkot nousivat vuosisadan aikana toisensa '
+        + 'perään. Itsenäisyys ratkesi 1822 Pichinchan rinteillä, ja tasavalta '
+        + 'toi pian oman observatorion.',
+      tehtava: {
+        kysymys: 'Kuinka kauan La Compañían kirkon rakentaminen kesti?',
+        vaihtoehdot: [
+          '160 vuotta',
+          '16 vuotta',
+          '60 vuotta',
+          '260 vuotta',
+        ],
+        oikea: 0,
+        fakta: 'Työ alkoi 1605, ja julkisivu valmistui vasta 1765. Sen '
+          + 'veistivät alkuperäiskansojen kivenveistäjät koristeelliseen '
+          + 'espanjalaisbarokkiin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaksikymmentä kirkkoa yhden vuosisadan aikana',
+          tiedosto: 'Iglesia de San Francisco, Quito, Ecuador, 2015-07-22, DD 153.JPG',
+          teksti: 'Espanjalaiset toivat katolisen kirkon Quitoon heti alusta: '
+            + 'ensimmäinen kirkko El Belén valmistui jo ennen kaupungin '
+            + 'virallista perustamista, ja tammikuussa 1535 nousi San '
+            + 'Franciscon luostari, ensimmäinen noin kahdestakymmenestä '
+            + 'siirtomaa-aikana rakennetusta kirkosta ja luostarista. '
+            + 'Espanjalaiset käännyttivät alkuperäisväestön kristinuskoon ja '
+            + 'käyttivät sitä rakennustyön voimana. Juuri tämä työ loi '
+            + 'vanhankaupungin tiheän kirkkojen ja luostarien verkoston, joka '
+            + 'teki keskustasta myöhemmin poikkeuksellisen yhtenäisen.',
+          selite: 'San Franciscon kirkon kaksi valkoista kellotornia ja '
+            + 'viuhkamaiset kiviportaat hallitsevat samannimistä aukiota.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Basilica and Convent of San Francisco, Quito',
+        },
+        {
+          otsikko: 'Satakuusikymmentä vuotta yhteen julkisivuun',
+          tiedosto: 'La Compañía, Quito - 3.jpg',
+          teksti: 'Jeesuksen seuran kirkon La Compañían rakentaminen alkoi '
+            + '1605, ja työ kesti 160 vuotta: julkisivu valmistui vasta 1765. '
+            + 'Sen tekivät alkuperäiskansojen kivenveistäjät, jotka muotoilivat '
+            + 'kivet huolella koristeelliseen espanjalaisbarokkiin – '
+            + 'lopputulos on yksi hienoimmista tämän tyylin näytteistä koko '
+            + 'Amerikan mantereella. Kirkko on yksi kymmenistä vanhankaupungin '
+            + 'uskonnollisista rakennuksista, jotka yhdessä muodostavat '
+            + 'mantereen laajimman ja parhaiten säilyneen historiallisen '
+            + 'keskustan.',
+          selite: 'La Compañían julkisivu on veistetty kokonaan kivestä, ja '
+            + 'kuusi kierteistä pylvästä kehystää sen kaariovea.',
+          lahde: 'Maros M r a z ( Maros ), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Church of La Compañía, Quito',
+        },
+        {
+          otsikko: 'Taistelu joka päätti siirtomaa-ajan',
+          tiedosto: 'Francisco Javier Cortés (atribuido) - Entrada en la ciudad de Quito de las tropas espanolas remitidas por el Virrey del Perú en 1809 - Museo de América 2010-04-01.jpg',
+          teksti: 'Quito yritti itsenäistyä jo 10. elokuuta 1809, mutta liike '
+            + 'kukistettiin seuraavana vuonna, kun siirtomaajoukot saapuivat '
+            + 'Limasta ja surmasivat kapinan johtajat ja noin kaksisataa muuta '
+            + 'asukasta. Lopullinen ratkaisu tuli 24. toukokuuta 1822, kun '
+            + 'Antonio José de Sucre johti Simón Bolívarin alaisuudessa joukot '
+            + 'Pichinchan taisteluun tulivuoren rinteillä. Voitto vahvisti '
+            + 'Quiton ja sen lähialueiden itsenäisyyden – samalla vuorella, '
+            + 'joka yhä kohoaa kaupungin länsilaidalla.',
+          selite: 'Aikalaismaalaus esittää varakuninkaan Limasta lähettämien '
+            + 'joukkojen saapumisen Quitoon marraskuussa 1809, ja sen '
+            + 'yläreunassa on teoksen oma kirjainluettelo kuvan kohteista.',
+          lahde: 'Marsupium, Wikimedia Commons (PD)',
+          wiki: 'Quito',
+        },
+        {
+          otsikko: 'Presidentti joka avasi tähtitieteen ikkunan',
+          tiedosto: 'Observatorium in Quito.JPG',
+          teksti: 'Presidentti Gabriel García Moreno avasi Quiton '
+            + 'observatorion 1873 La Alameda -puistoon, aivan vanhankaupungin '
+            + 'laidalle: yksi Etelä-Amerikan vanhimmista tähtitieteellisistä '
+            + 'laitoksista syntyi saksalaisen Bonnin observatorion mallin '
+            + 'mukaan. Ensimmäiseksi johtajaksi tuli Juan Bautista Menten, ja '
+            + 'rakennus valmistui kokonaan 1878. Kaksi vuotta avajaisten '
+            + 'jälkeen, elokuussa 1875, García Moreno murhattiin Quitossa – '
+            + 'mutta observatorio jäi paikalleen ja jatkoi samaa työtä, '
+            + 'meteorologiaa ja tähtitiedettä.',
+          selite: 'Observatorion vaaleankeltainen rakennus kupolitorneineen '
+            + 'seisoo La Alameda -puiston keskellä.',
+          lahde: 'Hannelore Hopfe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Quito Astronomical Observatory',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Quito tunnetaan korkeutensa lisäksi tieteestä: 1700-luvun '
+        + 'ranskalais-espanjalainen retkikunta mittasi täältä maapallon '
+        + 'muodon, ja sen perintö näkyy yhä observatoriossa ja naapurivuorten '
+        + 'kiipeilyhistoriassa.',
+      tehtava: {
+        kysymys: 'Minne Ranskan tiedeakatemia lähetti toisen astemittausretkikunnan Quiton alueen lisäksi?',
+        vaihtoehdot: [
+          'Lapin Tornionlaaksoon',
+          'Islantiin',
+          'Grönlantiin',
+          'Siperiaan',
+        ],
+        oikea: 0,
+        fakta: 'Kaksi retkikuntaa lähti samaan tehtävään: toinen mittasi '
+          + 'meridiaanin astetta päiväntasaajalla, toinen kaukana pohjoisessa '
+          + 'Tornionlaaksossa. Vasta vertailu ratkaisi kiistan maapallon '
+          + 'muodosta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Retkikunta joka tuli mittaamaan maapallon muotoa',
+          tiedosto: 'Hito-1° misión geodésica -OAQ.jpg',
+          teksti: 'Kysymys siitä, oliko Maa litistynyt navoilta vai '
+            + 'päiväntasaajalta, jakoi 1700-luvun tiedeyhteisön kahtia. '
+            + 'Ranskan kuningas Ludvig XV ja tiedeakatemia ratkaisivat kiistan '
+            + 'lähettämällä kaksi retkikuntaa: toisen Lapin Tornionlaaksoon, '
+            + 'toisen silloiseen Quiton alueeseen. Etelän retkikunta lähti '
+            + 'Ranskasta toukokuussa 1735 – mukana tähtitieteilijät Charles '
+            + 'Marie de La Condamine, Pierre Bouguer ja Louis Godin sekä '
+            + 'espanjalaiset geografit Jorge Juan ja Antonio de Ulloa – ja '
+            + 'saapui Quitoon kesäkuussa 1736 kuljettuaan Panaman kautta '
+            + 'sademetsien läpi.',
+          selite: 'Observatorion pihalla seisova kivipaasi luettelee latinaksi '
+            + 'ensimmäisen astemittausretkikunnan jäsenet ja sen kuninkaalliset '
+            + 'tukijat.',
+          lahde: 'GARY FLORES CADENA, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'French Geodesic Mission to the Equator',
+        },
+        {
+          otsikko: 'Heiluri joka muutti maailman mittajärjestelmää',
+          tiedosto: 'Círculo meridiano (Repsold & Söhne, 1889).jpg',
+          teksti: 'Pierre Bouguer mittasi sekuntiheilurin pituuden '
+            + 'päiväntasaajalla, Quitossa, Pichinchan huipulla ja merenpinnan '
+            + 'tasolla selvittääkseen painovoiman vaihtelun. La Condamine '
+            + 'teetti mittatuloksesta marmorilaatan pronssisine '
+            + 'heilurimallineen ja luovutti sen 1742 Quiton '
+            + 'jesuiittakollegiolle; laatta on nykyään esillä observatorion '
+            + 'museossa La Alameda -puistossa. Retkikunnan '
+            + 'meridiaanikaarimittaukset yhdistettiin myöhemmin Ranskan omiin '
+            + 'mittauksiin, ja niiden pohjalta metri vahvistettiin '
+            + 'virallisesti 1799 – päiväntasaajan retki on siis yksi metrin '
+            + 'isistä.',
+          selite: 'Observatorion museosalissa seisova meridiaanipiiri on '
+            + 'saksalaisen Repsold & Söhne -verstaan vuonna 1889 valmistama.',
+          lahde: 'Ranoutofusername, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'French Geodesic Mission to the Equator',
+        },
+        {
+          otsikko: 'Tulivuori joka näytti itsensä tiedemiehille ja kiipeilijöille',
+          tiedosto: 'Cotopaxi al amanecer - Ecuador - panoramio.jpg',
+          teksti: 'Cotopaxi, Quitosta noin 50 kilometriä etelään kohoava 5 897 '
+            + 'metrin tulivuori, on purkautunut 87 kertaa. Retkikunnan '
+            + 'tiedemiehet näkivät purkauksen omin silmin, mutta vuosiluvusta '
+            + 'lähteet eivät ole yhtä mieltä: joko kesäkuussa 1742 tai vuosina '
+            + '1743 ja 1744. Huipulle päästiin vasta pitkän yrittämisen '
+            + 'jälkeen. Alexander von Humboldt yritti 1802 ja pääsi vain noin '
+            + '4 500 metriin; ensimmäinen onnistunut nousu tehtiin 28. '
+            + 'marraskuuta 1872. Jo seuraavana vuonna 1873 huipulle nousi '
+            + 'geologi Moritz Alphons Stübel neljän ecuadorilaisen – Rafael '
+            + 'Jantuin, Melchor Páezin, Vicente Ramónin ja Eusebio '
+            + 'Rodriguezin – kanssa.',
+          selite: 'Cotopaxin jäätiköitynyt kartio ja tumma huippukraateri '
+            + 'kohoavat ylängön yli aamuvalossa.',
+          lahde: 'diego_cue, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cotopaxi',
+        },
+        {
+          otsikko: 'Observatorio joka kantoi retkikunnan perintöä eteenpäin',
+          tiedosto: 'Antique Telescope at the Quito Astronomical Observatory 005a.jpg',
+          teksti: 'Quiton observatorio, joka avattiin La Alameda -puistoon '
+            + '1873, ei syntynyt tyhjästä: se jatkoi tiedeperinnettä, jonka '
+            + 'ranskalais-espanjalainen retkikunta oli aloittanut 130 vuotta '
+            + 'aiemmin. Kokoelmissa on 1800-luvun mittalaitteita, muun muassa '
+            + 'Repsoldin meridiaanipiiri ja 1875 Münchenissä valmistettu '
+            + '24-senttinen Merzin kaukoputki. 1900-luvun alussa toinen '
+            + 'ranskalainen retkikunta työskenteli samoissa tiloissa '
+            + 'vahvistaakseen vanhat mittaustulokset – sen vuosiksi lähteet '
+            + 'antavat joko 1901–1906 tai 1902–1914.',
+          selite: 'Vanhan Merzin kaukoputken kupariputki ja etsinkiikari '
+            + 'lepäävät observatorion peltikupolin alla.',
+          lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Quito Astronomical Observatory',
+        },
+      ],
+    },
+  ],
 };

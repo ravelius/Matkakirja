@@ -292,4 +292,63 @@ export const SOUTHAMERICA_ARTIKKELIT = {
     + 'kiinalaisten siirtolaisten perintöä, ja kaksi limalaista '
     + 'ravintolaa on valittu 2020-luvulla maailman parhaaksi.',
 },
+  /*
+   * QUITO (23.8.2026). Avain on wiki-otsikko 'Quito', jonka
+   * js/packs/southamerica.js antaa kaupungille sekä wiki- että
+   * näyttönimeksi. Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain quito): jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 23.8.2026, ja lähdeaineistona
+   * ovat docs/mantereet-tyoaineisto/faktapohja-quito.md ja sen
+   * riippumaton tarkistus (tarkistus-quito.md), joka voittaa
+   * ristiriidassa. Perustajan nimi kirjoitetaan Belalcázar, koska
+   * henkilön oma en-Wikipedia-artikkeli on "Sebastián de Belalcázar"
+   * ja Benalcázar on pelkkä uudelleenohjaus. Väkiluvut ovat
+   * "Quito"-artikkelin infoboxista (population_total 1 763 275,
+   * population_metro 2 889 703). Korkeus 2 850 m on infoboxin luku;
+   * saman artikkelin Geography-osio sanoo 2 820 m, ja ero on kirjattu
+   * lehden lohkokommenttiin. Vuoden 1873 kulma kantaa koko lehden:
+   * isoisän matkavuonna avattiin Quiton observatorio ja Cotopaxin
+   * huipulle noustiin toisen kerran.
+   */
+  Quito: {
+    intro: 'Quito on rakennettu kapealle ylätasangolle Andien rinteille, '
+      + 'aivan päiväntasaajan tuntumaan, noin 2 850 metrin korkeuteen. '
+      + 'Kaupunki on vain viisi kilometriä leveä mutta neljäkymmentä '
+      + 'kilometriä pitkä, koska vuoret rajaavat sitä molemmin '
+      + 'puolin. Länsilaidalla kohoaa Pichincha-tulivuori, idässä laakson '
+      + 'takana Cotopaxi, Antisana ja Cayambe.'
+      + '\n\n'
+      + 'Seudun alkuperäisväestöä oli quitu-kansa, ja 1400-luvun lopulla '
+      + 'inkat liittivät alueen valtakuntaansa. **Espanjalaiset perustivat '
+      + 'nykyisen kaupungin uudelleen 6. joulukuuta 1534**, ja seuraavan '
+      + 'vuosisadan aikana vanhaankaupunkiin nousi noin kaksikymmentä '
+      + 'kirkkoa ja luostaria. Niistä syntyi Amerikan mantereen parhaiten '
+      + 'säilynyt historiallinen keskusta, joka pääsi 1978 Krakovan kanssa '
+      + 'ensimmäisten joukossa Unescon listalle.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Quito oli presidentti Gabriel García '
+      + 'Morenon hallitsema pääkaupunki. **Samana vuonna avattiin kaupungin '
+      + 'oma tähtitieteellinen observatorio** La Alameda -puistoon, ja '
+      + 'Cotopaxin huipulle noustiin vasta toista kertaa. Katukuva oli yhä '
+      + 'siirtomaa-ajan, eikä El Panecillon kukkulalla ollut vielä patsasta.',
+    teksti: 'Quito on Ecuadorin pohjoisilla ylängöillä, Guayllabamba-joen '
+      + 'valuma-alueella, Pichincha-tulivuoren itärinteillä. Laaksoa '
+      + 'reunustavat molemmin puolin tulivuoret, joista osa on lumihuippuisia '
+      + 'ja näkyy kirkkaalla säällä kaupunkiin. Päiväntasaaja kulkee '
+      + 'metropolialueen pohjoisosan halki San Antonion pitäjässä.'
+      + '\n\n'
+      + 'Espanjalaiset perustivat kaupungin nykyiselle paikalleen 1534 '
+      + 'Sebastián de Belalcázarin johdolla. Vuonna 1809 alkanut '
+      + 'itsenäisyysliike kukistettiin, mutta 24. toukokuuta 1822 Antonio '
+      + 'José de Sucre voitti Pichinchan taistelun tulivuoren rinteillä ja '
+      + 'ratkaisi asian. Tasavallan aikana kaupunki sai omat laitoksensa: '
+      + 'observatorio avattiin 1873 ja on yksi Etelä-Amerikan vanhimmista.'
+      + '\n\n'
+      + 'Nykyään kaupungissa asuu vajaat 1,8 miljoonaa ja metropolialueella '
+      + 'noin 2,9 miljoonaa ihmistä. Vanhaakaupunkia on kunnostettu '
+      + 'järjestelmällisesti vuodesta 2002, ja 320 hehtaarin alueella on '
+      + 'noin 130 monumentaalirakennusta. Uusi lentoasema avattiin 2013 '
+      + 'kaupungin ulkopuolelle, ja köysirata vie keskustasta Pichinchan '
+      + 'rinteelle noin 4 100 metriin.',
+  },
 };
