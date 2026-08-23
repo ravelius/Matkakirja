@@ -157,6 +157,17 @@ Faktat ja lähteet:
   ase räjähti hänen kädessään. Sarmiento oli kuuro eikä kuullut
   räjähdystä. — en-Wikipedia "Domingo Faustino Sarmiento", osio
   "Presidency (1868–1874) > Overview"
+- **[LISÄTTY 23.8.2026, ei osa 541 merkin nostotekstiä — taustaksi
+  kirjoittajalle, ks. osio 8 huomio 12]** Sarmiento esitetään tässä
+  nostossa koulutususkovaisena uudistajana ja murhan uhrina, mikä on
+  lähteiden mukaan oikein, mutta hänen perintönsä on nykyään myös
+  kiistanalainen: hänen "sivilisaatio vs. barbaria" -ajattelunsa ja
+  alkuperäiskansapolitiikkansa perintöä on arvosteltu jälkikäteen
+  esimerkiksi Michiganin yliopistossa, joka poisti hänen rintakuvansa
+  opiskelijaprotestien jälkeen. Spec-mantereet.md:n "piikki herroihin
+  itseensä" -kehyksen hengessä kirjoittaja voi harkita yhtä varovaista,
+  neutraalia mainintaa tästä lehtitekstissä. — en-Wikipedia "Domingo
+  Faustino Sarmiento"
 
 **Nosto K4 — "Vaaleanpunainen talo joka ei ollut vielä vaaleanpunainen"
 (516 merkkiä)**
@@ -186,11 +197,14 @@ Faktat ja lähteet:
   Julio Rocan kaudella; nykyinen "Vaaleanpunainen talo" valmistui
   kokonaisuudessaan 1898. — en-Wikipedia "Casa Rosada", osiot "History"
   ja "The Palace"
-- Plaza de Mayon nykyinen yhtenäinen aukio syntyi vasta 1884, kun
+- Plaza de Mayon nykyinen yhtenäinen aukio syntyi vasta 1883, kun
   aukion kahtia jakanut, 1804 valmistunut pylväsrivistö (Recova)
   purettiin pormestari Torcuato de Alvearin määräyksestä — isoisän
   aikaan aukio oli siis yhä kahtia jaettu (Plaza de la Victoria /
-  Plaza del Fuerte). — en-Wikipedia "Plaza de Mayo", osio "History"
+  Plaza del Fuerte). (Artikkelin infobox ja johdanto-osio antavat
+  erikseen vuoden 1884 — Wikipedian sisällä pieni epäjohdonmukaisuus —
+  mutta History-osio, jota tämä nosto siteeraa, antaa vuoden 1883.)
+  — en-Wikipedia "Plaza de Mayo", osio "History"
 
 ### Teemasivu `historia` — 4 nostoa
 
@@ -247,28 +261,51 @@ Faktat ja lähteet:
   isoisän vierailun jälkeen. — en-Wikipedia "Teatro Colón", osio
   "Opening and subsequent history"
 
-**Nosto H3 — "Satamakortteli ennen matkamuistoja" (458 merkkiä)**
+**Nosto H3 — "San Telmo ennen matkamuistoja" (493 merkkiä)**
 
-> Vuosisatoja ennen värikkäitä Caminito-taloja La Boca oli pelkkää
-> satamatyötä: telakkatyöläisten ja tiilenpolttajien kortteli
-> Riachuelo-joen suulla, kaupungin ensimmäinen teollisuusalue. Isoisän
-> vierailun aikaan 1870-luvulla juuri tästä satamasta lähti
-> laivalasteittain Argentiinan pääasiallinen tulonlähde — villaa,
-> vuotia ja nahkaa — Eurooppaan, ja korttelin varastoihin ja telakoille
-> kertyi genovalaisia satamatyöläisiä vuosikymmen vuosikymmeneltä
-> enemmän.
+**[KORJATTU 23.8.2026 — ks. korjaushistoria lopussa. Alkuperäinen versio
+oli otsikoitu ja kehystetty La Bocaksi, mutta nojasi kokonaan San Telmon
+artikkeliin ja sisälsi lähteistämättömän väitteen genovalaisesta
+siirtolaisuudesta 1870-luvulla sekä väitteen San Telmon ja La Bocan
+yhteisestä satamatyöläisalueesta — kumpikaan ei löytynyt kummastakaan
+lähdeartikkelista. Riippumaton tarkistus (tarkistus-buenosaires.md,
+osio 1) sai La Bocan artikkelin auki: se ei sisällä 1800-luvun
+telakkatyö-/tiilenpoltto-/varastointisisältöä, ja sen ainoa maininta
+liguurialaisista/genovalaisista siirtolaisista sijoittaa ilmiön
+2000-luvun sijaan nimenomaan 1900-luvulle, ei 1870-luvulle. Nosto on
+siis kirjoitettu uudelleen San Telmo-painotteisena, koska juuri San
+Telmon artikkeli tukee väitettä telakkatyöstä, tiilenpoltosta ja
+varastoinnista 1600-luvulta 1870-luvulle asti.]**
+
+> Vuosisatoja ennen kahviloita ja antiikkitoria San Telmo oli pelkkää
+> satamatyötä: telakkatyöläisten ja tiilenpolttajien kortteli joen
+> tuntumassa, kaupungin ensimmäinen teollisuusalue jo 1600-luvulta
+> lähtien. Isoisän vierailun aikaan 1870-luvulla korttelin vanhoissa
+> aitoissa varastoitiin ja pakattiin Argentiinan pääasiallinen
+> tulonlähde — villaa, vuotia ja nahkaa — ennen laivaan lastausta
+> Eurooppaan. Vasta keltakuume-epidemian jälkeen varakkaat muuttivat
+> pois ja kortteli jäi työväen omaksi.
 
 Faktat ja lähteet:
-- San Telmon/La Bocan alue oli 1600-luvulta lähtien kaupungin
-  ensimmäinen "teollisuusalue": telakkatyöläisten ja tiilenpolttajien
-  kortteli, jossa valmistettiin ja varastoitiin suurin osa Argentiinan
-  villa-, vuota- ja nahkaviennistä — maan pääasiallinen tulonlähde vielä
+- San Telmon alue oli kaupungin ensimmäinen "teollisuusalue" jo
+  1600-luvulta lähtien: telakkatyöläisten ja tiilenpolttajien kortteli,
+  jossa valmistettiin ja varastoitiin suurin osa Argentiinan villa-,
+  vuota- ja nahkaviennistä — maan pääasiallinen tulonlähde vielä
   1870-luvulla. — en-Wikipedia "San Telmo, Buenos Aires", osio "History"
-- (La Bocan artikkeli itsessään ei avautunut hakukatkosten vuoksi tämän
-  koosteen aikana, ks. osio 8 huomio 6 — faktat tälle nostolle on
-  koottu San Telmon artikkelista, joka kattaa saman satamakorttelin
-  historian; kirjoittajan kannattaa täydentää suoraan La Boca
-  -artikkelista genovalaisten siirtolaisten osuudesta ennen julkaisua.)
+- Keltakuume-epidemia (1871) ajoi San Telmon keski- ja yläluokan
+  muuttamaan pois Barrio Norteen (ks. Nosto K2), jonka jälkeen kortteli
+  jäi yhä selvemmin työväen ja satamatyön korttelina. — en-Wikipedia
+  "San Telmo, Buenos Aires", osio "History"
+- La Boca EI enää esiinny tässä nostossa lähteenä: sen oma artikkeli
+  (haettu onnistuneesti riippumattomassa tarkistuksessa 23.8.2026) ei
+  sisällä 1800-luvun telakkatyö-/tiilenpoltto-/varastointisisältöä, ja
+  sen ainoa maininta liguurialaisista siirtolaisista sijoittaa ilmiön
+  1900-luvulle ("during the 20th century, when millions of immigrants
+  from Europe and Asia arrived... many of its settlers originated from
+  the Italian region of Liguria"), ei 1870-luvulle. Väite San Telmon ja
+  La Bocan yhteisestä satamatyöläisalueesta oli aiemmassa versiossa
+  lähteistämätöntä päättelyä eikä sitä toisteta tässä. — en-Wikipedia
+  "La Boca", osio "History"
 
 **Nosto H4 — "Kesä jolloin presidentti kävi sotaa omaa maataan vastaan"
 (511 merkkiä)**
@@ -352,15 +389,19 @@ Faktat ja lähteet:
 > 1870-luvulla Buenos Airesin vaurastuminen nojasi villaan, vuotiin ja
 > nahkaan: karjatuotteet olivat Argentiinan pääasiallinen tulonlähde
 > vielä silloin, ja ne varastoitiin ja pakattiin satamakortteleiden
-> vanhoissa aitoissa ennen laivaan lastausta Eurooppaan. San Telmon ja La
-> Bocan kaltaiset korttelit elivät tästä työstä — telakoista, varastoista
+> vanhoissa aitoissa ennen laivaan lastausta Eurooppaan. San Telmon
+> kaltaiset korttelit elivät tästä työstä — telakoista, varastoista
 > ja tiilenpoltosta, ei vielä turismista tai tangosta.
 
 Faktat ja lähteet:
 - Villa, vuodat ja nahka olivat Argentiinan alueen pääasiallinen
   tulonlähde vielä 1870-luvulla, ja niiden vienti valmisteltiin ja
-  varastoitiin San Telmon/La Bocan satamakortteleissa siirtomaa-ajalta
-  lähtien. — en-Wikipedia "San Telmo, Buenos Aires", osio "History"
+  varastoitiin San Telmon satamakortteleissa siirtomaa-ajalta lähtien.
+  **[KORJATTU 23.8.2026: aiempi versio mainitsi tässä myös La Bocan —
+  poistettu, koska väite yhteisestä satamakorttelialueesta ei löydy
+  kummastakaan lähdeartikkelista, ks. Nosto H3:n korjaushuomio ja
+  korjaushistoria lopussa.]** — en-Wikipedia "San Telmo, Buenos Aires",
+  osio "History"
 
 **Jakso 4 — Historian käännekohta: presidentti sotaa omaa maataan vastaan**
 
@@ -659,16 +700,24 @@ jos sopivaa kaupunkikohtaista PD-äänitettä ei löydy — ks.
    kohdetta `falkland`, joka on eri kaupunki samalla laudalla. En ole
    tuonut Falkland-aihetta tähän koosteeseen ollenkaan.
 
-4. **La Boca -artikkeli ei avautunut hakuvaiheessa 429-katkosten
-   vuoksi** (ks. huomio 6) — Nosto H3:n faktat on koottu korvaavasti
-   San Telmo -artikkelista, joka kattaa saman satamakorttelin ja saman
-   ajanjakson historian (San Telmo ja La Boca olivat 1800-luvulla osa
-   samaa satamatyöläisaluetta, joka myöhemmin jakautui hallinnollisesti
-   kahdeksi barrioksi). **Kirjoittajan kannattaa täydentää suoraan La
-   Boca -artikkelista** ennen julkaisua, erityisesti genovalaisten
-   siirtolaisten osuudesta ja korttelin 1882 "itsenäistymisyrityksestä"
-   (mainittu artikkelin historiaosiossa, mutta liian myöhäinen 1873-
-   koosteeseen — vuosikymmen isoisän jälkeen).
+4. **[KORJATTU 23.8.2026] La Boca -artikkeli ei avautunut TÄMÄN
+   koosteen alkuperäisessä hakuvaiheessa (ks. huomio 6), ja Nosto H3:n
+   faktat koottiin tuolloin korvaavasti San Telmon artikkelista mutta
+   otsikoitiin virheellisesti La Bocaksi, mukaan lukien lähteistämätön
+   väite "San Telmo ja La Boca olivat 1800-luvulla osa samaa
+   satamatyöläisaluetta". Riippumaton tarkistus (tarkistus-
+   buenosaires.md) sai La Bocan artikkelin auki 23.8.2026: se EI tue
+   väitettä yhteisestä satamatyöläisalueesta, eikä siinä ole
+   1800-luvun telakkatyö-/tiilenpoltto-sisältöä — artikkelin ainoa
+   maininta liguurialaisista/genovalaisista siirtolaisista sijoittaa
+   ilmiön 1900-luvulle. Nosto H3 ja Jakso 3 on tämän korjauskierroksen
+   yhteydessä kirjoitettu uudelleen San Telmo-painotteisina, eikä
+   lähteistämätöntä väitettä yhteisestä satamatyöläisalueesta enää
+   toisteta. Ks. Nosto H3:n korjaushuomio ja korjaushistoria lopussa.
+   La Bocan 1882 "itsenäistymisyritys" ja 1900-luvun genovalainen
+   siirtolaisuus jäävät joka tapauksessa 1873-koosteen aikarajauksen
+   ulkopuolelle eivätkä siis nouse tähän faktapohjaan korvaavanakaan
+   aiheena.
 
 5. **Recoleta-hautausmaa oli jo olemassa 1873 mutta ilman nykyistä
    ilmettä:** perustettu 1822 vanhan fransiskaaniluostarin puutarhaan,
@@ -719,3 +768,75 @@ jos sopivaa kaupunkikohtaista PD-äänitettä ei löydy — ks.
     kanna samaa tiukkaa merkkirajaa kuin nostot, joten niiden pituudet
     (398–468 merkkiä) ovat viitteellisiä, saman mittaluokan mukaisia
     kuin New Yorkin jaksot.
+
+11. **[LISÄTTY 23.8.2026] Mendozan siirtokunnan autioitumisvuosi on
+    ristiriitainen en-Wikipedian OMASSA "Buenos Aires" -artikkelissa:**
+    osio "Etymology" antaa vuoden 1541 ("was abandoned in 1541"), mutta
+    osio "Viceregal times" (sekä leipäteksti että kuvateksti) antaa
+    vuoden 1542 ("in 1542, the site was thusly abandoned"; "had been
+    abandoned since 1542"). Nosto K1:n Faktat-lähteet-rivi hedgeaa jo
+    oikein muodossa "1541/1542", mutta itse nostotekstissä lukee vain
+    "autioitui 1541" mainitsematta epävarmuutta. Kirjoittajan kannattaa
+    joko pyöristää nostotekstissä ("1540-luvun alussa") tai mainita
+    molemmat vuodet, samaan tapaan kuin keltakuume-lukuristiriita on
+    avattu Nostossa K2 (ks. huomio 1). — en-Wikipedia "Buenos Aires",
+    osiot "Etymology" ja "Viceregal times"
+
+12. **[LISÄTTY 23.8.2026] Sarmiento esiintyy koosteessa yksinomaan
+    myönteisessä valossa** (koulutususkovainen, murhan uhri,
+    siirtolaisuuden edistäjä) — spec-mantereet.md:n "piikki herroihin
+    itseensä" -kehyksen hengessä tähän on lisätty yksi varovainen
+    maininta Nostoon K3 (ks. yllä): Sarmienton "sivilisaatio vs.
+    barbaria" -ajattelu ja hänen alkuperäiskansapolitiikkansa perintö on
+    nykyään kiistanalainen, minkä myös en-Wikipedian oma
+    Sarmiento-artikkeli mainitsee (Michiganin yliopiston rintakuvan
+    poistaminen opiskelijaprotestien seurauksena, perusteluna
+    "controversies surrounding his policies towards the indigenous
+    people in Argentina"). Tämä ei ole 1873-ajan tapahtuma sinänsä
+    (Conquest of the Desert toteutui vasta Roca'n kaudella), joten
+    maininta on tarkoituksella lyhyt ja neutraali eikä laajenna
+    aikarajausta. — en-Wikipedia "Domingo Faustino Sarmiento"
+
+---
+
+## Korjaushistoria
+
+**23.8.2026 — korjauskierros riippumattoman tarkistuksen
+(`tarkistus-buenosaires.md`, tuomio "kelpaa korjauksin") perusteella.**
+Kaikki en-Wikipedia-lähteet tarkistettu uudelleen `action=raw`-API:lla,
+`NODE_USE_ENV_PROXY=1`, 429-uusinnat kasvavalla viiveellä.
+
+1. **Nosto H3 kirjoitettu kokonaan uudelleen** ("Satamakortteli ennen
+   matkamuistoja" → "San Telmo ennen matkamuistoja", 458 → 493
+   merkkiä). Alkuperäinen versio oli otsikoitu/kehystetty La Bocaksi
+   mutta nojasi kokonaan San Telmon artikkeliin, ja sisälsi
+   lähteistämättömän väitteen (a) San Telmon ja La Bocan yhteisestä
+   1800-luvun satamatyöläisalueesta ja (b) genovalaisten siirtolaisten
+   kasautumisesta 1870-luvulla. La Bocan oma artikkeli (nyt haettu
+   onnistuneesti) ei tue kumpaakaan väitettä — sen ainoa maininta
+   liguurialaisista siirtolaisista sijoittaa ilmiön 1900-luvulle.
+   Uusi nosto on San Telmo-painotteinen ja lähteistetty vain San Telmon
+   artikkelista. Jakso 3 korjattu samalla logiikalla (La Boca-maininta
+   poistettu lähteistämättömänä). Osio 8 huomio 4 kirjoitettu
+   uudelleen selittämään korjaus. Mitta tarkistettu Nodella
+   (`[...s].length`).
+2. **Nosto K4:n Plaza de Mayo -pylväsrivistön purkuvuosi
+   yhtenäistetty:** Faktat-lähteet-rivi muutettu "1884" → "1883"
+   vastaamaan nostotekstiä ja en-Wikipedian "Plaza de Mayo" -artikkelin
+   History-osiota (jota faktapohja itse siteeraa); mukaan lisätty
+   huomio Wikipedian omasta infobox/johdanto-ristiriidasta (1884).
+3. **Osioon 8 lisätty huomio 11:** Buenos Aires -artikkelin sisäinen
+   ristiriita Mendozan siirtokunnan autioitumisvuodesta (1541
+   Etymology-osiossa vs. 1542 Viceregal times -osiossa) — Nosto K1:n
+   Faktat-lähteet-rivi hedgeasi jo tämän, mutta osio 8 ei maininnut
+   sitä ennen tätä korjausta.
+4. **Osioon 8 lisätty huomio 12 ja Nosto K3:n faktat-listaan täydennys**
+   spec-mantereet.md:n "piikki herroihin itseensä" -kehyksestä:
+   Sarmientoa ei enää esitetä yksinomaan myönteisessä valossa —
+   lisätty neutraali, ei-nostotekstiin kuuluva tausta-maininta hänen
+   alkuperäiskansapolitiikkansa kiistanalaisesta perinnöstä
+   (en-Wikipedian oman Sarmiento-artikkelin mukaan).
+
+Ei-pakollisiksi merkityt tarkistajan huomiot (osio 3: keltakuumeen
+"San Telmon korttelissa" -muotoilun tarkkuus) jätetty ennalleen —
+tarkistus totesi, ettei korjausta vaadita.
