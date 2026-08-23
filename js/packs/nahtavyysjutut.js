@@ -30694,4 +30694,458 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * NEW YORK (nippu 8, 23.8.2026). Kohteet ovat kohdekartan kymmenen
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.newyork), ja jokainen väite
+   * on luettu en-Wikipedian raakatekstistä 23.8.2026 (artikkelit
+   * "American Museum of Natural History", "Metropolitan Museum of Art",
+   * "St. Patrick's Cathedral (New York City)", "Times Square",
+   * "New York Public Library Main Branch", "Empire State Building",
+   * "Flatiron Building", "Washington Square Arch", "New York City Hall"
+   * ja "Trinity Church (Manhattan)").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Brooklynin silta, Bethesda-terassi, Castle Garden, Grand
+   * Central Depot, vuoden 1873 pörssiromahdus ja Manhattanin osto;
+   * kartan kohteista yksikään ei ole niiden aihe. Päällekkäisin on
+   * Empire State Building, joka mainitaan yhdessä avauskuvatekstissä
+   * yhdellä virkkeellä — juttu kertoo tontin hotellista, korkeuskisasta
+   * ja ilmalaivamastosta, joita kuvateksti ei käsittele.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 23.8.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin. Faktapohjan
+   * erityisehto "ei tunnistettavia ihmisiä" ohjasi valintaa: Trinityn
+   * ulkokuvista jokaisessa oli kadulla kasvot näkyvissä, joten kirkosta
+   * otettiin sisäkuva, jossa kaksi ihmistä on selin (faktapohja sallii
+   * selin olevat ja kaukaiset pisteet).
+   */
+  newyork: {
+    'Amerikan luonnonhistoriallinen museo': {
+      aika: '1869–1877',
+      teksti: 'Ajatuksen museosta esitti 1861 luonnontutkija Albert S. '
+          + 'Bickmore, joka opiskeli Louis Agassizin vertailevan '
+          + 'eläintieteen museossa Cambridgessa. Hän pani merkille, että '
+          + 'Euroopan luonnontieteelliset museot olivat väkirikkaissa '
+          + 'kaupungeissa, ja kirjoitti New Yorkin olevan maan '
+          + 'varakkain kaupunki ja siksi paras paikka. Vaatimukset '
+          + 'voimistuivat, kun Barnumin American Museum paloi 1868, ja '
+          + 'joulukuussa kahdeksantoista arvovaltaista newyorkilaista '
+          + 'kirjoitti Central Parkin komissiolle kirjeen museon '
+          + 'perustamisesta. Kuvernööri John Thompson Hoffman '
+          + 'allekirjoitti perustamislain 6. huhtikuuta 1869.'
+          + '\n\n'
+          + 'Museo avattiin 22. toukokuuta 1871 Central Parkin '
+          + 'Arsenaalin kahdessa ylimmässä kerroksessa: hyönteiset '
+          + 'alempana, kivet, fossiilit, nisäkkäät, linnut, kalat ja '
+          + 'matelijat ylempänä. Yleisöä riitti niin, että pelkästään '
+          + 'vuoden 1876 yhdeksänä ensimmäisenä kuukautena kävijöitä oli '
+          + '856 773 — enemmän kuin British Museumilla koko vuonna 1874. '
+          + 'Oma tontti oli jo varattu Manhattan Squarelta 77. ja 81. '
+          + 'kadun väliltä, ja rakentamiseen oli kerätty puoli miljoonaa '
+          + 'dollaria.'
+          + '\n\n'
+          + 'Peruskiven muurauksessa 3. kesäkuuta 1874 oli mukana '
+          + 'presidentti Ulysses S. Grant, ja Calvert Vaux\'n ja J. Wrey '
+          + 'Mouldin suunnittelema ensimmäinen rakennus avattiin 22. '
+          + 'joulukuuta 1877 presidentti Rutherford B. Hayesin läsnä '
+          + 'ollessa. Vanhat kokoelmat siirrettiin Arsenaalista '
+          + 'seuraavana vuonna. Nykyään museo on 21 toisiinsa liittyvää '
+          + 'rakennusta ja 45 näyttelysalia, ja kokoelmissa on noin 32 '
+          + 'miljoonaa esinettä ja näytettä, joista vain pieni osa on '
+          + 'kerrallaan esillä.',
+      kuvat: [
+        {
+          tiedosto: 'Exterior of the American Museum of Natural History 20170312.jpg',
+          selite: 'Museo aloitti 1871 Central Parkin Arsenaalissa ja sai '
+            + 'ensimmäisen oman rakennuksensa vasta 1877.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Metropolitan-museo': {
+      aika: '1870–1880',
+      teksti: 'New Yorkin osavaltion lakiasäätävä kokous myönsi museolle '
+          + 'perustamiskirjan 13. huhtikuuta 1870. Tarkoitus kirjattiin '
+          + 'asiakirjaan: kaupunkiin oli perustettava taidemuseo ja '
+          + '-kirjasto, kehitettävä kuvataiteiden opiskelua ja '
+          + 'annettava kansanomaista opetusta. Perustajissa oli '
+          + 'liikemiehiä ja rahoittajia, muiden muassa Theodore '
+          + 'Roosevelt vanhempi, sekä aikansa taiteilijoita ja '
+          + 'ajattelijoita. Ensimmäiseksi johtokunnan puheenjohtajaksi '
+          + 'tuli rautatiejohtaja John Taylor Johnston, jonka oma '
+          + 'kokoelma oli museon siemen.'
+          + '\n\n'
+          + 'Museo avattiin 20. helmikuuta 1872 vuokratiloissa '
+          + 'osoitteessa 681 Fifth Avenue. Kokoelmana oli roomalainen '
+          + 'kivisarkofagi ja 174 pääosin eurooppalaista maalausta, ja '
+          + 'tila loppui heti. Vuonna 1873 museo osti Luigi Palma di '
+          + 'Cesnolan kyproslaisen antiikkikokoelman ja muutti sen takia '
+          + 'Douglasin kartanoon osoitteeseen 128 West 14th Street — '
+          + 'isoisän matkan aikaan Metropolitan oli siis '
+          + 'muuttokuormassa. Cesnolasta tuli museon ensimmäinen '
+          + 'johtaja, ja hän hoiti tehtävää 1879–1904.'
+          + '\n\n'
+          + 'Kaupunki oli luovuttanut 1871 tontin Central Parkin '
+          + 'itälaidalta 79. ja 85. kadun väliltä. Sinne valmistui 1880 '
+          + 'Calvert Vaux\'n ja Jacob Wrey Mouldin punatiilinen '
+          + 'rakennus, joka jää nyt uudempien siipien taakse: Viidennen '
+          + 'Avenuen julkisivun, suuren aulan ja pääportaikon '
+          + 'suunnitteli beaux arts -tyyliin Richard Morris Hunt '
+          + 'poikansa kanssa 1800- ja 1900-lukujen vaihteessa, ja '
+          + 'McKim, Mead & White täydensi julkisivun siivet 1910. '
+          + 'Päärakennus on nykyään lähes 400 metriä pitkä ja koostuu '
+          + 'yli kahdestakymmenestä rakennuksesta, joista useimpia ei '
+          + 'näe ulos.',
+      kuvat: [
+        {
+          tiedosto: 'Metropolitan Museum of Art (The Met) - Central Park, NYC.jpg',
+          selite: 'Viidennen Avenuen julkisivun suunnitteli Richard Morris '
+            + 'Hunt, ja museon ensimmäinen rakennus vuodelta 1880 jää '
+            + 'kokonaan sen taakse.',
+          lahde: 'Hugo Schneider, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Patrickin katedraali': {
+      aika: '1858–1879',
+      teksti: 'Arkkipiispa John Hughes päätti jo 1850, että kasvava '
+          + 'hiippakunta tarvitsee vanhan Mulberry Streetin katedraalin '
+          + 'tilalle suuremman. Paikka Viidennen Avenuen varrella 50. ja '
+          + '51. kadun välissä oli tuolloin lähes maaseutua: ympärillä '
+          + 'oli kallioita ja avaamattomia katuja, mutta Hughes uskoi '
+          + 'kaupungin kasvavan sinne. Suunnittelijaksi hän palkkasi '
+          + '1853 James Renwick nuoremman, joka haki mallia muun muassa '
+          + 'keskeneräisestä Kölnin tuomiokirkosta. Peruskivi laskettiin '
+          + '15. elokuuta 1858 satatuhatpäisen yleisön edessä.'
+          + '\n\n'
+          + 'Rahat loppuivat kahdessa vuodessa. Elokuussa 1860 työ '
+          + 'keskeytettiin, kun muurit olivat keskimäärin kahdentoista '
+          + 'jalan korkuiset, ja sisällissota piti työmaan hiljaisena '
+          + 'vuosia; Hughes kuoli 1864 ehtimättä nähdä jatkoa. Hänen '
+          + 'seuraajansa John McCloskey järjesti rahoituksen uudelleen. '
+          + 'Isoisän matkan aikaan katedraali oli telineissä: vuoden '
+          + '1870 lopulla marmoriseinät olivat 54 jalan korkuiset ja '
+          + 'poikkilaiva valmis. Marmoria louhi yli sata miestä '
+          + 'Pleasantvillessä kaupungin pohjoispuolella, ja se tuotiin '
+          + 'Harlemin rataa pitkin haararaidetta myöten työmaalle.'
+          + '\n\n'
+          + 'Katedraali valmistui 1878 ja vihittiin käyttöön 25. '
+          + 'toukokuuta 1879. Tornien huiput nostettiin paikoilleen '
+          + 'vasta 1888, ja ne yltävät 329,5 jalkaan eli sataan metriin. '
+          + 'Lopullinen vihkiminen tehtiin 5. lokakuuta 1910, kun '
+          + 'rakennusvelat oli maksettu. Kirkko on Pohjois-Amerikan '
+          + 'suurin uusgoottilainen katolinen katedraali: pituutta on '
+          + '332 jalkaa ja poikkilaivojen kohdalla leveyttä 174 jalkaa, '
+          + 'ja pohjoisessa tornissa on yhdeksäntoista kelloa.',
+      kuvat: [
+        {
+          tiedosto: "Exterior of St. Patrick's Cathedral (Manhattan) 25-10-2018.jpg",
+          selite: 'Tornien huiput nousivat paikoilleen 1888 eli kymmenen '
+            + 'vuotta kirkon valmistumisen jälkeen.',
+          lahde: 'Sebring12Hrs, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Times Square': {
+      aika: '1872–1904',
+      teksti: 'Hollantilaisten aikaan seudun halki virtasi Great Kill '
+          + '-puro, joka laski Hudsoniin nykyisen 42. kadun kohdalla. '
+          + 'Sen eteläpuolinen ylänkö sai nimen Longacre. Vallankumouksen '
+          + 'aikoihin maat kuuluivat New Yorkin miliisin kenraalille '
+          + 'John Morin Scottille, ja hänen kartanonsa ympärillä '
+          + 'viljeltiin ja kasvatettiin hevosia. 1800-luvun '
+          + 'alkupuoliskolla alue siirtyi John Jacob Astorille, joka '
+          + 'teki toisen omaisuutensa myymällä tontteja hotelleille '
+          + 'kaupungin levitessä pohjoiseen.'
+          + '\n\n'
+          + 'Vuoteen 1872 mennessä aukio oli New Yorkin '
+          + 'hevosvaunuteollisuuden keskus. Nimeä sillä ei siihen asti '
+          + 'ollut, ja kaupunki antoi sille nimen Longacre Square '
+          + 'Lontoon Long Acren mukaan, jonka ympärille hevos- ja '
+          + 'vaunukauppa oli siellä keskittynyt. William Henry '
+          + 'Vanderbilt piti aukiolla omistamaansa hevospörssiä '
+          + 'American Horse Exchangea, jonka tiloista tuli 1910-luvulla '
+          + 'Winter Garden -teatteri. Isoisän matkan aikaan tämä oli '
+          + 'siis tallien ja vaunuseppien kaupunginosa.'
+          + '\n\n'
+          + 'Vuonna 1904 New York Timesin julkaisija Adolph S. Ochs '
+          + 'siirsi lehden uuteen pilvenpiirtäjään 42. kadun kulmaan ja '
+          + 'suostutteli pormestari George B. McClellan nuoremman '
+          + 'rakennuttamaan sinne metroaseman. Aukio nimettiin Times '
+          + 'Squareksi 8. huhtikuuta 1904, ja kolme viikkoa myöhemmin '
+          + 'ilmestyi ensimmäinen sähkömainos pankin seinään 46. kadun '
+          + 'kulmaan. Uudenvuoden pallo laskettiin ensimmäisen kerran '
+          + '31. joulukuuta 1907; se korvasi vuosina 1904–1906 '
+          + 'järjestetyn ilotulituksen, jonka kaupunki kielsi '
+          + 'tulipalovaaran takia.',
+      kuvat: [
+        {
+          tiedosto: 'Times Square, New York 2019 18.jpg',
+          selite: 'Uudenvuoden pallo on laskettu aukion torniin vuodesta '
+            + '1907, jolloin se korvasi kielletyn ilotulituksen.',
+          lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'New Yorkin pääkirjasto': {
+      aika: '1897–1911',
+      teksti: 'Kirjasto syntyi 1890-luvun lopulla, kun kaupungin kaksi '
+          + 'suurta yksityistä kirjastoa, Astorin ja Lenoxin kokoelmat, '
+          + 'päätettiin yhdistää. Tontiksi valittiin maaliskuussa 1896 '
+          + 'Viidennen Avenuen ja 40.–42. katujen välinen kortteli, '
+          + 'koska se oli kummankin kirjaston välissä. Paikalla seisoi '
+          + 'Crotonin jakoallas, kaupungin vanha vesisäiliö, joka oli '
+          + 'isoisän matkan aikaan vielä käytössä. Ensimmäinen johtaja '
+          + 'John Shaw Billings piirsi luonnoksen, jossa valtava '
+          + 'lukusali on seitsemän kirjavarastokerroksen päällä ja kirja '
+          + 'kulkee lukijalle mahdollisimman nopeasti.'
+          + '\n\n'
+          + 'Osavaltion laki salli säiliön tontin käytön kirjastolle '
+          + '1897, ja arkkitehtikilpailuun tuli 88 ehdotusta. Voiton vei '
+          + 'marraskuussa 1897 vähän tunnettu toimisto Carrère and '
+          + 'Hastings. Urakoitsija aloitti säiliön purkamisen kesäkuussa '
+          + '1899: seinä oli 25 jalkaa paksu, ja seitsemän viikon '
+          + 'tunneloinnin jälkeen todettiin, että altaan pohja saadaan '
+          + 'rikki vain dynamiitilla. Peruskivi laskettiin 10. '
+          + 'marraskuuta 1902, ja kellarissa on yhä säiliön jäänteitä.'
+          + '\n\n'
+          + 'Kirjasto avattiin 23. toukokuuta 1911 tilaisuudessa, jota '
+          + 'johti presidentti William Howard Taft ja jossa oli 15 000 '
+          + 'vierasta. Yleisö päästettiin sisään seuraavana päivänä. '
+          + 'Ensimmäinen tilauslippu jätettiin kello 9.08, ja lukija sai '
+          + 'kirjansa — venäläisen tutkielman Nietzschestä ja Tolstoista '
+          + '— seitsemässä minuutissa. Portaita vartioivat Tennesseen '
+          + 'marmorista veistetyt leijonat, ja 1920-luvulla talossa kävi '
+          + 'neljä miljoonaa vierasta vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'Lion and facade - N.Y. Public Library - Schwarzman Bldg. - exterior.jpg',
+          selite: 'Leijonat veistettiin Edward Clark Potterin mallin '
+            + 'mukaan, ja pormestari Fiorello La Guardia antoi niille '
+            + '1930-luvulla nimet Patience ja Fortitude.',
+          lahde: 'Bestbudbrian, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Empire State Building': {
+      aika: '1930–1931',
+      teksti: 'Tontilla seisoi Waldorf–Astoria. Astorin suku oli '
+          + 'omistanut paikan 1820-luvulta, ja William Waldorf Astor '
+          + 'avasi siihen 1893 Waldorf-hotellin; neljä vuotta myöhemmin '
+          + 'serkku John Jacob Astor IV rakensi viereen '
+          + '16-kerroksisen Astorian. Yhdessä niissä oli 1 300 '
+          + 'vuodetta, mikä teki talosta aikansa maailman suurimman '
+          + 'hotellin. Kun seurapiirielämä siirtyi pohjoisemmas, suku '
+          + 'myi tontin 1928 ja hotelli suljettiin 3. toukokuuta 1929.'
+          + '\n\n'
+          + 'Uuden omistajayhtiön Empire State Inc:n takana olivat muun '
+          + 'muassa John J. Raskob ja du Pontin suku, ja johtoon tuli '
+          + 'entinen New Yorkin kuvernööri Alfred E. Smith. Tavoite oli '
+          + 'maailman korkein rakennus, ja koska Chrysler Building nousi '
+          + 'samaan aikaan, piirustukset muutettiin viisitoista kertaa. '
+          + 'Viimeisessä versiossa joulukuulta 1929 talon päälle '
+          + 'lisättiin 200 jalan kruunu ja 222 jalan masto, jonka piti '
+          + 'toimia ilmalaivojen kiinnityspaikkana. Katon korkeudeksi '
+          + 'tuli 1 250 jalkaa eli 380 metriä.'
+          + '\n\n'
+          + 'Työ alkoi 17. maaliskuuta 1930, ja runko oli valmis 11. '
+          + 'huhtikuuta 1931 eli 410 päivässä; parhaimmillaan työmaalla '
+          + 'oli 3 439 miestä yhtenä päivänä elokuussa 1930, ja '
+          + 'virallisten tietojen mukaan viisi työntekijää kuoli. Talo '
+          + 'avattiin 1. toukokuuta 1931, kun presidentti Herbert Hoover '
+          + 'sytytti valot painikkeesta Washingtonissa. Lama jätti tilat '
+          + 'tyhjiksi, ja pilkkanimeksi tuli Empty State Building — '
+          + 'ensimmäisenä vuonna vuokralla oli 23 prosenttia tiloista, '
+          + 'ja voitolle omistajat pääsivät vasta 1950-luvun alussa. '
+          + 'Ilmalaivamastosta luovuttiin, kun laivaston pieni ilmalaiva '
+          + 'yritti kiinnittyä siihen 15. syyskuuta 1931: alus kaarteli '
+          + 'kaksikymmentäviisi kierrosta kovassa tuulessa, ja '
+          + 'rakennuksen omat nousuvirtaukset heittelivät sitä niin, '
+          + 'että hanke haudattiin siihen paikkaan.',
+      kuvat: [
+        {
+          tiedosto: 'Empire State Building NYC-20090519-RM-084516.jpg',
+          selite: 'Talon runko nousi 410 päivässä, ja huipun masto '
+            + 'suunniteltiin alun perin ilmalaivojen kiinnityspaikaksi.',
+          lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Flatiron Building': {
+      aika: '1901–1902',
+      teksti: 'Kolmion muotoinen tontti Broadwayn ja Viidennen Avenuen '
+          + 'risteyksessä oli 1857 lähtien Amos Enon omistuksessa: hän '
+          + 'osti koko korttelin 32 000 dollarilla ja rakensi vinosti '
+          + 'vastapäätä Fifth Avenue -hotellin. Tontilla olleen '
+          + 'asuintalon pohjoisseinä jäi paljaaksi, ja Eno vuokrasi sen '
+          + 'mainostajille. The New York Times pystytti siihen '
+          + 'sähkölampuista tehdyn kyltin, kaupungin ensimmäisen. '
+          + 'Myöhemmin seinälle pingotettiin kangas, jolle heijastettiin '
+          + 'taikalyhdyllä mainoksia ja uutisia; vaalipäivinä Madison '
+          + 'Squarelle kokoontui kymmeniä tuhansia ihmisiä odottamaan '
+          + 'tuloksia.'
+          + '\n\n'
+          + 'Enon kuoltua 1899 tontti myytiin, ja toukokuussa 1901 sen '
+          + 'osti rakennusyhtiö Fullerin toimitusjohtaja Harry S. Black '
+          + 'yhtiön pääkonttoria varten. Daniel Burnhamin ja Frederick '
+          + 'P. Dinkelbergin suunnittelema talo avattiin 1. lokakuuta '
+          + '1902. Se oli aluksi kaksikymmenkerroksinen ja 285 jalkaa '
+          + 'korkea; myöhemmin lisätyn ullakkokerroksen jälkeen '
+          + 'kerroksia on 22 ja korkeutta 307 jalkaa eli 94 metriä.'
+          + '\n\n'
+          + 'Talo oli mahdollinen vasta sen jälkeen, kun New Yorkin '
+          + 'rakennusmääräyksistä poistettiin 1892 vaatimus '
+          + 'paloturvallisesta muurauksesta ja teräsrunko tuli '
+          + 'sallituksi. Rungon suunnitteli Purdy and Henderson, ja '
+          + 'tuulijäykistys mitoitettiin nelinkertaiseksi siihen '
+          + 'nähden, mitä paikalla voi koskaan puhaltaa. Kolme alinta '
+          + 'kerrosta ovat kalkkikiveä ja ylemmät lasitettua '
+          + 'terrakottaa. Kaupunkilaiset epäilivät silti rakennelmaa ja '
+          + 'kutsuivat sitä Burnhamin hulluudeksi. Nimi Flatiron tulee '
+          + 'muodosta: kolmio muistuttaa valurautaista silitysrautaa.',
+      kuvat: [
+        {
+          tiedosto: '2003-03-Flatiron-Building-New-York-City.jpg',
+          selite: 'Talo valmistui 1902 rakennusyhtiö Fullerin '
+            + 'pääkonttoriksi, ja se sai lempinimensä silitysraudan '
+            + 'muotoisesta tontistaan.',
+          lahde: 'Gunnar Klack, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Washington Squaren riemukaari': {
+      aika: '1889–1895',
+      teksti: 'Vuonna 1889 tuli kuluneeksi sata vuotta George '
+          + 'Washingtonin virkaanastujaisista, ja liikemies William '
+          + 'Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle '
+          + 'Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart '
+          + 'asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät '
+          + 'hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat '
+          + 'juhlakulkueessa kaaren ali Washingtonin '
+          + 'virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli '
+          + 'niin suosittu, että rahaa kerättiin lisää ja kivinen kaari '
+          + 'tilattiin arkkitehti Stanford Whiteltä.'
+          + '\n\n'
+          + 'White otti mallin roomalaisesta riemukaaresta ja päätyi '
+          + 'lähelle ensimmäisellä vuosisadalla rakennettua Tituksen '
+          + 'kaarta. Rakennusaine on valkoista Tuckahoen marmoria. '
+          + 'Korkeutta on 77 jalkaa eli 23 metriä, pilarien väli on 30 '
+          + 'jalkaa ja aukon korkeus 47 jalkaa. Aiheena ovat sota ja '
+          + 'rauha: holvikaaren kulmissa lentävät voitottaret, ja '
+          + 'friisissä on kolmetoista suurta ja 42 pientä tähteä '
+          + 'W-kirjainten lomassa. Itäistä pilaria kaivettaessa löytyi '
+          + 'kolmen metrin syvyydestä ihmisluita, arkku ja vuoden 1803 '
+          + 'hautakivi.'
+          + '\n\n'
+          + 'Kaari vihittiin 1895, ja Washingtonin patsaat lisättiin '
+          + 'pilareihin vasta 1910-luvun lopulla: idässä sotapäällikkö '
+          + 'Kuuluisuuden ja Urhoollisuuden seurassa (Hermon A. '
+          + 'MacNeil), lännessä presidentti Viisauden ja Oikeuden '
+          + 'kanssa (Alexander Stirling Calder). Kaaren ylimpään kiveen '
+          + 'on hakattu suuri P puolalaisen pianistin Ignacy Jan '
+          + 'Paderewskin kunniaksi: hän lahjoitti hankkeeseen 4 500 '
+          + 'dollaria yhden newyorkilaisen konserttinsa tuotosta. '
+          + 'Vuosisadan lopulla kaari oli töhritty spraymaalilla, ja se '
+          + 'puhdistettiin ja kunnostettiin 2003–2004.',
+      kuvat: [
+        {
+          tiedosto: 'NYC - Washington Square Park - Arch.jpg',
+          selite: 'Kaari muistuttaa Washingtonin vuoden 1789 '
+            + 'virkaanastujaisista ja korvasi 1889 pystytetyn '
+            + 'väliaikaisen puu- ja kipsikaaren.',
+          lahde: 'Jean-Christophe BENOIST, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'New Yorkin kaupungintalo': {
+      aika: '1803–1812',
+      teksti: 'Kaupunki järjesti 1802 suunnittelukilpailun uudesta '
+          + 'kaupungintalosta. Kolmensadanviidenkymmenen dollarin '
+          + 'ensimmäisen palkinnon saivat ranskalaissyntyinen '
+          + 'Joseph-François Mangin ja newyorkilainen John McComb '
+          + 'nuorempi, joka oli suunnitellut myös Battery Parkin '
+          + 'linnakkeen. Paikaksi valittiin vanha yhteismaa kaupungin '
+          + 'pohjoisrajalla. Peruskivi laskettiin 26. toukokuuta 1803.'
+          + '\n\n'
+          + 'Valtuusto piti suunnitelmaa liian ylellisenä, joten McComb '
+          + 'pienensi taloa ja verhosi takaseinän halvemmalla ruskealla '
+          + 'hiekkakivellä; etujulkisivuun tuli marmoria Alfordista '
+          + 'Massachusettsista. Työriidat ja keltakuumeen puhkeaminen '
+          + 'hidastivat rakentamista, ja talo vihittiin vasta 1811 ja '
+          + 'avattiin 1812. Se on Yhdysvaltain vanhin kaupungintalo, '
+          + 'jossa hoidetaan yhä sen alkuperäisiä tehtäviä: talossa ovat '
+          + 'pormestarin työhuone ja kaupunginvaltuuston istuntosali.'
+          + '\n\n'
+          + 'Portaat ovat olleet puolentoista vuosisadan ajan kaupungin '
+          + 'juhlien ja mielenosoitusten näyttämö, ja pyöröaulassa on '
+          + 'pidetty kansallisia surujuhlia: Abraham Lincolnin arkku oli '
+          + 'portaiden tasanteella 1865, ja myös Ulysses S. Grant makasi '
+          + 'kupolin alla. Alkuperäinen marmori mureni saasteessa, ja '
+          + 'julkisivu verhottiin 1954–1956 Alabaman kalkkikivellä; työn '
+          + 'suunnitteli Shreve, Lamb & Harmon, sama toimisto joka '
+          + 'piirsi Empire State Buildingin. Talossa on 108 maalausta '
+          + '1700-luvun lopulta 1900-luvulle, muun muassa John '
+          + 'Trumbullin muotokuva Alexander Hamiltonista vuodelta 1805 '
+          + '— sama kasvokuva, joka on kymmenen dollarin setelissä.',
+      kuvat: [
+        {
+          tiedosto: 'New York City Hall, Manhattan, New York (7237192020).jpg',
+          selite: 'Talo on Yhdysvaltain vanhin kaupungintalo, jossa '
+            + 'hoidetaan yhä sen alkuperäisiä tehtäviä.',
+          lahde: 'Ken Lund, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Trinity Church': {
+      aika: '1839–1846',
+      teksti: 'Seurakunta sai peruskirjansa kuningas Vilhelm III:lta 6. '
+          + 'toukokuuta 1697, ja maavuokraksi määrättiin kuusikymmentä '
+          + 'vakallista vehnää vuodessa. Ensimmäinen kirkko valmistui '
+          + '1698 Wall Streetin päähän Hudsonia kohti, ja se tuhoutui '
+          + 'New Yorkin suurpalossa 1776. Toinen kirkko vihittiin 1790; '
+          + 'sitä ennen seurakunta kokoontui Pyhän Paavalin kappelissa, '
+          + 'jossa George Washington kävi jumalanpalveluksessa '
+          + 'virkaanastujaistensa jälkeen 1789. Toinen kirkko purettiin, '
+          + 'kun talven 1838–1839 lumet olivat heikentäneet sen '
+          + 'rakenteita.'
+          + '\n\n'
+          + 'Kolmas eli nykyinen kirkko rakennettiin 1839–1846 Richard '
+          + 'Upjohnin uusgoottilaisten piirustusten mukaan ja vihittiin '
+          + 'helatorstaina 1. toukokuuta 1846. Torni ristiineen ylsi 281 '
+          + 'jalkaan eli 86 metriin. Se oli Yhdysvaltain korkein '
+          + 'rakennus vuoteen 1869 ja New Yorkin korkein vuoteen 1890, '
+          + 'jolloin sen ohitti New York World Building — isoisän matkan '
+          + 'aikaan kultaristinen torninhuippu siis hallitsi Alemman '
+          + 'Manhattanin siluettia ja näkyi satamaan tuleville laivoille '
+          + 'kauas.'
+          + '\n\n'
+          + 'Vuosina 1876–1877 kuoriin pystytettiin William Backhouse '
+          + 'Astor vanhemman muistoksi alttarikoriste, jonka suunnitteli '
+          + 'arkkitehti Frederick Clarke Withers; samalla kirkon '
+          + 'takaosaan rakennettiin matala laajennus papiston ja kuoron '
+          + 'tiloiksi. Seurakunnalla on yhä kaksi kappelia, ja niistä '
+          + 'Pyhän Paavalin kappeli on New Yorkin vanhin yhtäjaksoisesti '
+          + 'käytössä ollut julkinen rakennus. Kirkon mailla aloitti '
+          + '1754 King\'s College, josta tuli myöhemmin Columbian '
+          + 'yliopisto.',
+      kuvat: [
+        {
+          tiedosto: 'NYC Trinity Church.jpg',
+          selite: 'Kuorin alttarikoriste pystytettiin 1876–1877 William '
+            + 'Backhouse Astor vanhemman muistoksi.',
+          lahde: 'Daniel Schwen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
