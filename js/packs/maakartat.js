@@ -8898,6 +8898,77 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Maungawhau', lat: -36.877, lon: 174.764 },
     ],
   },
+  /*
+   * SAN FRANCISCO (nippu 8, 23.8.2026). Rajaus on niemen
+   * koillisnurkka: pohjoisessa Aquatic Parkin ranta, idässä lahti ja
+   * Embarcadero, lännessä Pacific Heights ja etelässä Civic Center.
+   * Ruutu on 4,4 kilometriä kanttiinsa eli pelin tiiviimpiä — New
+   * Yorkin kymmenen kilometrin vastakohta. Perustelu ja hylätyt
+   * vaihtoehdot ovat tools/piirra-kaupunkikartta.mjs:n
+   * sanfrancisco-lohkossa; lyhyesti: faktapohja mittasi kohteiden
+   * jakautuvan tiiviiseen ydinklusteriin ja 5–7 kilometrin päässä
+   * olevaan ulkokehään, ja ydinklusteri mahtuu yhteen kävelymitan
+   * ruutuun.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Portsmouth Square, Mission
+   * Dolores, Chinatown, kaapeliraitiovaunut, kultaryntäyksen
+   * hylkylaivat ja vuoden 1906 maanjäristys ovat kaupunkilehden
+   * nostojen aiheita (kulttuuri-kategoriat.js), joten yksikään niistä
+   * ei ole kartan kohde. Kolme niistä osuisi ruutuun helposti.
+   *
+   * GOLDEN GATE -SILTA JA ALCATRAZ EIVÄT OLE KARTALLA. Silta on 7,2
+   * ja Alcatraz 5,5 kilometrin päässä keskipisteestä, ja kumpikin on
+   * 1930-luvulta eli isoisän matkaan nähden anakronismi. Molemmat
+   * ovat lehden avauskarusellin ja matkaoppaan kuvina.
+   */
+  sanfrancisco: {
+    polku: 'assets/kartat/sanfrancisco-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 37.812, etela: 37.772, lansi: -122.4345, ita: -122.3845 },
+    esittely: 'Kartan alue on niemen koillisnurkka, se osa kaupunkia '
+      + 'johon matkailijan San Francisco mahtuu. Pohjoisessa on lahden '
+      + 'ranta, idässä Embarcadero ja lauttaterminaali, keskellä '
+      + 'Financial Districtin ja Union Squaren korttelit sekä Nob '
+      + 'Hillin jyrkkä rinne, lännessä Pacific Heightsin puutalot ja '
+      + 'etelässä Civic Center. Kadut nousevat kartalla kukkuloiden yli '
+      + 'suorina, koska ruutukaava piirrettiin välittämättä maastosta. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KYMMENEN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * New Yorkissa ja Karachissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta ja artikkelien coord-mallineista
+       * 23.8.2026; Grace Cathedralilla ei ole kumpaakaan, joten sen
+       * piste on Wikidatan P625:stä (Q3082361).
+       *
+       * TRANSAMERICA PYRAMID JA OLD ST. MARY'S OVAT 380 METRIN
+       * PÄÄSSÄ toisistaan, ja niiden numeroympyrät sipaisevat
+       * toisiaan (tarkista-karttapisteet.mjs: alle prosentin peitto).
+       * Se on tietoinen: molemmat ovat kartan tarpeellisia kohteita
+       * — pyramidi seisoo Montgomery Blockin tontilla ja kirkko on
+       * kaupungin vanhin katedraali — eikä koordinaattia siirretä.
+       *
+       * FERRY BUILDINGIN PISTE ON SIIRRETTY 55 METRIÄ LÄNTEEN.
+       * Wikipedian koordinaatti (37,7955 / −122,3937) ja OSM:n oma
+       * rakennuskeskipiste (−122,39343) osuvat molemmat kohtaan,
+       * jossa terminaali seisoo paalujen varassa satama-altaan
+       * päällä, ja tarkista-karttapisteet.mjs lukee sieltä sata
+       * prosenttia vettä. Piste on nyt talon maanpuoleisella
+       * Embarcaderon julkisivulla, jossa sisäänkäynti on (Lontoon
+       * silmän ja Venetsian Arsenaalin ratkaisu).
+       */
+      { nimi: 'Ghirardelli Square', lat: 37.8059, lon: -122.423 },
+      { nimi: 'Coit Tower', lat: 37.8025, lon: -122.40583 },
+      { nimi: 'Ferry Building', lat: 37.7955, lon: -122.3944 },
+      { nimi: 'Transamerica Pyramid', lat: 37.7952, lon: -122.4028 },
+      { nimi: 'Haas–Lilienthalin talo', lat: 37.793008, lon: -122.424589 },
+      { nimi: "Old St. Mary's -katedraali", lat: 37.79265, lon: -122.40575 },
+      { nimi: 'Grace Cathedral', lat: 37.7919, lon: -122.413 },
+      { nimi: 'Palace Hotel', lat: 37.7884, lon: -122.402 },
+      { nimi: 'Union Square', lat: 37.788056, lon: -122.4075 },
+      { nimi: 'San Franciscon kaupungintalo', lat: 37.77919, lon: -122.41914 },
+    ],
+  },
 };
 
 /*

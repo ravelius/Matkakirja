@@ -3285,6 +3285,51 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -36.836, etela: -36.888, lansi: 174.7317, ita: 174.7967 },
     meri: true,
   },
+  sanfrancisco: {
+    /*
+     * Niemen koillisnurkka: Aquatic Parkin rannasta Civic Centeriin ja
+     * Pacific Heightsista lahdelle (23.8.2026). Ruutu on 4,4 × 4,4
+     * kilometriä eli New Yorkin (10 km) vastakohta, ja ero on
+     * maantieteen sanelema: faktapohja (docs/mantereet-tyoaineisto/
+     * faktapohja-sanfrancisco.md, osio 4) mittasi kaupungin
+     * kohteiden jakautuvan tiiviiseen ydinklusteriin ja 5–7
+     * kilometrin päässä olevaan ulkokehään, ja ydinklusteri mahtuu
+     * yhteen kävelymitan ruutuun.
+     *
+     * ULKOKEHÄ JÄÄ ULKOPUOLELLE TIETOISESTI. Golden Gate -silta
+     * (37,81972 / −122,47861), Presidio, Golden Gate Park ja
+     * Alcatraz ovat 4,9–7,2 kilometrin päässä keskipisteestä, ja
+     * niiden mukaan ottaminen kasvattaisi ruudun yli kymmeneen
+     * kilometriin — silloin puolet kuvasta olisi Tyyntämerta ja
+     * lahtea ja ydinklusterin kymmenen kohdetta puristuisivat
+     * nurkkaan. Silta ja Alcatraz ovat sitä paitsi jo lehden puolella
+     * (avauskarusellin ja matkaoppaan kuvat), ja molemmat ovat
+     * 1930-luvulta eli isoisän matkaan nähden anakronismeja.
+     *
+     * EI meri: true, ja se on KOKEILTU 23.8.2026 — lippu kääntyi
+     * väärin päin. Merentäyttö väritti niemen eli MAAN vesisävyllä
+     * ja jätti lahden paperin väriseksi, koska rantaviiva kulkee
+     * kuvan halki eikä sulkeudu renkaaksi oikein päin (Tukholman
+     * tunnettu puute). Ilman lippua satama-altaat ja laiturien
+     * väliset vedet piirtyvät oikein, koska ne ovat OSM:ssä myös
+     * natural=water -alueita; avolahti kuvan koillisnurkassa jää
+     * paperiksi, ja se on pienempi paha kuin väärä meri.
+     *
+     * EI jalkakäytäviä eikä palveluteitä. San Franciscon ydin on
+     * suoraa ruutukaavaa, jossa korttelin sivu on noin sata metriä
+     * eli 36 pikseliä — katuverkko piirtyy tiheänä ilman niitäkin,
+     * ja lipuilla Financial Districtin korttelit täyttyisivät
+     * pysäköintipihojen ja huoltokujien viivoista.
+     *
+     * ETELÄREUNA 37.772 ON VALITTU KAUPUNGINTALON MUKAAN. Mission
+     * Doloresin lähetysasema (37,76439) jää kilometrin reunan
+     * alapuolelle; se on lehden oman noston aihe ("Yerba Buenasta
+     * tuli San Francisco"), eikä ruudun venyttäminen sinne asti
+     * kannata — kartta kasvaisi 5,5 kilometriin ja kaikki kymmenen
+     * kohdetta nousisivat yläpuoliskoon.
+     */
+    rajat: { pohjoinen: 37.812, etela: 37.772, lansi: -122.4345, ita: -122.3845 },
+  },
 };
 
 /*

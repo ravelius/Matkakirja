@@ -31634,4 +31634,529 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  sanfrancisco: {
+    'Ghirardelli Square': {
+      aika: '1852–1964',
+      teksti: 'Domenico Ghirardelli syntyi 1817 Rapallossa ja oppi '
+          + 'suklaantekijän ammatin Romanengon liikkeessä Genovassa. '
+          + 'Parikymppisenä hän muutti Uruguayhin ja sieltä Limaan, '
+          + 'jossa hän piti makeiskauppaa ja alkoi käyttää nimensä '
+          + 'espanjalaista muotoa Domingo. Vuonna 1849 hän lähti '
+          + 'Kaliforniaan entisen naapurinsa James Lickin kehotuksesta '
+          + '— Lick oli vienyt San Franciscoon vuotta aiemmin 600 '
+          + 'naulaa suklaata — ja avasi ensimmäisen kauppansa '
+          + 'kaivosleiriin myydäkseen makeisia kullankaivajille.'
+          + '\n\n'
+          + 'Vuoden 1851 tulipalo tuhosi hänen San Franciscon '
+          + 'liikkeensä ja muutamaa päivää myöhemmin myös Stocktonin '
+          + 'kaupan. Ghirardelli aloitti alusta ja perusti 1852 '
+          + 'yhtiönsä, joka on Yhdysvaltain kolmanneksi vanhin '
+          + 'suklaayritys ja toiminut siitä lähtien keskeytyksettä. '
+          + 'Liike muutti parin vuoden välein suurempiin tiloihin, ja vuoteen '
+          + '1866 mennessä yhtiö toi tuhat naulaa kaakaopapuja '
+          + 'vuodessa ja myi suklaan lisäksi kahvia ja mausteita '
+          + 'Kiinaan, Japaniin ja Meksikoon asti. Isoisän matkan '
+          + 'aikaan yritys oli siis kahdenkymmenen vuoden ikäinen '
+          + 'tukkuliike. Noin 1865 tehtaan työntekijä huomasi, että '
+          + 'lämpimässä huoneessa riippuvasta kaakaopapusäkistä '
+          + 'valuu kaakaovoi pois ja jäljelle jää jauhettava suklaa; '
+          + 'menetelmä tunnetaan broma-menetelmänä ja on nykyään '
+          + 'suklaanvalmistuksen yleisin tapa.'
+          + '\n\n'
+          + 'Vuonna 1893 Ghirardelli osti koko korttelin Russian '
+          + 'Hillin juurelta yhtiönsä pääpaikaksi; hän itse kuoli '
+          + 'Rapallossa 1894. Kun yhtiö myytiin 1960-luvun alussa ja '
+          + 'tehdas siirtyi San Leandroon, kortteli pantiin myyntiin. '
+          + 'William M. Roth ja hänen äitinsä Lurline Matson Roth '
+          + 'ostivat sen 1962 estääkseen kerrostalon rakentamisen ja '
+          + 'palkkasivat maisema-arkkitehti Lawrence Halprinin '
+          + 'muuttamaan vanhat tiilirakennukset kauppojen ja '
+          + 'ravintoloiden kortteliksi. Työ valmistui 1964, ja se on '
+          + 'Yhdysvaltain ensimmäinen suuri teollisuuskiinteistön '
+          + 'uusiokäyttöhanke. Aukion suihkulähteen merenneitoveistos '
+          + 'on Ruth Asawan käsialaa vuodelta 1968: Halprin vaati sen '
+          + 'poistamista, mutta kaupunkilaiset puolustivat teosta ja '
+          + 'se jäi paikalleen.',
+      kuvat: [
+        {
+          tiedosto: 'Ghirardelli Square, San Francisco 2023-07-20.jpg',
+          selite: 'Kortteli oli vuodesta 1893 Ghirardellin '
+            + 'suklaatehdas, ja 1964 siitä tehtiin Yhdysvaltain '
+            + 'ensimmäinen suuri teollisuuskiinteistön uusiokäyttökohde.',
+          lahde: 'The wub, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Coit Tower': {
+      aika: '1849–1934',
+      teksti: 'Telegraph Hill sai nimensä 1849, kun sen laelle '
+          + 'rakennettiin kaksikerroksinen tähystysasema. Sieltä '
+          + 'ilmoitettiin kaupunkilaisille optisella '
+          + 'merkinantolaitteella, mitä laivoja oli tulossa satamaan; '
+          + '1853 se korvattiin sähkölennättimellä, jonka myrsky '
+          + 'tuhosi 1870. Isoisän matkan aikaan kukkulalla oli siis '
+          + 'yhä lennättimen nimi mutta ei enää asemaa. Paikkaa on '
+          + 'kuvattu koko lahden ja viiden ympäröivän piirikunnan '
+          + 'parhaaksi näköalapaikaksi.'
+          + '\n\n'
+          + 'Tornin maksoi Lillie Hitchcock Coit (1843–1929). '
+          + 'Viisitoistavuotiaana hän näki Knickerbocker Engine Co. '
+          + 'No. 5:n palokunnan jäävän vajaamiehiseksi hälytyksessä '
+          + 'Telegraph Hillille, heitti koulukirjansa maahan ja auttoi '
+          + 'ruiskun mäkeen huutaen muitakin sivullisia avuksi. Siitä '
+          + 'lähtien hän oli komppanian maskotti ja kunniapalomies; '
+          + 'kaupungissa ei ollut vakinaista palokuntaa ennen joulukuuta '
+          + '1866, vaan paloista vastasivat vapaaehtoiset komppaniat. '
+          + 'Testamentissaan Coit määräsi kolmanneksen omaisuudestaan, '
+          + '118 000 dollaria, käytettäväksi "sopivalla tavalla sen '
+          + 'kaupungin kaunistamiseen, jota olen aina rakastanut". '
+          + 'Kaupunginvaltuutetut ehdottivat rahoilla tietä Lake '
+          + 'Merced\'ille, mutta pesänhoitajat vaativat itsenäistä '
+          + 'muistomerkkiä, ja taidelautakunnan puheenjohtaja Herbert '
+          + 'Fleishhacker esitti Telegraph Hilliä. Arkkitehtikilpailun '
+          + 'voitti Arthur Brown nuorempi, ja 210 jalan korkuinen '
+          + 'maalaamattomasta teräsbetonista tehty art deco -torni '
+          + 'vihittiin 8. lokakuuta 1933. Tarina, jonka mukaan torni '
+          + 'muistuttaisi paloletkun suutinta, on jälkikäteen '
+          + 'keksitty.'
+          + '\n\n'
+          + 'Tornin sisäseinien freskot olivat Public Works of Art '
+          + 'Projectin koehanke — se oli New Dealin ensimmäinen '
+          + 'taiteilijoiden työllistämisohjelma. Maalaajia oli '
+          + 'kaksikymmentäkaksi apulaisineen, ja monet heistä olivat '
+          + 'California School of Fine Artsin opettajia ja oppilaita. '
+          + 'Kun rannikon satamalakko alkoi 1934 aivan kukkulan '
+          + 'juurella, lehdistö ja viranomaiset alkoivat epäillä '
+          + 'freskoissa kommunistista propagandaa. Heinäkuulle '
+          + 'suunniteltu avajaispäivä peruttiin, torni suljettiin ja '
+          + 'ikkunat peitettiin. Lopulta maalattiin yli vain sirppi ja '
+          + 'vasara sekä erään lehden nimi banderollissa, ja torni '
+          + 'avattiin yleisölle 12. lokakuuta 1934. Vuonna 2012 '
+          + 'kaupunkilaiset hyväksyivät kansanäänestyksessä '
+          + 'aloitteen, joka velvoittaa kaupungin huolehtimaan '
+          + 'freskojen ja rakennuksen kunnosta.',
+      kuvat: [
+        {
+          tiedosto: 'Coit Tower 1.jpg',
+          selite: 'Torni nousi 1933 sen kukkulan laelle, jolla oli '
+            + 'vuosina 1849–1870 laivojen tuloa ilmoittanut '
+            + 'merkkiasema.',
+          lahde: 'Ryan Schwark, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ferry Building': {
+      aika: '1875–2003',
+      teksti: 'Paikalla oli vuodesta 1875 puinen lauttarakennus. Sen '
+          + 'tilalle piirsi 1892 arkkitehti A. Page Brown '
+          + 'beaux arts -tyylisen terminaalin, joka valmistui 1898 ja '
+          + 'avattiin 13. heinäkuuta. Se oli siihen mennessä suurin '
+          + 'kaupungissa toteutettu rakennushanke. Talon molemmat '
+          + 'julkisivut ovat yhtenäistä kaariarkadia, ja keskellä '
+          + 'kohoaa 245 jalan kellotorni, jonka neljä kellotaulua ovat '
+          + 'halkaisijaltaan 22 jalkaa. Koneisto on bostonilaisen E. '
+          + 'Howardin vuonna 1898 tekemä ja oli aikanaan maailman '
+          + 'suurin vedettävä mekaaninen kellokoneisto; nykyään sitä '
+          + 'pyörittää sähkömoottori.'
+          + '\n\n'
+          + 'Terminaali oli East Bayn työmatkalaisten määränpää ja '
+          + 'samalla se paikka, jossa mannertenväliset radat '
+          + 'kohtasivat kaupungin: junat päättyivät Oaklandiin, ja '
+          + 'matka jatkui lautalla. Rakennuksen edustalle rakennettiin '
+          + 'raitiovaunusilmukat, jotka pystyivät käsittelemään 295 '
+          + 'vaunua tunnissa. Ennen kuin Bay Bridge ja Golden Gate '
+          + '-silta valmistuivat 1930-luvulla, terminaali oli '
+          + 'matkustajamäärältään maailman toiseksi vilkkain '
+          + 'liikenneasema heti Lontoon Charing Crossin jälkeen. '
+          + 'Vahvasti rakennettu talo kesti sekä vuoden 1906 että '
+          + 'vuoden 1989 maanjäristyksen lähes vaurioitta.'
+          + '\n\n'
+          + 'Siltojen jälkeen lauttaliikenne romahti, ja 1950-luvulta '
+          + 'alkaen sisätilat pilkottiin toimistoiksi: 660 jalan '
+          + 'pituinen valoisa halli jäi kapeaksi käytäväksi. '
+          + '1950-luvun lopulla talon eteen rakennettiin '
+          + 'Embarcadero-moottoritie, joka peitti näkymän Market '
+          + 'Streetiltä ja katkaisi kulun rantaan. Loma Prietan '
+          + 'maanjäristys vaurioitti moottoritietä 1989, ja pormestari '
+          + 'Art Agnosin johdolla se purettiin kokonaan vuoteen 1992 '
+          + 'mennessä. Terminaali kunnostettiin ja avattiin uudelleen '
+          + '2003; hallin 44 tiilikaaresta yksitoista oli purettu, ja '
+          + 'ne tehtiin uudelleen niin, että uudet ja vanhat erottuvat '
+          + 'toisistaan vain tarkalla katseella.',
+      kuvat: [
+        {
+          tiedosto: 'Ferry Building - San Francisco - California.jpg',
+          selite: 'Kellotorni on 245 jalkaa korkea, ja sen neljä '
+            + 'kellotaulua käyvät vuonna 1898 valmistuneella '
+            + 'bostonilaisella koneistolla.',
+          lahde: 'Andre m, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Transamerica Pyramid': {
+      aika: '1853–1972',
+      teksti: 'Tontti on täytemaata: se oli aikanaan Yerba Buena '
+          + 'Coven rantaviivaa. Kun lahdenpoukama täytettiin, paikalle '
+          + 'nousi 1853 Montgomery Block, jonka rakennutti Henry Wager '
+          + 'Halleck — myöhemmin sisällissodan pohjoisvaltioiden '
+          + 'armeijan ylipäällikkö. Nelikerroksinen talo oli '
+          + 'valmistuessaan korkein rakennus Mississippistä länteen ja '
+          + 'kaupungin ensimmäinen paloturvalliseksi ja '
+          + 'maanjäristystä kestäväksi suunniteltu rakennus. Sitä '
+          + 'kutsuttiin Halleckin hulluudeksi, koska se seisoi '
+          + 'punapuutukkien lautalla, ja lempinimeltään Monkey '
+          + 'Blockiksi. Talossa oli asianajajien ja pankkiirien '
+          + 'konttoreita ja taiteilijoiden asuntoja, ja sen '
+          + 'vakiovieraisiin kuuluivat Mark Twain, Bret Harte, Ambrose '
+          + 'Bierce ja myöhemmin Jack London. Isoisän matkan aikaan '
+          + 'Monkey Block oli kaupungin kuuluisin osoite.'
+          + '\n\n'
+          + 'Montgomery Block kesti vuoden 1906 maanjäristyksen ja '
+          + 'palon, mutta se purettiin 1959 ja tilalle tehtiin '
+          + 'pysäköintialue. Vakuutusyhtiö Transamerican '
+          + 'toimitusjohtaja John Beckett halusi tontille talon, joka '
+          + 'päästäisi valon kadulle asti, ja päätyi pyramidin '
+          + 'muotoon. Ensimmäinen ehdotus oli 1 150 jalkaa korkea, '
+          + 'mutta kaavoituslautakunta hylkäsi sen, koska se olisi '
+          + 'peittänyt näkymän lahdelle Nob Hillilta. William '
+          + 'Pereiran suunnittelema torni rakennettiin 1969–1972, ja '
+          + 'siitä tuli 853 jalkaa korkea ja 48-kerroksinen. Huipun '
+          + 'ylin 212 jalkaa on ontto huippu, jonka sisällä on sadan '
+          + 'jalan pituiset teräsportaat kuudenkymmenen asteen '
+          + 'kulmassa.'
+          + '\n\n'
+          + 'Valmistuessaan 1972 pyramidi oli maailman kahdeksanneksi '
+          + 'korkein rakennus ja korkein Chicagosta länteen; Los '
+          + 'Angelesin Aon Center ohitti sen jo 1974. San Franciscon '
+          + 'korkein se oli aina vuoteen 2017, jolloin rakenteilla '
+          + 'ollut Salesforce Tower nousi sen ohi. Rakennusaikanaan '
+          + 'pyramidia vastustettiin äänekkäästi ja sitä pidettiin '
+          + 'silmäsärkynä, mutta arvostelijat vaihtoivat mieltään: '
+          + 'San Francisco Chroniclen John King kuvasi taloa 2009 '
+          + '"parhaan lajin arkkitehtoniseksi ikoniksi — sellaiseksi, '
+          + 'joka sopii paikkaansa ja paranee iän myötä". '
+          + 'Kahdennenkymmenennenseitsemännen kerroksen näköalatasanne '
+          + 'suljettiin 2001, ja tilalle asennettiin huipun neljä '
+          + 'kameraa, joiden kuvaa aulan näytöiltä voi kääntää itse.',
+      kuvat: [
+        {
+          tiedosto: 'Near Trans America Pyramid (10376581266).jpg',
+          selite: 'Talo valmistui 1972 sille tontille, jolla oli '
+            + 'seissyt vuodesta 1853 Montgomery Block eli Monkey '
+            + 'Block.',
+          lahde: 'Robert Ashworth, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Haas–Lilienthalin talo': {
+      aika: '1886–1973',
+      teksti: 'Talon rakennutti kauppias William Haas (1849–1916), '
+          + 'joka syntyi juutalaiseen perheeseen Baijerin '
+          + 'Reckendorfissa ja saapui San Franciscoon lokakuussa '
+          + '1868. Hän menestyi nopeasti tukkukauppiaana ja meni 1880 '
+          + 'naimisiin Bertha Greenebaumin kanssa, jonka isä oli '
+          + 'niin ikään baijerilainen ja omisti kalifornialaisen '
+          + 'kauppahuoneen. Perhe asui useissa vuokra-asunnoissa, '
+          + 'kunnes rakennutti 1886 oman talon Franklin Streetille. '
+          + 'Suunnittelijaksi tuli baijerilainen arkkitehti Peter R. '
+          + 'Schmidt. Talo on punapuuta, tyyliltään Queen Anne ja '
+          + 'Eastlake, ja sen kulmassa on tornihuone noitalakin '
+          + 'muotoisine kattoineen. Pohjaratkaisu on kaupungille '
+          + 'tyypillinen rivitalokaava, joka kehitettiin syvien ja '
+          + 'kapeiden rinnetonttien takia.'
+          + '\n\n'
+          + 'Huhtikuun 18. päivänä 1906 talo kesti maanjäristyksen '
+          + 'vähin vaurioin, mutta sitä uhkasi tulipalo. Perhe '
+          + 'katseli paloa oman talonsa katolta, kunnes viranomaiset '
+          + 'määräsivät kaikki lähtemään, ja he leiriytyivät muiden '
+          + 'kaupunkilaisten tavoin lähimpään puistoon Lafayette '
+          + 'Parkiin. Kolme päivää järistyksen jälkeen palo saatiin '
+          + 'pysäytettyä Van Ness Avenuelle, ja talo säästyi täpärästi '
+          + '— sama raja pelasti suuren osan Pacific Heightsin '
+          + 'puutaloista, kun kaupungin keskusta oli jo palanut.'
+          + '\n\n'
+          + 'Talossa asui kolme sukupolvea. Alice Haas Lilienthal '
+          + 'kuoli 1972 asuttuaan siinä lähes kahdeksankymmentä '
+          + 'vuotta, ja hänen lapsensa lahjoittivat rakennuksen '
+          + 'seuraavana vuonna San Francisco Heritage -yhdistykselle. '
+          + 'Talo merkittiin kansalliseen historiallisten paikkojen '
+          + 'rekisteriin 2. heinäkuuta 1973 ja kaupungin '
+          + 'maamerkkiluetteloon 1975. Se on kaupungin ainoa '
+          + 'alkuperäisessä asussaan säilynyt viktoriaaninen '
+          + 'yksityistalo, joka on säännöllisesti auki museona '
+          + 'alkuperäisine huonekaluineen; opastettu kierros alkaa '
+          + 'kellarin juhlasalista. Rahavaikeuksien takia museo '
+          + 'suljettiin marraskuussa 2023, mutta kierrokset alkoivat '
+          + 'uudelleen keväällä 2024.',
+      kuvat: [
+        {
+          tiedosto: 'Haas-Lilienthal House exterior 2025.jpg',
+          selite: 'Talo rakennettiin 1886 kauppias William Haasille, '
+            + 'ja se säästyi vuoden 1906 palolta, joka pysähtyi Van '
+            + 'Ness Avenuelle.',
+          lahde: 'Ppienovagem, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "Old St. Mary's -katedraali": {
+      aika: '1853–1909',
+      teksti: 'Montereyn piispa Joseph Alemany laski peruskiven '
+          + 'sunnuntaina 17. heinäkuuta 1853 California Streetin ja '
+          + 'silloisen Dupont Streetin kulmaan. '
+          + 'Rakennusaineet tulivat kaukaa: tiilet tuotiin laivoilla '
+          + 'Kap Hornin ympäri ja graniitti veistettiin valmiiksi '
+          + 'Kiinassa, ja työn tekivät kiinalaiset työmiehet. '
+          + 'Uusgoottilaiset piirustukset laativat William Craine ja '
+          + 'Thomas England, kaksi Kalifornian ensimmäisistä '
+          + 'paikallisista arkkitehdeista. Alemany vihki kirkon '
+          + 'jouluyön messussa 1854 jo San Franciscon arkkipiispana, '
+          + 'ja siitä tuli San '
+          + 'Franciscon arkkihiippakunnan ensimmäinen katedraali sekä '
+          + 'Kalifornian ensimmäinen kirkko, joka rakennettiin '
+          + 'nimenomaan katedraaliksi. Valmistuessaan se oli koko '
+          + 'kaupungin ja koko osavaltion korkein rakennus.'
+          + '\n\n'
+          + 'Kellotornin kellotaulun alle hakattiin lause '
+          + '"Son, observe the time and fly from evil" eli poika, pane '
+          + 'merkille aika ja pakene pahaa. Se on Sirakin kirjasta ja '
+          + 'oli tarkoitettu ohjeeksi kadun ohikulkijoille. Katedraali '
+          + 'kirkko oli vuoteen 1891, jolloin kasvava seurakunta sai '
+          + 'suuremman katedraalin Van Ness Avenuen ja O\'Farrell '
+          + 'Streetin kulmaan; vanha kirkko jäi seurakuntakirkoksi ja '
+          + 'piti nimensä. Isoisän matkan aikaan se oli siis yhä '
+          + 'kaupungin katedraali. Paulistit ovat hoitaneet kirkkoa '
+          + 'vuodesta 1901.'
+          + '\n\n'
+          + 'Vuoden 1906 maanjäristyksen kirkko kesti, mutta seuraavana '
+          + 'päivänä tuli poltti sen sisältä tyhjäksi. Kuumuus suli '
+          + 'kirkonkellot ja marmorisen alttarin, ja jäljelle jäivät '
+          + 'vain tiiliset ulkoseinät ja kellotorni. Kunnostus '
+          + 'valmistui 1909 arkkitehtitoimisto Welsh & Careyn '
+          + 'johdolla. Samoihin aikoihin Dupont Street sai uuden nimen '
+          + 'Grant Avenue presidentti ja kenraali Ulysses S. Grantin '
+          + 'mukaan. Kirkko on Kalifornian osavaltion historiallinen '
+          + 'maamerkki ja on ollut San Franciscon maamerkkiluettelossa '
+          + 'vuodesta 1968.',
+      kuvat: [
+        {
+          tiedosto: "2017 Old St. Mary's Cathedral 660 California Street.jpg",
+          selite: 'Kirkko vihittiin katedraaliksi jouluyönä 1854, ja '
+            + 'sen tiilet tuotiin Kap Hornin ympäri ja graniitti '
+            + 'Kiinasta.',
+          lahde: 'Beyond My Ken, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Grace Cathedral': {
+      aika: '1849–1964',
+      teksti: 'Seurakunta perustettiin 1849 kultaryntäyksen vuosina. '
+          + 'Sen kolmas kirkko rakennettiin California Streetin ja '
+          + 'Stockton Streetin kulmaan ja vihittiin 3. toukokuuta '
+          + '1868 — se on se Grace Church, jonka isoisä olisi voinut '
+          + 'nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, '
+          + 'muiden muassa rautatiemies Leland Stanford ja pankkiiri '
+          + 'William Henry Crocker. Vuoden 1906 järistystä seurannut '
+          + 'palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan '
+          + '1907.'
+          + '\n\n'
+          + 'Crockerin suku lahjoitti hiippakunnalle oman raunioituneen '
+          + 'tonttinsa Nob Hillin laelta, ja peruskivi laskettiin '
+          + '1910. Piirustukset teki englantilainen goottilaisen '
+          + 'tyylin mestari George Frederick Bodley, joka kuoli 1907, '
+          + 'ja työn saattoi loppuun sanfranciscolainen Lewis P. '
+          + 'Hobart. Katedraali rakennettiin teräsbetonista neljässä '
+          + 'jaksossa vuosina 1928–1930, 1931–1934, 1939–1943 ja '
+          + '1961–1964; lama ja sota keskeyttivät työn kahdesti, ja '
+          + 'seitsemäntoista vuoden ajan kirkossa oli iso tyhjä väli '
+          + 'keskeneräisen pääkäytävän ja ainoan valmiin tornin '
+          + 'välissä. Rakennus vihittiin 28. maaliskuuta 1964. '
+          + 'Pituutta on 329 jalkaa ja keskitornin huippu ulottuu 247 '
+          + 'jalkaan kadun pinnasta.'
+          + '\n\n'
+          + 'Pääovet ovat jäljennös Firenzen kastekappelin Lorenzo '
+          + 'Ghibertin ovista, joita kutsutaan Paratiisin porteiksi. '
+          + 'Alkuperäiset ovet vietiin sodan aikana turvaan ja '
+          + 'piilotettiin käytöstä poistettuun rautatietunneliin; kun '
+          + 'ne löydettiin 1944, niistä tehtiin muotit, ja '
+          + 'jäljennökset valettiin 1956. Ne oli tarkoitettu erääseen '
+          + 'sotamuistomerkkiin, mutta rahoitus kaatui, ja '
+          + 'sanfranciscolainen Charles D. Field osti ovet kirkolle. '
+          + 'Pohjoisen tornin kellopelissä on 44 kelloa, jotka '
+          + 'valettiin Croydonissa Englannissa 1938. Ne ehtivät '
+          + 'kaupunkiin ennen torniaan ja olivat vuosina 1939–1940 '
+          + 'esillä Treasure Islandin maailmannäyttelyssä; ensimmäisen '
+          + 'kerran niitä soitettiin tornista jouluaattona 1940. '
+          + 'Kirkon lattiassa on labyrintti, joka noudattaa Chartresin '
+          + 'katedraalin keskiaikaista kuviota.',
+      kuvat: [
+        {
+          tiedosto: 'Grace Cathedral San Francisco facade.jpg',
+          selite: 'Pääovet ovat 1956 valettu jäljennös Firenzen '
+            + 'kastekappelin Ghiberti-ovista, ja ne asennettiin '
+            + 'paikoilleen kirkon vihkimiseen 1964.',
+          lahde: 'Everbruin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palace Hotel': {
+      aika: '1875–1909',
+      teksti: 'Hotellin rakennutti pankkiiri William Chapman Ralston, '
+          + 'ja se maksoi viisi miljoonaa dollaria. Kun se avattiin 2. '
+          + 'lokakuuta 1875, siinä oli 755 huonetta ja se oli '
+          + 'Yhdysvaltain länsiosien suurin hotelli. Korkeutta oli 120 '
+          + 'jalkaa, mikä riitti kaupungin korkeimmaksi rakennukseksi '
+          + 'yli vuosikymmeneksi. Keskellä taloa oli lasikattoinen '
+          + 'Grand Court, jonne vaunut ajoivat sisään ja jota '
+          + 'ympäröi seitsemän kerrosta valkoisia pylväsparvekkeita. '
+          + 'Hisseinä oli punapuupaneloituja hydraulisia '
+          + '"nousuhuoneita", ja joka huoneessa oli oma kylpyhuone ja '
+          + 'sähköinen kutsunappi palvelusväen hälyttämiseksi. Kun '
+          + 'isoisä kulki kaupungin läpi 1873, hotellia ei siis vielä '
+          + 'ollut — se avattiin kaksi vuotta myöhemmin.'
+          + '\n\n'
+          + 'Ralston ei nähnyt hotellinsa avajaisia. Hänen '
+          + 'pankkinsa Bank of California kaatui elokuun lopussa 1875, '
+          + 'ja samana päivänä kun hän menetti pankkinsa hallinnan, '
+          + 'hän hukkui San Franciscon lahteen. Liikekumppani, senaattori '
+          + 'William Sharon, sai haltuunsa sekä hotellin, pankin että '
+          + 'Ralstonin velat. Talo teki vaikutuksen: teräsmies Andrew '
+          + 'Carnegie kirjoitti maailmanmatkakirjassaan, ettei '
+          + 'maailmassa ole toista tällaista hotellirakennusta ja että '
+          + 'Pariisin Grand-hotellin sali on tämän rinnalla vaatimaton. '
+          + 'Havaijin kuningas Kalākaua asui hotellissa vierailullaan '
+          + '1890 ja kuoli siellä 20. tammikuuta 1891.'
+          + '\n\n'
+          + 'Hotelli kesti 18. huhtikuuta 1906 maanjäristyksen mutta '
+          + 'paloi saman päivän iltapäivällä. Talossa yöpyi tenori '
+          + 'Enrico Caruso, joka oli edellisiltana laulanut Don Josén '
+          + 'osan Carmenissa ja joka vannoi järistyksen jälkeen, ettei '
+          + 'palaa kaupunkiin koskaan. Väliaikaiseksi majataloksi '
+          + 'pystytettiin 23 huoneen "Baby" Palace, joka avattiin jo '
+          + 'marraskuussa 1906. Nykyinen hotelli avattiin samalle '
+          + 'tontille 19. joulukuuta 1909, ja vanhan Grand Courtin '
+          + 'paikalla on siitä lähtien ollut ruokasali Garden Court. '
+          + 'Presidentti Warren G. Harding kuoli hotellissa 1923, ja '
+          + 'vuonna 1945 siellä järjestettiin juhlaillallinen '
+          + 'Yhdistyneiden kansakuntien perustamiskokouksen '
+          + 'avajaisten kunniaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Palace Hotel from across Market on Montgomery St.JPG',
+          selite: 'Nykyinen talo avattiin 1909 sen hotellin paikalle, '
+            + 'jonka William Ralston rakennutti 1875 ja joka paloi '
+            + '1906.',
+          lahde: 'BrokenSphere, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Union Square': {
+      aika: '1850–1903',
+      teksti: 'Aukio oli alun perin hiekkadyyni. Kaupungin ensimmäinen '
+          + 'yhdysvaltalainen pormestari John Geary erotti sen '
+          + 'julkiseksi puistoksi 1850, ja se on yhä saman kokoinen '
+          + 'kortteli Gearyn, Powellin, Postin ja Stocktonin katujen '
+          + 'välissä — pinta-alaa on 2,6 eekkeriä. Nimi ei tarkoita '
+          + 'ammattiyhdistystä vaan unionia: aukiolla pidettiin '
+          + 'sisällissodan kynnyksellä ja sen aikana pappi Thomas '
+          + 'Starr Kingin johtamia mielenosoituksia pohjoisvaltioiden '
+          + 'puolesta. Isoisän matkan aikaan aukio oli siis runsaan '
+          + 'kahdenkymmenen vuoden ikäinen puisto keskellä uutta '
+          + 'kaupunginosaa.'
+          + '\n\n'
+          + 'Aukion keskellä kohoaa Dewey-muistomerkki, joka '
+          + 'vihittiin 1903. Kokonaiskorkeus on 97 jalkaa: '
+          + 'pylväs on 85 jalkaa ja sen päällä seisova pronssinen '
+          + 'Nike, kreikkalainen voiton jumalatar, yhdeksän jalkaa. '
+          + 'Muistomerkki kertoo amiraali George Deweyn voitosta '
+          + 'Manilanlahden meritaistelussa 1898 ja samalla vähän '
+          + 'aiemmin murhatusta presidentti William McKinleystä. '
+          + 'Veistoksen teki Robert Aitken, ja Voiton hahmon mallina '
+          + 'oli tanskalaissyntyinen konekirjoittaja ja taiteilijoiden '
+          + 'malli Alma de Bretteville, josta tuli myöhemmin kaupungin '
+          + 'rikkaimpiin kuuluneen miehen vaimo.'
+          + '\n\n'
+          + 'Vuosina 1939–1941 aukion alle louhittiin pysäköintihalli '
+          + 'arkkitehti Timothy Pfluegerin suunnitelmien mukaan. Se '
+          + 'oli maailman ensimmäinen maanalainen pysäköintilaitos, ja '
+          + 'sen seurauksena aukion nurmikot, pensaat ja koko '
+          + 'Dewey-muistomerkki lepäävät nykyään hallin katolla. Aukio '
+          + 'kunnostettiin uudelleen vuosituhannen vaihteessa ja '
+          + 'avattiin 25. heinäkuuta 2002. Sitä ympäröivät korttelit '
+          + 'ovat pitkään olleet Yhdysvaltain tunnetuimpia '
+          + 'tavarataloalueita, ja aukio on kaupungin vilkkaimpia '
+          + 'kohtaamispaikkoja.',
+      kuvat: [
+        {
+          tiedosto: 'Dewey Monument, Union Square.jpg',
+          selite: 'Aukion keskellä on 1903 vihitty muistomerkki '
+            + 'amiraali George Deweyn voitolle Manilanlahdella.',
+          lahde: 'Supercarwaar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Franciscon kaupungintalo': {
+      aika: '1870–1915',
+      teksti: 'Edellinen kaupungintalo oli varoittava esimerkki. Sen '
+          + 'rakentaminen alkoi 1870 vanhan hautausmaan paikalle '
+          + 'kolmion muotoiselle tontille, ja Augustus Laverin ja '
+          + 'Thomas Stentin suunnitelma valmistui vasta 1897 — '
+          + 'kaksikymmentäseitsemän vuotta ja seitsemän '
+          + 'pääarkkitehtia myöhemmin. Työtä varjosti korruptio: '
+          + 'tiilien huhuttiin olevan kelvottomia ja seinien '
+          + 'täytteenä todettiin olevan hiekkaa, lattiat olivat '
+          + 'vinossa ja savupiiput vetivät huonosti. Hinnaksi tuli '
+          + 'kuusi miljoonaa dollaria, ja vuoden 1906 maanjäristys '
+          + 'kaatoi talon vajaat kymmenen vuotta sen valmistumisen '
+          + 'jälkeen. Isoisän matkan aikaan työmaa oli ollut käynnissä '
+          + 'kolme vuotta, ja sitä oli vielä neljäkolmatta vuotta '
+          + 'jäljellä.'
+          + '\n\n'
+          + 'Uusi kaupungintalo rakennettiin nopeasti, koska kaupunki '
+          + 'halusi sen valmiiksi vuoden 1915 maailmannäyttelyyn. '
+          + 'Kilpailun voitti Arthur Brown nuorempi toimistostaan '
+          + 'Bakewell & Brown, ja hän piirsi itse myös ovenripat ja '
+          + 'valitsi opasteiden kirjasintyypin. Maantyöt alkoivat 5. '
+          + 'huhtikuuta 1913 ja peruskivi laskettiin saman vuoden '
+          + 'lokakuussa; pormestari James Rolph muutti taloon 28. '
+          + 'joulukuuta 1915, ja viimeinen kivi asetettiin '
+          + 'maaliskuussa 1916. Rakennus on beaux arts -tyylinen ja '
+          + 'täyttää kaksi korttelia. Kupoli on esikuviltaan '
+          + 'pariisilainen — Les Invalides ja Val-de-Grâce — ja '
+          + 'kohoaa 307,5 jalkaan eli korkeammalle kuin Yhdysvaltain '
+          + 'kongressitalon kupoli Washingtonissa.'
+          + '\n\n'
+          + 'Talon pyöröaulassa on pidetty kaupungin surujuhlia: '
+          + 'siellä lepäsivät muun muassa kenraali Frederick Funston '
+          + '1917 ja presidentti Warren G. Harding 1923. Joe DiMaggio '
+          + 'ja Marilyn Monroe vihittiin talossa tammikuussa 1954. '
+          + 'Marraskuun 27. päivänä 1978 entinen valtuutettu Dan White '
+          + 'surmasi rakennuksessa pormestari George Mosconen ja '
+          + 'valtuutettu Harvey Milkin; Mosconen pronssinen rintakuva '
+          + 'seisoo nyt pormestarin työhuoneen lähellä, ja Milkin '
+          + 'rintakuva paljastettiin talossa 2008. '
+          + 'Loma Prietan maanjäristys käänsi 1989 kupolia neljä '
+          + 'tuumaa jalustallaan, ja talo perustettiin uudelleen '
+          + 'kumi- ja teräseristimien varaan. Kun se avattiin '
+          + 'tammikuussa 1999, se oli maailman suurin tällä tavalla '
+          + 'eristetty rakennus.',
+      kuvat: [
+        {
+          tiedosto: 'Ayuntamiento de San Francisco (California) 001.jpg',
+          selite: 'Kupoli kohoaa 307,5 jalkaan eli korkeammalle kuin '
+            + 'Yhdysvaltain kongressitalon kupoli.',
+          lahde: 'Américo Toledano, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
