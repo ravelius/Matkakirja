@@ -25814,4 +25814,579 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * AUSTRALIA (AUS) — Oseanian laudan ensimmäinen maalehti (Opus
+   * 23.8.2026). Aineisto: docs/mantereet-tyoaineisto/faktapohja-
+   * australia.md ja tarkistus-australia.md yhdessä luettuna, ja jokainen
+   * tekstiin päätynyt luku on tarkistettu vielä kerran en-Wikipedian
+   * raakatekstistä 23.8.2026. Sisältölinjaus on spec-mantereet.md:n
+   * Oseania-osio: alkuperäiskansat elävinä toimijoina, historia suoraan
+   * mutta hienotunteisesti, Uluru vain ulkopuolelta.
+   *
+   * AIHEJAKO on Fablen toimeksianto: Historia, Alkuperäiskansat, Talous,
+   * Luonto ja Ruoka (5 × 4). Kahdella aiheella ei ole omaa kuvaketta
+   * js/ui-apurit.js:n AIHE_IKONIT-taulussa, joten ne piirtyvät
+   * yleiskuvakkeella `muu` — sama ratkaisu kuin taulun kolmella
+   * kymmenellä muulla omalla aihe-id:llä (aavikko, helmet, vuoret …).
+   * Uusia kuvakkeita EI lisätty.
+   *
+   * MINITEHTÄVÄT: yksi per aihe, ja jokaisen vastaus on saman sivun
+   * nostotekstissä. Tarkistettu js/packs/oceania-questions.js:n koko
+   * OCEANIA_QUESTIONS-taulukkoa vasten, ettei yksikään toista
+   * kaupunkivisaa. Lähimmäs osuu Alice Springsin kysymys siitä, mistä
+   * kaupunki sai alkunsa (lennätinaseman toistoasemasta) — Talouden
+   * tehtävä kysyy sen sijaan linjan valmistumisvuotta 1872, eri fakta.
+   * Alkuperäiskansat-sivun tehtävä on tarkoituksella
+   * tähtitieteestä eikä Ulurusta: Ulurun oma kaupunkivisa kysyy JO
+   * vuoden 1873 nimeämisen ja vuoden 2019 kiipeämiskiellon (Fablen
+   * ohje ja faktapohjan luku 11, avoin kysymys A).
+   *
+   * FAKTAPOHJASTA POIKETTIIN NÄISSÄ KOHDISSA:
+   *  - "Australiasta tuli 1870-luvulla maailman suurin villantuottaja"
+   *    JÄTETTIIN POIS. Faktapohja lainasi lauseen en-Wikipedian
+   *    artikkelista "Agriculture in Australia", mutta 23.8.2026 haetussa
+   *    raakatekstissä sitä ei enää ole — artikkeli sanoo vain, että
+   *    Australia on nykyään maailman suurin villantuottaja. Tilalle
+   *    otettiin luvut, jotka Wikipedia sanoo suoraan: 26 merinolammasta
+   *    1797, lähes kaksi miljoonaa lammasta 1830-luvulle tultaessa ja
+   *    villa puolena siirtokunnan viennistä 1844 ("History of Australia",
+   *    "Australian Merino").
+   *  - T4 (Talouden neljäs nosto) oli faktapohjassa auki (luku 4,
+   *    T4/T4b). Kalgoorlien 1893-ryntäys olisi ollut 20 vuotta isoisän
+   *    matkan jälkeen, ja Eureka on jo Historia-sivulla, joten neljäs
+   *    nosto on Murrayjoen siipirataslaivat: sama kuljetusketju kuin
+   *    T2:n villa, ja ajallisesti keskellä isoisän vuosikymmentä
+   *    (en-Wikipedia "Murray River").
+   *  - H4:n raideleveysnostoon EI kirjoitettu, että matkustajat
+   *    vaihtoivat junaa rajalla jo 1873. en-Wikipedia "Rail gauge in
+   *    Australia" sanoo suoraan, ettei ongelma ollut vielä 1880-luvulle
+   *    asti todellinen, koska siirtokuntien radat eivät yhtyneet: leveä
+   *    ja normaali raide kohtasivat Alburyssa vasta 1883. Teksti kertoo
+   *    asian tässä järjestyksessä.
+   *  - L1:n kenguru: faktapohja sanoi gangurrun tarkoittaneen
+   *    "harvinaista tummasävyistä lajia". Tuore artikkeli "Kangaroo"
+   *    sanoo sanan viittaavan itäharmaakenguruun, ja mainitsee lisäksi
+   *    Phillip Parker Kingin 1819–20 tekemän huomion, ettei paikallinen
+   *    sana ollutkaan kangaroo vaan menuah. Molemmat kirjoitettu auki.
+   *  - Stolen Generations jätettiin pois nostoista faktapohjan
+   *    perustelulla (avoin kysymys E): tapahtumat ovat 1900-luvulta
+   *    eivätkä istu 1873-kaareen ilman anakronismia. Fable päättää
+   *    erikseen, tuleeko aiheesta oma sivunsa.
+   *
+   * KUVAT: 20 nostokuvaa, jokainen haettu Commonsin rajapinnasta,
+   * lisenssi ja tekijä extmetadatasta, leveys ≥ 1200 px ja jokainen
+   * katsottu silmin 900 px:n esikatselussa. Kaksi hylättiin katsomisen
+   * jälkeen: J. W. Lindtin swagman-muotokuva 1887 (kuvan kulmassa
+   * studion oma signeeraus "J.W. LINDT MELBOURNE", reseptin kieltämä
+   * lisätty merkintä) ja Stubbsin kengurumaalauksen leikkaamaton
+   * museokuva (oikeassa reunassa valokuvaajan harmaasävyliuska) —
+   * tilalle otettiin saman maalauksen rajattu versio. Booth'n
+   * vuoden 1873 kartassa ja Doudiet'n akvarellissa on julkaisijan
+   * ja taiteilijan oma teksti, joka on reseptin sallima poikkeus ja
+   * kerrottu kuvatekstissä. Kahdesta kuvasta extmetadata ei anna
+   * tekijää lainkaan (Uluru-yleiskuva ja kultakenttien postivaunu),
+   * joten lähderiviin on kirjoitettu talon vakiomuoto "Tuntematon
+   * kuvaaja".
+   */
+  AUS: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 Australia ei ole vielä yksi maa vaan joukko '
+          + 'erillisiä siirtokuntia, ja viimeisen vankilaivan '
+          + 'saapumisesta on kulunut vasta viisi vuotta.',
+      nostot: [
+        {
+          otsikko: 'Yksitoista laivaa ja 252 päivää merellä',
+          aika: '1787–1788',
+          tiedosto: 'First Fleet entering Sydney 1788 Bradley.jpg',
+          teksti: 'Yksitoista laivaa lähti Portsmouthista 13. toukokuuta '
+              + '1787 ja saapui Botany Baylle tammikuussa 1788. Matkaa '
+              + 'kertyi 252 päivää ja yli 24 000 kilometriä, eikä yhtään '
+              + 'alusta menetetty. Lähtijöitä oli noin 1 420, heistä 775 '
+              + 'rangaistusvankeja; Sydney Coveen astui maihin 1 373 '
+              + 'ihmistä, sillä matkalla kuoli 48. Britannia oli menettänyt '
+              + 'Amerikan siirtokuntansa eikä sillä ollut enää paikkaa, '
+              + 'jonne lähettää tuomitut. Vuoteen 1868 mennessä vankeja '
+              + 'kuljetettiin Australiaan noin 162 000. Isoisän matkan '
+              + 'aikaan Sydney on jo satamakaupunki, jonka villalaivat '
+              + 'purjehtivat Lontooseen.',
+          selite: 'William Bradley, ensimmäisen laivueen upseeri, maalasi '
+            + 'laivat purjehtimassa sisään sataman hiekkakivikallioiden '
+            + 'ohi tammikuussa 1788.',
+          lahde: 'William Bradley, Wikimedia Commons (PD)',
+          wiki: 'Ensimmäinen laivue',
+        },
+        {
+          otsikko: 'Viimeinen vankilaiva ja käsin kirjoitettu lehti',
+          aika: '1868',
+          tiedosto: 'Old Fremantle Gaol (2009).jpg',
+          teksti: 'Hougoumont lähti Portsmouthista 12. lokakuuta 1867 '
+              + 'mukanaan 280 vankia ja 108 matkustajaa, ja se laski '
+              + 'ankkurin Fremantlessa 10. tammikuuta 1868 — viimeisenä '
+              + 'vankilaivana, joka koskaan saapui Australiaan. Vankien '
+              + 'joukossa oli 62 fenianiksi kutsuttua irlantilaista '
+              + 'poliittista vankia, joista noin 17 oli sotilaita. Heitä '
+              + 'oli poikkeuksellisen paljon kirjoitustaitoisia, ja 89 '
+              + 'päivän matkalla syntyi seitsemän numeroa käsin '
+              + 'kirjoitettua laivalehteä The Wild Goose. Numerot ovat '
+              + 'yhä tallessa New South Walesin osavaltionkirjastossa.',
+          selite: 'Fremantlen vankilan porttirakennus muurattiin '
+            + 'vankityönä 1854–1855 paikalta louhitusta kalkkikivestä, ja '
+            + 'sen portin rauta saatiin haaksirikkoutuneista laivoista.',
+          lahde: 'Tamsin Slater, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Fremantlen vankila',
+        },
+        {
+          otsikko: 'Kaivosmiesten vala Ballaratissa',
+          aika: '1854',
+          tiedosto: 'Doudiet Swearing allegiance to the Southern Cross.jpg',
+          teksti: 'Victorian kultakentillä kaivoslupa maksoi kuukaudessa '
+              + 'enemmän kuin moni ehti kaivaa, eikä vaeltavilla '
+              + 'kaivosmiehillä ollut äänioikeutta heitä verottavaan '
+              + 'hallintoon. Marraskuun 29. päivänä 1854 noin 10 000 '
+              + 'ihmistä vannoi Ballaratissa uskollisuutta Eureka-lipulle. '
+              + 'Aamuyöllä 3. joulukuuta kapteeni Thomasin komentama 276 '
+              + 'miehen sotilas- ja poliisijoukko hyökkäsi kaivosmiesten '
+              + 'puuaidan kimppuun. Kuolleita kirjattiin 27, valtaosa '
+              + 'kapinallisia. Kolmetoista vangittua vapautettiin '
+              + 'oikeudessa, ja kaivoslupa korvattiin punnan vuosimaksulla, '
+              + 'joka antoi haltijalleen myös äänioikeuden.',
+          selite: 'Charles Doudiet oli itse Ballaratissa ja maalasi '
+            + 'kaivosmiehet Eureka-lipun ympärillä kädet koholla; hän '
+            + 'kirjoitti akvarellin alalaitaan päiväyksen ja nimen omalla '
+            + 'kädellään.',
+          lahde: 'Charles Doudiet, Wikimedia Commons (PD)',
+          wiki: 'Eurekan kapina',
+        },
+        {
+          otsikko: 'Yksi manner, monta parlamenttia ja kolme raideleveyttä',
+          aika: '1873',
+          tiedosto: 'BOOTH(1873) 1.008 GENERAL MAP OF AUSTRALIA.jpg',
+          teksti: 'Isoisän matkan aikaan Australia on nimi, jonka alla on '
+              + 'kuusi erillistä siirtokuntaa: New South Wales, Victoria, '
+              + 'Queensland, Etelä-Australia, Länsi-Australia ja Tasmania, '
+              + 'kukin omine parlamentteineen ja lakeineen. Rautateistä '
+              + 'ei päästy yksimielisyyteen. New South Wales vaihtoi '
+              + 'raideleveyttä kesken suunnittelun, Victoria rakensi jo '
+              + 'valitsemallaan leveällä raiteella ja Queensland otti '
+              + '1865 käyttöön kapean. Ongelma näkyi vasta kun radat '
+              + 'kohtasivat: Melbournen ja Sydneyn linjat yhtyivät '
+              + 'Alburyssa 1883, ja siitä eteenpäin matkustajat vaihtoivat '
+              + 'junaa rajalla. Yhtenäinen normaaliraide valmistui 1995.',
+          selite: 'Vuoden 1873 kartassa siirtokuntien rajat on värjätty '
+            + 'erikseen, ja Pohjoisterritorio on merkitty Etelä-Australiaan '
+            + 'liitetyksi; alalaidassa on painoksen oma otsikko.',
+          lahde: 'Edwin Carton Booth, Wikimedia Commons (PD)',
+          wiki: 'Australian siirtokunnat',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta erillistä brittisiirtokuntaa Australiassa '
+            + 'oli vuonna 1873?',
+        vaihtoehdot: ['Kolme', 'Neljä', 'Kuusi', 'Kahdeksan'],
+        oikea: 2,
+        fakta: 'New South Wales, Victoria, Queensland, Etelä-Australia, '
+            + 'Länsi-Australia ja Tasmania olivat kukin oma '
+            + 'itsehallinnollinen siirtokuntansa.',
+      },
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Aboriginaalikansat ovat asuttaneet mannerta kymmeniä '
+          + 'tuhansia vuosia, ja heidän tähtitietonsa ja maanhoitonsa '
+          + 'ovat yhä käytössä.',
+      nostot: [
+        {
+          otsikko: 'Viisisataa kansaa ja viisikymmentä vuosituhatta',
+          tiedosto: 'Kakadu (AU), Kakadu National Park, Ubirr Rock Art -- 2019 -- 4169.jpg',
+          teksti: 'Arkeologisen näytön mukaan aboriginaalikansojen '
+              + 'esivanhemmat saapuivat mantereelle 50 000–65 000 vuotta '
+              + 'sitten. Reitti kulki todennäköisesti saarelta saarelle '
+              + 'nykyisen Indonesian kautta, ja jokainen väli oli '
+              + 'ylitettävä vettä pitkin. Aikaa myöten syntyi jopa 500 '
+              + 'kieli- ja alueryhmää, joilla kullakin oli oma maansa ja '
+              + 'sen hoitovastuu. Kun eurooppalaiset saapuivat, mantereella '
+              + 'asui arvioiden mukaan vähintään 314 500 ihmistä. '
+              + 'Kalliomaalaukset eivät ole muisto kadonneesta: samat '
+              + 'kansat asuvat yhä alueillaan, ja kertomukset kulkevat '
+              + 'edelleen sukupolvelta toiselle.',
+          selite: 'Ubirrin kalliosuojassa Kakadussa okralla maalattu kala '
+            + 'on tehty niin sanottuun röntgentyyliin, jossa näkyvät myös '
+            + 'ruodot ja sisäelimet.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Australian alkuperäiskansat',
+        },
+        {
+          otsikko: 'Emu, joka on tähtien välissä',
+          tiedosto: 'The Milky Way Over Anglers Reach (ann22042h).jpg',
+          teksti: 'Eurooppalainen tähtitiede piirtää kuviot tähdistä. '
+              + 'Lähes kaikkialla Australiassa tunnettu Emu taivaalla '
+              + 'muodostuu päinvastoin tummista pilvistä tähtien välissä: '
+              + 'linnun pää on Etelän Ristin vieressä oleva Hiilisäkki-sumu '
+              + 'ja ruumis Linnunradan tumma halkeama, joka jatkuu '
+              + 'Skorpionia kohti. '
+              + 'Sydneyn pohjoispuolella Ku-ring-gain kallioihin on '
+              + 'hakattu emu täsmälleen samaan asentoon kuin taivaalla. '
+              + 'Tähdet toimivat myös kalenterina: kun Boorong-kansan '
+              + 'pensaskana eli Lyyra katoaa lokakuussa auringon seuraan, '
+              + 'on aika kerätä munia.',
+          selite: 'Linnunrata kaartuu järven yli Uudessa Etelä-Walesissa, '
+            + 'ja sen halki kulkevat tummat pölypilvet erottuvat selvästi '
+            + 'tähtien seasta.',
+          lahde: 'Lucy Yunxi Hu/IAU OAE, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Linnunrata',
+        },
+        {
+          otsikko: 'Tuli, joka hoitaa maata',
+          tiedosto: 'Grass tree on fire during controlled burn (cropped).jpg',
+          teksti: 'Aboriginaalikansat ovat tuhansien vuosien ajan '
+              + 'sytyttäneet tarkoituksella pieniä ja matalia polttoja. '
+              + 'Menetelmällä on monta päämäärää kerralla: metsästys '
+              + 'helpottuu, kasvi- ja eläinlajisto muuttuu halutuksi, '
+              + 'rikkakasvit pysyvät kurissa ja ennen kaikkea suuren '
+              + 'maastopalon vaara pienenee, kun kuivaa kasvustoa ei pääse '
+              + 'kertymään. Arkeologi Rhys Jones antoi tavalle vuonna 1969 '
+              + 'nimen keppitulimaanviljely. Uudisasukkaat lopettivat '
+              + 'poltot laajoilla alueilla, mutta 2000-luvulla ne ovat '
+              + 'palanneet alkuperäiskansojen tietäjien johdolla — '
+              + 'Victoriassa 170 vuoden tauon jälkeen.',
+          selite: 'Länsi-Australiassa hallitussa poltossa palava '
+            + 'ruohopuu roihahtaa hetkeksi, kun tuli kulkee matalana '
+            + 'maanpintaa pitkin eukalyptusmetsässä.',
+          lahde: 'User:JarrahTree, Wikimedia Commons (CC BY 2.5 au)',
+          wiki: 'Kulotus',
+        },
+        {
+          otsikko: 'Punainen kallio saa toisen nimen',
+          aika: '1873',
+          tiedosto: 'Australie Uluru 1.JPG',
+          teksti: 'Heinäkuun 19. päivänä 1873 maanmittaaja William Gosse '
+              + 'näki tasangolta kohoavan hiekkakiviselänteen ja nimesi '
+              + 'sen Ayers Rockiksi Etelä-Australian ylisihteerin Henry '
+              + 'Ayersin mukaan. Alueen anangu-kansalle paikka oli jo '
+              + 'silloin Uluru: sen ympärillä on lähteitä, vesikuoppia, '
+              + 'luolia ja vanhoja kalliomaalauksia. Kallio kohoaa '
+              + 'tasangolta 348 metriä, ja sen ympärysmitta on 9,4 '
+              + 'kilometriä. Maanomistus palautettiin anangulle 26. '
+              + 'lokakuuta 1985. Puiston hallitus päätti 2017 yksimielisesti '
+              + 'kieltää kiipeämisen, ja kielto astui voimaan lokakuussa '
+              + '2019 — kalliota katsotaan nyt vain sen juurelta.',
+          selite: 'Ulurun juurelta katsottuna kallion punaiset kupeet '
+            + 'nousevat suoraan spinifexruohikosta ja matalasta '
+            + 'puurivistä.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Uluru',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä aboriginaalinen Emu taivaalla -kuvio muodostuu?',
+        vaihtoehdot: [
+          'Linnunradan tummista pilvistä',
+          'Etelän Ristin tähdistä',
+          'Kahdesta kirkkaasta planeetasta',
+          'Magellanin pilvistä',
+        ],
+        oikea: 0,
+        fakta: 'Emun pää on Hiilisäkki-sumu Etelän Ristin vieressä ja '
+            + 'ruumis Linnunradan tumma halkeama.',
+      },
+    },
+    {
+      id: 'talous',
+      nimi: 'Talous',
+      johdanto: 'Kulta, villa ja lennätin muuttivat mantereen kahdessa '
+          + 'vuosikymmenessä, ja isoisä saapuu juuri kun muutos on '
+          + 'tuoreimmillaan.',
+      nostot: [
+        {
+          otsikko: 'Kulta, joka kolminkertaisti väkiluvun',
+          aika: '1851–1861',
+          tiedosto: 'Edward Roper - Gold diggings, Ararat, 1854.jpg',
+          teksti: 'Helmikuussa 1851 Edward Hargraves kertoi julkisesti '
+              + 'löytäneensä kultaa Bathurstin lähellä, ja saman vuoden '
+              + 'aikana Victoriasta löytyi vielä rikkaampia kenttiä. '
+              + 'Australian väkiluku kasvoi 430 000:sta 1 170 000:een '
+              + 'kymmenessä vuodessa, Victoriasta tuli väkirikkain '
+              + 'siirtokunta ja Melbournesta suurin kaupunki. Tulijoita '
+              + 'saapui Britanniasta, Euroopasta, Yhdysvalloista ja '
+              + 'Kiinasta: Victorian kentillä oli vuoteen 1855 mennessä '
+              + '20 000 kiinalaista kaivosmiestä ja New South Walesissa '
+              + '13 000. Siirtokuntien hallitukset vastasivat säätämällä '
+              + 'kiinalaisille erillisiä veroja ja rajoituksia.',
+          selite: 'Edward Roper maalasi Araratin kaivoskentän vuonna 1854: '
+            + 'telttarivit, kauppapuodit, härkävaljakko ja miehiä '
+            + 'huuhtomassa kultaa puron rannalla.',
+          lahde: 'Edward Roper, Wikimedia Commons (PD)',
+          wiki: 'Australian kultaryntäys',
+        },
+        {
+          otsikko: 'Kaksikymmentäkuusi lammasta Kapkaupungista',
+          aika: '1797',
+          tiedosto: 'Tom Roberts - Shearing the rams - Google Art Project.jpg',
+          teksti: 'Vuonna 1797 Henry Waterhouse ja William Kent ostivat '
+              + 'Kapkaupungista 26 merinolammasta, joista noin puolet '
+              + 'selvisi merimatkasta Australiaan. Osa myytiin Elizabeth '
+              + 'ja John Macarthurille Parramattaan, ja hienovillainen rotu '
+              + 'osoittautui kuivalle mantereelle sopivaksi: vuoteen 1830 '
+              + 'mennessä lampaita oli jo lähes kaksi miljoonaa. Vuonna '
+              + '1844 villa oli puolet koko siirtokunnan viennistä, ja '
+              + 'sen tuotto rakensi rautatiet, kirjastot ja leveät kadut. '
+              + 'Työ nojasi vaeltaviin lampaanleikkaajiin, jotka kulkivat '
+              + 'tilalta toiselle omaisuus käärittynä selkään.',
+          selite: 'Tom Robertsin vuoden 1890 maalaus vie keritsimöön, '
+            + 'jossa miehet keritsevät lampaita käsin ja pojat kantavat '
+            + 'villat pois.',
+          lahde: 'Tom Roberts, Wikimedia Commons (PD)',
+          wiki: 'Merinolammas',
+        },
+        {
+          otsikko: 'Sanoma, joka kulki tunneissa eikä kuukausissa',
+          aika: '1872',
+          tiedosto: 'Alice Springs Telegraph Station, 2015 (08).JPG',
+          teksti: 'Etelä-Australian hallitus lupautui 1870 rakentamaan '
+              + '3 200 kilometriä lennätinlinjaa Adelaidesta Darwiniin. '
+              + 'Pylväät pystytettiin 80 metrin välein ja toistinasemat '
+              + 'enintään 250 kilometrin päähän toisistaan. Pohjoisen '
+              + 'osuuden urakoitsija sai potkut toukokuussa 1871 liian '
+              + 'hitaan etenemisen vuoksi, ja hallitus rakensi yli 700 '
+              + 'kilometriä itse. Linjat yhtyivät Frew\'s Pondsissa 22. '
+              + 'elokuuta 1872. Kun linja kytkettiin Jaavan merikaapeliin, '
+              + 'viesti Eurooppaan kulki tunneissa. Isoisän saapuessa '
+              + 'yhteys on toiminut runsaan vuoden.',
+          selite: 'Alice Springsin toistinasema on yhä pystyssä '
+            + 'kivimuureineen ja peltikattoineen jokivarren '
+            + 'punaisten eukalyptusten alla.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Australian lennätinlinja',
+        },
+        {
+          otsikko: 'Joki, jota pitkin villa tuli alas',
+          aika: '1853–',
+          tiedosto: 'P.S. Cumberoona on the Murray River.jpg',
+          teksti: 'Murray on Australian pisin joki, 2 508 kilometriä, '
+              + 'mutta merestä sinne ei pääse: joella ei ole suistoa, '
+              + 'jonka läpi laiva mahtuisi. Sisämaan kuljetukset hoitivat '
+              + 'siksi matalakulkuiset siipirataslaivat. Ensimmäiset kaksi '
+              + 'nousivat jokea kevättulvalla 1853, ja vuoteen 1860 '
+              + 'mennessä laivoja oli tusina. Kun rautatie ylsi Echucaan '
+              + '1864, Riverinan villapaalit kulkivat ensin jokea alas '
+              + 'Echucaan ja sieltä junalla Melbourneen. Isoisän matkan '
+              + 'aikaan tämä on mantereen vilkkain sisämaan reitti.',
+          selite: 'Siipirataslaiva on kiinnittynyt Murrayn rantaan '
+            + 'punaisten eukalyptusten alle, samaan tapaan kuin '
+            + 'villalastin ottavat laivat 1870-luvulla.',
+          lahde: 'Shiny Things, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Murray (joki)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna mantereen halki kulkevan lennätinlinjan '
+            + 'kaksi päätä yhtyivät?',
+        vaihtoehdot: ['1854', '1868', '1872', '1901'],
+        oikea: 2,
+        fakta: 'Linjat yhtyivät Frew\'s Pondsissa 22. elokuuta 1872, ja '
+            + 'viesti Eurooppaan alkoi kulkea tunneissa.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Mantereen eläimistö oli eurooppalaisille niin outoa, '
+          + 'että ensimmäiset näytteet epäiltiin väärennöksiksi.',
+      nostot: [
+        {
+          otsikko: 'Eläin, joka maalattiin täytetystä nahasta',
+          aika: '1770–1772',
+          tiedosto: 'The Kongouro from New Holland (Kangaroo) NMM ZBA5754 (cropped).jpg',
+          teksti: 'Heinäkuussa 1770 Cookin Endeavour oli korjattavana '
+              + 'nykyisen Cooktownin kohdalla, ja retkikunta kirjasi '
+              + 'muistiin paikallisen guugu yimithirr -kansan sanan '
+              + 'gangurru. Sanan on myöhemmin todettu tarkoittavan '
+              + 'itäharmaakengurua — tarina siitä, että se olisi merkinnyt '
+              + '"en ymmärrä", on pelkkä legenda. Kaikki eivät olleet '
+              + 'yhtä mieltä: Phillip Parker King väitti vuosina 1819–1820 '
+              + 'paikallisen sanan olevan menuah. Upseeri John Gore ampui '
+              + 'yhden eläimen, ja sen nahka vietiin Englantiin. George '
+              + 'Stubbs maalasi kengurun 1772 pelkän täytetyn nahan '
+              + 'mukaan.',
+          selite: 'Stubbsin maalaus vuodelta 1772 oli ensimmäinen '
+            + 'australialaisesta eläimestä tehty länsimainen taulu, ja '
+            + 'siksi eläimen asento on hieman oudon jäykkä.',
+          lahde: 'George Stubbs, Wikimedia Commons (PD)',
+          wiki: 'Kengurut',
+        },
+        {
+          otsikko: 'Eläin, jota pidettiin huijauksena',
+          aika: '1799',
+          tiedosto: 'Ornithorhynchus anatinus - feeding.jpg',
+          teksti: 'Kun kuvernööri John Hunter lähetti 1798 Britanniaan '
+              + 'vesinokkaeläimen nahan ja piirroksen, tiedemiesten '
+              + 'ensimmäinen arvaus oli huijaus. George Shaw kirjoitti '
+              + 'ensimmäisen kuvauksen 1799 ja myönsi suoraan epäilevänsä '
+              + 'eläimen aitoutta, ja Robert Knox arveli sen olevan '
+              + 'kiinalaisten merimiesten ompelema. Eläin on kuitenkin '
+              + 'todellinen ja yksi vain viidestä munivasta nisäkäslajista '
+              + 'maailmassa; muut neljä ovat nokkasiilejä. Koiraan '
+              + 'takajalan kannuksesta ruiskuaa myrkkyä, ja saaliinsa '
+              + 'eläin löytää veden alla sähköaistilla silmät, korvat ja '
+              + 'sieraimet suljettuina.',
+          selite: 'Vesinokkaeläin etsii ravintoa nokallaan pohjasorasta '
+            + 'silmät kiinni, pienten kalojen keskellä.',
+          lahde: 'robertpaulyoung, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Vesinokkaeläin',
+        },
+        {
+          otsikko: 'Suurin elävien rakentama rakennelma',
+          aika: '1770',
+          tiedosto: 'GBR From Air.png',
+          teksti: 'Kesäkuun 11. päivänä 1770 Cookin Endeavour ajoi karille '
+              + 'matalikolle nykyisen Cooktownin eteläpuolella, ja laivaa '
+              + 'korjattiin seitsemän viikkoa. Näin eurooppalaiset '
+              + 'kohtasivat Ison valliriutan, jonka aboriginaali- ja '
+              + 'Torresinsalmen kansat olivat tunteneet jo tuhansia vuosia. '
+              + 'Riutta koostuu yli 2 900 erillisestä riutasta ja 900 '
+              + 'saaresta, ulottuu yli 2 300 kilometrin matkalle ja on '
+              + 'suurin elävien eliöiden rakentama rakennelma maailmassa. '
+              + 'Vesissä elää yli 1 500 kalalajia. Koska riutalla ei ole '
+              + 'atolleja, sitä tutkittiin 1800-luvulla hyvin vähän.',
+          selite: 'Ilmasta katsottuna riutat erottuvat vaaleina nauhoina '
+            + 'syvän sinisen meren keskellä.',
+          lahde: 'Alexander Fordyce, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Iso valliriutta',
+        },
+        {
+          otsikko: 'Nimi, joka tarkoittaa ei vettä',
+          tiedosto: 'Koala branch.jpg',
+          teksti: 'Sana koala tulee Sydneyn seudun dharug-kielen sanasta '
+              + 'gula, joka merkitsee "ei vettä": eläin saa lähes kaiken '
+              + 'nesteensä eukalyptuksen lehdistä. Ravinto on niin '
+              + 'köyhää ja osin myrkyllistä, että koala nukkuu jopa '
+              + 'kaksikymmentä tuntia vuorokaudessa ja syö ja nukkuu '
+              + 'usein samassa puussa. Uudisasukkaat kutsuivat sitä '
+              + 'karhuksi ulkonäön vuoksi, mutta koala on pussieläin ja '
+              + 'sen lähin sukulainen on vombatti. Nimi on yksi sadoista '
+              + 'aboriginaalikielten sanoista, jotka jäivät '
+              + 'australianenglantiin.',
+          selite: 'Koala roikkuu paljaalla oksalla ja katsoo ylös; '
+            + 'kynnet ovat tarttuneet kuoreen molemmin käsin.',
+          lahde: 'Tanner Ford, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Koala',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä mukaan George Stubbs maalasi kengurunsa?',
+        vaihtoehdot: [
+          'Elävän eläimen mukaan',
+          'Täytetyn nahan mukaan',
+          'Luurangon mukaan',
+          'Toisen maalauksen mukaan',
+        ],
+        oikea: 1,
+        fakta: 'Upseeri John Gore ampui eläimen 1770, ja vain nahka '
+            + 'päätyi Englantiin asti.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Australian keittiö syntyi käytännön pakosta ja '
+          + 'kohtaamisista: nuotiosta, kultakentiltä ja mantereen omista '
+          + 'kasveista.',
+      nostot: [
+        {
+          otsikko: 'Leipä, joka paistetaan tuhkassa',
+          tiedosto: 'Damper (food).jpg',
+          teksti: 'Aboriginaalikansat jauhoivat siemeniä jauhoksi '
+              + 'käsikivillä, sekoittivat jauhon veteen ja paistoivat '
+              + 'taikinan kuumassa tuhkassa. Käsikiviä on löydetty '
+              + 'jopa 50 000 vuoden takaa. Karjapaimenten damper on '
+              + 'sekoitus tätä tapaa ja eurooppalaista leivontaa: '
+              + 'vehnäjauhoa, suolaa ja vettä, tarvittaessa voita, ja '
+              + 'sama hiillos tai rasvattu pata. Jauhosäkki vei '
+              + 'satulalaukussa vähemmän tilaa kuin valmis leipä. '
+              + 'Yön yli jätetty taikina saattoi hapata itsestään. '
+              + 'Damperia syötiin kuivatun lihan ja kultaisen siirapin '
+              + 'kanssa.',
+          selite: 'Leipä paistuu nuotion hiilloksessa hiekassa, ja '
+            + 'leipoja kaivaa tuhkaa sivuun kepillä.',
+          lahde: 'Nachoman-au, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Damper',
+        },
+        {
+          otsikko: 'Käärö, jota kannettiin selässä',
+          aika: '1830-luku',
+          tiedosto: '"Down on his Luck" by Frederick McCubbin - Art Gallery of Western Australia - Joy of Museums.jpg',
+          teksti: 'Sana swag oli 1800-luvun alussa brittiläisten varkaiden '
+              + 'slangia ja tarkoitti varastettua tavaraa; Francis Grosen '
+              + 'sanakirja selitti sen vuonna 1811. Australiassa merkitys '
+              + 'kääntyi 1830-luvulla toisin päin: swag oli kulkumiehen '
+              + 'oma käärö, ja sana swagman yleistyi 1850-luvun '
+              + 'kultaryntäysten aikaan. Villateollisuus nojasi näihin '
+              + 'kulkijoihin, ja monella lammastilalla oli tapana antaa '
+              + 'ohikulkijalle ruoka ja yösija silloinkin kun työtä ei '
+              + 'ollut. Etelä-Australian Canowiessa jaettiin vuoden 1903 '
+              + 'tienoilla yli 2 000 yösijaa vuodessa.',
+          selite: 'Frederick McCubbinin maalaus vuodelta 1889 esittää '
+            + 'kulkumiehen istumassa kääröllään pienen nuotion vieressä '
+            + 'eukalyptusmetsässä.',
+          lahde: 'Frederick McCubbin, valokuva Joyofmuseums, Wikimedia '
+            + 'Commons (CC BY-SA 4.0)',
+          wiki: 'Swagman',
+        },
+        {
+          otsikko: 'Riisiä ja teetä kultakentillä',
+          aika: '1850-luku',
+          tiedosto: 'Chinese on stagecoach to goldfields.jpg',
+          teksti: 'Kultaryntäys toi Victoriaan vuoteen 1858 mennessä '
+              + '42 000 kiinalaista siirtolaista — viisi vuotta aiemmin '
+              + 'koko Melbournessa oli asunut noin 25 000 ihmistä. '
+              + 'Tulijat toivat mukanaan riisin, vihannekset ja teen '
+              + 'kaivoskenttien jauho- ja lihapainotteisen ruokavalion '
+              + 'rinnalle. Monet asuivat Melbournen Little Bourke '
+              + 'Streetin majataloissa, ja korttelista kasvoi pysyvä '
+              + 'kiinalaiskaupunki. 1860-luvulla Australiassa oli noin '
+              + '40 000 kiinalaista, heistä vain kourallinen naisia. '
+              + 'Syrjivistä laeista huolimatta kauppaverkosto jäi.',
+          selite: 'Kultakentille matkaava postivaunu on lastattu '
+            + 'täyteen matkatavaraa, ja matkustajat istuvat myös katolla.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Kiinalaiset Australiassa',
+        },
+        {
+          otsikko: 'Ruoka, jota siirtolaiset väheksyivät',
+          tiedosto: 'CSIRO ScienceImage 2079 Fruit on the Quandong Tree.jpg',
+          teksti: 'Mantereen omat ruoka-aineet — kenguru, emu, '
+              + 'quandong-hedelmä, kutjera, sitruunamyrtti, '
+              + 'warrigal-vihannes ja witchetty-toukka — olivat '
+              + 'alkuperäiskansoille tuttuja tuhansia vuosia ennen '
+              + 'eurooppalaisia. Ne auttoivat myös uudisasukkaita, kun '
+              + 'omat viljelykasvit pettivät, mutta tulijat pitivät niitä '
+              + 'silti kotimaan ruokia huonompina. Vasta 1990-luvulla '
+              + 'alkuperäiskasveja alettiin viljellä kaupallisesti. Ainoa '
+              + 'poikkeus on makadamiapähkinä: ensimmäinen pieni '
+              + 'viljelmä perustettiin Australiassa 1880-luvulla, ja siitä '
+              + 'kasvoi lopulta suuren mittakaavan tuote.',
+          selite: 'Quandongin kirkkaanpunaiset hedelmät kypsyvät '
+            + 'kapealehtisessä puussa Australian kuivilla mailla.',
+          lahde: 'Plant Industry, CSIRO, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Bush tucker',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä on ainoa australialainen alkuperäiskasvi, josta '
+            + 'kasvoi suuren mittakaavan viljelytuote?',
+        vaihtoehdot: [
+          'Quandong',
+          'Makadamiapähkinä',
+          'Sitruunamyrtti',
+          'Warrigal-vihannes',
+        ],
+        oikea: 1,
+        fakta: 'Ensimmäinen pieni makadamiaviljelmä perustettiin '
+            + 'Australiassa 1880-luvulla.',
+      },
+    },
+  ],
 };

@@ -2717,6 +2717,72 @@ export const MAAKARTAT = {
       wiki: 'São Francisco (joki)',
     },
   },
+  AUS: {
+    /*
+     * AUSTRALIA (Opus 23.8.2026). Oseanian laudan ensimmäinen maakartta.
+     *
+     * PROJEKTIO oli faktapohjan avoin kysymys (faktapohja-australia.md,
+     * luku 9 ja avoin kysymys C): tarvitaanko USA:n ja Venäjän tapaan
+     * erikoisprojektiohaaraa. EI TARVITA. Wikipedian
+     * Module:Location map/data/Australia (haettu raakatekstinä
+     * 23.8.2026) antaa rajoiksi top -9, bottom -44.5, left 111.5,
+     * right 155 EIKÄ määrittele projektiota lainkaan, jolloin
+     * oletus on tasavälinen — sama kaava kuin karttapiste()
+     * käyttää. Modulin relief-kuva `Australia relief map.jpg`
+     * (1336 × 1200 px) on siis suoraan pelin oma kartta ilman
+     * uutta koodihaaraa. Kuva katsottu silmin 900 px:ssä: koko manner
+     * osavaltiorajoineen, Tasmania mukana, ei tekstiä eikä
+     * mittakaavajanaa.
+     *
+     * KAUPUNGIT: viisi pistettä, jotka näyttävät mantereen mitan —
+     * Sydney idässä (laudan ensimmäinen Australian kaupunki), Perth
+     * lännessä, Darwin pohjoisessa (lennätinlinjan pohjoispää),
+     * Alice Springs keskellä ja Hobart Tasmaniassa. Koordinaatit
+     * artikkelien coord-merkinnöistä. Perth on poikkeus: sen
+     * en-Wikipedian infolaatikko hakee koordinaatin Wikidatasta eikä
+     * raakatekstissä ole lukua lainkaan, joten piste on otettu
+     * Perth railway station -artikkelin coordista (31°57'05"S,
+     * 115°51'37"E) eli kaupungin ytimestä.
+     */
+    tiedosto: 'Australia relief map.jpg',
+    lahde: 'Виктор В, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: -9, etela: -44.5, lansi: 111.5, ita: 155 },
+    kaupungit: [
+      { nimi: 'Sydney', lat: -33.868, lon: 151.21, paa: true },
+      { nimi: 'Perth', lat: -31.951, lon: 115.86 },
+      { nimi: 'Darwin', lat: -12.438, lon: 130.841 },
+      { nimi: 'Alice Springs', lat: -23.7, lon: 133.87 },
+      { nimi: 'Hobart', lat: -42.881, lon: 147.325 },
+    ],
+    /*
+     * Kuvanosto Sinisistä vuorista: kartalla Sydneyn takana kohoava
+     * jyrkkä hiekkakiviylänkö on syy siihen, miksi siirtokunta pysyi
+     * neljännesvuosisadan rannikolla. Aihe ei osu yhteenkään maalehden
+     * kahteenkymmeneen nostoon (tarkistettu). Faktat en-Wikipedian
+     * artikkelista "Blue Mountains (New South Wales)" 23.8.2026.
+     * Ylitys kerrotaan eurooppalaisten ylityksenä, koska vuoret ovat
+     * olleet dharugien ja gundungurrojen maata vuosituhansia.
+     */
+    nosto: {
+      otsikko: 'Muuri, joka piti siirtokunnan rannalla',
+      tiedosto: 'Jamison valley frm wentworth falls.jpg',
+      teksti: 'Sydneystä noin viisikymmentä kilometriä länteen alkaa '
+        + 'hiekkakiviylänkö, jota dharugit ja gundungurrat ovat asuttaneet '
+        + 'vuosituhansia ja kutsuneet nimellä Gulu-mada, koalan paikka. '
+        + 'Gundungurrojen kertomuksessa Jamisonin laakson uursivat '
+        + 'Uneajan olennot Mirigan ja Garangatch taistellessaan. '
+        + 'Uudisasukkaille jyrkänteet olivat ylipääsemättömiä: vuosina '
+        + '1798–1813 moni yritti eikä kukaan löytänyt reittiä. Gregory '
+        + 'Blaxland, William Lawson ja William Charles Wentworth '
+        + 'lähtivät 11. toukokuuta 1813 ja pääsivät yli kuukauden '
+        + 'lopulla. Vasta silloin siirtokunta pääsi mantereen sisään.',
+      selite: 'Wentworth Fallsilta katsottuna Jamisonin laakson '
+        + 'hiekkakivijyrkänteet laskeutuvat portaina metsän peittämään '
+        + 'pohjaan, ja kaukaisuus siintää sinisenä.',
+      lahde: 'Adam.J.W.C., Wikimedia Commons (CC BY-SA 2.5)',
+      wiki: 'Siniset vuoret',
+    },
+  },
 };
 
 /*
