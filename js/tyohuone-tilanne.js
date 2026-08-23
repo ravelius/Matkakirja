@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1077 — KORJAUS: v1076 piilotti vahingossa koko pelin kuvakatselimen, joten mikaan kuva ei auennut kokoruudulle. Nyt piilossa on vain matkakirjan pienoiskuva. Lisaksi Quiton ja Los Angelesin kaupunkilehdet. Tarkista: minka tahansa lehden kuvan avaus kokoruudulle, kohdekartan kohteet, ja kahden uuden lehden sivut',
   'v1076 — KAKSI OMISTAJAN TILAUSTA: kehittajan MANTEREET-taulun otsikkorivi pysyy nakyvissa pystyvierityksessa, ja matkakirjan kuvapino on piilotettu (ei poistettu). Tarkista: MANTEREET-taulun vieritys iPadilla seka kaupunkiin saapuminen',
   'v1075 — LIMAN KAUPUNKILEHTI: kaupunki, historia ja ruoka; 12 nostoa ja 22 kuvaa. Tarkista: Liman lehti ja ruokasivu',
   'v1074 — TORONTON KAUPUNKILEHTI: kaupunki, historia ja alkuperaiskansat; 12 nostoa ja 23 kuvaa. Tarkista: Toronton lehti ja alkuperaiskansat-sivu',
@@ -443,6 +444,8 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '23.8.2026 ilta',
   valmiit: [
+    { id: 'quito', nimi: 'Quito', versio: 'v1077' },
+    { id: 'losangeles', nimi: 'Los Angeles', versio: 'v1077' },
     { id: 'lima', nimi: 'Lima', versio: 'v1075' },
     { id: 'toronto', nimi: 'Toronto', versio: 'v1074' },
     { id: 'brisbane', nimi: 'Brisbane', versio: 'v1073' },

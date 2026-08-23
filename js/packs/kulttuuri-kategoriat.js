@@ -62883,4 +62883,1134 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * QUITO (23.8.2026). Lauta southamerica, kaupunki-id quito, wiki-nimi
+   * "Quito" (js/packs/southamerica.js rivi 111). Lähdeaineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-quito.md ja sen RIIPPUMATON
+   * TARKISTUS docs/mantereet-tyoaineisto/tarkistus-quito.md, joka
+   * voittaa ristiriidassa. Jokainen tekstiin mennyt väite on lisäksi
+   * luettu itse en-Wikipedian raakatekstistä (action=raw, "Quito",
+   * "Cotopaxi", "Quito Astronomical Observatory", "French Geodesic
+   * Mission to the Equator", "Gabriel García Moreno") 23.8.2026.
+   *
+   * TARKISTUKSEN PAKOLLISET KORJAUKSET, KAIKKI TOTEUTETTU:
+   * 1. Sivun `kaupunki` johdanto oli faktapohjassa 251 merkkiä eli yli
+   *    kaupunkilehti.md:n rajan (154–232). Johdanto kirjoitettiin
+   *    uudestaan lyhyempänä.
+   * 2. Perustajan kirjoitusasu on "Sebastián de BELALCÁZAR", ei
+   *    "Benalcázar". Faktapohjan perustelu N-muodolle oli virheellinen:
+   *    henkilön oma en-Wikipedia-artikkeli on nimeltään "Sebastián de
+   *    Belalcázar", ja "Sebastián de Benalcázar" on pelkkä
+   *    uudelleenohjaus siihen. Wikipedian sisäinen ero on todellinen —
+   *    "Quito"-artikkelin infobox (founder=) kirjoittaa Belalcázar ja
+   *    Colonial period -leipäteksti Benalcázar, kumpikin kerran — mutta
+   *    lehti käyttää artikkelin omaa otsikkomuotoa Belalcázar.
+   * 3. Nosto "Vanhakaupunki joka pääsi listalle ensimmäisenä" sanoo
+   *    tasan 5 000 rekisteröityä kiinteistöä. Faktapohjan nostoteksti
+   *    lisäsi sanan "yli", jota lähde ei tue: "Quito" (Points of
+   *    interest § Historic center) sanoo "5,000 properties registered
+   *    in the municipal inventory".
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, KERROTTU LUKIJALLE AUKI (ei
+   * valittu puolesta, tarkistus vahvisti molemmat aidoiksi):
+   * - Cotopaxin purkaus, jonka retkikunta näki: "Cotopaxi" sanoo
+   *   19.6.1742, "French Geodesic Mission to the Equator" sanoo kaksi
+   *   purkausta "1743 and 1744". Nosto T3 sanoo molemmat vaihtoehdot.
+   * - Toinen ranskalainen retkikunta: "French Geodesic Mission to the
+   *   Equator" ajoittaa sen Ecuadoriin 1901–1906, "Quito Astronomical
+   *   Observatory" sanoo laitteiden olleen käytössä 1902–1914. Nosto T4
+   *   antaa molemmat vuosivälit.
+   * - Korkeuslukema: infobox 2 850 m, Geography-osion leipäteksti
+   *   2 820 m. Lehti käyttää infoboxin lukua 2 850 (sama kuin visassa
+   *   ja valtaosassa lähteitä); eroa ei toisteta teksteissä.
+   * - Säälukemat: lentokentän 1991–2020-taulukko (14,1 / 20,7 / 8,5 °C)
+   *   ja Climate-osion leipäteksti (15,6 / 21,4 / 9,8 °C) eroavat, koska
+   *   taulukko mittaa Tababelan lentokenttää ja leipäteksti keskustaa.
+   *   Oppaan jakso 5 kertoo molemmat ja sanoo kumpaa käyttää.
+   *
+   * VAHVISTETUT HELMET (tarkistus luki molemmat sanasta sanaan):
+   * Quiton observatorio avattiin presidentti García Morenon toimesta
+   * 1873 — samana vuonna kuin isoisän matka — ja Cotopaxin toinen
+   * onnistunut nousu tehtiin niin ikään 1873 (Moritz Alphons Stübel ja
+   * neljä nimeltä mainittua ecuadorilaista). Molemmat ovat tiede-sivun
+   * ja historia-sivun kantavia nostoja.
+   *
+   * SISÄLTÖLINJAUS (pilarit 3 ja 4): kichwat ja otavaleñot esiintyvät
+   * elävänä nykykansana — oppaan jakso 3 kertoo El Ejidon markkinoista
+   * nykypäivän elinkeinona, ei museotavarana. Siirtomaa-aika kerrotaan
+   * tapahtumina neutraalisti: Rumiñahuin vangitseminen ja teloitus,
+   * vuoden 1810 kukistettu itsenäisyysliike ja García Morenon murha
+   * mainitaan päivämäärineen mutta ilman raakuuksien yksityiskohtia
+   * (murha-asetta ja tekijää ei kerrota, vaikka "Gabriel García Moreno"
+   * -artikkeli ne sisältää). Alkuperäisväestön käännyttäminen ja
+   * käyttäminen rakennustyön voimana sanotaan suoraan, kaunistelematta
+   * ja korostamatta. Ei nykypolitiikkaa.
+   *
+   * KULTTUURIVISA (js/packs/southamerica-questions.js, avain quito)
+   * kysyy viisi asiaa: Ecuadorin pääkaupunki, päiväntasaajan yhtä
+   * pitkät päivät, 2 850 metrin korkeus, Unescon 1978-listaus ja
+   * Cotopaxi. Lehti käsittelee neljä näistä eri näkökulmasta ja
+   * tarkemmilla luvuilla kuin visan lyhyt vastaus (korkeus La Pazin ja
+   * Sucren vertailun kautta, Unesco päivämäärällä ja Krakovan kanssa,
+   * Cotopaxi kiipeilyhistorian kautta). Päivän ja yön yhtä pitkää
+   * kestoa EI käsitellä missään: faktapohja ei ollut tarkistanut sitä,
+   * eikä keksittyä tähtitiedettä lisätty. Kumpikaan minitehtävä ei
+   * toista visaa — historian tehtävä kysyy La Compañían rakennusaikaa
+   * ja tieteen tehtävä pohjoisen retkikunnan kohdetta, ja molempien
+   * vastaus on samalla sivulla.
+   *
+   * KUVAT: 21 kuvaa, haettu Commonsin rajapinnasta kategorioilla (Views
+   * of Quito, Panoramic views of the Historic Center Quito, El Panecillo
+   * Quito, Church of Saint Francis Quito, Exterior (Iglesia de La
+   * Compañía Quito), Quito Astronomical Observatory, Quito in the 19th
+   * century, Views of Cotopaxi, Mitad del Mundo, TeleferiQo, El Ejido
+   * Quito, Otavalo Artisan Market). Lisenssi ja tekijä on luettu
+   * rajapinnan extmetadatasta, ja JOKAINEN kuva on katsottu silmin 900
+   * pikselin esikatseluna. Avauskuvat ovat kolme laajaa yleiskuvaa
+   * kaupungin eri puolilta: vanhakaupunki El Panecillolta pohjoiseen
+   * (etelä), koko laakso Puengasí-kukkulalta (itä) ja pohjoisen
+   * kerrostalokorttelit Pichinchan edessä (pohjoinen). Kansikuvat ovat
+   * kolme pikkunostoa: Basílica del Voto Nacional kattojen yllä,
+   * vanhankaupungin kirkontornit rinteen alla ja Plaza de San Francisco
+   * ylhäältä.
+   *
+   * KUVAHYLKÄYKSET (syyt): "Hand Craft Market in Parque El Ejido Quito
+   * Ecuador" olisi ollut jakson 3 luonnollisin kuva, mutta torikäytävällä
+   * on useita ihmisiä kasvot kameraan päin (4000 px alkuperäisessä
+   * selvästi tunnistettavia) — tilalle valittiin Otavalon torin
+   * tavarapöytä, jossa ei ole ihmisiä; "Quito pl de la Independencia
+   * 2006 01" ja "Plaza Grande - Quito" hylättiin samasta syystä
+   * (etualalla lähellä kameraa olevia ihmisiä); "Historic Center of
+   * Quito - ... Photo 036" on mustavalkoinen ja etualalla kävelee
+   * ihminen; "Independence Square Historic Center - Plaza de la
+   * Independencia en Quito Ecuador" on puskan takaa otettu eikä näytä
+   * aukiota; "Mirador de los Volcanes Quito" on käytännössä kuva
+   * opastekyltistä ja siinä on TelefériQon logo; "Compañía de Jesús,
+   * Quito 01" osoittautui kuvaksi pelkästä seinään upotetusta
+   * kivitaulusta; "Telar manual de madera" on aulaan pystytetty
+   * museokappale eikä kerro torista; "Carte de la Province de Quito au
+   * Pérou ... btv1b8492959w" on sisällöltään täydellinen (La Condaminen
+   * ja Maldonadon havainnoista piirretty vuoden 1751 kartta), mutta sen
+   * marginaaleissa on kirjaston lyijykynähyllytunnuksia eli arkistomerkintöjä
+   * kuvan päällä; "Altstadt Quito Ecuador 869" on tavallinen
+   * asuinrinne ilman maamerkkiä; "Study of Cotopaxi (1862) Frederic
+   * Edwin Church" on kaunis mutta niin vaalea luonnos, ettei se erotu
+   * noston kokoisena.
+   *
+   * KUVAPOIKKEUS: historia-sivun nosto "Taistelu joka päätti
+   * siirtomaa-ajan" käyttää aikalaismaalausta, jonka yläreunassa on
+   * maalarin oma kirjainluettelo kuvan kohteista ja jonka museokehys
+   * näkyy reunoilla. Sama poikkeus kuin Vancouverin palokartassa ja
+   * Liman 1744-kartassa: teoksen oma litera kelpaa, kun se selitetään
+   * kuvatekstissä.
+   *
+   * AIHETOISTO: El Panecillon kukkula näkyy neljässä kuvassa (avauskuva
+   * kukkulan laelta, nostot QC1 ja QC3 kadun päätteenä, oppaan
+   * etusivun pystykuva) ja Pichincha kahdessa (avauskuva kaupungin
+   * takaa, nosto QC4 huippukraaterina) — eri tiedostot, eri kuvakulmat
+   * ja eri jutut. Observatorio esiintyy sekä historia- että tiede-
+   * sivulla, mutta eri kuvina (rakennus ulkoa / museon mittalaitteet)
+   * ja eri näkökulmasta (perustaminen 1873 / retkikunnan perintö).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian Quito-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN (Samarkandin, Vancouverin ja
+   * Liman malli). Mittauspiste olisi keskusta 0,2201 S / 78,5125 W.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   */
+  quito: [
+    {
+      id: 'kaupunki',
+      nimi: 'Quito',
+      johdanto: 'Andien rinteillä lähes päiväntasaajalla, 2 850 metrissä, '
+        + 'on maailman ylimpiä pääkaupunkeja. Espanjalaiset perustivat sen '
+        + 'uudelleen 1534, ja vanhakaupunki pääsi Unescon listalle '
+        + 'ensimmäisten joukossa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Quito as from panecillo Basilica.jpg',
+          selite: 'Basílica del Voto Nacionalin uusgoottilaiset tornit '
+            + 'kohoavat vanhankaupungin tiilikattojen yli, ja niiden takana '
+            + 'alkaa modernin keskustan tornitalojen alue.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Quito Panorama of the historic center from Casa Bella Vista 01.jpg',
+          selite: 'Vanhankaupungin kirkontornit ja kupolit jäävät rinteille '
+            + 'kiipeävien asuintalojen ja sumuisen vuorenharjan alle.',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Plaza de San Francisco (Quito).jpg',
+          selite: 'Plaza de San Franciscon avoin kivipinta erottuu ylhäältä '
+            + 'katsottuna vanhankaupungin yhtenäisestä tiilikattomerestä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Touring around Quito, Ecuador - Quito city from the historic center of Quito at the Virgin del Panecillo monument (16039061083).jpg',
+          selite: 'El Panecillon laelta vanhakaupunki avautuu pohjoiseen aina '
+            + 'modernin keskustan tornitaloihin asti.',
+          lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Vista de Quito desde la Loma de Puengasi.jpg',
+          selite: 'Idän puoleiselta Puengasí-kukkulalta näkyy, miten kaupunki '
+            + 'täyttää koko laakson Pichinchan harjanteen juurella.',
+          lahde: 'Josuadaniel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '20180813-Panoramic view of Quito with the Pichincha Volcano (0514).jpg',
+          selite: 'Pohjoisen Quiton kerrostalokorttelit päättyvät Pichinchan '
+            + 'rinteeseen, joka nousee suoraan kaupungin länsilaidalta.',
+          lahde: '© Nicolas Völcker, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki jonka inkat valtasivat ja espanjalaiset perustivat uudelleen',
+          tiedosto: 'Quito Cathedral.jpg',
+          teksti: 'Quitu-kansa oli seudun alkuperäisväestö, kunnes inkakeisari '
+            + 'Huayna Capac valloitti sen 1400-luvun lopulla ja teki Quitosta '
+            + 'valtakuntansa pohjoisen alueen pääkaupungin. Espanjalainen '
+            + 'Sebastián de Belalcázar perusti kaupungin uudelleen nykyiselle '
+            + 'paikalleen 6. joulukuuta 1534 kahdensadanneljän siirtolaisen '
+            + 'kanssa ja vangitsi inkasotapäällikkö Rumiñahuin, joka lopetti '
+            + 'järjestäytyneen vastarinnan ja teloitettiin 10. tammikuuta '
+            + '1535. Koska juuri vuoden 1534 valloitus lasketaan viralliseksi '
+            + 'perustamiseksi, Quito on Etelä-Amerikan vanhin pääkaupunki.',
+          selite: 'Tuomiokirkon valaistu torni kohoaa vanhankaupungin ytimessä, '
+            + 'ja sen ohi kulkeva katu jatkuu suoraan El Panecillon kukkulalle.',
+          lahde: 'szeke, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Quito',
+        },
+        {
+          otsikko: 'Ylin pääkaupunki päiväntasaajan kainalossa',
+          tiedosto: 'Quito from heights.jpg',
+          teksti: 'Quito nousee Andien rinteille 2 850 metrin korkeuteen, mikä '
+            + 'tekee siitä joko maailman ylimmän tai toiseksi ylimmän valtion '
+            + 'pääkaupungin – järjestys riippuu siitä, lasketaanko Bolivian '
+            + 'pääkaupungiksi hallinnollinen La Paz vai perustuslaillinen '
+            + 'Sucre. Korkeus ja sijainti aivan päiväntasaajan tuntumassa '
+            + 'pitävät ilman tasaisen viileänä ympäri vuoden, mutta '
+            + 'altistavat kaupungin myös maailman voimakkaimmalle auringon '
+            + 'säteilylle: kirkkaana keskipäivänä UV-indeksi voi nousta '
+            + 'lukemaan 24.',
+          selite: 'Pichinchan ylärinteen heinikosta katsottuna kaupunki jää '
+            + 'syvälle laakson pohjalle vuoren juureen.',
+          lahde: 'L0garitmic0, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Quito',
+        },
+        {
+          otsikko: 'Vanhakaupunki joka pääsi listalle ensimmäisenä',
+          tiedosto: 'Centro Histórico de Quito.jpg',
+          teksti: 'Quiton vanhakaupunki on Amerikan mantereen laajin, vähiten '
+            + 'muuttunut ja parhaiten säilynyt historiallinen keskusta: 320 '
+            + 'hehtaarin alueella on noin 130 monumentaalirakennusta ja '
+            + '5 000 kaupungin omaan suojeluluetteloon merkittyä kiinteistöä. '
+            + 'Syyskuun 18. päivänä 1978 se julistettiin Unescon '
+            + 'maailmanperintökohteeksi yhdessä Puolan Krakovan kanssa – '
+            + 'ensimmäisten joukossa koko listalla. Vuodesta 2002 kaupunki on '
+            + 'uudistanut vanhaakaupunkia järjestelmällisesti.',
+          selite: 'Vanhankaupungin parvekkeiden takaa kohoaa El Panecillon '
+            + 'kukkula, jonka laella seisoo Neitsyt Marian patsas.',
+          lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Quito',
+        },
+        {
+          otsikko: 'Ainoa pääkaupunki näin lähellä toimivaa tulivuorta',
+          tiedosto: 'Cráter Volcán Guagua Pichincha.jpg',
+          teksti: 'Quito on ainoa pääkaupunki, joka on kasvanut näin lähelle '
+            + 'aktiivista tulivuorta: kaupungin länsilaidalla kohoaa '
+            + 'Pichincha, jonka huiput Ruku Pichincha ja Guagua Pichincha '
+            + 'yltävät 4 700 ja 4 794 metriin. Vuoren suurin tunnettu purkaus '
+            + 'vuonna 1660 peitti kaupungin yli 25 senttimetrin '
+            + 'tuhkakerroksella. Idässä laakson toisella puolella kohoavat '
+            + 'Cotopaxi, Sincholagua, Antisana ja Cayambe, lännessä Illiniza, '
+            + 'Atacazo ja Pululahua – laakso on rajattu tulivuorilla '
+            + 'molemmin puolin.',
+          selite: 'Guagua Pichinchan hevosenkengän muotoinen huippukraateri '
+            + 'avautuu pilvirajan yläpuolella, ja sen sisäseinämät ovat '
+            + 'rikinkeltaiset.',
+          lahde: 'Josuadaniel, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pichincha (volcano)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'El Panecillo en Quito visto desde la Basílica del Voto Nacional.jpg',
+          selite: 'Basílica del Voto Nacionalin tornista katsottuna '
+            + 'vanhankaupungin katot jatkuvat suoraan El Panecillon kukkulan '
+            + 'juurelle asti.',
+          lahde: 'Martin.vascovinueza, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Quito jakautuu matkailijan kannalta kahteen osaan. Etelässä '
+          + 'on vanhakaupunki, jonka kirkot, luostarit ja aukiot mahtuvat '
+          + 'runsaan kilometrin säteelle Plaza Grandesta, pohjoisessa moderni '
+          + 'keskusta puistoineen ja korkeine taloineen. Kaupunki on vain '
+          + 'viitisen kilometriä leveä mutta neljäkymmentä kilometriä pitkä, '
+          + 'joten pääväylät kulkevat pohjoisesta etelään ja seuraavat laakson '
+          + 'suuntaa. Ensimmäisinä päivinä kannattaa varautua siihen, että '
+          + '2 850 metrin korkeus väsyttää: vanhankaupungin portaat tuntuvat '
+          + 'jyrkemmiltä kuin ne ovat. Aurinko on täällä poikkeuksellisen '
+          + 'voimakas, joten päähine ja aurinkosuoja kuuluvat mukaan myös '
+          + 'viileänä päivänä.',
+        artikkeli: {
+          nimi: 'Matkailijan Quito',
+          taitto: 'opas',
+          teksti: 'Vuoristokaupunki päiväntasaajalla, jossa siirtomaa-ajan '
+            + 'vanhakaupunki ja lumihuippuiset tulivuoret näkyvät samasta '
+            + 'ikkunasta.',
+          nosto: 'Päiväntasaaja kulkee kaupungin pohjoisosan halki San '
+            + 'Antonion pitäjässä – ja silti illat ovat viileitä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja korkeuteen tottuminen',
+              teksti: 'Quitoon saavutaan Mariscal Sucren kansainvälisen '
+                + 'lentoaseman kautta. Nykyinen kenttä avattiin liikenteelle '
+                + '20. helmikuuta 2013, päivä sen jälkeen kun vanha kenttä '
+                + 'keskellä kaupunkia suljettiin; matkaa keskustaan on noin '
+                + '45 minuuttia autolla, ja vanhan kentän paikalle '
+                + 'rakennettiin Parque Bicentenario -puisto. Korkeus tuntuu '
+                + 'ensimmäisinä päivinä väsymyksenä, ja sitä kannattaa '
+                + 'kunnioittaa. Halukkaat pääsevät vielä ylemmäs: heinäkuusta '
+                + '2005 asti käytössä ollut TelefériQo-köysirata vie '
+                + 'keskustasta Pichinchan itärinteelle Cruz Loman asemalle '
+                + 'noin 4 100 metriin, missä tuuli on selvästi viileämpi kuin '
+                + 'alhaalla.',
+              kuva: {
+                tiedosto: 'Quito y su teleférico - panoramio.jpg',
+                selite: 'TelefériQon gondoli ylittää pohjoisen Quiton matkalla '
+                  + 'Pichinchan rinteelle Cruz Loman asemalle.',
+                lahde: 'diego_cue, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Quito on rakennettu pitkälle ylätasangolle Pichinchan '
+                + 'itärinteille, Guayllabamba-joen valuma-alueelle. Kaupunki '
+                + 'on noin 40 kilometriä pitkä ja leveimmilläänkin vain viisi '
+                + 'kilometriä, joten lähes kaikki tärkeät väylät kulkevat '
+                + 'pohjoisesta etelään: idässä reunakukkuloita seuraa Avenida '
+                + 'Oriental, lännessä Pichinchan rinnettä Avenida Occidental, '
+                + 'ja keskeltä halkoo 10 de Agosto -katu. Vanhankaupungin '
+                + 'kadut on kukkuloista huolimatta ladottu ruutukaavaan, ja '
+                + 'sen tärkeimmät kadut ovat Venezuela, Chile, García Moreno '
+                + 'ja Guayaquil. Laaksoa reunustavat molemmin puolin '
+                + 'tulivuoret, joista osa on lumihuippuisia ja näkyy '
+                + 'kirkkaalla säällä kaupunkiin.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: viikonlopun käsityötori',
+              teksti: 'El Ejido on Quiton neljänneksi suurin puisto, ja se '
+                + 'erottaa vanhankaupungin uudemmasta keskustasta. Joka '
+                + 'lauantai ja sunnuntai sen laidalla avautuu käsityömarkkina, '
+                + 'jossa hinnoista tingitään. Paikalliset maalarit myyvät '
+                + 'kopioita Oswaldo Guayasamínin, Eduardo Kingmanin ja '
+                + 'Gonzalo Endara Crow\'n teoksista, ja Otavalon seudulta '
+                + 'saapuneet otavaleñot myyvät perinteisiä villapaitoja, '
+                + 'ponchoja, mattoja ja koruja. Otavaleñot ovat kichwaa '
+                + 'puhuva kansa, jonka käsityö tunnetaan kaukana Ecuadorin '
+                + 'ulkopuolella – kyse on nykypäivän elinkeinosta, ei '
+                + 'museotavarasta.',
+              kuva: {
+                tiedosto: 'Otavalo Market.jpg',
+                selite: 'Otavalon torin pöydillä on neulottuja villapaitoja, '
+                  + 'huiveja ja käsin kudottuja vöitä.',
+                lahde: 'Paulzuri, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: Mitad del Mundo',
+              teksti: 'Noin 35 kilometriä Quitosta pohjoiseen, San Antonion '
+                + 'pitäjässä, on Ciudad Mitad del Mundo: monumentti ja sen '
+                + 'ympärille rakennettu kylä, joka merkitsee päiväntasaajaa. '
+                + 'Monumentti pystytettiin 1936 juhlistamaan '
+                + 'ranskalais-espanjalaisen astemittausretkikunnan saapumisen '
+                + '200-vuotispäivää. Ironista kyllä, satelliittipaikannus on '
+                + 'sittemmin osoittanut todellisen päiväntasaajan kulkevan '
+                + 'noin 240 metriä monumenttialueen pohjoispuolella – '
+                + 'tarkkuus, johon 1700-luvun tiedemiehillä ei ollut '
+                + 'välineitä. Lähistöllä on Intiñanin aurinkomuseo, joka '
+                + 'saattaa olla lähempänä oikeaa viivaa.',
+              kuva: {
+                tiedosto: 'Mitad del mundo - Ecuador - panoramio.jpg',
+                selite: 'Mitad del Mundon monumentin huipulta näkyy alas '
+                  + 'päiväntasaajakylän paviljonkeihin ja nurmelle ladottuihin '
+                  + 'N- ja S-kirjaimiin.',
+                lahde: 'diego_cue, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Quitosta puuttuu, joten nämä luvut ovat '
+                + 'en-Wikipedian Quito-artikkelin Climate-osiosta eivätkä '
+                + 'samasta lähteestä kuin lehtien vuosigraafit. Ilmasto on '
+                + 'subtrooppista ylänköilmastoa (Köppen: Cfb), ja vuodessa on '
+                + 'käytännössä kaksi vuodenaikaa: kuiva "kesä" kesäkuusta '
+                + 'elokuuhun ja sateinen "talvi" syyskuusta toukokuuhun. '
+                + 'Sadetta kertyy sijainnista riippuen yli 1 000 millimetriä '
+                + 'vuodessa. Lentokentän mittausasemalla vuosien 1991–2020 '
+                + 'keskilämpötila on 14,1 astetta, iltapäivän keskimääräinen '
+                + 'ylin 20,7 ja yön alin 8,5; artikkelin leipäteksti antaa '
+                + 'keskustalle hieman lämpimämmät luvut 21,4 ja 9,8 astetta. '
+                + 'Ero vuodenaikojen välillä on joka tapauksessa pienempi '
+                + 'kuin vuorokauden sisällä, ja niin on päivänpituudessakin: '
+                + 'näin lähellä päiväntasaajaa aurinko nousee ja laskee '
+                + 'suunnilleen samoihin kellonaikoihin tammikuussa ja '
+                + 'heinäkuussa, noin kahdentoista tunnin välein.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Espanjalaiset rakensivat inkojen valtaaman kaupungin päälle '
+        + 'uuden Quiton, jonka kirkot nousivat vuosisadan aikana toisensa '
+        + 'perään. Itsenäisyys ratkesi 1822 Pichinchan rinteillä, ja tasavalta '
+        + 'toi pian oman observatorion.',
+      tehtava: {
+        kysymys: 'Kuinka kauan La Compañían kirkon rakentaminen kesti?',
+        vaihtoehdot: [
+          '160 vuotta',
+          '16 vuotta',
+          '60 vuotta',
+          '260 vuotta',
+        ],
+        oikea: 0,
+        fakta: 'Työ alkoi 1605, ja julkisivu valmistui vasta 1765. Sen '
+          + 'veistivät alkuperäiskansojen kivenveistäjät koristeelliseen '
+          + 'espanjalaisbarokkiin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaksikymmentä kirkkoa yhden vuosisadan aikana',
+          tiedosto: 'Iglesia de San Francisco, Quito, Ecuador, 2015-07-22, DD 153.JPG',
+          teksti: 'Espanjalaiset toivat katolisen kirkon Quitoon heti alusta: '
+            + 'ensimmäinen kirkko El Belén valmistui jo ennen kaupungin '
+            + 'virallista perustamista, ja tammikuussa 1535 nousi San '
+            + 'Franciscon luostari, ensimmäinen noin kahdestakymmenestä '
+            + 'siirtomaa-aikana rakennetusta kirkosta ja luostarista. '
+            + 'Espanjalaiset käännyttivät alkuperäisväestön kristinuskoon ja '
+            + 'käyttivät sitä rakennustyön voimana. Juuri tämä työ loi '
+            + 'vanhankaupungin tiheän kirkkojen ja luostarien verkoston, joka '
+            + 'teki keskustasta myöhemmin poikkeuksellisen yhtenäisen.',
+          selite: 'San Franciscon kirkon kaksi valkoista kellotornia ja '
+            + 'viuhkamaiset kiviportaat hallitsevat samannimistä aukiota.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Basilica and Convent of San Francisco, Quito',
+        },
+        {
+          otsikko: 'Satakuusikymmentä vuotta yhteen julkisivuun',
+          tiedosto: 'La Compañía, Quito - 3.jpg',
+          teksti: 'Jeesuksen seuran kirkon La Compañían rakentaminen alkoi '
+            + '1605, ja työ kesti 160 vuotta: julkisivu valmistui vasta 1765. '
+            + 'Sen tekivät alkuperäiskansojen kivenveistäjät, jotka muotoilivat '
+            + 'kivet huolella koristeelliseen espanjalaisbarokkiin – '
+            + 'lopputulos on yksi hienoimmista tämän tyylin näytteistä koko '
+            + 'Amerikan mantereella. Kirkko on yksi kymmenistä vanhankaupungin '
+            + 'uskonnollisista rakennuksista, jotka yhdessä muodostavat '
+            + 'mantereen laajimman ja parhaiten säilyneen historiallisen '
+            + 'keskustan.',
+          selite: 'La Compañían julkisivu on veistetty kokonaan kivestä, ja '
+            + 'kuusi kierteistä pylvästä kehystää sen kaariovea.',
+          lahde: 'Maros M r a z ( Maros ), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Church of La Compañía, Quito',
+        },
+        {
+          otsikko: 'Taistelu joka päätti siirtomaa-ajan',
+          tiedosto: 'Francisco Javier Cortés (atribuido) - Entrada en la ciudad de Quito de las tropas espanolas remitidas por el Virrey del Perú en 1809 - Museo de América 2010-04-01.jpg',
+          teksti: 'Quito yritti itsenäistyä jo 10. elokuuta 1809, mutta liike '
+            + 'kukistettiin seuraavana vuonna, kun siirtomaajoukot saapuivat '
+            + 'Limasta ja surmasivat kapinan johtajat ja noin kaksisataa muuta '
+            + 'asukasta. Lopullinen ratkaisu tuli 24. toukokuuta 1822, kun '
+            + 'Antonio José de Sucre johti Simón Bolívarin alaisuudessa joukot '
+            + 'Pichinchan taisteluun tulivuoren rinteillä. Voitto vahvisti '
+            + 'Quiton ja sen lähialueiden itsenäisyyden – samalla vuorella, '
+            + 'joka yhä kohoaa kaupungin länsilaidalla.',
+          selite: 'Aikalaismaalaus esittää varakuninkaan Limasta lähettämien '
+            + 'joukkojen saapumisen Quitoon marraskuussa 1809, ja sen '
+            + 'yläreunassa on teoksen oma kirjainluettelo kuvan kohteista.',
+          lahde: 'Marsupium, Wikimedia Commons (PD)',
+          wiki: 'Quito',
+        },
+        {
+          otsikko: 'Presidentti joka avasi tähtitieteen ikkunan',
+          tiedosto: 'Observatorium in Quito.JPG',
+          teksti: 'Presidentti Gabriel García Moreno avasi Quiton '
+            + 'observatorion 1873 La Alameda -puistoon, aivan vanhankaupungin '
+            + 'laidalle: yksi Etelä-Amerikan vanhimmista tähtitieteellisistä '
+            + 'laitoksista syntyi saksalaisen Bonnin observatorion mallin '
+            + 'mukaan. Ensimmäiseksi johtajaksi tuli Juan Bautista Menten, ja '
+            + 'rakennus valmistui kokonaan 1878. Kaksi vuotta avajaisten '
+            + 'jälkeen, elokuussa 1875, García Moreno murhattiin Quitossa – '
+            + 'mutta observatorio jäi paikalleen ja jatkoi samaa työtä, '
+            + 'meteorologiaa ja tähtitiedettä.',
+          selite: 'Observatorion vaaleankeltainen rakennus kupolitorneineen '
+            + 'seisoo La Alameda -puiston keskellä.',
+          lahde: 'Hannelore Hopfe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Quito Astronomical Observatory',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Quito tunnetaan korkeutensa lisäksi tieteestä: 1700-luvun '
+        + 'ranskalais-espanjalainen retkikunta mittasi täältä maapallon '
+        + 'muodon, ja sen perintö näkyy yhä observatoriossa ja naapurivuorten '
+        + 'kiipeilyhistoriassa.',
+      tehtava: {
+        kysymys: 'Minne Ranskan tiedeakatemia lähetti toisen astemittausretkikunnan Quiton alueen lisäksi?',
+        vaihtoehdot: [
+          'Lapin Tornionlaaksoon',
+          'Islantiin',
+          'Grönlantiin',
+          'Siperiaan',
+        ],
+        oikea: 0,
+        fakta: 'Kaksi retkikuntaa lähti samaan tehtävään: toinen mittasi '
+          + 'meridiaanin astetta päiväntasaajalla, toinen kaukana pohjoisessa '
+          + 'Tornionlaaksossa. Vasta vertailu ratkaisi kiistan maapallon '
+          + 'muodosta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Retkikunta joka tuli mittaamaan maapallon muotoa',
+          tiedosto: 'Hito-1° misión geodésica -OAQ.jpg',
+          teksti: 'Kysymys siitä, oliko Maa litistynyt navoilta vai '
+            + 'päiväntasaajalta, jakoi 1700-luvun tiedeyhteisön kahtia. '
+            + 'Ranskan kuningas Ludvig XV ja tiedeakatemia ratkaisivat kiistan '
+            + 'lähettämällä kaksi retkikuntaa: toisen Lapin Tornionlaaksoon, '
+            + 'toisen silloiseen Quiton alueeseen. Etelän retkikunta lähti '
+            + 'Ranskasta toukokuussa 1735 – mukana tähtitieteilijät Charles '
+            + 'Marie de La Condamine, Pierre Bouguer ja Louis Godin sekä '
+            + 'espanjalaiset geografit Jorge Juan ja Antonio de Ulloa – ja '
+            + 'saapui Quitoon kesäkuussa 1736 kuljettuaan Panaman kautta '
+            + 'sademetsien läpi.',
+          selite: 'Observatorion pihalla seisova kivipaasi luettelee latinaksi '
+            + 'ensimmäisen astemittausretkikunnan jäsenet ja sen kuninkaalliset '
+            + 'tukijat.',
+          lahde: 'GARY FLORES CADENA, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'French Geodesic Mission to the Equator',
+        },
+        {
+          otsikko: 'Heiluri joka muutti maailman mittajärjestelmää',
+          tiedosto: 'Círculo meridiano (Repsold & Söhne, 1889).jpg',
+          teksti: 'Pierre Bouguer mittasi sekuntiheilurin pituuden '
+            + 'päiväntasaajalla, Quitossa, Pichinchan huipulla ja merenpinnan '
+            + 'tasolla selvittääkseen painovoiman vaihtelun. La Condamine '
+            + 'teetti mittatuloksesta marmorilaatan pronssisine '
+            + 'heilurimallineen ja luovutti sen 1742 Quiton '
+            + 'jesuiittakollegiolle; laatta on nykyään esillä observatorion '
+            + 'museossa La Alameda -puistossa. Retkikunnan '
+            + 'meridiaanikaarimittaukset yhdistettiin myöhemmin Ranskan omiin '
+            + 'mittauksiin, ja niiden pohjalta metri vahvistettiin '
+            + 'virallisesti 1799 – päiväntasaajan retki on siis yksi metrin '
+            + 'isistä.',
+          selite: 'Observatorion museosalissa seisova meridiaanipiiri on '
+            + 'saksalaisen Repsold & Söhne -verstaan vuonna 1889 valmistama.',
+          lahde: 'Ranoutofusername, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'French Geodesic Mission to the Equator',
+        },
+        {
+          otsikko: 'Tulivuori joka näytti itsensä tiedemiehille ja kiipeilijöille',
+          tiedosto: 'Cotopaxi al amanecer - Ecuador - panoramio.jpg',
+          teksti: 'Cotopaxi, Quitosta noin 50 kilometriä etelään kohoava 5 897 '
+            + 'metrin tulivuori, on purkautunut 87 kertaa. Retkikunnan '
+            + 'tiedemiehet näkivät purkauksen omin silmin, mutta vuosiluvusta '
+            + 'lähteet eivät ole yhtä mieltä: joko kesäkuussa 1742 tai vuosina '
+            + '1743 ja 1744. Huipulle päästiin vasta pitkän yrittämisen '
+            + 'jälkeen. Alexander von Humboldt yritti 1802 ja pääsi vain noin '
+            + '4 500 metriin; ensimmäinen onnistunut nousu tehtiin 28. '
+            + 'marraskuuta 1872. Jo seuraavana vuonna 1873 huipulle nousi '
+            + 'geologi Moritz Alphons Stübel neljän ecuadorilaisen – Rafael '
+            + 'Jantuin, Melchor Páezin, Vicente Ramónin ja Eusebio '
+            + 'Rodriguezin – kanssa.',
+          selite: 'Cotopaxin jäätiköitynyt kartio ja tumma huippukraateri '
+            + 'kohoavat ylängön yli aamuvalossa.',
+          lahde: 'diego_cue, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cotopaxi',
+        },
+        {
+          otsikko: 'Observatorio joka kantoi retkikunnan perintöä eteenpäin',
+          tiedosto: 'Antique Telescope at the Quito Astronomical Observatory 005a.jpg',
+          teksti: 'Quiton observatorio, joka avattiin La Alameda -puistoon '
+            + '1873, ei syntynyt tyhjästä: se jatkoi tiedeperinnettä, jonka '
+            + 'ranskalais-espanjalainen retkikunta oli aloittanut 130 vuotta '
+            + 'aiemmin. Kokoelmissa on 1800-luvun mittalaitteita, muun muassa '
+            + 'Repsoldin meridiaanipiiri ja 1875 Münchenissä valmistettu '
+            + '24-senttinen Merzin kaukoputki. 1900-luvun alussa toinen '
+            + 'ranskalainen retkikunta työskenteli samoissa tiloissa '
+            + 'vahvistaakseen vanhat mittaustulokset – sen vuosiksi lähteet '
+            + 'antavat joko 1901–1906 tai 1902–1914.',
+          selite: 'Vanhan Merzin kaukoputken kupariputki ja etsinkiikari '
+            + 'lepäävät observatorion peltikupolin alla.',
+          lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Quito Astronomical Observatory',
+        },
+      ],
+    },
+  ],
+  /*
+   * LOS ANGELES (23.8.2026). Pohjois-Amerikan laudan kaupunkilehti,
+   * kolme sivua: kansi `kaupunki` sekä teemasivut `historia` ja
+   * `alkuperaiskansat` (sama sivujako kuin Vancouverissa).
+   *
+   * LÄHTEET. Pohjana ovat docs/mantereet-tyoaineisto/
+   * faktapohja-losangeles.md ja tarkistus-losangeles.md; jälkimmäinen
+   * ei ole mainissa vaan commiteissa 5ae70094 ja 68da4f28.
+   * TARKISTUS VOITTAA FAKTAPOHJAN. Faktapohjan ulkopuoliset väitteet
+   * on luettu en-Wikipedian raakatekstistä (action=raw,
+   * NODE_USE_ENV_PROXY=1) 23.8.2026: "Los Angeles", "Tongva",
+   * "Mission San Gabriel Arcángel", "Griffith Observatory",
+   * "Olvera Street", "Bradbury Building", "Paramount Pictures",
+   * "Venice, Los Angeles", "Los Angeles Memorial Coliseum".
+   *
+   * TARKISTUSRAPORTIN PAKOLLINEN KORJAUS ON TEHTY. Tongva-väestön
+   * luku "noin 1 700" EI ole tuore: Wikipedian oma teksti sanoo
+   * toisaalla "In the 21st century, an estimated 1,700 people
+   * self-identify" mutta toisaalla täsmällisemmin "In 2008, more than
+   * 1,700 people identified as Tongva or claimed partial ancestry".
+   * Nosto A3 sanoo vuoden 2008 ääneen, nostaa tuoreemman luvun
+   * (2013: yli 3 900 jäsentä neljässä ryhmässä) pääluvuksi ja kertoo
+   * lisäksi tuoreimman tapahtuman: lokakuussa 2022 yksityinen
+   * maanomistaja luovutti Altadenasta eekkerin maata Tongva Taraxat
+   * Paxaavxa Conservancylle, ensimmäisenä tongvien hallussa olevana
+   * maana Los Angelesin piirikunnassa kahteensataan vuoteen.
+   *
+   * KOLME MUUTA TARKISTUKSEN HUOMIOTA RATKAISTU. (1) Mission San
+   * Gabrielin siirtovuosi on lähteissä ristiriitainen: "Tongva"
+   * sanoo 1774, lähetysaseman oma artikkeli 1776 ("In 1776, a flash
+   * flood destroyed much of the crops and ruined the original Mission
+   * complex"). Ristiriita on KIRJOITETTU AUKI lukijalle nostossa A4
+   * (reseptin sääntö), koska kumpaakaan lähdettä ei voi osoittaa
+   * toista tarkemmaksi. (2) Kohteen suunta keskustasta on
+   * ITÄKOILLINEN, ei itäinen: tarkistuksen oma laskelma antaa
+   * bearingiksi 68° ja etäisyydeksi 14,18 km, ja A4 sanoo "runsaat
+   * neljätoista kilometriä keskustasta itäkoilliseen". Tämä erä ei
+   * tee kohdekarttaa, joten korjaus näkyy nostotekstissä.
+   * (3) Tongva Sacred Springs Foundationin perustamisvuosi on
+   * täsmällisesti 1992, ja nosto A2 käyttää sitä eikä faktapohjan
+   * pyöristystä "1990-luvulla".
+   *
+   * SPOILERISUOJA MENEE TARKISTUSTA PIDEMMÄLLE. Visa
+   * (js/packs/northamerica-questions.js, avain losangeles) kysyy
+   * viittä asiaa: Hollywood elokuvateollisuuden keskuksena, San
+   * Andreasin siirros, Tyynimeri, LA/Long Beachin satama maan
+   * vilkkaimpana ja juomaveden tulo akvedukteja pitkin. Yhdenkään
+   * visan fakta-kentän sisältöä ei toisteta: Hollywood-kyltin
+   * "1923, alun perin Hollywoodland" puuttuu kokonaan, satamaa ei
+   * sanota missään maan vilkkaimmaksi, akveduktinostossa lähdejoki on
+   * Owens eikä visan Sierra Nevada tai Colorado. Lisäksi H4 EI mainitse
+   * San Andreasin siirrosta nimeltä lainkaan (tarkistus hyväksyi nimen,
+   * mutta se on suoraan yhden kysymyksen vastaus) vaan puhuu seudun
+   * suurimmasta siirroksesta, järistyssykleistä ja Northridgesta.
+   *
+   * MINITEHTÄVÄT (2 kpl) eivät osu visaan: historian tehtävä kysyy
+   * vuoden 1815 tulvasta ja alkuperäiskansojen tehtävä Yaangan
+   * merkitystä. Molempien vastaus on SAMAN SIVUN nostossa (H1 ja A1).
+   *
+   * PILARI 3. Tongvat kuvataan nykyisenä kansana: A2 kertoo yhä
+   * virtaavista lähteistä ja niiden seremoniakäytöstä, A3 nykyisistä
+   * ryhmistä, jäsenmääristä ja 2022 palautetusta maasta. A4 kertoo
+   * lähetysaseman pakkotyön ja kuolleisuuden faktoina ilman
+   * yksityiskohtien korostamista (Tongva-artikkelin oma
+   * keskitysleirivertaus on jätetty pois). Hollywood on yksi nosto
+   * kahdestatoista: kaupunkia katsotaan pueblon, veden, sataman,
+   * maankamaran, meksikolaisen arjen ja alkuperäiskansojen kautta.
+   *
+   * VUOSI 1873 ON SANOTTU AUKI. Silloin täällä asui muutama tuhat
+   * ihmistä (laskennat: 5 728 vuonna 1870 ja 11 183 vuonna 1880;
+   * vuodelle 1873 ei ole omaa laskentaa, joten tarkkaa lukua ei
+   * väitetä), ja komein rakennus oli 1870 avattu Pico House. Tämä
+   * kerrotaan etusivun leipätekstissä (northamerica-artikkelit.js),
+   * kaupunkisivun johdannossa ja nostoissa LA2 ja LA3.
+   *
+   * EI NYKYPOLITIIKKAA. En-Wikipedian "21st century" -osion vuoden
+   * 2025 tapahtumat (maastopalot, mielenosoitukset ja liittovaltion
+   * joukot) on jätetty kokonaan pois linjauksen mukaisesti.
+   *
+   * KUVAT: 20 kuvaa, kaikki haettu Commonsin rajapinnalla, lisenssi ja
+   * tekijä luettu extmetadatasta ja jokainen kuva katsottu silmin 900
+   * pikselin esikatseluna. HYLKÄYKSET: Pico Housen vuoden 1870
+   * hevosraitiovaunukuva ("PICO HOUSE LOS ANGELES CAL 1870"
+   * negatiiviin kirjoitettuna), San Pedron aallonmurtajan
+   * rakennuskuva (negatiivinumero 2807), Hollywoodin vuoden 1895
+   * kukkulakuva (numero 7506-1 ja käsinkirjoitusta), Mission San
+   * Gabrielin HABS- ja CHS-kuvat (HABS-litera ja negatiivinumerot),
+   * Hollywoodin 1920-luvun ilmakuva (negatiivinumerot JA kukkulalla
+   * näkyvä kyltti, joka vuotaisi visan faktan), Ávila-adoben
+   * julkisivukuva (viisi tunnistettavaa kasvoa etualalla), Griffith
+   * Observatory parkkipaikalta (kartiot ja autot hallitsevat),
+   * Highsmithin "California coastline near Los Angeles" ja "Pacific
+   * Coast shoreline" (kuvat ovat Malibun rantahuviloita, eivät Los
+   * Angelesia) ja Marina del Reyn ilmakuva (lentokoneen ikkunankehys
+   * kuvassa).
+   *
+   * ENNEN JA NYT -PARIA EI OLE. Kaupungin valokuvataulun
+   * (northamerica-valokuvat.js) vanha vedos on Broadwaylta
+   * 1890-luvulta, mutta siinä on negatiiviin kirjoitettu numero
+   * "2858 C.C.P.", eikä muuta kuvasäännöt täyttävää vanhaa
+   * yleisnäkymää löytynyt Commonsista. Pari jää siis jatkotyöksi
+   * samaan tapaan kuin Dubaissa ja Dohassa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä. Matkaoppaan jakso 5
+   * nojaa siis en-Wikipedian Climate-osioon ja SANOO SEN ÄÄNEEN
+   * (Samarkandin ja Vancouverin malli). Mittauspiste olisi keskusta
+   * 34,05 / -118,25.
+   *
+   * KUVATEKSTIT: yksi virke, ja se kertoo KOHTEESTA eikä kuvaile
+   * kuvaa (omistajan linjaus 22.8.2026).
+   */
+  losangeles: [
+    {
+      id: 'kaupunki',
+      nimi: 'Los Angeles',
+      johdanto: 'Yhdentoista perheen pueblo hedelmätarhojen keskellä kasvoi '
+        + 'Yhdysvaltain toiseksi suurimmaksi kaupungiksi. Isoisän matkavuonna '
+        + '1873 täällä asui muutama tuhat ihmistä, ja komein rakennus oli '
+        + 'kolme vuotta aiemmin avattu hotelli.',
+      kansikuvat: [
+        {
+          tiedosto: 'Aerial view of downtown Los Angeles, California LCCN2013632690.tif',
+          selite: 'Keskusta on kaupungin ainoa tornien rypäs, sillä muuten '
+            + 'Los Angeles leviää matalana runsaan 1 300 neliökilometrin '
+            + 'alalle.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'San Fernando Valley, California LCCN2011634778.tif',
+          selite: 'Santa Monica -vuorten pohjoispuolinen San Fernandon laakso '
+            + 'kuuluu suurelta osin Los Angelesiin, vaikka vuoret erottavat '
+            + 'sen keskustan altaasta.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Aerial view of Venice Beach, California LCCN2013633205.tif',
+          selite: 'Venice perustettiin 1905 merenrantalomakohteeksi ja oli oma '
+            + 'kaupunkinsa vuoteen 1926, jolloin se liitettiin Los Angelesiin.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa eri puolilta — keskusta
+       * ilmasta, koko allas Hollywoodin kukkuloilta ja satama-alue
+       * San Pedron lahdella. Yksikään ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Aerial view of Los Angeles, California LCCN2011634747.tif',
+          selite: 'Los Angeles ulottuu 71 kilometriä pohjoisesta etelään ja 47 '
+            + 'kilometriä idästä länteen, ja matalaa kaupunkia riittää '
+            + 'näköpiirin reunaan asti.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Los Angeles from Hollywood Hills.jpg',
+          selite: 'Vasemmalla kukkulalla kohoava Griffith Observatory avattiin '
+            + '1935, ja lahjoittajansa testamentin mukaan sinne on ollut alusta '
+            + 'asti vapaa pääsy.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          tiedosto: 'Port of Los Angeles Aerial.jpg',
+          selite: 'San Pedron lahden satama-alue on erotettu avomerestä '
+            + 'aallonmurtajalla, jonka rakentaminen alkoi 1899.',
+          lahde: 'antoine fleitz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Neljäkymmentäneljä siirtolaista ja käsin kaivettu oja',
+          tiedosto: 'Map of the old portion of the city surrounding the plaza, showing the old plaza church, public square, the first gas plant and adode buildings, Los Angeles city, March 12th, 1873 LOC 2003623386.jpg',
+          teksti: 'Kalifornian espanjalaiskuvernööri Felipe de Neve määräsi '
+            + 'perustettavaksi uuden pueblon Porciúncula-joen eli nykyisen Los '
+            + 'Angeles -joen varrelle. Neljäkymmentäneljä siirtolaista '
+            + 'yhdestätoista perheestä saapui paikalle 4. syyskuuta 1781 ja '
+            + 'antoi asutukselle nimen El Pueblo de Nuestra Señora la Reina de '
+            + 'los Ángeles; ainakin kymmenen perustajaa oli mustia tai '
+            + 'osittain afrikkalaista syntyperää. Paikka valittiin tongvien '
+            + 'Yaanga-kylän viereltä, ja vesihuolto kaivettiin käsin heti '
+            + 'ensimmäisen kuukauden aikana. Zanja Madre -oja haarautui '
+            + 'myöhemmin kahdeksaan sivu-uomaan.',
+          selite: 'Maanmittari A. G. Ruxtonin kartta maaliskuulta 1873 näyttää '
+            + 'vanhan plazan, sen kirkon ja ympärillä olleet adobetalot.',
+          lahde: 'Ruxton, A. G., Wikimedia Commons (PD)',
+          wiki: 'Zanja Madre',
+        },
+        {
+          otsikko: 'Kuvernöörin hotelli pikkukaupungissa',
+          tiedosto: 'Pico House dllu.jpg',
+          teksti: 'Pío Pico, Meksikon Alta Californian viimeinen kuvernööri, '
+            + 'tilasi 1869 arkkitehti Ezra F. Kysorilta kolmikerroksisen '
+            + 'luksushotellin vanhan plazan laidalle. Italialaistyylinen Pico '
+            + 'House avautui 1870 kaupunkiin, jossa saman vuoden '
+            + 'väestönlaskenta laski 5 700 asukasta: huoneita oli aluksi 33 ja '
+            + 'myöhemmin lähes 80, ja sisäpihalla oli suihkulähde ja '
+            + 'lintutarha. Loisto jäi lyhyeksi. Kun Southern Pacific '
+            + '-rautatie saapui 1876, liike-elämä alkoi siirtyä etelämmäs, ja '
+            + 'Pico menetti hotellinsa sanfranciscolaiselle säästöpankille.',
+          selite: 'Pico House seisoo yhä vanhan plazan laidalla, missä se '
+            + 'avattiin 1870.',
+          lahde: 'Daniel L. Lu (user:dllu), Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pico House',
+        },
+        {
+          otsikko: 'Rautatie, öljy ja satatuhatta asukasta',
+          tiedosto: 'View of Los Angeles from the east. Brooklyn Hights in the foreground; Pacific Ocean and Santa Monica Mountains in the background. (pm000250) CROPPED.jpg',
+          teksti: 'Southern Pacificin rata San Franciscosta valmistui 1876 ja '
+            + 'Santa Fe seurasi 1885 — vasta silloin kaupunki oli kunnolla '
+            + 'kiinni muussa maassa. Öljyä löytyi kaupungista ja sen '
+            + 'ympäristöstä 1892, ja vuoteen 1923 mennessä löydöt olivat '
+            + 'tehneet Kaliforniasta maan suurimman öljyntuottajan: osuus koko '
+            + 'maailman tuotannosta oli noin neljännes. Väkiluku seurasi '
+            + 'perässä. Vuoden 1900 laskennassa asukkaita oli yli 102 000 eli '
+            + 'kaksikymmenkertaisesti isoisän matka-ajan pikkukaupunkiin '
+            + 'verrattuna.',
+          selite: 'E. S. Gloverin vuoden 1877 lintuperspektiivikuvassa kaupunki '
+            + 'on vielä pieni ja sitä ympäröivät hedelmätarhat.',
+          lahde: 'Glover, E. S. 1844-1920. (Eli Sheldon), Wikimedia Commons (PD)',
+          wiki: 'Los Angeles',
+        },
+        {
+          otsikko: 'Ojasta akveduktiksi',
+          tiedosto: 'Los Angeles Aqueduct (29081069995).jpg',
+          teksti: 'Pueblon oma maaoja riitti kasteluun ja kotitalouksille yli '
+            + 'sadan vuoden ajan, mutta 1900-luvun alun kasvu ohitti sen '
+            + 'nopeasti. Insinööri William Mulhollandin johtama työmaa '
+            + 'rakensi Owens-joelta 233 mailin eli 375 kilometrin mittaisen '
+            + 'akveduktin, joka kuljettaa veden kaupunkiin pelkän painovoiman '
+            + 'varassa; linja valmistui 1913. Kaupungin peruskirja kielsi '
+            + 'myymästä vettä rajojen ulkopuolelle, ja moni naapurikunta '
+            + 'päätyi siksi liittymään Los Angelesiin päästäkseen veden '
+            + 'ääreen.',
+          selite: 'Akvedukti tuo Owens-joen vettä kaupunkiin painovoiman '
+            + 'avulla, ja osa reitistä kulkee avoimena kanavana.',
+          lahde: 'Tony Webster from Minneapolis, Minnesota, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Los Angeles Aqueduct',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bradbury building LC-DIG-pplot-13725-01403.jpg',
+          selite: 'Bradbury Buildingin lasikatteinen valopiha portaikkoineen, '
+            + 'avohisseineen ja valurautakaiteineen valmistui 1893.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        kappale: 'Los Angeles on Yhdysvaltain toiseksi suurin kaupunki, eikä '
+          + 'sillä ole yhtä keskustaa vaan monta. Lyhyin reitti historiaan on '
+          + 'El Pueblo vanhan plazan ympärillä: siellä ovat Ávila-adobe, Pico '
+          + 'House ja Olvera Streetin tori, ja saman korttelin takana on Union '
+          + 'Station. Keskustan tornien juurella on kävelymatkan päässä '
+          + 'Bradbury Building, jonka 1893 valmistunut valopiha tunnetaan '
+          + 'lukemattomista elokuvista, ja Broadwayn vanha teatterikatu. '
+          + 'Griffith Parkissa Mount Hollywoodin etelärinteellä oleva '
+          + 'observatorio on maksuton näköalapaikka koko altaan yli, ja '
+          + 'lännessä ovat rannat: '
+          + 'Venicessä kulkee kahden ja puolen mailin mittainen Ocean Front '
+          + 'Walk. Etäisyydet ovat pitkiä, mutta Union Stationista lähtevät '
+          + 'metro- ja pikaraitiolinjat vievät suureen osaan kohteista.',
+        artikkeli: {
+          nimi: 'Matkailijan Los Angeles',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa on monta keskustaa, vuoret pohjoisessa ja '
+            + 'meri lännessä — ja jokaisen välissä ajomatka.',
+          nosto: 'Vuonna 1873 Los Angelesissa asui muutama tuhat ihmistä; nyt '
+            + 'kaupungissa on 3,87 miljoonaa asukasta ja seudulla lähes 13 '
+            + 'miljoonaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainvälinen lentoasema LAX on matkustajamäärältään '
+                + 'maailman kahdeksanneksi vilkkain, ja se on kaupungin '
+                + 'länsilaidalla lähellä rantaa. Junat kohtaavat Union '
+                + 'Stationilla, joka avattiin 1939 ja on yhä Yhdysvaltain '
+                + 'länsiosien suurin matkustajaterminaali: kaikki Amtrakin ja '
+                + 'Metrolinkin linjat päättyvät sinne, ja Amtrakin nousuja ja '
+                + 'poistumisia kirjattiin siellä yli miljoona vuonna 2025. '
+                + 'Samalta asemalta lähtee Metro, jossa on kaksi metrolinjaa '
+                + 'ja neljä pikaraitiolinjaa, 110 asemaa ja 202 kilometriä '
+                + 'rataa; pikaraitioverkko on matkustajamäärältään koko maan '
+                + 'vilkkain. Amtrakin Pacific Surfliner ajaa rannikkoa pitkin '
+                + 'San Diegoon ja pohjoiseen San Luis Obispoon, ja se on '
+                + 'yhtiön vilkkain linja koillisen pääradan ulkopuolella.',
+              kuva: {
+                tiedosto: 'Palm Tree Pathway to Union Station, Los Angeles.jpg',
+                selite: 'Union Station avattiin 1939, ja siellä päättyvät '
+                  + 'kaikki kaupungin kauko- ja lähijunalinjat.',
+                lahde: 'Phileven, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki kattaa 502,7 neliömailia eli runsaat 1 300 '
+                + 'neliökilometriä ja ulottuu 71 kilometriä pohjoisesta '
+                + 'etelään ja 47 kilometriä idästä länteen. Korkein kohta on '
+                + '1 547-metrinen Mount Lukens San Gabriel -vuorten juurella — '
+                + 'harva suurkaupunki nostaa rajojensa sisällä yli puolentoista '
+                + 'kilometrin vuorta. Santa Monica -vuoret jakavat kaupungin '
+                + 'kahtia aivan keskustan tuntumassa: eteläpuolella on Los '
+                + 'Angelesin allas, pohjoispuolella San Fernandon laakso, joka '
+                + 'on suureksi osaksi samaa kaupunkia. Sama harju jakaa myös '
+                + 'sään, sillä rannikolla ja laaksossa mitataan samaan aikaan '
+                + 'aivan eri lukemia.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: meksikolainen Los Angeles',
+              teksti: 'Lähes joka toinen los angelesilainen on '
+                + 'latinotaustainen — 47,2 prosenttia — ja meksikolais'
+                + 'taustaiset ovat 31,9 prosentin osuudella kaupungin suurin '
+                + 'yksittäinen alkuperäryhmä. Vanhin kerros näkyy plazan '
+                + 'vieressä. Olvera Street tunnettiin alun perin nimellä Wine '
+                + 'Street, se nimettiin 1877 tuomari Agustín Olveran mukaan, '
+                + 'ja 1930 paikalliset kauppiaat muuttivat sen meksikolaiseksi '
+                + 'toriksi, joka toimii yhä samalla kadulla. Kojuista ostetaan '
+                + 'käsityötä, ruokaa ja soittimia, ja saman kadun varrella on '
+                + 'kaupungin vanhin säilynyt asuinrakennus.',
+              kuva: {
+                tiedosto: 'Olvera Street in the oldest part of downtown Los Angeles, California LCCN2013632327.tif',
+                selite: 'Olvera Streetin kojuissa myydään käsityötä ja '
+                  + 'soittimia; katu muutettiin meksikolaiseksi toriksi 1930.',
+                lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kolmet olympialaiset',
+              teksti: 'Los Angeles isännöi kesäolympialaiset ensin 1932, kun '
+                + 'kaupungin väkiluku oli juuri ylittänyt miljoonan, ja '
+                + 'uudelleen 1984, jolloin kisoista tuli taloudellisesti '
+                + 'tuottoisemmat kuin mistään aiemmista — neljäntoista maan '
+                + 'boikotista huolimatta. Vuoden 2028 kisat ovat kaupungin '
+                + 'kolmannet, ja vasta Lontoo ja Pariisi ovat isännöineet '
+                + 'kesäkisat yhtä monta kertaa. Molempien aiempien kisojen '
+                + 'pääareena oli Los Angeles Memorial Coliseum, joka valmistui '
+                + '1923 ensimmäisen maailmansodan veteraanien muistomerkiksi; '
+                + 'vuoden 1932 kisoja varten katsomo laajennettiin 101 574 '
+                + 'paikkaan ja stadion tunnettiin hetken nimellä Olympic '
+                + 'Stadium. Vuonna 2028 siitä tulee maailman ensimmäinen '
+                + 'stadion, joka on isännöinyt kesäkisat kolmesti.',
+              kuva: {
+                tiedosto: 'Los Angeles Memorial Coliseum (29297859221).jpg',
+                selite: 'Coliseumin peristyylin yllä seisova olympiamalja on '
+                  + 'vuoden 1932 kisojen perua.',
+                lahde: 'Anthony Kernich from Adelaide, Australia, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Los Angelesista puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Los Angeles -artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. Ilmasto '
+                + 'luokitellaan puolikuivaksi (Köppen BSh), mutta se sivuaa '
+                + 'Välimeren ilmaston rajaa ja saa sadetta enemmän kuin '
+                + 'useimmat puolikuivat alueet. Keskustaan sataa keskimäärin '
+                + '372 millimetriä vuodessa, pääosin marras–maaliskuussa, ja '
+                + 'mitattavia sadepäiviä on vain noin 35. Talvipäivän '
+                + 'keskilämpötila on noin 20 astetta, ja rannikkoaltaassa '
+                + 'ylitetään 32 astetta vain noin tusinana päivänä vuodessa, '
+                + 'useimmiten syyskuussa. Ennätykset kertovat vaihtelusta: '
+                + 'keskustan asemalla 45 astetta 27.9.2010 ja −2 astetta '
+                + '4.1.1949, ja kaupungin sisällä korkein koskaan mitattu on '
+                + '49 astetta Woodland Hillsissä 6.9.2020. Heinäkuun '
+                + 'päivälämpötila on Santa Monica Pierillä noin 21 astetta '
+                + 'mutta 24 kilometrin päässä sisämaassa Canoga Parkissa noin '
+                + '35 astetta. Aurinkoa riittää yli 3 000 tuntia vuodessa, '
+                + 'joulukuun seitsemästä tunnista heinäkuun kahteentoista '
+                + 'päivässä.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Espanjalaisesta pueblosta tuli meksikolainen kaupunki, sitten '
+        + 'amerikkalainen pikkukaupunki ja lopulta 1900-luvun jättiläinen. '
+        + 'Maankamara sen alla ei ole koskaan pysynyt aivan paikallaan.',
+      tehtava: {
+        kysymys: 'Mikä tuhosi alkuperäisen pueblon ja siirsi kaupungin nykyisen plazan paikalle?',
+        vaihtoehdot: [
+          'Vuoden 1815 tulva',
+          'Vuoden 1857 maanjäristys',
+          'Vuoden 1871 tulipalo',
+          'Pitkä kuivuus 1830-luvulla',
+        ],
+        oikea: 0,
+        fakta: 'Joen läheisyys kostautui: tulva pyyhkäisi 1815 pueblon '
+          + 'mennessään, ja yhteisö rakensi uudelleen kauemmas vedestä. '
+          + 'Kolme vuotta myöhemmin valmistui Ávila-adobe, joka on yhä '
+          + 'kaupungin vanhin säilynyt asuinrakennus.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tulva siirsi koko kaupungin',
+          tiedosto: 'Pueblo de Los Angeles in the evening.jpg',
+          teksti: 'Alkuperäinen pueblo rakennettiin lähelle jokea, ja vuoden '
+            + '1815 tulva pyyhkäisi sen mennessään. Yhteisö rakensi uudelleen '
+            + 'kauemmas vedestä, nykyisen plazan kohdalle, ja sen ympärille '
+            + 'syntyi kaupungin ensimmäinen kivikeskusta: kirkko, joka '
+            + 'perustettiin 1814 ja valmistui 1822 ja jonka nykyinen rakennus '
+            + 'on vuodelta 1861, vuonna 1818 rakennettu Ávila-adobe eli '
+            + 'kaupungin vanhin säilynyt asuinrakennus ja lopulta Pico House. '
+            + 'Vuonna 1891 Los Angeles Times laski, että yhdeksänkymmentä '
+            + 'prosenttia edellisen vuosikymmenen rakentamisesta oli '
+            + 'tapahtunut plazan eteläpuolella.',
+          selite: 'El Pueblo de Los Angeles vanhan plazan ympärillä on '
+            + 'kaupungin vanhinta kolkkaa ja nykyään historiallinen '
+            + 'monumenttialue.',
+          lahde: 'Downtowngal, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'El Pueblo de Los Ángeles Historical Monument',
+        },
+        {
+          otsikko: 'Kiista ratkaisi sataman paikan',
+          tiedosto: 'Exterior view of the Los Angeles and San Pedro Station, the first railroad into Los Angeles, ca.1880 (CHS-6107).jpg',
+          teksti: 'San Pedron lahti oli 1800-luvulla niin matala mutakenttä, '
+            + 'ettei se kestänyt laituria: laivat purettiin veneisiin tai '
+            + 'ajettiin rantaan. Phineas Banning rakensi 1868 alueen '
+            + 'ensimmäisen rautatien satamalta kaupunkiin ja ruoppasi 1871 '
+            + 'kanavan Wilmingtoniin kymmenen jalan syvyyteen; satama '
+            + 'käsitteli tuona vuonna 50 000 tonnia tavaraa. Kun Southern '
+            + 'Pacific yritti 1890-luvulla siirtää sataman Santa Monicaan, '
+            + 'syntyi kiista nimeltä Free Harbor Fight. Se ratkesi 1897 San '
+            + 'Pedron hyväksi, ja aallonmurtajan rakentaminen alkoi 1899.',
+          selite: 'Los Angeles & San Pedro -radan asema noin 1880; rata oli '
+            + 'alueen ensimmäinen ja yhdisti sataman kaupunkiin.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Port of Los Angeles',
+        },
+        {
+          otsikko: 'Kymmenestä yhtiöstä maailman keskukseksi',
+          tiedosto: 'Paramount Pictures entrance gate, Hollywood, Los Angeles, California LCCN2011630074.tif',
+          teksti: 'Hollywood liitettiin Los Angelesiin 1910, ja kaupungissa '
+            + 'toimi silloin jo kymmenen elokuvayhtiötä. Länteen houkuttelivat '
+            + 'etäisyys idän patenttiriidoista ja ympärivuotinen aurinko, joka '
+            + 'teki ulkokuvauksista halpoja. Kasvu oli nopeaa: vuoteen 1921 '
+            + 'mennessä yli 80 prosenttia koko maailman elokuvatuotannosta oli '
+            + 'keskittynyt Los Angelesiin. Alan tulot myös pehmensivät '
+            + '1930-luvun lamaa täällä, kun moni muu yhdysvaltalaiskaupunki '
+            + 'kärsi siitä raskaasti.',
+          selite: 'Paramount muutti Melrose Avenuen tontilleen 1927 ja on '
+            + 'nykyään ainoa suuri elokuvastudio, joka sijaitsee yhä '
+            + 'Hollywoodissa.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+          wiki: 'Paramount Pictures',
+        },
+        {
+          otsikko: 'Maa, joka ei pysy paikallaan',
+          tiedosto: 'Northridge Earthquake 1994 0003.jpg',
+          teksti: 'Etelä-Kaliforniassa rekisteröidään noin 10 000 '
+            + 'maanjäristystä vuodessa, ja valtaosa niistä on niin pieniä, '
+            + 'ettei niitä tunne. Seudun suurin siirros liikahtaa kunnolla '
+            + 'keskimäärin 110–140 vuoden välein, ja edellisestä kerrasta eli '
+            + 'vuoden 1857 Fort Tejonin järistyksestä on kulunut jo kauemmin '
+            + 'kuin isoisän matkasta. Viimeisin raskas isku koettiin 1994, kun '
+            + 'magnitudin 6,7 Northridgen järistys aiheutti 12,5 miljardin '
+            + 'dollarin vahingot ja 72 kuolemaa.',
+          selite: 'Vuoden 1994 järistyksen jäljiltä kadunvarsille kasattiin '
+            + 'sortuneiden savupiippujen ja muurien betonia.',
+          lahde: 'Jongriffin, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: '1994 Northridge earthquake',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Tongvat asuivat Los Angelesin altaassa vuosituhansia ennen '
+        + 'espanjalaisia, ja he elävät alueella yhä — omine yhteisöineen, '
+        + 'pyhine lähteineen ja omalla nimellään.',
+      tehtava: {
+        kysymys: 'Mitä tongvien kylän nimi Yaanga tarkoittaa?',
+        vaihtoehdot: [
+          'Paikkaa, jossa kasvaa myrkkytammea',
+          'Kahden joen välistä niittyä',
+          'Suolan ottopaikkaa',
+          'Vuorten porttia',
+        ],
+        oikea: 0,
+        fakta: 'Iyáangẚ eli Yaanga oli kylä, jonka viereen pueblo rakennettiin '
+          + '1781. Nimi on toisinaan käännetty myös savulaaksoksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sata kylää ennen kaupunkia',
+          tiedosto: 'Model of a Tongva kiiy at Ballona Discovery Park.jpg',
+          teksti: 'Tongvat asuttivat Los Angelesin allasta ja San Fernandon '
+            + 'laaksoa vuosituhansien ajan, enimmillään sadassa kylässä, ja '
+            + 'tunsivat itsensä ennen muuta oman kylänsä eivätkä yhden koko '
+            + 'kansan nimen mukaan. Pueblon paikkaa kutsuttiin nimellä '
+            + 'Iyáangẚ eli Yaanga, joka tarkoittaa paikkaa, jossa kasvaa '
+            + 'myrkkytammea. Ensimmäinen tunnettu kohtaaminen eurooppalaisten '
+            + 'kanssa oli 1542, kun Juan Rodríguez Cabrillon retkikunta nimesi '
+            + 'rannikon lahden savujen lahdeksi näkemiensä nuotioiden mukaan. '
+            + 'Sana tongva on kirjattu vasta 1905 etnografi C. Hart Merriamin '
+            + 'haastatteluista.',
+          selite: 'Ballona Discovery Parkissa on rakennettu malli kiiy-majasta, '
+            + 'joka oli tongvalaisen talouden päärakennus.',
+          lahde: 'Jengod, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tongva',
+        },
+        {
+          otsikko: 'Lähteet, jotka virtaavat yhä',
+          tiedosto: 'One of the Serra springs.jpg',
+          teksti: 'University High Schoolin kampuksella Länsi-Los Angelesissa '
+            + 'pulppuaa lähderyhmä, jota tongvat kutsuvat nimellä '
+            + 'Koruu\'vanga. Vettä on otettu siitä ainakin 400-luvulta eaa. '
+            + 'lähtien, ja lähteet tuottavat yhä 22 000–25 000 gallonaa eli '
+            + '83 000–95 000 litraa vuorokaudessa. Kun paikalle suunniteltiin '
+            + 'pysäköintilaitosta, perustettiin 1992 Gabrielino/Tongva Springs '
+            + 'Foundation, joka elvytti lähteiden käytön seremonioissa. '
+            + 'Lähteet ovat harvoja tongvien omia paikkoja, jotka ovat '
+            + 'säilyneet läpi koko kaupungin historian.',
+          selite: 'Yksi lähdealtaista University High Schoolin kampuksella; '
+            + 'lähteet tuottavat yhä kymmeniätuhansia litroja vettä '
+            + 'vuorokaudessa.',
+          lahde: 'Jengod, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tongva Sacred Springs',
+        },
+        {
+          otsikko: 'Kansa, jota ei edusta yksi hallinto',
+          tiedosto: 'Guashna village recognition, Tongva populated place, Southern California.jpg',
+          teksti: 'Kalifornian osavaltio tunnusti 1994 Gabrielino-Tongva Tribe '
+            + '-nimisen ryhmän, mutta liittovaltion tunnustusta ei ole saanut '
+            + 'yksikään neljästä hakijasta. Yhtä yhteistä hallintoa ei ole, ja '
+            + 'ryhmillä on ollut erimielisyyksiä muun muassa maankäytöstä. '
+            + 'Vuonna 2013 neljän ryhmän jäsenmääräksi raportoitiin yhteensä '
+            + 'yli 3 900; usein siteerattu noin 1 700 hengen luku on vuodelta '
+            + '2008. Lokakuussa 2022 yksityinen maanomistaja luovutti '
+            + 'Altadenasta eekkerin maata Tongva Taraxat Paxaavxa '
+            + 'Conservancylle — ensimmäisen kerran kahteensataan vuoteen '
+            + 'tongvilla on omaa maata Los Angelesin piirikunnassa.',
+          selite: 'Muistokivet merkitsevät tongvien kylän paikan Ballonan '
+            + 'alueella Länsi-Los Angelesissa.',
+          lahde: 'Jengod, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tongva',
+        },
+        {
+          otsikko: 'Lähetysasema ja pakkotyö',
+          tiedosto: 'Mission San Gabriel 4-15-05 6611.JPG',
+          teksti: 'Alueen ensimmäinen espanjalainen lähetysasema Mission San '
+            + 'Gabriel perustettiin 1771 ja siirrettiin tulvavaurion jälkeen '
+            + 'nykyiselle paikalleen runsaat neljätoista kilometriä '
+            + 'keskustasta itäkoilliseen; lähteet antavat siirrolle kaksi eri '
+            + 'vuotta, 1774 ja 1776. Siirtomaaviranomaiset rakennuttivat '
+            + 'aseman ja sen maatalouden alkuperäiskansojen pakkotyöllä, ja '
+            + 'historioitsijat arvioivat lähes 6 000 tongvan olevan '
+            + 'haudattuna aseman maille. 1800-luvun alussa San Gabriel oli '
+            + 'koko Alta Californian rikkain lähetysasema.',
+          selite: 'Mission San Gabriel Arcángelin kirkko ja sen kellomuuri '
+            + 'seisovat yhä San Gabrielin kaupungissa.',
+          lahde: 'Robert A. Estremo, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mission San Gabriel Arcángel',
+        },
+      ],
+    },
+  ],
 };

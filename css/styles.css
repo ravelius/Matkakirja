@@ -1956,14 +1956,23 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * myös uusi kuva, se pilkottaa vanhan alta ja nousee napautuksesta
  * päälle (omistajan kokeilu). */
 /*
- * PIILOTETTU (omistajan tilaus 23.8.2026: "piilota (älä poista) kuvat
- * pois näkyvistä matkakirjasta"). Kuvapino on kytketty pois vain
- * näkyvistä: js/ui.js rakentaa kortit yhä, kuvadata on paketeissa ja
- * tiedostot ovat tallessa, joten paluu on tämän yhden säännön
- * poistaminen. ÄLÄ poista pinon koodia tai kuvia — piilotus on
- * tarkoituksella pelkkä näkyvyyskytkin.
+ * MATKAKIRJAN PIENOISKUVA PIILOTETTU (omistajan tilaus 23.8.2026:
+ * "matkakirjasta piti piilottaa se pienoiskuva"). Piilotettava on
+ * matkakirjamerkinnän vieressä oleva pieni valokuvanappi
+ * (index.html: #fact-valokuva) — EI postikorttikatselinta.
+ *
+ * VAROITUS SEURAAVALLE (v1076:n vika): ensimmäinen yritys piilotti
+ * .postikortti-luokan, ja silloin YKSIKÄÄN kuva ei auennut enää koko
+ * ruudulle missään päin peliä — samaa katselinta käyttävät lehden
+ * suurennokset (js/lehti.js), kohdekartan kohteet (js/nahtavyydet.js)
+ * ja js/ui.js:n oma suurennos. Älä koske .postikortti-sääntöihin
+ * tämän takia.
+ *
+ * Piilotus on pelkkä näkyvyyskytkin: js/ui.js rakentaa napin yhä,
+ * kuvadata on paketeissa ja tiedostot ovat tallessa, joten paluu on
+ * tämän yhden säännön poistaminen.
  */
-.postikortti { display: none; }
+.fact-valokuva { display: none; }
 
 .postikortti {
   position: fixed;
