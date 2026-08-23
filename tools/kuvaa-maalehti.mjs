@@ -67,14 +67,24 @@ const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e)));
 
 await sivu.goto('http://127.0.0.1:8731/index.html?lauta=middleeast', { waitUntil: 'load' });
-await sivu.waitForTimeout(2500);
-// Peli on aloitettava ennen kuin lehtinäkymä on olemassa.
+// Peli on oltava käynnissä ennen kuin lehtinäkymä on olemassa.
+// ?lauta=-parametri käynnistää pelin nykyään suoraan (katselutila),
+// jolloin aloitusnappia ei tule lainkaan — odotetaan siis joko nappia
+// TAI käynnissä olevaa peliä, ja napin puute ilman peliä on virhe.
+await sivu.waitForFunction(() => Boolean(window.matkakirja?.game?.phase)
+  || [...document.querySelectorAll('button')]
+    .some((b) => /aloita seikkailu/i.test(b.textContent)), null, { timeout: 30000 })
+  .catch(() => {});
 const aloitus = await sivu.evaluate(() => {
   const n = [...document.querySelectorAll('button')]
     .find((b) => /aloita seikkailu/i.test(b.textContent));
-  if (!n) return false;
-  n.click(); return true;
+  if (n) { n.click(); return 'napista'; }
+  return window.matkakirja?.game?.phase ? 'kaynnissa' : false;
 });
+if (!aloitus) {
+  console.log('VIRHE: peli ei käynnisty — lehteä ei voi avata.');
+  process.exit(1);
+}
 console.log('aloitus:', aloitus);
 await sivu.waitForTimeout(3000);
 const tulos = await sivu.evaluate(async (iso) => {
@@ -85,7 +95,15 @@ const tulos = await sivu.evaluate(async (iso) => {
     const pack = await import('/js/pack.js');
     const lauta = pack.PACKS.find((p) => p.map?.countryShapes?.[iso]);
     if (!lauta) return { virhe: `${iso}: ei maamuotoa millään laudalla` };
-    ui.game.pack = lauta;
+    // game.pack on getteri world.packin yli (js/game.js), joten suora
+    // sijoitus ui.game.pack = lauta menee hiljaa ohi — vaihto tehdään
+    // vuorossa olevan pelaajan worldiin.
+    const world = ui.game.worlds?.get?.(ui.game.player?.packId) ?? ui.game.world;
+    if (!world) return { virhe: 'worldia ei löydy laudanvaihtoon' };
+    world.pack = lauta;
+    if (!ui.game.pack?.map?.countryShapes?.[iso]) {
+      return { virhe: 'laudanvaihto ei tarttunut (game.pack ennallaan)' };
+    }
   }
   ui.avaaMaalehti(iso);
   return { ok: true, lauta: ui.game.pack.id, sivuja: ui.lehtitila.tutkiSivut?.length ?? 0 };
