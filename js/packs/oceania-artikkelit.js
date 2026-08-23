@@ -126,6 +126,59 @@ export const OCEANIA_ARTIKKELIT = {
       + 'ja merellinen, ja Auckland on Uuden-Seelannin lämpimin suuri '
       + 'keskus.',
   },
+  /* WELLINGTON (Opus 23.8.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain wellington): väitteet on
+   * luettu en-Wikipedian raakateksteistä 23.8.2026, ja pohjana ovat
+   * faktapohja-wellington.md ja tarkistus-wellington.md.
+   * Tarkistusraportin vaatimat kohdat näkyvät myös täällä:
+   * pääkaupunkiasema kerrotaan tarkenteella "itsenäisen valtion", ja
+   * māorit näkyvät nykyisenä kansana (mana whenua, Taranaki Whānui).
+   * Tuulisuuden lukuja, Cookinsalmen leveyttä eikä elokuva-alaa ei
+   * mainita, koska ne ovat laudan visan omia vastausfaktoja. */
+  Wellington: {
+    intro: 'Wellington on Uuden-Seelannin pääkaupunki ja maailman '
+      + 'eteläisin itsenäisen valtion pääkaupunki, ahtautunut Pohjoissaaren '
+      + 'lounaiskärjessä sataman ja jyrkkien mäkien väliin. Sataman māorinkielinen nimi on '
+      + '**Te Whanganui-a-Tara**, Taran suuri satama, ja alueen mana '
+      + 'whenua ovat Taranakin iwit, jotka muuttivat tänne 1820- ja '
+      + '1830-luvulla.'
+      + '\n\n'
+      + 'Pääkaupungiksi kaupunki tuli 1865, kun hallituksen istuinpaikka '
+      + 'siirrettiin Aucklandista lähemmäs Eteläsaarta: parlamentti '
+      + 'kokoontui täällä ensimmäisen kerran heinäkuussa 1865, kun '
+      + 'asukkaita oli vasta 4 900. Vuoden 1855 maanjäristys oli sitä ennen '
+      + 'nostanut maata kahdesta kolmeen metriä ja tehnyt keskustalle uutta '
+      + 'maata sinne, missä oli ollut satamaa. **Isoisän saapuessa 1873 '
+      + 'pääkaupunki oli vasta kahdeksan vuoden ikäinen**, ja talot '
+      + 'rakennettiin puusta, joka joustaa järistyksessä kiveä paremmin.'
+      + '\n\n'
+      + 'Nykyään kaupunki tunnetaan hallinnostaan, museoistaan ja '
+      + 'kahviloistaan, ja köysirata nousee keskustasta Kelburnin '
+      + 'kasvitieteelliselle puutarhalle. Aidattu Zealandia on tuonut '
+      + 'esikaupunkeihin takaisin lintuja, jotka ihmisen tuomat pedot '
+      + 'olivat karkottaneet.',
+    teksti: 'Wellington sijaitsee Pohjoissaaren lounaiskärjessä '
+      + 'Cookinsalmen rannalla, Remutaka-vuoriston ja sataman välissä. '
+      + 'Liikekeskusta on Lambtonin sataman rannassa aktiivisen '
+      + 'murroslinjan vieressä, ja heti sen länsipuolella maa kohoaa '
+      + 'jyrkästi, joten esikaupungit ovat rinteillä keskustan yläpuolella. '
+      + 'Idässä on Miramarin niemimaa, joka liittyy muuhun kaupunkiin '
+      + 'Rongotain matalalla kannaksella.'
+      + '\n\n'
+      + 'Waitangin tribunaali on todennut, että sopimuksen '
+      + 'allekirjoitusaikaan 1840 alueen mana whenua -asema oli viidellä '
+      + 'iwillä, ja Uuden-Seelannin komppania osti maat 1839 ja 1844. '
+      + 'Hallituksen istuinpaikka siirtyi tänne 1865, ja vuoden 1855 '
+      + 'järistyksen jälkeen kaupunki rakennettiin vuosikymmeniksi lähes '
+      + 'kokonaan puusta.'
+      + '\n\n'
+      + 'Nykyään keskusta on tiivis ja kävelykelpoinen: rantaraitti kulkee '
+      + 'museoiden ohi Oriental Bayn rannalle, ja kaupungissa on enemmän '
+      + 'kahviloita asukasta kohden kuin New Yorkissa. Kolmasosa '
+      + 'asukkaista on syntynyt ulkomailla. Maa muistuttaa itsestään yhä: '
+      + 'asukkaat huomaavat useita järistyksiä vuodessa, ja uudet '
+      + 'suurrakennukset tehdään tukieristyksellä.',
+  },
   'Uusi-Seelanti': {
     intro: 'Uusi-Seelanti on kaksi pitkää, vuorista saarta eteläisellä '
       + 'Tyynellämerellä. Polynesialaiset '
