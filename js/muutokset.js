@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1048, teksti: 'New Yorkin ja San Franciscon herokarusellit' },
   { v: 1047, teksti: 'New York, San Francisco ja USA — P-Amerikan pilotti' },
   { v: 1046, teksti: 'Pöllöpillerit; aihesivujen teksti kiertää kuvaa' },
   { v: 1045, teksti: 'Kohdekartalle nimet numeroiden tilalle' },

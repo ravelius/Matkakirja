@@ -50605,6 +50605,62 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
+       * AVAUSKARUSELLI (lisätty 23.8.2026): kärjessä kierroksen 9
+       * generoidut herot (tools/hero-tyolista-4.mjs), perässä kolme
+       * aitoa Commons-valokuvaa Helsingin mallin mukaan. Valokuvien
+       * pääkohteet eroavat toisistaan ja herojen lähikohteista niin
+       * pitkälle kuin mahdollista (kaapelivaunukuva jätettiin pois,
+       * koska keskipäivän hero on samasta aiheesta); Golden Gate on
+       * molemmissa tietoisesti — se on kaupungin tunnus, ja kuvakulmat
+       * ovat aivan eri (rantatasolta vs. tornin korkeudelta). Lisenssit
+       * ja tekijät Commonsin extmetadatasta 23.8.2026, kuvat katsottu
+       * silmin (ei vesileimoja, ei tunnistettavia kasvoja).
+       */
+      avauskuvat: [
+        {
+          ampari: 'herokoe/hero-sanfrancisco-aamu.png',
+          selite: 'Golden Gate -silta valmistui 1937, ja sen 1 280 metrin '
+            + 'pääjänne oli valmistuessaan maailman pisin — väriksi '
+            + 'valittiin sumusta erottuva International Orange.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sanfrancisco-keskipaiva.png',
+          selite: 'San Franciscon kaapelivaunut aloittivat 1873, kun Andrew '
+            + 'Hallidien Clay Street Hill Railroad voitti mäet '
+            + 'vetokaapelilla — sama järjestelmä kuljettaa matkustajia yhä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sanfrancisco-ilta.png',
+          selite: 'Alamo Squaren "Painted Ladies" on 1890-luvulla '
+            + 'rakennettu viktoriaanisten Queen Anne -talojen rivi, josta '
+            + 'tuli kaupungin tunnetuimpia näkymiä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          tiedosto: 'Golden Gate Bridge as seen from Marshall’s Beach, March 2018.jpg',
+          selite: 'Golden Gate -silta oli lähes neljäkymmentä vuotta '
+            + 'maailman pisin riippusilta, kunnes New Yorkin '
+            + 'Verrazzano-Narrows-silta ohitti sen 1964.',
+          lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Coit tower lombard street.JPG',
+          selite: 'Coit Tower nousi Telegraph Hillin laelle 1933 Lillie '
+            + 'Hitchcock Coitin testamenttilahjoituksella, ja sen '
+            + 'näköalatasanne katsoo koko lahden yli.',
+          lahde: 'chensiyuan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'San Francisco (CA, USA), Alcatraz -- 2022 -- 3016.jpg',
+          selite: 'Alcatrazin saarella toimi liittovaltion vankila vuosina '
+            + '1934–1963, ja sitä ennen saarella oli lähes sata vuotta '
+            + 'sotilaslinnake; nykyään se on osa kansallispuistoa.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
        * ENNEN JA NYT: sama katu, Market Street, sata vuotta ja yksi
        * maanjäristys välissä. Vanha on Detroit Photographic Companyn
        * photochrom-vedos vuodelta 1900 (Library of Congress, PD) —
@@ -51132,11 +51188,31 @@ export const KULTTUURI_KATEGORIAT = {
        * kaupungin ERI puolilta: satama etelästä, Lower Manhattan
        * lännestä Hudsonin yli ja Central Park ruutukaavoineen ilmasta.
        * Yksikään kolmesta ei ole minkään noston aiheena samalla
-       * tiedostolla. Kolme generoitua herokuvaa tulee tähän samaan
-       * listaan myöhemmin (Helsingin malli, O9) — paikkoja niille ei
-       * jätetty tyhjinä.
+       * tiedostolla. Kärjessä kierroksen 9 generoidut herot (23.8.2026,
+       * tools/hero-tyolista-4.mjs) Helsingin mallin mukaan.
        */
       avauskuvat: [
+        {
+          ampari: 'herokoe/hero-newyork-aamu.png',
+          selite: 'Brooklynin silta valmistui 1883 neljäntoista '
+            + 'rakennusvuoden jälkeen, ja sen 486 metrin jänne oli '
+            + 'valmistuessaan maailman pisin riippusillassa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-newyork-keskipaiva.png',
+          selite: 'Vapaudenpatsas oli Ranskan lahja Yhdysvalloille: '
+            + 'Frédéric Auguste Bartholdin muotoilema ja Gustave Eiffelin '
+            + 'rungolle rakennettu kupariveistos paljastettiin 1886.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-newyork-ilta.png',
+          selite: 'Empire State Building valmistui 1931 vain 410 päivässä, '
+            + 'ja sen 381 metrin katto piti maailman korkeimman rakennuksen '
+            + 'arvoa neljä vuosikymmentä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Jersey City & Manhattan - Staten Island Ferry, New York, NY, USA - August 19, 2015 01.jpg',
           selite: 'Satamaan tullaan Narrowsin salmen kautta, ja juuri tätä '

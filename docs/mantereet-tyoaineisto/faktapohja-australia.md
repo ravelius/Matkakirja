@@ -98,7 +98,7 @@ aiheella, nostojen kentät `otsikko`, (valinnainen `aika`), `tiedosto`,
 ### H1 — "Vankilaiva joka ei koskaan palannut kotiin" (First Fleet, 1788)
 
 > Tammikuussa 1788 yksitoista laivaa ankkuroitui Sydneyn satamaan
-> yhdeksän kuukauden purjehduksen jälkeen Englannista: mukana oli
+> kahdeksan kuukauden purjehduksen jälkeen Englannista: mukana oli
 > reilut 1 400 ihmistä, joista noin 750 oli rangaistusvankeja. Britannia
 > oli menettänyt Amerikan siirtokuntansa vankiensa lähetyspaikkana
 > vapaussodassa ja etsi uutta kohdetta — Botany Bay vaikutti
@@ -109,10 +109,11 @@ aiheella, nostojen kentät `otsikko`, (valinnainen `aika`), `tiedosto`,
 > purjehtivat Lontooseen sadassa päivässä.
 
 Faktat ja lähteet:
-- Ensimmäinen laivue (First Fleet), 11 laivaa, saapui Botany Bayhin
-  tammikuussa 1788; matkustajina noin 1 420 henkeä, joista noin 732
-  oli vankeja. — en-Wikipedia "Penal transportation" (viittaa First
-  Fleet -artikkeliin), tarkistettu myös nykyisestä Sydney-faktarivistä
+- Ensimmäinen laivue (First Fleet), 11 laivaa, lähti Portsmouthista
+  13.5.1787 ja saapui Botany Bayhin 18.1.1788 — matka kesti noin 250
+  päivää eli n. 8 kuukautta, ei yhdeksää. Matkustajina noin 1 420
+  henkeä, joista noin 732 oli vankeja. — en-Wikipedia "First Fleet",
+  tarkistettu myös nykyisestä Sydney-faktarivistä
   `js/packs/oceania-questions.js`: "Sydney oli Britannian ensimmäinen
   rangaistussiirtola Australiassa, perustettu 1788."
 - Suurten mittasuhteiden kuljetus Australiaan jatkui 1787:stä
@@ -149,10 +150,11 @@ Faktat ja lähteet:
 
 ### H3 — "Kaivosmiesten kapina" (Eureka-kapina, 1854)
 
-> Joulukuun 3. päivänä 1854 noin 1 500 hallituksen sotilasta ja
-> poliisia hyökkäsi Ballaratin kultakentillä kaivosmiesten
-> pystyttämän puuaidan, Eureka-linnoituksen, kimppuun aamun
-> pimeydessä. Taistelu kesti alle vartin, mutta siinä kuoli noin
+> Joulukuun 3. päivänä 1854 kapteeni Thomasin komentama 276 hengen
+> yhdistetty sotilas- ja poliisijoukko hyökkäsi Ballaratin
+> kultakentillä kaivosmiesten pystyttämän puuaidan, Eureka-
+> linnoituksen, kimppuun aamun pimeydessä. Taistelu kesti alle
+> vartin, mutta siinä kuoli noin
 > 20–27 ihmistä, valtaosa kaivosmiehiä. Mellakan taustalla oli
 > viha kalliiseen kaivoslupamaksuun ja äänioikeuden puutteeseen —
 > vaeltavilla kaivosmiehillä ei ollut edustusta hallinnossa, joka
@@ -165,6 +167,15 @@ Faktat ja lähteet:
 - Eureka-kapinan taistelu käytiin 3.12.1854 Ballaratissa, Victorian
   siirtokunnassa; virallinen kuolonuhrien määrä 27, valtaosa
   kapinallisia. — en-Wikipedia "Eureka Rebellion"
+- Hyökkäävä joukko oli kapteeni Thomasin komentama yhdistetty
+  sotilas-poliisimuodostelma, 276 miestä ("the combined military
+  police formation of 276 men under the command of Captain Thomas").
+  Luku 1 500 esiintyy Wikipediassa eri asiayhteydessä — se on
+  kapinallisten (varuskunnan) enimmäisvahvuus linnoituksessa ("up to
+  1,500 of 17,280 men in Ballarat were garrisoning the stockade, with
+  as few as 120 taking part in the battle"), ei hallituksen
+  hyökkääjien määrä; aiempi versio tästä faktapohjasta sekoitti nämä
+  kaksi lukua keskenään. — en-Wikipedia "Eureka Rebellion"
 - Taustalla oli tyytymättömyys kuukausittaiseen kaivoslupamaksuun ja
   hallinnon mielivaltaisuuteen sekä äänioikeuden puute vaeltaville
   kaivosmiehille; avoin kapina puhkesi 29.11.1854, kun noin 10 000
@@ -643,10 +654,12 @@ Faktat ja lähteet:
 
 > "Swagman" tarkoitti kiertelevää työmiestä, joka kulki tilalta
 > toiselle jalan, kaikki omaisuutensa käärittynä "swagiin" selässään.
-> Termi syntyi 1830-luvulla brittiläisen varasslingon sanasta "swag"
-> (varastettu tavara) ja siirtyi vähitellen tarkoittamaan rehellisen
-> kulkumiehen kantamuksia; sana "swagman" yleistyi 1850-luvulla
-> kultaryntäysten aikana. Villateollisuus oli täysin riippuvainen
+> Sana "swag" oli brittiläisten varkaiden slangia jo 1810-luvulla
+> (mm. Francis Grosen sanakirjassa 1811) ja tarkoitti tuolloin
+> varastettua tavaraa; vasta 1830-luvulla merkitys siirtyi
+> Australiassa tarkoittamaan rehellisen kulkumiehen kantamuksia, ja
+> sana "swagman" yleistyi 1850-luvulla kultaryntäysten aikana.
+> Villateollisuus oli täysin riippuvainen
 > vaeltavista lampaanleikkaajista, jotka kulkivat "asemalta" toiselle,
 > ja monilla lammastiloilla oli tapana tarjota ruokaa ja yösija
 > kaikille ohikulkijoille, olipa työtä tarjolla tai ei — Etelä-
@@ -772,53 +785,80 @@ ks. faktapohja-usa.md osio 7.)
 
 ## 8. Kuvaehdokkaiden kategorialistaus (Commonsista)
 
-**HUOM: Commonsin hakurajapinta palautti "too many requests" (429)
-tätä koostetta tehdessä useita kertoja peräkkäin, joten alla olevat
-kategoriat ovat PÄÄOSIN hakuapuvinkkejä eikä vahvistettuja
-tiedostomääriä — toisin kuin USA-faktapohjassa. Seuraavan kirjoittajan
-pitää tarkistaa jokainen kategoria itse `prop=categoryinfo`-kutsulla
+**HUOM (päivitetty korjauskierroksella 23.8.2026): riippumaton
+tarkistus (docs/mantereet-tyoaineisto/tarkistus-australia.md, luku 8)
+teki pistokokeen `prop=categoryinfo`-kutsuilla ja vahvisti seuraavat
+todelliset tiedostomäärät — nämä eivät ole enää hakuapuvinkkejä vaan
+VAHVISTETTUJA. Loput kategoriat (merkitty "EI TARKISTETTU" alla) jäivät
+Commonsin 429-rajoituksen taakse jo kahdella peräkkäisellä
+tarkistuskierroksella (koostaja 23.8. ja tarkistaja 23.8.) — seuraavan
+kirjoittajan on silti tehtävä niille oma `prop=categoryinfo`-kierros
 ennen käyttöä, nukkuen 5–6 s hakujen välissä (lehtityö-resepti.md).**
 
-Todennäköisesti vahvoja (Amerikoiden ja Oseanian kuvapooli on
-lehtityö-resepti.md:n mukaan vahva, Met/Smithsonian CC0 -aineistoineen):
+**Vahvistetut tiedostomäärät (tarkistus-australia.md, luku 8):**
 
-- H1/H2 Vankisiirtolaisuus → `Category:Convicts in Australia`,
-  `Category:First Fleet`
-- H3 Eureka-kapina → `Category:Eureka Rebellion` (todennäköisesti
-  runsas — Eureka-lippu ja Henderson-akvarelli ovat tunnettuja PD-teoksia)
+| Kategoria | Tiedostoja | Huomio |
+|---|---|---|
+| `Category:Uluru` | 543 | Vahva |
+| `Category:First Fleet` | 51 | Käyttökelpoinen |
+| `Category:Convicts in Australia` | 29 | Käyttökelpoinen mutta ohut |
+| `Category:Great Barrier Reef` | 125 | Käyttökelpoinen |
+| `Category:Eureka Stockade` | 30 | KORJATTU NIMI — ks. alla |
+| `Category:Australian Overland Telegraph Line` | 24 | Ohut |
+| `Category:Swagmen` | 30 | Käyttökelpoinen |
+| `Category:Kangaroos` | 22 suoraan + 14 alakategoriaa | Hae myös alakategorioista |
+| `Category:Platypus` | 5 suoraan + 16 alakategoriaa | Hae myös alakategorioista |
+| `Category:Koalas` | **0 (tyhjä säiliökategoria)** | VÄÄRÄ valinta sellaisenaan — ks. alla |
+| `Category:Chinese Australians` | **0 (tyhjä säiliökategoria)** | VÄÄRÄ valinta sellaisenaan — ks. alla |
+
+- H1/H2 Vankisiirtolaisuus → `Category:Convicts in Australia` (29
+  tiedostoa), `Category:First Fleet` (51 tiedostoa)
+- H3 Eureka-kapina → **EI `Category:Eureka Rebellion` (ei ole
+  olemassa Commonsissa) vaan `Category:Eureka Stockade` (30
+  tiedostoa, vahvistettu)** — aiempi versio tästä faktapohjasta
+  ehdotti väärää kategorianimeä
 - H4 Raideleveys/rautatiet → `Category:Rail transport in Australia`,
-  `Category:Break of gauge`
+  `Category:Break of gauge` — EI TARKISTETTU
 - A2 Tähtitiede → `Category:Australian Aboriginal astronomy` tai
-  hakusana "Emu in the sky"
+  hakusana "Emu in the sky" — EI TARKISTETTU
 - A3 Kulttuuripoltot → `Category:Cultural burning` tai "fire-stick
-  farming Australia"
-- A4 Uluru → `Category:Uluru` (todennäköisesti hyvin runsas) — MUISTA
+  farming Australia" — EI TARKISTETTU
+- A4 Uluru → `Category:Uluru` (543 tiedostoa, vahvistettu) — MUISTA
   spec-mantereet.md:n rajoite: VAIN ulkopuolelta, EI kiipeäjäkuvia.
   Petroglyfikuva ("Uluru petroglyphs") kelpaa, mutta tarkista ettei
   kuva riko valokuvausrajoituksia (Uluru-artikkeli mainitsee, ettei
   tiettyjä alueita saa kuvata Tjukurpa-uskomusten vuoksi — turvallisinta
   on käyttää yleiskuvaa kalliosta ulkopuolelta).
 - T1 Kultaryntäys → `Category:Australian gold rushes`,
-  `Category:Victorian gold rush`
+  `Category:Victorian gold rush` — EI TARKISTETTU
 - T2 Villateollisuus/lampaat → `Category:Sheep shearing in Australia`,
-  `Category:Merino`
+  `Category:Merino` — EI TARKISTETTU
 - T3 Lennätinlinja → `Category:Australian Overland Telegraph Line`
-  (todennäköisesti ohut — vara: hae myös "Charles Todd telegraph"
-  tai "Frews Ponds")
-- L1 Kenguru → `Category:Kangaroos` (todennäköisesti hyvin runsas)
-- L2 Nokkasiippa → `Category:Platypus` (todennäköisesti hyvin runsas)
-- L3 Iso valliriutta → `Category:Great Barrier Reef` (todennäköisesti
-  hyvin runsas)
-- L4 Koala → `Category:Koalas` (todennäköisesti hyvin runsas)
+  (24 tiedostoa, vahvistettu — ohut; vara: hae myös "Charles Todd
+  telegraph" tai "Frews Ponds")
+- L1 Kenguru → `Category:Kangaroos` (22 tiedostoa suoraan +
+  14 alakategoriaa, vahvistettu — hae myös alakategorioista, esim.
+  lajinimillä)
+- L2 Nokkasiippa → `Category:Platypus` (5 tiedostoa suoraan +
+  16 alakategoriaa, vahvistettu — hae myös alakategorioista)
+- L3 Iso valliriutta → `Category:Great Barrier Reef` (125 tiedostoa,
+  vahvistettu)
+- L4 Koala → **EI `Category:Koalas` sellaisenaan — vahvistettu TYHJÄ
+  säiliökategoria (0 tiedostoa).** Hae sen sijaan lajinimellä
+  `Phascolarctos cinereus` tai koalojen alakategorioista — EI VIELÄ
+  TARKISTETTU mikä alakategoria toimii
 - R1 Damper → hae "damper bread Australia" tai "camp oven Australia"
-  (ei omaa Commons-kategoriaa löytynyt tässä koosteessa)
-- R2 Swagman → `Category:Swagmen` tai hae "Down on His Luck McCubbin"
-  (Frederick McCubbinin 1889 maalaus on tunnettu PD-teos aiheesta)
-- R3 Kiinalaiset kultakentillä → `Category:Chinese Australians`,
-  `Category:History of Chinese Australians`, tai "Chinese diggers
-  goldfields Victoria"
+  (ei omaa Commons-kategoriaa löytynyt) — EI TARKISTETTU
+- R2 Swagman → `Category:Swagmen` (30 tiedostoa, vahvistettu) tai hae
+  "Down on His Luck McCubbin" (Frederick McCubbinin 1889 maalaus on
+  tunnettu PD-teos aiheesta)
+- R3 Kiinalaiset kultakentillä → **EI `Category:Chinese Australians`
+  sellaisenaan — vahvistettu TYHJÄ säiliökategoria (0 tiedostoa).**
+  Hae sen sijaan `Category:History of Chinese Australians` tai
+  hakusanalla "Chinese diggers goldfields Victoria" — EI VIELÄ
+  TARKISTETTU mikä kategoria toimii
 - R4 Alkuperäisruoka → `Category:Bushfood` tai hae yksittäisiä kasveja
-  ("quandong", "macadamia")
+  ("quandong", "macadamia") — EI TARKISTETTU
 
 **MAAKARTAT-nosto (relief-karttaan liitettävä yksittäiskuva, ks.
 luku 9):** ehdotan Ison valliriutan ilmakuvaa tai Uluru-yleiskuvaa
@@ -960,3 +1000,59 @@ niin, että anakronismi on selvästi merkitty ("myöhemmin"), samaan
 tapaan kuin USA-koosteen H2 mainitsi Philadelphian 1876-näyttelyn
 tulevana tapahtumana. Fablen kannattaa vahvistaa, että tämä muotoilu
 on hyväksyttävä rajaus.
+
+---
+
+## 12. Korjaushistoria
+
+**23.8.2026, Sonnet-faktakoostaja, korjauskierros riippumattoman
+tarkistuksen (docs/mantereet-tyoaineisto/tarkistus-australia.md,
+tuomio "KELPAA KORJAUKSIN") löydösten pohjalta. Kaikki korjaukset
+tarkistettu itse uudelleen en-Wikipediasta ja Commonsista
+(`action=raw`/`prop=categoryinfo`, `NODE_USE_ENV_PROXY=1`-vastine
+curlilla proxyn kautta) ennen tallennusta:**
+
+1. **H3 (Eureka-kapina) — korjattu VIRHE.** Nostoteksti ja faktarivit
+   muutettu "noin 1 500 hallituksen sotilasta ja poliisia" → "kapteeni
+   Thomasin komentama 276 hengen yhdistetty sotilas- ja poliisijoukko".
+   Itse vahvistettu en-Wikipedia "Eureka Rebellion" -raakatekstistä:
+   "the combined military police formation of 276 men under the
+   command of Captain Thomas". Luku 1 500 on eri asia (kapinallisten
+   varuskunnan enimmäisvahvuus) — selitetty faktariveissä, ettei
+   sekaannus toistu.
+2. **R2 (Swagman) — korjattu VIRHE.** Nostoteksti muutettu erottamaan
+   sanan "swag" alkuperä (1810-luvun brittiläinen varassleng, mm.
+   Grosen sanakirja 1811) sen australialaisesta
+   merkityksensiirtymästä kulkurin varustesanaksi (1830-luku).
+   Itse vahvistettu en-Wikipedia "Swagman" -raakatekstistä: "In the
+   early 1800s, the term swag was used by British thieves..." ja "By
+   the 1830s, the term in Australia had transferred from meaning
+   goods acquired by a thief to the possessions... carried by a
+   bushman." Faktarivit olivat jo alun perin oikein — vain nostoteksti
+   oli ristiriidassa niiden kanssa.
+3. **H1 (First Fleet) — korjattu VAROITUS.** "yhdeksän kuukauden
+   purjehduksen" → "kahdeksan kuukauden purjehduksen". Itse
+   vahvistettu en-Wikipedia "First Fleet" -raakatekstistä: lähti
+   Portsmouthista 13.5.1787, saapui Botany Bayhin 18.1.1788, "over
+   250 days" — n. 8 kk 5 pv, ei 9 kk. Faktarivi täsmennetty samalla.
+4. **Osio 8 (kuvakategoriat) — korjattu VAROITUS.** `Category:Eureka
+   Rebellion` (ei ole olemassa Commonsissa) korvattu oikealla nimellä
+   `Category:Eureka Stockade` (30 tiedostoa). Lisätty taulukko
+   riippumattoman tarkistuksen vahvistamista tiedostomääristä
+   (Uluru 543, First Fleet 51, Convicts in Australia 29, Great
+   Barrier Reef 125, Overland Telegraph Line 24, Swagmen 30,
+   Kangaroos 22+14 alakat., Platypus 5+16 alakat.).
+   `Category:Koalas` ja `Category:Chinese Australians` merkitty
+   vahvistetuiksi TYHJIKSI säiliökategorioiksi (0 tiedostoa) — itse
+   uudelleenvarmistettu `prop=categoryinfo`-kutsulla Commonsista
+   23.8.2026 (Chinese Australians: `"categoryinfo":{"size":0,...}`;
+   Koalas ei ehditty uudelleenvarmistaa oman istunnon 429-rajoituksen
+   vuoksi, mutta tarkistus-australia.md:n löydös hyväksytty
+   sellaisenaan, koska se on riippumaton ja yksiselitteinen). Loput
+   kategoriat merkitty selvästi "EI TARKISTETTU" siihen asti, kunnes
+   seuraava kirjoittaja tekee täyden kuvahakukierroksen.
+
+Kaikki muu sisältö (Alkuperäiskansat-, Talous-, Luonto- ja
+Ruoka-osiot, maan intro, 1873-kulman kooste) jätetty koskemattomaksi —
+riippumaton tarkistus vahvisti ne oikeiksi eikä tämä korjauskierros
+laajentanut tarkistusta niiden ulkopuolelle.
