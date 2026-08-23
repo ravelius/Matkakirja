@@ -246,4 +246,22 @@ export const MINIATYYRIT = {
     'Sirkecin asema': 'assets/kartat/miniatyyrit/istanbul-sirkecin-asema.webp',
     'Neitsyttorni': 'assets/kartat/miniatyyrit/istanbul-neitsyttorni.webp',
   },
+  /*
+   * New York (kohdekartta v1065). Kymmenestä kohteesta yhdeksän sai
+   * hyväksytyn akvarellin; Times Square jäi ilman, koska generoitu
+   * kuva luki geneerisenä eurooppalaisena kulmakorttelina eikä
+   * aukiona — kohde näkyy kartalla numeroympyränä, kunnes uusinta
+   * onnistuu.
+   */
+  newyork: {
+    'Amerikan luonnonhistoriallinen museo': 'assets/kartat/miniatyyrit/newyork-luonnonhistoriallinen-museo.webp',
+    'Metropolitan-museo': 'assets/kartat/miniatyyrit/newyork-metropolitan-museo.webp',
+    'Pyhän Patrickin katedraali': 'assets/kartat/miniatyyrit/newyork-pyhan-patrickin-katedraali.webp',
+    'New Yorkin pääkirjasto': 'assets/kartat/miniatyyrit/newyork-paakirjasto.webp',
+    'Empire State Building': 'assets/kartat/miniatyyrit/newyork-empire-state-building.webp',
+    'Flatiron Building': 'assets/kartat/miniatyyrit/newyork-flatiron-building.webp',
+    'Washington Squaren riemukaari': 'assets/kartat/miniatyyrit/newyork-washington-squaren-riemukaari.webp',
+    'New Yorkin kaupungintalo': 'assets/kartat/miniatyyrit/newyork-kaupungintalo.webp',
+    'Trinity Church': 'assets/kartat/miniatyyrit/newyork-trinity-church.webp',
+  },
 };

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1068';
+const CACHE = 'matkakirja-2026-08-09.1069';
 const SHELL = [
   './',
   './index.html',
@@ -459,6 +459,15 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tokio-ueno-tosho-gu.webp',
   './assets/kartat/miniatyyrit/tokio-uenon-asema.webp',
   './assets/kartat/miniatyyrit/tripoli-gurgin-moskeija.webp',
+  './assets/kartat/miniatyyrit/newyork-luonnonhistoriallinen-museo.webp',
+  './assets/kartat/miniatyyrit/newyork-metropolitan-museo.webp',
+  './assets/kartat/miniatyyrit/newyork-pyhan-patrickin-katedraali.webp',
+  './assets/kartat/miniatyyrit/newyork-paakirjasto.webp',
+  './assets/kartat/miniatyyrit/newyork-empire-state-building.webp',
+  './assets/kartat/miniatyyrit/newyork-flatiron-building.webp',
+  './assets/kartat/miniatyyrit/newyork-washington-squaren-riemukaari.webp',
+  './assets/kartat/miniatyyrit/newyork-kaupungintalo.webp',
+  './assets/kartat/miniatyyrit/newyork-trinity-church.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
