@@ -59837,4 +59837,601 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * CHICAGO (Opus 23.8.2026). Alusta asti tehty kaupunkilehti: kohteella
+   * ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen tätä erää.
+   * Pohjana ovat docs/mantereet-tyoaineisto/faktapohja-chicago.md ja sen
+   * riippumaton tarkistus tarkistus-chicago.md, jotka luettiin yhdessä;
+   * ristiriidoissa TARKISTUS VOITTAA. Väitteet on tarkistettu
+   * en-Wikipedian raakateksteistä (action=raw, 23.8.2026): Chicago,
+   * Great Chicago Fire, Home Insurance Building, Manhattan Building
+   * (Chicago), Chicago school (architecture), Rookery Building, Chicago
+   * Board of Trade Building, Union Stock Yards, Chicago Sanitary and
+   * Ship Canal, World's Columbian Exposition, Millennium Park, Chicago
+   * Water Tower, Chicago "L", O'Hare International Airport, Potawatomi,
+   * Fort Dearborn, Treaty of Chicago, American Indian Center, Prairie
+   * Band Potawatomi Nation ja Windy City (nickname).
+   *
+   * TARKISTUSRAPORTIN KOLME KORJAUSTA ON TEHTY. (1) Faktapohjan
+   * K2-fact-laatikko sanoi suurpalosta "ainakin 300 kuoli". Se kääntää
+   * lähteen epävarmuuden väärinpäin: "Great Chicago Fire" sanoo, että
+   * 120 ruumista löydettiin ja kuolonuhreja saattoi olla jopa 300.
+   * Nosto sanoo sen tässä järjestyksessä ja tällä varauksella.
+   * (2) Union Stock Yard Gate valmistui 1879, ei 1875 — portin oma
+   * artikkeli antaa infoboksissa, historiaosiossa ja kategoriassa
+   * vuoden 1879, ja 1875 on vain johdantolauseen suunnitteluvuosi.
+   * Luku 1879 on kansikuvan selitteessä. (3) Anish Kapoor on
+   * brittiläis-intialainen, ei pelkästään brittiläinen; oppaan jakso 4
+   * sanoo sen niin.
+   *
+   * KAKSI WIKIPEDIAN SISÄISTÄ RISTIRIITAA RATKAISTIIN NÄIN.
+   * (1) Rookery Buildingin valmistumisvuosi: "Chicago school
+   * (architecture)" -artikkelin taulukko sanoo 1886, mutta talon oma
+   * artikkeli sanoo sekä infoboksissa että johdannossa 1888. Lehti
+   * käyttää talon oman artikkelin lukua 1888, koska se on tarkempi
+   * lähde — sama periaate kuin Vancouverin sataman tonniluvuissa. Sama
+   * artikkeli tarkentaa myös rakenteen: Rookeryssä on kantavat
+   * ulkoseinät ja teräsrunko sisällä, ei siis puhdas luurankorunko.
+   * (2) Kylän kasvu 1833–1840: "Chicago"-artikkelin historiaosio sanoo
+   * "yli 6 000", saman artikkelin Demographics-osio "yli 4 000"
+   * ensimmäisen väestönlaskennan mukaan. Lehti käyttää historiaosion
+   * lukua, jonka faktapohja oli merkinnyt lähteekseen, eikä väitä sen
+   * olevan väestönlaskennan luku.
+   *
+   * VUOSI 1873 ON SANOTTU AUKI KOLMESTI. Isoisän matkavuonna Chicago
+   * oli kesken jälleenrakennuksen: suurpalo oli ollut lokakuussa 1871,
+   * ensimmäinen pilvenpiirtäjä valmistui vasta 1885 ja joen pysyvä
+   * kääntö vasta 1900. Tämä kerrotaan etusivun leipätekstissä
+   * (js/packs/northamerica-artikkelit.js), kaupunkisivun ja
+   * arkkitehtuurisivun johdannoissa sekä nostossa A3, jottei pelaaja
+   * luule isoisän katselleen pilvenpiirtäjiä.
+   *
+   * "ENSIMMÄINEN PILVENPIIRTÄJÄ" KERROTAAN KIISTANA, EI VÄITTEENÄ.
+   * Nosto K3 sanoo tittelin kiistanalaiseksi ja A1 kertoo kiistan
+   * kokonaan: aikalaislehdistö ei käyttänyt nimitystä, se vakiintui
+   * vasta satavuotisjuhlan tienoilla 1985, ja Blair Kamin
+   * kyseenalaisti sen Chicago Tribunessa 7.11.2019.
+   *
+   * "TUULINEN KAUPUNKI" -LEMPINIMEN SÄÄSELITYSTÄ EI VAHVISTETA.
+   * "Windy City (nickname)" -artikkeli antaa neljä kilpailevaa
+   * selitystä ja sanoo suoraan, ettei Chicago ole muita Yhdysvaltain
+   * kaupunkeja tuulisempi (keskituuli 10,3 mph vs. Bostonin 12,4 mph).
+   * Oppaan jakso 5 kertoo tämän ääneen, koska pelin oma visa
+   * (js/packs/northamerica-questions.js) yksinkertaistaa asian.
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3. Potawatomi ja Kolmen tulen
+   * neuvosto (Odawa, Ojibwe, Potawatomi) kuvataan nykyisinä kansoina:
+   * AK4 kertoo vuonna 1953 perustetusta American Indian Centeristä,
+   * joka toimii yhä ja palvelee yli viidenkymmenen heimon jäseniä, ja
+   * vuoden 2024 maapäätöksestä, jolla Prairie Band Potawatomi Nation
+   * sai 130 eekkeriä DeKalb Countyssa luottamukseen. Vääryydet (1833
+   * sopimuksen myöhästyneet korvaukset, pakkosiirto Mississippin
+   * länsipuolelle) kerrotaan tapahtumina ilman romantisointia ja ilman
+   * kärsimyksen yksityiskohtia. Fort Dearbornin 1812 hyökkäyksestä
+   * kerrotaan sekä uhrit että päällikkö Mucktypoken rooli hyökkäyksen
+   * vastustajana. Council of Three Firesin perustamisvuotta 796 EI
+   * käytetä: se perustuu suulliseen perimätietoon eikä ole samalla
+   * tavalla tarkistettavissa kuin muut luvut.
+   *
+   * KULTTUURIVISAN (js/packs/northamerica-questions.js) viiden
+   * kysymyksen vastaukset löytyvät lehdestä: Michiganjärvi (johdanto,
+   * etusivun intro ja oppaan jakso 2), pilvenpiirtäjä 1880-luvulla
+   * (nosto K3), rautateiden solmukohta (nosto K4), suurpalo 1871
+   * (nosto K2) ja joen kääntäminen 1900 (nosto A3). Kummankaan
+   * teemasivun minitehtävä ei kysy samaa kuin visa: arkkitehtuurisivu
+   * kysyy maailmannäyttelyn lempinimeä (vastaus A4:ssä) ja
+   * alkuperäiskansat-sivu Kolmen tulen neuvoston kolmea kansaa
+   * (vastaus AK1:ssä).
+   *
+   * SIVU-ID:T. Molemmat teemasivut (`arkkitehtuuri`,
+   * `alkuperaiskansat`) ovat js/ui-apurit.js:n AIHE_IKONIT-taulun
+   * ulkopuolella ja piirtyvät yleiskuvakkeella — sama perusteltu
+   * poikkeus kuin Vancouverissa, ja `alkuperaiskansat` on jo käytössä
+   * sekä Australian laudalla että Vancouverissa.
+   *
+   * KUVAT: kaikki 21 kuvaa on haettu Commonsista KATEGORIOILLA (tai
+   * kategorian puuttuessa tiedostohaulla), lisenssi ja tekijä on luettu
+   * rajapinnan extmetadatasta ja jokainen kuva on katsottu silmin 900
+   * pikselin esikatseluna. Hylkäysten yleisin syy oli tunnistettava
+   * ihminen etualalla: Field Buildingin ja vesitornin katunäkymissä,
+   * Rookeryn pääsisäänkäynnillä, Cloud Gaten aukiolla ja Jenneyn
+   * haudalla otetussa kuvassa kasvot ovat luettavissa. Toiseksi yleisin
+   * syy oli kuvan päälle lisätty merkintä: Ball State Universityn
+   * copyright-rivi maailmannäyttelyn Court of Honor -vedoksessa,
+   * postikortin painettu otsikkopalkki Loopin 1900-kuvassa,
+   * stereokortin paspartuu ja käsinkirjoitettu teksti vesitornin
+   * palonedellisessä kuvassa sekä Field Buildingin litografian
+   * lyijykynäsignatuuri. Lentokoneen siipi ja yhtiön tunnus hylkäsivät
+   * kaksi kanavan ilmakuvaa, mainosbanderollit Loopin katukuvan ja
+   * suuri kattokirjaiminen tornin nimi Riverwalkin kuvan. Karjapihojen
+   * lintuperspektiivipainoksesta valittiin rajattu versio, koska
+   * rajaamattomassa on kirjaston arkistoleima; painoksen omat
+   * paikannimet (Dexter Park, Transit Park) ja Currier & Ivesin
+   * painettu nimiö ovat julkaisijan omaa literaa, sama poikkeus kuin
+   * Vancouverin palokartassa, ja ne selitetään kuvateksteissä.
+   *
+   * KAKSI LÄHDERIVIÄ VAATII SELITYKSEN. (1) Vuoden 1830 kartan
+   * extmetadata.Artist on kirjaimellisesti "Copyrighted by Alfred T.
+   * Andreas", ja lähderivi toistaa sen sellaisenaan, koska talon sääntö
+   * on kirjoittaa tekijä täsmälleen Artist-kentän muodossa. (2)
+   * Karjapihojen litografialla ei ole infoboksia eikä siis
+   * Artist-kenttää lainkaan; tiedostosivulle kopioitu Kongressin
+   * kirjaston luettelotieto nimeää tekijäksi Charles Rascherin (Walsh &
+   * Co., 1878), ja lähderivi käyttää sitä. Nimeä ei ole arvattu.
+   *
+   * AIHETOISTO: Union Stock Yards esiintyy kahdesti (kansikuvan portti
+   * 1879 ja noston K4 lintuperspektiivipainos 1878) ja Chicago-joen suu
+   * kahdesti (avauskuvan vesirajanäkymä ja noston A3 sulkukuva) — eri
+   * tiedostot, eri kuvakulmat, eri jutut. Muut kohteet esiintyvät
+   * kerran, eikä yksikään kuva ole sama kuin matkakirjan
+   * js/packs/northamerica-valokuvat.js:n chicago-lohkossa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä. Oppaan jakso 5 nojaa siis en-Wikipedian Chicago-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin, Karachin ja
+   * Vancouverin malli. Mittauspiste olisi keskusta 41,88 / -87,63.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta eikä kuvaile kuvaa visuaalisesti, ja se on yhden
+   * virkkeen mittainen.
+   */
+  chicago: [
+    {
+      id: 'kaupunki',
+      nimi: 'Chicago',
+      johdanto: 'Michiganjärven rannalle nousi kaupunki nopeammin kuin mikään '
+        + 'toinen Yhdysvalloissa, ja lokakuussa 1871 se paloi lähes kokonaan. '
+        + 'Isoisän matkavuonna 1873 Chicago rakensi itseään uudelleen kivestä '
+        + 'ja tiilestä.',
+      kansikuvat: [
+        {
+          tiedosto: 'The Chicago Water Tower.jpg',
+          selite: 'Vuonna 1869 valmistunut vesitorni oli ainoa suurpalon '
+            + 'tuhoalueella pystyyn jäänyt julkinen rakennus, ja se seisoo '
+            + 'yhä Michigan Avenuen keskellä.',
+          lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Historic Union stock yard gate, Chicago, Illinois LCCN2011630451.tif',
+          selite: 'Union Stock Yardsin porttiin veistetty naudanpää katsoo yhä '
+            + 'Exchange Avenuelle, vaikka portin takana olleet karjapihat ovat '
+            + 'kadonneet; Burnhamin ja Rootin suunnittelema portti valmistui '
+            + '1879.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Millennium Park from Nichols Bridgeway, Chicago, Illinois (9179499913).jpg',
+          selite: 'Millennium Park avattiin 2004 vanhan rautatiepiha-alueen '
+            + 'päälle Loopin laidalle, ja sen konserttilavan ylle kaartuu '
+            + 'teräsputkista koottu ristikko.',
+          lahde: 'Ken Lund from Reno, Nevada, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kolmesta suunnasta — Loopin
+       * siluetti järveltä aamunkoitteessa, ilmakuva pohjoisen puolelta
+       * rantaviivaa pitkin ja joen suu vesirajasta katsottuna. Yksikään
+       * ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Chicago sunrise 1.jpg',
+          selite: 'Loopin tornit seisovat Michiganjärven rannalla samalla '
+            + 'kohdalla, jolla kaupunki paloi 1871 ja rakennettiin uudelleen.',
+          lahde: 'Daniel Schwen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '360 Chicago (Unsplash).jpg',
+          selite: 'Kaupunki jatkuu järven rantaviivaa pitkin pohjoiseen, ja '
+            + 'rannan ja korttelien väliin jää yhtenäinen puistojen ja '
+            + 'uimarantojen nauha.',
+          lahde: 'Kevin Rajaram kevinrajaram, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Wendella architecture tour on Chicago River (9433676806).jpg',
+          selite: 'Chicago-joen pääuoma kääntyy keskustan halki siitä kohdasta, '
+            + 'jossa se ennen laski Michiganjärveen; vasemmalla ovat kaupungin '
+            + 'paloveneet.',
+          lahde: 'Roy Luck, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Villisipulin nimi ja kylä joka kasvoi seitsemässä vuodessa',
+          tiedosto: '1830 Map of Chicago.jpg',
+          teksti: 'Nimi Chicago on ranskalaistettu muoto Miami–Illinois-kielen '
+            + 'sanasta šikaakwa, joka tarkoittaa villisipulia tai '
+            + '-valkosipulia. Paikka kirjattiin ensimmäisen kerran muodossa '
+            + 'Checagou noin 1679, kun ranskalainen La Salle mainitsi sen '
+            + 'matkamuistiossaan. Ensimmäinen tunnettu pysyvä asukas oli '
+            + 'kauppias Jean Baptiste Point du Sable, joka perusti asutuksen '
+            + '1780-luvulla ja tunnetaan Chicagon perustajana. Elokuun '
+            + '12. päivänä 1833 paikka järjestäytyi noin kahdensadan asukkaan '
+            + 'kylänä, ja seitsemässä vuodessa väkiluku kasvoi yli '
+            + 'kuuteentuhanteen. Kaupunki perustettiin virallisesti '
+            + '4. maaliskuuta 1837.',
+          selite: 'Alfred T. Andreasin 1884 julkaisema kartta esittää Chicagon '
+            + 'vuonna 1830: joen kaksi haaraa, kourallinen tontteja sen suulla '
+            + 'ja muuten kanavamaata Michiganjärven rannalla.',
+          lahde: 'Copyrighted by Alfred T. Andreas, Wikimedia Commons (PD)',
+          wiki: 'Chicago',
+        },
+        {
+          otsikko: 'Kaupunki joka paloi ja jäi pystyyn vesitorninsa varaan',
+          tiedosto: 'Chicago in Flames by Currier & Ives, 1871.jpg',
+          teksti: 'Suurpalo syttyi 8. lokakuuta 1871 illalla DeKoven '
+            + 'Streetillä, perimätiedon mukaan O\'Learyn perheen navetasta, ja '
+            + 'kuiva kesä sekä lounaistuuli veivät tulen kahdesti Chicago-joen '
+            + 'yli. Palo tuhosi yli 17 000 rakennusta ja jätti noin 90 000 '
+            + 'ihmistä eli lähes kolmasosan silloisesta 324 000 asukkaasta '
+            + 'kodittomaksi. Ruumiita löydettiin 120, mutta kuolleiden määrän '
+            + 'arvioidaan nousseen jopa kolmeensataan. Tuhoalueen julkisista '
+            + 'rakennuksista jäi pystyyn vain yksi: 1869 valmistunut vesitorni, '
+            + 'jonka oma pumppuasema kuitenkin syttyi ja lakkasi pumppaamasta '
+            + 'sammutusvettä.',
+          selite: 'Currier & Ivesin vuoden 1871 kivipainoksessa väki pakenee '
+            + 'paloa Randolph Streetin sillan yli, ja kuvan alalaidassa on '
+            + 'kustantajan oma painettu nimiö.',
+          lahde: 'Currier and Ives, Wikimedia Commons (PD)',
+          wiki: 'Great Chicago Fire',
+        },
+        {
+          otsikko: 'Kymmenen kerroksen talo joka ei kaatunut',
+          tiedosto: 'Streetwall (532675780).jpg',
+          teksti: 'Jälleenrakennuksen keskellä arkkitehti William Le Baron '
+            + 'Jenney suunnitteli talon, jonka painon kantoi raudasta ja '
+            + 'teräksestä koottu runko eivätkä enää paksut kantavat seinät. '
+            + 'Home Insurance Building valmistui 1885 kymmenkerroksisena, ja '
+            + 'kaupungin virkamiehet keskeyttivät työt hetkeksi tarkistaakseen '
+            + 'rakenteen turvallisuuden, koska talo painoi vain kolmasosan '
+            + 'vastaavan kivitalon painosta. Kaksi kerrosta lisättiin 1891. '
+            + 'Taloa kutsutaan usein maailman ensimmäiseksi pilvenpiirtäjäksi, '
+            + 'mutta titteli on kiistanalainen.',
+          selite: 'Oikealla kohoava Manhattan Building valmistui 1891 Jenneyn '
+            + 'piirustusten mukaan, ja se on vanhin pystyssä oleva '
+            + 'pilvenpiirtäjä, jonka koko painon kantaa pelkkä teräsluuranko.',
+          lahde: 'Payton Chung from DCA, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Home Insurance Building',
+        },
+        {
+          otsikko: 'Yhdeksän rautatieyhtiön yhteinen karjapiha',
+          tiedosto: 'Union stock yards chicago 1870s loc (cropped).jpg',
+          teksti: 'Yhdeksän rautatieyhtiön yhtymä osti 1864 noin 320 eekkeriä '
+            + 'suomaata kaupungin lounaispuolelta sadallatuhannella dollarilla '
+            + 'ja perusti Union Stock Yardsin, joka avautui jouluna 1865. '
+            + 'Karjan määrä kasvoi nopeasti: vuonna 1870 pihalla käsiteltiin '
+            + 'noin kaksi miljoonaa eläintä ja vuonna 1890 jo yhdeksän '
+            + 'miljoonaa. Vuosina 1865–1900 pihan läpi kulki arviolta 400 '
+            + 'miljoonaa eläintä. Rautateiden risteys ja karjapihat antoivat '
+            + 'kaupungille lempinimen, jonka runoilija Carl Sandburg kiteytti '
+            + '1916 säkeeseen Hog Butcher for the World.',
+          selite: 'Charles Rascherin vuoden 1878 lintuperspektiivipainos '
+            + 'esittää karjapihat aitauksineen ja ratapihoineen, ja painoksen '
+            + 'omat nimikilvet merkitsevät Dexter Parkin ja Transit Parkin.',
+          lahde: 'Rascher, Charles, Wikimedia Commons (PD)',
+          wiki: 'Union Stock Yards',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Chicago River and Wrigley Building - 01.jpg',
+          selite: 'Wrigley Buildingin kellotorni ja sen takana kohoava Tribune '
+            + 'Tower seisovat Michigan Avenuen sillan pohjoispäässä, ja niiden '
+            + 'juurella lähtevät joen arkkitehtuuriristeilyt.',
+          lahde: 'NorbertNagel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Chicago on Yhdysvaltain kolmanneksi suurin kaupunki ja '
+          + 'Keskilännen solmukohta. Matkailijan Chicago mahtuu pariin '
+          + 'neliökilometriin: keskellä on Loop, jonka rajaa kohoradan '
+          + 'silmukka, idässä järven ranta puistoineen ja uimarantoineen, '
+          + 'pohjoisessa joen yli Michigan Avenue ja vesitorni. Joki halkoo '
+          + 'keskustan ja on kaupungin paras näköalapaikka: sen varrelta '
+          + 'näkee kerralla 1880-luvun tiilitalot, 1930-luvun art decon ja '
+          + 'nykyiset lasitornit. Etelään päin, seitsemän kilometrin päässä '
+          + 'keskustasta, seisoo yhä karjapihojen kiviportti, ja lounaassa '
+          + 'on se kosteikkokannas, jonka takia koko kaupunki on tällä '
+          + 'kohdalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Chicago',
+          taitto: 'opas',
+          teksti: 'Ruutukaava kahden vesistön vedenjakajalla, kaupunki joka '
+            + 'opetteli rakentamaan korkealle kun sen oli pakko aloittaa '
+            + 'alusta.',
+          nosto: 'Vuonna 1833 paikalla asui noin kaksisataa ihmistä; '
+            + 'seitsemässä vuodessa heitä oli yli kuusituhatta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainväliset lennot laskeutuvat O\'Hare '
+                + 'International Airportille, joka on kaupungin '
+                + 'luoteislaidalla noin 27 kilometriä keskustasta ja jolla on '
+                + 'kahdeksan kiitotietä — enemmän kuin millään muulla '
+                + 'lentoasemalla maailmassa. Kentältä keskustaan pääsee '
+                + 'kohoradan sinisellä linjalla. Chicagon "L" aloitti '
+                + 'liikenteen 6. kesäkuuta 1892, ja siinä on nykyään '
+                + 'kahdeksan linjaa, 146 asemaa ja runsaat 165 kilometriä '
+                + 'rataa; osa kulkee kohoradalla, osa maan tasalla, osa '
+                + 'tunnelissa. Keskustan ympäri kiertävää silmukkaa '
+                + 'kutsutaan Loopiksi, ja nimestä on tullut koko '
+                + 'kaupunginosan nimi: puhekielessä the Loop tarkoittaa yhtä '
+                + 'lailla rataa kuin sen sisään jäävää liikekeskustaa.',
+              kuva: {
+                tiedosto: 'Brown Line transition 20120325.jpg',
+                selite: 'Chicagon kohorata nousee kadun yläpuolelle '
+                  + 'teräspilareiden varaan, ja Loop-kylttiä kantava juna on '
+                  + 'matkalla keskustan silmukkaan.',
+                lahde: 'User:JeremyA, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Chicago on Illinoisin koillisnurkassa makean veden '
+                + 'Michiganjärven lounaisrannalla, sekä Keskilännen että '
+                + 'Suurten järvien aluetta. Kaupunki on rakennettu mannerten '
+                + 'vedenjakajalle: Chicago Portagen kohdalla Mississippin ja '
+                + 'Suurten järvien vesistöt tulevat niin lähelle toisiaan, '
+                + 'että kanootin saattoi kantaa yhdestä toiseen. Juuri se '
+                + 'kannas teki paikasta kauppareitin jo kauan ennen '
+                + 'eurooppalaisia, ja sen takia yhdeksän rautatietä ja '
+                + 'myöhemmin kanava löysivät saman kohdan. Järven ranta on '
+                + 'keskustan kohdalla lähes kokonaan julkista puistoa, ja '
+                + 'kaupungin ruutukaava lähtee siitä sisämaahan päin '
+                + 'tasaisena kuin viivoitin.',
+              kuva: {
+                tiedosto: 'Streeterville, Chicago, Illinois and Lake Michigan Coastline (14187500926).jpg',
+                selite: 'Michiganjärven ranta keskustan kohdalla on '
+                  + 'täytemaalle rakennettua puistoa ja venesatamia, ja '
+                  + 'aallonmurtajat suojaavat niitä avoveden aallokolta.',
+                lahde: 'Ken Lund from Reno, Nevada, USA, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: arkkitehtuuri katsotaan veneestä',
+              teksti: 'Suosituin tapa nähdä kaupunki on lähteä '
+                + 'arkkitehtuuriristeilylle Chicago-joelle. Sama joki, joka '
+                + 'kerran uhkasi tukehduttaa kaupungin sen omiin '
+                + 'jätevesiin, on nyt sen paras näköalapaikka: veneestä '
+                + 'katsottuna julkisivut avautuvat kokonaan, kun taas '
+                + 'kadulta niistä näkee vain alimmat kerrokset. Risteily '
+                + 'kulkee pääuomaa ja molempia haaroja pitkin, ja opas '
+                + 'kertoo talo talolta, kuka sen suunnitteli ja miksi. Reitin '
+                + 'varrella on sekä Chicago Schoolin 1880-luvun '
+                + 'tiilijulkisivuja että lasitorneja, jotka ovat nuorempia '
+                + 'kuin risteilyt itse.',
+              kuva: {
+                tiedosto: 'Wacker Drive and the Chicago River.jpg',
+                selite: 'Chicago-joen pääuoma kulkee Wacker Driven ja Loopin '
+                  + 'välissä, ja sen yli nousee keskustan alueella toistakymmentä '
+                  + 'avattavaa siltaa.',
+                lahde: 'Strugglebussing, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: Millennium Park',
+              teksti: 'Vuonna 2004 avattu Millennium Park nousi vanhan '
+                + 'rautatiepiha-alueen paikalle Loopin laidalle. Puisto '
+                + 'valmistui neljä vuotta myöhässä, ja alkuperäinen 150 '
+                + 'miljoonan dollarin budjetti nousi lopulta 475 miljoonaan, '
+                + 'josta kaupunki maksoi 270 miljoonaa ja loput yksityiset '
+                + 'lahjoittajat. Puiston kiiltävästä Cloud Gate -veistoksesta, '
+                + 'jonka teki brittiläis-intialainen Anish Kapoor, on tullut '
+                + 'kaupungin tunnetuin symboli. Osa havainnoitsijoista pitää '
+                + 'puistoa kaupungin tärkeimpänä hankkeena sitten vuoden 1893 '
+                + 'maailmannäyttelyn.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Chicagosta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Chicago-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on lämminkesäinen mannerilmasto neljällä selvällä '
+                + 'vuodenajalla. Heinäkuun keskilämpötila on noin 24 astetta '
+                + 'ja iltapäivisin noin 29, ja tavallisena kesänä mittari '
+                + 'nousee vähintään 32 asteeseen seitsemäntenätoista päivänä; '
+                + 'joulu–maaliskuun normaali päivälämpötila on noin kaksi '
+                + 'astetta. Ukkosia on keskimäärin 38 päivänä vuodessa. '
+                + 'Lempinimestä kannattaa tietää yksi asia: "Tuulisen '
+                + 'kaupungin" alkuperästä on neljä kilpailevaa selitystä, '
+                + 'eikä Chicago ole mittausten mukaan muita Yhdysvaltain '
+                + 'kaupunkeja tuulisempi — keskituulennopeus on 10,3 mailia '
+                + 'tunnissa, Bostonissa 12,4.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'arkkitehtuuri',
+      nimi: 'Arkkitehtuuri',
+      johdanto: 'Suurpalon tuhkasta nousi uusi tapa rakentaa: teräsrunko '
+        + 'kantoi talon painon seinien sijaan. Isoisän matkavuonna 1873 sitä '
+        + 'ei vielä ollut, vaan kaupunki muurasi kiveä ja tiiltä.',
+      tehtava: {
+        kysymys: 'Millä lempinimellä vuoden 1893 maailmannäyttelyn rakennusryhmää kutsuttiin?',
+        vaihtoehdot: [
+          'Valkoinen kaupunki',
+          'Kultainen kortteli',
+          'Marmorinen mailinpätkä',
+          'Hopeinen ranta',
+        ],
+        oikea: 0,
+        fakta: 'Nimi tuli näyttelyn uusklassisesta arkkitehtuurista, joka '
+          + 'valaistiin hehkulampuilla. Alue kattoi lähes 700 eekkeriä '
+          + 'nykyisessä Jackson Parkissa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Talo joka purettiin toisen pilvenpiirtäjän tieltä',
+          tiedosto: 'Chicago Board of Trade Building, LaSalle Street and Jackson Boulevard, Chicago, IL (52901199896).jpg',
+          teksti: 'Home Insurance Building seisoi La Sallen ja Adamsin '
+            + 'kulmassa vuoteen 1931, jolloin se purettiin Field Buildingin '
+            + 'tieltä yhtenä kuudesta puretusta talosta. Uuden rakennuksen '
+            + 'aulaan asetettiin 1932 pronssilaatta, joka nimittää Jenneyn '
+            + 'pilvenpiirtäjän todelliseksi isäksi. Chicagon lehdistö ei '
+            + 'omana aikanaan kutsunut taloa ensimmäiseksi pilvenpiirtäjäksi, '
+            + 'vaan nimitys vakiintui vasta satavuotisjuhlan tienoilla 1985. '
+            + 'Chicago Tribunen arkkitehtuurikriitikko Blair Kamin '
+            + 'kyseenalaisti tittelin 7. marraskuuta 2019 ja viittasi '
+            + 'tutkimukseen vanhemmista rautarunkoisista taloista.',
+          selite: 'LaSalle Streetin kadunpätkän sulkee etelässä Chicago Board '
+            + 'of Trade Building, 1930 valmistunut 44-kerroksinen ja '
+            + '184-metrinen art deco -torni, joka oli kaupungin korkein '
+            + 'rakennus vuoteen 1965.',
+          lahde: 'Warren LeMay from Covington, KY, United States, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Home Insurance Building',
+        },
+        {
+          otsikko: 'Ikkuna joka kantoi Chicagon nimeä',
+          tiedosto: 'Chicago - S LaSalle St - Rookery - 03.jpg',
+          teksti: 'Chicago School -arkkitehdit, muun muassa Louis Sullivan, '
+            + 'Daniel Burnham ja John Root, pukivat rungon terrakotalaattoihin '
+            + 'ja suuriin lasiruutuihin, jotka toivat valoa entistä syvemmälle '
+            + 'konttoreihin. Näin syntyi Chicago-ikkuna: kolmiosainen ikkuna, '
+            + 'jossa kiinteä keskiruutu ja kaksi avattavaa sivuruutua '
+            + 'muodostavat julkisivuun toistuvan ruudukon. Burnhamin ja Rootin '
+            + 'Rookery Building valmistui 1888 ja on Chicagon vanhin pystyssä '
+            + 'oleva korkea talo: kantavat ulkoseinät ja teräsrunko sisällä.',
+          selite: 'Rookery Buildingin lasikattoinen valopiha tuo päivänvalon '
+            + 'korttelin kokoisen talon keskelle, ja aulan sai nykyisen '
+            + 'asunsa Frank Lloyd Wrightin muutostöissä 1905–1907.',
+          lahde: 'HaSt, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Rookery Building',
+        },
+        {
+          otsikko: 'Joki jonka insinöörit käänsivät kahdesti',
+          tiedosto: '2009 Chicago River locks.jpg',
+          teksti: 'Chicago-joki laski alun perin Michiganjärveen, mutta '
+            + 'kaupungin jätevedet uhkasivat samaa järveä, josta juomavesi '
+            + 'otettiin. Insinöörit yrittivät ensin 1871 syventää '
+            + 'Illinois–Michigan-kanavaa niin, että virtaus kääntyisi '
+            + 'poispäin järvestä; se onnistui, mutta vain yhden vuodenajan '
+            + 'ajaksi. Pysyvä ratkaisu vaati uuden kanavan: Chicago Sanitary '
+            + 'and Ship Canal avattiin 2. tammikuuta 1900, ja täysi virtaus '
+            + 'saatiin käyntiin 17. tammikuuta. Kun isoisä kulki kaupungissa '
+            + '1873, ensimmäinen yritys oli mennyt ohi ja joki virtasi taas '
+            + 'vanhaan suuntaansa.',
+          selite: 'Chicago-joen suulla oleva sulku päästää veneet '
+            + 'Michiganjärvelle, ja sen takaa avautuu se järvi, johon joki '
+            + 'ennen laski.',
+          lahde: 'Nicholas Hartmann, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Chicago Sanitary and Ship Canal',
+        },
+        {
+          otsikko: 'Valkoinen kaupunki joka juhli jälleenrakennusta',
+          tiedosto: 'Looking West From Peristyle, Court of Honor and Grand Basin, 1893.jpg',
+          teksti: 'Vain 22 vuotta suurpalon jälkeen Chicago isännöi '
+            + 'Kolumbuksen maailmannäyttelyä 1893 entisellä suoalueella '
+            + 'nykyisessä Jackson Parkissa. Näyttely kattoi lähes 700 '
+            + 'eekkeriä ja lähes kaksisataa tilapäisrakennusta, ja sitä '
+            + 'kutsuttiin Valkoiseksi kaupungiksi hehkulampuin valaistun '
+            + 'uusklassisen arkkitehtuurinsa vuoksi. Kuudessa kuukaudessa '
+            + 'kävijöitä oli yli 27 miljoonaa, ja yhtenä ainoana päivänä, '
+            + '9. lokakuuta pidettynä Chicago Daynä, portista kulki 751 026 '
+            + 'ihmistä. Näyttelyä varten rakennettu maailmanpyörä oli '
+            + 'ensimmäinen laatuaan.',
+          selite: 'Virallinen valokuva katsoo Peristylen päältä länteen Court '
+            + 'of Honorin ja Grand Basinin yli, ja perällä kohoaa '
+            + 'hallintorakennuksen kupoli.',
+          lahde: 'C. D. Arnold (1844-1927); H. D. Higinbotham, Wikimedia Commons (PD)',
+          wiki: 'World\'s Columbian Exposition',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Kaupungin nimi tulee seudun alkuperäiskansojen kieleltä, '
+        + 'villisipulin nimestä. Potawatomi karkotettiin täältä 1833, mutta '
+        + 'kansan jälkeläiset elävät ja hallitsevat itseään yhä — myös '
+        + 'Chicagossa.',
+      tehtava: {
+        kysymys: 'Mitkä kolme kansaa muodostavat Kolmen tulen neuvoston?',
+        vaihtoehdot: [
+          'Odawa, Ojibwe ja Potawatomi',
+          'Miami, Sauk ja Meskwaki',
+          'Potawatomi, Miami ja Sauk',
+          'Ojibwe, Cree ja Meskwaki',
+        ],
+        oikea: 0,
+        fakta: 'Nämä kolme kansaa allekirjoittivat yhdessä Chicagon '
+          + 'sopimukset 1821 ja 1833. Miami, Sauk ja Meskwaki olivat '
+          + 'asuneet seudulla ennen Potawatomia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Neljä kansaa ennen kaupunkia',
+          tiedosto: 'Chicago Portage Waterway.jpg',
+          teksti: '1700-luvun puolivälissä aluetta asutti Potawatomi-kansa, '
+            + 'joka oli tullut seudulle Miami-, Sauk- ja Meskwaki-kansojen '
+            + 'jälkeen. Potawatomi kuului yhdessä Odawan ja Ojibwen kanssa '
+            + 'liittoumaan, jota kutsutaan Kolmen tulen neuvostoksi; nämä '
+            + 'kolme kansaa allekirjoittivat yhdessä useita sopimuksia '
+            + 'Yhdysvaltain kanssa, muun muassa kaksi Chicagon nimeä kantavaa '
+            + 'sopimusta vuosina 1821 ja 1833. Kaupungin nimi tulee '
+            + 'Miami–Illinois-kielen sanasta šikaakwa, villisipulista, jota '
+            + 'kasvoi juuri näillä kosteikoilla.',
+          selite: 'Chicago Portage National Historic Site Lyonsissa säilyttää '
+            + 'sitä kosteikkokannasta, jonka yli kanootit kannettiin Suurten '
+            + 'järvien ja Mississippin vesistöjen välillä.',
+          lahde: 'Rickdrew, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Potawatomi',
+        },
+        {
+          otsikko: 'Linnake joka tuhoutui kahdesti',
+          tiedosto: 'Fort Dearborn 1831 Kinzie.jpg',
+          teksti: 'Yhdysvaltain armeija rakensi Fort Dearbornin Chicago-joen '
+            + 'suulle 1803. Vuoden 1812 sodan aikana varuskunnan '
+            + 'evakuointikolonnaa vastaan hyökkäsi noin viisisataa '
+            + 'Potawatomi-soturia, ja hyökkäyksessä kuoli suurin osa '
+            + 'siviileistä sekä 54 sotilasta. Päällikkö Mucktypoke eli Musta '
+            + 'peltopyy oli neuvonut hyökkäystä vastaan etukäteen ja pelasti '
+            + 'myöhemmin osan vangeista. Linnake rakennettiin uudelleen '
+            + 'samalle paikalle 1816 ja poistettiin käytöstä 1837; sen '
+            + 'viimeiset jäänteet tuhoutuivat suurpalossa 1871.',
+          selite: 'Toinen Fort Dearborn seisoi Chicago-joen suulla vuonna '
+            + '1831, jolloin sen ympärille oli kasvanut vasta kourallinen '
+            + 'taloja rannalle.',
+          lahde: 'Napoleon Sarony, Wikimedia Commons (PD)',
+          wiki: 'Fort Dearborn',
+        },
+        {
+          otsikko: 'Sopimus joka lähetti kansan Mississipin taakse',
+          tiedosto: 'Potawatomi Trail of Death Marker in Logansport, Indiana.jpg',
+          teksti: 'Vuoden 1833 Chicagon sopimuksessa Potawatomi, Odawa ja '
+            + 'Ojibwe luovuttivat viimeiset maansa Illinoisin alueelta '
+            + 'Yhdysvalloille. Vastineeksi luvattiin uusia maita, vuosirahoja '
+            + 'ja tarvikkeita, mutta ne saapuivat usein myöhässä tai '
+            + 'vähennettyinä. Potawatomi siirrettiin pakolla Mississippin '
+            + 'länsipuolelle, ensin Kansasiin ja Nebraskaan ja lopulta '
+            + 'Oklahomaan. Indianan Potawatomin siirtoa 1838 seurasi '
+            + 'katolinen pappi Benjamin Petit, joka piti matkasta '
+            + 'päiväkirjaa; se julkaistiin vasta 1941.',
+          selite: 'Logansportissa Indianassa oleva kivi merkitsee vuoden 1838 '
+            + 'leiripaikkaa sillä reitillä, jota myöten Indianan Potawatomi '
+            + 'siirrettiin länteen.',
+          lahde: 'Emergencyninja, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Treaty of Chicago',
+        },
+        {
+          otsikko: 'Kaupunki jossa yli viisikymmentä heimoa kokoontuu yhä',
+          tiedosto: 'American-indian-center.jpg',
+          teksti: 'American Indian Center perustettiin Chicagoon '
+            + '7. syyskuuta 1953, ja se on Yhdysvaltain vanhin kaupunkilainen '
+            + 'intiaanikeskus. Se syntyi vastauksena liittovaltion '
+            + 'politiikkaan, joka siirsi alkuperäiskansojen jäseniä ympäri '
+            + 'maata kaupunkeihin. Keskus palvelee yli viidenkymmenen heimon '
+            + 'jäseniä, ja sen pisimpään jatkunut ohjelma on vuosittainen '
+            + 'pow-wow. Vuonna 2024 sisäministeriö asetti 130 eekkeriä maata '
+            + 'DeKalb Countyssa luottamukseen Prairie Band Potawatomi '
+            + 'Nationille, josta tuli ensimmäinen liittovaltion tunnustama '
+            + 'heimokansakunta Illinoisissa sitten karkotusten.',
+          selite: 'American Indian Centerin salin katonrajassa riippuu '
+            + 'heimojen lippuja ympäri maata, ja seinillä on keskuksen omia '
+            + 'maalauksia.',
+          lahde: 'Eric Allix Rogers, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'American Indian Center',
+        },
+      ],
+    },
+  ],
 };
