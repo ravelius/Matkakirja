@@ -25275,4 +25275,543 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * BRASILIA (BRA) — Etelä-Amerikan ensimmäinen maalehti.
+   *
+   * Aiheet ovat Fablen toimeksiannon mukaiset (historia, luonto, tiede,
+   * musiikki, ruoka) ja seuraavat USA:n mallia. Aineisto on
+   * docs/mantereet-tyoaineisto/faktapohja-brasilia.md ja
+   * tarkistus-brasilia.md yhdessä luettuna, ja jokainen tekstiin
+   * päätynyt luku on tarkistettu vielä kerran en-Wikipedian
+   * raakatekstistä 23.8.2026.
+   *
+   * TARKISTUKSEN KORJAUKSET, JOTKA TEHTIIN:
+   *  - Kumipuun siementen salakuljetusvuosi (L2). Faktapohja siteerasi
+   *    vuodelle 1876 artikkelia "Hevea brasiliensis", joka itse sanoo
+   *    1875. Teksti nojaa nyt artikkeleihin "Amazon rubber cycle" ja
+   *    "Henry Wickham (explorer)" (siemenet perillä Kew'ssä 15.6.1876,
+   *    itäneitä n. 2 700) eikä mainitse vuotta lainkaan: se kertoo
+   *    "kolme vuotta myöhemmin", jolloin ristiriita ei siirry peliin.
+   *  - Alkuperäiskansojen 2022-luku (L4). Käytössä on JOHDONMUKAISESTI
+   *    väestönlaskennan väri/rotu-kysymyksen luku 1 227 642, joka on
+   *    vertailukelpoinen vuoden 1872 luvun 386 955 kanssa samasta
+   *    taulukosta. Artikkelin toinen luku 1 694 836 (johon 391 kansaa
+   *    ja 295 kieltä liittyvät) on ERI kysymyksestä; teksti sanoo siksi
+   *    "samaan kysymykseen vastasi", eikä lukuja lasketa yhteen.
+   *  - Kansallismuseo (T4). Faktapohja väitti museon sijainneen São
+   *    Cristóvãon palatsissa jo Pedro II:n aikana. En-Wikipedia
+   *    ("National Museum of Brazil") sanoo toisin: palatsi oli
+   *    keisariperheen asunto, ja museo muutti sinne vasta 1892
+   *    monarkian kaaduttua. Teksti kertoo asian oikein. Tulipalon
+   *    päivämäärä 2.9.2018 tarkistettiin samasta artikkelista
+   *    (faktapohjan avoin kysymys F).
+   *  - Feijoadan alkuperä (R2). En-Wikipedia kirjoittaa auki, että
+   *    tutumpi "orjien ylijäämäruoka" -tarina on kiistanalainen ja että
+   *    padalla on portugalilainen esimuoto. Ristiriita kerrotaan
+   *    lukijalle sellaisenaan reseptin ohjeen mukaan.
+   *  - Paraguayn sota (H3) kerrotaan tapahtumana ilman taistelukuvauksia,
+   *    ja uhriluku annetaan haarukkana 150 000–500 000, koska
+   *    en-Wikipedia itse sanoo sen kiistanalaiseksi.
+   *  - Darwinin gaúcho-sitaatista (R4) käytetään vain sen
+   *    ensimmäinen puolisko; jälkiosan puukkotappelukuvaus jätettiin
+   *    pois Perustuslain väkivaltalinjauksen mukaisesti.
+   *
+   * MINITEHTÄVIÄ on viisi, yksi joka aiheella (toimeksianto). Jokaisen
+   * vastaus löytyy saman sivun nostotekstistä eikä vuoda otsikkoon tai
+   * johdantoon (tools/tarkista-maa.mjs). Törmäystarkistus
+   * southamerica-questions.js:ää vasten tehtiin: siellä on jo kysymys
+   * terra pretasta (Santarém) ja Manausin kumikauden oopperatalosta,
+   * joten minitehtävät kysyvät muuta.
+   *
+   * KUVAT: 20 nostokuvaa, jokainen haettu Commonsin rajapinnasta,
+   * lisenssi ja tekijä extmetadatasta, leveys ≥ 1200 px ja jokainen
+   * katsottu silmin 900 px:n esikatselussa. Painokuvissa (vuoden 1871
+   * juhlalitografia, Revista Illustradan kansi 1880, vuoden 1851
+   * kaiverrus) näkyy julkaisijan oma teksti ja siementen kuvassa
+   * mittajana — reseptin sallima poikkeus, joka kerrotaan
+   * kuvatekstissä. Kaksi kuvaa hylättiin merkintöjen takia: Rio
+   * Brancon lain alkuperäissivulla on Arquivo Nacionalin vesileima ja
+   * Marc Ferrezin kahvitilakuvissa kuvaajan oma painosigneeraus.
+   * Pedro II esiintyy kolmessa kuvassa (maalaus 1872, valokuva 1865,
+   * Bradyn studiomuotokuva) — perusteltu toisto, koska hän on sekä
+   * historian että tieteen sivun keskushenkilö.
+   */
+  BRA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 Brasilia on Amerikan mantereen ainoa '
+          + 'keisarikunta, ja orjuus on yhä laillista — mutta sen '
+          + 'purkaminen on jo alkanut.',
+      nostot: [
+        {
+          otsikko: 'Viisivuotias jäi valtaistuimelle',
+          aika: '1831–1873',
+          tiedosto: 'Pedro Américo - D. Pedro II na abertura da Assembléia Geral.jpg',
+          teksti: 'Kun Pedro I luopui kruunusta 1831 ja purjehti takaisin '
+              + 'Portugaliin, Brasilian valtaistuimelle jäi hänen '
+              + 'viisivuotias poikansa. Täysivaltaiseksi hallitsijaksi '
+              + 'Pedro II julistettiin vasta 1840, ja vuoteen 1873 mennessä '
+              + 'hän oli hallinnut yli kolmekymmentä vuotta ainoaa '
+              + 'monarkiaa, joka Amerikan mantereella oli — ympärillä '
+              + 'pelkkiä tasavaltoja. Keisari piti itseään ennen kaikkea '
+              + 'oppineena: hän luki kymmentä kieltä latinasta arabiaan ja '
+              + 'tupiin, ja hänen palatsissaan São Cristóvãossa oli kolme '
+              + 'kirjastoa ja yli 60 000 kirjaa.',
+          selite: 'Pedro Américon maalaus vuodelta 1872 esittää Pedro II:n '
+            + 'keisarillisessa asussaan yleiskokouksen avajaisissa.',
+          lahde: 'Pedro Américo, Wikimedia Commons (PD)',
+          wiki: 'Pedro II (Brasilia)',
+        },
+        {
+          otsikko: 'Vapaa kohtu, ehdollinen lapsuus',
+          aika: '1871',
+          tiedosto: 'Gabinete Rio Branco (1871-1875).jpg',
+          teksti: 'Syyskuun 28. päivänä 1871, puolitoista vuotta ennen '
+              + 'isoisän matkaa, Brasilian yleiskokous hyväksyi Rio Brancon '
+              + 'lain: tästä eteenpäin orjuutetuille äideille syntyvät '
+              + 'lapset olivat vapaita. Laissa oli aukko, joka söi '
+              + 'lupauksen. Vapaana syntynyt lapsi oli silti velvollinen '
+              + 'palvelemaan äitinsä omistajaa 21 vuoden ikään asti, eikä '
+              + 'laki vapauttanut yhtäkään jo elävää orjaa: yli miljoona '
+              + 'ihmistä jäi orjuuteen. Kokonaan orjuus kiellettiin vasta '
+              + 'Kultalailla 13. toukokuuta 1888.',
+          selite: 'Juhlalitografia ylistää ministeriötä, joka sääti Rio '
+            + 'Brancon lain 1871; painoksen oma otsikko ja ministerien '
+            + 'nimiluettelo ovat kuvan alalaidassa.',
+          lahde: 'Um Historiador, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vapaan kohdun laki',
+        },
+        {
+          otsikko: 'Sota, joka käänsi upseerien mielet',
+          aika: '1864–1870',
+          tiedosto: 'Brazilian army in Paraguay.jpg',
+          teksti: 'Paraguayn sota päättyi keväällä 1870, kolme vuotta ennen '
+              + 'isoisän matkaa. Se oli mantereen verisin sota, jonka '
+              + 'uhriluvusta historiantutkijat eivät ole päässeet '
+              + 'yksimielisyyteen: arviot vaihtelevat 150 000:sta '
+              + '500 000:een kuolleeseen. Brasilia lähetti rintamalle noin '
+              + '146 000 miestä, ja heidän joukossaan oli 8 570 orjuutettua '
+              + 'miestä, jotka vapautettiin palvelukseen lähetettäessä. '
+              + 'Upseerit, jotka olivat taistelleet heidän rinnallaan, '
+              + 'alkoivat epäillä koko järjestelmää eivätkä enää halunneet '
+              + 'jäljittää karanneita orjia armeijan käskystä.',
+          selite: 'Brasilian armeija kokoontuneena Paraguayssa sodan '
+            + 'loppuvaiheessa; rintamalle lähetettiin kaikkiaan noin '
+            + '146 000 miestä.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Paraguayn sota',
+        },
+        {
+          otsikko: 'Itsenäisyys ilman pitkää sotaa',
+          aika: '1822',
+          tiedosto: 'François-René Moreaux – Proclamação da Independência (1844).jpg',
+          teksti: 'Syyskuun 7. päivänä 1822 Portugalin prinssiregentti Pedro '
+              + 'julisti Ipiranga-puron rannalla São Paulon liepeillä '
+              + 'Brasilian irti emämaasta. Toisin kuin Espanjan '
+              + 'siirtomaissa, joissa itsenäisyys vaati vuosikymmenten '
+              + 'sodat ja joissa valtakunta hajosi tusinaksi tasavallaksi, '
+              + 'Brasilia irtautui verrattain vähäisin taisteluin ja pysyi '
+              + 'yhtenä valtiona — ja sen hallitsijaksi tuli emämaan oman '
+              + 'kuningashuoneen prinssi, keisari Pedro I. Vuonna 1873 '
+              + 'tästä on kulunut 51 vuotta.',
+          selite: 'François-René Moreaux’n maalaus vuodelta 1844 esittää '
+            + 'Brasilian itsenäisyyden julistamista Ipiranga-purolla '
+            + '7. syyskuuta 1822.',
+          lahde: 'François-René Moreaux, Wikimedia Commons (PD)',
+          wiki: 'Brasilian itsenäisyys',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Brasiliassa säädettiin laki, jonka mukaan '
+            + 'orjuutetuille äideille syntyvät lapset olivat vapaita?',
+        vaihtoehdot: ['1822', '1850', '1871', '1888'],
+        oikea: 2,
+        fakta: 'Laki koski vain vastedes syntyviä lapsia; kokonaan orjuus '
+            + 'lakkautettiin vasta 17 vuotta myöhemmin.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Joka kymmenes maailman tunnettu eliölaji elää Amazonilla, '
+          + 'eikä metsä ole koskaan ollut tyhjä erämaa.',
+      nostot: [
+        {
+          otsikko: 'Metsä, jonka koko ei mahdu mieleen',
+          tiedosto: 'Amazon CIAT (2).jpg',
+          teksti: 'Amazonin altaan seitsemästä miljoonasta neliökilometristä '
+              + 'kuusi miljoonaa on sademetsän peitossa — yli puolet koko '
+              + 'maailman jäljellä olevasta sademetsästä. Siitä 60 '
+              + 'prosenttia on Brasilian puolella, 13 prosenttia Perussa ja '
+              + '10 prosenttia Kolumbiassa. Puita arvioidaan olevan 390 '
+              + 'miljardia noin 16 000 lajissa, hyönteislajeja 2,5 '
+              + 'miljoonaa ja lintu- ja nisäkäslajeja parisen tuhatta. '
+              + 'Yhdellä hehtaarilla elää noin miljardi selkärangatonta. '
+              + 'Alue ulottuu yhdeksän valtion alueelle, ja siellä on '
+              + '3 344 tunnustettua alkuperäiskansojen aluetta.',
+          selite: 'Amazonin sademetsä ja joki Manausin lähellä; sademetsää '
+            + 'on altaan seitsemästä miljoonasta neliökilometristä kuusi '
+            + 'miljoonaa.',
+          lahde: 'Neil Palmer/CIAT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Amazonin sademetsä',
+        },
+        {
+          otsikko: 'Kaksitoista tainta, jotka eivät selvinneet',
+          aika: '1873',
+          tiedosto: 'Hevea semillas2.jpg',
+          teksti: 'Täsmälleen isoisän matkavuonna 1873 Lontoon Kew Gardens '
+              + 'yritti ensi kertaa kasvattaa Amazonin kumipuuta Brasilian '
+              + 'ulkopuolella. Kaksitoista tainta itikin, mutta ne '
+              + 'lähetettiin Intiaan ja kuolivat matkalla. Kolme vuotta '
+              + 'myöhemmin englantilainen Henry Wickham vei Santarémista '
+              + '70 000 siementä samaan puutarhaan; niistä iti noin 2 700, '
+              + 'ja taimet päätyivät Ceyloniin ja Singaporeen. Kumin vienti '
+              + 'Amazonilta oli noussut 2 100 tonnista matkalla kohti '
+              + 'kymmentätuhatta — suuri kumibuumi oli vasta alkamassa.',
+          selite: 'Kumipuun siemeniä, joita Henry Wickham vei Kew Gardensiin '
+            + '70 000 kappaletta; kuvan mittajana kertoo niiden koon.',
+          lahde: 'User:Luis Fernández García, Wikimedia Commons '
+            + '(CC BY-SA 2.5 es)',
+          wiki: 'Kumipuu',
+        },
+        {
+          otsikko: 'Musta multa on ihmisen tekoa',
+          tiedosto: 'Cultura Santarém - Cerâmicas MN 01.jpg',
+          teksti: 'Amazonilla on laajoja alueita tummaa, poikkeuksellisen '
+              + 'viljavaa maata, jota kutsutaan nimellä terra preta. Sitä '
+              + 'ei syntynyt itsestään: ihmiset tekivät sitä vuosien 450 '
+              + 'eaa. ja 950 jaa. välillä sekoittamalla köyhään '
+              + 'sademetsämaahan hiiltä, luuta, ruukunsirpaleita ja '
+              + 'kompostia. Hiili säilyy maassa tuhansia vuosia ja pitää '
+              + 'ravinteet paikallaan. Kuinka laajalti sitä on, siitä '
+              + 'tutkijat kiistelevät: arviot vaihtelevat 0,1 prosentista '
+              + 'yli kymmeneen prosenttiin metsän alasta. Xingu-joen '
+              + 'latvoilta on löytynyt Kuhikugu, parinkymmenen '
+              + 'muinaisyhdyskunnan verkosto.',
+          selite: 'Santarémin kulttuurin keramiikkaa Brasilian '
+            + 'kansallismuseon kokoelmissa; ruukunsirpaleet ovat yksi '
+            + 'terra pretan aineksista.',
+          lahde: 'Dornicke, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Terra preta',
+        },
+        {
+          otsikko: 'Kolmesataayhdeksänkymmentäyksi kansaa',
+          tiedosto: 'Parque Indígena do Xingu.jpg',
+          teksti: 'Brasilian ensimmäisessä väestönlaskennassa, joka laski '
+              + 'myös alkuperäiskansat — vuonna 1872, vuosi ennen isoisän '
+              + 'matkaa — heitä kirjattiin 386 955 eli 3,9 prosenttia '
+              + 'väestöstä. Vuoden 2022 laskennassa samaan kysymykseen '
+              + 'vastasi 1 227 642 ihmistä. Kansoja on 391 ja kieliä 295. '
+              + 'Vuoden 1988 perustuslaki tunnustaa kansojen oikeuden omaan '
+              + 'elämäntapaansa ja perinteisiin maihinsa, ja ensimmäinen '
+              + 'suojelualue, Xingun kansallispuisto, perustettiin jo 1961. '
+              + 'Kyse ei ole menneisyydestä vaan tämän päivän Brasiliasta.',
+          selite: 'Ipatsen kylä Xingun kansallispuistossa on Kuikuro-kansan '
+            + 'pääyhteisö.',
+          lahde: 'Pedro Biondi/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Brasilian alkuperäiskansat',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Kew Gardensissa yritettiin ensimmäisen kerran '
+            + 'kasvattaa Amazonin kumipuuta Brasilian ulkopuolella?',
+        vaihtoehdot: ['1855', '1873', '1879', '1896'],
+        oikea: 1,
+        fakta: 'Taimet itivät, mutta kuolivat matkalla Intiaan — vasta '
+            + 'seuraava yritys onnistui.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Brasilian tiedehistoria 1800-luvulla kulkee melkein aina '
+          + 'saman miehen kautta: keisarin, joka olisi mieluummin ollut '
+          + 'opettaja.',
+      nostot: [
+        {
+          otsikko: 'Maan ensimmäinen valokuvaaja oli keisari',
+          aika: '1840',
+          tiedosto: 'Pedro II of Brazil in imperial uniform 1865.jpg',
+          teksti: 'Maaliskuussa 1840, samana vuonna kun hänet julistettiin '
+              + 'täysivaltaiseksi hallitsijaksi, nuori Pedro II hankki '
+              + 'daguerrotypiakameran ja tuli Brasilian ensimmäiseksi '
+              + 'valokuvaajaksi. Hän rakennutti São Cristóvãon palatsiin '
+              + 'oman valokuvauslaboratorion, toisen kemian ja fysiikan '
+              + 'kokeille sekä tähtitieteellisen observatorion. Vuoteen '
+              + '1873 mennessä hän oli harrastanut valokuvausta yli '
+              + 'kolmekymmentä vuotta, ja häntä itseään kuvattiin niin '
+              + 'usein, että hänestä tuli yksi 1800-luvun kuvatuimmista '
+              + 'hallitsijoista.',
+          selite: 'Revert Henrique Klumbin valokuva vuodelta 1865 esittää '
+            + 'Pedro II:n, joka oli itse Brasilian ensimmäinen '
+            + 'valokuvaaja.',
+          lahde: 'Revert Henrique Klumb, Wikimedia Commons (PD)',
+          wiki: 'Daguerrotypia',
+        },
+        {
+          otsikko: 'Kalastusretki, joka toi filosofin Amazonille',
+          aika: '1865–1866',
+          tiedosto: 'Group portrait of Thayer Expedition assistants and volunteers.jpg',
+          teksti: 'Huhtikuun 2. päivänä 1865, viikko ennen Yhdysvaltain '
+              + 'sisällissodan päättymistä, sveitsiläissyntyinen '
+              + 'luonnontieteilijä Louis Agassiz purjehti New Yorkista '
+              + 'Rioon johtamaan retkikuntaa, jonka bostonilainen liikemies '
+              + 'Nathaniel Thayer maksoi. Puolessatoista vuodessa ryhmä '
+              + 'keräsi kymmeniä tuhansia kalanäytteitä Amazonilta '
+              + 'Kolumbian ja Perun rajoille asti. Mukana oli kuusi nuorta '
+              + 'vapaaehtoista, joista yksi oli 23-vuotias William James — '
+              + 'tuleva filosofi ja psykologian uranuurtaja, tuolloin vasta '
+              + 'oppipoika kalaverkko kädessään.',
+          selite: 'Thayer-retkikunnan avustajat ja vapaaehtoiset; lattialla '
+            + 'vasemmalla istuu 23-vuotias William James.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'William James',
+        },
+        {
+          otsikko: 'Kolmas hallitsija akatemian luettelossa',
+          aika: '1875',
+          tiedosto: 'Pedro II of Brazil - Brady-Handy.jpg',
+          teksti: 'Vuonna 1875 Ranskan tiedeakatemia valitsi Pedro II:n '
+              + 'jäsenekseen. Valtionpäämiehistä sama kunnia oli ennen '
+              + 'häntä osunut vain kahdelle: Pietari Suurelle ja Napoleon '
+              + 'Bonapartelle. Keisari kuului myös Lontoon Royal Societyyn '
+              + 'ja Venäjän tiedeakatemiaan ja kävi kirjeenvaihtoa muun '
+              + 'muassa Louis Pasteurin, Alexander Graham Bellin ja Richard '
+              + 'Wagnerin kanssa. Omista varoistaan hän tuki '
+              + 'Pasteur-instituutin perustamista ja Wagnerin oopperatalon '
+              + 'rakentamista Bayreuthiin.',
+          selite: 'Pedro II siviiliasussa kuvattuna; keisari oli Ranskan '
+            + 'tiedeakatemian jäsen vuodesta 1875.',
+          lahde: 'Mathew Benjamin Brady / Levin Corbin Handy, Wikimedia '
+            + 'Commons (PD)',
+          wiki: 'Ranskan tiedeakatemia',
+        },
+        {
+          otsikko: 'Museo, joka alkoi lintujen talona',
+          aika: '1818',
+          tiedosto: 'Palace of sao cristovao by stahl 1862.jpg',
+          teksti: 'Kuningas João VI perusti 1818 Rioon Kuninkaallisen '
+              + 'museon, jonka ensimmäiset kokoelmat olivat kasveja ja '
+              + 'lintuja — kaupunkilaiset kutsuivat sitä Lintujen taloksi. '
+              + 'Pedro II teki siitä tutkimuslaitoksen: hän kutsui maahan '
+              + 'ulkomaisia tiedemiehiä, kuten saksalaisen kasvitieteilijän '
+              + 'Ludwig Riedelin ja amerikkalaisen geologin Charles '
+              + 'Frederick Harttin, ja lahjoitti museolle omia esineitään. '
+              + 'Museo muutti 1892 tyhjilleen jääneeseen keisarilliseen '
+              + 'palatsiin São Cristóvãossa, ja siellä se paloi '
+              + '2. syyskuuta 2018.',
+          selite: 'São Cristóvãon palatsi vuonna 1862 oli keisariperheen '
+            + 'koti, ja Brasilian kansallismuseo muutti siihen 1892.',
+          lahde: 'Augusto Stahl (1828–1877), Wikimedia Commons (PD)',
+          wiki: 'Brasilian kansallismuseo',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka Louis Agassizin retkikunnan nuori vapaaehtoinen '
+            + 'tuli myöhemmin kuuluisaksi filosofina ja psykologina?',
+        vaihtoehdot: [
+          'Charles Darwin',
+          'William James',
+          'Henry Wickham',
+          'Ludwig Riedel',
+        ],
+        oikea: 1,
+        fakta: 'Hän oli retkikunnan lähtiessä 23-vuotias ja keräsi '
+            + 'kalanäytteitä Amazonilla.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Brasilian musiikki syntyi risteyksessä, jossa Länsi-Afrikan '
+          + 'rytmit, Portugalin salonkilaulut ja kadun omat äänet '
+          + 'sekoittuivat toisiinsa.',
+      nostot: [
+        {
+          otsikko: 'Tyylilaji, jonka nimi tarkoittaa itkua',
+          aika: '1870',
+          tiedosto: 'Capa da Revista Illustrada, n.º 202 (1880).png',
+          teksti: 'Vuonna 1870 huilisti Joaquim Callado kokosi Rio de '
+              + 'Janeirossa yhtyeen, jonka nimeksi tuli Choro Carioca: '
+              + 'eebenpuinen huilu, kaksi kitaraa ja cavaquinho. Yhtye '
+              + 'soitti eurooppalaisia tanssikappaleita — polkkia, '
+              + 'valsseja, mazurkkoja — mutta afrobrasilialaisin rytmein ja '
+              + 'runsain improvisaatioin, ja tästä soittotavasta kasvoi '
+              + 'oma lajinsa. Nimen alkuperästä kiistellään yhä: se voi '
+              + 'tulla portugalin itkemistä tarkoittavasta sanasta tai '
+              + 'latinan kuoroa tarkoittavasta sanasta. Musiikki itse on '
+              + 'useimmiten nopeaa ja iloista.',
+          selite: 'Revista Illustrada -lehden kansi vuodelta 1880 esittää '
+            + 'huilisti Joaquim Calladon, jonka yhtyeestä choro sai '
+            + 'alkunsa; kannessa on lehden oma nimiö ja hintaluettelo.',
+          lahde: 'Angelo Agostini, Wikimedia Commons (PD)',
+          wiki: 'Choro',
+        },
+        {
+          otsikko: 'Nainen, joka käveli miesten piiriin',
+          aika: '1877',
+          tiedosto: 'Chiquinha Gonzaga portrait 1877.jpg',
+          teksti: 'Chiquinha Gonzaga naitettiin kuusitoistavuotiaana isänsä '
+              + 'valitsemalle laivaston upseerille. Hän jätti miehensä ja '
+              + 'pyysi avioeroa, mikä oli 1860-luvun Brasiliassa skandaali: '
+              + 'isä julisti hänet kuolleeksi ja nimeltä mainitsemattomaksi. '
+              + 'Gonzaga elätti itsensä ja poikansa pianotunneilla ja alkoi '
+              + 'käydä choro-illoissa, jotka olivat siihen asti olleet '
+              + 'miesten juttu — hänestä tuli ensimmäinen nainen Calladon '
+              + 'yhtyeessä. Vuonna 1877 hän improvisoi pianolla kesken '
+              + 'illan polkan Atraente, ensimmäisen suuren hittinsä. '
+              + 'Myöhemmin hänestä tuli Brasilian ensimmäinen '
+              + 'naiskapellimestari.',
+          selite: 'Chiquinha Gonzagan muotokuva noin vuodelta 1877, '
+            + 'myöhemmin väritettynä; samana vuonna hän sävelsi polkan '
+            + 'Atraente.',
+          lahde: 'Edinha Diniz, Wikimedia Commons (PD)',
+          wiki: 'Chiquinha Gonzaga',
+        },
+        {
+          otsikko: 'Peli, joka piiloutui musiikkiin',
+          tiedosto: 'Rugendasroda.jpg',
+          teksti: 'Capoeira syntyi orjuutettujen afrikkalaisten keskuudessa, '
+              + 'ja sen juuret johtavat Angolan engolo-taistelutaitoon. '
+              + 'Virallisiin papereihin se päätyi ensi kerran 1789 '
+              + 'vakavimpana rikoksena, ja rikoslaissa se pysyi vielä '
+              + 'vuoden 1890 jälkeenkin. Harjoittajat eivät puhu '
+              + 'taistelemisesta vaan pelaamisesta: liikkeet kulkevat '
+              + 'musiikin tahdissa, ja perusaskel ginga heiluu puolelta '
+              + 'toiselle kuin tanssissa. Piiriä eli rodaa johtaa berimbau, '
+              + 'yksijousinen soitin, jonka rytmi kertoo millaista peliä '
+              + 'pelataan. Unesco otti capoeira-piirin '
+              + 'kulttuuriperintöluetteloonsa 2014.',
+          selite: 'Johann Moritz Rugendasin litografia 1830-luvulta esittää '
+            + 'capoeiran pelaamista Brasiliassa.',
+          lahde: 'Johann Moritz Rugendas, Wikimedia Commons (PD)',
+          wiki: 'Capoeira',
+        },
+        {
+          otsikko: 'Lissabonin salonkien suosikki Riosta',
+          tiedosto: 'O Beneficiado. Domingos Caldas Barboza (Lereno Selinuntino). Fallecido em 1800.jpg',
+          teksti: 'Domingos Caldas Barbosa syntyi Rio de Janeirossa noin '
+              + '1739 portugalilaisen isän ja vapautetun angolalaisen '
+              + 'naisen poikana, ja hänestä tuli 1700-luvun lopun '
+              + 'Lissabonin hienoston suosituin laulaja-runoilija. Hän '
+              + 'säesti itseään violalla ja improvisoi laulunsa; '
+              + 'syntyperäänsä hänelle muistutettiin alentavalla '
+              + 'lisänimellä violansoittaja. Hänen modinha-laulunsa '
+              + 'julkaistiin kirjana vasta 1825, neljännesvuosisata hänen '
+              + 'kuolemansa jälkeen. Modinha ja afrikkalaisperäinen lundu '
+              + 'ovat Brasilian populaarimusiikin vanhimmat juuret.',
+          selite: 'Vuoden 1851 aikakauskirjaan tehty kaiverrus esittää '
+            + 'Domingos Caldas Barbosan, modinha-laulun luojan.',
+          lahde: 'Tuntematon kaivertaja, Wikimedia Commons (PD)',
+          wiki: 'Modinha',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä yksijousinen soitin johtaa capoeira-piiriä eli rodaa?',
+        vaihtoehdot: ['Cavaquinho', 'Berimbau', 'Viola', 'Atabaque'],
+        oikea: 1,
+        fakta: 'Sen rytmi kertoo pelaajille, millaista peliä piirissä '
+            + 'pelataan.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Brasilian ruokapöytä on kolmen mantereen risteys: '
+          + 'alkuperäiskansojen maniokki, Länsi-Afrikan pavut ja Euroopan '
+          + 'padat samalla aterialla.',
+      nostot: [
+        {
+          otsikko: 'Siemenet, joita ei olisi saanut viedä',
+          aika: '1727',
+          tiedosto: 'Fazenda Santa Genebra São Paulo 1880.jpg',
+          teksti: 'Legendan mukaan upseeri Francisco de Melo Palheta '
+              + 'lähetettiin 1727 Ranskan Guayanaan sovittelemaan '
+              + 'rajakiistaa, mutta hänen todellinen tehtävänsä oli hankkia '
+              + 'kahvinsiemeniä, joita Ranska varjeli tarkasti. Palheta '
+              + 'viehätti kuvernöörin vaimon, ja tämä ojensi hänelle '
+              + 'lähtiessä kukkakimpun, jonka sisään siemenet oli kätketty. '
+              + '1840-luvulla Brasilia tuotti jo 40 prosenttia maailman '
+              + 'kahvista. Hinta maksettiin toisaalla: 1800-luvun '
+              + 'alkupuoliskolla plantaaseille tuotiin puolitoista '
+              + 'miljoonaa orjuutettua ihmistä.',
+          selite: 'Santa Genebran kahvitila São Paulon provinssissa vuonna '
+            + '1880; kahvipavut kuivattiin laajoilla terasseilla '
+            + 'päärakennuksen edessä.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Kahvi',
+        },
+        {
+          otsikko: 'Lauantain papupata ja sen kaksi tarinaa',
+          tiedosto: 'Feijoada à brasileira 1.jpg',
+          teksti: 'Feijoada on mustien papujen ja sianlihan pata, jota '
+              + 'syödään Brasiliassa perinteisesti lauantaisin. Sen '
+              + 'alkuperästä kerrotaan kaksi tarinaa. Tutumman mukaan '
+              + 'orjuutetut afrikkalaiset kokosivat sen siitä, mitä '
+              + 'keittiöstä jäi yli. Ruokahistorioitsijat huomauttavat, '
+              + 'että Pohjois-Portugalissa on syöty samanlaista papupataa '
+              + 'jo ennen sitä ja että sukua ovat myös ranskalainen '
+              + 'cassoulet ja espanjalainen cocido — mustat pavut sen '
+              + 'sijaan ovat amerikkalaisia. Yhtä mieltä ollaan siitä, että '
+              + 'nykyinen ruoka sekoittaa portugalilaisen, afrikkalaisen ja '
+              + 'alkuperäiskansojen keittiöt.',
+          selite: 'Feijoada on mustien papujen ja sianlihan pata, jota '
+            + 'syödään Brasiliassa perinteisesti lauantaisin.',
+          lahde: 'Melsj, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Feijoada',
+        },
+        {
+          otsikko: 'Juuri, joka pitää osata käsitellä',
+          tiedosto: 'Farofa brazil.jpg',
+          teksti: 'Maniokki kesyyntyi Länsi-Keski-Brasiliassa arviolta '
+              + 'kymmenentuhatta vuotta sitten, ja siitä tuli '
+              + 'alkuperäiskansojen tärkein tärkkelyskasvi. Kasvissa on '
+              + 'syanidia tuottavia yhdisteitä: makeissa lajikkeissa niitä '
+              + 'voi olla parikymmentä milligrammaa kilossa, katkerissa '
+              + 'jopa tuhat. Siksi juuri on liotettava, puristettava ja '
+              + 'paahdettava huolella ennen syömistä — taito, joka opittiin '
+              + 'sukupolvien kokemuksella. Karkeaksi paahdettu '
+              + 'maniokkijauho farofa on yhä brasilialaisen pöydän '
+              + 'vakioaines. Portugalilaiset veivät kasvin 1500-luvulla '
+              + 'Afrikkaan, jossa siitä tuli perusravintoa.',
+          selite: 'Farofa on maniokkijuuresta raastettu, puristettu ja '
+            + 'paahdettu karkea jauho.',
+          lahde: 'User Carioca, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Maniokki',
+        },
+        {
+          otsikko: 'Aroilta hiilloksen ääreen',
+          tiedosto: 'Costela no Fogo.JPG',
+          teksti: 'Etelä-Brasilian, Uruguayn ja Argentiinan pampalla eli '
+              + '1600-luvulta lähtien oma yhteisönsä: ratsain liikkuvat '
+              + 'gaúchot, jotka pyydystivät villejä nautoja ja hevosia, '
+              + 'myivät nahat ja söivät lihan. Sana oli aluksi haukkumanimi, '
+              + 'ja sen alkuperästä on esitetty toistakymmentä eri '
+              + 'selitystä. Charles Darwin vietti pampalla puoli vuotta '
+              + 'vuonna 1833 ja kirjoitti päiväkirjaansa, että gaúcho on '
+              + 'poikkeuksetta avulias, kohtelias ja vieraanvarainen. Tapa '
+              + 'paahtaa lihaa vartaissa hiilloksen yllä eli churrasco on '
+              + 'yhä Rio Grande do Sulin ruokakulttuurin ydin.',
+          selite: 'Suolattu kylkiluupala vartaassa avotulen äärellä on '
+            + 'Etelä-Brasilian churrascon perusmuoto.',
+          lahde: 'Julio Cesar Martins, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Churrasco',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin kahvinsiemenet legendan mukaan kätkettiin, kun ne '
+            + 'vietiin Ranskan Guayanasta Brasiliaan vuonna 1727?',
+        vaihtoehdot: [
+          'Saappaanvarteen',
+          'Kukkakimppuun',
+          'Kirjan kansiin',
+          'Leipäkoriin',
+        ],
+        oikea: 1,
+        fakta: 'Lahjan antoi kuvernöörin vaimo, ja siitä alkoi maailman '
+            + 'suurin kahvintuotanto.',
+      },
+    },
+  ],
 };

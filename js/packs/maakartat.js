@@ -2632,6 +2632,91 @@ export const MAAKARTAT = {
       wiki: 'Eteläiset Alpit',
     },
   },
+  BRA: {
+    /*
+     * Brasilia on helpompi tapaus kuin USA: sijaintikarttaperheessä on
+     * tasavälinen korkokartta, joka kattaa koko maan yhtenä kuvana ilman
+     * erillisiä sivukuvia, joten karttapiste()-funktioon ei tarvita uutta
+     * haaraa. Kartta on Module:Location map/data/Brazil -moduulin
+     * `image1`, ja rajat on haettu TIEDOSTON OMALTA KUVAUSSIVULTA
+     * (Commons, action=raw) eikä faktapohjasta: "Equirectangular
+     * projection, N/S stretching 105 %. Geographic limits of the map:
+     * N 6.0°, S 34.0°, W 74.5°, E 32.0°." Sama neljä lukua on moduulin
+     * top/bottom/left/right-kentissä, eli lähteet ovat yhtä mieltä.
+     *
+     * Kuvasuhteen ristiintarkistus: 1200 px / 42,5° = 28,2 px astetta
+     * kohti pituussuunnassa ja 1186 px / 40° = 29,7 px leveyssuunnassa,
+     * suhde 1,05. Karttaperheen ilmoittama N/S-venytys on 105 %, ja
+     * geometrinen odotus 1/cos(14° S) on 1,03 — kolmen prosentin heitto
+     * on karttaperheen normaalia eikä vaikuta prosenttiasemointiin.
+     *
+     * Kuva on 1200 px leveä eli täsmälleen reseptin alarajalla; koko
+     * luokassa "Relief location maps of Brazil" ei ole suurempaa
+     * tasavälistä versiota (haettu 23.8.2026). Jos sellainen ilmestyy,
+     * tiedoston voi vaihtaa sellaisenaan — rajat ja pisteet pysyvät.
+     * Lähderivin tekijä on lyhennetty extmetadatan muodosta
+     * "Brazil_location_map.svg: NordNordWest, derivative work: Виктор В".
+     */
+    tiedosto: 'Relief Map of Brazil.jpg',
+    lahde: 'NordNordWest ja Виктор В, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 6, etela: -34, lansi: -74.5, ita: -32 },
+    /*
+     * Kuusi paikkaa, jotka näyttävät maan mitan: nykyinen pääkaupunki
+     * Brasília ylängön keskellä, 1873:n pääkaupunki Rio, Amazonin
+     * Manaus pohjoisessa, siirtomaa-ajan ensimmäinen pääkaupunki
+     * Salvador koillisessa, kahviylängön São Paulo ja gaúchojen Porto
+     * Alegre etelässä.
+     *
+     * Koordinaatit artikkelien coord-merkinnöistä (en-Wikipedia).
+     * Manausin oma artikkeli hakee koordinaattinsa Wikidatasta eikä
+     * kirjoita niitä auki, joten piste on otettu saman kaupungin
+     * Amazon-teatterin artikkelista (3°07′49″S 60°01′24″W) — juuri se
+     * rakennus on kumikauden Manausin ydin.
+     *
+     * Vesitarkistus: pisteet piirrettiin kartan päälle pelin omalla
+     * karttapiste()-funktiolla ja kuva katsottiin silmin. Yksikään
+     * kuudesta ei ole meressä; Rio, Salvador ja Porto Alegre ovat
+     * rannikkokaupunkeja, joiden kiekko koskettaa rantaviivaa —
+     * sama ilmiö kuin USA:n rannikkopisteissä, ei virhe.
+     */
+    kaupungit: [
+      { nimi: 'Brasília', lat: -15.794, lon: -47.883, paa: true },
+      { nimi: 'Manaus', lat: -3.13, lon: -60.023 },
+      { nimi: 'Salvador', lat: -12.975, lon: -38.477 },
+      { nimi: 'Rio de Janeiro', lat: -22.911, lon: -43.206 },
+      { nimi: 'São Paulo', lat: -23.55, lon: -46.633 },
+      { nimi: 'Porto Alegre', lat: -30.033, lon: -51.23 },
+    ],
+    /*
+     * Kuvanosto São Franciscosta: kartan halki koillisen puolelta
+     * juokseva joki on maan sisäinen valtaväylä, eikä yksikään BRA:n
+     * kahdestakymmenestä maalehden nostosta kerro siitä (tarkistettu).
+     * Pituudesta lähteet ovat eri mieltä — artikkelin infolaatikko
+     * sanoo 2 830 km ja sama artikkeli leipätekstissä 2 914 km — joten
+     * tekstissä lukee "lähes kolmetuhatta" eikä täsmälukua (Fablen
+     * linjaus: Moreebin dyyni). Kuva silmätarkistettu 900 px:ssä.
+     */
+    nosto: {
+      otsikko: 'Vanha Chico, maan sisäinen valtatie',
+      tiedosto: 'Rio Sao Francisco próximo a Paulo Afonso divisa BAHIA-ALAGOAS.jpg',
+      teksti: 'São Francisco saa alkunsa Canastra-vuorilta Minas Geraisin '
+        + 'ylängöltä ja kiertää lähes kolmetuhatta kilometriä koilliseen '
+        + 'ennen kuin laskee Atlanttiin. Brasilialaiset kutsuvat sitä '
+        + 'nimellä Velho Chico, Vanha Chico, ja "kansallisen '
+        + 'yhdistymisen joeksi": se on ainoa suuri vesireitti, joka '
+        + 'yhdistää etelän ja koillisen ja tuo vettä puolikuivalle '
+        + 'sertãolle. Amerigo Vespucci näki joen 4. lokakuuta 1501, '
+        + 'Franciscus Assisilaisen muistopäivänä, ja siitä tuli nimi. '
+        + '1860-luvulla brittitutkija Richard Francis Burton meloi joen '
+        + 'latvoilta Paulo Afonson putouksille asti. Sata vuotta joella '
+        + 'kulkivat gaiolat, siipirataslaivat, joista osa oli tuotu '
+        + 'Yhdysvaltain sisällissodan aikaiselta Mississippiltä.',
+      selite: 'São Francisco kulkee kalliouoman läpi Paulo Afonson '
+        + 'putousten seudulla Bahian ja Alagoasin rajalla.',
+      lahde: 'marinelson, Wikimedia Commons (CC BY 2.0)',
+      wiki: 'São Francisco (joki)',
+    },
+  },
 };
 
 /*
