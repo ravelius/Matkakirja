@@ -2188,4 +2188,42 @@ export const SAATIEDOT = {
       + 'korkeudelta, ja ruutuun kuuluu laakson lisäksi vuoria, joten se '
       + 'on viileämpi ja sateisempi kuin kaupungin oma mittausasema.',
   },
+  /*
+   * SAN FRANCISCO. Mittauspiste on kaupungin oma koordinaatti
+   * 37,7775 / −122,4164 (en-Wikipedian tietolaatikko). Luvut ovat
+   * paketin muun datan tapaan Open-Meteon ERA5-arkistosta,
+   * normaalikaudelta 1991–2020 (haettu 23.8.2026 viiden vuoden
+   * paloissa, koska kiintiö ei kestä koko jaksoa kerralla).
+   *
+   * ERA5-RUUTU ON KUIVEMPI KUIN KAUPUNGIN OMA ASEMA: rivin vuosisade
+   * on 490 mm, kun NOAA:n keskustan havaintoaseman normaali samalta
+   * kaudelta on 22,89 tuumaa eli noin 581 mm (Template:San Francisco
+   * weatherbox). Ruutu ulottuu merelle päin, ja rannikon sadegradientti
+   * on jyrkkä. Ero kerrotaan oppaan sääjaksossa, jossa myös NOAA:n luku
+   * mainitaan. Samasta syystä lämpötilat ovat aavistuksen tasaisemmat
+   * kuin aseman: ERA5:n syyskuu on 16,9 astetta, aseman kuukausikeskiarvo
+   * 62,9 °F eli 17,2.
+   *
+   * VAIHTELUVYÖHYKE PUUTTUU VIELÄ. tools/hae-saanormaalit.mjs ei saanut
+   * ylin/alin-rivejä laskettua 23.8.2026: Open-Meteon arkisto vastasi
+   * kiintiövirheellä pyyntö toisensa jälkeen, eikä lukuja keksitä
+   * (resepti: säärivin luvut ovat aina koneen hakemia). Kentät ovat
+   * valinnaisia, joten vuosigraafi piirtyy toistaiseksi ilman kaistaa.
+   * Uusinta-ajossa on annettava KAKSI kaupunkia ("--vain sanfrancisco,
+   * lhasa"), koska yhden paikan vastaus on Open-Meteolta olio eikä
+   * taulukko ja työkalun oma tarkistus kaatuu siihen.
+   */
+  sanfrancisco: {
+    lat: 37.7775,
+    lon: -122.4164,
+    keskilampo: [9.6, 10.6, 11.7, 12.6, 14.1, 15.8, 16.2, 16.7, 16.9, 15.6, 12.3, 9.8],
+    sade: [97, 100, 75, 36, 18, 3, 0, 1, 2, 22, 47, 89],
+    luonnehdinta: 'San Franciscon vuodessa ei ole vuodenaikoja vaan kaksi '
+      + 'kautta: kuiva ja sateinen. Lämpötila liikkuu koko vuoden '
+      + 'seitsemän asteen haarukassa, joulukuun 9,8:sta syyskuun '
+      + '16,9:ään — lämpimin kuukausi on siis syyskuu, ei heinäkuu. '
+      + 'Sade tulee marras–maaliskuussa, ja heinäkuussa sitä ei mittaa '
+      + 'lainkaan; vuoden 490 millimetristä yli puolet kertyy tammi–'
+      + 'helmikuussa.',
+  },
 };

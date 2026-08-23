@@ -50530,4 +50530,454 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SAN FRANCISCO on P-Amerikan laudan ensimmäinen kaupunkilehti
+   * (23.8.2026). Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-sanfrancisco.md ja sen riippumaton tarkistus
+   * tarkistus-sanfrancisco.md; sisältölinjaukset spec-mantereet.md.
+   * Jokainen väite on luettu en-Wikipedian raakatekstistä 22.–23.8.2026
+   * (artikkelit "San Francisco", "Clay Street Hill Railroad",
+   * "San Francisco cable car system", "Chinatown, San Francisco",
+   * "Yelamu", "Ramaytush" ja "Template:San Francisco weatherbox").
+   *
+   * KOLME KOHTAA, JOISSA LÄHTEET OLIVAT ERI MIELTÄ tai vaativat
+   * valinnan:
+   *
+   * 1. Vuoden 1906 uhriluku. Aikalaisraportit kertovat 498 kuollutta,
+   *    nykyarviot useita tuhansia. Kumpaakaan ei valita, vaan ristiriita
+   *    kirjoitetaan auki lukijalle (noston viimeinen kolmannes).
+   * 2. Sadeluvut. San Francisco -artikkelin leipäteksti sanoo 73
+   *    sadepäivää ja 23,65 tuumaa vuodessa, mutta saman artikkelin
+   *    sääruutu (Template:San Francisco weatherbox, NOAA 1991–2020)
+   *    antaa 71,2 päivää ja 22,89 tuumaa — ja sääruudun kuukausiluvut
+   *    laskevat yhteen juuri 22,89. Oppaassa käytetään sääruudun lukuja
+   *    (n. 581 mm, n. 71 sadepäivää), koska ne ovat uudemmalta
+   *    normaalikaudelta ja sisäisesti ristiriidattomat.
+   * 3. Hallidien mukulakivitarina löytyy vain artikkelista "San
+   *    Francisco cable car system", ei artikkelista "Andrew Smith
+   *    Hallidie", joka antaa vaimeamman selityksen (hevosten rasitus
+   *    Jackson Streetillä). Nostossa on siis edellisen versio.
+   *
+   * RAJAUS (Perustuslaki, kunnioitus ja ikäsopivuus; spec-mantereet.md
+   * kohdat 1–3): kiinalaiskorttelista kerrotaan perustaminen, kasvu,
+   * nimi Vanha Kultavuori ja vuoden 1882 maahanmuuttokielto
+   * tapahtumana — ei tongsotia, uhkapeliä eikä seksityötä. Yelamut ja
+   * ramaytush-ohlonit nimetään omilla nimillään ennen siirtomaanimiä ja
+   * kansa näytetään elävänä, ei kadonneena.
+   */
+  sanfrancisco: [
+    {
+      id: 'kaupunki',
+      nimi: 'San Francisco',
+      johdanto: 'Kapean niemen pohjoiskärjessä, Tyynenmeren ja lahden välissä, '
+        + 'yli viidenkymmenen kukkulan päällä. Kultaryntäys teki '
+        + 'kalastajakylästä kaupungin kahdessa vuodessa, ja isoisän '
+        + 'matkavuonna sen mäkiä alkoi kiivetä kaapeliraitiovaunu.',
+      /*
+       * KANSIKUVAT: kolme laajaa yleiskuvaa kaupungin eri puolilta
+       * (omistajan linjaus 21.8.2026 — ei yksityiskohtia kannessa).
+       * Twin Peaks katsoo kaupungin yli sisältä päin, Marin Headlands
+       * salmen pohjoispuolelta ja Alamo Square kaupungin länsipuolelta.
+       * Kaikki kolme on katsottu silmin: ei tunnistettavia kasvoja
+       * (Alamo Squaren nurmella olevat ihmiset ovat kaukaisia pisteitä),
+       * ei vesileimoja eikä lisättyjä merkintöjä. Lisenssit ja tekijät
+       * Commonsin extmetadatasta 23.8.2026.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'San Francisco Skyline and East Bay, from Twin Peaks.jpg',
+          selite: 'Twin Peaks on kaupungin keskellä kohoava kaksoiskukkula, '
+            + 'jolta näkee keskustan, lahden ja sen takana East Bayn.',
+          lahde: 'NevinThompson, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'San Francisco from the Marin Headlands in August 2022.jpg',
+          selite: 'Golden Gaten salmi on ainoa merenkulkuväylä Tyyneltämereltä '
+            + 'lahdelle, ja sen yli rakennettiin silta 1937.',
+          lahde: 'Lightandtruth, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Alamo Square, San Francisco, California, USA - 52462334439.jpg',
+          selite: 'Alamo Squaren reunan puutalorivi on 1800-luvun lopun '
+            + 'viktoriaanista rakennuskantaa, joka säilyi vuoden 1906 palolta '
+            + 'kaupungin länsipuolella.',
+          lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: sama katu, Market Street, sata vuotta ja yksi
+       * maanjäristys välissä. Vanha on Detroit Photographic Companyn
+       * photochrom-vedos vuodelta 1900 (Library of Congress, PD) —
+       * sama tiedosto kuin matkakirjan valokuvataulussa
+       * (northamerica-valokuvat.js), josta myös vuosi ja lähderivi on
+       * tarkistettu. Vedoksen alalaidassa on julkaisijan oma
+       * painettu nimiö; se on kuvan alkuperäinen osa, ei jälkeenpäin
+       * lisätty merkintä. Uusi kuva on samasta kadusta ylhäältä
+       * kuvattuna 2007, jolloin kulkijat näkyvät vain pisteinä eikä
+       * tunnistettavia kasvoja ole. Vuosi-kenttä ohjaa harmaasävyn
+       * (raja 1960).
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Market Street, San Francisco LCCN2015647623.jpg',
+          vuosi: '1900',
+          selite: 'Market Street oli vuonna 1900 kaupungin pääkatu, jolla '
+            + 'kulkivat sekä hevosvaunut että raitiovaunut; kuusi vuotta '
+            + 'myöhemmin suurin osa näistä taloista paloi.',
+          lahde: 'Detroit Photographic Co., Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: '2007 San Francisco Market Street.jpg',
+          vuosi: '2007',
+          selite: 'Market Street kulkee yhä samaa vinoa linjaa läpi keskustan, '
+            + 'ja sen alla ajavat nykyään sekä Muni Metro että BART.',
+          lahde: 'Nicholas Hartmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Ahwaste, paikka lahden luona',
+          teksti: 'Niemen pohjoiskärjessä asui yelamu-heimo, joka puhui '
+            + 'ramaytushin kieltä; ohlonien nimi San Franciscolle oli '
+            + 'Ahwaste, paikka lahden luona. Tutkijoiden mukaan yelamut ja '
+            + 'heidän naapurinsa saapuivat seudulle 4 000–6 000 vuotta '
+            + 'sitten, ja kaupungin rakennustöissä on löytynyt heidän '
+            + 'jälkiään yli viidestäkymmenestä paikasta. Kylät vaihtuivat '
+            + 'vuodenajan mukaan: talvikylä Tubsinthe oli Candlestick Pointin '
+            + 'lähellä ja kesäpaikka Amuctac Visitacion Valleyssa. Kun '
+            + 'espanjalaiset perustivat lähetysaseman 1776, yelamuja '
+            + 'arvioidaan olleen 160–300. Heidän jälkeläisensä toimivat '
+            + 'nykyään omana yhdistyksenään, Association of Ramaytush '
+            + 'Ohlonena.',
+          tiedosto: 'Choris Ohlone arms and utensils.jpg',
+          selite: 'Louis Chorisin vuoden 1822 matkakirjan kuvataulussa ovat '
+            + 'Kalifornian rannikon kansojen jousi, nuolikotelo ja '
+            + 'punontakoreja, jotka julkaisija on numeroinut omalla '
+            + 'merkinnällään.',
+          lahde: 'Louis Choris, Wikimedia Commons (PD)',
+          wiki: 'Yelamu',
+        },
+        {
+          otsikko: 'Yerba Buenasta tuli San Francisco',
+          teksti: 'Juan Bautista de Anza perusti Presidion 28. maaliskuuta 1776, '
+            + 'ja saman vuoden lokakuun 9. päivänä pater Francisco Palóu '
+            + 'vihki lähetysaseman Misión San Francisco de Asís, jota '
+            + 'kutsutaan Mission Doloresiksi. Espanja luovutti Kalifornian '
+            + 'Meksikolle 1821, ja 1834 nykyisen Chinatownin ja Financial '
+            + 'Districtin kohdalle syntyi kauppapaikka nimeltä Yerba Buena. '
+            + 'Yhdysvaltain laivaston USS Portsmouth otti sen haltuunsa 9. '
+            + 'heinäkuuta 1846 ja nosti lipun torilla, joka on siitä asti '
+            + 'ollut Portsmouth Square. Kaupunginpäällikkö Washington '
+            + 'Bartlett määräsi 30. tammikuuta 1847 nimeksi San Francisco: '
+            + 'vanha nimi tunnettiin vain paikallisesti, uusi jo maailman '
+            + 'kartoilla.',
+          tiedosto: 'Portsmouth Square or Plaza, San Francisco LCCN2002724167.tif',
+          selite: 'Lawrence & Houseworthin stereokortti numero 203 esittää '
+            + 'Portsmouth Squaren vuonna 1866, kaksikymmentä vuotta '
+            + 'lipunnoston jälkeen.',
+          lahde: 'Lawrence & Houseworth, publisher, Wikimedia Commons (PD)',
+          wiki: 'Portsmouth Square',
+        },
+        {
+          otsikko: 'Mastojen metsä Yerba Buena Covessa',
+          teksti: 'Vuonna 1847 San Franciscossa asui 459 ihmistä. Kun tieto '
+            + 'kullasta levisi, väkiluku nousi tuhannesta 25 000:een '
+            + 'joulukuuhun 1849 mennessä. Saapuvien laivojen miehistöt '
+            + 'karkasivat kultakentille, ja satamaan jäi mastojen metsä: noin '
+            + 'viisisataa hylättyä alusta. Osa niistä toimi varastolaivoina, '
+            + 'saluunoina ja hotelleina, moni jätettiin lahoamaan ja jotkin '
+            + 'upotettiin, jotta vedenalaisen tontin omistus saatiin '
+            + 'vahvistettua. Vuoteen 1851 mennessä satamaa jatkettiin '
+            + 'laitureilla ulos lahdelle ja taloja rakennettiin paalujen '
+            + 'varaan laivojen väliin. Vuoteen 1870 mennessä koko Yerba Buena '
+            + 'Cove oli täytetty maalla, ja hylkyjä paljastuu yhä perustuksia '
+            + 'kaivettaessa.',
+          tiedosto: 'SanFranciscoharbor1851c sharp.jpg',
+          selite: 'Yerba Buena Coven satama vuonna 1850 tai 1851, taustalla Yerba '
+            + 'Buena Island ja Berkeleyn kukkulat.',
+          lahde: 'Unknown author Unknown author, Wikimedia Commons (PD)',
+          wiki: 'San Francisco',
+        },
+        {
+          otsikko: 'Isoisän vuonna: vaijeri veti vaunun mäkeen',
+          teksti: 'Andrew Smith Hallidie sai idean 1869 nähtyään hevosvaunun '
+            + 'luisuvan takaisin märillä mukulakivillä niin, että vetohevoset '
+            + 'kuolivat. Clay Street Hill Railroadin toimilupa vaati '
+            + 'ensimmäisen ajon viimeistään 1. elokuuta 1873, ja yksi vaunu '
+            + 'ajettiin radan yli kello neljä aamulla harvojen todistajien '
+            + 'nähden; ensimmäinen julkinen ajo oli päivää myöhemmin. '
+            + 'Säännöllinen liikenne alkoi 1. syyskuuta 1873, ja vaunu nousi '
+            + '106 metriä kuudessa korttelissa kadun alla kulkevan vaijerin '
+            + 'voimalla. Vuoden kuluttua linjalla kulki 3 000 matkustajaa '
+            + 'päivässä, ja Havaijin kuningas Kalākaua kävi katsomassa rataa '
+            + 'marraskuussa 1874.',
+          tiedosto: 'The street railway review (1891) (14779177323).jpg',
+          selite: 'Clay Street Hill Railroadin vaunu numero 12 kuvattiin muutama '
+            + 'päivä radan avaamisen jälkeen elokuussa 1873.',
+          lahde: 'Unknown author Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Clay Street Hill Railroad',
+        },
+        {
+          otsikko: 'Vanha Kultavuori',
+          teksti: 'Kultaryntäykseen tulleet kantoninkiinalaiset antoivat '
+            + 'Kalifornialle ja San Franciscolle nimen Gam Saan, Kultavuori; '
+            + 'kun kultaa löytyi myös Australiasta, siitä tuli Uusi '
+            + 'Kultavuori ja Kaliforniasta Vanha Kultavuori. Elokuun 28. '
+            + 'päivänä 1850 pormestari John Geary toivotti Portsmouth '
+            + 'Squarella tervetulleeksi kolmesataa kiinalaista tulijaa. '
+            + 'Yhteisö kasvoi torin ja Dupont Streetin eli nykyisen Grant '
+            + 'Avenuen ympärille, ja vuoteen 1880 mennessä kiinalaisia oli '
+            + '9,3 prosenttia kaupungin väestöstä. Vuoden 1882 laki kielsi '
+            + 'kiinalaisten työläisten maahanmuuton, ja kielto pysyi voimassa '
+            + 'yli kuusikymmentä vuotta. Se on Pohjois-Amerikan vanhin '
+            + 'kiinalaiskortteli.',
+          tiedosto: 'Chinatown, San Francisco, California LCCN2013630310.tif',
+          selite: 'Grant Avenue on Chinatownin pääkatu, ja kortteli kerää '
+            + 'vuosittain enemmän kävijöitä kuin Golden Gate -silta.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+          wiki: 'Chinatown, San Francisco',
+        },
+        {
+          otsikko: 'Maanjäristys ja päiväkausia tulta',
+          teksti: 'Kello 5.12 aamulla 18. huhtikuuta 1906 voimakas maanjäristys '
+            + 'ravisteli San Franciscoa ja Pohjois-Kaliforniaa. Sortuneiden '
+            + 'talojen katkenneista kaasuputkista syttyi tulipaloja, jotka '
+            + 'levisivät hallitsemattomina useiden päivien ajan, ja kun '
+            + 'vesijohdot olivat poikki, Presidion tykistö räjäytti '
+            + 'kokonaisia kortteleita palokujiksi. Arvion mukaan yli kolme '
+            + 'neljäsosaa kaupungista ja koko keskusta jäi raunioiksi, ja yli '
+            + 'puolet 400 000 asukkaasta menetti kotinsa. Uhriluvusta ei ole '
+            + 'yksimielisyyttä: aikalaisraporteissa kuolleita oli 498, '
+            + 'nykyarvioissa useita tuhansia. Jälleenrakennus oli nopeaa, ja '
+            + 'kaupunki juhli toipumistaan maailmannäyttelyssä 1915.',
+          tiedosto: 'San Francisco Earthquake of 1906, General view from Nob Hill. Ruins of Hopkins Art Institute and Stanford\'s mansion... - NARA - 522952.tif',
+          selite: 'Näkymä Nob Hillilta huhtikuussa 1906: keskusta on raunioina, '
+            + 'ja taustalla seisovat palon kestäneet toimistotalot.',
+          lahde: 'George W. Haley, Wikimedia Commons (PD)',
+          wiki: '1906 San Francisco earthquake',
+        },
+      ],
+      /*
+       * MATKAILIJALLE. Etusivun kuva on tuore ja maltillisen pysty
+       * (1664 × 2079 eli 0,80; omistajan linjaus 20.–21.8.2026).
+       * Oppaan kuvat ovat nykyaikaisia — historialliset vedokset ovat
+       * nostoissa. Jaksoja on viisi, joista kaksi viimeistä ilman
+       * kuvaa (Tukholma-ennakkotapaus sallii enintään kaksi).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Coit Tower in San Francisco, California.jpg',
+          selite: 'Coit Tower nousi Telegraph Hillin laelle 1933, ja sen takaa '
+            + 'näkyy lahdella Alcatrazin saari.',
+          lahde: 'Sasha • Stories, Wikimedia Commons (CC0)',
+        },
+        kappale: 'San Francisco on samalla sekä kaupunki että lääni, mutta '
+          + 'matkailijan San Francisco mahtuu niemen koillisnurkkaan. '
+          + 'Pohjoisessa on Fisherman’s Wharf ja sen edustalla lahdella '
+          + 'Alcatrazin saari, idässä Ferry Building ja Embarcaderon '
+          + 'rantakatu, keskellä Union Squaren liikekorttelit ja niiden '
+          + 'takana Chinatown sekä Nob Hillin jyrkkä rinne. Lännessä '
+          + 'levittäytyy Golden Gate Park ja luoteessa Presidio, jonka '
+          + 'takaa silta lähtee salmen yli. Matkailu on kaupungin '
+          + 'tärkeimpiä elinkeinoja: vuonna 2023 kävijöitä oli 23,1 '
+          + 'miljoonaa, ja joka seitsemäs työpaikka on alan omia.',
+        artikkeli: {
+          nimi: 'Matkailijan San Francisco',
+          taitto: 'opas',
+          teksti: 'Kaupunki kiipeää viidellekymmenelle kukkulalle meren ja '
+            + 'lahden väliin, ja sen vanhin liikenneväline on yhä '
+            + 'aikataulussa.',
+          nosto: 'Kaapeliraitiovaunut on julistettu kansalliseksi '
+            + 'historialliseksi maamerkiksi, mutta ne eivät ole museo: '
+            + 'samat vaunut kuuluvat Munin liikenteeseen kuin bussit ja '
+            + 'metrojunat.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentäen saavutaan San Franciscon kansainväliselle '
+                + 'lentoasemalle, jolta BART-metro kulkee lahden rannan alta '
+                + 'Market Streetin alle keskustaan; sama rata jatkuu '
+                + 'Transbay-tunnelissa East Bayn puolelle. Joukkoliikenne on '
+                + 'kaupungin käytetyin tapa liikkua: Munin 69 bussilinjalla '
+                + 'kulkee arkisin yli 560 000 matkustajaa ja Muni Metron '
+                + 'pikaraitiotiellä yli 140 000. Asukkaista 32 prosenttia '
+                + 'menee töihin joukkoliikenteellä, mikä on länsirannikon '
+                + 'suurin osuus. Kaapeliraitiovaunujen rinnalla ajaa '
+                + 'F-linja, jonka vanhoilla raitiovaunuilla pääsee Market '
+                + 'Streetiä Castrosta Fisherman’s Wharfille. Caltrain vie '
+                + 'etelään San Joseen, ja lautat lähtevät Ferry Buildingilta '
+                + 'ja Pier 39:ltä Oaklandiin, Alamedaan, Richmondiin ja '
+                + 'Vallejoon; Golden Gate Ferry hoitaa Marinin suunnan.',
+              kuva: [
+                {
+                  tiedosto: '2007 San Francisco Market & Drumm Sts 01.jpg',
+                  selite: 'Market ja Drumm Streetin kulmassa kohtaavat F-linjan '
+                    + 'vanha raitiovaunu, kaapeliraitiovaunu ja Embarcadero-'
+                    + 'aseman liukuportaat.',
+                  lahde: 'Nicholas Hartmann, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'L Taraval train on Ulloa Street, June 2017-001 (cropped).JPG',
+                  selite: 'Muni Metron L-linja ajaa Ulloa Streetiä kohti '
+                    + 'eläintarhaa kaupungin länsiosassa.',
+                  lahde: 'Pi.1415926535, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'San Francisco (CA, USA), Pioneer Park, Blick auf Fisherman\'s Wharf -- 2022 -- 3083.jpg',
+                  selite: 'Fisherman’s Wharfin laiturit ja venesatama ovat lahden '
+                    + 'rannassa Telegraph Hillin alapuolella.',
+                  lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on San Francisco Peninsulan pohjoiskärjessä, ja '
+                + 'sen rajojen sisällä on yli viisikymmentä kukkulaa. Osa '
+                + 'kaupunginosista on nimetty kukkulansa mukaan: Nob Hill, '
+                + 'Russian Hill ja Potrero Hill. Twin Peaks on keskellä '
+                + 'kaupunkia kohoava näköalapaikka, korkein kukkula on '
+                + '283-metrinen Mount Davidson, jonka laella on vuonna 1934 '
+                + 'pystytetty 31 metrin risti, ja sen naapurissa Sutro '
+                + 'Towerin masto yltää 552 metriin merenpinnasta. Mannerosa '
+                + 'on suunnilleen seitsemän kertaa seitsemän mailia, mutta '
+                + 'vesialueineen pinta-alaa on lähes 232 neliömailia. '
+                + 'Kaupunkiin kuuluvat Alcatraz, Treasure Island ja Yerba '
+                + 'Buena Island sekä 43 kilometrin päässä avomerellä '
+                + 'asumattomat Farallon-saaret. Rantaviiva on kasvanut '
+                + 'luonnollisten rajojensa yli: Marina, Mission Bay ja suuri '
+                + 'osa Embarcaderoa seisovat täytemaalla.',
+              kuva: {
+                tiedosto: 'Lombard Street San Francisco no cars.jpg',
+                selite: 'Lombard Streetin kahdeksan mutkaa rakennettiin 1922 '
+                  + 'loiventamaan Russian Hillin 27 prosentin rinnettä.',
+                lahde: 'Adbar, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kesän kylmä sumu',
+              teksti: 'San Franciscon kesä yllättää monen matkailijan: suurista '
+                + 'yhdysvaltalaiskaupungeista täällä ovat kesä–elokuun '
+                + 'viileimmät keskilämpötilat sekä päivä- että yölukemina. '
+                + 'Syy on sisämaan laaksojen kuumuus, joka nostaa ilmaa ylös '
+                + 'ja imee tilalle kylmää merituulta Golden Gaten salmen '
+                + 'läpi — tuulen mukana tulee sumu, joka on kaupungin '
+                + 'tunnusmerkki. Sumu on vähäisempää itäisissä '
+                + 'kaupunginosissa sekä loppukesällä ja alkusyksystä. '
+                + 'Vuoden lämpimin kuukausi on keskimäärin syyskuu, ja '
+                + 'lokakuu on tavallisesti heinäkuuta lämpimämpi etenkin '
+                + 'päivisin. Kerrospukeutuminen kannattaa siis myös '
+                + 'heinäkuussa.',
+              kuva: {
+                tiedosto: 'Aerial view of Sutro Tower surrounded by fog, July 2024.JPG',
+                selite: 'Sutro Towerin masto yltää 552 metriin merenpinnasta ja '
+                  + 'jää kesäisin usein sumun yläpuolelle.',
+                lahde: 'Pi.1415926535, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: rautatie ja satama',
+              teksti: 'Kalifornia sai osavaltion aseman 1850, ja armeija '
+                + 'rakensi Fort Pointin Golden Gatelle ja linnoituksen '
+                + 'Alcatrazin saarelle lahden suojaksi. Vuonna 1869 '
+                + 'valmistunut mannertenvälinen rautatie antoi San '
+                + 'Franciscolle maayhteyden itärannikon rataverkkoon: '
+                + 'kaupunki tuki hanketta vain vastahakoisesti, mutta se '
+                + 'teki lahden alueesta kaupan keskuksen. Radan '
+                + 'rakennustöissä oli 1865–1869 suuri joukko kiinalaisia '
+                + 'siirtolaisia Central Pacific -yhtiön palveluksessa, ja '
+                + 'moni jäi töiden jälkeen kaupunkiin. Kasvavan väestön '
+                + 'tarpeisiin syntyi yrityksiä, joiden nimet tunnetaan yhä: '
+                + 'Levi Strauss avasi kangaskauppansa ja Domingo Ghirardelli '
+                + 'alkoi valmistaa suklaata. Sataman ja radan vuosina myös '
+                + 'kaupungin ensimmäiset kaapeliraitiotiet rakennettiin.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Lehden säärivi on laskettu Open-Meteon ERA5-arkistosta '
+                + '(normaalikausi 1991–2020) kaupungin omasta pisteestä, ja '
+                + 'sen mukaan lämpimin kuukausi on syyskuu 16,9 asteella ja '
+                + 'viilein joulukuu 9,8 asteella — vuoden vaihteluväli on '
+                + 'siis vain seitsemisen astetta. Kuiva kausi kestää '
+                + 'toukokuusta lokakuuhun, ja heinäkuussa sadetta ei '
+                + 'käytännössä tule lainkaan; sateisin kuukausi on helmikuu. '
+                + 'NOAA:n keskustan havaintoasema antaa samalle '
+                + 'normaalikaudelle vuosisateeksi 22,89 tuumaa eli noin 581 '
+                + 'millimetriä ja runsaat 71 sadepäivää; ERA5:n hilaruutu '
+                + 'jää hieman kuivemmaksi, mikä on tavallista rannikolla. '
+                + 'Lunta ei juuri näy: mitattavia lumikertymiä on kirjattu '
+                + 'vain kymmenen vuoden 1852 jälkeen, viimeksi 1976. Paras '
+                + 'aika tulla on syys–lokakuu, jolloin sumu on vähentynyt ja '
+                + 'lämpötila on vuoden korkeimmillaan.',
+            },
+          ],
+          /*
+           * KAINALOTAULU: vain otsikkotaso, perustelu miniponnahduksessa
+           * (opas 2.2, js/opas.js). "Hyvä tietää" on faktoja
+           * matkailijalle, ei kaupungin mollausta — hintataso on
+           * artikkelin oma tieto (exceptionally high cost of living),
+           * mäet ja kesän viileys sen ilmasto- ja maantieto-osioista.
+           */
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kaapeliraitiovaunu',
+                tahdet: 3,
+                selite: 'Maailman ensimmäinen toimiva kaapelirata avattiin '
+                  + '1873, ja samat vaunut ovat yhä liikenteessä.',
+              },
+              {
+                mita: 'Kukkulat ja näköalat',
+                tahdet: 3,
+                selite: 'Kukkuloita on yli viisikymmentä, ja Twin Peaksilta '
+                  + 'näkee kaupungin, lahden ja salmen kerralla.',
+              },
+              {
+                mita: 'Chinatown',
+                tahdet: 3,
+                selite: 'Pohjois-Amerikan vanhin kiinalaiskortteli kerää '
+                  + 'vuosittain enemmän kävijöitä kuin Golden Gate -silta.',
+              },
+              {
+                mita: 'Ranta ja lautat',
+                tahdet: 2,
+                selite: 'Ferry Buildingilta ja Pier 39:ltä lähtee lauttoja '
+                  + 'Oaklandiin, Alamedaan, Richmondiin ja Vallejoon.',
+              },
+              {
+                mita: 'Golden Gate Park',
+                tahdet: 2,
+                selite: 'Puisto raivattiin hiekkadyyneille 1870-luvulla, ja '
+                  + 'vuoteen 1875 mennessä sinne oli istutettu 60 000 puuta.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Hintataso',
+                teksti: 'Elinkustannukset ovat poikkeuksellisen korkeat, ja '
+                  + 'se näkyy suoraan majoituksen hinnassa.',
+              },
+              {
+                otsikko: 'Kesä on kylmä',
+                teksti: 'Kesäkuukaudet ovat suurten yhdysvaltalaiskaupunkien '
+                  + 'viileimmät, joten takki kannattaa ottaa mukaan.',
+              },
+              {
+                otsikko: 'Mäet',
+                teksti: 'Kadut nousevat jyrkästi: kaapelirata keksittiin '
+                  + 'juuri siksi, ettei hevosvaunu pysynyt märällä '
+                  + 'mukulakivellä.',
+              },
+              {
+                otsikko: 'Maa liikkuu',
+                teksti: 'San Andreasin ja Haywardin siirrokset aiheuttavat '
+                  + 'pieniä maanjäristyksiä säännöllisesti, ja '
+                  + 'rakennusmääräyksiä on kiristetty niiden takia.',
+              },
+            ],
+          },
+        },
+      },
+    },
+  ],
 };

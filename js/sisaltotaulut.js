@@ -28,6 +28,7 @@ import { EUROPE_KIELET } from './packs/europe-kielet.js';
 import { OMAT_ARTIKKELIT } from './packs/africa-artikkelit.js';
 import { EUROPE_ARTIKKELIT } from './packs/europe-artikkelit.js';
 import { ASIA_ARTIKKELIT } from './packs/asia-artikkelit.js';
+import { NORTHAMERICA_ARTIKKELIT } from './packs/northamerica-artikkelit.js';
 
 // Uuden mallin saapumistekstit laudoittain (Afrikka valmis, Eurooppa
 // rakentuu kaupunki kerrallaan — pilotti: Venetsia).
@@ -148,7 +149,10 @@ export const MAATIEDOT = {
 
 // Omat artikkelit: yhteinen hakemisto wiki-otsikolla (mantereet eivät
 // törmää, koska otsikot ovat eri).
-export const ARTIKKELIT = { ...OMAT_ARTIKKELIT, ...EUROPE_ARTIKKELIT, ...ASIA_ARTIKKELIT };
+export const ARTIKKELIT = {
+  ...OMAT_ARTIKKELIT, ...EUROPE_ARTIKKELIT, ...ASIA_ARTIKKELIT,
+  ...NORTHAMERICA_ARTIKKELIT,
+};
 
 // Saapumishavaintojen luennat: 'pakka:kaupunki' kertoo, että tiedosto
 // assets/audio/puhe-<pakka>-havainto-<kaupunki>.mp3 on olemassa
