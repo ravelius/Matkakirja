@@ -1,0 +1,99 @@
+name: Siivoa vanhat haarat
+
+# Poistaa vanhat, jo mergatut tyohaarat. Kaynnistetaan kasin GitHubin
+# Actions-valilehdelta (myos puhelimella ja tabletilla) — ei automaattista
+# ajastusta, koska haarojen poisto on peruuttamaton.
+#
+# MIKSI: repon koko oli 23.8.2026 kasvanut 2031 megatavuun (GitHubin
+# suositus on 1 gigatavu). Syy on dist/matkakirja.html ja
+# dist/matkakirja.partial.html, 10,7 Mt kumpikin, jotka oli committoitu
+# 973 committiin ennen kuin dist/ lisattiin .gitignoreen — yhteensa 1756
+# blobia ja 10,3 Gt raakana. Mainin OMASSA historiassa ei ole yhtaan
+# dist-committia, joten historiaa ei tarvitse kirjoittaa uusiksi: paisuma
+# on kokonaan vanhoissa haaroissa (241 haarasta 235 kantoi niita).
+#
+# KAYTTO: Actions → "Siivoa vanhat haarat" → Run workflow.
+#   kuiva_ajo = true  (oletus) listaa vain, ei poista mitaan
+#   kuiva_ajo = false poistaa oikeasti
+#
+# Aja ENSIN kuivana ja katso lista. Vasta sitten oikeasti.
+
+on:
+  workflow_dispatch:
+    inputs:
+      kuiva_ajo:
+        description: 'Vain listaus, ei poistoa'
+        type: boolean
+        default: true
+      paivia:
+        description: 'Suojaa haarat joissa on committeja nain monelta viime vuorokaudelta'
+        type: string
+        default: '4'
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  siivoa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Nouda repo kaikkine haaroineen
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Etsi ja poista vanhat haarat
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KUIVA: ${{ inputs.kuiva_ajo }}
+          PAIVIA: ${{ inputs.paivia }}
+        run: |
+          set -euo pipefail
+          git fetch --prune origin
+
+          # Avoimien PR:ien haarat suojaan.
+          gh pr list --state open --json headRefName --jq '.[].headRefName' > /tmp/avoimet.txt || : > /tmp/avoimet.txt
+          echo "Avoimia PR-haaroja suojassa: $(wc -l < /tmp/avoimet.txt)"
+
+          # Vientiputken haara suojataan aina: herokuvat kulkevat sen kautta
+          # R2-ampariin (vie-julisteet.yml), eika sita mergata mainiin.
+          echo 'claude/julisteet-vienti' >> /tmp/avoimet.txt
+          echo "${{ github.ref_name }}" >> /tmp/avoimet.txt
+
+          RAJA=$(date -d "${PAIVIA} days ago" +%Y-%m-%d)
+          echo "Suojataan haarat joissa committeja $RAJA jalkeen."
+
+          git for-each-ref --format='%(committerdate:short) %(refname:short)' refs/remotes/origin \
+            | grep -v 'origin/HEAD' \
+            | awk -v r="$RAJA" '$1 < r {sub(/^origin\//, "", $2); print $2}' \
+            | grep -vxF -f /tmp/avoimet.txt \
+            | grep -vx 'main' > /tmp/poistettavat.txt || : > /tmp/poistettavat.txt
+
+          MAARA=$(wc -l < /tmp/poistettavat.txt)
+          echo "## Poistettavia haaroja: $MAARA" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          cat /tmp/poistettavat.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$KUIVA" = "true" ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "Tama oli KUIVA AJO — mitaan ei poistettu. Aja uudelleen valinnalla kuiva_ajo = false." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          if [ "$MAARA" -eq 0 ]; then
+            echo "Ei poistettavaa." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          # Poisto erissa: yksi push ottaa monta refspecia kerralla.
+          ERA=50
+          split -l "$ERA" /tmp/poistettavat.txt /tmp/era-
+          for tiedosto in /tmp/era-*; do
+            git push origin --delete $(tr '\n' ' ' < "$tiedosto")
+          done
+
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Poistettu $MAARA haaraa." >> "$GITHUB_STEP_SUMMARY"
+          echo "GitHub ajaa roskienkeruun omaan tahtiinsa, joten koko ei pienene heti." >> "$GITHUB_STEP_SUMMARY"

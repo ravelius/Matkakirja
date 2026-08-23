@@ -18,6 +18,10 @@
 #   bash tools/poista-vanhat-haarat.sh          # nayttaa mita poistaisi
 #   bash tools/poista-vanhat-haarat.sh --poista # poistaa oikeasti
 #
+# HELPOMPI TAPA ilman omaa konetta (myos puhelimella ja tabletilla):
+# GitHub → Actions → "Siivoa vanhat haarat" → Run workflow. Se tekee
+# saman samoilla suojasaannoilla. Ks. .github/workflows/siivoa-haarat.yml.
+#
 # SUOJATUT: main, julisteet-vienti (herokuvien vientiputki), avoimien
 # PR:ien haarat seka kaikki haarat joissa on committeja viimeisen
 # NELJAN vuorokauden ajalta (rinnakkaiset sessiot).
