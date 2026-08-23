@@ -55871,4 +55871,1686 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SEVILLA on Euroopan laudan uusi kaupunkilehti (23.8.2026): kolme
+   * sivua (kaupunki, historia, musiikki), kaksitoista nostoa,
+   * matkaopas viidellä jaksolla ja yksi minitehtävä.
+   *
+   * AINEISTO. docs/mantereet-tyoaineisto/faktapohja-sevilla.md ja sen
+   * riippumaton ristiintarkistus tarkistus-sevilla.md; ohjeet
+   * docs/aasia-tyoaineisto/lehtityo-resepti.md ja
+   * docs/moduulit/kaupunkilehti.md. Jokainen tekstiin mennyt väite on
+   * luettu itse en-Wikipedian raakatekstistä 23.8.2026 (artikkelit
+   * "Seville", "Puente de Isabel II", "Triana, Seville", "Royal Tobacco
+   * Factory", "Torre del Oro", "Bitter orange", "Giralda", "Alcázar of
+   * Seville", "General Archive of the Indies" ja "Seville Fair") eikä
+   * faktapohjan omiin lähdemerkintöihin ole luotettu sokeasti.
+   *
+   * TARKISTUSRAPORTIN KORJAUKSET ON TEHTY KAIKKI VIISI:
+   *
+   * 1. VISASPOILERI, kysymys 5 (Giralda). Faktapohjan nosto H1 päättyi
+   *    lauseeseen "tornista tuli katedraalin kellotorni Giralda", mikä
+   *    on visan vastaus sanasta sanaan. Tämän lohkon H1 ei mainitse
+   *    nimeä lainkaan vaan päättyy tornin 35 ramppiin; nimi Giralda
+   *    esiintyy lehdessä vain europe-artikkelit.js:n introssa ja
+   *    sielläkin tuuliviirin kautta ("Giraldillo, josta torni sai
+   *    nykyisen nimensä Giralda"). Vastaus on siis yhä löydettävissä,
+   *    kuten resepti vaatii, mutta ei visan sanamuodossa.
+   * 2. VISASPOILERI, kysymys 4 (yksinoikeus Amerikan-kauppaan).
+   *    Faktapohjan kaupunkisivun johdanto ja nosto H4 alkoivat
+   *    ilmauksella "Amerikan-kaupan yksinoikeus", joka on visan
+   *    vastausvaihtoehto lähes sanatarkasti. Kaupunkisivun johdanto on
+   *    kirjoitettu kokonaan uusiksi (kolme valtakuntaa saman jokimutkan
+   *    äärellä), ja H4 alkaa nyt lauseella "Vain Sevillasta lähtenyt ja
+   *    sinne palannut purjelaiva sai käydä kauppaa Espanjan
+   *    Amerikan-siirtomaiden kanssa" — sama asia, en-Wikipedian oma
+   *    muotoilu, ei visan vastausvaihtoehto.
+   * 3. TRANSLITTERAATIO. Faktapohjassa oli kaksi eri muotoa ("Sultan
+   *    Don Pidru" faktalistassa, "Sulttaani Don Pedro" nostossa).
+   *    en-Wikipedia "Alcázar of Seville" sanoo "Sultan Don Bidru", ja
+   *    tämä lohko käyttää sitä sekä nostossa H3 että minitehtävässä.
+   * 4. TORNIN RAKENNUTTAJA. Faktapohja sanoi Torre del Oron nousseen
+   *    "almohadihallitsijan käskystä". Lähde puhuu Sevillan
+   *    ALMOHADIKUVERNÖÖRISTÄ Abu l-Ulàsta, ei kalifista; nosto SV3
+   *    sanoo nyt "Sevillan almohadikuvernöörin Abu l-Ulàn käskystä".
+   * 5. GIRALDAN KORKEUS. en-Wikipedian kaksi artikkelia ovat eri
+   *    mieltä (Giralda-artikkeli n. 95–96 m, katedraaliartikkeli
+   *    104,5 m), eikä kumpikaan täsmää visan 97 metriin. Tämä lehti EI
+   *    ANNA tornin kokonaiskorkeutta lainkaan. Nostossa H1 ja sen
+   *    selitteessä kerrotaan vain se luku, josta lähteet ovat yhtä
+   *    mieltä: almohadiaikaisen runko-osan 50,51 metriä.
+   *
+   * MUUT LÄHDEVALINNAT. Sillan valmistumisvuodeksi on otettu sillan
+   * OMAN artikkelin 1852 (Triana-artikkeli sanoo toisaalla 1845–1852,
+   * toisaalla 1854). Venesillan vuosi 1171 ja kalifin nimi ovat
+   * artikkelista "Triana, Seville", eivät sillan omasta artikkelista,
+   * jossa niitä ei ole — tämä oli tarkistusraportin kuudes, pienempi
+   * huomautus. Hiram Maximin kertomus kehdoista on merkitty
+   * muistelmiin eikä mihinkään vuoteen, koska lähde ei kerro
+   * käyntivuotta. Bienal-festivaalin "maailman suurin" on kirjoitettu
+   * järjestäjien väitteeksi, koska lähde esittää sen niin.
+   *
+   * MITÄ ON JÄTETTY POIS JA MIKSI. (1) Vuoden 1391 juutalaisvainot ja
+   * 1478 alkanut inkvisitio: ne mahtuisivat historiasivulle vain niin,
+   * että uhriluvut ja polttaminen olisi kerrottava, ja se on vastoin
+   * Raamatun väkivaltalinjausta (neutraali historia ilman
+   * yksityiskohtien korostusta). (2) Christopher Columbuksen hauta:
+   * jäänteet siirrettiin Sevillan katedraaliin vasta 1899, joten
+   * hautaa EI OLLUT olemassa isoisän matkavuonna 1873, eikä sitä siksi
+   * mainita missään 1873-henkisessä nostossa. (3) Härkätaistelu:
+   * Maestranzan areena näkyy avauskuvassa kaupunkinäkymän osana, mutta
+   * siitä ei ole omaa nostoa. (4) Säärivi: js/packs/saatiedot.js:ssä ei
+   * ole Sevillaa eikä sitä lisätty tässä erässä (Open-Meteon
+   * vuorokausikiintiö oli täynnä), joten matkaoppaan jakso 5 nojaa
+   * en-Wikipedian ilmasto-osioon ja SANOO SEN ÄÄNEEN — Samarkandin ja
+   * Karachin malli. Mittauspiste olisi keskusta 37,3886 / −5,9950.
+   * (5) Kohdekarttaa, nähtävyysjuttuja, tarinakaarta, saapumisia,
+   * kohtaamisia ja miniatyyrejä ei tehty (Fablen ohje 23.8.2026).
+   *
+   * KOLMAS SIVU (musiikki) otettiin mukaan, vaikka faktapohja merkitsi
+   * sen ehdotukseksi: nostojen M1–M3 faktat ovat yhtä hyvin
+   * lähteistetyt kuin historiasivun, ja Sevilla on 153 oopperallaan
+   * poikkeus koko Euroopassa. M4 nojaa nykytietoon (festivaali ja
+   * teatterit) eikä 1800-luvun lähteeseen, ja se on tässä sivun
+   * viimeisenä juuri siksi.
+   *
+   * KUVAT. 22 kuvaa, kaikki Wikimedia Commonsista. Lisenssi ja tekijä
+   * on todennettu Commonsin rajapinnasta (extmetadata: LicenseShortName
+   * ja Artist) 23.8.2026, ei arvattu tiedostonimestä, ja haku tehtiin
+   * kategorioittain. JOKAINEN kuva on katsottu silmin 900 pikselin
+   * esikatseluna ennen hyväksyntää.
+   *   avauskuvat = kolme LAAJAA YLEISKUVAA kaupungin eri puolilta
+   *   (omistajan linjaus 21.8.2026): kattonäkymä Metropol Parasolin
+   *   päältä kohti katedraalia, näkymä Torre del Oron huipulta jokea ja
+   *   Trianaa pitkin, ja Giraldalta lounaaseen Maestranzan ja Trianan
+   *   sillan yli. Herokuvia ei lisätty — ne tulevat erikseen.
+   *   kansikuvat = kolme pikkunostoa: Alcázarin Patio de las Doncellas
+   *   (kaupungin toiseksi tärkein kohde katedraalin jälkeen), NO8DO-
+   *   kaivonkansi (yllättävä yksityiskohta) ja Plaza de Españan
+   *   azulejopaneeli sikarintekijättäristä.
+   *   Matkailijalle-kuva on tuore, maltillinen pysty (3456 × 5184,
+   *   w/h 0,67) sevillalaisesta sisäpihasta.
+   * KUVAHYLKÄYKSET syineen: "Seville (Spain).jpg" ja koko Jose A:n
+   * ilmakuvasarja (kuvan päälle lisätty kehys), "PlazaEspanaDesdeAire2
+   * .JPG" (poltettu päiväysleima kuvan päällä), "Panorama Catedral de
+   * Sevilla.jpg" ja "Puente de Triana desde El Altozano.JPG"
+   * (tunnistettavia kasvoja etualalla), "Sevilla - Torre del Oro 03
+   * 2015-12-06.jpg" (soutuvene lähellä etualalla, kasvot luettavissa
+   * täydessä koossa), "Vista aerea Sevilla.JPG", "Sevilla 4.jpg" ja
+   * "Guadalquivir en Sevilla, Puente del Alamillo… 2015.JPG" (utuisia
+   * korkealta otettuja ilmakuvia, joissa kaupunkia ei erota),
+   * "Triana panorama.JPG" (4,38 leveä kaistale, ei kestä lehden
+   * rajausta), "Teatro de la Maestranza - Seville.JPG" (etualan
+   * risteilyveneen kyljessä luettava mainososoite ja puhelinnumero),
+   * "San Fernando recibe las llaves de Sevilla, Francisco Pacheco.jpg"
+   * ja "Entrega de las llaves a San Fernando.jpg" (molemmissa taulun
+   * kehys mukana kuvassa).
+   *
+   * AIHETOISTO ON PIDETTY KURISSA: yksikään tiedosto ei esiinny
+   * kahdesti. Kaksi kohdetta esiintyy kahdella ERI tiedostolla ja eri
+   * roolissa: NO8DO (kaivonkansi kansikuvana, parvekelippu matkaoppaan
+   * jaksossa 3) ja tupakkatehdas (julkisivu nostossa SV2,
+   * azulejopaneeli sikarintekijättäristä kansikuvana, Carmenin vuoden
+   * 1875 lavastuslitografia nostossa M1). Perustelu on sama kuin
+   * Karachin Merewether-tornilla: molemmat ovat kaupungin arkisia
+   * tunnuksia, joita lehti käsittelee kolmesta eri suunnasta.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta, sen historiasta tai merkityksestä EIKÄ kuvaile
+   * kuvaa visuaalisesti, ja on yksi virke. Kaikki 22 selitettä on
+   * kirjoitettu tässä asussa, ja jokaisen selitteen väite tulee samoista
+   * en-Wikipedian raakateksteistä kuin muukin lehti.
+   *
+   * MINITEHTÄVÄ on historiasivulla ja kysyy, millä nimellä Alcázarin
+   * arabiankieliset kirjoitukset kutsuvat Pedro I:tä. Vastaus on samalla
+   * sivulla nostossa H3, eikä laudan visa (js/packs/europe-questions.js,
+   * kohta sevilla) kysy tätä — sen viisi kysymystä koskevat
+   * Guadalquiviria, nimeä Hispalis, oliiviöljyn vientiä amforoissa,
+   * Amerikan-kaupan yksinoikeutta ja katedraalin kellotornia.
+   */
+  sevilla: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sevilla',
+      johdanto: 'Guadalquivirin itärannalla, kahdeksankymmentä kilometriä '
+        + 'Atlantilta ylävirtaan. Roomalaisten Hispalis, almohadien '
+        + 'Ishbiliya ja Amerikan-laivaston kotisatama seurasivat '
+        + 'toisiaan saman jokimutkan äärellä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Patio de las Doncellas, Alcázares Reales de Sevilla.jpg',
+          selite: 'Piha kuuluu Pedro I:n 1360-luvulla rakennuttamaan '
+            + 'mudéjar-palatsiin, ja sen alta löytyi vuosien 2002–2005 '
+            + 'kaivauksissa alkuperäinen puutarha altaineen, joka oli '
+            + 'haudattu marmorilattian alle 1580-luvulla.',
+          lahde: 'Andbog, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Trapa Nodo.jpg',
+          selite: 'Kaupungin tunnus NO8DO on sanaleikki, jossa keskellä '
+            + 'oleva kahdeksikko luetaan sanaksi madeja, lankakerä, '
+            + 'jolloin koko rivi kuuluu "no me ha dejado" eli "ei ole '
+            + 'hylännyt minua".',
+          lahde: 'Eduardo Milla, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Cigarreras en fábrica de tabacos de Sevilla.JPG',
+          selite: 'Gonzalo Bilbaon maalaus sikarintekijättäristä on '
+            + 'tunnetuin niistä teoksista, joilla tupakkatehtaan '
+            + 'naistyöläisiä on muistettu; tehtaan koko sikarintyövoima '
+            + 'oli vuodesta 1829 alkaen naisten.',
+          lahde: 'CarlosVdeHabsburgo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Seville (18370564119).jpg',
+          selite: 'Vanhakaupunki on neljän neliökilometrin laajuinen, ja '
+            + 'sen ytimessä katedraali, Alcázar ja Intian arkisto '
+            + 'muodostavat yhden Unescon maailmanperintökohteen.',
+          lahde: 'Luca Nebuloni, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Sevilla desde la Torre del Oro (1).jpg',
+          selite: 'Vasemmalla rannalla on Triana, jonka Alfonso XIII:n '
+            + 'kanava erottaa muusta kaupungista lähes saareksi.',
+          lahde: 'Gzzz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Sevilla - March 2011 - 063.jpg',
+          selite: 'Sevilla on rakennettu Guadalquivirin laaksoon '
+            + 'keskimäärin seitsemän metriä merenpinnan yläpuolelle, ja '
+            + 'kunnan pinta-ala on 141 neliökilometriä.',
+          lahde: 'Michiel1972, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Silta joka korvasi seitsemän vuosisadan venesillan',
+          tiedosto: 'Sevilla - Puente de Triana 01 2015-12-06b.jpg',
+          teksti: 'Maurit rakensivat 1171 kalifi Abu Yaqub Yusufin aikana '
+            + 'Sevillan ja Trianan väliin venesillan: peräkkäin '
+            + 'ankkuroituja veneitä, joiden päällä kulki kansi. Se '
+            + 'palveli lukemattomien korjausten turvin lähes seitsemän '
+            + 'vuosisataa. Isabel II:n hallituskaudella tilalle '
+            + 'rakennettiin vihdoin kiinteä silta, joka valmistui 1852 '
+            + 'kaupungin ensimmäisenä pysyvänä siltana. Rautakaarinen '
+            + 'Puente de Isabel II on 149 metriä pitkä, ja se ylittää '
+            + 'Alfonso XIII:n kanavan eli sen Guadalquivirin haaran, '
+            + 'joka tekee Trianasta melkein saaren.',
+          selite: 'Sillan länsipäähän rakennettiin 1927 Aníbal Gonzálezin '
+            + 'suunnittelema pieni neomudéjar-kappeli, ja silta ja '
+            + 'kappeli julistettiin yhdessä kansallismuistomerkiksi 1976.',
+          lahde: 'Rafa Esteve, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Puente de Isabel II',
+        },
+        {
+          otsikko: 'Tehdas, jossa vauvat nukkuivat työpöytien vieressä',
+          tiedosto: 'RECTORADO DE UNIVERSIDAD.jpg',
+          teksti: 'Kuninkaallisen tupakkatehtaan rakentaminen alkoi 1728 '
+            + 'kaupunginmuurien ulkopuolella vanhalla roomalaisella '
+            + 'hautausmaalla, ja työ eteni katkoen kolme vuosikymmentä. '
+            + 'Valmis rakennus mittasi 185 kertaa 147 metriä ja oli '
+            + 'Espanjan toiseksi suurin heti El Escorialin jälkeen. '
+            + 'Sikareita tekivät ensin pelkät miehet, mutta vuoden 1811 '
+            + 'sulkemisen jälkeen työ siirtyi naisille, ja 1880-luvun '
+            + 'huipussaan tehtaassa työskenteli noin 6 000 naista. '
+            + 'Keksijä Hiram Maxim kertoi muistelmissaan, että noin '
+            + 'kolmasosalla nuorista työntekijöistä oli vauva '
+            + 'hoidettavanaan kesken työpäivän.',
+          selite: 'Rakennuksessa toimii nykyään Sevillan yliopisto, jota '
+            + 'varten sisätiloja muutettiin 1950-luvulla.',
+          lahde: 'PEPE GADEIRAS, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Royal Tobacco Factory',
+        },
+        {
+          otsikko: 'Torni, jonka kulta oli laastia',
+          tiedosto: 'Torre del Oro, Guadalquivir, Sevilla.jpg',
+          teksti: 'Kaksitoistasivuinen vartiotorni nousi joen rantaan '
+            + '1220–1221 Sevillan almohadikuvernöörin Abu l-Ulàn '
+            + 'käskystä valvomaan jokea pitkin tulevaa liikennettä. Nimi '
+            + 'Torre del Oro eli Kultatorni tulee kultaisesta hohteesta, '
+            + 'jonka laastin, kalkin ja puristetun heinän seos loi — '
+            + 'kultaa tornissa ei ole koskaan ollut. Tornista lähti joen '
+            + 'poikki ketju, jonka toinen ankkuripiste vastarannalla on '
+            + 'sittemmin kadonnut; sillä yritettiin sulkea satama '
+            + 'kastilialaislaivastolta 1248. Ylin, pyöreä kerros on '
+            + 'vasta vuodelta 1760: sen '
+            + 'rakensi Lissabonin maanjäristyksen jäljiltä sama '
+            + 'sotilasinsinööri Sebastian Van der Borcht, joka '
+            + 'suunnitteli tupakkatehtaan.',
+          selite: 'Torni toimi keskiajalla vankilana, ja siinä on nykyään '
+            + 'merenkulun museo.',
+          lahde: 'Martinvl, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Torre del Oro',
+        },
+        {
+          otsikko: 'Katupuiden hedelmät, jotka päätyvät mämmiin',
+          tiedosto: 'Orangesinsevilla.JPG',
+          teksti: 'Sevillan appelsiinipuissa kasvaa katkeraa appelsiinia, '
+            + 'jonka raakaa hedelmälihaa ei yleensä syödä ja jota '
+            + 'Andalusiassa käytetään harvoin paikan päällä. Kerran '
+            + 'vuodessa sato kerätään ja laivataan Britanniaan: pektiiniä '
+            + 'on enemmän kuin makeassa appelsiinissa, joten marmeladi '
+            + 'hyytyy paremmin ja sitä saadaan enemmän. Varhaisin tunnettu '
+            + 'resepti "marmelet of oranges" on Eliza Cholmondeleyn '
+            + 'kirjaama vuodelta 1677. Sama hedelmä on suomalaisessa '
+            + 'keittiössä tuttu toisesta yhteydestä: mämmiin jauhetaan '
+            + 'sen kuorta.',
+          selite: 'Katkera appelsiini on pomelon ja villin '
+            + 'mandariiniappelsiinin risteymä, ja se on kotoisin '
+            + 'Kaakkois-Aasiasta.',
+          lahde: 'Florance, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bitter orange',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Seville (18556404735).jpg',
+          selite: 'Sevillan kesät ovat Euroopan suurkaupunkien kuumimmat: '
+            + 'heinä- ja elokuussa päivälämpötila on keskimäärin noin 36 '
+            + 'astetta ja yölämpötila 21.',
+          lahde: 'Luca Nebuloni, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Sevilla on Andalusian itsehallintoalueen ja Sevillan '
+          + 'maakunnan pääkaupunki: kunnassa asuu vajaat 687 000 ihmistä '
+          + 'ja koko kaupunkiseudulla noin puolitoista miljoonaa. '
+          + 'Matkailijan Sevilla on kuitenkin pieni. Neljän '
+          + 'neliökilometrin vanhakaupunki Casco Antiguo on kävelymatkan '
+          + 'päässä joka suuntaan, ja sen sydämessä katedraali, Alcázar '
+          + 'ja Intian arkisto seisovat kolmen aukion päässä toisistaan. '
+          + 'Pohjoisessa on Macarena vanhoine muureineen, etelässä '
+          + 'María Luisan puisto ja Plaza de España. Joen yli Trianaan '
+          + 'pääsee sillalla, jonka länsipäässä alkaa toinen kaupunki: '
+          + 'merimiesten, keramiikantekijöiden ja flamencolaulajien '
+          + 'kortteli.',
+        artikkeli: {
+          nimi: 'Matkailijan Sevilla',
+          taitto: 'opas',
+          teksti: 'Jokisatama kahdeksankymmenen kilometrin päässä merestä, '
+            + 'sen ympärille kasvanut vanhakaupunki ja yksi silta, jonka '
+            + 'takana kaikki on toisin.',
+          nosto: 'Sevillan satama on Espanjan ainoa jokisatama, ja se '
+            + 'sijaitsee 80 kilometrin päässä Guadalquivirin suulta; '
+            + 'vuonna 2006 sen kautta kulki 5,3 miljoonaa tonnia tavaraa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Junalla saavutaan Santa Justan asemalle, joka '
+                + 'avattiin 1991 ja jolta AVE-suurnopeusjunat kulkevat '
+                + 'Madridiin; Sevilla kuuluu verkkoon, joka yhdistää sen '
+                + 'seitsemääntoista Espanjan suureen kaupunkiin. '
+                + 'Lentokentän uusi terminaali on Rafael Moneon '
+                + 'suunnittelema, ja se rakennettiin vuoden 1992 '
+                + 'maailmannäyttelyä varten samaan aikaan kuin Alamillon '
+                + 'ja Centenarion sillat sekä SE-30-kehätie. Kaupungin '
+                + 'sisällä kulkee metro, jonka kaikilla asemilla on '
+                + 'laituriovet, sekä keskustan halki vuodesta 2007 '
+                + 'ajanut MetroCentro-raitiovaunu. Vanhakaupunki on '
+                + 'kuitenkin niin tiivis, että lähes kaikki kävellään: '
+                + 'Unescon maailmanperintökohteen kolme rakennusta '
+                + 'sijaitsevat saman aukiorykelmän ympärillä.',
+              kuva: {
+                tiedosto: 'Plaza del Triunfo.jpg',
+                selite: 'Vasemmalla on Intian arkisto, jonka Juan de '
+                  + 'Herrera suunnitteli 1572 kauppiaskillan taloksi, ja '
+                  + 'oikealla katedraali, jonka rakentaminen kesti 73 '
+                  + 'vuotta ja päättyi 1506.',
+                lahde: 'José Luis Filpo Cabana, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Suurin osa kaupungista on Guadalquivirin '
+                + 'itäpuolella; Triana, La Cartuja ja Los Remedios ovat '
+                + 'länsirannalla. Kaupunki on samalla leveyspiirillä kuin '
+                + 'Kalifornian San Jose ja Sisilian Catania, aivan '
+                + 'Ateenan pohjoispuolella, mutta se on sisämaassa: '
+                + 'lähimmät satamakaupungit Cádiz ja Huelva ovat '
+                + 'rannikolla, ja etäisyys mereen tekee Sevillan kesistä '
+                + 'selvästi kuumemmat. Vanhakaupungin pohjoislaidalla '
+                + 'seisoo yhä pitkä pätkä almohadien muuria; muurit '
+                + 'rakennettiin ensi kerran Julius Caesarin käskystä, '
+                + 'uudestaan vuoden 844 viikinkihyökkäyksen jälkeen ja '
+                + 'vuonna 1221 almohadit lisäsivät niihin vallihaudan ja '
+                + 'toisen, ulomman muurilinjan.',
+              kuva: {
+                tiedosto: 'Calle Betis y Torre Sevilla.jpg',
+                selite: 'Calle Betis on Trianan puoleinen rantakatu, ja '
+                  + 'oikealla kohoava Torre Sevilla valmistui vuoden 1992 '
+                  + 'maailmannäyttelyn alueen kupeeseen.',
+                lahde: 'Gzzz, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kahdeksikko kaivonkannessa',
+              teksti: 'Kaupungin virallinen tunnus NO8DO näkyy Sevillassa '
+                + 'kaikkialla: lipussa, katujen kaivonkansissa, '
+                + 'puistonpenkeissä ja parvekkeilta riippuvissa '
+                + 'viireissä. Se on kuvasanaleikki, jossa keskimmäinen '
+                + 'kahdeksikko luetaan sanana madeja, lankakerä, jolloin '
+                + 'rivi kuuluu "no me ha dejado" eli "ei ole hylännyt '
+                + 'minua". Legendan mukaan tunnuksen antoi kuningas '
+                + 'Alfonso X, joka asui kaupungin Alcázarissa ja sai '
+                + 'sevillalaisilta tuen silloin, kun hänen poikansa — '
+                + 'myöhempi Sancho IV — yritti anastaa valtaistuimen. '
+                + 'Sama kuningas antoi kaupungille arvonimen "hyvin '
+                + 'uskollinen".',
+              kuva: {
+                tiedosto: 'NO8DO.JPG',
+                selite: 'Sevillan lippu ripustetaan parvekkeille '
+                  + 'juhlapäivinä, ja siinä on kaupungin tunnus NO8DO.',
+                lahde: 'CarlosVdeHabsburgo, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kuningattaren rakennusbuumi',
+              teksti: 'Kuningatar Isabel II:n suoran hallituskauden aikana '
+                + 'noin 1843–1868 Sevillan porvaristo investoi '
+                + 'rakennusbuumiin, jollaista kaupunki ei ollut nähnyt '
+                + 'aiemmin: katuvalaistus laajeni koko kuntaan ja suurin '
+                + 'osa kaduista päällystettiin. Samalta kaudelta on '
+                + 'Trianan silta. Vuosisadan jälkipuoliskolla '
+                + 'rautatierakentaminen ja vanhojen muurien purkaminen '
+                + 'avasivat kaupungille tilaa kasvaa itään ja etelään; '
+                + 'sähköyhtiö Sevillana de Electricidad perustettiin '
+                + '1894 ja Plaza de Armasin rautatieasema vihittiin '
+                + '1901. Väkiluku oli 112 529 vuonna 1857 ja 133 247 '
+                + 'vuonna 1877 — isoisän matkavuosi osui juuri näiden '
+                + 'kahden laskennan väliin.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Sevillan säärivi puuttuu vielä pelistä, joten nämä '
+                + 'luvut ovat en-Wikipedian Sevilla-artikkelin '
+                + 'ilmasto-osiosta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Ilmasto on kuuman kesän Välimeren '
+                + 'ilmasto, ja Sevilla on Manner-Euroopan lämpimin '
+                + 'kaupunki ja Euroopan kuumin suuri '
+                + 'kaupunkiseutu: vuoden keskilämpötila on '
+                + '19,6 astetta, päivisin 25,7 ja öisin 13,3. Heinä- ja '
+                + 'elokuu ovat kuumimmat, päivälämpötila keskimäärin '
+                + 'noin 36 astetta ja yölämpötila 21; yli neljänkymmenen '
+                + 'asteen lukemat eivät ole kesällä harvinaisia, ja '
+                + 'kaupunki oli maailman ensimmäinen, joka alkoi nimetä '
+                + 'helleaaltonsa. Kuumin mitattu lukema on 46,6 astetta '
+                + '23. heinäkuuta 1995 ja kylmin −5,5 astetta '
+                + '12. helmikuuta 1956. Talvet ovat leudot ja sateet '
+                + 'kohtalaiset, joten kevät ja myöhäissyksy ovat '
+                + 'miellyttävintä aikaa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Roomalainen, maurilainen ja kristitty valtakunta '
+        + 'seurasivat toisiaan saman joen rannalla. Jokainen jätti '
+        + 'jälkensä muuriin, minareettiin ja palatsin saleihin, usein '
+        + 'samaan rakennukseen kerrostuen.',
+      tehtava: {
+        kysymys: 'Millä nimellä Alcázarin arabiankieliset kirjoitukset kutsuvat kuningas Pedro I:tä?',
+        vaihtoehdot: [
+          'Sultan Don Bidru',
+          'Emir Don Pedro',
+          'Kalifi Don Petrus',
+          'Malik Don Pedro',
+        ],
+        oikea: 0,
+        fakta: 'Palatsin pohjakerros on Pedro I:n 1360-luvun rakennustyötä, '
+          + 'ja sen arabiankieliset kirjoitukset puhuvat kristitystä '
+          + 'kuninkaasta sulttaanina — samaan aikaan julkisivun '
+          + 'latinankielinen rivi kutsuu häntä Kastilian ja Leónin '
+          + 'kuninkaaksi Jumalan armosta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Minareetti, joka valmistui voitonriemuun',
+          tiedosto: 'La Giralda (51599631667).jpg',
+          teksti: 'Kalifi Abu Ya\'qub Yusuf käski 1184 rakentaa '
+            + 'suurmoskeijalle minareetin, mutta työ pysähtyi samana '
+            + 'vuonna: ensin kuoli arkkitehti ja puolitoista kuukautta '
+            + 'myöhemmin kalifi itse. Rakentaminen jatkui vasta 1188 ja '
+            + 'kulki kolmen arkkitehdin käsien läpi. Torni valmistui '
+            + '10. maaliskuuta 1198, kun sen huippuun nostettiin neljä '
+            + 'kultaista tai pronssista palloa muistoksi voitosta '
+            + 'Kastilian Alfonso VIII:sta neljä vuotta aiemmin. Sisällä '
+            + 'ei ole portaita vaan 35 loivaa ramppia: aikalaiskronikan '
+            + 'mukaan ne tehtiin niin leveiksi, että juhtaeläimetkin '
+            + 'pääsivät ylös.',
+          selite: 'Almohadiaikainen runko-osa on 50,51 metriä korkea, ja '
+            + 'sen päälle rakennettiin 1558–1568 Hernán Ruiz nuoremman '
+            + 'suunnittelema renessanssitapuli.',
+          lahde: 'Francisco Anzola from United States, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Giralda',
+        },
+        {
+          otsikko: 'Viisitoista kuukautta muurien takana',
+          tiedosto: 'Murallas de Sevilla (2).JPG',
+          teksti: 'Kastilian kuningas Ferdinand III piiritti Sevillaa '
+            + 'vuodesta 1247 alkaen, ja hänen laivastonsa katkaisi jokea '
+            + 'pitkin kulkevan avunsaannin. Kaupunki antautui '
+            + '23. marraskuuta 1248 viidentoista kuukauden piirityksen '
+            + 'jälkeen. Antautumisehtoihin kuului väestön poistuminen, ja '
+            + 'aikalaislähteiden mukaan kaupungista todella lähti suuri '
+            + 'joukko ihmisiä. Muurit, joita vastaan piiritys käytiin, '
+            + 'olivat almohadien työtä: he lisäsivät vanhaan linjaan '
+            + '1221 vallihaudan ja toisen, matalamman ulkomuurin. '
+            + 'Sevillasta tuli osa Kastilian kruunua.',
+          selite: 'Suurin osa kaupunginmuureista purettiin vuoden 1861 '
+            + 'jälkeen rakentamisen tieltä, mutta pohjoisreunasta on '
+            + 'jäljellä huomattava osuus.',
+          lahde: 'Gzzz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ferdinand III (Kastilia)',
+        },
+        {
+          otsikko: 'Palatsi, jonka seinät puhuvat kahta kieltä',
+          tiedosto: 'Texto en la portada del Palacio de Pedro I.JPG',
+          teksti: 'Kastilian kuningas Pedro I rakennutti 1360-luvulla '
+            + 'Alcázariin uuden mudéjar-tyylisen palatsin. Julkisivun '
+            + 'latinankielinen kirjoitus antaa vuoden 1364 ja '
+            + 'Suurlähettiläiden salin arabiankielinen kirjoitus vuoden '
+            + '1366 — todennäköiset aloitus- ja valmistumisvuodet. '
+            + 'Pohjakerroksen arabiankieliset tekstit kutsuvat kristittyä '
+            + 'kuningasta nimellä "Sultan Don Bidru". Työhön lähetti '
+            + 'todennäköisesti käsityöläisiä Pedron liittolainen '
+            + 'Muhammad V, Granadan nasridihallitsija, ja lopputulos '
+            + 'muistuttaa läheisesti samaan aikaan rakennettua '
+            + 'Alhambraa.',
+          selite: 'Suurlähettiläiden salin puuovien arabiankielisen '
+            + 'kirjoituksen mukaan koristelu valmistui 1366, ja ovet '
+            + 'teettivät toledolaiset käsityöläiset.',
+          lahde: 'CarlosVdeHabsburgo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Alcázar of Seville',
+        },
+        {
+          otsikko: 'Yhdeksän kilometriä hyllyä yhden kaupan muistoksi',
+          tiedosto: 'Galería meridional, planta alta del Archivo de Indias (Sevilla).jpg',
+          teksti: 'Vain Sevillasta lähtenyt ja sinne palannut purjelaiva '
+            + 'sai käydä kauppaa Espanjan Amerikan-siirtomaiden kanssa, '
+            + 'joten koko Euroopan kauppiaskunnan oli tultava tänne — ja '
+            + 'kaupungin väkiluku ylitti satatuhatta. Guadalquivirin '
+            + 'mataloituminen siirsi kaupan vähitellen alavirtaan, '
+            + 'laivastot Cádiziin 1680 ja Amerikan-kaupan viraston Casa '
+            + 'de Contrataciónin 1717. Kaarle III '
+            + 'perusti 1785 Intian arkiston vanhaan kauppakillan taloon, '
+            + 'jonne koottiin Simancasista, Cádizista ja Sevillasta '
+            + 'hajallaan olleet asiakirjat. Niitä on nykyään yhdeksän '
+            + 'kilometriä hyllyä, 43 000 nidettä ja noin 80 miljoonaa '
+            + 'sivua.',
+          selite: 'Ennen kauppakillan taloa Sevillan kauppiaat tekivät '
+            + 'kauppansa katedraalin viileissä holveissa.',
+          lahde: 'Jl FilpoC, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'General Archive of the Indies',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Yhteenkään muuhun Euroopan kaupunkiin ei ole sijoitettu '
+        + 'yhtä montaa oopperaa kuin tähän. Joen toisella rannalla on '
+        + 'kaupunginosa, jota pidetään koko flamencoperinteen '
+        + 'syntypaikkana.',
+      tehtava: {
+        kysymys: 'Mitä Sevillan kaupunginosaa pidetään flamencon syntypaikkana?',
+        vaihtoehdot: [
+          'Triana',
+          'Macarena',
+          'Santa Cruz',
+          'Los Remedios',
+        ],
+        oikea: 0,
+        fakta: 'Kaupunginosa on joen länsipuolella, ja siellä asui '
+          + 'perinteisesti merimiehiä, keramiikantekijöitä ja '
+          + 'härkätaistelijoita; flamencotaiteilijoita on Sevillassa '
+          + 'enemmän kuin missään muualla Espanjassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jonne on sijoitettu 153 oopperaa',
+          tiedosto: 'Carmen 1875 Act1 lithograph Lamy NGO1p736.jpg',
+          teksti: 'Vuoden 2012 asiantuntijaselvityksen mukaan Sevillaan on '
+            + 'sijoitettu 153 oopperaa, enemmän kuin mihinkään muuhun '
+            + 'Euroopan kaupunkiin. Listalla ovat Beethovenin Fidelio, '
+            + 'Mozartin Figaron häät ja Don Giovanni, Rossinin Sevillan '
+            + 'parturi, Donizettin La favorite ja Bizet\'n Carmen, jonka '
+            + 'nimihenkilö on sikarintekijä kaupungin kuninkaallisessa '
+            + 'tupakkatehtaassa. Kantaesitys nähtiin Pariisissa 1875, '
+            + 'kaksi vuotta isoisän matkan jälkeen — ja sen ensimmäinen '
+            + 'näytös alkaa tehtaan portilta.',
+          selite: 'Carmenin ensimmäinen näytös sijoittuu Sevillan '
+            + 'kuninkaallisen tupakkatehtaan portille, ja oopperan '
+            + 'nimihenkilö on siellä työskentelevä sikarintekijä.',
+          lahde: 'Pierre-Auguste Lamy, Wikimedia Commons (PD)',
+          wiki: 'Georges Bizet',
+        },
+        {
+          otsikko: 'Kaupunginosa, jota pidetään flamencon kotina',
+          tiedosto: 'Seville (18531231626).jpg',
+          teksti: 'Joen länsipuolella sijaitsevaa Trianaa pidetään '
+            + 'flamencon syntypaikkana: taidemuoto sai alkunsa köyhien ja '
+            + 'syrjittyjen ilmaisuna, ja Sevillan romaniväestö oli '
+            + 'keskeisessä osassa sen kehityksessä. Alun perin '
+            + 'andalusialaisen kulttuurin ilmauksesta on tullut koko '
+            + 'Espanjan kansallinen tunnus, ja flamencotaiteilijoita on '
+            + 'Sevillassa enemmän kuin missään muualla maassa. Trianassa '
+            + 'asui perinteisesti merimiehiä, keramiikantekijöitä, '
+            + 'rakennustyöläisiä ja härkätaistelijoita — ja laulajia ja '
+            + 'tanssijoita heidän seassaan.',
+          selite: 'Trianan vanha Santa Anan keramiikkatehdas San Jorgen '
+            + 'kadulla on osittain muutettu kaupunginosan '
+            + 'keramiikkamuseoksi.',
+          lahde: 'Luca Nebuloni, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Triana, Seville',
+        },
+        {
+          otsikko: 'Tanssi, joka ei sittenkään ole flamencoa',
+          tiedosto: 'Portada feria 2019An002.jpg',
+          teksti: 'Nimestään huolimatta sevillana-tanssia, jota usein '
+            + 'esitellään flamencona, ei pidetä alkuperältään '
+            + 'sevillalaisena. Sen sijaan sevillanas-kansanlaulut ja '
+            + 'niihin kuuluva nelivaiheinen tanssi ovat aidosti '
+            + 'sevillalaisia, ja niitä tanssitaan yhä huhtikuun ferian '
+            + 'telttakujilla aamukuuteen asti. Messut perustettiin '
+            + '25. elokuuta 1846 karjamarkkinoiksi, ja ensimmäinen feria '
+            + 'pidettiin 18. huhtikuuta 1847 Prado de San Sebastiánilla '
+            + 'kaupungin laidalla. Vuonna 2012 telttoja oli 1 048.',
+          selite: 'Ferian portada eli pääportti rakennetaan joka vuosi '
+            + 'uudestaan, työ aloitetaan kuukausia etukäteen ja purku '
+            + 'kestää juhlan jälkeen viikkoja.',
+          lahde: 'Anual, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Seville Fair',
+        },
+        {
+          otsikko: 'Festivaali, joka väittää olevansa maailman suurin',
+          tiedosto: 'Teatro maestranza 2010 001.jpg',
+          teksti: 'Sevilla isännöi joka toinen vuosi La Bienal '
+            + '-flamencofestivaalia, joka kestää lähes kuukauden ja jota '
+            + 'järjestäjät kutsuvat maailman suurimmaksi '
+            + 'flamencotapahtumaksi. Klassinen ja kansanomainen jakavat '
+            + 'kaupungissa saman katon: María Luisan puiston laidalla '
+            + 'seisova Teatro Lope de Vega rakennettiin vuoden 1929 '
+            + 'Ibero-Amerikan-näyttelyn Sevillan paviljongiksi, siihen '
+            + 'mahtui 1 100 katsojaa, ja sen ohjelmistossa vuorottelevat '
+            + 'teatteri, tanssi, ooppera, jazz ja flamenco.',
+          selite: 'Teatro de la Maestranza on Teatro Lope de Vegan '
+            + 'ohella yksi kaupungin tärkeimmistä teattereista ja '
+            + 'klassisen musiikin esiintymispaikoista.',
+          lahde: 'Anual, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Flamenco',
+        },
+      ],
+    },
+  ],
+  /*
+   * BERGEN on Euroopan laudan uusi kaupunkilehti (23.8.2026).
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-bergen.md ja sen
+   * riippumaton tarkistus tarkistus-bergen.md — TARKISTUKSEN KORJAUKSET
+   * VOITTAVAT faktapohjan. Jokainen väite on luettu itse en-Wikipedian
+   * raakatekstistä 23.8.2026 (artikkelit "Bergen", "Bryggen",
+   * "Bryggen inscriptions", "Bergenhus Fortress", "Bergen Cathedral",
+   * "Kontor", "Ole Bull", "Edvard Grieg", "Peer Gynt (Grieg)",
+   * "Troldhaugen", "Fløibanen", "Buekorps").
+   *
+   * TARKISTUKSESTA TEHDYT KORJAUKSET (tarkistus-bergen.md, osio 2):
+   *
+   * 1. (2.1) Jakso "Bryggen tänään" EI enää sano, että vuoden 1955
+   *    palon jälkeen rakennettiin keskiaikaisella tyylillä. Lähde
+   *    liittää keskiaikaisen tyylin nimenomaan 1702-palon jälkeiseen
+   *    jälleenrakennukseen ("Bryggen (which was rebuilt in a mediaeval
+   *    style)"), ja 1955-palosta se sanoo vain, että jäljelle jääneet
+   *    rakennukset kunnostettiin ja osa palaneista rakennettiin
+   *    uudelleen. Jakso kertoo nyt molemmat oikein päin.
+   * 2. (2.2) K3-noston huvilat: "Møhlenprisin ja Nygårdin välille sekä
+   *    Fløyen-vuoren rinteeseen" — lähde puhuu kahdesta erillisestä
+   *    sijainnista, ei siitä että Møhlenpris olisi rinne.
+   * 3. (2.3) H3: vuoden 1916 paloa EI sanota viimeisimmäksi. Sama
+   *    Wikipedian virke jatkuu vuoden 1955 Bryggenin palolla, joka on
+   *    nyt luettelossa mukana.
+   * 4. (2.4) M2: Ole Bull "oli perustamassa" Det Norske Theateria —
+   *    lähde sanoo "co-founded", ei että hän olisi ainoa perustaja.
+   * 5. (2.5) Madam Fellen laulu jäi kokonaan pois (ks. poisjätöt).
+   * 6. (2.6) H1: kirjurin kirjeenvaihdon kieliä EI mainita. Lähde
+   *    sanoo vain, että kirjuri oli yliopistossa lakia lukenut ja
+   *    latinantaitoinen ja että hän hoiti kirjeenvaihdon; "latinaksi
+   *    ja saksaksi" ei löydy lähteestä.
+   *
+   * LÄHTEEN SISÄINEN RISTIRIITA, JOKA ON KIRJOITETTU AUKI LUKIJALLE
+   * (resepti: ristiriita kerrotaan tai valitaan tarkempi lähde):
+   * vuoden 1702 palon laajuus. en-Wikipedian "Bergen" antaa saman
+   * artikkelin sisällä kaksi lukua — suurpalojen luettelossa "90% of
+   * the city was burned to ashes" ja kaupunkirakenne-osiossa
+   * "seven-eighths of the city burned". H3-nosto kertoo molemmat.
+   *
+   * POISJÄTÖT PERUSTELUINEEN:
+   * - Madam Felle (Oline Fell, 1831–1908) ja hänen olutkojunsa
+   *   Sandvikenissa: hyvä tarina, mutta Commonsissa EI ole yhtään
+   *   kuvasäännöt täyttävää kuvaa hänen patsaastaan (Kari Rolfsen
+   *   1990) — haku löysi vain Fløyenin penkin, joka on nimetty hänen
+   *   mukaansa. Kuvaton nosto olisi ainoa lehdessä, joten aihe
+   *   jätettiin pois kokonaan.
+   * - Lisztin ja Griegin tapaaminen Roomassa 1870 (faktapohjan M4):
+   *   en-Wikipedian kappaleessa on toimittajien lisäämä
+   *   {{failed verification}} -merkintä, ja tarkistus suositteli
+   *   vahvempaa lähdettä. Sellaista ei ollut käytettävissä, joten
+   *   koko lukusoittokohtaus jätettiin pois ja M4 rakennettiin Peer
+   *   Gyntin ympärille, joka on omassa artikkelissaan lähteistetty.
+   * - Toisen maailmansodan tapahtumat (miehitys, vuoden 1944
+   *   räjähdys, Håkonshallen vauriot) jätettiin pois: lehden painotus
+   *   on 1873:ssa ja yleislinjaus välttää nykysotaa. Håkonshallen
+   *   1950-luvun korjaus mainitaan kuvatekstissä ilman syytä, koska
+   *   kuva näyttää nykyisen, vaatimattomasti sisustetun salin.
+   * - Väestöluku jätettiin pois nostoista: se on visan oma vastaus
+   *   (europe-questions.js, bergen, kysymys 1) ja artikkeli antaa
+   *   siitä kaksi eri lukua (infobox 294 029 / leipäteksti 294 860).
+   * - Torget ja Fisketorget: faktapohjan mukaan näistä ei ole omaa
+   *   en-Wikipedia-artikkelia (kolme otsikkoa palautti 404), joten
+   *   niistä ei väitetä lehdessä mitään omaa faktaa; Torget mainitaan
+   *   vain paikannimenä oppaan kappaleessa.
+   *
+   * VISAN VASTAUKSET (europe-questions.js, bergen): reseptin mukaan
+   * vastausten pitää löytyä lehden teksteistä, mutta faktapohja ja
+   * tarkistus varoittavat toistamasta niitä nostojen pääväitteinä.
+   * Ratkaisu: kaikki viisi (Norja/Vestland, Bryggen, kuivattu turska,
+   * pääkaupunkiasema 1200-luvulla ja "seitsemän vuoren kaupunki")
+   * ovat ETUSIVUN LEIPÄTEKSTISSÄ (europe-artikkelit.js, avain
+   * "Bergen"), eivät yhdenkään noston pääväitteenä.
+   *
+   * KUVAT: kaikki haettu Commonsin kategorioista, lisenssi ja tekijä
+   * luettu rajapinnan extmetadatasta, ja jokainen katsottu silmin 900
+   * px:n esikatseluna. Tekijärivit ovat extmetadata.Artist-muodossa;
+   * kahdesta on siivottu vain lisenssiteksti pois ("Svein Skare, UiB,
+   * CC BY-SA 4.0" -> "Svein Skare, UiB") ja yhdestä Commonsin
+   * kaksinkertainen "Unknown authorUnknown author" -> "Unknown
+   * author", kuten paketissa on ennenkin tehty.
+   *
+   * AIHETOISTO, joka on tietoinen: Bryggen esiintyy kolmessa eri
+   * tiedostossa (avauskuvien laaja näkymä Vågenilta, K1:n Bellgårdenin
+   * kuja ja oppaan sisäpiha). Ne ovat kolme eri mittakaavaa samasta
+   * maailmanperintökohteesta, joka on koko kaupungin tunnistettavin
+   * paikka; sama tiedosto ei esiinny kahdesti.
+   */
+  bergen: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bergen',
+      johdanto: 'Puinen satamakaupunki kasvoi vuonon pohjukkaan '
+        + 'vuorten väliin ja eli vuosisatoja kalasta ja hansakaupasta. '
+        + 'Isoisän matkan aikoihin se ylitti ensi kertaa vanhat '
+        + 'rajansa ja levisi etelään uusiin kortteleihin.',
+      /*
+       * KANSIKUVAT ovat kaksi pikkunostoa ja yksi yllättävä
+       * yksityiskohta: Bergenhusin linnoitus (Bryggenin jälkeen
+       * kaupungin tärkein kohde), Mariakirken (kaupungin vanhin
+       * rakennus, joka selvisi paloista) ja Norjan ainoa yhä
+       * toiminnassa oleva johdinbussi. Yksikään ei ole minkään
+       * noston aiheena.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Bergenhus Fortress Bergen Norway 2009 1.JPG',
+          selite: 'Bergenhusin linnoitus menetti 1800-luvulla '
+            + 'puolustustehtävänsä mutta jäi sotilashallinnon '
+            + 'tukikohdaksi, ja siellä on yhä noin 150 sotilaan '
+            + 'varuskunta.',
+          lahde: 'User:Sveter, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Bergen - Mariakirken fra Øvregaten.jpg',
+          selite: 'Mariakirken on 1100-luvulta ja Bryggenin alueen '
+            + 'vanhin ja korkein rakennus.',
+          lahde: 'Odd Roar Aalborg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Skyss 8196, Allehelgens gate, Bergen, 2019 (01).jpg',
+          selite: 'Bergenin johdinbussijärjestelmä on ainoa yhä '
+            + 'toiminnassa oleva Norjassa ja toinen kahdesta koko '
+            + 'Skandinaviassa.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT ovat kolme laajaa yleiskuvaa kaupungin eri
+       * puolilta: idästä Fløyen-vuorelta koko kaupungin yli,
+       * mereltä Vågenin pohjukkaan Bryggenin edustalle ja
+       * pohjoisesta Sverresborgista Skutevikenin puutalojen ylle.
+       * Ei yhtään yksityiskohtakuvaa, ei herokuvia.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Vista de Bergen desde la montaña Fløyen, Noruega, 2019-09-08, DD 48.jpg',
+          selite: 'Bergenin keskusta on Vågen-lahden ympärillä, ja '
+            + 'lahden suulta avautuu Byfjorden, kaupungin oma vuono.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Bergen Bryggen 1017.jpg',
+          selite: 'Bryggen on Vågenin itärannan vanha laituri, jonka '
+            + 'ympärillä hansakauppa Bergenissä käytiin.',
+          lahde: 'Anna Anichkova, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Bergen - Skuteviken sett fra Sverresborg.jpg',
+          selite: 'Skuteviken on yksi Bergenin vanhoista '
+            + 'puutalokaupunginosista, ja se nousee rannasta suoraan '
+            + 'vuoren rinteeseen.',
+          lahde: 'Odd Roar Aalborg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Varasto, joka palveli kahteen suuntaan',
+          tiedosto: 'Bryggen i Bergen - Bellgården fra landsiden.jpg',
+          teksti: 'Hansaliiton kontori perustettiin Bryggenin rantaan '
+            + 'noin vuonna 1350, ja kun kaupungista kasvoi kaupan '
+            + 'keskus, laiturin talot siirtyivät vähitellen '
+            + 'saksalaisten kauppiaiden haltuun. Varastot palvelivat '
+            + 'kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta '
+            + 'tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua '
+            + 'viljaa jaettavaksi paikallisille. Vuoden 1702 palo '
+            + 'tuhosi hansakauppiaiden rakennukset, ja nykyisistä '
+            + 'taloista vain noin neljäsosa on rakennettu sen '
+            + 'jälkeen — loput ovat sitäkin nuorempia. Osa '
+            + 'kivikellareista on kuitenkin 1400-luvulta.',
+          selite: 'Bellgården on yksi Bryggenin nimekkäistä '
+            + 'kauppiaskartanoista, ja sen rakennukset ovat noin '
+            + 'kolmesataa vuotta vanhoja.',
+          lahde: 'Odd Roar Aalborg, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bryggen',
+        },
+        {
+          otsikko: 'Sali, jonka tehtävä unohtui',
+          tiedosto: 'Interior of Håkonshallen, 2019 (01).jpg',
+          teksti: 'Kuningas Håkon Håkonssonin (1217–1263) aikana '
+            + '1200-luvun puolivälissä rakennettu kivisali oli '
+            + 'Bergenin kuninkaankartanon suurin rakennus, ja se on '
+            + 'yhä Norjan suurin keskiaikainen maallinen rakennus. '
+            + 'Sen alkuperäinen tehtävä oli 1700-luvulle tultaessa '
+            + 'suurelta osin unohtunut. Vuonna 1840 todistettiin, '
+            + 'että kyseessä oli kuningas Håkonin vanha juhlasali, ja '
+            + 'seuraavan puolen vuosisadan ajan kaupungissa '
+            + 'väiteltiin sen ennallistamisesta. Henrik Ibsen '
+            + 'kirjoitti salin kunniaksi runon, ja runoilija Henrik '
+            + 'Wergeland otti ensimmäisenä käyttöön nimen Haakons '
+            + 'hall.',
+          selite: 'Håkonshallen ennallistettiin 1890-luvulla ja '
+            + 'uudelleen 1950-luvulla, ja se avattiin yleisölle 11. '
+            + 'syyskuuta 1961 tasan seitsemänsataa vuotta '
+            + 'ensimmäisen käyttönsä jälkeen.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bergen',
+        },
+        {
+          otsikko: 'Kaupunki ylittää vanhat rajansa',
+          tiedosto: 'Møhlenpris i Bergen - murbyen i Konsul Børs\' gate (1).jpg',
+          teksti: 'Vuoden 1855 tulipalo Torgallmenningenin '
+            + 'länsipuolella johti siihen, että alue rakennettiin '
+            + 'uudelleen säännöllisen kokoisiksi kortteleiksi. '
+            + 'Kaupungin rajoja laajennettiin 1876, ja Nygård, '
+            + 'Møhlenpris ja Sandviken kaupungistuivat nopeasti: '
+            + 'suuriin korttelitaloihin muuttivat sekä köyhät että '
+            + 'varakkaat. Arkkitehtuurissa sekoittuvat historismi, '
+            + 'klassismi ja art nouveau. Varakkaat rakensivat '
+            + 'huviloita Møhlenprisin ja Nygårdin välille sekä '
+            + 'Fløyen-vuoren rinteeseen, ja nämäkin alueet liitettiin '
+            + 'Bergeniin samana vuonna.',
+          selite: 'Møhlenpris liitettiin Bergeniin 1876, ja alue '
+            + 'rakennettiin nopeasti suuriksi asuinkortteleiksi.',
+          lahde: 'Odd Roar Aalborg, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bergen',
+        },
+        {
+          otsikko: 'Riimut, jotka palo kaivoi esiin',
+          tiedosto: 'Runepinne med skipsgrafitti.jpg',
+          teksti: 'Osa Bryggenistä paloi vuonna 1955, ja palopaikalla '
+            + 'aloitettiin kaivaus, joka kesti kolmetoista vuotta. '
+            + 'Maasta nousi noin 670 keskiaikaista riimukirjoitusta, '
+            + 'useimmat mäntyyn tai luuhun kaiverrettuja, ja löytöä '
+            + 'on kutsuttu 1900-luvun tärkeimmäksi riimulöydöksi. '
+            + 'Sitä ennen epäiltiin, käytettiinkö riimuja lainkaan '
+            + 'muuhun kuin nimiin ja juhlallisiin lauseisiin. '
+            + 'Bryggenin puikot ovat arkea: yksi sanoo nimilapun '
+            + 'tavoin ”Eysteinn omistaa minut”, toinen ”Rakkaani, '
+            + 'suutele minua”. Moni on 1300-luvulta, jolloin riimujen '
+            + 'luultiin jo kadonneen.',
+          selite: 'Bryggenin kaivauksista on löytynyt noin 670 '
+            + 'keskiaikaista riimukirjoitusta puuhun ja luuhun, ja ne '
+            + 'ovat nykyään Bryggens Museumin kokoelmissa.',
+          lahde: 'Svein Skare, UiB, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Riimusauva',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Torget in Bergen with Fløyen in the background (30824571222).jpg',
+          selite: 'Fløyen on noin 400 metriä korkea vuori aivan '
+            + 'keskustan takana, ja sen rinnettä nousee '
+            + 'Fløibanen-köysirata.',
+          lahde: 'TimOve from Norway, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Bergen on Norjan toiseksi suurin kaupunki ja '
+          + 'Vestlandin hallintokeskus, ja se on rakennettu '
+          + 'Bergenshalvøyen-niemimaalle vuonojen ja vuorten väliin; '
+          + 'kuntaa on 465 neliökilometriä ja se jakautuu kahdeksaan '
+          + 'kaupunginosaan. Matkailijan Bergen on silti pieni. '
+          + 'Kaikki alkaa Vågen-lahdesta: itärannalla on Bryggen, '
+          + 'pohjoiskärjessä Bergenhusin linnoitus ja lahden '
+          + 'pohjukassa Torget. Sieltä on muutama kortteli '
+          + 'Fløibanen-köysiradan alaasemalle. Etelään mentäessä '
+          + 'tullaan 1870-luvun uusiin kaupunginosiin Nygårdiin ja '
+          + 'Møhlenprisiin. Kaupunki on kyllin pieni käveltäväksi '
+          + 'mutta kyllin mäkinen, että köysirata kannattaa käyttää.',
+        artikkeli: {
+          nimi: 'Matkailijan Bergen',
+          taitto: 'opas',
+          teksti: 'Vuonon pohjukka, sen ympärille kasvanut puukaupunki '
+            + 'ja vuoret, joiden yli ei ajeta vaan kierretään.',
+          nosto: 'Bergenin satama on Norjan vilkkain sekä rahdin että '
+            + 'matkustajien osalta: risteilijöitä käy yli kolmesataa '
+            + 'vuodessa ja ne tuovat kaupunkiin lähes puoli miljoonaa '
+            + 'matkustajaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Bergen Airport Flesland on 18 kilometrin '
+                + 'päässä keskustasta, ja se on Scandinavian '
+                + 'Airlinesin, Norwegian Air Shuttlen ja Widerøen '
+                + 'tukikohta; suoria lentoja on 20 kotimaan ja 53 '
+                + 'ulkomaan kohteeseen. Bergenin satama on Norjan '
+                + 'vilkkain sekä rahdin että matkustajien osalta, ja '
+                + 'se on Hurtigruten-rannikkolaivan eteläinen '
+                + 'päätepiste — laiva lähtee päivittäin ja kulkee '
+                + 'aina Kirkenesiin asti. Fjord Line liikennöi '
+                + 'Tanskan Hirtshalsiin. Rautatieasema on Bergenin '
+                + 'radan pääteasema, ja rata kulkee 496 kilometriä '
+                + 'Osloon; Arnaan mennään Ulriken-tunnelin läpi noin '
+                + 'puolen tunnin välein, koska vastaavaa '
+                + 'maantietunnelia ei ole. Kaupungin sisällä kulkee '
+                + 'Bybanen-raitiotie.',
+              kuva: {
+                tiedosto: 'Bybanen Stadler Variobahn at Byparken, Bergen.jpg',
+                selite: 'Bybanen-raitiotie avattiin 2010 keskustan ja '
+                  + 'Nesttunin välille, ja linja jatkettiin '
+                  + 'Fleslandin lentoasemalle 2017.',
+                lahde: 'Kabelleger / David Gubler, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupungin rakenne',
+              teksti: 'Vanhin Bergen on Vågen-lahden ympärillä, ja '
+                + 'kaupunki levisi sieltä ensin länteen ja etelään. '
+                + 'Vuoret ympäröivät keskustaa joka suunnalta, ja '
+                + 'seitsemän vuoren joukkoon lasketaan aina Ulriken, '
+                + 'Fløyen, Løvstakken ja Damsgårdsfjellet, loput '
+                + 'kolme viidestä muusta. Kunnan korkein vuori on '
+                + 'Gullfjellet, 987 metriä. Fløyen itse on noin 400 '
+                + 'metriä korkea ja alkaa aivan keskustan takaa. '
+                + 'Sinne pääsee Fløibanen-köysiradalla, joka on 848 '
+                + 'metriä pitkä, nousee 302 metriä ja kuljettaa '
+                + 'lähes kaksi miljoonaa matkustajaa vuodessa; rata '
+                + 'avattiin 15. tammikuuta 1918 ja huipun ravintola '
+                + '1925. Ulrikenille menee oma köysiratansa, '
+                + 'Ulriksbanen, ja molemmilta vuorilta lähtee '
+                + 'merkittyjä polkuja.',
+              kuva: {
+                tiedosto: 'Floeibanen-2021.jpg',
+                selite: 'Fløibanen kuljettaa lähes kaksi miljoonaa '
+                  + 'matkustajaa vuodessa ja on yksi Norjan '
+                  + 'suosituimmista nähtävyyksistä.',
+                lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: buekorps',
+              teksti: 'Bergenissä on tapa, jota ei ole muualla: '
+                + 'buekorps, kaupunginosien omat marssivat '
+                + 'nuorisojoukot. Pataljoonat järjestäytyivät '
+                + 'virallisesti 1850-luvulla, ja niitä johtavat '
+                + 'nuoret itse; jokainen kuuluu tiettyyn '
+                + 'kaupunginosaan. Rivistössä on sotilaallinen '
+                + 'järjestys — puisia kivääreitä tai jousipyssyjä '
+                + 'kantavat rivimiehet, vanhemmat lapset upseereina '
+                + 'ja rummuttajat — mutta toiminta ulottuu '
+                + 'liikunnasta hyväntekeväisyyteen. Jäsenet ovat '
+                + 'noin seitsemästä yli kahdenkymmenen vuoden '
+                + 'ikäisiä. Kausi kestää maaliskuusta kesään, ja sen '
+                + 'huippu on 17. toukokuuta, jolloin buekorpsit ovat '
+                + 'kulkueen näkyvin osa. Ensimmäinen tyttöjen '
+                + 'buekorps perustettiin 1991.',
+            },
+            {
+              otsikko: 'Bryggen tänään',
+              teksti: 'Bryggen on ollut Unescon maailmanperintökohde '
+                + 'vuodesta 1979, ja puutalojen sisällä on nykyään '
+                + 'museoita, kauppoja, ravintoloita ja pubeja. '
+                + 'Alkuperäistä vuoden 1702 rakennuskantaa ovat vain '
+                + 'Schøtstuene ja muutama talo Julehusetin '
+                + 'suunnalla — ja juuri 1702-palon jälkeen Bryggen '
+                + 'rakennettiin uudelleen keskiaikaiseen tyyliin. '
+                + 'Vuoden 1955 palon jälkeen koko aluetta uhkasi '
+                + 'purkaminen, mutta jäljelle jääneet rakennukset '
+                + 'kunnostettiin ja osa palaneista rakennettiin '
+                + 'uudelleen. Palon raivaamalle tontille valmistui '
+                + '1976 Bryggens Museum. Alueen vanhin ja korkein '
+                + 'rakennus on Mariakirken.',
+              kuva: {
+                tiedosto: 'Bryggen 1 (52606770243).jpg',
+                selite: 'Bryggenin puutalojen sisäpihoilla on '
+                  + 'nykyään kauppoja, kahviloita ja museoita.',
+                lahde: 'Maarten Heerlien from Voorschoten, The Netherlands, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Bergenistä puuttuu, joten nämä '
+                + 'luvut ovat en-Wikipedian Bergen-artikkelin '
+                + 'sääruudusta (Floridan mittausasema, normaalikausi '
+                + '1991–2020) eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Ilmasto on leuto ja merellinen. '
+                + 'Toukokuu on kuivin kuukausi, noin 108 '
+                + 'millimetriä, ja joulukuu sateisin, noin 290 '
+                + 'millimetriä; sadepäiviä kertyy kuukausiluvuista '
+                + 'yhteen laskien noin kaksisataa vuodessa. '
+                + 'Aurinkoisinta on touko- ja kesäkuussa, yli 230 '
+                + 'tuntia kuukaudessa, ja pimeintä joulukuussa, '
+                + 'jolloin aurinkoa mitataan runsaat kolmetoista '
+                + 'tuntia koko kuukaudessa. Lämpimintä on heinä- ja '
+                + 'elokuussa, keskilämpötila runsaat viisitoista '
+                + 'astetta. Kuumin mitattu lukema on 33,4 astetta '
+                + '26. heinäkuuta 2019 ja kylmin -16,3 astetta '
+                + 'tammikuussa 1987. Sadetakki kannattaa ottaa '
+                + 'mukaan mihin vuodenaikaan tahansa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saksalaiset kauppiaat pitivät Bryggenin rannassa omaa '
+        + 'lakiaan neljän vuosisadan ajan, ja kaupunki paloi maan '
+        + 'tasalle yhä uudelleen — silti sama puurivistö nousi joka '
+        + 'kerta samalle paikalle.',
+      tehtava: {
+        kysymys: 'Mikä on jäänyt kiinni Bergenin tuomiokirkon ulkoseinään?',
+        vaihtoehdot: [
+          'tykinkuula',
+          'laivan ankkuri',
+          'kirkonkello',
+          'aurinkokello',
+        ],
+        oikea: 0,
+        fakta: 'Kuula on peräisin vuoden 1665 Vågenin taistelusta, '
+          + 'jossa englantilainen ja hollantilainen laivasto ottivat '
+          + 'yhteen Bergenin satamassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kauppahuone, jolla oli oma laki',
+          tiedosto: 'Communal room in Schøtstuene 2010.jpg',
+          teksti: 'Kontorit olivat oikeushenkilöitä: kauppiaiden '
+            + 'yhteisöllä oli oma kassa, oma sinetti, oma säännöstö '
+            + 'ja valta panna säännöt täytäntöön asukkaidensa '
+            + 'keskuudessa. Säännöstö oli kirjoitettu keskisaksaksi, '
+            + 'ja se luettiin kauppiasyhteisölle ääneen kerran '
+            + 'vuodessa. Sisäistä johtoa hoitivat aldermannit, jotka '
+            + 'olivat virassaan tavallisesti vuoden kerrallaan; '
+            + 'yhden näkemyksen mukaan Bryggenillä heitä oli alussa '
+            + 'kuusi. Bryggen, Brugge ja Lontoo saivat 1400-luvun '
+            + 'puolivälissä uuden viran, kirjurin: yliopistossa '
+            + 'lakia lukeneen ja latinaa hallitsevan miehen, joka '
+            + 'neuvoi aldermanneja ja hoiti kirjeenvaihdon.',
+          selite: 'Schøtstuene olivat hansakauppiaiden yhteiset '
+            + 'kokoontumissalit, joissa syötiin lämmin ruoka ja '
+            + 'pidettiin juhlat ja seremoniat.',
+          lahde: 'JopkeB, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hansaliitto',
+        },
+        {
+          otsikko: 'Etuoikeus, joka kesti neljäsataa vuotta',
+          tiedosto: 'Hieronymus Scholeus - View of Bergen - NMK.2022.0090 - National Museum of Art, Architecture and Design.jpg',
+          teksti: 'Hansakauppiaat asuivat omassa kaupunginosassaan, '
+            + 'jossa käytettiin keskisaksaa, ja heillä oli '
+            + 'yksinoikeus käydä kauppaa niiden pohjoisnorjalaisten '
+            + 'kalastajien kanssa, jotka purjehtivat Bergeniin joka '
+            + 'kesä. Kauppamonopoli Pohjois-Norjaan säilyi vuoteen '
+            + '1789 asti. Suhteet muihin tulokkaisiin eivät aina '
+            + 'olleet rauhalliset: 9. marraskuuta 1523 saksalaiset '
+            + 'asukkaat kävivät useiden Bergeniin asettuneiden '
+            + 'skotlantilaiskauppiaiden talouksien kimppuun. Noin '
+            + 'vuodesta 1600 hansan ote alkoi hellittää norjalaisten '
+            + 'kauppiaiden hyväksi, ja kontori suljettiin '
+            + '1750-luvulla.',
+          selite: 'Hieronymus Scholeuksen piirtämä näkymä 1500-luvun '
+            + 'lopulta esittää Bergenin siltä ajalta, jolloin '
+            + 'hansakauppiaat yhä hallitsivat Vågenin itärantaa.',
+          lahde: 'Hieronymus Scholeus, Wikimedia Commons (PD)',
+          wiki: 'Hansaliitto',
+        },
+        {
+          otsikko: 'Kaupunki, joka paloi yhä uudelleen',
+          tiedosto: 'BergenHordalandNorwayVagen.jpg',
+          teksti: 'Bergenin historia on tulipalojen luetteloa. Vuonna '
+            + '1198 kaupunki poltettiin sisällissodan yhteydessä, '
+            + '1248 tuhoutui yksitoista kirkkoa ja 1413 vielä '
+            + 'neljätoista. Suurin palo oli 1702, ja sen laajuudesta '
+            + 'kerrotaan kaksi eri lukua: yhdeksän kymmenesosaa tai '
+            + 'seitsemän kahdeksasosaa kaupungista. Silloin loppui '
+            + 'tervattujen ja hirsisten talojen aika, ja tilalle '
+            + 'tulivat maalatut, osin tiilipäällysteiset puutalot. '
+            + 'Uudet suurpalot iskivät Strandsideniin 1756 ja 1771, '
+            + 'vuonna 1916 keskustasta tuhoutui 300 rakennusta ja '
+            + 'vuonna 1955 osa Bryggeniä.',
+          selite: 'Bergen oli 1800-luvun lopulla yhä lähes kokonaan '
+            + 'puinen kaupunki, ja vuoden 1916 palossa keskustasta '
+            + 'tuhoutui 300 rakennusta, muun muassa Norjan vanhin '
+            + 'apteekki.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Bergen',
+        },
+        {
+          otsikko: 'Tykinkuula seinässä, vaalihuone kirkossa',
+          tiedosto: 'Catedral, Bergen, Noruega, 2019-09-08, DD 50.jpg',
+          teksti: 'Tuomiokirkon ulkoseinässä on yhä kiinni tykinkuula '
+            + 'vuoden 1665 Vågenin taistelusta, jossa englantilainen '
+            + 'ja hollantilainen laivasto ottivat yhteen kaupungin '
+            + 'satamassa. Vuonna 1814 kirkko toimi vaalikirkkona: yli '
+            + 'kolmensadan muun seurakuntakirkon tavoin se oli '
+            + 'äänestyspaikka, kun valittiin valitsijamiehet '
+            + 'Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan '
+            + 'perustuslain. Ne olivat maan ensimmäiset kansalliset '
+            + 'vaalit. 1880-luvulla arkkitehdit Christian Christie ja '
+            + 'Peter Andreas Blix johtivat korjausta, jossa '
+            + 'rokokoosisustus palautettiin keskiaikaiseen asuun.',
+          selite: 'Bergenin tuomiokirkko rakennettiin kivestä vuoden '
+            + '1248 palon jälkeen, ja vanhan kirkon pohjoisseinästä '
+            + 'osa liitettiin uuteen rakennukseen.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bergenin tuomiokirkko',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Kaksi bergeniläistä muusikkoa, viulisti Ole Bull ja '
+        + 'säveltäjä Edvard Grieg, tunsivat toisensa — ja juuri '
+        + 'isoisän matkan vuosina molempien elämässä tapahtui käänne.',
+      tehtava: {
+        kysymys: 'Kuka suostutteli Edvard Griegin vanhemmat lähettämään poikansa Leipzigin konservatorioon?',
+        vaihtoehdot: [
+          'Ole Bull',
+          'Henrik Ibsen',
+          'Nina Hagerup',
+          'Edmund Neupert',
+        ],
+        oikea: 0,
+        fakta: 'Bull oli Griegin perheen ystävä ja tunnisti '
+          + 'viisitoistavuotiaan lahjakkuuden kesällä 1858; Leipzigin '
+          + 'pianolinjaa johti tuolloin Ignaz Moscheles.',
+      },
+      nostot: [
+        {
+          otsikko: 'Poika, joka soitti ensiviulua yhdeksänvuotiaana',
+          tiedosto: 'Elisabeth Jerichau Baumann - Painting - NG.M.00435 - National Museum of Art, Architecture and Design.jpg',
+          teksti: 'Ole Bull osasi neli-viisivuotiaana soittaa '
+            + 'korvakuulolta kaikki laulut, joita hän oli kuullut '
+            + 'äitinsä soittavan viululla. Yhdeksänvuotiaana hän '
+            + 'soitti jo ensiviulua Bergenin teatterin orkesterissa '
+            + 'ja esiintyi solistina Bergenin filharmonisen '
+            + 'orkesterin kanssa. Isä olisi halunnut pojasta papin. '
+            + 'Pariisissa Bull jakoi 1832 asunnon Frédéric Chopinin '
+            + 'kanssa, ja hänestä tuli lopulta virtuoosi, joka antoi '
+            + 'tuhansia konsertteja — pelkästään Englannissa 274 '
+            + 'vuonna 1837. Robert Schumannin mukaan hän oli soiton '
+            + 'nopeudessa ja selkeydessä Niccolò Paganinin tasolla.',
+          selite: 'Elisabeth Jerichau Baumannin muotokuva Ole '
+            + 'Bullista on vuodelta 1851, ja se kuuluu Norjan '
+            + 'kansallismuseon kokoelmiin.',
+          lahde: 'Elisabeth Baumann, Wikimedia Commons (PD)',
+          wiki: 'Ole Bull',
+        },
+        {
+          otsikko: 'Teatteri, jossa puhuttiin norjaa',
+          tiedosto: 'Ole Bull\'s villa.jpg',
+          teksti: 'Ole Bull oli 1850 perustamassa Bergeniin Det '
+            + 'Norske Theateria, ensimmäistä teatteria, jossa '
+            + 'näyttelijät puhuivat norjaa tanskan sijaan; siitä '
+            + 'tuli myöhemmin Den Nationale Scene. Kahtakymmentä '
+            + 'vuotta myöhemmin, 1872, Bull osti Lysøenin saaren '
+            + 'Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad '
+            + 'Fredrik von der Lippen (1833–1901) suunnittelemaan '
+            + 'sinne asuinrakennuksen. Siellä hän myös kuoli 17. '
+            + 'elokuuta 1880, samana vuonna kun oli sairaana pitänyt '
+            + 'viimeisen konserttinsa Chicagossa. Ruumista '
+            + 'kuljettanutta laivaa saattoi viisitoista höyrylaivaa '
+            + 'ja joukko pienempiä aluksia.',
+          selite: 'Ole Bullin huvila Lysøenilla lahjoitettiin '
+            + 'myöhemmin muinaismuistoyhdistykselle, ja saarella '
+            + 'toimii nykyään Lysøenin museo.',
+          lahde: 'Eduardo, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Ole Bull',
+        },
+        {
+          otsikko: 'Kesäilta, joka lähetti pojan Leipzigiin',
+          tiedosto: 'Eilif Peterssen - Portrait of the Composer Edvard Grieg - NG.M.00396 - National Museum of Art, Architecture and Design.jpg',
+          teksti: 'Kesällä 1858 perheystävä Ole Bull tunnisti '
+            + 'viisitoistavuotiaan Edvard Griegin lahjakkuuden ja '
+            + 'suostutteli tämän vanhemmat lähettämään pojan '
+            + 'Leipzigin konservatorioon. Keväällä 1860 Grieg selvisi '
+            + 'kahdesta hengenvaarallisesta keuhkosairaudesta, '
+            + 'keuhkopussintulehduksesta ja tuberkuloosista. Hän '
+            + 'debytoi konserttipianistina Ruotsin Karlshamnissa '
+            + '1861 ja avioitui serkkunsa, sopraano Nina Hagerupin '
+            + 'kanssa 11. kesäkuuta 1867. Seuraavana kesänä hän '
+            + 'sävelsi a-mollipianokonserttonsa; sen kantaesitti '
+            + 'Edmund Neupert Kööpenhaminassa 3. huhtikuuta 1869, '
+            + 'eikä Grieg itse päässyt paikalle.',
+          selite: 'Eilif Peterssen maalasi Edvard Griegin vuonna '
+            + '1891, ja muotokuva kuuluu Norjan kansallismuseon '
+            + 'kokoelmiin.',
+          lahde: 'Eilif Peterssen, Wikimedia Commons (PD)',
+          wiki: 'Edvard Grieg',
+        },
+        {
+          otsikko: 'Kauhean hankala aihe',
+          tiedosto: 'Troldhaugen in Bergen.jpg',
+          teksti: 'Vuonna 1874 Henrik Ibsen pyysi Griegiltä '
+            + 'näytelmämusiikkia Peer Gyntiin, ja Grieg suostui '
+            + 'vastahakoisesti. Elokuussa 1874 hän kirjoitti '
+            + 'ystävälleen, että työ edistyy hitaasti eikä ehdi '
+            + 'valmiiksi syksyksi: aihe on kauhean hankala. '
+            + 'Musiikkia syntyi lopulta yhdeksänkymmentä minuuttia, '
+            + 'ja se kantaesitettiin näytelmän mukana Christianiassa '
+            + '24. helmikuuta 1876. Teatterin johto oli määrännyt '
+            + 'jokaisen numeron keston ja järjestyksen, ja Grieg '
+            + 'valitti joutuneensa tekemään paikkatyötä. Yhdeksän '
+            + 'vuotta myöhemmin hän muutti Bergenin eteläpuolelle '
+            + 'Troldhaugeniin, jonka nimi tarkoittaa peikkokukkulaa.',
+          selite: 'Grieg rakennutti Troldhaugenin serkkunsa, '
+            + 'arkkitehti Schak Bullin piirustusten mukaan, ja asui '
+            + 'siellä huhtikuusta 1885 kuolemaansa asti.',
+          lahde: 'Andreas Sandberg, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Troldhaugen',
+        },
+      ],
+    },
+  ],
+  /*
+   * MONTREAL (Opus 23.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita eikä ARTIKKELIT-merkintää ennen tätä. Etusivun
+   * leipäteksti (intro) ja Lue lisää -teksti kirjoitettiin samassa
+   * erässä tiedostoon js/packs/northamerica-artikkelit.js avaimelle
+   * "Montreal" — sama avain, jolla js/packs/northamerica.js antaa
+   * kohteen wiki-nimen. Pohjana ovat
+   * docs/mantereet-tyoaineisto/faktapohja-montreal.md ja
+   * tarkistus-montreal.md, jotka luettiin YHDESSÄ; ristiriidoissa
+   * tarkistusraportti voittaa. Faktat on koostettu en-Wikipedian
+   * raakateksteistä (23.8.2026): Montreal, Notre-Dame Basilica
+   * (Montreal), Victoria Bridge (Montreal), Port of Montreal, Beaver
+   * Club, Mount Royal, Old Montreal, McGill University, Underground
+   * City, Montreal, Expo 67 ja François Dollier de Casson.
+   *
+   * TARKISTUSRAPORTIN NELJÄ KORJAUSTA ON TEHTY.
+   * (1) A-kohta: faktapohjan nosto MTL2 sanoi Robert Stephensonia
+   * "höyryveturi Rocketin rakentajan pojaksi". Lähde sanoo toisin:
+   * Robert Stephenson rakensi Rocketin ITSE 1829 ja oli George
+   * Stephensonin poika. Lehti sanoo tämän oikein päin.
+   * (2) B-kohta: faktapohja ajoitti sulpitiaanien katulinjat vuoteen
+   * 1665. Vuosi 1665 liittyy lähteessä Carignan-Salières-rykmentin
+   * saapumiseen, ei katuverkkoon; "François Dollier de Casson"
+   * -artikkeli päivää katusuunnitelman vuoteen 1672 ja kertoo hänen
+   * saapuneen Uuteen Ranskaan vasta 1666. Nosto H4 sanoo 1672 ja
+   * kertoo lukijalle myös saapumisvuoden 1666, jotta ajoitus on
+   * tarkistettavissa.
+   * (3) C-kohta: faktapohjan nosto H2 sanoi siirtomaan luovutuksen
+   * Britannialle tapahtuneen 1763 ja merkitsi lähteeksi
+   * en-Wikipedian "Montreal" -artikkelin. Vuosilukua 1763 ei löydy
+   * siitä artikkelista lainkaan (artikkeli sanoo vain: valtaus 1760,
+   * "the colony then surrendered to Great Britain"). Vuosiluku on
+   * jätetty POIS; lehti kertoo vain sen, minkä lähde sanoo.
+   * (4) G-kohta: faktapohjan matkaoppaan jakso 1 toisti laudan visan
+   * fact-kentän sanamuotoa maanalaisesta kaupungista lähes sanasta
+   * sanaan ("yhdistää kauppoja, asemia ja toimistoja"). Jakso on
+   * kirjoitettu kokonaan uusiksi eri yksityiskohdista: aloitusvuosi
+   * 1962 Place Ville Marien työmaalla ja verkoston asema yhtenä
+   * maailman laajimmista maanalaisista jalankulkualueista. Sama
+   * uudelleenmuotoilu on kansikuvan selitteessä.
+   *
+   * TARKISTUSRAPORTIN H-KOHTA: vuoden 1859 lukema -42 °C on
+   * vahvistettu oikeaksi (en-Wikipedian sääosio, lähteenä Christopher
+   * C. Burt, Extreme Weather, 2007, s. 61), joten se on oppaan
+   * jaksossa 5 mukana — yhdessä virallisen Environment Canada
+   * -ennätyksen -37,8 °C (15.1.1957) kanssa ja niin, että ero
+   * viralliseen mittaushistoriaan (alkaa McGillissä 1871) sanotaan
+   * ääneen.
+   *
+   * SISÄLTÖLINJAUS on Raamatun pilari 3 ja tehtävänannon rajaus:
+   * kaksikielisyys ja Québecin asema kuvataan TOTEAVASTI kaupungin
+   * peruskirjan ja väestönlaskennan lukuina, ei kannanottona.
+   * Nykypolitiikka on kokonaan poissa: vuoden 1995 kansanäänestystä,
+   * kielilakeja tai niiden tulkintaa ei käsitellä, eikä Expo 67:n
+   * yhteydessä kerrota Ranskan presidentin 24.7.1967 pitämää puhetta,
+   * joka sivuaa itsenäisyyskysymystä suoraan poliittisena lausumana.
+   * Irokeesien hyökkäykset 1640-luvulla kerrotaan tapahtumana ilman
+   * yksityiskohtia (resepti: väkivalta vain neutraalina historiana).
+   *
+   * VISAN (js/packs/northamerica-questions.js, kohta montreal) viisi
+   * vastausta löytyvät lehdestä: ranska kotikielenä (oppaan jakso 4 ja
+   * intro), Saint Lawrence -joki (johdanto, avauskuvan selite ja
+   * nosto MTL2), Mont Royal (avauskuvan selite, nosto H3 ja jakso 3),
+   * maanalainen käytäväverkosto (kansikuva ja jakso 1) sekä Expo 67
+   * (jakso 1 ja noston H2 selite). Historiasivun minitehtävä kysyy
+   * kaupunkioikeuksien vuotta 1832 — sitä visa ei kysy, ja vastaus on
+   * samalla sivulla nostossa H2.
+   *
+   * KANSIKUVAT JA AVAUSKUVAT eri rooleissa (js/lehti.js
+   * piirraLehtiKuvat): kun avauskuvat-taulukko on olemassa, se täyttää
+   * ison karusellin ja kansikuvista näkyy pikkurivillä kaksi
+   * ensimmäistä. Siksi avauskuvina on kolme LAAJAA yleisnäkymää
+   * kaupungin eri puolilta (vuorelta luoteesta, satamasta joelta ja
+   * Sainte-Hélènen saarelta joen toiselta puolen) ja kansikuvina kaksi
+   * pikkunostoa: kaupungin toiseksi tunnetuin kohde Notre-Damen kirkko
+   * ja yllättävä yksityiskohta, keskustan alla kulkeva käytävä.
+   *
+   * AIHETOISTO: Notre-Damen kirkko esiintyy kahdesti eri tiedostolla
+   * ja eri puolelta (kansikuvassa julkisivu Place d'Armesilta,
+   * nostossa MTL1 sisätila) — perustelu on sama kuin Karachin
+   * Merewether-tornilla: noston teksti kertoo nimenomaan 1872–1879
+   * tehdystä sisustuksesta, jota julkisivukuva ei näytä. Mont Royal
+   * esiintyy avauskuvan katselupaikkana, noston H3 vuoden 1877
+   * suunnitelmakarttana ja jakson 3 nykykuvana — kolme eri tiedostoa,
+   * kolme eri aikatasoa. Bonsecours-markkinahalli on vain
+   * matkaoppaan etusivukuvassa.
+   *
+   * KUVAHYLKÄYKSET on kirjattu raporttiin. Yleisimmät syyt: kuvan
+   * päälle painettu studion tai kustantajan nimirivi (Rijksmuseumin
+   * Mount Royal Park -albumiinivedos "Parks, Photo."), stereokortit
+   * joissa sama kuva toistuu kahdesti ja kortin alareunassa on
+   * painettu kuvateksti (Rijksmuseumin Victoria Bridge- ja Steamboat
+   * Wharf -kortit), arkiston pyöreä leima kuvan päällä (Ville-Marien
+   * vuoden 1685 asemakaava) sekä tunnistettavat kasvot etualalla
+   * (Place d'Armes'n väkijoukko, Champ-de-Mars'n metrolaituri,
+   * Notre-Damen sivukatu). Victoria-sillan ainoa kelvollinen
+   * 1800-luvun kuva on Charles Magnus & Co:n teräspiirros, ja siitä on
+   * käytetty rajattua versiota, josta kustantajan painettu nimirivi on
+   * leikattu pois.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (säärivit haetaan erillisenä eränä). Oppaan jakso 5 nojaa
+   * siis en-Wikipedian Montreal-artikkelin sääosioon ja SANOO SEN
+   * ÄÄNEEN — Samarkandin, Kašgarin ja Karachin malli.
+   *
+   * KUVATEKSTIT: jokainen selite on YKSI virke ja kertoo KOHTEESTA,
+   * sen historiasta tai merkityksestä, ei siitä miltä kuva näyttää
+   * (omistajan linjaus 22.8.2026).
+   */
+  montreal: [
+    {
+      id: 'kaupunki',
+      nimi: 'Montreal',
+      johdanto: 'Saarikaupunki kasvoi turkiskaupan varaan Saint Lawrence '
+        + '-joen mutkaan, ja 1860-luvulla se oli Brittiläisen '
+        + 'Pohjois-Amerikan suurin kaupunki. Vuori keskellä saarta on '
+        + 'antanut kaupungille nimen.',
+      kansikuvat: [
+        {
+          tiedosto: 'Notre-Dame Basilica - Basilique Notre-Dame de Montréal.jpg',
+          selite: 'Notre-Damen kirkko valmistui 1829 ja oli yli '
+            + 'viisikymmentä vuotta Pohjois-Amerikan suurin '
+            + 'kirkkorakennus.',
+          lahde: 'Wei Xi Luo, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Underground City, Montréal - panoramio.jpg',
+          selite: 'Keskustan alla kulkeva käytäväverkosto alkoi 1962 Place '
+            + 'Ville Marien työmaalta ja on kasvanut yhdeksi maailman '
+            + 'laajimmista maanalaisista jalankulkualueista.',
+          lahde: 'Martin Cígler, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleisnäkymää kaupungin eri puolilta —
+       * Mont Royalin rinteeltä luoteesta, Vanhan sataman kohdalta
+       * joelta ja Sainte-Hélènen saarelta joen toiselta puolen.
+       * Yksikään kolmesta ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Downtown Montreal seen from Mount Royal.jpg',
+          selite: 'Mont Royalin rinteen näköalapaikat ovat kaupungin '
+            + 'tunnetuin katselupaikka, ja samasta vuoresta on '
+            + 'lyhentynyt Montrealin nimi.',
+          lahde: 'Stanisom, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Montreal Old Port panorama.jpg',
+          selite: 'Vanhan sataman laiturit ovat samalla rannalla, jolle '
+            + 'vuonna 1830 perustettu satamahallinto rakensi kaupungin '
+            + 'ensimmäiset pysyvät laiturit.',
+          lahde: 'Robbie Sproule, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Saint-Lawrence river with Montreal skyline.jpg',
+          selite: 'Montreal on saari Saint Lawrence -joessa, ja väylä vie '
+            + 'valtamerialukset sen ohi Suurille järville asti.',
+          lahde: 'Johannes Meyer, Wikimedia Commons (CC0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kirkko, joka sai taivaansinisen kattonsa juuri tuolloin',
+          tiedosto: 'Notre-Dame Basilica Interior, Montreal, Canada - Diliff.jpg',
+          teksti: 'Iiriläis-amerikkalainen arkkitehti James O’Donnell '
+            + 'suunnitteli Notre-Damen kirkon 1824 goottilaiseen tyyliin '
+            + 'kymmenentuhannen hengen seurakunnalle. Peruskivi '
+            + 'laskettiin 1. syyskuuta 1824, pyhäkkö valmistui 1830 ja '
+            + 'tornit 1841 ja 1843; valmistuessaan kirkko oli '
+            + 'Pohjois-Amerikan suurin ja pysyi sellaisena yli '
+            + 'viisikymmentä vuotta. Julkisivu sai 1865 kolme '
+            + 'kuvapatsasta ranskalaiselta kuvanveistäjältä Henri '
+            + 'Bourichélta. Sisustus tehtiin vasta 1872–1879 arkkitehti '
+            + 'Victor Bourgeaun ja pastori Victor Rousselot’n '
+            + 'johdolla: syvänsininen holvikatto kultatähtineen sai '
+            + 'esikuvansa Pariisin Sainte-Chapellesta.',
+          selite: 'Bourgeaun 1872–1879 tekemässä sisustuksessa toistuvat '
+            + 'sininen, purppura, hopea ja kulta, ja holvikaton tähdet '
+            + 'ovat lehtikultaa.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Notre-Dame Basilica (Montreal)',
+        },
+        {
+          otsikko: 'Silta, joka oli valmistuessaan maailman pisin',
+          tiedosto: 'Victoria Bridge, Montreal (Stephenson) -b (53515809895) (cropped).jpg',
+          teksti: 'Insinööri Robert Stephenson — sama mies, joka rakensi '
+            + 'Rocket-höyryveturin 1829, ja George Stephensonin poika — '
+            + 'suunnitteli Victoria-sillan yhdessä Alexander McKenzie '
+            + 'Rossin kanssa. Sitä rakennettiin 1854–1859 kuudella '
+            + 'höyrylaivalla, 72 proomulla ja 3 040 miehen voimin. '
+            + 'Valmistuessaan 1859 se oli maailman pisin silta ja '
+            + 'ensimmäinen, joka ylitti koko Saint Lawrence -joen. '
+            + 'Ensimmäinen rahtijuna kulki yli 12. joulukuuta 1859, '
+            + 'ensimmäinen matkustajajuna viisi päivää myöhemmin, ja '
+            + 'Walesin prinssi vihki sillan 25. elokuuta 1860 '
+            + 'kuningatar Viktorian sijaisena.',
+          selite: 'Victoria-sillan alkuperäinen kansi oli putkimainen ja '
+            + 'koottu Englannista laivatuista takorautaosista, ja silta '
+            + 'kantaa yhä sekä rautatie- että maantieliikennettä.',
+          lahde: 'Thomas Fisher Rare Book Library, UofT, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Victoria Bridge (Montreal)',
+        },
+        {
+          otsikko: 'Satama 1 600 kilometrin päässä merestä',
+          tiedosto: 'Montréal 1830. Le port -Est. (6033840507).jpg',
+          teksti: 'Vuonna 1825 avattu Lachine-kanava vei laivat '
+            + 'Lachine-koskien ohi, ja 1830 perustettu satamahallinto '
+            + 'rakensi ensimmäiset pysyvät laiturit ja ajoi joen '
+            + 'ruoppausta. Arkistomerkinnän mukaan 28. toukokuuta 1872 '
+            + 'satamassa oli kerralla 70 alusta, joista 21 '
+            + 'valtamerihöyrylaivaa, ja lastia yhteensä lähes 54 000 '
+            + 'tonnia. Satama on noin 1 600 kilometrin päässä '
+            + 'Atlantilta, mutta se on silti lyhin suora reitti '
+            + 'Pohjois-Amerikan Keskilännestä Eurooppaan ja '
+            + 'Välimerelle.',
+          selite: 'Montrealin satamaan päästiin 1825 avatun '
+            + 'Lachine-kanavan ansiosta koskien ohi, ja ensimmäiset '
+            + 'pysyvät laiturit rakennettiin 1830-luvulta alkaen.',
+          lahde: 'Philippe Du Berger from Montréal, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Port of Montreal',
+        },
+        {
+          otsikko: 'Illallisseura, joka laski koskia pöydältä lattialle',
+          tiedosto: 'Montréal, 1896. Résidence W.R. Miller, rue Stanley. (5456984577).jpg',
+          teksti: 'Turkiskaupasta rikastuneet skotlantilaiskauppiaat '
+            + 'perustivat 1785 Beaver-klubin kunnioittamaan miehiä, '
+            + 'jotka olivat viettäneet parhaat vuotensa villissä maassa. '
+            + 'Illalliset alkoivat kello neljältä, jäsenet pukeutuivat '
+            + 'röyhelöihin ja kultanauhaan, ja ilta päättyi vanhoihin '
+            + 'voyageur-lauluihin ja pöydillä tanssimiseen. Lopuksi '
+            + 'miehet asettuivat riviin lattialle kuin kanoottiin, '
+            + 'meloivat hiilihangoilla ja jäljittelivät koskenlaskua '
+            + 'pöydältä lattialle. Klubin miehiä pidetään Kultaisen '
+            + 'neliömailin liikemiesten edeltäjinä.',
+          selite: 'Kultaisen neliömailin kartanoiden rakentaminen alkoi '
+            + '1850-luvulla, ja alueen asukkaita sanottiin nimellä '
+            + 'Square Milers.',
+          lahde: 'Philippe Du Berger from Montréal, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Beaver Club',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Marche Bonsecours 1 (7959704514).jpg',
+          selite: 'Bonsecours-markkinahalli on Vanhan Montrealin '
+            + 'tunnetuimpia rakennuksia ja yhä yksi alueen '
+            + 'kohtaamispaikoista.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Montreal on Québecin suurin kaupunki ja Kanadan toiseksi '
+          + 'suurin, ja se on rakennettu saarelle Saint Lawrence -joessa. '
+          + 'Matkailijan Montreal on kapea kaistale saaren eteläreunaa. '
+          + 'Idässä on Vanha Montreal kivikatuineen ja sen edessä satama, '
+          + 'lännessä keskustan tornit ja niiden takana Mont Royal, jonka '
+          + 'rinteeltä koko kaupunki näkyy kerralla. Väliä kuljetaan '
+          + 'metrolla tai keskustan alla kulkevia käytäviä pitkin — '
+          + 'talvella jälkimmäinen on se reitti, jota kaupunkilaiset '
+          + 'käyttävät.',
+        artikkeli: {
+          nimi: 'Matkailijan Montreal',
+          taitto: 'opas',
+          teksti: 'Saari joessa, sen eteläreunassa vanha kaupunki ja '
+            + 'satama, keskellä vuori — ja koko keskustan alla toinen, '
+            + 'katoton kaupunki.',
+          nosto: 'Vuoden 1871 väestönlaskennassa Montrealissa asui '
+            + '130 022 ihmistä — enemmän kuin missään muualla '
+            + 'Brittiläisessä Pohjois-Amerikassa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Metro avattiin 1966, ja sen junat kulkevat '
+                + 'kumipyörillä, mikä tekee järjestelmästä tavanomaista '
+                + 'hiljaisemman. Vuotta myöhemmin kaupunki isännöi '
+                + 'maailmannäyttely Expo 67:ää, jonka rakentaminen alkoi '
+                + '13. elokuuta 1963 ja jonka näyttelysaaret täytettiin '
+                + 'osin metrotyömaan kaivuumailla; näyttelyn jäljiltä '
+                + 'kaupunkiin jäi metron lisäksi pallomainen Biosphère. '
+                + 'Keskustan alle rakennettu käytäväverkosto sai alkunsa '
+                + 'jo 1962 Place Ville Marien työmaalla, ja siitä on '
+                + 'kasvanut yksi maailman laajimmista maanalaisista '
+                + 'jalankulkualueista — talvipakkasilla se on lämmin '
+                + 'oikotie korttelista toiseen.',
+              kuva: {
+                tiedosto: 'Train leaving Atwater station (Montreal).jpg',
+                selite: 'Montrealin metro avattiin 1966, ja kumipyörillä '
+                  + 'kulkevat junat ovat tavallista hiljaisempia.',
+                lahde: 'JustYou80, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vanha Montreal kävellen',
+              teksti: 'Vanha Montreal on yksi Pohjois-Amerikan vanhimmista '
+                + 'kaupunkialueista, ja osa sen rakennuksista on '
+                + '1600-luvulta. Place Jacques-Cartier ja '
+                + 'Bonsecours-markkinahalli ovat alueen tunnetuimpia '
+                + 'kohtaamispaikkoja, ja lähistöllä on säilynyt '
+                + 'siirtomaa-ajan kartanoita, kuten Château Ramezay. '
+                + '1960-luvun alussa alueen halki suunniteltiin '
+                + 'kohotietä; hanke torjuttiin, ja alue julistettiin '
+                + 'historialliseksi alueeksi 1964. Kadut ovat samat, '
+                + 'jotka sulpitiaanit vetivät 1600-luvulla: Rue '
+                + 'Notre-Dame, Rue Saint-Paul ja Rue Saint-Jacques.',
+              kuva: {
+                tiedosto: 'Montreal (32679320223).jpg',
+                selite: 'Place Jacques-Cartier nousee Vanhan sataman '
+                  + 'rannasta kohti kaupungintaloa, ja aukion päässä '
+                  + 'seisoo Nelsonin muistopatsas.',
+                lahde: 'Bryn Pinzgauer, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Mont Royal nykyään',
+              teksti: 'Vuoren laella oleva Kondiaronk-näköalapaikka on '
+                + 'suosituin paikka nähdä koko kaupunki ja Saint '
+                + 'Lawrence -joki kerralla. Puistossa on nykyään '
+                + 'pulkkamäki, lumiputkirata ja seitsemän hiihto- ja '
+                + 'lumikenkälatua, yhteensä noin kahdeksantoista '
+                + 'kilometriä, ja talvella Beaver-lammella luistellaan. '
+                + 'Huipulla kohoava valaistu risti on 31,4 metriä '
+                + 'korkea: se asennettiin 1924, ja sen valot vaihdettiin '
+                + 'valokuiduiksi 1992.',
+              kuva: {
+                tiedosto: 'Fall colours at Beaver Lake.jpg',
+                selite: 'Beaver-lampi on Mont Royalin puiston '
+                  + 'kokoontumispaikka, ja talvella sen jäällä '
+                  + 'luistellaan.',
+                lahde: 'Kunal Rakshit, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kaksi kieltä samassa kaupungissa',
+              teksti: 'Ranska on Montrealin kaupungin peruskirjan mukainen '
+                + 'virallinen kieli, ja väestönlaskennan mukaan 85,7 '
+                + 'prosenttia asukkaista puhuu sitä sujuvasti. Samassa '
+                + 'laskennassa 58,5 prosenttia ilmoitti puhuvansa sekä '
+                + 'ranskaa että englantia, ja arjessa moni vaihtaa '
+                + 'kieltä kesken keskustelun. Kielten rinnakkaiselo '
+                + 'näkyy myös laitoksissa: englanninkielinen McGillin '
+                + 'yliopisto sai kuninkaallisen peruskirjansa 31. '
+                + 'maaliskuuta 1821 kauppias James McGillin '
+                + 'testamenttilahjoituksen pohjalta, ja samaan aikaan '
+                + 'Notre-Damen ranskankielinen seurakunta rakensi omaa '
+                + 'kirkkoaan Place d’Armesin laidalle.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Montrealista puuttuu vielä, joten '
+                + 'nämä luvut ovat en-Wikipedian Montreal-artikkelin '
+                + 'sääosiosta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Ilmasto on kostea mannerilmasto: kesät '
+                + 'ovat lämpimiä ja kosteita, heinäkuun päivälämpötila '
+                + 'on keskimäärin 26–27 astetta ja yli kolmenkymmenen '
+                + 'asteen päiviä on tavallisesti useita. Talvi on kylmä '
+                + 'ja luminen: tammikuun keskilämpötila on noin '
+                + 'kymmenen pakkasastetta, lunta kertyy vuodessa noin '
+                + '210 senttiä marraskuun ja maaliskuun välillä, ja '
+                + 'lumipeite pysyy tyypillisesti joulukuun alusta '
+                + 'maaliskuuhun. Sadetta tulee noin tuhat millimetriä '
+                + 'vuodessa ja aurinko paistaa noin 2 050 tuntia. '
+                + 'Virallinen pakkasennätys on -37,8 astetta 15. '
+                + 'tammikuuta 1957; sitä kylmempi -42 astetta on '
+                + 'kirjattu 10. tammikuuta 1859 aamuseitsemältä, mutta '
+                + 'se on vanhempi kuin nykyinen mittaushistoria, joka '
+                + 'alkaa McGillissä 1871.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ranskalaiset lähetyssaarnaajat perustivat Ville-Marien '
+        + '1642, kaupunki vaihtoi hallitsijaa 1760 ja kasvoi mantereen '
+        + 'brittialueiden suurimmaksi. Oman kaupungintalonsa se sai '
+        + 'isoisän matkavuonna.',
+      tehtava: {
+        kysymys: 'Minä vuonna Montreal sai kaupungin oikeudet?',
+        vaihtoehdot: [
+          '1832',
+          '1642',
+          '1760',
+          '1873',
+        ],
+        oikea: 0,
+        fakta: 'Kaupunkioikeudet tulivat 1832, seitsemän vuotta '
+          + 'Lachine-kanavan avaamisen jälkeen; vuoteen 1860 mennessä '
+          + 'Montreal oli Brittiläisen Pohjois-Amerikan suurin kaupunki.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki, joka melkein hylättiin ennen kuin ehti alkaa',
+          tiedosto: 'Statue de Paul Chomedey de Maisonneuve.jpg',
+          teksti: 'Paul Chomedey de Maisonneuve johti siirtolaisryhmän '
+            + 'saaren eteläosaan ja perusti Ville-Marien 17. toukokuuta '
+            + '1642 siirtokunnan ensimmäisenä kuvernöörinä; mukana '
+            + 'olivat kappeli ja Jeanne Mancen johtama sairaala. '
+            + 'Vuoteen 1643 mennessä siirtokunta oli irokeesien '
+            + 'hyökkäysten kohteena, ja väkiluku painui alle '
+            + 'viidenkymmenen. Jos Maisonneuven Ranskasta värväämät sata '
+            + 'uutta siirtolaista eivät olisi saapuneet syksyllä 1653, '
+            + 'kaupunki olisi hylätty ja selviytyjät siirretty '
+            + 'Québeciin. Vuoteen 1685 mennessä asukkaita oli noin '
+            + 'kuusisataa ja paikasta oli tullut turkiskaupan keskus.',
+          selite: 'Paul Chomedey de Maisonneuve perusti Ville-Marien 17. '
+            + 'toukokuuta 1642 ja toimi siirtokunnan ensimmäisenä '
+            + 'kuvernöörinä.',
+          lahde: 'Denis-Carl Robidoux, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Montreal',
+        },
+        {
+          otsikko: 'Kaupunki, joka vaihtoi hallitsijaa kerran',
+          tiedosto: 'Montréal, vers 1853. Depuis lÎle Sainte-Hélène. (6963466635).jpg',
+          teksti: 'Ranska hallitsi siirtokuntaa vuoteen 1760, jolloin '
+            + 'Montreal antautui brittihyökkäykselle Seitsenvuotisen '
+            + 'sodan aikana ja siirtomaa siirtyi Britannialle. '
+            + 'Kaupunkioikeudet Montreal sai vasta 1832, mutta kasvu oli '
+            + 'nopeaa: Lachine-kanava 1825 ja myöhemmin Victoria-silta '
+            + 'tekivät siitä laiva- ja rautatieliikenteen solmukohdan. '
+            + 'Vuoteen 1860 mennessä se oli Brittiläisen '
+            + 'Pohjois-Amerikan suurin kaupunki, joka hallitsi muun '
+            + 'Kanadan taloutta ja kulttuuria. Vuoden 1871 '
+            + 'väestönlaskennassa asukkaita oli 130 022.',
+          selite: 'Sainte-Hélènen saarta laajennettiin 1960-luvulla osin '
+            + 'metrotyömaan kaivuumailla, kun sille rakennettiin Expo '
+            + '67:n näyttelyalue.',
+          lahde: 'Philippe Du Berger, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Montreal',
+        },
+        {
+          otsikko: 'Puisto, jota sen suunnittelija ei saanut valmiiksi',
+          tiedosto: 'Mount Royal Design Map 1877.jpg',
+          teksti: 'Montrealilaiset olivat halunneet puistoa Mont Royalille '
+            + 'jo vuodesta 1857, mutta kaupunki sitoutui ostamaan maan '
+            + 'vasta 1868. Puiston suunnitteli maisema-arkkitehti '
+            + 'Frederick Law Olmsted, joka halusi korostaa vuoren '
+            + 'muotoja kasvillisuudella: tiheää alarinteillä, '
+            + 'harvenevaa ylöspäin, jotta vuori näyttäisi todellista '
+            + 'korkeammalta. Puisto avattiin juhlallisesti 24. '
+            + 'toukokuuta 1876, mutta 1870-luvun puolivälin lama söi '
+            + 'rahoituksen kesken kaiken. Ajotie rakennettiin hätäisesti '
+            + 'alkuperäisestä suunnitelmasta piittaamatta, eikä '
+            + 'kasvillisuusvalintoja toteutettu koskaan.',
+          selite: 'Olmstedin vuoden 1877 suunnitelmassa vuorelle nousee '
+            + 'yksi pitkä, loivasti kiertävä ajotie — juuri se osa '
+            + 'suunnitelmasta, joka toteutettiin toisin kuin oli '
+            + 'tarkoitus.',
+          lahde: 'Frederick Law Olmsted, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Royal',
+        },
+        {
+          otsikko: 'Kaupungintalo jesuiittojen puutarhamaalla',
+          tiedosto: 'Hôtel de Ville de Montréal, juin 2024.jpg',
+          teksti: 'Sulpitiaanimunkit toimivat Montrealin saaren '
+            + 'seigneureina vuodesta 1663, ja François Dollier de Casson '
+            + 'veti siirtokunnan ensimmäisen katuverkon. Hän saapui '
+            + 'Uuteen Ranskaan 1666 ja nousi sulpitiaanien esimieheksi '
+            + '1671; hänen katusuunnitelmansa on päivätty vuoteen 1672. '
+            + 'Rue Notre-Dame, Rue Saint-Paul ja Rue Saint-Jacques '
+            + 'ohjaavat Vanhan Montrealin liikennettä yhä. Kaksisataa '
+            + 'vuotta myöhemmin, samana vuonna kun isoisä matkusti, '
+            + 'kaupunki rakensi oman kaupungintalonsa vanhalle '
+            + 'jesuiittapuutarhan paikalle 1873 — viereen, entisen '
+            + 'jesuiittakirkon tontille, jäi Place Vauquelin.',
+          selite: 'Montrealin kaupungintalo valmistui 1873 jesuiittojen '
+            + 'entisten puutarhojen paikalle Vanhan Montrealin laitaan.',
+          lahde: 'Pierre5018, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Old Montreal',
+        },
+      ],
+    },
+  ],
 };

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1068, teksti: 'Sevillan, Bergenin ja Montrealin kaupunkilehdet' },
   { v: 1067, teksti: 'Wellingtonin kaupunkilehti' },
   { v: 1066, teksti: 'Herot Varsovasta Jekaterinburgiin — kuusi kaupunkia' },
   { v: 1065, teksti: 'New Yorkin kohdekartta ja kymmenen nähtävyysjuttua' },

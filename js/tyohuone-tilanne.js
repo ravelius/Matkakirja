@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1068 — KOLME UUTTA KAUPUNKILEHTEA: Sevilla, Bergen ja Montreal (yhteensa kahdeksan sivua, 32 nostoa ja 61 Commons-kuvaa). Tarkista: kolmen lehden etusivut, teemasivut ja matkaoppaat',
   'v1067 — WELLINGTONIN KAUPUNKILEHTI: kaupunki-, historia- ja luontosivut, 12 nostoa ja 22 Commons-kuvaa. Tarkista: Wellingtonin lehti kannesta oppaaseen',
   'v1066 — HEROKIERROS 18: Varsova, Riika, Kuwait, Tabriz, Kasgar ja Jekaterinburg; 18/18 hyvaksyttiin. Tarkista: kuuden kaupungin etusivukarusellit',
   'v1065 — NEW YORKIN KOHDEKARTTA ja kymmenen nahtavyysjuttua kuvineen; kartan kaikki pisteet maalla. Tarkista: New Yorkin lehden kohdekartta ja numeropisteiden jutut',
@@ -434,6 +435,9 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '23.8.2026 ilta',
   valmiit: [
+    { id: 'sevilla', nimi: 'Sevilla', versio: 'v1068' },
+    { id: 'bergen', nimi: 'Bergen', versio: 'v1068' },
+    { id: 'montreal', nimi: 'Montreal', versio: 'v1068' },
     { id: 'wellington', nimi: 'Wellington', versio: 'v1067' },
     { id: 'rio', nimi: 'Rio de Janeiro', versio: 'v1049' },
     { id: 'buenosaires', nimi: 'Buenos Aires', versio: 'v1049' },
