@@ -6738,6 +6738,33 @@ export const KULTTUURI_KATEGORIAT = {
        * katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 16 (23.8.2026, tools/hero-tyolista-11.mjs). */
+        {
+          ampari: 'herokoe/hero-dublin-aamu.png',
+          selite: 'Trinity Collegen kellotorni valmistui 1853 Charles '
+            + 'Lanyonin suunnitelmien mukaan: 30,5 metriä korkean tornin '
+            + 'alaosa on Wicklowin sinertävää graniittia ja kupoli Portlandin '
+            + 'kiveä, ja kellohuoneen juurella istuu neljä veistosta — '
+            + 'jumaluusoppi, tiede, lääketiede ja laki.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-dublin-keskipaiva.png',
+          selite: 'Pyhän Patrickin katedraali perustettiin 1191, ja ulkoa 91 '
+            + 'metriä pitkänä se on Irlannin suurin kirkko — graniittinen '
+            + 'torninhuippu nostettiin tornin päälle vasta 1749 George '
+            + 'Semplen suunnitelmien mukaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-dublin-ilta.png',
+          selite: 'James Gandonin tullitalo valmistui 7. marraskuuta 1791, ja '
+            + 'kun se poltettiin 1921 vapaussodan aikana, sisätilat '
+            + 'tuhoutuivat ja kupoli romahti — se muurattiin uudelleen '
+            + 'tummemmasta Ardbraccanin kalkkikivestä kuin muu Portlandin '
+            + 'kivestä tehty talo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Dublin, városkép a Guinness-toronyból.jpg',
           selite: 'Guinnessin panimon käymislaitos rakennettiin vuonna 1902 ja '
@@ -8337,6 +8364,31 @@ export const KULTTUURI_KATEGORIAT = {
        * Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 16 (23.8.2026, tools/hero-tyolista-11.mjs). */
+        {
+          ampari: 'herokoe/hero-barcelona-aamu.png',
+          selite: 'Sagrada Famílian rakentaminen alkoi 19. maaliskuuta 1882 '
+            + 'ja Gaudí johti työtä 1883 kuolemaansa 1926 asti — '
+            + 'kahdeksastatoista tornista korkein eli Jeesuksen torni nousee '
+            + '172,5 metriin, ja kirkko vihittiin käyttöön 2010.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-barcelona-keskipaiva.png',
+          selite: 'Gaudí muokkasi Casa Batllón vanhasta talosta 1904–1906: '
+            + 'julkisivun alaosa on Montjuïcin hiekkakiveä ja ylempi osa '
+            + 'rikotuista laatoista ladottua mosaiikkia, ja kattoharja '
+            + 'kaartuu kuin lohikäärmeen selkä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-barcelona-ilta.png',
+          selite: 'Palau Nacional avattiin vuoden 1929 maailmannäyttelyyn, ja '
+            + 'sen juhlasali mittaa 46 kertaa 74 metriä ja kohoaa 70 metriin '
+            + '— vuodesta 1934 talossa on ollut Katalonian kansallinen '
+            + 'taidemuseo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Barcelona rooftops.jpg',
           selite: 'Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä, '
@@ -27534,6 +27586,30 @@ export const KULTTUURI_KATEGORIAT = {
        * sama linja kuin Medinan Quba-moskeijassa.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 16 (23.8.2026, tools/hero-tyolista-11.mjs). */
+        {
+          ampari: 'herokoe/hero-riad-aamu.png',
+          selite: 'Masmakin savitiililinnoitus rakennettiin 1865–1895: sen '
+            + 'neljä vartiotornia ovat noin 18 metriä korkeat ja muurit 1,25 '
+            + 'metriä paksut, ja palmupuisessa pääportissa on vain yhden '
+            + 'ihmisen kokoinen luukku nimeltä al-Khokha.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-riad-keskipaiva.png',
+          selite: 'Al Faisaliahin torni valmistui vuonna 2000 Foster and '
+            + 'Partnersin suunnitelmien mukaan ja oli 267 metrillään '
+            + 'Saudi-Arabian ensimmäinen pilvenpiirtäjä — huipun lasipallon '
+            + 'sisällä on ravintola.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-riad-ilta.png',
+          selite: 'Kingdom Centre kohoaa 302,3 metriin ja ohitti '
+            + 'valmistuessaan 2002 Al Faisaliahin: ylimmän kaaren yli kulkee '
+            + '65 metriä pitkä näköalasilta 290 metrin korkeudessa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'At-Turaif District in ad-Dir\'iyah (5).jpg',
           selite: 'At-Turaifin kortteli liitettiin maailmanperintöluetteloon '
@@ -40852,6 +40928,32 @@ export const KULTTUURI_KATEGORIAT = {
        * (hallinnon keskus, neuvostoajan ruutukaava, suojeltu vuori).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 16 (23.8.2026, tools/hero-tyolista-11.mjs). */
+        {
+          ampari: 'herokoe/hero-ulanbator-aamu.png',
+          selite: 'Gandanin luostari perustettiin 1809, ja sen Megzed '
+            + 'Janraisegin temppelissä seisoo 26,5 metriä korkea kullattu '
+            + 'patsas, joka pystytettiin uudelleen 1996 vuosina 1937–1943 '
+            + 'hävitetyn tilalle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-ulanbator-keskipaiva.png',
+          selite: 'Sükhbaatarin aukio sai nimensä 1923, ratsastajapatsas '
+            + 'pystytettiin 1946 ja hallituspalatsi valmistui 1951 — sen '
+            + 'edustan pylväikköön nousi 2006 Tsingis-kaanin patsas Ögedein '
+            + 'ja Khubilain väliin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-ulanbator-ilta.png',
+          selite: 'Zaisanin muistomerkki paljastettiin 1971 '
+            + 'neuvostoliittolais-mongolialaisen ystävyyden kunniaksi: '
+            + 'kukkulalle nousee 612 porrasta, ja ympyränmuotoisen '
+            + 'mosaiikkiseinän keskellä palaa ikuinen tuli punaisessa '
+            + 'porfyyrimaljassa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Sükhbaatar Square.jpg',
           selite: 'Sükhbaatarin aukio on Ulan Batorin hallinnollinen '
@@ -45797,6 +45899,30 @@ export const KULTTUURI_KATEGORIAT = {
        * jotka lehti kertoo tässä järjestyksessä.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 16 (23.8.2026, tools/hero-tyolista-11.mjs). */
+        {
+          ampari: 'herokoe/hero-manila-aamu.png',
+          selite: 'Fort Santiagon kivilinnoitus muurattiin 1590–1593 '
+            + 'Guadalupesta louhitusta tuffista, sen kehä on 620 metriä, ja '
+            + 'porttitornin julkisivussa on reliefi pyhästä Jaakobista.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-manila-keskipaiva.png',
+          selite: 'San Agustinin kirkko valmistui 19. tammikuuta 1607, sen '
+            + 'vasen kellotorni purettiin vuoden 1880 maanjäristysten '
+            + 'jälkeen, ja se oli ainoa Intramurosin seitsemästä kirkosta, '
+            + 'joka säilyi vuoden 1945 taisteluissa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-manila-ilta.png',
+          selite: 'Nykyinen Manilan katedraali on kahdeksas rakennus samalla '
+            + 'paikalla ja valmistui 1954–1958 Fernando Ocampon suunnitelmien '
+            + 'mukaan — kellotornin seitsemän carillon-kelloa painavat '
+            + 'yhteensä 17 tonnia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Manila, Fort Santiago, Walled city of Intramuros, Philippines.jpg',
           selite: 'Kuninkaan määräys oli pystyttää linnoitus siihen, '
@@ -49264,6 +49390,29 @@ export const KULTTUURI_KATEGORIAT = {
        * jonka takia kaikki on tässä).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 16 (23.8.2026, tools/hero-tyolista-11.mjs). */
+        {
+          ampari: 'herokoe/hero-chennai-aamu.png',
+          selite: 'Kapaleeshwararin temppelin päägopuram muurattiin 1906 ja '
+            + 'kohoaa 120 jalkaa eli reilut 36 metriä, ja sen lähellä on 190 '
+            + 'metriä pitkä ja 143 metriä leveä temppeliallas.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-chennai-keskipaiva.png',
+          selite: 'Madrasin ylioikeus perustettiin 1862, ja sen '
+            + 'indosaraseeninen punatiilipalatsi vihittiin 12. heinäkuuta '
+            + '1892 — torniin sijoitettiin 53 metrin korkeuteen majakka, joka '
+            + 'opasti laivoja 1900-luvun loppupuolelle asti.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-chennai-ilta.png',
+          selite: 'Santhomen basilika rakennettiin uudelleen 1896 '
+            + 'uusgoottilaiseen asuun, sen torninhuippu nousee 45 metriin, ja '
+            + 'kirkon alla on apostoli Tuomaan hauta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Fort St. George, Chennai 2.jpg',
           selite: 'Fort St. George valmistui 23. huhtikuuta 1644 eli Pyhän '
