@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1064 — HEROKIERROS 17: Kobenhavn, Oslo, Ankara, Karachi, Mandalay ja Lhasa; 18/18 hyvaksyttiin katselmoinnissa. Tarkista: kuuden kaupungin etusivukarusellit',
   'v1063 — MAAMUODOT E-AMERIKAN, OSEANIAN JA AASIAN LAUDOILLE: maalehdet aukeavat nyt kaikilta laudoilta. Tarkista: kolmen laudan i-napin maalehdet (Rio, Sydney, Auckland, Peking, Singapore)',
   'v1062 — HEROKIERROS 16: Dublin, Barcelona, Riad, Chennai, Manila ja Ulan Bator. Tarkista: kuuden kaupungin etusivukarusellit',
   'v1061 — P-AMERIKAN LAUDAN MAAMUODOT: maalehdet aukeavat nyt laudalta, ei vain maailmankartalta. Tarkista: P-Amerikan lauta ja i-napin maalehdet (Mexico City, Havanna, Nuuk)',
