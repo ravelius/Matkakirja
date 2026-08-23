@@ -217,8 +217,10 @@ console.log(vedessa ? `\n${vedessa} pistettä vedessä — siirrä ne rannalle.`
  * ja päätyi tarkalleen janan päälle.
  *
  * Mitat on MITATTU SELAIMESTA eikä arvattu: 390 px:n näytöllä kartan
- * kotelo on 360 px leveä, numeroympyrä 24 × 24 px ja janan teksti 10 px
- * korkea. Kapein näyttö on pahin tapaus, koska jana ja ympyrä ovat
+ * kotelo on 360 px leveä ja janan teksti 10 px korkea. Kohdemerkki on
+ * 23.8.2026 alkaen 13 px:n täplä, mutta sen alla lukee kohteen nimi
+ * (.kohde-nimi), joten merkin ala pidetään laskennassa entisenä
+ * 24 × 24 pikselinä — se vastaa merkkiä nimineen. Kapein näyttö on pahin tapaus, koska jana ja ympyrä ovat
  * pikseleitä mutta kuva prosentteja: mitä kapeampi kuva, sitä suuremman
  * osan kuvasta ne peittävät. Siksi tarkistus tehdään puhelinleveydellä.
  *
@@ -241,7 +243,7 @@ console.log(vedessa ? `\n${vedessa} pistettä vedessä — siirrä ne rannalle.`
  * ovat samat kuin ennen.
  */
 const KOTELO = 360;   // px, mitattu 390 px:n näytöllä (kehys)
-const YMPYRA = 24;    // px, .maakartta-piste.kohde-numero
+const YMPYRA = 24;    // px, kohdemerkin ja sen nimitekstin karkea ala
 const JANA_H = 6;     // px, .kartta-mittajana
 const TEKSTI_H = 10;  // px, .kartta-mittajana-teksti rivikorkeus
 const tekstinLeveys = (t) => t.length * 5.5 + 6;  // px, keskitettynä janalle

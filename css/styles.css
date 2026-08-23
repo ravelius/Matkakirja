@@ -12788,35 +12788,13 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 /*
- * Piirroskohteen numerolappu kokoruudulla (ks. avaaKarttaSuurennos).
- * Sama pieni pallo kuin selitelistassa ja kartan numeroympyrässä,
- * jotta kolme paikkaa puhuvat samaa kieltä; nurkassa, ettei se peitä
- * itse piirrosta. Laatikko (.kohde-piirros) on absoluuttisesti
- * asemoitu, joten lappu löytää sen nurkan sellaisenaan.
+ * (Piirroskohteen numerolappu kokoruudulla oli tässä 22.–23.8.2026.
+ * Se poistettiin, kun numerot lähtivät kartalta kokonaan: piirroksen
+ * tunnistaa nyt sen alla lukevasta nimestä, ks. .kohde-nimi.)
  */
-.kartta-suurennos .kohde-numerolappu {
-  position: absolute;
-  right: -0.15rem;
-  bottom: -0.15rem;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.05rem;
-  height: 1.05rem;
-  border: 1px solid #2c2318;
-  border-radius: 50%;
-  background: #e8d3a0;
-  font-family: var(--font-type);
-  font-size: 0.56rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #2c1e07;
-  pointer-events: none;
-}
 
 /*
- * Numeroiden selite kartan alle. Sama ladelma kuin lehden
+ * Nimilista kartan alle. Sama ladelma kuin lehden
  * selitelistassa, mutta vaalealla musteella tummaa pohjaa vasten ja
  * keskitettynä kartan alle. Katto ja vieritys ovat varmistus pitkälle
  * listalle kapealla ruudulla: kortti ei saa kasvaa ruutua
@@ -13087,24 +13065,24 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 /*
- * Numeroympyrän tausta kevennettiin kullasta vaaleaan hiekkaan
- * (omistajan palaute 8.8.2026). Numero pysyy luettavana, koska teksti
- * on lähes musta: #2c1e07 taustalla #e8d3a0 on noin 9:1, eli reilusti
- * yli saavutettavuusrajan. Reunaviiva jäi tummaksi tarkoituksella —
- * se on ainoa asia, joka erottaa ympyrän vaalean kartan päältä nyt kun
- * sekä kartta että ympyrä ovat vaaleita.
+ * NUMEROYMPYRÄSTÄ TÄPLÄKSI (omistajan tilaus 23.8.2026: "Ota numerot
+ * pois kartalta myös kokosivun näkymässä mutta lisää kohteiden nimet
+ * näkyviin yksinkertaisella tekstillä").
+ *
+ * Piirroksettomasta kohteesta ei voi poistaa merkkiä kokonaan — ilman
+ * sitä kohdetta ei näkisi kartalla lainkaan — mutta numeroa se ei enää
+ * tarvitse, koska nimi lukee sen alla (.kohde-nimi). Ympyrä kutistuu
+ * siis 24 pikselistä täpläksi, joka on kartan merkki eikä lappu.
+ *
+ * Vaalea hiekka ja tumma reunaviiva ovat 8.8.2026 tehty valinta: ne
+ * ovat ainoa asia, joka erottaa merkin vaalean kartan päältä nyt kun
+ * sekä kartta että merkki ovat vaaleita. Luokan nimi on yhä
+ * kohde-numero, koska se on kohdekartan merkin tunnus koodissa,
+ * savukkeissa ja tarkistustyökaluissa — numeroa siinä ei enää ole.
  */
 .maakartta-piste.kohde-numero {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-type);
-  font-size: 0.74rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #2c1e07;
+  width: 13px;
+  height: 13px;
   background: #e8d3a0;
   border: 1.5px solid #2c2318;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -13262,6 +13240,95 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 .kohde-piirros.valittu .kohde-kyltti { display: block; }
 
 /*
+ * KOHTEEN NIMI KARTALLE NUMERON TILALLE (omistajan tilaus 23.8.2026:
+ * "Ota numerot pois kartalta myös kokosivun näkymässä mutta lisää
+ * kohteiden nimet näkyviin yksinkertaisella tekstillä. Koko voi olla
+ * sen verran pieni että pitää vähän zoomata että näkee.")
+ *
+ * KOKO ON PIENI TARKOITUKSELLA. 0,6 rem on noin 9,6 px kartan omassa
+ * mittakaavassa: lepotilassa nimi on hiljainen merkintä kartalla, ja
+ * zoomatessa se kasvaa kartan tahdissa luettavaksi — juuri niin kuin
+ * omistaja pyysi. Konekirjoituskirjasin on sama kuin mittajanalla ja
+ * nimikyltillä, joten kartta puhuu yhtä kieltä.
+ *
+ * NIMI MENEE MERKIN ALLE, EI SEN PÄÄLLE. Piirroskohteella paikka on
+ * mitattu rakennuksen jalka (--nimi-top, js/nahtavyydet.js:
+ * asetaKylttiRaja) — sama mittaus, joka asettaa suurennetun kyltin.
+ * Täplällä riittää täplän alareuna. Teksti on keskitetty ja katkeaa
+ * enintään parille riville, jottei pitkä nimi ("Temppeliaukion
+ * kirkko") vedä viivaa naapurikorttelin yli.
+ *
+ * VAALEA HALO, EI LAPPUA. Kartta on värikäs, ja umpinainen taustalappu
+ * jokaisen kohteen alla peittäisi juuri sen kaupungin, jota katsotaan.
+ * Paperinvärinen hehku irrottaa tekstin tiestöstä ilman, että kartta
+ * katoaa sen alle — sama keino kuin maalehden korkokartan
+ * kaupunkinimissä (.maakartta-nimi).
+ *
+ * pointer-events: none — nimi on merkintää, ei osumapintaa: napautus
+ * menee sen läpi kartalle (tai merkille, joka on sen alla).
+ */
+.kohde-nimi {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 2px);
+  z-index: 1;
+  width: 6.5rem;
+  transform: translateX(-50%);
+  font-family: var(--font-type);
+  font-size: 0.6rem;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #16130f;
+  text-shadow:
+    0 0 3px rgba(247, 239, 220, 0.95),
+    0 0 6px rgba(247, 239, 220, 0.9),
+    0 0 9px rgba(247, 239, 220, 0.85);
+  pointer-events: none;
+}
+
+/*
+ * KAPEALLA RUUDULLA VIELÄ PIENEMPI. Kartan kohteet ovat kartalla
+ * yhtä tiheässä joka ruudulla, mutta puhelimen lehdessä kartta on
+ * noin 360 px leveä — sama nimiladelma vie siinä kaksinkertaisen
+ * osuuden kartasta ja naapurien nimet menevät ristiin. Pienempi
+ * kirjasin ja kapeampi palsta pitävät nimet omilla paikoillaan;
+ * lukeminen tapahtuu puhelimella joka tapauksessa zoomaamalla tai
+ * kokoruudulla.
+ */
+@media (max-width: 560px) {
+  .kohde-nimi {
+    width: 4.6rem;
+    font-size: 0.5rem;
+  }
+}
+
+/* Piirroskohteella nimi alkaa rakennuksen jalasta (mitattu) eikä
+ * laatikon alareunasta: matala rakennus jättää laatikon alalaitaan
+ * läpinäkyvää tyhjää, jossa nimi olisi turhan kaukana. */
+.kohde-piirros > .kohde-nimi { top: var(--nimi-top, 104%); }
+
+/*
+ * NIMI KASVAA KARTAN MUKANA MYÖS TÄPLÄLLÄ. Täplä on merkki eikä
+ * maisema, joten se saa lavan vastaskaalauksen (1/zoom) — nimi ei:
+ * omistaja pyysi tekstin, jonka näkee zoomaamalla. Kerroin zoomilla
+ * kumoaa vastaskaalauksen, jolloin nimi elää kartan mittakaavassa
+ * kuten piirrosten nimet (piirros ei saa vastaskaalausta lainkaan).
+ * Origo on tekstin yläreunassa, joten kasvu suuntautuu merkistä
+ * alaspäin eikä sen päälle.
+ */
+.kartta-lava .maakartta-piste:not(.kohde-piirros) > .kohde-nimi {
+  transform: translateX(-50%) scale(var(--zoom, 1));
+  transform-origin: top center;
+}
+
+/* Valittu piirros näyttää nimensä isossa kyltissä (ks. .kohde-kyltti),
+ * joten kartan pieni nimi väistyy suurennoksen ajaksi — sama sääntö
+ * kuin hover-vihjeellä, ja samasta syystä: kaksi nimeä päällekkäin
+ * olisi pahempi kuin ei kumpaakaan. */
+.kohde-piirros.valittu .kohde-nimi { display: none; }
+
+/*
  * Kohteen nimi hiiren alla — VAIN osoitinlaitteella.
  *
  * Sääntö on kokonaan `hover: hover` -kyselyn sisällä, joten
@@ -13373,11 +13440,12 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   text-decoration-color: #16130f;
 }
 
-/* Selitelistan pallo on sama merkki kuin kartalla, joten se on myös
- * saman värinen (omistajan palaute 8.8.2026: v362:ssa kartan ympyrät
- * vaalenivat mutta selitelistan pallot jäivät vanhaan kultaan, ja pari
- * näytti kahdelta eri asialta). Tumma reunaviiva ja lähes musta numero
- * kuten kartallakin — kontrasti tekstille noin 9:1. */
+/* Numeropallo. Kartan selitelistoista se poistui 23.8.2026 numeroiden
+ * mukana (ks. .kohde-nimi); jäljellä se on nähtävyysjutun
+ * kohdevalikossa (.nahtavyys-valikko-rivi), jossa numero kertoo
+ * monesko kohde on lukuvuorossa. Vaalea hiekka ja tumma reunaviiva
+ * ovat kartan merkin väreistä (8.8.2026), lähes musta numero antaa
+ * tekstille noin 9:1 kontrastin. */
 .kartta-selite-numero {
   flex: 0 0 auto;
   width: 1.2rem;
