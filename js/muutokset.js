@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1053, teksti: 'Poistonappi avattuun pöllöpoimintaan' },
   { v: 1052, teksti: 'Poiminnat-oikotie valikkoon; tallennus kuratointijonoon' },
   { v: 1051, teksti: 'Herot Madridista Kiotoon — kuusi uutta kaupunkia' },
   { v: 1050, teksti: 'Herokarusellit Rioon, BA:iin, Sydneyyn ja Aucklandiin' },

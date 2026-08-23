@@ -35,6 +35,8 @@
 
 import { POLLO_POIMINNAT } from './packs/pollo-poiminnat.js';
 import { avaaMinipopup } from './minipopup.js';
+// Poistopyynnöt kulkevat samaa ehdotuskanavaa kuin tallennuksetkin.
+import { ehdotusKaytossa, lahetaEhdotus } from './ehdotukset.js';
 
 /** Laitteen omat poiminnat. Ei kuulu pelin tallennukseen. */
 export const POIMINNAT_TALLE = 'matkakirja-pollo-poiminnat';
@@ -164,6 +166,27 @@ export function tallennaPoiminta(avain, kysymys, vastaus) {
   }
 }
 
+/**
+ * Poistaa yhden parin laitteelta (omistajan tilaus 23.8.2026:
+ * poistonappi avattuun kysymykseen).
+ *
+ * @returns {boolean} tosi, jos pari löytyi ja poistui
+ */
+export function poistaPoiminta(avain, kysymys) {
+  const kaikki = lueOmatPoiminnat();
+  const lista = kaikki[avain] ?? [];
+  const uusi = lista.filter((p) => p.kysymys !== kysymys);
+  if (uusi.length === lista.length) return false;
+  if (uusi.length) kaikki[avain] = uusi;
+  else delete kaikki[avain];
+  try {
+    localStorage.setItem(POIMINNAT_TALLE, JSON.stringify(kaikki));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /** Tyhjentää laitteen omat poiminnat (vienti tehty). */
 export function tyhjennaPoiminnat() {
   try {
@@ -274,6 +297,60 @@ export function piirraPoimintapillerit(kohde, avain, asetukset = {}) {
         p.textContent = kappale;
         return p;
       });
+      /*
+       * POISTONAPPI AVATTUUN KYSYMYKSEEN (omistajan tilaus 23.8.2026):
+       * vain kehittäjätilassa. Laitteen oma pari poistuu suoraan (ja
+       * peruutus lähtee kuratointijonoon, koska tallennus on voinut jo
+       * mennä sinne autolähetyksellä); paketissa oleva pari ei poistu
+       * pelistä käsin, joten siitä lähtee poistopyyntö Fablelle samaa
+       * ehdotuskanavaa pitkin.
+       */
+      if (poimintaKehittaja()) {
+        const poistorivi = document.createElement('div');
+        poistorivi.className = 'minipopup-poistorivi';
+        const poista = document.createElement('button');
+        poista.type = 'button';
+        poista.className = 'wiki-btn';
+        poista.textContent = pari.oma ? 'Poista laitteelta' : 'Pyydä poistoa paketista';
+        const kuittaus = document.createElement('span');
+        kuittaus.className = 'pollo-poimintatila';
+        kuittaus.setAttribute('role', 'status');
+        poista.addEventListener('click', async () => {
+          poista.disabled = true;
+          if (pari.oma) {
+            poistaPoiminta(avain, pari.kysymys);
+            paivitaPillerit(avain);
+            kuittaus.textContent = 'Poistettu laitteelta.';
+            if (ehdotusKaytossa()) {
+              lahetaEhdotus({
+                teksti: `Pöllöpoiminta: PERUUTUS\n\nKysymys: ${pari.kysymys}`,
+                sivu: avain,
+                tarkenne: 'Pöllöpoiminta: peruutus',
+              }).catch(() => { /* paikallinen poisto riittää */ });
+            }
+            return;
+          }
+          if (!ehdotusKaytossa()) {
+            kuittaus.textContent = 'Ehdotuskanava ei ole käytössä.';
+            return;
+          }
+          kuittaus.textContent = 'Lähetetään…';
+          try {
+            await lahetaEhdotus({
+              teksti: `Pöllöpoiminta: POISTOPYYNTÖ\n\nKysymys: ${pari.kysymys}`,
+              sivu: avain,
+              tarkenne: 'Pöllöpoiminta: poisto',
+            });
+            kuittaus.textContent = 'Poistopyyntö lähti Fablelle.';
+          } catch {
+            kuittaus.textContent = 'Ei lähtenyt. Yritä uudelleen.';
+            poista.disabled = false;
+          }
+        });
+        poistorivi.appendChild(poista);
+        poistorivi.appendChild(kuittaus);
+        sisalto.push(poistorivi);
+      }
       avaaMinipopup({ otsikko: pari.kysymys, sisalto, luokka: 'pollo-poiminta' });
     });
     rivi.appendChild(pilleri);

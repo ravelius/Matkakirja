@@ -16990,6 +16990,16 @@ button.pollo-poimintanappi:disabled { opacity: 0.5; cursor: default; }
   opacity: 0.8;
 }
 
+/* Minipopupin poistorivi (kehittäjätila): nappi + kuittaus avatun
+   kysymyksen alla, erotettu vastauksesta pienellä välillä. */
+.minipopup-poistorivi {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
 /* Työhuoneen vientisivu (Tilannelehti → Pöllöpoiminnat). */
 .poimintavienti-avain {
   margin: 0.7rem 0 0.2rem;
