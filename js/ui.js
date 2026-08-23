@@ -4384,10 +4384,11 @@ export class UI {
      *   valkoinen        lähes valmis: lehti on, jokin osa puuttuu
      *   harmaa           ei lehteä lainkaan
      *
-     * TUOREUS KATSOTAAN ENSIN ja voittaa muut luokat: tuore kaupunki
-     * on määritelmän mukaan juuri se, jonka omistaja haluaa löytää
-     * laudalta — myös silloin, kun sen viimeinen osa (esimerkiksi
-     * säärivi) tulee vasta seuraavassa erässä.
+     * TUOREUS EI OHITA VALMIUTTA (omistajan havainto 23.8.2026:
+     * "Täällä vielä vihreää vaikka herokuvat ei generoitu" — TUOREET-
+     * lista väritti Kašgarin ja kumppanit vihreiksi ilman heroja).
+     * Kirkkaan vihreän saa vain kaupunki, joka on oikeasti valmis;
+     * muuten tuorekin kaupunki näkyy asteikon mukaan.
      *
      * Aste tulee js/tyohuone-tilastot.js:n lehtiValmius-funktiosta eli
      * samasta määritelmästä kuin Tilastot-taulun sarakkeet.
@@ -4402,9 +4403,10 @@ export class UI {
      */
     const valmiusLuokka = (c) => {
       if (!this.kehittajaTila) return '';
-      if (TUORE_VALMIS_IDT.has(c.id)) return ' city-tuore';
       const aste = lehtiValmius(c.id);
-      if (aste === 'valmis') return ' city-valmis';
+      if (aste === 'valmis') {
+        return TUORE_VALMIS_IDT.has(c.id) ? ' city-tuore' : ' city-valmis';
+      }
       return aste === 'lahes' ? ' city-lahes' : ' city-kesken';
     };
     for (const c of board.cities) {
