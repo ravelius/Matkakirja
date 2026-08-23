@@ -1955,6 +1955,16 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 /* Postikorttipino: kääre asemoi, kortit ovat sisällä. Kun kaupungilla on
  * myös uusi kuva, se pilkottaa vanhan alta ja nousee napautuksesta
  * päälle (omistajan kokeilu). */
+/*
+ * PIILOTETTU (omistajan tilaus 23.8.2026: "piilota (älä poista) kuvat
+ * pois näkyvistä matkakirjasta"). Kuvapino on kytketty pois vain
+ * näkyvistä: js/ui.js rakentaa kortit yhä, kuvadata on paketeissa ja
+ * tiedostot ovat tallessa, joten paluu on tämän yhden säännön
+ * poistaminen. ÄLÄ poista pinon koodia tai kuvia — piilotus on
+ * tarkoituksella pelkkä näkyvyyskytkin.
+ */
+.postikortti { display: none; }
+
 .postikortti {
   position: fixed;
   z-index: 70;
