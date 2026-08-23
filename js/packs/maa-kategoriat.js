@@ -24691,4 +24691,588 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * UUSI-SEELANTI (NZL) — Oseanian ensimmäinen maalehti.
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-uusiseelanti.md ja
+   * tarkistus-uusiseelanti.md yhdessä luettuna, ja jokainen tekstiin
+   * päätynyt luku, päiväys ja nimi tarkistettu vielä kerran
+   * en-Wikipedian raakatekstistä 23.8.2026. Sisältölinjaus on
+   * docs/mantereet-tyoaineisto/spec-mantereet.md:n Oseania-osio:
+   * māorikulttuuri elävänä eikä museona, Waitangin sopimus (1840)
+   * perushistoriana, te reo -nimet käytössä, sodat tapahtumina ilman
+   * sankarikehystä kummallekaan suunnalle.
+   *
+   * AIHEIDEN NIMET ovat yksisanaisia (docs/moduulit/maalehti.md): peli
+   * kirjoittaa otsikoksi maan genetiivin ja aiheen pienellä, "UUDEN-
+   * SEELANNIN maorikulttuuri". Fablen toimeksiannon aiheet "Kulta ja
+   * talous" ja "Merenkulku ja löytöretket" on siksi lyhennetty
+   * muotoon "Talous" ja "Merenkulku". Sivu-id:t ovat kaikki repossa jo
+   * käytössä olevia (historia, tavat, luonto, arki, meri) — uusia
+   * id:itä ei luotu (lehtityö-resepti).
+   *
+   * TARKISTUKSEN JÄLKEEN TEHDYT KORJAUKSET JA RATKAISUT:
+   *  - Otagon väestönkasvu kirjoitetaan lähteen omalla luvulla ("kasvoi
+   *    400 prosenttia vuosina 1861–1864"), ei faktapohjan sanalla
+   *    "nelinkertaistui": 400 prosentin kasvu tarkoittaa viisinkertaista
+   *    lopputulosta, joten sanamuoto olisi ollut väärä (tarkistuksen
+   *    varoitus 2).
+   *  - Gabriel Readin LÖYTÖPÄIVÄ jätettiin pois: en-Wikipedia antaa
+   *    kaksi eri päivää samasta löydöstä ("Otago Gold Rush" 20.5.1861,
+   *    "Gabriel Read" ja "Gabriel's Gully" 25.5.1861). Teksti sanoo
+   *    "toukokuussa 1861", mikä on riidaton.
+   *  - Waitangin ALLEKIRJOITTAJIEN määrä on sama ristiriita: saman
+   *    artikkelin ingressi sanoo noin 530–540 allekirjoittajaa, sen
+   *    leipäteksti "yli 600 päällikköä". Teksti sanoo "yli viisisataa",
+   *    jonka molemmat luvut kattavat, ja nostaa esiin riidattoman
+   *    yksityiskohdan: vain kaksitoista kirjoitti nimensä latinalaisin
+   *    kirjaimin.
+   *  - Hobsonin ASU kerrotaan molemmilla lähdemuodoilla (aamutakki /
+   *    silminnäkijä Colenson "siviilivaatteissa, hattua lukuun
+   *    ottamatta"), koska artikkeli antaa nekin rinnakkain.
+   *  - T3:n villatalouden luvut (5 punnan vuokra + punta jokaista
+   *    tuhatta lammasta kohti yli 5 000:n; 8,1 miljoonaa eekkeriä
+   *    7,6 miljoonalla punnalla; 2,2 miljoonaa eekkeriä ilmaiseksi)
+   *    tarkistettiin itse en-Wikipedian "History of New Zealand"
+   *    -artikkelista, koska tarkistusagentti ei ehtinyt vahvistaa niitä.
+   *  - "Great Fleet" -myyttiä EI käytetä: P1 puhuu perimätiedosta
+   *    ilman kanoottien nimiä ja vuosilukuja (tarkistus vahvisti linjan).
+   *  - Rugbyn haka-perinne (1888–) jätettiin pois: se on 15 vuotta
+   *    isoisän matkan jälkeen eikä kuulu 1873-lehteen.
+   *  - Pink and White Terraces: tuhoutuminen 1886 kerrotaan suoraan
+   *    (Raamatun linja tuhoutuneesta kohteesta), ja artikkelin sisäinen
+   *    kiista säilymisestä kirjoitetaan auki yhdellä lauseella.
+   *  - Gate Pān aikalaislainausta ("puolialastomia villejä") EI
+   *    käytetä; tappio kerrotaan lukuina.
+   *
+   * MINITEHTÄVÄT: yksi jokaisella sivulla (talon valtatapa; USA:n yksi
+   * tehtävä oli Fablen erillinen toimeksianto). Jokaisen vastaus löytyy
+   * saman sivun tekstistä, eikä yksikään osu oceania-questions.js:n
+   * NZL-kysymyksiin (auckland, wellington, christchurch, dunedin,
+   * milfordsound käyty läpi: kultaryntäys kysytään Dunedinissä
+   * kaupunkina, kiivi lentokyvyttömyytenä Milford Soundissa — tämän
+   * lehden tehtävät kysyvät eri asiat).
+   *
+   * KUVAT: 20 nostokuvaa, jokainen haettu Commonsista, katsottu silmin
+   * 960 px:n esikatselussa ja mitattu (leveys ≥ 1200 px). Commonsin
+   * api.php ja en-Wikipedian API vastasivat tänään toistuvasti
+   * 429:llä, joten lisenssi ja tekijä on luettu tiedostosivun omasta
+   * raakatekstistä (action=raw) silloin kun extmetadata ei vastannut —
+   * sama tieto, eri reitti; poikkeama kirjattu myös raporttiin.
+   * Tekijänimet on kirjoitettu lähderiveille luettavaan muotoon kuten
+   * muuallakin tässä tiedostossa ("Joseph Jenner Merrett", ei
+   * "Merrett, Joseph Jenner, 1816-1854."), ja Tanenuiarangi-kuvan
+   * tekijäkenttä on tyhjä extmetadatassa, joten lähderivillä on
+   * tiedostosivun oma PD-user-nimi Kahuroa.
+   * HYLÄTYT: Sporingin waka-piirros (museovitriinin oma selitekyltti
+   * näkyy kuvassa), "ALEXANDER(1873) attack on a Maori pah"
+   * (taistelukuva kaatuneineen), Gabriel's Gullyn 1862-valokuva ja
+   * SS Dunedinin lastausvalokuva (700–762 px), Lindauerin
+   * tohunga-tā-moko (800 px), Otagon "Southern Alps in Winter"
+   * (Pixabay-lisenssi, ei CC), Whakarewarewan vaakakuva (etualalla
+   * tunnistettavia matkailijoita).
+   */
+  NZL: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 ase on juuri vaiennut: vuosikymmeniä kestäneet '
+          + 'Uuden-Seelannin sodat päättyivät edellisenä vuonna, ja Waitangin '
+          + 'sopimuksen kolmenkymmenen vuoden takaiset lupaukset ovat yhä '
+          + 'kiistanalaisia.',
+      nostot: [
+        {
+          otsikko: 'Sopimus, joka kirjoitettiin yhdessä yössä',
+          aika: '1840',
+          tiedosto: '“The Signing of the Treaty of Waitangi”, Ōriwa Haddon - Flickr - Archives New Zealand.jpg',
+          teksti: 'Kapteeni William Hobson oli suunnitellut allekirjoitus'
+              + 'tilaisuuden 7. helmikuuta 1840, mutta jo edellisenä aamuna '
+              + 'Busbyn talon nurmikolla odotti 45 päällikköä. Sopimus oli '
+              + 'kirjoitettu kiireessä ilman lakimiestä: Hobson, hänen '
+              + 'sihteerinsä James Freeman ja brittiresidentti James Busby '
+              + 'laativat sen 4.–5. helmikuuta, ja lähetyssaarnaajat '
+              + 'käänsivät sen yön yli māoriksi. Hobson otti päälliköt '
+              + 'vastaan aamutakissaan — silminnäkijä William Colenso muisti '
+              + 'hänet "siviilivaatteissa, hattua lukuun ottamatta". Jokaisen '
+              + 'allekirjoituksen jälkeen hän sanoi: "He iwi tahi tātou", '
+              + 'olemme nyt yksi kansa.',
+          selite: 'Ōriwa Haddonin maalaus esittää Waitangin sopimuksen '
+            + 'allekirjoitustilaisuutta 6. helmikuuta 1840: teltan alla '
+            + 'istuvat virkamiehet, pöydän yli kumartuva päällikkö ja '
+            + 'ympärillä viittoihinsa kääriytynyt väki.',
+          lahde: 'Archives New Zealand from New Zealand, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Waitangin sopimus',
+        },
+        {
+          otsikko: 'Kaksi tekstiä, kaksi lupausta',
+          aika: '1840',
+          tiedosto: 'Ruapekapeka fortification earthworks.jpg',
+          teksti: 'Sopimusta vietiin ympäri maata vuoden 1840 ajan, ja '
+              + 'allekirjoittajia kertyi yli viisisataa. Nimensä '
+              + 'latinalaisin kirjaimin kirjoitti vain kaksitoista: moni '
+              + 'piirsi asiakirjaan osan omasta moko-kuviostaan, toiset '
+              + 'merkin. Englannin- ja māorinkielinen teksti eivät kuitenkaan '
+              + 'sano samaa. Englanniksi päälliköt luovuttivat '
+              + 'suvereniteetin, māoriksi he luovuttivat kāwanatangan eli '
+              + 'kuvernöörin vallan ja säilyttivät tino rangatiratangan, '
+              + 'täyden määräysvallan omaan maahansa. Juuri tämä ero on '
+              + 'sotien takana: ensimmäiset laukaukset ammuttiin pohjoisessa '
+              + 'jo 1845, ja tammikuussa 1846 tykit jauhoivat Te Ruki '
+              + 'Kawitin Ruapekapeka-linnoitusta.',
+          selite: 'Ruapekapekan pā:n valleista ja kaivannoista on jäljellä '
+            + 'ruohottuneet harjanteet, jotka näyttävät yhä, miten '
+            + 'linnoitus rakennettiin maan sisään.',
+          lahde: 'Winstonwolfe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Uuden-Seelannin sodat',
+        },
+        {
+          otsikko: 'Linnoitus, jota tykit eivät murtaneet',
+          aika: '1864',
+          tiedosto: 'Gate Pa.jpg',
+          teksti: 'Uuden-Seelannin sodat eivät olleet yksi sota vaan sarja '
+              + 'konflikteja vuodesta 1845 vuoteen 1872, ja niiden ytimessä '
+              + 'oli maa. Huippuvuosina 1860-luvulla noin 18 000 '
+              + 'brittisotilasta tykistöineen oli liikkeellä noin 4 000:ta '
+              + 'māorisoturia vastaan, eikä ylivoima ratkaissut. Huhtikuun '
+              + '29. päivänä 1864 kenraali Duncan Cameron lähetti 300 miestä '
+              + 'rynnäkköön Pukehinahinan pā:han Taurangassa. Tykit olivat '
+              + 'jauhaneet varustusta koko päivän, mutta puolustajat olivat '
+              + 'katetuissa kaivannoissa. Hyökkääjistä kaatui 31 ja '
+              + 'haavoittui 80 — yli kolmasosa joukosta.',
+          selite: 'Vuonna 1864 piirretty kuva Gate Pān varustuksesta '
+            + 'taistelun jälkeen näyttää kaivannot, matalat vallit ja '
+            + 'paaluaidan tyngät, joiden takana alle 250 puolustajaa oli '
+            + 'odottanut rynnäkköä.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Gate Pān taistelu',
+        },
+        {
+          otsikko: 'Sota vaikenee ilman ratkaisua',
+          aika: '1872',
+          tiedosto: 'Mundy NZ 1870 SLNSW FL1083129.jpg',
+          teksti: 'Viimeinen vaihe päättyi ilman ratkaisutaistelua. Rangatira '
+              + 'Te Kooti Arikirangi Te Turuki, jota hallituksen joukot olivat '
+              + 'jahdanneet itärannikolla vuodesta 1868, sai vuonna 1872 '
+              + 'turvapaikan māorikuninkaalta ja siirtyi King Countryyn, '
+              + 'jonne takaa-ajajat eivät menneet; siellä hän kehitti '
+              + 'perustamaansa Ringatū-uskoa rauhassa, ja armahdus tuli '
+              + 'vasta 1883. Taranakissa Tītokowaru ei ollut hävinnyt '
+              + 'yhtäkään taistelua, mutta hylkäsi 1869 vahvan asemansa '
+              + 'yllättäen, ja joukot hajosivat. Vuonna 1873 ase on vaiennut '
+              + 'koko maassa, mutta maakysymystä ei ole ratkaistu.',
+          selite: 'Daniel Mundyn valokuva vuodelta 1870 näyttää māorikylän '
+            + 'olkikattoisine taloineen ja avoimen kokoontumiskentän, jonka '
+            + 'reunalle koko kylän väki on asettunut kuvaan.',
+          lahde: 'Daniel Louis Mundy, Wikimedia Commons (PD)',
+          wiki: 'Te Kooti',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Uuden-Seelannin sodat päättyivät — vuosi ennen '
+            + 'isoisän matkaa?',
+        vaihtoehdot: ['1840', '1864', '1872', '1886'],
+        oikea: 2,
+        fakta: 'Viimeinen vaihe päättyi, kun Te Kooti sai turvapaikan '
+            + 'māorikuninkaalta ja siirtyi King Countryyn.',
+      },
+    },
+    {
+      id: 'tavat',
+      nimi: 'Maorikulttuuri',
+      johdanto: 'Vuonna 1873 māorikulttuuri ei ole muisto vaan arkea: '
+          + 'kaiverretut kanootit lepäävät rannoilla, kokoustalojen edustat '
+          + 'täyttyvät vieraista ja kasvojen kuviot kertovat suvun jokaiselle, '
+          + 'joka osaa lukea ne.',
+      nostot: [
+        {
+          otsikko: 'Kanootti, joka kantaa koko suvun nimeä',
+          tiedosto: '00 27 0561 Waitangi NZ - Kriegskanu der Maori.jpg',
+          teksti: 'Waka tarkoittaa kanoottia, mutta sana kantaa enemmän: se '
+              + 'on myös nimitys ihmisryhmälle, joka polveutuu samasta '
+              + 'muinaisesta purjehduskanootista. Suurimmat sotakanootit, '
+              + 'waka taua, veistettiin yhdestä ainoasta tōtara-rungosta jopa '
+              + 'neljänkymmenen metrin mittaisiksi, ja keula- ja '
+              + 'peräkuvioihin kaiverrettiin sukupolvien tarinat. Kanootti '
+              + 'oli tapu, pyhä: siihen ei saanut viedä keitettyä ruokaa, '
+              + 'eikä siihen astuttu keulasta tai perästä vaan laidan yli. '
+              + 'Sotaretkellä yhteen alukseen mahtui jopa kahdeksankymmentä '
+              + 'soutajaa.',
+          selite: 'Waitangissa säilytettävä suuri waka taua lepää katoksensa '
+            + 'alla: punainen runko, mustaksi kaiverrettu korkea peräkuvio ja '
+            + 'kymmenien soutajien penkkirivi.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Waka',
+        },
+        {
+          otsikko: 'Kasvot, jotka kertovat kuka olet',
+          aika: '1878',
+          tiedosto: 'Tukukino, by Lindauer.jpg',
+          teksti: 'Tā moko ei ollut koriste vaan asiakirja: kuviot kertoivat '
+              + 'suvun, aseman ja tehdyt teot, ja niitä osattiin lukea. Työ '
+              + 'ei ollut pistelyä vaan veistoa. Uhi-taltalla, usein '
+              + 'albatrossin luusta tehdyllä, iho avattiin ja väri hierottiin '
+              + 'vakoihin, joten valmis moko tuntui sormenpäissä uurteina. '
+              + 'Miehet saivat kuvionsa tavallisesti kasvoihin ja reisiin, '
+              + 'naiset huuliin ja leukaan, ja sen saaminen oli siirtymä '
+              + 'lapsuudesta aikuisuuteen. Isoisän aikaan tapa oli '
+              + 'muuttumassa: eurooppalainen neula alkoi korvata taltan, ja '
+              + 'miesten kasvokuviot harvinaistuivat.',
+          selite: 'Gottfried Lindauerin muotokuva vuodelta 1878 esittää '
+            + 'päällikkö Tukukinon, jonka kasvoja kiertää täysi moko-kuvio ja '
+            + 'jonka kädessä on kaiverrettu puinen ase.',
+          lahde: 'Gottfried Lindauer, Wikimedia Commons (PD)',
+          wiki: 'Tā moko',
+        },
+        {
+          otsikko: 'Kenttä, jolla asiat sanotaan ääneen',
+          tiedosto: 'Tanenuiarangi.jpg',
+          teksti: 'Marae ātea on kokoustalon eli wharenuin edessä oleva avoin '
+              + 'kenttä, ja arkikielessä marae tarkoittaa koko aluetta '
+              + 'rakennuksineen. Jako ei ole sattumaa: kokoustalo kuuluu '
+              + 'rauhan jumalalle Rongolle ja avoin kenttä Tūmatauengalle, '
+              + 'jonka aluetta ovat sota ja riita — siksi juuri kentällä '
+              + 'pidetään puheet, joissa asiat voivat kärjistyä. Vieras '
+              + 'otetaan vastaan pōwhiri-seremonialla: naisten karanga-kutsu '
+              + 'kantaa yli kentän, ja sitten puhutaan vuorotellen. Lähes '
+              + 'jokaisella heimolla ja alaheimolla on oma marae, joka on '
+              + 'monelle yhtä tärkeä kuin oma koti.',
+          selite: 'Kokoustalon punaiseksi maalatut kaiverrukset kehystävät '
+            + 'oviaukkoa ja ikkunaa, ja talon edessä avautuu nurmikenttä eli '
+            + 'marae ātea.',
+          lahde: 'Kahuroa, Wikimedia Commons (PD)',
+          wiki: 'Marae',
+        },
+        {
+          otsikko: 'Tanssi, joka ei ole vain sotatanssi',
+          aika: 'n. 1845',
+          tiedosto: 'MaoriWardanceKahuroa.jpg',
+          teksti: 'Haka on asentotanssi, jossa sanat, jalkojen isku, kädet, '
+              + 'silmät ja ulos työnnetty kieli sanovat saman asian yhtä '
+              + 'aikaa. Käännös "sotatanssi" on liian kapea: hakoja on '
+              + 'juhliin, hautajaisiin, vieraiden vastaanottoon ja '
+              + 'tervehdyksiin, eikä esittäjän tarvitse olla soturi. '
+              + 'Tunnetuin niistä, Ka Mate, on Ngāti Toan päällikön Te '
+              + 'Rauparahan 1820-luvulla sepittämä haka taparahi, joka '
+              + 'esitetään ilman aseita. Sen sanat kertovat siitä, miten hän '
+              + 'väisti vainoojansa ja nousi piilostaan päivänvaloon: elämän '
+              + 'voitosta kuoleman yli.',
+          selite: 'Joseph Jenner Merrettin noin vuonna 1845 maalaama vesiväri '
+            + 'esittää rivin miehiä hakassa kokoustalon edustalla, aseet '
+            + 'koholla, ja istuvan yleisön kentän laidalla.',
+          lahde: 'Joseph Jenner Merrett, Wikimedia Commons (PD)',
+          wiki: 'Haka',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä sotakanoottiin ei saanut viedä, koska se oli tapu?',
+        vaihtoehdot: [
+          'Keitettyä ruokaa',
+          'Juomavettä',
+          'Kalaverkkoja',
+          'Melaa',
+        ],
+        oikea: 0,
+        fakta: 'Kanoottiin astuttiin samasta syystä laidan yli eikä keulasta '
+            + 'tai perästä.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saaret erosivat muusta maailmasta niin varhain, ettei niille '
+          + 'kehittynyt yhtään maalla elävää nisäkästä lepakoita lukuun '
+          + 'ottamatta — ja pohjoisessa maankuori kiehuu kaupungin katujen '
+          + 'alla.',
+      nostot: [
+        {
+          otsikko: 'Maa, jossa linnut ottivat nisäkkäiden paikan',
+          tiedosto: 'Apteryx mantelli -Rotorua, North Island, New Zealand-8a.jpg',
+          teksti: 'Kun ensimmäiset ihmiset nousivat maihin, saarilla ei ollut '
+              + 'yhtäkään maalla elävää nisäkästä: ainoat alkuperäiset olivat '
+              + 'kolme lepakkolajia. Linnut olivat ottaneet nisäkkäiden '
+              + 'paikat. Kiivi nuuskii toukkia maasta sieraimilla, jotka ovat '
+              + 'poikkeuksellisesti nokan kärjessä, ja kākāpō — maailman '
+              + 'ainoa lentokyvytön yöpapukaija — pesii maassa ja kokoontuu '
+              + 'soidinkuoppiin, joista koiraan jyminä kantaa kauas. Kun '
+              + 'laivat toivat rotat, kissat ja myöhemmin kärpät, tasapaino '
+              + 'kaatui: lähes puolet saarten alkuperäisistä lintulajeista on '
+              + 'kadonnut ihmisen saapumisen jälkeen.',
+          selite: 'Kiivi työntää pitkän nokkansa multaan Rotoruan '
+            + 'kiivitalossa, jossa lintu on nimilaputettu rengas jalassaan.',
+          lahde: 'The.Rohit, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kiivit',
+        },
+        {
+          otsikko: 'Yhdeksän jättiläistä ja niiden ainoa vihollinen',
+          tiedosto: 'Giant Haasts eagle attacking New Zealand moa.jpg',
+          teksti: 'Ennen ihmisiä metsien suurimmat kasvinsyöjät olivat moat, '
+              + 'yhdeksän lajia siivettömiä lintuja — ainoita lintuja, '
+              + 'joilta puuttuivat siipien surkastuneet jäänteetkin. Niiden '
+              + 'ainoa saalistaja oli Haastin kotka, suurin tunnettu kotka '
+              + 'maailmassa, joka painoi kymmenestä kahdeksaantoista kiloa ja '
+              + 'iski saaliinsa ylhäältä. Polynesialaiset saapuivat noin '
+              + 'vuoden 1300 tienoilla, ja alle sadassa vuodessa moat oli '
+              + 'metsästetty loppuun: vuoteen 1445 mennessä kaikki lajit '
+              + 'olivat kadonneet, ja kotka hävisi pian perässä. Lajin kuvasi '
+              + 'tieteelle Julius von Haast vasta vuonna 1871.',
+          selite: 'John Megahanin maalaus esittää Haastin kotkan iskeytymässä '
+            + 'kahden pakenevan moan kimppuun metsänreunassa.',
+          lahde: 'John Megahan, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Moat',
+        },
+        {
+          otsikko: 'Kaupunki, joka tuoksuu rikille',
+          tiedosto: 'WhakarewarewaGeyserFlat.jpg',
+          teksti: 'Rotorua tunnetaan lempinimellä Sulphur City: rikkivety '
+              + 'leijuu kaduilla ja tuoksuu mädälle munalle. Kaupunki seisoo '
+              + 'noin 240 000 vuotta sitten syntyneen tulivuorikalderan '
+              + 'päällä, ja kuuma vesi on osa arkea — siinä kypsennetään '
+              + 'ruokaa, pestään pyykkiä ja kylvetään. Te Arawan '
+              + 'perimätiedon mukaan lähteet syntyivät, kun tohunga '
+              + 'Ngātoro-i-rangi rukoili jumalia lähettämään tulihenget '
+              + 'kaukaisesta Hawaikista. Vuonna 1880 Ngāti Whakaue vuokrasi '
+              + 'kruunulle viisikymmentä eekkeriä maata sopimuksella, joka '
+              + 'teki paikasta kylpyläkaupungin ja matkailijoiden '
+              + 'lähtöpisteen.',
+          selite: 'Whakarewarewan geysirikentällä höyry nousee vaaleasta '
+            + 'piikuoresta ja kuuma puro juoksee kentän halki.',
+          lahde: 'Carl Lindberg, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Rotorua',
+        },
+        {
+          otsikko: 'Maailman kahdeksas ihme, joka katosi',
+          aika: '1886',
+          tiedosto: 'White Terraces - Blomfield.jpg',
+          teksti: 'Vuonna 1873 maan kuuluisin nähtävyys ovat Vaaleanpunaiset '
+              + 'ja Valkoiset Terassit, māoriksi Te Otukapuarangi ja Te '
+              + 'Tarata: piidioksidipitoinen kuuma vesi oli laskeutunut '
+              + 'vuosituhansien ajan altaiksi, jotka porrastuivat rinnettä '
+              + 'alas noin kahdeksan hehtaarin alalla. Matka oli oma '
+              + 'urakkansa — höyrylaivalla, kärryillä ja kanootilla, ja '
+              + 'perille pääsi vain Tūhourangi-heimon oppaan kanssa. Kaikki '
+              + 'loppui 10. kesäkuuta 1886, kun Tarawera purkautui ja hautasi '
+              + 'terassit. Tutkijat kiistelevät yhä siitä, tuhoutuiko kaikki: '
+              + 'vuoden 2016 tutkimus päätyi siihen, että suurin osa tuhoutui.',
+          selite: 'Charles Blomfieldin vuonna 1884 maalaama näkymä esittää '
+            + 'Valkoisten Terassien portaikon vaaleine altaineen ja '
+            + 'vaaleansinisine vesineen kaksi vuotta ennen purkausta.',
+          lahde: 'Charles Blomfield, Wikimedia Commons (PD)',
+          wiki: 'Pink and White Terraces',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitkä olivat Uuden-Seelannin ainoat alkuperäiset maalla '
+            + 'elävät nisäkkäät?',
+        vaihtoehdot: [
+          'Kolme lepakkolajia',
+          'Kaksi rottalajia',
+          'Villikissat',
+          'Ei yhtään lajia',
+        ],
+        oikea: 0,
+        fakta: 'Linnut olivat ottaneet ne paikat, jotka muualla kuuluvat '
+            + 'nisäkkäille.',
+      },
+    },
+    {
+      id: 'arki',
+      nimi: 'Talous',
+      johdanto: 'Toukokuussa 1861 mies löysi kultaa purosta Otagossa, ja '
+          + 'eteläsaari muuttui vuodessa; vuonna 1873 ryntäys on laantunut, '
+          + 'mutta suurin mullistus odottaa yhdeksän vuoden päässä.',
+      nostot: [
+        {
+          otsikko: 'Kultaa kuin tähdet Orionissa',
+          aika: '1861',
+          tiedosto: 'Old gold workings, St. Bathans, Otago, New Zealand.jpg',
+          teksti: 'Toukokuussa 1861 australialainen etsijä Gabriel Read kaivoi '
+              + 'Tuapeka-joen rantatörmää lähellä nykyistä Lawrencea. '
+              + '"Lapioin pois puolisen metriä soraa, tulin kauniiseen '
+              + 'pehmeään liuskeeseen ja näin kullan kimaltavan kuin tähdet '
+              + 'Orionissa pakkasyönä", hän kirjoitti. Löytökirje syntyi '
+              + 'Janet Robertsonin mökissä, ja uutinen ilmestyi Otago '
+              + 'Witnessissä 8. kesäkuuta. Ryntäys alkoi toden teolla vasta, '
+              + 'kun virkamies John Hardy kävi katsomassa kentän. Jouluun '
+              + 'mennessä etsijöitä oli 14 000, ja Otagon väkiluku kasvoi '
+              + '400 prosenttia vuosina 1861–1864.',
+          selite: 'St. Bathansissa vesisuihkuilla huuhdotut kalliot ja niiden '
+            + 'juureen jäänyt syvä vedellä täyttynyt kuoppa ovat sitä, mitä '
+            + 'kultaryntäys jätti maisemaan.',
+          lahde: 'Phillip Capper, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Otagon kultaryntäys',
+        },
+        {
+          otsikko: 'Kutsutut kaivajat',
+          aika: '1866',
+          tiedosto: 'Arrowtown Chinese goldminers huts.jpg',
+          teksti: 'Vuoteen 1865 mennessä ensimmäinen ryntäys oli ohi ja '
+              + 'etsijät siirtyivät länsirannikon uusille kentille. Otagon '
+              + 'maakuntaneuvosto pelkäsi talouden romahtavan ja kutsui '
+              + 'Victorian kaivoksilta kiinalaisia kaivajia jatkamaan työtä '
+              + 'hylätyillä valtauksilla. Vuoden 1866 väenlaskussa heitä oli '
+              + 'Otagossa alle kaksisataa, seuraavina vuosikymmeninä '
+              + 'tuhansia. Arrowtowniin syntyi oma kylä, jonka majat '
+              + 'rakennettiin kallioseinämää vasten suojaan tuulelta. Kutsu '
+              + 'ei tarkoittanut tervetulotoivotusta: kaivajat kohtasivat '
+              + 'syrjintää, ja harva ansaitsi tarpeeksi päästäkseen takaisin '
+              + 'kotiin.',
+          selite: 'Arrowtownin kiinalaiskylän maja on rakennettu suoraan '
+            + 'liuskekallion kylkeen, ja sen katto jatkuu rinteeseen '
+            + 'olkikerroksena.',
+          lahde: 'Wildman NZ, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Arrowtown',
+        },
+        {
+          otsikko: 'Ennen kultaa oli villa',
+          tiedosto: 'EMC Sheep.jpg',
+          teksti: 'Talouden perusta oli lammas jo ennen kultaa. 1840-luvulta '
+              + 'lähtien laajat lammastilat veivät villaa Englannin '
+              + 'kehruukoneille, ja karjatilallinen sai vuokrata '
+              + 'hallitukselta laidunta viidellä punnalla vuodessa lisättynä '
+              + 'punnalla jokaista tuhatta lammasta kohti, jotka ylittivät '
+              + 'ensimmäiset viisituhatta. Halpa maa ja pitkät laitumet '
+              + 'tekivät harvoista miehistä poikkeuksellisen rikkaita. '
+              + 'Vuosina 1856–1876 maata myytiin 8,1 miljoonaa eekkeriä 7,6 '
+              + 'miljoonalla punnalla, ja 2,2 miljoonaa eekkeriä annettiin '
+              + 'ilmaiseksi sotilaille, merimiehille ja siirtolaisille. Metsä '
+              + 'vaihtui laitumeksi koko maan mitassa.',
+          selite: 'Merinolammaslauma siirtyy laitumelta toiselle paimenen ja '
+            + 'koiran ajamana Canterburyn tasangolla.',
+          lahde: 'Experience Mid Canterbury, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Lampaiden kasvatus',
+        },
+        {
+          otsikko: 'Laiva, joka muutti maan suunnan',
+          aika: '1882',
+          tiedosto: 'SS Dunedin by Frederick Tudgay.JPG',
+          teksti: 'Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä '
+              + 'Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 '
+              + 'Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä '
+              + 'päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista '
+              + 'Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian '
+              + 'ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma '
+              + 'kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään '
+              + 'sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä '
+              + 'puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan '
+              + 'jälkeen, ja vain yksi ruho hylättiin.',
+          selite: 'Frederick Tudgayn maalaus vuodelta 1875 esittää Dunedinin '
+            + 'täysissä purjeissa avomerellä, punainen kauppalippu perässä.',
+          lahde: 'Frederick Tudgay, Wikimedia Commons (PD)',
+          wiki: 'Dunedin (laiva)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä laiva Dunedin vei Lontooseen helmikuussa 1882?',
+        vaihtoehdot: [
+          'Jäähdytettyä lihaa',
+          'Kultaharkkoja',
+          'Villapaaleja',
+          'Kauriipuuta',
+        ],
+        oikea: 0,
+        fakta: 'Matka kesti 98 vuorokautta, ja perillä vain yksi ruho '
+            + 'jouduttiin hylkäämään.',
+      },
+    },
+    {
+      id: 'meri',
+      nimi: 'Merenkulku',
+      johdanto: 'Aotearoa on yksi viimeisistä suurista maista, joihin ihminen '
+          + 'löysi tien, ja vielä isoisän aikaan sinne pääsee vain kolmen '
+          + 'kuukauden merimatkalla.',
+      nostot: [
+        {
+          otsikko: 'Navigointi ilman kompassia',
+          tiedosto: '00 0524 Te Aurere, ein Doppelrumpf-Kanu (Waka Hourua) der Maoris.jpg',
+          teksti: 'Aotearoaan purjehdittiin avomeren yli satoja vuosia ennen '
+              + 'eurooppalaisia. Alukset olivat suuria waka hourua '
+              + '-kaksirunkokanootteja, ja suunta pidettiin ilman kompassia: '
+              + 'tähtien nousukohdista, aallokon suunnasta, pilvien väristä '
+              + 'saaren yllä ja merilintujen lentoreiteistä. Perimätieto '
+              + 'muistaa kanoottien nimet, ja monet heimot laskevat sukunsa '
+              + 'niistä yhä. Vanhin löydetty kanootin osa, Anaweka-waka '
+              + 'Eteläsaaren pohjoisrannikolta, on ajoitettu noin vuoteen '
+              + '1400 ja rakennettu jo täällä — muun Polynesian tyyliin, '
+              + 'mutta uusiseelantilaisesta puusta.',
+          selite: 'Kaksirunkoinen purjehduskanootti Te Aurere makaa ankkurissa '
+            + 'tyynellä lahdella, kaksi mastoa pystyssä ja rungot yhdistetty '
+            + 'kannella.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Polynesialainen navigointi',
+        },
+        {
+          otsikko: 'Kohtaaminen, joka meni pieleen',
+          aika: '1642',
+          tiedosto: 'Gilsemans 1642.jpg',
+          teksti: '13. joulukuuta 1642 hollantilainen Abel Tasman näki '
+              + 'ensimmäisenä eurooppalaisena Uuden-Seelannin rannan. '
+              + 'Muutamaa päivää myöhemmin, ankkurissa nykyisen Golden Bayn '
+              + 'edustalla, hänen miehensä ja māorit soittivat toisilleen '
+              + 'torvia pimeässä ymmärtämättä sanaakaan. Aamulla kohtaaminen '
+              + 'kääntyi väkivaltaiseksi: waka törmäsi alusten välillä '
+              + 'soutavaan veneeseen, neljä hollantilaista sai surmansa '
+              + 'patu-aseen iskuista, ja laivoilta ammuttiin poistuvia '
+              + 'kanootteja. Tasman nimesi paikan Murhaajien lahdeksi ja '
+              + 'purjehti pois astumatta koskaan maihin.',
+          selite: 'Isaack Gilsemansin piirros vuodelta 1642 näyttää '
+            + 'hollantilaiset alukset ja niitä ympäröivät kanootit; kirjaimet '
+            + 'A–F ja käsin kirjoitettu selitys ovat piirtäjän omat.',
+          lahde: 'Isaack Gilsemans, Wikimedia Commons (PD)',
+          wiki: 'Abel Tasman',
+        },
+        {
+          otsikko: 'Rapu, kangas ja tulkki Tahitilta',
+          aika: '1769',
+          tiedosto: 'A Maori man and Joseph Banks exchanging a crayfish for a piece of cloth, c. 1769.jpg',
+          teksti: 'Lokakuussa 1769 James Cook ankkuroi Endeavourin Poverty '
+              + 'Bayhin. Mukana oli tahitilainen pappi ja navigoija Tupaia, '
+              + 'jonka kieli oli riittävän lähellä te reoa, jotta puhe kulki '
+              + '— ensimmäistä kertaa eurooppalaisten ja māorien välillä. '
+              + 'Ensikohtaamiset johtivat myös kuolemiin, mutta matka jatkui: '
+              + 'tammikuussa 1770 Cook saapui Queen Charlotte Soundiin, josta '
+              + 'tuli hänen tukikohtansa ja jossa hän varmisti salmen '
+              + 'erottavan kaksi saarta. Hän purjehti koko maan ympäri ja '
+              + 'kartoitti rantaviivan niin tarkasti, että karttoja '
+              + 'käytettiin vielä sata vuotta myöhemmin.',
+          selite: 'Tupaian piirroksessa viittaan pukeutunut māori ojentaa '
+            + 'suuren punaisen ravun ja Joseph Banks tarjoaa vastineeksi '
+            + 'valkoista kangaspalaa.',
+          lahde: 'Tupaia, Wikimedia Commons (PD)',
+          wiki: 'James Cook',
+        },
+        {
+          otsikko: 'Sata vuorokautta merellä',
+          tiedosto: 'William Allsworth - The emigrants - Google Art Project.jpg',
+          teksti: 'Isoisän aikaan Lontoosta Uuteen-Seelantiin oli kolmen '
+              + 'kuukauden matka. Purjelaiva Dunedin teki ensimmäisen '
+              + 'matkansa Lontoosta Lytteltoniin 98 vuorokaudessa vuonna 1874 '
+              + 'ja seuraavana vuonna Aucklandiin 94:ssä; sen seitsemästä '
+              + 'siirtolaismatkasta jokainen alitti sata päivää. Se oli '
+              + 'nopeaa — ja silti kolmasosa vuodesta merellä, suurimmaksi '
+              + 'osaksi ilman satamaa matkan varrella, myrskyisillä '
+              + 'eteläisillä leveysasteilla. Suezin kanava avattiin 1869 ja '
+              + 'höyrylaivat lyhensivät matkoja muualla, mutta Uusi-Seelanti '
+              + 'pysyi kaukaisimpana kohteena, johon Euroopasta lähdettiin.',
+          selite: 'William Allsworthin maalaus vuodelta 1844 esittää '
+            + 'skotlantilaisperheen tavaroineen ja lampaineen rannalla, '
+            + 'purjelaiva odottamassa ulapalla.',
+          lahde: 'William Allsworth, Wikimedia Commons (PD)',
+          wiki: 'Siirtolaisuus',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka eurooppalainen näki Uuden-Seelannin ensimmäisenä '
+            + 'vuonna 1642?',
+        vaihtoehdot: [
+          'Abel Tasman',
+          'James Cook',
+          'Francis Drake',
+          'Ferdinand Magalhães',
+        ],
+        oikea: 0,
+        fakta: 'Hän ei astunut maihin lainkaan, vaan purjehti pois '
+            + 'nimettyään paikan Murhaajien lahdeksi.',
+      },
+    },
+  ],
 };

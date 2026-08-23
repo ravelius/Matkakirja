@@ -2552,6 +2552,86 @@ export const MAAKARTAT = {
       wiki: 'Mississippi (joki)',
     },
   },
+  NZL: {
+    /*
+     * UUSI-SEELANTI — Oseanian ensimmäinen maakartta. Suoraviivainen
+     * tapaus toisin kuin USA ja Venäjä: sijaintikarttaperheessä on
+     * tasavälinen korkokartta koko maasta, eikä uutta projektiohaaraa
+     * tarvita.
+     *
+     * Kuva on M.Bittonin relief-versio (1380 × 1976 px), jonka
+     * kuvaussivu ilmoittaa itse reunakoordinaatit ja N/S-venytyksen
+     * 136 %. Sama kartta on Wikipedian Module:Location map/data/New
+     * Zealand -moduulin `image1`, ja rajat luettiin MOLEMMISTA PÄISTÄ
+     * (moduuli JA tiedostosivu) ennen kuin faktapohjan ehdotusta
+     * katsottiin (resepti, kohta 2): molemmat antavat saman luvun.
+     * Ristiinvarmistus kuvasuhteesta: 1380 px / 13,2° = 104,5 px
+     * astetta kohti pituussuunnassa ja 1976 px / 13,9° = 142,2 px
+     * leveyssuunnassa, suhde 1,36. Keskileveysasteella 40,9°
+     * 1/cos on 1,32 — kolmen prosentin ero on karttaperheen omaa
+     * venytystä eikä vaikuta prosenttiasemointiin.
+     */
+    tiedosto: 'New Zealand (relief map).png',
+    lahde: 'M.Bitton, Wikimedia Commons (CC BY-SA 4.0)',
+    rajat: { pohjoinen: -33.9, etela: -47.8, lansi: 165.9, ita: 179.1 },
+    /*
+     * Kuusi paikkaa: pelin viisi NZL-kohdetta (Auckland, Wellington,
+     * Christchurch, Dunedin ja Milford Sound) sekä Rotorua, joka on
+     * maalehden luontosivun geoterminen keskus eikä näkyisi muuten
+     * kartalla lainkaan. Koordinaatit fi-Wikipedian artikkelien
+     * sijaintiruuduista; Milford Sound puuttuu fi-artikkelin ruudusta,
+     * joten sen koordinaatti on en-Wikipedian coord-merkinnästä
+     * (44°38′53″S, 167°54′20″E).
+     *
+     * Pisteet todennettiin pelin omalla karttapiste()-funktiolla ja
+     * katsottiin kuvan päälle piirrettynä: kaikki kuusi osuvat maalle.
+     * Milford Sound on vuonon perukka ja siksi rantaviivan päällä —
+     * satamakohteen normaali ilmiö, ei virhe.
+     */
+    kaupungit: [
+      { nimi: 'Wellington', lat: -41.286, lon: 174.776, paa: true },
+      { nimi: 'Auckland', lat: -36.848, lon: 174.766 },
+      { nimi: 'Rotorua', lat: -38.138, lon: 176.251 },
+      { nimi: 'Christchurch', lat: -43.532, lon: 172.637 },
+      { nimi: 'Dunedin', lat: -45.867, lon: 170.5 },
+      { nimi: 'Milford Sound', lat: -44.648, lon: 167.906 },
+    ],
+    /*
+     * Kuvanosto vuoristosta: kartan halki kulkeva valkoinen selkäranka
+     * selittää sekä sään että sen, miksi asutus on rannikoilla. Aihe ei
+     * osu maalehden kahteenkymmeneen nostoon (luonto-sivu kertoo
+     * linnuista, geotermiasta ja terasseista, ei vuorista) —
+     * tarkistettu. Kuva on silmätarkistettu 960 px:ssä: Hooker Valleyn
+     * yli avautuva näkymä Aorakiin auringonlaskun aikaan, ei ihmisiä
+     * eikä merkintöjä.
+     */
+    nosto: {
+      otsikko: 'Vuorijono, joka tekee sään',
+      tiedosto: 'Hooker Valley towards Aoraki Mount Cook at sunset.jpg',
+      teksti: 'Eteläiset Alpit kulkevat noin viidensadan kilometrin '
+        + 'matkan Eteläsaaren halki lounaasta koilliseen. Korkein huippu '
+        + 'on Aoraki eli Mount Cook, 3 724 metriä, ja sen lisäksi '
+        + 'jonossa on kuusitoista muuta yli kolmen kilometrin '
+        + 'huippua. Vuoret ovat nuoria ja yhä nousussa: Tyynenmeren '
+        + 'laatta työntyy Australian laatan alle Alppien ali kulkevaa '
+        + 'Alppisiirrosta pitkin. Jono seisoo poikittain lännestä '
+        + 'puhaltavia tuulia vastaan, ja siitä syntyy maan jyrkin '
+        + 'sääraja: länsirannikolla sataa noin 3 000 millimetriä '
+        + 'vuodessa ja vedenjakajan tuntumassa jopa 15 000, mutta '
+        + 'kolmenkymmenen kilometrin päässä idässä enää tuhat. Siksi '
+        + 'lännessä on sademetsää ja jäätiköitä, idässä kuivaa '
+        + 'lakeutta ja lammaslaitumia. Vuorilta tulee myös pounamu, '
+        + 'vihreä nefriitti, jonka mukaan Eteläsaari on māoriksi Te '
+        + 'Wai Pounamu, vihreän kiven vedet. James Cook antoi '
+        + 'vuoristolle nimen todennäköisesti 23. maaliskuuta 1770, '
+        + 'vaikka ei sumun takia nähnyt korkeinta huippua.',
+      selite: 'Aoraki hohtaa auringonlaskun valossa Hooker Valleyn '
+        + 'perällä, ja sen edessä jyrkät rinteet putoavat jäätikön '
+        + 'uurtamaan laaksoon.',
+      lahde: 'Pseudopanax, Wikimedia Commons (CC BY 3.0)',
+      wiki: 'Eteläiset Alpit',
+    },
+  },
 };
 
 /*
