@@ -57553,4 +57553,818 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MELBOURNE (Opus 23.8.2026). Alusta asti tehty lehti: kohteella ei
+   * ollut kategorioita ennen tätä, ja ARTIKKELIT-merkintä kirjoitettiin
+   * samassa erässä (js/packs/oceania-artikkelit.js, avain 'Melbourne').
+   * Faktat on tarkistettu en-Wikipedian raakateksteistä (action=raw,
+   * haettu 23.8.2026): Melbourne, History of Melbourne, Yarra River,
+   * Wurundjeri, Boonwurrung, Victorian gold rush, Hoddle Grid,
+   * Parliament House, Melbourne, Old Treasury Building, Melbourne,
+   * Melbourne Cricket Ground, Trams in Melbourne, Chinatown, Melbourne,
+   * Queen Victoria Market, State Library Victoria, National Gallery of
+   * Victoria, Eugene von Guerard, Louis Buvelot, Heidelberg School,
+   * William Barak, Royal Botanic Gardens Victoria, William Guilfoyle,
+   * Fitzroy Gardens, Carlton Gardens, Royal Arcade, Melbourne,
+   * Flinders Street railway station, Melbourne Airport ja Myki.
+   * Korjauskierroksella 23.8.2026 luettiin lisäksi Melbourne cable
+   * tramway system, Bunurong, Royal Exhibition Building ja Louis
+   * Buvelot uudelleen (action=raw, NODE_USE_ENV_PROXY=1).
+   *
+   * KAKSI LÄHDETARKENNUSTA korjauskierroksella. (a) Buvelot: saman
+   * en-Wikipedia-artikkelin johdanto sanoo "lived 17 years in Brazil"
+   * ja leipäteksti "lived in Brazil for four years in Bahia and Rio".
+   * Luku on siis kiistanalainen, eikä nosto T3 enää nojaa siihen —
+   * teksti sanoo vain "vuosia Brasiliassa" ja kertoo sedän plantaasin,
+   * joka on leipätekstin oma tieto. (b) Fitzroy Gardens: nosto L3
+   * väitti aiemmin, että La Trobe varasi 1839 puistoiksi Carltonin,
+   * Flagstaffin, Fitzroyn ja Treasuryn sekä Kings Domainin. History of
+   * Melbourne -artikkelin lause ei ajoita varauksia eikä nimeä
+   * Fitzroyta tai Kings Domainia: sen lista on Treasury, Carlton,
+   * Flagstaff, Royal Park ja kasvitieteellinen puutarha, ja La Trobe
+   * nimitettiin lokakuussa 1839. Nosto (ja Flagstaffin kuvateksti)
+   * noudattaa nyt lähdelausetta sanasta sanaan; Fitzroy Gardensin oma
+   * vuosiluku 1848 on edelleen omana väitteenään.
+   *
+   * TYÖAINEISTO PUUTTUI ENSIMMÄISTÄ VERSIOTA KIRJOITETTAESSA. Ohje
+   * käski lukea ensin tiedostot
+   * docs/mantereet-tyoaineisto/faktapohja-melbourne.md ja
+   * tarkistus-melbourne.md, mutta niitä ei silloin ollut kirjoittajan
+   * worktreessä. Siksi jokainen väite haettiin suoraan
+   * en-Wikipediasta, ja tilaajan kirjaamat kaksi pakollista korjausta
+   * tehtiin alla kuvatulla tavalla. Riippumaton tarkistus
+   * (tarkistus-melbourne-lehti.md, noin 95 väitettä yli 20
+   * artikkelista) ei löytänyt yhtään päivämäärä-, mitta- tai
+   * nimivirhettä, mutta löysi kulttuurivisan vastausten vuotamisen
+   * (ks. KULTTUURIVISA alla) ja pilarin 3 epätasapainon. Molemmat on
+   * korjattu 23.8.2026 faktapohja luettuna.
+   *
+   * TILAAJAN KORJAUS (a) ON TEHTY, ja se on nostossa K1 heti etusivulla.
+   * Joki EI kanna wurundjerien omaa nimeä: kansan oma nimi on
+   * Birrarung, ja 'Yarra' on vuoden 1835 käännösvirhe. Lehti kertoo
+   * tapauksen Wedgen omilla sanoilla. TÄSSÄ ON WIKIPEDIAN SISÄINEN
+   * RISTIRIITA, joka on ratkaistu eikä kirjoitettu auki: Yarra River
+   * -artikkelin johdanto sanoo nimen tulevan boonwurrungin sanoista
+   * 'Yarro-yarro' merkityksessä 'ever-flowing', mutta saman artikkelin
+   * nimiosio ja siihen liitetty John Helder Wedgen oma lainaus
+   * (Bonwick 1868) sanovat sanan tarkoittaneen KOSKEA — samat miehet
+   * käyttivät sitä myös Werribee-joen putouksesta. Lehti käyttää
+   * Wedgen omaa selostusta, koska se on ensikäden lähde ja koska sama
+   * artikkeli kertoo erikseen, että Yarra Yarra -koski oli olemassa ja
+   * räjäytettiin 1883. Birrarungin merkitys 'sumujen joki' on saman
+   * artikkelin mukaan woiwurrungin sanasta.
+   *
+   * TILAAJAN KORJAUS (b) ON TEHTY, ja se on nostossa T1. Kirjasto ja
+   * galleria EIVÄT syntyneet isoisän matkavuosina: kirjasto
+   * perustettiin 1854 ja sen ensimmäinen osa avattiin 11.2.1856,
+   * taidekokoelma avautui Museum of Art -nimisenä toukokuussa 1861
+   * kirjaston eteläsiiven alakerrassa, ja ensimmäinen varta vasten
+   * rakennettu gallerirakennus (McArthur Gallery) avattiin 24.5.1874 —
+   * eli VUOSI isoisän matkan jälkeen. Nimi National Gallery of
+   * Victoria otettiin käyttöön vasta 1875. Vuonna 1873 Melbournessa
+   * oli siis kokoelma mutta ei omaa gallerirakennusta, ja lehti sanoo
+   * sen suoraan. Pieni ristiriita: NGV-artikkelin leipäteksti sanoo
+   * 24.5.1874, mutta artikkelin kuvatekstissä sama avajaiskuva on
+   * merkitty vuodelle 1875; lehti käyttää leipätekstin päivämäärää.
+   *
+   * SISÄLTÖLINJAUS on spec-mantereet.md:n Oseania-osio ja sen
+   * yhteinen kohta 1 (alkuperäiskansat kunnioittavasti ja elävinä).
+   * Käytännössä: wurundjerit ja boonwurrungit nimetään omilla
+   * nimillään ennen siirtomaanimiä, ja heidät näytetään NYKYISINÄ
+   * kansoina. Missä mikäkin asia on (tarkistettu kohta kohdalta
+   * 23.8.2026, kun aiempi versio tästä kommentista lupasi enemmän kuin
+   * teksti antoi): vuoden 2021 raja-sopimus JA molempien kansojen
+   * nykyiset kulttuuriperintöjärjestöt nimeltä ovat nostossa H4 ja
+   * VAIN siinä; woiwurrungin seitsemän vuodenaikaa nostossa L4;
+   * Birrarung-nimi nostossa K1 sekä kaupunki- ja luonto-sivujen
+   * johdannoissa; William Barakin teosten palautus 2022 nostossa T4;
+   * Merri Creekin leiripaikat ja kalavedet H4:n kuvatekstissä.
+   * Boonwurrung/bunurong esiintyy preesensmuotoisena H4:ssä ja
+   * ARTIKKELIT-intron ensimmäisessä kappaleessa. Batmanin 1835 "kauppa" kerrotaan
+   * tapahtumana: osapuolilla ei ollut yhteistä kieltä, vanhimmat
+   * ymmärsivät sen todennäköisesti tanderrum-seremoniaksi, ja
+   * kuvernööri Bourke mitätöi sopimuksen. POIS ON JÄTETTY
+   * yksityiskohtainen kärsimyskuvaus (ikäsopivuus): Lettsomin
+   * ratsian, isorokon ja väestön romahduksen luvut, Buckland Riverin
+   * 1857 mellakka, Coranderrkin sulkemiseen johtanut lainsäädäntö
+   * yksityiskohtineen sekä Queen Victoria Marketin alta 1877 ja
+   * 1920-luvulla siirretyt haudat. Kiinalaisiin kohdistunut
+   * asumislupamaksu 1857–1862 kerrotaan yhtenä neutraalina
+   * virkkeenä nostossa K4, ilman mellakkakuvauksia.
+   *
+   * KULTTUURIVISAN (js/packs/oceania-questions.js, avain melbourne)
+   * VASTAUKSET VUOTIVAT ensimmäisessä versiossa neljästä kysymyksestä
+   * viidestä, ja se korjattiin 23.8.2026 riippumattoman tarkistuksen
+   * (docs/mantereet-tyoaineisto/tarkistus-melbourne-lehti.md, osio D)
+   * jälkeen. Nyt lehti KÄSITTELEE visan aiheet mutta ei anna niiden
+   * vastauksia: (1) kysymys 2, sää — hyvaTietaa-laatikko "Neljä
+   * vuodenaikaa päivässä" toisti visan vihjeen sanatarkasti ja
+   * vaihdettiin aiheeksi ruudukon vinous, ja oppaan jakson 5
+   * mekanismikuvaus ("kylmä etelästä, kuuma sisämaasta" = visan fact)
+   * korvattiin ääripäiden erolla; (2) kysymykset 1 ja 3, pääkaupunki
+   * 1901–1927 — esiintyi kolmesti (ARTIKKELIT-intro, kansikuvan
+   * selite, nosto H2), ja siitä jäi VAIN nosto H2:n viimeinen virke,
+   * jossa se ei ole noston pääväite; (3) kysymys 4, raitiovaunut —
+   * K3 rakentui superlatiiville "maailman laajin", joka on visan
+   * fact-kentän ydin, ja nosto kirjoitettiin uusiksi köysiraitiotien
+   * synnystä (Clapp, San Francisco 1873, laki 1883, linja 1885,
+   * loppu 1940); superlatiivi poistettiin myös ARTIKKELIT-tekstistä;
+   * (4) kysymys 5, australialainen jalkapallo — vanha nosto H4 antoi
+   * sekä lajin synnyn 1859 että MCG:n katsojaluvun 100 024, ja se
+   * korvattiin kokonaan toisella aiheella (kulin-kansojen maa ja
+   * vuoden 2021 rajasopimus). Samasta syystä kansikuvan selitteestä
+   * poistettiin katsojaluku ja matkailuosion tähtikohteesta
+   * australialaisen jalkapallon loppuottelu (tilalla kriketin
+   * ensimmäinen testiottelu 1877). Kysymys 1 (maa on Australia) on
+   * niin perustavaa taustatietoa, ettei sen kertomista voi välttää.
+   * MINITEHTÄVIÄ on kolme, yksi jokaisella aihesivulla
+   * (tests/lehdet.test.mjs vaatii sen), eikä yksikään toista visaa:
+   * historia kysyy parlamenttitalon rakentamatta jäänyttä kupolia
+   * (vastaus nostossa H2), kuvataide taidekokoelman ensimmäistä
+   * osoitetta kirjaston eteläsiivessä (nosto T1) ja luonto
+   * woiwurrungin seitsemää vuodenaikaa (nosto L4). Jokaisen vastaus
+   * on siis samalla sivulla kuin kysymys.
+   *
+   * AIHETOISTO ON PIDETTY KURISSA: jokainen kohde esiintyy lehdessä
+   * enintään kahdesti ja aina eri tiedostolla. Kaksi tietoista
+   * poikkeusta. (1) Kasvitieteellinen puutarha on nostoissa L1 ja L2
+   * kahdella eri kuvalla, koska perustaminen 1846 ja Guilfoylen tulo
+   * 1873 ovat eri tarinat ja jälkimmäinen osuu pelin vuoteen.
+   * (2) Yarra-joki näkyy sekä avauskuvassa (Northbank) että nostossa
+   * K1 (ilmakuva South Yarran kohdalta) — eri tiedostot, eri
+   * mittakaava ja eri asia (kaupungin rantabulevardi vs. joen mutka
+   * esikaupunkien läpi). Queen Victoria Marketin, Collins Streetin ja
+   * Swanston Streetin raitiovaunujen tiedostot, jotka ovat jo
+   * js/packs/oceania-valokuvat.js:n melbourne-taulussa, on
+   * TARKOITUKSELLA jätetty käyttämättä: lehden torikuva on eri
+   * tiedosto (retail row) ja raitiovaunukuva eri (City Circle).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, eikä sitä lisätty
+   * tässä erässä (säärivit haetaan erillisenä eränä). Oppaan jakso 5
+   * nojaa siis en-Wikipedian Melbourne-artikkelin sääruutuihin ja
+   * SANOO SEN ÄÄNEEN — Sydneyn, Karachin ja Samarkandin malli.
+   * Ruutuja on artikkelissa kolme (Olympic Park 2013–2025, lentoasema
+   * 1991–2020, keskusta 1991–2015); jakso 5 käyttää KESKUSTAN ruutua
+   * lämpötiloihin ja kertoo sadesumman molemmista: keskustan ruudun
+   * kuukausiluvut antavat yhteenlaskettuna noin 601 mm, kun taas
+   * lentoaseman ruutu ilmoittaa vuosisateeksi 515,5 mm. Ero on
+   * mittauspaikassa, ja se sanotaan lukijalle.
+   *
+   * ENNEN JA NYT -PARIA EI LISÄTTY. Syy on sama kuin Karachissa ja
+   * Sydneyssä: ennenNyt korvaisi etusivun pikkurivin kansikuvat, ja
+   * kansikuvat on tässä lehdessä valittu juuri siihen paikkaan.
+   * js/packs/oceania-valokuvat.js:n melbourne-lohkossa on jo valmis
+   * pari (Collins Street 1880–1900 ja Collins Street east end), joten
+   * pelaaja näkee sen matkakirjan valokuvataulussa.
+   *
+   * KUVAT: kaikki Commonsista kategoriahaulla, lisenssi ja tekijä
+   * luettu rajapinnan extmetadatasta, ja jokainen katsottu silmin
+   * 900 px esikatselusta. HYLKÄYKSIÄ: Charles Nettletonin
+   * villanpesukuva Yarralta (skannauksessa näkyy studion painatus ja
+   * harmaasävykiila), Booth 1873 -teräskaiverrukset Melbournesta
+   * (extmetadata.Artist tyhjä, tekijää ei voi merkitä), Wellcomen
+   * kirjasto- ja gallerialehtikuva (Artist tyhjä), Canvas Town 1850
+   * ja Hoddlen kartta 1837 (alle 1200 px), Fitzroy Gardensin
+   * jalavakuja ja arpipuu (alle 1200 px), Flinders Streetin
+   * auringonlaskukuva ja Chinatownin katukulma (etualalla
+   * tunnistettavia kasvoja), Parliament House 1576 (pelkkä
+   * kylttilähikuva) sekä kirjaston ja Block Arcaden kuvat, joissa
+   * mainosbanderollit tai myymäläbrändit hallitsevat kuvaa.
+   * Google Art Project -tiedostojen Artist-kenttä sisältää taiteilijan
+   * elämäkerran; lähderiviin on otettu siitä pelkkä nimi talon
+   * vakiintuneen tavan mukaan.
+   *
+   * YKSI KUVA VAIHTUI korjauskierroksella. Nosto H4:n vanha kuva
+   * "Football electric lighting MCG 1879.jpg" lähti noston mukana,
+   * koska se esittää nimenomaan australialaista jalkapalloa eli visan
+   * kysymyksen 5 vastausta. Tilalla on "Merri Creek Plenty
+   * Ranges-Troedel.jpg": Charles Troedelin sävytetty litografia 1864
+   * kokoelmasta Souvenir Views of Melbourne and Victorian Scenery
+   * (1865), 2000 x 1413 px, PD, extmetadata.Artist nimeää Troedelin.
+   * Kuu-, nuotio- ja soihtuvalossa kalastava ja leiriytyvä joukko
+   * Merri Creekin varrella — ei karikatyyri eikä kärsimyskuva, ja
+   * Merri Creek on juuri se paikka, jossa H1:n kertoma Batmanin
+   * tapaaminen pidettiin. Katsottu silmin 960 px esikatselusta.
+   */
+  melbourne: [
+    {
+      id: 'kaupunki',
+      nimi: 'Melbourne',
+      johdanto: 'Port Phillipin pohjukassa, Birrarung-joen mutkassa, '
+        + 'kasvoi kultaryntäyksen rahoilla siirtokuntien rikkain '
+        + 'kaupunki. Leveiden pääkatujen väliin jäi kapeita pikkukatuja, '
+        + 'ja ne ovat yhä kaupungin oma tavaramerkki.',
+      kansikuvat: [
+        {
+          tiedosto: 'Flinders St Station Melbourne. (20484830004).jpg',
+          selite: 'Flinders Streetin asema avattiin 12. syyskuuta 1854 '
+            + 'Australian ensimmäisenä kaupunkiasemana, mutta nykyinen '
+            + 'kupolirakennus valmistui vasta 1909.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Eastern entrance to the Royal Exhibition Building December 2020.jpg',
+          selite: 'Näyttelypalatsi rakennettiin vuosina 1879–1880 '
+            + 'maailmannäyttelyä varten, ja siitä tuli 2004 Australian '
+            + 'ensimmäinen Unescon maailmanperintökohde.',
+          lahde: 'Nick-D, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'AUS Melbourne, Melbourne, Melbourne Cricket Ground 001.jpg',
+          selite: 'Melbourne Cricket Ground on ollut nykyisellä '
+            + 'paikallaan vuodesta 1853 ja on eteläisen pallonpuoliskon '
+            + 'suurin stadion.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kaupungin eri puolilta —
+       * ruutukaava ilmasta luoteesta (Flagstaff Gardens), Yarran
+       * pohjoisranta keskustan kohdalla ja siluetti etelästä Albert
+       * Parkin lammen takaa. Yksikään kolmesta ei ole minkään noston
+       * aiheena samalla tiedostolla.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Aerial panorama of Melbourne city taken from Flagstaff Gardens.jpg',
+          selite: 'Flagstaff Gardens on yksi niistä alueista, jotka '
+            + 'Charles La Trobe varasi ruutukaavan ympäriltä julkisiksi '
+            + 'puistoiksi.',
+          lahde: 'Bob T, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Melbourne (AU), Northbank -- 2019 -- 1422-7.jpg',
+          selite: 'Ruutukaava sijoitettiin kulkemaan suunnilleen joen '
+            + 'suuntaisesti, ja sen eteläreuna on yhä Yarran ranta.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Albert Park Lake & Melbourne City Skyline, 2016.png',
+          selite: 'Keskusta näkyy etelästä Albert Parkin lammen takaa, '
+            + 'noin kolmen kilometrin päästä.',
+          lahde: 'Rob Deutscher, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Joki, jonka nimi on väärinkäsitys',
+          tiedosto: 'The Yarra River Birrarung meandering past South Yarra. September 2023.jpg',
+          teksti: 'Wurundjerien kielessä joki on Birrarung, ja nimen on '
+            + 'selitetty tarkoittavan sumujen jokea. Nykyinen nimi syntyi '
+            + 'erehdyksestä. Vuonna 1835 John Helder Wedge kulki rannalla '
+            + 'kahden kulinilaisen kanssa, jotka osoittivat virtaavaa '
+            + 'vettä ja sanoivat yarra yarra; Wedge kirjasi sanat '
+            + 'muistikirjaansa joen nimenä. Myöhemmin hän myönsi '
+            + 'erehtyneensä: sanalla tarkoitettiin koskea, ja samat miehet '
+            + 'käyttivät sitä paluumatkalla myös Werribee-joen '
+            + 'putouksesta. Nimi oli silloin jo jäänyt. Koski itse '
+            + 'räjäytettiin 1883, kun satamaväylää syvennettiin.',
+          selite: 'Joki kiemurtelee esikaupunkien läpi keskustaan, ja sen '
+            + 'varrelle on jätetty yhtenäinen puistonauha.',
+          lahde: 'Bob Tan, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Yarra River',
+        },
+        {
+          otsikko: 'Kulta, joka teki kaiken kerralla',
+          tiedosto: 'Forest Creek (Castlemaine, Victoria) 1852.jpg',
+          teksti: 'Kultaa löytyi Victoriasta kesällä 1851, ja Melbourne '
+            + 'oli siirtokunnan satama. Kaupungin väkiluku nousi kuukausissa '
+            + '25 000:sta 40 000:een ja vuoteen 1854 mennessä 123 000:een; '
+            + 'koko siirtokunnassa asui 1851 noin 77 000 ihmistä ja '
+            + 'kymmenen vuotta myöhemmin yli 538 000. Vuonna 1865 Melbourne '
+            + 'ohitti Sydneyn Australian väkirikkaimpana kaupunkina. Paras '
+            + 'vuosi oli 1856, jolloin Victoriasta kaivettiin 3 053 744 '
+            + 'troyunssia kultaa. Ryntäys oli ohi 1860, mutta villa, '
+            + 'tehtaat ja satama jatkoivat kasvua.',
+          selite: 'Forest Creekin kaivoksia Castlemainessa pidettiin '
+            + 'maailman rikkaimpana matalana huuhdontakenttänä.',
+          lahde: 'Samuel Thomas Gill, Wikimedia Commons (PD)',
+          wiki: 'Victorian gold rush',
+        },
+        {
+          otsikko: 'Keksintö, joka oli isoisän ikäinen',
+          tiedosto: 'Melbourne (AU), City Circle Tram -- 2019 -- 1547.jpg',
+          teksti: 'Isoisän matkavuonna 1873 Melbournen kaduilla kulki '
+            + 'hevosomnibusseja, ei kiskovaunuja — ja samana vuonna San '
+            + 'Franciscossa otettiin käyttöön Andrew Hallidien köysivetoinen '
+            + 'vaunu. Amerikkalainen Francis Boardman Clapp, joka oli tullut '
+            + 'kaupunkiin kultaryntäyksen aikaan ja pyörittänyt omnibusseja, '
+            + 'päätti tuoda keksinnön Melbourneen. Vuoden 1883 laki perusti '
+            + 'kahdentoista kunnan yhteisen rahaston, joka osti maat, laski '
+            + 'kiskot ja rakensi konehuoneet köyden pyörittämistä varten. '
+            + 'Ensimmäinen köysilinja avattiin 11. marraskuuta 1885, ja '
+            + 'viimeinen köysivaunu ajoi 26. lokakuuta 1940.',
+          selite: 'City Circle -linjan vaunut ovat W-luokkaa, jota '
+            + 'rakennettiin vuodesta 1923 vuoteen 1956 kaikkiaan 756 '
+            + 'kappaletta.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Trams in Melbourne',
+        },
+        {
+          otsikko: 'Kortteli, joka syntyi kultakenttien varrelle',
+          tiedosto: 'AUS Melbourne, Central Business District, Little Bourke Street 002.jpg',
+          teksti: 'Little Bourke Streetin itäpää oli 1850-luvulta lähtien '
+            + 'kiinalaisten kauppiaiden ja matkalaisten kortteli: siitä oli '
+            + 'kätevä lähteä keskisen Victorian kultakentille. Ensimmäiset '
+            + 'majatalot olivat Celestial Avenuen varrella, ja vuoteen 1855 '
+            + 'mennessä kiinalaisia taloja ja liikkeitä oli koko matkalla '
+            + 'Elizabeth Streetiltä Russell Streetille. Victoria peri '
+            + 'kiinalaisilta asukkailta punnan asumisluvan vuosina '
+            + '1857–1862. Kortteli on yhä paikallaan: se on eteläisen '
+            + 'pallonpuoliskon vanhin ja lännen pisimpään yhtäjaksoisesti '
+            + 'asuttu kiinalaiskaupunginosa.',
+          selite: 'Little Bourke Street on niitä kapeita pikkukatuja, jotka '
+            + 'kuvernööri Bourke vaati leveiden pääkatujen väliin.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Chinatown, Melbourne',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Melbourne Royal Arcade Passage to Elizabeth Street.jpg',
+          selite: 'Royal Arcade avattiin 2. toukokuuta 1870 ja on Australian '
+            + 'vanhin säilynyt kauppakuja.',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Melbourne on Victorian pääkaupunki ja Australian toiseksi '
+          + 'väkirikkain kaupunki: kesäkuussa 2025 siinä asui 5,435 '
+          + 'miljoonaa ihmistä eli 19 prosenttia koko maan väestöstä. Se on '
+          + 'myös maailman eteläisin yli miljoonan asukkaan kaupunki. '
+          + 'Matkailijan Melbourne on silti pieni ja kävelymitassa. Koko '
+          + 'vanha kaupunki mahtuu ruutukaavaan, joka on 1,6 kilometriä '
+          + 'pitkä ja 800 metriä leveä: pohjoisreunalla on kirjasto, '
+          + 'itäpäässä parlamenttitalo, etelässä joki ja lännessä '
+          + 'Southern Crossin asema. Puistot alkavat heti ruudukon '
+          + 'ulkopuolelta, ja keskustan raitiovaunut ovat maksuttomia.',
+        artikkeli: {
+          nimi: 'Matkailijan Melbourne',
+          taitto: 'opas',
+          teksti: 'Ruutukaavakaupunki, jossa kapeat pikkukadut, katetut '
+            + 'kauppakujat ja puistokehä ovat kaikki saman kävelyn '
+            + 'päässä toisistaan.',
+          nosto: 'Keskustan raitiovaunut ovat olleet maksuttomia vuoden '
+            + '2015 alusta: Free Tram Zone kattaa ruutukaavan, Docklandsin '
+            + 'ja Queen Victoria Marketin, eikä sen sisällä tarvitse '
+            + 'leimata myki-korttia lainkaan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokoneet laskeutuvat Tullamarineen noin 22 '
+                + 'kilometrin päähän keskustasta. Kenttä avattiin 1970, '
+                + 'se rakennettiin tarkoituksella ilman yölentokieltoa, ja '
+                + 'sen kautta kulki vuonna 2025 yli 36 miljoonaa '
+                + 'matkustajaa. Kaukojunat lähtevät Southern Crossista '
+                + 'ruutukaavan länsireunalta ja lähijunat Flinders '
+                + 'Streetin asemalta joen rannalta — jälkimmäinen on '
+                + 'osavaltion vilkkain asema, ja paikallinen tapaamispaikka '
+                + 'on yhä sen pääoven yläpuolinen kellorivi. Koko verkossa '
+                + 'käy sama myki-kortti, joka leimataan sekä noustessa '
+                + 'että poistuessa; poikkeus on raitiovaunumatka keskustan '
+                + 'maksuttomalla vyöhykkeellä.',
+              kuva: {
+                tiedosto: 'AUS Melbourne, Central Business District, Southern Cross Railway Station 001.jpg',
+                selite: 'Southern Cross rakennettiin vanhan Spencer '
+                  + 'Streetin aseman paikalle, ja sen aaltoileva katto '
+                  + 'lepää haarautuvien teräspilarien varassa.',
+                lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ruudukko, jonka mitat ovat ketjuja',
+              teksti: 'Keskusta on Robert Hoddlen 1837 merkitsemä ruudukko, '
+                + 'joka nojaa Robert Russellin vuoden 1836 mittaukseen. '
+                + 'Pääkadut mitattiin puolentoista ketjun eli 30 metrin '
+                + 'levyisiksi ja korttelit kymmenen ketjun neliöiksi. '
+                + 'Kuvernööri Bourke vaati kortteleiden läpi kulkevat '
+                + 'takakadut, ja niistä tuli puolen ketjun eli kymmenen '
+                + 'metrin levyisiä pikkukatuja — Little Collins, Little '
+                + 'Bourke, Little Lonsdale. Ruudukko käännettiin joen '
+                + 'suuntaiseksi, ja siksi se on kartalla vinossa muuhun '
+                + 'kaupunkiin nähden. Se piirrettiin muutamalle sadalle '
+                + 'asukkaalle; nyt saman kaavan päällä elää yli viisi '
+                + 'miljoonaa.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: tori kahden korttelin kokoinen',
+              teksti: 'Queen Victoria Market on kaupungin viimeinen suuri '
+                + '1800-luvun tori ja Melbournen käydyimpiä paikkoja noin '
+                + 'kymmenen miljoonan vuosivierailijan voimin. Se avattiin '
+                + 'virallisesti maaliskuussa 1878, eli isoisän käynnin '
+                + 'aikaan paikalla oli vasta karjan ja heinän tori. Alue '
+                + 'kasvoi kahden korttelin kokoiseksi, ja hallien lisäksi '
+                + 'siihen kuuluvat Elizabeth- ja Victoria-katujen '
+                + 'liikerivit vuosilta 1882–1891. Tori on auki muina '
+                + 'päivinä paitsi maanantaina ja keskiviikkona, ja kesällä '
+                + 'ja talvella keskiviikkoiltaisin pidetään yötori.',
+              kuva: {
+                tiedosto: 'Queen Victoria Market retail row.jpg',
+                selite: 'Victoria Streetin liikerivin valurautainen '
+                  + 'katos on 1880-luvun lopun työtä.',
+                lahde: 'HappyWaldo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: koski katoaa',
+              teksti: 'Ruudukon paikka valittiin kosken takia. Yarra Yarra '
+                + '-koski oli juuri nykyisen keskustan kohdalla, ja sen '
+                + 'yläpuolella vesi oli makeaa, alapuolella suolaista ja '
+                + 'purjehduskelpoista. Siirtokunta asettui kosken '
+                + 'yläpuolelle luonnonsataman viereen. Vuonna 1883 koski '
+                + 'räjäytettiin osana sir John Cooden suunnittelemia '
+                + 'satamatöitä, ja joen alajuoksu muuttui laivaväyläksi. '
+                + 'Koskesta ei ole jäljellä mitään nähtävää, mutta se on '
+                + 'syy siihen, miksi kaupunki on juuri tässä mutkassa '
+                + 'eikä lahden rannalla.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Melbournesta puuttuu vielä, joten nämä '
+                + 'luvut ovat en-Wikipedian Melbourne-artikkelin '
+                + 'sääruuduista eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit muualla. Ilmasto on lauhkea merellinen, '
+                + 'Köppenin luokka Cfb. Keskustan asemalla (normaalikausi '
+                + '1991–2015) helmikuu on lämpimin kuukausi keskilämmöltään '
+                + '21,6 astetta ja heinäkuu viilein 11,0 astetta; '
+                + 'eteläisellä pallonpuoliskolla joulukuu on siis kesää. '
+                + 'Sademäärästä on kaksi lukua eri mittauspaikoista: '
+                + 'keskustan kuukausiluvut antavat yhteensä noin 600 '
+                + 'millimetriä, lentoaseman asema 515,5 millimetriä, ja '
+                + 'sadepäiviä on siellä 135 vuodessa. Kuivaa kautta ei ole. '
+                + 'Keskiarvot kertovat kuitenkin vain osan totuudesta, '
+                + 'sillä mitattujen ääripäiden väli on lähes viisikymmentä '
+                + 'astetta. Kylmin lukema on 2,8 astetta '
+                + 'pakkasta 21. heinäkuuta 1869 ja kuumin 46,4 astetta '
+                + '7. helmikuuta 2009.',
+              kuva: {
+                tiedosto: 'AUS Melbourne, Port Phillip, St Kilda Pier, View 002.jpg',
+                selite: 'St Kildan laiturilta katsotaan keskustaan Port '
+                  + 'Phillipin yli, ja lahti on matalana lämpimämpi kuin '
+                  + 'avomeri kesällä ja kylmempi talvella.',
+                lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Ruutukaava ja pikkukadut',
+                tahdet: 3,
+                selite: 'Kymmenen ketjun korttelit ja niiden läpi '
+                  + 'kulkevat kymmenmetriset takakadut ovat vuodelta '
+                  + '1837.',
+              },
+              {
+                mita: 'Royal Arcade',
+                tahdet: 3,
+                selite: 'Australian vanhin säilynyt kauppakuja avattiin '
+                  + 'toukokuussa 1870.',
+              },
+              {
+                mita: 'Kasvitieteellinen puutarha',
+                tahdet: 3,
+                selite: 'Kolmenkymmenenkahdeksan hehtaarin puisto sai '
+                  + 'nykyisen muotonsa vuonna 1873 aloittaneelta '
+                  + 'johtajaltaan.',
+              },
+              {
+                mita: 'Queen Victoria Market',
+                tahdet: 2,
+                selite: 'Kaupungin viimeinen suuri 1800-luvun tori '
+                  + 'täyttää kaksi korttelia.',
+              },
+              {
+                mita: 'Melbourne Cricket Ground',
+                tahdet: 2,
+                selite: 'Maailman ensimmäinen kriketin testiottelu '
+                  + 'pelattiin kentällä 1877.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sää- ja sadeluvut ovat samoista
+             * en-Wikipedian sääruuduista kuin jakso 5. Hintataso
+             * kerrotaan yleisellä tasolla ilman lukuja.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Ruudukko on vinossa',
+                teksti: 'Keskustan kadut kulkevat joen suuntaisesti '
+                  + 'eivätkä ilmansuuntien mukaan, joten kartan pohjoinen '
+                  + 'ja kadun pohjoinen eivät ole sama asia.',
+              },
+              {
+                otsikko: 'Vuodenajat nurin',
+                teksti: 'Joulukuu on kesää ja heinäkuu talvea: heinäkuun '
+                  + 'keskilämpö on keskustassa 11,0 astetta, helmikuun '
+                  + '21,6.',
+              },
+              {
+                otsikko: 'Sadetta vähän mutta usein',
+                teksti: 'Vuosisade jää alle 600 millimetriin, mutta '
+                  + 'sadepäiviä on runsaat 130 ja kuiva kausi puuttuu '
+                  + 'kokonaan.',
+              },
+              {
+                otsikko: 'Maksuton vyöhyke loppuu ruudukkoon',
+                teksti: 'Raitiovaunu on ilmainen vain keskustassa; sen '
+                  + 'ulkopuolelle mennessä myki-kortti on leimattava '
+                  + 'jo noustessa.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kulinin kansojen kokoontumispaikasta siirtomaakylään ja '
+        + 'kullan kolmessa vuodessa rikastuttamaksi suurkaupungiksi. '
+        + 'Vuonna 1873 kaupunki oli 36-vuotias ja rakensi itselleen '
+        + 'julkisia taloja moneen suuntaan.',
+      tehtava: {
+        kysymys: 'Mikä osa Melbournen parlamenttitalon suunnitelmasta jäi lopulta rakentamatta?',
+        vaihtoehdot: [
+          'kupoli',
+          'pylväikkö',
+          'pääportaat',
+          'istuntosalit',
+        ],
+        oikea: 0,
+        fakta: 'Peter Kerrin vuoden 1877 suunnitelma korvasi tornin '
+          + 'kupolilla, mutta 1890-luvun lama pysäytti työt eikä kupolia '
+          + 'ole rakennettu koskaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kylä, joka nimettiin Lontoon mukaan',
+          tiedosto: 'Map shewing the site of Melbourne and the position of the Huts & Building previous to the foundation of the Township by Sir Richard Bourke in 1837.jpg',
+          teksti: 'John Batman kertoi touko-kesäkuussa 1835 ostaneensa '
+            + 'kahdeksalta wurundjerivanhimmalta 600 000 eekkeriä maata. '
+            + 'Osapuolilla ei ollut yhteistä kieltä, ja vanhimmat '
+            + 'ymmärsivät tilaisuuden todennäköisesti tanderrumiksi, '
+            + 'seremoniaksi jolla annetaan lupa käyttää maata '
+            + 'väliaikaisesti. Kuvernööri Richard Bourke mitätöi '
+            + 'sopimuksen ja teki paikasta 1836 Port Phillipin '
+            + 'hallintokeskuksen. Robert Russell mittasi tontit 1836 ja '
+            + 'Robert Hoddle merkitsi ruudukon 1837. Nimen Melbourne '
+            + 'Bourke antoi 10. huhtikuuta 1837 Britannian pääministerin '
+            + 'mukaan.',
+          selite: 'Russellin kartassa joki on nimellä Yarra Yarra River ja '
+            + 'ensimmäiset korttelit piirtyvät sen pohjoisrannalle.',
+          lahde: 'Robert Russell, Wikimedia Commons (PD)',
+          wiki: 'Hoddle Grid',
+        },
+        {
+          otsikko: 'Parlamenttitalo, joka on yhä kesken',
+          tiedosto: 'Parliament House East Melbourne.jpg',
+          teksti: 'Rakentaminen alkoi joulukuussa 1855 kahdesta '
+            + 'istuntosalista, ja Victorian parlamentti kokoontui niissä '
+            + 'ensimmäisen kerran 25. marraskuuta 1856. Talo päätettiin '
+            + 'rakentaa vaiheittain, koska se oli valtava ja kallis. Peter '
+            + 'Kerrin vuoden 1877 suunnitelma korvasi tornin kupolilla ja '
+            + 'pitkällä pylväiköllä; Queen’s Hall valmistui 1879, '
+            + 'pylväikkö ja pääportaat 1889 ja sisustus 1890. Sitten tuli '
+            + 'lama, ja pohjoissiipi ja kupoli jäivät rakentamatta. '
+            + 'Australian liittovaltion parlamentti kokoontui talossa '
+            + 'vuosina 1901–1927.',
+          selite: 'Pylväikkö hallitsee näkymää Bourke Streetiä ylös, ja '
+            + 'sen takana katto jatkuu ilman aiottua kupolia.',
+          lahde: 'John Torcasio, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Parliament House, Melbourne',
+        },
+        {
+          otsikko: 'Holvit, joihin kulta ei ehtinyt',
+          tiedosto: 'Old Treasury Building facade.jpg',
+          teksti: 'Rahastotalo rakennettiin 1858–1862, ja sen kellariin '
+            + 'muurattiin holvit kultaharkkoja varten. Parhaimmillaan '
+            + 'Melbournen rahastoon virtasi noin kaksi tonnia kultaa '
+            + 'viikossa, mutta talon valmistuessa ryntäys oli jo ohi ja '
+            + 'holveihin pantiin asiakirjoja. Piirustukset teki J. J. '
+            + 'Clark, joka oli 1857 yhdeksäntoistavuotias ja lähti kesken '
+            + 'työn seitsemäksi kuukaudeksi Eurooppaan opintomatkalle. '
+            + 'Etupiha valurautalyhtyineen valmistui 1868. '
+            + 'Arkkitehtuurihistorioitsija Miles Lewis on sanonut taloa '
+            + 'Australian hienoimmaksi julkisivuksi.',
+          selite: 'Clarkin oma julkisivupiirustus näyttää talon sellaisena '
+            + 'kuin se rakennettiin Spring Streetin päähän.',
+          lahde: 'John James Clark, Wikimedia Commons (PD)',
+          wiki: 'Old Treasury Building, Melbourne',
+        },
+        {
+          otsikko: 'Kenen maalle kaupunki rakennettiin',
+          tiedosto: 'Merri Creek Plenty Ranges-Troedel.jpg',
+          teksti: 'Melbourne seisoo kahden Kulinin kansan mailla. '
+            + 'Wurundjerit ovat jokilaakson väkeä, boonwurrungit eli '
+            + 'bunurongit suolaisen veden väkeä, joiden alue ulottuu '
+            + 'lahden rannoilta Western Portille ja Morningtonin '
+            + 'niemimaalle. Siirtomaakartat eivät kansojen rajaa '
+            + 'tunteneet. Kesäkuussa 2021 kansojen omat järjestöt — '
+            + 'Wurundjeri Woi Wurrung Cultural Heritage Aboriginal '
+            + 'Corporation vuodelta 1985 ja Bunurong Land Council '
+            + 'Aboriginal Corporation — sopivat rajan uudesta linjasta: se '
+            + 'kulkee kaupungin halki lännestä itään, keskusta ja Richmond '
+            + 'wurundjerien puolella, Albert Park ja St Kilda bunurongien. '
+            + 'Kaikki eivät pidä linjaa oikeana, ja kiistaa käydään yhä.',
+          selite: 'Merri Creekin varrella oli wurundjerien leiripaikkoja '
+            + 'ja kalavesiä, ja sen rannalla kahdeksan ngurungaetaa '
+            + 'tapasi Batmanin 1835.',
+          lahde: 'Charles Troedel, Wikimedia Commons (PD)',
+          wiki: 'Bunurong',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Kultarikas siirtokunta osti taidetta ennen kuin sillä oli '
+        + 'paikkaa panna sitä esille. Vuonna 1873 kokoelma asui kirjaston '
+        + 'siivessä ja maalarit olivat vasta löytämässä oman maisemansa '
+        + 'valon.',
+      tehtava: {
+        kysymys: 'Missä Melbournen taidekokoelma oli esillä ennen oman gallerian valmistumista?',
+        vaihtoehdot: [
+          'yleisen kirjaston eteläsiivessä',
+          'parlamenttitalon salissa',
+          'rahastotalon kellariholvissa',
+          'kasvitieteellisen puutarhan kasvihuoneessa',
+        ],
+        oikea: 0,
+        fakta: 'Veistosjäljennökset avattiin nähtäville toukokuussa 1861 '
+          + 'kirjaston eteläsiiven alakerrassa, ja maalaukset saivat oman '
+          + 'salinsa samassa talossa joulukuussa 1864.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kokoelma ilman omaa taloa',
+          tiedosto: 'Nicholas Chevalier - The Buffalo Ranges - Google Art Project.jpg',
+          teksti: 'Yleinen kirjasto perustettiin 1854 ja avattiin '
+            + '11. helmikuuta 1856 kolmentuhannen kahdeksansadan niteen '
+            + 'kokoelmalla; sinne pääsi jokainen yli 14-vuotias, jonka '
+            + 'kädet olivat puhtaat. Taidekokoelma alkoi siitä, kun '
+            + 'hallitus lupasi 1859 kaksituhatta puntaa veistosjäljennöksiä '
+            + 'varten, ja ne avattiin nähtäville toukokuussa 1861 kirjaston '
+            + 'eteläsiiven alakerrassa. Maalauksia ostettiin 1860-luvun '
+            + 'alusta, ja ne saivat oman salinsa joulukuussa 1864. Varta '
+            + 'vasten rakennettu galleria avautui vasta 24. toukokuuta '
+            + '1874 — vuosi isoisän matkan jälkeen.',
+          selite: 'Nicholas Chevalier’n Buffalo Ranges vuodelta 1864 oli '
+            + 'ensimmäinen australialaisaiheinen maalaus, jonka galleria '
+            + 'osti.',
+          lahde: 'Nicholas Chevalier, Wikimedia Commons (PD)',
+          wiki: 'National Gallery of Victoria',
+        },
+        {
+          otsikko: 'Wieniläinen, joka opetti sukupolven',
+          tiedosto: 'Eugène von Guérard - Tea Trees near Cape Schanck, Victoria - Google Art Project.jpg',
+          teksti: 'Eugene von Guérard tuli Victoriaan 1852 kokeilemaan '
+            + 'onneaan kultakentillä. Kaivajana hän epäonnistui, mutta '
+            + 'piirsi kenttien elämää tarkasti, ja 1860-luvun alkuun '
+            + 'mennessä häntä pidettiin siirtokuntien parhaana '
+            + 'maisemamaalarina. Vuonna 1870 hänestä tuli Victorian '
+            + 'gallerian maalauskoulun ensimmäinen johtaja, ja hän opetti '
+            + 'yksitoista vuotta; oppilaita olivat muun muassa Frederick '
+            + 'McCubbin ja Tom Roberts. Düsseldorfissa opittu tarkkuus meni '
+            + 'niin pitkälle, että hänen Tower Hill -maalaustaan käytettiin '
+            + 'sata vuotta myöhemmin kasvillisuuden ennallistamisen mallina.',
+          selite: 'Tuulen muotoilemat teepensaat kasvavat Cape Schanckin '
+            + 'rinteillä Morningtonin niemimaalla.',
+          lahde: 'Eugene von Guerard, Wikimedia Commons (PD)',
+          wiki: 'Eugene von Guerard',
+        },
+        {
+          otsikko: 'Ulkona maalaamisen oppi-isä',
+          tiedosto: 'Louis Buvelot - Summer afternoon, Templestowe - Google Art Project.jpg',
+          teksti: 'Sveitsiläinen Abram-Louis Buvelot ehti maalata vuosia '
+            + 'Brasiliassa, missä hänen sedällään oli plantaasi, ennen '
+            + 'kuin palasi kotimaahansa ja muutti terveytensä vuoksi '
+            + 'Melbourneen 1865 ja asettui Fitzroyhin. '
+            + 'Galleria osti häneltä kaksi maalausta 1869, ja vuoden 1873 '
+            + 'Melbournen näyttelyissä hän voitti kultamitalit. Hänen '
+            + 'innostuksensa maalata suoraan ulkoilmassa tarttui '
+            + 'nuorempiin: Heidelbergin koulun maalarit pitivät häntä '
+            + 'opettajanaan, ja Arthur Streeton kutsui myöhemmin hänen '
+            + 'vuoden 1866 Templestowe-maisemaansa ensimmäiseksi hienoksi '
+            + 'maisemaksi, joka Victoriassa on maalattu.',
+          selite: 'Kesäinen iltapäivä Templestowessa on maalattu Yarran '
+            + 'yläjuoksun maatilamaisemasta noin kymmenen kilometrin '
+            + 'päässä keskustasta.',
+          lahde: 'Louis Buvelot, Wikimedia Commons (PD)',
+          wiki: 'Louis Buvelot',
+        },
+        {
+          otsikko: 'Beruk piirsi sen, mitä ei saanut unohtua',
+          tiedosto: 'William Barak - Figures in possum skin cloaks - Google Art Project.jpg',
+          teksti: 'William Barak sai vanhemmiltaan nimen Beruk. Hän syntyi '
+            + 'noin syyskuussa 1823 ja oli poikana paikalla, kun Batman '
+            + 'tapasi vanhimmat 1835. Vuonna 1863 hän asettui Coranderrkin '
+            + 'yhteisöön Healesvillen lähelle, ja serkkunsa Simon Wongan '
+            + 'kuoltua joulukuussa 1874 hänestä tuli klaanin ngurungaeta '
+            + 'eli vanhin. Elämänsä loppupuolella hän piirsi ja maalasi '
+            + 'seremonioita okralla, hiilellä, vesivärillä ja lyijykynällä. '
+            + 'Vuonna 2022 wurundjerien oma kulttuuriperintöyhtiö osti '
+            + 'huutokaupasta takaisin kaksi hänen työtään, ja ne tulivat '
+            + 'näytteille kirjastoon joulukuussa 2023.',
+          selite: 'Barakin piirroksissa toistuvat opossuminnahkaviitat, '
+            + 'joiden juovat kertovat kantajastaan.',
+          lahde: 'William Barak, Wikimedia Commons (PD)',
+          wiki: 'William Barak',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kaupungin ympärille varattiin puistokehä jo ennen kuin '
+        + 'taloja oli montaa. Suoperäisestä rantakaistasta tuli puutarha, '
+        + 'jonka muodon ratkaisi juuri vuonna 1873 aloittanut johtaja.',
+      tehtava: {
+        kysymys: 'Kuinka moneen vuodenaikaan vuosi jakautuu woiwurrungin kielessä?',
+        vaihtoehdot: [
+          'seitsemään',
+          'neljään',
+          'kahteen',
+          'kahteentoista',
+        ],
+        oikea: 0,
+        fakta: 'Vuodenajat seuraavat sitä, mitä luonnossa tapahtuu: '
+          + 'maaliskuu on ankeriaan aika ja marraskuu heinien kukinnan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suosta tuli puutarha',
+          tiedosto: 'Lake in Melbourne Botanic Gardens 20180726-016.jpg',
+          teksti: 'Charles La Trobe valitsi 1846 kasvitieteellisen '
+            + 'puutarhan paikaksi soisen rantakaistan joen eteläpuolelta, '
+            + 'kuvernöörin talon ja observatorion vierestä. Aluksi maata '
+            + 'oli kaksi hehtaaria. Alue laajeni tuntuvasti 1857, kun '
+            + 'Ferdinand von Muellerista tuli ensimmäinen vakinainen '
+            + 'johtaja: hän perusti Victorian kasvitieteellisen museon ja '
+            + 'toi puutarhaan lajeja ympäri maailman. Nykyään Melbournen '
+            + 'puutarha on 38 hehtaaria ja siinä kasvaa lähes 50 000 '
+            + 'kasviyksilöä, 8 500 lajia kolmessakymmenessä kokoelmassa.',
+          selite: 'Puutarhan lammet ovat ihmiskäden tekemiä ja syntyivät '
+            + 'vanhojen suoalueiden paikalle.',
+          lahde: 'Gary Houston, Wikimedia Commons (CC0)',
+          wiki: 'Royal Botanic Gardens Victoria',
+        },
+        {
+          otsikko: 'Vuoden 1873 puutarhuri',
+          tiedosto: 'Royal Botanic Gardens Melbourne Guilfoyle\'s Volcano pano 2017.jpg',
+          teksti: 'William Guilfoyle nimitettiin puutarhan johtajaksi '
+            + '21. heinäkuuta 1873, juuri isoisän matkavuonna. Mueller, '
+            + 'jonka tilalle hän tuli, oli saman vuoden huhtikuussa '
+            + 'nimennyt hänen mukaansa kasvisuvun Guilfoylia; nimityksen '
+            + 'jälkeen hän kutsui seuraajaansa taimikauppiaaksi, jolla ei '
+            + 'ole tieteellisiä ansioita. Vaikutusvaltaiset '
+            + 'melbournelaiset olivat halunneet puutarhan, jossa voi '
+            + 'kävellä. Guilfoyle muotoili 35 vuodessa aaltoilevat '
+            + 'nurmet, mutkittelevat polut ja lampiketjun; suo ja laguuni '
+            + 'erotettiin joesta insinööri Carlo Catanin johdolla.',
+          selite: 'Guilfoylen tulivuori oli alun perin puutarhan vesisäiliö '
+            + 'ja kunnostettiin 2010-luvulla kuivan ilmaston kasveille.',
+          lahde: 'Wpcpey, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'William Guilfoyle',
+        },
+        {
+          otsikko: 'Puistokehä, joka varattiin ennen taloja',
+          tiedosto: 'AUS Melbourne, Melbourne, Fitzroy Gardens 022.jpg',
+          teksti: 'Charles La Trobe tuli piirikunnan johtoon lokakuussa '
+            + '1839, ja hänen pysyvimpänä jälkenään kaupungissa pidetään '
+            + 'laajojen alueiden varaamista julkisiksi puistoiksi: niistä '
+            + 'ovat kasvaneet Treasury Gardens, Carlton Gardens, Flagstaff '
+            + 'Gardens, Royal Park ja kasvitieteellinen puutarha. Fitzroy '
+            + 'Gardens sai pysyvän '
+            + 'puistostatuksen 1848 ja oli nimeltään Fitzroy Square vuoteen '
+            + '1862. James Sinclair toimi puutarhurina 1857 kuolemaansa '
+            + 'asti 1881, ja Clement Hodgkinson suunnitteli 1860-luvulta '
+            + 'polkuverkon. Jalavakujat istutettiin polkujen varsille — ja '
+            + 'muodostivat vahingossa Union Jackin kuvion.',
+          selite: 'Puiston läpi virtasi alun perin puro, ja alavat kohdat '
+            + 'istutettiin saniaisilla ja pajuilla.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Fitzroy Gardens',
+        },
+        {
+          otsikko: 'Vuosi, jossa on seitsemän aikaa',
+          tiedosto: 'View of Dights Falls from platform.jpg',
+          teksti: 'Woiwurrungin kielessä vuosi jakautuu seitsemään '
+            + 'vuodenaikaan: biderap on kuiva aika tammi-helmikuussa, iuk '
+            + 'ankeriaan aika maaliskuussa, waring vompatin aika huhtikuusta '
+            + 'heinäkuuhun, guling kämmeköiden aika elokuussa, poorneet '
+            + 'nuijapäiden aika syys-lokakuussa, buarth gurru heinien '
+            + 'kukinta marraskuussa ja garrawang kenguruomenan aika '
+            + 'joulukuussa. Tulta käytettiin maanhoidossa, ja avoimilla '
+            + 'tasangoilla kasvoi runsaasti murnongia eli jamssikirkiruohoa. '
+            + 'Leiripaikat olivat Birrarungin ja sen sivujokien varsilla.',
+          selite: 'Dights Fallsin kohdalle rakennettiin 1840-luvulla pato '
+            + 'myllyä varten, ja siihen asti pääsi vuoden 1803 '
+            + 'mittausretkikunta jokea ylös.',
+          lahde: 'Redtree21, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wurundjeri',
+        },
+      ],
+    },
+  ],
 };
