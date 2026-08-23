@@ -956,6 +956,30 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
        */
       kuva.addEventListener('load', () => {
         lohko.classList.toggle('pysty', kuva.naturalHeight > kuva.naturalWidth * 1.15);
+        /*
+         * TÄYSLEVEÄ NOSTOKUVA (omistajan tilaus 23.8.2026: "visuaalisesti
+         * laadukkaat vaakakuvat saisi olla täysleveitä" — esimerkkinä
+         * Gaertnerin Berliini-panoraama). Valinta on kaksiportainen:
+         *
+         *   1. KÄSINOHJAUS voittaa aina: noston kenttä
+         *      leveys: 'taysi' pakottaa täysleveäksi ja
+         *      leveys: 'kapea' pitää kainalossa, vaikka automatiikka
+         *      sanoisi toisin.
+         *   2. AUTOMATIIKKA: selvästi leveä vaakakuva (suhde ≥ 1,6)
+         *      levitetään koko palstalle. Kynnys on harkittu niin,
+         *      että tavalliset 3:2-valokuvat (1,5) jäävät kainaloon
+         *      ja vasta panoraamamaiset kuvat (16:9 = 1,78,
+         *      maalauspanoraamat) leviävät — juuri ne, jotka 36 %:n
+         *      kainalossa kutistuvat postimerkiksi.
+         *
+         * Suunta ja suhde selviävät vasta kuvan latauduttua, ja
+         * galleriassa luokka lasketaan uudelleen joka teokselle kuten
+         * pysty-luokkakin.
+         */
+        const suhde = kuva.naturalWidth / Math.max(1, kuva.naturalHeight);
+        const taysi = nosto.leveys === 'taysi'
+          || (nosto.leveys !== 'kapea' && suhde >= 1.6);
+        lohko.classList.toggle('taysileve', taysi);
       });
       lohko.appendChild(kuva);
     } else if (nosto.kuvaUrl) {
