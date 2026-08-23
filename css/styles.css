@@ -1955,6 +1955,16 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 /* Postikorttipino: kääre asemoi, kortit ovat sisällä. Kun kaupungilla on
  * myös uusi kuva, se pilkottaa vanhan alta ja nousee napautuksesta
  * päälle (omistajan kokeilu). */
+/*
+ * PIILOTETTU (omistajan tilaus 23.8.2026: "piilota (älä poista) kuvat
+ * pois näkyvistä matkakirjasta"). Kuvapino on kytketty pois vain
+ * näkyvistä: js/ui.js rakentaa kortit yhä, kuvadata on paketeissa ja
+ * tiedostot ovat tallessa, joten paluu on tämän yhden säännön
+ * poistaminen. ÄLÄ poista pinon koodia tai kuvia — piilotus on
+ * tarkoituksella pelkkä näkyvyyskytkin.
+ */
+.postikortti { display: none; }
+
 .postikortti {
   position: fixed;
   z-index: 70;
@@ -11821,8 +11831,19 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * yhtä väriä.
  * ------------------------------------------------------------------ */
 
+/*
+ * Taulu vierii omassa kotelossaan MOLEMPIIN suuntiin (omistajan tilaus
+ * 23.8.2026: "tee otsikkorivistä pysyvästi näkyvä scrollatessa").
+ * Korkeusraja on se, joka tekee sticky-otsikosta ylipäätään
+ * mahdollisen: ilman sitä kotelo ei vieri pystyssä, jolloin thead
+ * kiinnittyisi koteloon joka ei liiku, ja pystyvieritys tapahtuisi
+ * jossain esivanhemmassa otsikon mukana. Lyhyt taulu ei yllä rajaan
+ * eikä siis muutu.
+ */
 .tk-vieri {
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 70vh;
   -webkit-overflow-scrolling: touch;
   margin: 0 0 0.8rem;
 }
@@ -11844,12 +11865,19 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 /*
- * Otsikkorivi EI ole sticky. tk-vieri vierii vain vaakaan, joten
- * top: 0 ei koskaan tarttunut pystyssä — mutta se nosti solut omalle
- * WebKit-kerrokselle, jonka piirto jäi iPadilla kesken vaaka-
- * vierityksessä (osa otsikoista katosi, omistajan kaappaus 18.8.2026).
+ * Otsikkorivi jää paikalleen pystyvierityksessä, kuten nimisarake jää
+ * vaakavierityksessä. HUOM aiempi vika (omistajan kaappaus 18.8.2026):
+ * sticky-otsikko nosti solut omalle WebKit-kerrokselle ja osa
+ * otsikoista katosi iPadilla vaakavierityksen aikana. Silloin
+ * tk-vieri vieri vain vaakaan, joten top: 0 ei tarttunut mihinkään —
+ * kerrosnosto tuli ilman mitään hyötyä. Nyt kotelolla on korkeusraja
+ * ja se vierii myös pystyssä, joten otsikko tarttuu oikeasti. Sticky
+ * tarvitsee peittävän taustan, muuten vierivä sisältö kuultaa läpi.
  */
 .tk-taulu thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   background: #f0e6cd;
   border-bottom: 1px solid rgba(70, 51, 31, 0.4);
   font-size: 0.64rem;

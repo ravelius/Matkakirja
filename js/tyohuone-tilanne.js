@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1076 — KAKSI OMISTAJAN TILAUSTA: kehittajan MANTEREET-taulun otsikkorivi pysyy nakyvissa pystyvierityksessa, ja matkakirjan kuvapino on piilotettu (ei poistettu). Tarkista: MANTEREET-taulun vieritys iPadilla seka kaupunkiin saapuminen',
   'v1075 — LIMAN KAUPUNKILEHTI: kaupunki, historia ja ruoka; 12 nostoa ja 22 kuvaa. Tarkista: Liman lehti ja ruokasivu',
   'v1074 — TORONTON KAUPUNKILEHTI: kaupunki, historia ja alkuperaiskansat; 12 nostoa ja 23 kuvaa. Tarkista: Toronton lehti ja alkuperaiskansat-sivu',
   'v1073 — KOHDEKARTAT viidelle kaupungille (San Francisco, Rio, Buenos Aires, Sydney, Auckland) seka nelja uutta kaupunkilehtea: Brisbane, Chicago, Perth ja Sao Paulo. Tarkista: viiden kaupungin kohdekartat ja neljan uuden lehden sivut',
