@@ -1294,6 +1294,27 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
+          ampari: 'herokoe/hero-praha-aamu.png',
+          selite: 'Pyhän Vituksen katedraalin rakentaminen alkoi vuonna 1344 '
+            + 'Kaarle IV:n käskystä Matias Arraslaisen ja Peter Parlerin '
+            + 'johdolla, ja rakennus saatiin valmiiksi vasta vuonna 1929.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-praha-keskipaiva.png',
+          selite: 'Kaarlensillan peruskivi laskettiin vuonna 1357 ja silta '
+            + 'valmistui 1400-luvun alussa; se oli Vltavan ainoa kiinteä ylitys '
+            + 'Prahassa aina 1840-luvulle asti.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-praha-ilta.png',
+          selite: 'Tynin kirkkoa rakennettiin 1300-luvulta lähtien '
+            + 'vanhankaupungin pääkirkoksi, ja sen kuoriin haudattiin '
+            + 'tähtitieteilijä Tyko Brahe vuonna 1601.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           tiedosto: 'Vltava river in Prague.jpg',
           selite: 'Vltava on Tšekin pisin joki, ja sen nimi tulee vanhoista '
             + 'germaanisista sanoista, jotka merkitsevät villiä vettä.',
@@ -5282,6 +5303,28 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        {
+          ampari: 'herokoe/hero-ateena-aamu.png',
+          selite: 'Parthenon rakennettiin Athena Parthenoksen temppeliksi '
+            + 'vuosina 447–438 eaa., ja sen piirsivät Iktinos ja Kallikrates '
+            + 'Feidiaan johtaessa veistostöitä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-ateena-keskipaiva.png',
+          selite: 'Zeuksen temppelin rakentaminen aloitettiin 500-luvulla eaa., '
+            + 'mutta se valmistui vasta keisari Hadrianuksen aikana vuonna 131 '
+            + 'jaa. eli yli kuusisataa vuotta myöhemmin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-ateena-ilta.png',
+          selite: 'Panathinaikon stadion sai marmoriasunsa jo Herodes '
+            + 'Atticuksen aikana vuonna 144 jaa., ja Georgios Averoffin '
+            + 'lahjoitus nosti sen ennalleen ensimmäisiin nykyaikaisiin '
+            + 'olympialaisiin vuonna 1896.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Atenas, 03.jpg',
           selite: 'Antiikin agora oli Ateenan kauppa- ja kokouspaikka, ja sen '
@@ -26694,6 +26737,29 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
+          ampari: 'herokoe/hero-luxor-aamu.png',
+          selite: 'Karnakin Amonin temppelialuetta rakennettiin ja '
+            + 'laajennettiin yli kahden vuosituhannen ajan Keskimmästä '
+            + 'valtakunnasta ptolemaiolaisaikaan, ja sen 134 pylvään sali on '
+            + 'antiikin suurimpia katettuja tiloja.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-luxor-keskipaiva.png',
+          selite: 'Luxorin temppelin rakennutti Amenhotep III 1300-luvulla eaa. '
+            + 'ja sitä laajensi Ramses II, jonka pystyttämästä obeliskiparista '
+            + 'toinen siirrettiin Pariisin Place de la Concordelle vuonna 1836.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-luxor-ilta.png',
+          selite: 'Deir el-Bahariin louhittu Hatshepsutin muistotemppeli '
+            + 'valmistui noin 1470 eaa. hovimies Senenmutin johdolla, ja '
+            + 'Thutmosis III hakkautti kuningattaren nimen ja kuvat pois sen '
+            + 'seinistä hänen kuolemansa jälkeen.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           tiedosto: 'Colossi of Memnon R02.jpg',
           selite: 'Memnonin kolossit seisovat länsirannalla, jonne muinaisen '
             + 'Theban nekropoli rakennettiin.',
@@ -28390,6 +28456,29 @@ export const KULTTUURI_KATEGORIAT = {
        * kohdetta, joita lehti ei muuten näytä.
        */
       avauskuvat: [
+        {
+          ampari: 'herokoe/hero-isfahan-aamu.png',
+          selite: 'Shaahin moskeija rakennettiin Abbas Suuren käskystä vuosina '
+            + '1611–1629 Naqsh-e Jahanin aukion eteläpäähän, ja sen porttiholvi '
+            + 'on käännetty aukion linjasta, jotta itse moskeija asettuisi kohti '
+            + 'Mekkaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-isfahan-keskipaiva.png',
+          selite: 'Si-o-se-pol rakennettiin vuosina 1599–1602 Allahverdi Khanin '
+            + 'valvonnassa, ja sen 33 kaarta kantavat lähes 300 metrin pituista '
+            + 'siltaa, joka toimii samalla patona.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-isfahan-ilta.png',
+          selite: 'Sheikh Lotfollahin moskeija valmistui vuosina 1603–1619 '
+            + 'hovin yksityiseksi rukoushuoneeksi pääarkkitehti Muhammad Rezan '
+            + 'suunnitelmien mukaan, eikä siinä siksi ole minareetteja eikä '
+            + 'pihaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Naqsh-e Jahan Square from the gheisariye Vault.jpg',
           selite: 'Aukio rakennettiin vuosina 1598–1629 osana Sheikh Bahain '
@@ -32078,6 +32167,30 @@ export const KULTTUURI_KATEGORIAT = {
        * kolmas joen toiselta puolelta.
        */
       avauskuvat: [
+        {
+          ampari: 'herokoe/hero-soul-aamu.png',
+          selite: 'Gyeongbokgung valmistui Joseon-dynastian pääpalatsiksi '
+            + 'vuonna 1395, ja sen valtaistuinsali Geunjeongjeon rakennettiin '
+            + 'nykyiseen asuunsa 1867, kun palatsi nostettiin vuoden 1592 sodan '
+            + 'tuhoista.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-soul-keskipaiva.png',
+          selite: 'Sungnyemun eli Namdaemun valmistui kaupunginmuurin '
+            + 'eteläiseksi pääportiksi vuonna 1398, ja vuoden 2008 tuhopoltossa '
+            + 'palanut yläkerta ennallistettiin perinteisin menetelmin vuoteen '
+            + '2013 mennessä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-soul-ilta.png',
+          selite: 'Namsanin laelle vuosina 1969–1971 rakennettu 236-metrinen '
+            + 'torni oli Korean ensimmäinen useaa televisio- ja radiokanavaa '
+            + 'palvellut masto, ja yleisö pääsi sen näköalatasanteelle vuonna '
+            + '1980.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'flickr-48753082278.jpg',
           selite: 'Soulin keskellä on Namsanin kukkula, ja kaupunkia '
@@ -38229,6 +38342,30 @@ export const KULTTUURI_KATEGORIAT = {
        * raunioina matalien savikattojen takana.
        */
       avauskuvat: [
+        {
+          ampari: 'herokoe/hero-samarkand-aamu.png',
+          selite: 'Sherdorin medresa rakennettiin Registanin aukiolle vuosina '
+            + '1619–1636, ja sen portaalin raidalliset pedot ja ihmiskasvoinen '
+            + 'aurinko rikkovat islamilaisen koristetaiteen tapaa karttaa '
+            + 'elävien olentojen kuvia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-samarkand-keskipaiva.png',
+          selite: 'Gur-e-Amiria alettiin rakentaa vuonna 1403 Timurin '
+            + 'pojanpojan Muhammad Sultanin haudaksi, mutta siihen haudattiin '
+            + 'Timur itse, kun hän kuoli 1405 eivätkä lumen tukkimat '
+            + 'vuoristosolat päästäneet saattuetta Shahrisabziin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-samarkand-ilta.png',
+          selite: 'Bibi-Khanymin moskeijan rakentaminen alkoi vuonna 1399 '
+            + 'Timurin Intian-sotaretken jälkeen, ja sen nelikymmenmetrinen '
+            + 'kupoli alkoi varista jo muutaman vuoden kuluttua, kun kunnianhimo '
+            + 'ylitti aikansa rakennustaidon.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Western iwan of Bibi-Khanym Mosque 01.jpg',
           selite: 'Bibi-Khanymin korjaukset lopetettiin 1500-luvun '
