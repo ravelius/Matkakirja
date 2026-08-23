@@ -11095,6 +11095,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
+          /*
+           * Neljäs generoitu kuva Tampereelle (24.8.2026). Ensimmäinen
+           * erä, joka tehtiin viitekuvilla: kohde tunnistettiin omasta
+           * Commons-kategoriastaan (Category:Näsinneula, 43 kelvollista
+           * kuvaa) ja generointi ankkuroitiin kolmeen niistä. Viitteet
+           * painotettiin lähikuviin, jotta näkötasanteen ja antennin
+           * mittasuhteet välittyvät — kaukainen siluetti ei olisi
+           * kertonut niistä mitään.
+           */
+          ampari: 'herokoe/hero-tampere-nasinneula.png',
+          selite: 'Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 '
+            + 'Särkänniemessä ja on 168 metriä korkea; sen pyörivä '
+            + 'ravintola 124 metrin korkeudessa tekee täyden kierroksen '
+            + '45 minuutissa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           tiedosto: 'flickr-52302493222.jpg',
           selite: 'Tampere on rakennettu kapealle kannakselle kahden järven '
             + 'väliin, ja tehdassalit nousivat aivan kosken rantaan.',

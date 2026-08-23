@@ -22,16 +22,19 @@
  * Mutta pidetään tämä." Kuva siis kelpaa, mutta kulma ei ole se, jota
  * muille tehdään.
  *
- * LAHI on näiden kahden väliltä ja se on OLETUS korjauksille: hieman
- * koholla, selvästi lähempänä kuin vakio, ympäristöä vain sen verran
- * että paikka tunnistuu.
+ * OMISTAJAN PÄÄTÖS 24.8.2026: oletus on silti VAKIO — "pidä
+ * alkuperäinen korkeus ja etäisyys, se on visuaalisesti paras".
+ * Tämä on tietoinen valinta: laaja näkymä on kaunein, ja Tampereen
+ * hyväksytty erä tehtiin juuri sillä. Sijoitusriski jää siis voimaan
+ * ja se hyväksytään — viitekuvat ankkuroivat rakennuksen, vaikka
+ * ympäristö on yhä mallin varassa. LAHI ja TIUKKA ovat käytettävissä
+ * silloin, kun jokin kohde osoittautuu toistuvasti sijoitusvirheiden
+ * lähteeksi.
  */
 
 /*
- * VAKIO — kohde kattojen korkeudelta, laaja kaupunki takana.
- * Käytä VAIN kohteille, jotka malli tuntee hyvin ja joiden ympäristö
- * on runsaasti kuvattu (Lontoo, Pariisi, New York). Näissä laaja
- * näkymä on rikkaus; muualla se on riski.
+ * VAKIO — OLETUS. Kohde kattojen korkeudelta, laaja kaupunki takana.
+ * Visuaalisesti paras ja koko herokuvasarjan vakiintunut ilme.
  */
 export const VAKIO =
   " Shot from a LOW ELEVATED viewpoint at rooftop height, roughly level"
@@ -44,7 +47,8 @@ export const VAKIO =
   + ' no watermark, no borders.';
 
 /*
- * LAHI — OLETUS. Kohde täyttää kuvan, ympäristöä vain reunoilla.
+ * LAHI — varakulma sijoitusvirheiden varalle. Kohde täyttää kuvan,
+ * ympäristöä vain reunoilla.
  * Kamera on ihmisen silmänkorkeuden yläpuolella mutta selvästi
  * kattojen alapuolella, noin toisen kerroksen tasolla, ja katsoo
  * kohdetta lähes vaakasuoraan.
@@ -80,13 +84,13 @@ export const TIUKKA =
   + ' no stylization. Absolutely no text, no watermark, no borders.';
 
 /**
- * Promptin runko. Oletuskulma on LAHI.
+ * Promptin runko. Oletuskulma on VAKIO.
  *
  * @param {string} kohde      mitä kuvataan, englanniksi
  * @param {string} kuvaus     rakennuksen muoto ja materiaalit
  * @param {string} ymparisto  mitä ympärillä näkyy
  * @param {string} kulma      VAKIO | LAHI | TIUKKA
  */
-export const prompti = (kohde, kuvaus, ymparisto, kulma = LAHI) =>
+export const prompti = (kohde, kuvaus, ymparisto, kulma = VAKIO) =>
   `A photorealistic photograph of ${kohde}, the building dominating the`
   + ` frame: ${kuvaus}. Immediately around it: ${ymparisto}.${kulma}`;
