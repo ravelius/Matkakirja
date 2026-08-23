@@ -130,6 +130,25 @@ Vanha äänite (VANHAT_AANET) — 2/112 kaupunkia: `kairo`, `lontoo`.
 
 **Erikoishuomio — BHR (Bahrain):** maalehti on olemassa (4 aihetta, 16 nostoa, 4 minitehtävää) ja Lähi-idän laudan omalla kartalla (`js/packs/middleeast-countries.js`) Bahrainilla on sekä muoto että lippu (`Flag of Bahrain.svg`) — mutta se puuttuu kokonaan käsin ylläpidetystä yhdistelmätaulusta `MAAILMANKARTTA.map.countryShapes` (js/packs/maailmankartta.js). Sen vuoksi maailmankartalla ei näy Bahrainin lippua eikä muotoa, vaikka Lähi-idän laudalla se toimii. Lisäksi `RADIOT.BHR` ja `MAAKARTAT.BHR` puuttuvat molemmat kokonaan omista tauluistaan — nämä ovat aitoja puutteita eivätkä liity yhdistelmäkarttabugiin. Kolme eri asiaa yhdessä maassa: syytä käydä läpi ja korjata erikseen ennen yhtenäisyystyön aloitusta.
 
+**Lisäys 23.8.2026 (Fable, v1047:n jälkeen) — P-Amerikan pilotin jättämät aukot:**
+
+- **northamerica-laudalta puuttuu `map.countryShapes` kokonaan** (lauta itse
+  toteaa tämän kommentissaan "tulee myöhemmin sisältöagentin erässä").
+  Seuraus: USA:n maalehti aukeaa toistaiseksi VAIN maailmankartalla
+  (avaaMaalehti vaatii muodon), eikä P-Amerikan laudalla näy maiden
+  korostuksia, lippuja eikä Maiden lehdet -nappia. Tehdään omana eränä
+  tools/middleeast-countries.mjs-mallilla (projektio sovitetaan laudan
+  kaupungeista, Natural Earth 50m -lähde). Sama puute koskee myös
+  southamerica-, oceania- ja asia-lautoja.
+- **newyork + sanfrancisco: kohdekartat puuttuvat** (`KAUPUNKIKARTAT`) —
+  kohdekarttapuutteiden lista kasvoi siis 12 → 14 kaupunkiin.
+- **newyork + sanfrancisco: herokuvat puuttuvat** — generointi kierroksella 9
+  (tools/hero-tyolista-4.mjs) käynnissä 23.8.2026.
+- **sanfrancisco: avauskuvat puuttuvat kokonaan** (0 aitoa valokuvaa;
+  New Yorkilla 3) — kuvatoimitus käynnissä 23.8.2026.
+- USA:n 4 lisäminitehtävää (maalehden aiheilta puuttuvat tehtävät) kirjattu
+  aiemmin — yhä tekemättä.
+
 ## Lähteet ja mittaustavat
 
 - **Kaupungit**: `Object.keys(KULTTUURI_KATEGORIAT)` (112 kpl), avain = kaupunki-id.
