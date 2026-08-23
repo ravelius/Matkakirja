@@ -7251,19 +7251,20 @@ body.katselu #newgame-btn { display: none; }
  * näyttää tehdyltä.
  */
 
-.wiki-nosto .selite {
-  margin: 0 0 0.35rem;
-  font-size: 0.82rem;
-  line-height: 1.42;
-  color: rgba(70, 51, 31, 0.82);
-}
+/*
+ * KUVATEKSTIN (.selite) TYYLIT POISTETTU 23.8.2026. Aihesivujen
+ * kainalokuvista jäi jäljelle kuva ja lähderivi (omistajan päätös:
+ * "ota ennemmin Kuvatekstit pois ja laita leipäteksti kiertämään
+ * kuvaa"), eikä yksikään piirto tee enää .selite-kappaletta noston
+ * sisään (js/maalehti.js). Selite elää datassa: alt-teksti ja
+ * suurennoksen kuvateksti. Luokka pysyy lukijan ohituslistalla
+ * (js/lukija.js) muiden näkymien varalta.
+ */
 
 /*
- * Kuvan ja kuvatekstien yhteinen kehys: kutistuu kuvan mittoihin ja
- * keskittyy palstalle. Kuvateksti EI SAA ylittää kuvan reunaa
- * (omistajan toive 5.8.2026) — leveys 0 + min-width 100 % antaa
- * selitteelle täsmälleen kehyksen (= kuvan) leveyden ilman, että
- * pitkä teksti venyttäisi fit-content-kehystä palstan levyiseksi.
+ * Kuvan ja sen lähderivin yhteinen kehys: kutistuu kuvan mittoihin ja
+ * keskittyy palstalle. Krediitti EI SAA ylittää kuvan reunaa — kehys
+ * on aina täsmälleen kuvan levyinen (100 %, kainalossa 36 % / 27 %).
  */
 /*
  * Kuvat palstansa täyteen leveyteen KAPEALLA RUUDULLA (omistajan
@@ -7277,19 +7278,17 @@ body.katselu #newgame-btn { display: none; }
  * kainaloon ja teksti juoksee sen vierellä — ks. "KAINALOKUVA"
  * alempana (omistajan palaute 21.8.2026).
  *
- * ALAMARGINAALI 0,6 → 0,85 rem (23.8.2026): lähderivi on nyt kuvan
- * alla inline-virrassa, joten sen oma 0,85 rem:n alamarginaali ei enää
- * erota kuvatekstiä sen alta alkavasta leipätekstistä. Sama väli
- * siirtyy kehykselle, jolloin taitto pysyy ennallaan.
+ * ALAMARGINAALI 0,85 → 0,7 rem (23.8.2026): kuvateksti on poissa, ja
+ * kehyksen alla on enää kuuden pisteen krediittirivi. Väli mitattiin
+ * kuvan alle jäävän ilman mukaan, ei kadonneen kuvatekstin.
  */
 .wiki-nosto .kuvakehys {
   width: 100%;
-  margin: 0 auto 0.85rem;
+  margin: 0 auto 0.7rem;
 }
 
-/* Kuva omalle rivilleen lohkona: sen alta alkava kuvateksti on nyt
- * inline-virtaa, ja inline-kuva imisi tekstin ensimmäisen rivin
- * viereensä. */
+/* Kuva omalle rivilleen lohkona, jotta lähderivi alkaa sen alta eikä
+ * asetu kuvan viereen. */
 .wiki-nosto .kuvakehys img,
 .wiki-nosto .kuvakehys .nosto-galleria {
   display: block;
@@ -7298,25 +7297,22 @@ body.katselu #newgame-btn { display: none; }
 }
 
 /*
- * Selite ja lähde SAMAAN inline-virtaan (23.8.2026, ks. "LÄHDERIVI
- * KUVATEKSTIN JATKEEKSI"). Tässä ne ovat kaksi erillistä p-elementtiä
- * kehyksen sisällä; inline-arvo sulattaa ne yhdeksi anonyymiksi
- * lohkoksi, jolloin lähde jatkaa selitettä ja rivittyy sen mukana.
- *
- * Aiempi `width: 0; min-width: 100%` esti kuvatekstiä venyttämästä
- * kehystä kuvaa leveämmäksi. Sitä ei tarvita: kehyksellä on aina
- * täsmällinen leveys (100 %, kainalossa 42 % / 30 %), eikä inline-laatikko
- * ota leveyttä vastaan muutenkaan.
+ * LÄHDERIVI YKSIN KUVAN ALLA (23.8.2026). Kuvateksti oli sen pari
+ * inline-virrassa; nyt paria ei ole, joten rivi palaa omaksi pieneksi
+ * lohkokseen kuvan alle. Se kääriytyy kehyksen leveyteen eli kuvan
+ * reunaan asti, ja jos krediitti on pitkä, se rivittyy kuvan alla
+ * eikä ulotu leipätekstin puolelle.
  */
-.wiki-nosto .kuvakehys .selite,
 .wiki-nosto .kuvakehys .lahde {
-  display: inline;
+  display: block;
+  margin: 0.25rem 0 0;
 }
 
 /* Lähdemaininta on lisenssiehto, ei koriste: se näkyy aina. */
 .wiki-nosto .lahde {
   margin: 0 0 0.85rem;
   font-size: 0.66rem;
+  line-height: 1.3;
   color: rgba(70, 51, 31, 0.68);
 }
 
@@ -7383,9 +7379,23 @@ body.katselu #newgame-btn { display: none; }
    * huomautti. Nuolet ovat kuvan päällä kolmanneksen levyisinä
    * osuma-alueina, joten ne kutistuvat kuvan mukana.
    */
+  /*
+   * LEVEYS 42 → 36 % (23.8.2026, sama omistajan päätös kuin
+   * kuvatekstin poisto: "niin tyhjä tila katoaa samalla").
+   *
+   * Kuvateksti oli vain puolet tyhjästä tilasta. Toinen puoli on
+   * kelluva kuva itse: 42 prosentissa vaakakuva oli 890 pikselin
+   * arkissa noin 375 px leveä ja 315 px korkea, kun sen vierelle
+   * jäävä tekstikaista latoi jutun 190 pikseliin — lohkon vasempaan
+   * alanurkkaan jäi tyhjä kaista, jota mikään ei täyttänyt.
+   * Kaventaminen pienentää kuvaa ja LEVENTÄÄ tekstikaistaa yhtä
+   * aikaa, joten ero kutistuu molemmista päistä. Tekstikaista on
+   * 36 prosentissa yhä noin 545 px eli reilut 60 merkkiä, siis
+   * luettava rivi eikä suikale.
+   */
   .wiki-nosto.kainalo .kuvakehys {
     float: right;
-    width: 42%;
+    width: 36%;
     margin: 0.2rem 0 0.7rem 1.6rem;
   }
 
@@ -7418,7 +7428,11 @@ body.katselu #newgame-btn { display: none; }
    * Luokan .pysty antaa piirto kuvan latauduttua, kun luonnollinen
    * korkeus ylittää leveyden selvästi.
    */
-  .wiki-nosto.kainalo.pysty .kuvakehys { width: 30%; }
+  /* 30 → 27 % samasta syystä kuin vaakakuvan 42 → 36 % (23.8.2026):
+   * pystykuva on kainalon korkein osa, ja juuri sen alle jäi jutun
+   * loputtua tyhjä kaista. 27 prosentissa kuva on 890 pikselin
+   * arkissa noin 240 px leveä ja 2:3-kuvana noin 270 px korkea. */
+  .wiki-nosto.kainalo.pysty .kuvakehys { width: 27%; }
 
   .wiki-nosto.kainalo.pysty .kuvakehys img {
     max-height: 420px;
@@ -9162,8 +9176,10 @@ button.lukija-nappi.lukee,
 .nahtavyys-lahde::before,
 .lightbox-lahde::before,
 .kuvateksti .kuvalahde::before,
-.wiki-nosto .kuvakehys .lahde::before,
 .vinkki-hero .lahde::before { content: ' '; }
+/* Aihesivun kainalokuvasta välilyönti ei kuulu tähän listaan enää
+ * (23.8.2026): kuvateksti on poistettu, ja lähderivi on siellä yksin
+ * omalla rivillään — ei mitään, minkä perään se jatkaisi. */
 
 /* Postikortin ja suurennoksen lähde on nyt kuvatekstin sisällä
  * (js/ui.js): inline-virtaan ja kortin omaa lähdekokoa pienemmäksi. */
