@@ -41958,6 +41958,15 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
+          ampari: 'herokoe/hero-astana-keskipaiva.png',
+          selite: 'Khan Shatyr avattiin 2010 Norman Fosterin toimiston '
+            + 'suunnittelemana: kalvokatteinen teltta pitää sisätilan 15–30 '
+            + 'asteessa, vaikka ulkona lämpötila vaihtelee '
+            + 'kolmenkymmenenviiden pakkasasteen ja yhtä monen '
+            + 'lämpöasteen välillä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           ampari: 'herokoe/hero-astana-ilta.png',
           selite: 'Hazrat Sultanin moskeija avattiin 2012 Yesil-joen '
             + 'rannalle: sen 51-metrinen pääkupoli on Kazakstanin suurin, ja '
