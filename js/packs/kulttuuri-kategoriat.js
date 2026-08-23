@@ -52149,4 +52149,572 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * BUENOS AIRES (Opus 23.8.2026) — Etelä-Amerikan laudan pilottikaupunki
+   * yhdessä Rio de Janeiron kanssa. Kohteella ei ollut kategorioita eikä
+   * säätietoja ennen tätä; litteä kulttuuritaulu (js/packs/
+   * southamerica-questions.js) ja saapumisteksti (southamerica-
+   * saapumiset.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * FAKTAPOHJA on docs/mantereet-tyoaineisto/faktapohja-buenosaires.md ja
+   * sen riippumaton tarkistus tarkistus-buenosaires.md (molemmat
+   * 23.8.2026, tuomio "kelpaa korjauksin"). Lähdeartikkelit en-Wikipediassa:
+   * Buenos Aires, Domingo Faustino Sarmiento, Casa Rosada, Plaza de Mayo,
+   * Teatro Colón, San Telmo (Buenos Aires), La Recoleta Cemetery, Tango,
+   * Immigration to Argentina. Sarmienton artikkeli haettiin tässä erässä
+   * vielä kerran raakatekstinä (action=raw), jotta Facundo-kohta ja
+   * arvostelu voitiin muotoilla lähteen mukaan eikä muistista.
+   *
+   * TANGO-ANAKRONISMI on koko lehden tärkein varoitus: tango syntyi
+   * 1880-luvulla, eikä isoisä voinut kuulla sitä 1873. Nosto H1 sanoo
+   * tämän suoraan, ja sama "juuri ennen" -kehys on käytössä kaikkialla —
+   * southamerica-saapumiset.js:n valmis teksti ("Ukko ehti paikalle juuri
+   * ennen sitä") oli jo oikein eikä sitä muutettu.
+   *
+   * TARKISTAJAN KAKSI PAKOLLISTA KORJAUSTA on tehty tähän:
+   * 1) Nosto H3 on kirjoitettu SAN TELMOsta, ei La Bocasta. La Bocan oma
+   *    artikkeli ei tue väitettä 1800-luvun telakkatyöstä eikä 1870-luvun
+   *    genovalaisesta siirtolaisuudesta (sen ainoa liguurialaismaininta
+   *    sijoittuu 1900-luvulle); San Telmon artikkeli tukee telakkatyötä,
+   *    tiilenpolttoa ja varastointia 1600-luvulta 1870-luvulle.
+   * 2) Plaza de Mayon pylväsrivistön (Recova) purkuvuosi on 1883, sama
+   *    kuin artikkelin History-osiossa. Wikipedian oma infoboksi ja
+   *    johdanto sanovat 1884 — ristiriita on kirjoitettu nostoon K4
+   *    näkyviin lukijalle (v925/v932:n tapa).
+   * Lisäksi kaksi harkinnanvaraista huomiota on otettu käyttöön:
+   * Mendozan siirtokunnan autioitumisvuosi kerrotaan muodossa "1540-luvun
+   * alussa" (Etymology 1541 vs. Viceregal times 1542), ja keltakuumeen
+   * lukuero (14 000 vs. yli 10 000) kirjoitetaan auki sen sijaan että
+   * valittaisiin toinen (spec-mantereet.md kohta 5).
+   *
+   * SARMIENTO EI OLE SANKARIKEHYKSESSÄ (spec-mantereet.md kohta 2,
+   * "piikki herroihin itseensä"): nosto K3 kertoo hänet aikansa
+   * uudistajana ja murhayrityksen uhrina, mutta sanoo myös, että hänen
+   * Facundossa muotoiltua sivilisaatio–barbaria-jakoaan ja hänen
+   * alkuperäiskansoja koskenutta politiikkaansa on jälkikäteen
+   * arvosteltu. Piikki osuu isoisän aikakauden herroihin, ei
+   * paikallisiin. POIS JÄTETTY kokonaan: vuosien 1976–1983 sotilasjuntta,
+   * Falklandin sota ja kaikki nykypolitiikka — sata vuotta isoisän ajan
+   * ulkopuolella (sama ratkaisu kuin New Yorkin Draft Riots).
+   *
+   * MINITEHTÄVÄ kysyy ensimmäisen Teatro Colónin avajaisoopperaa, ja
+   * vastaus on saman sivun nostossa H2. Kaupungin oma kulttuuritaulu
+   * (southamerica-questions.js, avain buenosaires) kysyy nimen
+   * merkitystä, tangon syntyä ja Río de la Platan leveyttä — tehtävä ei
+   * osu yhteenkään niistä (kaupunkilehti.md, toistuva vika 2).
+   *
+   * SÄÄRIVI PUUTTUU EIKÄ LUKUJA KEKSITTY. Open-Meteon arkisto vastasi
+   * 23.8.2026 "Daily API request limit exceeded" heti ensimmäisen
+   * viisivuotispalan jälkeen, joten kuukausinormaaleja ei saatu laskettua
+   * eikä js/packs/saatiedot.js:ään kirjoitettu riviä (Samarkand-malli
+   * v965: mieluummin ei säätä kuin keksittyä säätä). Lehti toimii ilman
+   * riviä, ja oppaan sääjakso nojaa en-Wikipedian omaan sääruutuun
+   * (Buenos Aires Central Observatory, Agronomía, 1991–2020) sanoen
+   * lähteensä ääneen. Fable voi täydentää rivin, kun kiintiö vapautuu.
+   *
+   * KUVAT: kaikki lisenssit ja tekijänimet Commonsin extmetadatasta
+   * 23.8.2026, ja jokainen kuva katsottiin silmin 900 px esikatseluna.
+   * HYLÄTTY: "Parcelamiento de Buenos Aires (Garay, 1580).jpg" (arkkiin
+   * on lisätty punaiset pisteet ja italiankielinen selitys, ja arkin oma
+   * otsikko sanoo vuodeksi 1583 eikä 1580), "Cabildo Plaza de Mayo Buenos
+   * Aires 5 de Agosto 2023.jpg" (etualalla tunnistettavia kasvoja),
+   * "Ignacio Baz - Domingo F. Sarmiento - Google Art Project.jpg"
+   * (arkkiin kirjoitettu luettelonumero 51), "Palacio de San Jose.jpeg"
+   * (kahdesta valokuvasta koottu montaasi näkyvine saumoineen) sekä
+   * "Sarmiento (1873).jpg", "Vieja Recova.jpg" ja "Plaza de la
+   * Victoria.png" (kaikki alle 1200 px leveitä).
+   * Jo pelissä olevia buenosaires-kuvia (southamerica-valokuvat.js:n
+   * Plaza Victoria 1890, San Telmon tori, Plaza Dorrego, Caminito ja
+   * Plaza de Mayo panorama) ei käytetty uudelleen.
+   * KAKSI PERUSTELTUA AIHETOISTOA: Cabildo näkyy sekä kannen laajassa
+   * kattonäkymässä että noston K1 alaviistokuvassa (eri tiedostot, eri
+   * mittakaava — rakennus on kaupungin siirtomaa-ajan hallinnon talo ja
+   * kannen näkymän tunnistettavin kohde), ja hallituksen talo esiintyy
+   * ennen–nyt-parissa sekä
+   * noston K4 vanhassa postitalokuvassa, koska nosto kertoo juuri siitä
+   * rakennuksesta, jonka Sarmiento tilasi isoisän matkavuonna.
+   */
+  buenosaires: [
+    {
+      id: 'kaupunki',
+      nimi: 'Buenos Aires',
+      johdanto: 'Río de la Platan rannalle noussut satamakaupunki, jonka '
+        + 'nimi tarkoittaa hyviä tuulia. Isoisän vierailun aikaan 1873 se '
+        + 'oli nuoren tasavallan pääkaupunki täynnä eurooppalaisia '
+        + 'siirtolaisia — ja tango oli vielä syntymättä.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat) — sama tilanne kuin
+       * New Yorkissa ja Helsingissä. Ne ovat silti kolme laajaa
+       * yleiskuvaa suurennossarjaa varten: historiallinen ydin
+       * kattotasolta, Recoleta ja Palermo ilmasta.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Vista Plaza de Mayo, Cabildo, Casa Rosada 02.jpg',
+          selite: 'Plaza de Mayon ympäristö on kaupungin historiallinen '
+            + 'ydin: valkoinen Cabildo, aukion Toukokuun pyramidi ja '
+            + 'Avenida de Mayo samassa näkymässä.',
+          lahde: 'Roberto Fiadone, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Aerial view - Recoleta, Buenos Aires.jpg',
+          selite: 'Recoleta kasvoi varakkaiden kaupunginosaksi, kun '
+            + 'keltakuume ajoi väkeä pois eteläisistä kortteleista.',
+          lahde: 'Ricardo Patiño, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Aerial view - Palermo, Buenos Aires.jpg',
+          selite: 'Palermon puistot ovat kaupungin suurin viheralue, ja '
+            + 'niiden takana nousee pohjoisten kaupunginosien siluetti.',
+          lahde: 'Ricardo Patiño, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa kaupungin ERI puolilta
+       * (omistajan kansikaruselli-linjaus 21.8.2026) — keskusta ilmasta
+       * jokirantoineen, Avenida 9 de Julio Obeliskeineen ja Riachuelon
+       * suu satamineen. Yksikään ei ole minkään noston aiheena samalla
+       * tiedostolla, eikä yksikään ole yksityiskohta- tai sisäkuva.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Buenos Aires aerial 1.jpg',
+          selite: 'Kaupunki on rakennettu tasaiselle pampalle, ja '
+            + 'jokirannan uusimmat osat — satama, Puerto Madero ja '
+            + 'luonnonsuojelualue — ovat täytemaata.',
+          lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Buenos Aires - Monserrat - Avenida 9 de Julio.jpg',
+          selite: 'Avenida 9 de Julio halkoo keskustan pohjois–eteläsuunnassa, '
+            + 'ja sen keskellä seisoo vuonna 1936 pystytetty Obeliski.',
+          lahde: 'jmpznz from https://www.flickr.com/photos/jmpznz/481712080/, '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Aerial view of La Boca and Avellaneda, Buenos Aires (33008635006).jpg',
+          selite: 'Riachuelo-joen suulla ovat kaupungin telakat ja '
+            + 'konttisatama, ja sen eteläpuolella alkaa jo naapurikaupunki '
+            + 'Avellaneda.',
+          lahde: 'Thomas Woodtli from Zürich, Switzerland, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: sama rakennus, sama suunta, sata neljäkymmentä
+       * vuotta väliä. Vasemmalla Christiano Juniorin valokuva vuodelta
+       * 1876, jossa vanha linnoitus ja Sarmienton tilaama postitalo ovat
+       * vielä kaksi erillistä taloa; oikealla nykyinen Casa Rosada, joka
+       * syntyi niiden yhdistämisestä. Vanhalla on vuosi-kenttä, joten
+       * peli piirtää sen harmaasävynä (raja 1960).
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Casa Rosada (1876).jpg',
+          vuosi: '1876',
+          selite: 'Matala vanha linnoitus ja sen takana kohoava postitalo '
+            + 'olivat vielä erillisiä rakennuksia; linnoitus purettiin '
+            + '1880-luvulla.',
+          lahde: 'Christiano Junior (1832–1902), Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Casa Rosada façade.jpg',
+          selite: 'Nykyinen Casa Rosada on presidentin virastotalo, ja sen '
+            + 'keskikaari on kahden vanhan rakennuksen liitoskohta.',
+          lahde: 'The Cosmonaut, Wikimedia Commons (CC BY-SA 2.5 ca)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaksi kertaa perustettu kaupunki',
+          teksti: 'Espanjalainen Pedro de Mendoza perusti siirtokunnan Río '
+            + 'de la Platan rannalle 2. helmikuuta 1536 ja nimesi sen hyvien '
+            + 'tuulten Neitsyen mukaan. Alkuperäisväestön hyökkäykset '
+            + 'pakottivat asukkaat pakenemaan, ja paikka autioitui '
+            + '1540-luvun alussa — Wikipedia antaa siitä kaksi eri vuotta, '
+            + '1541 ja 1542. Pysyvä kaupunki syntyi vasta 1580, kun Juan de '
+            + 'Garay purjehti Paraná-jokea alas Asunciónista ja perusti sen '
+            + 'uudelleen 11. kesäkuuta nimellä Santísima Trinidad. Satama '
+            + 'säilytti vanhan nimensä, ja siitä lyhennetty Buenos Aires '
+            + 'vakiintui 1600-luvulla.',
+          tiedosto: 'Cabildo de Buenos Aires 01.jpg',
+          selite: 'Cabildo toimi siirtomaa-ajan raatihuoneena ja Río de la '
+            + 'Platan varakuninkaankunnan hallintotalona, ja se seisoo yhä '
+            + 'Plaza de Mayon laidalla.',
+          lahde: 'Gargiulo omar, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Buenos Aires',
+        },
+        {
+          otsikko: 'Keltakuume muutti kaupungin kartan',
+          teksti: 'Kaksi vuotta ennen isoisän matkaa kaupunkia runteli '
+            + 'keltakuume. Epidemia tappoi Buenos Airesissa arviolta 14 000 '
+            + 'ihmistä, ja koko kansallishallitus pakeni taudin tieltä. Luku '
+            + 'vaihtelee lähteen mukaan: San Telmoon keskittyvä kuvaus puhuu '
+            + 'yli 10 000 uhrista rajaamatta lukua yksiselitteisesti yhteen '
+            + 'kortteliin. Pahiten kärsi juuri San Telmo, jonka keski- ja '
+            + 'yläluokka muutti pohjoisemmas. Epidemian jälkeen kaupunki '
+            + 'perusti La Chacaritan hautausmaan ja rakensi ensimmäiset '
+            + 'vesijohto- ja viemäriverkostonsa.',
+          tiedosto: 'Capilla cement chacarita 1891-restored.jpg',
+          selite: 'La Chacaritan hautausmaa perustettiin epidemian jälkeen '
+            + 'kaupungin laidalle, jossa oli vielä paljasta maata.',
+          lahde: 'Unknown author Unknown author Restoration: Ezarate, '
+            + 'Wikimedia Commons (PD)',
+          wiki: 'Domingo Faustino Sarmiento',
+        },
+        {
+          otsikko: 'Presidentti, joka ei kuullut pommia',
+          teksti: 'Isoisän vierailun aikaan presidenttinä oli kirjailija ja '
+            + 'poliitikko Domingo Faustino Sarmiento. Hänen kaudellaan '
+            + '1868–1874 maahan saapui 280 000 siirtolaista, ja jo vuoden '
+            + '1869 väestönlaskennassa puolet Buenos Airesin väestöstä oli '
+            + 'äskettäin tulleita. Elokuun 22. päivänä 1873 hänen vaunuaan '
+            + 'vastaan räjäytettiin pommi Corrientes- ja Maipú-katujen '
+            + 'kulmassa; hyökkäys epäonnistui, kun ase petti tekijän '
+            + 'kädessä, eikä kuuro presidentti kuullut räjähdystä. Hänen '
+            + 'pääteoksensa jakoi maailman sivilisaatioon ja barbariaan, ja '
+            + 'siitä ajattelusta häntä on jälkikäteen arvosteltu.',
+          tiedosto: 'Las Ideas no se matan, Domingo Faustino Sarmiento, San Juan Argentina.jpg',
+          selite: 'Zondan solaan San Juanissa on muurattu espanjaksi lause, '
+            + 'jonka Sarmiento kirjoitti ranskaksi kylpylän seinään 1840 '
+            + 'matkalla maanpakoon: ideoita ei tapeta.',
+          lahde: 'EagLau, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Domingo Faustino Sarmiento',
+        },
+        {
+          otsikko: 'Vaaleanpunainen talo ei ollut vielä vaaleanpunainen',
+          teksti: 'Vuonna 1873 hallituksen talo ei ollut se vaaleanpunainen '
+            + 'palatsi, jonka nykymatkailija näkee. Sarmiento tilasi juuri '
+            + 'sinä vuonna ruotsalaissyntyiseltä arkkitehdilta Carl '
+            + 'Kihlbergiltä uuden postitalon vanhan linnoituksen viereen; '
+            + 'talot yhdistettiin kaariholvilla vasta 1884, ja nykyinen Casa '
+            + 'Rosada valmistui 1898. Väri periytyy kertoman mukaan '
+            + 'Sarmientolta, joka sekoitti federalistien punaisen ja '
+            + 'unitaarien valkoisen sovinnon merkiksi — toisen selityksen '
+            + 'mukaan maalissa oli lehmänverta. Aukiokin oli yhä kahtia: sen '
+            + 'jakanut pylväsrivistö purettiin 1883, vaikka Wikipedian '
+            + 'infoboksi sanoo 1884.',
+          tiedosto: 'Palacio de Correos y Telegrafos de Buenos Aires.jpg',
+          selite: 'Kihlbergin suunnittelema postitalo nousi vanhan '
+            + 'linnoituksen viereen ja liitettiin myöhemmin osaksi '
+            + 'hallituksen taloa.',
+          lahde: 'Casa Rosada, Wikimedia Commons (CC BY 2.5 ar)',
+          wiki: 'Casa Rosada',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Buenos Aires-2740f-Obelisco.jpg',
+          selite: 'Obeliski pystytettiin 1936 kaupungin perustamisen '
+            + 'neljäsataavuotisjuhlaan paikalle, jossa aiemmin seisoneen '
+            + 'San Nicolásin kirkon tornissa Argentiinan lippu nostettiin '
+            + 'kaupungissa ensimmäisen kerran 1812.',
+          lahde: 'Barcex, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Buenos Aires on Argentiinan pääkaupunki ja jakautuu 48 '
+          + 'viralliseen barrioon, mutta matkailijan kaupunki on niistä '
+          + 'kapea kaistale joen suuntaisesti. Historiallinen ydin on Plaza '
+          + 'de Mayon ympärillä: Cabildo, katedraali ja Casa Rosada ovat '
+          + 'muutaman sadan metrin päässä toisistaan. Etelään mentäessä '
+          + 'tulee vastaan San Telmo mukulakivikatuineen, pohjoiseen '
+          + 'Recoleta ja Palermon puistot, ja itään päin jokirannan '
+          + 'vanhoista satama-altaista on tehty Puerto Maderon '
+          + 'kävelyranta. Metro eli Subte avattiin 1913 ensimmäisenä '
+          + 'eteläisellä pallonpuoliskolla, ja sillä pääsee näiden '
+          + 'kaikkien välillä.',
+        artikkeli: {
+          nimi: 'Matkailijan Buenos Aires',
+          taitto: 'opas',
+          teksti: 'Tasaiselle pampalle rakennettu satamakaupunki, jossa '
+            + 'siirtomaa-ajan aukio, siirtolaisten korttelit ja '
+            + 'ranskalaistyyliset puistot ovat kävelymatkan päässä '
+            + 'toisistaan.',
+          nosto: 'Vuoden 1869 väestönlaskennassa puolet kaupungin väestöstä '
+            + 'oli äskettäin maahan tulleita siirtolaisia — koko maassa '
+            + 'osuus oli yksitoista prosenttia.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Buenos Aires sijaitsee Río de la Platan '
+                + 'lounaisrannalla siinä kohdassa, jossa joki avautuu '
+                + 'maailman leveimmäksi jokisuuksi — vastarantaa Uruguayssa '
+                + 'ei näe. Sijainti teki paikasta luontaisen kauppasataman '
+                + 'jo espanjalaisaikana, ja 1800-luvun lopulla siitä tuli '
+                + 'Etelä-Amerikan vilkkain siirtolaisten porttikaupunki. '
+                + 'Junat saapuvat useammalle pääteasemalle, joista Retiro '
+                + 'on suurin: se avattiin 1915 ja kokoaa kolmen eri radan '
+                + 'päätepisteet vierekkäin. Kaupungin sisällä '
+                + 'liikutaan metrolla, jonka ensimmäinen linja avattiin '
+                + '1913 — se oli eteläisen pallonpuoliskon ensimmäinen '
+                + 'metro. Isoisän aikaan mitään näistä ei ollut: kaupunki '
+                + 'oli tiivis, matala ja rajattu muutamaan kortteliin joen '
+                + 'tuntumassa.',
+              kuva: {
+                tiedosto: 'Argentina-01729 - Retiro Mitre (49005258806).jpg',
+                selite: 'Retiron Mitre-aseman holvattu päähalli valmistui '
+                  + '1915, ja samassa rakennusryhmässä on kolmen eri radan '
+                  + 'päätepiste.',
+                lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Tasainen pampa ja täytetty ranta',
+              teksti: 'Kaupunki on rakennettu pampalle ilman luonnollisia '
+                + 'rajoja, eikä sen ympäriltä löydy kukkulaa, jolta '
+                + 'katsoa maisemaa. Osa nykyisistä alueista on myöhemmin '
+                + 'täytettyä maata joen suunnasta: satama, Puerto Madero, '
+                + 'lentokenttä ja rannan luonnonsuojelualue seisovat '
+                + 'kaikki paikoilla, jotka olivat isoisän aikaan vettä. '
+                + 'Puerto Maderon vanhat tiiliset varastorakennukset ja '
+                + 'nosturit ovat yhä paikoillaan altaiden reunoilla, ja '
+                + 'niiden takana nousee kaupungin uusin korkea '
+                + 'rakentaminen. Asukkaiden lempinimi porteño tarkoittaa '
+                + 'satamalaista, ja heidän määränsä kolminkertaistui '
+                + 'vuosien 1887 ja 1915 välillä puolesta miljoonasta '
+                + 'puoleentoista miljoonaan.',
+              kuva: {
+                tiedosto: 'Puerto Madero dock 4.JPG',
+                selite: 'Puerto Maderon satama-altaat rakennettiin '
+                  + '1887–1897, ja niiden varastot muutettiin 1990-luvulla '
+                  + 'asunnoiksi ja toimistoiksi.',
+                lahde: 'Helge Høifødt, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: satamasta laivaan',
+              teksti: '1870-luvun Buenos Aires eli karjasta. Villa, vuodat '
+                + 'ja nahka olivat Argentiinan pääasiallinen tulonlähde '
+                + 'vielä isoisän matkavuonna, ja ne varastoitiin ja '
+                + 'pakattiin satamakortteleiden vanhoissa aitoissa ennen '
+                + 'laivaan lastausta Eurooppaan. San Telmon kaltaiset '
+                + 'korttelit elivät juuri tästä työstä — telakoista, '
+                + 'varastoista ja tiilenpoltosta, ei turismista eikä '
+                + 'tangosta. Keltakuumeen jälkeen suurin osa korttelin '
+                + 'isoista taloista muuttui vuokrakasarmeiksi: 1870-luvulta '
+                + 'alkaen ne olivat conventilloja, joissa asui '
+                + 'siirtolaisperheitä yhteisen pihan ympärillä. San Telmosta '
+                + 'tuli kaupungin monikulttuurisin kortteli, ja siellä oli '
+                + 'suuret brittiläiset, galicialaiset, italialaiset ja '
+                + 'venäläiset yhteisönsä.',
+            },
+            {
+              otsikko: 'Historian käännekohta: hautausmaa ennen muuriaan',
+              teksti: 'Recoletan hautausmaa vihittiin marraskuussa 1822 '
+                + 'vanhan fransiskaaniluostarin puutarhaan, joten se oli '
+                + 'isoisän vierailun aikaan jo puoli vuosisataa vanha. '
+                + 'Nykyisen ilmeensä se sai kuitenkin vasta myöhemmin: '
+                + 'tunnusomaisen kehämuurin ja pylväsporttikäytävän '
+                + 'suunnitteli italialaissyntyinen arkkitehti Juan Antonio '
+                + 'Buschiazzo vuonna 1881 pormestari Torcuato de Alvearin '
+                + 'aikana. Sama pormestari purkautti 1883 Plaza de Mayon '
+                + 'kahtia jakaneen pylväsrivistön ja teki aukiosta '
+                + 'yhtenäisen. Kahdeksassa vuodessa kaupungin kaksi '
+                + 'tunnetuinta julkista paikkaa saivat siis muotonsa, '
+                + 'jonka matkailija tänään näkee.',
+              kuva: {
+                tiedosto: 'Cementerio de la Recoleta.jpg',
+                selite: 'Hautausmaan pylväsportti ja kehämuuri ovat vuodelta '
+                  + '1881, ja portin päädyssä lukee latinaksi levätkööt '
+                  + 'rauhassa.',
+                lahde: 'Sking, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Buenos Aires '
+                + '-artikkelin sääruudusta, joka kokoaa kaupungin oman '
+                + 'havaintoaseman normaalit Agronomían kaupunginosasta '
+                + 'jaksolta 1991–2020. Lehdellä ei ole tällä kertaa omaa '
+                + 'vuosigraafia, koska sen ERA5-normaaleja ei saatu '
+                + 'laskettua ilman keksittyjä lukuja — säärivi voidaan '
+                + 'lisätä myöhemmin. Ilmasto on Köppenin luokituksessa '
+                + 'kostea subtrooppinen eli Cfa, ja vuodessa on neljä '
+                + 'selvää vuodenaikaa eteläisen pallonpuoliskon '
+                + 'järjestyksessä. Kesä on kuuma ja kostea: tammikuun '
+                + 'keskilämpötila on lähes 25 astetta. Talvi on leuto mutta '
+                + 'viileä ja usein sumuinen, heinäkuun keskilämpötila '
+                + 'yhdentoista asteen tienoilla. Sadetta tulee noin 1 260 '
+                + 'millimetriä vuodessa melko tasaisesti, eikä kuivaa '
+                + 'kautta ole. Hellejakson katkaisee usein etelästä iskevä '
+                + 'pampero-tuuli, joka tuo äkillisiä ukkoskuuroja ja '
+                + 'viilentää sään nopeasti. Säähavaintoja on tehty '
+                + 'kaupungissa vuodesta 1856 — seitsemäntoista vuotta '
+                + 'ennen isoisän vierailua.',
+              kuva: {
+                tiedosto: 'El Rosedal, Palermo 03.jpg',
+                selite: 'Palermon ruusutarha kukkii eteläisen kevään '
+                  + 'aikaan loka–marraskuussa, samaan aikaan kun '
+                  + 'jakarandat sinertävät.',
+                lahde: 'Roberto Fiadone, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Plaza de Mayo',
+                tahdet: 3,
+                selite: 'Cabildo, katedraali ja Casa Rosada saman aukion '
+                  + 'laidoilla; aukio yhtenäistettiin 1883.',
+              },
+              {
+                mita: 'San Telmo',
+                tahdet: 3,
+                selite: 'Vanhin kortteli, jonka mukulakivikadut ja matalat '
+                  + 'talot ovat satamatyön ajalta.',
+              },
+              {
+                mita: 'Recoletan hautausmaa',
+                tahdet: 2,
+                selite: 'Kaupunki pienoiskoossa: käytävät, mausoleumit ja '
+                  + 'vuoden 1881 pylväsportti.',
+              },
+              {
+                mita: 'Puerto Madero',
+                tahdet: 2,
+                selite: 'Vanhat satama-altaat ja tiilivarastot kävelyrantana '
+                  + 'aivan keskustan vieressä.',
+              },
+              {
+                mita: 'Teatro Colón',
+                tahdet: 3,
+                selite: 'Nykyinen oopperatalo avattiin 1908 ja korvasi '
+                  + 'Plaza de Mayon vanhan Colónin.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sääluvut ovat en-Wikipedian Buenos
+             * Aires -artikkelin ilmasto-osiosta, sama lähde kuin
+             * jaksossa 5 — pelin omaa ERA5-riviä ei tälle kaupungille
+             * saatu (ks. lohkon alkukommentti).
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Vuodenajat ovat käänteiset',
+                teksti: 'Eteläisellä pallonpuoliskolla joulukuu on kesää ja '
+                  + 'heinäkuu talvea — matkan ajoitus kannattaa miettiä '
+                  + 'uusiksi.',
+              },
+              {
+                otsikko: 'Kesä on kuuma ja kostea',
+                teksti: 'Tammikuun keskilämpötila on lähes 25 astetta, '
+                  + 'joten keskipäivä kannattaa viettää varjossa.',
+              },
+              {
+                otsikko: 'Pampero tulee äkkiä',
+                teksti: 'Etelästä iskevä tuuli katkaisee hellejakson '
+                  + 'voimakkaalla ukkoskuurolla ja viilentää sään '
+                  + 'nopeasti.',
+              },
+              {
+                otsikko: 'Sadetta ympäri vuoden',
+                teksti: 'Vuosisade on noin 1 260 millimetriä ja jakautuu '
+                  + 'melko tasaisesti — varsinaista kuivaa kautta ei ole.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuosi 1873: presidentti selviää murhayrityksestä, kapina '
+        + 'jyllää maakunnissa ja kaupunki toipuu vasta keltakuumeesta. '
+        + 'Satamakortteleissa soivat jo tangon ainekset, vaikka tanssi itse '
+        + 'puuttuu yhä vuosikymmenen.',
+      tehtava: {
+        kysymys: 'Millä oopperalla ensimmäinen Teatro Colón avattiin '
+          + 'vuonna 1857?',
+        vaihtoehdot: [
+          'Verdin La traviatalla',
+          'Mozartin Taikahuilulla',
+          'Puccinin Toscalla',
+          'Wagnerin Lohengrinilla',
+        ],
+        oikea: 0,
+        fakta: 'Talo avattiin 27. huhtikuuta 1857 Verdin La traviatalla — '
+          + 'vain neljä vuotta oopperan italialaisen kantaesityksen '
+          + 'jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tanssi, jota isoisä ei ehtinyt kuulla',
+          teksti: 'Isoisä ei kuullut Buenos Airesissa tangoa: laji syntyi '
+            + 'vasta 1880-luvulla, kymmenkunta vuotta hänen vierailunsa '
+            + 'jälkeen. Vuonna 1873 satamakortteleissa kuultiin sen '
+            + 'aineksia — entisten orjien candombe-rummutusta, '
+            + 'argentiinalaista milongaa ja espanjalais-kuubalaista '
+            + 'habaneraa. Sanaa tango käytettiin Río de la Platan alueella '
+            + 'jo 1700-luvulla orjien tanssikokoontumisista, ja Buenos '
+            + 'Airesin cabildon virkamies valitti niistä vuonna 1789. '
+            + 'Sanan alkuperästä on useita teorioita eikä yhtäkään ole '
+            + 'todistettu.',
+          tiedosto: 'Pedro Figari - Candombe o Candombe bajo la luna - Google Art Project.jpg',
+          selite: 'Candombe on afrikkalaistaustaisten yhteisöjen tanssi- ja '
+            + 'rumpuperinne, joka on yksi tangon esiasteista.',
+          lahde: 'Pedro Figari, Wikimedia Commons (PD)',
+          wiki: 'Tango',
+        },
+        {
+          otsikko: 'Ensimmäinen Teatro Colón seisoi eri paikassa',
+          teksti: 'Ennen nykyistä oopperataloa kaupungissa oli toinen Teatro '
+            + 'Colón, joka seisoi suoraan Plaza de Mayon laidalla ja oli '
+            + 'isoisän vierailun aikaan kuudentoista vuoden ikäinen. Se '
+            + 'avattiin 27. huhtikuuta 1857 Verdin La traviatalla, vain '
+            + 'neljä vuotta oopperan italialaisen kantaesityksen jälkeen, '
+            + 'ja sen kahdentuhannenviidensadan paikan joukossa oli oma '
+            + 'aitiorivi suruvaatteisille vieraille. Talo suljettiin 13. '
+            + 'syyskuuta 1888 uuden teatterin tieltä, mutta nykyinen Teatro '
+            + 'Colón avattiin vasta kaksikymmentä vuotta myöhemmin, 25. '
+            + 'toukokuuta 1908.',
+          tiedosto: 'Teatro colon 1881.jpg',
+          selite: 'Ensimmäinen Teatro Colón oli Plaza de Mayon laidalla '
+            + 'kaarikäytävineen, ja aukion keskellä seisoi Toukokuun '
+            + 'pyramidi kuten nytkin.',
+          lahde: 'Alexander Witcomb, Wikimedia Commons (PD)',
+          wiki: 'Teatro Colón',
+        },
+        {
+          otsikko: 'San Telmo ennen matkamuistoja',
+          teksti: 'Vuosisatoja ennen kahviloita ja antiikkitoria San Telmo '
+            + 'oli satamatyön kortteli: telakkatyöläisiä ja tiilenpolttajia '
+            + 'joen tuntumassa, kaupungin ensimmäinen teollisuusalue jo '
+            + '1600-luvulta lähtien. Isoisän aikaan korttelin vanhoissa '
+            + 'aitoissa varastoitiin ja pakattiin Argentiinan pääasiallista '
+            + 'tulonlähdettä — villaa, vuotia ja nahkaa — ennen laivausta '
+            + 'Eurooppaan. Vasta vuoden 1871 keltakuume-epidemian jälkeen '
+            + 'varakkaat muuttivat pois ja kortteli jäi työväen omaksi. '
+            + 'Sunnuntaitorin ja tangonäytösten San Telmo on paljon '
+            + 'myöhempi ilmiö.',
+          tiedosto: 'Calle Defensa y la Avenida Independencia, San Telmo, Buenos Aires.jpg',
+          selite: 'Calle Defensa kulkee San Telmon läpi Plaza de Mayolta '
+            + 'etelään ja on korttelin vanha pääkatu.',
+          lahde: 'Banfield, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'San Telmo, Buenos Aires',
+        },
+        {
+          otsikko: 'Kesä, jolloin presidentti kävi sotaa omaa maataan vastaan',
+          teksti: 'Samana vuonna kun isoisä matkusti Argentiinassa, '
+            + 'presidentti kävi sotaa oman maansa sisällä. '
+            + 'Federalistikenraali Ricardo López Jordán nousi toukokuussa '
+            + '1873 toistamiseen kapinaan Entre Ríosin maakunnassa, ja '
+            + 'hänen komennossaan oli lopulta 16 000 miestä tykistöineen. '
+            + 'Sarmiento asetti hänen päästään hintapalkkion, jonka '
+            + 'kongressi hylkäsi, ja lähetti maakuntaan kolme armeijaa. '
+            + 'Kapina kukistettiin, ja López Jordán pakeni joulukuussa '
+            + 'Uruguayhin. Samojen miesten epäiltiin olleen elokuun '
+            + 'murhayrityksen takana.',
+          tiedosto: 'Domingo Sarmiento abre el periodo ordinario de sesiones en el Congreso (1872).JPG',
+          selite: 'Argentiinan kongressi kokoontui 1870-luvulla '
+            + 'hevosenkengän muotoiseen saliin, jonka parvet olivat '
+            + 'yleisölle.',
+          lahde: 'Unknown, Wikimedia Commons (PD)',
+          wiki: 'Domingo Faustino Sarmiento',
+        },
+      ],
+    },
+  ],
 };
