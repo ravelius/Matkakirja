@@ -3,6 +3,7 @@
 // Älä muokkaa käsin.
 export const LIPUT_PAIKALLISET = new Map([
   ["\n          + ", '.png'],
+  ["\n        + ", '.png'],
   ["Ainu flag.svg", 'ainu-flag.png'],
   ["Bandeira-de-Miranda-do-Douro.png", 'bandeira-de-miranda-do-douro-png.png'],
   ["Berber flag.svg", 'berber-flag.png'],
@@ -22,6 +23,7 @@ export const LIPUT_PAIKALLISET = new Map([
   ["Flag of Bashkortostan.svg", 'bashkortostan.png'],
   ["Flag of Belarus.svg", 'belarus.png'],
   ["Flag of Belgium (civil).svg", 'belgium-civil.png'],
+  ["Flag of Bermuda.svg", 'bermuda.png'],
   ["Flag of Bhutan.svg", 'bhutan.png'],
   ["Flag of Bolivia.svg", 'bolivia.png'],
   ["Flag of Bosnia and Herzegovina.svg", 'bosnia-and-herzegovina.png'],
@@ -109,6 +111,7 @@ export const LIPUT_PAIKALLISET = new Map([
   ["Flag of Peru.svg", 'peru.png'],
   ["Flag of Poland.svg", 'poland.png'],
   ["Flag of Portugal.svg", 'portugal.png'],
+  ["Flag of Puerto Rico.svg", 'puerto-rico.png'],
   ["Flag of Punjab.svg", 'punjab.png'],
   ["Flag of Qatar.svg", 'qatar.png'],
   ["Flag of Romania.svg", 'romania.png'],
