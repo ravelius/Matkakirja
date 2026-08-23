@@ -51606,4 +51606,2305 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * AUCKLAND on Oseanian laudan toinen kaupunkilehti (23.8.2026).
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-auckland.md;
+   * sisältölinjaukset spec-mantereet.md (Oseania: maorikulttuuri
+   * elävänä, te reo -nimet). Jokainen väite on luettu en-Wikipedian
+   * raakatekstistä 23.8.2026 (artikkelit "Auckland", "Auckland War
+   * Memorial Museum", "Auckland Domain", "Maungakiekie / One Tree
+   * Hill", "St Patrick's Cathedral, Auckland", "Invasion of the
+   * Waikato", "Kauri gum" sekä "Auckland"-artikkelin sääruutu).
+   *
+   * FAKTAPOHJAN KOLME KORJAUSTA, jotka tarkistettiin erikseen ja
+   * jotka muuttivat tekstiä:
+   *
+   * 1. MUSEO EI OLLUT 1873 PRINCES STREETILLÄ. Faktapohja sijoitti
+   *    museon isoisän aikaan Princes Streetin vaatimattomiin
+   *    tiloihin. Artikkeli sanoo toisin: museo aloitti 1852 pienessä
+   *    mökissä Grafton Roadilla Symonds Streetin kulman tuntumassa
+   *    ("Old Government Farm House", "The Governor's Dairy"), ja
+   *    Princes Streetin italialaistyylinen talo AVATTIIN vasta
+   *    5.6.1876. Nosto H1 on kirjoitettu tämän mukaan.
+   * 2. ST PATRICK'SIN 1848-KIRKKO OLI KIVINEN, ei puinen: puinen
+   *    kappeli 1843 korvattiin 1848 paikallisesta louhitusta
+   *    kuonakivestä (scoria) muuratulla kirkolla, johon mahtui 700
+   *    henkeä. Se on nostossa H4, koska sama kivi tulee kaupungin
+   *    tulivuorista ja seurakunta oli irlantilaisenemmistöisen
+   *    Aucklandin oma.
+   * 3. WAIKATON KONFISKAATIOT VAHVISTETTU. "Invasion of the Waikato"
+   *    kertoo joulukuun 1863 New Zealand Settlements Actin ja sen,
+   *    että kuvernööri Grey takavarikoi 1865 yli 480 000 hehtaaria
+   *    Waikato-Tainuin maita; 1995 kruunu myönsi takavarikon
+   *    vääräksi ja pyysi anteeksi. Väite on siis nostossa H4, ja
+   *    1995 kerrotaan mukana, ettei tarina jää 1860-luvulle.
+   *
+   * LÄHTEIDEN RISTIRIITA, joka on kirjoitettu auki lukijalle:
+   * lahjoitetun maan pinta-ala. "Auckland" sanoo 3 500 eekkeriä,
+   * "Auckland Domain" sanoo 3 000 eekkeriä. Kumpaakaan ei valita —
+   * ero kerrotaan nostossa K2 (ennakkotapaus: San Franciscon 1906
+   * uhriluku).
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 23.8.2026 joka
+   * pyyntöön "Daily API request limit exceeded", eikä lukuja
+   * keksitä (Samarkand-malli v965) — js/packs/saatiedot.js jää
+   * koskematta ja lehti näkyy ilman säätä, kunnes rivi haetaan
+   * koneella. Oppaan sääjakso nojaa siksi en-Wikipedian sääruutuun
+   * ja sanoo sen ääneen: luvut ovat Auckland Airportin asemalta,
+   * joka on 17 km keskustasta etelään (normaalikausi 1991–2020).
+   *
+   * ANAKRONISMIVAHTI: Auckland Harbour Bridge (1959) ja Sky Tower
+   * (1997) eivät kuulu isoisän 1873-kehykseen. Kumpaakaan ei
+   * mainita tekstissä eikä kuvateksteissä; nykyvalokuvissa Sky
+   * Tower näkyy siluetissa, mikä on sallittua, koska kuvat eivät
+   * väitä olevansa 1800-luvulta.
+   *
+   * KUVAT on haettu Commonsin API:sta ja lisenssi luettu
+   * extmetadatasta erälukuna; pienin hyväksytty leveys on 1310 px
+   * (Ferry Building) ja kaikki muut ovat yli 1600 px. AIHETOISTO:
+   * Maungakiekie / One Tree Hill esiintyy kahdesti (penkereet
+   * lähikuvassa nostossa K1, koko vuori ilmasta nostossa H2) ja
+   * Rangitoto kolmesti (kaukana kansikuvassa, taustalla
+   * avauskuvassa, kohteena nostossa K4) — eri tiedostot, eri
+   * mittakaava, ja molemmat ovat lehden kantavia aiheita.
+   * HYLKÄYKSET raportissa; yleisimmät syyt olivat lisenssi, jota
+   * talon sääntö ei salli (National Library NZ:n "No restrictions"
+   * -kuvat, joukossa ainoa löytynyt kuva Princes Streetin
+   * museorakennuksesta), kuvan päälle lisätty kehys (vuoden 1875
+   * Northern Club -laterna­kuvan musta kehys, vuoden 1853
+   * maalauksen kullattu kehys) ja alle 1200 px leveys
+   * (Winkelmannin pihkavarastokuvat, Carabainin Queen Street).
+   *
+   * ENNEN JA NYT: Queen Streetin pari on sama kuin matkakirjan
+   * valokuvataulussa (js/packs/oceania-valokuvat.js), josta
+   * tiedostonimi ja vuosi on otettu sellaisenaan; lähderivit on
+   * kirjoitettu tähän talon muotoon eli täsmälleen
+   * extmetadata.Artist-kentän mukaan, ja selitteet on kirjoitettu
+   * uudestaan yhdeksi virkkeeksi.
+   *
+   * TEKIJÄNIMET ovat täsmälleen extmetadata.Artist-muodossa. Kahden
+   * Auckland Museumin Flickr-latauksen (nostot K3 ja H4:n
+   * hylkäysvertailu) Artist-kenttä on kokoelman nimi eikä
+   * piirtäjän nimi, joten piirtäjää ei arvata lähderiville, vaikka
+   * arkin alalaidassa on nimikirjaimet.
+   */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
+  auckland: [
+    {
+      id: 'kaupunki',
+      nimi: 'Auckland',
+      johdanto: 'Kapea kannas kahden sataman välissä, viidenkymmenenkolmen '
+        + 'tulivuoren päällä — maorien Tāmaki Makaurau, "Tāmaki jota moni '
+        + 'halusi". Auckland oli Uuden-Seelannin pääkaupunki 1841–1865, ja '
+        + 'isoisän saapuessa 1873 se oli yhä maan vilkkain satama.',
+      /*
+       * KANSIKUVAT jäävät tällä kaupungilla pikkuriviltä piiloon,
+       * koska ennenNyt-pari korvaa rivin (js/lehti.js
+       * piirraLehtiKuvat) — sama tilanne kuin New Yorkissa. Ne ovat
+       * silti kolme laajaa yleiskuvaa kaupungin eri puolilta:
+       * pohjoinen satama iltavalossa, itäinen rantabulevardi ja
+       * eteläinen Manukau.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Auckland skyline - May 2024.jpg',
+          selite: 'Waitematā-satama avautuu pohjoisessa Hauraki-lahdelle ja '
+            + 'siitä Tyynellemerelle.',
+          lahde: 'elpinto007, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Three Volcanic Cones.jpg',
+          selite: 'Tamaki Drive kulkee Waitematān etelärantaa itään, ja sen '
+            + 'takaa kohoaa Rangitoto.',
+          lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Manukau Harbour low tide 20210916 145912.jpg',
+          selite: 'Manukau-satama on kannaksen toinen meri: se avautuu '
+            + 'lännessä Tasmaninmerelle.',
+          lahde: 'Prosperosity, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI on etusivun iso kuvapaikka, ja siihen kuuluvat
+       * omistajan 21.8.2026 kansikaruselli-linjauksen laajat
+       * yleiskuvat kaupungin ERI puolilta: siluetti Devonportista,
+       * kaupunki Rangitotolta katsottuna ja Maungawhaun kraatteri
+       * kaupungin keskellä. Yksikään ei ole minkään noston aiheena
+       * samalla tiedostolla.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Auckland Skyline as seen from Devonport 20100128 3.jpg',
+          selite: 'Aucklandin satama käsitteli vuonna 2015 kolmanneksen koko '
+            + 'maan konttiliikenteestä.',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Auckland from Rangitoto Island 1 (5642741996).jpg',
+          selite: 'Rangitoton ja keskustan välissä on Hauraki-lahti, jonka yli '
+            + 'lautat kulkevat Devonportiin, Waihekelle ja Tiritiri '
+            + 'Matangille.',
+          lahde: 'Ronnie Macdonald from Chelmsford, United Kingdom, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Mount Eden crater with Auckland CBD and Rangitoto skyline.jpg',
+          selite: 'Maungawhau eli Mount Eden oli Waiohua-heimoliiton vallan '
+            + 'keskus, kunnes Kiwi Tāmaki siirsi sen Maungakiekielle.',
+          lahde: 'Avenue, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Auckland, Queen Street LCCN2017657811.tif',
+          vuosi: '1890-luku',
+          selite: 'Queen Street oli jo 1800-luvulla Aucklandin pääkatu, ja sitä '
+            + 'pitkin kuljettiin laaksoa alas satamaan.',
+          lahde: 'Photoglob Co., publisher, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Queen Street in Auckland 01.jpg',
+          selite: 'Katu seuraa yhä samaa laaksoa, mutta hevosraitiovaunujen '
+            + 'tilalla ovat bussit ja kivitalojen välissä lasitornit.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Tāmaki, jota moni halusi',
+          teksti: 'Maorit asettuivat kannakselle noin vuonna 1350, ja rikas '
+            + 'maaperä kannatti suurta väestöä: ennen eurooppalaisia alueella '
+            + 'asui arviolta 20 000 maoria. Linnoitettuja pā-kyliä nousi '
+            + 'etenkin tulivuorenhuipuille, joilta hallittiin kannaksen '
+            + 'kantopaikkoja kahden sataman välillä. 1700-luvun alussa '
+            + 'kannasta hallitsi Te Waiohua -heimoliitto, jonka valta päättyi '
+            + 'noin 1741, kun ylipäällikkö Kiwi Tāmaki kaatui taistelussa '
+            + 'Ngāti Whātuan Te Taoū-hapūa vastaan. Vuosisadan lopulla '
+            + 'pohjoisesta levinneet tuliaseet järkyttivät voimatasapainon, ja '
+            + '1807 alkaneet sodat ajoivat rannikon iwit turvaan kauemmas.',
+          tiedosto: 'TerracingonOneTreeHill.JPG',
+          selite: 'Maungakiekien rinteiden penkereet rakensi 1600-luvulla '
+            + 'ngāti awa -päällikkö Tītahi, ja niitä kutsutaan nimellä Ngā '
+            + 'Whakairo a Tītahi, Tītahin veistokset.',
+          lahde: 'German302, Wikimedia Commons (PD)',
+          wiki: 'Auckland',
+        },
+        {
+          otsikko: 'Maa, jonka Ngāti Whātua lahjoitti',
+          teksti: 'Ngāti Whātua Ōrākein ylipäällikkö Āpihai Te Kawau '
+            + 'allekirjoitti Waitangin sopimuksen 20. maaliskuuta 1840 '
+            + 'Manukau-sataman rannalla, missä heimo viljeli maata. Ngāti '
+            + 'Whātua haki kruunulta suojaa Ngāpuhia vastaan ja '
+            + 'vastavuoroista suhdetta hallitsijaan ja kirkkoon. Pian '
+            + 'sopimuksen jälkeen heimo teki strategisen lahjoituksen: maata '
+            + 'Waitematā-sataman rannalta uudelle kuvernöörille William '
+            + 'Hobsonille uuden pääkaupungin paikaksi. Lähteet antavat alan '
+            + 'kooksi joko 3 500 tai 3 000 eekkeriä. Hobson nimesi kaupungin '
+            + 'Aucklandin jaarlin George Edenin mukaan, ja Auckland '
+            + 'perustettiin 18. syyskuuta 1840.',
+          tiedosto: 'Admiralty Chart No 1349 Wai-temata Harbour, Published 1841.jpg',
+          selite: 'Brittiläinen merikartta mittasi Waitematān 1841, ja siihen '
+            + 'on merkitty Aucklandin ehdotettu paikka.',
+          lahde: 'United Kingdom Hydrographic Office, Wikimedia Commons (PD)',
+          wiki: 'Auckland',
+        },
+        {
+          otsikko: 'Pääkaupunki, jonka Wellington vei',
+          teksti: 'Auckland julistettiin viralliseksi pääkaupungiksi 1841, ja '
+            + 'hallinto siirrettiin Russellista Bay of Islandsista kokonaan '
+            + 'tänne 1842. Jo 1840 Port Nicholson — nykyinen Wellington — '
+            + 'nähtiin kuitenkin parempana hallintopaikkana, koska se on '
+            + 'lähempänä Eteläsaarta, ja 1865 pääkaupunki siirtyi sinne. '
+            + 'Isoisän saapuessa 1873 menetyksestä oli kulunut kahdeksan '
+            + 'vuotta. Kaupunki kasvoi silti satamansa varassa, ja Auckland '
+            + 'pysyi Aucklandin provinssin pääkaupunkina, kunnes koko '
+            + 'provinssijärjestelmä lakkautettiin 1876 — kolme vuotta isoisän '
+            + 'käynnin jälkeen.',
+          tiedosto: 'Auckland, from near Mechanics Bay (48753239418).jpg',
+          selite: 'Auckland perustettiin 1840 Waitematān rantaan, ja koko '
+            + '1800-luvun kaupungin talous nojasi laitureihin.',
+          lahde: 'Auckland Museum Collections from Auckland, Aotearoa New Zealand, Wikimedia Commons (PD)',
+          wiki: 'Auckland',
+        },
+        {
+          otsikko: 'Viisikymmentäkolme tulivuorta kaupungin alla',
+          teksti: 'Auckland on rakennettu Aucklandin tulivuorikentän päälle: '
+            + 'viimeisten noin 193 000 vuoden aikana alueella on purkautunut '
+            + 'ainakin 53 pientä tulivuorta, ja niistä on jäänyt '
+            + 'räjähdyskraattereita, tuffirenkaita, kuonakartioita ja '
+            + 'laavavirtoja. Kenttä saa basalttinsa suoraan vaipasta 70–90 '
+            + 'kilometrin syvyydestä eikä liity Taupōn tulivuorivyöhykkeen '
+            + 'purkauksiin 250 kilometrin päässä. Kenttä on monogeneettinen: '
+            + 'jokainen tulivuori purkautuu vain kerran. Viimeisin purkaus '
+            + 'tapahtui Rangitotolla noin vuonna 1450, ja se on ainoa, jonka '
+            + 'ihmiset ovat nähneet omin silmin.',
+          tiedosto: 'Rangitoto from Mount Victoria in Devonport.jpg',
+          selite: 'Rangitoto on tulivuorikentän nuorin ja laajin kartio, ja '
+            + 'sen laavavirrat peittävät suuremman alan kuin minkään muun '
+            + 'kentän tulivuoren.',
+          lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Auckland volcanic field',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Auckland Ferry Building.JPG',
+          selite: 'Lauttaterminaali on Queen Streetin pohjoispäässä, ja siitä '
+            + 'lähtevät alukset Devonportiin, Waihekelle ja Pohjoisrannalle.',
+          lahde: 'Follash, Wikimedia Commons (PD)',
+        },
+        kappale: 'Auckland on Uuden-Seelannin suurin kaupunki, ja siinä asuu '
+          + 'noin kolmasosa koko maan väestöstä. Matkailijan Auckland on '
+          + 'kapea: keskusta laskeutuu Queen Streetin laaksoa Waitematān '
+          + 'rantaan, ja koko 1800-luvun kaupunki mahtuu muutaman korttelin '
+          + 'alalle sen ympärille. Etelässä kohoavat Maungawhau ja '
+          + 'Maungakiekie, kaakossa Auckland Domain museoineen, ja '
+          + 'lauttaterminaalilta pääsee kolmessa vartissa toiselle puolelle '
+          + 'lahtea. Kaupunkia sanotaan purjeiden kaupungiksi, ja syy näkyy '
+          + 'vedessä: veneitä on rekisteröity 135 000 ja noin joka kolmas '
+          + 'kotitalous omistaa sellaisen.',
+        artikkeli: {
+          nimi: 'Matkailijan Auckland',
+          taitto: 'opas',
+          teksti: 'Kannaksen kaupunki, jossa kaksi merta, tulivuorten kartiot '
+            + 'ja sademetsä mahtuvat saman päivän kävelylle.',
+          nosto: 'Kannas on kapeimmillaan alle kaksi kilometriä leveä — '
+            + 'Aucklandissa voi seistä paikassa, josta on molempiin meriin '
+            + 'yhtä lyhyt matka, ja juuri näitä kohtia maorit käyttivät '
+            + 'kanoottien kantopaikkoina.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Auckland Airport on kaupungista noin seitsemäntoista '
+                + 'kilometriä etelään, ja sen kautta kulkee kolme neljäsosaa '
+                + 'kaikista Uuteen-Seelantiin saapuvista ulkomaisista '
+                + 'matkailijoista. Kaupungin sisällä pisimmät valtaväylät '
+                + 'ovat yhä Great North Road ja Great South Road, jotka '
+                + 'olivat pääyhteydet pohjoiseen ja etelään ennen '
+                + 'moottoritieverkkoa. Kaupunkiliikenne kulki 1800-luvulla '
+                + 'lautoilla ja junilla, hevosilla vain lyhyet matkat; '
+                + 'sähköraitiovaunut tulivat 1902 ja levittivät asutusta '
+                + 'kannakselle, ja toisen maailmansodan jälkeen auto otti '
+                + 'vallan. Lautta on silti yhä käytännöllisin tapa liikkua: '
+                + 'terminaalista lähdetään Devonportiin, Waihekelle, '
+                + 'Rangitotolle ja Tiritiri Matangille.',
+              kuva: {
+                tiedosto: 'Fullers commuter ferries at Auckland terminal.jpg',
+                selite: 'Lautat lähtevät keskustan terminaalista Waitematān '
+                  + 'yli Pohjoisrannalle ja Hauraki-lahden saarille.',
+                lahde: 'RadishSlice, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kaksi satamaa, yksi kannas',
+              teksti: 'Auckland on harvoja kaupunkeja maailmassa, joilla on '
+                + 'satama kahdella eri merialueella. Pohjoisessa Waitematā '
+                + 'avautuu Hauraki-lahdelle ja siitä Tyynellemerelle, '
+                + 'etelässä Manukau avautuu länteen Tasmaninmerelle. Näiden '
+                + 'välissä kannas kapenee Māngere Inletin ja Tāmaki-joen '
+                + 'kohdalla alle kahteen kilometriin, ja juuri siellä '
+                + 'kulkivat vanhat kanoottien kantopaikat. Kaupunkia '
+                + 'ympäröivät sademetsän peittämät kukkulat: Waitākeren '
+                + 'vuoret lännessä ja Hunuan vuoret kaakossa. Idässä ovat '
+                + 'Hauraki-lahden saaret, ja koko seudun päällä on 53 '
+                + 'tulivuorta, joiden rinteiden multa oli kannaksen paras '
+                + 'viljelysmaa jo ennen eurooppalaisia.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: kauri-pihkan kaivajat',
+              teksti: 'Kauri-pihka oli Aucklandin tärkein vientitavara koko '
+                + '1800-luvun jälkipuoliskon ja kannatti suuren osan '
+                + 'kaupungin varhaisesta kasvusta. Se on kauri-puun '
+                + 'pihkaa, joka valuu kaarnan halkeamista, kovettuu ilmassa '
+                + 'ja jää maahan kivettymään; maorit kutsuivat sitä nimellä '
+                + 'kapia ja käyttivät sitä purukumina, sytykkeenä ja '
+                + 'poltettuna moko-tatuoinnin väriaineena. Eurooppalaiset '
+                + 'veivät sitä 1840-luvun puolivälistä Lontooseen ja '
+                + 'Amerikkaan lakan raaka-aineeksi, ja 1890-luvulla '
+                + 'seitsemänkymmentä prosenttia Englannin öljylakoista '
+                + 'tehtiin siitä. Vuoteen 1850 mennessä pinnalta oli kerätty '
+                + 'kaikki, ja sen jälkeen pihkaa kaivettiin kepeillä ja '
+                + 'lapioilla metrin syvyydeltä rinteistä ja neljän metrin '
+                + 'syvyydeltä soista. Aucklandilaiset perheet ylittivät '
+                + 'viikonloppuisin Waitematān lautalla kaivamaan pihkaa '
+                + 'Birkenheadin kentiltä.',
+              kuva: {
+                tiedosto: 'Kauri on Fairy Falls Track 20241227 125939.jpg',
+                selite: 'Kauri kasvaa yhä Waitākeren vuorten sademetsässä '
+                  + 'Aucklandin länsipuolella.',
+                lahde: 'Prosperosity, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: vuoret palasivat',
+              teksti: 'Aucklandin tulivuorenhuiput olivat maoreille pā-paikkoja '
+                + 'ja puutarhoja satojen vuosien ajan, ja siirtomaa-aikana ne '
+                + 'siirtyivät kruunulle, kaupungille ja yksityisille tiloille. '
+                + 'Maungakiekien maat myytiin 1844 kauppias Thomas Henrylle, '
+                + 'ja 1853 ne osti John Logan Campbell yhdessä William Brownin '
+                + 'kanssa. Vuonna 1880 Campbell päätti lahjoittaa tilansa '
+                + 'yleisölle ja luovutti sen virallisesti 1901. Nykyään One '
+                + 'Tree Hill Domainin omistaa Ngā Mana Whenua o Tāmaki '
+                + 'Makaurau -yhteenliittymä ja sitä hallinnoi Tūpuna Maunga o '
+                + 'Tāmaki Makaurau -viranomainen. Vuori on siis yhä julkinen '
+                + 'puisto, mutta sen isäntä on jälleen se kansa, joka rakensi '
+                + 'penkereet.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat Auckland Airportin asemalta '
+                + '(en-Wikipedian Auckland-artikkelin sääruutu, normaalikausi '
+                + '1991–2020). Asema on seitsemäntoista kilometriä keskustasta '
+                + 'etelään, joten keskusta on todennäköisesti aavistuksen '
+                + 'leudompi: se on lähempänä molempia satamia. Lehdellä ei ole '
+                + 'omaa vuosigraafia, koska ERA5-lukuja ei saatu haettua — '
+                + 'ne täydennetään myöhemmin. Ilmasto on Köppenin '
+                + 'luokituksessa merellinen (Cfb), mutta Uuden-Seelannin '
+                + 'ilmatieteen laitos NIWA ja Trewarthan luokitus pitävät sitä '
+                + 'lähempänä kosteaa subtrooppista: kesät ovat lämpimät ja '
+                + 'talvet leudot, ja Auckland on maan lämpimin suuri keskus. '
+                + 'Helmikuu on lämpimin kuukausi, keskilämpötila 20,5 astetta, '
+                + 'ja heinäkuu kylmin, 11,2 astetta; koko vuoden keskiarvo on '
+                + '15,6. Sadetta tulee vuodessa noin 1 119 millimetriä, ja se '
+                + 'jakautuu koko vuodelle: heinäkuu on sateisin runsaalla 137 '
+                + 'millimetrillä ja tammikuu kuivin vajaalla 58 millimetrillä. '
+                + 'Lunta ei käytännössä sada — merkittävin lumipäivä sitten '
+                + '1900-luvun alun oli 27. heinäkuuta 1939. Vallitsevat tuulet '
+                + 'ovat lounaasta, ja meri on lämpimimmillään helmikuussa noin '
+                + '21 asteessa.',
+              kuva: {
+                tiedosto: 'Ngataringa bay and Rangitoto island.jpg',
+                selite: 'Aucklandin kesä on lämmin ja merellinen, ja '
+                  + 'helmikuussa meriveden lämpötila nousee noin 21 asteeseen.',
+                lahde: 'Andrew McMillan, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Maungakiekie',
+                tahdet: 3,
+                selite: 'Kannaksen suurin pā, jonka penkereet ovat yhä '
+                  + 'rinteessä ja jonka laelta näkyvät molemmat satamat.',
+              },
+              {
+                mita: 'Auckland Domain',
+                tahdet: 3,
+                selite: 'Kaupungin vanhin puisto vuodelta 1844, vanhan '
+                  + 'Pukekawa-tulivuoren kraatterissa.',
+              },
+              {
+                mita: 'Lautta Devonportiin',
+                tahdet: 2,
+                selite: 'Lyhyt matka Waitematān yli, ja paluumatkalla koko '
+                  + 'keskustan siluetti edessä.',
+              },
+              {
+                mita: 'Rangitoto',
+                tahdet: 2,
+                selite: 'Noin 1450 purkautunut saari, ainoa tulivuori, jonka '
+                  + 'purkauksen ihmiset ovat täällä nähneet.',
+              },
+              {
+                mita: 'Waitākeren vuoret',
+                tahdet: 2,
+                selite: 'Sademetsä ja kauri-puut alkavat parinkymmenen '
+                  + 'kilometrin päästä keskustasta.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sääluvut ovat en-Wikipedian
+             * Auckland-artikkelin sääruudusta, sama lähde kuin
+             * jaksossa 5. Tūpuna Maunga -kohta on mukana, koska
+             * vuoret ovat pyhiä paikkoja eivätkä pelkkiä
+             * näköalapaikkoja.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadetta ympäri vuoden',
+                teksti: 'Vuosisade on noin 1 119 millimetriä, ja talvella '
+                  + 'sataa noin viitenätoista päivänä kuukaudessa — kuivaa '
+                  + 'kautta ei ole.',
+              },
+              {
+                otsikko: 'Vuodenajat ovat käänteiset',
+                teksti: 'Kesä on joulu–helmikuussa ja talvi kesä–elokuussa; '
+                  + 'heinäkuun keskilämpö on 11,2 astetta.',
+              },
+              {
+                otsikko: 'Vuoret ovat pyhiä',
+                teksti: 'Tulivuoret ovat Tūpuna Maunga, esi-isien vuoria, ja '
+                  + 'niillä liikutaan merkityillä poluilla penkereitä '
+                  + 'kunnioittaen.',
+              },
+              {
+                otsikko: 'Sumua ja tuulta',
+                teksti: 'Sumu on tavallista syksyllä ja talvella, ja '
+                  + 'vallitseva tuuli puhaltaa lounaasta läpi vuoden.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kannaksesta pääkaupungiksi ja pääkaupungista provinssin '
+        + 'keskukseksi — Aucklandin käänteet osuvat tiheästi isoisän vuoden '
+        + '1873 ympärille.',
+      tehtava: {
+        kysymys: 'Minä vuonna Auckland Museum perustettiin?',
+        vaihtoehdot: [
+          '1852',
+          '1840',
+          '1876',
+          '1929',
+        ],
+        oikea: 0,
+        fakta: 'Yleisö päästettiin museoon ensimmäisen kerran sunnuntaina 24. '
+          + 'lokakuuta 1852, ja ensimmäisen vuoden aikana kävijöitä oli 708.',
+      },
+      nostot: [
+        {
+          otsikko: 'Museo, joka odotti taloa',
+          teksti: 'Auckland Museum perustettiin 1852, ja se aloitti pienessä '
+            + 'mökissä Grafton Roadin varrella Symonds Streetin kulman '
+            + 'tuntumassa; talosta käytettiin nimiä Old Government Farm House '
+            + 'ja The Governor’s Dairy. Yleisö päästettiin sisään '
+            + 'ensimmäisen kerran sunnuntaina 24. lokakuuta 1852, ja '
+            + 'ensimmäisen vuoden kävijämäärä oli 708. Kiinnostus hiipui '
+            + '1860-luvulla, vaikka kokoelma kasvoi, ja 1869 laiminlyöty museo '
+            + 'siirtyi Auckland Instituten hoitoon. Italialaistyylinen talo '
+            + 'Princes Streetillä avattiin vasta 5. kesäkuuta 1876 — kolme '
+            + 'vuotta isoisän käynnin jälkeen.',
+          tiedosto: 'Auckland War Memorial Museum in 2021.jpg',
+          selite: 'Museon kolmas koti valmistui 1929 Auckland Domainiin '
+            + 'ensimmäisen maailmansodan muistomerkiksi.',
+          lahde: 'Daan Hoffmann / Auckland War Memorial Museum Tāmaki Paenga Hira, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Auckland War Memorial Museum',
+        },
+        {
+          otsikko: 'Suurin pā kannaksella',
+          teksti: 'Maungakiekie, kiekie-köynnöksen vuori, oli esieurooppalaisena '
+            + 'aikana Aucklandin kannaksen suurin pā. Kartion ja sen '
+            + 'ympäristön väkiluvuksi arvioidaan jopa 5 000, ja huipun lähellä '
+            + 'oli jättimäinen vihreäkivinen gongi Whakarewa-tāhuna, jolla '
+            + 'Kiwi Tāmaki kutsui koolle kannaksen soturit. Te Taoū voitti '
+            + 'Waiohuan 1740-luvulla, ja päällikkö Tuperiri rakensi huipun '
+            + 'alle uuden pā:n. Kauppiaat John Logan Campbell ja William Brown '
+            + 'ostivat maat 1853. Campbell palasi Aucklandiin 1874 ja '
+            + 'suunnitteli vuoren viereen italialaistyylistä kartanoa, mutta '
+            + 'hänen vaimonsa Emma ei hyväksynyt suunnitelmaa ja hanke '
+            + 'raukesi 1876.',
+          tiedosto: 'One Tree Hill, Auckland, March 2015.jpg',
+          selite: 'Vuori kuuluu nykyään Ngā Mana Whenua o Tāmaki Makaurau '
+            + '-yhteenliittymälle, ja sen ympärillä on yli kahdensadan '
+            + 'hehtaarin puistoalue.',
+          lahde: 'Techno246, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Maungakiekie / One Tree Hill',
+        },
+        {
+          otsikko: 'Puisto, joka pelasti puut',
+          teksti: 'Alue varattiin virkistysmaaksi jo 1840, ja kuvernööri '
+            + 'William Hobson otti malliksi Melbournen ja Sydneyn uudet '
+            + 'puistot. Kuvernööri Robert FitzRoy julisti sen 1844 '
+            + 'virallisesti julkiseksi puistoksi nimellä Auckland Park. Alue '
+            + 'oli yksi harvoista siirtokunnan lähellä olleista paikoista, '
+            + 'joilla oli vielä puustoa jäljellä, ja rauhoitus suojeli juuri '
+            + 'nämä puut. Auckland Domain on kaupungin vanhin puisto ja '
+            + 'Pukekawa-tulivuoren kraatterin ja tuffirenkaan jäänne. '
+            + 'Urheiluseurat tulivat pian: keilaklubi perustettiin 1861 ja '
+            + 'Parnell Lawn Tennis Club 1872, vuosi ennen isoisän vierailua.',
+          tiedosto: 'Nature walk at Auckland Domain 01.jpg',
+          selite: 'Puiston vanhinta osaa ovat kraatterin rinteiden '
+            + 'alkuperäiset puut, joiden takia alue rauhoitettiin.',
+          lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Auckland Domain',
+        },
+        {
+          otsikko: 'Sotilaita etelään',
+          teksti: '1860-luvun alussa Aucklandista tuli tukikohta maorien '
+            + 'kuningasliikettä vastaan, ja kaupunkiin sijoitetut 12 000 '
+            + 'imperiumin sotilasta vauhdittivat kauppaa. Samaan aikaan '
+            + 'rakennettiin Great South Road kohti Waikatoa. Väkiluku kasvoi '
+            + '1 500:sta vuonna 1841 12 423:een vuonna 1864, ja noin puolet '
+            + 'asukkaista oli irlantilaisia — toisin kuin '
+            + 'englantilaisenemmistöisissä Wellingtonissa ja Christchurchissa. '
+            + 'Sodalla oli pitkä jälki: joulukuun 1863 lain nojalla kuvernööri '
+            + 'Grey takavarikoi 1865 yli 480 000 hehtaaria Waikato-Tainuin '
+            + 'maita. Vuonna 1995 kruunu myönsi takavarikon vääräksi ja pyysi '
+            + 'sitä anteeksi.',
+          tiedosto: 'Saint Patrick Cathedral in Auckland 02.jpg',
+          selite: 'Aucklandin katolisen seurakunnan puinen kappeli korvattiin '
+            + '1848 kirkolla, joka muurattiin paikallisesta kuonakivestä ja '
+            + 'johon mahtui 700 henkeä; nykyinen kirkko valmistui 1907.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Auckland',
+        },
+      ],
+    },
+  ],
+  /*
+   * BUENOS AIRES (Opus 23.8.2026) — Etelä-Amerikan laudan pilottikaupunki
+   * yhdessä Rio de Janeiron kanssa. Kohteella ei ollut kategorioita eikä
+   * säätietoja ennen tätä; litteä kulttuuritaulu (js/packs/
+   * southamerica-questions.js) ja saapumisteksti (southamerica-
+   * saapumiset.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * FAKTAPOHJA on docs/mantereet-tyoaineisto/faktapohja-buenosaires.md ja
+   * sen riippumaton tarkistus tarkistus-buenosaires.md (molemmat
+   * 23.8.2026, tuomio "kelpaa korjauksin"). Lähdeartikkelit en-Wikipediassa:
+   * Buenos Aires, Domingo Faustino Sarmiento, Casa Rosada, Plaza de Mayo,
+   * Teatro Colón, San Telmo (Buenos Aires), La Recoleta Cemetery, Tango,
+   * Immigration to Argentina. Sarmienton artikkeli haettiin tässä erässä
+   * vielä kerran raakatekstinä (action=raw), jotta Facundo-kohta ja
+   * arvostelu voitiin muotoilla lähteen mukaan eikä muistista.
+   *
+   * TANGO-ANAKRONISMI on koko lehden tärkein varoitus: tango syntyi
+   * 1880-luvulla, eikä isoisä voinut kuulla sitä 1873. Nosto H1 sanoo
+   * tämän suoraan, ja sama "juuri ennen" -kehys on käytössä kaikkialla —
+   * southamerica-saapumiset.js:n valmis teksti ("Ukko ehti paikalle juuri
+   * ennen sitä") oli jo oikein eikä sitä muutettu.
+   *
+   * TARKISTAJAN KAKSI PAKOLLISTA KORJAUSTA on tehty tähän:
+   * 1) Nosto H3 on kirjoitettu SAN TELMOsta, ei La Bocasta. La Bocan oma
+   *    artikkeli ei tue väitettä 1800-luvun telakkatyöstä eikä 1870-luvun
+   *    genovalaisesta siirtolaisuudesta (sen ainoa liguurialaismaininta
+   *    sijoittuu 1900-luvulle); San Telmon artikkeli tukee telakkatyötä,
+   *    tiilenpolttoa ja varastointia 1600-luvulta 1870-luvulle.
+   * 2) Plaza de Mayon pylväsrivistön (Recova) purkuvuosi on 1883, sama
+   *    kuin artikkelin History-osiossa. Wikipedian oma infoboksi ja
+   *    johdanto sanovat 1884 — ristiriita on kirjoitettu nostoon K4
+   *    näkyviin lukijalle (v925/v932:n tapa).
+   * Lisäksi kaksi harkinnanvaraista huomiota on otettu käyttöön:
+   * Mendozan siirtokunnan autioitumisvuosi kerrotaan muodossa "1540-luvun
+   * alussa" (Etymology 1541 vs. Viceregal times 1542), ja keltakuumeen
+   * lukuero (14 000 vs. yli 10 000) kirjoitetaan auki sen sijaan että
+   * valittaisiin toinen (spec-mantereet.md kohta 5).
+   *
+   * SARMIENTO EI OLE SANKARIKEHYKSESSÄ (spec-mantereet.md kohta 2,
+   * "piikki herroihin itseensä"): nosto K3 kertoo hänet aikansa
+   * uudistajana ja murhayrityksen uhrina, mutta sanoo myös, että hänen
+   * Facundossa muotoiltua sivilisaatio–barbaria-jakoaan ja hänen
+   * alkuperäiskansoja koskenutta politiikkaansa on jälkikäteen
+   * arvosteltu. Piikki osuu isoisän aikakauden herroihin, ei
+   * paikallisiin. POIS JÄTETTY kokonaan: vuosien 1976–1983 sotilasjuntta,
+   * Falklandin sota ja kaikki nykypolitiikka — sata vuotta isoisän ajan
+   * ulkopuolella (sama ratkaisu kuin New Yorkin Draft Riots).
+   *
+   * MINITEHTÄVÄ kysyy ensimmäisen Teatro Colónin avajaisoopperaa, ja
+   * vastaus on saman sivun nostossa H2. Kaupungin oma kulttuuritaulu
+   * (southamerica-questions.js, avain buenosaires) kysyy nimen
+   * merkitystä, tangon syntyä ja Río de la Platan leveyttä — tehtävä ei
+   * osu yhteenkään niistä (kaupunkilehti.md, toistuva vika 2).
+   *
+   * SÄÄRIVI PUUTTUU EIKÄ LUKUJA KEKSITTY. Open-Meteon arkisto vastasi
+   * 23.8.2026 "Daily API request limit exceeded" heti ensimmäisen
+   * viisivuotispalan jälkeen, joten kuukausinormaaleja ei saatu laskettua
+   * eikä js/packs/saatiedot.js:ään kirjoitettu riviä (Samarkand-malli
+   * v965: mieluummin ei säätä kuin keksittyä säätä). Lehti toimii ilman
+   * riviä, ja oppaan sääjakso nojaa en-Wikipedian omaan sääruutuun
+   * (Buenos Aires Central Observatory, Agronomía, 1991–2020) sanoen
+   * lähteensä ääneen. Fable voi täydentää rivin, kun kiintiö vapautuu.
+   *
+   * KUVAT: kaikki lisenssit ja tekijänimet Commonsin extmetadatasta
+   * 23.8.2026, ja jokainen kuva katsottiin silmin 900 px esikatseluna.
+   * HYLÄTTY: "Parcelamiento de Buenos Aires (Garay, 1580).jpg" (arkkiin
+   * on lisätty punaiset pisteet ja italiankielinen selitys, ja arkin oma
+   * otsikko sanoo vuodeksi 1583 eikä 1580), "Cabildo Plaza de Mayo Buenos
+   * Aires 5 de Agosto 2023.jpg" (etualalla tunnistettavia kasvoja),
+   * "Ignacio Baz - Domingo F. Sarmiento - Google Art Project.jpg"
+   * (arkkiin kirjoitettu luettelonumero 51), "Palacio de San Jose.jpeg"
+   * (kahdesta valokuvasta koottu montaasi näkyvine saumoineen) sekä
+   * "Sarmiento (1873).jpg", "Vieja Recova.jpg" ja "Plaza de la
+   * Victoria.png" (kaikki alle 1200 px leveitä).
+   * Jo pelissä olevia buenosaires-kuvia (southamerica-valokuvat.js:n
+   * Plaza Victoria 1890, San Telmon tori, Plaza Dorrego, Caminito ja
+   * Plaza de Mayo panorama) ei käytetty uudelleen.
+   * KAKSI PERUSTELTUA AIHETOISTOA: Cabildo näkyy sekä kannen laajassa
+   * kattonäkymässä että noston K1 alaviistokuvassa (eri tiedostot, eri
+   * mittakaava — rakennus on kaupungin siirtomaa-ajan hallinnon talo ja
+   * kannen näkymän tunnistettavin kohde), ja hallituksen talo esiintyy
+   * ennen–nyt-parissa sekä
+   * noston K4 vanhassa postitalokuvassa, koska nosto kertoo juuri siitä
+   * rakennuksesta, jonka Sarmiento tilasi isoisän matkavuonna.
+   */
+  buenosaires: [
+    {
+      id: 'kaupunki',
+      nimi: 'Buenos Aires',
+      johdanto: 'Río de la Platan rannalle noussut satamakaupunki, jonka '
+        + 'nimi tarkoittaa hyviä tuulia. Isoisän vierailun aikaan 1873 se '
+        + 'oli nuoren tasavallan pääkaupunki täynnä eurooppalaisia '
+        + 'siirtolaisia — ja tango oli vielä syntymättä.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat) — sama tilanne kuin
+       * New Yorkissa ja Helsingissä. Ne ovat silti kolme laajaa
+       * yleiskuvaa suurennossarjaa varten: historiallinen ydin
+       * kattotasolta, Recoleta ja Palermo ilmasta.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Vista Plaza de Mayo, Cabildo, Casa Rosada 02.jpg',
+          selite: 'Plaza de Mayon ympäristö on kaupungin historiallinen '
+            + 'ydin: valkoinen Cabildo, aukion Toukokuun pyramidi ja '
+            + 'Avenida de Mayo samassa näkymässä.',
+          lahde: 'Roberto Fiadone, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Aerial view - Recoleta, Buenos Aires.jpg',
+          selite: 'Recoleta kasvoi varakkaiden kaupunginosaksi, kun '
+            + 'keltakuume ajoi väkeä pois eteläisistä kortteleista.',
+          lahde: 'Ricardo Patiño, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Aerial view - Palermo, Buenos Aires.jpg',
+          selite: 'Palermon puistot ovat kaupungin suurin viheralue, ja '
+            + 'niiden takana nousee pohjoisten kaupunginosien siluetti.',
+          lahde: 'Ricardo Patiño, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa kaupungin ERI puolilta
+       * (omistajan kansikaruselli-linjaus 21.8.2026) — keskusta ilmasta
+       * jokirantoineen, Avenida 9 de Julio Obeliskeineen ja Riachuelon
+       * suu satamineen. Yksikään ei ole minkään noston aiheena samalla
+       * tiedostolla, eikä yksikään ole yksityiskohta- tai sisäkuva.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Buenos Aires aerial 1.jpg',
+          selite: 'Kaupunki on rakennettu tasaiselle pampalle, ja '
+            + 'jokirannan uusimmat osat — satama, Puerto Madero ja '
+            + 'luonnonsuojelualue — ovat täytemaata.',
+          lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Buenos Aires - Monserrat - Avenida 9 de Julio.jpg',
+          selite: 'Avenida 9 de Julio halkoo keskustan pohjois–eteläsuunnassa, '
+            + 'ja sen keskellä seisoo vuonna 1936 pystytetty Obeliski.',
+          lahde: 'jmpznz from https://www.flickr.com/photos/jmpznz/481712080/, '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Aerial view of La Boca and Avellaneda, Buenos Aires (33008635006).jpg',
+          selite: 'Riachuelo-joen suulla ovat kaupungin telakat ja '
+            + 'konttisatama, ja sen eteläpuolella alkaa jo naapurikaupunki '
+            + 'Avellaneda.',
+          lahde: 'Thomas Woodtli from Zürich, Switzerland, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: sama rakennus, sama suunta, sata neljäkymmentä
+       * vuotta väliä. Vasemmalla Christiano Juniorin valokuva vuodelta
+       * 1876, jossa vanha linnoitus ja Sarmienton tilaama postitalo ovat
+       * vielä kaksi erillistä taloa; oikealla nykyinen Casa Rosada, joka
+       * syntyi niiden yhdistämisestä. Vanhalla on vuosi-kenttä, joten
+       * peli piirtää sen harmaasävynä (raja 1960).
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Casa Rosada (1876).jpg',
+          vuosi: '1876',
+          selite: 'Matala vanha linnoitus ja sen takana kohoava postitalo '
+            + 'olivat vielä erillisiä rakennuksia; linnoitus purettiin '
+            + '1880-luvulla.',
+          lahde: 'Christiano Junior (1832–1902), Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Casa Rosada façade.jpg',
+          selite: 'Nykyinen Casa Rosada on presidentin virastotalo, ja sen '
+            + 'keskikaari on kahden vanhan rakennuksen liitoskohta.',
+          lahde: 'The Cosmonaut, Wikimedia Commons (CC BY-SA 2.5 ca)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaksi kertaa perustettu kaupunki',
+          teksti: 'Espanjalainen Pedro de Mendoza perusti siirtokunnan Río '
+            + 'de la Platan rannalle 2. helmikuuta 1536 ja nimesi sen hyvien '
+            + 'tuulten Neitsyen mukaan. Alkuperäisväestön hyökkäykset '
+            + 'pakottivat asukkaat pakenemaan, ja paikka autioitui '
+            + '1540-luvun alussa — Wikipedia antaa siitä kaksi eri vuotta, '
+            + '1541 ja 1542. Pysyvä kaupunki syntyi vasta 1580, kun Juan de '
+            + 'Garay purjehti Paraná-jokea alas Asunciónista ja perusti sen '
+            + 'uudelleen 11. kesäkuuta nimellä Santísima Trinidad. Satama '
+            + 'säilytti vanhan nimensä, ja siitä lyhennetty Buenos Aires '
+            + 'vakiintui 1600-luvulla.',
+          tiedosto: 'Cabildo de Buenos Aires 01.jpg',
+          selite: 'Cabildo toimi siirtomaa-ajan raatihuoneena ja Río de la '
+            + 'Platan varakuninkaankunnan hallintotalona, ja se seisoo yhä '
+            + 'Plaza de Mayon laidalla.',
+          lahde: 'Gargiulo omar, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Buenos Aires',
+        },
+        {
+          otsikko: 'Keltakuume muutti kaupungin kartan',
+          teksti: 'Kaksi vuotta ennen isoisän matkaa kaupunkia runteli '
+            + 'keltakuume. Epidemia tappoi Buenos Airesissa arviolta 14 000 '
+            + 'ihmistä, ja koko kansallishallitus pakeni taudin tieltä. Luku '
+            + 'vaihtelee lähteen mukaan: San Telmoon keskittyvä kuvaus puhuu '
+            + 'yli 10 000 uhrista rajaamatta lukua yksiselitteisesti yhteen '
+            + 'kortteliin. Pahiten kärsi juuri San Telmo, jonka keski- ja '
+            + 'yläluokka muutti pohjoisemmas. Epidemian jälkeen kaupunki '
+            + 'perusti La Chacaritan hautausmaan ja rakensi ensimmäiset '
+            + 'vesijohto- ja viemäriverkostonsa.',
+          tiedosto: 'Capilla cement chacarita 1891-restored.jpg',
+          selite: 'La Chacaritan hautausmaa perustettiin epidemian jälkeen '
+            + 'kaupungin laidalle, jossa oli vielä paljasta maata.',
+          lahde: 'Unknown author Unknown author Restoration: Ezarate, '
+            + 'Wikimedia Commons (PD)',
+          wiki: 'Domingo Faustino Sarmiento',
+        },
+        {
+          otsikko: 'Presidentti, joka ei kuullut pommia',
+          teksti: 'Isoisän vierailun aikaan presidenttinä oli kirjailija ja '
+            + 'poliitikko Domingo Faustino Sarmiento. Hänen kaudellaan '
+            + '1868–1874 maahan saapui 280 000 siirtolaista, ja jo vuoden '
+            + '1869 väestönlaskennassa puolet Buenos Airesin väestöstä oli '
+            + 'äskettäin tulleita. Elokuun 22. päivänä 1873 hänen vaunuaan '
+            + 'vastaan räjäytettiin pommi Corrientes- ja Maipú-katujen '
+            + 'kulmassa; hyökkäys epäonnistui, kun ase petti tekijän '
+            + 'kädessä, eikä kuuro presidentti kuullut räjähdystä. Hänen '
+            + 'pääteoksensa jakoi maailman sivilisaatioon ja barbariaan, ja '
+            + 'siitä ajattelusta häntä on jälkikäteen arvosteltu.',
+          tiedosto: 'Las Ideas no se matan, Domingo Faustino Sarmiento, San Juan Argentina.jpg',
+          selite: 'Zondan solaan San Juanissa on muurattu espanjaksi lause, '
+            + 'jonka Sarmiento kirjoitti ranskaksi kylpylän seinään 1840 '
+            + 'matkalla maanpakoon: ideoita ei tapeta.',
+          lahde: 'EagLau, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Domingo Faustino Sarmiento',
+        },
+        {
+          otsikko: 'Vaaleanpunainen talo ei ollut vielä vaaleanpunainen',
+          teksti: 'Vuonna 1873 hallituksen talo ei ollut se vaaleanpunainen '
+            + 'palatsi, jonka nykymatkailija näkee. Sarmiento tilasi juuri '
+            + 'sinä vuonna ruotsalaissyntyiseltä arkkitehdilta Carl '
+            + 'Kihlbergiltä uuden postitalon vanhan linnoituksen viereen; '
+            + 'talot yhdistettiin kaariholvilla vasta 1884, ja nykyinen Casa '
+            + 'Rosada valmistui 1898. Väri periytyy kertoman mukaan '
+            + 'Sarmientolta, joka sekoitti federalistien punaisen ja '
+            + 'unitaarien valkoisen sovinnon merkiksi — toisen selityksen '
+            + 'mukaan maalissa oli lehmänverta. Aukiokin oli yhä kahtia: sen '
+            + 'jakanut pylväsrivistö purettiin 1883, vaikka Wikipedian '
+            + 'infoboksi sanoo 1884.',
+          tiedosto: 'Palacio de Correos y Telegrafos de Buenos Aires.jpg',
+          selite: 'Kihlbergin suunnittelema postitalo nousi vanhan '
+            + 'linnoituksen viereen ja liitettiin myöhemmin osaksi '
+            + 'hallituksen taloa.',
+          lahde: 'Casa Rosada, Wikimedia Commons (CC BY 2.5 ar)',
+          wiki: 'Casa Rosada',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Buenos Aires-2740f-Obelisco.jpg',
+          selite: 'Obeliski pystytettiin 1936 kaupungin perustamisen '
+            + 'neljäsataavuotisjuhlaan paikalle, jossa aiemmin seisoneen '
+            + 'San Nicolásin kirkon tornissa Argentiinan lippu nostettiin '
+            + 'kaupungissa ensimmäisen kerran 1812.',
+          lahde: 'Barcex, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Buenos Aires on Argentiinan pääkaupunki ja jakautuu 48 '
+          + 'viralliseen barrioon, mutta matkailijan kaupunki on niistä '
+          + 'kapea kaistale joen suuntaisesti. Historiallinen ydin on Plaza '
+          + 'de Mayon ympärillä: Cabildo, katedraali ja Casa Rosada ovat '
+          + 'muutaman sadan metrin päässä toisistaan. Etelään mentäessä '
+          + 'tulee vastaan San Telmo mukulakivikatuineen, pohjoiseen '
+          + 'Recoleta ja Palermon puistot, ja itään päin jokirannan '
+          + 'vanhoista satama-altaista on tehty Puerto Maderon '
+          + 'kävelyranta. Metro eli Subte avattiin 1913 ensimmäisenä '
+          + 'eteläisellä pallonpuoliskolla, ja sillä pääsee näiden '
+          + 'kaikkien välillä.',
+        artikkeli: {
+          nimi: 'Matkailijan Buenos Aires',
+          taitto: 'opas',
+          teksti: 'Tasaiselle pampalle rakennettu satamakaupunki, jossa '
+            + 'siirtomaa-ajan aukio, siirtolaisten korttelit ja '
+            + 'ranskalaistyyliset puistot ovat kävelymatkan päässä '
+            + 'toisistaan.',
+          nosto: 'Vuoden 1869 väestönlaskennassa puolet kaupungin väestöstä '
+            + 'oli äskettäin maahan tulleita siirtolaisia — koko maassa '
+            + 'osuus oli yksitoista prosenttia.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Buenos Aires sijaitsee Río de la Platan '
+                + 'lounaisrannalla siinä kohdassa, jossa joki avautuu '
+                + 'maailman leveimmäksi jokisuuksi — vastarantaa Uruguayssa '
+                + 'ei näe. Sijainti teki paikasta luontaisen kauppasataman '
+                + 'jo espanjalaisaikana, ja 1800-luvun lopulla siitä tuli '
+                + 'Etelä-Amerikan vilkkain siirtolaisten porttikaupunki. '
+                + 'Junat saapuvat useammalle pääteasemalle, joista Retiro '
+                + 'on suurin: se avattiin 1915 ja kokoaa kolmen eri radan '
+                + 'päätepisteet vierekkäin. Kaupungin sisällä '
+                + 'liikutaan metrolla, jonka ensimmäinen linja avattiin '
+                + '1913 — se oli eteläisen pallonpuoliskon ensimmäinen '
+                + 'metro. Isoisän aikaan mitään näistä ei ollut: kaupunki '
+                + 'oli tiivis, matala ja rajattu muutamaan kortteliin joen '
+                + 'tuntumassa.',
+              kuva: {
+                tiedosto: 'Argentina-01729 - Retiro Mitre (49005258806).jpg',
+                selite: 'Retiron Mitre-aseman holvattu päähalli valmistui '
+                  + '1915, ja samassa rakennusryhmässä on kolmen eri radan '
+                  + 'päätepiste.',
+                lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Tasainen pampa ja täytetty ranta',
+              teksti: 'Kaupunki on rakennettu pampalle ilman luonnollisia '
+                + 'rajoja, eikä sen ympäriltä löydy kukkulaa, jolta '
+                + 'katsoa maisemaa. Osa nykyisistä alueista on myöhemmin '
+                + 'täytettyä maata joen suunnasta: satama, Puerto Madero, '
+                + 'lentokenttä ja rannan luonnonsuojelualue seisovat '
+                + 'kaikki paikoilla, jotka olivat isoisän aikaan vettä. '
+                + 'Puerto Maderon vanhat tiiliset varastorakennukset ja '
+                + 'nosturit ovat yhä paikoillaan altaiden reunoilla, ja '
+                + 'niiden takana nousee kaupungin uusin korkea '
+                + 'rakentaminen. Asukkaiden lempinimi porteño tarkoittaa '
+                + 'satamalaista, ja heidän määränsä kolminkertaistui '
+                + 'vuosien 1887 ja 1915 välillä puolesta miljoonasta '
+                + 'puoleentoista miljoonaan.',
+              kuva: {
+                tiedosto: 'Puerto Madero dock 4.JPG',
+                selite: 'Puerto Maderon satama-altaat rakennettiin '
+                  + '1887–1897, ja niiden varastot muutettiin 1990-luvulla '
+                  + 'asunnoiksi ja toimistoiksi.',
+                lahde: 'Helge Høifødt, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: satamasta laivaan',
+              teksti: '1870-luvun Buenos Aires eli karjasta. Villa, vuodat '
+                + 'ja nahka olivat Argentiinan pääasiallinen tulonlähde '
+                + 'vielä isoisän matkavuonna, ja ne varastoitiin ja '
+                + 'pakattiin satamakortteleiden vanhoissa aitoissa ennen '
+                + 'laivaan lastausta Eurooppaan. San Telmon kaltaiset '
+                + 'korttelit elivät juuri tästä työstä — telakoista, '
+                + 'varastoista ja tiilenpoltosta, ei turismista eikä '
+                + 'tangosta. Keltakuumeen jälkeen suurin osa korttelin '
+                + 'isoista taloista muuttui vuokrakasarmeiksi: 1870-luvulta '
+                + 'alkaen ne olivat conventilloja, joissa asui '
+                + 'siirtolaisperheitä yhteisen pihan ympärillä. San Telmosta '
+                + 'tuli kaupungin monikulttuurisin kortteli, ja siellä oli '
+                + 'suuret brittiläiset, galicialaiset, italialaiset ja '
+                + 'venäläiset yhteisönsä.',
+            },
+            {
+              otsikko: 'Historian käännekohta: hautausmaa ennen muuriaan',
+              teksti: 'Recoletan hautausmaa vihittiin marraskuussa 1822 '
+                + 'vanhan fransiskaaniluostarin puutarhaan, joten se oli '
+                + 'isoisän vierailun aikaan jo puoli vuosisataa vanha. '
+                + 'Nykyisen ilmeensä se sai kuitenkin vasta myöhemmin: '
+                + 'tunnusomaisen kehämuurin ja pylväsporttikäytävän '
+                + 'suunnitteli italialaissyntyinen arkkitehti Juan Antonio '
+                + 'Buschiazzo vuonna 1881 pormestari Torcuato de Alvearin '
+                + 'aikana. Sama pormestari purkautti 1883 Plaza de Mayon '
+                + 'kahtia jakaneen pylväsrivistön ja teki aukiosta '
+                + 'yhtenäisen. Kahdeksassa vuodessa kaupungin kaksi '
+                + 'tunnetuinta julkista paikkaa saivat siis muotonsa, '
+                + 'jonka matkailija tänään näkee.',
+              kuva: {
+                tiedosto: 'Cementerio de la Recoleta.jpg',
+                selite: 'Hautausmaan pylväsportti ja kehämuuri ovat vuodelta '
+                  + '1881, ja portin päädyssä lukee latinaksi levätkööt '
+                  + 'rauhassa.',
+                lahde: 'Sking, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Buenos Aires '
+                + '-artikkelin sääruudusta, joka kokoaa kaupungin oman '
+                + 'havaintoaseman normaalit Agronomían kaupunginosasta '
+                + 'jaksolta 1991–2020. Lehdellä ei ole tällä kertaa omaa '
+                + 'vuosigraafia, koska sen ERA5-normaaleja ei saatu '
+                + 'laskettua ilman keksittyjä lukuja — säärivi voidaan '
+                + 'lisätä myöhemmin. Ilmasto on Köppenin luokituksessa '
+                + 'kostea subtrooppinen eli Cfa, ja vuodessa on neljä '
+                + 'selvää vuodenaikaa eteläisen pallonpuoliskon '
+                + 'järjestyksessä. Kesä on kuuma ja kostea: tammikuun '
+                + 'keskilämpötila on lähes 25 astetta. Talvi on leuto mutta '
+                + 'viileä ja usein sumuinen, heinäkuun keskilämpötila '
+                + 'yhdentoista asteen tienoilla. Sadetta tulee noin 1 260 '
+                + 'millimetriä vuodessa melko tasaisesti, eikä kuivaa '
+                + 'kautta ole. Hellejakson katkaisee usein etelästä iskevä '
+                + 'pampero-tuuli, joka tuo äkillisiä ukkoskuuroja ja '
+                + 'viilentää sään nopeasti. Säähavaintoja on tehty '
+                + 'kaupungissa vuodesta 1856 — seitsemäntoista vuotta '
+                + 'ennen isoisän vierailua.',
+              kuva: {
+                tiedosto: 'El Rosedal, Palermo 03.jpg',
+                selite: 'Palermon ruusutarha kukkii eteläisen kevään '
+                  + 'aikaan loka–marraskuussa, samaan aikaan kun '
+                  + 'jakarandat sinertävät.',
+                lahde: 'Roberto Fiadone, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Plaza de Mayo',
+                tahdet: 3,
+                selite: 'Cabildo, katedraali ja Casa Rosada saman aukion '
+                  + 'laidoilla; aukio yhtenäistettiin 1883.',
+              },
+              {
+                mita: 'San Telmo',
+                tahdet: 3,
+                selite: 'Vanhin kortteli, jonka mukulakivikadut ja matalat '
+                  + 'talot ovat satamatyön ajalta.',
+              },
+              {
+                mita: 'Recoletan hautausmaa',
+                tahdet: 2,
+                selite: 'Kaupunki pienoiskoossa: käytävät, mausoleumit ja '
+                  + 'vuoden 1881 pylväsportti.',
+              },
+              {
+                mita: 'Puerto Madero',
+                tahdet: 2,
+                selite: 'Vanhat satama-altaat ja tiilivarastot kävelyrantana '
+                  + 'aivan keskustan vieressä.',
+              },
+              {
+                mita: 'Teatro Colón',
+                tahdet: 3,
+                selite: 'Nykyinen oopperatalo avattiin 1908 ja korvasi '
+                  + 'Plaza de Mayon vanhan Colónin.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sääluvut ovat en-Wikipedian Buenos
+             * Aires -artikkelin ilmasto-osiosta, sama lähde kuin
+             * jaksossa 5 — pelin omaa ERA5-riviä ei tälle kaupungille
+             * saatu (ks. lohkon alkukommentti).
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Vuodenajat ovat käänteiset',
+                teksti: 'Eteläisellä pallonpuoliskolla joulukuu on kesää ja '
+                  + 'heinäkuu talvea — matkan ajoitus kannattaa miettiä '
+                  + 'uusiksi.',
+              },
+              {
+                otsikko: 'Kesä on kuuma ja kostea',
+                teksti: 'Tammikuun keskilämpötila on lähes 25 astetta, '
+                  + 'joten keskipäivä kannattaa viettää varjossa.',
+              },
+              {
+                otsikko: 'Pampero tulee äkkiä',
+                teksti: 'Etelästä iskevä tuuli katkaisee hellejakson '
+                  + 'voimakkaalla ukkoskuurolla ja viilentää sään '
+                  + 'nopeasti.',
+              },
+              {
+                otsikko: 'Sadetta ympäri vuoden',
+                teksti: 'Vuosisade on noin 1 260 millimetriä ja jakautuu '
+                  + 'melko tasaisesti — varsinaista kuivaa kautta ei ole.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuosi 1873: presidentti selviää murhayrityksestä, kapina '
+        + 'jyllää maakunnissa ja kaupunki toipuu vasta keltakuumeesta. '
+        + 'Satamakortteleissa soivat jo tangon ainekset, vaikka tanssi itse '
+        + 'puuttuu yhä vuosikymmenen.',
+      tehtava: {
+        kysymys: 'Millä oopperalla ensimmäinen Teatro Colón avattiin '
+          + 'vuonna 1857?',
+        vaihtoehdot: [
+          'Verdin La traviatalla',
+          'Mozartin Taikahuilulla',
+          'Puccinin Toscalla',
+          'Wagnerin Lohengrinilla',
+        ],
+        oikea: 0,
+        fakta: 'Talo avattiin 27. huhtikuuta 1857 Verdin La traviatalla — '
+          + 'vain neljä vuotta oopperan italialaisen kantaesityksen '
+          + 'jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tanssi, jota isoisä ei ehtinyt kuulla',
+          teksti: 'Isoisä ei kuullut Buenos Airesissa tangoa: laji syntyi '
+            + 'vasta 1880-luvulla, kymmenkunta vuotta hänen vierailunsa '
+            + 'jälkeen. Vuonna 1873 satamakortteleissa kuultiin sen '
+            + 'aineksia — entisten orjien candombe-rummutusta, '
+            + 'argentiinalaista milongaa ja espanjalais-kuubalaista '
+            + 'habaneraa. Sanaa tango käytettiin Río de la Platan alueella '
+            + 'jo 1700-luvulla orjien tanssikokoontumisista, ja Buenos '
+            + 'Airesin cabildon virkamies valitti niistä vuonna 1789. '
+            + 'Sanan alkuperästä on useita teorioita eikä yhtäkään ole '
+            + 'todistettu.',
+          tiedosto: 'Pedro Figari - Candombe o Candombe bajo la luna - Google Art Project.jpg',
+          selite: 'Candombe on afrikkalaistaustaisten yhteisöjen tanssi- ja '
+            + 'rumpuperinne, joka on yksi tangon esiasteista.',
+          lahde: 'Pedro Figari, Wikimedia Commons (PD)',
+          wiki: 'Tango',
+        },
+        {
+          otsikko: 'Ensimmäinen Teatro Colón seisoi eri paikassa',
+          teksti: 'Ennen nykyistä oopperataloa kaupungissa oli toinen Teatro '
+            + 'Colón, joka seisoi suoraan Plaza de Mayon laidalla ja oli '
+            + 'isoisän vierailun aikaan kuudentoista vuoden ikäinen. Se '
+            + 'avattiin 27. huhtikuuta 1857 Verdin La traviatalla, vain '
+            + 'neljä vuotta oopperan italialaisen kantaesityksen jälkeen, '
+            + 'ja sen kahdentuhannenviidensadan paikan joukossa oli oma '
+            + 'aitiorivi suruvaatteisille vieraille. Talo suljettiin 13. '
+            + 'syyskuuta 1888 uuden teatterin tieltä, mutta nykyinen Teatro '
+            + 'Colón avattiin vasta kaksikymmentä vuotta myöhemmin, 25. '
+            + 'toukokuuta 1908.',
+          tiedosto: 'Teatro colon 1881.jpg',
+          selite: 'Ensimmäinen Teatro Colón oli Plaza de Mayon laidalla '
+            + 'kaarikäytävineen, ja aukion keskellä seisoi Toukokuun '
+            + 'pyramidi kuten nytkin.',
+          lahde: 'Alexander Witcomb, Wikimedia Commons (PD)',
+          wiki: 'Teatro Colón',
+        },
+        {
+          otsikko: 'San Telmo ennen matkamuistoja',
+          teksti: 'Vuosisatoja ennen kahviloita ja antiikkitoria San Telmo '
+            + 'oli satamatyön kortteli: telakkatyöläisiä ja tiilenpolttajia '
+            + 'joen tuntumassa, kaupungin ensimmäinen teollisuusalue jo '
+            + '1600-luvulta lähtien. Isoisän aikaan korttelin vanhoissa '
+            + 'aitoissa varastoitiin ja pakattiin Argentiinan pääasiallista '
+            + 'tulonlähdettä — villaa, vuotia ja nahkaa — ennen laivausta '
+            + 'Eurooppaan. Vasta vuoden 1871 keltakuume-epidemian jälkeen '
+            + 'varakkaat muuttivat pois ja kortteli jäi työväen omaksi. '
+            + 'Sunnuntaitorin ja tangonäytösten San Telmo on paljon '
+            + 'myöhempi ilmiö.',
+          tiedosto: 'Calle Defensa y la Avenida Independencia, San Telmo, Buenos Aires.jpg',
+          selite: 'Calle Defensa kulkee San Telmon läpi Plaza de Mayolta '
+            + 'etelään ja on korttelin vanha pääkatu.',
+          lahde: 'Banfield, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'San Telmo, Buenos Aires',
+        },
+        {
+          otsikko: 'Kesä, jolloin presidentti kävi sotaa omaa maataan vastaan',
+          teksti: 'Samana vuonna kun isoisä matkusti Argentiinassa, '
+            + 'presidentti kävi sotaa oman maansa sisällä. '
+            + 'Federalistikenraali Ricardo López Jordán nousi toukokuussa '
+            + '1873 toistamiseen kapinaan Entre Ríosin maakunnassa, ja '
+            + 'hänen komennossaan oli lopulta 16 000 miestä tykistöineen. '
+            + 'Sarmiento asetti hänen päästään hintapalkkion, jonka '
+            + 'kongressi hylkäsi, ja lähetti maakuntaan kolme armeijaa. '
+            + 'Kapina kukistettiin, ja López Jordán pakeni joulukuussa '
+            + 'Uruguayhin. Samojen miesten epäiltiin olleen elokuun '
+            + 'murhayrityksen takana.',
+          tiedosto: 'Domingo Sarmiento abre el periodo ordinario de sesiones en el Congreso (1872).JPG',
+          selite: 'Argentiinan kongressi kokoontui 1870-luvulla '
+            + 'hevosenkengän muotoiseen saliin, jonka parvet olivat '
+            + 'yleisölle.',
+          lahde: 'Unknown, Wikimedia Commons (PD)',
+          wiki: 'Domingo Faustino Sarmiento',
+        },
+      ],
+    },
+  ],
+  /*
+   * RIO DE JANEIRO on Etelä-Amerikan laudan ensimmäinen kaupunkilehti
+   * (23.8.2026) ja laudan lähtökaupunki (js/packs/southamerica.js:
+   * start: true), joten tämä on todennäköisesti pelaajan ensimmäinen
+   * lehti koko laudalla. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-rio.md ja sen riippumaton tarkistus tarkistus-rio.md
+   * (tuomio "kelpaa sellaisenaan", nolla asiavirhettä nosto- ja
+   * jaksoteksteissä); sisältölinjaukset spec-mantereet.md, yleisresepti
+   * docs/aasia-tyoaineisto/lehtityo-resepti.md. Jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 23.8.2026 (artikkelit "Rio de
+   * Janeiro", "Rio Branco Law", "Lei Áurea", "Tijuca National Park",
+   * "Candelária Church", "Corcovado", "Sugarloaf Cable Car",
+   * "Royal Portuguese Cabinet of Reading", "Corcovado Rack Railway").
+   *
+   * 1873-KULMA ON RAKENTEELLINEN, EI TAPAHTUMAKOHTAINEN. Toisin kuin
+   * New Yorkissa, jossa isoisän vuosi on täynnä päivämääriä, Riossa
+   * neljä käännekohtaa kestivät koko vuoden: kaupunki OLI
+   * keisarikunnan pääkaupunki, vapaan kohdun laki OLI voimassa,
+   * Candelárian kupoli OLI kesken ja Tijucan metsitys OLI kesken.
+   * Lehti on rakennettu tämän varaan, ei yksittäisten päivien.
+   *
+   * SISÄLTÖLINJAUS on spec-mantereet.md:n E-Amerikka-osio ja sen
+   * kolme yleisperiaatetta. Orjuus kerrotaan kaunistelematta, koska se
+   * oli isoisän vierailun aikaan Brasiliassa yhä laillista: nostot K1,
+   * K4 ja H4 käsittelevät sitä lukuina, lakeina ja tehtynä työnä,
+   * EIVÄT ruumiillisen kohtelun kuvauksena. Ranska Antarktikan sota
+   * (1555–1567) on yksi lause tapahtumana ilman taistelukuvausta.
+   * Nykyfavelaväkivaltaa, huumekauppaa ja nykypolitiikkaa EI ole
+   * lainkaan, vaikka Wikipedian oma teksti mainitsee ne sivulauseina.
+   * Favelat itse ovat mukana oppaan jaksossa 2 tavallisina
+   * asuinalueina — kaupunginosina, köysiratana ja pikkubussilinjoina,
+   * ei kurjuutena eikä rikollisuutena — koska kaupungin kulttuurivisa
+   * kysyy niitä ja vastaus on löydyttävä lehdestä. Samasta syystä
+   * vuoden 2016 kesäolympialaiset mainitaan noston K1 kuvatekstissä:
+   * juuri niiden valmistelu paljasti Valongon laiturin.
+   * Tijucan metsityksen tehneet kuusi orjuutettua henkilöä on nimetty
+   * omilla nimillään (Eleutério, Constantino, Manuel, Mateus,
+   * Leopoldo, Maria) — sama periaate kuin alkuperäiskansojen omissa
+   * nimissä: ihminen ennen roolia.
+   *
+   * ANAKRONISMIT ON SANOTTU ÄÄNEEN. Kristus-patsasta (1922–1931),
+   * Sokerileivän köysirataa (27.10.1912), Corcovadon hammasratasrataa
+   * (1884) eikä Candelárian kupolia (1877) ollut olemassa 1873, ja
+   * nostot K3 ja H3 kertovat sen. Real Gabinete Português de Leitura
+   * on jätetty lehdestä KOKONAAN pois, vaikka se on kohdekartan
+   * kävelymatkalla: instituutio on vuodelta 1837, mutta se näyttävä
+   * neo-manueliininen rakennus, joka näkyy jokaisessa kuvassa,
+   * valmistui vasta 1880–1887 — kuva olisi väistämättä esittänyt
+   * jotain, mitä isoisä ei nähnyt (faktapohjan huomio 2).
+   *
+   * KAKSI WIKIPEDIAN SISÄISTÄ RISTIRIITAA:
+   *
+   * 1. Valongon laiturin kautta kulkeneiden ihmisten määrä. Wikipedia
+   *    antaa haarukan "between 500 thousand and one million", eikä
+   *    kumpaakaan päätä valita: nosto K1 kirjoittaa haarukan auki
+   *    lukijalle sellaisenaan (reseptin ohje ristiriidoista).
+   * 2. Corcovadon hammasratasradan avauspäivä. Artikkelin
+   *    "Corcovado Rack Railway" infoboksi sanoo 10.7.1884 ja saman
+   *    artikkelin leipäteksti 9.10.1884. Oppaan jakso 1 sanoo siksi
+   *    vain vuoden 1884 eikä päivämäärää.
+   * 3. Corcovadon korkeus. Artikkeli "Corcovado" sanoo 710 m ja
+   *    artikkeli "Christ the Redeemer (statue)" 700 m. Lehti käyttää
+   *    vuorta itseään käsittelevän artikkelin lukua 710 m (sama luku
+   *    kuin kaupungin kulttuurivisassa).
+   *
+   * ENNEN JA NYT -PARI on siirretty sellaisenaan matkakirjan
+   * valokuvataulusta (js/packs/southamerica-valokuvat.js, avain rio):
+   * tiedostonimet ja vuosi on kopioitu, ja kumpaankin on kirjoitettu
+   * uusi YHDEN VIRKKEEN selite. Vanha vedos on vuodelta 1895 eli
+   * reilusti harmaasävyrajan (1960) alapuolella. Lähderivit on
+   * NORMALISOITU talon muotoon: valokuvataulussa lukee "Commons
+   * (public domain)", tässä "(PD)" reseptin vaatimuksen mukaisesti.
+   * Ferrezin vedoksen paperikehykseen on painettu otsikko
+   * "Copacabana." ja valokuvaajan signeeraus; ne ovat 1800-luvun
+   * vedoksen omia julkaisijamerkintöjä eivätkä vesileimoja, ja ne
+   * hyväksytään samalla perusteella kuin Currier & Ivesin arkin
+   * painettu otsikko New Yorkin lehdessä.
+   *
+   * KUVIEN TEKIJÄT: Instituto Moreira Sallesin kokoelmasta tulevissa
+   * PD-kuvissa Commonsin extmetadata.Artist antaa DIGITOIJAN nimen
+   * ("Núcleo de digitalização / IMS"), koska kuvasivu käyttää Art
+   * Photo -mallinetta, jossa photographer-kenttä tarkoittaa teoksen
+   * kuvaajaa eikä teoksen tekijää. Molempien tässä käytettyjen
+   * IMS-kuvien kuvasivu on kategoriassa "Photographs by Marc Ferrez
+   * at Moreira Salles Institute" (tarkistettu action=raw 23.8.2026),
+   * joten lähderiviksi on kirjoitettu "Marc Ferrez / Instituto Moreira
+   * Salles" — sama muoto, jota repon oma valokuvataulu jo käyttää.
+   * Tämä on tietoinen poikkeus reseptin "täsmälleen Artist-kentän
+   * mukaan" -säännöstä, ja se on tehty samalla perusteella kuin
+   * CNG-lyhenteen avaaminen: kirjaimellinen kenttä olisi ollut
+   * tekijänoikeudellisesti väärä.
+   *
+   * KUVAHYLKÄYKSET (kaikki katsottu silmin 900 px:n esikatselusta):
+   * "Cais do Valongo.jpg" ja "Cais do Valongo 2.jpg" — molemmat ovat
+   * pystykuvia armillaaripallolla kruunatusta pylväästä taivasta
+   * vasten, eivät laiturista; "Caminho de coqueiros.JPG" (palmukuja,
+   * hieno pystykuva) — kameran polttama päiväysleima 04/21/2015 kuvan
+   * päällä; "Ipanema, RJ, 1870.jpg" — 776 × 432 px; "Rio de Janeiro
+   * Cume do Corcovado" (Marc Ferrez, CC0) — 497 × 800 px; kaikki
+   * Isabel-prinsessan muotokuvat — suurin löytyi 1024 px:n leveydellä;
+   * "Gilberto Ferrez, Getty Museum, Abolition of slavery..." (Marc
+   * Ferrezin kuva 13.5.1888 Paço Imperialin edustan väkijoukosta) —
+   * vedoksessa on valokuvaajan signeeraus, ja toisin kuin
+   * ennen–nyt-parissa tälle oli olemassa merkitsemätön vaihtoehto;
+   * "Preparations for victory celebration.jpg" — Paraguayn sodan
+   * aiheinen, ei sovi sisältölinjaukseen.
+   *
+   * AIHETOISTO: Guanabaran ja Botafogon lahti näkyy kaikissa kolmessa
+   * kansikuvassa, koska se on se maisema, jonka takia kaupunki on
+   * olemassa — mutta kuvauspaikat ovat kolme eri suuntaa (Corcovadolta
+   * itään, Santa Teresasta pohjoiseen, Sokerileivältä länteen), ja
+   * juuri sitä kansikaruselli-linjaus pyytää. Copacabana esiintyy
+   * kahdesti ennen–nyt-parissa (eri tiedostot, eri vuosisadat) eikä
+   * missään muualla lehdessä. Corcovado esiintyy K3:n 1800-luvun
+   * vedoksessa paljaana huippuna ja matkaoppaan kuvassa patsaineen —
+   * juuri tämä ero on koko K3:n asia.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 23.8.2026 kaikkiin
+   * pyyntöihin "Daily API request limit exceeded" (myös yhden
+   * vuorokauden koekutsuun), joten js/packs/saatiedot.js:ään EI
+   * kirjoitettu rio-riviä eikä lukuja keksitty — Samarkandin
+   * ennakkotapaus (v965). Matkaoppaan jakso 5 on siksi kirjoitettu
+   * en-Wikipedian sääruudun varaan ja SANOO SEN ITSE: luvut ovat
+   * Rio de Janeiron (Saúde) aseman normaaleja jaksolta 1981–2010,
+   * eivät pelin oman ERA5-hilan lukuja. Asema on 11 metrissä
+   * merenpinnan yläpuolella eli samalla matalalla rantavyöhykkeellä
+   * kuin 1873-ajan ydinkeskusta, joten Petran ja Siinain
+   * vuoristo–rannikko-ristiriitaa ei tässä ole. Fable voi lisätä
+   * rivin omana versionaan, kun kiintiö vapautuu.
+   *
+   * MINITEHTÄVÄ ei toista kaupungin kulttuurivisaa
+   * (js/packs/southamerica-questions.js, avain rio: patsas, nimen
+   * merkitys, pääkaupunkikausi 1763–1960, Copacabana, favelat,
+   * vuoden 2016 kisat). Tehtävä kysyy vuoden 1871 vapaan kohdun lain
+   * sisältöä, ja vastaus on saman sivun nostossa H4.
+   *
+   * Etusivun leipäteksti on js/packs/southamerica-artikkelit.js:n
+   * intro-kentässä (avain "Rio de Janeiro" = laudan wiki-otsikko).
+   */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
+  rio: [
+    {
+      id: 'kaupunki',
+      nimi: 'Rio de Janeiro',
+      johdanto: 'Guanabaran lahden rannalle Sokerileivän ja Corcovadon '
+        + 'vuorten väliin kasvanut satamakaupunki oli isoisän vuonna 1873 '
+        + 'keisari Pedro II:n Brasilian pääkaupunki ja kahvitalouden sydän '
+        + '— vaikka orjuus oli yhä laillista.',
+      /*
+       * KANSIKUVAT: kolme laajaa yleiskuvaa kolmesta eri suunnasta
+       * (omistajan kansikaruselli-linjaus 21.8.2026 — ei yhtään
+       * yksityiskohtaa, sisäkuvaa eikä esinettä kannessa). Koska
+       * ennenNyt-pari korvaa etusivun pikkurivin (js/lehti.js
+       * piirraLehtiKuvat), näistä ensimmäinen on etusivun iso kuva ja
+       * loput kaksi näkyvät suurennossarjassa. Kaikki kolme on katsottu
+       * silmin: ei tunnistettavia kasvoja (rannoilla ja aukioilla
+       * näkyvät ihmiset ovat kaukaisia pisteitä), ei vesileimoja eikä
+       * lisättyjä merkintöjä. Lisenssit, tekijät ja koot Commonsin
+       * extmetadatasta 23.8.2026; pienin on 3 888 px leveä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Rio de Janeiro, Pão de Açúcar from Cristo Redentor (15744316848).jpg',
+          selite: 'Sokerileipä kohoaa 396 metriä Guanabaran lahden suulla '
+            + 'niemekkeellä, joka työntyy Atlantille.',
+          lahde: 'Arian Zwegers from Brussels, Belgium, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Panorama do Rio de Janeiro a partir do Parque das Ruínas 2024 11 24.jpg',
+          selite: 'Santa Teresan kukkula nousee heti vanhan keskustan takaa, '
+            + 'ja sen rinteeltä näkyy sama lahti, jonka rannalle kaupunki '
+            + 'perustettiin 1565.',
+          lahde: 'Tet, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Enseada de Botafogo vista do Pão de Açúcar.jpg',
+          selite: 'Botafogon poukama on suojaisa satama-allas, jonka takana '
+            + 'kaupunki kiipeää graniittikukkuloiden väliin.',
+          lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Copacabana, Acervo do Instituto Moreira Salles.jpg',
+          vuosi: '1895',
+          selite: 'Copacabanan ranta oli 1800-luvun lopulla kaupungin '
+            + 'ulkopuolinen hiekkakaari, jonne pääsi vain vuorten yli.',
+          lahde: 'Marc Ferrez / Instituto Moreira Salles, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'BrunaPrado Praia de Copacabana Praia do Leme Rio de Janeiro RJ (40070449945).jpg',
+          selite: 'Sama kaari on nyt neljän kilometrin mittainen '
+            + 'kaupunginranta, jonka takana on yhtenäinen tornitalorivi ja '
+            + 'jonka rinteet jäivät rakentamatta kansallispuiston takia.',
+          lahde: 'Bruna Prado / MTur Destinos, Wikimedia Commons (PD)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Amerikan suurin orjasatama',
+          teksti: 'Valongon laiturille Rion keskustassa nousi 1811–1831 '
+            + 'arviolta puolesta miljoonasta miljoonaan orjuutettua '
+            + 'afrikkalaista — kaupungin satama oli koko Amerikan mantereen '
+            + 'vilkkain orjakauppapaikka. Vuonna 1871 keisarikunta sääti '
+            + 'niin sanotun vapaan kohdun lain: orjuutettujen naisten uudet '
+            + 'lapset julistettiin vapaiksi, mutta heidän piti silti '
+            + 'palvella äitinsä omistajaa 21-vuotiaaksi asti. Isoisän '
+            + 'saapuessa 1873 laki oli kaksi vuotta voimassa ja yli miljoona '
+            + 'ihmistä oli yhä orjia — Brasilia lakkautti orjuuden kokonaan '
+            + 'vasta 1888, viimeisenä maana koko Amerikassa.',
+          tiedosto: 'Cais do Valongo e da Imperatriz.jpg',
+          selite: 'Laiturin kiveys löytyi 2011 kaivauksissa, joita tehtiin '
+            + 'vuoden 2016 kesäolympialaisia valmisteltaessa, ja kohde '
+            + 'otettiin maailmanperintöluetteloon heinäkuussa 2017.',
+          lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Valongo Wharf',
+        },
+        {
+          otsikko: 'Ainoa Euroopan pääkaupunki Euroopan ulkopuolella',
+          teksti: 'Vuonna 1808 Portugalin kuninkaallinen hovi pakeni '
+            + 'Napoleonin joukkoja ja siirtyi kokonaisuudessaan Rio de '
+            + 'Janeiroon — ainoa kerta uuden ajan historiassa, kun '
+            + 'siirtomaita hallinneen maan pääkaupunki muutti omaan '
+            + 'siirtomaahansa. Rio oli hetken koko Portugalin valtakunnan '
+            + 'pääkaupunki, sitten 1822 itsenäisen Brasilian keisarikunnan. '
+            + 'Hovin mukana tulleille aatelisille tehtiin tilaa häätämällä '
+            + 'tavallisia asukkaita kodeistaan. Kaupunkiin syntyi samalla '
+            + 'vuosikymmenellä kansalliskirjasto ja kasvitieteellinen '
+            + 'puutarha, molemmat yhä toiminnassa.',
+          tiedosto: 'Arboreto do Jardim Botânico, Rio de Janeiro.jpg',
+          selite: 'Kasvitieteellinen puutarha perustettiin hovin ensimmäisenä '
+            + 'vuonna 1808, ja se on yhä tutkimuslaitos.',
+          lahde: 'Tania Freire, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Rio de Janeiro Botanical Garden',
+        },
+        {
+          otsikko: 'Vuori ilman patsasta',
+          teksti: 'Isoisän 1873 näkemä Corcovado oli paljas graniittihuippu '
+            + 'ilman patsasta — Kristus-patsas rakennettiin vasta 1922–1931, '
+            + 'puoli vuosisataa myöhemmin. Sokerileivän huipulle ei myöskään '
+            + 'päässyt köysiradalla: se avattiin 27. lokakuuta 1912. '
+            + 'Valokuvaaja Marc Ferrez kuvasi juuri tätä aikakauden Riota '
+            + 'lasilevyilleen, ja hänen otoksensa Corcovadosta ennen '
+            + 'patsasta ovat säilyneet. Vuoret olivat jo tuolloin kaupungin '
+            + 'tunnusmerkki, mutta niiden huiput olivat vielä '
+            + 'koskemattomia.',
+          tiedosto: 'Vista do centro do Rio, vendo-se ao fundo o Corcovado, Acervo do Instituto Moreira Salles.jpg',
+          selite: 'Corcovadon huippu on 710 metriä korkea, ja sen '
+            + 'Kristus-patsas vihittiin vasta 12. lokakuuta 1931.',
+          lahde: 'Marc Ferrez / Instituto Moreira Salles, Wikimedia Commons (PD)',
+          wiki: 'Corcovado',
+        },
+        {
+          otsikko: 'Metsä joka istutettiin uudelleen orjatyöllä',
+          teksti: 'Kahvipeltojen raivaama metsä oli syönyt Rion juomaveden '
+            + 'lähteet, ja keisari Pedro II määräsi 1861 Tijucan vuorten '
+            + 'metsittämisen uudelleen. Metsänvartija majuri Manuel Gomes '
+            + 'Archer johti työtä, jota teki kuusi orjuutettua henkilöä '
+            + 'nimeltä Eleutério, Constantino, Manuel, Mateus, Leopoldo ja '
+            + 'Maria. Vuosina 1861–1887 he istuttivat yli 100 000 puuta — '
+            + 'työ oli siis kesken juuri isoisän vierailun aikaan 1873. '
+            + 'Nykyinen Tijucan kansallispuisto on tämän orjatyöllä tehdyn '
+            + 'istutuksen tulosta.',
+          tiedosto: 'Floresta da Tijuca e Pedra da Gávea ao fundo.jpg',
+          selite: 'Tijucan metsä julistettiin kansallispuistoksi 1961, ja '
+            + 'sen takana kohoava Pedra da Gávea on kaupungin korkeimpia '
+            + 'huippuja.',
+          lahde: 'Marc Ferrez / Instituto Moreira Salles, Wikimedia Commons (PD)',
+          wiki: 'Tijuca National Park',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Christ the Redeemer - Cristo Redentor.jpg',
+          selite: 'Kristus-patsas on 30 metriä korkea ilman kahdeksan '
+            + 'metrin jalustaansa, ja se valittiin 7. heinäkuuta 2007 '
+            + 'uusien maailman seitsemän ihmeen joukkoon.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+        kappale: 'Rio on São Paulon jälkeen Brasilian toiseksi suurin '
+          + 'kaupunki, ja siinä asuu kuusi miljoonaa ihmistä. Matkailijan '
+          + 'Rio jakautuu kahteen osaan, jotka ovat aivan eri-ikäisiä. '
+          + 'Vanha keskusta lahden rannalla on isoisän kaupunki: Praça '
+          + 'Quinze de Novembro, Paço Imperial, Candelárian kirkko ja '
+          + 'Valongon laituri mahtuvat kaikki alle kahden kilometrin '
+          + 'kävelylle. Etelässä ovat rantakaupunginosat Copacabana, '
+          + 'Ipanema ja Leblon, jotka olivat 1873 vielä kaupungin '
+          + 'ulkopuolella. Niiden väliin jää Tijucan sademetsä, ja '
+          + 'vuorille noustaan kahdella laitteella: Corcovadolle '
+          + 'hammasratasjunalla ja Sokerileivälle köysiradalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Rio de Janeiro',
+          taitto: 'opas',
+          teksti: 'Satamakaupunki graniittivuorten ja meren välissä, jossa '
+            + 'keisarikunnan keskusta ja maailman tunnetuimmat rannat ovat '
+            + 'saman metrolinjan varrella.',
+          nosto: 'Kaupungin maisema itsessään on Unescon '
+            + 'maailmanperintökohde: vuonna 2012 listalle otettiin '
+            + '"Rio de Janeiro: Carioca Landscapes between the Mountain and '
+            + 'the Sea" eli vuorten ja meren väliin jäävä kaupunkimaisema, '
+            + 'ei yksittäinen rakennus.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Rio kohoaa Guanabaran lahden suulla graniittivuorten '
+                + 'ja meren välissä — Sokerileipä on kaupungin '
+                + 'käyntikortti, josta laivat tunnistivat sataman jo '
+                + 'kaukaa. Lentokoneella tullaan kahdelle kentälle: '
+                + 'Galeão–Antônio Carlos Jobim hoitaa kaikki '
+                + 'kansainväliset ja useimmat kotimaan lennot, ja '
+                + 'keskustan rannassa oleva Santos Dumont on lähinnä São '
+                + 'Paulon pikalinjan kenttä. Kaupungin sisällä liikutaan '
+                + 'metrolla, jolla on 41 asemaa ja 58 kilometriä rataa, '
+                + 'ja sen jatkeena kulkevat lähijunat, raitiovaunu ja '
+                + 'lautat lahden yli Niteróihin. Corcovadolle nousee '
+                + 'hammasratasrata Cosme Velhon asemalta: se on 3,8 '
+                + 'kilometriä pitkä, avattiin 1884 ja sähköistettiin 1910 '
+                + 'ensimmäisenä Brasiliassa. Sokerileivän köysirata on '
+                + 'vuodelta 1912.',
+              kuva: {
+                tiedosto: 'Bondinho do Pão de Açúcar by Diego Baravelli.jpg',
+                selite: 'Köysirata nousee Praia Vermelhalta Urcan kukkulan '
+                  + 'kautta Sokerileivän huipulle ja avattiin 27. lokakuuta '
+                  + '1912.',
+                lahde: 'Diego Baravelli, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunki, jonka keskellä kasvaa sademetsä',
+              teksti: 'Kaupunki on ahtautunut kapeille rannoille jyrkkien '
+                + 'graniittikukkuloiden väliin — tila on aina ollut '
+                + 'niukkaa, ja se näkyy yhä kaupunkikuvassa. Keskellä '
+                + 'kaupunkia kohoaa Tijucan sademetsä, maailman toiseksi '
+                + 'suurin kaupungin ympäröimä metsäalue: se on kokonaan '
+                + 'ihmisen 1860-luvulta lähtien uudelleen istuttamaa, '
+                + 'koska alkuperäinen metsä oli kaadettu kahvi- ja '
+                + 'polttopuupelloiksi. Maailman suurin kaupunkimetsä on '
+                + 'saman kaupungin toisessa laidassa: Pedra Brancan metsä '
+                + 'Rion länsivyöhykkeellä. Molemmat ovat kaupungin rajojen '
+                + 'sisällä, ja niiden väliin mahtuu miljoonakaupunki. '
+                + 'Kukkuloiden rinteille on kasvanut tiiviitä asuinalueita, '
+                + 'faveloita: Riossa asuu Brasilian kaupungeista toiseksi '
+                + 'eniten favela-asukkaita, mutta osuutena koko väestöstä '
+                + 'kaupunki on vasta yhdestoista. Vanhimmalle niistä, '
+                + 'keskustan takana kohoavalle Morro da Providêncialle, '
+                + 'nousee köysirata Central do Brasilin asemalta, ja '
+                + 'kapeimmilla ja jyrkimmillä kaduilla liikennettä hoitavat '
+                + 'bussien sijaan pikkubussit.',
+              kuva: {
+                tiedosto: 'Cascatinha Taunay do Rio Cachoeira 01.jpg',
+                selite: 'Cascatinha Taunay on noin 30 metriä korkea putous '
+                  + 'aivan Tijucan metsän sisääntulon tuntumassa.',
+                lahde: 'Ricardo Wagner e Silva, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: naamiaiset ennen sambaa',
+              teksti: 'Rion karnevaali juontuu naamiaistanssiaisista, joita '
+                + 'alettiin järjestää 1840 — vuosikymmeniä ennen '
+                + 'sambakouluja ja afrobrasilialaisten rumpujen tuloa '
+                + 'juhlan keskiöön 1900-luvulla. Isoisän vierailun aikaan '
+                + 'karnevaali oli siis yhä eurooppalaishenkinen '
+                + 'naamiaisperinne, jota juhlivat lähinnä kaupungin '
+                + 'yläluokka ja valkoinen väestö. Wikipedia arvelee tavan '
+                + 'tulleen Ranskan tai Saksan hoveista Portugalin ja '
+                + 'Brasilian keisariperheen mukana; varmaa tietoa ei ole. '
+                + 'Afrobrasilialaisen musiikin ja rumpujen vaikutus alkoi '
+                + 'näkyä vasta 1900-luvun ensimmäisellä puoliskolla, ja '
+                + 'siitä kasvoi se karnevaali, joka nykyään paraatii '
+                + 'Sambódromon katsomoiden välissä.',
+            },
+            {
+              otsikko: 'Historian käännekohta: kahvi joka rahoitti valtakunnan',
+              teksti: 'Kahvi oli 1870-luvun Brasilian tärkein vientituote, '
+                + 'ja sen viljely levisi Paraíban laaksoon Rion '
+                + 'pohjoispuolelle sitä mukaa kuin sokeriruoko väistyi. '
+                + 'Kahviplantaasien nälkä työvoimaan piti orjakauppaa '
+                + 'hengissä pitkään sen jälkeen, kun Atlantin yli tuonti '
+                + 'oli jo kielletty — samat plantaasien omistajat, jotka '
+                + 'rikastuivat kahvista, olivat myös niitä, jotka '
+                + 'vastustivat orjuuden lakkauttamista pisimpään. Sama '
+                + 'kahviraha rakensi sen kaupungin, jonka isoisä näki: '
+                + 'sataman, hallintotalot ja rautatiet. Kun orjuus 1888 '
+                + 'lakkautettiin, plantaasien omistajat siirsivät tukensa '
+                + 'tasavaltalaisille, ja keisarikunta kaatui seuraavana '
+                + 'vuonna.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat Rio de Janeiron (Saúde) '
+                + 'sääaseman normaaleja jaksolta 1981–2010, sellaisina '
+                + 'kuin en-Wikipedian Rio de Janeiro -artikkelin sääruutu '
+                + 'ne antaa — lehdellä ei ole tällä kertaa omaa '
+                + 'vuosigraafia, koska säädatan hakukiintiö oli täynnä '
+                + 'lehteä kirjoitettaessa. Asema on 11 metrin korkeudessa '
+                + 'merenpinnasta eli samalla matalalla rantavyöhykkeellä '
+                + 'kuin vanha keskusta. Ilmasto on Köppenin luokituksessa '
+                + 'trooppinen kuiva-kostea (Aw). Kylmää vuodenaikaa ei '
+                + 'ole lainkaan: kylmin kuukausi on heinäkuu, jonka '
+                + 'keskilämpötila on 22,6 astetta, ja lämpimin helmikuu '
+                + 'jonka keskilämpötila on 28,3 astetta. Vuoden keskiarvo '
+                + 'on 25,3 astetta. Sadetta tulee vuodessa 1 069 '
+                + 'millimetriä, ja se jakautuu epätasaisesti: joulukuusta '
+                + 'maaliskuuhun sataa 130–137 millimetriä kuukaudessa ja '
+                + 'rankkasadejaksot ovat pitkiä, kun taas kesä- ja '
+                + 'heinäkuussa jäädään runsaaseen neljäänkymmeneen '
+                + 'millimetriin. Talvi on siis lauha, aurinkoinen ja '
+                + 'kuivin vuodenaika — eteläisellä pallonpuoliskolla se '
+                + 'osuu kesä–elokuulle.',
+              kuva: {
+                tiedosto: 'Lagoa Rodrigo de Freitas, sob névoa - Rio (4912179180).jpg',
+                selite: 'Lagoa Rodrigo de Freitas on merestä kuroutunut '
+                  + 'laguuni Ipaneman ja Tijucan rinteiden välissä.',
+                lahde: 'Cyro A. Silva from Rio de Janeiro, Brasil, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Corcovado',
+                tahdet: 3,
+                selite: 'Hammasratasrata vie 710 metrin huipulle, jolla '
+                  + 'isoisän aikaan ei ollut mitään.',
+              },
+              {
+                mita: 'Sokerileipä',
+                tahdet: 3,
+                selite: 'Köysirata vuodelta 1912 nousee Urcan kautta 396 '
+                  + 'metrin huipulle lahden suulla.',
+              },
+              {
+                mita: 'Vanha keskusta',
+                tahdet: 3,
+                selite: 'Praça XV, Paço Imperial ja Candelárian kirkko ovat '
+                  + 'parin korttelin kävelyllä.',
+              },
+              {
+                mita: 'Valongon laituri',
+                tahdet: 2,
+                selite: 'Maailmanperintökohde, jonka kiveys kaivettiin esiin '
+                  + 'vasta 2011.',
+              },
+              {
+                mita: 'Tijucan metsä',
+                tahdet: 2,
+                selite: 'Kaupungin keskellä kasvava sademetsä, joka on '
+                  + 'kokonaan uudelleen istutettu.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sää- ja sadeluvut ovat en-Wikipedian
+             * Rio de Janeiro -artikkelin sääruudusta, sama lähde kuin
+             * jaksossa 5 — eivät pelin omasta säärivistä, jota tällä
+             * kaupungilla ei vielä ole.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Vuodenajat ovat toisin päin',
+                teksti: 'Eteläisellä pallonpuoliskolla kesä on joulukuusta '
+                  + 'maaliskuuhun ja talvi kesäkuusta elokuuhun.',
+              },
+              {
+                otsikko: 'Kesä on kuuma ja märkä',
+                teksti: 'Helmikuun keskilämpötila on 28,3 astetta, ja '
+                  + 'joulu–maaliskuussa sataa 130–137 millimetriä '
+                  + 'kuukaudessa pitkinä rankkasadejaksoina.',
+              },
+              {
+                otsikko: 'Talvikin on lämmin',
+                teksti: 'Kylmimmän kuukauden heinäkuun keskilämpötila on '
+                  + '22,6 astetta — kylmää vuodenaikaa ei ole.',
+              },
+              {
+                otsikko: 'Vuorille jonotetaan',
+                teksti: 'Corcovadon hammasratasradalla kulkee kolme kahden '
+                  + 'vaunun junaa, joten huipulle pääsee 540 matkustajaa '
+                  + 'tunnissa ja odotus voi venyä.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Rio oli kolme kertaa pääkaupunki: ensin siirtomaan, sitten '
+        + 'koko Portugalin valtakunnan ja lopulta itsenäisen keisarikunnan. '
+        + 'Vuonna 1873 kaupunki eli murroskohtaa, jossa vapaus eteni '
+        + 'hitaasti ja vain osittain.',
+      tehtava: {
+        kysymys: 'Mitä vuoden 1871 vapaan kohdun laki teki?',
+        vaihtoehdot: [
+          'Julisti orjuutettujen naisten uudet lapset vapaiksi',
+          'Lakkautti orjuuden kokonaan',
+          'Kielsi orjien tuonnin Atlantin yli',
+          'Vapautti kaikki yli 60-vuotiaat',
+        ],
+        oikea: 0,
+        fakta: 'Laki koski vain sen jälkeen syntyneitä lapsia, ja hekin '
+          + 'olivat velvollisia palvelemaan äitinsä omistajaa 21 ikävuoteen '
+          + 'asti. Yli miljoona ihmistä pysyi orjuutettuna, ja orjuus '
+          + 'lakkautettiin kokonaan vasta 1888.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tammikuun joki joka ei ollut joki',
+          teksti: 'Portugalilaiset purjehtivat Guanabaran lahdelle '
+            + '1. tammikuuta 1502 ja luulivat sitä joen suuksi — siitä nimi '
+            + 'Rio de Janeiro, "tammikuun joki". Ranskalaiset siirtolaiset '
+            + 'ehtivät perustaa lahden saarelle oman siirtokuntansa 1555, ja '
+            + 'portugalilaiset karkottivat heidät vasta vuosien sotimisen '
+            + 'jälkeen 1567. Estácio de Sá perusti varsinaisen kaupungin '
+            + '1. maaliskuuta 1565 ja nimesi sen São Sebastião do Rio de '
+            + 'Janeiroksi silloisen kuninkaan suojeluspyhimyksen mukaan.',
+          tiedosto: 'MHN Leandro Joaquim - Cena Marítima.jpg',
+          selite: 'Villegagnonin saari, jolle ranskalaiset rakensivat '
+            + 'siirtokuntansa 1555, sai myöhemmin linnoituksen ja on yhä '
+            + 'lahden suulla.',
+          lahde: 'Leandro Joaquim, Wikimedia Commons (PD)',
+          wiki: 'Rio de Janeiro',
+        },
+        {
+          otsikko: 'Pääkaupunki kolme kertaa',
+          teksti: 'Rio nousi Brasilian siirtomaahallinnon pääkaupungiksi '
+            + '1763, kun Minas Geraisin kulta- ja timanttilöydöt tekivät '
+            + 'siitä Salvadoria käytännöllisemmän vientisataman. Vuonna '
+            + '1808 koko Portugalin hovi muutti tänne, ja 1815 kaupungista '
+            + 'tuli Portugalin, Brasilian ja Algarven yhdistyneen '
+            + 'kuningaskunnan pääkaupunki. Itsenäistymisen 1822 jälkeen Rio '
+            + 'jatkoi Brasilian keisarikunnan pääkaupunkina isoisän koko '
+            + 'vierailun ajan — asema säilyi tasavallankin alla aina vuoteen '
+            + '1960.',
+          tiedosto: 'Paço Imperial ao entardecer.jpg',
+          selite: 'Paço Imperial Praça XV:n laidalla oli vuorollaan '
+            + 'siirtomaan kuvernöörien, kuninkaallisen hovin ja '
+            + 'keisarikunnan hallintotalo.',
+          lahde: 'Guilherme Soares, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Paço Imperial',
+        },
+        {
+          otsikko: 'Kupoli joka valmistui neljä vuotta myöhässä',
+          teksti: 'Candelárian kirkon rakentaminen alkoi 1775, ja sen '
+            + 'barokkijulkisivu vihittiin käyttöön jo 1811 kuningas João '
+            + 'VI:n läsnä ollessa, vaikka kirkko oli sisältä yhä kesken. '
+            + 'Keskikupu jäi vuosikymmeniksi valmistumatta: se saatiin '
+            + 'lopulta pystyyn vasta 1877, neljä vuotta isoisän vierailun '
+            + 'jälkeen. Kupolin kivet veistettiin valkoisesta '
+            + 'portugalilaisesta lioz-kivestä Lissabonissa ja kuljetettiin '
+            + 'laivalla Rioon. Isoisä näki siis kirkon vielä ilman kupolia '
+            + '— myöhemmin siitä tuli hetkeksi kaupungin korkein '
+            + 'rakennelma.',
+          tiedosto: 'Igreja da Candelária - Rio de Janeiro (5617801438).jpg',
+          selite: 'Kirkon holvit valmistuivat noin 1856, mutta kupoli ja sen '
+            + 'kahdeksan patsasta saatiin paikoilleen vasta 1877.',
+          lahde: 'Marinelson Almeida - Traveling through Brazil from Niteroi, Brasil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Candelária Church',
+        },
+        {
+          otsikko: 'Vapaa kohtu, orja edelleen',
+          teksti: 'Vuoden 1871 vapaan kohdun laki oli vasta ensimmäinen '
+            + 'askel: se vapautti orjuutettujen äitien tulevat lapset mutta '
+            + 'ei ketään jo orjuutettua. Paraguayn sota 1864–1870 muutti '
+            + 'monen upseerin asennetta, kun he olivat taistelleet rinta '
+            + 'rinnan orjuutettujen sotilaiden kanssa. Vasta 1888 prinsessa '
+            + 'Isabel allekirjoitti niin sanotun kultaisen lain ja lakkautti '
+            + 'orjuuden kokonaan isänsä Pedro II:n ollessa Euroopassa — '
+            + 'Brasiliasta tuli viimeinen maa Amerikassa, joka luopui '
+            + 'orjuudesta.',
+          tiedosto: 'Visconde do Rio Branco 1879.jpg',
+          selite: 'Vuoden 1871 laki tunnetaan myös Rio Branco -lakina sitä '
+            + 'ajaneen pääministerin José Paranhosin arvonimen mukaan.',
+          lahde: 'Alberto Henschel (1827-1882), Wikimedia Commons (PD)',
+          wiki: 'Rio Branco Law',
+        },
+      ],
+    },
+  ],
+  /*
+   * SYDNEY (Opus 23.8.2026). OSEANIAN LAUDAN ENSIMMÄINEN KAUPUNKILEHTI:
+   * kohteella ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen
+   * tätä. Intro ja teksti-kenttä kirjoitettiin samassa erässä uuteen
+   * tiedostoon js/packs/oceania-artikkelit.js (sama ratkaisu kuin
+   * P-Amerikan pilotissa, spec-mantereet.md, Fablen päätös 1).
+   * Pohjana ovat docs/mantereet-tyoaineisto/faktapohja-sydney.md ja sen
+   * riippumaton tarkistus tarkistus-sydney.md, jotka luettiin yhdessä;
+   * faktapohjaan on jo tehty tarkistuksen neljä pakollista korjausta
+   * (Warrane/Kamay, porte-cochère, Fort Denisonin tykki 1906, Rocks
+   * Pushin maineen kesto). Jokainen väite on lisäksi luettu
+   * en-Wikipedian raakateksteistä 23.8.2026: Sydney, Sydney Cove,
+   * Gadigal, History of Sydney, Port Jackson, Sydney Observatory,
+   * Sydney Mint, Government House Sydney, Circular Quay, The Rocks
+   * New South Wales, Cadmans Cottage, Great Synagogue (Sydney),
+   * Central railway station Sydney, Climate of Sydney ja
+   * Template:Sydney weatherbox.
+   *
+   * ANAKRONISMIVAHTI on tämän lehden tärkein yksittäinen sääntö
+   * (faktapohja, osio 8, huomio 2). Sydney Harbour Bridge avattiin
+   * 1932 ja oopperatalo 1973 — kumpaakaan ei ollut olemassa eikä
+   * suunnitteilla 1873. Ne esiintyvät vain nykykuvissa, ja lehti
+   * sanoo kahdesti ääneen, että ne ovat isoisän matkaa myöhempiä
+   * (etusivun intro ja ennenNyt-parin nykyselite). Yksikään
+   * 1873-kehyksessä oleva teksti ei mainitse niitä.
+   *
+   * NELJÄ KOHTAA, JOISSA LÄHTEET SANOVAT ERI ASIAN — kirjoitettu auki
+   * tähän, koska talon sääntö on selittää ristiriita eikä valita
+   * hiljaa toista lukua:
+   *
+   * 1. Kuvernöörintalon 1873-lisäys. Artikkelin "Government House,
+   *    Sydney" leipäteksti sanoo "a front portico in 1873", mutta
+   *    saman artikkelin muutoslista sanoo "1873 - A porte cochere
+   *    added". Nosto H4 käyttää muutoslistan tarkempaa muotoa
+   *    (vaunukatos, porte-cochère); pylväikkö (Colonnade) ja itäinen
+   *    arkadi ovat vasta vuosilta 1879–80.
+   * 2. Suursynagogan rakennusaika. Sama artikkeli antaa
+   *    johdannossaan rakennusajaksi 1874–1878 mutta kertoo
+   *    leipätekstissä peruskiven muuratun 26.1.1875. Nosto H4 kertoo
+   *    peruskivipäivän, koska se on artikkelin tarkempi tieto.
+   * 3. Cadmans Cottagen merimieskotivaihe. Artikkelin tiivistelmä
+   *    sanoo "the Sailor's Home (from 1865 to 1970)", mutta sama
+   *    artikkeli kertoo merimieskodin avautuneen viereiseen taloon
+   *    1864 ja Cadmansin toimineen sen jälkeen kodin isännän
+   *    asuntona. Oppaan jakso 3 kertoo tämän tarkemman version.
+   * 4. Observatory Hillin havaintosarjan alku. Faktapohja sanoo
+   *    havaintojen ulottuvan vuoteen 1858, mutta
+   *    Template:Sydney weatherbox merkitsee ääriarvojen jakson
+   *    1861–nykyhetki. Oppaan jakso 5 käyttää sääruudun omaa lukua
+   *    1861, ja ero mainitaan tässä.
+   *
+   * SÄÄRIVIÄ EI OLE. tools/hae-saanormaalit.mjs täydentää vain
+   * olemassa olevia saatiedot.js-rivejä, ja uuden rivin pohjaluvut
+   * pitäisi hakea Open-Meteon arkistosta — se vastasi 23.8.2026
+   * "Daily API request limit exceeded", eli vuorokausikiintiö oli
+   * käytetty. Samarkandin ennakkotapauksen (v965) mukaisesti lukuja EI
+   * keksitä: Sydney jää toistaiseksi ilman säälaatikkoa ja vuosigraafia,
+   * ja oppaan jakso 5 nojaa en-Wikipedian sääruutuun (Observatory
+   * Hillin asema, normaalikausi 1991–2020) sanoen sen ääneen —
+   * Karachin ennakkotapaus. Fable voi lisätä rivin, kun kiintiö
+   * vapautuu.
+   *
+   * SISÄLTÖLINJAUS on spec-mantereet.md:n Oseania-kohta. Gadigalit ja
+   * eora nimetään omilla nimillään ennen siirtomaanimiä (Warrane ennen
+   * Sydney Covea, Tallawoladah ennen The Rocksia), ja kansa näytetään
+   * elävänä: nosto H2 päättyy vuoden 2023 metroasemaan ja gadigal-
+   * vanhimman Allen Maddenin arvioon nykyisistä asukkaista, ei
+   * epidemiaan. Isorokkoepidemia 1789 kerrotaan tapahtumana ilman
+   * kärsimyksen yksityiskohtia. Sukupolvien erottaminen (Stolen
+   * Generations) on 1900-luvun aihe eikä nouse tässä 1873-painotteisessa
+   * lehdessä (faktapohjan oma rajaus, osio 8, huomio 4) — se kuuluu
+   * maalehden puolelle, jos Fable haluaa sen sinne. Pinchgut-saaren
+   * nimen alkuperä (vanki leivällä ja vedellä 1788) kerrotaan
+   * mainintana; hirttämiset ja gibbetointi on jätetty pois. Ei
+   * nykypolitiikkaa.
+   *
+   * ENNEN JA NYT -PARI on siirretty sellaisenaan matkakirjan
+   * valokuvataulusta (js/packs/oceania-valokuvat.js, avain sydney):
+   * tiedostonimet, vuosi ja lähderivit on kopioitu, ja kumpaankin on
+   * kirjoitettu uusi YHDEN VIRKKEEN selite. Vanha vedos on vuodelta
+   * 1890 eli reilusti harmaasävyrajan (1960) alapuolella. Lähderivit
+   * ovat taulun muodossa ('Photoglob Co., Library of Congress (PD)',
+   * 'Paul Carmona, Commons (CC BY 2.0)') eivätkä talon
+   * 'Tekijä, Wikimedia Commons (LISENSSI)' -muodossa — sama ratkaisu
+   * kuin New Yorkissa, koska rivi kopioidaan taulusta muuttamatta.
+   *
+   * KUVAT: kaikki muut kahdeksantoista kuvaa on haettu Commonsin
+   * api.php:sta, lisenssi ja tekijä luettu extmetadatasta ja leveys
+   * tarkistettu (pienin 1 800 px, useimmat yli 3 500 px). Jokainen on
+   * katsottu silmin 900 pikselin esikatselusta. Etusivun iso
+   * avauskaruselli on kolme laajaa yleiskuvaa kaupungin eri puolilta
+   * (koko satama ilmasta, Circular Quayn villavarastorivi vedeltä,
+   * Farm Cove kasvitieteellisen puutarhan rannalta) omistajan
+   * 21.8.2026 kansikaruselli-linjauksen mukaisesti; kansikuvat ovat
+   * samaa laatua (satama Fort Denisonin kohdalta, itäiset poukamat,
+   * Bondin ranta ilmasta). Herokuvat generoidaan erikseen myöhemmin
+   * samaan listaan (Helsingin malli), eikä niille jätetty tyhjiä
+   * paikkoja.
+   *
+   * AIHETOISTO, joka hyväksytään ja kirjataan: Fort Denison esiintyy
+   * kahdesti eri tiedostoina ja eri mittakaavassa (kansikuvassa 1
+   * kaukaisena osana satamanäkymää, oppaan jaksossa 5 lähikuvana),
+   * ja Circular Quay esiintyy avauskuvassa 2 nykyisenä sekä nostossa
+   * K1 vuoden 1839 akvarellina. Molemmat ovat lehden kantavia
+   * 1873-aiheita, ja kuvat ovat eri aikakausilta.
+   *
+   * KUVAHYLKÄYKSET on kirjattu raporttiin. Yleisimmät syyt olivat
+   * kuvan päälle lisätty merkintä (Argyle Cutin 1870-luvun vedos,
+   * jonka negatiiviin on raapustettu nimiö; Mrs Macquarie's Chairin
+   * Holtermann-vedos, jonka paspartuussa on lyijykynämerkintöjä;
+   * Circular Quayn 1871 taikalyhtylevy, jossa on musta pyöristetty
+   * kehys ja nimiölappu), aihe joka ei vastannut otsikkoaan
+   * (Sydney Observatoryn "Time Ball" osoittautui kuvaksi
+   * opastetaulusta, "Tank Stream 2026" työmaakuopasta) ja
+   * kuvallinen laatu (kaksi Sardakan satamanäkymää olivat sateen
+   * harmaita, yksi taivaan täyttävä risteilijän tuotemerkki).
+   *
+   * KAKSI LÄHDERIVIÄ ON NORMALISOITU. Conrad Martensin Sydney Cove
+   * -maalauksessa extmetadata.Artist on kokonainen elämäkertavirke
+   * ("Conrad MARTENS (1801 - 21 August 1878) Born in Crutched
+   * Friars, England. Died in Sydney..."); lähderivillä on siitä vain
+   * taiteilijan nimi, koska koko virke ei ole tekijämerkintä vaan
+   * Google Art Projectin kuvausteksti. Saman tekijän toisessa
+   * teoksessa Artist on jo pelkkä "Conrad Martens". Photoglobin
+   * photochromissa Artist on "Photoglob Co., publisher", ja rivi on
+   * valokuvataulun muodossa (ks. yllä).
+   */
+  sydney: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sydney',
+      johdanto: 'Satamakaupunki Port Jacksonin poukamien varrella: eoran '
+        + 'kansat tunsivat lahden nimellä Warrane kauan ennen brittien '
+        + 'rangaistussiirtokuntaa. Isoisän saapuessa 1873 kullan tuoma '
+        + 'raha muutti kadut hiekkakivityömaiksi.',
+      /*
+       * KANSIKUVAT jäävät tällä kaupungilla pikkuriviltä piiloon,
+       * koska ennenNyt-pari korvaa rivin (js/lehti.js
+       * piirraLehtiKuvat) — sama tilanne kuin New Yorkissa ja
+       * Helsingissä. Ne ovat silti kolme kelvollista laajaa
+       * yleiskuvaa suurennossarjaa varten: satama, itäiset poukamat
+       * ja Bondin ranta.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'AU-sydney-einfahrt-2.jpg',
+          selite: 'Fort Denison seisoo keskellä satamaa siinä kohdassa, '
+            + 'jossa väylä kääntyy kohti Sydney Covea.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '(1)Sydney 008.jpg',
+          selite: 'Sataman itäosassa lahdenpoukamat ja niemekkeet '
+            + 'pilkkovat rannan pieniksi kaupunginosiksi.',
+          lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Bondi from above.jpg',
+          selite: 'Bondi on kaupungin tunnetuin avomeren ranta, ja sen '
+            + 'eteläpäässä on kallioon louhittu merivesiallas.',
+          lahde: 'Nick Ang, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI on etusivun iso kuvapaikka, ja siihen kuuluvat
+       * omistajan 21.8.2026 kansikaruselli-linjauksen laajat
+       * yleiskuvat kaupungin ERI puolilta: koko satama ilmasta,
+       * Circular Quayn varastorivi vedeltä ja Farm Cove
+       * kasvitieteellisen puutarhan rannalta. Yksikään kolmesta ei
+       * ole minkään noston aiheena samalla tiedostolla.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Sydney as seen from an airplane (28480748074).jpg',
+          selite: 'Port Jackson on yksi maailman suurimmista '
+            + 'luonnonsatamista, ja kaupunki on rakennettu sen '
+            + 'molemmin puolin.',
+          lahde: 'Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'AUS Sydney, Central Business District, Circular Quay 041.jpg',
+          selite: 'Circular Quayn länsirannan päätykolmioiset '
+            + 'hiekkakivivarastot ovat villakaupan ajalta, jolloin '
+            + 'quayn kaikki kolme sivua olivat laitureita ja '
+            + 'varastoja.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Sydney (AU), Farm Cove -- 2019 -- 2283.jpg',
+          selite: 'Farm Coven rantaa reunustaa kuninkaallinen '
+            + 'kasvitieteellinen puutarha, joka perustettiin 1816 '
+            + 'siirtokunnan ensimmäisen viljelysmaan paikalle.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Sydney Harbour LCCN2017657737.jpg',
+          vuosi: '1890',
+          selite: 'Photochrom-vedokset olivat käsin väritettyjä '
+            + 'painokuvia, joita myytiin matkailijoille aikana, jolloin '
+            + 'värivalokuvaa ei vielä ollut.',
+          lahde: 'Photoglob Co., Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Sydney Harbour from Circular Quay.jpg',
+          selite: 'Kumpaakaan nykyistä maamerkkiä ei ollut vanhan '
+            + 'vedoksen aikaan: satamansilta valmistui 1932 ja '
+            + 'oopperatalo 1973.',
+          lahde: 'Paul Carmona, Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Warrane ennen Sydney Covea',
+          teksti: 'Ennen brittejä lahden tunsivat gadigalit, yksi eoran '
+            + 'seitsemästä rannikkoklaanista. Heidän nimensä poukamalle '
+            + 'oli Warrane, ja oma alueensa Gadi ulottui South Headista '
+            + 'Darling Harbouriin — klaanien nimet muodostettiin '
+            + 'lisäämällä alueen nimeen pääte -gal. Miehet keihästivät '
+            + 'kalaa rannalta ja naiset onkivat kaarnaveneistään. Arthur '
+            + 'Phillip valitsi tammikuussa 1788 juuri tämän poukaman, '
+            + 'koska siinä oli sekä suojainen ankkuripaikka että makeaa '
+            + 'vettä: puro, joka sai pian nimen Tank Stream. Suur-Sydneyn '
+            + 'alueella tunnetaan 28 klaanin perinteiset maat.',
+          tiedosto: 'Circular Quay 1839 V1-FL3198424.jpg',
+          selite: 'Sydney Cove eli Warrane oli vielä 1830-luvulla '
+            + 'matalarantainen poukama, jonka pohjukkaan Tank Stream '
+            + 'laski.',
+          lahde: 'Frederick Garling Jr., Wikimedia Commons (PD)',
+          wiki: 'Sydney Cove',
+        },
+        {
+          otsikko: 'Kaupunki, jota rakennettiin joka suunnasta',
+          teksti: 'Kullan löytyminen New South Walesissa ja Victoriassa '
+            + '1851 vei miehet ensin kultakentille, mutta siirtolaisuus '
+            + 'ja kullan tuoma varallisuus kasvattivat pian asumisen, '
+            + 'tavaroiden ja palvelujen kysyntää. Sydneyn ja sen '
+            + 'esikaupunkien väkiluku nousi 95 600:sta vuonna 1861 '
+            + 'lähes 387 000:een vuonna 1891, ja hallitus rakensi '
+            + 'rautateitä, raitioteitä, satamia ja lennätintä. Isoisän '
+            + 'vierailun aikaan kaupunki oli täynnä keskeneräisiä '
+            + 'hiekkakivitaloja: yliopisto oli valmistunut 1861 ja '
+            + 'Australian Museum 1866, mutta kaupungintalo ja pääposti '
+            + 'olivat vielä työn alla.',
+          tiedosto: 'A.M.P. Society Building, 98 Pitt Street, Sydney (circa 1871-1873).jpg',
+          selite: 'Australian Mutual Provident Societyn talo Pitt '
+            + 'Streetillä on juuri isoisän matkavuosien tienoilta ja '
+            + 'kuuluu Holtermannin lasilevykokoelmaan.',
+          lahde: 'American and Australasian Photographic Company (1866-1873), Wikimedia Commons (PD)',
+          wiki: 'Sydney',
+        },
+        {
+          otsikko: 'Pallo, joka putosi joka päivä kello yhdeltä',
+          teksti: 'Observatory Hillin observatorio valmistui 1858, ja sen '
+            + 'tärkein tehtävä ei ollut tähtitiede vaan aika. Tornin '
+            + 'huipun aikapallo pudotettiin ensimmäisen kerran '
+            + 'keskipäivällä 5. kesäkuuta 1858, ja pudotus siirrettiin '
+            + 'pian kello yhteen. Samalla hetkellä ammuttiin tykki Dawes '
+            + 'Pointilta, jotta satamassa olevat laivat saattoivat '
+            + 'tarkistaa kronometrinsä. Isoisän vierailun aikaan tykki '
+            + 'oli yhä Dawes Pointilla — Fort Denisonin saarelle se '
+            + 'siirrettiin vasta 1906. Pallo pudotetaan yhä joka päivä '
+            + 'alkuperäisellä koneistolla.',
+          tiedosto: '(1)Observatory Hill Sydney.jpg',
+          selite: 'Observatorion nelikerroksinen aikapallotorni kohoaa '
+            + 'Observatory Hillin nurmelta, ja sen huipulla on yhä '
+            + 'kullattu pallo.',
+          lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sydney Observatory',
+        },
+        {
+          otsikko: 'Rahapaja rommisairaalassa',
+          teksti: 'Macquarie Streetin varrella seisoo Sydneyn vanhin '
+            + 'säilynyt julkinen rakennus. Kuvernööri Lachlan Macquarie '
+            + 'sopi 1810 kolmen liikemiehen kanssa, että nämä saavat '
+            + 'kolmeksi vuodeksi väkevien tuontimonopolin, jos '
+            + 'rakentavat kaupunkiin sairaalan — siitä nimi Rum '
+            + 'Hospital, ja talo valmistui 1816. Sen eteläsiipeen '
+            + 'avattiin 14. toukokuuta 1855 Royal Mint, Sydney Branch, '
+            + 'Kuninkaallisen rahapajan ensimmäinen sivukonttori '
+            + 'Englannin ulkopuolella. Vuonna 1868 Sydneyn kolikot '
+            + 'kelpasivat kaikissa siirtokunnissa, Britanniassa vasta '
+            + '1886.',
+          tiedosto: 'Sydney Mint 1870 SLNSW FL1229069.jpg',
+          selite: 'Rahapaja lyö viitenä ensimmäisenä vuotenaan '
+            + 'vuosittain yli miljoonan punnan arvosta kultaa sovereign- '
+            + 'ja half sovereign -kolikoiksi.',
+          lahde: 'attributed to Charles Pickering, Wikimedia Commons (PD)',
+          wiki: 'Sydney Mint',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '(1)Cadmans Cottage-1.jpg',
+          selite: 'Cadmans Cottage valmistui 1816 ja on Sydneyn '
+            + 'toiseksi vanhin säilynyt asuinrakennus.',
+          lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Sydney on Australian suurin kaupunki: Suur-Sydneyssä '
+          + 'asui kesäkuussa 2025 arviolta 5 638 830 ihmistä, ja siihen '
+          + 'kuuluu 658 esikaupunkia 33 kunnan alueella. Matkailijan '
+          + 'Sydney on silti pieni. Isoisän ajan kaupunki mahtuu '
+          + 'kävelymatkan päähän Circular Quaystä: lännessä The '
+          + 'Rocksin hiekkakivikorttelit ja Observatory Hill, etelässä '
+          + 'Macquarie Streetin rahapaja, idässä kasvitieteellinen '
+          + 'puutarha ja kuvernöörin talo. Rannat ovat kaupungin toinen '
+          + 'puoli: Manlyyn mennään lautalla ja Bondiin bussilla, ja '
+          + 'samalla Opal-kortilla noustaan bussiin, junaan, metroon ja '
+          + 'laivaan.',
+        artikkeli: {
+          nimi: 'Matkailijan Sydney',
+          taitto: 'opas',
+          teksti: 'Satamakaupunki, jossa vanhin kortteli, '
+            + 'kasvitieteellinen puutarha ja avomeren rannat ovat '
+            + 'saman matkakortin päässä toisistaan.',
+          nosto: 'Sydneyn lauttaliikenne oli satamansillan avautuessa '
+            + '1932 maailman suurin; matkustajamäärä putosi '
+            + '37 miljoonasta vuonna 1945 yhteentoista miljoonaan '
+            + 'vuonna 1963, ja lautat kulkevat yhä kymmenellä reitillä '
+            + 'Circular Quaystä Manlyyn ja Parramattaan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokoneet laskeutuvat Kingsford Smithin '
+                + 'kentälle Mascotiin. Se on Australian vilkkain '
+                + 'lentoasema ja yksi maailman vanhimpia yhä '
+                + 'toimivia kenttiä, ja sillä on yölentokielto kello '
+                + '23–6. Toinen kenttä, Western Sydney Airport '
+                + 'Badgerys Creekissä, avataan loppuvuodesta 2026. '
+                + 'Junat kokoontuvat Central-asemalle, joka avattiin '
+                + '1906 ja on osavaltion suurin ja vilkkain asema: '
+                + 'Sydney Trains palvelee 168 asemaa ja teki '
+                + 'vuonna 2023–24 noin 302 miljoonaa matkaa. '
+                + 'Kuljettajaton metro kulkee 3–4 minuutin välein, '
+                + 'lähijuna 10–15 minuutin. Circular Quaystä lähtee '
+                + 'kymmenen lauttareittiä satamalle ja Parramattajoelle, '
+                + 'ja koko verkossa käy sama Opal-kortti.',
+              kuva: {
+                tiedosto: 'Freshwater class ferry Queenscliff on its way to Manly at Circular Quay.jpg',
+                selite: 'Manlyn lautta on tavallista joukkoliikennettä '
+                  + 'eikä nähtävyyskierros, ja reitti on kulkenut '
+                  + 'Circular Quaystä pohjoiselle niemelle 1800-luvulta '
+                  + 'asti.',
+                lahde: 'State Transport Regions, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kallio, josta koko vanha kaupunki louhittiin',
+              teksti: 'Keskusta lepää paksun hiekkakiven päällä, ja '
+                + 'varhainen kaupunki rakennettiin siitä: kirkot, '
+                + 'varastot ja katujen reunakivet ovat samaa kiveä. The '
+                + 'Rocks Sydney Coven länsipuolella sai nimensä juuri '
+                + 'tästä kalliosta, ja gadigalit kutsuivat aluetta '
+                + 'Tallawoladahiksi. Ensimmäiset talot olivat '
+                + 'risuseinäisiä ja olkikattoisia, myöhemmät '
+                + 'paikallista hiekkakiveä. Argyle Cut louhittiin '
+                + 'kannaksen läpi vankityönä, ja sen seinissä näkyy '
+                + 'yhä taltan jälki. Fort Denisonin saari oli ennen '
+                + 'toistakymmentä metriä korkea hiekkakiviluoto: se '
+                + 'madallettiin louhimalla, ja kivi meni Circular '
+                + 'Quayn rakentamiseen.',
+              kuva: {
+                tiedosto: 'Argyle Cut 001.jpg',
+                selite: 'Argyle Cut yhdistää The Rocksin Millers '
+                  + 'Pointiin, ja sen yli kulkee kaksi siltaa sekä '
+                  + 'satamansillan pengertie.',
+                lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: satamakortteli merimiehineen',
+              teksti: 'The Rocksin kujat olivat pitkään köyhän väen '
+                + 'aluetta. Alueella oli slummin maine siirtokunnan '
+                + 'alkuajoista asti, ja 1800-luvun jälkipuoliskolla '
+                + 'sitä hallitsi Rocks Push -niminen jengi; rosoinen '
+                + 'maine kesti suunnilleen 1870-luvulle, eli isoisä '
+                + 'näki alueen juuri sen viimeisinä villeinä vuosina. '
+                + 'Rannassa seisoo yhä Cadmans Cottage, joka '
+                + 'valmistui 1816 hallituksen ruorimiesten asunnoksi. '
+                + 'Vesipoliisi piti siinä majaansa 1840-luvun lopulta '
+                + '1860-luvulle, ja sitten se kuului viereen 1864 '
+                + 'avatun merimieskodin piiriin kodin isännän '
+                + 'asuntona. Vuonna 1900 puhjennut rutto johti '
+                + 'satojen alueen talojen purkamiseen.',
+            },
+            {
+              otsikko: 'Historian käännekohta: puro peittyy, lahti kaventuu',
+              teksti: 'Sydney Coven eteläreuna muurattiin 1837–1844 '
+                + 'keinotekoiseksi rantaviivaksi, ja Tank Streamin suu '
+                + 'täytettiin umpeen; puro kulkee yhä betoniputkessa '
+                + 'keskustan katujen alla. Uutta rantaa kutsuttiin '
+                + 'muotonsa mukaan Semi-Circular Quayksi, ja nimi '
+                + 'lyheni käytännön syistä Circular Quayksi. Tullitalo '
+                + 'rakennettiin rannalle 1844–1845, ja 1860-luvulle '
+                + 'tultaessa quayn kaikki kolme sivua olivat '
+                + 'laitureiden ja varastojen — erityisesti '
+                + 'villakaupan — hallussa. Cadmans Cottagen edestä '
+                + 'vesiraja siirtyi töiden myötä noin sata metriä '
+                + 'kauemmas.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Sydneystä puuttuu vielä, joten '
+                + 'nämä luvut ovat en-Wikipedian Sydney-artikkelin '
+                + 'sääruudusta (Observatory Hillin asema, '
+                + 'normaalikausi 1991–2020) eivätkä samasta lähteestä '
+                + 'kuin lehden vuosigraafit muualla. Ilmasto on '
+                + 'kostea subtrooppinen, Köppenin luokka Cfa, eikä '
+                + 'selvää kuivaa kautta ole. Eteläisellä '
+                + 'pallonpuoliskolla vuodenajat ovat päinvastoin kuin '
+                + 'Euroopassa: tammikuu on lämpimin kuukausi '
+                + 'keskilämmöltään 23,5 astetta, heinäkuu viilein '
+                + '13,4 astetta. Vuosisade on 1 149,7 millimetriä ja '
+                + 'jakautuu kaikille kuukausille, mutta epätasaisesti: '
+                + 'kesäkuu on sateisin runsaalla 142 millimetrillä ja '
+                + 'syyskuu kuivin 63 millimetrillä. Sadepäiviä on '
+                + 'vuodessa noin 95 ja aurinkotunteja runsaat 2 600. '
+                + 'Kuumin mitattu lukema on 45,8 astetta '
+                + '18. tammikuuta 2013 ja kylmin 2,1 astetta '
+                + '22. kesäkuuta 1932; sääruudun ääriarvot alkavat '
+                + 'vuodesta 1861, eli asema mittasi jo isoisän '
+                + 'vierailun aikaan.',
+              kuva: {
+                tiedosto: 'Fort Denison (30129306283).jpg',
+                selite: 'Fort Denisonilla on mitattu vuoroveden '
+                  + 'korkeutta vuodesta 1857 ja ammuttu tykki '
+                  + 'päivittäin kello yksi vuodesta 1906.',
+                lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Circular Quay ja The Rocks',
+                tahdet: 3,
+                selite: 'Siirtokunnan vanhin kortteli ja sen '
+                  + 'hiekkakivivarastot ovat samalla rannalla, jolle '
+                  + 'ensimmäinen laivasto nousi 1788.',
+              },
+              {
+                mita: 'Lautta Manlyyn',
+                tahdet: 3,
+                selite: 'Puolen tunnin matka vie sataman poikki '
+                  + 'avomeren rannalle tavallisella matkakortilla.',
+              },
+              {
+                mita: 'Observatory Hill',
+                tahdet: 2,
+                selite: 'Aikapallo pudotetaan yhä joka päivä kello '
+                  + 'yksi alkuperäisellä koneistolla.',
+              },
+              {
+                mita: 'Kasvitieteellinen puutarha',
+                tahdet: 2,
+                selite: 'Puutarha perustettiin 1816 Farm Coven '
+                  + 'rannalle siirtokunnan ensimmäisen pellon '
+                  + 'paikalle.',
+              },
+              {
+                mita: 'Bondi ja rantapolku',
+                tahdet: 3,
+                selite: 'Kaupungin tunnetuin ranta ja sen '
+                  + 'eteläpäähän kallioon louhittu merivesiallas.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sää- ja sadeluvut ovat
+             * en-Wikipedian Sydney-artikkelin sääruudusta, sama
+             * lähde kuin jaksossa 5. Hintataso kerrotaan yleisellä
+             * tasolla ilman lukuja.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Hintataso',
+                teksti: 'Sydney on maailman kalleimpia kaupunkeja, ja '
+                  + 'majoitus vie budjetista suurimman osan.',
+              },
+              {
+                otsikko: 'Vuodenajat nurin',
+                teksti: 'Joulukuu on keskikesää ja heinäkuu talvea: '
+                  + 'heinäkuun keskilämpö on 13,4 astetta, tammikuun '
+                  + '23,5.',
+              },
+              {
+                otsikko: 'Sadetta ympäri vuoden',
+                teksti: 'Kuivaa kautta ei ole — sateisin kuukausi on '
+                  + 'talvinen kesäkuu ja kuivin kevätkuukausi '
+                  + 'syyskuu.',
+              },
+              {
+                otsikko: 'Aurinko on voimakas',
+                teksti: 'Observatory Hillillä mitataan runsaat 2 600 '
+                  + 'aurinkotuntia vuodessa, ja elokuu on '
+                  + 'aurinkoisin kuukausi.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kalastajakansan lahdesta rangaistussiirtokunnaksi ja '
+        + 'siitä kullan rahoittamaksi siirtomaakaupungiksi kahdessa '
+        + 'ihmisiässä. Vuonna 1873 Sydneyä rakennettiin monesta '
+        + 'suunnasta yhtä aikaa.',
+      tehtava: {
+        kysymys: 'Mihin lahteen ensimmäinen laivasto saapui ennen kuin siirtokunta perustettiin Sydney Coveen?',
+        vaihtoehdot: [
+          'Botany Bay',
+          'Farm Cove',
+          'Manly Cove',
+          'Camp Cove',
+        ],
+        oikea: 0,
+        fakta: 'Arthur Phillip totesi Botany Bayn sopimattomaksi, souti '
+          + 'pohjoiseen tutkimaan Cookin kartalle merkitsemää Port '
+          + 'Jacksonia ja perusti siirtokunnan Sydney Coveen '
+          + '26. tammikuuta 1788.',
+      },
+      nostot: [
+        {
+          otsikko: 'Satama, jonka Cook merkitsi käymättä siellä',
+          teksti: 'James Cook purjehti Endeavourilla Sydney Headsin ohi '
+            + '1770 ja kirjoitti päiväkirjaansa nähneensä lahden tai '
+            + 'sataman, jossa näytti olevan turvallinen ankkuripaikka. '
+            + 'Hän nimesi sen amiraliteetin lordikomissaarin Sir George '
+            + 'Jacksonin mukaan Port Jacksoniksi eikä purjehtinut '
+            + 'sisään. Kahdeksantoista vuotta myöhemmin Arthur Phillip '
+            + 'lähti Botany Baystä pohjoiseen tutkimaan Cookin '
+            + 'merkintää, yöpyi Camp Covessa ja löysi Sydney Coven. '
+            + 'Lontooseen hän kirjoitti löytäneensä maailman parhaan '
+            + 'sataman, johon mahtuisi tuhat linjalaivaa täysin '
+            + 'turvassa.',
+          tiedosto: 'Conrad Martens - North Head from above Balmoral, Sydney Harbour - Google Art Project.jpg',
+          selite: 'Sydney Heads on sataman ainoa suuaukko, ja North '
+            + 'Head on sen pohjoinen kallioniemi.',
+          lahde: 'Conrad Martens, Wikimedia Commons (PD)',
+          wiki: 'Port Jackson',
+        },
+        {
+          otsikko: 'Kansa, joka ei kadonnut',
+          teksti: 'Sydneyn seudulla on asuttu ainakin 30 000 vuotta, ja '
+            + 'kalliopiirroksia on yhä kaikkialla. Siirtokunta muutti '
+            + 'gadigalien elämän nopeasti: vuoden 1789 '
+            + 'isorokkoepidemian arvioidaan tappaneen noin puolet eoran '
+            + 'väestöstä, ja gadigaleista, joita arvioitiin olleen '
+            + '50–80, selvisi kolme. Arkeologinen aineisto viittaa '
+            + 'siihen, että osa pakeni nykyisen Concordin seudulle. '
+            + 'Gadigal-vanhin Allen Madden arvioi Sydneyssä asuvan '
+            + 'nykyään useita satoja dharug-ihmisiä, joukossa ainakin '
+            + 'sata hänen omaa sukuaan olevaa gadigalia. Lokakuussa '
+            + '2023 keskustan uusi metroasema nimettiin Gadigaliksi.',
+          tiedosto: '20250326 Gadigal Station - Platform 1.jpg',
+          selite: 'Gadigal-asema oli rakennusaikana nimeltään Pitt '
+            + 'Street, ja se nimettiin uudelleen lokakuussa 2023.',
+          lahde: 'Windmemories, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gadigal',
+        },
+        {
+          otsikko: 'Vankilaivoista vapaaksi kaupungiksi',
+          teksti: 'Macquarien lähdettyä 1821 virallinen politiikka alkoi '
+            + 'houkutella vapaita brittisiirtolaisia: heitä tuli 900 '
+            + 'vuosina 1826–30 ja 29 000 vuosina 1836–40. Vapaat '
+            + 'siirtolaiset, vapaana syntyneet ja vapautuneet vangit '
+            + 'olivat pian valtaenemmistö, ja he vaativat '
+            + 'vastuunalaista hallintoa ja vankikuljetusten '
+            + 'lopettamista. Kuljetukset New South Walesiin päättyivät '
+            + '1840. Vuonna 1842 lakiasäätävästä neuvostosta tuli osin '
+            + 'vaaleilla valittu ja Sydney julistettiin kaupungiksi — '
+            + 'mutta äänioikeus sidottiin omaisuuteen, ja sen sai vain '
+            + 'noin viidestoista osa aikuisväestöstä.',
+          tiedosto: 'Conrad Martens - View of Sydney Harbour showing Sydney Cove - Google Art Project.jpg',
+          selite: 'Conrad Martens asui Sydneyssä vuodesta 1835 ja '
+            + 'maalasi satamaa yhä uudestaan; tämä näkymä on noin '
+            + 'vuodelta 1850.',
+          lahde: 'Conrad Martens, Wikimedia Commons (PD)',
+          wiki: 'History of Sydney',
+        },
+        {
+          otsikko: 'Vuosi, jolloin kaikki oli kesken',
+          teksti: 'Vuonna 1873 kuvernöörin talon sisäänkäynnin eteen '
+            + 'valmistui vaunukatos, porte-cochère — ainoa kaupungin '
+            + 'kolmesta suuresta rakennushankkeesta, joka sai sinä '
+            + 'vuonna jotain valmiiksi. Suursynagogan tontti oli '
+            + 'ostettu 1871 ja arkkitehti Thomas Rowe valittu 1872, '
+            + 'mutta peruskivi muurattiin vasta 26. tammikuuta 1875 ja '
+            + 'rakennus vihittiin 1878. Rautatieaseman toisen '
+            + 'rakennuksen piirustukset olivat vuodelta 1871, mutta '
+            + 'avajaisia vietettiin 1874. Isoisä käveli kaupungissa, '
+            + 'joka rakensi itseään joka kadulla mutta ei ollut vielä '
+            + 'missään valmis.',
+          tiedosto: '(1)Government House Sydney-1.jpg',
+          selite: 'Kuvernöörin talo rakennettiin 1837–1843 goottilaisen '
+            + 'kertaustyylin mukaan, ja kuvan puoleinen pylväikkö '
+            + 'lisättiin vasta 1879–80 — vuoden 1873 vaunukatos on '
+            + 'talon toisella puolella.',
+          lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Government House, Sydney',
+        },
+      ],
+    },
+  ],
 };

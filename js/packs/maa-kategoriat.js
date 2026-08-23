@@ -24691,4 +24691,2286 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * UUSI-SEELANTI (NZL) — Oseanian ensimmäinen maalehti.
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-uusiseelanti.md ja
+   * tarkistus-uusiseelanti.md yhdessä luettuna, ja jokainen tekstiin
+   * päätynyt luku, päiväys ja nimi tarkistettu vielä kerran
+   * en-Wikipedian raakatekstistä 23.8.2026. Sisältölinjaus on
+   * docs/mantereet-tyoaineisto/spec-mantereet.md:n Oseania-osio:
+   * māorikulttuuri elävänä eikä museona, Waitangin sopimus (1840)
+   * perushistoriana, te reo -nimet käytössä, sodat tapahtumina ilman
+   * sankarikehystä kummallekaan suunnalle.
+   *
+   * AIHEIDEN NIMET ovat yksisanaisia (docs/moduulit/maalehti.md): peli
+   * kirjoittaa otsikoksi maan genetiivin ja aiheen pienellä, "UUDEN-
+   * SEELANNIN maorikulttuuri". Fablen toimeksiannon aiheet "Kulta ja
+   * talous" ja "Merenkulku ja löytöretket" on siksi lyhennetty
+   * muotoon "Talous" ja "Merenkulku". Sivu-id:t ovat kaikki repossa jo
+   * käytössä olevia (historia, tavat, luonto, arki, meri) — uusia
+   * id:itä ei luotu (lehtityö-resepti).
+   *
+   * TARKISTUKSEN JÄLKEEN TEHDYT KORJAUKSET JA RATKAISUT:
+   *  - Otagon väestönkasvu kirjoitetaan lähteen omalla luvulla ("kasvoi
+   *    400 prosenttia vuosina 1861–1864"), ei faktapohjan sanalla
+   *    "nelinkertaistui": 400 prosentin kasvu tarkoittaa viisinkertaista
+   *    lopputulosta, joten sanamuoto olisi ollut väärä (tarkistuksen
+   *    varoitus 2).
+   *  - Gabriel Readin LÖYTÖPÄIVÄ jätettiin pois: en-Wikipedia antaa
+   *    kaksi eri päivää samasta löydöstä ("Otago Gold Rush" 20.5.1861,
+   *    "Gabriel Read" ja "Gabriel's Gully" 25.5.1861). Teksti sanoo
+   *    "toukokuussa 1861", mikä on riidaton.
+   *  - Waitangin ALLEKIRJOITTAJIEN määrä on sama ristiriita: saman
+   *    artikkelin ingressi sanoo noin 530–540 allekirjoittajaa, sen
+   *    leipäteksti "yli 600 päällikköä". Teksti sanoo "yli viisisataa",
+   *    jonka molemmat luvut kattavat, ja nostaa esiin riidattoman
+   *    yksityiskohdan: vain kaksitoista kirjoitti nimensä latinalaisin
+   *    kirjaimin.
+   *  - Hobsonin ASU kerrotaan molemmilla lähdemuodoilla (aamutakki /
+   *    silminnäkijä Colenson "siviilivaatteissa, hattua lukuun
+   *    ottamatta"), koska artikkeli antaa nekin rinnakkain.
+   *  - T3:n villatalouden luvut (5 punnan vuokra + punta jokaista
+   *    tuhatta lammasta kohti yli 5 000:n; 8,1 miljoonaa eekkeriä
+   *    7,6 miljoonalla punnalla; 2,2 miljoonaa eekkeriä ilmaiseksi)
+   *    tarkistettiin itse en-Wikipedian "History of New Zealand"
+   *    -artikkelista, koska tarkistusagentti ei ehtinyt vahvistaa niitä.
+   *  - "Great Fleet" -myyttiä EI käytetä: P1 puhuu perimätiedosta
+   *    ilman kanoottien nimiä ja vuosilukuja (tarkistus vahvisti linjan).
+   *  - Rugbyn haka-perinne (1888–) jätettiin pois: se on 15 vuotta
+   *    isoisän matkan jälkeen eikä kuulu 1873-lehteen.
+   *  - Pink and White Terraces: tuhoutuminen 1886 kerrotaan suoraan
+   *    (Raamatun linja tuhoutuneesta kohteesta), ja artikkelin sisäinen
+   *    kiista säilymisestä kirjoitetaan auki yhdellä lauseella.
+   *  - Gate Pān aikalaislainausta ("puolialastomia villejä") EI
+   *    käytetä; tappio kerrotaan lukuina.
+   *
+   * MINITEHTÄVÄT: yksi jokaisella sivulla (talon valtatapa; USA:n yksi
+   * tehtävä oli Fablen erillinen toimeksianto). Jokaisen vastaus löytyy
+   * saman sivun tekstistä, eikä yksikään osu oceania-questions.js:n
+   * NZL-kysymyksiin (auckland, wellington, christchurch, dunedin,
+   * milfordsound käyty läpi: kultaryntäys kysytään Dunedinissä
+   * kaupunkina, kiivi lentokyvyttömyytenä Milford Soundissa — tämän
+   * lehden tehtävät kysyvät eri asiat).
+   *
+   * KUVAT: 20 nostokuvaa, jokainen haettu Commonsista, katsottu silmin
+   * 960 px:n esikatselussa ja mitattu (leveys ≥ 1200 px). Commonsin
+   * api.php ja en-Wikipedian API vastasivat tänään toistuvasti
+   * 429:llä, joten lisenssi ja tekijä on luettu tiedostosivun omasta
+   * raakatekstistä (action=raw) silloin kun extmetadata ei vastannut —
+   * sama tieto, eri reitti; poikkeama kirjattu myös raporttiin.
+   * Tekijänimet on kirjoitettu lähderiveille luettavaan muotoon kuten
+   * muuallakin tässä tiedostossa ("Joseph Jenner Merrett", ei
+   * "Merrett, Joseph Jenner, 1816-1854."), ja Tanenuiarangi-kuvan
+   * tekijäkenttä on tyhjä extmetadatassa, joten lähderivillä on
+   * tiedostosivun oma PD-user-nimi Kahuroa.
+   * HYLÄTYT: Sporingin waka-piirros (museovitriinin oma selitekyltti
+   * näkyy kuvassa), "ALEXANDER(1873) attack on a Maori pah"
+   * (taistelukuva kaatuneineen), Gabriel's Gullyn 1862-valokuva ja
+   * SS Dunedinin lastausvalokuva (700–762 px), Lindauerin
+   * tohunga-tā-moko (800 px), Otagon "Southern Alps in Winter"
+   * (Pixabay-lisenssi, ei CC), Whakarewarewan vaakakuva (etualalla
+   * tunnistettavia matkailijoita).
+   */
+  NZL: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 ase on juuri vaiennut: vuosikymmeniä kestäneet '
+          + 'Uuden-Seelannin sodat päättyivät edellisenä vuonna, ja Waitangin '
+          + 'sopimuksen kolmenkymmenen vuoden takaiset lupaukset ovat yhä '
+          + 'kiistanalaisia.',
+      nostot: [
+        {
+          otsikko: 'Sopimus, joka kirjoitettiin yhdessä yössä',
+          aika: '1840',
+          tiedosto: '“The Signing of the Treaty of Waitangi”, Ōriwa Haddon - Flickr - Archives New Zealand.jpg',
+          teksti: 'Kapteeni William Hobson oli suunnitellut allekirjoitus'
+              + 'tilaisuuden 7. helmikuuta 1840, mutta jo edellisenä aamuna '
+              + 'Busbyn talon nurmikolla odotti 45 päällikköä. Sopimus oli '
+              + 'kirjoitettu kiireessä ilman lakimiestä: Hobson, hänen '
+              + 'sihteerinsä James Freeman ja brittiresidentti James Busby '
+              + 'laativat sen 4.–5. helmikuuta, ja lähetyssaarnaajat '
+              + 'käänsivät sen yön yli māoriksi. Hobson otti päälliköt '
+              + 'vastaan aamutakissaan — silminnäkijä William Colenso muisti '
+              + 'hänet "siviilivaatteissa, hattua lukuun ottamatta". Jokaisen '
+              + 'allekirjoituksen jälkeen hän sanoi: "He iwi tahi tātou", '
+              + 'olemme nyt yksi kansa.',
+          selite: 'Ōriwa Haddonin maalaus esittää Waitangin sopimuksen '
+            + 'allekirjoitustilaisuutta 6. helmikuuta 1840: teltan alla '
+            + 'istuvat virkamiehet, pöydän yli kumartuva päällikkö ja '
+            + 'ympärillä viittoihinsa kääriytynyt väki.',
+          lahde: 'Archives New Zealand from New Zealand, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Waitangin sopimus',
+        },
+        {
+          otsikko: 'Kaksi tekstiä, kaksi lupausta',
+          aika: '1840',
+          tiedosto: 'Ruapekapeka fortification earthworks.jpg',
+          teksti: 'Sopimusta vietiin ympäri maata vuoden 1840 ajan, ja '
+              + 'allekirjoittajia kertyi yli viisisataa. Nimensä '
+              + 'latinalaisin kirjaimin kirjoitti vain kaksitoista: moni '
+              + 'piirsi asiakirjaan osan omasta moko-kuviostaan, toiset '
+              + 'merkin. Englannin- ja māorinkielinen teksti eivät kuitenkaan '
+              + 'sano samaa. Englanniksi päälliköt luovuttivat '
+              + 'suvereniteetin, māoriksi he luovuttivat kāwanatangan eli '
+              + 'kuvernöörin vallan ja säilyttivät tino rangatiratangan, '
+              + 'täyden määräysvallan omaan maahansa. Juuri tämä ero on '
+              + 'sotien takana: ensimmäiset laukaukset ammuttiin pohjoisessa '
+              + 'jo 1845, ja tammikuussa 1846 tykit jauhoivat Te Ruki '
+              + 'Kawitin Ruapekapeka-linnoitusta.',
+          selite: 'Ruapekapekan pā:n valleista ja kaivannoista on jäljellä '
+            + 'ruohottuneet harjanteet, jotka näyttävät yhä, miten '
+            + 'linnoitus rakennettiin maan sisään.',
+          lahde: 'Winstonwolfe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Uuden-Seelannin sodat',
+        },
+        {
+          otsikko: 'Linnoitus, jota tykit eivät murtaneet',
+          aika: '1864',
+          tiedosto: 'Gate Pa.jpg',
+          teksti: 'Uuden-Seelannin sodat eivät olleet yksi sota vaan sarja '
+              + 'konflikteja vuodesta 1845 vuoteen 1872, ja niiden ytimessä '
+              + 'oli maa. Huippuvuosina 1860-luvulla noin 18 000 '
+              + 'brittisotilasta tykistöineen oli liikkeellä noin 4 000:ta '
+              + 'māorisoturia vastaan, eikä ylivoima ratkaissut. Huhtikuun '
+              + '29. päivänä 1864 kenraali Duncan Cameron lähetti 300 miestä '
+              + 'rynnäkköön Pukehinahinan pā:han Taurangassa. Tykit olivat '
+              + 'jauhaneet varustusta koko päivän, mutta puolustajat olivat '
+              + 'katetuissa kaivannoissa. Hyökkääjistä kaatui 31 ja '
+              + 'haavoittui 80 — yli kolmasosa joukosta.',
+          selite: 'Vuonna 1864 piirretty kuva Gate Pān varustuksesta '
+            + 'taistelun jälkeen näyttää kaivannot, matalat vallit ja '
+            + 'paaluaidan tyngät, joiden takana alle 250 puolustajaa oli '
+            + 'odottanut rynnäkköä.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Gate Pān taistelu',
+        },
+        {
+          otsikko: 'Sota vaikenee ilman ratkaisua',
+          aika: '1872',
+          tiedosto: 'Mundy NZ 1870 SLNSW FL1083129.jpg',
+          teksti: 'Viimeinen vaihe päättyi ilman ratkaisutaistelua. Rangatira '
+              + 'Te Kooti Arikirangi Te Turuki, jota hallituksen joukot olivat '
+              + 'jahdanneet itärannikolla vuodesta 1868, sai vuonna 1872 '
+              + 'turvapaikan māorikuninkaalta ja siirtyi King Countryyn, '
+              + 'jonne takaa-ajajat eivät menneet; siellä hän kehitti '
+              + 'perustamaansa Ringatū-uskoa rauhassa, ja armahdus tuli '
+              + 'vasta 1883. Taranakissa Tītokowaru ei ollut hävinnyt '
+              + 'yhtäkään taistelua, mutta hylkäsi 1869 vahvan asemansa '
+              + 'yllättäen, ja joukot hajosivat. Vuonna 1873 ase on vaiennut '
+              + 'koko maassa, mutta maakysymystä ei ole ratkaistu.',
+          selite: 'Daniel Mundyn valokuva vuodelta 1870 näyttää māorikylän '
+            + 'olkikattoisine taloineen ja avoimen kokoontumiskentän, jonka '
+            + 'reunalle koko kylän väki on asettunut kuvaan.',
+          lahde: 'Daniel Louis Mundy, Wikimedia Commons (PD)',
+          wiki: 'Te Kooti',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Uuden-Seelannin sodat päättyivät — vuosi ennen '
+            + 'isoisän matkaa?',
+        vaihtoehdot: ['1840', '1864', '1872', '1886'],
+        oikea: 2,
+        fakta: 'Viimeinen vaihe päättyi, kun Te Kooti sai turvapaikan '
+            + 'māorikuninkaalta ja siirtyi King Countryyn.',
+      },
+    },
+    {
+      id: 'tavat',
+      nimi: 'Maorikulttuuri',
+      johdanto: 'Vuonna 1873 māorikulttuuri ei ole muisto vaan arkea: '
+          + 'kaiverretut kanootit lepäävät rannoilla, kokoustalojen edustat '
+          + 'täyttyvät vieraista ja kasvojen kuviot kertovat suvun jokaiselle, '
+          + 'joka osaa lukea ne.',
+      nostot: [
+        {
+          otsikko: 'Kanootti, joka kantaa koko suvun nimeä',
+          tiedosto: '00 27 0561 Waitangi NZ - Kriegskanu der Maori.jpg',
+          teksti: 'Waka tarkoittaa kanoottia, mutta sana kantaa enemmän: se '
+              + 'on myös nimitys ihmisryhmälle, joka polveutuu samasta '
+              + 'muinaisesta purjehduskanootista. Suurimmat sotakanootit, '
+              + 'waka taua, veistettiin yhdestä ainoasta tōtara-rungosta jopa '
+              + 'neljänkymmenen metrin mittaisiksi, ja keula- ja '
+              + 'peräkuvioihin kaiverrettiin sukupolvien tarinat. Kanootti '
+              + 'oli tapu, pyhä: siihen ei saanut viedä keitettyä ruokaa, '
+              + 'eikä siihen astuttu keulasta tai perästä vaan laidan yli. '
+              + 'Sotaretkellä yhteen alukseen mahtui jopa kahdeksankymmentä '
+              + 'soutajaa.',
+          selite: 'Waitangissa säilytettävä suuri waka taua lepää katoksensa '
+            + 'alla: punainen runko, mustaksi kaiverrettu korkea peräkuvio ja '
+            + 'kymmenien soutajien penkkirivi.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Waka',
+        },
+        {
+          otsikko: 'Kasvot, jotka kertovat kuka olet',
+          aika: '1878',
+          tiedosto: 'Tukukino, by Lindauer.jpg',
+          teksti: 'Tā moko ei ollut koriste vaan asiakirja: kuviot kertoivat '
+              + 'suvun, aseman ja tehdyt teot, ja niitä osattiin lukea. Työ '
+              + 'ei ollut pistelyä vaan veistoa. Uhi-taltalla, usein '
+              + 'albatrossin luusta tehdyllä, iho avattiin ja väri hierottiin '
+              + 'vakoihin, joten valmis moko tuntui sormenpäissä uurteina. '
+              + 'Miehet saivat kuvionsa tavallisesti kasvoihin ja reisiin, '
+              + 'naiset huuliin ja leukaan, ja sen saaminen oli siirtymä '
+              + 'lapsuudesta aikuisuuteen. Isoisän aikaan tapa oli '
+              + 'muuttumassa: eurooppalainen neula alkoi korvata taltan, ja '
+              + 'miesten kasvokuviot harvinaistuivat.',
+          selite: 'Gottfried Lindauerin muotokuva vuodelta 1878 esittää '
+            + 'päällikkö Tukukinon, jonka kasvoja kiertää täysi moko-kuvio ja '
+            + 'jonka kädessä on kaiverrettu puinen ase.',
+          lahde: 'Gottfried Lindauer, Wikimedia Commons (PD)',
+          wiki: 'Tā moko',
+        },
+        {
+          otsikko: 'Kenttä, jolla asiat sanotaan ääneen',
+          tiedosto: 'Tanenuiarangi.jpg',
+          teksti: 'Marae ātea on kokoustalon eli wharenuin edessä oleva avoin '
+              + 'kenttä, ja arkikielessä marae tarkoittaa koko aluetta '
+              + 'rakennuksineen. Jako ei ole sattumaa: kokoustalo kuuluu '
+              + 'rauhan jumalalle Rongolle ja avoin kenttä Tūmatauengalle, '
+              + 'jonka aluetta ovat sota ja riita — siksi juuri kentällä '
+              + 'pidetään puheet, joissa asiat voivat kärjistyä. Vieras '
+              + 'otetaan vastaan pōwhiri-seremonialla: naisten karanga-kutsu '
+              + 'kantaa yli kentän, ja sitten puhutaan vuorotellen. Lähes '
+              + 'jokaisella heimolla ja alaheimolla on oma marae, joka on '
+              + 'monelle yhtä tärkeä kuin oma koti.',
+          selite: 'Kokoustalon punaiseksi maalatut kaiverrukset kehystävät '
+            + 'oviaukkoa ja ikkunaa, ja talon edessä avautuu nurmikenttä eli '
+            + 'marae ātea.',
+          lahde: 'Kahuroa, Wikimedia Commons (PD)',
+          wiki: 'Marae',
+        },
+        {
+          otsikko: 'Tanssi, joka ei ole vain sotatanssi',
+          aika: 'n. 1845',
+          tiedosto: 'MaoriWardanceKahuroa.jpg',
+          teksti: 'Haka on asentotanssi, jossa sanat, jalkojen isku, kädet, '
+              + 'silmät ja ulos työnnetty kieli sanovat saman asian yhtä '
+              + 'aikaa. Käännös "sotatanssi" on liian kapea: hakoja on '
+              + 'juhliin, hautajaisiin, vieraiden vastaanottoon ja '
+              + 'tervehdyksiin, eikä esittäjän tarvitse olla soturi. '
+              + 'Tunnetuin niistä, Ka Mate, on Ngāti Toan päällikön Te '
+              + 'Rauparahan 1820-luvulla sepittämä haka taparahi, joka '
+              + 'esitetään ilman aseita. Sen sanat kertovat siitä, miten hän '
+              + 'väisti vainoojansa ja nousi piilostaan päivänvaloon: elämän '
+              + 'voitosta kuoleman yli.',
+          selite: 'Joseph Jenner Merrettin noin vuonna 1845 maalaama vesiväri '
+            + 'esittää rivin miehiä hakassa kokoustalon edustalla, aseet '
+            + 'koholla, ja istuvan yleisön kentän laidalla.',
+          lahde: 'Joseph Jenner Merrett, Wikimedia Commons (PD)',
+          wiki: 'Haka',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä sotakanoottiin ei saanut viedä, koska se oli tapu?',
+        vaihtoehdot: [
+          'Keitettyä ruokaa',
+          'Juomavettä',
+          'Kalaverkkoja',
+          'Melaa',
+        ],
+        oikea: 0,
+        fakta: 'Kanoottiin astuttiin samasta syystä laidan yli eikä keulasta '
+            + 'tai perästä.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saaret erosivat muusta maailmasta niin varhain, ettei niille '
+          + 'kehittynyt yhtään maalla elävää nisäkästä lepakoita lukuun '
+          + 'ottamatta — ja pohjoisessa maankuori kiehuu kaupungin katujen '
+          + 'alla.',
+      nostot: [
+        {
+          otsikko: 'Maa, jossa linnut ottivat nisäkkäiden paikan',
+          tiedosto: 'Apteryx mantelli -Rotorua, North Island, New Zealand-8a.jpg',
+          teksti: 'Kun ensimmäiset ihmiset nousivat maihin, saarilla ei ollut '
+              + 'yhtäkään maalla elävää nisäkästä: ainoat alkuperäiset olivat '
+              + 'kolme lepakkolajia. Linnut olivat ottaneet nisäkkäiden '
+              + 'paikat. Kiivi nuuskii toukkia maasta sieraimilla, jotka ovat '
+              + 'poikkeuksellisesti nokan kärjessä, ja kākāpō — maailman '
+              + 'ainoa lentokyvytön yöpapukaija — pesii maassa ja kokoontuu '
+              + 'soidinkuoppiin, joista koiraan jyminä kantaa kauas. Kun '
+              + 'laivat toivat rotat, kissat ja myöhemmin kärpät, tasapaino '
+              + 'kaatui: lähes puolet saarten alkuperäisistä lintulajeista on '
+              + 'kadonnut ihmisen saapumisen jälkeen.',
+          selite: 'Kiivi työntää pitkän nokkansa multaan Rotoruan '
+            + 'kiivitalossa, jossa lintu on nimilaputettu rengas jalassaan.',
+          lahde: 'The.Rohit, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kiivit',
+        },
+        {
+          otsikko: 'Yhdeksän jättiläistä ja niiden ainoa vihollinen',
+          tiedosto: 'Giant Haasts eagle attacking New Zealand moa.jpg',
+          teksti: 'Ennen ihmisiä metsien suurimmat kasvinsyöjät olivat moat, '
+              + 'yhdeksän lajia siivettömiä lintuja — ainoita lintuja, '
+              + 'joilta puuttuivat siipien surkastuneet jäänteetkin. Niiden '
+              + 'ainoa saalistaja oli Haastin kotka, suurin tunnettu kotka '
+              + 'maailmassa, joka painoi kymmenestä kahdeksaantoista kiloa ja '
+              + 'iski saaliinsa ylhäältä. Polynesialaiset saapuivat noin '
+              + 'vuoden 1300 tienoilla, ja alle sadassa vuodessa moat oli '
+              + 'metsästetty loppuun: vuoteen 1445 mennessä kaikki lajit '
+              + 'olivat kadonneet, ja kotka hävisi pian perässä. Lajin kuvasi '
+              + 'tieteelle Julius von Haast vasta vuonna 1871.',
+          selite: 'John Megahanin maalaus esittää Haastin kotkan iskeytymässä '
+            + 'kahden pakenevan moan kimppuun metsänreunassa.',
+          lahde: 'John Megahan, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Moat',
+        },
+        {
+          otsikko: 'Kaupunki, joka tuoksuu rikille',
+          tiedosto: 'WhakarewarewaGeyserFlat.jpg',
+          teksti: 'Rotorua tunnetaan lempinimellä Sulphur City: rikkivety '
+              + 'leijuu kaduilla ja tuoksuu mädälle munalle. Kaupunki seisoo '
+              + 'noin 240 000 vuotta sitten syntyneen tulivuorikalderan '
+              + 'päällä, ja kuuma vesi on osa arkea — siinä kypsennetään '
+              + 'ruokaa, pestään pyykkiä ja kylvetään. Te Arawan '
+              + 'perimätiedon mukaan lähteet syntyivät, kun tohunga '
+              + 'Ngātoro-i-rangi rukoili jumalia lähettämään tulihenget '
+              + 'kaukaisesta Hawaikista. Vuonna 1880 Ngāti Whakaue vuokrasi '
+              + 'kruunulle viisikymmentä eekkeriä maata sopimuksella, joka '
+              + 'teki paikasta kylpyläkaupungin ja matkailijoiden '
+              + 'lähtöpisteen.',
+          selite: 'Whakarewarewan geysirikentällä höyry nousee vaaleasta '
+            + 'piikuoresta ja kuuma puro juoksee kentän halki.',
+          lahde: 'Carl Lindberg, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Rotorua',
+        },
+        {
+          otsikko: 'Maailman kahdeksas ihme, joka katosi',
+          aika: '1886',
+          tiedosto: 'White Terraces - Blomfield.jpg',
+          teksti: 'Vuonna 1873 maan kuuluisin nähtävyys ovat Vaaleanpunaiset '
+              + 'ja Valkoiset Terassit, māoriksi Te Otukapuarangi ja Te '
+              + 'Tarata: piidioksidipitoinen kuuma vesi oli laskeutunut '
+              + 'vuosituhansien ajan altaiksi, jotka porrastuivat rinnettä '
+              + 'alas noin kahdeksan hehtaarin alalla. Matka oli oma '
+              + 'urakkansa — höyrylaivalla, kärryillä ja kanootilla, ja '
+              + 'perille pääsi vain Tūhourangi-heimon oppaan kanssa. Kaikki '
+              + 'loppui 10. kesäkuuta 1886, kun Tarawera purkautui ja hautasi '
+              + 'terassit. Tutkijat kiistelevät yhä siitä, tuhoutuiko kaikki: '
+              + 'vuoden 2016 tutkimus päätyi siihen, että suurin osa tuhoutui.',
+          selite: 'Charles Blomfieldin vuonna 1884 maalaama näkymä esittää '
+            + 'Valkoisten Terassien portaikon vaaleine altaineen ja '
+            + 'vaaleansinisine vesineen kaksi vuotta ennen purkausta.',
+          lahde: 'Charles Blomfield, Wikimedia Commons (PD)',
+          wiki: 'Pink and White Terraces',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitkä olivat Uuden-Seelannin ainoat alkuperäiset maalla '
+            + 'elävät nisäkkäät?',
+        vaihtoehdot: [
+          'Kolme lepakkolajia',
+          'Kaksi rottalajia',
+          'Villikissat',
+          'Ei yhtään lajia',
+        ],
+        oikea: 0,
+        fakta: 'Linnut olivat ottaneet ne paikat, jotka muualla kuuluvat '
+            + 'nisäkkäille.',
+      },
+    },
+    {
+      id: 'arki',
+      nimi: 'Talous',
+      johdanto: 'Toukokuussa 1861 mies löysi kultaa purosta Otagossa, ja '
+          + 'eteläsaari muuttui vuodessa; vuonna 1873 ryntäys on laantunut, '
+          + 'mutta suurin mullistus odottaa yhdeksän vuoden päässä.',
+      nostot: [
+        {
+          otsikko: 'Kultaa kuin tähdet Orionissa',
+          aika: '1861',
+          tiedosto: 'Old gold workings, St. Bathans, Otago, New Zealand.jpg',
+          teksti: 'Toukokuussa 1861 australialainen etsijä Gabriel Read kaivoi '
+              + 'Tuapeka-joen rantatörmää lähellä nykyistä Lawrencea. '
+              + '"Lapioin pois puolisen metriä soraa, tulin kauniiseen '
+              + 'pehmeään liuskeeseen ja näin kullan kimaltavan kuin tähdet '
+              + 'Orionissa pakkasyönä", hän kirjoitti. Löytökirje syntyi '
+              + 'Janet Robertsonin mökissä, ja uutinen ilmestyi Otago '
+              + 'Witnessissä 8. kesäkuuta. Ryntäys alkoi toden teolla vasta, '
+              + 'kun virkamies John Hardy kävi katsomassa kentän. Jouluun '
+              + 'mennessä etsijöitä oli 14 000, ja Otagon väkiluku kasvoi '
+              + '400 prosenttia vuosina 1861–1864.',
+          selite: 'St. Bathansissa vesisuihkuilla huuhdotut kalliot ja niiden '
+            + 'juureen jäänyt syvä vedellä täyttynyt kuoppa ovat sitä, mitä '
+            + 'kultaryntäys jätti maisemaan.',
+          lahde: 'Phillip Capper, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Otagon kultaryntäys',
+        },
+        {
+          otsikko: 'Kutsutut kaivajat',
+          aika: '1866',
+          tiedosto: 'Arrowtown Chinese goldminers huts.jpg',
+          teksti: 'Vuoteen 1865 mennessä ensimmäinen ryntäys oli ohi ja '
+              + 'etsijät siirtyivät länsirannikon uusille kentille. Otagon '
+              + 'maakuntaneuvosto pelkäsi talouden romahtavan ja kutsui '
+              + 'Victorian kaivoksilta kiinalaisia kaivajia jatkamaan työtä '
+              + 'hylätyillä valtauksilla. Vuoden 1866 väenlaskussa heitä oli '
+              + 'Otagossa alle kaksisataa, seuraavina vuosikymmeninä '
+              + 'tuhansia. Arrowtowniin syntyi oma kylä, jonka majat '
+              + 'rakennettiin kallioseinämää vasten suojaan tuulelta. Kutsu '
+              + 'ei tarkoittanut tervetulotoivotusta: kaivajat kohtasivat '
+              + 'syrjintää, ja harva ansaitsi tarpeeksi päästäkseen takaisin '
+              + 'kotiin.',
+          selite: 'Arrowtownin kiinalaiskylän maja on rakennettu suoraan '
+            + 'liuskekallion kylkeen, ja sen katto jatkuu rinteeseen '
+            + 'olkikerroksena.',
+          lahde: 'Wildman NZ, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Arrowtown',
+        },
+        {
+          otsikko: 'Ennen kultaa oli villa',
+          tiedosto: 'EMC Sheep.jpg',
+          teksti: 'Talouden perusta oli lammas jo ennen kultaa. 1840-luvulta '
+              + 'lähtien laajat lammastilat veivät villaa Englannin '
+              + 'kehruukoneille, ja karjatilallinen sai vuokrata '
+              + 'hallitukselta laidunta viidellä punnalla vuodessa lisättynä '
+              + 'punnalla jokaista tuhatta lammasta kohti, jotka ylittivät '
+              + 'ensimmäiset viisituhatta. Halpa maa ja pitkät laitumet '
+              + 'tekivät harvoista miehistä poikkeuksellisen rikkaita. '
+              + 'Vuosina 1856–1876 maata myytiin 8,1 miljoonaa eekkeriä 7,6 '
+              + 'miljoonalla punnalla, ja 2,2 miljoonaa eekkeriä annettiin '
+              + 'ilmaiseksi sotilaille, merimiehille ja siirtolaisille. Metsä '
+              + 'vaihtui laitumeksi koko maan mitassa.',
+          selite: 'Merinolammaslauma siirtyy laitumelta toiselle paimenen ja '
+            + 'koiran ajamana Canterburyn tasangolla.',
+          lahde: 'Experience Mid Canterbury, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Lampaiden kasvatus',
+        },
+        {
+          otsikko: 'Laiva, joka muutti maan suunnan',
+          aika: '1882',
+          tiedosto: 'SS Dunedin by Frederick Tudgay.JPG',
+          teksti: 'Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä '
+              + 'Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 '
+              + 'Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä '
+              + 'päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista '
+              + 'Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian '
+              + 'ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma '
+              + 'kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään '
+              + 'sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä '
+              + 'puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan '
+              + 'jälkeen, ja vain yksi ruho hylättiin.',
+          selite: 'Frederick Tudgayn maalaus vuodelta 1875 esittää Dunedinin '
+            + 'täysissä purjeissa avomerellä, punainen kauppalippu perässä.',
+          lahde: 'Frederick Tudgay, Wikimedia Commons (PD)',
+          wiki: 'Dunedin (laiva)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä laiva Dunedin vei Lontooseen helmikuussa 1882?',
+        vaihtoehdot: [
+          'Jäähdytettyä lihaa',
+          'Kultaharkkoja',
+          'Villapaaleja',
+          'Kauriipuuta',
+        ],
+        oikea: 0,
+        fakta: 'Matka kesti 98 vuorokautta, ja perillä vain yksi ruho '
+            + 'jouduttiin hylkäämään.',
+      },
+    },
+    {
+      id: 'meri',
+      nimi: 'Merenkulku',
+      johdanto: 'Aotearoa on yksi viimeisistä suurista maista, joihin ihminen '
+          + 'löysi tien, ja vielä isoisän aikaan sinne pääsee vain kolmen '
+          + 'kuukauden merimatkalla.',
+      nostot: [
+        {
+          otsikko: 'Navigointi ilman kompassia',
+          tiedosto: '00 0524 Te Aurere, ein Doppelrumpf-Kanu (Waka Hourua) der Maoris.jpg',
+          teksti: 'Aotearoaan purjehdittiin avomeren yli satoja vuosia ennen '
+              + 'eurooppalaisia. Alukset olivat suuria waka hourua '
+              + '-kaksirunkokanootteja, ja suunta pidettiin ilman kompassia: '
+              + 'tähtien nousukohdista, aallokon suunnasta, pilvien väristä '
+              + 'saaren yllä ja merilintujen lentoreiteistä. Perimätieto '
+              + 'muistaa kanoottien nimet, ja monet heimot laskevat sukunsa '
+              + 'niistä yhä. Vanhin löydetty kanootin osa, Anaweka-waka '
+              + 'Eteläsaaren pohjoisrannikolta, on ajoitettu noin vuoteen '
+              + '1400 ja rakennettu jo täällä — muun Polynesian tyyliin, '
+              + 'mutta uusiseelantilaisesta puusta.',
+          selite: 'Kaksirunkoinen purjehduskanootti Te Aurere makaa ankkurissa '
+            + 'tyynellä lahdella, kaksi mastoa pystyssä ja rungot yhdistetty '
+            + 'kannella.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Polynesialainen navigointi',
+        },
+        {
+          otsikko: 'Kohtaaminen, joka meni pieleen',
+          aika: '1642',
+          tiedosto: 'Gilsemans 1642.jpg',
+          teksti: '13. joulukuuta 1642 hollantilainen Abel Tasman näki '
+              + 'ensimmäisenä eurooppalaisena Uuden-Seelannin rannan. '
+              + 'Muutamaa päivää myöhemmin, ankkurissa nykyisen Golden Bayn '
+              + 'edustalla, hänen miehensä ja māorit soittivat toisilleen '
+              + 'torvia pimeässä ymmärtämättä sanaakaan. Aamulla kohtaaminen '
+              + 'kääntyi väkivaltaiseksi: waka törmäsi alusten välillä '
+              + 'soutavaan veneeseen, neljä hollantilaista sai surmansa '
+              + 'patu-aseen iskuista, ja laivoilta ammuttiin poistuvia '
+              + 'kanootteja. Tasman nimesi paikan Murhaajien lahdeksi ja '
+              + 'purjehti pois astumatta koskaan maihin.',
+          selite: 'Isaack Gilsemansin piirros vuodelta 1642 näyttää '
+            + 'hollantilaiset alukset ja niitä ympäröivät kanootit; kirjaimet '
+            + 'A–F ja käsin kirjoitettu selitys ovat piirtäjän omat.',
+          lahde: 'Isaack Gilsemans, Wikimedia Commons (PD)',
+          wiki: 'Abel Tasman',
+        },
+        {
+          otsikko: 'Rapu, kangas ja tulkki Tahitilta',
+          aika: '1769',
+          tiedosto: 'A Maori man and Joseph Banks exchanging a crayfish for a piece of cloth, c. 1769.jpg',
+          teksti: 'Lokakuussa 1769 James Cook ankkuroi Endeavourin Poverty '
+              + 'Bayhin. Mukana oli tahitilainen pappi ja navigoija Tupaia, '
+              + 'jonka kieli oli riittävän lähellä te reoa, jotta puhe kulki '
+              + '— ensimmäistä kertaa eurooppalaisten ja māorien välillä. '
+              + 'Ensikohtaamiset johtivat myös kuolemiin, mutta matka jatkui: '
+              + 'tammikuussa 1770 Cook saapui Queen Charlotte Soundiin, josta '
+              + 'tuli hänen tukikohtansa ja jossa hän varmisti salmen '
+              + 'erottavan kaksi saarta. Hän purjehti koko maan ympäri ja '
+              + 'kartoitti rantaviivan niin tarkasti, että karttoja '
+              + 'käytettiin vielä sata vuotta myöhemmin.',
+          selite: 'Tupaian piirroksessa viittaan pukeutunut māori ojentaa '
+            + 'suuren punaisen ravun ja Joseph Banks tarjoaa vastineeksi '
+            + 'valkoista kangaspalaa.',
+          lahde: 'Tupaia, Wikimedia Commons (PD)',
+          wiki: 'James Cook',
+        },
+        {
+          otsikko: 'Sata vuorokautta merellä',
+          tiedosto: 'William Allsworth - The emigrants - Google Art Project.jpg',
+          teksti: 'Isoisän aikaan Lontoosta Uuteen-Seelantiin oli kolmen '
+              + 'kuukauden matka. Purjelaiva Dunedin teki ensimmäisen '
+              + 'matkansa Lontoosta Lytteltoniin 98 vuorokaudessa vuonna 1874 '
+              + 'ja seuraavana vuonna Aucklandiin 94:ssä; sen seitsemästä '
+              + 'siirtolaismatkasta jokainen alitti sata päivää. Se oli '
+              + 'nopeaa — ja silti kolmasosa vuodesta merellä, suurimmaksi '
+              + 'osaksi ilman satamaa matkan varrella, myrskyisillä '
+              + 'eteläisillä leveysasteilla. Suezin kanava avattiin 1869 ja '
+              + 'höyrylaivat lyhensivät matkoja muualla, mutta Uusi-Seelanti '
+              + 'pysyi kaukaisimpana kohteena, johon Euroopasta lähdettiin.',
+          selite: 'William Allsworthin maalaus vuodelta 1844 esittää '
+            + 'skotlantilaisperheen tavaroineen ja lampaineen rannalla, '
+            + 'purjelaiva odottamassa ulapalla.',
+          lahde: 'William Allsworth, Wikimedia Commons (PD)',
+          wiki: 'Siirtolaisuus',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka eurooppalainen näki Uuden-Seelannin ensimmäisenä '
+            + 'vuonna 1642?',
+        vaihtoehdot: [
+          'Abel Tasman',
+          'James Cook',
+          'Francis Drake',
+          'Ferdinand Magalhães',
+        ],
+        oikea: 0,
+        fakta: 'Hän ei astunut maihin lainkaan, vaan purjehti pois '
+            + 'nimettyään paikan Murhaajien lahdeksi.',
+      },
+    },
+  ],
+  /*
+   * BRASILIA (BRA) — Etelä-Amerikan ensimmäinen maalehti.
+   *
+   * Aiheet ovat Fablen toimeksiannon mukaiset (historia, luonto, tiede,
+   * musiikki, ruoka) ja seuraavat USA:n mallia. Aineisto on
+   * docs/mantereet-tyoaineisto/faktapohja-brasilia.md ja
+   * tarkistus-brasilia.md yhdessä luettuna, ja jokainen tekstiin
+   * päätynyt luku on tarkistettu vielä kerran en-Wikipedian
+   * raakatekstistä 23.8.2026.
+   *
+   * TARKISTUKSEN KORJAUKSET, JOTKA TEHTIIN:
+   *  - Kumipuun siementen salakuljetusvuosi (L2). Faktapohja siteerasi
+   *    vuodelle 1876 artikkelia "Hevea brasiliensis", joka itse sanoo
+   *    1875. Teksti nojaa nyt artikkeleihin "Amazon rubber cycle" ja
+   *    "Henry Wickham (explorer)" (siemenet perillä Kew'ssä 15.6.1876,
+   *    itäneitä n. 2 700) eikä mainitse vuotta lainkaan: se kertoo
+   *    "kolme vuotta myöhemmin", jolloin ristiriita ei siirry peliin.
+   *  - Alkuperäiskansojen 2022-luku (L4). Käytössä on JOHDONMUKAISESTI
+   *    väestönlaskennan väri/rotu-kysymyksen luku 1 227 642, joka on
+   *    vertailukelpoinen vuoden 1872 luvun 386 955 kanssa samasta
+   *    taulukosta. Artikkelin toinen luku 1 694 836 (johon 391 kansaa
+   *    ja 295 kieltä liittyvät) on ERI kysymyksestä; teksti sanoo siksi
+   *    "samaan kysymykseen vastasi", eikä lukuja lasketa yhteen.
+   *  - Kansallismuseo (T4). Faktapohja väitti museon sijainneen São
+   *    Cristóvãon palatsissa jo Pedro II:n aikana. En-Wikipedia
+   *    ("National Museum of Brazil") sanoo toisin: palatsi oli
+   *    keisariperheen asunto, ja museo muutti sinne vasta 1892
+   *    monarkian kaaduttua. Teksti kertoo asian oikein. Tulipalon
+   *    päivämäärä 2.9.2018 tarkistettiin samasta artikkelista
+   *    (faktapohjan avoin kysymys F).
+   *  - Feijoadan alkuperä (R2). En-Wikipedia kirjoittaa auki, että
+   *    tutumpi "orjien ylijäämäruoka" -tarina on kiistanalainen ja että
+   *    padalla on portugalilainen esimuoto. Ristiriita kerrotaan
+   *    lukijalle sellaisenaan reseptin ohjeen mukaan.
+   *  - Paraguayn sota (H3) kerrotaan tapahtumana ilman taistelukuvauksia,
+   *    ja uhriluku annetaan haarukkana 150 000–500 000, koska
+   *    en-Wikipedia itse sanoo sen kiistanalaiseksi.
+   *  - Darwinin gaúcho-sitaatista (R4) käytetään vain sen
+   *    ensimmäinen puolisko; jälkiosan puukkotappelukuvaus jätettiin
+   *    pois Perustuslain väkivaltalinjauksen mukaisesti.
+   *
+   * MINITEHTÄVIÄ on viisi, yksi joka aiheella (toimeksianto). Jokaisen
+   * vastaus löytyy saman sivun nostotekstistä eikä vuoda otsikkoon tai
+   * johdantoon (tools/tarkista-maa.mjs). Törmäystarkistus
+   * southamerica-questions.js:ää vasten tehtiin: siellä on jo kysymys
+   * terra pretasta (Santarém) ja Manausin kumikauden oopperatalosta,
+   * joten minitehtävät kysyvät muuta.
+   *
+   * KUVAT: 20 nostokuvaa, jokainen haettu Commonsin rajapinnasta,
+   * lisenssi ja tekijä extmetadatasta, leveys ≥ 1200 px ja jokainen
+   * katsottu silmin 900 px:n esikatselussa. Painokuvissa (vuoden 1871
+   * juhlalitografia, Revista Illustradan kansi 1880, vuoden 1851
+   * kaiverrus) näkyy julkaisijan oma teksti ja siementen kuvassa
+   * mittajana — reseptin sallima poikkeus, joka kerrotaan
+   * kuvatekstissä. Kaksi kuvaa hylättiin merkintöjen takia: Rio
+   * Brancon lain alkuperäissivulla on Arquivo Nacionalin vesileima ja
+   * Marc Ferrezin kahvitilakuvissa kuvaajan oma painosigneeraus.
+   * Pedro II esiintyy kolmessa kuvassa (maalaus 1872, valokuva 1865,
+   * Bradyn studiomuotokuva) — perusteltu toisto, koska hän on sekä
+   * historian että tieteen sivun keskushenkilö.
+   */
+  BRA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 Brasilia on Amerikan mantereen ainoa '
+          + 'keisarikunta, ja orjuus on yhä laillista — mutta sen '
+          + 'purkaminen on jo alkanut.',
+      nostot: [
+        {
+          otsikko: 'Viisivuotias jäi valtaistuimelle',
+          aika: '1831–1873',
+          tiedosto: 'Pedro Américo - D. Pedro II na abertura da Assembléia Geral.jpg',
+          teksti: 'Kun Pedro I luopui kruunusta 1831 ja purjehti takaisin '
+              + 'Portugaliin, Brasilian valtaistuimelle jäi hänen '
+              + 'viisivuotias poikansa. Täysivaltaiseksi hallitsijaksi '
+              + 'Pedro II julistettiin vasta 1840, ja vuoteen 1873 mennessä '
+              + 'hän oli hallinnut yli kolmekymmentä vuotta ainoaa '
+              + 'monarkiaa, joka Amerikan mantereella oli — ympärillä '
+              + 'pelkkiä tasavaltoja. Keisari piti itseään ennen kaikkea '
+              + 'oppineena: hän luki kymmentä kieltä latinasta arabiaan ja '
+              + 'tupiin, ja hänen palatsissaan São Cristóvãossa oli kolme '
+              + 'kirjastoa ja yli 60 000 kirjaa.',
+          selite: 'Pedro Américon maalaus vuodelta 1872 esittää Pedro II:n '
+            + 'keisarillisessa asussaan yleiskokouksen avajaisissa.',
+          lahde: 'Pedro Américo, Wikimedia Commons (PD)',
+          wiki: 'Pedro II (Brasilia)',
+        },
+        {
+          otsikko: 'Vapaa kohtu, ehdollinen lapsuus',
+          aika: '1871',
+          tiedosto: 'Gabinete Rio Branco (1871-1875).jpg',
+          teksti: 'Syyskuun 28. päivänä 1871, puolitoista vuotta ennen '
+              + 'isoisän matkaa, Brasilian yleiskokous hyväksyi Rio Brancon '
+              + 'lain: tästä eteenpäin orjuutetuille äideille syntyvät '
+              + 'lapset olivat vapaita. Laissa oli aukko, joka söi '
+              + 'lupauksen. Vapaana syntynyt lapsi oli silti velvollinen '
+              + 'palvelemaan äitinsä omistajaa 21 vuoden ikään asti, eikä '
+              + 'laki vapauttanut yhtäkään jo elävää orjaa: yli miljoona '
+              + 'ihmistä jäi orjuuteen. Kokonaan orjuus kiellettiin vasta '
+              + 'Kultalailla 13. toukokuuta 1888.',
+          selite: 'Juhlalitografia ylistää ministeriötä, joka sääti Rio '
+            + 'Brancon lain 1871; painoksen oma otsikko ja ministerien '
+            + 'nimiluettelo ovat kuvan alalaidassa.',
+          lahde: 'Um Historiador, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vapaan kohdun laki',
+        },
+        {
+          otsikko: 'Sota, joka käänsi upseerien mielet',
+          aika: '1864–1870',
+          tiedosto: 'Brazilian army in Paraguay.jpg',
+          teksti: 'Paraguayn sota päättyi keväällä 1870, kolme vuotta ennen '
+              + 'isoisän matkaa. Se oli mantereen verisin sota, jonka '
+              + 'uhriluvusta historiantutkijat eivät ole päässeet '
+              + 'yksimielisyyteen: arviot vaihtelevat 150 000:sta '
+              + '500 000:een kuolleeseen. Brasilia lähetti rintamalle noin '
+              + '146 000 miestä, ja heidän joukossaan oli 8 570 orjuutettua '
+              + 'miestä, jotka vapautettiin palvelukseen lähetettäessä. '
+              + 'Upseerit, jotka olivat taistelleet heidän rinnallaan, '
+              + 'alkoivat epäillä koko järjestelmää eivätkä enää halunneet '
+              + 'jäljittää karanneita orjia armeijan käskystä.',
+          selite: 'Brasilian armeija kokoontuneena Paraguayssa sodan '
+            + 'loppuvaiheessa; rintamalle lähetettiin kaikkiaan noin '
+            + '146 000 miestä.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Paraguayn sota',
+        },
+        {
+          otsikko: 'Itsenäisyys ilman pitkää sotaa',
+          aika: '1822',
+          tiedosto: 'François-René Moreaux – Proclamação da Independência (1844).jpg',
+          teksti: 'Syyskuun 7. päivänä 1822 Portugalin prinssiregentti Pedro '
+              + 'julisti Ipiranga-puron rannalla São Paulon liepeillä '
+              + 'Brasilian irti emämaasta. Toisin kuin Espanjan '
+              + 'siirtomaissa, joissa itsenäisyys vaati vuosikymmenten '
+              + 'sodat ja joissa valtakunta hajosi tusinaksi tasavallaksi, '
+              + 'Brasilia irtautui verrattain vähäisin taisteluin ja pysyi '
+              + 'yhtenä valtiona — ja sen hallitsijaksi tuli emämaan oman '
+              + 'kuningashuoneen prinssi, keisari Pedro I. Vuonna 1873 '
+              + 'tästä on kulunut 51 vuotta.',
+          selite: 'François-René Moreaux’n maalaus vuodelta 1844 esittää '
+            + 'Brasilian itsenäisyyden julistamista Ipiranga-purolla '
+            + '7. syyskuuta 1822.',
+          lahde: 'François-René Moreaux, Wikimedia Commons (PD)',
+          wiki: 'Brasilian itsenäisyys',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Brasiliassa säädettiin laki, jonka mukaan '
+            + 'orjuutetuille äideille syntyvät lapset olivat vapaita?',
+        vaihtoehdot: ['1822', '1850', '1871', '1888'],
+        oikea: 2,
+        fakta: 'Laki koski vain vastedes syntyviä lapsia; kokonaan orjuus '
+            + 'lakkautettiin vasta 17 vuotta myöhemmin.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Joka kymmenes maailman tunnettu eliölaji elää Amazonilla, '
+          + 'eikä metsä ole koskaan ollut tyhjä erämaa.',
+      nostot: [
+        {
+          otsikko: 'Metsä, jonka koko ei mahdu mieleen',
+          tiedosto: 'Amazon CIAT (2).jpg',
+          teksti: 'Amazonin altaan seitsemästä miljoonasta neliökilometristä '
+              + 'kuusi miljoonaa on sademetsän peitossa — yli puolet koko '
+              + 'maailman jäljellä olevasta sademetsästä. Siitä 60 '
+              + 'prosenttia on Brasilian puolella, 13 prosenttia Perussa ja '
+              + '10 prosenttia Kolumbiassa. Puita arvioidaan olevan 390 '
+              + 'miljardia noin 16 000 lajissa, hyönteislajeja 2,5 '
+              + 'miljoonaa ja lintu- ja nisäkäslajeja parisen tuhatta. '
+              + 'Yhdellä hehtaarilla elää noin miljardi selkärangatonta. '
+              + 'Alue ulottuu yhdeksän valtion alueelle, ja siellä on '
+              + '3 344 tunnustettua alkuperäiskansojen aluetta.',
+          selite: 'Amazonin sademetsä ja joki Manausin lähellä; sademetsää '
+            + 'on altaan seitsemästä miljoonasta neliökilometristä kuusi '
+            + 'miljoonaa.',
+          lahde: 'Neil Palmer/CIAT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Amazonin sademetsä',
+        },
+        {
+          otsikko: 'Kaksitoista tainta, jotka eivät selvinneet',
+          aika: '1873',
+          tiedosto: 'Hevea semillas2.jpg',
+          teksti: 'Täsmälleen isoisän matkavuonna 1873 Lontoon Kew Gardens '
+              + 'yritti ensi kertaa kasvattaa Amazonin kumipuuta Brasilian '
+              + 'ulkopuolella. Kaksitoista tainta itikin, mutta ne '
+              + 'lähetettiin Intiaan ja kuolivat matkalla. Kolme vuotta '
+              + 'myöhemmin englantilainen Henry Wickham vei Santarémista '
+              + '70 000 siementä samaan puutarhaan; niistä iti noin 2 700, '
+              + 'ja taimet päätyivät Ceyloniin ja Singaporeen. Kumin vienti '
+              + 'Amazonilta oli noussut 2 100 tonnista matkalla kohti '
+              + 'kymmentätuhatta — suuri kumibuumi oli vasta alkamassa.',
+          selite: 'Kumipuun siemeniä, joita Henry Wickham vei Kew Gardensiin '
+            + '70 000 kappaletta; kuvan mittajana kertoo niiden koon.',
+          lahde: 'User:Luis Fernández García, Wikimedia Commons '
+            + '(CC BY-SA 2.5 es)',
+          wiki: 'Kumipuu',
+        },
+        {
+          otsikko: 'Musta multa on ihmisen tekoa',
+          tiedosto: 'Cultura Santarém - Cerâmicas MN 01.jpg',
+          teksti: 'Amazonilla on laajoja alueita tummaa, poikkeuksellisen '
+              + 'viljavaa maata, jota kutsutaan nimellä terra preta. Sitä '
+              + 'ei syntynyt itsestään: ihmiset tekivät sitä vuosien 450 '
+              + 'eaa. ja 950 jaa. välillä sekoittamalla köyhään '
+              + 'sademetsämaahan hiiltä, luuta, ruukunsirpaleita ja '
+              + 'kompostia. Hiili säilyy maassa tuhansia vuosia ja pitää '
+              + 'ravinteet paikallaan. Kuinka laajalti sitä on, siitä '
+              + 'tutkijat kiistelevät: arviot vaihtelevat 0,1 prosentista '
+              + 'yli kymmeneen prosenttiin metsän alasta. Xingu-joen '
+              + 'latvoilta on löytynyt Kuhikugu, parinkymmenen '
+              + 'muinaisyhdyskunnan verkosto.',
+          selite: 'Santarémin kulttuurin keramiikkaa Brasilian '
+            + 'kansallismuseon kokoelmissa; ruukunsirpaleet ovat yksi '
+            + 'terra pretan aineksista.',
+          lahde: 'Dornicke, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Terra preta',
+        },
+        {
+          otsikko: 'Kolmesataayhdeksänkymmentäyksi kansaa',
+          tiedosto: 'Parque Indígena do Xingu.jpg',
+          teksti: 'Brasilian ensimmäisessä väestönlaskennassa, joka laski '
+              + 'myös alkuperäiskansat — vuonna 1872, vuosi ennen isoisän '
+              + 'matkaa — heitä kirjattiin 386 955 eli 3,9 prosenttia '
+              + 'väestöstä. Vuoden 2022 laskennassa samaan kysymykseen '
+              + 'vastasi 1 227 642 ihmistä. Kansoja on 391 ja kieliä 295. '
+              + 'Vuoden 1988 perustuslaki tunnustaa kansojen oikeuden omaan '
+              + 'elämäntapaansa ja perinteisiin maihinsa, ja ensimmäinen '
+              + 'suojelualue, Xingun kansallispuisto, perustettiin jo 1961. '
+              + 'Kyse ei ole menneisyydestä vaan tämän päivän Brasiliasta.',
+          selite: 'Ipatsen kylä Xingun kansallispuistossa on Kuikuro-kansan '
+            + 'pääyhteisö.',
+          lahde: 'Pedro Biondi/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Brasilian alkuperäiskansat',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Kew Gardensissa yritettiin ensimmäisen kerran '
+            + 'kasvattaa Amazonin kumipuuta Brasilian ulkopuolella?',
+        vaihtoehdot: ['1855', '1873', '1879', '1896'],
+        oikea: 1,
+        fakta: 'Taimet itivät, mutta kuolivat matkalla Intiaan — vasta '
+            + 'seuraava yritys onnistui.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Brasilian tiedehistoria 1800-luvulla kulkee melkein aina '
+          + 'saman miehen kautta: keisarin, joka olisi mieluummin ollut '
+          + 'opettaja.',
+      nostot: [
+        {
+          otsikko: 'Maan ensimmäinen valokuvaaja oli keisari',
+          aika: '1840',
+          tiedosto: 'Pedro II of Brazil in imperial uniform 1865.jpg',
+          teksti: 'Maaliskuussa 1840, samana vuonna kun hänet julistettiin '
+              + 'täysivaltaiseksi hallitsijaksi, nuori Pedro II hankki '
+              + 'daguerrotypiakameran ja tuli Brasilian ensimmäiseksi '
+              + 'valokuvaajaksi. Hän rakennutti São Cristóvãon palatsiin '
+              + 'oman valokuvauslaboratorion, toisen kemian ja fysiikan '
+              + 'kokeille sekä tähtitieteellisen observatorion. Vuoteen '
+              + '1873 mennessä hän oli harrastanut valokuvausta yli '
+              + 'kolmekymmentä vuotta, ja häntä itseään kuvattiin niin '
+              + 'usein, että hänestä tuli yksi 1800-luvun kuvatuimmista '
+              + 'hallitsijoista.',
+          selite: 'Revert Henrique Klumbin valokuva vuodelta 1865 esittää '
+            + 'Pedro II:n, joka oli itse Brasilian ensimmäinen '
+            + 'valokuvaaja.',
+          lahde: 'Revert Henrique Klumb, Wikimedia Commons (PD)',
+          wiki: 'Daguerrotypia',
+        },
+        {
+          otsikko: 'Kalastusretki, joka toi filosofin Amazonille',
+          aika: '1865–1866',
+          tiedosto: 'Group portrait of Thayer Expedition assistants and volunteers.jpg',
+          teksti: 'Huhtikuun 2. päivänä 1865, viikko ennen Yhdysvaltain '
+              + 'sisällissodan päättymistä, sveitsiläissyntyinen '
+              + 'luonnontieteilijä Louis Agassiz purjehti New Yorkista '
+              + 'Rioon johtamaan retkikuntaa, jonka bostonilainen liikemies '
+              + 'Nathaniel Thayer maksoi. Puolessatoista vuodessa ryhmä '
+              + 'keräsi kymmeniä tuhansia kalanäytteitä Amazonilta '
+              + 'Kolumbian ja Perun rajoille asti. Mukana oli kuusi nuorta '
+              + 'vapaaehtoista, joista yksi oli 23-vuotias William James — '
+              + 'tuleva filosofi ja psykologian uranuurtaja, tuolloin vasta '
+              + 'oppipoika kalaverkko kädessään.',
+          selite: 'Thayer-retkikunnan avustajat ja vapaaehtoiset; lattialla '
+            + 'vasemmalla istuu 23-vuotias William James.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'William James',
+        },
+        {
+          otsikko: 'Kolmas hallitsija akatemian luettelossa',
+          aika: '1875',
+          tiedosto: 'Pedro II of Brazil - Brady-Handy.jpg',
+          teksti: 'Vuonna 1875 Ranskan tiedeakatemia valitsi Pedro II:n '
+              + 'jäsenekseen. Valtionpäämiehistä sama kunnia oli ennen '
+              + 'häntä osunut vain kahdelle: Pietari Suurelle ja Napoleon '
+              + 'Bonapartelle. Keisari kuului myös Lontoon Royal Societyyn '
+              + 'ja Venäjän tiedeakatemiaan ja kävi kirjeenvaihtoa muun '
+              + 'muassa Louis Pasteurin, Alexander Graham Bellin ja Richard '
+              + 'Wagnerin kanssa. Omista varoistaan hän tuki '
+              + 'Pasteur-instituutin perustamista ja Wagnerin oopperatalon '
+              + 'rakentamista Bayreuthiin.',
+          selite: 'Pedro II siviiliasussa kuvattuna; keisari oli Ranskan '
+            + 'tiedeakatemian jäsen vuodesta 1875.',
+          lahde: 'Mathew Benjamin Brady / Levin Corbin Handy, Wikimedia '
+            + 'Commons (PD)',
+          wiki: 'Ranskan tiedeakatemia',
+        },
+        {
+          otsikko: 'Museo, joka alkoi lintujen talona',
+          aika: '1818',
+          tiedosto: 'Palace of sao cristovao by stahl 1862.jpg',
+          teksti: 'Kuningas João VI perusti 1818 Rioon Kuninkaallisen '
+              + 'museon, jonka ensimmäiset kokoelmat olivat kasveja ja '
+              + 'lintuja — kaupunkilaiset kutsuivat sitä Lintujen taloksi. '
+              + 'Pedro II teki siitä tutkimuslaitoksen: hän kutsui maahan '
+              + 'ulkomaisia tiedemiehiä, kuten saksalaisen kasvitieteilijän '
+              + 'Ludwig Riedelin ja amerikkalaisen geologin Charles '
+              + 'Frederick Harttin, ja lahjoitti museolle omia esineitään. '
+              + 'Museo muutti 1892 tyhjilleen jääneeseen keisarilliseen '
+              + 'palatsiin São Cristóvãossa, ja siellä se paloi '
+              + '2. syyskuuta 2018.',
+          selite: 'São Cristóvãon palatsi vuonna 1862 oli keisariperheen '
+            + 'koti, ja Brasilian kansallismuseo muutti siihen 1892.',
+          lahde: 'Augusto Stahl (1828–1877), Wikimedia Commons (PD)',
+          wiki: 'Brasilian kansallismuseo',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka Louis Agassizin retkikunnan nuori vapaaehtoinen '
+            + 'tuli myöhemmin kuuluisaksi filosofina ja psykologina?',
+        vaihtoehdot: [
+          'Charles Darwin',
+          'William James',
+          'Henry Wickham',
+          'Ludwig Riedel',
+        ],
+        oikea: 1,
+        fakta: 'Hän oli retkikunnan lähtiessä 23-vuotias ja keräsi '
+            + 'kalanäytteitä Amazonilla.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Brasilian musiikki syntyi risteyksessä, jossa Länsi-Afrikan '
+          + 'rytmit, Portugalin salonkilaulut ja kadun omat äänet '
+          + 'sekoittuivat toisiinsa.',
+      nostot: [
+        {
+          otsikko: 'Tyylilaji, jonka nimi tarkoittaa itkua',
+          aika: '1870',
+          tiedosto: 'Capa da Revista Illustrada, n.º 202 (1880).png',
+          teksti: 'Vuonna 1870 huilisti Joaquim Callado kokosi Rio de '
+              + 'Janeirossa yhtyeen, jonka nimeksi tuli Choro Carioca: '
+              + 'eebenpuinen huilu, kaksi kitaraa ja cavaquinho. Yhtye '
+              + 'soitti eurooppalaisia tanssikappaleita — polkkia, '
+              + 'valsseja, mazurkkoja — mutta afrobrasilialaisin rytmein ja '
+              + 'runsain improvisaatioin, ja tästä soittotavasta kasvoi '
+              + 'oma lajinsa. Nimen alkuperästä kiistellään yhä: se voi '
+              + 'tulla portugalin itkemistä tarkoittavasta sanasta tai '
+              + 'latinan kuoroa tarkoittavasta sanasta. Musiikki itse on '
+              + 'useimmiten nopeaa ja iloista.',
+          selite: 'Revista Illustrada -lehden kansi vuodelta 1880 esittää '
+            + 'huilisti Joaquim Calladon, jonka yhtyeestä choro sai '
+            + 'alkunsa; kannessa on lehden oma nimiö ja hintaluettelo.',
+          lahde: 'Angelo Agostini, Wikimedia Commons (PD)',
+          wiki: 'Choro',
+        },
+        {
+          otsikko: 'Nainen, joka käveli miesten piiriin',
+          aika: '1877',
+          tiedosto: 'Chiquinha Gonzaga portrait 1877.jpg',
+          teksti: 'Chiquinha Gonzaga naitettiin kuusitoistavuotiaana isänsä '
+              + 'valitsemalle laivaston upseerille. Hän jätti miehensä ja '
+              + 'pyysi avioeroa, mikä oli 1860-luvun Brasiliassa skandaali: '
+              + 'isä julisti hänet kuolleeksi ja nimeltä mainitsemattomaksi. '
+              + 'Gonzaga elätti itsensä ja poikansa pianotunneilla ja alkoi '
+              + 'käydä choro-illoissa, jotka olivat siihen asti olleet '
+              + 'miesten juttu — hänestä tuli ensimmäinen nainen Calladon '
+              + 'yhtyeessä. Vuonna 1877 hän improvisoi pianolla kesken '
+              + 'illan polkan Atraente, ensimmäisen suuren hittinsä. '
+              + 'Myöhemmin hänestä tuli Brasilian ensimmäinen '
+              + 'naiskapellimestari.',
+          selite: 'Chiquinha Gonzagan muotokuva noin vuodelta 1877, '
+            + 'myöhemmin väritettynä; samana vuonna hän sävelsi polkan '
+            + 'Atraente.',
+          lahde: 'Edinha Diniz, Wikimedia Commons (PD)',
+          wiki: 'Chiquinha Gonzaga',
+        },
+        {
+          otsikko: 'Peli, joka piiloutui musiikkiin',
+          tiedosto: 'Rugendasroda.jpg',
+          teksti: 'Capoeira syntyi orjuutettujen afrikkalaisten keskuudessa, '
+              + 'ja sen juuret johtavat Angolan engolo-taistelutaitoon. '
+              + 'Virallisiin papereihin se päätyi ensi kerran 1789 '
+              + 'vakavimpana rikoksena, ja rikoslaissa se pysyi vielä '
+              + 'vuoden 1890 jälkeenkin. Harjoittajat eivät puhu '
+              + 'taistelemisesta vaan pelaamisesta: liikkeet kulkevat '
+              + 'musiikin tahdissa, ja perusaskel ginga heiluu puolelta '
+              + 'toiselle kuin tanssissa. Piiriä eli rodaa johtaa berimbau, '
+              + 'yksijousinen soitin, jonka rytmi kertoo millaista peliä '
+              + 'pelataan. Unesco otti capoeira-piirin '
+              + 'kulttuuriperintöluetteloonsa 2014.',
+          selite: 'Johann Moritz Rugendasin litografia 1830-luvulta esittää '
+            + 'capoeiran pelaamista Brasiliassa.',
+          lahde: 'Johann Moritz Rugendas, Wikimedia Commons (PD)',
+          wiki: 'Capoeira',
+        },
+        {
+          otsikko: 'Lissabonin salonkien suosikki Riosta',
+          tiedosto: 'O Beneficiado. Domingos Caldas Barboza (Lereno Selinuntino). Fallecido em 1800.jpg',
+          teksti: 'Domingos Caldas Barbosa syntyi Rio de Janeirossa noin '
+              + '1739 portugalilaisen isän ja vapautetun angolalaisen '
+              + 'naisen poikana, ja hänestä tuli 1700-luvun lopun '
+              + 'Lissabonin hienoston suosituin laulaja-runoilija. Hän '
+              + 'säesti itseään violalla ja improvisoi laulunsa; '
+              + 'syntyperäänsä hänelle muistutettiin alentavalla '
+              + 'lisänimellä violansoittaja. Hänen modinha-laulunsa '
+              + 'julkaistiin kirjana vasta 1825, neljännesvuosisata hänen '
+              + 'kuolemansa jälkeen. Modinha ja afrikkalaisperäinen lundu '
+              + 'ovat Brasilian populaarimusiikin vanhimmat juuret.',
+          selite: 'Vuoden 1851 aikakauskirjaan tehty kaiverrus esittää '
+            + 'Domingos Caldas Barbosan, modinha-laulun luojan.',
+          lahde: 'Tuntematon kaivertaja, Wikimedia Commons (PD)',
+          wiki: 'Modinha',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä yksijousinen soitin johtaa capoeira-piiriä eli rodaa?',
+        vaihtoehdot: ['Cavaquinho', 'Berimbau', 'Viola', 'Atabaque'],
+        oikea: 1,
+        fakta: 'Sen rytmi kertoo pelaajille, millaista peliä piirissä '
+            + 'pelataan.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Brasilian ruokapöytä on kolmen mantereen risteys: '
+          + 'alkuperäiskansojen maniokki, Länsi-Afrikan pavut ja Euroopan '
+          + 'padat samalla aterialla.',
+      nostot: [
+        {
+          otsikko: 'Siemenet, joita ei olisi saanut viedä',
+          aika: '1727',
+          tiedosto: 'Fazenda Santa Genebra São Paulo 1880.jpg',
+          teksti: 'Legendan mukaan upseeri Francisco de Melo Palheta '
+              + 'lähetettiin 1727 Ranskan Guayanaan sovittelemaan '
+              + 'rajakiistaa, mutta hänen todellinen tehtävänsä oli hankkia '
+              + 'kahvinsiemeniä, joita Ranska varjeli tarkasti. Palheta '
+              + 'viehätti kuvernöörin vaimon, ja tämä ojensi hänelle '
+              + 'lähtiessä kukkakimpun, jonka sisään siemenet oli kätketty. '
+              + '1840-luvulla Brasilia tuotti jo 40 prosenttia maailman '
+              + 'kahvista. Hinta maksettiin toisaalla: 1800-luvun '
+              + 'alkupuoliskolla plantaaseille tuotiin puolitoista '
+              + 'miljoonaa orjuutettua ihmistä.',
+          selite: 'Santa Genebran kahvitila São Paulon provinssissa vuonna '
+            + '1880; kahvipavut kuivattiin laajoilla terasseilla '
+            + 'päärakennuksen edessä.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Kahvi',
+        },
+        {
+          otsikko: 'Lauantain papupata ja sen kaksi tarinaa',
+          tiedosto: 'Feijoada à brasileira 1.jpg',
+          teksti: 'Feijoada on mustien papujen ja sianlihan pata, jota '
+              + 'syödään Brasiliassa perinteisesti lauantaisin. Sen '
+              + 'alkuperästä kerrotaan kaksi tarinaa. Tutumman mukaan '
+              + 'orjuutetut afrikkalaiset kokosivat sen siitä, mitä '
+              + 'keittiöstä jäi yli. Ruokahistorioitsijat huomauttavat, '
+              + 'että Pohjois-Portugalissa on syöty samanlaista papupataa '
+              + 'jo ennen sitä ja että sukua ovat myös ranskalainen '
+              + 'cassoulet ja espanjalainen cocido — mustat pavut sen '
+              + 'sijaan ovat amerikkalaisia. Yhtä mieltä ollaan siitä, että '
+              + 'nykyinen ruoka sekoittaa portugalilaisen, afrikkalaisen ja '
+              + 'alkuperäiskansojen keittiöt.',
+          selite: 'Feijoada on mustien papujen ja sianlihan pata, jota '
+            + 'syödään Brasiliassa perinteisesti lauantaisin.',
+          lahde: 'Melsj, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Feijoada',
+        },
+        {
+          otsikko: 'Juuri, joka pitää osata käsitellä',
+          tiedosto: 'Farofa brazil.jpg',
+          teksti: 'Maniokki kesyyntyi Länsi-Keski-Brasiliassa arviolta '
+              + 'kymmenentuhatta vuotta sitten, ja siitä tuli '
+              + 'alkuperäiskansojen tärkein tärkkelyskasvi. Kasvissa on '
+              + 'syanidia tuottavia yhdisteitä: makeissa lajikkeissa niitä '
+              + 'voi olla parikymmentä milligrammaa kilossa, katkerissa '
+              + 'jopa tuhat. Siksi juuri on liotettava, puristettava ja '
+              + 'paahdettava huolella ennen syömistä — taito, joka opittiin '
+              + 'sukupolvien kokemuksella. Karkeaksi paahdettu '
+              + 'maniokkijauho farofa on yhä brasilialaisen pöydän '
+              + 'vakioaines. Portugalilaiset veivät kasvin 1500-luvulla '
+              + 'Afrikkaan, jossa siitä tuli perusravintoa.',
+          selite: 'Farofa on maniokkijuuresta raastettu, puristettu ja '
+            + 'paahdettu karkea jauho.',
+          lahde: 'User Carioca, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Maniokki',
+        },
+        {
+          otsikko: 'Aroilta hiilloksen ääreen',
+          tiedosto: 'Costela no Fogo.JPG',
+          teksti: 'Etelä-Brasilian, Uruguayn ja Argentiinan pampalla eli '
+              + '1600-luvulta lähtien oma yhteisönsä: ratsain liikkuvat '
+              + 'gaúchot, jotka pyydystivät villejä nautoja ja hevosia, '
+              + 'myivät nahat ja söivät lihan. Sana oli aluksi haukkumanimi, '
+              + 'ja sen alkuperästä on esitetty toistakymmentä eri '
+              + 'selitystä. Charles Darwin vietti pampalla puoli vuotta '
+              + 'vuonna 1833 ja kirjoitti päiväkirjaansa, että gaúcho on '
+              + 'poikkeuksetta avulias, kohtelias ja vieraanvarainen. Tapa '
+              + 'paahtaa lihaa vartaissa hiilloksen yllä eli churrasco on '
+              + 'yhä Rio Grande do Sulin ruokakulttuurin ydin.',
+          selite: 'Suolattu kylkiluupala vartaassa avotulen äärellä on '
+            + 'Etelä-Brasilian churrascon perusmuoto.',
+          lahde: 'Julio Cesar Martins, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Churrasco',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin kahvinsiemenet legendan mukaan kätkettiin, kun ne '
+            + 'vietiin Ranskan Guayanasta Brasiliaan vuonna 1727?',
+        vaihtoehdot: [
+          'Saappaanvarteen',
+          'Kukkakimppuun',
+          'Kirjan kansiin',
+          'Leipäkoriin',
+        ],
+        oikea: 1,
+        fakta: 'Lahjan antoi kuvernöörin vaimo, ja siitä alkoi maailman '
+            + 'suurin kahvintuotanto.',
+      },
+    },
+  ],
+  /*
+   * AUSTRALIA (AUS) — Oseanian laudan ensimmäinen maalehti (Opus
+   * 23.8.2026). Aineisto: docs/mantereet-tyoaineisto/faktapohja-
+   * australia.md ja tarkistus-australia.md yhdessä luettuna, ja jokainen
+   * tekstiin päätynyt luku on tarkistettu vielä kerran en-Wikipedian
+   * raakatekstistä 23.8.2026. Sisältölinjaus on spec-mantereet.md:n
+   * Oseania-osio: alkuperäiskansat elävinä toimijoina, historia suoraan
+   * mutta hienotunteisesti, Uluru vain ulkopuolelta.
+   *
+   * AIHEJAKO on Fablen toimeksianto: Historia, Alkuperäiskansat, Talous,
+   * Luonto ja Ruoka (5 × 4). Kahdella aiheella ei ole omaa kuvaketta
+   * js/ui-apurit.js:n AIHE_IKONIT-taulussa, joten ne piirtyvät
+   * yleiskuvakkeella `muu` — sama ratkaisu kuin taulun kolmella
+   * kymmenellä muulla omalla aihe-id:llä (aavikko, helmet, vuoret …).
+   * Uusia kuvakkeita EI lisätty.
+   *
+   * MINITEHTÄVÄT: yksi per aihe, ja jokaisen vastaus on saman sivun
+   * nostotekstissä. Tarkistettu js/packs/oceania-questions.js:n koko
+   * OCEANIA_QUESTIONS-taulukkoa vasten, ettei yksikään toista
+   * kaupunkivisaa. Lähimmäs osuu Alice Springsin kysymys siitä, mistä
+   * kaupunki sai alkunsa (lennätinaseman toistoasemasta) — Talouden
+   * tehtävä kysyy sen sijaan linjan valmistumisvuotta 1872, eri fakta.
+   * Alkuperäiskansat-sivun tehtävä on tarkoituksella
+   * tähtitieteestä eikä Ulurusta: Ulurun oma kaupunkivisa kysyy JO
+   * vuoden 1873 nimeämisen ja vuoden 2019 kiipeämiskiellon (Fablen
+   * ohje ja faktapohjan luku 11, avoin kysymys A).
+   *
+   * FAKTAPOHJASTA POIKETTIIN NÄISSÄ KOHDISSA:
+   *  - "Australiasta tuli 1870-luvulla maailman suurin villantuottaja"
+   *    JÄTETTIIN POIS. Faktapohja lainasi lauseen en-Wikipedian
+   *    artikkelista "Agriculture in Australia", mutta 23.8.2026 haetussa
+   *    raakatekstissä sitä ei enää ole — artikkeli sanoo vain, että
+   *    Australia on nykyään maailman suurin villantuottaja. Tilalle
+   *    otettiin luvut, jotka Wikipedia sanoo suoraan: 26 merinolammasta
+   *    1797, lähes kaksi miljoonaa lammasta 1830-luvulle tultaessa ja
+   *    villa puolena siirtokunnan viennistä 1844 ("History of Australia",
+   *    "Australian Merino").
+   *  - T4 (Talouden neljäs nosto) oli faktapohjassa auki (luku 4,
+   *    T4/T4b). Kalgoorlien 1893-ryntäys olisi ollut 20 vuotta isoisän
+   *    matkan jälkeen, ja Eureka on jo Historia-sivulla, joten neljäs
+   *    nosto on Murrayjoen siipirataslaivat: sama kuljetusketju kuin
+   *    T2:n villa, ja ajallisesti keskellä isoisän vuosikymmentä
+   *    (en-Wikipedia "Murray River").
+   *  - H4:n raideleveysnostoon EI kirjoitettu, että matkustajat
+   *    vaihtoivat junaa rajalla jo 1873. en-Wikipedia "Rail gauge in
+   *    Australia" sanoo suoraan, ettei ongelma ollut vielä 1880-luvulle
+   *    asti todellinen, koska siirtokuntien radat eivät yhtyneet: leveä
+   *    ja normaali raide kohtasivat Alburyssa vasta 1883. Teksti kertoo
+   *    asian tässä järjestyksessä.
+   *  - L1:n kenguru: faktapohja sanoi gangurrun tarkoittaneen
+   *    "harvinaista tummasävyistä lajia". Tuore artikkeli "Kangaroo"
+   *    sanoo sanan viittaavan itäharmaakenguruun, ja mainitsee lisäksi
+   *    Phillip Parker Kingin 1819–20 tekemän huomion, ettei paikallinen
+   *    sana ollutkaan kangaroo vaan menuah. Molemmat kirjoitettu auki.
+   *  - Stolen Generations jätettiin pois nostoista faktapohjan
+   *    perustelulla (avoin kysymys E): tapahtumat ovat 1900-luvulta
+   *    eivätkä istu 1873-kaareen ilman anakronismia. Fable päättää
+   *    erikseen, tuleeko aiheesta oma sivunsa.
+   *
+   * KUVAT: 20 nostokuvaa, jokainen haettu Commonsin rajapinnasta,
+   * lisenssi ja tekijä extmetadatasta, leveys ≥ 1200 px ja jokainen
+   * katsottu silmin 900 px:n esikatselussa. Kaksi hylättiin katsomisen
+   * jälkeen: J. W. Lindtin swagman-muotokuva 1887 (kuvan kulmassa
+   * studion oma signeeraus "J.W. LINDT MELBOURNE", reseptin kieltämä
+   * lisätty merkintä) ja Stubbsin kengurumaalauksen leikkaamaton
+   * museokuva (oikeassa reunassa valokuvaajan harmaasävyliuska) —
+   * tilalle otettiin saman maalauksen rajattu versio. Booth'n
+   * vuoden 1873 kartassa ja Doudiet'n akvarellissa on julkaisijan
+   * ja taiteilijan oma teksti, joka on reseptin sallima poikkeus ja
+   * kerrottu kuvatekstissä. Kahdesta kuvasta extmetadata ei anna
+   * tekijää lainkaan (Uluru-yleiskuva ja kultakenttien postivaunu),
+   * joten lähderiviin on kirjoitettu talon vakiomuoto "Tuntematon
+   * kuvaaja".
+   */
+  AUS: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 Australia ei ole vielä yksi maa vaan joukko '
+          + 'erillisiä siirtokuntia, ja viimeisen vankilaivan '
+          + 'saapumisesta on kulunut vasta viisi vuotta.',
+      nostot: [
+        {
+          otsikko: 'Yksitoista laivaa ja 252 päivää merellä',
+          aika: '1787–1788',
+          tiedosto: 'First Fleet entering Sydney 1788 Bradley.jpg',
+          teksti: 'Yksitoista laivaa lähti Portsmouthista 13. toukokuuta '
+              + '1787 ja saapui Botany Baylle tammikuussa 1788. Matkaa '
+              + 'kertyi 252 päivää ja yli 24 000 kilometriä, eikä yhtään '
+              + 'alusta menetetty. Lähtijöitä oli noin 1 420, heistä 775 '
+              + 'rangaistusvankeja; Sydney Coveen astui maihin 1 373 '
+              + 'ihmistä, sillä matkalla kuoli 48. Britannia oli menettänyt '
+              + 'Amerikan siirtokuntansa eikä sillä ollut enää paikkaa, '
+              + 'jonne lähettää tuomitut. Vuoteen 1868 mennessä vankeja '
+              + 'kuljetettiin Australiaan noin 162 000. Isoisän matkan '
+              + 'aikaan Sydney on jo satamakaupunki, jonka villalaivat '
+              + 'purjehtivat Lontooseen.',
+          selite: 'William Bradley, ensimmäisen laivueen upseeri, maalasi '
+            + 'laivat purjehtimassa sisään sataman hiekkakivikallioiden '
+            + 'ohi tammikuussa 1788.',
+          lahde: 'William Bradley, Wikimedia Commons (PD)',
+          wiki: 'Ensimmäinen laivue',
+        },
+        {
+          otsikko: 'Viimeinen vankilaiva ja käsin kirjoitettu lehti',
+          aika: '1868',
+          tiedosto: 'Old Fremantle Gaol (2009).jpg',
+          teksti: 'Hougoumont lähti Portsmouthista 12. lokakuuta 1867 '
+              + 'mukanaan 280 vankia ja 108 matkustajaa, ja se laski '
+              + 'ankkurin Fremantlessa 10. tammikuuta 1868 — viimeisenä '
+              + 'vankilaivana, joka koskaan saapui Australiaan. Vankien '
+              + 'joukossa oli 62 fenianiksi kutsuttua irlantilaista '
+              + 'poliittista vankia, joista noin 17 oli sotilaita. Heitä '
+              + 'oli poikkeuksellisen paljon kirjoitustaitoisia, ja 89 '
+              + 'päivän matkalla syntyi seitsemän numeroa käsin '
+              + 'kirjoitettua laivalehteä The Wild Goose. Numerot ovat '
+              + 'yhä tallessa New South Walesin osavaltionkirjastossa.',
+          selite: 'Fremantlen vankilan porttirakennus muurattiin '
+            + 'vankityönä 1854–1855 paikalta louhitusta kalkkikivestä, ja '
+            + 'sen portin rauta saatiin haaksirikkoutuneista laivoista.',
+          lahde: 'Tamsin Slater, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Fremantlen vankila',
+        },
+        {
+          otsikko: 'Kaivosmiesten vala Ballaratissa',
+          aika: '1854',
+          tiedosto: 'Doudiet Swearing allegiance to the Southern Cross.jpg',
+          teksti: 'Victorian kultakentillä kaivoslupa maksoi kuukaudessa '
+              + 'enemmän kuin moni ehti kaivaa, eikä vaeltavilla '
+              + 'kaivosmiehillä ollut äänioikeutta heitä verottavaan '
+              + 'hallintoon. Marraskuun 29. päivänä 1854 noin 10 000 '
+              + 'ihmistä vannoi Ballaratissa uskollisuutta Eureka-lipulle. '
+              + 'Aamuyöllä 3. joulukuuta kapteeni Thomasin komentama 276 '
+              + 'miehen sotilas- ja poliisijoukko hyökkäsi kaivosmiesten '
+              + 'puuaidan kimppuun. Kuolleita kirjattiin 27, valtaosa '
+              + 'kapinallisia. Kolmetoista vangittua vapautettiin '
+              + 'oikeudessa, ja kaivoslupa korvattiin punnan vuosimaksulla, '
+              + 'joka antoi haltijalleen myös äänioikeuden.',
+          selite: 'Charles Doudiet oli itse Ballaratissa ja maalasi '
+            + 'kaivosmiehet Eureka-lipun ympärillä kädet koholla; hän '
+            + 'kirjoitti akvarellin alalaitaan päiväyksen ja nimen omalla '
+            + 'kädellään.',
+          lahde: 'Charles Doudiet, Wikimedia Commons (PD)',
+          wiki: 'Eurekan kapina',
+        },
+        {
+          otsikko: 'Yksi manner, monta parlamenttia ja kolme raideleveyttä',
+          aika: '1873',
+          tiedosto: 'BOOTH(1873) 1.008 GENERAL MAP OF AUSTRALIA.jpg',
+          teksti: 'Isoisän matkan aikaan Australia on nimi, jonka alla on '
+              + 'kuusi erillistä siirtokuntaa: New South Wales, Victoria, '
+              + 'Queensland, Etelä-Australia, Länsi-Australia ja Tasmania, '
+              + 'kukin omine parlamentteineen ja lakeineen. Rautateistä '
+              + 'ei päästy yksimielisyyteen. New South Wales vaihtoi '
+              + 'raideleveyttä kesken suunnittelun, Victoria rakensi jo '
+              + 'valitsemallaan leveällä raiteella ja Queensland otti '
+              + '1865 käyttöön kapean. Ongelma näkyi vasta kun radat '
+              + 'kohtasivat: Melbournen ja Sydneyn linjat yhtyivät '
+              + 'Alburyssa 1883, ja siitä eteenpäin matkustajat vaihtoivat '
+              + 'junaa rajalla. Yhtenäinen normaaliraide valmistui 1995.',
+          selite: 'Vuoden 1873 kartassa siirtokuntien rajat on värjätty '
+            + 'erikseen, ja Pohjoisterritorio on merkitty Etelä-Australiaan '
+            + 'liitetyksi; alalaidassa on painoksen oma otsikko.',
+          lahde: 'Edwin Carton Booth, Wikimedia Commons (PD)',
+          wiki: 'Australian siirtokunnat',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta erillistä brittisiirtokuntaa Australiassa '
+            + 'oli vuonna 1873?',
+        vaihtoehdot: ['Kolme', 'Neljä', 'Kuusi', 'Kahdeksan'],
+        oikea: 2,
+        fakta: 'New South Wales, Victoria, Queensland, Etelä-Australia, '
+            + 'Länsi-Australia ja Tasmania olivat kukin oma '
+            + 'itsehallinnollinen siirtokuntansa.',
+      },
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Aboriginaalikansat ovat asuttaneet mannerta kymmeniä '
+          + 'tuhansia vuosia, ja heidän tähtitietonsa ja maanhoitonsa '
+          + 'ovat yhä käytössä.',
+      nostot: [
+        {
+          otsikko: 'Viisisataa kansaa ja viisikymmentä vuosituhatta',
+          tiedosto: 'Kakadu (AU), Kakadu National Park, Ubirr Rock Art -- 2019 -- 4169.jpg',
+          teksti: 'Arkeologisen näytön mukaan aboriginaalikansojen '
+              + 'esivanhemmat saapuivat mantereelle 50 000–65 000 vuotta '
+              + 'sitten. Reitti kulki todennäköisesti saarelta saarelle '
+              + 'nykyisen Indonesian kautta, ja jokainen väli oli '
+              + 'ylitettävä vettä pitkin. Aikaa myöten syntyi jopa 500 '
+              + 'kieli- ja alueryhmää, joilla kullakin oli oma maansa ja '
+              + 'sen hoitovastuu. Kun eurooppalaiset saapuivat, mantereella '
+              + 'asui arvioiden mukaan vähintään 314 500 ihmistä. '
+              + 'Kalliomaalaukset eivät ole muisto kadonneesta: samat '
+              + 'kansat asuvat yhä alueillaan, ja kertomukset kulkevat '
+              + 'edelleen sukupolvelta toiselle.',
+          selite: 'Ubirrin kalliosuojassa Kakadussa okralla maalattu kala '
+            + 'on tehty niin sanottuun röntgentyyliin, jossa näkyvät myös '
+            + 'ruodot ja sisäelimet.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Australian alkuperäiskansat',
+        },
+        {
+          otsikko: 'Emu, joka on tähtien välissä',
+          tiedosto: 'The Milky Way Over Anglers Reach (ann22042h).jpg',
+          teksti: 'Eurooppalainen tähtitiede piirtää kuviot tähdistä. '
+              + 'Lähes kaikkialla Australiassa tunnettu Emu taivaalla '
+              + 'muodostuu päinvastoin tummista pilvistä tähtien välissä: '
+              + 'linnun pää on Etelän Ristin vieressä oleva Hiilisäkki-sumu '
+              + 'ja ruumis Linnunradan tumma halkeama, joka jatkuu '
+              + 'Skorpionia kohti. '
+              + 'Sydneyn pohjoispuolella Ku-ring-gain kallioihin on '
+              + 'hakattu emu täsmälleen samaan asentoon kuin taivaalla. '
+              + 'Tähdet toimivat myös kalenterina: kun Boorong-kansan '
+              + 'pensaskana eli Lyyra katoaa lokakuussa auringon seuraan, '
+              + 'on aika kerätä munia.',
+          selite: 'Linnunrata kaartuu järven yli Uudessa Etelä-Walesissa, '
+            + 'ja sen halki kulkevat tummat pölypilvet erottuvat selvästi '
+            + 'tähtien seasta.',
+          lahde: 'Lucy Yunxi Hu/IAU OAE, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Linnunrata',
+        },
+        {
+          otsikko: 'Tuli, joka hoitaa maata',
+          tiedosto: 'Grass tree on fire during controlled burn (cropped).jpg',
+          teksti: 'Aboriginaalikansat ovat tuhansien vuosien ajan '
+              + 'sytyttäneet tarkoituksella pieniä ja matalia polttoja. '
+              + 'Menetelmällä on monta päämäärää kerralla: metsästys '
+              + 'helpottuu, kasvi- ja eläinlajisto muuttuu halutuksi, '
+              + 'rikkakasvit pysyvät kurissa ja ennen kaikkea suuren '
+              + 'maastopalon vaara pienenee, kun kuivaa kasvustoa ei pääse '
+              + 'kertymään. Arkeologi Rhys Jones antoi tavalle vuonna 1969 '
+              + 'nimen keppitulimaanviljely. Uudisasukkaat lopettivat '
+              + 'poltot laajoilla alueilla, mutta 2000-luvulla ne ovat '
+              + 'palanneet alkuperäiskansojen tietäjien johdolla — '
+              + 'Victoriassa 170 vuoden tauon jälkeen.',
+          selite: 'Länsi-Australiassa hallitussa poltossa palava '
+            + 'ruohopuu roihahtaa hetkeksi, kun tuli kulkee matalana '
+            + 'maanpintaa pitkin eukalyptusmetsässä.',
+          lahde: 'User:JarrahTree, Wikimedia Commons (CC BY 2.5 au)',
+          wiki: 'Kulotus',
+        },
+        {
+          otsikko: 'Punainen kallio saa toisen nimen',
+          aika: '1873',
+          tiedosto: 'Australie Uluru 1.JPG',
+          teksti: 'Heinäkuun 19. päivänä 1873 maanmittaaja William Gosse '
+              + 'näki tasangolta kohoavan hiekkakiviselänteen ja nimesi '
+              + 'sen Ayers Rockiksi Etelä-Australian ylisihteerin Henry '
+              + 'Ayersin mukaan. Alueen anangu-kansalle paikka oli jo '
+              + 'silloin Uluru: sen ympärillä on lähteitä, vesikuoppia, '
+              + 'luolia ja vanhoja kalliomaalauksia. Kallio kohoaa '
+              + 'tasangolta 348 metriä, ja sen ympärysmitta on 9,4 '
+              + 'kilometriä. Maanomistus palautettiin anangulle 26. '
+              + 'lokakuuta 1985. Puiston hallitus päätti 2017 yksimielisesti '
+              + 'kieltää kiipeämisen, ja kielto astui voimaan lokakuussa '
+              + '2019 — kalliota katsotaan nyt vain sen juurelta.',
+          selite: 'Ulurun juurelta katsottuna kallion punaiset kupeet '
+            + 'nousevat suoraan spinifexruohikosta ja matalasta '
+            + 'puurivistä.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Uluru',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä aboriginaalinen Emu taivaalla -kuvio muodostuu?',
+        vaihtoehdot: [
+          'Linnunradan tummista pilvistä',
+          'Etelän Ristin tähdistä',
+          'Kahdesta kirkkaasta planeetasta',
+          'Magellanin pilvistä',
+        ],
+        oikea: 0,
+        fakta: 'Emun pää on Hiilisäkki-sumu Etelän Ristin vieressä ja '
+            + 'ruumis Linnunradan tumma halkeama.',
+      },
+    },
+    {
+      id: 'talous',
+      nimi: 'Talous',
+      johdanto: 'Kulta, villa ja lennätin muuttivat mantereen kahdessa '
+          + 'vuosikymmenessä, ja isoisä saapuu juuri kun muutos on '
+          + 'tuoreimmillaan.',
+      nostot: [
+        {
+          otsikko: 'Kulta, joka kolminkertaisti väkiluvun',
+          aika: '1851–1861',
+          tiedosto: 'Edward Roper - Gold diggings, Ararat, 1854.jpg',
+          teksti: 'Helmikuussa 1851 Edward Hargraves kertoi julkisesti '
+              + 'löytäneensä kultaa Bathurstin lähellä, ja saman vuoden '
+              + 'aikana Victoriasta löytyi vielä rikkaampia kenttiä. '
+              + 'Australian väkiluku kasvoi 430 000:sta 1 170 000:een '
+              + 'kymmenessä vuodessa, Victoriasta tuli väkirikkain '
+              + 'siirtokunta ja Melbournesta suurin kaupunki. Tulijoita '
+              + 'saapui Britanniasta, Euroopasta, Yhdysvalloista ja '
+              + 'Kiinasta: Victorian kentillä oli vuoteen 1855 mennessä '
+              + '20 000 kiinalaista kaivosmiestä ja New South Walesissa '
+              + '13 000. Siirtokuntien hallitukset vastasivat säätämällä '
+              + 'kiinalaisille erillisiä veroja ja rajoituksia.',
+          selite: 'Edward Roper maalasi Araratin kaivoskentän vuonna 1854: '
+            + 'telttarivit, kauppapuodit, härkävaljakko ja miehiä '
+            + 'huuhtomassa kultaa puron rannalla.',
+          lahde: 'Edward Roper, Wikimedia Commons (PD)',
+          wiki: 'Australian kultaryntäys',
+        },
+        {
+          otsikko: 'Kaksikymmentäkuusi lammasta Kapkaupungista',
+          aika: '1797',
+          tiedosto: 'Tom Roberts - Shearing the rams - Google Art Project.jpg',
+          teksti: 'Vuonna 1797 Henry Waterhouse ja William Kent ostivat '
+              + 'Kapkaupungista 26 merinolammasta, joista noin puolet '
+              + 'selvisi merimatkasta Australiaan. Osa myytiin Elizabeth '
+              + 'ja John Macarthurille Parramattaan, ja hienovillainen rotu '
+              + 'osoittautui kuivalle mantereelle sopivaksi: vuoteen 1830 '
+              + 'mennessä lampaita oli jo lähes kaksi miljoonaa. Vuonna '
+              + '1844 villa oli puolet koko siirtokunnan viennistä, ja '
+              + 'sen tuotto rakensi rautatiet, kirjastot ja leveät kadut. '
+              + 'Työ nojasi vaeltaviin lampaanleikkaajiin, jotka kulkivat '
+              + 'tilalta toiselle omaisuus käärittynä selkään.',
+          selite: 'Tom Robertsin vuoden 1890 maalaus vie keritsimöön, '
+            + 'jossa miehet keritsevät lampaita käsin ja pojat kantavat '
+            + 'villat pois.',
+          lahde: 'Tom Roberts, Wikimedia Commons (PD)',
+          wiki: 'Merinolammas',
+        },
+        {
+          otsikko: 'Sanoma, joka kulki tunneissa eikä kuukausissa',
+          aika: '1872',
+          tiedosto: 'Alice Springs Telegraph Station, 2015 (08).JPG',
+          teksti: 'Etelä-Australian hallitus lupautui 1870 rakentamaan '
+              + '3 200 kilometriä lennätinlinjaa Adelaidesta Darwiniin. '
+              + 'Pylväät pystytettiin 80 metrin välein ja toistinasemat '
+              + 'enintään 250 kilometrin päähän toisistaan. Pohjoisen '
+              + 'osuuden urakoitsija sai potkut toukokuussa 1871 liian '
+              + 'hitaan etenemisen vuoksi, ja hallitus rakensi yli 700 '
+              + 'kilometriä itse. Linjat yhtyivät Frew\'s Pondsissa 22. '
+              + 'elokuuta 1872. Kun linja kytkettiin Jaavan merikaapeliin, '
+              + 'viesti Eurooppaan kulki tunneissa. Isoisän saapuessa '
+              + 'yhteys on toiminut runsaan vuoden.',
+          selite: 'Alice Springsin toistinasema on yhä pystyssä '
+            + 'kivimuureineen ja peltikattoineen jokivarren '
+            + 'punaisten eukalyptusten alla.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Australian lennätinlinja',
+        },
+        {
+          otsikko: 'Joki, jota pitkin villa tuli alas',
+          aika: '1853–',
+          tiedosto: 'P.S. Cumberoona on the Murray River.jpg',
+          teksti: 'Murray on Australian pisin joki, 2 508 kilometriä, '
+              + 'mutta merestä sinne ei pääse: joella ei ole suistoa, '
+              + 'jonka läpi laiva mahtuisi. Sisämaan kuljetukset hoitivat '
+              + 'siksi matalakulkuiset siipirataslaivat. Ensimmäiset kaksi '
+              + 'nousivat jokea kevättulvalla 1853, ja vuoteen 1860 '
+              + 'mennessä laivoja oli tusina. Kun rautatie ylsi Echucaan '
+              + '1864, Riverinan villapaalit kulkivat ensin jokea alas '
+              + 'Echucaan ja sieltä junalla Melbourneen. Isoisän matkan '
+              + 'aikaan tämä on mantereen vilkkain sisämaan reitti.',
+          selite: 'Siipirataslaiva on kiinnittynyt Murrayn rantaan '
+            + 'punaisten eukalyptusten alle, samaan tapaan kuin '
+            + 'villalastin ottavat laivat 1870-luvulla.',
+          lahde: 'Shiny Things, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Murray (joki)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna mantereen halki kulkevan lennätinlinjan '
+            + 'kaksi päätä yhtyivät?',
+        vaihtoehdot: ['1854', '1868', '1872', '1901'],
+        oikea: 2,
+        fakta: 'Linjat yhtyivät Frew\'s Pondsissa 22. elokuuta 1872, ja '
+            + 'viesti Eurooppaan alkoi kulkea tunneissa.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Mantereen eläimistö oli eurooppalaisille niin outoa, '
+          + 'että ensimmäiset näytteet epäiltiin väärennöksiksi.',
+      nostot: [
+        {
+          otsikko: 'Eläin, joka maalattiin täytetystä nahasta',
+          aika: '1770–1772',
+          tiedosto: 'The Kongouro from New Holland (Kangaroo) NMM ZBA5754 (cropped).jpg',
+          teksti: 'Heinäkuussa 1770 Cookin Endeavour oli korjattavana '
+              + 'nykyisen Cooktownin kohdalla, ja retkikunta kirjasi '
+              + 'muistiin paikallisen guugu yimithirr -kansan sanan '
+              + 'gangurru. Sanan on myöhemmin todettu tarkoittavan '
+              + 'itäharmaakengurua — tarina siitä, että se olisi merkinnyt '
+              + '"en ymmärrä", on pelkkä legenda. Kaikki eivät olleet '
+              + 'yhtä mieltä: Phillip Parker King väitti vuosina 1819–1820 '
+              + 'paikallisen sanan olevan menuah. Upseeri John Gore ampui '
+              + 'yhden eläimen, ja sen nahka vietiin Englantiin. George '
+              + 'Stubbs maalasi kengurun 1772 pelkän täytetyn nahan '
+              + 'mukaan.',
+          selite: 'Stubbsin maalaus vuodelta 1772 oli ensimmäinen '
+            + 'australialaisesta eläimestä tehty länsimainen taulu, ja '
+            + 'siksi eläimen asento on hieman oudon jäykkä.',
+          lahde: 'George Stubbs, Wikimedia Commons (PD)',
+          wiki: 'Kengurut',
+        },
+        {
+          otsikko: 'Eläin, jota pidettiin huijauksena',
+          aika: '1799',
+          tiedosto: 'Ornithorhynchus anatinus - feeding.jpg',
+          teksti: 'Kun kuvernööri John Hunter lähetti 1798 Britanniaan '
+              + 'vesinokkaeläimen nahan ja piirroksen, tiedemiesten '
+              + 'ensimmäinen arvaus oli huijaus. George Shaw kirjoitti '
+              + 'ensimmäisen kuvauksen 1799 ja myönsi suoraan epäilevänsä '
+              + 'eläimen aitoutta, ja Robert Knox arveli sen olevan '
+              + 'kiinalaisten merimiesten ompelema. Eläin on kuitenkin '
+              + 'todellinen ja yksi vain viidestä munivasta nisäkäslajista '
+              + 'maailmassa; muut neljä ovat nokkasiilejä. Koiraan '
+              + 'takajalan kannuksesta ruiskuaa myrkkyä, ja saaliinsa '
+              + 'eläin löytää veden alla sähköaistilla silmät, korvat ja '
+              + 'sieraimet suljettuina.',
+          selite: 'Vesinokkaeläin etsii ravintoa nokallaan pohjasorasta '
+            + 'silmät kiinni, pienten kalojen keskellä.',
+          lahde: 'robertpaulyoung, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Vesinokkaeläin',
+        },
+        {
+          otsikko: 'Suurin elävien rakentama rakennelma',
+          aika: '1770',
+          tiedosto: 'GBR From Air.png',
+          teksti: 'Kesäkuun 11. päivänä 1770 Cookin Endeavour ajoi karille '
+              + 'matalikolle nykyisen Cooktownin eteläpuolella, ja laivaa '
+              + 'korjattiin seitsemän viikkoa. Näin eurooppalaiset '
+              + 'kohtasivat Ison valliriutan, jonka aboriginaali- ja '
+              + 'Torresinsalmen kansat olivat tunteneet jo tuhansia vuosia. '
+              + 'Riutta koostuu yli 2 900 erillisestä riutasta ja 900 '
+              + 'saaresta, ulottuu yli 2 300 kilometrin matkalle ja on '
+              + 'suurin elävien eliöiden rakentama rakennelma maailmassa. '
+              + 'Vesissä elää yli 1 500 kalalajia. Koska riutalla ei ole '
+              + 'atolleja, sitä tutkittiin 1800-luvulla hyvin vähän.',
+          selite: 'Ilmasta katsottuna riutat erottuvat vaaleina nauhoina '
+            + 'syvän sinisen meren keskellä.',
+          lahde: 'Alexander Fordyce, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Iso valliriutta',
+        },
+        {
+          otsikko: 'Nimi, joka tarkoittaa ei vettä',
+          tiedosto: 'Koala branch.jpg',
+          teksti: 'Sana koala tulee Sydneyn seudun dharug-kielen sanasta '
+              + 'gula, joka merkitsee "ei vettä": eläin saa lähes kaiken '
+              + 'nesteensä eukalyptuksen lehdistä. Ravinto on niin '
+              + 'köyhää ja osin myrkyllistä, että koala nukkuu jopa '
+              + 'kaksikymmentä tuntia vuorokaudessa ja syö ja nukkuu '
+              + 'usein samassa puussa. Uudisasukkaat kutsuivat sitä '
+              + 'karhuksi ulkonäön vuoksi, mutta koala on pussieläin ja '
+              + 'sen lähin sukulainen on vombatti. Nimi on yksi sadoista '
+              + 'aboriginaalikielten sanoista, jotka jäivät '
+              + 'australianenglantiin.',
+          selite: 'Koala roikkuu paljaalla oksalla ja katsoo ylös; '
+            + 'kynnet ovat tarttuneet kuoreen molemmin käsin.',
+          lahde: 'Tanner Ford, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Koala',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä mukaan George Stubbs maalasi kengurunsa?',
+        vaihtoehdot: [
+          'Elävän eläimen mukaan',
+          'Täytetyn nahan mukaan',
+          'Luurangon mukaan',
+          'Toisen maalauksen mukaan',
+        ],
+        oikea: 1,
+        fakta: 'Upseeri John Gore ampui eläimen 1770, ja vain nahka '
+            + 'päätyi Englantiin asti.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Australian keittiö syntyi käytännön pakosta ja '
+          + 'kohtaamisista: nuotiosta, kultakentiltä ja mantereen omista '
+          + 'kasveista.',
+      nostot: [
+        {
+          otsikko: 'Leipä, joka paistetaan tuhkassa',
+          tiedosto: 'Damper (food).jpg',
+          teksti: 'Aboriginaalikansat jauhoivat siemeniä jauhoksi '
+              + 'käsikivillä, sekoittivat jauhon veteen ja paistoivat '
+              + 'taikinan kuumassa tuhkassa. Käsikiviä on löydetty '
+              + 'jopa 50 000 vuoden takaa. Karjapaimenten damper on '
+              + 'sekoitus tätä tapaa ja eurooppalaista leivontaa: '
+              + 'vehnäjauhoa, suolaa ja vettä, tarvittaessa voita, ja '
+              + 'sama hiillos tai rasvattu pata. Jauhosäkki vei '
+              + 'satulalaukussa vähemmän tilaa kuin valmis leipä. '
+              + 'Yön yli jätetty taikina saattoi hapata itsestään. '
+              + 'Damperia syötiin kuivatun lihan ja kultaisen siirapin '
+              + 'kanssa.',
+          selite: 'Leipä paistuu nuotion hiilloksessa hiekassa, ja '
+            + 'leipoja kaivaa tuhkaa sivuun kepillä.',
+          lahde: 'Nachoman-au, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Damper',
+        },
+        {
+          otsikko: 'Käärö, jota kannettiin selässä',
+          aika: '1830-luku',
+          tiedosto: '"Down on his Luck" by Frederick McCubbin - Art Gallery of Western Australia - Joy of Museums.jpg',
+          teksti: 'Sana swag oli 1800-luvun alussa brittiläisten varkaiden '
+              + 'slangia ja tarkoitti varastettua tavaraa; Francis Grosen '
+              + 'sanakirja selitti sen vuonna 1811. Australiassa merkitys '
+              + 'kääntyi 1830-luvulla toisin päin: swag oli kulkumiehen '
+              + 'oma käärö, ja sana swagman yleistyi 1850-luvun '
+              + 'kultaryntäysten aikaan. Villateollisuus nojasi näihin '
+              + 'kulkijoihin, ja monella lammastilalla oli tapana antaa '
+              + 'ohikulkijalle ruoka ja yösija silloinkin kun työtä ei '
+              + 'ollut. Etelä-Australian Canowiessa jaettiin vuoden 1903 '
+              + 'tienoilla yli 2 000 yösijaa vuodessa.',
+          selite: 'Frederick McCubbinin maalaus vuodelta 1889 esittää '
+            + 'kulkumiehen istumassa kääröllään pienen nuotion vieressä '
+            + 'eukalyptusmetsässä.',
+          lahde: 'Frederick McCubbin, valokuva Joyofmuseums, Wikimedia '
+            + 'Commons (CC BY-SA 4.0)',
+          wiki: 'Swagman',
+        },
+        {
+          otsikko: 'Riisiä ja teetä kultakentillä',
+          aika: '1850-luku',
+          tiedosto: 'Chinese on stagecoach to goldfields.jpg',
+          teksti: 'Kultaryntäys toi Victoriaan vuoteen 1858 mennessä '
+              + '42 000 kiinalaista siirtolaista — viisi vuotta aiemmin '
+              + 'koko Melbournessa oli asunut noin 25 000 ihmistä. '
+              + 'Tulijat toivat mukanaan riisin, vihannekset ja teen '
+              + 'kaivoskenttien jauho- ja lihapainotteisen ruokavalion '
+              + 'rinnalle. Monet asuivat Melbournen Little Bourke '
+              + 'Streetin majataloissa, ja korttelista kasvoi pysyvä '
+              + 'kiinalaiskaupunki. 1860-luvulla Australiassa oli noin '
+              + '40 000 kiinalaista, heistä vain kourallinen naisia. '
+              + 'Syrjivistä laeista huolimatta kauppaverkosto jäi.',
+          selite: 'Kultakentille matkaava postivaunu on lastattu '
+            + 'täyteen matkatavaraa, ja matkustajat istuvat myös katolla.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Kiinalaiset Australiassa',
+        },
+        {
+          otsikko: 'Ruoka, jota siirtolaiset väheksyivät',
+          tiedosto: 'CSIRO ScienceImage 2079 Fruit on the Quandong Tree.jpg',
+          teksti: 'Mantereen omat ruoka-aineet — kenguru, emu, '
+              + 'quandong-hedelmä, kutjera, sitruunamyrtti, '
+              + 'warrigal-vihannes ja witchetty-toukka — olivat '
+              + 'alkuperäiskansoille tuttuja tuhansia vuosia ennen '
+              + 'eurooppalaisia. Ne auttoivat myös uudisasukkaita, kun '
+              + 'omat viljelykasvit pettivät, mutta tulijat pitivät niitä '
+              + 'silti kotimaan ruokia huonompina. Vasta 1990-luvulla '
+              + 'alkuperäiskasveja alettiin viljellä kaupallisesti. Ainoa '
+              + 'poikkeus on makadamiapähkinä: ensimmäinen pieni '
+              + 'viljelmä perustettiin Australiassa 1880-luvulla, ja siitä '
+              + 'kasvoi lopulta suuren mittakaavan tuote.',
+          selite: 'Quandongin kirkkaanpunaiset hedelmät kypsyvät '
+            + 'kapealehtisessä puussa Australian kuivilla mailla.',
+          lahde: 'Plant Industry, CSIRO, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Bush tucker',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä on ainoa australialainen alkuperäiskasvi, josta '
+            + 'kasvoi suuren mittakaavan viljelytuote?',
+        vaihtoehdot: [
+          'Quandong',
+          'Makadamiapähkinä',
+          'Sitruunamyrtti',
+          'Warrigal-vihannes',
+        ],
+        oikea: 1,
+        fakta: 'Ensimmäinen pieni makadamiaviljelmä perustettiin '
+            + 'Australiassa 1880-luvulla.',
+      },
+    },
+  ],
+  /*
+   * ARGENTIINA (Opus 23.8.2026, E-Amerikan pilottierä). Lähde:
+   * docs/mantereet-tyoaineisto/faktapohja-argentina.md ja sen
+   * riippumaton tarkistus tarkistus-argentina.md. Faktapohjan
+   * korjauskierros on otettu huomioon: malbec-köynnökset tilattiin
+   * 17.4.1853 EIKÄ 1868, Sarmiento ei ollut tuolloin missään virassa;
+   * empanadan alkuperä on 600-luku (engl. 7th century) eikä 700-luku;
+   * Tucumánin empanadajuhla kerrotaan nykyaikaisena eikä 1873:n
+   * tapahtumana.
+   *
+   * TANGO-ANAKRONISMI kantaa koko musiikkiaiheen. Vuonna 1873 tangoa
+   * ei ole — sana tarkoittaa vielä afrikkalaisperäistä tanssitilaisuutta
+   * ja itse tanssi muotoutuu vasta 1880-luvulla. Siksi nostot kertovat
+   * esimuodoista (candombe, payada, milonga) ja neljäs nosto sanoo
+   * ääneen, mitä vielä puuttuu.
+   *
+   * MAPUCHE (aihe arki, nosto "Maan kansa") on kirjoitettu
+   * spec-mantereet.md:n E-Amerikka-linjan mukaan: kansan oma nimi ja
+   * oma merkitys ensin, elävä hopeaseppäperinne kuvassa, ja ns.
+   * Aavikon valloitus vain yhtenä neutraalina, päivätyllä tapahtuma-
+   * maininnalla ilman uhrilukuja tai kummankaan puolen sankarikehystä
+   * — se on isoisän matkan hetkellä vielä tulevaisuutta. Falkland ei
+   * esiinny lehdessä lainkaan, koska mikään nosto ei sivua sitä.
+   *
+   * KAKSI RISTIRIITAA KIRJATTU AUKI:
+   *  - Aconcaguan korkeus. Nostossa on en-Wikipedian nykyinen luku
+   *    6 967 m (infobox elevation_m = 6967.16, leipätekstin
+   *    "6967.15 m"). Vanhempi ja yleisesti siteerattu luku on 6 961 m
+   *    / 6 962 m; valittiin tarkempi ja päivätty mittaus, koska sama
+   *    artikkeli antaa sen sekä infoboxissa että leipätekstissä.
+   *  - Iguazún putousten lukumäärä. Faktapohja ja en-Wikipedia antavat
+   *    150–300, pelin oma southamerica-questions.js sanoo "yli 270".
+   *    Nostossa lukee 150–300 "veden korkeuden mukaan", mikä pitää
+   *    molemmat totena eikä kumoa visan vastausta.
+   *
+   * LÄHDEVAROITUKSET (faktapohjan osio 12): en-Wikipedian artikkelit
+   * "Immigration to Argentina" (AI-generated-lippu) ja "Asado"
+   * (Original research -lippu) kantavat omia laatutunnisteitaan.
+   * Siirtolaisuusnostosta jätettiin siksi pois artikkelin oma
+   * ristiriitainen italialaisluku (3,8 milj. vs. taulukon 2,34 milj.)
+   * ja pidettiin vain ne väitteet, jotka riippumaton tarkistus
+   * vahvisti erikseen; asado-nosto nojaa vain artikkelin
+   * kiistattomiin perustietoihin (suola ainoana mausteena,
+   * quebracho-hiilet, asado al palo).
+   *
+   * KUVAT: kaikki 20 haettu ja tarkistettu itse Commonsin
+   * rajapinnasta (lisenssi extmetadatasta) ja katsottu silmin 900 px:n
+   * esikatselusta. Hylättyjä: "Sarmiento (1873).jpg" (1032 px, alle
+   * rajan), "Candombe federal (Boneo).jpg" ja "Candombe en tiempos de
+   * Rosas" (alle 1200 px), "El Candombe en 1838" (kuvan päälle lisätty
+   * soikea kehys), "Aqui Las Empanada Salteñas" (etualalla mainoskuvin
+   * teipattu jakeluauto), "Traditional mate set…" (tuotemerkit
+   * keskiössä eli pakkauskuva), "Carlos Morel - Payada en una
+   * pulpería.jpg" (960 px; sama teos löytyi 2000 px:n kopiona).
+   * Boneon candombe-maalauksesta on saatavilla vain karkearasterinen
+   * mustavalkopainos — se kerrotaan kuvatekstissä.
+   */
+  ARG: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 nuori tasavalta elää presidentti Domingo '
+          + 'Faustino Sarmienton kautta: mies, joka kiersi maailmaa '
+          + 'etsimässä parasta koulujärjestelmää, tuo nyt luokkahuoneen '
+          + 'jokaiseen kylään.',
+      nostot: [
+        {
+          otsikko: 'Presidentti, joka rakensi 800 koulua',
+          aika: '1868–1874',
+          tiedosto: 'Domingo Faustino Sarmiento (c. 1884) - Eugenia Belín Sarmiento - Google Arts & Culture.jpg',
+          teksti: 'Domingo Faustino Sarmiento nousi presidentiksi '
+              + 'lokakuussa 1868 — mies, joka oli aloittanut opettajana '
+              + 'isänsä köyhässä kylässä ja matkustanut sitten Eurooppaan '
+              + 'ja Yhdysvaltoihin tutkimaan koulujärjestelmiä. '
+              + 'Presidenttinä hän teki koulutuksesta hallituksensa '
+              + 'tärkeimmän asian: kuudessa vuodessa valtio perusti noin '
+              + '800 uutta alakoulua, ja koululaisten määrä nousi 30 '
+              + '000:sta yli 100 000:een. Hän toi Yhdysvalloista yli 70 '
+              + 'naisopettajaa ja neljä miesopettajaa kouluttamaan '
+              + 'opettajia maan omiin seminaareihin. Suosittu hän ei '
+              + 'silti ollut: Paraguayn sota söi rahat, ja pääkaupungin '
+              + 'ja maakuntien kilpailu jatkui koko kauden.',
+          selite: 'Sarmienton muotokuvan maalasi hänen oma '
+            + 'lapsenlapsensa Eugenia Belín Sarmiento noin vuonna 1884, '
+            + 'kymmenen vuotta presidenttikauden jälkeen.',
+          lahde: 'Eugenia Belín Sarmiento, Wikimedia Commons (PD)',
+          wiki: 'Domingo Faustino Sarmiento',
+        },
+        {
+          otsikko: 'Ensimmäinen kerta, kun kansa laskettiin',
+          aika: '1869',
+          tiedosto: 'BuenosAiresPlano1870.JPG',
+          teksti: 'Yhtenä ensimmäisistä toimistaan Sarmiento määräsi maan '
+              + 'ensimmäisen kansallisen väestönlaskennan. Vuonna 1869 '
+              + 'laskettiin 1 836 490 asukasta — pieni luku valtavalle '
+              + 'maalle, eivätkä lukuun sisältyneet valtion hallinnan '
+              + 'ulkopuolella elävät alkuperäiskansat. Kahdeksan '
+              + 'prosenttia asukkaista oli eurooppalaisia '
+              + 'maahanmuuttajia, ja mukaan laskettiin myös 6 276 '
+              + 'sotilasta, jotka olivat yhä Paraguayn alueella. Karuinta '
+              + 'luettavaa olivat kaksi muuta lukua: 70 prosenttia asui '
+              + 'maaseudulla ja 71 prosenttia ei osannut lukea. Juuri '
+              + 'sitä lukutaidottomuutta vastaan koulut rakennettiin.',
+          selite: 'Buenos Airesin hallinnollinen kaavakartta vuodelta '
+            + '1870 näyttää kaupungin ruutukaavan, rautatiet ja Río de la '
+            + 'Platan rannan vuosi väestönlaskennan jälkeen.',
+          lahde: 'Tuntematon kaivertaja, Wikimedia Commons (PD)',
+          wiki: 'Argentiinan historia',
+        },
+        {
+          otsikko: 'Sota, joka vei presidentin pojan',
+          aika: '1864–1870',
+          tiedosto: 'Invernada del Ejercito Oriental - Cándido López.jpg',
+          teksti: 'Kolme vuotta ennen isoisän matkaa päättyi '
+              + 'Etelä-Amerikan verisin sota. Kolmoisliiton sodassa '
+              + 'Argentiina, Brasilia ja Uruguay taistelivat Paraguayta '
+              + 'ja sen presidenttiä Francisco Solano Lópezia vastaan. '
+              + 'Sota oli alkanut edellisen presidentin Bartolomé Mitren '
+              + 'kaudella, ja Sarmiento peri sen tuskin virkaan '
+              + 'astuttuaan: liittoutuneiden joukot valtasivat Asunciónin '
+              + 'juuri kun hän aloitti lokakuussa 1868. Sota kosketti '
+              + 'häntä myös henkilökohtaisesti — hänen adoptoitu poikansa '
+              + 'kaatui rintamalla. Sodan viimeisenä vuonna perustettiin '
+              + 'maan ensimmäinen sotilasakatemia, Colegio Militar de la '
+              + 'Nación.',
+          selite: 'Argentiinalainen Cándido López, joka palveli itse '
+            + 'sodassa, maalasi vuoden 1866 talvileirin karjalaitumineen '
+            + 'ja auringonlaskuineen.',
+          lahde: 'Luis Candido Lopez, Wikimedia Commons (PD)',
+          wiki: 'Kolmoisliiton sota',
+        },
+        {
+          otsikko: 'Kansa, joka tuli laivoilla',
+          aika: '1853–1876',
+          tiedosto: 'Antiguo hotel de inmigrantes en Retiro, Buenos Aires 1875.jpg',
+          teksti: 'Argentiinan suurin muutos ei tullut sodasta vaan '
+              + 'laivoista. Vuoden 1853 perustuslaki kielsi rajoitukset '
+              + 'ulkomaalaisilta, jotka tulivat viljelemään maata ja '
+              + 'opettamaan tieteitä ja taiteita, ja 1870-luvulla liike '
+              + 'oli täydessä vauhdissa: Buenos Airesin asukkaista joka '
+              + 'toinen oli vuonna 1869 äskettäin saapunut siirtolainen. '
+              + 'Ennen kaikkea tultiin Italiasta ja Espanjasta. '
+              + 'Varsinainen maahanmuuttolaki säädettiin vasta 1876 ja '
+              + 'suuri Hotel de Inmigrantes valmistui vasta 1898 — muutos '
+              + 'näkyi kadulla kauan ennen kuin se näkyi laissa.',
+          selite: 'Retiron vanha siirtolaiskoti Buenos Airesin rannassa '
+            + 'vuonna 1875 otetussa valokuvassa, kaksi vuotta isoisän '
+            + 'matkan jälkeen.',
+          lahde: 'Alexander Witcomb, Wikimedia Commons (PD)',
+          wiki: 'Argentiina',
+        },
+      ],
+      /*
+       * Minitehtävä kysyy lukutaidottomuutta eikä presidentin nimeä:
+       * aiheen johdanto nimeää Sarmienton, joten nimikysymyksen vastaus
+       * vuotaisi jo ennen nostoja (tools/tarkista-maa.mjs huomasi tämän).
+       * Vastaus löytyy nostosta "Ensimmäinen kerta, kun kansa laskettiin".
+       */
+      tehtava: {
+        kysymys: 'Kuinka suuri osa argentiinalaisista ei osannut lukea '
+            + 'vuoden 1869 väestönlaskennassa?',
+        vaihtoehdot: [
+          '31 prosenttia',
+          '51 prosenttia',
+          '71 prosenttia',
+          '91 prosenttia',
+        ],
+        oikea: 2,
+        fakta: 'Samassa laskennassa 70 prosenttia asukkaista asui '
+            + 'maaseudulla.',
+      },
+    },
+    {
+      /*
+       * Aiheen id on `arki`, ei uusi `gaucho`: uusia sivu-id:itä ei
+       * luoda (js/ui-apurit.js AIHE_IKONIT), ja `arki` on jo talon
+       * käytössä kymmenessä maalohkossa. Otsikoksi tulee silti
+       * "Argentiinan gaucho", koska otsikko syntyy nimestä.
+       */
+      id: 'arki',
+      nimi: 'Gaucho',
+      johdanto: 'Loputon pampa on gauchon maailma: mies hevosen selässä, '
+          + 'poncho hartioilla ja veitsi vyöllä. Vuonna 1873 tuo maailma '
+          + 'on jo hiipumassa.',
+      nostot: [
+        {
+          otsikko: 'Mies, joka ei tarvinnut kattoa',
+          tiedosto: 'Prilidiano Pueyrredon - Un alto en la pulpería - Google Art Project.jpg',
+          teksti: 'Pampan luonnonrikkaus teki mahdolliseksi elää ilman '
+              + 'kiinteää työtä tai kotia: villiä karjaa, hevosia ja '
+              + 'nandu-strutseja riitti niin, että taitava ratsastaja '
+              + 'pärjäsi myymällä nahkoja ja höyheniä ja syömällä ilmaista '
+              + 'lihaa. Siitä syntyi gauchon riippumaton, vaeltava '
+              + 'elämäntapa. Charles Darwin, joka vietti pampalla kuusi '
+              + 'kuukautta vuonna 1833, kuvasi gauchoja vaatimattomiksi, '
+              + 'rohkeiksi ja vieraanvaraisiksi mutta huomautti, että '
+              + 'aina mukana kannettu veitsi johti usein riitoihin. Sana '
+              + 'gaucho oli alun perin siirtomaahallinnon halveksuva '
+              + 'nimitys; kenraali Güemes otti sen ylpeydellä omien '
+              + 'joukkojensa nimeksi.',
+          selite: 'Prilidiano Pueyrredónin maalauksessa noin vuodelta '
+            + '1860 ratsastava gaucho pysähtyy juttelemaan pulperían eli '
+            + 'maalaiskapakan edustalla härkävankkurien vieressä.',
+          lahde: 'Prilidiano Pueyrredón, Wikimedia Commons (PD)',
+          wiki: 'Gaucho',
+        },
+        {
+          otsikko: 'Runo, joka puolusti häviäjää',
+          aika: '1872',
+          tiedosto: 'La vuelta de Martín Fierro cover - 1879-restored.jpg',
+          teksti: 'Vuosi ennen isoisän matkaa José Hernández julkaisi 2 '
+              + '316-säkeisen runoelman El gaucho Martín Fierro. Sen '
+              + 'sankari on köyhä gaucho, joka pakkokutsutaan '
+              + 'rajalinnoitukseen, karkaa palveluksesta, menettää kotinsa '
+              + 'ja perheensä ja ajautuu lopulta lainsuojattomaksi. '
+              + 'Hernández kirjoitti puolustuspuheen luokalle, jonka aika '
+              + 'oli menossa ohi juuri silloin: Sarmienton elämäkerturin '
+              + 'sanoin gauchon aikakausi oli päättynyt ja kauppiaan ja '
+              + 'karjanomistajan aikakausi alkanut. Jatko-osa ilmestyi '
+              + '1879, ja runosta tuli kansalliseepos, joka on käännetty '
+              + 'yli 70 kielelle.',
+          selite: 'Jatko-osan La vuelta de Martín Fierro ensipainoksen '
+            + 'kansi vuodelta 1879 lupaa kymmenen kuvalaattaa ja myyntiä '
+            + 'kaikissa Buenos Airesin kirjakaupoissa.',
+          lahde: 'José Hernández / Charles Clérice, Wikimedia Commons '
+            + '(PD)',
+          wiki: 'El Gaucho Martín Fierro',
+        },
+        {
+          /*
+           * Mate esiintyy lehdessä kahdesti tarkoituksella ja eri
+           * kulmista: tässä juomisen rituaalina ja jesuiittojen
+           * viljelykokeiluna, Ruoka-aiheessa kansallisjuomana ja
+           * nykytuotantona. Kuvatkin ovat eri puolilta (kalebassit
+           * kadulla / pensasrivit pellolla).
+           */
+          otsikko: 'Kuppi, joka kiertää piirissä',
+          tiedosto: 'Selection of Yerba Mate Gourds.JPG',
+          teksti: 'Pampalla ja koko Río de la Platan alueella juoma ei ole '
+              + 'kahvi vaan mate: kalebassista juotu, metallisella '
+              + 'bombilla-pillillä siemailtu yerba mate. Juominen on '
+              + 'rituaali — sama kuppi ja sama pilli kiertävät piirissä, '
+              + 'jokainen ottaa yhden siemauksen ja antaa astian '
+              + 'eteenpäin. Juoman ottivat käyttöön guaraní- ja '
+              + 'tupí-kansat kauan ennen espanjalaisia, ja 1600-luvun '
+              + 'puolivälissä jesuiitat onnistuivat ensimmäisinä '
+              + 'kesyttämään yerba maten viljelykasviksi Misionesin '
+              + 'lähetysasemillaan. Kun jesuiitat karkotettiin '
+              + '1770-luvulla, plantaasit rappeutuivat — mutta juoma oli '
+              + 'jo jäänyt.',
+          selite: 'Buenos Airesin katukauppiaan valikoimassa on '
+            + 'kymmeniä koristeltuja matekalebasseja ja niiden '
+            + 'bombilla-pillejä.',
+          lahde: 'Marshallhenrie, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mate (juoma)',
+        },
+        {
+          otsikko: 'Maan kansa',
+          tiedosto: 'Zarcillos (Chaway) de diseño mapuche.png',
+          teksti: 'Kauan ennen gauchoa pampa ja sen eteläpuolinen '
+              + 'Patagonia olivat mapuchejen, tehuelchejen ja muiden '
+              + 'kansojen kotiseutua. Mapuche tarkoittaa omalla kielellä '
+              + 'maan kansaa: mapu on maa ja che kansa. Heidän '
+              + 'hopeaseppiensä työ oli 1800-luvulla kuulua — lähes '
+              + 'jokaisella merkittävällä päälliköllä oli oma seppänsä — '
+              + 'ja kudonnaiset tunnettiin kauas. Espanjan '
+              + 'siirtomaahallinto ei koskaan alistanut näitä kansoja, ja '
+              + 'moni gaucho polveutui itse sekaliitoista. Vuonna 1872 '
+              + 'päällikkö Calfucurán joukot ratsastivat yhä vapaina '
+              + 'pampan halki; vasta 1878 alkanut sotaretki, jota alettiin '
+              + 'kutsua Aavikon valloitukseksi, siirsi rajan etelään.',
+          selite: 'Mapuchemallisia hopeisia chaway-korvakoruja myydään '
+            + 'yhä Buenos Airesin katukojussa, samaa seppäperinnettä '
+            + 'jatkaen.',
+          lahde: 'Silviaanac, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mapuchet',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna José Hernández julkaisi kansalliseepoksen '
+            + 'Martín Fierron?',
+        vaihtoehdot: ['1852', '1872', '1880', '1895'],
+        oikea: 1,
+        fakta: 'Eepos ilmestyi vuotta ennen isoisän matkaa, ja sen '
+            + 'jatko-osa vasta 1879.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Tangoa ei ole vielä olemassa vuonna 1873. Sen '
+          + 'rakennusaineet soivat kuitenkin jo: afrikkalaisperäiset '
+          + 'rummut, gauchojen laulukilvat ja pampan tanssimusiikki.',
+      nostot: [
+        {
+          otsikko: 'Sana, joka tarkoitti tanssipaikkaa',
+          aika: '1789',
+          tiedosto: 'El Tambo Congo en 1820, by Martín Boneo.jpg',
+          teksti: 'Buenos Airesin kaupunginhallinto yritti jo vuonna 1789 '
+              + 'kieltää tilaisuudet, joissa orjuutetut afrikkalaiset '
+              + 'kokoontuivat tanssimaan; asiakirjoissa niitä kutsuttiin '
+              + 'nimillä tango ja tambo. Sana tarkoitti tuolloin paikkaa '
+              + 'ja tilaisuutta, ei tanssia, jonka maailma myöhemmin oppi '
+              + 'tuntemaan. Candombe-rummutus ja -tanssi, joita '
+              + 'länsiafrikkalaisten jälkeläiset ylläpitivät Buenos '
+              + 'Airesissa ja Montevideossa, on yksi kolmesta juuresta '
+              + 'espanjalais-kuubalaisen habaneran ja pampan milongan '
+              + 'rinnalla. Vuonna 1873 nämä perinteet elävät rinnakkain, '
+              + 'mutta kukaan ei vielä kutsu niiden yhdistelmää tangoksi.',
+          selite: 'Martín Boneon maalauksessa candombea tanssitaan ja '
+            + 'rummutetaan Buenos Airesin pihalla; jäljellä on vain '
+            + 'karkearasterinen mustavalkopainos teoksesta.',
+          lahde: 'Martín Boneo, Wikimedia Commons (PD)',
+          wiki: 'Candombe',
+        },
+        {
+          otsikko: 'Kaksintaistelu kitaralla',
+          tiedosto: 'Payada en una pulpería - Carlos Morel.jpg',
+          teksti: 'Ennen kuin kukaan kirjoitti gauchoista runoja, gauchot '
+              + 'sepittivät itse — ääneen ja hetkessä. Payada on '
+              + 'improvisoidun laulun kaksintaistelu: kaksi payadoria '
+              + 'vastaa toisilleen vuorosäkein kitaran säestyksellä, usein '
+              + 'filosofisista tai kilpailullisista aiheista, leirinuotion '
+              + 'tai maalaiskapakan ääressä. Perinne on koko '
+              + 'gauchesque-kirjallisuuden esikuva: myös Martín Fierro on '
+              + 'kirjoitettu maaseudun omalla espanjalla ja payadan '
+              + 'mittaan, jotta se kuulostaisi siltä kuin gaucho itse sen '
+              + 'lausuisi. Vuonna 1873 payada elää yhä suullisena '
+              + 'perinteenä, ei painettuna kirjana.',
+          selite: 'Carlos Morelin maalauksessa kaksi kitaristia laulaa '
+            + 'vastakkain pulperían hämärässä ponchoihin ja '
+            + 'silinterihattuihin pukeutuneen yleisön keskellä.',
+          lahde: 'Carlos Morel, Wikimedia Commons (PD)',
+          wiki: 'Gaucho',
+        },
+        {
+          otsikko: 'Tanssi, joka syntyi ennen tangoa',
+          tiedosto: 'Prilidiano Pueyrredon - Un domingo en los suburbios de San Isidro - Google Art Project.jpg',
+          teksti: 'Milonga on pampan maalaislaulun ja -tanssin muoto, joka '
+              + 'on olemassa ennen tangoa. Alun perin se oli gauchojen '
+              + 'kaupunkiin tuoma, kitaralla säestetty laulu; myöhemmin '
+              + 'siitä tuli oma tanssinsa, joka elää yhä tangon rinnalla '
+              + 'erillisenä. Juuri milonga antaa tulevalle tangolle osan '
+              + 'sen rytmistä ja yhden teorian mukaan myös nimen. '
+              + 'Tutkijat kiistelevät yhä siitä, kuinka paljon '
+              + 'alkuperäiskansojen, afrikkalaisten ja eurooppalaisten '
+              + 'perinteet kukin muovasivat lopputulosta — mutta kaikki '
+              + 'kolme olivat läsnä samoissa kortteleissa jo isoisän '
+              + 'matkan aikaan.',
+          selite: 'Pueyrredónin vesivärityö vuodelta 1864 näyttää '
+            + 'sunnuntain Buenos Airesin laitamilla San Isidrossa, jossa '
+            + 'maaseutu ja kaupunki kohtaavat.',
+          lahde: 'Prilidiano Pueyrredón, Wikimedia Commons (PD)',
+          wiki: 'Milonga',
+        },
+        {
+          otsikko: 'Vielä ei ole tangoa',
+          aika: '1880-luku',
+          tiedosto: 'La Boca en 1900.jpg',
+          teksti: 'Kun isoisä kirjoittaa päiväkirjaansa vuonna 1873, '
+              + 'tangoa ei siis ole. Sana tarkoittaa yhä '
+              + 'afrikkalaisperäistä tanssitilaisuutta, ja itse tanssi '
+              + 'muotoutuu vasta 1880-luvulla Río de la Platan '
+              + 'satamakortteleissa, joiden baareihin omistajat palkkasivat '
+              + 'yhtyeitä viihdyttämään asiakkaita. Maailmanmaine on vielä '
+              + 'kauempana: tanssijat ja orkesterit vievät tangon '
+              + 'Pariisiin 1900-luvun alussa, ja vuoden 1913 lopulla se '
+              + 'saapuu New Yorkiin ja Suomeen asti. Isoisän Argentiina '
+              + 'soi toisenlaista musiikkia — juuri niitä aineksia, joista '
+              + 'seuraavat polvet rakentavat tangon.',
+          selite: 'La Bocan laituri noin vuonna 1900: purjealusten '
+            + 'mastoja, hevoskärryjä ja säkkilastia siinä satamakaupungin '
+            + 'osassa, jossa tango oli juuri syntynyt.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Tango',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä vuosikymmenellä tango sai lopullisen muotonsa '
+            + 'Buenos Airesin satamakortteleissa?',
+        vaihtoehdot: [
+          '1850-luvulla',
+          '1880-luvulla',
+          '1910-luvulla',
+          '1930-luvulla',
+        ],
+        oikea: 1,
+        fakta: 'Tango muotoutui vasta noin kymmenen vuotta isoisän matkan '
+            + 'jälkeen.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Argentiina venyy pohjoisesta etelään lähes 3 700 '
+          + 'kilometriä, subtrooppisesta sademetsästä jäätiköihin. Osa '
+          + 'siitä on vuonna 1873 eurooppalaisille yhä lähes '
+          + 'tuntematonta.',
+      nostot: [
+        {
+          otsikko: 'Iso vesi viidakon keskellä',
+          aika: '1541',
+          tiedosto: 'A view of Iguazu Falls from the Argentina side.jpg',
+          teksti: 'Espanjalainen Álvar Núñez Cabeza de Vaca kirjasi '
+              + 'putoukset ensimmäisenä eurooppalaisena muistiin vuonna '
+              + '1541. Guaraníksi nimi tarkoittaa yksinkertaisesti isoa '
+              + 'vettä. Putouksia ei ole yksi vaan 150–300 veden korkeuden '
+              + 'mukaan, lähes kolmen kilometrin matkalla, korkeimmillaan '
+              + '82 metriä. Puolet joen virtaamasta syöksyy yhteen kapeaan '
+              + 'kuiluun, jota kutsutaan Paholaisen kurkuksi. Vuonna 1873 '
+              + 'alue on yhä suojelematonta sademetsää: ensimmäinen '
+              + 'ehdotus kansallispuistosta tehdään vasta 1876 ja '
+              + 'Argentiinan Iguazún kansallispuisto perustetaan vuonna '
+              + '1934.',
+          selite: 'Argentiinan puolelta katsottuna putousrivi jatkuu '
+            + 'kilometrien päähän sademetsän reunustamana.',
+          lahde: 'Horacio Cambeiro, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Iguassun putoukset',
+        },
+        {
+          otsikko: 'Tasanko, jolla ei ole loppua',
+          tiedosto: 'Nandu, Parque Luro, La Pampa, Argentina.jpg',
+          teksti: 'Pampa on yli 1 200 000 neliökilometrin ruohoaromaisto — '
+              + 'enemmän kuin Ranska ja Espanja yhteensä — ja se kattaa '
+              + 'suuren osan Buenos Airesin, La Pampan, Santa Fen, Entre '
+              + 'Ríosin ja Córdoban maakunnista. Maasto on niin tasainen, '
+              + 'että sen ainoat kohoumat ovat Ventanan ja Tandilin '
+              + 'kukkulat, korkeimmillaan 1 239 metriä. Ennen '
+              + 'karjatalouden aikaa tasangolla juoksi nanduja, joita '
+              + 'alkuperäiskansat ja myöhemmin gauchot metsästivät '
+              + 'heittämällä boleadora-painoja lintujen jalkoihin. Karja, '
+              + 'lampaat ja vilja muuttivat maiseman 1800-luvulla '
+              + 'lopullisesti.',
+          selite: 'Nandu juoksee heinikossa La Pampan maakunnassa, jossa '
+            + 'lintu on elänyt kauan ennen karjatalouden tuloa.',
+          lahde: 'Juan Eduardo De Cristófaro , \'Juanedc\', Wikimedia '
+            + 'Commons (CC BY 2.0)',
+          wiki: 'Pampa',
+        },
+        {
+          otsikko: 'Jättiläisten maa',
+          aika: '1520',
+          tiedosto: 'Guanaco in Argentina.jpg',
+          teksti: 'Kun Ferdinand Magellanin miehistö kohtasi vuonna 1520 '
+              + 'mantereen eteläkärjen asukkaita, se antoi heille nimen '
+              + 'patagonit ja uskoi tavanneensa jättiläisiä. Kyse oli '
+              + 'todennäköisesti tehuelcheistä, jotka olivat aikansa '
+              + 'eurooppalaisia keskimäärin pidempiä. Nimi jäi koko '
+              + 'alueelle: kivikkoisille tasangoille, jotka nousevat '
+              + 'terassimaisesti sisämaahan päin ja joilla laiduntavat '
+              + 'guanakot, laaman villit sukulaiset. Alueen kansat elivät '
+              + 'ennen jalan metsästäen; espanjalaisten tuoma hevonen teki '
+              + 'heistä 1600–1700-luvuilla ratsastajia. Vuonna 1873 '
+              + 'Patagonia on yhä lähes kokonaan heidän hallussaan.',
+          selite: 'Guanako kulkee kivikkoisella rinteellä Argentiinan '
+            + 'aroylängöllä.',
+          lahde: 'David, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Patagonia',
+        },
+        {
+          otsikko: 'Huippu, jota ei ole vielä valloitettu',
+          aika: '1897',
+          tiedosto: 'Aconcagua, 2019.jpg',
+          teksti: 'Andien Aconcagua on Amerikan korkein vuori, 6 967 '
+              + 'metriä — korkeampi kuin mikään huippu Aasian '
+              + 'ulkopuolella. Vuonna 1873 sen laki on yhä koskematon: '
+              + 'ensimmäinen todistettu nousu tehdään 14. tammikuuta 1897, '
+              + 'kun sveitsiläinen opas Matthias Zurbriggen kiipeää '
+              + 'huipulle brittiläisen retkikunnan mukana. Nimen '
+              + 'alkuperästä kiistellään: yksi selitys johtaa '
+              + 'mapudungunin sanoihin toiselta puolelta tuleva, toinen '
+              + 'ketšuan valkoiseen vartijaan. Vuori kohoaa Mendozan '
+              + 'maakunnassa, samalla seudulla, jonne istutettiin '
+              + 'Argentiinan ensimmäiset ranskalaiset viiniköynnökset.',
+          selite: 'Aconcaguan lumi- ja kalliohuippu kuvattuna '
+            + 'matkustajakoneesta Andien yllä.',
+          lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Aconcagua',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Aconcaguan laelle päästiin ensi kertaa '
+            + 'todistetusti?',
+        vaihtoehdot: ['1873', '1880', '1897', '1920'],
+        oikea: 2,
+        fakta: 'Sveitsiläinen opas Matthias Zurbriggen saavutti huipun 14. '
+            + 'tammikuuta 1897.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Argentiinan ruokapöytä syntyy risteyksessä: '
+          + 'alkuperäiskansojen mate, espanjalaisten tuoma karja ja vehnä '
+          + 'ja gauchon avotulella paistama liha.',
+      nostot: [
+        {
+          otsikko: 'Kokonainen eläin tulen äärellä',
+          tiedosto: 'Asado tradicional argentino, leña, brasas.jpg',
+          teksti: 'Asado ei ole vain ruokalaji vaan tapahtuma. Lihaa — '
+              + 'nautaa, sikaa, kanaa, makkaraa — kypsennetään avotulella '
+              + 'tai parrilla-ritilän päällä tuntikausia, ja kokilla on '
+              + 'oma nimensä, asador. Lihaa ei marinoida: ainoa mauste on '
+              + 'suola. Hiilet tehdään kotimaisista puulajeista kuten '
+              + 'quebrachosta, koska havupuun pihka toisi makuun '
+              + 'sivumaun. Vanhin muoto on asado al palo, jossa kokonainen '
+              + 'eläin paahtuu puuseipäässä avotulen äärellä — juuri niin '
+              + 'kuin gauchot tekivät pampan leirissä ja niin kuin '
+              + 'Patagoniassa tehdään yhä.',
+          selite: 'Tiiliparrillassa palaa puu rautaisessa telineessä ja '
+            + 'karkealla suolalla maustetut naudanlihapalat kypsyvät '
+            + 'hiilloksen päällä.',
+          lahde: 'Maxd2, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Argentiinalainen keittiö',
+        },
+        {
+          otsikko: 'Kansallisjuoma omalta pellolta',
+          tiedosto: 'Plantación de yerba mate, Misiones.jpg',
+          teksti: 'Mate on kansallisjuoma paitsi Argentiinassa myös '
+              + 'Paraguayssa ja Uruguayssa, eikä se ole kahvia eikä teetä '
+              + 'vaan oma kasvinsa, Ilex paraguariensis. Nykyään '
+              + 'Argentiina on maailman suurin tuottaja: yli puolet koko '
+              + 'maailman sadosta kasvaa maan koillisosassa. Juoma on niin '
+              + 'syvällä kansallisessa identiteetissä, että maalla on '
+              + 'sille oma kansallispäivänsä 30. marraskuuta — päivä on '
+              + 'nimetty 1800-luvun kaudillon Andrés Guacurarí y '
+              + 'Artigasin mukaan, jota kutsuttiin Andresitoksi. Vuonna '
+              + '1873 mate on jo kaikkien juoma, pampan leiristä '
+              + 'presidentin työhuoneeseen.',
+          selite: 'Yerba mate -pensaiden rivit kasvavat Misionesin '
+            + 'punaisessa maassa maan koillisnurkassa.',
+          lahde: 'Laurel toxico, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mate (juoma)',
+        },
+        {
+          otsikko: 'Jokainen maakunta väittää omaansa aidoimmaksi',
+          tiedosto: 'Empanadas salteñas 1.jpg',
+          teksti: 'Empanada — suljettu, täytetty taikinatasku — tuli '
+              + 'Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on '
+              + 'tehnyt siitä omansa. Saltan empanadat ovat pieniä, '
+              + 'mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja '
+              + 'jauhettua chiliä, ja sama versio on suosittu myös rajan '
+              + 'takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä '
+              + 'ja valkosipulia, ja Tucumánin Famaillássa järjestetään '
+              + 'nykyään vuosittainen kansallinen empanadajuhla. Alkuperä '
+              + 'johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta '
+              + 'Andien juurelle teki ruoasta täysin paikallisen.',
+          selite: 'Tusina uunissa paistettuja saltalaisia empanadoja '
+            + 'odottaa laatikossa, reunat käsin poimutettuina.',
+          lahde: 'Gonzalo Rivero, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Empanada',
+        },
+        {
+          otsikko: 'Köynnökset, jotka istutettiin kaksikymmentä vuotta '
+              + 'aiemmin',
+          aika: '1853',
+          tiedosto: 'Mañanas mendocinas.JPG',
+          teksti: 'Kaksikymmentä vuotta ennen isoisän matkaa, 17. '
+              + 'huhtikuuta 1853, Domingo Faustino Sarmiento — vielä '
+              + 'kaukana presidenttiydestä — antoi ranskalaiselle '
+              + 'agronomille Michel Pouget\'lle tehtävän tuoda '
+              + 'viiniköynnöksiä Ranskasta Mendozaan ja perusti sinne '
+              + 'maatalousoppilaitoksen Quinta Agronómican. Mukana oli '
+              + 'malbec, Ranskassa vaatimaton ja hallalle altis rypäle, '
+              + 'joka Mendozan korkealla ja kuivalla maalla alkoi tuottaa '
+              + 'tummaa, pehmeätanniinista viiniä. Vuonna 1873 nuo '
+              + 'köynnökset ovat jo juurtuneet — eikä kukaan vielä tiedä, '
+              + 'että juuri niistä tulee Argentiinan tunnusmerkki.',
+          selite: 'Talvinen viinitarha Mendozan Uco-laaksossa lepää '
+            + 'lumisten Andien juurella.',
+          lahde: 'Analía Fiocca Solimei, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Malbec',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä ranskalainen rypälelajike tuotiin vuonna 1853 '
+            + 'Mendozaan ja siitä tuli Argentiinan tunnusmerkki?',
+        vaihtoehdot: ['Malbec', 'Merlot', 'Pinot noir', 'Riesling'],
+        oikea: 0,
+        fakta: 'Sarmiento antoi tehtävän ranskalaiselle agronomille '
+            + 'Michel Pouget\'lle.',
+      },
+    },
+  ],
 };

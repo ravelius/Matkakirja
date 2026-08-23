@@ -2552,6 +2552,319 @@ export const MAAKARTAT = {
       wiki: 'Mississippi (joki)',
     },
   },
+  NZL: {
+    /*
+     * UUSI-SEELANTI — Oseanian ensimmäinen maakartta. Suoraviivainen
+     * tapaus toisin kuin USA ja Venäjä: sijaintikarttaperheessä on
+     * tasavälinen korkokartta koko maasta, eikä uutta projektiohaaraa
+     * tarvita.
+     *
+     * Kuva on M.Bittonin relief-versio (1380 × 1976 px), jonka
+     * kuvaussivu ilmoittaa itse reunakoordinaatit ja N/S-venytyksen
+     * 136 %. Sama kartta on Wikipedian Module:Location map/data/New
+     * Zealand -moduulin `image1`, ja rajat luettiin MOLEMMISTA PÄISTÄ
+     * (moduuli JA tiedostosivu) ennen kuin faktapohjan ehdotusta
+     * katsottiin (resepti, kohta 2): molemmat antavat saman luvun.
+     * Ristiinvarmistus kuvasuhteesta: 1380 px / 13,2° = 104,5 px
+     * astetta kohti pituussuunnassa ja 1976 px / 13,9° = 142,2 px
+     * leveyssuunnassa, suhde 1,36. Keskileveysasteella 40,9°
+     * 1/cos on 1,32 — kolmen prosentin ero on karttaperheen omaa
+     * venytystä eikä vaikuta prosenttiasemointiin.
+     */
+    tiedosto: 'New Zealand (relief map).png',
+    lahde: 'M.Bitton, Wikimedia Commons (CC BY-SA 4.0)',
+    rajat: { pohjoinen: -33.9, etela: -47.8, lansi: 165.9, ita: 179.1 },
+    /*
+     * Kuusi paikkaa: pelin viisi NZL-kohdetta (Auckland, Wellington,
+     * Christchurch, Dunedin ja Milford Sound) sekä Rotorua, joka on
+     * maalehden luontosivun geoterminen keskus eikä näkyisi muuten
+     * kartalla lainkaan. Koordinaatit fi-Wikipedian artikkelien
+     * sijaintiruuduista; Milford Sound puuttuu fi-artikkelin ruudusta,
+     * joten sen koordinaatti on en-Wikipedian coord-merkinnästä
+     * (44°38′53″S, 167°54′20″E).
+     *
+     * Pisteet todennettiin pelin omalla karttapiste()-funktiolla ja
+     * katsottiin kuvan päälle piirrettynä: kaikki kuusi osuvat maalle.
+     * Milford Sound on vuonon perukka ja siksi rantaviivan päällä —
+     * satamakohteen normaali ilmiö, ei virhe.
+     */
+    kaupungit: [
+      { nimi: 'Wellington', lat: -41.286, lon: 174.776, paa: true },
+      { nimi: 'Auckland', lat: -36.848, lon: 174.766 },
+      { nimi: 'Rotorua', lat: -38.138, lon: 176.251 },
+      { nimi: 'Christchurch', lat: -43.532, lon: 172.637 },
+      { nimi: 'Dunedin', lat: -45.867, lon: 170.5 },
+      { nimi: 'Milford Sound', lat: -44.648, lon: 167.906 },
+    ],
+    /*
+     * Kuvanosto vuoristosta: kartan halki kulkeva valkoinen selkäranka
+     * selittää sekä sään että sen, miksi asutus on rannikoilla. Aihe ei
+     * osu maalehden kahteenkymmeneen nostoon (luonto-sivu kertoo
+     * linnuista, geotermiasta ja terasseista, ei vuorista) —
+     * tarkistettu. Kuva on silmätarkistettu 960 px:ssä: Hooker Valleyn
+     * yli avautuva näkymä Aorakiin auringonlaskun aikaan, ei ihmisiä
+     * eikä merkintöjä.
+     */
+    nosto: {
+      otsikko: 'Vuorijono, joka tekee sään',
+      tiedosto: 'Hooker Valley towards Aoraki Mount Cook at sunset.jpg',
+      teksti: 'Eteläiset Alpit kulkevat noin viidensadan kilometrin '
+        + 'matkan Eteläsaaren halki lounaasta koilliseen. Korkein huippu '
+        + 'on Aoraki eli Mount Cook, 3 724 metriä, ja sen lisäksi '
+        + 'jonossa on kuusitoista muuta yli kolmen kilometrin '
+        + 'huippua. Vuoret ovat nuoria ja yhä nousussa: Tyynenmeren '
+        + 'laatta työntyy Australian laatan alle Alppien ali kulkevaa '
+        + 'Alppisiirrosta pitkin. Jono seisoo poikittain lännestä '
+        + 'puhaltavia tuulia vastaan, ja siitä syntyy maan jyrkin '
+        + 'sääraja: länsirannikolla sataa noin 3 000 millimetriä '
+        + 'vuodessa ja vedenjakajan tuntumassa jopa 15 000, mutta '
+        + 'kolmenkymmenen kilometrin päässä idässä enää tuhat. Siksi '
+        + 'lännessä on sademetsää ja jäätiköitä, idässä kuivaa '
+        + 'lakeutta ja lammaslaitumia. Vuorilta tulee myös pounamu, '
+        + 'vihreä nefriitti, jonka mukaan Eteläsaari on māoriksi Te '
+        + 'Wai Pounamu, vihreän kiven vedet. James Cook antoi '
+        + 'vuoristolle nimen todennäköisesti 23. maaliskuuta 1770, '
+        + 'vaikka ei sumun takia nähnyt korkeinta huippua.',
+      selite: 'Aoraki hohtaa auringonlaskun valossa Hooker Valleyn '
+        + 'perällä, ja sen edessä jyrkät rinteet putoavat jäätikön '
+        + 'uurtamaan laaksoon.',
+      lahde: 'Pseudopanax, Wikimedia Commons (CC BY 3.0)',
+      wiki: 'Eteläiset Alpit',
+    },
+  },
+  BRA: {
+    /*
+     * Brasilia on helpompi tapaus kuin USA: sijaintikarttaperheessä on
+     * tasavälinen korkokartta, joka kattaa koko maan yhtenä kuvana ilman
+     * erillisiä sivukuvia, joten karttapiste()-funktioon ei tarvita uutta
+     * haaraa. Kartta on Module:Location map/data/Brazil -moduulin
+     * `image1`, ja rajat on haettu TIEDOSTON OMALTA KUVAUSSIVULTA
+     * (Commons, action=raw) eikä faktapohjasta: "Equirectangular
+     * projection, N/S stretching 105 %. Geographic limits of the map:
+     * N 6.0°, S 34.0°, W 74.5°, E 32.0°." Sama neljä lukua on moduulin
+     * top/bottom/left/right-kentissä, eli lähteet ovat yhtä mieltä.
+     *
+     * Kuvasuhteen ristiintarkistus: 1200 px / 42,5° = 28,2 px astetta
+     * kohti pituussuunnassa ja 1186 px / 40° = 29,7 px leveyssuunnassa,
+     * suhde 1,05. Karttaperheen ilmoittama N/S-venytys on 105 %, ja
+     * geometrinen odotus 1/cos(14° S) on 1,03 — kolmen prosentin heitto
+     * on karttaperheen normaalia eikä vaikuta prosenttiasemointiin.
+     *
+     * Kuva on 1200 px leveä eli täsmälleen reseptin alarajalla; koko
+     * luokassa "Relief location maps of Brazil" ei ole suurempaa
+     * tasavälistä versiota (haettu 23.8.2026). Jos sellainen ilmestyy,
+     * tiedoston voi vaihtaa sellaisenaan — rajat ja pisteet pysyvät.
+     * Lähderivin tekijä on lyhennetty extmetadatan muodosta
+     * "Brazil_location_map.svg: NordNordWest, derivative work: Виктор В".
+     */
+    tiedosto: 'Relief Map of Brazil.jpg',
+    lahde: 'NordNordWest ja Виктор В, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 6, etela: -34, lansi: -74.5, ita: -32 },
+    /*
+     * Kuusi paikkaa, jotka näyttävät maan mitan: nykyinen pääkaupunki
+     * Brasília ylängön keskellä, 1873:n pääkaupunki Rio, Amazonin
+     * Manaus pohjoisessa, siirtomaa-ajan ensimmäinen pääkaupunki
+     * Salvador koillisessa, kahviylängön São Paulo ja gaúchojen Porto
+     * Alegre etelässä.
+     *
+     * Koordinaatit artikkelien coord-merkinnöistä (en-Wikipedia).
+     * Manausin oma artikkeli hakee koordinaattinsa Wikidatasta eikä
+     * kirjoita niitä auki, joten piste on otettu saman kaupungin
+     * Amazon-teatterin artikkelista (3°07′49″S 60°01′24″W) — juuri se
+     * rakennus on kumikauden Manausin ydin.
+     *
+     * Vesitarkistus: pisteet piirrettiin kartan päälle pelin omalla
+     * karttapiste()-funktiolla ja kuva katsottiin silmin. Yksikään
+     * kuudesta ei ole meressä; Rio, Salvador ja Porto Alegre ovat
+     * rannikkokaupunkeja, joiden kiekko koskettaa rantaviivaa —
+     * sama ilmiö kuin USA:n rannikkopisteissä, ei virhe.
+     */
+    kaupungit: [
+      { nimi: 'Brasília', lat: -15.794, lon: -47.883, paa: true },
+      { nimi: 'Manaus', lat: -3.13, lon: -60.023 },
+      { nimi: 'Salvador', lat: -12.975, lon: -38.477 },
+      { nimi: 'Rio de Janeiro', lat: -22.911, lon: -43.206 },
+      { nimi: 'São Paulo', lat: -23.55, lon: -46.633 },
+      { nimi: 'Porto Alegre', lat: -30.033, lon: -51.23 },
+    ],
+    /*
+     * Kuvanosto São Franciscosta: kartan halki koillisen puolelta
+     * juokseva joki on maan sisäinen valtaväylä, eikä yksikään BRA:n
+     * kahdestakymmenestä maalehden nostosta kerro siitä (tarkistettu).
+     * Pituudesta lähteet ovat eri mieltä — artikkelin infolaatikko
+     * sanoo 2 830 km ja sama artikkeli leipätekstissä 2 914 km — joten
+     * tekstissä lukee "lähes kolmetuhatta" eikä täsmälukua (Fablen
+     * linjaus: Moreebin dyyni). Kuva silmätarkistettu 900 px:ssä.
+     */
+    nosto: {
+      otsikko: 'Vanha Chico, maan sisäinen valtatie',
+      tiedosto: 'Rio Sao Francisco próximo a Paulo Afonso divisa BAHIA-ALAGOAS.jpg',
+      teksti: 'São Francisco saa alkunsa Canastra-vuorilta Minas Geraisin '
+        + 'ylängöltä ja kiertää lähes kolmetuhatta kilometriä koilliseen '
+        + 'ennen kuin laskee Atlanttiin. Brasilialaiset kutsuvat sitä '
+        + 'nimellä Velho Chico, Vanha Chico, ja "kansallisen '
+        + 'yhdistymisen joeksi": se on ainoa suuri vesireitti, joka '
+        + 'yhdistää etelän ja koillisen ja tuo vettä puolikuivalle '
+        + 'sertãolle. Amerigo Vespucci näki joen 4. lokakuuta 1501, '
+        + 'Franciscus Assisilaisen muistopäivänä, ja siitä tuli nimi. '
+        + '1860-luvulla brittitutkija Richard Francis Burton meloi joen '
+        + 'latvoilta Paulo Afonson putouksille asti. Sata vuotta joella '
+        + 'kulkivat gaiolat, siipirataslaivat, joista osa oli tuotu '
+        + 'Yhdysvaltain sisällissodan aikaiselta Mississippiltä.',
+      selite: 'São Francisco kulkee kalliouoman läpi Paulo Afonson '
+        + 'putousten seudulla Bahian ja Alagoasin rajalla.',
+      lahde: 'marinelson, Wikimedia Commons (CC BY 2.0)',
+      wiki: 'São Francisco (joki)',
+    },
+  },
+  AUS: {
+    /*
+     * AUSTRALIA (Opus 23.8.2026). Oseanian laudan ensimmäinen maakartta.
+     *
+     * PROJEKTIO oli faktapohjan avoin kysymys (faktapohja-australia.md,
+     * luku 9 ja avoin kysymys C): tarvitaanko USA:n ja Venäjän tapaan
+     * erikoisprojektiohaaraa. EI TARVITA. Wikipedian
+     * Module:Location map/data/Australia (haettu raakatekstinä
+     * 23.8.2026) antaa rajoiksi top -9, bottom -44.5, left 111.5,
+     * right 155 EIKÄ määrittele projektiota lainkaan, jolloin
+     * oletus on tasavälinen — sama kaava kuin karttapiste()
+     * käyttää. Modulin relief-kuva `Australia relief map.jpg`
+     * (1336 × 1200 px) on siis suoraan pelin oma kartta ilman
+     * uutta koodihaaraa. Kuva katsottu silmin 900 px:ssä: koko manner
+     * osavaltiorajoineen, Tasmania mukana, ei tekstiä eikä
+     * mittakaavajanaa.
+     *
+     * KAUPUNGIT: viisi pistettä, jotka näyttävät mantereen mitan —
+     * Sydney idässä (laudan ensimmäinen Australian kaupunki), Perth
+     * lännessä, Darwin pohjoisessa (lennätinlinjan pohjoispää),
+     * Alice Springs keskellä ja Hobart Tasmaniassa. Koordinaatit
+     * artikkelien coord-merkinnöistä. Perth on poikkeus: sen
+     * en-Wikipedian infolaatikko hakee koordinaatin Wikidatasta eikä
+     * raakatekstissä ole lukua lainkaan, joten piste on otettu
+     * Perth railway station -artikkelin coordista (31°57'05"S,
+     * 115°51'37"E) eli kaupungin ytimestä.
+     */
+    tiedosto: 'Australia relief map.jpg',
+    lahde: 'Виктор В, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: -9, etela: -44.5, lansi: 111.5, ita: 155 },
+    kaupungit: [
+      { nimi: 'Sydney', lat: -33.868, lon: 151.21, paa: true },
+      { nimi: 'Perth', lat: -31.951, lon: 115.86 },
+      { nimi: 'Darwin', lat: -12.438, lon: 130.841 },
+      { nimi: 'Alice Springs', lat: -23.7, lon: 133.87 },
+      { nimi: 'Hobart', lat: -42.881, lon: 147.325 },
+    ],
+    /*
+     * Kuvanosto Sinisistä vuorista: kartalla Sydneyn takana kohoava
+     * jyrkkä hiekkakiviylänkö on syy siihen, miksi siirtokunta pysyi
+     * neljännesvuosisadan rannikolla. Aihe ei osu yhteenkään maalehden
+     * kahteenkymmeneen nostoon (tarkistettu). Faktat en-Wikipedian
+     * artikkelista "Blue Mountains (New South Wales)" 23.8.2026.
+     * Ylitys kerrotaan eurooppalaisten ylityksenä, koska vuoret ovat
+     * olleet dharugien ja gundungurrojen maata vuosituhansia.
+     */
+    nosto: {
+      otsikko: 'Muuri, joka piti siirtokunnan rannalla',
+      tiedosto: 'Jamison valley frm wentworth falls.jpg',
+      teksti: 'Sydneystä noin viisikymmentä kilometriä länteen alkaa '
+        + 'hiekkakiviylänkö, jota dharugit ja gundungurrat ovat asuttaneet '
+        + 'vuosituhansia ja kutsuneet nimellä Gulu-mada, koalan paikka. '
+        + 'Gundungurrojen kertomuksessa Jamisonin laakson uursivat '
+        + 'Uneajan olennot Mirigan ja Garangatch taistellessaan. '
+        + 'Uudisasukkaille jyrkänteet olivat ylipääsemättömiä: vuosina '
+        + '1798–1813 moni yritti eikä kukaan löytänyt reittiä. Gregory '
+        + 'Blaxland, William Lawson ja William Charles Wentworth '
+        + 'lähtivät 11. toukokuuta 1813 ja pääsivät yli kuukauden '
+        + 'lopulla. Vasta silloin siirtokunta pääsi mantereen sisään.',
+      selite: 'Wentworth Fallsilta katsottuna Jamisonin laakson '
+        + 'hiekkakivijyrkänteet laskeutuvat portaina metsän peittämään '
+        + 'pohjaan, ja kaukaisuus siintää sinisenä.',
+      lahde: 'Adam.J.W.C., Wikimedia Commons (CC BY-SA 2.5)',
+      wiki: 'Siniset vuoret',
+    },
+  },
+  ARG: {
+    /*
+     * ARGENTIINA (Opus 23.8.2026). Toisin kuin USA ja Venäjä,
+     * Argentiina ei vaadi omaa projektiohaaraa: Wikipedian
+     * Module:Location map/data/Argentina antaa pelkät rajat ilman
+     * projektio-kenttää, ja tämän tiedoston oma kuvaussivu sanoo sen
+     * ääneen — "Equirectangular projection, N/S stretching 115 %".
+     * N/S-venytys vaikuttaa vain kuvasuhteeseen, ei
+     * prosenttiasemointiin, joten suoraPiste() riittää sellaisenaan.
+     *
+     * Tiedosto on 882 px leveä eli kapein pelin korkokartoista (EGY
+     * 1055 px oli tähän asti pienin). Suurempaa tasavälistä
+     * korkokarttaa ei ole: Commonsin ainoa isompi versio on
+     * `Argentina topo location map.jpg` (1216 px), mutta sen oma
+     * kuvaussivu ilmoittaa lähteekseen `Argentina adm location
+     * map.svg`:n, joka on {{Location map series N (conic)}} eli
+     * KARTIOPROJEKTIO (latitude1 -34, latitude2 -44, longitude -64).
+     * Sen käyttö siirtäisi jokaista kaupunkipistettä samalla tavalla
+     * kuin Venäjän laea — siksi tässä on kapeampi mutta oikea kartta.
+     * Jos Commonsiin ilmestyy leveämpi tasavälinen relief samoilla
+     * rajoilla, tiedoston voi vaihtaa ja rajat pysyvät.
+     */
+    tiedosto: 'Relief Map of Argentina.jpg',
+    lahde: 'NordNordWest ja Виктор В, Wikimedia Commons (CC BY-SA 3.0)',
+    /*
+     * Rajat tiedoston omalta kuvaussivulta (N 21,0° S, S 56,5° S,
+     * W 76,5° W, E 52,5° W) — samat luvut kuin Module:Location
+     * map/data/Argentina antaa.
+     */
+    rajat: { pohjoinen: -21.0, etela: -56.5, lansi: -76.5, ita: -52.5 },
+    /*
+     * Viisi paikkaa, jotka näyttävät maan mitan: maa on lähes 3 700 km
+     * pitkä, ja kartalta sen näkee vasta kun mukana on sekä trooppinen
+     * koillisnurkka että Tulimaa. Pääkaupunki Buenos Aires ja pelin
+     * kaksi muuta ARG-kaupunkia (Salta luoteessa, Puerto Iguazú
+     * koillisessa) ovat mukana; Mendoza on Aconcaguan ja malbecin
+     * koti eli maalehden Luonto- ja Ruoka-aiheiden maantieteellinen
+     * ankkuri, ja Ushuaia on maailman eteläisin kaupunki.
+     * Koordinaatit en-Wikipedian coord-merkinnöistä (haettu
+     * rajapinnasta 23.8.2026), pyöristettyinä kolmeen desimaaliin.
+     *
+     * Sijainnit tarkistettu kartalta silmin: yksikään ei osu veteen.
+     * Buenos Aires on Río de la Platan rannalla ja Ushuaia Beaglen
+     * kanavan rannalla, joten näiden kahden kiekon reunaan jää myös
+     * vettä — rannalla oleva piste ei ole virhe (sama huomio kuin
+     * USA-lohkossa).
+     */
+    kaupungit: [
+      { nimi: 'Buenos Aires', lat: -34.604, lon: -58.381, paa: true },
+      { nimi: 'Salta', lat: -24.783, lon: -65.417 },
+      { nimi: 'Puerto Iguazú', lat: -25.6, lon: -54.567 },
+      { nimi: 'Mendoza', lat: -32.89, lon: -68.844 },
+      { nimi: 'Ushuaia', lat: -54.807, lon: -68.308 },
+    ],
+    /*
+     * Kuvanosto Paranásta: kartan koillisosassa kulkeva leveä joki on
+     * se väylä, jota pitkin isoisän aikaan noustiin sisämaahan, mutta
+     * yksikään maalehden kahdestakymmenestä nostosta ei kerro siitä
+     * (tarkistettu). Kuva on silmätarkistettu 900 px:ssä: leveä
+     * panoraama jokea illansuussa, ei vesileimoja eikä tunnistettavia
+     * ihmisiä.
+     */
+    nosto: {
+      otsikko: 'Joki, jota pitkin noustiin sisämaahan',
+      tiedosto: 'Paraná.jpg',
+      teksti: 'Paraná virtaa Brasiliasta Paraguayn kautta Argentiinaan '
+        + 'noin 4 880 kilometriä ja on Etelä-Amerikan joista toiseksi '
+        + 'pisin heti Amazonin jälkeen. Se yhtyy ensin Paraguayjokeen ja '
+        + 'sitten Uruguayjokeen, ja yhdessä ne muodostavat Río de la '
+        + 'Platan, jonka pohjukassa Buenos Aires sijaitsee. Ensimmäinen '
+        + 'eurooppalainen, joka nousi jokea ylös, oli venetsialainen '
+        + 'Sebastian Cabot vuonna 1526 Espanjan palveluksessa. Ennen '
+        + 'rautateitä joki oli ainoa nopea reitti sisämaahan: '
+        + 'jokilaivat kulkivat Buenos Airesista Asunciónin satamaan '
+        + 'asti. Suistossa joki hajoaa sadoiksi saariksi ja haaroiksi.',
+      selite: 'Paraná levittäytyy Argentiinan halki niin leveänä, että '
+        + 'vastaranta jää matalaksi metsäviivaksi taivaanrannassa.',
+      lahde: 'Luis Argerich from Buenos Aires, Argentina, Wikimedia '
+        + 'Commons (CC BY 2.0)',
+      wiki: 'Paraná (joki)',
+    },
+  },
 };
 
 /*

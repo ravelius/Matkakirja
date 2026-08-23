@@ -187,8 +187,9 @@ Faktat ja lähteet:
 > kävijöitä oli 708. Kiinnostus museota kohtaan hiipui 1860-luvulla, vaikka
 > kokoelma kasvoi koko ajan, ja 1869 hoitovastuu siirtyi vasta perustetulle
 > Auckland Institutelle. Isoisän vieraillessa 1873 museo asui yhä
-> vaatimattomissa tiloissa Princes Streetillä — uusi italialaistyylinen
-> rakennus valmistui vasta 1876. Ranskalainen taidemaalari Paul Gauguin
+> alkuperäisessä vaatimattomassa mökissään Grafton Roadin ja Symonds
+> Streetin kulmilla — uusi italialaistyylinen rakennus Princes
+> Streetillä valmistui vasta 1876. Ranskalainen taidemaalari Paul Gauguin
 > vieraili museossa 1890-luvulla ja luonnosteli maorikokoelman esineitä
 > myöhempiin tahitilaiskausiin.
 
@@ -204,9 +205,10 @@ Faktat ja lähteet:
   luonnosteli maori-esineitä ja käytti niitä myöhemmin
   Tahiti-kauden maalauksissaan. — en-Wikipedia "Auckland War Memorial
   Museum"
-- **Huom:** nykyinen sotamuistomerkkirakennus (nykyinen sijainti Auckland
-  Domainissa) valmistui vasta 1929 — täysin isoisän ajan jälkeen; 1873
-  museo oli siis vielä Princes Streetin vaatimattomassa rakennuksessa.
+- **Huom (KORJATTU 23.8.2026 tarkistuksen jälkeen):** vuonna 1873 museo
+  oli yhä ALKUPERÄISESSÄ Grafton Road/Symonds Street -mökissä; Princes
+  Street on vasta 1876 avatun uuden rakennuksen osoite. Nykyinen
+  sotamuistomerkkirakennus Auckland Domainissa valmistui vasta 1929.
 
 **Nosto H2 — "Suurin pā kannaksella" (585 merkkiä)**
 
@@ -524,8 +526,9 @@ silmätarkistuksen:
 7. Devonport tai Devonport Naval Base historiallinen näkymä (kohdekartan
    piste 7 -tuki).
 8. Old Government House tai St Patrick's Cathedral julkisivu — molemmat
-   olivat jo pystyssä 1873 (St Patrick'sin nykyinen puinen kirkko rakennettu
-   1848, uusittu myöhemmin — tarkistettava tarkemmin, ks. osio 8, huomio 3).
+   olivat jo pystyssä 1873 (St Patrick'sin 1848-kirkko oli KIVINEN,
+   paikallista scoria-kiveä — vain edeltävä 1843-kappeli oli puinen;
+   KORJATTU 23.8.2026 tarkistuksen jälkeen, ks. tarkistus-auckland.md).
 
 ### 6.4 Ennen ja nyt -kuvaparin ehdokkaat
 
@@ -598,13 +601,11 @@ tämä ei ole este julkaisulle.
    vain haettu sen koordinaatit API:lla. **Tarkistettava erikseen** ennen
    käyttöä, samaan tapaan kuin New Yorkin Grand Central -huomautus.
 
-4. **Waikaton sodan maakonfiskaatiot (Jakso 4:n huomio) EIVÄT ole suoraan
-   peräisin luetusta "Auckland"-artikkelin katkelmasta** — se on
-   yleistietoa Uuden-Seelannin sotien seurauksista, jonka olen merkinnyt
-   auki tekstiin. **Tarkistettava erikseen** artikkelista "New Zealand
-   Wars" tai "Waikato War" ennen julkaisua, tai poistettava jos vahvistusta
-   ei löydy — spec-mantereet.md:n Oseania-linjan mukaisesti tapahtumat
-   kerrotaan neutraalisti, mutta väitteen pitää olla tarkistettu.
+4. **RATKENNUT (tarkistus 23.8.2026):** Waikaton sodan
+   maakonfiskaatioväite on VAHVISTETTU riippumattomassa tarkistuksessa
+   suoraan artikkelista "Invasion of the Waikato" — voidaan kirjata
+   varmana faktana (ks. tarkistus-auckland.md). Neutraali
+   tapahtumakerronta spec-mantereet.md:n Oseania-linjan mukaisesti.
 
 5. **Kauri-pihkan käsinkaivu ("gum digging") osiossa Jakso 3 on merkitty
    täydentäväksi yleistiedoksi**, ei suoraan luetusta raakatekstistä —
