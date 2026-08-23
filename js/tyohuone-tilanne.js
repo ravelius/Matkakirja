@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1078 — MATKAKIRJAN TEKSTI kayttaa taas koko leveyden: piilotetun pienoiskuvan kellutusvaraus jai voimaan ja teksti kiersi tyhjaa kolkkaa. Tarkista: matkakirjamerkinta kaupunkiin saavuttaessa',
   'v1077 — KORJAUS: v1076 piilotti vahingossa koko pelin kuvakatselimen, joten mikaan kuva ei auennut kokoruudulle. Nyt piilossa on vain matkakirjan pienoiskuva. Lisaksi Quiton ja Los Angelesin kaupunkilehdet. Tarkista: minka tahansa lehden kuvan avaus kokoruudulle, kohdekartan kohteet, ja kahden uuden lehden sivut',
   'v1076 — KAKSI OMISTAJAN TILAUSTA: kehittajan MANTEREET-taulun otsikkorivi pysyy nakyvissa pystyvierityksessa, ja matkakirjan kuvapino on piilotettu (ei poistettu). Tarkista: MANTEREET-taulun vieritys iPadilla seka kaupunkiin saapuminen',
   'v1075 — LIMAN KAUPUNKILEHTI: kaupunki, historia ja ruoka; 12 nostoa ja 22 kuvaa. Tarkista: Liman lehti ja ruokasivu',
