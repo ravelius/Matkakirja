@@ -151,4 +151,26 @@ export const OCEANIA_ARTIKKELIT = {
       + 'laiva nimeltä Dunedin vie ensimmäisen jäähdytetyn lihalastin '
       + 'Lontooseen.',
   },
+  /* Australian maaintro liitetty fragmentista 23.8.2026. */
+  Australia: {
+    intro: 'Australia ei ole vuonna 1873 vielä yksi maa vaan kuusi '
+      + 'erillistä brittisiirtokuntaa, joilla on omat parlamenttinsa, '
+      + 'lakinsa ja jopa raideleveytensä; liittovaltio syntyy vasta '
+      + '1901. Aboriginaalikansat ovat asuttaneet mannerta 50 000–65 000 '
+      + 'vuotta ja muodostaneet jopa viisisataa kieli- ja alueryhmää, '
+      + 'joiden tähtitieto ja maanhoito ovat yhä käytössä. Viimeinen '
+      + 'vankilaiva saapui Fremantleen 1868, joten rangaistussiirtolan '
+      + 'aika on vasta juuri päättynyt. Kultaryntäykset kasvattivat '
+      + 'väkiluvun 430 000:sta yli miljoonaan kymmenessä vuodessa ja '
+      + 'tekivät Melbournesta suurimman kaupungin, ja hienovillaiset '
+      + 'merinolampaat, joita tuotiin ensimmäisen kerran 1797, olivat jo '
+      + '1844 puolet siirtokunnan viennistä. Mantereen eläimistö on niin '
+      + 'omanlaisensa, että ensimmäiset tutkijat pitivät nokkasiippaa '
+      + 'vuonna 1799 huijauksena. Edellisenä vuonna valmistunut '
+      + 'mannertenvälinen lennätinlinja on juuri lopettanut Australian '
+      + 'eristyneisyyden: viesti Eurooppaan kulkee nyt tunneissa eikä '
+      + 'kuukausissa. Isoisän matkapäiväkirja saapuu mantereelle '
+      + 'hetkellä, jolloin sen kuusi osaa ovat vasta löytämässä '
+      + 'toisiaan.',
+  },
 };
