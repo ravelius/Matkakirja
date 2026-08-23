@@ -2210,6 +2210,25 @@ class Pollo {
         // Alla oleva juttu on yhä auki: pillerit päivittyvät heti
         // eikä vasta seuraavalla avauksella.
         paivitaPillerit(avain, this.doc);
+        /*
+         * Sama pari lähtee taustalla myös ehdotuskanavaan (omistajan
+         * tilaus 23.8.2026: "saako prosessia helpommaksi") — silloin
+         * poiminta on tallessa kanavassa eikä vain tämän laitteen
+         * localStoragessa, ja Fable voi kuratoida sen pakettiin
+         * suoraan Lukijoilta-jonosta ilman kopiointia. Tarkenne
+         * erottaa kehittäjän tallennuksen pelaajan ehdotuksesta.
+         * Epäonnistuminen ei haittaa: paikallinen tallennus ja
+         * Pöllöpoiminnat-sivun vientilohko toimivat kuten ennenkin.
+         */
+        if (ok && ehdotusKaytossa()) {
+          lahetaEhdotus({
+            teksti: `Pöllöpoiminta\n\nKysymys: ${kysymys}\n\nVastaus: ${vastaus}`,
+            sivu: avain,
+            tarkenne: 'Pöllöpoiminta (kehittäjä)',
+          }).then(() => {
+            tila.textContent = 'Tallennettu juttuun · lähti myös kuratointijonoon.';
+          }).catch(() => { /* vientilohko on varareitti */ });
+        }
         return;
       }
       tila.textContent = 'Lähetetään…';
