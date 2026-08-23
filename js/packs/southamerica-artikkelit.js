@@ -122,4 +122,24 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'syntyi vasta isoisän vierailun jälkeen, on nyt kaupungin '
       + 'tunnetuin vientituote.',
   },
+  /* Brasilian maaintro liitetty fragmentista 23.8.2026 (ks. docs/
+   * mantereet-tyoaineisto/brasilia-intro-fragmentti.js). */
+  Brasilia: {
+    intro: 'Vuonna 1873 Brasilia on Amerikan mantereen ainoa keisarikunta '
+      + '— monarkia keskellä tasavaltoja, ja sitä hallitsee tiedettä ja '
+      + 'valokuvausta harrastava Pedro II. Maa on juuri selvinnyt '
+      + 'mantereen verisimmästä sodasta, ja orjuuteen on tullut '
+      + 'ensimmäinen särö: orjuutetuille äideille syntyvät lapset on '
+      + 'julistettu vapaiksi, vaikka täysi lakkautus tulee vasta '
+      + 'viidentoista vuoden päästä. Kahvi on tehnyt maasta maailman '
+      + 'suurimman tuottajan ja Rio de Janeirosta vauraan satamakaupungin, '
+      + 'jonka kaduilla soi juuri syntynyt musiikkilaji choro. '
+      + 'Pohjoisessa aukeaa Amazon, maailman suurin sademetsä, jota '
+      + 'alkuperäiskansat ovat muokanneet vuosituhansien ajan ja jonka '
+      + 'kumipuut ovat vasta houkuttelemassa maailman huomiota. Etelässä '
+      + 'gaúchot ratsastavat pampan aroilla karjan perässä ja paahtavat '
+      + 'lihansa hiilloksen yllä. Kaikki tämä mahtuu maahan, joka on '
+      + 'ollut itsenäinen vasta 51 vuotta ja jonka pohjoiskärjen ja '
+      + 'eteläkärjen välillä on lähes neljäkymmentä leveysastetta.',
+  },
 };
