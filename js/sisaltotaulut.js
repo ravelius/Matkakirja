@@ -30,6 +30,7 @@ import { EUROPE_ARTIKKELIT } from './packs/europe-artikkelit.js';
 import { ASIA_ARTIKKELIT } from './packs/asia-artikkelit.js';
 import { NORTHAMERICA_ARTIKKELIT } from './packs/northamerica-artikkelit.js';
 import { SOUTHAMERICA_ARTIKKELIT } from './packs/southamerica-artikkelit.js';
+import { OCEANIA_ARTIKKELIT } from './packs/oceania-artikkelit.js';
 
 // Uuden mallin saapumistekstit laudoittain (Afrikka valmis, Eurooppa
 // rakentuu kaupunki kerrallaan — pilotti: Venetsia).
@@ -150,12 +151,13 @@ export const MAATIEDOT = {
 
 // Omat artikkelit: yhteinen hakemisto wiki-otsikolla (mantereet eivät
 // törmää, koska otsikot ovat eri). P-Amerikan taulu tuli mukaan
-// 23.8.2026 New Yorkin kaupunkilehden myötä ja E-Amerikan taulu samana
-// päivänä Rio de Janeiron myötä; Oseania saa omansa samalla kaavalla,
-// kun sen ensimmäinen lehti kirjoitetaan (spec-mantereet.md).
+// 23.8.2026 New Yorkin kaupunkilehden myötä, ja E-Amerikan ja Oseanian
+// taulut samana päivänä Rio de Janeiron ja Sydneyn myötä
+// (spec-mantereet.md).
 export const ARTIKKELIT = {
   ...OMAT_ARTIKKELIT, ...EUROPE_ARTIKKELIT, ...ASIA_ARTIKKELIT,
   ...NORTHAMERICA_ARTIKKELIT, ...SOUTHAMERICA_ARTIKKELIT,
+  ...OCEANIA_ARTIKKELIT,
 };
 
 // Saapumishavaintojen luennat: 'pakka:kaupunki' kertoo, että tiedosto

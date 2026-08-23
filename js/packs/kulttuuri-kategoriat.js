@@ -53299,4 +53299,612 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SYDNEY (Opus 23.8.2026). OSEANIAN LAUDAN ENSIMMÄINEN KAUPUNKILEHTI:
+   * kohteella ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen
+   * tätä. Intro ja teksti-kenttä kirjoitettiin samassa erässä uuteen
+   * tiedostoon js/packs/oceania-artikkelit.js (sama ratkaisu kuin
+   * P-Amerikan pilotissa, spec-mantereet.md, Fablen päätös 1).
+   * Pohjana ovat docs/mantereet-tyoaineisto/faktapohja-sydney.md ja sen
+   * riippumaton tarkistus tarkistus-sydney.md, jotka luettiin yhdessä;
+   * faktapohjaan on jo tehty tarkistuksen neljä pakollista korjausta
+   * (Warrane/Kamay, porte-cochère, Fort Denisonin tykki 1906, Rocks
+   * Pushin maineen kesto). Jokainen väite on lisäksi luettu
+   * en-Wikipedian raakateksteistä 23.8.2026: Sydney, Sydney Cove,
+   * Gadigal, History of Sydney, Port Jackson, Sydney Observatory,
+   * Sydney Mint, Government House Sydney, Circular Quay, The Rocks
+   * New South Wales, Cadmans Cottage, Great Synagogue (Sydney),
+   * Central railway station Sydney, Climate of Sydney ja
+   * Template:Sydney weatherbox.
+   *
+   * ANAKRONISMIVAHTI on tämän lehden tärkein yksittäinen sääntö
+   * (faktapohja, osio 8, huomio 2). Sydney Harbour Bridge avattiin
+   * 1932 ja oopperatalo 1973 — kumpaakaan ei ollut olemassa eikä
+   * suunnitteilla 1873. Ne esiintyvät vain nykykuvissa, ja lehti
+   * sanoo kahdesti ääneen, että ne ovat isoisän matkaa myöhempiä
+   * (etusivun intro ja ennenNyt-parin nykyselite). Yksikään
+   * 1873-kehyksessä oleva teksti ei mainitse niitä.
+   *
+   * NELJÄ KOHTAA, JOISSA LÄHTEET SANOVAT ERI ASIAN — kirjoitettu auki
+   * tähän, koska talon sääntö on selittää ristiriita eikä valita
+   * hiljaa toista lukua:
+   *
+   * 1. Kuvernöörintalon 1873-lisäys. Artikkelin "Government House,
+   *    Sydney" leipäteksti sanoo "a front portico in 1873", mutta
+   *    saman artikkelin muutoslista sanoo "1873 - A porte cochere
+   *    added". Nosto H4 käyttää muutoslistan tarkempaa muotoa
+   *    (vaunukatos, porte-cochère); pylväikkö (Colonnade) ja itäinen
+   *    arkadi ovat vasta vuosilta 1879–80.
+   * 2. Suursynagogan rakennusaika. Sama artikkeli antaa
+   *    johdannossaan rakennusajaksi 1874–1878 mutta kertoo
+   *    leipätekstissä peruskiven muuratun 26.1.1875. Nosto H4 kertoo
+   *    peruskivipäivän, koska se on artikkelin tarkempi tieto.
+   * 3. Cadmans Cottagen merimieskotivaihe. Artikkelin tiivistelmä
+   *    sanoo "the Sailor's Home (from 1865 to 1970)", mutta sama
+   *    artikkeli kertoo merimieskodin avautuneen viereiseen taloon
+   *    1864 ja Cadmansin toimineen sen jälkeen kodin isännän
+   *    asuntona. Oppaan jakso 3 kertoo tämän tarkemman version.
+   * 4. Observatory Hillin havaintosarjan alku. Faktapohja sanoo
+   *    havaintojen ulottuvan vuoteen 1858, mutta
+   *    Template:Sydney weatherbox merkitsee ääriarvojen jakson
+   *    1861–nykyhetki. Oppaan jakso 5 käyttää sääruudun omaa lukua
+   *    1861, ja ero mainitaan tässä.
+   *
+   * SÄÄRIVIÄ EI OLE. tools/hae-saanormaalit.mjs täydentää vain
+   * olemassa olevia saatiedot.js-rivejä, ja uuden rivin pohjaluvut
+   * pitäisi hakea Open-Meteon arkistosta — se vastasi 23.8.2026
+   * "Daily API request limit exceeded", eli vuorokausikiintiö oli
+   * käytetty. Samarkandin ennakkotapauksen (v965) mukaisesti lukuja EI
+   * keksitä: Sydney jää toistaiseksi ilman säälaatikkoa ja vuosigraafia,
+   * ja oppaan jakso 5 nojaa en-Wikipedian sääruutuun (Observatory
+   * Hillin asema, normaalikausi 1991–2020) sanoen sen ääneen —
+   * Karachin ennakkotapaus. Fable voi lisätä rivin, kun kiintiö
+   * vapautuu.
+   *
+   * SISÄLTÖLINJAUS on spec-mantereet.md:n Oseania-kohta. Gadigalit ja
+   * eora nimetään omilla nimillään ennen siirtomaanimiä (Warrane ennen
+   * Sydney Covea, Tallawoladah ennen The Rocksia), ja kansa näytetään
+   * elävänä: nosto H2 päättyy vuoden 2023 metroasemaan ja gadigal-
+   * vanhimman Allen Maddenin arvioon nykyisistä asukkaista, ei
+   * epidemiaan. Isorokkoepidemia 1789 kerrotaan tapahtumana ilman
+   * kärsimyksen yksityiskohtia. Sukupolvien erottaminen (Stolen
+   * Generations) on 1900-luvun aihe eikä nouse tässä 1873-painotteisessa
+   * lehdessä (faktapohjan oma rajaus, osio 8, huomio 4) — se kuuluu
+   * maalehden puolelle, jos Fable haluaa sen sinne. Pinchgut-saaren
+   * nimen alkuperä (vanki leivällä ja vedellä 1788) kerrotaan
+   * mainintana; hirttämiset ja gibbetointi on jätetty pois. Ei
+   * nykypolitiikkaa.
+   *
+   * ENNEN JA NYT -PARI on siirretty sellaisenaan matkakirjan
+   * valokuvataulusta (js/packs/oceania-valokuvat.js, avain sydney):
+   * tiedostonimet, vuosi ja lähderivit on kopioitu, ja kumpaankin on
+   * kirjoitettu uusi YHDEN VIRKKEEN selite. Vanha vedos on vuodelta
+   * 1890 eli reilusti harmaasävyrajan (1960) alapuolella. Lähderivit
+   * ovat taulun muodossa ('Photoglob Co., Library of Congress (PD)',
+   * 'Paul Carmona, Commons (CC BY 2.0)') eivätkä talon
+   * 'Tekijä, Wikimedia Commons (LISENSSI)' -muodossa — sama ratkaisu
+   * kuin New Yorkissa, koska rivi kopioidaan taulusta muuttamatta.
+   *
+   * KUVAT: kaikki muut kahdeksantoista kuvaa on haettu Commonsin
+   * api.php:sta, lisenssi ja tekijä luettu extmetadatasta ja leveys
+   * tarkistettu (pienin 1 800 px, useimmat yli 3 500 px). Jokainen on
+   * katsottu silmin 900 pikselin esikatselusta. Etusivun iso
+   * avauskaruselli on kolme laajaa yleiskuvaa kaupungin eri puolilta
+   * (koko satama ilmasta, Circular Quayn villavarastorivi vedeltä,
+   * Farm Cove kasvitieteellisen puutarhan rannalta) omistajan
+   * 21.8.2026 kansikaruselli-linjauksen mukaisesti; kansikuvat ovat
+   * samaa laatua (satama Fort Denisonin kohdalta, itäiset poukamat,
+   * Bondin ranta ilmasta). Herokuvat generoidaan erikseen myöhemmin
+   * samaan listaan (Helsingin malli), eikä niille jätetty tyhjiä
+   * paikkoja.
+   *
+   * AIHETOISTO, joka hyväksytään ja kirjataan: Fort Denison esiintyy
+   * kahdesti eri tiedostoina ja eri mittakaavassa (kansikuvassa 1
+   * kaukaisena osana satamanäkymää, oppaan jaksossa 5 lähikuvana),
+   * ja Circular Quay esiintyy avauskuvassa 2 nykyisenä sekä nostossa
+   * K1 vuoden 1839 akvarellina. Molemmat ovat lehden kantavia
+   * 1873-aiheita, ja kuvat ovat eri aikakausilta.
+   *
+   * KUVAHYLKÄYKSET on kirjattu raporttiin. Yleisimmät syyt olivat
+   * kuvan päälle lisätty merkintä (Argyle Cutin 1870-luvun vedos,
+   * jonka negatiiviin on raapustettu nimiö; Mrs Macquarie's Chairin
+   * Holtermann-vedos, jonka paspartuussa on lyijykynämerkintöjä;
+   * Circular Quayn 1871 taikalyhtylevy, jossa on musta pyöristetty
+   * kehys ja nimiölappu), aihe joka ei vastannut otsikkoaan
+   * (Sydney Observatoryn "Time Ball" osoittautui kuvaksi
+   * opastetaulusta, "Tank Stream 2026" työmaakuopasta) ja
+   * kuvallinen laatu (kaksi Sardakan satamanäkymää olivat sateen
+   * harmaita, yksi taivaan täyttävä risteilijän tuotemerkki).
+   *
+   * KAKSI LÄHDERIVIÄ ON NORMALISOITU. Conrad Martensin Sydney Cove
+   * -maalauksessa extmetadata.Artist on kokonainen elämäkertavirke
+   * ("Conrad MARTENS (1801 - 21 August 1878) Born in Crutched
+   * Friars, England. Died in Sydney..."); lähderivillä on siitä vain
+   * taiteilijan nimi, koska koko virke ei ole tekijämerkintä vaan
+   * Google Art Projectin kuvausteksti. Saman tekijän toisessa
+   * teoksessa Artist on jo pelkkä "Conrad Martens". Photoglobin
+   * photochromissa Artist on "Photoglob Co., publisher", ja rivi on
+   * valokuvataulun muodossa (ks. yllä).
+   */
+  sydney: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sydney',
+      johdanto: 'Satamakaupunki Port Jacksonin poukamien varrella: eoran '
+        + 'kansat tunsivat lahden nimellä Warrane kauan ennen brittien '
+        + 'rangaistussiirtokuntaa. Isoisän saapuessa 1873 kullan tuoma '
+        + 'raha muutti kadut hiekkakivityömaiksi.',
+      /*
+       * KANSIKUVAT jäävät tällä kaupungilla pikkuriviltä piiloon,
+       * koska ennenNyt-pari korvaa rivin (js/lehti.js
+       * piirraLehtiKuvat) — sama tilanne kuin New Yorkissa ja
+       * Helsingissä. Ne ovat silti kolme kelvollista laajaa
+       * yleiskuvaa suurennossarjaa varten: satama, itäiset poukamat
+       * ja Bondin ranta.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'AU-sydney-einfahrt-2.jpg',
+          selite: 'Fort Denison seisoo keskellä satamaa siinä kohdassa, '
+            + 'jossa väylä kääntyy kohti Sydney Covea.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '(1)Sydney 008.jpg',
+          selite: 'Sataman itäosassa lahdenpoukamat ja niemekkeet '
+            + 'pilkkovat rannan pieniksi kaupunginosiksi.',
+          lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Bondi from above.jpg',
+          selite: 'Bondi on kaupungin tunnetuin avomeren ranta, ja sen '
+            + 'eteläpäässä on kallioon louhittu merivesiallas.',
+          lahde: 'Nick Ang, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI on etusivun iso kuvapaikka, ja siihen kuuluvat
+       * omistajan 21.8.2026 kansikaruselli-linjauksen laajat
+       * yleiskuvat kaupungin ERI puolilta: koko satama ilmasta,
+       * Circular Quayn varastorivi vedeltä ja Farm Cove
+       * kasvitieteellisen puutarhan rannalta. Yksikään kolmesta ei
+       * ole minkään noston aiheena samalla tiedostolla.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Sydney as seen from an airplane (28480748074).jpg',
+          selite: 'Port Jackson on yksi maailman suurimmista '
+            + 'luonnonsatamista, ja kaupunki on rakennettu sen '
+            + 'molemmin puolin.',
+          lahde: 'Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'AUS Sydney, Central Business District, Circular Quay 041.jpg',
+          selite: 'Circular Quayn länsirannan päätykolmioiset '
+            + 'hiekkakivivarastot ovat villakaupan ajalta, jolloin '
+            + 'quayn kaikki kolme sivua olivat laitureita ja '
+            + 'varastoja.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Sydney (AU), Farm Cove -- 2019 -- 2283.jpg',
+          selite: 'Farm Coven rantaa reunustaa kuninkaallinen '
+            + 'kasvitieteellinen puutarha, joka perustettiin 1816 '
+            + 'siirtokunnan ensimmäisen viljelysmaan paikalle.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Sydney Harbour LCCN2017657737.jpg',
+          vuosi: '1890',
+          selite: 'Photochrom-vedokset olivat käsin väritettyjä '
+            + 'painokuvia, joita myytiin matkailijoille aikana, jolloin '
+            + 'värivalokuvaa ei vielä ollut.',
+          lahde: 'Photoglob Co., Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Sydney Harbour from Circular Quay.jpg',
+          selite: 'Kumpaakaan nykyistä maamerkkiä ei ollut vanhan '
+            + 'vedoksen aikaan: satamansilta valmistui 1932 ja '
+            + 'oopperatalo 1973.',
+          lahde: 'Paul Carmona, Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Warrane ennen Sydney Covea',
+          teksti: 'Ennen brittejä lahden tunsivat gadigalit, yksi eoran '
+            + 'seitsemästä rannikkoklaanista. Heidän nimensä poukamalle '
+            + 'oli Warrane, ja oma alueensa Gadi ulottui South Headista '
+            + 'Darling Harbouriin — klaanien nimet muodostettiin '
+            + 'lisäämällä alueen nimeen pääte -gal. Miehet keihästivät '
+            + 'kalaa rannalta ja naiset onkivat kaarnaveneistään. Arthur '
+            + 'Phillip valitsi tammikuussa 1788 juuri tämän poukaman, '
+            + 'koska siinä oli sekä suojainen ankkuripaikka että makeaa '
+            + 'vettä: puro, joka sai pian nimen Tank Stream. Suur-Sydneyn '
+            + 'alueella tunnetaan 28 klaanin perinteiset maat.',
+          tiedosto: 'Circular Quay 1839 V1-FL3198424.jpg',
+          selite: 'Sydney Cove eli Warrane oli vielä 1830-luvulla '
+            + 'matalarantainen poukama, jonka pohjukkaan Tank Stream '
+            + 'laski.',
+          lahde: 'Frederick Garling Jr., Wikimedia Commons (PD)',
+          wiki: 'Sydney Cove',
+        },
+        {
+          otsikko: 'Kaupunki, jota rakennettiin joka suunnasta',
+          teksti: 'Kullan löytyminen New South Walesissa ja Victoriassa '
+            + '1851 vei miehet ensin kultakentille, mutta siirtolaisuus '
+            + 'ja kullan tuoma varallisuus kasvattivat pian asumisen, '
+            + 'tavaroiden ja palvelujen kysyntää. Sydneyn ja sen '
+            + 'esikaupunkien väkiluku nousi 95 600:sta vuonna 1861 '
+            + 'lähes 387 000:een vuonna 1891, ja hallitus rakensi '
+            + 'rautateitä, raitioteitä, satamia ja lennätintä. Isoisän '
+            + 'vierailun aikaan kaupunki oli täynnä keskeneräisiä '
+            + 'hiekkakivitaloja: yliopisto oli valmistunut 1861 ja '
+            + 'Australian Museum 1866, mutta kaupungintalo ja pääposti '
+            + 'olivat vielä työn alla.',
+          tiedosto: 'A.M.P. Society Building, 98 Pitt Street, Sydney (circa 1871-1873).jpg',
+          selite: 'Australian Mutual Provident Societyn talo Pitt '
+            + 'Streetillä on juuri isoisän matkavuosien tienoilta ja '
+            + 'kuuluu Holtermannin lasilevykokoelmaan.',
+          lahde: 'American and Australasian Photographic Company (1866-1873), Wikimedia Commons (PD)',
+          wiki: 'Sydney',
+        },
+        {
+          otsikko: 'Pallo, joka putosi joka päivä kello yhdeltä',
+          teksti: 'Observatory Hillin observatorio valmistui 1858, ja sen '
+            + 'tärkein tehtävä ei ollut tähtitiede vaan aika. Tornin '
+            + 'huipun aikapallo pudotettiin ensimmäisen kerran '
+            + 'keskipäivällä 5. kesäkuuta 1858, ja pudotus siirrettiin '
+            + 'pian kello yhteen. Samalla hetkellä ammuttiin tykki Dawes '
+            + 'Pointilta, jotta satamassa olevat laivat saattoivat '
+            + 'tarkistaa kronometrinsä. Isoisän vierailun aikaan tykki '
+            + 'oli yhä Dawes Pointilla — Fort Denisonin saarelle se '
+            + 'siirrettiin vasta 1906. Pallo pudotetaan yhä joka päivä '
+            + 'alkuperäisellä koneistolla.',
+          tiedosto: '(1)Observatory Hill Sydney.jpg',
+          selite: 'Observatorion nelikerroksinen aikapallotorni kohoaa '
+            + 'Observatory Hillin nurmelta, ja sen huipulla on yhä '
+            + 'kullattu pallo.',
+          lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sydney Observatory',
+        },
+        {
+          otsikko: 'Rahapaja rommisairaalassa',
+          teksti: 'Macquarie Streetin varrella seisoo Sydneyn vanhin '
+            + 'säilynyt julkinen rakennus. Kuvernööri Lachlan Macquarie '
+            + 'sopi 1810 kolmen liikemiehen kanssa, että nämä saavat '
+            + 'kolmeksi vuodeksi väkevien tuontimonopolin, jos '
+            + 'rakentavat kaupunkiin sairaalan — siitä nimi Rum '
+            + 'Hospital, ja talo valmistui 1816. Sen eteläsiipeen '
+            + 'avattiin 14. toukokuuta 1855 Royal Mint, Sydney Branch, '
+            + 'Kuninkaallisen rahapajan ensimmäinen sivukonttori '
+            + 'Englannin ulkopuolella. Vuonna 1868 Sydneyn kolikot '
+            + 'kelpasivat kaikissa siirtokunnissa, Britanniassa vasta '
+            + '1886.',
+          tiedosto: 'Sydney Mint 1870 SLNSW FL1229069.jpg',
+          selite: 'Rahapaja lyö viitenä ensimmäisenä vuotenaan '
+            + 'vuosittain yli miljoonan punnan arvosta kultaa sovereign- '
+            + 'ja half sovereign -kolikoiksi.',
+          lahde: 'attributed to Charles Pickering, Wikimedia Commons (PD)',
+          wiki: 'Sydney Mint',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '(1)Cadmans Cottage-1.jpg',
+          selite: 'Cadmans Cottage valmistui 1816 ja on Sydneyn '
+            + 'toiseksi vanhin säilynyt asuinrakennus.',
+          lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Sydney on Australian suurin kaupunki: Suur-Sydneyssä '
+          + 'asui kesäkuussa 2025 arviolta 5 638 830 ihmistä, ja siihen '
+          + 'kuuluu 658 esikaupunkia 33 kunnan alueella. Matkailijan '
+          + 'Sydney on silti pieni. Isoisän ajan kaupunki mahtuu '
+          + 'kävelymatkan päähän Circular Quaystä: lännessä The '
+          + 'Rocksin hiekkakivikorttelit ja Observatory Hill, etelässä '
+          + 'Macquarie Streetin rahapaja, idässä kasvitieteellinen '
+          + 'puutarha ja kuvernöörin talo. Rannat ovat kaupungin toinen '
+          + 'puoli: Manlyyn mennään lautalla ja Bondiin bussilla, ja '
+          + 'samalla Opal-kortilla noustaan bussiin, junaan, metroon ja '
+          + 'laivaan.',
+        artikkeli: {
+          nimi: 'Matkailijan Sydney',
+          taitto: 'opas',
+          teksti: 'Satamakaupunki, jossa vanhin kortteli, '
+            + 'kasvitieteellinen puutarha ja avomeren rannat ovat '
+            + 'saman matkakortin päässä toisistaan.',
+          nosto: 'Sydneyn lauttaliikenne oli satamansillan avautuessa '
+            + '1932 maailman suurin; matkustajamäärä putosi '
+            + '37 miljoonasta vuonna 1945 yhteentoista miljoonaan '
+            + 'vuonna 1963, ja lautat kulkevat yhä kymmenellä reitillä '
+            + 'Circular Quaystä Manlyyn ja Parramattaan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokoneet laskeutuvat Kingsford Smithin '
+                + 'kentälle Mascotiin. Se on Australian vilkkain '
+                + 'lentoasema ja yksi maailman vanhimpia yhä '
+                + 'toimivia kenttiä, ja sillä on yölentokielto kello '
+                + '23–6. Toinen kenttä, Western Sydney Airport '
+                + 'Badgerys Creekissä, avataan loppuvuodesta 2026. '
+                + 'Junat kokoontuvat Central-asemalle, joka avattiin '
+                + '1906 ja on osavaltion suurin ja vilkkain asema: '
+                + 'Sydney Trains palvelee 168 asemaa ja teki '
+                + 'vuonna 2023–24 noin 302 miljoonaa matkaa. '
+                + 'Kuljettajaton metro kulkee 3–4 minuutin välein, '
+                + 'lähijuna 10–15 minuutin. Circular Quaystä lähtee '
+                + 'kymmenen lauttareittiä satamalle ja Parramattajoelle, '
+                + 'ja koko verkossa käy sama Opal-kortti.',
+              kuva: {
+                tiedosto: 'Freshwater class ferry Queenscliff on its way to Manly at Circular Quay.jpg',
+                selite: 'Manlyn lautta on tavallista joukkoliikennettä '
+                  + 'eikä nähtävyyskierros, ja reitti on kulkenut '
+                  + 'Circular Quaystä pohjoiselle niemelle 1800-luvulta '
+                  + 'asti.',
+                lahde: 'State Transport Regions, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kallio, josta koko vanha kaupunki louhittiin',
+              teksti: 'Keskusta lepää paksun hiekkakiven päällä, ja '
+                + 'varhainen kaupunki rakennettiin siitä: kirkot, '
+                + 'varastot ja katujen reunakivet ovat samaa kiveä. The '
+                + 'Rocks Sydney Coven länsipuolella sai nimensä juuri '
+                + 'tästä kalliosta, ja gadigalit kutsuivat aluetta '
+                + 'Tallawoladahiksi. Ensimmäiset talot olivat '
+                + 'risuseinäisiä ja olkikattoisia, myöhemmät '
+                + 'paikallista hiekkakiveä. Argyle Cut louhittiin '
+                + 'kannaksen läpi vankityönä, ja sen seinissä näkyy '
+                + 'yhä taltan jälki. Fort Denisonin saari oli ennen '
+                + 'toistakymmentä metriä korkea hiekkakiviluoto: se '
+                + 'madallettiin louhimalla, ja kivi meni Circular '
+                + 'Quayn rakentamiseen.',
+              kuva: {
+                tiedosto: 'Argyle Cut 001.jpg',
+                selite: 'Argyle Cut yhdistää The Rocksin Millers '
+                  + 'Pointiin, ja sen yli kulkee kaksi siltaa sekä '
+                  + 'satamansillan pengertie.',
+                lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: satamakortteli merimiehineen',
+              teksti: 'The Rocksin kujat olivat pitkään köyhän väen '
+                + 'aluetta. Alueella oli slummin maine siirtokunnan '
+                + 'alkuajoista asti, ja 1800-luvun jälkipuoliskolla '
+                + 'sitä hallitsi Rocks Push -niminen jengi; rosoinen '
+                + 'maine kesti suunnilleen 1870-luvulle, eli isoisä '
+                + 'näki alueen juuri sen viimeisinä villeinä vuosina. '
+                + 'Rannassa seisoo yhä Cadmans Cottage, joka '
+                + 'valmistui 1816 hallituksen ruorimiesten asunnoksi. '
+                + 'Vesipoliisi piti siinä majaansa 1840-luvun lopulta '
+                + '1860-luvulle, ja sitten se kuului viereen 1864 '
+                + 'avatun merimieskodin piiriin kodin isännän '
+                + 'asuntona. Vuonna 1900 puhjennut rutto johti '
+                + 'satojen alueen talojen purkamiseen.',
+            },
+            {
+              otsikko: 'Historian käännekohta: puro peittyy, lahti kaventuu',
+              teksti: 'Sydney Coven eteläreuna muurattiin 1837–1844 '
+                + 'keinotekoiseksi rantaviivaksi, ja Tank Streamin suu '
+                + 'täytettiin umpeen; puro kulkee yhä betoniputkessa '
+                + 'keskustan katujen alla. Uutta rantaa kutsuttiin '
+                + 'muotonsa mukaan Semi-Circular Quayksi, ja nimi '
+                + 'lyheni käytännön syistä Circular Quayksi. Tullitalo '
+                + 'rakennettiin rannalle 1844–1845, ja 1860-luvulle '
+                + 'tultaessa quayn kaikki kolme sivua olivat '
+                + 'laitureiden ja varastojen — erityisesti '
+                + 'villakaupan — hallussa. Cadmans Cottagen edestä '
+                + 'vesiraja siirtyi töiden myötä noin sata metriä '
+                + 'kauemmas.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Sydneystä puuttuu vielä, joten '
+                + 'nämä luvut ovat en-Wikipedian Sydney-artikkelin '
+                + 'sääruudusta (Observatory Hillin asema, '
+                + 'normaalikausi 1991–2020) eivätkä samasta lähteestä '
+                + 'kuin lehden vuosigraafit muualla. Ilmasto on '
+                + 'kostea subtrooppinen, Köppenin luokka Cfa, eikä '
+                + 'selvää kuivaa kautta ole. Eteläisellä '
+                + 'pallonpuoliskolla vuodenajat ovat päinvastoin kuin '
+                + 'Euroopassa: tammikuu on lämpimin kuukausi '
+                + 'keskilämmöltään 23,5 astetta, heinäkuu viilein '
+                + '13,4 astetta. Vuosisade on 1 149,7 millimetriä ja '
+                + 'jakautuu kaikille kuukausille, mutta epätasaisesti: '
+                + 'kesäkuu on sateisin runsaalla 142 millimetrillä ja '
+                + 'syyskuu kuivin 63 millimetrillä. Sadepäiviä on '
+                + 'vuodessa noin 95 ja aurinkotunteja runsaat 2 600. '
+                + 'Kuumin mitattu lukema on 45,8 astetta '
+                + '18. tammikuuta 2013 ja kylmin 2,1 astetta '
+                + '22. kesäkuuta 1932; sääruudun ääriarvot alkavat '
+                + 'vuodesta 1861, eli asema mittasi jo isoisän '
+                + 'vierailun aikaan.',
+              kuva: {
+                tiedosto: 'Fort Denison (30129306283).jpg',
+                selite: 'Fort Denisonilla on mitattu vuoroveden '
+                  + 'korkeutta vuodesta 1857 ja ammuttu tykki '
+                  + 'päivittäin kello yksi vuodesta 1906.',
+                lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Circular Quay ja The Rocks',
+                tahdet: 3,
+                selite: 'Siirtokunnan vanhin kortteli ja sen '
+                  + 'hiekkakivivarastot ovat samalla rannalla, jolle '
+                  + 'ensimmäinen laivasto nousi 1788.',
+              },
+              {
+                mita: 'Lautta Manlyyn',
+                tahdet: 3,
+                selite: 'Puolen tunnin matka vie sataman poikki '
+                  + 'avomeren rannalle tavallisella matkakortilla.',
+              },
+              {
+                mita: 'Observatory Hill',
+                tahdet: 2,
+                selite: 'Aikapallo pudotetaan yhä joka päivä kello '
+                  + 'yksi alkuperäisellä koneistolla.',
+              },
+              {
+                mita: 'Kasvitieteellinen puutarha',
+                tahdet: 2,
+                selite: 'Puutarha perustettiin 1816 Farm Coven '
+                  + 'rannalle siirtokunnan ensimmäisen pellon '
+                  + 'paikalle.',
+              },
+              {
+                mita: 'Bondi ja rantapolku',
+                tahdet: 3,
+                selite: 'Kaupungin tunnetuin ranta ja sen '
+                  + 'eteläpäähän kallioon louhittu merivesiallas.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sää- ja sadeluvut ovat
+             * en-Wikipedian Sydney-artikkelin sääruudusta, sama
+             * lähde kuin jaksossa 5. Hintataso kerrotaan yleisellä
+             * tasolla ilman lukuja.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Hintataso',
+                teksti: 'Sydney on maailman kalleimpia kaupunkeja, ja '
+                  + 'majoitus vie budjetista suurimman osan.',
+              },
+              {
+                otsikko: 'Vuodenajat nurin',
+                teksti: 'Joulukuu on keskikesää ja heinäkuu talvea: '
+                  + 'heinäkuun keskilämpö on 13,4 astetta, tammikuun '
+                  + '23,5.',
+              },
+              {
+                otsikko: 'Sadetta ympäri vuoden',
+                teksti: 'Kuivaa kautta ei ole — sateisin kuukausi on '
+                  + 'talvinen kesäkuu ja kuivin kevätkuukausi '
+                  + 'syyskuu.',
+              },
+              {
+                otsikko: 'Aurinko on voimakas',
+                teksti: 'Observatory Hillillä mitataan runsaat 2 600 '
+                  + 'aurinkotuntia vuodessa, ja elokuu on '
+                  + 'aurinkoisin kuukausi.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kalastajakansan lahdesta rangaistussiirtokunnaksi ja '
+        + 'siitä kullan rahoittamaksi siirtomaakaupungiksi kahdessa '
+        + 'ihmisiässä. Vuonna 1873 Sydneyä rakennettiin monesta '
+        + 'suunnasta yhtä aikaa.',
+      tehtava: {
+        kysymys: 'Mihin lahteen ensimmäinen laivasto saapui ennen kuin siirtokunta perustettiin Sydney Coveen?',
+        vaihtoehdot: [
+          'Botany Bay',
+          'Farm Cove',
+          'Manly Cove',
+          'Camp Cove',
+        ],
+        oikea: 0,
+        fakta: 'Arthur Phillip totesi Botany Bayn sopimattomaksi, souti '
+          + 'pohjoiseen tutkimaan Cookin kartalle merkitsemää Port '
+          + 'Jacksonia ja perusti siirtokunnan Sydney Coveen '
+          + '26. tammikuuta 1788.',
+      },
+      nostot: [
+        {
+          otsikko: 'Satama, jonka Cook merkitsi käymättä siellä',
+          teksti: 'James Cook purjehti Endeavourilla Sydney Headsin ohi '
+            + '1770 ja kirjoitti päiväkirjaansa nähneensä lahden tai '
+            + 'sataman, jossa näytti olevan turvallinen ankkuripaikka. '
+            + 'Hän nimesi sen amiraliteetin lordikomissaarin Sir George '
+            + 'Jacksonin mukaan Port Jacksoniksi eikä purjehtinut '
+            + 'sisään. Kahdeksantoista vuotta myöhemmin Arthur Phillip '
+            + 'lähti Botany Baystä pohjoiseen tutkimaan Cookin '
+            + 'merkintää, yöpyi Camp Covessa ja löysi Sydney Coven. '
+            + 'Lontooseen hän kirjoitti löytäneensä maailman parhaan '
+            + 'sataman, johon mahtuisi tuhat linjalaivaa täysin '
+            + 'turvassa.',
+          tiedosto: 'Conrad Martens - North Head from above Balmoral, Sydney Harbour - Google Art Project.jpg',
+          selite: 'Sydney Heads on sataman ainoa suuaukko, ja North '
+            + 'Head on sen pohjoinen kallioniemi.',
+          lahde: 'Conrad Martens, Wikimedia Commons (PD)',
+          wiki: 'Port Jackson',
+        },
+        {
+          otsikko: 'Kansa, joka ei kadonnut',
+          teksti: 'Sydneyn seudulla on asuttu ainakin 30 000 vuotta, ja '
+            + 'kalliopiirroksia on yhä kaikkialla. Siirtokunta muutti '
+            + 'gadigalien elämän nopeasti: vuoden 1789 '
+            + 'isorokkoepidemian arvioidaan tappaneen noin puolet eoran '
+            + 'väestöstä, ja gadigaleista, joita arvioitiin olleen '
+            + '50–80, selvisi kolme. Arkeologinen aineisto viittaa '
+            + 'siihen, että osa pakeni nykyisen Concordin seudulle. '
+            + 'Gadigal-vanhin Allen Madden arvioi Sydneyssä asuvan '
+            + 'nykyään useita satoja dharug-ihmisiä, joukossa ainakin '
+            + 'sata hänen omaa sukuaan olevaa gadigalia. Lokakuussa '
+            + '2023 keskustan uusi metroasema nimettiin Gadigaliksi.',
+          tiedosto: '20250326 Gadigal Station - Platform 1.jpg',
+          selite: 'Gadigal-asema oli rakennusaikana nimeltään Pitt '
+            + 'Street, ja se nimettiin uudelleen lokakuussa 2023.',
+          lahde: 'Windmemories, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gadigal',
+        },
+        {
+          otsikko: 'Vankilaivoista vapaaksi kaupungiksi',
+          teksti: 'Macquarien lähdettyä 1821 virallinen politiikka alkoi '
+            + 'houkutella vapaita brittisiirtolaisia: heitä tuli 900 '
+            + 'vuosina 1826–30 ja 29 000 vuosina 1836–40. Vapaat '
+            + 'siirtolaiset, vapaana syntyneet ja vapautuneet vangit '
+            + 'olivat pian valtaenemmistö, ja he vaativat '
+            + 'vastuunalaista hallintoa ja vankikuljetusten '
+            + 'lopettamista. Kuljetukset New South Walesiin päättyivät '
+            + '1840. Vuonna 1842 lakiasäätävästä neuvostosta tuli osin '
+            + 'vaaleilla valittu ja Sydney julistettiin kaupungiksi — '
+            + 'mutta äänioikeus sidottiin omaisuuteen, ja sen sai vain '
+            + 'noin viidestoista osa aikuisväestöstä.',
+          tiedosto: 'Conrad Martens - View of Sydney Harbour showing Sydney Cove - Google Art Project.jpg',
+          selite: 'Conrad Martens asui Sydneyssä vuodesta 1835 ja '
+            + 'maalasi satamaa yhä uudestaan; tämä näkymä on noin '
+            + 'vuodelta 1850.',
+          lahde: 'Conrad Martens, Wikimedia Commons (PD)',
+          wiki: 'History of Sydney',
+        },
+        {
+          otsikko: 'Vuosi, jolloin kaikki oli kesken',
+          teksti: 'Vuonna 1873 kuvernöörin talon sisäänkäynnin eteen '
+            + 'valmistui vaunukatos, porte-cochère — ainoa kaupungin '
+            + 'kolmesta suuresta rakennushankkeesta, joka sai sinä '
+            + 'vuonna jotain valmiiksi. Suursynagogan tontti oli '
+            + 'ostettu 1871 ja arkkitehti Thomas Rowe valittu 1872, '
+            + 'mutta peruskivi muurattiin vasta 26. tammikuuta 1875 ja '
+            + 'rakennus vihittiin 1878. Rautatieaseman toisen '
+            + 'rakennuksen piirustukset olivat vuodelta 1871, mutta '
+            + 'avajaisia vietettiin 1874. Isoisä käveli kaupungissa, '
+            + 'joka rakensi itseään joka kadulla mutta ei ollut vielä '
+            + 'missään valmis.',
+          tiedosto: '(1)Government House Sydney-1.jpg',
+          selite: 'Kuvernöörin talo rakennettiin 1837–1843 goottilaisen '
+            + 'kertaustyylin mukaan, ja kuvan puoleinen pylväikkö '
+            + 'lisättiin vasta 1879–80 — vuoden 1873 vaunukatos on '
+            + 'talon toisella puolella.',
+          lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Government House, Sydney',
+        },
+      ],
+    },
+  ],
 };

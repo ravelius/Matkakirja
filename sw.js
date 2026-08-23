@@ -118,6 +118,7 @@ const SHELL = [
   './js/packs/asia-artikkelit.js',
   './js/packs/northamerica-artikkelit.js',
   './js/packs/southamerica-artikkelit.js',
+  './js/packs/oceania-artikkelit.js',
   './js/packs/asia-valokuvat.js',
   './js/packs/asia-lisat-valokuvat.js',
   './js/packs/northamerica-valokuvat.js',
