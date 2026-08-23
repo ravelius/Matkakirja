@@ -2783,6 +2783,88 @@ export const MAAKARTAT = {
       wiki: 'Siniset vuoret',
     },
   },
+  ARG: {
+    /*
+     * ARGENTIINA (Opus 23.8.2026). Toisin kuin USA ja Venäjä,
+     * Argentiina ei vaadi omaa projektiohaaraa: Wikipedian
+     * Module:Location map/data/Argentina antaa pelkät rajat ilman
+     * projektio-kenttää, ja tämän tiedoston oma kuvaussivu sanoo sen
+     * ääneen — "Equirectangular projection, N/S stretching 115 %".
+     * N/S-venytys vaikuttaa vain kuvasuhteeseen, ei
+     * prosenttiasemointiin, joten suoraPiste() riittää sellaisenaan.
+     *
+     * Tiedosto on 882 px leveä eli kapein pelin korkokartoista (EGY
+     * 1055 px oli tähän asti pienin). Suurempaa tasavälistä
+     * korkokarttaa ei ole: Commonsin ainoa isompi versio on
+     * `Argentina topo location map.jpg` (1216 px), mutta sen oma
+     * kuvaussivu ilmoittaa lähteekseen `Argentina adm location
+     * map.svg`:n, joka on {{Location map series N (conic)}} eli
+     * KARTIOPROJEKTIO (latitude1 -34, latitude2 -44, longitude -64).
+     * Sen käyttö siirtäisi jokaista kaupunkipistettä samalla tavalla
+     * kuin Venäjän laea — siksi tässä on kapeampi mutta oikea kartta.
+     * Jos Commonsiin ilmestyy leveämpi tasavälinen relief samoilla
+     * rajoilla, tiedoston voi vaihtaa ja rajat pysyvät.
+     */
+    tiedosto: 'Relief Map of Argentina.jpg',
+    lahde: 'NordNordWest ja Виктор В, Wikimedia Commons (CC BY-SA 3.0)',
+    /*
+     * Rajat tiedoston omalta kuvaussivulta (N 21,0° S, S 56,5° S,
+     * W 76,5° W, E 52,5° W) — samat luvut kuin Module:Location
+     * map/data/Argentina antaa.
+     */
+    rajat: { pohjoinen: -21.0, etela: -56.5, lansi: -76.5, ita: -52.5 },
+    /*
+     * Viisi paikkaa, jotka näyttävät maan mitan: maa on lähes 3 700 km
+     * pitkä, ja kartalta sen näkee vasta kun mukana on sekä trooppinen
+     * koillisnurkka että Tulimaa. Pääkaupunki Buenos Aires ja pelin
+     * kaksi muuta ARG-kaupunkia (Salta luoteessa, Puerto Iguazú
+     * koillisessa) ovat mukana; Mendoza on Aconcaguan ja malbecin
+     * koti eli maalehden Luonto- ja Ruoka-aiheiden maantieteellinen
+     * ankkuri, ja Ushuaia on maailman eteläisin kaupunki.
+     * Koordinaatit en-Wikipedian coord-merkinnöistä (haettu
+     * rajapinnasta 23.8.2026), pyöristettyinä kolmeen desimaaliin.
+     *
+     * Sijainnit tarkistettu kartalta silmin: yksikään ei osu veteen.
+     * Buenos Aires on Río de la Platan rannalla ja Ushuaia Beaglen
+     * kanavan rannalla, joten näiden kahden kiekon reunaan jää myös
+     * vettä — rannalla oleva piste ei ole virhe (sama huomio kuin
+     * USA-lohkossa).
+     */
+    kaupungit: [
+      { nimi: 'Buenos Aires', lat: -34.604, lon: -58.381, paa: true },
+      { nimi: 'Salta', lat: -24.783, lon: -65.417 },
+      { nimi: 'Puerto Iguazú', lat: -25.6, lon: -54.567 },
+      { nimi: 'Mendoza', lat: -32.89, lon: -68.844 },
+      { nimi: 'Ushuaia', lat: -54.807, lon: -68.308 },
+    ],
+    /*
+     * Kuvanosto Paranásta: kartan koillisosassa kulkeva leveä joki on
+     * se väylä, jota pitkin isoisän aikaan noustiin sisämaahan, mutta
+     * yksikään maalehden kahdestakymmenestä nostosta ei kerro siitä
+     * (tarkistettu). Kuva on silmätarkistettu 900 px:ssä: leveä
+     * panoraama jokea illansuussa, ei vesileimoja eikä tunnistettavia
+     * ihmisiä.
+     */
+    nosto: {
+      otsikko: 'Joki, jota pitkin noustiin sisämaahan',
+      tiedosto: 'Paraná.jpg',
+      teksti: 'Paraná virtaa Brasiliasta Paraguayn kautta Argentiinaan '
+        + 'noin 4 880 kilometriä ja on Etelä-Amerikan joista toiseksi '
+        + 'pisin heti Amazonin jälkeen. Se yhtyy ensin Paraguayjokeen ja '
+        + 'sitten Uruguayjokeen, ja yhdessä ne muodostavat Río de la '
+        + 'Platan, jonka pohjukassa Buenos Aires sijaitsee. Ensimmäinen '
+        + 'eurooppalainen, joka nousi jokea ylös, oli venetsialainen '
+        + 'Sebastian Cabot vuonna 1526 Espanjan palveluksessa. Ennen '
+        + 'rautateitä joki oli ainoa nopea reitti sisämaahan: '
+        + 'jokilaivat kulkivat Buenos Airesista Asunciónin satamaan '
+        + 'asti. Suistossa joki hajoaa sadoiksi saariksi ja haaroiksi.',
+      selite: 'Paraná levittäytyy Argentiinan halki niin leveänä, että '
+        + 'vastaranta jää matalaksi metsäviivaksi taivaanrannassa.',
+      lahde: 'Luis Argerich from Buenos Aires, Argentina, Wikimedia '
+        + 'Commons (CC BY 2.0)',
+      wiki: 'Paraná (joki)',
+    },
+  },
 };
 
 /*

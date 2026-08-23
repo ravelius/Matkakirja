@@ -26389,4 +26389,588 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * ARGENTIINA (Opus 23.8.2026, E-Amerikan pilottierä). Lähde:
+   * docs/mantereet-tyoaineisto/faktapohja-argentina.md ja sen
+   * riippumaton tarkistus tarkistus-argentina.md. Faktapohjan
+   * korjauskierros on otettu huomioon: malbec-köynnökset tilattiin
+   * 17.4.1853 EIKÄ 1868, Sarmiento ei ollut tuolloin missään virassa;
+   * empanadan alkuperä on 600-luku (engl. 7th century) eikä 700-luku;
+   * Tucumánin empanadajuhla kerrotaan nykyaikaisena eikä 1873:n
+   * tapahtumana.
+   *
+   * TANGO-ANAKRONISMI kantaa koko musiikkiaiheen. Vuonna 1873 tangoa
+   * ei ole — sana tarkoittaa vielä afrikkalaisperäistä tanssitilaisuutta
+   * ja itse tanssi muotoutuu vasta 1880-luvulla. Siksi nostot kertovat
+   * esimuodoista (candombe, payada, milonga) ja neljäs nosto sanoo
+   * ääneen, mitä vielä puuttuu.
+   *
+   * MAPUCHE (aihe arki, nosto "Maan kansa") on kirjoitettu
+   * spec-mantereet.md:n E-Amerikka-linjan mukaan: kansan oma nimi ja
+   * oma merkitys ensin, elävä hopeaseppäperinne kuvassa, ja ns.
+   * Aavikon valloitus vain yhtenä neutraalina, päivätyllä tapahtuma-
+   * maininnalla ilman uhrilukuja tai kummankaan puolen sankarikehystä
+   * — se on isoisän matkan hetkellä vielä tulevaisuutta. Falkland ei
+   * esiinny lehdessä lainkaan, koska mikään nosto ei sivua sitä.
+   *
+   * KAKSI RISTIRIITAA KIRJATTU AUKI:
+   *  - Aconcaguan korkeus. Nostossa on en-Wikipedian nykyinen luku
+   *    6 967 m (infobox elevation_m = 6967.16, leipätekstin
+   *    "6967.15 m"). Vanhempi ja yleisesti siteerattu luku on 6 961 m
+   *    / 6 962 m; valittiin tarkempi ja päivätty mittaus, koska sama
+   *    artikkeli antaa sen sekä infoboxissa että leipätekstissä.
+   *  - Iguazún putousten lukumäärä. Faktapohja ja en-Wikipedia antavat
+   *    150–300, pelin oma southamerica-questions.js sanoo "yli 270".
+   *    Nostossa lukee 150–300 "veden korkeuden mukaan", mikä pitää
+   *    molemmat totena eikä kumoa visan vastausta.
+   *
+   * LÄHDEVAROITUKSET (faktapohjan osio 12): en-Wikipedian artikkelit
+   * "Immigration to Argentina" (AI-generated-lippu) ja "Asado"
+   * (Original research -lippu) kantavat omia laatutunnisteitaan.
+   * Siirtolaisuusnostosta jätettiin siksi pois artikkelin oma
+   * ristiriitainen italialaisluku (3,8 milj. vs. taulukon 2,34 milj.)
+   * ja pidettiin vain ne väitteet, jotka riippumaton tarkistus
+   * vahvisti erikseen; asado-nosto nojaa vain artikkelin
+   * kiistattomiin perustietoihin (suola ainoana mausteena,
+   * quebracho-hiilet, asado al palo).
+   *
+   * KUVAT: kaikki 20 haettu ja tarkistettu itse Commonsin
+   * rajapinnasta (lisenssi extmetadatasta) ja katsottu silmin 900 px:n
+   * esikatselusta. Hylättyjä: "Sarmiento (1873).jpg" (1032 px, alle
+   * rajan), "Candombe federal (Boneo).jpg" ja "Candombe en tiempos de
+   * Rosas" (alle 1200 px), "El Candombe en 1838" (kuvan päälle lisätty
+   * soikea kehys), "Aqui Las Empanada Salteñas" (etualalla mainoskuvin
+   * teipattu jakeluauto), "Traditional mate set…" (tuotemerkit
+   * keskiössä eli pakkauskuva), "Carlos Morel - Payada en una
+   * pulpería.jpg" (960 px; sama teos löytyi 2000 px:n kopiona).
+   * Boneon candombe-maalauksesta on saatavilla vain karkearasterinen
+   * mustavalkopainos — se kerrotaan kuvatekstissä.
+   */
+  ARG: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 nuori tasavalta elää presidentti Domingo '
+          + 'Faustino Sarmienton kautta: mies, joka kiersi maailmaa '
+          + 'etsimässä parasta koulujärjestelmää, tuo nyt luokkahuoneen '
+          + 'jokaiseen kylään.',
+      nostot: [
+        {
+          otsikko: 'Presidentti, joka rakensi 800 koulua',
+          aika: '1868–1874',
+          tiedosto: 'Domingo Faustino Sarmiento (c. 1884) - Eugenia Belín Sarmiento - Google Arts & Culture.jpg',
+          teksti: 'Domingo Faustino Sarmiento nousi presidentiksi '
+              + 'lokakuussa 1868 — mies, joka oli aloittanut opettajana '
+              + 'isänsä köyhässä kylässä ja matkustanut sitten Eurooppaan '
+              + 'ja Yhdysvaltoihin tutkimaan koulujärjestelmiä. '
+              + 'Presidenttinä hän teki koulutuksesta hallituksensa '
+              + 'tärkeimmän asian: kuudessa vuodessa valtio perusti noin '
+              + '800 uutta alakoulua, ja koululaisten määrä nousi 30 '
+              + '000:sta yli 100 000:een. Hän toi Yhdysvalloista yli 70 '
+              + 'naisopettajaa ja neljä miesopettajaa kouluttamaan '
+              + 'opettajia maan omiin seminaareihin. Suosittu hän ei '
+              + 'silti ollut: Paraguayn sota söi rahat, ja pääkaupungin '
+              + 'ja maakuntien kilpailu jatkui koko kauden.',
+          selite: 'Sarmienton muotokuvan maalasi hänen oma '
+            + 'lapsenlapsensa Eugenia Belín Sarmiento noin vuonna 1884, '
+            + 'kymmenen vuotta presidenttikauden jälkeen.',
+          lahde: 'Eugenia Belín Sarmiento, Wikimedia Commons (PD)',
+          wiki: 'Domingo Faustino Sarmiento',
+        },
+        {
+          otsikko: 'Ensimmäinen kerta, kun kansa laskettiin',
+          aika: '1869',
+          tiedosto: 'BuenosAiresPlano1870.JPG',
+          teksti: 'Yhtenä ensimmäisistä toimistaan Sarmiento määräsi maan '
+              + 'ensimmäisen kansallisen väestönlaskennan. Vuonna 1869 '
+              + 'laskettiin 1 836 490 asukasta — pieni luku valtavalle '
+              + 'maalle, eivätkä lukuun sisältyneet valtion hallinnan '
+              + 'ulkopuolella elävät alkuperäiskansat. Kahdeksan '
+              + 'prosenttia asukkaista oli eurooppalaisia '
+              + 'maahanmuuttajia, ja mukaan laskettiin myös 6 276 '
+              + 'sotilasta, jotka olivat yhä Paraguayn alueella. Karuinta '
+              + 'luettavaa olivat kaksi muuta lukua: 70 prosenttia asui '
+              + 'maaseudulla ja 71 prosenttia ei osannut lukea. Juuri '
+              + 'sitä lukutaidottomuutta vastaan koulut rakennettiin.',
+          selite: 'Buenos Airesin hallinnollinen kaavakartta vuodelta '
+            + '1870 näyttää kaupungin ruutukaavan, rautatiet ja Río de la '
+            + 'Platan rannan vuosi väestönlaskennan jälkeen.',
+          lahde: 'Tuntematon kaivertaja, Wikimedia Commons (PD)',
+          wiki: 'Argentiinan historia',
+        },
+        {
+          otsikko: 'Sota, joka vei presidentin pojan',
+          aika: '1864–1870',
+          tiedosto: 'Invernada del Ejercito Oriental - Cándido López.jpg',
+          teksti: 'Kolme vuotta ennen isoisän matkaa päättyi '
+              + 'Etelä-Amerikan verisin sota. Kolmoisliiton sodassa '
+              + 'Argentiina, Brasilia ja Uruguay taistelivat Paraguayta '
+              + 'ja sen presidenttiä Francisco Solano Lópezia vastaan. '
+              + 'Sota oli alkanut edellisen presidentin Bartolomé Mitren '
+              + 'kaudella, ja Sarmiento peri sen tuskin virkaan '
+              + 'astuttuaan: liittoutuneiden joukot valtasivat Asunciónin '
+              + 'juuri kun hän aloitti lokakuussa 1868. Sota kosketti '
+              + 'häntä myös henkilökohtaisesti — hänen adoptoitu poikansa '
+              + 'kaatui rintamalla. Sodan viimeisenä vuonna perustettiin '
+              + 'maan ensimmäinen sotilasakatemia, Colegio Militar de la '
+              + 'Nación.',
+          selite: 'Argentiinalainen Cándido López, joka palveli itse '
+            + 'sodassa, maalasi vuoden 1866 talvileirin karjalaitumineen '
+            + 'ja auringonlaskuineen.',
+          lahde: 'Luis Candido Lopez, Wikimedia Commons (PD)',
+          wiki: 'Kolmoisliiton sota',
+        },
+        {
+          otsikko: 'Kansa, joka tuli laivoilla',
+          aika: '1853–1876',
+          tiedosto: 'Antiguo hotel de inmigrantes en Retiro, Buenos Aires 1875.jpg',
+          teksti: 'Argentiinan suurin muutos ei tullut sodasta vaan '
+              + 'laivoista. Vuoden 1853 perustuslaki kielsi rajoitukset '
+              + 'ulkomaalaisilta, jotka tulivat viljelemään maata ja '
+              + 'opettamaan tieteitä ja taiteita, ja 1870-luvulla liike '
+              + 'oli täydessä vauhdissa: Buenos Airesin asukkaista joka '
+              + 'toinen oli vuonna 1869 äskettäin saapunut siirtolainen. '
+              + 'Ennen kaikkea tultiin Italiasta ja Espanjasta. '
+              + 'Varsinainen maahanmuuttolaki säädettiin vasta 1876 ja '
+              + 'suuri Hotel de Inmigrantes valmistui vasta 1898 — muutos '
+              + 'näkyi kadulla kauan ennen kuin se näkyi laissa.',
+          selite: 'Retiron vanha siirtolaiskoti Buenos Airesin rannassa '
+            + 'vuonna 1875 otetussa valokuvassa, kaksi vuotta isoisän '
+            + 'matkan jälkeen.',
+          lahde: 'Alexander Witcomb, Wikimedia Commons (PD)',
+          wiki: 'Argentiina',
+        },
+      ],
+      /*
+       * Minitehtävä kysyy lukutaidottomuutta eikä presidentin nimeä:
+       * aiheen johdanto nimeää Sarmienton, joten nimikysymyksen vastaus
+       * vuotaisi jo ennen nostoja (tools/tarkista-maa.mjs huomasi tämän).
+       * Vastaus löytyy nostosta "Ensimmäinen kerta, kun kansa laskettiin".
+       */
+      tehtava: {
+        kysymys: 'Kuinka suuri osa argentiinalaisista ei osannut lukea '
+            + 'vuoden 1869 väestönlaskennassa?',
+        vaihtoehdot: [
+          '31 prosenttia',
+          '51 prosenttia',
+          '71 prosenttia',
+          '91 prosenttia',
+        ],
+        oikea: 2,
+        fakta: 'Samassa laskennassa 70 prosenttia asukkaista asui '
+            + 'maaseudulla.',
+      },
+    },
+    {
+      /*
+       * Aiheen id on `arki`, ei uusi `gaucho`: uusia sivu-id:itä ei
+       * luoda (js/ui-apurit.js AIHE_IKONIT), ja `arki` on jo talon
+       * käytössä kymmenessä maalohkossa. Otsikoksi tulee silti
+       * "Argentiinan gaucho", koska otsikko syntyy nimestä.
+       */
+      id: 'arki',
+      nimi: 'Gaucho',
+      johdanto: 'Loputon pampa on gauchon maailma: mies hevosen selässä, '
+          + 'poncho hartioilla ja veitsi vyöllä. Vuonna 1873 tuo maailma '
+          + 'on jo hiipumassa.',
+      nostot: [
+        {
+          otsikko: 'Mies, joka ei tarvinnut kattoa',
+          tiedosto: 'Prilidiano Pueyrredon - Un alto en la pulpería - Google Art Project.jpg',
+          teksti: 'Pampan luonnonrikkaus teki mahdolliseksi elää ilman '
+              + 'kiinteää työtä tai kotia: villiä karjaa, hevosia ja '
+              + 'nandu-strutseja riitti niin, että taitava ratsastaja '
+              + 'pärjäsi myymällä nahkoja ja höyheniä ja syömällä ilmaista '
+              + 'lihaa. Siitä syntyi gauchon riippumaton, vaeltava '
+              + 'elämäntapa. Charles Darwin, joka vietti pampalla kuusi '
+              + 'kuukautta vuonna 1833, kuvasi gauchoja vaatimattomiksi, '
+              + 'rohkeiksi ja vieraanvaraisiksi mutta huomautti, että '
+              + 'aina mukana kannettu veitsi johti usein riitoihin. Sana '
+              + 'gaucho oli alun perin siirtomaahallinnon halveksuva '
+              + 'nimitys; kenraali Güemes otti sen ylpeydellä omien '
+              + 'joukkojensa nimeksi.',
+          selite: 'Prilidiano Pueyrredónin maalauksessa noin vuodelta '
+            + '1860 ratsastava gaucho pysähtyy juttelemaan pulperían eli '
+            + 'maalaiskapakan edustalla härkävankkurien vieressä.',
+          lahde: 'Prilidiano Pueyrredón, Wikimedia Commons (PD)',
+          wiki: 'Gaucho',
+        },
+        {
+          otsikko: 'Runo, joka puolusti häviäjää',
+          aika: '1872',
+          tiedosto: 'La vuelta de Martín Fierro cover - 1879-restored.jpg',
+          teksti: 'Vuosi ennen isoisän matkaa José Hernández julkaisi 2 '
+              + '316-säkeisen runoelman El gaucho Martín Fierro. Sen '
+              + 'sankari on köyhä gaucho, joka pakkokutsutaan '
+              + 'rajalinnoitukseen, karkaa palveluksesta, menettää kotinsa '
+              + 'ja perheensä ja ajautuu lopulta lainsuojattomaksi. '
+              + 'Hernández kirjoitti puolustuspuheen luokalle, jonka aika '
+              + 'oli menossa ohi juuri silloin: Sarmienton elämäkerturin '
+              + 'sanoin gauchon aikakausi oli päättynyt ja kauppiaan ja '
+              + 'karjanomistajan aikakausi alkanut. Jatko-osa ilmestyi '
+              + '1879, ja runosta tuli kansalliseepos, joka on käännetty '
+              + 'yli 70 kielelle.',
+          selite: 'Jatko-osan La vuelta de Martín Fierro ensipainoksen '
+            + 'kansi vuodelta 1879 lupaa kymmenen kuvalaattaa ja myyntiä '
+            + 'kaikissa Buenos Airesin kirjakaupoissa.',
+          lahde: 'José Hernández / Charles Clérice, Wikimedia Commons '
+            + '(PD)',
+          wiki: 'El Gaucho Martín Fierro',
+        },
+        {
+          /*
+           * Mate esiintyy lehdessä kahdesti tarkoituksella ja eri
+           * kulmista: tässä juomisen rituaalina ja jesuiittojen
+           * viljelykokeiluna, Ruoka-aiheessa kansallisjuomana ja
+           * nykytuotantona. Kuvatkin ovat eri puolilta (kalebassit
+           * kadulla / pensasrivit pellolla).
+           */
+          otsikko: 'Kuppi, joka kiertää piirissä',
+          tiedosto: 'Selection of Yerba Mate Gourds.JPG',
+          teksti: 'Pampalla ja koko Río de la Platan alueella juoma ei ole '
+              + 'kahvi vaan mate: kalebassista juotu, metallisella '
+              + 'bombilla-pillillä siemailtu yerba mate. Juominen on '
+              + 'rituaali — sama kuppi ja sama pilli kiertävät piirissä, '
+              + 'jokainen ottaa yhden siemauksen ja antaa astian '
+              + 'eteenpäin. Juoman ottivat käyttöön guaraní- ja '
+              + 'tupí-kansat kauan ennen espanjalaisia, ja 1600-luvun '
+              + 'puolivälissä jesuiitat onnistuivat ensimmäisinä '
+              + 'kesyttämään yerba maten viljelykasviksi Misionesin '
+              + 'lähetysasemillaan. Kun jesuiitat karkotettiin '
+              + '1770-luvulla, plantaasit rappeutuivat — mutta juoma oli '
+              + 'jo jäänyt.',
+          selite: 'Buenos Airesin katukauppiaan valikoimassa on '
+            + 'kymmeniä koristeltuja matekalebasseja ja niiden '
+            + 'bombilla-pillejä.',
+          lahde: 'Marshallhenrie, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mate (juoma)',
+        },
+        {
+          otsikko: 'Maan kansa',
+          tiedosto: 'Zarcillos (Chaway) de diseño mapuche.png',
+          teksti: 'Kauan ennen gauchoa pampa ja sen eteläpuolinen '
+              + 'Patagonia olivat mapuchejen, tehuelchejen ja muiden '
+              + 'kansojen kotiseutua. Mapuche tarkoittaa omalla kielellä '
+              + 'maan kansaa: mapu on maa ja che kansa. Heidän '
+              + 'hopeaseppiensä työ oli 1800-luvulla kuulua — lähes '
+              + 'jokaisella merkittävällä päälliköllä oli oma seppänsä — '
+              + 'ja kudonnaiset tunnettiin kauas. Espanjan '
+              + 'siirtomaahallinto ei koskaan alistanut näitä kansoja, ja '
+              + 'moni gaucho polveutui itse sekaliitoista. Vuonna 1872 '
+              + 'päällikkö Calfucurán joukot ratsastivat yhä vapaina '
+              + 'pampan halki; vasta 1878 alkanut sotaretki, jota alettiin '
+              + 'kutsua Aavikon valloitukseksi, siirsi rajan etelään.',
+          selite: 'Mapuchemallisia hopeisia chaway-korvakoruja myydään '
+            + 'yhä Buenos Airesin katukojussa, samaa seppäperinnettä '
+            + 'jatkaen.',
+          lahde: 'Silviaanac, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mapuchet',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna José Hernández julkaisi kansalliseepoksen '
+            + 'Martín Fierron?',
+        vaihtoehdot: ['1852', '1872', '1880', '1895'],
+        oikea: 1,
+        fakta: 'Eepos ilmestyi vuotta ennen isoisän matkaa, ja sen '
+            + 'jatko-osa vasta 1879.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Tangoa ei ole vielä olemassa vuonna 1873. Sen '
+          + 'rakennusaineet soivat kuitenkin jo: afrikkalaisperäiset '
+          + 'rummut, gauchojen laulukilvat ja pampan tanssimusiikki.',
+      nostot: [
+        {
+          otsikko: 'Sana, joka tarkoitti tanssipaikkaa',
+          aika: '1789',
+          tiedosto: 'El Tambo Congo en 1820, by Martín Boneo.jpg',
+          teksti: 'Buenos Airesin kaupunginhallinto yritti jo vuonna 1789 '
+              + 'kieltää tilaisuudet, joissa orjuutetut afrikkalaiset '
+              + 'kokoontuivat tanssimaan; asiakirjoissa niitä kutsuttiin '
+              + 'nimillä tango ja tambo. Sana tarkoitti tuolloin paikkaa '
+              + 'ja tilaisuutta, ei tanssia, jonka maailma myöhemmin oppi '
+              + 'tuntemaan. Candombe-rummutus ja -tanssi, joita '
+              + 'länsiafrikkalaisten jälkeläiset ylläpitivät Buenos '
+              + 'Airesissa ja Montevideossa, on yksi kolmesta juuresta '
+              + 'espanjalais-kuubalaisen habaneran ja pampan milongan '
+              + 'rinnalla. Vuonna 1873 nämä perinteet elävät rinnakkain, '
+              + 'mutta kukaan ei vielä kutsu niiden yhdistelmää tangoksi.',
+          selite: 'Martín Boneon maalauksessa candombea tanssitaan ja '
+            + 'rummutetaan Buenos Airesin pihalla; jäljellä on vain '
+            + 'karkearasterinen mustavalkopainos teoksesta.',
+          lahde: 'Martín Boneo, Wikimedia Commons (PD)',
+          wiki: 'Candombe',
+        },
+        {
+          otsikko: 'Kaksintaistelu kitaralla',
+          tiedosto: 'Payada en una pulpería - Carlos Morel.jpg',
+          teksti: 'Ennen kuin kukaan kirjoitti gauchoista runoja, gauchot '
+              + 'sepittivät itse — ääneen ja hetkessä. Payada on '
+              + 'improvisoidun laulun kaksintaistelu: kaksi payadoria '
+              + 'vastaa toisilleen vuorosäkein kitaran säestyksellä, usein '
+              + 'filosofisista tai kilpailullisista aiheista, leirinuotion '
+              + 'tai maalaiskapakan ääressä. Perinne on koko '
+              + 'gauchesque-kirjallisuuden esikuva: myös Martín Fierro on '
+              + 'kirjoitettu maaseudun omalla espanjalla ja payadan '
+              + 'mittaan, jotta se kuulostaisi siltä kuin gaucho itse sen '
+              + 'lausuisi. Vuonna 1873 payada elää yhä suullisena '
+              + 'perinteenä, ei painettuna kirjana.',
+          selite: 'Carlos Morelin maalauksessa kaksi kitaristia laulaa '
+            + 'vastakkain pulperían hämärässä ponchoihin ja '
+            + 'silinterihattuihin pukeutuneen yleisön keskellä.',
+          lahde: 'Carlos Morel, Wikimedia Commons (PD)',
+          wiki: 'Gaucho',
+        },
+        {
+          otsikko: 'Tanssi, joka syntyi ennen tangoa',
+          tiedosto: 'Prilidiano Pueyrredon - Un domingo en los suburbios de San Isidro - Google Art Project.jpg',
+          teksti: 'Milonga on pampan maalaislaulun ja -tanssin muoto, joka '
+              + 'on olemassa ennen tangoa. Alun perin se oli gauchojen '
+              + 'kaupunkiin tuoma, kitaralla säestetty laulu; myöhemmin '
+              + 'siitä tuli oma tanssinsa, joka elää yhä tangon rinnalla '
+              + 'erillisenä. Juuri milonga antaa tulevalle tangolle osan '
+              + 'sen rytmistä ja yhden teorian mukaan myös nimen. '
+              + 'Tutkijat kiistelevät yhä siitä, kuinka paljon '
+              + 'alkuperäiskansojen, afrikkalaisten ja eurooppalaisten '
+              + 'perinteet kukin muovasivat lopputulosta — mutta kaikki '
+              + 'kolme olivat läsnä samoissa kortteleissa jo isoisän '
+              + 'matkan aikaan.',
+          selite: 'Pueyrredónin vesivärityö vuodelta 1864 näyttää '
+            + 'sunnuntain Buenos Airesin laitamilla San Isidrossa, jossa '
+            + 'maaseutu ja kaupunki kohtaavat.',
+          lahde: 'Prilidiano Pueyrredón, Wikimedia Commons (PD)',
+          wiki: 'Milonga',
+        },
+        {
+          otsikko: 'Vielä ei ole tangoa',
+          aika: '1880-luku',
+          tiedosto: 'La Boca en 1900.jpg',
+          teksti: 'Kun isoisä kirjoittaa päiväkirjaansa vuonna 1873, '
+              + 'tangoa ei siis ole. Sana tarkoittaa yhä '
+              + 'afrikkalaisperäistä tanssitilaisuutta, ja itse tanssi '
+              + 'muotoutuu vasta 1880-luvulla Río de la Platan '
+              + 'satamakortteleissa, joiden baareihin omistajat palkkasivat '
+              + 'yhtyeitä viihdyttämään asiakkaita. Maailmanmaine on vielä '
+              + 'kauempana: tanssijat ja orkesterit vievät tangon '
+              + 'Pariisiin 1900-luvun alussa, ja vuoden 1913 lopulla se '
+              + 'saapuu New Yorkiin ja Suomeen asti. Isoisän Argentiina '
+              + 'soi toisenlaista musiikkia — juuri niitä aineksia, joista '
+              + 'seuraavat polvet rakentavat tangon.',
+          selite: 'La Bocan laituri noin vuonna 1900: purjealusten '
+            + 'mastoja, hevoskärryjä ja säkkilastia siinä satamakaupungin '
+            + 'osassa, jossa tango oli juuri syntynyt.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Tango',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä vuosikymmenellä tango sai lopullisen muotonsa '
+            + 'Buenos Airesin satamakortteleissa?',
+        vaihtoehdot: [
+          '1850-luvulla',
+          '1880-luvulla',
+          '1910-luvulla',
+          '1930-luvulla',
+        ],
+        oikea: 1,
+        fakta: 'Tango muotoutui vasta noin kymmenen vuotta isoisän matkan '
+            + 'jälkeen.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Argentiina venyy pohjoisesta etelään lähes 3 700 '
+          + 'kilometriä, subtrooppisesta sademetsästä jäätiköihin. Osa '
+          + 'siitä on vuonna 1873 eurooppalaisille yhä lähes '
+          + 'tuntematonta.',
+      nostot: [
+        {
+          otsikko: 'Iso vesi viidakon keskellä',
+          aika: '1541',
+          tiedosto: 'A view of Iguazu Falls from the Argentina side.jpg',
+          teksti: 'Espanjalainen Álvar Núñez Cabeza de Vaca kirjasi '
+              + 'putoukset ensimmäisenä eurooppalaisena muistiin vuonna '
+              + '1541. Guaraníksi nimi tarkoittaa yksinkertaisesti isoa '
+              + 'vettä. Putouksia ei ole yksi vaan 150–300 veden korkeuden '
+              + 'mukaan, lähes kolmen kilometrin matkalla, korkeimmillaan '
+              + '82 metriä. Puolet joen virtaamasta syöksyy yhteen kapeaan '
+              + 'kuiluun, jota kutsutaan Paholaisen kurkuksi. Vuonna 1873 '
+              + 'alue on yhä suojelematonta sademetsää: ensimmäinen '
+              + 'ehdotus kansallispuistosta tehdään vasta 1876 ja '
+              + 'Argentiinan Iguazún kansallispuisto perustetaan vuonna '
+              + '1934.',
+          selite: 'Argentiinan puolelta katsottuna putousrivi jatkuu '
+            + 'kilometrien päähän sademetsän reunustamana.',
+          lahde: 'Horacio Cambeiro, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Iguassun putoukset',
+        },
+        {
+          otsikko: 'Tasanko, jolla ei ole loppua',
+          tiedosto: 'Nandu, Parque Luro, La Pampa, Argentina.jpg',
+          teksti: 'Pampa on yli 1 200 000 neliökilometrin ruohoaromaisto — '
+              + 'enemmän kuin Ranska ja Espanja yhteensä — ja se kattaa '
+              + 'suuren osan Buenos Airesin, La Pampan, Santa Fen, Entre '
+              + 'Ríosin ja Córdoban maakunnista. Maasto on niin tasainen, '
+              + 'että sen ainoat kohoumat ovat Ventanan ja Tandilin '
+              + 'kukkulat, korkeimmillaan 1 239 metriä. Ennen '
+              + 'karjatalouden aikaa tasangolla juoksi nanduja, joita '
+              + 'alkuperäiskansat ja myöhemmin gauchot metsästivät '
+              + 'heittämällä boleadora-painoja lintujen jalkoihin. Karja, '
+              + 'lampaat ja vilja muuttivat maiseman 1800-luvulla '
+              + 'lopullisesti.',
+          selite: 'Nandu juoksee heinikossa La Pampan maakunnassa, jossa '
+            + 'lintu on elänyt kauan ennen karjatalouden tuloa.',
+          lahde: 'Juan Eduardo De Cristófaro , \'Juanedc\', Wikimedia '
+            + 'Commons (CC BY 2.0)',
+          wiki: 'Pampa',
+        },
+        {
+          otsikko: 'Jättiläisten maa',
+          aika: '1520',
+          tiedosto: 'Guanaco in Argentina.jpg',
+          teksti: 'Kun Ferdinand Magellanin miehistö kohtasi vuonna 1520 '
+              + 'mantereen eteläkärjen asukkaita, se antoi heille nimen '
+              + 'patagonit ja uskoi tavanneensa jättiläisiä. Kyse oli '
+              + 'todennäköisesti tehuelcheistä, jotka olivat aikansa '
+              + 'eurooppalaisia keskimäärin pidempiä. Nimi jäi koko '
+              + 'alueelle: kivikkoisille tasangoille, jotka nousevat '
+              + 'terassimaisesti sisämaahan päin ja joilla laiduntavat '
+              + 'guanakot, laaman villit sukulaiset. Alueen kansat elivät '
+              + 'ennen jalan metsästäen; espanjalaisten tuoma hevonen teki '
+              + 'heistä 1600–1700-luvuilla ratsastajia. Vuonna 1873 '
+              + 'Patagonia on yhä lähes kokonaan heidän hallussaan.',
+          selite: 'Guanako kulkee kivikkoisella rinteellä Argentiinan '
+            + 'aroylängöllä.',
+          lahde: 'David, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Patagonia',
+        },
+        {
+          otsikko: 'Huippu, jota ei ole vielä valloitettu',
+          aika: '1897',
+          tiedosto: 'Aconcagua, 2019.jpg',
+          teksti: 'Andien Aconcagua on Amerikan korkein vuori, 6 967 '
+              + 'metriä — korkeampi kuin mikään huippu Aasian '
+              + 'ulkopuolella. Vuonna 1873 sen laki on yhä koskematon: '
+              + 'ensimmäinen todistettu nousu tehdään 14. tammikuuta 1897, '
+              + 'kun sveitsiläinen opas Matthias Zurbriggen kiipeää '
+              + 'huipulle brittiläisen retkikunnan mukana. Nimen '
+              + 'alkuperästä kiistellään: yksi selitys johtaa '
+              + 'mapudungunin sanoihin toiselta puolelta tuleva, toinen '
+              + 'ketšuan valkoiseen vartijaan. Vuori kohoaa Mendozan '
+              + 'maakunnassa, samalla seudulla, jonne istutettiin '
+              + 'Argentiinan ensimmäiset ranskalaiset viiniköynnökset.',
+          selite: 'Aconcaguan lumi- ja kalliohuippu kuvattuna '
+            + 'matkustajakoneesta Andien yllä.',
+          lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Aconcagua',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Aconcaguan laelle päästiin ensi kertaa '
+            + 'todistetusti?',
+        vaihtoehdot: ['1873', '1880', '1897', '1920'],
+        oikea: 2,
+        fakta: 'Sveitsiläinen opas Matthias Zurbriggen saavutti huipun 14. '
+            + 'tammikuuta 1897.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Argentiinan ruokapöytä syntyy risteyksessä: '
+          + 'alkuperäiskansojen mate, espanjalaisten tuoma karja ja vehnä '
+          + 'ja gauchon avotulella paistama liha.',
+      nostot: [
+        {
+          otsikko: 'Kokonainen eläin tulen äärellä',
+          tiedosto: 'Asado tradicional argentino, leña, brasas.jpg',
+          teksti: 'Asado ei ole vain ruokalaji vaan tapahtuma. Lihaa — '
+              + 'nautaa, sikaa, kanaa, makkaraa — kypsennetään avotulella '
+              + 'tai parrilla-ritilän päällä tuntikausia, ja kokilla on '
+              + 'oma nimensä, asador. Lihaa ei marinoida: ainoa mauste on '
+              + 'suola. Hiilet tehdään kotimaisista puulajeista kuten '
+              + 'quebrachosta, koska havupuun pihka toisi makuun '
+              + 'sivumaun. Vanhin muoto on asado al palo, jossa kokonainen '
+              + 'eläin paahtuu puuseipäässä avotulen äärellä — juuri niin '
+              + 'kuin gauchot tekivät pampan leirissä ja niin kuin '
+              + 'Patagoniassa tehdään yhä.',
+          selite: 'Tiiliparrillassa palaa puu rautaisessa telineessä ja '
+            + 'karkealla suolalla maustetut naudanlihapalat kypsyvät '
+            + 'hiilloksen päällä.',
+          lahde: 'Maxd2, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Argentiinalainen keittiö',
+        },
+        {
+          otsikko: 'Kansallisjuoma omalta pellolta',
+          tiedosto: 'Plantación de yerba mate, Misiones.jpg',
+          teksti: 'Mate on kansallisjuoma paitsi Argentiinassa myös '
+              + 'Paraguayssa ja Uruguayssa, eikä se ole kahvia eikä teetä '
+              + 'vaan oma kasvinsa, Ilex paraguariensis. Nykyään '
+              + 'Argentiina on maailman suurin tuottaja: yli puolet koko '
+              + 'maailman sadosta kasvaa maan koillisosassa. Juoma on niin '
+              + 'syvällä kansallisessa identiteetissä, että maalla on '
+              + 'sille oma kansallispäivänsä 30. marraskuuta — päivä on '
+              + 'nimetty 1800-luvun kaudillon Andrés Guacurarí y '
+              + 'Artigasin mukaan, jota kutsuttiin Andresitoksi. Vuonna '
+              + '1873 mate on jo kaikkien juoma, pampan leiristä '
+              + 'presidentin työhuoneeseen.',
+          selite: 'Yerba mate -pensaiden rivit kasvavat Misionesin '
+            + 'punaisessa maassa maan koillisnurkassa.',
+          lahde: 'Laurel toxico, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mate (juoma)',
+        },
+        {
+          otsikko: 'Jokainen maakunta väittää omaansa aidoimmaksi',
+          tiedosto: 'Empanadas salteñas 1.jpg',
+          teksti: 'Empanada — suljettu, täytetty taikinatasku — tuli '
+              + 'Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on '
+              + 'tehnyt siitä omansa. Saltan empanadat ovat pieniä, '
+              + 'mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja '
+              + 'jauhettua chiliä, ja sama versio on suosittu myös rajan '
+              + 'takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä '
+              + 'ja valkosipulia, ja Tucumánin Famaillássa järjestetään '
+              + 'nykyään vuosittainen kansallinen empanadajuhla. Alkuperä '
+              + 'johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta '
+              + 'Andien juurelle teki ruoasta täysin paikallisen.',
+          selite: 'Tusina uunissa paistettuja saltalaisia empanadoja '
+            + 'odottaa laatikossa, reunat käsin poimutettuina.',
+          lahde: 'Gonzalo Rivero, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Empanada',
+        },
+        {
+          otsikko: 'Köynnökset, jotka istutettiin kaksikymmentä vuotta '
+              + 'aiemmin',
+          aika: '1853',
+          tiedosto: 'Mañanas mendocinas.JPG',
+          teksti: 'Kaksikymmentä vuotta ennen isoisän matkaa, 17. '
+              + 'huhtikuuta 1853, Domingo Faustino Sarmiento — vielä '
+              + 'kaukana presidenttiydestä — antoi ranskalaiselle '
+              + 'agronomille Michel Pouget\'lle tehtävän tuoda '
+              + 'viiniköynnöksiä Ranskasta Mendozaan ja perusti sinne '
+              + 'maatalousoppilaitoksen Quinta Agronómican. Mukana oli '
+              + 'malbec, Ranskassa vaatimaton ja hallalle altis rypäle, '
+              + 'joka Mendozan korkealla ja kuivalla maalla alkoi tuottaa '
+              + 'tummaa, pehmeätanniinista viiniä. Vuonna 1873 nuo '
+              + 'köynnökset ovat jo juurtuneet — eikä kukaan vielä tiedä, '
+              + 'että juuri niistä tulee Argentiinan tunnusmerkki.',
+          selite: 'Talvinen viinitarha Mendozan Uco-laaksossa lepää '
+            + 'lumisten Andien juurella.',
+          lahde: 'Analía Fiocca Solimei, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Malbec',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä ranskalainen rypälelajike tuotiin vuonna 1853 '
+            + 'Mendozaan ja siitä tuli Argentiinan tunnusmerkki?',
+        vaihtoehdot: ['Malbec', 'Merlot', 'Pinot noir', 'Riesling'],
+        oikea: 0,
+        fakta: 'Sarmiento antoi tehtävän ranskalaiselle agronomille '
+            + 'Michel Pouget\'lle.',
+      },
+    },
+  ],
 };
