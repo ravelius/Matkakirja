@@ -19,6 +19,7 @@ import { LIPPUTIEDOT } from './packs/lipputiedot.js';
 import { karttapiste } from './packs/maakartat.js';
 import { radioMaalle } from './packs/radiot.js';
 import { vanhaTallenne } from './packs/vanhat-aanet.js';
+import { aiheAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import {
@@ -782,6 +783,25 @@ export function aiheenOtsikko(ui, kategoria) {
   return nimi;
 }
 
+/*
+ * PÖLLÖPOIMINNAT AIHESIVULLE (omistajan tilaus 23.8.2026).
+ *
+ * Vain oikea aihesivu saa pillerit: karttasivun nostokotelo piirtyy
+ * samalla funktiolla mutta omaan säiliöönsä ilman otsikkoa (ks.
+ * piirraMaaEtusivu), eikä kehittäjän liitteillä (Raamattu, Tilanne,
+ * Tilastot) ole artikkelitunnistetta lainkaan.
+ *
+ * Omistaja erottelee kaupunkilehden ja maalehden saman aiheen sivut
+ * samalla logiikalla kuin minitehtävän avain (js/ui.js).
+ */
+function piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko) {
+  if (!otsikko || kohde !== ui.arrivalKategoria) return;
+  if (ui.lehtitila?.tutkiTila === 'kehittaja' || !kategoria?.id) return;
+  const omistaja = ui.lehtitila?.tutkiTila === 'maa' && ui.lehtitila?.tutkiMaaLehti
+    ? ui.lehtitila.tutkiMaaLehti : ui.lehtitila?.arrivalShownFor;
+  piirraPoimintapillerit(kohde, aiheAvain(omistaja, kategoria.id));
+}
+
 export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { otsikko = true } = {}) {
   kohde.replaceChildren();
   if (!kategoria) return;
@@ -882,6 +902,7 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       kohde.appendChild(hero);
     }
     piirraVinkkilista(ui, kohde, kategoria.lista);
+    piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko);
     if (kategoria.tehtava) ui.piirraMinitehtava(kohde, kategoria);
     return;
   }
@@ -1034,6 +1055,10 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     }
     kohde.appendChild(lohko);
   }
+  // Pöllöpoiminnat jutun perään, ennen minitehtävää (omistajan tilaus
+  // 23.8.2026): tehtävälaatikko erottaa luettavan sivun pelitoiminnosta,
+  // ja pillerit kuuluvat luettavan puolelle.
+  piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko);
   // Lehden minitehtävä sivun loppuun (omistajan toive 5.8.2026).
   if (kategoria.tehtava) ui.piirraMinitehtava(kohde, kategoria);
   // Kohdekartta EI ole enää täällä kaupunkisivun pohjalla: omistajan
