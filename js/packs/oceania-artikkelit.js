@@ -331,4 +331,57 @@ export const OCEANIA_ARTIKKELIT = {
       + 'päälle nostetuista puutaloista, joiden verannat tehtiin '
       + 'subtrooppista ilmastoa varten.',
   },
+  /* PERTH (23.8.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain perth): väitteet on luettu
+   * en-Wikipedian raakateksteistä 23.8.2026, ja pohjana ovat
+   * faktapohja-perth.md ja tarkistus-perth.md. AVAIN ON WIKI-OTSIKKO
+   * 'Perth (Länsi-Australia)', koska js/packs/oceania.js antaa Perthille
+   * juuri sen wiki-nimen (suomeksi pelkkä Perth on täsmennyssivu) ja
+   * ui.js hakee taulusta arvolla city.wiki ?? city.name — pelkällä
+   * nimellä 'Perth' merkintä ei löytyisi lainkaan. Tarkistusraportin
+   * korjaus näkyy myös täällä: kuvernöörintalon paikkaa ei väitetä
+   * samaksi kuin Stirlingin telttaleirin. Eristyneisyyttä, Jakarta-
+   * vertailua eikä Fremantle Doctorin viilennystä ei mainita, koska ne
+   * ovat laudan OCEANIA_FACTS-kohdan omia faktoja. */
+  'Perth (Länsi-Australia)': {
+    intro: 'Perth on Länsi-Australian pääkaupunki ja Australian '
+      + 'neljänneksi väkirikkain kaupunki. Se on rakennettu Swan-joen '
+      + 'pohjoisrannalle sinne, missä Mount Elizan juurella pulppusi '
+      + 'seudun ainoa ympärivuotinen makean veden lähde. '
+      + 'Whadjuk-noongarit tunsivat lähteen nimellä **Goonininup** ja '
+      + 'kaupungin paikan nimellä Boorloo kauan ennen kuin siirtokunta '
+      + 'perustettiin 1829.'
+      + '\n\n'
+      + 'Kaupunki kasvoi hitaasti. Kun muu Australia oli lopettamassa '
+      + 'rangaistusvankien tuontia, Länsi-Australia pyysi 1850 '
+      + 'itselleen vankeja työvoimapulan takia: kahdeksassatoista '
+      + 'vuodessa saapui 9 721 vankia, enemmän kuin siirtokunnassa oli '
+      + 'vapaita uudisasukkaita. Heidän työnsä jälki on yhä keskustassa, '
+      + 'kaupungintalossa ja kuvernöörintalossa.'
+      + '\n\n'
+      + '**Isoisän matkan vuonna 1873 järjestelmä oli juuri purettu**: '
+      + 'viimeinen vankilaiva oli tullut 1868 ja vankien pääjohtajan '
+      + 'virka lakkautettu 1872. Perth oli silloin kolmentuhannen '
+      + 'asukkaan pikkukaupunki, jonka sivukadut olivat paljasta '
+      + 'hiekkaa. Kultaryntäys tuli vasta kahdenkymmenen vuoden päästä '
+      + 'ja muutti kaiken.',
+    teksti: 'Perth on Australian lounaiskulmassa, ja suurin osa '
+      + 'kaupungista on Swanin rannikkotasangolla Intian valtameren ja '
+      + 'Darling-jyrkänteen välissä. Keskusta on Swan-joen '
+      + 'pohjoisrannalla siinä kohdassa, jossa joki levenee Perth '
+      + 'Wateriksi, ja satamakaupunki Fremantle on joen suulla '
+      + 'lounaassa.'
+      + '\n\n'
+      + 'Siirtokunta perustettiin 1829, ja se otti vastaan '
+      + 'rangaistusvankeja 1850–1868. Kaupungintalo valmistui 1870 ja '
+      + 'Mount Elizan rinne rauhoitettiin puistoksi 1871. Kultalöydöt '
+      + 'Coolgardiessa, Kalgoorliessa ja Murchisonissa kasvattivat '
+      + 'siirtokunnan väkiluvun 23 000:sta 180 000:een vuosisadan '
+      + 'vaihteeseen mennessä, ja rahapaja avattiin 1899.'
+      + '\n\n'
+      + 'Nykyään Suur-Perthissä asuu yli 2,3 miljoonaa ihmistä. Kings '
+      + 'Park on Länsi-Australian suosituin yksittäinen käyntikohde, ja '
+      + 'whadjuk-noongarien maankäyttösopimus Perthin alueesta '
+      + 'vahvistettiin liittovaltion tuomioistuimessa joulukuussa 2021.',
+  },
 };

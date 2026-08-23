@@ -60434,4 +60434,647 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * PERTH (Opus 23.8.2026). Alusta asti tehty kaupunkilehti: kohteella
+   * ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen tätä erää.
+   * Pohjana ovat docs/mantereet-tyoaineisto/faktapohja-perth.md ja sen
+   * riippumaton tarkistus tarkistus-perth.md, jotka luettiin yhdessä;
+   * ristiriidoissa TARKISTUS VOITTAA. Kumpikaan tiedosto ei ollut
+   * mainissa vaan haarassa claude/matkakirja-julisteet-finish-h235w7,
+   * josta ne luettiin (git show) — tämä on kirjattu tähän, koska
+   * tehtävänanto oletti niiden olevan mainissa.
+   *
+   * Jokainen väite on luettu en-Wikipedian raakatekstistä (action=raw,
+   * haettu 23.8.2026): Perth, Kings Park (Western Australia), Convict
+   * era of Western Australia, Perth Mint, Perth Town Hall, Government
+   * House (Perth), Swan River (Western Australia), Whadjuk, Yagan,
+   * Yagan Square, Fremantle Prison, Fremantle Doctor ja Elizabeth Quay.
+   *
+   * TARKISTUSRAPORTIN KOLME KORJAUSTA ON TEHTY. (1) Faktapohja sanoi
+   * nykyisen kuvernöörintalon seisovan SAMALLA PAIKALLA kuin Stirlingin
+   * telttaleiri 1829. Lähde sanoo päinvastoin: teltat olivat Barrack
+   * Streetin ja St Georges Terracen kulmalla (nykyiset Stirling
+   * Gardens), ja ensimmäinen varsinainen kuvernöörintalo rakennettiin
+   * 1834–1835 "a short distance away". Nosto H2 kertoo talojen sarjan
+   * oikein: teltat, 1832 puutalo samalla paikalla, 1834/35 talo lyhyen
+   * matkan päässä ja nykyinen 1859–1864 talo samalla korttelilla.
+   * (2) Faktapohja sanoi Yaganin väkivallan alkaneen siitä, että
+   * uudisasukkaat ampuivat aboriginaaleja KARJAN KEIHÄSTÄMISESTÄ.
+   * Yagan-artikkeli ei sano niin: joulukuussa 1831 Thomas Smedley
+   * ampui perunamaalta yhden Yaganin sukulaisista, ja huhtikuussa 1833
+   * ammuttiin Fremantlen jauhovarastoon murtautunutta joukkoa, jolloin
+   * Yaganin veli Domjum kuoli. Whadjuk-artikkeli kuvaa karjan
+   * keihästämisen PÄINVASTAISENA suuntana. Nosto Y2 kertoo molemmat
+   * tapaukset lähteen mukaan. (3) Faktapohjan proosa pyöristi Kings
+   * Parkin kasvilajimäärän muotoon "yli 320"; faktalaatikon ja lähteen
+   * luku on 324, ja oppaan jakso 3 käyttää sitä.
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3 JA spec-mantereet.md:n
+   * Oseania-osio. Whadjuk-noongarit ovat oma sivunsa, eivät
+   * sivuhuomautus, ja heidät kuvataan nykyisenä kansana omalla
+   * nimellään: kuusi vuodenaikaa on käytössä, maaoikeussopimus
+   * vahvistettiin 2021 ja Yagan Square avattiin 2018. Yaganin kohtalo
+   * kerrotaan toteavana tapahtumasarjana ilman julmuuksien
+   * yksityiskohtia — pään käsittelyä Englannissa ei kuvailla, vain
+   * todetaan että pää vietiin sinne ja palautettiin 1997. Whadjukit-
+   * sivun neljäs nosto päättyy nykyhetkeen eikä hylättyyn vaatimukseen
+   * tai kuolleeseen vanhimpaan, ja historia-sivun H4 päättyy siihen,
+   * että vankitaustasta on tullut ylpeyden aihe.
+   *
+   * OCEANIA_FACTS-KOHDAN `perth` KOLMEA FAKTAA EI TOISTETA: kaupungin
+   * eristyneisyyttä (lähin miljoonakaupunki yli 2 000 km), Jakarta-
+   * vertailua eikä Fremantle Doctorin viilentävää vaikutusta ei
+   * mainita missään lehden tekstissä. Saapumiskortti kertoo ne, lehti
+   * kertoo muuta.
+   *
+   * VUOSI 1873 ON SANOTTU AUKI. Rangaistusjärjestelmän hallinto
+   * purettiin 1872, kaupungintalo valmistui 1870 ja Kings Park
+   * rauhoitettiin 1871 — kaikki 1–3 vuotta ennen isoisän matkaa. Sitä
+   * varten oppaan jakso 4 lainaa melbournelaistoimittajan kuvausta
+   * vuodelta 1870: hiljainen 3 000 asukkaan pikkukaupunki, jonka
+   * sivukadut olivat paljasta hiekkaa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (säärivit haetaan omana eränään, ja tämän erän tehtävänanto
+   * kielsi säätiedot). Oppaan jakso 5 nojaa siis en-Wikipedian
+   * Perth-artikkelin Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin,
+   * Karachin ja Vancouverin malli.
+   *
+   * KUVAT: kaikki 26 kuvaa on haettu Commonsista KATEGORIOILLA
+   * (Views of Perth, Skylines of Perth, Perth Water, Elizabeth Quay,
+   * Fremantle Harbour, Cottesloe Beach, Perth Town Hall, Government
+   * House Western Australia, Fremantle Prison, Perth Mint, Old Swan
+   * Brewery, Mount Eliza Kings Park, Swan River Western Australia,
+   * Flora in Kings Park, Noongar, Heirisson Island, Yagan Square,
+   * Swan Bells, Barracks Arch, History of Perth, Perth railway
+   * station Western Australia, Western Australian Botanic Garden),
+   * lisenssi ja tekijä on luettu rajapinnan extmetadatasta ja jokainen
+   * kuva on katsottu silmin 900 pikselin esikatseluna. Hylkäyksiä:
+   * Kings Parkin ikikukkakuva, jossa istuu tunnistettava mies
+   * (kasvot luettavissa); Yagan Squaren Wirin-kuva, jossa etualalla on
+   * ihmisryhmä lähietäisyydellä; Yagan Squaren digitaalinen torni,
+   * jonka koko pinta on mainoskuvaa; vuoden 1892 kirjan kuvalaatta
+   * "View of Perth from Mount Eliza" ja n. 1900 kuvalaatta, joissa
+   * painettu kuvateksti on osa lehteä; Lesmurdien panoraama, jossa
+   * kaupunki hukkuu utuun; Fremantlen sataman kuva, joka on
+   * käytännössä tyhjää vettä.
+   *
+   * AIHETOISTO ON HARKITTU JA PERUSTELTU: Fremantlen vankilaitos
+   * esiintyy kahdesti eri aikoina ja eri asiassa — nostossa K3 Henry
+   * Wrayn 1850-luvun akvarellina siitä, mitä vangit rakensivat
+   * itselleen, ja nostossa H3 valokuvana samasta selliosastosta sen
+   * jälkeen, kun laitos siirtyi siirtokunnalle 1872. Kings Park
+   * esiintyy kolmesti eri kohteina (avauskuvan näköalatasanne, noston
+   * L1 Mount Elizan rinne joelta ja oppaan ikikukkarinne), ja Swan-joki
+   * neljästi eri paikoissa. Yksikään tiedostonimi ei toistu.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta eikä kuvaile kuvaa visuaalisesti, ja se on yhden
+   * virkkeen mittainen.
+   */
+  perth: [
+    {
+      id: 'kaupunki',
+      nimi: 'Perth',
+      johdanto: 'Whadjuk-noongarien lähteen ääreen 1829 perustettu Perth on '
+        + 'Länsi-Australian pääkaupunki. Isoisän matkan vuonna sen julkiset '
+        + 'talot olivat vankien rakentamia ja rangaistusjärjestelmä juuri '
+        + 'purettu.',
+      kansikuvat: [
+        {
+          tiedosto: 'Elizabeth Quay.jpg',
+          selite: 'Elizabeth Quay avattiin 2016 sille rantakaistalle, joka '
+            + 'oli täytetty maaksi Perth Waterin pohjukasta.',
+          lahde: 'Angah hfz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View from the top of Cantonment Hill.jpg',
+          selite: 'Fremantlen satama Swan-joen suulla on Länsi-Australian '
+            + 'tärkein kontti- ja matkustajasatama.',
+          lahde: 'Sam Wilson (taken with Panasonic Lumix DMC-FT1), Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Cottesloe Beach, May 2021 02.jpg',
+          selite: 'Cottesloe on Perthin tunnetuin merenranta, ja sen '
+            + 'aallonmurtaja ja teehuone ovat 1900-luvun alkupuolelta.',
+          lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kolmelta eri suunnalta —
+       * Kings Parkin nurmelta lännestä, ilmasta pohjoisesta ja Mill
+       * Pointista etelästä joen yli. Yksikään ei ole minkään noston
+       * aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Perth skyline.jpg',
+          selite: 'Keskustan tornit näkyvät Kings Parkin nurmikentältä, '
+            + 'joka on Mount Elizan laella runsaan kilometrin päässä '
+            + 'kaupungin ytimestä.',
+          lahde: 'Robert Young, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Perth CBD from air.jpg',
+          selite: 'Keskusta on Swan-joen pohjoisrannalla, ja joki '
+            + 'mutkittelee sen takana kohti Darling-jyrkännettä.',
+          lahde: 'Chewy m at English Wikipedia, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          tiedosto: 'Perth CBD from Mill Point (2).jpg',
+          selite: 'Perth Water on Swan-joen levennys keskustan edessä, ja '
+            + 'sen eteläranta South Perthissä on kaupungin tunnetuin '
+            + 'näköalapaikka.',
+          lahde: 'JJ Harrison (jjharrison89@facebook.com), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki lähteen ympärillä',
+          tiedosto: 'Old Swan Brewery from the river.jpg',
+          teksti: 'Kun kuvernööri James Stirling etsi 1829 paikkaa uudelle '
+            + 'siirtokunnalle, ratkaisu oli yksinkertainen: Mount Elizan '
+            + 'etelärinteen juurella pulppusi seudun ainoa ympärivuotinen '
+            + 'makean veden lähde, ja kaupunki perustettiin sen viereen. '
+            + 'Whadjuk-noongarit olivat käyttäneet lähdettä sukupolvien ajan '
+            + 'ja tunsivat sen nimellä Goonininup; siirtolaisten kartoissa '
+            + 'se on Kennedy Spring. Sama vesi oli täydentänyt jo '
+            + 'hollantilaisen Willem de Vlaminghin retkikunnan varastot '
+            + '11. tammikuuta 1697. Kummun Stirling nimesi Eliza Darlingin '
+            + 'mukaan.',
+          selite: 'Old Swan Breweryn rakennukset seisovat Mount Elizan '
+            + 'juurella sillä rantakaistalla, jossa Goonininupin lähde '
+            + 'antoi vettä ympäri vuoden.',
+          lahde: 'Sam Wilson (taken with Panasonic Lumix DMC-FT1), Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Kings Park, Western Australia',
+        },
+        {
+          otsikko: 'Kaksi nimeä samalle paikalle',
+          tiedosto: 'Perth Water 1838.jpg',
+          teksti: 'Stirlingin julistus siirtokunnan perustamisesta luettiin '
+            + 'Fremantlessa 18. kesäkuuta 1829, ja se päättyi sanoihin '
+            + '"annettu Perthissä". Nimi oli lainattu Skotlannin Perthistä. '
+            + 'Ainoa aikalaislähde sille, kenen kunniaksi, on kapteeni '
+            + 'Charles Fremantlen päiväkirjamerkintä 12. elokuuta 1829: '
+            + 'paikka "nimettiin Perthiksi Sir George Murrayn toiveiden '
+            + 'mukaisesti". Murray oli siirtomaaministeri. Whadjukeilla '
+            + 'alueella oli jo oma nimensä, Boorloo, ja se on viime vuosina '
+            + 'palannut kaupungin rinnakkaisnimeksi.',
+          selite: 'Maanmittaushallinnon vuoden 1838 asemakaava näyttää '
+            + 'Perthin ruutukaavan Perth Waterin pohjoisrannalla ja '
+            + 'kaupungin ympärille jääneet järvet.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Perth',
+        },
+        {
+          otsikko: 'Siirtokunta joka pyysi itselleen vankeja',
+          tiedosto: 'FremantlePrisonHenry Wray.jpg',
+          teksti: 'Kun muu Australia oli jo lopettamassa rangaistusvankien '
+            + 'tuontia, Länsi-Australia teki 1850 päinvastoin ja pyysi '
+            + 'Britannialta vankeja työvoimapulan takia. Ehtoja oli kolme: '
+            + 'ei naispuolisia vankeja, ei poliittisia vankeja eikä '
+            + 'vakavien rikosten tekijöitä. Kahdesta jälkimmäisestä '
+            + 'lipsuttiin jo ensimmäisten vuosien jälkeen, mutta '
+            + 'ensimmäinen piti loppuun asti. Kahdeksantoista vuoden aikana '
+            + '43 laivaa toi 9 721 vankia siirtokuntaan, jossa oli noin '
+            + '7 300 vapaata uudisasukasta.',
+          selite: 'Kuninkaallisten insinöörien upseeri Henry Wray maalasi '
+            + 'Fremantlen vankilaitoksen, jonka vangit rakensivat itselleen '
+            + '1850-luvulla.',
+          lahde: 'Henry Wray, Wikimedia Commons (PD)',
+          wiki: 'Convict era of Western Australia',
+        },
+        {
+          otsikko: 'Kulta toi rahapajan',
+          tiedosto: 'Perth Mint, WA, 2023.jpg',
+          teksti: 'Isoisän matkan aikoihin koko Länsi-Australiassa asui noin '
+            + '23 000 ihmistä. Kun Coolgardiesta, Kalgoorliesta ja '
+            + 'Murchisonista löytyi kultaa 1890-luvulla, luku oli '
+            + 'vuosisadan vaihteessa 180 000, ja Perthistä tuli '
+            + 'kultakenttien huoltokeskus. John Forrest muurasi 1896 '
+            + 'peruskiven rahapajalle, joka avattiin 20. kesäkuuta 1899 '
+            + 'Lontoon kuninkaallisen rahapajan sivutoimipisteenä. Vuoteen '
+            + '1931 mennessä se oli lyönyt yli 106 miljoonaa '
+            + 'kultasovereignia imperiumin käyttöön.',
+          selite: 'Rahapajan kalkkikivitalo Hay Streetin varrella avattiin '
+            + 'kesäkuussa 1899, ja rakennus on yhä rahapajan käytössä.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Perth Mint',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Perth Swan Bells Tower.jpg',
+          selite: 'Barrack Street päättyy joen rantaan, jossa kellotorni '
+            + 'kohoaa Elizabeth Quayn vieressä.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Perth on Länsi-Australian pääkaupunki ja Australian '
+          + 'neljänneksi väkirikkain kaupunki: Suur-Perthissä asuu yli 2,3 '
+          + 'miljoonaa ihmistä. Matkailijan Perth on kapea kaistale '
+          + 'Swan-joen ja Intian valtameren välissä. Keskusta on joen '
+          + 'pohjoisrannalla, ja St Georges Terracen varrella seisovat '
+          + 'kaupungin vanhimmat julkiset talot. Lännessä Kings Park nousee '
+          + 'jyrkästi joen yli, etelässä Elizabeth Quayltä lähtevät lautat '
+          + 'South Perthiin, ja lounaassa on satamakaupunki Fremantle. '
+          + 'Rannikolla on rivi hiekkarantoja, joista tunnetuin on '
+          + 'Cottesloe.',
+        artikkeli: {
+          nimi: 'Matkailijan Perth',
+          taitto: 'opas',
+          teksti: 'Kapea kaistale joen ja valtameren välissä — kaupunki, '
+            + 'jonka vanhimmat julkiset talot ovat vankien käsialaa.',
+          nosto: 'Vuonna 1870 Perthissä asui noin 3 000 ihmistä; nykyään '
+            + 'Suur-Perthissä yli 2,3 miljoonaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Perthin satama on Fremantlessa Swan-joen suulla, ja '
+                + 'sen kautta kulkevat sekä kontit että matkustajalaivat. '
+                + 'Juuri sinne nousivat maihin kesäkuussa 1829 ensimmäiset '
+                + 'siirtolaiset laivoista Parmelia ja Sulphur; James '
+                + 'Stirling piti näkymää yhtä kauniina kuin mitään '
+                + 'aiemmin näkemäänsä. Lentäen tullaan Perth Airportille '
+                + 'kaupungin itäpuolelle. Keskustan ja Fremantlen väli on '
+                + 'lyhyt junamatka, ja Elizabeth Quayltä pääsee joen yli '
+                + 'lautalla South Perthiin. Fremantlen vanha satamaosa on '
+                + 'oma käyntikohteensa: sen länsipäässä toimii yliopiston '
+                + 'kampus vanhoissa satamarakennuksissa, ja Victoria '
+                + 'Quayn merenkulkumuseon vieressä on telakoitu '
+                + 'sukellusvene.',
+              kuva: {
+                tiedosto: 'Western Australian Maritime Museum.jpg',
+                selite: 'Fremantlen Victoria Quaylla toimii Länsi-Australian '
+                  + 'merenkulkumuseo, ja sataman nosturit jatkavat samalla '
+                  + 'rannalla.',
+                lahde: 'Grahame Bowland, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Suurin osa Perthin kaupunkialueesta on Swanin '
+                + 'rannikkotasangolla Intian valtameren ja '
+                + 'Darling-jyrkänteen välissä. Lännessä on hiekkaranta ja '
+                + 'idässä jyrkänne, joka nousee tasangolta Darlingin '
+                + 'vuorijonoksi; sen laelta kaupunki näkyy kokonaan. '
+                + 'Keskusta on Swan-joen pohjoisrannalla siinä kohdassa, '
+                + 'jossa joki levenee Perth Wateriksi, ja Canning-joki '
+                + 'yhtyy siihen hieman ylempänä. Kaupungin länsireunalla '
+                + 'Mount Eliza kohoaa jyrkästi joen yli, ja sen laella on '
+                + 'Kings Park. Fremantle on joen suulla lounaassa, '
+                + 'Perthin lentoasema idässä jokimutkan takana.',
+              kuva: {
+                tiedosto: 'Perth from Greenmount in 2010.jpg',
+                selite: 'Greenmountin rinteeltä Darling-jyrkänteen laidalta '
+                  + 'näkyy koko rannikkotasanko lentoasemineen ja keskustan '
+                  + 'tornit sen takana.',
+                lahde: 'User:JarrahTree, Wikimedia Commons (CC BY 2.5 au)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: villikukkien kuukausi',
+              teksti: 'Syyskuussa Kings Park järjestää Australian suurimman '
+                + 'villikukkanäyttelyn, ja tapahtuma vetää nykyään yli '
+                + '500 000 kävijää. Näyttely ei ole puutarhaesittely vaan '
+                + 'lyhyen sadekauden jälkeinen kukinta: puiston '
+                + 'kokoelmissa on yli 324 alkuperäistä kasvilajia, 215 '
+                + 'tunnettua sienilajia ja 80 lintulajia. Whadjukien '
+                + 'vuodenaikajaossa sama kausi on kambarang, kukinnan '
+                + 'aika. Kings Park on Länsi-Australian suosituin '
+                + 'yksittäinen käyntikohde, ja vuonna 2012 laskettiin yli '
+                + '5,8 miljoonaa kävijää. Puiston läpi kulkee lisäksi '
+                + 'kasvitieteellinen puutarha ja rinteen alle jäävä '
+                + 'jokirantareitti.',
+              kuva: {
+                tiedosto: 'Flowers, Kings Park, Perth.jpg',
+                selite: 'Kings Parkin rinteet peittyvät keväällä '
+                  + 'ikikukkiin, joita puiston villikukkanäyttely esittelee '
+                  + 'joka syyskuu.',
+                lahde: 'Gemma Longman, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kaupunki vuonna 1870',
+              teksti: 'Melbournelaistoimittaja kuvaili Perthiä vuonna 1870 '
+                + 'hiljaiseksi noin kolmentuhannen asukkaan '
+                + 'pikkukaupungiksi, joka levisi hajanaisina tontteina '
+                + 'aina rantaan asti puutarhojen ja pensasaitojen keskellä '
+                + 'ja oli ilmeeltään puoliksi maalaismainen. Pääkadut '
+                + 'olivat sorapäällysteisiä, mutta sivukadut ja useimmat '
+                + 'jalkakäytävät olivat paljasta hiekkaa, joka kesällä '
+                + 'nosti pölyn ja häikäisyn. Samana vuonna valmistui '
+                + 'kaupungintalo, ja seuraavana vuonna rauhoitettiin '
+                + 'Kings Park. Isoisä ehti nähdä kaupungin juuri ennen '
+                + 'sitä vuosikymmentä, jona kulta muutti kaiken.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Perthistä puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Perth-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on kuuman kesän välimerenilmastoa: kesät ovat '
+                + 'kuivia ja kuumia, talvet leutoja ja sateisia, ja sade '
+                + 'painottuu touko-elokuuhun, jolloin rintamat kulkevat '
+                + 'alueen yli. Perth on Australian osavaltiopääkaupungeista '
+                + 'aurinkoisin, noin 3 200 tuntia ja 138,7 selkeää päivää '
+                + 'vuodessa. Kuumin keskustassa mitattu lukema on 46,2 '
+                + 'astetta 23. helmikuuta 1991 ja kylmin −0,7 astetta '
+                + '17. kesäkuuta 2006.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Länsi-Australia pyysi itselleen rangaistusvankeja 1850, kun '
+        + 'muu Australia oli jo lopettamassa kuljetukset. Vangit rakensivat '
+        + 'kaupungin julkiset talot, ja järjestelmä purettiin vasta isoisän '
+        + 'matkan kynnyksellä.',
+      tehtava: {
+        kysymys: 'Minä vuonna viimeinen vankilaiva Hougoumont saapui Länsi-Australiaan?',
+        vaihtoehdot: [
+          '1868',
+          '1850',
+          '1872',
+          '1876',
+        ],
+        oikea: 0,
+        fakta: 'Kuljetukset päättyivät siihen, mutta järjestelmä ei: vuoden '
+          + '1868 lopussa siirtokunnassa oli yhä 3 158 tuomiotaan '
+          + 'suorittavaa vankia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupungintalo, jonka ikkunat kertovat rakentajistaan',
+          tiedosto: 'Perth Town Hall - Perth.jpg',
+          teksti: 'Perth Town Hall on ainoa vankityövoimalla rakennettu '
+            + 'kaupungintalo Australiassa. Perustus laskettiin 24. '
+            + 'toukokuuta 1867, talo valmistui 1870 ja oli silloin '
+            + 'kaupungin korkein rakennus. Tiilet poltettiin East Perthin '
+            + 'savesta, ja koristelu kertoo rakentajien asemasta: ikkunat '
+            + 'on muotoiltu vankien univormun nuolimerkin muotoon ja osa '
+            + 'koristeista muistuttaa hirsipuun köyttä. Talo seisoo yhä '
+            + 'Hay Streetin ja Barrack Streetin kulmassa, ja sen '
+            + 'jarrahportaikon seinillä ovat kaikkien ylipormestarien '
+            + 'kuvat ensimmäisestä, George Shentonista, alkaen.',
+          selite: 'Kaupungintalon kellotorni Hay Streetin ja Barrack '
+            + 'Streetin kulmassa valmistui 1870 Richard Roach Jewellin ja '
+            + 'James Manningin piirustusten mukaan.',
+          lahde: 'JJ Harrison (https://www.jjharrison.com.au/), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Perth Town Hall',
+        },
+        {
+          otsikko: 'Kolmas kuvernöörintalo samalla korttelilla',
+          tiedosto: 'Government House, east front.jpg',
+          teksti: 'Kuvernööri James Stirling asui perheineen 1829 teltoissa '
+            + 'Barrack Streetin ja St Georges Terracen kulmalla, siellä '
+            + 'missä ovat nykyiset Stirling Gardens. Samalle paikalle nousi '
+            + '1832 väliaikainen puutalo, ja lyhyen matkan päähän '
+            + 'rakennettiin 1834–1835 ensimmäinen varsinainen '
+            + 'kuvernöörintalo. Nykyinen on kolmas kuvernöörien käytössä '
+            + 'ollut talo samalla korttelilla: peruskivi laskettiin 17. '
+            + 'maaliskuuta 1859, työ tehtiin suureksi osaksi '
+            + 'vankityövoimalla ja maksoi 15 000 puntaa. Kuvernööri John '
+            + 'Hampton muutti sisään jo 1863, vuotta ennen valmistumista.',
+          selite: 'Kuvernöörin residenssin itäjulkisivu valmistui 1864 '
+            + 'Edmund Hendersonin piirustusten mukaan St Georges Terracen '
+            + 'ja Swan-joen väliin.',
+          lahde: 'Michal Lewi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Government House, Perth',
+        },
+        {
+          otsikko: 'Vuosi jolloin järjestelmä lakkasi',
+          tiedosto: 'Fremantle prison main cellblock.JPG',
+          teksti: 'Viimeinen vankilaiva Hougoumont lähti Britanniasta 1867 '
+            + 'ja saapui Länsi-Australiaan 10. tammikuuta 1868 mukanaan 62 '
+            + 'irlantilaista fenian-vankia. Kuljetukset päättyivät, mutta '
+            + 'järjestelmä ei: vuoden 1868 lopussa siirtokunnassa oli yhä '
+            + '3 158 tuomiotaan suorittavaa vankia. Vuonna 1872, vuosi '
+            + 'ennen isoisän matkaa, vankien pääjohtajan virka '
+            + 'lakkautettiin ja laitokset siirtyivät siirtokunnalle — '
+            + 'Convict Establishmentista tuli Fremantlen vankila. Kauden '
+            + 'tunnetuin yksittäinen tapaus, Catalpa-pako, sattui vasta '
+            + '1876.',
+          selite: 'Fremantlen vankilan pääselliosasto kappeleineen on 1850-'
+            + 'luvulla vangeilla rakennettua laitosta, joka siirtyi '
+            + 'siirtokunnan haltuun 1872.',
+          lahde: 'Ghostieguide at English Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fremantle Prison',
+        },
+        {
+          otsikko: 'Häpeästä ylpeydeksi',
+          tiedosto: 'Perth Barracks, c1863, SLWA b2393679 (cropped).png',
+          teksti: 'Vuonna 1874, isoisän matkan jälkeisenä vuonna, '
+            + 'Länsi-Australian lakiasäätävä neuvosto pyysi Britannialta '
+            + 'itsehallintoa. Pyyntö hylättiin, ja yhtenä perusteluna oli '
+            + 'entisten vankien liian suuri osuus väestöstä. Julkiset virat '
+            + 'pysyivät heiltä lähes kokonaan suljettuina — ainoa '
+            + 'poikkeus oli koulunopettajan toimi, johon palkattiin '
+            + 'runsaasti entisiä vankeja, koska matalat palkat eivät '
+            + 'houkutelleet koulutettuja vapaita siirtolaisia. Vankitausta '
+            + 'oli pitkään vaiettu asia, ja vasta viime vuosikymmeninä '
+            + 'siitä on tullut monelle sukututkimuksen ylpeyden aihe.',
+          selite: 'Perthin kasarmi valmistui 1863 eläkkeelle siirtyneiden '
+            + 'sotilaiden vartiojoukolle, joka saapui siirtokuntaan '
+            + 'vankikuljetusten mukana.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Convict era of Western Australia',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kaupunkia reunustava rinne rauhoitettiin puistoksi kaksi '
+        + 'vuotta ennen isoisän matkaa. Sen alla mutkitteleva joki kantaa yhä '
+        + 'nimeä Derbarl Yerrigan ja tarinaa käärmeolennosta, joka sen loi.',
+      tehtava: {
+        kysymys: 'Kuinka moneen vuodenaikaan whadjukit jakavat vuoden?',
+        vaihtoehdot: [
+          'kuuteen',
+          'neljään',
+          'kahteen',
+          'kymmeneen',
+        ],
+        oikea: 0,
+        fakta: 'Vuodenaikojen rajat eivät ole kalenteripäiviä vaan merkkejä '
+          + 'luonnossa: kambarangin alkamisen kertoo kukinta ja bunurun '
+          + 'tulon joulupuun kukat.',
+      },
+      nostot: [
+        {
+          otsikko: 'Rinne joka rauhoitettiin 1871',
+          tiedosto: 'MountEliza90.JPG',
+          teksti: 'Mount Elizan jarrahmetsä oli siirtokunnan ensimmäinen '
+            + 'vientitavara: viisi tonnia puuta kaadettiin rinteeltä 1835. '
+            + 'Hakkuu jatkui 1871 asti, jolloin maanmittaaja Malcolm Fraser '
+            + 'sai kuvernööri Frederick Weldin varaamaan 432 eekkeriä '
+            + 'julkiseksi puistoksi. Alue laajeni 1890 ja uudestaan 1897, '
+            + 'kun John Forrest kasvatti sen 1 017 eekkeriin. Puiston nimi '
+            + 'oli Perth Park, ja King’s Parkiksi se muutettiin vasta '
+            + '1901. Noongareille kukkula oli jo kauan ennen sitä Mooro '
+            + 'Katta, Kaarta Gar-up ja Kaarta Koomba.',
+          selite: 'Mount Elizan pensasmetsäinen rinne kohoaa Swan-joen yli '
+            + 'Narrows-sillan takana, ja juuri se rauhoitettiin puistoksi '
+            + '1871.',
+          lahde: 'JarrahTree, Wikimedia Commons (CC BY 2.5 au)',
+          wiki: 'Kings Park, Western Australia',
+        },
+        {
+          otsikko: 'Joki, jonka käärme loi',
+          tiedosto: 'Black Swan on Perth Water.JPG',
+          teksti: 'Whadjukien kielessä joki on Derbarl Yerrigan. Sen loi '
+            + 'Wagyl, käärmemäinen Uneajan olento, joka mutkitteli maan '
+            + 'halki ja jätti jälkeensä joet, järvet ja vesireitit; '
+            + 'whadjukit ovat säilyttäneet siitä useita kertomuksia. '
+            + 'Hollantilainen Willem de Vlamingh purjehti jokea ylös 1697 '
+            + 'ja nimesi sen alueen mustien joutsenten mukaan Swarte '
+            + 'Swaene-Revieriksi. Ranskalainen Nicolas Baudinin retkikunta '
+            + 'seurasi 1801, lähes kolmekymmentä vuotta ennen brittiläistä '
+            + 'asutusta.',
+          selite: 'Musta joutsen ui Perth Waterilla South Perthin rantaa '
+            + 'vasten, ja juuri näiden lintujen mukaan hollantilaiset '
+            + 'nimesivät joen 1697.',
+          lahde: 'User:JarrahTree, Wikimedia Commons (CC BY 2.5 au)',
+          wiki: 'Swan River (Western Australia)',
+        },
+        {
+          otsikko: 'Vuosi, jossa on kuusi aikaa',
+          tiedosto: 'Mirrabooka library Noongar calendar.jpg',
+          teksti: 'Whadjukit jakavat vuoden kuuteen vuodenaikaan, joita ei '
+            + 'mitata kalenterista vaan siitä, mitä maassa tapahtuu. Birak '
+            + 'marras-joulukuussa on hedelmän aika ja kuumien itätuulten '
+            + 'kausi, jolloin pensaikkoa poltettiin mosaiikkina '
+            + 'metsästyksen ja itämisen helpottamiseksi. Bunuru '
+            + 'tammi-helmikuussa on kuuma ja kuiva, ja perheet siirtyivät '
+            + 'rannikon jokisuille kalaan. Djeran tuo ensimmäiset sateet, '
+            + 'makuru vie ihmiset sisämaahan jyrkänteelle, djilba on kylmä '
+            + 'ja märkä, ja kambarang syys-lokakuussa on kukinnan huippu.',
+          selite: 'Mirrabookan kirjaston edessä oleva kivikuvio näyttää '
+            + 'noongarien kuusi vuodenaikaa ja niiden suhteen '
+            + 'eurooppalaiseen kalenteriin.',
+          lahde: 'Orderinchaos, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Whadjuk',
+        },
+        {
+          otsikko: 'Joki jota muokattiin muotoonsa',
+          tiedosto: 'Heirisson Island Aug2020.jpg',
+          teksti: 'Vuoden 1862 tulvat olivat pahoja, ja maantäytöt olivat '
+            + 'tehneet niistä pahempia kuin ne olisivat muuten olleet. '
+            + 'Seuraavina vuosikymmeninä jokea ruopattiin '
+            + 'järjestelmällisesti: Länsi-Australian ensimmäinen '
+            + 'ämpäriruoppaaja Black Swan aloitti 1872, vuotta ennen '
+            + 'isoisän matkaa, ja kaivoi väyliä ja täyttömaata vuoteen '
+            + '1911 asti. Heirisson Island keskellä Perth Wateria oli '
+            + 'alun perin joukko matalia mutasaaria, ja saaren nykyinen '
+            + 'yhtenäinen muoto on tämän työn tulosta.',
+          selite: 'Heirisson Island jakaa Perth Waterin kahtia '
+            + 'Causeway-siltojen kohdalla, ja whadjukien kielessä paikka on '
+            + 'Matagarup.',
+          lahde: 'Moondyne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Swan River (Western Australia)',
+        },
+      ],
+    },
+    {
+      id: 'whadjukit',
+      nimi: 'Whadjukit',
+      johdanto: 'Whadjuk-noongarit ovat asuneet Swan-joen varrella tuhansia '
+        + 'vuosia ja asuvat siellä yhä. Heidän tarinansa ulottuu '
+        + 'siirtomaa-ajan raskaista vuosista tämän vuosituhannen '
+        + 'maaoikeussopimuksiin.',
+      tehtava: {
+        kysymys: 'Mitä whadjukien suullinen perinne kertoo Rottnestin saaresta?',
+        vaihtoehdot: [
+          'Se oli ennen kiinni mantereessa',
+          'Se syntyi tulivuoren purkauksesta',
+          'Sinne purjehdittiin kauppaa käymään',
+          'Se oli aina asumaton',
+        ],
+        oikea: 0,
+        fakta: 'Meri nousi ja katkaisi yhteyden noin 12 000–8 000 vuotta '
+          + 'sitten, ja kertomus siitä on kulkenut suullisena perinteenä '
+          + 'siitä asti.',
+      },
+      nostot: [
+        {
+          otsikko: 'Neljä ryhmää yhden joen varrella',
+          tiedosto: 'Matilda Bay Swan River, Western Australia.jpg',
+          teksti: 'Ennen siirtokuntaa whadjukit jakautuivat Swan- ja '
+            + 'Canning-jokien mukaan alueisiin: beeliar lounaassa '
+            + 'Midgegooroon johdolla, beeloo joen eteläpuolella ja mooro '
+            + 'pohjoispuolella Yellagongan johdolla. Kun luutnanttikuvernööri '
+            + 'Frederick Irwinin vene tapasi Yellagongan perheineen '
+            + 'Crawleyn rannalla 1829, kohtaaminen oli vielä rauhallinen. '
+            + 'Whadjukien punaokra louhittiin sieltä, missä nykyinen '
+            + 'rautatieasema seisoo, ja sitä vaihdettiin itään päin. '
+            + 'Rannikon whadjukeilla on suullinen perinne siitä, kuinka '
+            + 'Rottnest irtosi mantereesta meren noustessa.',
+          selite: 'Matilda Bay Crawleyssa on se rannanpätkä, jolla '
+            + 'Yellagonga tapasi siirtolaisten veneen vuonna 1829.',
+          lahde: 'Nachoman-au, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Whadjuk',
+        },
+        {
+          otsikko: 'Yagan',
+          tiedosto: 'Yagan Statue 2005.jpg',
+          teksti: 'Joulukuussa 1831 maanviljelijä Archibald Butlerin '
+            + 'palvelija Thomas Smedley ampui perunamaalla yhden Yaganin '
+            + 'sukulaisista. Noongarien lain mukaan kuolema oli kostettava, '
+            + 'ja Yagan ja hänen isänsä Midgegooroo surmasivat toisen '
+            + 'Butlerin palvelijoista. Siirtokunta julisti Yaganin '
+            + 'lainsuojattomaksi; siirtolainen Robert Lyon puolusti häntä '
+            + 'sotavankina, ja Yagan karkotettiin Carnac-saarelle, josta '
+            + 'hän pakeni. Huhtikuussa 1833 Fremantlen jauhovarastoon '
+            + 'murtautunutta joukkoa ammuttiin ja Yaganin veli Domjum '
+            + 'kuoli. Yagan surmattiin 11. heinäkuuta 1833, ja hänen '
+            + 'päänsä vietiin Englantiin.',
+          selite: 'Robert Hitchcockin veistämä Yaganin patsas paljastettiin '
+            + 'Heirisson Islandilla 11. syyskuuta 1984.',
+          lahde: 'Nachoman-au, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Yagan',
+        },
+        {
+          otsikko: 'Pään paluu ja hautaus',
+          tiedosto: 'Yagan Memorial Park, Belhus.jpg',
+          teksti: 'Noongar-vanhimmat alkoivat etsiä päätä 1980-luvun alussa. '
+            + 'Arkeologi Cressida Fforde jäljitti sen joulukuussa 1993 '
+            + 'Liverpooliin, jossa museo oli haudannut sen 1964. Luovutus '
+            + 'noongar-valtuuskunnalle tehtiin Liverpoolin kaupungintalossa '
+            + '31. elokuuta 1997. Uudelleenhautaus viivästyi vuosia, koska '
+            + 'hautapaikasta ja muun ruumiin sijainnista ei ollut '
+            + 'yksimielisyyttä; Richard Wilkesin johtama komitea vei asian '
+            + 'loppuun. Yagan haudattiin 10. heinäkuuta 2010 Belhusiin '
+            + 'avattuun Yagan Memorial Parkiin noin kolmensadan ihmisen '
+            + 'läsnä ollessa.',
+          selite: 'Yagan Memorial Parkin sisäänkäyntimuuri Belhusissa '
+            + 'kertoo Yaganin tarinan, ja muurin suunnittelivat Jenny '
+            + 'Dawson ja Sandra Hill.',
+          lahde: 'Outrune, Wikimedia Commons (CC0)',
+          wiki: 'Yagan',
+        },
+        {
+          otsikko: 'Tunnustus tässä ajassa',
+          tiedosto: 'Yagan Square - Wirin, March 2018 03.jpg',
+          teksti: 'Liittovaltion tuomioistuin totesi syyskuussa 2006 '
+            + 'tapauksessa Bennell vastaan Länsi-Australia, että noongarien '
+            + 'alkuperäinen maaoikeus oli säilynyt Perthin '
+            + 'metropolialueella. Valitusten ja vuosien neuvottelujen '
+            + 'jälkeen syntyi Etelä-Länsi-Australian maaoikeussopimus, '
+            + 'johon kuuluu whadjukien oma maankäyttösopimus Perthin '
+            + 'alueesta; tuomioistuin vahvisti kokonaisuuden 1. joulukuuta '
+            + '2021. Keskustaan avattiin 3. maaliskuuta 2018 Yagan Square, '
+            + 'jonka yhdeksänmetrisen Wirin-veistoksen teki '
+            + 'noongar-taiteilija Tjyllyungoo.',
+          selite: 'Tjyllyungoon veistämä Wirin kohoaa yhdeksän metriä Yagan '
+            + 'Squarella, ja nimi tarkoittaa kaiken elämän yhdistävää '
+            + 'luovaa voimaa.',
+          lahde: 'Samuel Wiki, Wikimedia Commons (CC0)',
+          wiki: 'Yagan Square',
+        },
+      ],
+    },
+  ],
 };
