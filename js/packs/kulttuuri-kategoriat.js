@@ -55185,4 +55185,690 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * WELLINGTON (Opus 23.8.2026). Alusta asti tehty kaupunkilehti:
+   * kohteella ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen
+   * tätä erää. Pohjana ovat docs/mantereet-tyoaineisto/
+   * faktapohja-wellington.md ja tarkistus-wellington.md, jotka
+   * luettiin yhdessä; ristiriidoissa TARKISTUSRAPORTTI VOITTAA.
+   * Jokainen väite on luettu en-Wikipedian raakateksteistä
+   * 23.8.2026 (artikkelit "Wellington", "Old Government Buildings,
+   * Wellington", "Pouwhenua" ja "Taranaki Whānui ki te Upoko o te
+   * Ika") sekä faktapohjan ja tarkistuksen yhtäpitävistä kohdista
+   * ("1855 Wairarapa earthquake", "Wellington Cable Car", "Te Papa",
+   * "Old St Paul's, Wellington", "New Zealand Parliament Buildings",
+   * "Government House, Wellington", "Zealandia (wildlife sanctuary)",
+   * "Wellington Harbour").
+   *
+   * TARKISTUSRAPORTIN KUUSI KOHTAA ON KAIKKI TOTEUTETTU.
+   * (1) H1-nosto EI sisällä sanaparia, jolla visan Q5:n oikea
+   * vastausvaihtoehto on kirjoitettu — museo kerrotaan Colonial
+   * Museumin ja Dominion Museumin kautta, ja Te Papa mainitaan
+   * nimellä ilman vaihtoehtotekstiä. (2) Te Papan nimen merkitystä
+   * ("aarreaitta") EI kerrota missään, koska se on visan oma vihje;
+   * hotellin siirto ja tukieristys ovat lehdessä, nimen käännös ei.
+   * (3) Zealandian aidan ulkopuolelle jäävät lajit on kirjoitettu
+   * muotoon "rotat, possut ja kärpät" — faktapohjan "mustekit" ei
+   * ole suomen sana. (4) Wellington kerrotaan maailman eteläisimpänä
+   * ITSENÄISEN VALTION pääkaupunkina (sama tarkenne kuin visan
+   * fact-kentässä). (5) Taranaki Whānui ki te Upoko o te Ika
+   * -artikkeli ON olemassa, ja se luettiin lähteeksi oppaan
+   * jaksoon 2. (6) Kohdekartan Government House on nykyinen,
+   * 1910 valmistunut talo — H4-nosto kertoo TOISESTA, noin 1871
+   * valmistuneesta puutalosta, ja H4:n kuvateksti sanoo eron
+   * ääneen, ettei lukija sekoita rakennuksia.
+   *
+   * VISAN (js/packs/oceania-questions.js, avain wellington) VIISI
+   * KYSYMYSTÄ ohjasivat sisältöä näin. Pääkaupunkiasema (kysymys 1)
+   * on koko lehden ydin ja löytyy johdannosta, introsta ja
+   * CO1-nostosta. Cookinsalmen leveys ja lauttamatkan kesto
+   * (kysymys 2) sekä keskituulen nopeus ja "maailman tuulisin
+   * pääkaupunki" (kysymys 3) on TARKOITUKSELLA jätetty kokonaan
+   * pois: salmi mainitaan vain sijaintina ja tuuli vain oppaan
+   * sääjakson eteläpuhureina ilman lukuja tai superlatiiveja.
+   * Elokuva-ala (kysymys 4) jätettiin pois kokonaan — Weta-aiheinen
+   * teemasivu oli faktapohjassa vain varalla, eikä sitä käytetty.
+   * Te Papa (kysymys 5) esiintyy H1-nostossa syntyhistoriana ja
+   * L3-noston kuvatekstissä tukieristyksen esimerkkinä, ei
+   * kansallismuseon määritelmänä. Historiasivun minitehtävä kysyy
+   * parlamentin 1907 palosta säästynyttä osaa; sitä visa ei kysy, ja
+   * vastaus on samalla sivulla nostossa H3.
+   *
+   * SISÄLTÖLINJAUS (Raamattu, Perustuslain pilari 3): māorit
+   * kuvataan nykyisenä kansana. Oppaan jakso 2 kertoo mana whenua
+   * -asemasta, vuoden 2008 sovintosopimuksesta ja keskustan maraen
+   * yhteisöstä Ngāti Pōneke NYKYISINÄ toimijoina, toteavasti ja
+   * ilman kannanottoa; Waitangin sopimuksen koko tarina on
+   * Uuden-Seelannin maalehdessä (maa-kategoriat.js, NZL), eikä sitä
+   * toisteta tässä. Satavuotisnäyttelyn nosto (CO4) mainitsee
+   * sopimuksen vuosipäivänä, ei tulkintana. Ei nykypolitiikkaa:
+   * vuoden 2022 parlamenttimielenosoitukset, joita Taranaki Whānui
+   * -artikkeli käsittelee, jätettiin kokonaan pois.
+   *
+   * PÄÄLLEKKÄISYYS AUCKLANDIN JA NZL-MAALEHDEN KANSSA on kierretty
+   * faktapohjan ohjeen mukaan: pääkaupungin siirto kerrotaan tässä
+   * Wellingtonin päätöksentekona (Domett, australialaiskomissaarit,
+   * 4 900 asukasta), kun Aucklandin K3-nosto kertoo saman
+   * menetyksenä. Māorikulttuurin yleisesittely, kulta ja maasodat
+   * ovat maalehdessä eivätkä täällä.
+   *
+   * KAKSI RISTIRIITAA LÄHTEISSÄ. (1) Old Government Buildingsin
+   * koko: en-Wikipedian "Wellington"-artikkeli sanoo rakennusta
+   * eteläisen pallonpuoliskon suurimmaksi puutaloksi, kun taas
+   * "Old Government Buildings, Wellington" -artikkeli sanoo sen
+   * olleen vuoteen 1998 asti maailman toiseksi suurin puurakennus
+   * ja merkitsee väitteen itse epäluotettavaksi
+   * (Failed verification -merkintä). Opas käyttää vain eteläisen
+   * pallonpuoliskon lukemaa, joka on molemmissa artikkeleissa
+   * riidaton. (2) Satavuotisnäyttelyn Collins-valokuvan
+   * (AM 85830-1) Commons-metatiedoissa vuosiluku on 1950, vaikka
+   * kuvaus kertoo sen esittävän vuosien 1939–1940 näyttelyä;
+   * kuvateksti nojaa siksi näyttelyn omiin vuosilukuihin eikä
+   * negatiivin luettelointivuoteen.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä, eikä sitä lisätty
+   * tässä erässä (säärivit haetaan omana eränään). Oppaan jakso 5
+   * nojaa siksi en-Wikipedian Wellington-artikkelin sääruutuun
+   * (Kelburnin asema, normaalikausi 1991–2020) ja SANOO SEN ÄÄNEEN
+   * — Samarkandin, Kašgarin ja Karachin malli. Artikkelissa on
+   * kaksi sääruutua (Kelburn ja lentoasema); käytössä on
+   * johdonmukaisesti Kelburnin ruutu, koska myös artikkelin
+   * ennätyslukemat ovat siltä asemalta.
+   *
+   * KUVAT: kaikki Commonsista, lisenssi ja tekijä luettu
+   * api.php:n extmetadata-kentistä 23.8.2026, haku tehty
+   * KATEGORIOILLA (Cityscapes of Wellington, Oriental Bay,
+   * Bucket Fountain, Wellington Botanic Garden, History of
+   * Wellington, Wellington in the 1870s, Wellington Cable Car,
+   * New Zealand Centennial Exhibition, Exterior of Te Papa
+   * Tongarewa, Old St Pauls Wellington, Parliamentary Library
+   * Wellington, Government House Wellington, Karori Wildlife
+   * Sanctuary, Otari-Wilton's Bush, Te Papa Tongarewa,
+   * Matiu / Somes Island, Cafés in Wellington, Old Government
+   * Buildings Wellington). Jokainen valittu kuva katsottiin
+   * silmin 900 pikselin esikatseluna. HUOM: faktapohjan
+   * kuvaehdotusten kategoria "Wellington" on Commonsissa
+   * täsmennyssivu (kaimoja Australiassa, Kanadassa, Englannissa
+   * ja Yhdysvalloissa) — kaupungin kuvat ovat luokassa
+   * "Wellington City" ja sen alaluokissa, ja sama koski
+   * Zealandiaa, jonka kuvat ovat luokassa "Karori Wildlife
+   * Sanctuary".
+   *
+   * HYLÄTYT KUVAT JA SYYT: Burton Brothersin valokuva toisesta
+   * Government Housesta (ainoa kuva H4:n rakennuksesta) hylättiin,
+   * koska kuvan alalaitaan on painettu studion signeeraus
+   * "BURTON BROS, DUNEDIN" ja kuvateksti — talon nosto on siksi
+   * kuvitettu kuvalla, jossa näkyy nykyinen Government House ja
+   * jonka kuvateksti kertoo rakennusten eron. Samasta syystä
+   * hylättiin Lambton Quayn vuoden 1891 katunäkymä (negatiiviin
+   * painettu "WELLINGTON 9059") ja satavuotisnäyttelyn
+   * Wellington City Councilin vedos (valokuvaajan signeeraus ja
+   * lisätty valkoinen kehys). Archives New Zealandin
+   * satavuotisnäyttelykuva (10654042046) on nykyaikainen
+   * mainosgrafiikka tekstipalkkeineen, ei valokuva. Lambton Quayn
+   * ja lauttasataman nykykuvista hylättiin kolme, joissa etualalla
+   * on tunnistettavia kasvoja, ja Mount Victorian sekä Miramarin
+   * yleiskuvat siksi, että etuala peittää kaupungin.
+   *
+   * AIHETOISTO: Te Papa esiintyy kahdesti (H1:n julkisivu ja
+   * L3:n tukieristimet) eri tiedostoilla ja eri asiasta — sama
+   * ennakkotapaus kuin Karachin Merewether-tornilla. Kaikki muut
+   * kohteet esiintyvät lehdessä kerran. Tiedostoja ei ole
+   * yhdessäkään kohdassa sama kuin oceania-valokuvat.js:n
+   * wellington-lohkossa (köysirata, Cuba Street, Beehive,
+   * Te Papa satamasta) — sama kohde saa esiintyä molemmissa,
+   * tiedosto ei.
+   */
+  wellington: [
+    {
+      id: 'kaupunki',
+      nimi: 'Wellington',
+      johdanto: 'Pohjoissaaren lounaiskärkeen, sataman ja jyrkkien mäkien '
+        + 'väliin puristunut pääkaupunki Cookinsalmen rannalla. Sataman '
+        + 'māorinkielinen nimi Te Whanganui-a-Tara tarkoittaa Taran suurta '
+        + 'satamaa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Oriental Bay - Wellington.JPG',
+          selite: 'Sataman rantoja reunustavat vehreät rinteet ja niille '
+            + 'kerroksittain nousevat siirtomaa-ajan huvilat ovat kaupungin '
+            + 'tunnetuin näky.',
+          lahde: 'Octagon, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'The Bucket Fountain.jpg',
+          selite: 'Cuba Streetin Bucket Fountain on kaupungin tunnetuimpia '
+            + 'veistoksia, ja katua pidetään Wellingtonin kulttuurin '
+            + 'pienoismallina.',
+          lahde: 'Matt Boulton, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'General view - Wellington Botanic Garden - Wellington, NZ - DSC09259.jpg',
+          selite: 'Kasvitieteellisen puutarhan laidalla Kelburnissa on '
+            + 'kaupungin sääasema, jolla mitattiin 29. tammikuuta 2019 '
+            + 'vuonna 1927 alkaneen mittaussarjan korkein lukema 30,3 '
+            + 'astetta.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kaupungin eri puolilta —
+       * pohjoisen Mount Kaukaulta liikekeskustaan, sataman puolelta
+       * itärannan esikaupunkeihin ja lounaan Brooklynista koko
+       * satamaan. Yksikään kolmesta ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Central Wellington from Mt. Kaukau, New Zealand, 20 January 2006 - Flickr - In Memoriam, PhillipC.jpg',
+          selite: 'Liikekeskusta on rakennettu Lambtonin sataman ympärille, '
+            + 'ja kaupunki on tiiviimmin asuttu kuin useimmat muut '
+            + 'Uuden-Seelannin kaupungit, koska tasaista maata on sataman '
+            + 'ja mäkien välissä vähän.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Roseneath and Oriental Bay Wellington.jpg',
+          selite: 'Roseneath ja Oriental Bay ovat sataman itäpuolen '
+            + 'esikaupunkeja, ja rinteille nousevat korttelit syntyivät '
+            + 'siitä, ettei kaupungilla ollut tilaa levitä tasamaalle.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Wellington Harbour from above Brooklyn, 7 April 2007 - Flickr - PhillipC.jpg',
+          selite: 'Lambtonin sataman suora länsiranta paljastaa aktiivisen '
+            + 'murroslinjan, jonka vieressä liikekeskusta sijaitsee, ja sen '
+            + 'takana maa kohoaa jyrkästi esikaupunkien alle.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Pääkaupunki, jonka australialaiset valitsivat',
+          tiedosto: 'Wellington, 1841 (17199194268).jpg',
+          teksti: 'Marraskuussa 1863 pääministeri Alfred Domett esitti '
+            + 'Aucklandin parlamentille, että hallituksen istuinpaikka '
+            + 'siirrettäisiin sopivaan paikkaan Cookinsalmen alueelle: '
+            + 'kultakenttien rikastuttaman Eteläsaaren pelättiin muuten '
+            + 'eroavan omaksi siirtokunnakseen. Valinta jätettiin '
+            + 'puolueettomina pidetyille australialaisille komissaareille, '
+            + 'jotka päätyivät Wellingtoniin keskeisen sijainnin ja hyvän '
+            + 'sataman takia — satamaan uskottiin mahtuvan koko '
+            + 'kuninkaallinen laivasto. Parlamentti kokoontui uudessa '
+            + 'pääkaupungissa ensimmäisen kerran 26. heinäkuuta 1865, kun '
+            + 'kaupungissa asui vasta 4 900 ihmistä.',
+          selite: 'Charles Heaphy piirsi näkymän Lambton Quaylle ja satamaan '
+            + 'huhtikuussa 1841, ja Uuden-Seelannin komppania julkaisi kuvan '
+            + 'seuraavana vuonna houkutellakseen siirtolaisia.',
+          lahde: 'Charles Heaphy, Wikimedia Commons (PD)',
+          wiki: 'Wellington',
+        },
+        {
+          otsikko: 'Katu, joka kulkee vanhan meren päällä',
+          tiedosto: 'National Bank of New Zealand Grey Street Wellington.jpg',
+          teksti: 'Tammikuun 23. päivänä 1855 Wellingtonia ravisteli '
+            + 'Wairarapan murroslinjan järistys, jonka magnitudiksi on '
+            + 'arvioitu vähintään 8,2 — luultavasti voimakkain koko '
+            + 'Uuden-Seelannin kirjatussa historiassa. Se siirsi maata '
+            + 'pystysuunnassa kahdesta kolmeen metriä laajalla alueella ja '
+            + 'nosti satamanpohjaa vuorovesisuoksi, joka myöhemmin '
+            + 'täytettiin. Suuri osa nykyisestä liikekeskustasta seisoo '
+            + 'tuolla maalla, ja siksi Lambton Quay kulkee nykyään sadan tai '
+            + 'kahdensadan metrin päässä satamasta. Jalkakäytävään upotetut '
+            + 'laatat merkitsevät vuoden 1840 rantaviivan.',
+          selite: 'Grey Streetin varrella oleva National Bank of New '
+            + 'Zealandin talo oli lähes valmis 1874, ja valokuva on otettu '
+            + 'noin vuonna 1875.',
+          lahde: 'Unknown (photographer), Wellington, Wikimedia Commons (PD)',
+          wiki: 'Wellington',
+        },
+        {
+          otsikko: 'Raiteet, jotka veivät kaupungin mäelle',
+          tiedosto: 'Wellington Cable Car Cityscape.jpg',
+          teksti: 'Ahdas keskusta ei voinut kasvaa tasaisesti joka suuntaan, '
+            + 'koska satama ja jyrkät rinteet sulkivat sen väliinsä. '
+            + 'Ratkaisu avattiin 22. helmikuuta 1902: köysirata alkoi '
+            + 'kuljettaa matkustajia Lambton Quayn liikekeskustasta '
+            + 'Kelburnin rinteelle kasvitieteellisen puutarhan portille '
+            + 'asti. Rata on yksiraiteinen, ja vaunut ohittavat toisensa '
+            + 'radan puolivälissä olevalla ohituspaikalla. Yläasemalle '
+            + 'rakennettiin 1905 kioski, josta tuli maamerkki; se paloi '
+            + 'myöhemmin, ja tilalle valmistui nykyinen ravintola 1984.',
+          selite: 'Köysiradan yläasema on Kelburnissa kasvitieteellisen '
+            + 'puutarhan portilla, ja rata on kulkenut Lambton Quaylta '
+            + 'sinne vuodesta 1902.',
+          lahde: 'Panamitsu, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wellington Cable Car',
+        },
+        {
+          otsikko: 'Kuusi kuukautta, kaksi ja puoli miljoonaa vierasta',
+          tiedosto: 'View of a building (AM 85830-1).jpg',
+          teksti: 'Kuuden kuukauden ajan vuosina 1939 ja 1940 Wellington '
+            + 'isännöi Uuden-Seelannin satavuotisnäyttelyä, joka juhli '
+            + 'Waitangin sopimuksen allekirjoituksesta kulunutta sataa '
+            + 'vuotta. Rongotain 55 eekkerin eli noin 22 hehtaarin alueelle '
+            + 'nousi kolme näyttelyhallia, joukko art deco -tyylisiä '
+            + 'rakennuksia ja suosittu kolmen eekkerin huvipuisto. '
+            + 'Näyttelyssä kävi yli 2,5 miljoonaa vierailijaa aikana, '
+            + 'jolloin koko Uuden-Seelannin väkiluku oli 1,6 miljoonaa — '
+            + 'puoleksi vuodeksi kaupungista tuli koko maan juhlapaikka.',
+          selite: 'Satavuotisnäyttelyn torniin oli kirjoitettu vuosiluku '
+            + '1940, ja näyttelyalue rakennettiin Rongotain matalalle '
+            + 'kannakselle, jolla on nykyään lentoasema.',
+          lahde: 'Collins, Tudor Washington, 1898-1970, photographer, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Wellington',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'View from Wellington Carillon.jpg',
+          selite: 'Kansallisen sotamuistomerkin kellotorni kohoaa keskustan '
+            + 'eteläpuolella, ja sen ikkunoista katsotaan pohjoiseen '
+            + 'liikekeskustan yli satamaan.',
+          lahde: 'Ballofstring, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Wellington on Uuden-Seelannin pääkaupunki ja maailman '
+          + 'eteläisin itsenäisen valtion pääkaupunki, mutta matkailijalle '
+          + 'se on ennen kaikkea pieni ja kävelykelpoinen. Keskusta on '
+          + 'kapea kaistale Lambtonin sataman ja jyrkkien rinteiden '
+          + 'välissä: pohjoispäässä ovat parlamentti ja rautatieasema, '
+          + 'keskellä Lambton Quayn liikekortteli ja köysiradan alaasema, '
+          + 'etelässä Cuba Street ja Courtenay Place. Rantaraittia pitkin '
+          + 'pääsee museoiden ohi Oriental Bayn rannalle. Sataman mana '
+          + 'whenua ovat Taranakin iwien muodostama Taranaki Whānui ki te '
+          + 'Upoko o te Ika, ja keskustan marae, sitä ylläpitävä yhteisö ja '
+          + 'sen kapa haka -ryhmä tunnetaan nimellä Ngāti Pōneke.',
+        artikkeli: {
+          nimi: 'Matkailijan Wellington',
+          taitto: 'opas',
+          teksti: 'Satama, kannas ja jyrkät mäet — kaupunki, jonka koko '
+            + 'keskusta mahtuu kävelymatkan sisään.',
+          nosto: 'Wellingtonin liikekeskusta seisoo suurelta osin maalla, '
+            + 'joka nousi merestä vuoden 1855 järistyksessä ja täytettiin '
+            + 'sen jälkeen; Lambton Quay on nykyään sadan tai kahdensadan '
+            + 'metrin päässä satamasta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Wellingtonin lentoasema on kuuden kilometrin päässä '
+                + 'keskustasta kaakkoon Rongotain matalalla kannaksella. '
+                + 'Sinne lennetään ympäri Uutta-Seelantia sekä Australiasta '
+                + 'ja Fidžiltä, mutta muualta on vaihdettava konetta, koska '
+                + '2 081 metrin kiitorata rajoittaa koneiden toimintamatkaa. '
+                + 'Etelänsaarelta tullaan lautalla Pictonista: reittiä '
+                + 'liikennöivät valtion Interislander ja yksityinen '
+                + 'Bluebridge, ja lautat laskevat CentrePortin laitureille '
+                + 'aivan keskustan pohjoispuolelle. Rautatieasemalta lähtee '
+                + 'neljä sähköistettyä lähiliikenteen rataa pohjoisiin '
+                + 'esikaupunkeihin ja Hutt Valleyhin sekä pitkän matkan '
+                + 'junat Palmerston Northiin ja Aucklandiin. Kaupungin '
+                + 'sisällä bussit kulkevat Metlinkin nimissä, ja useimmat '
+                + 'niistä ajavat rautatieasemalta Courtenay Placelle '
+                + 'kulkevaa Golden Milea; paikallislautat vievät '
+                + 'Eastbourneen ja Seatouniin.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Pohjoissaaren lounaiskärjessä '
+                + 'Cookinsalmen ja Remutaka-vuoriston välissä; vuoriston '
+                + 'takana alkavat Wairarapan tasangot ja pohjoisessa '
+                + 'Kāpitin rannikko. Liikekeskusta on Lambtonin sataman '
+                + 'rannassa aktiivisen murroslinjan vieressä, ja heti sen '
+                + 'länsipuolella maa kohoaa jyrkästi, joten moni '
+                + 'esikaupunki sijaitsee korkealla keskustan yläpuolella. '
+                + 'Korkeimmat mäet ovat Mount Kaukau 445 metrissä ja Mount '
+                + 'Victoria 196 metrissä. Idässä on Miramarin niemimaa, '
+                + 'joka liittyy muuhun kaupunkiin Rongotain kannaksella, ja '
+                + 'teollisuus on keskittynyt pohjoiseen Hutt Valleyhin. '
+                + 'Sataman nimi Te Whanganui-a-Tara tulee tutkimusmatkailija '
+                + 'Whatongan pojasta Tarasta. Waitangin tribunaali on '
+                + 'todennut, että sopimuksen allekirjoitusaikaan 1840 '
+                + 'alueen mana whenua -asema oli Te Ātiawalla, Taranakilla, '
+                + 'Ngāti Ruanuilla, Ngāti Tamalla ja Ngāti Toalla. Näiden '
+                + 'Taranakin iwien muodostama Taranaki Whānui ki te Upoko o '
+                + 'te Ika vei vuosien 1839 ja 1844 maakauppoja koskevat '
+                + 'vaatimuksensa Waitangin tribunaaliin, ja sovintosopimus '
+                + 'kruunun kanssa allekirjoitettiin 2008.',
+              kuva: {
+                tiedosto: 'Maori Pouwhenua - panoramio.jpg',
+                selite: 'Pouwhenua ovat kaiverrettuja pylväitä, joilla '
+                  + 'māorit merkitsevät alueen rajoja tai merkityksellisiä '
+                  + 'paikkoja.',
+                lahde: 'DB Thats-Me, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kahvi ja kaksi maahanmuuttoaaltoa',
+              teksti: 'Wellingtonissa on enemmän kahviloita asukasta kohden '
+                + 'kuin New Yorkissa, ja kaupunkia pidetään paikkana, jossa '
+                + 'maailmalle levinnyt flat white hioutui lopulliseen '
+                + 'muotoonsa. Kahvikulttuuri ei syntynyt tyhjästä: sen '
+                + 'toivat italialaiset ja kreikkalaiset maahanmuuttajat, '
+                + 'jotka asettuivat muun muassa Mount Victorian, Island '
+                + 'Bayn ja Miramarin kaupunginosiin, ja tuoreempi vaikute '
+                + 'tulee etiopialaisilta muuttajilta. Kolmasosa '
+                + 'kaupunkilaisista on syntynyt ulkomailla, ja väestössä on '
+                + 'huomattavat malesialaiset, italialaiset, hollantilaiset, '
+                + 'korealaiset, kiinalaiset, kreikkalaiset, intialaiset ja '
+                + 'samoalaiset yhteisöt. Kahvilat ovat tiheimmillään Cuba '
+                + 'Streetin ympäristössä, jota pidetään kaupungin '
+                + 'kulttuurin pienoismallina.',
+              kuva: {
+                tiedosto: 'Deluxe cafe and coffee machine.jpg',
+                selite: 'Deluxe-kahvila toimii Embassy-teatterin vieressä '
+                  + 'Courtenay Placen päässä.',
+                lahde: 'L Maule, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: puusta tukieristykseen',
+              teksti: 'Vuoden 1855 järistyksen jälkeen Wellington '
+                + 'rakennettiin vuosikymmeniksi lähes kokonaan puusta, '
+                + 'koska puinen runko kestää maan liikkeen kivimuuria '
+                + 'paremmin. Lambton Quayn varrella seisova Government '
+                + 'Buildings on tämän ajattelun muistomerkki: se valmistui '
+                + '1876 satamasta täytetylle maalle, ja kun betoni '
+                + 'osoittautui liian kalliiksi, koko talo tehtiin puusta '
+                + 'italialaisen kivipalatsin näköiseksi. Siinä on 143 '
+                + 'huonetta, 126 takkaa ja 22 savupiippua, ja se nousi '
+                + '22 kuukaudessa 39 000 punnalla. Vuosina 1994–1996 '
+                + 'restauroitu talo on eteläisen pallonpuoliskon suurin '
+                + 'puurakennus, ja siinä toimii nykyään Victoria-yliopiston '
+                + 'oikeustieteellinen tiedekunta. Sama oppitunti jatkuu '
+                + 'insinöörityönä: Te Papan rakennus lepää tukieristimien '
+                + 'varassa, jotka päästävät talon liikkumaan järistyksessä '
+                + 'nykäysten sijaan.',
+              kuva: {
+                tiedosto: 'Old Government Buildings, Wellington.JPG',
+                selite: 'Government Buildings valmistui 1876 satamasta '
+                  + 'täytetylle maalle, ja se tehtiin puusta kivipalatsin '
+                  + 'näköiseksi, koska betoni oli liian kallista.',
+                lahde: 'Gruyere, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Wellingtonista puuttuu vielä, joten '
+                + 'nämä luvut ovat en-Wikipedian Wellington-artikkelin '
+                + 'sääruudusta (Kelburnin asema, normaalikausi 1991–2020) '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on lauhkea merellinen, Köppenin luokassa Cfb, ja '
+                + 'tasainen ympäri vuoden: lämpötila ylittää harvoin 26 '
+                + 'astetta tai laskee alle neljän, ja koko mittaushistorian '
+                + 'ääripäät ovat 31,1 ja −1,9 astetta. Tammikuu on lämpimin '
+                + 'kuukausi keskilämpötilaltaan 17,0 astetta ja heinäkuu '
+                + 'viilein 9,2 asteella. Sadetta kertyy noin 1 250 '
+                + 'millimetriä vuodessa, ja kesä- ja heinäkuu ovat '
+                + 'sateisimmat: heinäkuussa mitataan 147 millimetriä ja '
+                + 'lähes kolmetoista sadepäivää, tammikuussa 79 '
+                + 'millimetriä ja seitsemän. Aurinkoa kertyy 2 055 tuntia '
+                + 'vuodessa. Miellyttävintä on joulu–maaliskuussa; '
+                + 'talvella kannattaa varautua etelän puhureihin, jotka '
+                + 'saavat lämpötilan tuntumaan mitattua kylmemmältä, ja '
+                + 'mäkien esikaupungeissa on hallaöitä touko–syyskuussa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Köysirata Kelburniin',
+                tahdet: 3,
+                selite: 'Vuonna 1902 avattu rata nousee liikekeskustasta '
+                  + 'kasvitieteellisen puutarhan portille.',
+              },
+              {
+                mita: 'Te Papa',
+                tahdet: 3,
+                selite: 'Vuonna 1998 avattu museo, jonka juuret ovat 1865 '
+                  + 'perustetussa Colonial Museumissa.',
+              },
+              {
+                mita: 'Zealandia',
+                tahdet: 3,
+                selite: 'Maailman ensimmäinen kokonaan aidattu '
+                  + 'kaupunkilajisuoja, 225 hehtaaria entistä '
+                  + 'vedenottoaluetta.',
+              },
+              {
+                mita: 'Old St Paul\'s',
+                tahdet: 2,
+                selite: 'Kokonaan puusta rakennettu goottilainen kirkko '
+                  + 'vuodelta 1866.',
+              },
+              {
+                mita: 'Matiu/Somes Island',
+                tahdet: 2,
+                selite: 'Sataman ainoa asuttava saari, entinen '
+                  + 'karanteeniasema ja nykyinen luonnonsuojelusaari.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sääluvut ovat samasta sääruudusta
+             * kuin jakso 5. Viittomakielinen nimi on mukana, koska
+             * se kertoo kaupungin arjesta niille, jotka eivät kuule
+             * sen nimeä ääneen.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Vuodenajat ovat käänteiset',
+                teksti: 'Kesä on joulu–helmikuussa ja talvi '
+                  + 'kesä–elokuussa; heinäkuun keskilämpötila on 9,2 '
+                  + 'astetta.',
+              },
+              {
+                otsikko: 'Sadetta ympäri vuoden',
+                teksti: 'Vuosisade on noin 1 250 millimetriä, ja '
+                  + 'heinäkuussa sataa lähes joka toinen päivä — kuivaa '
+                  + 'kautta ei ole.',
+              },
+              {
+                otsikko: 'Maa liikkuu',
+                teksti: 'Asukkaat huomaavat tavallisesti useita järistyksiä '
+                  + 'vuodessa, ja kaupungin läpi kulkee Wellington Fault '
+                  + '-murroslinja.',
+              },
+              {
+                otsikko: 'Kaupungilla on oma viittoma',
+                teksti: 'Uusiseelantilaisessa viittomakielessä Wellington '
+                  + 'viitotaan nostamalla etu-, keski- ja nimetön sormi '
+                  + 'W-muotoon ja heilauttamalla kättä kahdesti puolelta '
+                  + 'toiselle.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Pääkaupungin mukana Wellingtoniin nousi muutamassa vuodessa '
+        + 'museo, puukirkko ja kuvernöörin residenssi — ja yksi niistä sai '
+        + 'ensimmäisen asukkaansa juuri isoisän matkavuonna 1873.',
+      tehtava: {
+        kysymys: 'Mikä osa parlamenttikorttelia säilyi vuoden 1907 tulipalossa?',
+        vaihtoehdot: [
+          'kirjasto',
+          'istuntosali',
+          'kellotorni',
+          'pääportaikko',
+        ],
+        oikea: 0,
+        fakta: 'Kirjaston pelasti rautainen palo-ovi. Vuonna 1899 valmistunut '
+          + 'kirjastorakennus on yhä koko parlamenttikompleksin vanhin osa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Museo, joka syntyi samana vuonna kuin pääkaupunki',
+          tiedosto: 'Exterior view of Te Papa from the Wellington Waterfront.jpg',
+          teksti: 'Colonial Museum avasi ovensa 1865, samana vuonna kuin '
+            + 'Wellingtonista tuli pääkaupunki. Sitä johti geologi James '
+            + 'Hector, joka pysyi museon johdossa vuoteen 1903 asti. '
+            + 'Kokoelma alkoi luonnontieteen näytteistä, mutta karttui pian '
+            + 'lahjoituksin myös taiteella ja esineistöllä. Vuonna 1907 '
+            + 'museo nimettiin uudelleen Dominion Museumiksi, ja monen '
+            + 'vaiheen kautta samasta perustasta kasvoi lopulta Te Papa: se '
+            + 'perustettiin lailla 1992 ja avautui nykyisessä '
+            + 'rakennuksessaan 1998. Museon juuret ulottuvat siis suoraan '
+            + 'pääkaupungin ensimmäiseen vuoteen.',
+          selite: 'Nykyinen rakennus avautui vuonna 1998 kaupungin '
+            + 'rantaraitin varrella, ja sen edeltäjä oli 1865 perustettu '
+            + 'Colonial Museum.',
+          lahde: 'Museum of New Zealand Te Papa Tongarewa, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Te Papa',
+        },
+        {
+          otsikko: 'Kirkko, joka rakennettiin kokonaan puusta',
+          tiedosto: 'Old St Paul\'s 1 (31656344101).jpg',
+          teksti: 'Kuvernööri George Grey laski uuden anglikaanisen '
+            + 'seurakuntakirkon peruskiven 21. elokuuta 1865, ja '
+            + 'pastori-arkkitehti Frederick Thatcherin suunnittelema Old St '
+            + 'Paul\'s vihittiin käyttöön 6. kesäkuuta 1866 piispa Charles '
+            + 'Abrahamin toimesta. Kirkko rakennettiin kokonaan puusta '
+            + 'goottilaista kertaustyyliä jäljitellen — ratkaisu oli '
+            + 'edullinen ja järistysherkälle kaupungille käytännöllinen, '
+            + 'koska puinen runko joustaa kiveä paremmin. Rakennusta on '
+            + 'kuvattu yhdeksi maailman parhaista puisen gotiikan '
+            + 'esimerkeistä, ja se toimii nykyään tapahtumapaikkana.',
+          selite: 'Kirkko vihittiin käyttöön 1866, ja seurakuntakäytöstä se '
+            + 'jäi pois myöhemmin — nykyään talossa järjestetään vihkiäisiä '
+            + 'ja muita tilaisuuksia.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Old St Paul\'s, Wellington',
+        },
+        {
+          otsikko: 'Parlamentti, joka asui ensin puutalossa',
+          tiedosto: 'Parliamentary Library - Wellington - New Zealand - DSC00163.jpg',
+          teksti: 'Uusi pääkaupunki tarvitsi tilat hallitukselle nopeasti, '
+            + 'ja ensimmäinen parlamentti kokoontui puisessa, '
+            + 'kaksikerroksisessa maakuntaneuvoston talossa. 1880-luvulla '
+            + 'sen tilalle nousi kolmikerroksinen goottilainen rakennus, '
+            + 'jossa käytettiin runsaasti kotimaisia puulajeja — mutta se '
+            + 'paloi 1907 maan tasalle, ja vain kirjasto säästyi rautaisen '
+            + 'palo-oven ansiosta. Parlamentti majoittui seuraavaksi '
+            + 'kymmeneksi vuodeksi viereiseen Government Houseen, ja '
+            + 'nykyinen uusklassinen parlamenttitalo valmistui vasta 1922.',
+          selite: 'Parlamentin kirjastorakennus valmistui 1899 ja on koko '
+            + 'kompleksin vanhin yhä pystyssä oleva osa.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+          wiki: 'New Zealand Parliament Buildings',
+        },
+        {
+          otsikko: 'Talo, jonka ensimmäinen asukas muutti 1873',
+          tiedosto: 'Historic Wellington Buildings.jpg',
+          teksti: 'Pääkaupungin myötä hallitus tarvitsi arvokkaamman '
+            + 'kuvernöörin residenssin vanhan Wakefield-huvilan tilalle. '
+            + 'Suunnittelu alkoi 1868, ja goottilaisen ehdotuksen sijaan '
+            + 'valittiin edullisempi italialaistyyli. Arkkitehti William '
+            + 'Henry Claytonin suunnittelema toinen Government House '
+            + 'valmistui noin 1871: se oli kokonaan puuta, siinä oli torni '
+            + 'ja siitä avautui näköala sekä kaupunkiin että satamaan. '
+            + 'Talon ensimmäinen asukas oli kenraalikuvernööri Sir George '
+            + 'Ferguson Bowen, joka muutti sisään vuonna 1873 — samana '
+            + 'vuonna kuin isoisän matka.',
+          selite: 'Kuvan punakattoinen Government House on nykyinen, 1910 '
+            + 'valmistunut residenssi Newtownissa eikä sama talo kuin '
+            + 'nostossa kerrottu, noin 1871 valmistunut puinen edeltäjänsä.',
+          lahde: 'Stuartyeates, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Government House, Wellington',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Wellingtonin luonto on kertomus menetyksestä ja paluusta: '
+        + 'maanjäristys teki keskustan maapohjan, ja aidattu lajisuoja toi '
+        + 'linnut takaisin esikaupunkeihin.',
+      tehtava: {
+        kysymys: 'Kuinka monta saarta Wellingtonin satamassa on?',
+        vaihtoehdot: [
+          'kolme',
+          'yksi',
+          'viisi',
+          'kymmenen',
+        ],
+        oikea: 0,
+        fakta: 'Saaret ovat Matiu/Somes, Mākaro/Ward ja Mokopuna. Niistä vain '
+          + 'Matiu/Somes on tarpeeksi suuri asuttavaksi, ja se on nykyään '
+          + 'luonnonsuojelusaari.',
+      },
+      nostot: [
+        {
+          otsikko: 'Aita, joka toi linnut takaisin kaupunkiin',
+          tiedosto: 'An endangered kākā overlooking Wellington City from a resident\'s deck.jpg',
+          teksti: 'Vuonna 1999 avattu Zealandia, silloiselta nimeltään '
+            + 'Karori Wildlife Sanctuary, oli maailman ensimmäinen kokonaan '
+            + 'aidattu kaupunkilajisuoja: 225 hehtaaria entistä '
+            + 'vedenottoaluetta ympäröitiin aidalla, jonka on määrä pitää '
+            + 'ulkona rotat, possut ja kärpät sekä muut ihmisen tuomat '
+            + 'nisäkkäät. Uuden-Seelannin alkuperäislajit eivät ole '
+            + 'kohdanneet niitä evoluutiossaan. Kokeilu onnistui niin '
+            + 'hyvin, että tui ja kaka ovat levinneet takaisin ympäröiviin '
+            + 'kaupunginosiin, ja vastaavia aitauksia on rakennettu ympäri '
+            + 'Uutta-Seelantia.',
+          selite: 'Kaka on uhanalainen papukaija, joka on Zealandian '
+            + 'palautustyön ansiosta tavallinen näky Wellingtonin '
+            + 'kaupunginosissa.',
+          lahde: 'Judi Lapsley Miller, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Zealandia (wildlife sanctuary)',
+        },
+        {
+          otsikko: 'Viisisataa neliökilometriä mäkien välissä',
+          tiedosto: 'Otari-Wilton\'s bush canopy walkway.jpg',
+          teksti: 'Vaikka Wellington on tiivis ja ahdas, seudulla on noin '
+            + '500 neliökilometriä alueellisia puistoja ja metsiä, ja '
+            + 'kaupunki ja vapaaehtoiset ylläpitävät niissä kulkevaa '
+            + 'polkuverkostoa. Tunnetuin niistä on viiden kilometrin päässä '
+            + 'keskustasta sijaitseva Ōtari-Wilton\'s Bush, Uuden-Seelannin '
+            + 'ainoa julkinen puutarha, joka on omistettu yksinomaan maan '
+            + 'omille kasveille: sata hehtaaria alkuperäismetsää ja viisi '
+            + 'hehtaaria kokoelmia, joissa kasvaa noin 1 200 lajia. Sama '
+            + 'jyrkkä maasto, joka pakotti kaupungin kiipeämään rinteitä '
+            + 'pitkin eikä leviämään tasaisesti, on samalla säästänyt '
+            + 'laajoja metsäalueita aivan keskustan tuntumassa.',
+          selite: 'Latvustosilta rakennettiin puronotkon yli 1990-luvun '
+            + 'lopulla yhdistämään opastuskeskus puutarhan kokoelmiin.',
+          lahde: 'Marshelec, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wellington',
+        },
+        {
+          otsikko: 'Vuosi, jonka aikana maa liikkuu huomaamatta',
+          tiedosto: 'Te Papa\'s base isolators.jpg',
+          teksti: 'Wellingtonin alla kulkee useita murroslinjoja: suurin '
+            + 'niistä, Wellington Fault, halkoo kaupungin keskustan, ja '
+            + 'kaupunkialueelta on tunnistettu useita satoja pienempiä '
+            + 'siirroksia. Asukkaat huomaavat tavallisesti useita '
+            + 'järistyksiä vuodessa. Vuodesta 2003 lähtien tutkijat ovat '
+            + 'mitanneet noin viiden vuoden välein toistuvan hitaan '
+            + 'maanjäristyksen, joka kestää vuoden ja vapauttaa yhtä paljon '
+            + 'energiaa kuin magnitudin 7 järistys — mutta niin hitaasti, '
+            + 'ettei sitä tunne eikä se aiheuta vahinkoa.',
+          selite: 'Te Papan rakennus lepää tukieristimien varassa, jotka '
+            + 'päästävät talon liikkumaan järistyksessä nykäysten sijaan.',
+          lahde: 'Museum of New Zealand Te Papa Tongarewa, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wellington',
+        },
+        {
+          otsikko: 'Kolme saarta ja yksi vaarallinen riutta',
+          tiedosto: 'Matiu-Somes Island - panoramio.jpg',
+          teksti: 'Wellingtonin satamassa on kolme saarta: Matiu/Somes, '
+            + 'Mākaro/Ward ja Mokopuna. Vain Matiu/Somes on tarpeeksi suuri '
+            + 'asuttavaksi, ja sitä on käytetty ihmisten ja eläinten '
+            + 'karanteeniasemana sekä internointileirinä kummankin '
+            + 'maailmansodan aikana; nykyään se on luonnonsuojelusaari, '
+            + 'joka tarjoaa turvapaikan uhanalaisille lajeille. Sataman '
+            + 'kapea suuaukko on Miramarin niemimaan itäpuolella, ja siellä '
+            + 'ovat Barrett Reefin matalikot, joilla on haaksirikkoutunut '
+            + 'lukuisia laivoja — tunnetuimpana matkustajalautta Wahine '
+            + 'vuonna 1968.',
+          selite: 'Legendan mukaan purjehtija Kupe antoi Matiulle ja '
+            + 'naapurisaari Mākarolle nimet kahden tyttärensä mukaan.',
+          lahde: 'DB Thats-Me, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Wellington Harbour',
+        },
+      ],
+    },
+  ],
 };

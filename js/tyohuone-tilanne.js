@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1067 — WELLINGTONIN KAUPUNKILEHTI: kaupunki-, historia- ja luontosivut, 12 nostoa ja 22 Commons-kuvaa. Tarkista: Wellingtonin lehti kannesta oppaaseen',
   'v1066 — HEROKIERROS 18: Varsova, Riika, Kuwait, Tabriz, Kasgar ja Jekaterinburg; 18/18 hyvaksyttiin. Tarkista: kuuden kaupungin etusivukarusellit',
   'v1065 — NEW YORKIN KOHDEKARTTA ja kymmenen nahtavyysjuttua kuvineen; kartan kaikki pisteet maalla. Tarkista: New Yorkin lehden kohdekartta ja numeropisteiden jutut',
   'v1064 — HEROKIERROS 17: Kobenhavn, Oslo, Ankara, Karachi, Mandalay ja Lhasa; 18/18 hyvaksyttiin katselmoinnissa. Tarkista: kuuden kaupungin etusivukarusellit',
@@ -433,6 +434,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '23.8.2026 ilta',
   valmiit: [
+    { id: 'wellington', nimi: 'Wellington', versio: 'v1067' },
     { id: 'rio', nimi: 'Rio de Janeiro', versio: 'v1049' },
     { id: 'buenosaires', nimi: 'Buenos Aires', versio: 'v1049' },
     { id: 'sydney', nimi: 'Sydney', versio: 'v1049' },
