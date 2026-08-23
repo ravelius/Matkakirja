@@ -63258,7 +63258,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ylin 20,7 ja yön alin 8,5; artikkelin leipäteksti antaa '
                 + 'keskustalle hieman lämpimämmät luvut 21,4 ja 9,8 astetta. '
                 + 'Ero vuodenaikojen välillä on joka tapauksessa pienempi '
-                + 'kuin vuorokauden sisällä.',
+                + 'kuin vuorokauden sisällä, ja niin on päivänpituudessakin: '
+                + 'näin lähellä päiväntasaajaa aurinko nousee ja laskee '
+                + 'suunnilleen samoihin kellonaikoihin tammikuussa ja '
+                + 'heinäkuussa, noin kahdentoista tunnin välein.',
             },
           ],
         },
