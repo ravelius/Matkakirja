@@ -22055,6 +22055,30 @@ export const KULTTUURI_KATEGORIAT = {
        * silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
+        {
+          ampari: 'herokoe/hero-oslo-aamu.png',
+          selite: 'Akershusin linnoitus rakennettiin 1290-luvun lopulla '
+            + 'kuningas Haakon V:n käskystä, se kesti kaikki piiritykset, ja '
+            + 'Christian IV muutti sen 1600-luvulla renessanssilinnaksi '
+            + 'italialaisvaikutteisine bastioneineen.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-oslo-keskipaiva.png',
+          selite: 'Holmenkollenissa hypättiin ensimmäinen kilpailu 30. '
+            + 'tammikuuta 1892, ja nykyinen teräsmäki rakennettiin 2008–2010 '
+            + 'Julien De Smedtin ja Florian Koschen voittaneen kilpailutyön '
+            + 'mukaan — mäen HS-luku on 134 metriä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-oslo-ilta.png',
+          selite: 'Oslon kuninkaanlinna rakennettiin 1824–1849 Hans Linstowin '
+            + 'suunnitelmien mukaan, siinä on 173 huonetta, ja sitä ympäröi '
+            + '22 hehtaarin puisto.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Barcode and Oslo Opera house seen from Ekeberg.JPG',
           selite: 'Ekeberg on yksi Oslon vanhimmista asuinpaikoista, ja sen '
@@ -22792,6 +22816,32 @@ export const KULTTUURI_KATEGORIAT = {
        * 15.8.2026, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
+        {
+          ampari: 'herokoe/hero-kobenhavn-aamu.png',
+          selite: 'Marmorikirkon eli Frederikin kirkon peruskivi laskettiin '
+            + '31. lokakuuta 1749 Nicolai Eigtvedin suunnitelmien mukaan, '
+            + 'mutta rahat loppuivat ja kirkko valmistui vasta 19. elokuuta '
+            + '1894 marmorin sijasta kalkkikivestä — kupolin jänneväli on 31 '
+            + 'metriä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kobenhavn-keskipaiva.png',
+          selite: 'Kolmas Christiansborgin linna rakennettiin 1907–1928 '
+            + 'Thorvald Jørgensenin suunnitelmien mukaan, sen 106 metrin '
+            + 'torni on yhä kaupungin korkein, ja talossa toimivat eduskunta, '
+            + 'pääministerin virasto ja korkein oikeus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kobenhavn-ilta.png',
+          selite: 'Vapahtajan kirkko vihittiin 1695 ja Lauritz de Thurahin '
+            + 'kierreportainen torninhuippu valmistui 1752 — 90 metrin '
+            + 'korkeuteen nousee 400 porrasta, joista viimeiset 150 kiertävät '
+            + 'tornia ulkopuolelta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Panorama view on Copenhagen from Church of Our Saviour (2).jpg',
           selite: 'Vapahtajan kirkko tunnetaan ulkopuolisesta kierreportaastaan, '
@@ -25856,6 +25906,29 @@ export const KULTTUURI_KATEGORIAT = {
        * vanhimmasta uusimpaan.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
+        {
+          ampari: 'herokoe/hero-ankara-aamu.png',
+          selite: 'Anıtkabir rakennettiin 9. lokakuuta 1944 alkaen ja '
+            + 'valmistui 1. syyskuuta 1953 Emin Onatin ja Orhan Ardan '
+            + 'suunnitelmien mukaan Rasattepen kukkulalle, ja sen '
+            + 'seremonia-aukiolle mahtuu 15 000 ihmistä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-ankara-keskipaiva.png',
+          selite: 'Hacı Bayramin moskeija rakennettiin 1427–1428 pyhimyksen '
+            + 'haudan viereen kiinni Augustuksen ja Roman temppeliin, ja sen '
+            + 'ainoa minareetti nousee viiteenkymmeneen metriin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-ankara-ilta.png',
+          selite: 'Atakule avattiin 13. lokakuuta 1989 Ragıp Buluçin '
+            + 'suunnitelmien mukaan, se on 125 metriä korkea, ja sen '
+            + 'Sevilla-ravintola tekee täyden kierroksen tunnissa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Ankara Castle Outer wall from outside at west side in 2017 01.jpg',
           selite: 'Ankaran linnan muurit muurattiin uusiokäytetystä kivestä, '
@@ -43707,6 +43780,32 @@ export const KULTTUURI_KATEGORIAT = {
        * kaupunkia).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
+        {
+          ampari: 'herokoe/hero-mandalay-aamu.png',
+          selite: 'Kuningas Mindon rakennutti Atumashin luostarin 1857 puolen '
+            + 'miljoonan rupian hinnalla, tulipalo tuhosi sen 1890, ja se '
+            + 'rakennettiin uudelleen 1996 — katto nousee viitenä '
+            + 'suorakulmaisena pengermänä tavanomaisen tornin sijasta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-mandalay-keskipaiva.png',
+          selite: 'Kuningas Mindon perusti Sandamunin pagodin 1874 murhatun '
+            + 'veljensä Kanaungin muistoksi, ja siellä on Bodawpayan vuonna '
+            + '1802 valattama rautainen buddhapatsas, joka painaa yli 18 500 '
+            + 'kiloa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-mandalay-ilta.png',
+          selite: 'Kyauktawgyin temppelin rakentaminen alkoi 1853 kuningas '
+            + 'Mindonin käskystä ja valmistui vasta 1878, ja sen sisällä '
+            + 'istuu buddhapatsas, joka veistettiin yhdestä ainoasta '
+            + 'vaaleanvihreästä marmorilohkareesta Sagyinin louhoksilta 19 '
+            + 'kilometrin päästä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Mandalay Palace from Watch Tower.jpg',
           selite: 'Nykyinen Mandalayn palatsi on vuonna 1989 aloitettu '
@@ -47870,6 +47969,28 @@ export const KULTTUURI_KATEGORIAT = {
        * molemmat ovat).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
+        {
+          ampari: 'herokoe/hero-lhasa-aamu.png',
+          selite: 'Jokhangin temppelin rakennutti noin vuonna 652 kuningas '
+            + 'Songtsen Gampo, sen pääportti osoittaa länteen Nepaliin päin, '
+            + 'ja temppelialue kattaa 2,5 hehtaaria.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-lhasa-keskipaiva.png',
+          selite: 'Drepungin luostarin perusti 1416 Tsongkhapan oppilas '
+            + 'Jamyang Choje, ja siitä kasvoi maailman suurin luostari, jossa '
+            + 'asui 7 700 munkkia ja ajoittain jopa kymmenentuhatta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-lhasa-ilta.png',
+          selite: 'Norbulingkan rakennutti 1755 seitsemäs dalai-lama '
+            + 'kesäasunnokseen ja se valmistui 1783, ja 36 hehtaarin puiston '
+            + 'rakennuksissa on yhteensä 374 huonetta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Palacio de Potala - 02.JPG',
           selite: 'Potalan kaltevat kiviseinät ovat kolmisen metriä '
@@ -51025,6 +51146,31 @@ export const KULTTUURI_KATEGORIAT = {
        * kolmesta ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
+        {
+          ampari: 'herokoe/hero-karachi-aamu.png',
+          selite: 'Mazar-e-Quaidin peruskivi laskettiin 31. heinäkuuta 1960 '
+            + 'ja mausoleumi vihittiin 18. tammikuuta 1971 Yahya Merchantin '
+            + 'suunnitelmien mukaan — valkoisen marmorikuution sivu on 75 '
+            + 'metriä ja korkeus 43 metriä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-karachi-keskipaiva.png',
+          selite: 'Empress Market rakennettiin 1884–1889 James Strachanin '
+            + 'suunnitelmien mukaan, sen kellotorni on 140 jalkaa korkea, ja '
+            + 'sisäpihan 130 kertaa 100 jalan alalle mahtui alun perin 280 '
+            + 'kauppiasta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-karachi-ilta.png',
+          selite: 'Masjid e Tooba rakennettiin 1966–1969 Babar Hameed '
+            + 'Chauhanin suunnitelmien mukaan, ja sen 65 metriä leveä '
+            + 'valkoinen marmorikupoli lepää matalan ympärysmuurin varassa '
+            + 'ilman yhtään pilaria; saliin mahtuu 5 000 ihmistä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Karachi Port Trust Building.jpg',
           selite: 'Satamalaitoksen pääkonttori valmistui 1916, ja se '
