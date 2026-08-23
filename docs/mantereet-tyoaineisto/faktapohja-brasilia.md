@@ -271,10 +271,12 @@ Faktat ja lähteet:
 - Ensimmäiset yritykset kasvattaa H. brasiliensistä Brasilian
   ulkopuolella tehtiin 1873: 12 tainta itivät Kew Gardensissa mutta
   kuolivat matkalla Intiaan. — en-Wikipedia "Hevea brasiliensis"
-- Vuonna 1876 Henry Wickham salakuljetti 70 000 siementä Kew'hun; noin
-  4 % itikin, ja taimet lähetettiin 1876 Ceyloniin (n. 2 000 tainta) ja
-  Singaporeen (22 tainta). — en-Wikipedia "Hevea brasiliensis"; "Amazon
-  rubber cycle"
+- Vuonna 1876 Henry Wickham salakuljetti 70 000 siementä Kew'hun (perillä
+  15.6.1876; noin 2 700 eli ~3,9 % iti), ja taimet lähetettiin 1876
+  Ceyloniin (n. 2 000 tainta) ja Singaporeen (22 tainta). — en-Wikipedia
+  "Henry Wickham (explorer)" ja "Amazon rubber cycle". HUOM (tarkistus
+  23.8.2026): "Hevea brasiliensis" -artikkeli itse sanoo vuodeksi 1875 —
+  kaksi muuta artikkelia vahvistavat 1876:n, joten lähteeksi merkitty ne.
 - Kumin vienti Amazonilta kasvoi 2 100 tonnista (1855) 10 000 tonniin
   (1879); ensimmäinen kumibuumi ajoittuu pääosin 1879–1912.
   — en-Wikipedia "Amazon rubber cycle"
@@ -336,7 +338,10 @@ Faktat ja lähteet:
 - Vuoden 2022 IBGE-laskennassa 1 694 836 brasilialaista identifioitui
   alkuperäiskansaksi jaettuna 391 etniseen ryhmään ja 295 kieleen; 2010
   laskenta tunnisti 305 etnistä ryhmää. — en-Wikipedia "Indigenous
-  peoples in Brazil"
+  peoples in Brazil". HUOM (tarkistus 23.8.2026): tämä luku on ERI
+  IBGE-kysymyksestä kuin yllä oleva 1 227 642 (väri/rotu-kysymys, jota
+  leipäteksti käyttää koska se on vertailukelpoinen 1872-lukuun) —
+  kirjoittaja: käytä 1,2 miljoonaa äläkä sekoita lukuja keskenään.
 - FUNAI (Fundação Nacional do Índio) perustettiin 1967 suojelemaan
   alkuperäiskansojen etuja, kulttuuria ja oikeuksia; sen edeltäjä SPI
   perustettiin 1910 Cândido Rondonin aloitteesta. — en-Wikipedia
