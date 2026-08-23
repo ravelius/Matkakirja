@@ -63,6 +63,9 @@ const MODULES = [
   'js/packs/pollo-asetukset.js',
   // Pöllön valmiskysymykset. js/pollo.js tuo tämän staattisesti.
   'js/packs/pollo-kysymykset.js',
+  // Kuratoidut pöllöpoiminnat (kysymys–vastaus-pillerit artikkeleissa).
+  // js/pollopoiminnat.js tuo tämän staattisesti.
+  'js/packs/pollo-poiminnat.js',
   'js/packs/europe-valokuvat.js',
   'js/packs/europe-kielet.js',
   'js/packs/europe-maatiedot.js',
@@ -218,6 +221,12 @@ const MODULES = [
   // Minipopup ennen ehdotuksia ja tasogalleriaa (molemmat tuovat sen;
   // moduuli tuo vain ui-apurit, joka on yllä).
   'js/minipopup.js',
+  /*
+   * Pöllöpoiminnat ennen artikkeleiden piirtäjiä: nähtävyydet,
+   * maalehti, lehti ja pollo tuovat sen. Moduuli tuo minipopupin
+   * (yllä) ja oman pakkansa (pakkojen joukossa yllä).
+   */
+  'js/pollopoiminnat.js',
   // Lukijoiden ehdotukset ennen lehteä ja ui:ta (molemmat tuovat sen;
   // moduuli tuo ui-apurit ja minipopupin, jotka ovat yllä).
   'js/ehdotukset.js',

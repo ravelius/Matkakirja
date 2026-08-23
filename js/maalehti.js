@@ -19,6 +19,7 @@ import { LIPPUTIEDOT } from './packs/lipputiedot.js';
 import { karttapiste } from './packs/maakartat.js';
 import { radioMaalle } from './packs/radiot.js';
 import { vanhaTallenne } from './packs/vanhat-aanet.js';
+import { aiheAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import {
@@ -782,6 +783,25 @@ export function aiheenOtsikko(ui, kategoria) {
   return nimi;
 }
 
+/*
+ * PÖLLÖPOIMINNAT AIHESIVULLE (omistajan tilaus 23.8.2026).
+ *
+ * Vain oikea aihesivu saa pillerit: karttasivun nostokotelo piirtyy
+ * samalla funktiolla mutta omaan säiliöönsä ilman otsikkoa (ks.
+ * piirraMaaEtusivu), eikä kehittäjän liitteillä (Raamattu, Tilanne,
+ * Tilastot) ole artikkelitunnistetta lainkaan.
+ *
+ * Omistaja erottelee kaupunkilehden ja maalehden saman aiheen sivut
+ * samalla logiikalla kuin minitehtävän avain (js/ui.js).
+ */
+function piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko) {
+  if (!otsikko || kohde !== ui.arrivalKategoria) return;
+  if (ui.lehtitila?.tutkiTila === 'kehittaja' || !kategoria?.id) return;
+  const omistaja = ui.lehtitila?.tutkiTila === 'maa' && ui.lehtitila?.tutkiMaaLehti
+    ? ui.lehtitila.tutkiMaaLehti : ui.lehtitila?.arrivalShownFor;
+  piirraPoimintapillerit(kohde, aiheAvain(omistaja, kategoria.id));
+}
+
 export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { otsikko = true } = {}) {
   kohde.replaceChildren();
   if (!kategoria) return;
@@ -882,6 +902,7 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       kohde.appendChild(hero);
     }
     piirraVinkkilista(ui, kohde, kategoria.lista);
+    piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko);
     if (kategoria.tehtava) ui.piirraMinitehtava(kohde, kategoria);
     return;
   }
@@ -952,18 +973,27 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       kuva.src = nosto.kuvaUrl;
       lohko.appendChild(kuva);
     }
-    // Kuvateksti ja lähderivi HETI kuvan alle kuten lehtijutussa —
-    // leipäteksti vasta niiden jälkeen (omistajan toive 5.8.2026;
-    // palstataitossa selite jutun perässä näytti irralliselta).
-    // Kuva ja sen tekstit kääritään yhteiseen kehykseen, joka
-    // kutistuu kuvan mittoihin: kuvateksti ei saa ylittää kuvan
-    // reunaa (omistajan toive).
-    //
-    // KUVAN ALLA nämä kaksi kappaletta ovat inline-virrassa, eli lähde
-    // jatkaa selitettä samalla rivillä pienemmällä (omistajan tilaus
-    // 23.8.2026). Muutos on kokonaan CSS:ssä — ks. css/styles.css
-    // "LÄHDERIVI KUVATEKSTIN JATKEEKSI" ja .wiki-nosto .kuvakehys.
-    const selite = nosto.selite ? html('p', 'selite', nosto.selite) : null;
+    /*
+     * KUVATEKSTI POIS AIHESIVUILTA (omistajan päätös 23.8.2026:
+     * "ota ennemmin Kuvatekstit pois ja laita leipäteksti kiertämään
+     * kuvaa, niin tyhjä tila katoaa samalla").
+     *
+     * Selite oli kuvan alla kolmesta viiteen riviä ja teki kelluvasta
+     * kainalosta juttua korkeamman: leipäteksti loppui kuvan puolivälin
+     * kohdalla ja lohkon vasempaan alanurkkaan jäi tyhjä kaista (mitattu
+     * Istanbulin "pintaa syvemmältä" -sivulla, 1280 px). Nyt kainalossa
+     * on kuva ja sen alla pelkkä lähderivi, ja teksti juoksee kuvan
+     * ohi sen alle asti.
+     *
+     * SELITE EI KATOA TIEDOSTA: se on yhä kuvan alt-teksti
+     * (varustaNostonKuva) ja suurennoksen kuvateksti
+     * (naytaKulttuuriKuva saa noston sellaisenaan), eli ruudunlukija ja
+     * suurennoksen avaava lukija saavat sen kuten ennenkin.
+     *
+     * LÄHDERIVI SÄILYY. Se ei ole koriste vaan lisenssiehto: Commonsin
+     * CC-kuvat vaativat tekijän ja lisenssin näkyviin (Raamattu). Tyyli
+     * on v1040:n pienennetty krediittirivi sellaisenaan.
+     */
     // Pro-tuottajan kuvassa (`tekijaId`) tekijän nimi on lähderivillä
     // painike, joka avaa tekijäsivun (js/tekijakortti.js). Ilman
     // kenttää rivi on tavallista tekstiä kuten ennen.
@@ -979,7 +1009,6 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     if (kuva) {
       const kehys = html('div', 'kuvakehys');
       kehys.appendChild(kuva);
-      if (selite) kehys.appendChild(selite);
       if (lahde) kehys.appendChild(lahde);
       lohko.appendChild(kehys);
       /*
@@ -994,9 +1023,8 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
        * mikään jää tavoittamattomiin.
        */
       lohko.classList.add('kainalo');
-    } else {
-      if (selite) lohko.appendChild(selite);
-      if (lahde) lohko.appendChild(lahde);
+    } else if (lahde) {
+      lohko.appendChild(lahde);
     }
     // Yksipalstainen kehittäjäsivu ei saa anfangia — se on lehden
     // koriste (omistaja 15.8.2026).
@@ -1027,13 +1055,19 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     }
     ui.lisaaNostonLinkki(leipa, nosto);
     // Selattava teosgalleria noston kuvan ympärille (pilottina
-    // Venetsian Canaletto): nuolet vaihtavat teosta, selite ja
-    // lähderivi seuraavat mukana.
+    // Venetsian Canaletto): nuolet vaihtavat teosta ja lähderivi
+    // seuraa mukana. Selitettä ei enää ole sivulla (ks. yllä), joten
+    // galleria saa sen paikalle tyhjän — teoksen oma selite kulkee
+    // silti alt-tekstinä ja suurennoksessa (nayta()).
     if (kuva && nosto.galleria?.length) {
-      ui.kaariNostoGalleria(kuva, nosto, { selite, lahde });
+      ui.kaariNostoGalleria(kuva, nosto, { lahde });
     }
     kohde.appendChild(lohko);
   }
+  // Pöllöpoiminnat jutun perään, ennen minitehtävää (omistajan tilaus
+  // 23.8.2026): tehtävälaatikko erottaa luettavan sivun pelitoiminnosta,
+  // ja pillerit kuuluvat luettavan puolelle.
+  piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko);
   // Lehden minitehtävä sivun loppuun (omistajan toive 5.8.2026).
   if (kategoria.tehtava) ui.piirraMinitehtava(kohde, kategoria);
   // Kohdekartta EI ole enää täällä kaupunkisivun pohjalla: omistajan

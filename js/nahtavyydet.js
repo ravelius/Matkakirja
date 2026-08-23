@@ -21,6 +21,7 @@ import {
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
+import { juttuAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { sfx } from './sound.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { esilataaKuvat, html, lahdemerkinta, vuosiluku } from './ui-apurit.js';
@@ -1621,6 +1622,13 @@ export function avaaNahtavyys(ui, kohde, numero, {
     // sanamuoto kertoo tekstin omaksi, ks. lahdemerkinta).
     sisalto.appendChild(html('p', 'nahtavyys-lahderivi', lahdemerkinta(kohde.lahde)));
   }
+  /*
+   * PÖLLÖPOIMINNAT jutun loppuun, lähderivin jälkeen (omistajan tilaus
+   * 23.8.2026): kysymyspillerit, joista aukeaa tallennettu vastaus.
+   * Avain on jutun oma tunniste — kaupunki + kohteen nimi
+   * aineiston mukaisena (js/pollopoiminnat.js).
+   */
+  piirraPoimintapillerit(sisalto, juttuAvain(ui.lehtitila.arrivalShownFor, kohde.nimi));
   mitoitaNahtavyysDialogi(ui);
   if (!dialogi.open) dialogi.showModal();
   ui.nollaaDialoginVieritys(dialogi);

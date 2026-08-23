@@ -57,6 +57,10 @@ import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
+import {
+  nykyinenPoimintaAvain, paivitaPillerit, poimintaKehittaja, tallennaPoiminta,
+} from './pollopoiminnat.js';
+import { ehdotusKaytossa, lahetaEhdotus } from './ehdotukset.js';
 import { haeKuvallinenArtikkeli, suurennusportaat } from './wiki.js';
 import { lueAaneen, lueVirtana, lukijaTuettu, pysaytaLukija } from './lukija.js';
 import { sfx } from './sound.js';
@@ -2162,6 +2166,77 @@ class Pollo {
    * vastauksen renderöintiin, koska striimi kirjoittaa kuplan
    * textContentin yli palasta toiseen.
    */
+  /**
+   * POIMINTANAPIT VALMIIN VASTAUKSEN PERÄÄN (omistajan tilaus
+   * 23.8.2026: "kehittäjätilassa hyvän vastauksen voisi tallentaa
+   * juttuun" + "pelaajat voisivat myös ehdottaa niitä talletettaviksi").
+   *
+   * KAKSI ERI POLKUA, EIKÄ NIITÄ SEKOITETA:
+   *
+   *   kehittäjä → Tallenna juttuun: pari menee laitteen localStorageen
+   *     ja ilmestyy pillerinä heti alla olevaan juttuun. Vienti
+   *     pakettiin tapahtuu Tilannelehden Pöllöpoiminnat-sivulta.
+   *   pelaaja → Ehdota tallennettavaksi: pari lähtee OLEMASSA OLEVAA
+   *     ehdotuskanavaa pitkin (js/ehdotukset.js) omistajan Lukijoilta-
+   *     kuratointiin. Se ei näy pelissä kenellekään ennen hyväksyntää
+   *     — pelaajan ehdotus ei koskaan renderöidy pillerinä suoraan.
+   *
+   * Kehittäjätilassa näkyy VAIN tallennus: omistaja ei ehdota
+   * itselleen, ja kaksi lähes samaa nappia vierekkäin olisi vain
+   * epäselvä. Nappi puuttuu kokonaan, jos vastausta ei voi kiinnittää
+   * mihinkään artikkeliin (esim. pöllö avattu kartalta).
+   */
+  liitaPoimintaNapit(viesti, kysymys, vastaus) {
+    if (!viesti || viesti.querySelector?.('.pollo-poimintarivi')) return;
+    const avain = nykyinenPoimintaAvain(this.haeUi?.(), this.doc);
+    if (!avain || !kysymys || !vastaus) return;
+    const kehittaja = poimintaKehittaja();
+    if (!kehittaja && !ehdotusKaytossa()) return;
+
+    const rivi = polloElementti('div', 'pollo-poimintarivi');
+    const nappi = polloElementti('button', 'pollo-poimintanappi',
+      kehittaja ? 'Tallenna juttuun' : 'Ehdota tallennettavaksi');
+    nappi.type = 'button';
+    const tila = polloElementti('span', 'pollo-poimintatila');
+    tila.setAttribute('role', 'status');
+    rivi.appendChild(nappi);
+    rivi.appendChild(tila);
+
+    nappi.addEventListener('click', async () => {
+      nappi.disabled = true;
+      if (kehittaja) {
+        const ok = tallennaPoiminta(avain, kysymys, vastaus);
+        tila.textContent = ok ? 'Tallennettu juttuun.' : 'Oli jo tallessa.';
+        // Alla oleva juttu on yhä auki: pillerit päivittyvät heti
+        // eikä vasta seuraavalla avauksella.
+        paivitaPillerit(avain, this.doc);
+        return;
+      }
+      tila.textContent = 'Lähetetään…';
+      try {
+        /*
+         * Sama reitti ja sama runko kuin Ehdota sisältöä -lomakkeella:
+         * uutta verkkopäätettä ei rakenneta. Tarkenne kertoo omistajalle
+         * kuratoinnissa, että kyseessä on pöllöpoiminta, ja sivu on
+         * artikkelin tunniste sellaisenaan — se on suoraan paketin avain.
+         */
+        await lahetaEhdotus({
+          teksti: `Pöllöpoiminta\n\nKysymys: ${kysymys}\n\nVastaus: ${vastaus}`,
+          sivu: avain,
+          tarkenne: 'Pöllöpoiminta',
+        });
+        tila.textContent = 'Kiitos! Ehdotus lähti kuratointiin.';
+      } catch {
+        // Verkko voi olla poikki: pöllö ei kaadu siihen, ja pelaaja
+        // voi yrittää uudestaan.
+        tila.textContent = 'Ehdotus ei lähtenyt. Yritä myöhemmin uudelleen.';
+        nappi.disabled = false;
+      }
+    });
+
+    viesti.appendChild(rivi);
+  }
+
   naytaVastausKuva(viesti, { esikatselu, vara = null, seloste = '', avaa }) {
     if (!viesti || viesti.querySelector('.pollo-vastauskuva')) return;
     const nappi = polloElementti('button', 'pollo-vastauskuva');
@@ -3123,6 +3198,9 @@ class Pollo {
         // 15.8.2026). Kumpikin kuva — paikallinen ja Wikipedian —
         // ilmestyy vasta latauduttuaan eikä koske näkymän ankkuriin.
         this.liitaVastausKuva(viesti, teksti, kysymys);
+        // Hyvä vastaus talteen juttuun (kehittäjä) tai ehdolle
+        // kuratointiin (pelaaja) — omistajan tilaus 23.8.2026.
+        this.liitaPoimintaNapit(viesti, kysymys, poistaKasiteMerkinnat(teksti));
         /*
          * Näkymään ei kosketa: ankkuri asetettiin kysymyksen kohdalla.
          * Valmis vastaus, sen linkit ja jatkokysymykset kirjoittuvat

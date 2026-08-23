@@ -39,6 +39,7 @@ import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
+import { lueOmatPoiminnat, tyhjennaPoiminnat, vientiLohko } from './pollopoiminnat.js';
 import {
   haeSaaTanaan, kuukausiSsa, piirraVuosiSaa, saaKuvaus, vuosiSaaSelite, SAA_IKONIT,
 } from './saa.js';
@@ -863,6 +864,67 @@ function piirraTuoreetChipit(kohde) {
   kohde.appendChild(kotelo);
 }
 
+/*
+ * PÖLLÖPOIMINTOJEN VIENTISIVU (omistajan tilaus 23.8.2026).
+ *
+ * Kehittäjätilassa tallennetut kysymys–vastaus-parit asuvat laitteen
+ * localStoragessa, josta ne pitää saada REPOON. Sivu näyttää parit
+ * luettavina ja niistä lasketun valmiin JS-lohkon, jonka omistaja
+ * kopioi js/packs/pollo-poiminnat.js:ään — vasta siellä ne näkyvät
+ * pelaajille. Tyhjennä-nappi siivoaa laitteen, kun vienti on tehty.
+ *
+ * Työhuone ON lehti eikä erillistä hallintapaneelia ole, joten sivu
+ * rakentuu kategorian rakenna-koukulla kuten Tilanne-sivun chipit.
+ */
+function piirraPoimintavienti(kohde) {
+  const omat = lueOmatPoiminnat();
+  const avaimet = Object.keys(omat).filter((a) => (omat[a] ?? []).length).sort();
+  const kotelo = html('div', 'poimintavienti');
+  kotelo.appendChild(html('p', 'periaate-teksti',
+    'Kopioi lohko tiedostoon js/packs/pollo-poiminnat.js. Vasta paketissa '
+    + 'olevat parit näkyvät pelaajille — laitteen omat parit näkyvät '
+    + 'pillereinä vain kehittäjätilassa tällä laitteella.'));
+  if (!avaimet.length) {
+    kotelo.appendChild(html('p', 'periaate-huomio',
+      'Ei tallennettuja poimintoja tällä laitteella. Avaa juttu, kysy pöllöltä '
+      + 'ja paina vastauksen alla "Tallenna juttuun".'));
+    kohde.appendChild(kotelo);
+    return;
+  }
+  for (const avain of avaimet) {
+    kotelo.appendChild(html('p', 'poimintavienti-avain', avain));
+    for (const pari of omat[avain]) {
+      kotelo.appendChild(html('p', 'poimintavienti-pari', `— ${pari.kysymys}`));
+    }
+  }
+  const lohko = html('pre', 'poimintavienti-lohko', vientiLohko(omat));
+  kotelo.appendChild(lohko);
+
+  const napit = html('div', 'poimintavienti-napit');
+  const kopioi = html('button', 'wiki-btn', 'Kopioi lohko');
+  kopioi.type = 'button';
+  kopioi.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(lohko.textContent);
+      kopioi.textContent = 'Kopioitu';
+    } catch {
+      // iPadin Safari voi kieltää leikepöydän: teksti on silti
+      // ruudulla valittavissa, joten vienti ei jää kiinni tästä.
+      kopioi.textContent = 'Valitse teksti käsin';
+    }
+  });
+  napit.appendChild(kopioi);
+  const tyhjenna = html('button', 'wiki-btn', 'Tyhjennä');
+  tyhjenna.type = 'button';
+  tyhjenna.addEventListener('click', () => {
+    tyhjennaPoiminnat();
+    kotelo.replaceChildren(html('p', 'periaate-huomio', 'Laitteen poiminnat tyhjennetty.'));
+  });
+  napit.appendChild(tyhjenna);
+  kotelo.appendChild(napit);
+  kohde.appendChild(kotelo);
+}
+
 /** Työhuoneen tilannetaulut lehtenä: tilanne + testattavaa. */
 export function avaaTilanneLehti(ui) {
   const sivut = [{
@@ -888,6 +950,11 @@ export function avaaTilanneLehti(ui) {
     nostot: [{
       teksti: (TESTATTAVAA ?? []).map((rivi) => `— ${rivi}`).join('\n\n'),
     }],
+  }, {
+    id: 'tilanne-poiminnat',
+    nimi: 'Pöllöpoiminnat',
+    yksipalsta: true,
+    rakenna: piirraPoimintavienti,
   }];
   avaaKehittajaLehti(ui, 'Tilannelehti', sivut);
 }
