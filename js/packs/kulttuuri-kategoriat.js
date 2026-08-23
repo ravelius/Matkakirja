@@ -10550,6 +10550,31 @@ export const KULTTUURI_KATEGORIAT = {
        * silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 18 (23.8.2026, tools/hero-tyolista-13.mjs). */
+        {
+          ampari: 'herokoe/hero-varsova-aamu.png',
+          selite: 'Varsovan kuninkaanlinna sai barokkiasunsa 1598–1619, se '
+            + 'tuhoutui syyskuussa 1944 ja koottiin uudelleen 1971–1984 '
+            + 'vanhojen piirustusten mukaan — Sigismundin torni nousee 60 '
+            + 'metriin ja tiilijulkisivu on 90 metriä pitkä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-varsova-keskipaiva.png',
+          selite: 'Wilanówin palatsin rakentaminen alkoi 23. huhtikuuta 1677 '
+            + 'Augustyn Wincenty Loccin suunnitelmien mukaan ja päärakennus '
+            + 'valmistui 1696, ja Elżbieta Sieniawska laajensi sen '
+            + 'sivusiivillä 1720–1729.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-varsova-ilta.png',
+          selite: 'Saaripalatsi rakennettiin kylpypaviljongiksi ennen vuotta '
+            + '1683 ja valmistui 1689, ja Domenico Merlini muutti sen '
+            + '1764–1795 uusklassiseksi kesäpalatsiksi 76 hehtaarin '
+            + 'Łazienki-puistoon.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Old Town in Warsaw view from Vistula 2019a.jpg',
           selite: 'Veikselin länsipuoli rakennettiin sodan jälkeen uudelleen '
@@ -21250,6 +21275,31 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, jokainen kuva katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 18 (23.8.2026, tools/hero-tyolista-13.mjs). */
+        {
+          ampari: 'herokoe/hero-riika-aamu.png',
+          selite: 'Mustapäiden talo pystytettiin 1334 kauppiaiden varastoksi '
+            + 'ja juhlapaikaksi, se tuhoutui 29. kesäkuuta 1941 ja purettiin '
+            + '1948, ja nykyinen talo on 1996–1999 tehty jälleenrakennus, '
+            + 'joka avattiin 9. joulukuuta 1999.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-riika-keskipaiva.png',
+          selite: 'Riian vapaudenpatsas paljastettiin 18. marraskuuta 1935 '
+            + 'kuvanveistäjä Kārlis Zālen suunnitelman mukaan, se on 42 '
+            + 'metriä korkea, ja huipulla seisova yhdeksänmetrinen kuparinen '
+            + 'naishahmo kohottaa käsissään kolme kullattua tähteä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-riika-ilta.png',
+          selite: 'Riian Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi '
+            + 'kerran vuonna 1209, sen moneen kertaan uusittu torni '
+            + 'kunnostettiin 1967–1983, ja tornin näköalatasanne on 72 metrin '
+            + 'korkeudessa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Riga From 26th Floor of Radisson Blu, Latvia.jpg',
           selite: 'Vapaudenpatsas pystytettiin Latvian vapaussodassa '
@@ -24162,6 +24212,30 @@ export const KULTTUURI_KATEGORIAT = {
        * yhtään vapaata kuvaa kuwaitilaisesta diwaniyasta.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 18 (23.8.2026, tools/hero-tyolista-13.mjs). */
+        {
+          ampari: 'herokoe/hero-kuwait-aamu.png',
+          selite: 'Kuwaitin tornit vihittiin maaliskuussa 1979 tanskalaisen '
+            + 'Malene Bjørnin suunnitelman mukaan, korkein niistä on 187 '
+            + 'metriä, ja pallojen pintaa peittää noin 41 000 emaloitua '
+            + 'teräskiekkoa kahdeksassa sinisen, vihreän ja harmaan sävyssä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kuwait-keskipaiva.png',
+          selite: 'Kuwaitin suurmoskeija rakennettiin 1979–1986, sen kupoli '
+            + 'on 26 metriä leveä ja 43 metriä korkea, minareetti nousee 74 '
+            + 'metriin, ja rukoussaliin mahtuu kymmenentuhatta ihmistä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kuwait-ilta.png',
+          selite: 'Seifin palatsin rakentaminen alkoi 1880 ja siihen '
+            + 'käytettiin paikallista savea, kiveä, kalkkikiveä, puuta ja '
+            + 'metallia, ja sen kellotorni on päällystetty sinisillä '
+            + 'kaakeleilla ja kullatulla katolla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Kuwait City Skyline 1.jpg',
           selite: 'Kuwait Cityllä ei ole omaa hallinnollista rajaa: kaikkiin '
@@ -28050,6 +28124,31 @@ export const KULTTUURI_KATEGORIAT = {
        * mitä lehti ei muuten näytä.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 18 (23.8.2026, tools/hero-tyolista-13.mjs). */
+        {
+          ampari: 'herokoe/hero-tabriz-aamu.png',
+          selite: 'Tabrizin Sininen moskeija valmistui lokakuussa 1465 '
+            + 'hallitsija Jahanshahin puolison Khatun Jan Begomin '
+            + 'toimeksiannosta, vuoden 1780 maanjäristys jätti pystyyn '
+            + 'lähinnä porttiholvin, ja jälleenrakennus aloitettiin 1973.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tabriz-keskipaiva.png',
+          selite: 'Tabrizin Arg eli Alishahin muuri rakennettiin 1310–1321 '
+            + 'ilkhanidien aikana suureksi holvatuksi moskeijaksi, jonka '
+            + 'holvi oli 30,5 metriä leveä ja 48 metriä syvä, ja siitä on '
+            + 'jäljellä enää massiivinen tiiliseinä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tabriz-ilta.png',
+          selite: 'Tabrizin kaupungintalo eli Saat-torni valmistui 1934 '
+            + 'Avedis Ohanjanianin suunnitelmien mukaan, sen nelitauluinen '
+            + 'kellotorni on 30,5 metriä korkea, ja vuodesta 2007 talossa on '
+            + 'toiminut myös kaupunginmuseo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Tabriz Bazaar Carpet Corner.jpg',
           selite: 'Basaari ei ole yksi halli vaan rivistö käytäviä, joista '
@@ -34359,6 +34458,30 @@ export const KULTTUURI_KATEGORIAT = {
        * aiheet eivät toistu.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 18 (23.8.2026, tools/hero-tyolista-13.mjs). */
+        {
+          ampari: 'herokoe/hero-jekaterinburg-aamu.png',
+          selite: 'Jekaterinburgin Veren kirkko rakennettiin 2000–2003 ja '
+            + 'vihittiin 16. heinäkuuta 2003, se on tyyliltään '
+            + 'uusbysanttilainen, ja 2 760 neliömetrin kokonaisuuteen '
+            + 'kuuluvat kaksi kirkkoa, kellotorni ja museo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-jekaterinburg-keskipaiva.png',
+          selite: 'Uralmashin Valkoinen torni rakennettiin vesitorniksi '
+            + '1929–1931 Moisei Reisherin suunnitelmien mukaan, se on 29 '
+            + 'metriä korkea, ja sen 700 kuutiometrin terässäiliö oli '
+            + 'kaupungin ensimmäisiä hitsattuja rakenteita.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-jekaterinburg-ilta.png',
+          selite: 'Iset-torni rakennettiin 2010–2015 Werner Sobekin '
+            + 'suunnitelmien mukaan, se on 209 metriä korkea ja '
+            + '52-kerroksinen, ja se on Jekaterinburgin korkein rakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Kasli Cast Iron Pavilion - 2.jpeg',
           selite: 'Kaslin valurautapaviljonki voitti Pariisin '
@@ -47461,6 +47584,30 @@ export const KULTTUURI_KATEGORIAT = {
        * vasten, ja seudun pyhin rakennus).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 18 (23.8.2026, tools/hero-tyolista-13.mjs). */
+        {
+          ampari: 'herokoe/hero-kashgar-aamu.png',
+          selite: 'Kašgarin vanhankaupungin kortteleita ei ole kaavoitettu, '
+            + 'vaan ne ovat kasvaneet vuosisatojen kuluessa savitiiliseinien '
+            + 'ja sisäpihojen varaan loessikukkulan päälle, ja 2000-luvun '
+            + 'alussa siellä asui kaksi viidesosaa koko kaupungin väestöstä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kashgar-keskipaiva.png',
+          selite: 'Runoilija Yusuf Balasagunin (noin 1019–1077) mausoleumi '
+            + 'pystytettiin Kašgariin 1865 Jakub Begin toimesta, ja '
+            + 'Balasaguni oli kirjoittanut vuonna 1069 turkkilaiskielisen '
+            + 'hallitsijan ohjekirjan Kutadgu Bilig.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kashgar-ilta.png',
+          selite: 'Kašgarin sunnuntaimarkkinat ovat Keski-Aasian suurin '
+            + 'markkinapaikka, ja vilkkaimpina tunteina paikalla käy '
+            + 'satatuhatta ihmistä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Kashgar Altstadt 1.jpg',
           selite: 'Kašgarin vanhaakaupunkia on kuvailtu parhaiten '

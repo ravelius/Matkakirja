@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1066 — HEROKIERROS 18: Varsova, Riika, Kuwait, Tabriz, Kasgar ja Jekaterinburg; 18/18 hyvaksyttiin. Tarkista: kuuden kaupungin etusivukarusellit',
   'v1065 — NEW YORKIN KOHDEKARTTA ja kymmenen nahtavyysjuttua kuvineen; kartan kaikki pisteet maalla. Tarkista: New Yorkin lehden kohdekartta ja numeropisteiden jutut',
   'v1064 — HEROKIERROS 17: Kobenhavn, Oslo, Ankara, Karachi, Mandalay ja Lhasa; 18/18 hyvaksyttiin katselmoinnissa. Tarkista: kuuden kaupungin etusivukarusellit',
   'v1063 — MAAMUODOT E-AMERIKAN, OSEANIAN JA AASIAN LAUDOILLE: maalehdet aukeavat nyt kaikilta laudoilta. Tarkista: kolmen laudan i-napin maalehdet (Rio, Sydney, Auckland, Peking, Singapore)',
