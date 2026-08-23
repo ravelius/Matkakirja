@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1075 — LIMAN KAUPUNKILEHTI: kaupunki, historia ja ruoka; 12 nostoa ja 22 kuvaa. Tarkista: Liman lehti ja ruokasivu',
   'v1074 — TORONTON KAUPUNKILEHTI: kaupunki, historia ja alkuperaiskansat; 12 nostoa ja 23 kuvaa. Tarkista: Toronton lehti ja alkuperaiskansat-sivu',
   'v1073 — KOHDEKARTAT viidelle kaupungille (San Francisco, Rio, Buenos Aires, Sydney, Auckland) seka nelja uutta kaupunkilehtea: Brisbane, Chicago, Perth ja Sao Paulo. Tarkista: viiden kaupungin kohdekartat ja neljan uuden lehden sivut',
   'v1072 — HEROKIERROS 19: Wellington, Sevilla, Bergen, Montreal, Tampere ja Tallinna; 18/18 hyvaksyttiin, Nasilinna uusittiin kerran. Tarkista: kuuden kaupungin etusivukarusellit',
@@ -441,6 +442,7 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '23.8.2026 ilta',
   valmiit: [
+    { id: 'lima', nimi: 'Lima', versio: 'v1075' },
     { id: 'toronto', nimi: 'Toronto', versio: 'v1074' },
     { id: 'brisbane', nimi: 'Brisbane', versio: 'v1073' },
     { id: 'saopaulo', nimi: 'São Paulo', versio: 'v1073' },

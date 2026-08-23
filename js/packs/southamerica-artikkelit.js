@@ -235,4 +235,61 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'japanilaisyhteisöt kotimaidensa ulkopuolella — Bixigan, Bom '
       + 'Retiron ja Liberdaden kaupunginosat ovat yhä niiden osoite.',
   },
+  /*
+   * LIMA (23.8.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain lima): jokainen väite on
+   * luettu en-Wikipedian raakateksteistä 23.8.2026, ja lähdeaineistona
+   * ovat docs/mantereet-tyoaineisto/faktapohja-lima.md ja sen
+   * riippumaton tarkistus (tarkistus-lima.md), joka voittaa
+   * ristiriidassa. Väkiluku on Lima-artikkelin infoboxin
+   * population_metro (11 445 928, vuoden 2025 väestönlasku).
+   * Sisältölinjaus on spec-mantereet.md:n E-Amerikka-osio:
+   * siirtomaa-aika kerrotaan neutraalina historiana, esi-inkakulttuurit
+   * omana korkeakulttuurinaan ja kiinalaisten sopimustyöläisten tulo
+   * suoraan mutta hillitysti. Vuoden 1873 kulma on introssa mukana,
+   * koska se kantaa koko lehden: guanotalous, purettu kaupunginmuuri ja
+   * käynnissä ollut Andien radan työmaa osuvat kaikki isoisän
+   * matkavuoteen.
+   */
+  Lima: {
+  intro: 'Lima on Perun pääkaupunki ja yksi Etelä-Amerikan suurimmista '
+    + 'kaupungeista. Se on rakennettu Tyynenmeren rannalle aavikkoon, '
+    + 'Rímac-joen laaksoon, ja se on Karachin ja Kairon jälkeen maailman '
+    + 'kolmanneksi suurin aavikkokaupunki. **Sadetta täällä ei käytännössä '
+    + 'tule:** kylmä Humboldtin merivirta jäähdyttää ilman niin, että '
+    + 'kosteus jää harmaaksi sumuksi, garúaksi, eikä tiivisty sateeksi.'
+    + '\n\n'
+    + 'Laaksossa oli kaupunkeja ja pyhäkköjä kauan ennen espanjalaisia: '
+    + 'Ichman herruus, Liman kulttuuri ja Pachacamacin '
+    + 'pyhiinvaelluskohde. Francisco Pizarro mittasi ruutukaavan tammikuussa '
+    + '1535 ja antoi kaupungille nimen Ciudad de los Reyes. Vuoden 1746 '
+    + 'maanjäristys kaatoi lähes koko kaupungin, ja nykyinen vanhakaupunki '
+    + 'parvekkeineen on suureksi osaksi sen jälkeistä jälleenrakennusta.'
+    + '\n\n'
+    + 'Isoisän matkavuonna 1873 Lima oli keskellä kolmea murrosta. '
+    + '**Rannikkosaarten guano oli tehnyt valtiosta rikkaan**, sen rahoilla '
+    + 'oli rakennettu keskustori, sairaalat ja vankila, ja kaupungin '
+    + 'muuri oli purettu vuotta aiemmin. Andien rautatietä '
+    + 'louhittiin samaan aikaan Rímacin rotkossa, ja työmailla oli '
+    + 'kiinalaisia sopimustyöläisiä.',
+  teksti: 'Lima on Perun länsirannikolla, Tyynenmeren ja Andien välissä. '
+    + 'Metropolialue kattaa yli 2670 neliökilometriä ja nousee rannalta '
+    + 'laaksoja ja rinteitä pitkin jopa 1550 metrin korkeuteen. Rímac-joki '
+    + 'tuo Andeilta juomaveden ja vesivoiman, ja etelässä kaupunki päättyy '
+    + 'jyrkkiin hiekkakallioihin, joiden juurella kulkee rantatie.'
+    + '\n\n'
+    + 'Kaupunki perustettiin 1535, ja siitä tuli siirtomaahallinnon '
+    + 'tärkein paikka Etelä-Amerikassa. Merirosvojen varalta sen ympärille '
+    + 'rakennettiin 1684–1687 muuri, joka purettiin 1872 kasvun tieltä. '
+    + '1800-luvun puolivälissä guanon vienti rahoitti julkiset rakennukset '
+    + 'ja rautatiet; radasta Limasta Andeille tuli maailman toiseksi '
+    + 'korkein, ja sen huipputunneli on 4783 metrissä.'
+    + '\n\n'
+    + 'Nykyään Liman metropolialueella asuu yli yksitoista miljoonaa '
+    + 'ihmistä, ja se on Etelä-Amerikan toiseksi väkirikkain kaupunki. '
+    + 'Kaupunkia kutsutaan Amerikan gastronomiseksi '
+    + 'pääkaupungiksi: ceviche on maan kansallisruoka, chifa on '
+    + 'kiinalaisten siirtolaisten perintöä, ja kaksi limalaista '
+    + 'ravintolaa on valittu 2020-luvulla maailman parhaaksi.',
+},
 };

@@ -62328,4 +62328,559 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * LIMA (E-Amerikan lauta, 23.8.2026). Kolme sivua: kaupunki, historia
+   * ja ruoka. Lähdeaineisto on docs/mantereet-tyoaineisto/faktapohja-
+   * lima.md ja sen riippumaton tarkistus (tarkistus-lima.md); ristiriidassa
+   * TARKISTUS VOITTAA, ja sen pakolliset korjaukset on tehty tässä
+   * lohkossa. Jokainen tekstiin mennyt väite on luettu en-Wikipedian
+   * raakatekstistä (artikkelit Lima, Walls of Lima, Huaca Pucllana,
+   * 1746 Lima–Callao earthquake, Guano, Ferrocarril Central Andino,
+   * Chinese Peruvians, Ceviche, Callao).
+   *
+   * TARKISTUKSEN PAKOLLISET KORJAUKSET, jotka on tehty:
+   * 1. Väite "Meiggs kunnosti myös muurin ympäristön kadut" on lähteetön
+   *    eikä sitä ole missään (nosto "Muuri joka kaatui rautatien tieltä").
+   *    Tilalle tuli kaksi lähteistettyä yksityiskohtaa: muurin kymmenen
+   *    porttia ja nykyiset kadut, joilla muuri kulki (Walls of Lima).
+   * 2. Mirafloresin kalliot ja Malecón EIVÄT ole "Miraflores District,
+   *    Lima" -artikkelissa vaan "Lima"-artikkelissa; rantakallioita ja
+   *    liitovarjolentoa käsittelevät kohdat viittaavat siksi Lima- ja
+   *    Barranco District -artikkeleihin, eivät Miraflores-artikkeliin.
+   * 3. Espanjan laivastoa EI sanota korjauskelvottomaksi: "Battle of
+   *    Callao" merkitsee taistelun lopputuloksen ratkaisemattomaksi, ja
+   *    oppaan jakso 4 kertoo sen auki (raskaat vauriot, vetäytyminen,
+   *    molemmat ilmoittivat voittaneensa).
+   * 4. Kaupunki-sivun johdanto on kirjoitettu kokonaan uudelleen etäälle
+   *    kulttuurivisan perustamisfaktan sanamuodosta: johdanto ei mainitse
+   *    Pizarroa, vuotta 1535 eikä hallinnon keskusta lainkaan vaan
+   *    aavikkolaakson, sateettomuuden ja 1873-työmaat.
+   * 5. Guanonoston proosa ja faktalaatikko nimesivät eri neljännen
+   *    rakennuksen; teksti luettelee nyt kaikki viisi rakennusta, jotka
+   *    "Lima"-artikkeli (Republican era) mainitsee.
+   * 6. Faktapohjan kompassisuuntavirheitä (Desamparados, Barrio Chino)
+   *    ei tarvinnut korjata, koska teksteissä ei ole kompassisuuntia.
+   *
+   * WIKIPEDIAN SISÄINEN RISTIRIITA: "Walls of Lima" -artikkelin infobox
+   * antaa muurin purkuvuodeksi 1871, mutta saman artikkelin leipäteksti
+   * ja "Lima"-artikkelin Republican era -osio sanovat 1872 lähteineen.
+   * Teksti käyttää lukua 1872 (sama kuin faktapohjassa ja tarkistuksessa).
+   * Sama artikkeli sanoo muurissa olleen kymmenen porttia mutta luettelee
+   * yksitoista nimeä; teksti käyttää artikkelin omaa lukua kymmenen.
+   * 1746-järistyksen uhriluvuista lähteet eivät ole yksimielisiä (NGDC
+   * 5941, aikalaistilit n. 4000 hukkunutta yksin Callaossa), joten
+   * teksti kertoo vain ne luvut, jotka artikkeli antaa yksiselitteisesti:
+   * 1141 kuollutta Limassa ja 23 tuhoutunutta alusta Callaossa.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md, E-Amerikka): siirtomaa-aika on
+   * neutraalia historiaa — kuka hallitsi, mitä rakennettiin, milloin.
+   * Esi-inkakulttuurit (Ichma, Liman ja Marangan kulttuurit, Wari,
+   * Pachacamac, Huaca Pucllana) kuvataan omana korkeakulttuurinaan, ei
+   * "kadonneen kansan" kehyksessä, ja Taulichusco mainitaan nimeltä.
+   * Kiinalaiset sopimustyöläiset (1849–1874) kerrotaan suoraan mutta
+   * hillitysti: työn kovuus ja se, ettei puolet elänyt sopimuskauttaan
+   * loppuun, sanotaan yhdellä virkkeellä ilman yksityiskohtien
+   * korostusta, ja loppu nostosta kertoo chifa-keittiöstä ja nimistä.
+   * Köyhyyttä ei estetisoida eikä kuvata: guanonoston viimeinen virke
+   * toteaa vaurauden epätasaisen jakautumisen tosiasiana.
+   *
+   * KULTTUURIVISA (js/packs/southamerica-questions.js, avain lima) kysyy
+   * viisi asiaa: Perun pääkaupunki, sumuinen sateeton sää, Tyynimeri,
+   * ceviche ja syy vähäsateisuuteen. Kaikkien vastaukset löytyvät
+   * lehdestä (pääkaupunki: matkailijalle-kappale; sää ja syy: nosto
+   * "Aavikko jossa ei sada" ja oppaan jakso 5; Tyynimeri: johdanto ja
+   * avauskuvat; ceviche: nosto "Kala joka kypsyy limessä"). Kumpikaan
+   * minitehtävä ei toista visaa: historian tehtävä kysyy 1746-järistyksen
+   * säilyneiden talojen määrää ja ruokasivun tehtävä chifa-sanan
+   * alkuperää, ja molempien vastaus on samalla sivulla.
+   *
+   * KUVAT: 22 kuvaa, kaikki haettu Commonsista KATEGORIOILLA (Views of
+   * Lima, Plaza Mayor (Lima), Lima city walls in Parque de la Muralla,
+   * Huaca Pucllana, Malecón de Miraflores, Barranco District, Puente de
+   * los Suspiros (Lima), Real Felipe Callao, Chincha Islands, Central
+   * Railway of Peru, Ceviche of Peru, Chifa, Mistura, Palacio de Torre
+   * Tagle, Jorge Chávez International Airport). Lisenssi ja tekijä on
+   * luettu rajapinnan extmetadatasta ja jokainen kuva katsottu silmin
+   * 900 pikselin esikatseluna. Avauskuvat ovat kolme laajaa yleiskuvaa
+   * (vanhakaupunki ilmasta, Mirafloresin ranta ilmasta, koko kaupunki
+   * kukkuloille asti) eivätkä ne ole minkään noston aiheena.
+   * Kansikuvat ovat kolme pikkunostoa: Plaza Mayor illalla, Costa Verden
+   * kalliot ja muurin jäänteet Parque de la Murallassa.
+   *
+   * KUVAHYLKÄYKSET (syyt): "Joseph mulder-Lima Ciudad de los Reyes..."
+   * -kaiverruksessa on Biblioteca Nacional de Españan leimat ja
+   * hyllytunnus kuvan päällä; "Historic Center of Lima - 54548281854"
+   * ja "Palacio de Gobierno del Perú 07" hylättiin etualan
+   * tunnistettavien ihmisten takia; "Arco Chino en Lima 02/05"
+   * samasta syystä (kadulla kävijöitä lähellä kameraa);
+   * "Vista de Lima - 2014" etualalla istuu pariskunta kasvot näkyvissä;
+   * "Jirón Ucayali, centro histórico de Lima" hylättiin keskellä
+   * seisovan ihmisryhmän takia; "Muralla de Lima (restos en la
+   * actualidad)" on hämärä ja opastekyltti peittää puolet kuvasta;
+   * "Lima Peru cityscape (sunny day)" on ylivalottunut; "Campoy 03641"
+   * näyttäisi laita-alueen keskeneräisiä taloja eli estetisoisi
+   * köyhyyttä; "Aeropuerto de Lima, 2023 (02)" on tumma kuva
+   * lentokoneen siiven takaa; Meiggsin muotokuvat ovat kaikki alle
+   * 1200 pikseliä leveitä.
+   *
+   * KUVAPOIKKEUS: kaksi valittua kuvaa on karttoja ja kaiverruksia,
+   * joissa on painettua tekstiä osana itse teosta — vuoden 1744
+   * kaupunkikartta (nimiö ja merkkien selitys) ja vuoden 1866 litografia
+   * Torre Taglen julkisivusta (levyn oma kuvateksti ja painajan rivi).
+   * Sama poikkeus kuin Vancouverin palokartassa: julkaisijan oma litera
+   * kelpaa, kun se selitetään.
+   *
+   * AIHETOISTO: kaupunginmuuri esiintyy kahdesti (kansikuvassa nykyiset
+   * jäänteet, nostossa vuoden 1744 kartta) ja Mirafloresin rantakallio
+   * kolmesti eri kuvina (kansikuva, avauskuva ilmasta, oppaan
+   * etusivun pystykuva) — eri tiedostot, eri kuvakulmat ja eri jutut.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä. Oppaan jakso 5 nojaa siis en-Wikipedian Lima-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN (Samarkandin ja Vancouverin
+   * malli). Mittauspiste olisi keskusta 12,05 S / 77,03 W.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta eikä kuvaile kuvaa
+   * visuaalisesti, ja se on yhden virkkeen mittainen.
+   */
+  lima: [
+    {
+      id: 'kaupunki',
+      nimi: 'Lima',
+      johdanto: 'Rímac-joen aavikkolaakso Tyynenmeren rannalla on paikka, '
+        + 'jossa ei käytännössä sada. Isoisän matkavuonna 1873 kaupunginmuuria '
+        + 'purettiin ja Andien rataa louhittiin samaan aikaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Plaza Mayor de Lima (3).jpg',
+          selite: 'Plaza Mayorin laidalla seisoo keltainen kaupungintalo, ja '
+            + 'aukio on ollut kaupungin keskipiste sen perustamisesta asti.',
+          lahde: 'Jonathan M. Corredor O., Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Acantilados y circuito de la Costa Verde.jpg',
+          selite: 'Costa Verden rantatie kulkee jyrkkien hiekkakallioiden ja '
+            + 'Tyynenmeren välissä koko eteläisen kaupungin matkan.',
+          lahde: 'Wasiwatana, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Lima city walls.jpg',
+          selite: 'Rímac-joen vasemmalta rannalta esiin otettu muurinpätkä on '
+            + 'nykyään osa Parque de la Muralla -puistoa, joskin jäänteet '
+            + 'saattavat olla vanhemmasta rakenteesta.',
+          lahde: 'Martin Garcia from Lima, Peru, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Vista aérea del Centro de Lima en la cuarentena 2020.jpg',
+          selite: 'Vanhankaupungin ruutukaava, hallituksen palatsi ja Plaza '
+            + 'Mayor ovat Rímac-joen eteläpuolella samoilla paikoilla kuin '
+            + '1500-luvulla mitattaessa.',
+          lahde: 'MINISTERIO DE DEFENSA DEL PERÚ, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Vista aérea del malecón de Miraflores 2017.jpg',
+          selite: 'Mirafloresin ranta on kallionreunan alla, ja rantatie '
+            + 'Circuito de Playas erottaa hiekkarannan kaupungista.',
+          lahde: 'Municipalidad de Miraflores, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Vista aérea de Lima en 2020.jpg',
+          selite: 'Metropolitan Lima kattaa 2672 neliökilometriä ja ulottuu '
+            + 'rannikolta aavikkokukkuloiden rinteille.',
+          lahde: 'MINISTERIO DE DEFENSA DEL PERÚ, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Loppiaisen kaupunki',
+          tiedosto: 'Lima, Plaza de Armas and cathedral (6091615471).jpg',
+          teksti: 'Francisco Pizarro valitsi kaupungin paikan Rímac-joen '
+            + 'laaksosta ja perusti sen 6. tammikuuta 1535. Päivä oli '
+            + 'loppiainen, ja siitä tuli nimi Ciudad de los Reyes, '
+            + 'Kuninkaiden kaupunki. Pizarro mittasi Plaza Mayorin ja koko '
+            + 'ruutukaavan itse kolmen avustajansa kanssa ja laski omin '
+            + 'käsin tuomiokirkon peruskiven. Virallinen nimi jäi '
+            + 'asiakirjoihin, mutta arkikielessä kaupunkia sanottiin pian '
+            + 'Limaksi – nimi juontuu joko ketšuan sanasta limaq, "puhuja", '
+            + 'joka oli laakson oraakkelin nimi, tai aimaran sanoista '
+            + 'lima-limaq, "keltainen kukka". Ruutukaava rakennettiin '
+            + 'paikallisen kuraakan Taulichuscon maille.',
+          selite: 'Nykyinen tuomiokirkko seisoo sillä paikalla, jolle Pizarro '
+            + 'laski peruskiven vuonna 1535.',
+          lahde: 'sergejf, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Lima',
+        },
+        {
+          otsikko: 'Muuri joka kaatui rautatien tieltä',
+          tiedosto: 'Plano de la Ciudad de los Reyes del Peru en 1744 (Detalle Principal) - AHG.jpg',
+          teksti: 'Merirosvojen ja korsaarien uhka sai siirtomaahallinnon '
+            + 'rakentamaan kaupungin ympärille muurin vuosina 1684–1687, '
+            + 'varakuningas Melchor de Navarra y Rocafullin kaudella. '
+            + 'Muurissa oli kymmenen porttia, ja se seurasi linjaa, jolla '
+            + 'kulkevat nykyään Alfonso Ugarten, Paseo Colónin ja Graun '
+            + 'kadut. Yhdysvaltalainen rautatieurakoitsija Henry Meiggs purki '
+            + 'muurin 1872 Perun hallituksen sopimuksella tulevan kasvun '
+            + 'tieltä – vain vuosi ennen isoisän matkaa. Porteista tunnetuin, '
+            + 'Arco del Puente, tuhoutui katukauppiaiden sytyttämässä '
+            + 'tulipalossa 1879.',
+          selite: 'Vuoden 1744 kartassa muuri kiertää koko kaupungin '
+            + 'sahalaitaisena kehänä Rímac-joen eteläpuolella.',
+          lahde: 'Jojagal, Wikimedia Commons (CC0)',
+          wiki: 'Walls of Lima',
+        },
+        {
+          otsikko: 'Aavikko jossa ei sada',
+          tiedosto: 'Lima Perú paisaje urbano del invierno - Lima Peru winter cityscape 03.jpg',
+          teksti: 'Lima on maailman kolmanneksi suurin aavikkokaupunki '
+            + 'Karachin ja Kairon jälkeen, mutta helteestä ja hiekkadyyneistä '
+            + 'ei ole tietoakaan: kylmä Humboldtin merivirta jäähdyttää ilman '
+            + 'niin, ettei kosteus tiivisty kunnolliseksi sateeksi. '
+            + 'Talvikuukausina kesäkuusta lokakuuhun kaupungin ylle laskeutuu '
+            + 'harmaa sumuvaippa, garúa, joka voi peittää auringon '
+            + 'viikkokausiksi; rannikkopiireihin sataa silti vain 10–30 '
+            + 'millimetriä vuodessa. Kesäisin taivas kirkastuu ja iltarusko '
+            + 'värjää sen oranssiksi ja punaiseksi – sitä sanotaan noitien '
+            + 'taivaaksi.',
+          selite: 'Mirafloresin kallionreuna häviää garúa-sumuun, joka '
+            + 'peittää rannikon useaksi kuukaudeksi kerrallaan.',
+          lahde: 'Indisdepe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lima',
+        },
+        {
+          otsikko: 'Savitiilipyramidi korttelin keskellä',
+          tiedosto: 'Huaca Pucllana and modern city.jpg',
+          teksti: 'Mirafloresin asuinkorttelien keskellä kohoaa seitsemästä '
+            + 'porrastetusta tasanteesta koottu savitiilipyramidi Huaca '
+            + 'Pucllana. Liman kulttuuri rakensi sen '
+            + 'uskonnollis-hallinnolliseksi keskuksekseen vuosina 200–700, ja '
+            + 'myöhemmin alueelle tullut Wari-kulttuuri hautasi paikalle '
+            + 'omat vainajansa. Nimi juontuu ketšuan sanoista wak\'a, pyhä '
+            + 'paikka, ja pukllana, leikki; toisen selityksen mukaan se '
+            + 'tulee esi-inkakauden päälliköltä. Kohde avattiin museona 1984, '
+            + 'ja tänään sen ympärillä kohoavat asuintalot – 1500 vuotta '
+            + 'vanha rakennus ja nykykaupunki samassa näkymässä.',
+          selite: 'Huaca Pucllanan savitiilistä ladotut tasanteet ovat '
+            + 'Mirafloresin asuinkortteleiden ympäröimät.',
+          lahde: 'Tauly, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Huaca Pucllana',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Miraflores View (5836213878).jpg',
+          selite: 'Costa Verden rantatie kulkee kallion juurella, ja '
+            + 'Mirafloresin talot ovat aivan jyrkänteen reunalla.',
+          lahde: 'DearEdward from New York, NY, USA, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Lima on Perun pääkaupunki ja Etelä-Amerikan suurimpia '
+          + 'kaupunkeja. Matkailijan Lima jakautuu kahtia: pohjoisessa on '
+          + 'vanhankaupungin ruutukaava puisine parvekkeineen, luostareineen '
+          + 'ja aukioineen, etelässä rannikon kaupunginosat Miraflores ja '
+          + 'Barranco kallionreunan päällä. Väliä on noin seitsemän '
+          + 'kilometriä, ja matka taittuu helpoiten rantakatua tai '
+          + 'pikabussilinjaa pitkin. Vanhankaupungin kohteet mahtuvat '
+          + 'kilometrin säteelle Plaza Mayorista, joten aamupäivä riittää '
+          + 'niihin; iltapäivä kannattaa käyttää merenrantaan, jossa '
+          + 'kallion päältä katsotaan auringonlaskua ja liitovarjoja.',
+        artikkeli: {
+          nimi: 'Matkailijan Lima',
+          taitto: 'opas',
+          teksti: 'Aavikkokaupunki meren rannalla, jossa vanhat parvekkeet ja '
+            + 'kallionreunan rantabulevardit ovat saman matkan päissä.',
+          nosto: 'Aurinkoa paistaa vuodessa 1284 tuntia – vähemmän kuin '
+            + 'Lontoossa tai Moskovassa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Limaan saavutaan Jorge Chávezin kansainvälisen '
+                + 'lentoaseman kautta. Kenttä on Callaossa noin 13 metrin '
+                + 'korkeudella merenpinnasta, ja sen uusi terminaali avattiin '
+                + '1. kesäkuuta 2025; matkustajia sen odotetaan palvelevan '
+                + 'noin 40 miljoonaa vuodessa vuoteen 2030 mennessä. '
+                + 'Kaupungin sisällä liikutaan pääosin bussilla: '
+                + 'pikabussijärjestelmä El Metropolitano käynnistyi 2007 ja '
+                + 'kulkee omalla kaistallaan pohjois–eteläsuunnassa. '
+                + 'Metrosta on toistaiseksi valmiina linja 1, joka avattiin '
+                + '2010 – hanketta oli aloitettu ja keskeytetty sekä '
+                + '1970- että 1990-luvulla. Muuten Lima on kasvanut '
+                + 'autoliikenteen ehdoilla, ja ruuhkiin kannattaa varautua.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Metropolitan Lima kattaa 2672 neliökilometriä, joista '
+                + 'runsas kolmannes on varsinaista kaupunkia ja loput '
+                + 'laita-alueita. Kaupunki nousee Tyynenmeren rannalta '
+                + 'loivasti sisämaahan päin ja kohoaa laaksoissa ja '
+                + 'rinteillä jopa 1550 metriin merenpinnasta. Keskustan '
+                + 'halki virtaava Rímac-joki tuo Andeilta sekä juomaveden '
+                + 'että vesivoiman. Etelärannikolla kaupunki päättyy '
+                + 'jyrkkiin hiekkakallioihin, joiden juurella kulkee '
+                + 'Costa Verden rantatie ja joiden päällä ovat Mirafloresin '
+                + 'ja Barrancon kaupunginosat. Nämä kaksi olivat isoisän '
+                + 'aikaan vielä omia pikkukaupunkejaan Liman ulkopuolella.',
+              kuva: {
+                tiedosto: 'Malecon de la Reserva.jpg',
+                selite: 'Mirafloresin rantabulevardin kohdalla kallio on '
+                  + 'halkaistu laaksoksi, jonka yli kulkee silta '
+                  + 'merenrantaan johtavan tien päällä.',
+                lahde: 'Christian Córdova, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kallionreunan iltapäivä',
+              teksti: 'Mirafloresin ja Barrancon jyrkänteet ovat kaupungin '
+                + 'oma parveke. Kallionreunalla kulkee puistoketju, jonka '
+                + 'penkeillä istutaan katsomassa merta, ja tasaisesta '
+                + 'merituulesta johtuen jyrkänteen päältä lähtee '
+                + 'liitovarjolentäjiä suoraan kaupungin ylle. Barranco oli '
+                + '1800-luvulla varakkaiden limalaisten kesänviettopaikka '
+                + 'merenrannalla, ja siitä tuli oma piirikuntansa vasta '
+                + '1874 – vuosi isoisän vierailun jälkeen. Vanhat huvilat, '
+                + 'puistokadut ja rantaan laskeutuvat portaat ovat yhä '
+                + 'paikoillaan, ja alue on nykyisin kaupungin '
+                + 'taiteilijakortteli.',
+              kuva: {
+                tiedosto: 'ParapenteBarranco.jpg',
+                selite: 'Liitovarjolentäjät nousevat Mirafloresin ja '
+                  + 'Barrancon jyrkänteiltä merituulen varassa.',
+                lahde: 'Ursula Paulina Uriarte Espejo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: Callao 1866',
+              teksti: 'Liman satamakaupunki Callao on kaupungista noin 13 '
+                + 'kilometriä länteen, ja sen rannalla seisoo Real Felipen '
+                + 'linnoitus. Sen edustalla käytiin 2. toukokuuta 1866 '
+                + 'taistelu, jossa Espanjan laivasto amiraali Casto Méndez '
+                + 'Núñezin johdolla pommitti satamaa osana Chincha-saarten '
+                + 'sotaa. Perun puolustusta johtivat eversti Mariano '
+                + 'Ignacio Prado ja sodanministeri José Gálvez Egúsquiza, '
+                + 'joka kuoli taistelussa ja jota muistetaan sankarina. '
+                + 'Espanjan alukset kärsivät raskaita vaurioita ja '
+                + 'vetäytyivät taistelukentältä, mutta lopputulos on '
+                + 'kirjattu ratkaisemattomaksi: molemmat osapuolet '
+                + 'ilmoittivat voittaneensa. Päivämäärä on yhä Perun '
+                + 'merkkipäivä.',
+              kuva: {
+                tiedosto: 'Castillo del Real Felipe 1 - CAL015 - 16052017.jpg',
+                selite: 'Real Felipen linnoitus rakennettiin Callaon '
+                  + 'suojaksi 1700-luvulla, ja sen tornista on näkymä '
+                  + 'satamaan.',
+                lahde: 'FotosATP-Pe, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Limasta puuttuu, joten nämä luvut ovat '
+                + 'en-Wikipedian Lima-artikkelin Climate-osiosta eivätkä '
+                + 'samasta lähteestä kuin lehden vuosigraafit. Kesä kestää '
+                + 'joulukuusta huhtikuuhun: taivas on kirkas ja päivällä on '
+                + '25–30 astetta. Kesäkuusta lokakuuhun kaupunkia peittää '
+                + 'garúa-sumu, lämpötila pysyy 16–19 asteessa eikä aurinkoa '
+                + 'juuri näy – elokuussa sitä paistaa keskimäärin vain 28 '
+                + 'tuntia koko kuukaudessa, kun huhtikuussa tuntimäärä on '
+                + '183. Sadetakkia ei tarvitse kummassakaan: sadetta tulee '
+                + 'vuodessa parikymmentä millimetriä, ja sekin tihkuna. '
+                + 'Kuumin mitattu lukema on 33,4 astetta.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Laaksossa oli kaupunkeja ja pyhäkköjä kauan ennen '
+        + 'espanjalaisia. Maanjäristys rakensi keskustan uudelleen 1746, ja '
+        + 'guanotulot maksoivat radan, joka nousi Andeille.',
+      tehtava: {
+        kysymys: 'Kuinka moni Liman kolmestatuhannesta talosta jäi pystyyn vuoden 1746 maanjäristyksessä?',
+        vaihtoehdot: [
+          '25',
+          '74',
+          '300',
+          '1141',
+        ],
+        oikea: 0,
+        fakta: 'Järistys kaatoi kaupungin muutamassa minuutissa: kolmesta '
+          + 'tuhannesta talosta säilyi 25 ja kaikki 74 kirkkoa vaurioituivat. '
+          + 'Luku 1141 on Limassa kuolleiden määrä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Ichman laakso ennen espanjalaisia',
+          tiedosto: 'Pachacámac 3.jpg',
+          teksti: 'Rímacin, Chillónin ja Lurínin jokilaaksoissa asui '
+            + 'vuosisatojen ajan yhteisöjä, jotka kokosi yhteen Ichman '
+            + 'herruus; alueen ilmeen loivat Marangan ja Liman kulttuurit. '
+            + 'Inkavallan aikana laakso kuului Pachacamacin provinssiin, '
+            + 'jonka pyhäkkö oli rannikon tärkein pyhiinvaelluskohde '
+            + '300-luvulta 1400-luvulle. Espanjalaisten saapuessa laaksoa '
+            + 'hallitsi kuraakka Taulichusco, joka oli aiemmin palvellut '
+            + 'inkakeisari Huayna Capacin puolisoa Mama Viloa. Uusi kaupunki '
+            + 'rakennettiin suoraan vanhan päälle: Taulichuscon palatsin '
+            + 'paikalla on nykyinen hallituksen palatsi ja Puma Intin '
+            + 'temppelin paikalla tuomiokirkko.',
+          selite: 'Pachacamacin pyhäkkö Lurín-joen laaksossa oli rannikon '
+            + 'tärkein pyhiinvaelluskohde yli tuhannen vuoden ajan.',
+          lahde: 'Rodolfo pimentel, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lima',
+        },
+        {
+          otsikko: 'Kaupunki joka kaatui muutamassa minuutissa',
+          tiedosto: 'Palacio de Torre Tagle. Firmin Didot, Brothers, Sons & Co., 1866.jpg',
+          teksti: '28. lokakuuta 1746 kello puoli yksitoista illalla noin 90 '
+            + 'kilometrin päässä Limasta puhjennut maanjäristys, '
+            + 'voimakkuudeltaan 8,6–8,8, tuhosi kaupungin muutamassa '
+            + 'minuutissa: kolmesta tuhannesta talosta jäi pystyyn 25 ja '
+            + 'kaikki 74 kirkkoa vaurioituivat. Limassa kuoli 60 000 '
+            + 'asukkaasta 1141. Satamakaupunki Callaossa kävi pahemmin, '
+            + 'kun puoli tuntia myöhemmin saapunut hyökyaalto tuhosi kaikki '
+            + '23 satamassa ollutta alusta. Varakuningas José Antonio Manso '
+            + 'de Velasco johti jälleenrakennuksen, ja siitä on peräisin '
+            + 'suuri osa keskustan nykyisestä katukuvasta ja sen yli 1600 '
+            + 'parvekkeesta.',
+          selite: 'Palacio de Torre Taglen puiset umpiparvekkeet ovat '
+            + 'kaiverruksineen keskustan kuuluisimmat; talo valmistui 1735.',
+          lahde: 'Manuel A. Fuentes; Firmin Didot, Brothers, Sons & Co., Wikimedia Commons (PD)',
+          wiki: '1746 Lima–Callao earthquake',
+        },
+        {
+          otsikko: 'Lintujen lannasta valtion tärkein tulo',
+          tiedosto: 'Guano Mining in Chincha Islands Peru (1865) Moulton.jpg',
+          teksti: 'Vuonna 1840 neuvoteltu sopimus teki rannikkosaarten '
+            + 'guanosta – merilintujen ulosteista muodostuneesta '
+            + 'typpilannoitteesta – valtion yksinoikeudella hallitseman '
+            + 'vientituotteen, ja siitä tuli maan suurin tulonlähde. Vienti '
+            + 'huipentui 1870, jolloin Perusta lähti yli 700 000 tonnia '
+            + 'guanoa. Osalla tuloista vapautettiin 1854 yli 25 000 orjaa ja '
+            + 'poistettiin alkuperäisväestöltä peritty henkivero; suurin osa '
+            + 'meni Liman julkisiin rakennuksiin, joita nousi 1850–1870- '
+            + 'luvuilla viisi: keskustori, teurastamo, mielisairaala, '
+            + 'vankila ja Dos de Mayo -sairaala. Vaurauden epätasainen '
+            + 'jakautuminen lisäsi samalla levottomuutta.',
+          selite: 'Chincha-saarilla guano irrotettiin kerroksittain ja '
+            + 'ajettiin kiskoja pitkin vaunuissa laivoihin; kuva on '
+            + 'vuodelta 1865.',
+          lahde: 'Henry de Witt Moulton, Wikimedia Commons (PD)',
+          wiki: 'Guano',
+        },
+        {
+          otsikko: 'Rautatie sinne missä laamat kävelevät',
+          tiedosto: 'FCCA GE C30-7 Visio Switchbacks.jpg',
+          teksti: 'Puolalaissyntyinen insinööri Ernest Malinowski ehdotti jo '
+            + '1851 radan jatkamista Limasta Andien yli Jaujan laaksoon, '
+            + 'mutta hanke lähti liikkeelle vasta kun urakoitsija Henry '
+            + 'Meiggs otti sen hoitaakseen 1868. Sopimus allekirjoitettiin '
+            + 'joulukuussa 1869, ja rakentaminen alkoi tammikuussa 1870 '
+            + 'juhlallisin menoin Liman Monserraten asemalla. Vuonna 1873 '
+            + 'louhinta ja raiteenlasku olivat täydessä käynnissä Rímacin '
+            + 'rotkossa. Radalla on 69 tunnelia ja 58 siltaa, ja '
+            + 'Galera-tunneli kohoaa 4783 metriin – rata avautui Chiclaan '
+            + '1878 ja on yhä maailman toiseksi korkein.',
+          selite: 'Rata seuraa Rímac-joen rotkoa Limasta Andeille ja nousee '
+            + 'kallioseinämään louhittuja pengerryksiä pitkin.',
+          lahde: 'Kabelleger / David Gubler, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ferrocarril Central Andino',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Liman keittiössä kohtaavat Andien raaka-aineet, siirtomaa-ajan '
+        + 'reseptit ja kolmelta mantereelta tulleiden siirtolaisten maut. '
+        + 'Kaupunkia kutsutaan nykyään Amerikan gastronomiseksi pääkaupungiksi.',
+      tehtava: {
+        kysymys: 'Mistä kiinalais-perulaisten chifa-ravintoloiden nimi tulee?',
+        vaihtoehdot: [
+          'kantonin sanoista, jotka tarkoittavat riisin syömistä',
+          'ensimmäisen ravintoloitsijan sukunimestä',
+          'espanjan sanasta, joka tarkoittaa paistamista',
+          'sen korttelin nimestä, jossa ravintolat sijaitsivat',
+        ],
+        oikea: 0,
+        fakta: 'Kantonin hek3 faan6 tarkoittaa riisin syömistä eli aterioimista. '
+          + 'Sopimuskautensa päättäneet työläiset perustivat näitä ravintoloita '
+          + 'ympäri maata, ja chifa on nykyään oma perulainen keittiönsä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Amerikan gastronomian pääkaupunki',
+          tiedosto: 'Peru - Lima 195 - Mistura Fiesta de Comida (8148324108).jpg',
+          teksti: 'Liman keittiö syntyi kerroksittain. Siirtomaakaudella '
+            + 'espanjalaisten ruokaperinteet sekoittuivat alkuperäisväestön '
+            + 'raaka-aineisiin, ja myöhemmät maahanmuuttoaallot – '
+            + 'afrikkalaiset, kiinalaiset, japanilaiset ja eurooppalaiset – '
+            + 'toivat mukanaan omansa. 2000-luvulla kaupungin ravintolat '
+            + 'ovat nousseet kansainväliseen kärkeen: World\'s 50 Best '
+            + '-listalla Central valittiin maailman parhaaksi ravintolaksi '
+            + '2023 ja Maido 2025. Myös perulainen kahvi ja suklaa ovat '
+            + 'voittaneet kansainvälisiä palkintoja. Kaupunkia kutsutaan '
+            + 'nykyään koko Amerikan gastronomiseksi pääkaupungiksi.',
+          selite: 'Perulaisia suklaakonvehteja Liman Mistura-ruokafestivaalin '
+            + 'myyntipöydällä.',
+          lahde: 'McKay Savage from London, UK, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Lima',
+        },
+        {
+          otsikko: 'Kala joka kypsyy limessä',
+          tiedosto: 'Ceviche 220108.jpg',
+          teksti: 'Ceviche on Perun kansallisruoka. Tuore kala leikataan '
+            + 'paloiksi ja jätetään limemehuun, jonka happamuus kypsentää '
+            + 'sen ilman lämpöä; mukaan tulevat suola, valkosipuli, sipuli '
+            + 'ja chili. Alue vaihtelee reseptiä: pohjoisessa käytetään '
+            + 'mustia simpukoita ja äyriäisiä, Andeilla taimenta ja jopa '
+            + 'kanaa. Lime itsessään ei ole kotoisin Perusta – '
+            + 'sitrushedelmät ovat peräisin Aasiasta ja tulivat mantereelle '
+            + 'espanjalaisten mukana. Yhtä vanhaa ruokalajia, causa '
+            + 'limeñaa, selitetään kolmella eri tarinalla, eikä yhtäkään '
+            + 'niistä ole voitu todistaa.',
+          selite: 'Perulaisessa cevichessä kala tarjotaan punasipulin, '
+            + 'keitetyn maissin ja bataatin kanssa.',
+          lahde: 'Cmasi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ceviche',
+        },
+        {
+          otsikko: 'Riisiä syömässä',
+          tiedosto: 'Comida chifa.jpg',
+          teksti: 'Vuosina 1849–1874 Peruun saapui 80 000–100 000 kiinalaista '
+            + 'sopimustyöläistä, ja he toivat mukanaan ruokakulttuurinsa. '
+            + 'Työ oli kovaa eikä puolet heistä elänyt sopimuskautensa '
+            + 'loppuun; kauden päättäneistä monet jäivät maahan ja '
+            + 'perustivat pieniä ravintoloita, chifoja. Nimi tulee kantonin '
+            + 'sanoista, jotka tarkoittavat riisin syömistä. Liman Calle '
+            + 'Capónista kasvoi yksi läntisen pallonpuoliskon '
+            + 'varhaisimmista kiinalaiskortteleista. Moni vapautunut '
+            + 'työläinen otti isäntänsä espanjankielisen sukunimen – siksi '
+            + 'kiinalaistaustaisella perulaisella on tänään usein täysin '
+            + 'espanjalainen nimi.',
+          selite: 'Chifa-aterialla on perulaista paistettua riisiä eli '
+            + 'arroz chaufaa, wontoneita ja wokattuja kasviksia.',
+          lahde: 'MiguelAlanCS, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Chinese Peruvians',
+        },
+        {
+          otsikko: '600 000 kävijää kymmenessä päivässä',
+          tiedosto: 'Anticuchos en Lima.jpg',
+          teksti: 'Vuonna 2007 perustettu järjestö APEGA kokosi yhteen kokit, '
+            + 'ravintoloitsijat, ravitsemustieteilijät, tutkijat, '
+            + 'käsityöläiskalastajat ja toriruokamyyjät edistämään '
+            + 'perulaista ruokaa osana kansallista identiteettiä. Seuraavana '
+            + 'vuonna se järjesti ensimmäisen Mistura-ruokafestivaalin, '
+            + 'jossa limalaiset ravintolat, katukauppiaat, leipurit ja '
+            + 'tuottajat olivat esillä kymmenen päivän ajan syyskuussa. '
+            + 'Kävijämäärä kasvoi 30 000:sta vuonna 2008 yli 600 000:een '
+            + 'vuoteen 2014 mennessä, ja tapahtumasta tuli Latinalaisen '
+            + 'Amerikan suurin ruokajuhla.',
+          selite: 'Anticuchoja eli marinoituja lihavartaita paistetaan '
+            + 'hiilloksella Liman katukeittiöissä ja ruokafestivaaleilla.',
+          lahde: 'Heather Sperling, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Lima',
+        },
+      ],
+    },
+  ],
 };
