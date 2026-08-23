@@ -31148,4 +31148,490 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * AUCKLAND (nippu 8, 23.8.2026). Kohteet ovat kohdekartan kymmenen
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.auckland), ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 23.8.2026
+   * (artikkelit "Auckland Ferry Terminal", "Victoria Park Market",
+   * "Albert Park, Auckland", "Auckland Town Hall", "Karangahape
+   * Road", "Symonds Street Cemetery", "Ewelme Cottage", "Highwic",
+   * "Eden Park" ja "Maungawhau / Mount Eden"; Albert Parkin jutun
+   * kuvernöörintalo artikkelista "Old Government House, Auckland").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Tāmaki Makaurau ja Maungakiekien pā, Ngāti Whātuan
+   * maalahjoitus, pääkaupungin menetys, tulivuorikenttä, museon
+   * vaiheet, Auckland Domain ja Waikaton sota; kartan kohteista
+   * yksikään ei ole niiden aihe. Lähimpänä on Maungawhau, joka
+   * vilahtaa lehden avauskuvan ja yhden herokuvan selitteessä yhdellä
+   * virkkeellä — juttu kertoo kraatterin nimen, huipun tien ja
+   * laidunmaksut, norsun ja vuoden 2014 sopimusratkaisun, joita
+   * selitteet eivät käsittele.
+   *
+   * MAORIKULTTUURI ON NYKYINEN EIKÄ MENNYT (Raamatun pilari 3):
+   * Maungawhaun juttu päättyy siihen, että vuori kuuluu nykyään
+   * kolmentoista iwin ja hapūn yhteenliittymälle, ja Karangahape
+   * Roadin juttu siihen, että te reo -nimi kesti kolme
+   * uudelleennimeämisyritystä. Waitangin sopimus mainitaan
+   * toteavasti eikä tulkiten.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 23.8.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin. Kaksi
+   * on isoisän ajalta: Symonds Streetin hautausmaa on John Kinderin
+   * valokuvassa 1868 ja Karangahapen tiepiiri noin 1870 piirretyssä
+   * kartassa (Auckland Librariesin kokoelma, tekijää ei tiedetä).
+   * Yksikään tiedosto ei ole sama kuin kaupunkilehden auckland-
+   * lohkossa; lehden lauttaterminaalikuva on eri tiedosto ja eri
+   * kuvakulma kuin tämän jutun.
+   */
+  auckland: {
+    'Ferry Building': {
+      aika: '1909–1912',
+      teksti: 'Aucklandin satamahallitus katsoi 1900-luvun alussa, että '
+          + 'lautoille tarvittiin oma rakennus. Ensimmäiset piirustukset '
+          + 'olivat viisikerroksisesta talosta, mutta korkeus herätti '
+          + 'julkista vastustusta, ja tilalle esitettiin nelikerroksista '
+          + 'taloa kellotornilla. Suunnitelma muistutti San Franciscon '
+          + 'lauttarakennusta. Piirtäjä oli Alex Wiseman ja rakentaja '
+          + 'Philcox and Sons, ja talo nousi 1909–1912 täyttömaalle '
+          + 'hiekkakivestä ja tiilestä Coromandelin graniittijalustan '
+          + 'päälle. Hinnaksi tuli 67 944 puntaa, aikakauteensa nähden '
+          + 'suuri summa.'
+          + '\n\n'
+          + 'Rakennus ei ollut osa itse laitureita, vaan se pystytettiin '
+          + 'lauttaliikenteen kiintopisteeksi ja tuottamaan '
+          + 'satamahallitukselle vuokratuloja. Molemmat suuret '
+          + 'lauttayhtiöt, Devonport Steam Ferry Company ja Takapuna '
+          + 'Tramways Ferry Company, pitivät talossa pääkonttoriaan. '
+          + 'Pohjoisrannalle mentiin täältä aina vuoteen 1959, jolloin '
+          + 'Auckland Harbour Bridge avattiin — sen jälkeen lauttamatkat '
+          + 'vähenivät ja talo alkoi rapistua.'
+          + '\n\n'
+          + 'Viereen rakennettiin 1982 uusi lauttarakennus, ja samana '
+          + 'vuonna valmistunut selvitys vaati vanhaan taloon isoja '
+          + 'korjauksia maanjäristys- ja palomääräysten takia. '
+          + 'Satamahallitus oli kahtia sen säilyttämisestä mutta päätti '
+          + 'vahvan yleisen mielipiteen jälkeen kunnostaa sen; työ alkoi '
+          + '1986, ja kenraalikuvernööri avasi talon uudelleen 5. '
+          + 'marraskuuta 1988. Vuonna 2021 Auckland Transport rakensi 42 '
+          + 'miljoonalla dollarilla kuusi uutta laituripaikkaa, ja '
+          + 'arkkitehti Murray Dayn suunnittelema kaareva katos on '
+          + 'muotoiltu purjeeksi ja pidetty matalana, jottei se peittäisi '
+          + 'näkymiä.',
+      kuvat: [
+        {
+          tiedosto: 'Auckland Ferry Terminals (old and new).jpg',
+          selite: 'Ferry Building rakennettiin 1909–1912 satamahallituksen '
+            + 'vuokratuloiksi eikä osaksi itse laitureita.',
+          lahde: 'Ulrich Lange, Bochum, Germany, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Victoria Park Market': {
+      aika: '1905',
+      teksti: 'Paikka oli alun perin osaksi niemeke ja osaksi Freemans Bayn '
+          + 'rantavyöhykettä. Lahtea alettiin täyttää 1870-luvun lopulla — '
+          + 'siis pian isoisän käynnin jälkeen — ja levenneelle rannalle '
+          + 'nousi liike- ja asuinrakennuksia. Torin takana kulkeva katu '
+          + 'seuraa yhä vanhan merenrantatörmän harjaa. Viereinen '
+          + 'Victoria Park perustettiin 1905 ja nimettiin kuningattaren '
+          + 'mukaan, joka oli kuollut neljä vuotta aiemmin.'
+          + '\n\n'
+          + 'Kaupunki pelkäsi rottien levittämää ruttoa, koska roskia '
+          + 'vietiin tyhjille tonteille, ja kaupunginvaltuusto alkoi 1900 '
+          + 'harkita omaa polttolaitosta. Meldrum-polttouunin urakka '
+          + 'annettiin 1904 sydneyläiselle J. Barre Johnston Ltd:lle, ja '
+          + 'laitos valmistui 1905. Tontille rakennettiin 1905–1918 '
+          + 'tiilirakennusten sarja: varikko, seppä, kirvesmiehet, tallit '
+          + 'ja 38 metriä korkea savupiippu. Helmikuun 10. päivänä 1908 '
+          + 'avattiin generaattori, joka teki sähköä uunin hukkalämmöllä '
+          + 'ja hiilellä; teho ei riittänyt, joten paikalle asennettiin '
+          + 'kolme 225 kilowatin höyrygeneraattoria. Laitos suljettiin '
+          + '1913, kun Kings Wharfille valmistui uusi hiilivoimala.'
+          + '\n\n'
+          + 'Vuosina 1914–1918 alueelle rakennettiin kaksikerroksinen '
+          + 'talli niille 94 hevoselle, jotka vetivät kaupungin '
+          + 'roskakärryjä, sekä valtuuston toimistoja. Tallit jäivät pois '
+          + 'käytöstä 1952, polttouuni sammui 1972 ja jätevarikko toimi '
+          + 'vuoteen 1981. Kaupunki aikoi purkaa korttelin mutta perääntyi '
+          + 'kansalaiskampanjan jälkeen, ja rakennukset muutettiin '
+          + 'kauppahalliksi 1983 ja 1990. Kortteli on suojeltu '
+          + 'ykkösluokassa, ja se peruskorjattiin 20 miljoonalla '
+          + 'dollarilla 2012–2013. Vuodesta 1984 käytävällä on ollut '
+          + 'kuuluisuuksien kädenjälkiä, muiden muassa Edmund Hillaryn ja '
+          + 'Kiri Te Kanawan.',
+      kuvat: [
+        {
+          tiedosto: 'Victoria Park Market Chimney.jpg',
+          selite: 'Savupiippu kuului Meldrumin polttolaitokseen, joka teki '
+            + 'kaupungin roskien lämmöllä sähköä 1908–1913.',
+          lahde: 'Summ23, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Albert Park': {
+      aika: '1870–1880-luku',
+      teksti: 'Puiston paikalla oli maorien kāinga eli kylä nimeltä '
+          + 'Rangipuke, ja sen luoteiskulmassa seisoi Te Horotiun pā. '
+          + 'Alueella oli myös Waiohuan kylä Mangahekea, jonka Ngāti '
+          + 'Whātua valtasi 1740-luvulla. Maaperä on hiekkakiveä, mutta '
+          + 'luoteessa on oma tulivuorensa: Albert Parkin kuonakartio '
+          + 'purkautui noin 145 000 vuotta sitten ja peitti suuren osan '
+          + 'nykyisestä puistosta tuhkaan.'
+          + '\n\n'
+          + 'Suurin osa puiston alasta oli 1800-luvun puolivälissä Albert '
+          + 'Barracksia, kaupungin varhaisinta eurooppalaista '
+          + 'varuskuntaa. 1850- ja 1860-luvuilla siellä majaili sotilaita, '
+          + 'muun muassa 58. rykmentti, ja puu- ja kivirakennuksia '
+          + 'ympäröi paikallisesta tulivuorikivestä muurattu valli. Pala '
+          + 'muuria seisoo yhä yliopiston pihalla ykkösluokan '
+          + 'suojelukohteena. Alue varattiin puistoksi 1870-luvulla ja '
+          + 'rakennettiin puistoksi 1880-luvulla, eli isoisän aikaan '
+          + 'käynnissä oli juuri muutos kasarmista puistoksi; puihin '
+          + 'istutettiin yli 80 lajia vuosina 1874–1908. Puiston '
+          + 'itäpuolella seisoo Old Government House, William Masonin 1856 '
+          + 'suunnittelema puinen kuvernöörintalo, joka jäljittelee '
+          + 'kivimuurausta ja jota käytettiin enää harvoin sen jälkeen, '
+          + 'kun hallinto muutti Wellingtoniin.'
+          + '\n\n'
+          + 'Puiston muoto ratkaistiin yleisellä kilpailulla, ja se '
+          + 'noudattaa pohjois–eteläakselia. Akselin pohjoispäässä on '
+          + 'Francis J. Williamsonin veistämä kuningatar Victorian patsas '
+          + 'vuodelta 1897, eteläpäässä James Slatorin soittolava '
+          + 'vuodelta 1901 ja keskellä 1881 Britanniasta tuotu '
+          + 'valurautasuihkulähde, jossa kerubit ratsastavat delfiineillä. '
+          + 'Puistossa on myös Sir George Greyn patsas, joka siirrettiin '
+          + 'tänne kaupungintalon edestä, ja kaksi kenttätykkiä '
+          + '1880-luvun venäläisinvaasion pelosta. Asemakaava on pysynyt '
+          + 'lähes muuttumattomana vuodesta 1882. Puiston alla on '
+          + 'tunneliverkko, joka kaivettiin 1941 pommisuojiksi ja '
+          + 'suljettiin jo ennen sodan loppua.',
+      kuvat: [
+        {
+          tiedosto: 'The fountain at Albert Park.jpg',
+          selite: 'Puiston asemakaava on ollut lähes sama vuodesta 1882, ja '
+            + 'sen keskipiste on 1881 tuotu valurautasuihkulähde.',
+          lahde: 'RadishSlice, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Aucklandin kaupungintalo': {
+      aika: '1909–1911',
+      teksti: 'Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen '
+          + 'isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja '
+          + 'Queen Streetin kulma, joka lunastettiin omalla '
+          + 'parlamenttilailla 1881, ja kun tontti osoittautui liian '
+          + 'pieneksi, kaupunki osti naapurikiinteistöt 1883. '
+          + 'Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat '
+          + 'melbournelaiset arkkitehdit JJ & EJ Clark.'
+          + '\n\n'
+          + 'Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta '
+          + '1909, ja kenraalikuvernööri lordi Islington vihki talon 14. '
+          + 'joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa '
+          + 'on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun '
+          + 'kalkkikiveä, ja kellotorni nousee 40 metriin. '
+          + 'Viisikerroksinen italialaisen renessanssin tyyliin piirretty '
+          + 'talo muistuttaa samoihin aikoihin valmistunutta Lambethin '
+          + 'kaupungintaloa Lontoossa. Aucklandilaisten mielipiteet '
+          + 'valmiista talosta olivat ristiriitaisia, ja osa vertasi sitä '
+          + 'juustonpalaan ja silitysrautaan. Suuri sali vetää 1 673 '
+          + 'henkeä, se on tehty Leipzigin Gewandhausin malliin, ja sen '
+          + 'akustiikkaa pidetään maailman parhaimpiin kuuluvana.'
+          + '\n\n'
+          + 'Salin urut vuodelta 1911 ovat maan suurin soitin ja Uuden-'
+          + 'Seelannin laissa erikseen suojeltu esine. Ne kustansi '
+          + 'entinen pormestari Henry Brett, suunnitteli englantilainen '
+          + 'urkuri Edwin Lemare ja rakensi norwichilainen Norman and '
+          + 'Beard. Urut muutettiin 1969–1970 barokkisointiin, purettiin '
+          + '2008 ja koottiin uudelleen bonnilaisen Orgelbau Klaisin '
+          + 'työnä; ne vihittiin käyttöön 21. maaliskuuta 2010. Talon '
+          + 'sisätilat kunnostettiin 1994–1997 kolmellakymmenellä '
+          + 'kolmella miljoonalla dollarilla, koska raudoittamaton '
+          + 'muuraus ei täyttänyt maanjäristysvaatimuksia.',
+      kuvat: [
+        {
+          tiedosto: 'Auckland Town Hall from Sky Tower.jpg',
+          selite: 'Talo oli valmistuessaan 1911 kaupungin ensimmäinen '
+            + 'pysyvä paikka, jossa hallinto ja konsertit olivat saman '
+            + 'katon alla.',
+          lahde: 'Bob Linsdell, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Karangahape Road': {
+      aika: '1868',
+      teksti: 'Karangahape on maorinkielinen nimi, jonka alkuperästä on useita '
+          + 'tulkintoja: se on käännetty niin "mutkittelevaksi ihmisten '
+          + 'harjanteeksi" kuin "Hapen kutsumiseksi". Hape oli Tainui-'
+          + 'kanootin tohunga eli tietäjä, joka asui Manukau-sataman '
+          + 'seudulla, ja harjannetta pitkin kulkenutta polkua sanottiin '
+          + 'nimellä Te Ara o Karangahape, Karangahapen tie. Katu on siis '
+          + 'vanhempi kulkureitti kuin Queen Street, jonka eurooppalaiset '
+          + 'rakensivat vasta 1840-luvulla, ja se oli 1900-luvun '
+          + 'puoliväliin asti Aucklandin keskustan ainoa maorinkielinen '
+          + 'kadunnimi.'
+          + '\n\n'
+          + 'Harjanne oli koko 1800-luvun kaupungin virallinen '
+          + 'eteläraja. Karangahape Road Districtiksi kutsuttu '
+          + 'oma tiepiiri perustettiin 5. lokakuuta 1868 ja aloitti '
+          + 'toimintansa 2. marraskuuta 1869 — isoisän saapuessa katu '
+          + 'hallinnoi siis itse itseään, ja vasta 1882 piiri liitettiin '
+          + 'Aucklandin kaupunkiin. Noin vuodesta 1900 1960-luvun alkuun '
+          + 'K Road oli kaupungin vilkkain ostoskatu: kaasulyhdyt '
+          + 'vaihdettiin sähköön 1908, vuoden 1935 valohanke sytytti '
+          + 'yhtenäisen valoketjun mailin matkalle, ja 1949 kadulle '
+          + 'asennettiin Uuden-Seelannin ensimmäiset loistevalot.'
+          + '\n\n'
+          + 'Nimeä yritettiin vaihtaa kolmesti. Vuonna 1908 käytiin '
+          + 'kokouksia ja lehtikirjoittelua sen puolesta, että pitkä '
+          + 'maorinkielinen nimi korvattaisiin eurooppalaisemmalla; '
+          + 'aihe palasi 1913 ja vielä 1953 ennen kuningattaren vierailua, '
+          + 'jolloin ehdotettiin nimeä Elizabeth Street. Kaupunki ei '
+          + 'suostunut kertaakaan, ja nimi säilyi. Moottoriteiden '
+          + 'rakentaminen ja muutto lähiöihin 1960-luvulta alkaen tekivät '
+          + 'kadusta syrjäisen ja huonomaineisen, mutta 1980- ja '
+          + '1990-luvuilta lähtien se on noussut kaupungin '
+          + 'kulttuurikeskuksiin. Vuonna 2021 kadulle maalattiin '
+          + 'sateenkaarisuojatie muistoksi siitä, että alue on ollut '
+          + 'seksuaalivähemmistöjen turvapaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Karangahape Highway District circa 1870.jpg',
+          selite: 'Harjanteelle perustettiin oma tiepiiri 1868, ja tämä '
+            + 'kartta sen alueesta piirrettiin noin 1870.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Symonds Streetin hautausmaa': {
+      aika: '1842',
+      teksti: 'Symonds Streetin hautausmaa oli Aucklandin ensimmäinen '
+          + 'virallinen hautausmaa, ja siihen haudattiin vuodesta 1842 '
+          + 'alkaen. Se on 5,8 hehtaarin lehtimetsä Grafton Gullyn '
+          + 'länsirinteellä Symonds Streetin ja Karangahape Roadin '
+          + 'kulmassa, ja nimi tulee William Cornwallis Symondsilta, '
+          + 'brittiupseerilta, joka oli näkyvästi mukana siirtokunnan '
+          + 'perustamisessa. Alue jaettiin aluksi neljään osaan: '
+          + 'anglikaaneille, katolisille ja juutalaisille sekä yhteinen '
+          + 'osa presbyteereille, wesleyläisille ja muille. Vuoteen 1852 '
+          + 'mennessä yhteisestä osasta tuli presbyteerien, ja rinnalle '
+          + 'tehtiin uusi wesleyläisten ja yleinen osa.'
+          + '\n\n'
+          + 'Kun Länsi-Aucklandiin perustettiin uusi kunnallinen '
+          + 'hautausmaa Waikumeteen, Symonds Street suljettiin uusilta '
+          + 'haudoilta 1886 — isoisän käydessä 1873 se oli siis vielä '
+          + 'kaupungin oma hautausmaa. Vanhoihin sukuhautoihin sai yhä '
+          + 'haudata, mutta uusia paikkoja ei myyty. Kaupunki otti '
+          + 'hoidon vastuulleen 1909. Täällä lepää suuri osa Aucklandin '
+          + 'varhaisista uudisasukkaista. Täällä lepäävät William Hobson, '
+          + 'Uuden-Seelannin ensimmäinen kuvernööri ja yksi Waitangin '
+          + 'sopimuksen laatijoista; Archibald Clark, joka valittiin '
+          + 'Aucklandin kauppalan ensimmäiseksi pormestariksi 1851; '
+          + 'kauppias ja juutalaisyhteisön johtaja David Nathan; sekä '
+          + 'Annie Jane Schnackenberg, joka teki työtä lähetystyön, '
+          + 'raittiusliikkeen ja naisten äänioikeuden puolesta.'
+          + '\n\n'
+          + '1960-luvun puolivälissä rakennettu eteläinen moottoritie '
+          + 'muutti hautausmaan: yli 4 100 vainajaa siirrettiin kahteen '
+          + 'muistopaikkaan hautausmaan sisällä, ja pinta-alasta katosi '
+          + 'noin neljännes. Siirron yhteydessä selvisi, kuinka tiheässä '
+          + 'haudat olivat — anglikaanien osassa 1 200 hautakiven alta '
+          + 'löytyi 2 000 hautaa ja katolisten osassa 400 kiven alta 2 100 '
+          + 'hautaa. Alue on nykyään suojeltu ykkösluokassa, ja kaupunki '
+          + 'pitää palkkalistoillaan kivenveistäjää hautakivien '
+          + 'kunnostamista varten; töitä riittää, sillä kunnostettuja '
+          + 'kiviä on toistuvasti rikottu.',
+      kuvat: [
+        {
+          tiedosto: 'Symonds Street Cemetery and the Waitematā Harbour, 1868.jpg',
+          selite: 'Hautausmaa oli vielä isoisän aikaan käytössä, ja John '
+            + 'Kinder valokuvasi sen aidatut haudat 1868.',
+          lahde: 'John Kinder, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ewelme Cottage': {
+      aika: '1863–1864',
+      teksti: 'Ewelme Cottage rakennettiin 1863–1864 Howickin kirkkoherralle '
+          + 'Vicesimus Lushille. Talo ei ollut hänen omaa asuntoaan varten '
+          + 'vaan hänen poikiaan varten: Parnell oli Uuden-Seelannin '
+          + 'anglikaanisen piispan istuin, ja pojat pääsivät sieltä '
+          + 'käsin kaupunginosan kirkolliseen oppikouluun samalla kun isä '
+          + 'hoiti tehtäviään muualla. Nimi tulee englantilaisesta '
+          + 'Ewelmen kirkosta.'
+          + '\n\n'
+          + 'Talo on puolitoistakerroksinen ja ulkoa yrjöläistyylinen, '
+          + 'mutta huonejako poikkeaa tyylin tavanomaisesta etu- ja '
+          + 'takahuonejaosta. Pohjapiirros saattaa olla laadittu jo 1850 '
+          + 'Englannissa yhdessä arkkitehdin kanssa, ja Lushiin lienee '
+          + 'vaikuttanut ajan kirkollinen suuntaus, joka suositteli '
+          + 'keskiaikaisia esikuvia. Alun perin huoneita oli viisi ja '
+          + 'niiden kylkiäisinä kaksi pulpettikattoista siipeä, '
+          + 'todennäköisesti astiainpesuhuone ja puuvaja. Kuisti '
+          + 'suljettiin 1865 lisätilaksi, noin 1871 taakse rakennettiin '
+          + 'keittiö ja ullakko, ja isot muutokset tehtiin 1882–1883.'
+          + '\n\n'
+          + 'Lushin perhe muutti talosta 1871 isän perässä Thamesiin, '
+          + 'mutta suku omisti sen yli sadan vuoden ajan ja myi sen '
+          + 'Aucklandin kaupungille vasta 1969; nykyään sitä hoitaa '
+          + 'Heritage New Zealand. Sisustus ja irtaimisto ovat säilyneet '
+          + '1800-luvun asussa, mukana alkuperäisiä huonekaluja ja 2 000 '
+          + 'kirjaa, ja pihassa on 1800-luvun puutarha. New Zealand '
+          + 'Herald on kutsunut taloa mahdollisesti tärkeimmäksi '
+          + 'suojelusäätiön kohteista, ja siinä kuvattiin osia elokuvasta '
+          + 'Piano.',
+      kuvat: [
+        {
+          tiedosto: 'Ewelme Cottage 20240117 120605 01.jpg',
+          selite: 'Talo rakennettiin 1863–1864 kirkkoherra Vicesimus Lushin '
+            + 'pojille, jotta he pääsivät Parnellin oppikouluun.',
+          lahde: 'Prosperosity, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Highwic: {
+      aika: '1862',
+      teksti: 'Highwic rakennettiin 1862 Alfred Bucklandille, varakkaalle '
+          + 'uudisasukkaalle ja maanomistajalle. Tontin osti 1861 hänen '
+          + 'ensimmäinen vaimonsa Eliza tuhannella punnalla, ja perhe '
+          + 'muutti taloon seitsemän lapsen kanssa seuraavana vuonna. '
+          + 'Rakennus on suurikokoinen esimerkki kirvesmiesgotiikasta, ja '
+          + 'se pystytettiin korkealle paikalle Newmarketin taajaman '
+          + 'yläpuolelle.'
+          + '\n\n'
+          + 'Eliza ehti saada talossa vielä kaksi lasta ja kuoli '
+          + 'keuhkokuumeeseen heinäkuussa 1866. Alfred meni toukokuussa '
+          + '1867 naimisiin kaksikymmentä vuotta nuoremman Matilda Jane '
+          + 'Frodshamin kanssa, ja tämä sai yksitoista lasta, joista '
+          + 'yhdeksän eli aikuisiksi; Matilda eli miestään vanhemmaksi ja '
+          + 'vietti vanhuutensa Highwicissä. Alkuperäistä kahdeksan '
+          + 'huoneen taloa laajennettiin 1874, 1883 ja 1884 sitä mukaa '
+          + 'kuin perhe ja varallisuus kasvoivat — isoisän käydessä '
+          + 'Aucklandissa talo oli siis vielä alkuperäisessä koossaan, ja '
+          + 'ensimmäinen laajennus alkoi seuraavana vuonna.'
+          + '\n\n'
+          + 'Talossa oli sali, makuuhuoneita, poikien makuusali, '
+          + 'pesutupa, keittiö, astiainpesuhuone, ulkotallit, tallirengin '
+          + 'asunto, biljardirakennus ja huoltopiha; 1900-luvun alussa '
+          + 'sisään rakennettiin kaksi kylpyhuonetta ammeineen, '
+          + 'vesiklosetteineen ja lämpimine vesineen. Suvun jälkeläiset '
+          + 'asuivat talossa vuoteen 1978, minkä jälkeen Uuden-Seelannin '
+          + 'suojelusäätiö ja Aucklandin kaupunki ostivat sen yhdessä, '
+          + 'jotta tonttia ei jaettaisi rakennuspaikoiksi. Museona talo '
+          + 'avattiin 1981.',
+      kuvat: [
+        {
+          tiedosto: 'Highwic from N.jpg',
+          selite: 'Talo valmistui 1862 Alfred Bucklandin perheelle, ja sitä '
+            + 'laajennettiin kolmesti perheen kasvaessa.',
+          lahde: 'Bjankuloski06, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Eden Park': {
+      aika: '1900',
+      teksti: 'Stadionin paikalla oli suo, jota ruokkivat Maungawhaun ja '
+          + 'Mount Albertin laavaonkalot yli 30 000 vuoden takaa. '
+          + 'Tāmakin maorit keräsivät suolta ruokaa ja tarveaineita. '
+          + 'Vuonna 1845 alueen osti cornwallilainen maanviljelijä John '
+          + 'Walters, eli isoisän aikaan tässä oli maatila. '
+          + 'Urheilukenttänä paikka on ollut vuodesta 1900 ja '
+          + 'krikettikenttänä 1903 alkaen, ja siitä saa kiittää Harry '
+          + 'Ryania, joka vuokrasi innostuneena palan Waltersin maata. '
+          + 'Kenttä oli kivinen ja kallioinen laidun, jonka notko täyttyi '
+          + 'sateella ja pysyi veden alla koko talven.'
+          + '\n\n'
+          + 'Vuonna 1907 kenttä oli kahdesti viikon ajan veden alla. '
+          + 'Ylläpito kävi kalliiksi, ja 1910 paikallinen krikettiseura '
+          + 'pyysi Aucklandin krikettiliittoa ottamaan kentän hoitoonsa; '
+          + '1912 maa siirtyi liiton uskotuille miehille, ja nimi Eden '
+          + 'Park vakiintui. Vuonna 1913 kenttä vuokrattiin ensin 21 '
+          + 'vuodeksi Aucklandin rugbyliitolle, joka kustansi '
+          + 'ensimmäisen 2 500 katsojan katsomon. '
+          + 'Ensimmäinen kansainvälinen krikettiottelu pelattiin 1914 ja '
+          + 'ensimmäinen rugbymaaottelu 27. elokuuta 1921 Etelä-Afrikkaa '
+          + 'vastaan 40 000 katsojan edessä.'
+          + '\n\n'
+          + 'Nykyään Eden Park on Uuden-Seelannin kansallisstadion, johon '
+          + 'mahtuu noin 50 000 katsojaa: talvella rugbya, kesällä '
+          + 'krikettiä. Täällä avattiin 1950 imperiumin kisat, ja se on '
+          + 'maailman ainoa areena, jolla on pelattu sekä rugby unionin '
+          + '(1987) että rugby leaguen (1988) maailmanmestaruuden '
+          + 'ratkaisuottelu. Vuoden 1981 Etelä-Afrikan-kiertueen '
+          + 'viimeisessä maaottelussa Marx Jonesin ja Grant Colen '
+          + 'ohjaama pienlentokone pudotti kentälle jauhopommeja osana '
+          + 'laajoja rotuerottelun vastaisia mielenosoituksia. Stadion '
+          + 'peruskorjattiin 256 miljoonalla dollarilla lokakuuhun 2010 '
+          + 'mennessä seuraavan vuoden rugbyn MM-kisoja varten.',
+      kuvat: [
+        {
+          tiedosto: 'Eden Park aerial from N.jpg',
+          selite: 'Kansallisstadionin paikalla oli 1800-luvulla suo ja sen '
+            + 'jälkeen maatila, ja urheilukenttä siitä tuli vasta 1900.',
+          lahde: 'Bjankuloski06, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Maungawhau: {
+      aika: 'noin 28 000 vuotta sitten',
+      teksti: 'Maungawhau eli Mount Eden on kuonakartio ja tūpuna maunga, '
+          + 'esivanhempien vuori. Sen huippu on 196 metriä merenpinnasta '
+          + 'ja siten kannaksen korkein luonnollinen kohta, ja kraatteri '
+          + 'on viidenkymmenen metrin syvyinen. Nimi tarkoittaa '
+          + 'whau-puun vuorta, ja kraatteria sanotaan nimellä Te Upu Kai '
+          + 'a Mataaho, Mataahon kulho: Mataaho on jumaluus, jonka '
+          + 'kerrotaan asuvan kraatterissa ja vartioivan maan sisään '
+          + 'kätkettyjä salaisuuksia. Englanninkielisen nimen valitsi '
+          + 'kuvernööri William Hobson esimiehensä, Aucklandin jaarlin '
+          + 'George Edenin mukaan. Vuori purkautui kolmesta kraatterista '
+          + 'noin 28 000 vuotta sitten, ja eteläisimmän viimeiset '
+          + 'purkaukset täyttivät pohjoiset kraatterit.'
+          + '\n\n'
+          + 'Kannaksella on asuttu 1200- tai 1300-luvulta lähtien. '
+          + 'Maungawhau oli Huakaiwakan, Waiohuan kantaisän, tärkein pā, '
+          + 'ja se pysyi heimoliiton keskeisenä paikkana 1600-luvulta '
+          + 'noin vuoteen 1740. Rinteet pengerrettiin laajalti ja neljän '
+          + 'alueen ympärille kaivettiin puolustusvallihaudat. '
+          + 'Huakaiwakan pojanpoika Kiwi Tāmaki siirsi Waiohuan vallan '
+          + 'keskuksen Maungawhaulta Maungakiekielle, ja 1700-luvun '
+          + 'puolivälistä vuori kuului Ngāti Whātuan alueeseen. Kun '
+          + 'heimo lahjoitti 1840 maata uuden pääkaupungin paikaksi, '
+          + 'Maungawhau oli lahjoitetun alueen eteläisin kolkka.'
+          + '\n\n'
+          + 'Vielä 1850-luvulla kartiolla erotti neljä selvää '
+          + 'pengerrystä, jotka myöhemmin peittyivät kasvillisuuteen ja '
+          + 'louhintaan. Huipulle vei tie jo 1869, ja 1870 paikallinen '
+          + 'tielautakunta alkoi periä maksua laidunoikeudesta — isoisän '
+          + 'aikaan rinteillä siis laidunsi karjaa. Huipun kolmiomittaus'
+          + 'pisteen tasanteen rakentamisessa auttoi prinssi Alfredin '
+          + 'norsu, jolle maksettiin karkeilla, pullilla ja oluella. '
+          + '1900-luvun alussa Mount Edenin vankilan vangit louhivat '
+          + 'vuorelta kiveä tietöihin. Huipputie suljettiin '
+          + 'moottoriajoneuvoilta 2011, ja vuoden 2014 '
+          + 'sopimusratkaisussa Aucklandin neljäntoista esivanhempien '
+          + 'vuoren omistus siirtyi kolmentoista iwin ja hapūn '
+          + 'muodostamalle Ngā Mana Whenua o Tāmaki Makaurau '
+          + '-yhteenliittymälle. Kraatterin reunalle rakennettiin 2020 '
+          + 'pitkospuut, jotka suojelevat pengerryksiä ja vanhoja '
+          + 'kūmara-kuoppia.',
+      kuvat: [
+        {
+          tiedosto: 'Maungawhau in 2009.jpg',
+          selite: 'Vuoren rinteillä näkyvät yhä pā-ajan pengerrykset, ja '
+            + 'huippu on kannaksen korkein luonnollinen kohta.',
+          lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

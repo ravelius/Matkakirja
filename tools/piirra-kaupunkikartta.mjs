@@ -3243,6 +3243,48 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 40.788, etela: 40.698, lansi: -74.056, ita: -73.9372 },
   },
+  auckland: {
+    /*
+     * KANNAKSEN POHJOISPUOLI: Waitematān ranta Maungawhaulle
+     * (23.8.2026). Ruutu on 5,8 × 5,8 km, eli työkalun oman ohjeen
+     * keskivaiheilla (5–8 km) — Aucklandin kohteet mahtuvat siihen
+     * ilman New Yorkin kaltaista poikkeusta.
+     *
+     * ENSIMMÄINEN ETELÄISEN PALLONPUOLISKON RUUTU. Leveysasteet ovat
+     * negatiivisia, ja se toimii sellaisenaan: rajaus antaa Overpassille
+     * bbox-järjestyksen (etela < pohjoinen myös etumerkillisenä), ja
+     * suoraPiste laskee y:n erotuksena pohjoisreunasta.
+     *
+     * KANNAS EI MAHDU KOKONAAN, ja se on tietoinen valinta. Auckland on
+     * kahden sataman välissä, mutta Manukau on Onehungassa noin
+     * -36,928 eli viisi kilometriä eteläreunan alapuolella: molemmat
+     * meret vaatisivat kymmenen kilometrin ruudun (New Yorkin mitta),
+     * ja väliin jäisi pelkkää esikaupunkia ilman kohteita. Kartta
+     * näyttää siksi Waitematān puolen, ja kannaksen kapeus kerrotaan
+     * esittelytekstissä (maakartat.js).
+     *
+     * POHJOISREUNA -36,836 ON VEDETTY LAITUREIDEN YLÄPUOLELLE mutta ei
+     * Pohjoisrannalle asti: Devonport on -36,832 ja Harbour Bridgen
+     * keskikohta -36,829, ja niiden ottaminen mukaan olisi tuonut
+     * ruutuun kilometrin lisää avovettä ja siirtänyt keskustan alas.
+     * Nyt Waitematāsta näkyy 700 metrin nauha, eli laiturit ja
+     * rantaviiva erottuvat mutta vesi ei hallitse kuvaa.
+     *
+     * ETELÄREUNA -36,888 ON MAUNGAWHAUN MUKAAN. Maungakiekie /
+     * One Tree Hill (-36,900) jäisi vielä kilometrin alapuolelle, ja
+     * se sopii: vuori on kaupunkilehden oma nosto eikä kartan kohde
+     * (kulttuuri-kategoriat.js, nostot K1 ja H2).
+     *
+     * meri: true. Waitematā on OSM:ssä rantaviivaa (natural=coastline)
+     * eikä vesimonikulmio, joten ilman lippua kartan yläreuna ja
+     * Hobson Bay olisivat paperin värisiä.
+     *
+     * EI jalkakäytäviä eikä palveluteitä: Aucklandin keskusta on
+     * väljä katuverkko, ja koeajossa kuva luki hyvin ilman niitä.
+     */
+    rajat: { pohjoinen: -36.836, etela: -36.888, lansi: 174.7317, ita: 174.7967 },
+    meri: true,
+  },
 };
 
 /*

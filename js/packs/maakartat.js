@@ -8832,6 +8832,72 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Trinity Church', lat: 40.70806, lon: -74.01222 },
     ],
   },
+  /*
+   * AUCKLAND (nippu 8, 23.8.2026). Rajaus on 5,8 kilometriä kanttiinsa
+   * Waitematān laitureilta Maungawhaulle, eli tavallista kokoa —
+   * perustelu ja hylätyt vaihtoehdot ovat
+   * tools/piirra-kaupunkikartta.mjs:n auckland-lohkossa.
+   *
+   * KANNAS EI MAHDU KOKONAAN RUUTUUN. Auckland on kahden sataman
+   * välissä, mutta Manukau on viisi kilometriä eteläreunan
+   * alapuolella: molemmat meret vaatisivat New Yorkin mittaisen
+   * kymmenen kilometrin ruudun, jonka keskiosassa ei olisi yhtään
+   * kohdetta. Kartta näyttää Waitematān puolen, ja kannaksen kapeus
+   * kerrotaan esittelyssä.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Kaupunkilehden nostot
+   * (kulttuuri-kategoriat.js: auckland) ovat Tāmaki Makaurau ja
+   * Maungakiekien pā, Ngāti Whātuan maalahjoitus, pääkaupungin
+   * menetys Wellingtonille, tulivuorikenttä, museon vaiheet, Auckland
+   * Domain ja Waikaton sota St Patrick'sin kuvalla — yksikään kartan
+   * kymmenestä kohteesta ei ole niiden aihe. Auckland Domain, museo,
+   * Maungakiekie ja St Patrick's jäivät siksi pois, vaikka kolme
+   * ensimmäistä mahtuisi ruutuun.
+   *
+   * MAUNGAWHAU ON MUKANA, vaikka se vilahtaa lehden avauskuvan ja
+   * yhden herokuvan selitteessä. Se on New Yorkin Empire State
+   * Buildingin tilanne: kohde ei ole minkään noston aihe, ja juttu
+   * kertoo eri asian kuin selitteet (kraatterin nimi, huipun tie ja
+   * laidunmaksut 1870, norsu, vuoden 2014 sopimusratkaisu).
+   *
+   * OLD GOVERNMENT HOUSE JA TAIDEMUSEO OVAT RUUDUSSA MUTTA EIVÄT
+   * PISTELISTALLA: kumpikin on runsaat kaksisataa metriä Albert
+   * Parkin pisteestä, ja numeroympyrät menisivät päällekkäin (Petran,
+   * Mekan ja Karachin oppi). Kuvernöörintalo kerrotaan Albert Parkin
+   * omassa jutussa.
+   */
+  auckland: {
+    polku: 'assets/kartat/auckland-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -36.836, etela: -36.888, lansi: 174.7317, ita: 174.7967 },
+    esittely: 'Kartan alue on Waitematān laitureilta Maungawhaun '
+      + 'kraatterille. Pohjoisessa on satama, jonka varassa kaupunki '
+      + 'eli isoisän aikaan, keskellä Queen Streetin laakso ja sen '
+      + 'eteläreunana Karangahapen harjanne, idässä Parnellin '
+      + 'siirtolaiskaupunginosa ja etelässä Newmarket ja tulivuoret. '
+      + 'Kannaksen toinen meri, Manukau-satama, jää viisi kilometriä '
+      + 'eteläreunan alapuolelle. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KYMMENEN KOHDETTA, numerointi pohjoisesta etelään kuten New
+       * Yorkissa ja Karachissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 23.8.2026; Albert Parkilla ja Ewelme
+       * Cottagella ei ole siellä koordinaatteja, joten niiden pisteet
+       * ovat Wikidatan P625:stä (Q4710966 ja Q79301226).
+       */
+      { nimi: 'Ferry Building', lat: -36.843, lon: 174.767 },
+      { nimi: 'Victoria Park Market', lat: -36.8485, lon: 174.754 },
+      { nimi: 'Albert Park', lat: -36.8507, lon: 174.7675 },
+      { nimi: 'Aucklandin kaupungintalo', lat: -36.852686, lon: 174.763491 },
+      { nimi: 'Karangahape Road', lat: -36.857794, lon: 174.759704 },
+      { nimi: 'Symonds Streetin hautausmaa', lat: -36.8595, lon: 174.7642 },
+      { nimi: 'Ewelme Cottage', lat: -36.862721, lon: 174.783752 },
+      { nimi: 'Highwic', lat: -36.8718, lon: 174.7749 },
+      { nimi: 'Eden Park', lat: -36.875, lon: 174.744722 },
+      { nimi: 'Maungawhau', lat: -36.877, lon: 174.764 },
+    ],
+  },
 };
 
 /*
