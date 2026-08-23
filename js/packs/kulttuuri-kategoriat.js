@@ -50980,4 +50980,554 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * NEW YORK (Opus 23.8.2026). Pohjois-Amerikan laudan PILOTTIKAUPUNKI
+   * ja mantereen ensimmäinen kaupunkilehti: kohteella ei ollut
+   * kategorioita eikä ARTIKKELIT-merkintää ennen tätä. Intro ja
+   * teksti-kenttä kirjoitettiin samassa erässä uuteen tiedostoon
+   * js/packs/northamerica-artikkelit.js (spec-mantereet.md, Fablen
+   * päätös 1). Pohjana ovat docs/mantereet-tyoaineisto/
+   * faktapohja-newyork.md ja tarkistus-newyork.md, jotka luettiin
+   * yhdessä; ristiriidoissa tarkistusraportti voittaa. Jokainen väite on
+   * lisäksi luettu en-Wikipedian raakateksteistä 23.8.2026: New York
+   * City, Brooklyn Bridge, Central Park, Bethesda Terrace and Fountain,
+   * Castle Clinton, History of Grand Central Terminal, Panic of 1873,
+   * Wall Street, Little Italy, Manhattan, Trinity Church (Manhattan) ja
+   * New York Stock Exchange Building.
+   *
+   * TARKISTUSRAPORTIN KOLME KORJAUSTA ON TEHTY. (1) Kaapelien kehruu:
+   * faktapohja sanoi elokuuta 1876, mutta "Brooklyn Bridge" osio
+   * "Cables" sanoo, että ensimmäinen koevaijeri pingotettiin tornien
+   * välille 29. toukokuuta 1877 — nosto sanoo toukokuuta 1877.
+   * (2) "Long Depression" EI ole Yhdysvaltain nimitys 1870-luvun
+   * lamalle vaan Britannian; Yhdysvalloissa käytettiin 1930-luvulle
+   * asti nimeä "Great Depression". Koko nimityskysymys on jätetty pois
+   * sekaannuksen välttämiseksi, ja nosto sanoo vain, että lama jatkui
+   * Yhdysvalloissa vuoteen 1877 (Panic of 1873 -artikkelin johdanto).
+   * (3) Trinity Churchin tornin korkeus on 281 jalkaa, ei 279 — luku ei
+   * päätynyt tähän lohkoon, mutta ristiriita kirjataan: "Brooklyn
+   * Bridge" sanoo 279 jalkaa ja "Trinity Church (Manhattan)" 281, ja
+   * tarkistus totesi jälkimmäisen oikeaksi.
+   *
+   * KOLME EPÄVARMAA KOHTAA ON KIRJOITETTU AUKI TAI PEHMENNETTY.
+   * (1) Minuitin kaupan nykyarvo vaihtelee Wikipedia-artikkelien välillä
+   * (900 dollaria vuoden 2018 rahassa "New York City" -artikkelissa,
+   * 1 143 dollaria vuoden 2020 rahassa "Peter Minuit" -artikkelissa);
+   * nosto sanoo "noin yhdeksänsataa dollaria, mutta eri lähteet
+   * päätyvät eri lukuun". (2) Castle Gardenin läpi kulkeneiden määrä on
+   * lähteestä riippuen 7,5 tai 8 miljoonaa, ja lehti sanoo molemmat.
+   * (3) Manhattanin kallioperän ja pilvenpiirtäjien syy-yhteys on
+   * kiistanalainen: "Geography of New York City" huomauttaa, että
+   * uudempi tutkimus painottaa taloudellisia syitä. Oppaan jakso 2
+   * kertoo kallioperän tosiasiana ja syy-yhteyden perinteisenä
+   * selityksenä.
+   *
+   * SISÄLTÖLINJAUS on spec-mantereet.md:n USA-kohta. Orjuus kerrotaan
+   * suoraan mutta ilman yksityiskohtia: oppaan jakso 4 sanoo, että Wall
+   * Streetin päässä toimi 1711–1762 kaupungin virallinen orjamarkkina.
+   * Vuoden 1863 mellakat on jätetty kokonaan pois faktapohjan oman
+   * rajauksen mukaisesti (rotuun perustuva joukkoväkivalta ei kestä
+   * mainintatason lyhennystä). Ei nykypolitiikkaa eikä nykyrikollisuutta.
+   *
+   * ANAKRONISMIVAROITUS on otettu vakavasti: Vapaudenpatsasta (1886) ja
+   * Ellis Islandia (1892) EI ollut olemassa 1873, ja nosto K4 sanoo sen
+   * ääneen — isoisä näki vain Castle Gardenin. Kansikuvassa 1 patsas
+   * näkyy nykysataman kaukaisena siluettina, ja se on nykykuva, ei
+   * kuvaus vuodesta 1873.
+   *
+   * ENNEN JA NYT -PARI on siirretty sellaisenaan matkakirjan
+   * valokuvataulusta (js/packs/northamerica-valokuvat.js, avain
+   * newyork): tiedostonimet, vuosi ja lähderivit on kopioitu, ja
+   * kumpaankin on kirjoitettu uusi YHDEN VIRKKEEN selite. Vanha vedos
+   * on noin vuodelta 1900 eli reilusti harmaasävyrajan (1960)
+   * alapuolella. Koska pari vie etusivun pikkuriviltä kaksi kansikuvaa
+   * kolmesta, Mulberry Street ei esiinny enää muualla lehdessä —
+   * oppaan jakso 3 kertoo saman korttelin tarinan ilman omaa kuvaa.
+   *
+   * SÄÄRIVI ON js/packs/saatiedot.js:ssä, ja se on laskettu Open-Meteon
+   * arkistosta (ERA5, normaalikausi 1991–2020) pisteestä 40,71 /
+   * -74,01; ylin ja alin ovat samasta ajosta. Rivi on noin puolitoista
+   * astetta viileämpi ja runsaat sata millimetriä vähäsateisempi kuin
+   * Central Parkin oma mittausasema, koska ERA5-ruutu ulottuu Hudsonin
+   * yli. Ero on kirjoitettu auki sekä saatiedot.js:n lohkokommenttiin
+   * että oppaan jaksoon 5 (Siinain ja Petran ennakkotapaus), ja jakso 5
+   * sanoo ääneen, että sen omat luvut ovat aseman normaaleja eivätkä
+   * graafin ERA5-lukuja.
+   *
+   * KUVAT: etusivun ison karusellin kolme kuvaa (avauskuvat-kenttä)
+   * ovat laajoja yleiskuvia kaupungin eri puolilta — satama etelästä,
+   * Lower Manhattan lännestä Hudsonin yli ja Central Park ilmasta —
+   * omistajan 21.8.2026 kansikaruselli-linjauksen mukaisesti.
+   * Herokuvat generoidaan erikseen myöhemmin samaan listaan
+   * (Helsingin malli), eikä niille jätetty tyhjiä paikkoja. Jokainen kuva on
+   * katsottu silmin 900 pikselin esikatselusta, lisenssi ja tekijä
+   * haettu erälukuna Commonsin extmetadatasta ja leveys tarkistettu
+   * (pienin 2 500 px). AIHETOISTO: Brooklynin silta esiintyy kahdesti
+   * (Currier & Ives -kivipiirros nostossa, nykyvalokuva avauskuvissa)
+   * ja Central Park kolmesti (ilmakuva kannessa, enkelipatsas nostossa,
+   * Mall syksyllä oppaassa) — eri tiedostot, eri aikakaudet ja eri
+   * kuvakulmat, ja molemmat ovat lehden kantavia 1873-aiheita.
+   * KUVAHYLKÄYKSET on kirjattu raporttiin; yleisimmät syyt olivat
+   * tunnistettavat kasvot etualalla (Battery Parkin kirjakauppa, Broad
+   * Streetin katukuva, City Hallin portaat), kuvan päälle lisätty
+   * kehys tai arkistoleima (South Street Seaportin mustavalkokuva,
+   * Trinity Churchin photochrom studion tekstillä, Castle Gardenin
+   * etsaus MICROFILMED-leimalla, N.Y. Stock Exchange negatiiviin
+   * raapustetulla tekijämerkinnällä) ja lisenssi, jota talon sääntö ei
+   * salli (Brooklyn Museumin loistava kuva sillan tornista rakenteilla
+   * on "No known copyright restrictions", ei PD/CC).
+   *
+   * KAKSI LÄHDERIVIÄ ON NORMALISOITU, ja se kerrotaan tässä, koska
+   * talon sääntö on kirjoittaa tekijä täsmälleen extmetadata.Artist-
+   * muodossa. Currier & Ivesin kivipiirroksessa Artist-kenttä on
+   * "Currier & Ives." pisteineen; lähderiviltä on jätetty vain se
+   * loppupiste pois, jotta rivi ei saisi kahta pistettä peräkkäin.
+   * Currier & Ivesin arkkiin kuuluu painettu otsikko ja insinöörien
+   * nimilista kuvan alla sekä Library of Congressin viivakoodi arkin
+   * reunassa; ne ovat julkaisijan ja arkiston omia merkintöjä, eivät
+   * vesileimoja, ja hyväksytään samalla perusteella kuin Karachin
+   * ranskalainen satama-atlas.
+   */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
+  newyork: [
+    {
+      id: 'kaupunki',
+      nimi: 'New York',
+      johdanto: 'Manhattanin, Brooklynin, Queensin, Bronxin ja Staten Islandin '
+        + 'saaristokaupunki Hudsonjoen suulla. Hollantilaiset perustivat sen '
+        + 'New Amsterdamiksi 1620-luvulla, englantilaiset nimesivät sen '
+        + 'uudelleen 1664, ja isoisän saapuessa 1873 se oli höyrylaivakauden '
+        + 'vilkkain satama.',
+      /*
+       * KANSIKUVAT jäävät tällä kaupungilla pikkuriviltä piiloon, koska
+       * ennenNyt-pari korvaa rivin (js/lehti.js piirraLehtiKuvat) —
+       * sama tilanne kuin Helsingissä. Ne ovat silti kolme kelvollista
+       * kaupunkikuvaa suurennossarjaa varten: satama, silta ja Midtown.
+       */
+      kansikuvat: [
+        {
+          tiedosto: '2012 07 30 New York, Manhattan, South Street Seaport.JPG',
+          selite: 'South Street Seaportin laitureissa on säilytetty vanhoja '
+            + 'purjelaivoja muistona ajasta, jolloin East Riverin ranta oli '
+            + 'mastojen täyttämä.',
+          lahde: 'Florival fr, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Brooklin Bridge NY.jpg',
+          selite: 'Sillan kävelytie kulkee ajoradan yläpuolella, ja se oli '
+            + 'mukana jo John Roeblingin alkuperäisessä suunnitelmassa.',
+          lahde: 'Eurico Craveiro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Goodies from Top of the Rock (Unsplash).jpg',
+          selite: 'Midtown kasvoi kaupungin toiseksi keskustaksi vasta '
+            + 'rautatieaseman jälkeen; Empire State Building valmistui 1931.',
+          lahde: 'jonathan riley jonathan_christian_photography, Wikimedia Commons (CC0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI on etusivun iso kuvapaikka, ja siihen kuuluvat
+       * omistajan 21.8.2026 kansikaruselli-linjauksen laajat yleiskuvat
+       * kaupungin ERI puolilta: satama etelästä, Lower Manhattan
+       * lännestä Hudsonin yli ja Central Park ruutukaavoineen ilmasta.
+       * Yksikään kolmesta ei ole minkään noston aiheena samalla
+       * tiedostolla. Kolme generoitua herokuvaa tulee tähän samaan
+       * listaan myöhemmin (Helsingin malli, O9) — paikkoja niille ei
+       * jätetty tyhjinä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Jersey City & Manhattan - Staten Island Ferry, New York, NY, USA - August 19, 2015 01.jpg',
+          selite: 'Satamaan tullaan Narrowsin salmen kautta, ja juuri tätä '
+            + 'reittiä pitkin saapuivat höyrylaivat, joiden matkustajat '
+            + 'kirjattiin Castle Gardenissa.',
+          lahde: 'Giorgio Galeotti, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Lower Manhattan skyline 21.jpg',
+          selite: 'Manhattanin eteläkärki on kaupungin vanhin kolkka: sen '
+            + 'rantaviiva on siirtynyt täytemaan myötä kauas hollantilaisen '
+            + 'kauppa-aseman rannasta.',
+          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Drone photo of Central Park 20170506-001-2 (33679392984).jpg',
+          selite: 'Central Park varattiin puistoksi 1853, ja ruutukaava '
+            + 'rakennettiin sen ympärille — puisto ei jäänyt kaupungin '
+            + 'reunalle vaan keskelle.',
+          lahde: 'CucombreLibre from New York, NY, USA, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'NYC Mulberry Street 3g04637u.jpg',
+          vuosi: 'noin 1900',
+          selite: 'Mulberry Streetin kortteli oli 1880-luvulta alkaen New '
+            + 'Yorkin italialaissiirtolaisten sydän, ja huippuvuonna 1910 '
+            + 'alueella asui lähes 10 000 italialaista.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Little Italy, Mulberry Street, Manhattan, New York (7237377196).jpg',
+          selite: 'Little Italy on kutistunut viiden korttelin mittaiseksi '
+            + 'kaistaleeksi Mulberry Streetillä Canal Streetin pohjoispuolella.',
+          lahde: 'Ken Lund, Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Saari kuudellakymmenellä guldenilla',
+          teksti: 'Hollantilaiset perustivat 1624 turkiskauppa-aseman Governors '
+            + 'Islandille, ja seuraavana vuonna alkoi Fort Amsterdamin '
+            + 'rakentaminen Manhattanin eteläkärkeen. Uuden Alankomaiden '
+            + 'johtaja Peter Minuit osti saaren canarsie-lenapeilta 1626 '
+            + 'kuudenkymmenen guldenin arvosta; nykyrahassa arvio on noin '
+            + 'yhdeksänsataa dollaria, mutta eri lähteet päätyvät eri lukuun. '
+            + 'Laajalti kerrottu tarina kahdenkymmenenneljän dollarin '
+            + 'lasihelmistä on osoitettu vääräksi. Asutus sai nimekseen New '
+            + 'Amsterdam 1626 ja kaupunginoikeudet vasta 1653.',
+          tiedosto: 'Stad Amsterdam in Nieuw Nederland (City Amsterdam in New Netherland) Castello Plan 1660.jpg',
+          selite: 'Siirtokunnan pohjoisrajalle rakennettiin 1653 paalutus '
+            + 'englantilaisten ja alkuperäisväestön varalta, ja sen paikalle '
+            + 'jäänyt katu on nykyinen Wall Street.',
+          lahde: 'Johannes Vingboons (cartographer), Jacques Cortelyou (surveyor), Wikimedia Commons (PD)',
+          wiki: 'New York City',
+        },
+        {
+          otsikko: 'Silta oli vielä pelkkiä torneja',
+          teksti: 'Kesään 1873 mennessä Brooklynin sillasta oli pystyssä kaksi '
+            + 'keskeneräistä tornia: Brooklynin puoleinen kohosi 164 jalkaa '
+            + 'ja Manhattanin puoleinen 88 jalkaa keskiveden yläpuolelle. '
+            + 'Ensimmäinen koevaijeri pingotettiin tornien välille vasta '
+            + 'toukokuussa 1877. Pääsuunnittelija John Roebling kuoli '
+            + 'jäykkäkouristukseen 1869 saatuaan jalkansa murskaan lautan ja '
+            + 'laiturin väliin. Poikansa Washington halvaantui kaisonitautiin '
+            + 'ja johti työtä asunnostaan käsin, ja vaimo Emily Warren '
+            + 'Roebling opetteli kaapelilaskelmat ja valvoi työmaata '
+            + 'yksitoista vuotta.',
+          tiedosto: 'The great East River suspension bridge-Connecting the cities of New York and Brooklyn - Parsons & Atwater, del. LCCN96512348.jpg',
+          selite: 'Silta avattiin liikenteelle 24. toukokuuta 1883 ja oli '
+            + 'valmistuessaan maailman pisin riippusilta, keskijänteeltään '
+            + '1 595 jalkaa.',
+          lahde: 'Currier & Ives, Wikimedia Commons (PD)',
+          wiki: 'Brooklyn Bridge',
+        },
+        {
+          otsikko: 'Enkeli, joka siunaa vettä',
+          teksti: 'Central Park ei ollut isoisän aikaan valmis: rakennustyöt '
+            + 'alkoivat 1857, ensimmäiset osat avattiin yleisölle joulukuussa '
+            + '1858 ja valmiiksi puisto julistettiin vasta 1876. Juuri vuonna '
+            + '1873 paljastettiin puiston sydämessä Bethesda-terassilla '
+            + 'pronssinen suihkulähdepatsas Angel of the Waters. Sen '
+            + 'suunnitteli 1868 Emma Stebbins, ensimmäinen nainen, joka sai '
+            + 'New Yorkin kaupungilta tilauksen suureen julkiseen '
+            + 'taideteokseen. Enkeli siunaa vettä muistona '
+            + 'Croton-vesijohdosta, joka toi kaupunkiin ensimmäisen puhtaan '
+            + 'juomaveden 1842.',
+          tiedosto: 'Angel-Bethesda-Fountain-Central-Park-New-York-September-2014.jpg',
+          selite: 'Kahdeksan jalan korkuinen pronssienkeli oli puiston '
+            + 'alkuperäisessä suunnitelmassa ainoa patsas, jonka kaupunki '
+            + 'rahoitti.',
+          lahde: 'Acediscovery, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Bethesda Terrace and Fountain',
+        },
+        {
+          otsikko: 'Portti ennen Vapaudenpatsasta',
+          teksti: 'Ennen Ellis Islandia maahantulijat kirjattiin Castle '
+            + 'Gardenissa, vanhassa linnakkeessa Manhattanin eteläkärjessä. '
+            + 'Se toimi Yhdysvaltain ensimmäisenä maahantuloasemana '
+            + '1855–1890, ja sen kautta kulki lähteestä riippuen 7,5 tai 8 '
+            + 'miljoonaa siirtolaista. Saksalaiset ja jiddishinkieliset '
+            + 'juutalaiset ääntivät nimen Kesselgarteniksi, ja sanasta tuli '
+            + 'yleisnimitys meluisalle ja sekavalle paikalle, jossa puhutaan '
+            + 'kaikkia kieliä. Kesällä 1873 kaupunki, osavaltio ja '
+            + 'liittovaltio riitelivät yhä siitä, kuka laitoksen omisti — '
+            + 'riita jatkui koko vuosikymmenen. Vapaudenpatsasta isoisä ei '
+            + 'voinut nähdä: se vihittiin vasta 1886.',
+          tiedosto: 'Castle Clinton, Battery Park - NYC, Set2011 (6181406976).jpg',
+          selite: 'Linnake rakennettiin 1808–1811 rannikkopatteriksi, ja siitä '
+            + 'on sittemmin tehty huvipaikka, maahantuloasema ja kaupungin '
+            + 'ensimmäinen akvaario.',
+          lahde: 'Ana Paula Hirama, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Castle Clinton',
+        },
+        {
+          otsikko: 'Rautatiekausi saapuu 42. kadulle',
+          teksti: 'Cornelius Vanderbilt kokosi kolme rautatietä yhdelle asemalle: '
+            + 'Grand Central Depotin rakentaminen alkoi 1. syyskuuta 1869 ja '
+            + 'asema valmistui lokakuussa 1871. Harlemin rata siirtyi sinne '
+            + '9. lokakuuta, New Haven viikkoa myöhemmin ja New York Central '
+            + '1. marraskuuta. Lasinen junahalli oli noin 530 jalkaa pitkä ja '
+            + '200 jalkaa leveä, ja kaksitoista raidetta veti 150 vaunua '
+            + 'kerrallaan — se oli valmistuessaan maailman suurin '
+            + 'rautatieasema. Paikka oli tuolloin kaupungin rakennetun alueen '
+            + 'ulkopuolella, ja rahoittajatkin varoittelivat rakentamasta '
+            + 'niin syrjään.',
+          tiedosto: 'Grand Central Depot (NYPL b13476047-421000).jpg',
+          selite: 'Aseman tilalle nousi samalle tontille nykyinen Grand Central '
+            + 'Terminal, joka avattiin 2. helmikuuta 1913.',
+          lahde: 'C. K. Bill, Wikimedia Commons (PD)',
+          wiki: 'History of Grand Central Terminal',
+        },
+        {
+          otsikko: 'Syksy, jolloin raha loppui',
+          teksti: 'Syyskuun 18. päivänä 1873 pankkitalo Jay Cooke & Company teki '
+            + 'konkurssin, kun se ei saanut myydyksi Northern Pacific '
+            + '-rautatien obligaatioita. Kaatuminen laukaisi pankkien '
+            + 'ketjureaktion, ja New Yorkin pörssi sulki ovensa kymmeneksi '
+            + 'päiväksi 20. syyskuuta alkaen. Kaupungissa jäi työttömäksi '
+            + 'neljännes työntekijöistä. Marraskuuhun mennessä 55 rautatietä '
+            + 'oli kaatunut, radanrakennus romahti 7 500 mailista 1 600 '
+            + 'mailiin ja 18 000 yritystä meni nurin kolmessa vuodessa. Lama '
+            + 'jatkui Yhdysvalloissa vuoteen 1877.',
+          tiedosto: 'Ame02019 03.JPG',
+          selite: 'Pörssin nykyinen pylväikkötalo 18 Broad Streetillä valmistui '
+            + '1903, ja sen päätykolmion veistokset esittävät kauppaa ja '
+            + 'teollisuutta.',
+          lahde: 'Gorup de Besanez, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Panic of 1873',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Flatiron-Building-NYC-September-2014.jpg',
+          selite: 'Flatiron Building avattiin 1902 kolmion muotoisella '
+            + 'tontilla, jonka Broadwayn vino linja leikkaa Viidennen '
+            + 'Avenuen ruutukaavasta.',
+          lahde: 'Acediscovery, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'New York on Yhdysvaltain suurin kaupunki ja sen viisi '
+          + 'kaupunginosaa yhdistyivät nykyiseksi kaupungiksi 1898. '
+          + 'Matkailijan New York on silti kapea kaistale: Manhattanin '
+          + 'saari on kapea ja pitkä, ja koko 1800-luvun kaupunki mahtuu '
+          + 'sen eteläpäähän. Etelässä ovat Wall Street, Battery Park ja South '
+          + 'Street Seaport, keskellä Midtownin pilvenpiirtäjät ja Grand '
+          + 'Central Terminal, pohjoisessa puisto. Metro kulkee lähes '
+          + 'kaikkialla ympäri vuorokauden, ja Staten Islandin lautalta '
+          + 'näkee saman sataman kuin isoisä laivastaan.',
+        artikkeli: {
+          nimi: 'Matkailijan New York',
+          taitto: 'opas',
+          teksti: 'Saariston kaupunki, jossa vanha satama, ruutukaava ja '
+            + 'puisto ovat kolmen metromatkan päässä toisistaan.',
+          nosto: 'Metrossa tehtiin vuonna 2019 noin 1,7 miljardia matkaa, ja '
+            + 'lähes koko verkko on auki vuorokauden ympäri — mikä on '
+            + 'maailman metrojen joukossa poikkeus eikä sääntö.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokoneella tullaan kolmelle kentälle: John F. '
+                + 'Kennedyn ja LaGuardian kentät ovat Queensissä, Newark '
+                + 'Liberty Hudsonin toisella puolella New Jerseyssä. '
+                + 'JFK:lta pääsee kaupunkiin AirTrainilla, joka vie metroon '
+                + 'ja Long Island Rail Roadille. Kaukojunat saapuvat Penn '
+                + 'Stationille, lähijunat sen lisäksi Grand Central '
+                + 'Terminalille, joka on laiturimäärältään ja pinta-alaltaan '
+                + 'maailman suurin rautatieasema. Lähijunaverkko on '
+                + 'Pohjois-Amerikan laajin: Long Island Rail Road, '
+                + 'Metro-North ja New Jersey Transit kokoavat yhteen yli '
+                + 'kaksisataaviisikymmentä asemaa ja kaksikymmentä rataa. '
+                + 'Kaupungin sisällä liikutaan metrolla, joka on '
+                + 'asemamäärältään yksi maailman suurimmista ja jonka '
+                + 'verkosta lähes kaikki on auki vuorokauden ympäri. '
+                + 'Manhattanin eteläkärjestä lähtee Staten Islandille '
+                + 'lautta, jolta ei peritä maksua.',
+              kuva: [
+                {
+                  tiedosto: 'Grand Central Station Main Concourse Rectilinear projection Jan 2006.jpg',
+                  selite: 'Grand Central Terminalin päähalli avattiin 1913, ja '
+                    + 'asemalla on 44 laituria ja 67 raidetta kahdessa '
+                    + 'tasossa.',
+                  lahde: 'Diliff, Wikimedia Commons (CC BY 2.5)',
+                },
+                {
+                  tiedosto: 'R160 E Train 010.jpg',
+                  selite: 'Metro avattiin 1904 erillisinä yksityisinä '
+                    + 'verkkoina, ja se sitoi vuoden 1898 kaupunginosat '
+                    + 'yhdeksi kaupungiksi.',
+                  lahde: 'Kidfly182, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'View of Verrazzano-Narrows Bridge from Staten Island Ferry, New York City, 20231002 1614 1741.jpg',
+                  selite: 'Verrazzano–Narrows-silta yhdistää Staten Islandin '
+                    + 'Brooklyniin ja on Amerikan pisin riippusilta.',
+                  lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Viisi kaupunginosaa, joista vain yksi on mantereella',
+              teksti: 'Manhattan ja Staten Island ovat omia saariaan, Brooklyn '
+                + 'ja Queens ovat Long Islandin läntisessä päässä, ja Bronx '
+                + 'on ainoa kaupunginosa, joka on pääosin kiinni '
+                + 'Yhdysvaltain mantereessa. Queens on pinta-alaltaan suurin '
+                + 'ja Staten Island esikaupunkimaisin — sitä sanotaan '
+                + 'puistojen kaupunginosaksi, ja sen keskellä on yksi '
+                + 'kaupungin viimeisistä koskemattomista metsistä. '
+                + 'Wisconsinin jääkauden aikana 75 000–11 000 vuotta sitten '
+                + 'seutu oli suuren mannerjäätikön reunassa: jään liike '
+                + 'erotti Long Islandin ja Staten Islandin toisistaan ja '
+                + 'jätti kallioperän lähelle pintaa. Perinteisen selityksen '
+                + 'mukaan juuri se antoi Manhattanin pilvenpiirtäjille '
+                + 'vakaan perustan, mutta uudempi tutkimus painottaa '
+                + 'taloudellisia syitä. Staten Islandille pääsee '
+                + 'Brooklynista Verrazzano–Narrows-sillan yli ja '
+                + 'Manhattanilta maksuttomalla lautalla.',
+              kuva: {
+                tiedosto: 'New York harbor upper bay at sunset with a ferry boat.jpg',
+                selite: 'Sataman yläpoukamassa ovat Governors Island, Liberty '
+                  + 'Island ja Ellis Island, ja avomerelle mennään '
+                  + 'Narrowsin salmen kautta.',
+                lahde: 'Alfred Twu, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kortteli, joka vaihtoi kieltä',
+              teksti: 'Mulberry Streetin kortteli Manhattanin alaosassa oli '
+                + '1880-luvun suuren italialaissiirtolaisuuden jälkeen New '
+                + 'Yorkin italialaisin paikka: vuonna 1910 alueella asui '
+                + 'lähes 10 000 italialaista, ja neljästoista kaupunginosa '
+                + 'oli yli 90-prosenttisesti italialaissyntyisten asuttama. '
+                + 'Little Italy sai alkunsa Mulberry Bendistä, joka oli osa '
+                + 'pahamaineista Five Pointsin slummia; toimittaja Jacob '
+                + 'Riis kutsui sitä New Yorkin slummien inhoittavaksi '
+                + 'ytimeksi. Toisen maailmansodan jälkeen moni '
+                + 'italialaisperhe muutti väljemmälle esikaupunkeihin, ja '
+                + 'eteläpuolelta laajentunut Chinatown otti korttelit '
+                + 'haltuunsa. Nykyään Little Italy on viiden korttelin '
+                + 'mittainen kaistale Mulberry Streetiä Canal Streetin '
+                + 'pohjoispuolella, ja Mulberry Bendin paikka on Chinatownin '
+                + 'sydän.',
+            },
+            {
+              otsikko: 'Historian käännekohta: muuri, joka antoi kadulle nimen',
+              teksti: 'Hollantilaiset kutsuivat nykyisen Wall Streetin paikkaa '
+                + 'vain nimellä Het Cingel, vyö. Vuonna 1653 siihen '
+                + 'rakennettiin puinen paalutus siirtokunnan pohjoisrajaksi, '
+                + 'ja englantilaiset ja hollantilaiset vahvistivat sitä '
+                + 'vuorollaan niin, että vuosisadan lopulla muurissa oli '
+                + 'kaksi kivibastionia ja kaksi porttia — Broadwaylla '
+                + 'maaportti, Pearl Streetillä vesiportti. Muuri purettiin '
+                + '1699, koska kaupunki oli kasvanut sen ohi, ja bastionien '
+                + 'kivistä muurattiin 1700 uuden kaupungintalon perustukset. '
+                + 'Samasta talosta tuli myöhemmin Federal Hall, jonka '
+                + 'portailla George Washington vannoi virkavalansa 1789. '
+                + 'Kadun päässä toimi 1711–1762 myös kaupungin virallinen '
+                + 'orjamarkkina. Vuonna 1792 kadun kauppiaat solmivat '
+                + 'Buttonwood-sopimuksen, josta New Yorkin pörssi sai '
+                + 'alkunsa.',
+              kuva: {
+                tiedosto: 'Federal-hall-national-memorial-7.jpg',
+                selite: 'Federal Hallin portaiden patsas muistuttaa George '
+                  + 'Washingtonin virkaanastujaisista 1789, kun New York oli '
+                  + 'Yhdysvaltain pääkaupunki.',
+                lahde: 'GertBoers, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat Central Parkin mittausasemalta '
+                + '(en-Wikipedian New York City -artikkelin ilmasto-osio, '
+                + 'normaalikausi 1991–2020). Lehden oma vuosigraafi '
+                + 'piirtyy ERA5-hilaruudusta, joka ulottuu Hudsonin yli '
+                + 'ja on siksi noin puolitoista astetta viileämpi ja '
+                + 'runsaat sata millimetriä vähäsateisempi kuin '
+                + 'kaupungin oma asema. Ilmasto on Köppenin luokituksessa kostea '
+                + 'subtrooppinen (Cfa), ja New York on tässä luokassa '
+                + 'Pohjois-Amerikan mantereen pohjoisin suuri kaupunki. '
+                + 'Talvet ovat koleita ja kosteita, mutta Atlantti ja '
+                + 'Appalakkien suoja pitävät kaupungin leudompana kuin '
+                + 'sisämaan kaupungit samalla leveysasteella. Tammikuu on '
+                + 'kylmin kuukausi, keskilämpötila 33,3 astetta '
+                + 'fahrenheitia eli vajaa yksi celsiusaste, ja pakkanen käy '
+                + 'talvessa muutaman kerran kymmenessä fahrenheit-asteessa. '
+                + 'Heinäkuu on lämpimin, keskilämpötila 77,5 astetta '
+                + 'fahrenheitia eli runsaat 25 celsiusastetta, ja kesä on '
+                + 'kostea. Kevät ja syksy ovat arvaamattomia mutta '
+                + 'tavallisesti leutoja ja kuivailmaisia. Sadetta tulee '
+                + 'vuodessa 49,5 tuumaa eli noin 1 260 millimetriä melko '
+                + 'tasaisesti ympäri vuoden, ja aurinko paistaa yli 2 500 '
+                + 'tuntia. Central Parkin viralliset säähavainnot on tehty '
+                + '1869–1919 Arsenaalissa Viidennellä Avenuella ja sen '
+                + 'jälkeen Belvedere-linnassa, eli havaintosarja alkaa neljä '
+                + 'vuotta ennen isoisän matkaa.',
+              kuva: {
+                tiedosto: 'The Mall Central Park New York City October 30 2022 - Flickr - Anthony Quintano.jpg',
+                selite: 'The Mall on puiston alkuperäisen Greensward-'
+                  + 'suunnitelman ainoa muodollinen osa ja johtaa suoraan '
+                  + 'Bethesda-terassille.',
+                lahde: 'Anthony Quintano from Mount Laurel, United States, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Central Park',
+                tahdet: 3,
+                selite: 'Puistoa rakennettiin 1857–1876, ja sen Bethesda-terassi '
+                  + 'on yhä koko kaupungin olohuone.',
+              },
+              {
+                mita: 'Brooklynin silta',
+                tahdet: 3,
+                selite: 'Kävelytie kulkee ajoradan yläpuolella kivitornien läpi; '
+                  + 'silta avattiin 1883.',
+              },
+              {
+                mita: 'Ilmainen lautta',
+                tahdet: 2,
+                selite: 'Staten Islandin lautalta näkyy koko satama, eikä '
+                  + 'matkasta peritä maksua.',
+              },
+              {
+                mita: 'Vanha kaupunki',
+                tahdet: 2,
+                selite: 'Wall Street, Federal Hall ja Battery Park mahtuvat '
+                  + 'parin korttelin kävelylle.',
+              },
+              {
+                mita: 'Metro yöllä',
+                tahdet: 3,
+                selite: 'Lähes koko verkko on auki vuorokauden ympäri, mikä on '
+                  + 'metrojen joukossa poikkeus.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sää- ja sadeluvut ovat en-Wikipedian
+             * New York City -artikkelin ilmasto-osiosta, sama lähde kuin
+             * jaksossa 5. Hintataso on matkailijan tavallisin yllätys,
+             * ja se kerrotaan yleisellä tasolla ilman lukuja.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Hintataso',
+                teksti: 'New York on Yhdysvaltain kalleimpia kaupunkeja, ja '
+                  + 'majoitus vie budjetista suurimman osan.',
+              },
+              {
+                otsikko: 'Kesä on kostea',
+                teksti: 'Heinäkuun keskilämpötila on runsaat 25 astetta ja ilma '
+                  + 'kostea, joten keskipäivä kannattaa viettää varjossa.',
+              },
+              {
+                otsikko: 'Talvi on kolea',
+                teksti: 'Tammikuun keskilämpötila on nollan tienoilla, ja '
+                  + 'muutaman kerran talvessa mennään selvästi pakkasen '
+                  + 'puolelle.',
+              },
+              {
+                otsikko: 'Sadetta ympäri vuoden',
+                teksti: 'Vuosisade on noin 1 260 millimetriä ja jakautuu '
+                  + 'tasaisesti kuukausille — kuivaa kautta ei ole.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+  ],
 };

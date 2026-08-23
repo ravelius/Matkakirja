@@ -148,7 +148,10 @@ export const MAATIEDOT = {
 };
 
 // Omat artikkelit: yhteinen hakemisto wiki-otsikolla (mantereet eivät
-// törmää, koska otsikot ovat eri).
+// törmää, koska otsikot ovat eri). P-Amerikan taulu tuli mukaan
+// 23.8.2026 New Yorkin kaupunkilehden myötä; E-Amerikka ja Oseania
+// saavat omansa samalla kaavalla, kun niiden ensimmäiset lehdet
+// kirjoitetaan (spec-mantereet.md).
 export const ARTIKKELIT = {
   ...OMAT_ARTIKKELIT, ...EUROPE_ARTIKKELIT, ...ASIA_ARTIKKELIT,
   ...NORTHAMERICA_ARTIKKELIT,

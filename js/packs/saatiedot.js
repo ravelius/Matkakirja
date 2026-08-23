@@ -2226,4 +2226,36 @@ export const SAATIEDOT = {
       + 'lainkaan; vuoden 490 millimetristä yli puolet kertyy tammi–'
       + 'helmikuussa.',
   },
+  /*
+   * NEW YORK. Mittauspiste on Manhattanin eteläosa 40,71 / -74,01
+   * (en-Wikipedian "New York City" -infoboksin koordinaatti). ERA5-ruutu
+   * asettui pisteeseen 40,74 / -74,04 eli Hudsonin länsipuolelle 27
+   * metrin korkeuteen, ja ruutu kattaa sekä kaupunkia että vettä.
+   *
+   * RIVI ON NOIN PUOLITOISTA ASTETTA VIILEÄMPI JA VÄHÄSATEISEMPI KUIN
+   * KAUPUNGIN OMA MITTAUSASEMA, ja ero kerrotaan tässä, koska molemmat
+   * luvut esiintyvät lehdessä. NOAA:n normaalit Central Parkin asemalta
+   * (en-Wikipedian sääruutu, sama jakso 1991–2020) antavat tammikuun
+   * keskilämmöksi 0,9 astetta ja heinäkuun 25,3 astetta ja vuosisateeksi
+   * 1 258 millimetriä; tämän rivin ERA5-luvut ovat -0,7 ja 24,2 astetta
+   * ja 1 129 millimetriä. Ero on tavanomainen kaupunkiaseman ja
+   * kymmenien kilometrien levyisen hilaruudun välillä. Matkaoppaan
+   * sääjakso käyttää Central Parkin asemalukuja ja sanoo lähteensä
+   * ääneen; vuosigraafi on tätä riviä, jonka lähderivi lupaa ERA5:n.
+   */
+  newyork: {
+    lat: 40.71,
+    lon: -74.01,
+    keskilampo: [-0.7, 0, 4.1, 10.1, 15.7, 21, 24.2, 23.3, 19.7, 13.4, 7.4, 2.4],
+    ylin: [3, 4, 9, 15, 20, 25, 29, 27, 24, 17, 11, 6],
+    alin: [-5, -4, 0, 5, 11, 17, 20, 19, 16, 10, 4, -1],
+    sade: [83, 78, 106, 91, 87, 101, 104, 105, 98, 98, 77, 101],
+    luonnehdinta: 'New Yorkin vuodessa on neljä selvää vuodenaikaa: '
+      + 'tammikuun keskilämpö jää 0,7 pakkasasteeseen ja heinäkuussa '
+      + 'noustaan 24,2 asteeseen. Sade jakautuu poikkeuksellisen '
+      + 'tasaisesti — kuivimman marraskuun 77 millimetrin ja sateisimman '
+      + 'elokuun 105 millimetrin ero on alle kolmekymmentä millimetriä, '
+      + 'eikä kuivaa kautta ole lainkaan. Vuodessa kertyy runsaat 1 100 '
+      + 'millimetriä.',
+  },
 };

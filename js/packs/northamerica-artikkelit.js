@@ -1,36 +1,80 @@
 // Matkakirjan omat artikkelit Pohjois-Amerikan kaupungeista.
 //
-// Sama muoto ja sama tehtävä kuin AFRICA-, EUROPE- ja
-// ASIA_ARTIKKELIT-tauluilla (ks. js/packs/asia-artikkelit.js:n
-// otsake): avaimena on kaupungin wiki-otsikko, jolla ui.js hakee
-// tekstin lehden etusivulle (ARTIKKELIT[city.wiki ?? city.name]).
+// Tiedosto perustettiin 23.8.2026 New Yorkin kaupunkilehden yhteydessä
+// (P-Amerikan laudan pilottikaupunki). Malli on africa-artikkelit.js ja
+// asia-artikkelit.js, ja rakenne on täsmälleen sama:
 //
-//   intro   — lehden ETUSIVUN LEIPÄTEKSTI: 7–10 virkkeen johdatus
-//             kaupunkiin (~700–1100 merkkiä), 2–3 kappaletta
-//             '\n\n'-rajalla ja 1–3 maltillista **lihavointia**.
-//             Renderöijä tekee kappaleet ja boldit — ei HTML:ää tänne.
-//   teksti  — kolme kappaletta, yhteensä 600–1100 merkkiä: missä
-//             ollaan, mitä täällä on tapahtunut, millaista täällä on
-//             nyt (Lue lisää -näkymä).
+//   intro   — lehden ETUSIVUN LEIPÄTEKSTI (Raamattu, "TEKSTIEN
+//             PAINOPISTE" 20.8.2026): 7–10 virkkeen johdatus siihen,
+//             millainen kaupunki on ja mikä sen merkitys ja historia
+//             ovat. Noin 700–1100 merkkiä, 2–3 kappaletta '\n\n'-rajalla
+//             ja 1–3 maltillista **lihavointia**. Renderöijä tekee
+//             kappaleet ja boldit — ei HTML:ää tänne.
+//   teksti  — kolme kappaletta, yhteensä 600–1100 merkkiä. Ensimmäinen
+//             kertoo missä ollaan, toinen mitä täällä on tapahtunut,
+//             kolmas millaista täällä on nyt. Tämä on Lue lisää
+//             -dialogin teksti.
 //
-// Tämä tiedosto syntyi P-Amerikan laudan pilottikaupungin
-// (San Francisco) mukana. Fablen päätös 22.8.2026
-// (docs/mantereet-tyoaineisto/spec-mantereet.md, "Fablen päätökset
-// USA-faktapohjan avoimiin kysymyksiin", kohta 1): P-Amerikan introt
-// asuvat omassa paketissaan eivätkä Aasian taulussa.
+// Avaimena on wiki-otsikko, sama jolla cachedSummary hakee — New Yorkin
+// kohdalla js/packs/northamerica.js antaa sekä wiki-nimeksi että
+// näyttönimeksi 'New York', joten avain on 'New York' eikä 'New York
+// City'. Taulu yhdistetään muiden lautojen tauluihin
+// js/sisaltotaulut.js:ssä.
 //
-// LÄHTEET. San Franciscon jokainen väite on tarkistettu
-// en-Wikipedian raakateksteistä 22.–23.8.2026 (artikkelit
-// "San Francisco", "Clay Street Hill Railroad", "San Francisco cable
-// car system", "Chinatown, San Francisco") ja kaupungin omista, jo
-// tarkistetuista lehtiteksteistä (kulttuuri-kategoriat.js).
-// Työaineisto: docs/mantereet-tyoaineisto/faktapohja-sanfrancisco.md
-// ja tarkistus-sanfrancisco.md.
+// Ei ylisanoja eikä huutomerkkejä: nuoren herran innostus kuuluu
+// saapumistekstissä, ja tämä on se rauhallinen ääni, joka kertoo
+// taustan.
 //
-// Sisältölinjaus (spec-mantereet.md): alkuperäiskansa nimetään omalla
-// nimellään ennen siirtomaanimiä, ja vuoden 1906 katastrofi kerrotaan
-// perushistoriana. Ei nykypolitiikkaa eikä nykyrikollisuutta.
+// NEW YORK (23.8.2026): jokainen väite tulee samasta erästä kuin lehden
+// tekstit (js/packs/kulttuuri-kategoriat.js, avain newyork), ja ne on
+// tarkistettu en-Wikipedian raakateksteistä 23.8.2026 — uusia
+// lähdehakuja ei tarvittu. Sisältölinjaus on spec-mantereet.md:n
+// USA-kohta: siirtomaahistoria ja orjuus kerrotaan tapahtumina
+// neutraalisti, ei nykypolitiikkaa. Vuoden 1873 kulma on introssa
+// mukana, koska se on koko lehden kantava aihe.
 export const NORTHAMERICA_ARTIKKELIT = {
+  'New York': {
+    intro: 'New York on Yhdysvaltain suurin kaupunki, ja se on rakennettu '
+      + 'saarille Hudsonjoen suulle, missä joki avautuu suojaisaan '
+      + 'satamaan ja edelleen Atlantille. Manhattan ja Staten Island ovat '
+      + 'omia saariaan, Brooklyn ja Queens ovat Long Islandin läntisessä '
+      + 'päässä, ja vain Bronx on pääosin kiinni Yhdysvaltain '
+      + 'mantereessa. Nämä **viisi kaupunginosaa yhdistyivät '
+      + 'kaupungiksi vasta 1898**.'
+      + '\n\n'
+      + 'Hollantilaiset perustivat 1624 turkiskauppa-aseman Governors '
+      + 'Islandille ja aloittivat seuraavana vuonna Fort Amsterdamin '
+      + 'rakentamisen Manhattanin kärkeen; asutus sai nimen New Amsterdam '
+      + '1626 ja kaupunginoikeudet 1653. Englanti valtasi sen '
+      + '1664 ja nimesi sen Yorkin herttuan mukaan, ja nimi vakiintui '
+      + 'pysyväksi 1674. Vuosina 1785–1790 New York oli nuoren '
+      + 'Yhdysvaltain pääkaupunki.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 kaupunki oli keskellä muodonmuutosta. '
+      + '**Brooklynin sillasta oli pystyssä vasta kaksi keskeneräistä '
+      + 'tornia**, Central Park odotti valmistumistaan ja sen '
+      + 'Bethesda-suihkulähteen enkelipatsas paljastettiin juuri sinä '
+      + 'vuonna. Syyskuussa 1873 pörssi sulki ovensa kymmeneksi päiväksi '
+      + 'ensimmäistä kertaa historiassaan.',
+    teksti: 'New York on Yhdysvaltain koillisrannikolla Hudsonjoen '
+      + 'suistossa. Kaupunki jakautuu viiteen kaupunginosaan, joista '
+      + 'Manhattan on pienin mutta tunnetuin: kapea saari, jonka '
+      + 'ruutukaava kiertää keskellä olevan Central Parkin.'
+      + '\n\n'
+      + 'Hollantilaisten kauppa-asemasta kasvoi englantilaisten aikana '
+      + 'siirtomaiden vilkkain satama, ja 1800-luvulla New Yorkista tuli '
+      + 'Euroopasta tulevien siirtolaisten portti. Heidät kirjattiin '
+      + 'vuosina 1855–1890 Castle Gardenissa Manhattanin eteläkärjessä ja '
+      + 'sen jälkeen Ellis Islandilla. Kaupungin muoto muuttui samaan '
+      + 'aikaan: Central Park valmistui 1876, Brooklynin silta 1883 ja '
+      + 'metro avattiin 1904.'
+      + '\n\n'
+      + 'Nykyään New York on maan talouden keskus, ja Wall Streetin '
+      + 'kulmalla toimii New Yorkin pörssi, yksi maailman kahdesta '
+      + 'markkina-arvoltaan suurimmasta. Metro kulkee lähes '
+      + 'kaikkialla ympäri vuorokauden, ja Staten Islandin lautta vie '
+      + 'sataman yli maksutta.',
+  },
   'San Francisco': {
     intro: 'San Francisco seisoo Kalifornian rannikolla, kapean niemen '
       + 'pohjoiskärjessä Tyynenmeren ja suojaisan lahden välissä. '
