@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1069 — NEW YORKIN MINIATYYRIT: yhdeksan kohdetta kymmenesta sai akvarellipiirroksen kartalle; Times Square jai numeroympyraksi, koska kuva ei lukenut aukiona. Tarkista: New Yorkin kohdekartta ja piirrosten avaus',
   'v1068 — KOLME UUTTA KAUPUNKILEHTEA: Sevilla, Bergen ja Montreal (yhteensa kahdeksan sivua, 32 nostoa ja 61 Commons-kuvaa). Tarkista: kolmen lehden etusivut, teemasivut ja matkaoppaat',
   'v1067 — WELLINGTONIN KAUPUNKILEHTI: kaupunki-, historia- ja luontosivut, 12 nostoa ja 22 Commons-kuvaa. Tarkista: Wellingtonin lehti kannesta oppaaseen',
   'v1066 — HEROKIERROS 18: Varsova, Riika, Kuwait, Tabriz, Kasgar ja Jekaterinburg; 18/18 hyvaksyttiin. Tarkista: kuuden kaupungin etusivukarusellit',
