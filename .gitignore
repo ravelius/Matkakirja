@@ -44,3 +44,9 @@ dist/
 # julkaisuajossa (envsubst) ja sisältää ämpärin nimen — pohja
 # wrangler.toml.template on repossa, tulos ei.
 worker/ehdotukset/wrangler.toml
+
+# Agenttien worktreet. Claude Code luo tanne oman git-worktreen jokaiselle
+# eristetylle agentille; ne ovat vain taman session tyokaluja, ja
+# vahingossa lisattyna ne menevat committiin upotettuna repona
+# (nain kavi kerran 23.8.2026, korjattu amendilla).
+.claude/worktrees/
