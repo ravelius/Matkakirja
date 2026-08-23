@@ -3372,6 +3372,92 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -34.5825, etela: -34.618, lansi: -58.4, ita: -58.361 },
   },
+  sydney: {
+    /*
+     * SATAMANSILLALTA HYDE PARKIN ETELÄPÄÄHÄN (nippu 8, 23.8.2026).
+     * Ruutu on 4,6 × 4,7 km eli lähes neliö, ja sen sisään mahtuu
+     * koko se kaupunki, jonka isoisä olisi kävellyt läpi puolessa
+     * päivässä: pohjoisessa sataman suuaukko ja Bennelong Point,
+     * keskellä Macquarie Streetin virastorivi ja The Domain,
+     * lännessä Darling Harbour ja etelässä Hyde Park.
+     *
+     * RUUTU ON NELIÖ, VAIKKA KOHTEET OVAT NAUHA. Kymmenen kohdetta
+     * asettuvat 2,6 kilometrin pituiselle pohjois–eteläkaistalle,
+     * joka on vain 1,7 kilometriä leveä. Tiukka rajaus olisi
+     * piirtynyt kapeaksi pystynauhaksi, josta puuttuisi molemmin
+     * puolin juuri se, mikä tekee Sydneystä Sydneyn: satama idässä
+     * ja Darling Harbour lännessä (sama ratkaisu kuin Colombossa ja
+     * Mumbaissa).
+     *
+     * meri: true, ja se on TÄSSÄ VÄLTTÄMÄTÖN. Port Jackson on OSM:ssä
+     * avomerta eikä sulkeutuvaa vesimonikulmiota — vesi tulee kuvaan
+     * koillisesta ja jatkuu suuaukosta Tasmanmerelle — ja ilman
+     * merentäyttöä kartan koko yläosa, Darling Harbour, Woolloomooloo
+     * Bay ja Farm Cove jäisivät paperin värisiksi. Sydneyn rantaviiva
+     * on lisäksi kartaston rikkonaisin: niemiä, poukamia ja
+     * täyttömaata vieri vieressä, joten juuri tällä kaupungilla
+     * rantojen on osuttava kohdalleen (ks. tarkista-karttapisteet.mjs).
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kolkatassa ja Karachissa: Circular Quayn promenadi,
+     * Martin Place, Pitt Street Mall, Hyde Parkin ja The Domainin
+     * puistokäytävät sekä kasvitieteellisen puutarhan polut ovat
+     * OSM:ssä jalankulkualueita, ja ilman lippuja kartan koko itäinen
+     * kolmannes olisi tyhjää paperia.
+     *
+     * EI laajennusta (vrt. Berliini): reunus jatkaisi kuvaa
+     * pohjoisessa avomerelle ja idässä Woolloomooloon jälkeen
+     * Potts Pointin asuinkortteleihin, eli kohdekartan kannalta
+     * tyhjään. Sama päätös kuin New Yorkissa.
+     *
+     * MANLY JA BONDI EIVÄT OLE KAINALOSSA. Rantakaupunginosat
+     * (Manly 11 km pohjoiseen, Bondi 7 km itään) ovat kertaluokkaa
+     * kauempana kuin yksikään kainalo tässä kartastossa (Medinan
+     * Quba 3,5 km, Adenin Tawahi 6 km), ja ne kerrotaan
+     * kaupunkilehden matkaoppaassa. Mrs Macquarie's Chair sen sijaan
+     * on ruudun sisällä itäreunassa.
+     */
+    rajat: { pohjoinen: -33.8455, etela: -33.888, lansi: 151.183, ita: 151.233 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
+  rio: {
+    /*
+     * Rio de Janeiron vanha keskusta Guanabaran lahden rannalla,
+     * lännessä Quinta da Boa Vista ja Maracanã (E-Amerikan lauta,
+     * 23.8.2026). Ruutu on 8,2 × 5,1 km eli New Yorkia (10 km)
+     * pienempi mutta selvästi leveämpi kuin korkea, ja se on
+     * maaston sanelemaa: 1873-kaupunki on kapea kaistale lahden
+     * rannassa, ja keisarin asuinpaikka Quinta da Boa Vista on
+     * viisi kilometriä siitä länteen. Pohjois–etelä-suunnassa
+     * kohteet mahtuvat alle kahteen kilometriin, joten korkeampi
+     * ruutu olisi pelkkää vuorta ja avovettä.
+     *
+     * VUORET JÄÄVÄT ULKOPUOLELLE, ja se on päätös eikä unohdus.
+     * Corcovado (22,952 E) on 2,4 km eteläreunan alapuolella ja
+     * Sokerileipä (22,949 E / 43,157 L) kaakossa lahden suulla
+     * kahden kilometrin päässä eteläreunasta;
+     * kumpikin on kaupunkilehden noston "Vuori ilman patsasta"
+     * aihe (kulttuuri-kategoriat.js), eikä kohdekartta toista
+     * lehden juttuja. Eteläreunan vetäminen niihin asti nostaisi
+     * ruudun korkeuden viidestä kilometristä lähes kahdeksaan ja
+     * täyttäisi alaosan Tijucan metsällä, jossa ei ole yhtään
+     * kohdetta.
+     *
+     * MERI: TRUE, ja se on mitattu. Ilman lippua Guanabaran lahti jäi
+     * paperin väriseksi: New Yorkin ratkaisu ei toimi täällä, koska
+     * lahdesta on OSM:ssä vesialueina vain satama-altaat ja Santos
+     * Dumontin edusta, ja avolahti on pelkkää rantaviivaa. Kuvassa
+     * lahti näytti siksi maalta.
+     *
+     * EI jalkakäytäviä eikä palveluteitä: Centron ruutukaava on
+     * väljää 1800-luvun korttelia, ja kahdeksan kilometrin ruudussa
+     * kujat sotkisivat kuvan (sama mittaus kuin New Yorkissa).
+     */
+    rajat: { pohjoinen: -22.884, etela: -22.930, lansi: -43.238, ita: -43.158 },
+    meri: true,
+  },
 };
 
 /*

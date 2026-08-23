@@ -9034,6 +9034,143 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Santo Domingon luostari', lat: -34.613056, lon: -58.371667 },
     ],
   },
+  /*
+   * SYDNEY (nippu 8, 23.8.2026). Rajaus on sataman suuaukolta Hyde
+   * Parkin eteläpäähän, 4,6 × 4,7 kilometriä eli lähes neliö.
+   * Perustelu ja hylätyt vaihtoehdot ovat
+   * tools/piirra-kaupunkikartta.mjs:n sydney-lohkossa; lyhyesti:
+   * kohteet ovat luonnostaan kapea pohjois–eteläkaista, ja ruutu on
+   * levennetty molemmin puolin, jotta satama ja Darling Harbour
+   * mahtuvat kuvaan (Colombon ja Mumbain ratkaisu).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Kaupunkilehden nostot ja
+   * matkaopas (kulttuuri-kategoriat.js, avain sydney) kertovat
+   * Sydney Coven eli Warranen, Observatory Hillin aikapallon,
+   * rahapajan rommisairaalassa, The Rocksin ja Argyle Cutin,
+   * Cadmans Cottagen, Tank Streamin ja Circular Quayn, Fort
+   * Denisonin, Port Jacksonin, Gadigal-aseman, kuvernöörin talon,
+   * Suursynagogan ja Central-aseman. Yksikään niistä ei ole kartan
+   * kohde, vaikka kaikki mahtuisivat ruutuun.
+   *
+   * KOLME KOHDETTA MAINITAAN LEHDESSÄ YHDELLÄ LAUSEELLA, ja se on
+   * New Yorkin Empire State Buildingin ennakkotapaus. Nosto
+   * "Kaupunki, jota rakennettiin joka suunnasta" luettelee kaupungin
+   * keskeneräisiä hankkeita ja sanoo sivulauseessa "Australian Museum
+   * 1866"; generoitujen herokuvien tekstit kertovat oopperatalon
+   * laatoista ja satamansillan jännevälistä. Kartan jutut kertovat
+   * aivan muuta: museon perustamisen 1827 ja Gerard Krefftin häädön
+   * 1874, oopperatalon tontin linnakkeen ja kilpailun, sillan
+   * varhaiset ehdotukset 1814 alkaen ja avajaisten miekkatempun.
+   *
+   * FORT DENISON EI OLE KARTALLA, vaikka se on ruudun sisällä
+   * (33,8549 S / 151,2255 I): se on saari keskellä satamaa, eli piste
+   * osuisi määritelmän mukaan veteen, ja saari on lisäksi lehden
+   * matkaoppaan ja kansikuvan oma aihe.
+   */
+  sydney: {
+    polku: 'assets/kartat/sydney-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -33.8455, etela: -33.888, lansi: 151.183, ita: 151.233,
+    },
+    esittely: 'Kartan alue ulottuu sataman suuaukolta Hyde Parkin '
+      + 'eteläpäähän. Pohjoisessa on Bennelong Point, jonka kärjessä '
+      + 'seisoi isoisän aikaan Fort Macquarien linnake, idässä '
+      + 'Macquarie Streetin virastorivi ja kasvitieteellinen puutarha, '
+      + 'lännessä Darling Harbour ja etelässä Hyde Park. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KYMMENEN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * New Yorkissa, Karachissa ja Medinassa. Koordinaatit
+       * en-Wikipedian coordinates-rajapinnasta 23.8.2026; Hyde Park
+       * Barracksilla ei ole niitä artikkelissa, joten sen piste on
+       * Wikidatan P625:stä (Q1577600).
+       *
+       * SYDNEY HARBOUR BRIDGEN PISTE ON VEDESSÄ, ja se on oikein:
+       * silta on määritelmän mukaan veden päällä kuten Rialto,
+       * Ha'penny ja Ketjusilta (tarkista-karttapisteet.mjs). Sama
+       * koskee Pyrmontin siltaa Cockle Bayn yli.
+       *
+       * SYDNEYN KAUPUNGINTALO JA QUEEN VICTORIA BUILDING JÄIVÄT POIS,
+       * vaikka molemmat mahtuvat ruutuun: ne ovat 80 ja 240 metrin
+       * päässä Pyhän Andreaksen katedraalista, ja merkit olisivat
+       * menneet päällekkäin (Petran, Mekan ja Karachin oppi).
+       * Kaupungintalo on sitä paitsi lehden noston sivulause samaan
+       * tapaan kuin Australian museo.
+       */
+      { nimi: 'Sydney Harbour Bridge', lat: -33.852222, lon: 151.210556 },
+      { nimi: 'Sydneyn oopperatalo', lat: -33.85681, lon: 151.21514 },
+      { nimi: "Mrs Macquarie's Chair", lat: -33.859467, lon: 151.222203 },
+      { nimi: 'Sydneyn konservatorio', lat: -33.863455, lon: 151.214353 },
+      { nimi: 'Hyde Park Barracks', lat: -33.869611, lon: 151.212806 },
+      /*
+       * Sillan keskipiste on Cockle Bayn päällä, joten piste on
+       * siirretty sillan itäpäähän Darling Harbourin rantaan
+       * (sama ratkaisu kuin New Yorkin Ferry Buildingissa).
+       */
+      { nimi: 'Pyrmontin silta', lat: -33.8709, lon: 151.2026 },
+      { nimi: 'Pyhän Marian katedraali', lat: -33.871111, lon: 151.213333 },
+      { nimi: 'Pyhän Andreaksen katedraali', lat: -33.873923, lon: 151.206336 },
+      { nimi: 'Australian museo', lat: -33.8743, lon: 151.2134 },
+      { nimi: 'Anzac-muistomerkki', lat: -33.875556, lon: 151.210833 },
+    ],
+  },
+  /*
+   * RIO DE JANEIRO (E-Amerikan lauta, 23.8.2026). Rajaus on vanha
+   * keskusta Guanabaran lahden rannalla, lännessä Quinta da Boa Vista
+   * ja Maracanã — 8,2 × 5,1 km. Perustelu ja hylätyt vaihtoehdot ovat
+   * tools/piirra-kaupunkikartta.mjs:n rio-lohkossa; lyhyesti: kohteet
+   * ovat kapealla rantakaistaleella, ja kartta on siksi leveä ja
+   * matala niin kuin kaupunki itse.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Kaupunkilehden nostot
+   * (kulttuuri-kategoriat.js) ovat Valongon laituri, hovin muutto 1808
+   * kasvitieteellisine puutarhoineen, Corcovado ja Sokerileipä ilman
+   * patsasta ja köysirataa, Tijucan uudelleen istutettu metsä,
+   * Guanabaran lahden nimi, Paço Imperial, Candelárian kirkko ja
+   * vuoden 1871 vapaan kohdun laki. Yksikään niistä ei ole kartan
+   * kohde, vaikka Paço Imperial ja Candelária ovat parin sadan metrin
+   * päässä kartan pisteistä.
+   *
+   * FAVELAT EIVÄT OLE KARTAN KOHTEITA. Ne ovat asuinalueita eivätkä
+   * nähtävyyksiä, ja spec-mantereet.md kieltää köyhyyden estetisoinnin
+   * — kaupunkilehti kertoo niistä asiatekstinä matkaoppaan jaksossa.
+   */
+  rio: {
+    polku: 'assets/kartat/rio-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -22.884, etela: -22.93, lansi: -43.238, ita: -43.158 },
+    esittely: 'Kartan alue on Rion vanha keskusta Guanabaran lahden '
+      + 'rannalla. Idässä ovat lahti ja satama, joiden takia kaupunki on '
+      + 'juuri tässä, keskellä Centron korttelit, joissa isoisä kulki '
+      + '1873, ja lännessä puisto Quinta da Boa Vista, jossa keisari '
+      + 'Pedro II asui perheineen. Etelässä kohoavat Santa Teresan '
+      + 'rinteet, ja niiden juurelta lähtevät Lapan akveduktin kaaret. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KYMMENEN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * New Yorkissa ja Karachissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 23.8.2026.
+       *
+       * Praça XV jätettiin pois, vaikka se on kaupungin vanha
+       * pääaukio: se on 280 metriä vanhasta katedraalista ja 160
+       * metriä Paço Imperialista, eli merkki olisi mennyt katedraalin
+       * päälle ja juttu lehden Paço-noston päälle.
+       */
+      { nimi: 'São Benton luostari', lat: -22.89666667, lon: -43.17777778 },
+      { nimi: 'Vanha katedraali Antiga Sé', lat: -22.90333333, lon: -43.17555556 },
+      { nimi: 'Central do Brasilin asema', lat: -22.90341389, lon: -43.19144444 },
+      { nimi: 'Real Gabinete -kirjasto', lat: -22.9053, lon: -43.1822 },
+      { nimi: 'Quinta da Boa Vista', lat: -22.90583333, lon: -43.22444444 },
+      { nimi: 'Kansallinen historiallinen museo', lat: -22.90590833, lon: -43.16952222 },
+      { nimi: 'Theatro Municipal', lat: -22.90922222, lon: -43.17649167 },
+      { nimi: 'Maracanãn stadion', lat: -22.9122, lon: -43.2303 },
+      { nimi: 'Lapan akvedukti', lat: -22.91259444, lon: -43.17985 },
+      { nimi: 'Passeio Público', lat: -22.91379722, lon: -43.17598611 },
+    ],
+  },
 };
 
 /*
