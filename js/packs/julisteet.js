@@ -325,9 +325,12 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-tampere.png',
     kaupunki: 'Tampere',
     otsikko: 'Tampere 1882',
+    /* Tarkennus 23.8.2026 (omistajan faktakysymys): Pietarissa oli jo
+     * 1879–80 KAARILAMPPUVALOA, joten ensimmäisyys koskee nimenomaan
+     * hehkulamppuvalaistusta. */
     selite: 'Finlaysonin Plevna-kutomossa sytytettiin 15. maaliskuuta 1882 '
-      + 'Edisonin hehkulamput — se oli ensimmäinen sähkövalo Pohjoismaissa ja '
-      + 'koko Venäjän keisarikunnassa.',
+      + 'Edisonin hehkulamput — Pohjoismaiden ja koko Venäjän keisarikunnan '
+      + 'ensimmäinen hehkulamppuvalaistus.',
   },
   tallinna: {
     tiedosto: 'tuotanto/tuot-tallinna.png',
