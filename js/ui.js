@@ -33,7 +33,8 @@ import {
 // Remontin M5a: lehden sivukoneisto.
 import {
   avaaGrafiikkaLehti,
-  avaaKehittajaLehti, avaaLukijoiltaLehti, avaaMaalehti, avaaRaamattuLehti,
+  avaaKehittajaLehti, avaaLukijoiltaLehti, avaaMaalehti, avaaPoiminnatLehti,
+  avaaRaamattuLehti,
   avaaSisallysvalikko,
   avaaTilanneLehti, avaaTilastoLehti, jatkaLehdenLuentaa, kytkeTutkiSelaus, naytaMaaUutiset,
   naytaTutkiSivu, naytaVuosiSaa, openWiki, rakennaSivut, renderArticle,
@@ -7751,6 +7752,8 @@ export class UI {
   avaaRaamattuLehti() { return avaaRaamattuLehti(this); }
 
   avaaTilanneLehti() { return avaaTilanneLehti(this); }
+
+  avaaPoiminnatLehti() { return avaaPoiminnatLehti(this); }
 
   avaaTilastoLehti() { return avaaTilastoLehti(this); }
 

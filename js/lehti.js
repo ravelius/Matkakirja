@@ -883,7 +883,10 @@ function piirraPoimintavienti(kohde) {
   kotelo.appendChild(html('p', 'periaate-teksti',
     'Kopioi lohko tiedostoon js/packs/pollo-poiminnat.js. Vasta paketissa '
     + 'olevat parit näkyvät pelaajille — laitteen omat parit näkyvät '
-    + 'pillereinä vain kehittäjätilassa tällä laitteella.'));
+    + 'pillereinä vain kehittäjätilassa tällä laitteella. Jokainen '
+    + 'tallennus lähtee nykyään myös ehdotuskanavaan (tarkenne '
+    + '"Pöllöpoiminta (kehittäjä)"), joten kopiointi on varareitti — '
+    + 'Fable poimii parit kuratointijonosta.'));
   if (!avaimet.length) {
     kotelo.appendChild(html('p', 'periaate-huomio',
       'Ei tallennettuja poimintoja tällä laitteella. Avaa juttu, kysy pöllöltä '
@@ -957,6 +960,17 @@ export function avaaTilanneLehti(ui) {
     rakenna: piirraPoimintavienti,
   }];
   avaaKehittajaLehti(ui, 'Tilannelehti', sivut);
+}
+
+/**
+ * Oikotie hampurilaisvalikosta suoraan Tilannelehden
+ * Pöllöpoiminnat-sivulle (omistajan tilaus 23.8.2026: "tee suoraan
+ * hampurilaiseen") — sivu on lehden kolmas, joten avataan lehti ja
+ * käännetään heti oikealle sivulle.
+ */
+export function avaaPoiminnatLehti(ui) {
+  avaaTilanneLehti(ui);
+  naytaTutkiSivu(ui, 3, { heti: true });
 }
 
 /**

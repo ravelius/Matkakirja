@@ -44,7 +44,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1051';
+const APP_VERSION = '2026-08-09.1052';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1113,6 +1113,9 @@ document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {
 });
 document.getElementById('tilanne-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaTilanneLehti();
+});
+document.getElementById('poiminnat-lehti-btn')?.addEventListener('click', () => {
+  window.matkakirja?.ui?.avaaPoiminnatLehti();
 });
 document.getElementById('tilastot-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaTilastoLehti();
