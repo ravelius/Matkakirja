@@ -61714,4 +61714,618 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TORONTO (Opus 23.8.2026). Alusta asti tehty kaupunkilehti:
+   * kohteella ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen
+   * tätä erää. Pohjana ovat docs/mantereet-tyoaineisto/
+   * faktapohja-toronto.md ja sen riippumaton tarkistus
+   * tarkistus-toronto.md, jotka luettiin yhdessä; ristiriidoissa
+   * TARKISTUS VOITTAA. Jokainen väite on luettu en-Wikipedian
+   * raakatekstistä (action=raw, haettu 23.8.2026): Toronto, Toronto
+   * subway, Union Pearson Express, St. Lawrence Market, St. Lawrence
+   * Hall, Distillery District, CN Tower, Fort York, Casa Loma,
+   * Nathan Phillips Square, Toronto Islands, Niagara Falls, St.
+   * Lawrence Seaway, Mississaugas of the Credit First Nation,
+   * Wabakinine, Peter Jones (missionary), Harry LaForme ja Truth and
+   * Reconciliation Commission of Canada.
+   *
+   * TARKISTUSRAPORTIN VIISI KORJAUSTA ON TEHTY. (1) Faktapohja sanoi
+   * markkinahallin nousseen "1850-luvun tulipalon" jälkeen; palo oli
+   * 7.4.1849, ja lehti sanoo vuoden 1849 palo sekä nostossa T2 että
+   * oppaan jaksossa 3. (2) Faktapohja sanoi Peter Jonesin toimineen
+   * "sata vuotta" Wabakininen kuoleman jälkeen; Wabakinine kuoli
+   * elokuussa 1796 ja Jones kääntyi metodistiksi 1823, joten nosto A3
+   * sanoo kaksikymmentäseitsemän vuotta. (3) Harry LaFormesta
+   * kerrotaan, että hän erosi sovintokomission johdosta 20.10.2008
+   * eli noin neljä kuukautta sen jälkeen kun komissio aloitti
+   * 1.6.2008 — ilman sitä lukija luulisi hänen johtaneen komission
+   * vuosia kestäneen työn, jonka teki Murray Sinclair. (4) Faktapohja
+   * sanoi Wabakininen kuolleen "matkalla Yorkista"; hänen oma
+   * nimikkoartikkelinsa kertoo hänen tulleen Yorkiin lohta myymään ja
+   * kuolleen leirissään lähellä nykyistä St. Lawrence Marketia, ja
+   * nosto A3 kertoo sen näin. (5) Faktapohjan T4 toisti visan
+   * sanamuodon "yli 30 vuotta"; tämän lehden T4 sanoo ennätyksen
+   * pysyneen "aina vuoteen 2007".
+   *
+   * KAKSI LÄHDERISTIRIITAA RATKAISTIIN NÄIN. (1) Etäisyys Niagaran
+   * putouksille: pelin oma menovinkki (northamerica-questions.js)
+   * sanoo "noin sadan kilometrin päässä", en-Wikipedian Niagara
+   * Falls -artikkeli sanoo 69 km kaakkoon. Lehti käyttää artikkelin
+   * lukua, koska se on linnuntietä mitattu ja lähteistetty; pelin
+   * vanhaa vinkkiriviä ei muutettu tässä erässä. (2) Kielten määrä:
+   * "Toronto"-artikkeli sanoo yhdessä kohdassa "over 160 languages
+   * are spoken in the city" ja toisessa, että hätänumero vastaa
+   * "over 150 languages" — lehti kertoo molemmat luvut ja sanoo
+   * kumpi koskee mitä.
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3. Mississaugas of the Credit
+   * kuvataan NYKYISENÄ itsehallinnollisena kansana: oma alue, oma
+   * nimi, omat neuvottelut. Sivun viimeinen nosto A4 päättyy
+   * käynnissä oleviin maanvaatimusneuvotteluihin eikä hylättyyn
+   * vaatimukseen tai kuolleeseen vanhimpaan — kansa toimii, ei vain
+   * muistele. Wabakininen kuolema kerrotaan tapahtumana ilman
+   * yksityiskohtien korostusta, sisäoppilaitosjärjestelmää
+   * käsitellään vain komission nimen tasolla, ja kaikki
+   * nykypolitiikka on jätetty pois.
+   *
+   * VUOSI 1873 ON SANOTTU AUKI. Toronto ei ollut isoisän matkavuonna
+   * enää kylä eikä vielä metropoli: vuoden 1871 laskennassa asukkaita
+   * oli 56 092 ja vuoden 1881 laskennassa 86 415, kaupunki oli
+   * itsenäistynyt 1834 ja saanut Ontarion pääkaupungin aseman 1867.
+   * Tämä kerrotaan etusivun leipätekstissä
+   * (js/packs/northamerica-artikkelit.js) ja kaupunkisivun
+   * johdannossa, jottei pelaaja luule Torontoa vasta perustetuksi
+   * siirtokunnaksi.
+   *
+   * KULTTUURIVISAN (js/packs/northamerica-questions.js) viiden
+   * kysymyksen vastaukset löytyvät lehdestä: Kanadan väkirikkain
+   * kaupunki (etusivun intro ja kaupunkisivun johdanto), Niagaran
+   * putoukset (oppaan jakso 4), CN Tower (nosto T4), yli 150 kieltä
+   * (etusivun intro) ja Suurten järvien laivaväylä Atlantille
+   * (oppaan jakso 4). Minitehtävät eivät toista visaa: historiasivu
+   * kysyy kaupungin vanhaa nimeä (vastaus samalla sivulla nostossa
+   * H2) ja alkuperäiskansat-sivu kansan nimen jokea (vastaus samalla
+   * sivulla nostossa A1).
+   *
+   * AIHETOISTO, TARKOITUKSELLINEN JA KIRJATTU: Humber-joki esiintyy
+   * kahdesti (H1:n nykyvalokuva suistosta ja A2:n vuoden 1942 kartta
+   * saman joen varren vanhoista paikoista) — eri tiedostot, eri
+   * aikataso, eri juttu. Ontariojärven ranta näkyy kahdessa
+   * avauskuvassa eri suunnista (sataman edustalta ja saarten
+   * matalalta lahdelta) ja kansikuvan lautta kolmannen kerran, mutta
+   * kukin kertoo eri asian: siluetti, järven ranta ja lauttayhteys.
+   * Muut kohteet esiintyvät kerran.
+   *
+   * KUVAT: kaikki 23 kuvaa on haettu Commonsista KATEGORIOILLA
+   * (Skyline of Toronto, Toronto Islands, Fort York, Fires in
+   * Toronto, Distillery District, CN Tower in 1976, St. Lawrence
+   * Hall, St. Lawrence Market South, Exterior of Casa Loma, Ontario
+   * Legislative Building, Nathan Phillips Square, Toronto streetcar
+   * system, Scarborough Bluffs, Horseshoe Falls, Battle of York,
+   * History of Toronto, Toronto Carrying Place, Credit River in
+   * Mississauga, Rouge National Urban Park, Humber River in Toronto,
+   * Peter Jones (missionary)), lisenssi ja tekijä on luettu
+   * rajapinnan extmetadatasta ja jokainen kuva on katsottu silmin
+   * 900 pikselin esikatseluna. NELJÄ HYLKÄYSTÄ: vuoden 1904 palon
+   * paras kuva "Where the Fire Started Toronto, 19th April 1904"
+   * hylättiin, koska vedokseen on kirjoitettu studion signeeraus
+   * Galbraith ja alalaitaan tekijänoikeusrekisteröinnin teksti —
+   * siksi T2:n kuva on vuoden 1849 palosta; Old City Hallin pystykuva
+   * hylättiin, koska etualalla on tunnistettavia kasvoja lähikuvassa;
+   * Niagaran paras nykykuva (David Zhang 2017) hylättiin
+   * copyright-vesileiman takia; ja "Casa Loma Neighborhood" hylättiin
+   * väärän kohteen takia, koska siinä on kaupunginosan asuintalo eikä
+   * linna. Kolme karttaa (Yorkin 1816 pohjapiirros, Jefferysin 1942
+   * Humber-kartta ja vuoden 1915 liitoskartta) ovat karttoja, joissa
+   * teksti on osa itse teosta — sama poikkeus kuin julkaisijan omalla
+   * literalla, ja kuvateksti kertoo mitä kartassa lukee.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty
+   * tässä erässä (säärivit haetaan omana eränään). Matkaoppaan
+   * jakso 5 nojaa siis en-Wikipedian Toronto-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin, Karachin ja
+   * Vancouverin malli. Mittauspiste olisi keskusta 43,65 / -79,38.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta eikä kuvaile kuvaa visuaalisesti, ja se on
+   * yhden virkkeen mittainen.
+   */
+  toronto: [
+    {
+      id: 'kaupunki',
+      nimi: 'Toronto',
+      johdanto: 'Ontariojärven pohjoisrannalla varuskuntakylästä kasvoi '
+        + 'Kanadan väkirikkain kaupunki. Isoisän matkavuonna 1873 Toronto '
+        + 'oli jo Ontarion pääkaupunki, jonka satamaan tuli laivoja ja '
+        + 'jonka läpi kulki rautatie.',
+      kansikuvat: [
+        {
+          tiedosto: 'June 2012 Ontario Legislature Toronto.jpg',
+          selite: 'Ontarion parlamenttitalo valmistui Queen\'s Parkiin 1893, '
+            + 'ja provinssin hallinnon istuin siirtyi sinne kaupungin '
+            + 'vanhemmista rakennuksista.',
+          lahde: 'Priscilla Jordão from São Paulo, Brasil, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: '2020-09-08 Casa Loma 002.jpg',
+          selite: 'Rahoittaja Henry Pellatt rakennutti Casa Loman 1911, ja '
+            + 'linnaan kuuluu puutarhoja, torneja, talleja, hissi, '
+            + 'salakäytäviä ja keilarata.',
+          lahde: 'Thomas1313, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ferry to Toronto Island.jpg',
+          selite: 'Kaupungin lautat veivät Toronton saarille yli 1,4 '
+            + 'miljoonaa matkustajaa vuonna 2024, eivätkä yksityisautot '
+            + 'pääse saarille lainkaan.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kaupungin eri suunnista —
+       * siluetti sataman edustalta järveltä, koko kaupunki ilmasta
+       * pohjoisesta ja järven ranta saarten matalalta lahdelta.
+       * Yksikään ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'View of Toronto Downtown (54587811913).jpg',
+          selite: 'Keskustan tornit nousevat suoraan sataman rannalta, ja '
+            + 'niiden keskellä kohoaa 553,3 metrin CN Tower.',
+          lahde: 'Daniel from Glasgow, United Kingdom, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Toronto aerial 2009.jpg',
+          selite: 'Kaupungin pinta-ala on 631 neliökilometriä, ja se '
+            + 'ulottuu järven rannalta 21 kilometriä pohjoiseen ja 43 '
+            + 'kilometriä idästä länteen.',
+          lahde: 'Christian Muise from Toronto, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Ontario-00360 - Toronto Skyline (51447025725).jpg',
+          selite: 'Ontariojärvi on kaupungin eteläraja, ja rantaviivaa on '
+            + '46 kilometriä.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Varuskunta, joka antoi kylälle nimen',
+          tiedosto: 'Fort York east blockhouse 1.jpg',
+          teksti: 'Kuvernööri John Graves Simcoe perusti Yorkin kylän '
+            + 'Ontariojärven pohjoisrannalle 1793 ja siirsi Yläkanadan '
+            + 'pääkaupungin sinne Newarkista eli nykyisestä '
+            + 'Niagara-on-the-Lakesta, koska paikkaa oli helpompi '
+            + 'puolustaa Yhdysvaltoja vastaan. Sataman suulle nousi Fort '
+            + 'Yorkin varuskunta, ja asutus levisi sen taakse nykyisen '
+            + 'Parliament Streetin ja Front Streetin risteyksen tienoille. '
+            + 'Nimi Toronto tulee alkuperäiskansojen kielistä: mohawkin '
+            + 'tkaronto tarkoittaa paikkaa, jossa puita seisoo vedessä, ja '
+            + 'se viittasi alun perin kauempana pohjoisessa olevaan '
+            + 'kapeikkoon.',
+          selite: 'Fort Yorkin itäinen blokkitalo seisoo varustuksen '
+            + 'vallilla, ja varuskunta rakennettiin sataman suulle '
+            + 'suojaamaan Yorkin kylää.',
+          lahde: 'Secondarywaltz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fort York',
+        },
+        {
+          otsikko: 'Kaupunki, joka paloi kahdesti',
+          tiedosto: 'Aftermath of April 1849 fire at St. James\' Anglican Church, Toronto.jpg',
+          teksti: 'Huhtikuun 7. päivänä 1849 tuli tuhosi Toronton vanhan '
+            + 'ytimen: St. Jamesin kirkosta jäivät jäljelle vain muurit, ja '
+            + 'markkina-alueen pohjoisosat jouduttiin purkamaan. Tilalle '
+            + 'nousi uusi markkinahalli korttelin verran etelämmäs ja '
+            + '1850–51 St. Lawrence Hall. Toinen suurpalo alkoi 19. '
+            + 'huhtikuuta 1904 ja tuhosi yli sata rakennusta keskustassa '
+            + 'sekä suuren osan kaupungin teollisuudesta; vahingot olivat '
+            + 'noin kymmenen miljoonaa Kanadan dollaria silloisessa '
+            + 'rahassa. Palo vaati yhden uhrin, raunioita räjähteillä '
+            + 'raivanneen John Croftin. Osa yrityksistä siirtyi sen '
+            + 'jälkeen lännemmäs King Streetin varrelle.',
+          selite: 'Vuoden 1849 palon jälkeen St. Jamesin anglikaanisesta '
+            + 'kirkosta King Street Eastin ja Church Streetin kulmassa oli '
+            + 'jäljellä vain katoton kivikuori.',
+          lahde: 'Henry Martin, Wikimedia Commons (PD)',
+          wiki: 'Toronto',
+        },
+        {
+          otsikko: 'Viskitehtaasta taidekortteliksi',
+          tiedosto: 'Buildings 3 (grist mill) and 5 (stone distillery) of the Distillery District.jpg',
+          teksti: 'James Worts ja William Gooderham perustivat 1832 '
+            + 'jauhomyllyn ja tislaamon sataman itäpuolelle. Vuosina '
+            + '1859–1861 valmistunut kivirakennus kasvatti laitoksen maan '
+            + 'suurimmaksi viskitehtaaksi, ja tuotanto lähti sataman kautta '
+            + 'maailmanmarkkinoille. Tislaus loppui 1990, ja alue jäi '
+            + 'tyhjilleen. Uudet omistajat ostivat sen 2001 ja avasivat 22. '
+            + 'toukokuuta 2003 jalankulkijoiden korttelin, joka kattaa 13 '
+            + 'eekkeriä ja yli neljäkymmentä suojeltua rakennusta. Se on '
+            + 'Pohjois-Amerikan laajin säilynyt viktoriaanisen '
+            + 'teollisuusarkkitehtuurin kokonaisuus ja kansallinen '
+            + 'historiallinen kohde vuodesta 1988.',
+          selite: 'Vuosina 1859–1861 rakennettu kivitislaamo on Distillery '
+            + 'Districtin vanhin suuri rakennus, ja sen oven yllä on yhä '
+            + 'Gooderham and Wortsin kilpi.',
+          lahde: 'Óðinn, Wikimedia Commons (CC BY-SA 2.5 ca)',
+          wiki: 'Distillery District',
+        },
+        {
+          otsikko: 'Torni, joka rakennettiin kuuluvuuden takia',
+          tiedosto: 'CN Tower 1976.jpg',
+          teksti: '1970-luvun alussa keskustaan nousi pilvenpiirtäjiä niin '
+            + 'tiheään, että niiden heijastavat pinnat alkoivat heikentää '
+            + 'radio- ja tv-lähetysten laatua. Ratkaisuksi tarvittiin '
+            + 'vähintään kolmensadan metrin korkuinen antenni, ja '
+            + 'rautatieyhtiö Canadian National ryhtyi rakentamaan omaa '
+            + 'torniaan 6. helmikuuta 1973. CN Towerista tuli 553,3 metriä '
+            + 'korkea, ja se ohitti maailman kaikki vapaasti seisovat '
+            + 'rakennelmat jo 31. maaliskuuta 1975 kesken rakennustyön. '
+            + 'Ennätys pysyi Torontossa aina vuoteen 2007, jolloin Burj '
+            + 'Khalifa ohitti sen.',
+          selite: 'CN Tower kuvattiin 1976, samana vuonna kun torni '
+            + 'avattiin yleisölle 26. kesäkuuta, ja rannassa seisoivat '
+            + 'silloin vielä sataman viljasiilot.',
+          lahde: 'Robert Taylor from Stirling, Canada, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'CN Tower',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Arch in a Toronto plaza (Unsplash).jpg',
+          selite: 'Nathan Phillips Square on kaupungin päätori, ja sen '
+            + 'perällä avautuu Viljo Revellin suunnittelema kaupungintalo '
+            + 'kahtena kaarevana tornina.',
+          lahde: 'Scott Webb scottwebb, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Toronto on Kanadan väkirikkain kaupunki ja Ontarion '
+          + 'pääkaupunki, ja matkailijan Toronto mahtuu järven rannan ja '
+          + 'Queen\'s Parkin väliin. Etelässä ovat satama, CN Tower ja '
+          + 'lautat saarille, keskellä Nathan Phillips Square ja Old City '
+          + 'Hallin kellotorni, idässä St. Lawrence Marketin kortteli ja '
+          + 'Distillery Districtin tiilikujat. Pohjoisessa Queen\'s Parkin '
+          + 'ympärillä ovat Ontarion parlamenttitalo ja museot, ja '
+          + 'luoteessa kohoaa Casa Loman linna. Talvella keskustassa '
+          + 'pääsee kulkemaan maan alla PATH-verkossa, joka on maailman '
+          + 'suurin maanalainen kauppakäytävästö. Niagaran putouksille on '
+          + '69 kilometriä kaakkoon.',
+        artikkeli: {
+          nimi: 'Matkailijan Toronto',
+          taitto: 'opas',
+          teksti: 'Järven pohjoisrannalle rakennettu suurkaupunki, jossa '
+            + 'noin puolet asukkaista on syntynyt Kanadan ulkopuolella.',
+          nosto: 'Vuoden 1871 laskennassa Torontossa oli 56 092 asukasta; '
+            + 'vuoden 2021 laskennassa 2 794 356.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kanadan vilkkain lentoasema Toronto Pearson on '
+                + 'kaupungin länsirajalla naapurikaupungin Mississaugan '
+                + 'puolella, ja sieltä keskustaan pääsee Union Pearson '
+                + 'Express -junalla: matka Union Stationille kestää 28 '
+                + 'minuuttia ja junia lähtee neljännestunnin välein '
+                + 'seitsemänä päivänä viikossa. Liikenne alkoi kesäkuussa '
+                + '2015. Union Station on myös GO Transitin lähijunien, '
+                + 'Via Railin ja Amtrakin solmu; niiden yhteinen Maple '
+                + 'Leaf New Yorkiin on kaupungin ainoa kansainvälinen '
+                + 'junayhteys. Metro avattiin 1954 Kanadan ensimmäisenä: '
+                + 'Yongen linja kulki Union Stationilta Eglinton '
+                + 'Avenuelle ja siinä oli kaksitoista asemaa. Toronto ei '
+                + 'koskaan purkanut raitiotietään, ja sen verkko on '
+                + 'Pohjois-Amerikan suurin ja vilkkain. Hevosvaunut '
+                + 'vaihtuivat sähköraitiovaunuiksi 1891, ja liikenne '
+                + 'siirtyi kaupungin omistukseen 1921.',
+              kuva: {
+                tiedosto: 'Cars waiting at the Queensway and Windermere, Toronto 2026.jpg',
+                selite: 'Raitiovaunuilla on Queenswayllä oma kaista '
+                  + 'autojen keskellä, ja verkko on Pohjois-Amerikan '
+                  + 'suurin ja vilkkain.',
+                lahde: 'Chicken4War, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Toronto on Ontariojärven luoteisrannalla, ja maasto '
+                + 'nousee järveltä loivasti: rantaviivalla ollaan 76,5 '
+                + 'metrissä merenpinnasta ja pohjoisessa York Universityn '
+                + 'seudulla Keele Streetin ja Steeles Avenuen risteyksessä '
+                + '209 metrissä. Tasaista maata halkoo rotkolaaksosto, '
+                + 'jonka ovat kaivaneet Humber-joki lännessä, Don-joki '
+                + 'keskustan itäpuolella ja Rouge-joki kaupungin '
+                + 'itärajalla; laaksot ovat niin leveitä ja syviä, että '
+                + 'useat valtakadut päättyvät toiselle reunalle ja '
+                + 'jatkuvat vasta toiselta. Suurin osa rotkoista on '
+                + 'nykyään puistoa. Idässä Scarborough Bluffsin jyrkänteet '
+                + 'merkitsevät jääkauden Iroquois-järven vanhaa '
+                + 'rantaviivaa. Sataman suojana oleva saaristo oli niemi '
+                + 'vuoteen 1858, jolloin myrsky katkaisi sen mantereesta.',
+              kuva: {
+                tiedosto: 'Bluffs.jpg',
+                selite: 'Scarborough Bluffs on jyrkänne Ontariojärven '
+                  + 'rannalla kaupungin itäosassa, ja se paljastaa '
+                  + 'jääkauden jälkeisen Iroquois-järven vanhan '
+                  + 'rantakerroksen.',
+                lahde: 'WildComet, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: tori samalla korttelilla vuodesta 1803',
+              teksti: 'Yorkin kylä perusti ensimmäisen julkisen torinsa '
+                + '1803 sille korttelille, jolla St. Lawrence Market yhä '
+                + 'seisoo. Toinen pysyvä markkinarakennus valmistui 1831, '
+                + 'ja vuoden 1849 palon jälkeen alueelle rakennettiin uusi '
+                + 'halli korttelin verran etelämmäs — ensimmäinen '
+                + 'rakennus, joka virallisesti kantoi nimeä St. Lawrence '
+                + 'Market. Eteläinen halli on Front Streetin ja Jarvis '
+                + 'Streetin kulmassa, ja pohjoinen halli on rakennettu '
+                + 'uudelleen 2010-luvun lopulla. Torikortteli on '
+                + 'matkailijoiden suosituimpia paikkoja Kensington '
+                + 'Marketin ja maanalaisen PATH-käytävästön ohella.',
+              kuva: {
+                tiedosto: 'St Lawerence South Market Exterior 202112.jpg',
+                selite: 'St. Lawrence Marketin eteläinen halli on Front '
+                  + 'Streetin ja Jarvis Streetin kulmassa samalla '
+                  + 'korttelilla, jolle Yorkin tori perustettiin 1803.',
+                lahde: 'Canmenwalker, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Päivämatka putouksille ja tie merelle',
+              teksti: 'Niagaran putoukset ovat 69 kilometriä kaakkoon, '
+                + 'Ontarion ja New Yorkin osavaltion rajalla. Kolmesta '
+                + 'putouksesta suurin on Kanadan puolelle kaartuva '
+                + 'Horseshoe Falls, virtaamaltaan Pohjois-Amerikan '
+                + 'mahtavin; Niagara-joki laskee niissä Erie-järvestä '
+                + 'Ontariojärveen ja kuluttaa uraansa Niagaran jyrkänteen '
+                + 'läpi. Maid of the Mist -veneet ovat vieneet matkustajia '
+                + 'putousten alle vuodesta 1846, siis jo isoisän aikaan. '
+                + 'Samaa reittiä kulkee rahti: vuonna 1959 valmistunut '
+                + 'Saint Lawrence -laivaväylä avasi valtamerilaivoille '
+                + 'tien Atlantilta Suurille järville, ja Toronton satama '
+                + 'ottaa nykyään vastaan kaksi miljoonaa tonnia lastia '
+                + 'vuodessa.',
+              kuva: {
+                tiedosto: 'AERIAL VIEW OF "HORSESHOE FALLS," THE CANADIAN HALF OF NIAGARA FALLS. TO THE LEFT IS GOAT ISLAND, WHICH DIVIDES THE... - NARA - 549474.jpg',
+                selite: 'Horseshoe Falls kaartuu Kanadan puolelle, ja sen '
+                  + 'alapuolella kulkevat Maid of the Mist -veneet, jotka '
+                  + 'ovat vieneet matkustajia koskiin vuodesta 1846.',
+                lahde: 'George Burns, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Torontosta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Toronto-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on lämpimän kesän mannerilmasto, ja se oli '
+                + 'lähempänä viileämmän kesän tyyppiä ennen 1900-lukua, '
+                + 'ennen kuin kaupungin lämpösaareke voimistui. Sade '
+                + 'jakautuu jokseenkin tasaisesti ympäri vuoden, yhteensä '
+                + 'noin 822,7 millimetriä, ja kesä on sateisin '
+                + 'ukkoskuurojen takia; lunta kertyy keskimäärin 121,5 '
+                + 'senttiä talvessa. Aurinko paistaa 2 066 tuntia eli 45 '
+                + 'prosenttia valoisasta ajasta, joulukuussa 28 ja '
+                + 'heinäkuussa 60 prosenttia. Kuumin mitattu lukema on '
+                + '40,6 astetta heinäkuulta 1936 ja kylmin −32,8 astetta '
+                + '10. tammikuuta 1859 — isoisän omana aikana.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Rannalla asui monta kansaa ennen kuin britit mittasivat '
+        + 'Yorkin kylän 1793. Sota, tulipalot ja rautatiet tekivät siitä '
+        + 'sadassa vuodessa provinssin pääkaupungin, ja kuudesta kunnasta '
+        + 'tuli lopulta yksi kaupunki.',
+      tehtava: {
+        kysymys: 'Millä nimellä Toronto tunnettiin ennen vuotta 1834?',
+        vaihtoehdot: [
+          'York',
+          'Newark',
+          'Fort Rouillé',
+          'Teiaiagon',
+        ],
+        oikea: 0,
+        fakta: 'Kuvernööri Simcoe perusti Yorkin kylän 1793, ja se otti '
+          + 'nimekseen Toronto vasta kaupungiksi tullessaan 6. maaliskuuta '
+          + '1834.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolme kansaa ennen Yorkia',
+          tiedosto: 'Humber Marshes Toronto.jpg',
+          teksti: 'Seutua on asuttu yli kymmenentuhatta vuotta. '
+            + 'Irokeesikielinen wendat-kansa viljeli sitä vuosisatoja '
+            + 'ennen eurooppalaisia, kunnes haudenosaunee-kansa syrjäytti '
+            + 'sen vuosina 1648–1650. Vuoteen 1660 mennessä '
+            + 'haudenosauneilla oli kaksi kylää nykyisen kaupungin '
+            + 'alueella: Ganatsekwyagon Rouge-joen ja Teiaiagon '
+            + 'Humber-joen varrella. Vuoteen 1701 mennessä pohjoisesta '
+            + 'tulleet anishinaabe-kieliset mississaugat olivat '
+            + 'vuorostaan syrjäyttäneet heidät, ja suurin osa '
+            + 'haudenosauneista palasi nykyisen New Yorkin osavaltion '
+            + 'puolelle. Ranskalaiset kauppiaat rakensivat rannalle Fort '
+            + 'Rouillén 1750 mutta hylkäsivät sen 1759.',
+          selite: 'Humber-joen suisto Ontariojärveen on kaupungin '
+            + 'länsilaidalla, ja joen varrella sijaitsi 1600-luvulla '
+            + 'Teiaiagonin kylä.',
+          lahde: 'Mykola Swarnyk, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Toronto',
+        },
+        {
+          otsikko: 'Poltettu pääkaupunki ja uusi nimi',
+          tiedosto: 'Plan of the harbour, fort and town of York, the capital of Upper Canada (March 16th, 1816).jpg',
+          teksti: 'Yorkista tuli Yläkanadan pääkaupunki, ja vuoden 1812 '
+            + 'sodassa asema maksoi kalliisti: huhtikuussa 1813 '
+            + 'Yhdysvaltain joukot valtasivat kylän, miehittivät sen kaksi '
+            + 'viikkoa ja polttivat parlamenttirakennukset. Perääntyvät '
+            + 'britit räjäyttivät varuskunnan ruutivaraston. Myöhemmin '
+            + 'samassa sodassa britit polttivat vastaavasti Washingtonin. '
+            + 'York otti nimekseen City of Toronto 6. maaliskuuta 1834, ja '
+            + 'ensimmäiseksi pormestariksi valittiin uudistusmielinen '
+            + 'William Lyon Mackenzie, joka johti kolme vuotta myöhemmin '
+            + 'epäonnistuneen kapinan brittihallintoa vastaan. Vuonna 1867 '
+            + 'kaupungista tuli Ontarion pääkaupunki.',
+          selite: 'Vuoden 1816 pohjapiirroksessa Yorkin ruutukaava on '
+            + 'sataman pohjoisrannalla ja Fort York lännempänä, ja kartan '
+            + 'reunahuomautus kertoo amerikkalaisten polttaneen '
+            + 'hallintorakennukset 27. huhtikuuta.',
+          lahde: 'Nicolls, Gustavus Published: Royal Engineers, Quebec, 1816, Wikimedia Commons (PD)',
+          wiki: 'Battle of York',
+        },
+        {
+          otsikko: 'Kokoontumissali palon raunioille',
+          tiedosto: 'St Lawrence Hall, Toronto (exterior).jpg',
+          teksti: 'Vuoden 1849 palon jälkeen vanhan markkina-alueen '
+            + 'pohjoisosa oli purettava, ja tilalle nousi 1850–51 St. '
+            + 'Lawrence Hall. Arkkitehti William Thomasin suunnittelemassa '
+            + 'talossa oli tuhannen istumapaikan juhlasali, ja siitä tuli '
+            + 'nopeasti kaupungin yhteiskuntaelämän keskus: salissa '
+            + 'puhuivat muun muassa John A. Macdonald ja George Brown, '
+            + 'molemmat Kanadan valaliiton isiä. 1870-luvulle tultaessa '
+            + 'kaupunkiin oli rakennettu suurempia ja soveliaampia '
+            + 'esiintymistiloja, ja Hallin merkitys väheni. Rakennus '
+            + 'säilyi silti, ja se entisöitiin täysin 1967 Kanadan '
+            + 'satavuotisjuhlaan; samana vuonna siitä tuli kansallinen '
+            + 'historiallinen kohde.',
+          selite: 'St. Lawrence Hall King Street Eastin varrella on '
+            + 'William Thomasin suunnittelema, ja sen kellotornin alla on '
+            + 'tuhannen istumapaikan juhlasali.',
+          lahde: 'DavidArthur, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'St. Lawrence Hall',
+        },
+        {
+          otsikko: 'Kuudesta kaupungista yksi',
+          tiedosto: 'TorontoAnnexationHistory.jpg',
+          teksti: 'Toronto kasvoi ensin liitoksilla: kaupunki laajeni '
+            + 'alkuperäisten rajojensa yli liittämällä itseensä '
+            + 'naapurikyliä ja esikaupunkeja. Vuonna 1954 kaupunki ja '
+            + 'kaksitoista naapurikuntaa koottiin Metropolitan Toronto '
+            + '-nimiseksi seutuhallinnoksi, joka hoiti teitä, poliisia, '
+            + 'vettä ja joukkoliikennettä. Vuonna 1967 seitsemän pienintä '
+            + 'kuntaa yhdistettiin naapureihinsa, ja jäljelle jäi kuusi. '
+            + 'Ne — East York, Etobicoke, North York, Scarborough, York ja '
+            + 'entinen Toronton kaupunki — lakkautettiin 1. tammikuuta '
+            + '1998 ja korvattiin yhdellä kaupungilla. Maaliskuun 1997 '
+            + 'kansanäänestyksissä yli kolme neljäsosaa vastusti, mutta '
+            + 'äänestykset eivät olleet sitovia.',
+          selite: 'Vuoden 1915 liitoskarttaan on merkitty ne kylät ja '
+            + 'esikaupungit, jotka Toronto oli siihen mennessä liittänyt '
+            + 'itseensä, sekä kunkin liitoksen vuosi ja pinta-ala.',
+          lahde: 'Special Committee of Radial Railway Entrances and Rapid Transit for the City of Toronto, City of Toronto, Wikimedia Commons (PD)',
+          wiki: 'Toronto',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Mississaugas of the Credit on nykyinen itsehallinnollinen '
+        + 'kansa, jonka esivanhempien mailla Toronto seisoo. Kansa '
+        + 'hallitsee omaa aluettaan, lyhensi nimeään 2019 ja neuvottelee '
+        + 'maistaan yhä 2020-luvulla.',
+      tehtava: {
+        kysymys: 'Minkä joen mukaan Mississaugas of the Credit -kansa on nimetty?',
+        vaihtoehdot: [
+          'Credit-joen',
+          'Humber-joen',
+          'Don-joen',
+          'Rouge-joen',
+        ],
+        oikea: 0,
+        fakta: 'Ojibwenkielinen nimi Mazina\'iga-ziibing Misi-zaagiwininiwag '
+          + 'tarkoittaa mississauga-kansaa Credit-joen luona.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kansa, jonka nimi kertoo joesta',
+          tiedosto: 'Credit River - Mississauga, Ontario 2019-04-24 (03).jpg',
+          teksti: 'Mississaugas of the Credit First Nation on ojibwe-'
+            + 'kansoihin kuuluvien mississaugojen itsehallinnollinen '
+            + 'kansakunta Etelä-Keski-Ontariossa. Sen ojibwenkielinen nimi '
+            + 'Mazina\'iga-ziibing Misi-zaagiwininiwag tarkoittaa '
+            + 'mississauga-kansaa Credit-joen luona. 1800-luvulla '
+            + 'siirtolaisväestön nopea kasvu ajoi kansan pois nykyisen '
+            + 'Mississaugan alueelta, ja se otti 1848 vastaan Six Nations '
+            + '-liiton tarjoaman maapalan tämän omalta alueelta. Maa '
+            + 'ostettiin lopullisesti omaksi 15. kesäkuuta 1903. Nykyinen '
+            + 'New Credit -alue on Hagersvillen lähellä Six Nations of the '
+            + 'Grand Riverin naapurissa; huhtikuussa 2015 kansaan kuului '
+            + '2 330 jäsentä, joista 850 asui alueella.',
+          selite: 'Credit-joki virtaa Ontariojärveen Mississaugan '
+            + 'kaupungin läpi, ja juuri tästä joesta kansan nimi kertoo.',
+          lahde: 'Ryan Hodnett, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mississaugas of the Credit First Nation',
+        },
+        {
+          otsikko: 'Kauppa, jota kutsuttiin ostoksi',
+          tiedosto: 'Charles W. Jefferys\'s map of lower Humber Toronto.jpg',
+          teksti: 'Syyskuussa 1787 Britannian edustaja lordi Dorchester '
+            + 'hankki mississaugoilta yli 250 000 eekkeriä maata nykyisen '
+            + 'Toronton kohdalta. Vastineeksi annettiin rahaa, 2 000 '
+            + 'piikiveä, 24 messinkikattilaa, 120 peiliä, 24 hattua, '
+            + 'kangaspakka ja 96 gallonaa rommia. Kauppakirjassa ei kuvattu '
+            + 'aluetta tarkasti, ja sitä täsmennettiin uudella asiakirjalla '
+            + '1805, jolloin yksikään alkuperäisistä neuvottelijoista ei '
+            + 'ollut enää elossa. Mississaugat pitivät sopimusta alun perin '
+            + 'vuokrana ikuisiksi ajoiksi luvattuja lahjoja vastaan. Kiista '
+            + 'kesti yli kaksisataa vuotta: 2010 Kanada suostui maksamaan '
+            + '145 miljoonaa dollaria maan historialliseen arvoon '
+            + 'perustuvana hyvityksenä.',
+          selite: 'C. W. Jefferysin vuonna 1942 piirtämään karttaan on '
+            + 'merkitty Humber-joen varren vanhat paikat: Teiaiagonin '
+            + 'kylä, Toronto Carrying Place -reitti ja mississaugoja '
+            + 'varten 1788 pystytetty paja.',
+          lahde: 'Charles William Jefferys, Wikimedia Commons (PD)',
+          wiki: 'Toronto Purchase',
+        },
+        {
+          otsikko: 'Kolme nimeä kansan omasta historiasta',
+          tiedosto: 'Kahkewaquonaby-1845.jpg',
+          teksti: 'Wabakinine oli 1790-luvun puolivälissä Ontariojärven '
+            + 'länsirannan mississaugojen ylin päällikkö. Elokuussa 1796 '
+            + 'hän oli tullut Yorkiin myymään lohta ja sai leirissään '
+            + 'yöllä surmansa puolustaessaan sisartaan; paikka on lähellä '
+            + 'nykyistä St. Lawrence Marketia. Kaksikymmentäseitsemän '
+            + 'vuotta myöhemmin Peter Jones eli Kahkewāquonāby kääntyi '
+            + '1823 metodistiksi ja vetosi kansansa maista suoraan '
+            + 'kuningatar Victorialle. Harry LaForme taas oli 2004 '
+            + 'ensimmäinen alkuperäiskansan jäsen kanadalaisessa '
+            + 'valitustuomioistuimessa; hän oli myös totuus- ja '
+            + 'sovintokomission ensimmäinen puheenjohtaja, mutta erosi '
+            + '20. lokakuuta 2008, neljä kuukautta komission '
+            + 'aloittamisesta.',
+          selite: 'Skotlantilaiset valokuvaajat Hill ja Adamson kuvasivat '
+            + 'Peter Jonesin eli Kahkewāquonābyn Edinburghissa 4. elokuuta '
+            + '1845, kun hän kiersi Britanniassa kansansa asialla.',
+          lahde: 'Hill & Adamson, Wikimedia Commons (PD)',
+          wiki: 'Peter Jones (missionary)',
+        },
+        {
+          otsikko: 'Nimi lyhennettiin, neuvottelut jatkuvat',
+          tiedosto: 'Little Rouge Creek valley.jpg',
+          teksti: 'Tammikuun 8. päivänä 2019 Mississaugas of the New '
+            + 'Credit ilmoitti lyhentävänsä nimensä muotoon Mississaugas '
+            + 'of the Credit. Vuoden 2010 sovinto ei päättänyt '
+            + 'maakysymystä. Maaliskuussa 2025 Kanadan hallitus maksoi 30 '
+            + 'miljoonan dollarin ennakon kansan erityisvaatimuksesta, '
+            + 'joka koskee vuoden 1820 sopimuksia 22 ja 23 sekä niissä '
+            + 'luovutettua reservialuetta. Samaan aikaan Kanada ja Ontario '
+            + 'esittivät 183,4 miljoonan dollarin sovintoa Rouge River '
+            + 'Valley Tract -vaatimukseen, joka koskee laajaa aluetta '
+            + 'Ontariojärven pohjoisrannalla; neuvottelut siitä olivat '
+            + 'alkaneet jo 2015. Kansa neuvottelee siis omista maistaan '
+            + 'yhä, omissa nimissään.',
+          selite: 'Little Rouge Creekin laakso kuuluu Rouge-joen '
+            + 'vesistöön, jonka laaksoa koskevasta vaatimuksesta '
+            + 'Mississaugas of the Credit neuvottelee Kanadan ja Ontarion '
+            + 'kanssa.',
+          lahde: 'Óðinn, Wikimedia Commons (CC BY-SA 2.5 ca)',
+          wiki: 'Mississaugas of the Credit First Nation',
+        },
+      ],
+    },
+  ],
 };

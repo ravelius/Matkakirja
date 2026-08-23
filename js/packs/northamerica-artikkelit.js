@@ -230,4 +230,42 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'julkista puistoa, ja joen varsi on kaupungin suosituin '
       + 'näköalapaikka.',
   },
+  Toronto: {
+    intro: 'Toronto on Kanadan väkirikkain kaupunki ja Ontarion provinssin '
+      + 'pääkaupunki. Se on rakennettu Ontariojärven luoteisrannalle '
+      + 'sataman ympärille, ja maasto nousee järveltä loivasti pohjoiseen. '
+      + 'Vuoden 2021 laskennassa kaupungissa asui 2 794 356 ihmistä, ja se '
+      + 'on Pohjois-Amerikan neljänneksi väkirikkain kaupunki.'
+      + '\n\n'
+      + 'Britit perustivat Yorkin kylän 1793 kiistanalaisen Toronto '
+      + 'Purchase -maakaupan jälkeen ja tekivät siitä Yläkanadan '
+      + 'pääkaupungin. Vuoden 1812 sodassa amerikkalaiset valtasivat kylän '
+      + 'kahdeksi viikoksi, ja 1834 York otti nimekseen Toronto. '
+      + '**Isoisän matkavuonna 1873 Toronto ei ollut enää kylä eikä vielä '
+      + 'metropoli:** vuoden 1871 laskennassa asukkaita oli 56 092, '
+      + 'kaupunki oli ollut Ontarion pääkaupunki kuusi vuotta ja rautatiet '
+      + 'olivat tehneet siitä portin mantereen sisäosiin.'
+      + '\n\n'
+      + 'Nykyään noin puolet asukkaista on syntynyt Kanadan ulkopuolella, '
+      + 'kaupungissa puhutaan **yli 160 kieltä** ja hätänumero vastaa yli '
+      + '150 kielellä. Niagaran putoukset ovat 69 kilometriä kaakkoon, ja '
+      + 'vuonna 1959 valmistunut Saint Lawrence -laivaväylä avasi '
+      + 'valtamerilaivoille tien Atlantilta Suurille järville.',
+    teksti: 'Toronto on Kanadan väkirikkain kaupunki ja Ontarion '
+      + 'pääkaupunki Ontariojärven luoteisrannalla. Kaupunki on rakennettu '
+      + 'loivaan rinteeseen, jota halkovat Humberin, Donin ja Rouge-joen '
+      + 'kaivamat rotkolaaksot, ja sataman edustalla on saariketju.'
+      + '\n\n'
+      + 'Britit perustivat Yorkin kylän 1793, Yhdysvaltain joukot '
+      + 'valtasivat sen 1813, ja 1834 York otti nimekseen Toronto. Vuoden '
+      + '1849 palo tuhosi vanhan ytimen ja vuoden 1904 palo yli sata '
+      + 'rakennusta keskustassa; molemmat korttelit rakennettiin '
+      + 'uudelleen. Vuonna 1998 kuusi erillistä kuntaa lakkautettiin ja '
+      + 'korvattiin yhdellä kaupungilla.'
+      + '\n\n'
+      + 'CN Tower kohoaa 553,3 metriin, raitiovaunut kulkevat yhä samoilla '
+      + 'kaduilla kuin hevosvaunujen aikaan, ja St. Lawrence Marketin tori '
+      + 'on ollut samalla korttelilla vuodesta 1803. Niagaran putouksille '
+      + 'on päivämatka kaakkoon.',
+  },
 };
