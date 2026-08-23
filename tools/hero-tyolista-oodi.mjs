@@ -29,21 +29,35 @@
  * eduskuntataloa vastapäätä.
  */
 
-// Reseptin muuttumaton loppuosa — sama kuin hero-tyolista-3..20:ssa.
+/*
+ * LAHIKUVAKULMA (omistajan linjaus 24.8.2026 Oodin ensimmaisen ajon
+ * jalkeen: "Oodi sijoittuu kaupunkiin vaarin. Turvallisempi tehda
+ * enemman lahikuva ja vahan matalammalta").
+ *
+ * Vakioresepti kuvaa kohteen kattojen korkeudelta ja levittaa taakse
+ * laajan kaupunkinakyman. Se on hyva tunnetuille maamerkeille, mutta
+ * jokainen naytetty kortteli on mahdollisuus sijoittaa rakennus
+ * vaaraan ymparistoon — ja juuri niin kavi Oodille. Mita vahemman
+ * kaupunkia nakyy, sita vahemman siina voi mennä pieleen.
+ *
+ * Tama kulma on siksi matalampi ja lahempi: kohde tayttaa kuvan,
+ * ymparistoa nakyy vain sen verran etta paikka tunnistuu. Kayta tata
+ * aina kun kohteen ymparisto on vaikea tai vahan kuvattu.
+ */
 const KUVAKULMA =
-  " Shot from a LOW ELEVATED viewpoint at rooftop height, roughly level"
-  + " with the landmark's midpoint, camera tilted only gently downward"
-  + ' (about 15 degrees): the landmark towers large and dominant in the'
-  + ' foreground, its facade fully visible, while streets with people'
-  + ' directly below and the city behind stretch into the distance.'
-  + ' Professional full-frame drone photograph, natural colours, crisp'
-  + ' detail, realistic atmosphere, no stylization. Absolutely no text,'
-  + ' no watermark, no borders.';
+  ' Shot from street level or only slightly above, from close range, the'
+  + ' camera looking almost horizontally at the building and tilted up'
+  + ' very slightly. The building FILLS the frame and is cropped by the'
+  + ' edges: its facade and materials are the subject, seen close enough'
+  + ' that the surface texture reads clearly. Only a narrow strip of the'
+  + ' surroundings is visible at the edges and behind — just enough to'
+  + ' place it, never a wide city panorama. Professional full-frame'
+  + ' photograph, natural colours, crisp detail, realistic atmosphere,'
+  + ' no stylization. Absolutely no text, no watermark, no borders.';
 
 const p = (kohde, kuvaus, ymparisto) =>
-  `A photorealistic wide photograph of ${kohde} dominating the`
-  + ` foreground: ${kuvaus}. Behind and below it, smaller:`
-  + ` ${ymparisto}.${KUVAKULMA}`;
+  `A photorealistic close photograph of ${kohde} filling the frame:`
+  + ` ${kuvaus}. At the edges only: ${ymparisto}.${KUVAKULMA}`;
 
 export const TYOLISTA = [
   /* ---- OODI — Kansalaistori, päivä. Korvaa viitteettömän kuvan. */
@@ -72,12 +86,10 @@ export const TYOLISTA = [
       + ' top floor is a continuous band of glass under a gently'
       + ' undulating white roof, and the glazed ground floor is set back'
       + ' in shadow beneath the overhang',
-      'the open paved expanse of Kansalaistori with people crossing it as'
-      + ' small distant figures, the columned front of the Parliament'
-      + ' House on its granite steps across the street, the glass and'
-      + ' steel of the Musiikkitalo and the Sanomatalo nearby, and the'
-      + ' rooftops of central Helsinki stretching away under a clear'
-      + ' northern sky',
+      'only a strip of the paved Kansalaistori square in front with a few'
+      + ' people walking past at human scale, and a narrow glimpse of the'
+      + ' granite steps and columns of the Parliament House at the very'
+      + ' edge of the frame, under a clear northern sky',
     ),
     selite: 'Keskustakirjasto Oodi (2018) valittiin pian valmistumisensa '
       + 'jälkeen maailman parhaaksi uudeksi yleiseksi kirjastoksi.',
