@@ -1,7 +1,7 @@
 # Herokuvien riskiarvio
 Mittausvaihe (ei kuvien katselua eikä arviointia): jokaiselle 258:lle `herokoe/`-alkuiselle herokuvalle pääteltiin kuvatekstin perusteella väitetty kohdeluokka, ja Wikimedia Commonsin rajapinnasta mitattiin kuvadatan tiheys (oman Commons-kategorian tiedostomäärä ja hakuosumat). Tulos on riskijärjestys seuraavalle vaiheelle, joka katsoo kuvat silmin.
 
-**HUOM — mittaus jäi kesken:** Wikimedia Commonsin rajapinta alkoi rajoittaa hakuja (HTTP 429) kesken ajon. Luokittelu (a/b/c) on valmis kaikille 258 kuvalle, mutta Commons-mittaus ehdittiin tehdä **138/258** kuvalle. Loput **120** on merkitty taulukkoon tekstillä "EI MITATTU" — niitä ei ole jätetty pois, jotta puute näkyy eikä häviä. Kärkilista alempana on rakennettu vain mitatuista kuvista; mittaamattomat a-luokan kuvat on listattu erikseen omana osionaan, koska niidenkin riski on toistaiseksi tuntematon — ei tiedetä matalaksi.
+**HUOM — mittaus jäi kesken JA osa tuloksista on epäluotettavia:** Wikimedia Commonsin rajapinta alkoi rajoittaa hakuja (HTTP 429) kesken ajon. Luokittelu (a/b/c) on valmis kaikille 258 kuvalle, mutta Commons-mittaus yritettiin vain **138/258** kuvalle — loput **120** eivät edes yrittäneet, ja ne on merkitty taulukkoon tekstillä "EI MITATTU". Yritetyistäkin **59 kuvan mittaus epäonnistui kokonaan** (429 rikkoi molemmat osahaut, ei aitoa nollatulosta) ja **7** jäi osittaiseksi. Luotettavasti mitattuja on siis vain **72/258**. Mikään näistä puutteista ei ole jätetty pois taulukosta — kaikki näkyvät omilla merkinnöillään, jotta puute näkyy eikä häviä. Kärkilista alempana on rakennettu vain luotettavasti mitatuista kuvista; sekä mittaamattomat että epäonnistuneet a-luokan kuvat on listattu erikseen, koska niidenkin riski on toistaiseksi tuntematon — ei tiedetä matalaksi.
 ## Menetelmä lyhyesti
 1. **Poiminta**: kaikki `ampari: 'herokoe/...'`-kentän sisältävät kuvat js/packs/kulttuuri-kategoriat.js:stä (258 kpl), kuvateksti (`selite`) talteen sellaisenaan.
 2. **Luokittelu (a/b/c)**: automatisoitu päättely kuvatekstin ensimmäisestä lauseesta — subjektin/pääkohteen tunnistus (verbirajapinta), sitten avainsanahaku (silta/aukio/puisto/katu = b, yleisnäkymä/vanhakaupunki/alue = c, muuten oletus a). Noin 50 rajatapausta (kaikki b- ja c-luokat sekä kaikki tapaukset, joissa päättely valitsi "henkilö rakensi kohteen" -lauserakenteesta väärän osan tai jätti nimen kesken) tarkistettiin ja korjattiin käsin. Loput noin 200 a-luokan kuvaa jäivät automaattipäättelyn varaan.
@@ -9,28 +9,21 @@ Mittausvaihe (ei kuvien katselua eikä arviointia): jokaiselle 258:lle `herokoe/
 4. **Commons-mittaus**: `list=search&srnamespace=14` haki parhaiten täsmäävän Commons-kategorian, jonka jäsenmäärä (`cmtype=file`, kattoraja 500) on päämittari. Rinnalla `list=search&srnamespace=6` kertoo koko tiedostohaun osumamäärän (löysempi, kielimuodoille sietokykyisempi mittari). Jos kategoriaa ei löytynyt, se on kirjattu omaan sarakkeeseensa — sellaisenaan vahva riskisignaali. **Commons alkoi rajoittaa (429) osaa hauista, ja mittaus jäi tältä osin vajaaksi — ks. yllä oleva huomautus ja alempana "Ei mitatut kuvat".**
 5. **Riskipisteet** = luokkapaino (a=3, b=2, c=1) × niukkuuspaino (kategorian tiedostomäärän perusteella: alle 5 = 5, alle 20 = 4, alle 50 = 3, alle 150 = 2, 150 tai enemmän = 1; "ei kategoriaa" = 5). Asteikko 1–15. Mittaamattomille kuville riskipisteitä ei laskettu ("EI MITATTU").
 ## Yhteenveto
-- Kuvia yhteensä: **258**, mitattu Commonsista: **138**, ei mitattu (429-rajoitus): **120**.
+- Kuvia yhteensä: **258**. Luotettavasti mitattu Commonsista: **72**. Mittaus yritettiin muttei onnistunut: **59** (429 rikkoi molemmat osahaut). Osittain mitattu: **7**. Ei edes yritetty (429-rajoitus pysäytti ajon ensin): **120**.
 - Luokkajakauma (kaikki 258): **a) 226** nimetty rakennus tai monumentti, **b) 30** nimetty katu, aukio, puisto tai silta, **c) 2** yleisnäkymä ilman nimettyä kohdetta.
-- Mitatuista kohteista ilman omaa Commons-kategoriaa: **74** / 138.
+- Luotettavasti mitatuista kohteista ilman omaa Commons-kategoriaa: **15** / 72.
+- **59 kuvan mittaus epäonnistui kokonaan** (josta **58** on a-luokkaa): sekä kategoriahaku että tiedostohaku palauttivat tyhjää samalla rivillä, mikä on tunnusomaista API-kutsun epäonnistumiselle 429-rajoituksen alla — ei aidolle nollatulokselle. Näitä ei lasketa kärkilistaan eikä niille annettu riskipisteitä; ks. oma taulukkonsa alempana.
 - **7 kuvaa jäivät osittain mitatuiksi**: oikea Commons-kategoria löytyi, mutta sen tiedostomäärän laskenta katkesi 429-rajoitukseen. Nämä eivät ole mukana kärkilistassa (riskipisteitä ei voitu laskea) — ks. taulukko.
-- **Kärkilista** (luokka a JA Commons-kategoriassa alle 20 tiedostoa, laskettu vain täysin mitatuista): **87 kuvaa**, joista **8 on todennäköisesti mittausvirhe** (ks. varoitus Kärkilista-osiossa) — luultavasti oikeasti alempana on suunnilleen **79 kuvaa**.
+- **Kärkilista** (luokka a JA Commons-kategoriassa alle 20 tiedostoa, laskettu vain täysin mitatuista): **29 kuvaa**, joista **13 on todennäköisesti mittausvirhe** (ks. varoitus Kärkilista-osiossa) — luultavasti oikeasti alempana on suunnilleen **16 kuvaa**.
 - Lisäksi **96 a-luokan kuvaa jäi kokonaan mittaamatta** — niiden riski on tuntematon, ei oletettavasti matala; ks. oma listansa alempana.
 - Kašgarin tunnettu virhekuva (`hero-kashgar-keskipaiva.png`, Yusuf Balasagunin mausoleumi): **EI MITATTU** — jäi 429-rajoituksen taakse ennen kuin ehdittiin siihen asti. Se pitää mitata ensimmäisenä seuraavalla ajolla, koska kyseessä on tunnettu virhetapaus eikä sen riskiä siksi voi jättää auki. Menetelmä on aiemmin (testiajossa) sijoittanut sen korkeaksi riskiksi — ks. rajoitukset-osio.
 - Kärkilistalla toistuvat kaupungit (vähintään 3 kuvaa):
-  - Wien: 3 kuvaa
-  - Edinburgh: 3 kuvaa
-  - Varsova: 3 kuvaa
   - Moskova: 3 kuvaa
-  - Petra: 3 kuvaa
-  - Kuwait: 3 kuvaa
-  - Bagdad: 3 kuvaa
-  - Luxor: 3 kuvaa
-  - Riad: 3 kuvaa
 
 ## Kärkilista
-Nämä ovat kuvat, jotka seuraava vaihe katsoo silmin ensin: luokka on **a** (nimetty yksittäinen rakennus tai monumentti) JA Commons-kategoriassa on alle 20 tiedostoa — tai kategoriaa ei löytynyt lainkaan. Vain mitatuista 138 kuvasta.
+Nämä ovat kuvat, jotka seuraava vaihe katsoo silmin ensin: luokka on **a** (nimetty yksittäinen rakennus tai monumentti) JA Commons-kategoriassa on alle 20 tiedostoa — tai kategoriaa ei löytynyt lainkaan. Vain mitatuista 72 kuvasta.
 
-**Menetelmävaroitus — 8 riviä listan kärjessä ovat todennäköisesti mittausvirheitä, ei oikeasti niukkoja:** näillä "Commons-kategoria" on "ei löytynyt", mutta hakuosumia (`srnamespace=6`) on silti vähintään 500 — esimerkiksi Sagrada Família ja Pantheon ovat listalla juuri tästä syystä, vaikka niistä on Commonsissa selvästi tuhansia kuvia. Todennäköisin selitys on, että 429-rajoitus tai rinnakkaisajon kuormitus rikkoi juuri kategoriahaun tälle riville, ja koodi tulkitsi epäonnistuneen haun samaksi asiaksi kuin "kategoriaa ei ole" — näitä kahta ei erotettu toisistaan tässä ajossa. Rivit on merkitty alla **⚠**-merkillä eikä niitä pidä katsoa ensimmäisenä; oikea kärkipää löytyy niiden alta, riveiltä joilla hakuosumatkin ovat matalat.
+**Menetelmävaroitus — 13 riviä listan kärjessä ovat todennäköisesti mittausvirheitä, ei oikeasti niukkoja.** Kahdenlaisia tapauksia: (1) "Commons-kategoria" on "ei löytynyt", mutta hakuosumia (`srnamespace=6`) on silti vähintään 500 — esim. Sagrada Família ja Pantheon; (2) kategoria LÖYTYI oikein, mutta sen tiedostomäärä on 0–2 vaikka hakuosumia on satoja tuhansia — esim. Kremlin (Category:Kremlin, 0 tiedostoa, 61 420 hakuosumaa) ja Hagia Sofia (0 tiedostoa, 14 310 hakuosumaa). Molemmissa Commonsissa on tosiasiassa selvästi tuhansia kuvia. Todennäköisin selitys on, että 429-rajoitus tai rinnakkaisajon kuormitus rikkoi joko kategoriahaun tai jäsenmäärän laskennan juuri näillä riveillä, ja koodi tulkitsi epäonnistuneen/typistetyn vastauksen samaksi asiaksi kuin aidon niukan tuloksen — näitä ei erotettu toisistaan tässä ajossa. Rivit on merkitty alla **⚠**-merkillä eikä niitä pidä katsoa ensimmäisenä; oikea kärkipää löytyy niiden alta, riveiltä joilla hakuosumatkin ovat matalat.
 
 | # | Tiedosto | Kaupunki | Kohteen nimi | Commons-kategoria | Kategorian tiedostot | Hakuosumat | Riskipisteet |
 |---|---|---|---|---|---|---|---|
@@ -48,82 +41,88 @@ Nämä ovat kuvat, jotka seuraava vaihe katsoo silmin ensin: luokka on **a** (ni
 | 12 | `hero-dublin-ilta.png` | Dublin | James Gandonin | *(ei löytynyt)* | – | 1 | 15 |
 | 13 | `hero-moskova-ilta.png` | Moskova | Moskovan valtionyliopiston päärakennus | *(ei löytynyt)* | – | 1 | 15 |
 | 14 | `hero-mekka-aamu.png` | Mekka | Suuren moskeijan | *(ei löytynyt)* | – | 1 | 15 |
-| 15 | `hero-kairo-ilta.png` | Kairo | Kairon torni | *(ei löytynyt)* | – | 0 | 15 |
-| 16 | `hero-praha-ilta.png` | Praha | Tynin kirkkoa | *(ei löytynyt)* | – | 0 | 15 |
-| 17 | `hero-wien-aamu.png` | Wien | Stephansdomin etelätorni | *(ei löytynyt)* | – | 0 | 15 |
-| 18 | `hero-madrid-aamu.png` | Madrid | Madridin kuninkaanlinna | *(ei löytynyt)* | – | 0 | 15 |
-| 19 | `hero-madrid-ilta.png` | Madrid | Kybele-jumalattaren suihkulähde | *(ei löytynyt)* | – | 0 | 15 |
-| 20 | `hero-venetsia-aamu.png` | Venetsia | Markuksenkirkon | *(ei löytynyt)* | – | 0 | 15 |
-| 21 | `hero-tukholma-ilta.png` | Tukholma | Riddarholmenin kirkko | *(ei löytynyt)* | – | 0 | 15 |
-| 22 | `hero-pariisi-keskipaiva.png` | Pariisi | Notre-Damen katedraalia | *(ei löytynyt)* | – | 0 | 15 |
-| 23 | `hero-pariisi-ilta.png` | Pariisi | Sacré-Cœurin basilikaa | *(ei löytynyt)* | – | 0 | 15 |
-| 24 | `hero-ateena-keskipaiva.png` | Ateena | Zeuksen temppelin | *(ei löytynyt)* | – | 0 | 15 |
-| 25 | `hero-amsterdam-aamu.png` | Amsterdam | Westerkerkin torni | *(ei löytynyt)* | – | 0 | 15 |
-| 26 | `hero-amsterdam-keskipaiva.png` | Amsterdam | Pierre Cuypersin | *(ei löytynyt)* | – | 0 | 15 |
-| 27 | `hero-dublin-aamu.png` | Dublin | Trinity Collegen kellotorni | *(ei löytynyt)* | – | 0 | 15 |
-| 28 | `hero-edinburgh-aamu.png` | Edinburgh | Edinburghin linna | *(ei löytynyt)* | – | 0 | 15 |
-| 29 | `hero-edinburgh-keskipaiva.png` | Edinburgh | St Gilesin katedraalin kruunutorni | *(ei löytynyt)* | – | 0 | 15 |
-| 30 | `hero-edinburgh-ilta.png` | Edinburgh | Calton Hillin kansallismonumentti | *(ei löytynyt)* | – | 0 | 15 |
-| 31 | `hero-lissabon-keskipaiva.png` | Lissabon | Jerónimosin luostarin | *(ei löytynyt)* | – | 0 | 15 |
-| 32 | `hero-budapest-keskipaiva.png` | Budapest | Kalastajanlinnakkeen | *(ei löytynyt)* | – | 0 | 15 |
-| 33 | `hero-rooma-keskipaiva.png` | Rooma | Pietarinkirkkoa | *(ei löytynyt)* | – | 0 | 15 |
-| 34 | `hero-krakova-keskipaiva.png` | Krakova | Mariacki-kirkon tornit | *(ei löytynyt)* | – | 0 | 15 |
-| 35 | `hero-varsova-aamu.png` | Varsova | Varsovan kuninkaanlinna | *(ei löytynyt)* | – | 0 | 15 |
-| 36 | `hero-varsova-keskipaiva.png` | Varsova | Wilanówin palatsin | *(ei löytynyt)* | – | 0 | 15 |
-| 37 | `hero-varsova-ilta.png` | Varsova | Saaripalatsi | *(ei löytynyt)* | – | 0 | 15 |
-| 38 | `hero-tallinna-ilta.png` | Tallinna | Tallinnan teletorni | *(ei löytynyt)* | – | 0 | 15 |
-| 39 | `hero-pietari-ilta.png` | Pietari | Pietari-Paavalin katedraalin | *(ei löytynyt)* | – | 0 | 15 |
-| 40 | `hero-dubai-keskipaiva.png` | Dubai | Purjeen | *(ei löytynyt)* | – | 0 | 15 |
-| 41 | `hero-petra-ilta.png` | Petra | Kuningashautojen | *(ei löytynyt)* | – | 0 | 15 |
-| 42 | `hero-jerusalem-aamu.png` | Jerusalem | Kalliomoskeija | *(ei löytynyt)* | – | 0 | 15 |
-| 43 | `hero-jerusalem-keskipaiva.png` | Jerusalem | Daavidin tornin sitadelli | *(ei löytynyt)* | – | 0 | 15 |
-| 44 | `hero-riika-keskipaiva.png` | Riika | Riian vapaudenpatsas | *(ei löytynyt)* | – | 0 | 15 |
-| 45 | `hero-oslo-keskipaiva.png` | Oslo | Holmenkollenissa | *(ei löytynyt)* | – | 0 | 15 |
-| 46 | `hero-oslo-ilta.png` | Oslo | Oslon kuninkaanlinna | *(ei löytynyt)* | – | 0 | 15 |
-| 47 | `hero-firenze-aamu.png` | Firenze | Brunelleschin | *(ei löytynyt)* | – | 0 | 15 |
-| 48 | `hero-firenze-ilta.png` | Firenze | Palazzo Vecchio | *(ei löytynyt)* | – | 0 | 15 |
-| 49 | `hero-kobenhavn-aamu.png` | Kööpenhamina | Marmorikirkon eli Frederikin kirkon | *(ei löytynyt)* | – | 0 | 15 |
-| 50 | `hero-doha-ilta.png` | Doha | West Bayn tornirykelmä | *(ei löytynyt)* | – | 0 | 15 |
-| 51 | `hero-kuwait-aamu.png` | Kuwait | Kuwaitin tornit | *(ei löytynyt)* | – | 0 | 15 |
-| 52 | `hero-kuwait-keskipaiva.png` | Kuwait | Kuwaitin suurmoskeija | *(ei löytynyt)* | – | 0 | 15 |
-| 53 | `hero-kuwait-ilta.png` | Kuwait | Seifin palatsin | *(ei löytynyt)* | – | 0 | 15 |
-| 54 | `hero-masqat-keskipaiva.png` | Masqat | Mutrahin korniisi | *(ei löytynyt)* | – | 0 | 15 |
-| 55 | `hero-masqat-ilta.png` | Masqat | Al Jalalin ja Al Miranin linnakkeet | *(ei löytynyt)* | – | 0 | 15 |
-| 56 | `hero-bagdad-aamu.png` | Bagdad | Mustansiriyan | *(ei löytynyt)* | – | 0 | 15 |
-| 57 | `hero-bagdad-keskipaiva.png` | Bagdad | Kadhimiyan pyhäkkö | *(ei löytynyt)* | – | 0 | 15 |
-| 58 | `hero-bagdad-ilta.png` | Bagdad | Marttyyrien muistomerkki | *(ei löytynyt)* | – | 0 | 15 |
-| 59 | `hero-ankara-keskipaiva.png` | Ankara | Hacı Bayramin moskeija | *(ei löytynyt)* | – | 0 | 15 |
-| 60 | `hero-luxor-aamu.png` | Luxor | Karnakin Amonin temppelialuetta | *(ei löytynyt)* | – | 0 | 15 |
-| 61 | `hero-luxor-keskipaiva.png` | Luxor | Luxorin temppelin | *(ei löytynyt)* | – | 0 | 15 |
-| 62 | `hero-luxor-ilta.png` | Luxor | Deir el-Bahari (Hatshepsutin muistotemppeli) | *(ei löytynyt)* | – | 0 | 15 |
-| 63 | `hero-riad-aamu.png` | Riad | Masmakin savitiililinnoitus | *(ei löytynyt)* | – | 0 | 15 |
-| 64 | `hero-riad-keskipaiva.png` | Riad | Al Faisaliahin torni | *(ei löytynyt)* | – | 0 | 15 |
-| 65 | `hero-riad-ilta.png` | Riad | Kingdom Centre | *(ei löytynyt)* | – | 0 | 15 |
-| 66 | `hero-tabriz-keskipaiva.png` | Tabriz | Tabrizin Arg eli Alishahin | *(ei löytynyt)* | – | 0 | 15 |
-| 67 | `hero-teheran-aamu.png` | Teheran | Azadi-torni | *(ei löytynyt)* | – | 0 | 15 |
-| 68 | `hero-isfahan-aamu.png` | Isfahan | Shaahin moskeija | *(ei löytynyt)* | – | 0 | 15 |
-| 69 | `hero-isfahan-ilta.png` | Isfahan | Sheikh Lotfollahin moskeija | *(ei löytynyt)* | – | 0 | 15 |
-| 70 | `hero-peking-keskipaiva.png` | Peking | Taivaan temppelissä | *(ei löytynyt)* | – | 0 | 15 |
-| 71 | `hero-delhi-aamu.png` | Delhi | Humayunin hauta | *(ei löytynyt)* | – | 0 | 15 |
-| 72 | `hero-tokio-keskipaiva.png` | Tokio | Tokion torni | *(ei löytynyt)* | – | 0 | 15 |
-| 73 | `hero-moskova-keskipaiva.png` | Moskova | Kremlin | Category:Kremlin | 0 | 61420 | 15 |
-| 74 | `hero-istanbul-aamu.png` | Istanbul | Hagia Sofia | Category:Hagia Sofia | 0 | 14310 | 15 |
-| 75 | `hero-wien-keskipaiva.png` | Wien | Schönbrunn | Category:Schönbrunn (surname) | 0 | 13551 | 15 |
-| 76 | `hero-pietari-keskipaiva.png` | Pietari | Verikirkko | Category:Church of the Saviour on the Blood | 0 | 499 | 15 |
-| 77 | `hero7-tuomiokirkko.png` | Helsinki | Carl Ludvig Engelin | Category:Churches by Carl Ludvig Engel | 1 | 108 | 15 |
-| 78 | `hero-venetsia-ilta.png` | Venetsia | Santa Maria della Salute | Category:Santa Maria della Salute (Venice) | 2 | 108313 | 15 |
-| 79 | `hero-mekka-keskipaiva.png` | Mekka | Abraj Al-Bait -tornin | Category:Abraj Al Bait Towers | 2 | 39296 | 15 |
-| 80 | `hero-wien-ilta.png` | Wien | Valtionooppera | Category:Hamburgische Staatsoper | 5 | 1268 | 12 |
-| 81 | `hero-petra-aamu.png` | Petra | Al-Khazneh eli Aarrekammio | Category:Treasury of Cyrene (Olympia) | 5 | 0 | 12 |
-| 82 | `hero-teheran-ilta.png` | Teheran | Milad-torni | Category:Milad Tower | 6 | 0 | 12 |
-| 83 | `hero-riika-ilta.png` | Riika | Riian Pyhän Pietarin kirkko | Category:Lieto church | 8 | 445 | 12 |
-| 84 | `hero-petra-keskipaiva.png` | Petra | Ad-Deir eli Luostari | Category:Lintula Holy Trinity Convent | 11 | 18 | 12 |
-| 85 | `hero-lontoo-ilta.png` | Lontoo | Christopher Wrenin St Paulin katedraali | Category:St. Paul's Cathedral | 14 | 2460 | 12 |
-| 86 | `hero-barcelona-keskipaiva.png` | Barcelona | Casa Batlló | Category:Casa Batlló | 14 | 1951 | 12 |
-| 87 | `hero-moskova-aamu.png` | Moskova | Vasilin katedraali | Category:Saint Basil's Cathedral | 17 | 122 | 12 |
+| 15 | `hero-moskova-keskipaiva.png` | Moskova | Kremlin ⚠ | Category:Kremlin | 0 | 61420 | 15 |
+| 16 | `hero-istanbul-aamu.png` | Istanbul | Hagia Sofia ⚠ | Category:Hagia Sofia | 0 | 14310 | 15 |
+| 17 | `hero-wien-keskipaiva.png` | Wien | Schönbrunn ⚠ | Category:Schönbrunn (surname) | 0 | 13551 | 15 |
+| 18 | `hero-pietari-keskipaiva.png` | Pietari | Verikirkko | Category:Church of the Saviour on the Blood | 0 | 499 | 15 |
+| 19 | `hero7-tuomiokirkko.png` | Helsinki | Carl Ludvig Engelin | Category:Churches by Carl Ludvig Engel | 1 | 108 | 15 |
+| 20 | `hero-venetsia-ilta.png` | Venetsia | Santa Maria della Salute ⚠ | Category:Santa Maria della Salute (Venice) | 2 | 108313 | 15 |
+| 21 | `hero-mekka-keskipaiva.png` | Mekka | Abraj Al-Bait -tornin ⚠ | Category:Abraj Al Bait Towers | 2 | 39296 | 15 |
+| 22 | `hero-wien-ilta.png` | Wien | Valtionooppera | Category:Hamburgische Staatsoper | 5 | 1268 | 12 |
+| 23 | `hero-petra-aamu.png` | Petra | Al-Khazneh eli Aarrekammio | Category:Treasury of Cyrene (Olympia) | 5 | 0 | 12 |
+| 24 | `hero-teheran-ilta.png` | Teheran | Milad-torni | Category:Milad Tower | 6 | 0 | 12 |
+| 25 | `hero-riika-ilta.png` | Riika | Riian Pyhän Pietarin kirkko | Category:Lieto church | 8 | 445 | 12 |
+| 26 | `hero-petra-keskipaiva.png` | Petra | Ad-Deir eli Luostari | Category:Lintula Holy Trinity Convent | 11 | 18 | 12 |
+| 27 | `hero-lontoo-ilta.png` | Lontoo | Christopher Wrenin St Paulin katedraali | Category:St. Paul's Cathedral | 14 | 2460 | 12 |
+| 28 | `hero-barcelona-keskipaiva.png` | Barcelona | Casa Batlló | Category:Casa Batlló | 14 | 1951 | 12 |
+| 29 | `hero-moskova-aamu.png` | Moskova | Vasilin katedraali | Category:Saint Basil's Cathedral | 17 | 122 | 12 |
 
-## Ei mitatut a-luokan kuvat (tarkista ensimmäisenä seuraavaksi)
-Näillä kuvilla väite on luokkaa **a** (korkein riskiluokka), mutta Commons-mittaus ei ehtinyt valmistua (429-rajoitus). Riski on tuntematon — ei oletettavasti matala. Nämä kannattaa joko mitata ensin uudella ajolla tai katsoa suoraan silmin kärkilistan rinnalla.
+## Epäonnistuneen mittauksen a-luokan kuvat (tarkista ensin)
+Näillä kuvilla väite on luokkaa **a** (korkein riskiluokka), ja Commons-mittausta yritettiin, mutta molemmat osahaut palauttivat tyhjää samalla rivillä (429-rajoituksen jälki, ei aito nollatulos). Riski on tuntematon.
+
+| Tiedosto | Kaupunki | Kohteen nimi |
+|---|---|---|
+| `hero-amsterdam-aamu.png` | Amsterdam | Westerkerkin torni |
+| `hero-amsterdam-keskipaiva.png` | Amsterdam | Pierre Cuypersin |
+| `hero-ankara-keskipaiva.png` | Ankara | Hacı Bayramin moskeija |
+| `hero-ateena-keskipaiva.png` | Ateena | Zeuksen temppelin |
+| `hero-bagdad-aamu.png` | Bagdad | Mustansiriyan |
+| `hero-bagdad-ilta.png` | Bagdad | Marttyyrien muistomerkki |
+| `hero-bagdad-keskipaiva.png` | Bagdad | Kadhimiyan pyhäkkö |
+| `hero-budapest-keskipaiva.png` | Budapest | Kalastajanlinnakkeen |
+| `hero-delhi-aamu.png` | Delhi | Humayunin hauta |
+| `hero-doha-ilta.png` | Doha | West Bayn tornirykelmä |
+| `hero-dubai-keskipaiva.png` | Dubai | Purjeen |
+| `hero-dublin-aamu.png` | Dublin | Trinity Collegen kellotorni |
+| `hero-edinburgh-aamu.png` | Edinburgh | Edinburghin linna |
+| `hero-edinburgh-ilta.png` | Edinburgh | Calton Hillin kansallismonumentti |
+| `hero-edinburgh-keskipaiva.png` | Edinburgh | St Gilesin katedraalin kruunutorni |
+| `hero-firenze-aamu.png` | Firenze | Brunelleschin |
+| `hero-firenze-ilta.png` | Firenze | Palazzo Vecchio |
+| `hero-isfahan-aamu.png` | Isfahan | Shaahin moskeija |
+| `hero-isfahan-ilta.png` | Isfahan | Sheikh Lotfollahin moskeija |
+| `hero-jerusalem-aamu.png` | Jerusalem | Kalliomoskeija |
+| `hero-jerusalem-keskipaiva.png` | Jerusalem | Daavidin tornin sitadelli |
+| `hero-kairo-ilta.png` | Kairo | Kairon torni |
+| `hero-krakova-keskipaiva.png` | Krakova | Mariacki-kirkon tornit |
+| `hero-kuwait-aamu.png` | Kuwait | Kuwaitin tornit |
+| `hero-kuwait-ilta.png` | Kuwait | Seifin palatsin |
+| `hero-kuwait-keskipaiva.png` | Kuwait | Kuwaitin suurmoskeija |
+| `hero-kobenhavn-aamu.png` | Kööpenhamina | Marmorikirkon eli Frederikin kirkon |
+| `hero-lissabon-keskipaiva.png` | Lissabon | Jerónimosin luostarin |
+| `hero-luxor-aamu.png` | Luxor | Karnakin Amonin temppelialuetta |
+| `hero-luxor-ilta.png` | Luxor | Deir el-Bahari (Hatshepsutin muistotemppeli) |
+| `hero-luxor-keskipaiva.png` | Luxor | Luxorin temppelin |
+| `hero-madrid-aamu.png` | Madrid | Madridin kuninkaanlinna |
+| `hero-madrid-ilta.png` | Madrid | Kybele-jumalattaren suihkulähde |
+| `hero-masqat-ilta.png` | Masqat | Al Jalalin ja Al Miranin linnakkeet |
+| `hero-masqat-keskipaiva.png` | Masqat | Mutrahin korniisi |
+| `hero-oslo-ilta.png` | Oslo | Oslon kuninkaanlinna |
+| `hero-oslo-keskipaiva.png` | Oslo | Holmenkollenissa |
+| `hero-pariisi-ilta.png` | Pariisi | Sacré-Cœurin basilikaa |
+| `hero-pariisi-keskipaiva.png` | Pariisi | Notre-Damen katedraalia |
+| `hero-peking-keskipaiva.png` | Peking | Taivaan temppelissä |
+| `hero-petra-ilta.png` | Petra | Kuningashautojen |
+| `hero-pietari-ilta.png` | Pietari | Pietari-Paavalin katedraalin |
+| `hero-praha-ilta.png` | Praha | Tynin kirkkoa |
+| `hero-riad-aamu.png` | Riad | Masmakin savitiililinnoitus |
+| `hero-riad-ilta.png` | Riad | Kingdom Centre |
+| `hero-riad-keskipaiva.png` | Riad | Al Faisaliahin torni |
+| `hero-riika-keskipaiva.png` | Riika | Riian vapaudenpatsas |
+| `hero-rooma-keskipaiva.png` | Rooma | Pietarinkirkkoa |
+| `hero-tabriz-keskipaiva.png` | Tabriz | Tabrizin Arg eli Alishahin |
+| `hero-tallinna-ilta.png` | Tallinna | Tallinnan teletorni |
+| `hero-teheran-aamu.png` | Teheran | Azadi-torni |
+| `hero-tokio-keskipaiva.png` | Tokio | Tokion torni |
+| `hero-tukholma-ilta.png` | Tukholma | Riddarholmenin kirkko |
+| `hero-varsova-aamu.png` | Varsova | Varsovan kuninkaanlinna |
+| `hero-varsova-ilta.png` | Varsova | Saaripalatsi |
+| `hero-varsova-keskipaiva.png` | Varsova | Wilanówin palatsin |
+| `hero-venetsia-aamu.png` | Venetsia | Markuksenkirkon |
+| `hero-wien-aamu.png` | Wien | Stephansdomin etelätorni |
+
+## Ei mitatut a-luokan kuvat (tarkista seuraavana)
+Näillä kuvilla väite on luokkaa **a** (korkein riskiluokka), mutta Commons-mittausta ei edes ehditty yrittää (429-rajoitus pysäytti ajon aiemmin). Riski on tuntematon — ei oletettavasti matala. Nämä kannattaa joko mitata ensin uudella ajolla tai katsoa suoraan silmin kärkilistan rinnalla.
 
 | Tiedosto | Kaupunki | Kohteen nimi |
 |---|---|---|
@@ -231,85 +230,27 @@ Taulukko sisältää kaikki herokuvat. Sarake `Luokka` on pääteltävä väite 
 
 | Tiedosto | Kaupunki | Luokka | Kohteen nimi | Hakukysely | Commons-kategoria | Kategorian tiedostot | Hakuosumat | Riskipisteet |
 |---|---|---|---|---|---|---|---|---|
-| `hero-amsterdam-aamu.png` | Amsterdam | a | Westerkerkin torni | Westerkerkin torni | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-amsterdam-keskipaiva.png` | Amsterdam | a | Pierre Cuypersin | Pierre Cuypersin | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-ankara-aamu.png` | Ankara | a | Anıtkabir | Anıtkabir | *(ei löytynyt)* | – | 1030 | 15 |
-| `hero-ankara-keskipaiva.png` | Ankara | a | Hacı Bayramin moskeija | Hacı Bayramin moskeija | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-ateena-keskipaiva.png` | Ateena | a | Zeuksen temppelin | Zeuksen temppelin | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-bagdad-aamu.png` | Bagdad | a | Mustansiriyan | Mustansiriyan | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-bagdad-ilta.png` | Bagdad | a | Marttyyrien muistomerkki | Marttyyrien muistomerkki | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-bagdad-keskipaiva.png` | Bagdad | a | Kadhimiyan pyhäkkö | Kadhimiyan pyhäkkö | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-barcelona-aamu.png` | Barcelona | a | Sagrada Família | Sagrada Família | *(ei löytynyt)* | – | 44266 | 15 |
-| `hero-budapest-keskipaiva.png` | Budapest | a | Kalastajanlinnakkeen | Kalastajanlinnakkeen | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-damaskos-aamu.png` | Damaskos | a | Umaijadimoskeija | Umaijadimoskeija | *(ei löytynyt)* | – | 1850 | 15 |
-| `hero-delhi-aamu.png` | Delhi | a | Humayunin hauta | Humayunin hauta | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-doha-ilta.png` | Doha | a | West Bayn tornirykelmä | West Bayn tornirykelmä | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-dubai-keskipaiva.png` | Dubai | a | Purjeen | Purjeen | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-dublin-aamu.png` | Dublin | a | Trinity Collegen kellotorni | Trinity Collegen kellotorni | *(ei löytynyt)* | – | 0 | 15 |
+| `hero-ankara-aamu.png` | Ankara | a | Anıtkabir ⚠ | Anıtkabir | *(ei löytynyt)* | – | 1030 | 15 |
+| `hero-barcelona-aamu.png` | Barcelona | a | Sagrada Família ⚠ | Sagrada Família | *(ei löytynyt)* | – | 44266 | 15 |
+| `hero-damaskos-aamu.png` | Damaskos | a | Umaijadimoskeija ⚠ | Umaijadimoskeija | *(ei löytynyt)* | – | 1850 | 15 |
 | `hero-dublin-ilta.png` | Dublin | a | James Gandonin | James Gandonin | *(ei löytynyt)* | – | 1 | 15 |
-| `hero-edinburgh-aamu.png` | Edinburgh | a | Edinburghin linna | Edinburghin linna | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-edinburgh-ilta.png` | Edinburgh | a | Calton Hillin kansallismonumentti | Calton Hillin kansallismonumentti | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-edinburgh-keskipaiva.png` | Edinburgh | a | St Gilesin katedraalin kruunutorni | St Gilesin katedraalin kruunutorni | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-firenze-aamu.png` | Firenze | a | Brunelleschin | Brunelleschin | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-firenze-ilta.png` | Firenze | a | Palazzo Vecchio | Palazzo Vecchio | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-isfahan-aamu.png` | Isfahan | a | Shaahin moskeija | Shaahin moskeija | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-isfahan-ilta.png` | Isfahan | a | Sheikh Lotfollahin moskeija | Sheikh Lotfollahin moskeija | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-jerusalem-aamu.png` | Jerusalem | a | Kalliomoskeija | Kalliomoskeija | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-jerusalem-keskipaiva.png` | Jerusalem | a | Daavidin tornin sitadelli | Daavidin tornin sitadelli | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-kairo-ilta.png` | Kairo | a | Kairon torni | Kairon torni | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-kobenhavn-aamu.png` | Kööpenhamina | a | Marmorikirkon eli Frederikin kirkon | Marmorikirkon eli Frederikin kirkon | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-kobenhavn-ilta.png` | Kööpenhamina | a | Vapahtajan kirkko | Vapahtajan kirkko | *(ei löytynyt)* | – | 17216 | 15 |
-| `hero-krakova-ilta.png` | Krakova | a | Sukiennice | Sukiennice | *(ei löytynyt)* | – | 3676 | 15 |
-| `hero-krakova-keskipaiva.png` | Krakova | a | Mariacki-kirkon tornit | Mariacki-kirkon tornit | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-kuwait-aamu.png` | Kuwait | a | Kuwaitin tornit | Kuwaitin tornit | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-kuwait-ilta.png` | Kuwait | a | Seifin palatsin | Seifin palatsin | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-kuwait-keskipaiva.png` | Kuwait | a | Kuwaitin suurmoskeija | Kuwaitin suurmoskeija | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-lissabon-keskipaiva.png` | Lissabon | a | Jerónimosin luostarin | Jerónimosin luostarin | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-luxor-aamu.png` | Luxor | a | Karnakin Amonin temppelialuetta | Karnakin Amonin temppelialuetta | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-luxor-ilta.png` | Luxor | a | Deir el-Bahari (Hatshepsutin muistotemppeli) | Deir el-Bahari | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-luxor-keskipaiva.png` | Luxor | a | Luxorin temppelin | Luxorin temppelin | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-madrid-aamu.png` | Madrid | a | Madridin kuninkaanlinna | Madridin kuninkaanlinna | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-madrid-ilta.png` | Madrid | a | Kybele-jumalattaren suihkulähde | Kybele-jumalattaren suihkulähde | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-masqat-ilta.png` | Masqat | a | Al Jalalin ja Al Miranin linnakkeet | Al Jalalin ja Al Miranin linnakkeet | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-masqat-keskipaiva.png` | Masqat | a | Mutrahin korniisi | Mutrahin korniisi | *(ei löytynyt)* | – | 0 | 15 |
+| `hero-kobenhavn-ilta.png` | Kööpenhamina | a | Vapahtajan kirkko ⚠ | Vapahtajan kirkko | *(ei löytynyt)* | – | 17216 | 15 |
+| `hero-krakova-ilta.png` | Krakova | a | Sukiennice ⚠ | Sukiennice | *(ei löytynyt)* | – | 3676 | 15 |
 | `hero-mekka-aamu.png` | Mekka | a | Suuren moskeijan | Suuren moskeijan | *(ei löytynyt)* | – | 1 | 15 |
 | `hero-moskova-ilta.png` | Moskova | a | Moskovan valtionyliopiston päärakennus | Moskovan valtionyliopiston päärakennus | *(ei löytynyt)* | – | 1 | 15 |
-| `hero-oslo-ilta.png` | Oslo | a | Oslon kuninkaanlinna | Oslon kuninkaanlinna | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-oslo-keskipaiva.png` | Oslo | a | Holmenkollenissa | Holmenkollenissa | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-pariisi-ilta.png` | Pariisi | a | Sacré-Cœurin basilikaa | Sacré-Cœurin basilikaa | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-pariisi-keskipaiva.png` | Pariisi | a | Notre-Damen katedraalia | Notre-Damen katedraalia | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-peking-keskipaiva.png` | Peking | a | Taivaan temppelissä | Taivaan temppelissä | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-petra-ilta.png` | Petra | a | Kuningashautojen | Kuningashautojen | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-pietari-ilta.png` | Pietari | a | Pietari-Paavalin katedraalin | Pietari-Paavalin katedraalin | *(ei löytynyt)* | – | 0 | 15 |
 | `hero-praha-aamu.png` | Praha | a | Pyhän Vituksen katedraalin | Pyhän Vituksen katedraalin | *(ei löytynyt)* | – | 1 | 15 |
-| `hero-praha-ilta.png` | Praha | a | Tynin kirkkoa | Tynin kirkkoa | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-riad-aamu.png` | Riad | a | Masmakin savitiililinnoitus | Masmakin savitiililinnoitus | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-riad-ilta.png` | Riad | a | Kingdom Centre | Kingdom Centre | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-riad-keskipaiva.png` | Riad | a | Al Faisaliahin torni | Al Faisaliahin torni | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-riika-keskipaiva.png` | Riika | a | Riian vapaudenpatsas | Riian vapaudenpatsas | *(ei löytynyt)* | – | 0 | 15 |
 | `hero-rooma-ilta.png` | Rooma | a | Pantheonin | Pantheonin | *(ei löytynyt)* | – | 2 | 15 |
-| `hero-rooma-keskipaiva.png` | Rooma | a | Pietarinkirkkoa | Pietarinkirkkoa | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-tabriz-aamu.png` | Tabriz | a | Tabrizin Sininen moskeija | Sininen moskeija | *(ei löytynyt)* | – | 2936 | 15 |
-| `hero-tabriz-keskipaiva.png` | Tabriz | a | Tabrizin Arg eli Alishahin | Tabrizin Arg eli Alishahin | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-tallinna-ilta.png` | Tallinna | a | Tallinnan teletorni | Tallinnan teletorni | *(ei löytynyt)* | – | 0 | 15 |
+| `hero-tabriz-aamu.png` | Tabriz | a | Tabrizin Sininen moskeija ⚠ | Sininen moskeija | *(ei löytynyt)* | – | 2936 | 15 |
 | `hero-tampere-aamu.png` | Tampere | a | Tampereen Näsilinna | Tampereen Näsilinna | *(ei löytynyt)* | – | 22 | 15 |
-| `hero-tampere-keskipaiva.png` | Tampere | a | Tampereen pääkirjasto Metso | Tampereen pääkirjasto Metso | *(ei löytynyt)* | – | 604 | 15 |
-| `hero-teheran-aamu.png` | Teheran | a | Azadi-torni | Azadi-torni | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-tokio-keskipaiva.png` | Tokio | a | Tokion torni | Tokion torni | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-tukholma-ilta.png` | Tukholma | a | Riddarholmenin kirkko | Riddarholmenin kirkko | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-varsova-aamu.png` | Varsova | a | Varsovan kuninkaanlinna | Varsovan kuninkaanlinna | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-varsova-ilta.png` | Varsova | a | Saaripalatsi | Saaripalatsi | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-varsova-keskipaiva.png` | Varsova | a | Wilanówin palatsin | Wilanówin palatsin | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-venetsia-aamu.png` | Venetsia | a | Markuksenkirkon | Markuksenkirkon | *(ei löytynyt)* | – | 0 | 15 |
-| `hero-wien-aamu.png` | Wien | a | Stephansdomin etelätorni | Stephansdomin etelätorni | *(ei löytynyt)* | – | 0 | 15 |
-| `hero7-oodi.png` | Helsinki | a | Keskustakirjasto Oodi | Keskustakirjasto Oodi | *(ei löytynyt)* | – | 1654085 | 15 |
-| `hero-istanbul-aamu.png` | Istanbul | a | Hagia Sofia | Hagia Sofia | Category:Hagia Sofia | 0 | 14310 | 15 |
-| `hero-moskova-keskipaiva.png` | Moskova | a | Kremlin | Kremlin | Category:Kremlin | 0 | 61420 | 15 |
+| `hero-tampere-keskipaiva.png` | Tampere | a | Tampereen pääkirjasto Metso ⚠ | Tampereen pääkirjasto Metso | *(ei löytynyt)* | – | 604 | 15 |
+| `hero7-oodi.png` | Helsinki | a | Keskustakirjasto Oodi ⚠ | Keskustakirjasto Oodi | *(ei löytynyt)* | – | 1654085 | 15 |
+| `hero-istanbul-aamu.png` | Istanbul | a | Hagia Sofia ⚠ | Hagia Sofia | Category:Hagia Sofia | 0 | 14310 | 15 |
+| `hero-moskova-keskipaiva.png` | Moskova | a | Kremlin ⚠ | Kremlin | Category:Kremlin | 0 | 61420 | 15 |
 | `hero-pietari-keskipaiva.png` | Pietari | a | Verikirkko | Verikirkko | Category:Church of the Saviour on the Blood | 0 | 499 | 15 |
-| `hero-wien-keskipaiva.png` | Wien | a | Schönbrunn | Schönbrunn | Category:Schönbrunn (surname) | 0 | 13551 | 15 |
+| `hero-wien-keskipaiva.png` | Wien | a | Schönbrunn ⚠ | Schönbrunn | Category:Schönbrunn (surname) | 0 | 13551 | 15 |
 | `hero7-tuomiokirkko.png` | Helsinki | a | Carl Ludvig Engelin | Ludvig Engelin | Category:Churches by Carl Ludvig Engel | 1 | 108 | 15 |
-| `hero-mekka-keskipaiva.png` | Mekka | a | Abraj Al-Bait -tornin | Abraj Al-Bait -tornin | Category:Abraj Al Bait Towers | 2 | 39296 | 15 |
-| `hero-venetsia-ilta.png` | Venetsia | a | Santa Maria della Salute | Maria della Salute | Category:Santa Maria della Salute (Venice) | 2 | 108313 | 15 |
+| `hero-mekka-keskipaiva.png` | Mekka | a | Abraj Al-Bait -tornin ⚠ | Abraj Al-Bait -tornin | Category:Abraj Al Bait Towers | 2 | 39296 | 15 |
+| `hero-venetsia-ilta.png` | Venetsia | a | Santa Maria della Salute ⚠ | Maria della Salute | Category:Santa Maria della Salute (Venice) | 2 | 108313 | 15 |
 | `hero-petra-aamu.png` | Petra | a | Al-Khazneh eli Aarrekammio | eli Aarrekammio | Category:Treasury of Cyrene (Olympia) | 5 | 0 | 12 |
 | `hero-wien-ilta.png` | Wien | a | Valtionooppera | Valtionooppera | Category:Hamburgische Staatsoper | 5 | 1268 | 12 |
 | `hero-teheran-ilta.png` | Teheran | a | Milad-torni | Milad-torni | Category:Milad Tower | 6 | 0 | 12 |
@@ -318,10 +259,9 @@ Taulukko sisältää kaikki herokuvat. Sarake `Luokka` on pääteltävä väite 
 | `hero-barcelona-keskipaiva.png` | Barcelona | a | Casa Batlló | Casa Batlló | Category:Casa Batlló | 14 | 1951 | 12 |
 | `hero-lontoo-ilta.png` | Lontoo | a | Christopher Wrenin St Paulin katedraali | St Paulin katedraali | Category:St. Paul's Cathedral | 14 | 2460 | 12 |
 | `hero-moskova-aamu.png` | Moskova | a | Vasilin katedraali | Vasilin katedraali | Category:Saint Basil's Cathedral | 17 | 122 | 12 |
-| `hero-dubai-ilta.png` | Dubai | b | Al Fahidin kortteli | Al Fahidin kortteli | *(ei löytynyt)* | – | 0 | 10 |
-| `hero-lissabon-ilta.png` | Lissabon | b | Kauppatori (Praça do Comércio) | Kauppatori | *(ei löytynyt)* | – | 2892 | 10 |
+| `hero-lissabon-ilta.png` | Lissabon | b | Kauppatori (Praça do Comércio) ⚠ | Kauppatori | *(ei löytynyt)* | – | 2892 | 10 |
 | `hero-amsterdam-ilta.png` | Amsterdam | b | "Laiha silta" eli Magere Brug | Magere Brug | Category:Magere Brug | 0 | 0 | 10 |
-| `hero-madrid-keskipaiva.png` | Madrid | b | Plaza Mayor | Plaza Mayor | Category:Plaza Mayor | 1 | 41638 | 10 |
+| `hero-madrid-keskipaiva.png` | Madrid | b | Plaza Mayor ⚠ | Plaza Mayor | Category:Plaza Mayor | 1 | 41638 | 10 |
 | `hero-mekka-ilta.png` | Mekka | a | Jabal al-Nour (Hiran luola) | Jabal al-Nour | Category:Jabal al-Nour | 21 | 132 | 9 |
 | `hero-tokio-aamu.png` | Tokio | a | Sensō-ji | Sensō-ji | Category:Sensoji | 21 | 10379 | 9 |
 | `hero-berliini-keskipaiva.png` | Berliini | a | Valtiopäivätalo | Valtiopäivätalo | Category:Gamla riksdagshuset | 24 | 16784 | 9 |
@@ -369,6 +309,65 @@ Taulukko sisältää kaikki herokuvat. Sarake `Luokka` on pääteltävä väite 
 | `hero-peking-ilta.png` | Peking | a | Kesäpalatsi | Kesäpalatsi | Category:Archepiscopal Summer Palace (Bratislava) | EI MITATTU (429) | 12162 | EI MITATTU |
 | `hero-tukholma-aamu.png` | Tukholma | a | Tukholman kuninkaanlinna | Tukholman kuninkaanlinna | Category:Royal Palace, Stockholm | EI MITATTU (429) | 65272 | EI MITATTU |
 | `hero7-uspenski.png` | Helsinki | a | Uspenskin katedraali | Uspenskin katedraali | Category:Uspenski Cathedral | EI MITATTU (429) | 0 | EI MITATTU |
+| `hero-amsterdam-aamu.png` | Amsterdam | a | Westerkerkin torni | Westerkerkin torni | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-amsterdam-keskipaiva.png` | Amsterdam | a | Pierre Cuypersin | Pierre Cuypersin | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-ankara-keskipaiva.png` | Ankara | a | Hacı Bayramin moskeija | Hacı Bayramin moskeija | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-ateena-keskipaiva.png` | Ateena | a | Zeuksen temppelin | Zeuksen temppelin | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-bagdad-aamu.png` | Bagdad | a | Mustansiriyan | Mustansiriyan | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-bagdad-ilta.png` | Bagdad | a | Marttyyrien muistomerkki | Marttyyrien muistomerkki | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-bagdad-keskipaiva.png` | Bagdad | a | Kadhimiyan pyhäkkö | Kadhimiyan pyhäkkö | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-budapest-keskipaiva.png` | Budapest | a | Kalastajanlinnakkeen | Kalastajanlinnakkeen | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-delhi-aamu.png` | Delhi | a | Humayunin hauta | Humayunin hauta | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-doha-ilta.png` | Doha | a | West Bayn tornirykelmä | West Bayn tornirykelmä | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-dubai-keskipaiva.png` | Dubai | a | Purjeen | Purjeen | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-dublin-aamu.png` | Dublin | a | Trinity Collegen kellotorni | Trinity Collegen kellotorni | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-edinburgh-aamu.png` | Edinburgh | a | Edinburghin linna | Edinburghin linna | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-edinburgh-ilta.png` | Edinburgh | a | Calton Hillin kansallismonumentti | Calton Hillin kansallismonumentti | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-edinburgh-keskipaiva.png` | Edinburgh | a | St Gilesin katedraalin kruunutorni | St Gilesin katedraalin kruunutorni | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-firenze-aamu.png` | Firenze | a | Brunelleschin | Brunelleschin | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-firenze-ilta.png` | Firenze | a | Palazzo Vecchio | Palazzo Vecchio | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-isfahan-aamu.png` | Isfahan | a | Shaahin moskeija | Shaahin moskeija | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-isfahan-ilta.png` | Isfahan | a | Sheikh Lotfollahin moskeija | Sheikh Lotfollahin moskeija | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-jerusalem-aamu.png` | Jerusalem | a | Kalliomoskeija | Kalliomoskeija | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-jerusalem-keskipaiva.png` | Jerusalem | a | Daavidin tornin sitadelli | Daavidin tornin sitadelli | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-kairo-ilta.png` | Kairo | a | Kairon torni | Kairon torni | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-kobenhavn-aamu.png` | Kööpenhamina | a | Marmorikirkon eli Frederikin kirkon | Marmorikirkon eli Frederikin kirkon | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-krakova-keskipaiva.png` | Krakova | a | Mariacki-kirkon tornit | Mariacki-kirkon tornit | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-kuwait-aamu.png` | Kuwait | a | Kuwaitin tornit | Kuwaitin tornit | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-kuwait-ilta.png` | Kuwait | a | Seifin palatsin | Seifin palatsin | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-kuwait-keskipaiva.png` | Kuwait | a | Kuwaitin suurmoskeija | Kuwaitin suurmoskeija | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-lissabon-keskipaiva.png` | Lissabon | a | Jerónimosin luostarin | Jerónimosin luostarin | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-luxor-aamu.png` | Luxor | a | Karnakin Amonin temppelialuetta | Karnakin Amonin temppelialuetta | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-luxor-ilta.png` | Luxor | a | Deir el-Bahari (Hatshepsutin muistotemppeli) | Deir el-Bahari | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-luxor-keskipaiva.png` | Luxor | a | Luxorin temppelin | Luxorin temppelin | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-madrid-aamu.png` | Madrid | a | Madridin kuninkaanlinna | Madridin kuninkaanlinna | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-madrid-ilta.png` | Madrid | a | Kybele-jumalattaren suihkulähde | Kybele-jumalattaren suihkulähde | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-masqat-ilta.png` | Masqat | a | Al Jalalin ja Al Miranin linnakkeet | Al Jalalin ja Al Miranin linnakkeet | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-masqat-keskipaiva.png` | Masqat | a | Mutrahin korniisi | Mutrahin korniisi | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-oslo-ilta.png` | Oslo | a | Oslon kuninkaanlinna | Oslon kuninkaanlinna | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-oslo-keskipaiva.png` | Oslo | a | Holmenkollenissa | Holmenkollenissa | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-pariisi-ilta.png` | Pariisi | a | Sacré-Cœurin basilikaa | Sacré-Cœurin basilikaa | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-pariisi-keskipaiva.png` | Pariisi | a | Notre-Damen katedraalia | Notre-Damen katedraalia | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-peking-keskipaiva.png` | Peking | a | Taivaan temppelissä | Taivaan temppelissä | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-petra-ilta.png` | Petra | a | Kuningashautojen | Kuningashautojen | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-pietari-ilta.png` | Pietari | a | Pietari-Paavalin katedraalin | Pietari-Paavalin katedraalin | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-praha-ilta.png` | Praha | a | Tynin kirkkoa | Tynin kirkkoa | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-riad-aamu.png` | Riad | a | Masmakin savitiililinnoitus | Masmakin savitiililinnoitus | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-riad-ilta.png` | Riad | a | Kingdom Centre | Kingdom Centre | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-riad-keskipaiva.png` | Riad | a | Al Faisaliahin torni | Al Faisaliahin torni | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-riika-keskipaiva.png` | Riika | a | Riian vapaudenpatsas | Riian vapaudenpatsas | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-rooma-keskipaiva.png` | Rooma | a | Pietarinkirkkoa | Pietarinkirkkoa | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-tabriz-keskipaiva.png` | Tabriz | a | Tabrizin Arg eli Alishahin | Tabrizin Arg eli Alishahin | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-tallinna-ilta.png` | Tallinna | a | Tallinnan teletorni | Tallinnan teletorni | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-teheran-aamu.png` | Teheran | a | Azadi-torni | Azadi-torni | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-tokio-keskipaiva.png` | Tokio | a | Tokion torni | Tokion torni | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-tukholma-ilta.png` | Tukholma | a | Riddarholmenin kirkko | Riddarholmenin kirkko | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-varsova-aamu.png` | Varsova | a | Varsovan kuninkaanlinna | Varsovan kuninkaanlinna | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-varsova-ilta.png` | Varsova | a | Saaripalatsi | Saaripalatsi | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-varsova-keskipaiva.png` | Varsova | a | Wilanówin palatsin | Wilanówin palatsin | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-venetsia-aamu.png` | Venetsia | a | Markuksenkirkon | Markuksenkirkon | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-wien-aamu.png` | Wien | a | Stephansdomin etelätorni | Stephansdomin etelätorni | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
+| `hero-dubai-ilta.png` | Dubai | b | Al Fahidin kortteli | Al Fahidin kortteli | MITTAUS EPÄONNISTUI (429) | MITTAUS EPÄONNISTUI | 0 | EI MITATTU |
 | `hero-astana-aamu.png` | Astana | a | Bayterek | – | EI MITATTU | EI MITATTU | EI MITATTU | EI MITATTU |
 | `hero-astana-ilta.png` | Astana | a | Hazrat Sultanin moskeija | – | EI MITATTU | EI MITATTU | EI MITATTU | EI MITATTU |
 | `hero-astana-keskipaiva.png` | Astana | a | Khan Shatyr | – | EI MITATTU | EI MITATTU | EI MITATTU | EI MITATTU |
@@ -493,8 +492,8 @@ Taulukko sisältää kaikki herokuvat. Sarake `Luokka` on pääteltävä väite 
 </details>
 
 ## Menetelmän rajoitukset
-- **Tärkein löydös — "kategoriaa ei löytynyt" ei aina tarkoita sitä**: koodi ei erottanut toisistaan "Commons-haku palautti aidosti tyhjän" ja "Commons-haku epäonnistui/rajoitettiin, ja tulos jäi tyhjäksi sen takia". Käytännössä tämä näkyy kärkilistassa 8 rivillä, joilla tunnettu, runsaasti kuvattu kohde (esim. Sagrada Família, Pantheon, Pyhän Vituksen katedraali) saa täydet riskipisteet vain siksi, että kategoriahaku ei ehtinyt/onnistunut — ei siksi, että kuvia olisi vähän. Merkitty **⚠**-lipulla Kärkilista-taulukossa. Tämä on menetelmän todellinen heikkous eikä pelkkä yksittäistapaus, ja se kannattaa korjata (erottaa virhetila "ei tulosta"-tilasta) ennen seuraavaa ajoa.
-- **Mittaus on kesken**: 120/258 kuvaa jäi kokonaan ilman Commons-mittausta (rajapinnan 429-rajoitus pysäytti ajon kesken). Näiltä osin taulukko kertoo vain luokan (a/b/c), ei kuvadatan tiheyttä. Seuraava ajo pitäisi aloittaa juuri näistä — erityisesti Kašgarin toinen kuva, koska se on tunnettu virhetapaus.
+- **Tärkein löydös — "kategoriaa ei löytynyt" ei aina tarkoita sitä**: koodi ei erottanut toisistaan "Commons-haku palautti aidosti tyhjän" ja "Commons-haku epäonnistui/rajoitettiin, ja tulos jäi tyhjäksi sen takia". Käytännössä tämä näkyy kärkilistassa 13 rivillä, joilla tunnettu, runsaasti kuvattu kohde (esim. Sagrada Família, Pantheon, Pyhän Vituksen katedraali) saa täydet riskipisteet vain siksi, että kategoriahaku ei ehtinyt/onnistunut — ei siksi, että kuvia olisi vähän. Merkitty **⚠**-lipulla Kärkilista-taulukossa. Tämä on menetelmän todellinen heikkous eikä pelkkä yksittäistapaus, ja se kannattaa korjata (erottaa virhetila "ei tulosta"-tilasta) ennen seuraavaa ajoa.
+- **Mittaus on kesken**: 120/258 kuvaa jäi kokonaan ilman Commons-mittausta (rajapinnan 429-rajoitus pysäytti ajon kesken), ja lisäksi 59/258 yritettiin mutta mittaus epäonnistui (429 rikkoi molemmat osahaut). Näiltä 179 riviltä taulukko kertoo vain luokan (a/b/c), ei kuvadatan tiheyttä. Seuraava ajo pitäisi aloittaa juuri näistä — erityisesti Kašgarin toinen kuva, koska se on tunnettu virhetapaus eikä sitä ehditty mitata lainkaan.
 - Tämä on **automatisoitu mittaus**, ei silmämääräinen tarkistus. Kohteen nimen päättely kuvatekstistä on heuristinen (noin 50 kuvaa korjattu käsin, loput automaatin varassa) — väärin poimittu tai epätäsmällinen nimi voi joko yli- tai aliarvioida yksittäisen kuvan riskin.
 - Commons-kategorian tiedostomäärä mittaa vain parhaan osuman kategoriaa; jos oikea kategoria on eri nimellä tai kohde on jaettu useaan alikategoriaan, todellinen kuvamäärä voi olla mitattua suurempi.
 - Hakuosumat (`srnamespace=6`) ovat löysempi mittari (koko tekstihaku) ja voivat antaa korkeita lukuja myös silloin, kun kyseessä on yleinen sana — esimerkiksi henkilön- tai paikannimi, joka osuu moneen tiedostoon aivan eri aiheista. Siksi ensisijainen riskimittari on kategorian tiedostomäärä.
