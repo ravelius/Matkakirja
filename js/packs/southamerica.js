@@ -15,6 +15,7 @@
 // kompassi ja laiva.
 
 import { SOUTHAMERICA_QUESTIONS, SOUTHAMERICA_FACTS } from './southamerica-questions.js';
+import { SOUTH_AMERICA_COUNTRY_SHAPES, SOUTH_AMERICA_CITY_COUNTRY } from './southamerica-countries.js';
 import { themedTokenTypes } from '../tokens.js';
 
 const SA_MAP = {
@@ -241,60 +242,18 @@ const SA_EDGES = [
   { a: 'montevideo', b: 'falkland', steps: 7, type: 'sea', via: [[600, 700], [590, 780], [568, 862]] },
 ];
 
-// map.cityCountry: kaupunki (id) → ISO-3166-1 alpha-3 -maatunnus.
-// Tekninen esivaihe uusien mantereiden lehtityölle (docs/mantereen-resepti.md
-// vaihe 2, Dubai-oppi): ilman tätä taulua menovinkit, liput ja "maa
-// numeroina" eivät syty lehdissä, vaikka aineisto olisi muuten valmis.
-// countryShapes (maiden rajat, korkokartat) tulee myöhemmin sisältöagentin
-// erässä samaan tapaan kuin middleeast.js:ssä ja africa.js:ssä — puuttuva
-// countryShapes ei riko mitään, ks. niiden kommentit.
+// KAUPUNKI -> MAA JA MAIDEN MUODOT ASUVAT NYT OMASSA TIEDOSTOSSAAN.
 //
-// titicaca: lähdeaineiston piste (tools/mapdata/southamerica.json,
-// -69.35, -15.8) osuu järven Peru-puolelle Punon kohdalla — Bolivian
-// Copacabana on kauempana idässä. Iguazú: piste (-54.44, -25.69) on
-// lähempänä Argentiinan Puerto Iguazúa kuin Brasilian Foz do Iguaçua tai
-// Paraguayn Ciudad del Estea, ja putouksista suurin osa on Argentiinan
-// puolella.
-const SA_CITY_COUNTRY = {
-  panama: 'PAN',
-  buenosaires: 'ARG',
-  caracas: 'VEN',
-  bogota: 'COL',
-  quito: 'ECU',
-  galapagos: 'ECU',
-  boavista: 'BRA',
-  cayenne: 'GUF',
-  macapa: 'BRA',
-  manaus: 'BRA',
-  santarem: 'BRA',
-  saoluis: 'BRA',
-  joaopessoa: 'BRA',
-  salvador: 'BRA',
-  iquitos: 'PER',
-  portovelho: 'BRA',
-  bananal: 'BRA',
-  machupicchu: 'PER',
-  titicaca: 'PER',
-  lima: 'PER',
-  santacruz: 'BOL',
-  campogrande: 'BRA',
-  rio: 'BRA',
-  saopaulo: 'BRA',
-  ouropreto: 'BRA',
-  iguazu: 'ARG',
-  portoalegre: 'BRA',
-  antofagasta: 'CHL',
-  salta: 'ARG',
-  asuncion: 'PRY',
-  valparaiso: 'CHL',
-  sanambrosio: 'CHL',
-  robinsoncrusoe: 'CHL',
-  puertomontt: 'CHL',
-  montevideo: 'URY',
-  falkland: 'FLK',
-  puntaarenas: 'CHL',
-  caphorn: 'CHL',
-};
+// Taulu SA_CITY_COUNTRY oli tässä 23.8.2026 asti. Se siirtyi
+// sellaisenaan js/packs/southamerica-countries.js:ään nimellä
+// SOUTH_AMERICA_CITY_COUNTRY, kun laudalle tehtiin countryShapes —
+// samaan tapaan kuin middleeast.js ja northamerica.js pitävät
+// molemmat taulut omassa -countries-paketissaan ja tuovat ne yhtenä
+// parina. Alkuperäinen peruste taululle pätee yhä: ilman
+// kaupunki->maa-tietoa menovinkit, liput ja "maa numeroina" eivät
+// syty lehdissä, vaikka aineisto olisi muuten valmis
+// (docs/mantereen-resepti.md vaihe 2, Dubai-oppi). Myös titicacan ja
+// iguazún rajatapausten perustelut siirtyivät samaan tiedostoon.
 
 // Lentoreitit kulkevat suoraan kaupungista toiseen yhdellä vuorolla.
 const SA_AIR_ROUTES = [
@@ -317,9 +276,22 @@ export const SOUTHAMERICA = {
   tagline: 'Etsi El Doradon kulta Andien huipuilta, Amazonin sademetsästä ja Patagonian tuulilta.',
   ariaLabel: 'Etelä-Amerikan aarrekartta',
 
+  /*
+   * countryShapes ja cityCountry kytkettiin 23.8.2026 (ks.
+   * southamerica-countries.js). Ennen sitä laudalla oli vain
+   * cityCountry, ja esimerkiksi Brasilian ja Argentiinan maalehdet
+   * aukesivat pelkästään maailmankartalla.
+   *
+   * Kolmellatoista maalla on muoto, ja ne ovat täsmälleen ne maat,
+   * joihin laudan 38 kohdetta kuuluvat. Robinson Crusoella, San
+   * Ambrosiolla ja Kap Hornilla ei ole omaa rengasta — ne ovat laudalla
+   * 2–5 yksikköä leveitä eli alle sirpalerajan — mutta ne osoittavat
+   * silti Chileen cityCountryssa.
+   */
   map: {
     ...SA_MAP,
-    cityCountry: SA_CITY_COUNTRY,
+    countryShapes: SOUTH_AMERICA_COUNTRY_SHAPES,
+    cityCountry: SOUTH_AMERICA_CITY_COUNTRY,
     outlines: [
       SA_MAP.mainlandPoints, SA_MAP.galapagosPoints, SA_MAP.falklandPoints,
       SA_MAP.robinsonPoints, SA_MAP.ambrosioPoints, SA_MAP.hornPoints,

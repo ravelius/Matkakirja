@@ -159,8 +159,16 @@ const MODULES = [
   'js/packs/middleeast-countries.js',
   'js/packs/middleeast.js',
   'js/packs/asia-questions.js',
+  // Sama järjestyssääntö kuin middleeastissa ja northamericassa:
+  // asia.js lukee ASIA_COUNTRY_SHAPESin heti moduulitasolla, joten
+  // muodot niputetaan ennen lautaa.
+  'js/packs/asia-countries.js',
   'js/packs/asia.js',
   'js/packs/oceania-questions.js',
+  // Sama järjestyssääntö kuin middleeastissa ja northamericassa:
+  // oceania.js lukee OCEANIA_COUNTRY_SHAPESin heti moduulitasolla,
+  // joten muodot niputetaan ennen lautaa.
+  'js/packs/oceania-countries.js',
   'js/packs/oceania.js',
   'js/packs/northamerica-questions.js',
   // Sama järjestyssääntö kuin middleeastissa: northamerica.js lukee
@@ -169,6 +177,10 @@ const MODULES = [
   'js/packs/northamerica-countries.js',
   'js/packs/northamerica.js',
   'js/packs/southamerica-questions.js',
+  // Sama järjestyssääntö kuin middleeastissa ja northamericassa:
+  // southamerica.js lukee SOUTH_AMERICA_COUNTRY_SHAPESin heti
+  // moduulitasolla, joten muodot niputetaan ennen lautaa.
+  'js/packs/southamerica-countries.js',
   'js/packs/southamerica.js',
   // Sama syy kuin edellä: maailmankartta.js lukee MAAILMANKARTAN_MAASTOn
   // moduulitasolla, joten maasto on niputettava ensin.

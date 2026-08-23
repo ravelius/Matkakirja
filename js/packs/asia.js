@@ -15,6 +15,7 @@
 // saariaan, joihin pääsee vain laivalla.
 
 import { ASIA_QUESTIONS, ASIA_FACTS } from './asia-questions.js';
+import { ASIA_COUNTRY_SHAPES, ASIA_CITY_COUNTRY } from './asia-countries.js';
 import { themedTokenTypes } from '../tokens.js';
 
 const AS_MAP = {
@@ -304,8 +305,21 @@ export const ASIA = {
   tagline: 'Etsi keisarin kadonnut jadesinetti Silkkitieltä, Himalajalta, Siperian taigalta ja trooppisilta saarilta.',
   ariaLabel: 'Aasian aarrekartta',
 
+  /*
+   * countryShapes ja cityCountry kytkettiin 23.8.2026 (ks.
+   * asia-countries.js). Ennen sitä laudalla ei ollut kumpaakaan taulua,
+   * ja maalehdet aukesivat vain maailmankartalta.
+   *
+   * Muoto on 21 maalla, ja ne ovat täsmälleen ne maat, joihin laudan 41
+   * kohdetta kuuluvat. Kaikilla kohteilla on cityCountry-tunnus, myös
+   * niillä neljällä, jotka jäävät oman maansa renkaan ulkopuolelle
+   * (Borneo, Singapore, Hongkong, Kamtšatka) — maan aihesivut haetaan
+   * ISO-tunnuksella eikä muodosta.
+   */
   map: {
     ...AS_MAP,
+    countryShapes: ASIA_COUNTRY_SHAPES,
+    cityCountry: ASIA_CITY_COUNTRY,
     outlines: [
       AS_MAP.mainlandPoints, AS_MAP.japanPoints, AS_MAP.hokkaidoPoints,
       AS_MAP.sahalinPoints, AS_MAP.taiwanPoints, AS_MAP.sriLankaPoints,

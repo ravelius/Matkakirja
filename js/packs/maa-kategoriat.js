@@ -91,6 +91,7 @@ const MAAN_GENETIIVIT = {
   Alankomaat: 'Alankomaiden',
   Arabiemiirikunnat: 'Arabiemiirikuntien',
   'Etelä-Afrikka': 'Etelä-Afrikan',
+  Falklandinsaaret: 'Falklandinsaarten',
   Filippiinit: 'Filippiinien',
   Grönlanti: 'Grönlannin',
   Irlanti: 'Irlannin',
@@ -101,10 +102,16 @@ const MAAN_GENETIIVIT = {
   Kypros: 'Kyproksen',
   Marokko: 'Marokon',
   'Papua-Uusi-Guinea': 'Papua-Uuden-Guinean',
+  // Norfolkinsaari taipuu kuin saari (saari → saaren), ei kuin
+  // vokaaliloppuinen maannimi; sääntö antaisi "Norfolkinsaarin".
+  Norfolkinsaari: 'Norfolkinsaaren',
   Salomonsaaret: 'Salomonsaarten',
   Suomi: 'Suomen',
   Turkki: 'Turkin',
   Tšekki: 'Tšekin',
+  // Uusi taipuu Uuden kummassakin: sama poikkeus kuin
+  // Uudessa-Seelannissa ja Papua-Uudessa-Guineassa.
+  'Uusi-Kaledonia': 'Uuden-Kaledonian',
   'Uusi-Seelanti': 'Uuden-Seelannin',
   Yhdysvallat: 'Yhdysvaltojen',
 };

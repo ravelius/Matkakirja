@@ -13,6 +13,7 @@
 // enemmän kuin millään muulla.
 
 import { OCEANIA_QUESTIONS, OCEANIA_FACTS } from './oceania-questions.js';
+import { OCEANIA_COUNTRY_SHAPES, OCEANIA_CITY_COUNTRY } from './oceania-countries.js';
 import { themedTokenTypes } from '../tokens.js';
 
 const OC_MAP = {
@@ -226,48 +227,17 @@ const OC_EDGES = [
   { a: 'brisbane', b: 'noumea', steps: 6, type: 'sea', via: [[653, 545], [726, 507]] },
 ];
 
-// map.cityCountry: kaupunki (id) → ISO-3166-1 alpha-3 -maatunnus.
-// Tekninen esivaihe uusien mantereiden lehtityölle (docs/mantereen-resepti.md
-// vaihe 2, Dubai-oppi): ilman tätä taulua menovinkit, liput ja "maa
-// numeroina" eivät syty lehdissä, vaikka aineisto olisi muuten valmis.
-// countryShapes (maiden rajat, korkokartat) tulee myöhemmin sisältöagentin
-// erässä samaan tapaan kuin middleeast.js:ssä ja africa.js:ssä — puuttuva
-// countryShapes ei riko mitään, ks. niiden kommentit.
-const OC_CITY_COUNTRY = {
-  sydney: 'AUS',
-  perth: 'AUS',
-  melbourne: 'AUS',
-  brisbane: 'AUS',
-  cairns: 'AUS',
-  darwin: 'AUS',
-  adelaide: 'AUS',
-  alicesprings: 'AUS',
-  uluru: 'AUS',
-  broome: 'AUS',
-  kalgoorlie: 'AUS',
-  townsville: 'AUS',
-  hobart: 'AUS',
-  nullarbor: 'AUS',
-  birdsville: 'AUS',
-  exmouth: 'AUS',
-  mountisa: 'AUS',
-  cooberpedy: 'AUS',
-  geraldton: 'AUS',
-  portmoresby: 'PNG',
-  sepik: 'PNG',
-  honiara: 'SLB',
-  portvila: 'VUT',
-  noumea: 'NCL',
-  norfolk: 'NFK',
-  suva: 'FJI',
-  auckland: 'NZL',
-  wellington: 'NZL',
-  christchurch: 'NZL',
-  milfordsound: 'NZL',
-  dunedin: 'NZL',
-  dili: 'TLS',
-  bali: 'IDN',
-};
+// KAUPUNKI -> MAA JA MAIDEN MUODOT ASUVAT NYT OMASSA TIEDOSTOSSAAN.
+//
+// Taulu OC_CITY_COUNTRY oli tässä 23.8.2026 asti. Se siirtyi
+// sellaisenaan js/packs/oceania-countries.js:ään nimellä
+// OCEANIA_CITY_COUNTRY, kun laudalle tehtiin countryShapes — samaan
+// tapaan kuin middleeast.js ja northamerica.js pitävät molemmat taulut
+// omassa -countries.js-tiedostossaan ja tuovat ne yhtenä parina.
+// Alkuperäinen peruste taululle pätee yhä: ilman kaupunki->maa-tietoa
+// menovinkit, liput ja "maa numeroina" eivät syty lehdissä, vaikka
+// aineisto olisi muuten valmis (docs/mantereen-resepti.md vaihe 2,
+// Dubai-oppi).
 
 // Lentoreitit kulkevat suoraan kaupungista toiseen yhdellä vuorolla.
 const OC_AIR_ROUTES = [
@@ -289,9 +259,22 @@ export const OCEANIA = {
   tagline: 'Etsi Eteläristin helmi punaiselta keskustalta, Suurelta valliriutalta ja Tyynenmeren saarilta.',
   ariaLabel: 'Oseanian aarrekartta',
 
+  /*
+   * countryShapes ja cityCountry kytkettiin 23.8.2026 (ks.
+   * oceania-countries.js). Ennen sitä laudalla oli vain cityCountry, ja
+   * esimerkiksi Australian ja Uuden-Seelannin maalehdet aukesivat
+   * pelkästään maailmankartalta.
+   *
+   * Kymmenellä maalla on muoto, ja ne ovat täsmälleen ne maat, joihin
+   * laudan 33 kohdetta kuuluvat. Renkaat ulottuvat paikoin laudan
+   * ulkopuolelle — Jaava lännessä ja Vanua Levu idässä — mutta maasävy
+   * rajataan ui.js:ssä laudan omaan rannikkoon, joten pelissä näkyy vain
+   * se osa, jonka lauta piirtää.
+   */
   map: {
     ...OC_MAP,
-    cityCountry: OC_CITY_COUNTRY,
+    countryShapes: OCEANIA_COUNTRY_SHAPES,
+    cityCountry: OCEANIA_CITY_COUNTRY,
     outlines: [
       OC_MAP.australiaPoints, OC_MAP.tasmaniaPoints, OC_MAP.newGuineaPoints,
       OC_MAP.nzNorthPoints, OC_MAP.nzSouthPoints, OC_MAP.timorPoints,
