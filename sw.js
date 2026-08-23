@@ -151,6 +151,7 @@ const SHELL = [
   './js/packs/middleeast-countries.js',
   './js/packs/middleeast-questions.js',
   './js/packs/asia.js',
+  './js/packs/asia-countries.js',
   './js/packs/asia-questions.js',
   './js/packs/oceania.js',
   './js/packs/oceania-questions.js',

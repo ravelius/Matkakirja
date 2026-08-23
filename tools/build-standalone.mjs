@@ -159,6 +159,10 @@ const MODULES = [
   'js/packs/middleeast-countries.js',
   'js/packs/middleeast.js',
   'js/packs/asia-questions.js',
+  // Sama järjestyssääntö kuin middleeastissa ja northamericassa:
+  // asia.js lukee ASIA_COUNTRY_SHAPESin heti moduulitasolla, joten
+  // muodot niputetaan ennen lautaa.
+  'js/packs/asia-countries.js',
   'js/packs/asia.js',
   'js/packs/oceania-questions.js',
   'js/packs/oceania.js',
