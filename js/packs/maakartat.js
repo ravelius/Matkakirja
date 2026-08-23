@@ -8772,6 +8772,66 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Mohatta Palace', lat: 24.814617, lon: 67.0325 },
     ],
   },
+  /*
+   * NEW YORK (nippu 8, 23.8.2026). Rajaus on Manhattan Battery
+   * Parkista Central Parkin puoliväliin, kymmenen kilometriä kanttiinsa
+   * — pelin laajimpia ruutuja (Berliini 10,2 km). Perustelu ja hylätyt
+   * vaihtoehdot ovat tools/piirra-kaupunkikartta.mjs:n newyork-lohkossa;
+   * lyhyesti: faktapohja mittasi kohteiden jakautuvan kahteen
+   * ryppääseen (Lower Manhattan ja Midtown–puisto), ja juuri se väli
+   * on kaupungin kasvusuunta isoisän aikaan.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Brooklynin silta, Castle
+   * Clinton, Grand Central, Bethesda-terassi ja pörssi ovat
+   * kaupunkilehden nostojen aiheita (kulttuuri-kategoriat.js), joten
+   * yksikään niistä ei ole kartan kohde, vaikka kaikki mahtuisivat
+   * ruutuun.
+   *
+   * VAPAUDENPATSAS EI OLE KARTALLA. Se on 40,6892 eli noin kilometrin
+   * eteläreunan alapuolella, ja Ellis Island (40,6994) osuu nipin
+   * napin alalaitaan, jossa merkki jäisi puoliksi kuvan ulkopuolelle.
+   * Eteläreunan laskeminen sinne asti kasvattaisi ruudun 11,4
+   * kilometriin ja täyttäisi alakolmanneksen avovedellä. Kumpikin
+   * kuuluu joka tapauksessa lehden puolelle: Castle Gardenin nosto
+   * kertoo siirtolaisten maahantulon ja sanoo suoraan, ettei isoisä
+   * voinut nähdä patsasta, koska se vihittiin vasta 1886.
+   */
+  newyork: {
+    polku: 'assets/kartat/newyork-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 40.788, etela: 40.698, lansi: -74.056, ita: -73.9372 },
+    esittely: 'Kartan alue on Manhattan Battery Parkista Central Parkin '
+      + 'puoliväliin. Etelässä on 1800-luvun kaupungin ydin, jossa ovat '
+      + 'Trinity Church ja kaupungintalo, keskellä Midtown, joka oli '
+      + 'isoisän aikaan vasta rakentumassa, ja pohjoisessa puiston '
+      + 'laidalla kaksi museota, jotka perustettiin 1869 ja 1870. '
+      + 'Lännessä virtaa Hudson ja idässä East River. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KYMMENEN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Karachissa ja Medinassa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 23.8.2026; pääkirjasto ja Pyhän
+       * Paavalin kappeli puuttuvat siitä, joten kirjaston piste on
+       * Wikidatan P625:stä (Q7013887).
+       *
+       * WOOLWORTH BUILDING JA PYHÄN PAAVALIN KAPPELI JÄIVÄT POIS,
+       * vaikka molemmat mahtuvat ruutuun: ne ovat sadan ja
+       * kahdensadan metrin päässä kaupungintalosta, ja merkit olisivat
+       * menneet päällekkäin (Petran, Mekan ja Karachin oppi).
+       */
+      { nimi: 'Amerikan luonnonhistoriallinen museo', lat: 40.78083, lon: -73.97444 },
+      { nimi: 'Metropolitan-museo', lat: 40.7794, lon: -73.9631 },
+      { nimi: 'Pyhän Patrickin katedraali', lat: 40.75861, lon: -73.97639 },
+      { nimi: 'Times Square', lat: 40.7575, lon: -73.9858 },
+      { nimi: 'New Yorkin pääkirjasto', lat: 40.753333, lon: -73.982222 },
+      { nimi: 'Empire State Building', lat: 40.7483, lon: -73.9856 },
+      { nimi: 'Flatiron Building', lat: 40.74111, lon: -73.98972 },
+      { nimi: 'Washington Squaren riemukaari', lat: 40.73124, lon: -73.9971 },
+      { nimi: 'New Yorkin kaupungintalo', lat: 40.7127, lon: -74.0059 },
+      { nimi: 'Trinity Church', lat: 40.70806, lon: -74.01222 },
+    ],
+  },
 };
 
 /*

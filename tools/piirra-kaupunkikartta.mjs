@@ -3192,6 +3192,57 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  newyork: {
+    /*
+     * Manhattan Battery Parkista Central Parkin puoliväliin (nippu 8,
+     * 23.8.2026). Rajaus on kymmenen kilometriä leveä eli pelin
+     * laajimpia (Berliini 10,2 km), ja se on tietoinen valinta:
+     * faktapohja (docs/mantereet-tyoaineisto/faktapohja-newyork.md,
+     * osio 4) mittasi kohteiden jakautuvan kahteen ryppääseen —
+     * 1873-kaupungin ytimeen Lower Manhattanilla ja pohjoisen
+     * uudisrakennuskaupunkiin Midtownissa ja puiston laidalla — ja
+     * suositteli joko yhtä laajaa ruutua tai kahta karttaa. Yksi ruutu
+     * valittiin, koska juuri se väli kertoo kaupungin kasvusuunnan:
+     * isoisän aikaan Grand Centralin tienoota pidettiin liian
+     * syrjäisenä ja museot olivat vasta perustettuja.
+     *
+     * PUURO EI UHKAA, vaikka mitta on iso: Manhattanin ruutukaavassa
+     * poikkikadut ovat noin 80 metrin välein eli kaksitoista pikseliä,
+     * ja avenuet erottuvat omana paksumpana luokkanaan. Vanhojen
+     * kaupunkien kujaverkko olisi tällä mitalla mahdoton, ruutukaava
+     * ei ole.
+     *
+     * EI jalkakäytäviä eikä palveluteitä (vrt. Karachi yllä):
+     * kymmenen kilometrin ruudussa niitä olisi kymmeniä tuhansia.
+     *
+     * EI meri: true, ja se on mitattu päätös. Merentäyttö kokeiltiin
+     * 23.8.2026, ja työkalu peräytyi itse: New Yorkin sataman
+     * rantaviivat kiertävät niin, että renkaat peittäisivät 223 %
+     * rajauksesta (vahti on 85 %), joten kuva piirtyi joka
+     * tapauksessa rantanauhalla. Vesi ei silti puutu kartalta —
+     * Hudson, East River ja satama-altaat ovat OSM:ssä myös
+     * natural=water -alueita ja täyttyvät sitä kautta, ja Manhattan
+     * erottuu saarena. Lippu jätettiin siksi pois: se ei muuttaisi
+     * kuvasta pikseliäkään mutta tulostaisi joka ajolla varoituksen.
+     *
+     * LÄNSIREUNA ON VEDETTY NEW JERSEYN PUOLELLE eikä Manhattanin
+     * rantaan, ja siihen on kaksi syytä. Hudson on kaupungin
+     * länsiraja, ja pelkkä rantaviiva kuvan laidassa näyttäisi
+     * virheeltä; toiseksi lehti piirtää mittakaavajanan vasempaan
+     * alakulmaan (ui.js), ja Trinity Church on kartan eteläisin kohde.
+     * Kun länsireuna on Jersey Cityssä, Trinityn merkki istuu 37 %:n
+     * kohdalla eikä janan päällä, joka ulottuu 28 %:iin
+     * (tarkista-karttapisteet.mjs).
+     *
+     * ETELÄREUNA 40.698 ON VALITTU BATTERYN MUKAAN, ei Vapaudenpatsaan.
+     * Patsas (40,6892) jää noin kilometrin reunan alapuolelle ja Ellis
+     * Island (40,6994) aivan alalaitaan. Reunan laskeminen patsaaseen
+     * asti kasvattaisi ruudun 11,4 kilometriin ja veisi
+     * alakolmanneksen avovedelle; kumpikin kohde kuuluu sitä paitsi
+     * kaupunkilehden Castle Gardenin nostoon eikä kohdekartalle.
+     */
+    rajat: { pohjoinen: 40.788, etela: 40.698, lansi: -74.056, ita: -73.9372 },
+  },
 };
 
 /*
