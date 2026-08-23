@@ -7434,6 +7434,31 @@ body.katselu #newgame-btn { display: none; }
    * arkissa noin 240 px leveä ja 2:3-kuvana noin 270 px korkea. */
   .wiki-nosto.kainalo.pysty .kuvakehys { width: 27%; }
 
+  /*
+   * TÄYSLEVEÄ NOSTOKUVA (omistajan tilaus 23.8.2026): selvästi leveä
+   * vaakakuva — panoraama tai maalaus, jonka suhde on ≥ 1,6 — ei
+   * kellu kainalossa vaan levittäytyy koko palstalle jutun ylle, ja
+   * leipäteksti palaa kahteen palstaan kuvan alle kuten kuvattomassa
+   * nostossa. Luokan antaa js/maalehti.js kuvan latauduttua;
+   * noston kenttä leveys: 'taysi'/'kapea' ohittaa automatiikan.
+   */
+  .wiki-nosto.kainalo.taysileve .kuvakehys {
+    float: none;
+    width: 100%;
+    margin: 0.2rem 0 0.9rem;
+  }
+
+  .wiki-nosto.kainalo.taysileve .kuvakehys img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+  }
+
+  .wiki-nosto.kainalo.taysileve .leipa {
+    columns: 2;
+    column-gap: 2.2rem;
+  }
+
   .wiki-nosto.kainalo.pysty .kuvakehys img {
     max-height: 420px;
     object-fit: contain;
