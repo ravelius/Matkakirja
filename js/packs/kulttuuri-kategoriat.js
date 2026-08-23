@@ -59128,4 +59128,713 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * BRISBANE (Opus, 23.8.2026). Oseanian laudan neljäs kaupunkilehti
+   * Sydneyn, Melbournen ja Aucklandin jälkeen. Neljä sivua: kansi
+   * `kaupunki` sekä teemasivut `historia`, `luonto` ja `kaupunkikuva`.
+   *
+   * LÄHTEET. Jokainen väite on luettu en-Wikipedian raakatekstistä
+   * (action=raw, NODE_USE_ENV_PROXY=1) 23.8.2026: "Brisbane",
+   * "Queensland", "The Old Windmill, Brisbane", "Commissariat Store,
+   * Brisbane", "Parliament House, Brisbane", "Old Government House,
+   * Brisbane", "General Post Office, Brisbane", "Brisbane City Botanic
+   * Gardens", "Brisbane River", "Kangaroo Point, Queensland",
+   * "Mount Coot-tha, Queensland", "Story Bridge", "Customs House,
+   * Brisbane", "Queen Street Mall", "World Expo 88", "South Bank
+   * Parklands", "Turrbal", "Jagera people", "Neville Bonner",
+   * "Queenslander (architecture)". Pohjana ovat
+   * docs/mantereet-tyoaineisto/faktapohja-brisbane.md ja
+   * tarkistus-brisbane.md; ne eivät ole vielä mainissa, vaan
+   * commiteissa ae2df23f ja e160477d. TARKISTUS VOITTAA FAKTAPOHJAN.
+   *
+   * TARKISTUSRAPORTIN PAKOLLISET KORJAUKSET ON TEHTY. (a) Tullitalon
+   * julkisivun eläin on EMU, ei kotka: "the building features a
+   * depiction on its facade of a shield between an emu and kangaroo".
+   * (b) Vanha tuulimylly rakennettiin 1828, ei 1824-1828. Myllyn oman
+   * artikkelin infoboksi sanoo built = 1828, perustuskaivanto alkoi
+   * heinäkuussa 1828 ja ensimmäinen jauhatus oli 31.10.1828. Vuosiluku
+   * 1824 on pääartikkelin virhe ja sekaantuu siirtolan alkuvuoteen;
+   * tarkempi lähde voittaa (ennakkotapaukset v925, v932, v937).
+   * (c) Ilmansuuntia ei mainita teksteissä lainkaan, koska tämä erä ei
+   * tee kohdekarttaa. (d) Vaakuna on QUEENSLANDIN, ei Australian:
+   * lähde sanoo heraldisten aiheiden olleen "precursors to the official
+   * Queensland coat of arms, which was not granted until 1893", eikä
+   * Australiaa liittovaltiona ollut 1889 olemassakaan. (e) Oppaan
+   * jaksot 3 ja 5 on kirjoitettu kokonaan toisin kuin faktapohjassa,
+   * ks. VISA alla.
+   *
+   * KOLME OMAA TARKENNUSTA FAKTAPOHJAAN. (1) Tuulimyllyn aikapallo EI
+   * ollut käytössä isoisän matkan aikaan: pallo asennettiin 1861 mutta
+   * korvattiin aikatykillä jo 1866, ja sähköinen aikapallo tuli vasta
+   * 1894. Vuonna 1873 aika ilmoitettiin siis laukauksella, ja nosto H1
+   * sanoo sen. (2) Signaalimiehen mökin vuosi on artikkelin
+   * leipätekstin 1883, ei johdannon pyöristys "kaksikymmentä vuotta
+   * myöhemmin". (3) Ku-ta-sanan kansa-attribuutio vaihtelee lähteiden
+   * välillä (Turrbal-artikkeli: turrbalit; Mount Coot-tha -artikkeli:
+   * yugarat). Lehti seuraa kohteen omaa artikkelia ja sanoo sanan
+   * olevan yugarabulia, jolloin ristiriitaa ei synny.
+   *
+   * WIKIPEDIAN SISÄINEN RISTIRIITA KIRJOITETTU AUKI: Expo 88:n
+   * kävijämäärä on infoboksissa 18 574 476 mutta leipätekstissä "yli
+   * 15 760 000 kävijää, jotka ostivat lippuja 175 miljoonalla
+   * dollarilla". Artikkeli selittää eron itse (korkeampi luku sisältää
+   * henkilökunnan ja kutsuvieraat), ja nosto T4 kertoo molemmat luvut.
+   *
+   * PILARI 3. Turrbalit ja jagerat (yuggerat) kuvataan NYKYISINÄ
+   * kansoina. Nosto K4 ei pääty oikeusprosessiin eikä muistokirjoitukseen
+   * vaan elävään kieleen ja nykyisiin instituutioihin: kaupunginosien
+   * nimet, yagaran sana yaga koko Australian puhekielessä ja Musgrave
+   * Parkin Jagera Community Hall, joka toimii yhä. Vuosien 2015 ja
+   * 2017 hylätyt maaoikeusvaatimukset on JÄTETTY POIS tietoisesti: ne
+   * ovat nykyistä oikeus- ja politiikkaprosessia (spec-mantereet.md,
+   * sääntö 3). Lehti ei väitä niiden tilalle mitään voitettua vaan
+   * sanoo sen minkä lähdekin sanoo — molempien kansojen jälkeläiset
+   * pitävät itseään alueen perinteisinä haltijoina. Queenslandin
+   * osavaltiotason frontier wars -uhriluvut on jätetty pois samasta
+   * syystä kuin faktapohjassa. Tyynenmeren saarilta värvätty
+   * plantaasityövoima kerrotaan neutraalisti oppaan jaksossa 4, ilman
+   * yksittäistarinoita ja ilman kärsimyksen yksityiskohtia.
+   *
+   * VISA (js/packs/oceania-questions.js, avain brisbane). Viiden
+   * kysymyksen vastaukset löytyvät lehdestä: itärannikko ja Gold
+   * Coastin ja Sunshine Coastin hiekkarannat oppaan jaksosta 2,
+   * Brisbane-joki nostosta L2 ja oppaan jaksosta 1, Queenslandin
+   * pääkaupunkiasema johdannosta ja nostosta K3, subtrooppinen ilmasto
+   * oppaan jaksosta 5. Tarkistusraportin kohta D5 vaati kaksi
+   * uudelleenkirjoitusta, ja ne on tehty: jakso 5 ei käytä visan
+   * vastausvaihtoehdon sanaparia vaan kertoo Köppen-luokan,
+   * vuodenaikojen eron ja ennätyslukemat, ja jakso 3 on kokonaan eri
+   * aihe (queenslander-talo) kuin faktapohjan CityCat-jakso, joka oli
+   * lähellä visan fakta-kenttää. Teemasivujen minitehtävät eivät toista
+   * visaa: ne kysyvät myllyn signaaliasemaa, joen turrbalinkielistä
+   * nimeä ja Story Bridgen esikuvaa.
+   *
+   * KUVAT. 26 kuvaa, kaikki Commonsista KATEGORIAHAULLA, lisenssi ja
+   * tekijä luettu rajapinnan extmetadatasta, ja jokainen katsottu
+   * silmin 900 pikselin esikatseluna. Hylkäysten yleisin syy oli kuvaan
+   * kirjoitettu merkintä: Queen Streetin 1975 katunäkymään on lisätty
+   * valkoinen palkki, jossa lukee kuvaajan nimi ja sähköpostiosoite,
+   * ja vuoden 1893 tulvakuvasarjaan on kirjoitettu negatiiviin
+   * "P C Poulsen" ja kuvateksti. Muita hylkäyksiä: parlamenttitalon
+   * 1878 rakennustyömaakuva ja Tullitalon arkistokuvat alle 1200 px;
+   * vuoden 1904 kansanedustajaryhmäkuva (neljätoista luettavissa olevaa
+   * kasvoa); rahastotalon kaksi kuvaa (rakennustelineet, mainoskyltit
+   * ja pinkki kasinovalaistus); Commissariat Storen yökuva
+   * (julkisivulle heijastettu valoteos peitti kivityön); pääpostin
+   * nykykuva (kymmenkunta luettavaa kasvoa ja mainostaulu); Jagera
+   * Hallin kolme kuvaa (kasvot, roska-astiat ja pollarit etualalla,
+   * itse talo vain nurkaltaan). Vuoden 1897 pääpostikuvassa on julkaisijan oma
+   * levynumerointi, joka selitetään kuvatekstissä — sama poikkeus kuin
+   * karttojen ja litografioiden omalla tekstillä.
+   *
+   * Turrbal- ja jagera-aiheiselle kuvitukselle EI ole Commonsissa omaa
+   * kategoriaa (tarkistettu suoraan: "Category:Turrbal" ja
+   * "Category:Aboriginal Queenslanders" eivät ole olemassa), joten
+   * K4:n kuva haettiin käsin tiedostohaulla. Kolme Jagera Hallin kuvaa
+   * hylättiin (ks. yllä), ja valinnaksi tuli Musgrave Parkin bunyapuu:
+   * elävä, paikallinen ja tekstin kanssa yhteen käyvä aihe eikä
+   * seremoniaklišee (spec-mantereet.md, Kuvalinjat).
+   *
+   * AIHETOISTO, kirjattu tarkoituksella. South Bank esiintyy kahdesti:
+   * avauskuvassa nykyisenä puistona ja nostossa T4 vuoden 1986
+   * ilmakuvana samasta rannasta ennen näyttelyä. Toisto on juuri
+   * noston oma aihe, ja tiedostot ja vuosikymmenet ovat eri. Mount
+   * Coot-tha esiintyy avauskuvassa näköalana kaupunkiin ja nostossa L4
+   * mäkenä itsenään. Muut kohteet kerran. Yksikään tiedosto ei toistu
+   * lehden sisällä eikä ole sama kuin js/packs/oceania-valokuvat.js:n
+   * brisbane-lohkossa (Queen Street 1900, CityCat, Streets Beach,
+   * Story Bridge Bowen Terracelta, Queen Street Mall -väkijoukko).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (säärivit haetaan omana eränään; Samarkandin ja Vancouverin
+   * malli). Oppaan jakso 5 nojaa siis en-Wikipedian Brisbane-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN. Mittauspiste olisi keskusta
+   * -27,47 / 153,03.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta eikä kuvaile kuvaa, ja se on yhden virkkeen
+   * mittainen.
+   */
+  brisbane: [
+    {
+      id: 'kaupunki',
+      nimi: 'Brisbane',
+      johdanto: 'Queenslandin pääkaupunki kiertyy joen mutkan sisään, ja '
+        + 'keskusta on melkein saari. Isoisän matkavuonna 1873 siirtokunta '
+        + 'oli neljäntoista vuoden ikäinen ja rakensi yhä julkisia talojaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Brisbane City Hall 1 (30298960383).jpg',
+          selite: 'Brisbanen kaupungintalo valmistui 1930, ja sen '
+            + 'hiekkakivinen pylväikkö ja kellotorni kohoavat King George '
+            + 'Squaren laidalla.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Queens Gardens, Treasury Building, Brisbane 02.jpg',
+          selite: 'Rahastotalo rakennettiin kolmessa vaiheessa 1886–1928 '
+            + 'kokonaisen korttelin kokoiseksi, ja sen ensimmäinen vaihe '
+            + 'nousi samaan aikaan kuin Tullitalo.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Commissariat Store, Brisbane - Joy of Museums - External 2.jpg',
+          selite: 'William Streetin muonavarasto vuodelta 1828 on toinen '
+            + 'kahdesta rangaistussiirtolan ajalta säilyneestä rakennuksesta '
+            + 'ja toimii nykyään museona.',
+          lahde: 'GordonMakryllos, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kaupungin eri puolilta —
+       * keskusta joen yli Kangaroo Pointista, South Bankin ranta
+       * vastarannalta ja koko kaupunki Mount Coot-thalta. Yksikään ei
+       * ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Brisbane CBD seen from Kangaroo Point, 2024, 02.jpg',
+          selite: 'Keskusta seisoo niemekkeellä, jonka ympäri Brisbane-joki '
+            + 'kaartaa lähes umpeen, ja vuonna 2024 avattu Kangaroo Pointin '
+            + 'kävelysilta ylittää joen keskustan kupeessa.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '28 - South Bank Parklands (4741163759).jpg',
+          selite: 'South Bankin puisto avattiin 1992 vuoden 1988 '
+            + 'maailmannäyttelyn alueelle, ja sen rannassa kulkee kilometrin '
+            + 'mittainen kukkiva pylväskäytävä.',
+          lahde: 'Brisbane City Council, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Brisbane from Mt Mount Coot-tha.jpg',
+          selite: 'Mount Coot-than näköalapaikalta avautuu esteetön näkymä '
+            + 'yli koko kaupungin, joka leviää joen tulvatasangolle '
+            + 'eukalyptusmetsien takana.',
+          lahde: 'Silje Ljosland Bakke User:Siljelb, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Siirtola, joka muutti heti perustamisensa jälkeen',
+          tiedosto: 'Brisbane Commissariat Store, circa 1840.jpg',
+          teksti: 'Matthew Flinders kartoitti osia Moreton Baystä 1799, ja '
+            + 'John Oxley löysi joen 1823 haaksirikkoutuneiden merimiesten '
+            + 'avulla ja suositteli seutua rangaistussiirtolaksi. '
+            + 'Ensimmäinen tukikohta perustettiin Redcliffeen 1824, mutta jo '
+            + 'kahdeksan kuukauden jälkeen koko joukko — vangit, sotilaat, '
+            + 'hallintoväki ja perheet — siirtyi joen mutkaan North Quaylle '
+            + 'nykyisen keskustan kohdalle. Kapteeni Patrick Loganin '
+            + 'komennossa asema sai maineen yhtenä Uuden Etelä-Walesin '
+            + 'ankarimmista. Siirtola suljettiin 1842 ja alue avattiin '
+            + 'vapaalle asutukselle; vasta siitä alkoi kaupungin kasvu.',
+          selite: 'Vuoden 1840 piirustussarja esittää William Streetin '
+            + 'muonavaraston julkisivut, pohjapiirrokset ja rantaleikkauksen, '
+            + 'ja sen käsinkirjoitetut selitykset kuuluvat itse piirustukseen.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Commissariat Store, Brisbane',
+        },
+        {
+          otsikko: 'Kaksi nimeä samalle joenmutkalle',
+          tiedosto: 'Harpullia-pendula-SF24331-06.jpg',
+          teksti: 'Kaupungin nimi ei kerro paikasta vaan virkamiehestä: John '
+            + 'Oxley nimesi joen 1823 Uuden Etelä-Walesin kuvernöörin Thomas '
+            + 'Brisbanen mukaan, ja siirtola peri nimensä joeltaan. '
+            + 'Keskustan niemekkeellä on kuitenkin vanhempi nimi. Turrbalin '
+            + 'ja yagaran kielissä se on Meanjin tai Magandjin, ja sen '
+            + 'merkityksestä keskustellaan yhä: yhden tulkinnan mukaan sana '
+            + 'viittaa piikin muotoon, toisen mukaan Gardens Pointissa '
+            + 'kasvaneeseen tulppaanipuuhun, jonka nimi on magan. Vanhin '
+            + 'Gaja Kerry Charlton pitää juuri puuhun palautuvaa Magandjinia '
+            + 'osuvampana, eikä kirjoitusasusta ole perinteisten haltijoiden '
+            + 'kesken yksimielisyyttä.',
+          selite: 'Australiantulppaanipuun Harpullia pendulan oranssit '
+            + 'kotelohedelmät avautuvat mustille siemenille, ja juuri tähän '
+            + 'puuhun eli maganiin nimi Magandjin palautuu.',
+          lahde: 'Steve Fitzgerald, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Brisbane',
+        },
+        {
+          otsikko: 'Pääkaupunki, joka rakensi itselleen talot',
+          tiedosto: 'Old Government House, Brisbane 01.jpg',
+          teksti: 'Kuningatar Viktoria allekirjoitti 6. kesäkuuta 1859 '
+            + 'kirjeen, joka erotti Queenslandin omaksi itsehallinnolliseksi '
+            + 'siirtokunnaksi Uudesta Etelä-Walesista ja teki Brisbanesta sen '
+            + 'pääkaupungin. Ensimmäinen kuvernööri George Bowen luki '
+            + 'julistuksen joulukuussa, ja toukokuussa 1860 kokoontunut '
+            + 'ensimmäinen parlamentti mahtui entiseen vankibarakkiin Queen '
+            + 'Streetillä. Tilat tarvittiin nopeasti: siirtokunnan arkkitehti '
+            + 'Charles Tiffin suunnitteli kuvernöörin talon Gardens Pointin '
+            + 'kukkulalle, rakentajaksi tuli Joshua Jeays, ja Bowenin perhe '
+            + 'muutti sisään huhtikuussa 1862.',
+          selite: 'Queenslandin ensimmäinen kuvernöörin talo valmistui 1862 '
+            + 'hiekkakivestä ja paikallisesta tuffista, ja isoisän matkan '
+            + 'aikaan se oli yhä kuvernöörin koti.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Old Government House, Brisbane',
+        },
+        {
+          otsikko: 'Turrbal ja jagera tänään',
+          tiedosto: 'Araucaria bidwillii in silhouette Musgrave Park South Brisbane P1380329.jpg',
+          teksti: 'Brisbanen seudulla on asuttu yli 22 000 vuotta, ja alueen '
+            + 'kansoja ovat turrbalit, jagerat eli yuggerat sekä lahden '
+            + 'puolella quandamookat. Tutkijat ovat eri mieltä siitä, '
+            + 'kulkeeko kansojen raja joen mukana vai onko kyse saman kansan '
+            + 'osista; kummankin jälkeläiset pitävät itseään alueen '
+            + 'perinteisinä haltijoina. Joen eteläpuolen Musgrave Park oli '
+            + 'yksi suurista leiripaikoista, ja siellä toimii nykyään '
+            + 'Jagera Community Hall. Kieli on jäänyt kaupungin arkeen: '
+            + 'kaupunginosien nimet Woolloongabba, Toowong, Bulimba ja '
+            + 'Indooroopilly ovat turrbalin ja yagaran sanoja, ja '
+            + 'australianenglannin yakka eli raadanta tulee yagaran sanasta '
+            + 'yaga.',
+          selite: 'Musgrave Parkin bunyapuu Araucaria bidwillii on sitä '
+            + 'lajia, jonka pähkinäsato kutsui kansat koolle suuriin '
+            + 'juhliin kolmen vuoden välein.',
+          lahde: 'John Robert McPherson, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jagera people',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Autumn in Roma Street Parkland 052013 524.jpg',
+          selite: 'Roma Street Parkland rakennettiin vanhalle ratapiha-'
+            + 'alueelle keskustan laitaan, ja sen subtrooppiset istutukset '
+            + 'kukkivat myös syksyllä.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Brisbane on Queenslandin pääkaupunki ja Australian '
+          + 'kolmanneksi väkirikkain kaupunki. Matkailijan Brisbane mahtuu '
+          + 'joenmutkan sisään ja sen molemmille rannoille: pohjoisrannalla '
+          + 'ovat Queen Streetin kävelykatu, kaupungintalo ja Tullitalon '
+          + 'kuparikupoli, eteläpuolella South Bankin puisto ja museot, '
+          + 'idässä Kangaroo Pointin kalliot Story Bridgen alla. Niemekkeen '
+          + 'kärjessä ovat kasvitieteellinen puutarha ja parlamenttitalo '
+          + 'vierekkäin. Joki on osa joukkoliikennettä, joten paikasta '
+          + 'toiseen pääsee myös vettä pitkin, ja lännessä Mount Coot-than '
+          + 'näköalapaikalta näkee koko kaupungin yhdellä silmäyksellä.',
+        artikkeli: {
+          nimi: 'Matkailijan Brisbane',
+          taitto: 'opas',
+          teksti: 'Joenmutka, jonka ympärille rakennettiin ensin '
+            + 'rangaistussiirtola ja sitten kokonaisen siirtokunnan '
+            + 'pääkaupunki.',
+          nosto: 'Vuonna 1873 kaupungin uusin rakennus oli vuoden vanha '
+            + 'pääposti, jonka tiloissa asui myös Queenslandin museo.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lennot saapuvat Brisbanen lentoasemalle joen suulle, '
+                + 'ja sieltä keskustaan pääsee junalla. Junat, bussit ja '
+                + 'lautat kuuluvat samaan TransLink-järjestelmään ja samaan '
+                + 'go card -maksuun koko Kaakkois-Queenslandissa, ja '
+                + 'keskustan solmukohdat ovat Roma Streetin, Centralin ja '
+                + 'Fortitude Valleyn asemat. Brisbane-joella liikennöivät '
+                + 'CityCat-katamaraanit ovat osa samaa verkkoa, ja koska '
+                + 'joki mutkittelee keskustan ympäri, laituri on usein '
+                + 'lähempänä kuin pysäkki. Yksityisauto on Australian '
+                + 'tapaan suosituin kulkuneuvo, mutta keskustassa pärjää '
+                + 'hyvin ilman. Isoisän aikaan sama matka olisi taittunut '
+                + 'höyrylaivalla, ja Ipswichiin mentiin jokea pitkin, koska '
+                + 'rautatie valmistui vasta 1875.',
+              kuva: {
+                tiedosto: 'Approach Brisbane Airport flying over Brisbane River.jpg',
+                selite: 'Brisbanen lentoasema on rakennettu joen suulle '
+                  + 'Moreton Bayn rannalle, ja laskeutumisreitti seuraa '
+                  + 'jokea alavirtaan keskustan ohi.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Brisbane on Australian itärannikolla, Queenslandin '
+                + 'kaakkoiskulmassa. Keskusta on joen niemekkeellä noin '
+                + 'viidentoista kilometrin päässä siitä kohdasta, jossa '
+                + 'joki laskee Moreton Bayhin, ja kaupunki leviää '
+                + 'kumpuilevalle tulvatasangolle Tyynenmeren sekä Taylorin '
+                + 'ja D’Aguilarin vuorijonojen väliin. Suur-Brisbane '
+                + 'koostuu useasta kunnasta, ja niistä Brisbane City on '
+                + 'Australian väkirikkain. Rannikko jatkuu etelään Gold '
+                + 'Coastin ja pohjoiseen Sunshine Coastin hiekkarantoina, '
+                + 'jotka ovat maan tunnetuimpia lomakohteita; lähijunaverkko '
+                + 'ulottuu molemmille. Sillat ratkaisevat kaiken: Victoria '
+                + 'Bridge, Captain Cook -silta ja Story Bridge sitovat '
+                + 'niemekkeen molempiin rantoihin.',
+              kuva: {
+                tiedosto: 'Brisbane - panoramio (18).jpg',
+                selite: 'Captain Cook -silta vie moottoritien joen yli '
+                  + 'keskustan eteläpuolella, ja sen kupeessa vanha '
+                  + 'kiinnityspollari on saanut päälleen lintuveistokset.',
+                lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: talo tolppien päällä',
+              teksti: 'Brisbanen esikaupungit erottuvat muiden '
+                + 'osavaltionpääkaupunkien lähiöistä yhdestä syystä, ja se '
+                + 'on queenslander-talo. Se on puinen, peltikattoinen ja '
+                + 'nostettu tolppien varaan noin kahden ja puolen metrin '
+                + 'korkeuteen, ja sen kylkeä kiertää veranta, joka ei '
+                + 'koskaan kierrä koko taloa. Talotyyppi kehittyi '
+                + '1840-luvulta alkaen, ja jokainen sen piirre vastaa '
+                + 'ilmastoon: alusta tuulettuu, tulvavesi menee ali, ja '
+                + 'ovet ja ikkunat on aseteltu niin että ilma kulkee '
+                + 'huoneiden läpi. Verantaa käytetään ulkohuoneena, jossa '
+                + 'syödään ja nukutaan. Tolppien päällä on peltiset '
+                + 'muurahaishatut termiittejä vastaan, ja koska puutalolle '
+                + 'ei voi laskea peruskiveä, uusi rakennus vihittiin '
+                + 'kiinnittämällä hattu juhlallisesti paikalleen.',
+              kuva: {
+                tiedosto: 'House in Corinda, Queensland 01.jpg',
+                selite: 'Corindan kaltaisissa Brisbanen esikaupungeissa '
+                  + 'queenslander-talo seisoo yhä tolppiensa päällä '
+                  + 'ulkoportaineen, verantoineen ja peltikattoineen.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: satama, joka toi väen',
+              teksti: 'Kun Queenslandista tuli oma siirtokunta 1859, '
+                + 'Brisbane oli ennen kaikkea jokisatama. 1860-luvulta '
+                + 'lähtien se oli myös keskeinen läpikulkupaikka '
+                + 'Tyynenmeren saarilta värvätylle työvoimalle, jota '
+                + 'vietiin siirtokunnan sokeri- ja puuvillaplantaaseille. '
+                + 'Järjestelmä oli muodollisesti sopimustyötä, mutta '
+                + 'rekrytointi oli usein harhaanjohtavaa ja liikkumista '
+                + 'rajoitettiin, ja monet historioitsijat pitävät käytäntöä '
+                + 'orjuuden kaltaisena pakkotyönä. Samat vuosikymmenet '
+                + 'toivat kaupunkiin saksalaisia maanviljelijöitä sekä '
+                + 'skotlantilaisia ja irlantilaisia siirtolaisia, '
+                + 'kiinalaiskorttelin Frog’s Hollow -nimiselle '
+                + 'alueelle, juutalaisen seurakunnan ja yhden Australian '
+                + 'varhaisimmista venäläisyhteisöistä. Kokoaan '
+                + 'monikulttuurisempi satamakaupunki syntyi näinä vuosina.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Brisbanesta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Brisbane-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Köppenin luokituksessa Brisbane on subtrooppinen Cfa, ja '
+                + 'Darwinin jälkeen se on Australian pääkaupungeista kuumin: '
+                + 'vuoden keskimääräinen ylin lukema on 26,6 ja alin 16,6 '
+                + 'astetta. Kesä joulukuusta maaliskuuhun on ukkosten ja '
+                + 'rankkasateiden aikaa, ja talvi toukokuusta elokuuhun on '
+                + 'kuiva ja aurinkoinen — matkailijalle helpoin jakso. '
+                + 'Kuumin mitattu lukema on 43,2 astetta Australia '
+                + 'Day -päivänä 1940 ja kylmin 0,1 astetta pakkasen puolella '
+                + 'heinäkuussa 2007, ensimmäinen kerta koko '
+                + 'mittaushistoriassa. Vuorokauden sademäärän ennätys, 465 '
+                + 'millimetriä tammikuussa 1887, on yhä suurin minkään '
+                + 'Australian pääkaupungin historiassa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vankityövoima pystytti myllyn, jota myöhemmin käytettiin '
+        + 'laivojen vahtimiseen. Isoisän matkan aikaan kaupunki rakensi '
+        + 'parlamenttiaan ja postiaan yhtä aikaa, ja suuret tulvat olivat '
+        + 'vielä edessä.',
+      tehtava: {
+        kysymys: 'Mihin tehtävään Wickham Terracen vanha tuulimylly valjastettiin vuodesta 1855?',
+        vaihtoehdot: [
+          'laivaliikenteen signaaliasemaksi',
+          'kaupungin vesitorniksi',
+          'siirtokunnan vankilaksi',
+          'kirkon kellotapuliksi',
+        ],
+        oikea: 0,
+        fakta: 'Mylly lakkasi jauhamasta viljaa 1845. Kymmenen vuotta '
+          + 'myöhemmin torniin rakennettiin semaforiasema, joka välitti '
+          + 'sähkelankaa pitkin tiedot joensuulle saapuvista laivoista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Torni, joka jauhoi viljaa ja vahti sitten satamaa',
+          tiedosto: 'Brisbane Old Windmill SLNSW FL790597.jpg',
+          teksti: 'Wickham Terracen tuulimylly on Queenslandin vanhin '
+            + 'säilynyt rakennus. Perustuksia alettiin kaivaa heinäkuussa '
+            + '1828, ensimmäinen vilja jauhettiin lokakuun viimeisenä '
+            + 'päivänä, ja tornin kylkeen liitettiin polkumylly, joka toimi '
+            + 'voimanlähteenä tuulettomina päivinä ja rangaistusvälineenä '
+            + 'vankeja vastaan. Jauhaminen loppui 1845 ja polkumylly '
+            + 'purettiin. Vuodesta 1855 tornia käytettiin signaaliasemana, '
+            + 'ja vuoden 1861 kunnostuksessa siihen asennettiin aikapallo. '
+            + 'Isoisä ei olisi nähnyt palloa putoavan: se korvattiin '
+            + 'aikatykillä jo 1866, ja signaalimiehen mökki rakennettiin '
+            + 'vasta 1883.',
+          selite: 'Vanha tuulimylly toimi signaaliasemana, ja sen vieressä '
+            + 'seisoi korkea lipputanko, jonka viireillä ilmoitettiin '
+            + 'joensuulle saapuneista laivoista.',
+          lahde: 'G. F. Matthews, Wikimedia Commons (PD)',
+          wiki: 'The Old Windmill, Brisbane',
+        },
+        {
+          otsikko: 'Parlamentti, joka valmistui isoisän ympärillä',
+          tiedosto: 'Parliament House, Brisbane, Botanic Gardens facade 01.jpg',
+          teksti: 'Uuden siirtokunnan parlamentti kokoontui ensimmäisen '
+            + 'kerran 22. toukokuuta 1860 entisessä vankibarakissa, ja '
+            + 'kunnollisen talon suunnittelukilpailu meni kahdesti uusiksi '
+            + 'ennen kuin siirtokunnan arkkitehdin Charles Tiffinin ehdotus '
+            + 'valittiin. Peruskiven laski kuvernööri George Bowen 14. '
+            + 'heinäkuuta 1865, ja George Streetin julkisivu avattiin '
+            + 'elokuussa 1868 ranskalaisen renessanssin tyyliin. Isoisän '
+            + 'matkan aikaan rakennus oli siis käytössä mutta yhä kesken: '
+            + 'kaarikäytävät ja pylväiköt valmistuivat vasta 1878 ja Alice '
+            + 'Streetin siipi 1889. Rakentaja Joshua Jeays louhi '
+            + 'hiekkakiven omista louhoksistaan.',
+          selite: 'Queenslandin parlamenttitalo on kasvitieteellisen '
+            + 'puutarhan kupeessa, ja sen kuninkaita esittävät '
+            + 'lasimaalaukset tuotiin Birminghamista.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Parliament House, Brisbane',
+        },
+        {
+          otsikko: 'Pääposti, jonka tiloissa asui museo',
+          tiedosto: 'General Post Office, Queen Street, Brisbane, 1897.jpg',
+          teksti: 'Queen Streetin pääposti avattiin 28. syyskuuta 1872, vain '
+            + 'puoli vuotta ennen isoisän matkaa. Arkkitehti oli '
+            + 'F. D. G. Stanley, ja rakennuspaikalta oli purettu edellisenä '
+            + 'vuonna talo, jossa oli aikanaan pidetty naisvankeja. '
+            + 'Julkisivun päätykolmiossa on kello, jota valaistiin aluksi '
+            + 'kaasulla, ja syvät verannat ja korkeat huoneet tehtiin '
+            + 'ilmastoa varten. Vuonna 1873 talossa toimi myös Queenslandin '
+            + 'museo, joka muutti William Streetille vasta 1879; samana '
+            + 'vuonna John Petrien rakentama toinen siipi valmistui ja '
+            + 'lennätinkonttori pääsi saman katon alle.',
+          selite: 'Vuoden 1897 kaupallisen valokuvasarjan levy numero 50 '
+            + 'esittää pääpostin pylväikön ja Queen Streetin '
+            + 'hevosvetoiset kaksikerroksiset raitiovaunut.',
+          lahde: 'Queensland State Archives, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'General Post Office, Brisbane',
+        },
+        {
+          otsikko: 'Tulva, joka vei sillan mukanaan',
+          tiedosto: 'Queensland State Archives 3071 Panorama from Kangaroo Point during the Brisbane River flood 1893.png',
+          teksti: 'Helmikuun 1893 suurtulva peitti laajat alueet Brisbanesta '
+            + 'ja vei mukanaan ensimmäisen Victoria Bridgen kokonaan. Sillan '
+            + 'tilalle järjestettiin väliaikainen lauttayhteys, mutta se '
+            + 'päättyi onnettomuuteen kolme vuotta myöhemmin, kun '
+            + 'Pearl-lautta kaatui helmikuussa 1896; arviolta puolet '
+            + 'kyydissä olleista kahdeksastakymmenestä sadasta ihmisestä '
+            + 'menehtyi. Kaupunki koki uudet suurtulvat 1974, 2011 ja 2022, '
+            + 'ja jokainen niistä on muuttanut sitä, miten Brisbane '
+            + 'varautuu jokeensa — vuoden 1974 jälkeen yläjuoksulle '
+            + 'rakennettiin Wivenhoen pato.',
+          selite: 'Vuoden 1893 tulvassa Brisbane-joki levisi Kangaroo '
+            + 'Pointista katsottuna yli koko keskustan alavien osien.',
+          lahde: 'Colonial Secretary\'s Office, Wikimedia Commons (PD)',
+          wiki: 'Brisbane',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kaupungin läpi kulkee joki, jonka turrbalinkielinen nimi on '
+        + 'Maiwar. Sen rannoilla ovat maailman ensimmäinen viljelty '
+        + 'makadamiapuu, laavakalliot ja mäki, jonka nimi vaihtui kesken '
+        + 'kaiken.',
+      tehtava: {
+        kysymys: 'Millä nimellä turrbalit kutsuvat Brisbanen halki virtaavaa jokea?',
+        vaihtoehdot: [
+          'Maiwar',
+          'Barrambin',
+          'Magandjin',
+          'Kurilpa',
+        ],
+        oikea: 0,
+        fakta: 'Maiwar oli vuosituhansien ajan alueen kulttuurisen, '
+          + 'taloudellisen ja seremoniallisen elämän keskus, ja nimi on '
+          + 'nykyään myös yhden Brisbanen vaalipiirin nimi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puutarha, joka ruokki vangit ja kasvatti makadamian',
+          tiedosto: 'Walter Hill Fountain in City Botanic Gardens, Brisbane, Queensland, 2020.jpg',
+          teksti: 'Kasvitieteellinen puutarha alkoi 1825 vankisiirtolan '
+            + 'ruokaviljelmänä, ja 1828 Uuden Etelä-Walesin '
+            + 'siirtokuntakasvitieteilijä Charles Fraser valitsi alueen '
+            + 'julkiseksi puutarhaksi. Vuodesta 1855 sitä hoiti kuraattori '
+            + 'Walter Hill, joka pysyi virassa vuoteen 1881 asti eli koko '
+            + 'isoisän matkan ajan. Hill kokeili kaupallisesti lupaavia '
+            + 'lajeja: hän istutti 1858 maailman ensimmäisen viljellyn '
+            + 'makadamiapähkinäpuun ja tuki John Buhotia, jonka käsissä '
+            + 'valmistui huhtikuussa 1862 Queenslandin ensimmäinen kiteinen '
+            + 'sokerierä. Puutarha on tulvinut yhdeksän kertaa vuosina '
+            + '1870–2011.',
+          selite: 'Puutarhan juomavesilähteen suunnitteli 1867 siirtokunnan '
+            + 'arkkitehti Charles Tiffin, ja se tunnetaan nykyään Walter '
+            + 'Hillin lähteenä.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Brisbane City Botanic Gardens',
+        },
+        {
+          otsikko: 'Maiwar, jota kutsutaan ruskeaksi käärmeeksi',
+          tiedosto: 'AUS Brisbane, Toowong, Brisbane River 001.jpg',
+          teksti: 'Joen turrbalinkielinen nimi on Maiwar, ja se oli '
+            + 'vuosituhansien ajan alueen tärkein kokoontumis- ja '
+            + 'ruokapaikka. John Oxley nimesi sen uudelleen 1823. Joki on '
+            + '344 kilometriä pitkä ja niin mutkitteleva ja sameavetinen, '
+            + 'että brisbanelaiset kutsuvat sitä ruskeaksi käärmeeksi. '
+            + 'Vuorovesi työntää suolaista vettä Mount Crosbyn padolle '
+            + 'saakka, ja vedessä elävät muun muassa queenslandinkeuhkokala '
+            + 'ja härkähait. Ruoppaus alkoi 1862, ja isoisän matkan aikaan '
+            + 'joki oli yhä valtatie: Ipswichiin mentiin vettä pitkin, '
+            + 'koska rautatie valmistui vasta 1875.',
+          selite: 'Toowongin kohdalla Brisbane-joki kaartaa keskustan '
+            + 'länsipuolella, ja veden ruskeus tulee tulvatasangon '
+            + 'hienojakoisesta savesta.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Brisbane River',
+        },
+        {
+          otsikko: 'Kalliot, joista louhittiin kaupunki',
+          tiedosto: 'Kangaroo Point Cliffs - Brisbane - Australia (34942602383).jpg',
+          teksti: 'Kangaroo Pointin jyrkänteet ovat rioliittia eli '
+            + 'laavakiveä, joka purkautui noin 230 miljoonaa vuotta sitten '
+            + 'ja täytti muinaisen jokilaakson. Turrbalit asuivat '
+            + 'niemekkeellä ennen siirtokuntaa. 1800-luvulla kalliosta '
+            + 'louhittiin rakennuskiveä, ja juuri louhinta teki jyrkänteistä '
+            + 'nykyisen kaltaiset. Kallion juurella oli Queenslandin '
+            + 'laivaston päävarasto, jota Australian kuninkaallinen laivasto '
+            + 'käytti vuoteen 1959 ja armeija vuoteen 1984. Nykyään '
+            + 'suojellut varastorakennukset ovat jokitoimintaa ja '
+            + 'kalliokiipeilyä järjestävän yrityksen käytössä.',
+          selite: 'Kangaroo Pointin kalliot kohoavat suoraan joesta aivan '
+            + 'keskustan vastapäätä, ja ne ovat Brisbanen suosituin '
+            + 'kiipeilypaikka.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Kangaroo Point, Queensland',
+        },
+        {
+          otsikko: 'Mäki, jonka nimi vaihtui kesken kaiken',
+          tiedosto: 'Mount Coot-tha seen from Sherwood, Queensland, 2021.jpg',
+          teksti: 'Vuonna 1839 maanmittari James Warner raivasi mäen laen '
+            + 'puhtaaksi yhtä isoa eukalyptusta lukuun ottamatta, koska '
+            + 'yksinäinen puu näkyi kauas ja kelpasi kolmiomittauspisteeksi. '
+            + 'Niin syntyi nimi One Tree Hill, ja sillä nimellä isoisä olisi '
+            + 'mäen tuntenut. Nykyinen nimi tuli vasta elokuussa 1883, kun '
+            + 'alue julistettiin puistoksi; sen ehdotti virkamies Henry '
+            + 'Wyatt Radford paikallisen aboriginaalityönjohtajan Kerwallin '
+            + 'neuvosta. Ku-ta on yugarabulin sana hunajalle, jota alueelta '
+            + 'kerättiin pistiäisettömiltä mehiläisiltä. Mäki ei ole edes '
+            + 'seudun korkein: sen 226 metriä jää Constitution Hillin ja The '
+            + 'Summitin alle.',
+          selite: 'Mount Coot-tha kohoaa metsäisenä selänteenä kaupungin '
+            + 'länsilaidalla, ja sen rinteillä ovat Brisbanen toinen '
+            + 'kasvitieteellinen puutarha ja planetaario.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Coot-tha, Queensland',
+        },
+      ],
+    },
+    {
+      id: 'kaupunkikuva',
+      nimi: 'Kaupunkikuva',
+      johdanto: 'Kupolit ovat 1880-luvulta ja niitit 1930-luvulta, kävelykatu '
+        + '1980-luvulta. Kaksi nousukautta ja yksi maailmannäyttely ovat '
+        + 'muokanneet Brisbanen ilmeen kolmeen kertaan.',
+      tehtava: {
+        kysymys: 'Minkä kaupungin sillasta Story Bridgen suunnittelu otti mallia?',
+        vaihtoehdot: [
+          'Montrealin',
+          'New Yorkin',
+          'Lissabonin',
+          'Edinburghin',
+        ],
+        oikea: 0,
+        fakta: 'Esikuva oli vuonna 1930 valmistunut Jacques Cartier -silta. '
+          + 'Story Bridgen suunnitteli John Bradfield, sama insinööri, joka '
+          + 'vastasi Sydneyn satamansillasta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Silta, jonka perustukset kaivettiin paineen alla',
+          tiedosto: 'Approaching Story Bridge from Fortitude Valley, Brisbane.jpg',
+          teksti: 'Story Bridge on Australian pisin ulokepalkkisilta, ja sen '
+            + 'suunnitteli John Bradfield Montrealin Jacques Cartier '
+            + '-sillan mallin mukaan. Työ alkoi toukokuussa 1935, ja osat '
+            + 'valmistettiin Rocklean tehtaalla. Vaikein kohta oli '
+            + 'eteläranta, jonka perustukset piti kaivaa neljänkymmenen '
+            + 'metrin syvyyteen: vesi olisi täyttänyt kuilun heti, joten työ '
+            + 'tehtiin paineistetussa kaisuunissa nelinkertaisessa '
+            + 'ilmanpaineessa, ja jokaisen vuoron jälkeen tarvittiin lähes '
+            + 'kahden tunnin paineenpurku. Sillassa on 1,25 miljoonaa '
+            + 'niittiä, kolme rakentajaa kuoli työn aikana, ja avajaisia '
+            + 'vietettiin 6. heinäkuuta 1940.',
+          selite: 'Story Bridge yhdistää Fortitude Valleyn ja Kangaroo '
+            + 'Pointin, ja sen ylityksestä perittiin kuuden pennin maksu '
+            + 'vuoteen 1947 asti.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Story Bridge',
+        },
+        {
+          otsikko: 'Kupoli, jonka alla laskettiin nousukauden tullit',
+          tiedosto: 'Customs House, Brisbane, Queensland, 2019, 01.jpg',
+          teksti: 'Tullitalo rakennettiin 1886–1889 siirtokunnan '
+            + 'arkkitehtitoimiston Charles McLayn suunnitelmien mukaan, ja '
+            + 'urakoitsijana oli John Petrie & Son. Talo avattiin '
+            + '2. syyskuuta 1889 keskellä Queenslandin 1880-luvun '
+            + 'rakennusbuumia, ja kuparilla päällystetyn kupolin teki '
+            + 'kuparisepäksi palkattu William Smith Henderson. Julkisivun '
+            + 'päätykolmiossa on kilpi emun ja kengurun välissä, vaikka '
+            + 'Queenslandille myönnettiin oma vaakuna vasta 1893; '
+            + 'parvekkeiden rautakaide tuotiin Englannista kuningatar '
+            + 'Viktorian nimikirjaimin. Brisbane Courier ennusti muutama '
+            + 'päivä avajaisten jälkeen, että kupolista tulee yksi '
+            + 'kaupungin tunnusmerkeistä.',
+          selite: 'Tullitalon kuparikupoli näkyy Queen Streetiä pitkin '
+            + 'molempiin suuntiin ja joelta merelle päin tuleville '
+            + 'laivoille.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Customs House, Brisbane',
+        },
+        {
+          otsikko: 'Katu, jolta autot poistettiin',
+          tiedosto: 'AUS Brisbane, Central Business District, Queen Street Mall 012.jpg',
+          teksti: 'Queen Street suljettiin autoliikenteeltä 1981, ja Robin '
+            + 'Gibsonin suunnitteleman kävelykadun avasi kuningatar '
+            + 'Elisabet II 9. elokuuta 1982 — ajoissa saman vuoden '
+            + 'Kansainyhteisön kisoihin. Kävelykatu on noin viisisataa '
+            + 'metriä pitkä George Streetiltä Edward Streetille, ja sen '
+            + 'varrella on yli seitsemänsataa liikettä kuudessa '
+            + 'kauppakeskuksessa, yhteensä 40 000 neliömetriä. Aluetta '
+            + 'jatkettiin 1988 maailmannäyttelyn tahdissa. Kadun alla on '
+            + 'maanalainen bussiasema, joten kävelykatu lepää '
+            + 'kirjaimellisesti joukkoliikenteen päällä.',
+          selite: 'Kävelykadun keskellä avautuu portaikko maanalaiselle '
+            + 'Queen Streetin bussiasemalle, joka on osa samaa '
+            + 'TransLink-verkkoa kuin junat ja jokilautat.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Queen Street Mall',
+        },
+        {
+          otsikko: 'Maailmannäyttely, josta jäi puisto',
+          tiedosto: 'Aerial shots of Brisbane and South Bank, Preparing the site for Expo 88, 1986.jpg',
+          teksti: 'World Expo 88 järjestettiin South Brisbanen rannalla '
+            + 'kuuden kuukauden ajan huhtikuusta lokakuuhun 1988 teemalla '
+            + 'vapaa-aika teknologian aikakaudella. Kävijämääristä on '
+            + 'liikkeellä kaksi lukua: lipun osti yli 15,7 miljoonaa '
+            + 'ihmistä, ja kun henkilökunta ja kutsuvieraat lasketaan '
+            + 'mukaan, luku nousee yli kahdeksaantoista miljoonaan. '
+            + 'Näyttelyn jälkeen hallitus aikoi myydä alueen '
+            + 'rakennusmaaksi, mutta kansalaisliike sai sen muutettua '
+            + 'puistoksi: South Bank Corporation perustettiin 1989 ja '
+            + 'puisto avattiin 20. kesäkuuta 1992. Nykyään rannalla on '
+            + 'kilometrin mittainen pylväskäytävä ja keinotekoinen '
+            + 'hiekkaranta.',
+          selite: 'South Brisbanen rantaa raivattiin 1986 näyttelyalueeksi '
+            + 'aivan keskustan vastapäätä, ja samalle kohdalle avattiin '
+            + 'puisto kuusi vuotta myöhemmin.',
+          lahde: 'Queensland State Archives, Wikimedia Commons (PD)',
+          wiki: 'World Expo 88',
+        },
+      ],
+    },
+  ],
 };
