@@ -4209,6 +4209,31 @@ export const KULTTUURI_KATEGORIAT = {
        * Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 13 (23.8.2026, tools/hero-tyolista-8.mjs). */
+        {
+          ampari: 'herokoe/hero-tukholma-aamu.png',
+          selite: 'Tukholman kuninkaanlinna valmistui 1754 palaneen Tre '
+            + 'Kronorin paikalle, ja yli 600 huoneellaan se on '
+            + 'Euroopan suurimpia yhä virkakäytössä olevia '
+            + 'kuninkaanlinnoja.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tukholma-keskipaiva.png',
+          selite: 'Tukholman kaupungintalo valmistui 1923 kahdeksasta '
+            + 'miljoonasta tiilestä, ja sen 106-metrisen tornin '
+            + 'huipulla kimaltavat kolme kruunua — juhlasalissa '
+            + 'tanssitaan Nobel-illalliset.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tukholma-ilta.png',
+          selite: 'Riddarholmenin kirkko on Tukholman vanhimpia '
+            + 'rakennuksia ja Ruotsin kuninkaiden hautakirkko '
+            + '1600-luvulta asti — sen valurautainen pitsitorni nousi '
+            + 'tulipalon jälkeen 1846.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Gamla stan February 2013 01.jpg',
           selite: 'Tukholma perustettiin vuonna 1252, ja vanhassakaupungissa '
@@ -9067,6 +9092,30 @@ export const KULTTUURI_KATEGORIAT = {
        * API:sta, jokainen kuva katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 13 (23.8.2026, tools/hero-tyolista-8.mjs). */
+        {
+          ampari: 'herokoe/hero-budapest-aamu.png',
+          selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin '
+            + 'piirustuksin: uusgoottilainen palatsi on 268 metriä '
+            + 'pitkä, ja sen kupoli nousee tasan 96 metriin — luku '
+            + 'muistuttaa vuoden 896 maahantulosta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-budapest-keskipaiva.png',
+          selite: 'Kalastajanlinnakkeen seitsemän suippotornia '
+            + 'muistuttavat unkarilaisten seitsemästä heimosta — '
+            + 'näköalaterassi valmistui 1902 Matthias-kirkon viereen, '
+            + 'eikä se ole koskaan ollut puolustusrakennelma.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-budapest-ilta.png',
+          selite: 'Széchenyin ketjusilta valmistui 1849 ensimmäisenä '
+            + 'pysyvänä siltana Tonavan yli Budan ja Pestin välillä — '
+            + 'kivileijonat ovat vartioineet sen päitä vuodesta 1852.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Budapest Panorama R01.jpg',
           selite: 'Buda on rakennettu kukkuloille ja Pest tasangolle, ja '
@@ -24265,6 +24314,31 @@ export const KULTTUURI_KATEGORIAT = {
        * vettä eikä yhtään samaa kohdetta.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 13 (23.8.2026, tools/hero-tyolista-8.mjs). */
+        {
+          ampari: 'herokoe/hero-masqat-aamu.png',
+          selite: 'Sulttaani Qaboosin suurmoskeija valmistui 2001: sen '
+            + 'pääminareetti nousee 90 metriin, ja rukoussalin '
+            + 'persialainen matto kudottiin yhtenä 4 200 neliömetrin '
+            + 'kappaleena.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-masqat-keskipaiva.png',
+          selite: 'Mutrahin korniisi kaartuu vanhan kauppasataman ympäri, '
+            + 'ja sen suq on Arabian niemimaan vanhimpia — vuorten ja '
+            + 'meren väliin puristunut ranta on ollut kauppapaikka '
+            + 'vuosisadat.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-masqat-ilta.png',
+          selite: 'Al Jalalin ja Al Miranin linnakkeet nousivat Maskatin '
+            + 'sataman kallioille 1580-luvulla portugalilaisten '
+            + 'rakentamina, ja niiden välissä seisoo sulttaanin '
+            + 'seremoniallinen Al Alamin palatsi.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Muttrah Corniche 2.jpg',
           selite: 'Mutrahin lahti on toinen Masqatin kahdesta '
@@ -33478,6 +33552,30 @@ export const KULTTUURI_KATEGORIAT = {
        * kuva katsottu silmin 18.8.2026.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 13 (23.8.2026, tools/hero-tyolista-8.mjs). */
+        {
+          ampari: 'herokoe/hero-tripoli-aamu.png',
+          selite: 'Tripolin Punainen linna eli Assai al-Hamra on '
+            + 'vartioinut satamaa vuosisatoja: foinikialaisten '
+            + 'perustukselle ovat rakentaneet roomalaiset, ritarit ja '
+            + 'osmanit kukin kerroksensa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tripoli-keskipaiva.png',
+          selite: 'Marcus Aureliuksen kunniaksi pystytetty nelikaari '
+            + 'valmistui vuonna 165 roomalaisen Oean keskustaan — se '
+            + 'on ainoa kaupungista kokonaisena säilynyt antiikin '
+            + 'rakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tripoli-ilta.png',
+          selite: 'Tripolin medina kasvoi osmanikaudella satamansa '
+            + 'ympärille, ja sen kapeiden kujien ylle nousevat yhä '
+            + '1700-luvun moskeijoiden kupolit ja minareetit.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Tripoli aerial view.jpg',
           selite: 'Rantabulevardi ilmasta iltapäivällä: kaareva '
@@ -43840,6 +43938,31 @@ export const KULTTUURI_KATEGORIAT = {
        * temppeliperinne).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 13 (23.8.2026, tools/hero-tyolista-8.mjs). */
+        {
+          ampari: 'herokoe/hero-taipei-aamu.png',
+          selite: 'Taipei 101 oli valmistuessaan 2004 maailman korkein '
+            + 'rakennus: 508-metrinen torni nousee kahdeksana '
+            + 'bambunvarren jaksona, ja sen heilurivaimennin painaa '
+            + '660 tonnia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-taipei-keskipaiva.png',
+          selite: 'Chiang Kai-shekin muistohalli valmistui 1980: '
+            + 'kahdeksankulmainen sininen katto ja 89 porrasta '
+            + 'kantavat symboliikkaa, ja aukiosta on tullut kaupungin '
+            + 'kansalaistapahtumien näyttämö.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-taipei-ilta.png',
+          selite: 'Longshanin temppeli perustettiin 1738 Fujianin '
+            + 'siirtolaisten voimin, ja se on jälleenrakennettu '
+            + 'maanjäristysten ja pommitusten jälkeen aina entistä '
+            + 'koristeellisemmaksi.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'North Gate of Taipei City, 2023 (01).jpg',
           selite: 'Pohjoisportti on Taipein viidestä kaupunginportista '
@@ -47867,6 +47990,30 @@ export const KULTTUURI_KATEGORIAT = {
        * jonka takia kaikki on tässä).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 13 (23.8.2026, tools/hero-tyolista-8.mjs). */
+        {
+          ampari: 'herokoe/hero-kolkata-aamu.png',
+          selite: 'Victoria Memorial valmistui 1921 samasta Makranan '
+            + 'valkoisesta marmorista kuin Taj Mahal, ja sen kupolia '
+            + 'kruunaa pyörivä Voiton enkeli.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kolkata-keskipaiva.png',
+          selite: 'Howrahin silta valmistui 1943 ilman yhtäkään jokeen '
+            + 'laskettua pilaria: 705-metrinen ulokesilta kantaa '
+            + 'päivässä yli satatuhatta ajoneuvoa ja loputtoman '
+            + 'jalankulkijavirran.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kolkata-ilta.png',
+          selite: 'Dakshineswarin Kali-temppeli valmistui 1855 Hooghlyn '
+            + 'rannalle: yhdeksäntorninen pyhäkkö tunnetaan mystikko '
+            + 'Ramakrishnan kotitemppelinä, ja sen pihaa reunustaa '
+            + 'kaksitoista Shivan pyhäkköä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Writer\'s Building (14837276474).jpg',
           selite: 'Writers’ Building sai nimensä Itä-Intian '
