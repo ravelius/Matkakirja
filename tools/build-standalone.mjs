@@ -227,12 +227,14 @@ const MODULES = [
   /*
    * Pöllöpoiminnat ennen artikkeleiden piirtäjiä: nähtävyydet,
    * maalehti, lehti ja pollo tuovat sen. Moduuli tuo minipopupin
-   * (yllä) ja oman pakkansa (pakkojen joukossa yllä).
+   * (yllä), oman pakkansa (pakkojen joukossa yllä) ja ehdotukset
+   * (siirretty tämän edelle 23.8.2026, kun poistopyynnöt alkoivat
+   * kulkea ehdotuskanavaa pitkin).
    */
-  'js/pollopoiminnat.js',
-  // Lukijoiden ehdotukset ennen lehteä ja ui:ta (molemmat tuovat sen;
-  // moduuli tuo ui-apurit ja minipopupin, jotka ovat yllä).
+  // Lukijoiden ehdotukset ennen pollopoiminnat/lehteä/ui:ta (kaikki
+  // tuovat sen; moduuli tuo ui-apurit ja minipopupin, jotka ovat yllä).
   'js/ehdotukset.js',
+  'js/pollopoiminnat.js',
   // Pro-tuottajan tekijäsivu ennen lähderivien piirtäjiä (nähtävyydet
   // ja maalehti tuovat sen; moduuli tuo ehdotukset ja ui-apurit, jotka
   // ovat yllä).
