@@ -53,6 +53,7 @@ import { PEILI_JUURI } from './media.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
+import { JULISTEET } from './packs/julisteet.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
@@ -248,6 +249,22 @@ const KAUPUNGIN_OSAT = [
       const tehty = kohteet.filter((k) => MINIATYYRIT[c.id]?.[k.nimi]).length;
       return [tehty, kohteet.length];
     },
+  },
+  {
+    avain: 'herot',
+    otsikko: 'Herot',
+    selite: 'generoidut herokuvat avauskarusellissa (ampari-kentät)',
+    arvo: (c) => kaupungillaHerot(c.id),
+    luku: (c) => {
+      const kansi = (KULTTUURI_KATEGORIAT[c.id] ?? []).find((k) => k.id === 'kaupunki');
+      return (kansi?.avauskuvat ?? []).filter((kuva) => kuva.ampari).length || null;
+    },
+  },
+  {
+    avain: 'juliste',
+    otsikko: 'Juliste',
+    selite: 'aikakausjuliste JULISTEET-taulussa (kuva täydentyy ämpäristä)',
+    arvo: (c) => Boolean(JULISTEET[c.id]),
   },
   {
     avain: 'merkinta',
