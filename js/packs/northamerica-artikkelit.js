@@ -176,6 +176,14 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'lennättimen ja höyryn voimalla. Isoisän matkapäiväkirja osuu '
       + 'maahan hetkellä, jolloin se on yhtä aikaa vanha ja aivan uusi.',
   },
+  /* Chicagon kaksi väkilukua eivät ole lehden omasta erästä, joten ne
+   * on tarkistettu erikseen en-Wikipedian artikkelista Chicago
+   * 23.8.2026: kaupungin väkiluku 2,74 miljoonaa ja metropolialueen
+   * 9,62 miljoonaa vuoden 2020 väestönlaskennassa. Home Insurance
+   * Buildingia EI sanota täällä ensimmäiseksi pilvenpiirtäjäksi eikä
+   * ensimmäiseksi teräsrunkoiseksi taloksi, koska lehden oma nosto
+   * kertoo tittelin olevan kiistanalainen — artikkeli ei saa väittää
+   * enempää kuin lehti. */
   Chicago: {
     intro: 'Chicago on Yhdysvaltain kolmanneksi suurin kaupunki ja '
       + 'Keskilännen suurin, ja se on Michiganjärven lounaisrannalla. '
@@ -192,7 +200,8 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'tuhosi yli 17 000 rakennusta ja jätti 90 000 ihmistä '
       + 'kodittomaksi.** Isoisän matkavuonna 1873 kaupunki oli kesken '
       + 'jälleenrakennuksen: se muurasi kiveä ja tiiltä, sillä '
-      + 'ensimmäinen teräsrunkoinen korkea talo valmistui vasta 1885.'
+      + 'teräsrunkoinen korkea rakentaminen alkoi vasta 1885, kun '
+      + 'Home Insurance Building valmistui.'
       + '\n\n'
       + 'Siitä alkoi rakentamisen tapa, jota kutsutaan Chicago '
       + 'Schooliksi, ja vuoden 1893 maailmannäyttely näytti '

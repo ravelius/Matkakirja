@@ -289,6 +289,12 @@ export const OCEANIA_ARTIKKELIT = {
       + 'hetkellä, jolloin sen kuusi osaa ovat vasta löytämässä '
       + 'toisiaan.',
   },
+  /* Brisbanen kaksi väkilukua eivät ole lehden omasta erästä, joten ne
+   * on tarkistettu erikseen en-Wikipedian artikkelista Brisbane
+   * 23.8.2026: Australian tilastokeskuksen arvio Greater Brisbanen
+   * väestöstä on 2 833 524 (kesäkuu 2025) ja Kaakkois-Queenslandin
+   * 4,1 miljoonaa (2024). Siksi tässä sanotaan kaupunkiseutu eikä
+   * kaupunki — kaupungin oma luku on selvästi pienempi. */
   Brisbane: {
     intro: 'Brisbane on Queenslandin pääkaupunki ja Australian '
       + 'kolmanneksi väkirikkain kaupunki, ja se on rakennettu joen '
@@ -324,8 +330,8 @@ export const OCEANIA_ARTIKKELIT = {
       + 'siirtolaisia. Helmikuun 1893 suurtulva peitti kaupungin alavat '
       + 'osat ja vei mukanaan ensimmäisen Victoria Bridgen.'
       + '\n\n'
-      + 'Nykyään Brisbanessa asuu noin 2,8 miljoonaa ihmistä ja koko '
-      + 'Kaakkois-Queenslandissa 4,1 miljoonaa. Joki on yhä kulkuväylä: '
+      + 'Nykyään Brisbanen kaupunkiseudulla asuu noin 2,8 miljoonaa '
+      + 'ihmistä ja koko Kaakkois-Queenslandissa 4,1 miljoonaa. Joki on yhä kulkuväylä: '
       + 'CityCat-katamaraanit kuuluvat samaan lippujärjestelmään kuin '
       + 'bussit ja junat. Kaupungin esikaupungit tunnistaa tolppien '
       + 'päälle nostetuista puutaloista, joiden verannat tehtiin '
