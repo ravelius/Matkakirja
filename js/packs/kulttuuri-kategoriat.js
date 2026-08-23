@@ -58367,4 +58367,611 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * VANCOUVER (Opus 23.8.2026). Alusta asti tehty kaupunkilehti:
+   * kohteella ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen
+   * tätä erää. Pohjana ovat docs/mantereet-tyoaineisto/
+   * faktapohja-vancouver.md ja sen riippumaton tarkistus
+   * tarkistus-vancouver.md, jotka luettiin yhdessä; ristiriidoissa
+   * TARKISTUS VOITTAA. Jokainen väite on luettu en-Wikipedian
+   * raakatekstistä (action=raw, haettu 23.8.2026): Vancouver,
+   * Gastown, Hastings Mill, Great Vancouver Fire, Vancouver Fire and
+   * Rescue Services, Canadian Pacific Railway, Canadian Pacific 374,
+   * Port of Vancouver, Granville Island, Stanley Park, Canada Place,
+   * SkyTrain (Vancouver), Canada Line, Steam clock, North Shore
+   * Mountains, RMS Empress of China (1890), Musqueam First Nation,
+   * Squamish Nation, Tsleil-Waututh First Nation ja Susan Point.
+   *
+   * TARKISTUSRAPORTIN KAKSI KORJAUSTA ON TEHTY. (1) Faktapohja sanoi,
+   * että kaupunki perusti palokunnan vasta palon jälkeen. Se on
+   * väärin: Vancouver Volunteer Hose Company No. 1 piti ensimmäisen
+   * kokouksensa 28.5.1886 eli kuusitoista päivää ENNEN 13.6.1886
+   * paloa, ja palon jälkeen perustettiin poliisilaitos ja hankittiin
+   * ensimmäinen paloruisku. Nosto VC2 kertoo tämän oikeassa
+   * järjestyksessä. (2) Faktapohja sanoi palon tulleen kuuden viikon
+   * kuluttua kaupungin perustamisesta; 6.4.–13.6.1886 on 68 päivää
+   * eli lähes kymmenen viikkoa, ja lehti sanoo "kymmenen viikkoa".
+   * Kohdekartan rajausvirke ja kompassisuunnat eivät koske tätä erää
+   * (karttaa ei tehty), joten tarkistuksen kohdat C ja D jäivät
+   * odottamaan karttaerää.
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA RATKAISTIIN NÄIN.
+   * (1) Ensimmäisen paloruiskun alkuperä: "Great Vancouver Fire"
+   * sanoo sen tulleen New Westminsteristä, "Vancouver Fire and Rescue
+   * Services" sanoo sen ostetun Ontariosta ja saapuneen elokuussa.
+   * Lehti kertoo vain, että kaupunki osti ensimmäisen ruiskunsa
+   * viikko palon jälkeen — ei alkuperää eikä saapumiskuukautta,
+   * koska kaksi artikkelia ovat niistä suoraan eri mieltä.
+   * (2) Sataman kauppakumppanit: "Port of Vancouver" sanoo yli 170
+   * taloutta, "Vancouver" sanoo yli 160. Lehti käyttää sataman oman
+   * artikkelin lukua, koska sen infoboksin tonni- ja konttiluvut
+   * ovat samasta lähteestä. (3) MST Development Corporationin
+   * perustamisvuosi: Musqueam-artikkeli sanoo 2016, Squamish-
+   * artikkeli 2017; lehti sanoo "2010-luvun puolivälissä".
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3. Musqueam, Squamish ja
+   * Tsleil-Waututh kuvataan NYKYISINÄ itsehallinnollisina kansoina:
+   * omat neuvostot, omat maat, omat yhtiöt ja oma osuus kaupungin
+   * nykyisyydestä. Vääryydet (Sen̓áḵw-varauksen pakkomyynti 1913,
+   * Stanley Parkin asukkaiden häätö 1888) kerrotaan tapahtumina ja
+   * aina siihen asti, mihin kansojen oma toiminta ne vei — A3 on
+   * kertomus voitetusta oikeusjutusta, ei uhritarina. Kaikkea
+   * nykypolitiikkaa (Trans Mountain -kiista, Gassy Jackin patsaan
+   * kaataminen 2022, asuntojen hinnat) on vältetty, samoin
+   * 1900-luvun aasialaisvastaisia mellakoita ja japanilais-
+   * kanadalaisten internointia, jotka eivät osu tämän lehden
+   * 1873-painotukseen.
+   *
+   * VUOSI 1873 ON SANOTTU AUKI. Vancouveria ei silloin ollut:
+   * paikalla oli Hastings Millin saha ja sen ympärille kasvanut
+   * Gastownin kylä, jonka siirtomaahallinto oli mitannut tonteiksi
+   * 1870 nimellä Granville. Tämä kerrotaan etusivun leipätekstissä
+   * (js/packs/northamerica-artikkelit.js), kaupunkisivun
+   * johdannossa ja nostossa VC1, jottei pelaaja luule isoisän
+   * kävelleen nykyisen kaltaisessa suurkaupungissa.
+   *
+   * KULTTUURIVISAN (js/packs/northamerica-questions.js) viiden
+   * kysymyksen vastaukset löytyvät lehdestä: Kanada (johdanto ja
+   * intro), Rannikkovuoret (oppaan jakso 2 kertoo North Shore
+   * Mountainsin kuuluvan Rannikkovuorten eteläisimpään ryhmään),
+   * Kanadan suurin satama (nosto VC4), vuoden 2010 talviolympialaiset
+   * (nosto A4) ja lauhkea sademetsä (nosto H2). Historiasivun
+   * minitehtävä kysyy kylän nimeä ennen kaupunkia — sitä visa ei
+   * kysy, ja vastaus on samalla sivulla nostossa H2.
+   *
+   * AIHETOISTO: Gastown esiintyy kahdesti (kansikuvan katujulkisivut
+   * ja oppaan jakso 3:n höyrykello) ja Stanley Park kahdesti (oppaan
+   * etusivun pystykuva seawallilta ja nosto H2:n ontto setri) — eri
+   * tiedostot, eri kohteet, eri jutut. Muut kohteet esiintyvät
+   * kerran.
+   *
+   * KUVAT: kaikki 22 kuvaa on haettu Commonsista KATEGORIOILLA,
+   * lisenssi ja tekijä on luettu rajapinnan extmetadatasta ja
+   * jokainen kuva on katsottu silmin 900 pikselin esikatseluna.
+   * Hylkäysten yleisin syy oli kuvan päälle kirjoitettu teksti:
+   * vuoden 1886 rantapanoraamassa lukee negatiivissa "Before the
+   * Fire — Copyright applied for", Granville Street Bridgen 1888
+   * kuvassa "Granville St Bridge approx Dec 1888" ja HMS Triumphin
+   * kuvassa aluksen nimi ja negatiivin numero. Ensimmäisen
+   * kaupunginvaltuuston telttakuva 1886 hylättiin kahdesta syystä:
+   * neljäntoista miehen kasvot ovat luettavissa ja nimet on
+   * kirjoitettu kuvan alalaitaan. Nykykuvista hylättiin Gastownin
+   * katunäkymiä mainostelineiden (olutmainos), mainosrekan ja
+   * lähikuvassa olevien tunnistettavien kasvojen takia sekä Maple
+   * Tree Squaren kuva, jossa näkyy vuonna 2022 poistettu patsas.
+   * Vuoden 1886 palokartta ja Franz Boasin 1887 kartta ovat
+   * karttoja, joissa teksti on osa itse teosta — sama poikkeus kuin
+   * julkaisijan omalla literalla.
+   *
+   * YKSI LÄHDERIVI ON NORMALISOITU: vuoden 1898 lintuperspektiivi-
+   * litografian Artist-kenttä luettelee kolme yhtiötä peräkkäin
+   * (kustantaja, piirtäjä ja kivipaino), ja lähderivi toistaa sen
+   * sellaisenaan, koska talon sääntö on kirjoittaa tekijä
+   * täsmälleen extmetadata.Artist-muodossa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty
+   * tässä erässä (säärivit haetaan omana eränään). Matkaoppaan
+   * jakso 5 nojaa siis en-Wikipedian Vancouver-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin ja Karachin
+   * malli. Mittauspiste olisi keskusta 49,26 / -123,11.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta eikä kuvaile kuvaa visuaalisesti, ja se on
+   * yhden virkkeen mittainen.
+   */
+  vancouver: [
+    {
+      id: 'kaupunki',
+      nimi: 'Vancouver',
+      johdanto: 'Burrard Inlet -lahden ja Fraser-joen väliin puristuvassa '
+        + 'kaupungissa on Kanadan suurin satama ja sen takana vuoret. '
+        + 'Isoisän matkavuonna 1873 täällä oli vasta saha ja sen ympärille '
+        + 'kasvanut kylä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Vancouver - Gastown 04.jpg',
+          selite: 'Gastownin korttelit noudattavat yhä siirtomaahallinnon '
+            + 'vuonna 1870 mittaamaa Granvillen tonttijakoa, ja alueesta '
+            + 'tuli kansallinen historiallinen kohde 2009.',
+          lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Granville Island Public Market 2015.jpg',
+          selite: 'Granville Islandin ruokatori avattiin 1979 vanhaan '
+            + 'konepajarakennukseen, jonka liittovaltio ja provinssi '
+            + 'muuttivat toriksi.',
+          lahde: 'Jay Esplana, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Canada Place & Cruise Ships - Vancouver (2651698648).jpg',
+          selite: 'Canada Place rakennettiin Kanadan paviljongiksi vuoden '
+            + '1986 maailmannäyttelyyn, ja siinä toimii nykyään myös '
+            + 'alueen tärkein risteilyterminaali.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kaupungin eri puolilta —
+       * Coal Harbour Stanley Parkin puolelta, False Creek etelästä
+       * Fairview'n rinteeltä ja koko niemi ilmasta vuorineen. Yksikään
+       * ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Vista de Vancouver desde el parque Stanley, Canadá, 2017-08-14, DD 02-03 PAN.jpg',
+          selite: 'Coal Harbourin venesatama ja sen takana kohoava '
+            + 'keskusta ovat Burrard Inletin etelärannalla, samalla '
+            + 'rannalla jolla Hastings Millin saha aloitti 1867.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'False Creek, Vancouver (2025).jpg',
+          selite: 'False Creek oli 1800-luvun lopulla yli kaksi kertaa '
+            + 'nykyistä laajempi, ja sen pohjoisrannan teollisuusalueet '
+            + 'muutettiin asuinkortteleiksi 1980-luvulta alkaen.',
+          lahde: 'Northwest, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Aerial view of Vancouver and the Coast Mountains.JPG',
+          selite: 'Kaupunki on rakennettu Burrard Peninsulalle lahden ja '
+            + 'joen väliin, ja sen pinta-ala on 115 neliökilometriä.',
+          lahde: 'CanucksWhitecaps, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Saha, krouvi ja kylä nimeltä Gastown',
+          tiedosto: 'HastingsMillDetailofVancouverPanorama.jpg',
+          teksti: 'Kapteeni Edward Stamp perusti 1865 Englannissa yhtiön '
+            + 'sadantuhannen dollarin pääomalla ja hankki '
+            + 'siirtomaahallinnolta oikeuden 16 000 eekkerin metsiin. '
+            + 'Ensimmäinen sahapaikka Brockton Pointissa osoittautui '
+            + 'kelvottomaksi virtausten ja karikon takia, joten saha '
+            + 'siirrettiin 1867 Burrard Inletin etelärannalle ja alkoi '
+            + 'saman vuoden kesäkuussa sahata vientilankkua. Stampin '
+            + 'sahasta tuli Hastings Mill, se ydin, jonka ympärille '
+            + 'kaupunki kasvoi. Samana vuonna jorkshireläinen '
+            + 'merikapteeni John Deighton avasi sahan liepeille '
+            + 'ensimmäisen krouvin, ja hänen puheliaisuutensa antoi '
+            + 'kylälle nimen Gastown.',
+          selite: 'Vuoden 1898 lintuperspektiivikuvassa Hastings Millin '
+            + 'lankkukasat ja purjelaivat ovat rannassa, ja saha pysyi '
+            + 'toiminnassa vuoteen 1928.',
+          lahde: 'Vancouver World Printing and Publishing Company Limited McLean, J.C. Toronto Lithographing Co. Ltd., Wikimedia Commons (PD)',
+          wiki: 'Hastings Mill',
+        },
+        {
+          otsikko: 'Kaupunki, joka paloi kymmenen viikon ikäisenä',
+          tiedosto: 'Great Vancouver Fire.jpg',
+          teksti: 'Kevät 1886 oli ollut kolme viikkoa poikkeuksellisen '
+            + 'kuuma, kun 13. kesäkuuta kaksi maanraivaustulta karkasi '
+            + 'käsistä kaupungin länsipuolella: toinen raivasi tilaa '
+            + 'rautatien veturitallille, toinen kaupungin laajennukselle. '
+            + 'Tuuli yltyi myrskyksi, ja tuli tuhosi 600–1000 rakennusta '
+            + 'ja tappoi ainakin 21 ihmistä. Useimmat pakenivat rantaan, '
+            + 'ja ainakin kaksisataa pelastui Robert Kerr -laivaan; '
+            + 'squamishit meloivat kanooteillaan hakemaan veteen jääneitä. '
+            + 'Vapaaehtoinen palokunta oli perustettu kuusitoista päivää '
+            + 'aiemmin, ja viikko palon jälkeen kaupunki osti ensimmäisen '
+            + 'paloruiskunsa. Puolessa vuodessa viisisataa taloa oli '
+            + 'pystyssä, moni tiilestä.',
+          selite: 'Kartta seuraa tulen kulkua lännen raivaustulilta '
+            + 'kaupunkiin ja merkitsee myös pakolaisten leirin ja '
+            + 'rannassa odottaneen Robert Kerrin.',
+          lahde: 'Major Mathews/W. J. Moore, Wikimedia Commons (PD)',
+          wiki: 'Great Vancouver Fire',
+        },
+        {
+          otsikko: 'Nimi tuli rautatien mukana',
+          tiedosto: 'CPR Steam engine No 374 2011.jpg',
+          teksti: 'Rautatieyhtiö CPR valitsi 1884 Granvillen kylän radan '
+            + 'läntiseksi päätepisteeksi Port Moodyn, New Westminsterin ja '
+            + 'Victorian pettymykseksi. Kylä liitettiin kaupungiksi '
+            + '6. huhtikuuta 1886, ja nimen antoi yhtiön johtaja William '
+            + 'Van Horne tutkimusmatkailija George Vancouverin mukaan, joka '
+            + 'oli kartoittanut lahden 1792. Ensimmäinen mannertenvälinen '
+            + 'juna saapui Port Moodyhin 4. heinäkuuta 1886, ja veturi 374 '
+            + 'veti ensimmäisen matkustajajunan Vancouveriin vasta '
+            + '23. toukokuuta 1887. Sama veturi oli liikenteessä vuoteen '
+            + '1945 ja seisoo nyt Yaletownin paviljongissa.',
+          selite: 'Veturi 374 rakennettiin toukokuussa 1886 CPR:n Montrealin '
+            + 'konepajoilla, ja se kunnostettiin vuoden 1986 '
+            + 'maailmannäyttelyä varten.',
+          lahde: 'Nils Öberg, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Canadian Pacific 374',
+        },
+        {
+          otsikko: 'Tukeista kontteihin',
+          tiedosto: 'Burrard Inlet South Shore container cranes. INFO IN PANORAMIO DESCRIPTION - panoramio.jpg',
+          teksti: 'Hastings Millin lankut lähtivät maailmalle purjelaivoilla, '
+            + 'ja samasta lahdesta kulkee nykyään noin 141 miljoonaa tonnia '
+            + 'rahtia ja 3,5 miljoonaa konttia vuodessa. Vancouverin satama '
+            + 'on Kanadan suurin ja tonnimäärällä mitattuna Pohjois-Amerikan '
+            + 'neljänneksi suurin, ja se käy kauppaa yli 170 talouden '
+            + 'kanssa. Satamaa hallinnoi Vancouver Fraser Port Authority, '
+            + 'joka syntyi 2008 kolmen erillisen satamaviranomaisen '
+            + 'yhdistyessä; laitureita on 57 ja suuria terminaaleja 27, ja '
+            + 'satama-alue ulottuu 350 kilometrin matkalle rannikkoa. '
+            + 'Liikenne suuntautuu erityisesti Tyynenmeren yli Aasiaan.',
+          selite: 'Konttiterminaali on Burrard Inletin etelärannalla '
+            + 'keskustan kupeessa, ja sen vieressä kulkevat mantereen '
+            + 'halki tulevat rautatiet.',
+          lahde: 'John Newcomb, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Port of Vancouver',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Coast in Stanley Park.jpg',
+          selite: 'Stanley Parkin rantamuurin rakentaminen alkoi 1917, ja '
+            + 'kivimies James Cunningham teki työtä 32 vuotta ennen kuin '
+            + 'jäi eläkkeelle 1963.',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Vancouver on British Columbian suurin kaupunki ja Kanadan '
+          + 'portti Tyynellemerelle. Matkailijan Vancouver mahtuu kapealle '
+          + 'niemelle: pohjoisessa Gastownin tiilikorttelit ja Canada '
+          + 'Placen purjekatto, lännessä Stanley Parkin metsä ja '
+          + 'rantamuuri, etelässä False Creek ja sen keskellä Granville '
+          + 'Islandin tori. Rantamuuri jatkuu Canada Placelta Stanley '
+          + 'Parkin ympäri ja edelleen Kitsilanoon, ja kaupungin rannoilla '
+          + 'on kaikkiaan kahdeksantoista kilometriä hiekkaa. Keskustasta '
+          + 'on parikymmentä minuuttia North Shore Mountainsin '
+          + 'hiihtokeskuksiin, joten samana päivänä ehtii sekä vuorelle '
+          + 'että merenrantaan.',
+        artikkeli: {
+          nimi: 'Matkailijan Vancouver',
+          taitto: 'opas',
+          teksti: 'Kapea niemi vuorten ja meren välissä, kaupunki joka on '
+            + 'nuorempi kuin moni sen puista.',
+          nosto: 'Vuonna 1881 paikalla asui tuhat ihmistä; vuonna 1911 '
+            + 'Vancouverissa oli satatuhatta asukasta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentäen saavutaan Vancouver International '
+                + 'Airportille, joka on Sea Islandilla naapurikaupungissa '
+                + 'Richmondissa ja Kanadan toiseksi vilkkain lentoasema. '
+                + 'Kentältä keskustaan pääsee Canada Line -radalla, joka '
+                + 'avattiin 17. elokuuta 2009: suunnitteluvaatimus oli, '
+                + 'että matka Waterfront-asemalta kentälle kestää '
+                + 'enintään 25 minuuttia. Koko SkyTrain-järjestelmä on '
+                + 'täysin automaattinen eikä junissa ole kuljettajaa; '
+                + 'ensimmäinen linja avattiin 11. joulukuuta 1985 ja '
+                + 'nimi SkyTrain syntyi vuoden 1986 maailmannäyttelyn '
+                + 'aikaan, koska rata kulki keskustan ulkopuolella '
+                + 'kohoradalla. Lahden yli Pohjois-Vancouveriin menee '
+                + 'SeaBus-lautta, ja Pacific Central Stationilta lähtevät '
+                + 'junat itään sekä etelään Seattleen ja Portlandiin. '
+                + 'Kaupungilla on Pohjois-Amerikan toiseksi suurin '
+                + 'johdinautokalusto San Franciscon jälkeen.',
+              kuva: {
+                tiedosto: 'Canada Line - Vancouver (tracks\' view).jpg',
+                selite: 'Canada Linen 19,2 kilometrin rata yhdistää '
+                  + 'keskustan, Richmondin ja lentoaseman, ja koska junat '
+                  + 'ovat kuljettajattomia, matkustaja voi istua '
+                  + 'etuikkunan ääressä.',
+                lahde: 'Kyah117, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Burrard Peninsulalla: pohjoisessa '
+                + 'Burrard Inlet, etelässä Fraser-joki ja lännessä '
+                + 'Georgian salmi, jonka Vancouver Island suojaa '
+                + 'avomereltä. Pohjoisrannalla kohoavat North Shore '
+                + 'Mountains, pieni osaryhmä Pacific Rangesia eli '
+                + 'Rannikkovuorten eteläisintä ryhmää; kirkkaalla säällä '
+                + 'kaakossa näkyy Washingtonin osavaltion lumihuippuinen '
+                + 'tulivuori Mount Baker ja luoteessa Bowen Island. '
+                + 'Kaupungin pinta-ala on 115 neliökilometriä ja siitä '
+                + 'runsaat neljäsataa hehtaaria on Stanley Parkia, yhtä '
+                + 'Pohjois-Amerikan suurimmista kaupunkipuistoista. '
+                + 'Keskustasta on 20–30 minuutin ajomatka kolmeen '
+                + 'hiihtokeskukseen: Cypress Mountain, Grouse Mountain ja '
+                + 'Mount Seymour.',
+              kuva: {
+                tiedosto: 'North Shore over exposed Spanish Banks.JPG',
+                selite: 'Spanish Banksin rannalla laskuvesi paljastaa '
+                  + 'laajat liejutasangot, ja lahden takana nousevat '
+                  + 'North Shore Mountains.',
+                lahde: 'Amateria1121, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: höyrykello, joka ei ole vanha',
+              teksti: 'Gastownin tunnetuin maamerkki on Water Streetin ja '
+                + 'Cambie Streetin kulman höyrykello, ja se näyttää '
+                + '1800-luvulta. Kello on kuitenkin vuodelta 1977: '
+                + 'kanadalainen kellonrakentaja Raymond Saunders teki sen '
+                + 'peittämään jalkakäytävän höyryritilän, joka kuuluu '
+                + 'keskustan kaukolämpöverkkoon. Noin 58 000 dollarin '
+                + 'kustannukset kerättiin alueen kauppiailta ja '
+                + 'talonomistajilta. Höyry pyörittää pientä höyrykonetta, '
+                + 'joka nostaa ketjulla teräskuulia ylös; laskeutuvien '
+                + 'kuulien paino käyttää tavallista heilurikoneistoa. '
+                + 'Neljännestunnit soivat pillit eivätkä kellot, ja '
+                + 'tasatunnein kellon huipusta pöllähtää höyrypilvi. '
+                + 'Ensimmäinen koneisto oli niin epäonnistunut, että kello '
+                + 'kävi välillä sähköllä.',
+              kuva: {
+                tiedosto: 'Gastown Steam (245661799).jpeg',
+                selite: 'Höyrykellon pillit soittavat Westminsterin '
+                  + 'neljännessävelmän, ja höyry tulee keskustan '
+                  + 'kaukolämpöverkosta Georgia Viaductin viereiseltä '
+                  + 'laitokselta.',
+                lahde: 'Ian Spence, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: maailmannäyttely 1986',
+              teksti: 'Vuoden 1986 maailmannäyttelyn teemana oli '
+                + 'liikenne ja viestintä, ja se toi kaupunkiin yli '
+                + 'kaksikymmentä miljoonaa kävijää ja Kanadan talouteen '
+                + '3,7 miljardia dollaria. Näyttely jätti jälkeensä kaksi '
+                + 'asiaa, joita matkailija käyttää yhä: SkyTrainin '
+                + 'ensimmäisen linjan ja Canada Placen. Canada Place '
+                + 'rakennettiin CPR:n vuonna 1927 valmistuneen laiturin '
+                + 'paikalle Kanadan paviljongiksi, ja se otti vastaan yli '
+                + 'viisi miljoonaa vierailijaa ennen näyttelyn '
+                + 'päättymistä 13. lokakuuta 1986. Purjekattoisessa '
+                + 'rakennuksessa on nykyään osa kongressikeskusta, hotelli '
+                + 'ja risteilyterminaali, josta lähdetään Alaskaan. '
+                + 'Vuoden 2010 talviolympialaisissa talo toimi kisojen '
+                + 'lehdistökeskuksena.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Vancouverista puuttuu, joten nämä '
+                + 'luvut ovat en-Wikipedian Vancouver-artikkelin '
+                + 'Climate-osiosta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Ilmasto on merellinen ja Kanadan '
+                + 'leudoimpia, ja se rajautuu lämpimän kesän '
+                + 'välimerenilmastoon. Heinä- ja elokuussa päivän ylin '
+                + 'lämpötila on keskimäärin 22 astetta, kolmeakymmentä '
+                + 'ylitetään harvoin, ja sadetta tulee vain joka '
+                + 'viidentenä päivänä; marraskuusta maaliskuuhun sataa '
+                + 'lähes joka päivä. Vuosisade on keskustassa noin 1588 '
+                + 'millimetriä, lentoasemalla 1189 ja Pohjois-'
+                + 'Vancouverissa 2044 — vuoret jakavat kosteuden eri '
+                + 'tavalla kaupungin eri puolille. Lunta sataa '
+                + 'keskimäärin yhdeksänä päivänä vuodessa. Kuumin '
+                + 'kaupungissa mitattu lukema on 35,0 astetta ja kylmin '
+                + '−17,8 astetta.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Rannalla asuttiin tuhansia vuosia ennen sahaa, ja kaupunki '
+        + 'itse on nuorempi kuin moni sen puista. Kylästä tuli kaupunki '
+        + '1886, ja sata vuotta myöhemmin se isännöi maailmannäyttelyä.',
+      tehtava: {
+        kysymys: 'Millä nimellä Vancouverin paikalla ollut kylä tunnettiin ennen kaupungin perustamista?',
+        vaihtoehdot: [
+          'Granville',
+          'New Westminster',
+          'Port Moody',
+          'Moodyville',
+        ],
+        oikea: 0,
+        fakta: 'Siirtomaahallinto mittasi 1870 sahakylän ympärille '
+          + 'kaupunkitontit ja nimesi paikan Granvilleksi silloisen '
+          + 'siirtomaaministerin, lordi Granvillen, mukaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kahdeksantuhatta vuotta ennen sahaa',
+          tiedosto: 'DIE INDIANERSTÄMME von VANCOUVER Iᴰ̣ und an der KÜSTE von BRITISCH-COLUMBIA.jpg',
+          teksti: 'Arkeologisten löytöjen mukaan seudulla on asuttu '
+            + '8 000–10 000 vuotta. Coast Salish -ryhmään kuuluvilla '
+            + 'squamisheilla, musqueameilla ja tsleil-waututheilla oli '
+            + 'kyliä eri puolilla nykyistä kaupunkia: Stanley Parkissa, '
+            + 'False Creekillä, Kitsilanossa, Point Greyssä ja Fraser-joen '
+            + 'suulla. Espanjalainen José María Narváez tutki Point Greyn '
+            + 'rannikkoa ja osaa Burrard Inletistä 1791, ja seuraavana '
+            + 'vuonna britti George Vancouver kartoitti sisälahden ja antoi '
+            + 'paikoille englanninkielisiä nimiä. Simon Fraserin retkikunta '
+            + 'oli 1808 ensimmäinen tunnettu eurooppalaisjoukko nykyisen '
+            + 'kaupungin maaperällä.',
+          selite: 'Franz Boas julkaisi 1887 kartan rannikon kansojen '
+            + 'alueista, ja Vancouverin seutu kuuluu siinä salish-kansojen '
+            + 'alueeseen.',
+          lahde: 'Boas, Dr. Franz, Wikimedia Commons (PD)',
+          wiki: 'Vancouver',
+        },
+        {
+          otsikko: 'Sademetsä, saha ja kylä nimeltä Granville',
+          tiedosto: 'Giant Old Tree, Stanley Park (7974705158).jpg',
+          teksti: 'Seudun alkuperäinen kasvillisuus oli lauhkeaa '
+            + 'sademetsää: douglaskuusta, jättituijaa ja lännenhemlokkia, '
+            + 'ja lajien suurimmat yksilöt koko British Columbian '
+            + 'rannikolla kasvoivat juuri täällä. Vanhan metsän jykevimmät '
+            + 'puut olivat Gastownin kohdalla, ja Stanley Park hakattiin '
+            + '1860-luvulta 1880-luvulle. Fraserin kultaryntäys toi 1858 '
+            + 'yli 25 000 miestä lähelle New Westminsteriä, mutta tuleva '
+            + 'Vancouver jäi reitin sivuun. Ensimmäinen eurooppalainen '
+            + 'asutus syntyi 1862 McCleeryn tilalle Fraser-joen varrelle, '
+            + 'ja 1870 siirtomaahallinto mittasi Gastownin ympärille '
+            + 'tontit ja nimesi paikan Granvilleksi.',
+          selite: 'Stanley Parkin ontto setri on 700–800 vuotta vanha '
+            + 'kanto, joka pelastettiin tienlevennykseltä 1910 ja '
+            + 'tuettiin teräksellä 2009 yksityisin lahjoituksin.',
+          lahde: 'Reg Natarajan from Vancouver, Bogotá, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Stanley Park',
+        },
+        {
+          otsikko: 'Tuhannesta sataantuhanteen',
+          tiedosto: 'Dominion and Woodwards Buildings Vancouver.JPG',
+          teksti: 'Vancouverin ensimmäiset kunnallisvaalit pidettiin '
+            + '3. toukokuuta 1886, ja pormestariksi valittiin Malcolm '
+            + 'MacLean. Väkiluku kasvoi tuhannesta asukkaasta (1881) yli '
+            + '20 000:een vuosisadan vaihteessa ja 100 000:een vuoteen '
+            + '1911 mennessä. Rautatieyhtiö CPR oli kaupungin suurin '
+            + 'maanomistaja ja rakennuttaja, ja nousukauden konttoritalot '
+            + 'olivat vuorollaan Britannian imperiumin korkeimpia '
+            + 'liikerakennuksia: Carter-Cotton, Dominion Building 1907 ja '
+            + 'Sun Tower 1911. Vuoden 1929 alussa Point Grey ja South '
+            + 'Vancouver liitettiin kaupunkiin, ja laajentuneessa '
+            + 'kaupungissa oli 228 193 asukasta; pian tämän jälkeen '
+            + 'Vancouver oli maan kolmanneksi suurin kaupunkiseutu.',
+          selite: 'Dominion Building valmistui 1907 ja oli aikanaan '
+            + 'imperiumin korkein liikerakennus; oikealla kohoaa '
+            + 'Woodward\'sin tavaratalon paikalle rakennettu uudisrakennus.',
+          lahde: 'Xicotencatl, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dominion Building',
+        },
+        {
+          otsikko: 'Postilaivat Tyynenmeren yli',
+          tiedosto: 'RMS Empress of China 1904.jpg',
+          teksti: 'Varhaisen Vancouverin talous nojasi luonnonvaroihin: '
+            + 'ensin puuhun ja sitten satamasta lähtevään vientiin, ja '
+            + '1930-luvulla kauppaliikenne oli kaupungin suurin '
+            + 'elinkeinoala. Käännekohta tuli 1891, kun CPR ja Britannian '
+            + 'hallitus sopivat tuetusta postiliikenteestä Britannian ja '
+            + 'Hongkongin välillä Kanadan kautta. Reittiä varten '
+            + 'rakennettiin kolme laivaa, joista jokainen sai '
+            + 'keisarillisen nimen; ne loivat pohjan CPR:n '
+            + 'Tyynenmeren-laivastolle, joka liikennöi puoli vuosisataa. '
+            + 'Empress of China lähti neitsytmatkalleen Liverpoolista '
+            + '15. heinäkuuta 1891 ja kulki sen jälkeen Vancouverista '
+            + 'Yokohaman, Koben, Nagasakin ja Shanghain kautta '
+            + 'Hongkongiin.',
+          selite: 'Empress of China rakennettiin 1890–1891 Barrow'
+            + '-in-Furnessissa ja upposi 1911 Tokion satamassa '
+            + 'vedenalaiseen riuttaan.',
+          lahde: 'Vancouver Centennial Commission, Wikimedia Commons (CC0)',
+          wiki: 'RMS Empress of China (1890)',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Musqueam, Squamish ja Tsleil-Waututh ovat Vancouverin '
+        + 'alueen alkuperäiskansoja yhä tänään: omat hallinnot, omat maat '
+        + 'ja oma osuutensa kaupungin nykyisyydestä.',
+      tehtava: {
+        kysymys: 'Mitä Musqueam-kansan oma nimi xʷməθkʷəy̓əm tarkoittaa?',
+        vaihtoehdot: [
+          'paikkaa, jossa kasvaa məθkʷəy̓-kasvi',
+          'suuren joen suuta',
+          'kahden lahden välissä olevaa niemeä',
+          'vuorten varjoon jäävää rantaa',
+        ],
+        oikea: 0,
+        fakta: 'Musqueam on englannistus hən̓q̓əmin̓əm̓-kielen sanasta '
+          + 'xʷməθkʷəy̓əm. Squamishin kielessä taas sahan paikkaa '
+          + 'kutsuttiin nimellä K\'emk\'emeláy̓ eli paikaksi, jossa kasvaa '
+          + 'paljon vaahteroita.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nimet, joita kaupunki ei korvannut',
+          tiedosto: 'Draft of Major Matthews map of Vancouver\'s indigenous place names.tif',
+          teksti: 'Squamishin kielessä paikkaa, johon Stampin saha '
+            + 'rakennettiin, kutsuttiin nimellä K\'emk\'emeláy̓, '
+            + '"paikka jossa kasvaa paljon vaahteroita"; nimi on '
+            + 'käytössä Sea to Sky Highwayn squamishinkielisissä '
+            + 'tienviitoissa. Musqueamin puhumassa hən̓q̓əmin̓əm̓-'
+            + 'kielessä ei ole sanaa koko Vancouverille lainkaan, vaan '
+            + 'omat nimet yksittäisille kylille ja maastonkohdille. '
+            + 'Musqueamin oma nimi xʷməθkʷəy̓əm tarkoittaa paikkaa, '
+            + 'jossa kasvaa məθkʷəy̓-kasvi. British Columbian yliopisto '
+            + 'pystytti 2018 Point Greyn kampukselleen 54 '
+            + 'hən̓q̓əmin̓əm̓-kielistä katukylttiä.',
+          selite: 'Kaupunginarkistonhoitaja J. S. Matthews piirsi 1932 '
+            + 'luonnoksen, johon on merkitty punaisella alueen '
+            + 'alkuperäiskansojen paikannimiä Burrard Inletin ja English '
+            + 'Bayn rannoilla.',
+          lahde: 'S. Matthews, City of Vancouver Archivist, Wikimedia Commons (PD)',
+          wiki: 'Musqueam First Nation',
+        },
+        {
+          otsikko: 'Neljätuhatta vuotta Fraserin suulla',
+          tiedosto: 'Musqueam House post MOA.jpg',
+          teksti: 'Musqueam-kansa on asunut Point Greyn seudulla ja '
+            + 'Fraser-joen suulla ainakin 4 000 vuotta. Marpolen '
+            + 'kuoppakeon kohdalla oli c̓əsnaʔəm, kansan suurin kylä '
+            + 'noin 2 500 vuotta sitten; suiston muuttuessa asutus '
+            + 'siirtyi noin 1 500 vuotta sitten nykyisen Musqueam 2 '
+            + '-varauksen paikalle. Kesäkuun 10. päivänä 1976 kansa '
+            + 'antoi julistuksen, joka määritteli sen perinteisen alueen '
+            + 'Howe Soundista Fraser-joen eteläiselle haaralle. Kansaa '
+            + 'johtaa bändineuvosto päällikkönään Wayne Sparrow, ja '
+            + 'Musqueam Capital Corporation hoitaa sen kiinteistöjä '
+            + 'ympäri Vancouverin seutua.',
+          selite: 'Musqueam-taiteilija Susan Point veisti talopaalun '
+            + 'British Columbian yliopiston antropologisen museon taakse; '
+            + 'hän suunnitteli myös kansan lipun.',
+          lahde: 'Leoboudv, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Musqueam First Nation',
+        },
+        {
+          otsikko: 'Sen̓áḵw palasi oikeudessa',
+          tiedosto: 'Vanier-Park.jpg',
+          teksti: 'Squamish-kansan nykyinen hallinto syntyi heinäkuussa '
+            + '1923, kun useita erillisiä yhteisöjä yhdistettiin '
+            + 'jäsentensä äänestyksen jälkeen yhdeksi kansaksi ja niiden '
+            + 'rahastot yhdeksi tiliksi. Vuodesta 1977 kansa ajoi '
+            + 'oikeudessa Sen̓áḵw-alueen eli Kitsilanon varauksen nro 6 '
+            + 'palauttamista: sen pakkomyynti 1913 rikkoi valtion '
+            + 'huolenpitovelvollisuutta. Oikeuden päätökset ja lopulta '
+            + 'sovinto palauttivat kansalle noin 11,7 eekkeriä keskeistä '
+            + 'kantakaupungin maata. Musqueam, Squamish ja Tsleil-Waututh '
+            + 'perustivat 2010-luvun puolivälissä yhteisen MST '
+            + 'Development Corporationin kehittämään omistamiaan '
+            + 'kiinteistöjä.',
+          selite: 'Kitsilanon niemi False Creekin suun eteläpuolella on '
+            + 'sitä Sen̓áḵw-nimistä aluetta, jota koski kansan vuonna '
+            + '1977 alkanut oikeusprosessi.',
+          lahde: 'Xicotencatl, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Squamish Nation',
+        },
+        {
+          otsikko: 'Neljä isäntäkansaa vuoden 2010 kisoissa',
+          tiedosto: 'Squamish Lilwat Carving (8050763160).jpg',
+          teksti: 'Kun Vancouver isännöi 2010 talviolympialaisia, '
+            + 'squamishit, musqueamit, tsleil-waututhit ja lil\'watit '
+            + 'perustivat Four Host First Nations -yhdistyksen ja '
+            + 'valvoivat etujaan kisojen järjestelykomitean rinnalla. '
+            + 'Neljätoista kahdestakymmenestä olympia- ja '
+            + 'paralympialajista kilpailtiin kansojen yhteisillä '
+            + 'alueilla, pääosin Whistlerin ympäristössä. '
+            + 'Tsleil-Waututh-kansan mukaan tämä oli ensimmäinen kerta, '
+            + 'kun olympialiike tunnusti alkuperäiskansat maiden '
+            + 'haltijoina. Squamishit ja lil\'watit olivat avanneet '
+            + 'Whistleriin oman kulttuurikeskuksensa jo heinäkuussa 2008 '
+            + 'vuoden 2001 yhteistyösopimuksen pohjalta.',
+          selite: 'Squamish Lil\'wat Cultural Centressä Whistlerissä on '
+            + 'puuveistoksia, pitkätalo, kuoppatalo ja 80 hengen teatteri.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Squamish Nation',
+        },
+      ],
+    },
+  ],
 };
