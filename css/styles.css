@@ -11491,6 +11491,15 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   background-blend-mode: multiply;
   -webkit-appearance: none;
   appearance: none;
+  /*
+   * iOS:n napautuskorostus pois myös napin LAPSILTA (omistajan
+   * bugiraportti 23.8.2026: syvätyn vaakunan taakse jäi ruskea
+   * laatikko, joka katosi napauttamalla sivusta). body-tason
+   * nollaus ei periydy img-elementtiin, joten iPad maalasi oman
+   * tumman korostuksensa kuvan päälle ja se jäi näkyviin niin
+   * kauan kuin kosketus "osoitti" kuvaa.
+   */
+  -webkit-tap-highlight-color: transparent;
   font: inherit;
   text-align: left;
   color: inherit;
@@ -11605,6 +11614,10 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   background: var(--arkki-paperi, #f5f0e2);
   border-radius: 4px;
 }
+
+/* Sama nollaus napin lapsille — tap-highlight ei periydy. */
+.lippu-kortti .lippu-tunnus *,
+.lippu-kortti .lippu-versiot * { -webkit-tap-highlight-color: transparent; }
 
 .lippu-tunnus-kuva { transition: width 160ms ease; }
 

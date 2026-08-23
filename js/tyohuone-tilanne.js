@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1044 — VAAKUNAN RUSKEA LAATIKKO (omistajan bugiraportti 23.8.2026): iOS:n napautuskorostus maalautui syvatyn vaakunan paalle eika pelin nollaus kattanut napin lapsia — tap-highlight nollattu lippunapille ja sen lapsille. EI toistettavissa kontissa (vain Chromium) — tarkista iPadilla: Tsekin lippusivu, napauta vaakunaa, ruskeaa ei saa jaada',
   'v1043 — TILASTOIHIN GENEROINTISARAKKEET (omistajan tilaus 23.8.2026): Tilastot-tauluun Herot-sarake (montako generoitua herokuvaa avauskarusellissa) ja Juliste-sarake (onko aikakausjuliste taulussa). Tarkista: kehittajatilan Tilastot-lehti',
   'v1042 — HEROKIERROKSET 7-8 (laskutuskorjauksen jalkeen): Ateena, Soul, Isfahan, Praha, Samarkand ja Luxor saivat 3 heroa kukin (18 kuvaa, kaikki katselmoitu ja R2:ssa) — karuselleissa nyt 3 heroa + 3 valokuvaa Helsinki-mallin mukaan. Herokaupunkeja 27. Julisteiden 28 loppukuvaa generoituvat jonossa. Tarkista: kuuden kaupungin etusivukarusellit',
   'v1041 — SITAATTINOSTOT POIS AIHESIVUILTA (omistajan tilaus 23.8.2026: "nostot ovat turhia koska kappaleet ovat itsessaan niin lyhyita"): aihesivujen poimittu sitaattilohko poistettu kokonaan (nakyvilta JA luennasta — se luettiin ennen kahdesti). Ulkoasuehdotukset odottavat omistajan paatosta chatissa. LISAKSI: tuore-kirkasvihrea ei enaa ohita herovaatimusta — Kasgar ym. nakyvat valkoisina kunnes herot on generoitu. Tarkista: Istanbul pintaa syvemmalta, maalehden aihesivu',
