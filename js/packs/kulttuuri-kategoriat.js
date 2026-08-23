@@ -7129,6 +7129,31 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 14 (23.8.2026, tools/hero-tyolista-9.mjs). */
+        {
+          ampari: 'herokoe/hero-edinburgh-aamu.png',
+          selite: 'Edinburghin linna seisoo sammuneen tulivuoren '
+            + 'kraatteri- tulpalla, ja sen kalliolla on ollut '
+            + 'linnoitus ainakin 1100-luvulta — yhden tykin laukaus '
+            + 'kajahtaa yhä joka päivä kello 13.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-edinburgh-keskipaiva.png',
+          selite: 'St Gilesin katedraalin kruunutorni on kannatellut '
+            + 'kivistä kruunuaan 1400-luvulta asti, ja kirkko on '
+            + 'Skotlannin reformaation pääkirkko — John Knox saarnasi '
+            + 'täällä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-edinburgh-ilta.png',
+          selite: 'Calton Hillin kansallismonumentti jäi kesken 1829, kun '
+            + 'rahat loppuivat kahdentoista pylvään jälkeen — '
+            + '"Edinburghin häpeäksi" ristitystä raunioista tuli '
+            + 'rakastettu maamerkki.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Edinburgh Auld Toun (138362373).jpeg',
           selite: 'Vanhankaupungin harjanne on jäätikön kaivama loiva häntä '
@@ -22098,6 +22123,29 @@ export const KULTTUURI_KATEGORIAT = {
        * suunta ei tarvitse karusellissa kahta kuvaa.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 14 (23.8.2026, tools/hero-tyolista-9.mjs). */
+        {
+          ampari: 'herokoe/hero-firenze-aamu.png',
+          selite: 'Brunelleschin kupoli valmistui 1436 ja on yhä maailman '
+            + 'suurin muurattu kupoli — se nostettiin ilman '
+            + 'tukitelineitä kalanruotolimityksen ja kaksoiskuoren '
+            + 'varassa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-firenze-keskipaiva.png',
+          selite: 'Ponte Vecchio valmistui 1345, ja sen kultaseppien '
+            + 'myymälät ovat riippuneet sillan kyljissä 1500-luvulta '
+            + 'asti — yläpuolella kulkee Vasarin salakäytävä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-firenze-ilta.png',
+          selite: 'Palazzo Vecchio nousi 1299 alkaen kaupunkivaltion '
+            + 'linnoitetuksi raatihuoneeksi, ja sen 94-metrinen torni '
+            + 'hallitsee yhä Firenzen siluettia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'flickr-27613279050.jpg',
           selite: 'Ponte Santa Trinita on maailman vanhin ellipsikaarinen '
@@ -23172,6 +23220,29 @@ export const KULTTUURI_KATEGORIAT = {
        * FAL-lisenssillä, joka ei ole reseptin sallitussa listassa.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 14 (23.8.2026, tools/hero-tyolista-9.mjs). */
+        {
+          ampari: 'herokoe/hero-doha-aamu.png',
+          selite: 'I. M. Pei suunnitteli Dohan islamilaisen taiteen museon '
+            + '91-vuotiaana ja vaati sille oman tekosaaren — '
+            + 'kuutioista pinottu rakennus avattiin 2008.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-doha-keskipaiva.png',
+          selite: 'Souq Waqif kasvoi beduiinien kauppapaikasta vanhan '
+            + 'joenuoman varteen — 2000-luvun restaurointi palautti '
+            + 'savirapatut julkisivut ja teki basaarista kaupungin '
+            + 'olohuoneen.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-doha-ilta.png',
+          selite: 'West Bayn tornirykelmä nousi parissakymmenessä vuodessa '
+            + 'tyhjälle rannalle — dhow-veneet risteilevät yhä '
+            + 'lahdella, jonka poukamasta Doha sai nimensäkin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Highrises in The Pearl Qatar.jpg',
           selite: 'Helmi-saaren ensimmäinen osa avattiin vuonna 2004 West '
@@ -36741,6 +36812,29 @@ export const KULTTUURI_KATEGORIAT = {
        * en-Wikipedian ilmasto-osiosta (lumensyvyys enintään 5 cm).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 14 (23.8.2026, tools/hero-tyolista-9.mjs). */
+        {
+          ampari: 'herokoe/hero-vladivostok-aamu.png',
+          selite: 'Russki-silta valmistui 2012, ja sen 1 104 metrin '
+            + 'pääjänne on vinoköysisiltojen maailmanennätys — pylonit '
+            + 'nousevat 324 metriin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-vladivostok-keskipaiva.png',
+          selite: 'Vladivostokin asema on Trans-Siperian radan itäinen '
+            + 'pääteasema: laiturilla seisova kilometripylväs näyttää '
+            + 'lukemaa 9 288 — matkaa Moskovaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-vladivostok-ilta.png',
+          selite: 'Kultaisen sarven lahti sai nimensä Istanbulin esikuvan '
+            + 'mukaan, ja sen yli jännittyy 2012 valmistunut '
+            + 'Zolotoi-silta — Kotkanpesän näköalakukkulalta koko '
+            + 'satama avautuu kerralla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Svetlanskaya Street in Vladivostok (October 2024)-0.jpg',
           selite: 'Svetlanskaja, kaupungin vanhin pääkatu, kulkee '
@@ -45024,6 +45118,30 @@ export const KULTTUURI_KATEGORIAT = {
        * sen vesiväylä ja se ovi, josta kaupunkiin nykyään tullaan.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 14 (23.8.2026, tools/hero-tyolista-9.mjs). */
+        {
+          ampari: 'herokoe/hero-jakarta-aamu.png',
+          selite: 'Kansallismonumentti Monas valmistui 1975: 132-metrisen '
+            + 'obeliskin huipulla palaa kullattu liekki, ja jalustan '
+            + 'maljakko kuvaa riisinsurvontahuhmaria — itsenäisyyden '
+            + 'symboli keskellä Merdeka-aukiota.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-jakarta-keskipaiva.png',
+          selite: 'Istiqlal on Kaakkois-Aasian suurin moskeija, ja se '
+            + 'seisoo tarkoituksella katedraalia vastapäätä — vuonna '
+            + '2021 niiden esipihat yhdistettiin "ystävyyden '
+            + 'tunnelilla".',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-jakarta-ilta.png',
+          selite: 'Sunda Kelapan satamasta Jakarta sai alkunsa: puisia '
+            + 'pinisi-kuunareita lastataan sen laiturissa yhä '
+            + 'käsivoimin, kuten vuosisatojen ajan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Fatahillah Square 3.jpg',
           selite: 'Fatahillah-aukion alkuperäinen nimi oli Nieuwe Markt, ja '
@@ -49499,6 +49617,30 @@ export const KULTTUURI_KATEGORIAT = {
        * 1900-luvun täyttömaa).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 14 (23.8.2026, tools/hero-tyolista-9.mjs). */
+        {
+          ampari: 'herokoe/hero-mumbai-aamu.png',
+          selite: 'Gateway of India valmistui 1924 basaltista kuningas '
+            + 'Yrjö V:n vierailun muistoksi — sen kaaren kautta myös '
+            + 'viimeiset brittijoukot marssivat laivoihin 1948.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-mumbai-keskipaiva.png',
+          selite: 'Chhatrapati Shivaji Terminus valmistui 1888 '
+            + 'viktoriaanisen gotiikan ja intialaisen '
+            + 'kiviornamentiikan liittona — Unescon kohteen '
+            + 'laitureilta lähtee yhä yli tuhat junaa päivässä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-mumbai-ilta.png',
+          selite: 'Marine Driven kaareva rantabulevardi valaistuu illalla '
+            + 'helminauhaksi, jota kaupunki kutsuu kuningattaren '
+            + 'kaulakoruksi — sen varrella on maailman laajimpia art '
+            + 'deco -kokonaisuuksia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Main mandapa and pillars in Cave 1 of Elephanta Caves.jpg',
           selite: 'Elephantan temppelit on hakattu yhtenäiseen '
