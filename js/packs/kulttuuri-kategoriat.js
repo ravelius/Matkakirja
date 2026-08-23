@@ -7931,6 +7931,28 @@ export const KULTTUURI_KATEGORIAT = {
        * katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
+        {
+          ampari: 'herokoe/hero-lissabon-aamu.png',
+          selite: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta: '
+            + 'nelikerroksinen torni nousee 30 metriin, ja sen bastionin '
+            + 'ampuma-aukoista mahtui tulittamaan seitsemäntoista tykkiä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-lissabon-keskipaiva.png',
+          selite: 'Jerónimosin luostarin rakentaminen alkoi 1501 ja kesti '
+            + 'sata vuotta — kirkon holvi jännittyy yhtenä kaarena 19 metrin '
+            + 'yli, ja sisällä lepäävät Vasco da Gama ja runoilija Camões.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-lissabon-ilta.png',
+          selite: 'Kauppatori mittaa 175 metriä joka suuntaan ja avautuu '
+            + 'U-kirjaimena Tejolle — sen paikalla seisoi kuninkaanlinna, '
+            + 'jonka vuoden 1755 maanjäristys ja tulipalo pyyhkivät pois.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Castelo de São Jorge and 25 de Abril Bridge Over Lisbon Rooftops (54739478432).jpg',
           selite: 'Alakaupungin talojen seiniin, lattioihin ja kattoihin '
@@ -10077,6 +10099,28 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
+        {
+          ampari: 'herokoe/hero-krakova-aamu.png',
+          selite: 'Wawelin kukkula on jurakautista kalkkikiveä, ja sen päällä '
+            + 'seisova katedraali vihittiin 1364 — siellä kruunattiin Puolan '
+            + 'kuninkaat vuoteen 1764 asti.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-krakova-keskipaiva.png',
+          selite: 'Mariacki-kirkon tornit ovat eriparia: korkeampi nousee 80 '
+            + 'metriin vartiotorniksi, ja sen huipulta soitetaan joka tunti '
+            + 'hejnał, joka katkeaa aina kesken sävelen.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-krakova-ilta.png',
+          selite: 'Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen '
+            + 'torin keskellä; renessanssiasunsa se sai 1555 palon jälkeen, '
+            + 'ja kiviset irvinaamat reunustavat sen räystäslistaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Main Market Square, view from S, Old Town, Kraków, Poland.jpg',
           selite: 'Rynek Główny on peräisin 1200-luvulta, ja sitä sanotaan '
@@ -28264,6 +28308,28 @@ export const KULTTUURI_KATEGORIAT = {
        * katsottu silmin 18.8.2026.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
+        {
+          ampari: 'herokoe/hero-teheran-aamu.png',
+          selite: 'Azadi-torni valmistui 1971 Hossein Amanatin suunnitelmien '
+            + 'mukaan: 45-metriseen monumenttiin ladottiin kahdeksantuhatta '
+            + 'lohkaretta isfahanilaista valkoista marmoria.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-teheran-keskipaiva.png',
+          selite: 'Shams ol-Emareh eli Auringon rakennus nousi Golestanin '
+            + 'palatsin laitaan 1865–1867 ja oli 35 metrillään Teheranin '
+            + 'korkein rakennus — sen katolta näki koko kaupungin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-teheran-ilta.png',
+          selite: 'Milad-torni valmistui 2007 ja kohoaa 435 metriin antennin '
+            + 'kärkeen: kahdeksankulmaiselta jalustalta nouseva betonivarsi '
+            + 'kannattaa 315 metrissä kaksitoistakerroksista päätä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'North of tehran.jpg',
           selite: 'Teheran on rakennettu Elbursin etelärinteelle noin '
@@ -41882,6 +41948,22 @@ export const KULTTUURI_KATEGORIAT = {
        * jolle kaikki rakennettiin).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
+        {
+          ampari: 'herokoe/hero-astana-aamu.png',
+          selite: 'Bayterek valmistui 2002 ja kohoaa 105 metriin: oksamaisten '
+            + 'tukien varassa lepäävä kullattu pallo on halkaisijaltaan 22 '
+            + 'metriä, ja näköalataso on 97 metrissä — muistuttamassa '
+            + 'vuodesta 1997, jolloin pääkaupunki siirtyi arolle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-astana-ilta.png',
+          selite: 'Hazrat Sultanin moskeija avattiin 2012 Yesil-joen '
+            + 'rannalle: sen 51-metrinen pääkupoli on Kazakstanin suurin, ja '
+            + 'neljä 77-metristä minareettia seisoo rakennuksen kulmissa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Another view of Downtown Astana (6245921591).jpg',
           selite: 'Uuden pääkaupungin kaavan ratkaisi kansainvälinen kilpailu, '
@@ -42927,6 +43009,29 @@ export const KULTTUURI_KATEGORIAT = {
        * kaksituhatta vuotta.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
+        {
+          ampari: 'herokoe/hero-yangon-aamu.png',
+          selite: 'Shwedagonin kullattu stupa nousee Singuttara-kukkulalla '
+            + '112 metriin hti-varjostimen kärkeen asti; varjostimessa on '
+            + 'tuhansia timantteja ja rubiineja ja aivan huipulla 76 karaatin '
+            + 'timantti.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-yangon-keskipaiva.png',
+          selite: 'Sule-pagodi jäi Yangonin ruutukaavan keskipisteeksi, kun '
+            + 'brittiläinen insinööri Alexander Fraser vetäisi kadut sen '
+            + 'ympärille 1800-luvun puolivälissä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-yangon-ilta.png',
+          selite: 'Karaweik valmistui 1974 betonista mytologisen '
+            + 'karaweik-linnun muotoon, ja sen esikuvana oli Mandalayn hovin '
+            + 'kuninkaallinen ruuhi Pyigyimon.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Yangon - Shwedagon Pagoda 03.jpg',
           selite: 'Shwedagonin stupa seisoo 51 metriä korkealla '
@@ -50160,6 +50265,29 @@ export const KULTTUURI_KATEGORIAT = {
        * kasvi, joka maksoi jälkimmäisen).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
+        {
+          ampari: 'herokoe/hero-colombo-aamu.png',
+          selite: 'Gangaramayan temppeli valmistui 1800-luvun lopulla, ja sen '
+            + 'rakennuksissa sekoittuvat singalilainen, thaimaalainen, '
+            + 'intialainen ja kiinalainen tyyli — järven päälle rakennetun '
+            + 'Seema Malakan suunnitteli Geoffrey Bawa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-colombo-keskipaiva.png',
+          selite: 'Punavalkoraidallinen Jami Ul-Alfar rakennettiin Pettahiin '
+            + '1908–1909, ja merimiehet tunnistivat siitä koko kaupungin '
+            + 'satamaan tullessaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-colombo-ilta.png',
+          selite: 'Lotus Tower kohoaa Beira-järven rannalla 351,5 metriin ja '
+            + 'on Etelä-Aasian korkein itsekantava rakennelma — se valmistui '
+            + '2019 ja avattiin yleisölle 2022.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Dutch Hospital.jpg',
           selite: 'Hollantilainen sairaala on Fortin vanhin rakennus ja '
