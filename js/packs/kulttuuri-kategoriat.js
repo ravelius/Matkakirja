@@ -11068,6 +11068,32 @@ export const KULTTUURI_KATEGORIAT = {
        * — juuri sitä avauskuvalta pyydetään.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 19 (23.8.2026, tools/hero-tyolista-14.mjs). */
+        {
+          ampari: 'herokoe/hero-tampere-aamu.png',
+          selite: 'Tampereen Näsilinna valmistui 1898 Karl August Wreden '
+            + 'suunnittelemaksi uusbarokkipalatsiksi tehtailijasuvun '
+            + 'jäsenelle Peter von Nottbeckille, joka antoi sille nimen '
+            + 'Milavida, ja vuodesta 2015 talossa on toiminut Milavida-museo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tampere-keskipaiva.png',
+          selite: 'Tampereen pääkirjasto Metso avattiin elokuussa 1986 Reima '
+            + 'ja Raili Pietilän suunnitelmien mukaan, ja ylhäältä katsottuna '
+            + 'metsoa muistuttavan talon julkisivuissa on graniittia, '
+            + 'rapakiveä, kuparia ja lasia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tampere-ilta.png',
+          selite: 'Tampereen Vanha kirkko valmistui puisena ristikirkkona '
+            + '1824 Carlo Bassin suunnitelmien mukaan ja otettiin käyttöön '
+            + '1825, sen viereinen kellotapuli valmistui 1828 Carl Ludvig '
+            + 'Engelin piirustusten mukaan, ja kirkko on keskustan vanhin '
+            + 'säilynyt rakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'flickr-52302493222.jpg',
           selite: 'Tampere on rakennettu kapealle kannakselle kahden järven '
@@ -11799,6 +11825,31 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 19 (23.8.2026, tools/hero-tyolista-14.mjs). */
+        {
+          ampari: 'herokoe/hero-tallinna-aamu.png',
+          selite: 'Tallinnan Oleviste eli Pyhän Olavin kirkko mainitaan '
+            + 'asiakirjoissa ensi kerran 1267, sen torni nousee nykyään 123,8 '
+            + 'metriin ja näköalatasanne on 60 metrin korkeudessa, ja torniin '
+            + 'on iskenyt salama noin kymmenen kertaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tallinna-keskipaiva.png',
+          selite: 'Tallinnan Kadriorgin palatsi rakennettiin 1718–1725 Nicola '
+            + 'Michettin suunnitelmien mukaan Pietari Suuren toimeksiannosta '
+            + 'hänen puolisolleen Katariina I:lle, ja siinä toimii nykyään '
+            + 'ulkomaista taidetta esittelevä Kadriorgin taidemuseo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-tallinna-ilta.png',
+          selite: 'Tallinnan teletorni avattiin 11. heinäkuuta 1980 Moskovan '
+            + 'olympialaisten purjehduskisoja varten, se on 314 metriä korkea '
+            + 'ja siten Viron korkein rakennus, ja sen näköalatasanne on 170 '
+            + 'metrin korkeudessa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Tallinn Landmarks 01.jpg',
           selite: 'Tallinna oli vuosisatoja kaksi kaupunkia: mäen päällä '
@@ -55358,6 +55409,31 @@ export const KULTTUURI_KATEGORIAT = {
        * satamaan. Yksikään kolmesta ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 19 (23.8.2026, tools/hero-tyolista-14.mjs). */
+        {
+          ampari: 'herokoe/hero-wellington-aamu.png',
+          selite: 'Wellingtonin Beehive eli parlamentin toimeenpanosiipi '
+            + 'rakennettiin 1969–1981 Basil Spencen vuonna 1964 '
+            + 'luonnosteleman idean pohjalta, se on 72 metriä korkea, ja '
+            + 'siinä on kymmenen kerrosta maan päällä ja neljä maan alla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-wellington-keskipaiva.png',
+          selite: 'Uuden-Seelannin kansallismuseo Te Papa Tongarewa avattiin '
+            + '14. helmikuuta 1998 Jasmaxin suunnittelemaan 36 000 '
+            + 'neliömetrin taloon, joka seisoo satamalta vallatulla maalla '
+            + 'maanjäristysten varalta eristetyillä perustuksilla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-wellington-ilta.png',
+          selite: 'Wellingtonin vanha hallintorakennus valmistui 1876 William '
+            + 'Claytonin suunnitelmien mukaan kauripuusta, joka veistettiin '
+            + 'ja maalattiin kiveä jäljitteleväksi, ja se on eteläisen '
+            + 'pallonpuoliskon suurin puurakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Central Wellington from Mt. Kaukau, New Zealand, 20 January 2006 - Flickr - In Memoriam, PhillipC.jpg',
           selite: 'Liikekeskusta on rakennettu Lambtonin sataman ympärille, '
@@ -56043,6 +56119,33 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 19 (23.8.2026, tools/hero-tyolista-14.mjs). */
+        {
+          ampari: 'herokoe/hero-sevilla-aamu.png',
+          selite: 'Sevillan Giralda rakennettiin almohadien minareetiksi '
+            + '1184–1198, sen päälle kohotettiin 1558–1568 Hernán Ruiz '
+            + 'nuoremman suunnittelema renessanssiajan kellotorni, ja '
+            + 'huipulle nostettiin 1568 nelimetrinen ja 1 500 kilon painoinen '
+            + 'pronssinen tuuliviiri Giraldillo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sevilla-keskipaiva.png',
+          selite: 'Sevillan Plaza de España rakennettiin 1928 Aníbal '
+            + 'Gonzálezin suunnitelmien mukaan seuraavan vuoden '
+            + 'Ibero-amerikkalaista näyttelyä varten, aukio on 45 932 '
+            + 'neliömetriä, ja kanavan ylittävät neljä siltaa kuvaavat '
+            + 'Espanjan vanhoja kuningaskuntia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sevilla-ilta.png',
+          selite: 'Sevillan Metropol Parasol valmistui huhtikuussa 2011 '
+            + 'Jürgen Mayerin suunnitelman mukaan, se on 150 metriä pitkä, 70 '
+            + 'metriä leveä ja 26 metriä korkea, ja siihen käytettiin 3 500 '
+            + 'kuutiometriä suomalaista mäntyviilua.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Seville (18370564119).jpg',
           selite: 'Vanhakaupunki on neljän neliökilometrin laajuinen, ja '
@@ -56620,6 +56723,30 @@ export const KULTTUURI_KATEGORIAT = {
        * Ei yhtään yksityiskohtakuvaa, ei herokuvia.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 19 (23.8.2026, tools/hero-tyolista-14.mjs). */
+        {
+          ampari: 'herokoe/hero-bergen-aamu.png',
+          selite: 'Bergenin Johanneksen kirkko vihittiin 15. maaliskuuta 1894 '
+            + 'Herman Major Backerin suunnitelmien mukaan punatiilestä, sen '
+            + '61 metriä korkea torni on kaupungin korkein, ja kirkkoon '
+            + 'mahtuu 690 ihmistä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-bergen-keskipaiva.png',
+          selite: 'Bergenin Fløibanen-köysirata avattiin 15. tammikuuta 1918, '
+            + 'rata on 848 metriä pitkä ja nousee 302 metriä Fløyen-vuoren '
+            + 'rinnettä, ja sen kaksi vaunua on nimetty punaiseksi '
+            + 'Rødhetteksi ja siniseksi Blåmanniksi.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-bergen-ilta.png',
+          selite: 'Bergenin Grieghallen vihittiin 23. toukokuuta 1978 '
+            + 'tanskalaisen Knud Munkin suunnitelmien mukaan, sen pääsalissa '
+            + 'on 1 500 paikkaa, ja talo on Bergenin filharmonikkojen koti.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Vista de Bergen desde la montaña Fløyen, Noruega, 2019-09-08, DD 48.jpg',
           selite: 'Bergenin keskusta on Vågen-lahden ympärillä, ja '
@@ -57220,6 +57347,33 @@ export const KULTTUURI_KATEGORIAT = {
        * Yksikään kolmesta ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 19 (23.8.2026, tools/hero-tyolista-14.mjs). */
+        {
+          ampari: 'herokoe/hero-montreal-aamu.png',
+          selite: 'Montrealin Pyhän Joosefin oratorion basilikaa rakennettiin '
+            + '1914–1967 veli André Bessetten vuonna 1904 perustaman pienen '
+            + 'kappelin paikalle, sen kupoli on 39 metriä leveä ja nousee 97 '
+            + 'metriä kirkkosalin lattiasta, ja rinteen portaissa on kaksi '
+            + '283 betoniaskelman rivistöä ja niiden välissä 99 puuaskelmaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-montreal-keskipaiva.png',
+          selite: 'Montrealin Biosphère rakennettiin Yhdysvaltain '
+            + 'paviljongiksi vuoden 1967 maailmannäyttelyyn Buckminster '
+            + 'Fullerin suunnitelman mukaan, pallo on 76 metriä leveä ja 62 '
+            + 'metriä korkea, ja 20. toukokuuta 1976 tulipalo poltti sen '
+            + 'läpinäkyvän akryylikuoren mutta jätti teräsrungon pystyyn.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-montreal-ilta.png',
+          selite: 'Montrealin olympiastadionin torni valmistui 1987 Roger '
+            + 'Taillibertin suunnitelmien mukaan, se on 165 metriä korkea ja '
+            + 'kallistuu 45 asteen kulmassa, ja sen huipulta laskeutuvat '
+            + 'vaijerit kannattivat stadionin avattavaa kattoa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Downtown Montreal seen from Mount Royal.jpg',
           selite: 'Mont Royalin rinteen näköalapaikat ovat kaupungin '
