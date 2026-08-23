@@ -1196,6 +1196,47 @@ const KUVAT = [
     + 'through the gaps between them onto the paving, traditional '
     + 'arabesque lanterns hanging from the arches, and shopfronts '
     + 'stacked with bolts of folded cloth on both sides. NO people'],
+  // ── New York (kohdekartta v1065, paketti O9) ─────────────────────
+  ['newyork-luonnonhistoriallinen-museo', 'the American Museum of '
+    + 'Natural History in New York: a long Romanesque Revival granite '
+    + 'facade with a broad arched entrance, round corner turrets with '
+    + 'conical roofs and a wide flight of steps rising to the door'],
+  ['newyork-metropolitan-museo', 'the Metropolitan Museum of Art in '
+    + 'New York: a long Beaux-Arts limestone facade with a central '
+    + 'arched entrance flanked by paired columns, three tall arched '
+    + 'windows above and a broad staircase spilling down to the avenue'],
+  ['newyork-pyhan-patrickin-katedraali', 'St Patrick\'s Cathedral in '
+    + 'New York: a white marble Gothic Revival church with two '
+    + 'identical open-work spires rising side by side, a large rose '
+    + 'window between them and pointed arched doorways below'],
+  ['newyork-times-square', 'a wedge-shaped street junction where two '
+    + 'avenues cross at an angle: tall buildings on both sides covered '
+    + 'from top to bottom in blank rectangular advertising panels and '
+    + 'stepped tiers, strictly no letters, no words, no readable text'],
+  ['newyork-paakirjasto', 'the New York Public Library main building: '
+    + 'a Beaux-Arts marble palace with a six-columned portico, three '
+    + 'tall arched doorways, wide steps and one carved stone lion '
+    + 'lying on a pedestal at each side of the stairs'],
+  ['newyork-empire-state-building', 'the Empire State Building in New '
+    + 'York: a very tall limestone Art Deco skyscraper rising in '
+    + 'stepped setbacks to a narrow tower, crowned by a rounded '
+    + 'observation crown and a slender antenna mast'],
+  ['newyork-flatiron-building', 'the Flatiron Building in New York: a '
+    + 'narrow triangular twenty-storey building shaped like the prow '
+    + 'of a ship, rounded at its sharp corner, with a heavily '
+    + 'ornamented terracotta facade and a projecting cornice on top'],
+  ['newyork-washington-squaren-riemukaari', 'the Washington Square '
+    + 'Arch in New York: a single white marble triumphal arch with one '
+    + 'wide opening, a carved frieze and eagles above the columns, and '
+    + 'a statue standing in a niche on each of the two front piers'],
+  ['newyork-kaupungintalo', 'New York City Hall: a small early '
+    + 'nineteenth-century marble civic building with a colonnaded '
+    + 'front, two low wings, a balustraded roof and a central domed '
+    + 'cupola with a statue on its top'],
+  ['newyork-trinity-church', 'Trinity Church in New York: a dark '
+    + 'brownstone Gothic Revival church with a single tall square '
+    + 'tower carrying a pointed spire and a clock face, pointed arched '
+    + 'windows along its side and an old graveyard beside it'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
@@ -1273,48 +1314,7 @@ async function generoi(tunnus, aihe, pienentaja, merkinta) {
     return false;
   }
   const data = await vastaus.json();
-  const osat = data.candidates?.[0]?.content?.parts ?? [  // ── New York (kohdekartta v1065, paketti O9) ─────────────────────
-  ['newyork-luonnonhistoriallinen-museo', 'the American Museum of '
-    + 'Natural History in New York: a long Romanesque Revival granite '
-    + 'facade with a broad arched entrance, round corner turrets with '
-    + 'conical roofs and a wide flight of steps rising to the door'],
-  ['newyork-metropolitan-museo', 'the Metropolitan Museum of Art in '
-    + 'New York: a long Beaux-Arts limestone facade with a central '
-    + 'arched entrance flanked by paired columns, three tall arched '
-    + 'windows above and a broad staircase spilling down to the avenue'],
-  ['newyork-pyhan-patrickin-katedraali', 'St Patrick\'s Cathedral in '
-    + 'New York: a white marble Gothic Revival church with two '
-    + 'identical open-work spires rising side by side, a large rose '
-    + 'window between them and pointed arched doorways below'],
-  ['newyork-times-square', 'a wedge-shaped street junction where two '
-    + 'avenues cross at an angle: tall buildings on both sides covered '
-    + 'from top to bottom in blank rectangular advertising panels and '
-    + 'stepped tiers, strictly no letters, no words, no readable text'],
-  ['newyork-paakirjasto', 'the New York Public Library main building: '
-    + 'a Beaux-Arts marble palace with a six-columned portico, three '
-    + 'tall arched doorways, wide steps and one carved stone lion '
-    + 'lying on a pedestal at each side of the stairs'],
-  ['newyork-empire-state-building', 'the Empire State Building in New '
-    + 'York: a very tall limestone Art Deco skyscraper rising in '
-    + 'stepped setbacks to a narrow tower, crowned by a rounded '
-    + 'observation crown and a slender antenna mast'],
-  ['newyork-flatiron-building', 'the Flatiron Building in New York: a '
-    + 'narrow triangular twenty-storey building shaped like the prow '
-    + 'of a ship, rounded at its sharp corner, with a heavily '
-    + 'ornamented terracotta facade and a projecting cornice on top'],
-  ['newyork-washington-squaren-riemukaari', 'the Washington Square '
-    + 'Arch in New York: a single white marble triumphal arch with one '
-    + 'wide opening, a carved frieze and eagles above the columns, and '
-    + 'a statue standing in a niche on each of the two front piers'],
-  ['newyork-kaupungintalo', 'New York City Hall: a small early '
-    + 'nineteenth-century marble civic building with a colonnaded '
-    + 'front, two low wings, a balustraded roof and a central domed '
-    + 'cupola with a statue on its top'],
-  ['newyork-trinity-church', 'Trinity Church in New York: a dark '
-    + 'brownstone Gothic Revival church with a single tall square '
-    + 'tower carrying a pointed spire and a clock face, pointed arched '
-    + 'windows along its side and an old graveyard beside it'],
-];
+  const osat = data.candidates?.[0]?.content?.parts ?? [];
   const b64 = osat.find((p) => p.inlineData)?.inlineData?.data;
   if (!b64) {
     console.error(`${tunnus}: vastauksessa ei kuvaa (${JSON.stringify(data).slice(0, 160).replace(new RegExp(avain, 'g'), '***')})`);
