@@ -8969,6 +8969,71 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'San Franciscon kaupungintalo', lat: 37.77919, lon: -122.41914 },
     ],
   },
+  /*
+   * BUENOS AIRES (23.8.2026). Rajaus on Recoletasta San Telmon
+   * rajalle, 3,6 × 4,0 kilometriä — pelin tiiviimpiä ruutuja, koska
+   * kaupungin historiallinen ydin on juuri niin pieni. Piirtorajauksen
+   * perustelut, itäreunan Puerto Madero ja poisjätöt ovat
+   * tools/piirra-kaupunkikartta.mjs:n buenosaires-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Cabildo,
+   * Plaza de Mayo, Casa Rosada, Teatro Colón, San Telmo, Recoletan
+   * hautausmaa, obeliski, Puerto Madero ja Retiron asema ovat kaikki
+   * kaupunkilehden nostojen tai matkaoppaan jaksojen aiheita
+   * (kulttuuri-kategoriat.js), joten yksikään niistä ei ole kartan
+   * kohde, vaikka jokainen mahtuisi ruutuun. Teatro Colón jäi pois
+   * juuri tästä syystä eikä sijainnin takia: se seisoo keskellä
+   * rajausta.
+   *
+   * KOORDINAATIT OVAT EN-WIKIPEDIASTA 23.8.2026 mutta kolmesta eri
+   * paikasta, ja jako on kirjattu tähän, koska sitä ei näe listasta.
+   * MediaWikin coordinates-rajapinnasta tulevat Pilarin basilika
+   * (-34,5873 / -58,3911), Palacio de Aguas Corrientes, Museo Mitre,
+   * katedraali, Palacio Barolo, kongressipalatsi, Manzana de las
+   * Luces ja Santo Domingon luostari. Plaza San Martínin ja Café
+   * Tortonin artikkeleissa {{coord}} on ilman display=title-lippua,
+   * joten rajapinta ei tunne niitä lainkaan ja arvo on muunnettu
+   * artikkelin omista asteista, minuuteista ja sekunneista:
+   * 34°35'42"S 58°22'32"W = -34,595 / -58,375556 ja 34°36'31,2"S
+   * 58°22'41,7"W = -34,608667 / -58,37825. Wikidatan P625 antaa
+   * Tortonille -34,608789 / -58,378306 eli eron on viisitoista
+   * metriä; kartalla on artikkelin oma arvo (Karachin Mohatta
+   * Palacen ratkaisu).
+   *
+   * KAKSI KOHDETTA JÄI POIS LÄHEISYYDEN TAKIA. Galerías Pacífico
+   * (-34,59917 / -58,37472) on 550 metrin päässä Plaza San Martínista
+   * ja mahtuisi ruutuun, mutta sen en-Wikipedian artikkeli on
+   * muutaman rivin mittainen ja sen laajin osio kertoo 1970-luvun
+   * sotilashallinnon ajasta — kohteelle ei olisi saanut kirjoitettua
+   * isoisän ajan juttua. Basílica de San Francisco on 230 metrin
+   * päässä Santo Domingosta, ja numeroympyrät olisivat menneet
+   * päällekkäin (Petran, Mekan ja Karachin oppi).
+   *
+   * KAINALOA EI OLE: kaikki kymmenen mahtuvat pääruutuun.
+   */
+  buenosaires: {
+    polku: 'assets/kartat/buenosaires-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -34.5825, etela: -34.618, lansi: -58.4, ita: -58.361 },
+    esittely: 'Kartan alue ulottuu pohjoisen Recoletasta San Telmon '
+      + 'rajalle. Keskellä kulkee ruutukaava, jonka espanjalaiset '
+      + 'mittasivat jo 1580, ja idässä ovat sataman altaat, jotka '
+      + 'kaivettiin vasta isoisän matkan jälkeen. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
+      { nimi: 'Pilarin basilika', lat: -34.5873, lon: -58.3911 },
+      { nimi: 'Plaza San Martín', lat: -34.595, lon: -58.375556 },
+      { nimi: 'Palacio de Aguas Corrientes', lat: -34.600556, lon: -58.395 },
+      { nimi: 'Museo Mitre', lat: -34.60411, lon: -58.37397 },
+      { nimi: 'Buenos Airesin katedraali', lat: -34.607408, lon: -58.373277 },
+      { nimi: 'Café Tortoni', lat: -34.608667, lon: -58.37825 },
+      { nimi: 'Palacio Barolo', lat: -34.609556, lon: -58.385861 },
+      { nimi: 'Kongressipalatsi', lat: -34.609653, lon: -58.392581 },
+      { nimi: 'Manzana de las Luces', lat: -34.610556, lon: -58.374444 },
+      { nimi: 'Santo Domingon luostari', lat: -34.613056, lon: -58.371667 },
+    ],
+  },
 };
 
 /*

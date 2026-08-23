@@ -32159,4 +32159,484 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * BUENOS AIRES (23.8.2026). Kohteet ovat kohdekartan kymmenen
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.buenosaires), ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 23.8.2026
+   * (artikkelit "Basilica of Our Lady of the Pillar, Buenos Aires",
+   * "Recoleta, Buenos Aires", "Plaza San Martín (Buenos Aires)",
+   * "Palacio de Aguas Corrientes", "Museo Mitre", "Buenos Aires
+   * Metropolitan Cathedral", "Café Tortoni", "Avenida de Mayo",
+   * "Palacio Barolo", "Palace of the Argentine National Congress",
+   * "Illuminated Block" ja "Santo Domingo Convent").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin kaksi perustamista, vuoden 1871 keltakuume,
+   * Sarmiento ja murhayritys, hallituksen talon vaiheet, tango,
+   * ensimmäinen Teatro Colón, San Telmo ja López Jordánin kapina;
+   * matkaoppaan jaksot kertovat Retiron aseman, Puerto Maderon ja
+   * Recoletan hautausmaan. Kartan kymmenestä kohteesta yksikään ei
+   * ole näiden aihe. Lähimmäksi tulee Pilarin basilika, joka seisoo
+   * hautausmaan vieressä — juttu kertoo kirkon ja luostarin, ei
+   * hautausmaata, ja mainitsee sen yhdellä lauseella.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md). Plaza San Martínin juttu
+   * kertoo toteavasti, että aukion maat myytiin 1713 brittiläiselle
+   * South Sea Companylle, joka kävi tontilta orjakauppaa, ja että
+   * kauppa kiellettiin 1813 — sama periaate kuin Rion lehdessä:
+   * orjuus kerrotaan lukuina, lakeina ja paikkoina, ei ruumiillisen
+   * kohtelun kuvauksena. Vuosien 1976–1983 sotilashallinto ei tule
+   * yhdessäkään jutussa vastaan, koska yksikään kohde ei ole sen
+   * tapahtumapaikka; Galerías Pacífico, jonka en-Wikipedian artikkelin
+   * laajin osio kertoo juuri siitä, jätettiin kohdelistalta pois
+   * (perustelu maakartat.js:ssä).
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA on kirjoitettu auki
+   * lukijalle reseptin ohjeen mukaan: Palacio de Aguas Corrientes on
+   * artikkelin mukaan yhtä aikaa toimiva pumppaamo ja 1978 museoksi
+   * muutettu talo, Palacio Barolo menetti korkeimman talon asemansa
+   * joko 1935 tai 1936, ja katedraalin julkisivun piirtäneen jesuiitan
+   * nimi kirjoitetaan sekä Giovanni Bianchi että Blanqui.
+   *
+   * KUVAT: kaikki lisenssit ja tekijänimet Commonsin extmetadatasta
+   * 23.8.2026, haku kategorioittain, ja jokainen kuva katsottiin
+   * silmin 900 px esikatseluna. HYLÄTTY tunnistettavien kasvojen takia
+   * "Corredor del pasaje Barolo.jpg", "Museo Mitre 09.JPG",
+   * "Fachada del Complejo Histórico Cultural Manzana de las Luces.jpg"
+   * ja "Casa del Gral. Bartolomé Mitre - Museo Mitre.jpg"; "Museo
+   * Mitre 08.JPG" hylättiin, koska peilistä näkyy kuvaajan kasvot.
+   * Katedraalin kuva on Christiano Juniorin valokuva vuodelta 1876:
+   * se on kartaston harvoja kuvia, joissa kohde näkyy tarkalleen
+   * sellaisena kuin isoisä sen näki.
+   */
+  buenosaires: {
+    'Pilarin basilika': {
+      aika: '1732',
+      teksti: 'Fransiskaanien recollectiveljet perustivat 1700-luvun '
+          + 'alussa joen yläpuoliselle töyräälle luostarin, kirkon ja '
+          + 'hautausmaan. Heistä koko kaupunginosa sai nimensä '
+          + 'Recoleta, ja kirkon mukaan sitä kutsuttiin toisinaan myös '
+          + 'El Pilariksi. Kirkko vihittiin Pilarin Neitsyt Marialle ja '
+          + 'valmistui 1732; se on Buenos Airesin toiseksi vanhin '
+          + 'kirkko. Paikka oli tuolloin kaupungin ulkopuolella: '
+          + 'töyräs laskeutui Río de la Platan rantaan ja sen vieressä '
+          + 'virtasi Manso-puro, joka kulkee nykyään putkessa '
+          + 'Pueyrredón-kadun alla.'
+          + '\n\n'
+          + 'Rakennustyön aloitti italialainen jesuiitta-arkkitehti '
+          + 'Andrés Blanqui ja sen sai valmiiksi Juan Bautista '
+          + 'Prímoli. Sama mies piirsi myös katedraalin julkisivun '
+          + 'vuosina 1725–1727 — en-Wikipedia kirjoittaa hänen nimensä '
+          + 'kahdella tavalla, italialaisittain Giovanni Bianchi ja '
+          + 'espanjalaisittain Blanqui, eikä valitse niistä '
+          + 'kumpaakaan.'
+          + '\n\n'
+          + 'Fransiskaanit karkotettiin maasta 1821, ja siitä lähtien '
+          + 'kirkko on ollut tavallinen seurakuntakirkko. Isoisän '
+          + 'matkan aikaan 1873 se oli 141 vuotta vanha ja seisoi yhä '
+          + 'kaupungin laidalla, mutta juuri silloin seutu alkoi '
+          + 'muuttua: vuoden 1871 keltakuumeen jälkeen varakkaat '
+          + 'perheet muuttivat etelästä tänne ylängölle, ja Recoletasta '
+          + 'tuli kaupungin hienoin kaupunginosa suurlähetystöineen ja '
+          + 'palatsihotelleineen.',
+      kuvat: [
+        {
+          tiedosto: 'Basílica Nuestra Señora del Pilar (Buenos Aires).jpg',
+          selite: 'Kirkko valmistui 1732, ja se on Buenos Airesin '
+            + 'toiseksi vanhin.',
+          lahde: 'Butterfly austral, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Plaza San Martín': {
+      aika: '1713–1878',
+      teksti: 'Aukion paikalla asuivat aluksi siirtomaa-ajan '
+          + 'espanjalaiset kuvernöörit. Vuonna 1713 maat myytiin '
+          + 'brittiläiselle South Sea Companylle, joka kävi entisestä '
+          + 'kuvernöörin talosta käsin orjakauppaa; lähelle '
+          + 'rakennettiin myöhemmin linnake ja härkätaisteluareena. '
+          + 'Vuonna 1807 tontilla kärsi tappion kenraali John '
+          + 'Whitelocke, joka johti Britannian toista yritystä valloittaa '
+          + 'Buenos Aires, ja alue sai siitä nimen Kunnian kenttä.'
+          + '\n\n'
+          + 'Vuoden 1810 toukokuun vallankumous toi kaupungille oman '
+          + 'hallituksen, joka antoi ratsuväen krenatöörirykmentin José '
+          + 'de San Martínin komentoon ja salli hänen sijoittaa '
+          + 'kasarminsa aukiolle. Vuonna 1813 annettu päätös lakkautti '
+          + 'orjakaupan Río de la Platan yhdistyneissä provinsseissa, ja '
+          + 'orjien majoitustilat suljettiin. San Martín joutui 1824 '
+          + 'poliittisista syistä maanpakoon ja kuoli 1850, mutta hänen '
+          + 'asemansa arvioitiin kuoleman jälkeen uudelleen: '
+          + 'ratsastajapatsas tilattiin 1862 ranskalaiselta kuvanveistäjä '
+          + 'Louis-Joseph Daumasilta, ja aukio nimettiin hänen mukaansa '
+          + '1878 hänen syntymänsä satavuotispäivänä.'
+          + '\n\n'
+          + 'Puistoksi paikka muuttui vasta isoisän matkan jälkeen. '
+          + 'Pormestari Torcuato de Alvear purkautti 1883 linnakkeen, '
+          + 'areenan ja muut rakennukset, ja tilalle istutettiin ombú-, '
+          + 'lehmus- ja silkkiflossipuita; ranskalainen '
+          + 'puutarhasuunnittelija Charles Thays antoi aukiolle 1889 '
+          + 'suunnilleen sen nykyisen muodon. Vuoden 1900 tienoilla '
+          + 'aukion laita oli maan varakkaimpien maanomistajien '
+          + 'suosituinta osoitetta, ja kolme heidän palatsiaan seisoo '
+          + 'siinä yhä.',
+      kuvat: [
+        {
+          tiedosto: 'CABA - Retiro - Monumento al General San Martín.jpg',
+          selite: 'Ratsastajapatsas tilattiin 1862 ranskalaiselta '
+            + 'Louis-Joseph Daumasilta, ja aukio sai San Martínin nimen '
+            + '1878.',
+          lahde: 'Leandro Kibisz, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palacio de Aguas Corrientes': {
+      aika: '1887–1894',
+      teksti: 'Kaupungin ensimmäinen vesilaitos oli brittiomisteinen '
+          + 'Buenos Aires Water Supply and Drainage Company Limited, ja '
+          + 'se avattiin 1869. Sen ensimmäinen johtaja oli insinööri '
+          + 'Guillermo Villanueva, jonka rintakuva seisoo talon '
+          + 'puutarhassa. Yhtiön arkisto perustettiin isoisän '
+          + 'matkavuonna 1873, ja se on yhä ainoa kokoelma, jossa on '
+          + 'täydelliset tiedot kaupungin vesihuollon suunnittelusta — '
+          + 'vanhimmat piirustukset ovat vuodelta 1870.'
+          + '\n\n'
+          + 'Talon suunnittelivat 1877 norjalainen arkkitehti Olaf Boye, '
+          + 'ruotsalainen insinööri Carlos Nyströmer ja brittiläinen '
+          + 'rakennusinsinööri John Bateman. Rakentaminen alkoi 1887 ja '
+          + 'talo vihittiin 1894. Sisällä oli kolmessa kerroksessa '
+          + 'kaksitoista vesisäiliötä, joihin mahtui yhteensä 72 000 '
+          + 'tonnia vettä; rautarunko valmistettiin Belgiassa, ja sitä '
+          + 'kannattaa 180 pilaria. Yksi syy koko hankkeeseen oli, että '
+          + 'kaupunki halusi eroon Lorean aukion rumasta vesitornista, '
+          + 'joka seisoi nykyisen kongressiaukion paikalla.'
+          + '\n\n'
+          + 'Julkisivu on tehty yli 300 000 lasitetusta ja monivärisestä '
+          + 'terrakottalaatasta, jotka tuotiin brittiläiseltä Royal '
+          + 'Doultonin keramiikkatehtaalta. Katto on peltinen '
+          + 'mansardikatto, ja seinissä ovat sen ajan neljäntoista '
+          + 'maakunnan vaakunat. Talo siirtyi kaupungille, kun '
+          + 'brittiyhtiö kansallistettiin 1892. Wikipedia kertoo '
+          + 'jatkosta kaksi eri asiaa: yhtäällä se sanoo talon toimivan '
+          + 'yhä pumppaamona, toisaalla että pumput purettiin 1978 ja '
+          + 'talosta tuli museo. Nykyään siellä on joka tapauksessa '
+          + 'vesiyhtiön toimistoja, historiallinen arkisto ja pieni '
+          + 'vesihuollon museo.',
+      kuvat: [
+        {
+          tiedosto: 'Aguas Corrientes-fachada-HDR.jpg',
+          selite: 'Julkisivun terrakottalaatat tilattiin Britanniasta '
+            + 'Royal Doultonin tehtaalta, ja niitä on yli 300 000.',
+          lahde: 'HalloweenHJB, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Museo Mitre': {
+      aika: '1785–1907',
+      teksti: 'Talo on siirtomaa-ajan espanjalainen asuintalo vuodelta '
+          + '1785. Ensimmäisen kerran se esiintyy Argentiinan '
+          + 'historiassa turvapaikkana: Río de la Platan viimeinen '
+          + 'varakuningas Baltasar Hidalgo de Cisneros pakeni tänne '
+          + 'vuoden 1810 toukokuun vallankumouksen jälkeen.'
+          + '\n\n'
+          + 'Kenraali Bartolomé Mitre vuokrasi talon 1860 ja asui '
+          + 'siinä koko presidenttikautensa 1862–1868. Vuonna 1868 '
+          + 'joukko kaupunkilaisia osti talon ja lahjoitti sen hänelle '
+          + 'kiitokseksi presidenttikaudesta ja työstä maan '
+          + 'yhtenäisyyden puolesta, ja hän asui siinä kuolemaansa '
+          + 'saakka 1906. Näissä huoneissa tehtiin myös La Nación, '
+          + 'yksi maan vanhimmista ja vaikutusvaltaisimmista '
+          + 'sanomalehdistä: se perustettiin 1870 ja ilmestyi talosta '
+          + 'käsin vuoteen 1895. Isoisän matkan aikaan talossa asui '
+          + 'siis entinen presidentti, joka teki samalla maan '
+          + 'tärkeintä sanomalehteä.'
+          + '\n\n'
+          + 'Valtio osti talon lailla 4943, ja museo avattiin yleisölle '
+          + '3. kesäkuuta 1907. Ensimmäinen johtaja oli Alejandro Rosa, '
+          + 'joka oli perustanut Mitren kanssa 1893 historiallisen ja '
+          + 'numismaattisen seuran. Museon historiallinen arkisto on '
+          + 'Argentiinan suurimpia — noin 53 200 asiakirjaa, suurin osa '
+          + 'Mitren omasta kokoelmasta — ja kirjastossa on satatuhatta '
+          + 'nidettä. Talo julistettiin kansalliseksi historialliseksi '
+          + 'muistomerkiksi 21. toukokuuta 1942, ja se on ollut kuvana '
+          + 'kahden peson setelissä.',
+      kuvat: [
+        {
+          tiedosto: 'Museo Mitre 05.JPG',
+          selite: 'Talossa asui presidentti Bartolomé Mitre kuolemaansa '
+            + '1906 asti, ja museo avattiin siihen 1907.',
+          lahde: 'Roberto Fiadone, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Buenos Airesin katedraali': {
+      aika: '1753–1863',
+      teksti: 'Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 '
+          + 'saman korttelin neljänneksen, jolla katedraali yhä seisoo. '
+          + 'Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne '
+          + 'kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 '
+          + 'vanhana ja sopimattomana, seuraavan katto uhkasi sortua '
+          + '1616 ja rakennus romahti, koska se oli tehty lahosta '
+          + 'pajupuusta. Uusi kirkko valmistui 1618, mutta se oli '
+          + 'edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi '
+          + '1671, ja sen torni ja katto putosivat 1680-luvun alussa. '
+          + 'Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti '
+          + 'jälleen.'
+          + '\n\n'
+          + 'Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti '
+          + 'Antonio Masella. Hänen kupolissaan havaittiin halkeamia, '
+          + 'se jouduttiin purkamaan, ja Masella erotettiin ja '
+          + 'asetettiin syytteeseen — myöhemmin hänet vapautettiin. '
+          + 'Kupolin rakensi uudelleen portugalilainen Manuel Álvarez '
+          + 'de Rocha vuoden 1770 jälkeen. Vanha julkisivu ja tornit '
+          + 'purettiin 1778, koska ne olivat uuteen kirkkoon nähden '
+          + 'liian pienet, ja kirkko vihittiin 1779 kokonaan ilman '
+          + 'julkisivua. Vuodesta 1826 ranskalaiset Prosper Catelin ja '
+          + 'Pierre Benoit rakensivat sille uusklassisen julkisivun, '
+          + 'jonka esikuva oli Pariisin Palais Bourbon: kaksitoista '
+          + 'pilaria ja kolmiopääty. Tornit jäivät rakentamatta, ja '
+          + 'siksi kirkko näyttää ulkoa antiikin temppeliltä.'
+          + '\n\n'
+          + 'Päädyn reliefit veisti ranskalainen Joseph Dubourdieu '
+          + 'vuosina 1860–1863. Aihe on Joosefin jälleennäkeminen '
+          + 'veljiensä ja isänsä Jaakobin kanssa Egyptissä, ja se '
+          + 'tarkoitettiin vertauskuvaksi kansakunnan yhtenäisyydestä '
+          + 'sisällissotien jälkeen. Isoisän matkaa kaksi vuotta ennen, '
+          + '1871, kirkkoon asennettiin saksalainen Walcker-urku, jossa '
+          + 'on yli 3 500 pilliä. Sen sijaan San Martínin hautamuistomerkkiä '
+          + 'ei vielä ollut: kenraalin jäännökset tuotiin Ranskasta '
+          + '1880, ja mustan sarkofagin ympärille veistetyt kolme '
+          + 'naishahmoa esittävät Argentiinaa, Chileä ja Perua.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia Metropolitana (Junior, 1876).jpg',
+          selite: 'Christiano Juniorin valokuva on vuodelta 1876, eli '
+            + 'katedraali näytti isoisän matkan aikaan käytännössä '
+            + 'tältä.',
+          lahde: 'Christiano Junior, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Café Tortoni': {
+      aika: '1858',
+      teksti: 'Kahvilan avasi 1858 ranskalainen siirtolainen, jonka '
+          + 'sukunimi oli Touan, ja hän nimesi sen pariisilaisen '
+          + 'Tortonin mukaan — sen kahvilan, jonka ympärille Boulevard '
+          + 'des Italiensilla kokoontui 1800-luvun ranskalainen '
+          + 'kulttuuriväki. Isoisän matkan aikaan Tortoni oli siis jo '
+          + 'olemassa, mutta ei täällä: kahvila seisoi Rivadavia- ja '
+          + 'Esmeralda-katujen kulmassa.'
+          + '\n\n'
+          + 'Nykyiselle korttelille kahvila muutti 1880, ja sen ovi oli '
+          + 'aluksi korttelin toisella puolella Rivadavia-kadulla. '
+          + 'Avenida de Mayota ei nimittäin ollut vielä olemassa: '
+          + 'pormestari Torcuato de Alvearin ajama katu louhittiin '
+          + 'suoraan vanhojen korttelien läpi vuosina 1885–1894 ja '
+          + 'vihittiin 9. heinäkuuta 1894. Vasta 1898 Tortoni avasi '
+          + 'sisäänkäynnin uudelle bulevardille, ja julkisivun piirsi '
+          + 'arkkitehti Alejandro Christophersen. Vuosisadan lopulla '
+          + 'kahvilan osti toinen ranskalainen, Celestino Curutchet.'
+          + '\n\n'
+          + 'Kellariin perustettiin 1926 taidepiiri La Peña, joka '
+          + 'toimi vuoteen 1943 ja jonka vieraita olivat muun muassa '
+          + 'runoilija Alfonsina Storni, kirjailijat Roberto Arlt ja '
+          + 'Jorge Luis Borges, filosofi José Ortega y Gasset ja '
+          + 'pianisti Arthur Rubinstein. Kellari on yhä esiintymislava '
+          + 'jazzille ja tangolle, ja salissa on säilytetty alkuvuosien '
+          + 'sisustus, kirjasto ja takahuoneen biljardipöydät.',
+      kuvat: [
+        {
+          tiedosto: 'Café Tortoni 01.jpg',
+          selite: 'Kahvila perustettiin 1858, mutta nykyiselle '
+            + 'paikalleen se muutti vasta 1880.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palacio Barolo': {
+      aika: '1923',
+      teksti: 'Talon tilasi italialainen siirtolainen Luis Barolo, joka '
+          + 'oli tullut maahan 1890 ja rikastunut neuletehtaalla, ja '
+          + 'sen suunnitteli italialainen arkkitehti Mario Palanti. '
+          + 'Rakennus noudattaa Danten Jumalaisen näytelmän '
+          + 'maailmankuvaa: kerroksia on 22 ja ne jakautuvat kolmeen '
+          + 'osaan niin, että kellari ja katutaso ovat helvetti, '
+          + 'kerrokset 1–14 kiirastuli ja 15–22 taivas. Korkeutta on '
+          + 'sata metriä, yksi metri runoelman jokaista laulua kohden, '
+          + 'ja huipun majakka vastaa enkelien yhdeksää kuoroa. '
+          + 'Kärkikoriste esittää Etelän ristiä.'
+          + '\n\n'
+          + 'Valmistuessaan 1923 talo oli sekä kaupungin että koko '
+          + 'Etelä-Amerikan korkein. Aseman se menetti Kavanagh-talolle '
+          + '— Wikipedia antaa siitä kaksi vuotta, 1935 ja 1936. Avenida '
+          + 'de Mayolla oli pormestari Miguel Canén asettama '
+          + 'kahdenkymmenenneljän metrin korkeusraja, ja Barolo oli '
+          + 'ensimmäinen talo, joka sai siitä poikkeusluvan.'
+          + '\n\n'
+          + 'Rakennus tehtiin Danten tuhkia varten. Barolo uskoi '
+          + 'Euroopan ajautuvan tuhoon ja halusi ne mahdollisimman '
+          + 'kauas mantereelta. Aula haarautuu keskuskupolista '
+          + 'yhdeksään holvikaareen, jotka vastaavat helvetin yhdeksää '
+          + 'piiriä, ja seinillä on latinankielisiä säkeitä ja '
+          + 'hirviöveistoksia. Talon kaksonen on Montevideon Palacio '
+          + 'Salvo, jonka sama arkkitehti suunnitteli samaan aikaan: '
+          + 'molempien majakat oli tarkoitettu tervehtimään Atlantilta '
+          + 'saapuvia kuin Herkuleen pylväät. Kärkikoriste asettuu '
+          + 'samaan linjaan todellisen Etelän ristin kanssa 9. '
+          + 'heinäkuuta, Argentiinan itsenäisyyspäivänä.',
+      kuvat: [
+        {
+          tiedosto: 'CABA - Monserrat - Palacio Barolo.jpg',
+          selite: 'Talo oli valmistuessaan 1923 sekä kaupungin että '
+            + 'koko Etelä-Amerikan korkein rakennus.',
+          lahde: 'Leandro Kibisz, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kongressipalatsi: {
+      aika: '1898–1906',
+      teksti: 'Isoisän matkan aikaan tätä taloa ei ollut: ajatus omasta '
+          + 'kongressipalatsista esitettiin ja säädettiin vasta 1895. '
+          + 'Piirustukset teki italialainen arkkitehti Vittorio Meano '
+          + 'ja työn sai valmiiksi argentiinalainen Julio Dormal. '
+          + 'Rakentaminen kesti 1898–1906, ja liittovaltio myönsi siihen '
+          + 'kuusi miljoonaa dollaria. Kongressi otti talon virallisesti '
+          + 'vastaan 12. toukokuuta 1906, mutta koristelut valmistuivat '
+          + 'vasta 1946.'
+          + '\n\n'
+          + 'Talo on uusklassinen ja pääosin valkoista marmoria. '
+          + 'Kahdeksankymmentä metriä korkea kupoli on pronssipäällysteinen '
+          + 'ja painaa kolmetuhatta tonnia; se on vihertynyt säässä ja '
+          + 'lepää kymmenen metrin syvyisen käännetyn kupolin varassa. '
+          + 'Kunnian sisäänkäynnin edessä on kahdeksanmetrinen '
+          + 'nelivaljakko, jonka veisti Victor de Pol: pronssia '
+          + 'kaksikymmentä tonnia, ja ohjaksia pitelee Vapaus. '
+          + 'Argentiinalainen kuvanveistäjä Lola Mora teki taloon '
+          + 'vertauskuvallisia pronssi- ja marmoriveistoksia, mutta hän '
+          + 'oli lahjoittanut alkuperäiset Jujuyn maakunnalle; ne '
+          + 'skannattiin 2013, ja kopiot paljastettiin 1. maaliskuuta '
+          + '2014.'
+          + '\n\n'
+          + 'Talon edessä on kongressiaukio, jonka suunnitteli '
+          + 'ranskalaissyntyinen Charles Thays ja joka vihittiin 1910. '
+          + 'Aukiolla on kivi, joka merkitsee Argentiinan kaikkien '
+          + 'valtateiden nollakilometriä. Talo kävi ajan mittaan liian '
+          + 'pieneksi, ja edustajien työhuoneita varten alettiin 1974 '
+          + 'rakentaa erillistä lisärakennusta.',
+      kuvat: [
+        {
+          tiedosto: '2019 Buenos Aires - Palacio del Congreso de la Nación Argentina.jpg',
+          selite: 'Palatsista päätettiin vasta 1895, ja se valmistui '
+            + '1906.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manzana de las Luces': {
+      aika: '1686–1821',
+      teksti: 'Jesuiitat saapuivat kaupunkiin 1608 ja saivat tontin, '
+          + 'jonka Juan de Garay oli varannut tulevaksi toriksi. He '
+          + 'myivät sen 1661 — siitä tuli lopulta Plaza de Mayo — ja '
+          + 'rakensivat viereiselle, Isabel de Carvajalin lahjoittamalle '
+          + 'tontille uuden, omavaraisen aseman. San Ignacion kirkon '
+          + 'rakentaminen alkoi 1686 ja se valmistui barokkirakennuksena '
+          + '1722; viereisen San Ignacion collegen suunnitteli '
+          + 'paikallinen arkkitehti Juan Kraus, ja se rakennettiin '
+          + '1710–1729.'
+          + '\n\n'
+          + 'Korttelista tuli siirtomaa-ajan Buenos Airesin ainoa '
+          + 'klassisen sivistyksen oppilaitos, ja siellä olivat '
+          + 'kaupungin parhaat laboratoriot, museo ja kirjasto sekä '
+          + 'ensimmäinen apteekki, jota piti englantilainen '
+          + 'jesuiittaisä Thomas Falkner. Kun jesuiittain sääntökunta '
+          + 'lakkautettiin 1767, asema suljettiin, mutta oppilaitos '
+          + 'avattiin 1772 uudelleen kuninkaallisena San Carlosin '
+          + 'collegena. Falknerin apteekista tuli 1780 varakuningas '
+          + 'Vértizin lääkintäkollegio eli nykyisen Argentiinan '
+          + 'ensimmäinen lääketieteen oppilaitos, ja samana vuonna '
+          + 'Vértiz perusti korttelille kaupungin ensimmäisen '
+          + 'kirjapainon.'
+          + '\n\n'
+          + 'Korttelin alla risteilee viisi tunnelia. Niiden arvellaan '
+          + 'olleen huoltoreittejä piirityksen varalle ja rauhan aikaan '
+          + 'salakuljetusta varten, ja itsenäisyyssodassa niissä '
+          + 'säilytettiin ammuksia. Yleinen kirjasto avattiin 1812, ja '
+          + '1821 kuvernööri Martín Rodríguez perusti tänne Buenos '
+          + 'Airesin yliopiston ja kansallisarkiston. Muutamaa päivää '
+          + 'myöhemmin, 1. syyskuuta 1821, sanomalehti El Argos kutsui '
+          + 'pääkirjoituksessaan aluetta Valojen kortteliksi, ja nimi '
+          + 'jäi. Provinssin lakiasäätävä kokous istui korttelilla, ja '
+          + 'sen salissa kokoontui kansalliskongressi vuosina 1826–1827 '
+          + 'ja uudestaan 1862–1864 — eli aivan isoisän matkaa '
+          + 'edeltävinä vuosina.',
+      kuvat: [
+        {
+          tiedosto: 'Templo de San Ignacio - Buenos Aires.jpg',
+          selite: 'Jesuiittojen San Ignacion kirkon rakentaminen alkoi '
+            + '1686 ja se valmistui 1722.',
+          lahde: 'Banfield, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Santo Domingon luostari': {
+      aika: '1751–1805',
+      teksti: 'Dominikaanit olivat asuneet tontilla vuodesta 1606, '
+          + 'mutta nykyisen kirkon rakentaminen alkoi vasta 1751 '
+          + 'arkkitehti Antonio Masellan piirustusten mukaan — saman '
+          + 'miehen, joka aloitti kaksi vuotta myöhemmin myös '
+          + 'katedraalin rakentamisen. '
+          + 'Peruskivi laskettiin 29. kesäkuuta, ja työ eteni nykien, '
+          + 'koska suunnittelija ja sääntökunta olivat eri mieltä. '
+          + 'Vuosina 1762–1779 hanketta rahoitti ja johti Juan de Lezica '
+          + 'y Torrezuri. Keskeneräinen kirkko vihittiin 17. lokakuuta '
+          + '1783 ja torni valmistui seuraavana vuonna; luostarin '
+          + 'rakentaminen alkoi 1792 ja päättyi 1805.'
+          + '\n\n'
+          + 'Kesäkuun 27. päivänä 1806 kenraali William Beresfordin '
+          + 'brittijoukot valtasivat Buenos Airesin. Heinäkuun 1. '
+          + 'päivänä kapteeni Santiago de Liniers lupasi luostarissa, '
+          + 'että jos kaupunki saadaan takaisin, hän lahjoittaa '
+          + 'valtaajien liput kirkolle; joukot kukistettiin 12. '
+          + 'heinäkuuta, ja liput luovutettiin 24. päivänä. Ne ovat '
+          + 'kirkossa yhä. Seuraavana vuonna 2. heinäkuuta 1807 britit '
+          + 'yrittivät uudelleen ja linnoittautuivat kirkon itätorniin, '
+          + 'jota vastaan hyökkäsi eversti Pedro Andrés Garcían '
+          + 'komentama miliisiyksikkö. Torni vaurioitui tykkitulessa ja '
+          + 'korjattiin jälkeenpäin; alkuperäiset kuulat on poistettu ja '
+          + 'niiden tilalle on asetettu puiset muistokappaleet.'
+          + '\n\n'
+          + 'Presidentti Bernardino Rivadavian aikana dominikaanit '
+          + 'karkotettiin maasta, ja talosta tuli 1826 '
+          + 'luonnonhistoriallinen museo italialaisen kemistin ja '
+          + 'kasvitieteilijän Pablo Ferrarin johdolla: kokoelmassa oli '
+          + 'noin 800 eläintä, 1 500 mineraalia ja yli 1 500 kolikkoa. '
+          + 'Kirkon yläosaan rakennettiin tähtitieteellinen '
+          + 'observatorio, ja italialainen tiedemies Ottaviano Fabrizio '
+          + 'Mossotti hoiti siellä sääasemaa ja luennoi fysiikasta '
+          + '1828–1834. Munkit saivat palata 1835, mutta museo jatkoi '
+          + 'talossa vuoteen 1854. Läntinen torni valmistui 1849, ja '
+          + 'kuorin takainen kellarikerros on vuodelta 1873 eli juuri '
+          + 'isoisän matkavuodelta. Manuel Belgranon hautamuistomerkki '
+          + 'pihalla on Ettore Ximenesin työtä vuodelta 1903; sitä '
+          + 'ennen kenraali lepäsi kirkon oven edessä laatan alla.',
+      kuvat: [
+        {
+          tiedosto: 'Buenos Aires Santo Domingo Convent-20110509-RM-114943.jpg',
+          selite: 'Torniin osuneiden vuoden 1807 tykinkuulien tilalle on '
+            + 'asetettu puiset muistokappaleet.',
+          lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

@@ -3330,6 +3330,48 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 37.812, etela: 37.772, lansi: -122.4345, ita: -122.3845 },
   },
+  buenosaires: {
+    /*
+     * RECOLETASTA SAN TELMON RAJALLE (23.8.2026). Ruutu on 3,6 × 4,0 km
+     * ja se kattaa kaupungin historiallisen ytimen: pohjoisessa
+     * Recoletan Pilar-basilika, keskellä Microcentron ruutukaava ja
+     * Avenida de Mayo, etelässä Monserraten siirtomaa-ajan korttelit.
+     * Kaikki kymmenen kohdetta mahtuvat pääruutuun, joten kainaloa ei
+     * ole (kuten Kantonissa, Kolkatassa ja Colombossa).
+     *
+     * RUUTU ON PYSTY (kuvasuhde 0,90) samasta syystä kuin Colombossa:
+     * kohteet ovat luonnostaan 2,9 kilometrin pohjois–eteläsuuntainen
+     * nauha ja vain 2,1 kilometriä leveä, koska Buenos Aires kasvoi
+     * Plaza de Mayolta pohjoiseen Recoletaan ja etelään San Telmoon
+     * joen suuntaisesti.
+     *
+     * ITÄREUNA ON VEDETTY PUERTO MADERON ALTAILLE, vaikka satama
+     * rakennettiin vasta 1887–1897 eikä isoisä nähnyt sitä. Perustelu
+     * on sama kuin New Yorkin länsireunassa: pelkkä katuverkko ilman
+     * vettä ei kerro, että kyseessä on satamakaupunki, ja altaat
+     * antavat ruudun oikealle laidalle rakenteen. Costanera Surin
+     * luonnonsuojelualue jää altaiden taakse ulkopuolelle — se on
+     * 1970-luvulla täytettyä maata, joka piirtyisi tyhjänä paperina.
+     *
+     * EI meri: true. Río de la Platan avovesi on vasta Costanera Surin
+     * takana eli ruudun ulkopuolella, ja Puerto Maderon neljä allasta
+     * ovat OSM:ssä sulkeutuvia vesialueita, jotka täyttyvät ilman
+     * merilippua. Sama tilanne kuin Madridissa ja Wienissä.
+     *
+     * EI jalkakäytäviä eikä palveluteitä. Microcentron korttelit ovat
+     * noin 110 metriä sivultaan eli parikymmentä pikseliä, ja
+     * ruutukaava piirtyy jo itsessään tiheänä; Calle Florida ja
+     * Lavalle ovat OSM:ssä pedestrian-luokkaa, joka piirtyy joka
+     * tapauksessa (KADUT-taulun kolmas rivi).
+     *
+     * TEATRO COLÓN, PLAZA DE MAYO, CABILDO, CASA ROSADA, RECOLETAN
+     * HAUTAUSMAA JA SAN TELMON PLAZA DORREGO OVAT RUUDUSSA MUTTA
+     * EIVÄT PISTELISTALLA: ne kaikki ovat kaupunkilehden nostojen tai
+     * matkaoppaan jaksojen aiheita (kulttuuri-kategoriat.js), eikä
+     * kohdekartta toista lehden juttuja (New Yorkin sääntö).
+     */
+    rajat: { pohjoinen: -34.5825, etela: -34.618, lansi: -58.4, ita: -58.361 },
+  },
 };
 
 /*
