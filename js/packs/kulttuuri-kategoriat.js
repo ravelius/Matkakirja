@@ -51606,4 +51606,547 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * AUCKLAND on Oseanian laudan toinen kaupunkilehti (23.8.2026).
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-auckland.md;
+   * sisältölinjaukset spec-mantereet.md (Oseania: maorikulttuuri
+   * elävänä, te reo -nimet). Jokainen väite on luettu en-Wikipedian
+   * raakatekstistä 23.8.2026 (artikkelit "Auckland", "Auckland War
+   * Memorial Museum", "Auckland Domain", "Maungakiekie / One Tree
+   * Hill", "St Patrick's Cathedral, Auckland", "Invasion of the
+   * Waikato", "Kauri gum" sekä "Auckland"-artikkelin sääruutu).
+   *
+   * FAKTAPOHJAN KOLME KORJAUSTA, jotka tarkistettiin erikseen ja
+   * jotka muuttivat tekstiä:
+   *
+   * 1. MUSEO EI OLLUT 1873 PRINCES STREETILLÄ. Faktapohja sijoitti
+   *    museon isoisän aikaan Princes Streetin vaatimattomiin
+   *    tiloihin. Artikkeli sanoo toisin: museo aloitti 1852 pienessä
+   *    mökissä Grafton Roadilla Symonds Streetin kulman tuntumassa
+   *    ("Old Government Farm House", "The Governor's Dairy"), ja
+   *    Princes Streetin italialaistyylinen talo AVATTIIN vasta
+   *    5.6.1876. Nosto H1 on kirjoitettu tämän mukaan.
+   * 2. ST PATRICK'SIN 1848-KIRKKO OLI KIVINEN, ei puinen: puinen
+   *    kappeli 1843 korvattiin 1848 paikallisesta louhitusta
+   *    kuonakivestä (scoria) muuratulla kirkolla, johon mahtui 700
+   *    henkeä. Se on nostossa H4, koska sama kivi tulee kaupungin
+   *    tulivuorista ja seurakunta oli irlantilaisenemmistöisen
+   *    Aucklandin oma.
+   * 3. WAIKATON KONFISKAATIOT VAHVISTETTU. "Invasion of the Waikato"
+   *    kertoo joulukuun 1863 New Zealand Settlements Actin ja sen,
+   *    että kuvernööri Grey takavarikoi 1865 yli 480 000 hehtaaria
+   *    Waikato-Tainuin maita; 1995 kruunu myönsi takavarikon
+   *    vääräksi ja pyysi anteeksi. Väite on siis nostossa H4, ja
+   *    1995 kerrotaan mukana, ettei tarina jää 1860-luvulle.
+   *
+   * LÄHTEIDEN RISTIRIITA, joka on kirjoitettu auki lukijalle:
+   * lahjoitetun maan pinta-ala. "Auckland" sanoo 3 500 eekkeriä,
+   * "Auckland Domain" sanoo 3 000 eekkeriä. Kumpaakaan ei valita —
+   * ero kerrotaan nostossa K2 (ennakkotapaus: San Franciscon 1906
+   * uhriluku).
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 23.8.2026 joka
+   * pyyntöön "Daily API request limit exceeded", eikä lukuja
+   * keksitä (Samarkand-malli v965) — js/packs/saatiedot.js jää
+   * koskematta ja lehti näkyy ilman säätä, kunnes rivi haetaan
+   * koneella. Oppaan sääjakso nojaa siksi en-Wikipedian sääruutuun
+   * ja sanoo sen ääneen: luvut ovat Auckland Airportin asemalta,
+   * joka on 17 km keskustasta etelään (normaalikausi 1991–2020).
+   *
+   * ANAKRONISMIVAHTI: Auckland Harbour Bridge (1959) ja Sky Tower
+   * (1997) eivät kuulu isoisän 1873-kehykseen. Kumpaakaan ei
+   * mainita tekstissä eikä kuvateksteissä; nykyvalokuvissa Sky
+   * Tower näkyy siluetissa, mikä on sallittua, koska kuvat eivät
+   * väitä olevansa 1800-luvulta.
+   *
+   * KUVAT on haettu Commonsin API:sta ja lisenssi luettu
+   * extmetadatasta erälukuna; pienin hyväksytty leveys on 1310 px
+   * (Ferry Building) ja kaikki muut ovat yli 1600 px. AIHETOISTO:
+   * Maungakiekie / One Tree Hill esiintyy kahdesti (penkereet
+   * lähikuvassa nostossa K1, koko vuori ilmasta nostossa H2) ja
+   * Rangitoto kolmesti (kaukana kansikuvassa, taustalla
+   * avauskuvassa, kohteena nostossa K4) — eri tiedostot, eri
+   * mittakaava, ja molemmat ovat lehden kantavia aiheita.
+   * HYLKÄYKSET raportissa; yleisimmät syyt olivat lisenssi, jota
+   * talon sääntö ei salli (National Library NZ:n "No restrictions"
+   * -kuvat, joukossa ainoa löytynyt kuva Princes Streetin
+   * museorakennuksesta), kuvan päälle lisätty kehys (vuoden 1875
+   * Northern Club -laterna­kuvan musta kehys, vuoden 1853
+   * maalauksen kullattu kehys) ja alle 1200 px leveys
+   * (Winkelmannin pihkavarastokuvat, Carabainin Queen Street).
+   *
+   * ENNEN JA NYT: Queen Streetin pari on sama kuin matkakirjan
+   * valokuvataulussa (js/packs/oceania-valokuvat.js), josta
+   * tiedostonimi ja vuosi on otettu sellaisenaan; lähderivit on
+   * kirjoitettu tähän talon muotoon eli täsmälleen
+   * extmetadata.Artist-kentän mukaan, ja selitteet on kirjoitettu
+   * uudestaan yhdeksi virkkeeksi.
+   *
+   * TEKIJÄNIMET ovat täsmälleen extmetadata.Artist-muodossa. Kahden
+   * Auckland Museumin Flickr-latauksen (nostot K3 ja H4:n
+   * hylkäysvertailu) Artist-kenttä on kokoelman nimi eikä
+   * piirtäjän nimi, joten piirtäjää ei arvata lähderiville, vaikka
+   * arkin alalaidassa on nimikirjaimet.
+   */
+  // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
+  // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
+  auckland: [
+    {
+      id: 'kaupunki',
+      nimi: 'Auckland',
+      johdanto: 'Kapea kannas kahden sataman välissä, viidenkymmenenkolmen '
+        + 'tulivuoren päällä — maorien Tāmaki Makaurau, "Tāmaki jota moni '
+        + 'halusi". Auckland oli Uuden-Seelannin pääkaupunki 1841–1865, ja '
+        + 'isoisän saapuessa 1873 se oli yhä maan vilkkain satama.',
+      /*
+       * KANSIKUVAT jäävät tällä kaupungilla pikkuriviltä piiloon,
+       * koska ennenNyt-pari korvaa rivin (js/lehti.js
+       * piirraLehtiKuvat) — sama tilanne kuin New Yorkissa. Ne ovat
+       * silti kolme laajaa yleiskuvaa kaupungin eri puolilta:
+       * pohjoinen satama iltavalossa, itäinen rantabulevardi ja
+       * eteläinen Manukau.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Auckland skyline - May 2024.jpg',
+          selite: 'Waitematā-satama avautuu pohjoisessa Hauraki-lahdelle ja '
+            + 'siitä Tyynellemerelle.',
+          lahde: 'elpinto007, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Three Volcanic Cones.jpg',
+          selite: 'Tamaki Drive kulkee Waitematān etelärantaa itään, ja sen '
+            + 'takaa kohoaa Rangitoto.',
+          lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Manukau Harbour low tide 20210916 145912.jpg',
+          selite: 'Manukau-satama on kannaksen toinen meri: se avautuu '
+            + 'lännessä Tasmaninmerelle.',
+          lahde: 'Prosperosity, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI on etusivun iso kuvapaikka, ja siihen kuuluvat
+       * omistajan 21.8.2026 kansikaruselli-linjauksen laajat
+       * yleiskuvat kaupungin ERI puolilta: siluetti Devonportista,
+       * kaupunki Rangitotolta katsottuna ja Maungawhaun kraatteri
+       * kaupungin keskellä. Yksikään ei ole minkään noston aiheena
+       * samalla tiedostolla.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Auckland Skyline as seen from Devonport 20100128 3.jpg',
+          selite: 'Aucklandin satama käsitteli vuonna 2015 kolmanneksen koko '
+            + 'maan konttiliikenteestä.',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Auckland from Rangitoto Island 1 (5642741996).jpg',
+          selite: 'Rangitoton ja keskustan välissä on Hauraki-lahti, jonka yli '
+            + 'lautat kulkevat Devonportiin, Waihekelle ja Tiritiri '
+            + 'Matangille.',
+          lahde: 'Ronnie Macdonald from Chelmsford, United Kingdom, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Mount Eden crater with Auckland CBD and Rangitoto skyline.jpg',
+          selite: 'Maungawhau eli Mount Eden oli Waiohua-heimoliiton vallan '
+            + 'keskus, kunnes Kiwi Tāmaki siirsi sen Maungakiekielle.',
+          lahde: 'Avenue, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Auckland, Queen Street LCCN2017657811.tif',
+          vuosi: '1890-luku',
+          selite: 'Queen Street oli jo 1800-luvulla Aucklandin pääkatu, ja sitä '
+            + 'pitkin kuljettiin laaksoa alas satamaan.',
+          lahde: 'Photoglob Co., publisher, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Queen Street in Auckland 01.jpg',
+          selite: 'Katu seuraa yhä samaa laaksoa, mutta hevosraitiovaunujen '
+            + 'tilalla ovat bussit ja kivitalojen välissä lasitornit.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Tāmaki, jota moni halusi',
+          teksti: 'Maorit asettuivat kannakselle noin vuonna 1350, ja rikas '
+            + 'maaperä kannatti suurta väestöä: ennen eurooppalaisia alueella '
+            + 'asui arviolta 20 000 maoria. Linnoitettuja pā-kyliä nousi '
+            + 'etenkin tulivuorenhuipuille, joilta hallittiin kannaksen '
+            + 'kantopaikkoja kahden sataman välillä. 1700-luvun alussa '
+            + 'kannasta hallitsi Te Waiohua -heimoliitto, jonka valta päättyi '
+            + 'noin 1741, kun ylipäällikkö Kiwi Tāmaki kaatui taistelussa '
+            + 'Ngāti Whātuan Te Taoū-hapūa vastaan. Vuosisadan lopulla '
+            + 'pohjoisesta levinneet tuliaseet järkyttivät voimatasapainon, ja '
+            + '1807 alkaneet sodat ajoivat rannikon iwit turvaan kauemmas.',
+          tiedosto: 'TerracingonOneTreeHill.JPG',
+          selite: 'Maungakiekien rinteiden penkereet rakensi 1600-luvulla '
+            + 'ngāti awa -päällikkö Tītahi, ja niitä kutsutaan nimellä Ngā '
+            + 'Whakairo a Tītahi, Tītahin veistokset.',
+          lahde: 'German302, Wikimedia Commons (PD)',
+          wiki: 'Auckland',
+        },
+        {
+          otsikko: 'Maa, jonka Ngāti Whātua lahjoitti',
+          teksti: 'Ngāti Whātua Ōrākein ylipäällikkö Āpihai Te Kawau '
+            + 'allekirjoitti Waitangin sopimuksen 20. maaliskuuta 1840 '
+            + 'Manukau-sataman rannalla, missä heimo viljeli maata. Ngāti '
+            + 'Whātua haki kruunulta suojaa Ngāpuhia vastaan ja '
+            + 'vastavuoroista suhdetta hallitsijaan ja kirkkoon. Pian '
+            + 'sopimuksen jälkeen heimo teki strategisen lahjoituksen: maata '
+            + 'Waitematā-sataman rannalta uudelle kuvernöörille William '
+            + 'Hobsonille uuden pääkaupungin paikaksi. Lähteet antavat alan '
+            + 'kooksi joko 3 500 tai 3 000 eekkeriä. Hobson nimesi kaupungin '
+            + 'Aucklandin jaarlin George Edenin mukaan, ja Auckland '
+            + 'perustettiin 18. syyskuuta 1840.',
+          tiedosto: 'Admiralty Chart No 1349 Wai-temata Harbour, Published 1841.jpg',
+          selite: 'Brittiläinen merikartta mittasi Waitematān 1841, ja siihen '
+            + 'on merkitty Aucklandin ehdotettu paikka.',
+          lahde: 'United Kingdom Hydrographic Office, Wikimedia Commons (PD)',
+          wiki: 'Auckland',
+        },
+        {
+          otsikko: 'Pääkaupunki, jonka Wellington vei',
+          teksti: 'Auckland julistettiin viralliseksi pääkaupungiksi 1841, ja '
+            + 'hallinto siirrettiin Russellista Bay of Islandsista kokonaan '
+            + 'tänne 1842. Jo 1840 Port Nicholson — nykyinen Wellington — '
+            + 'nähtiin kuitenkin parempana hallintopaikkana, koska se on '
+            + 'lähempänä Eteläsaarta, ja 1865 pääkaupunki siirtyi sinne. '
+            + 'Isoisän saapuessa 1873 menetyksestä oli kulunut kahdeksan '
+            + 'vuotta. Kaupunki kasvoi silti satamansa varassa, ja Auckland '
+            + 'pysyi Aucklandin provinssin pääkaupunkina, kunnes koko '
+            + 'provinssijärjestelmä lakkautettiin 1876 — kolme vuotta isoisän '
+            + 'käynnin jälkeen.',
+          tiedosto: 'Auckland, from near Mechanics Bay (48753239418).jpg',
+          selite: 'Auckland perustettiin 1840 Waitematān rantaan, ja koko '
+            + '1800-luvun kaupungin talous nojasi laitureihin.',
+          lahde: 'Auckland Museum Collections from Auckland, Aotearoa New Zealand, Wikimedia Commons (PD)',
+          wiki: 'Auckland',
+        },
+        {
+          otsikko: 'Viisikymmentäkolme tulivuorta kaupungin alla',
+          teksti: 'Auckland on rakennettu Aucklandin tulivuorikentän päälle: '
+            + 'viimeisten noin 193 000 vuoden aikana alueella on purkautunut '
+            + 'ainakin 53 pientä tulivuorta, ja niistä on jäänyt '
+            + 'räjähdyskraattereita, tuffirenkaita, kuonakartioita ja '
+            + 'laavavirtoja. Kenttä saa basalttinsa suoraan vaipasta 70–90 '
+            + 'kilometrin syvyydestä eikä liity Taupōn tulivuorivyöhykkeen '
+            + 'purkauksiin 250 kilometrin päässä. Kenttä on monogeneettinen: '
+            + 'jokainen tulivuori purkautuu vain kerran. Viimeisin purkaus '
+            + 'tapahtui Rangitotolla noin vuonna 1450, ja se on ainoa, jonka '
+            + 'ihmiset ovat nähneet omin silmin.',
+          tiedosto: 'Rangitoto from Mount Victoria in Devonport.jpg',
+          selite: 'Rangitoto on tulivuorikentän nuorin ja laajin kartio, ja '
+            + 'sen laavavirrat peittävät suuremman alan kuin minkään muun '
+            + 'kentän tulivuoren.',
+          lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Auckland volcanic field',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Auckland Ferry Building.JPG',
+          selite: 'Lauttaterminaali on Queen Streetin pohjoispäässä, ja siitä '
+            + 'lähtevät alukset Devonportiin, Waihekelle ja Pohjoisrannalle.',
+          lahde: 'Follash, Wikimedia Commons (PD)',
+        },
+        kappale: 'Auckland on Uuden-Seelannin suurin kaupunki, ja siinä asuu '
+          + 'noin kolmasosa koko maan väestöstä. Matkailijan Auckland on '
+          + 'kapea: keskusta laskeutuu Queen Streetin laaksoa Waitematān '
+          + 'rantaan, ja koko 1800-luvun kaupunki mahtuu muutaman korttelin '
+          + 'alalle sen ympärille. Etelässä kohoavat Maungawhau ja '
+          + 'Maungakiekie, kaakossa Auckland Domain museoineen, ja '
+          + 'lauttaterminaalilta pääsee kolmessa vartissa toiselle puolelle '
+          + 'lahtea. Kaupunkia sanotaan purjeiden kaupungiksi, ja syy näkyy '
+          + 'vedessä: veneitä on rekisteröity 135 000 ja noin joka kolmas '
+          + 'kotitalous omistaa sellaisen.',
+        artikkeli: {
+          nimi: 'Matkailijan Auckland',
+          taitto: 'opas',
+          teksti: 'Kannaksen kaupunki, jossa kaksi merta, tulivuorten kartiot '
+            + 'ja sademetsä mahtuvat saman päivän kävelylle.',
+          nosto: 'Kannas on kapeimmillaan alle kaksi kilometriä leveä — '
+            + 'Aucklandissa voi seistä paikassa, josta on molempiin meriin '
+            + 'yhtä lyhyt matka, ja juuri näitä kohtia maorit käyttivät '
+            + 'kanoottien kantopaikkoina.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Auckland Airport on kaupungista noin seitsemäntoista '
+                + 'kilometriä etelään, ja sen kautta kulkee kolme neljäsosaa '
+                + 'kaikista Uuteen-Seelantiin saapuvista ulkomaisista '
+                + 'matkailijoista. Kaupungin sisällä pisimmät valtaväylät '
+                + 'ovat yhä Great North Road ja Great South Road, jotka '
+                + 'olivat pääyhteydet pohjoiseen ja etelään ennen '
+                + 'moottoritieverkkoa. Kaupunkiliikenne kulki 1800-luvulla '
+                + 'lautoilla ja junilla, hevosilla vain lyhyet matkat; '
+                + 'sähköraitiovaunut tulivat 1902 ja levittivät asutusta '
+                + 'kannakselle, ja toisen maailmansodan jälkeen auto otti '
+                + 'vallan. Lautta on silti yhä käytännöllisin tapa liikkua: '
+                + 'terminaalista lähdetään Devonportiin, Waihekelle, '
+                + 'Rangitotolle ja Tiritiri Matangille.',
+              kuva: {
+                tiedosto: 'Fullers commuter ferries at Auckland terminal.jpg',
+                selite: 'Lautat lähtevät keskustan terminaalista Waitematān '
+                  + 'yli Pohjoisrannalle ja Hauraki-lahden saarille.',
+                lahde: 'RadishSlice, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kaksi satamaa, yksi kannas',
+              teksti: 'Auckland on harvoja kaupunkeja maailmassa, joilla on '
+                + 'satama kahdella eri merialueella. Pohjoisessa Waitematā '
+                + 'avautuu Hauraki-lahdelle ja siitä Tyynellemerelle, '
+                + 'etelässä Manukau avautuu länteen Tasmaninmerelle. Näiden '
+                + 'välissä kannas kapenee Māngere Inletin ja Tāmaki-joen '
+                + 'kohdalla alle kahteen kilometriin, ja juuri siellä '
+                + 'kulkivat vanhat kanoottien kantopaikat. Kaupunkia '
+                + 'ympäröivät sademetsän peittämät kukkulat: Waitākeren '
+                + 'vuoret lännessä ja Hunuan vuoret kaakossa. Idässä ovat '
+                + 'Hauraki-lahden saaret, ja koko seudun päällä on 53 '
+                + 'tulivuorta, joiden rinteiden multa oli kannaksen paras '
+                + 'viljelysmaa jo ennen eurooppalaisia.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: kauri-pihkan kaivajat',
+              teksti: 'Kauri-pihka oli Aucklandin tärkein vientitavara koko '
+                + '1800-luvun jälkipuoliskon ja kannatti suuren osan '
+                + 'kaupungin varhaisesta kasvusta. Se on kauri-puun '
+                + 'pihkaa, joka valuu kaarnan halkeamista, kovettuu ilmassa '
+                + 'ja jää maahan kivettymään; maorit kutsuivat sitä nimellä '
+                + 'kapia ja käyttivät sitä purukumina, sytykkeenä ja '
+                + 'poltettuna moko-tatuoinnin väriaineena. Eurooppalaiset '
+                + 'veivät sitä 1840-luvun puolivälistä Lontooseen ja '
+                + 'Amerikkaan lakan raaka-aineeksi, ja 1890-luvulla '
+                + 'seitsemänkymmentä prosenttia Englannin öljylakoista '
+                + 'tehtiin siitä. Vuoteen 1850 mennessä pinnalta oli kerätty '
+                + 'kaikki, ja sen jälkeen pihkaa kaivettiin kepeillä ja '
+                + 'lapioilla metrin syvyydeltä rinteistä ja neljän metrin '
+                + 'syvyydeltä soista. Aucklandilaiset perheet ylittivät '
+                + 'viikonloppuisin Waitematān lautalla kaivamaan pihkaa '
+                + 'Birkenheadin kentiltä.',
+              kuva: {
+                tiedosto: 'Kauri on Fairy Falls Track 20241227 125939.jpg',
+                selite: 'Kauri kasvaa yhä Waitākeren vuorten sademetsässä '
+                  + 'Aucklandin länsipuolella.',
+                lahde: 'Prosperosity, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: vuoret palasivat',
+              teksti: 'Aucklandin tulivuorenhuiput olivat maoreille pā-paikkoja '
+                + 'ja puutarhoja satojen vuosien ajan, ja siirtomaa-aikana ne '
+                + 'siirtyivät kruunulle, kaupungille ja yksityisille tiloille. '
+                + 'Maungakiekien maat myytiin 1844 kauppias Thomas Henrylle, '
+                + 'ja 1853 ne osti John Logan Campbell yhdessä William Brownin '
+                + 'kanssa. Vuonna 1880 Campbell päätti lahjoittaa tilansa '
+                + 'yleisölle ja luovutti sen virallisesti 1901. Nykyään One '
+                + 'Tree Hill Domainin omistaa Ngā Mana Whenua o Tāmaki '
+                + 'Makaurau -yhteenliittymä ja sitä hallinnoi Tūpuna Maunga o '
+                + 'Tāmaki Makaurau -viranomainen. Vuori on siis yhä julkinen '
+                + 'puisto, mutta sen isäntä on jälleen se kansa, joka rakensi '
+                + 'penkereet.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat Auckland Airportin asemalta '
+                + '(en-Wikipedian Auckland-artikkelin sääruutu, normaalikausi '
+                + '1991–2020). Asema on seitsemäntoista kilometriä keskustasta '
+                + 'etelään, joten keskusta on todennäköisesti aavistuksen '
+                + 'leudompi: se on lähempänä molempia satamia. Lehdellä ei ole '
+                + 'omaa vuosigraafia, koska ERA5-lukuja ei saatu haettua — '
+                + 'ne täydennetään myöhemmin. Ilmasto on Köppenin '
+                + 'luokituksessa merellinen (Cfb), mutta Uuden-Seelannin '
+                + 'ilmatieteen laitos NIWA ja Trewarthan luokitus pitävät sitä '
+                + 'lähempänä kosteaa subtrooppista: kesät ovat lämpimät ja '
+                + 'talvet leudot, ja Auckland on maan lämpimin suuri keskus. '
+                + 'Helmikuu on lämpimin kuukausi, keskilämpötila 20,5 astetta, '
+                + 'ja heinäkuu kylmin, 11,2 astetta; koko vuoden keskiarvo on '
+                + '15,6. Sadetta tulee vuodessa noin 1 119 millimetriä, ja se '
+                + 'jakautuu koko vuodelle: heinäkuu on sateisin runsaalla 137 '
+                + 'millimetrillä ja tammikuu kuivin vajaalla 58 millimetrillä. '
+                + 'Lunta ei käytännössä sada — merkittävin lumipäivä sitten '
+                + '1900-luvun alun oli 27. heinäkuuta 1939. Vallitsevat tuulet '
+                + 'ovat lounaasta, ja meri on lämpimimmillään helmikuussa noin '
+                + '21 asteessa.',
+              kuva: {
+                tiedosto: 'Ngataringa bay and Rangitoto island.jpg',
+                selite: 'Aucklandin kesä on lämmin ja merellinen, ja '
+                  + 'helmikuussa meriveden lämpötila nousee noin 21 asteeseen.',
+                lahde: 'Andrew McMillan, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Maungakiekie',
+                tahdet: 3,
+                selite: 'Kannaksen suurin pā, jonka penkereet ovat yhä '
+                  + 'rinteessä ja jonka laelta näkyvät molemmat satamat.',
+              },
+              {
+                mita: 'Auckland Domain',
+                tahdet: 3,
+                selite: 'Kaupungin vanhin puisto vuodelta 1844, vanhan '
+                  + 'Pukekawa-tulivuoren kraatterissa.',
+              },
+              {
+                mita: 'Lautta Devonportiin',
+                tahdet: 2,
+                selite: 'Lyhyt matka Waitematān yli, ja paluumatkalla koko '
+                  + 'keskustan siluetti edessä.',
+              },
+              {
+                mita: 'Rangitoto',
+                tahdet: 2,
+                selite: 'Noin 1450 purkautunut saari, ainoa tulivuori, jonka '
+                  + 'purkauksen ihmiset ovat täällä nähneet.',
+              },
+              {
+                mita: 'Waitākeren vuoret',
+                tahdet: 2,
+                selite: 'Sademetsä ja kauri-puut alkavat parinkymmenen '
+                  + 'kilometrin päästä keskustasta.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sääluvut ovat en-Wikipedian
+             * Auckland-artikkelin sääruudusta, sama lähde kuin
+             * jaksossa 5. Tūpuna Maunga -kohta on mukana, koska
+             * vuoret ovat pyhiä paikkoja eivätkä pelkkiä
+             * näköalapaikkoja.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadetta ympäri vuoden',
+                teksti: 'Vuosisade on noin 1 119 millimetriä, ja talvella '
+                  + 'sataa noin viitenätoista päivänä kuukaudessa — kuivaa '
+                  + 'kautta ei ole.',
+              },
+              {
+                otsikko: 'Vuodenajat ovat käänteiset',
+                teksti: 'Kesä on joulu–helmikuussa ja talvi kesä–elokuussa; '
+                  + 'heinäkuun keskilämpö on 11,2 astetta.',
+              },
+              {
+                otsikko: 'Vuoret ovat pyhiä',
+                teksti: 'Tulivuoret ovat Tūpuna Maunga, esi-isien vuoria, ja '
+                  + 'niillä liikutaan merkityillä poluilla penkereitä '
+                  + 'kunnioittaen.',
+              },
+              {
+                otsikko: 'Sumua ja tuulta',
+                teksti: 'Sumu on tavallista syksyllä ja talvella, ja '
+                  + 'vallitseva tuuli puhaltaa lounaasta läpi vuoden.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kannaksesta pääkaupungiksi ja pääkaupungista provinssin '
+        + 'keskukseksi — Aucklandin käänteet osuvat tiheästi isoisän vuoden '
+        + '1873 ympärille.',
+      tehtava: {
+        kysymys: 'Minä vuonna Auckland Museum perustettiin?',
+        vaihtoehdot: [
+          '1852',
+          '1840',
+          '1876',
+          '1929',
+        ],
+        oikea: 0,
+        fakta: 'Yleisö päästettiin museoon ensimmäisen kerran sunnuntaina 24. '
+          + 'lokakuuta 1852, ja ensimmäisen vuoden aikana kävijöitä oli 708.',
+      },
+      nostot: [
+        {
+          otsikko: 'Museo, joka odotti taloa',
+          teksti: 'Auckland Museum perustettiin 1852, ja se aloitti pienessä '
+            + 'mökissä Grafton Roadin varrella Symonds Streetin kulman '
+            + 'tuntumassa; talosta käytettiin nimiä Old Government Farm House '
+            + 'ja The Governor’s Dairy. Yleisö päästettiin sisään '
+            + 'ensimmäisen kerran sunnuntaina 24. lokakuuta 1852, ja '
+            + 'ensimmäisen vuoden kävijämäärä oli 708. Kiinnostus hiipui '
+            + '1860-luvulla, vaikka kokoelma kasvoi, ja 1869 laiminlyöty museo '
+            + 'siirtyi Auckland Instituten hoitoon. Italialaistyylinen talo '
+            + 'Princes Streetillä avattiin vasta 5. kesäkuuta 1876 — kolme '
+            + 'vuotta isoisän käynnin jälkeen.',
+          tiedosto: 'Auckland War Memorial Museum in 2021.jpg',
+          selite: 'Museon kolmas koti valmistui 1929 Auckland Domainiin '
+            + 'ensimmäisen maailmansodan muistomerkiksi.',
+          lahde: 'Daan Hoffmann / Auckland War Memorial Museum Tāmaki Paenga Hira, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Auckland War Memorial Museum',
+        },
+        {
+          otsikko: 'Suurin pā kannaksella',
+          teksti: 'Maungakiekie, kiekie-köynnöksen vuori, oli esieurooppalaisena '
+            + 'aikana Aucklandin kannaksen suurin pā. Kartion ja sen '
+            + 'ympäristön väkiluvuksi arvioidaan jopa 5 000, ja huipun lähellä '
+            + 'oli jättimäinen vihreäkivinen gongi Whakarewa-tāhuna, jolla '
+            + 'Kiwi Tāmaki kutsui koolle kannaksen soturit. Te Taoū voitti '
+            + 'Waiohuan 1740-luvulla, ja päällikkö Tuperiri rakensi huipun '
+            + 'alle uuden pā:n. Kauppiaat John Logan Campbell ja William Brown '
+            + 'ostivat maat 1853. Campbell palasi Aucklandiin 1874 ja '
+            + 'suunnitteli vuoren viereen italialaistyylistä kartanoa, mutta '
+            + 'hänen vaimonsa Emma ei hyväksynyt suunnitelmaa ja hanke '
+            + 'raukesi 1876.',
+          tiedosto: 'One Tree Hill, Auckland, March 2015.jpg',
+          selite: 'Vuori kuuluu nykyään Ngā Mana Whenua o Tāmaki Makaurau '
+            + '-yhteenliittymälle, ja sen ympärillä on yli kahdensadan '
+            + 'hehtaarin puistoalue.',
+          lahde: 'Techno246, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Maungakiekie / One Tree Hill',
+        },
+        {
+          otsikko: 'Puisto, joka pelasti puut',
+          teksti: 'Alue varattiin virkistysmaaksi jo 1840, ja kuvernööri '
+            + 'William Hobson otti malliksi Melbournen ja Sydneyn uudet '
+            + 'puistot. Kuvernööri Robert FitzRoy julisti sen 1844 '
+            + 'virallisesti julkiseksi puistoksi nimellä Auckland Park. Alue '
+            + 'oli yksi harvoista siirtokunnan lähellä olleista paikoista, '
+            + 'joilla oli vielä puustoa jäljellä, ja rauhoitus suojeli juuri '
+            + 'nämä puut. Auckland Domain on kaupungin vanhin puisto ja '
+            + 'Pukekawa-tulivuoren kraatterin ja tuffirenkaan jäänne. '
+            + 'Urheiluseurat tulivat pian: keilaklubi perustettiin 1861 ja '
+            + 'Parnell Lawn Tennis Club 1872, vuosi ennen isoisän vierailua.',
+          tiedosto: 'Nature walk at Auckland Domain 01.jpg',
+          selite: 'Puiston vanhinta osaa ovat kraatterin rinteiden '
+            + 'alkuperäiset puut, joiden takia alue rauhoitettiin.',
+          lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Auckland Domain',
+        },
+        {
+          otsikko: 'Sotilaita etelään',
+          teksti: '1860-luvun alussa Aucklandista tuli tukikohta maorien '
+            + 'kuningasliikettä vastaan, ja kaupunkiin sijoitetut 12 000 '
+            + 'imperiumin sotilasta vauhdittivat kauppaa. Samaan aikaan '
+            + 'rakennettiin Great South Road kohti Waikatoa. Väkiluku kasvoi '
+            + '1 500:sta vuonna 1841 12 423:een vuonna 1864, ja noin puolet '
+            + 'asukkaista oli irlantilaisia — toisin kuin '
+            + 'englantilaisenemmistöisissä Wellingtonissa ja Christchurchissa. '
+            + 'Sodalla oli pitkä jälki: joulukuun 1863 lain nojalla kuvernööri '
+            + 'Grey takavarikoi 1865 yli 480 000 hehtaaria Waikato-Tainuin '
+            + 'maita. Vuonna 1995 kruunu myönsi takavarikon vääräksi ja pyysi '
+            + 'sitä anteeksi.',
+          tiedosto: 'Saint Patrick Cathedral in Auckland 02.jpg',
+          selite: 'Aucklandin katolisen seurakunnan puinen kappeli korvattiin '
+            + '1848 kirkolla, joka muurattiin paikallisesta kuonakivestä ja '
+            + 'johon mahtui 700 henkeä; nykyinen kirkko valmistui 1907.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Auckland',
+        },
+      ],
+    },
+  ],
 };
