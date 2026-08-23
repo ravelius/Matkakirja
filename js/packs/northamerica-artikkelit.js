@@ -32,6 +32,20 @@
 // USA-kohta: siirtomaahistoria ja orjuus kerrotaan tapahtumina
 // neutraalisti, ei nykypolitiikkaa. Vuoden 1873 kulma on introssa
 // mukana, koska se on koko lehden kantava aihe.
+//
+// MONTREAL (23.8.2026): jokainen väite tulee samasta erästä kuin lehden
+// tekstit (js/packs/kulttuuri-kategoriat.js, avain montreal), ja ne on
+// tarkistettu en-Wikipedian raakateksteistä 23.8.2026. Pohjana ovat
+// docs/mantereet-tyoaineisto/faktapohja-montreal.md ja
+// tarkistus-montreal.md, jotka luettiin yhdessä; tarkistusraportin
+// korjaukset voittavat faktapohjan. Siksi TÄSSÄ EI SANOTA vuotta 1763:
+// tarkistus osoitti, ettei sitä löydy siteeratusta artikkelista, joten
+// intro kertoo vain sen minkä lähde sanoo (valtaus 1760, siirtomaa
+// siirtyi Britannialle). Sisältölinjaus on Raamatun pilari 3:
+// kaksikielisyys ja Québecin asema kuvataan toteavasti peruskirjan ja
+// väestönlaskennan lukuina, ei kannanottona, eikä nykypolitiikkaa
+// käsitellä lainkaan. Vuoden 1873 kulma on introssa mukana, koska se on
+// koko lehden kantava aihe.
 export const NORTHAMERICA_ARTIKKELIT = {
   'New York': {
     intro: 'New York on Yhdysvaltain suurin kaupunki, ja se on rakennettu '
@@ -118,6 +132,46 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'kesäiltapäivisin sumu vyöryy Golden Gaten salmesta sisään. '
       + 'Kaupungissa on Pohjois-Amerikan vanhin kiinalaiskortteli, ja '
       + 'se on lahden alueen talouden keskuksia.',
+  },
+  Montreal: {
+    intro: 'Montreal on saari Saint Lawrence -joessa, Québecin suurin '
+      + 'kaupunki ja Kanadan toiseksi suurin. Keskellä saarta kohoaa '
+      + 'Mont Royal, ja juuri siitä on lyhentynyt kaupungin nimi. '
+      + 'Satama on noin 1 600 kilometrin päässä Atlantilta, mutta se on '
+      + 'silti lyhin suora reitti Pohjois-Amerikan Keskilännestä '
+      + 'Eurooppaan.'
+      + '\n\n'
+      + 'Ranskalaiset lähetyssaarnaajat perustivat paikalle Ville-Marien '
+      + '17. toukokuuta 1642. Siirtokunta oli kaatua irokeesien '
+      + 'hyökkäyksiin 1640-luvulla, mutta se selvisi ja kasvoi '
+      + 'turkiskaupan keskukseksi; **kaupunkioikeudet Montreal sai vasta '
+      + '1832**. Lachine-kanava 1825 ja Victoria-silta 1859 tekivät '
+      + 'siitä laiva- ja rautatieliikenteen solmukohdan, ja vuoteen 1860 '
+      + 'mennessä se oli Brittiläisen Pohjois-Amerikan suurin kaupunki.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 kaupunki rakensi oman kaupungintalonsa '
+      + 'vanhan jesuiittapuutarhan paikalle, ja **Notre-Damen kirkossa '
+      + 'oli parhaillaan telineitä**: sen syvänsininen, kultatähtinen '
+      + 'holvikatto tehtiin vuosina 1872–1879. Mont Royalin puisto odotti '
+      + 'yhä avajaisiaan, jotka tulivat vasta 1876.',
+    teksti: 'Montreal on saari Saint Lawrence -joessa, Kanadan '
+      + 'Québecissä. Kaupungin keskellä kohoaa Mont Royal, jonka '
+      + 'rinteiltä keskusta, satama ja joki näkyvät yhtenä näkymänä. '
+      + 'Joen väylä vie valtamerialukset kaupungin ohi Suurille järville '
+      + 'asti.'
+      + '\n\n'
+      + 'Ranskalaiset perustivat siirtokunnan 1642, ja se siirtyi '
+      + 'Britannialle 1760. Turkiskaupan keskuksesta kasvoi satama- ja '
+      + 'rautatiekaupunki: Lachine-kanava avattiin 1825, Victoria-silta '
+      + '1859, ja vuoden 1871 väestönlaskennassa asukkaita oli 130 022. '
+      + 'Notre-Damen kirkko valmistui 1829 ja oli yli viisikymmentä '
+      + 'vuotta Pohjois-Amerikan suurin kirkkorakennus.'
+      + '\n\n'
+      + 'Nykyään ranska on kaupungin peruskirjan mukainen virallinen '
+      + 'kieli, ja väestönlaskennan mukaan 85,7 prosenttia asukkaista '
+      + 'puhuu sitä sujuvasti. Metro avattiin 1966 ja sen kumipyöräiset '
+      + 'junat ovat tavallista hiljaisempia, ja keskustan alla kulkee '
+      + 'yksi maailman laajimmista maanalaisista jalankulkualueista.',
   },
   Yhdysvallat: {
     intro: 'Yhdysvallat on vuonna 1873 nuori jättiläinen: '

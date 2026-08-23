@@ -231,6 +231,114 @@ export const EUROPE_ARTIKKELIT = {
       + 'ominainen tapa on tarjota juoman mukana ilmainen tapas — muualla '
       + 'Espanjassa harvinaista, ja granadalaisille kunnia-asia.',
   },
+  /*
+   * SEVILLA on Euroopan laudan uusi kaupunkilehti (23.8.2026). intro on
+   * lehden ETUSIVUN LEIPÄTEKSTI (Raamattu 20.8.2026): kahdeksan
+   * virkettä kolmessa kappaleessa ja kaksi maltillista lihavointia.
+   * teksti on Lue lisää -kortin kolmikappaleinen versio. Kaikki luvut
+   * on luettu en-Wikipedian raakateksteistä 23.8.2026 (artikkelit
+   * "Seville", "Giralda", "Puente de Isabel II" ja "General Archive of
+   * the Indies"), ja ne ovat samat kuin kulttuuri-kategoriat.js:n
+   * sevilla-lohkossa.
+   *
+   * VISASPOILERIN VÄLTTÄMINEN (tarkistus-sevilla.md, osio 1): laudan
+   * visa kysyy, mikä on katedraalin kellotorni, joka jäi jäljelle
+   * vanhasta moskeijasta, ja mikä yksinoikeus Sevillalla oli Amerikan
+   * löytymisen jälkeen. Nimi Giralda tulee tässä introssa esiin vain
+   * tuuliviirin kautta ("Giraldillo, josta torni sai nykyisen nimensä
+   * Giralda"), ja monopoli on kirjoitettu muotoon "siirtomaakauppa
+   * kulki tämän jokisataman kautta". Kummankin kysymyksen vastaus on
+   * yhä luettavissa lehdestä, kuten resepti vaatii, mutta ei visan
+   * vastausvaihtoehdon sanamuodossa.
+   */
+  Bergen: {
+    intro: 'Bergen on Norjan toiseksi suurin kaupunki ja Vestlandin '
+             + 'hallintokeskus, ja se on rakennettu niemimaalle '
+             + 'vuonojen ja vuorten väliin. Vuoret ympäröivät keskustaa '
+             + 'joka suunnalta, ja siitä tulee lisänimi **seitsemän '
+             + 'vuoren kaupunki**. Sadepäiviä kertyy noin kaksisataa '
+             + 'vuodessa, sateisimpana joulukuu.'
+             + '\n\n'
+             + 'Perimätiedon mukaan kaupungin perusti kuningas Olav '
+             + 'Kyrre vuonna 1070, ja Bergen oli Norjan pääkaupunki '
+             + '1200-luvulla. Sataman itärannalla toimi 1300-luvun '
+             + 'puolivälistä lähtien yksi Hansaliiton neljästä '
+             + 'kontorista, ja tärkein vientitavara oli **kuivattu '
+             + 'turska** pohjoisesta; vastineeksi sinne kulki viljaa '
+             + 'Euroopasta. Kauppiaiden vanha laituri '
+             + '**Bryggen** on ollut Unescon maailmanperintökohde '
+             + 'vuodesta 1979.'
+             + '\n\n'
+             + 'Puinen kaupunki paloi lukuisia kertoja, pahimmin 1702. '
+             + 'Isoisän matkan aikoihin Bergen ylitti vanhat rajansa: '
+             + 'vuoden 1855 palon jäljille nousivat säännölliset '
+             + 'korttelit, ja 1876 kaupunkiin liitettiin Nygård, '
+             + 'Møhlenpris ja Sandviken. Samoihin vuosiin osuvat sen '
+             + 'kaksi kuuluisinta muusikkoa: Ole Bull osti Lysøenin '
+             + 'saaren 1872, ja Edvard Grieg sai 1874 Ibseniltä '
+             + 'pyynnön säveltää Peer Gynt.',
+    teksti: 'Bergen kasvoi Vågen-lahden ympärille. Perimätiedon mukaan '
+              + 'kuningas Olav Kyrre perusti kaupungin vuonna 1070, ja se '
+              + 'oli Norjan pääkaupunki 1200-luvulla. Bryggenin rantaan '
+              + 'perustettiin noin 1350 Hansaliiton kontori, ja saksalaiset '
+              + 'kauppiaat pitivät siellä omaa kaupunginosaansa, omaa '
+              + 'kieltään ja omaa säännöstöään. Yksinoikeus Pohjois-Norjan '
+              + 'kauppaan säilyi vuoteen 1789.\n\nPuinen kaupunki paloi yhä '
+              + 'uudelleen: 1198, 1248, 1413, 1702, 1756, 1771, 1916 ja '
+              + 'viimeksi 1955, jolloin osa Bryggeniä tuhoutui. Vuoden 1702 '
+              + 'palon jälkeen tervatut hirsitalot vaihtuivat maalattuihin '
+              + 'ja osin tiilipäällysteisiin puutaloihin, ja Bryggen '
+              + 'rakennettiin uudelleen keskiaikaiseen tyyliin.\n\n'
+              + '1800-luvun jälkipuolisko oli nopean kasvun aikaa. Vuoden '
+              + '1855 palon jälkeen Torgallmenningenin länsipuoli '
+              + 'rakennettiin säännöllisiksi kortteleiksi, ja 1876 '
+              + 'kaupungin rajat siirrettiin niin, että Nygård, Møhlenpris '
+              + 'ja Sandviken liitettiin mukaan. Samaan aikaan Bergenistä '
+              + 'lähti maailmalle kaksi muusikkoa, Ole Bull ja Edvard '
+              + 'Grieg.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+  Sevilla: {
+    intro: 'Sevilla on Andalusian pääkaupunki ja Espanjan viidenneksi '
+      + 'suurin kaupunki: kunnassa asuu vajaat 687 000 ihmistä. Se on '
+      + 'Guadalquivirin laaksossa keskimäärin seitsemän metriä '
+      + 'merenpinnan yläpuolella, ja sen satama on Espanjan ainoa '
+      + 'jokisatama: merelle on jokea 80 kilometriä.'
+      + '\n\n'
+      + 'Roomalaiset perustivat paikalle Hispaliksen, ja vuoden 711 '
+      + 'jälkeen kaupunki tunnettiin nimellä Ishbiliya. Almohadien '
+      + 'jäljiltä ovat kaupunginmuurit, Torre del Oro ja suurmoskeijan '
+      + 'minareetti; **Kastilia valtasi kaupungin 1248** viidentoista '
+      + 'kuukauden piirityksen jälkeen. Löytöretkien jälkeen '
+      + 'siirtomaakauppa kulki tämän jokisataman kautta, ja Sevillasta '
+      + 'kasvoi 1500-luvulla yksi Länsi-Euroopan suurimmista.'
+      + '\n\n'
+      + 'Vanhankaupungin ytimessä katedraali, Alcázar ja Intian arkisto '
+      + 'muodostavat yhden Unescon maailmanperintökohteen. Katedraalin '
+      + 'tornin huipulle nostettiin 1568 pyörivä pronssiveistos '
+      + '**Giraldillo**, josta torni sai nykyisen nimensä Giralda. '
+      + 'Sevilla on Manner-Euroopan lämpimin kaupunki, ja sinne on '
+      + 'sijoitettu enemmän oopperoita kuin mihinkään muuhun Euroopan '
+      + 'kaupunkiin — vuoden 2012 selvityksen mukaan 153.',
+    teksti: 'Sevillan vanhakaupunki on kolmen valtakunnan kerrostuma. '
+      + 'Roomalaisten Hispaliksen muurit rakennutti Julius Caesar, '
+      + 'almohadit lisäsivät niihin 1221 vallihaudan ja toisen '
+      + 'muurilinjan, ja kastilialaiset muuttivat moskeijat kirkoiksi '
+      + 'vuoden 1248 jälkeen. Suurmoskeijan minareetti jäi paikoilleen ja '
+      + 'sai 1500-luvulla renessanssitapulin päälleen.\n\n'
+      + 'Amerikan-kaupan vuosisadat jättivät jälkeensä kauppakillan '
+      + 'talon, johon Kaarle III perusti 1785 Intian arkiston. Sinne '
+      + 'koottiin asiakirjat Espanjan Amerikan- ja '
+      + 'Filippiinien-hallinnosta: yhdeksän kilometriä hyllyä ja noin 80 '
+      + 'miljoonaa sivua. Kun joki mataloitui, kauppa siirtyi alavirtaan '
+      + 'Cádiziin — laivastot 1680 ja kauppavirasto 1717.\n\n'
+      + 'Isoisän matkavuonna 1873 kaupunki oli juuri saanut ensimmäisen '
+      + 'kiinteän siltansa: Trianan silta valmistui 1852 ja korvasi lähes '
+      + 'seitsemän vuosisataa palvelleen venesillan. Tupakkatehtaassa '
+      + 'työskenteli tuhansia naisia, katuja päällystettiin ja '
+      + 'katuvalaistus laajeni, ja huhtikuun feria oli vasta '
+      + 'neljännesvuosisadan ikäinen.',
+  },
   Espanja: {
     // Muita pidempi tarkoituksella: Madridin lehden maaosasto nojaa
     // tähän yksin (sama malli kuin Italialla ja Egyptillä).
