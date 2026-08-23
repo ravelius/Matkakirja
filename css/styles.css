@@ -1974,6 +1974,18 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  */
 .fact-valokuva { display: none; }
 
+/*
+ * Pienoiskuvan kellutusvaraus pois samalla. Ylempänä (.fact-text::before)
+ * kelluu näkymätön 72x58 laatikko, joka varaa tekstistä tilan
+ * pienoiskuvalle. Kun kuva on piilossa, varaus jäisi voimaan ja teksti
+ * kiertäisi tyhjää kolkkaa — omistajan havainto 24.8.2026 ("teksti
+ * kiertää näkymätöntä kuvaa"). Nämä kaksi sääntöä kuuluvat yhteen: jos
+ * pienoiskuva palautetaan näkyviin, poista molemmat.
+ */
+.fact-teksti-rivi:has(.fact-valokuva:not([hidden])) .fact-text::before {
+  content: none;
+}
+
 .postikortti {
   position: fixed;
   z-index: 70;
