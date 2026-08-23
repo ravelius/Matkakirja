@@ -14,8 +14,11 @@ kirjoitusta).*
 
 Uusi-Seelanti kuuluu Oseanian pilottierään Sydneyn, Aucklandin ja Australian
 kanssa. Peliin kirjatut NZL-kaupungit (`js/packs/oceania.js`, `CITY_COUNTRY`):
-**auckland** (todennäköinen lehtikaupunki — pelin ainoa NZL-kohde jolla on
-`start`-tyyppinen matkareitin painoarvo Sydneyn kautta), **wellington**,
+**auckland** (todennäköinen lehtikaupunki — maan suurin kaupunki, laudan
+NZL-kohteista ainoa jolla on `airport: true`, ja Sydney-lentoreitin pääte;
+KORJAUS 23.8.2026 tarkistuksen jälkeen: aiempi "ainoa start-painoarvo"
+-peruste oli väärä, `la: 'start'` on nimilapun sijoitteluohje ja se on
+neljällä NZL-kaupungilla viidestä), **wellington**,
 **christchurch**, **dunedin**, **milfordsound**. Maa-aiheet palvelevat
 kaikkia viittä.
 
@@ -771,7 +774,7 @@ samat kuin pelin NZL-kaupungit (`oceania.js`, `CITY_COUNTRY`):
 
 | Nimi | Huom |
 |---|---|
-| Auckland | `start`-tyyppinen painoarvo, Pohjoissaari, suurin kaupunki |
+| Auckland | suurin kaupunki, `airport: true`, Sydney-lentoreitin pääte |
 | Wellington | pääkaupunki, Cookinsalmen rannalla |
 | Christchurch | Etelä-saari, Canterbury |
 | Dunedin | Etelä-saari, Otagon kultaryntäyksen ja jäähdytyslaivan

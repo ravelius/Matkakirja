@@ -101,9 +101,10 @@ puolestaan noudattaa ITA/IND-lohkoja `js/packs/maa-kategoriat.js`:ssä.
 > koulujärjestelmiä. Presidenttinä hän teki koulutuksesta hallituksensa
 > tärkeimmän asian: kuuden vuoden aikana valtio perusti noin 800 uutta
 > alakoulua, ja koululaisten määrä kolminkertaistui 30 000:sta yli
-> 100 000:een. Hän toi Yhdysvalloista yli 60 naisopettajaa kouluttamaan
-> uusia opettajia maan omiin opettajaseminaareihin — ratkaisu, joka oli
-> tuolloin ainutlaatuinen Etelä-Amerikassa. Sarmiento ei ollut suosittu
+> 100 000:een. Hän toi Yhdysvalloista yli 70 naisopettajaa ja neljä
+> miesopettajaa kouluttamaan uusia opettajia maan omiin
+> opettajaseminaareihin — ratkaisu, joka oli tuolloin ainutlaatuinen
+> Etelä-Amerikassa. Sarmiento ei ollut suosittu
 > presidentti: Paraguayn sota söi rahaa, ja pääkaupungin ja maakuntien
 > välinen kilpailu jatkui koko hänen kautensa ajan. Silti hänen
 > koulu-uudistuksensa teki argentiinalaisista pian yhden maanosan
@@ -147,10 +148,12 @@ Faktat ja lähteet:
 - Vuoteen 1869 mennessä 11 % Argentiinan väestöstä ja 50 % Buenos
   Airesin väestöstä oli äskettäin saapuneita maahanmuuttajia.
   — en-Wikipedia "Immigration to Argentina"
-- Perustuslaki vuodelta 1852 kielsi rajoitukset maahan tuleville
+- Perustuslaki vuodelta 1853 kielsi rajoitukset maahan tuleville
   ulkomaalaisille, jotka tulivat "työskentelemään maata, kehittämään
   teollisuutta sekä tuomaan ja opettamaan tieteitä ja taiteita", ja
-  valtio kannusti nimenomaan "eurooppalaista" maahanmuuttoa.
+  valtio kannusti nimenomaan "eurooppalaista" maahanmuuttoa (Argentiinan
+  perustuslaki hyväksyttiin virallisesti 1.5.1853; lähdeartikkeli itse
+  käyttää epäjohdonmukaisesti sekä "1852" että "1853" — ks. osio 12).
   — en-Wikipedia "Immigration to Argentina"
 
 ### H3 — "Sota, joka vei pojan" (Paraguayn sota, 1864–1870)
@@ -499,7 +502,9 @@ Faktat ja lähteet:
   ensimmäinen kansallispuisto Yellowstone Yhdysvalloissa oli neljä
   vuotta vanha; varsinaiset Iguazú- ja Iguaçu-kansallispuistot
   perustettiin vasta 1934 (Argentiina) ja Brasiliassa myöhemmin.
-  — en-Wikipedia "Iguazu Falls"
+  — en-Wikipedia "Iguazu Falls". Vuosiluku 1934 varmistettu
+  korjauskierroksella myös erikseen artikkelista "Iguazú National Park"
+  (infobox: `established = 1934`) — ei enää epävarma, ks. osio 13.
 
 ### L2 — "Pampa, jolla ei ole loppua" (pampan ekosysteemi)
 
@@ -567,8 +572,9 @@ Faktat ja lähteet:
 > retkikuntaa. Nimen alkuperä on kiistanalainen — yksi selitys juontaa
 > mapudungun-kielestä ja tarkoittaa "toiselta puolelta tulevaa", toinen
 > ketšuan kielestä ja tarkoittaa "kivistä vartijaa". Vuori sijaitsee
-> Mendozan maakunnassa — samalla alueella, jonne Sarmiento juuri tuolloin
-> tilasi ranskalaisia viiniköynnöksiä (ks. Ruoka-aihe).
+> Mendozan maakunnassa — samalla alueella, jonne Sarmiento jo
+> kaksikymmentä vuotta aiemmin, 1853, oli tilannut ranskalaisia
+> viiniköynnöksiä (ks. Ruoka-aihe).
 
 Faktat ja lähteet:
 - Aconcagua on Amerikan mantereiden ja koko läntisen ja eteläisen
@@ -662,16 +668,18 @@ tai jättää pois toistoa vastaan, ks. osio 11.)*
 > omansa. Saltan empanadat, saltasit, ovat pieniä, mehukkaita ja
 > tulisia: täytteenä perunaa, paprikaa ja jauhettua chiliä — juuri se
 > versio, joka on suosittu myös naapurimaassa Boliviassa. Vieressä
-> Jujuyn versio lisää herneitä ja valkosipulia; Tucumánissa järjestetään
-> jo tuolloin vuosittainen kansallinen empanada-festivaali. Buenos
-> Airesissa criollo-empanada on niin tärkeä osa kaupungin identiteettiä,
-> että se on myöhemmin nimetty viralliseksi ruoka- ja gastronomiaperinnöksi.
-> Alkuperä juontuu 700-luvun Galiciaan asti, mutta matka Espanjasta
-> Andien juurelle teki siitä täysin oman, paikallisen ruoan.
+> Jujuyn versio lisää herneitä ja valkosipulia; Tucumánissa on oma
+> tunnettu kansallinen empanada-festivaalinsa Famaillássa, joka
+> järjestetään yhä nykyään vuosittain. Buenos Airesissa criollo-empanada
+> on niin tärkeä osa kaupungin identiteettiä, että se on myöhemmin
+> nimetty viralliseksi ruoka- ja gastronomiaperinnöksi. Alkuperä juontuu
+> 600-luvun Galiciaan asti, mutta matka Espanjasta Andien juurelle teki
+> siitä täysin oman, paikallisen ruoan.
 
 Faktat ja lähteet:
-- Empanadan alkuperä on tuntematon, mutta arvellaan juontuvan 700-luvun
-  Galiciasta, luoteis-Espanjasta. — en-Wikipedia "Empanada"
+- Empanadan alkuperä on tuntematon, mutta arvellaan juontuvan 600-luvulta
+  (engl. "7th century") Galiciasta, luoteis-Espanjasta. — en-Wikipedia
+  "Empanada"
 - Saltan empanadat (saltas) ovat pieniä, mehukkaita ja tulisia, sisältävät
   perunaa, paprikaa ja jauhettua chiliä; suosittuja myös naapurimaassa
   Boliviassa. Jujuyn versio lisää herneitä ja valkosipulia. Tucumánin
@@ -681,25 +689,35 @@ Faktat ja lähteet:
   ministeriön toimesta osaksi ruoka- ja gastronomiaperintöä.
   — en-Wikipedia "Empanada"
 
-### R4 — "Presidentti tilasi köynnöksiä Ranskasta" (malbec-viini, 1868)
+### R4 — "Köynnökset jotka istutettiin kaksikymmentä vuotta aiemmin" (malbec-viini, 1853)
 
-> Vuonna 1868 — samana vuonna kun hänestä tuli presidentti — Domingo
-> Faustino Sarmiento oli jo aiemmin Mendozan maakuntahallitusmiehenä
-> antanut ranskalaiselle agronomille Michel Pouget'lle tehtävän tuoda
-> viiniköynnöksiä Ranskasta Argentiinaan. Mukana oli rypälelajike
-> nimeltä malbec — Ranskassa vaatimaton, halloille altis rypäle, joka
-> Mendozan korkealla, kuivalla ja aurinkoisella maaperällä alkoi
-> tuottaa jotain aivan erilaista: tummaa, pehmeätanniinista viiniä,
-> josta tulee vuosikymmenien päästä koko maan tunnusmerkki. Vuonna
-> 1873 istutukset ovat vielä nuoria taimia — kukaan ei vielä tiedä, että
-> Ranskan oma malbec-kanta tuhoutuu pian phylloxera-tuholaiseen ja että
-> juuri nämä Mendozan versiot pelastavat lajikkeen maailmalle.
+> Kaksikymmentä vuotta ennen isoisän matkaa, 17. huhtikuuta 1853, Domingo
+> Faustino Sarmiento — vielä kaukana presidenttiydestä, mutta jo tunnettu
+> koulutuksen ja edistyksen puolestapuhuja — antoi ranskalaiselle
+> agronomille Michel Pouget'lle tehtävän tuoda viiniköynnöksiä Ranskasta
+> Mendozaan ja perusti samalla Quinta Agronómica de Mendozan. Mukana oli
+> rypälelajike nimeltä malbec — Ranskassa vaatimaton, halloille altis
+> rypäle, joka Mendozan korkealla, kuivalla ja aurinkoisella maaperällä
+> alkoi tuottaa jotain aivan erilaista: tummaa, pehmeätanniinista viiniä.
+> Vuonna 1873, kun isoisä matkustaa Argentiinassa, nämä köynnökset ovat
+> jo kaksikymmentä vuotta vanhoja ja juurtuneet syvälle Mendozan
+> maaperään — mutta kukaan ei vielä tiedä, että Ranskan oma malbec-kanta
+> tuhoutuu pian phylloxera-tuholaiseen ja että juuri nämä Mendozan
+> versiot pelastavat lajikkeen maailmalle.
 
 Faktat ja lähteet:
-- Malbec tuotiin Argentiinaan 1868, kun ranskalainen agronomi Michel
-  Pouget toi viiniköynnöksiä Ranskasta; Pouget'n toimeksiantaja oli
-  tuolloin Mendozan maakuntahallitusmies Domingo Faustino Sarmiento.
-  — en-Wikipedia "Malbec"
+- Sarmiento uudisti 17.4.1853 maansa viiniteollisuutta tuomalla uusia
+  ranskalaisia rypälelajikkeita, kuten malbecia, ja perustamalla Mendozan
+  Quinta Agronómican. — en-Wikipedia "Domingo Faustino Sarmiento"
+- Sarmiento ei tuolloin ollut Mendozan maakuntahallitusmies eikä
+  missään muussa virassa — hänen ainoa kuvernöörinvirkansa oli Governor
+  of San Juan (3.1.1862–9.4.1864). — en-Wikipedia "Domingo Faustino
+  Sarmiento" (HUOM: Malbec-artikkeli kutsuu häntä epämääräisesti
+  "provincial governor"iksi eikä anna vuotta; sen Chile-osio esittää
+  lisäksi kilpailevan version, jossa malbec tuotiin ensin Chileen 1841 ja
+  vasta sieltä Mendozaan 1853 — käytä tässä Sarmiento-artikkelin
+  täsmällisempää ja päivättyä versiota, ei Malbec-artikkelin
+  "provincial governor" -muotoilua.)
 - Argentiinalaisen malbecin rypäleterttu eroaa ranskalaisesta (pienemmät
   marjat, tiiviimmät terttu) — viittaa siihen, että Pouget'n tuoma kanta
   saattoi kadota myöhemmin Ranskassa halla- ja phylloxera-tuhojen myötä.
@@ -708,13 +726,17 @@ Faktat ja lähteet:
   Argentiinan viinin tunnusmerkki. — en-Wikipedia "Malbec"
 
 **Minitehtäväehdokas (Ruoka):**
-> Kuka tilasi 1868 ranskalaisia viiniköynnöksiä Mendozaan — köynnöksiä,
-> joista syntyi Argentiinan tunnetuin viinilajike malbec?
+> Kuka antoi 1853 tehtäväksi tuoda ranskalaisia viiniköynnöksiä
+> Mendozaan — köynnöksiä, joista syntyi Argentiinan tunnetuin
+> viinilajike malbec?
 > Vaihtoehdot: Julio Argentino Roca / **Domingo Faustino Sarmiento** /
 > José Hernández / Bartolomé Mitre
-> Fakta: Sarmiento toimeksiantajana, Michel Pouget toteuttajana.
+> Fakta: Sarmiento toimeksiantajana, Michel Pouget toteuttajana; tämä
+> tapahtui kaksikymmentä vuotta ennen kuin Sarmientosta tuli presidentti.
 
-*Vastaus löytyy nostosta R4, ja kytkeytyy suoraan Historia-aiheen H1:een.*
+*Vastaus löytyy nostosta R4, ja kytkeytyy Historia-aiheen H1:een
+Sarmienton henkilön kautta — ei enää samana vuonna presidenttiyden
+kanssa, vaan kaksikymmentä vuotta aiemmin.*
 
 ---
 
@@ -857,9 +879,14 @@ tai sen välittömään läheisyyteen:
   kuvaava valokuva "Sarmiento (1873)" on olemassa Commonsissa (ks. osio 8).
 - **Yksi vuosi ennen (1872):** *Martín Fierro* julkaistaan (G2); päällikkö
   Calfucurán 6 000 soturia hyökkäävät siirtokuntiin (G4).
-- **Neljä-viisi vuotta ennen (1868–1869):** Sarmiento astuu virkaan ja
-  tilaa malbec-köynnökset (H1, R4); ensimmäinen kansanlaskenta (H2);
-  11 % maan väestöstä on tuoreita siirtolaisia (H2/H4).
+- **Neljä-viisi vuotta ennen (1868–1869):** Sarmiento astuu virkaan (H1);
+  ensimmäinen kansanlaskenta (H2); 11 % maan väestöstä on tuoreita
+  siirtolaisia (H2/H4).
+- **Kaksikymmentä vuotta ennen (1853):** Sarmiento antaa tehtäväksi
+  tuoda malbec-köynnökset Ranskasta Mendozaan (R4) — kauempana
+  ydinklusterista kuin muut nostot, mutta silti osa isoisän 1873
+  löytämää, jo juurtunutta maisemaa; ei liity ajallisesti Sarmienton
+  presidenttiyteen (ks. korjaushistoria, osio 13).
 - **Kolme vuotta ennen (1870):** Paraguayn sota päättyy (H3).
 - **Kolme vuotta jälkeen (1876):** ensimmäinen maahanmuuttolaki
   säädetään (H4); ensimmäinen kansallispuistoehdotus Iguazúlle (L1).
@@ -943,3 +970,77 @@ kategoria ei ole tässä koosteessa vahvistettu, vain hakusanaehdotettu.
 empanadojen kautta — jos/kun Salta saa oman kaupunkilehtensä, tämä
 maalehden nosto ja Saltan kansi kannattaa tarkistaa päällekkäisyyden
 varalta (sama periaate kuin USA:n Yellowstone/Grand Canyon -huomio).
+
+---
+
+## 12. Lähdevaroitukset (lisätty korjauskierroksella 23.8.2026)
+
+Kaksi tässä koosteessa käytettyä en-Wikipedia-lähdeartikkelia kantavat
+itse laatutunnisteita — kirjoittajan kannattaa varoa näitä jatkotyössä:
+
+- **"Immigration to Argentina"** (käytetty H2/H4:ssä, mm. 11 %/50 %-luku,
+  laki 817/1876, 1898-Hotel de Inmigrantes, 1,5 milj. espanjalaista /
+  3,8 milj. italialaista 1861–1920) kantaa tunnisteen
+  `{{AI-generated|date=June 2026}}` ja lisäksi
+  `{{clarify|reason=numbers don't match lead despite using same
+  sources}}` juuri 3,8 miljoonan italialaisen kohdalla (artikkelin oma
+  taulukko antaa italialaisille vain n. 2,34 miljoonaa). Tässä
+  koosteessa käytetyt luvut ovat sanatarkkoja lainauksia artikkelista,
+  mutta lähde on syytä tarkistaa toisesta lähteestä (esim. Baily 1999
+  suoraan) ennen lopullista kirjoitusta.
+- **"Asado"** kantaa tunnisteen `{{Original research|reason=Sources
+  cited do not substantiate the preceding claims or are absent, and
+  large swaths are copied verbatim.}}`. R1-nosto täsmää artikkelin
+  tekstiin sanatarkasti, mutta lähdettä ei kannata pitää yhtä vahvana
+  kuin muita ARG-nostoja.
+
+Molemmat tunnisteet on tarkistettu suoraan en-Wikipedian raakatekstistä
+korjauskierroksella; ne eivät ole suoria virheitä tässä faktapohjassa,
+vaan varoituksia lähteen omasta luotettavuudesta.
+
+---
+
+## 13. Korjaushistoria
+
+23.8.2026 — korjauskierros riippumattoman tarkistuksen
+(`docs/mantereet-tyoaineisto/tarkistus-argentina.md`, tuomio "kelpaa
+korjauksin") perusteella. Kaikki korjaukset tarkistettu itse uudelleen
+en-Wikipediasta (`action=raw`, `NODE_USE_ENV_PROXY=1`):
+
+1. **R4 (malbec/Sarmiento), virhe:** korjattu vuosiluku 1868 → 1853
+   (varmistettu suoraan Sarmiento-artikkelista: "On 17 April 1853 he
+   transformed his country's wine industry... such as Malbec, and by
+   creating the Quinta Agronómica of Mendoza"); poistettu virheellinen
+   väite Sarmientosta Mendozan maakuntahallitusmiehenä (hänen ainoa
+   kuvernöörinvirkansa oli Governor of San Juan, 3.1.1862–9.4.1864,
+   todettu artikkelin infoboxista — 1853 hänellä ei ollut virallista
+   virkaa). Nosto ja minitehtävä kirjoitettu uudelleen "kaksikymmentä
+   vuotta aiemmin" -kehykseen; osion 10 "1873-kulma koottuna" siirretty
+   vastaavasti omaksi kohdakseen, samoin L4:n ristiviittaus.
+2. **R3 (empanadafestivaali), virhe:** poistettu anakronistinen "jo
+   tuolloin" -muotoilu Tucumánin/Famaillán empanadafestivaalista;
+   festivaali kerrotaan nyt ajattomana/nykyaikaisena tapahtumana ilman
+   1873-sidontaa (mikään lähde ei anna sille 1800-luvun
+   perustamisvuotta).
+3. **R3 (empanadan alkuperä), virhe:** korjattu "700-luku" → "600-luku"
+   (varmistettu: en-Wikipedia sanoo "thought to have originated in
+   7th century Galicia" — 7th century = vuodet 601–700 = suomeksi
+   600-luku, ei 700-luku).
+4. **H1 (opettajamäärä), varoitus:** nostoteksti muutettu "yli 60
+   naisopettajaa" → "yli 70 naisopettajaa ja neljä miesopettajaa"
+   vastaamaan faktalistaa ja lähdettä (yli 75 opettajaa, 71 naista ja
+   4 miestä).
+5. **H2 (perustuslain vuosi), varoitus:** "1852" → "1853" (Argentiinan
+   perustuslaki hyväksyttiin virallisesti 1.5.1853); lisätty
+   huomautus, että "Immigration to Argentina" -lähdeartikkeli itse
+   käyttää molempia vuosia epäjohdonmukaisesti.
+6. **Lähdevaroitukset, varoitus:** lisätty uusi osio 12, joka merkitsee
+   "Immigration to Argentina" (AI-generated-lippu) ja "Asado"
+   (Original research -lippu) -lähteiden laatuvaroitukset kirjoittajan
+   varoitukseksi.
+7. **L1 (Iguazún kansallispuiston perustamisvuosi 1934), varoitus:**
+   varmistettu erikseen artikkelista "Iguazú National Park" (infobox:
+   `established = 1934`) — luku ei ole enää vahvistamaton.
+
+Ei koskettu tarkistusraporttiin (`tarkistus-argentina.md`) eikä
+js-tiedostoihin; ei committoitu.

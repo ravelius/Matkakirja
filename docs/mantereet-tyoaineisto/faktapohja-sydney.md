@@ -32,20 +32,26 @@ koske tätä koostetta. Ei nykysotaa, ei nykypolitiikkaa.
 
 ### Sivu A — id `kaupunki`, nimi "Sydney"
 
-**Johdanto (326 merkkiä):**
+**Johdanto (317 merkkiä):**
 
 > Sydney kohoaa jättimäisen Port Jacksonin sataman rannoille — eoran kansat
-> tunsivat lahden nimillä Warrane ja Kamay kauan ennen brittien
-> rangaistussiirtokuntaa 1788. Isoisän saapuessa 1873 vankikuljetukset olivat
-> päättyneet jo vuosikymmeniä sitten, ja kultaryntäyksen tuoma vauraus muutti
-> kadut hiekkakivirakennusten työmaiksi.
+> tunsivat lahden nimeltä Warrane kauan ennen brittien rangaistussiirtokuntaa
+> 1788. Isoisän saapuessa 1873 vankikuljetukset olivat päättyneet jo
+> vuosikymmeniä sitten, ja kultaryntäyksen tuoma vauraus muutti kadut
+> hiekkakivirakennusten työmaiksi.
+
+*(Korjattu tarkistus-sydney.md:n huomion 1 mukaisesti: Kamay on Botany Bayn
+nimi dharawalin kielellä — eri lahti, eri kieliryhmä — ei Sydney
+Coven/Port Jacksonin eoran nimi. "ja Kamay" poistettu.)*
 
 ### Sivu B — teemasivu, ehdotettu id `historia`, nimi "Historia"
 
 **Perustelu valinnalle:** Sydneyn 1873-kulma on poikkeuksellisen vahva —
-kolme erillistä rakennushanketta (kuvernöörin talon pylväikkö, suursynagogan
-suunnittelu, rautatieaseman uudisrakennus) ovat kaikki juuri isoisän
-matkavuodelta tai sen välittömästä läheisyydestä (ks. osio 8, huomio 1).
+kolme erillistä rakennushanketta (kuvernöörin talon vaunukatos/porte-cochère,
+suursynagogan suunnittelu, rautatieaseman uudisrakennus) ovat kaikki juuri
+isoisän matkavuodelta tai sen välittömästä läheisyydestä (ks. osio 8,
+huomio 1; huomaa korjaus — 1873:n lisäys oli porte-cochère, ei koko
+julkisivun pylväikkö, mutta vuosi 1873 itsessään pitää edelleen).
 Muut vakioaiheet eivät nouse yhtä terävinä tässä vaiheessa: kuvataide ja
 musiikki kytkeytyvät enemmän 1900-luvun alkuun (Heidelberg-koulukunnan
 taiteilijaleirit alkoivat vasta 1880-luvulla), ruoka on vahva aihe mutta
@@ -127,24 +133,38 @@ eteenpäin, ellei toisin mainita):
   rajoitettuun omaisuuskiintiöön perustuvalla äänioikeudella valitulla
   hallintoneuvostollaan.
 
-**Nosto K3 — "Aikapallo joka putosi joka päivä samaan aikaan" (504 merkkiä)**
+**Nosto K3 — "Aikapallo joka putosi joka päivä samaan aikaan" (598 merkkiä)**
 
 > Observatory Hillin torni pudotti aikapallon joka päivä täsmälleen kello
-> yhdeltä — merkki, jonka näki koko satama, ja samalla ammuttiin tykki Fort
-> Denisonin saarelta. Tapa alkoi 5. kesäkuuta 1858 ja jatkui isoisän
-> vierailun aikaan täsmälleen samalla koneistolla, jota käytetään yhä
-> tänään. Fort Denison itse oli rakennettu 1857 Krimin sodan aikaisen
-> venäläispelon vuoksi linnoittamaan satamaa: sen ainoa martello-torni on
-> ainoa koskaan Australiaan rakennettu ja viimeinen koko Brittiläisessä
-> imperiumissa.
+> yhdeltä — merkki, jonka näki koko satama, ja samalla ammuttiin tykki
+> Dawes Pointilta. Tapa alkoi 5. kesäkuuta 1858 ja jatkui isoisän vierailun
+> aikaan täsmälleen samalla koneistolla, jota käytetään yhä tänään. Tykki
+> siirrettiin Fort Denisonin saarelle vasta 1906, kolmisenkymmentä vuotta
+> isoisän matkan jälkeen. Fort Denison itse oli rakennettu 1857 Krimin
+> sodan aikaisen venäläispelon vuoksi linnoittamaan satamaa: sen ainoa
+> martello-torni on ainoa koskaan Australiaan rakennettu ja viimeinen koko
+> Brittiläisessä imperiumissa.
 
 Faktat ja lähteet:
 - Sydney Observatory rakennettiin 1857–1859 Observatory Hillille; ensimmäinen
   aikapallo (time ball) pudotettiin keskipäivällä 5.6.1858, ja pudotusaika
-  siirrettiin pian kello yhteen. Samalla ammuttiin kanuuna, aluksi Dawes
-  Pointilta, myöhemmin Fort Denisonilta. Aikapallo pudotetaan yhä päivittäin
-  kello 1 samalla alkuperäisellä koneistolla (nykyään sähkömoottorin avulla).
-  — en-Wikipedia "Sydney Observatory"
+  siirrettiin pian kello yhteen. Samalla ammuttiin kanuuna Dawes Pointilta.
+  Aikapallo pudotetaan yhä päivittäin kello 1 samalla alkuperäisellä
+  koneistolla (nykyään sähkömoottorin avulla). — en-Wikipedia "Sydney
+  Observatory"
+- Tykki siirrettiin Dawes Pointilta Fort Denisonin saarelle vasta 1906 —
+  isoisän vierailun (1873) aikaan tykki ammuttiin siis yhä Dawes
+  Pointilta, ei Fort Denisonilta. Fort Denisonin oma artikkeli kuvaa
+  vuodesta 1906 alkaen vakiintunutta, nimenomaan siihen paikkaan
+  liitettyä käytäntöä ("the custom of firing a gun daily at 1pm began in
+  1906" laivojen kronometrien tarkistamiseksi, jatkui toiseen
+  maailmansotaan asti ja elvytettiin 1986) — tämä ei sinänsä kiistä Sydney
+  Observatory -artikkelin tietoa aiemmasta, Dawes Pointilta ammutusta
+  tykistä vuodesta 1858, vaan täsmentää, milloin käytäntö siirtyi ja
+  vakiintui juuri Fort Denisonille. — en-Wikipedia "Fort Denison"
+  (*"In 1906, a saluting gun ... was transferred from Dawes Point to Fort
+  Denison."*; *"The custom of firing a gun daily at 1pm began in
+  1906..."*)
 - Fort Denison rakennettiin uudelleen (aiempi 1841 aloitettu linnoitustyö jäi
   kesken) 1855–1857 Krimin sodan aikaisen Venäjän-laivastopelon vuoksi;
   valmistui 14.11.1857. Sen martello-torni on ainoa koskaan Australiaan
@@ -255,23 +275,25 @@ Faktat ja lähteet (en-Wikipedia "History of Sydney"):
   omaisuuskiintiöön perustuvalla äänioikeudella valitulla
   hallintoneuvostolla.
 
-**Nosto H4 — "Vuosi jolloin kaikki oli kesken" (569 merkkiä)**
+**Nosto H4 — "Vuosi jolloin kaikki oli kesken" (585 merkkiä)**
 
-> Vuonna 1873 kuvernöörin talon eteen valmistui uusi pylväikkö — yksi
-> harvoista rakennushankkeista, joka valmistui juuri sinä vuonna, kun
-> kaikki muu oli vielä kesken. Samana vuonna arkkitehti Thomas Rowe
-> valittiin suunnittelemaan uutta suursynagogaa yhdistämään kaupungin kaksi
-> juutalaisyhteisöä — rakennus valmistui vasta 1878. Rautatieasema sai
-> uuden tiilirakennuksen, jonka piirustukset olivat vuodelta 1871 mutta
-> viralliset avajaiset vasta 1874. Isoisä käveli siis kaupungissa, joka
-> rakensi itseään joka kadulla yhtä aikaa, mutta ei ollut vielä missään
-> kohtaa valmis.
+> Vuonna 1873 kuvernöörin talon eteen valmistui uusi vaunukatos,
+> porte-cochère — yksi harvoista rakennushankkeista, joka valmistui juuri
+> sinä vuonna, kun kaikki muu oli vielä kesken. Samana vuonna arkkitehti
+> Thomas Rowe valittiin suunnittelemaan uutta suursynagogaa yhdistämään
+> kaupungin kaksi juutalaisyhteisöä — rakennus valmistui vasta 1878.
+> Rautatieasema sai uuden tiilirakennuksen, jonka piirustukset olivat
+> vuodelta 1871 mutta viralliset avajaiset vasta 1874. Isoisä käveli siis
+> kaupungissa, joka rakensi itseään joka kadulla yhtä aikaa, mutta ei ollut
+> vielä missään kohtaa valmis.
 
 Faktat ja lähteet:
-- Government House -kuvernöörintalon lisärakennukset: eteinen pylväikkö
-  (portico) valmistui 1873, itäinen veranta 1879. Talo itse rakennettiin
-  1837–1843/1847, ja kuvernööri asui siinä vuodesta 1845. — en-Wikipedia
-  "Government House, Sydney"
+- Government House -kuvernöörintalon lisärakennukset: eteinen vaunukatos
+  (porte-cochère) valmistui 1873, pylväikkö (Colonnade) ja itäinen arkadi
+  1879–80. Talo itse rakennettiin 1837–1843/1847, ja kuvernööri asui siinä
+  vuodesta 1845. — en-Wikipedia "Government House, Sydney", osio
+  "Modifications and dates" (*"1873 - A porte cochere added"*, *"1879-80 -
+  Construction of Colonnade and eastern arcade"*)
 - Kahden Sydneyn juutalaisyhteisön yhdistämiseksi rakennettavan uuden
   suursynagogan tontti ostettiin 1871, ja arkkitehti Thomas Rowe valittiin
   rajoitetun kilpailun kautta 1872. Peruskivi muurattiin 26.1.1875, ja
@@ -332,7 +354,8 @@ Faktat ja lähteet:
 
 > The Rocksin kapeat kujat olivat 1870-luvulla yhä köyhän väen aluetta:
 > seutu tunnettiin jengistä nimeltä Rocks Push, ja maine säilyi rosoisena
-> aina vuosisadan loppuun asti. Rannassa, alueen vanhimpien rakennusten
+> suunnilleen 1870-luvulle asti — isoisä siis näki aluetta juuri sen
+> rosoisimpana kautena. Rannassa, alueen vanhimpien rakennusten
 > joukossa, seisoi vuonna 1816 valmistunut Cadmans Cottage — 1870-luvulla
 > se toimi merimiesten kotina, paikkana jonne vasta maihin astuneet
 > purjehtijat saattoivat majoittua. Alue oli täynnä kapakoita,
@@ -494,7 +517,8 @@ kulttuuritapahtumat), ei 1800-luvun etnografisia "tyyppikuvia".
 1. Sydney Observatoryn aikapallotorni (Observatory Hill) lähikuvassa — koko
    teemasivun vahvin 1873-ankkuri (K3/J5).
 2. Fort Denisonin martello-torni ulkoa kuvattuna, ei ihmisiä.
-3. Government Housen pylväikkö (portico) — 1873-lisäys — julkisivukuvassa.
+3. Government Housen vaunukatos (porte-cochère) — 1873-lisäys —
+   julkisivukuvassa (ei pylväikkö/Colonnade, joka valmistui vasta 1879–80).
 
 ### 6.2 Kansikuvaehdokkaiden KATEGORIALISTAUS — 3 laajaa yleiskuvaa
 
@@ -530,7 +554,8 @@ huomio.
 3. Sydney Mintin (entinen Rum Hospital) hiekkakivijulkisivu (K4) — Commonsissa
    1870 vuodelta oleva historiallinen kuva "Sydney Mint 1870 SLNSW
    FL1229069.jpg" mainittu artikkelissa, tarkistettava lisenssi.
-4. Government Housen pylväikköjulkisivu (H4).
+4. Government Housen vaunukatos (porte-cochère) -julkisivu, 1873-lisäys
+   (H4) — ei pylväikkö/Colonnade (1879–80).
 5. Great Synagoguen julkisivu tai sen 1870-luvun rakennuspiirustus/-kuva
    (H4) — huom: rakennus valmistui vasta 1878, joten kuva on ajallisesti
    "tulevaisuudesta" isoisän näkökulmasta, kuvatekstissä syytä mainita.
@@ -593,16 +618,29 @@ vedosta").
 
 ## 8. Ristiriidat, epävarmuudet ja ei-Wikipedia-lähteet
 
-1. **Kolme rakennushanketta osuu poikkeuksellisen tarkasti vuoteen 1873** —
-   tämä on koko teemasivun `historia`-valinnan peruste. Government Housen
-   pylväikkö valmistui nimenomaan 1873 (en-Wikipedia "Government House,
-   Sydney"), arkkitehti Thomas Rowe valittiin suursynagogan suunnittelijaksi
-   1872 ja peruskivi muurattiin tammikuussa 1875 (en-Wikipedia "Great
-   Synagogue (Sydney)"), ja Central-aseman toisen rakennuksen piirustukset
-   ovat 1871 mutta avajaiset 1874 (en-Wikipedia "Central railway station,
-   Sydney") — kaikki kolme olivat siis kirjaimellisesti "kesken" tai juuri
-   valmistumassa isoisän matkavuonna. Tämä on huomionarvoinen löydös
-   Fablelle/kaaren kirjoittajalle, ei oma päätökseni.
+1. **Kolme rakennushanketta osuu poikkeuksellisen tarkasti vuoteen 1873 —
+   perustelu korjattu, mutta pitää edelleen.** Government Housen 1873-lisäys
+   oli vaunukatos (porte-cochère), EI pylväikkö — varsinainen pylväikkö
+   (Colonnade) ja itäinen arkadi valmistuivat vasta 1879–80 (en-Wikipedia
+   "Government House, Sydney", osio "Modifications and dates": *"1873 - A
+   porte cochere added"*, *"1879-80 - Construction of Colonnade and eastern
+   arcade"*). Tämä on korjattu kaikkialla koosteessa (H4, Sivu B:n
+   perustelu, kuva-aiheet). Itse 1873-ankkuri kuitenkin pitää: porte-cochère
+   valmistui juuri 1873, joten Government House -hanke osuu edelleen tarkasti
+   isoisän matkavuoteen — vain sanavalinta ja rakennusosan mittakaava
+   (pieni vaunukatos, ei koko julkisivun pylväikkö) muuttuu, ei vuosi.
+   Kaksi muuta ankkuria pitävät ennallaan: arkkitehti Thomas Rowe valittiin
+   suursynagogan suunnittelijaksi 1872 ja peruskivi muurattiin tammikuussa
+   1875 (en-Wikipedia "Great Synagogue (Sydney)"), ja Central-aseman toisen
+   rakennuksen piirustukset ovat 1871 mutta avajaiset 1874 (en-Wikipedia
+   "Central railway station, Sydney") — kaikki kolme olivat siis
+   kirjaimellisesti "kesken" tai juuri valmistumassa/valmistuneet isoisän
+   matkavuoden tienoilla. Perustelu ei siis romahda, mutta on syytä
+   kuvatekstissä ja leipätekstissä käyttää pientä, tarkkaa rakennusosaa
+   (vaunukatos) eikä antaa mielikuvaa suuresta, koko julkisivun
+   pylväshankkeesta. Tämä on huomionarvoinen löydös Fablelle/kaaren
+   kirjoittajalle, ei oma päätökseni. (Korjattu tarkistus-sydney.md:n
+   huomion 2 mukaisesti.)
 
 2. **Sydney Harbour Bridge ja Sydney Opera House EIVÄT olleet olemassa
    1873** — tärkeä anakronismivaroitus, samantyyppinen kuin New Yorkin
@@ -662,8 +700,75 @@ vedosta").
     (kaupunkilehti.md-ennakkotapaukset: Dubai, Doha, Salalah, Astana).
 
 11. **Sydney Observatory ja Fort Denisonin aikapallo/tykki-yhteys on
-    kaksi eri artikkelia yhdistävä väite** — molemmat artikkelit ("Sydney
-    Observatory" ja "Fort Denison") vahvistavat saman tarinan omista
-    näkökulmistaan (observatorio pudottaa pallon, tykki ammutaan samaan
-    aikaan, aluksi Dawes Pointilta myöhemmin Fort Denisonilta), joten
-    tieto on ristiriidaton mutta koottu kahdesta lähteestä.
+    kaksi eri artikkelia yhdistävä väite — korjattu tarkistus-sydney.md:n
+    huomion 3 mukaisesti.** Molemmat artikkelit ("Sydney Observatory" ja
+    "Fort Denison") vahvistavat saman tarinan omista näkökulmistaan
+    (observatorio pudottaa pallon kello yhdeltä vuodesta 1858, tykki
+    ammutaan samaan aikaan Dawes Pointilta), mutta tykki siirrettiin Fort
+    Denisonille vasta 1906 — Fort Denisonin oma artikkeli vahvistaa
+    suoraan: *"In 1906, a saluting gun ... was transferred from Dawes
+    Point to Fort Denison"* ja *"The custom of firing a gun daily at 1pm
+    began in 1906"*. Koosteen aiempi versio yhdisti nämä virheellisesti
+    niin, että tykki ammuttiin jo 1873 Fort Denisonilta — Nosto K3 on
+    korjattu käyttämään Dawes Pointia isoisän vierailun (1873) yhteydessä
+    ja mainitsemaan 1906-siirto erikseen.
+
+---
+
+## Korjaushistoria
+
+**23.8.2026 — neljä faktavirhettä korjattu docs/mantereet-tyoaineisto/
+tarkistus-sydney.md:n löydösten perusteella.** Korjaukset tarkistettu
+uudelleen suoraan en-Wikipediasta (`action=raw`, `NODE_USE_ENV_PROXY=1`;
+ei 429-vastauksia tässä erässä). Kaikkien kahdeksan noston (K1–K4, H1–H4)
+merkkimäärät mitattu uudelleen Nodella (`[...s].length`) korjausten
+jälkeen — kaikki edelleen 440–660 merkin sisällä (ks. tarkat luvut
+otsikoissa).
+
+1. **Sivu A:n johdanto (osio 1, tarkistuksen huomio 1):** poistettiin
+   virheellinen "ja Kamay" — Kamay on Botany Bayn nimi dharawalin
+   kielellä, ei Sydney Coven/Port Jacksonin nimi eoran kielellä. Johdanto
+   kertoo nyt vain Warranesta (Sydney Cove, eora). Vahvistettu:
+   en-Wikipedia "Sydney Cove" (*"The Eora name for Sydney Cove was
+   recorded ... Warrane..."*), "Botany Bay" (*"Botany Bay (Dharawal:
+   Kamay)"*, *"Botany Bay is named Kamay in the Dharawal language"*).
+
+2. **Government Housen 1873-lisäys (osio 2, tarkistuksen huomio 2):**
+   "pylväikkö" korvattiin "vaunukatoksella (porte-cochère)" Nostossa H4,
+   Sivu B:n perustelussa ja kuva-aiheissa (6.1, 6.3); 1879–80-lisäys
+   nimettiin uudelleen "pylväikkö (Colonnade) ja itäinen arkadi" -muotoon.
+   Vahvistettu: en-Wikipedia "Government House, Sydney", osio
+   "Modifications and dates" (*"1873 - A porte cochere added"*, *"1879-80
+   - Construction of Colonnade and eastern arcade"*). "Kolme
+   rakennushanketta 1873" -perustelu (osio 8, huomio 1) arvioitiin
+   uudelleen: se EI romahda, koska porte-cochère todella valmistui juuri
+   1873 — vuosiankkuri pitää, vain rakennusosan nimi ja mittakaava
+   muuttuivat (pieni vaunukatos, ei koko julkisivun pylväshanke). Kaksi
+   muuta ankkuria (Great Synagogue: arkkitehti valittu 1872; Central-asema:
+   piirustukset 1871, avajaiset 1874) pitävät ennallaan, kuten
+   tarkistusraportti totesi.
+
+3. **Fort Denisonin tykinlaukaus (osio 3, tarkistuksen huomio 3):**
+   Nosto K3:sta poistettiin anakronistinen kytkös "tykki Fort Denisonin
+   saarelta" isoisän 1873-vierailun yhteydessä. Tykki ammuttiin 1873
+   yhä Dawes Pointilta; siirto Fort Denisonille ja päivittäisen
+   klo 13 -laukauksen käytäntö vahvistuivat vasta 1906. Vahvistettu:
+   en-Wikipedia "Fort Denison" (*"In 1906, a saluting gun ... was
+   transferred from Dawes Point to Fort Denison"*, *"The custom of
+   firing a gun daily at 1pm began in 1906"*).
+
+4. **The Rocks Push -jengin maineen kesto (osio 4, tarkistuksen huomio
+   4):** Jakso 3:n leipäteksti muutettiin vastaamaan omaa
+   Faktat-lähteet-riviään — "vuosisadan loppuun asti" korvattiin
+   "suunnilleen 1870-luvulle asti". Vahvistettu: en-Wikipedia "The
+   Rocks, New South Wales" (*"It maintained this rough reputation until
+   approximately the 1870s."*).
+
+**Ei korjattu (tarkistuksen "varoitukset", eivät pakollisia):**
+Cadmans Cottagen vaihepäivämäärien pieni pyöristysero, "n. 15
+sumupäivää" -väitteen erillinen tarkistamattomuus, Elizabeth Farmin
+etäisyyden pisteellinen vahvistamattomuus ja Commons-kuvien
+lisenssitarkistus jäivät tarkoituksella koskematta — ne ovat
+tarkistusraportin mukaan tarkennuksia, eivät esteitä, ja niiden
+korjaaminen ei kuulunut tämän kierroksen neljän pakollisen kohdan
+rajaukseen.
