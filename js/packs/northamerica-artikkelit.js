@@ -268,4 +268,51 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'on ollut samalla korttelilla vuodesta 1803. Niagaran putouksille '
       + 'on päivämatka kaakkoon.',
   },
+  /* LOS ANGELES (23.8.2026). Samasta erästä kuin lehden
+   * tekstit (js/packs/kulttuuri-kategoriat.js, avain losangeles) ja
+   * tarkistettu en-Wikipedian raakateksteistä 23.8.2026. Vuoden 1873
+   * väkilukua ei väitetä tarkasti, koska sille ei ole omaa laskentaa:
+   * 1870 laskettiin 5 728 ja 1880 jo 11 183 asukasta. Nykypolitiikka
+   * ja vuoden 2025 tapahtumat on jätetty pois linjauksen mukaisesti. */
+  'Los Angeles': {
+    intro: 'Los Angeles on Kalifornian suurin ja koko Yhdysvaltain toiseksi '
+      + 'suurin kaupunki: rajojen sisällä asuu 3,87 miljoonaa ihmistä ja koko '
+      + 'seudulla lähes kolmetoista miljoonaa. Kaupunki on rakennettu vuorten '
+      + 'ja meren väliin jäävälle tasangolle, ja se ulottuu 71 kilometriä '
+      + 'pohjoisesta etelään ja 47 kilometriä idästä länteen. Korkein kohta '
+      + 'rajojen sisällä on 1 547-metrinen Mount Lukens.'
+      + '\n\n'
+      + 'Espanjalaiset perustivat pueblon 4. syyskuuta 1781 tongvien '
+      + 'Yaanga-kylän viereen ja antoivat sille nimen El Pueblo de Nuestra '
+      + 'Señora la Reina de los Ángeles. Meksikon itsenäistyttyä 1821 '
+      + 'paikasta tuli meksikolainen kaupunki ja Alta Californian '
+      + 'aluepääkaupunki, ja 1848 se siirtyi Yhdysvalloille. **Kun kaupunki '
+      + 'sai kunnalliset oikeudet 1850, siellä asui 1 610 ihmistä.**'
+      + '\n\n'
+      + '**Isoisän matkavuonna 1873** Los Angeles oli yhä tomuinen '
+      + 'pikkukaupunki hedelmätarhojen keskellä: vuoden 1870 laskennassa '
+      + 'asukkaita oli 5 728 ja vuonna 1880 jo 11 183. Sitten tulivat '
+      + 'rautatie 1876, öljy 1892 ja akvedukti 1913, ja jokainen niistä '
+      + 'moninkertaisti kaupungin.',
+    teksti: 'Los Angeles on Etelä-Kaliforniassa, rannikon ja San Gabriel '
+      + '-vuorten välisessä altaassa. Santa Monica -vuoret erottavat altaan '
+      + 'pohjoispuolella olevasta San Fernandon laaksosta, ja kaupunki jatkuu '
+      + 'vuorten molemmin puolin. Ilmasto on puolikuiva mutta lähellä '
+      + 'Välimeren ilmastoa: sadetta tulee runsaat 370 millimetriä vuodessa ja '
+      + 'lähes yksinomaan talvikuukausina.'
+      + '\n\n'
+      + 'Pueblon perustivat 1781 neljäkymmentäneljä siirtolaista, ja se pysyi '
+      + 'pienenä yli sadan vuoden ajan. Rautatie saapui 1876, öljyä löytyi '
+      + '1892 ja Owens-joelta tuleva akvedukti valmistui 1913 — vasta vesi '
+      + 'teki suurkaupungista mahdollisen. Elokuva-ala keskittyi kaupunkiin '
+      + '1910-luvulla, ja San Pedron lahden satama kasvoi sen jälkeen, kun '
+      + 'aallonmurtajaa alettiin rakentaa 1899.'
+      + '\n\n'
+      + 'Nykyään kaupungissa ei ole yhtä keskustaa vaan monta, ja etäisyydet '
+      + 'ovat pitkiä. Vanhin kolkka on El Pueblo vanhan plazan ympärillä, ja '
+      + 'sen vieressä on Union Station, jonne kaikki kaupungin junat '
+      + 'päättyvät. Asukkaista 47,2 prosenttia on latinotaustaisia ja '
+      + 'meksikolaistaustaiset ovat suurin yksittäinen ryhmä; seudun '
+      + 'alkuperäiskansa tongvat elää alueella yhä.',
+  },
 };

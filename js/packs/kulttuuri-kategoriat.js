@@ -63457,4 +63457,560 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * LOS ANGELES (23.8.2026). Pohjois-Amerikan laudan kaupunkilehti,
+   * kolme sivua: kansi `kaupunki` sekä teemasivut `historia` ja
+   * `alkuperaiskansat` (sama sivujako kuin Vancouverissa).
+   *
+   * LÄHTEET. Pohjana ovat docs/mantereet-tyoaineisto/
+   * faktapohja-losangeles.md ja tarkistus-losangeles.md; jälkimmäinen
+   * ei ole mainissa vaan commiteissa 5ae70094 ja 68da4f28.
+   * TARKISTUS VOITTAA FAKTAPOHJAN. Faktapohjan ulkopuoliset väitteet
+   * on luettu en-Wikipedian raakatekstistä (action=raw,
+   * NODE_USE_ENV_PROXY=1) 23.8.2026: "Los Angeles", "Tongva",
+   * "Mission San Gabriel Arcángel", "Griffith Observatory",
+   * "Olvera Street", "Bradbury Building", "Paramount Pictures",
+   * "Venice, Los Angeles", "Los Angeles Memorial Coliseum".
+   *
+   * TARKISTUSRAPORTIN PAKOLLINEN KORJAUS ON TEHTY. Tongva-väestön
+   * luku "noin 1 700" EI ole tuore: Wikipedian oma teksti sanoo
+   * toisaalla "In the 21st century, an estimated 1,700 people
+   * self-identify" mutta toisaalla täsmällisemmin "In 2008, more than
+   * 1,700 people identified as Tongva or claimed partial ancestry".
+   * Nosto A3 sanoo vuoden 2008 ääneen, nostaa tuoreemman luvun
+   * (2013: yli 3 900 jäsentä neljässä ryhmässä) pääluvuksi ja kertoo
+   * lisäksi tuoreimman tapahtuman: lokakuussa 2022 yksityinen
+   * maanomistaja luovutti Altadenasta eekkerin maata Tongva Taraxat
+   * Paxaavxa Conservancylle, ensimmäisenä tongvien hallussa olevana
+   * maana Los Angelesin piirikunnassa kahteensataan vuoteen.
+   *
+   * KOLME MUUTA TARKISTUKSEN HUOMIOTA RATKAISTU. (1) Mission San
+   * Gabrielin siirtovuosi on lähteissä ristiriitainen: "Tongva"
+   * sanoo 1774, lähetysaseman oma artikkeli 1776 ("In 1776, a flash
+   * flood destroyed much of the crops and ruined the original Mission
+   * complex"). Ristiriita on KIRJOITETTU AUKI lukijalle nostossa A4
+   * (reseptin sääntö), koska kumpaakaan lähdettä ei voi osoittaa
+   * toista tarkemmaksi. (2) Kohteen suunta keskustasta on
+   * ITÄKOILLINEN, ei itäinen: tarkistuksen oma laskelma antaa
+   * bearingiksi 68° ja etäisyydeksi 14,18 km, ja A4 sanoo "runsaat
+   * neljätoista kilometriä keskustasta itäkoilliseen". Tämä erä ei
+   * tee kohdekarttaa, joten korjaus näkyy nostotekstissä.
+   * (3) Tongva Sacred Springs Foundationin perustamisvuosi on
+   * täsmällisesti 1992, ja nosto A2 käyttää sitä eikä faktapohjan
+   * pyöristystä "1990-luvulla".
+   *
+   * SPOILERISUOJA MENEE TARKISTUSTA PIDEMMÄLLE. Visa
+   * (js/packs/northamerica-questions.js, avain losangeles) kysyy
+   * viittä asiaa: Hollywood elokuvateollisuuden keskuksena, San
+   * Andreasin siirros, Tyynimeri, LA/Long Beachin satama maan
+   * vilkkaimpana ja juomaveden tulo akvedukteja pitkin. Yhdenkään
+   * visan fakta-kentän sisältöä ei toisteta: Hollywood-kyltin
+   * "1923, alun perin Hollywoodland" puuttuu kokonaan, satamaa ei
+   * sanota missään maan vilkkaimmaksi, akveduktinostossa lähdejoki on
+   * Owens eikä visan Sierra Nevada tai Colorado. Lisäksi H4 EI mainitse
+   * San Andreasin siirrosta nimeltä lainkaan (tarkistus hyväksyi nimen,
+   * mutta se on suoraan yhden kysymyksen vastaus) vaan puhuu seudun
+   * suurimmasta siirroksesta, järistyssykleistä ja Northridgesta.
+   *
+   * MINITEHTÄVÄT (2 kpl) eivät osu visaan: historian tehtävä kysyy
+   * vuoden 1815 tulvasta ja alkuperäiskansojen tehtävä Yaangan
+   * merkitystä. Molempien vastaus on SAMAN SIVUN nostossa (H1 ja A1).
+   *
+   * PILARI 3. Tongvat kuvataan nykyisenä kansana: A2 kertoo yhä
+   * virtaavista lähteistä ja niiden seremoniakäytöstä, A3 nykyisistä
+   * ryhmistä, jäsenmääristä ja 2022 palautetusta maasta. A4 kertoo
+   * lähetysaseman pakkotyön ja kuolleisuuden faktoina ilman
+   * yksityiskohtien korostamista (Tongva-artikkelin oma
+   * keskitysleirivertaus on jätetty pois). Hollywood on yksi nosto
+   * kahdestatoista: kaupunkia katsotaan pueblon, veden, sataman,
+   * maankamaran, meksikolaisen arjen ja alkuperäiskansojen kautta.
+   *
+   * VUOSI 1873 ON SANOTTU AUKI. Silloin täällä asui muutama tuhat
+   * ihmistä (laskennat: 5 728 vuonna 1870 ja 11 183 vuonna 1880;
+   * vuodelle 1873 ei ole omaa laskentaa, joten tarkkaa lukua ei
+   * väitetä), ja komein rakennus oli 1870 avattu Pico House. Tämä
+   * kerrotaan etusivun leipätekstissä (northamerica-artikkelit.js),
+   * kaupunkisivun johdannossa ja nostoissa LA2 ja LA3.
+   *
+   * EI NYKYPOLITIIKKAA. En-Wikipedian "21st century" -osion vuoden
+   * 2025 tapahtumat (maastopalot, mielenosoitukset ja liittovaltion
+   * joukot) on jätetty kokonaan pois linjauksen mukaisesti.
+   *
+   * KUVAT: 20 kuvaa, kaikki haettu Commonsin rajapinnalla, lisenssi ja
+   * tekijä luettu extmetadatasta ja jokainen kuva katsottu silmin 900
+   * pikselin esikatseluna. HYLKÄYKSET: Pico Housen vuoden 1870
+   * hevosraitiovaunukuva ("PICO HOUSE LOS ANGELES CAL 1870"
+   * negatiiviin kirjoitettuna), San Pedron aallonmurtajan
+   * rakennuskuva (negatiivinumero 2807), Hollywoodin vuoden 1895
+   * kukkulakuva (numero 7506-1 ja käsinkirjoitusta), Mission San
+   * Gabrielin HABS- ja CHS-kuvat (HABS-litera ja negatiivinumerot),
+   * Hollywoodin 1920-luvun ilmakuva (negatiivinumerot JA kukkulalla
+   * näkyvä kyltti, joka vuotaisi visan faktan), Ávila-adoben
+   * julkisivukuva (viisi tunnistettavaa kasvoa etualalla), Griffith
+   * Observatory parkkipaikalta (kartiot ja autot hallitsevat),
+   * Highsmithin "California coastline near Los Angeles" ja "Pacific
+   * Coast shoreline" (kuvat ovat Malibun rantahuviloita, eivät Los
+   * Angelesia) ja Marina del Reyn ilmakuva (lentokoneen ikkunankehys
+   * kuvassa).
+   *
+   * ENNEN JA NYT -PARIA EI OLE. Kaupungin valokuvataulun
+   * (northamerica-valokuvat.js) vanha vedos on Broadwaylta
+   * 1890-luvulta, mutta siinä on negatiiviin kirjoitettu numero
+   * "2858 C.C.P.", eikä muuta kuvasäännöt täyttävää vanhaa
+   * yleisnäkymää löytynyt Commonsista. Pari jää siis jatkotyöksi
+   * samaan tapaan kuin Dubaissa ja Dohassa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä. Matkaoppaan jakso 5
+   * nojaa siis en-Wikipedian Climate-osioon ja SANOO SEN ÄÄNEEN
+   * (Samarkandin ja Vancouverin malli). Mittauspiste olisi keskusta
+   * 34,05 / -118,25.
+   *
+   * KUVATEKSTIT: yksi virke, ja se kertoo KOHTEESTA eikä kuvaile
+   * kuvaa (omistajan linjaus 22.8.2026).
+   */
+  losangeles: [
+    {
+      id: 'kaupunki',
+      nimi: 'Los Angeles',
+      johdanto: 'Yhdentoista perheen pueblo hedelmätarhojen keskellä kasvoi '
+        + 'Yhdysvaltain toiseksi suurimmaksi kaupungiksi. Isoisän matkavuonna '
+        + '1873 täällä asui muutama tuhat ihmistä, ja komein rakennus oli '
+        + 'kolme vuotta aiemmin avattu hotelli.',
+      kansikuvat: [
+        {
+          tiedosto: 'Aerial view of downtown Los Angeles, California LCCN2013632690.tif',
+          selite: 'Keskusta on kaupungin ainoa tornien rypäs, sillä muuten '
+            + 'Los Angeles leviää matalana runsaan 1 300 neliökilometrin '
+            + 'alalle.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'San Fernando Valley, California LCCN2011634778.tif',
+          selite: 'Santa Monica -vuorten pohjoispuolinen San Fernandon laakso '
+            + 'kuuluu suurelta osin Los Angelesiin, vaikka vuoret erottavat '
+            + 'sen keskustan altaasta.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Aerial view of Venice Beach, California LCCN2013633205.tif',
+          selite: 'Venice perustettiin 1905 merenrantalomakohteeksi ja oli oma '
+            + 'kaupunkinsa vuoteen 1926, jolloin se liitettiin Los Angelesiin.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa eri puolilta — keskusta
+       * ilmasta, koko allas Hollywoodin kukkuloilta ja satama-alue
+       * San Pedron lahdella. Yksikään ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Aerial view of Los Angeles, California LCCN2011634747.tif',
+          selite: 'Los Angeles ulottuu 71 kilometriä pohjoisesta etelään ja 47 '
+            + 'kilometriä idästä länteen, ja matalaa kaupunkia riittää '
+            + 'näköpiirin reunaan asti.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Los Angeles from Hollywood Hills.jpg',
+          selite: 'Vasemmalla kukkulalla kohoava Griffith Observatory avattiin '
+            + '1935, ja lahjoittajansa testamentin mukaan sinne on ollut alusta '
+            + 'asti vapaa pääsy.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          tiedosto: 'Port of Los Angeles Aerial.jpg',
+          selite: 'San Pedron lahden satama-alue on erotettu avomerestä '
+            + 'aallonmurtajalla, jonka rakentaminen alkoi 1899.',
+          lahde: 'antoine fleitz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Neljäkymmentäneljä siirtolaista ja käsin kaivettu oja',
+          tiedosto: 'Map of the old portion of the city surrounding the plaza, showing the old plaza church, public square, the first gas plant and adode buildings, Los Angeles city, March 12th, 1873 LOC 2003623386.jpg',
+          teksti: 'Kalifornian espanjalaiskuvernööri Felipe de Neve määräsi '
+            + 'perustettavaksi uuden pueblon Porciúncula-joen eli nykyisen Los '
+            + 'Angeles -joen varrelle. Neljäkymmentäneljä siirtolaista '
+            + 'yhdestätoista perheestä saapui paikalle 4. syyskuuta 1781 ja '
+            + 'antoi asutukselle nimen El Pueblo de Nuestra Señora la Reina de '
+            + 'los Ángeles; ainakin kymmenen perustajaa oli mustia tai '
+            + 'osittain afrikkalaista syntyperää. Paikka valittiin tongvien '
+            + 'Yaanga-kylän viereltä, ja vesihuolto kaivettiin käsin heti '
+            + 'ensimmäisen kuukauden aikana. Zanja Madre -oja haarautui '
+            + 'myöhemmin kahdeksaan sivu-uomaan.',
+          selite: 'Maanmittari A. G. Ruxtonin kartta maaliskuulta 1873 näyttää '
+            + 'vanhan plazan, sen kirkon ja ympärillä olleet adobetalot.',
+          lahde: 'Ruxton, A. G., Wikimedia Commons (PD)',
+          wiki: 'Zanja Madre',
+        },
+        {
+          otsikko: 'Kuvernöörin hotelli pikkukaupungissa',
+          tiedosto: 'Pico House dllu.jpg',
+          teksti: 'Pío Pico, Meksikon Alta Californian viimeinen kuvernööri, '
+            + 'tilasi 1869 arkkitehti Ezra F. Kysorilta kolmikerroksisen '
+            + 'luksushotellin vanhan plazan laidalle. Italialaistyylinen Pico '
+            + 'House avautui 1870 kaupunkiin, jossa saman vuoden '
+            + 'väestönlaskenta laski 5 700 asukasta: huoneita oli aluksi 33 ja '
+            + 'myöhemmin lähes 80, ja sisäpihalla oli suihkulähde ja '
+            + 'lintutarha. Loisto jäi lyhyeksi. Kun Southern Pacific '
+            + '-rautatie saapui 1876, liike-elämä alkoi siirtyä etelämmäs, ja '
+            + 'Pico menetti hotellinsa sanfranciscolaiselle säästöpankille.',
+          selite: 'Pico House seisoo yhä vanhan plazan laidalla, missä se '
+            + 'avattiin 1870.',
+          lahde: 'Daniel L. Lu (user:dllu), Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pico House',
+        },
+        {
+          otsikko: 'Rautatie, öljy ja satatuhatta asukasta',
+          tiedosto: 'View of Los Angeles from the east. Brooklyn Hights in the foreground; Pacific Ocean and Santa Monica Mountains in the background. (pm000250) CROPPED.jpg',
+          teksti: 'Southern Pacificin rata San Franciscosta valmistui 1876 ja '
+            + 'Santa Fe seurasi 1885 — vasta silloin kaupunki oli kunnolla '
+            + 'kiinni muussa maassa. Öljyä löytyi kaupungista ja sen '
+            + 'ympäristöstä 1892, ja vuoteen 1923 mennessä löydöt olivat '
+            + 'tehneet Kaliforniasta maan suurimman öljyntuottajan: osuus koko '
+            + 'maailman tuotannosta oli noin neljännes. Väkiluku seurasi '
+            + 'perässä. Vuoden 1900 laskennassa asukkaita oli yli 102 000 eli '
+            + 'kaksikymmenkertaisesti isoisän matka-ajan pikkukaupunkiin '
+            + 'verrattuna.',
+          selite: 'E. S. Gloverin vuoden 1877 lintuperspektiivikuvassa kaupunki '
+            + 'on vielä pieni ja sitä ympäröivät hedelmätarhat.',
+          lahde: 'Glover, E. S. 1844-1920. (Eli Sheldon), Wikimedia Commons (PD)',
+          wiki: 'Los Angeles',
+        },
+        {
+          otsikko: 'Ojasta akveduktiksi',
+          tiedosto: 'Los Angeles Aqueduct (29081069995).jpg',
+          teksti: 'Pueblon oma maaoja riitti kasteluun ja kotitalouksille yli '
+            + 'sadan vuoden ajan, mutta 1900-luvun alun kasvu ohitti sen '
+            + 'nopeasti. Insinööri William Mulhollandin johtama työmaa '
+            + 'rakensi Owens-joelta 233 mailin eli 375 kilometrin mittaisen '
+            + 'akveduktin, joka kuljettaa veden kaupunkiin pelkän painovoiman '
+            + 'varassa; linja valmistui 1913. Kaupungin peruskirja kielsi '
+            + 'myymästä vettä rajojen ulkopuolelle, ja moni naapurikunta '
+            + 'päätyi siksi liittymään Los Angelesiin päästäkseen veden '
+            + 'ääreen.',
+          selite: 'Akvedukti tuo Owens-joen vettä kaupunkiin painovoiman '
+            + 'avulla, ja osa reitistä kulkee avoimena kanavana.',
+          lahde: 'Tony Webster from Minneapolis, Minnesota, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Los Angeles Aqueduct',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bradbury building LC-DIG-pplot-13725-01403.jpg',
+          selite: 'Bradbury Buildingin lasikatteinen valopiha portaikkoineen, '
+            + 'avohisseineen ja valurautakaiteineen valmistui 1893.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        kappale: 'Los Angeles on Yhdysvaltain toiseksi suurin kaupunki, eikä '
+          + 'sillä ole yhtä keskustaa vaan monta. Lyhyin reitti historiaan on '
+          + 'El Pueblo vanhan plazan ympärillä: siellä ovat Ávila-adobe, Pico '
+          + 'House ja Olvera Streetin tori, ja saman korttelin takana on Union '
+          + 'Station. Keskustan tornien juurella on kävelymatkan päässä '
+          + 'Bradbury Building, jonka 1893 valmistunut valopiha tunnetaan '
+          + 'lukemattomista elokuvista, ja Broadwayn vanha teatterikatu. '
+          + 'Griffith Parkissa Mount Hollywoodin etelärinteellä oleva '
+          + 'observatorio on maksuton näköalapaikka koko altaan yli, ja '
+          + 'lännessä ovat rannat: '
+          + 'Venicessä kulkee kahden ja puolen mailin mittainen Ocean Front '
+          + 'Walk. Etäisyydet ovat pitkiä, mutta Union Stationista lähtevät '
+          + 'metro- ja pikaraitiolinjat vievät suureen osaan kohteista.',
+        artikkeli: {
+          nimi: 'Matkailijan Los Angeles',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa on monta keskustaa, vuoret pohjoisessa ja '
+            + 'meri lännessä — ja jokaisen välissä ajomatka.',
+          nosto: 'Vuonna 1873 Los Angelesissa asui muutama tuhat ihmistä; nyt '
+            + 'kaupungissa on 3,87 miljoonaa asukasta ja seudulla lähes 13 '
+            + 'miljoonaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainvälinen lentoasema LAX on matkustajamäärältään '
+                + 'maailman kahdeksanneksi vilkkain, ja se on kaupungin '
+                + 'länsilaidalla lähellä rantaa. Junat kohtaavat Union '
+                + 'Stationilla, joka avattiin 1939 ja on yhä Yhdysvaltain '
+                + 'länsiosien suurin matkustajaterminaali: kaikki Amtrakin ja '
+                + 'Metrolinkin linjat päättyvät sinne, ja Amtrakin nousuja ja '
+                + 'poistumisia kirjattiin siellä yli miljoona vuonna 2025. '
+                + 'Samalta asemalta lähtee Metro, jossa on kaksi metrolinjaa '
+                + 'ja neljä pikaraitiolinjaa, 110 asemaa ja 202 kilometriä '
+                + 'rataa; pikaraitioverkko on matkustajamäärältään koko maan '
+                + 'vilkkain. Amtrakin Pacific Surfliner ajaa rannikkoa pitkin '
+                + 'San Diegoon ja pohjoiseen San Luis Obispoon, ja se on '
+                + 'yhtiön vilkkain linja koillisen pääradan ulkopuolella.',
+              kuva: {
+                tiedosto: 'Palm Tree Pathway to Union Station, Los Angeles.jpg',
+                selite: 'Union Station avattiin 1939, ja siellä päättyvät '
+                  + 'kaikki kaupungin kauko- ja lähijunalinjat.',
+                lahde: 'Phileven, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki kattaa 502,7 neliömailia eli runsaat 1 300 '
+                + 'neliökilometriä ja ulottuu 71 kilometriä pohjoisesta '
+                + 'etelään ja 47 kilometriä idästä länteen. Korkein kohta on '
+                + '1 547-metrinen Mount Lukens San Gabriel -vuorten juurella — '
+                + 'harva suurkaupunki nostaa rajojensa sisällä yli puolentoista '
+                + 'kilometrin vuorta. Santa Monica -vuoret jakavat kaupungin '
+                + 'kahtia aivan keskustan tuntumassa: eteläpuolella on Los '
+                + 'Angelesin allas, pohjoispuolella San Fernandon laakso, joka '
+                + 'on suureksi osaksi samaa kaupunkia. Sama harju jakaa myös '
+                + 'sään, sillä rannikolla ja laaksossa mitataan samaan aikaan '
+                + 'aivan eri lukemia.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: meksikolainen Los Angeles',
+              teksti: 'Lähes joka toinen los angelesilainen on '
+                + 'latinotaustainen — 47,2 prosenttia — ja meksikolais'
+                + 'taustaiset ovat 31,9 prosentin osuudella kaupungin suurin '
+                + 'yksittäinen alkuperäryhmä. Vanhin kerros näkyy plazan '
+                + 'vieressä. Olvera Street tunnettiin alun perin nimellä Wine '
+                + 'Street, se nimettiin 1877 tuomari Agustín Olveran mukaan, '
+                + 'ja 1930 paikalliset kauppiaat muuttivat sen meksikolaiseksi '
+                + 'toriksi, joka toimii yhä samalla kadulla. Kojuista ostetaan '
+                + 'käsityötä, ruokaa ja soittimia, ja saman kadun varrella on '
+                + 'kaupungin vanhin säilynyt asuinrakennus.',
+              kuva: {
+                tiedosto: 'Olvera Street in the oldest part of downtown Los Angeles, California LCCN2013632327.tif',
+                selite: 'Olvera Streetin kojuissa myydään käsityötä ja '
+                  + 'soittimia; katu muutettiin meksikolaiseksi toriksi 1930.',
+                lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kolmet olympialaiset',
+              teksti: 'Los Angeles isännöi kesäolympialaiset ensin 1932, kun '
+                + 'kaupungin väkiluku oli juuri ylittänyt miljoonan, ja '
+                + 'uudelleen 1984, jolloin kisoista tuli taloudellisesti '
+                + 'tuottoisemmat kuin mistään aiemmista — neljäntoista maan '
+                + 'boikotista huolimatta. Vuoden 2028 kisat ovat kaupungin '
+                + 'kolmannet, ja vasta Lontoo ja Pariisi ovat isännöineet '
+                + 'kesäkisat yhtä monta kertaa. Molempien aiempien kisojen '
+                + 'pääareena oli Los Angeles Memorial Coliseum, joka valmistui '
+                + '1923 ensimmäisen maailmansodan veteraanien muistomerkiksi; '
+                + 'vuoden 1932 kisoja varten katsomo laajennettiin 101 574 '
+                + 'paikkaan ja stadion tunnettiin hetken nimellä Olympic '
+                + 'Stadium. Vuonna 2028 siitä tulee maailman ensimmäinen '
+                + 'stadion, joka on isännöinyt kesäkisat kolmesti.',
+              kuva: {
+                tiedosto: 'Los Angeles Memorial Coliseum (29297859221).jpg',
+                selite: 'Coliseumin peristyylin yllä seisova olympiamalja on '
+                  + 'vuoden 1932 kisojen perua.',
+                lahde: 'Anthony Kernich from Adelaide, Australia, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Los Angelesista puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Los Angeles -artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. Ilmasto '
+                + 'luokitellaan puolikuivaksi (Köppen BSh), mutta se sivuaa '
+                + 'Välimeren ilmaston rajaa ja saa sadetta enemmän kuin '
+                + 'useimmat puolikuivat alueet. Keskustaan sataa keskimäärin '
+                + '372 millimetriä vuodessa, pääosin marras–maaliskuussa, ja '
+                + 'mitattavia sadepäiviä on vain noin 35. Talvipäivän '
+                + 'keskilämpötila on noin 20 astetta, ja rannikkoaltaassa '
+                + 'ylitetään 32 astetta vain noin tusinana päivänä vuodessa, '
+                + 'useimmiten syyskuussa. Ennätykset kertovat vaihtelusta: '
+                + 'keskustan asemalla 45 astetta 27.9.2010 ja −2 astetta '
+                + '4.1.1949, ja kaupungin sisällä korkein koskaan mitattu on '
+                + '49 astetta Woodland Hillsissä 6.9.2020. Heinäkuun '
+                + 'päivälämpötila on Santa Monica Pierillä noin 21 astetta '
+                + 'mutta 24 kilometrin päässä sisämaassa Canoga Parkissa noin '
+                + '35 astetta. Aurinkoa riittää yli 3 000 tuntia vuodessa, '
+                + 'joulukuun seitsemästä tunnista heinäkuun kahteentoista '
+                + 'päivässä.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Espanjalaisesta pueblosta tuli meksikolainen kaupunki, sitten '
+        + 'amerikkalainen pikkukaupunki ja lopulta 1900-luvun jättiläinen. '
+        + 'Maankamara sen alla ei ole koskaan pysynyt aivan paikallaan.',
+      tehtava: {
+        kysymys: 'Mikä tuhosi alkuperäisen pueblon ja siirsi kaupungin nykyisen plazan paikalle?',
+        vaihtoehdot: [
+          'Vuoden 1815 tulva',
+          'Vuoden 1857 maanjäristys',
+          'Vuoden 1871 tulipalo',
+          'Pitkä kuivuus 1830-luvulla',
+        ],
+        oikea: 0,
+        fakta: 'Joen läheisyys kostautui: tulva pyyhkäisi 1815 pueblon '
+          + 'mennessään, ja yhteisö rakensi uudelleen kauemmas vedestä. '
+          + 'Kolme vuotta myöhemmin valmistui Ávila-adobe, joka on yhä '
+          + 'kaupungin vanhin säilynyt asuinrakennus.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tulva siirsi koko kaupungin',
+          tiedosto: 'Pueblo de Los Angeles in the evening.jpg',
+          teksti: 'Alkuperäinen pueblo rakennettiin lähelle jokea, ja vuoden '
+            + '1815 tulva pyyhkäisi sen mennessään. Yhteisö rakensi uudelleen '
+            + 'kauemmas vedestä, nykyisen plazan kohdalle, ja sen ympärille '
+            + 'syntyi kaupungin ensimmäinen kivikeskusta: kirkko, joka '
+            + 'perustettiin 1814 ja valmistui 1822 ja jonka nykyinen rakennus '
+            + 'on vuodelta 1861, vuonna 1818 rakennettu Ávila-adobe eli '
+            + 'kaupungin vanhin säilynyt asuinrakennus ja lopulta Pico House. '
+            + 'Vuonna 1891 Los Angeles Times laski, että yhdeksänkymmentä '
+            + 'prosenttia edellisen vuosikymmenen rakentamisesta oli '
+            + 'tapahtunut plazan eteläpuolella.',
+          selite: 'El Pueblo de Los Angeles vanhan plazan ympärillä on '
+            + 'kaupungin vanhinta kolkkaa ja nykyään historiallinen '
+            + 'monumenttialue.',
+          lahde: 'Downtowngal, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'El Pueblo de Los Ángeles Historical Monument',
+        },
+        {
+          otsikko: 'Kiista ratkaisi sataman paikan',
+          tiedosto: 'Exterior view of the Los Angeles and San Pedro Station, the first railroad into Los Angeles, ca.1880 (CHS-6107).jpg',
+          teksti: 'San Pedron lahti oli 1800-luvulla niin matala mutakenttä, '
+            + 'ettei se kestänyt laituria: laivat purettiin veneisiin tai '
+            + 'ajettiin rantaan. Phineas Banning rakensi 1868 alueen '
+            + 'ensimmäisen rautatien satamalta kaupunkiin ja ruoppasi 1871 '
+            + 'kanavan Wilmingtoniin kymmenen jalan syvyyteen; satama '
+            + 'käsitteli tuona vuonna 50 000 tonnia tavaraa. Kun Southern '
+            + 'Pacific yritti 1890-luvulla siirtää sataman Santa Monicaan, '
+            + 'syntyi kiista nimeltä Free Harbor Fight. Se ratkesi 1897 San '
+            + 'Pedron hyväksi, ja aallonmurtajan rakentaminen alkoi 1899.',
+          selite: 'Los Angeles & San Pedro -radan asema noin 1880; rata oli '
+            + 'alueen ensimmäinen ja yhdisti sataman kaupunkiin.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Port of Los Angeles',
+        },
+        {
+          otsikko: 'Kymmenestä yhtiöstä maailman keskukseksi',
+          tiedosto: 'Paramount Pictures entrance gate, Hollywood, Los Angeles, California LCCN2011630074.tif',
+          teksti: 'Hollywood liitettiin Los Angelesiin 1910, ja kaupungissa '
+            + 'toimi silloin jo kymmenen elokuvayhtiötä. Länteen houkuttelivat '
+            + 'etäisyys idän patenttiriidoista ja ympärivuotinen aurinko, joka '
+            + 'teki ulkokuvauksista halpoja. Kasvu oli nopeaa: vuoteen 1921 '
+            + 'mennessä yli 80 prosenttia koko maailman elokuvatuotannosta oli '
+            + 'keskittynyt Los Angelesiin. Alan tulot myös pehmensivät '
+            + '1930-luvun lamaa täällä, kun moni muu yhdysvaltalaiskaupunki '
+            + 'kärsi siitä raskaasti.',
+          selite: 'Paramount muutti Melrose Avenuen tontilleen 1927 ja on '
+            + 'nykyään ainoa suuri elokuvastudio, joka sijaitsee yhä '
+            + 'Hollywoodissa.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+          wiki: 'Paramount Pictures',
+        },
+        {
+          otsikko: 'Maa, joka ei pysy paikallaan',
+          tiedosto: 'Northridge Earthquake 1994 0003.jpg',
+          teksti: 'Etelä-Kaliforniassa rekisteröidään noin 10 000 '
+            + 'maanjäristystä vuodessa, ja valtaosa niistä on niin pieniä, '
+            + 'ettei niitä tunne. Seudun suurin siirros liikahtaa kunnolla '
+            + 'keskimäärin 110–140 vuoden välein, ja edellisestä kerrasta eli '
+            + 'vuoden 1857 Fort Tejonin järistyksestä on kulunut jo kauemmin '
+            + 'kuin isoisän matkasta. Viimeisin raskas isku koettiin 1994, kun '
+            + 'magnitudin 6,7 Northridgen järistys aiheutti 12,5 miljardin '
+            + 'dollarin vahingot ja 72 kuolemaa.',
+          selite: 'Vuoden 1994 järistyksen jäljiltä kadunvarsille kasattiin '
+            + 'sortuneiden savupiippujen ja muurien betonia.',
+          lahde: 'Jongriffin, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: '1994 Northridge earthquake',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Tongvat asuivat Los Angelesin altaassa vuosituhansia ennen '
+        + 'espanjalaisia, ja he elävät alueella yhä — omine yhteisöineen, '
+        + 'pyhine lähteineen ja omalla nimellään.',
+      tehtava: {
+        kysymys: 'Mitä tongvien kylän nimi Yaanga tarkoittaa?',
+        vaihtoehdot: [
+          'Paikkaa, jossa kasvaa myrkkytammea',
+          'Kahden joen välistä niittyä',
+          'Suolan ottopaikkaa',
+          'Vuorten porttia',
+        ],
+        oikea: 0,
+        fakta: 'Iyáangẚ eli Yaanga oli kylä, jonka viereen pueblo rakennettiin '
+          + '1781. Nimi on toisinaan käännetty myös savulaaksoksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sata kylää ennen kaupunkia',
+          tiedosto: 'Model of a Tongva kiiy at Ballona Discovery Park.jpg',
+          teksti: 'Tongvat asuttivat Los Angelesin allasta ja San Fernandon '
+            + 'laaksoa vuosituhansien ajan, enimmillään sadassa kylässä, ja '
+            + 'tunsivat itsensä ennen muuta oman kylänsä eivätkä yhden koko '
+            + 'kansan nimen mukaan. Pueblon paikkaa kutsuttiin nimellä '
+            + 'Iyáangẚ eli Yaanga, joka tarkoittaa paikkaa, jossa kasvaa '
+            + 'myrkkytammea. Ensimmäinen tunnettu kohtaaminen eurooppalaisten '
+            + 'kanssa oli 1542, kun Juan Rodríguez Cabrillon retkikunta nimesi '
+            + 'rannikon lahden savujen lahdeksi näkemiensä nuotioiden mukaan. '
+            + 'Sana tongva on kirjattu vasta 1905 etnografi C. Hart Merriamin '
+            + 'haastatteluista.',
+          selite: 'Ballona Discovery Parkissa on rakennettu malli kiiy-majasta, '
+            + 'joka oli tongvalaisen talouden päärakennus.',
+          lahde: 'Jengod, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tongva',
+        },
+        {
+          otsikko: 'Lähteet, jotka virtaavat yhä',
+          tiedosto: 'One of the Serra springs.jpg',
+          teksti: 'University High Schoolin kampuksella Länsi-Los Angelesissa '
+            + 'pulppuaa lähderyhmä, jota tongvat kutsuvat nimellä '
+            + 'Koruu\'vanga. Vettä on otettu siitä ainakin 400-luvulta eaa. '
+            + 'lähtien, ja lähteet tuottavat yhä 22 000–25 000 gallonaa eli '
+            + '83 000–95 000 litraa vuorokaudessa. Kun paikalle suunniteltiin '
+            + 'pysäköintilaitosta, perustettiin 1992 Gabrielino/Tongva Springs '
+            + 'Foundation, joka elvytti lähteiden käytön seremonioissa. '
+            + 'Lähteet ovat harvoja tongvien omia paikkoja, jotka ovat '
+            + 'säilyneet läpi koko kaupungin historian.',
+          selite: 'Yksi lähdealtaista University High Schoolin kampuksella; '
+            + 'lähteet tuottavat yhä kymmeniätuhansia litroja vettä '
+            + 'vuorokaudessa.',
+          lahde: 'Jengod, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tongva Sacred Springs',
+        },
+        {
+          otsikko: 'Kansa, jota ei edusta yksi hallinto',
+          tiedosto: 'Guashna village recognition, Tongva populated place, Southern California.jpg',
+          teksti: 'Kalifornian osavaltio tunnusti 1994 Gabrielino-Tongva Tribe '
+            + '-nimisen ryhmän, mutta liittovaltion tunnustusta ei ole saanut '
+            + 'yksikään neljästä hakijasta. Yhtä yhteistä hallintoa ei ole, ja '
+            + 'ryhmillä on ollut erimielisyyksiä muun muassa maankäytöstä. '
+            + 'Vuonna 2013 neljän ryhmän jäsenmääräksi raportoitiin yhteensä '
+            + 'yli 3 900; usein siteerattu noin 1 700 hengen luku on vuodelta '
+            + '2008. Lokakuussa 2022 yksityinen maanomistaja luovutti '
+            + 'Altadenasta eekkerin maata Tongva Taraxat Paxaavxa '
+            + 'Conservancylle — ensimmäisen kerran kahteensataan vuoteen '
+            + 'tongvilla on omaa maata Los Angelesin piirikunnassa.',
+          selite: 'Muistokivet merkitsevät tongvien kylän paikan Ballonan '
+            + 'alueella Länsi-Los Angelesissa.',
+          lahde: 'Jengod, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tongva',
+        },
+        {
+          otsikko: 'Lähetysasema ja pakkotyö',
+          tiedosto: 'Mission San Gabriel 4-15-05 6611.JPG',
+          teksti: 'Alueen ensimmäinen espanjalainen lähetysasema Mission San '
+            + 'Gabriel perustettiin 1771 ja siirrettiin tulvavaurion jälkeen '
+            + 'nykyiselle paikalleen runsaat neljätoista kilometriä '
+            + 'keskustasta itäkoilliseen; lähteet antavat siirrolle kaksi eri '
+            + 'vuotta, 1774 ja 1776. Siirtomaaviranomaiset rakennuttivat '
+            + 'aseman ja sen maatalouden alkuperäiskansojen pakkotyöllä, ja '
+            + 'historioitsijat arvioivat lähes 6 000 tongvan olevan '
+            + 'haudattuna aseman maille. 1800-luvun alussa San Gabriel oli '
+            + 'koko Alta Californian rikkain lähetysasema.',
+          selite: 'Mission San Gabriel Arcángelin kirkko ja sen kellomuuri '
+            + 'seisovat yhä San Gabrielin kaupungissa.',
+          lahde: 'Robert A. Estremo, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mission San Gabriel Arcángel',
+        },
+      ],
+    },
+  ],
 };

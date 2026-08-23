@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1077, teksti: 'Kuvien kokoruutu takaisin, Quito ja Los Angeles' },
   { v: 1076, teksti: 'Tilastotaulun otsikkorivi pysyy, kuvapino piiloon' },
   { v: 1075, teksti: 'Liman kaupunkilehti' },
   { v: 1074, teksti: 'Toronton kaupunkilehti' },
