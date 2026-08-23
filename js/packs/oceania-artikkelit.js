@@ -34,6 +34,26 @@
 // nimillään ennen siirtomaanimiä ja kansa näytetään elävänä.
 // ANAKRONISMI: satamansilta (1932) ja oopperatalo (1973) mainitaan
 // vain siksi, että ne sanotaan ääneen isoisän ajan ulkopuolisiksi.
+//
+// MELBOURNE (23.8.2026): jokainen väite tulee samasta erästä kuin lehden
+// tekstit (js/packs/kulttuuri-kategoriat.js, avain melbourne), ja ne on
+// luettu en-Wikipedian raakateksteistä 23.8.2026 (artikkelit "Melbourne",
+// "History of Melbourne", "Hoddle Grid", "Yarra River", "Wurundjeri",
+// "Victorian gold rush", "Parliament House, Melbourne",
+// "Old Treasury Building, Melbourne", "National Gallery of Victoria" ja
+// "William Guilfoyle"). Sisältölinjaus on spec-mantereet.md:n Oseania-osio:
+// wurundjerit ja boonwurrungit nimetään omilla nimillään ennen
+// siirtomaanimiä. Työaineistoa (faktapohja-melbourne.md,
+// tarkistus-melbourne.md) EI ollut kirjoittajan worktreessä, mikä on
+// kirjattu kulttuuri-kategoriat.js:n melbourne-lohkon kommenttiin.
+// KAKSI VISAVUOTOA KORJATTU 23.8.2026 (tarkistus-melbourne-lehti.md,
+// osio D): intron viimeisestä kappaleesta poistettiin "Melbourne oli
+// Australian pääkaupunki 1901–1927" (visan kysymykset 1 ja 3 — fakta
+// on nyt vain kulttuurilehden nostossa H2), ja teksti-osiosta
+// superlatiivi "maailman laajin toiminnassa oleva kaupunkiraitiotie"
+// (visan kysymys 4). Molempien tilalla on saman asian toinen puoli:
+// vuoden 1873 katukuva ilman kiskovaunuja ja raitiotien aikajana
+// 1884 → köysi → sähkö.
 export const OCEANIA_ARTIKKELIT = {
   Sydney: {
     intro: 'Sydney on Australian vanhin ja väkirikkain kaupunki, ja se '
@@ -78,6 +98,49 @@ export const OCEANIA_ARTIKKELIT = {
       + 'Lautat lähtevät yhä Circular Quaystä kymmenelle reitille, ja '
       + 'kaupungin tunnetuimmat maamerkit — satamansilta ja '
       + 'oopperatalo — ovat molemmat isoisän matkaa myöhempiä.',
+  },
+  Melbourne: {
+    intro: 'Melbourne on Victorian pääkaupunki ja Australian toiseksi '
+      + 'väkirikkain kaupunki, ja se on rakennettu Port Phillipin lahden '
+      + 'pohjukkaan joen mutkaan. Kulinin kansat, wurundjerit ja '
+      + 'boonwurrungit, kokoontuivat joen varrelle kauan ennen brittejä; '
+      + 'heidän kielissään seutu on **Naarm** ja joki Birrarung.'
+      + '\n\n'
+      + 'Britit perustivat kylän 1835, kuvernööri Bourke nimesi sen '
+      + '10. huhtikuuta 1837 Britannian pääministerin mukaan, ja Robert '
+      + 'Hoddle merkitsi samana vuonna ruudukon, jonka mukaan keskusta '
+      + 'yhä kulkee. Kullan löytyminen Victoriasta 1851 muutti kaiken: '
+      + 'väkiluku kaksinkertaistui kuukausissa, ja 1865 Melbourne ohitti '
+      + 'Sydneyn maan väkirikkaimpana kaupunkina.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 kaupunki rakensi julkisia talojaan '
+      + 'moneen suuntaan. **Parlamenttitalo oli kesken, rahastotalon '
+      + 'kultaholvit jäivät tyhjiksi ja taidekokoelma asui kirjaston '
+      + 'siivessä**, ja kasvitieteellinen puutarha sai heinäkuussa '
+      + 'johtajan, joka muotoili sen nykyiseen asuunsa. Kaduilla kulki '
+      + 'hevosomnibusseja; kiskovaunuja ei ollut vielä yhtäkään. '
+      + 'Kaupungin rikkain vuosikymmen oli vasta tulossa, ja sen '
+      + 'jälkeen tuli lama.',
+    teksti: 'Melbourne on Australian kaakkoiskulmassa Port Phillipin '
+      + 'lahden pohjois- ja itärannalla. Keskusta on joen mutkassa, ja '
+      + 'kaupunki jatkuu pohjoiseen jokilaakson kukkuloille ja kaakkoon '
+      + 'Dandenongin suuntaan; lahden rannalla on rivi uimarantoja '
+      + 'Port Melbournesta Frankstoniin.'
+      + '\n\n'
+      + 'Kylä perustettiin 1835 ja sai nimensä 1837. Kullan löytyminen '
+      + '1851 kasvatti Melbournen väkiluvun 123 000:een vuoteen 1854 '
+      + 'mennessä, ja 1880-luvun tonttibuumin aikaan kaupunkia sanottiin '
+      + 'maailman rikkaimmaksi ja Britannian imperiumin toiseksi '
+      + 'suurimmaksi Lontoon jälkeen. Vuoden 1888 huipun jälkeen '
+      + 'kupla puhkesi, ja lama pysäytti rakentamisen vuosikymmeneksi.'
+      + '\n\n'
+      + 'Nykyään kaupungissa asuu 5,435 miljoonaa ihmistä eli 19 '
+      + 'prosenttia koko Australian väestöstä, ja se on maailman '
+      + 'eteläisin yli miljoonan asukkaan kaupunki. Nimi tarkoittaa '
+      + 'yleensä lähes 10 000 neliökilometrin aluetta, jolla on 31 '
+      + 'kuntaa. Kiskoilla kulkevat vaunut ovat kuuluneet katukuvaan '
+      + 'vuodesta 1884, ensin hevosten ja köyden vetäminä ja 1900-luvun '
+      + 'alusta sähköllä.',
   },
   /* Aucklandin ja Uuden-Seelannin lohkot liitetty fragmenteista
    * 23.8.2026 (docs/mantereet-tyoaineisto/*-intro-fragmentti.js) —
