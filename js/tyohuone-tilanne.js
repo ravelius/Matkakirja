@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1047 — P-AMERIKAN PILOTTI (omistajan yotilaus 23.8.2026): New Yorkin ja San Franciscon kaupunkilehdet seka USA:n maalehti (Historia, Luonto ja kansallispuistot, Musiikki, Tiede ja keksinnot, Ruoka — 5x4 nostoa, faktapohja ja riippumaton tarkistus ennen kirjoitusta). Karuselleissa 3 generoitua heroa + 3 aitoa Commons-valokuvaa Helsinki-mallin mukaan. USA:n korkokartta location map -pohjalta ilman Alaskaa ja Havaijia (kirjattu MAAKARTAT-kommenttiin). HUOM: P-Amerikan laudalta puuttuu viela countryShapes, joten USA-maalehti aukeaa toistaiseksi vain maailmankartalla — kirjattu tyolistalle. Lisaksi Tampereen julisteen selite tasmennetty (kaarilamppu vs hehkulamppu) ja kuvaa-maalehti-tyokalu korjattu. Tarkista: New Yorkin ja San Franciscon lehdet kannesta loppuun, USA-maalehti maailmankartalla (i-nappi kaupunkilehdesta), Tampereen juliste',
   'v1046 — POLLOPOIMINNAT (omistajan idea 23.8.2026): kehittajatilassa pollon vastauksen voi tallentaa artikkeliin (Tallenna juttuun) — pari nakyy heti pillerina jutun lopussa, klikkaus avaa minipopupin vastauksineen; Tilannelehden Pollopoiminnat-sivu antaa valmiin lohkon pakettiin kuratointia varten. Pelitilassa pelaajilla Ehdota tallennettavaksi -nappi (menee ehdotuskanavaan). Pelaajille pillerit nakyvat vasta kun parit on kuratoitu pakettiin. LISAKSI aihesivujen taitto (omistajan paatos): kuvatekstit pois, leipateksti kiertaa kuvaa — sivut ~20% lyhyemmat, tekija+lisenssi-rivi sailyy kuvan alla (lisenssiehto). Tarkista: kysy pollolta jutussa ja tallenna (pilleri + Tilannelehti), Istanbul pintaa syvemmalta ja maalehden Historia-sivu',
   'v1045 — KOHDEKARTAN NIMET (omistajan tilaus 23.8.2026): numeroympyrat pois kartalta (myos kokoruudusta), tilalle kohteiden nimet pienella konekirjoitustekstilla paperihalolla — zoom suurentaa luettavaksi; piirroksettomat kohteet pienena taplana + nimi; alalista pelkkia nimilinkkeja. Tunnettu pikkuasia: 390 px:n tiheimmassa rykelmassa pari nimea koskettaa toisiaan. Tarkista: Kairon ja Helsingin kohdekartta lehdessa ja kokoruudulla, zoomaa',
   'v1044 — VAAKUNAN RUSKEA LAATIKKO (omistajan bugiraportti 23.8.2026): iOS:n napautuskorostus maalautui syvatyn vaakunan paalle eika pelin nollaus kattanut napin lapsia — tap-highlight nollattu lippunapille ja sen lapsille. EI toistettavissa kontissa (vain Chromium) — tarkista iPadilla: Tsekin lippusivu, napauta vaakunaa, ruskeaa ei saa jaada',
@@ -411,8 +412,10 @@ export const TESTATTAVAA = [
  * samasta listasta ilman nimivertailua.
  */
 export const TUOREET = {
-  paivitetty: '22.8.2026',
+  paivitetty: '23.8.2026',
   valmiit: [
+    { id: 'newyork', nimi: 'New York', versio: 'v1047' },
+    { id: 'sanfrancisco', nimi: 'San Francisco', versio: 'v1047' },
     { id: 'karachi', nimi: 'Karachi', versio: 'v1008' },
     { id: 'colombo', nimi: 'Colombo', versio: 'v1006' },
     { id: 'mumbai', nimi: 'Mumbai', versio: 'v996' },
@@ -423,10 +426,6 @@ export const TUOREET = {
     { id: 'lhasa', nimi: 'Lhasa', versio: 'v992' },
     { id: 'borneo', nimi: 'Borneo', versio: 'v990' },
     { id: 'sumatra', nimi: 'Sumatra', versio: 'v990' },
-    { id: 'manila', nimi: 'Manila', versio: 'v989' },
-    { id: 'jakarta', nimi: 'Jakarta', versio: 'v988' },
-    { id: 'taipei', nimi: 'Taipei', versio: 'v984' },
-    { id: 'hongkong', nimi: 'Hongkong', versio: 'v984' },
   ],
   tyossa: [],
 };

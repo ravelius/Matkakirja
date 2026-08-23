@@ -24152,4 +24152,543 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * YHDYSVALLAT (USA) — P-Amerikan ensimmäinen maalehti.
+   *
+   * Aihejako on Fablen hyväksymä (docs/mantereet-tyoaineisto/
+   * spec-mantereet.md, "Fablen päätökset" 22.8.2026): historia, luonto
+   * ja kansallispuistot, musiikki, tiede ja keksinnöt sekä ruoka.
+   * Aineisto on faktapohja-usa.md ja tarkistus-usa.md yhdessä luettuna,
+   * ja jokainen tekstiin päätynyt luku on tarkistettu vielä kerran
+   * en-Wikipedian raakatekstistä 22.–23.8.2026.
+   *
+   * TARKISTUKSEN KORJAUKSET, JOTKA TEHTIIN:
+   *  - Stephen Foster -nosto KORVATTIIN. Tarkistus osoitti, että kaksi
+   *    kolmesta nostetusta laulusta ("Oh! Susanna", "Camptown Races")
+   *    kirjoitettiin blackface-minstrel-näytöksiin, eikä sitä voi
+   *    ohittaa vaieten. Raamatun linjaus ("mustan musiikin saavutukset
+   *    omana kulttuurina, minstreliä ei nosteta viihteenä") ja Fablen
+   *    päätös 4 johtivat korvaavaan nostoon: spirituaalit ja vuoden
+   *    1867 kokoelma Slave Songs of the United States, joka on Fisk
+   *    Jubilee Singers -noston luonteva pari.
+   *  - Mannertenvälisen rautatien EPÄVARMAT LUVUT jätettiin pois.
+   *    Tarkistus ei saanut vahvistettua faktapohjan lukuja "3000
+   *    kiinalaista ja 1700 valkoista työntekijää 1865" eikä "15
+   *    tunnelia Sierra Nevadaan". Tilalle otettiin luvut, jotka
+   *    en-Wikipedia sanoo suoraan: kuukausipalkka 31 dollaria ja
+   *    lakon jälkeen 1867 35 dollaria.
+   *  - Old Faithfulin purkausväliksi kirjoitettiin en-Wikipedian
+   *    NYKYINEN luku (keskimäärin 92 min, vaihtelu 35–120 min), ei
+   *    faktapohjan tiukempaa haarukkaa 60–90 min. Ero 1900-luvun
+   *    keskiarvoon (66,5 min vuonna 1939) kerrotaan tekstissä auki,
+   *    koska sama artikkeli antaa molemmat luvut.
+   *  - Otisin turvahissin KEKSIMISVUOSI jätettiin pois tekstistä:
+   *    en-Wikipedian "Elisha Otis" -artikkelin ingressi sanoo 1853 ja
+   *    leipäteksti 1852, ja "Elevator"-artikkeli sanoo 1852. Kaksi
+   *    riidatonta vuosilukua (julkinen näytös 1854, ensimmäinen
+   *    matkustajahissi 23.3.1857) kantavat noston ilman ristiriitaa.
+   *    Samasta syystä tekstissä EI väitetä, että köysi katkaistiin
+   *    kirveellä — en-Wikipedia sanoo vain "dramaattinen,
+   *    hengenvaaralliselta näyttänyt esitys", ja loput on perimätietoa.
+   *
+   * MINITEHTÄVÄ on yksi (Fablen toimeksianto): luonto-sivulla, ja sen
+   * vastaus löytyy saman sivun L2-nostosta. Tarkistettu, ettei se osu
+   * northamerica-questions.js:n visakysymyksiin (siellä ei ole
+   * lainkaan geysir- eikä pyykkiaiheista kysymystä).
+   *
+   * KUVAT: 20 nostokuvaa, jokainen haettu Commonsin rajapinnasta,
+   * lisenssi ja tekijä extmetadatasta, leveys ≥ 1200 px ja jokainen
+   * katsottu silmin 900 px:n esikatselussa. Painokuvissa (Currier &
+   * Ives, Willardin kromolitografia, Fiskin albumilehti, Morsen
+   * kaiverrus, McCormickin patenttipiirros, Worcesterin postikortti)
+   * näkyy julkaisijan oma teksti tai kirjaimet — reseptin sallima
+   * poikkeus, joka on kerrottu kuvatekstissä.
+   */
+  USA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 tasavalta ei ole vielä satavuotias: '
+          + 'sisällissodan päättymisestä on kahdeksan vuotta ja mantereen '
+          + 'halki kulkeva rautatie on ollut valmis vasta neljä.',
+      nostot: [
+        {
+          otsikko: 'Teetä mereen sata vuotta sitten',
+          aika: '1773',
+          tiedosto: 'Boston Tea Party Currier colored.jpg',
+          teksti: 'Joulukuun 16. päivänä 1773 joukko bostonilaisia nousi '
+              + 'kolmelle brittiläiselle kauppa-alukselle mohawk-asuihin '
+              + 'pukeutuneina ja tyhjensi satamaan 340–342 laatikollista '
+              + 'teetä. Naamiointi peitti kasvot, mutta se oli myös '
+              + 'kannanotto: mohawkin asu sanoi, että nämä miehet pitivät '
+              + 'itseään ennemmin amerikkalaisina kuin Britannian '
+              + 'alamaisina. Kyse ei ollut hinnasta, sillä tuore Tea Act '
+              + 'päinvastoin halvensi laillisesti tuodun teen kolmesta '
+              + 'shillingistä kahteen. Kyse oli periaatteesta: ei verotusta '
+              + 'ilman edustusta. Puolentoista vuoden päästä alkoi '
+              + 'vapaussota — ja vuonna 1873 teekutsuista on kulunut tasan '
+              + 'sata vuotta.',
+          selite: 'Bostonin teekutsuissa 16. joulukuuta 1773 heitettiin '
+            + 'kolmelta alukselta satamaan 340–342 teelaatikkoa protestina '
+            + 'Tea Actia vastaan, eikä syynä ollut teen hinta vaan '
+            + 'verotusoikeus.',
+          lahde: 'Nathaniel Currier, Wikimedia Commons (PD)',
+          wiki: 'Bostonin teekutsut',
+        },
+        {
+          otsikko: 'Maalaus, joka ei esitä allekirjoitusta',
+          aika: '1776',
+          tiedosto: 'Declaration of Independence (1819), by John Trumbull.jpg',
+          teksti: 'Mannerkongressi nimesi 11. kesäkuuta 1776 viisi miestä — '
+              + 'John Adamsin, Benjamin Franklinin, Thomas Jeffersonin, '
+              + 'Robert Livingstonin ja Roger Shermanin — laatimaan '
+              + 'julistuksen. Jefferson kirjoitti luonnoksen '
+              + 'vuokrahuoneistossaan reilussa kahdessa viikossa, ja '
+              + 'kongressi hyväksyi tekstin yksimielisesti 4. heinäkuuta. '
+              + 'Allekirjoittajat tiesivät tekevänsä maanpetoksen, josta '
+              + 'rangaistus oli kuolema. John Trumbullin nelimetrinen '
+              + 'maalaus Capitolin kupolisalissa esittää yleisestä '
+              + 'käsityksestä poiketen hetkeä, jolloin viisikko luovutti '
+              + 'luonnoksensa kongressille 28. kesäkuuta — ei '
+              + 'allekirjoitustilaisuutta.',
+          selite: 'John Trumbullin maalaus esittää hetkeä, jolloin '
+            + 'viisihenkinen valiokunta luovutti itsenäisyysjulistuksen '
+            + 'luonnoksen mannerkongressille 28. kesäkuuta 1776.',
+          lahde: 'John Trumbull, Wikimedia Commons (PD)',
+          wiki: 'Yhdysvaltain itsenäisyysjulistus',
+        },
+        {
+          otsikko: 'Kello, joka vaikeni ikuisiksi ajoiksi',
+          aika: '1752–1846',
+          tiedosto: 'Liberty Bell 2008.jpg',
+          teksti: 'Philadelphian osavaltiontalon kello tilattiin Lontoosta '
+              + 'vuonna 1752, ja se halkesi heti ensimmäisellä soitolla. '
+              + 'Paikalliset valurit John Pass ja John Stow valoivat sen '
+              + 'kahdesti uudelleen, ja heidän nimensä ovat yhä kellon '
+              + 'kyljessä. Helmikuun 23. päivänä 1846 philadelphialainen '
+              + 'lehti kertoi kellon soineen viimeisen kerran ja tulleen '
+              + '"korjaamattomasti haljenneeksi ja ikuisesti mykäksi". '
+              + 'Nimen Vapauskello sille antoivat orjuuden vastustajat '
+              + '1830-luvulla: kellon kylkeen valettu lupaus vapaudesta '
+              + 'kaikille maan asukkaille oli heidän mielestään pilkkaa '
+              + 'niin kauan kuin osa asukkaista oli orjina.',
+          selite: 'Philadelphian Vapauskello halkesi jo ensimmäisellä '
+            + 'soitollaan vuonna 1752 ja vaikeni lopullisesti helmikuussa '
+            + '1846, ja nimensä se sai 1830-luvulla orjuuden vastustajilta.',
+          lahde: 'Tony the Misfit on Flickr, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Liberty Bell',
+        },
+        {
+          otsikko: 'Kultainen naula ja yhden sanan sähke',
+          aika: '1869',
+          tiedosto: 'East and West Shaking hands at the laying of last rail Union Pacific Railroad - Restoration.jpg',
+          teksti: 'Toukokuun 10. päivänä 1869 kaksi rautatietä kohtasi '
+              + 'Utahin autiomaassa Promontory Summitissa. Vasarat ja '
+              + 'viimeinen naula oli kytketty lennätinlankaan, jotta '
+              + 'jokainen isku kuuluisi naksahduksena lennätinasemilla '
+              + 'ympäri maata; kun lyönnit menivät ohi, virkailija napautti '
+              + 'merkit itse ja lähetti perään yhden sanan: DONE. Lännestä '
+              + 'nousseen radan louhivat suurelta osin kiinalaiset '
+              + 'siirtotyöläiset, jotka saivat 31 dollaria kuussa ja '
+              + 'majoituksen mutta laittoivat ruokansa itse; lakon jälkeen '
+              + 'vuonna 1867 palkka nousi 35 dollariin. Matka rannikolta '
+              + 'rannikolle lyheni puolesta vuodesta viikkoon.',
+          selite: 'Promontory Summitissa 10. toukokuuta 1869 lyöty '
+            + 'viimeinen naula yhdisti Yhdysvaltain rannikot raiteilla, ja '
+            + 'matka rannikolta rannikolle lyheni puolesta vuodesta '
+            + 'viikkoon.',
+          lahde: 'Andrew J. Russell / Adam Cuerden, Wikimedia Commons (PD)',
+          wiki: 'Union Pacific Railroad',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto ja kansallispuistot',
+      johdanto: 'Vuotta ennen isoisän matkaa Yhdysvallat teki jotain, mitä '
+          + 'mikään maa ei ollut aiemmin tehnyt: rauhoitti valtavan '
+          + 'erämaan pelkän luonnon vuoksi.',
+      nostot: [
+        {
+          otsikko: 'Maailman ensimmäinen kansallispuisto',
+          aika: '1872',
+          tiedosto: 'Thomas Moran - Grand Canyon of the Yellowstone - Smithsonian.jpg',
+          teksti: 'Maaliskuun 1. päivänä 1872 presidentti Ulysses S. Grant '
+              + 'allekirjoitti lain, joka varasi Yellowstonen "kansan '
+              + 'hyödyksi ja iloksi puistoksi" — yleisesti maailman '
+              + 'ensimmäisenä kansallispuistona pidetty päätös. Kongressi '
+              + 'uskoi kertomukset kiehuvista lähteistä vasta nähtyään '
+              + 'Ferdinand Haydenin vuoden 1871 retkikunnan todisteet: '
+              + 'Thomas Moranin maalaukset ja William Henry Jacksonin '
+              + 'valokuvat. Ensimmäinen puistonjohtaja Nathaniel Langford ei '
+              + 'saanut kongressilta palkkaa, rahoitusta eikä yhtään '
+              + 'työntekijää, joten suojelu jäi vuosiksi enemmän aatteeksi '
+              + 'kuin käytännöksi.',
+          selite: 'Yellowstonesta tuli 1. maaliskuuta 1872 yleisesti '
+            + 'maailman ensimmäisenä pidetty kansallispuisto, ja kongressin '
+            + 'vakuuttivat Thomas Moranin maalaukset ja William Henry '
+            + 'Jacksonin valokuvat.',
+          lahde: 'Thomas Moran, Wikimedia Commons (PD)',
+          wiki: 'Yellowstonen kansallispuisto',
+        },
+        {
+          otsikko: 'Lähde, joka pitää aikataulua',
+          aika: '1870',
+          tiedosto: 'Old Faithful.jpg',
+          teksti: 'Washburnin retkikunta saapui 18. syyskuuta 1870 '
+              + 'ylägeysiraltaalle ja näki purkauksen yhdeksän kertaa '
+              + 'vierailunsa aikana. Retkikunta antoi lähteelle nimen Old '
+              + 'Faithful, ja siitä tuli puiston ensimmäinen nimetty '
+              + 'geysiri. Puiston alkuvuosina sitä käytettiin myös pyykin '
+              + 'pesuun: vuoden 1883 matkaoppaan mukaan kraatteriin laskettu '
+              + 'pellava ja puuvilla nousivat purkauksessa perusteellisesti '
+              + 'pestyinä, mutta villavaatteet repeytyivät riekaleiksi. '
+              + 'Vesipatsas nousee 32–56 metriin. Purkausväli on nykyisin '
+              + 'keskimäärin 92 minuuttia; vuonna 1939 keskiarvo oli 66,5.',
+          selite: 'Old Faithful sai nimensä 18. syyskuuta 1870 ja oli '
+            + 'Yellowstonen ensimmäinen nimetty geysiri, jonka vesipatsas '
+            + 'nousee 32–56 metriin keskimäärin 92 minuutin välein.',
+          lahde: 'Marco Soave, Wikimedia Commons (PD)',
+          wiki: 'Old Faithful',
+        },
+        {
+          otsikko: 'Yksikätinen mies soutaa tuntemattomaan',
+          aika: '1869',
+          tiedosto: 'USA 09847 Grand Canyon Luca Galuzzi 2007.jpg',
+          teksti: 'Kanjonin nimi hopin kielellä on Öngtupqa, ja pueblokansat '
+              + 'ovat pitäneet sitä pyhänä paikkana ja tehneet sinne '
+              + 'pyhiinvaelluksia vuosisatoja. Toukokuun 24. päivänä 1869 '
+              + 'John Wesley Powell — joka oli menettänyt oikean kätensä '
+              + 'sisällissodassa — lähti Green Riveristä yhdeksän miehen ja '
+              + 'neljän soutuveneen kanssa alas Coloradojokea. Kesäkuun 7. '
+              + 'päivänä koski vei yhden veneen ja kolmasosan muonasta, ja '
+              + 'loppumatka soudettiin nälkäannoksilla. Kanjoni, jonka he '
+              + 'kartoittivat, on 446 kilometriä pitkä, enimmillään 29 '
+              + 'kilometriä leveä ja yli kilometrin syvä.',
+          selite: 'Grand Canyon on hopin kielellä Öngtupqa ja pueblokansojen '
+            + 'pyhä paikka, ja se on 446 kilometriä pitkä, enimmillään 29 '
+            + 'kilometriä leveä ja yli kilometrin syvä.',
+          lahde: 'Luca Galuzzi (Lucag), Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Grand Canyon',
+        },
+        {
+          otsikko: 'Presidentti allekirjoitti kesken sodan',
+          aika: '1864',
+          tiedosto: 'Carleton Watkins (American - Yosemite Valley from the Best General View - Google Art Project.jpg',
+          teksti: 'Laakso oli ahwahneechee-kansan koti, ja he kutsuivat sitä '
+              + 'nimellä Ahwahnee, suuri suu. Kesäkuun 30. päivänä 1864, '
+              + 'keskellä sisällissotaa, presidentti Abraham Lincoln '
+              + 'allekirjoitti lain, joka luovutti Yosemiten laakson ja '
+              + 'Mariposan jättiläissekvoiametsikön Kalifornialle '
+              + 'suojeltavaksi. Se oli ensimmäinen kerta, kun liittovaltio '
+              + 'varasi maata nimenomaan suojelun ja yleisen käytön vuoksi, '
+              + 'ja siitä tuli malli Yellowstonelle kahdeksan vuotta '
+              + 'myöhemmin. Matkailijoita alkoi tulla toden teolla vasta '
+              + 'kun mannertenvälinen rautatie valmistui 1869.',
+          selite: 'Yosemiten laakso on ahwahneechee-kansan Ahwahnee, ja '
+            + 'Abraham Lincoln allekirjoitti 30. kesäkuuta 1864 lain, jolla '
+            + 'liittovaltio varasi ensimmäistä kertaa maata suojeluun ja '
+            + 'yleiseen käyttöön.',
+          lahde: 'Carleton Watkins, Wikimedia Commons (PD)',
+          wiki: 'Yosemiten kansallispuisto',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin arkiseen työhön Old Faithful -geysiriä käytettiin '
+            + 'puiston alkuvuosina?',
+        vaihtoehdot: [
+          'Pyykin pesuun',
+          'Ruoan kypsentämiseen',
+          'Höyrysahan käyttövoimaksi',
+          'Juomaveden lämmittämiseen',
+        ],
+        oikea: 0,
+        fakta: 'Vuoden 1883 matkaoppaan mukaan pellava ja puuvilla '
+            + 'kestivät, mutta villavaatteet eivät.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Keväällä 1873, samaan aikaan kun isoisän matkapäiväkirja '
+          + 'alkaa, yksitoista nuorta laulajaa entisten orjien '
+          + 'yliopistosta esiintyi Euroopan hoveissa.',
+      nostot: [
+        {
+          otsikko: 'Laulua kuningattarelle',
+          aika: '1873',
+          tiedosto: 'Fisk Jubilee Singers 1876.jpg',
+          teksti: 'Nashvillen Fisk-yliopisto oli perustettu vapautettujen '
+              + 'orjien opetukseen, ja vuonna 1871 se oli menossa konkurssiin. '
+              + 'Musiikinopettaja George White kokosi yhdeksän opiskelijan '
+              + 'kuoron ja lähti sen kanssa kiertueelle 6. lokakuuta 1871. '
+              + 'Ryhmä lauloi presidentti Grantille Valkoisessa talossa '
+              + 'maaliskuussa 1872, ja huhtikuussa 1873 se esitti Lontoossa '
+              + 'kuningatar Viktorialle laulut "Steal Away to Jesus" ja "Go '
+              + 'Down, Moses". Kiertueiden tuotoilla yliopisto rakensi '
+              + 'ensimmäisen kivitalonsa, Jubilee Hallin, joka seisoo yhä.',
+          selite: 'Fisk Jubilee Singers lauloi huhtikuussa 1873 kuningatar '
+            + 'Viktorialle Lontoossa, ja kiertueiden tuotoilla rakennettiin '
+            + 'Fisk-yliopiston ensimmäinen kivitalo Jubilee Hall; kuvan '
+            + 'alle on painettu laulajien nimet.',
+          // Fisk Jubilee Singersillä ei ole fi-Wikipedian artikkelia
+          // (tarkistettu 23.8.2026), joten wiki-kenttä jätetään pois:
+          // 'Lue lisää' avaisi tyhjän sivun.
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kirja, joka pysäytti katoavat laulut',
+          aika: '1867',
+          tiedosto: 'Slave Songs of the United States (1867) title page.jpg',
+          teksti: 'Spirituaalit syntyivät orjuutettujen ihmisten suullisena '
+              + 'perinteenä, jossa afrikkalaiset lauluperinteet, työlaulut '
+              + 'ja Raamatun kertomukset sekoittuivat. Vuonna 1867 '
+              + 'ilmestyi Slave Songs of the United States, 136 laulun '
+              + 'kokoelma ja ensimmäinen painettu kirja afroamerikkalaista '
+              + 'musiikkia. Sen kokosivat William Francis Allen, Lucy McKim '
+              + 'Garrison ja Charles Pickard Ware kuuntelemalla '
+              + 'gullah-kansan laulua Etelä-Carolinan Saint Helenan '
+              + 'saarella. Laulujen kaksoismerkitys oli avoin salaisuus: '
+              + '"Go Down, Moses" kertoi Egyptistä mutta tarkoitti '
+              + 'vapautta, ja monet orjanomistajat kielsivät sen.',
+          selite: 'Slave Songs of the United States ilmestyi 1867, sisälsi '
+            + '136 laulua ja oli ensimmäinen painettu kokoelma '
+            + 'afroamerikkalaista musiikkia.',
+          lahde: 'Francis Allen, Lucy McKim Garrison, Charles Pickard Ware '
+            + '(editors), Wikimedia Commons (PD)',
+          wiki: 'Negrospirituaali',
+        },
+        {
+          otsikko: 'Kurpitsasta ja nahasta tehty soitin',
+          tiedosto: 'Banjo MET 209449.jpg',
+          teksti: 'Banjon esi-isät rakensivat Pohjois-Amerikassa ja '
+              + 'Karibialla orjuutetut ihmiset 1600-luvulta alkaen: '
+              + 'halkaistu kurpitsa kaikupohjaksi, eläimennahka kanneksi ja '
+              + 'puinen kaula, jonka kielet punottiin suolesta tai '
+              + 'kasvikuidusta. Malli tuli Länsi- ja Keski-Afrikan '
+              + 'soittimista. Varhaisin tunnettu kuvaus on englantilaisen '
+              + 'Richard Jobsonin muistiinpano Gambiasta vuodelta 1621: '
+              + '"iso kurpitsa ja siihen kiinnitetty kaula", ilman nauhoja '
+              + 'ja enintään kuusi kieltä. Nimen alkuperästä kiistellään '
+              + 'yhä; ehdolla ovat muun muassa kimbundun mbanza ja mandingon '
+              + 'sanat.',
+          selite: 'Banjon esi-isät tehtiin halkaistusta kurpitsasta ja '
+            + 'eläimennahasta, ja varhaisin tunnettu kuvaus soittimesta on '
+            + 'Richard Jobsonin muistiinpano Gambiasta vuodelta 1621.',
+          lahde: 'William Esperance Boucher, Jr., Wikimedia Commons (CC0)',
+          wiki: 'Banjo',
+        },
+        {
+          otsikko: 'Pilkkalaulusta ylpeyden ääneksi',
+          aika: '1755–1777',
+          tiedosto: "Sprit of '76.2.jpeg",
+          teksti: 'Brittiarmeijan kirurgi Richard Shuckburgh sepitti '
+              + '"Yankee Doodlen" noin vuonna 1755 pilkatakseen '
+              + 'siirtomaajoukkoja, joiden hän katsoi luulevan höyhenen '
+              + 'hatussa tekevän heistä yhtä hienoja kuin Lontoon '
+              + 'macaroni-keikarit. Amerikkalaiset omivat pilkan itselleen, '
+              + 'lisäsivät omia säkeitään ja marssivat sen tahdissa koko '
+              + 'vapaussodan läpi; laulu soi myös brittien antautuessa '
+              + 'Saratogassa 1777. Vuoteen 1781 mennessä siitä oli tullut '
+              + 'kansallisylpeyden laulu, ja se toimi yhtenä epävirallisena '
+              + 'kansallislauluna aina vuoteen 1931 asti.',
+          selite: 'Britit sepittivät "Yankee Doodlen" noin 1755 '
+            + 'pilkkalauluksi siirtomaajoukoista, mutta amerikkalaiset '
+            + 'omivat sen itselleen ja tekivät siitä kansallisylpeyden '
+            + 'laulun; kuvan alalaitaan on painettu kustantajan nimi.',
+          lahde: 'Archibald Willard, Wikimedia Commons (PD)',
+          wiki: 'Yankee Doodle',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede ja keksinnöt',
+      johdanto: 'Vuosisadan puoliväli oli Yhdysvalloissa keksijöiden aikaa, '
+          + 'ja nämä neljä keksintöä olivat arkea jo hyvissä ajoin ennen '
+          + 'vuotta 1873.',
+      nostot: [
+        {
+          otsikko: 'Taidemaalari, joka kutisti mantereen',
+          aika: '1844',
+          tiedosto: 'Morse telegraph.jpg',
+          teksti: 'Samuel Morse oli ammatiltaan taidemaalari ja New Yorkin '
+              + 'yliopiston maalaustaiteen professori. Palatessaan laivalla '
+              + 'Euroopasta vuonna 1832 hän näki matkatoverinsa '
+              + 'sähkömagneettikokeita, keksi yhden langan lennättimen ja '
+              + 'jätti keskeneräisen maalauksensa sikseen. Kongressi '
+              + 'myönsi 1843 kolmekymmentätuhatta dollaria koelinjalle '
+              + 'Washingtonista Baltimoreen, ja 24. toukokuuta 1844 Morse '
+              + 'lähetti sitä pitkin sanat "Mitä Jumala on tehnyt". Laite '
+              + 'välitti kolmekymmentä merkkiä minuutissa. Vuoteen 1850 '
+              + 'mennessä lennätinlankaa oli maassa jo 19 000 kilometriä.',
+          selite: 'Samuel Morse oli taidemaalari, joka keksi yhden langan '
+            + 'lennättimen ja lähetti sillä 24. toukokuuta 1844 sanat "Mitä '
+            + 'Jumala on tehnyt" Washingtonista Baltimoreen; kuvan '
+            + 'kirjaimet ovat kaiverruksen omat osaviitteet.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Samuel Morse',
+        },
+        {
+          otsikko: 'Hissi, joka ei enää pudonnut',
+          aika: '1854',
+          tiedosto: 'Elisha OTIS 1854.jpg',
+          teksti: 'Ennen Elisha Otisia hissi oli kori köyden varassa: kun '
+              + 'nostoköysi petti, kori putosi pohjaan asti. Yonkersilaisen '
+              + 'tehtaan tavarahissiä varten Otis keksi turvajarrun, joka '
+              + 'pysäyttää korin itsestään heti kun köyden veto lakkaa. '
+              + 'Vuonna 1854 hän esitteli sen New Yorkin Crystal Palace '
+              + '-näyttelyssä esityksessä, joka näytti yleisön silmissä '
+              + 'hengenvaaralliselta: keksijä seisoi itse korkealla '
+              + 'nostetun tason päällä. Ensimmäinen matkustajakäyttöön '
+              + 'asennettu turvahissi otettiin käyttöön newyorkilaisessa '
+              + 'tavaratalossa 23. maaliskuuta 1857.',
+          selite: 'Elisha Otisin turvajarru pysäyttää hissikorin itsestään, '
+            + 'kun nostoköyden veto lakkaa, ja ensimmäinen matkustajakäyttöön '
+            + 'asennettu turvahissi otettiin käyttöön New Yorkissa 23. '
+            + 'maaliskuuta 1857.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Elisha Otis',
+        },
+        {
+          otsikko: 'Kone, jota kukaan ei halunnut ostaa',
+          aika: '1831',
+          tiedosto: 'McCormick Reaper, 1845.jpg',
+          teksti: 'Cyrus McCormick oli 22-vuotias, kun hän esitteli '
+              + 'virginialaisessa Steeles Tavernissa hevosvetoisen '
+              + 'leikkuukoneen vuonna 1831. Hänen isänsä oli yrittänyt '
+              + 'samaa 28 vuotta onnistumatta, ja ratkaisevana apuna oli '
+              + 'perheen orjuuttama seppä Jo Anderson. Menestys ei tullut '
+              + 'nopeasti: koneita myytiin vuonna 1840 yksi ja vuonna 1841 '
+              + 'ei ainuttakaan, koska maanviljelijät pitivät niitä '
+              + 'epäluotettavina. Vuonna 1847 McCormick siirsi tuotannon '
+              + 'Chicagoon, jonne Suuret järvet toivat raaka-aineet ja josta '
+              + 'rautatiet veivät koneet lännen viljapelloille.',
+          selite: 'Cyrus McCormickin hevosvetoinen leikkuukone esiteltiin '
+            + 'Virginiassa vuonna 1831, ja tuotanto siirtyi 1847 Chicagoon, '
+            + 'jonne Suuret järvet ja rautatiet toivat raaka-aineet ja '
+            + 'asiakkaat; kuvan kirjaimet ovat patenttipiirroksen omat.',
+          lahde: 'Cyrus McCormick, Wikimedia Commons (PD)',
+          wiki: 'Cyrus McCormick',
+        },
+        {
+          otsikko: 'Oikeussalista syntynyt patenttipooli',
+          aika: '1846–1856',
+          tiedosto: 'Bonton stitching room -- Royal Worcester Corset Co, Worcester Mass A.jpg',
+          teksti: 'Elias Howe sai lukkotikkiompelukoneelleen patentin 10. '
+              + 'syyskuuta 1846 mutta ei rahaa. Kun hän palasi Englannista, '
+              + 'moni valmistaja käytti hänen keksintöään — muun muassa '
+              + 'Isaac Singer, joka oli parantanut konetta ja keksinyt '
+              + 'osamaksukaupan. Howe voitti oikeusjutun 1854 ja sai '
+              + 'rojaltin jokaisesta myydystä koneesta. Valmistajat '
+              + 'haastoivat 1850-luvulla toisiaan niin ahkerasti, että '
+              + 'sotkua kutsuttiin ompelukonesodaksi; se päättyi 1856, kun '
+              + 'viisi suurinta yhdisti patenttinsa ja alkoi periä muilta '
+              + '15 dollaria konetta kohti.',
+          selite: 'Elias Howen ja Isaac Singerin patenttiriita päättyi 1856 '
+            + 'yhteiseen patenttipooliin, ja ompelukone siirsi vaatteiden '
+            + 'valmistuksen kodeista tehtaisiin; kuvan yläreunassa on '
+            + 'postikortin oma teksti.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Ompelukone',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Amerikkalainen ruokapöytä on aina ollut risteys: '
+          + 'alkuperäiskansojen kasvit, siirtolaisten tavat ja '
+          + 'Länsi-Afrikasta tuodut tekniikat päätyivät samaan pataan.',
+      nostot: [
+        {
+          otsikko: 'Kiitospäivä keskellä sisällissotaa',
+          aika: '1863',
+          tiedosto: 'John Schutler after George Henry Durrie, Home to Thanksgiving, 1867, NGA 66577.jpg',
+          teksti: 'Aikakauslehti Godey\'s Lady\'s Bookin toimittaja Sarah '
+              + 'Josepha Hale kirjoitti vuosikymmenen ajan presidenteille '
+              + 'ja vaati koko maalle yhteistä kiitospäivää hajanaisten '
+              + 'paikallisten juhlien tilalle. Lokakuun 3. päivänä 1863, '
+              + 'keskellä sisällissotaa ja tuoreiden Gettysburgin ja '
+              + 'Vicksburgin voittojen jälkeen, Abraham Lincoln julisti '
+              + 'marraskuun viimeisen torstain kansalliseksi kiitospäiväksi. '
+              + 'Julistuksen kirjoitti ulkoministeri William Seward. Tarina '
+              + 'ensimmäisestä kiitosjuhlasta ulottuu vuoteen 1621, mutta '
+              + 'koko maan yhteinen juhlapäivä on Lincolnin perua.',
+          selite: 'Abraham Lincoln julisti 3. lokakuuta 1863 marraskuun '
+            + 'viimeisen torstain kansalliseksi kiitospäiväksi Sarah '
+            + 'Josepha Halen vuosien painostuksen jälkeen; kuvan alareunassa '
+            + 'on painolaatan oma teksti.',
+          lahde: 'John Schutler after George Henry Durrie, Wikimedia '
+            + 'Commons (PD)',
+          wiki: 'Kiitospäivä',
+        },
+        {
+          otsikko: 'Sana, joka tuli Karibialta',
+          tiedosto: 'Barbecue pit.jpg',
+          teksti: 'Sana barbecue tulee espanjan sanasta barbacoa, joka '
+              + 'puolestaan juontuu Karibian arawak-kielten sanasta '
+              + 'barabicu: puinen teline, jonka päällä lihaa kypsennettiin '
+              + 'ja säilytettiin tulen yllä. Espanjalainen Gonzalo '
+              + 'Fernández de Oviedo painatti sanan ensi kerran vuonna '
+              + '1526. Yhdysvaltain etelävaltioissa tekniikka sai muotonsa '
+              + 'alkuperäiskansojen, länsiafrikkalaisten ja '
+              + 'eurooppalaisten tavoista: puu poltetaan ensin hiillokseksi, '
+              + 'ja liha kypsyy tuntikausia savussa. Kansanselitys '
+              + 'ranskan sanoista "parrasta häntään" ei saa tukea '
+              + 'kielitieteestä.',
+          selite: 'Sana barbecue juontuu Karibian arawak-kielten sanasta '
+            + 'barabicu, joka tarkoitti puista telinettä lihan '
+            + 'kypsentämiseen tulen yllä, ja espanjalainen Oviedo painatti '
+            + 'sanan ensi kerran vuonna 1526.',
+          lahde: 'Southern Foodways Alliance, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Barbecue',
+        },
+        {
+          otsikko: 'Pata, jossa maailma kohtaa',
+          aika: '1802',
+          tiedosto: 'Shrimp and crab gumbo.jpg',
+          teksti: 'Louisianan gumbo yhdistää samaan pataan Länsi- ja '
+              + 'Keski-Afrikan, Ranskan, Saksan, Espanjan ja '
+              + 'choctaw-intiaanien ruokaperinteet. Muhennos paksunnetaan '
+              + 'joko okralla tai filé-jauheella, joka on choctawien '
+              + 'käyttämää kuivattua sassafraslehteä. Nimikin kertoo '
+              + 'juurista: bambaran kielessä gombo tarkoittaa okraa, ja '
+              + 'sama sana esiintyy bantukielissä muodoissa ki ngombo ja '
+              + 'quingombo. Ensimmäinen kirjallinen kuvaus gumbosta on '
+              + 'vuodelta 1802, ja 1800-luvun jälkipuoliskolla se oli jo '
+              + 'monessa keittokirjassa. Louisiana nimesi sen '
+              + 'osavaltioruoakseen vuonna 2004.',
+          selite: 'Louisianan gumbo yhdistää länsiafrikkalaisen okran, '
+            + 'choctawien sassafrasjauheen ja eurooppalaiset '
+            + 'ruokaperinteet, ja se kuvattiin kirjallisesti ensi kerran '
+            + 'vuonna 1802.',
+          lahde: 'jeffreyw, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Gumbo',
+        },
+        {
+          otsikko: 'Mies, joka istutti taimitarhoja rajaseudulle',
+          aika: '1871',
+          tiedosto: 'Appleseed-primitive.gif',
+          teksti: 'John Chapman, tunnetumpi nimellä Johnny Appleseed, '
+              + 'kulki vuosikymmeniä Pennsylvaniasta Ohioon ja Indianaan ja '
+              + 'levitti omenapuita rajaseudun uudisasukkaille. Legenda '
+              + 'kertoo hänen sirotelleen siemeniä umpimähkään, mutta '
+              + 'todellisuudessa hän perusti aidattuja taimitarhoja, jätti '
+              + 'ne naapurin hoitoon myytäväksi osuuksilla ja palasi '
+              + 'hoitamaan niitä parin vuoden välein. Puut kasvatettiin '
+              + 'siemenestä eikä varttamalla. Chapman kuoli 1845, mutta '
+              + 'koko kansan tuntema hahmo hänestä tuli vasta marraskuussa '
+              + '1871, kun Harper\'s-aikakauslehti julkaisi hänestä pitkän '
+              + 'jutun.',
+          selite: 'John Chapman eli Johnny Appleseed perusti rajaseudulle '
+            + 'aidattuja omenataimitarhoja eikä sirotellut siemeniä '
+            + 'umpimähkään, ja Harper\'s-lehden juttu marraskuussa 1871 '
+            + 'teki hänestä koko kansan tunteman hahmon.',
+          lahde: 'Harper\'s New Monthly Magazine, Wikimedia Commons (PD)',
+          wiki: 'Johnny Appleseed',
+        },
+      ],
+    },
+  ],
 };
