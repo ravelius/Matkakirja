@@ -184,4 +184,55 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'joka tuotiin Ranskasta vuonna 1853 ja josta tuli maan '
       + 'tunnusmerkki.',
   },
+  /*
+   * SÃO PAULO (23.8.2026). Väitteet ovat samasta erästä kuin lehden
+   * tekstit (js/packs/kulttuuri-kategoriat.js, avain saopaulo), ja ne
+   * on tarkistettu en-Wikipedian raakateksteistä samana päivänä.
+   * Avain on wiki-otsikko 'São Paulo', sama jonka js/packs/
+   * southamerica.js antaa kaupungille sekä wiki- että näyttönimeksi.
+   * Vuoden 1873 kulma on introssa mukana, koska koko lehti seisoo sen
+   * varassa: isoisän matkavuonna kaupungissa oli reilut 31 000
+   * asukasta ja rautatie oli ollut käytössä kuusi vuotta.
+   */
+  'São Paulo': {
+    intro: 'São Paulo on Brasilian ja koko Etelä-Amerikan suurin kaupunki, '
+      + 'ja se seisoo 760 metrin korkeudessa Piratiningan ylängöllä. Meren '
+      + 'ja ylängön välissä on Serra do Marin lähes 800 metrin '
+      + 'rannikkojyrkänne. Nimi tulee jesuiittojen '
+      + 'koulusta, jonka kaksitoista pappia perusti kukkulalle kahden joen '
+      + 'väliin 25. tammikuuta 1554 — apostoli Paavalin kääntymyksen '
+      + 'juhlapäivänä.'
+      + '\n\n'
+      + 'Kaksi ensimmäistä vuosisataa São Paulo oli köyhä sisämaakylä, '
+      + 'josta lähti retkikuntia kullan ja orjuutettavien perään. '
+      + '**Käänteen teki rautatie: brittiläinen São Paulo Railway avasi '
+      + '1867 radan ylängöltä Santosin satamaan, ja ylängön kahvi pääsi '
+      + 'maailmanmarkkinoille.** Puolessa vuosisadassa kaupunki kasvoi '
+      + 'kolmestakymmenestätuhannesta yli kahteensataantuhanteen '
+      + 'asukkaaseen, ja kasvun maksoivat kahvirahat ja Euroopasta, '
+      + 'Lähi-idästä ja Japanista tulleet siirtolaiset.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 mitään tästä ei vielä näkynyt. '
+      + '**Kaupungissa oli reilut 31 000 asukasta, torilla seisoi 1760-luvun '
+      + 'barokkikirkko ja Luzin asema oli matala yksikerroksinen talo.** '
+      + 'Avenida Paulistaa ei ollut, eikä yhtään pilvenpiirtäjää.',
+    teksti: 'São Paulo on Kaakkois-Brasiliassa Piratiningan ylängöllä, ja '
+      + 'sen halki kulkevat Tietê- ja Pinheiros-joet. Etelänkääntöpiiri '
+      + 'menee kaupungin pohjoispuolelta, mutta korkeus tekee ilmastosta '
+      + 'leudomman kuin leveysasteelta voisi odottaa: kesäpäivät ovat '
+      + 'keskimäärin 28 ja talvipäivät 22 asteen tienoilla.'
+      + '\n\n'
+      + 'Jesuiitat perustivat kylän 1554, ja kaupunkioikeudet se sai vasta '
+      + '1711. Rautatie Santosiin avattiin 1867, ja sen jälkeen kahvin '
+      + 'vientitulot rakensivat kaupungin uudestaan: väkiluku nousi vuoden '
+      + '1872 laskennan 31 385:stä 239 820:een vuosisadan vaihteessa ja '
+      + 'ylitti miljoonan 1928. Ensimmäinen pilvenpiirtäjä Martinelli '
+      + 'valmistui 1929.'
+      + '\n\n'
+      + 'Nykyään kaupungissa asuu lähes 12 miljoonaa ja metropolialueella '
+      + '21,5 miljoonaa ihmistä. Kaupunkilaisia kutsutaan paulistanoiksi, '
+      + 'ja heissä on maailman suurimmat italialais-, arabi- ja '
+      + 'japanilaisyhteisöt kotimaidensa ulkopuolella — Bixigan, Bom '
+      + 'Retiron ja Liberdaden kaupunginosat ovat yhä niiden osoite.',
+  },
 };

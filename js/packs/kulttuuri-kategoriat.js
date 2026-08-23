@@ -61077,4 +61077,641 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SÃO PAULO (lauta southamerica, kaupunki-id saopaulo) — kaupunkilehti
+   * 23.8.2026.
+   *
+   * LÄHTEET. Työpohja on docs/mantereet-tyoaineisto/faktapohja-saopaulo.md.
+   * Sen rinnalle luvattua tarkistus-saopaulo.md:tä EI OLE OLEMASSA
+   * repossa eikä origin/mainissa (tarkistettu git ls-tree origin/main
+   * 23.8.2026), joten kirjoittaja on hakenut jokaisen tekstiin menevän
+   * väitteen uudestaan en-Wikipedian raakateksteistä samana päivänä:
+   * São Paulo, São Paulo Cathedral, São Paulo Railway Company, Luz
+   * Station, Paulista Avenue, Municipal Market of São Paulo,
+   * Ibirapuera Park, Immigrant Inn, Liberdade (district of São Paulo),
+   * Rua 25 de Março. Tehtävänannon kolme pakollista korjausta on tehty
+   * ja ne kaikki vahvistettiin raakatekstistä:
+   *
+   *   (a) KUIVIN KUUKAUSI ON ELOKUU. Faktapohja sanoi "elo-syyskuussa
+   *       (kuivin) n. 32 mm". Sääruutu antaa elokuulle 32,3 mm ja
+   *       syyskuulle 83,3 mm — syyskuu on siis yli kaksi ja puoli
+   *       kertaa elokuuta sateisempi. Oppaan sääjakso sanoo elokuun
+   *       yksin kuivimmaksi ja kertoo syyskuun luvun erikseen.
+   *   (b) IBIRAPUERAN PUISTON TEKIJÄT. Faktapohja antoi puiston Burle
+   *       Marxin ja Niemeyerin nimiin. Ibirapuera Park -artikkeli
+   *       sanoo toisin: vuoden 1954 rakennukset suunnitteli arkkitehti
+   *       João Felipe Pereira ja maiseman agronomi Otávio Augusto
+   *       Teixeira Mendes, kun taas Roberto Burle Marx mainitaan
+   *       INSPIRAATIONA ("inspired on modern drafts from the landscape
+   *       architect"). Oscar Niemeyerin paviljonkikokonaisuus on eri
+   *       asia: se merkittiin kansalliseksi muistomerkiksi vasta 2016.
+   *       Oppaan jakso 4 kertoo kaikki kolme roolia erikseen.
+   *   (c) KOLME NOSTOA KIRJOITETTU IRTI VISAN SANAMUODOSTA.
+   *       js/packs/southamerica-questions.js kysyy saopaulo-kohdassa
+   *       (1) mikä São Paulo on eteläisellä pallonpuoliskolla,
+   *       (2) minkä tuotteen vienti teki seudusta rikkaan,
+   *       (3) missä maassa kaupunki on, (4) mikä on Avenida Paulista,
+   *       (5) mikä siirtolaisyhteisö on maailman suurin Japanin
+   *       ulkopuolella. Nosto SP4 ei toista visan "eteläisen
+   *       pallonpuoliskon väkirikkain" -muotoilua vaan antaa
+   *       täsmälliset väkiluvut ja kertoo vertailun kolmen alueen
+   *       luettelona; SP3 ei sano "kahvin vienti teki rikkaaksi" vaan
+   *       kulkee väestönlaskentojen ja café com leite -politiikan
+   *       kautta; A3 ei sano "maailman suurin japanilaisyhteisö
+   *       Japanin ulkopuolella" vaan antaa vuosiluvut 1912, 1958 ja
+   *       1987 ja kertoo, ettei yhtä suurta japanilaistaustaista
+   *       väestöä asu missään muualla Japanin rajojen ulkopuolella.
+   *       Visan vastaukset löytyvät silti lehdestä: Brasilia
+   *       (etusivun leipäteksti ja kaupunkisivun johdanto), kahvi
+   *       (SP2, SP3), väkiluku (SP4), Avenida Paulista (H3),
+   *       japanilaisyhteisö (A3).
+   *
+   * FAKTAPOHJAN MUUT VARAUKSET RATKAISTU NÄIN. (1) TERRA ROXA. Visan
+   * vihje puhuu terra roxa -maaperästä, mutta en-Wikipediassa on
+   * aiheesta vain täsmennyssivu ilman mainintaa kahvinviljelystä.
+   * Maaperäväitettä EI ole käytetty missään lehden tekstissä; kahvin
+   * ja kaupungin suhde kerrotaan radan, vientisataman ja
+   * väestönkasvun kautta. (2) RAUTATIEN VUOSILUKU. Pääartikkeli
+   * sanoo Santosin yhteyden syntyneen "vuodesta 1869" nimellä Estrada
+   * de Ferro Santos-Jundiaí; se on saman radan nimi vasta vuoden 1946
+   * kansallistamisen jälkeen. Radan oma artikkeli antaa avauspäiväksi
+   * 16.2.1867 kahdella lähteellä, ja lehti käyttää sitä — sama
+   * periaate kuin aiemmissa lehdissä, tarkempi lähde voittaa
+   * pyöristetyn leipätekstin. (3) BIENNAALIN SIJAINTI oli faktapohjan
+   * mukaan heikosti lähteistetty, joten sitä ei mainita lainkaan.
+   * (4) HOSPEDARIAN LUVUT (yli 70 kansallisuutta, yli 2,5 miljoonaa
+   * ihmistä, ensimmäinen ryhmä 5.6.1887, sulkeminen 1978 yhdeksän-
+   * kymmenenyhden vuoden jälkeen) tarkistettiin Immigrant Inn
+   * -artikkelin raakatekstistä ja pitävät paikkansa.
+   *
+   * SISÄLTÖLINJAUS. Tehtävänanto ja docs/mantereet-tyoaineisto/
+   * spec-mantereet.md: siirtolaisyhteisöt kuvataan KAUPUNGIN
+   * NYKYISENÄ ELÄMÄNÄ, ei historiallisena kuriositeettina — siksi
+   * niillä on oma sivunsa eikä pelkkä nosto historiasivulla, ja
+   * jokainen sen neljästä nostosta päättyy tähän päivään. Pois on
+   * jätetty kokonaan en-Wikipedian "Public security" -osio
+   * (rikostilastot) ja "Social challenges" -osion favela- ja
+   * kodittomuuskuvaus, samoin kaikki nykypolitiikka. Orjuus ja
+   * bandeirantien orjaretket kerrotaan tapahtumina neutraalisti,
+   * ilman yksityiskohtien korostusta: H2 sanoo suoraan, mitä
+   * retkikunnat hakivat, eikä tee niistä seikkailua.
+   *
+   * AIHETOISTO, KAKSI PERUSTELTUA PARIA. (1) Rua 25 de Março
+   * esiintyy nostossa SP3 (Antonio Ferrignon maalaus 1894) ja
+   * nostossa A4 (nykyinen kauppakatu ylhäältä). Se on tarkoituksellinen
+   * ennen ja nyt -pari kahdella eri sivulla: SP3:ssa katu on matala
+   * kaupungin reuna kahvirahan alkuvuosina, A4:ssä sama katu on
+   * Brasilian tunnetuin halpakauppakortteli. (2) Praça da Sé esiintyy
+   * kansikuvassa (nykyinen uusgoottilainen katedraali) ja nostossa H1
+   * (Militão Augusto de Azevedon valokuva vanhasta barokkikirkosta
+   * 1862). Kyse on kahdesta ERI RAKENNUKSESTA samalla torilla, ja
+   * juuri se on H1:n pointti. Muut kohteet esiintyvät kerran.
+   *
+   * KUVAT: 22 kuvaa, kaikki haettu Wikimedia Commonsista
+   * KATEGORIOILLA (Skylines of São Paulo (city), Avenida Paulista,
+   * Pátio do Colégio, Sé (São Paulo), Facade of Catedral da Sé
+   * (São Paulo), São Paulo Railway Company, Estrada de Ferro
+   * Santos-Jundiaí, Estação da Luz 1880, Álbum Comparativo da Cidade
+   * de S. Paulo 1862-1887, Monumento às Bandeiras, Edifício
+   * Martinelli, Theatro Municipal de São Paulo in 2018/2019,
+   * Ibirapuera Park, Marquise do Parque Ibirapuera, Mercado Municipal
+   * de São Paulo, Hospedaria dos Imigrantes, Bixiga, Liberdade
+   * (São Paulo), Rua 25 de Março). Lisenssi ja tekijä on luettu
+   * rajapinnan extmetadatasta (LicenseShortName, Artist,
+   * Restrictions) ja jokainen valittu kuva on katsottu silmin 900
+   * pikselin esikatseluna.
+   *
+   * KUVAHYLKÄYKSET SYINEEN. Kuvan päälle lisätty merkintä:
+   * "S. Paulo Railway Co. Planos inclinados" -postikorttisarjan
+   * Museu Paulista -skannaukset (painettu otsikko ylä- ja alalaidassa
+   * SEKÄ värikalibrointipalkki kuvan alla); Guilherme Gaenslyn
+   * "Panorama de São Paulo II" (postikortti, jonka päälle on
+   * kirjoitettu tervehdys musteella); "São Paulo Antigo - 11"
+   * (albumisivu, jonka alle on kirjoitettu kuvateksti käsin);
+   * "Faz São Luiz - Macuco" (valokuvaajan vesileima kulmassa).
+   * Tunnistettavat kasvot lähikuvassa: "Avenida Paulista em São Paulo
+   * (52692651817)" (metroaseman suu, etualalla kolme ihmistä
+   * kasvot kameraan, lisäksi mainosjuliste), "ROGERIOCASSIMIRO
+   * AVENIDAPAULISTA" (autoilta suljettu Paulista täynnä lähikuvassa
+   * olevia kävijöitä), "Rua 25 de Março.jpg" (katutaso, etualan
+   * kasvot luettavissa), "Liberdade of Sao Paulo" ja "Libertade
+   * Japonese town of São Paulo city" (viikonlopputori, kymmeniä
+   * tunnistettavia kasvoja), "Estação Liberdade São Paulo-12302"
+   * (lisäksi vinoreunainen panoraamaompelu), "Corredor mercadão" ja
+   * "Mercado Municipal of São Paulo, Brazil" (myyjät kasvot
+   * kameraan). Hintakyltit ruokakuvassa: "Mercado Municipal
+   * (São Paulo) 02, 03 ja 16" ja "Mercado Municipal de Sao Paulo
+   * 037" — talon ruokakuvasääntö kieltää hintakyltit. Roskat ja
+   * töhryt hallitsevana aiheena: "Torii, Liberdade 01" ja
+   * "Torii, Liberdade 02" (jätesäkkirivi ja graffititäytteinen
+   * seinä koko vasemman laidan mitalta). Aihe ei vastannut
+   * käyttötarkoitusta: "Panoramic view of Sao Paulo city"
+   * (mustavalkoinen varastokattonäkymä, ei tunnistettavaa
+   * kaupunkia), "25 de Março - panoramio" (pelkkiä takapihoja),
+   * "Torre da Estação da Luz ... 01" (kuvattu ikkunan läpi,
+   * heijastus kuvan päällä), "Edifício Martinelli em São Paulo"
+   * (raskaasti jälkikäsitelty mustavalkoinen, etualalla ihminen).
+   * Lisäksi kaksi teknisesti kelpaavaa kuvaa jätettiin pois
+   * LÄHDERIVIN takia: Sérgio Valle Duarten kuvien
+   * extmetadata.Artist-kenttä palauttaa koko MediaWiki-
+   * viestilaatikon CSS:n, eikä talon sääntöä "tekijä täsmälleen
+   * Artist-muodossa" voi noudattaa ilman että lähderivistä tulee
+   * kilometrin mittainen.
+   *
+   * KUVATEKSTIT noudattavat omistajan 22.8.2026 linjausta: selite
+   * kertoo KOHTEESTA eikä kuvaile kuvaa, ja se on yhden virkkeen
+   * mittainen.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (säärivit haetaan omana eränään). Oppaan jakso 5 nojaa
+   * siis en-Wikipedian São Paulo -artikkelin Climate-osioon ja SANOO
+   * SEN ÄÄNEEN — Samarkandin, Karachin ja Vancouverin malli.
+   * Mittauspiste olisi Mirante de Santana, jonka korkeus on 785 m,
+   * kun infoboksin kaupunkikorkeus on 760 m.
+   *
+   * KOHDEKARTTAA, miniatyyrejä eikä tarinakaarta ei tehty tässä
+   * erässä (tehtävänannon rajaus).
+   */
+  saopaulo: [
+    {
+      id: 'kaupunki',
+      nimi: 'São Paulo',
+      johdanto: 'Jesuiitat perustivat 1554 kukkulalle kahden joen väliin '
+        + 'koulun, jonka ympärille kasvoi Etelä-Amerikan suurin kaupunki. '
+        + 'Isoisän matkavuonna 1873 täällä asui vasta reilut '
+        + 'kolmekymmentätuhatta ihmistä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Catedral da sé.jpg',
+          selite: 'Uusgoottilaisen Sé-katedraalin 92 metrin tornit '
+            + 'valmistuivat vasta 1967, ja sen pilarien kapiteeleihin on '
+            + 'veistetty kahvinoksia, ananaksia ja vyötiäisiä.',
+          lahde: 'William Freitas de Oliveira, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Conjunto arquitetônico do Pátio do Colégio.jpg',
+          selite: 'Pátio do Colégion kirkko on 1900-luvun lopun '
+            + 'jälleenrakennus vuoden 1653 jesuiittakoulusta ja kirkosta, '
+            + 'jotka seisoivat kaupungin perustamispaikalla.',
+          lahde: 'Wladimir alberto martins, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Webysther 20190304120141 - Theatro municipal.jpg',
+          selite: 'Theatro Municipalissa pidettiin helmikuussa 1922 '
+            + 'Modernismin viikko, joka käänsi brasilialaisen taiteen '
+            + 'selän eurooppalaisille esikuville.',
+          lahde: 'Webysther, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kaupungin eri puolilta —
+       * vanha keskusta ylhäältä, Paulistan harjanne Jardinsin
+       * kattojen takaa ja Ibirapueran puisto Moeman siluetin edessä.
+       * Yksikään ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Centro de SP.jpg',
+          selite: 'Vanhan keskustan takana kaupunki jatkuu horisonttiin '
+            + 'asti: São Paulon kaupungissa on lähes kaksitoista '
+            + 'miljoonaa asukasta.',
+          lahde: 'Ana Paula Hirama, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Rebouças Avenue.jpg',
+          selite: 'Avenida Paulista kulkee kaupungin korkeimman '
+            + 'harjanteen päällä, ja sen 2,8 kilometrin varrella seisoo '
+            + 'pankkien ja televisiomastojen rivistö.',
+          lahde: 'Alexandre Giesbrecht, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Vista aérea do Ibirapuera, São Paulo.jpg',
+          selite: 'Ibirapueran 158 hehtaaria on kaupungin ensimmäinen '
+            + 'metropolipuisto, ja sen laidalla kohoaa vuoden 1954 '
+            + 'juhlien obeliski.',
+          lahde: 'Daniel Whistler, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Lähetyskoulu kahden joen välissä',
+          tiedosto: 'Pateo do Collegio.jpg',
+          teksti: 'Kaksitoista jesuiittapappia, heidän joukossaan Manuel da '
+            + 'Nóbrega ja José de Anchieta, pystytti 25. tammikuuta 1554 '
+            + 'Piratiningan ylängölle koulun jyrkälle kukkulalle '
+            + 'Anhangabaú- ja Tamanduateí-jokien väliin. Vihkiäispäivä osui '
+            + 'apostoli Paavalin kääntymyksen juhlaan, ja juhlan nimi jäi '
+            + 'ensin koululle, sitten kylälle ja lopulta koko kaupungille. '
+            + 'Ensimmäinen rakennus tehtiin alueen alkuperäisasukkaiden '
+            + 'omalla tekniikalla tampatusta savesta. Sen jälkeen kului '
+            + 'kaksisataa vuotta, joiden ajan São Paulo oli Brasilian '
+            + 'sisämaan ainoa siirtokuntakylä ja eli omavaraisviljelystä.',
+          selite: 'Pátio do Colégio on se kukkula, jolla kaupunki '
+            + 'perustettiin 1554, ja nykyinen rakennusryhmä valmistui '
+            + 'jälleenrakennuksena 1900-luvun lopulla.',
+          lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Pátio do Colégio',
+        },
+        {
+          otsikko: 'Rata, joka toi kahvin merelle',
+          tiedosto: 'Jesus, Benedito Calixto de - Estação da Luz, 1880.jpg',
+          teksti: 'Brittiläinen São Paulo Railway Company avasi 16. '
+            + 'helmikuuta 1867 radan satamakaupunki Santosista ylängön '
+            + 'poikki Jundiaíhin. Serra do Marin lähes 800 metrin rinne oli '
+            + 'pidetty ylitsepääsemättömänä, kunnes 26-vuotias insinööri '
+            + 'Daniel Makinson Fox esitti neljäosaista köysivetorataa: '
+            + 'tavallinen rata olisi vaatinut yli neljänkymmenen kilometrin '
+            + 'kiertotien ja syönyt koko 200 000 punnan budjetin. Rinne '
+            + 'louhittiin ilman räjähteitä kiilaamalla, eikä radalla ole '
+            + 'yhtään tunnelia. Työ valmistui kymmenen kuukautta ennen '
+            + 'kahdeksan vuoden sopimusaikaa.',
+          selite: 'Luzin ensimmäinen asema oli matala yksikerroksinen talo, '
+            + 'jonka Benedito Calixto maalasi vuoden 1880 asussaan — '
+            + 'nykyinen tiiliasema rakennettiin vasta 1895–1901.',
+          lahde: 'Benedito Calixto, Wikimedia Commons (PD)',
+          wiki: 'São Paulo Railway Company',
+        },
+        {
+          otsikko: 'Kolmestakymmenestätuhannesta neljännesmiljoonaan',
+          tiedosto: 'Antonio Ferrigno - Rua 25 de Março.JPG',
+          teksti: 'Vuoden 1872 väestönlaskennassa São Paulossa oli 31 385 '
+            + 'asukasta — pikkukaupunki, jonka laidalta laitaan käveli '
+            + 'puolessa tunnissa. Rata satamaan ja ylängön kahvipeltojen '
+            + 'vientitulot käänsivät käyrän jyrkkään nousuun: asukkaita oli '
+            + '64 934 vuonna 1890 ja 239 820 vuosisadan vaihteessa. Valta '
+            + 'seurasi rahaa. Tasavallan alkuvuosikymmeninä São Paulo ja '
+            + 'maitotaloudestaan tunnettu Minas Gerais vuorottelivat '
+            + 'presidentin valitsemisessa niin säännöllisesti, että '
+            + 'liittoumaa alettiin kutsua nimellä café com leite, kahvi '
+            + 'maidon kanssa.',
+          selite: 'Antonio Ferrigno maalasi Rua 25 de Marçon noin 1894, '
+            + 'kun katu oli vielä hiekkainen ja Tamanduateí-joki kulki sen '
+            + 'vieressä oikaisematta.',
+          lahde: 'Antonio Ferrigno, Wikimedia Commons (PD)',
+          wiki: 'São Paulo',
+        },
+        {
+          otsikko: 'Mihin ylängön kylästä on tultu',
+          tiedosto: 'Centro Antigo de São Paulo - by Lucas.JPG',
+          teksti: 'São Paulon kaupungissa asuu nykyään noin 11,9 miljoonaa '
+            + 'ihmistä ja koko metropolialueella 21,5 miljoonaa. '
+            + 'Väkirikkaampaa kaupunkia ei löydy Brasiliasta, ei Etelä-'
+            + 'Amerikasta eikä koko päiväntasaajan eteläpuoliselta '
+            + 'maapallonpuoliskolta. Kaupunki tuottaa yksin noin '
+            + 'kahdeksasosan Brasilian bruttokansantuotteesta, ja siellä '
+            + 'toimii B3, markkina-arvoltaan Latinalaisen Amerikan suurin '
+            + 'pörssi. Kahvirahasta tuli 1900-luvulla teollisuutta ja '
+            + 'teollisuudesta palveluja, mutta lähtöruutu on yhä sama '
+            + 'kukkula kahden joen välissä.',
+          selite: 'Vanhan keskustan korttelit ovat yhä kaupungin '
+            + 'hallinnollinen ja historiallinen ydin, vaikka rahan '
+            + 'painopiste siirtyi 1900-luvulla Avenida Paulistalle.',
+          lahde: 'Lukaaz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'São Paulo',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Altino Arantes Building.jpg',
+          selite: 'Vuonna 1947 valmistunut Altino Arantesin torni oli '
+            + 'pitkään kaupungin korkein rakennus, ja sen katolta näkee '
+            + 'koko keskustan.',
+          lahde: 'Dornicke, Wikimedia Commons (PD)',
+        },
+        kappale: 'São Paulo on Brasilian talouden keskus ja Etelä-Amerikan '
+          + 'suurin kaupunki, ja matkailijan kannalta se on ennen kaikkea '
+          + 'kolme aluetta. Vanha keskusta Praça da Sén ympärillä on se '
+          + 'kukkula, jolta kaikki alkoi: Pátio do Colégio, katedraali, '
+          + 'Theatro Municipal, Mercadão ja Rua 25 de Março ovat kaikki '
+          + 'kävelymatkan päässä toisistaan. Kolme kilometriä lounaaseen '
+          + 'nousee Avenida Paulista museoineen ja pankkitorneineen, ja '
+          + 'sen takana avautuu Ibirapueran puisto. Kolmas suunta on '
+          + 'siirtolaiskortteleiden São Paulo — Liberdade, Bixiga, Bom '
+          + 'Retiro ja Mooca — jossa kaupunki näyttää, mistä sen väki on '
+          + 'tullut. Kaupunki on 760 metrin korkeudessa, joten se on '
+          + 'selvästi viileämpi kuin rannikon Santos.',
+        artikkeli: {
+          nimi: 'Matkailijan São Paulo',
+          taitto: 'opas',
+          teksti: 'Ylängön kaupunki, joka rakennettiin uudestaan joka '
+            + 'sukupolvi — ja jonka kaduilla kuulee edelleen kaikkien '
+            + 'niiden maiden jälkiä, joista sen väki tuli.',
+          nosto: 'Vuonna 1872 São Paulossa asui 31 385 ihmistä; '
+            + 'metropolialueella heitä on nyt 21,5 miljoonaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainväliset lennot laskeutuvat São Paulo/'
+                + 'Guarulhosin lentoasemalle, kotimaanlennot lähempänä '
+                + 'keskustaa sijaitsevalle Congonhasille ja pienkoneet '
+                + 'Campo de Martelle; yhdessä kentät liikuttivat jo 2015 '
+                + 'yli 58 miljoonaa matkustajaa. Kaupungin sisällä '
+                + 'liikutaan metrolla. Sen rakentaminen alkoi 1968 '
+                + 'pormestari José Vicente de Faria Liman kaudella, ja '
+                + 'kaupallinen liikenne aloitettiin 14. syyskuuta 1974. '
+                + 'Vuonna 2016 verkostoa oli 71,5 kilometriä, asemia 64 '
+                + 'ja linjoja viisi, ja järjestelmä kuljetti sinä vuonna '
+                + '1,1 miljardia matkustajaa. Metro ja lähijunat käyttävät '
+                + 'osittain samoja asemia, joten vanha rautatieasema Luz '
+                + 'on yhä koko seudun vaihtopiste.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on 760 metrin korkeudessa Piratiningan '
+                + 'ylängöllä, ja Etelänkääntöpiiri kulkee sen '
+                + 'pohjoispuolelta. Korkeus tekee ilmastosta leudomman '
+                + 'kuin leveysasteelta voisi päätellä. Meren ja ylängön '
+                + 'välissä on Serra do Marin lähes 800 metrin '
+                + 'rannikkojyrkänne, jota pitkin kaikki liikenne satamaan '
+                + 'laskeutuu: vanha köysivetorata palveli 1867–1970, '
+                + 'toinen köysirata 1901–1982 ja nykyinen sähköistetty '
+                + 'hammastankorata avattiin 1974 vanhan radan pohjalle. '
+                + 'Kaupungin halki kulkevat Tietê- ja Pinheiros-joet, '
+                + 'jotka on oikaistu betoniuomiin ja joiden '
+                + 'puhdistushanke on yhä kesken.',
+              kuva: {
+                tiedosto: 'Cremalheira 1.jpg',
+                selite: 'Serra do Marin nykyinen hammastankorata avattiin '
+                  + '1974 vanhan, vuodesta 1867 palvelleen '
+                  + 'köysivetoradan linjalle.',
+                lahde: 'User:OS2Warp, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: Mercadão',
+              teksti: 'Mercado Municipal — paulistanoille Mercadão — '
+                + 'vihittiin käyttöön 25. tammikuuta 1933 arkkitehti '
+                + 'Francisco Ramos de Azevedon suunnitelmien mukaan. '
+                + 'Julkisivun teki hänen toimistossaan työskennellyt '
+                + 'italialaisbrasilialainen Felisberto Ranzini, joka '
+                + 'sekoitti joonialaisia ja doorilaisia pylväitä niin, '
+                + 'että väliin jäi tilaa suurille laseille ja halli saa '
+                + 'valonsa päivänvalosta. Hallissa on 12 600 neliömetriä, '
+                + 'noin 1 500 työntekijää ja yli 290 myyntipistettä, ja '
+                + 'sen läpi kulkee 450 tonnia ruokaa päivässä. Conrado '
+                + 'Sorgenicht Filhon 72 lasimaalausta 32 paneelissa '
+                + 'kuvaavat seudun ruoantuotantoa — eivät pyhimyksiä, '
+                + 'vaikka sama verstas teki myös katedraalin ikkunat.',
+              kuva: {
+                tiedosto: 'Janelão Mercadão.jpg',
+                selite: 'Mercadãon kaarevat ikkunat ovat osa Felisberto '
+                  + 'Ranzinin julkisivuratkaisua, jossa massiiviset '
+                  + 'pylväät jättivät tilaa suurille laseille.',
+                lahde: 'Nanci Medeiros, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: Ibirapuera 1954',
+              teksti: 'Kaupungin 400-vuotisjuhlaan avattiin 21. elokuuta '
+                + '1954 Ibirapueran puisto, São Paulon ensimmäinen '
+                + 'metropolipuisto ja 158 hehtaaria vihreää keskellä '
+                + 'kivikaupunkia. Työnjako oli kolmiosainen: rakennukset '
+                + 'suunnitteli arkkitehti João Felipe Pereira ja maiseman '
+                + 'agronomi Otávio Augusto Teixeira Mendes, kun taas '
+                + 'maisema-arkkitehti Roberto Burle Marxin modernit '
+                + 'luonnokset olivat työn innoittajana. Paviljonkien '
+                + 'rakentaminen oli aikanaan kiistanalaista, koska osa '
+                + 'kaupunkilaisista halusi puhtaasti vihreän puiston. '
+                + 'Oscar Niemeyerin ja hänen työtovereidensa '
+                + 'rakennuskokonaisuus merkittiin kansalliseksi '
+                + 'muistomerkiksi vasta 2016. Kävijöitä puistossa on yli '
+                + '18 miljoonaa vuodessa.',
+              kuva: {
+                tiedosto: 'Marquise Parque do Ibirapuera São Paulo 2019-5942.jpg',
+                selite: 'Puiston läpi kiemurteleva betonikatos yhdistää '
+                  + 'Niemeyerin paviljongit toisiinsa, ja se on '
+                  + 'kaupunkilaisten suosituin sadesuoja.',
+                lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi São Paulosta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian São Paulo -artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on lauhkean subtrooppinen. Kesällä eli tammi–'
+                + 'maaliskuussa alin lämpötila on keskimäärin 19 ja ylin '
+                + '28 astetta; talvella liikutaan 12 ja 22 asteen välillä. '
+                + 'Sadetta tulee vuodessa noin 1 658 millimetriä, ja se on '
+                + 'jakautunut hyvin epätasaisesti: tammikuussa sataa 292 '
+                + 'millimetriä seitsemäntoista päivänä, kun ELOKUU on '
+                + 'vuoden kuivin kuukausi 32,3 millimetrillä ja neljällä '
+                + 'sadepäivällä. Syyskuu ei enää ole kuiva — silloin '
+                + 'sataa jo 83,3 millimetriä. Kuumin mitattu lukema on '
+                + '38,4 astetta 17. lokakuuta 2014 ja kylmin −3,2 astetta '
+                + '25. kesäkuuta 1918.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'São Paulo oli isoisän matka-aikaan pieni ylänkökaupunki, '
+        + 'jonka torilla seisoi vanha barokkikirkko. Rautatie ja kahvi '
+        + 'muuttivat sen yhdessä sukupolvessa pystysuoraksi '
+        + 'maailmankaupungiksi.',
+      tehtava: {
+        kysymys: 'Minä vuonna São Paulo sai kaupunkioikeudet?',
+        vaihtoehdot: [
+          '1554',
+          '1711',
+          '1822',
+          '1867',
+        ],
+        oikea: 1,
+        fakta: 'Kylä oli silloin ollut olemassa jo 157 vuotta. '
+          + 'Kaupunkioikeudet tulivat vasta kaksi vuotta sen jälkeen, kun '
+          + 'São Paulon ja Minas de Ouron kapteenikunta oli perustettu '
+          + 'Minas Geraisin kultalöytöjen takia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Katedraali, jota isoisä ei nähnyt',
+          tiedosto: 'Militão A. de Azevedo - Álbum Comparativo, 47 - Acervo do Museu Paulista da USP (DR).jpg',
+          teksti: 'Praça da Séllä seisoi isoisän vierailuvuonna 1873 '
+            + 'vaatimaton barokkikirkko vuodelta 1764. Paikalle oli '
+            + 'päätetty rakentaa pääkirkko jo 1589, ja se valmistui noin '
+            + '1616; kun São Paulosta tehtiin hiippakunnan keskus 1745, '
+            + 'vanha kirkko purettiin ja tilalle tuli barokkikirkko. Sekin '
+            + 'purettiin 1911. Nykyinen uusgoottilainen katedraali alkoi '
+            + 'nousta 1913 saksalaisen Maximilian Emil Hehlin '
+            + 'suunnitelmasta, se vihittiin käyttöön 1954 tornit yhä '
+            + 'kesken ja valmistui lopullisesti 1967. Isoisän näkemästä '
+            + 'kirkosta ei siis ole jäljellä yhtään kiveä.',
+          selite: 'Militão Augusto de Azevedo valokuvasi vanhan '
+            + 'barokkikatedraalin ja Largo da Sén vuonna 1862, yksitoista '
+            + 'vuotta ennen isoisän matkaa.',
+          lahde: 'Militão Augusto de Azevedo, Wikimedia Commons (PD)',
+          wiki: 'São Paulo Cathedral',
+        },
+        {
+          otsikko: 'Siirtokunnan köyhin kolkka',
+          tiedosto: '00 1867 São Paulo - Monumento às Bandeiras.jpg',
+          teksti: '1600-luvulla São Paulo oli Portugalin siirtokunnan '
+            + 'köyhimpiä alueita. Paulistoilla ei ollut varaa ostaa '
+            + 'afrikkalaisia orjia niin kuin rannikon istutusviljelmillä, '
+            + 'ja kaupungista tuli sen sijaan bandeirantien tukikohta: '
+            + 'sisämaahan lähtevien retkikuntien, jotka etsivät kultaa, '
+            + 'jalokiviä ja orjuutettavia alkuperäisasukkaita. Ryhmä sai '
+            + 'niin paljon valtaa, että se ajoi jesuiitat pois kaupungista '
+            + '1640. Kultaa löytyi Minas Geraisista 1690-luvulla, '
+            + 'kapteenikunta perustettiin 3. marraskuuta 1709 ja '
+            + 'kaupunkioikeudet tulivat 11. heinäkuuta 1711. Kullan '
+            + 'ehdyttyä siirryttiin sokeriruokoon.',
+          selite: 'Victor Brecheretin Monumento às Bandeiras Ibirapueran '
+            + 'laidalla muistaa 1600-luvun retkikuntia, ja se paljastettiin '
+            + 'kaupungin 400-vuotisjuhlien aikoihin.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bandeirantes',
+        },
+        {
+          otsikko: 'Katu, jonka kahviparonit rakensivat',
+          tiedosto: 'Werner Haberkorn - Vista aérea da Avenida Paulista. São Paulo-SP.jpg',
+          teksti: 'Uruguaylais-brasilialainen insinööri Joaquim Eugênio de '
+            + 'Lima vihki Avenida Paulistan käyttöön 8. joulukuuta 1891. '
+            + 'Katu oli aluksi asuinkatu: sen varrella oli kahviparonien ja '
+            + 'tehtailijoiden, muun muassa Matarazzon suvun, koristeellisia '
+            + 'huviloita, ja talo numero yksi kuului Antarctica-panimoa '
+            + 'pyörittäneelle Von Bülow\'n perheelle. Vuonna 1909 Paulistasta '
+            + 'tuli São Paulon ensimmäinen päällystetty katu, ja asfaltti '
+            + 'tuotiin sitä varten Saksasta asti. Huvilat purettiin '
+            + '1950-luvulta alkaen pankkien tornien tieltä, ja nyt '
+            + 'samaa 2,8 kilometrin katutilaa käyttää yli 800 000 ihmistä '
+            + 'päivässä.',
+          selite: 'Avenida Paulista kuvattuna ilmasta 1900-luvun '
+            + 'puolivälissä, kun huviloiden purkaminen pankkitornien tieltä '
+            + 'oli juuri alkanut.',
+          lahde: 'Werner Haberkorn/Fotolabor/Museu Paulista da USP, Wikimedia Commons (PD)',
+          wiki: 'Paulista Avenue',
+        },
+        {
+          otsikko: 'Modernismin viikko ja ensimmäinen pilvenpiirtäjä',
+          tiedosto: 'Edifício Martinelli - A.jpg',
+          teksti: 'Modernismin viikko järjestettiin Theatro Municipalissa '
+            + '10.–17. helmikuuta 1922, ja se kokosi yhteen runoilijat '
+            + 'Mário ja Oswald de Andraden, taidemaalarit Anita Malfattin '
+            + 'ja Tarsila do Amaralin sekä kuvanveistäjä Victor '
+            + 'Brecheretin. Järjestäjät halusivat kärjistää nuorten '
+            + 'modernistien ja akateemisen taide-establishmentin pitkän '
+            + 'kiistan, ja viikkoa pidetään brasilialaisen modernismin '
+            + 'lähtölaukauksena. Samaan aikaan kahviraha nousi pystyyn: '
+            + 'kaupungin ensimmäinen pilvenpiirtäjä Martinelli valmistui '
+            + '1929. Miljoonan asukkaan raja oli ylitetty jo edellisenä '
+            + 'vuonna 1928 — kolme sukupolvea aiemmin kaupungissa oli '
+            + 'asunut 31 000 ihmistä.',
+          selite: 'Martinelli rakennettiin 1924–1929 ja se oli São Paulon '
+            + 'ensimmäinen pilvenpiirtäjä.',
+          lahde: 'Mauro Cateb, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Martinelli Building',
+        },
+      ],
+    },
+    {
+      id: 'siirtolaisuus',
+      nimi: 'Siirtolaisuus',
+      johdanto: 'Yli seitsemänkymmentä kansallisuutta kulki Hospedaria dos '
+        + 'Imigrantesin portista sisään. Heidän jälkeläisensä eivät ole '
+        + 'kaupungin historiaa vaan sen kortteleita, keittiöitä ja '
+        + 'juhlakalentereita tänään.',
+      tehtava: {
+        kysymys: 'Kuinka moni ihminen kulki Hospedaria dos Imigrantesin '
+          + 'kautta sen 91 toimintavuoden aikana?',
+        vaihtoehdot: [
+          'noin 25 000',
+          'noin 250 000',
+          'yli 2,5 miljoonaa',
+          'yli 25 miljoonaa',
+        ],
+        oikea: 2,
+        fakta: 'Majatalo otti vastaan ensimmäisen siirtolaisryhmänsä '
+          + '5. kesäkuuta 1887 ja sulki ovensa 1978. Viimeiset sen kautta '
+          + 'kulkeneet tulivat Koreasta samana vuonna.',
+      },
+      nostot: [
+        {
+          otsikko: 'Majatalo radan varressa',
+          tiedosto: 'Exposição Vidas Refugiadas, no Museu da Imigração, em SP (34681520066).jpg',
+          teksti: 'Hospedaria dos Imigrantes rakennettiin korvaamaan Bom '
+            + 'Retiron vanha majatalo, joka oli huonokuntoinen ja vailla '
+            + 'kunnollista viemäröintiä. Mateus Haüsslerin suunnittelemaan '
+            + 'uuteen taloon vedettiin kaasu, sinkkiset kylpyammeet ja '
+            + 'rautaiset vesisäiliöt, ja se pystytettiin suoraan '
+            + 'rautatielinjan viereen, koska siirtolaiset saapuivat junalla. '
+            + 'Rakennustyöt alkoivat 1886 ja talo otettiin käyttöön '
+            + 'keskeneräisenä 1887. Yhdeksänkymmenenyhden toimintavuoden '
+            + 'aikana sen läpi kulki yli 2,5 miljoonaa ihmistä. Samassa '
+            + 'rakennuksessa toimii nykyään Museu da Imigração.',
+          selite: 'Museu da Imigração toimii Moocan kaupunginosassa siinä '
+            + 'samassa talossa, jossa siirtolaiset kirjattiin sisään '
+            + 'vuosina 1887–1978.',
+          lahde: 'Agência Brasil Fotografias, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Immigrant Inn',
+        },
+        {
+          otsikko: 'Enemmän italialaisia kuin Roomassa',
+          tiedosto: 'Famiglia Mancini, São Paulo, Brazil.jpg',
+          teksti: 'São Paulossa on enemmän italialaisten jälkeläisiä kuin '
+            + 'missään Italian kaupungissa, Rooma mukaan luettuna: noin '
+            + 'puolella kaupunkilaisista on kokonaan tai osittain '
+            + 'italialaiset juuret. Vuoteen 1920 mennessä osavaltioon oli '
+            + 'saapunut 1 078 437 italialaista, ja samana vuonna lähes 80 '
+            + 'prosenttia kaupungin väestöstä oli siirtolaisia tai heidän '
+            + 'jälkeläisiään. Italiaa ja sen murteita puhuttiin '
+            + '1900-luvun alussa melkein yhtä paljon kuin portugalia, ja '
+            + 'siitä jäi jälki paulistanojen puhetapaan. Bixigan, Brásin ja '
+            + 'Moocan juhlakalenteri on yhä italialainen, ja kaupungin '
+            + 'kuudessatuhannessa pizzeriassa paistetaan noin miljoona '
+            + 'pizzaa päivässä.',
+          selite: 'Rua Avanhandavan italialaisravintoloissa kupariastiat '
+            + 'ja ruudulliset pöytäliinat ovat osa samaa perinnettä, jonka '
+            + '1800-luvun siirtolaiset toivat mukanaan.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Italian Brazilians',
+        },
+        {
+          otsikko: 'Liberdade, kaupunginosa jonne Japani muutti',
+          tiedosto: 'Casario - Liberdade 03.jpg',
+          teksti: 'Japanilaiset siirtolaiset alkoivat asettua Liberdadeen '
+            + '1912. Moni tuli osavaltion kahvitiloilta, joilla työ ei '
+            + 'ollut vastannut lupauksia, ja pääkaupungissa oli enemmän '
+            + 'mahdollisuuksia. Vuonna 1958 kaupungissa laskettiin 120 000 '
+            + 'japanilaista ja 1987 jo 326 000, minkä lisäksi osavaltion '
+            + 'muissa osissa asui 170 000; missään muualla Japanin rajojen '
+            + 'ulkopuolella ei asu yhtä suurta japanilaistaustaista '
+            + 'väestöä. Nykyään suurin osa heistä asuu muualla ja pitää '
+            + 'Liberdadessa vain liikkeitään, ja kaupunginosaan on '
+            + 'muuttanut kiinalaisia, taiwanilaisia ja korealaisia. '
+            + 'Vuodesta 1974 sisäänkäyntiä on merkinnyt yhdeksänmetrinen '
+            + 'punainen torii Rua Galvão Buenolla.',
+          selite: 'Liberdaden mäkikaduilla on säilynyt uuskolonialistista '
+            + 'rivitaloasutusta siltä ajalta, jolloin useampi perhe asui '
+            + 'samassa talossa.',
+          lahde: 'Dornicke, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Liberdade (district of São Paulo)',
+        },
+        {
+          otsikko: 'Kauppias, joka avasi kadun',
+          tiedosto: 'Rua 25 de Março 1.jpg',
+          teksti: 'Rua 25 de Março sai nimensä 1865 Brasilian ensimmäisen '
+            + 'perustuslain allekirjoituspäivästä; sitä ennen se oli Rua de '
+            + 'Baixo, alakatu, koska se kulki Tamanduateí-joen tasolla. '
+            + '1800-luvun jälkipuoliskolla alueelle asettui Lähi-idästä '
+            + 'tulleita siirtolaisia, ja 1887 libanonilainen Benjamin Jafet '
+            + 'avasi kadun ensimmäisen kaupan. Muut seurasivat perässä. '
+            + '1960-luvun toistuvat tulvat pilasivat varastoja niin usein, '
+            + 'että tavara oli myytävä nopeasti alennuksella — siitä syntyi '
+            + 'kadun maine tukkuhintojen keskuksena. 1980-luvulta alkaen '
+            + 'liikkeitä avasivat korealaiset, kiinalaiset, kreikkalaiset '
+            + 'ja portugalilaiset.',
+          selite: 'Rua 25 de Março on Brasilian tunnetuin '
+            + 'halpakauppakortteli, ja sen ympäristö São Bento -luostarin '
+            + 'ja Mercadãon välissä tunnetaan yleisesti kadun nimellä.',
+          lahde: 'Peter Louiz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Rua 25 de Março',
+        },
+      ],
+    },
+  ],
 };

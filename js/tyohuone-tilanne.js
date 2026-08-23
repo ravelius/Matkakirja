@@ -48,7 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
-  'v1073 — KOHDEKARTAT viidelle kaupungille (San Francisco, Rio, Buenos Aires, Sydney, Auckland) seka kolme uutta kaupunkilehtea: Brisbane, Chicago ja Perth. Tarkista: viiden kaupungin kohdekartat ja kolmen uuden lehden sivut',
+  'v1073 — KOHDEKARTAT viidelle kaupungille (San Francisco, Rio, Buenos Aires, Sydney, Auckland) seka nelja uutta kaupunkilehtea: Brisbane, Chicago, Perth ja Sao Paulo. Tarkista: viiden kaupungin kohdekartat ja neljan uuden lehden sivut',
   'v1072 — HEROKIERROS 19: Wellington, Sevilla, Bergen, Montreal, Tampere ja Tallinna; 18/18 hyvaksyttiin, Nasilinna uusittiin kerran. Tarkista: kuuden kaupungin etusivukarusellit',
   'v1071 — VANCOUVERIN KAUPUNKILEHTI: kaupunki, historia ja alkuperaiskansat; 12 nostoa ja 22 kuvaa. Tarkista: Vancouverin lehti ja alkuperaiskansat-sivu',
   'v1070 — MELBOURNEN KAUPUNKILEHTI: kaupunki, historia, kuvataide ja luonto; 16 nostoa ja 26 kuvaa. Tarkista: Melbournen lehti kannesta oppaaseen',
@@ -441,6 +441,7 @@ export const TUOREET = {
   paivitetty: '23.8.2026 ilta',
   valmiit: [
     { id: 'brisbane', nimi: 'Brisbane', versio: 'v1073' },
+    { id: 'saopaulo', nimi: 'São Paulo', versio: 'v1073' },
     { id: 'chicago', nimi: 'Chicago', versio: 'v1073' },
     { id: 'perth', nimi: 'Perth', versio: 'v1073' },
     { id: 'vancouver', nimi: 'Vancouver', versio: 'v1071' },
