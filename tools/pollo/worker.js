@@ -764,6 +764,83 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
 const KUVA_KOOT = { pysty: '1024x1536', vaaka: '1536x1024', nelio: '1024x1024' };
 const KUVA_MALLI_OLETUS = 'gpt-image-2';
 
+/*
+ * VIITEKUVAT (omistajan tilaus 23.8.2026).
+ *
+ * Ongelma, joka tällä ratkaistaan: hero-kashgar-keskipaiva.png esitti
+ * Samarkandin tyylistä timuridimausoleumia, vaikka kuvateksti lupasi
+ * Yusuf Balasagunin mausoleumia Kašgarissa. Malli ei tuntenut kohdetta
+ * ja täytti aukon alueen arkkityypillä. Ratkaisu ei ole luopua
+ * generoinnista vaan ankkuroida se oikeisiin valokuviin: kun rungossa
+ * on `viitteet`, kutsu menee /v1/images/generations -sijasta
+ * /v1/images/edits -päätepisteeseen, jolle viitekuvat annetaan
+ * multipart/form-data -muodossa toistuvana `image[]`-kenttänä ja
+ * prompti sellaisenaan.
+ *
+ * RAJAPINTA tarkistettu OpenAI:n omasta dokumentaatiosta 23.8.2026
+ * (developers.openai.com, "Create image edit"):
+ *   - kenttä on `image[]`, toistettuna kerran per kuva
+ *   - GPT-kuvamalleille enintään 16 kuvaa yhdessä pyynnössä
+ *   - enintään 50 MB per kuva, muodot PNG, JPEG ja WebP
+ *   - `input_fidelity` on vain gpt-image-1/1.5:lle, joten sitä ei
+ *     lähetetä gpt-image-2:lle lainkaan
+ * Tämä worker ottaa vastaan enintään neljä viitettä.
+ *
+ * MIKSI USEITA VIITTEITÄ EIKÄ YHTÄ (päätoimittajan linjaus
+ * 23.8.2026 — ÄLÄ "optimoi" tätä yhteen kuvaan):
+ *   - LAATU: monesta eri kuvakulmasta malli oppii rakennuksen
+ *     GEOMETRIAN. Yhdestä kuvasta se oppii vain sen yhden ruudun ja
+ *     alkaa toistaa sitä.
+ *   - OIKEUDET: rakennuksen muoto ei ole valokuvaajan omaisuutta,
+ *     mutta yksittäinen valokuva on. Useasta eri kuvaajan kuvasta
+ *     koottu geometria on kohteen kuvaus, ei yhden teoksen jäljennös.
+ * Ajuri hakee siksi 2–4 eri kuvaajan ja eri kuvakulman valokuvaa
+ * samasta kohteesta (tools/hae-viitekuvat.mjs).
+ */
+const VIITTEITA_ENINTAAN = 4;
+/*
+ * Yhden viitteen kokokatto tavuina. OpenAI:n oma raja on 50 MB, mutta
+ * viite on tarkoitettu pikkukuvaksi (~1024 px): kaikki tätä suurempi
+ * hylätään hiljaisesti, koska iso viite ei paranna tulosta vaan vain
+ * paisuttaa pyynnön. Ajuri lähettää valmiiksi pienennettyjä kuvia
+ * (tools/hae-viitekuvat.mjs).
+ */
+const VIITTEEN_KOKOKATTO = 8 * 1024 * 1024;
+
+/** Tunnistaa kuvamuodon tavujen alusta; oletus on PNG. */
+function viitteenMuoto(tavut) {
+  if (tavut[0] === 0xff && tavut[1] === 0xd8) return { mime: 'image/jpeg', pate: 'jpg' };
+  if (tavut[0] === 0x52 && tavut[1] === 0x49 && tavut[8] === 0x57) {
+    return { mime: 'image/webp', pate: 'webp' };
+  }
+  return { mime: 'image/png', pate: 'png' };
+}
+
+/**
+ * Rungon `viitteet` → Blob-lista. Kelpaamattomat ohitetaan hiljaa:
+ * yksi rikkinäinen viite ei saa kaataa koko generointia, ja ajuri
+ * päättää joka tapauksessa itse, riittääkö viitteitä (generointiportti).
+ */
+function puraViitteet(viitteet) {
+  if (!Array.isArray(viitteet)) return [];
+  const ulos = [];
+  for (const alkio of viitteet.slice(0, VIITTEITA_ENINTAAN)) {
+    // Sekä paljas base64 että data-URL kelpaavat syötteeksi.
+    const raaka = String(alkio ?? '').replace(/^data:[^,]*,/, '').replace(/\s+/g, '');
+    if (!raaka || raaka.length > VIITTEEN_KOKOKATTO * 1.4) continue;
+    let tavut;
+    try {
+      const merkit = atob(raaka);
+      tavut = new Uint8Array(merkit.length);
+      for (let i = 0; i < merkit.length; i += 1) tavut[i] = merkit.charCodeAt(i);
+    } catch { continue; }
+    if (!tavut.length || tavut.length > VIITTEEN_KOKOKATTO) continue;
+    const { mime, pate } = viitteenMuoto(tavut);
+    ulos.push({ blob: new Blob([tavut], { type: mime }), nimi: `viite${ulos.length + 1}.${pate}` });
+  }
+  return ulos;
+}
+
 async function hoidaKuva(pyynto, env, kors, runko) {
   if (!kehittajaOhitus(pyynto, env)) {
     return vastaa({ virhe: 'koodi', viesti: 'Vain kehittäjälle.' }, { status: 403, ...kors });
@@ -794,19 +871,44 @@ async function hoidaKuva(pyynto, env, kors, runko) {
   }
   const koko = KUVA_KOOT[runko?.koko] ?? KUVA_KOOT.pysty;
   const laatu = ['low', 'medium', 'high'].includes(runko?.laatu) ? runko.laatu : 'high';
-  const vastausOAI = await fetch('https://api.openai.com/v1/images/generations', {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-      authorization: `Bearer ${env.OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: env.KUVA_MALLI || KUVA_MALLI_OLETUS,
-      prompt: prompti,
-      size: koko,
-      quality: laatu,
-    }),
-  });
+  const malli = env.KUVA_MALLI || KUVA_MALLI_OLETUS;
+  const viitteet = puraViitteet(runko?.viitteet);
+
+  /*
+   * Kaksi polkua, sama laskuri ja sama virheenvaimennus:
+   *   - viitteitä on  → /v1/images/edits, multipart, toistuva `image[]`
+   *   - viitteitä ei  → /v1/images/generations, JSON (ennallaan)
+   */
+  let vastausOAI;
+  if (viitteet.length) {
+    const lomake = new FormData();
+    lomake.append('model', malli);
+    lomake.append('prompt', prompti);
+    lomake.append('size', koko);
+    lomake.append('quality', laatu);
+    for (const v of viitteet) lomake.append('image[]', v.blob, v.nimi);
+    vastausOAI = await fetch('https://api.openai.com/v1/images/edits', {
+      method: 'POST',
+      // content-type jätetään asettamatta: fetch kirjoittaa
+      // multipart-rajamerkin itse, ja käsin asetettu otsake rikkoisi sen.
+      headers: { authorization: `Bearer ${env.OPENAI_API_KEY}` },
+      body: lomake,
+    });
+  } else {
+    vastausOAI = await fetch('https://api.openai.com/v1/images/generations', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `Bearer ${env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: malli,
+        prompt: prompti,
+        size: koko,
+        quality: laatu,
+      }),
+    });
+  }
   if (!vastausOAI.ok) {
     // Virherunkoja ei lokiteta eikä välitetä — sama sääntö kuin
     // puheessa ja pöllön chat-kutsuissa.
@@ -825,7 +927,9 @@ async function hoidaKuva(pyynto, env, kors, runko) {
     kuva: b64,
     muoto: 'png',
     koko,
-    malli: env.KUVA_MALLI || KUVA_MALLI_OLETUS,
+    malli,
+    // Ajuri kirjaa lokiinsa, kuinka monella viitteellä kuva syntyi.
+    viitteita: viitteet.length,
   }, kors);
 }
 

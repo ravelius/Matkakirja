@@ -746,6 +746,11 @@ export const RAAMATTU = {
           + 'työlistat.',
         'docs/moduulit/lukijoilta.md — lukijoiden ehdotukset: worker, '
           + 'lomake, Lukijoilta-lehti ja kuratointi.',
+        'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: '
+          + 'kohde tunnistetaan sen omasta Commons-kategoriasta, '
+          + 'generointi ankkuroidaan 2–4 vapaasti lisensoituun '
+          + 'nykyvalokuvaan, ja generointiportti estää kuvan syntymisen '
+          + 'jos viitteitä on alle kaksi tai tunnistus jää epävarmaksi.',
         'docs/pro-lisenssilupa.md — vakiopohja, jonka omistaja '
           + 'lähettää kutsumalleen pro-sisällöntuottajalle: mitä '
           + 'luovutetaan, lisenssi, krediitti ja tekijäsivu, '
