@@ -2565,6 +2565,28 @@ export const KULTTUURI_KATEGORIAT = {
        * Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 11 (23.8.2026, tools/hero-tyolista-6.mjs). */
+        {
+          ampari: 'herokoe/hero-madrid-aamu.png',
+          selite: 'Madridin kuninkaanlinna valmistui 1755 tulipalossa '
+            + 'tuhoutuneen maurilinnan paikalle, ja yli 3 400 huoneellaan '
+            + 'se on Länsi-Euroopan suurin kuninkaanlinna.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-madrid-keskipaiva.png',
+          selite: 'Plaza Mayor valmistui 1619 Habsburgien Madridin '
+            + 'juhla-aukioksi, ja sitä reunustavat asuintalot lepäävät '
+            + 'yhtenäisen holvikaarikäytävän päällä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-madrid-ilta.png',
+          selite: 'Kybele-jumalattaren suihkulähde valmistui 1782 Ventura '
+            + 'Rodríguezin piirustuksin, ja sen takana kohoava Cibelesin '
+            + 'palatsi (1919) oli alkujaan pääpostitalo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Azotea del Circulo de Bellas Artes, Madrid.jpg',
           selite: 'Círculo de Bellas Artes on vuonna 1880 perustettu '
@@ -2759,6 +2781,28 @@ export const KULTTUURI_KATEGORIAT = {
        * tarkistettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 11 (23.8.2026, tools/hero-tyolista-6.mjs). */
+        {
+          ampari: 'herokoe/hero-berliini-aamu.png',
+          selite: 'Brandenburgin portti valmistui 1791 '
+            + 'kaupunkitulliporttina, ja sen harjalla ajaa neljän hevosen '
+            + 'vetämä voitonjumalattaren vaunu, Quadriga.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-berliini-keskipaiva.png',
+          selite: 'Valtiopäivätalo valmistui 1894, ja Norman Fosterin '
+            + 'lasikupoli nousi sen katolle 1999 — kävijät kiertävät '
+            + 'spiraaliramppia istuntosalin yläpuolella.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-berliini-ilta.png',
+          selite: 'Berliinin tuomiokirkko valmistui 1905 Hohenzollernien '
+            + 'hovikirkoksi, ja sen kupolikruunu hallitsee Museosaaren '
+            + 'siluettia Spreen rannalla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Berlin Panorama von der Siegessäule 2021.jpg',
           selite: 'Voitonpylväs vihittiin 2. syyskuuta 1873, jolloin sen '
@@ -12260,6 +12304,28 @@ export const KULTTUURI_KATEGORIAT = {
        * silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 11 (23.8.2026, tools/hero-tyolista-6.mjs). */
+        {
+          ampari: 'herokoe/hero-pietari-aamu.png',
+          selite: 'Talvipalatsi valmistui 1762 Bartolomeo Rastrellin '
+            + 'piirustuksin, ja sen edustan Aleksanterin pylväs (1834) on '
+            + 'nostettu paikalleen yhtenä 600 tonnin graniittikappaleena.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-pietari-keskipaiva.png',
+          selite: 'Verikirkko rakennettiin 1883–1907 Aleksanteri II:n '
+            + 'murhapaikalle, ja sen sisäseiniä peittää yli 7 000 '
+            + 'neliömetriä mosaiikkeja.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-pietari-ilta.png',
+          selite: 'Pietari-Paavalin katedraalin kullattu neula nousee '
+            + '122,5 metriin, ja se oli kaupungin korkein rakennelma yli '
+            + 'kahdensadan vuoden ajan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Spb Views from Isaac Cathedral May2012 05.jpg',
           selite: 'Iisakinkirkko on omistettu Dalmatian pyhälle Isakille, '
@@ -26302,6 +26368,29 @@ export const KULTTUURI_KATEGORIAT = {
        * lähikuvaa, eikä niitä toisteta.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 11 (23.8.2026, tools/hero-tyolista-6.mjs). */
+        {
+          ampari: 'herokoe/hero-damaskos-aamu.png',
+          selite: 'Umaijadimoskeija valmistui 715, ja sen pihan arkadeja '
+            + 'peittävät kullanvihreät mosaiikit kuvaavat puutarhoja ja '
+            + 'palatseja — ihmiskuvia niissä ei ole.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-damaskos-keskipaiva.png',
+          selite: 'Suq al-Hamidiyyan pääkatu katettiin 1800-luvun lopulla '
+            + 'rautaholvilla, jonka luodinreikien ja ilma-aukkojen läpi '
+            + 'aurinko piirtää valopisteitä koko kadun mitalle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-damaskos-ilta.png',
+          selite: 'Damaskos on maailman vanhimpia yhtäjaksoisesti '
+            + 'asuttuja kaupunkeja, ja Qasiun-vuoren rinteeltä sen '
+            + 'vanhakaupunki näyttäytyy kattojen ja kupolien mattona '
+            + 'keitaan keskellä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Umayyad Mosque, Mount Qasioun, Old Damascus.jpg',
           selite: 'Roomalaiset kaavoittivat Damaskoksen uudelleen, ja '
@@ -37331,6 +37420,29 @@ export const KULTTUURI_KATEGORIAT = {
        * kohdekartalla.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 11 (23.8.2026, tools/hero-tyolista-6.mjs). */
+        {
+          ampari: 'herokoe/hero-kioto-aamu.png',
+          selite: 'Kinkaku-ji rakennettiin 1397 shōgunin huvilaksi, ja '
+            + 'sen kaksi ylintä kerrosta on päällystetty lehtikullalla — '
+            + 'nykyinen paviljonki on vuoden 1950 palon jälkeinen '
+            + 'jälleenrakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kioto-keskipaiva.png',
+          selite: 'Fushimi Inarin rinnepolkuja reunustaa noin '
+            + 'kymmenentuhatta lahjoitettua vermilionin väristä '
+            + 'torii-porttia, jotka muodostavat yhtenäisiä tunneleita.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kioto-ilta.png',
+          selite: 'Kiyomizu-deran päähallin puinen näköalalava työntyy '
+            + 'rinteestä kolmentoista metrin korkeudella '
+            + 'pilariristikon varassa — rakenne on koottu ilman nauloja.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Water reflection of Kinkaku-ji Temple with blue sky and white clouds, Kyoto, Japan.jpg',
           selite: 'Kinkaku-ji kuuluu niihin seitsemääntoista kohteeseen, jotka '
@@ -39366,6 +39478,29 @@ export const KULTTUURI_KATEGORIAT = {
        * vanhankaupungin kujaverkko, buddhalainen esikaupunki).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 11 (23.8.2026, tools/hero-tyolista-6.mjs). */
+        {
+          ampari: 'herokoe/hero-varanasi-aamu.png',
+          selite: 'Varanasin ghatit ovat kilometrien mittainen '
+            + 'porrasranta, jolla pyhiinvaeltajat kylpevät Gangesissa '
+            + 'auringonnousun aikaan — kaupunki on hindulaisuuden '
+            + 'pyhimpiä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-varanasi-keskipaiva.png',
+          selite: 'Dashashwamedh on Varanasin pääghat, jonka '
+            + 'porrasrantaa reunustavat ruhtinaiden 1700-luvulla '
+            + 'rakennuttamat rantapalatsit ja pyhäköt.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-varanasi-ilta.png',
+          selite: 'Ganga aarti on joka ilta Dashashwamedh-ghatilla '
+            + 'toimitettava tuliseremonia, jossa papit kiertävät '
+            + 'monikerroksisia öljylamppuja joelle omistettuina.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Dashashwamedh Ghat in Varanasi, Uttar Pradesh.jpg',
           selite: 'Dashashwamedh-ghatilla pidetään iltaisin Ganga aarti, '
