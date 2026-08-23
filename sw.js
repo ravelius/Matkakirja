@@ -15,6 +15,7 @@ const SHELL = [
   './js/karttazoom.js',
   './js/vertailu.js',
   './js/nahtavyydet.js',
+  './js/kuvagalleria.js',
   './js/opas.js',
   './js/lehti.js',
   './js/ehdotukset.js',

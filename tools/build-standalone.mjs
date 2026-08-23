@@ -265,6 +265,14 @@ const MODULES = [
   'js/liput.js',
   'js/karttazoom.js',
   'js/vertailu.js',
+  /*
+   * Kuvagalleria ennen nähtävyyksiä (nahtavyydet.js tuo galleriaNapin
+   * staattisesti). Moduuli tuo vain ui-apurit, joka on jo yllä. Yhden
+   * tiedoston versiossa galleria on mukana mutta jää käytännössä
+   * tyhjäksi: ulkoiset rajapinnat eivät vastaa, ja haku päättyy
+   * kohteliaaseen riviin ilman virhettä.
+   */
+  'js/kuvagalleria.js',
   // M4: nähtävyydet ennen opasta (opas tuo sen apurit).
   'js/nahtavyydet.js',
   'js/opas.js',

@@ -11,6 +11,7 @@
  */
 
 import { kytkeKarttaZoom } from './karttazoom.js';
+import { galleriaNappi } from './kuvagalleria.js';
 import { liitaLukija, pysaytaLukija } from './lukija.js';
 import { el } from './mapart.js';
 import { asetaKuva, julisteUrl } from './media.js';
@@ -347,7 +348,17 @@ export function piirraKaupunkiKartta(ui, kohde) {
   const avaajat = [];
   (kartta.kohteet ?? []).forEach((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
-    const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
+    /*
+     * `kuvahaku` säilyttää kohteen Wikipedia-otsikon kuvagalleriaa
+     * varten. Oma juttu nollaa `wiki`-kentän, koska jutun lopussa ei
+     * näytetä "Lue lisää" -linkkiä — mutta juuri se otsikko on paras
+     * avain kohteen omaan Commons-kategoriaan (js/kuvagalleria.js),
+     * joten se otetaan talteen erikseen.
+     */
+    const kuvahaku = raaka.wiki ?? raaka.nimi;
+    const k = juttu
+      ? { ...raaka, wiki: undefined, ...juttu, kuvahaku }
+      : { ...raaka, kuvahaku };
     const numero = String(i + 1);
     const p = karttapiste(kartta, k.lat, k.lon);
     // Napautettava, jos kohteella on oma juttu TAI wiki-artikkeli.
@@ -690,6 +701,25 @@ export function piirraKaupunkiKartta(ui, kohde) {
   lohko.appendChild(kehys);
   lohko.appendChild(selitteet);
   lohko.appendChild(lahderivi);
+  /*
+   * KAUPUNGIN OMA KUVAGALLERIA (omistajan tilaus 23.8.2026). Sama
+   * uloskäynti kuin nähtävyysjutussa, mutta koko kaupungista: kartan ja
+   * kohdelistan alla on luonteva paikka, koska siinä pelaaja on juuri
+   * katsonut, mitä kaupungissa on. Koordinaatit tulevat kartan
+   * rajauksen keskeltä ja säde on kilometrejä eikä metrejä — kaupunki
+   * on alue, ei rakennus.
+   */
+  const kaupunkitieto = ui.game?.board?.cityById?.get(kaupunki) ?? null;
+  const keskiLat = kartta.rajat ? (kartta.rajat.pohjoinen + kartta.rajat.etela) / 2 : NaN;
+  const keskiLon = kartta.rajat ? (kartta.rajat.ita + kartta.rajat.lansi) / 2 : NaN;
+  const galleria = galleriaNappi(ui, {
+    nimi: kaupunkitieto?.name ?? kaupunki,
+    wiki: kaupunkitieto?.wiki ?? kaupunkitieto?.name ?? '',
+    lat: keskiLat,
+    lon: keskiLon,
+    sade: 5000,
+  }, 'Lisää kuvia tästä kaupungista');
+  if (galleria) lohko.appendChild(galleria);
   kohde.appendChild(lohko);
   kytkeKarttaZoom(ui, kehys, kotelo, napit, ydin, zoomOhjain);
 }
@@ -1623,6 +1653,26 @@ export function avaaNahtavyys(ui, kohde, numero, {
     sisalto.appendChild(html('p', 'nahtavyys-lahderivi', lahdemerkinta(kohde.lahde)));
   }
   /*
+   * "LISÄÄ KUVIA TÄSTÄ KOHTEESTA" (omistajan tilaus 23.8.2026).
+   *
+   * Nappi on tarkoituksella lähderivin JÄLKEEN ja omannäköisensä: se ei
+   * ole osa jutun kuvitusta vaan uloskäynti avoimiin kokoelmiin, joiden
+   * kuvia kukaan ei ole valinnut lehteen (js/kuvagalleria.js). Ilman
+   * verkkoa galleriaNappi palauttaa null, jolloin nappia ei ole
+   * olemassakaan — offline-peli ei näytä ovea, jota ei voi avata.
+   */
+  const galleria = galleriaNappi(ui, {
+    nimi: kohde.nimi,
+    wiki: kohde.kuvahaku ?? kohde.wiki,
+    kaupunki: ui.game?.board?.cityById?.get(ui.lehtitila.arrivalShownFor)?.name ?? '',
+    lat: kohde.lat,
+    lon: kohde.lon,
+    // Nähtävyys on yksi rakennus: puolen kilometrin säde riittää, eikä
+    // naapurikorttelin kuvia oteta tämän kohteen nimissä.
+    sade: 500,
+  });
+  if (galleria) sisalto.appendChild(galleria);
+  /*
    * PÖLLÖPOIMINNAT jutun loppuun, lähderivin jälkeen (omistajan tilaus
    * 23.8.2026): kysymyspillerit, joista aukeaa tallennettu vastaus.
    * Avain on jutun oma tunniste — kaupunki + kohteen nimi
@@ -1883,7 +1933,17 @@ export function nahtavyysKohteet(ui) {
   const kaupunki = ui.lehtitila.arrivalShownFor;
   return (KAUPUNKIKARTAT[kaupunki]?.kohteet ?? []).map((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
-    const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
+    /*
+     * `kuvahaku` säilyttää kohteen Wikipedia-otsikon kuvagalleriaa
+     * varten. Oma juttu nollaa `wiki`-kentän, koska jutun lopussa ei
+     * näytetä "Lue lisää" -linkkiä — mutta juuri se otsikko on paras
+     * avain kohteen omaan Commons-kategoriaan (js/kuvagalleria.js),
+     * joten se otetaan talteen erikseen.
+     */
+    const kuvahaku = raaka.wiki ?? raaka.nimi;
+    const k = juttu
+      ? { ...raaka, wiki: undefined, ...juttu, kuvahaku }
+      : { ...raaka, kuvahaku };
     return { k, numero: String(i + 1) };
   });
 }
