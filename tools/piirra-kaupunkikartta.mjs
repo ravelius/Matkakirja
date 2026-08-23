@@ -3243,6 +3243,221 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 40.788, etela: 40.698, lansi: -74.056, ita: -73.9372 },
   },
+  auckland: {
+    /*
+     * KANNAKSEN POHJOISPUOLI: Waitematān ranta Maungawhaulle
+     * (23.8.2026). Ruutu on 5,8 × 5,8 km, eli työkalun oman ohjeen
+     * keskivaiheilla (5–8 km) — Aucklandin kohteet mahtuvat siihen
+     * ilman New Yorkin kaltaista poikkeusta.
+     *
+     * ENSIMMÄINEN ETELÄISEN PALLONPUOLISKON RUUTU. Leveysasteet ovat
+     * negatiivisia, ja se toimii sellaisenaan: rajaus antaa Overpassille
+     * bbox-järjestyksen (etela < pohjoinen myös etumerkillisenä), ja
+     * suoraPiste laskee y:n erotuksena pohjoisreunasta.
+     *
+     * KANNAS EI MAHDU KOKONAAN, ja se on tietoinen valinta. Auckland on
+     * kahden sataman välissä, mutta Manukau on Onehungassa noin
+     * -36,928 eli viisi kilometriä eteläreunan alapuolella: molemmat
+     * meret vaatisivat kymmenen kilometrin ruudun (New Yorkin mitta),
+     * ja väliin jäisi pelkkää esikaupunkia ilman kohteita. Kartta
+     * näyttää siksi Waitematān puolen, ja kannaksen kapeus kerrotaan
+     * esittelytekstissä (maakartat.js).
+     *
+     * POHJOISREUNA -36,836 ON VEDETTY LAITUREIDEN YLÄPUOLELLE mutta ei
+     * Pohjoisrannalle asti: Devonport on -36,832 ja Harbour Bridgen
+     * keskikohta -36,829, ja niiden ottaminen mukaan olisi tuonut
+     * ruutuun kilometrin lisää avovettä ja siirtänyt keskustan alas.
+     * Nyt Waitematāsta näkyy 700 metrin nauha, eli laiturit ja
+     * rantaviiva erottuvat mutta vesi ei hallitse kuvaa.
+     *
+     * ETELÄREUNA -36,888 ON MAUNGAWHAUN MUKAAN. Maungakiekie /
+     * One Tree Hill (-36,900) jäisi vielä kilometrin alapuolelle, ja
+     * se sopii: vuori on kaupunkilehden oma nosto eikä kartan kohde
+     * (kulttuuri-kategoriat.js, nostot K1 ja H2).
+     *
+     * meri: true. Waitematā on OSM:ssä rantaviivaa (natural=coastline)
+     * eikä vesimonikulmio, joten ilman lippua kartan yläreuna ja
+     * Hobson Bay olisivat paperin värisiä.
+     *
+     * EI jalkakäytäviä eikä palveluteitä: Aucklandin keskusta on
+     * väljä katuverkko, ja koeajossa kuva luki hyvin ilman niitä.
+     */
+    rajat: { pohjoinen: -36.836, etela: -36.888, lansi: 174.7317, ita: 174.7967 },
+    meri: true,
+  },
+  sanfrancisco: {
+    /*
+     * Niemen koillisnurkka: Aquatic Parkin rannasta Civic Centeriin ja
+     * Pacific Heightsista lahdelle (23.8.2026). Ruutu on 4,4 × 4,4
+     * kilometriä eli New Yorkin (10 km) vastakohta, ja ero on
+     * maantieteen sanelema: faktapohja (docs/mantereet-tyoaineisto/
+     * faktapohja-sanfrancisco.md, osio 4) mittasi kaupungin
+     * kohteiden jakautuvan tiiviiseen ydinklusteriin ja 5–7
+     * kilometrin päässä olevaan ulkokehään, ja ydinklusteri mahtuu
+     * yhteen kävelymitan ruutuun.
+     *
+     * ULKOKEHÄ JÄÄ ULKOPUOLELLE TIETOISESTI. Golden Gate -silta
+     * (37,81972 / −122,47861), Presidio, Golden Gate Park ja
+     * Alcatraz ovat 4,9–7,2 kilometrin päässä keskipisteestä, ja
+     * niiden mukaan ottaminen kasvattaisi ruudun yli kymmeneen
+     * kilometriin — silloin puolet kuvasta olisi Tyyntämerta ja
+     * lahtea ja ydinklusterin kymmenen kohdetta puristuisivat
+     * nurkkaan. Silta ja Alcatraz ovat sitä paitsi jo lehden puolella
+     * (avauskarusellin ja matkaoppaan kuvat), ja molemmat ovat
+     * 1930-luvulta eli isoisän matkaan nähden anakronismeja.
+     *
+     * EI meri: true, ja se on KOKEILTU 23.8.2026 — lippu kääntyi
+     * väärin päin. Merentäyttö väritti niemen eli MAAN vesisävyllä
+     * ja jätti lahden paperin väriseksi, koska rantaviiva kulkee
+     * kuvan halki eikä sulkeudu renkaaksi oikein päin (Tukholman
+     * tunnettu puute). Ilman lippua satama-altaat ja laiturien
+     * väliset vedet piirtyvät oikein, koska ne ovat OSM:ssä myös
+     * natural=water -alueita; avolahti kuvan koillisnurkassa jää
+     * paperiksi, ja se on pienempi paha kuin väärä meri.
+     *
+     * EI jalkakäytäviä eikä palveluteitä. San Franciscon ydin on
+     * suoraa ruutukaavaa, jossa korttelin sivu on noin sata metriä
+     * eli 36 pikseliä — katuverkko piirtyy tiheänä ilman niitäkin,
+     * ja lipuilla Financial Districtin korttelit täyttyisivät
+     * pysäköintipihojen ja huoltokujien viivoista.
+     *
+     * ETELÄREUNA 37.772 ON VALITTU KAUPUNGINTALON MUKAAN. Mission
+     * Doloresin lähetysasema (37,76439) jää kilometrin reunan
+     * alapuolelle; se on lehden oman noston aihe ("Yerba Buenasta
+     * tuli San Francisco"), eikä ruudun venyttäminen sinne asti
+     * kannata — kartta kasvaisi 5,5 kilometriin ja kaikki kymmenen
+     * kohdetta nousisivat yläpuoliskoon.
+     */
+    rajat: { pohjoinen: 37.812, etela: 37.772, lansi: -122.4345, ita: -122.3845 },
+  },
+  buenosaires: {
+    /*
+     * RECOLETASTA SAN TELMON RAJALLE (23.8.2026). Ruutu on 3,6 × 4,0 km
+     * ja se kattaa kaupungin historiallisen ytimen: pohjoisessa
+     * Recoletan Pilar-basilika, keskellä Microcentron ruutukaava ja
+     * Avenida de Mayo, etelässä Monserraten siirtomaa-ajan korttelit.
+     * Kaikki kymmenen kohdetta mahtuvat pääruutuun, joten kainaloa ei
+     * ole (kuten Kantonissa, Kolkatassa ja Colombossa).
+     *
+     * RUUTU ON PYSTY (kuvasuhde 0,90) samasta syystä kuin Colombossa:
+     * kohteet ovat luonnostaan 2,9 kilometrin pohjois–eteläsuuntainen
+     * nauha ja vain 2,1 kilometriä leveä, koska Buenos Aires kasvoi
+     * Plaza de Mayolta pohjoiseen Recoletaan ja etelään San Telmoon
+     * joen suuntaisesti.
+     *
+     * ITÄREUNA ON VEDETTY PUERTO MADERON ALTAILLE, vaikka satama
+     * rakennettiin vasta 1887–1897 eikä isoisä nähnyt sitä. Perustelu
+     * on sama kuin New Yorkin länsireunassa: pelkkä katuverkko ilman
+     * vettä ei kerro, että kyseessä on satamakaupunki, ja altaat
+     * antavat ruudun oikealle laidalle rakenteen. Costanera Surin
+     * luonnonsuojelualue jää altaiden taakse ulkopuolelle — se on
+     * 1970-luvulla täytettyä maata, joka piirtyisi tyhjänä paperina.
+     *
+     * EI meri: true. Río de la Platan avovesi on vasta Costanera Surin
+     * takana eli ruudun ulkopuolella, ja Puerto Maderon neljä allasta
+     * ovat OSM:ssä sulkeutuvia vesialueita, jotka täyttyvät ilman
+     * merilippua. Sama tilanne kuin Madridissa ja Wienissä.
+     *
+     * EI jalkakäytäviä eikä palveluteitä. Microcentron korttelit ovat
+     * noin 110 metriä sivultaan eli parikymmentä pikseliä, ja
+     * ruutukaava piirtyy jo itsessään tiheänä; Calle Florida ja
+     * Lavalle ovat OSM:ssä pedestrian-luokkaa, joka piirtyy joka
+     * tapauksessa (KADUT-taulun kolmas rivi).
+     *
+     * TEATRO COLÓN, PLAZA DE MAYO, CABILDO, CASA ROSADA, RECOLETAN
+     * HAUTAUSMAA JA SAN TELMON PLAZA DORREGO OVAT RUUDUSSA MUTTA
+     * EIVÄT PISTELISTALLA: ne kaikki ovat kaupunkilehden nostojen tai
+     * matkaoppaan jaksojen aiheita (kulttuuri-kategoriat.js), eikä
+     * kohdekartta toista lehden juttuja (New Yorkin sääntö).
+     */
+    rajat: { pohjoinen: -34.5825, etela: -34.618, lansi: -58.4, ita: -58.361 },
+  },
+  sydney: {
+    /*
+     * SATAMANSILLALTA HYDE PARKIN ETELÄPÄÄHÄN (nippu 8, 23.8.2026).
+     * Ruutu on 4,6 × 4,7 km eli lähes neliö, ja sen sisään mahtuu
+     * koko se kaupunki, jonka isoisä olisi kävellyt läpi puolessa
+     * päivässä: pohjoisessa sataman suuaukko ja Bennelong Point,
+     * keskellä Macquarie Streetin virastorivi ja The Domain,
+     * lännessä Darling Harbour ja etelässä Hyde Park.
+     *
+     * RUUTU ON NELIÖ, VAIKKA KOHTEET OVAT NAUHA. Kymmenen kohdetta
+     * asettuvat 2,6 kilometrin pituiselle pohjois–eteläkaistalle,
+     * joka on vain 1,7 kilometriä leveä. Tiukka rajaus olisi
+     * piirtynyt kapeaksi pystynauhaksi, josta puuttuisi molemmin
+     * puolin juuri se, mikä tekee Sydneystä Sydneyn: satama idässä
+     * ja Darling Harbour lännessä (sama ratkaisu kuin Colombossa ja
+     * Mumbaissa).
+     *
+     * meri: true, ja se on TÄSSÄ VÄLTTÄMÄTÖN. Port Jackson on OSM:ssä
+     * avomerta eikä sulkeutuvaa vesimonikulmiota — vesi tulee kuvaan
+     * koillisesta ja jatkuu suuaukosta Tasmanmerelle — ja ilman
+     * merentäyttöä kartan koko yläosa, Darling Harbour, Woolloomooloo
+     * Bay ja Farm Cove jäisivät paperin värisiksi. Sydneyn rantaviiva
+     * on lisäksi kartaston rikkonaisin: niemiä, poukamia ja
+     * täyttömaata vieri vieressä, joten juuri tällä kaupungilla
+     * rantojen on osuttava kohdalleen (ks. tarkista-karttapisteet.mjs).
+     *
+     * JALKAKÄYTÄVÄT JA PALVELUTIET PÄÄLLÄ samasta syystä kuin
+     * Xi'anissa, Kolkatassa ja Karachissa: Circular Quayn promenadi,
+     * Martin Place, Pitt Street Mall, Hyde Parkin ja The Domainin
+     * puistokäytävät sekä kasvitieteellisen puutarhan polut ovat
+     * OSM:ssä jalankulkualueita, ja ilman lippuja kartan koko itäinen
+     * kolmannes olisi tyhjää paperia.
+     *
+     * EI laajennusta (vrt. Berliini): reunus jatkaisi kuvaa
+     * pohjoisessa avomerelle ja idässä Woolloomooloon jälkeen
+     * Potts Pointin asuinkortteleihin, eli kohdekartan kannalta
+     * tyhjään. Sama päätös kuin New Yorkissa.
+     *
+     * MANLY JA BONDI EIVÄT OLE KAINALOSSA. Rantakaupunginosat
+     * (Manly 11 km pohjoiseen, Bondi 7 km itään) ovat kertaluokkaa
+     * kauempana kuin yksikään kainalo tässä kartastossa (Medinan
+     * Quba 3,5 km, Adenin Tawahi 6 km), ja ne kerrotaan
+     * kaupunkilehden matkaoppaassa. Mrs Macquarie's Chair sen sijaan
+     * on ruudun sisällä itäreunassa.
+     */
+    rajat: { pohjoinen: -33.8455, etela: -33.888, lansi: 151.183, ita: 151.233 },
+    meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
+  rio: {
+    /*
+     * Rio de Janeiron vanha keskusta Guanabaran lahden rannalla,
+     * lännessä Quinta da Boa Vista ja Maracanã (E-Amerikan lauta,
+     * 23.8.2026). Ruutu on 8,2 × 5,1 km eli New Yorkia (10 km)
+     * pienempi mutta selvästi leveämpi kuin korkea, ja se on
+     * maaston sanelemaa: 1873-kaupunki on kapea kaistale lahden
+     * rannassa, ja keisarin asuinpaikka Quinta da Boa Vista on
+     * viisi kilometriä siitä länteen. Pohjois–etelä-suunnassa
+     * kohteet mahtuvat alle kahteen kilometriin, joten korkeampi
+     * ruutu olisi pelkkää vuorta ja avovettä.
+     *
+     * VUORET JÄÄVÄT ULKOPUOLELLE, ja se on päätös eikä unohdus.
+     * Corcovado (22,952 E) on 2,4 km eteläreunan alapuolella ja
+     * Sokerileipä (22,949 E / 43,157 L) kaakossa lahden suulla
+     * kahden kilometrin päässä eteläreunasta;
+     * kumpikin on kaupunkilehden noston "Vuori ilman patsasta"
+     * aihe (kulttuuri-kategoriat.js), eikä kohdekartta toista
+     * lehden juttuja. Eteläreunan vetäminen niihin asti nostaisi
+     * ruudun korkeuden viidestä kilometristä lähes kahdeksaan ja
+     * täyttäisi alaosan Tijucan metsällä, jossa ei ole yhtään
+     * kohdetta.
+     *
+     * MERI: TRUE, ja se on mitattu. Ilman lippua Guanabaran lahti jäi
+     * paperin väriseksi: New Yorkin ratkaisu ei toimi täällä, koska
+     * lahdesta on OSM:ssä vesialueina vain satama-altaat ja Santos
+     * Dumontin edusta, ja avolahti on pelkkää rantaviivaa. Kuvassa
+     * lahti näytti siksi maalta.
+     *
+     * EI jalkakäytäviä eikä palveluteitä: Centron ruutukaava on
+     * väljää 1800-luvun korttelia, ja kahdeksan kilometrin ruudussa
+     * kujat sotkisivat kuvan (sama mittaus kuin New Yorkissa).
+     */
+    rajat: { pohjoinen: -22.884, etela: -22.930, lansi: -43.238, ita: -43.158 },
+    meri: true,
+  },
 };
 
 /*

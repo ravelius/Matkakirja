@@ -289,4 +289,105 @@ export const OCEANIA_ARTIKKELIT = {
       + 'hetkellä, jolloin sen kuusi osaa ovat vasta löytämässä '
       + 'toisiaan.',
   },
+  /* Brisbanen kaksi väkilukua eivät ole lehden omasta erästä, joten ne
+   * on tarkistettu erikseen en-Wikipedian artikkelista Brisbane
+   * 23.8.2026: Australian tilastokeskuksen arvio Greater Brisbanen
+   * väestöstä on 2 833 524 (kesäkuu 2025) ja Kaakkois-Queenslandin
+   * 4,1 miljoonaa (2024). Siksi tässä sanotaan kaupunkiseutu eikä
+   * kaupunki — kaupungin oma luku on selvästi pienempi. */
+  Brisbane: {
+    intro: 'Brisbane on Queenslandin pääkaupunki ja Australian '
+      + 'kolmanneksi väkirikkain kaupunki, ja se on rakennettu joen '
+      + 'mutkien varaan noin viidentoista kilometrin päähän Moreton Bayn '
+      + 'suulta. Keskusta seisoo niemekkeellä, jonka ympäri joki kaartaa '
+      + 'lähes umpeen; turrbalin ja yagaran kielissä paikan nimi on '
+      + '**Meanjin, myös Magandjin**. Seudulla on asuttu yli 22 000 '
+      + 'vuotta.'
+      + '\n\n'
+      + 'Britit perustivat paikalle rangaistussiirtolan, ensin '
+      + 'Redcliffeen 1824 ja jo seuraavana vuonna joen mutkaan. Siirtola '
+      + 'suljettiin 1842, alue avattiin vapaalle asutukselle, ja '
+      + 'kesäkuussa 1859 kuningatar Viktoria erotti Queenslandin omaksi '
+      + 'siirtokunnaksi. Brisbanesta tuli sen pääkaupunki.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 kaupunki rakensi itselleen julkiset '
+      + 'talonsa. **Parlamenttitalon julkisivu oli avattu 1868, mutta '
+      + 'pylväiköt valmistuivat vasta 1878**, pääposti oli ollut auki '
+      + 'vuoden ja sen tiloissa asui Queenslandin museo, ja Wickham '
+      + 'Terracen tuulimylly oli jo puolen vuosisadan ikäinen '
+      + 'signaaliasema. Story Bridgeä ja South Bankin puistoja ei ollut: '
+      + 'ne ovat vuosilta 1940 ja 1992.',
+    teksti: 'Brisbane sijaitsee Australian itärannikolla Queenslandin '
+      + 'kaakkoiskulmassa. Keskusta on Brisbane-joen niemekkeellä, ja '
+      + 'kaupunki leviää joen tulvatasangolle Tyynenmeren ja Taylorin ja '
+      + 'D’Aguilarin vuorijonojen väliin. Rannikko jatkuu etelään Gold '
+      + 'Coastin ja pohjoiseen Sunshine Coastin hiekkarantoina.'
+      + '\n\n'
+      + 'Kaupunki alkoi rangaistussiirtolana 1824 ja tuli Queenslandin '
+      + 'pääkaupungiksi 1859. Vuosisadan loppu oli satamakaupungin aikaa: '
+      + 'joki oli tie Ipswichiin siihen asti kun rautatie valmistui 1875, '
+      + 'ja laivat toivat saksalaisia, skotlantilaisia ja irlantilaisia '
+      + 'siirtolaisia. Helmikuun 1893 suurtulva peitti kaupungin alavat '
+      + 'osat ja vei mukanaan ensimmäisen Victoria Bridgen.'
+      + '\n\n'
+      + 'Nykyään Brisbanen kaupunkiseudulla asuu noin 2,8 miljoonaa '
+      + 'ihmistä ja koko Kaakkois-Queenslandissa 4,1 miljoonaa. Joki on yhä kulkuväylä: '
+      + 'CityCat-katamaraanit kuuluvat samaan lippujärjestelmään kuin '
+      + 'bussit ja junat. Kaupungin esikaupungit tunnistaa tolppien '
+      + 'päälle nostetuista puutaloista, joiden verannat tehtiin '
+      + 'subtrooppista ilmastoa varten.',
+  },
+  /* PERTH (23.8.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain perth): väitteet on luettu
+   * en-Wikipedian raakateksteistä 23.8.2026, ja pohjana ovat
+   * faktapohja-perth.md ja tarkistus-perth.md. AVAIN ON WIKI-OTSIKKO
+   * 'Perth (Länsi-Australia)', koska js/packs/oceania.js antaa Perthille
+   * juuri sen wiki-nimen (suomeksi pelkkä Perth on täsmennyssivu) ja
+   * ui.js hakee taulusta arvolla city.wiki ?? city.name — pelkällä
+   * nimellä 'Perth' merkintä ei löytyisi lainkaan. Tarkistusraportin
+   * korjaus näkyy myös täällä: kuvernöörintalon paikkaa ei väitetä
+   * samaksi kuin Stirlingin telttaleirin. Eristyneisyyttä, Jakarta-
+   * vertailua eikä Fremantle Doctorin viilennystä ei mainita, koska ne
+   * ovat laudan OCEANIA_FACTS-kohdan omia faktoja. */
+  'Perth (Länsi-Australia)': {
+    intro: 'Perth on Länsi-Australian pääkaupunki ja Australian '
+      + 'neljänneksi väkirikkain kaupunki. Se on rakennettu Swan-joen '
+      + 'pohjoisrannalle sinne, missä Mount Elizan juurella pulppusi '
+      + 'seudun ainoa ympärivuotinen makean veden lähde. '
+      + 'Whadjuk-noongarit tunsivat lähteen nimellä **Goonininup** ja '
+      + 'kaupungin paikan nimellä Boorloo kauan ennen kuin siirtokunta '
+      + 'perustettiin 1829.'
+      + '\n\n'
+      + 'Kaupunki kasvoi hitaasti. Kun muu Australia oli lopettamassa '
+      + 'rangaistusvankien tuontia, Länsi-Australia pyysi 1850 '
+      + 'itselleen vankeja työvoimapulan takia: kahdeksassatoista '
+      + 'vuodessa saapui 9 721 vankia, enemmän kuin siirtokunnassa oli '
+      + 'vapaita uudisasukkaita. Heidän työnsä jälki on yhä keskustassa, '
+      + 'kaupungintalossa ja kuvernöörintalossa.'
+      + '\n\n'
+      + '**Isoisän matkan vuonna 1873 järjestelmä oli juuri purettu**: '
+      + 'viimeinen vankilaiva oli tullut 1868 ja vankien pääjohtajan '
+      + 'virka lakkautettu 1872. Perth oli silloin kolmentuhannen '
+      + 'asukkaan pikkukaupunki, jonka sivukadut olivat paljasta '
+      + 'hiekkaa. Kultaryntäys tuli vasta kahdenkymmenen vuoden päästä '
+      + 'ja muutti kaiken.',
+    teksti: 'Perth on Australian lounaiskulmassa, ja suurin osa '
+      + 'kaupungista on Swanin rannikkotasangolla Intian valtameren ja '
+      + 'Darling-jyrkänteen välissä. Keskusta on Swan-joen '
+      + 'pohjoisrannalla siinä kohdassa, jossa joki levenee Perth '
+      + 'Wateriksi, ja satamakaupunki Fremantle on joen suulla '
+      + 'lounaassa.'
+      + '\n\n'
+      + 'Siirtokunta perustettiin 1829, ja se otti vastaan '
+      + 'rangaistusvankeja 1850–1868. Kaupungintalo valmistui 1870 ja '
+      + 'Mount Elizan rinne rauhoitettiin puistoksi 1871. Kultalöydöt '
+      + 'Coolgardiessa, Kalgoorliessa ja Murchisonissa kasvattivat '
+      + 'siirtokunnan väkiluvun 23 000:sta 180 000:een vuosisadan '
+      + 'vaihteeseen mennessä, ja rahapaja avattiin 1899.'
+      + '\n\n'
+      + 'Nykyään Suur-Perthissä asuu yli 2,3 miljoonaa ihmistä. Kings '
+      + 'Park on Länsi-Australian suosituin yksittäinen käyntikohde, ja '
+      + 'whadjuk-noongarien maankäyttösopimus Perthin alueesta '
+      + 'vahvistettiin liittovaltion tuomioistuimessa joulukuussa 2021.',
+  },
 };

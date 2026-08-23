@@ -31148,4 +31148,2460 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * AUCKLAND (nippu 8, 23.8.2026). Kohteet ovat kohdekartan kymmenen
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.auckland), ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 23.8.2026
+   * (artikkelit "Auckland Ferry Terminal", "Victoria Park Market",
+   * "Albert Park, Auckland", "Auckland Town Hall", "Karangahape
+   * Road", "Symonds Street Cemetery", "Ewelme Cottage", "Highwic",
+   * "Eden Park" ja "Maungawhau / Mount Eden"; Albert Parkin jutun
+   * kuvernöörintalo artikkelista "Old Government House, Auckland").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Tāmaki Makaurau ja Maungakiekien pā, Ngāti Whātuan
+   * maalahjoitus, pääkaupungin menetys, tulivuorikenttä, museon
+   * vaiheet, Auckland Domain ja Waikaton sota; kartan kohteista
+   * yksikään ei ole niiden aihe. Lähimpänä on Maungawhau, joka
+   * vilahtaa lehden avauskuvan ja yhden herokuvan selitteessä yhdellä
+   * virkkeellä — juttu kertoo kraatterin nimen, huipun tien ja
+   * laidunmaksut, norsun ja vuoden 2014 sopimusratkaisun, joita
+   * selitteet eivät käsittele.
+   *
+   * MAORIKULTTUURI ON NYKYINEN EIKÄ MENNYT (Raamatun pilari 3):
+   * Maungawhaun juttu päättyy siihen, että vuori kuuluu nykyään
+   * kolmentoista iwin ja hapūn yhteenliittymälle, ja Karangahape
+   * Roadin juttu siihen, että te reo -nimi kesti kolme
+   * uudelleennimeämisyritystä. Waitangin sopimus mainitaan
+   * toteavasti eikä tulkiten.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 23.8.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin. Kaksi
+   * on isoisän ajalta: Symonds Streetin hautausmaa on John Kinderin
+   * valokuvassa 1868 ja Karangahapen tiepiiri noin 1870 piirretyssä
+   * kartassa (Auckland Librariesin kokoelma, tekijää ei tiedetä).
+   * Yksikään tiedosto ei ole sama kuin kaupunkilehden auckland-
+   * lohkossa; lehden lauttaterminaalikuva on eri tiedosto ja eri
+   * kuvakulma kuin tämän jutun.
+   */
+  auckland: {
+    'Ferry Building': {
+      aika: '1909–1912',
+      teksti: 'Aucklandin satamahallitus katsoi 1900-luvun alussa, että '
+          + 'lautoille tarvittiin oma rakennus. Ensimmäiset piirustukset '
+          + 'olivat viisikerroksisesta talosta, mutta korkeus herätti '
+          + 'julkista vastustusta, ja tilalle esitettiin nelikerroksista '
+          + 'taloa kellotornilla. Suunnitelma muistutti San Franciscon '
+          + 'lauttarakennusta. Piirtäjä oli Alex Wiseman ja rakentaja '
+          + 'Philcox and Sons, ja talo nousi 1909–1912 täyttömaalle '
+          + 'hiekkakivestä ja tiilestä Coromandelin graniittijalustan '
+          + 'päälle. Hinnaksi tuli 67 944 puntaa, aikakauteensa nähden '
+          + 'suuri summa.'
+          + '\n\n'
+          + 'Rakennus ei ollut osa itse laitureita, vaan se pystytettiin '
+          + 'lauttaliikenteen kiintopisteeksi ja tuottamaan '
+          + 'satamahallitukselle vuokratuloja. Molemmat suuret '
+          + 'lauttayhtiöt, Devonport Steam Ferry Company ja Takapuna '
+          + 'Tramways Ferry Company, pitivät talossa pääkonttoriaan. '
+          + 'Pohjoisrannalle mentiin täältä aina vuoteen 1959, jolloin '
+          + 'Auckland Harbour Bridge avattiin — sen jälkeen lauttamatkat '
+          + 'vähenivät ja talo alkoi rapistua.'
+          + '\n\n'
+          + 'Viereen rakennettiin 1982 uusi lauttarakennus, ja samana '
+          + 'vuonna valmistunut selvitys vaati vanhaan taloon isoja '
+          + 'korjauksia maanjäristys- ja palomääräysten takia. '
+          + 'Satamahallitus oli kahtia sen säilyttämisestä mutta päätti '
+          + 'vahvan yleisen mielipiteen jälkeen kunnostaa sen; työ alkoi '
+          + '1986, ja kenraalikuvernööri avasi talon uudelleen 5. '
+          + 'marraskuuta 1988. Vuonna 2021 Auckland Transport rakensi 42 '
+          + 'miljoonalla dollarilla kuusi uutta laituripaikkaa, ja '
+          + 'arkkitehti Murray Dayn suunnittelema kaareva katos on '
+          + 'muotoiltu purjeeksi ja pidetty matalana, jottei se peittäisi '
+          + 'näkymiä.',
+      kuvat: [
+        {
+          tiedosto: 'Auckland Ferry Terminals (old and new).jpg',
+          selite: 'Ferry Building rakennettiin 1909–1912 satamahallituksen '
+            + 'vuokratuloiksi eikä osaksi itse laitureita.',
+          lahde: 'Ulrich Lange, Bochum, Germany, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Victoria Park Market': {
+      aika: '1905',
+      teksti: 'Paikka oli alun perin osaksi niemeke ja osaksi Freemans Bayn '
+          + 'rantavyöhykettä. Lahtea alettiin täyttää 1870-luvun lopulla — '
+          + 'siis pian isoisän käynnin jälkeen — ja levenneelle rannalle '
+          + 'nousi liike- ja asuinrakennuksia. Torin takana kulkeva katu '
+          + 'seuraa yhä vanhan merenrantatörmän harjaa. Viereinen '
+          + 'Victoria Park perustettiin 1905 ja nimettiin kuningattaren '
+          + 'mukaan, joka oli kuollut neljä vuotta aiemmin.'
+          + '\n\n'
+          + 'Kaupunki pelkäsi rottien levittämää ruttoa, koska roskia '
+          + 'vietiin tyhjille tonteille, ja kaupunginvaltuusto alkoi 1900 '
+          + 'harkita omaa polttolaitosta. Meldrum-polttouunin urakka '
+          + 'annettiin 1904 sydneyläiselle J. Barre Johnston Ltd:lle, ja '
+          + 'laitos valmistui 1905. Tontille rakennettiin 1905–1918 '
+          + 'tiilirakennusten sarja: varikko, seppä, kirvesmiehet, tallit '
+          + 'ja 38 metriä korkea savupiippu. Helmikuun 10. päivänä 1908 '
+          + 'avattiin generaattori, joka teki sähköä uunin hukkalämmöllä '
+          + 'ja hiilellä; teho ei riittänyt, joten paikalle asennettiin '
+          + 'kolme 225 kilowatin höyrygeneraattoria. Laitos suljettiin '
+          + '1913, kun Kings Wharfille valmistui uusi hiilivoimala.'
+          + '\n\n'
+          + 'Vuosina 1914–1918 alueelle rakennettiin kaksikerroksinen '
+          + 'talli niille 94 hevoselle, jotka vetivät kaupungin '
+          + 'roskakärryjä, sekä valtuuston toimistoja. Tallit jäivät pois '
+          + 'käytöstä 1952, polttouuni sammui 1972 ja jätevarikko toimi '
+          + 'vuoteen 1981. Kaupunki aikoi purkaa korttelin mutta perääntyi '
+          + 'kansalaiskampanjan jälkeen, ja rakennukset muutettiin '
+          + 'kauppahalliksi 1983 ja 1990. Kortteli on suojeltu '
+          + 'ykkösluokassa, ja se peruskorjattiin 20 miljoonalla '
+          + 'dollarilla 2012–2013. Vuodesta 1984 käytävällä on ollut '
+          + 'kuuluisuuksien kädenjälkiä, muiden muassa Edmund Hillaryn ja '
+          + 'Kiri Te Kanawan.',
+      kuvat: [
+        {
+          tiedosto: 'Victoria Park Market Chimney.jpg',
+          selite: 'Savupiippu kuului Meldrumin polttolaitokseen, joka teki '
+            + 'kaupungin roskien lämmöllä sähköä 1908–1913.',
+          lahde: 'Summ23, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Albert Park': {
+      aika: '1870–1880-luku',
+      teksti: 'Puiston paikalla oli maorien kāinga eli kylä nimeltä '
+          + 'Rangipuke, ja sen luoteiskulmassa seisoi Te Horotiun pā. '
+          + 'Alueella oli myös Waiohuan kylä Mangahekea, jonka Ngāti '
+          + 'Whātua valtasi 1740-luvulla. Maaperä on hiekkakiveä, mutta '
+          + 'luoteessa on oma tulivuorensa: Albert Parkin kuonakartio '
+          + 'purkautui noin 145 000 vuotta sitten ja peitti suuren osan '
+          + 'nykyisestä puistosta tuhkaan.'
+          + '\n\n'
+          + 'Suurin osa puiston alasta oli 1800-luvun puolivälissä Albert '
+          + 'Barracksia, kaupungin varhaisinta eurooppalaista '
+          + 'varuskuntaa. 1850- ja 1860-luvuilla siellä majaili sotilaita, '
+          + 'muun muassa 58. rykmentti, ja puu- ja kivirakennuksia '
+          + 'ympäröi paikallisesta tulivuorikivestä muurattu valli. Pala '
+          + 'muuria seisoo yhä yliopiston pihalla ykkösluokan '
+          + 'suojelukohteena. Alue varattiin puistoksi 1870-luvulla ja '
+          + 'rakennettiin puistoksi 1880-luvulla, eli isoisän aikaan '
+          + 'käynnissä oli juuri muutos kasarmista puistoksi; puihin '
+          + 'istutettiin yli 80 lajia vuosina 1874–1908. Puiston '
+          + 'itäpuolella seisoo Old Government House, William Masonin 1856 '
+          + 'suunnittelema puinen kuvernöörintalo, joka jäljittelee '
+          + 'kivimuurausta ja jota käytettiin enää harvoin sen jälkeen, '
+          + 'kun hallinto muutti Wellingtoniin.'
+          + '\n\n'
+          + 'Puiston muoto ratkaistiin yleisellä kilpailulla, ja se '
+          + 'noudattaa pohjois–eteläakselia. Akselin pohjoispäässä on '
+          + 'Francis J. Williamsonin veistämä kuningatar Victorian patsas '
+          + 'vuodelta 1897, eteläpäässä James Slatorin soittolava '
+          + 'vuodelta 1901 ja keskellä 1881 Britanniasta tuotu '
+          + 'valurautasuihkulähde, jossa kerubit ratsastavat delfiineillä. '
+          + 'Puistossa on myös Sir George Greyn patsas, joka siirrettiin '
+          + 'tänne kaupungintalon edestä, ja kaksi kenttätykkiä '
+          + '1880-luvun venäläisinvaasion pelosta. Asemakaava on pysynyt '
+          + 'lähes muuttumattomana vuodesta 1882. Puiston alla on '
+          + 'tunneliverkko, joka kaivettiin 1941 pommisuojiksi ja '
+          + 'suljettiin jo ennen sodan loppua.',
+      kuvat: [
+        {
+          tiedosto: 'The fountain at Albert Park.jpg',
+          selite: 'Puiston asemakaava on ollut lähes sama vuodesta 1882, ja '
+            + 'sen keskipiste on 1881 tuotu valurautasuihkulähde.',
+          lahde: 'RadishSlice, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Aucklandin kaupungintalo': {
+      aika: '1909–1911',
+      teksti: 'Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen '
+          + 'isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja '
+          + 'Queen Streetin kulma, joka lunastettiin omalla '
+          + 'parlamenttilailla 1881, ja kun tontti osoittautui liian '
+          + 'pieneksi, kaupunki osti naapurikiinteistöt 1883. '
+          + 'Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat '
+          + 'melbournelaiset arkkitehdit JJ & EJ Clark.'
+          + '\n\n'
+          + 'Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta '
+          + '1909, ja kenraalikuvernööri lordi Islington vihki talon 14. '
+          + 'joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa '
+          + 'on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun '
+          + 'kalkkikiveä, ja kellotorni nousee 40 metriin. '
+          + 'Viisikerroksinen italialaisen renessanssin tyyliin piirretty '
+          + 'talo muistuttaa samoihin aikoihin valmistunutta Lambethin '
+          + 'kaupungintaloa Lontoossa. Aucklandilaisten mielipiteet '
+          + 'valmiista talosta olivat ristiriitaisia, ja osa vertasi sitä '
+          + 'juustonpalaan ja silitysrautaan. Suuri sali vetää 1 673 '
+          + 'henkeä, se on tehty Leipzigin Gewandhausin malliin, ja sen '
+          + 'akustiikkaa pidetään maailman parhaimpiin kuuluvana.'
+          + '\n\n'
+          + 'Salin urut vuodelta 1911 ovat maan suurin soitin ja Uuden-'
+          + 'Seelannin laissa erikseen suojeltu esine. Ne kustansi '
+          + 'entinen pormestari Henry Brett, suunnitteli englantilainen '
+          + 'urkuri Edwin Lemare ja rakensi norwichilainen Norman and '
+          + 'Beard. Urut muutettiin 1969–1970 barokkisointiin, purettiin '
+          + '2008 ja koottiin uudelleen bonnilaisen Orgelbau Klaisin '
+          + 'työnä; ne vihittiin käyttöön 21. maaliskuuta 2010. Talon '
+          + 'sisätilat kunnostettiin 1994–1997 kolmellakymmenellä '
+          + 'kolmella miljoonalla dollarilla, koska raudoittamaton '
+          + 'muuraus ei täyttänyt maanjäristysvaatimuksia.',
+      kuvat: [
+        {
+          tiedosto: 'Auckland Town Hall from Sky Tower.jpg',
+          selite: 'Talo oli valmistuessaan 1911 kaupungin ensimmäinen '
+            + 'pysyvä paikka, jossa hallinto ja konsertit olivat saman '
+            + 'katon alla.',
+          lahde: 'Bob Linsdell, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Karangahape Road': {
+      aika: '1868',
+      teksti: 'Karangahape on maorinkielinen nimi, jonka alkuperästä on useita '
+          + 'tulkintoja: se on käännetty niin "mutkittelevaksi ihmisten '
+          + 'harjanteeksi" kuin "Hapen kutsumiseksi". Hape oli Tainui-'
+          + 'kanootin tohunga eli tietäjä, joka asui Manukau-sataman '
+          + 'seudulla, ja harjannetta pitkin kulkenutta polkua sanottiin '
+          + 'nimellä Te Ara o Karangahape, Karangahapen tie. Katu on siis '
+          + 'vanhempi kulkureitti kuin Queen Street, jonka eurooppalaiset '
+          + 'rakensivat vasta 1840-luvulla, ja se oli 1900-luvun '
+          + 'puoliväliin asti Aucklandin keskustan ainoa maorinkielinen '
+          + 'kadunnimi.'
+          + '\n\n'
+          + 'Harjanne oli koko 1800-luvun kaupungin virallinen '
+          + 'eteläraja. Karangahape Road Districtiksi kutsuttu '
+          + 'oma tiepiiri perustettiin 5. lokakuuta 1868 ja aloitti '
+          + 'toimintansa 2. marraskuuta 1869 — isoisän saapuessa katu '
+          + 'hallinnoi siis itse itseään, ja vasta 1882 piiri liitettiin '
+          + 'Aucklandin kaupunkiin. Noin vuodesta 1900 1960-luvun alkuun '
+          + 'K Road oli kaupungin vilkkain ostoskatu: kaasulyhdyt '
+          + 'vaihdettiin sähköön 1908, vuoden 1935 valohanke sytytti '
+          + 'yhtenäisen valoketjun mailin matkalle, ja 1949 kadulle '
+          + 'asennettiin Uuden-Seelannin ensimmäiset loistevalot.'
+          + '\n\n'
+          + 'Nimeä yritettiin vaihtaa kolmesti. Vuonna 1908 käytiin '
+          + 'kokouksia ja lehtikirjoittelua sen puolesta, että pitkä '
+          + 'maorinkielinen nimi korvattaisiin eurooppalaisemmalla; '
+          + 'aihe palasi 1913 ja vielä 1953 ennen kuningattaren vierailua, '
+          + 'jolloin ehdotettiin nimeä Elizabeth Street. Kaupunki ei '
+          + 'suostunut kertaakaan, ja nimi säilyi. Moottoriteiden '
+          + 'rakentaminen ja muutto lähiöihin 1960-luvulta alkaen tekivät '
+          + 'kadusta syrjäisen ja huonomaineisen, mutta 1980- ja '
+          + '1990-luvuilta lähtien se on noussut kaupungin '
+          + 'kulttuurikeskuksiin. Vuonna 2021 kadulle maalattiin '
+          + 'sateenkaarisuojatie muistoksi siitä, että alue on ollut '
+          + 'seksuaalivähemmistöjen turvapaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Karangahape Highway District circa 1870.jpg',
+          selite: 'Harjanteelle perustettiin oma tiepiiri 1868, ja tämä '
+            + 'kartta sen alueesta piirrettiin noin 1870.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Symonds Streetin hautausmaa': {
+      aika: '1842',
+      teksti: 'Symonds Streetin hautausmaa oli Aucklandin ensimmäinen '
+          + 'virallinen hautausmaa, ja siihen haudattiin vuodesta 1842 '
+          + 'alkaen. Se on 5,8 hehtaarin lehtimetsä Grafton Gullyn '
+          + 'länsirinteellä Symonds Streetin ja Karangahape Roadin '
+          + 'kulmassa, ja nimi tulee William Cornwallis Symondsilta, '
+          + 'brittiupseerilta, joka oli näkyvästi mukana siirtokunnan '
+          + 'perustamisessa. Alue jaettiin aluksi neljään osaan: '
+          + 'anglikaaneille, katolisille ja juutalaisille sekä yhteinen '
+          + 'osa presbyteereille, wesleyläisille ja muille. Vuoteen 1852 '
+          + 'mennessä yhteisestä osasta tuli presbyteerien, ja rinnalle '
+          + 'tehtiin uusi wesleyläisten ja yleinen osa.'
+          + '\n\n'
+          + 'Kun Länsi-Aucklandiin perustettiin uusi kunnallinen '
+          + 'hautausmaa Waikumeteen, Symonds Street suljettiin uusilta '
+          + 'haudoilta 1886 — isoisän käydessä 1873 se oli siis vielä '
+          + 'kaupungin oma hautausmaa. Vanhoihin sukuhautoihin sai yhä '
+          + 'haudata, mutta uusia paikkoja ei myyty. Kaupunki otti '
+          + 'hoidon vastuulleen 1909. Täällä lepää suuri osa Aucklandin '
+          + 'varhaisista uudisasukkaista. Täällä lepäävät William Hobson, '
+          + 'Uuden-Seelannin ensimmäinen kuvernööri ja yksi Waitangin '
+          + 'sopimuksen laatijoista; Archibald Clark, joka valittiin '
+          + 'Aucklandin kauppalan ensimmäiseksi pormestariksi 1851; '
+          + 'kauppias ja juutalaisyhteisön johtaja David Nathan; sekä '
+          + 'Annie Jane Schnackenberg, joka teki työtä lähetystyön, '
+          + 'raittiusliikkeen ja naisten äänioikeuden puolesta.'
+          + '\n\n'
+          + '1960-luvun puolivälissä rakennettu eteläinen moottoritie '
+          + 'muutti hautausmaan: yli 4 100 vainajaa siirrettiin kahteen '
+          + 'muistopaikkaan hautausmaan sisällä, ja pinta-alasta katosi '
+          + 'noin neljännes. Siirron yhteydessä selvisi, kuinka tiheässä '
+          + 'haudat olivat — anglikaanien osassa 1 200 hautakiven alta '
+          + 'löytyi 2 000 hautaa ja katolisten osassa 400 kiven alta 2 100 '
+          + 'hautaa. Alue on nykyään suojeltu ykkösluokassa, ja kaupunki '
+          + 'pitää palkkalistoillaan kivenveistäjää hautakivien '
+          + 'kunnostamista varten; töitä riittää, sillä kunnostettuja '
+          + 'kiviä on toistuvasti rikottu.',
+      kuvat: [
+        {
+          tiedosto: 'Symonds Street Cemetery and the Waitematā Harbour, 1868.jpg',
+          selite: 'Hautausmaa oli vielä isoisän aikaan käytössä, ja John '
+            + 'Kinder valokuvasi sen aidatut haudat 1868.',
+          lahde: 'John Kinder, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ewelme Cottage': {
+      aika: '1863–1864',
+      teksti: 'Ewelme Cottage rakennettiin 1863–1864 Howickin kirkkoherralle '
+          + 'Vicesimus Lushille. Talo ei ollut hänen omaa asuntoaan varten '
+          + 'vaan hänen poikiaan varten: Parnell oli Uuden-Seelannin '
+          + 'anglikaanisen piispan istuin, ja pojat pääsivät sieltä '
+          + 'käsin kaupunginosan kirkolliseen oppikouluun samalla kun isä '
+          + 'hoiti tehtäviään muualla. Nimi tulee englantilaisesta '
+          + 'Ewelmen kirkosta.'
+          + '\n\n'
+          + 'Talo on puolitoistakerroksinen ja ulkoa yrjöläistyylinen, '
+          + 'mutta huonejako poikkeaa tyylin tavanomaisesta etu- ja '
+          + 'takahuonejaosta. Pohjapiirros saattaa olla laadittu jo 1850 '
+          + 'Englannissa yhdessä arkkitehdin kanssa, ja Lushiin lienee '
+          + 'vaikuttanut ajan kirkollinen suuntaus, joka suositteli '
+          + 'keskiaikaisia esikuvia. Alun perin huoneita oli viisi ja '
+          + 'niiden kylkiäisinä kaksi pulpettikattoista siipeä, '
+          + 'todennäköisesti astiainpesuhuone ja puuvaja. Kuisti '
+          + 'suljettiin 1865 lisätilaksi, noin 1871 taakse rakennettiin '
+          + 'keittiö ja ullakko, ja isot muutokset tehtiin 1882–1883.'
+          + '\n\n'
+          + 'Lushin perhe muutti talosta 1871 isän perässä Thamesiin, '
+          + 'mutta suku omisti sen yli sadan vuoden ajan ja myi sen '
+          + 'Aucklandin kaupungille vasta 1969; nykyään sitä hoitaa '
+          + 'Heritage New Zealand. Sisustus ja irtaimisto ovat säilyneet '
+          + '1800-luvun asussa, mukana alkuperäisiä huonekaluja ja 2 000 '
+          + 'kirjaa, ja pihassa on 1800-luvun puutarha. New Zealand '
+          + 'Herald on kutsunut taloa mahdollisesti tärkeimmäksi '
+          + 'suojelusäätiön kohteista, ja siinä kuvattiin osia elokuvasta '
+          + 'Piano.',
+      kuvat: [
+        {
+          tiedosto: 'Ewelme Cottage 20240117 120605 01.jpg',
+          selite: 'Talo rakennettiin 1863–1864 kirkkoherra Vicesimus Lushin '
+            + 'pojille, jotta he pääsivät Parnellin oppikouluun.',
+          lahde: 'Prosperosity, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Highwic: {
+      aika: '1862',
+      teksti: 'Highwic rakennettiin 1862 Alfred Bucklandille, varakkaalle '
+          + 'uudisasukkaalle ja maanomistajalle. Tontin osti 1861 hänen '
+          + 'ensimmäinen vaimonsa Eliza tuhannella punnalla, ja perhe '
+          + 'muutti taloon seitsemän lapsen kanssa seuraavana vuonna. '
+          + 'Rakennus on suurikokoinen esimerkki kirvesmiesgotiikasta, ja '
+          + 'se pystytettiin korkealle paikalle Newmarketin taajaman '
+          + 'yläpuolelle.'
+          + '\n\n'
+          + 'Eliza ehti saada talossa vielä kaksi lasta ja kuoli '
+          + 'keuhkokuumeeseen heinäkuussa 1866. Alfred meni toukokuussa '
+          + '1867 naimisiin kaksikymmentä vuotta nuoremman Matilda Jane '
+          + 'Frodshamin kanssa, ja tämä sai yksitoista lasta, joista '
+          + 'yhdeksän eli aikuisiksi; Matilda eli miestään vanhemmaksi ja '
+          + 'vietti vanhuutensa Highwicissä. Alkuperäistä kahdeksan '
+          + 'huoneen taloa laajennettiin 1874, 1883 ja 1884 sitä mukaa '
+          + 'kuin perhe ja varallisuus kasvoivat — isoisän käydessä '
+          + 'Aucklandissa talo oli siis vielä alkuperäisessä koossaan, ja '
+          + 'ensimmäinen laajennus alkoi seuraavana vuonna.'
+          + '\n\n'
+          + 'Talossa oli sali, makuuhuoneita, poikien makuusali, '
+          + 'pesutupa, keittiö, astiainpesuhuone, ulkotallit, tallirengin '
+          + 'asunto, biljardirakennus ja huoltopiha; 1900-luvun alussa '
+          + 'sisään rakennettiin kaksi kylpyhuonetta ammeineen, '
+          + 'vesiklosetteineen ja lämpimine vesineen. Suvun jälkeläiset '
+          + 'asuivat talossa vuoteen 1978, minkä jälkeen Uuden-Seelannin '
+          + 'suojelusäätiö ja Aucklandin kaupunki ostivat sen yhdessä, '
+          + 'jotta tonttia ei jaettaisi rakennuspaikoiksi. Museona talo '
+          + 'avattiin 1981.',
+      kuvat: [
+        {
+          tiedosto: 'Highwic from N.jpg',
+          selite: 'Talo valmistui 1862 Alfred Bucklandin perheelle, ja sitä '
+            + 'laajennettiin kolmesti perheen kasvaessa.',
+          lahde: 'Bjankuloski06, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Eden Park': {
+      aika: '1900',
+      teksti: 'Stadionin paikalla oli suo, jota ruokkivat Maungawhaun ja '
+          + 'Mount Albertin laavaonkalot yli 30 000 vuoden takaa. '
+          + 'Tāmakin maorit keräsivät suolta ruokaa ja tarveaineita. '
+          + 'Vuonna 1845 alueen osti cornwallilainen maanviljelijä John '
+          + 'Walters, eli isoisän aikaan tässä oli maatila. '
+          + 'Urheilukenttänä paikka on ollut vuodesta 1900 ja '
+          + 'krikettikenttänä 1903 alkaen, ja siitä saa kiittää Harry '
+          + 'Ryania, joka vuokrasi innostuneena palan Waltersin maata. '
+          + 'Kenttä oli kivinen ja kallioinen laidun, jonka notko täyttyi '
+          + 'sateella ja pysyi veden alla koko talven.'
+          + '\n\n'
+          + 'Vuonna 1907 kenttä oli kahdesti viikon ajan veden alla. '
+          + 'Ylläpito kävi kalliiksi, ja 1910 paikallinen krikettiseura '
+          + 'pyysi Aucklandin krikettiliittoa ottamaan kentän hoitoonsa; '
+          + '1912 maa siirtyi liiton uskotuille miehille, ja nimi Eden '
+          + 'Park vakiintui. Vuonna 1913 kenttä vuokrattiin ensin 21 '
+          + 'vuodeksi Aucklandin rugbyliitolle, joka kustansi '
+          + 'ensimmäisen 2 500 katsojan katsomon. '
+          + 'Ensimmäinen kansainvälinen krikettiottelu pelattiin 1914 ja '
+          + 'ensimmäinen rugbymaaottelu 27. elokuuta 1921 Etelä-Afrikkaa '
+          + 'vastaan 40 000 katsojan edessä.'
+          + '\n\n'
+          + 'Nykyään Eden Park on Uuden-Seelannin kansallisstadion, johon '
+          + 'mahtuu noin 50 000 katsojaa: talvella rugbya, kesällä '
+          + 'krikettiä. Täällä avattiin 1950 imperiumin kisat, ja se on '
+          + 'maailman ainoa areena, jolla on pelattu sekä rugby unionin '
+          + '(1987) että rugby leaguen (1988) maailmanmestaruuden '
+          + 'ratkaisuottelu. Vuoden 1981 Etelä-Afrikan-kiertueen '
+          + 'viimeisessä maaottelussa Marx Jonesin ja Grant Colen '
+          + 'ohjaama pienlentokone pudotti kentälle jauhopommeja osana '
+          + 'laajoja rotuerottelun vastaisia mielenosoituksia. Stadion '
+          + 'peruskorjattiin 256 miljoonalla dollarilla lokakuuhun 2010 '
+          + 'mennessä seuraavan vuoden rugbyn MM-kisoja varten.',
+      kuvat: [
+        {
+          tiedosto: 'Eden Park aerial from N.jpg',
+          selite: 'Kansallisstadionin paikalla oli 1800-luvulla suo ja sen '
+            + 'jälkeen maatila, ja urheilukenttä siitä tuli vasta 1900.',
+          lahde: 'Bjankuloski06, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Maungawhau: {
+      aika: 'noin 28 000 vuotta sitten',
+      teksti: 'Maungawhau eli Mount Eden on kuonakartio ja tūpuna maunga, '
+          + 'esivanhempien vuori. Sen huippu on 196 metriä merenpinnasta '
+          + 'ja siten kannaksen korkein luonnollinen kohta, ja kraatteri '
+          + 'on viidenkymmenen metrin syvyinen. Nimi tarkoittaa '
+          + 'whau-puun vuorta, ja kraatteria sanotaan nimellä Te Upu Kai '
+          + 'a Mataaho, Mataahon kulho: Mataaho on jumaluus, jonka '
+          + 'kerrotaan asuvan kraatterissa ja vartioivan maan sisään '
+          + 'kätkettyjä salaisuuksia. Englanninkielisen nimen valitsi '
+          + 'kuvernööri William Hobson esimiehensä, Aucklandin jaarlin '
+          + 'George Edenin mukaan. Vuori purkautui kolmesta kraatterista '
+          + 'noin 28 000 vuotta sitten, ja eteläisimmän viimeiset '
+          + 'purkaukset täyttivät pohjoiset kraatterit.'
+          + '\n\n'
+          + 'Kannaksella on asuttu 1200- tai 1300-luvulta lähtien. '
+          + 'Maungawhau oli Huakaiwakan, Waiohuan kantaisän, tärkein pā, '
+          + 'ja se pysyi heimoliiton keskeisenä paikkana 1600-luvulta '
+          + 'noin vuoteen 1740. Rinteet pengerrettiin laajalti ja neljän '
+          + 'alueen ympärille kaivettiin puolustusvallihaudat. '
+          + 'Huakaiwakan pojanpoika Kiwi Tāmaki siirsi Waiohuan vallan '
+          + 'keskuksen Maungawhaulta Maungakiekielle, ja 1700-luvun '
+          + 'puolivälistä vuori kuului Ngāti Whātuan alueeseen. Kun '
+          + 'heimo lahjoitti 1840 maata uuden pääkaupungin paikaksi, '
+          + 'Maungawhau oli lahjoitetun alueen eteläisin kolkka.'
+          + '\n\n'
+          + 'Vielä 1850-luvulla kartiolla erotti neljä selvää '
+          + 'pengerrystä, jotka myöhemmin peittyivät kasvillisuuteen ja '
+          + 'louhintaan. Huipulle vei tie jo 1869, ja 1870 paikallinen '
+          + 'tielautakunta alkoi periä maksua laidunoikeudesta — isoisän '
+          + 'aikaan rinteillä siis laidunsi karjaa. Huipun kolmiomittaus'
+          + 'pisteen tasanteen rakentamisessa auttoi prinssi Alfredin '
+          + 'norsu, jolle maksettiin karkeilla, pullilla ja oluella. '
+          + '1900-luvun alussa Mount Edenin vankilan vangit louhivat '
+          + 'vuorelta kiveä tietöihin. Huipputie suljettiin '
+          + 'moottoriajoneuvoilta 2011, ja vuoden 2014 '
+          + 'sopimusratkaisussa Aucklandin neljäntoista esivanhempien '
+          + 'vuoren omistus siirtyi kolmentoista iwin ja hapūn '
+          + 'muodostamalle Ngā Mana Whenua o Tāmaki Makaurau '
+          + '-yhteenliittymälle. Kraatterin reunalle rakennettiin 2020 '
+          + 'pitkospuut, jotka suojelevat pengerryksiä ja vanhoja '
+          + 'kūmara-kuoppia.',
+      kuvat: [
+        {
+          tiedosto: 'Maungawhau in 2009.jpg',
+          selite: 'Vuoren rinteillä näkyvät yhä pā-ajan pengerrykset, ja '
+            + 'huippu on kannaksen korkein luonnollinen kohta.',
+          lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  sanfrancisco: {
+    'Ghirardelli Square': {
+      aika: '1852–1964',
+      teksti: 'Domenico Ghirardelli syntyi 1817 Rapallossa ja oppi '
+          + 'suklaantekijän ammatin Romanengon liikkeessä Genovassa. '
+          + 'Parikymppisenä hän muutti Uruguayhin ja sieltä Limaan, '
+          + 'jossa hän piti makeiskauppaa ja alkoi käyttää nimensä '
+          + 'espanjalaista muotoa Domingo. Vuonna 1849 hän lähti '
+          + 'Kaliforniaan entisen naapurinsa James Lickin kehotuksesta '
+          + '— Lick oli vienyt San Franciscoon vuotta aiemmin 600 '
+          + 'naulaa suklaata — ja avasi ensimmäisen kauppansa '
+          + 'kaivosleiriin myydäkseen makeisia kullankaivajille.'
+          + '\n\n'
+          + 'Vuoden 1851 tulipalo tuhosi hänen San Franciscon '
+          + 'liikkeensä ja muutamaa päivää myöhemmin myös Stocktonin '
+          + 'kaupan. Ghirardelli aloitti alusta ja perusti 1852 '
+          + 'yhtiönsä, joka on Yhdysvaltain kolmanneksi vanhin '
+          + 'suklaayritys ja toiminut siitä lähtien keskeytyksettä. '
+          + 'Liike muutti parin vuoden välein suurempiin tiloihin, ja vuoteen '
+          + '1866 mennessä yhtiö toi tuhat naulaa kaakaopapuja '
+          + 'vuodessa ja myi suklaan lisäksi kahvia ja mausteita '
+          + 'Kiinaan, Japaniin ja Meksikoon asti. Isoisän matkan '
+          + 'aikaan yritys oli siis kahdenkymmenen vuoden ikäinen '
+          + 'tukkuliike. Noin 1865 tehtaan työntekijä huomasi, että '
+          + 'lämpimässä huoneessa riippuvasta kaakaopapusäkistä '
+          + 'valuu kaakaovoi pois ja jäljelle jää jauhettava suklaa; '
+          + 'menetelmä tunnetaan broma-menetelmänä ja on nykyään '
+          + 'suklaanvalmistuksen yleisin tapa.'
+          + '\n\n'
+          + 'Vuonna 1893 Ghirardelli osti koko korttelin Russian '
+          + 'Hillin juurelta yhtiönsä pääpaikaksi; hän itse kuoli '
+          + 'Rapallossa 1894. Kun yhtiö myytiin 1960-luvun alussa ja '
+          + 'tehdas siirtyi San Leandroon, kortteli pantiin myyntiin. '
+          + 'William M. Roth ja hänen äitinsä Lurline Matson Roth '
+          + 'ostivat sen 1962 estääkseen kerrostalon rakentamisen ja '
+          + 'palkkasivat maisema-arkkitehti Lawrence Halprinin '
+          + 'muuttamaan vanhat tiilirakennukset kauppojen ja '
+          + 'ravintoloiden kortteliksi. Työ valmistui 1964, ja se on '
+          + 'Yhdysvaltain ensimmäinen suuri teollisuuskiinteistön '
+          + 'uusiokäyttöhanke. Aukion suihkulähteen merenneitoveistos '
+          + 'on Ruth Asawan käsialaa vuodelta 1968: Halprin vaati sen '
+          + 'poistamista, mutta kaupunkilaiset puolustivat teosta ja '
+          + 'se jäi paikalleen.',
+      kuvat: [
+        {
+          tiedosto: 'Ghirardelli Square, San Francisco 2023-07-20.jpg',
+          selite: 'Kortteli oli vuodesta 1893 Ghirardellin '
+            + 'suklaatehdas, ja 1964 siitä tehtiin Yhdysvaltain '
+            + 'ensimmäinen suuri teollisuuskiinteistön uusiokäyttökohde.',
+          lahde: 'The wub, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Coit Tower': {
+      aika: '1849–1934',
+      teksti: 'Telegraph Hill sai nimensä 1849, kun sen laelle '
+          + 'rakennettiin kaksikerroksinen tähystysasema. Sieltä '
+          + 'ilmoitettiin kaupunkilaisille optisella '
+          + 'merkinantolaitteella, mitä laivoja oli tulossa satamaan; '
+          + '1853 se korvattiin sähkölennättimellä, jonka myrsky '
+          + 'tuhosi 1870. Isoisän matkan aikaan kukkulalla oli siis '
+          + 'yhä lennättimen nimi mutta ei enää asemaa. Paikkaa on '
+          + 'kuvattu koko lahden ja viiden ympäröivän piirikunnan '
+          + 'parhaaksi näköalapaikaksi.'
+          + '\n\n'
+          + 'Tornin maksoi Lillie Hitchcock Coit (1843–1929). '
+          + 'Viisitoistavuotiaana hän näki Knickerbocker Engine Co. '
+          + 'No. 5:n palokunnan jäävän vajaamiehiseksi hälytyksessä '
+          + 'Telegraph Hillille, heitti koulukirjansa maahan ja auttoi '
+          + 'ruiskun mäkeen huutaen muitakin sivullisia avuksi. Siitä '
+          + 'lähtien hän oli komppanian maskotti ja kunniapalomies; '
+          + 'kaupungissa ei ollut vakinaista palokuntaa ennen joulukuuta '
+          + '1866, vaan paloista vastasivat vapaaehtoiset komppaniat. '
+          + 'Testamentissaan Coit määräsi kolmanneksen omaisuudestaan, '
+          + '118 000 dollaria, käytettäväksi "sopivalla tavalla sen '
+          + 'kaupungin kaunistamiseen, jota olen aina rakastanut". '
+          + 'Kaupunginvaltuutetut ehdottivat rahoilla tietä Lake '
+          + 'Merced\'ille, mutta pesänhoitajat vaativat itsenäistä '
+          + 'muistomerkkiä, ja taidelautakunnan puheenjohtaja Herbert '
+          + 'Fleishhacker esitti Telegraph Hilliä. Arkkitehtikilpailun '
+          + 'voitti Arthur Brown nuorempi, ja 210 jalan korkuinen '
+          + 'maalaamattomasta teräsbetonista tehty art deco -torni '
+          + 'vihittiin 8. lokakuuta 1933. Tarina, jonka mukaan torni '
+          + 'muistuttaisi paloletkun suutinta, on jälkikäteen '
+          + 'keksitty.'
+          + '\n\n'
+          + 'Tornin sisäseinien freskot olivat Public Works of Art '
+          + 'Projectin koehanke — se oli New Dealin ensimmäinen '
+          + 'taiteilijoiden työllistämisohjelma. Maalaajia oli '
+          + 'kaksikymmentäkaksi apulaisineen, ja monet heistä olivat '
+          + 'California School of Fine Artsin opettajia ja oppilaita. '
+          + 'Kun rannikon satamalakko alkoi 1934 aivan kukkulan '
+          + 'juurella, lehdistö ja viranomaiset alkoivat epäillä '
+          + 'freskoissa kommunistista propagandaa. Heinäkuulle '
+          + 'suunniteltu avajaispäivä peruttiin, torni suljettiin ja '
+          + 'ikkunat peitettiin. Lopulta maalattiin yli vain sirppi ja '
+          + 'vasara sekä erään lehden nimi banderollissa, ja torni '
+          + 'avattiin yleisölle 12. lokakuuta 1934. Vuonna 2012 '
+          + 'kaupunkilaiset hyväksyivät kansanäänestyksessä '
+          + 'aloitteen, joka velvoittaa kaupungin huolehtimaan '
+          + 'freskojen ja rakennuksen kunnosta.',
+      kuvat: [
+        {
+          tiedosto: 'Coit Tower 1.jpg',
+          selite: 'Torni nousi 1933 sen kukkulan laelle, jolla oli '
+            + 'vuosina 1849–1870 laivojen tuloa ilmoittanut '
+            + 'merkkiasema.',
+          lahde: 'Ryan Schwark, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ferry Building': {
+      aika: '1875–2003',
+      teksti: 'Paikalla oli vuodesta 1875 puinen lauttarakennus. Sen '
+          + 'tilalle piirsi 1892 arkkitehti A. Page Brown '
+          + 'beaux arts -tyylisen terminaalin, joka valmistui 1898 ja '
+          + 'avattiin 13. heinäkuuta. Se oli siihen mennessä suurin '
+          + 'kaupungissa toteutettu rakennushanke. Talon molemmat '
+          + 'julkisivut ovat yhtenäistä kaariarkadia, ja keskellä '
+          + 'kohoaa 245 jalan kellotorni, jonka neljä kellotaulua ovat '
+          + 'halkaisijaltaan 22 jalkaa. Koneisto on bostonilaisen E. '
+          + 'Howardin vuonna 1898 tekemä ja oli aikanaan maailman '
+          + 'suurin vedettävä mekaaninen kellokoneisto; nykyään sitä '
+          + 'pyörittää sähkömoottori.'
+          + '\n\n'
+          + 'Terminaali oli East Bayn työmatkalaisten määränpää ja '
+          + 'samalla se paikka, jossa mannertenväliset radat '
+          + 'kohtasivat kaupungin: junat päättyivät Oaklandiin, ja '
+          + 'matka jatkui lautalla. Rakennuksen edustalle rakennettiin '
+          + 'raitiovaunusilmukat, jotka pystyivät käsittelemään 295 '
+          + 'vaunua tunnissa. Ennen kuin Bay Bridge ja Golden Gate '
+          + '-silta valmistuivat 1930-luvulla, terminaali oli '
+          + 'matkustajamäärältään maailman toiseksi vilkkain '
+          + 'liikenneasema heti Lontoon Charing Crossin jälkeen. '
+          + 'Vahvasti rakennettu talo kesti sekä vuoden 1906 että '
+          + 'vuoden 1989 maanjäristyksen lähes vaurioitta.'
+          + '\n\n'
+          + 'Siltojen jälkeen lauttaliikenne romahti, ja 1950-luvulta '
+          + 'alkaen sisätilat pilkottiin toimistoiksi: 660 jalan '
+          + 'pituinen valoisa halli jäi kapeaksi käytäväksi. '
+          + '1950-luvun lopulla talon eteen rakennettiin '
+          + 'Embarcadero-moottoritie, joka peitti näkymän Market '
+          + 'Streetiltä ja katkaisi kulun rantaan. Loma Prietan '
+          + 'maanjäristys vaurioitti moottoritietä 1989, ja pormestari '
+          + 'Art Agnosin johdolla se purettiin kokonaan vuoteen 1992 '
+          + 'mennessä. Terminaali kunnostettiin ja avattiin uudelleen '
+          + '2003; hallin 44 tiilikaaresta yksitoista oli purettu, ja '
+          + 'ne tehtiin uudelleen niin, että uudet ja vanhat erottuvat '
+          + 'toisistaan vain tarkalla katseella.',
+      kuvat: [
+        {
+          tiedosto: 'Ferry Building - San Francisco - California.jpg',
+          selite: 'Kellotorni on 245 jalkaa korkea, ja sen neljä '
+            + 'kellotaulua käyvät vuonna 1898 valmistuneella '
+            + 'bostonilaisella koneistolla.',
+          lahde: 'Andre m, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Transamerica Pyramid': {
+      aika: '1853–1972',
+      teksti: 'Tontti on täytemaata: se oli aikanaan Yerba Buena '
+          + 'Coven rantaviivaa. Kun lahdenpoukama täytettiin, paikalle '
+          + 'nousi 1853 Montgomery Block, jonka rakennutti Henry Wager '
+          + 'Halleck — myöhemmin sisällissodan pohjoisvaltioiden '
+          + 'armeijan ylipäällikkö. Nelikerroksinen talo oli '
+          + 'valmistuessaan korkein rakennus Mississippistä länteen ja '
+          + 'kaupungin ensimmäinen paloturvalliseksi ja '
+          + 'maanjäristystä kestäväksi suunniteltu rakennus. Sitä '
+          + 'kutsuttiin Halleckin hulluudeksi, koska se seisoi '
+          + 'punapuutukkien lautalla, ja lempinimeltään Monkey '
+          + 'Blockiksi. Talossa oli asianajajien ja pankkiirien '
+          + 'konttoreita ja taiteilijoiden asuntoja, ja sen '
+          + 'vakiovieraisiin kuuluivat Mark Twain, Bret Harte, Ambrose '
+          + 'Bierce ja myöhemmin Jack London. Isoisän matkan aikaan '
+          + 'Monkey Block oli kaupungin kuuluisin osoite.'
+          + '\n\n'
+          + 'Montgomery Block kesti vuoden 1906 maanjäristyksen ja '
+          + 'palon, mutta se purettiin 1959 ja tilalle tehtiin '
+          + 'pysäköintialue. Vakuutusyhtiö Transamerican '
+          + 'toimitusjohtaja John Beckett halusi tontille talon, joka '
+          + 'päästäisi valon kadulle asti, ja päätyi pyramidin '
+          + 'muotoon. Ensimmäinen ehdotus oli 1 150 jalkaa korkea, '
+          + 'mutta kaavoituslautakunta hylkäsi sen, koska se olisi '
+          + 'peittänyt näkymän lahdelle Nob Hillilta. William '
+          + 'Pereiran suunnittelema torni rakennettiin 1969–1972, ja '
+          + 'siitä tuli 853 jalkaa korkea ja 48-kerroksinen. Huipun '
+          + 'ylin 212 jalkaa on ontto huippu, jonka sisällä on sadan '
+          + 'jalan pituiset teräsportaat kuudenkymmenen asteen '
+          + 'kulmassa.'
+          + '\n\n'
+          + 'Valmistuessaan 1972 pyramidi oli maailman kahdeksanneksi '
+          + 'korkein rakennus ja korkein Chicagosta länteen; Los '
+          + 'Angelesin Aon Center ohitti sen jo 1974. San Franciscon '
+          + 'korkein se oli aina vuoteen 2017, jolloin rakenteilla '
+          + 'ollut Salesforce Tower nousi sen ohi. Rakennusaikanaan '
+          + 'pyramidia vastustettiin äänekkäästi ja sitä pidettiin '
+          + 'silmäsärkynä, mutta arvostelijat vaihtoivat mieltään: '
+          + 'San Francisco Chroniclen John King kuvasi taloa 2009 '
+          + '"parhaan lajin arkkitehtoniseksi ikoniksi — sellaiseksi, '
+          + 'joka sopii paikkaansa ja paranee iän myötä". '
+          + 'Kahdennenkymmenennenseitsemännen kerroksen näköalatasanne '
+          + 'suljettiin 2001, ja tilalle asennettiin huipun neljä '
+          + 'kameraa, joiden kuvaa aulan näytöiltä voi kääntää itse.',
+      kuvat: [
+        {
+          tiedosto: 'Near Trans America Pyramid (10376581266).jpg',
+          selite: 'Talo valmistui 1972 sille tontille, jolla oli '
+            + 'seissyt vuodesta 1853 Montgomery Block eli Monkey '
+            + 'Block.',
+          lahde: 'Robert Ashworth, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Haas–Lilienthalin talo': {
+      aika: '1886–1973',
+      teksti: 'Talon rakennutti kauppias William Haas (1849–1916), '
+          + 'joka syntyi juutalaiseen perheeseen Baijerin '
+          + 'Reckendorfissa ja saapui San Franciscoon lokakuussa '
+          + '1868. Hän menestyi nopeasti tukkukauppiaana ja meni 1880 '
+          + 'naimisiin Bertha Greenebaumin kanssa, jonka isä oli '
+          + 'niin ikään baijerilainen ja omisti kalifornialaisen '
+          + 'kauppahuoneen. Perhe asui useissa vuokra-asunnoissa, '
+          + 'kunnes rakennutti 1886 oman talon Franklin Streetille. '
+          + 'Suunnittelijaksi tuli baijerilainen arkkitehti Peter R. '
+          + 'Schmidt. Talo on punapuuta, tyyliltään Queen Anne ja '
+          + 'Eastlake, ja sen kulmassa on tornihuone noitalakin '
+          + 'muotoisine kattoineen. Pohjaratkaisu on kaupungille '
+          + 'tyypillinen rivitalokaava, joka kehitettiin syvien ja '
+          + 'kapeiden rinnetonttien takia.'
+          + '\n\n'
+          + 'Huhtikuun 18. päivänä 1906 talo kesti maanjäristyksen '
+          + 'vähin vaurioin, mutta sitä uhkasi tulipalo. Perhe '
+          + 'katseli paloa oman talonsa katolta, kunnes viranomaiset '
+          + 'määräsivät kaikki lähtemään, ja he leiriytyivät muiden '
+          + 'kaupunkilaisten tavoin lähimpään puistoon Lafayette '
+          + 'Parkiin. Kolme päivää järistyksen jälkeen palo saatiin '
+          + 'pysäytettyä Van Ness Avenuelle, ja talo säästyi täpärästi '
+          + '— sama raja pelasti suuren osan Pacific Heightsin '
+          + 'puutaloista, kun kaupungin keskusta oli jo palanut.'
+          + '\n\n'
+          + 'Talossa asui kolme sukupolvea. Alice Haas Lilienthal '
+          + 'kuoli 1972 asuttuaan siinä lähes kahdeksankymmentä '
+          + 'vuotta, ja hänen lapsensa lahjoittivat rakennuksen '
+          + 'seuraavana vuonna San Francisco Heritage -yhdistykselle. '
+          + 'Talo merkittiin kansalliseen historiallisten paikkojen '
+          + 'rekisteriin 2. heinäkuuta 1973 ja kaupungin '
+          + 'maamerkkiluetteloon 1975. Se on kaupungin ainoa '
+          + 'alkuperäisessä asussaan säilynyt viktoriaaninen '
+          + 'yksityistalo, joka on säännöllisesti auki museona '
+          + 'alkuperäisine huonekaluineen; opastettu kierros alkaa '
+          + 'kellarin juhlasalista. Rahavaikeuksien takia museo '
+          + 'suljettiin marraskuussa 2023, mutta kierrokset alkoivat '
+          + 'uudelleen keväällä 2024.',
+      kuvat: [
+        {
+          tiedosto: 'Haas-Lilienthal House exterior 2025.jpg',
+          selite: 'Talo rakennettiin 1886 kauppias William Haasille, '
+            + 'ja se säästyi vuoden 1906 palolta, joka pysähtyi Van '
+            + 'Ness Avenuelle.',
+          lahde: 'Ppienovagem, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "Old St. Mary's -katedraali": {
+      aika: '1853–1909',
+      teksti: 'Montereyn piispa Joseph Alemany laski peruskiven '
+          + 'sunnuntaina 17. heinäkuuta 1853 California Streetin ja '
+          + 'silloisen Dupont Streetin kulmaan. '
+          + 'Rakennusaineet tulivat kaukaa: tiilet tuotiin laivoilla '
+          + 'Kap Hornin ympäri ja graniitti veistettiin valmiiksi '
+          + 'Kiinassa, ja työn tekivät kiinalaiset työmiehet. '
+          + 'Uusgoottilaiset piirustukset laativat William Craine ja '
+          + 'Thomas England, kaksi Kalifornian ensimmäisistä '
+          + 'paikallisista arkkitehdeista. Alemany vihki kirkon '
+          + 'jouluyön messussa 1854 jo San Franciscon arkkipiispana, '
+          + 'ja siitä tuli San '
+          + 'Franciscon arkkihiippakunnan ensimmäinen katedraali sekä '
+          + 'Kalifornian ensimmäinen kirkko, joka rakennettiin '
+          + 'nimenomaan katedraaliksi. Valmistuessaan se oli koko '
+          + 'kaupungin ja koko osavaltion korkein rakennus.'
+          + '\n\n'
+          + 'Kellotornin kellotaulun alle hakattiin lause '
+          + '"Son, observe the time and fly from evil" eli poika, pane '
+          + 'merkille aika ja pakene pahaa. Se on Sirakin kirjasta ja '
+          + 'oli tarkoitettu ohjeeksi kadun ohikulkijoille. Katedraali '
+          + 'kirkko oli vuoteen 1891, jolloin kasvava seurakunta sai '
+          + 'suuremman katedraalin Van Ness Avenuen ja O\'Farrell '
+          + 'Streetin kulmaan; vanha kirkko jäi seurakuntakirkoksi ja '
+          + 'piti nimensä. Isoisän matkan aikaan se oli siis yhä '
+          + 'kaupungin katedraali. Paulistit ovat hoitaneet kirkkoa '
+          + 'vuodesta 1901.'
+          + '\n\n'
+          + 'Vuoden 1906 maanjäristyksen kirkko kesti, mutta seuraavana '
+          + 'päivänä tuli poltti sen sisältä tyhjäksi. Kuumuus suli '
+          + 'kirkonkellot ja marmorisen alttarin, ja jäljelle jäivät '
+          + 'vain tiiliset ulkoseinät ja kellotorni. Kunnostus '
+          + 'valmistui 1909 arkkitehtitoimisto Welsh & Careyn '
+          + 'johdolla. Samoihin aikoihin Dupont Street sai uuden nimen '
+          + 'Grant Avenue presidentti ja kenraali Ulysses S. Grantin '
+          + 'mukaan. Kirkko on Kalifornian osavaltion historiallinen '
+          + 'maamerkki ja on ollut San Franciscon maamerkkiluettelossa '
+          + 'vuodesta 1968.',
+      kuvat: [
+        {
+          tiedosto: "2017 Old St. Mary's Cathedral 660 California Street.jpg",
+          selite: 'Kirkko vihittiin katedraaliksi jouluyönä 1854, ja '
+            + 'sen tiilet tuotiin Kap Hornin ympäri ja graniitti '
+            + 'Kiinasta.',
+          lahde: 'Beyond My Ken, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Grace Cathedral': {
+      aika: '1849–1964',
+      teksti: 'Seurakunta perustettiin 1849 kultaryntäyksen vuosina. '
+          + 'Sen kolmas kirkko rakennettiin California Streetin ja '
+          + 'Stockton Streetin kulmaan ja vihittiin 3. toukokuuta '
+          + '1868 — se on se Grace Church, jonka isoisä olisi voinut '
+          + 'nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, '
+          + 'muiden muassa rautatiemies Leland Stanford ja pankkiiri '
+          + 'William Henry Crocker. Vuoden 1906 järistystä seurannut '
+          + 'palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan '
+          + '1907.'
+          + '\n\n'
+          + 'Crockerin suku lahjoitti hiippakunnalle oman raunioituneen '
+          + 'tonttinsa Nob Hillin laelta, ja peruskivi laskettiin '
+          + '1910. Piirustukset teki englantilainen goottilaisen '
+          + 'tyylin mestari George Frederick Bodley, joka kuoli 1907, '
+          + 'ja työn saattoi loppuun sanfranciscolainen Lewis P. '
+          + 'Hobart. Katedraali rakennettiin teräsbetonista neljässä '
+          + 'jaksossa vuosina 1928–1930, 1931–1934, 1939–1943 ja '
+          + '1961–1964; lama ja sota keskeyttivät työn kahdesti, ja '
+          + 'seitsemäntoista vuoden ajan kirkossa oli iso tyhjä väli '
+          + 'keskeneräisen pääkäytävän ja ainoan valmiin tornin '
+          + 'välissä. Rakennus vihittiin 28. maaliskuuta 1964. '
+          + 'Pituutta on 329 jalkaa ja keskitornin huippu ulottuu 247 '
+          + 'jalkaan kadun pinnasta.'
+          + '\n\n'
+          + 'Pääovet ovat jäljennös Firenzen kastekappelin Lorenzo '
+          + 'Ghibertin ovista, joita kutsutaan Paratiisin porteiksi. '
+          + 'Alkuperäiset ovet vietiin sodan aikana turvaan ja '
+          + 'piilotettiin käytöstä poistettuun rautatietunneliin; kun '
+          + 'ne löydettiin 1944, niistä tehtiin muotit, ja '
+          + 'jäljennökset valettiin 1956. Ne oli tarkoitettu erääseen '
+          + 'sotamuistomerkkiin, mutta rahoitus kaatui, ja '
+          + 'sanfranciscolainen Charles D. Field osti ovet kirkolle. '
+          + 'Pohjoisen tornin kellopelissä on 44 kelloa, jotka '
+          + 'valettiin Croydonissa Englannissa 1938. Ne ehtivät '
+          + 'kaupunkiin ennen torniaan ja olivat vuosina 1939–1940 '
+          + 'esillä Treasure Islandin maailmannäyttelyssä; ensimmäisen '
+          + 'kerran niitä soitettiin tornista jouluaattona 1940. '
+          + 'Kirkon lattiassa on labyrintti, joka noudattaa Chartresin '
+          + 'katedraalin keskiaikaista kuviota.',
+      kuvat: [
+        {
+          tiedosto: 'Grace Cathedral San Francisco facade.jpg',
+          selite: 'Pääovet ovat 1956 valettu jäljennös Firenzen '
+            + 'kastekappelin Ghiberti-ovista, ja ne asennettiin '
+            + 'paikoilleen kirkon vihkimiseen 1964.',
+          lahde: 'Everbruin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palace Hotel': {
+      aika: '1875–1909',
+      teksti: 'Hotellin rakennutti pankkiiri William Chapman Ralston, '
+          + 'ja se maksoi viisi miljoonaa dollaria. Kun se avattiin 2. '
+          + 'lokakuuta 1875, siinä oli 755 huonetta ja se oli '
+          + 'Yhdysvaltain länsiosien suurin hotelli. Korkeutta oli 120 '
+          + 'jalkaa, mikä riitti kaupungin korkeimmaksi rakennukseksi '
+          + 'yli vuosikymmeneksi. Keskellä taloa oli lasikattoinen '
+          + 'Grand Court, jonne vaunut ajoivat sisään ja jota '
+          + 'ympäröi seitsemän kerrosta valkoisia pylväsparvekkeita. '
+          + 'Hisseinä oli punapuupaneloituja hydraulisia '
+          + '"nousuhuoneita", ja joka huoneessa oli oma kylpyhuone ja '
+          + 'sähköinen kutsunappi palvelusväen hälyttämiseksi. Kun '
+          + 'isoisä kulki kaupungin läpi 1873, hotellia ei siis vielä '
+          + 'ollut — se avattiin kaksi vuotta myöhemmin.'
+          + '\n\n'
+          + 'Ralston ei nähnyt hotellinsa avajaisia. Hänen '
+          + 'pankkinsa Bank of California kaatui elokuun lopussa 1875, '
+          + 'ja samana päivänä kun hän menetti pankkinsa hallinnan, '
+          + 'hän hukkui San Franciscon lahteen. Liikekumppani, senaattori '
+          + 'William Sharon, sai haltuunsa sekä hotellin, pankin että '
+          + 'Ralstonin velat. Talo teki vaikutuksen: teräsmies Andrew '
+          + 'Carnegie kirjoitti maailmanmatkakirjassaan, ettei '
+          + 'maailmassa ole toista tällaista hotellirakennusta ja että '
+          + 'Pariisin Grand-hotellin sali on tämän rinnalla vaatimaton. '
+          + 'Havaijin kuningas Kalākaua asui hotellissa vierailullaan '
+          + '1890 ja kuoli siellä 20. tammikuuta 1891.'
+          + '\n\n'
+          + 'Hotelli kesti 18. huhtikuuta 1906 maanjäristyksen mutta '
+          + 'paloi saman päivän iltapäivällä. Talossa yöpyi tenori '
+          + 'Enrico Caruso, joka oli edellisiltana laulanut Don Josén '
+          + 'osan Carmenissa ja joka vannoi järistyksen jälkeen, ettei '
+          + 'palaa kaupunkiin koskaan. Väliaikaiseksi majataloksi '
+          + 'pystytettiin 23 huoneen "Baby" Palace, joka avattiin jo '
+          + 'marraskuussa 1906. Nykyinen hotelli avattiin samalle '
+          + 'tontille 19. joulukuuta 1909, ja vanhan Grand Courtin '
+          + 'paikalla on siitä lähtien ollut ruokasali Garden Court. '
+          + 'Presidentti Warren G. Harding kuoli hotellissa 1923, ja '
+          + 'vuonna 1945 siellä järjestettiin juhlaillallinen '
+          + 'Yhdistyneiden kansakuntien perustamiskokouksen '
+          + 'avajaisten kunniaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Palace Hotel from across Market on Montgomery St.JPG',
+          selite: 'Nykyinen talo avattiin 1909 sen hotellin paikalle, '
+            + 'jonka William Ralston rakennutti 1875 ja joka paloi '
+            + '1906.',
+          lahde: 'BrokenSphere, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Union Square': {
+      aika: '1850–1903',
+      teksti: 'Aukio oli alun perin hiekkadyyni. Kaupungin ensimmäinen '
+          + 'yhdysvaltalainen pormestari John Geary erotti sen '
+          + 'julkiseksi puistoksi 1850, ja se on yhä saman kokoinen '
+          + 'kortteli Gearyn, Powellin, Postin ja Stocktonin katujen '
+          + 'välissä — pinta-alaa on 2,6 eekkeriä. Nimi ei tarkoita '
+          + 'ammattiyhdistystä vaan unionia: aukiolla pidettiin '
+          + 'sisällissodan kynnyksellä ja sen aikana pappi Thomas '
+          + 'Starr Kingin johtamia mielenosoituksia pohjoisvaltioiden '
+          + 'puolesta. Isoisän matkan aikaan aukio oli siis runsaan '
+          + 'kahdenkymmenen vuoden ikäinen puisto keskellä uutta '
+          + 'kaupunginosaa.'
+          + '\n\n'
+          + 'Aukion keskellä kohoaa Dewey-muistomerkki, joka '
+          + 'vihittiin 1903. Kokonaiskorkeus on 97 jalkaa: '
+          + 'pylväs on 85 jalkaa ja sen päällä seisova pronssinen '
+          + 'Nike, kreikkalainen voiton jumalatar, yhdeksän jalkaa. '
+          + 'Muistomerkki kertoo amiraali George Deweyn voitosta '
+          + 'Manilanlahden meritaistelussa 1898 ja samalla vähän '
+          + 'aiemmin murhatusta presidentti William McKinleystä. '
+          + 'Veistoksen teki Robert Aitken, ja Voiton hahmon mallina '
+          + 'oli tanskalaissyntyinen konekirjoittaja ja taiteilijoiden '
+          + 'malli Alma de Bretteville, josta tuli myöhemmin kaupungin '
+          + 'rikkaimpiin kuuluneen miehen vaimo.'
+          + '\n\n'
+          + 'Vuosina 1939–1941 aukion alle louhittiin pysäköintihalli '
+          + 'arkkitehti Timothy Pfluegerin suunnitelmien mukaan. Se '
+          + 'oli maailman ensimmäinen maanalainen pysäköintilaitos, ja '
+          + 'sen seurauksena aukion nurmikot, pensaat ja koko '
+          + 'Dewey-muistomerkki lepäävät nykyään hallin katolla. Aukio '
+          + 'kunnostettiin uudelleen vuosituhannen vaihteessa ja '
+          + 'avattiin 25. heinäkuuta 2002. Sitä ympäröivät korttelit '
+          + 'ovat pitkään olleet Yhdysvaltain tunnetuimpia '
+          + 'tavarataloalueita, ja aukio on kaupungin vilkkaimpia '
+          + 'kohtaamispaikkoja.',
+      kuvat: [
+        {
+          tiedosto: 'Dewey Monument, Union Square.jpg',
+          selite: 'Aukion keskellä on 1903 vihitty muistomerkki '
+            + 'amiraali George Deweyn voitolle Manilanlahdella.',
+          lahde: 'Supercarwaar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Franciscon kaupungintalo': {
+      aika: '1870–1915',
+      teksti: 'Edellinen kaupungintalo oli varoittava esimerkki. Sen '
+          + 'rakentaminen alkoi 1870 vanhan hautausmaan paikalle '
+          + 'kolmion muotoiselle tontille, ja Augustus Laverin ja '
+          + 'Thomas Stentin suunnitelma valmistui vasta 1897 — '
+          + 'kaksikymmentäseitsemän vuotta ja seitsemän '
+          + 'pääarkkitehtia myöhemmin. Työtä varjosti korruptio: '
+          + 'tiilien huhuttiin olevan kelvottomia ja seinien '
+          + 'täytteenä todettiin olevan hiekkaa, lattiat olivat '
+          + 'vinossa ja savupiiput vetivät huonosti. Hinnaksi tuli '
+          + 'kuusi miljoonaa dollaria, ja vuoden 1906 maanjäristys '
+          + 'kaatoi talon vajaat kymmenen vuotta sen valmistumisen '
+          + 'jälkeen. Isoisän matkan aikaan työmaa oli ollut käynnissä '
+          + 'kolme vuotta, ja sitä oli vielä neljäkolmatta vuotta '
+          + 'jäljellä.'
+          + '\n\n'
+          + 'Uusi kaupungintalo rakennettiin nopeasti, koska kaupunki '
+          + 'halusi sen valmiiksi vuoden 1915 maailmannäyttelyyn. '
+          + 'Kilpailun voitti Arthur Brown nuorempi toimistostaan '
+          + 'Bakewell & Brown, ja hän piirsi itse myös ovenripat ja '
+          + 'valitsi opasteiden kirjasintyypin. Maantyöt alkoivat 5. '
+          + 'huhtikuuta 1913 ja peruskivi laskettiin saman vuoden '
+          + 'lokakuussa; pormestari James Rolph muutti taloon 28. '
+          + 'joulukuuta 1915, ja viimeinen kivi asetettiin '
+          + 'maaliskuussa 1916. Rakennus on beaux arts -tyylinen ja '
+          + 'täyttää kaksi korttelia. Kupoli on esikuviltaan '
+          + 'pariisilainen — Les Invalides ja Val-de-Grâce — ja '
+          + 'kohoaa 307,5 jalkaan eli korkeammalle kuin Yhdysvaltain '
+          + 'kongressitalon kupoli Washingtonissa.'
+          + '\n\n'
+          + 'Talon pyöröaulassa on pidetty kaupungin surujuhlia: '
+          + 'siellä lepäsivät muun muassa kenraali Frederick Funston '
+          + '1917 ja presidentti Warren G. Harding 1923. Joe DiMaggio '
+          + 'ja Marilyn Monroe vihittiin talossa tammikuussa 1954. '
+          + 'Marraskuun 27. päivänä 1978 entinen valtuutettu Dan White '
+          + 'surmasi rakennuksessa pormestari George Mosconen ja '
+          + 'valtuutettu Harvey Milkin; Mosconen pronssinen rintakuva '
+          + 'seisoo nyt pormestarin työhuoneen lähellä, ja Milkin '
+          + 'rintakuva paljastettiin talossa 2008. '
+          + 'Loma Prietan maanjäristys käänsi 1989 kupolia neljä '
+          + 'tuumaa jalustallaan, ja talo perustettiin uudelleen '
+          + 'kumi- ja teräseristimien varaan. Kun se avattiin '
+          + 'tammikuussa 1999, se oli maailman suurin tällä tavalla '
+          + 'eristetty rakennus.',
+      kuvat: [
+        {
+          tiedosto: 'Ayuntamiento de San Francisco (California) 001.jpg',
+          selite: 'Kupoli kohoaa 307,5 jalkaan eli korkeammalle kuin '
+            + 'Yhdysvaltain kongressitalon kupoli.',
+          lahde: 'Américo Toledano, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * BUENOS AIRES (23.8.2026). Kohteet ovat kohdekartan kymmenen
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.buenosaires), ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 23.8.2026
+   * (artikkelit "Basilica of Our Lady of the Pillar, Buenos Aires",
+   * "Recoleta, Buenos Aires", "Plaza San Martín (Buenos Aires)",
+   * "Palacio de Aguas Corrientes", "Museo Mitre", "Buenos Aires
+   * Metropolitan Cathedral", "Café Tortoni", "Avenida de Mayo",
+   * "Palacio Barolo", "Palace of the Argentine National Congress",
+   * "Illuminated Block" ja "Santo Domingo Convent").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin kaksi perustamista, vuoden 1871 keltakuume,
+   * Sarmiento ja murhayritys, hallituksen talon vaiheet, tango,
+   * ensimmäinen Teatro Colón, San Telmo ja López Jordánin kapina;
+   * matkaoppaan jaksot kertovat Retiron aseman, Puerto Maderon ja
+   * Recoletan hautausmaan. Kartan kymmenestä kohteesta yksikään ei
+   * ole näiden aihe. Lähimmäksi tulee Pilarin basilika, joka seisoo
+   * hautausmaan vieressä — juttu kertoo kirkon ja luostarin, ei
+   * hautausmaata, ja mainitsee sen yhdellä lauseella.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md). Plaza San Martínin juttu
+   * kertoo toteavasti, että aukion maat myytiin 1713 brittiläiselle
+   * South Sea Companylle, joka kävi tontilta orjakauppaa, ja että
+   * kauppa kiellettiin 1813 — sama periaate kuin Rion lehdessä:
+   * orjuus kerrotaan lukuina, lakeina ja paikkoina, ei ruumiillisen
+   * kohtelun kuvauksena. Vuosien 1976–1983 sotilashallinto ei tule
+   * yhdessäkään jutussa vastaan, koska yksikään kohde ei ole sen
+   * tapahtumapaikka; Galerías Pacífico, jonka en-Wikipedian artikkelin
+   * laajin osio kertoo juuri siitä, jätettiin kohdelistalta pois
+   * (perustelu maakartat.js:ssä).
+   *
+   * KOLME WIKIPEDIAN SISÄISTÄ RISTIRIITAA on kirjoitettu auki
+   * lukijalle reseptin ohjeen mukaan: Palacio de Aguas Corrientes on
+   * artikkelin mukaan yhtä aikaa toimiva pumppaamo ja 1978 museoksi
+   * muutettu talo, Palacio Barolo menetti korkeimman talon asemansa
+   * joko 1935 tai 1936, ja katedraalin julkisivun piirtäneen jesuiitan
+   * nimi kirjoitetaan sekä Giovanni Bianchi että Blanqui.
+   *
+   * KUVAT: kaikki lisenssit ja tekijänimet Commonsin extmetadatasta
+   * 23.8.2026, haku kategorioittain, ja jokainen kuva katsottiin
+   * silmin 900 px esikatseluna. HYLÄTTY tunnistettavien kasvojen takia
+   * "Corredor del pasaje Barolo.jpg", "Museo Mitre 09.JPG",
+   * "Fachada del Complejo Histórico Cultural Manzana de las Luces.jpg"
+   * ja "Casa del Gral. Bartolomé Mitre - Museo Mitre.jpg"; "Museo
+   * Mitre 08.JPG" hylättiin, koska peilistä näkyy kuvaajan kasvot.
+   * Katedraalin kuva on Christiano Juniorin valokuva vuodelta 1876:
+   * se on kartaston harvoja kuvia, joissa kohde näkyy tarkalleen
+   * sellaisena kuin isoisä sen näki.
+   */
+  buenosaires: {
+    'Pilarin basilika': {
+      aika: '1732',
+      teksti: 'Fransiskaanien recollectiveljet perustivat 1700-luvun '
+          + 'alussa joen yläpuoliselle töyräälle luostarin, kirkon ja '
+          + 'hautausmaan. Heistä koko kaupunginosa sai nimensä '
+          + 'Recoleta, ja kirkon mukaan sitä kutsuttiin toisinaan myös '
+          + 'El Pilariksi. Kirkko vihittiin Pilarin Neitsyt Marialle ja '
+          + 'valmistui 1732; se on Buenos Airesin toiseksi vanhin '
+          + 'kirkko. Paikka oli tuolloin kaupungin ulkopuolella: '
+          + 'töyräs laskeutui Río de la Platan rantaan ja sen vieressä '
+          + 'virtasi Manso-puro, joka kulkee nykyään putkessa '
+          + 'Pueyrredón-kadun alla.'
+          + '\n\n'
+          + 'Rakennustyön aloitti italialainen jesuiitta-arkkitehti '
+          + 'Andrés Blanqui ja sen sai valmiiksi Juan Bautista '
+          + 'Prímoli. Sama mies piirsi myös katedraalin julkisivun '
+          + 'vuosina 1725–1727 — en-Wikipedia kirjoittaa hänen nimensä '
+          + 'kahdella tavalla, italialaisittain Giovanni Bianchi ja '
+          + 'espanjalaisittain Blanqui, eikä valitse niistä '
+          + 'kumpaakaan.'
+          + '\n\n'
+          + 'Fransiskaanit karkotettiin maasta 1821, ja siitä lähtien '
+          + 'kirkko on ollut tavallinen seurakuntakirkko. Isoisän '
+          + 'matkan aikaan 1873 se oli 141 vuotta vanha ja seisoi yhä '
+          + 'kaupungin laidalla, mutta juuri silloin seutu alkoi '
+          + 'muuttua: vuoden 1871 keltakuumeen jälkeen varakkaat '
+          + 'perheet muuttivat etelästä tänne ylängölle, ja Recoletasta '
+          + 'tuli kaupungin hienoin kaupunginosa suurlähetystöineen ja '
+          + 'palatsihotelleineen.',
+      kuvat: [
+        {
+          tiedosto: 'Basílica Nuestra Señora del Pilar (Buenos Aires).jpg',
+          selite: 'Kirkko valmistui 1732, ja se on Buenos Airesin '
+            + 'toiseksi vanhin.',
+          lahde: 'Butterfly austral, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Plaza San Martín': {
+      aika: '1713–1878',
+      teksti: 'Aukion paikalla asuivat aluksi siirtomaa-ajan '
+          + 'espanjalaiset kuvernöörit. Vuonna 1713 maat myytiin '
+          + 'brittiläiselle South Sea Companylle, joka kävi entisestä '
+          + 'kuvernöörin talosta käsin orjakauppaa; lähelle '
+          + 'rakennettiin myöhemmin linnake ja härkätaisteluareena. '
+          + 'Vuonna 1807 tontilla kärsi tappion kenraali John '
+          + 'Whitelocke, joka johti Britannian toista yritystä valloittaa '
+          + 'Buenos Aires, ja alue sai siitä nimen Kunnian kenttä.'
+          + '\n\n'
+          + 'Vuoden 1810 toukokuun vallankumous toi kaupungille oman '
+          + 'hallituksen, joka antoi ratsuväen krenatöörirykmentin José '
+          + 'de San Martínin komentoon ja salli hänen sijoittaa '
+          + 'kasarminsa aukiolle. Vuonna 1813 annettu päätös lakkautti '
+          + 'orjakaupan Río de la Platan yhdistyneissä provinsseissa, ja '
+          + 'orjien majoitustilat suljettiin. San Martín joutui 1824 '
+          + 'poliittisista syistä maanpakoon ja kuoli 1850, mutta hänen '
+          + 'asemansa arvioitiin kuoleman jälkeen uudelleen: '
+          + 'ratsastajapatsas tilattiin 1862 ranskalaiselta kuvanveistäjä '
+          + 'Louis-Joseph Daumasilta, ja aukio nimettiin hänen mukaansa '
+          + '1878 hänen syntymänsä satavuotispäivänä.'
+          + '\n\n'
+          + 'Puistoksi paikka muuttui vasta isoisän matkan jälkeen. '
+          + 'Pormestari Torcuato de Alvear purkautti 1883 linnakkeen, '
+          + 'areenan ja muut rakennukset, ja tilalle istutettiin ombú-, '
+          + 'lehmus- ja silkkiflossipuita; ranskalainen '
+          + 'puutarhasuunnittelija Charles Thays antoi aukiolle 1889 '
+          + 'suunnilleen sen nykyisen muodon. Vuoden 1900 tienoilla '
+          + 'aukion laita oli maan varakkaimpien maanomistajien '
+          + 'suosituinta osoitetta, ja kolme heidän palatsiaan seisoo '
+          + 'siinä yhä.',
+      kuvat: [
+        {
+          tiedosto: 'CABA - Retiro - Monumento al General San Martín.jpg',
+          selite: 'Ratsastajapatsas tilattiin 1862 ranskalaiselta '
+            + 'Louis-Joseph Daumasilta, ja aukio sai San Martínin nimen '
+            + '1878.',
+          lahde: 'Leandro Kibisz, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palacio de Aguas Corrientes': {
+      aika: '1887–1894',
+      teksti: 'Kaupungin ensimmäinen vesilaitos oli brittiomisteinen '
+          + 'Buenos Aires Water Supply and Drainage Company Limited, ja '
+          + 'se avattiin 1869. Sen ensimmäinen johtaja oli insinööri '
+          + 'Guillermo Villanueva, jonka rintakuva seisoo talon '
+          + 'puutarhassa. Yhtiön arkisto perustettiin isoisän '
+          + 'matkavuonna 1873, ja se on yhä ainoa kokoelma, jossa on '
+          + 'täydelliset tiedot kaupungin vesihuollon suunnittelusta — '
+          + 'vanhimmat piirustukset ovat vuodelta 1870.'
+          + '\n\n'
+          + 'Talon suunnittelivat 1877 norjalainen arkkitehti Olaf Boye, '
+          + 'ruotsalainen insinööri Carlos Nyströmer ja brittiläinen '
+          + 'rakennusinsinööri John Bateman. Rakentaminen alkoi 1887 ja '
+          + 'talo vihittiin 1894. Sisällä oli kolmessa kerroksessa '
+          + 'kaksitoista vesisäiliötä, joihin mahtui yhteensä 72 000 '
+          + 'tonnia vettä; rautarunko valmistettiin Belgiassa, ja sitä '
+          + 'kannattaa 180 pilaria. Yksi syy koko hankkeeseen oli, että '
+          + 'kaupunki halusi eroon Lorean aukion rumasta vesitornista, '
+          + 'joka seisoi nykyisen kongressiaukion paikalla.'
+          + '\n\n'
+          + 'Julkisivu on tehty yli 300 000 lasitetusta ja monivärisestä '
+          + 'terrakottalaatasta, jotka tuotiin brittiläiseltä Royal '
+          + 'Doultonin keramiikkatehtaalta. Katto on peltinen '
+          + 'mansardikatto, ja seinissä ovat sen ajan neljäntoista '
+          + 'maakunnan vaakunat. Talo siirtyi kaupungille, kun '
+          + 'brittiyhtiö kansallistettiin 1892. Wikipedia kertoo '
+          + 'jatkosta kaksi eri asiaa: yhtäällä se sanoo talon toimivan '
+          + 'yhä pumppaamona, toisaalla että pumput purettiin 1978 ja '
+          + 'talosta tuli museo. Nykyään siellä on joka tapauksessa '
+          + 'vesiyhtiön toimistoja, historiallinen arkisto ja pieni '
+          + 'vesihuollon museo.',
+      kuvat: [
+        {
+          tiedosto: 'Aguas Corrientes-fachada-HDR.jpg',
+          selite: 'Julkisivun terrakottalaatat tilattiin Britanniasta '
+            + 'Royal Doultonin tehtaalta, ja niitä on yli 300 000.',
+          lahde: 'HalloweenHJB, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Museo Mitre': {
+      aika: '1785–1907',
+      teksti: 'Talo on siirtomaa-ajan espanjalainen asuintalo vuodelta '
+          + '1785. Ensimmäisen kerran se esiintyy Argentiinan '
+          + 'historiassa turvapaikkana: Río de la Platan viimeinen '
+          + 'varakuningas Baltasar Hidalgo de Cisneros pakeni tänne '
+          + 'vuoden 1810 toukokuun vallankumouksen jälkeen.'
+          + '\n\n'
+          + 'Kenraali Bartolomé Mitre vuokrasi talon 1860 ja asui '
+          + 'siinä koko presidenttikautensa 1862–1868. Vuonna 1868 '
+          + 'joukko kaupunkilaisia osti talon ja lahjoitti sen hänelle '
+          + 'kiitokseksi presidenttikaudesta ja työstä maan '
+          + 'yhtenäisyyden puolesta, ja hän asui siinä kuolemaansa '
+          + 'saakka 1906. Näissä huoneissa tehtiin myös La Nación, '
+          + 'yksi maan vanhimmista ja vaikutusvaltaisimmista '
+          + 'sanomalehdistä: se perustettiin 1870 ja ilmestyi talosta '
+          + 'käsin vuoteen 1895. Isoisän matkan aikaan talossa asui '
+          + 'siis entinen presidentti, joka teki samalla maan '
+          + 'tärkeintä sanomalehteä.'
+          + '\n\n'
+          + 'Valtio osti talon lailla 4943, ja museo avattiin yleisölle '
+          + '3. kesäkuuta 1907. Ensimmäinen johtaja oli Alejandro Rosa, '
+          + 'joka oli perustanut Mitren kanssa 1893 historiallisen ja '
+          + 'numismaattisen seuran. Museon historiallinen arkisto on '
+          + 'Argentiinan suurimpia — noin 53 200 asiakirjaa, suurin osa '
+          + 'Mitren omasta kokoelmasta — ja kirjastossa on satatuhatta '
+          + 'nidettä. Talo julistettiin kansalliseksi historialliseksi '
+          + 'muistomerkiksi 21. toukokuuta 1942, ja se on ollut kuvana '
+          + 'kahden peson setelissä.',
+      kuvat: [
+        {
+          tiedosto: 'Museo Mitre 05.JPG',
+          selite: 'Talossa asui presidentti Bartolomé Mitre kuolemaansa '
+            + '1906 asti, ja museo avattiin siihen 1907.',
+          lahde: 'Roberto Fiadone, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Buenos Airesin katedraali': {
+      aika: '1753–1863',
+      teksti: 'Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 '
+          + 'saman korttelin neljänneksen, jolla katedraali yhä seisoo. '
+          + 'Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne '
+          + 'kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 '
+          + 'vanhana ja sopimattomana, seuraavan katto uhkasi sortua '
+          + '1616 ja rakennus romahti, koska se oli tehty lahosta '
+          + 'pajupuusta. Uusi kirkko valmistui 1618, mutta se oli '
+          + 'edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi '
+          + '1671, ja sen torni ja katto putosivat 1680-luvun alussa. '
+          + 'Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti '
+          + 'jälleen.'
+          + '\n\n'
+          + 'Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti '
+          + 'Antonio Masella. Hänen kupolissaan havaittiin halkeamia, '
+          + 'se jouduttiin purkamaan, ja Masella erotettiin ja '
+          + 'asetettiin syytteeseen — myöhemmin hänet vapautettiin. '
+          + 'Kupolin rakensi uudelleen portugalilainen Manuel Álvarez '
+          + 'de Rocha vuoden 1770 jälkeen. Vanha julkisivu ja tornit '
+          + 'purettiin 1778, koska ne olivat uuteen kirkkoon nähden '
+          + 'liian pienet, ja kirkko vihittiin 1779 kokonaan ilman '
+          + 'julkisivua. Vuodesta 1826 ranskalaiset Prosper Catelin ja '
+          + 'Pierre Benoit rakensivat sille uusklassisen julkisivun, '
+          + 'jonka esikuva oli Pariisin Palais Bourbon: kaksitoista '
+          + 'pilaria ja kolmiopääty. Tornit jäivät rakentamatta, ja '
+          + 'siksi kirkko näyttää ulkoa antiikin temppeliltä.'
+          + '\n\n'
+          + 'Päädyn reliefit veisti ranskalainen Joseph Dubourdieu '
+          + 'vuosina 1860–1863. Aihe on Joosefin jälleennäkeminen '
+          + 'veljiensä ja isänsä Jaakobin kanssa Egyptissä, ja se '
+          + 'tarkoitettiin vertauskuvaksi kansakunnan yhtenäisyydestä '
+          + 'sisällissotien jälkeen. Isoisän matkaa kaksi vuotta ennen, '
+          + '1871, kirkkoon asennettiin saksalainen Walcker-urku, jossa '
+          + 'on yli 3 500 pilliä. Sen sijaan San Martínin hautamuistomerkkiä '
+          + 'ei vielä ollut: kenraalin jäännökset tuotiin Ranskasta '
+          + '1880, ja mustan sarkofagin ympärille veistetyt kolme '
+          + 'naishahmoa esittävät Argentiinaa, Chileä ja Perua.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia Metropolitana (Junior, 1876).jpg',
+          selite: 'Christiano Juniorin valokuva on vuodelta 1876, eli '
+            + 'katedraali näytti isoisän matkan aikaan käytännössä '
+            + 'tältä.',
+          lahde: 'Christiano Junior, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Café Tortoni': {
+      aika: '1858',
+      teksti: 'Kahvilan avasi 1858 ranskalainen siirtolainen, jonka '
+          + 'sukunimi oli Touan, ja hän nimesi sen pariisilaisen '
+          + 'Tortonin mukaan — sen kahvilan, jonka ympärille Boulevard '
+          + 'des Italiensilla kokoontui 1800-luvun ranskalainen '
+          + 'kulttuuriväki. Isoisän matkan aikaan Tortoni oli siis jo '
+          + 'olemassa, mutta ei täällä: kahvila seisoi Rivadavia- ja '
+          + 'Esmeralda-katujen kulmassa.'
+          + '\n\n'
+          + 'Nykyiselle korttelille kahvila muutti 1880, ja sen ovi oli '
+          + 'aluksi korttelin toisella puolella Rivadavia-kadulla. '
+          + 'Avenida de Mayota ei nimittäin ollut vielä olemassa: '
+          + 'pormestari Torcuato de Alvearin ajama katu louhittiin '
+          + 'suoraan vanhojen korttelien läpi vuosina 1885–1894 ja '
+          + 'vihittiin 9. heinäkuuta 1894. Vasta 1898 Tortoni avasi '
+          + 'sisäänkäynnin uudelle bulevardille, ja julkisivun piirsi '
+          + 'arkkitehti Alejandro Christophersen. Vuosisadan lopulla '
+          + 'kahvilan osti toinen ranskalainen, Celestino Curutchet.'
+          + '\n\n'
+          + 'Kellariin perustettiin 1926 taidepiiri La Peña, joka '
+          + 'toimi vuoteen 1943 ja jonka vieraita olivat muun muassa '
+          + 'runoilija Alfonsina Storni, kirjailijat Roberto Arlt ja '
+          + 'Jorge Luis Borges, filosofi José Ortega y Gasset ja '
+          + 'pianisti Arthur Rubinstein. Kellari on yhä esiintymislava '
+          + 'jazzille ja tangolle, ja salissa on säilytetty alkuvuosien '
+          + 'sisustus, kirjasto ja takahuoneen biljardipöydät.',
+      kuvat: [
+        {
+          tiedosto: 'Café Tortoni 01.jpg',
+          selite: 'Kahvila perustettiin 1858, mutta nykyiselle '
+            + 'paikalleen se muutti vasta 1880.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palacio Barolo': {
+      aika: '1923',
+      teksti: 'Talon tilasi italialainen siirtolainen Luis Barolo, joka '
+          + 'oli tullut maahan 1890 ja rikastunut neuletehtaalla, ja '
+          + 'sen suunnitteli italialainen arkkitehti Mario Palanti. '
+          + 'Rakennus noudattaa Danten Jumalaisen näytelmän '
+          + 'maailmankuvaa: kerroksia on 22 ja ne jakautuvat kolmeen '
+          + 'osaan niin, että kellari ja katutaso ovat helvetti, '
+          + 'kerrokset 1–14 kiirastuli ja 15–22 taivas. Korkeutta on '
+          + 'sata metriä, yksi metri runoelman jokaista laulua kohden, '
+          + 'ja huipun majakka vastaa enkelien yhdeksää kuoroa. '
+          + 'Kärkikoriste esittää Etelän ristiä.'
+          + '\n\n'
+          + 'Valmistuessaan 1923 talo oli sekä kaupungin että koko '
+          + 'Etelä-Amerikan korkein. Aseman se menetti Kavanagh-talolle '
+          + '— Wikipedia antaa siitä kaksi vuotta, 1935 ja 1936. Avenida '
+          + 'de Mayolla oli pormestari Miguel Canén asettama '
+          + 'kahdenkymmenenneljän metrin korkeusraja, ja Barolo oli '
+          + 'ensimmäinen talo, joka sai siitä poikkeusluvan.'
+          + '\n\n'
+          + 'Rakennus tehtiin Danten tuhkia varten. Barolo uskoi '
+          + 'Euroopan ajautuvan tuhoon ja halusi ne mahdollisimman '
+          + 'kauas mantereelta. Aula haarautuu keskuskupolista '
+          + 'yhdeksään holvikaareen, jotka vastaavat helvetin yhdeksää '
+          + 'piiriä, ja seinillä on latinankielisiä säkeitä ja '
+          + 'hirviöveistoksia. Talon kaksonen on Montevideon Palacio '
+          + 'Salvo, jonka sama arkkitehti suunnitteli samaan aikaan: '
+          + 'molempien majakat oli tarkoitettu tervehtimään Atlantilta '
+          + 'saapuvia kuin Herkuleen pylväät. Kärkikoriste asettuu '
+          + 'samaan linjaan todellisen Etelän ristin kanssa 9. '
+          + 'heinäkuuta, Argentiinan itsenäisyyspäivänä.',
+      kuvat: [
+        {
+          tiedosto: 'CABA - Monserrat - Palacio Barolo.jpg',
+          selite: 'Talo oli valmistuessaan 1923 sekä kaupungin että '
+            + 'koko Etelä-Amerikan korkein rakennus.',
+          lahde: 'Leandro Kibisz, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kongressipalatsi: {
+      aika: '1898–1906',
+      teksti: 'Isoisän matkan aikaan tätä taloa ei ollut: ajatus omasta '
+          + 'kongressipalatsista esitettiin ja säädettiin vasta 1895. '
+          + 'Piirustukset teki italialainen arkkitehti Vittorio Meano '
+          + 'ja työn sai valmiiksi argentiinalainen Julio Dormal. '
+          + 'Rakentaminen kesti 1898–1906, ja liittovaltio myönsi siihen '
+          + 'kuusi miljoonaa dollaria. Kongressi otti talon virallisesti '
+          + 'vastaan 12. toukokuuta 1906, mutta koristelut valmistuivat '
+          + 'vasta 1946.'
+          + '\n\n'
+          + 'Talo on uusklassinen ja pääosin valkoista marmoria. '
+          + 'Kahdeksankymmentä metriä korkea kupoli on pronssipäällysteinen '
+          + 'ja painaa kolmetuhatta tonnia; se on vihertynyt säässä ja '
+          + 'lepää kymmenen metrin syvyisen käännetyn kupolin varassa. '
+          + 'Kunnian sisäänkäynnin edessä on kahdeksanmetrinen '
+          + 'nelivaljakko, jonka veisti Victor de Pol: pronssia '
+          + 'kaksikymmentä tonnia, ja ohjaksia pitelee Vapaus. '
+          + 'Argentiinalainen kuvanveistäjä Lola Mora teki taloon '
+          + 'vertauskuvallisia pronssi- ja marmoriveistoksia, mutta hän '
+          + 'oli lahjoittanut alkuperäiset Jujuyn maakunnalle; ne '
+          + 'skannattiin 2013, ja kopiot paljastettiin 1. maaliskuuta '
+          + '2014.'
+          + '\n\n'
+          + 'Talon edessä on kongressiaukio, jonka suunnitteli '
+          + 'ranskalaissyntyinen Charles Thays ja joka vihittiin 1910. '
+          + 'Aukiolla on kivi, joka merkitsee Argentiinan kaikkien '
+          + 'valtateiden nollakilometriä. Talo kävi ajan mittaan liian '
+          + 'pieneksi, ja edustajien työhuoneita varten alettiin 1974 '
+          + 'rakentaa erillistä lisärakennusta.',
+      kuvat: [
+        {
+          tiedosto: '2019 Buenos Aires - Palacio del Congreso de la Nación Argentina.jpg',
+          selite: 'Palatsista päätettiin vasta 1895, ja se valmistui '
+            + '1906.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manzana de las Luces': {
+      aika: '1686–1821',
+      teksti: 'Jesuiitat saapuivat kaupunkiin 1608 ja saivat tontin, '
+          + 'jonka Juan de Garay oli varannut tulevaksi toriksi. He '
+          + 'myivät sen 1661 — siitä tuli lopulta Plaza de Mayo — ja '
+          + 'rakensivat viereiselle, Isabel de Carvajalin lahjoittamalle '
+          + 'tontille uuden, omavaraisen aseman. San Ignacion kirkon '
+          + 'rakentaminen alkoi 1686 ja se valmistui barokkirakennuksena '
+          + '1722; viereisen San Ignacion collegen suunnitteli '
+          + 'paikallinen arkkitehti Juan Kraus, ja se rakennettiin '
+          + '1710–1729.'
+          + '\n\n'
+          + 'Korttelista tuli siirtomaa-ajan Buenos Airesin ainoa '
+          + 'klassisen sivistyksen oppilaitos, ja siellä olivat '
+          + 'kaupungin parhaat laboratoriot, museo ja kirjasto sekä '
+          + 'ensimmäinen apteekki, jota piti englantilainen '
+          + 'jesuiittaisä Thomas Falkner. Kun jesuiittain sääntökunta '
+          + 'lakkautettiin 1767, asema suljettiin, mutta oppilaitos '
+          + 'avattiin 1772 uudelleen kuninkaallisena San Carlosin '
+          + 'collegena. Falknerin apteekista tuli 1780 varakuningas '
+          + 'Vértizin lääkintäkollegio eli nykyisen Argentiinan '
+          + 'ensimmäinen lääketieteen oppilaitos, ja samana vuonna '
+          + 'Vértiz perusti korttelille kaupungin ensimmäisen '
+          + 'kirjapainon.'
+          + '\n\n'
+          + 'Korttelin alla risteilee viisi tunnelia. Niiden arvellaan '
+          + 'olleen huoltoreittejä piirityksen varalle ja rauhan aikaan '
+          + 'salakuljetusta varten, ja itsenäisyyssodassa niissä '
+          + 'säilytettiin ammuksia. Yleinen kirjasto avattiin 1812, ja '
+          + '1821 kuvernööri Martín Rodríguez perusti tänne Buenos '
+          + 'Airesin yliopiston ja kansallisarkiston. Muutamaa päivää '
+          + 'myöhemmin, 1. syyskuuta 1821, sanomalehti El Argos kutsui '
+          + 'pääkirjoituksessaan aluetta Valojen kortteliksi, ja nimi '
+          + 'jäi. Provinssin lakiasäätävä kokous istui korttelilla, ja '
+          + 'sen salissa kokoontui kansalliskongressi vuosina 1826–1827 '
+          + 'ja uudestaan 1862–1864 — eli aivan isoisän matkaa '
+          + 'edeltävinä vuosina.',
+      kuvat: [
+        {
+          tiedosto: 'Templo de San Ignacio - Buenos Aires.jpg',
+          selite: 'Jesuiittojen San Ignacion kirkon rakentaminen alkoi '
+            + '1686 ja se valmistui 1722.',
+          lahde: 'Banfield, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Santo Domingon luostari': {
+      aika: '1751–1805',
+      teksti: 'Dominikaanit olivat asuneet tontilla vuodesta 1606, '
+          + 'mutta nykyisen kirkon rakentaminen alkoi vasta 1751 '
+          + 'arkkitehti Antonio Masellan piirustusten mukaan — saman '
+          + 'miehen, joka aloitti kaksi vuotta myöhemmin myös '
+          + 'katedraalin rakentamisen. '
+          + 'Peruskivi laskettiin 29. kesäkuuta, ja työ eteni nykien, '
+          + 'koska suunnittelija ja sääntökunta olivat eri mieltä. '
+          + 'Vuosina 1762–1779 hanketta rahoitti ja johti Juan de Lezica '
+          + 'y Torrezuri. Keskeneräinen kirkko vihittiin 17. lokakuuta '
+          + '1783 ja torni valmistui seuraavana vuonna; luostarin '
+          + 'rakentaminen alkoi 1792 ja päättyi 1805.'
+          + '\n\n'
+          + 'Kesäkuun 27. päivänä 1806 kenraali William Beresfordin '
+          + 'brittijoukot valtasivat Buenos Airesin. Heinäkuun 1. '
+          + 'päivänä kapteeni Santiago de Liniers lupasi luostarissa, '
+          + 'että jos kaupunki saadaan takaisin, hän lahjoittaa '
+          + 'valtaajien liput kirkolle; joukot kukistettiin 12. '
+          + 'heinäkuuta, ja liput luovutettiin 24. päivänä. Ne ovat '
+          + 'kirkossa yhä. Seuraavana vuonna 2. heinäkuuta 1807 britit '
+          + 'yrittivät uudelleen ja linnoittautuivat kirkon itätorniin, '
+          + 'jota vastaan hyökkäsi eversti Pedro Andrés Garcían '
+          + 'komentama miliisiyksikkö. Torni vaurioitui tykkitulessa ja '
+          + 'korjattiin jälkeenpäin; alkuperäiset kuulat on poistettu ja '
+          + 'niiden tilalle on asetettu puiset muistokappaleet.'
+          + '\n\n'
+          + 'Presidentti Bernardino Rivadavian aikana dominikaanit '
+          + 'karkotettiin maasta, ja talosta tuli 1826 '
+          + 'luonnonhistoriallinen museo italialaisen kemistin ja '
+          + 'kasvitieteilijän Pablo Ferrarin johdolla: kokoelmassa oli '
+          + 'noin 800 eläintä, 1 500 mineraalia ja yli 1 500 kolikkoa. '
+          + 'Kirkon yläosaan rakennettiin tähtitieteellinen '
+          + 'observatorio, ja italialainen tiedemies Ottaviano Fabrizio '
+          + 'Mossotti hoiti siellä sääasemaa ja luennoi fysiikasta '
+          + '1828–1834. Munkit saivat palata 1835, mutta museo jatkoi '
+          + 'talossa vuoteen 1854. Läntinen torni valmistui 1849, ja '
+          + 'kuorin takainen kellarikerros on vuodelta 1873 eli juuri '
+          + 'isoisän matkavuodelta. Manuel Belgranon hautamuistomerkki '
+          + 'pihalla on Ettore Ximenesin työtä vuodelta 1903; sitä '
+          + 'ennen kenraali lepäsi kirkon oven edessä laatan alla.',
+      kuvat: [
+        {
+          tiedosto: 'Buenos Aires Santo Domingo Convent-20110509-RM-114943.jpg',
+          selite: 'Torniin osuneiden vuoden 1807 tykinkuulien tilalle on '
+            + 'asetettu puiset muistokappaleet.',
+          lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SYDNEY (nippu 8, 23.8.2026). Kymmenen juttua kohdekartan
+   * kymmenelle kohteelle (js/packs/maakartat.js: KAUPUNKIKARTAT.sydney).
+   * Jokainen väite on luettu en-Wikipedian raakatekstistä 23.8.2026
+   * (artikkelit "Sydney Harbour Bridge", "Sydney Opera House",
+   * "Bennelong Point", "Fort Macquarie Tram Depot", "Mrs Macquarie's
+   * Chair", "Sydney Conservatorium of Music", "Hyde Park Barracks,
+   * Sydney", "Pyrmont Bridge", "St Mary's Cathedral, Sydney",
+   * "St Andrew's Cathedral, Sydney", "Australian Museum", "Gerard
+   * Krefft" ja "Anzac Memorial").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ja matkaopas (kulttuuri-kategoriat.js) käsittelevät Warranea,
+   * observatorion aikapalloa, rahapajaa, The Rocksia, Argyle Cutia,
+   * Cadmans Cottagea, Tank Streamia ja Circular Quayta, Fort
+   * Denisonia, Port Jacksonia, kuvernöörin taloa, Suursynagogaa ja
+   * Central-asemaa; yksikään kartan kohde ei ole niiden aihe.
+   * Päällekkäisintä on kolme yhden lauseen mainintaa, ja ne ovat New
+   * Yorkin Empire State Buildingin ennakkotapaus: lehden nosto
+   * luettelee sivulauseessa "Australian Museum 1866", ja generoitujen
+   * herokuvien tekstit mainitsevat oopperatalon laatat ja
+   * satamansillan jännevälin. Jutut kertovat aivan muuta — museon
+   * osalta Krefftin häädön, oopperatalon osalta Fort Macquarien
+   * tontin ja kilpailun, sillan osalta Greenwayn 1814 esittämän
+   * idean ja vuoden 1932 miekkatempun.
+   *
+   * KOLME KUVAA ON VUODELTA 1872 eli isoisän matkaa edeltävältä
+   * vuodelta, ja se on tietoinen valinta eikä sattuma: New South
+   * Walesin valtionpainon valokuvaaja Charles Percy Pickering kuvasi
+   * juuri ne kolme rakennusta, joiden juttu kertoo nimenomaan siitä,
+   * miltä paikka näytti isoisän aikaan (kuvernöörin tallit,
+   * siirtolaiskasarmi ja Pyhän Andreaksen katedraali). Sama
+   * kuvaajanimi esiintyy jo lehden rahapajanostossa muodossa
+   * "attributed to Charles Pickering"; näissä kolmessa
+   * extmetadata.Artist on täsmällisempi ja lähderivi on siksi sen
+   * muodossa.
+   *
+   * MRS MACQUARIE'S CHAIRIN 1870-LUVUN VEDOS ON HYLÄTTY UUDESTAAN.
+   * Se on kartaston paras aikalaiskuva tuolista, mutta paspartuussa
+   * on lyijykynämerkintöjä (Holtermannin nimi ja nuoli yläreunassa),
+   * ja lehti hylkäsi saman vedoksen jo omassa kuvatyössään. Tuoli
+   * esitetään siksi nykykuvana, jossa kaiverrus on luettavissa.
+   *
+   * KAKSI KOHTAA, JOISSA LÄHTEET SANOVAT ERI ASIAN:
+   *
+   * 1. Australian museon vanhin siipi. Artikkeli kertoo samassa
+   *    kappaleessa sen olevan siirtomaa-arkkitehti Mortimer Lewisin
+   *    suunnittelema (n. 1846) ja James Barnetin suunnittelema.
+   *    Juttu ei nimeä vanhimman siiven arkkitehtia lainkaan vaan
+   *    kertoo vain avaamisvuoden 1857; Barnet mainitaan siinä, mistä
+   *    artikkeli on yksiselitteinen eli vuoden 1868 länsisiivessä.
+   * 2. Pyrmontin sillan kääntöaika. Artikkelin johdanto sanoo
+   *    45 sekuntia, tekninen osio noin 60 sekuntia 83 asteeseen.
+   *    Juttu käyttää teknisen osion lukua, koska se on tarkempi.
+   *    Sama artikkeli antaa peruskiven päiväksi sekä 6.9.1899 että
+   *    6.12.1899, joten juttu sanoo pelkän vuoden.
+   *
+   * KUVAT: kaikki kymmenen on haettu Commonsin kategorioista,
+   * lisenssi ja tekijä luettu extmetadatasta ja jokainen katsottu
+   * silmin 900 pikselin esikatselusta. Hylättyjä: Pyrmontin sillan
+   * auringonlaskukuva ja kannelta otettu kuva (etualalla
+   * tunnistettavia ihmisiä), Australian museon yökuvat (autojen
+   * valojuovat ja vihertävä värivääristymä), museon toinen ulkokuva (aiheena
+   * sateenkaarihai eikä rakennus), konservatorion kattotuuletin- ja
+   * katedraalien yksityiskohtakuvat (kohde ei tunnistu).
+   */
+  sydney: {
+    'Sydney Harbour Bridge': {
+      aika: '1924–1932',
+      teksti: 'Ajatus sillasta on vanhempi kuin kaupungin rautatiet. '
+          + 'Vangiksi tuomittu arkkitehti Francis Greenway esitti '
+          + 'kuvernööri Macquarielle jo 1814, että sataman yli '
+          + 'rakennettaisiin silta, ja kirjoitti 1825 The Australian '
+          + '-lehteen, että sellainen antaisi vaikutelman voimasta ja '
+          + 'suuruudesta, joka toisi kunniaa sekä siirtokunnalle että '
+          + 'emämaalle. Insinööri Peter Henderson piirsi noin 1857 '
+          + 'yhden varhaisimmista tunnetuista siltakuvista, 1879 '
+          + 'ehdotettiin ristikkosiltaa ja 1880 korkealla kulkevaa '
+          + 'siltaa, jonka hinnaksi arvioitiin 850 000 puntaa. Isoisän '
+          + 'matkan aikaan pohjoisrannalle mentiin lautalla, kuten '
+          + 'kaikki muutkin.'
+          + '\n\n'
+          + 'Hanke eteni vasta ensimmäisen maailmansodan jälkeen '
+          + 'insinööri John Bradfieldin ajamana. Vuoden 1922 laki '
+          + 'määräsi rakennettavaksi korkean sillan Dawes Pointin ja '
+          + 'Milsons Pointin välille, ja urakka annettiin 24. '
+          + 'maaliskuuta 1924 englantilaiselle Dorman Long & Co:lle '
+          + 'Middlesbroughista hintaan 4 217 721 puntaa 11 shillinkiä '
+          + 'ja 10 pennyä. Kaarimalli otettiin New Yorkin Hell Gate '
+          + '-sillasta. Bradfieldin sihteeri Kathleen M. Butler hoiti '
+          + 'kansainvälisen kirjeenvaihdon ja perusti 1924 Lontooseen '
+          + 'projektitoimiston — käytännössä hän johti hanketta. '
+          + 'Pohjoisrannalta purettiin arviolta 469 rakennusta, eikä '
+          + 'korvauksia juuri maksettu.'
+          + '\n\n'
+          + 'Terästä kului 52 800 tonnia ja niittejä kuusi miljoonaa, '
+          + 'kaikki käsin lyötyjä. Kuusitoista työntekijää kuoli, '
+          + 'heistä vain kaksi putoamalla. Helmikuussa 1932 sillan '
+          + 'kantavuus koestettiin ajamalla neljälle raiteelle '
+          + 'yhdeksänkymmentäkuusi höyryveturia peräkkäin. Avajaisissa '
+          + '19. maaliskuuta 1932 pääministeri Jack Langin oli määrä '
+          + 'leikata nauha, mutta univormupukuinen mies ratsasti '
+          + 'paikalle ja katkaisi nauhan sapelillaan julistaen sillan '
+          + 'avatuksi New South Walesin kansan nimissä. Mies oli '
+          + 'Francis de Groot, hänet pidätettiin, nauha solmittiin '
+          + 'uudelleen ja Lang avasi sillan virallisesti.',
+      kuvat: [
+        {
+          tiedosto: 'Sydney Harbour Bridge 1 (30646448636).jpg',
+          selite: 'Kaari kohoaa 134 metriä veden pinnasta, ja silta oli '
+            + 'valmistuessaan maailman leveimmäksi mitattu pitkän '
+            + 'jännevälin silta.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sydneyn oopperatalo': {
+      aika: '1957–1973',
+      teksti: 'Bennelong Point on gadigaleille Dubbagullee, ja se oli '
+          + 'alun perin pieni vuorovesisaari nimeltä Tubowgule. Saaren '
+          + 'ja mantereen väli täytettiin 1818–1821 kalliosta '
+          + 'louhitulla kivellä, kun niemelle rakennettiin Fort '
+          + 'Macquarien linnake — se oli paikalla isoisän matkan '
+          + 'aikaan. Linnakkeen tilalle nousi 1902 raitiovaunuvarikko, '
+          + 'joka rakennettiin linnan näköiseksi harjahampaisine '
+          + 'muureineen ja purettiin 1958 oopperatalon tieltä.'
+          + '\n\n'
+          + 'Hanketta ajoi kapellimestari Eugene Goossens, jonka '
+          + 'mielestä Sydneyn kaupungintalo oli orkesterille liian '
+          + 'pieni, ja juuri hän vaati paikaksi Bennelong Pointia; '
+          + 'pääministeri Joseph Cahill olisi rakentanut talon '
+          + 'Wynyardin aseman tienoille. Kilpailu julistettiin 13. '
+          + 'syyskuuta 1955, ja siihen tuli 233 ehdotusta 32 maasta. '
+          + 'Tuomaristossa istunut Eero Saarinen poimi kolmenkymmenen '
+          + 'finalistin joukosta tanskalaisen Jørn Utzonin työn, ja '
+          + 'voittaja julkistettiin 29. tammikuuta 1957.'
+          + '\n\n'
+          + 'Kattopurjeiden muotoa haettiin vuosina 1957–1963 ainakin '
+          + 'kahdellatoista eri tavalla, ennen kuin ne saatiin '
+          + 'saman pallopinnan osiksi ja siten valettaviksi. Laattoja '
+          + 'on 1 056 006, ja ne teki ruotsalainen Höganäs. '
+          + 'Hallituksen vaihduttua 1965 hanke siirtyi '
+          + 'julkisten töiden ministeriölle, Utzon erosi 1966 ja '
+          + 'sisätilat suunnitteli Peter Hall. Kuningatar Elisabet II '
+          + 'vihki talon 20. lokakuuta 1973. Vuoden 1957 arvio oli '
+          + '3,5 miljoonaa puntaa ja valmistumispäivä 26. tammikuuta '
+          + '1963; lopullinen hinta oli 102 miljoonaa dollaria.',
+      kuvat: [
+        {
+          tiedosto: 'Opera House from Sydney Harbour.jpg',
+          selite: 'Talo seisoo Bennelong Pointilla, jolla oli ennen sitä '
+            + 'linnake ja raitiovaunuvarikko.',
+          lahde: 'Michelle Corcoran, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "Mrs Macquarie's Chair": {
+      aika: '1810',
+      teksti: 'Niemen kärjessä on hiekkakivikallio, johon vangit '
+          + 'veistivät 1810 käsin penkin. Se tehtiin Elizabeth '
+          + 'Macquarielle, kuvernööri Lachlan Macquarien puolisolle. '
+          + 'Gadigalien nimi niemelle on Yurong; nykyään se tunnetaan '
+          + 'Mrs Macquarie’s Pointina ja kuuluu The Domainin '
+          + 'puistoalueeseen kasvitieteellisen puutarhan vieressä. '
+          + 'Perimätiedon mukaan rouva Macquarie istui kivellä '
+          + 'katsomassa, tuleeko satamaan laivoja Britanniasta.'
+          + '\n\n'
+          + 'Penkin yläpuolella on kallioon hakattu teksti, joka '
+          + 'kertoo tiestä eikä tuolista. Kuvernööri rakennutti '
+          + 'puolisolleen 1813–1818 tien vanhalta kuvernöörintalolta '
+          + 'niemen kärkeen, ja kaiverrus ilmoittaa, että Mrs '
+          + 'Macquarie’s Road on nimetty hänen mukaansa, koska hän '
+          + 'itse suunnitteli sen, että pituutta on kolme mailia ja '
+          + '377 jaardia ja että työ valmistui 13. kesäkuuta 1816. '
+          + 'Tiestä itsestään ei ole jäljellä muuta kuin yksi '
+          + 'rumpuholvi.'
+          + '\n\n'
+          + 'Paikka on yhä sama kuin isoisän aikaan: penkki katsoo '
+          + 'koilliseen kohti Fort Denisonia ja sen takaista '
+          + 'Tasmanmerta, idässä on Garden Islandin niemi ja lännessä '
+          + 'Bennelong Point. Vasta 1900-luvun rakennukset ovat '
+          + 'muuttaneet näkymän, ja siksi kohta on nykyään yksi '
+          + 'kaupungin suosituimmista valokuvauspaikoista.',
+      kuvat: [
+        {
+          tiedosto: "Mrs Macquarie's Chair 2013.jpg",
+          selite: 'Penkki veistettiin 1810 kuvernöörin puolisolle '
+            + 'Elizabeth Macquarielle, ja yläpuolen kaiverrus kertoo '
+            + 'hänen suunnittelemastaan tiestä.',
+          lahde: 'Mitch Ames, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sydneyn konservatorio': {
+      aika: '1817–1821',
+      teksti: 'Kuvernööri Macquarie valitti maaliskuussa 1816 '
+          + 'Lontooseen, että kuvernöörintalon sivurakennukset ovat '
+          + 'lahonneet ja tallit niin huonot, että niitä on jouduttu '
+          + 'tukemaan pylväillä, jotteivät ne kaadu tuulessa. Lupaa ei '
+          + 'kuulunut, mutta 4. heinäkuuta 1817 Macquarie käski '
+          + 'vapautetun vangin, arkkitehti Francis Greenwayn, piirtää '
+          + 'uudet tallit. Työt alkoivat 9. elokuuta, peruskivi '
+          + 'laskettiin 16. joulukuuta 1817, ja vasta maaliskuussa '
+          + '1819 Macquarie ilmoitti siirtomaaministeriölle '
+          + 'aloittaneensa rakentamisen vastoin nimenomaista käskyä.'
+          + '\n\n'
+          + 'Tuloksena oli linna: harjahampaiset muurit, '
+          + 'kahdeksankulmaiset tornit ja goottilaiset kaaret. '
+          + 'Greenway kertoi 1825 malliksi Thornbury Castlen, ja '
+          + 'huonejaon yksityiskohdat hän sai Elizabeth Macquarielta. '
+          + 'Kustannusarvio oli 9 000 puntaa. Arkkitehti Henry Kitchen '
+          + 'moitti taloa 1821 komissaari Biggen kuulustelussa '
+          + 'tuhlaavaiseksi ja epäonnistuneeksi yritykseksi linnamaista '
+          + 'gotiikkaa: 174 jalkaa kertaa 130 jalkaa, 28 hevosta, '
+          + 'vaunuvajat, navetta ja palvelusväen tilat. Talo valmistui '
+          + 'helmikuussa 1821, ja se on ainoa säilynyt Greenwayn '
+          + 'goottilaisista rakennuksista.'
+          + '\n\n'
+          + 'Macquarie ei koskaan saanut uutta kuvernöörintaloaan, ja '
+          + 'kun sellainen viimein rakennettiin 1837 alkaen, tallit '
+          + 'jäivät sen varjoon hevosten ja henkilökunnan tiloiksi — '
+          + 'niin isoisä olisi ne nähnyt. Autojen yleistyttyä käyttö '
+          + 'loppui noin 1910, ja 1912 hallitus päätti tehdä talosta '
+          + 'museon; opetusministeri ehdotti taideakatemiaa, ja '
+          + 'lopputulos oli musiikkiopisto. Muutostyö tehtiin '
+          + '1913–1915 R. Seymour Wellsin piirustusten mukaan: '
+          + 'sisäpiha katettiin ja tilalle rakennettiin iso '
+          + 'konserttisali, joka vihittiin 6. huhtikuuta 1915. Opetus '
+          + 'alkoi 6. maaliskuuta 1916 belgialaisen kapellimestarin '
+          + 'Henri Verbrugghenin johdolla.',
+      kuvat: [
+        {
+          tiedosto: 'SLNSW 479633 130 Government House Stables features Charles Pickerings wagon SH 586.jpg',
+          selite: 'Talo rakennettiin kuvernöörin talleiksi, ja se toimi '
+            + 'sellaisena vielä isoisän matkan aikaan.',
+          lahde: 'Pickering, Charles Percy (New South Wales. Government Printing Office), Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hyde Park Barracks': {
+      aika: '1817–1819',
+      teksti: 'Macquarie ei sietänyt sitä, että vangit etsivät '
+          + 'työpäivän jälkeen yösijansa itse mistä sattui, ja tilasi '
+          + 'Greenwaylta kasarmin kuudellesadalle miehelle. Peruskivi '
+          + 'laskettiin 6. huhtikuuta 1817 ja talo avattiin 4. '
+          + 'kesäkuuta 1819, jolloin sisään otettiin 589 vankia; '
+          + 'Macquarie oli piirustuksiin niin tyytyväinen, että antoi '
+          + 'Greenwaylle täyden armahduksen. Nukuttiin riippumatoissa '
+          + 'kahdessa rivissä, kullekin 2,1 metriä kertaa 60 '
+          + 'senttimetriä, ja pitkiin itäsaleihin mahtui '
+          + 'seitsemänkymmentä miestä kumpaankin.'
+          + '\n\n'
+          + 'Pian talossa oli yhtä aikaa jopa 1 400 miestä, ja '
+          + 'kaikkiaan kasarmin läpi arvioidaan kulkeneen noin 30 000 '
+          + 'miestä ja poikaa vuosina 1819–1848. Vankikuljetukset '
+          + 'päättyivät 1840, ja 1848 viimeiset vangit siirrettiin '
+          + 'Cockatoo Islandille. Talosta tuli Female Immigration '
+          + 'Depot, jossa juuri saapuneet naimattomat siirtolaisnaiset '
+          + 'asuivat, kunnes heille löytyi paikka; erityisesti '
+          + 'nälänhädän Irlannista lähteneitä naisia houkuteltiin '
+          + 'siirtokuntaan työn ja paremman elämän lupauksella. '
+          + 'Ylimmässä kerroksessa toimi 1862–1886 turvakoti, jossa '
+          + 'oli tilaa 150 varattomalle ja sairaalle naiselle. Näin '
+          + 'talo eli isoisän matkan aikana.'
+          + '\n\n'
+          + '1880-luvulta alkaen tilat otti haltuunsa oikeuslaitos, '
+          + 'ja paikka sai nimen Chancery Square ja myöhemmin Queen’s '
+          + 'Square Courts. Lattioiden alta löytyi myöhemmin '
+          + 'poikkeuksellinen aineisto: lankkujen ja kattojen väliin '
+          + 'oli säilynyt paperia ja kangasta vuosilta 1848–1886, eli '
+          + 'juuri siltä ajalta, jolloin talossa asuivat siirtolaiset '
+          + 'ja turvakodin naiset. Nykyään talo on museo ja yksi '
+          + 'yhdestätoista Australian vankisiirtolakohteesta '
+          + 'Unescon maailmanperintöluettelossa.',
+      kuvat: [
+        {
+          tiedosto: 'SLNSW 479663 159 Immigration Barracks SH 541.jpg',
+          selite: 'Vankikasarmista tuli 1848 siirtolaisnaisten '
+            + 'vastaanottokoti, ja nimenä oli isoisän matkan aikaan '
+            + 'Immigration Barracks.',
+          lahde: 'Pickering, Charles Percy (New South Wales. Government Printing Office), Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyrmontin silta': {
+      aika: '1858 ja 1902',
+      teksti: 'Ensimmäinen Pyrmontin silta avattiin 17. maaliskuuta '
+          + '1858. Se oli puupaalusilta, jonka keskellä oli rautainen '
+          + 'kääntyvä osa laivoja varten, ja ylityksestä perittiin '
+          + 'pennin tulli. Kahden ensimmäisen viikon aikana tullin '
+          + 'maksoi 20 000 jalankulkijaa, ja sillan yli kulki 932 '
+          + 'kärryä ja rahtirattaita, 43 kevyttä kaksipyöräistä, 17 '
+          + 'vaunua sekä 125 hevosta ratsastajineen. Tämä silta oli '
+          + 'paikallaan isoisän matkan aikaan. Hallitus osti sen '
+          + 'sillanomistajayhtiöltä 1884 hintaan 52 500 puntaa ja '
+          + 'poisti tullin.'
+          + '\n\n'
+          + 'Uudesta sillasta järjestettiin kilpailu 1891, mutta lama '
+          + 'pysäytti hankkeen. Vasta 1894 julkisten töiden komitea '
+          + 'valitsi noin kahdestakymmenestäkuudesta ehdotuksesta '
+          + 'oman viraston teräsrakenteisen kääntösillan. Peruskivi '
+          + 'laskettiin 1899 ja silta avattiin liikenteelle 28. '
+          + 'kesäkuuta 1902. Suunnittelusta vastasi Percy Allan, joka '
+          + 'piirsi urallaan yli 550 siltaa; nuorena insinöörinä '
+          + 'hiekkakivisiä maatukia oli suunnittelemassa J. J. C. '
+          + 'Bradfield, joka myöhemmin johti satamansillan hanketta.'
+          + '\n\n'
+          + 'Kääntyvä jänne oli aikanaan maailman suurimpia ja '
+          + 'ensimmäisiä sähköllä käännettyjä. Virta tuli Ultimon '
+          + 'voimalasta, ja silta kääntyy yhä auki noin minuutissa 83 '
+          + 'asteen kulmaan alkuperäisillä kahdella '
+          + '50-hevosvoimaisella General Electricin moottorilla. '
+          + 'Sillan puiset tulojaksot ovat harvinainen esimerkki '
+          + 'Allanin ristikkorakenteesta. Autoliikenne loppui 1981, '
+          + 'hallitus '
+          + 'määräsi sillan purettavaksi mutta perui päätöksensä, ja '
+          + '1988 silta avattiin uudelleen jalankulkijoille.',
+      kuvat: [
+        {
+          tiedosto: 'AUS Sydney, Central Business District, Pyrmont Bridge 001.jpg',
+          selite: 'Nykyinen teräksinen kääntösilta avattiin 1902 ja '
+            + 'korvasi vuoden 1858 puupaalusillan, jolla perittiin '
+            + 'pennin tulli.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Marian katedraali': {
+      aika: '1868–1928',
+      teksti: 'Ensimmäisen katolisen kirkon peruskiven laski '
+          + 'kuvernööri Macquarie 29. lokakuuta 1821. Pappi John '
+          + 'Therry oli pyytänyt tonttia kaupungin länsilaidalta '
+          + 'Darling Harbourin suunnalta, mutta hänelle annettiin maa '
+          + 'idästä Macquarien omien rakennushankkeiden vierestä, '
+          + 'tiilenpolttopaikan yläpuolelta — samalta alueelta, joka '
+          + 'on nykyään Hyde Park. Kirkko paloi 29. kesäkuuta 1865.'
+          + '\n\n'
+          + 'Arkkipiispa John Bede Polding kirjoitti Lontooseen '
+          + 'William Wardellille, joka oli Augustus Welby Puginin '
+          + 'oppilas, ja antoi tälle vapaat kädet: mikä tahansa '
+          + 'suunnitelma, mikä tahansa tyyli, mikä tahansa kaunis ja '
+          + 'suuri, siihen asti kuin varamme riittävät. Peruskivi '
+          + 'laskettiin 1868. Väliaikainen puukirkko paloi sekin '
+          + 'vuonna 1869, ja seurakunta siirtyi koulun tontille '
+          + 'rakennettuun tiilitaloon. Isoisän matkan aikaan '
+          + 'jumalanpalvelukset pidettiin siis väliaikaisessa talossa, '
+          + 'ja katedraali kasvoi sen takana.'
+          + '\n\n'
+          + 'Polding kuoli 1877 näkemättä kirkkoa käytössä; hänen '
+          + 'seuraajansa arkkipiispa Vaughan vihki sen 8. syyskuuta '
+          + '1882 ja lahjoitti kellot. Pitkä laiva sai peruskivensä '
+          + 'vasta 1913 ja vihittiin 1928 — sisäseinien hiekkakiven '
+          + 'sävyero näyttää yhä, mihin ensimmäinen vaihe päättyi. '
+          + 'Katto kohoaa 30,3 metriin ja keskitornin huiput 46 '
+          + 'metriin kirkon lattiasta. Wardellin piirtämät tornihuiput '
+          + 'rakennettiin vasta vuonna 2000 vuosituhannen vaihteen '
+          + 'määrärahalla, ja 74,6 metrissään ne tekevät kirkosta '
+          + 'Australian neljänneksi korkeimman.',
+      kuvat: [
+        {
+          tiedosto: "AUS Sydney, Central Business District, Saint Mary's Cathedral 001.jpg",
+          selite: 'Julkisivun tornihuiput rakennettiin vasta vuonna 2000 '
+            + 'William Wardellin alkuperäisten piirustusten mukaan.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Andreaksen katedraali': {
+      aika: '1837–1868',
+      teksti: 'Macquarie suunnitteli Greenwayn kanssa katedraalia, '
+          + 'joka olisi ollut 61 metriä joka suuntaan ja seissyt '
+          + 'suurella aukiolla muiden julkisten talojen keskellä. '
+          + 'Peruskivi laskettiin juhlallisesti 31. '
+          + 'elokuuta 1819, mutta työ jäi perustuksiin: suunnitelma '
+          + 'hylättiin ja paikkaa siirrettiin, jotta George Street '
+          + 'saatiin kulkemaan suorana. Piispa William Grant '
+          + 'Broughton laski uuden peruskiven 1837 James Humen paljon '
+          + 'vaatimattomampien piirustusten mukaan, ja työ pysähtyi '
+          + '1842 kuivuuteen ja lamaan, kun muurit olivat noin viiden '
+          + 'metrin korkuiset.'
+          + '\n\n'
+          + 'Samana vuonna 1842 Broughtonin luo saapui Edmund Blacket '
+          + 'mukanaan Canterburyn arkkipiispan suosituskirje. Hänestä '
+          + 'tuli siirtomaan arkkitehti 1849–1854 ja lopulta '
+          + 'Australian tuotteliain kirkkorakentaja: kaksi yliopistoa, '
+          + 'kolme katedraalia ja yli viisikymmentä seurakuntakirkkoa. '
+          + 'Blacketin ongelma oli, että perustukset olivat '
+          + 'englantilaisen maalaiskirkon kokoiset. Hän valitsi '
+          + 'perpendikulaarisen gotiikan, pidensi kirkkoa kahdella '
+          + 'jaksolla, lisäsi keskitornin ja otti länsijulkisivuun '
+          + 'väljän mallin Yorkin tuomiokirkosta. Lokakuussa 1850 '
+          + 'Sydneyssä kokoontui kuusi Australasian piispaa, ja '
+          + 'kirkkosalin kuusi pilaria nimettiin heidän mukaansa.'
+          + '\n\n'
+          + 'Broughton kuoli 1853 Englannissa, ja kirkon vihki toinen '
+          + 'Sydneyn piispa Frederic Barker Andreaksen päivänä 30. '
+          + 'marraskuuta 1868; se on Australian vanhin katedraali. '
+          + 'Vuoteen 1874 mennessä rakennus oli ulkoa valmis '
+          + 'länsitorneineen, eli isoisä näki sen juuri viimeistelyn '
+          + 'vuosina. Kirkon poikakuoro aloitti jo 1820-luvulla ja on '
+          + 'Australian vanhin yhtäjaksoisesti toiminut '
+          + 'musiikki-instituutio. Koska George Street kulkee '
+          + 'itäpään ohi ja raitiovaunujen kolina peitti ehtoollisen '
+          + 'sanat, sisätila käännettiin 1941 toisin päin — ja '
+          + '1999–2000 takaisin alkuperäiseen asentoonsa.',
+      kuvat: [
+        {
+          tiedosto: 'SLNSW 479568 65 St Andrews Anglican Cathedral SH 726.jpg',
+          selite: 'Kirkko vihittiin 30. marraskuuta 1868, ja se on '
+            + 'Australian vanhin katedraali.',
+          lahde: 'Pickering, Charles Percy (New South Wales. Government Printing Office), Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Australian museo': {
+      aika: '1827–1857',
+      teksti: 'Museon perusti 1827 siirtomaaministeri Earl Bathurst, '
+          + 'joka kirjoitti New South Walesin kuvernöörille aikovansa '
+          + 'perustaa julkisen museon ja myönsi sen ylläpitoon 200 '
+          + 'puntaa vuodessa. Asiaa oli ajanut hyönteistutkija '
+          + 'Alexander Macleay. Museo on Australian vanhin '
+          + 'luonnonhistoriallinen museo ja maailman viidenneksi '
+          + 'vanhin. Ensimmäinen hoitaja William Holmes nimitettiin '
+          + '1829, ja hän kuoli elokuussa 1831 oman aseensa laukaukseen '
+          + 'keräysmatkalla Moreton Bayssä. Nimi oli aluksi Colonial '
+          + 'Museum tai Sydney Museum, ja Australian Museumiksi se '
+          + 'ristittiin kesäkuussa 1836 kesken erään kokouksen '
+          + 'kiistan.'
+          + '\n\n'
+          + 'Kolmenkymmenen ensimmäisen vuoden aikana kokoelma '
+          + 'muutti talosta toiseen, kunnes se sai oman rakennuksen '
+          + 'College Streetin ja William Streetin kulmasta. Työt '
+          + 'alkoivat 1846, ja hiekkakivinen, kreikkalaista '
+          + 'uusklassismia noudattava talo avattiin yleisölle '
+          + 'toukokuussa 1857. Kokoelmien kasvaessa siirtomaa-arkkitehti '
+          + 'James Barnet rakensi 1868 William Streetin varteen '
+          + 'uusklassisen länsisiiven, ja pohjoissiipeen lisättiin '
+          + 'kolmas kerros 1890.'
+          + '\n\n'
+          + 'Museon tieteellisen maineen teki kuraattori Gerard '
+          + 'Krefft, joka hoiti tehtävää 1861–1874. Hän tunnisti '
+          + 'queenslandilaisen keuhkokalan ja julkisti sen '
+          + 'kirjeenä Sydney Morning Heraldissa 18. tammikuuta 1870 '
+          + 'nimellä Ceratodus forsteri — elävän esimerkin suvusta, '
+          + 'joka tunnettiin siihen asti vain fossiilihampaista. '
+          + 'Maaliskuusta 1871 kesäkuuhun 1874 hän kirjoitti Sydney '
+          + 'Mail -viikkolehteen yli 150 luonnonhistoriallista '
+          + 'artikkelia, eli isoisän kaupungissa käydessä museota '
+          + 'johti mies, joka selitti Darwinia sanomalehden lukijoille. '
+          + 'Riita luottamusmiesten kanssa päättyi pahoin: museo oli '
+          + 'suljettuna yleisöltä yksitoista viikkoa heinäkuusta '
+          + 'syyskuuhun 1874, ja '
+          + '21. syyskuuta ulosottomies kahden palkatun nyrkkeilijän '
+          + 'kanssa kantoi Krefftin ulos hänen museoasunnostaan tuoliin '
+          + 'istuvana, koska hän kieltäytyi nousemasta. Nykyään '
+          + 'kokoelmissa on yli 21 miljoonaa esinettä ja näytettä.',
+      kuvat: [
+        {
+          tiedosto: 'Australian Museum - Joy of Museums - External.jpg',
+          selite: 'Museon vanhin siipi avattiin yleisölle toukokuussa '
+            + '1857, ja William Streetin puoleisen siiven rakensi 1868 '
+            + 'siirtomaa-arkkitehti James Barnet.',
+          lahde: 'GordonMakryllos, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anzac-muistomerkki': {
+      aika: '1930–1934',
+      teksti: 'Varainkeruu aloitettiin 25. huhtikuuta 1916, vuosi '
+          + 'Gallipolin maihinnousun jälkeen. Suunnittelukilpailu '
+          + 'julistettiin 13. heinäkuuta 1929, ja siihen saivat '
+          + 'osallistua vain australialaiset arkkitehdit; rakennuksen '
+          + 'hinnaksi määrättiin enintään 75 000 puntaa, ja tiloihin '
+          + 'piti mahtua myös veteraanijärjestöjen toimistot. '
+          + 'Ehdotuksia tuli 117, ja voittajaksi julkistettiin '
+          + 'helmikuussa 1930 Bruce Dellit. Rakennusaineet vaadittiin '
+          + 'australialaisiksi ja työntekijöiksi otettiin '
+          + 'ensisijaisesti rintamalta palanneita.'
+          + '\n\n'
+          + 'Kilpailun voitettuaan Dellit pyysi veistokset '
+          + 'kuvanveistäjä Rayner Hoffilta, joka oli itse palvellut '
+          + 'länsirintamalla. Hoff kahdeksan apulaisensa kanssa teki '
+          + '1931–1934 kuusitoista istuvaa ja neljä seisovaa '
+          + 'sotilashahmoa, neljä kulmareliefiä ja kaksi '
+          + 'pronssireliefiä ovien ylle. Hän nosti naiset esiin: '
+          + 'sairaanhoitajat ovat hahmojen joukossa, ja keskusveistos '
+          + 'Uhri esittää kaatunutta nuorukaista kilvellään kannattavia '
+          + 'äitiä, sisarta ja vaimoa. Kaksi muuta pronssiryhmää jäi '
+          + 'tekemättä, kun niiden kipsimallit herättivät 1932 kiivaan '
+          + 'kohun; Hoff hajotti mallit itse.'
+          + '\n\n'
+          + 'Sisällä kävijän on kumarrettava katsoakseen '
+          + 'Mietiskelykaivon läpi alas Hiljaisuuden saliin, jossa '
+          + 'Uhri on. Kupolissa on 120 000 kullattua tähteä, yksi '
+          + 'jokaista sotaan lähtenyttä New South Walesin miestä ja '
+          + 'naista kohti; tähdet alkoivat varainkeruusta, jossa '
+          + 'veteraanijärjestö myi niitä kahden shillingin kappalehinnalla. '
+          + 'Prinssi Henry, Gloucesterin herttua, vihki muistomerkin '
+          + '24. marraskuuta 1934. Pohjoispuolen Muistoaltaan '
+          + 'ympärille istutettiin samana vuonna neljätoista poppelia '
+          + 'muistuttamaan Ranskan taistelupaikoista, ja rakennuksen '
+          + 'ympärillä kasvaa alepponmäntyjä Gallipolin Lone Pinen '
+          + 'muistoksi.',
+      kuvat: [
+        {
+          tiedosto: 'ANZAC Memorial Hyde Park 002.jpg',
+          selite: 'Kupolissa on 120 000 kullattua tähteä, yksi jokaista '
+            + 'sotaan lähtenyttä New South Walesin miestä ja naista '
+            + 'kohti.',
+          lahde: 'Sardaka, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * RIO DE JANEIRO (E-Amerikan lauta, 23.8.2026). Kohteet ovat
+   * kohdekartan kymmenen pistettä (maakartat.js: KAUPUNKIKARTAT.rio),
+   * ja jokainen väite on luettu en-Wikipedian raakatekstistä
+   * 23.8.2026 (artikkelit "São Bento Monastery", "Old Cathedral of
+   * Rio de Janeiro", "Central do Brasil", "Royal Portuguese Cabinet
+   * of Reading", "Quinta da Boa Vista", "National Museum of Brazil",
+   * "National Historical Museum (Brazil)", "Theatro Municipal (Rio de
+   * Janeiro)", "Maracanã Stadium", "Carioca Aqueduct" ja "Passeio
+   * Público (Rio de Janeiro)").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Valongon laituri, hovin muutto 1808, Corcovado ja Sokerileipä,
+   * Tijucan metsä, lahden nimi, Paço Imperial, Candelárian kirkko ja
+   * vuoden 1871 laki; kartan kohteista yksikään ei ole niiden aihe.
+   * Lähimmäksi tulee Quinta da Boa Vista, jonka juttu kertoo hovin
+   * asuinpaikasta ja museon palosta — ei lehden aiheesta eli hovin
+   * muutosta Portugalista.
+   *
+   * ORJUUS SANOTAAN SUORAAN muttei koristella: São Benton luostarin
+   * rakensivat orjuutetut afrikkalaiset ja Kansallisen historiallisen
+   * museon tontilla oli orjien vankila. Molemmat ovat artikkelien omia
+   * tietoja, ja spec-mantereet.md vaatii ne kerrottavaksi.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 23.8.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin. Kolme on
+   * 1800-luvun valokuvaa tai maalausta, koska niissä näkyy juuri se
+   * kaupunki, jonka isoisä näki; niissä ei ole tunnistettavia
+   * ihmisiä sen paremmin kuin uusissakaan.
+   */
+  rio: {
+    'São Benton luostari': {
+      aika: '1590–1671',
+      teksti: 'Luostarin historia alkoi 1590, kun Manoel de Brito ja '
+          + 'hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta '
+          + 'tulleelle benediktiinimunkille, Pedro Ferrazille ja João '
+          + 'Porcalholle. Munkit asuivat siihen asti vaatimattomassa '
+          + 'majatalossa Nossa Senhora da Conceiçãon kappelin vieressä '
+          + 'sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari '
+          + 'sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 '
+          + 'uuden nimen Montserratin Neitsyen mukaan.'
+          + '\n\n'
+          + 'Kirkon piirsi portugalilainen sotilasinsinööri Francisco '
+          + 'Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; '
+          + 'rakennusaikana Bernardo de São Bento Correia de Souza '
+          + 'muutti pohjan kolmilaivaiseksi, ja viereinen konventti '
+          + 'valmistui vasta 1755 José Fernandes Pinto Alpoimin '
+          + 'suunnitelmien mukaan. Rahat tulivat munkkien sokeriruoko'
+          + 'tiloilta, joita oli ympäri Rion kapteenikuntaa, ja '
+          + 'ruumiillisen työn tekivät orjuutetut afrikkalaiset. Kivet '
+          + 'louhittiin Morro da Viúvalta Flamengon puolelta.'
+          + '\n\n'
+          + 'Sisältä kirkko on kullattua puuveistosta. Ensimmäinen '
+          + 'veistäjä oli portugalilainen munkki Domingos da Conceição, '
+          + 'ja pääkappelin uudisti 1787–1794 rokokoomestari Inácio '
+          + 'Ferreira Pinto, joka säilytti saksalaisen munkin Ricardo do '
+          + 'Pilarin 1676–1684 maalaamat laatat. Isoisän matkan aikaan '
+          + 'luostari oli hiipumassa: vuoden 1855 kirkonvastainen laki '
+          + 'kielsi Brasilian luostareita ottamasta noviiseja, ja '
+          + 'benediktiinien brasilialainen kongregaatio kuihtui '
+          + 'vuosisadan loppuun mennessä. Kielto purettiin 1889, ja paavi '
+          + 'Leo XIII lähetti 1893 belgialaisen munkin Gerard van '
+          + 'Caloenin elvyttämään luostarielämää.',
+      kuvat: [
+        {
+          tiedosto: 'Mosteiro de São Bento do Rio de Janeiro - Fachada.jpg',
+          selite: 'Kirkon rakensivat 1633–1671 orjuutetut afrikkalaiset, ja '
+            + 'työ maksettiin luostarin sokeriruokotilojen tuotolla.',
+          lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha katedraali Antiga Sé': {
+      aika: '1761–1770',
+      teksti: 'Karmeliitat tulivat Rioon 1590 ja asettuivat pieneen '
+          + 'kappeliin lahden rannalle. Nykyinen kirkko alkoi nousta '
+          + 'noin 1761, ja työtä johti todennäköisesti portugalilainen '
+          + 'arkkitehti Manuel Alves Setúbal. Kirkko vihittiin 1770 '
+          + 'julkisivu vielä keskeneräisenä, ja sisustuksen kullatun '
+          + 'rokokoopuuveiston teki vuoden 1785 jälkeen Inácio Ferreira '
+          + 'Pinto, aikansa parhaita veistäjiä kaupungissa.'
+          + '\n\n'
+          + 'Vuonna 1808 Portugalin hovi saapui Rioon, ja karmeliittojen '
+          + 'talot otettiin käyttöön: kuningatar Maria I majoitettiin '
+          + 'konventtiin ja viereisestä kirkosta tehtiin ensin '
+          + 'kuninkaallinen kappeli ja pian kaupungin katedraali. Siellä '
+          + 'pidettiin Maria I:n hautajaiset 1816 ja Te Deum, kun João '
+          + 'VI julistettiin kuninkaaksi 1818. Itsenäistymisen jälkeen '
+          + 'kirkosta tuli keisarillinen kappeli.'
+          + '\n\n'
+          + 'Täällä kruunattiin Pedro I 1. joulukuuta 1822 ja Pedro II '
+          + '18. heinäkuuta 1841 — ne ovat ainoat kristilliset '
+          + 'kruunajaiset, jotka on koskaan pidetty Etelä-Amerikassa. '
+          + 'Samassa kirkossa keisari vannoi valansa perustuslaille '
+          + '1824, ja prinsessa Isabel vihittiin siellä 1864. Isoisän '
+          + 'matkan aikaan kirkko oli yhä keisarillinen kappeli, jossa '
+          + 'senaatti ja edustajainhuone kokoontuivat Pyhän Hengen '
+          + 'messuun ennen valtiopäivien avaamista. Katedraalin asemansa '
+          + 'kirkko menetti vasta 1976, kun uusi tuomiokirkko valmistui.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja de Nossa Senhora do Monte do Carmo, Rio de Janeiro, Brasil.jpg',
+          selite: 'Kirkon kullattu rokokoopuuveisto tehtiin vuoden 1785 '
+            + 'jälkeen, ja samassa salissa kruunattiin Brasilian '
+            + 'molemmat keisarit.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Central do Brasilin asema': {
+      aika: '1858–1943',
+      teksti: 'Aseman rakentaminen alkoi 1855. Se tehtiin uuden Dom Pedro '
+          + 'II:n rautatien päätepysäkiksi, ja radan oli määrä yhdistää '
+          + 'pääkaupunki São Paulon ja Minas Geraisin provinsseihin. '
+          + 'Paikaksi valittiin Campo de Santana, jonka ympärillä oli '
+          + 'hallintorakennuksia, ja tieltä purettiin vuoden 1735 Pyhän '
+          + 'Annan kirkko; kirkon puinen pyhimyskuva on yhä aseman '
+          + 'kappelissa. Asema avattiin maaliskuussa 1858 radan '
+          + 'ensimmäisen osuuden kanssa keisari Pedro II:n, keisarinna '
+          + 'Teresa Cristinan ja piispan läsnä ollessa.'
+          + '\n\n'
+          + 'Jo 1870 asema oli käynyt ahtaaksi, ja se laajennettiin '
+          + 'Jorge Grademaker Grunewaldin suunnitelmien mukaan uusien '
+          + 'esikaupunkien matkustajamäärille: keskusrakennus, kaksi '
+          + 'isoa sivusiipeä ja kello keskellä. Isoisä näki siis juuri '
+          + 'tämän talon. Vuosina 1876–1880 Francisco Pereira Passos '
+          + 'johti varastojen rakentamista, ja 21. marraskuuta 1879 '
+          + 'asemalle asennettiin sähkövalot ensimmäisenä julkisena '
+          + 'rakennuksena Brasiliassa.'
+          + '\n\n'
+          + 'Asema nimettiin 1925 Dom Pedro II:n asemaksi keisarin '
+          + 'syntymän satavuotispäivän kunniaksi. Vanha rakennus '
+          + 'purettiin 1939, ja tilalle nousi art deco -talo, joka '
+          + 'avattiin 1943 ja valmistui 1945: kaksikymmentäkahdeksan '
+          + 'kerrosta ja nelisivuinen kello, valmistuessaan '
+          + 'Etelä-Amerikan korkein rakennus ja maailman korkein '
+          + 'teräsbetonirakennelma. Kaukojunat loppuivat 1990-luvulla, '
+          + 'ja nykyään asema on lähijunien ja metron solmukohta.',
+      kuvat: [
+        {
+          tiedosto: 'Estação Central do Brasil (007A5P4F03-008).jpg',
+          selite: 'Ensimmäinen asemarakennus, joka avattiin 1858 ja '
+            + 'purettiin 1939 nykyisen tornitalon tieltä, kuvattuna '
+            + '1860- tai 1870-luvulla.',
+          lahde: 'Instituto Moreira Salles, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Real Gabinete -kirjasto': {
+      aika: '1837–1887',
+      teksti: 'Kirjaston perusti 1837 neljäkymmentäkolme portugalilaista '
+          + 'siirtolaista, jotka olivat paenneet kotimaansa poliittisia '
+          + 'oloja. Tarkoitus oli pitää yllä portugalilaista kulttuuria '
+          + 'keisarikunnan pääkaupungissa, ja se oli yhteisön '
+          + 'ensimmäinen oma yhdistys kaupungissa. Isoisän matkan aikaan '
+          + 'lukukabinetti oli siis toiminut jo 36 vuotta — mutta ei '
+          + 'siinä talossa, joka nyt tunnetaan.'
+          + '\n\n'
+          + 'Nykyinen rakennus tehtiin 1880–1887 portugalilaisen '
+          + 'arkkitehdin Rafael da Silva e Castron piirustusten mukaan '
+          + 'uusmanueliiniseen tyyliin, joka jäljittelee '
+          + 'löytöretkiajan portugalilaista koristetyyliä. Keisari '
+          + 'Pedro II laski peruskiven 10. kesäkuuta 1880, ja talon '
+          + 'vihkivät 10. syyskuuta 1887 hänen tyttärensä prinsessa '
+          + 'Isabel ja tämän puoliso Eun kreivi. Julkisivun esikuva on '
+          + 'Lissabonin Jerónimos-luostari; se veistettiin Lissabonissa '
+          + 'ja tuotiin laivalla Rioon, ja sen neljä patsasta esittävät '
+          + 'Pedro Álvares Cabralia, Luís de Camõesia, Henrik '
+          + 'Purjehtijaa ja Vasco da Gamaa.'
+          + '\n\n'
+          + 'Lukusalin kattoikkuna on rautarakenteinen ja ensimmäinen '
+          + 'laatuaan Brasiliassa. Kokoelmassa on 350 000 nidettä, ja se '
+          + 'on suurin portugalilaisen kirjallisuuden kokoelma Portugalin '
+          + 'ulkopuolella; harvinaisuuksiin kuuluu Camõesin Os Lusíadasin '
+          + 'ensipainos vuodelta 1572. Yleisölle talo avattiin 1900. '
+          + 'Brasilian kirjallisuusakatemian viisi ensimmäistä '
+          + 'juhlaistuntoa pidettiin täällä Machado de Assisin '
+          + 'johdolla, ja Time-lehti valitsi kirjaston 2014 maailman '
+          + 'kauneimpien kirjastojen listalla neljänneksi.',
+      kuvat: [
+        {
+          tiedosto: 'Real Gabinete Português Interior.jpg',
+          selite: 'Lukusalin rautarakenteinen kattoikkuna oli ensimmäinen '
+            + 'laatuaan Brasiliassa, ja hyllyillä on 350 000 nidettä.',
+          lahde: 'Nicolly Alves de Barros, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Quinta da Boa Vista': {
+      aika: '1808–1889',
+      teksti: 'Alue oli aikanaan jesuiittojen maatila. Kun jesuiitat '
+          + 'karkotettiin siirtomaasta 1759, maat jaettiin, ja 1800-luvun '
+          + 'alussa osa niistä kuului varakkaalle portugalilaiselle '
+          + 'kauppiaalle Elias António Lopesille. Hän rakensi noin 1803 '
+          + 'kukkulan päälle kartanon, jonka ikkunoista näkyi Guanabaran '
+          + 'lahti — siitä nimi Boa Vista, "hyvä näköala". Kun '
+          + 'prinssiregentti João VI saapui hoveineen 1808, Lopes '
+          + 'lahjoitti tilan hänelle.'
+          + '\n\n'
+          + 'Talo kunnostettiin 1816–1821 englantilaisen arkkitehdin '
+          + 'John Johnstonin johdolla hoville sopivaksi, ja sen eteen '
+          + 'pystytettiin koristeportti, jonka Northumberlandin herttua '
+          + 'oli lähettänyt lahjaksi Englannista. Rakennus sai nimen '
+          + 'Paço de São Cristóvão, ja siinä asui Portugalin '
+          + 'kuningasperhe 1808–1821 ja Brasilian keisariperhe '
+          + '1822–1889. Isoisän matkan aikaan talossa asui siis Pedro '
+          + 'II perheineen. Tila oli alun perin kaukana kaupungista '
+          + 'mangrovesoiden takana, ja soita jouduttiin kuivaamaan, '
+          + 'jotta sinne pääsi.'
+          + '\n\n'
+          + 'Tasavallan julistuksen 1889 jälkeen keisariperhe lähti '
+          + 'maasta ja palatsi jäi tyhjäksi. Vuonna 1892 sinne muutti '
+          + 'Kansallismuseo, jonka João VI oli perustanut 6. kesäkuuta '
+          + '1818 ja jota Pedro II oli tukenut tieteen ystävänä. '
+          + 'Kokoelma kasvoi yli kahteenkymmeneen miljoonaan esineeseen '
+          + 'ja näytteeseen, mutta 2. syyskuuta 2018 palatsi paloi: tuli '
+          + 'sai alkunsa auditorion ilmastointilaitteesta, ja rakennusta '
+          + 'oli sitä ennen kutsuttu paloansaksi. Rauniota on sen '
+          + 'jälkeen käsitelty arkeologisena kaivauksena. Puistossa on '
+          + 'lisäksi vuonna 1945 avattu eläintarha, Brasilian vanhin.',
+      kuvat: [
+        {
+          tiedosto: 'Quinta da Boa Vista Palácio de São Cristovão Museu Nacional RJ.jpg',
+          selite: 'Palatsissa asui keisariperhe 1822–1889, ja kuva on '
+            + 'otettu kolme kuukautta ennen syyskuun 2018 paloa.',
+          lahde: 'Fortes Photography, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Karl Robert von Planitz - Paço do Imperador do Brasil em São Cristóvão.jpg',
+          selite: 'Noin 1840 keisarin asunto oli vielä kaupungin '
+            + 'ulkopuolella peltojen ja vuorten keskellä.',
+          lahde: 'Karl Robert von Planitz, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen historiallinen museo': {
+      aika: '1603–1922',
+      teksti: 'Museon rakennusryhmä on kasvanut neljänsadan vuoden ajan '
+          + 'meren rannalla. Vanhin osa on vuoden 1603 Santiagon '
+          + 'linnake, ja sitäkin varhaisempia rakenteita on vuodelta '
+          + '1567, jolloin Portugalin kuningas Sebastian käski '
+          + 'linnoittaa paikan. Vuonna 1693 tontille rakennettiin '
+          + 'orjuutettujen vankila, 1762 asevarasto Casa do Trem, 1764 '
+          + 'sota-arsenaali ja 1835 kasarmi.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan paikalla ei siis ollut museota vaan '
+          + 'armeijan arsenaali. Museo perustettiin vasta elokuussa 1922 '
+          + 'presidentti Epitácio Pessoan asetuksella, ja se avasi '
+          + 'ovensa lokakuussa osana itsenäisyyden satavuotisnäyttelyä '
+          + 'kahdessa Casa do Tremin salissa. Vähitellen museo levisi '
+          + 'koko rakennusryhmään, joka on nykyään 20 000 neliömetriä.'
+          + '\n\n'
+          + 'Kokoelmassa on yli 287 000 esinettä, muun muassa Pedro '
+          + 'II:n valtaistuin ja keisariajan vaunuja, ja siihen kuuluu '
+          + 'Latinalaisen Amerikan suurin rahakokoelma. Kirjastossa on '
+          + 'yli 57 000 nimekettä, joista osa on 1400-luvulta, sekä '
+          + '50 000 asiakirjaa ja valokuvaa. Museo oli ensimmäinen '
+          + 'Brasiliassa, joka opetti museologiaa virallisella '
+          + 'kurssilla; sen mallista syntyi muita museoita, ja 1940-luvulla '
+          + 'se tunnettiin jo kansainvälisesti.',
+      kuvat: [
+        {
+          tiedosto: 'MHN Museu Histórico Nacional - Fachada do Beco da Batalha.jpg',
+          selite: 'Rakennusryhmä oli isoisän aikaan armeijan arsenaali, ja '
+            + 'museo perustettiin siihen vasta 1922.',
+          lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Theatro Municipal': {
+      aika: '1905–1909',
+      teksti: '1800-luvun jälkipuoliskolla Riossa oli vilkas '
+          + 'teatterielämä mutta vain kaksi taloa, Lyric ja São Pedro, '
+          + 'ja yleisö ja seurueet moittivat molempien tiloja. Juuri '
+          + 'sellaisessa kaupungissa isoisä kävi 1873. Näytelmäkirjailija '
+          + 'Artur Azevedo aloitti 1894 kampanjan uuden teatterin '
+          + 'puolesta, ja kaupunki sääti asiasta jopa lain ja veron — '
+          + 'mutta rahoja ei koskaan käytetty rakentamiseen.'
+          + '\n\n'
+          + 'Talo nousi vasta, kun pormestari Francisco Pereira Passos '
+          + 'ryhtyi uudistamaan keskustaa ja avasi 1903 Pariisin '
+          + 'bulevardien malliin vedetyn Avenida Centralin. Teatterin '
+          + 'suunnitteli pormestarin poika Francisco de Oliveira Passos '
+          + 'yhdessä Albert Guilbertin kanssa, ja esikuvana oli Charles '
+          + 'Garnier’n Pariisin ooppera. Työ alkoi 1905, ja perustus '
+          + 'tehtiin 1 180 puupaalun varaan pohjaveteen. Koristelusta '
+          + 'vastasivat aikansa tunnetuimmat brasilialaiset taiteilijat, '
+          + 'muun muassa Eliseu Visconti, Rodolfo Amoedo sekä veljekset '
+          + 'Henrique ja Rodolfo Bernardelli.'
+          + '\n\n'
+          + 'Presidentti Nilo Peçanha vihki teatterin 14. heinäkuuta '
+          + '1909, ja saliin mahtui tuolloin 1 739 katsojaa. Kun kaupunki '
+          + 'kasvoi, katsomo suurennettiin 1934 kolmessa kuukaudessa '
+          + '2 205 paikkaan. Talo suljettiin 19. lokakuuta 1975 '
+          + 'perusteelliseen korjaukseen ja avattiin uudelleen 15. '
+          + 'maaliskuuta 1978; vuonna 1996 aloitettiin lisärakennus, '
+          + 'johon kuoro, orkesteri ja baletti saivat harjoitussalit.',
+      kuvat: [
+        {
+          tiedosto: 'Brazil-00988 - Rio de Janeiro Municipal Theatre (48984301008).jpg',
+          selite: 'Teatteri vihittiin 14. heinäkuuta 1909, ja sen esikuva '
+            + 'oli Charles Garnier’n Pariisin ooppera.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Maracanãn stadion': {
+      aika: '1948–1950',
+      teksti: 'Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti '
+          + 'olla valmis vuoden 1950 jalkapallon maailmanmestaruus'
+          + 'kisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin '
+          + 'pahasti, että Fifa lähetti paikalle Italian liiton johtajan '
+          + 'Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja '
+          + 'viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. '
+          + 'kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: '
+          + 'käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti '
+          + 'maailman suurin stadion.'
+          + '\n\n'
+          + 'Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. '
+          + 'Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti '
+          + '2–1, ja hiljaisuus katsomossa jäi historiaan nimellä '
+          + 'Maracanazo. Virallinen yleisömäärä oli 199 854 ja arvioitu '
+          + 'noin 210 000 — suurin väkijoukko, joka on koskaan nähnyt '
+          + 'jalkapallo-ottelun. Katsomo oli tuolloin lähes kokonaan '
+          + 'seisomapaikkoja.'
+          + '\n\n'
+          + 'Stadion valmistui lopullisesti vasta 1965, seitsemäntoista '
+          + 'vuotta töiden aloittamisen jälkeen, ja se nimettiin 1966 '
+          + 'toimittaja Mário Rodrigues Filhon mukaan — kansa sanoo silti '
+          + 'yhä Maracanã. Pelé teki täällä uransa tuhannennen maalin '
+          + '1969. Kun ylemmän katsomon kaide petti 1992 ja kolme '
+          + 'katsojaa kuoli, paikat muutettiin istumapaikoiksi. Vanha '
+          + 'kaksikerroksinen katsomo purettiin 2010-luvun remontissa, ja '
+          + 'nykyiseen yksitasoiseen katsomoon mahtuu 78 639 katsojaa. '
+          + 'Vuoden 2016 olympialaisten avajaisten jälkeen stadion jäi '
+          + 'hoitamatta: nurmi kuivui, ja sähköt katkaistiin '
+          + 'maksamattomien laskujen takia, kun omistaja, ylläpitäjä ja '
+          + 'kisojen järjestäjät kiistelivät vastuusta.',
+      kuvat: [
+        {
+          tiedosto: 'Estádio Maracanã 1 by Diego Baravelli.jpg',
+          selite: 'Stadionin nurmi oli helmikuussa 2017 kuivunut '
+            + 'olympialaisten jälkeen, kun vastuu ylläpidosta oli '
+            + 'kiistanalainen.',
+          lahde: 'Diego Baravelli, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lapan akvedukti': {
+      aika: '1744–1750',
+      teksti: 'Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: '
+          + 'juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. '
+          + 'Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen '
+          + 'latvoilta Santa Teresan kukkulalta, mutta kanavatyöt '
+          + 'takkusivat rahan ja tekniikan puutteessa niin, että '
+          + '1600-luvun lopussa valmiina oli vain muutama sata metriä. '
+          + 'Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti '
+          + 'valmistui 1723 tuoden veden barokkiseen suihkulähteeseen '
+          + 'nykyisellä Largo da Cariocalla.'
+          + '\n\n'
+          + 'Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, '
+          + 'ja kuvernööri Gomes Freire de Andrade määräsi tilalle '
+          + 'suuremman. Sen suunnitteli portugalilainen sotilasinsinööri '
+          + 'José Fernandes Pinto Alpoim Lissabonin Águas Livres '
+          + '-akveduktin malliin, ja se vihittiin 1750. Santa Teresan ja '
+          + 'Santo Antônion kukkuloiden välinen jakso on 270 metriä '
+          + 'pitkä, kaksikerroksinen ja korkeimmillaan 17,6 metriä; '
+          + 'kaaria on 42. Vesi kulki useisiin suihkulähteisiin, myös '
+          + 'sille aukiolle, joka on nykyään Praça XV.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan akvedukti oli yhä vesijohto; se '
+          + 'poistui käytöstä vasta 1800-luvun lopulla, kun kaupunki sai '
+          + 'uudet vesilähteet. Vuonna 1896 rakennelma muutettiin '
+          + 'sillaksi Santa Teresan raitiovaunulle, joka on yhä '
+          + 'kaupungin ainoa vanha raitiotie. Elokuussa 2011 vaunun jarrut '
+          + 'pettivät ja viisi ihmistä kuoli, minkä jälkeen liikenne '
+          + 'keskeytettiin; osa linjasta kaarien yli avattiin uudelleen '
+          + 'heinäkuussa 2015.',
+      kuvat: [
+        {
+          tiedosto: '2018 Rio de Janeiro - Arcos da Lapa.jpg',
+          selite: 'Kaksikerroksisessa jaksossa on 42 kaarta, pituutta 270 '
+            + 'metriä ja korkeutta enimmillään 17,6 metriä.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Passeio Público': {
+      aika: '1779–1783',
+      teksti: 'Kun siirtomaan hallinto siirtyi 1763 Salvadorista Rioon, '
+          + 'varakuningas Luís de Vasconcelos halusi uuteen pääkaupunkiin '
+          + 'julkisen puiston Lissabonin Passeio Públicon malliin. Hän '
+          + 'tilasi sen 1779 kaupungin johtavalta kuvanveistäjältä '
+          + 'Valentim da Fonseca e Silvalta eli Mestre Valentimilta, ja '
+          + 'puisto valmistui 1783. Se rakennettiin täytemaalle, joka '
+          + 'nousi Boqueirãon lammikon paikalle: lammikko oli saastunut '
+          + 'ja levitti tauteja, ja sen hävittämistä pidettiin '
+          + 'kaupungin suurena parannuksena.'
+          + '\n\n'
+          + 'Valentimin puisto oli ranskalaiseen tapaan suora ja '
+          + 'symmetrinen, muodoltaan epäsäännöllinen kuusikulmio, ja '
+          + 'meren puolella oli terassi, jolta näkyi Guanabaran lahti. '
+          + 'Sisäänkäynnin rokokootyylinen rautaportti on yhä '
+          + 'paikallaan, ja siinä on kuningatar Maria I:n ja Pedro '
+          + 'III:n kuvat sekä vuosiluku 1783. Rakkauden lähteen '
+          + 'pronssiset kaimaanit olivat ensimmäisiä Riossa valettuja '
+          + 'pronsseja, ja 1806 Valentim lisäsi puistoon kaksi '
+          + 'graniittipyramidia. Muuri ympäröi puistoa, ja aluksi siellä '
+          + 'kävi lähinnä siirtomaan yläluokka; kaikille se avattiin '
+          + '1793.'
+          + '\n\n'
+          + 'Vuonna 1864 ranskalainen puutarha-arkkitehti Auguste '
+          + 'François Marie Glaziou uudisti puiston englantilaiseen '
+          + 'tyyliin: suorat käytävät väistyivät mutkittelevien polkujen, '
+          + 'lammen ja sillan tieltä, mutta Valentimin lähteet, portti '
+          + 'ja pyramidit säilyivät. Isoisä näki siis yhdeksän vuotta '
+          + 'vanhan uudistuksen. Myöhemmät merentäytöt jättivät puiston '
+          + 'kauas rannasta, ja näköala lahdelle katosi. Puisto '
+          + 'kunnostettiin perusteellisesti 2001–2004, ja se on '
+          + 'Brasilian vanhin julkinen puisto.',
+      kuvat: [
+        {
+          tiedosto: 'Jardim do Passeio Público (014MF002002).jpg',
+          selite: 'Puisto sai lampensa ja mutkittelevat polkunsa Auguste '
+            + 'Glazioun uudistuksessa 1864, ja kuva on otettu pian sen '
+            + 'jälkeen.',
+          lahde: 'Instituto Moreira Salles, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

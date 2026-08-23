@@ -59128,4 +59128,2590 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * BRISBANE (Opus, 23.8.2026). Oseanian laudan neljäs kaupunkilehti
+   * Sydneyn, Melbournen ja Aucklandin jälkeen. Neljä sivua: kansi
+   * `kaupunki` sekä teemasivut `historia`, `luonto` ja `kaupunkikuva`.
+   *
+   * LÄHTEET. Jokainen väite on luettu en-Wikipedian raakatekstistä
+   * (action=raw, NODE_USE_ENV_PROXY=1) 23.8.2026: "Brisbane",
+   * "Queensland", "The Old Windmill, Brisbane", "Commissariat Store,
+   * Brisbane", "Parliament House, Brisbane", "Old Government House,
+   * Brisbane", "General Post Office, Brisbane", "Brisbane City Botanic
+   * Gardens", "Brisbane River", "Kangaroo Point, Queensland",
+   * "Mount Coot-tha, Queensland", "Story Bridge", "Customs House,
+   * Brisbane", "Queen Street Mall", "World Expo 88", "South Bank
+   * Parklands", "Turrbal", "Jagera people", "Neville Bonner",
+   * "Queenslander (architecture)". Pohjana ovat
+   * docs/mantereet-tyoaineisto/faktapohja-brisbane.md ja
+   * tarkistus-brisbane.md; ne eivät ole vielä mainissa, vaan
+   * commiteissa ae2df23f ja e160477d. TARKISTUS VOITTAA FAKTAPOHJAN.
+   *
+   * TARKISTUSRAPORTIN PAKOLLISET KORJAUKSET ON TEHTY. (a) Tullitalon
+   * julkisivun eläin on EMU, ei kotka: "the building features a
+   * depiction on its facade of a shield between an emu and kangaroo".
+   * (b) Vanha tuulimylly rakennettiin 1828, ei 1824-1828. Myllyn oman
+   * artikkelin infoboksi sanoo built = 1828, perustuskaivanto alkoi
+   * heinäkuussa 1828 ja ensimmäinen jauhatus oli 31.10.1828. Vuosiluku
+   * 1824 on pääartikkelin virhe ja sekaantuu siirtolan alkuvuoteen;
+   * tarkempi lähde voittaa (ennakkotapaukset v925, v932, v937).
+   * (c) Ilmansuuntia ei mainita teksteissä lainkaan, koska tämä erä ei
+   * tee kohdekarttaa. (d) Vaakuna on QUEENSLANDIN, ei Australian:
+   * lähde sanoo heraldisten aiheiden olleen "precursors to the official
+   * Queensland coat of arms, which was not granted until 1893", eikä
+   * Australiaa liittovaltiona ollut 1889 olemassakaan. (e) Oppaan
+   * jaksot 3 ja 5 on kirjoitettu kokonaan toisin kuin faktapohjassa,
+   * ks. VISA alla.
+   *
+   * KOLME OMAA TARKENNUSTA FAKTAPOHJAAN. (1) Tuulimyllyn aikapallo EI
+   * ollut käytössä isoisän matkan aikaan: pallo asennettiin 1861 mutta
+   * korvattiin aikatykillä jo 1866, ja sähköinen aikapallo tuli vasta
+   * 1894. Vuonna 1873 aika ilmoitettiin siis laukauksella, ja nosto H1
+   * sanoo sen. (2) Signaalimiehen mökin vuosi on artikkelin
+   * leipätekstin 1883, ei johdannon pyöristys "kaksikymmentä vuotta
+   * myöhemmin". (3) Ku-ta-sanan kansa-attribuutio vaihtelee lähteiden
+   * välillä (Turrbal-artikkeli: turrbalit; Mount Coot-tha -artikkeli:
+   * yugarat). Lehti seuraa kohteen omaa artikkelia ja sanoo sanan
+   * olevan yugarabulia, jolloin ristiriitaa ei synny.
+   *
+   * WIKIPEDIAN SISÄINEN RISTIRIITA KIRJOITETTU AUKI: Expo 88:n
+   * kävijämäärä on infoboksissa 18 574 476 mutta leipätekstissä "yli
+   * 15 760 000 kävijää, jotka ostivat lippuja 175 miljoonalla
+   * dollarilla". Artikkeli selittää eron itse (korkeampi luku sisältää
+   * henkilökunnan ja kutsuvieraat), ja nosto T4 kertoo molemmat luvut.
+   *
+   * PILARI 3. Turrbalit ja jagerat (yuggerat) kuvataan NYKYISINÄ
+   * kansoina. Nosto K4 ei pääty oikeusprosessiin eikä muistokirjoitukseen
+   * vaan elävään kieleen ja nykyisiin instituutioihin: kaupunginosien
+   * nimet, yagaran sana yaga koko Australian puhekielessä ja Musgrave
+   * Parkin Jagera Community Hall, joka toimii yhä. Vuosien 2015 ja
+   * 2017 hylätyt maaoikeusvaatimukset on JÄTETTY POIS tietoisesti: ne
+   * ovat nykyistä oikeus- ja politiikkaprosessia (spec-mantereet.md,
+   * sääntö 3). Lehti ei väitä niiden tilalle mitään voitettua vaan
+   * sanoo sen minkä lähdekin sanoo — molempien kansojen jälkeläiset
+   * pitävät itseään alueen perinteisinä haltijoina. Queenslandin
+   * osavaltiotason frontier wars -uhriluvut on jätetty pois samasta
+   * syystä kuin faktapohjassa. Tyynenmeren saarilta värvätty
+   * plantaasityövoima kerrotaan neutraalisti oppaan jaksossa 4, ilman
+   * yksittäistarinoita ja ilman kärsimyksen yksityiskohtia.
+   *
+   * VISA (js/packs/oceania-questions.js, avain brisbane). Viiden
+   * kysymyksen vastaukset löytyvät lehdestä: itärannikko ja Gold
+   * Coastin ja Sunshine Coastin hiekkarannat oppaan jaksosta 2,
+   * Brisbane-joki nostosta L2 ja oppaan jaksosta 1, Queenslandin
+   * pääkaupunkiasema johdannosta ja nostosta K3, subtrooppinen ilmasto
+   * oppaan jaksosta 5. Tarkistusraportin kohta D5 vaati kaksi
+   * uudelleenkirjoitusta, ja ne on tehty: jakso 5 ei käytä visan
+   * vastausvaihtoehdon sanaparia vaan kertoo Köppen-luokan,
+   * vuodenaikojen eron ja ennätyslukemat, ja jakso 3 on kokonaan eri
+   * aihe (queenslander-talo) kuin faktapohjan CityCat-jakso, joka oli
+   * lähellä visan fakta-kenttää. Teemasivujen minitehtävät eivät toista
+   * visaa: ne kysyvät myllyn signaaliasemaa, joen turrbalinkielistä
+   * nimeä ja Story Bridgen esikuvaa.
+   *
+   * KUVAT. 26 kuvaa, kaikki Commonsista KATEGORIAHAULLA, lisenssi ja
+   * tekijä luettu rajapinnan extmetadatasta, ja jokainen katsottu
+   * silmin 900 pikselin esikatseluna. Hylkäysten yleisin syy oli kuvaan
+   * kirjoitettu merkintä: Queen Streetin 1975 katunäkymään on lisätty
+   * valkoinen palkki, jossa lukee kuvaajan nimi ja sähköpostiosoite,
+   * ja vuoden 1893 tulvakuvasarjaan on kirjoitettu negatiiviin
+   * "P C Poulsen" ja kuvateksti. Muita hylkäyksiä: parlamenttitalon
+   * 1878 rakennustyömaakuva ja Tullitalon arkistokuvat alle 1200 px;
+   * vuoden 1904 kansanedustajaryhmäkuva (neljätoista luettavissa olevaa
+   * kasvoa); rahastotalon kaksi kuvaa (rakennustelineet, mainoskyltit
+   * ja pinkki kasinovalaistus); Commissariat Storen yökuva
+   * (julkisivulle heijastettu valoteos peitti kivityön); pääpostin
+   * nykykuva (kymmenkunta luettavaa kasvoa ja mainostaulu); Jagera
+   * Hallin kolme kuvaa (kasvot, roska-astiat ja pollarit etualalla,
+   * itse talo vain nurkaltaan). Vuoden 1897 pääpostikuvassa on julkaisijan oma
+   * levynumerointi, joka selitetään kuvatekstissä — sama poikkeus kuin
+   * karttojen ja litografioiden omalla tekstillä.
+   *
+   * Turrbal- ja jagera-aiheiselle kuvitukselle EI ole Commonsissa omaa
+   * kategoriaa (tarkistettu suoraan: "Category:Turrbal" ja
+   * "Category:Aboriginal Queenslanders" eivät ole olemassa), joten
+   * K4:n kuva haettiin käsin tiedostohaulla. Kolme Jagera Hallin kuvaa
+   * hylättiin (ks. yllä), ja valinnaksi tuli Musgrave Parkin bunyapuu:
+   * elävä, paikallinen ja tekstin kanssa yhteen käyvä aihe eikä
+   * seremoniaklišee (spec-mantereet.md, Kuvalinjat).
+   *
+   * AIHETOISTO, kirjattu tarkoituksella. South Bank esiintyy kahdesti:
+   * avauskuvassa nykyisenä puistona ja nostossa T4 vuoden 1986
+   * ilmakuvana samasta rannasta ennen näyttelyä. Toisto on juuri
+   * noston oma aihe, ja tiedostot ja vuosikymmenet ovat eri. Mount
+   * Coot-tha esiintyy avauskuvassa näköalana kaupunkiin ja nostossa L4
+   * mäkenä itsenään. Muut kohteet kerran. Yksikään tiedosto ei toistu
+   * lehden sisällä eikä ole sama kuin js/packs/oceania-valokuvat.js:n
+   * brisbane-lohkossa (Queen Street 1900, CityCat, Streets Beach,
+   * Story Bridge Bowen Terracelta, Queen Street Mall -väkijoukko).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (säärivit haetaan omana eränään; Samarkandin ja Vancouverin
+   * malli). Oppaan jakso 5 nojaa siis en-Wikipedian Brisbane-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN. Mittauspiste olisi keskusta
+   * -27,47 / 153,03.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta eikä kuvaile kuvaa, ja se on yhden virkkeen
+   * mittainen.
+   */
+  brisbane: [
+    {
+      id: 'kaupunki',
+      nimi: 'Brisbane',
+      johdanto: 'Queenslandin pääkaupunki kiertyy joen mutkan sisään, ja '
+        + 'keskusta on melkein saari. Isoisän matkavuonna 1873 siirtokunta '
+        + 'oli neljäntoista vuoden ikäinen ja rakensi yhä julkisia talojaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Brisbane City Hall 1 (30298960383).jpg',
+          selite: 'Brisbanen kaupungintalo valmistui 1930, ja sen '
+            + 'hiekkakivinen pylväikkö ja kellotorni kohoavat King George '
+            + 'Squaren laidalla.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Queens Gardens, Treasury Building, Brisbane 02.jpg',
+          selite: 'Rahastotalo rakennettiin kolmessa vaiheessa 1886–1928 '
+            + 'kokonaisen korttelin kokoiseksi, ja sen ensimmäinen vaihe '
+            + 'nousi samaan aikaan kuin Tullitalo.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Commissariat Store, Brisbane - Joy of Museums - External 2.jpg',
+          selite: 'William Streetin muonavarasto vuodelta 1828 on toinen '
+            + 'kahdesta rangaistussiirtolan ajalta säilyneestä rakennuksesta '
+            + 'ja toimii nykyään museona.',
+          lahde: 'GordonMakryllos, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kaupungin eri puolilta —
+       * keskusta joen yli Kangaroo Pointista, South Bankin ranta
+       * vastarannalta ja koko kaupunki Mount Coot-thalta. Yksikään ei
+       * ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Brisbane CBD seen from Kangaroo Point, 2024, 02.jpg',
+          selite: 'Keskusta seisoo niemekkeellä, jonka ympäri Brisbane-joki '
+            + 'kaartaa lähes umpeen, ja vuonna 2024 avattu Kangaroo Pointin '
+            + 'kävelysilta ylittää joen keskustan kupeessa.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '28 - South Bank Parklands (4741163759).jpg',
+          selite: 'South Bankin puisto avattiin 1992 vuoden 1988 '
+            + 'maailmannäyttelyn alueelle, ja sen rannassa kulkee kilometrin '
+            + 'mittainen kukkiva pylväskäytävä.',
+          lahde: 'Brisbane City Council, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Brisbane from Mt Mount Coot-tha.jpg',
+          selite: 'Mount Coot-than näköalapaikalta avautuu esteetön näkymä '
+            + 'yli koko kaupungin, joka leviää joen tulvatasangolle '
+            + 'eukalyptusmetsien takana.',
+          lahde: 'Silje Ljosland Bakke User:Siljelb, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Siirtola, joka muutti heti perustamisensa jälkeen',
+          tiedosto: 'Brisbane Commissariat Store, circa 1840.jpg',
+          teksti: 'Matthew Flinders kartoitti osia Moreton Baystä 1799, ja '
+            + 'John Oxley löysi joen 1823 haaksirikkoutuneiden merimiesten '
+            + 'avulla ja suositteli seutua rangaistussiirtolaksi. '
+            + 'Ensimmäinen tukikohta perustettiin Redcliffeen 1824, mutta jo '
+            + 'kahdeksan kuukauden jälkeen koko joukko — vangit, sotilaat, '
+            + 'hallintoväki ja perheet — siirtyi joen mutkaan North Quaylle '
+            + 'nykyisen keskustan kohdalle. Kapteeni Patrick Loganin '
+            + 'komennossa asema sai maineen yhtenä Uuden Etelä-Walesin '
+            + 'ankarimmista. Siirtola suljettiin 1842 ja alue avattiin '
+            + 'vapaalle asutukselle; vasta siitä alkoi kaupungin kasvu.',
+          selite: 'Vuoden 1840 piirustussarja esittää William Streetin '
+            + 'muonavaraston julkisivut, pohjapiirrokset ja rantaleikkauksen, '
+            + 'ja sen käsinkirjoitetut selitykset kuuluvat itse piirustukseen.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Commissariat Store, Brisbane',
+        },
+        {
+          otsikko: 'Kaksi nimeä samalle joenmutkalle',
+          tiedosto: 'Harpullia-pendula-SF24331-06.jpg',
+          teksti: 'Kaupungin nimi ei kerro paikasta vaan virkamiehestä: John '
+            + 'Oxley nimesi joen 1823 Uuden Etelä-Walesin kuvernöörin Thomas '
+            + 'Brisbanen mukaan, ja siirtola peri nimensä joeltaan. '
+            + 'Keskustan niemekkeellä on kuitenkin vanhempi nimi. Turrbalin '
+            + 'ja yagaran kielissä se on Meanjin tai Magandjin, ja sen '
+            + 'merkityksestä keskustellaan yhä: yhden tulkinnan mukaan sana '
+            + 'viittaa piikin muotoon, toisen mukaan Gardens Pointissa '
+            + 'kasvaneeseen tulppaanipuuhun, jonka nimi on magan. Vanhin '
+            + 'Gaja Kerry Charlton pitää juuri puuhun palautuvaa Magandjinia '
+            + 'osuvampana, eikä kirjoitusasusta ole perinteisten haltijoiden '
+            + 'kesken yksimielisyyttä.',
+          selite: 'Australiantulppaanipuun Harpullia pendulan oranssit '
+            + 'kotelohedelmät avautuvat mustille siemenille, ja juuri tähän '
+            + 'puuhun eli maganiin nimi Magandjin palautuu.',
+          lahde: 'Steve Fitzgerald, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Brisbane',
+        },
+        {
+          otsikko: 'Pääkaupunki, joka rakensi itselleen talot',
+          tiedosto: 'Old Government House, Brisbane 01.jpg',
+          teksti: 'Kuningatar Viktoria allekirjoitti 6. kesäkuuta 1859 '
+            + 'kirjeen, joka erotti Queenslandin omaksi itsehallinnolliseksi '
+            + 'siirtokunnaksi Uudesta Etelä-Walesista ja teki Brisbanesta sen '
+            + 'pääkaupungin. Ensimmäinen kuvernööri George Bowen luki '
+            + 'julistuksen joulukuussa, ja toukokuussa 1860 kokoontunut '
+            + 'ensimmäinen parlamentti mahtui entiseen vankibarakkiin Queen '
+            + 'Streetillä. Tilat tarvittiin nopeasti: siirtokunnan arkkitehti '
+            + 'Charles Tiffin suunnitteli kuvernöörin talon Gardens Pointin '
+            + 'kukkulalle, rakentajaksi tuli Joshua Jeays, ja Bowenin perhe '
+            + 'muutti sisään huhtikuussa 1862.',
+          selite: 'Queenslandin ensimmäinen kuvernöörin talo valmistui 1862 '
+            + 'hiekkakivestä ja paikallisesta tuffista, ja isoisän matkan '
+            + 'aikaan se oli yhä kuvernöörin koti.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Old Government House, Brisbane',
+        },
+        {
+          otsikko: 'Turrbal ja jagera tänään',
+          tiedosto: 'Araucaria bidwillii in silhouette Musgrave Park South Brisbane P1380329.jpg',
+          teksti: 'Brisbanen seudulla on asuttu yli 22 000 vuotta, ja alueen '
+            + 'kansoja ovat turrbalit, jagerat eli yuggerat sekä lahden '
+            + 'puolella quandamookat. Tutkijat ovat eri mieltä siitä, '
+            + 'kulkeeko kansojen raja joen mukana vai onko kyse saman kansan '
+            + 'osista; kummankin jälkeläiset pitävät itseään alueen '
+            + 'perinteisinä haltijoina. Joen eteläpuolen Musgrave Park oli '
+            + 'yksi suurista leiripaikoista, ja siellä toimii nykyään '
+            + 'Jagera Community Hall. Kieli on jäänyt kaupungin arkeen: '
+            + 'kaupunginosien nimet Woolloongabba, Toowong, Bulimba ja '
+            + 'Indooroopilly ovat turrbalin ja yagaran sanoja, ja '
+            + 'australianenglannin yakka eli raadanta tulee yagaran sanasta '
+            + 'yaga.',
+          selite: 'Musgrave Parkin bunyapuu Araucaria bidwillii on sitä '
+            + 'lajia, jonka pähkinäsato kutsui kansat koolle suuriin '
+            + 'juhliin kolmen vuoden välein.',
+          lahde: 'John Robert McPherson, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jagera people',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Autumn in Roma Street Parkland 052013 524.jpg',
+          selite: 'Roma Street Parkland rakennettiin vanhalle ratapiha-'
+            + 'alueelle keskustan laitaan, ja sen subtrooppiset istutukset '
+            + 'kukkivat myös syksyllä.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Brisbane on Queenslandin pääkaupunki ja Australian '
+          + 'kolmanneksi väkirikkain kaupunki. Matkailijan Brisbane mahtuu '
+          + 'joenmutkan sisään ja sen molemmille rannoille: pohjoisrannalla '
+          + 'ovat Queen Streetin kävelykatu, kaupungintalo ja Tullitalon '
+          + 'kuparikupoli, eteläpuolella South Bankin puisto ja museot, '
+          + 'idässä Kangaroo Pointin kalliot Story Bridgen alla. Niemekkeen '
+          + 'kärjessä ovat kasvitieteellinen puutarha ja parlamenttitalo '
+          + 'vierekkäin. Joki on osa joukkoliikennettä, joten paikasta '
+          + 'toiseen pääsee myös vettä pitkin, ja lännessä Mount Coot-than '
+          + 'näköalapaikalta näkee koko kaupungin yhdellä silmäyksellä.',
+        artikkeli: {
+          nimi: 'Matkailijan Brisbane',
+          taitto: 'opas',
+          teksti: 'Joenmutka, jonka ympärille rakennettiin ensin '
+            + 'rangaistussiirtola ja sitten kokonaisen siirtokunnan '
+            + 'pääkaupunki.',
+          nosto: 'Vuonna 1873 kaupungin uusin rakennus oli vuoden vanha '
+            + 'pääposti, jonka tiloissa asui myös Queenslandin museo.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lennot saapuvat Brisbanen lentoasemalle joen suulle, '
+                + 'ja sieltä keskustaan pääsee junalla. Junat, bussit ja '
+                + 'lautat kuuluvat samaan TransLink-järjestelmään ja samaan '
+                + 'go card -maksuun koko Kaakkois-Queenslandissa, ja '
+                + 'keskustan solmukohdat ovat Roma Streetin, Centralin ja '
+                + 'Fortitude Valleyn asemat. Brisbane-joella liikennöivät '
+                + 'CityCat-katamaraanit ovat osa samaa verkkoa, ja koska '
+                + 'joki mutkittelee keskustan ympäri, laituri on usein '
+                + 'lähempänä kuin pysäkki. Yksityisauto on Australian '
+                + 'tapaan suosituin kulkuneuvo, mutta keskustassa pärjää '
+                + 'hyvin ilman. Isoisän aikaan sama matka olisi taittunut '
+                + 'höyrylaivalla, ja Ipswichiin mentiin jokea pitkin, koska '
+                + 'rautatie valmistui vasta 1875.',
+              kuva: {
+                tiedosto: 'Approach Brisbane Airport flying over Brisbane River.jpg',
+                selite: 'Brisbanen lentoasema on rakennettu joen suulle '
+                  + 'Moreton Bayn rannalle, ja laskeutumisreitti seuraa '
+                  + 'jokea alavirtaan keskustan ohi.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Brisbane on Australian itärannikolla, Queenslandin '
+                + 'kaakkoiskulmassa. Keskusta on joen niemekkeellä noin '
+                + 'viidentoista kilometrin päässä siitä kohdasta, jossa '
+                + 'joki laskee Moreton Bayhin, ja kaupunki leviää '
+                + 'kumpuilevalle tulvatasangolle Tyynenmeren sekä Taylorin '
+                + 'ja D’Aguilarin vuorijonojen väliin. Suur-Brisbane '
+                + 'koostuu useasta kunnasta, ja niistä Brisbane City on '
+                + 'Australian väkirikkain. Rannikko jatkuu etelään Gold '
+                + 'Coastin ja pohjoiseen Sunshine Coastin hiekkarantoina, '
+                + 'jotka ovat maan tunnetuimpia lomakohteita; lähijunaverkko '
+                + 'ulottuu molemmille. Sillat ratkaisevat kaiken: Victoria '
+                + 'Bridge, Captain Cook -silta ja Story Bridge sitovat '
+                + 'niemekkeen molempiin rantoihin.',
+              kuva: {
+                tiedosto: 'Brisbane - panoramio (18).jpg',
+                selite: 'Captain Cook -silta vie moottoritien joen yli '
+                  + 'keskustan eteläpuolella, ja sen kupeessa vanha '
+                  + 'kiinnityspollari on saanut päälleen lintuveistokset.',
+                lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: talo tolppien päällä',
+              teksti: 'Brisbanen esikaupungit erottuvat muiden '
+                + 'osavaltionpääkaupunkien lähiöistä yhdestä syystä, ja se '
+                + 'on queenslander-talo. Se on puinen, peltikattoinen ja '
+                + 'nostettu tolppien varaan noin kahden ja puolen metrin '
+                + 'korkeuteen, ja sen kylkeä kiertää veranta, joka ei '
+                + 'koskaan kierrä koko taloa. Talotyyppi kehittyi '
+                + '1840-luvulta alkaen, ja jokainen sen piirre vastaa '
+                + 'ilmastoon: alusta tuulettuu, tulvavesi menee ali, ja '
+                + 'ovet ja ikkunat on aseteltu niin että ilma kulkee '
+                + 'huoneiden läpi. Verantaa käytetään ulkohuoneena, jossa '
+                + 'syödään ja nukutaan. Tolppien päällä on peltiset '
+                + 'muurahaishatut termiittejä vastaan, ja koska puutalolle '
+                + 'ei voi laskea peruskiveä, uusi rakennus vihittiin '
+                + 'kiinnittämällä hattu juhlallisesti paikalleen.',
+              kuva: {
+                tiedosto: 'House in Corinda, Queensland 01.jpg',
+                selite: 'Corindan kaltaisissa Brisbanen esikaupungeissa '
+                  + 'queenslander-talo seisoo yhä tolppiensa päällä '
+                  + 'ulkoportaineen, verantoineen ja peltikattoineen.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: satama, joka toi väen',
+              teksti: 'Kun Queenslandista tuli oma siirtokunta 1859, '
+                + 'Brisbane oli ennen kaikkea jokisatama. 1860-luvulta '
+                + 'lähtien se oli myös keskeinen läpikulkupaikka '
+                + 'Tyynenmeren saarilta värvätylle työvoimalle, jota '
+                + 'vietiin siirtokunnan sokeri- ja puuvillaplantaaseille. '
+                + 'Järjestelmä oli muodollisesti sopimustyötä, mutta '
+                + 'rekrytointi oli usein harhaanjohtavaa ja liikkumista '
+                + 'rajoitettiin, ja monet historioitsijat pitävät käytäntöä '
+                + 'orjuuden kaltaisena pakkotyönä. Samat vuosikymmenet '
+                + 'toivat kaupunkiin saksalaisia maanviljelijöitä sekä '
+                + 'skotlantilaisia ja irlantilaisia siirtolaisia, '
+                + 'kiinalaiskorttelin Frog’s Hollow -nimiselle '
+                + 'alueelle, juutalaisen seurakunnan ja yhden Australian '
+                + 'varhaisimmista venäläisyhteisöistä. Kokoaan '
+                + 'monikulttuurisempi satamakaupunki syntyi näinä vuosina.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Brisbanesta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Brisbane-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Köppenin luokituksessa Brisbane on subtrooppinen Cfa, ja '
+                + 'Darwinin jälkeen se on Australian pääkaupungeista kuumin: '
+                + 'vuoden keskimääräinen ylin lukema on 26,6 ja alin 16,6 '
+                + 'astetta. Kesä joulukuusta maaliskuuhun on ukkosten ja '
+                + 'rankkasateiden aikaa, ja talvi toukokuusta elokuuhun on '
+                + 'kuiva ja aurinkoinen — matkailijalle helpoin jakso. '
+                + 'Kuumin mitattu lukema on 43,2 astetta Australia '
+                + 'Day -päivänä 1940 ja kylmin 0,1 astetta pakkasen puolella '
+                + 'heinäkuussa 2007, ensimmäinen kerta koko '
+                + 'mittaushistoriassa. Vuorokauden sademäärän ennätys, 465 '
+                + 'millimetriä tammikuussa 1887, on yhä suurin minkään '
+                + 'Australian pääkaupungin historiassa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vankityövoima pystytti myllyn, jota myöhemmin käytettiin '
+        + 'laivojen vahtimiseen. Isoisän matkan aikaan kaupunki rakensi '
+        + 'parlamenttiaan ja postiaan yhtä aikaa, ja suuret tulvat olivat '
+        + 'vielä edessä.',
+      tehtava: {
+        kysymys: 'Mihin tehtävään Wickham Terracen vanha tuulimylly valjastettiin vuodesta 1855?',
+        vaihtoehdot: [
+          'laivaliikenteen signaaliasemaksi',
+          'kaupungin vesitorniksi',
+          'siirtokunnan vankilaksi',
+          'kirkon kellotapuliksi',
+        ],
+        oikea: 0,
+        fakta: 'Mylly lakkasi jauhamasta viljaa 1845. Kymmenen vuotta '
+          + 'myöhemmin torniin rakennettiin semaforiasema, joka välitti '
+          + 'sähkelankaa pitkin tiedot joensuulle saapuvista laivoista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Torni, joka jauhoi viljaa ja vahti sitten satamaa',
+          tiedosto: 'Brisbane Old Windmill SLNSW FL790597.jpg',
+          teksti: 'Wickham Terracen tuulimylly on Queenslandin vanhin '
+            + 'säilynyt rakennus. Perustuksia alettiin kaivaa heinäkuussa '
+            + '1828, ensimmäinen vilja jauhettiin lokakuun viimeisenä '
+            + 'päivänä, ja tornin kylkeen liitettiin polkumylly, joka toimi '
+            + 'voimanlähteenä tuulettomina päivinä ja rangaistusvälineenä '
+            + 'vankeja vastaan. Jauhaminen loppui 1845 ja polkumylly '
+            + 'purettiin. Vuodesta 1855 tornia käytettiin signaaliasemana, '
+            + 'ja vuoden 1861 kunnostuksessa siihen asennettiin aikapallo. '
+            + 'Isoisä ei olisi nähnyt palloa putoavan: se korvattiin '
+            + 'aikatykillä jo 1866, ja signaalimiehen mökki rakennettiin '
+            + 'vasta 1883.',
+          selite: 'Vanha tuulimylly toimi signaaliasemana, ja sen vieressä '
+            + 'seisoi korkea lipputanko, jonka viireillä ilmoitettiin '
+            + 'joensuulle saapuneista laivoista.',
+          lahde: 'G. F. Matthews, Wikimedia Commons (PD)',
+          wiki: 'The Old Windmill, Brisbane',
+        },
+        {
+          otsikko: 'Parlamentti, joka valmistui isoisän ympärillä',
+          tiedosto: 'Parliament House, Brisbane, Botanic Gardens facade 01.jpg',
+          teksti: 'Uuden siirtokunnan parlamentti kokoontui ensimmäisen '
+            + 'kerran 22. toukokuuta 1860 entisessä vankibarakissa, ja '
+            + 'kunnollisen talon suunnittelukilpailu meni kahdesti uusiksi '
+            + 'ennen kuin siirtokunnan arkkitehdin Charles Tiffinin ehdotus '
+            + 'valittiin. Peruskiven laski kuvernööri George Bowen 14. '
+            + 'heinäkuuta 1865, ja George Streetin julkisivu avattiin '
+            + 'elokuussa 1868 ranskalaisen renessanssin tyyliin. Isoisän '
+            + 'matkan aikaan rakennus oli siis käytössä mutta yhä kesken: '
+            + 'kaarikäytävät ja pylväiköt valmistuivat vasta 1878 ja Alice '
+            + 'Streetin siipi 1889. Rakentaja Joshua Jeays louhi '
+            + 'hiekkakiven omista louhoksistaan.',
+          selite: 'Queenslandin parlamenttitalo on kasvitieteellisen '
+            + 'puutarhan kupeessa, ja sen kuninkaita esittävät '
+            + 'lasimaalaukset tuotiin Birminghamista.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Parliament House, Brisbane',
+        },
+        {
+          otsikko: 'Pääposti, jonka tiloissa asui museo',
+          tiedosto: 'General Post Office, Queen Street, Brisbane, 1897.jpg',
+          teksti: 'Queen Streetin pääposti avattiin 28. syyskuuta 1872, vain '
+            + 'puoli vuotta ennen isoisän matkaa. Arkkitehti oli '
+            + 'F. D. G. Stanley, ja rakennuspaikalta oli purettu edellisenä '
+            + 'vuonna talo, jossa oli aikanaan pidetty naisvankeja. '
+            + 'Julkisivun päätykolmiossa on kello, jota valaistiin aluksi '
+            + 'kaasulla, ja syvät verannat ja korkeat huoneet tehtiin '
+            + 'ilmastoa varten. Vuonna 1873 talossa toimi myös Queenslandin '
+            + 'museo, joka muutti William Streetille vasta 1879; samana '
+            + 'vuonna John Petrien rakentama toinen siipi valmistui ja '
+            + 'lennätinkonttori pääsi saman katon alle.',
+          selite: 'Vuoden 1897 kaupallisen valokuvasarjan levy numero 50 '
+            + 'esittää pääpostin pylväikön ja Queen Streetin '
+            + 'hevosvetoiset kaksikerroksiset raitiovaunut.',
+          lahde: 'Queensland State Archives, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'General Post Office, Brisbane',
+        },
+        {
+          otsikko: 'Tulva, joka vei sillan mukanaan',
+          tiedosto: 'Queensland State Archives 3071 Panorama from Kangaroo Point during the Brisbane River flood 1893.png',
+          teksti: 'Helmikuun 1893 suurtulva peitti laajat alueet Brisbanesta '
+            + 'ja vei mukanaan ensimmäisen Victoria Bridgen kokonaan. Sillan '
+            + 'tilalle järjestettiin väliaikainen lauttayhteys, mutta se '
+            + 'päättyi onnettomuuteen kolme vuotta myöhemmin, kun '
+            + 'Pearl-lautta kaatui helmikuussa 1896; arviolta puolet '
+            + 'kyydissä olleista kahdeksastakymmenestä sadasta ihmisestä '
+            + 'menehtyi. Kaupunki koki uudet suurtulvat 1974, 2011 ja 2022, '
+            + 'ja jokainen niistä on muuttanut sitä, miten Brisbane '
+            + 'varautuu jokeensa — vuoden 1974 jälkeen yläjuoksulle '
+            + 'rakennettiin Wivenhoen pato.',
+          selite: 'Vuoden 1893 tulvassa Brisbane-joki levisi Kangaroo '
+            + 'Pointista katsottuna yli koko keskustan alavien osien.',
+          lahde: 'Colonial Secretary\'s Office, Wikimedia Commons (PD)',
+          wiki: 'Brisbane',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kaupungin läpi kulkee joki, jonka turrbalinkielinen nimi on '
+        + 'Maiwar. Sen rannoilla ovat maailman ensimmäinen viljelty '
+        + 'makadamiapuu, laavakalliot ja mäki, jonka nimi vaihtui kesken '
+        + 'kaiken.',
+      tehtava: {
+        kysymys: 'Millä nimellä turrbalit kutsuvat Brisbanen halki virtaavaa jokea?',
+        vaihtoehdot: [
+          'Maiwar',
+          'Barrambin',
+          'Magandjin',
+          'Kurilpa',
+        ],
+        oikea: 0,
+        fakta: 'Maiwar oli vuosituhansien ajan alueen kulttuurisen, '
+          + 'taloudellisen ja seremoniallisen elämän keskus, ja nimi on '
+          + 'nykyään myös yhden Brisbanen vaalipiirin nimi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puutarha, joka ruokki vangit ja kasvatti makadamian',
+          tiedosto: 'Walter Hill Fountain in City Botanic Gardens, Brisbane, Queensland, 2020.jpg',
+          teksti: 'Kasvitieteellinen puutarha alkoi 1825 vankisiirtolan '
+            + 'ruokaviljelmänä, ja 1828 Uuden Etelä-Walesin '
+            + 'siirtokuntakasvitieteilijä Charles Fraser valitsi alueen '
+            + 'julkiseksi puutarhaksi. Vuodesta 1855 sitä hoiti kuraattori '
+            + 'Walter Hill, joka pysyi virassa vuoteen 1881 asti eli koko '
+            + 'isoisän matkan ajan. Hill kokeili kaupallisesti lupaavia '
+            + 'lajeja: hän istutti 1858 maailman ensimmäisen viljellyn '
+            + 'makadamiapähkinäpuun ja tuki John Buhotia, jonka käsissä '
+            + 'valmistui huhtikuussa 1862 Queenslandin ensimmäinen kiteinen '
+            + 'sokerierä. Puutarha on tulvinut yhdeksän kertaa vuosina '
+            + '1870–2011.',
+          selite: 'Puutarhan juomavesilähteen suunnitteli 1867 siirtokunnan '
+            + 'arkkitehti Charles Tiffin, ja se tunnetaan nykyään Walter '
+            + 'Hillin lähteenä.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Brisbane City Botanic Gardens',
+        },
+        {
+          otsikko: 'Maiwar, jota kutsutaan ruskeaksi käärmeeksi',
+          tiedosto: 'AUS Brisbane, Toowong, Brisbane River 001.jpg',
+          teksti: 'Joen turrbalinkielinen nimi on Maiwar, ja se oli '
+            + 'vuosituhansien ajan alueen tärkein kokoontumis- ja '
+            + 'ruokapaikka. John Oxley nimesi sen uudelleen 1823. Joki on '
+            + '344 kilometriä pitkä ja niin mutkitteleva ja sameavetinen, '
+            + 'että brisbanelaiset kutsuvat sitä ruskeaksi käärmeeksi. '
+            + 'Vuorovesi työntää suolaista vettä Mount Crosbyn padolle '
+            + 'saakka, ja vedessä elävät muun muassa queenslandinkeuhkokala '
+            + 'ja härkähait. Ruoppaus alkoi 1862, ja isoisän matkan aikaan '
+            + 'joki oli yhä valtatie: Ipswichiin mentiin vettä pitkin, '
+            + 'koska rautatie valmistui vasta 1875.',
+          selite: 'Toowongin kohdalla Brisbane-joki kaartaa keskustan '
+            + 'länsipuolella, ja veden ruskeus tulee tulvatasangon '
+            + 'hienojakoisesta savesta.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Brisbane River',
+        },
+        {
+          otsikko: 'Kalliot, joista louhittiin kaupunki',
+          tiedosto: 'Kangaroo Point Cliffs - Brisbane - Australia (34942602383).jpg',
+          teksti: 'Kangaroo Pointin jyrkänteet ovat rioliittia eli '
+            + 'laavakiveä, joka purkautui noin 230 miljoonaa vuotta sitten '
+            + 'ja täytti muinaisen jokilaakson. Turrbalit asuivat '
+            + 'niemekkeellä ennen siirtokuntaa. 1800-luvulla kalliosta '
+            + 'louhittiin rakennuskiveä, ja juuri louhinta teki jyrkänteistä '
+            + 'nykyisen kaltaiset. Kallion juurella oli Queenslandin '
+            + 'laivaston päävarasto, jota Australian kuninkaallinen laivasto '
+            + 'käytti vuoteen 1959 ja armeija vuoteen 1984. Nykyään '
+            + 'suojellut varastorakennukset ovat jokitoimintaa ja '
+            + 'kalliokiipeilyä järjestävän yrityksen käytössä.',
+          selite: 'Kangaroo Pointin kalliot kohoavat suoraan joesta aivan '
+            + 'keskustan vastapäätä, ja ne ovat Brisbanen suosituin '
+            + 'kiipeilypaikka.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Kangaroo Point, Queensland',
+        },
+        {
+          otsikko: 'Mäki, jonka nimi vaihtui kesken kaiken',
+          tiedosto: 'Mount Coot-tha seen from Sherwood, Queensland, 2021.jpg',
+          teksti: 'Vuonna 1839 maanmittari James Warner raivasi mäen laen '
+            + 'puhtaaksi yhtä isoa eukalyptusta lukuun ottamatta, koska '
+            + 'yksinäinen puu näkyi kauas ja kelpasi kolmiomittauspisteeksi. '
+            + 'Niin syntyi nimi One Tree Hill, ja sillä nimellä isoisä olisi '
+            + 'mäen tuntenut. Nykyinen nimi tuli vasta elokuussa 1883, kun '
+            + 'alue julistettiin puistoksi; sen ehdotti virkamies Henry '
+            + 'Wyatt Radford paikallisen aboriginaalityönjohtajan Kerwallin '
+            + 'neuvosta. Ku-ta on yugarabulin sana hunajalle, jota alueelta '
+            + 'kerättiin pistiäisettömiltä mehiläisiltä. Mäki ei ole edes '
+            + 'seudun korkein: sen 226 metriä jää Constitution Hillin ja The '
+            + 'Summitin alle.',
+          selite: 'Mount Coot-tha kohoaa metsäisenä selänteenä kaupungin '
+            + 'länsilaidalla, ja sen rinteillä ovat Brisbanen toinen '
+            + 'kasvitieteellinen puutarha ja planetaario.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Coot-tha, Queensland',
+        },
+      ],
+    },
+    {
+      id: 'kaupunkikuva',
+      nimi: 'Kaupunkikuva',
+      johdanto: 'Kupolit ovat 1880-luvulta ja niitit 1930-luvulta, kävelykatu '
+        + '1980-luvulta. Kaksi nousukautta ja yksi maailmannäyttely ovat '
+        + 'muokanneet Brisbanen ilmeen kolmeen kertaan.',
+      tehtava: {
+        kysymys: 'Minkä kaupungin sillasta Story Bridgen suunnittelu otti mallia?',
+        vaihtoehdot: [
+          'Montrealin',
+          'New Yorkin',
+          'Lissabonin',
+          'Edinburghin',
+        ],
+        oikea: 0,
+        fakta: 'Esikuva oli vuonna 1930 valmistunut Jacques Cartier -silta. '
+          + 'Story Bridgen suunnitteli John Bradfield, sama insinööri, joka '
+          + 'vastasi Sydneyn satamansillasta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Silta, jonka perustukset kaivettiin paineen alla',
+          tiedosto: 'Approaching Story Bridge from Fortitude Valley, Brisbane.jpg',
+          teksti: 'Story Bridge on Australian pisin ulokepalkkisilta, ja sen '
+            + 'suunnitteli John Bradfield Montrealin Jacques Cartier '
+            + '-sillan mallin mukaan. Työ alkoi toukokuussa 1935, ja osat '
+            + 'valmistettiin Rocklean tehtaalla. Vaikein kohta oli '
+            + 'eteläranta, jonka perustukset piti kaivaa neljänkymmenen '
+            + 'metrin syvyyteen: vesi olisi täyttänyt kuilun heti, joten työ '
+            + 'tehtiin paineistetussa kaisuunissa nelinkertaisessa '
+            + 'ilmanpaineessa, ja jokaisen vuoron jälkeen tarvittiin lähes '
+            + 'kahden tunnin paineenpurku. Sillassa on 1,25 miljoonaa '
+            + 'niittiä, kolme rakentajaa kuoli työn aikana, ja avajaisia '
+            + 'vietettiin 6. heinäkuuta 1940.',
+          selite: 'Story Bridge yhdistää Fortitude Valleyn ja Kangaroo '
+            + 'Pointin, ja sen ylityksestä perittiin kuuden pennin maksu '
+            + 'vuoteen 1947 asti.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Story Bridge',
+        },
+        {
+          otsikko: 'Kupoli, jonka alla laskettiin nousukauden tullit',
+          tiedosto: 'Customs House, Brisbane, Queensland, 2019, 01.jpg',
+          teksti: 'Tullitalo rakennettiin 1886–1889 siirtokunnan '
+            + 'arkkitehtitoimiston Charles McLayn suunnitelmien mukaan, ja '
+            + 'urakoitsijana oli John Petrie & Son. Talo avattiin '
+            + '2. syyskuuta 1889 keskellä Queenslandin 1880-luvun '
+            + 'rakennusbuumia, ja kuparilla päällystetyn kupolin teki '
+            + 'kuparisepäksi palkattu William Smith Henderson. Julkisivun '
+            + 'päätykolmiossa on kilpi emun ja kengurun välissä, vaikka '
+            + 'Queenslandille myönnettiin oma vaakuna vasta 1893; '
+            + 'parvekkeiden rautakaide tuotiin Englannista kuningatar '
+            + 'Viktorian nimikirjaimin. Brisbane Courier ennusti muutama '
+            + 'päivä avajaisten jälkeen, että kupolista tulee yksi '
+            + 'kaupungin tunnusmerkeistä.',
+          selite: 'Tullitalon kuparikupoli näkyy Queen Streetiä pitkin '
+            + 'molempiin suuntiin ja joelta merelle päin tuleville '
+            + 'laivoille.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Customs House, Brisbane',
+        },
+        {
+          otsikko: 'Katu, jolta autot poistettiin',
+          tiedosto: 'AUS Brisbane, Central Business District, Queen Street Mall 012.jpg',
+          teksti: 'Queen Street suljettiin autoliikenteeltä 1981, ja Robin '
+            + 'Gibsonin suunnitteleman kävelykadun avasi kuningatar '
+            + 'Elisabet II 9. elokuuta 1982 — ajoissa saman vuoden '
+            + 'Kansainyhteisön kisoihin. Kävelykatu on noin viisisataa '
+            + 'metriä pitkä George Streetiltä Edward Streetille, ja sen '
+            + 'varrella on yli seitsemänsataa liikettä kuudessa '
+            + 'kauppakeskuksessa, yhteensä 40 000 neliömetriä. Aluetta '
+            + 'jatkettiin 1988 maailmannäyttelyn tahdissa. Kadun alla on '
+            + 'maanalainen bussiasema, joten kävelykatu lepää '
+            + 'kirjaimellisesti joukkoliikenteen päällä.',
+          selite: 'Kävelykadun keskellä avautuu portaikko maanalaiselle '
+            + 'Queen Streetin bussiasemalle, joka on osa samaa '
+            + 'TransLink-verkkoa kuin junat ja jokilautat.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Queen Street Mall',
+        },
+        {
+          otsikko: 'Maailmannäyttely, josta jäi puisto',
+          tiedosto: 'Aerial shots of Brisbane and South Bank, Preparing the site for Expo 88, 1986.jpg',
+          teksti: 'World Expo 88 järjestettiin South Brisbanen rannalla '
+            + 'kuuden kuukauden ajan huhtikuusta lokakuuhun 1988 teemalla '
+            + 'vapaa-aika teknologian aikakaudella. Kävijämääristä on '
+            + 'liikkeellä kaksi lukua: lipun osti yli 15,7 miljoonaa '
+            + 'ihmistä, ja kun henkilökunta ja kutsuvieraat lasketaan '
+            + 'mukaan, luku nousee yli kahdeksaantoista miljoonaan. '
+            + 'Näyttelyn jälkeen hallitus aikoi myydä alueen '
+            + 'rakennusmaaksi, mutta kansalaisliike sai sen muutettua '
+            + 'puistoksi: South Bank Corporation perustettiin 1989 ja '
+            + 'puisto avattiin 20. kesäkuuta 1992. Nykyään rannalla on '
+            + 'kilometrin mittainen pylväskäytävä ja keinotekoinen '
+            + 'hiekkaranta.',
+          selite: 'South Brisbanen rantaa raivattiin 1986 näyttelyalueeksi '
+            + 'aivan keskustan vastapäätä, ja samalle kohdalle avattiin '
+            + 'puisto kuusi vuotta myöhemmin.',
+          lahde: 'Queensland State Archives, Wikimedia Commons (PD)',
+          wiki: 'World Expo 88',
+        },
+      ],
+    },
+  ],
+  /*
+   * CHICAGO (Opus 23.8.2026). Alusta asti tehty kaupunkilehti: kohteella
+   * ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen tätä erää.
+   * Pohjana ovat docs/mantereet-tyoaineisto/faktapohja-chicago.md ja sen
+   * riippumaton tarkistus tarkistus-chicago.md, jotka luettiin yhdessä;
+   * ristiriidoissa TARKISTUS VOITTAA. Väitteet on tarkistettu
+   * en-Wikipedian raakateksteistä (action=raw, 23.8.2026): Chicago,
+   * Great Chicago Fire, Home Insurance Building, Manhattan Building
+   * (Chicago), Chicago school (architecture), Rookery Building, Chicago
+   * Board of Trade Building, Union Stock Yards, Chicago Sanitary and
+   * Ship Canal, World's Columbian Exposition, Millennium Park, Chicago
+   * Water Tower, Chicago "L", O'Hare International Airport, Potawatomi,
+   * Fort Dearborn, Treaty of Chicago, American Indian Center, Prairie
+   * Band Potawatomi Nation ja Windy City (nickname).
+   *
+   * TARKISTUSRAPORTIN KOLME KORJAUSTA ON TEHTY. (1) Faktapohjan
+   * K2-fact-laatikko sanoi suurpalosta "ainakin 300 kuoli". Se kääntää
+   * lähteen epävarmuuden väärinpäin: "Great Chicago Fire" sanoo, että
+   * 120 ruumista löydettiin ja kuolonuhreja saattoi olla jopa 300.
+   * Nosto sanoo sen tässä järjestyksessä ja tällä varauksella.
+   * (2) Union Stock Yard Gate valmistui 1879, ei 1875 — portin oma
+   * artikkeli antaa infoboksissa, historiaosiossa ja kategoriassa
+   * vuoden 1879, ja 1875 on vain johdantolauseen suunnitteluvuosi.
+   * Luku 1879 on kansikuvan selitteessä. (3) Anish Kapoor on
+   * brittiläis-intialainen, ei pelkästään brittiläinen; oppaan jakso 4
+   * sanoo sen niin.
+   *
+   * KAKSI WIKIPEDIAN SISÄISTÄ RISTIRIITAA RATKAISTIIN NÄIN.
+   * (1) Rookery Buildingin valmistumisvuosi: "Chicago school
+   * (architecture)" -artikkelin taulukko sanoo 1886, mutta talon oma
+   * artikkeli sanoo sekä infoboksissa että johdannossa 1888. Lehti
+   * käyttää talon oman artikkelin lukua 1888, koska se on tarkempi
+   * lähde — sama periaate kuin Vancouverin sataman tonniluvuissa. Sama
+   * artikkeli tarkentaa myös rakenteen: Rookeryssä on kantavat
+   * ulkoseinät ja teräsrunko sisällä, ei siis puhdas luurankorunko.
+   * (2) Kylän kasvu 1833–1840: "Chicago"-artikkelin historiaosio sanoo
+   * "yli 6 000", saman artikkelin Demographics-osio "yli 4 000"
+   * ensimmäisen väestönlaskennan mukaan. Lehti käyttää historiaosion
+   * lukua, jonka faktapohja oli merkinnyt lähteekseen, eikä väitä sen
+   * olevan väestönlaskennan luku.
+   *
+   * VUOSI 1873 ON SANOTTU AUKI KOLMESTI. Isoisän matkavuonna Chicago
+   * oli kesken jälleenrakennuksen: suurpalo oli ollut lokakuussa 1871,
+   * ensimmäinen pilvenpiirtäjä valmistui vasta 1885 ja joen pysyvä
+   * kääntö vasta 1900. Tämä kerrotaan etusivun leipätekstissä
+   * (js/packs/northamerica-artikkelit.js), kaupunkisivun ja
+   * arkkitehtuurisivun johdannoissa sekä nostossa A3, jottei pelaaja
+   * luule isoisän katselleen pilvenpiirtäjiä.
+   *
+   * "ENSIMMÄINEN PILVENPIIRTÄJÄ" KERROTAAN KIISTANA, EI VÄITTEENÄ.
+   * Nosto K3 sanoo tittelin kiistanalaiseksi ja A1 kertoo kiistan
+   * kokonaan: aikalaislehdistö ei käyttänyt nimitystä, se vakiintui
+   * vasta satavuotisjuhlan tienoilla 1985, ja Blair Kamin
+   * kyseenalaisti sen Chicago Tribunessa 7.11.2019.
+   *
+   * "TUULINEN KAUPUNKI" -LEMPINIMEN SÄÄSELITYSTÄ EI VAHVISTETA.
+   * "Windy City (nickname)" -artikkeli antaa neljä kilpailevaa
+   * selitystä ja sanoo suoraan, ettei Chicago ole muita Yhdysvaltain
+   * kaupunkeja tuulisempi (keskituuli 10,3 mph vs. Bostonin 12,4 mph).
+   * Oppaan jakso 5 kertoo tämän ääneen, koska pelin oma visa
+   * (js/packs/northamerica-questions.js) yksinkertaistaa asian.
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3. Potawatomi ja Kolmen tulen
+   * neuvosto (Odawa, Ojibwe, Potawatomi) kuvataan nykyisinä kansoina:
+   * AK4 kertoo vuonna 1953 perustetusta American Indian Centeristä,
+   * joka toimii yhä ja palvelee yli viidenkymmenen heimon jäseniä, ja
+   * vuoden 2024 maapäätöksestä, jolla Prairie Band Potawatomi Nation
+   * sai 130 eekkeriä DeKalb Countyssa luottamukseen. Vääryydet (1833
+   * sopimuksen myöhästyneet korvaukset, pakkosiirto Mississippin
+   * länsipuolelle) kerrotaan tapahtumina ilman romantisointia ja ilman
+   * kärsimyksen yksityiskohtia. Fort Dearbornin 1812 hyökkäyksestä
+   * kerrotaan sekä uhrit että päällikkö Mucktypoken rooli hyökkäyksen
+   * vastustajana. Council of Three Firesin perustamisvuotta 796 EI
+   * käytetä: se perustuu suulliseen perimätietoon eikä ole samalla
+   * tavalla tarkistettavissa kuin muut luvut.
+   *
+   * KULTTUURIVISAN (js/packs/northamerica-questions.js) viiden
+   * kysymyksen vastaukset löytyvät lehdestä: Michiganjärvi (johdanto,
+   * etusivun intro ja oppaan jakso 2), pilvenpiirtäjä 1880-luvulla
+   * (nosto K3), rautateiden solmukohta (nosto K4), suurpalo 1871
+   * (nosto K2) ja joen kääntäminen 1900 (nosto A3). Kummankaan
+   * teemasivun minitehtävä ei kysy samaa kuin visa: arkkitehtuurisivu
+   * kysyy maailmannäyttelyn lempinimeä (vastaus A4:ssä) ja
+   * alkuperäiskansat-sivu Kolmen tulen neuvoston kolmea kansaa
+   * (vastaus AK1:ssä).
+   *
+   * SIVU-ID:T. Molemmat teemasivut (`arkkitehtuuri`,
+   * `alkuperaiskansat`) ovat js/ui-apurit.js:n AIHE_IKONIT-taulun
+   * ulkopuolella ja piirtyvät yleiskuvakkeella — sama perusteltu
+   * poikkeus kuin Vancouverissa, ja `alkuperaiskansat` on jo käytössä
+   * sekä Australian laudalla että Vancouverissa.
+   *
+   * KUVAT: kaikki 21 kuvaa on haettu Commonsista KATEGORIOILLA (tai
+   * kategorian puuttuessa tiedostohaulla), lisenssi ja tekijä on luettu
+   * rajapinnan extmetadatasta ja jokainen kuva on katsottu silmin 900
+   * pikselin esikatseluna. Hylkäysten yleisin syy oli tunnistettava
+   * ihminen etualalla: Field Buildingin ja vesitornin katunäkymissä,
+   * Rookeryn pääsisäänkäynnillä, Cloud Gaten aukiolla ja Jenneyn
+   * haudalla otetussa kuvassa kasvot ovat luettavissa. Toiseksi yleisin
+   * syy oli kuvan päälle lisätty merkintä: Ball State Universityn
+   * copyright-rivi maailmannäyttelyn Court of Honor -vedoksessa,
+   * postikortin painettu otsikkopalkki Loopin 1900-kuvassa,
+   * stereokortin paspartuu ja käsinkirjoitettu teksti vesitornin
+   * palonedellisessä kuvassa sekä Field Buildingin litografian
+   * lyijykynäsignatuuri. Lentokoneen siipi ja yhtiön tunnus hylkäsivät
+   * kaksi kanavan ilmakuvaa, mainosbanderollit Loopin katukuvan ja
+   * suuri kattokirjaiminen tornin nimi Riverwalkin kuvan. Karjapihojen
+   * lintuperspektiivipainoksesta valittiin rajattu versio, koska
+   * rajaamattomassa on kirjaston arkistoleima; painoksen omat
+   * paikannimet (Dexter Park, Transit Park) ja Currier & Ivesin
+   * painettu nimiö ovat julkaisijan omaa literaa, sama poikkeus kuin
+   * Vancouverin palokartassa, ja ne selitetään kuvateksteissä.
+   *
+   * KAKSI LÄHDERIVIÄ VAATII SELITYKSEN. (1) Vuoden 1830 kartan
+   * extmetadata.Artist on kirjaimellisesti "Copyrighted by Alfred T.
+   * Andreas", ja lähderivi toistaa sen sellaisenaan, koska talon sääntö
+   * on kirjoittaa tekijä täsmälleen Artist-kentän muodossa. (2)
+   * Karjapihojen litografialla ei ole infoboksia eikä siis
+   * Artist-kenttää lainkaan; tiedostosivulle kopioitu Kongressin
+   * kirjaston luettelotieto nimeää tekijäksi Charles Rascherin (Walsh &
+   * Co., 1878), ja lähderivi käyttää sitä. Nimeä ei ole arvattu.
+   *
+   * AIHETOISTO: Union Stock Yards esiintyy kahdesti (kansikuvan portti
+   * 1879 ja noston K4 lintuperspektiivipainos 1878) ja Chicago-joen suu
+   * kahdesti (avauskuvan vesirajanäkymä ja noston A3 sulkukuva) — eri
+   * tiedostot, eri kuvakulmat, eri jutut. Muut kohteet esiintyvät
+   * kerran, eikä yksikään kuva ole sama kuin matkakirjan
+   * js/packs/northamerica-valokuvat.js:n chicago-lohkossa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä. Oppaan jakso 5 nojaa siis en-Wikipedian Chicago-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin, Karachin ja
+   * Vancouverin malli. Mittauspiste olisi keskusta 41,88 / -87,63.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta eikä kuvaile kuvaa visuaalisesti, ja se on yhden
+   * virkkeen mittainen.
+   */
+  chicago: [
+    {
+      id: 'kaupunki',
+      nimi: 'Chicago',
+      johdanto: 'Michiganjärven rannalle nousi kaupunki nopeammin kuin mikään '
+        + 'toinen Yhdysvalloissa, ja lokakuussa 1871 se paloi lähes kokonaan. '
+        + 'Isoisän matkavuonna 1873 Chicago rakensi itseään uudelleen kivestä '
+        + 'ja tiilestä.',
+      kansikuvat: [
+        {
+          tiedosto: 'The Chicago Water Tower.jpg',
+          selite: 'Vuonna 1869 valmistunut vesitorni oli ainoa suurpalon '
+            + 'tuhoalueella pystyyn jäänyt julkinen rakennus, ja se seisoo '
+            + 'yhä Michigan Avenuen keskellä.',
+          lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Historic Union stock yard gate, Chicago, Illinois LCCN2011630451.tif',
+          selite: 'Union Stock Yardsin porttiin veistetty naudanpää katsoo yhä '
+            + 'Exchange Avenuelle, vaikka portin takana olleet karjapihat ovat '
+            + 'kadonneet; Burnhamin ja Rootin suunnittelema portti valmistui '
+            + '1879.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Millennium Park from Nichols Bridgeway, Chicago, Illinois (9179499913).jpg',
+          selite: 'Millennium Park avattiin 2004 vanhan rautatiepiha-alueen '
+            + 'päälle Loopin laidalle, ja sen konserttilavan ylle kaartuu '
+            + 'teräsputkista koottu ristikko.',
+          lahde: 'Ken Lund from Reno, Nevada, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kolmesta suunnasta — Loopin
+       * siluetti järveltä aamunkoitteessa, ilmakuva pohjoisen puolelta
+       * rantaviivaa pitkin ja joen suu vesirajasta katsottuna. Yksikään
+       * ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Chicago sunrise 1.jpg',
+          selite: 'Loopin tornit seisovat Michiganjärven rannalla samalla '
+            + 'kohdalla, jolla kaupunki paloi 1871 ja rakennettiin uudelleen.',
+          lahde: 'Daniel Schwen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '360 Chicago (Unsplash).jpg',
+          selite: 'Kaupunki jatkuu järven rantaviivaa pitkin pohjoiseen, ja '
+            + 'rannan ja korttelien väliin jää yhtenäinen puistojen ja '
+            + 'uimarantojen nauha.',
+          lahde: 'Kevin Rajaram kevinrajaram, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Wendella architecture tour on Chicago River (9433676806).jpg',
+          selite: 'Chicago-joen pääuoma kääntyy keskustan halki siitä kohdasta, '
+            + 'jossa se ennen laski Michiganjärveen; vasemmalla ovat kaupungin '
+            + 'paloveneet.',
+          lahde: 'Roy Luck, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Villisipulin nimi ja kylä joka kasvoi seitsemässä vuodessa',
+          tiedosto: '1830 Map of Chicago.jpg',
+          teksti: 'Nimi Chicago on ranskalaistettu muoto Miami–Illinois-kielen '
+            + 'sanasta šikaakwa, joka tarkoittaa villisipulia tai '
+            + '-valkosipulia. Paikka kirjattiin ensimmäisen kerran muodossa '
+            + 'Checagou noin 1679, kun ranskalainen La Salle mainitsi sen '
+            + 'matkamuistiossaan. Ensimmäinen tunnettu pysyvä asukas oli '
+            + 'kauppias Jean Baptiste Point du Sable, joka perusti asutuksen '
+            + '1780-luvulla ja tunnetaan Chicagon perustajana. Elokuun '
+            + '12. päivänä 1833 paikka järjestäytyi noin kahdensadan asukkaan '
+            + 'kylänä, ja seitsemässä vuodessa väkiluku kasvoi yli '
+            + 'kuuteentuhanteen. Kaupunki perustettiin virallisesti '
+            + '4. maaliskuuta 1837.',
+          selite: 'Alfred T. Andreasin 1884 julkaisema kartta esittää Chicagon '
+            + 'vuonna 1830: joen kaksi haaraa, kourallinen tontteja sen suulla '
+            + 'ja muuten kanavamaata Michiganjärven rannalla.',
+          lahde: 'Copyrighted by Alfred T. Andreas, Wikimedia Commons (PD)',
+          wiki: 'Chicago',
+        },
+        {
+          otsikko: 'Kaupunki joka paloi ja jäi pystyyn vesitorninsa varaan',
+          tiedosto: 'Chicago in Flames by Currier & Ives, 1871.jpg',
+          teksti: 'Suurpalo syttyi 8. lokakuuta 1871 illalla DeKoven '
+            + 'Streetillä, perimätiedon mukaan O\'Learyn perheen navetasta, ja '
+            + 'kuiva kesä sekä lounaistuuli veivät tulen kahdesti Chicago-joen '
+            + 'yli. Palo tuhosi yli 17 000 rakennusta ja jätti noin 90 000 '
+            + 'ihmistä eli lähes kolmasosan silloisesta 324 000 asukkaasta '
+            + 'kodittomaksi. Ruumiita löydettiin 120, mutta kuolleiden määrän '
+            + 'arvioidaan nousseen jopa kolmeensataan. Tuhoalueen julkisista '
+            + 'rakennuksista jäi pystyyn vain yksi: 1869 valmistunut vesitorni, '
+            + 'jonka oma pumppuasema kuitenkin syttyi ja lakkasi pumppaamasta '
+            + 'sammutusvettä.',
+          selite: 'Currier & Ivesin vuoden 1871 kivipainoksessa väki pakenee '
+            + 'paloa Randolph Streetin sillan yli, ja kuvan alalaidassa on '
+            + 'kustantajan oma painettu nimiö.',
+          lahde: 'Currier and Ives, Wikimedia Commons (PD)',
+          wiki: 'Great Chicago Fire',
+        },
+        {
+          otsikko: 'Kymmenen kerroksen talo joka ei kaatunut',
+          tiedosto: 'Streetwall (532675780).jpg',
+          teksti: 'Jälleenrakennuksen keskellä arkkitehti William Le Baron '
+            + 'Jenney suunnitteli talon, jonka painon kantoi raudasta ja '
+            + 'teräksestä koottu runko eivätkä enää paksut kantavat seinät. '
+            + 'Home Insurance Building valmistui 1885 kymmenkerroksisena, ja '
+            + 'kaupungin virkamiehet keskeyttivät työt hetkeksi tarkistaakseen '
+            + 'rakenteen turvallisuuden, koska talo painoi vain kolmasosan '
+            + 'vastaavan kivitalon painosta. Kaksi kerrosta lisättiin 1891. '
+            + 'Taloa kutsutaan usein maailman ensimmäiseksi pilvenpiirtäjäksi, '
+            + 'mutta titteli on kiistanalainen.',
+          selite: 'Oikealla kohoava Manhattan Building valmistui 1891 Jenneyn '
+            + 'piirustusten mukaan, ja se on vanhin pystyssä oleva '
+            + 'pilvenpiirtäjä, jonka koko painon kantaa pelkkä teräsluuranko.',
+          lahde: 'Payton Chung from DCA, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Home Insurance Building',
+        },
+        {
+          otsikko: 'Yhdeksän rautatieyhtiön yhteinen karjapiha',
+          tiedosto: 'Union stock yards chicago 1870s loc (cropped).jpg',
+          teksti: 'Yhdeksän rautatieyhtiön yhtymä osti 1864 noin 320 eekkeriä '
+            + 'suomaata kaupungin lounaispuolelta sadallatuhannella dollarilla '
+            + 'ja perusti Union Stock Yardsin, joka avautui jouluna 1865. '
+            + 'Karjan määrä kasvoi nopeasti: vuonna 1870 pihalla käsiteltiin '
+            + 'noin kaksi miljoonaa eläintä ja vuonna 1890 jo yhdeksän '
+            + 'miljoonaa. Vuosina 1865–1900 pihan läpi kulki arviolta 400 '
+            + 'miljoonaa eläintä. Rautateiden risteys ja karjapihat antoivat '
+            + 'kaupungille lempinimen, jonka runoilija Carl Sandburg kiteytti '
+            + '1916 säkeeseen Hog Butcher for the World.',
+          selite: 'Charles Rascherin vuoden 1878 lintuperspektiivipainos '
+            + 'esittää karjapihat aitauksineen ja ratapihoineen, ja painoksen '
+            + 'omat nimikilvet merkitsevät Dexter Parkin ja Transit Parkin.',
+          lahde: 'Rascher, Charles, Wikimedia Commons (PD)',
+          wiki: 'Union Stock Yards',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Chicago River and Wrigley Building - 01.jpg',
+          selite: 'Wrigley Buildingin kellotorni ja sen takana kohoava Tribune '
+            + 'Tower seisovat Michigan Avenuen sillan pohjoispäässä, ja niiden '
+            + 'juurella lähtevät joen arkkitehtuuriristeilyt.',
+          lahde: 'NorbertNagel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Chicago on Yhdysvaltain kolmanneksi suurin kaupunki ja '
+          + 'Keskilännen solmukohta. Matkailijan Chicago mahtuu pariin '
+          + 'neliökilometriin: keskellä on Loop, jonka rajaa kohoradan '
+          + 'silmukka, idässä järven ranta puistoineen ja uimarantoineen, '
+          + 'pohjoisessa joen yli Michigan Avenue ja vesitorni. Joki halkoo '
+          + 'keskustan ja on kaupungin paras näköalapaikka: sen varrelta '
+          + 'näkee kerralla 1880-luvun tiilitalot, 1930-luvun art decon ja '
+          + 'nykyiset lasitornit. Etelään päin, seitsemän kilometrin päässä '
+          + 'keskustasta, seisoo yhä karjapihojen kiviportti, ja lounaassa '
+          + 'on se kosteikkokannas, jonka takia koko kaupunki on tällä '
+          + 'kohdalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Chicago',
+          taitto: 'opas',
+          teksti: 'Ruutukaava kahden vesistön vedenjakajalla, kaupunki joka '
+            + 'opetteli rakentamaan korkealle kun sen oli pakko aloittaa '
+            + 'alusta.',
+          nosto: 'Vuonna 1833 paikalla asui noin kaksisataa ihmistä; '
+            + 'seitsemässä vuodessa heitä oli yli kuusituhatta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainväliset lennot laskeutuvat O\'Hare '
+                + 'International Airportille, joka on kaupungin '
+                + 'luoteislaidalla noin 27 kilometriä keskustasta ja jolla on '
+                + 'kahdeksan kiitotietä — enemmän kuin millään muulla '
+                + 'lentoasemalla maailmassa. Kentältä keskustaan pääsee '
+                + 'kohoradan sinisellä linjalla. Chicagon "L" aloitti '
+                + 'liikenteen 6. kesäkuuta 1892, ja siinä on nykyään '
+                + 'kahdeksan linjaa, 146 asemaa ja runsaat 165 kilometriä '
+                + 'rataa; osa kulkee kohoradalla, osa maan tasalla, osa '
+                + 'tunnelissa. Keskustan ympäri kiertävää silmukkaa '
+                + 'kutsutaan Loopiksi, ja nimestä on tullut koko '
+                + 'kaupunginosan nimi: puhekielessä the Loop tarkoittaa yhtä '
+                + 'lailla rataa kuin sen sisään jäävää liikekeskustaa.',
+              kuva: {
+                tiedosto: 'Brown Line transition 20120325.jpg',
+                selite: 'Chicagon kohorata nousee kadun yläpuolelle '
+                  + 'teräspilareiden varaan, ja Loop-kylttiä kantava juna on '
+                  + 'matkalla keskustan silmukkaan.',
+                lahde: 'User:JeremyA, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Chicago on Illinoisin koillisnurkassa makean veden '
+                + 'Michiganjärven lounaisrannalla, sekä Keskilännen että '
+                + 'Suurten järvien aluetta. Kaupunki on rakennettu mannerten '
+                + 'vedenjakajalle: Chicago Portagen kohdalla Mississippin ja '
+                + 'Suurten järvien vesistöt tulevat niin lähelle toisiaan, '
+                + 'että kanootin saattoi kantaa yhdestä toiseen. Juuri se '
+                + 'kannas teki paikasta kauppareitin jo kauan ennen '
+                + 'eurooppalaisia, ja sen takia yhdeksän rautatietä ja '
+                + 'myöhemmin kanava löysivät saman kohdan. Järven ranta on '
+                + 'keskustan kohdalla lähes kokonaan julkista puistoa, ja '
+                + 'kaupungin ruutukaava lähtee siitä sisämaahan päin '
+                + 'tasaisena kuin viivoitin.',
+              kuva: {
+                tiedosto: 'Streeterville, Chicago, Illinois and Lake Michigan Coastline (14187500926).jpg',
+                selite: 'Michiganjärven ranta keskustan kohdalla on '
+                  + 'täytemaalle rakennettua puistoa ja venesatamia, ja '
+                  + 'aallonmurtajat suojaavat niitä avoveden aallokolta.',
+                lahde: 'Ken Lund from Reno, Nevada, USA, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: arkkitehtuuri katsotaan veneestä',
+              teksti: 'Suosituin tapa nähdä kaupunki on lähteä '
+                + 'arkkitehtuuriristeilylle Chicago-joelle. Sama joki, joka '
+                + 'kerran uhkasi tukehduttaa kaupungin sen omiin '
+                + 'jätevesiin, on nyt sen paras näköalapaikka: veneestä '
+                + 'katsottuna julkisivut avautuvat kokonaan, kun taas '
+                + 'kadulta niistä näkee vain alimmat kerrokset. Risteily '
+                + 'kulkee pääuomaa ja molempia haaroja pitkin, ja opas '
+                + 'kertoo talo talolta, kuka sen suunnitteli ja miksi. Reitin '
+                + 'varrella on sekä Chicago Schoolin 1880-luvun '
+                + 'tiilijulkisivuja että lasitorneja, jotka ovat nuorempia '
+                + 'kuin risteilyt itse.',
+              kuva: {
+                tiedosto: 'Wacker Drive and the Chicago River.jpg',
+                selite: 'Chicago-joen pääuoma kulkee Wacker Driven ja Loopin '
+                  + 'välissä, ja sen yli nousee keskustan alueella toistakymmentä '
+                  + 'avattavaa siltaa.',
+                lahde: 'Strugglebussing, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: Millennium Park',
+              teksti: 'Vuonna 2004 avattu Millennium Park nousi vanhan '
+                + 'rautatiepiha-alueen paikalle Loopin laidalle. Puisto '
+                + 'valmistui neljä vuotta myöhässä, ja alkuperäinen 150 '
+                + 'miljoonan dollarin budjetti nousi lopulta 475 miljoonaan, '
+                + 'josta kaupunki maksoi 270 miljoonaa ja loput yksityiset '
+                + 'lahjoittajat. Puiston kiiltävästä Cloud Gate -veistoksesta, '
+                + 'jonka teki brittiläis-intialainen Anish Kapoor, on tullut '
+                + 'kaupungin tunnetuin symboli. Osa havainnoitsijoista pitää '
+                + 'puistoa kaupungin tärkeimpänä hankkeena sitten vuoden 1893 '
+                + 'maailmannäyttelyn.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Chicagosta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Chicago-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on lämminkesäinen mannerilmasto neljällä selvällä '
+                + 'vuodenajalla. Heinäkuun keskilämpötila on noin 24 astetta '
+                + 'ja iltapäivisin noin 29, ja tavallisena kesänä mittari '
+                + 'nousee vähintään 32 asteeseen seitsemäntenätoista päivänä; '
+                + 'joulu–maaliskuun normaali päivälämpötila on noin kaksi '
+                + 'astetta. Ukkosia on keskimäärin 38 päivänä vuodessa. '
+                + 'Lempinimestä kannattaa tietää yksi asia: "Tuulisen '
+                + 'kaupungin" alkuperästä on neljä kilpailevaa selitystä, '
+                + 'eikä Chicago ole mittausten mukaan muita Yhdysvaltain '
+                + 'kaupunkeja tuulisempi — keskituulennopeus on 10,3 mailia '
+                + 'tunnissa, Bostonissa 12,4.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'arkkitehtuuri',
+      nimi: 'Arkkitehtuuri',
+      johdanto: 'Suurpalon tuhkasta nousi uusi tapa rakentaa: teräsrunko '
+        + 'kantoi talon painon seinien sijaan. Isoisän matkavuonna 1873 sitä '
+        + 'ei vielä ollut, vaan kaupunki muurasi kiveä ja tiiltä.',
+      tehtava: {
+        kysymys: 'Millä lempinimellä vuoden 1893 maailmannäyttelyn rakennusryhmää kutsuttiin?',
+        vaihtoehdot: [
+          'Valkoinen kaupunki',
+          'Kultainen kortteli',
+          'Marmorinen mailinpätkä',
+          'Hopeinen ranta',
+        ],
+        oikea: 0,
+        fakta: 'Nimi tuli näyttelyn uusklassisesta arkkitehtuurista, joka '
+          + 'valaistiin hehkulampuilla. Alue kattoi lähes 700 eekkeriä '
+          + 'nykyisessä Jackson Parkissa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Talo joka purettiin toisen pilvenpiirtäjän tieltä',
+          tiedosto: 'Chicago Board of Trade Building, LaSalle Street and Jackson Boulevard, Chicago, IL (52901199896).jpg',
+          teksti: 'Home Insurance Building seisoi La Sallen ja Adamsin '
+            + 'kulmassa vuoteen 1931, jolloin se purettiin Field Buildingin '
+            + 'tieltä yhtenä kuudesta puretusta talosta. Uuden rakennuksen '
+            + 'aulaan asetettiin 1932 pronssilaatta, joka nimittää Jenneyn '
+            + 'pilvenpiirtäjän todelliseksi isäksi. Chicagon lehdistö ei '
+            + 'omana aikanaan kutsunut taloa ensimmäiseksi pilvenpiirtäjäksi, '
+            + 'vaan nimitys vakiintui vasta satavuotisjuhlan tienoilla 1985. '
+            + 'Chicago Tribunen arkkitehtuurikriitikko Blair Kamin '
+            + 'kyseenalaisti tittelin 7. marraskuuta 2019 ja viittasi '
+            + 'tutkimukseen vanhemmista rautarunkoisista taloista.',
+          selite: 'LaSalle Streetin kadunpätkän sulkee etelässä Chicago Board '
+            + 'of Trade Building, 1930 valmistunut 44-kerroksinen ja '
+            + '184-metrinen art deco -torni, joka oli kaupungin korkein '
+            + 'rakennus vuoteen 1965.',
+          lahde: 'Warren LeMay from Covington, KY, United States, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Home Insurance Building',
+        },
+        {
+          otsikko: 'Ikkuna joka kantoi Chicagon nimeä',
+          tiedosto: 'Chicago - S LaSalle St - Rookery - 03.jpg',
+          teksti: 'Chicago School -arkkitehdit, muun muassa Louis Sullivan, '
+            + 'Daniel Burnham ja John Root, pukivat rungon terrakotalaattoihin '
+            + 'ja suuriin lasiruutuihin, jotka toivat valoa entistä syvemmälle '
+            + 'konttoreihin. Näin syntyi Chicago-ikkuna: kolmiosainen ikkuna, '
+            + 'jossa kiinteä keskiruutu ja kaksi avattavaa sivuruutua '
+            + 'muodostavat julkisivuun toistuvan ruudukon. Burnhamin ja Rootin '
+            + 'Rookery Building valmistui 1888 ja on Chicagon vanhin pystyssä '
+            + 'oleva korkea talo: kantavat ulkoseinät ja teräsrunko sisällä.',
+          selite: 'Rookery Buildingin lasikattoinen valopiha tuo päivänvalon '
+            + 'korttelin kokoisen talon keskelle, ja aulan sai nykyisen '
+            + 'asunsa Frank Lloyd Wrightin muutostöissä 1905–1907.',
+          lahde: 'HaSt, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Rookery Building',
+        },
+        {
+          otsikko: 'Joki jonka insinöörit käänsivät kahdesti',
+          tiedosto: '2009 Chicago River locks.jpg',
+          teksti: 'Chicago-joki laski alun perin Michiganjärveen, mutta '
+            + 'kaupungin jätevedet uhkasivat samaa järveä, josta juomavesi '
+            + 'otettiin. Insinöörit yrittivät ensin 1871 syventää '
+            + 'Illinois–Michigan-kanavaa niin, että virtaus kääntyisi '
+            + 'poispäin järvestä; se onnistui, mutta vain yhden vuodenajan '
+            + 'ajaksi. Pysyvä ratkaisu vaati uuden kanavan: Chicago Sanitary '
+            + 'and Ship Canal avattiin 2. tammikuuta 1900, ja täysi virtaus '
+            + 'saatiin käyntiin 17. tammikuuta. Kun isoisä kulki kaupungissa '
+            + '1873, ensimmäinen yritys oli mennyt ohi ja joki virtasi taas '
+            + 'vanhaan suuntaansa.',
+          selite: 'Chicago-joen suulla oleva sulku päästää veneet '
+            + 'Michiganjärvelle, ja sen takaa avautuu se järvi, johon joki '
+            + 'ennen laski.',
+          lahde: 'Nicholas Hartmann, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Chicago Sanitary and Ship Canal',
+        },
+        {
+          otsikko: 'Valkoinen kaupunki joka juhli jälleenrakennusta',
+          tiedosto: 'Looking West From Peristyle, Court of Honor and Grand Basin, 1893.jpg',
+          teksti: 'Vain 22 vuotta suurpalon jälkeen Chicago isännöi '
+            + 'Kolumbuksen maailmannäyttelyä 1893 entisellä suoalueella '
+            + 'nykyisessä Jackson Parkissa. Näyttely kattoi lähes 700 '
+            + 'eekkeriä ja lähes kaksisataa tilapäisrakennusta, ja sitä '
+            + 'kutsuttiin Valkoiseksi kaupungiksi hehkulampuin valaistun '
+            + 'uusklassisen arkkitehtuurinsa vuoksi. Kuudessa kuukaudessa '
+            + 'kävijöitä oli yli 27 miljoonaa, ja yhtenä ainoana päivänä, '
+            + '9. lokakuuta pidettynä Chicago Daynä, portista kulki 751 026 '
+            + 'ihmistä. Näyttelyä varten rakennettu maailmanpyörä oli '
+            + 'ensimmäinen laatuaan.',
+          selite: 'Virallinen valokuva katsoo Peristylen päältä länteen Court '
+            + 'of Honorin ja Grand Basinin yli, ja perällä kohoaa '
+            + 'hallintorakennuksen kupoli.',
+          lahde: 'C. D. Arnold (1844-1927); H. D. Higinbotham, Wikimedia Commons (PD)',
+          wiki: 'World\'s Columbian Exposition',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Kaupungin nimi tulee seudun alkuperäiskansojen kieleltä, '
+        + 'villisipulin nimestä. Potawatomi karkotettiin täältä 1833, mutta '
+        + 'kansan jälkeläiset elävät ja hallitsevat itseään yhä — myös '
+        + 'Chicagossa.',
+      tehtava: {
+        kysymys: 'Mitkä kolme kansaa muodostavat Kolmen tulen neuvoston?',
+        vaihtoehdot: [
+          'Odawa, Ojibwe ja Potawatomi',
+          'Miami, Sauk ja Meskwaki',
+          'Potawatomi, Miami ja Sauk',
+          'Ojibwe, Cree ja Meskwaki',
+        ],
+        oikea: 0,
+        fakta: 'Nämä kolme kansaa allekirjoittivat yhdessä Chicagon '
+          + 'sopimukset 1821 ja 1833. Miami, Sauk ja Meskwaki olivat '
+          + 'asuneet seudulla ennen Potawatomia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Neljä kansaa ennen kaupunkia',
+          tiedosto: 'Chicago Portage Waterway.jpg',
+          teksti: '1700-luvun puolivälissä aluetta asutti Potawatomi-kansa, '
+            + 'joka oli tullut seudulle Miami-, Sauk- ja Meskwaki-kansojen '
+            + 'jälkeen. Potawatomi kuului yhdessä Odawan ja Ojibwen kanssa '
+            + 'liittoumaan, jota kutsutaan Kolmen tulen neuvostoksi; nämä '
+            + 'kolme kansaa allekirjoittivat yhdessä useita sopimuksia '
+            + 'Yhdysvaltain kanssa, muun muassa kaksi Chicagon nimeä kantavaa '
+            + 'sopimusta vuosina 1821 ja 1833. Kaupungin nimi tulee '
+            + 'Miami–Illinois-kielen sanasta šikaakwa, villisipulista, jota '
+            + 'kasvoi juuri näillä kosteikoilla.',
+          selite: 'Chicago Portage National Historic Site Lyonsissa säilyttää '
+            + 'sitä kosteikkokannasta, jonka yli kanootit kannettiin Suurten '
+            + 'järvien ja Mississippin vesistöjen välillä.',
+          lahde: 'Rickdrew, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Potawatomi',
+        },
+        {
+          otsikko: 'Linnake joka tuhoutui kahdesti',
+          tiedosto: 'Fort Dearborn 1831 Kinzie.jpg',
+          teksti: 'Yhdysvaltain armeija rakensi Fort Dearbornin Chicago-joen '
+            + 'suulle 1803. Vuoden 1812 sodan aikana varuskunnan '
+            + 'evakuointikolonnaa vastaan hyökkäsi noin viisisataa '
+            + 'Potawatomi-soturia, ja hyökkäyksessä kuoli suurin osa '
+            + 'siviileistä sekä 54 sotilasta. Päällikkö Mucktypoke eli Musta '
+            + 'peltopyy oli neuvonut hyökkäystä vastaan etukäteen ja pelasti '
+            + 'myöhemmin osan vangeista. Linnake rakennettiin uudelleen '
+            + 'samalle paikalle 1816 ja poistettiin käytöstä 1837; sen '
+            + 'viimeiset jäänteet tuhoutuivat suurpalossa 1871.',
+          selite: 'Toinen Fort Dearborn seisoi Chicago-joen suulla vuonna '
+            + '1831, jolloin sen ympärille oli kasvanut vasta kourallinen '
+            + 'taloja rannalle.',
+          lahde: 'Napoleon Sarony, Wikimedia Commons (PD)',
+          wiki: 'Fort Dearborn',
+        },
+        {
+          otsikko: 'Sopimus joka lähetti kansan Mississipin taakse',
+          tiedosto: 'Potawatomi Trail of Death Marker in Logansport, Indiana.jpg',
+          teksti: 'Vuoden 1833 Chicagon sopimuksessa Potawatomi, Odawa ja '
+            + 'Ojibwe luovuttivat viimeiset maansa Illinoisin alueelta '
+            + 'Yhdysvalloille. Vastineeksi luvattiin uusia maita, vuosirahoja '
+            + 'ja tarvikkeita, mutta ne saapuivat usein myöhässä tai '
+            + 'vähennettyinä. Potawatomi siirrettiin pakolla Mississippin '
+            + 'länsipuolelle, ensin Kansasiin ja Nebraskaan ja lopulta '
+            + 'Oklahomaan. Indianan Potawatomin siirtoa 1838 seurasi '
+            + 'katolinen pappi Benjamin Petit, joka piti matkasta '
+            + 'päiväkirjaa; se julkaistiin vasta 1941.',
+          selite: 'Logansportissa Indianassa oleva kivi merkitsee vuoden 1838 '
+            + 'leiripaikkaa sillä reitillä, jota myöten Indianan Potawatomi '
+            + 'siirrettiin länteen.',
+          lahde: 'Emergencyninja, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Treaty of Chicago',
+        },
+        {
+          otsikko: 'Kaupunki jossa yli viisikymmentä heimoa kokoontuu yhä',
+          tiedosto: 'American-indian-center.jpg',
+          teksti: 'American Indian Center perustettiin Chicagoon '
+            + '7. syyskuuta 1953, ja se on Yhdysvaltain vanhin kaupunkilainen '
+            + 'intiaanikeskus. Se syntyi vastauksena liittovaltion '
+            + 'politiikkaan, joka siirsi alkuperäiskansojen jäseniä ympäri '
+            + 'maata kaupunkeihin. Keskus palvelee yli viidenkymmenen heimon '
+            + 'jäseniä, ja sen pisimpään jatkunut ohjelma on vuosittainen '
+            + 'pow-wow. Vuonna 2024 sisäministeriö asetti 130 eekkeriä maata '
+            + 'DeKalb Countyssa luottamukseen Prairie Band Potawatomi '
+            + 'Nationille, josta tuli ensimmäinen liittovaltion tunnustama '
+            + 'heimokansakunta Illinoisissa sitten karkotusten.',
+          selite: 'American Indian Centerin salin katonrajassa riippuu '
+            + 'heimojen lippuja ympäri maata, ja seinillä on keskuksen omia '
+            + 'maalauksia.',
+          lahde: 'Eric Allix Rogers, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'American Indian Center',
+        },
+      ],
+    },
+  ],
+  /*
+   * PERTH (Opus 23.8.2026). Alusta asti tehty kaupunkilehti: kohteella
+   * ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen tätä erää.
+   * Pohjana ovat docs/mantereet-tyoaineisto/faktapohja-perth.md ja sen
+   * riippumaton tarkistus tarkistus-perth.md, jotka luettiin yhdessä;
+   * ristiriidoissa TARKISTUS VOITTAA. Kumpikaan tiedosto ei ollut
+   * mainissa vaan haarassa claude/matkakirja-julisteet-finish-h235w7,
+   * josta ne luettiin (git show) — tämä on kirjattu tähän, koska
+   * tehtävänanto oletti niiden olevan mainissa.
+   *
+   * Jokainen väite on luettu en-Wikipedian raakatekstistä (action=raw,
+   * haettu 23.8.2026): Perth, Kings Park (Western Australia), Convict
+   * era of Western Australia, Perth Mint, Perth Town Hall, Government
+   * House (Perth), Swan River (Western Australia), Whadjuk, Yagan,
+   * Yagan Square, Fremantle Prison, Fremantle Doctor ja Elizabeth Quay.
+   *
+   * TARKISTUSRAPORTIN KOLME KORJAUSTA ON TEHTY. (1) Faktapohja sanoi
+   * nykyisen kuvernöörintalon seisovan SAMALLA PAIKALLA kuin Stirlingin
+   * telttaleiri 1829. Lähde sanoo päinvastoin: teltat olivat Barrack
+   * Streetin ja St Georges Terracen kulmalla (nykyiset Stirling
+   * Gardens), ja ensimmäinen varsinainen kuvernöörintalo rakennettiin
+   * 1834–1835 "a short distance away". Nosto H2 kertoo talojen sarjan
+   * oikein: teltat, 1832 puutalo samalla paikalla, 1834/35 talo lyhyen
+   * matkan päässä ja nykyinen 1859–1864 talo samalla korttelilla.
+   * (2) Faktapohja sanoi Yaganin väkivallan alkaneen siitä, että
+   * uudisasukkaat ampuivat aboriginaaleja KARJAN KEIHÄSTÄMISESTÄ.
+   * Yagan-artikkeli ei sano niin: joulukuussa 1831 Thomas Smedley
+   * ampui perunamaalta yhden Yaganin sukulaisista, ja huhtikuussa 1833
+   * ammuttiin Fremantlen jauhovarastoon murtautunutta joukkoa, jolloin
+   * Yaganin veli Domjum kuoli. Whadjuk-artikkeli kuvaa karjan
+   * keihästämisen PÄINVASTAISENA suuntana. Nosto Y2 kertoo molemmat
+   * tapaukset lähteen mukaan. (3) Faktapohjan proosa pyöristi Kings
+   * Parkin kasvilajimäärän muotoon "yli 320"; faktalaatikon ja lähteen
+   * luku on 324, ja oppaan jakso 3 käyttää sitä.
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3 JA spec-mantereet.md:n
+   * Oseania-osio. Whadjuk-noongarit ovat oma sivunsa, eivät
+   * sivuhuomautus, ja heidät kuvataan nykyisenä kansana omalla
+   * nimellään: kuusi vuodenaikaa on käytössä, maaoikeussopimus
+   * vahvistettiin 2021 ja Yagan Square avattiin 2018. Yaganin kohtalo
+   * kerrotaan toteavana tapahtumasarjana ilman julmuuksien
+   * yksityiskohtia — pään käsittelyä Englannissa ei kuvailla, vain
+   * todetaan että pää vietiin sinne ja palautettiin 1997. Whadjukit-
+   * sivun neljäs nosto päättyy nykyhetkeen eikä hylättyyn vaatimukseen
+   * tai kuolleeseen vanhimpaan, ja historia-sivun H4 päättyy siihen,
+   * että vankitaustasta on tullut ylpeyden aihe.
+   *
+   * OCEANIA_FACTS-KOHDAN `perth` KOLMEA FAKTAA EI TOISTETA: kaupungin
+   * eristyneisyyttä (lähin miljoonakaupunki yli 2 000 km), Jakarta-
+   * vertailua eikä Fremantle Doctorin viilentävää vaikutusta ei
+   * mainita missään lehden tekstissä. Saapumiskortti kertoo ne, lehti
+   * kertoo muuta.
+   *
+   * VUOSI 1873 ON SANOTTU AUKI. Rangaistusjärjestelmän hallinto
+   * purettiin 1872, kaupungintalo valmistui 1870 ja Kings Park
+   * rauhoitettiin 1871 — kaikki 1–3 vuotta ennen isoisän matkaa. Sitä
+   * varten oppaan jakso 4 lainaa melbournelaistoimittajan kuvausta
+   * vuodelta 1870: hiljainen 3 000 asukkaan pikkukaupunki, jonka
+   * sivukadut olivat paljasta hiekkaa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (säärivit haetaan omana eränään, ja tämän erän tehtävänanto
+   * kielsi säätiedot). Oppaan jakso 5 nojaa siis en-Wikipedian
+   * Perth-artikkelin Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin,
+   * Karachin ja Vancouverin malli.
+   *
+   * KUVAT: kaikki 26 kuvaa on haettu Commonsista KATEGORIOILLA
+   * (Views of Perth, Skylines of Perth, Perth Water, Elizabeth Quay,
+   * Fremantle Harbour, Cottesloe Beach, Perth Town Hall, Government
+   * House Western Australia, Fremantle Prison, Perth Mint, Old Swan
+   * Brewery, Mount Eliza Kings Park, Swan River Western Australia,
+   * Flora in Kings Park, Noongar, Heirisson Island, Yagan Square,
+   * Swan Bells, Barracks Arch, History of Perth, Perth railway
+   * station Western Australia, Western Australian Botanic Garden),
+   * lisenssi ja tekijä on luettu rajapinnan extmetadatasta ja jokainen
+   * kuva on katsottu silmin 900 pikselin esikatseluna. Hylkäyksiä:
+   * Kings Parkin ikikukkakuva, jossa istuu tunnistettava mies
+   * (kasvot luettavissa); Yagan Squaren Wirin-kuva, jossa etualalla on
+   * ihmisryhmä lähietäisyydellä; Yagan Squaren digitaalinen torni,
+   * jonka koko pinta on mainoskuvaa; vuoden 1892 kirjan kuvalaatta
+   * "View of Perth from Mount Eliza" ja n. 1900 kuvalaatta, joissa
+   * painettu kuvateksti on osa lehteä; Lesmurdien panoraama, jossa
+   * kaupunki hukkuu utuun; Fremantlen sataman kuva, joka on
+   * käytännössä tyhjää vettä.
+   *
+   * AIHETOISTO ON HARKITTU JA PERUSTELTU: Fremantlen vankilaitos
+   * esiintyy kahdesti eri aikoina ja eri asiassa — nostossa K3 Henry
+   * Wrayn 1850-luvun akvarellina siitä, mitä vangit rakensivat
+   * itselleen, ja nostossa H3 valokuvana samasta selliosastosta sen
+   * jälkeen, kun laitos siirtyi siirtokunnalle 1872. Kings Park
+   * esiintyy kolmesti eri kohteina (avauskuvan näköalatasanne, noston
+   * L1 Mount Elizan rinne joelta ja oppaan ikikukkarinne), ja Swan-joki
+   * neljästi eri paikoissa. Yksikään tiedostonimi ei toistu.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta eikä kuvaile kuvaa visuaalisesti, ja se on yhden
+   * virkkeen mittainen.
+   */
+  perth: [
+    {
+      id: 'kaupunki',
+      nimi: 'Perth',
+      johdanto: 'Whadjuk-noongarien lähteen ääreen 1829 perustettu Perth on '
+        + 'Länsi-Australian pääkaupunki. Isoisän matkan vuonna sen julkiset '
+        + 'talot olivat vankien rakentamia ja rangaistusjärjestelmä juuri '
+        + 'purettu.',
+      kansikuvat: [
+        {
+          tiedosto: 'Elizabeth Quay.jpg',
+          selite: 'Elizabeth Quay avattiin 2016 sille rantakaistalle, joka '
+            + 'oli täytetty maaksi Perth Waterin pohjukasta.',
+          lahde: 'Angah hfz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View from the top of Cantonment Hill.jpg',
+          selite: 'Fremantlen satama Swan-joen suulla on Länsi-Australian '
+            + 'tärkein kontti- ja matkustajasatama.',
+          lahde: 'Sam Wilson (taken with Panasonic Lumix DMC-FT1), Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Cottesloe Beach, May 2021 02.jpg',
+          selite: 'Cottesloe on Perthin tunnetuin merenranta, ja sen '
+            + 'aallonmurtaja ja teehuone ovat 1900-luvun alkupuolelta.',
+          lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kolmelta eri suunnalta —
+       * Kings Parkin nurmelta lännestä, ilmasta pohjoisesta ja Mill
+       * Pointista etelästä joen yli. Yksikään ei ole minkään noston
+       * aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Perth skyline.jpg',
+          selite: 'Keskustan tornit näkyvät Kings Parkin nurmikentältä, '
+            + 'joka on Mount Elizan laella runsaan kilometrin päässä '
+            + 'kaupungin ytimestä.',
+          lahde: 'Robert Young, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Perth CBD from air.jpg',
+          selite: 'Keskusta on Swan-joen pohjoisrannalla, ja joki '
+            + 'mutkittelee sen takana kohti Darling-jyrkännettä.',
+          lahde: 'Chewy m at English Wikipedia, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          tiedosto: 'Perth CBD from Mill Point (2).jpg',
+          selite: 'Perth Water on Swan-joen levennys keskustan edessä, ja '
+            + 'sen eteläranta South Perthissä on kaupungin tunnetuin '
+            + 'näköalapaikka.',
+          lahde: 'JJ Harrison (jjharrison89@facebook.com), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki lähteen ympärillä',
+          tiedosto: 'Old Swan Brewery from the river.jpg',
+          teksti: 'Kun kuvernööri James Stirling etsi 1829 paikkaa uudelle '
+            + 'siirtokunnalle, ratkaisu oli yksinkertainen: Mount Elizan '
+            + 'etelärinteen juurella pulppusi seudun ainoa ympärivuotinen '
+            + 'makean veden lähde, ja kaupunki perustettiin sen viereen. '
+            + 'Whadjuk-noongarit olivat käyttäneet lähdettä sukupolvien ajan '
+            + 'ja tunsivat sen nimellä Goonininup; siirtolaisten kartoissa '
+            + 'se on Kennedy Spring. Sama vesi oli täydentänyt jo '
+            + 'hollantilaisen Willem de Vlaminghin retkikunnan varastot '
+            + '11. tammikuuta 1697. Kummun Stirling nimesi Eliza Darlingin '
+            + 'mukaan.',
+          selite: 'Old Swan Breweryn rakennukset seisovat Mount Elizan '
+            + 'juurella sillä rantakaistalla, jossa Goonininupin lähde '
+            + 'antoi vettä ympäri vuoden.',
+          lahde: 'Sam Wilson (taken with Panasonic Lumix DMC-FT1), Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Kings Park, Western Australia',
+        },
+        {
+          otsikko: 'Kaksi nimeä samalle paikalle',
+          tiedosto: 'Perth Water 1838.jpg',
+          teksti: 'Stirlingin julistus siirtokunnan perustamisesta luettiin '
+            + 'Fremantlessa 18. kesäkuuta 1829, ja se päättyi sanoihin '
+            + '"annettu Perthissä". Nimi oli lainattu Skotlannin Perthistä. '
+            + 'Ainoa aikalaislähde sille, kenen kunniaksi, on kapteeni '
+            + 'Charles Fremantlen päiväkirjamerkintä 12. elokuuta 1829: '
+            + 'paikka "nimettiin Perthiksi Sir George Murrayn toiveiden '
+            + 'mukaisesti". Murray oli siirtomaaministeri. Whadjukeilla '
+            + 'alueella oli jo oma nimensä, Boorloo, ja se on viime vuosina '
+            + 'palannut kaupungin rinnakkaisnimeksi.',
+          selite: 'Maanmittaushallinnon vuoden 1838 asemakaava näyttää '
+            + 'Perthin ruutukaavan Perth Waterin pohjoisrannalla ja '
+            + 'kaupungin ympärille jääneet järvet.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Perth',
+        },
+        {
+          otsikko: 'Siirtokunta joka pyysi itselleen vankeja',
+          tiedosto: 'FremantlePrisonHenry Wray.jpg',
+          teksti: 'Kun muu Australia oli jo lopettamassa rangaistusvankien '
+            + 'tuontia, Länsi-Australia teki 1850 päinvastoin ja pyysi '
+            + 'Britannialta vankeja työvoimapulan takia. Ehtoja oli kolme: '
+            + 'ei naispuolisia vankeja, ei poliittisia vankeja eikä '
+            + 'vakavien rikosten tekijöitä. Kahdesta jälkimmäisestä '
+            + 'lipsuttiin jo ensimmäisten vuosien jälkeen, mutta '
+            + 'ensimmäinen piti loppuun asti. Kahdeksantoista vuoden aikana '
+            + '43 laivaa toi 9 721 vankia siirtokuntaan, jossa oli noin '
+            + '7 300 vapaata uudisasukasta.',
+          selite: 'Kuninkaallisten insinöörien upseeri Henry Wray maalasi '
+            + 'Fremantlen vankilaitoksen, jonka vangit rakensivat itselleen '
+            + '1850-luvulla.',
+          lahde: 'Henry Wray, Wikimedia Commons (PD)',
+          wiki: 'Convict era of Western Australia',
+        },
+        {
+          otsikko: 'Kulta toi rahapajan',
+          tiedosto: 'Perth Mint, WA, 2023.jpg',
+          teksti: 'Isoisän matkan aikoihin koko Länsi-Australiassa asui noin '
+            + '23 000 ihmistä. Kun Coolgardiesta, Kalgoorliesta ja '
+            + 'Murchisonista löytyi kultaa 1890-luvulla, luku oli '
+            + 'vuosisadan vaihteessa 180 000, ja Perthistä tuli '
+            + 'kultakenttien huoltokeskus. John Forrest muurasi 1896 '
+            + 'peruskiven rahapajalle, joka avattiin 20. kesäkuuta 1899 '
+            + 'Lontoon kuninkaallisen rahapajan sivutoimipisteenä. Vuoteen '
+            + '1931 mennessä se oli lyönyt yli 106 miljoonaa '
+            + 'kultasovereignia imperiumin käyttöön.',
+          selite: 'Rahapajan kalkkikivitalo Hay Streetin varrella avattiin '
+            + 'kesäkuussa 1899, ja rakennus on yhä rahapajan käytössä.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Perth Mint',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Perth Swan Bells Tower.jpg',
+          selite: 'Barrack Street päättyy joen rantaan, jossa kellotorni '
+            + 'kohoaa Elizabeth Quayn vieressä.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Perth on Länsi-Australian pääkaupunki ja Australian '
+          + 'neljänneksi väkirikkain kaupunki: Suur-Perthissä asuu yli 2,3 '
+          + 'miljoonaa ihmistä. Matkailijan Perth on kapea kaistale '
+          + 'Swan-joen ja Intian valtameren välissä. Keskusta on joen '
+          + 'pohjoisrannalla, ja St Georges Terracen varrella seisovat '
+          + 'kaupungin vanhimmat julkiset talot. Lännessä Kings Park nousee '
+          + 'jyrkästi joen yli, etelässä Elizabeth Quayltä lähtevät lautat '
+          + 'South Perthiin, ja lounaassa on satamakaupunki Fremantle. '
+          + 'Rannikolla on rivi hiekkarantoja, joista tunnetuin on '
+          + 'Cottesloe.',
+        artikkeli: {
+          nimi: 'Matkailijan Perth',
+          taitto: 'opas',
+          teksti: 'Kapea kaistale joen ja valtameren välissä — kaupunki, '
+            + 'jonka vanhimmat julkiset talot ovat vankien käsialaa.',
+          nosto: 'Vuonna 1870 Perthissä asui noin 3 000 ihmistä; nykyään '
+            + 'Suur-Perthissä yli 2,3 miljoonaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Perthin satama on Fremantlessa Swan-joen suulla, ja '
+                + 'sen kautta kulkevat sekä kontit että matkustajalaivat. '
+                + 'Juuri sinne nousivat maihin kesäkuussa 1829 ensimmäiset '
+                + 'siirtolaiset laivoista Parmelia ja Sulphur; James '
+                + 'Stirling piti näkymää yhtä kauniina kuin mitään '
+                + 'aiemmin näkemäänsä. Lentäen tullaan Perth Airportille '
+                + 'kaupungin itäpuolelle. Keskustan ja Fremantlen väli on '
+                + 'lyhyt junamatka, ja Elizabeth Quayltä pääsee joen yli '
+                + 'lautalla South Perthiin. Fremantlen vanha satamaosa on '
+                + 'oma käyntikohteensa: sen länsipäässä toimii yliopiston '
+                + 'kampus vanhoissa satamarakennuksissa, ja Victoria '
+                + 'Quayn merenkulkumuseon vieressä on telakoitu '
+                + 'sukellusvene.',
+              kuva: {
+                tiedosto: 'Western Australian Maritime Museum.jpg',
+                selite: 'Fremantlen Victoria Quaylla toimii Länsi-Australian '
+                  + 'merenkulkumuseo, ja sataman nosturit jatkavat samalla '
+                  + 'rannalla.',
+                lahde: 'Grahame Bowland, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Suurin osa Perthin kaupunkialueesta on Swanin '
+                + 'rannikkotasangolla Intian valtameren ja '
+                + 'Darling-jyrkänteen välissä. Lännessä on hiekkaranta ja '
+                + 'idässä jyrkänne, joka nousee tasangolta Darlingin '
+                + 'vuorijonoksi; sen laelta kaupunki näkyy kokonaan. '
+                + 'Keskusta on Swan-joen pohjoisrannalla siinä kohdassa, '
+                + 'jossa joki levenee Perth Wateriksi, ja Canning-joki '
+                + 'yhtyy siihen hieman ylempänä. Kaupungin länsireunalla '
+                + 'Mount Eliza kohoaa jyrkästi joen yli, ja sen laella on '
+                + 'Kings Park. Fremantle on joen suulla lounaassa, '
+                + 'Perthin lentoasema idässä jokimutkan takana.',
+              kuva: {
+                tiedosto: 'Perth from Greenmount in 2010.jpg',
+                selite: 'Greenmountin rinteeltä Darling-jyrkänteen laidalta '
+                  + 'näkyy koko rannikkotasanko lentoasemineen ja keskustan '
+                  + 'tornit sen takana.',
+                lahde: 'User:JarrahTree, Wikimedia Commons (CC BY 2.5 au)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: villikukkien kuukausi',
+              teksti: 'Syyskuussa Kings Park järjestää Australian suurimman '
+                + 'villikukkanäyttelyn, ja tapahtuma vetää nykyään yli '
+                + '500 000 kävijää. Näyttely ei ole puutarhaesittely vaan '
+                + 'lyhyen sadekauden jälkeinen kukinta: puiston '
+                + 'kokoelmissa on yli 324 alkuperäistä kasvilajia, 215 '
+                + 'tunnettua sienilajia ja 80 lintulajia. Whadjukien '
+                + 'vuodenaikajaossa sama kausi on kambarang, kukinnan '
+                + 'aika. Kings Park on Länsi-Australian suosituin '
+                + 'yksittäinen käyntikohde, ja vuonna 2012 laskettiin yli '
+                + '5,8 miljoonaa kävijää. Puiston läpi kulkee lisäksi '
+                + 'kasvitieteellinen puutarha ja rinteen alle jäävä '
+                + 'jokirantareitti.',
+              kuva: {
+                tiedosto: 'Flowers, Kings Park, Perth.jpg',
+                selite: 'Kings Parkin rinteet peittyvät keväällä '
+                  + 'ikikukkiin, joita puiston villikukkanäyttely esittelee '
+                  + 'joka syyskuu.',
+                lahde: 'Gemma Longman, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kaupunki vuonna 1870',
+              teksti: 'Melbournelaistoimittaja kuvaili Perthiä vuonna 1870 '
+                + 'hiljaiseksi noin kolmentuhannen asukkaan '
+                + 'pikkukaupungiksi, joka levisi hajanaisina tontteina '
+                + 'aina rantaan asti puutarhojen ja pensasaitojen keskellä '
+                + 'ja oli ilmeeltään puoliksi maalaismainen. Pääkadut '
+                + 'olivat sorapäällysteisiä, mutta sivukadut ja useimmat '
+                + 'jalkakäytävät olivat paljasta hiekkaa, joka kesällä '
+                + 'nosti pölyn ja häikäisyn. Samana vuonna valmistui '
+                + 'kaupungintalo, ja seuraavana vuonna rauhoitettiin '
+                + 'Kings Park. Isoisä ehti nähdä kaupungin juuri ennen '
+                + 'sitä vuosikymmentä, jona kulta muutti kaiken.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Perthistä puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Perth-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on kuuman kesän välimerenilmastoa: kesät ovat '
+                + 'kuivia ja kuumia, talvet leutoja ja sateisia, ja sade '
+                + 'painottuu touko-elokuuhun, jolloin rintamat kulkevat '
+                + 'alueen yli. Perth on Australian osavaltiopääkaupungeista '
+                + 'aurinkoisin, noin 3 200 tuntia ja 138,7 selkeää päivää '
+                + 'vuodessa. Kuumin keskustassa mitattu lukema on 46,2 '
+                + 'astetta 23. helmikuuta 1991 ja kylmin −0,7 astetta '
+                + '17. kesäkuuta 2006.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Länsi-Australia pyysi itselleen rangaistusvankeja 1850, kun '
+        + 'muu Australia oli jo lopettamassa kuljetukset. Vangit rakensivat '
+        + 'kaupungin julkiset talot, ja järjestelmä purettiin vasta isoisän '
+        + 'matkan kynnyksellä.',
+      tehtava: {
+        kysymys: 'Minä vuonna viimeinen vankilaiva Hougoumont saapui Länsi-Australiaan?',
+        vaihtoehdot: [
+          '1868',
+          '1850',
+          '1872',
+          '1876',
+        ],
+        oikea: 0,
+        fakta: 'Kuljetukset päättyivät siihen, mutta järjestelmä ei: vuoden '
+          + '1868 lopussa siirtokunnassa oli yhä 3 158 tuomiotaan '
+          + 'suorittavaa vankia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupungintalo, jonka ikkunat kertovat rakentajistaan',
+          tiedosto: 'Perth Town Hall - Perth.jpg',
+          teksti: 'Perth Town Hall on ainoa vankityövoimalla rakennettu '
+            + 'kaupungintalo Australiassa. Perustus laskettiin 24. '
+            + 'toukokuuta 1867, talo valmistui 1870 ja oli silloin '
+            + 'kaupungin korkein rakennus. Tiilet poltettiin East Perthin '
+            + 'savesta, ja koristelu kertoo rakentajien asemasta: ikkunat '
+            + 'on muotoiltu vankien univormun nuolimerkin muotoon ja osa '
+            + 'koristeista muistuttaa hirsipuun köyttä. Talo seisoo yhä '
+            + 'Hay Streetin ja Barrack Streetin kulmassa, ja sen '
+            + 'jarrahportaikon seinillä ovat kaikkien ylipormestarien '
+            + 'kuvat ensimmäisestä, George Shentonista, alkaen.',
+          selite: 'Kaupungintalon kellotorni Hay Streetin ja Barrack '
+            + 'Streetin kulmassa valmistui 1870 Richard Roach Jewellin ja '
+            + 'James Manningin piirustusten mukaan.',
+          lahde: 'JJ Harrison (https://www.jjharrison.com.au/), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Perth Town Hall',
+        },
+        {
+          otsikko: 'Kolmas kuvernöörintalo samalla korttelilla',
+          tiedosto: 'Government House, east front.jpg',
+          teksti: 'Kuvernööri James Stirling asui perheineen 1829 teltoissa '
+            + 'Barrack Streetin ja St Georges Terracen kulmalla, siellä '
+            + 'missä ovat nykyiset Stirling Gardens. Samalle paikalle nousi '
+            + '1832 väliaikainen puutalo, ja lyhyen matkan päähän '
+            + 'rakennettiin 1834–1835 ensimmäinen varsinainen '
+            + 'kuvernöörintalo. Nykyinen on kolmas kuvernöörien käytössä '
+            + 'ollut talo samalla korttelilla: peruskivi laskettiin 17. '
+            + 'maaliskuuta 1859, työ tehtiin suureksi osaksi '
+            + 'vankityövoimalla ja maksoi 15 000 puntaa. Kuvernööri John '
+            + 'Hampton muutti sisään jo 1863, vuotta ennen valmistumista.',
+          selite: 'Kuvernöörin residenssin itäjulkisivu valmistui 1864 '
+            + 'Edmund Hendersonin piirustusten mukaan St Georges Terracen '
+            + 'ja Swan-joen väliin.',
+          lahde: 'Michal Lewi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Government House, Perth',
+        },
+        {
+          otsikko: 'Vuosi jolloin järjestelmä lakkasi',
+          tiedosto: 'Fremantle prison main cellblock.JPG',
+          teksti: 'Viimeinen vankilaiva Hougoumont lähti Britanniasta 1867 '
+            + 'ja saapui Länsi-Australiaan 10. tammikuuta 1868 mukanaan 62 '
+            + 'irlantilaista fenian-vankia. Kuljetukset päättyivät, mutta '
+            + 'järjestelmä ei: vuoden 1868 lopussa siirtokunnassa oli yhä '
+            + '3 158 tuomiotaan suorittavaa vankia. Vuonna 1872, vuosi '
+            + 'ennen isoisän matkaa, vankien pääjohtajan virka '
+            + 'lakkautettiin ja laitokset siirtyivät siirtokunnalle — '
+            + 'Convict Establishmentista tuli Fremantlen vankila. Kauden '
+            + 'tunnetuin yksittäinen tapaus, Catalpa-pako, sattui vasta '
+            + '1876.',
+          selite: 'Fremantlen vankilan pääselliosasto kappeleineen on 1850-'
+            + 'luvulla vangeilla rakennettua laitosta, joka siirtyi '
+            + 'siirtokunnan haltuun 1872.',
+          lahde: 'Ghostieguide at English Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fremantle Prison',
+        },
+        {
+          otsikko: 'Häpeästä ylpeydeksi',
+          tiedosto: 'Perth Barracks, c1863, SLWA b2393679 (cropped).png',
+          teksti: 'Vuonna 1874, isoisän matkan jälkeisenä vuonna, '
+            + 'Länsi-Australian lakiasäätävä neuvosto pyysi Britannialta '
+            + 'itsehallintoa. Pyyntö hylättiin, ja yhtenä perusteluna oli '
+            + 'entisten vankien liian suuri osuus väestöstä. Julkiset virat '
+            + 'pysyivät heiltä lähes kokonaan suljettuina — ainoa '
+            + 'poikkeus oli koulunopettajan toimi, johon palkattiin '
+            + 'runsaasti entisiä vankeja, koska matalat palkat eivät '
+            + 'houkutelleet koulutettuja vapaita siirtolaisia. Vankitausta '
+            + 'oli pitkään vaiettu asia, ja vasta viime vuosikymmeninä '
+            + 'siitä on tullut monelle sukututkimuksen ylpeyden aihe.',
+          selite: 'Perthin kasarmi valmistui 1863 eläkkeelle siirtyneiden '
+            + 'sotilaiden vartiojoukolle, joka saapui siirtokuntaan '
+            + 'vankikuljetusten mukana.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Convict era of Western Australia',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kaupunkia reunustava rinne rauhoitettiin puistoksi kaksi '
+        + 'vuotta ennen isoisän matkaa. Sen alla mutkitteleva joki kantaa yhä '
+        + 'nimeä Derbarl Yerrigan ja tarinaa käärmeolennosta, joka sen loi.',
+      tehtava: {
+        kysymys: 'Kuinka moneen vuodenaikaan whadjukit jakavat vuoden?',
+        vaihtoehdot: [
+          'kuuteen',
+          'neljään',
+          'kahteen',
+          'kymmeneen',
+        ],
+        oikea: 0,
+        fakta: 'Vuodenaikojen rajat eivät ole kalenteripäiviä vaan merkkejä '
+          + 'luonnossa: kambarangin alkamisen kertoo kukinta ja bunurun '
+          + 'tulon joulupuun kukat.',
+      },
+      nostot: [
+        {
+          otsikko: 'Rinne joka rauhoitettiin 1871',
+          tiedosto: 'MountEliza90.JPG',
+          teksti: 'Mount Elizan jarrahmetsä oli siirtokunnan ensimmäinen '
+            + 'vientitavara: viisi tonnia puuta kaadettiin rinteeltä 1835. '
+            + 'Hakkuu jatkui 1871 asti, jolloin maanmittaaja Malcolm Fraser '
+            + 'sai kuvernööri Frederick Weldin varaamaan 432 eekkeriä '
+            + 'julkiseksi puistoksi. Alue laajeni 1890 ja uudestaan 1897, '
+            + 'kun John Forrest kasvatti sen 1 017 eekkeriin. Puiston nimi '
+            + 'oli Perth Park, ja King’s Parkiksi se muutettiin vasta '
+            + '1901. Noongareille kukkula oli jo kauan ennen sitä Mooro '
+            + 'Katta, Kaarta Gar-up ja Kaarta Koomba.',
+          selite: 'Mount Elizan pensasmetsäinen rinne kohoaa Swan-joen yli '
+            + 'Narrows-sillan takana, ja juuri se rauhoitettiin puistoksi '
+            + '1871.',
+          lahde: 'JarrahTree, Wikimedia Commons (CC BY 2.5 au)',
+          wiki: 'Kings Park, Western Australia',
+        },
+        {
+          otsikko: 'Joki, jonka käärme loi',
+          tiedosto: 'Black Swan on Perth Water.JPG',
+          teksti: 'Whadjukien kielessä joki on Derbarl Yerrigan. Sen loi '
+            + 'Wagyl, käärmemäinen Uneajan olento, joka mutkitteli maan '
+            + 'halki ja jätti jälkeensä joet, järvet ja vesireitit; '
+            + 'whadjukit ovat säilyttäneet siitä useita kertomuksia. '
+            + 'Hollantilainen Willem de Vlamingh purjehti jokea ylös 1697 '
+            + 'ja nimesi sen alueen mustien joutsenten mukaan Swarte '
+            + 'Swaene-Revieriksi. Ranskalainen Nicolas Baudinin retkikunta '
+            + 'seurasi 1801, lähes kolmekymmentä vuotta ennen brittiläistä '
+            + 'asutusta.',
+          selite: 'Musta joutsen ui Perth Waterilla South Perthin rantaa '
+            + 'vasten, ja juuri näiden lintujen mukaan hollantilaiset '
+            + 'nimesivät joen 1697.',
+          lahde: 'User:JarrahTree, Wikimedia Commons (CC BY 2.5 au)',
+          wiki: 'Swan River (Western Australia)',
+        },
+        {
+          otsikko: 'Vuosi, jossa on kuusi aikaa',
+          tiedosto: 'Mirrabooka library Noongar calendar.jpg',
+          teksti: 'Whadjukit jakavat vuoden kuuteen vuodenaikaan, joita ei '
+            + 'mitata kalenterista vaan siitä, mitä maassa tapahtuu. Birak '
+            + 'marras-joulukuussa on hedelmän aika ja kuumien itätuulten '
+            + 'kausi, jolloin pensaikkoa poltettiin mosaiikkina '
+            + 'metsästyksen ja itämisen helpottamiseksi. Bunuru '
+            + 'tammi-helmikuussa on kuuma ja kuiva, ja perheet siirtyivät '
+            + 'rannikon jokisuille kalaan. Djeran tuo ensimmäiset sateet, '
+            + 'makuru vie ihmiset sisämaahan jyrkänteelle, djilba on kylmä '
+            + 'ja märkä, ja kambarang syys-lokakuussa on kukinnan huippu.',
+          selite: 'Mirrabookan kirjaston edessä oleva kivikuvio näyttää '
+            + 'noongarien kuusi vuodenaikaa ja niiden suhteen '
+            + 'eurooppalaiseen kalenteriin.',
+          lahde: 'Orderinchaos, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Whadjuk',
+        },
+        {
+          otsikko: 'Joki jota muokattiin muotoonsa',
+          tiedosto: 'Heirisson Island Aug2020.jpg',
+          teksti: 'Vuoden 1862 tulvat olivat pahoja, ja maantäytöt olivat '
+            + 'tehneet niistä pahempia kuin ne olisivat muuten olleet. '
+            + 'Seuraavina vuosikymmeninä jokea ruopattiin '
+            + 'järjestelmällisesti: Länsi-Australian ensimmäinen '
+            + 'ämpäriruoppaaja Black Swan aloitti 1872, vuotta ennen '
+            + 'isoisän matkaa, ja kaivoi väyliä ja täyttömaata vuoteen '
+            + '1911 asti. Heirisson Island keskellä Perth Wateria oli '
+            + 'alun perin joukko matalia mutasaaria, ja saaren nykyinen '
+            + 'yhtenäinen muoto on tämän työn tulosta.',
+          selite: 'Heirisson Island jakaa Perth Waterin kahtia '
+            + 'Causeway-siltojen kohdalla, ja whadjukien kielessä paikka on '
+            + 'Matagarup.',
+          lahde: 'Moondyne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Swan River (Western Australia)',
+        },
+      ],
+    },
+    {
+      id: 'whadjukit',
+      nimi: 'Whadjukit',
+      johdanto: 'Whadjuk-noongarit ovat asuneet Swan-joen varrella tuhansia '
+        + 'vuosia ja asuvat siellä yhä. Heidän tarinansa ulottuu '
+        + 'siirtomaa-ajan raskaista vuosista tämän vuosituhannen '
+        + 'maaoikeussopimuksiin.',
+      tehtava: {
+        kysymys: 'Mitä whadjukien suullinen perinne kertoo Rottnestin saaresta?',
+        vaihtoehdot: [
+          'Se oli ennen kiinni mantereessa',
+          'Se syntyi tulivuoren purkauksesta',
+          'Sinne purjehdittiin kauppaa käymään',
+          'Se oli aina asumaton',
+        ],
+        oikea: 0,
+        fakta: 'Meri nousi ja katkaisi yhteyden noin 12 000–8 000 vuotta '
+          + 'sitten, ja kertomus siitä on kulkenut suullisena perinteenä '
+          + 'siitä asti.',
+      },
+      nostot: [
+        {
+          otsikko: 'Neljä ryhmää yhden joen varrella',
+          tiedosto: 'Matilda Bay Swan River, Western Australia.jpg',
+          teksti: 'Ennen siirtokuntaa whadjukit jakautuivat Swan- ja '
+            + 'Canning-jokien mukaan alueisiin: beeliar lounaassa '
+            + 'Midgegooroon johdolla, beeloo joen eteläpuolella ja mooro '
+            + 'pohjoispuolella Yellagongan johdolla. Kun luutnanttikuvernööri '
+            + 'Frederick Irwinin vene tapasi Yellagongan perheineen '
+            + 'Crawleyn rannalla 1829, kohtaaminen oli vielä rauhallinen. '
+            + 'Whadjukien punaokra louhittiin sieltä, missä nykyinen '
+            + 'rautatieasema seisoo, ja sitä vaihdettiin itään päin. '
+            + 'Rannikon whadjukeilla on suullinen perinne siitä, kuinka '
+            + 'Rottnest irtosi mantereesta meren noustessa.',
+          selite: 'Matilda Bay Crawleyssa on se rannanpätkä, jolla '
+            + 'Yellagonga tapasi siirtolaisten veneen vuonna 1829.',
+          lahde: 'Nachoman-au, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Whadjuk',
+        },
+        {
+          otsikko: 'Yagan',
+          tiedosto: 'Yagan Statue 2005.jpg',
+          teksti: 'Joulukuussa 1831 maanviljelijä Archibald Butlerin '
+            + 'palvelija Thomas Smedley ampui perunamaalla yhden Yaganin '
+            + 'sukulaisista. Noongarien lain mukaan kuolema oli kostettava, '
+            + 'ja Yagan ja hänen isänsä Midgegooroo surmasivat toisen '
+            + 'Butlerin palvelijoista. Siirtokunta julisti Yaganin '
+            + 'lainsuojattomaksi; siirtolainen Robert Lyon puolusti häntä '
+            + 'sotavankina, ja Yagan karkotettiin Carnac-saarelle, josta '
+            + 'hän pakeni. Huhtikuussa 1833 Fremantlen jauhovarastoon '
+            + 'murtautunutta joukkoa ammuttiin ja Yaganin veli Domjum '
+            + 'kuoli. Yagan surmattiin 11. heinäkuuta 1833, ja hänen '
+            + 'päänsä vietiin Englantiin.',
+          selite: 'Robert Hitchcockin veistämä Yaganin patsas paljastettiin '
+            + 'Heirisson Islandilla 11. syyskuuta 1984.',
+          lahde: 'Nachoman-au, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Yagan',
+        },
+        {
+          otsikko: 'Pään paluu ja hautaus',
+          tiedosto: 'Yagan Memorial Park, Belhus.jpg',
+          teksti: 'Noongar-vanhimmat alkoivat etsiä päätä 1980-luvun alussa. '
+            + 'Arkeologi Cressida Fforde jäljitti sen joulukuussa 1993 '
+            + 'Liverpooliin, jossa museo oli haudannut sen 1964. Luovutus '
+            + 'noongar-valtuuskunnalle tehtiin Liverpoolin kaupungintalossa '
+            + '31. elokuuta 1997. Uudelleenhautaus viivästyi vuosia, koska '
+            + 'hautapaikasta ja muun ruumiin sijainnista ei ollut '
+            + 'yksimielisyyttä; Richard Wilkesin johtama komitea vei asian '
+            + 'loppuun. Yagan haudattiin 10. heinäkuuta 2010 Belhusiin '
+            + 'avattuun Yagan Memorial Parkiin noin kolmensadan ihmisen '
+            + 'läsnä ollessa.',
+          selite: 'Yagan Memorial Parkin sisäänkäyntimuuri Belhusissa '
+            + 'kertoo Yaganin tarinan, ja muurin suunnittelivat Jenny '
+            + 'Dawson ja Sandra Hill.',
+          lahde: 'Outrune, Wikimedia Commons (CC0)',
+          wiki: 'Yagan',
+        },
+        {
+          otsikko: 'Tunnustus tässä ajassa',
+          tiedosto: 'Yagan Square - Wirin, March 2018 03.jpg',
+          teksti: 'Liittovaltion tuomioistuin totesi syyskuussa 2006 '
+            + 'tapauksessa Bennell vastaan Länsi-Australia, että noongarien '
+            + 'alkuperäinen maaoikeus oli säilynyt Perthin '
+            + 'metropolialueella. Valitusten ja vuosien neuvottelujen '
+            + 'jälkeen syntyi Etelä-Länsi-Australian maaoikeussopimus, '
+            + 'johon kuuluu whadjukien oma maankäyttösopimus Perthin '
+            + 'alueesta; tuomioistuin vahvisti kokonaisuuden 1. joulukuuta '
+            + '2021. Keskustaan avattiin 3. maaliskuuta 2018 Yagan Square, '
+            + 'jonka yhdeksänmetrisen Wirin-veistoksen teki '
+            + 'noongar-taiteilija Tjyllyungoo.',
+          selite: 'Tjyllyungoon veistämä Wirin kohoaa yhdeksän metriä Yagan '
+            + 'Squarella, ja nimi tarkoittaa kaiken elämän yhdistävää '
+            + 'luovaa voimaa.',
+          lahde: 'Samuel Wiki, Wikimedia Commons (CC0)',
+          wiki: 'Yagan Square',
+        },
+      ],
+    },
+  ],
+  /*
+   * SÃO PAULO (lauta southamerica, kaupunki-id saopaulo) — kaupunkilehti
+   * 23.8.2026.
+   *
+   * LÄHTEET. Työpohja on docs/mantereet-tyoaineisto/faktapohja-saopaulo.md.
+   * Sen rinnalle luvattua tarkistus-saopaulo.md:tä EI OLE OLEMASSA
+   * repossa eikä origin/mainissa (tarkistettu git ls-tree origin/main
+   * 23.8.2026), joten kirjoittaja on hakenut jokaisen tekstiin menevän
+   * väitteen uudestaan en-Wikipedian raakateksteistä samana päivänä:
+   * São Paulo, São Paulo Cathedral, São Paulo Railway Company, Luz
+   * Station, Paulista Avenue, Municipal Market of São Paulo,
+   * Ibirapuera Park, Immigrant Inn, Liberdade (district of São Paulo),
+   * Rua 25 de Março. Tehtävänannon kolme pakollista korjausta on tehty
+   * ja ne kaikki vahvistettiin raakatekstistä:
+   *
+   *   (a) KUIVIN KUUKAUSI ON ELOKUU. Faktapohja sanoi "elo-syyskuussa
+   *       (kuivin) n. 32 mm". Sääruutu antaa elokuulle 32,3 mm ja
+   *       syyskuulle 83,3 mm — syyskuu on siis yli kaksi ja puoli
+   *       kertaa elokuuta sateisempi. Oppaan sääjakso sanoo elokuun
+   *       yksin kuivimmaksi ja kertoo syyskuun luvun erikseen.
+   *   (b) IBIRAPUERAN PUISTON TEKIJÄT. Faktapohja antoi puiston Burle
+   *       Marxin ja Niemeyerin nimiin. Ibirapuera Park -artikkeli
+   *       sanoo toisin: vuoden 1954 rakennukset suunnitteli arkkitehti
+   *       João Felipe Pereira ja maiseman agronomi Otávio Augusto
+   *       Teixeira Mendes, kun taas Roberto Burle Marx mainitaan
+   *       INSPIRAATIONA ("inspired on modern drafts from the landscape
+   *       architect"). Oscar Niemeyerin paviljonkikokonaisuus on eri
+   *       asia: se merkittiin kansalliseksi muistomerkiksi vasta 2016.
+   *       Oppaan jakso 4 kertoo kaikki kolme roolia erikseen.
+   *   (c) KOLME NOSTOA KIRJOITETTU IRTI VISAN SANAMUODOSTA.
+   *       js/packs/southamerica-questions.js kysyy saopaulo-kohdassa
+   *       (1) mikä São Paulo on eteläisellä pallonpuoliskolla,
+   *       (2) minkä tuotteen vienti teki seudusta rikkaan,
+   *       (3) missä maassa kaupunki on, (4) mikä on Avenida Paulista,
+   *       (5) mikä siirtolaisyhteisö on maailman suurin Japanin
+   *       ulkopuolella. Nosto SP4 ei toista visan "eteläisen
+   *       pallonpuoliskon väkirikkain" -muotoilua vaan antaa
+   *       täsmälliset väkiluvut ja kertoo vertailun kolmen alueen
+   *       luettelona; SP3 ei sano "kahvin vienti teki rikkaaksi" vaan
+   *       kulkee väestönlaskentojen ja café com leite -politiikan
+   *       kautta; A3 ei sano "maailman suurin japanilaisyhteisö
+   *       Japanin ulkopuolella" vaan antaa vuosiluvut 1912, 1958 ja
+   *       1987 ja kertoo, ettei yhtä suurta japanilaistaustaista
+   *       väestöä asu missään muualla Japanin rajojen ulkopuolella.
+   *       Visan vastaukset löytyvät silti lehdestä: Brasilia
+   *       (etusivun leipäteksti ja kaupunkisivun johdanto), kahvi
+   *       (SP2, SP3), väkiluku (SP4), Avenida Paulista (H3),
+   *       japanilaisyhteisö (A3).
+   *
+   * FAKTAPOHJAN MUUT VARAUKSET RATKAISTU NÄIN. (1) TERRA ROXA. Visan
+   * vihje puhuu terra roxa -maaperästä, mutta en-Wikipediassa on
+   * aiheesta vain täsmennyssivu ilman mainintaa kahvinviljelystä.
+   * Maaperäväitettä EI ole käytetty missään lehden tekstissä; kahvin
+   * ja kaupungin suhde kerrotaan radan, vientisataman ja
+   * väestönkasvun kautta. (2) RAUTATIEN VUOSILUKU. Pääartikkeli
+   * sanoo Santosin yhteyden syntyneen "vuodesta 1869" nimellä Estrada
+   * de Ferro Santos-Jundiaí; se on saman radan nimi vasta vuoden 1946
+   * kansallistamisen jälkeen. Radan oma artikkeli antaa avauspäiväksi
+   * 16.2.1867 kahdella lähteellä, ja lehti käyttää sitä — sama
+   * periaate kuin aiemmissa lehdissä, tarkempi lähde voittaa
+   * pyöristetyn leipätekstin. (3) BIENNAALIN SIJAINTI oli faktapohjan
+   * mukaan heikosti lähteistetty, joten sitä ei mainita lainkaan.
+   * (4) HOSPEDARIAN LUVUT (yli 70 kansallisuutta, yli 2,5 miljoonaa
+   * ihmistä, ensimmäinen ryhmä 5.6.1887, sulkeminen 1978 yhdeksän-
+   * kymmenenyhden vuoden jälkeen) tarkistettiin Immigrant Inn
+   * -artikkelin raakatekstistä ja pitävät paikkansa.
+   *
+   * SISÄLTÖLINJAUS. Tehtävänanto ja docs/mantereet-tyoaineisto/
+   * spec-mantereet.md: siirtolaisyhteisöt kuvataan KAUPUNGIN
+   * NYKYISENÄ ELÄMÄNÄ, ei historiallisena kuriositeettina — siksi
+   * niillä on oma sivunsa eikä pelkkä nosto historiasivulla, ja
+   * jokainen sen neljästä nostosta päättyy tähän päivään. Pois on
+   * jätetty kokonaan en-Wikipedian "Public security" -osio
+   * (rikostilastot) ja "Social challenges" -osion favela- ja
+   * kodittomuuskuvaus, samoin kaikki nykypolitiikka. Orjuus ja
+   * bandeirantien orjaretket kerrotaan tapahtumina neutraalisti,
+   * ilman yksityiskohtien korostusta: H2 sanoo suoraan, mitä
+   * retkikunnat hakivat, eikä tee niistä seikkailua.
+   *
+   * AIHETOISTO, KAKSI PERUSTELTUA PARIA. (1) Rua 25 de Março
+   * esiintyy nostossa SP3 (Antonio Ferrignon maalaus 1894) ja
+   * nostossa A4 (nykyinen kauppakatu ylhäältä). Se on tarkoituksellinen
+   * ennen ja nyt -pari kahdella eri sivulla: SP3:ssa katu on matala
+   * kaupungin reuna kahvirahan alkuvuosina, A4:ssä sama katu on
+   * Brasilian tunnetuin halpakauppakortteli. (2) Praça da Sé esiintyy
+   * kansikuvassa (nykyinen uusgoottilainen katedraali) ja nostossa H1
+   * (Militão Augusto de Azevedon valokuva vanhasta barokkikirkosta
+   * 1862). Kyse on kahdesta ERI RAKENNUKSESTA samalla torilla, ja
+   * juuri se on H1:n pointti. Muut kohteet esiintyvät kerran.
+   *
+   * KUVAT: 22 kuvaa, kaikki haettu Wikimedia Commonsista
+   * KATEGORIOILLA (Skylines of São Paulo (city), Avenida Paulista,
+   * Pátio do Colégio, Sé (São Paulo), Facade of Catedral da Sé
+   * (São Paulo), São Paulo Railway Company, Estrada de Ferro
+   * Santos-Jundiaí, Estação da Luz 1880, Álbum Comparativo da Cidade
+   * de S. Paulo 1862-1887, Monumento às Bandeiras, Edifício
+   * Martinelli, Theatro Municipal de São Paulo in 2018/2019,
+   * Ibirapuera Park, Marquise do Parque Ibirapuera, Mercado Municipal
+   * de São Paulo, Hospedaria dos Imigrantes, Bixiga, Liberdade
+   * (São Paulo), Rua 25 de Março). Lisenssi ja tekijä on luettu
+   * rajapinnan extmetadatasta (LicenseShortName, Artist,
+   * Restrictions) ja jokainen valittu kuva on katsottu silmin 900
+   * pikselin esikatseluna.
+   *
+   * KUVAHYLKÄYKSET SYINEEN. Kuvan päälle lisätty merkintä:
+   * "S. Paulo Railway Co. Planos inclinados" -postikorttisarjan
+   * Museu Paulista -skannaukset (painettu otsikko ylä- ja alalaidassa
+   * SEKÄ värikalibrointipalkki kuvan alla); Guilherme Gaenslyn
+   * "Panorama de São Paulo II" (postikortti, jonka päälle on
+   * kirjoitettu tervehdys musteella); "São Paulo Antigo - 11"
+   * (albumisivu, jonka alle on kirjoitettu kuvateksti käsin);
+   * "Faz São Luiz - Macuco" (valokuvaajan vesileima kulmassa).
+   * Tunnistettavat kasvot lähikuvassa: "Avenida Paulista em São Paulo
+   * (52692651817)" (metroaseman suu, etualalla kolme ihmistä
+   * kasvot kameraan, lisäksi mainosjuliste), "ROGERIOCASSIMIRO
+   * AVENIDAPAULISTA" (autoilta suljettu Paulista täynnä lähikuvassa
+   * olevia kävijöitä), "Rua 25 de Março.jpg" (katutaso, etualan
+   * kasvot luettavissa), "Liberdade of Sao Paulo" ja "Libertade
+   * Japonese town of São Paulo city" (viikonlopputori, kymmeniä
+   * tunnistettavia kasvoja), "Estação Liberdade São Paulo-12302"
+   * (lisäksi vinoreunainen panoraamaompelu), "Corredor mercadão" ja
+   * "Mercado Municipal of São Paulo, Brazil" (myyjät kasvot
+   * kameraan). Hintakyltit ruokakuvassa: "Mercado Municipal
+   * (São Paulo) 02, 03 ja 16" ja "Mercado Municipal de Sao Paulo
+   * 037" — talon ruokakuvasääntö kieltää hintakyltit. Roskat ja
+   * töhryt hallitsevana aiheena: "Torii, Liberdade 01" ja
+   * "Torii, Liberdade 02" (jätesäkkirivi ja graffititäytteinen
+   * seinä koko vasemman laidan mitalta). Aihe ei vastannut
+   * käyttötarkoitusta: "Panoramic view of Sao Paulo city"
+   * (mustavalkoinen varastokattonäkymä, ei tunnistettavaa
+   * kaupunkia), "25 de Março - panoramio" (pelkkiä takapihoja),
+   * "Torre da Estação da Luz ... 01" (kuvattu ikkunan läpi,
+   * heijastus kuvan päällä), "Edifício Martinelli em São Paulo"
+   * (raskaasti jälkikäsitelty mustavalkoinen, etualalla ihminen).
+   * Lisäksi kaksi teknisesti kelpaavaa kuvaa jätettiin pois
+   * LÄHDERIVIN takia: Sérgio Valle Duarten kuvien
+   * extmetadata.Artist-kenttä palauttaa koko MediaWiki-
+   * viestilaatikon CSS:n, eikä talon sääntöä "tekijä täsmälleen
+   * Artist-muodossa" voi noudattaa ilman että lähderivistä tulee
+   * kilometrin mittainen.
+   *
+   * KUVATEKSTIT noudattavat omistajan 22.8.2026 linjausta: selite
+   * kertoo KOHTEESTA eikä kuvaile kuvaa, ja se on yhden virkkeen
+   * mittainen.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (säärivit haetaan omana eränään). Oppaan jakso 5 nojaa
+   * siis en-Wikipedian São Paulo -artikkelin Climate-osioon ja SANOO
+   * SEN ÄÄNEEN — Samarkandin, Karachin ja Vancouverin malli.
+   * Mittauspiste olisi Mirante de Santana, jonka korkeus on 785 m,
+   * kun infoboksin kaupunkikorkeus on 760 m.
+   *
+   * KOHDEKARTTAA, miniatyyrejä eikä tarinakaarta ei tehty tässä
+   * erässä (tehtävänannon rajaus).
+   */
+  saopaulo: [
+    {
+      id: 'kaupunki',
+      nimi: 'São Paulo',
+      johdanto: 'Jesuiitat perustivat 1554 kukkulalle kahden joen väliin '
+        + 'koulun, jonka ympärille kasvoi Etelä-Amerikan suurin kaupunki. '
+        + 'Isoisän matkavuonna 1873 täällä asui vasta reilut '
+        + 'kolmekymmentätuhatta ihmistä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Catedral da sé.jpg',
+          selite: 'Uusgoottilaisen Sé-katedraalin 92 metrin tornit '
+            + 'valmistuivat vasta 1967, ja sen pilarien kapiteeleihin on '
+            + 'veistetty kahvinoksia, ananaksia ja vyötiäisiä.',
+          lahde: 'William Freitas de Oliveira, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Conjunto arquitetônico do Pátio do Colégio.jpg',
+          selite: 'Pátio do Colégion kirkko on 1900-luvun lopun '
+            + 'jälleenrakennus vuoden 1653 jesuiittakoulusta ja kirkosta, '
+            + 'jotka seisoivat kaupungin perustamispaikalla.',
+          lahde: 'Wladimir alberto martins, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Webysther 20190304120141 - Theatro municipal.jpg',
+          selite: 'Theatro Municipalissa pidettiin helmikuussa 1922 '
+            + 'Modernismin viikko, joka käänsi brasilialaisen taiteen '
+            + 'selän eurooppalaisille esikuville.',
+          lahde: 'Webysther, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kaupungin eri puolilta —
+       * vanha keskusta ylhäältä, Paulistan harjanne Jardinsin
+       * kattojen takaa ja Ibirapueran puisto Moeman siluetin edessä.
+       * Yksikään ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Centro de SP.jpg',
+          selite: 'Vanhan keskustan takana kaupunki jatkuu horisonttiin '
+            + 'asti: São Paulon kaupungissa on lähes kaksitoista '
+            + 'miljoonaa asukasta.',
+          lahde: 'Ana Paula Hirama, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Rebouças Avenue.jpg',
+          selite: 'Avenida Paulista kulkee kaupungin korkeimman '
+            + 'harjanteen päällä, ja sen 2,8 kilometrin varrella seisoo '
+            + 'pankkien ja televisiomastojen rivistö.',
+          lahde: 'Alexandre Giesbrecht, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Vista aérea do Ibirapuera, São Paulo.jpg',
+          selite: 'Ibirapueran 158 hehtaaria on kaupungin ensimmäinen '
+            + 'metropolipuisto, ja sen laidalla kohoaa vuoden 1954 '
+            + 'juhlien obeliski.',
+          lahde: 'Daniel Whistler, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Lähetyskoulu kahden joen välissä',
+          tiedosto: 'Pateo do Collegio.jpg',
+          teksti: 'Kaksitoista jesuiittapappia, heidän joukossaan Manuel da '
+            + 'Nóbrega ja José de Anchieta, pystytti 25. tammikuuta 1554 '
+            + 'Piratiningan ylängölle koulun jyrkälle kukkulalle '
+            + 'Anhangabaú- ja Tamanduateí-jokien väliin. Vihkiäispäivä osui '
+            + 'apostoli Paavalin kääntymyksen juhlaan, ja juhlan nimi jäi '
+            + 'ensin koululle, sitten kylälle ja lopulta koko kaupungille. '
+            + 'Ensimmäinen rakennus tehtiin alueen alkuperäisasukkaiden '
+            + 'omalla tekniikalla tampatusta savesta. Sen jälkeen kului '
+            + 'kaksisataa vuotta, joiden ajan São Paulo oli Brasilian '
+            + 'sisämaan ainoa siirtokuntakylä ja eli omavaraisviljelystä.',
+          selite: 'Pátio do Colégio on se kukkula, jolla kaupunki '
+            + 'perustettiin 1554, ja nykyinen rakennusryhmä valmistui '
+            + 'jälleenrakennuksena 1900-luvun lopulla.',
+          lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Pátio do Colégio',
+        },
+        {
+          otsikko: 'Rata, joka toi kahvin merelle',
+          tiedosto: 'Jesus, Benedito Calixto de - Estação da Luz, 1880.jpg',
+          teksti: 'Brittiläinen São Paulo Railway Company avasi 16. '
+            + 'helmikuuta 1867 radan satamakaupunki Santosista ylängön '
+            + 'poikki Jundiaíhin. Serra do Marin lähes 800 metrin rinne oli '
+            + 'pidetty ylitsepääsemättömänä, kunnes 26-vuotias insinööri '
+            + 'Daniel Makinson Fox esitti neljäosaista köysivetorataa: '
+            + 'tavallinen rata olisi vaatinut yli neljänkymmenen kilometrin '
+            + 'kiertotien ja syönyt koko 200 000 punnan budjetin. Rinne '
+            + 'louhittiin ilman räjähteitä kiilaamalla, eikä radalla ole '
+            + 'yhtään tunnelia. Työ valmistui kymmenen kuukautta ennen '
+            + 'kahdeksan vuoden sopimusaikaa.',
+          selite: 'Luzin ensimmäinen asema oli matala yksikerroksinen talo, '
+            + 'jonka Benedito Calixto maalasi vuoden 1880 asussaan — '
+            + 'nykyinen tiiliasema rakennettiin vasta 1895–1901.',
+          lahde: 'Benedito Calixto, Wikimedia Commons (PD)',
+          wiki: 'São Paulo Railway Company',
+        },
+        {
+          otsikko: 'Kolmestakymmenestätuhannesta neljännesmiljoonaan',
+          tiedosto: 'Antonio Ferrigno - Rua 25 de Março.JPG',
+          teksti: 'Vuoden 1872 väestönlaskennassa São Paulossa oli 31 385 '
+            + 'asukasta — pikkukaupunki, jonka laidalta laitaan käveli '
+            + 'puolessa tunnissa. Rata satamaan ja ylängön kahvipeltojen '
+            + 'vientitulot käänsivät käyrän jyrkkään nousuun: asukkaita oli '
+            + '64 934 vuonna 1890 ja 239 820 vuosisadan vaihteessa. Valta '
+            + 'seurasi rahaa. Tasavallan alkuvuosikymmeninä São Paulo ja '
+            + 'maitotaloudestaan tunnettu Minas Gerais vuorottelivat '
+            + 'presidentin valitsemisessa niin säännöllisesti, että '
+            + 'liittoumaa alettiin kutsua nimellä café com leite, kahvi '
+            + 'maidon kanssa.',
+          selite: 'Antonio Ferrigno maalasi Rua 25 de Marçon noin 1894, '
+            + 'kun katu oli vielä hiekkainen ja Tamanduateí-joki kulki sen '
+            + 'vieressä oikaisematta.',
+          lahde: 'Antonio Ferrigno, Wikimedia Commons (PD)',
+          wiki: 'São Paulo',
+        },
+        {
+          otsikko: 'Mihin ylängön kylästä on tultu',
+          tiedosto: 'Centro Antigo de São Paulo - by Lucas.JPG',
+          teksti: 'São Paulon kaupungissa asuu nykyään noin 11,9 miljoonaa '
+            + 'ihmistä ja koko metropolialueella 21,5 miljoonaa. '
+            + 'Väkirikkaampaa kaupunkia ei löydy Brasiliasta, ei Etelä-'
+            + 'Amerikasta eikä koko päiväntasaajan eteläpuoliselta '
+            + 'maapallonpuoliskolta. Kaupunki tuottaa yksin noin '
+            + 'kahdeksasosan Brasilian bruttokansantuotteesta, ja siellä '
+            + 'toimii B3, markkina-arvoltaan Latinalaisen Amerikan suurin '
+            + 'pörssi. Kahvirahasta tuli 1900-luvulla teollisuutta ja '
+            + 'teollisuudesta palveluja, mutta lähtöruutu on yhä sama '
+            + 'kukkula kahden joen välissä.',
+          selite: 'Vanhan keskustan korttelit ovat yhä kaupungin '
+            + 'hallinnollinen ja historiallinen ydin, vaikka rahan '
+            + 'painopiste siirtyi 1900-luvulla Avenida Paulistalle.',
+          lahde: 'Lukaaz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'São Paulo',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Altino Arantes Building.jpg',
+          selite: 'Vuonna 1947 valmistunut Altino Arantesin torni oli '
+            + 'pitkään kaupungin korkein rakennus, ja sen katolta näkee '
+            + 'koko keskustan.',
+          lahde: 'Dornicke, Wikimedia Commons (PD)',
+        },
+        kappale: 'São Paulo on Brasilian talouden keskus ja Etelä-Amerikan '
+          + 'suurin kaupunki, ja matkailijan kannalta se on ennen kaikkea '
+          + 'kolme aluetta. Vanha keskusta Praça da Sén ympärillä on se '
+          + 'kukkula, jolta kaikki alkoi: Pátio do Colégio, katedraali, '
+          + 'Theatro Municipal, Mercadão ja Rua 25 de Março ovat kaikki '
+          + 'kävelymatkan päässä toisistaan. Kolme kilometriä lounaaseen '
+          + 'nousee Avenida Paulista museoineen ja pankkitorneineen, ja '
+          + 'sen takana avautuu Ibirapueran puisto. Kolmas suunta on '
+          + 'siirtolaiskortteleiden São Paulo — Liberdade, Bixiga, Bom '
+          + 'Retiro ja Mooca — jossa kaupunki näyttää, mistä sen väki on '
+          + 'tullut. Kaupunki on 760 metrin korkeudessa, joten se on '
+          + 'selvästi viileämpi kuin rannikon Santos.',
+        artikkeli: {
+          nimi: 'Matkailijan São Paulo',
+          taitto: 'opas',
+          teksti: 'Ylängön kaupunki, joka rakennettiin uudestaan joka '
+            + 'sukupolvi — ja jonka kaduilla kuulee edelleen kaikkien '
+            + 'niiden maiden jälkiä, joista sen väki tuli.',
+          nosto: 'Vuonna 1872 São Paulossa asui 31 385 ihmistä; '
+            + 'metropolialueella heitä on nyt 21,5 miljoonaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainväliset lennot laskeutuvat São Paulo/'
+                + 'Guarulhosin lentoasemalle, kotimaanlennot lähempänä '
+                + 'keskustaa sijaitsevalle Congonhasille ja pienkoneet '
+                + 'Campo de Martelle; yhdessä kentät liikuttivat jo 2015 '
+                + 'yli 58 miljoonaa matkustajaa. Kaupungin sisällä '
+                + 'liikutaan metrolla. Sen rakentaminen alkoi 1968 '
+                + 'pormestari José Vicente de Faria Liman kaudella, ja '
+                + 'kaupallinen liikenne aloitettiin 14. syyskuuta 1974. '
+                + 'Vuonna 2016 verkostoa oli 71,5 kilometriä, asemia 64 '
+                + 'ja linjoja viisi, ja järjestelmä kuljetti sinä vuonna '
+                + '1,1 miljardia matkustajaa. Metro ja lähijunat käyttävät '
+                + 'osittain samoja asemia, joten vanha rautatieasema Luz '
+                + 'on yhä koko seudun vaihtopiste.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on 760 metrin korkeudessa Piratiningan '
+                + 'ylängöllä, ja Etelänkääntöpiiri kulkee sen '
+                + 'pohjoispuolelta. Korkeus tekee ilmastosta leudomman '
+                + 'kuin leveysasteelta voisi päätellä. Meren ja ylängön '
+                + 'välissä on Serra do Marin lähes 800 metrin '
+                + 'rannikkojyrkänne, jota pitkin kaikki liikenne satamaan '
+                + 'laskeutuu: vanha köysivetorata palveli 1867–1970, '
+                + 'toinen köysirata 1901–1982 ja nykyinen sähköistetty '
+                + 'hammastankorata avattiin 1974 vanhan radan pohjalle. '
+                + 'Kaupungin halki kulkevat Tietê- ja Pinheiros-joet, '
+                + 'jotka on oikaistu betoniuomiin ja joiden '
+                + 'puhdistushanke on yhä kesken.',
+              kuva: {
+                tiedosto: 'Cremalheira 1.jpg',
+                selite: 'Serra do Marin nykyinen hammastankorata avattiin '
+                  + '1974 vanhan, vuodesta 1867 palvelleen '
+                  + 'köysivetoradan linjalle.',
+                lahde: 'User:OS2Warp, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: Mercadão',
+              teksti: 'Mercado Municipal — paulistanoille Mercadão — '
+                + 'vihittiin käyttöön 25. tammikuuta 1933 arkkitehti '
+                + 'Francisco Ramos de Azevedon suunnitelmien mukaan. '
+                + 'Julkisivun teki hänen toimistossaan työskennellyt '
+                + 'italialaisbrasilialainen Felisberto Ranzini, joka '
+                + 'sekoitti joonialaisia ja doorilaisia pylväitä niin, '
+                + 'että väliin jäi tilaa suurille laseille ja halli saa '
+                + 'valonsa päivänvalosta. Hallissa on 12 600 neliömetriä, '
+                + 'noin 1 500 työntekijää ja yli 290 myyntipistettä, ja '
+                + 'sen läpi kulkee 450 tonnia ruokaa päivässä. Conrado '
+                + 'Sorgenicht Filhon 72 lasimaalausta 32 paneelissa '
+                + 'kuvaavat seudun ruoantuotantoa — eivät pyhimyksiä, '
+                + 'vaikka sama verstas teki myös katedraalin ikkunat.',
+              kuva: {
+                tiedosto: 'Janelão Mercadão.jpg',
+                selite: 'Mercadãon kaarevat ikkunat ovat osa Felisberto '
+                  + 'Ranzinin julkisivuratkaisua, jossa massiiviset '
+                  + 'pylväät jättivät tilaa suurille laseille.',
+                lahde: 'Nanci Medeiros, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: Ibirapuera 1954',
+              teksti: 'Kaupungin 400-vuotisjuhlaan avattiin 21. elokuuta '
+                + '1954 Ibirapueran puisto, São Paulon ensimmäinen '
+                + 'metropolipuisto ja 158 hehtaaria vihreää keskellä '
+                + 'kivikaupunkia. Työnjako oli kolmiosainen: rakennukset '
+                + 'suunnitteli arkkitehti João Felipe Pereira ja maiseman '
+                + 'agronomi Otávio Augusto Teixeira Mendes, kun taas '
+                + 'maisema-arkkitehti Roberto Burle Marxin modernit '
+                + 'luonnokset olivat työn innoittajana. Paviljonkien '
+                + 'rakentaminen oli aikanaan kiistanalaista, koska osa '
+                + 'kaupunkilaisista halusi puhtaasti vihreän puiston. '
+                + 'Oscar Niemeyerin ja hänen työtovereidensa '
+                + 'rakennuskokonaisuus merkittiin kansalliseksi '
+                + 'muistomerkiksi vasta 2016. Kävijöitä puistossa on yli '
+                + '18 miljoonaa vuodessa.',
+              kuva: {
+                tiedosto: 'Marquise Parque do Ibirapuera São Paulo 2019-5942.jpg',
+                selite: 'Puiston läpi kiemurteleva betonikatos yhdistää '
+                  + 'Niemeyerin paviljongit toisiinsa, ja se on '
+                  + 'kaupunkilaisten suosituin sadesuoja.',
+                lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi São Paulosta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian São Paulo -artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on lauhkean subtrooppinen. Kesällä eli tammi–'
+                + 'maaliskuussa alin lämpötila on keskimäärin 19 ja ylin '
+                + '28 astetta; talvella liikutaan 12 ja 22 asteen välillä. '
+                + 'Sadetta tulee vuodessa noin 1 658 millimetriä, ja se on '
+                + 'jakautunut hyvin epätasaisesti: tammikuussa sataa 292 '
+                + 'millimetriä seitsemäntoista päivänä, kun ELOKUU on '
+                + 'vuoden kuivin kuukausi 32,3 millimetrillä ja neljällä '
+                + 'sadepäivällä. Syyskuu ei enää ole kuiva — silloin '
+                + 'sataa jo 83,3 millimetriä. Kuumin mitattu lukema on '
+                + '38,4 astetta 17. lokakuuta 2014 ja kylmin −3,2 astetta '
+                + '25. kesäkuuta 1918.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'São Paulo oli isoisän matka-aikaan pieni ylänkökaupunki, '
+        + 'jonka torilla seisoi vanha barokkikirkko. Rautatie ja kahvi '
+        + 'muuttivat sen yhdessä sukupolvessa pystysuoraksi '
+        + 'maailmankaupungiksi.',
+      tehtava: {
+        kysymys: 'Minä vuonna São Paulo sai kaupunkioikeudet?',
+        vaihtoehdot: [
+          '1554',
+          '1711',
+          '1822',
+          '1867',
+        ],
+        oikea: 1,
+        fakta: 'Kylä oli silloin ollut olemassa jo 157 vuotta. '
+          + 'Kaupunkioikeudet tulivat vasta kaksi vuotta sen jälkeen, kun '
+          + 'São Paulon ja Minas de Ouron kapteenikunta oli perustettu '
+          + 'Minas Geraisin kultalöytöjen takia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Katedraali, jota isoisä ei nähnyt',
+          tiedosto: 'Militão A. de Azevedo - Álbum Comparativo, 47 - Acervo do Museu Paulista da USP (DR).jpg',
+          teksti: 'Praça da Séllä seisoi isoisän vierailuvuonna 1873 '
+            + 'vaatimaton barokkikirkko vuodelta 1764. Paikalle oli '
+            + 'päätetty rakentaa pääkirkko jo 1589, ja se valmistui noin '
+            + '1616; kun São Paulosta tehtiin hiippakunnan keskus 1745, '
+            + 'vanha kirkko purettiin ja tilalle tuli barokkikirkko. Sekin '
+            + 'purettiin 1911. Nykyinen uusgoottilainen katedraali alkoi '
+            + 'nousta 1913 saksalaisen Maximilian Emil Hehlin '
+            + 'suunnitelmasta, se vihittiin käyttöön 1954 tornit yhä '
+            + 'kesken ja valmistui lopullisesti 1967. Isoisän näkemästä '
+            + 'kirkosta ei siis ole jäljellä yhtään kiveä.',
+          selite: 'Militão Augusto de Azevedo valokuvasi vanhan '
+            + 'barokkikatedraalin ja Largo da Sén vuonna 1862, yksitoista '
+            + 'vuotta ennen isoisän matkaa.',
+          lahde: 'Militão Augusto de Azevedo, Wikimedia Commons (PD)',
+          wiki: 'São Paulo Cathedral',
+        },
+        {
+          otsikko: 'Siirtokunnan köyhin kolkka',
+          tiedosto: '00 1867 São Paulo - Monumento às Bandeiras.jpg',
+          teksti: '1600-luvulla São Paulo oli Portugalin siirtokunnan '
+            + 'köyhimpiä alueita. Paulistoilla ei ollut varaa ostaa '
+            + 'afrikkalaisia orjia niin kuin rannikon istutusviljelmillä, '
+            + 'ja kaupungista tuli sen sijaan bandeirantien tukikohta: '
+            + 'sisämaahan lähtevien retkikuntien, jotka etsivät kultaa, '
+            + 'jalokiviä ja orjuutettavia alkuperäisasukkaita. Ryhmä sai '
+            + 'niin paljon valtaa, että se ajoi jesuiitat pois kaupungista '
+            + '1640. Kultaa löytyi Minas Geraisista 1690-luvulla, '
+            + 'kapteenikunta perustettiin 3. marraskuuta 1709 ja '
+            + 'kaupunkioikeudet tulivat 11. heinäkuuta 1711. Kullan '
+            + 'ehdyttyä siirryttiin sokeriruokoon.',
+          selite: 'Victor Brecheretin Monumento às Bandeiras Ibirapueran '
+            + 'laidalla muistaa 1600-luvun retkikuntia, ja se paljastettiin '
+            + 'kaupungin 400-vuotisjuhlien aikoihin.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bandeirantes',
+        },
+        {
+          otsikko: 'Katu, jonka kahviparonit rakensivat',
+          tiedosto: 'Werner Haberkorn - Vista aérea da Avenida Paulista. São Paulo-SP.jpg',
+          teksti: 'Uruguaylais-brasilialainen insinööri Joaquim Eugênio de '
+            + 'Lima vihki Avenida Paulistan käyttöön 8. joulukuuta 1891. '
+            + 'Katu oli aluksi asuinkatu: sen varrella oli kahviparonien ja '
+            + 'tehtailijoiden, muun muassa Matarazzon suvun, koristeellisia '
+            + 'huviloita, ja talo numero yksi kuului Antarctica-panimoa '
+            + 'pyörittäneelle Von Bülow\'n perheelle. Vuonna 1909 Paulistasta '
+            + 'tuli São Paulon ensimmäinen päällystetty katu, ja asfaltti '
+            + 'tuotiin sitä varten Saksasta asti. Huvilat purettiin '
+            + '1950-luvulta alkaen pankkien tornien tieltä, ja nyt '
+            + 'samaa 2,8 kilometrin katutilaa käyttää yli 800 000 ihmistä '
+            + 'päivässä.',
+          selite: 'Avenida Paulista kuvattuna ilmasta 1900-luvun '
+            + 'puolivälissä, kun huviloiden purkaminen pankkitornien tieltä '
+            + 'oli juuri alkanut.',
+          lahde: 'Werner Haberkorn/Fotolabor/Museu Paulista da USP, Wikimedia Commons (PD)',
+          wiki: 'Paulista Avenue',
+        },
+        {
+          otsikko: 'Modernismin viikko ja ensimmäinen pilvenpiirtäjä',
+          tiedosto: 'Edifício Martinelli - A.jpg',
+          teksti: 'Modernismin viikko järjestettiin Theatro Municipalissa '
+            + '10.–17. helmikuuta 1922, ja se kokosi yhteen runoilijat '
+            + 'Mário ja Oswald de Andraden, taidemaalarit Anita Malfattin '
+            + 'ja Tarsila do Amaralin sekä kuvanveistäjä Victor '
+            + 'Brecheretin. Järjestäjät halusivat kärjistää nuorten '
+            + 'modernistien ja akateemisen taide-establishmentin pitkän '
+            + 'kiistan, ja viikkoa pidetään brasilialaisen modernismin '
+            + 'lähtölaukauksena. Samaan aikaan kahviraha nousi pystyyn: '
+            + 'kaupungin ensimmäinen pilvenpiirtäjä Martinelli valmistui '
+            + '1929. Miljoonan asukkaan raja oli ylitetty jo edellisenä '
+            + 'vuonna 1928 — kolme sukupolvea aiemmin kaupungissa oli '
+            + 'asunut 31 000 ihmistä.',
+          selite: 'Martinelli rakennettiin 1924–1929 ja se oli São Paulon '
+            + 'ensimmäinen pilvenpiirtäjä.',
+          lahde: 'Mauro Cateb, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Martinelli Building',
+        },
+      ],
+    },
+    {
+      id: 'siirtolaisuus',
+      nimi: 'Siirtolaisuus',
+      johdanto: 'Yli seitsemänkymmentä kansallisuutta kulki Hospedaria dos '
+        + 'Imigrantesin portista sisään. Heidän jälkeläisensä eivät ole '
+        + 'kaupungin historiaa vaan sen kortteleita, keittiöitä ja '
+        + 'juhlakalentereita tänään.',
+      tehtava: {
+        kysymys: 'Kuinka moni ihminen kulki Hospedaria dos Imigrantesin '
+          + 'kautta sen 91 toimintavuoden aikana?',
+        vaihtoehdot: [
+          'noin 25 000',
+          'noin 250 000',
+          'yli 2,5 miljoonaa',
+          'yli 25 miljoonaa',
+        ],
+        oikea: 2,
+        fakta: 'Majatalo otti vastaan ensimmäisen siirtolaisryhmänsä '
+          + '5. kesäkuuta 1887 ja sulki ovensa 1978. Viimeiset sen kautta '
+          + 'kulkeneet tulivat Koreasta samana vuonna.',
+      },
+      nostot: [
+        {
+          otsikko: 'Majatalo radan varressa',
+          tiedosto: 'Exposição Vidas Refugiadas, no Museu da Imigração, em SP (34681520066).jpg',
+          teksti: 'Hospedaria dos Imigrantes rakennettiin korvaamaan Bom '
+            + 'Retiron vanha majatalo, joka oli huonokuntoinen ja vailla '
+            + 'kunnollista viemäröintiä. Mateus Haüsslerin suunnittelemaan '
+            + 'uuteen taloon vedettiin kaasu, sinkkiset kylpyammeet ja '
+            + 'rautaiset vesisäiliöt, ja se pystytettiin suoraan '
+            + 'rautatielinjan viereen, koska siirtolaiset saapuivat junalla. '
+            + 'Rakennustyöt alkoivat 1886 ja talo otettiin käyttöön '
+            + 'keskeneräisenä 1887. Yhdeksänkymmenenyhden toimintavuoden '
+            + 'aikana sen läpi kulki yli 2,5 miljoonaa ihmistä. Samassa '
+            + 'rakennuksessa toimii nykyään Museu da Imigração.',
+          selite: 'Museu da Imigração toimii Moocan kaupunginosassa siinä '
+            + 'samassa talossa, jossa siirtolaiset kirjattiin sisään '
+            + 'vuosina 1887–1978.',
+          lahde: 'Agência Brasil Fotografias, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Immigrant Inn',
+        },
+        {
+          otsikko: 'Enemmän italialaisia kuin Roomassa',
+          tiedosto: 'Famiglia Mancini, São Paulo, Brazil.jpg',
+          teksti: 'São Paulossa on enemmän italialaisten jälkeläisiä kuin '
+            + 'missään Italian kaupungissa, Rooma mukaan luettuna: noin '
+            + 'puolella kaupunkilaisista on kokonaan tai osittain '
+            + 'italialaiset juuret. Vuoteen 1920 mennessä osavaltioon oli '
+            + 'saapunut 1 078 437 italialaista, ja samana vuonna lähes 80 '
+            + 'prosenttia kaupungin väestöstä oli siirtolaisia tai heidän '
+            + 'jälkeläisiään. Italiaa ja sen murteita puhuttiin '
+            + '1900-luvun alussa melkein yhtä paljon kuin portugalia, ja '
+            + 'siitä jäi jälki paulistanojen puhetapaan. Bixigan, Brásin ja '
+            + 'Moocan juhlakalenteri on yhä italialainen, ja kaupungin '
+            + 'kuudessatuhannessa pizzeriassa paistetaan noin miljoona '
+            + 'pizzaa päivässä.',
+          selite: 'Rua Avanhandavan italialaisravintoloissa kupariastiat '
+            + 'ja ruudulliset pöytäliinat ovat osa samaa perinnettä, jonka '
+            + '1800-luvun siirtolaiset toivat mukanaan.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Italian Brazilians',
+        },
+        {
+          otsikko: 'Liberdade, kaupunginosa jonne Japani muutti',
+          tiedosto: 'Casario - Liberdade 03.jpg',
+          teksti: 'Japanilaiset siirtolaiset alkoivat asettua Liberdadeen '
+            + '1912. Moni tuli osavaltion kahvitiloilta, joilla työ ei '
+            + 'ollut vastannut lupauksia, ja pääkaupungissa oli enemmän '
+            + 'mahdollisuuksia. Vuonna 1958 kaupungissa laskettiin 120 000 '
+            + 'japanilaista ja 1987 jo 326 000, minkä lisäksi osavaltion '
+            + 'muissa osissa asui 170 000; missään muualla Japanin rajojen '
+            + 'ulkopuolella ei asu yhtä suurta japanilaistaustaista '
+            + 'väestöä. Nykyään suurin osa heistä asuu muualla ja pitää '
+            + 'Liberdadessa vain liikkeitään, ja kaupunginosaan on '
+            + 'muuttanut kiinalaisia, taiwanilaisia ja korealaisia. '
+            + 'Vuodesta 1974 sisäänkäyntiä on merkinnyt yhdeksänmetrinen '
+            + 'punainen torii Rua Galvão Buenolla.',
+          selite: 'Liberdaden mäkikaduilla on säilynyt uuskolonialistista '
+            + 'rivitaloasutusta siltä ajalta, jolloin useampi perhe asui '
+            + 'samassa talossa.',
+          lahde: 'Dornicke, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Liberdade (district of São Paulo)',
+        },
+        {
+          otsikko: 'Kauppias, joka avasi kadun',
+          tiedosto: 'Rua 25 de Março 1.jpg',
+          teksti: 'Rua 25 de Março sai nimensä 1865 Brasilian ensimmäisen '
+            + 'perustuslain allekirjoituspäivästä; sitä ennen se oli Rua de '
+            + 'Baixo, alakatu, koska se kulki Tamanduateí-joen tasolla. '
+            + '1800-luvun jälkipuoliskolla alueelle asettui Lähi-idästä '
+            + 'tulleita siirtolaisia, ja 1887 libanonilainen Benjamin Jafet '
+            + 'avasi kadun ensimmäisen kaupan. Muut seurasivat perässä. '
+            + '1960-luvun toistuvat tulvat pilasivat varastoja niin usein, '
+            + 'että tavara oli myytävä nopeasti alennuksella — siitä syntyi '
+            + 'kadun maine tukkuhintojen keskuksena. 1980-luvulta alkaen '
+            + 'liikkeitä avasivat korealaiset, kiinalaiset, kreikkalaiset '
+            + 'ja portugalilaiset.',
+          selite: 'Rua 25 de Março on Brasilian tunnetuin '
+            + 'halpakauppakortteli, ja sen ympäristö São Bento -luostarin '
+            + 'ja Mercadãon välissä tunnetaan yleisesti kadun nimellä.',
+          lahde: 'Peter Louiz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Rua 25 de Março',
+        },
+      ],
+    },
+  ],
 };
