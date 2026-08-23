@@ -802,29 +802,12 @@ export function piirraLeipa(kohde, teksti, { anfangi = false } = {}) {
   return leipa;
 }
 
-/**
- * Sivun oma nosto: yksi virke lehden tapaan isolla väliin.
- *
- * KERRAN SIVUA KOHTI eikä joka nostossa. Sitaattinosto toistaa virkkeen,
- * joka on jo tekstissä — se on lehden tapa ja lukija tunnistaa sen, mutta
- * seitsemän kertaa peräkkäin se olisi pelkkää toistoa. Valinta on pisin
- * virke, koska lyhyt virke nostettuna näyttää irralliselta.
- *
- * VIRKE OTETAAN ENSIMMÄISESTÄ NOSTOSTA, ja nosto sijoitetaan sen JÄLKEEN.
- * Ensimmäinen esikatselu otti virkkeen mistä tahansa, ja se osui juuri
- * seuraavaan nostoon: sitaatti luki saman lauseen, joka alkoi kahden
- * rivin päästä uudestaan. Lehdessä nosto kaikuu sitä, minkä lukija on jo
- * lukenut — ei sitä, mitä hän on juuri lukemassa.
+/*
+ * SITAATTINOSTON POIMINTA (poimiNostoVirke) POISTETTU 23.8.2026.
+ * Aihesivujen jutut ovat niin lyhyitä, että nostettu virke näkyi
+ * heti uudestaan parin rivin päässä — omistajan päätös: nostot pois.
+ * Ks. js/maalehti.js piirraKategoria.
  */
-export function poimiNostoVirke(nostot) {
-  let paras = '';
-  for (const nosto of nostot ?? []) {
-    for (const virke of virkkeiksi(nosto.teksti)) {
-      if (virke.length > paras.length && virke.length <= 170) paras = virke;
-    }
-  }
-  return paras;
-}
 
 /*
  * Kehittäjätila (omistajan toive): kaupunkiin pääsee napauttamalla sen

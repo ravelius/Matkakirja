@@ -7109,72 +7109,12 @@ body.katselu #newgame-btn { display: none; }
 }
 
 /*
- * SITAATTINOSTO PALSTAN SISÄSSÄ (omistajan tilaus 22.8.2026: "siirrä
- * nostot osaksi tekstiä niin että tyhjätila ja pitkät vaakaviivat
- * häviävät").
- *
- * MIKÄ OLI VIKANA. Nosto oli oma täysleveä lohkonsa nostojen VÄLISSÄ:
- * ohut viiva ylä- ja alapuolella, keskitetty teksti ja lähes kolme
- * senttiä pystytyhjää. Kainalokuvallisessa nostossa (kuva kelluu
- * oikealla) leipäteksti loppui kuvan puoliväliin, ja koska nosto tuli
- * vasta lohkon jälkeen, kuvan viereen jäi ammottava aukko — kaksi
- * pitkää vaakaviivaa lisää alleviivasivat sen (mitattu 22.8.2026,
- * Venäjän Taide ja teatteri: nosto 888 px leveä, 161 px korkea).
- *
- * MIKÄ ON NYT. Nosto ladotaan leipätekstin jatkoksi SAMAAN
- * palstavirtaan (js/maalehti.js), joten se juoksee kainalokuvan
- * vierellä ja täyttää juuri sen aukon, joka ennen jäi tyhjäksi.
- * Korostus on kirjasintyön varassa eikä viivojen: kapea sisennys
- * molemmin puolin, hieman isompi kursiivi lukukirjasimella ja
- * antiikvan iso lainausmerkki riippumassa sisennyksessä kuten
- * vanhassa kirjaladonnassa. Perään jää lyhyt häntäviiva (2,4 rem)
- * kertomaan, mihin nosto loppuu ja leipäteksti jatkuu — se on
- * ornamentti, ei erotin, eikä ylitä sisennystä juuri lainkaan.
- *
- * Lainausmerkki on absoluuttisesti sijoitettu, joten se ei vie
- * riviltä tilaa eikä siirrä ensimmäistä sanaa; luennalle se ei näy
- * lainkaan, koska pseudoelementin sisältö ei ole DOM-tekstiä.
+ * SITAATTINOSTON TYYLIT (.wiki-sitaatti) POISTETTU 23.8.2026.
+ * Omistajan päätös: aihesivujen jutut ovat niin lyhyitä, että
+ * nostettu virke toisti itsensä heti parin rivin päässä. Nosto ei
+ * synny enää lainkaan (js/maalehti.js), joten säännöt olisivat
+ * jääneet kuolleiksi.
  */
-.wiki-sitaatti {
-  position: relative;
-  margin: 0.85rem 0 0.4rem;
-  padding: 0 0.8rem 0 2.4rem;
-  border: 0;
-  text-align: left;
-  /* Nosto ei saa katketa kahden palstan väliin (kuvaton nosto
-     taittuu kahdelle palstalle ≥ 700 px). */
-  break-inside: avoid;
-}
-
-.wiki-sitaatti::before {
-  content: '\201C';
-  position: absolute;
-  left: 0.1rem;
-  top: 0;
-  font-family: var(--font-luku);
-  font-size: 2.5rem;
-  line-height: 1;
-  color: rgba(70, 51, 31, 0.42);
-}
-
-.wiki-sitaatti::after {
-  content: '';
-  display: block;
-  width: 2.4rem;
-  height: 1px;
-  margin: 0.5rem 0 0;
-  background: rgba(70, 51, 31, 0.45);
-}
-
-.wiki-sitaatti p {
-  margin: 0;
-  font-family: var(--font-luku);
-  font-style: italic;
-  font-size: 1.08rem;
-  line-height: 1.45;
-  max-width: none;
-  color: rgba(58, 42, 26, 0.95);
-}
 
 /* Yksi nosto: kuva, otsikko, teksti, selite, lähde. */
 /*
