@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1042, teksti: 'Herokuvat kuuteen kaupunkiin Ateenasta Luxoriin' },
   { v: 1041, teksti: 'Aihesivujen toisteiset sitaattinostot poistettu' },
   { v: 1040, teksti: 'Kuvien lähderivi kuvatekstin jatkoksi pienemmällä' },
   { v: 1039, teksti: 'Akvarellit valmiit: 24 kaupunkia, Dubai ja Istanbul uusina' },
