@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1079, teksti: 'Viitekuvat herokuvien generointiin' },
   { v: 1078, teksti: 'Matkakirjan tekstille koko leveys takaisin' },
   { v: 1077, teksti: 'Kuvien kokoruutu takaisin, Quito ja Los Angeles' },
   { v: 1076, teksti: 'Tilastotaulun otsikkorivi pysyy, kuvapino piiloon' },
