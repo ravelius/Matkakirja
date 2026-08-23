@@ -3673,6 +3673,30 @@ export const KULTTUURI_KATEGORIAT = {
        * koot todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 12 (23.8.2026, tools/hero-tyolista-7.mjs). */
+        {
+          ampari: 'herokoe/hero-venetsia-aamu.png',
+          selite: 'Markuksenkirkon pääportaalin yllä seisovat neljä '
+            + 'pronssihevosta tuotiin Konstantinopolista 1204, ja '
+            + 'kampanilen nykyinen torni on vuoden 1902 sortuman '
+            + 'jälkeinen jälleenrakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-venetsia-keskipaiva.png',
+          selite: 'Rialton silta valmistui 1591 Antonio da Ponten '
+            + 'suunnittelemana yhtenä marmorikaarena, ja sen päällä '
+            + 'kulkee kaksi myymäläriviä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-venetsia-ilta.png',
+          selite: 'Santa Maria della Salute rakennettiin kiitokseksi '
+            + 'vuoden 1630 ruton päättymisestä, ja sen '
+            + 'kahdeksankulmainen runko lepää yli miljoonan puupaalun '
+            + 'varassa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Views of Venice, near Canal Grande5.jpg',
           selite: 'Venetsian vanhassa keskustassa asui noin 120 000 ihmistä '
@@ -5795,6 +5819,29 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 12 (23.8.2026, tools/hero-tyolista-7.mjs). */
+        {
+          ampari: 'herokoe/hero-amsterdam-aamu.png',
+          selite: 'Westerkerkin torni valmistui 1638 ja on Amsterdamin '
+            + 'korkein kirkontorni — sen huipulla kimaltaa keisari '
+            + 'Maximilianin kaupungille myöntämä kruunu.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-amsterdam-keskipaiva.png',
+          selite: 'Pierre Cuypersin suunnittelema Rijksmuseum avattiin '
+            + '1885, ja sen holvikäytävän läpi kulkee yhä pyörätie '
+            + 'suoraan rakennuksen ali.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-amsterdam-ilta.png',
+          selite: '"Laiha silta" eli Magere Brug on Amstelin yli johtava '
+            + 'valkoinen puinen kääntösilta, jonka nykyhahmo on '
+            + 'vuodelta 1934 — iltaisin sen kaaria valaisee yli tuhat '
+            + 'lamppua.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Amsterdam Westerkerk Blick vom Turm auf die Prinsengracht 2.jpg',
           selite: 'Westerkerk rakennettiin 1620–1631 Hendrick de Keyserin '
@@ -24631,6 +24678,29 @@ export const KULTTUURI_KATEGORIAT = {
        * katsottu silmin 18.8.2026.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 12 (23.8.2026, tools/hero-tyolista-7.mjs). */
+        {
+          ampari: 'herokoe/hero-bagdad-aamu.png',
+          selite: 'Mustansiriyan madrasa valmistui 1234 Tigriin rannalle, '
+            + 'ja se on maailman vanhimpia yliopistorakennuksia — '
+            + 'tiiliseiniä peittävät geometriset reliefikuviot.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-bagdad-keskipaiva.png',
+          selite: 'Kadhimiyan pyhäkkö kahden imaamin haudalla on '
+            + 'shiialaisen maailman suuria pyhiinvaelluskohteita, ja '
+            + 'sen kaksi kullattua kupolia hallitsevat kaupunginosan '
+            + 'siluettia.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-bagdad-ilta.png',
+          selite: 'Marttyyrien muistomerkin 40-metrinen turkoosi kupoli on '
+            + 'halkaistu kahtia, ja puolikkaiden väliin jää ikuinen '
+            + 'liekki — monumentti valmistui 1983.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: '160731-D-PB383-021 Tigris River flows through Baghdad, July 2016.JPG',
           selite: 'Tigris on Bagdadin keskiviiva, ja vuonna 762 perustettu '
@@ -40005,6 +40075,28 @@ export const KULTTUURI_KATEGORIAT = {
        * vain kerran.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 12 (23.8.2026, tools/hero-tyolista-7.mjs). */
+        {
+          ampari: 'herokoe/hero-hanoi-aamu.png',
+          selite: 'Hoan Kiem eli Palautetun miekan järvi on Hanoin sydän: '
+            + 'legendan mukaan kilpikonna vei keisarin taikamiekan '
+            + 'järveen, ja saaren kilpikonnatorni muistuttaa tarusta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-hanoi-keskipaiva.png',
+          selite: 'Yhden pylvään pagodi rakennettiin ensi kerran 1049 '
+            + 'lootuksenkukan muotoon yhden pilarin varaan — nykyinen '
+            + 'pyhäkkö on vuoden 1955 jälleenrakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-hanoi-ilta.png',
+          selite: 'Long Bienin terässilta valmistui 1902 Punaisenjoen yli, '
+            + 'ja sen keskellä kulkee yhä junarata — moottoripyörät ja '
+            + 'polkupyörät ajavat kapeilla reunakaistoilla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Ngoc Son Temple, Hanoi (5) (38496236631).jpg',
           selite: 'Ngọc Sơnin temppeli rakennettiin 1800-luvun alussa kolmen '
@@ -40993,6 +41085,31 @@ export const KULTTUURI_KATEGORIAT = {
        * jossa lehti ne kertoo.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 12 (23.8.2026, tools/hero-tyolista-7.mjs). */
+        {
+          ampari: 'herokoe/hero-kathmandu-aamu.png',
+          selite: 'Boudhanathin stupa on Nepalin suurimpia, ja sen '
+            + 'kullatusta tornista katsovat Buddhan silmät neljään '
+            + 'ilmansuuntaan — pyhiinvaeltajat kiertävät kupolia aina '
+            + 'myötäpäivään.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kathmandu-keskipaiva.png',
+          selite: 'Kathmandun Durbar-aukio oli mallakuninkaiden '
+            + 'palatsiaukio, jonka pagodatemppeleitä on korjattu '
+            + 'vuoden 2015 järistyksen jäljiltä — puiset tukirakenteet '
+            + 'näkyvät yhä paikoin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kathmandu-ilta.png',
+          selite: 'Swayambhunathin kukkulastupa on Kathmandun laakson '
+            + 'vanhimpia pyhäkköjä, jonne nousee 365 portaan '
+            + 'pyhiinvaellusrappu — temppeliapinat pitävät rinteitä '
+            + 'omanaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Side view of Kathmandu Durbar Square.jpg',
           selite: 'Hanuman Dhokan palatsin pihalle Prithvi Narayan Shah '
@@ -42066,6 +42183,30 @@ export const KULTTUURI_KATEGORIAT = {
        * kaupunkinäkymissä matalien kattojen yllä.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 12 (23.8.2026, tools/hero-tyolista-7.mjs). */
+        {
+          ampari: 'herokoe/hero-kanton-aamu.png',
+          selite: 'Chenin suvun esi-isäintemppeli valmistui 1894, ja sen '
+            + 'harjakattoja kruunaavat tuhansien keramiikkahahmojen '
+            + 'oopperakohtaukset — rakennus on kantonilaisen '
+            + 'koristetaiteen pääteos.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kanton-keskipaiva.png',
+          selite: 'Kantonin Pyhän sydämen katedraali rakennettiin '
+            + '1863–1888 kokonaan graniitista, ja sen kaksoistornit '
+            + 'nousevat lähes 60 metriin — paikalliset kutsuvat sitä '
+            + 'kivitaloksi.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kanton-ilta.png',
+          selite: 'Canton Tower valmistui 2010 Helmijoen rannalle: '
+            + 'kiertyvä teräsverkkotorni kapenee keskeltä kuin vyötärö '
+            + 'ja nousee antenneineen noin 600 metriin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Guangzhou Zhenhai Lou 2013.09.14 09-52-09.jpg',
           selite: 'Vanhasta kaupunginmuurista on jäljellä pätkä Yuexiun '
