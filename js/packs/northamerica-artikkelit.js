@@ -119,4 +119,22 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'Kaupungissa on Pohjois-Amerikan vanhin kiinalaiskortteli, ja '
       + 'se on lahden alueen talouden keskuksia.',
   },
+  Yhdysvallat: {
+    intro: 'Yhdysvallat on vuonna 1873 nuori jättiläinen: '
+      + 'itsenäisyysjulistuksesta on vasta vajaat sata vuotta, ja maa '
+      + 'ulottuu jo Atlantilta Tyynellemerelle. Sisällissota päättyi '
+      + 'kahdeksan vuotta sitten ja orjuus sen mukana, mutta arvet '
+      + 'pohjoisen ja etelän välillä ovat vielä tuoreet. Mantereen halki '
+      + 'kulkeva rautatie valmistui 1869 ja lyhensi matkan rannikolta '
+      + 'rannikolle puolesta vuodesta viikkoon — sitä ennen sama matka '
+      + 'tehtiin vaunuilla erämaan poikki tai laivalla Etelä-Amerikan '
+      + 'ympäri. Idän satamakaupungit ottavat vastaan siirtolaisia '
+      + 'Euroopasta, etelän New Orleansissa ranskalainen, espanjalainen ja '
+      + 'länsiafrikkalainen keittiö kiehuvat samassa padassa, ja lännessä '
+      + 'on juuri rauhoitettu maailman ensimmäinen kansallispuisto '
+      + 'Yellowstone. Amerikkalainen musiikki, ruoka ja keksinnöt syntyvät '
+      + 'juuri tässä murroksessa, jossa vanha maailma ja uusi kohtaavat '
+      + 'lennättimen ja höyryn voimalla. Isoisän matkapäiväkirja osuu '
+      + 'maahan hetkellä, jolloin se on yhtä aikaa vanha ja aivan uusi.',
+  },
 };

@@ -2441,6 +2441,117 @@ export const MAAKARTAT = {
       wiki: 'Persian qanatit',
     },
   },
+  USA: {
+    /*
+     * PELIN AINOA MAAKARTTA, JOKA EI OLE KORKOKARTTA. Lue tämä ennen
+     * kuin vaihdat tiedoston.
+     *
+     * Fablen päätös 22.8.2026 (spec-mantereet.md, "Fablen päätökset" 2)
+     * oli: manner-USA ilman Alaskaa ja Havaijia, EIKÄ uutta
+     * projektiohaaraa karttapiste()-funktioon. Päätös oletti, että
+     * Commonsista löytyy tasavälinen korkokartta mantereisesta
+     * Yhdysvalloista. SITÄ EI OLE. Läpikäynti 23.8.2026:
+     *  - Wikipedian Module:Location map/data/USA ja .../USA2 antavat
+     *    molemmat SAMAN kartioprojektion kaavan
+     *    (EquiDistantConicProjection, keskileveyspiiri 37°N,
+     *    keskipituuspiiri 96°W, standardileveyspiirit 32°N ja 42°N),
+     *    ja niiden relief-kuvat ovat `Usa edcp relief location
+     *    map.png` (1181 px, alle 1200 px:n rajan) ja `Usa edcp
+     *    (+HI +AK) relief location map.png/svg`. Sama kaava on myös
+     *    de-Wikipedian Vorlage:Positionskarte USA:ssa.
+     *  - Commonsin luokat "Relief location maps of the United States"
+     *    (44 tiedostoa), "Location maps of the United States" (24),
+     *    "Contiguous United States" (15) ja "Language-neutral maps of
+     *    the United States" (35) käytiin läpi: koko manner-USA:n
+     *    korkokartat ovat kaikki tuota samaa kartioprojektiota.
+     *    Ainoa tasavälinen relief on Alexrk2:n `USA Region West
+     *    relief location map.jpg`, joka päättyy pituuspiiriin 101,4°W
+     *    — Chicago, New Orleans ja New York jäisivät kuvan ulkopuolelle.
+     *  - Commonsin tekstihaku `insource:/49.8/ insource:/125.5/
+     *    insource:/66.5/` löysi näillä rajoilla vain NordNordWestin
+     *    oman kartan ja sen johdannaiset.
+     * Kartioprojektio suoraPiste()-kaavalla siirtäisi JOKAISEN
+     * kaupunkipisteen (sama sudenkuoppa kuin Venäjällä, ks. RUS), ja
+     * uusi haara oli kielletty. Siksi tässä on ainoa tasavälinen ja
+     * dokumentoitu koko manner-USA:n kartta, joka Commonsista löytyy:
+     * NordNordWestin sijaintikartta. PUUTE ON TERRAIN: kartassa
+     * näkyvät osavaltiorajat, rannikko ja Suuret järvet mutta ei
+     * korkeusvarjostusta, ja Alaska ja Havaiji ovat rajauksen
+     * ulkopuolella. Jos Commonsiin joskus ilmestyy tasavälinen
+     * korkokartta samoilla rajoilla, tiedoston voi vaihtaa
+     * sellaisenaan — rajat, pisteet ja lohko pysyvät.
+     */
+    tiedosto: 'USA location map.svg',
+    lahde: 'NordNordWest, Wikimedia Commons (CC BY-SA 3.0)',
+    /*
+     * Rajat tiedoston omalta kuvaussivulta ("Equirectangular
+     * projection, N/S stretching 120 %"), haettu itse ennen kuin
+     * faktapohjan ehdotusta luettiin (resepti, kohta 2). N/S-venytys
+     * vaikuttaa vain kuvasuhteeseen, ei prosenttiasemointiin.
+     */
+    rajat: { pohjoinen: 49.8, etela: 24.2, lansi: -125.5, ita: -66.5 },
+    /*
+     * Kuusi paikkaa, jotka näyttävät mantereen mitan: pääkaupunki
+     * Washington ja maahanmuuton portti New York idässä, Chicago
+     * Suurten järvien rannalla, New Orleans Mississippin suistossa,
+     * Denver Kalliovuorten juurella ja San Francisco lännessä eli
+     * rautatien läntinen pääte. Koordinaatit artikkelien
+     * coord-merkinnöistä (Washington ja New York fi-Wikipediasta,
+     * muut en-Wikipediasta).
+     *
+     * Vesitarkistus ajettu pelin omalla karttapiste()-funktiolla ja
+     * kartan pikselivärillä (1280 px leveä renderöinti, kiekon säde 4
+     * px): yksikään kuudesta ei ole vedessä. Neljä on rannalla, joten
+     * kiekossa on myös sinistä — Chicago 59 %, San Francisco 56 % ja
+     * New York 44 % ovat kaikki rantakaupunkeja, joiden piste on
+     * mittakaavassa parin pikselin päässä rantaviivasta. Sama ilmiö
+     * kuin satamakohteissa tools/tarkista-karttapisteet.mjs:n
+     * otsakkeessa: rannalla oleva piste ei ole virhe. Kartta ja
+     * pisteet katsottu silmin myös lehden 340 px:n koossa.
+     */
+    kaupungit: [
+      { nimi: 'Washington', lat: 38.895, lon: -77.037, paa: true },
+      { nimi: 'New York', lat: 40.67, lon: -73.94 },
+      { nimi: 'Chicago', lat: 41.882, lon: -87.628 },
+      { nimi: 'New Orleans', lat: 29.95, lon: -90.067 },
+      { nimi: 'Denver', lat: 39.74, lon: -104.99 },
+      { nimi: 'San Francisco', lat: 37.777, lon: -122.416 },
+    ],
+    /*
+     * Kuvanosto Mississippistä: kartan halki juokseva joki on maan
+     * vanha valtaväylä, eikä yksikään USA:n aihesivu kerro siitä.
+     * Aihe ei osu mihinkään maalehden kahteenkymmeneen nostoon
+     * (tarkistettu). Kuva on Currier & Ivesin lintuperspektiivipainos
+     * vuodelta 1874 — vuosi isoisän matkan jälkeen — ja siinä näkyy
+     * painoksen oma otsikko ja kohdeluettelo alareunassa (reseptin
+     * sallima julkaisijan oma litera, kerrottu kuvatekstissä). Kuva
+     * silmätarkistettu 900 px:ssä. Lähderivin tekijä on lyhennetty
+     * extmetadatan muodosta "Parsons & Atwater New York : Published
+     * by Currier & Ives, c1874." luettavaan muotoon.
+     */
+    nosto: {
+      otsikko: 'Joki, joka oli maan valtatie',
+      tiedosto: 'City of Saint Louis and Riverfront, 1874.jpg',
+      teksti: 'Mississippi virtaa Minnesotan Itascajärvestä '
+        + 'Meksikonlahteen 3 766 kilometriä ja on Yhdysvaltain toiseksi '
+        + 'pisin joki heti Missourin jälkeen. Ennen rautateitä se oli '
+        + 'maan valtaväylä. Ensimmäinen höyrylaiva kulki koko alajuoksun '
+        + 'New Orleansiin asti joulukuussa 1811 — keskellä New Madridin '
+        + 'maanjäristyssarjaa — ja höyrylaivakauppa kukoisti '
+        + '1830-luvulta 1870-luvulle. Anchor Line ajoi ylellisiä '
+        + 'matkustajalaivoja St. Louisin ja New Orleansin väliä vuosina '
+        + '1859–1898, ja Mark Twain kirjoitti juuri näistä vuosista '
+        + 'kirjansa Elämää Mississippillä. St. Louis oli solmukohta, '
+        + 'jossa joen laivat ja lännen rautatiet kohtasivat.',
+      selite: 'Mississippi virtaa Itascajärvestä Meksikonlahteen 3 766 '
+        + 'kilometriä ja oli ennen rautateitä maan valtaväylä, jonka '
+        + 'höyrylaivakausi kesti 1830-luvulta 1870-luvulle; painoksen '
+        + 'oma otsikko ja kohdeluettelo ovat kuvan alareunassa.',
+      lahde: 'Parsons & Atwater, kustantanut Currier & Ives, '
+        + 'Wikimedia Commons (PD)',
+      wiki: 'Mississippi (joki)',
+    },
+  },
 };
 
 /*
