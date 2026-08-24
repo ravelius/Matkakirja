@@ -37,6 +37,20 @@
  * kirjoittaa lisäksi kuvan, jossa on laudan oma maarengas punaisella ja
  * risti kaupungin laattakoordinaatissa — silmällä katsottava todiste.
  *
+ * TASAUS MITATTIIN VIELÄ KERRAN 27.8.2026 valmiista tuotantokuvasta
+ * (omistajan pelitestiepäily v1101: *"fokuskuvan ja laudan
+ * koordinaatiston kohdistus heittää puoli astetta"*). Kuva ladattiin
+ * ämpäristä ja siihen merkittiin laudan kaavalla lasketut pisteet:
+ * Ateenan laatta (6624,7 / 1882) osuu Attikan niemelle Salamiin ja
+ * Pireuksen viereen, ja kuvaan poltettu Náfplion piste osuu omaan
+ * lasketuun koordinaattiinsa muutaman kuvapikselin tarkkuudella eli
+ * alle 0,02 asteen. Puolen asteen heitto olisi 175 kuvapikseliä ja
+ * silminnähtävä — SIIS KUVA ON KOHDALLAAN eikä sitä tarvitse ajaa
+ * uudelleen. Epäilyn syy oli laudan oma ATEENA-nimilappu, joka on
+ * kaupunkidatassa siirretty lännemmäs (js/packs/maailmankartta.js:
+ * `la:'end'`, `lx:-17`) ja jonka fokuszoomi suurentaa lähes sadan
+ * kilometrin päähän laatasta.
+ *
  * === LEHTI JA VUOTO: KAKSI LAATIKKOA ===
  *
  * Rajaus EI enää ole maan oma laatikko pienellä marginaalilla, vaan

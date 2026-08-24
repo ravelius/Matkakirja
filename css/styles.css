@@ -17986,6 +17986,35 @@ body.kartalento .fokus-viivaimet { opacity: 0; pointer-events: none; }
     0 0 10px rgba(244, 232, 205, 0.7);
 }
 
+/*
+ * YLEINEN NAPPITAUSTA EI SAA PALATA MISSÄÄN TILASSA (omistajan
+ * pelitestipalaute v1101, iPad: alarivi "ΕΛΛΑΣ · Hellas ·
+ * kuningaskunta v. 1873" oli lukukelvoton tumman laatan päällä).
+ *
+ * SYY MITATTIIN SELAIMESSA eikä arvattu: kartuutsin alle ilmestyi
+ * täsmälleen sen kokoinen laatta värillä #43331f, joka on tyylitiedoston
+ * YLEINEN `button:hover:not(:disabled)` (rivi ~1540).
+ *
+ * KOSKETUSNÄYTÖLLÄ :hover JÄÄ PÄÄLLE napautuksen jälkeen, ja kartuutsia
+ * napautetaan aina — se on maataulun ainoa avain. Vika oli siis pysyvä
+ * juuri siinä tilanteessa, jossa maataulu on auki.
+ *
+ * TARKKUUS ON LASKETTAVA, EI ARVATTAVA. Yleisen säännön tarkkuus on
+ * (0,2,1): kaksi pseudoluokkaa (`:hover`, `:not(:disabled)`) ja yksi
+ * elementti. Pelkkä `.fokus-kartuutsi:hover` on (0,2,0) ja HÄVIÄÄ
+ * elementtiosassa — mitattu selaimessa, tausta jäi tummaksi. Siksi
+ * tässä toistetaan sama muoto elementteineen ja `:not`-osineen, jolloin
+ * tarkkuus on (0,3,1) eikä ratkaisu ole kiinni tiedoston järjestyksestä.
+ */
+.fokus-kartuutsi,
+button.fokus-kartuutsi:hover:not(:disabled),
+button.fokus-kartuutsi:focus:not(:disabled),
+button.fokus-kartuutsi:active:not(:disabled) {
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
 .fokus-kartuutsi:hover { color: rgba(40, 26, 14, 0.98); }
 .fokus-kartuutsi:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
@@ -18016,12 +18045,26 @@ body.kartalento .fokus-viivaimet { opacity: 0; pointer-events: none; }
  *
  * Tyhjä alarivi (maa, jonka omaa nimeä ei tunneta) kutistuu pois
  * itsestään, koska molemmat palat ovat tyhjiä tekstisolmuja.
+ *
+ * OMA, TIHEÄMPI HALO. Rivi on kartuutsin pienintä tekstiä ja sen pituus
+ * riippuu maasta: "ΕΛΛΑΣ · Hellas · kuningaskunta v. 1873" on lyhyt
+ * verrattuna Bulgarian riviin, ja mitä pidemmälle rivi ulottuu, sitä
+ * varmemmin sen loppupää osuu kartuutsin alta ulapan sijaan vuoristoon.
+ * Kartuutsin oma halo (4 px ja 10 px) on mitoitettu 1,35rem:n
+ * versaalille; 0,66rem:n kursiivilla sama säde jättää kirjaimen
+ * ohuenkin viivan kiinni maastoon. Kolme tiheämpää kerrosta pitää rivin
+ * luettavana koko pituudeltaan taustasta riippumatta — text-shadow eikä
+ * suodatin, kuten kaikkialla muuallakin (tests/rules.test.mjs).
  */
 .fokus-kartuutsi-alarivi {
   display: block;
   line-height: 1.25;
   white-space: nowrap;
   color: rgba(74, 52, 33, 0.88);
+  text-shadow:
+    0 0 3px rgba(244, 232, 205, 0.98),
+    0 0 6px rgba(244, 232, 205, 0.92),
+    0 0 12px rgba(244, 232, 205, 0.8);
 }
 
 .fokus-kartuutsi-paikallinen {
@@ -18256,36 +18299,62 @@ body.fokuspohja .maa-pilleri { display: none; }
 
    LIIKE ON TRANSFORM + OPACITY, ei suodatin (iOS-sääntö), ja
    prefers-reduced-motion sammuttaa sen kokonaan.
+
+   --- LOPPU PAPERILAATASTA (omistajan pelitestitilaus 27.8.2026) ------
+
+   *"Taulu kokonaan läpinäkyvälle pohjalle ja lähemmäs KREIKKA-plakaattia
+   niin että ne muodostavat yhtenäisen kokonaisuuden."* Kaksi seurausta:
+
+     A. EI TAUSTAA, EI KEHYSTÄ, EI VARJOA. Kohdan 2 vaalea laatta (0.58)
+        oli viimeinen jäänne "sivusta" kartan päällä; nyt taulu on samaa
+        lajia kuin kartuutsi eli MUSTETTA PAPERILLA. Luettavuus tulee
+        yksinomaan halosta — kolme kerrosta kuten kartuutsin alarivillä,
+        koska taulun pienin teksti (lähdeviite 0,64rem) on vielä
+        alariviäkin hennompi. Halo on text-shadow eikä suodatin
+        (tests/rules.test.mjs).
+     B. ALAREUNA MITATAAN KARTUUTSISTA eikä arvata rem-luvuilla. Vanha
+        `4.9rem + turva-alue` ei ollut sama viiva kuin kartuutsin oma
+        `0.9rem` ilman turva-aluetta, joten iPadilla väliin jäi
+        turva-alueen verran tyhjää — juuri se rako, jonka takia taulu ja
+        plakaatti näyttivät kahdelta eri kalusteelta. Nyt js/fokusmitat.js
+        mittaa kartuutsin (ja Liiku-neliön) yläreunan ja kirjoittaa sen
+        muuttujaan --fokus-taulupohja; rem-arvo jää varalle siltä
+        varalta, ettei mittaus ole vielä ehtinyt.
    =========================================================================== */
 
 .fokus-maataulu {
   position: absolute;
   left: 0.7rem;
   /*
-   * ALAREUNA ON SEKÄ KARTUUTSIN ETTÄ LIIKU-NELIÖN YLÄPUOLELLA.
-   * Kartuutsi alkaa 0.9rem korkeudelta ja on noin 3rem korkea, mutta
-   * neliö on ylempänä: alanappirivi asuu .rail-kerroksessa, joka on
-   * itse --gapin verran irti reunasta, joten neliön yläreuna on
-   * tabletilla runsaat 4,5rem ruudun alalaidasta (mitattu 768 px:n
-   * ruudulla: 4.4rem jätti napin päälle 1,6 pikseliä). 4.9rem jättää
-   * molempiin selvän raon. Turva-alue kuten muillakin alalaidan
-   * kalusteilla.
+   * ALAREUNA ON SEKÄ KARTUUTSIN ETTÄ LIIKU-NELIÖN YLÄPUOLELLA — mitattuna
+   * niistä itsestään (js/fokusmitat.js paivitaTaulunPohja). Varalla oleva
+   * rem-arvo on entinen: kartuutsi alkaa 0.9rem korkeudelta ja on noin
+   * 3rem korkea, mutta neliö on ylempänä, koska alanappirivi asuu
+   * .rail-kerroksessa, joka on itse --gapin verran irti reunasta.
    */
-  bottom: calc(4.9rem + env(safe-area-inset-bottom, 0px));
+  bottom: var(--fokus-taulupohja, calc(4.9rem + env(safe-area-inset-bottom, 0px)));
   z-index: 5;
   width: min(26rem, calc(100% - 1.4rem));
   max-height: min(46%, 22rem);
   overflow-y: auto;
-  padding: 0.65rem 2.6rem 0.55rem 0.85rem;
-  border: 1px solid rgba(74, 52, 33, 0.42);
-  border-radius: 6px;
-  background: rgba(243, 230, 201, 0.58);
-  box-shadow: 0 4px 14px rgba(46, 30, 14, 0.18);
+  /*
+   * VASEN PEHMUSTE ON SAMA KUIN KARTUUTSILLA (0.35rem), jotta lukurivit
+   * ja KREIKKA alkavat täsmälleen samasta pystyviivasta — se on se yksi
+   * asia, joka tekee kahdesta kalusteesta yhden. Oikea pehmuste pitää
+   * rivit poissa plus-napin alta.
+   */
+  padding: 0.65rem 2.6rem 0.5rem 0.35rem;
+  border: 0;
+  background: none;
+  box-shadow: none;
   color: rgba(52, 36, 21, 0.95);
   font-family: var(--font-type);
-  /* Läpikuultavan paperin päällä muste tarvitsee saman vaalean halon
-     kuin kartuutsi, tai maasto sotkisi lukuja. */
-  text-shadow: 0 0 4px rgba(244, 232, 205, 0.9);
+  /* Ilman paperilaattaa muste on suoraan maaston päällä: halo on siis
+     taulun ainoa luettavuuden lähde, ja siksi kolmikerroksinen. */
+  text-shadow:
+    0 0 3px rgba(244, 232, 205, 0.98),
+    0 0 6px rgba(244, 232, 205, 0.92),
+    0 0 12px rgba(244, 232, 205, 0.8);
   /* Pystyvieritys sormella; kartan panorointi ei saa käynnistyä
      (js/fokusmitat.js pysäyttää tapahtumat, tämä sallii vierityksen). */
   touch-action: pan-y;
@@ -18399,6 +18468,19 @@ body.fokuspohja .maa-pilleri { display: none; }
   flex-wrap: wrap;
   gap: 0.25rem 0.7rem;
   font-size: 0.78rem;
+}
+
+/*
+ * KIELEN TARKENNE ("· Länsi-Traakia") kielen nimen perässä. Se on
+ * väitteen ehto eikä lisätieto (js/fokusmitat.js kieliOsat), joten se
+ * on luettavissa — mutta selvästi kevyempi kuin kielen nimi, jottei
+ * lyhyt rivi näytä kahdelta rinnakkaiselta kieleltä. Sama sävy ja
+ * kokosuhde kuin lukurivien sijaluvulla (.fokus-maataulu-sija).
+ */
+.fokus-kieli-tarkenne {
+  color: rgba(74, 52, 33, 0.6);
+  font-size: 0.78em;
+  white-space: nowrap;
 }
 
 .fokus-maataulu-lahde {

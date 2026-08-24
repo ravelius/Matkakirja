@@ -249,6 +249,14 @@ function maanRivit(ui, iso) {
  * LIPPU SAA PUUTTUA. Maalehden sääntö pätee tässäkin: vähemmistökielen
  * merkitseminen naapurivaltion lipulla liittäisi puhujat toiseen
  * maahan, joten `lippu`-kenttä on tarkoituksella joskus tyhjä.
+ *
+ * TARKENNE ON OSA VÄITETTÄ EIKÄ KORISTE (omistaja 27.8.2026). Tässä
+ * pudotettiin ennen suluissa oleva tarkenne pois tilanpuutteen takia,
+ * jolloin datan "turkki (Länsi-Traakia)" latoutui tauluun muotoon
+ * "turkki" — ja taulu väitti turkkia Kreikan kieleksi ilman sitä
+ * ainoaa sanaa, joka tekee väitteestä tosen. Tarkenne on siis
+ * NÄYTETTÄVÄ; se ladotaan kielen nimen perään pienempänä ja
+ * haaleampana, samalla erotinpisteellä kuin muutkin lisät.
  */
 function kieliOsat(ui, iso) {
   const tiedot = (MAATIEDOT[ui.game?.pack?.id] ?? {})[iso] ?? {};
@@ -265,10 +273,17 @@ function kieliOsat(ui, iso) {
       asetaKuva(lippu, lippuUrl(t.lippu, 40), lippuVara(t.lippu, 40), () => lippu.remove());
       osa.appendChild(lippu);
     }
-    // Suluissa oleva tarkenne ("turkki (Länsi-Traakia)") on lehden
-    // asia; ahtaassa taulussa riittää kielen nimi.
-    osa.appendChild(luo('span', 'maa-sija tervehdys-osuus',
-      t.kieli.replace(/\s*\(.*\)$/, '')));
+    /*
+     * Kielen nimi ja sen jälkeen mahdollinen tarkenne omana palanaan.
+     * Sulut jäävät pois, koska rivillä on jo omat erottimensa: piste
+     * erottaa tarkenteen kevyemmin kuin sulkumerkit, jotka näyttäisivät
+     * ahtaassa taulussa kirjoitusvirheeltä katkettuaan.
+     */
+    const [, nimiOsa = t.kieli, tarkenne] = /^(.*?)\s*\(([^)]*)\)$/.exec(t.kieli) ?? [];
+    osa.appendChild(luo('span', 'maa-sija tervehdys-osuus', nimiOsa));
+    if (tarkenne) {
+      osa.appendChild(luo('span', 'fokus-kieli-tarkenne', `· ${tarkenne}`));
+    }
     return osa;
   });
 }
@@ -352,9 +367,13 @@ function rakenna(ui) {
 }
 
 /*
- * MAATAULU: KARTUUTSIN YLÄPUOLELLE nouseva, läpikuultava taulu maan
- * perustiedoista (omistaja 25.8.2026, viimeistely pelitestissä
- * 26.8.2026).
+ * MAATAULU: KARTUUTSIN YLÄPUOLELLE nouseva taulu maan perustiedoista
+ * (omistaja 25.8.2026, viimeistely pelitesteissä 26.–27.8.2026).
+ *
+ * TAULULLA EI OLE ENÄÄ OMAA POHJAA (omistaja 27.8.2026): teksti on
+ * suoraan kartan päällä kuten kartuutsissakin, ja luettavuus tulee
+ * halosta (CSS). Samalla taulu laskettiin kiinni kartuutsiin —
+ * alareuna mitataan siitä (paivitaTaulunPohja) eikä arvata remeinä.
  *
  * VIISI SÄÄNTÖÄ:
  *
@@ -363,8 +382,9 @@ function rakenna(ui) {
  *    vasempaan laitaan kuin kartuutsi ja alkaa heti sen yläpuolelta —
  *    kartuutsi jää näkyviin taulun alle, ja juuri siksi taulussa EI OLE
  *    OTSIKKOA: maan nimi lukee jo kartuutsissa.
- * 2. TAULU EI PEITÄ ALANAPPEJA. Sen alareuna on alanappirivin
- *    yläpuolella (CSS `bottom`), joten Liiku on käytössä koko ajan.
+ * 2. TAULU EI PEITÄ ALANAPPEJA. Sen alareuna on kartuutsin JA
+ *    Liiku-neliön yläpuolella — kummankin mitatun yläreunan mukaan
+ *    (paivitaTaulunPohja), joten Liiku on käytössä koko ajan.
  * 3. SULKUNAPPIA EI OLE. Taulu sulkeutuu napauttamalla karttaa, samaa
  *    kartuutsia uudelleen tai Escistä — ristin paikka meni taulun
  *    ainoalle kalusteelle, plussalle.
@@ -436,6 +456,13 @@ export function avaaMaataulu(ui, auki) {
   taulu.classList.toggle('auki', ui.fokusMaatauluAuki);
   taulu.inert = !ui.fokusMaatauluAuki;
   ui.fokusKartuutsi?.setAttribute('aria-expanded', String(ui.fokusMaatauluAuki));
+  /*
+   * Vasen viivain varaa kaistan auki olevalle taululle (ks.
+   * paivitaViivaimet), joten lukemat on ladottava uudelleen heti
+   * avattaessa ja suljettaessa — muuten ne palaisivat vasta seuraavan
+   * panoroinnin päätteeksi.
+   */
+  paivitaViivaimet(ui);
   /*
    * KARTUUTSI JÄÄ NÄKYVIIN TAULUN ALLE (omistajan pelitestitilaus
    * 26.8.2026). Ennen koko mittasäiliö häivytettiin taulun tieltä
@@ -650,6 +677,24 @@ function paivitaViivaimet(ui) {
   }
 
   /* --- leveysasteet vasempaan reunaan --- */
+  /*
+   * AUKI OLEVA MAATAULU VARAA KAISTAN ITSELLEEN. Taulu on nyt pohjaton
+   * (ks. rakennaMaataulu), ja sen lukurivit alkavat samasta
+   * pystyviivasta kuin kartuutsi eli viivainnauhan päältä. Ennen
+   * paperilaatta peitti lukemat; nyt ne latoutuisivat "34°P KESKITULO"
+   * -sotkuksi. Lukema on kahdesta vähäarvoisempi — se palaa heti kun
+   * taulu sulkeutuu — joten viivain väistää eikä taulu.
+   */
+  const taulu = ui.fokusMaatauluAuki ? ui.fokusMaataulu : null;
+  /*
+   * ASETTELULAATIKKO EIKÄ getBoundingClientRect: taulun avaus on
+   * transform-siirtymä (scaleY), ja ruutulaatikko kertoisi kesken
+   * animaation väärän korkeuden. offsetTop/offsetHeight ovat
+   * karttaruudun suhteen ja transformista riippumattomat.
+   */
+  const varattu = taulu && taulu.offsetHeight > 0
+    ? [taulu.offsetTop - 6, taulu.offsetTop + taulu.offsetHeight + 6]
+    : null;
   const latYla = kaavat.lat(ruutu.lautaY(0));
   const latAla = kaavat.lat(ruutu.lautaY(ruutu.korkeus));
   const pxLeveysasteessa = Math.abs(ruutu.korkeus / (latYla - latAla));
@@ -661,6 +706,7 @@ function paivitaViivaimet(ui) {
       const y = ruutu.py(kaavat.y(lat));
       // Nurkka kuuluu yläviivaimelle, alanurkka kartuutsille.
       if (y < NURKKA_PX || y > ruutu.korkeus - 64) continue;
+      if (varattu && y > varattu[0] && y < varattu[1]) continue;
       viivainMerkki(vasen, y, asteTeksti(lat, ['P', 'E']), true);
     }
   }
@@ -697,6 +743,58 @@ function paivitaNappipaikka(ui) {
   document.body.style.setProperty('--fokus-nappipaikka', `${Math.round(leveys + 8)}px`);
 }
 
+/* Rako taulun alareunan ja kartuutsin yläreunan väliin. Pieni, koska
+ * juuri raon pienuus tekee kahdesta kalusteesta yhden (omistaja
+ * 27.8.2026: *"muodostavat yhtenäisen kokonaisuuden"*). */
+const TAULUN_RAKO = 6;
+
+/**
+ * MAATAULUN ALAREUNA MITATAAN KARTUUTSISTA — samasta syystä kuin
+ * neliönapin paikka mitataan sen leveydestä (ks. paivitaNappipaikka).
+ *
+ * Käsin kirjoitettu rem-luku ei voi osua kartuutsin yläreunaan, koska
+ * kalusteet eivät ole ankkuroituina samaan viivaan: kartuutsi on
+ * karttaruudun alalaidassa `bottom: 0.9rem` ja saa turva-alueen mukaan
+ * vasta kapealla ruudulla, kun taas taulu laski turva-alueen aina
+ * mukaan. iPadilla ero oli tasan turva-alueen verran, ja juuri se rako
+ * sai taulun näyttämään omalta erilliseltä ikkunaltaan.
+ *
+ * MITTA LASKETAAN SÄILIÖN OMASTA ANKKURISTA, EI KARTTARUUDUN
+ * ALAREUNASTA. Sekä taulu että mittasäiliö ovat karttaruudun
+ * absoluuttisia lapsia ja molemmat ankkuroitu `bottom`-arvolla, joten
+ * oikea mitta on säiliön oma `bottom` plus kartuutsin korkeus. Erotus
+ * karttaruudun alareunasta olisi sama luku vain silloin, kun ruutu on
+ * juuri mitatun korkuinen — ja karttaruutu venyy ja kutistuu kesken
+ * pelin (fokusvirran kortti), jolloin taulu jäisi kellumaan kauas
+ * kartuutsista seuraavaan päivitykseen asti.
+ *
+ * LIIKU-NELIÖ OTETAAN MUKAAN. Se on kartuutsin rinnalla mutta hitusen
+ * ylempänä (alanappirivi asuu .rail-kerroksessa eikä karttaruudussa),
+ * ja taulu peittäisi pelin ainoan liikkumisnapin, jos ylin reuna
+ * luettaisiin pelkästä kartuutsista. Ero luetaan näiden kahden
+ * ruutulaatikon erotuksena, joka ei riipu karttaruudun mitoista.
+ *
+ * Muuttuja asetetaan bodyyn samasta syystä kuin --fokus-nappipaikka.
+ */
+function paivitaTaulunPohja(ui) {
+  const kartuutsi = ui.fokusKartuutsi;
+  const sailio = ui.fokusmitatSailio;
+  if (!kartuutsi || !sailio) return;
+  const korkeus = kartuutsi.offsetHeight;
+  const ankkuri = parseFloat(getComputedStyle(sailio).bottom);
+  if (!(korkeus > 0) || !Number.isFinite(ankkuri)) return;
+  const oma = kartuutsi.getBoundingClientRect();
+  const nappi = document.querySelector('.toimintorivi.rivi-yksi .monitoimi-nappi');
+  const napinRuutu = nappi?.getBoundingClientRect();
+  // Kuinka paljon neliö on kartuutsia ylempänä (nolla tai enemmän).
+  const napinYli = napinRuutu?.height > 0 && oma.height > 0
+    ? Math.max(0, oma.top - napinRuutu.top)
+    : 0;
+  const pohja = Math.round(ankkuri + korkeus + napinYli + TAULUN_RAKO);
+  if (!(pohja > 0)) return;
+  document.body.style.setProperty('--fokus-taulupohja', `${pohja}px`);
+}
+
 /* ------------------------------------------------------- päivitys */
 
 /**
@@ -721,6 +819,7 @@ export function paivitaFokusmitat(ui) {
       sailio.hidden = true;
       if (ui.fokusViivaimet) ui.fokusViivaimet.hidden = true;
       document.body.style.removeProperty('--fokus-nappipaikka');
+      document.body.style.removeProperty('--fokus-taulupohja');
       avaaMaataulu(ui, false);
       ui.fokusMitatAvain = null;
     }
@@ -748,9 +847,11 @@ export function paivitaFokusmitat(ui) {
     taytaMaataulu(ui, iso);
   }
 
-  // Neliönapin paikka mitataan joka päivityksellä: ruudun leveys (ja
-  // sen myötä kartuutsin kirjasinkoko) voi vaihtua kesken pelin.
+  // Neliönapin paikka ja taulun alareuna mitataan joka päivityksellä:
+  // ruudun leveys (ja sen myötä kartuutsin kirjasinkoko) sekä
+  // karttaruudun korkeus voivat vaihtua kesken pelin.
   paivitaNappipaikka(ui);
+  paivitaTaulunPohja(ui);
   paivitaViivaimet(ui);
 
   const jana = laskeMittajana(ui);
@@ -768,6 +869,7 @@ export function nollaaFokusmitat(ui) {
   ui.fokusMaataulu?.remove();
   ui.fokusViivaimet?.remove();
   document.body.style.removeProperty('--fokus-nappipaikka');
+  document.body.style.removeProperty('--fokus-taulupohja');
   ui.fokusmitatSailio = null;
   ui.fokusKartuutsi = null;
   ui.fokusJana = null;
