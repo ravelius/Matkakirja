@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1085 — NELJA OSEANIAN KAUPUNKILEHTEA: Adelaide, Hobart, Darwin ja Port Moresby. Kaikilla nelja sivua ja 16 nostoa. Adelaide Ovalin avajaispaiva osuu isoisan matkavuoteen paivalleen, ja Port Moresbyn sataman nimeaminen samoin. Tarkista: neljan lehden sivut, erityisesti alkuperaiskansasivut',
   'v1084 — NELJA UUTTA KAUPUNKILEHTEA: Havanna, Mexico City, New Orleans ja Bogota. Jokaisen faktapohja oli kaynyt lapi riippumattoman tarkistuksen, ja tarkistuksen pakolliset korjaukset on tehty. Tarkista: neljan uuden lehden sivut kannesta matkaoppaaseen',
   'v1083 — MONTEVIDEON KAUPUNKILEHTI: kaupunki, historia ja musiikki; 12 nostoa ja 22 kuvaa. Candombe elavana nykykulttuurina omalla sivullaan. Tarkista: Montevideon lehti ja musiikkisivu',
   'v1082 — LISAA KUVIA -GALLERIA: nahtavyysjutun ja kohdekartan alta aukeaa erillinen galleria, joka hakee kohteesta lisaa AITOJA kuvia seitsemasta avoimesta lahteesta (Commons kategoriahaulla ja geohaulla, Openverse, Library of Congress, kolme museota). Vain PD ja CC BY/BY-SA, tekija ja lisenssi nakyvat. Ilman verkkoa nappia ei ole. Tarkista: nahtavyysjutun Lisaa kuvia -nappi, kohdekartan vastaava, ja etta lehden omat kuvat toimivat ennallaan',
@@ -451,6 +452,10 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '23.8.2026 ilta',
   valmiit: [
+    { id: 'adelaide', nimi: 'Adelaide', versio: 'v1085' },
+    { id: 'hobart', nimi: 'Hobart', versio: 'v1085' },
+    { id: 'darwin', nimi: 'Darwin', versio: 'v1085' },
+    { id: 'portmoresby', nimi: 'Port Moresby', versio: 'v1085' },
     { id: 'havanna', nimi: 'Havanna', versio: 'v1084' },
     { id: 'mexico', nimi: 'Mexico City', versio: 'v1084' },
     { id: 'neworleans', nimi: 'New Orleans', versio: 'v1084' },

@@ -390,4 +390,217 @@ export const OCEANIA_ARTIKKELIT = {
       + 'whadjuk-noongarien maankäyttösopimus Perthin alueesta '
       + 'vahvistettiin liittovaltion tuomioistuimessa joulukuussa 2021.',
   },
+  /* ADELAIDE (24.8.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain adelaide): väitteet on luettu
+   * en-Wikipedian raakateksteistä 24.8.2026, ja pohjana ovat
+   * faktapohja-adelaide.md sekä tarkistus-adelaide.md (jälkimmäinen ei ole
+   * työpuussa vaan committissa 5536e097). AVAIN ON WIKI-OTSIKKO 'Adelaide',
+   * koska js/packs/oceania.js antaa kaupungille juuri sen wiki-nimen ja
+   * ui.js hakee taulusta arvolla city.wiki ?? city.name. Tarkistusraportin
+   * pakolliset korjaukset eivät kosketa tätä merkintää, mutta sen linja on
+   * sama: kaurnat nimetään omalla nimellään ennen siirtomaanimiä ja
+   * näytetään elävänä kansana. Rundle Mallia, Barossaa ja puistovyöhykettä
+   * käsitellään lyhyesti, koska ne ovat laudan OCEANIA_FACTS- ja
+   * kulttuurivisan omia aiheita — intro ei toista niiden sanamuotoja.
+   * Ivaritjin kohdalla käytetään "Kaurna"-artikkelin varovaista muotoilua:
+   * hän oli todennäköisesti viimeinen täysin kaurnalaista syntyperää ollut
+   * ihminen ja kielen viimeinen tunnettu puhuja ennen sen elvytystä. */
+  Adelaide: {
+    intro: 'Adelaide on Etelä-Australian pääkaupunki ja Australian '
+      + 'viidenneksi väkirikkain kaupunki. Se sijaitsee Adelaiden tasangolla '
+      + 'Saint Vincentin lahden ja Mount Lofty Rangesin välissä, mantereen '
+      + 'etelärannikolla. Kaurnat ovat tasangon perinteinen kansa, ja '
+      + 'kaupungin keskustan kaurnankielinen nimi on **Tarndanya**, punaisen '
+      + 'kengurun kallio.'
+      + '\n\n'
+      + 'Kaupunki suunniteltiin ennen kuin sitä oli. Siirtokunta perustettiin '
+      + 'Edward Gibbon Wakefieldin teorian varaan vapaiden siirtolaisten '
+      + 'maaksi, hallinto julistettiin alkaneeksi 28. joulukuuta 1836, ja '
+      + 'eversti William Light piirsi seuraavana vuonna ruutukaavan viisine '
+      + 'aukioineen ja sitä kiertävine puistorenkaineen. '
+      + '**Vankisiirtolan menneisyyttä Adelaidella ei ole** — toisin kuin '
+      + 'Sydneyllä, Brisbanella ja Hobartilla.'
+      + '\n\n'
+      + 'Isoisän matkan vuonna kaupunki oli vasta kolmenkymmenenseitsemän '
+      + 'vuoden ikäinen, ja sen uusi krikettikenttä Adelaide Oval avattiin '
+      + 'lauantaina 13. joulukuuta 1873. Ympäristöön oli jo asettunut '
+      + 'saksalaisia luterilaisia, jotka olivat tuoneet mukanaan '
+      + 'viiniköynnökset.',
+    teksti: 'Adelaide on kapea kaupunkinauha Etelä-Australian rannikolla: '
+      + 'rannalta Mount Lofty Rangesin juurelle on parikymmentä kilometriä, '
+      + 'mutta pohjoisesta etelään nauha venyy Gawlerista Sellicks Beachille '
+      + 'lähes sata kilometriä. Keskusta on Torrens-joen eteläpuolella ja '
+      + 'North Adelaide sen pohjoispuolella; molempia kiertää sama '
+      + 'puistovyöhyke.'
+      + '\n\n'
+      + 'Siirtokunta julistettiin 1836 ja kaupunki kaavoitettiin 1837. '
+      + 'Krikettikenttä avattiin 1873, Torrens padottiin altaaksi 1881, ja '
+      + '1890-luvun lamasta selvittiin viinin ja kuparin varassa. '
+      + 'Ensimmäisen maailmansodan aikana seudun saksalaiset paikannimet '
+      + 'vaihdettiin, ja vanhat nimet palautettiin vasta 1935.'
+      + '\n\n'
+      + 'Nykyään suuralueella asuu noin 1,47 miljoonaa ihmistä. Maaliskuussa '
+      + '2018 kaurnat tunnustettiin koko Adelaiden alueen perinteisiksi '
+      + 'omistajiksi, ja joulukuussa 2021 kaupunki sai maailman toisena '
+      + 'National Park City -nimityksen.',
+  },
+  /* HOBART (24.8.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain hobart): väitteet on luettu
+   * en-Wikipedian raakateksteistä 24.8.2026, ja pohjana ovat
+   * faktapohja-hobart.md sekä riippumaton tarkistus-hobart.md (ei tässä
+   * työpuussa, luettu commitista 0b8a3a1b). AVAIN ON WIKI-OTSIKKO
+   * 'Hobart', koska js/packs/oceania.js antaa Hobartille juuri sen
+   * wiki-nimen ja ui.js hakee taulusta arvolla city.wiki ?? city.name.
+   * Tarkistuksen korjaus näkyy myös täällä: perustamiskuukausi on
+   * HELMIKUU 1804 (infolaatikko 20.2., Sullivans Cove -artikkeli 21.2.),
+   * ei elokuu. Kulttuurivisan vastausta "rangaistussiirtola ja satama"
+   * ei toisteta sanamuotona: introssa sanotaan, että Britannia perusti
+   * paikan ottaakseen vastaan kotimaassa tuomittuja. Port Arthuria ei
+   * mainita täällä lainkaan — se on eri paikkakunta 97 km:n päässä ja
+   * kerrotaan lehden historia-sivulla. */
+  Hobart: {
+    intro: 'Hobart on Tasmanian pääkaupunki ja Australian eteläisin '
+      + 'osavaltiopääkaupunki. Se on rakennettu Derwentin suistoon, ja sen '
+      + 'satama on maailman toiseksi syvin luonnonsatama. Kaupungin yllä '
+      + 'kohoaa 1 271 metrin korkuinen **kunanyi eli Wellingtoninvuori**, '
+      + 'ja maa, jolla kaupunki seisoo, tunnetaan muwinina-kansan nimellä '
+      + 'nipaluna.'
+      + '\n\n'
+      + 'Britannia perusti paikan helmikuussa 1804 ottaakseen vastaan '
+      + 'kotimaassa tuomittuja, ja Sydneyn jälkeen se on Australian vanhin '
+      + 'pääkaupunki. Valaanpyynti nousi nopeasti pääelinkeinoksi: jonkin '
+      + 'aikaa Hobart oli eteläisen valtameren tärkein valaanpyyntisatama. '
+      + 'Vankikuljetusten päätyttyä 1850-luvulla kaupunki vuorotteli kasvun '
+      + 'ja hiljaisten vuosikymmenten välillä.'
+      + '\n\n'
+      + '**Isoisän matkan vuonna 1873** Hobart oli jo mannermaan '
+      + 'kultakaupunkien varjossa, mutta satamassa varustettiin yhä '
+      + 'valaanpyytäjiä ja Derwentissä kävi Venäjän laivasto. Nykyään '
+      + 'Suur-Hobartissa asuu noin 255 000 ihmistä, kaupunki on Australian '
+      + 'ja Ranskan Etelämanner-ohjelmien kotisatama ja sen tunnetuin '
+      + 'käyntikohde on kallioon louhittu MONA-taidemuseo.',
+    teksti: 'Hobart on Tasmanian kaakkoiskulmassa Derwentin suistossa. '
+      + 'Läntinen ranta kantaa vanhan keskustan, Salamanca Placen '
+      + 'hiekkakivimakasiinit ja Battery Pointin, ja sen takaa maa nousee '
+      + 'jyrkästi kunanyin rinteille; itäiselle rannalle mennään Tasman '
+      + 'Bridgen yli.'
+      + '\n\n'
+      + 'Siirtokunta aloitti 1803 Risdon Covessa ja siirtyi helmikuussa 1804 '
+      + 'vastarannalle Sullivans Coveen. Valaanpyynti alkoi Derwentissä 1805 '
+      + 'ja oli huipussaan 1830-luvulla; viimeinen siirtomaakauden '
+      + 'pyyntialus lähti kaupungista 1898. Theatre Royal avattiin 1837 ja '
+      + 'kaupungintalo 1866, ja molemmat ovat yhä käytössä.'
+      + '\n\n'
+      + 'Tasmanian alkuperäiskansaa pidettiin pitkään virheellisesti '
+      + 'sukupuuttoon kuolleena; Unesco poisti sitä väittäneen asiakirjan '
+      + 'sivuiltaan huhtikuussa 2023. Kaupungin halki virtaavassa purossa '
+      + 'elää villejä vesinokkaeläimiä, ja eteläiset sileävalaat ovat '
+      + 'alkaneet palata jokisuistoon.',
+  },
+  'Darwin (Australia)': {
+    intro: 'Darwin on Pohjoisterritorion pääkaupunki ja Australian '
+      + 'pohjoisin, pienin ja sateisin osavaltiotason pääkaupunki. Se '
+      + 'on rakennettu matalalle törmälle Darwin Harbourin yllä, ja '
+      + 'larrakia-kansa on tuntenut paikan nimellä **Garramilla**, '
+      + '"valkoinen kivi", kauan ennen eurooppalaisia. Nimen Port '
+      + 'Darwin antoi 1839 HMS Beaglen päällikkö John Clements Wickham '
+      + 'luonnontieteilijä Charles Darwinin mukaan.'
+      + '\n\n'
+      + 'Asutus syntyi vasta 1869, kun Etelä-Australian maanmittari '
+      + 'George Goyder pystytti Fort Hillin juurelle 135 hengen leirin '
+      + 'ja nimesi sen Palmerstoniksi. **Vuosi ennen isoisän matkaa, '
+      + 'elokuussa 1872, valmistui ylimaalinnettu lennätinlinja**, joka '
+      + 'yhdisti Adelaiden Darwiniin; Jaavan merikaapeli oli tuotu '
+      + 'rantaan jo edellisenä marraskuuna, ja viestin matka Eurooppaan '
+      + 'lyheni kuukausista tunteihin. Kaupunki sai nimekseen Darwin '
+      + 'vasta 1911.'
+      + '\n\n'
+      + 'Darwin on rakennettu lähes kokonaan uudelleen neljä kertaa: '
+      + 'kahden hirmumyrskyn, sodanaikaisten pommitusten ja hirmumyrsky '
+      + 'Tracyn jäljiltä. Nykyinen kaupunki on siksi nuori, ja siinä '
+      + 'asuu vajaat 140 000 ihmistä eli lähes kaksi kolmasosaa koko '
+      + 'territorion väestöstä.',
+    teksti: 'Darwin on Australian pohjoisrannikolla kapealla niemellä '
+      + 'sataman ja avomeren välissä. Ilmasto on trooppista savannia: '
+      + 'päivän ylin lämpötila on lähes sama ympäri vuoden, ja vuoden '
+      + 'jakaa kahtia sade. Stuart Highway alkaa täältä ja jatkuu halki '
+      + 'mantereen Port Augustaan asti, ja Kaakkois-Aasia on lähempänä '
+      + 'kuin Australian eteläiset suurkaupungit.'
+      + '\n\n'
+      + 'Kultakentät ja Palmerstonista Pine Creekiin rakennettu rautatie '
+      + 'toivat 1870-luvulla suuren joukon kiinalaisia työläisiä, ja '
+      + 'kaupungin sydämeen syntyi 1874 Chinatown. Se hävitettiin maan '
+      + 'tasalle 1942, kun japanilaiset pommittivat satamaa ja '
+      + 'kaupunkia; jouluna 1974 hirmumyrsky Tracy kaatoi lopun. '
+      + 'Kaupunki rakennettiin joka kerta uudelleen samalle paikalle.'
+      + '\n\n'
+      + 'Nykyään Mindil Beachin auringonlaskumarkkinat kokoontuvat '
+      + 'kuivan kauden iltoina, ja laksa-nuudelikeitto on kaupungin '
+      + 'suosikkiruoka. Vuonna 1997 perustettu Larrakia Nation '
+      + 'Aboriginal Corporation edustaa seudun alkuperäisiä asukkaita, '
+      + 'ja maaliskuussa 2021 yksi kaupungin rannoista sai takaisin '
+      + 'larrakia-nimensä Bundilla Beach.',
+  },
+  /* PORT MORESBY (24.8.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain portmoresby): väitteet on
+   * luettu en-Wikipedian raakateksteistä 24.8.2026, ja pohjana ovat
+   * faktapohja-portmoresby.md sekä sen riippumaton tarkistus
+   * tarkistus-portmoresby.md (commit 1fa359ae), joka voittaa
+   * ristiriidoissa. AVAIN ON WIKI-OTSIKKO 'Port Moresby', jonka
+   * js/packs/oceania.js antaa kaupungille sekä wiki- että
+   * näyttönimeksi; ui.js hakee taulusta arvolla city.wiki ?? city.name.
+   *
+   * Vuosi 1873 on nostettu heti toiseen kappaleeseen, koska se on
+   * isoisän matkan vuosi: kapteeni John Moresby purjehti tänne HMS
+   * Basiliskilla HELMIKUUSSA 1873 ja nimesi ankkuripaikan. Aiempi
+   * asutus sanotaan ENNEN sitä — motut ja koitabut omistavat paikan
+   * maat yhä — jottei nimeäminen näytä paikan syntyhetkeltä. Sama
+   * ratkaisu kuin lehden nostossa K1.
+   *
+   * Kulttuurivisan (js/packs/oceania-questions.js) vastauksista maa ja
+   * saari löytyvät tästä introsta; kielten määrä, vuoristosyy ja tok
+   * pisin ovat lehden matkaoppaan jaksossa 3. */
+  'Port Moresby': {
+    intro: 'Port Moresby on Papua-Uuden-Guinean pääkaupunki ja maan '
+      + 'suurin kaupunki. Se on Uuden-Guinean saaren eteläisellä '
+      + 'rannikolla Korallimeren rannalla, kukkuloiden ja lahtien väliin '
+      + 'levinneenä. Paikka, jolle kaupunki nousi, on ollut motu- ja '
+      + 'koitabu-kansojen asuinseutua vuosisatoja, ja he omistavat sen '
+      + 'maat yhä.'
+      + '\n\n'
+      + '**Helmikuussa 1873 — isoisän matkan vuonna — kuningattaren '
+      + 'laivaston kapteeni John Moresby purjehti tänne HMS '
+      + 'Basiliskilla** kartoittamaan saaren etelärannikkoa. Hän nimesi '
+      + 'lahden isänsä Fairfax Moresbyn mukaan ja merkitsi Paga-kukkulan '
+      + 'edustan ankkuripaikan kartoilleen nimellä Port Moresby. '
+      + 'Marraskuussa 1873 saapuivat ensimmäiset lähetysseuran '
+      + 'opettajat, ja 1885 erikoiskomissaari valitsi paikan siirtomaan '
+      + 'hallintopaikaksi.'
+      + '\n\n'
+      + 'Itsenäisyys tuli syyskuussa 1975, ja Waiganin uudelle '
+      + 'hallintoalueelle rakennettiin parlamentti, kansallismuseo ja '
+      + 'kirjasto. **Vuoden 2024 väestönlaskennassa kaupungissa asui '
+      + '756 754 ihmistä** — yli kaksinkertaisesti enemmän kuin vuonna '
+      + '2011.',
+    teksti: 'Port Moresby on Uuden-Guinean saaren kaakkoisniemellä, '
+      + 'Korallimeren rannalla. Kaupunki levittäytyy kukkuloiden ja '
+      + 'lahtien väliin: vanha keskusta on Paga- ja Touaguba-kukkuloiden '
+      + 'välisellä kannaksella sataman äärellä, uusi hallintoalue '
+      + 'Waigani noin seitsemän kilometrin päässä koilliseen. Ilmasto on '
+      + 'trooppista savannia ja kuivempi kuin missään muualla '
+      + 'Uudella-Guinealla.'
+      + '\n\n'
+      + 'Motu- ja koitabu-kansat asuivat rannikolla ja sisämaan '
+      + 'kukkuloilla jo ennen eurooppalaisia. Kapteeni John Moresby '
+      + 'kartoitti sataman 1873, Britannia julisti alueen '
+      + 'suojelualueekseen 1884 ja Australia hallitsi Papuaa vuodesta '
+      + '1906. Toisessa maailmansodassa kaupunki oli liittoutuneiden '
+      + 'viimeinen tukikohta saarella.'
+      + '\n\n'
+      + 'Nykyään Port Moresby on lounaisen Tyynenmeren suurimpia '
+      + 'kaupunkeja Australian ja Uuden-Seelannin ulkopuolella. '
+      + 'Kaupungin alkuperäisiä maanomistajia edustaa Motu Koita '
+      + 'Assembly, joka hallinnoi kymmentä tunnustettua kylää — ainoa '
+      + 'laatuaan koko maassa.',
+  },
 };
