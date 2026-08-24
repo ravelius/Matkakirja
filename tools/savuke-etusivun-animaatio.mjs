@@ -217,7 +217,19 @@ for (const [nimi, kirkas] of [['valahdys', true], ['himmea', false]]) {
   console.log(`  lähikuva ${nimi}: peittävyys ${kohta.op.toFixed(3)}`);
 }
 
-// --- 4) Avauslennon ajoitus ------------------------------------------------
+// --- 4) Avauslento: kartta, kone ja ajoitus --------------------------------
+/*
+ * AVAUSLENTO ON NYT KARTALLA (omistaja 24.8.2026, Raamattu:
+ * ALOITUSLENTO UUSIKSI). Aiemmin tässä mitattiin pelkkiä aikoja, koska
+ * lento oli oma piirretty kohtauksensa kalvolla eikä sillä ollut mitään
+ * tekemistä kartan kanssa. Nyt kohtaus on kartta itse, ja mittaus
+ * kattaa senkin: rajaukseen mahtuvat sekä lähtömaa että kohdemaa, kone
+ * ja punainen reitti piirtyvät kartan omaan lentokerrokseen, ja vanha
+ * kalvon kuvitteellinen karttalehti (.flight-scene) on poissa.
+ *
+ * Ajoitusväitteet ovat ennallaan: repliikin, luennan ja Astu
+ * mantereelle -napin keskinäinen tahti ei muuttunut.
+ */
 
 await sivu.evaluate(() => {
   const n = [...document.querySelectorAll('button')]
@@ -257,6 +269,49 @@ const lento = await sivu.evaluate(async () => {
       if (nappi && !nappi.classList.contains('odottaa') && havainnot.koneLaskeutui === undefined) {
         havainnot.koneLaskeutui = nyt;
       }
+      /*
+       * Kartan tila luetaan sillä hetkellä, kun kone ilmestyy: silloin
+       * kamera-ajo on ohi ja rajaus on se, jonka pelaaja näkee. Rajaus
+       * mitataan siitä, mahtuvatko lähtö- ja kohdekaupunki näkyvälle
+       * alueelle — se on sama asia kuin "molemmat maat näkyvissä",
+       * mutta luettavissa ilman maiden muotoja.
+       */
+      const kone = document.querySelector('.flight .flight-plane');
+      if (kone && havainnot.kartta === undefined) {
+        const n = ui.nakyvaAlue?.() ?? null;
+        const paikka = (id) => {
+          const c = game.board.cityById.get(id);
+          return c ? { x: c.x, y: c.y } : null;
+        };
+        /*
+         * KIERTÄVÄ KARTTA: näkyvä alue voi olla laudan levyisen
+         * kopion puolella (kartta toistuu, ja lentokerros toistuu sen
+         * mukana <use>-kopiona). Vertailu tehdään siksi laudan
+         * leveyden jäännösluokassa — muuten oikein rajattu näkymä
+         * näyttäisi mittarissa väärältä.
+         */
+        const leveys = game.pack.map?.width ?? 0;
+        const sisalla = (p) => {
+          if (!n || !p) return false;
+          if (p.y < n.y || p.y > n.y + n.h) return false;
+          for (const x of leveys ? [p.x, p.x + leveys, p.x - leveys] : [p.x]) {
+            if (x >= n.x && x <= n.x + n.w) return true;
+          }
+          return false;
+        };
+        havainnot.kartta = {
+          lauta: game.pack.id,
+          kartalento: document.body.classList.contains('kartalento'),
+          reitti: Boolean(document.querySelector('.flight .flight-trail')),
+          skene: Boolean(document.querySelector('.flight-scene')),
+          sumu: Boolean(document.querySelector('.fokus-sumu-harso')),
+          himmennettyja: document.querySelectorAll('.fokus-piilossa').length,
+          nappula: document.querySelector('.pawns')
+            ? getComputedStyle(document.querySelector('.pawns')).opacity : null,
+          lahtoNakyy: sisalla(paikka('lontoo')),
+          kohdeNakyy: sisalla(paikka(havainnot.kaupunki)),
+        };
+      }
       const loppu = havainnot.tekstiValmis !== undefined && havainnot.koneLaskeutui !== undefined;
       if (loppu || nyt - kello > 40000) { clearInterval(tikki); valmis(); }
     }, 20);
@@ -269,9 +324,24 @@ const lento = await sivu.evaluate(async () => {
     tekstiAlkoi: suhteessa(havainnot.tekstiAlkoi),
     tekstiValmis: suhteessa(havainnot.tekstiValmis),
     koneLaskeutui: suhteessa(havainnot.koneLaskeutui),
+    kartta: havainnot.kartta ?? null,
   };
 });
 console.log('  lennon ajoitus:', JSON.stringify(lento));
+console.log('  lennon kartta:', JSON.stringify(lento.kartta));
+
+const kartta = lento.kartta ?? {};
+vaadi('kone ja punainen reitti piirtyvät kartan lentokerrokseen',
+  Boolean(kartta.kartalento && kartta.reitti),
+  `kartalento ${kartta.kartalento}, reitti ${kartta.reitti}`);
+vaadi('vanha kalvokohtaus on poissa', kartta.skene === false,
+  kartta.skene ? '.flight-scene on yhä ruudulla' : '');
+vaadi('rajaukseen mahtuvat sekä lähtömaa että kohdemaa',
+  Boolean(kartta.lahtoNakyy && kartta.kohdeNakyy),
+  `Lontoo ${kartta.lahtoNakyy}, ${lento.kaupunki} ${kartta.kohdeNakyy}`);
+vaadi('kartta on lennon aikana niukka: sumu päällä, pelitila piilossa',
+  Boolean(kartta.sumu) && kartta.himmennettyja > 0 && kartta.nappula === '0',
+  `sumu ${kartta.sumu}, himmennettyjä ${kartta.himmennettyja}, nappulan peittävyys ${kartta.nappula}`);
 /*
  * Yläraja puuttuu tarkoituksella: avauslennon alla piirtyy koko
  * maailmankartan lauta, ja kuormitettu pääsäie venyttää jokaista
@@ -280,6 +350,12 @@ console.log('  lennon ajoitus:', JSON.stringify(lento));
  * 190 ms:stä 590 ms:iin — kuorma peittää eron alleen. Tässä
  * varmistetaan siis vain, ettei kirjoitus ala kalvon kanssa yhtä
  * aikaa; nimellinen viive on yksikkötestin asia.
+ *
+ * NOLLAKOHTA ON YHÄ REPLIIKIN ILMESTYMINEN (.flight-line). Kartalla
+ * lennettäessä se syntyy vasta kamera-ajon ja kartan tarkentumisen
+ * jälkeen, joten mitattu hetki on eri kuin ennen — mutta väite on sama
+ * ja koskee samaa asiaa: kirjoitus ei ala samassa silmänräpäyksessä
+ * kuin se elementti, johon se kirjoitetaan.
  */
 vaadi('lennon repliikki ei ala kalvon kanssa yhtä aikaa',
   lento.tekstiAlkoi >= 350, `${lento.tekstiAlkoi} ms kalvon avauduttua`);

@@ -309,6 +309,50 @@ const LENNON_TEKSTI_ODOTUS_MS = 30000;
 // Kuinka kauan lennon jälkeen odotetaan, ennen kuin pieni nuoli syttyy.
 const LENNON_NUOLI_MS = 3500;
 
+/*
+ * ALOITUSLENTO KARTALLA (omistaja 24.8.2026, Raamatun osio
+ * "Fokusmoodi" / ALOITUSLENTO UUSIKSI). Luvut yhdessä paikassa, koska
+ * ne on mitoitettu toisiaan vasten: kamera-ajo ensin, sitten lento.
+ */
+// Lähtökaupunki: matka alkaa aina Lontoosta (Raamattu, "Pelin kulku").
+const ALOITUSLENNON_LAHTO = 'lontoo';
+// Rajauksen marginaali: lähtömaan ja kohdemaan ympärille jää tämän
+// verran merta ja naapureita, jotta molemmat maat erottuvat muodoiltaan
+// eivätkä kosketa ruudun laitaa. Väljempi kuin kartan oletus (0,12),
+// koska kuvassa on kaksi maata ja niiden välinen reitti.
+const ALOITUSLENNON_MARGINAALI = 0.16;
+// Kamera-ajon kesto rajaukseen. Pidempi kuin kartan oletusajo (2000 ms):
+// tämä on pelin ensimmäinen liike, ja matka Lontoosta kohteeseen
+// kannattaa ehtiä lukea kartalta ennen kuin kone lähtee.
+const ALOITUSLENNON_AJO_MS = 2400;
+// Reitin kaaren voimakkuus. Sama kerroin kuin laudan omilla
+// lentoreiteillä (drawBoard, .air-route), jotta uusi viiva on samaa
+// käsialaa kuin kartalle valmiiksi piirretyt kaaret.
+const ALOITUSLENNON_KAARI = 0.12;
+/*
+ * Kuinka paljon rajaus saa enintään laajeta reitin ympärille.
+ *
+ * "Lähtömaa ja kohdemaa näkyvät molemmat" on Raamatun sääntö, mutta
+ * maat ovat eri kokoisia: Kreikka on 220 yksikköä leveä ja Yhdysvallat
+ * Alaskoineen 6300 — eli puolet maailmasta. Sellaisenaan noudatettuna
+ * sääntö kutistaisi Lontoo–New York -lennon 110 pikselin viivaksi
+ * ruudun laitaan (mitattu 24.8.2026), ja itse lento katoaisi kuvasta,
+ * jonka on määrä esittää se.
+ *
+ * Siksi maiden rajausta käytetään SIIHEN ASTI kun se pysyy tämän
+ * kertoimen sisällä reitin omasta koosta; sen yli menevä osa jää
+ * kuvan ulkopuolelle. Reitti päätepisteineen mahtuu aina kokonaan.
+ */
+const ALOITUSLENNON_LAAJUUS = 2.2;
+// Reittiviivan paksuus ja koneen mitta RUUDUN pikseleinä: kumpikin
+// muunnetaan laudan yksiköiksi näkymän mittakaavalla, jottei viiva
+// katoa hiuskarvaksi eikä kone kasva mantereen kokoiseksi.
+const ALOITUSLENNON_VIIVA_PX = 2.2;
+const ALOITUSLENNON_KONE_PX = 34;
+// Koneen piirroksen oma leveys omissa yksiköissään (polku ulottuu
+// x = -15…14, ks. aloituslentoSisalla): mitta, jota vasten
+// ALOITUSLENNON_KONE_PX skaalataan.
+const ALOITUSLENNON_KONE_MITTA = 29;
 
 const AUTO_ROLL_MS = 320; // tauko ennen itsestään pyörähtävää noppaa
 /*
@@ -2564,7 +2608,10 @@ export class UI {
     this.suljeKulttuuriKuva();
     this.pysaytaKulttuuriAani();
     // Kesken jäänyt lentokalvo siivotaan, ettei se jää uuden pelin päälle.
-    document.body.classList.remove('flight-active');
+    // Sama kartalennolle: lippu pidättelee kamera-ajoja ja annosteluvirtaa,
+    // joten kesken katkennut lento lamauttaisi seuraavan pelin.
+    document.body.classList.remove('flight-active', 'kartalento');
+    this.aloituslentoKesken = false;
     // Radiotila piilottaa matkakirjan ja alanapit; ilman purkua ne
     // jäisivät piiloon uudessa pelissä.
     document.body.classList.remove('radio-tila');
@@ -3087,8 +3134,19 @@ export class UI {
      * aikana, ja ajastin ei pääse ajoon jumin läpi.
      *
      * Kuva täydennetään heti kun kalvo väistyy.
+     *
+     * POIKKEUS: ALOITUSLENTO KARTALLA (body.kartalento). Siinä kalvoa ei
+     * ole vaan lento piirtyy kartan päälle, ja kartta ON se, mitä
+     * pelaaja katsoo: rasteroimatta jäänyt lauta näkyisi koko lennon
+     * ajan venytettynä sumuna. Työtä tulee kuitenkin vain yksi erä,
+     * koska näkymä ei enää muutu koneen lähdettyä liikkeelle — kamera-
+     * ajo on silloin jo ohi (ks. aloituslentoSisalla).
      */
-    if (document.body.classList.contains('flight-active')) { this.taideOdottaa = true; return; }
+    if (document.body.classList.contains('flight-active')
+      && !document.body.classList.contains('kartalento')) {
+      this.taideOdottaa = true;
+      return;
+    }
     /*
      * Zoomiliu'un aikana ei rasteroida.
      *
@@ -6163,17 +6221,27 @@ export class UI {
     // Ei ääniefektiä lähtövalinnassa (omistajan päätös 10.8.2026):
     // moottoriääni feidautuu sisään vasta lentokalvolla.
     // Pelin avaus on se filmihetki: avausteksti häipyy ja lento piirtyy
-    // kalvona kartan päälle ennen kuin mantereen kartta aukeaa.
-    const lontoo = game.board.cityById.get('lontoo');
+    // kartalle (fokusmoodi) tai kalvona sen päälle (vanha tapa) ennen
+    // kuin kohdemaan kartta aukeaa.
+    const lontoo = game.board.cityById.get(ALOITUSLENNON_LAHTO);
     if (lontoo && lontoo.id !== city.id) {
       // Lukuääni väistyy, kun matka alkaa.
       stopIntroVoice(this);
       this.introEl.classList.add('intro-fade');
       // Repliikki ennen siirtoa, jotta rng-kutsut osuvat samaan kohtaan.
       const line = game.firstFlightLine(city.id);
-      // Lippu ennen siirtoa, jotta saapumismerkintä ei ala kalvon alla —
-      // se odottaa Astu ulos -nappia. animateFlight poistaa lipun.
+      /*
+       * Kumpi avauslento (Raamattu, ALOITUSLENTO UUSIKSI): fokusmoodissa
+       * kone lentää kartalla, muuten vanha kalvo. Ratkaisu tehdään ENNEN
+       * siirtoa, koska lippu aloituslentoKesken on nostettava ennen
+       * ensimmäistä piirtoa: se pidättelee kamera-ajoja ja annostelu-
+       * virtaa, joita render muuten käynnistäisi kesken lennon.
+       */
+      const kartalento = this.aloituslentoKartalla();
+      // Lippu ennen siirtoa, jotta saapumismerkintä ei ala lennon alla —
+      // se odottaa Astu ulos -nappia. Lennot poistavat lipun perillä.
       if (!this.reducedMotion) document.body.classList.add('flight-active');
+      if (kartalento) this.aloituslentoKesken = true;
       this.doAction(() => game.actionPickStart(city.id, portti ? 0 : null));
       if (!this.reducedMotion) {
         // Avauslennon repliikki on lukittu ja luettu ääneen: puhe alkaa
@@ -6190,10 +6258,16 @@ export class UI {
           }
         }, LENNON_PUHE_MS);
       }
-      await this.animateFlight(
-        'Lontoo', city.name, line,
-        { dx: city.x - lontoo.x, dy: city.y - lontoo.y },
-      );
+      // Kartalento voi todeta lennon mahdottomaksi (puuttuva maatieto tai
+      // rajaus); silloin vanha kalvo hoitaa avauksen kuten ennenkin.
+      const lensi = kartalento && await this.aloituslento(city.id, line);
+      if (!lensi) {
+        this.aloituslentoKesken = false;
+        await this.animateFlight(
+          'Lontoo', city.name, line,
+          { dx: city.x - lontoo.x, dy: city.y - lontoo.y },
+        );
+      }
       clearTimeout(this.lentoPuheAjastin);
       return;
     }
@@ -6572,6 +6646,20 @@ export class UI {
 
   renderFact() {
     const { game } = this;
+    /*
+     * ALOITUSLENTO: KORTTI ODOTTAA PERILLE ASTI.
+     *
+     * Kortti itse on lennon ajan piilossa (body.flight-active .fact-card),
+     * mutta ilman tätä sen TEKSTI kirjoittuisi silti loppuun piilossa — ja
+     * fokusvirta siirtyy kirjoituksen päätteeksi seuraavaan vaiheeseen
+     * (fokusvirtaMerkintaLuettu), jolloin Pöllön kupla ponnahtaa kartalla
+     * lentävän koneen päälle. Mitattu Ateenan koeajossa 24.8.2026: kupla
+     * oli ruudulla kuudennella sekunnilla, kun kone oli vasta Alpeilla.
+     *
+     * Lento päättää itsensä render-kutsulla, joka tuo kortin esiin
+     * tavalliseen tapaan.
+     */
+    if (this.aloituslentoKesken) return;
     // Aloitusnäkymässä kartta saa puhua puolestaan: tietoruutu on piilossa.
     this.factCard.hidden = game.phase === 'pickstart';
     if (game.phase === 'pickstart') {
@@ -7105,9 +7193,18 @@ export class UI {
     this.renderTurnPill();
     // Ennen nappien latomista: syke luetaan napin luonnissa.
     this.paivitaTutkiSyke();
-    // Fokusmoodissa kaupungin esittely alkaa itsestään saapumisesta
-    // (Raamattu, ANNOSTELU). Muualla tämä ei tee mitään.
-    fokusvirtaSaapuminen(this);
+    /*
+     * Fokusmoodissa kaupungin esittely alkaa itsestään saapumisesta
+     * (Raamattu, ANNOSTELU). Muualla tämä ei tee mitään.
+     *
+     * ALOITUSLENNON AIKANA EI VIELÄ: kone on kartalla matkalla kohti
+     * kaupunkia, eikä esittelykortti saa avautua sen alle. Peli on
+     * siirtänyt nappulan perille jo lennon alussa (actionPickStart), ja
+     * ilman tätä ehtoa render avaisi virran heti. Lento päättää itsensä
+     * render-kutsulla, jolloin esittely alkaa kuten muillakin
+     * saapumisilla (ks. aloituslentoSisalla).
+     */
+    if (!this.aloituslentoKesken) fokusvirtaSaapuminen(this);
     this.renderActions();
     this.renderFact();
     renderQuiz(this);
@@ -11967,6 +12064,386 @@ export class UI {
     this.flightLineKuittaus?.();
     this.flightLineValmis = null;
     this.flightLine = null;
+  }
+
+  /*
+   * ==================================================================
+   * ALOITUSLENTO KARTALLA (omistaja 24.8.2026, Raamatun osio
+   * "Fokusmoodi" / ALOITUSLENTO UUSIKSI: *"kun pelaaja valitsee pelin
+   * alussa ensimmäisen kohteen, kartta rajautuu automaattisesti niin,
+   * että lähtömaa (Lontoo/Britannia) ja kohdemaa näkyvät molemmat
+   * sopivalla marginaalilla, ja lentokone lentää punaista viivaa pitkin
+   * Lontoosta kohteeseen. Kartta on tällöin jo fokusmoodin tapaan
+   * niukka: maat, joissa ei ole käyty tai joissa pelaaja ei ole,
+   * himmeinä/sumennettuina. Koko näkymä uusitaan."*)
+   * ==================================================================
+   *
+   * MIKÄ VANHASTA JÄÄ POIS. Avauslento oli tähän asti läpikuultava
+   * KALVO kartan päällä (animateFlightSisalla): oikea kartta sumennettiin
+   * pergamenttiharson alle ja sen päälle piirrettiin oma kuvitteellinen
+   * karttalehti — kääntöpiirit katkoviivalla, isoisän muistiinpanoja
+   * kaunokirjoituksella, kompassiruusu ja kaksi nimettyä pistettä ruudun
+   * vastakkaisissa nurkissa. Kohtaus oli siis PIIRROS lennosta eikä
+   * lento kartalla: suunta oli vain "itään vai länteen, ylös vai alas",
+   * eikä kaari päättynyt siihen kaupunkiin, jonka pelaaja juuri valitsi.
+   * Juuri sen omistaja näki 24.8.2026 ("näkyy vielä vanha animaatio ja
+   * tausta"). Tausta, kohtaus ja niiden sumennus jäävät nyt pois.
+   *
+   * MIKÄ JÄÄ ENNALLEEN. Repliikki kirjoituskoneineen ja naputuksineen,
+   * kertojan luenta, matkustamon äänimaisema, ohitusnuoli ja Astu
+   * mantereelle -nappi — kaikki samoine ajoituksineen, joita
+   * tests/lento-ajoitus.test.mjs vartioi. Vaihtuu vain se, minkä päällä
+   * ne ovat: kalvon oman kuvitteellisen kartan sijaan pelin oma kartta.
+   *
+   * VANHA KALVO ON YHÄ OLEMASSA eikä sitä poistettu: fokusmoodin
+   * kehittäjäkytkin ja liikeherkkyys (reducedMotion) vievät yhä vanhaa
+   * tietä (ks. aloituslentoKartalla), samoin lennot, joilta puuttuu
+   * maatieto. Myöhemmät lennot (doFly) ovat kokonaan ennallaan.
+   *
+   * KOLME VAIHETTA:
+   *   1. lauta vaihtuu (aloitusnäytöstä maailmankartalle) ja fokusmoodin
+   *      niukkuus astuu voimaan: sumu päälle, käymättömät maat himmeinä
+   *   2. kamera-ajo lähtömaan ja kohdemaan yhteisrajaukseen
+   *      (kartta.maidenBbox + kartta.ajaKamera, Raamattu: KAMERA-AJOT)
+   *   3. kone lentää punaista viivaa pitkin Lontoosta kohteeseen
+   */
+
+  /**
+   * Lennetäänkö aloituslento kartalla vai vanhalla kalvolla?
+   *
+   * Fokusmoodi on ehto siksi, että koko lento on fokusmoodin näkymä:
+   * niukka kartta, sumennetut maat, ei ylimääräistä dataa. Kun
+   * kehittäjä kytkee fokusmoodin pois, myös avaus palaa entiselleen.
+   * Liikeherkkyys ohittaa animaatiot kaikkialla muuallakin.
+   */
+  aloituslentoKartalla() {
+    return Boolean(this.fokusmoodi && !this.reducedMotion && !this.katselu);
+  }
+
+  /**
+   * Reittikaaren ohjauspiste laudan koordinaateissa.
+   *
+   * Kaari on sama kuin laudan omilla lentoreiteillä (drawBoard,
+   * .air-route), mutta se kaartuu AINA POHJOISEEN — sama sääntö kuin
+   * vanhalla kalvolla ("kaari kaartuu aina ylöspäin kulkusuunnasta
+   * riippumatta"). Laudan kaava antaa suunnan etumerkin mukaan, joten
+   * länteen lennettäessä ohjauspiste peilataan jänteen keskipisteen
+   * kautta. Ilman peilausta Lontoo–New York kaartuisi etelään, mitä
+   * yksikään 1800-luvun atlaksen lentoreitti ei tee.
+   */
+  aloituslennonOhjauspiste(a, b) {
+    const mx = (a.x + b.x) / 2;
+    const my = (a.y + b.y) / 2;
+    const kx = mx + (b.y - a.y) * ALOITUSLENNON_KAARI;
+    const ky = my - (b.x - a.x) * ALOITUSLENNON_KAARI;
+    return ky > my ? { x: 2 * mx - kx, y: 2 * my - ky } : { x: kx, y: ky };
+  }
+
+  /**
+   * Aloituslennon rajaus: lähtömaa ja kohdemaa samaan kuvaan niin
+   * pitkälle kuin reitti kestää (ks. ALOITUSLENNON_LAAJUUS).
+   *
+   * Reitin oma laatikko lasketaan päätepisteistä ja kaaren
+   * keskipisteestä (Bézier t = 0,5). Se ei ole kaaren tarkka ääriarvo
+   * — neliöllisellä käyrällä ääriarvo osuu yleensä hieman muualle —
+   * mutta ero on murto-osa marginaalista, ja koko laatikkoa
+   * väljennetään joka tapauksessa ALOITUSLENNON_MARGINAALILLA.
+   *
+   * Rajaus kasvaa siitä maiden rajaukseen asti mutta enintään
+   * laajuuskertoimen verran; reitin päätepisteet mahtuvat aina, myös
+   * silloin kun ne pistävät maiden laatikon ulkopuolelle.
+   */
+  aloituslennonRajaus(a, b, isot) {
+    const maat = this.kartta.maidenBbox(isot);
+    if (!maat) return null;
+    const k = this.aloituslennonOhjauspiste(a, b);
+    const huippu = { x: (a.x + 2 * k.x + b.x) / 4, y: (a.y + 2 * k.y + b.y) / 4 };
+    const rx0 = Math.min(a.x, b.x, huippu.x);
+    const rx1 = Math.max(a.x, b.x, huippu.x);
+    const ry0 = Math.min(a.y, b.y, huippu.y);
+    const ry1 = Math.max(a.y, b.y, huippu.y);
+    const cx = (rx0 + rx1) / 2;
+    const cy = (ry0 + ry1) / 2;
+    const puoliW = (Math.max(rx1 - rx0, 1) * ALOITUSLENNON_LAAJUUS) / 2;
+    const puoliH = (Math.max(ry1 - ry0, 1) * ALOITUSLENNON_LAAJUUS) / 2;
+    const x0 = Math.min(rx0, Math.max(maat.x, cx - puoliW));
+    const x1 = Math.max(rx1, Math.min(maat.x + maat.w, cx + puoliW));
+    const y0 = Math.min(ry0, Math.max(maat.y, cy - puoliH));
+    const y1 = Math.max(ry1, Math.min(maat.y + maat.h, cy + puoliH));
+    if (!(x1 > x0) || !(y1 > y0)) return null;
+    return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+  }
+
+  /**
+   * Aloituslento kartalla. Palauttaa true, jos lento oikeasti lennettiin
+   * — false tarkoittaa, että kutsujan on lennettävä vanha kalvolento.
+   */
+  async aloituslento(cityId, line) {
+    /*
+     * LAUTA VAIHTUU ENNEN LENTOA. Aloitusnäyttö on oma pieni lautansa
+     * (js/packs/maailma.js), ja lähtöpisteen valinta vie sen portista
+     * varsinaiselle maailmankartalle. Lento piirretään sille laudalle,
+     * joten kartta on rakennettava ensin: muuten kone lentäisi laudalla,
+     * joka katoaa alta ensimmäisessä piirrossa. render() tekee vaihdon
+     * (drawBoardFor) — se on sama kutsu, joka muutenkin tulisi
+     * doActionin perässä, tässä vain heti eikä vasta lokin jälkeen.
+     */
+    this.render();
+    const kerros = this.flightLayer;
+    const lahto = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
+    const kohde = this.game.board.cityById.get(cityId);
+    const maat = this.game.pack?.map?.cityCountry;
+    const lahtoIso = maat?.[ALOITUSLENNON_LAHTO];
+    const kohdeIso = maat?.[cityId];
+    // Ilman maatietoa rajausta ei voi laskea — silloin vanha kalvo on
+    // parempi kuin puolikas uusi (sama varovaisuus kuin sumuverholla).
+    if (!kerros || !lahto || !kohde || !lahtoIso || !kohdeIso) return false;
+    const bbox = this.aloituslennonRajaus(lahto, kohde, [lahtoIso, kohdeIso]);
+    if (!bbox) return false;
+    try {
+      await this.isoAnimaatio(() => this.aloituslentoSisalla({
+        kerros, lahto, kohde, kohdeIso, bbox, line,
+      }));
+    } finally {
+      /*
+       * Lippu alas myös silloin, kun lento katkeaa poikkeukseen. Se
+       * pidättelee kamera-ajoja ja annosteluvirtaa, joten pystyyn
+       * jäädessään se lamauttaisi koko loppupelin — ja vika näkyisi
+       * jossain aivan muualla kuin lennossa.
+       */
+      this.aloituslentoKesken = false;
+    }
+    return true;
+  }
+
+  /** Lennon varsinainen piirto; kääre yllä hiljentää kartan animaatiot. */
+  async aloituslentoSisalla({ kerros, lahto, kohde, kohdeIso, bbox, line }) {
+    kerros.textContent = '';
+    /*
+     * kartalento kertoo CSS:lle ja rasteroinnille, että lento on kartan
+     * PÄÄLLÄ eikä kalvon takana: pelitila (nappula, kohderenkaat,
+     * laatat) piiloon lennon ajaksi, mutta kartan kuva täyteen
+     * tarkkuuteen (ks. taydennaTaide).
+     */
+    document.body.classList.add('flight-active', 'kartalento');
+    /*
+     * Fokusmoodin niukkuus voimaan ENNEN kamera-ajoa: sumuverho ja
+     * maakohtainen pohja rakennetaan tässä, jotta ajo alkaa jo valmiiksi
+     * niukalta kartalta eikä maailma himmene kesken liikkeen.
+     */
+    this.paivitaFokusKerros();
+
+    // --- 1) Kamera-ajo: lähtömaa ja kohdemaa samaan kuvaan -----------
+    /*
+     * pakota, koska lento omistaa kameran (ks. kartta.ajaKamera):
+     * this.aloituslentoKesken torjuu muut ajot lennon ajaksi, ja tämä on
+     * se yksi ajo, joka saa mennä läpi.
+     */
+    await this.kartta.ajaKamera(
+      { bbox, marginaali: ALOITUSLENNON_MARGINAALI },
+      { kesto: ALOITUSLENNON_AJO_MS, pakota: true },
+    );
+    if (this.dead) return;
+    /*
+     * KARTTA TARKENTUU ENNEN KUIN KONE LÄHTEE.
+     *
+     * Ajon päätteeksi kartta rasteroidaan uudessa mittakaavassa
+     * (ajaKamera → taydennaTaide), ja se vie pääsäikeestä satoja
+     * millisekunteja kerrallaan. Mitattuna (Chromium, kontti) repliikin
+     * ensimmäinen sana ilmestyi 4,5 sekuntia kalvon jälkeen, kun sen
+     * pitäisi tulla 400 ms:ssä: kirjoituskone naputtaa setTimeoutilla ja
+     * jäi rasteroinnin alle. Kone lensi silloin yksin ja teksti tuli
+     * perässä omaan tahtiinsa.
+     *
+     * Siksi lento odottaa piirron rauhoittumista. Odotus ei ole tyhjää:
+     * ruudulla kartta tarkentuu venytetystä yleiskuvasta lopulliseen —
+     * juuri se isoisän atlaksen tarkentuminen, jota fokusmoodi muutenkin
+     * esittää. Yläraja on varoventtiili hitaalle laitteelle: kone lähtee
+     * joka tapauksessa, vaikka viimeinen ruutu olisi kesken.
+     */
+    for (let i = 0; i < 30 && (this.taidePiirtyy || this.taideOdottaa); i++) {
+      await this.wait(100);
+    }
+    if (this.dead) return;
+
+    // --- 2) Reitti ja kone laudan koordinaateissa --------------------
+    /*
+     * Mittakaava luetaan kerran: kamera on nyt paikallaan koko lennon
+     * ajan, joten viivan paksuus ja koneen koko voidaan muuntaa ruudun
+     * pikseleistä laudan yksiköiksi tässä eikä joka kehyksellä.
+     */
+    const skaala = this.nakyvaAlue()?.skaala || 1;
+    const a = { x: lahto.x, y: lahto.y };
+    const b = { x: kohde.x, y: kohde.y };
+    // Sama kaari kuin rajausta laskettaessa — yksi ja sama ohjauspiste,
+    // jottei viiva voi kulkea kuvan ulkopuolelta.
+    const ohjaus = this.aloituslennonOhjauspiste(a, b);
+    // Lähtömerkki Lontoon kohdalle: reitin alkupää on luettava, vaikka
+    // Britannia on käymättömänä maana sumun alla.
+    el('circle', {
+      cx: a.x,
+      cy: a.y,
+      r: (ALOITUSLENNON_VIIVA_PX * 1.6) / skaala,
+      class: 'aloituslento-piste',
+    }, kerros);
+    const reitti = el('path', {
+      d: `M${a.x},${a.y} Q${ohjaus.x},${ohjaus.y} ${b.x},${b.y}`,
+      class: 'flight-trail',
+    }, kerros);
+    /*
+     * VIIVA PIIRTYY KONEEN EDETESSÄ, EI KOKONAAN VALMIIKSI.
+     *
+     * Kaksi syytä. Kartalla valmis kaari kertoisi määränpään ennen kuin
+     * sinne on tultu — ja juuri se saapuminen on avauksen ainoa
+     * tapahtuma. Toiseksi valmis viiva kilpailisi koneen kanssa: silmä
+     * lukee ensin pisimmän viivan eikä liikkuvaa pistettä. Piirtyvä
+     * viiva tekee päinvastoin, se on koneen jälki — sama kieli kuin
+     * vanhalla kalvolla, joten mitään ei mene hukkaan.
+     *
+     * Katkoviiva (.flight-trail stroke-dasharray) korvautuu tässä
+     * paljastuksella: sama polku ei voi olla yhtä aikaa katkonainen ja
+     * puoliksi piirtynyt.
+     */
+    reitti.style.strokeWidth = (ALOITUSLENNON_VIIVA_PX / skaala).toFixed(2);
+    const kokoPituus = reitti.getTotalLength();
+    reitti.style.strokeDasharray = kokoPituus;
+    reitti.style.strokeDashoffset = kokoPituus;
+
+    const kone = el('g', { class: 'flight-plane' }, kerros);
+    // Sama koneen piirros kuin vanhalla kalvolla: runko, siivet, pyrstö.
+    // Mitta ruudun pikseleinä, jottei kone kasva mantereen kokoiseksi.
+    el('path', {
+      d: 'M14,0 L-6,0 M-10,0 L-14,0 M2,0 L-8,-9 L-4,-9 L6,0 L-4,9 L-8,9 z '
+        + 'M-11,0 L-15,-5 L-13,-5 L-9,0 L-13,5 L-15,5 z',
+      class: 'flight-plane-body',
+      transform: `scale(${(ALOITUSLENNON_KONE_PX
+        / (ALOITUSLENNON_KONE_MITTA * skaala)).toFixed(4)})`,
+    }, kone);
+
+    // Reitti näytteistetään kerran valmiiksi (sama syy kuin kalvolla:
+    // getPointAtLength joka kehyksellä nykii etenkin iPadin Safarissa).
+    const NAYTTEITA = 240;
+    const naytteet = [];
+    for (let i = 0; i <= NAYTTEITA; i++) {
+      naytteet.push(reitti.getPointAtLength((kokoPituus * i) / NAYTTEITA));
+    }
+    const kohta = (osuus) => {
+      const f = Math.min(NAYTTEITA - 0.001, Math.max(0, osuus * NAYTTEITA));
+      const i = Math.floor(f);
+      const j = f - i;
+      const p1 = naytteet[i];
+      const p2 = naytteet[i + 1];
+      return {
+        x: p1.x + (p2.x - p1.x) * j,
+        y: p1.y + (p2.y - p1.y) * j,
+        kulma: (Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180) / Math.PI,
+      };
+    };
+
+    // --- 3) Repliikki, napit ja ohitus (ennallaan kalvolta) ----------
+    const lentoAnimaatiot = [];
+    const ohitaLento = () => {
+      for (const anim of lentoAnimaatiot) anim.finish();
+      this.paataLennonTeksti(line);
+    };
+    /*
+     * Kalvo on nyt LÄPINÄKYVÄ (.flight-overlay.kartalla): siitä jää
+     * jäljelle vain repliikin ja napin pysty pino sekä koko ruudun
+     * kokoinen ohituskuuntelija. Tausta, sumennus ja piirretty kohtaus
+     * ovat poissa — kartta näkyy sellaisenaan.
+     */
+    const overlay = html('div', 'flight-overlay kartalla');
+    this.mapPane.appendChild(overlay);
+    overlay.addEventListener('pointerdown', ohitaLento, { once: true });
+    const alaosa = html('div', 'flight-alaosa');
+    overlay.appendChild(alaosa);
+    this.flightLineValmis = null;
+    if (line) this.showFlightLine(line, alaosa);
+    const nappi = html('button', 'flight-exit odottaa', 'Astu mantereelle');
+    nappi.type = 'button';
+    alaosa.appendChild(nappi);
+    const sanoja = line ? String(line).trim().split(/\s+/).length : 0;
+    const lennonKesto = Math.min(
+      LENNON_ENINTAAN_MS,
+      Math.max(
+        FLY_OVERLAY_MS,
+        LENNON_POHJA_MS + sanoja * LENNON_SANA_MS,
+        line ? LENNON_TEKSTI_VIIVE_MS + kirjoituksenKesto(line) + LENNON_LUKUAIKA_MS : 0,
+      ),
+    );
+    const nuoli = html('button', 'flight-eteen');
+    nuoli.type = 'button';
+    nuoli.setAttribute('aria-label', 'Ohita lento');
+    nuoli.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+      + '<path d="M8 5 L15 12 L8 19" fill="none" stroke="currentColor"'
+      + ' stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    overlay.appendChild(nuoli);
+    const nuolenAjastin = setTimeout(() => nuoli.classList.add('nakyy'), LENNON_NUOLI_MS);
+    nuoli.addEventListener('click', ohitaLento);
+    // Matkustamon äänimaisema seuraa flight-active-lippua, kuten kalvolla.
+    this.syncAmbience();
+
+    // --- 4) Lento selaimen omina animaatioina ------------------------
+    const RUUTUJA = 120;
+    const koneRuudut = [];
+    const reittiRuudut = [];
+    for (let i = 0; i <= RUUTUJA; i++) {
+      const t = i / RUUTUJA;
+      // Pehmeä kiihdytys ja jarrutus, jottei kone nykäise liikkeelle.
+      const e = t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
+      const p = kohta(e);
+      koneRuudut.push({
+        offset: t,
+        transform: `translate(${p.x.toFixed(2)}px, ${p.y.toFixed(2)}px) rotate(${p.kulma.toFixed(2)}deg)`,
+      });
+      reittiRuudut.push({ offset: t, strokeDashoffset: kokoPituus * (1 - e) });
+    }
+    kone.style.transform = koneRuudut[0].transform;
+    await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
+    const koneAnim = kone.animate(koneRuudut, {
+      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
+    });
+    const reittiAnim = reitti.animate(reittiRuudut, {
+      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
+    });
+    lentoAnimaatiot.push(koneAnim, reittiAnim);
+    await Promise.all([koneAnim.finished, reittiAnim.finished]).catch(() => {
+      /* peruttu animaatio (esim. uusi peli) ei kaada lentoa */
+    });
+
+    // Sama mitattu sääntö kuin kalvolla: Astu mantereelle syttyy vasta
+    // kun repliikki on oikeasti kirjoittunut loppuun.
+    await Promise.race([
+      this.flightLineValmis ?? Promise.resolve(),
+      this.wait(LENNON_TEKSTI_ODOTUS_MS),
+    ]);
+    clearTimeout(nuolenAjastin);
+    nuoli.remove();
+    await new Promise((resolve) => {
+      nappi.classList.remove('odottaa');
+      nappi.addEventListener('click', resolve, { once: true });
+    });
+
+    // --- 5) Perillä: fokusmoodin tavallinen saapuminen ---------------
+    sfx.stopFlight();
+    this.ennakoiAmbienssi(this.game.player?.pos);
+    document.body.classList.remove('flight-active', 'kartalento');
+    overlay.classList.add('flight-leaving');
+    await this.wait(280);
+    overlay.remove();
+    kerros.textContent = '';
+    this.hideFlightLine();
+    /*
+     * Lento päättyy tähän, ja vasta nyt muut kamera-ajot ovat taas
+     * sallittuja. Kamera ajaa kohdemaan rajaukseen — se on sama
+     * saapumisliike, jonka fokuskartta tekee muissa maanvaihdoksissa —
+     * ja render käynnistää annosteluvirran (fokusvirtaSaapuminen),
+     * joka odotti lennon ajan.
+     */
+    this.aloituslentoKesken = false;
+    const maanRajaus = this.kartta.maidenBbox([kohdeIso]);
+    if (maanRajaus) this.kartta.ajaKamera({ bbox: maanRajaus });
+    if (!this.dead) this.render();
   }
 
   /** Siirtää nappulaa askel kerrallaan annettua polkua pitkin. */

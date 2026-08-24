@@ -47,7 +47,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1096';
+const APP_VERSION = '2026-08-09.1097';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -860,8 +860,8 @@ function nollaaValitila(game) {
   // ikkunat. DOM on latauksen jäljiltä puhdas, mutta tämä on halpa ja
   // tekee säännöstä yksiselitteisen.
   document.body.classList.remove(
-    'flight-active', 'zoom-kaynnissa', 'manner-zoom', 'manner-odottaa',
-    'kartta-raahaus', 'radio-tila',
+    'flight-active', 'kartalento', 'zoom-kaynnissa', 'manner-zoom',
+    'manner-odottaa', 'kartta-raahaus', 'radio-tila',
   );
   for (const dialogi of document.querySelectorAll('dialog[open]')) dialogi.close();
 

@@ -26,7 +26,13 @@
  * kysymys, vaihtoehdot, oikean indeksi ja faktarivi, joka näytetään
  * VASTA vastauksen jälkeen. Erillistä hint-kenttää ei ole: minivisa on
  * lämmittely, ei laattakysymys.
+ *
+ * KOHDENOSTOT (omistajan tilaus 24.8.2026) eivät ole täkyjä eivätkä asu
+ * tässä tiedostossa: ne ovat koko maan yhteisiä ja tulevat listasta
+ * js/packs/fokuskohteet-grc.js. Täällä on vain poiminta tunnuksilla,
+ * jotta seuraavan kohteen tarjoaminen Ateenassa on yhden sanan lisäys.
  */
+import { fokuskohteet } from './fokuskohteet-grc.js';
 
 export const FOKUSVIRTA_ATEENA = {
   kaupunki: 'ateena',
@@ -87,6 +93,15 @@ export const FOKUSVIRTA_ATEENA = {
     aarreNappi: 'Jatka aarteelle',
     aarreEste: 'Kuuntele ensin yksi tarina',
   },
+
+  /*
+   * ---------- 3b. Kohdenostot ----------
+   * Vapaaehtoinen NELJÄS valinta valintakuplassa. Ei minivisaa eikä
+   * palkkiota: kohdenosto kääntää katseen pois kaupungista, ja siitä
+   * jää muistoksi vinjetti kartalle kohteen omaan paikkaan. Se EI
+   * avaa aarreporttia (ks. js/fokusvirta.js) — portin mitta on täky.
+   */
+  kohteet: fokuskohteet(['korintin-kanava']),
 
   /* ---------- 4. Kolme täkypolkua ---------- */
   takyt: [

@@ -31,11 +31,18 @@
  *   6. Leipäteksti on lukukirjasimella, ei kirjoituskoneella
  *      (omistajan palaute: *"fontti saisi olla luettavampi"*).
  *   7. Kartan kuvavinjetit ilmestyvät Ateenan ylle, kertyvät virran
- *      mukana, pysyvät samankokoisina zoomista riippumatta ja avaavat
- *      napautuksesta pelin katselimen.
- *   8. Tila säilyy: kuplan sulku napautuksella ja uusi avaus jatkavat
+ *      mukana ja pysyvät samankokoisina zoomista riippumatta.
+ *   8. KUVAN SUURENNOS (omistajan tilaus 24.8.2026): napautus KASVATTAA
+ *      kuvan vinjetin paikalta suureksi kartan päälle — ei koko ruudun
+ *      katselinta, ei täyttä pimennystä, kartta näkyy yhä taustalla.
+ *      Selite ja lähde ovat kuvan ALLA, ja napautus sulkee.
+ *   9. KOHDENOSTO (omistajan tilaus 24.8.2026): valintakuplan neljäs
+ *      valinta kertoo MUUSTA paikasta kuin pelikaupungista — kupla
+ *      ilman visaa, ja vinjetti kartalle KOHTEEN OMAAN sijaintiin eikä
+ *      kaupungin viuhkaan. Portti ei aukea siitä.
+ *  10. Tila säilyy: kuplan sulku napautuksella ja uusi avaus jatkavat
  *      samasta vaiheesta eivätkä ala alusta.
- *   9. Saapuminen avaa virran itsestään (ANNOSTELU-poikkeus "mikään ei
+ *  11. Saapuminen avaa virran itsestään (ANNOSTELU-poikkeus "mikään ei
  *      ponnahda" -sääntöön).
  *
  * Peli istutetaan valmiiksi Ateenaan pelitallenteen kautta: Ateena on
@@ -171,15 +178,42 @@ const matkakirja = () => sivu.evaluate(() => {
 /** Kartan kuvavinjetit: määrä, koko ruudulla ja paikka laattaan nähden. */
 const vinjetit = () => sivu.evaluate(() => {
   const pinnit = [...document.querySelectorAll('.fokuskuva-pinni')];
-  const kerros = document.querySelector('.fokuskuvat');
+  const ryhmat = [...document.querySelectorAll('.fokuskuva-ryhma')];
   return {
     maara: pinnit.length,
     suodattimia: pinnit.filter((p) => p.querySelector('[filter]') || p.getAttribute('filter')).length,
-    kerroksenMuunnos: kerros?.getAttribute('transform') ?? '',
+    // Kiinteä ruutukoko tehdään ankkuriryhmän muunnoksella; kohdenosto
+    // saa oman ryhmänsä omaan laudan pisteeseensä.
+    ryhmat: ryhmat.map((g) => g.getAttribute('transform') ?? ''),
+    kerroksenMuunnos: ryhmat[0]?.getAttribute('transform') ?? '',
     koot: pinnit.map((p) => {
       const r = p.getBoundingClientRect();
       return { w: Math.round(r.width), h: Math.round(r.height), y: Math.round(r.bottom) };
     }),
+  };
+});
+
+/** Suurennoksen tilanne: kuva, sen mitat, teksti ja taustan tummuus. */
+const suurennos = () => sivu.evaluate(() => {
+  const kerros = document.querySelector('.fokuszoom');
+  if (!kerros) return null;
+  const img = kerros.querySelector('.fokuszoom-kuva');
+  const teksti = kerros.querySelector('.fokuszoom-teksti');
+  const tyyli = getComputedStyle(kerros);
+  const alfa = (tyyli.backgroundColor.match(/rgba?\([^)]*?([\d.]+)\)$/) ?? [])[1];
+  const k = img?.getBoundingClientRect();
+  const t = teksti?.getBoundingClientRect();
+  return {
+    kuva: k ? { w: Math.round(k.width), h: Math.round(k.height), ylin: Math.round(k.top), alin: Math.round(k.bottom) } : null,
+    tekstinYlin: t ? Math.round(t.top) : null,
+    selite: kerros.querySelector('.fokuszoom-selite')?.textContent ?? '',
+    lahde: kerros.querySelector('.fokuszoom-lahde')?.textContent ?? '',
+    laskuri: kerros.querySelector('.fokuszoom-laskuri')?.textContent ?? '',
+    taustanAlfa: alfa === undefined ? 1 : Number(alfa),
+    sumennus: `${tyyli.backdropFilter ?? ''}${tyyli.webkitBackdropFilter ?? ''}`,
+    lehtikatselin: Boolean(document.querySelector('.lightbox')),
+    kartta: Boolean(document.querySelector('.map-pane svg')),
+    ikkuna: { w: window.innerWidth, h: window.innerHeight },
   };
 });
 
@@ -275,9 +309,12 @@ vaadi('vinjetissä ei ole suodattimia (iOS-sääntö)', kuvat.suodattimia === 0)
 await paina('Jatka');
 tila = await kortti();
 const aarreNappi = tila?.napit.find((n) => n.teksti.includes('aarteelle'));
-vaadi('vaihe 3 on valintakupla, jossa kolme täkyä ja aarrenappi',
-  tila?.vaihe === 'valinta' && tila.kupla === true && tila.napit.length === 4,
+vaadi('vaihe 3 on valintakupla: kolme täkyä, kohdenosto ja aarrenappi',
+  tila?.vaihe === 'valinta' && tila.kupla === true && tila.napit.length === 5,
   JSON.stringify(tila));
+vaadi('kohdenosto on tarjolla valintakuplassa',
+  tila?.napit.some((n) => n.teksti.includes('Kanava, jota ei vielä ollut')),
+  JSON.stringify(tila?.napit));
 vaadi('portti kiinni: aarteelle ei pääse ilman täkyä',
   aarreNappi?.pois === true, JSON.stringify(tila?.napit));
 
@@ -323,19 +360,35 @@ vaadi('vinjetti on kiinteän kokoinen ruudulla zoomista riippumatta',
   && Math.abs(kuvat.koot[0].w - kokoEnnenZoomia.w) <= 2,
   JSON.stringify({ ennen: kokoEnnenZoomia, nyt: kuvat.koot[0] }));
 
-/* --- 8: vinjetin napautus avaa katselimen --- */
+/* --- 8: vinjetin napautus KASVATTAA kuvan kartan päälle --- */
+const vinjetinKoko = (await vinjetit()).koot[0];
 await sivu.evaluate(() => document.querySelector('.fokuskuva-pinni')?.dispatchEvent(
   new MouseEvent('click', { bubbles: true }),
 ));
-await sivu.waitForTimeout(500);
-const katselin = await sivu.evaluate(() => ({
-  auki: Boolean(document.querySelector('.lightbox')),
-  kuvia: document.querySelector('.lightbox-counter')?.textContent ?? '',
-}));
-vaadi('vinjetin napautus avaa pelin katselimen', katselin.auki === true, JSON.stringify(katselin));
-vaadi('katselimessa voi selata koko viuhkan', katselin.kuvia.includes('/'), JSON.stringify(katselin));
-await sivu.evaluate(() => document.querySelector('.lightbox-close')?.click());
-await sivu.waitForTimeout(300);
+await sivu.waitForTimeout(700);
+let zoom = await suurennos();
+vaadi('vinjetin napautus avaa oman suurennoksen, ei lehtien katselinta',
+  Boolean(zoom) && zoom.lehtikatselin === false, JSON.stringify(zoom));
+vaadi('kuva kasvoi vinjetistä suureksi (~ruudun pienempi sivu)',
+  Boolean(zoom?.kuva) && zoom.kuva.w > vinjetinKoko.w * 3
+  && zoom.kuva.w <= Math.min(zoom.ikkuna.w, zoom.ikkuna.h),
+  JSON.stringify({ vinjetti: vinjetinKoko, suuri: zoom?.kuva, ikkuna: zoom?.ikkuna }));
+vaadi('kartta näkyy yhä taustalla: kevyt himmennys, ei sumennusta',
+  zoom?.kartta === true && zoom.taustanAlfa <= 0.6 && !/blur/.test(zoom.sumennus),
+  JSON.stringify({ alfa: zoom?.taustanAlfa, sumennus: zoom?.sumennus }));
+vaadi('selite ja lähde ovat kuvan ALLA (CC BY vaatii tekijän)',
+  zoom?.selite.length > 10 && zoom.lahde.length > 10
+  && zoom.tekstinYlin >= zoom.kuva.alin,
+  JSON.stringify({ selite: zoom?.selite, lahde: zoom?.lahde }));
+vaadi('viuhkaa voi selata suurennoksessa', zoom?.laskuri.includes('/'),
+  JSON.stringify(zoom?.laskuri));
+
+// Napautus mihin tahansa — myös kuvaan — kutistaa takaisin vinjettiin.
+await sivu.evaluate(() => document.querySelector('.fokuszoom-kuva')?.dispatchEvent(
+  new MouseEvent('click', { bubbles: true }),
+));
+await sivu.waitForTimeout(700);
+vaadi('napautus kuvaan sulkee suurennoksen', (await suurennos()) === null);
 
 /* --- 9: portti aukeaa --- */
 await paina('Takaisin');
@@ -344,6 +397,38 @@ const aarreNyt = tila?.napit.find((n) => n.teksti.includes('aarteelle'));
 vaadi('portti aukeaa yhdestä täystä', aarreNyt?.pois === false, JSON.stringify(tila?.napit));
 vaadi('tehtyä täkyä ei tarjota uudelleen',
   !tila?.napit.some((n) => n.teksti.includes('Filosofi')), JSON.stringify(tila?.napit));
+
+/* --- 9b: KOHDENOSTO — huomio muualle kuin pelikaupunkiin --- */
+const ryhmatEnnen = (await vinjetit()).ryhmat.length;
+await paina('Kanava, jota ei vielä ollut');
+tila = await kortti();
+kuvat = await vinjetit();
+// Korintin kanava Euroopan laudalla: x = (22,98389 + 11) × 19,2 ja
+// y = (72 − 37,93472) × 26,3 (js/packs/fokuskohteet-grc.js).
+const kanavaRyhma = kuvat.ryhmat.find((m) => /translate\(652\.5\s+895\.9\)/.test(m));
+vaadi('kohdenosto on pöllön KUPLA ilman minivisaa',
+  tila?.vaihe === 'kohde' && tila.kupla === true && tila.vaihtoehdot.length === 0
+  && tila.napit.length === 1, JSON.stringify(tila));
+vaadi('kupla kertoo kohteesta 1873-kulmasta',
+  tila?.otsikko.includes('Korintin kanava')
+  && tila.teksti.includes('Periandros') && tila.teksti.includes('1881'),
+  JSON.stringify(tila?.teksti));
+vaadi('kartalle tuli oma ryhmä KOHTEEN sijaintiin, ei kaupungin viuhkaan',
+  kuvat.ryhmat.length === ryhmatEnnen + 1 && Boolean(kanavaRyhma),
+  JSON.stringify(kuvat.ryhmat));
+vaadi('kohteen vinjetti on kiinteän kokoinen kuten muutkin',
+  /scale\(/.test(kanavaRyhma ?? ''), JSON.stringify(kanavaRyhma));
+
+await paina('Takaisin');
+tila = await kortti();
+kuvat = await vinjetit();
+vaadi('kohteesta palataan valintaan eikä kohdetta tarjota uudelleen',
+  tila?.vaihe === 'valinta'
+  && !tila.napit.some((n) => n.teksti.includes('Kanava, jota ei vielä ollut')),
+  JSON.stringify(tila?.napit));
+vaadi('kohteen vinjetti jää kartalle muistoksi',
+  kuvat.ryhmat.some((m) => /translate\(652\.5\s+895\.9\)/.test(m)),
+  JSON.stringify(kuvat.ryhmat));
 
 /* --- 10: kuplan napautus sulkee, tila säilyy --- */
 await sivu.evaluate(() => {
@@ -382,7 +467,9 @@ tila = await kortti();
 vaadi('vaihe 5 on oppituntikortti, joka pohjustaa laattakysymystä',
   tila?.vaihe === 'oppitunti' && tila.kupla === false && tila.teksti.includes('demokratia'),
   JSON.stringify(tila?.vaihe));
-vaadi('oppitunnin kuva liittyi kartan viuhkaan', (await vinjetit()).maara === 3);
+// Kartalla on nyt neljä kuvaa: herokuva, täky, kohdenosto ja oppitunti
+// — kolme Ateenan viuhkassa ja yksi Korintin kannaksella.
+vaadi('oppitunnin kuva liittyi kartan viuhkaan', (await vinjetit()).maara === 4);
 
 await paina('Nikos');
 tila = await kortti();
