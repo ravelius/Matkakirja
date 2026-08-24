@@ -291,8 +291,8 @@ const MODULES = [
   // Tilastot-lehti ennen lehteä (lehti.js tuo sen staattisesti). Se
   // lukee pack.js:n, sisältötaulut ja ui-apurit, jotka ovat yllä —
   // laskenta tapahtuu vasta kun liite avataan.
-  'js/tyohuone-tilastot.js',
   'js/viitekuva-herot.js',
+  'js/tyohuone-tilastot.js',
   // M5c: maalehden koneisto ennen lehteä (lehti tuo sen piirtäjät).
   'js/maalehti.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
