@@ -60,6 +60,22 @@
  * tunnetussa ajassa eikä savuke joudu arvaamaan konekirjoituksen
  * kestoa.
  */
+/*
+ * KEVYT KULKU -KOKEILUN OHITUSVAHTI (Fable 24.8.2026): tama savuke
+ * mittaa korttiannostelua ja lehtinakymaa, jotka ovat kokeilun ajan
+ * lipun takana (js/fokusvirta.js FOKUSVIRTA_KORTIT = false). Lipun
+ * ollessa pois savuke ohitetaan; kun vanha virta palautetaan, vahti
+ * paastaa savukkeen ajoon sellaisenaan. Kokeilutilan oma kattavuus:
+ * tools/savuke-fokusvirta.mjs ja tools/savuke-fokuskartta.mjs.
+ */
+{
+  const { readFileSync } = await import('node:fs');
+  const virta = readFileSync(new URL('../../js/fokusvirta.js', import.meta.url), 'utf8');
+  if (/FOKUSVIRTA_KORTIT\s*=\s*false/.test(virta)) {
+    console.log('OHITETTU: kevyt kulku -kokeilu paalla (FOKUSVIRTA_KORTIT=false)');
+    process.exit(0);
+  }
+}
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
