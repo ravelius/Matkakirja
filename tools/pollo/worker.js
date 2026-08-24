@@ -997,6 +997,63 @@ async function haeElevenTila(env) {
   };
 }
 
+/**
+ * Googlen kuluvan kuukauden kulut dollareina.
+ *
+ * TÄMÄ ON HANKALAMPI KUIN MUUT LÄHTEET, ja syy kannattaa tietää ennen
+ * kuin joku "korjaa" tämän yksinkertaisemmaksi: Google Cloudilla EI OLE
+ * rajapintaa, joka kertoisi kuluvan kuukauden toteutuneen kulutuksen.
+ * Cloud Billing -rajapinta kertoo tilin ja hinnaston, budjettirajapinta
+ * kertoo budjetit — ei kumpikaan sitä, paljonko on käytetty. Ainoa
+ * virallinen tie toteutuneisiin lukuihin on laskutuksen vienti
+ * BigQueryyn ja kysely sieltä.
+ *
+ * Siksi tämä lukee BigQueryn laskutustaulua. Tarvittavat asetukset:
+ *   GOOGLE_BILLING_TOKEN   palvelutilin OAuth-token (bigquery.readonly)
+ *   GOOGLE_BILLING_PROJECT projektin tunnus
+ *   GOOGLE_BILLING_TAULU   viedyn laskutustaulun täysi nimi
+ * Ilman niitä palautetaan null, jolloin palkki jää haaleaksi
+ * "ei tietoa" -palkiksi — sama sopimus kuin ElevenLabsilla.
+ *
+ * Jos laskutusvientiä ei haluta pystyttää, tämä jää tyhjäksi eikä se
+ * ole vika: peli ei valehtele lukua, jota se ei voi tietää.
+ */
+async function haeGoogleKulut(env, kkAlku) {
+  const token = env.GOOGLE_BILLING_TOKEN;
+  const projekti = env.GOOGLE_BILLING_PROJECT;
+  const taulu = env.GOOGLE_BILLING_TAULU;
+  if (!token || !projekti || !taulu) return null;
+  const alku = kkAlku.toISOString().slice(0, 10);
+  // Taulun nimi tulee asetuksesta eikä käyttäjältä, mutta rajataan silti
+  // muotoon jonka BigQuery hyväksyy — asetusvirhe ei saa muuttua
+  // kyselyksi, joka tekee jotain muuta.
+  if (!/^[\w.-]+$/.test(taulu)) throw new Error('taulun nimi kelpaamaton');
+  const kysely = 'SELECT SUM(cost) AS usd FROM `' + taulu + '`'
+    + ' WHERE DATE(usage_start_time) >= @alku';
+  const vastaus = await fetch(
+    `https://bigquery.googleapis.com/bigquery/v2/projects/${encodeURIComponent(projekti)}/queries`,
+    {
+      method: 'POST',
+      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+      body: JSON.stringify({
+        query: kysely,
+        useLegacySql: false,
+        timeoutMs: 8000,
+        parameterMode: 'NAMED',
+        queryParameters: [{
+          name: 'alku',
+          parameterType: { type: 'DATE' },
+          parameterValue: { value: alku },
+        }],
+      }),
+    },
+  );
+  if (!vastaus.ok) throw new Error(`HTTP ${vastaus.status}`);
+  const data = await vastaus.json();
+  const arvo = data?.rows?.[0]?.f?.[0]?.v;
+  return arvo === null || arvo === undefined ? 0 : Number(arvo);
+}
+
 /** OpenAI:n kuluvan kuukauden kulut dollareina (admin-avaimella). */
 async function haeOpenaiKulut(env, kkAlku) {
   if (!env.OPENAI_ADMIN_KEY) return null;
@@ -1077,21 +1134,24 @@ async function hoidaTila(env, kors) {
       return { virhe: String(v?.message ?? v).slice(0, 60) };
     }
   };
-  const [r2, eleven, openaiKulut, claudeKulut, polloKuukausi] = await Promise.all([
+  const [r2, eleven, openaiKulut, claudeKulut, googleKulut, polloKuukausi] = await Promise.all([
     koeta(haeR2Kaytto(env)),
     koeta(haeElevenTila(env)),
     koeta(haeOpenaiKulut(env, kkAlku)),
     koeta(haeClaudeKulut(env, kkAlku)),
+    koeta(haeGoogleKulut(env, kkAlku)),
     koeta(lueLaskuri(kv, kuukausiAvain(nyt))),
   ]);
   const viat = {};
   for (const [nimi, tulos] of [
     ['r2', r2], ['eleven', eleven], ['openai', openaiKulut], ['claude', claudeKulut],
+    ['google', googleKulut],
   ]) {
     if (tulos.virhe) viat[nimi] = tulos.virhe;
   }
   const openai = openaiKulut.arvo ?? null;
   const claude = claudeKulut.arvo ?? null;
+  const google = googleKulut.arvo ?? null;
   const tila = {
     r2: r2.arvo ?? null,
     eleven: eleven.arvo ?? null,
@@ -1105,9 +1165,10 @@ async function hoidaTila(env, kors) {
       // Onko Claude-summa rajattu pöllön työtilaan vai koko
       // organisaation (peli kertoo eron kulurivillä).
       claudeRajattu: claude?.rajattu ?? false,
-      yhteensa: openai === null && claude === null
+      google,
+      yhteensa: openai === null && claude === null && google === null
         ? null
-        : (openai ?? 0) + (claude?.usd ?? 0),
+        : (openai ?? 0) + (claude?.usd ?? 0) + (google ?? 0),
     },
     viat: Object.keys(viat).length ? viat : null,
     aika: nyt.toISOString(),

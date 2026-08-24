@@ -947,6 +947,16 @@ const KIINTIO_RAJAT = {
   // R2:n ilmaistaso on 10 Gt ja GitHubin suositus repolle 1 Gt.
   r2: 10 * 1024 ** 3,
   repo: 1024 ** 2, // kilotavuina (GitHubin size-kenttä on kt)
+  /*
+   * Kuvageneroinnin kuukausibudjetti dollareina (omistajan tilaus
+   * 24.8.2026: "saako Googlen ja openain kulutusta mitenkään tänne
+   * näkyviin"). Nämä eivät ole palveluiden asettamia rajoja vaan
+   * omistajan omia hälytysrajoja: kumpikaan palvelu ei katkaise
+   * mitään näiden kohdalla, vaan palkki vain muuttuu keltaiseksi ja
+   * punaiseksi kuten muutkin. Muuta luku jos budjetti muuttuu.
+   */
+  openaiUsd: 50,
+  googleUsd: 50,
 };
 let kiintioTila = null;
 let kiintioHaku = null;
@@ -1061,6 +1071,30 @@ function piirraKiintiopalkit(kotelo, data) {
     tila?.pollo?.raja ? (tila.pollo.kuukausi ?? 0) / tila.pollo.raja : null,
     tila?.pollo?.raja ? `${tila.pollo.kuukausi ?? 0} / ${tila.pollo.raja}` : '', tyhja));
   /*
+   * Kuvageneroinnin kulut kuluvalta kuukaudelta. Luvut tulevat
+   * workerin tila-vastauksesta, joka on hakenut ne palveluiden omista
+   * rajapinnoista — peli ei laske niitä itse eikä arvaa.
+   *
+   * MOLEMMAT VAATIVAT OMAN TUNNUKSENSA workeriin, eikä kumpikaan ole
+   * sama avain jolla kuvia generoidaan:
+   *   OpenAI  OPENAI_ADMIN_KEY (organisaation kustannusrajapinta)
+   *   Google  GOOGLE_BILLING_TOKEN + _PROJECT + _TAULU (BigQueryyn
+   *           viety laskutustaulu; Googlella ei ole rajapintaa, joka
+   *           kertoisi toteutuneen kulutuksen suoraan)
+   * Ilman tunnusta palkki jää haaleaksi "ei tietoa" -palkiksi. Se on
+   * oikea tila eikä vika: lukua jota ei voi tietää ei keksitä.
+   */
+  const kulut = tila?.kulut ?? null;
+  const usdArvo = (usd, raja) => `${usd.toFixed(2)} / ${raja} $`;
+  kotelo.appendChild(kiintioPalkki('OpenAI/kk',
+    typeof kulut?.openai === 'number' ? kulut.openai / KIINTIO_RAJAT.openaiUsd : null,
+    typeof kulut?.openai === 'number' ? usdArvo(kulut.openai, KIINTIO_RAJAT.openaiUsd) : '',
+    tyhja));
+  kotelo.appendChild(kiintioPalkki('Google/kk',
+    typeof kulut?.google === 'number' ? kulut.google / KIINTIO_RAJAT.googleUsd : null,
+    typeof kulut?.google === 'number' ? usdArvo(kulut.google, KIINTIO_RAJAT.googleUsd) : '',
+    tyhja));
+  /*
    * Kulurivi ja lähdediagnoosi POISTETTU (omistajan tilaus 15.8.2026
    * "Poista nämä tekstit" — palkit riittävät). Diagnoosirivi ehti
    * tehdä tehtävänsä: se paljasti peili/pöllö-muuttujien ristiinmenon
@@ -1118,7 +1152,10 @@ function piirraKiintiosivu(kohde) {
     'R2 on peiliämpärien yhteiskoko (kuvat, liput, äänet, tekstit) '
     + 'ilmaistason 10 gigatavusta; Repo on GitHubin ilmoittama repon '
     + 'koko suosituksen 1 gigatavusta. ElevenLabs ja Pöllö ovat '
-    + 'kuukausikiintiöitä. Repon koko tulee GitHubin julkisesta '
+    + 'kuukausikiintiöitä. OpenAI ja Google ovat kuvageneroinnin '
+    + 'kuluvan kuukauden kulut dollareina omaa budjettirajaa vasten; '
+    + 'ne vaativat workeriin oman tunnuksensa, joka EI ole sama avain '
+    + 'jolla kuvia generoidaan. Repon koko tulee GitHubin julkisesta '
     + 'rajapinnasta, muut pöllö-workerilta kehittäjäkoodilla — ilman '
     + 'koodia tai verkkoa palkki jää haaleaksi "ei tietoa" -palkiksi. '
     + 'Vastaus muistetaan istunnon ajan, joten lehden uusi avaus ei hae '

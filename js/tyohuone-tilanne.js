@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1087 — OPENAIN JA GOOGLEN KULUT KIINTIOT-nakymaan: kaksi uutta palkkia kuvageneroinnin kuukausikuluille. Molemmat vaativat workeriin oman tunnuksen (OPENAI_ADMIN_KEY seka Googlelle BigQuery-laskutustaulu) — ilman niita palkki nayttaa ei tietoa eika keksi lukua. Tarkista: KIINTIOT-nakyma kehittajakoodilla',
   'v1086 — HEROKIERROS 21 VIITEKUVILLA: Melbourne, Vancouver, Brisbane, Chicago, Perth ja Kabul, 18 kuvaa, jokainen ankkuroitu kohteen omasta Commons-kategoriasta haettuihin valokuviin. Lisaksi Valparaison kaupunkilehti. Kehittajan MANTEREET-taulussa Herot-sarake on nyt oranssi niilla kaupungeilla, joiden kuvat on ankkuroitu. Tarkista: kuuden kaupungin etusivukarusellit, Valparaison lehti ja MANTEREET-taulun oranssit solut',
   'v1085 — NELJA OSEANIAN KAUPUNKILEHTEA: Adelaide, Hobart, Darwin ja Port Moresby. Kaikilla nelja sivua ja 16 nostoa. Adelaide Ovalin avajaispaiva osuu isoisan matkavuoteen paivalleen, ja Port Moresbyn sataman nimeaminen samoin. Tarkista: neljan lehden sivut, erityisesti alkuperaiskansasivut',
   'v1084 — NELJA UUTTA KAUPUNKILEHTEA: Havanna, Mexico City, New Orleans ja Bogota. Jokaisen faktapohja oli kaynyt lapi riippumattoman tarkistuksen, ja tarkistuksen pakolliset korjaukset on tehty. Tarkista: neljan uuden lehden sivut kannesta matkaoppaaseen',
