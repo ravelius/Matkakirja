@@ -545,4 +545,200 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'toiminut kaupungissa vuodesta 1817 ja kansalliskongressi vuodesta '
       + '1990.',
   },
+  /*
+   * MANAUS (24.8.2026). Avain on 'Manaus (kaupunki)', koska
+   * js/packs/southamerica.js (rivi 116) antaa kaupungille wiki-nimeksi
+   * fi-Wikipedian täsmennetyn otsikon — ui.js hakee introa juuri
+   * kentällä `city.wiki ?? city.name`. Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain manaus): väitteet on luettu
+   * en-Wikipedian raakateksteistä 24.8.2026, lähdeaineistona
+   * docs/mantereet-tyoaineisto/faktapohja-manaus.md ja sen riippumaton
+   * tarkistus tarkistus-manaus.md, joka voittaa ristiriidassa.
+   *
+   * ETÄISYYS MERESTÄ ON TÄSSÄ 1 500 KM. Tarkistuksen pakollinen korjaus
+   * 2: "Amazonas (Brazilian state)" sanoo "1,500 km upstream from the
+   * Atlantic Ocean". Pelissä oli sekä oikea luku (paikkatietoteksti)
+   * että väärä tuhat kilometriä (visan Q4-fakta,
+   * js/packs/southamerica-questions.js) — tämä intro käyttää oikeaa.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna kaupungissa ei ollut vielä
+   * mitään siitä, mistä se tunnetaan. Kumibuumi ajoitetaan vasta
+   * vuosiin 1879–1912, katedraali avattiin 1878 ja oopperataloa ei
+   * ollut ehdotettukaan ennen vuotta 1881. Koillisen suuri kuivuus
+   * (Grande Seca) EI ole 1873-ankkuri: se oli 1877–1878, ja
+   * faktapohjan virheellinen "samaan aikaan" on korjattu sekä täällä
+   * että lehden nostossa K3.
+   */
+  'Manaus (kaupunki)': {
+    intro: 'Manaus on Amazonasin osavaltion pääkaupunki ja Brasilian '
+      + 'pohjoisosan suurin kaupunki: kaksi miljoonaa asukasta keskellä '
+      + 'sademetsää, Rio Negron ja Amazonin yhtymäkohdassa. **Amazon on '
+      + 'täällä yhä niin syvä, että valtamerialus voi nousta jokea pitkin '
+      + '1 500 kilometriä Atlantilta sisämaahan.** Käyttökelpoista '
+      + 'maantietä muuhun Brasiliaan ei ole, joten liikenne kulkee '
+      + 'ilmassa ja vedessä.'
+      + '\n\n'
+      + 'Portugalilaiset rakensivat paikalle linnoituksen 1669, ja '
+      + 'manaó-, baré-, baniwa- ja passé-kansat auttoivat työssä. '
+      + 'Nykyisen nimensä kaupunki sai vasta 1856 manaó-kansan mukaan. '
+      + 'Sen tunnetuin jakso on kumibuumi 1879–1912, joka rakensi '
+      + 'keskustaan oopperatalon, tullitalon ja kelluvan sataman ja toi '
+      + 'kaduille sähkövalot ennen monia Euroopan kaupunkeja.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 mitään tästä ei vielä ollut. **Manaus '
+      + 'oli pieni jokisatama, jonka katedraali oli yhä rakenteilla ja '
+      + 'jonka väkiluku oli murto-osa vuosisadan lopun 70 000:sta.** '
+      + 'Kumin jälkeen kaupunki vaipui vuosikymmeniksi hiljaisuuteen, '
+      + 'kunnes vuonna 1967 perustettu vapaakauppa-alue teki siitä '
+      + 'elektroniikkateollisuuden keskuksen.',
+    teksti: 'Manaus on Brasilian luoteisosassa, Rio Negron ja Solimõesin '
+      + 'yhtymäkohdan tuntumassa keskellä Amazonin sademetsää. Kaupungin '
+      + 'alapuolella tumma ja savenvärinen joki kulkevat kilometrien '
+      + 'matkan sekoittumatta – ilmiön nimi on Encontro das Águas. '
+      + 'Historiallinen keskusta on tiivis ja kävelymatkan kokoinen, '
+      + 'mutta kaupunki itse levittäytyy laajalle.'
+      + '\n\n'
+      + 'Vuoden 1669 linnoitus korotettiin kyläksi 1832 ja kaupungiksi '
+      + '1848. Kumibuumi teki 1800-luvun lopulla Manausista Amazonin '
+      + 'rikkaimman kaupungin: oopperatalo vihittiin 1896, tullitalo '
+      + 'nousi englantilaisen yhtiön käsissä 1900-luvun alussa, ja '
+      + 'satamaan rakennettiin kelluvat laiturit. Kun kumipuun siemenet '
+      + 'päätyivät Aasian '
+      + 'viljelmille, buumi loppui yhtä äkkiä kuin oli alkanutkin.'
+      + '\n\n'
+      + 'Nykyään Manausissa asuu lähes puolet osavaltion väestöstä, ja '
+      + 'talous nojaa vuoden 1967 vapaakauppa-alueeseen: '
+      + 'teollisuusalueella kootaan elektroniikkaa, ja lentoasema on '
+      + 'rahtimäärältään Brasilian kolmanneksi suurin. Matkailija saapuu '
+      + 'lentäen tai jokilaivalla ja lähtee retkille vedelle: vesien '
+      + 'kohtaamiseen, jokisaaristoon tai rannalle, joka on olemassa vain '
+      + 'elo-marraskuussa.',
+  },
+  /*
+   * CARACAS (24.8.2026). Avain on wiki-otsikko 'Caracas', jonka
+   * js/packs/southamerica.js antaa kaupungille sekä wiki- että
+   * näyttönimeksi (rivi 109). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain caracas): lähdeaineistona
+   * docs/mantereet-tyoaineisto/faktapohja-caracas.md ja sen riippumaton
+   * tarkistus (tarkistus-caracas.md, haettu committista 5e31d2cf), joka
+   * voittaa ristiriidassa, ja jokainen väite on luettu uudestaan
+   * en-Wikipedian raakatekstistä 24.8.2026.
+   *
+   * ETÄISYYS MERELLE on tässä 15 km, ei "reilu kymmenen": tarkistuksen
+   * pakollinen korjaus 1. "Caracas"-artikkelin johdanto sanoo "separated
+   * from the Caribbean coast by a roughly 15 km expanse of El Ávila
+   * National Park". Korkeusluvut (870–1 043 m, ydin n. 900 m) ovat
+   * saman artikkelin Geography-osiosta, ja ne kerrotaan tässä omassa
+   * yhteydessään — eivät visan kysymyksen 1 fakta-kentän sanamuodossa,
+   * jossa 900 metriä ja meren etäisyys ovat samassa virkkeessä.
+   *
+   * VUODEN 1873 KULMA: matkavuosi osuu Antonio Guzmán Blancon
+   * ENSIMMÄISELLE, seitsenvuotiselle kaudelle (27.4.1870–27.2.1877,
+   * infoboksi term_start2/term_end2). Bolívarin ratsastajapatsasta ei
+   * vielä ollut — se paljastettiin 7.11.1874 — ja tämä sanotaan
+   * introssa suoraan, koska se on lehden historia-sivun ankkuri.
+   * Nykypolitiikka, talouskriisi ja väkivalta on jätetty kokonaan pois
+   * (tilauksen tiukin rajaus); Bolívar on historiallinen henkilö.
+   */
+  Caracas: {
+    intro: 'Caracas on Venezuelan pääkaupunki ja maan suurin kaupunki. Se on '
+      + 'ahtautunut kapeaan laaksoon rannikkovuoriston sisään, 870 ja '
+      + '1 043 metrin välille; historiallinen keskusta on noin 900 '
+      + 'metrissä. Karibianmeri on vain viidentoista kilometrin '
+      + 'päässä, mutta väliin nousee lähes 2 200 metriä korkea vuorimuuri, '
+      + 'jota kaupunkilaiset kutsuvat Ávilaksi ja kaupungin keuhkoiksi.'
+      + '\n\n'
+      + 'Diego de Losada perusti kaupungin nimellä Santiago de León de '
+      + 'Caracas heinäkuussa 1567, kun päällikkö Guaicaipuron vastarinta '
+      + 'oli pitänyt espanjalaiset poissa laaksosta vuosia. **Täällä '
+      + 'syntyi 1783 Simón Bolívar**, joka johti itsenäistymissodat '
+      + 'Espanjaa vastaan. Vuoden 1812 maanjäristys tuhosi kaupungin '
+      + 'lähes kokonaan, ja 1900-luvun öljyvuosina se kasvoi laakson '
+      + 'täydeltä ja levisi rinteille.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Caracas oli työmaa: presidentti Antonio '
+      + 'Guzmán Blancon ensimmäisellä kaudella pääaukiosta tehtiin '
+      + 'ranskalaistyylinen puisto, kongressipalatsin rakentaminen alkoi '
+      + 'ja kansallinen hautaholvi perustettiin. **Bolívarin '
+      + 'ratsastajapatsasta ei vielä ollut** – se paljastettiin aukiolla '
+      + 'vasta marraskuussa 1874.',
+    teksti: 'Caracas on Venezuelan pohjoisosassa, rannikkovuoriston sisään '
+      + 'jäävässä laaksossa. Kaupungin halki virtaa Guaire-joki lännestä '
+      + 'itään, ja pohjoisreunaa vartioi Ávila eli Waraira Repano, jonka '
+      + 'korkein huippu kohoaa 2 765 metriin. Asukkaita on yli kolme '
+      + 'miljoonaa ja koko kaupunkiseudulla yli viisi miljoonaa.'
+      + '\n\n'
+      + 'Espanjalaiset perustivat kaupungin 1567. Kiirastorstaina 1812 '
+      + 'maanjäristys tuhosi kaupungin niin laajalti, että uuden '
+      + 'pääkaupungin perustamista ehdotettiin. Itsenäistymisen jälkeen '
+      + 'kaupunki sai '
+      + 'nykyilmeensä ytimen 1870-luvulla, kun Guzmán Blanco rakennutti '
+      + 'Capitolion, Panteón Nacionalin ja uuden pääaukion. Öljyn '
+      + 'löytyminen 1900-luvun alussa teki siitä miljoonakaupungin.'
+      + '\n\n'
+      + 'Nykyään kaupungissa kulkee 1983 avattu metro, ja vuoren harjalle '
+      + 'nousee köysirata, joka avattiin 1955 ja kunnostettiin 2000-luvun '
+      + 'alussa. Kaakossa on Carlos Raúl Villanuevan suunnittelema Ciudad '
+      + 'Universitaria, Unescon maailmanperintökohde vuodesta 2000. '
+      + 'Musiikinopetusohjelma El Sistema ja siitä noussut Simón Bolívar '
+      + '-sinfoniaorkesteri toimivat kaupungissa, ja arkiruoka on arepa.',
+  },
+  /*
+   * SALVADOR (24.8.2026). Avain on laudan wiki-nimi
+   * js/packs/southamerica.js:ssä eli 'Salvador (Brasilia)' — pelkkä
+   * "Salvador" on suomeksi täsmennyssivu, josta ei saa tiivistelmää.
+   * Jokainen väite tulee samasta erästä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain salvador), ja ne on
+   * tarkistettu en-Wikipedian raakateksteistä 24.8.2026: "Salvador,
+   * Bahia", "Slavery in Brazil", "Candomblé", "Elevador Lacerda",
+   * "Historic Center of Salvador", "Timeline of Salvador, Bahia".
+   * Sisältölinjaus on spec-mantereet.md:n E-Amerikka-osio ja Raamatun
+   * pilarit 3 ja 4: orjakauppa kerrotaan tapahtumina, vuosilukuina ja
+   * lukuina, kaunistelematta ja dramatisoimatta, ja afrobrasilialainen
+   * kulttuuri elävänä nykykulttuurina. Vuoden 1873 kulma on introssa,
+   * koska se on koko lehden kantava aihe: isoisän matkavuonna
+   * Salvadoriin valmistui Brasilian ensimmäinen hissi ja orjuus oli
+   * yhä laillista.
+   */
+  'Salvador (Brasilia)': {
+    intro: 'Salvador on Bahian osavaltion pääkaupunki Brasilian '
+      + 'koillisrannikolla, niemellä joka erottaa Kaikkien pyhien lahden '
+      + 'Atlantista. Kaupunki on kahdessa kerroksessa: noin 85 metrin '
+      + 'jyrkänteen päällä on Cidade Alta kirkkoineen ja hallintoineen, '
+      + 'alhaalla lahden rannassa Cidade Baixa satamineen. Asukkaita on '
+      + 'noin 2,4 miljoonaa.'
+      + '\n\n'
+      + '**Tomé de Sousa perusti kaupungin 1549, ja se oli Portugalin '
+      + 'Brasilian ensimmäinen pääkaupunki vuoteen 1763.** Sokeri ja '
+      + 'tupakka tekivät satamasta rikkaan, ja samasta satamasta tuli maan '
+      + 'suurin orjien tuontisatama: Brasiliaan tuotiin noin neljä '
+      + 'miljoonaa orjuutettua afrikkalaista, suurin osa heistä '
+      + 'Bahiaan. Siitä juontuu kaupungin nykyinen kulttuuri, jossa '
+      + 'candomblé, capoeira ja bahialainen keittiö ovat tavallista arkea. '
+      + 'Vanha keskusta Pelourinho on Unescon maailmanperintökohde.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 kaupungissa asui 129 109 ihmistä ja '
+      + 'orjuus oli yhä laillista – Brasilia lakkautti sen viimeisenä '
+      + 'Amerikan mantereen maista 1888. **Samana vuonna valmistui '
+      + 'Brasilian ensimmäinen hissi, Elevador Lacerda**, joka yhdistää '
+      + 'kaupungin kaksi kerrosta ja kulkee yhä.',
+    teksti: 'Salvador on Brasilian koillisrannikolla, Bahian osavaltion '
+      + 'pääkaupunki. Se seisoo kapealla niemellä, joka erottaa Kaikkien '
+      + 'pyhien lahden – maan suurimman lahden – Atlantista. Kaupunki on '
+      + 'kahdessa tasossa, ja tasojen väliä kulkee Lacerdan hissi.'
+      + '\n\n'
+      + 'Portugalilaiset perustivat kaupungin 1549 siirtomaansa '
+      + 'pääkaupungiksi, ja täällä toimi myös Brasilian ensimmäinen '
+      + 'hiippakunta. Sokeriruoko ja tupakka tekivät siitä varakkaan, ja '
+      + 'satama oli maan suurin orjien tuontisatama. Hallinto siirtyi '
+      + 'Rio de Janeiroon 1763, orjakauppa kiellettiin 1850 ja orjuus '
+      + 'lakkautettiin 1888.'
+      + '\n\n'
+      + 'Nykyään Salvador on afrobrasilialaisen kulttuurin keskus. '
+      + 'Candomblén temppeleitä on kaupungissa yli tuhat, capoeira-ringit '
+      + 'kokoontuvat kaduilla ja kouluissa, ja Bahian karnevaali on '
+      + 'Guinnessin ennätyskirjan mukaan maailman suurin katujuhla. '
+      + 'Pelourinhon värikkäitä kortteleita on kunnostettu 1990-luvulta '
+      + 'alkaen, ja entisöityjä rakennuksia on yli 800.',
+  },
 };

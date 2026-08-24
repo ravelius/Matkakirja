@@ -190,6 +190,7 @@ import { TILANNE, TESTATTAVAA, TUOREET } from './tyohuone-tilanne.js';
 // Tilastot-taulu (drawBoard, valmiusLuokka) — yksi määritelmä, jottei
 // kartta ja taulu voi kertoa eri tarinaa samasta kaupungista.
 import { lehtiValmius } from './tyohuone-tilastot.js';
+import { viitekuvaTila } from './viitekuva-herot.js';
 import {
   el,
   hash01,
@@ -4410,6 +4411,37 @@ export class UI {
       }
       return aste === 'lahes' ? ' city-lahes' : ' city-kesken';
     };
+
+    /*
+     * ORANSSI LAATTA = kaupungin herokuvat on generoitu kohteen omista
+     * Commons-valokuvista viitteinä (omistajan tilaus 24.8.2026:
+     * "muuta niiden kaupunkien laatan väri oranssiksi"). Ankkuroimaton
+     * generointi tuotti Kašgariin väärän rakennuksen, joten ankkuroitu
+     * ja ankkuroimaton erä ovat eri luotettavuustasoa — ja se ero
+     * halutaan nähdä suoraan laudalta.
+     *
+     * ORANSSI KORVAA VALMIUSVÄRIN, EI TÄYDENNÄ SITÄ. Laatta on yksi
+     * ellipsi ja sillä on yksi täyttöväri, joten kahta asteikkoa ei voi
+     * näyttää samassa täytössä. Lehtivalmius jää silti luettavaksi:
+     * valmiusluokka annetaan yhä ja sen ÄÄRIVIIVA jää voimaan, koska
+     * oranssit säännöt asettavat vain fillin. Kaupunki, joka on sekä
+     * valmis että ankkuroitu, on siis oranssi vihrein reunoin.
+     *
+     * Vain kehittäjätilassa — pelaajan lauta pysyy ennallaan.
+     */
+    const viiteLuokka = (c) => {
+      if (!this.kehittajaTila) return '';
+      const kansi = (KULTTUURI_KATEGORIAT[c.id] ?? [])
+        .find((k) => k.id === 'kaupunki');
+      const kaikki = (kansi?.avauskuvat ?? [])
+        .filter((kuva) => kuva.ampari).length;
+      const tila = viitekuvaTila(c.id, kaikki);
+      if (!tila) return '';
+      return tila.taysi ? ' city-viite-taysi' : ' city-viite-osa';
+    };
+
+    /** Laatan kehittäjäluokat: valmiusaste + mahdollinen viiteankkurointi. */
+    const laatanLuokat = (c) => `${valmiusLuokka(c)}${viiteLuokka(c)}`;
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
       const base = (c.start ? 20 : 11.6) * nodeScale;
@@ -4417,7 +4449,7 @@ export class UI {
       const ry = base + vary(`city:ry:${c.id}`, 0.7);
       if (c.start) {
         el('ellipse', {
-          cx: c.x, cy: c.y, rx, ry, transform: wobble, class: `city-start${valmiusLuokka(c)}`,
+          cx: c.x, cy: c.y, rx, ry, transform: wobble, class: `city-start${laatanLuokat(c)}`,
         }, cities);
         el('ellipse', {
           cx: c.x, cy: c.y, rx: rx * 0.6, ry: ry * 0.6, transform: wobble, class: 'coast-soft',
@@ -4430,7 +4462,7 @@ export class UI {
           ry,
           transform: wobble,
           'stroke-width': (2.2 + hash01(`city:sw:${c.id}`) * 0.7).toFixed(2),
-          class: `city${valmiusLuokka(c)}`,
+          class: `city${laatanLuokat(c)}`,
         }, cities);
       }
       // Porttikaupungista lähtee pitkä lento toiselle laudalle: kaksoiskehä

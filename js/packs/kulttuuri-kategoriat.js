@@ -70657,4 +70657,2880 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * CHRISTCHURCH (lauta oceania, kaupunki-id christchurch) — kaupunki-
+   * lehti 24.8.2026.
+   *
+   * LÄHTEET. Työpohjana docs/mantereet-tyoaineisto/faktapohja-
+   * christchurch.md ja sen rinnalla RIIPPUMATON TARKISTUS docs/
+   * mantereet-tyoaineisto/tarkistus-christchurch.md, joka VOITTAA
+   * faktapohjan ristiriidoissa. Jokainen tähän lohkoon menevä väite on
+   * lisäksi haettu uudestaan en-Wikipedian raakateksteistä 24.8.2026
+   * (action=raw, NODE_USE_ENV_PROXY=1): Christchurch, 2010 Canterbury
+   * earthquake, 2011 Christchurch earthquake, Christ Church Cathedral
+   * Christchurch, Cardboard Cathedral, Canterbury Association, Ngāi
+   * Tahu, Ngāi Tahu Claims Settlement Act 1998, Hagley Park
+   * Christchurch, Christchurch Botanic Gardens, Avon River / Ōtākaro,
+   * Riccarton New Zealand, Southern Alps, Canterbury Plains,
+   * Christchurch Arts Centre.
+   *
+   * TARKISTUKSEN KOLME PAKOLLISTA KORJAUSTA ON TEHTY, KAIKKI H2:EEN.
+   *
+   *   (1) JÄRISTYKSEN KESTO. Faktapohjan H2 otsikoitiin "Kolmetoista
+   *       sekuntia joka muutti kaiken". Lukua kolmetoista ei ole
+   *       lähteessä. En-Wikipedia "2011 Christchurch earthquake":
+   *       "While the initial quake only lasted for approximately 10
+   *       seconds, the damage was severe because of the location and
+   *       shallowness of the earthquake's focus". Otsikko on nyt
+   *       "Kymmenen sekuntia joka muutti kaiken" ja leipäteksti sanoo
+   *       "noin kymmenen sekuntia" — lähteen oma varaus mukana.
+   *
+   *   (2) EPISENTRUMIN SIJAINTI. Faktapohjan H2 sanoi järistyksen
+   *       osuneen "keskikaupungin alle". Sama artikkeli sanoo:
+   *       "centred {{convert|6.7|km}} south-east of the central
+   *       business district". Nosto sanoo nyt "keskustasta 6,7
+   *       kilometriä kaakkoon". Faktapohja oli tässä myös itsensä
+   *       kanssa ristiriidassa: sen oma Faktat-rivi sanoi oikein
+   *       "keskikaupungin lähellä". Keskustan ALLA oli eri tapahtuma,
+   *       joulukuun 2010 jälkijäristysparvi, ja se kerrotaan omana
+   *       asianaan nostossa H1 ("2010 Canterbury earthquake": 26.12.
+   *       2010 parvi, "many centred directly under the city").
+   *
+   *   (3) 1 240 PURKUA. Faktapohjan H2 kutsui niitä "historiallisiksi
+   *       rakennuksiksi". Lähde sanoo vain: "As of February 2015,
+   *       there had been 1240 demolitions within the bounds of the
+   *       Four Avenues since the September 2010 earthquakes" — luku
+   *       kattaa kaikki purut eikä erittele suojeltujen osuutta.
+   *       Nosto kertoo luvun niin kuin lähde sen sanoo ja sanoo
+   *       lukijalle ääneen, ettei erittelyä ole.
+   *
+   * TARKISTUKSEN HUOMIOT (ei pakollisia) KÄSITELTIIN NÄIN.
+   *   (4) "Canterburyn tasanko on maan laajin ja tärkein
+   *       maatalousalue" EI löydy lähteistä, ja väite on POISTETTU.
+   *       En-Wikipedia "Canterbury Plains" kertoo vain geologian
+   *       (jäätiköiden kuljettama sora, punokset jokiuomissa) ja
+   *       "Christchurch" sanoo Canterburyn viljelystä vain: "Cropping
+   *       has always been important in the Canterbury Region. Wheat
+   *       and barley and various strains of clover and other grasses
+   *       for seed exporting have been the main crops." Oppaan jakso 2
+   *       käyttää täsmälleen tätä. Faktapohjan mainitsemat vuoden 2002
+   *       viljaosuudet (60,7 % vehnästä jne.) eivät ole enää
+   *       artikkelissa, joten niitä ei käytetä.
+   *   (5) KĀTI MĀMOEN SULAUTUMINEN. Tarkistus epäili muotoilua, mutta
+   *       en-Wikipedia "Christchurch" -artikkelin JOHDANTO sanoo sen
+   *       suoraan: waitaha "were invaded by Kāti Māmoe in the
+   *       sixteenth century, and then were absorbed by Kāi Tahu a
+   *       century later". Nosto K2 käyttää tätä lausetta ja lisää
+   *       lähteen omat tarkennukset (waitaha 1200-luvun puolivälistä,
+   *       suoseudun asutus, Kaiapoi Pā kauppakeskuksena).
+   *   (6) ETELÄSAARI. Tarkistus oli oikeassa: maininta on jo olemassa,
+   *       eikä sitä toisteta. Eteläsaari sanotaan kerran ARTIKKELIT-
+   *       introssa ja kerran Matkailijalle-kappaleessa, ei useammin.
+   *
+   * OMAT LÖYDÖT, JOISSA FAKTAPOHJA ON VANHENTUNUT (lähde luettiin
+   * uudestaan 24.8.2026 ja lehti seuraa lähdettä):
+   *   - "Cyclopolis"-noston 25 prosentin osuus maan pyöräilevistä
+   *     työmatkalaisista EI OLE enää Christchurch-artikkelissa. Se on
+   *     jätetty pois; 30 prosentin kasvu 2016–2023, yli 3,6 miljoonaa
+   *     havaittua pyöräilijää ja Major Cycle Routen 100 km löytyvät
+   *     yhä ja ovat mukana.
+   *   - Pahvikatedraalin "96 pahviputkea", "700 istumapaikkaa" ja "50
+   *     vuoden käyttöikä" EIVÄT ole enää artikkelissa. Lähde sanoo nyt
+   *     "over 90 large cardboard tubes", halkaisija 60 cm, katto
+   *     polykarbonaattia, kahdeksan merikonttia, korkeus 21 m alttarin
+   *     yläpuolella, hinta NZ$5 milj., avautui yleisölle 6.8.2013 ja
+   *     vihittiin 15.8.2013. Nosto H4 käyttää näitä.
+   *   - Katedraalin synodin "55 prosentin äänestys 2017" EI OLE enää
+   *     artikkelissa. H3 ei siis mainitse äänestystä; kustannusten
+   *     nousu 104 miljoonasta (2017) 248 miljoonaan (2024) ja
+   *     Re:Opening-vaiheistus (rakentaminen alkoi 2026, valmis 2030)
+   *     ovat, koska ne ovat.
+   *   - Sään pakkasluvut ovat muuttuneet: faktapohjan "50 pakkasyötä
+   *     lentokentällä, 23 keskustassa" ei ole enää tekstissä, vaan
+   *     "There are on average 80 days of ground frost per year".
+   *     Oppaan jakso 5 käyttää lukua 80.
+   *   - Kāi tahun aluenimi "Karaitiana" EI OLE enää artikkelissa.
+   *     Se on jätetty pois K2:sta.
+   *   - Te Rūnanga o Ngāi Tahun kotipaikaksi lähde sanoo vain
+   *     "Christchurch and Invercargill", ei Addingtonia. Kaupungin-
+   *     osaa ei siis mainita.
+   *   - Tammikuun 22,6 astetta ja heinäkuun 10,9 astetta ovat lähteen
+   *     mukaan keskimääräisiä YLIMPIÄ päivälämpötiloja, eivät
+   *     keskilämpötiloja. Opas sanoo sen niin.
+   *
+   * WIKIPEDIAN SISÄINEN RISTIRIITA, JOKA KIRJOITETTIIN AUKI:
+   * helmikuun 2011 järistyksen magnitudi. "2011 Christchurch
+   * earthquake" merkitsee sen johdantoon muodossa {{M|w|6.2}}
+   * ({{M|l|6.3}}) eli momenttimagnitudi 6,2 ja paikallismagnitudi
+   * 6,3, kun taas leipäteksti ja "Christ Church Cathedral,
+   * Christchurch" puhuvat toistuvasti 6,3 magnitudin järistyksestä.
+   * Nosto H2 kertoo lukijalle molemmat luvut ja sen, kumpi on kumpi,
+   * eikä valitse puolestaan (v925/v932/v937 -ennakkotapaus).
+   * Syyskuun 2010 järistyksen uhriluvusta käytetään dedikoidun
+   * artikkelin tarkempaa lukua (2 kuollutta, yli 1 700
+   * loukkaantunutta), koska Christchurch-pääartikkelin "no direct
+   * fatalities" on samasta tapahtumasta epätarkempi.
+   *
+   * SISÄLTÖLINJAUS. Kohderyhmä on 13 vuotta täyttäneet ja aikuiset.
+   * 15.3.2019 moskeija-isku on JÄTETTY KOKONAAN POIS, vaikka
+   * en-Wikipedia käsittelee sitä laajasti sekä Christchurch- että
+   * Riccarton-artikkelissa; poisjättö on tietoinen ja koskee myös
+   * kuvavalintoja (Hagley Parkin kukkakuvat Deans Avenuen varrelta
+   * hylättiin tästä syystä). Maanjäristykset kerrotaan tapahtumina ja
+   * lukuina toteavasti ilman uhrien kärsimyksen kuvailua, ja
+   * painopiste on jälleenrakennuksessa ja siinä, mitä kaupungissa on
+   * nyt: Pahvikatedraali, Te Kaha, punaisen vyöhykkeen puistohanke,
+   * pyörätiet, Ōtākaro-jokivyöhyke. Kāi tahu (Ngāi Tahu) esiintyy
+   * elävänä nykykansana omalla nimellään (pilari 3): Te Rūnanga o
+   * Ngāi Tahu on nykyinen hallintoelin, Canterburyssa on yhdeksän
+   * rūnangaa, ja sekä Ōnukun että Wairewan marae ovat kuvissa
+   * nykyisinä paikkoina. Ei nykysotaa, ei nykypolitiikkaa.
+   *
+   * VUOSI 1873 ON LEHDEN HELMI. ChristChurch-katedraalin rakennustyö
+   * käynnistyi uudelleen juuri 1873, kun Benjamin Mountfort otti
+   * hankkeen johtoonsa kahdeksan vuoden rahapulakatkon jälkeen. Tämä
+   * on historia-sivun nosto H3, ja se sanotaan ääneen isoisän matkan
+   * vuodeksi.
+   *
+   * KULTTUURIVISA (js/packs/oceania-questions.js, kohta christchurch,
+   * viisi kysymystä) — PÄÄTOIMITTAJAN SÄÄNTÖ: vastaus LÖYTYY lehden
+   * teksteistä mutta EI VISAN OMALLA SANAMUODOLLA. Kysymykset käytiin
+   * läpi myös sivujen johdantoja vasten, ei vain nostoja vasten.
+   *   1. saari -> "Eteläsaaren suurin kaupunki" (ARTIKKELIT-intro ja
+   *      Matkailijalle-kappale).
+   *   2. Eteläiset Alpit -> oppaan jakso 2. Visan fakta sanoo
+   *      "läntinen rinne on maailman sateisimpia paikkoja, itäinen
+   *      taas kuivaa lakeutta"; opas kertoo saman lähteen omilla
+   *      millimetreillä (3 000 / 15 000 / 1 000 mm) eikä toista
+   *      sanamuotoa.
+   *   3. Canterburyn tasanko -> oppaan jakso 2 ja kaupunki-sivun
+   *      johdanto. Visan fakta kutsuu tasankoa maan tärkeimmäksi
+   *      maatalousalueeksi; lehti EI toista sitä, koska lähde ei tue
+   *      sitä (ks. huomio 4 yllä), vaan kertoo viljasta ja
+   *      siemenheinistä.
+   *   4. vuoden 2011 järistys -> nostot H2, H3 ja H4. Visan fakta
+   *      sanoo kaupunkia rakennetun uudelleen "matalammaksi ja
+   *      joustavammaksi"; lehti käyttää eri kulmaa (purkuluvut,
+   *      pahviputket, uusi stadion).
+   *   5. puutarhakaupunki -> nosto L1 ja luonto-sivun johdanto.
+   * MINITEHTÄVÄT (kaksi, yksi per teemasivu) eivät toista visaa, ja
+   * kummankin vastaus on SAMAN SIVUN nostotekstissä: katedraalin
+   * kahdeksan vuoden katko H3:ssa ja Ōtākaron merkitys L2:ssa.
+   *
+   * OCEANIA_FACTS-KOHDAN `christchurch` NELJÄÄ RIVIÄ EI TOISTETA
+   * SANAMUODOLTAAN: saapumiskortti sanoo Eteläsaaren suurimman
+   * kaupungin kärsineen järistyksissä, Eteläisten Alppien kohoavan
+   * lännessä satoine jäätikköineen, Canterburyn lakeuden olevan maan
+   * laajin tasanko ja isoisän ihmettelevän englantilaista kaupunkia
+   * vuorten alla. Lehti kertoo samat asiat toista kautta: tarkat
+   * päivämäärät ja purkuluvut, Aoraki 3 724 m ja yli 3 000 jäätikköä
+   * inventaarin mukaan, tasangon soraperäinen synty ja punokselliset
+   * joet, ja Canterbury-yhdistyksen ihannesiirtokunnan tarina.
+   * HUOM: faktarivi väittää Canterburyn lakeutta maan LAAJIMMAKSI
+   * tasangoksi; en-Wikipedia "Canterbury Plains" ei sano niin, joten
+   * lehti ei toista väitettä missään.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä. Oppaan jakso 5 nojaa siis en-Wikipedian Christchurch-
+   * artikkelin Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin,
+   * Perthin, Vancouverin ja Adelaiden malli.
+   *
+   * ENNEN JA NYT -PARIA EI LISÄTTY: js/packs/oceania-valokuvat.js:n
+   * christchurch-lohkossa on jo valmis pari (Katedraalitori 1905 ja
+   * sama tori 2023), ja ennenNyt korvaisi etusivun kansikuvat, jotka
+   * on tässä lehdessä valittu juuri siihen paikkaan. Samasta syystä
+   * yhtään valokuvataulun tiedostonimeä (Cathedral Square, 1905.jpg;
+   * Cardboard Cathedral, Christchurch, New Zealand.jpg; Punting on
+   * the Avon. Christchurch NZ (52897685952).jpg; Riverside Market,
+   * Christchurch City, New Zealand.jpg; Christchurch Cathedral
+   * Square.jpg) ei käytetä täällä uudestaan.
+   *
+   * SIVU-ID:T ovat kaikki talon vakioaiheita: `kaupunki`, `historia`
+   * ja `luonto`. Historia-sivun näkyvä nimi on "Maanjäristykset ja
+   * jälleenrakennus", koska AIHE_IKONIT-taulussa ei ole järistys-
+   * ikonia ja `historia` on lähin vakioaihe (kaupunkilehti.md:
+   * teemasivu näyttää kategoriatason nimen).
+   *
+   * KUVAT: 23 kuvaa, kaikki Wikimedia Commonsista. Lisenssi, tekijä
+   * ja Restrictions luettiin rajapinnan extmetadatasta, ja jokainen
+   * valittu kuva KATSOTTIIN SILMIN 900 pikselin esikatseluna. Kaikki
+   * ovat vähintään 1 200 px leveitä, lisenssit ovat PD, CC0, CC BY
+   * tai CC BY-SA, eikä yhdelläkään ole Restrictions-merkintää.
+   *
+   * KUVAHYLKÄYKSET SYINEEN: "Ōnuku Marae 1305.jpg" (Willem van
+   * Valkenburg) — muuten paras Ōnuku-kuva, mutta oikeassa alareunassa
+   * on kuvaan poltettu vesileima "CC-BY Willem van Valkenburg";
+   * "Black Map, Christchurch.jpg" (13 631 px) — hylättiin
+   * repeytyneen ja tahraisen kuntonsa takia toisen, luettavan
+   * Jollie-kopion hyväksi; "Cherry Blossoms Christchurch NZ - Flickr
+   * - Bernard Spragg.jpg" — Harper Avenuen kirsikkakuja on kaunis,
+   * mutta polulla kävelevän ryhmän kasvot voisivat olla luettavissa
+   * täydessä 3 048 pikselin koossa; "Cathedral Square in 2024.jpg" —
+   * harmaa sää, tyhjä kiveys eikä katedraalia näy lainkaan;
+   * "Christchurch City Mall Red Zone Demolition.jpg" — etualan
+   * aitarivin takana on ihmisiä, joista yhden kasvot erottuvat;
+   * "Chch Wikicon 2025 Friday Photowalk PA25.jpg" (New Regent Street
+   * yöllä) — etualan pöydässä istuvan miehen kasvot ovat
+   * luettavissa; "Deloitte Building and River Avon and sculpture
+   * Stay" — Gormleyn veistos näkyy, mutta kuvan hallitsevin elementti
+   * on vuokralaisen logo koko julkisivun levyisenä; "Avon River -
+   * Christchurch, NZ - DSC02337.jpg" — rannalle heitetty
+   * sähköpotkulauta; "Christchurch, city centre, New Zealand
+   * (23).JPG" — pelkkiä kaivinkoneita taivasta vasten, ei kaupunkia;
+   * "Tūranga Christchurch Library.jpg" — sisäänkäynnin edessä seisoo
+   * yksittäinen ihminen liian lähellä kameraa.
+   *
+   * AIHETOISTO ON HARKITTU JA PERUSTELTU, YKSI KOKONAISUUS: Avon-
+   * joki esiintyy neljässä kuvassa. Se on kaupungin selkäranka ja
+   * kulkee jokaisen tässä lehdessä käsitellyn paikan läpi, ja
+   * kuvat ovat neljä eri jokiosuutta neljästä eri syystä —
+   * avauskuvana syksyinen Hagley Park (puisto), nostossa L2
+   * keskustan jälleenrakennettu jokivyöhyke (nimen tarina), nostossa
+   * L4 punaisen vyöhykkeen tyhjä nauha (tuhon jälkeinen puisto) ja
+   * nostossa L1 kasvitieteellinen puutarha joen mutkassa (1863).
+   * Yksikään tiedostonimi ei toistu.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 20.8.2026 LINJAUSTA: selite
+   * kertoo KOHTEESTA eikä kuvaile kuvaa, ja se on YHDEN VIRKKEEN
+   * mittainen. Nosto K1:n kartassa näkyvä arkistonumero B.M. 273
+   * selitetään kuvatekstissä reseptin sallimalla tavalla.
+   * Matkailijalle-etusivukuva on tuore (toukokuu 2025) ja MALTILLINEN
+   * PYSTY (3060x4080, w/h 0,75).
+   */
+  christchurch: [
+    {
+      id: 'kaupunki',
+      nimi: 'Christchurch',
+      johdanto: 'Canterbury-yhdistys piirsi Christchurchin Lontoossa jo '
+        + 'ennen kuin kukaan asui täällä: katedraali keskelle, korkeakoulu '
+        + 'viereen, ruutukaava Canterburyn tasangolle. Isoisän matkan '
+        + 'aikoihin asukkaita oli reilut 14 000.',
+      kansikuvat: [
+        {
+          tiedosto: 'Christchurch viewed from the Port Hills, 2025.jpg',
+          selite: 'Port Hillsin Summit Road on ainoa paikka, josta koko '
+            + 'kaupungin näkee kerralla tasangon päällä.',
+          lahde: 'Christchurch City Council, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: '02-01-2025-Central Christchurch and Tūranga library.jpg',
+          selite: 'Keskustan uusi kortteliluonne syntyi jälleenrakennuksessa, '
+            + 'ja sen tunnetuin talo on kirjasto Tūranga.',
+          lahde: 'ZNDave, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Christchurch Skyline 2015.jpg',
+          selite: 'Christchurchin siluetti oli 2010-luvun puolivälissä '
+            + 'enemmän nostureita kuin taloja.',
+          lahde: 'Francis Vallance (Heritage Warrior), Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kolmesta eri suunnasta —
+       * puistosta joen tasalta, ilmasta idästä aamuhämärässä ja
+       * keskustan jokivarresta syksyllä. Yksikään ei ole minkään noston
+       * aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Autumn Hagley Park. (50652045977).jpg',
+          selite: 'Hagley Park on 164,6 hehtaarin kokoinen ja kaupungin '
+            + 'suurin yhtenäinen viheralue.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Aerial of Christchurch, New Zealand.jpg',
+          selite: 'Eteläiset Alpit sulkevat horisontin Christchurchin '
+            + 'takana koko lännen laajuudelta.',
+          lahde: 'jnimmo, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Avon River with Christchurch Convention Centre Precinct, Christchurch, New Zealand.jpg',
+          selite: 'Christchurchin kongressikortteli on Avon-joen varrella '
+            + 'keskustassa.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki joka piirrettiin ennen kuin se oli olemassa',
+          tiedosto: 'Black Map Christchurch 1850.jpg',
+          teksti: 'Canterbury-yhdistys perustettiin Lontoossa 27. maaliskuuta '
+            + '1848. Sen jäseninä oli parlamentaarikkoja, aatelisia ja '
+            + 'anglikaanikirkon johtajia, ja moottoreina Edward Gibbon '
+            + 'Wakefield ja John Robert Godley. Tarkoitus oli pystyttää '
+            + 'Uuteen-Seelantiin kokonainen siirtokunta kerralla: maakunnan '
+            + 'nimeksi Canterbury, pääkaupungin nimeksi Christchurch. '
+            + 'Charlotte Jane ja Randolph laskivat ankkurin Lyttelton '
+            + 'Harbouriin 16. joulukuuta 1850, Sir George Seymour seuraavana '
+            + 'päivänä ja Cressy 27. joulukuuta — noin 750 siirtolaista. '
+            + 'Kuninkaallinen patenttikirje teki Christchurchistä kaupungin '
+            + '31. heinäkuuta 1856, maan ensimmäisen.',
+          selite: 'Edward Jollien maaliskuussa 1850 mittaama Plot of '
+            + 'Christchurch on kaupungin alkuperäinen ruutukaava, ja sen '
+            + 'kulman merkintä B.M. 273 on arkiston oma numero Black Map '
+            + '-kokoelmassa.',
+          lahde: 'Edward Jollie, Wikimedia Commons (PD)',
+          wiki: 'Canterbury Association',
+        },
+        {
+          otsikko: 'Kolme kansaa ennen ensimmäistä laivaa',
+          tiedosto: 'Tāngatahara statue at Wairewa Marae.jpg',
+          teksti: 'Nykyisen Christchurchin seutu oli 1200-luvun puolivälistä '
+            + 'waitahan maata; he asuttivat suoseutua ja sen soiden '
+            + 'tilkkutäkkiä. Kāti māmoe valtasi alueen 1500-luvulla, ja kāi '
+            + 'tahu sulautti heidät sata vuotta myöhemmin itseensä. Ōtautahi '
+            + 'oli kausiasuttu paikka, ja seudun suuri kauppakeskus oli '
+            + 'Kaiapoi Pā pohjoisempana. Nimi Ōtautahi tarkoittaa Tautahin '
+            + 'paikkaa ja viittaa täsmälleen yhteen kohtaan Avon-joen '
+            + 'varrella keskustassa; koko kaupungin māorinkieliseksi nimeksi '
+            + 'se otettiin vasta 1930-luvulla.',
+          selite: 'Wairewan marae Banks Peninsulalla on yksi kāi tahun '
+            + 'yhdeksästä Canterburyn rūnangasta, ja sen pihalla seisoo '
+            + 'vuonna 1900 paljastettu muistopatsas päällikkö '
+            + 'Tāngataharalle.',
+          lahde: 'Herewhy, Wikimedia Commons (CC0)',
+          wiki: 'Christchurch',
+        },
+        {
+          otsikko: 'Cyclopolis, kaupunki joka polki',
+          tiedosto: 'Christchurch estuary on the Rapanui Shag Rock cycleway.jpg',
+          teksti: 'Tasainen maasto teki Christchurchistä pyöräilykaupungin '
+            + 'heti alusta, ja 1900-luvun taitteessa sillä oli lempinimi '
+            + 'Cyclopolis. Mark Twain kuvasi kaupunkia vuonna 1895 paikaksi, '
+            + 'jossa puolet väestä ajaa polkupyörällä ja toinen puoli on '
+            + 'kiireisenä väistelemässä heitä. Perintö palasi maanjäristysten '
+            + 'jälkeen: Major Cycle Route -ohjelma tähtää sataan kilometriin '
+            + 'uusia pyöräteitä, pyörämatkat kasvoivat 30 prosenttia vuosina '
+            + '2016–2023, ja laskentapisteet havaitsivat kahdentoista '
+            + 'kuukauden aikana yli 3,6 miljoonaa pyöräilijää.',
+          selite: 'Rapanui–Shag Rock -pyöräreitti seuraa Christchurchin '
+            + 'suiston rantaa Redcliffsin kohdalla.',
+          lahde: 'TinaVerschoor, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Christchurch',
+        },
+        {
+          otsikko: 'Anteeksipyyntö joka luettiin Akaroan lähellä',
+          tiedosto: 'Onuku - Noho Marae (1).jpg',
+          teksti: 'Vuosina 1844–1864 kāi tahu luovutti Kruunulle yli 34,5 '
+            + 'miljoonaa eekkeriä maata 14 750 punnalla — kuusi sadasosaa '
+            + 'penniä eekkeriltä. Suurin yksittäinen kauppa oli Kempin '
+            + 'sopimus 1848. Uuden-Seelannin parlamentti sääti Ngāi Tahu '
+            + 'Claims Settlement Act -lain 1998; se kirjasi Kruunun '
+            + 'anteeksipyynnön ja 170 miljoonan dollarin taloudellisen '
+            + 'hyvityksen, ja se palautti kymmenille paikoille kaksikieliset '
+            + 'nimet. Kuninkaallinen hyväksyntä tuli 1. lokakuuta 1998, ja '
+            + 'pääministeri Jenny Shipley luki anteeksipyynnön itse '
+            + 'marraskuussa Ōnukun maraella Akaroan lähellä.',
+          selite: 'Ōnukun marae Akaroan lähellä on Te Rūnanga o Ōnukun '
+            + 'kokoontumispaikka, ja sen kokoustalon nimi on Karaweko.',
+          lahde: 'Remi Jouan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ngāi Tahu Claims Settlement Act 1998',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Christchurch Arts Centre tower May 2025.jpg',
+          selite: 'Arts Centren uusgoottilainen kellotorni kuuluu Canterbury '
+            + 'Collegen vanhoihin rakennuksiin, ja korkeakoulusta kasvoi '
+            + 'myöhemmin Canterburyn yliopisto.',
+          lahde: 'Heidi Meudt, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Christchurch on Eteläsaaren suurin kaupunki, ja vuoden '
+          + '2023 väestönlaskennassa siellä asui 391 383 ihmistä. '
+          + 'Matkailijalle kaupunki on helppo: ruutukaava on tasainen, '
+          + 'keskusta kävelymatkan mittainen ja Hagley Park sen länsilaidalla '
+          + 'niin suuri, ettei siltä eksy. Katedraalitori on yhä kaupungin '
+          + 'keskipiste, mutta itse katedraali on ollut aidattuna työmaana '
+          + 'vuoden 2011 järistyksestä lähtien — ensimmäisen vaiheen on '
+          + 'määrä valmistua vuoteen 2030 mennessä, joten sisään ei pääse. '
+          + 'Pahvikatedraali Latimer Squaren vieressä on avoinna ja toimii '
+          + 'sekä kirkkona että konserttitilana. Arts Centre, Canterbury '
+          + 'Museum ja kasvitieteellinen puutarha ovat kaikki samalla '
+          + 'kulttuurikaistaleella keskustan länsipäässä, ja niiden ohi '
+          + 'kulkee vanha raitiovaunu.',
+        artikkeli: {
+          nimi: 'Matkailijan Christchurch',
+          taitto: 'opas',
+          teksti: 'Englantilaiseksi suunniteltu kaupunki tasangolla, jonka '
+            + 'takana kohoavat lumihuippuiset vuoret — ja jonka keskusta on '
+            + 'rakennettu kahdesti.',
+          nosto: 'Christchurch on ollut Etelämantereen porttikaupunki '
+            + 'vuodesta 1901, jolloin Discovery lähti Lyttelton Harbourista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Christchurch Airport on Harewoodissa kahdentoista '
+                + 'kilometrin päässä keskustasta luoteeseen. Se on maan '
+                + 'toiseksi vilkkain lentokenttä, ja sieltä on säännöllisiä '
+                + 'reittejä kuuteentoista kotimaan ja seitsemään ulkomaan '
+                + 'kohteeseen. Kaupunki on ollut Etelämantereen porttina '
+                + 'vuodesta 1901 ja on nykyään yksi viidestä maailman '
+                + 'antarktisesta porttikaupungista, joissa on useiden maiden '
+                + 'tukikohtia. Rautateitse tärkein matka on TranzAlpine: se '
+                + 'kulkee Main South Linea Rollestoniin, kääntyy Midland '
+                + 'Linelle, läpäisee Eteläiset Alpit Otiran tunnelissa ja '
+                + 'päättyy Greymouthiin länsirannikolle.',
+              kuva: {
+                tiedosto: 'KiwiRail DXC 5039 with TranzAlpine Cass - Cora Lynn.jpg',
+                selite: 'TranzAlpine ylittää Waimakaririn sivujoen Cassin ja '
+                  + 'Cora Lynnin välillä Arthurin solan tuntumassa.',
+                lahde: 'Kabelleger, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki lepää lähes tasaisena Canterburyn tasangolla, '
+                + 'jonka kāi tahun nimi on Kā Pākihi-whakatekateka-a-Waitaha. '
+                + 'Tasanko syntyi Eteläisten Alppien jäätiköiden kuljettamasta '
+                + 'sorasta jääkausien aikana, ja sen joet — Waimakariri, '
+                + 'Rakaia, Selwyn ja Rangitata — juoksevat leveissä '
+                + 'punoksissa. Viljely on aina ollut Canterburyn ydin: vehnä, '
+                + 'ohra sekä apila ja siemenheinät vientiin. Lännessä '
+                + 'kohoavat Eteläiset Alpit eli Kā Tiritiri o te Moana, noin '
+                + '500 kilometriä pitkänä; korkein huippu Aoraki / Mount Cook '
+                + 'on 3 724 metriä, ja 1970-luvun inventaarissa laskettiin yli '
+                + '3 000 hehtaaria suurempaa jäätikköä.',
+              kuva: {
+                tiedosto: 'Canterbury Plains from Mt Hutt.JPG',
+                selite: 'Canterburyn tasanko leviää Mount Huttin rinteiltä '
+                  + 'katsottuna peltoruutuina merelle asti.',
+                lahde: 'Mw12310 (talk), Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: vanha vaunu tyhjien tonttien lomassa',
+              teksti: 'Christchurchin raitiotiet sähköistettiin 1905 ja '
+                + 'lakkautettiin 1954. Vuonna 1995 osa verkosta herätettiin '
+                + 'henkiin matkailunähtävyytenä, ja vaunu kiertää nyt lyhyttä '
+                + 'silmukkaa keskustan katuja pysähtyen muun muassa '
+                + 'Katedraalitorilla, Arts Centrellä, Canterbury Museumilla ja '
+                + 'Victoria Squarella. Radan jatke High Streetille rakennettiin '
+                + '2022, mutta se jouduttiin laskemaan uudelleen, koska vaunu '
+                + 'suistui kiskoilta. Tyhjiksi jääneet tontit taas synnyttivät '
+                + 'oman kulttuurinsa: Festival of Transitional Architecture '
+                + 'järjestettiin 2012–2018, ja vuodesta 2019 sen perillinen on '
+                + 'Open Christchurch.',
+              kuva: {
+                tiedosto: 'Christchurch Tram 01.jpg',
+                selite: 'Christchurchin museoraitiovaunu ajaa keskustan '
+                  + 'silmukkaa, jonka pysäkit ovat kaupungin kulttuurikohteilla.',
+                lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: pelloista tehtaisiin',
+              teksti: '1900-luvun alussa maatalouskaupunki muuttui '
+                + 'teollisuuskaupungiksi. Asukasluku ylitti 100 000 '
+                + 'ensimmäisen kerran vuonna 1919, ja tehtaat vetivät '
+                + 'työläisperheitä lähiöihin. Christchurch rakensi myös maan '
+                + 'varhaisimpia valtion vuokra-asuntoja: Sydenhamiin nousi '
+                + 'taloja 1900-luvun ensimmäisellä vuosikymmenellä lähitehtaiden '
+                + 'väelle, ja 1909 lisää Addingtonin rautatiepajojen '
+                + 'kupeeseen. Pajat olivat oma maailmansa — niissä rakennettiin '
+                + 'vetureita, ei vain korjattu niitä.',
+              kuva: {
+                tiedosto: 'Steam locomotive W192 by the New Zealand Government Railways; October 2010.jpg',
+                selite: 'Höyryveturi W192 rakennettiin 1889 Addingtonin '
+                  + 'rautatiepajoissa, ja se on nykyään Ferrymead Heritage '
+                  + 'Parkin liikennekalustoa.',
+                lahde: 'Bernard Spragg. NZ, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Christchurchistä puuttuu, joten nämä '
+                + 'luvut ovat en-Wikipedian Christchurch-artikkelin '
+                + 'ilmasto-osiosta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Ilmasto on lauhkeaa merellistä (Köppenin '
+                + 'Cfb): kesät ovat leutoja, talvet viileitä ja sademäärä '
+                + 'kohtalainen. Keskimääräinen ylin päivälämpötila on '
+                + 'tammikuussa 22,6 astetta ja heinäkuussa 10,9 astetta. '
+                + 'Maanpinnan pakkasta on keskimäärin 80 päivänä vuodessa ja '
+                + 'lunta sataa noin kolmesti. Luoteinen nor’wester on '
+                + 'föhn-tuuli, joka yltää ajoittain myrskyyn. Tyyninä '
+                + 'talviöinä kukkuloiden pitämä inversio kerää savusumua, ja '
+                + 'siksi avotulet kiellettiin kaupungissa 2006.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Maanjäristykset ja jälleenrakennus',
+      johdanto: 'Christchurch rakennettiin kirkon unelmaksi englantilaisesta '
+        + 'kaupungista eteläisellä pallonpuoliskolla. Vuosina 2010 ja 2011 '
+        + 'kaupunki koki jotain, mihin perustajat eivät olleet varautuneet.',
+      tehtava: {
+        kysymys: 'Kuinka kauan katedraalin rakennustyö seisoi rahapulan takia ennen kuin Benjamin Mountfort otti sen johtoonsa?',
+        vaihtoehdot: [
+          'Kahdeksan vuotta',
+          'Kaksi vuotta',
+          'Kaksikymmentä vuotta',
+          'Neljäkymmentä vuotta',
+        ],
+        oikea: 0,
+        fakta: 'Anthony Trollope näki aukion vuonna 1872 ja kutsui tyhjiä '
+          + 'perustuksia valtavaksi epäonnistumisen muistomerkiksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Järistys jonka kellonaika pehmensi',
+          tiedosto: 'Lateral.spread.christchurch.JPG',
+          teksti: 'Lauantaina 4. syyskuuta 2010 kello 4.35 aamuyöllä '
+            + 'Canterburya ravisteli magnitudin 7,1 järistys. Episentrumi oli '
+            + 'neljänkymmenen kilometrin päässä Christchurchistä länteen '
+            + 'Darfieldin kylän lähellä, kymmenen kilometrin syvyydessä, ja '
+            + 'se paljasti tasangon alta siirroksen, jota kukaan ei tiennyt '
+            + 'olevan olemassa: maanpinta siirtyi paikoin neljä metriä. Kaksi '
+            + 'ihmistä kuoli ja yli 1 700 loukkaantui. Vakuutusvaateita '
+            + 'kertyi 2,75–3,5 miljardia dollaria. Tapaninpäivänä 2010 '
+            + 'jälkijäristysten parvi osui suoraan keskustan alle.',
+          selite: 'Nesteytynyt maaperä levisi syyskuussa 2010 sivusuunnassa '
+            + 'ja rikkoi jalkakäytäviä ja ajoratoja Christchurchin '
+            + 'esikaupungeissa.',
+          lahde: 'Cataclasite, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: '2010 Canterbury earthquake',
+        },
+        {
+          otsikko: 'Kymmenen sekuntia joka muutti kaiken',
+          tiedosto: 'View from Oxford Terrace towards the city center, Christchurch, New Zealand 02.jpg',
+          teksti: 'Tiistaina 22. helmikuuta 2011 kello 12.51 keskustasta 6,7 '
+            + 'kilometriä kaakkoon osunut järistys kesti lähteen mukaan vain '
+            + 'noin kymmenen sekuntia. Momenttimagnitudi oli 6,2 ja '
+            + 'paikallismagnitudi 6,3, mutta pesäkkeen mataluus ja läheisyys '
+            + 'tekivät vahingosta valtavan: 185 ihmistä kuoli. Nesteytynyt '
+            + 'maaperä työnsi itäisiin lähiöihin noin 400 000 tonnia silttiä, '
+            + 'ja Kruunu ja vakuutusyhtiöt purkivat tai siirsivät yli 8 000 '
+            + 'kotia punaiselta vyöhykkeeltä. Helmikuuhun 2015 mennessä '
+            + 'Neljän Avenuen sisällä oli tehty 1 240 purkua — lähde laskee '
+            + 'niihin kaikki talot eikä erittele suojeltujen osuutta.',
+          selite: 'Keskustan ruutukaavaan jäi purkujen jälkeen tyhjiä '
+            + 'tontteja, joita täytetään yhä uudisrakennuksilla.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: '2011 Christchurch earthquake',
+        },
+        {
+          otsikko: 'Katedraali joka odotti isoisää — ja odottaa yhä',
+          tiedosto: 'Christ Church Cathedral in October 2021.jpg',
+          teksti: 'Peruskivi laskettiin 16. joulukuuta 1864, ja perustukset '
+            + 'olivat valmiit huhtikuuhun 1865 mennessä, mutta rahat '
+            + 'loppuivat ja aukio kasvoi ruohoa kahdeksan vuotta. Anthony '
+            + 'Trollope kävi 1872 ja kirjoitti, ettei aukiolla ollut yhtään '
+            + 'tiiltä eikä kiveä maanpinnan yläpuolella. Vuonna 1873 — '
+            + 'isoisän matkan vuonna — työ käynnistyi uudelleen, kun '
+            + 'uusiseelantilainen Benjamin Mountfort otti hankkeen '
+            + 'johtoonsa. Hän muokkasi George Gilbert Scottin piirustuksia '
+            + 'parvekkein, huippukoristein ja pidemmin pilaririvein. Pääsali '
+            + 'ja torni vihittiin 1. marraskuuta 1881.',
+          selite: 'ChristChurch-katedraalin torni menetti huippunsa helmikuun '
+            + '2011 järistyksessä, ja rakennus on ollut siitä lähtien '
+            + 'aidattuna työmaana.',
+          lahde: 'Wiremu Stadtwald Demchick, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Christ Church Cathedral, Christchurch',
+        },
+        {
+          otsikko: 'Pahvista, ja pysyvämpää kuin luultiin',
+          tiedosto: 'Cardboard Cathedral and Te Kaha May 2025 02.jpg',
+          teksti: 'Katedraalin kohtalon jäätyä auki seurakunta tarvitsi '
+            + 'väliaikaisen kirkon. Japanilainen Shigeru Ban suunnitteli sen '
+            + 'ilmaiseksi yhdessä christchurchiläisen Warren and Mahoneyn '
+            + 'kanssa. Pahvikatedraali nousi Latimer Squaren viereen '
+            + 'tontille, joka oli varattu anglikaaniselle kirkolle jo vuoden '
+            + '1850 alkuperäisessä mittauksessa. Rakennuksessa on yli '
+            + 'yhdeksänkymmentä halkaisijaltaan 60-senttistä pahviputkea, '
+            + 'puuta ja terästä, katto on polykarbonaattia ja seinustoina on '
+            + 'kahdeksan merikonttia; sisätila kohoaa 21 metriin alttarin '
+            + 'yläpuolelle. Ovet avautuivat yleisölle 6. elokuuta 2013.',
+          selite: 'Pahvikatedraalin takana kohoaa Te Kaha; 30 000 katsojan '
+            + 'katettu stadion avattiin huhtikuussa 2026.',
+          lahde: 'Tom Ackroyd, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Cardboard Cathedral',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Puutarhakaupungin nimi ei ole markkinointia: Hagley Park ja '
+        + 'kasvitieteellinen puutarha syntyivät 1850–60-luvuilla. Avon-joki '
+        + 'kantaa kahta nimeä ja kahta historiaa.',
+      tehtava: {
+        kysymys: 'Mitä kāi tahun nimi Ōtākaro tarkoittaa?',
+        vaihtoehdot: [
+          'Leikkipaikkaa',
+          'Suurta jokea',
+          'Valkoista kiveä',
+          'Ankeriaiden vettä',
+        ],
+        oikea: 0,
+        fakta: 'Varhaiset eurooppalaislähteet antavat joelle myös toisen '
+          + 'māorinkielisen nimen, Putare Kamutu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puutarhakaupunki joka ansaitsi nimensä',
+          tiedosto: 'Christchurch Botanic Gardens 13.jpg',
+          teksti: 'Lempinimi puutarhakaupunki ei ole matkailumainos vaan '
+            + '1800-luvun vierailijan huomio: brittiläinen lakimies John '
+            + 'Eldon Gorst sanoi Christchurchin muistuttaneen häntä Englannin '
+            + 'puutarhakaupungeista. Maakunnan hallitus varasi Hagley Parkin '
+            + '1855 määräyksellä, jonka mukaan puisto on ikuisiksi ajoiksi '
+            + 'varattu yleiseksi puistoksi ja avoin kaikkien virkistykseksi. '
+            + 'Nimi tulee Canterbury-yhdistyksen puheenjohtajan lordi '
+            + 'Lyttletonin kotitilalta Worcestershirestä. Kasvitieteellinen '
+            + 'puutarha perustettiin puiston sisään 1863, kun sinne '
+            + 'istutettiin englantilainen tammi.',
+          selite: 'Kasvitieteellinen puutarha on 21 hehtaarin alue Hagley '
+            + 'Parkin sisällä Avon-joen mutkan kupeessa.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Christchurch Botanic Gardens',
+        },
+        {
+          otsikko: 'Joki jolla oli melkein Shakespearen nimi',
+          tiedosto: 'Avon River, Christchurch, New Zealand 01.jpg',
+          teksti: 'Joen ensimmäinen nimi on kāi tahun Ōtākaro, leikkipaikka: '
+            + 'lapset leikkivät rannalla aikuisten kerätessä ruokaa. '
+            + 'Canterbury-yhdistys aikoi nimetä joen Shakespereksi, mutta '
+            + 'skotlantilainen uudisasukas John Deans ehti ensin ja antoi '
+            + 'sille 1848 nimen Avon isoisiensä tilan lähellä virranneen '
+            + 'Ayrshiren Avonin mukaan. Yhtäläisyys Stratford-upon-Avoniin on '
+            + 'siis sattumaa, vaikka paikallinen perimätieto uskoo toisin. '
+            + 'Vuoden 1998 sopimuslaki teki nimestä virallisesti '
+            + 'kaksikielisen: Avon River / Ōtākaro.',
+          selite: 'Avon River / Ōtākaro kiertää keskustan halki loivana '
+            + 'mutkana, ja sen rannoilta nousee jälleenrakennetun kaupungin '
+            + 'uusi siluetti.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Avon River / Ōtākaro',
+        },
+        {
+          otsikko: 'Metsä jonka nimi tarkoittaa katkaistua korvaa',
+          tiedosto: 'Riccarton Bush 353.jpg',
+          teksti: 'Riccartonin esikaupungissa kasvaa 6,4 hehtaaria '
+            + 'alkuperäistä kahikatea-metsää. Kāi tahu kutsui paikkaa '
+            + 'nimellä Pūtaringamotu, joka tarkoittaa joko kaiun paikkaa tai '
+            + 'katkaistua korvaa — jälkimmäinen on kuvaannollinen ilmaus '
+            + 'muusta metsästä eristetylle saarekkeelle. Se on yksi vain '
+            + 'neljästä Canterburyn tasangon alkuperäisen metsän jäänteestä, '
+            + 'jotka säästyivät moanmetsästyskauden paloilta. John ja William '
+            + 'Deans sopivat 1848 New Zealand Companyn kanssa noin 22 '
+            + 'hehtaarin suojelusta, ja Riccarton Bush Act 1914 teki '
+            + 'suojelusta pysyvän.',
+          selite: 'Riccarton Bushin kahikateat kohoavat suorina runkoina, ja '
+            + 'metsikköä kiertää petoaita, jonka turvin kiivi on tarkoitus '
+            + 'palauttaa alueelle.',
+          lahde: 'Schwede66, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Riccarton, New Zealand',
+        },
+        {
+          otsikko: 'Punainen vyöhyke joka muuttuu puistoksi',
+          tiedosto: 'Avon River at the Red Zone, Christchurch, New Zealand.jpg',
+          teksti: 'Keskustan alapuolella Avonin varren maa vaurioitui vuosien '
+            + '2010 ja 2011 järistyksissä niin pahoin, että Canterbury '
+            + 'Earthquake Recovery Authority merkitsi sen punaiseksi '
+            + 'vyöhykkeeksi. Yli 8 000 kotia purettiin tai siirrettiin, ja '
+            + 'viimeinen purku valmistui lokakuussa 2021. Tyhjentyneelle '
+            + 'nauhalle on ajettu ajatusta yhtenäisestä puistosta, joka '
+            + 'yhdistäisi keskustan suistoon asti. Syyskuussa 2015 kaupunki '
+            + 'ja Recovery Authority ostivat englantilaiselta kuvanveistäjä '
+            + 'Antony Gormleylta kaksi Stay-veistosta; toinen seisoo '
+            + 'jokivedessä, toinen Arts Centrellä.',
+          selite: 'Punaisella vyöhykkeellä Avonin ranta on nyt avointa '
+            + 'nurmea siellä, missä ennen järistyksiä oli asuinkortteleita.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Avon River / Ōtākaro',
+        },
+      ],
+    },
+  ],
+  /*
+   * MANAUS (24.8.2026). Lauta southamerica, kaupunki-id `manaus`,
+   * en-Wikipedian pääartikkeli "Manaus" (pelin wiki-nimi on
+   * fi-Wikipedian "Manaus (kaupunki)", js/packs/southamerica.js rivi 116).
+   *
+   * MISTÄ TIEDOT. Lähdeaineistona docs/mantereet-tyoaineisto/
+   * faktapohja-manaus.md ja sen riippumaton tarkistus tarkistus-manaus.md,
+   * joka VOITTAA faktapohjan ristiriidassa. Jokainen tekstiin mennyt
+   * väite on luettu uudelleen en-Wikipedian raakatekstistä 24.8.2026
+   * (artikkelit "Manaus", "History of Manaus", "Amazonas (Brazilian
+   * state)", "Grande Seca", "Customs House, Manaus", "Amazon Theatre",
+   * "Amazon rubber cycle", "Baré people", "Ajuricaba (chief)",
+   * "Palácio Rio Negro, Manaus", "Metropolitan Cathedral of Our Lady of
+   * the Conception, Manaus", "Meeting of Waters").
+   *
+   * TARKISTUKSEN VIISI PAKOLLISTA KORJAUSTA on tehty näin:
+   *  1. GRANDE SECA EI OLE 1873-ANKKURI. Faktapohja väitti kuivuuden
+   *     osuneen "samaan aikaan" vuoden 1872 väestönlaskennan kanssa.
+   *     Kuivuuden oma artikkeli ajoittaa sen vuosiin 1877–1878, eli
+   *     4–5 vuotta isoisän matkan JÄLKEEN. Nosto K3 sanoo ajoituksen
+   *     nyt ääneen ("tuli vasta 1877–1878") eikä sido sitä 1872/1873:een.
+   *     Kumivuodet 1879–1912 ja kulta-aika 1890–1910 ovat sen sijaan
+   *     lähteessä suoraan ja säilyvät.
+   *  2. ETÄISYYS MERESTÄ ON 1 500 KM, ei 1 000. "Amazonas (Brazilian
+   *     state)" sanoo suoraan "1,500 km upstream from the Atlantic
+   *     Ocean". Luku on oppaan jaksossa "Perille ja liikkeelle" ja
+   *     ARTIKKELIT-introssa; pelin oma paikkatietoteksti käytti jo
+   *     oikeaa lukua, visan Q4-fakta väärää.
+   *  3. VISASÄÄNTÖ KOSKEE MYÖS JOHDANTOJA. Faktapohjan ehdottamat
+   *     johdannot mukailivat visan Q1-, Q3- ja Q4-faktojen rakennetta
+   *     (js/packs/southamerica-questions.js, kohta `manaus`). Kaikki
+   *     kolme johdantoa on kirjoitettu tässä uudelleen niin, ettei
+   *     yksikään toista visan sanamuotoa. Vastaukset LÖYTYVÄT silti:
+   *     kumi K3:sta ja koko Kumibuumi-sivulta, Encontro das Águas ja
+   *     sekoittumattomuuden syy K2:sta, oopperatalo R1:stä, kaupunkiin
+   *     pääsy oppaan jaksosta 1.
+   *  4. TULLITALON TIILILLE EI KEKSITÄ SYYTÄ. Faktapohja väitti, ettei
+   *     Amazonasista löytynyt sopivaa rakennusmateriaalia. Lähde ei
+   *     sano tästä mitään: se sanoo esivalmistettujen tiilien
+   *     jäljitelleen Lontoon rakennuksia. Nosto R3 kertoo vain sen.
+   *  5. MINDÚ, EI "MINDÚN". Puiston nimi on Parque do Mindú / Mindu
+   *     Park; oppaan jakso 2 käyttää muotoa Mindú.
+   *
+   * HUOMIOT, JOTKA TARKISTUS NOSTI ESIIN:
+   *  - Cabanagem-nosto A4 nimeää kapinallisiksi mustat, alkuperäiskansat
+   *     JA mestitsit, kuten lähde ("blacks, Native Americans, and
+   *     mestizos") — faktapohjan nostolainaus pudotti mustat pois.
+   *  - "a member of the local House of Representatives" on käännetty
+   *     "provinssin edustajakokouksen jäsen", ei kaupunginvaltuutetuksi.
+   *  - Ponta Negran etäisyydestä keskustaan "Manaus" antaa kaksi lukua,
+   *     18 km ja 13 km. Kumpaakaan ei ole valittu: oppaan jakso 5
+   *     sanoo epävarmuuden ääneen.
+   *  - Amazon-teatterin heinäkuun 2026 Unesco-merkintä (osana kohdetta
+   *     "Amazonia Theaters" yhdessä Teatro da Pazin kanssa) on otettu
+   *     mukaan yhtenä virkkeenä nostossa R1; se on infoboxissa ja
+   *     leipätekstissä eikä ole nykypolitiikkaa.
+   *
+   * MUUT WIKIPEDIAN SISÄISET RISTIRIIDAT KIRJOITETTU AUKI LUKIJALLE:
+   * vuoden 1832 nimi (K1), Encontro das Águasin 6 km vs. 9 km ja
+   * lämpötilan merkitys (K2), Mindú-puiston perustamisvuosi 1989 vs.
+   * 1992 (oppaan jakso 2), Ponta Negran etäisyys (jakso 5).
+   *
+   * KUMIBUUMIN VARJOPUOLI on omana kappaleenaan nostossa R4 ja
+   * teemasivun johdannossa. Manausiin sidottuja lukuja lähteessä ei
+   * ole (tarkistuksen osio 7), joten se kerrotaan sillä tarkkuudella
+   * kuin lähteet antavat: kumialueiden pakkotyö ja velkaorjuus
+   * yleisesti ("Amazon rubber cycle") ja baré-kansan kohdalla suoraan
+   * ("Baré people": "forced to work as debt slaves"). Ei kärsimyksen
+   * kuvailua, ei kaunistelua.
+   *
+   * KUVAT (23 kpl, jokainen haettu ja KATSOTTU 24.8.2026, lisenssi
+   * Commonsin extmetadatasta, leveys >= 1200 px):
+   *  - Hylätyt ja syyt: "Mapa de Manaus (1852).jpg" ja "Cidade e
+   *    arrabaldes de Manaus Ribas 1892" (arkistoleimat ja Arquivo
+   *    Nacional -palkki kuvan päällä); "Catedral Metropolitana de
+   *    Manaus - 1890.jpg" (IMS-vesileima); "CATEDRAL DA MATRIZ 02.jpg"
+   *    (©periclesdias-vesileima); "Construção das canoas ao modo dos
+   *    índios" (Biblioteca Nacional -leima); "Construction of canoes in
+   *    the Indian way.jpg" (1138 px); "Forte de São José da Barra do
+   *    Rio Negro.jpg" (1197 px); "Praça de São Sebastião ... Am42537"
+   *    (postikorttiin painettua tekstiä, heikko laatu); "Inner-city
+   *    architecture, Manaus, Brazil 01.jpg" (liikkeen mainoskyltit
+   *    hallitsevat); "Manaus commercial port, Brazil 02.jpg"
+   *    (roskaantunut ranta, köyhyysestetiikkaa); "Rubber tapping
+   *    pots.jpg" (kaksi ämpäriä nurmikolla, ei kerro kumin keruusta);
+   *    "Porto flutuante com barcos ... panoramio.jpg" (ihmisiä
+   *    ponttonilla lähietäisyydellä); Zoológico do CIGS -kategorian
+   *    kaikki 105 kuvaa (varapresidentin vierailusarja ja
+   *    toimittajaryhmä — tunnistettavia kasvoja), minkä vuoksi oppaan
+   *    jakso 3 jää kuvattomaksi (Tukholma-ennakkotapaus).
+   *  - Kaksi selitettyä poikkeusta: K3:n kuva on taikalyhtylasi, jonka
+   *    oma musta maski kehystää kuvan — se on esineen oma muoto, ei
+   *    päälle lisätty kehys, ja kuvateksti sanoo sen ääneen. Saman
+   *    kuvan tekijäkenttä on Commonsissa pitkä roolikuvaus
+   *    ("Coudreau, Henri (1859-1899). Auteur de la conférence. Chef de
+   *    la mission Molteni. Photographe"); lähderiviin on otettu nimi
+   *    ja elinvuodet.
+   *  - Aihetoisto: oopperatalo on kannessa ulkoa (aukio ympärillään)
+   *    ja nostossa R1 sisältä — eri tiedosto, eri näkökulma, tietoinen
+   *    valinta. Satama esiintyy kannessa yleiskuvana ja R2:ssa
+   *    kelluvana laiturina, joka on nimenomaan noston aihe.
+   *
+   * SÄÄRIVI: tämä lohko ei koske js/packs/saatiedot.js:ää. Oppaan
+   * sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen ääneen.
+   */
+  manaus: [
+    {
+      id: 'kaupunki',
+      nimi: 'Manaus',
+      johdanto: 'Amazonasin pääkaupunki kasvoi 1600-luvun linnoituksesta '
+        + 'kahden miljoonan asukkaan teollisuuskaupungiksi keskelle '
+        + 'sademetsää. Sen historiassa on yksi lyhyt jakso, jolloin '
+        + 'täällä liikkui enemmän rahaa kuin missään muualla Brasiliassa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Largo de São Sebastião, Manaus, Brazil 01.jpg',
+          selite: 'Largo de São Sebastiãon aaltokuvioidun kiveyksen takana '
+            + 'kohoavat oopperatalon kupoli ja satamien avaamista '
+            + 'juhlistava muistomerkki.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Ponte Rio Negro, Estado do Amazonas.jpg',
+          selite: 'Rio Negron ylittävä vinoköysisilta jatkuu pilarien '
+            + 'varassa vastarannalle asti, ja sen alla kulkee tummaa '
+            + 'jokivettä.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Manaus harbor.jpg',
+          selite: 'Iltavalossa sataman poukamaan on ahtautunut kymmeniä '
+            + 'monikerroksisia jokilaivoja, ja niiden takana nousee '
+            + 'keskustan kortteleita.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Manaus aerial view.jpg',
+          selite: 'Korkealta katsottuna tornirivistön takana kimaltaa joki '
+            + 'ja etualalla kaupunkia rajaa leveä metsäkaistale.',
+          lahde: 'CIAT, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Vista do Centro de Manaus.jpg',
+          selite: 'Satamasta katsottuna katedraalin kaksi tornia jäävät '
+            + 'toimistotornien ja markkinahallin peltikaton väliin.',
+          lahde: 'Christian Almeida Campos, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Entre nuvem e floresta.jpg',
+          selite: 'Lentokoneesta kuvattuna pilvenhattarat lipuvat '
+            + 'sademetsän ja mutkittelevan joen yllä Manausin lähellä.',
+          lahde: 'Sharlene Melanie, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Nimi joka vaihtui kolmesti',
+          tiedosto: 'Catedral Metropolitana de Manaus (Igreja Matriz).jpg',
+          teksti: 'Portugalilaiset rakensivat Rio Negron rannalle '
+            + 'linnoituksen 1669, ja paikalla asuneet manaó-, baré-, '
+            + 'baniwa- ja passé-kansat auttoivat työssä. Vuonna 1695 '
+            + 'lähetyssaarnaajat pystyttivät viereen kappelin Nossa '
+            + 'Senhora da Conceiçãolle, josta tuli kaupungin '
+            + 'suojeluspyhimys. Asutus korotettiin kyläksi 1832 ja '
+            + 'kaupungiksi 24. lokakuuta 1848 nimellä Cidade da Barra do '
+            + 'Rio Negro. Vasta 4. syyskuuta 1856 kuvernööri '
+            + 'Herculano Ferreira Pena antoi sille lailla 68 nykyisen '
+            + 'nimen manaó-kansan kunniaksi. Vuoden 1832 nimestä '
+            + 'Wikipedian artikkelit ovat eri mieltä: toisen mukaan se oli '
+            + 'jo Manaus, toisen mukaan Nossa Senhora da Conceição da '
+            + 'Barra do Rio Negro.',
+          selite: 'Katedraalin valkokeltainen julkisivu ja kaksi '
+            + 'kellotornia nousevat leveiden portaiden päästä keskustan '
+            + 'laidalla.',
+          lahde: 'Naldo_Arruda, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Manaus (kaupunki)',
+        },
+        {
+          otsikko: 'Vedet jotka eivät sekoitu',
+          tiedosto: 'EncontroDasAguas.jpg',
+          teksti: 'Kaupungin alapuolella tumma Rio Negro ja savenvärinen '
+            + 'Solimões kulkevat samassa uomassa rinnakkain sekoittumatta. '
+            + 'Rio Negro virtaa noin kahta kilometriä tunnissa '
+            + '28-asteisena, Solimões neljästä kuuteen kilometriä tunnissa '
+            + '22-asteisena, ja vesien tiheys eroaa: vaalea kantaa '
+            + 'Andeilta huuhtoutunutta lietettä, musta saa värinsä '
+            + 'lahonneista lehdistä ja on lähes lietteetön. Wikipedia '
+            + 'riitelee tästä itsensä kanssa kahdesti. Rinnakkaisen matkan '
+            + 'pituudeksi annetaan sekä kuusi että yhdeksän kilometriä, ja '
+            + 'lämpötilan merkityksestä kaksi artikkelia sanoo '
+            + 'päinvastoin. Ilmiön nimi on Encontro das Águas.',
+          selite: 'Veneestä katsottuna savenvärinen ja musta vesi kulkevat '
+            + 'vierekkäin niin, että raja erottuu aallonharjoja myöten.',
+          lahde: 'Roberto Ravanini, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Meeting of Waters',
+        },
+        {
+          otsikko: 'Kaupunki kumibuumin kynnyksellä',
+          tiedosto: 'Guyane. 15, Quais de Manaos - (mission) H. Coudreau ; (photogr.?) ; (photogr. reprod. par Molténi? pour la conférence donnée par) H. Coudreau - btv1b59657876.jpg',
+          teksti: 'Isoisän matkavuonna 1873 Manaus oli yhä pieni '
+            + 'jokisatama: vuonna 1849 asukkaita oli 5 000, ja '
+            + 'vuosisadan loppuun mennessä luku nousi 70 000:een. '
+            + 'Varsinainen kumibuumi ajoitetaan vasta vuosiin 1879–1912 ja '
+            + 'sen kulta-aika vuosiin 1890–1910. Vuoden 1872 '
+            + 'väestönlaskennan mukaan osavaltioon oli muuttanut 2 199 '
+            + 'ulkomaalaista kumin perässä, suurin osa heistä Manausiin. '
+            + 'Koillisen suuri kuivuus, joka siirsi noin 120 000 ihmistä '
+            + 'Amazonin alueelle, tuli vasta 1877–1878 – ei siis vielä '
+            + 'isoisän aikaan. Katedraali oli rakenteilla: edellinen '
+            + 'kirkko oli palanut 1850 ja uusi avattiin 1878. '
+            + 'Oopperataloa ei ollut vielä edes ehdotettu.',
+          selite: 'Vuoden 1883 taikalyhtylasilla, jonka oma musta maski '
+            + 'kehystää kuvan, Manausin ranta on matalien tiilikattoisten '
+            + 'talojen rivi ja sen päässä rautainen silta.',
+          lahde: 'Coudreau, Henri (1859-1899), Wikimedia Commons (PD)',
+          wiki: 'Amazon rubber cycle',
+        },
+        {
+          otsikko: 'Vapaakauppa-alue joka herätti kaupungin',
+          tiedosto: 'Zona-Centro-Sul-Manaus.jpg',
+          teksti: 'Kumin jälkeen kaupunki vaipui hiljaisuuteen '
+            + 'vuosikymmeniksi. Sotilashallitus perusti 28. helmikuuta '
+            + '1967 asetuksella 288 Manausin vapaakauppa-alueen, ja '
+            + 'verohelpotukset toivat sademetsän keskelle tehtaita: '
+            + 'matkapuhelimia ovat koonneet täällä muun muassa LG, Nokia, '
+            + 'Samsung ja Siemens. Väkiluku ylitti miljoonan 1991 ja kaksi '
+            + 'miljoonaa 2014 – kaksinkertaistuminen kesti 23 vuotta, ja '
+            + 'nykyään Manausissa asuu lähes puolet koko osavaltion '
+            + 'väestöstä. Eduardo Gomesin lentoasema on rahtimäärältään '
+            + 'Brasilian kolmanneksi suurin, koska teollisuusalueen '
+            + 'tuotteet lähtevät ilmateitse.',
+          selite: 'Ilmakuvassa keskustan eteläpuoliset korttelit '
+            + 'levittäytyvät kerrostaloineen ja peltikattoineen '
+            + 'mustavetisen puron molemmin puolin.',
+          lahde: 'Portal da Copa, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Manaus (kaupunki)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mercado Municipal Adolpho Lisboa - 12.jpg',
+          selite: 'Markkinahallin vihreään valurautakaareen on valettu '
+            + 'kultakirjaimin teksti Mercado Publico ja vuosiluku 1882.',
+          lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Manaus on kaupunki, johon saavutaan aina joko ylhäältä '
+          + 'tai vedeltä. Historiallinen keskusta on pieni ja kävellen '
+          + 'kierrettävä: oopperatalo aukioineen, katedraali, tullitalo '
+          + 'majakkatorneineen ja 1882 valmistunut markkinahalli ovat '
+          + 'kaikki noin kilometrin säteellä toisistaan, ja niiden '
+          + 'alapuolella on satama, josta jokilaivat lähtevät päiväkausien '
+          + 'matkoille. Muu kaupunki on laaja ja matala: kaksi miljoonaa '
+          + 'ihmistä asuu tornitalojen, peltikattoisten kortteleiden ja '
+          + 'igarapé-purojen sekamelskassa, ja etäisyydet taittuvat '
+          + 'bussilla tai taksilla. Retket suuntautuvat vedelle – vesien '
+          + 'kohtaamiseen, Anavilhanasin jokisaaristoon tai jollekin '
+          + 'rannalle, jonka olemassaolo riippuu vuodenajasta.',
+        artikkeli: {
+          nimi: 'Matkailijan Manaus',
+          taitto: 'opas',
+          teksti: 'Sademetsän keskellä oleva miljoonakaupunki, johon ei '
+            + 'tule tietä muusta Brasiliasta – mutta jonne valtamerialus '
+            + 'pääsee jokea pitkin.',
+          nosto: 'Kaupungin rannat syntyvät vasta elo-marraskuussa, kun '
+            + 'joen pinta laskee; joulukuusta alkaen vesi peittää hiekat '
+            + 'jälleen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Amazon kantaa valtamerialuksia 1 500 kilometriä '
+                + 'Atlantilta sisämaahan asti – juuri niin kauas kuin '
+                + 'Manausiin. Maateitse '
+                + 'kaupunki on käytännössä saari: pohjoiseen vie '
+                + 'päällystetty BR-174 Boa Vistaan ja Venezuelaan, mutta '
+                + 'etelään johtava BR-319 vaatii ensin noin 40 minuutin '
+                + 'lauttamatkan Careiroon ja on päällystetty vain noin '
+                + 'sadan kilometrin matkalta; sen jälkeen tie ei ole '
+                + 'ajokelpoinen. The Independent totesi vielä 2014, ettei '
+                + 'Manausiin ole teitä muusta maasta. Käytännössä kaikki '
+                + 'liikenne kulkee ilmassa tai vedessä: Eduardo Gomesin '
+                + 'kansainvälisen lentoaseman kautta tai jokilaivoilla, '
+                + 'joiden matkat Belémiin kestävät päiviä.',
+              kuva: {
+                tiedosto: 'Cruise ship in Manaus, Brazil.jpg',
+                selite: 'Valtamerialus lipuu leveällä Rio Negrolla kohti '
+                  + 'Manausia, ja takana horisontin täyttää matala '
+                  + 'metsäraja.',
+                lahde: 'Ivo Brasil, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Luonto keskellä kaupunkia',
+              teksti: 'Sademetsän keskellä olevassa Manausissa on '
+                + 'yllättävän vähän vihreää: kaupunki on rakennettu '
+                + 'tiiviisti, ja suurimmat viheralueet ovat pienehköjä '
+                + 'puistoja. Mindú-puisto keskustan eteläpuolella on '
+                + 'niistä käydyimpiä, ja sen 330 000 neliömetriä metsää '
+                + 'on yksi viimeisistä elinympäristöistä uhanalaiselle '
+                + 'kaksivärisille tamariinille, apinalle jota tavataan '
+                + 'luonnossa vain Manausin seudulla. Puiston '
+                + 'perustamisvuodesta Wikipedia antaa kaksi lukua, 1989 '
+                + 'ja 1992, samasta artikkelista. Kaupungin ulkopuolella '
+                + 'ovat Adolpho Ducken kasvitieteellinen puutarha ja '
+                + 'Anavilhanasin kansallispuisto, yksi maailman '
+                + 'suurimmista jokisaaristoista.',
+              kuva: {
+                tiedosto: 'Saguinus bicolor Parque do Mindu.jpg',
+                selite: 'Mustanaamainen, valkorintainen tamariini istuu '
+                  + 'oksalla pitkä ruskea häntä riippuen suoraan alas.',
+                lahde: 'Whaldener Endo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: armeijan eläintarha',
+              teksti: 'Manausin julkinen eläintarha on Brasilian armeijan '
+                + 'ylläpitämä. CIGS-eläintarha kuuluu viidakkosodankäynnin '
+                + 'koulutuskeskukseen, ja siellä on noin 300 lajia '
+                + 'Amazonin eläimistöä. Tarha on avoinna yleisölle. '
+                + 'Yhdistelmä kuulostaa oudolta vasta muualta tulleen '
+                + 'korvaan: kaupungissa, jonne ei tule tietä ja jonka '
+                + 'ympärillä on tuhansia kilometrejä metsää, armeija on '
+                + 'yksi harvoista organisaatioista, joilla on varaa pitää '
+                + 'yllä pysyvää eläinkokoelmaa – ja hyvä syy tuntea '
+                + 'alueen eläimet. Tästä kohteesta ei löytynyt Commonsista '
+                + 'kuvasäännöt täyttävää kuvaa, joten jakso on kuvaton.',
+            },
+            {
+              otsikko: 'Historian käännekohta: kumiparonin talo',
+              teksti: 'Saksalainen kumikauppias Karl Waldemar Scholz '
+                + 'rakennutti 1903 keskustaan eklektisen huvilan, joka '
+                + 'valmistui 1911 – juuri kun Aasian viljelmien kilpailu '
+                + 'alkoi purra. Ensimmäinen maailmansota katkaisi '
+                + 'laivayhteyden Manausin ja Hampurin välillä, ja Scholz '
+                + 'joutui kiinnittämään talonsa 400 miljoonasta reisistä. '
+                + 'Talo huutokaupattiin, ja osavaltio osti sen 1918 '
+                + 'kahdellasadalla miljoonalla reisillä ja antoi sille '
+                + 'nimen Palácio Rio Negro. Se toimi osavaltion hallinnon '
+                + 'päämajana vuoteen 1995, jolloin siitä tehtiin museo, '
+                + 'joka kertoo nimenomaan kumin tarinan. Scholzin perhe '
+                + 'palasi Saksaan.',
+              kuva: {
+                tiedosto: 'Palácio Rio Negro (Manaus) 489530.jpg',
+                selite: 'Palácio Rio Negron keltavalkoinen julkisivu '
+                  + 'pylväineen ja kaidekoristeineen kaartuu kadunkulmassa '
+                  + 'kahden lipputangon takana.',
+                lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Manaus-artikkelin '
+                + 'Climate-osiosta eivätkä samasta lähteestä kuin lehtien '
+                + 'vuosigraafit. Ilmasto on trooppista monsuuni-ilmastoa '
+                + '(Köppen: Am) – juuri niin kuiva kuivimpana kuukautena, '
+                + 'ettei se luokitu sademetsäilmastoksi. Vuoden '
+                + 'keskilämpötila on 27,4 astetta, eikä lämpötila jaa '
+                + 'vuotta vuodenaikoihin; sade tekee sen. Heinä-syyskuu on '
+                + 'suhteellisen kuiva, joulu-toukokuu hyvin sateinen, ja '
+                + 'sadetta kertyy noin 2 300 millimetriä vuodessa. '
+                + 'Kaupungin rannat, kuten Ponta Negra, syntyvät '
+                + 'elo-marraskuussa veden laskiessa. Ponta Negran '
+                + 'etäisyydeksi keskustasta sama artikkeli antaa kahdessa '
+                + 'kohdassa 18 ja 13 kilometriä; kumpaakaan ei ole '
+                + 'valittu tässä oikeaksi.',
+              kuva: {
+                tiedosto: 'Ponta-Negra-Manaus3.jpg',
+                selite: 'Ponta Negran kaartuvalla hiekkarannalla on '
+                  + 'rivissä valkoisia päivävarjoja, ja taustalla häämöttää '
+                  + 'Rio Negron silta.',
+                lahde: 'Portal da Copa/ME, Wikimedia Commons (CC BY 3.0 br)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'kumibuumi',
+      nimi: 'Kumibuumi',
+      johdanto: 'Kolmenkymmenen vuoden ajan Amazonas myi maailmalle '
+        + 'ainetta, jota ei saanut mistään muualta. Vauraus rakensi '
+        + 'Manausin uudelleen, mutta sen keräsivät toiset ihmiset kaukana '
+        + 'kaupungin aukioilta.',
+      tehtava: {
+        kysymys: 'Mistä maasta Manausin tullitalon esivalmistetut '
+          + 'tiilielementit tuotiin?',
+        vaihtoehdot: [
+          'Englannista',
+          'Portugalista',
+          'Italiasta',
+          'Ranskasta',
+        ],
+        oikea: 0,
+        fakta: 'Tiilet tulivat laivalla Englannista, ja niillä jäljiteltiin '
+          + '1900-luvun alun Lontoon rakennuksia. Urakoitsija oli '
+          + 'englantilainen Manaos Harbour Limited.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jalokivi keskellä sademetsää',
+          tiedosto: 'Interior of Teatro Amazonas, Manaus, Brazil 02.jpg',
+          teksti: 'Oopperatalon idean esitti 1881 provinssin '
+            + 'edustajakokouksen jäsen Antonio José Fernandes Júnior, joka '
+            + 'halusi jalokiven keskelle sademetsää. Provinssin presidentti '
+            + 'José Lustosa Paranaguá hyväksyi riittävän rahoituksen 1882 '
+            + 'ja järjesti suunnittelukilpailun, jonka voitti lissabonilainen '
+            + 'toimisto. Työt alkoivat 1884 italialaisen Celestial '
+            + 'Sacardimin johdolla ja etenivät pysähdyksin 1885–1892. '
+            + 'Kattotiilet tuotiin Alsacesta, teräsrakenteet Glasgow\'sta '
+            + 'ja Carrara-marmori Italiasta; kupolissa on 36 000 kaakelia '
+            + 'Brasilian lipun väreissä ja salissa 198 kruunua. Talo '
+            + 'vihittiin 31. joulukuuta 1896. Heinäkuussa 2026 se liitettiin '
+            + 'Unescon maailmanperintöluetteloon.',
+          selite: 'Salin kolme parvikerrosta kaartuvat kullattujen '
+            + 'kaiteiden ja pylväiden riveinä, ja jokaisen kaaren alla palaa '
+            + 'oma valaisimensa.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Amazon Theatre',
+        },
+        {
+          otsikko: 'Sähköä ennen monia Euroopan kaupunkeja',
+          tiedosto: 'Porto Flutuante de Manaus Construção Inglesa - panoramio.jpg',
+          teksti: 'Manaus oli Brasilian toinen kaupunki, jonka kaduille '
+            + 'saatiin sähkövalot – ensimmäinen oli Campos dos Goytacazes '
+            + 'Rio de Janeiron osavaltiossa. Kuvernööri Eduardo Ribeiron '
+            + 'kaudella vuodesta 1892 kaupunki sai sähköraitiovaunut, '
+            + 'puhelimet, vesijohdot ja kelluvan sataman, jonka laiturit '
+            + 'nousevat ja laskevat joen mukana. Kadut kivettiin '
+            + 'Portugalista tuodulla graniitilla ja lioz-kalkkikivellä. '
+            + 'Kun kumin hinta romahti, generaattoreiden käyttö kävi liian '
+            + 'kalliiksi, eikä kaupunki kyennyt tuottamaan sähköä uudelleen '
+            + 'vuosiin.',
+          selite: 'Kelluvan sataman ponttonilaiturit kaartuvat ulos '
+            + 'rannasta, ja niihin on kiinnitetty rivi valkoisia '
+            + 'kaksikerroksisia jokilaivoja.',
+          lahde: 'James Martins, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Manaus (kaupunki)',
+        },
+        {
+          otsikko: 'Tullitalo joka jäljitteli Lontoota',
+          tiedosto: 'Alfândega de Manaus.jpg',
+          teksti: 'Sataman uudistus alkoi 1899, ja 1900 liittovaltio '
+            + 'siirsi urakan englantilaiselle Manaos Harbour Limitedille. '
+            + 'Sopimus velvoitti yhtiön rakentamaan myös tullitalon. '
+            + 'Piirustukset olivat valmiit 1903, työt alkoivat 1906, ja '
+            + 'Edmund Fisherin, H. M. Fletcherin ja G. Pinkertonin '
+            + 'suunnittelema rakennus tehtiin eklektiseen tyyliin '
+            + 'keskiaikaisin ja renessanssiaiheisin yksityiskohdin. '
+            + 'Esivalmistetut tiilielementit tuotiin Englannista, koska '
+            + 'niillä jäljiteltiin 1900-luvun alun Lontoon rakennuksia. '
+            + 'Viereinen vartiotalo Guardamoria sai torniinsa teräksisen '
+            + 'majakan ja avattiin 17. tammikuuta 1909.',
+          selite: 'Tullitalon punatiilinen ja vaalea julkisivu jatkuu '
+            + 'kaarikkeiden rivinä koko korttelin mitalta, ja oikealla '
+            + 'kohoaa Guardamorian torni.',
+          lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Customs House, Manaus',
+        },
+        {
+          otsikko: 'Siemenet jotka päättivät kaiken',
+          tiedosto: 'Rubber tree and latex cup.jpg',
+          teksti: 'Englantilainen Henry Wickham salakuljetti 1876 '
+            + 'Brasiliasta noin 70 000 kumipuun siementä, ja niistä '
+            + 'kasvatetut puut istutettiin Britannian siirtomaihin '
+            + 'Malesiaan, Ceyloniin ja tropiikin Afrikkaan. Viljelmillä '
+            + 'puut kasvoivat riveissä, kun Amazonilla jokainen puu piti '
+            + 'etsiä metsästä erikseen; halvempi tuotanto siirsi '
+            + 'maailmanmarkkinan Britannian imperiumille. Buumi loppui '
+            + 'äkisti ja Manaus vaipui köyhyyteen. Hinnan oli maksanut '
+            + 'joku muu jo aiemmin: kumialueilla alkuperäiskansoja '
+            + 'pakotettiin keräämään maitiaisnestettä ja velkaan sidottu '
+            + 'työ oli tavallista; baré-kansaa portugalilaiset ja '
+            + 'espanjalaiset kauppiaat pitivät velkaorjina '
+            + 'vuosikymmenten ajan.',
+          selite: 'Kumipuun kuoreen viilletty kierteinen ura ohjaa valkoista '
+            + 'maitiaisnestettä rungon juurella olevaan kuppiin.',
+          lahde: 'Wee Hong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Amazon rubber cycle',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Kaupungin nimi tulee manaó-kansalta, ja Rio Negron '
+        + 'varrella asuu yhä kymmeniätuhansia alkuperäiskansoihin kuuluvia '
+        + 'ihmisiä. Tällä sivulla heistä puhutaan myös nykyajassa.',
+      tehtava: {
+        kysymys: 'Mitä yhteiskieltä baré-yhteisöt puhuvat nykyään?',
+        vaihtoehdot: [
+          'nheengatua',
+          'guaramia',
+          'ketšuaa',
+          'aimaraa',
+        ],
+        oikea: 0,
+        fakta: 'Karmeliittalähetys levitti nheengatua siirtomaa-aikana koko '
+          + 'Rio Negron varrelle. Alkuperäistä baré-kieltä osasi vuonna '
+          + '2012 enää kaksi ihmistä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kansat jotka olivat täällä ensin',
+          tiedosto: 'Amanhecer no Rio Negro.jpg',
+          teksti: 'Ennen portugalilaisia Rio Negron alajuoksulla asui '
+            + 'manaó-, baré-, baniwa- ja passé-kansaa. Kun linnoitus '
+            + 'rakennettiin 1669, juuri nämä kansat auttoivat työssä ja '
+            + 'asettuivat sen liepeille. Samaan aikaan rannikolla riehunut '
+            + 'isorokko oli harventanut väestöä niin, että orjatyön '
+            + 'tarvitsijat suuntasivat yhä syvemmälle sisämaahan '
+            + 'descimento-retkille. Manaót kieltäytyivät alistumasta ja '
+            + 'ajautuivat yhteenottoihin siirtomaaherrojen kanssa; '
+            + 'taistelut laantuivat vasta kun portugalilaiset alkoivat '
+            + 'solmia avioliittoja kasiikkien tyttärien kanssa, mistä sai '
+            + 'alkunsa alueen caboclo-väestö.',
+          selite: 'Aamu sarastaa Rio Negrolla: pilvet kaartuvat matalan '
+            + 'metsärajan yllä ja tyyni vesi heijastaa ne takaisin.',
+          lahde: 'Isabelle Allet-Coche, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Rio Negro (Amazon)',
+        },
+        {
+          otsikko: 'Päällikkö joka ei antautunut',
+          tiedosto: 'Vila de Barcelos, Rio Negro.jpg',
+          teksti: 'Ajuricaba syntyi Rio Negron varrella Mariuán kylässä, '
+            + 'nykyisessä Barcelosissa, ja johti 1720-luvulla '
+            + 'manaó-kansaa. Hän kieltäytyi alistumasta orjatyöhön ja '
+            + 'liittoutui Alankomaiden kanssa, joka oli tuolloin '
+            + 'Portugalin vihollinen; kertomusten mukaan hän kuljetti '
+            + 'kanootissaan Alankomaiden lippua. Portugalilaiset pelkäsivät '
+            + 'esimerkin innostavan sekä muita alkuperäiskansoja että '
+            + 'orjuutettuja afrikkalaisia, ja käynnistivät sotaretken '
+            + 'nimeltä guerra justa. Vangittuna ja matkalla oikeuden eteen '
+            + 'Ajuricaba hyppäsi jokeen noin vuonna 1728. Hänen nimensä '
+            + 'merkitsee mehiläisparvea.',
+          selite: '1700-luvun lopun piirroksessa Barcelosin kylä on matala '
+            + 'valkoisten talojen rivi Rio Negron rannalla, ja edustalla '
+            + 'keinuu muutama purjevene.',
+          lahde: 'Alexandre Rodrigues Ferreira, Wikimedia Commons (PD)',
+          wiki: 'Ajuricaba (chief)',
+        },
+        {
+          otsikko: 'Kansa joka elää yhä Rio Negron varrella',
+          tiedosto: 'AssuncaodoIcana.jpg',
+          teksti: 'Baré-kansaan kuului Amazonasin osavaltiossa 11 472 '
+            + 'ihmistä vuonna 2014 ja Venezuelassa runsaat 5 000. '
+            + 'Kotiseutuja ovat Xié-joki ja Rio Negron yläjuoksu, ja '
+            + 'elanto tulee maanviljelystä, metsästyksestä, kalastuksesta '
+            + 'ja piassava-kuidun keruusta. Kylät ovat hirsitaloja puhtaan '
+            + 'hiekkakentän ympärillä, ja suurimmissa on kappeli, koulu ja '
+            + 'joskus terveysasema. Alkuperäistä baré-kieltä osasi 2012 '
+            + 'enää kaksi ihmistä; yhteiskielenä on nheengatu, jota '
+            + 'karmeliitat levittivät siirtomaa-aikana. Cumati-putouksen '
+            + 'alapuolella yhteisöt ovat protestanttisia ja yläpuolella '
+            + 'katolisia, ja molemmissa parantajina toimivat yhä šamaanit.',
+          selite: 'Ilmakuvassa Assunção do Içanan kylä levittäytyy '
+            + 'joenmutkan niemekkeelle, ja rantahiekan edessä on rivi '
+            + 'veneitä.',
+          lahde: 'Marcelo Camargo/Agência Brasil, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Baré people',
+        },
+        {
+          otsikko: 'Kapina joka synnytti osavaltion',
+          tiedosto: 'Belém by Spix & Martius excerto.jpg',
+          teksti: 'Cabanagem oli 1835–1840 käyty kapina, jossa mustat, '
+            + 'alkuperäiskansat ja mestitsit nousivat Grão-Parán valkoista '
+            + 'poliittista eliittiä vastaan ja ottivat vallan 1835. '
+            + 'Kapinallisia kutsuttiin cabanoiksi jokivarren mökkien '
+            + 'mukaan. Alto Amazonasin eli nykyisen Manausin seudun '
+            + 'cabanot kiersivät alueella ja valtasivat kaupungin kahdesti, '
+            + 'ja useimmissa asutuksissa ei-valkoinen väestö liittyi '
+            + 'heihin oma-aloitteisesti. Juuri tämä laaja osallistuminen '
+            + 'oli ratkaisevaa nykyisen Amazonasin osavaltion synnylle. '
+            + 'Kapina vähensi silloisen Grão-Parán väkiluvun noin '
+            + '100 000:sta 60 000:een.',
+          selite: '1800-luvun alun kaiverruksessa purjelaiva ja soutuvene '
+            + 'kulkevat Belémin edustalla, ja rannalla jatkuu matala '
+            + 'talorivi kirkon kaksine torneineen.',
+          lahde: 'Johann Baptist von Spix & Carl Friedrich Philipp von Martius, '
+            + 'Wikimedia Commons (PD)',
+          wiki: 'Cabanagem',
+        },
+      ],
+    },
+  ],
+  /*
+   * CARACAS (lauta southamerica, kaupunki-id caracas) — kaupunkilehti
+   * 24.8.2026.
+   *
+   * LÄHTEET. Työpohjana docs/mantereet-tyoaineisto/faktapohja-caracas.md
+   * ja sen riippumaton tarkistus docs/mantereet-tyoaineisto/
+   * tarkistus-caracas.md, joka EI OLE työpuussa vaan haettiin
+   * committista 5e31d2cf ("Riippumattomat tarkistukset: Manaus ja
+   * Caracas"). Tarkistus voittaa faktapohjan aina, kun ne ovat
+   * ristiriidassa. Jokainen tähän lohkoon menevä väite on lisäksi
+   * luettu uudestaan en-Wikipedian raakatekstistä 24.8.2026
+   * (action=raw, NODE_USE_ENV_PROXY=1, uusinnat kasvavalla viiveellä):
+   * Caracas, Caracas Metro, Caracas-La Guaira highway, Simón Bolívar
+   * International Airport (Venezuela), El Ávila National Park,
+   * Teleférico de Caracas, Guaicaipuro, Diego de Losada, 1812 Caracas
+   * earthquake, Caracas Cathedral, Simón Bolívar, Bolívar Square
+   * (Caracas), Palacio Federal Legislativo, National Pantheon of
+   * Venezuela, Antonio Guzmán Blanco, Auyán-tepui, Angel Falls,
+   * Catatumbo lightning, History of the Venezuelan oil industry,
+   * El Sistema, Simón Bolívar Symphony Orchestra, University City of
+   * Caracas, Floating Clouds (artwork), Joropo, Alma Llanera, Arepa,
+   * Pabellón criollo.
+   *
+   * TARKISTUKSEN NELJÄ PAKOLLISTA KORJAUSTA, ja miten ne on tehty:
+   *
+   * (1) K2 rikkoi visasääntöä ja käytti väärää lukua. Faktapohjan
+   *     avausvirke ("Caracas makaa kapeassa laaksossa noin 900 metrin
+   *     korkeudessa, vaikka Karibianmeri on vain reilun kymmenen
+   *     kilometrin päässä") toisti lähes sanasta sanaan visan
+   *     kysymyksen 1 fakta-kentän ja käytti etäisyytenä "reilua
+   *     kymmentä kilometriä". En-Wikipedian "Caracas"-artikkelin
+   *     johdanto sanoo "separated from the Caribbean coast by a
+   *     roughly 15 km expanse of El Ávila National Park" eli noin 15
+   *     kilometriä — poikkeama olisi ollut lähes 50 %. Nosto on
+   *     kirjoitettu kokonaan uusiksi: se lähtee liikkeelle merestä ja
+   *     vuoresta, käyttää lukua viisitoista kilometriä eikä mainitse
+   *     900 metrin ja etäisyyden paria lainkaan samassa virkkeessä.
+   *     Laakson korkeusluvut (870–1 043 m, ydin n. 900 m) kerrotaan
+   *     erikseen oppaan jaksossa 2 ja etusivun leipätekstissä, jossa
+   *     ne ovat omassa yhteydessään eivätkä visan sanamuodossa.
+   *
+   * (2) L1:n luvut olivat ristiriidassa oman lähteensä kanssa
+   *     molempiin suuntiin. Faktapohja kirjoitti "satoja perhoslajeja"
+   *     ja "lähes 1 800 kasvilajia"; en-Wikipedian "El Ávila National
+   *     Park" (Biodiversity) sanoo "More than 100 butterfly species...
+   *     More than 1,800 plant species". Nostossa lukee nyt yli sata
+   *     perhoslajia ja yli 1 800 kasvilajia, ja lisäksi lähteen omat
+   *     luvut 120 nisäkäslajia ja 500 lintulajia (36 % maan
+   *     linnustosta).
+   *
+   * (3) Teleféricon uudelleenavausvuosi 2002 EI ole "Teleférico de
+   *     Caracas" -artikkelissa — tarkistin koko artikkelin, eikä
+   *     merkkijonoa 2002 esiinny siinä kertaakaan. Vuosiluku on silti
+   *     olemassa lähteessä, vain toisessa artikkelissa: "El Ávila
+   *     National Park" (History) sanoo "After being out of service for
+   *     20 years, this cable car was reopened in February 2002".
+   *     Korvasin siis lähteettömän luvun lähteestä varmennetulla ja
+   *     kerron oppaassa myös kunnostuksen alun (konsessio ja
+   *     rakennustyöt 2000, "Teleférico de Caracas", History).
+   *     HUOM: samat kaksi artikkelia ovat ristiriidassa radan
+   *     avausvuodesta — Teleférico-artikkeli antaa täsmäpäivän
+   *     2.12.1955, Ávila-artikkeli sanoo "1956". Käytin täsmällisempää
+   *     päivämäärälähdettä eli vuotta 1955.
+   *
+   * (4) H4:n "viisitoista vuotta kestänyt kautensa" oli ristiriidassa
+   *     sivun oman seitsenvuotisen kehyksen kanssa. Guzmán Blancon
+   *     infoboksi antaa kolme erillistä kautta: 27.4.1870–27.2.1877,
+   *     26.2.1879–26.4.1884 ja 15.9.1886–8.8.1887 — Wikipedian "In 15
+   *     years from 1870" laskee ne yhteen. Nosto kirjoittaa kaudet
+   *     auki sellaisina kuin ne olivat ja sanoo suoraan, että
+   *     koululuku kertyi kolmelta kaudelta eikä yhdeltä. Isoisän
+   *     matkavuosi 1873 osuu ensimmäiselle, seitsenvuotiselle
+   *     kaudelle, ja se on koko historia-sivun ankkuri.
+   *
+   * VIIDES POIKKEAMA, jota kumpikaan lähdedokumentti ei ennakoinut:
+   * en-Wikipedian "Caracas Cathedral" -artikkeli EI ENÄÄ sisällä niitä
+   * väitteitä, jotka faktapohja siihen viittasi ja jotka tarkistus
+   * merkitsi vahvistetuiksi. Hain artikkelin 24.8.2026 (13 886 tavua
+   * eli tarkistuksen mainitsema oikea koko, ja sisältö on varmasti
+   * Caracasin katedraalista), ja siinä ei puhuta katedraalin
+   * romahtamisesta kesken messun, pappien Miranda-tulkinnasta,
+   * Bolívarin rauhoittelusta eikä kastemaljan siirtämisestä
+   * synnyintalon pihalle. Kirjoitin siksi nostot K3 ja K4 uusiksi
+   * niin, että jokainen väite on nyt luettavissa artikkeleista, jotka
+   * todella sisältävät sen: "1812 Caracas earthquake" (kiirastorstai
+   * 26.3.1812 kello 16.37 — EI pitkäperjantai kuten faktapohjassa;
+   * 7,7 tai kaksi sysäystä Mw 7,4 ja 7,1; uhrilukujen kiista
+   * 1 000–20 000 ja arkkipiispa Narciso Coll y Pratin 10 000–12 000;
+   * kuninkaanpuoluelaisten tulkinta jumalan rangaistuksena),
+   * "Caracas Cathedral" (tornin madaltaminen järistyksen jälkeen),
+   * "Simón Bolívar" (syntymä 24.7.1783, kaste 30.7., El Libertador
+   * Méridalta 23.5.1813 ja Caracasin kaupunginvaltuustolta 14.10.1813)
+   * ja "Birthplace of Simón Bolívar" (talo 1640-luvulta, Guzmán Blanco
+   * osti sen 1876). Kastemalja jäi pois kokonaan, koska sille ei
+   * löytynyt lähdettä.
+   *
+   * TARKISTUKSEN HUOMIOT, ja miten ne on ratkaistu:
+   *
+   * - METRON LINJAMÄÄRÄ. "Caracas"-artikkelin sisällä on ristiriita:
+   *   Transportation-osio sanoo "four lines, 47 stations", saman
+   *   otsikon alaosio "has five lines". Ratkaisin sen oman artikkelin
+   *   hyväksi: "Caracas Metro" -artikkelin infoboksi sanoo neljä
+   *   linjaa, ja sen Lines-taulukossa on nimenomaan linjat 1–4;
+   *   "linja 5" esiintyy artikkelissa vain linjan 2 jatkeen
+   *   rakennusaikaisena nimenä ja pitkän tähtäimen suunnitelmana.
+   *   Lehti sanoo siis neljä linjaa. Asemamäärää EI mainita
+   *   lainkaan, koska siitä on kolme eri lukua (infoboksi 46,
+   *   johdanto 48, "Caracas"-artikkeli 47) eikä mikään niistä ole
+   *   muita vahvempi; samasta syystä radan pituusluku on jätetty pois
+   *   (54,1 km, 106,5 km ja 71 km samoissa lähteissä).
+   *
+   * - PILARI 3:N PUUTTUVAT ESIMERKIT. Tarkistus huomautti, ettei
+   *   faktapohjassa ollut sanaakaan El Sistemasta, Simón Bolívar
+   *   -orkesterista eikä Ávilan nykyisestä virkistyskäytöstä, vaikka
+   *   ne oli tilattu. Ne ovat nyt lehden runkoa: Musiikki on oma
+   *   sivunsa (El Sistema, Simón Bolívar -sinfoniaorkesteri, Aula
+   *   Magna ja joropo), ja Ávilan virkistyskäyttö on nostossa L1
+   *   omana asianaan ("These mountains now serve as both a
+   *   recreational area and as a buffer to pollution and urban
+   *   expansion", en-Wikipedia "El Ávila National Park", History;
+   *   juoksu, pyöräily, kalliokiipeily, telttailu ja vaijeriliuku
+   *   saman artikkelin Culture & traditions -osiosta). Ciudad
+   *   Universitarian Unesco-status on nostossa M3.
+   *
+   * - L3:N JA L4:N VISAKAIUT. Faktapohjan L3 avautui sanoilla
+   *   "Merenkulkijat käyttivät ilmiötä vuosisatoja majakkana" (visa:
+   *   "Merimiehet käyttivät sitä majakkana") ja L4 päättyi lauseeseen
+   *   maailman suurimmista todetuista öljyvaroista (visa: "Maalla on
+   *   maailman suurimpia todettuja öljyvarantoja"). Molemmat on
+   *   kirjoitettu uusiksi: L3 lähtee barí-kansan nimestä ja
+   *   Humboldtin ja Codazzin aikalaiskuvauksista, L4 esikolumbiaanisesta
+   *   menestä ja keisari Kaarle V:n tynnyristä. Varantoluku on jätetty
+   *   pois kokonaan, ja visan vastaus (öljy tärkeimpänä
+   *   vientituotteena) sanotaan lehden omin sanoin.
+   *
+   * KULTTUURIVISA (js/packs/southamerica-questions.js, avain caracas)
+   * kysyy kuusi asiaa. Päätoimittajan sääntö on, että vastausten
+   * TÄYTYY löytyä lehden teksteistä mutta EI visan omalla
+   * sanamuodolla. Kävin jokaisen kysymyksen läpi myös sivujen
+   * johdantoja vasten, en vain nostoja vasten:
+   * (1) Venezuelan pääkaupunki — etusivun leipäteksti
+   *     (southamerica-artikkelit.js) ja kaupunki-sivun johdanto;
+   * (2) Simón Bolívar / El Libertador — nosto K4, joka kertoo
+   *     arvonimen SAAMISEN tarinan (Mérida ensin toukokuussa 1813,
+   *     Caracasin kaupunginvaltuusto vasta lokakuussa) eikä totea
+   *     visan tapaan "hän on El Libertador";
+   * (3) Angelin putous — nosto L2 löytö- ja mittaustarinana;
+   * (4) Karibianmeri — nosto K2 ja oppaan jakso 2, meri vuoren
+   *     takaisena naapurina eikä luettelotietona;
+   * (5) öljy vientituotteena — nosto L4, painopiste 1500-luvussa ja
+   *     esikolumbiaanisessa käytössä;
+   * (6) Catatumbon salamointi — nosto L3, painopiste nimessä ja
+   *     1800-luvun aikalaiskuvauksissa.
+   * Yksikään kolmesta minitehtävästä ei toista visaa, ja jokaisen
+   * vastaus on samalla sivulla: Panteónin paikalla ollut luhistunut
+   * kirkko (vastaus nostossa H3, ja saman sivun H2 tarjoaa
+   * houkuttelevan harhavaihtoehdon eli luostarin), Auyán-tepuin
+   * merkitys pemonien kielellä (L2) ja El Sisteman perustaja (M1,
+   * jonka kaikki kolme harhavaihtoehtoa esiintyvät samalla sivulla).
+   *
+   * VISAN OMISSA FAKTAKENTISSÄ on kaksi virhettä, joita lehti EI
+   * toista (kumpikaan ei ole faktapohjan syytä): Catatumbo-kentän
+   * "ukkostaa noin 250 yönä vuodessa" sekoittaa salamatiheyden
+   * (250 salamaa neliökilometrille vuodessa) ja öiden määrän
+   * (140–160 yötä); Bolívar-kentän "viiden maan itsenäistyminen" on
+   * Simón Bolívar -artikkelin mukaan kuusi maata (Bolivia, Kolumbia,
+   * Ecuador, Panama, Peru, Venezuela); ja pääkaupunkikysymyksen
+   * fakta-kenttä sanoo meren olevan "vain kymmenen kilometrin
+   * päässä", kun lähde sanoo noin viisitoista. Lehti käyttää lähteen
+   * lukuja. Samat virheet ovat myös js/packs/southamerica-questions.js:n
+   * SOUTHAMERICA_FACTS-rivillä caracas ("noin 900 metrin korkeudessa,
+   * vaikka Karibianmeri on vain kymmenen kilometrin päässä") — niitä
+   * ei korjattu tässä erässä, koska visan ja tiesitkö-rivien
+   * korjaaminen ei kuulunut tähän tilaukseen; Fablen kannattaa
+   * tietää siitä.
+   *
+   * SISÄLTÖLINJAUS. EI NYKYPOLITIIKKAA — tämä on Caracasin kohdalla
+   * tiukin rajaus. Venezuelan nykyinen poliittinen ja taloudellinen
+   * tilanne, siirtolaisuus, hallinto ja kriisi on jätetty kokonaan
+   * pois, samoin Chávez ja Maduro, vaikka en-Wikipedian
+   * "Caracas"-artikkeli ja "El Sistema" -artikkeli käsittelevät niitä
+   * laajasti. Pois on jätetty myös artikkelien rikollisuus-, mielen-
+   * osoitus- ja väkivalta-aineisto sekä Urbanism-osion
+   * rancho-kuvaus: kaupunki kuvataan arvokkaana nykyisenä
+   * suurkaupunkina, ei ongelmaluettelona. Simón Bolívar käsitellään
+   * historiallisena henkilönä. Guaicaipuron 1500-luvun tarina
+   * kerrotaan tapahtumana neutraalisti ilman nykypoliittista käyttöä.
+   *
+   * KUVAT: 26 kuvaa, kaikki haettu Commonsin rajapinnasta
+   * (categorymembers ja generator=search) yhtenä peräkkäisenä jonona.
+   * Lisenssi ja tekijä on luettu rajapinnan extmetadatasta
+   * (LicenseShortName, UsageTerms, Restrictions, Artist), ja NC- ja
+   * ND-ehdot tarkistettiin ensin — yhtään ei osunut valintoihin.
+   * JOKAINEN valittu kuva on katsottu silmin 900 pikselin
+   * esikatseluna. Kansikuvat ovat kolme laajaa yleiskuvaa: Ávila
+   * kaupungin yllä laaksosta nähtynä, kaupunki vuorelta nähtynä ja
+   * koko vuorijono laakson eteläpuolelta. Avauskuvat ovat kolme
+   * laveaa näkymää kaupungin eri osista ja eri vuorokaudenaikoina:
+   * keskustan siluetti yliopiston mailta, Ávila pilvissä San
+   * Bernardinon yllä ja keskusta yöllä.
+   *
+   * KUVAHYLKÄYKSET (syineen): "Catedral de Caracas.JPG" on paras
+   * katedraalin julkisivukuva, mutta sen etualalla kulkee väkeä,
+   * jonka kasvot ovat luettavissa — tilalle vaihtui saman kuvaajan
+   * sisäkuva; "Plaza Bolivar de Caracas.jpg" ja "Plaza Bolivar de
+   * Caracas en la celebracion del Bicentenario.JPG" hylättiin samasta
+   * syystä (penkeillä istuvien kasvot täydessä koossa);
+   * "Palacio de las Academias.JPG" on aiheeltaan täsmälleen oikea
+   * (Guzmán Blancon 1876 uusgoottilaiseksi puettu yliopistotalo),
+   * mutta jalkakäytävällä on tunnistettavia kulkijoita;
+   * "Centro de Acción Social por la Música ... 3.jpg" näyttää salin
+   * värikkäät istuimet kauniisti, mutta etualalla istuu mies kasvot
+   * kameraan; "Vista PlazaVenezuela.jpg" on hieno ilmakuva, mutta
+   * kuvan täyttävät jättimäiset Nescafé- ja Pepsi-mainokset;
+   * "Teatro Teresa Carreño en Caracas Venezuela.jpg" on otettu
+   * ikkunan läpi, ja lasin heijastukset ja karmi näkyvät;
+   * "Teleferico de Caracas Warairarepano cablecar Avila Venezuela
+   * 1.jpg" on kuvattu hytin lasin läpi ja etualalla on kuvaajan oma
+   * pää; "Caracas desde la Montaña.JPG" ja "Vista de Caracas 2.jpg"
+   * ovat teknisesti kelvollisia mutta toinen hämärä ja utuinen ja
+   * toisessa etualan täyttää rinneasutus; "The land of Bolivar; or,
+   * War, peace and adventure in the republic of Venezuela (1878)
+   * (14764399645).jpg" olisi ollut täsmälleen isoisän vuosikymmenen
+   * kuvitusta Plaza Bolívarista, mutta sen extmetadata-lisenssi on
+   * "No known copyright restrictions", joka ei ole PD/CC0/CC BY/
+   * CC BY-SA — talon sääntö ei salli sitä, joten se jäi pois.
+   *
+   * KUVAPOIKKEUS: nosto H3 käyttää Ferdinand Bellermannin noin
+   * 1842–1845 tekemää piirrosta Santísima Trinidad -kirkon raunioista
+   * — juuri sen paikalle Panteón Nacional nousi 1874. Piirroksen
+   * vasemmassa alakulmassa on tekijän oma kynämerkintä. Sama poikkeus
+   * kuin Bogotán vuoden 1869 puupiirroksessa ja Quiton
+   * aikalaismaalauksessa: teoksen oma alkuperäinen merkintä kelpaa,
+   * kun se on osa teosta eikä jälkikäteen lisätty arkisto- tai
+   * studioleima. Nosto M1:n kuvassa näkyy talon oma juhlavuoden
+   * lakana parvekkeen kaiteessa; se on paikan päällä oleva kyltti,
+   * ei kuvan päälle lisätty merkintä, eikä se ole mainos.
+   *
+   * AIHETOISTO (tietoinen, kirjattu): Ávila esiintyy neljässä
+   * kuvassa — kansikuvissa kahdesti (laaksosta ylös ja huipulta
+   * alas), nostossa K2 laajana panoraamana ja nostossa L1
+   * lähikuvana sammalten ja bromelioiden tasolla. Vuori on
+   * kaupungin ainoa todellinen maamerkki, ja kuvakulmat ovat eri.
+   * Köysirata näkyy sekä matkaoppaan pystykuvassa että jaksossa 1
+   * mainittuna; jakson 1 kuva on kuitenkin moottoritie ja sen
+   * viadukti, jotta sama aihe ei toistu kahdessa kuvassa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian "Caracas"-artikkelin
+   * Climate-osion säälaatikkoon ja SANOO SEN ÄÄNEEN (Bogotán,
+   * Samarkandin ja Liman malli). Mittauspiste on La Carlotan
+   * lentokenttä laakson pohjalla, normaalit 1991–2020 ja ennätykset
+   * 1964–2020, ja se kerrotaan lukijalle — huipulla on useita
+   * asteita viileämpää kuin mittauspisteellä. Tarkistuksen huomio
+   * kuivasta kaudesta on otettu huomioon: joulukuu (107,4 mm) on
+   * sateinen kuukausi, joten kuivaksi kaudeksi sanotaan
+   * tammi–huhtikuu eikä joulu–maaliskuu.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   */
+  caracas: [
+    {
+      id: 'kaupunki',
+      nimi: 'Caracas',
+      johdanto: 'Vuoren ja meren väliin puristuneessa laaksossa makaava '
+        + 'Caracas on Venezuelan pääkaupunki ja Simón Bolívarin '
+        + 'synnyinkaupunki. Espanjalaisesta siirtomaakylästä kasvoi '
+        + 'miljoonakaupunki, jota vihreä Ávila yhä vartioi merta vasten.',
+      kansikuvat: [
+        {
+          tiedosto: 'Caracas y mi Ávila desde su valle.jpg',
+          selite: 'Ávilan metsäinen rinne nousee suoraan kaupungin '
+            + 'kerrostalokortteleiden takaa ja sulkee laakson pohjoisreunan.',
+          lahde: 'WILLIAM REYNA, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Caracas from the Avila National Park in 2016.jpg',
+          selite: 'Vuoren rinteeltä katsottuna keskustan tornit erottuvat '
+            + 'laakson keskeltä ja kaupunki jatkuu ympäröiville kukkuloille.',
+          lahde: 'Oscar Costero, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ciudad de Caracas City, Venezuela 1.jpg',
+          selite: 'Laakson eteläpuolelta avautuu koko rannikkovuoriston '
+            + 'harjanne, ja kaupunki jää sen juurelle kapeaksi nauhaksi.',
+          lahde: 'Warairarepano&Guaicaipuro, Wikimedia Commons (CC0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Caracas view from UCV grounds towards the east 2012.jpg',
+          selite: 'Yliopiston mailta itään katsottuna iltapäivän valo osuu '
+            + 'keskustan torneihin ja Ávila kohoaa niiden takana.',
+          lahde: 'JCFG1989, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Cerro El Ávila desde San Bernardino.jpg',
+          selite: 'San Bernardinon kaupunginosan yllä pilvet valuvat '
+            + 'harjanteen yli laakson puolelle.',
+          lahde: 'Robert Marcano, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Caracas DownTown Night.jpeg',
+          selite: 'Yöllä valot piirtävät laakson muodon: rinteet nousevat '
+            + 'valopisteinä pimeän vuoren reunaan asti.',
+          lahde: 'Walter Vargas from San Cristobal, Venezuela., Wikimedia '
+            + 'Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Päällikkö joka ei antautunut',
+          tiedosto: 'Cacique Guaicaipuro..jpg',
+          teksti: 'Kun espanjalaiset saapuivat laaksoon, sen asukkaat eivät '
+            + 'antautuneet taisteluitta. Teques- ja Caracas-heimojen '
+            + 'päällikkö Guaicaipuro kokosi liiton, joka löi useita '
+            + 'retkikuntia – muun muassa Luis Narváezin joukot 1562 – ja '
+            + 'piti valloittajat poissa vuosikausia. Vasta kun Diego de '
+            + 'Losada saapui suurella joukolla ja perusti kaupungin nimellä '
+            + 'Santiago de León de Caracas heinäkuussa 1567, espanjalaiset '
+            + 'saivat pysyvän jalansijan. Guaicaipuro kaatui seuraavana '
+            + 'vuonna: pormestari Francisco de Infante sai käskyn vangita '
+            + 'hänet, ja miehet sytyttivät hänen majansa tuleen saadakseen '
+            + 'hänet ulos.',
+          selite: 'Pronssinen Guaicaipuro seisoo keihäs koholla kivijalustan '
+            + 'päällä, ja jalustaan on kiinnitetty päällikön muistolaatta.',
+          lahde: 'Ramyz18, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Guaicaipuro',
+        },
+        {
+          otsikko: 'Vuori joka erottaa kaksi maailmaa',
+          tiedosto: 'Cerro El Ávila - Caracas.jpg',
+          teksti: 'Karibianmeri on keskustasta vain viidentoista kilometrin '
+            + 'päässä, mutta sitä ei kaupungista näe: väliin nousee lähes '
+            + '2 200 metriä korkea rannikkovuoristo, jonka kaupunkilaiset '
+            + 'tuntevat Ávilana. Vuori pitää ilman leutona. Vuoden '
+            + 'keskilämpötila on 23,4 astetta, ja lämpimimmän ja kylmimmän '
+            + 'kuukauden ero jää 2,8 asteeseen – tropiikissa se on '
+            + 'poikkeuksellisen vähän. Joulu- ja tammikuussa laaksoon valuu '
+            + 'sumua ja yö voi viiletä kahdeksaan asteeseen. Silloin '
+            + 'caracasilaiset sanovat toisilleen, että Pacheco on tullut.',
+          selite: 'Ávilan harjanne kulkee laakson poikki koko kuvan leveydeltä '
+            + 'ja erottaa kaupungin merestä.',
+          lahde: 'Periodismodepaz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Caracas',
+        },
+        {
+          otsikko: 'Järistys joka selitettiin rangaistukseksi',
+          tiedosto: 'Catedral Caracas.JPG',
+          teksti: 'Kiirastorstaina 26. maaliskuuta 1812 kello 16.37 maa '
+            + 'järkkyi. Voimakkuudeksi on arvioitu 7,7, mutta uudemman '
+            + 'tulkinnan mukaan kyse oli kahdesta erillisestä sysäyksestä, '
+            + 'joista ensimmäinen tuhosi Caracasin ja toinen Méridan. '
+            + 'Katedraalin toinen torni vaurioitui niin pahoin, että se '
+            + 'jouduttiin madaltamaan. Kuolonuhrien määrästä ei ole '
+            + 'yksimielisyyttä: arviot vaihtelevat tuhannesta '
+            + 'kahteenkymmeneentuhanteen, ja arkkipiispa Narciso Coll y '
+            + 'Prat päätyi hiippakuntansa pappien luvuista laskien '
+            + '10 000–12 000:een. Itsenäisyyssota oli käynnissä, ja '
+            + 'kuninkaan puolta pitäneet selittivät tuhon jumalan '
+            + 'rangaistukseksi kapinasta.',
+          selite: 'Katedraalin sivukappelissa kultainen barokkialttari on '
+            + 'valaistu violetiksi, ja sen edessä seisovat Venezuelan ja '
+            + 'Vatikaanin liput.',
+          lahde: 'AlexisCarmona, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: '1812 Caracas earthquake',
+        },
+        {
+          otsikko: 'Poika joka sai arvonimensä kahdesti',
+          tiedosto: 'Casa Natal del Libertador Patio Caracas Centro.JPG',
+          teksti: 'San Jacinton kadun varrella olevassa 1640-luvun talossa '
+            + 'syntyi 24. heinäkuuta 1783 varakkaan kreolisuvun neljäs '
+            + 'lapsi, ja kuusi päivää myöhemmin hänet kastettiin nimellä '
+            + 'Simón José Antonio de la Santísima Trinidad Bolívar y '
+            + 'Palacios. Kunnianimen hän sai vasta kolmekymmentä vuotta '
+            + 'myöhemmin, eikä kotikaupungissaan: ensin Méridan asukkaat '
+            + 'antoivat hänelle nimen El Libertador 23. toukokuuta 1813, ja '
+            + 'vasta kun hän palasi voittajana Caracasiin 14. lokakuuta, '
+            + 'myös kaupunginvaltuusto vahvisti sen. Synnyintalon osti 1876 '
+            + 'presidentti Guzmán Blanco – sama mies, joka oli pystyttänyt '
+            + 'hänen patsaansa pääaukiolle.',
+          selite: 'Bolívarin synnyintalon valkoiseksi kalkittu holvikaari '
+            + 'avautuu pihalle, jonka nurmikolla kasvaa kaksi pientä puuta.',
+          lahde: 'Ricardo Juliao, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Birthplace of Simón Bolívar',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '02teleferico.jpg',
+          selite: 'Köysiradan vaijeri nousee tiheän vuorimetsän yli '
+            + 'harjanteelle, jossa asema ja mastot erottuvat taivasta '
+            + 'vasten.',
+          lahde: 'Luis Jaimes, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Caracas on helppo hahmottaa, koska laakso tekee sen '
+          + 'puolestasi: Ávila on aina pohjoisessa, ja sen huippu on '
+          + 'kaupungin kompassi. Laakso kulkee lännestä itään, ja niin '
+          + 'kulkevat myös pääväylät, metro ja Guaire-joki. Vanha keskusta '
+          + 'ruutukaavoineen on lännessä, Plaza Bolívar sen keskusruutuna; '
+          + 'itään päin mentäessä korttelit muuttuvat 1900-luvun '
+          + 'lähiöiksi ja toimistotorneiksi, ja kaakossa on yliopiston '
+          + 'kampus. Etäisyydet ovat lyhyitä, mutta laakso on kapea ja '
+          + 'liikenne ruuhkautuu helposti, joten metro on usein nopein. '
+          + 'Sää ei ratkaise matka-ajankohtaa – lämpötila on lähes sama '
+          + 'ympäri vuoden – mutta sade ratkaisee, ja iltaisin kannattaa '
+          + 'varautua siihen, että laaksoon laskeutuu viileä ilma vuorelta.',
+        artikkeli: {
+          nimi: 'Matkailijan Caracas',
+          taitto: 'opas',
+          teksti: 'Miljoonakaupunki kapeassa laaksossa: siirtomaa-ajan '
+            + 'ruutukaava lännessä, modernistinen yliopistokampus '
+            + 'kaakossa ja köysirata vuoren yli merelle päin.',
+          nosto: 'Ávila on aina pohjoisessa: niin kauan kuin näet vuoren, '
+            + 'tiedät missä olet.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainväliset lennot laskeutuvat Maiquetíaan, '
+                + 'vuoren toiselle puolelle rannikolle noin 21 kilometrin '
+                + 'päähän keskustasta. Kenttä avattiin 1945, ja sinne '
+                + 'ajetaan moottoritietä, joka rakennettiin 1950–1953 ja '
+                + 'lyhensi matkan tunnista kahteenkymmeneen minuuttiin: '
+                + 'kaksi tunnelia, joista toinen on yli 1 900 metriä pitkä, '
+                + 'ja kolme betonisiltaa vievät vuoriston läpi. Kaupungissa '
+                + 'liikutaan metrolla, joka avattiin 1983 ja jolla on '
+                + 'neljä linjaa; vuonna 2010 sen jatkeeksi avattiin '
+                + 'Metrocable, rinteille nouseva köysiratalinja. Vuoren '
+                + 'harjalle pääsee omalla köysiradallaan: Teleférico de '
+                + 'Caracas avattiin 2. joulukuuta 1955, suljettiin '
+                + '1970-luvun lopulla ja avattiin laajan kunnostuksen '
+                + 'jälkeen uudelleen helmikuussa 2002. Matka on noin 3,5 '
+                + 'kilometriä ja kestää vartin.',
+              kuva: {
+                tiedosto: 'Autopista Caracas-La Guaira.JPG',
+                selite: 'Rannikolle vievä moottoritie ylittää jyrkän laakson '
+                  + 'kaarisillalla keskellä vuoristoa.',
+                lahde: 'Enzo861, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Caracas on kokonaan rannikkovuoriston sisällä olevassa '
+                + 'laaksossa, joka on kapea ja epäsäännöllinen. Laakson '
+                + 'pohja on 870 ja 1 043 metrin välillä merenpinnasta, ja '
+                + 'historiallinen keskusta noin 900 metrissä; pääkaupunki'
+                + 'piirin korkein kohta Pico El Ávila kohoaa 2 159 metriin '
+                + 'ja koko puiston korkein huippu Pico Naiguatá 2 765 '
+                + 'metriin. Pohjoisessa vuori erottaa kaupungin '
+                + 'Karibianmerestä, etelässä nousee toinen kukkularivi. '
+                + 'Guaire-joki virtaa laakson halki lännestä itään ja laskee '
+                + 'Tuy-jokeen; sitä ruokkivat Ávilan rinteiltä laskevat '
+                + 'purot. Koska tasaista maata on vähän, kaupunki on '
+                + 'kasvanut pystysuoraan ja levinnyt naapurikuntiin – '
+                + 'yhdessä ne muodostavat Suur-Caracasin.',
+              kuva: {
+                tiedosto: 'ISS027-E-9881 - View of Venezuela - Caracas - Catia La Mar - La Guaira - Caraballeda - Venezuelan Coastal Range - Caribbean Sea (cropped).jpg',
+                selite: 'Avaruusaseman kuvassa näkyy koko asetelma kerralla: '
+                  + 'rannikko lentokenttineen ja satamineen ylhäällä, '
+                  + 'vuoristo keskellä ja Caracasin laakso alavasemmalla.',
+                lahde: 'Earth Science and Remote Sensing Unit, Lyndon B. '
+                  + 'Johnson Space Center, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: arepa',
+              teksti: 'Venezuelalaisen päivän mitta on arepa: maissijauhosta '
+                + 'vaivattu pyöreä leipä, joka paistetaan tai grillataan ja '
+                + 'halkaistaan täytettä varten. Se on esikolumbiaaninen '
+                + 'ruoka, ja nimikin tulee cumanagoto-kielen sanasta erepa, '
+                + 'maissileipä. Vuoden 2015 kyselyssä lähes 70 prosenttia '
+                + 'venezuelalaisista söi arepoja säännöllisesti. Ratkaiseva '
+                + 'keksintö tehtiin 1950-luvulla, kun insinööri Luis '
+                + 'Caballero Mejías kehitti esikypsennetyn arepajauhon – '
+                + 'sitä ennen maissi jauhettiin kotona. Täytteet vaihtelevat '
+                + 'juustosta ja avokadosta lihaan ja papuihin. Maan '
+                + 'kansallisruoka on kuitenkin pabellón criollo, lautasellinen '
+                + 'riisiä, mustapapuja ja haudutettua repimälihaa, usein '
+                + 'paistettujen banaaniviipaleiden kanssa.',
+              kuva: {
+                tiedosto: 'Arepas (32187739776).jpg',
+                selite: 'Halkaistut arepat on täytetty lihalla ja juustolla, '
+                  + 'ja jauhoinen kuori on paistettu kevyesti ruskeaksi.',
+                lahde: 'Luca Nebuloni, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kun kaupunki rakennettiin uusiksi',
+              teksti: '1900-luvun alun öljyvuodet muuttivat Caracasin '
+                + 'kokoluokkaa, ja 1950-luvulla siitä tehtiin tietoisesti '
+                + 'moderni pääkaupunki. Silloin syntyi Suur-Caracasin '
+                + 'kaupunkiseutu, rakennettiin julkisia rakennuksia, '
+                + 'moottoritie rannikolle ja yliopiston uusi kampus, ja '
+                + 'ohjelma jatkui 1960-luvun yli. Vanhaa keskustaa se '
+                + 'kavensi: nykyään ydinkeskusta on alle neljännes '
+                + 'kaupungin pinta-alasta, ja loput on levinnyt laakson '
+                + 'suuntaisesti ja rinteille. Kaupungissa asuu nykyään yli '
+                + 'kolme miljoonaa ihmistä ja koko kaupunkiseudulla yli '
+                + 'viisi miljoonaa. Vanhan ytimen tunnistaa yhä '
+                + 'ruutukaavasta ja aukioista, joita 1870-luvulla '
+                + 'uudistettiin.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Caracasista puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Caracas-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehtien vuosigraafit. '
+                + 'Mittauspiste on La Carlotan lentokenttä laakson pohjalla '
+                + '(normaalit 1991–2020, ennätykset 1964–2020) – vuoren '
+                + 'harjalla on useita asteita viileämpää. Lämpötila pysyy '
+                + 'lähes samana ympäri vuoden, joten matka-aikaa kannattaa '
+                + 'miettiä sateen mukaan: kuivinta on tammi–huhtikuussa '
+                + '(maaliskuu 20,7 mm) ja sateisinta kesäkuun ja marraskuun '
+                + 'välillä (lokakuu 144,3 mm). Vuodessa sataa noin 1 104 '
+                + 'millimetriä 92 sadepäivänä. Päivän ylin on keskimäärin '
+                + '28,3 astetta ja yön alin 19,8; ennätykset ovat 37,1 '
+                + 'astetta syyskuussa ja 5,1 astetta maaliskuussa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuonna 1873 Caracasin pääaukio oli työmaa: '
+        + 'presidentti Guzmán Blanco rakensi pääkaupunkia uusiksi '
+        + 'patsaiden ja palatsien varaan.',
+      tehtava: {
+        kysymys: 'Minkä rakennuksen paikalle Panteón Nacional pystytettiin?',
+        vaihtoehdot: [
+          'Luhistuneen kirkon',
+          'Entisen luostarin',
+          'Vanhan tullihuoneen',
+          'Puretun teatterin',
+        ],
+        oikea: 0,
+        fakta: 'Santísima Trinidad -kirkko oli vuodelta 1744, ja sen '
+          + 'raunioiden paikalle perustettiin 1874 kansallissankarien '
+          + 'hautaholvi. Luostarin paikalle nousi sen sijaan Capitolio.',
+      },
+      nostot: [
+        {
+          otsikko: 'Aukio joka sai patsaansa tykinlaukauksin',
+          tiedosto: 'Nuestro Libertador.jpg',
+          teksti: 'Kaupungin pääaukiota reunustivat vuodesta 1754 '
+            + 'kauppiaiden holvikäytävät. Guzmán Blanco purätti ne 1865 ja '
+            + 'aloitti 1872 aukion muuttamisen ranskalaistyyliseksi '
+            + 'puistoksi: istutuksia, neljä vuodenaikaa esittävää '
+            + 'valurautaista suihkulähdettä kulmiin ja noin sata '
+            + 'koristepylvästä. Marraskuun 7. päivänä 1874 aukiolle '
+            + 'paljastettiin Simón Bolívarin nelimetrinen ratsastajapatsas '
+            + 'kellojen soidessa ja 21 kunnialaukauksen kajahtaessa. Se on '
+            + 'jäljennös Adamo Tadolinin Liman patsaasta – ja täsmälleen se '
+            + 'patsas, joka seisoo aukiolla yhä.',
+          selite: 'Bolívarin ratsastajapatsas nousee puiden lomasta, ja sen '
+            + 'takana liehuu Venezuelan lippu.',
+          lahde: 'Carlos E. Perez S.L, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bolívar Square (Caracas)',
+        },
+        {
+          otsikko: 'Rautainen palatsi jossa Vapauttaja katsoo yhä alas',
+          tiedosto: 'Palacio Legislativo de Caracas.jpg',
+          teksti: 'Plaza Bolívarin länsipuolelle Guzmán Blanco rakennutti '
+            + 'vuodesta 1872 uuden kongressirakennuksen entisen luostarin '
+            + 'paikalle. Palacio Federal Legislativo eli Capitolio nousi '
+            + 'valurautarunkoisena ja valkoiseksi maalattuna arkkitehti '
+            + 'Juan Hurtado Manriquen suunnitelmien mukaan, insinööreinä '
+            + 'Luciano Urdaneta ja Roberto García. Kullatun soikean kupolin '
+            + 'alle jäi Elliptinen sali, jonka kattoon Martín Tovar y Tovar '
+            + 'maalasi Carabobon taistelun. Julkisivun päätykolmiossa on '
+            + 'Simón Bolívarin ja Guzmán Blancon rintakuvat vierekkäin: '
+            + 'presidentti asetti itsensä muistomerkkiin samalle tasolle '
+            + 'vapauttajan kanssa.',
+          selite: 'Capitolion kolmiopäädyssä lepäävät allegoriset hahmot '
+            + 'vaakunan molemmin puolin, ja päädyn reunoilla seisoo '
+            + 'jalustoillaan kaksi rintakuvaa.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC0)',
+          wiki: 'Palacio Federal Legislativo',
+        },
+        {
+          otsikko: 'Hautaholvi joka nousi raunioiden päälle',
+          tiedosto: 'Ruinas de la iglesia de la Santísima Trinidad en Caracas - Ferdinand Bellermann.JPG',
+          teksti: 'Vanhan kaupungin pohjoislaidalla seisoivat vuodelta 1744 '
+            + 'peräisin olevan Santísima Trinidad -kirkon rauniot. Niiden '
+            + 'paikalle perustettiin 27. maaliskuuta 1874 Panteón Nacional, '
+            + 'kansallissankarien hautaholvi – yksi Guzmán Blancon '
+            + 'hallinnon suurista julkisista töistä Capitolion ja '
+            + 'kaupunginteatterin rinnalla. Vuoden 1876 aikana sinne '
+            + 'siirrettiin kymmenittäin itsenäisyyssodan upseereita ja '
+            + 'siviilejä, ja 28. lokakuuta myös Simón Bolívar. Nykyään '
+            + 'keskilaivan hallitsee yksin hänen pronssinen sarkofaginsa, '
+            + 'ja katossa loistaa kristallikruunu, joka asennettiin 1883 '
+            + 'hänen syntymänsä satavuotispäivänä.',
+          selite: 'Ferdinand Bellermann piirsi 1840-luvulla Santísima '
+            + 'Trinidad -kirkon rauniot, joiden paikalle Panteón Nacional '
+            + 'myöhemmin rakennettiin.',
+          lahde: 'Ferdinand Bellerman (1814-1889), Wikimedia Commons (PD)',
+          wiki: 'National Pantheon of Venezuela',
+        },
+        {
+          otsikko: 'Presidentti joka rakensi koko kaupungin uusiksi',
+          tiedosto: 'Guzmán Blanco, 1875.jpg',
+          teksti: 'Antonio Guzmán Blanco nousi valtaan huhtikuussa 1870, ja '
+            + 'hänen ensimmäinen kautensa kesti seitsemän vuotta, vuoteen '
+            + '1877 – juuri sille osuu isoisän matkavuosi. Myöhemmin hän '
+            + 'palasi vielä kahdesti, 1879–1884 ja 1886–1887. Näiden '
+            + 'kausien aikana Caracas sai rautatien rannikolle, '
+            + 'puhelinyhteyden La Guairaan ja oman valuutan, bolívarin, ja '
+            + '1876 maan vanhin yliopisto siirrettiin Palacio de las '
+            + 'Academiasiin, jonka siirtomaa-ajan julkisivu puettiin '
+            + 'uusgoottilaiseksi. Vuodesta 1870 laskien viidessätoista '
+            + 'vuodessa kansakoulujen määrä nelinkertaistui lähes kahteen '
+            + 'tuhanteen – mutta ne vuodet jakautuivat kolmelle erilliselle '
+            + 'kaudelle, eivät yhdelle.',
+          selite: 'Vuoden 1875 muotokuvassa Guzmán Blanco seisoo '
+            + 'kirjaillussa univormussa kirjapinon vieressä.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Antonio Guzmán Blanco',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Caracasin yllä kohoava Ávila on vasta esimakua. Venezuelassa '
+        + 'on maailman korkein vesiputous ja järvenselkä, jonka yllä '
+        + 'salamoi lähes joka yö.',
+      tehtava: {
+        kysymys: 'Mitä pöytävuoren nimi Auyán-tepui tarkoittaa pemonien '
+          + 'kielellä?',
+        vaihtoehdot: [
+          'Jumalten taloa',
+          'Sateen äitiä',
+          'Mustaa jokea',
+          'Kadonnutta polkua',
+        ],
+        oikea: 0,
+        fakta: 'Pöytävuoria kutsutaan Guayanan ylängöllä tepuiksi, ja niiden '
+          + 'nimet ovat pemon-kieltä. Auyán-tepui on niistä laajimpia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupungin keuhkot',
+          tiedosto: 'Abundante diversidad vegetal en la fila del Ávila.jpg',
+          teksti: 'Caracasilaiset kutsuvat Ávilaa kaupungin keuhkoiksi. '
+            + 'Vuori suojaa laaksoa saasteilta ja rakentamiselta, ja sen '
+            + 'huippu on kaupungin pohjoisviitta – mutta ennen kaikkea se '
+            + 'on kaupunkilaisten virkistysalue: rinteillä juostaan, '
+            + 'pyöräillään, kiivetään kallioille, telttaillaan ja '
+            + 'liu’utaan vaijereilla. Alkuperäiskielellä vuori on '
+            + 'Waraira Repano, ja korkein kohta Pico Naiguatá kohoaa 2 765 '
+            + 'metriin. Suojelualueella on dokumentoitu yli 500 lintulajia '
+            + '– runsas kolmannes koko maan linnustosta – noin 120 '
+            + 'nisäkäslajia, yli sata perhoslajia ja yli 1 800 kasvilajia.',
+          selite: 'Sammalten, saniaisten ja bromelioiden peittämät oksat '
+            + 'kertovat, että harjanteen läpi kulkevat pilvet kastelevat '
+            + 'metsän päivittäin.',
+          lahde: 'Arnaldo Noguera Sifontes, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'El Ávila National Park',
+        },
+        {
+          otsikko: 'Lentäjä joka etsi kultaa ja löysi putouksen',
+          tiedosto: 'KerepakupaiVená.jpg',
+          teksti: 'Guayanan ylängöllä kohoaa Auyán-tepui, pöytävuori, jonka '
+            + 'nimi tarkoittaa pemonien kielellä jumalten taloa. Sen '
+            + 'reunalta vesi putoaa 979 metriä, josta 807 metriä '
+            + 'yhtäjaksoisesti – lähes yhdeksäntoista kertaa Niagaran '
+            + 'putouksen korkeus. Paikalliset tunsivat putouksen kauan, '
+            + 'mutta ulkomaailma sai siitä tiedon vasta 16. marraskuuta '
+            + '1933, kun yhdysvaltalainen lentäjä Jimmie Angel lensi sen '
+            + 'yli kultamalmia etsiessään; putous nimettiin hänen mukaansa '
+            + 'Angelin putoukseksi. Tarkka korkeus mitattiin vasta '
+            + '13. toukokuuta 1949 yhdysvaltalaisen toimittajan Ruth '
+            + 'Robertsonin rahoittamalla retkikunnalla.',
+          selite: 'Vesipatsas syöksyy pöytävuoren punaruskealta seinämältä ja '
+            + 'sumuuntuu jo puolimatkassa kallion edessä.',
+          lahde: 'Stratokumulus, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Angel Falls',
+        },
+        {
+          otsikko: 'Taivas joka palaa ilman ukkosenjyrinää',
+          tiedosto: 'Catatumbo Lightning - Rayo del Catatumbo.jpg',
+          teksti: 'Barí-kansan kielessä Catatumbo tarkoittaa ukkosen taloa, '
+            + 'ja nimi on ansaittu: Maracaibo-järven länsipuolella '
+            + 'salamoi 140–160 yönä vuodessa, yhdeksän tuntia kerrallaan '
+            + 'ja parhaimmillaan neljäkymmentä kertaa minuutissa. Tiheys, '
+            + 'noin 250 salamaa neliökilometrille vuodessa, on maailman '
+            + 'suurin. Ilmiö on ollut tiedossa kauan: luonnontutkija '
+            + 'Alexander von Humboldt kuvaili sitä 1826, ja maantieteilijä '
+            + 'Agustín Codazzi kirjoitti 1841 sen ohjaavan merenkulkijoita '
+            + 'kuin majakka. Kaukaa katsottuna välähdykset näkyvät ilman '
+            + 'ääntä, koska matkaa on kymmeniä kilometrejä.',
+          selite: 'Kaksi salamaa iskee samaan aikaan järven takaiseen '
+            + 'metsänreunaan, ja vesi heijastaa niiden valon.',
+          lahde: 'Fernando Flores from Caracas, Venezuela, Wikimedia Commons '
+            + '(CC BY-SA 2.0)',
+          wiki: 'Catatumbo lightning',
+        },
+        {
+          otsikko: 'Musta lääke keisarin kihtiin',
+          tiedosto: 'Lago de Maracaibo. Pozos petroleros.jpg',
+          teksti: 'Kauan ennen porauslauttoja alkuperäiskansat keräsivät '
+            + 'maan pinnalle pursuavaa mustaa mene-tervaa lääkkeeksi, '
+            + 'valaistukseen ja kanoottien tiivistämiseen. Espanjalaiset '
+            + 'oppivat saman tempun: vuonna 1539 Venezuelasta laivattiin '
+            + 'Espanjaan yksi tynnyri öljyä keisari Kaarle V:n kihdin '
+            + 'hoitoon. Teollinen poraus alkoi 1910-luvulla, ja sen keskus '
+            + 'olivat Maracaibo-järven ympärillä ja alla olevat kentät, '
+            + 'joiden matalaan veteen nousi metsä poraustorneja. Vuoteen '
+            + '1928 mennessä Venezuela oli maailman suurin öljynviejä, ja '
+            + 'öljystä tuli maan tärkein vientituote. Valtion öljy-yhtiön '
+            + 'pääkonttori on Caracasissa.',
+          selite: 'Vanhassa valokuvassa Maracaibo-järven matalikolla seisoo '
+            + 'rivi ristikkorakenteisia poraustorneja puulaitureineen.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'History of the Venezuelan oil industry',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Caracasissa musiikinopetus on julkinen laitos: valtion '
+        + 'rahoittama ohjelma on opettanut satojatuhansia lapsia '
+        + 'soittamaan orkesterissa.',
+      tehtava: {
+        kysymys: 'Kuka perusti El Sisteman vuonna 1975?',
+        vaihtoehdot: [
+          'José Antonio Abreu',
+          'Gustavo Dudamel',
+          'Teresa Carreño',
+          'Carlos Raúl Villanueva',
+        ],
+        oikea: 0,
+        fakta: 'Dudamel on ohjelmasta noussut kapellimestari, Carreño '
+          + '1800-luvun pianisti ja Villanueva arkkitehti – kaikki kolme '
+          + 'liittyvät kaupungin musiikkielämään, mutta perustaja oli '
+          + 'Abreu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Yksitoista oppilasta parkkihallissa',
+          tiedosto: 'Centro de Acción Social por la Música de Fundamusical Simón Bolívar Caracas Venezuela 5.jpg',
+          teksti: 'Vuonna 1975 José Antonio Abreu aloitti yhdentoista '
+            + 'oppilaan kanssa maanalaisessa parkkihallissa. Ajatus oli '
+            + 'yksinkertainen: lapsi ei opettele ensin soittamaan ja mene '
+            + 'sitten orkesteriin, vaan aloittaa orkesterissa heti '
+            + 'ensimmäisestä päivästä. Yhdessä soittaminen opettaa '
+            + 'kurinalaisuutta, ryhmätyötä ja kuulumista. Ohjelman '
+            + 'tunnuslause on ollut alusta asti Tocar y Luchar, soita ja '
+            + 'taistele. Virallisilta luvuiltaan El Sistemassa oli 2015 '
+            + 'yli 400 musiikkikeskusta ja 700 000 nuorta soittajaa, ja '
+            + 'sen esimerkin mukaan on perustettu ohjelmia yli '
+            + 'kuudessakymmenessä maassa.',
+          selite: 'Musiikin kansallisen keskuksen betonijulkisivulta riippuu '
+            + 'keltainen kineettinen pallo, joka on koottu tuhansista '
+            + 'ohuista tangoista.',
+          lahde: 'Warairarepano&Guaicaipuro, Wikimedia Commons (CC0)',
+          wiki: 'El Sistema',
+        },
+        {
+          otsikko: 'Orkesteri joka lähti Caracasista maailmalle',
+          tiedosto: 'Teatro Teresa Carreño, vista frontal del conjunto arquitectónico.JPG',
+          teksti: 'Ohjelman huipulle syntyi 12. helmikuuta 1978 Simón '
+            + 'Bolívar -sinfoniaorkesteri. Sen taiteellisena johtajana on '
+            + 'vuodesta 1999 toiminut Gustavo Dudamel, ja sen edessä ovat '
+            + 'seisoneet muun muassa Claudio Abbado, Simon Rattle ja Daniel '
+            + 'Barenboim. Elokuussa 2007 orkesteri debytoi Lontoon BBC '
+            + 'Promsissa ja esiintyi samana vuonna Carnegie Hallissa; '
+            + 'ylimääräisenä soitetusta Bernsteinin Mambosta tuli sen '
+            + 'tunnusnumero. Kotinsa orkesteri vaihtoi 2007 Teresa Carreño '
+            + '-kulttuurikeskuksesta viereiseen musiikin keskukseen. '
+            + 'Soittajia on 180, eikä se ole enää nuoriso-orkesteri: '
+            + 'vuoteen 2011 mennessä keski-ikä oli noussut yli '
+            + 'kahdenkymmenen.',
+          selite: 'Teresa Carreño -kulttuurikeskuksen betoniset kattolevyt '
+            + 'kelluvat pilarien varassa kuin päällekkäiset laatat.',
+          lahde: 'Angel Castillo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Simón Bolívar Symphony Orchestra',
+        },
+        {
+          otsikko: 'Sali jonka katossa kelluu pilviä',
+          tiedosto: 'UCV 2015-080a Aula Magna.jpg',
+          teksti: 'Kaupungin kuuluisin konserttisali on yliopiston Aula '
+            + 'Magna, joka vihittiin 2. maaliskuuta 1954. Sen akustiikka '
+            + 'oli aluksi huono, ja ratkaisu löytyi taiteesta: Alexander '
+            + 'Calderin suunnittelemat kaarevat levyt, Nubes eli pilvet, '
+            + 'siirrettiin ulkotilasta salin kattoon, jossa ne sekä '
+            + 'koristavat että ohjaavat ääntä. Suurin niistä on 80 '
+            + 'neliömetriä. Sali kuuluu Ciudad Universitaria de Caracasiin, '
+            + 'jonka Carlos Raúl Villanueva suunnitteli ja jota '
+            + 'rakennettiin 1944–1967; Unesco otti kampuksen '
+            + 'maailmanperintöluetteloon vuonna 2000 ja nimesi pilvet '
+            + 'erikseen.',
+          selite: 'Aula Magnan kattoon on ripustettu kymmeniä värillisiä '
+            + 'kaarevia levyjä, jotka kelluvat katsomon yllä kuin pilvet.',
+          lahde: 'GermanX, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'University City of Caracas',
+        },
+        {
+          otsikko: 'Kansallistanssi jota soitetaan harpulla',
+          tiedosto: 'Músicos tocando instrumentos nativos.jpg',
+          teksti: 'Konserttisalien rinnalla elää vanhempi musiikki. Joropo '
+            + 'syntyi Venezuelan ja Kolumbian llanos-tasangoilla noin '
+            + 'kolmesataa vuotta sitten, ja siinä yhdistyvät afrikkalaiset, '
+            + 'eurooppalaiset ja alkuperäiskansojen ainekset. Sitä '
+            + 'soitetaan harpulla, nelikielisellä cuatrolla ja maracaseilla, '
+            + 'ja se on sekä tanssi että sävellaji. Venezuelan viralliseksi '
+            + 'kansallistanssiksi ja -musiikiksi joropo julistettiin 1882 – '
+            + 'yhdeksän vuotta isoisän vierailun jälkeen. Sen tunnetuin '
+            + 'kappale Alma Llanera sai ensiesityksensä Caracasissa '
+            + '19. syyskuuta 1914, ja sitä kutsutaan maan toiseksi '
+            + 'kansallislauluksi. Unesco otti joropon aineettoman '
+            + 'kulttuuriperinnön luetteloon 2025.',
+          selite: '1800-luvun kaiverruksessa katumuusikot soittavat harppua '
+            + 'ja rumpua talon kuistin edessä ohikulkijoiden pysähtyessä '
+            + 'kuuntelemaan.',
+          lahde: 'Ramón Bolet Peraza / Antón Goering, Wikimedia Commons (PD)',
+          wiki: 'Joropo',
+        },
+      ],
+    },
+  ],
+  /*
+   * SALVADOR (lauta southamerica, kaupunki-id salvador, maa BRA) —
+   * kaupunkilehti 24.8.2026.
+   *
+   * LÄHTEET. Työpohjana docs/mantereet-tyoaineisto/faktapohja-salvador.md.
+   * Sen riippumatonta tarkistusta (tarkistus-salvador.md) EI OLE tässä
+   * työpuussa; tarkistuksen kolme pakollista korjausta ja seitsemän
+   * huomiota tulivat tehtävänannon mukana, ja ne on kaikki tehty (ks.
+   * alla). Jokainen tähän lohkoon menevä väite on lisäksi haettu
+   * uudestaan en-Wikipedian raakateksteistä 24.8.2026 (action=raw,
+   * NODE_USE_ENV_PROXY=1, uusinnat kasvavalla viiveellä — MediaWiki
+   * vastasi toistuvasti 429): Salvador Bahia, Barra Lighthouse,
+   * Malê revolt, Elevador Lacerda, Candomblé, Akara, Lavagem do Bonfim,
+   * Church of Nosso Senhor do Bonfim Salvador, Timeline of Salvador
+   * Bahia, Historic Center of Salvador, Porto da Barra Beach, Slavery
+   * in Brazil, Eusébio de Queirós Law.
+   *
+   * TARKISTUKSEN KOLME PAKOLLISTA KORJAUSTA ON TEHTY.
+   *
+   *   (1) ORJAKAUPAN LAKKAUTTAMISVUOSI ON 1850, EI 1851. Faktapohjan
+   *       nosto H3 sanoi leipätekstissä 1850 mutta omassa lähde-
+   *       viittauksessaan "(toteutui 1851)". Ristiriita on peräisin
+   *       en-Wikipediasta itsestään: "Malê revolt" (Aftermath) sanoo
+   *       "the slave trade was abolished in 1851", kun taas aiheen oma
+   *       artikkeli "Eusébio de Queirós Law" antaa tarkan päivämäärän
+   *       ("Law No. 581 of 4 September 1850 ... to abolish international
+   *       slave trade in the country") ja "Candomblé" (History) toistaa
+   *       saman ("Brazil abolished the slave trade in 1850"). Tarkempi
+   *       lähde voittaa: nosto H3 sanoo 1850 ja nimeää lain (Eusébio de
+   *       Queirósin laki, 4. syyskuuta 1850).
+   *
+   *   (2) LIBERDADE — "YKSI SUURIMMISTA", EI "SUURIN". Faktapohjan
+   *       jakso 2 väitti, että Liberdadessa asuisi suhteessa enemmän
+   *       afrobrasilialaisia kuin missään muualla Salvadorissa tai
+   *       Brasiliassa. Lähde on varauksellisempi: "The neighborhood of
+   *       Liberdade has one of the largest proportions of Afro-Brazilians
+   *       of Salvador and Brazil" (Salvador, Bahia — Neighborhoods).
+   *       Oppaan jakso 2 sanoo nyt "yksi suurimmista".
+   *
+   *   (3) COMMONS-KATEGORIA. Faktapohjan ehdottamaa kategoriaa
+   *       `Category:Historic Centre of Salvador de Bahia` EI OLE
+   *       OLEMASSA. Commonsin oma haku (srnamespace=14) antaa
+   *       pääkategoriaksi `Category:Historic center of Salvador (Bahia)`
+   *       — ja Commonsin epäjohdonmukaisuutena sen ALAKATEGORIAT
+   *       käyttävät silti "de Bahia" -muotoa ja ovat olemassa
+   *       (`Squares in the Historic Centre of Salvador de Bahia`,
+   *       `Aerial photographs of Centro Histórico de Salvador`). Jokainen
+   *       tässä käytetty kategoria on todennettu itse rajapinnasta.
+   *
+   * TARKISTUKSEN HUOMIOT ON MYÖS HOIDETTU.
+   *   (a) "Viimeisenä Amerikan mantereella" on nyt merkitty lähteeseen,
+   *       joka sen todella sanoo: en-Wikipedia "Slavery in Brazil"
+   *       ("Brazil was the last country in the Americas to abolish
+   *       slavery, on 13 May 1888"). Nosto H2 käyttää tätä muotoilua.
+   *   (b) Capoeira Regional / Capoeira Angola -erottelulle EI löytynyt
+   *       lähdeviitettä "Salvador, Bahia" -artikkelista, joka sanoo vain
+   *       "Salvador-born masters Mestre Bimba and Mestre Pastinha founded
+   *       capoeira schools and helped standardize and popularize the art".
+   *       Haaraerottelu on siksi JÄTETTY POIS nostosta M2, joka nimeää
+   *       mestarit ja heidän koulunsa mutta ei koulukuntien nimiä.
+   *   (c) Merkkimäärät on mitattu koneellisesti tästä tiedostosta, ei
+   *       faktapohjasta: nostot 474–589 merkkiä, sivujen johdannot
+   *       188–230 merkkiä, kuvatekstit yhden virkkeen mittaisia.
+   *
+   * ISOISÄN MATKAVUOSI 1873 ON LEHDEN ANKKURI. Elevador Lacerda,
+   * Brasilian ensimmäinen hissi, avattiin juuri 1873 ("Timeline of
+   * Salvador, Bahia": "1873 - Elevador Lacerda begins operating";
+   * "Salvador, Bahia": "In 1873, Brazil's first elevator ... was
+   * constructed"). Edellisessä väestönlaskennassa 1872 kaupungissa oli
+   * 129 109 asukasta, ja orjuus oli Brasiliassa yhä laillista.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, JOTKA RATKAISTIIN AUKI KIRJOITTAEN.
+   *   (a) HISSIN VALMISTUMISVUOSI. "Elevador Lacerda" -artikkelin
+   *       infobox sanoo completion_date 1869, leipäteksti "built between
+   *       1869 and 1873". Pääartikkeli, Timeline ja Commonsin kategoria
+   *       "1873 establishments in Brazil" sanovat 1873. Nosto H4 kertoo
+   *       molemmat: rakennettiin 1869–1873, avattiin 1873.
+   *   (b) HISSIN KAPASITEETTI. "Salvador, Bahia" sanoo 128 henkeä 22
+   *       sekunnissa, "Elevador Lacerda" taas neljä hissiä à 27 henkeä
+   *       30 sekunnissa. Kumpaakaan EI käytetä; nosto käyttää
+   *       riidatonta lukua (yli 33 000 matkustajaa vuorokaudessa 2019)
+   *       ja korkeuseroa 72 m, jotka molemmat artikkelit antavat samoin.
+   *   (c) IPHAN-SUOJELUN VUOSI. "Elevador Lacerda" -infobox sanoo 2002,
+   *       leipäteksti 7.12.2006 lähdeviitteen kanssa. Käytetään 2006,
+   *       koska sillä on lähde.
+   *
+   * SISÄLTÖLINJAUS (Raamatun pilarit 3 ja 4, tehtävänannon oma tilaus).
+   * ORJAKAUPPA ON KÄSITELTY, koska se on tämän kaupungin ydinaihe:
+   * tapahtumina, vuosilukuina ja lukuina, toteavasti. Ei kärsimyksen
+   * kuvailua, ei kaunistelua, ei dramatisointia. Häpeäpaalu kerrotaan
+   * sanan merkityksenä ja kaupunginosan nimen alkuperänä (H1), satama
+   * lukuina ja vientitavaroina (H2), Malê-kapina kapinallisten oman
+   * lukutaidon ja järjestäytymisen kautta (H3) — kapinan uhrilukuja
+   * (infoboxissa n. 7 + 80 kuollutta, 300 vangittua, 5 teloitettua) EI
+   * käytetä. Candomblé käsitellään USKONTONA, ei folklorena, ja
+   * capoeira, karnevaali ja bahialainen keittiö elävänä
+   * nykykulttuurina: toimivat temppelit ja niiden papittaret, joka
+   * tammikuinen kulkue, yhä soivat blocos afro -ryhmät ja yli 500
+   * acarajé-myyjää. Pelourinhon 1990-luvun peruskorjaukseen liittyvä
+   * afrobrasilialaisen väestön häätökeskustelu, Salvadorin
+   * väkivaltatilastot ja Magalhães-suvun "carlismo" on jätetty pois
+   * (ei nykypolitiikkaa, ei nykyrikollisuutta). Myöskään
+   * 2000-luvun uskonnollisia yhteenottoja ei käsitellä.
+   *
+   * KULTTUURIVISA (js/packs/southamerica-questions.js, avain salvador,
+   * viisi kysymystä) — vastaus LÖYTYY lehdestä mutta EI VISAN OMALLA
+   * SANAMUODOLLA:
+   *   1. pääkaupunki vuoteen 1763 -> nosto K1 antaa tarkat vuodet 1549
+   *      ja 1763 sekä nimen synnyn (Vespucci 1502); historia-sivun
+   *      johdanto toistaa aseman toisesta näkökulmasta.
+   *   2. capoeira -> nosto M2 (Bimba ja Pastinha, rodat kaduilla).
+   *      Visan fakta puhuu naamioinnista tanssiksi; lehti ei toista sitä.
+   *   3. Pelourinho -> nosto H1 kertoo nimen merkityksen (häpeäpaalu) ja
+   *      Unesco-vuoden 1985, joita visa ei mainitse.
+   *   4. acarajé -> nosto R1 (baianojen ammatti, vapauden osto,
+   *      IPHAN 2004, nimen etymologia). Visan fakta kuvailee reseptin;
+   *      R1 ei kuvaile reseptiä lainkaan, R2 kertoo rituaalikäytön.
+   *   5. candomblé -> nosto M1 (Casa Branca 1830, mãe de santo,
+   *      1 144 temppeliä 1997). Visan yleinen "säilytti uskomuksia" ei
+   *      toistu.
+   * SOUTHAMERICA_FACTS-kohdan `salvador` kolmea saapumiskorttifaktaa
+   * (pääkaupunki 1549–1763, Pelourinho maailmanperintönä, capoeira
+   * Bahiassa) ei toisteta sanamuodoltaan: lehti kertoo samat asiat
+   * nimen synnyn, häpeäpaalun merkityksen ja mestarien kautta.
+   * MINITEHTÄVÄT (kolme, yksi per teemasivu) eivät toista visaa ja
+   * jokaisen vastaus on SAMAN SIVUN nostotekstissä: hissin korkeusero
+   * H4:ssä, kulkueen pituus M3:ssa ja acarajé-sanan alkuperä R1:ssä.
+   *
+   * SIVU-ID:T. Kolme neljästä (`kaupunki`, `historia`, `ruoka`) ovat
+   * talon vakioaiheita (js/ui-apurit.js, AIHE_IKONIT). Neljäs,
+   * `mustarooma`, on taulun ulkopuolella ja piirtyy yleiskuvakkeella —
+   * sama perusteltu poikkeus kuin Adelaiden `saksalaisperinne`- ja
+   * Chicagon `arkkitehtuuri`-sivuilla. Nimi "Musta Rooma" on kaupungin
+   * oma lempinimi, ei ulkopuolisen keksimä: en-Wikipedia "Candomblé"
+   * (Demographics) sanoo Salvadorista "sometimes referred to as 'Black
+   * Rome'", ja se on myös pääartikkelin infoboxin lempinimilistalla.
+   * Vakioaihe `musiikki` olisi ollut saatavilla mutta harhaanjohtava:
+   * sivu on ennen muuta uskonnosta.
+   *
+   * KUVAT: 26 kuvaa, kaikki Wikimedia Commonsista. Lisenssi ja tekijä on
+   * luettu rajapinnan extmetadatasta (LicenseShortName, Artist,
+   * Restrictions) ja JOKAINEN valittu kuva on katsottu silmin 900
+   * pikselin esikatseluna. Kaikki ovat vähintään 1200 px leveitä,
+   * lisenssit ovat PD, CC0, CC BY tai CC BY-SA, eikä yhdelläkään ole
+   * Restrictions-merkintää. Kategoriat, joista haettiin (kaikki
+   * todennettu itse): Historic center of Salvador (Bahia), Largo do
+   * Pelourinho (Salvador), Aerial photographs of Centro Histórico de
+   * Salvador, Aerial photographs of Salvador (Bahia), Skylines of
+   * Salvador (Bahia), Elevador Lacerda, Farol da Barra, Mercado Modelo,
+   * Port of Salvador, Praça Tomé de Souza, Terreiro de Jesus,
+   * Cathedral-Basilica of Salvador, Igreja Nosso Senhor do Bonfim,
+   * Festa do Bonfim 2018, Candomblé in Bahia, Berimbau, Olodum,
+   * Akara in Brazil, Moqueca baiana, Old maps of Salvador (Bahia),
+   * Salvador (Bahia) in the 19th century.
+   *
+   * KUVAHYLKÄYKSET SYINEEN. TUNNISTETTAVAT KASVOT: "Cores no
+   * Pelourinho" (etualan mies oikeassa reunassa), "Baianas do Acarajé"
+   * (istuva myyjä keskellä), "Acarajes" (lavastettu sisäkuva lipun
+   * edessä), "Capoeristas do Terreiro de Jesus" ja "Bloco da Capoeira,
+   * Circuito Campo Grande 2008" (koko rinki kasvot kameraan), "Bloco de
+   * berimbau", "Saida do Olodum (Carnaval de 2010)", "Salvador
+   * (44573726072)", ferry-kuvat "Saindo do Terminal do Ferry-Boat de
+   * São Joaquim" ja "Ferry Zumbi dos Palmares". KUVAN PÄÄLLE LISÄTTY
+   * MERKINTÄ: "Palacio do Governo - Bahia ... Museu Paulista da USP"
+   * (museon värikalibrointipalkki ja postikortin kehys), "St. Salvador
+   * capitale ... btv1b53122061q" (Bibliothèque nationalen punainen
+   * arkistoleima), "Cidade da Bahia (The City of Bahia)" ja sen cropped-
+   * versio (albumipahvin reunat, taitteet ja painettu kuvateksti sekä
+   * kokoelmaleima; kuva on lisäksi hyvin haalistunut), "BAAG-StAAG
+   * Bahia-1885" (albumipahvin reunat). ALLE 1200 px: "Bahia - vista"
+   * (902), "Na Baía de Todos os Santos" (800), "Giuseppe Leone Righini —
+   * Vista do Porto de Salvador no século XIX" (640), "Elevador Lacerda e
+   * Forte São Marcelo" (1080), "Centro Histórico Pelourinho Bahia"
+   * (1080), koko "Festa do Bonfim 2023" -kategorian kuvasto (1024),
+   * "Procissão senhor do Bonfim" (1146), "Baiana do acaraje" (246),
+   * "Capoeira! Brazil" (604), "Capoeira Bahia" (640),
+   * "CapoeiraEdited OriginalBy-Turismo Bahia" (640), "Salvador visto de
+   * cima" (600). RESTRICTIONS-MERKINTÄ: "Candomblé in Salvador de
+   * Bahia" (extmetadata: personality). MUU SYY: "Salvador Bahia Skyline
+   * 2018-0901" ja "Salvador de Bahia vue panoramique 04" (kaupunki
+   * hukkuu — pelkkää merta ja harmaata pilveä), "View over the
+   * Pelourinho District - Salvador - Brazil 02" (kuvan hallitseva aihe
+   * on yksittäisen liikkeen kyltti), "Centro Histórico de Salvador
+   * Terreiro de Jesus ... 2019-6587" (kuva on pelkkä rakennuslaatta),
+   * "Centro Histórico de Salvador Bahia Largo Terreiro de Jesus
+   * 2021-5726" ja "... Largo do Pelourinho 2019-6500" (yksityiskohta-
+   * kuvia, eivät kerro kohteesta), "Linha elevada do Metrô de Salvador"
+   * (ilmakuva tiiviistä pientaloalueesta lukisi köyhyyskuvastona),
+   * "Marc Ferrez — Bay Todos os Santos, Paqueta" (ei esitä Salvadoria),
+   * "Catedral Basílica de Salvador - ft. Lazaro Menezes" (yökuva, jossa
+   * etualan täyttävät autot ja liikennekartiot).
+   *
+   * KUVAPOIKKEUS, JOKA SELITETÄÄN KUVATEKSTISSÄ: nosto K1 käyttää
+   * Frézier'n vuoden 1714 kuparipiirrosta, jonka reunassa on kaivertajan
+   * oma kirjain- ja numeroluettelo ja jonka yläreunaan on painettu
+   * julkaisijan kuvateksti. Sama poikkeus kuin Valparaíson 1860-luvun
+   * puupiirroksessa ja Liman 1744-kartassa.
+   *
+   * AIHETOISTO ON HARKITTU JA PERUSTELTU. (1) Elevador Lacerda näkyy
+   * kolmessa kuvassa eri roolissa: kansikuvassa maamerkkinä lahden ja
+   * Mercado Modelon kanssa, nostossa K2 mittatikkuna, joka näyttää
+   * 85 metrin jyrkänteen kaupungin kahden kerroksen välissä, ja
+   * nostossa H4 lähikuvana tornin nimikilvestä. (2) Acarajé näkyy
+   * kahdesti ruokasivulla: R1:ssä paistumassa dendê-öljyssä (baianojen
+   * työ) ja R2:ssa tarjoiltuna (rituaali- ja arkiruoka). (3) Mercado
+   * Modelo näkyy kansikuvassa ja avauskuvassa kaukaa sekä nostossa R4
+   * julkisivuna. Yksikään tiedostonimi ei toistu, eikä yksikään ole
+   * sama kuin js/packs/southamerica-valokuvat.js:n salvador-lohkossa
+   * (Salvador bahia panorama 1870, Baiana-acarajé-Salvador, Largo do
+   * Pelourinho ... DSC05452, Elevador Lacerda ... 2019-0359,
+   * Salvador 01).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian Climate-osioon ja sen
+   * 1991–2020-sääruutuun ja SANOO SEN ÄÄNEEN — Samarkandin,
+   * Vancouverin, Liman, Quiton ja Valparaíson malli.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   * Matkailijalle-etusivukuva on tuore ja MALTILLINEN PYSTY
+   * (3941x5911, w/h 0,67).
+   */
+  salvador: [
+    {
+      id: 'kaupunki',
+      nimi: 'Salvador',
+      johdanto: 'Kaikkien pyhien lahden niemellä kohoava Salvador oli '
+        + 'Portugalin Brasilian ensimmäinen pääkaupunki ja sen tärkein '
+        + 'satama. Kaupunki on rakennettu kahteen kerrokseen jyrkänteen '
+        + 'ylle, ja sen nykykulttuuri on Brasilian afrikkalaisinta.',
+      kansikuvat: [
+        {
+          tiedosto: 'Raul Golinelli Elevador Lacerda Mercado Modelo Salvador Bahia Brasil.jpg',
+          selite: 'Lacerdan hissin torni erottaa Yläkaupungin '
+            + 'Alakaupungista, ja sen takana avautuu Kaikkien pyhien lahti '
+            + 'venesatamineen, Mercado Modelon keltainen tullitalo ja '
+            + 'merellä seisova São Marcelon pyöreä linnake.',
+          lahde: 'Raul Golinelli, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Panorama Salvador com Farol da Barra (52620265937).jpg',
+          selite: 'Barran niemen kärjessä seisoo Santo Antônion linnake '
+            + 'majakkoineen, ja sen takaa alkaa kaupungin tornirivi, joka '
+            + 'jatkuu koko rannikon suuntaisesti.',
+          lahde: 'Marinha do Brasil, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'MARCIO FILHO PELOURINHO SALVADOR BAHIA (40369900734).jpg',
+          selite: 'Largo do Pelourinhon vinolla mukulakiviaukiolla '
+            + 'siirtomaa-ajan talot on maalattu vihreiksi, sinisiksi ja '
+            + 'vaaleanpunaisiksi, ja aukion päästä katu laskee kohti merta.',
+          lahde: 'MTur Destinos, Wikimedia Commons (PD)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Centro Histórico Salvador Vista Aérea 2021-0933.jpg',
+          selite: 'Historiallisen keskustan tiilikatot peittävät koko '
+            + 'jyrkänteen laen, ja niiden takana näkyvät sataman aallonmurtaja '
+            + 'ja Kaikkien pyhien lahti.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vista de Salvador da ponta da Barra.jpg',
+          selite: 'Mereltä katsottuna kaupunki täyttää koko kolmion '
+            + 'muotoisen niemen, jonka kärjessä Barran majakka erottaa lahden '
+            + 'Atlantista.',
+          lahde: 'Fotos GOVBA from Bahia/Brasil, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Webysther 20150907165153 - Mercado modelo e baia de todos os santos.jpg',
+          selite: 'Yläkaupungin reunalta katsottuna Alakaupunki jää suoraan '
+            + 'alapuolelle, ja lahdella näkyvät venesatama, rahtilaivat ja '
+            + 'São Marcelon linnake.',
+          lahde: 'Webysther, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Nimi joka syntyi pyhäinpäivänä',
+          tiedosto: 'Frezier Voyage St Salvador.jpg',
+          teksti: 'Kaupungin nimi tulee juhlapäivästä. Italialainen '
+            + 'purjehtija Amerigo Vespucci näki lahden pyhäinpäivänä '
+            + '1. marraskuuta 1502 ja nimesi sen kotiseurakuntansa mukaan '
+            + 'Firenzessä: Kaikkien pyhien lahdeksi. Portugalilaiset '
+            + 'asettuivat niemelle 1549 Tomé de Sousan johdolla ja antoivat '
+            + 'linnoitukselleen nimen São Salvador da Bahia de Todos os '
+            + 'Santos, Kaikkien pyhien lahden pyhä Vapahtaja. Täältä '
+            + 'hallittiin koko Portugalin Brasiliaa vuoteen 1763, jolloin '
+            + 'hallinto siirrettiin Rio de Janeiroon, josta tuli samalla '
+            + 'varakuningaskunnan pääkaupunki.',
+          selite: 'Amédée François Frézier\'n vuoden 1714 kuparipiirroksessa '
+            + 'on ylhäällä näkymä kaupunkiin lahdelta ja alhaalla '
+            + 'asemakaava, jonka kirjaimet ja numerot viittaavat reunaan '
+            + 'painettuun kaivertajan omaan luetteloon.',
+          lahde: 'Amédée François Frézier, Wikimedia Commons (PD)',
+          wiki: 'Salvador, Bahia',
+        },
+        {
+          otsikko: 'Kaksi kaupunkia samalla kalliolla',
+          tiedosto: 'Salvador Historic Center - Sea View.jpg',
+          teksti: 'Salvador on rakennettu kahteen kerrokseen. Noin 85 metriä '
+            + 'korkea jyrkänne erottaa Yläkaupungin, jossa ovat hallinto, '
+            + 'kirkot ja asuinkorttelit, Alakaupungista, joka on aina ollut '
+            + 'sataman ja torien aluetta. Rantaviivaa kaupungilla on 80 '
+            + 'kilometriä. Yläkaupungin rannat avautuvat Atlantille ja '
+            + 'Alakaupungin rannat lahdelle; ainoa poikkeus on Porto da '
+            + 'Barran ranta, joka on Yläkaupungin puolella mutta katsoo '
+            + 'silti lahdelle. Brittilehti The Guardian valitsi sen 2007 '
+            + 'maailman kolmanneksi parhaaksi rannaksi.',
+          selite: 'Mereltä katsottuna jyrkänne erottaa selvästi Alakaupungin '
+            + 'venesataman ja Mercado Modelon ylhäällä olevasta '
+            + 'vanhastakaupungista, jonne noustaan Lacerdan hissillä.',
+          lahde: 'Fernando Hidalgo Molina, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Salvador, Bahia',
+        },
+        {
+          otsikko: 'Lahti joka antoi kaupungille elannon',
+          tiedosto: 'Baía de Todos-os- Santos e Solar do Unhão - Foto Tereza Torres- Setur) (16253451116).jpg',
+          teksti: 'Kaikkien pyhien lahti on Brasilian suurin lahti, ja '
+            + 'Salvador seisoo kolmion muotoisella niemellä, joka erottaa '
+            + 'sen Atlantista. Lahden yli on kuljettu viisi vuosisataa: '
+            + 'suurelle Itaparican saarelle mennään yhä lautalla, joka '
+            + 'lähtee Mercado Modelon läheltä. Koska valaat käyttivät '
+            + 'lahtea pariutumisalueenaan, kaupungista kasvoi 1800-luvulla '
+            + 'yksi eteläisen pallonpuoliskon suurista '
+            + 'valaanpyyntisatamista – '
+            + 'mutta pyynti oli jo hiipumassa 1870-luvulle tultaessa, juuri '
+            + 'isoisän matka-aikoihin.',
+          selite: 'Solar do Unhãon vanha kartano kappeleineen seisoo lahden '
+            + 'rannassa, ja sen edessä levittäytyy venesatama, jonka takana '
+            + 'näkyvät sataman nosturit.',
+          lahde: 'Turismo Bahia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Salvador, Bahia',
+        },
+        {
+          otsikko: 'Majakka jonka kauppa teki välttämättömäksi',
+          tiedosto: 'Barra Lighthouse, Salvador.jpg',
+          teksti: 'Barran niemen kärkeen rakennettiin 1600-luvulla majakka, '
+            + 'koska kaupan ja orjakaupan kasvu vaati opastetta lahden '
+            + 'suulle. Se tehtiin savesta ja se oli toinen koko Amerikan '
+            + 'mantereelle rakennettu majakka. Vuonna 1668 galjooni '
+            + 'Santíssimo Sacramento haaksirikkoutui hiekkasärkälle, ja '
+            + 'englantilainen kaappari William Dampier kirjasi lokikirjaansa '
+            + '1699 nähneensä linnoituksen lyhtyjen opastavan laivoja yöllä. '
+            + 'Nykyinen 22-metrinen torni tilattiin Englannista, ja '
+            + 'Pedro II vihki sen käyttöön 2. joulukuuta 1839.',
+          selite: 'Mustavalkoraidallinen majakkatorni nousee Santo Antônion '
+            + 'linnakkeen keskeltä, ja sen juurella lepää vanha '
+            + 'tykinputki.',
+          lahde: 'Thiago Alexandre, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Barra Lighthouse',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Igreja de Nossa Senhora do Rosário dos Pretos Salvador 2018-1153.jpg',
+          selite: 'Rosário dos Pretosin vaaleansininen kirkko Pelourinhon '
+            + 'laidalla rakennettiin mustien veljeskunnan omin varoin, ja '
+            + 'siellä pidetään messuja joruban kielellä.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Salvador on helpointa hahmottaa kahtena kerroksena. '
+          + 'Alhaalla lahden rannassa on Cidade Baixa, jossa ovat satama, '
+          + 'Mercado Modelo ja Comércion vanhat kauppakorttelit. Ylhäällä '
+          + 'jyrkänteen päällä on Cidade Alta, jonne mahtuvat Pelourinho, '
+          + 'aukiot ja suurin osa kirkoista. Kerrosten väliä kuljetaan '
+          + 'Lacerdan hissillä, ja niin kauan kuin näet sen tornin, tiedät '
+          + 'missä olet. Vanhankaupungin mukulakivikadut ovat jyrkkiä ja '
+          + 'lämpötila pysyy 25 asteen tuntumassa ympäri vuoden, joten '
+          + 'kävelymatkat kannattaa mitoittaa lyhyemmiksi kuin kartalta '
+          + 'näyttää. Matka-aikaa taas kannattaa miettiä sateen eikä lämmön '
+          + 'mukaan: kuivinta on joulukuusta tammikuuhun.',
+        artikkeli: {
+          nimi: 'Matkailijan Salvador',
+          taitto: 'opas',
+          teksti: 'Kaksikerroksinen satamakaupunki, jossa siirtomaa-ajan '
+            + 'kirkot, candomblén temppelit ja maailman suurin katukarnevaali '
+            + 'mahtuvat samalle niemelle.',
+          nosto: 'Kaupunki on kahdessa kerroksessa: jos suunta katoaa, etsi '
+            + 'Lacerdan hissin torni.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Salvadoriin saavutaan Deputado Luís Eduardo '
+                + 'Magalhãesin kansainväliselle lentoasemalle, joka on 28 '
+                + 'kilometriä keskustasta pohjoiseen dyynien ja Atlantin '
+                + 'metsän keskellä; kentälle vievästä tiestä on tullut yksi '
+                + 'kaupungin omista nähtävyyksistä. Metro on kulkenut '
+                + 'vuodesta 2014, ja sen ensimmäinen linja Lapasta Pirajálle '
+                + 'oli 2018 mennessä 32 kilometriä pitkä ja siinä oli 20 '
+                + 'asemaa; toinen linja yhdistää lentoaseman keskustaan ja '
+                + 'Fonte Novan stadionille. Bussit hoitavat loput: niitä on '
+                + 'noin 2 500 ja matkustajia päivässä kaksi miljoonaa. '
+                + 'Lahden yli Itaparican saarelle päästään lautalla, joka '
+                + 'lähtee Alakaupungista.',
+              kuva: {
+                tiedosto: 'Estação da linha 1 do metrô de Salvador.jpg',
+                selite: 'Metron ykköslinjan keltainen putkiasema kaartuu '
+                  + 'moottoritien yli, ja sen ympärillä kaupunki jatkuu '
+                  + 'rinteitä pitkin joka suuntaan.',
+                lahde: 'Portal da Copa/ME (victoria.camara), Wikimedia '
+                  + 'Commons (CC BY 3.0 br)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki jakautuu kolmeen vyöhykkeeseen. '
+                + 'Länsivyöhykkeellä ovat tunnetuimmat korttelit: '
+                + 'Pelourinho, Comércio ja vanha keskusta. Etelävyöhykkeellä '
+                + 'ovat rantakaupunginosat: Barra rantoineen ja '
+                + 'karnevaalireitteineen, tornitalojen Vitória, Campo Granden aukio '
+                + 'itsenäisyysmuistomerkkeineen sekä Graça ja Ondina. '
+                + 'Itävyöhykkeellä ovat kaupungin varakkaimmat asuinalueet, '
+                + 'muun muassa Pituba, Itaigara ja Stella Maris. Lahden '
+                + 'puoleinen luoteisosa tunnetaan nimellä Cidade Baixa, ja '
+                + 'siihen kuuluu Liberdaden kaupunginosa, jonka '
+                + 'afrobrasilialaisten osuus on yksi suurimmista sekä '
+                + 'Salvadorissa että koko Brasiliassa. Kaupunginosien tarkkaa '
+                + 'määrää ei tiedetä, koska kasvu oli vuosisatojen ajan '
+                + 'täysin suunnittelematonta.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: käsityö ja onnennauhat',
+              teksti: 'Bahian käsityö tehdään yksinkertaisista '
+                + 'raaka-aineista – oljesta, nahasta, savesta, puusta, '
+                + 'simpukankuorista ja helmistä – ja aiheet ovat useimmiten '
+                + 'uskonnollisia. Samoissa töissä kulkevat rinnakkain '
+                + 'katoliset pyhimykset ja candomblén jumaluudet, ja '
+                + 'musiikki näkyy atabaque-rumpuina, sadekapuloina ja '
+                + 'berimbau-jousina. Tunnetuin muisto on kuitenkin halvin: '
+                + 'Bonfimin nauha, kapea värillinen kangassuikale, joka '
+                + 'sidotaan ranteeseen kolmella solmulla ja jokaisella '
+                + 'solmulla toivotaan yksi toive. Nauhoja on solmittu '
+                + 'tuhansittain Bonfim-kirkon aidan pylväisiin. Suurin '
+                + 'käsityökeskittymä on Mercado Modelo, joka on koko '
+                + 'Latinalaisen Amerikan suurin.',
+              kuva: {
+                tiedosto: 'Fitas senhor do bonfim salvador.jpg',
+                selite: 'Bonfim-kirkon aidan pylväisiin on solmittu satoja '
+                  + 'värillisiä nauhoja, joihin on painettu kirkon nimi.',
+                lahde: 'Py4nf, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: katedraali joka oli jesuiittakirkko',
+              teksti: 'Salvadorista tehtiin 1551 koko Brasilian ensimmäisen '
+                + 'hiippakunnan keskus, ja ensimmäinen piispa saapui '
+                + 'seuraavana vuonna. Jesuiitat rakensivat ensin '
+                + 'savi- ja olkikirkon ja saivat 1553 valmiiksi kivisen '
+                + 'kirkon Terreiro de Jesusin aukiolle. Nykyinen katedraali '
+                + 'on sen seuraaja, rakennettu 1657–1679, ja se on yksi '
+                + 'Brasilian hienoimmista manierismin ajan rakennuksista. '
+                + 'Kuningas Pedro II:n pyynnöstä Salvadorin piispa '
+                + 'irrotettiin 1676 Lissabonin arkkihiippakunnasta, ja hän '
+                + 'toimi Kongon ja Angolan primaksena vuoteen 1844 asti. '
+                + 'Titteli on yhä voimassa: kaupungin arkkipiispa on '
+                + 'Brasilian primas.',
+              kuva: {
+                tiedosto: 'Catedral Basílica de Salvador 2019-6525.jpg',
+                selite: 'Katedraalin vaalea kivijulkisivu Terreiro de '
+                  + 'Jesusin laidalla on hillityn manieristinen, ja sen '
+                  + 'päätykolmiossa lukee jesuiittojen tunnus IHS.',
+                lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Salvadorista puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Salvador-artikkelin Climate-osiosta ja '
+                + 'sen 1991–2020-sääruudusta eivätkä samasta lähteestä kuin '
+                + 'lehtien vuosigraafit. Ilmasto on kauppatuulten '
+                + 'trooppinen sademetsäilmasto (Köppen: Af), ja lämpötila '
+                + 'vaihtelee vähän: vuoden keskiarvo on 25,6 astetta, '
+                + 'lämpimin kuukausi maaliskuu 27,1 ja viilein elokuu 23,6. '
+                + 'Päivän ylin on keskimäärin 29,0 ja yön alin 22,7 astetta. '
+                + 'Sadetta kertyy vuodessa noin 1 833 millimetriä, mutta se '
+                + 'jakautuu hyvin epätasaisesti: joulukuussa 63 ja '
+                + 'tammikuussa 77 millimetriä, kun taas huhtikuussa 285, '
+                + 'toukokuussa 302 ja kesäkuussa 238. Kuivin aika on siis '
+                + 'joulukuusta tammikuuhun, sateisin huhtikuusta kesäkuuhun.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Salvador oli Portugalin Brasilian hallinnollinen keskus yli '
+        + 'kaksisataa vuotta ja maan suurin orjien tuontisatama. Isoisän '
+        + 'matkavuonna 1873 kaupunkiin valmistui Brasilian ensimmäinen '
+        + 'hissi.',
+      tehtava: {
+        kysymys: 'Kuinka suuren korkeuseron Elevador Lacerda kulkee?',
+        vaihtoehdot: [
+          '72 metriä',
+          '22 metriä',
+          '128 metriä',
+          '7 metriä',
+        ],
+        oikea: 0,
+        fakta: 'Hissi nousee Alakaupungin Cayrún aukiolta Yläkaupungin Tomé '
+          + 'de Sousan aukiolle. Ilman sitä sama matka on jyrkkää '
+          + 'rinnekatua.',
+      },
+      nostot: [
+        {
+          otsikko: 'Häpeäpaalun mukaan nimetty kaupunginosa',
+          tiedosto: 'Salvador Piedade XIX.jpg',
+          teksti: 'Pelourinho tarkoittaa portugaliksi häpeäpaalua. '
+            + 'Ensimmäisenä pääkaupunkina Salvador käytti orjatyövoimaa, ja '
+            + 'häpeäpaaluja pystytettiin avoimille paikoille – Terreiro de '
+            + 'Jesusille sekä aukioille, jotka tunnetaan nykyään Tomé de '
+            + 'Sousan ja Castro Alvesin aukioina. Paalu oli joillekin '
+            + 'auktoriteetin ja oikeuden vertauskuva, useimmille ruoskimisen '
+            + 'ja vääryyden. Yksi paaluista siirrettiin myöhemmin '
+            + 'nykyiselle Praça da Piedadelle, mutta nimi jäi elämään koko '
+            + 'historiallisen keskustan nimenä. Alue on ollut Unescon '
+            + 'maailmanperintökohde vuodesta 1985.',
+          selite: 'Praça da Piedaden aukio 1800-luvulla kuvattuna: kirkon '
+            + 'kupoli ja kellotorni kohoavat matalien talojen takaa, ja '
+            + 'aukion poikki ajaa ratsastaja.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Historic Center of Salvador',
+        },
+        {
+          otsikko: 'Brasilian suurin orjasatama',
+          tiedosto: 'Porto de Salvador Bahia Vista Aérea 2021-0005.jpg',
+          teksti: 'Salvadorin satama oli Brasilian suurin orjien '
+            + 'tuontisatama ja koko maan atlanttisen orjakaupan '
+            + 'pääasiallinen kohde; vastasuuntaan täältä vietiin Eurooppaan '
+            + 'sokeria, puuvillaa, tupakkaa ja puutavaraa. Brasiliaan '
+            + 'tuotiin kaikkiaan noin neljä miljoonaa orjuutettua '
+            + 'afrikkalaista, enemmän kuin mihinkään muualle Amerikan '
+            + 'mantereelle, ja heistä suurin osa päätyi Bahiaan. Kun isoisä '
+            + 'matkusti 1873, orjuus oli Brasiliassa yhä laillista: se '
+            + 'lakkautettiin vasta 13. toukokuuta 1888, viimeisenä Amerikan '
+            + 'mantereen maista.',
+          selite: 'Salvadorin satamassa on nykyään konttiterminaali '
+            + 'nostureineen, ja sen takana avautuu Kaikkien pyhien lahti.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC0)',
+          wiki: 'Slavery in Brazil',
+        },
+        {
+          otsikko: 'Kapinaan nousseet oppineet',
+          tiedosto: 'Praça Tomé de Souza.jpg',
+          teksti: 'Tammikuussa 1835 Salvadorissa nousi kapinaan joukko '
+            + 'orjuutettuja ja vapautettuja muslimeja, joita kutsuttiin '
+            + 'Bahiassa nimellä malê. He osasivat lukea ja kirjoittaa '
+            + 'arabiaa ja opettivat taitoa toisilleen kadunkulmissa ja '
+            + 'vuokraamissaan rukoushuoneissa. Kapina ajoitettiin '
+            + 'juhlapäivän yöhön, jolloin viranomaiset olivat Bonfimissa, '
+            + 'mutta se paljastui etukäteen ja kukistettiin saman yön '
+            + 'aikana; taistelu eteni Palatsiaukiolle, nykyiselle Praça '
+            + 'Municipalille. Noin kaksisataa selvinnyttä karkotettiin '
+            + 'takaisin Länsi-Afrikkaan, ja heidän jälkeläisiään on yhä '
+            + 'muun muassa Lagosissa ja Ghanassa.',
+          selite: 'Praça Municipalin laajalla mukulakiviaukiolla seisoo '
+            + 'Rio Brancon palatsi, ja aukion toisella laidalla on '
+            + 'siirtomaa-ajan kaupungintalo.',
+          lahde: 'Portal da Copa/ME (victoria.camara), Wikimedia Commons '
+            + '(CC BY 3.0 br)',
+          wiki: 'Malê revolt',
+        },
+        {
+          otsikko: 'Hissi joka nosti kaupungin 1873',
+          tiedosto: 'Elevador Lacerda Salvador Bahia 20211003-6721.jpg',
+          teksti: 'Elevador Lacerda rakennettiin 1869–1873 ja avattiin '
+            + 'liikenteelle 1873 – samana vuonna, jolta isoisän '
+            + 'matkapäiväkirja on. Se oli Brasilian ensimmäinen hissi ja se '
+            + 'kulkee 72 metrin korkeuseron Alakaupungin ja Yläkaupungin '
+            + 'väliä. Nimi tulee liikemies Antônio de Lacerdalta, joka '
+            + 'johti Bahian kauppayhdistystä. Alun perin hissi toimi '
+            + 'vesivoimalla, sähköistettiin 1906 ja sai nykyiset '
+            + 'art déco -torninsa 1930. Kansallisperinnöksi se listattiin '
+            + 'vasta 7. joulukuuta 2006, ja vuonna 2019 sillä kulki yli '
+            + '33 000 matkustajaa vuorokaudessa.',
+          selite: 'Tornin päädyssä lukee kohokirjaimin LACERDA, ja sen '
+            + 'yläpuolella on kaupungin kultainen vaakuna.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Elevador Lacerda',
+        },
+      ],
+    },
+    {
+      id: 'mustarooma',
+      nimi: 'Musta Rooma',
+      johdanto: 'Salvadoria kutsutaan Mustaksi Roomaksi, koska candomblé, '
+        + 'capoeira ja karnevaali eivät ole täällä museoesineitä vaan '
+        + 'arkea. Temppelit toimivat, mestarit opettavat ja kadut täyttyvät '
+        + 'joka vuosi uudelleen.',
+      tehtava: {
+        kysymys: 'Kuinka pitkän matkan baianojen kulkue kävelee Bonfimin '
+          + 'kukkulalle?',
+        vaihtoehdot: [
+          'kahdeksan kilometriä',
+          'kahdeksansataa metriä',
+          'kaksikymmentäviisi kilometriä',
+          'kahdeksankymmentä kilometriä',
+        ],
+        oikea: 0,
+        fakta: 'Kulkue lähtee Conceiçãon basilikalta Alakaupungista ja '
+          + 'päättyy Bonfimin kirkon portaille. Kaikki kulkevat valkoisissa '
+          + 'vaatteissa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Temppeli joka on vanhempi kuin uskonnon nimi',
+          tiedosto: 'Orixás du dique do Tororó à Salvador (Bahia), Brésil (focus).jpg',
+          teksti: 'Candomblé on afrobrasilialainen uskonto, joka syntyi '
+            + 'Bahiassa 1800-luvun alussa, kun Länsi-Afrikasta tuotujen '
+            + 'ihmisten perinteet järjestäytyivät yhdeksi jumalanpalvelus'
+            + 'käytännöksi. Vanhin temppeli, Ilê Axé Iyá Nassô Oká eli Casa '
+            + 'Branca, perustettiin Salvadorissa 1830, ja siitä polveutuu '
+            + 'uskonnon suurin haara nagô. Temppeleitä johtavat Bahiassa '
+            + 'useimmiten naiset, papittaret joita kutsutaan nimellä mãe de '
+            + 'santo. Kaupunki on uskonnon keskus: vuoden 1997 laskennassa '
+            + 'Salvadorissa oli 1 144 toimivaa temppeliä.',
+          selite: 'Dique do Tororón tekojärvessä seisoo kahdeksan '
+            + 'suurikokoista orixá-veistosta, joista kukin kantaa oman '
+            + 'jumaluutensa tunnusesinettä.',
+          lahde: 'Pierre André Leclercq, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Candomblé',
+        },
+        {
+          otsikko: 'Kamppailulaji joka kasvoi aikuiseksi Salvadorissa',
+          tiedosto: 'Berimbau being sold on the street in Salvador, state of Bahia, Brazil.jpg',
+          teksti: 'Capoeira yhdistää kamppailun, tanssin ja musiikin. Laji '
+            + 'sai alkunsa Palmaresin pakolaisyhteisössä Pernambucossa, '
+            + 'mutta Salvadoria pidetään sen nykyisten koulukuntien kotina: '
+            + '1900-luvun alkupuoliskolla täällä syntyneet mestarit Mestre '
+            + 'Bimba ja Mestre Pastinha perustivat omat koulunsa ja '
+            + 'vakiinnuttivat lajin muodon. Heidän työnsä teki capoeirasta '
+            + 'tunnustetun taidemuodon ensin Brasiliassa ja sitten '
+            + 'maailmalla. Musiikin johtaa berimbau, yksikielinen '
+            + 'jousisoitin, jonka ääni määrää rinkiin pelin nopeuden.',
+          selite: 'Kadulle pystytetyssä telineessä riippuu rivi myytäviä '
+            + 'berimbaueja, joiden kalebassikaikupohjat on maalattu '
+            + 'kirkkain värein.',
+          lahde: 'Wmpearl, Wikimedia Commons (CC0)',
+          wiki: 'Capoeira',
+        },
+        {
+          otsikko: 'Pakkotyöstä alkanut juhla',
+          tiedosto: 'Lavagem do Bonfim 2018. Foto- Tatiana Azeviche (39634974501).jpg',
+          teksti: 'Lavagem do Bonfim alkoi 1773, kun kirkon maallikko'
+            + 'veljeskunta pakotti orjuutetut pesemään ja koristelemaan '
+            + 'Bonfim-kirkon ennen sen juhlaa. Candomblén harjoittajille '
+            + 'pesusta tuli myöhemmin osa Oxalán vesien seremoniaa, ja '
+            + 'arkkihiippakunta siirsi rituaalin kirkon sisältä portaille ja '
+            + 'kirkkopihalle. Nykyään noin kaksisataa valkopukuista baianaa '
+            + 'kävelee tammikuussa kahdeksan kilometriä Conceiçãon '
+            + 'basilikalta Bonfimin kukkulalle ja kaataa tuoksuvettä '
+            + 'portaille joruban kielisten laulujen ja rumpujen tahtiin.',
+          selite: 'Valkopukuinen baiana nojaa Bonfim-kirkon vihreään oveen, '
+            + 'ja hänen vierellään roikkuu tuhansia toivenauhoja.',
+          lahde: 'Turismo Bahia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Lavagem do Bonfim',
+        },
+        {
+          otsikko: 'Katujuhla joka soi Afrikan rytmiä',
+          tiedosto: 'Carnaval 2018. Foto- Tatiana Azeviche.jpg',
+          teksti: 'Bahian karnevaali on Guinnessin ennätyskirjan mukaan '
+            + 'maailman suurin katujuhla: viikon ajan lähes neljä miljoonaa '
+            + 'ihmistä juhlii 25 kilometrin matkalla katuja ja aukioita, ja '
+            + 'pelkkä järjestäminen työllistää yli satatuhatta. Juhlan '
+            + 'sydämessä soivat blocos afro -ryhmät – Ilê Aiyê, Olodum, '
+            + 'Timbalada ja Filhos de Gandhy – jotka syntyivät nostamaan '
+            + 'afrobrasilialaisen kulttuurin esiin karnevaalin '
+            + 'valtavirrasta. Niiden luoma axé ja samba-reggae soivat '
+            + 'nykyään koko Brasiliassa.',
+          selite: 'Blocon rummuttajat kantavat olkahihnoissaan suuria '
+            + 'surdo-rumpuja, joiden kalvoihin on maalattu ryhmän omat '
+            + 'värit.',
+          lahde: 'Turismo Bahia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Bahian Carnival',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Bahian keittiö on Brasilian afrikkalaisin: dendê-palmuöljy, '
+        + 'äyriäiset ja mausteet kertovat samaa tarinaa kuin kaupungin '
+        + 'väestö. Moni resepti kulki Länsi-Afrikasta merten yli '
+        + 'orjuutettujen mukana.',
+      tehtava: {
+        kysymys: 'Mitä sana acarajé alun perin tarkoittaa joruban kielellä?',
+        vaihtoehdot: [
+          '"tule syömään akaraa"',
+          '"pyhä öljy"',
+          '"papujen juhla"',
+          '"valkoinen puku"',
+        ],
+        oikea: 0,
+        fakta: 'Sanonta oli myyntihuuto, jolla kadulla työskentelevät naiset '
+          + 'kutsuivat ohikulkijoita. Ruoan oma nimi on joruban kielessä '
+          + 'àkàrà.',
+      },
+      nostot: [
+        {
+          otsikko: 'Naiset jotka ostivat vapautensa myyntitulolla',
+          tiedosto: 'MARCIO FILHO ACARAJE DA CIRA SALVADOR BAHIA (41036436112).jpg',
+          teksti: 'Acarajéta on myyty Salvadorin kaduilla 1800-luvulta '
+            + 'lähtien, ja myyjät – valkopukuiset baianat – tunnistaa jo '
+            + 'kaukaa. Nimikin syntyi kaupankäynnistä: brasilianportugalin '
+            + 'acarajé tulee joruban ilmauksesta àkàrà n\'jẹ, "tule syömään '
+            + 'akaraa", jolla myyjät kutsuivat ohikulkijoita. Myyntitulot '
+            + 'eivät olleet pelkkää arjen leipärahaa vaan monelle naiselle '
+            + 'ainoa keino koota summa, jolla osti orjuutetun '
+            + 'perheenjäsenensä vapaaksi. Kaupungissa toimii yhä yli 500 '
+            + 'myyjää, ja kulttuuriperintövirasto IPHAN listasi 2004 sekä '
+            + 'ruoan että baianojen ammatin kansallisperinnöksi.',
+          selite: 'Myyntikojun leveässä pannussa kohoaa parikymmentä '
+            + 'acarajéta kiehuvassa oranssissa dendê-palmuöljyssä.',
+          lahde: 'MTur Destinos, Wikimedia Commons (PD)',
+          wiki: 'Akara',
+        },
+        {
+          otsikko: 'Ruoka joka on myös uhrilahja',
+          tiedosto: 'Acarajé - Bahia 2011 (7290756706).jpg',
+          teksti: 'Candomblén rituaaleissa acarajé ei ole katuruokaa vaan '
+            + 'uhrilahja. Ensimmäinen tarjotaan aina jumaluus Exulle, ja '
+            + 'loput muotoillaan sen mukaan, kenelle ne on tarkoitettu: '
+            + 'suuret ja pyöreät Xangôlle, pienemmät Iansãlle ja aivan '
+            + 'pikkuruiset lapsihengille. Osalle jumaluuksista palmuöljy on '
+            + 'kielletty, ja heille paistetaan oma versio muussa öljyssä. '
+            + 'Paistoöljy dendê on itsessään merkityksellinen: sen '
+            + 'katsotaan olevan axén, elinvoiman, aineellistunut muoto – ja '
+            + 'sama öljy on bahialaisen arkikeittiön tärkein raaka-aine.',
+          selite: 'Lautasella acarajé on halkaistu ja täytetty vatapálla, '
+            + 'carurulla ja kokonaisilla katkaravuilla.',
+          lahde: 'Ben Tavener from Curitiba, Brazil, Wikimedia Commons '
+            + '(CC BY 2.0)',
+          wiki: 'Akara',
+        },
+        {
+          otsikko: 'Kolmen mantereen keittiö',
+          tiedosto: 'Moqueca- Ilha de Maré. Foto Tatiana Azeviche Setur (31969364150).jpg',
+          teksti: 'Bahian keittiö kertoo samaa tarinaa kuin kaupungin '
+            + 'väestö: viiden vuosisadan sekoittumista. Afrikkalaista perua '
+            + 'ovat mausteiset äyriäisruoat, kuten kookosmaitoon keitetty '
+            + 'moqueca ja tahnamainen vatapá. Portugalilaisesta '
+            + 'lihapadasta jäänyt kastike sekoitettiin maniokkijauhoon, ja '
+            + 'siitä syntyi puuro, joka jatkaa alkuperäiskansojen '
+            + 'perinnettä. Sokeriruo\'on puristusjätteestä, melassista ja '
+            + 'rapadura-sokerista tehtiin kookosmakeiset cocada branca ja '
+            + 'cocada preta. Kaikki kolme perinnettä ovat yhä samalla '
+            + 'lautasella.',
+          selite: 'Savipadassa höyryävässä moquecassa on katkarapuja, '
+            + 'kalmaria, paprikaa ja tomaattia, ja vieressä odottaa '
+            + 'maniokkijauhosta tehty farofa.',
+          lahde: 'Turismo Bahia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Salvador, Bahia',
+        },
+        {
+          otsikko: 'Torit jotka ruokkivat kaupunkia yhä',
+          tiedosto: 'Mercado Modelo - Wiki Encontros Salvador em 2024 05.jpg',
+          teksti: 'Salvadorin vanhat torit ruokkivat kaupunkia samalla '
+            + 'tavalla kuin vuosikymmeniä sitten. Sete Portasin torilla on '
+            + 'syöty mocotóa, hidasta härän sorkkapataa, perjantai-iltaisin '
+            + '1940-luvulta lähtien, jolloin tori avattiin. Mercado Modelon '
+            + 'ravintoloissa tarjoillaan sarapatelia ja muhennoksia; talo '
+            + 'itse on vanha tullirakennus, joka nousi Cayrún aukiolle 1861 '
+            + 'laivojen purkupaikaksi. São Joaquimin, Santa Bárbaran ja São '
+            + 'Miguelin toreilla myydään perinneruokia kojuilta, ja '
+            + 'rannoilla myyntipöydiltä saa rapumuhennosta ja ostereita.',
+          selite: 'Mercado Modelon keltainen uusklassinen tullitalo seisoo '
+            + 'Cayrún aukion laidalla, ja sen edessä on mustavalkoinen '
+            + 'aaltokuvioinen mosaiikkipäällyste.',
+          lahde: 'SouDiana, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Salvador, Bahia',
+        },
+      ],
+    },
+  ],
 };

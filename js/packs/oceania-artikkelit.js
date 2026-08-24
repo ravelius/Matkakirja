@@ -603,4 +603,74 @@ export const OCEANIA_ARTIKKELIT = {
       + 'Assembly, joka hallinnoi kymmentä tunnustettua kylää — ainoa '
       + 'laatuaan koko maassa.',
   },
+  /* CHRISTCHURCH (24.8.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain christchurch): väitteet on
+   * luettu en-Wikipedian raakateksteistä 24.8.2026, ja pohjana ovat
+   * faktapohja-christchurch.md sekä sen riippumaton tarkistus
+   * tarkistus-christchurch.md, joka voittaa ristiriidoissa. AVAIN ON
+   * WIKI-OTSIKKO 'Christchurch', jonka js/packs/oceania.js antaa
+   * kaupungille sekä wiki- että näyttönimeksi.
+   *
+   * Vuosi 1873 on nostettu toisen kappaleen loppuun, koska se on
+   * isoisän matkan vuosi: ChristChurch-katedraalin rakennustyö
+   * käynnistyi uudelleen juuri silloin, kun Benjamin Mountfort otti
+   * hankkeen johtoonsa kahdeksan vuoden rahapulakatkon jälkeen.
+   * Waitaha, kāti māmoe ja kāi tahu sanotaan ENNEN Canterbury-
+   * yhdistystä, jottei siirtokunnan perustaminen näytä seudun
+   * alkuhetkeltä.
+   *
+   * VISASÄÄNTÖ (js/packs/oceania-questions.js, kohta christchurch):
+   * kysymyksen 1 vastaus "Eteläsaari" on tässä introssa, ja se
+   * sanotaan koko lehdessä vain kahdesti — tässä ja lehden
+   * Matkailijalle-kappaleessa. Muut neljä vastausta ovat lehden
+   * puolella (Eteläiset Alpit ja Canterburyn tasanko oppaan jaksossa
+   * 2, vuoden 2011 järistys nostoissa H2–H4, puutarhakaupunki
+   * nostossa L1). Visan fact-kenttien sanamuotoja ei toisteta.
+   *
+   * 15.3.2019 moskeija-isku on jätetty kokonaan pois tehtävänannon
+   * mukaisesti, ja maanjäristykset kerrotaan toteavasti lukuina ilman
+   * uhrien kärsimyksen kuvailua. */
+  Christchurch: {
+    intro: 'Christchurch — māoriksi Ōtautahi — on Uuden-Seelannin '
+      + 'Eteläsaaren suurin kaupunki. Se lepää lähes tasaisena '
+      + 'Canterburyn tasangolla meren ja Port Hillsin kukkuloiden '
+      + 'välissä, ja lännessä horisontin sulkevat Eteläiset Alpit. '
+      + 'Keskustan halki mutkittelee Avon-joki, jonka kāi tahun nimi on '
+      + 'Ōtākaro. Seutu oli waitahan, kāti māmoen ja kāi tahun maata '
+      + 'vuosisatoja ennen ensimmäistäkään purjetta.'
+      + '\n\n'
+      + 'Canterbury-yhdistys perustettiin Lontoossa 1848 pystyttämään '
+      + 'Uuteen-Seelantiin anglikaanista ihannesiirtokuntaa, jonka '
+      + 'keskiöön nousisi katedraali ja korkeakoulu. Ensimmäiset neljä '
+      + 'laivaa toivat siirtolaiset Lyttelton Harbouriin joulukuussa '
+      + '1850, ja **kuninkaallinen patenttikirje teki Christchurchistä '
+      + 'kaupungin 31. heinäkuuta 1856, maan ensimmäisen**. Isoisän '
+      + 'matkan vuonna 1873 katedraalin rakennustyö käynnistyi '
+      + 'uudelleen kahdeksan vuoden rahapulatauon jälkeen.'
+      + '\n\n'
+      + '**Vuosien 2010 ja 2011 maanjäristykset veivät keskustasta '
+      + 'tornitalot ja katedraalin tornin**, ja kaupunki on rakentanut '
+      + 'ytimensä sen jälkeen uusiksi. Nyt siellä on pahviputkista '
+      + 'tehty kirkko, katettu stadion ja satoja kilometrejä '
+      + 'pyöräteitä.',
+    teksti: 'Christchurch on Canterburyn tasangolla, jonka jäätiköiden '
+      + 'kuljettama sora ulottuu Port Hillsin kukkuloilta Eteläisten '
+      + 'Alppien juurelle. Tasangon joet juoksevat leveissä punoksissa '
+      + 'kivikkoisissa uomissaan, ja kaupungin läpi kulkeva Avon River '
+      + '/ Ōtākaro on niistä hitain.'
+      + '\n\n'
+      + 'Waitaha asutti seutua 1200-luvun puolivälistä, kāti māmoe '
+      + '1500-luvulta ja kāi tahu sata vuotta myöhemmin. '
+      + 'Canterbury-yhdistyksen siirtolaiset saapuivat 1850, ja '
+      + 'kaupunki teollistui 1900-luvun alussa niin nopeasti, että '
+      + 'asukasluku ylitti 100 000 vuonna 1919.'
+      + '\n\n'
+      + 'Nykyinen Christchurch on jälleenrakennuksen kaupunki. '
+      + 'Keskustan tyhjille tonteille on noussut kirjasto Tūranga, '
+      + 'kongressikortteli ja katettu stadion, ja tyhjiksi jääneistä '
+      + 'jokivarsilähiöistä kaavaillaan yhtenäistä puistoa. Vanha '
+      + 'raitiovaunu kiertää yhä silmukkaansa aidatun katedraalin ohi, '
+      + 'jonka korjaustyön ensimmäisen vaiheen on määrä valmistua '
+      + 'vuoteen 2030 mennessä.',
+  },
 };

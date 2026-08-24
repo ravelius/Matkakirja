@@ -237,21 +237,37 @@ jobs:
           printf '%s' "$OPENAI_API_KEY" | "$WRANGLER" secret put OPENAI_API_KEY --config "$POLLO_ASETUS"
 
       # TYÖHUONEEN TILANNEPALKKIEN AVAIMET (omistajan tilaus 15.8.2026):
-      # kolme vapaaehtoista salaisuutta, joilla worker näkee ElevenLabsin
-      # kuukausikiintiön ja OpenAI:n/Anthropicin kulut (tehtava:'tila').
+      # vapaaehtoiset salaisuudet, joilla worker näkee ElevenLabsin
+      # kuukausikiintiön ja OpenAI:n/Anthropicin/Googlen kulut
+      # (tehtava:'tila').
       # HUOM: kulut vaativat ADMIN-avaimet — pöllön ja lukijaäänen
       # tavalliset avaimet eivät pääse kulurajapintoihin. Puuttuva avain
       # vain ohitetaan: vastaava palkki näyttää pelissä "ei nähtävissä".
       # Avaimet kulkevat putkessa kuten muutkin salaisuudet.
+      #
+      # GOOGLE ON POIKKEUS, ja siksi sillä on kolme asetusta yhden
+      # sijaan: Googlella EI OLE rajapintaa, joka kertoisi kuluvan
+      # kuukauden toteutuneet kulut. Cloud Billing antaa tilin ja
+      # hinnaston, Budgets antaa budjetit — kumpikaan ei anna käyttöä.
+      # Ainoa reitti toteutuneisiin lukuihin on laskutuksen
+      # BigQuery-vienti, joten worker kyselee sitä taulua suoraan ja
+      # tarvitsee siihen tokenin, projektin ja taulun nimen.
+      # GOOGLE_BILLING_PROJECT ja _TAULU eivät ole salaisuuksia, mutta
+      # ne kulkevat samaa reittiä, jotta asetuspaikkoja on vain yksi.
       - name: Aseta tilannepalkkien avaimet workerin salaisuuksiksi (jos on)
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
           OPENAI_ADMIN_KEY: ${{ secrets.OPENAI_ADMIN_KEY }}
           ANTHROPIC_ADMIN_KEY: ${{ secrets.ANTHROPIC_ADMIN_KEY }}
+          GOOGLE_BILLING_TOKEN: ${{ secrets.GOOGLE_BILLING_TOKEN }}
+          GOOGLE_BILLING_PROJECT: ${{ secrets.GOOGLE_BILLING_PROJECT }}
+          GOOGLE_BILLING_TAULU: ${{ secrets.GOOGLE_BILLING_TAULU }}
         run: |
           set -euo pipefail
           set +x
-          for nimi in ELEVEN_API_KEY OPENAI_ADMIN_KEY ANTHROPIC_ADMIN_KEY; do
+          for nimi in ELEVEN_API_KEY OPENAI_ADMIN_KEY ANTHROPIC_ADMIN_KEY \
+                      GOOGLE_BILLING_TOKEN GOOGLE_BILLING_PROJECT \
+                      GOOGLE_BILLING_TAULU; do
             arvo=$(eval "printf '%s' \"\${$nimi:-}\"")
             if [ -z "$arvo" ]; then
               echo "$nimi ei ole asetettu — ohitetaan (palkki näyttää 'ei nähtävissä')."
