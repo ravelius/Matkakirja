@@ -67016,4 +67016,2864 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * ADELAIDE (lauta oceania, kaupunki-id adelaide) — kaupunkilehti
+   * 24.8.2026.
+   *
+   * LÄHTEET. Työpohjana docs/mantereet-tyoaineisto/faktapohja-adelaide.md
+   * ja sen riippumaton tarkistus docs/mantereet-tyoaineisto/
+   * tarkistus-adelaide.md, joka EI OLE työpuussa vaan haettiin
+   * committista 5536e097 ("Tarkistus: Adelaide"). Tarkistus voittaa
+   * faktapohjan. Jokainen tähän lohkoon menevä väite on lisäksi haettu
+   * uudestaan en-Wikipedian raakateksteistä 24.8.2026 (action=raw,
+   * NODE_USE_ENV_PROXY=1): Adelaide, Kaurna, Peramangk, Warriparinga,
+   * Adelaide Park Lands, Adelaide Oval, Rundle Mall, River Torrens,
+   * Adelaide Botanic Garden, Victoria Square Adelaide, The Old Gum Tree,
+   * Adelaide Gaol, Adelaide Town Hall, Adelaide Central Market,
+   * Hahndorf South Australia, Barossa Valley, Moonta Mines South
+   * Australia, Tandanya National Aboriginal Cultural Institute.
+   *
+   * TARKISTUKSEN KAKSI PAKOLLISTA KORJAUSTA ON TEHTY.
+   *
+   *   (1) MIKE RANNIN AJOITUS. Faktapohjan G4 väitti, että "vuonna 2012
+   *       parlamentti sääti erillislain – silloinen pääministeri Mike
+   *       Rann perusteli lakia...". Se yhdisti kaksi eri ajankohtaa.
+   *       Barossa Valley -artikkeli: "In February 2011 ... Premier,
+   *       Mike Rann, announced that special legislation would be
+   *       introduced ... The Character Preservation (Barossa Valley)
+   *       Act 2012 was subsequently passed". Mike Rann -artikkeli:
+   *       "He resigned as Premier in October 2011 and was succeeded by
+   *       Jay Weatherill" (term_end 21.10.2011). Lain säätämisvuonna
+   *       pääministerinä oli siis Weatherill. Nosto G3 kertoo nämä nyt
+   *       kahtena eri tapahtumana ja nimeää molemmat.
+   *
+   *   (2) PILARI 3 -EPÄTASAPAINO. Faktapohjan G4 kuvasi perämangkit
+   *       vain arkeologisina jälkinä (esineet, arpeutuneet puut,
+   *       kalliomaalaukset) mutta saksalaisperinteen elävänä
+   *       nykykulttuurina. Korjaus tehtiin en-Wikipedian OMASTA
+   *       "Peramangk"-artikkelista, jota faktapohja ei käyttänyt:
+   *       "In recent decades, there have been moves to identify
+   *       Peramangk descendants through genealogy and through outreach
+   *       to those who identify as Peramangk. Adelaide Hills schools,
+   *       churches and local councils hold frequent welcome to country
+   *       ceremonies hosted by Peramangk elders and artists" sekä
+   *       "many families survive with a Peramangk genealogy" ja
+   *       säilyneet sukuryhmien nimet (Poonawatta, Tarrawatta,
+   *       Karrawatta). Nosto G4 on nyt KOKONAAN perämangkien oma nosto
+   *       ja päättyy nykyhetkeen, täsmälleen samalla tavalla kuin
+   *       kaurnojen K4. Rann-lakiasia siirrettiin pois tästä nostosta
+   *       G3:een, jotta perämangkit eivät jää sivutuotteeksi.
+   *
+   * TARKISTUKSEN SUOSITUKSET ON MYÖS OTETTU HUOMIOON. Nosto L1 ei enää
+   * sekoita lukuja "29 puistoa" ja "39 kohdetta": Adelaide Park Lands
+   * -artikkeli sanoo "All 29 Parks around the city have been assigned a
+   * Kaurna name ... The renaming of 39 sites was finalised and endorsed
+   * by the council in 2012", ja nosto kertoo molemmat luvut erikseen.
+   * Adelaide Ovalin katsomomäen ja viikunapuiden istutusvuoden sisäistä
+   * ristiriitaa (1884 vs. 1890-luku) ei käytetä missään. Kaurnojen
+   * väkiluvusta käytetään "Kaurna"-artikkelin tarkempaa lukua noin 700
+   * eikä "Adelaide"-artikkelin ohimennen mainittua noin 300:aa, joka on
+   * siellä itsekin merkitty epävarmaksi {{When}}-mallineella.
+   *
+   * VUOSI 1873 ON LEHDEN HELMI JA SE SANOTAAN ÄÄNEEN. Adelaide Oval
+   * avattiin kriketille LAUANTAINA 13. JOULUKUUTA 1873 — isoisän
+   * matkavuosi päivälleen. Tarkistus varmisti sekä sitaatin
+   * ("The Adelaide Oval was opened for cricket on Saturday 13 December
+   * 1873 ... approximately 500 spectators ... The previous day 2,000
+   * sheep were used to thin the top of the turf") että viikonpäivän
+   * omalla laskennallaan. Tämä on historia-sivun avausnosto.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, JOTKA KIRJOITETTIIN AUKI.
+   *   (a) ABORIGINAALILIPUN ENSIMMÄINEN LIEHUNTA. "Victoria Square,
+   *       Adelaide" antaa saman aukion samasta tapahtumasta kaksi
+   *       päivää: "on 9 July 1971" (Dual naming) ja "On 12 July 1971"
+   *       (History). Nosto L4 EI valitse kumpaakaan vaan kertoo
+   *       lukijalle, että lähteet antavat molemmat päivät. Pysyvän
+   *       liehunnan päiväys 8.7.2002 täsmää molemmissa kohdissa.
+   *   (b) TANDANYAN SULKEMINEN. Sama artikkeli sanoo yhtäällä "closed
+   *       for building repairs since May 2023" ja toisaalla "The
+   *       building closed temporarily in April 2023". Oppaan
+   *       Matkailijalle-kappale käyttää siksi muotoa "keväästä 2023"
+   *       eikä kuukautta.
+   *
+   * TANDANYAN NYKYTILA TARKISTETTIIN ENNEN KIRJOITTAMISTA (tehtävän-
+   * annon vaatimus). En-Wikipedia 24.8.2026 sanoo yhä tulevassa
+   * aikamuodossa "is due to reopen in February 2026" ja "Following its
+   * reopening after a major refurbishment in February 2026 ... will
+   * host performances". Lähde ei siis vahvista, että talo olisi
+   * todella auennut, ja aikataulu on siirtynyt kerran ennenkin
+   * (tammikuu 2025 -> helmikuu 2026). Opas ei siksi väitä
+   * kumpaakaan: se kertoo talon olleen suljettuna korjausten takia ja
+   * kehottaa tarkistamaan tilanteen ennen käyntiä. Tämä on myös
+   * reseptin "opas sanoo suoraan" -linjaus.
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3 JA spec-mantereet.md:n
+   * Oseania-osio. KAKSI alkuperäiskansaa näkyy elävinä nykykansoina:
+   * kaurnat kaupunkisivun nostossa K4 (KACHA:n sijaan mainitaan
+   * nimeltä elpymisliikkeen johtaneet vanhimmat, Warriparingan Living
+   * Kaurna Cultural Centre kuvassa ja maaliskuun 2018 tunnustus) ja
+   * perämangkit saksalaisperintösivun nostossa G4 (säilyneet
+   * sukuryhmien nimet, sukututkimus, vanhinten johtamat
+   * tervetuliaisseremoniat). Kaurna-nimet ovat mukana koko lehdessä:
+   * Tarndanya, Tarntanyangga, Karra wirra-parri, Patha Yukuna ja
+   * Narnungga. Siirtomaahistoria (väestön romahdus, kielen katoaminen)
+   * kerrotaan tapahtumina neutraalisti ilman kummankaan osapuolen
+   * sankarikehystä, ja Michael Mageen teloitus mainitaan päivämääränä
+   * ilman yksityiskohtia. Ei nykysotaa eikä nykypolitiikkaa;
+   * Character Preservation -laki on maankäytön historiaa, ja se
+   * kerrotaan ilman puoluekehystä.
+   *
+   * KULTTUURIVISA (js/packs/oceania-questions.js, kohta adelaide,
+   * viisi kysymystä) — PÄÄTOIMITTAJAN SÄÄNTÖ: vastaus LÖYTYY lehden
+   * teksteistä mutta EI VISAN OMALLA SANAMUODOLLA.
+   *   1. osavaltion pääkaupunki -> "Adelaide on Etelä-Australian
+   *      pääkaupunki" (ARTIKKELIT-intro ja Matkailijalle-kappale).
+   *   2. viini -> nosto G3 (Tanundan 1847 istutetut shiraz-köynnökset).
+   *   3. rannikko -> oppaan jakso 2 ("mantereen etelärannikolla").
+   *   4. puistovyöhyke -> nostot K2 ja L1. Visan fact-kenttä sanoo
+   *      puistokehän olevan "yhä rakentamaton"; se on liioittelua, ja
+   *      L1 kertoo lukijalle tarkat menetykset (370 eekkeriä pian
+   *      1837 jälkeen, 489 eekkeriä 1902 mennessä, n. 568 eekkeriä
+   *      2018 mennessä) käyttämättä visan sanamuotoa.
+   *   5. Barossan laakso -> nosto G3.
+   * MINITEHTÄVÄT (kolme, yksi per teemasivu) eivät toista visaa, ja
+   * jokaisen vastaus on SAMAN SIVUN nostotekstissä: lampaat H1:ssä,
+   * Torrens Laken avajaisyleisö L2:ssa ja Barossan kirjoitusvirhe
+   * G3:ssa.
+   *
+   * OCEANIA_FACTS-KOHDAN `adelaide` KOLMEA FAKTAA EI TOISTETA
+   * SANAMUODOLTAAN: saapumiskortti sanoo, että kaupunki suunniteltiin
+   * ruutuun puistovyöhykkeen ympäröimäksi, että Barossa on maan
+   * tunnetuin viinialue ja että Adelaide on ainoa osavaltion
+   * pääkaupunki, jota ei perustettu rangaistussiirtolaksi. Lehti
+   * kertoo samat asiat eri kautta: K2 antaa eekkerimäärät ja Lightin
+   * riidan kuvernöörin kanssa, K1 kulkee Wakefieldin teorian,
+   * Gougerin anomuksen ja South Australia Act 1834:n kautta, ja G3
+   * kertoo Barossasta nimivirheen ja Neu-Schlesienin.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä. Oppaan jakso 5 nojaa siis en-Wikipedian Adelaide-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin, Perthin ja
+   * Vancouverin malli.
+   *
+   * ENNEN JA NYT -PARIA EI LISÄTTY. Sama syy kuin Sydneyssä ja
+   * Melbournessa: ennenNyt korvaisi etusivun pikkurivin kansikuvat, ja
+   * kansikuvat on tässä lehdessä valittu juuri siihen paikkaan.
+   * js/packs/oceania-valokuvat.js:n adelaide-lohkossa on jo valmis
+   * pari (Port Adelaiden telakka n. 1885 ja hinaaja Yelta Queen's
+   * Wharfissa), joten pelaaja näkee sen matkakirjan valokuvataulussa.
+   * Samasta syystä yhtään valokuvataulun tiedostonimeä ei käytetä
+   * täällä uudestaan.
+   *
+   * SIVU-ID:T. Kolme neljästä (`kaupunki`, `historia`, `luonto`) ovat
+   * talon vakioaiheita. Neljäs, `saksalaisperinne`, on ui-apurit.js:n
+   * AIHE_IKONIT-taulun ulkopuolella ja piirtyy yleiskuvakkeella — sama
+   * perusteltu poikkeus kuin Chicagon `arkkitehtuuri`- ja
+   * `alkuperaiskansat`-sivuilla. Vakioaihe `ruoka` olisi ollut
+   * saatavilla, mutta se olisi harhaanjohtava: sivu on yhtä paljon
+   * siirtolaisuutta, kieltä ja alkuperäiskansan maata kuin viiniä.
+   * Omaa `ikoni`-kenttää ei kirjoitettu, koska AIHE_IKONIT-taulua ei
+   * tällä hetkellä tuoda mistään moduulista eikä kenttä siis näkyisi.
+   *
+   * KUVAT: 26 kuvaa, kaikki Wikimedia Commonsista. Lisenssi ja tekijä
+   * on luettu rajapinnan extmetadatasta (LicenseShortName, Artist,
+   * Restrictions) ja jokainen valittu kuva on KATSOTTU SILMIN 900
+   * pikselin esikatseluna. Kaikki ovat vähintään 1200 px leveitä,
+   * lisenssit ovat PD, CC0, CC BY tai CC BY-SA, eikä yhdelläkään ole
+   * Restrictions-merkintää.
+   *
+   * KUVAHYLKÄYKSET SYINEEN: State Government Photographerin CC0-
+   * negatiiviskannaukset (Adelaide Lightsin näköalapaikalta, Glenelgin
+   * ranta, Ambleside-suurpuu) — jokaisessa on negatiivin musta reuna
+   * ja arkiston käsin kirjoittama numero eli kuvan päälle lisätty
+   * merkintä; Samuel Calvertin litografia "City of Adelaide 1850" ja
+   * Eugene von Guerardin kuvalaatta "Top of Mount Lofty near Adelaide"
+   * — molemmissa painettu kuvateksti on osa lehteä ja Calvertissa on
+   * lisäksi lyijykynämerkintä marginaalissa; Beehive Cornerin
+   * lähikuva (DSCF3678) ja Central Marketin käytäväkuvat 01 ja 03 —
+   * etualan väkijoukossa kasvot luettavissa; Hahndorfin "German
+   * Village Shop" -kyltti ja Central Marketin Charlesworth-koju —
+   * mainoskuvia yhdestä liikkeestä; Elder Parkin ja Hallett Coven
+   * kuvat — harmaa sää tai utu, kaupunki hukkuu; "Adelaide
+   * (32834177576)" — lyhtypylväät peittävät näkymän; Unsplashin
+   * "Glenelg Beach" — pelkkää aallokkoa, ei kaupunkia; Adelaide Oval
+   * 359 — sisätila täynnä tunnistettavia ihmisiä.
+   *
+   * KAKSI KUVAA JÄI KÄYTTÄMÄTTÄ, VAIKKA LÄPÄISIVÄT TARKISTUKSEN:
+   * Government House Adelaide (Peripitus, CC BY 3.0) ja Hahndorf
+   * countryside 1 (Orderinchaos, CC BY-SA 3.0). Kummallekin ei ollut
+   * paikkaa ilman aihetoistoa — kuvernöörintalo olisi kertonut saman
+   * kuin H3:n vankila (kaksi Etelä-Australian vanhinta rakennusta) ja
+   * Hahndorfin maalaismaisema saman kuin G4:n Piccadilly Valley.
+   *
+   * AIHETOISTO ON HARKITTU JA PERUSTELTU, YKSI PARI: Adelaide Oval
+   * esiintyy kahdesti eri aikoina ja eri roolissa — avauskuvana
+   * ilmasta (2010-luvun kattokaaret puistovyöhykkeen keskellä, kuva
+   * kertoo kaupungin rakenteesta) ja nostossa H1 1880-luvun
+   * valokuvana, jossa kenttä on vielä matalan aidan ympäröimä nurmi
+   * kymmenen vuotta avajaisista. Perthin Fremantle-ennakkotapaus.
+   * Yksikään tiedostonimi ei toistu, eikä yksikään ole sama kuin
+   * js/packs/oceania-valokuvat.js:n adelaide-lohkossa.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 20.8.2026 LINJAUSTA: selite
+   * kertoo KOHTEESTA eikä kuvaile kuvaa, ja se on YHDEN VIRKKEEN
+   * mittainen. Matkailijalle-etusivukuva on tuore ja MALTILLINEN
+   * PYSTY (4365x6555, w/h 0,67).
+   */
+  adelaide: [
+    {
+      id: 'kaupunki',
+      nimi: 'Adelaide',
+      johdanto: 'Eversti William Lightin 1837 piirtämä ruutukaava ja sitä '
+        + 'kiertävä puistorengas tekivät Adelaidesta kaupungin, jolla ei ole '
+        + 'vankisiirtolan menneisyyttä. Isoisän matkan vuonna sen uusi '
+        + 'krikettikenttä avattiin.',
+      kansikuvat: [
+        {
+          tiedosto: 'Adelaide City.jpg',
+          selite: 'Adelaiden keskusta on Adelaiden tasangolla Saint Vincentin '
+            + 'lahden ja Mount Lofty Rangesin välissä.',
+          lahde: 'Vishnubonam, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Adelaide over Torrens.jpg',
+          selite: 'Torrens Lake on Torrens-joen padottu allas keskustan '
+            + 'pohjoislaidalla, ja sen rannalla ovat kaupungin juhla- ja '
+            + 'kongressitalot.',
+          lahde: 'M J, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Glenelg, adelaide.jpg',
+          selite: 'Glenelg on Adelaiden tunnetuin merenrantaesikaupunki, ja '
+            + 'juuri sen rannalle siirtokunta julistettiin joulukuussa 1836.',
+          lahde: 'Adam.J.W.C., Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kolmesta eri suunnasta ja
+       * kolmelta eri korkeudelta — suoraan ylhäältä ruutukaavan päältä,
+       * eteläisen puistovyöhykkeen tasalta ja viistosti pohjoisesta
+       * Adelaide Ovalin yli. Yksikään ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Adelaide DougBarber.jpg',
+          selite: 'Lightin ruutukaava erottuu ilmasta yhä: suorat kadut, '
+            + 'viisi aukiota ja niitä kiertävä puistovyöhyke.',
+          lahde: 'Photograph by Doug Barber, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'South terrace adelaide.jpg',
+          selite: 'Eteläinen puistovyöhyke erottaa keskustan esikaupungeista, '
+            + 'ja sen takana kohoaa Mount Lofty Ranges.',
+          lahde: 'Adam.J.W.C., Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        {
+          tiedosto: 'Adelaide city centre view crop.jpg',
+          selite: 'Adelaide Oval on puistovyöhykkeen sisällä Torrens-joen ja '
+            + 'North Adelaiden välissä aivan keskustan kupeessa.',
+          lahde: 'Normangerman at English Wikipedia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Siirtokunta joka ei ottanut vankeja',
+          tiedosto: 'Samuel Sweet - King William Street Adelaide, looking north from Victoria Square - Google Art Project.jpg',
+          teksti: 'Etelä-Australia perustettiin teorian varaan. Edward Gibbon '
+            + 'Wakefieldin ajatus oli, että siirtokunnan maa myydään niin '
+            + 'kalliilla, etteivät työläiset voi heti ostaa omaa tilaa, ja '
+            + 'että maakaupan tuotolla maksetaan uusien siirtolaisten matka. '
+            + 'Robert Gouger vei ajatuksen Britannian hallitukselle, ja South '
+            + 'Australia Act 1834 sääti siirtokunnan perustamisesta. '
+            + 'Ensimmäiset siirtolaiset saapuivat helmikuussa 1836, ja '
+            + 'kuvernööri julisti hallinnon alkaneeksi 28. joulukuuta 1836. '
+            + 'Sydneyn, Brisbanen ja Hobartin kaltaista rangaistussiirtolan '
+            + 'taustaa Adelaidella ei tämän politiikan takia ole.',
+          selite: 'King William Street on Lightin kaavan pääkatu, ja sen '
+            + 'varrella kohoava kaupungintalo avattiin kesäkuussa 1866.',
+          lahde: 'Samuel SWEET (1825 - 1886) (Australia) Born in Portsea, Britain. Died in Riverton, South Australia, Australia. Details on Google Art Project, Wikimedia Commons (PD)',
+          wiki: 'Adelaide',
+        },
+        {
+          otsikko: 'Piirtäjä joka piti päänsä',
+          tiedosto: 'Statue of william light adelaides founder in 1836.jpg',
+          teksti: 'Eversti William Light valitsi kaupungin paikan 1836, eikä '
+            + 'valinta miellyttänyt juuri ketään: kuvernööri John Hindmarsh '
+            + 'ja varhaiset siirtolaiset pitivät sitä liian kaukana Port '
+            + 'Adelaiden satamasta ja makeasta vedestä liian köyhänä. Light '
+            + 'piti päänsä. Hänen 1837 laatimassaan kaavassa on viisi '
+            + 'aukiota, suora ruutu ja kahdeksikon muotoinen puistorengas, '
+            + 'joka kiertää sekä keskustan että North Adelaiden ja erottaa ne '
+            + 'esikaupungeista. Puistoiksi varattiin 2 300 eekkeriä ja '
+            + 'hautausmaalle 32 lisää. Kaava on yhä paikallaan.',
+          selite: 'Light’s Vision -patsas seisoo Montefiore-kukkulalla '
+            + 'North Adelaidessa ja osoittaa kohti Lightin suunnittelemaa '
+            + 'keskustaa.',
+          lahde: 'Leon Brooks, Wikimedia Commons (PD)',
+          wiki: 'Adelaide Park Lands',
+        },
+        {
+          otsikko: 'Kauppakatu joka suljettiin autoilta',
+          tiedosto: 'Rundle Mall, Adelaide in April 2026 (DSCF4265).jpg',
+          teksti: 'Rundle Street sai nimensä 23. toukokuuta 1837 '
+            + 'kadunnimitoimikunnalta; John Rundle oli Britannian parlamentin '
+            + 'jäsen ja South Australia Companyn perustajajohtajia. Kadun ja '
+            + 'King William Streetin kulmaan asennettiin 1895 kaupungin '
+            + 'ensimmäinen sähkökatuvalaistus, ja paikka tunnetaan yhä '
+            + 'nimellä Beehive Corner. Marraskuussa 1972 Etelä-Australian '
+            + 'pääministeri Don Dunstan määräsi kadun länsipään suljettavaksi '
+            + 'autoilta, ja 1. syyskuuta 1976 avattiin Rundle Mall: 520 '
+            + 'metriä, yli tuhat liikettä ja noin 54 miljoonaa kävijää '
+            + 'vuodessa.',
+          selite: 'Rundle Mall on 520 metrin kävelykatu Rundle Streetin '
+            + 'länsipäässä keskellä Adelaiden ruutukaavaa.',
+          lahde: 'Yu Chu Chin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Rundle Mall',
+        },
+        {
+          otsikko: 'Kaurnat, tasangon oma kansa',
+          tiedosto: 'Living Kaurna Cultural Centre, Warriparinga.jpg',
+          teksti: 'Kaurnat ovat Adelaiden tasangon perinteinen kansa, ja '
+            + 'keskustan kaurnankielinen nimi Tarndanya tarkoittaa punaisen '
+            + 'kengurun kalliota. Siirtokunnan perustamisen aikaan 1836 '
+            + 'kaurnoja oli enää noin 700, vaikka heitä oli aiemmin ollut '
+            + 'useita tuhansia. Ivaritji, todennäköisesti viimeinen täysin '
+            + 'kaurnalaista syntyperää ollut ihminen ja kielen viimeinen '
+            + 'tunnettu puhuja, kuoli 1929. Kieli ei silti kadonnut: '
+            + '1970-luvulta alkaen vanhimmat Lewis O’Brien, Gladys '
+            + 'Elphick ja Alitya Rigney johtivat kulttuurin elvytystä, ja '
+            + 'maaliskuussa 2018 kaurnat tunnustettiin koko Adelaiden alueen '
+            + 'perinteisiksi omistajiksi.',
+          selite: 'Warriparingan Living Kaurna Cultural Centre avattiin 2002, '
+            + 'ja sen aaltopeltikatto on muotoiltu iibiksen siiven kaareksi.',
+          lahde: 'Bilby, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Kaurna',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Adelaide Town Hall in Adelaide, May 2026 (028A4563).jpg',
+          selite: 'Adelaiden kaupungintalo avattiin 20. kesäkuuta 1866, ja '
+            + 'sen Albert-torni on nimetty kuningatar Victorian puolison '
+            + 'muistoksi.',
+          lahde: 'Yu Chu Chin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Adelaide on Etelä-Australian pääkaupunki ja Australian '
+          + 'viidenneksi väkirikkain kaupunki: suuralueella asuu noin 1,47 '
+          + 'miljoonaa ihmistä. Matkailijan Adelaide on silti pieni. Lightin '
+          + 'ruutu on kävelymatkan mittainen laidasta laitaan, ja puistorengas '
+          + 'kertoo joka suunnassa, missä keskusta loppuu. Pohjoislaidalla '
+          + 'North Terracen varrella ovat museo, kirjasto, yliopisto ja '
+          + 'rautatieasema peräkkäin; kaavan keskipisteessä on Victoria '
+          + 'Square. Grenfell Streetin Tandanya on Australian vanhin '
+          + 'alkuperäiskansojen omistama ja johtama kulttuurikeskus, mutta se '
+          + 'on ollut korjausten takia suljettuna keväästä 2023 ja sen '
+          + 'avaamista on siirretty kerran jo aiemmin — tarkista tilanne '
+          + 'ennen kuin lähdet sinne.',
+        artikkeli: {
+          nimi: 'Matkailijan Adelaide',
+          taitto: 'opas',
+          teksti: 'Ruutukaava, puistorengas ja meri kahdenkymmenen kilometrin '
+            + 'päässä — kaupunki, jonka isoisä ehti nähdä juuri kun sen '
+            + 'krikettikenttä avattiin.',
+          nosto: 'Adelaide sai joulukuussa 2021 maailman toisena kaupunkina '
+            + 'National Park City -nimityksen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Adelaiden rautatieasema on North Terracen varrella '
+                + 'aivan ruutukaavan pohjoislaidalla, ja samalta kadulta '
+                + 'lähtee myös raitiovaunu. Adelaide Metron verkkoon kuuluu '
+                + 'seitsemän lähijunalinjaa, bussit ja O-Bahn-bussiväylä sekä '
+                + 'pieni raitiotie, joka kulkee Hindmarshista keskustan läpi '
+                + 'merenrantaan Glenelgiin. Raitiotiet purettiin 1950-luvulla '
+                + 'lähes kokonaan ja Glenelgin linja jäi ainoaksi; '
+                + '2010-luvulla verkkoa laajennettiin taas kasvitieteelliseen '
+                + 'puutarhaan ja Festival Plazalle. Keskustan kävelee '
+                + 'laidasta laitaan, koska ruutu on säilynyt lähes '
+                + 'muuttumattomana.',
+              kuva: {
+                tiedosto: 'Adelaide Railway Station and North Terrace, Adelaide, February 2023.jpg',
+                selite: 'Adelaiden rautatieasema on North Terracen varrella '
+                  + 'keskustan pohjoisreunalla.',
+                lahde: 'No Swan So Fine, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Adelaide on Adelaiden tasangolla Saint Vincentin lahden '
+                + 'ja Mount Lofty Rangesin välissä, mantereen '
+                + 'etelärannikolla. Kaupunki on kapea ja pitkä: rannalta '
+                + 'kukkuloiden juurelle on vain parikymmentä kilometriä, '
+                + 'mutta pohjois-eteläsuunnassa nauha venyy Gawlerista '
+                + 'Sellicks Beachille lähes sata kilometriä, ja väliin mahtuu '
+                + 'yli 430 esikaupunkia. Alue on myös yksi Australian '
+                + 'seismisesti aktiivisimmista: suurin mitattu järistys '
+                + 'sattui 1. maaliskuuta 1954 kello 3.40 aamuyöllä, sen '
+                + 'voimakkuus oli 5,6 ja keskus Darlingtonissa kahdentoista '
+                + 'kilometrin päässä keskustasta.',
+              kuva: {
+                tiedosto: 'CBD in the Distance (22809720932).jpg',
+                selite: 'Adelaiden esikaupungit peittävät tasangon, ja Mount '
+                  + 'Lofty Ranges nousee niiden takana kaupungin itäreunalla.',
+                lahde: 'Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: tori Grote Streetin varrella',
+              teksti: 'Tammikuussa 1869 osa kauppiaista muutti East Endin '
+                + 'toreilta uudelle paikalle, ja samana vuonna Grote Streetin '
+                + 'varteen nousi kaksi suurta hallia. Pormestari Judah '
+                + 'Solomon avasi City Marketin virallisesti 23. tammikuuta '
+                + '1870, isoisän matkaa edeltävällä vuosikymmenellä. Nimi '
+                + 'vaihtui Central Marketiksi 1965. Nykyään saman katon alla '
+                + 'on yli 76 kojua, torille tuodaan kuukaudessa noin miljoona '
+                + 'kiloa tuoretta ruokaa ja kävijöitä lasketaan yli 8,5 '
+                + 'miljoonaa vuodessa. Kojujen ympärille on kasvanut '
+                + 'kahviloita, ravintoloita ja Adelaiden Chinatown.',
+              kuva: {
+                tiedosto: 'Interior of Central Market, Adelaide 08.jpg',
+                selite: 'Adelaiden Central Market on Grote Streetin varrella, '
+                  + 'ja sen tuoretuotekojut ovat kaikki saman katon alla.',
+                lahde: 'Pangalau, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kaupunki joka muutti mielensä',
+              teksti: '1970-luvun Dunstanin hallitukset muuttivat Adelaiden '
+                + 'maineen. Etelä-Australiasta tuli 1975 ensimmäinen '
+                + 'Australian osavaltio tai territorio, joka poisti '
+                + 'homoseksuaalisuuden rangaistavuuden suostumuksellisten '
+                + 'aikuisten kesken, ja kaupunki alkoi olla tunnettu '
+                + 'edistyksellisyydestään. Samaan aikaan taiteesta tuli '
+                + 'kaupungin tunnusmerkki: kaksivuosittainen Adelaide '
+                + 'Festival of Arts oli alkanut jo 1960 ja synnytti heti '
+                + 'rinnalleen kuratoimattoman Adelaide Fringen. '
+                + 'Festivaalikeskuksen rakentaminen alkoi 1970, ja Dunstan '
+                + 'perusti myös osavaltion elokuvayhtiön 1972 ja oopperan '
+                + '1976.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Adelaidesta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Adelaide-artikkelin ilmasto-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on kuuman kesän välimerenilmastoa: kesät ovat '
+                + 'kuumia ja kuivia, talvet viileitä ja sateisempia, ja '
+                + 'sateisin kuukausi on kesäkuu noin 80 millimetrillä. '
+                + 'Lämpötilan ääripäät ovat −2,6 astetta 8. kesäkuuta 1982 ja '
+                + '47,7 astetta 24. tammikuuta 2019, ja selkeitä päiviä on '
+                + 'vuodessa 90,6. Adelaide on tuulinen kaupunki, ja talvella '
+                + 'tuuli saa lämpötilan tuntumaan mittaria kylmemmältä.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Adelaiden 1800-luku on vapaiden siirtolaisten ja sitkeän '
+        + 'talouden tarina. Isoisän matkan vuonna kaupungin krikettikenttä '
+        + 'avattiin, ja parikymmentä vuotta myöhemmin lama koetteli mannerta.',
+      tehtava: {
+        kysymys: 'Kuinka monta lammasta laidunsi Adelaide Ovalin nurmea avajaisia edeltävänä päivänä?',
+        vaihtoehdot: [
+          '2 000',
+          '200',
+          '500',
+          '12 000',
+        ],
+        oikea: 0,
+        fakta: 'Lampaat olivat halvin ruohonleikkuri, joka siirtokunnasta '
+          + 'löytyi: kenttä oli kylvetty koiruoholle vasta edellisenä '
+          + 'kesänä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kenttä joka avattiin isoisän matkan vuonna',
+          tiedosto: 'Adelaide Oval 1880\'s.png',
+          teksti: 'Etelä-Australian krikettiliitto perustettiin 31. toukokuuta '
+            + '1871, ja parlamentin laki salli sen vuokrata palan '
+            + 'puistovyöhykettä North Adelaiden ja Torrens-joen välistä. '
+            + 'Kenttä valmistui 31. elokuuta 1872: kaksitoista eekkeriä, '
+            + 'jonka keskiosa tasoitettiin käsityönä ja kylvettiin '
+            + 'koiruoholle. Virallinen avaus koitti vasta lauantaina 13. '
+            + 'joulukuuta 1873, täsmälleen isoisän matkan vuonna. '
+            + 'Avausottelussa Etelä-Australiassa syntyneiden joukkue kohtasi '
+            + 'merentakaisten joukkueen noin 500 katsojan edessä, ja '
+            + 'edellisenä päivänä nurmea oli ohennettu 2 000 lampaalla.',
+          selite: 'Adelaide Oval on puistovyöhykkeeseen vuokrattu '
+            + 'krikettikenttä Torrens-joen ja North Adelaiden välissä.',
+          lahde: 'Norwood Football Club (Life time: Unknown), Wikimedia Commons (PD)',
+          wiki: 'Adelaide Oval',
+        },
+        {
+          otsikko: 'Puu jonka juurella siirtokunta julistettiin',
+          tiedosto: 'OldGumTreeGlenelg2.jpg',
+          teksti: 'Kuvernööri John Hindmarsh luki siirtokunnan '
+            + 'perustamisjulistuksen 28. joulukuuta 1836 kumipuun juurella '
+            + 'nykyisessä Glenelg Northissa. Paikka on kaurnaksi Patha '
+            + 'Yukuna, ja puu — todennäköisesti punakumipuu — oli kaurnoille '
+            + 'merkittävä jo ennen siirtomaa-aikaa. Puu oli kuollut '
+            + 'viimeistään 1907, ja sen lahonnut pinta valettiin betoniin '
+            + '1963. Julistuspäivää vietetään yhä vuosittain samalla '
+            + 'paikalla, ja kuvernööri lukee Hindmarshin alkuperäisen puheen '
+            + 'ääneen. Vuonna 2025 tilaisuutta edelsi ensimmäistä kertaa '
+            + 'alkuperäiskansan yön yli kestänyt leiri ja seremoniallinen '
+            + 'tuli.',
+          selite: 'Vanha kumipuu Glenelg Northissa kuoli viimeistään 1907, ja '
+            + 'sen runko on tuettu betonilla ja katettu kaarevalla '
+            + 'teräskatoksella.',
+          lahde: 'User A1 at English Wikipedia, Wikimedia Commons (PD)',
+          wiki: 'The Old Gum Tree',
+        },
+        {
+          otsikko: 'Vankila jota ei pitänyt tarvita',
+          tiedosto: 'Adelaide gaol cell block.jpg',
+          teksti: 'Lightin 1837 kaavaan ei varattu tilaa vankilalle: vapaiden '
+            + 'siirtolaisten kaupungissa uskottiin olevan vähän '
+            + 'rikollisuutta. Jo saman vuoden puolivälissä South Australian '
+            + 'Register varoitti Uudesta Etelä-Walesista karanneista '
+            + 'vangeista, ja maaliskuussa 1838 kaupungissa tapahtui murto, '
+            + 'murha ja kaksi murhayritystä. Poliisilaitos perustettiin '
+            + 'huhtikuussa 1838 21-vuotiaan Henry Inmanin johdolla, ja '
+            + 'ryöstöön syyllistynyt Michael Magee teloitettiin 2. toukokuuta '
+            + '1838. Pysyvä vankila piirrettiin Lontoon Pentonvillen malliin; '
+            + 'se toimi 1841–1988.',
+          selite: 'Adelaiden vankila puistovyöhykkeen luoteiskulmassa on '
+            + 'Government Housen ohella Etelä-Australian vanhin yhä pystyssä '
+            + 'oleva rakennus.',
+          lahde: 'Peripitus, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Adelaide Gaol',
+        },
+        {
+          otsikko: 'Lama jonka viini ja kupari kestivät',
+          tiedosto: 'Hughes Enginehouse, Moonta Mines, North view 20230210 1.jpg',
+          teksti: '1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä '
+            + 'pankit ja Melbournessa rahalaitokset sulkivat ovensa. '
+            + 'Etelä-Australian vientitulojen arvo lähes puolittui, ja '
+            + 'vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta '
+            + 'niin, että osa perheistä lähti Länsi-Australiaan. Adelaide '
+            + 'selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin '
+            + 'hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi '
+            + 'kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset '
+            + 'ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut '
+            + 'lainkaan: viini ja kupari.',
+          selite: 'Hughesin konehuone toimi Moonta Minesin kuparikaivoksella '
+            + 'Yorken niemimaan pohjoispäässä vuodesta 1865 vuoteen 1923.',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Adelaide',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Lightin puistorengas ja kaurnojen pyhät paikat kietoutuvat '
+        + 'samaan maisemaan Torrens-joen ympärillä. Vihreä kehä keskustan '
+        + 'ympärillä on säilynyt isoisän ajoista, joskin pala kerrallaan '
+        + 'kutistuen.',
+      tehtava: {
+        kysymys: 'Kuinka moni oli paikalla, kun Torrens Lake avattiin yleisölle heinäkuussa 1881?',
+        vaihtoehdot: [
+          'noin 40 000',
+          'noin 400',
+          'noin 4 000',
+          'noin 400 000',
+        ],
+        oikea: 0,
+        fakta: 'Se oli lähes koko Adelaide: kaupungissa asui tuolloin vain '
+          + 'vähän enemmän ihmisiä kuin altaan avajaisiin tuli katsojia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puistorengas josta nakerrettiin palasia',
+          tiedosto: 'Gladys Elphick Park (Park 25) in Adelaide, May 2026 (DSCF6674).jpg',
+          teksti: 'Puistovyöhyke on kahdeksikon muotoinen viheralue '
+            + 'Torrens-joen molemmin puolin Hackneystä Thebartoniin, ja se '
+            + 'erottaa keskustan ja North Adelaiden ympäröivistä '
+            + 'esikaupungeista. Valtio alkoi kuitenkin nakertaa siitä palasia '
+            + 'heti: pian 1837 jälkeen 370 eekkeriä siirtyi hallituksen '
+            + 'varauksiksi, ja vuonna 1902 The Herald laski menetyksiä '
+            + 'kertyneen 489 eekkeriä — vankila, hautausmaa, rautatie ja '
+            + 'vesihuolto mukaan lukien. Vuoteen 2018 mennessä lukema oli noin '
+            + '568 eekkeriä. Kaikilla 29 puistolla on kaurnankielinen nimi, ja '
+            + 'valtuusto vahvisti 39 kohteen nimeämisen 2012.',
+          selite: 'Puistovyöhykkeen Park 25 kantaa nimiä Gladys Elphick Park '
+            + 'ja Narnungga, joka tarkoittaa kaurnaksi kotoperäisen männyn '
+            + 'paikkaa.',
+          lahde: 'Yu Chu Chin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Adelaide Park Lands',
+        },
+        {
+          otsikko: 'Joki jolle annettiin kolme nimeä',
+          tiedosto: 'Torrens Weir 376.JPG',
+          teksti: 'Marraskuussa 1836 liikkeellä ollut tutkimusretkikunta nimesi '
+            + 'joen Yatalaksi, mutta eversti Light nimesi sen pian uudelleen '
+            + 'siirtomaakomission puheenjohtajan Robert Torrensin mukaan; '
+            + 'kaurnaksi se on Karra wirra-parri, punakumipuumetsän joki. '
+            + 'Vuoteen 1878 mennessä joesta oli tullut haiseva musta viemäri, '
+            + 'ja kirjailija Anthony Trollope piti sitä rumimpana jokena, '
+            + 'jonka oli nähnyt. Vankityövoimalla rakennettu puupato '
+            + 'huuhtoutui pois 1867. Betonipato valmistui 1881, ja kun sen '
+            + 'padottama Torrens Lake avattiin 21. heinäkuuta 1881, paikalla '
+            + 'oli arviolta 40 000 ihmistä.',
+          selite: 'Torrensin pato padottaa Torrens Laken keskustan '
+            + 'pohjoispuolella, ja nykyinen rakenne on 1920-luvun lopun '
+            + 'uusinta.',
+          lahde: 'Schwede66, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'River Torrens',
+        },
+        {
+          otsikko: 'Puutarha kaurnojen pyhällä maalla',
+          tiedosto: 'Palm house, Adelaide Botanic Gardens - oblique.JPG',
+          teksti: 'Kasvitieteellisen puutarhan paikka hyväksyttiin '
+            + 'lakiasäätävässä neuvostossa tammikuussa 1855. Maa oli '
+            + 'kaurnoille pyhää punaisen kengurun unelma-aluetta eli '
+            + 'Tarndanyanggaa, mutta sitä käytettiin tuolloin poliisin '
+            + 'hevoslaitumena. Puutarha avattiin yleisölle 4. lokakuuta 1857, '
+            + 'ja sen viktoriaaninen Palmuhuone valmistui 1877. Ensimmäisen '
+            + 'johtajan George William Francisin kuoltua 1865 seuraajaksi '
+            + 'tuli saksalaissyntyinen Moritz Richard Schomburgk, '
+            + 'luonnontutkija Robert Hermann Schomburgkin veli, joka ajoi '
+            + 'voimakkaasti metsänsuojelualueita yhä puuttomammaksi käyvään '
+            + 'Etelä-Australiaan.',
+          selite: 'Kasvitieteellisen puutarhan Palmuhuone on vuodelta 1877 ja '
+            + 'edustaa viktoriaanista rauta- ja lasiarkkitehtuuria.',
+          lahde: 'Peripitus, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Adelaide Botanic Garden',
+        },
+        {
+          otsikko: 'Aukio jolla lippu nousi ensimmäisen kerran',
+          tiedosto: 'Aboriginal Flag - Victoria Square.jpg',
+          teksti: 'Victoria Square nimettiin 23. toukokuuta 1837 silloisen '
+            + 'prinsessa Victorian mukaan. Vuodesta 2002 aukiolla on ollut '
+            + 'myös kaurnankielinen nimi Tarntanyangga: tarnta on punainen '
+            + 'kenguru, kanya kallio ja pääte -ngga tarkoittaa paikkaa. Juuri '
+            + 'täällä nostettiin heinäkuussa 1971 maaoikeusmielenosoituksessa '
+            + 'ensimmäistä kertaa koko maassa alkuperäiskansojen lippu — '
+            + 'lähteet antavat päiväksi sekä 9. että 12. heinäkuuta. '
+            + 'Kaupunginvaltuusto päätti 8. heinäkuuta 2002, että lippu '
+            + 'liehuu aukiolla pysyvästi Australian lipun rinnalla.',
+          selite: 'Australian alkuperäiskansojen lippu liehuu Victoria '
+            + 'Squarella pysyvästi Australian lipun rinnalla.',
+          lahde: 'Peripitus, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Victoria Square, Adelaide',
+        },
+      ],
+    },
+    {
+      id: 'saksalaisperinne',
+      nimi: 'Saksalaisperintö',
+      johdanto: 'Adelaiden itäpuolisiin kukkuloihin ja Barossan laaksoon '
+        + 'asettui 1830–40-luvuilla saksalaisia luterilaisia, jotka toivat '
+        + 'mukanaan viiniköynnökset. Sama maa on perämangkien perinteistä '
+        + 'aluetta.',
+      tehtava: {
+        kysymys: 'Miksi Barossan laakson nimi kirjoitetaan Barossa eikä Barrosa?',
+        vaihtoehdot: [
+          'nimi kirjattiin rekisteriin virheellisesti',
+          'se on nimen saksankielinen muoto',
+          'laaksossa on kaksi jokea',
+          'nimi tulee kahdesta eri kylästä',
+        ],
+        oikea: 0,
+        fakta: 'Eversti Light oli itse taistellut Barrosan taistelussa '
+          + 'Espanjassa 1811, joten hän tuskin kirjoitti nimeä väärin — virhe '
+          + 'syntyi vasta rekisteriin kirjattaessa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kylä jonka nimi tuli laivan kapteenilta',
+          tiedosto: 'HahndorfSA.JPG',
+          teksti: 'Hahndorfin perustivat luterilaiset siirtolaiset, jotka '
+            + 'tulivat pääosin Kayn kylästä Preussista — nykyisin Kije '
+            + 'Puolassa. Suuri osa heistä saapui laivalla Zebra 28. '
+            + 'joulukuuta 1838. He asettuivat perämangkien perinteiselle '
+            + 'maalle paikkaan, jonka nimi Bukartilla viittaa seudun '
+            + 'vesikuoppiin, ja kylä nimettiin Zebran kapteenin Dirk Meinerts '
+            + 'Hahnin mukaan. Hahndorf on Australian vanhin yhä olemassa '
+            + 'oleva saksalaissiirtokunta, ja saksalainen kädenjälki näkyy '
+            + 'säilyneiden alkuperäisrakennusten puurunkoisessa '
+            + 'Fachwerk-rakenteessa.',
+          selite: 'Hahndorfin pääkatu on Australian vanhimman yhä olemassa '
+            + 'olevan saksalaissiirtokunnan keskus Adelaide Hillsissä.',
+          lahde: 'Yeti Hunter, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Hahndorf, South Australia',
+        },
+        {
+          otsikko: 'Nimi joka katosi sodan ajaksi',
+          tiedosto: 'Hahndorf (AU), St Paul\'s Lutheran Church -- 2019 -- 0679.jpg',
+          teksti: 'Ensimmäinen maailmansota muutti Etelä-Australian kartan: '
+            + 'hallitus vaihtoi 1917 kymmenien paikkojen saksalaiset nimet, '
+            + 'ja Hahndorfista tuli Ambleside läheisen rautatieaseman mukaan. '
+            + 'Vanha nimi palautettiin vasta nimistölailla, joka tuli voimaan '
+            + '12. joulukuuta 1935, ja Ambleside-nimen jälkiä näkyy kylässä '
+            + 'yhä. Seurakunnat säilyivät koko ajan. St Michael’s on '
+            + 'vuodelta 1839 ja on Australian vanhin luterilainen kirkko, '
+            + 'jolla on yhä seurakunta alkuperäisellä paikallaan; St '
+            + 'Paul’s syntyi 1846 pastorien Kavelin ja Fritzschen '
+            + 'välirikosta.',
+          selite: 'Hahndorfin St Paul’s perustettiin 1846, kun kylän '
+            + 'luterilainen seurakunta jakautui kahtia.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hahndorf, South Australia',
+        },
+        {
+          otsikko: 'Laakso jonka nimi jäi kirjoitusvirheeseen',
+          tiedosto: 'View of Barossa Valley from Mengler Hill 20230207.jpg',
+          teksti: 'Eversti Light nimesi kukkulat 1837 Barrosan taistelun '
+            + 'mukaan, jossa hän oli itse taistellut Espanjassa 1811, mutta '
+            + 'nimi kirjattiin rekisteriin muodossa Barossa ja jäi '
+            + 'sellaiseksi. Laaksoon asettui 1840-luvulla saksalaisia, joista '
+            + 'moni oli Preussin Sleesiasta; he kutsuivat seutua nimellä '
+            + 'Neu-Schlesien. Tanundaan istutettiin 1847 shiraz-köynnöksiä, '
+            + 'jotka tuottavat satoa yhä. Helmikuussa 2011 pääministeri Mike '
+            + 'Rann ilmoitti erillislaista, joka suojaisi laaksot '
+            + 'kaupungistumiselta; laki säädettiin 2012, jolloin '
+            + 'pääministerinä oli jo Jay Weatherill.',
+          selite: 'Barossan laakso avautuu Mengler’s Hillin '
+            + 'näköalapaikalta noin kuudenkymmenen kilometrin päässä '
+            + 'Adelaiden keskustasta koilliseen.',
+          lahde: 'User:DXR, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Barossa Valley',
+        },
+        {
+          otsikko: 'Perämangkit, kukkuloiden oma kansa',
+          tiedosto: 'Piccadilly Valley.JPG',
+          teksti: 'Perämangkit ovat Adelaide Hillsin perinteinen kansa, ja '
+            + 'Barossan laakso on osa heidän maataan. Tuhansien vuosien '
+            + 'läsnäolosta kertovat esineet, arpeutuneet puut ja '
+            + 'suojapaikkojen maalaukset. Kansa ei kuitenkaan jäänyt '
+            + 'maisemaan pelkiksi jäljiksi: sukuryhmien nimet Poonawatta, '
+            + 'Tarrawatta ja Karrawatta ovat säilyneet, monessa perheessä '
+            + 'perämangkien sukujuuri kulkee edelleen, ja viime '
+            + 'vuosikymmeninä jälkeläisiä on etsitty sukututkimuksella. '
+            + 'Adelaide Hillsin koulut, kirkot ja kunnat pyytävät nykyään '
+            + 'usein perämangkien vanhimpia ja taiteilijoita pitämään '
+            + 'tervetuliaisseremonian.',
+          selite: 'Piccadilly Valley on yksi Mount Lofty Rangesin laaksoista '
+            + 'Adelaide Hillsissä, perämangkien perinteisellä maalla.',
+          lahde: 'Bahudhara, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Peramangk',
+        },
+      ],
+    },
+  ],
+  /*
+   * HOBART (lauta oceania, kaupunki-id hobart) — kaupunkilehti 24.8.2026.
+   *
+   * LÄHTEET. Työpohjana docs/mantereet-tyoaineisto/faktapohja-hobart.md ja
+   * sen rinnalla RIIPPUMATON TARKISTUS tarkistus-hobart.md, joka ei ole
+   * tässä työpuussa vaan luettiin commitista 0b8a3a1b. Tarkistus voittaa
+   * faktapohjan. Kirjoittaja haki lisäksi jokaisen tekstiin menevän
+   * väitteen uudestaan en-Wikipedian raakateksteistä 24.8.2026 (Hobart,
+   * Sullivans Cove, Whaling in Australia, Aboriginal Tasmanians,
+   * Salamanca Place, Kelly's Steps, Battery Point, Hobart coastal
+   * defences, Theatre Royal (Hobart), Cascade Brewery, Port Arthur
+   * (Tasmania), Mount Wellington (Tasmania), Hobart Rivulet, Tasman
+   * Bridge, Hobart Airport, Hobart Town Hall, Museum of Old and New Art,
+   * Dark Mofo, Tasmanian devil). Yhtään #REDIRECT-riviä ei osunut.
+   *
+   * TARKISTUKSEN KOLME PAKOLLISTA KORJAUSTA ON TEHTY:
+   *
+   *   (a) PERUSTAMISKUUKAUSI ON HELMIKUU, EI ELOKUU. Faktapohja sanoi
+   *       Collinsin siirtäneen siirtokunnan Sullivans Coveen elokuussa
+   *       1804. Lähteessä ei ole elokuulle mitään tukea: Hobart-artikkelin
+   *       infolaatikko antaa `established = 20.2.1804` ja Sullivans Cove
+   *       -artikkeli sanoo "founded on 21 February 1804". Wikipedian
+   *       sisäinen ero on yksi päivä (20. vs. 21.2.), joten nosto K1
+   *       sanoo vain "helmikuussa 1804" ja ero kirjataan tähän —
+   *       ennakkotapaukset v925, v932 ja v937.
+   *   (b) CASCADEN 1824-SELITYS EI OLE LÄHTEEN TUKEMA. Faktapohja väitti
+   *       infolaatikon vuoden 1824 viittaavan saman tontin sahalaitokseen.
+   *       Cascade Brewery -artikkelin leipäteksti sanoo toisin: "The mills
+   *       began operation in 1825 and the brewery was founded ... in
+   *       1832", ja 1824 esiintyy artikkelissa vain Macintoshin ja
+   *       Degravesin siirtolaisvuotena ("emigrated from England on his
+   *       ship Hope in 1824"). Nosto H3 kirjoittaa ristiriidan auki juuri
+   *       näin eikä selitä sitä sahalla. Lisäristiriita mainitaan myös:
+   *       Hobart-artikkelin arkkitehtuuriosio antaa panimolle vuoden 1824
+   *       samoin kuin infolaatikko, panimon oma artikkeli vuoden 1832.
+   *   (c) VISAVUOTO K2:SSA KORJATTU. js/packs/oceania-questions.js kysyy
+   *       hobart-kohdassa (4) "Mikä oli Hobartin rooli 1800-luvun
+   *       alussa?", vastaus "rangaistussiirtola ja satama". Faktapohjan
+   *       nosto K2 toisti tämän lähes sanatarkasti jo otsikossaan
+   *       ("Vankisiirtola…") ja kertoi lisäksi Port Arthurista, joka on
+   *       eri paikkakunta 97 km:n päässä. Tässä lehdessä Port Arthur on
+   *       siirretty historia-sivulle nostoksi H4, jonka otsikko ja
+   *       ensimmäinen virke eivät kaiu visan sanamuotoa, ja etäisyys
+   *       sanotaan ääneen. Hobartin OMA perustaminen kerrotaan nostossa
+   *       K1 Hobart-artikkelin täsmällisemmän lauseen pohjalta ("Founded
+   *       in 1804 as a British penal colony") mutta eri sanoin: Britannia
+   *       perusti paikan ottaakseen vastaan kotimaassa tuomittuja.
+   *       Vastaus siis LÖYTYY lehdestä, muttei visan omalla muotoilulla.
+   *
+   * MUUT VISAKYSYMYKSET on käyty läpi samalla säännöllä. (1) Tasmania
+   * mainitaan kaikkialla, se on väistämätöntä. (2) Tasmanianpiru: oppaan
+   * jakso 2 kertoo lajin katoamisesta mantereelta ja siitä, että se elää
+   * enää Tasmaniassa — visan kysymystä "mikä pussieläin on saanut nimensä
+   * Tasmaniasta" ei toisteta. (3) Sydney–Hobart-purjehdus mainitaan oppaan
+   * jaksossa 3 osana kaupungin venekautta, ei visan kysymysmuodossa.
+   * (5) Tasmanian viileä sademetsä ja vuoristo tulevat luonto-sivun
+   * johdannosta ja nostoista.
+   *
+   * ARIMMAT VÄITTEET (tarkistuksen huomio 1: palawa-kansan jatkuvuus,
+   * Unescon asiakirjan poisto huhtikuussa 2023, nykyväestö 6 000 – yli
+   * 23 000) on käytetty LUOTTAVAISESTI ilman varauksia nostossa K3, koska
+   * riippumaton tarkistaja vahvisti ne suoriksi lauseiksi lähteessä.
+   *
+   * HERKKYYS. Musta sota kerrotaan nostossa H1 toteavasti tapahtumien
+   * kulkuna: sotatilalaki, Musta linja, 26 ihmisen antautuminen ja
+   * karkotus Flindersin saarelle. en-Wikipedian yksityiskohtaista
+   * taulukkoa ammutuista ja vangituista EI käytetä. Port Arthurin vuoden
+   * 1996 joukkomurha on jätetty kokonaan pois kaikesta sisällöstä.
+   * "Viimeinen täysiverinen X" -kehystystä ei käytetä missään, koska K3
+   * nimenomaan kumoaa sen; samasta syystä K3:n kuva on NYKYAIKAINEN eikä
+   * 1800-luvun valokuva.
+   *
+   * KUVAT: 27 kuvaa, kaikki Wikimedia Commonsista. Lisenssi ja tekijä on
+   * luettu rajapinnan extmetadatasta (LicenseShortName, Artist,
+   * Restrictions) ja JOKAINEN valittu kuva on katsottu silmin 900 pikselin
+   * esikatseluna. Yksikään tiedostonimi ei esiinny muualla repossa
+   * (tarkistettu grepillä koko js-puusta).
+   *
+   * KUVAHYLKÄYKSET SYINEEN. Vesileima tai kuvan päälle lisätty merkintä:
+   * "3B's Hobart golden hour 2018" (© 3B's vasemmassa alakulmassa),
+   * "Port Arthur Historic Site" (© tassie HAO vasemmassa alakulmassa),
+   * "Phasianotrochus irisodontes (MNHN-IM-2000-31178)" (© MNHN / Paris,
+   * France oikeassa yläkulmassa) ja "Penitentiary and Mount Arthur
+   * Tasmania by Anson Brothers" (albumiinivedoksen alareunaan painettu
+   * kuvateksti). Tunnistettavat kasvot: "Salamanca Market 2010" (kymmeniä
+   * kasvoja lähikuvassa), "Australian Wooden Boat Festival 2009 -
+   * 3260106068" (soutaja etualalla kasvot kameraan), "Hobart Tasmania
+   * Salamanca Place" (markkinaväkeä oikeassa alalaidassa lähietäisyydellä),
+   * "Battery Point TAS 7004, Australia - panoramio" (portaissa seisova
+   * nainen etualalla), "Tasmanian-Aboriginal-ochre-painting-20160924-010"
+   * (yksittäinen tunnistettava henkilö koko kuvan täyttäen), "Penetentiary,
+   * Port Arthur (3982410405)" (kaksi kävijää kaiteella lähietäisyydellä).
+   * Aihe ei vastannut käyttötarkoitusta: "Southern end of Hobart CBD and
+   * Battery Point July 2017" (kuvan keskellä tietoliikennemasto ja
+   * 1960-luvun toimistotalo, kaupunki ei tunnistu), "MS Oosterdam,
+   * Macquarie Wharf, 2013 (01)" (kansituoleja, ei Hobartia), "State
+   * Library of Tasmania" (ilmeetön 1960-luvun toimistokuutio),
+   * "Sundown-Point-petroglyphs-20160924-013" (kalliokaiverrukset niin
+   * heikosti erottuvia, ettei kuva kerro mitään), "Hobart - 52235263119
+   * Organ Pipes 2022" (huippu utuinen, urkupillit eivät näy),
+   * "Tiagarra, Devonport, Tasmania 01" (kohteesta ei ole
+   * en-Wikipedia-artikkelia, jolla selite olisi voitu lähteistää).
+   *
+   * POIS JÄTETTY AIHE. Faktapohjan nosto T4 (valokuvaaja Ricky Maynard ja
+   * maireener-simpukkakaulakorut) on jätetty pois VAIN kuvasyystä: ainoa
+   * maireener-simpukan kuva Commonsissa on museon vesileimattu
+   * tyyppiyksilökuva, ja ainoat nykyistä palawa-käsityötä esittävät kuvat
+   * näyttävät tunnistettavia yksityishenkilöitä. Tilalle tuli nosto T4
+   * Sidney Nolanin Käärmeestä. Palawa-kansan nykyisyys kantaa silti
+   * lehden näkyvimmän paikan (K3 kansisivulla), ja kaksoisnimet ovat
+   * nostossa L1.
+   *
+   * AIHETOISTO, KAKSI PERUSTELTUA PARIA. (1) John Glover esiintyy kahdesti
+   * eri teoksella ja eri sivulla: K1:ssä vuoden 1832 näkymä puutarhasta,
+   * jossa hän asui, ja H1:ssä vuoden 1834 näkymä Kangaroo Pointilta.
+   * Jälkimmäinen on H1:n sisällön kannalta olennainen juuri siksi, että
+   * Glover maalasi rannalle tanssivia alkuperäisasukkaita, vaikka heidät
+   * oli siihen mennessä jo karkotettu alueelta. (2) Salamanca Placen
+   * makasiinit esiintyvät avauskuvassa (katunäkymä), nostossa K4 (Kellyn
+   * portaat kallioseinämässä) ja nostossa T3 (Salamanca Arts Centren
+   * sisäkäytävä) — kolme eri tiedostoa, kolme eri asiaa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä. Oppaan jakso 5 nojaa siis en-Wikipedian Hobart-artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin, Karachin,
+   * Vancouverin ja Perthin malli.
+   *
+   * ENNEN JA NYT -PARIA, kohdekarttaa, miniatyyrejä eikä tarinakaarta ei
+   * tehty tässä erässä (tehtävänannon rajaus).
+   *
+   * KUVATEKSTIT noudattavat omistajan 22.8.2026 linjausta: selite kertoo
+   * KOHTEESTA eikä kuvaile kuvaa, ja se on yhden virkkeen mittainen.
+   */
+  hobart: [
+    {
+      id: 'kaupunki',
+      nimi: 'Hobart',
+      johdanto: 'Derwentin suulle helmikuussa 1804 perustettu Hobart on '
+        + 'Australian eteläisin ja Sydneyn jälkeen vanhin pääkaupunki. '
+        + 'Isoisän matkan vuonna sen satamasta lähti yhä valaanpyytäjiä ja '
+        + 'Venäjän laivasto kävi katsomassa Derwentiä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Hobart seen from Mt Wellington 1.jpg',
+          selite: 'Kunanyin huippulaki on runsaan tuhannen metrin korkeudessa '
+            + 'aivan kaupungin takana, ja sieltä näkyy koko Derwentin suisto.',
+          lahde: 'Andrea Schaffer from Sydney, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Constitution-Dock-facing-hbt-cbd.jpg',
+          selite: 'Constitution Dock on keskustan reunassa oleva vanha '
+            + 'satama-allas, jonne Sydneystä lähtevät purjeveneet saapuvat '
+            + 'uudenvuoden tienoilla.',
+          lahde: 'Wiki ian, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Hobart, kunanyi, the river and Tasman Bridge from the Rosny Lookout.jpg',
+          selite: 'Tasman Bridge yhdistää keskustan itäiseen rantaan, ja sen '
+            + 'takana Derwent jatkuu Storm Bayta kohti.',
+          lahde: 'jacobharrisau, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kolmelta eri suunnalta —
+       * sisäkaupungin kattojen yli, vedeltä päin ja Salamanca Placen
+       * katutasolta. Yksikään ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Hobart seen from the east.jpg',
+          selite: 'Hobartin vanhat esikaupungit ovat matalia ja peltikattoisia, '
+            + 'ja ne ulottuvat keskustan takaa ylös rinteille.',
+          lahde: 'Thennicke, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Hobart and Mount Wellington 20171120-039.jpg',
+          selite: 'Keskusta on Derwentin länsirannalla, ja kunanyin selänne '
+            + 'nousee sen takana yhtenäisenä muurina.',
+          lahde: 'Gary Houston, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Salamanca Place, Hobart (1).jpg',
+          selite: 'Salamanca Place on sataman vieressä kulkeva katu, jonka '
+            + 'toisella puolella seisoo rivi 1800-luvun hiekkakivimakasiineja.',
+          lahde: 'Tim J Keegan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Leiri joka siirtyi toiselle rannalle',
+          tiedosto: 'Hobart Town, taken from the garden where I lived a3891001h.jpg',
+          teksti: 'Ensimmäinen brittileiri pystytettiin 1803 Risdon Coveen '
+            + 'Derwentin itärannalle, mutta paikan vesi osoittautui '
+            + 'kelvottomaksi. Helmikuussa 1804 luutnanttikuvernööri David '
+            + 'Collins siirsi väen — sotilaat, siirtolaiset ja hylätystä Port '
+            + 'Phillipin siirtokunnasta tuodut vangit — vastarannalle '
+            + 'Sullivans Coveen, jonne laski vuorelta puro. Britannia oli '
+            + 'perustanut paikan ottaakseen vastaan kotimaassa tuomittuja, ja '
+            + 'Derwentin syvä satama teki siitä pian eteläisten merten '
+            + 'laivojen huolto- ja kauppapaikan. Collins nimesi kaupungin '
+            + 'sodasta ja siirtomaista vastanneen lordi Hobartin ja lahden '
+            + 'tämän alivaltiosihteerin mukaan.',
+          selite: 'John Glover maalasi Hobart Townin 1832 siitä puutarhasta, '
+            + 'jossa itse asui, kun kaupunki oli vasta reilut '
+            + 'kaksikymmentäviisi vuotta vanha.',
+          lahde: 'John Glover, Wikimedia Commons (PD)',
+          wiki: 'Hobart',
+        },
+        {
+          otsikko: 'Satama jonka valaat rakensivat',
+          tiedosto: 'Narrative of a Visit to the Australian Colonies - Hobart Town, 1834.png',
+          teksti: 'Siirtolaiset huomasivat pian, että Derwentin suisto oli '
+            + 'eteläisten sileävalaiden lisääntymisalue. Rantapyynti alkoi '
+            + 'joessa 1805, ja seuraavien neljän vuosikymmenen aikana '
+            + 'Tasmaniassa toimi ainakin 45 pyyntiasemaa; Hobart ja Sydney '
+            + 'olivat Australian kaksi tärkeintä valaanpyyntisatamaa. Kauppa '
+            + 'oli huipussaan 1830-luvulla, ja sen varaan syntyi '
+            + 'laivanrakennusta. Sitten tuli sarja takaiskuja: kannat '
+            + 'ehtyivät, 1840 alkoi lama, mannermaan kultalöydöt veivät miehet '
+            + 'ja kivennäisöljy syrjäytti valaanrasvan lampuissa. '
+            + 'Siirtomaakauden viimeinen pyyntialus Helen lähti Hobartista '
+            + '17. maaliskuuta 1898.',
+          selite: 'Vuoden 1834 vedos esittää Hobart Townin mereltä katsottuna '
+            + 'aikana, jolloin se oli eteläisten merten vilkkaimpia '
+            + 'valaanpyyntisatamia.',
+          lahde: 'Author James Backhouse Artist C. Wheeler Etched by William Chapman, Wikimedia Commons (PD)',
+          wiki: 'Whaling in Australia',
+        },
+        {
+          otsikko: 'Kansa joka ei koskaan hävinnyt',
+          tiedosto: 'SETAC office Cygnet 20201114-016.jpg',
+          teksti: 'Suuren osan 1900-lukua Tasmanian alkuperäiskansaa pidettiin '
+            + 'laajalti ja virheellisesti sukupuuttoon kuolleena. Käsitys '
+            + 'nojasi kahteen naiseen, Truganiniin ja Fanny Cochrane Smithiin, '
+            + 'jotka siirtomaa-ajan kirjoittajat esittivät väärin perustein '
+            + 'viimeisinä tasmanialaisina. Yhteisöt säilyivät, erityisesti '
+            + 'Tasmanian ja Bassin salmen saarten naisten jälkeläisten kautta. '
+            + 'Huhtikuussa 2023 Unesco poisti sivuiltaan asiakirjan, jossa '
+            + 'kansan väitettiin hävinneen; taustalla oli tasmanialaisten oma '
+            + 'kampanjointi. Vuoden 2016 luvuissa itsensä palawaksi tai '
+            + 'pakanaksi tunnistavia on kriteereistä riippuen 6 000 – yli '
+            + '23 000.',
+          selite: 'South East Tasmanian Aboriginal Corporationin päätoimisto '
+            + 'toimii puutalossa Cygnetin kylässä Etelä-Tasmaniassa.',
+          lahde: 'Gary Houston, Wikimedia Commons (CC0)',
+          wiki: 'Aboriginal Tasmanians',
+        },
+        {
+          otsikko: 'Neljäkymmentäkahdeksan porrasta kallioon',
+          tiedosto: "Kelly's Steps.jpg",
+          teksti: 'Salamanca Placen hiekkakivimakasiinit rakennettiin sataman '
+            + 'varastoiksi, ja katu sai nimensä Wellingtonin herttuan voitosta '
+            + 'Salamancan taistelussa 1812; sitä ennen paikkaa kutsuttiin '
+            + 'nimellä The Cottage Green. Vuonna 1839 merenkulkija James Kelly '
+            + 'hakkasi makasiinien takana kohoavaan jyrkänteeseen '
+            + 'neljänkymmenenkahdeksan portaan oikotien ylös Battery Pointiin '
+            + '— ja juuri siitä kalliosta louhittu kivi oli muurattu alla '
+            + 'seisoviin varastoihin. Battery Point puolestaan sai nimensä '
+            + '1818 valmistuneesta tykkipatterista, jonka vartiorakennus on '
+            + 'yhä kaupunginosan vanhin talo.',
+          selite: 'Kellyn portaat nousevat Salamanca Placelta Battery Pointiin '
+            + 'ja ne hakattiin 1839 samaan kallioon, josta makasiinien kivet '
+            + 'oli louhittu.',
+          lahde: 'Travis, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Salamanca Place',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: "St George's Battery Pt 2015.jpg",
+          selite: 'St Georgen kirkko Battery Pointissa valmistui 1838, ja sen '
+            + 'klassinen torni lisättiin 1847 James Blackburnin piirustusten '
+            + 'mukaan.',
+          lahde: 'Tatyana Kozlova, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Hobart on Tasmanian pääkaupunki ja Australian eteläisin '
+          + 'osavaltiopääkaupunki: Suur-Hobartissa asuu noin 255 000 ihmistä, '
+          + 'lähes puolet koko saaren väestä. Kaupunki on Derwentin suistossa, '
+          + 'ja sen satama on maailman toiseksi syvin luonnonsatama. Vanha '
+          + 'keskusta, Salamanca Place ja Battery Point ovat kaikki läntisellä '
+          + 'rannalla kävelymatkan päässä toisistaan; itäiselle rannalle '
+          + 'mennään Tasman Bridgen yli tai lautalla. Lännessä kunanyi eli '
+          + 'Wellingtoninvuori nousee 1 271 metriin heti esikaupunkien takaa, '
+          + 'ja pohjoisessa jokea ylöspäin on MONA-taidemuseo.',
+        artikkeli: {
+          nimi: 'Matkailijan Hobart',
+          taitto: 'opas',
+          teksti: 'Syvä satama vuoren ja joen välissä — kaupunki, joka '
+            + 'rakennettiin valaanöljyn rahoilla ja josta lähdetään nykyään '
+            + 'Etelämantereelle.',
+          nosto: 'Hobartissa on vähiten aurinkotunteja Australian '
+            + 'suurkaupungeista, mutta pisin valoisa kesäpäivä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Hobart Airport avattiin 1956 nimellä Llanherne, ja se '
+                + 'on Cambridgessa seitsemäntoista kilometriä keskustasta '
+                + 'koilliseen kapealla niemellä, jolta nousut ja laskut '
+                + 'suuntautuvat aina veden yli. Sieltä lennetään myös '
+                + 'Etelämantereelle Australian Antarktis-osaston laskuun. '
+                + 'Meritse tullaan yhä samaan rantaan kuin 1804: kesäkaudella '
+                + 'Macquarie Wharfiin kiinnittyy risteilijöitä, ja kaudella '
+                + '2016–2017 niitä kävi 47. Kaupungin sisällä kulkee yksi '
+                + 'lauttalinja Brooke Street Pieriltä Bellerive Quaylle '
+                + 'kuutena päivänä viikossa, ja MONAan pääsee omalla '
+                + 'katamaraanilla kahdessakymmenessäviidessä minuutissa. '
+                + 'Junia ei ole: lähiliikenne loppui 1974 ja raitiovaunut jo '
+                + '1960-luvun alussa, vaikka kiskot näkyvät yhä vanhoissa '
+                + 'kaduissa.',
+              kuva: {
+                tiedosto: 'Waterfront warehouses Hobart.jpg',
+                selite: 'Victoria Dockin takana Hunter Streetillä seisoo rivi '
+                  + 'georgiaanisia makasiineja, joiden kylkeen on maalattu '
+                  + 'vanhan hillitehtaan nimi.',
+                lahde: 'Tatyana Kozlova, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on kahden rannan varassa. Läntinen ranta '
+                + 'kantaa vanhan keskustan, ja sen takana maa nousee '
+                + 'jyrkästi kunanyin rinteille; itäinen ranta on '
+                + 'loivempaa ja uudempaa esikaupunkia Meehan-vuorijonon '
+                + 'kupeessa. Rantoja yhdistää Tasman Bridge, ja juuri siihen '
+                + 'osui kaupungin pahin onnettomuus: 5. tammikuuta 1975 '
+                + 'malmirahtilaiva törmäsi kahteen pilariin, sillasta '
+                + 'romahti 127 metriä ja kaksitoista ihmistä kuoli. '
+                + 'Itärannan asukkaat ajoivat kaksi ja puoli vuotta '
+                + 'viidenkymmenen kilometrin kiertotietä, kunnes silta '
+                + 'avattiin uudelleen 8. lokakuuta 1977. Saaren tunnetuin '
+                + 'eläin on tasmanianpiru, palawa kanin kielessä purinina: '
+                + 'se katosi mantereelta noin 3 500 vuotta sitten ja elää '
+                + 'nyt vain Tasmaniassa. Siitä tuli maailman suurin '
+                + 'lihansyöjäpussieläin, kun viimeinen tunnettu pussisusi '
+                + 'kuoli Hobartin Beaumaris-eläintarhassa 7. syyskuuta 1936.',
+              kuva: {
+                tiedosto: 'Tasman Bridge in Hobart.JPG',
+                selite: 'Tasman Bridge kantaa Tasman Highwayn Derwentin yli, '
+                  + 'ja se on Tasmanian vilkkaimmin liikennöity tieosuus.',
+                lahde: 'Synyan, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kaupunki katsoo veteen',
+              teksti: 'Hobartin vuosi on rakennettu veden ympärille. Royal '
+                + 'Hobart Regatta on purjehdittu vuodesta 1830, ja se on '
+                + 'Tasmanian vanhin yhä jatkuva urheilutapahtuma; Sandy Bayn '
+                + 'oma regatta alkoi 1849. Joka toinen vuosi keskustan '
+                + 'altaissa järjestetään puuveneiden festivaali. Suurin '
+                + 'yleisö kertyy kuitenkin vuodenvaihteessa, kun '
+                + 'tapaninpäivänä Sydneystä lähteneen Sydney–Hobart-'
+                + 'purjehduksen veneet saapuvat Constitution Dockiin; '
+                + 'saapumista vietetään osana Hobart Summer Festivalia, joka '
+                + 'kestää heti joulun jälkeen tammikuun puoliväliin. Lauantai '
+                + 'kuuluu torille: Salamanca Placen kojut ovat yksi maan '
+                + 'suosituimmista käyntikohteista.',
+              kuva: {
+                tiedosto: 'SV May Queen, Constitution Dock 2023.jpg',
+                selite: 'Vuonna 1867 rakennettu puinen kauppapurjehtija May '
+                  + 'Queen on yhä Constitution Dockissa, kuusi vuotta isoisän '
+                  + 'matkaa vanhempi alus.',
+                lahde: 'Canley, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: 1860-luku ja isoisän vuosi',
+              teksti: 'Kun vankikuljetukset loppuivat, Hobart ajautui '
+                + '1860-luvulla epävarmuuden aikaan. Aikalaishistorioitsija '
+                + 'kertoi vanhojen rouvien muistelleen entisten päivien '
+                + 'iloisuutta ja kauppiaiden aikaa, jolloin "Hobart Townin '
+                + 'luultiin tulevan Australian kauppapaikaksi, ellei jopa '
+                + 'pääkaupungiksi". Silti juuri silloin rakennettiin '
+                + 'kaupungintalo: peruskivi laskettiin 14. huhtikuuta 1864, '
+                + 'päivästä tehtiin vapaapäivä ja kadulla marssittiin, ja '
+                + 'kun talo valmistui syyskuussa 1866, juhlittiin toisella '
+                + 'vapaapäivällä ja tanssiaisilla. Se oli merkki uskosta '
+                + 'parempaan. Isoisän matkan vuonna 1873 Derwentissä käyneet '
+                + 'Venäjän sota-alukset vauhdittivat rannikon puolustusta, '
+                + 'ja Battery Pointin vanhat patterit tuomittiin 1878 '
+                + 'käyttökelvottomiksi.',
+              kuva: {
+                tiedosto: 'Hobart Town Hall 01.jpg',
+                selite: 'Hobartin kaupungintalo valmistui 1866 Henry Hunterin '
+                  + 'piirustusten mukaan vanhan kuvernöörintalon paikalle.',
+                lahde: 'edwardhblake, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Hobartista puuttuu, joten nämä luvut ovat '
+                + 'en-Wikipedian Hobart-artikkelin Climate-osiosta eivätkä '
+                + 'samasta lähteestä kuin lehden vuosigraafit. Ilmasto on '
+                + 'viileän merellinen: kesät ovat lämpimiä muttei kuumia ja '
+                + 'talvet leutoja. Kuumin mitattu lukema on 41,8 astetta '
+                + '4. tammikuuta 2013 ja kylmin −2,8 astetta 25. kesäkuuta '
+                + '1972 ja 11. heinäkuuta 1981. Meri on syyskuussa 12,5 ja '
+                + 'helmikuussa 16,5 asteista. Aurinkoa paistaa keskimäärin '
+                + '5,9 tuntia päivässä, vähemmän kuin missään muussa '
+                + 'Australian suurkaupungissa, mutta kesäpäivänseisauksena '
+                + 'valoisaa aikaa on 15,3 tuntia — enemmän kuin missään '
+                + 'muualla maassa. Talvella tilanne kääntyy: Keskiylängön '
+                + 'aiheuttama föhn-ilmiö tuo Hobartiin kesä- ja heinäkuussa '
+                + '132 ja 152 aurinkotuntia, kun samalla leveysasteella '
+                + 'sijaitseva Strathgordon saa 51 ja 62.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Hobart vaurastui valaanöljyn ja vankityön varassa, ja sen '
+        + '1830-luvun rakennukset seisovat yhä. Isoisän matkan aikaan kaupunki '
+        + 'oli jo ohitettu mannermaan kultakaupunkien varjossa.',
+      tehtava: {
+        kysymys: 'Minä vuonna Port Arthurin laitos suljettiin?',
+        vaihtoehdot: [
+          '1877',
+          '1830',
+          '1853',
+          '1901',
+        ],
+        oikea: 0,
+        fakta: 'Isoisä kävi Hobartissa 1873, joten laitos oli hänen '
+          + 'matkansa aikaan yhä toiminnassa — mutta vain neljä vuotta '
+          + 'lisää.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaksikymmentäkuusi ihmistä marssitettiin Hobartiin',
+          tiedosto: 'John Glover - Mount Wellington and Hobart Town from Kangaroo Point - Google Art Project.jpg',
+          teksti: 'Vuosien 1828–1832 Musta sota ja sen aikana toteutettu Musta '
+            + 'linja -operaatio 1830 olivat käännekohta siirtolaisten ja '
+            + 'alkuperäiskansan suhteissa. Monet välttivät kiinnioton, mutta '
+            + 'kampanjoiden mittakaava sai heidät suostumaan G. A. Robinsonin '
+            + 'lähetystön ehdotuksiin. Vuonna 1832, neljä vuotta sotatilan '
+            + 'julistamisen jälkeen, kaksikymmentäkuusi ihmistä — heidän '
+            + 'joukossaan Big Riverin ja Oyster Bayn kansojen johtajat '
+            + 'Tongerlongeter ja Montpelliatta — antautuivat ja marssitettiin '
+            + 'Hobartiin neuvottelemaan aselevosta kuvernööri George Arthurin '
+            + 'kanssa. Kymmenen päivää myöhemmin heidät karkotettiin väkisin '
+            + 'Flindersin saarelle.',
+          selite: 'John Glover maalasi 1834 Kangaroo Pointilta näkymän, jossa '
+            + 'alkuperäisasukkaat tanssivat rannalla, vaikka heidät oli '
+            + 'siihen mennessä jo karkotettu alueelta.',
+          lahde: 'John Glover, Wikimedia Commons (PD)',
+          wiki: 'Aboriginal Tasmanians',
+        },
+        {
+          otsikko: 'Näyttämö teurastamon naapurissa',
+          tiedosto: 'Theatre Royal Campbell Street Hobart Tasmania Australia.jpg',
+          teksti: 'Panimoyrittäjä Peter Degraves ja joukko hobartilaisia '
+            + 'ostivat 1834 satama-alueelta tontin teatteria varten. Paikka '
+            + 'oli kaikkea muuta kuin hieno: naapurissa oli teurastamo, '
+            + 'tehtaita ja kapakoita, ja arkkitehti järjesti permannolle '
+            + 'oman sisäänkäynnin viereisen kapakan läpi. Talo valmistui '
+            + 'osittain vankityövoimalla 1836, ja maaliskuussa 1837 '
+            + 'näyteltiin kaksi kappaletta samana iltana. Alkuvuosina '
+            + 'ohjelmassa oli yhtä lailla nyrkkeilyä, kukkotappeluita ja '
+            + 'hartauskokouksia. Isoisän aikaan talo oli nelikymppinen; '
+            + 'nykyisen punasamettisen katsomon suunnitteli melbournelainen '
+            + 'William Pitt vasta 1911.',
+          selite: 'Theatre Royalin julkisivu Campbell Streetillä on vuodelta '
+            + '1837, ja talo on Australian vanhin yhtäjaksoisesti toiminut '
+            + 'teatteri.',
+          lahde: 'TaswegianSchnapps, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Theatre Royal, Hobart',
+        },
+        {
+          otsikko: 'Panimo jonka historia kirjoitettiin uusiksi',
+          tiedosto: 'Cascade Brewery and Mount Wellington by Haughton Forrest (c1890).jpg',
+          teksti: 'Cascade Brewery on Australian vanhin yhä toimiva panimo, ja '
+            + 'se rakennettiin Hobart Rivuletin varrelle, koska puron '
+            + 'yläjuoksun vesi oli puhdasta. Perustamisvuosi on lähteen '
+            + 'sisällä riidanalainen: yhtiön infolaatikko sanoo 1824, mutta '
+            + 'saman artikkelin leipäteksti kertoo sahalaitoksen alkaneen '
+            + '1825 ja panimon syntyneen 1832 — vuosi 1824 on se, jona Hugh '
+            + 'Macintosh ja Peter Degraves saapuivat laivallaan siirtokuntaan. '
+            + 'Panimon perusti Macintosh veljenpoikineen Degravesin istuessa '
+            + 'velasta vankilassa. Vasta 2011 tutkimus osoitti, että Degraves '
+            + 'oli myöhemmin kirjoittanut Macintoshin osuuden pois.',
+          selite: 'Haughton Forrestin noin 1890 maalaama Cascaden panimo '
+            + 'seisoo yhä samassa laaksossa kunanyin urkupillikallioiden '
+            + 'alla.',
+          lahde: 'Haughton Forrest, Wikimedia Commons (PD)',
+          wiki: 'Cascade Brewery',
+        },
+        {
+          otsikko: 'Laitos joka ehti sulkeutua isoisän jälkeen',
+          tiedosto: 'Port Arthur 2016 02.jpg',
+          teksti: 'Tasmanin niemimaalle, noin 97 kilometrin päähän Hobartista '
+            + 'kaakkoon, perustettiin syyskuussa 1830 puunhakkuuleiri. Siitä '
+            + 'kasvoi Port Arthur, jonne vuodesta 1833 lähetettiin ne, jotka '
+            + 'olivat rikkoneet sääntöjä toistuvasti muualla Australiassa. '
+            + 'Laitos yhdisti tiukan vartioinnin ja ajan uuden, kuntouttavaksi '
+            + 'tarkoitetun rangaistusajattelun, mutta oli yhtä raskas kuin '
+            + 'muutkin siirtomaan pakkotyöleirit. Isoisän käydessä Hobartissa '
+            + '1873 se toimi yhä; ovet menivät kiinni 1877. Läheiselle '
+            + 'Kuolleiden saarelle on kirjattu 1 646 hautaa, joista vain 180 '
+            + 'on merkitty nimellä.',
+          selite: 'Port Arthurin rauniot Tasmanin niemimaalla ovat nykyään '
+            + 'museoalue, ja pyöreä vartiotorni on niiden tunnetuin '
+            + 'rakennus.',
+          lahde: 'Thennicke, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Port Arthur, Tasmania',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Hobart kasvaa kunanyin juurella Derwentin suulla. Kaupungin '
+        + 'rajojen sisällä on vuoristometsää, laikku viileää sademetsää ja '
+        + 'puro, jossa elää villejä vesinokkaeläimiä.',
+      tehtava: {
+        kysymys: 'Mikä eläin elää villinä Hobart Rivuletissa keskellä kaupunkia?',
+        vaihtoehdot: [
+          'vesinokkaeläin',
+          'saukko',
+          'majava',
+          'merileijona',
+        ],
+        oikea: 0,
+        fakta: 'Saastuminen rajoittaa kannan puron yläjuoksulle, ja '
+          + 'paikallinen vapaaehtoisryhmä on seurannut ja puolustanut sitä '
+          + 'vuosia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vuori jolla on kaksi nimeä',
+          tiedosto: 'Kunanyi Organ Pipes towers 2023.jpg',
+          teksti: 'Alueen alkuperäiskansan kielessä vuori on kunanyi; muistiin '
+            + 'on kirjattu myös nimet ungyhaletta ja poorawetter. '
+            + 'Eurooppalaiset kokeilivat vuorotellen nimiä Skiddaw ja Table '
+            + 'Mountain, kunnes se nimettiin 1832 Wellingtonin herttuan '
+            + 'mukaan. Charles Darwin kiipesi huipulle helmikuussa 1836 ja '
+            + 'kutsui eukalyptusmetsää jaloksi; kosteissa rotkoissa hän näki '
+            + 'puusaniaisen, joka oli vähintään kuusi metriä korkea ja jonka '
+            + 'lehvät tekivät varjon "kuin yön ensimmäisellä tunnilla". Vuonna '
+            + '2013 Tasmania otti käyttöön kaksoisnimet, ja kunanyi / Mount '
+            + 'Wellington oli ensimmäisiä.',
+          selite: 'Urkupillit ovat kunanyin rinteessä kohoava '
+            + 'doleriittipilarien seinämä ja vuoren tunnusomaisin piirre '
+            + 'Hobartista katsottuna.',
+          lahde: 'Paris Buttfield-Addison, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Mount Wellington (Tasmania)',
+        },
+        {
+          otsikko: 'Valaat jotka palasivat',
+          tiedosto: 'Eubalaena australis (43751551615).jpg',
+          teksti: 'Eteläiset sileävalaat tulevat talvella suojaisiin lahtiin '
+            + 'poikimaan, ja juuri se teki Derwentin suistosta 1800-luvulla '
+            + 'niin helpon pyyntipaikan: eläimet olivat rannan tuntumassa '
+            + 'eikä avomerelle tarvinnut lähteä. Rantapyyntiaseman sai pystyyn '
+            + 'muutamalla veneellä, keittopadalla ja tynnyrisarjalla. Laaja '
+            + 'pyynti ajoi lajin lähelle sukupuuttoa koko eteläisellä '
+            + 'pallonpuoliskolla. Viime vuosikymmeninä sileävalaat ovat '
+            + 'alkaneet palata Derwentiin ja muille Australian rannikoille, ja '
+            + 'sitä pidetään merkkinä hitaasta toipumisesta.',
+          selite: 'Eteläinen sileävalas nousee hengittämään matalikolla; laji '
+            + 'tulee talvisin suojaisiin lahtiin poikimaan.',
+          lahde: 'Donald Hobern from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Southern right whale',
+        },
+        {
+          otsikko: 'Portti Etelämantereelle',
+          tiedosto: 'Aurora Australis, Hobart, 2019 (01).jpg',
+          teksti: 'Hobart on yksi maailman Etelämanteren porttikaupungeista: '
+            + 'Itä-Antarktis ja eteläinen valtameri ovat lähellä, ja satama '
+            + 'palvelee sekä tutkimusaluksia että risteilijöitä. Kaupunki on '
+            + 'Australian ja Ranskan Etelämanner-ohjelmien kotisatama, ja '
+            + 'lentoasemalta on yhteys Wilkinsin kiitotielle Caseyn asemalle. '
+            + 'Täältä lähtevät jäätä murtava tutkimusalus Nuyina ja '
+            + 'ranskalainen L’Astrolabe. Napa-alueiden tutkimuslaitoksia '
+            + 'on poikkeuksellisen tiheässä: muun muassa Australian '
+            + 'Antarktis-osasto, Tasmanian yliopiston meri- ja '
+            + 'Antarktis-tutkimuksen instituutti sekä Etelämantereen meren '
+            + 'elollisten luonnonvarojen suojelukomissio.',
+          selite: 'Jäänmurtaja Aurora Australis palveli Australian '
+            + 'Etelämanner-ohjelmaa ja on tässä kiinnittyneenä Princes '
+            + 'Wharfiin Hobartin satamassa.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hobart',
+        },
+        {
+          otsikko: 'Vesinokkaeläin kaupungin puron mutkassa',
+          tiedosto: 'Duck-billed platypus (Ornithorhynchus anatinus) Scottsdale 2.jpg',
+          teksti: 'Hobart Rivulet syntyy kunanyin rinteillä 566 metrin '
+            + 'korkeudessa ja laskee runsaat seitsemän kilometriä alas '
+            + 'kaupungin läpi; keskustan alla se kulkee putkessa ja tulee '
+            + 'näkyviin vasta sairaalan kohdalla. Purossa elää villi '
+            + 'vesinokkaeläinkanta, jota saastuminen rajoittaa yläjuoksulle. '
+            + 'Vapaaehtoisryhmä Hobart Rivulet Platypus on seurannut ja '
+            + 'puolustanut sitä, ja puron tila on kohentunut. Kaupungin '
+            + 'rajojen sisällä elää yksitoista uhanalaista eläinlajia, joista '
+            + 'viisi ei esiinny missään muualla, ja pademelonit sekä valabit '
+            + 'ovat tavallinen näky kaduilla.',
+          selite: 'Vesinokkaeläin uiskentelee pinnan alla nokka edellä; laji '
+            + 'elää myös Hobartin halki virtaavassa purossa.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hobart Rivulet',
+        },
+      ],
+    },
+    {
+      id: 'nykytaide',
+      nimi: 'Nykytaide',
+      johdanto: 'MONA-taidemuseon avaaminen 2011 muutti Hobartin asemaa '
+        + 'nopeasti, ja sen ympärille on kasvanut kokonainen festivaalikausi. '
+        + 'Vanhat satamamakasiinit ovat samalla täyttyneet verstaista ja '
+        + 'gallerioista.',
+      tehtava: {
+        kysymys: 'Kuinka monesta pienestä maalauksesta Sidney Nolanin Käärme koostuu?',
+        vaihtoehdot: [
+          '1 620',
+          '162',
+          '16 200',
+          '62',
+        ],
+        oikea: 0,
+        fakta: 'Teosta ei ollut esitetty julkisesti Australiassa ennen kuin '
+          + 'museo avattiin sitä varten rakennetussa salissa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Museo joka louhittiin kallioon',
+          tiedosto: 'MONA, 2013 (02).jpg',
+          teksti: 'David Walshin kokoelma avautui yleisölle Berriedalen '
+            + 'niemellä 21. tammikuuta 2011; edeltäjä, Moorillan '
+            + 'antiikkimuseo, oli toiminut samalla viinitilalla vuodesta 2001. '
+            + 'MONA on eteläisen pallonpuoliskon suurin yksityisrahoitteinen '
+            + 'museo, ja se on rakennettu kallion sisään: katutasolla näkyy '
+            + 'vain vähän, ja kävijä laskeutuu ensin portaita alas ja kiertää '
+            + 'sitten takaisin pintaan. Ikkunoita ei ole lainkaan. Useimmat '
+            + 'tulevat lautalla jokea ylös. Vaikutusta matkailuun on verrattu '
+            + 'Bilbaon Guggenheimiin, ja vuoteen 2022 mennessä kävijöitä oli '
+            + 'ollut 2,5 miljoonaa.',
+          selite: 'MONA on rakennettu Berriedalen niemen kallioon Moorillan '
+            + 'viinitilalle, ja suurin osa museosta on maan alla.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Museum of Old and New Art',
+        },
+        {
+          otsikko: 'Valonsäde talvipäivänseisauksena',
+          tiedosto: 'Spectra from Tasman Bridge (9105303787).jpg',
+          teksti: 'MONAn omistaja David Walsh, ohjaaja Leigh Carmichael ja '
+            + 'muusikko Brian Ritchie käynnistivät 2013 talvifestivaalin, '
+            + 'jonka piti alun perin vain houkutella museoon kävijöitä '
+            + 'hiljaisimpaan aikaan. Dark Mofon tapahtumat ovat öisiä ja '
+            + 'johtavat eteläisen talvipäivänseisaukseen kesäkuussa. '
+            + 'Ensimmäisenä vuonna Ryoji Ikeda pystytti kaupungin ylle '
+            + 'viisitoista kilometriä korkean valopatsaan nimeltä spectra. '
+            + 'Ohjelmaan kuuluu Winter Feast -ruokajuhla, ja Salamanca Placen '
+            + 'puut koristellaan punaisilla valoilla. Vuonna 2023 kävijöitä '
+            + 'laskettiin 427 000.',
+          selite: 'Ryoji Ikedan spectra on valoteos, joka nousee Hobartin yltä '
+            + 'pilviin Dark Mofon aikaan.',
+          lahde: 'Christopher Neugebauer from Hobart, Australia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Dark Mofo',
+        },
+        {
+          otsikko: 'Makasiinit jotka täyttyivät verstaista',
+          tiedosto: '260906 SAC Arcade 03.jpg',
+          teksti: 'Samat hiekkakivimakasiinit, joissa 1800-luvulla säilytettiin '
+            + 'sataman tavaraa, ovat nyt ravintoloita, gallerioita, '
+            + 'käsityöliikkeitä ja toimistoja. Salamanca Arts Centre täyttää '
+            + 'useita niistä: vanhoihin varastosaleihin on rakennettu '
+            + 'työhuoneita, näyttelytiloja ja pieniä myymälöitä, ja ulkoa '
+            + 'katsottuna rivistö näyttää yhä sataman varastokujalta. Rannan '
+            + 'pohjoispäässä Hunter Streetillä sama muutos on tehty toisin: '
+            + 'georgiaanisiin makasiineihin on avattu ravintoloita, baareja ja '
+            + 'gallerioita.',
+          selite: 'Salamanca Arts Centren käytävä kulkee vanhan makasiinin '
+            + 'läpi, ja sen molemmin puolin on työhuoneita ja pieniä '
+            + 'myymälöitä.',
+          lahde: 'jacobharrisau, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Salamanca Place',
+        },
+        {
+          otsikko: 'Käärme, jonka takia sali rakennettiin',
+          tiedosto: 'Sidney Nolan Snake.jpg',
+          teksti: 'MONAn suurin yksittäinen sali rakennettiin yhtä teosta '
+            + 'varten. Sidney Nolan maalasi vuosina 1970–1972 Käärmeen, '
+            + '1 620 pienestä maalauksesta kootun jättikuvan, jonka aihe on '
+            + 'aboriginaalikansojen kertomusten Sateenkaarikäärme. Se on '
+            + 'Australian suurin modernistinen taideteos, eikä sitä ollut '
+            + 'ennen museon avaamista esitetty julkisesti Australiassa. '
+            + 'Kokoelmassa on yli 1 900 teosta, eikä niiden vieressä ole '
+            + 'seinätekstejä: kävijä saa tiedot puhelinsovelluksesta, joka '
+            + 'tunnistaa lähellä olevat työt.',
+          selite: 'Sidney Nolanin Käärme koostuu 1 620 pienestä maalauksesta '
+            + 'ja täyttää MONAssa kokonaisen salin seinän.',
+          lahde: 'jeffowenphotos, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Museum of Old and New Art',
+        },
+      ],
+    },
+  ],
+  /*
+   * DARWIN (lauta oceania, kaupunki-id darwin) — kaupunkilehti 24.8.2026.
+   *
+   * LÄHTEET. Työpohjana docs/mantereet-tyoaineisto/faktapohja-darwin.md ja
+   * sen riippumaton tarkistus docs/mantereet-tyoaineisto/tarkistus-darwin.md
+   * (tarkistus ei ollut työpuussa; haettu commitista c434e334 "Tarkistus:
+   * Darwin"). Ristiriidassa TARKISTUS VOITTAA faktapohjan. Jokainen
+   * tekstiin menevä väite on lisäksi luettu uudestaan en-Wikipedian
+   * raakateksteistä 24.8.2026: Darwin, Northern Territory · Australian
+   * Overland Telegraph Line · Larrakia people · Chinatown, Darwin ·
+   * Cyclone Tracy · Bombing of Darwin · Government House, Darwin ·
+   * Fannie Bay Gaol · Museum and Art Gallery of the Northern Territory ·
+   * George Brown Darwin Botanic Gardens · Charles Darwin National Park ·
+   * Mindil Beach · Anglican Diocese of the Northern Territory · Fort Hill
+   * (Darwin) · Darwin Festival.
+   *
+   * TARKISTUKSEN VIISI PAKOLLISTA KORJAUSTA ON TEHTY:
+   *
+   *   (A) ISOISÄN MATKAVUOSI. Faktapohja kehysti lennätinlinjan
+   *   valmistumisen sanoilla "juuri isoisän matkan vuonna" ja toisti
+   *   saman kaupunki-sivun johdannossa, vaikka sen oma proosa sanoi
+   *   linjan valmistuneen elokuussa 1872. Lähde on yksiselitteinen:
+   *   linjat yhdistettiin Frew's Pondsilla 22.8.1872, ja pelin kaanonissa
+   *   isoisän matka on 1873. Nosto K2 sanoo nyt "vuosi ennen isoisän
+   *   matkaa", ja johdannosta koko kehys on poistettu. Nostossa K1
+   *   sanotaan sen sijaan se, mikä on oikein: isoisän matkan aikaan
+   *   kaupunki oli yhä Palmerston.
+   *
+   *   (B) MAGNT. Faktapohja sanoi museon avanneen nykyisen talonsa
+   *   "Fannie Bayssä" ja "kolme vuotta" Tracyn jälkeen. Infoboksin
+   *   osoite on 19 Conacher Street, The Gardens, ja rakennus avattiin
+   *   10.9.1981 eli seitsemän vuotta vuoden 1974 hirmumyrskyn jälkeen.
+   *   Nosto T2 käyttää molempia korjattuja tietoja.
+   *
+   *   (C) CHINATOWNIN TUHO. Faktapohja rajasi syyn pelkkiin japanilaisten
+   *   pommituksiin. Lähde nimeää YHDISTELMÄN: japanilaisten
+   *   ilmapommitukset, Australian puolustusvoimien ilkivalta sekä
+   *   paikallisten eurooppalaisaustralialaisten ryöstely ja
+   *   kiinalaisyhteisöön kohdistunut tarkoituksellinen purkaminen.
+   *   Nosto H3 kertoo molemmat puolet. Tämä on myös pilari 3 -kysymys:
+   *   tarina ei ole vain ulkoisen vihollisen tuhotyö.
+   *
+   *   (D) BUNDILLA BEACH. Faktapohja sijoitti Vesteys Beachin East
+   *   Pointiin. Lähde ei sano niin missään; sijaintiväite on poistettu,
+   *   ja nosto K3 kertoo vain uudelleennimeämisen maaliskuussa 2021.
+   *
+   *   (E) ELOKUVATEATTERIT. Faktapohjan opasjakso sijoitti kaksi
+   *   elokuvateatteria Mitchell Streetille. Lähteen mukaan kaksi
+   *   sisäelokuvateatterikompleksia ovat Casuarinassa ja Palmerstonissa,
+   *   ja keskustassa on Deckchair Cinema, ulkoilmateatteri, joka toimii
+   *   kuivalla kaudella huhtikuusta lokakuuhun. Jakso 1 sanoo tämän
+   *   oikein, ja Deckchair Cinema on jakson 3 kuva.
+   *
+   * TARKISTUKSEN RATKAISEMAT KAKSI AVOINTA KOHTAA:
+   * larrakia-paikannimen kirjoitusasu on GULUMIRRGIN (en-Wikipedia
+   * "Larrakia people" ja "Laragiya language" -infoboksi; muoto
+   * "Gulumoerrgin" ei esiinny kummassakaan artikkelissa), ja hirmumyrsky
+   * Tracyn kuolinluku on 66 (MAGNT 2023, viisi kaksoislaskettua uhria).
+   * HUOM: en-Wikipedian Darwin-artikkelissa on yhä vanhentunut 71 —
+   * lehti käyttää tarkempaa Cyclone Tracy -artikkelia ja KERTOO
+   * lukijalle korjauksen, koska pelkkä 66 hämmentäisi sen, joka on
+   * nähnyt muualla luvun 71.
+   *
+   * KOLME OMAA WIKIPEDIAN SISÄISTÄ RISTIRIITAA, JOTKA RATKAISTIIN:
+   *   1. Pommituksen alkamishetki. "Darwin, Northern Territory" sanoo
+   *      9.57, "Bombing of Darwin" sanoo leipätekstissä 9.58 ja
+   *      toisaalla 0956. Kolme lukua samasta hetkestä, joten nosto H1 ei
+   *      väitä minuuttia lainkaan vaan sanoo "vähän ennen kymmentä".
+   *   2. Koneiden määrä. Bombing-artikkelin ingressi sanoo "188 konetta
+   *      kahdessa iskussa", mutta infoboksi ja leipäteksti erittelevät
+   *      188 tukialuskonetta AAMULLA ja 54 maatukikohdista noussutta
+   *      pommikonetta ENNEN PUOLTAPÄIVÄÄ, yhteensä 242. H1 käyttää
+   *      erittelyä, koska se on artikkelin tarkempi kohta.
+   *   3. Pommimäärä Pearl Harboriin verrattuna. Faktapohja sanoi
+   *      Darwiniin pudotetun "enemmän pommeja". Lähde antaa Darwiniin
+   *      681 pommia / 114 100 kg ja Pearl Harboriin 457 pommia /
+   *      133 560 kg — enemmän kappaleina, vähemmän painona. H1 sanoo
+   *      molemmat.
+   *   4. Vanhin rakennus. "George Brown Darwin Botanic Gardens"
+   *      -artikkelin kuvateksti kutsuu entistä wesleyläistä
+   *      metodistikirkkoa Darwinin vanhimmaksi säilyneeksi
+   *      rakennukseksi, mutta "Government House, Darwin" sanoo
+   *      Government Housen (1870–1871) olevan Pohjoisterritorion vanhin
+   *      eurooppalainen rakennus. Nosto L3 ei siksi käytä superlatiivia
+   *      kirkosta lainkaan, vaan kertoo vain että se on yhä pystyssä ja
+   *      toimii kahvilana; H4 kertoo Government Housen aseman lähteen
+   *      sanoin.
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3 JA PILARI 4 sekä
+   * spec-mantereet.md:n Oseania-osio. Larrakiat ovat kaupunki-sivun
+   * omassa nostossa (K3) nykyisenä kansana omalla nimellään: Garramilla,
+   * Gulumirrgin, vuonna 1997 perustettu Larrakia Nation Aboriginal
+   * Corporation ja vuoden 2021 nimenpalautus. Vuoden 1942 pommitus ja
+   * hirmumyrsky Tracy kerrotaan tapahtumina ilman uhrikuvauksia:
+   * kuolinluvut käsitellään tilastoina ja niiden epävarmuus sanotaan
+   * ääneen, yksittäisiä uhreja ei kuvailla. Chinatownin tarina päättyy
+   * yhteisön omaan temppeliin ja museoon, ei tuhoon. Fannie Bay Gaolin
+   * hirsipuuta ei mainita eikä kuvata (pilari 4), vaikka se on lähteessä
+   * ja Commonsissa.
+   *
+   * KULTTUURIVISA (js/packs/oceania-questions.js, kohta darwin) LUETTIIN
+   * ENNEN KIRJOITTAMISTA. Sen viisi vastausta löytyvät lehdestä, mutta
+   * yhdessäkään ei ole visan omaa sanamuotoa: "pohjoisrannikko" ja
+   * Aasian läheisyys ovat oppaan kappaleessa toisin sanoin (visan
+   * Jakarta–Sydney-vertailua ei käytetä missään), "sadekausi ja kuiva
+   * kausi" on nostossa L1 ilman ilmausta "vain kaksi vuodenaikaa",
+   * hirmumyrsky Tracy on nostoissa K4 ja H2 tarkempine lukuineen kuin
+   * visan "noin 70 prosenttia", ja larrakiat ovat nostossa K3 omilla
+   * nimillään ilman visan "salt water people" -lempinimeä. Kolme
+   * minitehtävää eivät kysy mitään visan kysymyksistä: Chinatownin
+   * perustamisvuosi (vastaus nostossa H3), Darwinin käärmelajimäärä
+   * (vastaus nostossa L2) ja katedraalin säilynyt osa (vastaus
+   * nostossa T4) — jokaisen vastaus on SAMALLA SIVULLA.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (säärivit haetaan omana eränään). Oppaan jakso 5 nojaa siis
+   * en-Wikipedian Darwin-artikkelin Climate-osioon ja SANOO SEN ÄÄNEEN
+   * — Perthin, Sydneyn, Melbournen, Samarkandin ja Karachin malli.
+   *
+   * ENNEN JA NYT -PARIA EI LISÄTTY. Sama syy kuin Sydneyssä,
+   * Melbournessa ja Karachissa: ennenNyt korvaisi etusivun pikkurivin
+   * kansikuvat, ja kansikuvat on tässä lehdessä valittu juuri siihen
+   * paikkaan. js/packs/oceania-valokuvat.js:n darwin-lohkossa on jo
+   * valmis pari (Port Darwinin rautalaituri n. 1905 ja Stokes Hill
+   * Wharf 2019), joten pelaaja näkee sen matkakirjan valokuvataulussa.
+   *
+   * KUVAT: 26 kuvaa, kaikki Commonsista kategoriahaulla (Darwin
+   * Northern Territory, Government House Darwin, East Point Northern
+   * Territory, Mindil Beach, George Brown Darwin Botanic Gardens,
+   * Australian Overland Telegraph Line, Cyclone Tracy Memorial,
+   * Darwin bombings, Fannie Bay Goal — Commonsin kategorianimessä on
+   * kirjoitusvirhe "Goal" —, Christ Church Cathedral Darwin, Charles
+   * Darwin National Park, Crocodylus porosus, Deckchair Cinema,
+   * Parliament House Darwin, Stokes Hill Wharf), lisenssi ja tekijä
+   * luettu rajapinnan extmetadatasta ja JOKAINEN kuva katsottu silmin
+   * 900 pikselin esikatseluna.
+   * HYLKÄYKSIÄ: Booth 1873 -teräskaiverrus "Port Darwin" (kuvassa on
+   * kaivertajien signeeraukset J. Carr ja J. C. Armytage, ja
+   * extmetadata.Artist on tyhjä — sama peruste kuin Melbournen Booth
+   * 1873 -laattojen hylkäyksessä); merikaapelin maihintuontikuva 1871
+   * GN01968 (valokuva paspartuun kiinnitetystä vedoksesta, jossa näkyy
+   * viivoitettu kehys); Darwin Festivalin kolme yökuvaa ja Mindilin
+   * markkinakuva gnangarra-106 (etualalla tunnistettavia kasvoja);
+   * Deckchair Cineman katsomokuva (etualalla lapsi tunnistettavasti);
+   * Darwinin yömarkkinoiden kylttikuva (pelkkä mainostaulu);
+   * "In the market" -tekstiilikoju (hintakylttejä); Mindal Market.JPG
+   * (nimestä huolimatta pelkkä auringonlasku merelle); vanha
+   * wesleyläinen metodistikirkko (1000 px, alle rajan); Larrakia
+   * people -kategorian seremoniakuvasarja (tunnistettavia kasvoja
+   * lähietäisyydeltä, eikä seremoniakuvasto ole spec-mantereet.md:n
+   * mukaista arkikuvastoa); "Darwin skyline through long grasses"
+   * (kaupunki hukkuu etualan heinikkoon).
+   * AIHETOISTO ON HARKITTU: East Point esiintyy kahdesti eri kohteina
+   * (avauskuvan satamanäkymä niemeltä ja noston H2 Tracy-muistomerkki
+   * East Point Reservessä), ja Darwin Harbour näkyy kolmessa laajassa
+   * yleiskuvassa eri suunnista. Yksikään tiedostonimi ei toistu.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 22.8.2026 LINJAUSTA: selite
+   * kertoo kohteesta eikä kuvaile kuvaa visuaalisesti, ja se on yhden
+   * virkkeen mittainen. Matkailijalle-etusivukuva on tuore ja
+   * maltillinen pysty (2851 × 3665, w/h 0,78), ja oppaan kuvat ovat
+   * nykykuvia; historialliset kuvat ovat vain nostoissa.
+   */
+  darwin: [
+    {
+      id: 'kaupunki',
+      nimi: 'Darwin',
+      johdanto: 'Vuonna 1869 perustettu Palmerston sai nimekseen Darwin vasta '
+        + '1911. Trooppinen satamakaupunki Australian pohjoisrannikolla on '
+        + 'rakennettu lähes kokonaan uudelleen neljä kertaa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Darwin CBD (March 2017).jpg',
+          selite: 'Keskusta on matalalla törmällä Darwin Harbourin '
+            + 'pohjoisrannalla, ja sadekauden rintamat tulevat mereltä.',
+          lahde: 'Mark Pegrum, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Darwin Waterfront.jpg',
+          selite: 'Waterfront on vanha satamakortteli, joka rakennettiin '
+            + '2000-luvulla asunnoiksi, hotelleiksi ja uimalaguuniksi.',
+          lahde: 'eGuide Travel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Mindil Beach.jpg',
+          selite: 'Mindil Beach on kaupungin tunnetuin ranta, ja sen takana '
+            + 'kokoontuvat kuivan kauden auringonlaskumarkkinat.',
+          lahde: 'Bidgee, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kolmelta eri suunnalta —
+       * keskustan kattojen yli lännestä, satamasuulle East Pointin
+       * niemeltä ja rannikkokalliolle kaupungin länsipuolelle. Yksikään
+       * ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Darwin\'s Changing Skyline January 2010.jpg',
+          selite: 'Keskustan asuintornit ovat nousseet matalien peltikattojen '
+            + 'väliin vasta hirmumyrsky Tracyn jälkeisinä vuosikymmeninä.',
+          lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Darwin (AU), East Point -- 2019 -- 4331.jpg',
+          selite: 'East Pointin niemeltä avautuu näkymä Darwin Harbourin '
+            + 'suulle ja Fannie Bayn venesatamaan.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Coast off Darwin.jpg',
+          selite: 'Kaupungin rantoja reunustaa vaalea kalliopenger, jonka '
+            + 'väristä larrakia-nimi Garramilla kertoo.',
+          lahde: 'Kendra Baker, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Palmerston, kaupunki joka vaihtoi nimeä',
+          tiedosto: 'Fort Hill 1870.jpg',
+          teksti: 'Kun HMS Beagle purjehti satamaan 9. syyskuuta 1839, '
+            + 'päällikkö John Clements Wickham nimesi paikan Port Darwiniksi '
+            + 'luonnontieteilijä Charles Darwinin mukaan — miehen, joka oli '
+            + 'purjehtinut hänen kanssaan laivan edellisellä matkalla. '
+            + 'Siirtokunta syntyi vasta kolmekymmentä vuotta myöhemmin: '
+            + 'Etelä-Australian maanmittari George Goyder perusti 5. '
+            + 'helmikuuta 1869 Fort Hillin ja jyrkänteen väliin 135 hengen '
+            + 'asutuksen ja nimesi sen Palmerstoniksi Britannian '
+            + 'pääministerin lordi Palmerstonin mukaan. Isoisän matkan '
+            + 'aikaan kaupunki oli yhä Palmerston; nimi vaihtui Darwiniksi '
+            + 'vasta 1911, kun territorio siirtyi liittovaltiolle.',
+          selite: 'Goyderin mittausleiri Fort Hillin juurella kuvattiin 1870, '
+            + 'vuosi asutuksen perustamisen jälkeen.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Fort Hill (Darwin)',
+        },
+        {
+          otsikko: 'Lanka joka kutisti maailman',
+          tiedosto: 'Darwin (AU), Overland Telegraph Memorial -- 2019 -- 4349.jpg',
+          teksti: 'Adelaidesta Darwiniin vedetty 3 200 kilometrin '
+            + 'lennätinlinja valmistui torstaina 22. elokuuta 1872, kun kaksi '
+            + 'työryhmää kohtasi Frew\'s Pondsilla — yli seitsemän kuukautta '
+            + 'myöhässä ja vuosi ennen isoisän matkaa. Merikaapeli Jaavalta '
+            + 'oli tuotu Darwiniin jo 18. marraskuuta 1871 ja kytketty '
+            + 'seuraavana päivänä, joten valmis lanka lyhensi viestin matkan '
+            + 'Eurooppaan kuukausista tunteihin. Ensimmäinen suora sähke '
+            + 'Lontoosta Adelaideen kulki 22. lokakuuta 1872. Kun isoisä '
+            + 'saapui, yhteys oli ollut auki vasta muutaman kuukauden.',
+          selite: 'Overland Telegraph -muistomerkin kuparireliefi esittää '
+            + 'linjan rakentajia työssään.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Australian Overland Telegraph Line',
+        },
+        {
+          otsikko: 'Kansa jolla oli paikalle oma nimi',
+          tiedosto: 'Vesteys Beach (renamed Bundilla Beach in 2021) in May 2003.jpg',
+          teksti: 'Larrakia-kansa on asunut Darwinin seudulla kauan ennen '
+            + 'eurooppalaisia ja kutsuu aluetta nimellä Garramilla, '
+            + '"valkoinen kivi", seudun kallioiden ja merenrantajyrkänteiden '
+            + 'värin mukaan. Kansa tunnettiin aiemmin nimellä Gulumirrgin, ja '
+            + 'sama sana on yhä sen kielen rinnakkaisnimi; vuoden 2021 '
+            + 'väestönlaskennassa 41 ihmistä ilmoitti osaavansa kieltä. '
+            + 'Vuonna 1997 perustettu Larrakia Nation Aboriginal Corporation '
+            + 'edustaa kansaa nykyään, ja sillä oli joulukuussa 2021 yli 740 '
+            + 'jäsentä. Maaliskuussa 2021 Vesteys Beach sai nimekseen '
+            + 'Bundilla Beach, jolla larrakiat olivat sitä pitkään kutsuneet.',
+          selite: 'Bundilla Beach kantoi vuoteen 2021 asti nimeä Vesteys '
+            + 'Beach 1910-luvulla toimineen lihatehtaan mukaan.',
+          lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Larrakia people',
+        },
+        {
+          otsikko: 'Neljästi uudelleen samalle paikalle',
+          tiedosto: 'Town Hall ruins, Darwin, 2023 (01).jpg',
+          teksti: 'Darwin on rakennettu lähes kokonaan uudelleen neljä '
+            + 'kertaa: vuoden 1897 hirmumyrskyn, vuoden 1937 hirmumyrskyn, '
+            + 'sodanaikaisten ilmahyökkäysten ja vuoden 1974 hirmumyrsky '
+            + 'Tracyn jäljiltä. Kaupunkioikeudet se sai vasta Australia-'
+            + 'päivänä 26. tammikuuta 1959. Tracy kaatoi myös vanhan '
+            + 'Palmerstonin kaupungintalon, jonka kivimuurit eivät kestäneet '
+            + 'tuulen sivuttaisvoimaa. Siksi keskusta näyttää nuorelta: '
+            + 'melkein kaikki on 1970-luvun jälkeen tiukempien '
+            + 'myrskymääräysten mukaan rakennettua.',
+          selite: 'Palmerstonin kaupungintalon rauniot jätettiin Smith '
+            + 'Streetin varteen sen jälkeen kun hirmumyrsky Tracy tuhosi '
+            + 'talon 1974.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Darwin, Northern Territory',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Northern Territory Legislative Assembly, Darwin, 2021, 01.jpg',
+          selite: 'Pohjoisterritorion parlamenttitalon syvät räystäät ja '
+            + 'säleiköt varjostavat julkisivua trooppiselta auringolta.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Darwin on Pohjoisterritorion pääkaupunki ja Australian '
+          + 'pohjoisin ja pienin osavaltiotason pääkaupunki: siellä asuu '
+          + 'vajaat 140 000 ihmistä eli lähes kaksi kolmasosaa koko '
+          + 'territorion väestöstä. Matkailijan Darwin on kapea niemi '
+          + 'Darwin Harbourin ja avomeren välissä. Keskusta on niemen '
+          + 'kärjessä matalalla törmällä, ja sen alapuolella on '
+          + 'Waterfrontin satamakortteli. Pohjoiseen levittäytyvät '
+          + 'uudemmat esikaupungit lentoaseman takana, ja itään päin tie '
+          + 'vie satelliittikaupunki Palmerstoniin. Kaakkois-Aasia on '
+          + 'täältä lähempänä kuin Australian eteläiset suurkaupungit.',
+        artikkeli: {
+          nimi: 'Matkailijan Darwin',
+          taitto: 'opas',
+          teksti: 'Kapea niemi meren ja sataman välissä — kaupunki, joka on '
+            + 'rakennettu neljästi uudelleen ja näyttää siksi nuoremmalta '
+            + 'kuin on.',
+          nosto: 'Kuivalla kaudella sataa noin viisi millimetriä kuukaudessa; '
+            + 'helmikuussa 2011 vettä tuli 1 110,2 millimetriä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Stuart Highway alkaa Darwinista ja jatkuu etelään '
+                + 'halki mantereen Tennant Creekin ja Alice Springsin kautta '
+                + 'Port Augustaan Etelä-Australiassa. Keskusta on '
+                + 'kävelykokoinen: sitä rajaavat luoteessa Daly Street, '
+                + 'koillisessa McMinn Street, lounaassa Mitchell Street ja '
+                + 'kaakossa Bennett Street. Mitchell Street on kaupungin '
+                + 'viihdekortteli yökerhoineen, noutoruokapaikkoineen ja '
+                + 'ravintoloineen, ja sen varrella on muutamia pienempiä '
+                + 'teattereita. Kaupungin kaksi sisäelokuvateatteri-'
+                + 'kompleksia ovat sen sijaan muualla, Casuarinassa ja '
+                + 'Palmerstonissa, ja alueen suurin ostoskeskittymä on '
+                + 'Casuarina Square. Teollisuusalueet ovat Stuart Highwayn '
+                + 'varrella Winnellien kohdalla.',
+              kuva: {
+                tiedosto: 'Darwin (AU), The Mall -- 2019 -- 4400.jpg',
+                selite: 'Keskustan kävelykadun palmut valaistaan iltaisin, ja '
+                  + 'kadun suulla on kangaskatos.',
+                lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Darwin ja sen esikaupungit levittäytyvät suunnilleen '
+                + 'kolmion muotoon: vanhemmat lounaiset esikaupungit ja itse '
+                + 'kaupunki muodostavat yhden kulman, uudemmat pohjoiset '
+                + 'esikaupungit toisen ja itäiset esikaupungit kohti '
+                + 'Palmerstonia kolmannen. Vanhan Darwinin ja pohjoisten '
+                + 'esikaupunkien välissä ovat lentoasema ja sen '
+                + 'ilmavoimatukikohta. Palmerston on satelliittikaupunki 20 '
+                + 'kilometriä itään; se perustettiin 1980-luvulla ja on yksi '
+                + 'Australian nopeimmin kasvavista kunnista — nimi on sama '
+                + 'kuin Darwinin oma alkuperäinen nimi, mutta paikka eri. '
+                + 'Maaseutualueilla Howard Springsissä, Humpty Doossa ja '
+                + 'Berry Springsissä kasvu on ollut niin ikään voimakasta.',
+              kuva: {
+                tiedosto: 'Darwin from the air, above Berrimah.jpg',
+                selite: 'Itäiset esikaupungit levittäytyvät Berrimahin '
+                  + 'kohdalla pensasmaan ja vuorovesiuomien väliin.',
+                lahde: 'JarrahTree, Wikimedia Commons (CC BY 2.5 au)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kuivan kauden illat',
+              teksti: 'Mindil Beach Sunset Market kokoontuu torstai- ja '
+                + 'sunnuntai-iltoina kuivan kauden ajan. Kojuja on noin 200, '
+                + 'ja niistä noin 60 myy ruokaa; kaupungin monikulttuurisuus '
+                + 'on tehnyt kaakkoisaasialaisesta laksa-nuudelikeitosta '
+                + 'darwinilaisten suosikkiruoan. Rannan nimi on peräisin '
+                + 'Goyderin vuoden 1869 kartasta, jossa "Mindil" merkittiin '
+                + 'tonttien takana olleelle suolle; nimi siirtyi pian suon '
+                + 'edessä olevalle rannalle. Samalla rannalla soudetaan '
+                + 'elokuussa oluttölkeistä rakennetuilla veneillä. Keskustan '
+                + 'Deckchair Cinema puolestaan näyttää ulkoilmassa '
+                + 'itsenäisiä ja taide-elokuvia huhtikuusta lokakuuhun.',
+              kuva: {
+                tiedosto: 'Deckchair Cinema, Darwin, September 2025 02.jpg',
+                selite: 'Deckchair Cinema on Darwinin elokuvaseuran '
+                  + 'ulkoilmateatteri, joka on auki kuivan kauden ajan.',
+                lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kapina 1918',
+              teksti: 'Joulukuun 17. päivänä 1918 noin tuhat mielenosoittajaa '
+                + 'marssi ammattiyhdistysjohtaja Harold Nelsonin johdolla '
+                + 'Government Houselle Liberty Squarelle, poltti territorion '
+                + 'hallintomiehen John Gilruthin nuken ja vaati tämän eroa. '
+                + 'Tapaus tunnetaan Darwinin kapinana. Tyytymättömyys '
+                + 'kohdistui territorion kahteen suurimpaan työnantajaan, '
+                + 'Vesteyn lihatehtaaseen ja liittovaltion hallitukseen, ja '
+                + 'sekä Gilruth että Vestey-yhtiö lähtivät Darwinista pian '
+                + 'sen jälkeen. Vuodet 1911–1919 olivat muutenkin '
+                + 'levottomia: Pohjoisterritorio oli juuri siirtynyt '
+                + 'Etelä-Australialta liittovaltiolle, ja oman itsehallinnon '
+                + 'territorio sai vasta 1978.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Darwinista puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Darwin-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Päivän ylin lämpötila on lähes sama ympäri vuoden ja '
+                + 'pysyy tavallisesti alle 35 asteessa, joten ajankohta '
+                + 'kannattaa valita sateen mukaan. Kuiva kausi kestää '
+                + 'suunnilleen toukokuusta syyskuuhun: lähes joka päivä on '
+                + 'aurinkoinen, iltapäivän kosteus on noin 30 prosenttia ja '
+                + 'sadetta tulee noin viisi millimetriä kuukaudessa. '
+                + 'Kuumimmat kuukaudet ovat loka- ja marraskuu juuri ennen '
+                + 'sateiden alkua, ja sadekausi joulukuusta maaliskuuhun tuo '
+                + 'monsuunin, ukkoset ja hirmumyrskyriskin.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Darwinin historia on sarja katastrofeja ja '
+        + 'jälleenrakennuksia. Samaan tarinaan kuuluu kultakenttien tuoma '
+        + 'kiinalaisyhteisö, jonka kaupunginosa ei koskaan noussut uudelleen.',
+      tehtava: {
+        kysymys: 'Minä vuonna Darwinin Chinatown syntyi?',
+        vaihtoehdot: [
+          '1874',
+          '1869',
+          '1888',
+          '1911',
+        ],
+        oikea: 0,
+        fakta: 'Perustajina oli 186 kiinalaista työläistä, jotka saapuivat '
+          + 'laivalla Singaporesta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Aamu jolloin sota tuli Australiaan',
+          tiedosto: 'Darwin (AU), Bombing of Darwin 1942 Memorial -- 2019 -- 4358.jpg',
+          teksti: 'Torstaiaamuna 19. helmikuuta 1942 vähän ennen kymmentä '
+            + 'Darwinin sataman, siellä olleiden laivojen ja kaupungin kahden '
+            + 'lentokentän yli tuli 188 lentotukialuskonetta; ennen '
+            + 'puoltapäivää seurasi 54 maatukikohdista noussutta '
+            + 'pommikonetta. Kaikki neljä tukialusta olivat olleet mukana '
+            + 'Pearl Harborissa, ja ensimmäistä aaltoa johti sama upseeri '
+            + 'kuin siellä. Pommeja pudotettiin kappalemäärältään enemmän '
+            + 'kuin Pearl Harboriin, vaikka niiden yhteispaino jäi '
+            + 'pienemmäksi. Hyökkäys oli suurin yksittäinen ulkovallan '
+            + 'hyökkäys Australiaan. Kuolleiden määrä on yhä kiistanalainen: '
+            + 'tuoreeltaan asetettu tutkintakomissio päätyi noin 250:een, '
+            + 'myöhemmät arviot ovat suurempia.',
+          selite: 'Pommituksen muistomerkki on lohkare, jonka laattaan on '
+            + 'kaiverrettu 19. helmikuuta 1942 tapahtumien kulku.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bombing of Darwin',
+        },
+        {
+          otsikko: 'Joulu jolloin kaupunki hajosi',
+          tiedosto: 'Cyclone Tracy Memorial, East Point Reserve, September 2025 01.jpg',
+          teksti: 'Jouluaamuna 25. joulukuuta 1974 hirmumyrsky Tracy pyyhkäisi '
+            + 'Darwinin yli. Se tuhosi yli 70 prosenttia rakennuksista ja 80 '
+            + 'prosenttia asuintaloista, ja asunnoista 94 prosenttia muuttui '
+            + 'asumiskelvottomiksi. Yli 30 000 ihmistä siirrettiin pois '
+            + 'kaupungista. Kuolinluku raportoitiin vuosikymmeniä 71:ksi, '
+            + 'kunnes Pohjoisterritorion museon tutkimus totesi 2023 viiden '
+            + 'uhrin tulleen lasketuksi kahdesti; oikea luku on 66, joista 45 '
+            + 'maalla ja 21 merellä. Jouluna 2024, viisikymmentä vuotta '
+            + 'myöhemmin, East Point Reserveen paljastettiin muistomerkki '
+            + 'uhrien nimillä.',
+          selite: 'East Point Reserven muistomerkki paljastettiin jouluna '
+            + '2024 siinä kohdassa, jossa hirmumyrsky Tracy iski rantaan.',
+          lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cyclone Tracy',
+        },
+        {
+          otsikko: 'Kaupunginosa joka ei noussut uudelleen',
+          tiedosto: 'Chinese Temple in Darwin, Australia.jpg',
+          teksti: 'Kultakentät ja Palmerstonista Pine Creekiin rakennettu '
+            + 'rautatie toivat 1870-luvulla Pohjoisterritorioon suuren joukon '
+            + 'kiinalaisia työläisiä, valtaosin Guangdongin maakunnasta; '
+            + 'vuoteen 1888 mennessä heitä oli 6 122. Chinatown syntyi '
+            + 'kaupungin sydämeen 1874. Kaupunginosa hävitettiin maan tasalle '
+            + '1942, ja syynä oli yhdistelmä: japanilaisten pommitukset, '
+            + 'puolustusvoimien ilkivalta sekä paikallisten ryöstely ja '
+            + 'kiinalaisyhteisöön kohdistunut tarkoituksellinen purkaminen. '
+            + 'Väestö oli evakuoitu, ja palaajat löysivät raunioita; maat '
+            + 'pakkolunastettiin, eikä Chinatownia ole rakennettu uudelleen. '
+            + 'Chung Wah -yhdistys ylläpitää yhä temppeliä ja kiinalaismuseota.',
+          selite: 'Kiinalainen temppeli perustettiin 1887, ja se on rakennettu '
+            + 'uudelleen sekä vuoden 1942 pommitusten että hirmumyrsky Tracyn '
+            + 'jäljiltä.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Chinatown, Darwin',
+        },
+        {
+          otsikko: 'Talo joka on kestänyt kaiken',
+          tiedosto: 'Darwin (AU), Government House -- 2019 -- 4353.jpg',
+          teksti: 'Government House rakennettiin 1870–1871, ja se on '
+            + 'Pohjoisterritorion vanhin eurooppalainen rakennus: '
+            + 'keskiviktoriaaninen goottilaisvilla, jota on sopeutettu '
+            + 'ilmastoon lukuisilla varjostavilla verannoilla ja kuisteilla. '
+            + 'Talo seisoo Esplanadilla 13 000 neliömetrin rinnepuutarhan '
+            + 'keskellä. Varhainen asukas Harriet Douglas Daly kirjoitti '
+            + 'rakennustyöstä, että sitä seurasivat alusta loppuun pelkät '
+            + 'vaikeudet ja tilapäisratkaisut. Rakennus on kestänyt '
+            + 'hirmumyrskyt, maanjäristykset, pommitukset ja termiitit; '
+            + 'vuoden 1942 pommituksissa vaurioitunut lippu lahjoitettiin '
+            + 'Australian sotamuseoon.',
+          selite: 'Government House on ollut territorion hallintomiesten koti '
+            + 'ja virkatalo vuodesta 1871.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Government House, Darwin',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Darwinin vuosi jakautuu sateeseen ja sen puutteeseen, ei '
+        + 'kylmään ja lämpimään. Krokotiilit, laatikkomeduusat ja käärmeet '
+        + 'kuuluvat kaupungin arkeen ympäri vuoden.',
+      tehtava: {
+        kysymys: 'Kuinka monta muuta kuin merikäärmelajia Darwinin seudulla elää?',
+        vaihtoehdot: [
+          '34',
+          '12',
+          '23',
+          '58',
+        ],
+        oikea: 0,
+        fakta: 'Myrkyllisten lajien osuus on Darwinissa pienempi kuin '
+          + 'useimmissa muissa kaupungeissa, koska pythonit ja tarhakäärmeet '
+          + 'ovat enemmistönä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vuosi jonka mittaa sade',
+          tiedosto: '004 Darwin evening storm, Australia 1971 (51242182331).jpg',
+          teksti: 'Darwinin trooppisessa savanni-ilmastossa päivän ylin '
+            + 'lämpötila on lähes sama ympäri vuoden; ero on sateessa. Kuiva '
+            + 'kausi kestää suunnilleen toukokuusta syyskuuhun, jolloin lähes '
+            + 'joka päivä on selkeä ja iltapäivän kosteus on noin 30 '
+            + 'prosenttia — vuonna 2012 sadetta ei tullut 147 päivään. '
+            + 'Sadekausi tuo monsuunin ja ukkoset: helmikuussa 2011 '
+            + 'lentoasemalla mitattiin 1 110,2 millimetriä, kaupungin '
+            + 'sateisin kuukausi koskaan. Kuivan kauden ansiosta Darwinissa '
+            + 'on Australian pääkaupungeista toiseksi eniten aurinkotunteja '
+            + 'päivässä, 8,4; vain Perthissä on enemmän.',
+          selite: 'Sadekauden ukkosrintama tummentaa taivaan Darwinin '
+            + 'esikaupungin yllä vuonna 1971.',
+          lahde: 'wilford peloquin, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Darwin, Northern Territory',
+        },
+        {
+          otsikko: 'Naapureita joita ei uida vastaan',
+          tiedosto: 'Krokodil Adelaide River.JPG',
+          teksti: 'Suolavesikrokotiilit ovat yleisiä kaikissa Darwinia '
+            + 'ympäröivissä vesistöissä ja päätyvät ajoittain satamaan ja '
+            + 'kaupungin rannoille; territorion hallinto pitää yllä jatkuvaa '
+            + 'pyydystysohjelmaa niiden määrän rajoittamiseksi kaupungin '
+            + 'vesialueilla. Lokakuusta toukokuuhun meressä ui tappavia '
+            + 'laatikkomeduusoja, joita kutsutaan paikallisesti nimellä '
+            + 'stinger. Käärmelajeja Darwinissa on enemmän kuin missään '
+            + 'muussa Australian pääkaupungissa: seudulla elää 34 muuta kuin '
+            + 'merikäärmelajia, ja niistä 23 on kirjattu ammattipyydystäjien '
+            + 'toimesta itse kaupungista.',
+          selite: 'Suolavesikrokotiili nousee vedestä pystyyn Adelaide-joella '
+            + 'Pohjoisterritoriossa.',
+          lahde: 'Gabriele Delhey, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Saltwater crocodile',
+        },
+        {
+          otsikko: 'Puutarha joka nousi kahdesti',
+          tiedosto: 'Rainforest gully in the George Brown Darwin Botanic Gardens.jpg',
+          teksti: 'George Brown Darwin Botanic Gardens perustettiin '
+            + 'nykyiselle paikalleen 1886 noin kahden kilometrin päähän '
+            + 'keskustasta. Kokoelmiin kuuluu Pohjois-Australian '
+            + 'monsuunikasvillisuutta: mangroveja, monsuunipensaikkoa, '
+            + 'Tiwi-saarten sademetsää ja Arnheminmaan jyrkänteen lajistoa '
+            + 'sekä käpypalmuja, palmuja, apinanleipäpuita, inkivääreitä ja '
+            + 'helikonioita. Hirmumyrsky Tracy vaurioitti puutarhaa pahoin '
+            + '1974, ja jälleenrakennusta johti George Brown, jonka mukaan '
+            + 'puutarha nimettiin uudelleen 2002. Alueen entinen wesleyläinen '
+            + 'metodistikirkko on yhä pystyssä, ja siinä toimii nykyään '
+            + 'puutarhan kahvila.',
+          selite: 'Puutarhan sademetsäkuru esittelee Pohjois-Australian '
+            + 'monsuunikasvillisuutta kävelypolun varrella.',
+          lahde: 'Kathryn Greenhill, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'George Brown Darwin Botanic Gardens',
+        },
+        {
+          otsikko: 'Puisto pommivaraston paikalla',
+          tiedosto: 'Charles Darwin National Park explosives bunker.jpg',
+          teksti: 'Neljä kilometriä keskustasta kaakkoon on Charles Darwin '
+            + '-kansallispuisto, joka perustettiin vanhalle sotilasalueelle: '
+            + 'sen mäkiä kiertää yhä rivi betonisia räjähdebunkkereita, ja '
+            + 'yksi niistä on muutettu opastuskeskukseksi ja sotamuistojen '
+            + 'näyttelyksi. Samalla alueella on larrakia-kansan jättämiä '
+            + 'simpukkakasoja eli middenejä. Puistosta on näköalapaikkoja '
+            + 'kaupungin siluettiin. Aurinko käy Darwinissa suoraan pään '
+            + 'päällä kahdesti vuodessa, loka- ja helmikuun puolivälissä.',
+          selite: 'Räjähdebunkkeri on osa toisen maailmansodan pommivarastoa, '
+            + 'jonka alueelle Charles Darwin -kansallispuisto perustettiin.',
+          lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Charles Darwin National Park',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Ensimmäiseksi kutsuttu aboriginaalitaiteen näyttely koottiin '
+        + 'Darwinin vankilasta 1888. Sama perintö jatkuu Australian '
+        + 'pisimpään jatkuneessa alkuperäiskansataiteen palkinnossa.',
+      tehtava: {
+        kysymys: 'Mikä osa vanhaa Christ Church -kirkkoa jäi pystyyn hirmumyrsky Tracyn jäljiltä?',
+        vaihtoehdot: [
+          'kuisti',
+          'kellotorni',
+          'kuoriosa',
+          'sakaristo',
+        ],
+        oikea: 0,
+        fakta: 'Uusi katedraali vihittiin 13. maaliskuuta 1977 Canterburyn '
+          + 'arkkipiispan läsnä ollessa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Näyttely joka lähti vankilasta',
+          tiedosto: 'Fannie Bay Gaol entrance gates.jpg',
+          teksti: 'Fannie Bay Gaol toimi Hänen Majesteettinsa vankilana ja '
+            + 'työlaitoksena 20. syyskuuta 1883 alkaen aina 1. syyskuuta 1979 '
+            + 'asti. Vuonna 1888 sen apulaissheriffi John George Knight, '
+            + 'myöhempi territorion hallintomies, kokosi aboriginaalivankien '
+            + 'piirustuksia ja luonnoksia näyttelyksi nimeltä The Dawn of Art '
+            + 'ja vei sen Melbournen satavuotisnäyttelyyn. Etelä-Australian '
+            + 'museon antropologian vanhempi kuraattori Philip Jones on '
+            + 'kutsunut kokoelmaa ensimmäiseksi aboriginaalitaiteen '
+            + 'näyttelyksi. Vankila on nykyisin museo.',
+          selite: 'Fannie Bay Gaolin portti kantaa yhä laitoksen '
+            + 'alkuperäistä nimeä.',
+          lahde: 'Ken Hodge, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fannie Bay Gaol',
+        },
+        {
+          otsikko: 'Palkinto joka on jatkunut pisimpään',
+          tiedosto: 'MAGNT Darwin, 2023 (01).jpg',
+          teksti: 'Museum and Art Gallery of the Northern Territory sijaitsee '
+            + 'The Gardensin kaupunginosassa Conacher Streetin varrella. '
+            + 'Museon ensimmäinen koti oli Smith Streetin vanha kaupungintalo, '
+            + 'jonka peruskorjaus oli juuri valmistumassa, kun hirmumyrsky '
+            + 'Tracy vaurioitti sitä pahoin 1974; nykyinen rakennus avattiin '
+            + 'vasta seitsemän vuotta myöhemmin, 10. syyskuuta 1981. Museo on '
+            + 'Telstran kansallisen aboriginaali- ja Torres-salmen '
+            + 'saarelaistaiteen palkinnon koti — Australian pisimpään '
+            + 'jatkunut alkuperäiskansataiteen palkintosarja. Ensimmäinen '
+            + 'kokonaan aboriginaalitaiteilijalle omistettu soolonäyttely '
+            + 'nähtiin siellä 2020.',
+          selite: 'Museon sisäänkäynnin banderolli kertoo Telstran '
+            + 'alkuperäiskansataiteen palkintonäyttelystä.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Museum and Art Gallery of the Northern Territory',
+        },
+        {
+          otsikko: 'Seinät jotka maalataan joka syyskuu',
+          tiedosto: 'Buildings in Darwin, Northern Territory, 2021, 03.jpg',
+          teksti: 'Darwin Street Art Festival kokoontuu joka syyskuu, kun '
+            + 'katutaiteilijoita ympäri maailmaa maalaa kaupunkiin suuria '
+            + 'ulkoseinämaalauksia. Vuoteen 2021 mennessä tapahtuma oli '
+            + 'levinnyt keskustasta esikaupunkeihin ja edelleen Katherineen, '
+            + 'Tennant Creekiin ja Alice Springsiin. Elokuussa on vuorossa '
+            + 'Darwin Festival, jonka ohjelmassa on komediaa, tanssia, '
+            + 'teatteria, musiikkia, elokuvaa ja kuvataidetta sekä '
+            + 'alkuperäiskansojen valtakunnallinen musiikkipalkintogaala.',
+          selite: 'Trooppinen seinämaalaus peittää kokonaisen päädyn '
+            + 'Darwinin keskustassa.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Darwin Festival',
+        },
+        {
+          otsikko: 'Ikkuna joka muistaa kalastajat',
+          tiedosto: 'AU-Darwin-christ-church-cathedral-innen.jpg',
+          teksti: 'Nykyinen Christ Church -katedraali rakennettiin 1975–1976 '
+            + 'edellisen rakennuksen paikalle sen jälkeen, kun hirmumyrsky '
+            + 'Tracy oli tuhonnut sen. Vanhasta kirkosta jäi pystyyn vain '
+            + 'kuisti, jonka Australian laivasto oli rakentanut 1944; se '
+            + 'säilytettiin osana uutta kahdeksankulmaista rakennusta, ja '
+            + 'takaseinä muurattiin vanhan kirkon kivistä. Darwinilaistaiteilija '
+            + 'George Chaloupka suunnitteli sisälle Cyclone Tracy Memorial '
+            + 'Window -lasi-ikkunan, jonka värit ja mustat kaartuvat viivat '
+            + 'esittävät kalaverkkoja ja myrskyn nostattamia aaltoja. Ikkuna '
+            + 'on omistettu Tracyssä menehtyneille kalastajille.',
+          selite: 'Katedraalin kolmiomainen muistoikkuna on omistettu '
+            + 'hirmumyrsky Tracyssä menehtyneille kalastajille.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Anglican Diocese of the Northern Territory',
+        },
+      ],
+    },
+  ],
+  /*
+   * PORT MORESBY (Opus 24.8.2026, lauta oceania, kaupunki-id
+   * portmoresby). Alusta asti tehty kaupunkilehti: kohteella ei ollut
+   * kategorioita eikä ARTIKKELIT-merkintää ennen tätä erää. Avain on
+   * paljas kaupunki-id `portmoresby`, jonka js/packs/oceania.js antaa
+   * (rivi { id: 'portmoresby', name: 'Port Moresby', wiki: 'Port
+   * Moresby' }); artikkelimerkintä on js/packs/oceania-artikkelit.js:ssä
+   * avaimella 'Port Moresby', koska ui.js hakee taulusta arvolla
+   * city.wiki ?? city.name.
+   *
+   * Pohjana ovat docs/mantereet-tyoaineisto/faktapohja-portmoresby.md
+   * ja sen riippumaton tarkistus tarkistus-portmoresby.md. Tarkistus ei
+   * ollut työpuussa vaan commitissa 1fa359ae, josta se luettiin
+   * (git show). RISTIRIIDOISSA TARKISTUS VOITTAA FAKTAPOHJAN.
+   *
+   * Jokainen väite on luettu en-Wikipedian raakatekstistä (action=raw,
+   * haettu 24.8.2026): Port Moresby, Hanuabada, Motu people, Koita
+   * language, HMS Basilisk (1848), John Moresby, Hiri trade cycle,
+   * Papua New Guinea National Museum and Art Gallery, Boroko, Konedobu,
+   * Ela Beach, Port Moresby International Airport ja Papua New Guinea.
+   *
+   * TARKISTUSRAPORTIN KAKSI PAKOLLISTA KORJAUSTA ON TEHTY.
+   * (1) Faktapohjan nosto T3 väitti tatuointiperinteen koskeneen sekä
+   * motu- että koitabu-tyttöjä, vaikka sen oma lähde (Motu people
+   * -artikkelin vuoden 1912 kuvateksti) puhuu vain KOITABU-naisista, ja
+   * artikkelin toinen tatuointilähde (Ratzel 1896) kertoo motuista eri
+   * asian eikä mainitse ikäkäytäntöä lainkaan. Koko nosto on KORVATTU
+   * (tarkistus suositteli tätä itse): kuvataide-sivun kolmas nosto
+   * kertoo nyt kahdesta museosta, jotka Port Moresbyyn perustettiin
+   * ennen nykyistä ja jotka eivät jääneet (1907, 1914, kokoelma
+   * Australiaan 1916, uusi asetus 1953, museo ja galleria 1956, muutto
+   * vanhaan sairaalaan 1960). Sadan vuoden takainen kuvateksti ei
+   * kanna nykykulttuurin selitystä, ja sen kuva olisi lisäksi
+   * rikkonut kuvasääntöjä (ks. HYLÄTYT KUVAT).
+   * (2) Merkkimäärät mitattiin koneellisesti: faktapohjan nostot T3
+   * (336 mrk) ja H4 (417 mrk) alittivat 440 merkin rajan. Kaikki 16
+   * tämän lehden nostoa mitattiin ennen committia ja ovat välillä
+   * 563–634 merkkiä.
+   *
+   * TARKISTUS VAHVISTI KAKSI KANTAVAA ASIAA, JOTKA ON KIRJOITETTU
+   * ROHKEASTI: John Moresby löysi ja nimesi sataman HELMIKUUSSA 1873
+   * HMS Basiliskilla — isoisän matkan vuonna — ja hiri-purjehdukset
+   * loppuivat 1950-luvun lopulla, mutta HIRI MOALE -JUHLA ON YHÄ
+   * KÄYNNISSÄ. Siksi hiri-sivun kolme ensimmäistä nostoa ovat
+   * mennessä aikamuodossa ja neljäs päättyy preesensiin.
+   *
+   * SANAMUOTO "LÖYSI": en-Wikipedia käyttää sanaa suoraan ("the
+   * territory was discovered by the crew of HMS Basilisk"), mutta se on
+   * eurooppalainen näkökulma paikkaan, jossa asuttiin. Lehti sanoo
+   * aiemman asutuksen joka kerta: etusivun johdanto, K1, K2, K3 ja
+   * ARTIKKELIT-intro mainitsevat motut ja koitabut ennen laivaa, ja
+   * K1 päättyy virkkeeseen "sai eurooppalaisen nimensä — mutta ei
+   * asukkaitaan". Sanaa "löysi" käytetään vain kerran ja siinä
+   * yhteydessä, jossa se on lähteen oma sana.
+   *
+   * PILARI 3 JA spec-mantereet.md: motut ja koitabut ovat nykykansoja,
+   * joilla on oma edustuselin (Motu Koita Assembly, kymmenen
+   * tunnustettua kylää) ja jotka omistavat kaupungin maat; Hanuabada on
+   * yhä yli 15 000 asukkaan kylä ja maan urheilumenestyksen koti.
+   * Papua-Uusi-Guinea on elävä nykyvaltio (2024 väestönlaskenta, 2025
+   * avattu ilmailuperintökeskus, museon palautusohjelma). Missään ei
+   * käytetä "kivikautinen"-kehystä.
+   *
+   * KULTTUURIVISA (js/packs/oceania-questions.js, kohta portmoresby)
+   * kysyy viisi asiaa: maan, kielten määrän (yli 800), saaren, kielten
+   * runsauden syyn (vuoristo ja laaksot) ja Tok Pisinin. KAIKKIEN
+   * VASTAUSTEN PITÄÄ LÖYTYÄ LEHDESTÄ, mutta ei visan omalla
+   * sanamuodolla. Maa ja saari ovat ARTIKKELIT-introssa ja oppaan
+   * kappaleessa; kieliluku, vuoristosyy ja Tok Pisin ovat oppaan
+   * jaksossa 3, jossa ne kerrotaan torin kautta ja eri sanoin
+   * (en-Wikipedia "Papua New Guinea": noin 840 tunnettua kieltä, yli
+   * 820 maan omaa, keskimäärin 7 000 puhujaa kieltä kohti, "the rural
+   * and diverse population is a result of highly mountainous
+   * geography"). Minitehtävät EIVÄT toista visaa: ne kysyvät
+   * Basiliskin komennusvuotta 1871 ja lagatoin lähtökuukautta.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä. Oppaan jakso 5 nojaa siis en-Wikipedian Port Moresby
+   * -artikkelin Climate-osioon ja SANOO SEN ÄÄNEEN — Perthin,
+   * Samarkandin ja Vancouverin malli.
+   *
+   * OCEANIA_FACTS- JA SAAPUMISKORTTIPÄÄLLEKKÄISYYS: laudan
+   * portmoresby-faktat kertovat kielten määrän, 12 prosentin osuuden
+   * maailman kielistä ja Kokoda Trackin. Kokoda Trackia ei mainita
+   * lehdessä lainkaan, eikä 12 prosentin lukua käytetä; kieliluku on
+   * lehdessä visasäännön takia mutta eri kulmasta (puhujamäärien
+   * pienuus). js/packs/oceania-valokuvat.js:n portmoresby-kortit
+   * kertovat kalatorin kalojen tulevan omalta riutalta — oppaan jakso 3
+   * ei toista sitä vaan puhuu torista vaihdon jatkumona.
+   *
+   * KUVAT: 26 kuvaa haettiin Commonsin rajapinnasta kategorioilla ja
+   * hauilla (Port Moresby, Lakatoi, Ela Beach, Waigani, Buildings in
+   * Port Moresby, Museums in Papua New Guinea, Garamut, National
+   * Parliament of Papua New Guinea, Jacksons International Airport,
+   * "Picturesque New Guinea Plate", "Hanuabada", "HMS Basilisk 1848"),
+   * lisenssi ja tekijä luettiin extmetadatasta ja JOKAINEN kuva
+   * katsottiin silmin 900 pikselin esikatseluna. Yksikään
+   * js/packs/oceania-valokuvat.js:n portmoresby-tiedosto ei toistu
+   * täällä (Plate V (a), Port Moresby Fish Market, Stilt houses
+   * 48641133468, Hirimoale2, POM Downtown).
+   *
+   * HYLÄTYT KUVAT JA SYYT:
+   * - "Reading the proclamation of annexation, Mr Lawe's house...
+   *   November 1884": historiallisesti tärkeä, mutta etualalla on rivi
+   *   vaatteettomia miehiä lähietäisyydeltä. Kunnioitus- ja
+   *   ikäsopivuuspilarit ratkaisivat.
+   * - "Picturesque New Guinea Plate V (b) - Women Making Pottery":
+   *   tunnistettava nainen lähikuvassa ja paljasta ihoa; juuri se
+   *   1900-luvun alun etnografinen kuvasto, josta tehtävänanto
+   *   varoitti.
+   * - "Picturesque New Guinea Plate IX - The Haunt of the Alligator":
+   *   kaksi vaatteetonta tunnistettavaa henkilöä JA kuvaan painettu
+   *   studiosigneeraus "LINDT MELBOURNE COPYRIGHT".
+   * - "Picturesque New Guinea Plate XVI - Sir Peter Scratchley's Camp":
+   *   ryhmäkuva, jossa kasvot ovat luettavissa.
+   * - "Papua New Guinea 1991-039 Parliament House" ja "1991-079 Lagotoi
+   *   at the Hiri Moali Festival" ja "1991-085 Reconstruction of Duhu":
+   *   etualalla tunnistettavia ihmisiä, myös lapsia.
+   * - "National library and archives in Waigani": mies nojaa kaiteeseen
+   *   etualalla kasvot luettavissa (korvattiin viereisellä
+   *   arkistorakennuksen kuvalla).
+   * - "(People gathered with banana varieties at Koki Market)": nainen
+   *   ja lapsi katsovat suoraan kameraan.
+   * - "Australian Squadron PNG 1885 slnsw": neliosainen panoraama
+   *   albumipahville liimattuna, painetut kuvatekstit ja kehykset.
+   * - "Port moresby (5987258134)": sama näkymä kuin valittu
+   *   rantakuva, mutta piikkilankakiepit peittävät etualan.
+   * - "Hiri Moale Festival.jpg" ja "Hiri Moale Festival2.jpg": 763 ja
+   *   574 pikseliä leveitä, alle rajan.
+   *
+   * KUVAMERKINTÖJEN TIETOINEN POIKKEUS: kolmessa John William Lindtin
+   * vuoden 1885 kuvalaatassa (Plate VI, Plate VII (a), Plate VII (b))
+   * on oikeassa alakulmassa hyvin pieni painomenetelmän merkintä
+   * "AUTOTYPE". Se on julkaisijan oma painoleima, ei vesileima eikä
+   * tekijänoikeutta vaativa studiosigneeraus — sellaisen sisältänyt
+   * Plate IX hylättiin yllä. Kirjataan tähän, jotta QA näkee että
+   * merkki on huomattu eikä ohitettu.
+   *
+   * AIHETOISTO ON HARKITTU: paalutalot esiintyvät kolmesti eri
+   * näkökulmista ja eri aikoina (K2 nykykylä lankkusiltoineen
+   * läheltä, K3 ilmakuva koko Hanuabadasta, H4 vanha lasidia samasta
+   * kylästä 1800-luvun lopulta), koska kylät ovat kaupungin
+   * määrittävä piirre. Lagatoi esiintyy kolmesti hiri-sivulla (purjeet
+   * täysinä, ankkurissa Elevalan luona, kaiverruksessa kylän edustalla)
+   * — se on koko sivun aihe. Ela Beach näkyy kolmessa kuvassa eri
+   * asiassa: rantaviivan yleiskuvassa kannessa, matkaoppaan
+   * pystykuvassa Musgrave Streetin päässä ja hiri-sivun juhlarannassa.
+   * Yksikään TIEDOSTONIMI ei toistu.
+   *
+   * KUVATEKSTIT: yksi virke, ja se kertoo KOHTEESTA eikä kuvaile kuvaa
+   * visuaalisesti (omistajan linjaus 22.8.2026). HMS Basiliskin
+   * piirroksen kuvateksti sanoo suoraan, että laiva on Threshold Bayssä
+   * saaren toisella puolella eikä Port Moresbyssä — extmetadata kertoo
+   * sen, eikä lukijaa jätetä luulemaan väärin.
+   *
+   * MATKAOPPAAN VAROVAISUUSHUOMAUTUS on yksi virke jakson 5 lopussa,
+   * eikä siinä ole yhtään rikollisuuden yksityiskohtaa: vain että
+   * jalan ei kannata liikkua ja että majoitukset järjestävät
+   * kuljetuksia. Lähde on en-Wikipedian oma Crime-osio ("Travel by
+   * foot is not recommended in and about the city and suburbs").
+   * Papua-Uusi-Guinea -artikkelin raskaampaa Crime and human rights
+   * -osiota ei käytetty lainkaan.
+   */
+  portmoresby: [
+    {
+      id: 'kaupunki',
+      nimi: 'Port Moresby',
+      johdanto: 'Motu- ja koitabu-kylien rannalle purjehti helmikuussa 1873 '
+        + 'brittikapteeni, joka merkitsi ankkuripaikan kartalleen isänsä '
+        + 'nimellä. Kylät ovat yhä siinä, ja niiden ympärille on kasvanut '
+        + 'maan suurin kaupunki.',
+      kansikuvat: [
+        {
+          tiedosto: 'Port Moresby Town Mschlauch.JPG',
+          selite: 'Vanha keskusta eli Town on Paga- ja Touaguba-kukkuloiden '
+            + 'välisellä kannaksella sataman äärellä.',
+          lahde: 'Mschlauch, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Port moresby (5986697553).jpg',
+          selite: 'Ela Beachin rantakaista kaartuu keskustan eteläpuolelta '
+            + 'kohti Paga-kukkulaa ja avomeren riuttaa.',
+          lahde: 'eGuide Travel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Moresby PNG (3) (5987274546).jpg',
+          selite: 'Kaupunki levittäytyy kuivien kukkuloiden väliin, ja '
+            + 'takana kohoaa saaren sisäosien vuoristo.',
+          lahde: 'eGuide Travel, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laveaa yleiskuvaa kolmesta suunnasta —
+       * satamalta hämärässä, Konedobun yli kukkulalta ja ilmasta
+       * rannikkoa pitkin. Yksikään ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Port Moresby at dusk.jpeg',
+          selite: 'Keskustan tornit ja satamalaiturit reunustavat Fairfax '
+            + 'Harbouria, jonka takana nousevat mantereen kukkulat.',
+          lahde: 'Michael Cousins, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Papua New Guinea 1991-063 View over Konedobu, Port Moresby (33594032542).jpg',
+          selite: 'Konedobun kaupunginosa on Touaguba-kukkulan ja Burns '
+            + 'Peakin välisessä laaksossa sataman rannalla.',
+          lahde: 'Brian ireland, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: '(Aerial view of Port Moresby coastline in Papua New Guinea) - DPLA - e1029ad7f197bd6a97d7e8c84e6cfa95.jpg',
+          selite: 'Papuanlahden rannikko on ruskeaa kukkulamaata, jonka '
+            + 'poukamiin kylät ja kaupunki ovat asettuneet.',
+          lahde: 'Carlquist, Sherwin John, 1930-2021, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Satama joka sai nimensä vuonna 1873',
+          tiedosto: 'Admiralty Chart No 2126 Port Moresby, Published 1887.jpg',
+          teksti: 'Helmikuussa 1873 siipiratashöyrylaiva HMS Basilisk kartoitti '
+            + 'Uuden-Guinean etelärannikkoa kapteeni John Moresbyn johdolla. '
+            + 'Miehistö purjehti lahteen, jonka rannalla motu- ja '
+            + 'koitabu-kansat olivat jo asuneet vuosisatoja: suurin asutus '
+            + 'Hanuabada koostui viidestä kylästä, ja eurooppalaiset arvioivat '
+            + 'seudun väkiluvuksi noin kaksituhatta. Moresby nimesi lahden '
+            + 'isänsä, amiraali Fairfax Moresbyn mukaan ja merkitsi '
+            + 'Paga-kukkulan edustan ankkuripaikan kartoilleen nimellä Port '
+            + 'Moresby. Sama vuosi, jona isoisä lähti maailmanmatkalleen, on '
+            + 'siis myös vuosi, jona tämä satama sai eurooppalaisen nimensä — '
+            + 'mutta ei asukkaitaan.',
+          selite: 'Amiraliteetin merikartta Port Moresbysta julkaistiin '
+            + 'maaliskuussa 1887, ja se perustuu luutnantti T. F. Pullenin '
+            + 'vuonna 1885 HMS Larkilla tekemiin mittauksiin.',
+          lahde: 'United Kingdom Hydrographic Office, Wikimedia Commons (PD)',
+          wiki: 'Port Moresby',
+        },
+        {
+          otsikko: 'Kaksi kansaa jotka olivat täällä ennen satamaa',
+          tiedosto: 'Port moresby (5987247416).jpg',
+          teksti: 'Rannikon motut ja sisämaan kukkuloilta tulleet koitabut ovat '
+            + 'asuneet samalla kannaksella kauan ennen kaupunkia, ja he ovat '
+            + 'sen maiden perinteiset omistajat. Kansat puhuvat kahden aivan '
+            + 'eri kieliperheen kieliä: motu on austronesialainen kieli kuten '
+            + 'monet muutkin Tyynenmeren saarten kielet, koitabu taas kuuluu '
+            + 'saaren omaan Trans-Uusi-Guinea-perheeseen. Silti niiden välillä '
+            + 'on solmittu avioliittoja runsaasti, ja molemmat jakautuvat '
+            + 'iduhu-nimisiin sukuryhmiin. Nykyään kansoja edustaa Motu Koita '
+            + 'Assembly, parlamentin säädöksellä perustettu elin, joka '
+            + 'hallinnoi kymmentä tunnustettua kylää eikä sillä ole vertaista '
+            + 'muualla maassa.',
+          selite: 'Motu- ja koitabu-kylien talot seisovat paaluilla veden '
+            + 'päällä, ja kadut ovat lankkusiltoja talolta talolle.',
+          lahde: 'eGuide Travel, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Motu people',
+        },
+        {
+          otsikko: 'Kylä joka on isompi kuin luulisi',
+          tiedosto: 'From the air - Stilt houses, Port Moresby. (48641553181).jpg',
+          teksti: 'Hanuabada tarkoittaa motun kielellä isoa kylää — hanua on '
+            + 'kylä ja bada iso. Se on motu-kylistä suurin, koti yli '
+            + 'viidelletoista tuhannelle ihmiselle, ja se on kaupungin '
+            + 'keskustasta luoteeseen sataman vesillä. Osa taloista seisoo '
+            + 'paaluilla veden päällä, ja kadut ovat lankkusiltoja talolta '
+            + 'talolle. Juuri tämän kylän rannalla luettiin vuonna 1884 '
+            + 'julistus, jolla Britannia otti alueen suojelualueekseen; '
+            + 'prinsessa Anne kävi katsomassa samaa paikkaa vuonna 2022. Kylä '
+            + 'tunnetaan myös kriketinpelaajistaan: Papua-Uuden-Guinean '
+            + 'yhdeksästä kansainyhteisön kisojen mitalista kahdeksan on tullut '
+            + 'Hanuabadasta.',
+          selite: 'Hanuabada leviää viuhkamaisina taloriveinä matalan veden '
+            + 'päälle kaupungin luoteispuolella.',
+          lahde: 'gailhampshire from Cradley, Malvern, U.K, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hanuabada',
+        },
+        {
+          otsikko: 'Hallintopaikasta itsenäiseksi pääkaupungiksi',
+          tiedosto: 'Government buildings in Waigani 2013.jpg',
+          teksti: 'Vuoden 1905 Papua Act siirsi alueen Australian suoraan '
+            + 'hallintoon 1906, ja Port Moresby sai kaupungin aseman vasta '
+            + '1972 — ensimmäisenä ylipormestarinaan Oala Oala-Rarua. '
+            + 'Syyskuussa 1975 Papua-Uusi-Guinea itsenäistyi, ja '
+            + 'juhlallisuuksissa kuningatarta edusti prinssi Charles. Uudet '
+            + 'hallinto- ja kulttuurirakennukset nousivat Waiganin alueelle '
+            + 'vanhan keskustan ulkopuolelle: parlamenttitalon avasi 1984 sama '
+            + 'prinssi, ja rakennus yhdistää perinteisen muotokielen '
+            + 'nykyaikaiseen rakennustekniikkaan. Kaupunki on kasvanut '
+            + 'nopeasti: vuoden 1980 laskennassa asukkaita oli 120 000, vuonna '
+            + '2011 jo 364 145 ja vuonna 2024 kaikkiaan 756 754.',
+          selite: 'Waiganin hallintorakennukset nousivat itsenäistymisen '
+            + 'jälkeen avoimelle maalle noin seitsemän kilometriä vanhasta '
+            + 'keskustasta koilliseen.',
+          lahde: 'Masalai, Wikimedia Commons (CC0)',
+          wiki: 'Waigani',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Office and apartment tower on Ela Beach at the bottom of Musgrave Street.jpg',
+          selite: 'Musgrave Street laskeutuu keskustasta Ela Beachille, ja sen '
+            + 'päässä seisoo kaupungin tunnetuimpia toimisto- ja asuintorneja.',
+          lahde: 'Masalai, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Port Moresby on Papua-Uuden-Guinean pääkaupunki ja maan '
+          + 'ainoa suurkaupunki: vuoden 2024 laskennassa asukkaita oli '
+          + '756 754. Se on Uuden-Guinean saaren eteläisellä rannikolla, ja '
+          + 'saari on maailman toiseksi suurin. Matkailijan Port Moresby '
+          + 'jakautuu kolmeen: vanha keskusta eli Town sataman äärellä '
+          + 'kukkuloiden välissä, Ela Beachin rantakaista sen eteläpuolella ja '
+          + 'Waiganin hallintoalue seitsemän kilometrin päässä koillisessa. '
+          + 'Motu- ja koitabu-kylät ovat yhä siellä missä ennenkin, osa '
+          + 'taloista veden päällä paaluilla. Sisämaahan noustaan jyrkästi '
+          + 'kohti saaren keskusvuoristoa.',
+        artikkeli: {
+          nimi: 'Matkailijan Port Moresby',
+          taitto: 'opas',
+          teksti: 'Kukkuloiden ja lahtien väliin levinnyt pääkaupunki, jonka '
+            + 'vanhimmat kylät seisovat yhä veden päällä paaluilla.',
+          nosto: 'Maanteitse Port Moresbysta ei pääse Laehen eikä Madangiin — '
+            + 'tieverkko ei ole yhtenäinen, joten sisämaahan lennetään.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Port Moresbyyn tullaan käytännössä lentäen. Kansallinen '
+                + 'tieverkko ei ole yhtenäinen, joten esimerkiksi Laehen ja '
+                + 'Madangiin ei pääse maanteitse lainkaan vaan niihin '
+                + 'lennetään. Kaupungin kansainvälinen lentoasema on '
+                + 'kahdeksan kilometrin päässä keskustasta, ja se tunnetaan '
+                + 'myös nimellä Jacksons: nimi tuli australialaisen '
+                + 'hävittäjälentäjän John Francis Jacksonin mukaan, joka '
+                + 'kaatui 1942. Kenttä on maan suurin, ja sen kautta kulki '
+                + '2025 arviolta 1,6 miljoonaa matkustajaa. Se on samalla '
+                + 'maan kahden lentoyhtiön, Air Niuginin ja PNG Airin, '
+                + 'tukikohta. Vanha lentokenttä oli Waiganissa, ja sen '
+                + 'kiitorata näkyi maastossa vielä 1990-luvulla.',
+              kuva: {
+                tiedosto: 'Port Moresby Airport looking west.jpg',
+                selite: 'Jacksonsin kiitorata halkoo tasankoa kaupungin '
+                  + 'koillispuolella, ja sen takana alkaa vuoristo.',
+                lahde: 'Masalai, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki jakautuu kolmeen osaan. Vanha keskusta, jota '
+                + 'paikalliset kutsuvat nimellä Town, on Paga- ja '
+                + 'Touaguba-kukkuloiden välisellä kannaksella sataman äärellä '
+                + '— siellä missä ensimmäiset siirtomaarakennukset nousivat '
+                + '1880-luvulla. Waigani rakennettiin itsenäistymisen jälkeen '
+                + 'uudeksi hallinto- ja kulttuurikeskukseksi, ja siellä ovat '
+                + 'parlamentti, kansallismuseo ja kansalliskirjasto. Niiden '
+                + 'välissä on Boroko, joka oli aikoinaan kaupungin '
+                + 'kaupallinen sydän mutta on hiljentynyt: liiketoiminta on '
+                + 'siirtynyt muualle ja moni entinen myymälätila on '
+                + 'tyhjillään. Lännessä on korkeita taloja, ostoskeskuksia ja '
+                + 'uutta asuinrakentamista.',
+              kuva: {
+                tiedosto: 'Boroiko post office.jpg',
+                selite: 'Borokon vanha liikekeskus postitaloineen on '
+                  + 'hiljentynyt sen jälkeen, kun kauppa siirtyi muualle '
+                  + 'kaupunkiin.',
+                lahde: 'Masalai, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: tori, tie ja monta kieltä',
+              teksti: 'Koki on Port Moresbyn tunnetuin tuoretori, ja sinne '
+                + 'tuodaan aamuisin kalaa, vihanneksia ja hedelmiä. '
+                + 'Kaupungin sisällä liikutaan busseilla ja yksityisillä '
+                + 'takseilla, ja katujen varsilla kuulee monta kieltä '
+                + 'kerralla. Papua-Uusi-Guinea on maailman kielellisesti '
+                + 'moninaisin maa: siellä on käytössä noin 840 tunnettua '
+                + 'kieltä, joista yli 820 on maan omia. Syy on maastossa — '
+                + 'vuorinen maa ja sen syvät laaksot ovat pitäneet yhteisöt '
+                + 'erillään, ja useimmilla kielillä on alle tuhat puhujaa. '
+                + 'Yhteisiä kieliä on kaksi: '
+                + 'englanti kaupan ja koulun kielenä sekä tok pisin, joka on '
+                + 'kasvanut eri kieliä puhuvien ihmisten kohtaamisista maan '
+                + 'yleisimmäksi yleiskieleksi.',
+              kuva: {
+                tiedosto: 'Douglas Street Port Moresby.jpg',
+                selite: 'Douglas Street laskee keskustan halki, ja sen varrella '
+                  + 'on Papua-Uuden-Guinean keskuspankin talo.',
+                lahde: 'Masalai, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kuivin paikka koko saarella',
+              teksti: 'Kaakkoispasaatituulet, jotka kantoivat lagatoit '
+                + 'länteen, tekevät kaupungista myös kuivan. Port Moresbyn '
+                + 'keskimääräinen vuosisade on 898,8 millimetriä, mikä on '
+                + 'koko Uuden-Guinean vähiten: ympäröivät korkeat vuoret '
+                + 'pysäyttävät sateet, ja tuulet kulkevat rannikon '
+                + 'suuntaisesti sen sijaan että nousisivat sitä vasten. '
+                + 'Siksi kaupungin rinteet ovat kuivan kauden lopulla '
+                + 'ruskeat, vaikka saaren sisäosissa kasvaa sademetsää. Sama '
+                + 'sadevarjo selittää, miksi motut eivät voineet kasvattaa '
+                + 'saagoa kotirannoillaan ja miksi savipatojen vaihtokauppa '
+                + 'syntyi.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Sadekausi alkaa joulukuussa ja päättyy toukokuussa; '
+                + 'loput kuusi kuukautta ovat kuivaa kautta, jolloin '
+                + 'kaakkoispasaatit puhaltavat. Lämpötila vaihtelee vähän: '
+                + 'päivän keskiylin on 28–32 astetta vuodenajasta riippuen ja '
+                + 'yön keskialin pysyy noin 23 asteessa ympäri vuoden. '
+                + 'Kuivalla kaudella kaupungissa on hieman viileämpää. Nämä '
+                + 'luvut ovat en-Wikipedian Port Moresby -artikkelin '
+                + 'sääruudusta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit — pelin säärivi kaupungista puuttuu. '
+                + 'Käytännön ohje: kaupungilla ei kannata liikkua jalan, ja '
+                + 'moni majoitus järjestää vieraidensa kuljetukset.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kapteeni John Moresby nimesi sataman isoisän matkan vuonna. '
+        + 'Kalastuskylien naapurista tuli lähetysasema, siirtomaan '
+        + 'hallintopaikka ja lopulta itsenäisen Papua-Uuden-Guinean '
+        + 'pääkaupunki.',
+      tehtava: {
+        kysymys: 'Minä vuonna HMS Basilisk komennettiin Australian asemalle John Moresbyn johtoon?',
+        vaihtoehdot: [
+          '1871',
+          '1848',
+          '1873',
+          '1882',
+        ],
+        oikea: 0,
+        fakta: 'Laiva ehti siis kartoittaa rannikkoa kaksi vuotta ennen kuin '
+          + 'se purjehti siihen lahteen, joka sai Moresbyn nimen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Laiva jonka kapteenin nimi jäi kartalle',
+          tiedosto: 'HMS \'Basilisk\', anchored in Threshold Bay, New Guinea, 28 May 1874 RMG PW8115.jpg',
+          teksti: 'HMS Basilisk laskettiin vesille Woolwichissa elokuussa 1848, '
+            + 'ja se oli ensimmäisen luokan siipiratassluuppi: '
+            + 'kaksisylinterinen höyrykone pyöritti laivan kylkien rattaita, ja '
+            + 'purjeet olivat parkin takila. Laiva palveli Krimin sodan aikana '
+            + 'Itämerellä 1854–1855 ja siirtyi sitten Pohjois-Amerikan, Kiinan '
+            + 'ja Japanin asemille. Maaliskuussa 1871 se komennettiin '
+            + 'Australian asemalle kapteeni John Moresbyn johtoon, ja siitä '
+            + 'alkoivat Uuden-Guinean rannikon merenmittaukset. Myöhemmin '
+            + 'Basiliskia käytettiin pakkotyövoiman kuljetuksia vastaan '
+            + 'Tyynellämerellä. Laiva palasi Englantiin 1874 ja purettiin '
+            + 'romuksi Chathamissa 1882.',
+          selite: 'HMS Basilisk on tässä piirroksessa ankkurissa Threshold '
+            + 'Bayssa toisaalla Uudella-Guinealla 28. toukokuuta 1874, ei '
+            + 'Port Moresbyssä.',
+          lahde: 'M. F. M., Wikimedia Commons (PD)',
+          wiki: 'HMS Basilisk (1848)',
+        },
+        {
+          otsikko: 'Neljä opettajaa ja talo joka rakennettiin heti',
+          tiedosto: 'Picturesque New Guinea Plate VII (b) - Elevala Island, from Mission Station.jpg',
+          teksti: 'Marraskuussa 1873, yhdeksän kuukautta Moresbyn käynnin '
+            + 'jälkeen, Lontoon lähetysseura lähetti Port Moresbyyn neljä '
+            + 'polynesialaista opettajaa; heidät oli lähettänyt pastori Samuel '
+            + 'Macfarlane. Vuotta myöhemmin, marraskuussa 1874, heidän '
+            + 'seuraansa saapui pastori William George Lawes, joka rakensi '
+            + 'heti lähetystalon Metoreiaan Elevala-saaren vastarannalle. '
+            + 'Satama oli jo tuolloin merkittävä kauppapaikka, jolla kävivät '
+            + 'kaukaisemmatkin saaren kansat, ja juuri se sai '
+            + 'lähetystyöntekijät toivomaan, että sanoma leviäisi laajemmalle. '
+            + 'Lawesin talo jäi seudun tunnetuimmaksi rakennukseksi '
+            + 'vuosikymmeniksi.',
+          selite: 'Elevala-saaren paalutalot ja sataman purjelaivat näkyvät '
+            + 'lähetysaseman pihasta vuoden 1885 kuvalaatassa.',
+          lahde: 'John William Lindt, Wikimedia Commons (PD)',
+          wiki: 'Port Moresby',
+        },
+        {
+          otsikko: 'Kultaryntäys joka jäi tulematta',
+          tiedosto: 'Papua New Guinea 1991-127 Rouna Valley Nr. Port Moresby (33010814364).jpg',
+          teksti: 'Syyskuussa 1877 luonnontieteilijä ja keräilijä Andrew '
+            + 'Goldien palveluksessa ollut tyynenmerensaarelainen löysi kullan '
+            + 'merkkejä Laloki- ja Goldie-jokien yhtymäkohdasta kävelymatkan '
+            + 'päässä Port Moresbysta. Kultaryntäystä odotellen kauppias '
+            + 'William Bairstow Ingham lähti Cooktownista tammikuussa 1878 '
+            + 'perustamaan satamaan puotia. Huhtikuusta alkaen paikalle saapui '
+            + 'satakunta kaivosmiestä, mutta useimmat lähtivät jo saman vuoden '
+            + 'lopulla: kultaa ei löytynyt ja tauteja riitti. Ryntäys jäi '
+            + 'tulematta, mutta puoti jäi — ja sen mukana ensimmäinen '
+            + 'eurooppalainen kaupankäynti sataman rannalla.',
+          selite: 'Rouna Valleyn tie nousee kaupungin takaa sisämaahan sille '
+            + 'kukkulaseudulle, jonka jokivarsista kultaa etsittiin.',
+          lahde: 'Brian ireland, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Port Moresby',
+        },
+        {
+          otsikko: 'Lippu joka nostettiin kahdesti',
+          tiedosto: 'Hanuabada, coastal village, Port Moresby, PNG (9605673456).jpg',
+          teksti: 'Huhtikuun 4. päivänä 1883 Queenslandin siirtomaa julisti '
+            + 'omavaltaisesti koko saaren itäosan brittiläiseksi: Union Jack '
+            + 'nostettiin Port Moresbyssa kolmentoista eurooppalaisen ja noin '
+            + 'kahdensadan papualaisen läsnä ollessa. Lontoo hylkäsi tempun. '
+            + 'Vasta lokakuussa 1884 alue julistettiin virallisesti '
+            + 'suojelualueeksi, ja silloin kävi kömpelösti: Hugh Romilly luki '
+            + 'lyhyen julistuksen 23. lokakuuta tietämättä, että komodori '
+            + 'James Erskine oli matkalla samalle asialle, ja Erskine piti '
+            + 'oman suuren seremoniansa vasta 6. marraskuuta. Elokuussa 1885 '
+            + 'erikoiskomissaari Peter Scratchley valitsi paikan siirtomaan '
+            + 'hallintopaikaksi.',
+          selite: 'Hanuabadan olkikattoiset paalutalot rannalla vanhassa '
+            + 'lasidiakuvassa; juuri tässä kylässä luettiin vuoden 1884 '
+            + 'suojelualuejulistus.',
+          lahde: 'Special Collections from Callaghan NSW, Australia, Wikimedia Commons (PD)',
+          wiki: 'Port Moresby',
+        },
+      ],
+    },
+    {
+      id: 'hiri',
+      nimi: 'Hiri',
+      /*
+       * Oma kuvake: lagatoin kaksi rapusaksipurjetta rungon yllä.
+       * `hiri` ei ole js/ui-apurit.js:n AIHE_IKONIT-vakioaihe, ja ilman
+       * omaa kuvaketta liuska saisi yleiskirjanmerkin. Piirretty samalla
+       * ohuella kynällä kuin talon muut viivaikonit: pelkkä ääriviiva,
+       * ei fill- eikä stroke-määreitä, koska ne tulevat SVG-kuoresta.
+       */
+      ikoni: '<path d="M12 3.2c2.8 1.4 4.4 4 4.6 7.2-1.6-.6-3.2-.6-4.6 0z"/>'
+        + '<path d="M12 3.2c-2.8 1.4-4.4 4-4.6 7.2 1.6-.6 3.2-.6 4.6 0z"/>'
+        + '<path d="M12 10.4v4.6"/><path d="M4 15.4h16l-1.8 4H5.8z"/>',
+      johdanto: 'Kerran vuodessa motu-kansan miehet purjehtivat länteen '
+        + 'viemään savipatoja ja toivat takaisin saagoa. Purjehdukset '
+        + 'päättyivät 1950-luvun lopulla, mutta niiden muistoksi vietetty '
+        + 'juhla on yhä käynnissä.',
+      tehtava: {
+        kysymys: 'Minä vuodenaikana lagatoit lähtivät hiri-purjehdukselle länteen?',
+        vaihtoehdot: [
+          'syyskuun lopulla tai lokakuun alussa',
+          'tammikuussa',
+          'juhannuksen aikaan',
+          'aina kun sattui sopimaan',
+        ],
+        oikea: 0,
+        fakta: 'Lähtö ajoitettiin tuulen mukaan: kaakkoispasaati laurabada '
+          + 'kantoi alukset länteen, ja kotiin päästiin vasta kun luoteesta '
+          + 'puhaltava lahara alkoi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Ankerias joka lähetti miehen merelle',
+          tiedosto: 'Picturesque New Guinea Plate VI - Lakatoi or Motu Trading Vessel Under Sail.jpg',
+          teksti: 'Boeran kylän kalastaja Edai Siabo oli tarinan mukaan '
+            + 'palaamassa kalasta, kun suuri ankerias tarttui häneen ja veti '
+            + 'hänet veden alle. Ankerias oli meren henki. Se palautti Edain '
+            + 'pinnalle ja käski hänen rakentaa suuren lagatoin, täyttää sen '
+            + 'keittopadoilla ja purjehtia länteen kaakkoistuulen mukana, jota '
+            + 'motun kielessä kutsutaan nimellä laurabada. Edai totteli. Hän '
+            + 'rakensi ensimmäisen hiri-lagatoin ja antoi sille nimeksi '
+            + 'Bogebada, merikotka, lastasi sen vaimonsa tekemillä padoilla ja '
+            + 'purjehti ystävineen Papuanlahden vesille. Näin alkoi '
+            + 'kauppapurjehdusten perinne, joka kesti sukupolvien yli.',
+          selite: 'Lagatoin rapusaksipurjeet nostettiin kahdesta mastosta, ja '
+            + 'runkoja sidottiin yhteen niin monta kuin lastia oli.',
+          lahde: 'John William Lindt, Wikimedia Commons (PD)',
+          wiki: 'Hiri trade cycle',
+        },
+        {
+          otsikko: 'Savi joka matkasi saagoksi',
+          tiedosto: 'PSM V52 D045 Papuan lake dwellings with a lakatoi under sail.jpg',
+          teksti: 'Motu-kansan asuinseutu jää sadevarjoon: kuiva kausi on '
+            + 'poikkeuksellisen ankara, eikä saagopalmulle sopivia '
+            + 'kasvupaikkoja ole tarpeeksi. Sen sijaan motut osasivat tehdä '
+            + 'savisia keittopatoja, uroja, mikä oli harvinaista Uudella-'
+            + 'Guinealla. Näistä kahdesta — puutteesta ja taidosta — syntyi '
+            + 'vaihtokauppa. Syyskuun lopulla tai lokakuun alussa miehet '
+            + 'valmistelivat lagatoinsa ja naiset muotoilivat ja polttivat '
+            + 'padat, ja kun kaakkoistuuli alkoi puhaltaa, monirunkoiset '
+            + 'purjealukset lähtivät länteen. Menomatka Papuanlahden kyliin '
+            + 'kesti tavallisesti vain viikon, ja vaihto tehtiin nopeasti '
+            + 'tuttujen kauppakumppanien kanssa.',
+          selite: 'Paalukylän edustalla lagatoi purjehtii ulos ja pitkä '
+            + 'kanootti soudetaan sen ohi 1890-luvun lopun kaiverruksessa.',
+          lahde: 'Unknown author Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Hiri trade cycle',
+        },
+        {
+          otsikko: 'Paluu jota piti odottaa kuukausia',
+          tiedosto: 'Picturesque New Guinea Plate VII (a) - Lakatoi, Near Elevala Island.jpg',
+          teksti: 'Paluuta ei voinut aloittaa heti. Ensin oli odotettava '
+            + 'vuodenajan vaihtumista ja luoteesta puhaltavaa lahara-monsuunia, '
+            + 'joka kantaisi alukset kotiin, ja lisäksi lagatoit piti rakentaa '
+            + 'suuremmiksi, jotta tilavampi saagolasti mahtuisi mukaan. Vasta '
+            + 'kahden tai kolmen kuukauden kuluttua käännyttiin kotiin, ja se '
+            + 'matka oli menomatkaa paljon vaarallisempi: lahara nostatti '
+            + 'raskaan merenkäynnin, ja lisärungot tekivät aluksista '
+            + 'kömpelöitä. Kotona odottavat vaimot noudattivat samaa riittiä, '
+            + 'jonka Edai Siabon vaimo oli tarinan mukaan aloittanut — muun '
+            + 'muassa pitivät tulta yllä ja laskivat poissaolopäivät.',
+          selite: 'Lagatoi lepää ankkurissa Elevala-saaren luona purjeet '
+            + 'nostettuina vuoden 1885 kuvalaatassa.',
+          lahde: 'John William Lindt, Wikimedia Commons (PD)',
+          wiki: 'Hiri trade cycle',
+        },
+        {
+          otsikko: 'Perinne joka päättyi myrskyyn ja palasi juhlana',
+          tiedosto: 'Ela Beach May 2015.jpg',
+          teksti: 'Purjehdukset jatkuivat lähes keskeytyksettä toisen '
+            + 'maailmansodan yli aina 1950-luvun loppuun asti, kunnes '
+            + 'raskaasti lastattu ja myrskyn vaurioittama lagatoi upposi '
+            + 'paluumatkalla Boeran kylän edustalla ja moni mies menehtyi. '
+            + 'Siirtomaaviranomaiset kielsivät sen jälkeen uudet purjehdukset, '
+            + 'eikä niitä ole tehty sen koommin. Itsenäistymisen myötä perinne '
+            + 'haluttiin kuitenkin säilyttää, ja niin syntyi Hiri Moale '
+            + '-juhla, joka osuu samaan aikaan itsenäisyyspäivän kanssa. '
+            + 'Ohjelmassa ovat yhä perinnetanssit, lagatoin saapuminen, '
+            + 'kanoottikilpailut, musiikkiesitykset ja käsityönäyttely.',
+          selite: 'Ela Beach on kaupungin pääranta ja Hiri Moale -juhlan '
+            + 'vuosittainen näyttämö.',
+          lahde: 'Nick-D, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hiri trade cycle',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Siirtomaavirkamiehet keräsivät maan esineitä museoihin '
+        + 'toisella puolen maailmaa jo 1889. Sata vuotta myöhemmin kokoelmat '
+        + 'alkoivat palata, ja kaupungin oma museo kutsuu itseään esi-isien '
+        + 'taloksi.',
+      tehtava: {
+        kysymys: 'Kuinka monta esinettä Australian kansallisgalleria palautti museolle vuonna 2020?',
+        vaihtoehdot: [
+          '225',
+          '17',
+          '50 000',
+          'ei yhtään',
+        ],
+        oikea: 0,
+        fakta: 'Ensimmäiset seitsemäntoista olivat palanneet jo museon '
+          + 'avajaisissa 1977, ja palautukset jatkuvat sovittuna ohjelmana.',
+      },
+      nostot: [
+        {
+          otsikko: 'Talo esi-isille',
+          tiedosto: 'Papua New Guinea National Museum May 2015.jpg',
+          teksti: 'Papua-Uuden-Guinean kansallismuseo ja -galleria avattiin '
+            + 'yleisölle 27. kesäkuuta 1977 Waiganissa, ja rakennustyö oli '
+            + 'alkanut kaksi vuotta aiemmin. Museo kutsuu itseään nimellä Haus '
+            + 'Tumbuna, esi-isien talo. Kokoelmissa on yli 50 000 etnografista '
+            + 'esinettä: kundu- ja garamut-rumpuja, naamioita ja totemipaaluja '
+            + 'sekä koristeltu Milne Bayn ulkorunkokanootti. Museo tekee myös '
+            + 'tutkimusta — vuonna 2019 se selvitti tutkijoiden kanssa '
+            + 'Papuanlahden savipatakauppaa ja päätyi siihen, että vaihtoa '
+            + 'Australian suuntaan oli käyty todennäköisesti jo kahden '
+            + 'vuosituhannen ajan.',
+          selite: 'Kansallismuseon maalattu päätykolmio kohoaa Waiganin '
+            + 'puistoalueella kivimuurin takaa.',
+          lahde: 'Nick-D, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Papua New Guinea National Museum and Art Gallery',
+        },
+        {
+          otsikko: 'Esineet jotka lähtivät ja palasivat',
+          tiedosto: 'Paris - Musée du quai Branly - Tambour horizontal à fente - 72.1963.14.1 - 001.jpg',
+          teksti: 'Siirtomaan kuvernööri William MacGregor aloitti 1889 '
+            + 'keräysohjelman, jonka tarkoitus oli saada maahan oma museo. '
+            + 'Museota ei syntynyt, ja kokoelma hajaantui useisiin Australian '
+            + 'museoihin odottamaan aikaa, jolloin maalla olisi omansa. '
+            + 'Pääministeri Michael Somare kirjoitti 1974: naamiot ja taide '
+            + 'ovat eläviä henkiä, joilla on kiinteä kotinsa, eikä ole oikein '
+            + 'säilyttää niitä New Yorkissa, Pariisissa tai Bonnissa. Museon '
+            + 'avajaisissa 1977 palautettiin ensimmäiset seitsemäntoista '
+            + 'MacGregorin kokoelman esinettä, 1990-luvulla lisää Queenslandin '
+            + 'museosta ja vuonna 2020 vielä 225 esinettä Australian '
+            + 'kansallisgalleriasta.',
+          selite: 'Alasepikin alueelta peräisin oleva rakokumpurumpu on '
+            + 'veistetty yhdestä rungosta, ja se on nyt Pariisin quai '
+            + 'Branlyn museossa.',
+          lahde: 'Thesupermat, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Papua New Guinea National Museum and Art Gallery',
+        },
+        {
+          otsikko: 'Kaksi museota jotka eivät jääneet',
+          tiedosto: 'National Archives Waigani NCD.jpg',
+          teksti: 'Ennen nykyistä museota Port Moresbyssa ehti olla kaksi, '
+            + 'jotka eivät jääneet. Staniforth Smithin 1907 perustama '
+            + 'talousmuseo keskittyi luonnonhistoriaan, kivinäytteisiin ja '
+            + 'puulajeihin; Hubert Murrayn 1914 perustama antropologinen museo '
+            + 'taas esineistöön, josta suuri osa oli hänen omasta '
+            + 'kokoelmastaan. Jälkimmäinen jäi lyhytikäiseksi, sillä kokoelma '
+            + 'päätettiin lähettää Australiaan 1916 säästösyistä. Vasta 1953 '
+            + 'säädettiin muinaisesineitä koskeva asetus ja aloitettiin uusi '
+            + 'keruu, 1956 perustettiin julkinen museo ja galleria, ja 1960 '
+            + 'kokoelmat muuttivat vanhaan sairaalaan odottamaan omaa taloa.',
+          selite: 'Kansallisarkisto on kansallismuseon naapurissa Waiganissa, '
+            + 'ja se säilyttää maan asiakirja-aineiston.',
+          lahde: 'Masalai, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Papua New Guinea National Museum and Art Gallery',
+        },
+        {
+          otsikko: 'Museo joka nimesi salinsa uudelleen',
+          tiedosto: 'Former Royal Australian Air Force (33 Squadron) Ford 5-AT-C A45-1 displayed at the National Museum and Art Gallery, Port Moresby.jpg',
+          teksti: 'Museon 40-vuotisjuhlavuonna 2017 osa taloa uudistettiin '
+            + 'australialaisen Architectus-toimiston suunnitelmien mukaan. '
+            + 'Talo avattiin uudelleen 12. lokakuuta, ja näyttelysalit '
+            + 'nimettiin samalla papualaisilla nimillä: Tumbuna, Susan Karike, '
+            + 'Bernard Narokobi, Ian Saem Majnep ja Be Jijimo. Samalla '
+            + 'parannettiin esteettömyyttä ja rakennettiin uusi toisen '
+            + 'maailmansodan näyttely. Vuonna 2025 valmistui '
+            + 'ilmailuperintökeskus, jonne palautettiin Australiasta '
+            + 'sodanaikainen Douglas A-20 Havoc -kone; keskuksessa kerrotaan '
+            + 'myös amerikkalaisesta hävittäjälentäjästä Dick Bongista.',
+          selite: 'Australian ilmavoimien entinen Ford-kolmimoottorinen kone '
+            + 'seisoo museon nurmella Waiganissa runko paljaana.',
+          lahde: 'Bauple58, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Papua New Guinea National Museum and Art Gallery',
+        },
+      ],
+    },
+  ],
 };
