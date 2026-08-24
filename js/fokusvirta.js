@@ -338,19 +338,27 @@ export function fokusvirtaSaapuminen(ui) {
 
 const TYYLIN_TUNNUS = 'fokusvirta-tyyli';
 
-/** Oma tyylitiedosto sivulle, jos sitä ei vielä ole. */
+/**
+ * Oma tyylitiedosto sivulle, jos sitä ei vielä ole.
+ *
+ * @returns {HTMLLinkElement|null} linkki, jos se on juuri lisätty ja
+ *   lataus on siis vielä kesken. Kupla tarvitsee tiedon: sen paikka
+ *   lasketaan MITATUSTA leveydestä, ja ilman tyylitiedostoa mitta on
+ *   tyylittömän laatikon leveys eikä kuplan.
+ */
 function lataaTyyli() {
-  if (typeof document === 'undefined') return;
-  if (document.getElementById(TYYLIN_TUNNUS)) return;
+  if (typeof document === 'undefined') return null;
+  if (document.getElementById(TYYLIN_TUNNUS)) return null;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
   // Yhden tiedoston versiossa erillistä linkkiä ei ole: tyylit ovat
   // silloin jo sivun <style>-lohkossa (tools/build-standalone.mjs).
-  if (!peruslinkki) return;
+  if (!peruslinkki) return null;
   const linkki = document.createElement('link');
   linkki.id = TYYLIN_TUNNUS;
   linkki.rel = 'stylesheet';
   linkki.href = new URL('fokusvirta.css', peruslinkki.href).href;
   document.head.appendChild(linkki);
+  return linkki;
 }
 
 /**
@@ -434,6 +442,16 @@ function piirraKortti(ui, city, data, tila) {
   if (typeof document === 'undefined') return;
   suljeFokusvirta(ui);
   /*
+   * TYYLI ENNEN PIIRTOA, EI VAIN AVAAFOKUSVIRRASSA. Kupla mitataan
+   * asemointia varten heti kun se on puussa, ja tyylitön laatikko on
+   * yhtä pitkää riviä eli leveämpi kuin ruutu — silloin reunapakko
+   * liimasi kuplan vasempaan laitaan pöllön sijasta (havaittu
+   * kolmella ruutukoolla 24.8.2026). Vaiheesta toiseen siirrytään
+   * siirry():n kautta, joka ei käy avaaFokusvirran läpi, joten lataus
+   * kuuluu tähän.
+   */
+  const tyyliKesken = lataaTyyli();
+  /*
    * VAIHE 1 EI PIIRRÄ MITÄÄN. Isoisän merkintä on ylävasemmassa
    * matkakirjakortissa (js/ui.js renderFact, ks. fokusvirtaMatkakirja),
    * ja virran oma pinta odottaa pöllön vuoroa. Ilman tätä paluuta
@@ -441,7 +459,7 @@ function piirraKortti(ui, city, data, tila) {
    */
   if (tila.vaihe === 'matkakirja') return;
   const nappi = KUPLAVAIHEET.has(tila.vaihe) ? polloNappi() : null;
-  if (nappi) piirraKupla(ui, city, data, tila, nappi);
+  if (nappi) piirraKupla(ui, city, data, tila, nappi, tyyliKesken);
   else piirraKehys(ui, city, data, tila);
 }
 
@@ -482,7 +500,7 @@ function piirraKehys(ui, city, data, tila) {
  * koskettaa"*), mutta tässä kuplassa on painikkeita — napautus niiden
  * päällä on valinta eikä sulku, ja se päästetään läpi.
  */
-function piirraKupla(ui, city, data, tila, nappi) {
+function piirraKupla(ui, city, data, tila, nappi, tyyliKesken = null) {
   const koti = nappi.parentNode ?? document.body;
   const kupla = html('div', 'fokusvirta-kupla');
   kupla.setAttribute('role', 'group');
@@ -498,8 +516,20 @@ function piirraKupla(ui, city, data, tila, nappi) {
   ui.fokusvirtaKortti = kupla;
   piirraSisalto(ui, city, data, tila, sisalto);
 
-  const asemoi = () => asetaKuplanPaikka(kupla, nappi);
+  const asemoi = () => {
+    if (kupla.isConnected) asetaKuplanPaikka(kupla, nappi);
+  };
   asemoi();
+  /*
+   * MITTA OTETAAN UUDESTAAN, KUN ASETTELU ON VALMIS. Ensimmäinen mitta
+   * on pakko ottaa heti — muuten kupla välähtäisi väärässä paikassa —
+   * mutta se voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla
+   * (ks. piirraKortti) tai kuvake ei ole vielä latautunut. Seuraava
+   * kehys ja lyhyt varmistus sen perään korjaavat molemmat.
+   */
+  globalThis.requestAnimationFrame?.(asemoi);
+  setTimeout(asemoi, 200);
+  tyyliKesken?.addEventListener('load', asemoi, { once: true });
   ui.fokusvirtaAsemointi = asemoi;
   globalThis.addEventListener?.('resize', asemoi);
   globalThis.addEventListener?.('orientationchange', asemoi);

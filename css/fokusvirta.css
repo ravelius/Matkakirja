@@ -43,7 +43,7 @@
    * matkakirjakorttia"*). Ruudun ylin kolmannes jää siis aina vapaaksi,
    * ja sitä pidempi teksti vieritetään kortin sisällä.
    */
-  max-height: 64%;
+  max-height: 58%;
   display: flex;
   flex-direction: column;
   padding: 0.7rem 0.8rem 0.75rem;
