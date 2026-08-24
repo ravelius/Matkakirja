@@ -221,6 +221,15 @@ export const RAAMATTU = {
           + 'kaupunki- ja maalehdet aukeavat, ja kartan '
           + 'erityiskohteista (vuoret, joet, muut kaupungit) aukeaa '
           + 'pienet pop-up-tietoruudut — tai pelaaja jatkaa matkaa.',
+        'ALOITUSLENTO UUSIKSI (omistaja 24.8.2026): kun pelaaja '
+          + 'valitsee pelin alussa ensimmäisen kohteen, kartta '
+          + 'rajautuu automaattisesti niin, että lähtömaa (Lontoo/'
+          + 'Britannia) ja kohdemaa näkyvät molemmat sopivalla '
+          + 'marginaalilla, ja lentokone lentää punaista viivaa '
+          + 'pitkin Lontoosta kohteeseen. Kartta on tällöin jo '
+          + 'fokusmoodin tapaan niukka: maat, joissa ei ole käyty '
+          + 'tai joissa pelaaja ei ole, himmeinä/sumennettuina. '
+          + 'Koko näkymä uusitaan.',
         'NOPPA JA REITIT (omistaja 24.8.2026): nykyinen noppa ja '
           + 'reittien viivat/pisteet säilyvät ennallaan — pienellä '
           + 'luvulla aika kuluu jo nyt hitaammin, kun heittoja '
