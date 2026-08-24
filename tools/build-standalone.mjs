@@ -322,6 +322,12 @@ const MODULES = [
   // päivitys- ja nollauskutsun; kohteiden lista, mapart, media,
   // ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
   'js/fokuskohteet.js',
+  /*
+   * Fokusnäkymän ruutuun ankkuroidut mitat ennen ui:ta (ui tuo ne
+   * staattisesti). Se lukee laudan projektion fokus-grc.js:stä ja maan
+   * perustiedot sisältötauluista — molemmat ovat jo yllä.
+   */
+  'js/fokusmitat.js',
   'js/ui.js',
 
   'js/muutokset.js',

@@ -12,8 +12,27 @@
  * TÄSMÄLLEEN hyväksytyltä prototyyppikuvalta pieniä yksityiskohtia
  * myöten (mittajana ym.)"*. Siksi tässä on prototyypin KOKO ulkoasu —
  * opaakki paperi, meren syvyysporrastus, naapurien sumenevat
- * ääriviivat, merten ja vuorten nimet, asteverkko, kehys, kartuutsi ja
- * mittajana — eikä pelkkä maastorasteri kuten v1091–v1095:ssä.
+ * ääriviivat, merten ja vuorten nimet — eikä pelkkä maastorasteri
+ * kuten v1091–v1095:ssä.
+ *
+ * === JATKUVA PINTA (omistaja 25.8.2026, Raamatun osio "JATKUVA KARTTA
+ * JA DYNAAMISET MITAT") ===
+ *
+ * Lehden KALUSTEET on sittemmin otettu kuvasta pois: kehysviiva,
+ * KREIKKA-kartuutsi, mittajana ja asteverkon reunalukemat eivät ole
+ * karttaa vaan sivua, ja ne tekivät kuvasta suljetun "lehden" keskelle
+ * lautaa. Kaikki ne piirtää nyt PELI ruutuun ankkuroituina
+ * (js/fokusmitat.js), jolloin ne pysyvät samankokoisina zoomista
+ * riippumatta ja mittajana kertoo TODELLISEN mittakaavan.
+ *
+ * Kuvasta jää se, mikä on karttaa: maasto, meri, rannikko, joet,
+ * vuoret, merten ja paikkojen nimet sekä ΕΛΛΑΣ-vesileima. Maasto ei
+ * myöskään lopu kohdemaan rajalle: NAAPURIEN topografia piirretään
+ * samasta ETOPO-ruudukosta haaleana ja harmaampana, ja se haalistuu
+ * kauemmas mentäessä. Fokusointi hoituu himmeydellä, ei rajaviivalla.
+ *
+ * Kytkin on maakohtainen (tools/fokuskartta/maat.mjs `jatkuva`), jotta
+ * vanha lehtiasu on yhä yhden lipun päässä.
  *
  * === KOLME ASIAA, JOTKA OVAT TOISIN KUIN PROTOTYYPISSÄ ===
  *
@@ -23,13 +42,15 @@
  *    kaava siirtäisi maan pohjoisosaa kymmeniä yksikköjä, ja kaupunkien
  *    laatat jäisivät maaston viereen.
  *
- * 2. KAKSI LAATIKKOA: `bbox` on koko kuva, `rajaus` on LEHTI. Kehys,
- *    asteverkon lukemat, kartuutsi ja mittajana asetellaan rajaukseen,
- *    ja bboxin ja rajauksen väliin jäävä paperi on VUOTOA: ruudun
- *    kuvasuhde ei ole koskaan lehden kuvasuhde, joten kamera näyttää
- *    aina hitusen lehteä enemmän, ja vuoto estää sauman laudan omaan
- *    grafiikkaan. Uloin reuna häivytetään läpinäkyväksi, jotta sauma
- *    sulaa lautaan siellä missä vuoto loppuu kesken (pystynäkymä).
+ * 2. KAKSI LAATIKKOA: `bbox` on koko kuva, `rajaus` on IKKUNA, johon
+ *    peli ajaa kameran. Bboxin ja rajauksen väliin jäävä osa on
+ *    VUOTOA: ruudun kuvasuhde ei ole koskaan ikkunan kuvasuhde, joten
+ *    kamera näyttää aina hitusen ikkunaa enemmän, ja vuoto estää sauman
+ *    laudan omaan grafiikkaan. Uloin reuna häivytetään läpinäkyväksi,
+ *    jotta sauma sulaa lautaan siellä missä vuoto loppuu kesken
+ *    (pystynäkymä). Jatkuvassa pinnassa vuoto ei ole tyhjää paperia
+ *    vaan samaa maastoa ja merta kuin muukin kuva — mikään ei kerro
+ *    pelaajalle, mistä ikkuna alkaa.
  *
  * 3. PELILAATTOJEN KAUPUNKEJA EI PIIRRETÄ. Prototyypissä Athína ja
  *    Irákleio olivat kuvassa; pelissä ne ovat laattoja, jotka peli
@@ -219,6 +240,13 @@ export function piirra(canvas, aineisto, asetukset) {
   const {
     bbox, rajaus, projektio, leveys, tyyli, tarkistus, esikatseluTausta,
   } = asetukset;
+  /*
+   * JATKUVA PINTA vai vanha lehti? Kytkin tulee maan tyylistä (maat.mjs)
+   * ja ratkaisee kaksi asiaa: piirretäänkö naapureille maasto, ja
+   * jätetäänkö lehden kalusteet (kehys, kartuutsi, mittajana,
+   * reunalukemat, vinjetti) pois. Ne kuuluvat nyt pelille.
+   */
+  const jatkuva = Boolean(tyyli.jatkuva);
   /*
    * Yksi kuvapikseli laudan yksikköinä ja päinvastoin. Kuvan on
    * istuttava bboxiin PIKSELILLEEN: peli asettaa <image>-elementin
@@ -480,14 +508,81 @@ export function piirra(canvas, aineisto, asetukset) {
     };
   })();
 
+  /*
+   * ================================ 2b. NAAPURIEN MAASTO (jatkuva pinta)
+   *
+   * Omistaja 25.8.2026: *"maasto ja meri jatkuvat koko kuvan alueelle:
+   * myös NAAPURIMAAT saavat topografian, mutta selvästi
+   * haaleampana/harmaampana kuin kohdemaa — himmeys hoitaa
+   * fokusoinnin"*.
+   *
+   * MAAN JA MEREN RAJA TULEE ETOPO-RUUDUKOSTA, EI RAJADATASTA. Ruudukko
+   * kattaa jo koko bboxin (aineisto.mjs vaatii sen meren sävyn takia),
+   * joten jokainen pikseli tietää korkeutensa — myös Bulgaria, Turkki ja
+   * Libyan rannikko, joista lehdellä ei ole yhtään monikulmiota. Sama
+   * temppu toimii siis millä tahansa maalla ilman uutta aineistoa.
+   *
+   * KOLME ASIAA TEKEE PINNASTA HAALEAN:
+   *   1. väri sekoitetaan harmaaseen paperiin (HIMMEA),
+   *   2. varjostus on kolmasosa kohdemaan liioittelusta,
+   *   3. peitto laskee etäisyyden mukaan kohdemaan rannikosta
+   *      (kentta), joten kaukainen manner on pelkkä aavistus.
+   *
+   * Kohdemaan alue maalataan tässä turhaan, mutta sen oma maastokerros
+   * (osio 5) peittää sen täydellä peitolla — erillinen maski maksaisi
+   * koko kuvan kokoisen ImageDatan säästämättä mitään.
+   */
+  if (jatkuva) {
+    // Paperinharmaa, johon naapurin hypsometria sekoitetaan.
+    const HIMMEA = [205, 197, 178];
+    const SEKOITUS = 0.45;
+    const img = ctx.getImageData(0, 0, W, H);
+    const d = img.data;
+    for (let y = 0; y < H; y++) {
+      for (let x = 0; x < W; x++) {
+        const lon = lonPikselista(x + 0.5);
+        const lat = latPikselista(y + 0.5);
+        const m = korkeus(lon, lat);
+        if (!Number.isFinite(m) || m < 0) continue;
+        /*
+         * Etäisyys kohdemaan rannikosta prototyyppipikseleinä. Sama
+         * kenttä kuin naapurien ääriviivoilla, joten maasto ja viiva
+         * haalistuvat samaa tahtia eikä niiden väliin jää eroa.
+         */
+        const dist = kentta.haeKuvasta(x, y);
+        const peitto = Math.max(0.32, Math.min(0.68, 0.68 - dist / 1300));
+        const n1 = fbm(KOHINA, x / (26 * S), y / (26 * S), 4) - 0.5;
+        const n2 = fbm(KOHINA2, x / (7 * S), y / (7 * S), 3) - 0.5;
+        const v = lerpVari(ASTEIKKO, Math.max(0, m + n1 * 190 + n2 * 60));
+        const varjo = (0.5 - varjostus(lon, lat)) * 0.16;
+        const rae = (KOHINA2(x / (2.1 * S), y / (2.1 * S)) - 0.5) * 9;
+        const i = (y * W + x) * 4;
+        for (let k = 0; k < 3; k++) {
+          const sekoitettu = v[k] * (1 - SEKOITUS) + HIMMEA[k] * SEKOITUS;
+          const savy = Math.max(0, Math.min(255, sekoitettu * (1 - varjo) + rae));
+          d[i + k] = d[i + k] * (1 - peitto) + savy * peitto;
+        }
+      }
+    }
+    ctx.putImageData(img, 0, 0);
+  }
+
   if (Object.keys(aineisto.naapurit ?? {}).length) {
     const taso = uusiCanvas(nw, nh);
     const g = taso.getContext('2d');
     for (const [a3, maa] of Object.entries(aineisto.naapurit)) {
-      // Täyttö on vain aavistus: naapurista näytetään ÄÄRIVIIVA, ei pintaa.
-      g.fillStyle = 'rgba(152,130,98,0.20)';
-      polku(g, maa.renkaat, 1.1, a3.charCodeAt(0) * 97 + 3, false, nk);
-      g.fill('evenodd');
+      /*
+       * Täyttö on vain aavistus: naapurista näytetään ÄÄRIVIIVA, ei
+       * pintaa. Jatkuvassa pinnassa täyttö jää kokonaan pois — pinta on
+       * jo maalattu topografiana (osio 2b), ja tasainen beessi lätäkkö
+       * sen päällä latistaisi juuri sen maaston, jonka takia koko
+       * kerros tehtiin.
+       */
+      if (!jatkuva) {
+        g.fillStyle = 'rgba(152,130,98,0.20)';
+        polku(g, maa.renkaat, 1.1, a3.charCodeAt(0) * 97 + 3, false, nk);
+        g.fill('evenodd');
+      }
       g.strokeStyle = 'rgba(56,38,24,1)';
       g.lineWidth = 2.3 * S * nk;
       g.lineJoin = 'round';
@@ -730,13 +825,22 @@ export function piirra(canvas, aineisto, asetukset) {
    * alle.
    */
   {
-    const ylaraja = ry0 + 46 * S;
+    /*
+     * Rajat, joiden sisään nimi on mahduttava. Lehtiasussa se on
+     * kehyksen sisäreuna; jatkuvassa pinnassa kehystä ei ole, joten
+     * rajana on kuvan oma reuna — nimi saa mennä vuodon puolelle,
+     * koska sielläkin on karttaa.
+     */
+    const ylaraja = (jatkuva ? 0 : ry0) + 46 * S;
+    const vasen = jatkuva ? 24 * S : rx0;
+    const oikea = jatkuva ? W - 24 * S : rx1;
+    const alaraja = jatkuva ? H - 24 * S : ry1;
     for (const n of tyyli.naapurit ?? []) {
       if (!aineisto.naapurit?.[n.iso]) continue;
       const x = kuvaX(n.lon);
       const y0 = kuvaY(n.lat);
       const y = Math.max(ylaraja, y0);
-      if (x < rx0 || x > rx1 || y0 > ry1) continue;
+      if (x < vasen || x > oikea || y0 > alaraja) continue;
       const dist = kentta.haeKuvasta(
         Math.max(0, Math.min(W - 1, Math.round(x))),
         Math.max(0, Math.min(H - 1, Math.round(y))),
@@ -839,8 +943,23 @@ export function piirra(canvas, aineisto, asetukset) {
    * mittajana ja kartuutsi — kaikki RAJAUKSEN mittojen mukaan, ei
    * kuvan. Kuvan ja rajauksen väliin jäävä vuoto on paperia, jonka
    * kamera näyttää vain sen verran kuin ruudun kuvasuhde vaatii.
+   *
+   * === JATKUVASSA PINNASSA TÄTÄ EI PIIRRETÄ LAINKAAN ===
+   *
+   * Jokainen tämän osion elementti on SIVUA eikä karttaa, ja jokainen
+   * niistä kertoo katsojalle, missä kuva loppuu: kehysviiva rajaa,
+   * reunalukemat istuvat kehyksessä, kartuutsi ja mittajana ovat
+   * kehyksen nurkissa. Vinjetti kuuluu samaan joukkoon — se tummentaa
+   * kuvan reunaa ja piirtää siten laudalle suorakaiteen ilman yhtään
+   * viivaa.
+   *
+   * Kartuutsin ja mittajanan piirtää nyt peli ruutuun ankkuroituna
+   * (js/fokusmitat.js), ja mittajana laskee pituutensa TODELLISESTA
+   * zoomista — kuvaan poltettu 200 km valehteli heti kun pelaaja
+   * lähensi karttaa. Asteverkon reunalukemat jäivät toistaiseksi pois
+   * kokonaan (ks. js/fokusmitat.js).
    */
-  {
+  if (!jatkuva) {
     ctx.save();
     // Vinjetti koko kuvan yli: lehti tummenee reunoilta kuin vanha paperi.
     const g = ctx.createRadialGradient(W / 2, H * 0.46, H * 0.25, W / 2, H * 0.5, H * 0.95);

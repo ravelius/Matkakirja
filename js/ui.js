@@ -243,6 +243,13 @@ import { INTRO_SPACE, Kartta } from './kartta.js';
 import { paivitaFokuskartta, paivitaFokusNimet, nollaaFokuskartta } from './fokuskartta.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
 import { paivitaFokuskohteet, nollaaFokuskohteet } from './fokuskohteet.js';
+/*
+ * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
+ * kartuutsi ja sen takaa liukuva maataulu (omistaja 25.8.2026). Ne
+ * eivät ole laudalla vaan kartan päällä HTML:nä, koska ne eivät saa
+ * skaalautua zoomissa — ks. js/fokusmitat.js.
+ */
+import { nollaaFokusmitat, paivitaFokusmitat } from './fokusmitat.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -3640,6 +3647,13 @@ export class UI {
     paivitaFokuskuvat(this);
     // Kartan kohdemerkit ovat samoin kiinteän kokoisia ruudulla.
     paivitaFokuskohteet(this);
+    /*
+     * Mittajana on ruudun ominaisuus eikä kuvan: se on laskettava
+     * uudelleen aina kun zoomi tai panorointi on ASETTUNUT. Tämä on
+     * juuri se kohta — samasta syystä kuin lisänimet ja kuvavinjetit
+     * yllä — eikä siis joka kehyksessä.
+     */
+    paivitaFokusmitat(this);
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     const nakyva = this.nakyvaAlue();
@@ -4309,6 +4323,13 @@ export class UI {
       class: 'fokuskartta', 'pointer-events': 'none',
     }, root);
     nollaaFokuskartta(this);
+    /*
+     * Ruutuun ankkuroidut mitat nollille laudan mukana: kartuutsin
+     * teksti ja mittajanan pituus riippuvat laudasta, ja vanhat
+     * elementit jäisivät muuten .map-paneen roikkumaan uuden laudan
+     * päälle. Ne rakennetaan uudelleen ensimmäisellä päivityksellä.
+     */
+    nollaaFokusmitat(this);
 
     /*
      * Etusivun kulkevat valopisteet. Vain aloituslaudalla; render()
@@ -4953,6 +4974,8 @@ export class UI {
     paivitaFokuskartta(this);
     // Lehden päällä olevat pelimerkit (v1097: "Ota pallot pois").
     this.paivitaFokusPallot();
+    // Ruutuun ankkuroidut mitat (v1099: mittajana ja kartuutsi).
+    paivitaFokusmitat(this);
   }
 
   /* --- PALLOT POIS LEHDEN PÄÄLTÄ (omistaja 24.8.2026, v1097) -------- */
@@ -5138,6 +5161,13 @@ export class UI {
     this.paivitaFokusPallot();
     // Viides kerros: lehden klikattavat karttakohteet (js/fokuskohteet.js).
     paivitaFokuskohteet(this);
+    /*
+     * Viides kerros: ruutuun ankkuroidut mitat (mittajana ja
+     * kartuutsi). Kutsu on tässä samasta syystä kuin pallojen: pohja
+     * saapuu verkosta vasta piirron jälkeen, eikä paivitaFokusKerros
+     * enää aja itseään uudelleen sen takia.
+     */
+    paivitaFokusmitat(this);
   }
 
   /**
