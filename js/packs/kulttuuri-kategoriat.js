@@ -26903,10 +26903,21 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
+          /*
+           * KOHDE VAIHDETTU 24.8.2026 suqista linnoitukseen. Kuvateksti
+           * lupasi ennen Suq al-Hamidiyyan katettua pääkatua, mutta se
+           * on väistämättä sisänäkymä: omistajan linjaus on, että
+           * herokuvan pitää olla dronemainen, jotta kaupunki hahmottuu,
+           * ja kohde vaihdetaan jos se ei muuten onnistu. Linnoitus on
+           * ilmasta kuvattava, se ei toista aamukuvan Umaijadimoskeijaa,
+           * ja se seisoo suqin länsipäässä — basaarin peltikatto näkyy
+           * kuvassa, joten vanha aihe ei katoa, vain kuvakulma muuttuu.
+           */
           ampari: 'herokoe/hero-damaskos-keskipaiva.png',
-          selite: 'Suq al-Hamidiyyan pääkatu katettiin 1800-luvun lopulla '
-            + 'rautaholvilla, jonka luodinreikien ja ilma-aukkojen läpi '
-            + 'aurinko piirtää valopisteitä koko kadun mitalle.',
+          selite: 'Damaskoksen linnoituksen paikka linnoitettiin ensi '
+            + 'kerran vuonna 1076, ja nykyinen ayyubidien aikainen linna '
+            + 'kuuluu vanhaankaupunkiin, joka otettiin maailmanperintö'
+            + 'luetteloon 1979.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
