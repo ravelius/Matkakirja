@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1098 — PALLOT PIILOON JA KORTIT KEVYIKSI (omistajan pelitesti): laatat, nappula ja renkaat piilossa fokuslehdella — palaavat Liiku-napista ja aarrevaiheessa (laatta saa huomioeleen); dev-napautus toimii yha. Suurennos isompi, kuvateksti paperipalkissa kehyksen sisalla, kupla piiloon suurennoksen ajaksi. Syvennyskortti vaalealle pohjalle ja kuva heti isona. Tarkista: Ateenan virta lapi iPadilla',
   'v1097 — ALOITUSLENTO KARTALLA + KUVAZOOM: pelin avauslento lentaa nyt oikealla kartalla Lontoosta kohteeseen (kamera rajaa molemmat maat, punainen kaari piirtyy koneen perassa, kaymattomat maat sumussa; vanha kalvo vain fokusmoodin ollessa pois). Vinjetin klikkaus kasvattaa kuvan animoidusti isoksi kartan jaadessa taustalle. Uusi kohdenosto: Korintin kanava (neljas valinta pollon kuplassa, kuva kanavan sijaintiin). Tarkista: uusi peli alusta Ateenaan, lento, kuvien zoomaus, kanavavalinta',
   'v1096 — FOKUSKARTTA PROTOTYYPIN LEHDEKSI: opaakki atlaksen lehti kehyksineen, kartuutteineen ja mittajanoineen (6400 px), naapurit himmeina nimineen, suomenkieliset merinimet kuvassa; punainen rengas, reittipisteet ja tuplanimet pois fokusnakymasta. Tarkista: Ateenan fokusnakyma iPadilla — vastaako prototyyppikuvaa, riittaako resoluutio',
   'v1095 — KORJAUS: fokuskartan osoite oli amparin juuressa (404) vaikka vientiputki vie kaiken julisteet-kansion alle — polku korjattu, Kreikan akvarellimaaston pitaisi nyt oikeasti nakya. Tarkista: Ateenassa topografia nakyvissa',
