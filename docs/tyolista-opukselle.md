@@ -107,6 +107,19 @@ kuin valmistuu, token-kulutus kurissa. Samassa tilauksessa:
    worker; jonossa julisteiden 28 loppukuvan jälkeen).
 5. **Vaakasuuntalukituksen purku** (omistaja: "vaatimus siitä että
    peliä ei voi pelata vaakasuunnassa voi kumota").
+6. **Silmätarkistuksen EPÄILYTTÄVÄT herokuvat odottavat** (omistajan
+   linjaus 24.8.2026: *"Jätetään myöhemmäksi. Kirjataan vain
+   muistiin."*). Kummankin silmätarkistuksen VÄÄRÄ-tuomiot on jo
+   korjattu viitekuvilla (Kašgar, Mekka, Petra, Damaskos); jäljellä
+   ovat seitsemän EPÄILYTTÄVÄÄ, joissa kohde on tunnistettavissa
+   mutta jokin yksityiskohta on väärin. Lista lähteineen:
+   `docs/mantereet-tyoaineisto/herokuvien-silmatarkistus-1.md`
+   (Kašgarin sunnuntaimarkkinat, Atumashin luostari Mandalayssa,
+   Kuwaitin suurmoskeija, Seifin palatsi, Damaskoksen iltakuva) ja
+   `-2.md` (Karnak Luxorissa, Atakule Ankarassa). Nämä EIVÄT ole
+   generointijonossa — ne odottavat omistajan erillistä päätöstä,
+   koska generointi on kallista eikä yksikään näistä ole väärä kohde
+   vaan väärä yksityiskohta.
 
 Afrikka (O7) jatkuu tuotantosuunnitelman erärungolla uusien
 mantereiden pilottien jälkeen — sama tilaus kattaa sen ("jatka
