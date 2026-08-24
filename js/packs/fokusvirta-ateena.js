@@ -34,6 +34,56 @@
  */
 import { fokuskohteet } from './fokuskohteet-grc.js';
 
+/*
+ * ATHENA NIKEN MINIVISA on YHDESSÄ PAIKASSA, kahdessa käytössä. Se on
+ * täyn 'nike' visa raskaassa korttivirrassa ja kevyen kulun kokeilussa
+ * kaupunkilehden sivun 3 JULISTE-tehtävä (ks. lehtitehtavat alempana).
+ * Kaksi kopiota samasta kysymyksestä ajautuisi erilleen ensimmäisellä
+ * korjauksella, joten teksti on tässä vakiona ja molemmat viittaavat
+ * siihen.
+ */
+const NIKE_VISA = {
+  kysymys: 'Miksi Athena Niken patsaalta oli myöhempien '
+    + 'ateenalaisten selityksen mukaan riisuttu siivet?',
+  vaihtoehdot: [
+    'Jotta Voitto ei voisi koskaan lentää pois kaupungista',
+    'Kuvanveistäjä ei ehtinyt tehdä niitä ajoissa',
+    'Patsas kuvasi alun perin miestä eikä jumalatarta',
+  ],
+  oikea: 0,
+  fakta: 'Athena Niken temppeli on Akropoliin pienin — ja ainoa, '
+    + 'jonka patsaalta puuttuvat siivet tarkoituksella, tarinan mukaan.',
+};
+
+/*
+ * PNYXIN MINIVISA — kevyen kulun AARTEEN AVAUS -tehtävä (sivu 2).
+ *
+ * EI UUTTA FAKTAA. Jokainen väite on Pnyx-oppitunnin omasta, jo
+ * hyväksytystä tekstistä (ks. `oppitunti` alempana): korokkeen nimi on
+ * béma, sille sai nousta "kuka tahansa vapaa kansalainen, ei vain
+ * ylimys tai sotapäällikkö", ja sieltä puhuivat Perikles ja
+ * Demosthenes. Väärät vaihtoehdot ovat tekstin oma vastakohtapari.
+ *
+ * MIKSI EI DEMOKRATIA-KYSYMYSTÄ. Oppitunti pohjustaa laattakysymyksen
+ * (EUROPE_QUESTIONS.ateena: "Mikä hallintomuoto sai alkunsa antiikin
+ * Ateenasta?"), ja jos lehden tehtävä kysyisi saman, aarrekysymys
+ * olisi ratkaistu ennen kuin Nikosta on tavattu. Visasääntö pätee yhä:
+ * vastaus löytyy tekstistä, mutta kysymyksen sanamuoto ei toistu siinä
+ * sellaisenaan.
+ */
+const PNYX_VISA = {
+  kysymys: 'Kuka sai antiikin Ateenassa nousta Pnyxin kallioon '
+    + 'veistetylle puhujankorokkeelle vaatimaan puheenvuoroa?',
+  vaihtoehdot: [
+    'Kuka tahansa vapaa kansalainen',
+    'Vain sotapäälliköt',
+    'Vain ylimyssukujen päämiehet',
+  ],
+  oikea: 0,
+  fakta: 'Koroketta kutsuttiin bémaksi. Pnyxiltä puhuivat muun muassa '
+    + 'Perikles ja myöhemmin Demosthenes.',
+};
+
 export const FOKUSVIRTA_ATEENA = {
   kaupunki: 'ateena',
 
@@ -131,18 +181,8 @@ export const FOKUSVIRTA_ATEENA = {
           + 'Toinen nimi Nike Aptera tarkoittaa siivetöntä Voittoa.',
         lahde: 'Joanbanjo, Wikimedia Commons (CC BY-SA 3.0)',
       },
-      visa: {
-        kysymys: 'Miksi Athena Niken patsaalta oli myöhempien '
-          + 'ateenalaisten selityksen mukaan riisuttu siivet?',
-        vaihtoehdot: [
-          'Jotta Voitto ei voisi koskaan lentää pois kaupungista',
-          'Kuvanveistäjä ei ehtinyt tehdä niitä ajoissa',
-          'Patsas kuvasi alun perin miestä eikä jumalatarta',
-        ],
-        oikea: 0,
-        fakta: 'Athena Niken temppeli on Akropoliin pienin — ja ainoa, '
-          + 'jonka patsaalta puuttuvat siivet tarkoituksella, tarinan mukaan.',
-      },
+      // Sama visa palvelee kevyen kulun JULISTE-tehtävää (ks. NIKE_VISA).
+      visa: NIKE_VISA,
     },
     {
       id: 'diogenes',
@@ -282,4 +322,71 @@ export const FOKUSVIRTA_ATEENA = {
       + 'varmistaa, että vieras on oikeasti katsonut ympärilleen — ei vain '
       + 'etsinyt kultaa.',
   },
+
+  /*
+   * ---------- KEVYT KULKU -KOKEILU (omistaja 24.8.2026, ilta) --------
+   *
+   * Kaksi kenttää, jotka palvelevat vain kevyttä kulkua. Raskas
+   * korttivirta ei lue kumpaakaan, joten liput voi kääntää suuntaan tai
+   * toiseen ilman että tämä tiedosto muuttuu.
+   */
+
+  /*
+   * KOHTAAMISPAIKKA: AKROPOLIS, ei kaupungin laatta.
+   *
+   * Raamattu (KEVYT KULKU -KOKEILU): *"Kohtaamisen paikan voi sitoa
+   * muuhunkin kuin kaupunkipisteeseen (kehyskertomus)."* Vartija Nikos
+   * on kiertänyt Akropoliin ja Agoran kujia kaksikymmentä vuotta, joten
+   * hänet tavataan siellä missä hän työskentelee.
+   *
+   * 23,72573 E / 37,97154 N — en-Wikipedia "Acropolis of Athens".
+   * Muunnos on sama kaava ja samat vakiot kuin fokuskohteilla
+   * (js/packs/fokuskohteet-grc.js): maailmankartalla Millerin lieriö
+   * LEVEYS 12000 / LON0 -175 / POHJOINEN 76, Euroopan laudalla
+   * x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3.
+   *
+   * TARKISTUS ATEENAN LAATTAA VASTEN: kaupungin laatta on
+   * maailmankartalla 6624,7 / 1882 ja Euroopan laudalla 667 / 895.
+   * Akropolis on laudalla siis noin puolen yksikön päässä laatasta —
+   * juuri niin kuin pitääkin, sillä kukkula on Ateenan keskustassa
+   * runsaan kilometrin päässä Syntagmasta, ja laudan yksikkö on
+   * maailmankartalla noin kolme kilometriä. Piste piirtyy laatan
+   * viereen eikä toiseen kaupunkiin.
+   */
+  kohtaamispiste: {
+    nimi: 'Akropolis',
+    laudat: {
+      maailmankartta: { x: 6624.2, y: 1881.9 },
+      europe: { x: 666.7, y: 894.9 },
+    },
+  },
+
+  /*
+   * NIMETYT MINITEHTÄVÄT KAUPUNKILEHDEN SIVUILLE 2 JA 3.
+   *
+   * Raamattu (KEVYT KULKU -KOKEILU): *"Lehden sivuilla 2 ja 3 on
+   * KUMMALLAKIN YKSI minitehtävä, erikseen nimettyinä: toinen AARTEEN
+   * AVAUS -tehtävä ja toinen JULISTE-tehtävä."*
+   *
+   * SIVU ON SIVUNUMERO, EI AIHETUNNUS. Omistaja puhuu sivuista, ja
+   * lehden sivupino rakennetaan aineistosta (js/lehti.js rakennaSivut):
+   * Ateenassa 0 = etusivu, 1 = kaupunkisivu ("Ateena"), 2 = Arki ja
+   * tavat, 3 = Menovinkit. Numero kestää sisällön muutokset paremmin
+   * kuin aihetunnus kestäisi sivujärjestyksen muutokset — ja jos sivua
+   * ei ole, tehtävä jää yksinkertaisesti näkymättä.
+   *
+   * SISÄLTÖ ON JO TARKISTETTUA. Kumpikin visa on tämän tiedoston omaa,
+   * Fablen hyväksymää aineistoa: JULISTE saa täyn 'nike' visan
+   * sellaisenaan (NIKE_VISA) ja AARTEEN AVAUS on koottu Pnyx-oppitunnin
+   * omasta tekstistä (PNYX_VISA) — ei yhtään uutta faktaväitettä.
+   *
+   * PALKINNOT: 'piste' sytyttää kartalle vihreän kohtaamispisteen
+   * (js/fokuspiste.js), 'juliste' myöntää kaupungin aikakausjulisteen
+   * kuten lehden tavallinen minitehtävä. Kumpikin maksaa lisäksi saman
+   * pienen rahapalkkion (js/fokustehtavat.js).
+   */
+  lehtitehtavat: [
+    { id: 'aarre', sivu: 2, otsake: 'AARTEEN AVAUS', palkinto: 'piste', visa: PNYX_VISA },
+    { id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: NIKE_VISA },
+  ],
 };
