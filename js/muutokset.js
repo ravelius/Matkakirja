@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1099, teksti: 'Kortin vieritys ei panoroi karttaa' },
   { v: 1098, teksti: 'Pallot piiloon, suurennos ja kortit' },
   { v: 1097, teksti: 'Aloituslento kartalla, kuvazoom' },
   { v: 1096, teksti: 'Fokuskartta prototyypin lehdeksi' },
