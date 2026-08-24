@@ -1,0 +1,202 @@
+{
+  "iso": "TUR",
+  "lauta": "maailmankartta",
+  "bbox": {
+    "x": 6535.89,
+    "y": 1553.07,
+    "w": 920.56,
+    "h": 575.71
+  },
+  "rajaus": {
+    "x": 6642.11,
+    "y": 1683.42,
+    "w": 708.12,
+    "h": 315.02
+  },
+  "kuva": {
+    "w": 6400,
+    "h": 4003
+  },
+  "tiedosto": "TUR.webp",
+  "tehty": "2026-08-24",
+  "yleinen": true,
+  "ikkuna": {
+    "lonKeski": 34.885126000000014,
+    "lat0": 34.919779,
+    "lat1": 42.998782,
+    "kuvasuhde": 2.2478865842266607
+  },
+  "maamuodonEro": 5.7,
+  "paikat": [
+    "Bursa",
+    "Adana",
+    "Konya",
+    "Samsun",
+    "Gaziantep",
+    "Antalya",
+    "Trabzon",
+    "Kayseri",
+    "Eskişehir"
+  ],
+  "tasaus": [
+    {
+      "id": "lontoo",
+      "nimi": "Lontoo",
+      "kohdemaassa": false,
+      "lauta": [
+        5829.5,
+        1324.1
+      ],
+      "projektio": [
+        5829.1,
+        1324
+      ],
+      "ero": 0.43
+    },
+    {
+      "id": "istanbul",
+      "nimi": "Istanbul",
+      "kohdemaassa": true,
+      "lauta": [
+        6796.5,
+        1763
+      ],
+      "projektio": [
+        6799.3,
+        1763.1
+      ],
+      "ero": 2.78,
+      "poikkeus": "Laatta on laudalla 0,08 astetta (2,8 yksikköä) todellisesta paikastaan länteen. Ero on laudan käsityötä eikä projektiota: laudan yksitoista muuta tarkistuspistettä osuvat alle 1,7 yksikköön, ja väärä kaava siirtäisi niitä kaikkia. Turkin lehdellä 2,8 yksikköä on noin 20 kuvapikseliä 6400 pikselin leveydellä."
+    },
+    {
+      "id": "pariisi",
+      "nimi": "Pariisi",
+      "kohdemaassa": false,
+      "lauta": [
+        5911.1,
+        1440.1
+      ],
+      "projektio": [
+        5911.7,
+        1439.6
+      ],
+      "ero": 0.81
+    },
+    {
+      "id": "lissabon",
+      "nimi": "Lissabon",
+      "kohdemaassa": false,
+      "lauta": [
+        5529.2,
+        1852.5
+      ],
+      "projektio": [
+        5528.7,
+        1852.8
+      ],
+      "ero": 0.61
+    },
+    {
+      "id": "madrid",
+      "nimi": "Madrid",
+      "kohdemaassa": false,
+      "lauta": [
+        5709.7,
+        1787
+      ],
+      "projektio": [
+        5709.9,
+        1786.5
+      ],
+      "ero": 0.55
+    },
+    {
+      "id": "berliini",
+      "nimi": "Berliini",
+      "kohdemaassa": false,
+      "lauta": [
+        6279.2,
+        1278.3
+      ],
+      "projektio": [
+        6280.2,
+        1278.9
+      ],
+      "ero": 1.11
+    },
+    {
+      "id": "wien",
+      "nimi": "Wien",
+      "kohdemaassa": false,
+      "lauta": [
+        6379.9,
+        1467.8
+      ],
+      "projektio": [
+        6379.1,
+        1467.3
+      ],
+      "ero": 0.89
+    },
+    {
+      "id": "rooma",
+      "nimi": "Rooma",
+      "kohdemaassa": false,
+      "lauta": [
+        6249.7,
+        1728.1
+      ],
+      "projektio": [
+        6249.9,
+        1727.5
+      ],
+      "ero": 0.66
+    },
+    {
+      "id": "ateena",
+      "nimi": "Ateena",
+      "kohdemaassa": false,
+      "lauta": [
+        6624.7,
+        1882
+      ],
+      "projektio": [
+        6624.3,
+        1881.5
+      ],
+      "ero": 0.7
+    },
+    {
+      "id": "helsinki",
+      "nimi": "Helsinki",
+      "kohdemaassa": false,
+      "lauta": [
+        6661.1,
+        901.8
+      ],
+      "projektio": [
+        6664.6,
+        917.2
+      ],
+      "ero": 15.83
+    },
+    {
+      "id": "kairo",
+      "nimi": "Kairo",
+      "kohdemaassa": false,
+      "lauta": [
+        6874.2,
+        2180.9
+      ],
+      "projektio": [
+        6874.5,
+        2179.3
+      ],
+      "ero": 1.65
+    }
+  ],
+  "lahteet": [
+    "Natural Earth 10m (Kelso & Patterson) — public domain",
+    "ETOPO1 Global Relief (NOAA, Amante & Eakins 2009) — public domain"
+  ]
+}
