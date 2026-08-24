@@ -68,11 +68,33 @@ function nykyinenMaa(ui) {
 }
 
 /**
+ * Odottaa, että kuva oikeasti latautuu. Palauttaa true tai false.
+ *
+ * TAVALLINEN <img> EIKÄ FETCH. Kuvan lataus ei tarvitse CORS-otsakkeita
+ * eikä siis ole kiinni siitä, mistä osoitteesta peli on avattu — sama
+ * syy kuin muillakin pelin kuvilla (js/media.js). Samalla kuva päätyy
+ * selaimen välimuistiin, joten <image>-elementti saa sen heti eikä
+ * ruudulla välähdä tyhjää.
+ *
+ * Lataus on osa POHJAN OLEMASSAOLOA: jos kuvaa ei ole, koko pohja
+ * merkitään puuttuvaksi eikä kerrokseen jää tyhjää <image>-elementtiä
+ * (ks. haePohja).
+ */
+function lataaKuva(osoite) {
+  return new Promise((valmis) => {
+    const kuva = new Image();
+    kuva.onload = () => valmis(true);
+    kuva.onerror = () => valmis(false);
+    kuva.src = osoite;
+  });
+}
+
+/**
  * Hakee maan pohjan tiedot. Palauttaa { bbox, kuva } tai null.
  *
- * Vain JSON haetaan fetchillä; itse kuvan lataa selain <image>-
- * elementin kautta, jolloin se kulkee saman välimuistin ja saman
- * uudelleenyrityksen läpi kuin kaikki muutkin pelin kuvat.
+ * Kaksi noutoa: JSON kertoo rajauksen ja kuva on itse pohja. Kumpikin
+ * on ehto — puolikas pohja ei kelpaa, koska väärään paikkaan asetettu
+ * tai puuttuva kuva näkyisi pelaajalle rikkinäisenä karttana.
  */
 async function haePohja(iso, lauta) {
   const avain = `${lauta}:${iso}`;
@@ -98,6 +120,7 @@ async function haePohja(iso, lauta) {
        */
       if (tiedot.lauta && tiedot.lauta !== lauta) throw new Error('eri lauta');
       const pohja = { bbox: b, kuva: fokuskarttaUrl(tiedot.tiedosto ?? `${iso}.webp`) };
+      if (!await lataaKuva(pohja.kuva)) throw new Error('kuva ei lataudu');
       VARASTO.set(avain, pohja);
       return pohja;
     } catch {
