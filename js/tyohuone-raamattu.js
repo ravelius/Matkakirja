@@ -214,6 +214,12 @@ export const RAAMATTU = {
           + 'suuremmiksi. Pöllö saa siteerata matkakirjaa suoraan '
           + '(on lukenut sen) ja viitata uuteen tai vanhaan asiaan; '
           + 'syvennykset poimitaan kaupunki-/maalehdistä.',
+        'KOHDEKOROSTUS (omistaja 24.8.2026): kun jostakin kohteesta '
+          + '(esim. Tonava) halutaan lisätietoa, kartta piirtyy '
+          + 'muuten niukkana mutta näyttää juuri sen kohteen '
+          + 'selkeänä — niukkuus on keino nostaa yksi asia esiin, '
+          + 'koska täydellä kartalla esim. jokien havainnointi on '
+          + 'ollut vaikeaa.',
         'ETENEMINEN (omistaja 24.8.2026): vähintään YKSI täky on '
           + 'tehtävä ennen pääsyä varsinaisen aarrekysymyksen luo; '
           + 'loput täkyt vapaaehtoisia, niistä lisää rahaa '
@@ -302,6 +308,13 @@ export const RAAMATTU = {
           + 'kerralla.',
         'Toteutus: käsin tarkistettu data, pelin oma animaatio. '
           + 'Etusivulla kevyt vihjeanimaatio.',
+        'KAMERA-AJOT (omistaja 24.8.2026): piirtomoottoriin '
+          + 'kehitetään sulavat zoomausanimaatiot sisään ja ulos — '
+          + 'zoomi kiihtyy ja hidastuu luontevasti alussa ja '
+          + 'lopussa (easing). Tarvitaan paljon jatkossa: linssien '
+          + 'animaatiot (esim. Silkkitien reitit, ihmispopulaation '
+          + 'leviäminen Afrikasta), joissa kartta liikkuu itsestään '
+          + 'ja zoomautuu tarvittaessa.',
         'AIKAJANA-AJO (omistaja 17.8.2026): animaatiolinsseillä '
           + 'yhteinen aikajanamoottori juoksevine vuosilukuineen — '
           + 'pelaajan käynnistämä, ele keskeyttää.',
