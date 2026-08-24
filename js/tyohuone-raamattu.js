@@ -179,6 +179,51 @@ export const RAAMATTU = {
       ],
     },
     {
+      otsikko: 'Fokusmoodi',
+      tila: 'luonnos — rakennetaan, pilotti Kreikka',
+      kohdat: [
+        'FOKUSMOODI (omistaja 24.8.2026): pelin oletustila heti '
+          + 'alusta — tietoa, kysymyksiä ja valintoja niukasti '
+          + 'kerrallaan. Kaikki rakennettu säilyy; tämä on '
+          + 'esitystapa- ja annostelukerros sen päällä.',
+        'KARTTA: nykyinen maa tarkkana topografioineen; käymättömät '
+          + 'maat himmeinä ja epäterävinä ilman dataa (ei reittejä, '
+          + 'kaupunkeja, kohteita), blur kasvaa rajan takana; käydyt '
+          + 'maat jäävät tarkoiksi. Tarinaperustelu: isoisän '
+          + '1873-atlas — kartoittamaton päiväkirja tarkentuu vasta '
+          + 'kun jäljillä kuljetaan.',
+        'PIIRTO: maakohtainen esirenderöity topografia PD-datasta '
+          + '(Natural Earth, SRTM/ETOPO), 1873-atlaksen '
+          + 'akvarellityyliin — sama kieli kuin julisteissa. Laatan '
+          + 'lisäksi maan muita kaupunkeja (ei pelattavia), jokia, '
+          + 'järviä, vuoria.',
+        'ANNOSTELU: uuteen kaupunkiin saavuttaessa Pöllö ja '
+          + 'matkakirja esittelevät sen AUTOMAATTISESTI (fokusmoodin '
+          + 'poikkeus "mikään ei ponnahda" -sääntöön). Yksi aihe '
+          + 'kerrallaan lehtiaineistosta: tietoteksti → '
+          + 'lämmittelykysymykset → aarrekysymys. Lehti kokonaan '
+          + 'luettavaksi vasta aarteen löydyttyä.',
+        'TÄKY: uusi sisältötyyppi — tarkistettu uteliaisuuskoukku '
+          + 'kaupungin yksityiskohdasta (tyyliä "lukonreiästä näkyy '
+          + 'täydellisesti rajautuva rakennus"). Pöllö tarjoaa '
+          + 'täkyjä, pelaaja tarttuu; käsittely 13+ -rajoissa.',
+        'PÖLLÖ-CHAT: ensisijaisesti kuratoitua sisältöä (lehdet, '
+          + 'tarkistetut faktat); mallin oma selittely selvästi '
+          + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
+        'UI: pöllö pysyvästi leijuvana sivuelementtinä kaikissa '
+          + 'tiloissa (pois alanapeista, kuten nyt lehtiä '
+          + 'luettaessa). Fokusmoodissa alhaalla vain Liiku- ja '
+          + 'Tutki-napit (Tutki-napin tarve fokusmoodissa vielä '
+          + 'auki). Fokusmoodin kytkin matkalaukun oikealla puolella '
+          + 'VAIN kehittäjätilassa; lisäksi kehittäjätilaan '
+          + 'sumennukset päälle/pois -nappi. Muille aina päällä.',
+        'PILOTTI: Kreikka/Ateena. Nykyinen aarrekysymys säilyy '
+          + 'pääkysymyksenä; lämmittelyt lehdistä, tarvittaessa '
+          + 'uusia. Ateenalle uusi matkakirjapätkä (Fable) '
+          + 'täkytutkimuksen jälkeen.',
+      ],
+    },
+    {
       otsikko: 'Aarteet ja eteneminen',
       tila: 'luonnos',
       kohdat: [
@@ -246,7 +291,14 @@ export const RAAMATTU = {
           + 'valitsematta puolta. Sotaan ei syvennytä oma-'
           + 'aloitteisesti, mutta suoraa kysymystä ei väistetä. '
           + 'Toteutettu tools/pollo/worker.js-kehotteeseen.',
-        'PÖLLÖ ON AARRE (omistaja 18.8.2026): peli alkaa ilman '
+        'PÖLLÖ MUKANA ALUSTA (omistaja 24.8.2026, kumoaa alla '
+          + 'olevan toistaiseksi): kehitysvaiheessa pöllö on pelissä '
+          + 'heti alusta — fokusmoodin esittely tarvitsee sen. '
+          + '"Pöllö on aarre" -idea säästetään ja voidaan tuoda '
+          + 'takaisin myöhemmin (vaatii erikoisjärjestelyt '
+          + 'ensimmäisen maan/kaupungin kohdalla).',
+        'PÖLLÖ ON AARRE (omistaja 18.8.2026, TAUOLLA 24.8.2026 — '
+          + 'ks. yllä): peli alkaa ilman '
           + 'pöllöä — nappi piilossa, ei kuplia eikä vihjeitä, eikä '
           + 'ennen ensimmäistä laattaa anneta ohjeita tai korvaavaa '
           + 'opastetta. Pöllö löytyy omana aarteenaan ensimmäisen '
