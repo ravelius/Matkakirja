@@ -125,7 +125,11 @@ import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 // Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
-import { fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden } from './fokusvirta.js';
+import {
+  fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
+  fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu,
+  paivitaFokuskuvat, nollaaFokuskuvat,
+} from './fokusvirta.js';
 
 const wikiGalleryCache = new Map();
 
@@ -3568,6 +3572,12 @@ export class UI {
      * — siitä, kuinka isona kirjain piirtyy ruudulle.
      */
     paivitaFokusNimet(this);
+    /*
+     * Fokusvirran kuvavinjetit ovat kiinteän KOKOISIA RUUDULLA, joten
+     * niiden mittakaava on laskettava uudelleen aina kun zoomi muuttuu
+     * — samasta syystä ja samasta kohdasta kuin lisänimien näkyvyys.
+     */
+    paivitaFokuskuvat(this);
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     const nakyva = this.nakyvaAlue();
@@ -4362,6 +4372,11 @@ export class UI {
      * tarvita mihinkään.
      */
     this.maastonimiKerros = el('g', { class: 'maastonimet' }, this.svg);
+    // Fokusvirran kuvavinjetit: oma kerros, sama juuriryhmän ulkopuolinen
+    // paikka ja sama syy kuin maastonimillä (kopio monistaisi ne).
+    // Kerroksen rakentaa js/fokusvirta.js paivitaFokuskuvat.
+    this.fokuskuvatKerros = null;
+    nollaaFokuskuvat(this);
     // Uusi lauta, tyhjä kerros: muistettu näkymätunniste ei saa jäädä
     // voimaan, tai nimet jäisivät piirtymättä kun sama näkymä palaa.
     this.maastonimiTunniste = null;
@@ -6227,9 +6242,15 @@ export class UI {
   /**
    * Vanhan valokuvan pikkukuva muistikirjan kylkeen, jos kaupungille on
    * kuva kuvastossa. Null piilottaa kuvan ja sulkee auki jääneen kortin.
+   *
+   * @param {object} [suoraan] valmis kuvaolio ({ tiedosto, selite,
+   *   lahde, … }) kuvaston ohi. Fokusvirta antaa merkintänsä oman
+   *   vanhan valokuvan tätä kautta: kuva kuuluu virtaan eikä
+   *   kaupunkien kuvastoon (js/fokusvirta.js fokusvirtaMatkakirja).
    */
-  naytaFactValokuva(cityId, paikka) {
-    const valokuva = cityId ? (VALOKUVAT[this.game.pack.id] ?? {})[cityId] ?? null : null;
+  naytaFactValokuva(cityId, paikka, suoraan = null) {
+    const valokuva = suoraan
+      ?? (cityId ? (VALOKUVAT[this.game.pack.id] ?? {})[cityId] ?? null : null);
     // Kaupungin vaihtuessa edellisen kaupungin auki jäänyt kortti suljetaan
     // aina — muuten vanha pino voi jäädä uuden kaupungin kortin alle.
     if (cityId !== this.factValokuvaCityId) this.suljePostikortti();
@@ -6498,15 +6519,46 @@ export class UI {
     if (game.player.pos.type === 'edge' && this.factKey) return;
 
     /*
-     * Fokusvirta korvaa saapumiskortin (omistajan havainto 24.8.2026:
-     * kaksi matkakirjaa aukesi yhtä aikaa ja vanha alkoi puhua).
-     * Kaupungissa, jossa annostelu on kesken (virtadataa on ja laatta
-     * kääntämättä), matkakirjan ääni kuuluu virran omasta kortista
-     * (js/fokusvirta.js) — vanha havainto piilotetaan ja sen luenta
-     * vaiennetaan. Laatan käännyttyä kortti palaa ennalleen.
+     * FOKUSVIRTA KIRJOITTAA TÄHÄN KORTTIIN (omistajan tarkennus
+     * 24.8.2026: *"ISOISÄN MERKINTÄ EI OLE UUSI KORTTI vaan se
+     * näytetään PERINTEISESSÄ matkakirjakortissa YLÄVASEMMALLA"*).
+     *
+     * v1093 piilotti tämän kortin, kun fokusvirta omisti saapumisen —
+     * silloin virralla oli oma matkakirjakorttinsa, ja kaksi
+     * matkakirjaa yhtä aikaa oli juuri se vika, joka korjattiin.
+     * Nyt virralla EI OLE omaa merkintäkorttia lainkaan: merkintä
+     * tulee tähän, sille kortille, jolla saapumistekstit ovat aina
+     * olleet. Piilotus siis vaihtui syötöksi.
+     *
+     * LUENTA PYSYY VAITI. Fokusvirran teksteille ei ole äänitteitä
+     * eikä niiden luentoja ole vielä tehty (omistaja: *"luennat
+     * tehdään myöhemmin erikseen"*), joten vanhaa saapumisluentaa ei
+     * käynnistetä eikä kuuntelunappia näytetä.
+     *
+     * Laatan käännyttyä fokusvirtaMatkakirja palauttaa nullin ja
+     * kortti jatkaa tavallista elämäänsä — kuten v1093:ssa.
      */
     if (game.player.pos.type === 'city') {
       const virtaKaupunki = game.board.cityById.get(game.player.pos.city);
+      const merkinta = virtaKaupunki ? fokusvirtaMatkakirja(this, virtaKaupunki) : null;
+      if (merkinta) {
+        this.factCard.hidden = false;
+        if (this.factKey === merkinta.avain) return;
+        this.uusiFactKey(merkinta.avain);
+        this.factVoiceEl.textContent = 'Matkapäiväkirjasta';
+        this.factPlace.textContent = merkinta.paikkarivi;
+        this.factImageTitle = null;
+        this.factImage.hidden = true;
+        this.factKuuntele.hidden = true;
+        stopDiaryVoice(this);
+        // Vanha valokuva kortin kylkeen suoraan virran datasta: kuvaa
+        // ei ole kaupunkien kuvastossa (VALOKUVAT), se on virran oma.
+        this.naytaFactValokuva(virtaKaupunki.id, virtaKaupunki.name, merkinta.kuva);
+        this.typeText(this.factText, merkinta.teksti, 'fact', () => {
+          fokusvirtaMerkintaLuettu(this, virtaKaupunki);
+        });
+        return;
+      }
       if (virtaKaupunki && fokusvirtaLukitseeLehden(this, virtaKaupunki)) {
         this.factCard.hidden = true;
         this.uusiFactKey(null);
