@@ -123,6 +123,9 @@ import {
 import { avaaTietajagalleria } from './tietajagalleria.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
+// Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
+// kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
+import { fokusvirtaOhittaaLehden, fokusvirtaSaapuminen } from './fokusvirta.js';
 
 const wikiGalleryCache = new Map();
 
@@ -6945,6 +6948,9 @@ export class UI {
     this.renderTurnPill();
     // Ennen nappien latomista: syke luetaan napin luonnissa.
     this.paivitaTutkiSyke();
+    // Fokusmoodissa kaupungin esittely alkaa itsestään saapumisesta
+    // (Raamattu, ANNOSTELU). Muualla tämä ei tee mitään.
+    fokusvirtaSaapuminen(this);
     this.renderActions();
     this.renderFact();
     renderQuiz(this);
@@ -7058,6 +7064,9 @@ export class UI {
   }
 
   openArrival(city) {
+    // Fokusmoodin lehtilukko: kaupungin lehti aukeaa vasta aarteesta,
+    // ja siihen asti sen paikan ottaa annosteluvirta (js/fokusvirta.js).
+    if (fokusvirtaOhittaaLehden(this, city)) return;
     if (this.lehtitila.arrivalShownFor === city.id && this.arrivalDialog.open) return;
     // Mitta kuntoon ennen kuin mitään sivutetaan (ks. varmistaLehtiMitta).
     this.varmistaLehtiMitta();

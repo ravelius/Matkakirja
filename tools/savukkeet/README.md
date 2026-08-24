@@ -37,6 +37,7 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-paivityspopup | Versionumeron päivitysnappi |
 | savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |
 | savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |
+| savuke-fokusvirta | Fokusmoodin annosteluvirta Ateenassa: lehtilukko, kortti kartan päällä, vaiheet 1–6, minivisan palkkio, portti (≥1 täky) ja luovutus laattamekaniikalle |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
 | savuke-mediakanava | Pelin äänet mediakanavassa (hiljainen ankkuri + audioSession, sanelun tauko) ja pelin oma mykistys myös striimatulla lukijaäänellä |
 | savuke-fokuskartta | Fokusmoodin maakohtainen topografiapohja: puuttuva kuva ei riko mitään, olemassa oleva osuu JSONin rajaukseen, reitit sen päällä, kamera-ajo maan rajaukseen ja eleen keskeytys, väärän laudan rajaus hylätään |
