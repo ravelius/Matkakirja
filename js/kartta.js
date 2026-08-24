@@ -21,6 +21,7 @@ import {
 } from './ambience-stream.js';
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
 import { sfx } from './sound.js';
+import { fokusmoodiPaalla, kehittajaTilaPaalla } from './ui-apurit.js';
 
 // Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
 export const INTRO_SPACE = 0.5;
@@ -1534,6 +1535,137 @@ export class Kartta {
   }
 
   /**
+   * ============ KAMERA PELIN KÄSISSÄ — PANOROINTI VALLOITETULLE
+   * ALUEELLE (Raamatun osio "Fokusmoodi", omistaja 24.8.2026 illalla,
+   * tarkennettu saman illan pelitestissä) =============================
+   *
+   * Ensimmäinen linjaus oli *"käsin vieritys POIS KOKONAAN"*. Omistaja
+   * tarkensi sen samana iltana: karttaa PITÄÄ pystyä liikuttamaan
+   * käsin, mutta VAIN VALLOITETULLA ALUEELLA JA SEN LÄHEISYYDESSÄ.
+   * Peli ajaa kameran edelleen itse (kamera-ajot), ja käsi saa liikkua
+   * siellä, missä matka on jo käynyt.
+   *
+   * ALUE ON SAMA KUIN SUMUVERHOLLA. Käydyt maat ja nykyinen maa ovat
+   * jo laskettuna yhdessä paikassa (js/ui.js fokusMaat) — se on
+   * fokusmoodin oma määritelmä siitä, mikä maailmasta on "auki".
+   * Kaksi eri määritelmää samasta asiasta ajautuisi erilleen, ja
+   * pelaaja näkisi tarkan kartan alueelta, jonne ei voi panoroida (tai
+   * päinvastoin). Bboxien yhdisteeseen lisätään REILU MARGINAALI, jotta
+   * rajamaa ei jää ruudun laitaan kiinni.
+   *
+   * KESKIPISTE RAJATAAN, EI REUNAA. Jos koko näkyvän ikkunan pitäisi
+   * mahtua alueen sisään, yhden maan kokoinen alue lukitsisi kartan
+   * paikalleen heti kun zoomaa ulos — ikkuna on silloin aluetta isompi
+   * eikä yksikään pan-arvo kelpaisi. Rajaamalla NÄKYMÄN KESKIPISTE
+   * alueen sisään pelaaja saa aina liikkua, ja reunan yli näkyy noin
+   * puoli ruutua: juuri se "läheisyys", jonka omistaja pyysi.
+   *
+   * MISSÄ TÄTÄ SOVELLETAAN: vain käsieleessä (raahaus ja sen liuku).
+   * Pelin omat kamera-ajot menevät asetaPanin läpi rajaamattomina —
+   * aloituslento Lontoosta Ateenaan ja kohdenoston ajo Korintin
+   * kanavalle veisivät muuten kameran alueen ulkopuolelle ja
+   * kilpailisivat oman rajauksensa kanssa.
+   *
+   * ZOOMAUS ENNALLAAN (nipistys, painikkeet, hiiren rulla), samoin
+   * elekeskeytys: pelaajan ele keskeyttää kamera-ajon kuten ennenkin.
+   *
+   * KEHITTÄJÄTILASSA VAPAA — ja ilman fokusmoodia (vertailutila,
+   * katselulinkit) sekin on pelin vanha rajaton panorointi.
+   */
+  panorointiVapaa() {
+    if (kehittajaTilaPaalla()) return true;
+    return !fokusmoodiPaalla();
+  }
+
+  /**
+   * Valloitetun alueen laatikko laudan yksiköissä — tai null, kun
+   * panorointi on vapaa (kehittäjätila, fokusmoodi pois, lauta ilman
+   * maiden muotoja).
+   *
+   * TULOS VÄLIMUISTITETAAN maalistalla: renkaita on maailmankartalla
+   * tuhansia pisteitä, eikä niitä saa käydä läpi jokaisella
+   * pointermovella. Uusi maa listalla vaihtaa avaimen, ja laatikko
+   * lasketaan silloin kerran uudelleen.
+   */
+  valloitettuAlue() {
+    if (this.panorointiVapaa()) return null;
+    const maat = this.ui.fokusMaat?.();
+    const muodot = this.ui.game?.pack?.map?.countryShapes;
+    if (!maat?.size || !muodot) return null;
+    const avain = `${this.ui.game.pack.id}:${[...maat].sort().join(',')}`;
+    if (this.panAlueAvain === avain) return this.panAlue;
+    let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
+    for (const iso of maat) {
+      for (const rengas of muodot[iso]?.renkaat ?? []) {
+        for (const [x, y] of rengas) {
+          if (x < x0) x0 = x;
+          if (x > x1) x1 = x;
+          if (y < y0) y0 = y;
+          if (y > y1) y1 = y;
+        }
+      }
+    }
+    this.panAlueAvain = avain;
+    this.panAlue = null;
+    if (!Number.isFinite(x0) || !(x1 > x0) || !(y1 > y0)) return null;
+    /*
+     * MARGINAALI ON NELIÖMÄINEN JA SUHTEELLINEN: neljännes alueen
+     * PIDEMMÄSTÄ sivusta joka reunalle. Suhteellisuus pitää mitan
+     * mielekkäänä laudasta riippumatta (maailmankartta on 12 000
+     * yksikköä leveä, Eurooppa noin 1 000), ja pidemmän sivun
+     * käyttäminen antaa kapealle maalle — Chilelle, Norjalle — leveyttä
+     * yhtä paljon kuin korkeutta.
+     */
+    const marginaali = 0.25 * Math.max(x1 - x0, y1 - y0);
+    this.panAlue = {
+      x0: x0 - marginaali,
+      x1: x1 + marginaali,
+      y0: y0 - marginaali,
+      y1: y1 + marginaali,
+    };
+    return this.panAlue;
+  }
+
+  /**
+   * Käsieleen pan-arvot rajattuna valloitetulle alueelle.
+   *
+   * Muunnos ruutupikselien ja laudan yksiköiden välillä on sama kuin
+   * asetaPanissa ja kameranKohteessa: ruudun piste x vastaa laudan
+   * kohtaa `box.x + (x - panX) / skaala`. Näkymän keskipiste on siis
+   * `box.x + (paneW / 2 - panX) / skaala`, ja juuri se rajataan.
+   *
+   * KIERTÄVÄ LAUTA: panX on normalisoitu yhden laudan leveyden
+   * jaksoon, joten keskipiste kääritään ensin laudan omalle välille.
+   * Päivämäärärajan yli ulottuva valloitus (Tyynenmeren molemmat
+   * puolet) rajautuisi tällöin lyhyempää reittiä — tiedossa oleva
+   * yksinkertaistus, joka ei koske yhtäkään nykyistä maata.
+   */
+  rajaaKasinPan(x, y) {
+    const alue = this.valloitettuAlue();
+    const pane = this.ui.svg?.parentElement;
+    const skaala = this.ui.zoomSkaala;
+    if (!alue || !pane || !skaala || !Number.isFinite(skaala) || skaala <= 0) return { x, y };
+    const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+    const ylaReuna = this.ui.zoomYlaReuna ?? box.y;
+    const paneW = pane.clientWidth;
+    const paneH = pane.clientHeight;
+
+    let uusiX = x;
+    const jakso = this.ui.panJakso;
+    let dx = (paneW / 2 - x) / skaala;
+    if (jakso && box.w > 0) dx = ((dx % box.w) + box.w) % box.w;
+    const cx = Math.min(alue.x1, Math.max(alue.x0, box.x + dx));
+    if (Math.abs(cx - (box.x + dx)) > 0.001) uusiX = paneW / 2 - (cx - box.x) * skaala;
+
+    let uusiY = y;
+    const cyRaaka = ylaReuna + (paneH / 2 - y) / skaala;
+    const cy = Math.min(alue.y1, Math.max(alue.y0, cyRaaka));
+    if (Math.abs(cy - cyRaaka) > 0.001) uusiY = paneH / 2 - (cy - ylaReuna) * skaala;
+
+    return { x: uusiX, y: uusiY };
+  }
+
+  /**
    * Vaakapanorointi lähikuvassa. Sormen liike siirtää karttaa; pystyyn ei
    * reagoida. Raahauksen ajaksi kartan animaatiot vaimennetaan
    * (omistajan toive), jotta ruudunpäivitys pysyy nopeana.
@@ -2102,7 +2234,16 @@ export class Kartta {
       liuku.viime = t;
       const ennenX = this.ui.panX ?? 0;
       const ennenY = this.ui.panY ?? 0;
-      this.asetaPan(ennenX + liuku.vx * dt, ennenY + liuku.vy * dt);
+      // Liuku on samaa käsielettä kuin raahaus, joten sitä koskee sama
+      // valloitetun alueen rajaus (ks. rajaaKasinPan).
+      const pyydettyX = ennenX + liuku.vx * dt;
+      const pyydettyY = ennenY + liuku.vy * dt;
+      const liukuun = this.rajaaKasinPan(pyydettyX, pyydettyY);
+      // Alueen raja on liu'ulle sama seinä kuin laudan laita — myös
+      // kiertävällä kartalla, jossa laitaa ei muuten ole.
+      const alueRajasiX = Math.abs(liukuun.x - pyydettyX) > 0.5;
+      const alueRajasiY = Math.abs(liukuun.y - pyydettyY) > 0.5;
+      this.asetaPan(liukuun.x, liukuun.y);
       /*
        * Pehmeä pysäytys reunalle: asetaPan rajaa siirron, ja jos
        * akseli ei enää liikkunut edes puolta pyydetystä, ollaan
@@ -2110,10 +2251,10 @@ export class Kartta {
        * puskemaan rajaa vasten. Kiertävällä kartalla vaakasuunnalla
        * ei ole laitaa (arvo kiertää), joten tarkistus ohitetaan.
        */
-      if (liuku.vx && !this.ui.panJakso
-          && Math.abs((this.ui.panX ?? 0) - ennenX) < Math.abs(liuku.vx * dt) / 2) liuku.vx = 0;
-      if (liuku.vy
-          && Math.abs((this.ui.panY ?? 0) - ennenY) < Math.abs(liuku.vy * dt) / 2) liuku.vy = 0;
+      if (liuku.vx && (alueRajasiX || (!this.ui.panJakso
+        && Math.abs((this.ui.panX ?? 0) - ennenX) < Math.abs(liuku.vx * dt) / 2))) liuku.vx = 0;
+      if (liuku.vy && (alueRajasiY
+        || Math.abs((this.ui.panY ?? 0) - ennenY) < Math.abs(liuku.vy * dt) / 2)) liuku.vy = 0;
       // Eksponentiaalinen kitka: aikapohjainen, jotta tuntuma ei
       // riipu ruudun virkistystaajuudesta.
       const vaimennus = 0.5 ** (dt / LIUKU_PUOLIINTUMIS_MS);
@@ -2209,7 +2350,13 @@ export class Kartta {
       while (naytteet.length > 2 && naytteet[naytteet.length - 1].t - naytteet[0].t > LIUKU_IKKUNA_MS) {
         naytteet.shift();
       }
-      this.asetaPan(alku.pan + dx, alku.panY + dy);
+      /*
+       * KÄSIN VAIN VALLOITETULLE ALUEELLE (ks. rajaaKasinPan). Rajaus
+       * on tässä eikä asetaPanissa: pelin omien kamera-ajojen pitää
+       * saada viedä näkymä minne pelin kulku vaatii.
+       */
+      const rajattu = this.rajaaKasinPan(alku.pan + dx, alku.panY + dy);
+      this.asetaPan(rajattu.x, rajattu.y);
     });
 
     const paata = (e, { salliLiuku = true } = {}) => {
