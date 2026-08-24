@@ -331,14 +331,25 @@ function piirraKuva(ui, kohde, kuva) {
   const nappi = html('button', 'fokusvirta-kuva');
   nappi.type = 'button';
   nappi.title = 'Katso kuva suurempana';
+  const kuvateksti = html('p', 'fokusvirta-kuvateksti');
   const img = document.createElement('img');
   img.alt = kuva.selite ?? '';
   img.loading = 'lazy';
   img.draggable = false;
+  /*
+   * PUUTTUVA KUVA PIILOTTAA KUVAPAIKAN kokonaan, kuten julisteilla
+   * (js/ui.js): rikkinäinen kuva jättäisi kortille tyhjän kehyksen ja
+   * kuvatekstin, joka selittää kuvaa jota ei ole. Teksti on kortin
+   * ydin, ja se toimii ilman kuvaakin.
+   */
+  const piilota = () => {
+    nappi.hidden = true;
+    kuvateksti.hidden = true;
+  };
   if (kuva.ampari) {
-    asetaKuva(img, julisteUrl(kuva.ampari), null);
+    asetaKuva(img, julisteUrl(kuva.ampari), null, piilota);
   } else {
-    asetaKuva(img, valokuvaUrl(kuva.tiedosto, 900), valokuvaVara(kuva.tiedosto, 900));
+    asetaKuva(img, valokuvaUrl(kuva.tiedosto, 900), valokuvaVara(kuva.tiedosto, 900), piilota);
   }
   nappi.appendChild(img);
   nappi.addEventListener('click', () => {
@@ -348,7 +359,6 @@ function piirraKuva(ui, kohde, kuva) {
       [{ src: suuri, caption: kuva.selite ?? '', lahde: kuva.lahde ?? '' }]);
   });
   kohde.appendChild(nappi);
-  const kuvateksti = html('p', 'fokusvirta-kuvateksti');
   kuvateksti.append(
     html('span', 'fokusvirta-kuvaselite', kuva.selite ?? ''),
     html('span', 'fokusvirta-kuvalahde', kuva.lahde ?? ''),
