@@ -624,14 +624,19 @@ ydin osuvat siis tässä kaupungissa yksiin.
 | # | Nimi | Koordinaatit (desimaali) | Lähdeartikkeli | Etäisyys/suunta vertailupisteestä |
 |---|---|---|---|---|
 | 1 | Praça da Matriz / Catedral Metropolitana (vertailupiste) | 30,03361°S 51,23000°W | "Metropolitan Cathedral of Our Lady Mother of God, Porto Alegre" | (vertailupiste) |
-| 2 | Palácio Piratini | 30,03389°S 51,23083°W | "Piratini Palace" | ~0,09 km lounaaseen |
-| 3 | Theatro São Pedro | 30,03204°S 51,23036°W | "São Pedro Theatre" | ~0,18 km luoteeseen |
+| 2 | Palácio Piratini | 30,03389°S 51,23083°W | "Piratini Palace" | ~0,09 km länsilounaaseen |
+| 3 | Theatro São Pedro | 30,03204°S 51,23036°W | "São Pedro Theatre" | ~0,18 km pohjoiseen |
 | 4 | Cais Mauá | 30,02750°S 51,23194°W | "Mauá Wharf" | ~0,68 km pohjoiseen |
-| 5 | Mercado Público | 30,02754°S 51,22809°W | "Porto Alegre Public Market" | ~0,70 km koilliseen |
-| 6 | Usina do Gasômetro | 30,03410°S 51,24100°W | "Usina do Gasômetro" | ~1,06 km lounaaseen |
-| 7 | Parque Farroupilha (Redenção) | 30,03667°S 51,21583°W | "Farroupilha Park" | ~1,40 km kaakkoon |
-| 8 | Estádio Beira-Rio (Internacional) | 30,06556°S 51,23611°W | "Estádio Beira-Rio" | ~3,59 km lounaaseen |
-| 9 | Fundação Iberê Camargo | 30,07800°S 51,24595°W | Wikidata Q4175872 (ks. yllä) | ~5,16 km lounaaseen |
+| 5 | Mercado Público | 30,02754°S 51,22809°W | "Porto Alegre Public Market" | ~0,70 km pohjoiseen |
+| 6 | Usina do Gasômetro | 30,03410°S 51,24100°W | "Usina do Gasômetro" | ~1,06 km länteen |
+| 7 | Parque Farroupilha (Redenção) | 30,03667°S 51,21583°W | "Farroupilha Park" | ~1,40 km itään |
+| 8 | Estádio Beira-Rio (Internacional) | 30,06556°S 51,23611°W | "Estádio Beira-Rio" | ~3,59 km etelään |
+| 9 | Fundação Iberê Camargo | 30,07800°S 51,24595°W | Wikidata Q4175872 (ks. yllä) | ~5,16 km etelään |
+
+Ilmansuunnat korjattu 24.8.2026 riippumattoman tarkistuksen
+bearing-laskennan mukaisiksi (alkuperäiset oli päätelty pelkistä
+koordinaattien etumerkeistä; etäisyydet olivat oikein alusta asti) —
+ks. tarkistus-portoalegre.md kohta E.
 
 Kahdeksan varsinaista kohdetta (rivit 2–9) täyttää pyydetyn 8–10
 kohteen välin vertailupisteen (rivi 1) lisäksi. Kohteet 8 ja 9 ovat
@@ -680,7 +685,9 @@ resepti-ohjeen varoituksen mukaisesti.
 1. `Category:Porto Alegre` — kaupungin siluetti Guaíban yli.
 2. `Category:Cais Mauá` (91 kuvaa) — satamalaiturin ja keskustan laaja
    näkymä.
-3. `Category:Farroupilha Park` (437 kuvaa) — puiston laaja ilmakuva.
+3. `Category:Parque Farroupilha` (437 kuvaa; HUOM Commons-kategorian
+   nimi on portugaliksi — `Category:Farroupilha Park` EI ole olemassa)
+   — puiston laaja ilmakuva.
 
 **Nosto-/jaksokuvat, sivuittain:**
 
@@ -706,10 +713,12 @@ resepti-ohjeen varoituksen mukaisesti.
   Porto Alegren pääkategoriasta.
 
 *Luonto:*
-- `Category:Farroupilha Park` (L1)
-- `Category:Kaingangs` (82 kuvaa, L2 — huom. monikkomuoto)
+- `Category:Parque Farroupilha` (L1 — nimi portugaliksi, ks. yllä)
+- `Category:Kaingangs` (69 kuvatiedostoa, L2 — huom. monikkomuoto;
+  kategorian kokonaiskoko 82 sisältää 13 alikategoriaa)
 - `Category:Guaraní` (235 kuvaa) tai tarkemmin `Category:Mbya
-  Guarani` (49 kuvaa, L3)
+  Guarani` (31 kuvatiedostoa, L3; kokonaiskoko 49 sisältää 18
+  alikategoriaa)
 - `Category:2024 Rio Grande do Sul floods` (29 kuvaa, 16 kuvatiedostoa,
   L4) — TARKISTA huolella kuten Christchurch-mallissa: valitse
   neutraali, ei-järkyttävä kuva (esim. tulvinut katu tai
@@ -857,3 +866,9 @@ kaingang, mbyá-guaraní, Iberê Camargo, jalkapalloseurat, Gasômetro,
 Redenção-puiston historia, 2024 tulvat) tai (b) saman yleisaiheen
 (Guaíba, mate, gaúcho) mutta täysin eri, tarkistetun yksityiskohdan
 kuin jo olemassa oleva rivi.
+
+## Korjaushistoria 24.8.2026 (tarkistus-portoalegre.md:n jälkeen, Fable)
+
+1. Osio 5: `Category:Farroupilha Park` → `Category:Parque Farroupilha` (Commons-kategorian oikea nimi; en-Wikipedian artikkelinimi "Farroupilha Park" lähdeviitteissä on edelleen oikein).
+2. Kaingangs- ja Mbya Guarani -kategorioiden luvut korjattu kuvatiedostoiksi (69 ja 31; aiemmat 82 ja 49 sisälsivät alikategoriat).
+3. Osio 4: kuusi kahdeksasta ilmansuunnasta korjattu tarkistuksen bearing-laskennan mukaisiksi (alkuperäiset päätelty pelkistä etumerkeistä; etäisyydet olivat oikein).
