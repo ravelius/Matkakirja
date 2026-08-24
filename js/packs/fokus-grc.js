@@ -30,6 +30,26 @@
  * sinne, missä nimi mahtuu ulapalle.
  */
 
+/*
+ * ESIRENDERÖITYJEN POHJIEN RAJAUKSET — repossa eikä ämpärissä.
+ *
+ * Ämpärin julkinen r2.dev-osoite EI lähetä CORS-otsakkeita, joten
+ * selaimen fetch() kaataa JSON-haun vaikka itse kuva latautuu
+ * <img>-elementillä ongelmitta (mitattu 24.8.2026: Kreikan pohja jäi
+ * tuotannossa näkymättä juuri tästä syystä). Rajaus on pieni ja
+ * muuttumaton, joten se asuu tässä — kuva pysyy ämpärissä. Luvut ovat
+ * suoraan tools/tee-fokuskartta.mjs:n kirjoittamasta
+ * GRC.json-tiedostosta (tasaus todennettu: Ateena 0,7 lautayksikköä).
+ * Uusi maa = uusi rivi tähän samalla kun kuva viedään ämpäriin.
+ */
+export const FOKUS_POHJAT = {
+  GRC: {
+    lauta: 'maailmankartta',
+    bbox: { x: 6488.94, y: 1722.84, w: 241.91, h: 285.01 },
+    tiedosto: 'GRC.webp',
+  },
+};
+
 export const FOKUS_LISANIMET = {
   GRC: {
     lauta: 'maailmankartta',

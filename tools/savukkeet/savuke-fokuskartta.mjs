@@ -48,7 +48,10 @@ const vaadi = (nimi, ehto, lisa = '') => {
 // Kreikan oikea rajaus pelilaudalla (tools/tee-fokuskartta.mjs,
 // GRC.json 24.8.2026 — maailmankartta, Millerin lieriö).
 const BBOX = {
-  x: 6488.9, y: 1722.8, w: 241.9, h: 285,
+  // Täsmälleen js/packs/fokus-grc.js FOKUS_POHJAT.GRC.bbox — rajaus
+  // luetaan nykyään repsta, ei ämpärin JSONista (CORS-korjaus
+  // 24.8.2026), joten savukkeen on verrattava samoihin lukuihin.
+  x: 6488.94, y: 1722.84, w: 241.91, h: 285.01,
 };
 // Pienin mahdollinen kelvollinen PNG: savuke tutkii sijoittelua, ei
 // kuvan sisältöä.
@@ -240,19 +243,29 @@ vaadi('4b kartta jää siihen mihin ajo ehti, ei hyppää maaliin',
 
 /* ------------------------------------------------- 5. väärä lauta pois */
 
-vaihe = 'vaara-lauta';
-await sivu.goto(osoite, { waitUntil: 'load' });
-await sivu.waitForTimeout(2500);
-await sivu.evaluate(() => {
-  const g = window.matkakirja.game;
-  if (g.phase === 'pickstart') g.actionPickStart('ateena', 0);
-  window.matkakirja.ui.render();
+/*
+ * Rajaus luetaan nykyään repon FOKUS_POHJAT-taulusta, jossa on
+ * lauta-kenttä ('maailmankartta'). Väärä lauta simuloidaan vaihtamalla
+ * pelin pack.id hetkeksi: haePohja saa lauta-arvon sieltä, ja
+ * FOKUS_POHJAT.GRC.lauta ei täsmää → kuvaa ei saa käyttää, koska
+ * rajaus on toisen projektion koordinaateissa.
+ */
+const vaara = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  const oikeaId = ui.game.pack.id;
+  ui.game.pack.id = 'europe';
+  ui.fokuskarttaAvain = null;
+  if (ui.fokuskarttaKerros) ui.fokuskarttaKerros.textContent = '';
+  ui.render();
+  await new Promise((s) => setTimeout(s, 800));
+  const tulos = {
+    kuvia: document.querySelectorAll('#board .fokuskartta-kuva').length,
+    laatta: Boolean(document.querySelector('#board .city')),
+  };
+  ui.game.pack.id = oikeaId;
+  ui.fokuskarttaAvain = null;
+  return tulos;
 });
-await sivu.waitForTimeout(1500);
-const vaara = await sivu.evaluate(() => ({
-  kuvia: document.querySelectorAll('#board .fokuskartta-kuva').length,
-  laatta: Boolean(document.querySelector('#board .city')),
-}));
 vaadi('5a toisen laudan rajausta ei käytetä', vaara.kuvia === 0, `${vaara.kuvia} kuvaa`);
 vaadi('5b peli toimii silti', vaara.laatta);
 
