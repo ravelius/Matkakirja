@@ -4505,6 +4505,28 @@ body.fokuspohja .country-korostus { display: none; }
   stroke: none;
 }
 
+/*
+ * VERHO FOKUSKUVAN YMPÄRILLÄ (omistajan pelitesti 24.8.2026, v1101:
+ * *"fokustilassa näkyy vanha pelilauta fokuskuvan ulkopuolella"*).
+ *
+ * Kun kartalla on maan fokuskuva, kuvan ULKOPUOLI on taustaa eikä
+ * pelilautaa: paksut rantaviivat, ruskeat väripinnat ja katkoviivareitit
+ * asuvat laudan bittikartassa (js/mapart.js pilkoTaide), eikä valmiista
+ * rasterista voi piilottaa yhtä kerrosta. Verho on ainoa keino, joka
+ * niihin yltää — ja siksi se on täällä paksumpi kuin käymättömän maan
+ * tavallinen harso: laudan piirroksesta jää enää aavistus, joka kertoo
+ * että maailmaa on olemassa.
+ *
+ * Sama pergamentin vaalea, ei harmaata: kartta on paperia, ja paperin
+ * päälle laskeutuu sumu eikä varjo. Peittävyys on värissä eikä
+ * opacityssa, jottei kerros saa omaa läpinäkyvyystasoaan (ja sen
+ * mukana omaa piirtopuskuriaan) — sama iOS-varovaisuus kuin
+ * suodattimien välttämisessä.
+ */
+.fokus-sumu-harso.fokus-sumu-kuva {
+  fill: rgba(240, 228, 200, 0.93);
+}
+
 /* ---------------------------------------------------------------------------
    FOKUSKARTTA: nykyisen maan esirenderöity topografia (js/fokuskartta.js,
    kuvat tools/tee-fokuskartta.mjs).

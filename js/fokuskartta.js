@@ -266,6 +266,33 @@ export function paivitaFokusNimet(ui) {
   g.classList.toggle('fokus-nimet-piilossa', NIMEN_KOKO * skaala < FOKUS_NIMI_LUETTAVA_PX);
 }
 
+/**
+ * Maan fokusnäkymä laudan koordinaateissa — kamera-ajon kohde.
+ *
+ * IKKUNA LUETAAN TAULUSTA EIKÄ KUVASTA (omistajan pelitesti v1101:
+ * *"kamera EI ajanut Bulgarian näkymään vaan jäi kauas"*). Ennen ajo
+ * lähti vasta kun kuva oli latautunut ämpäristä — kuva on kolmisen
+ * megatavua, ja siihen asti pelaaja ehti jo koskea karttaan, mikä
+ * keskeyttää ajon (kartta.pysaytaKameraAjo). Rajaus on repossa
+ * (FOKUS_POHJAT) ja luettavissa samassa kehyksessä kuin saapuminen, eikä
+ * kamera enää odota verkkoa.
+ *
+ * VARAREITTINÄ MAAN OMA MUOTO: maita on satoja ja pohjia kymmeniä, ja
+ * saapumisen kuuluu viedä uuden maan näkymään myös silloin kun pohjaa ei
+ * ole. Silloin rajaus tulee laudan maamuodoista (kartta.maidenBbox) ja
+ * saa tavallisen reunavaran.
+ */
+function maanNakyma(ui, iso, lauta) {
+  const tiedot = FOKUS_POHJAT[iso];
+  if (tiedot && (!tiedot.lauta || tiedot.lauta === lauta)) {
+    const ikkuna = tiedot.rajaus ?? tiedot.bbox;
+    // Marginaali on nolla: ikkunassa on jo oma ilmansa (ks. nayta).
+    if (ikkuna?.w > 0 && ikkuna?.h > 0) return { bbox: ikkuna, marginaali: 0 };
+  }
+  const muoto = ui.kartta?.maidenBbox?.([iso]);
+  return muoto ? { bbox: muoto } : null;
+}
+
 /** Piirtää lehden ja kertoo kartalle, että sen alue on nyt kuvan alla. */
 function piirra(ui, iso, pohja) {
   const kerros = ui.fokuskarttaKerros;
@@ -287,7 +314,9 @@ function piirra(ui, iso, pohja) {
   // lipulla (FOKUS_SVG_NIMET) tämä ei tee mitään: nimet ovat kuvassa.
   piirraLisanimet(ui, iso, kerros);
   paivitaFokusNimet(ui);
-  ui.paivitaFokusPohja?.(bbox);
+  // Kaksi laatikkoa: kuva vie bboxin, mutta kameran ja rajausten
+  // mittapuu on IKKUNA (ks. maanNakyma ja kartta.fokusRajaukset).
+  ui.paivitaFokusPohja?.(bbox, pohja.rajaus ?? bbox);
 }
 
 /**
@@ -299,6 +328,8 @@ function piirra(ui, iso, pohja) {
  * KAMERA-AJO vain maasta toiseen siirryttäessä, ei laudan ensimmäisessä
  * piirrossa: sivun lataus kesken pelin ei ole saapuminen, ja silloin
  * kartan oma saapumiszoom (kartta.ajastaMannerZoom) hoitaa näkymän.
+ * Ajo lähtee SAMASSA KEHYKSESSÄ kuin maa vaihtuu eikä odota kuvaa
+ * verkosta (ks. maanNakyma).
  */
 export function paivitaFokuskartta(ui) {
   const kerros = ui.fokuskarttaKerros;
@@ -315,21 +346,31 @@ export function paivitaFokuskartta(ui) {
   const nayta = (pohja) => {
     // Maa on voinut vaihtua haun aikana (botti, nopea siirto).
     if (ui.dead || !pohja || ui.fokuskarttaAvain !== iso || !ui.fokuskarttaKerros) return;
+    /*
+     * KAMERA AJAA LEHDEN IKKUNAAN, EI KOKO KUVAAN. Kuvassa on ikkunan
+     * ympärillä vuotoa, jonka tehtävä on jäädä ruudun ulkopuolelle — jos
+     * kamera sovittaisi koko kuvan, pelaaja näkisi lehden pienenä ruudun
+     * keskellä ja vuodon reunat ympärillä.
+     *
+     * AJO EI OLE ENÄÄ TÄSSÄ vaan saapumishetkellä (ks. maanNakyma).
+     * Piirto tekee sen, mitä kuvan saapuminen vaatii: asettaa kuvan ja
+     * kertoo rajauksen kartalle, joka tarkistaa samalla, mahtuuko
+     * ikkuna ruudulle (kartta.tarkistaFokusZoom).
+     */
     piirra(ui, iso, pohja);
-    if (!ensimmainen) {
-      /*
-       * KAMERA AJAA LEHDEN IKKUNAAN, EI KOKO KUVAAN. Kuvassa on
-       * ikkunan ympärillä vuotoa, jonka tehtävä on jäädä ruudun
-       * ulkopuolelle — jos kamera sovittaisi koko kuvan, pelaaja
-       * näkisi lehden pienenä ruudun keskellä ja vuodon reunat
-       * ympärillä. Marginaali on nolla, koska ikkunassa on jo oma
-       * ilmansa (kehyksen ja rannikon väli).
-       */
-      ui.kartta.ajaKamera({ bbox: pohja.rajaus ?? pohja.bbox, marginaali: 0 });
-    }
   };
 
   const lauta = ui.game.pack.id;
+  /*
+   * KAMERA AJAA HETI, EI VASTA KUVAN LATATTUA. Sivun lataus kesken pelin
+   * ei ole saapuminen (silloin kartan oma saapumiszoom hoitaa näkymän),
+   * mutta maasta toiseen siirtyminen on — ja silloin näkymä vaihtuu
+   * samassa kehyksessä kuin maa.
+   */
+  if (!ensimmainen) {
+    const nakyma = maanNakyma(ui, iso, lauta);
+    if (nakyma) ui.kartta?.ajaKamera?.(nakyma);
+  }
   const valmis = VARASTO.get(`${lauta}:${iso}`);
   // Jo muistissa: piirretään samassa kehyksessä, jottei kuva välähdä
   // vasta seuraavalla ruudunpäivityksellä.

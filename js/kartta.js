@@ -192,6 +192,18 @@ function pehmennysKaari(t) {
   return t < 0.5 ? 4 * t * t * t : 1 - ((-2 * t + 2) ** 3) / 2;
 }
 
+/** Kahden laatikon pienin yhteinen laatikko (ks. fokusRajaukset). */
+function yhdistaAlue(a, b) {
+  const x = Math.min(a.x, b.x);
+  const y = Math.min(a.y, b.y);
+  return {
+    x,
+    y,
+    w: Math.max(a.x + a.w, b.x + b.w) - x,
+    h: Math.max(a.y + a.h, b.y + b.h) - y,
+  };
+}
+
 export class Kartta {
   constructor(ui) {
     this.ui = ui;
@@ -597,16 +609,36 @@ export class Kartta {
      * silloin se voittaa portaikon. Painikkeet nollaavat sen, jolloin
      * portaat palaavat käyttöön: kaksi eri tapaa zoomata samaan
      * lukuun, eikä niiden tarvitse olla samaa mieltä.
+     *
+     * RAJAT VIIMEISENÄ VARMISTUKSENA. Fokusikkuna nostaa portaikon
+     * pohjaa (zoomiRajat), ja tämä on se yksi kohta, jonka läpi jokainen
+     * piirretty mittakaava kulkee — myös vanha porras, joka jäi
+     * muistiin ennen kuin ikkuna ilmestyi kartalle.
      */
-    if (this.ui.zoomiVapaa) return this.ui.zoomiVapaa;
+    const { pienin, suurin } = this.zoomiRajat();
+    const rajaa = (k) => Math.min(suurin, Math.max(pienin, k));
+    if (this.ui.zoomiVapaa) return rajaa(this.ui.zoomiVapaa);
     const tasot = this.zoomiTasot();
-    return tasot[this.zoomiIndeksi] ?? tasot[this.saapumisPorras()] ?? MANNER_ZOOM;
+    return rajaa(tasot[this.zoomiIndeksi] ?? tasot[this.saapumisPorras()] ?? MANNER_ZOOM);
   }
 
-  /** Pienin ja suurin sallittu kerroin: portaikon päät. */
+  /**
+   * Pienin ja suurin sallittu kerroin: portaikon päät — paitsi että
+   * fokusnäkymässä pohja nousee fokusikkunaan (ks. fokusZoomMinimi).
+   */
   zoomiRajat() {
     const tasot = this.zoomiTasot();
-    return { pienin: tasot[0] ?? 1, suurin: tasot.at(-1) ?? MANNER_ZOOM };
+    const suurin = tasot.at(-1) ?? MANNER_ZOOM;
+    const portaanPohja = tasot[0] ?? 1;
+    return {
+      pienin: Math.min(suurin, Math.max(portaanPohja, this.fokusZoomMinimi())),
+      suurin,
+    };
+  }
+
+  /** Onko yleiskuva (porras 0) juuri nyt sallittu määränpää? */
+  yleiskuvaSallittu() {
+    return this.fokusZoomMinimi() <= (this.zoomiTasot()[0] ?? 1) * 1.001;
   }
 
   /**
@@ -659,11 +691,29 @@ export class Kartta {
       ? tasot.findIndex((t) => (suunta > 0 ? t > vapaa * 1.02 : t >= vapaa * 0.98))
       : this.zoomiIndeksi;
     const lahin = nykyinen < 0 ? tasot.length - 1 : nykyinen;
-    const uusi = vapaa
+    const raaka = vapaa
       ? Math.min(tasot.length - 1, Math.max(0, suunta > 0 ? lahin : lahin - 1))
       : Math.min(tasot.length - 1, Math.max(0, lahin + suunta));
+    /*
+     * FOKUSIKKUNA ON PORTAIKON POHJA (omistajan pelitesti 24.8.2026,
+     * v1101: *"fokustilassa näkyy vanha pelilauta fokuskuvan
+     * ulkopuolella"*). Loitonnus pysähtyy fokusikkunaan — kauemmas ei
+     * pääse painikkeella eikä rullalla.
+     *
+     * VIIMEINEN ASKEL ON VAPAA KERROIN, EI PORRAS. Ikkuna osuu harvoin
+     * portaikon askelmalle, ja portaaseen pyöristäminen jätti pelaajan
+     * puolitoistakertaa liian lähelle (mitattu: ikkuna 466 yksikköä,
+     * lähin porras 313). Viimeinen loitonnus vie siis täsmälleen siihen
+     * näkymään, johon saapumisajokin — mikä on samalla se, mitä pelaaja
+     * yrittää nähdä.
+     */
+    const pohjaKerroin = this.fokusZoomMinimi();
+    const pohjalle = pohjaKerroin > 0 && raaka < this.fokusPorrasMinimi();
+    const uusi = pohjalle ? this.fokusPorrasMinimi() : raaka;
+    const nykyKerroin = vapaa || (tasot[this.zoomiIndeksi] ?? 0);
     this.ui.zoomiVapaa = 0;
-    if (!vapaa && uusi === nykyinen) return false;
+    if (pohjalle && nykyKerroin > 0 && nykyKerroin <= pohjaKerroin * 1.001) return false;
+    if (!pohjalle && !vapaa && uusi === nykyinen) return false;
 
     /*
      * Keskipiste luetaan ENNEN tason vaihtoa, vanhalla mittakaavalla.
@@ -671,6 +721,21 @@ export class Kartta {
      * ruudun keskipiste — painikkeella ei ole osoitinta.
      */
     const keskipiste = this.ui.rullanKohta ?? this.nykyinenKeskipiste();
+
+    if (pohjalle) {
+      // Fokusikkuna kokonaisuudessaan ruudulle (ks. yllä).
+      this.ui.zoomiVapaa = pohjaKerroin;
+      if (!this.ui.mannerZoom) {
+        this.ui.mannerZoom = true;
+        document.body.classList.add('manner-zoom');
+      }
+      this.ui.zoomKohde = keskipiste;
+      this.ui.panX = null;
+      this.ui.panY = null;
+      this.fitViewBox();
+      this.paivitaZoomiNapit();
+      return true;
+    }
 
     if (uusi === 0) {
       // Takaisin kokonäkymään: lähikuvan mitat ja siirto pois.
@@ -754,7 +819,9 @@ export class Kartta {
     const ryhma = sisaan.parentElement;
     if (ryhma) ryhma.hidden = piilossa;
     sisaan.disabled = this.zoomiIndeksi >= this.zoomiTasot().length - 1;
-    ulos.disabled = this.zoomiIndeksi <= 0;
+    // Loitonnuksen pohja on fokusnäkymässä fokusikkuna eikä yleiskuva.
+    ulos.disabled = this.fokusPohjallaOllaan()
+      || this.zoomiIndeksi <= this.fokusPorrasMinimi();
   }
 
   /** Palauttaa kartan tavalliseen kokoonsa (uusi peli, laudan vaihto). */
@@ -788,6 +855,9 @@ export class Kartta {
       'aloitus-zoom', 'manner-zoom', 'kartta-raahaus', 'kiikari-paalla',
       'zoom-kaynnissa', 'manner-odottaa',
     );
+    // Lähikuva loppui: fokuskuvan verho väistyy laudan oman sumun
+    // tieltä (sama raja kuin sovitaMannerZoomissa).
+    this.ui.paivitaFokusSumu?.(this.ui.fokusMaat?.());
   }
 
   /**
@@ -946,7 +1016,28 @@ export class Kartta {
       this.ui.panX = paneW / 2 - (keskus.x - box.x) * skaala;
       this.ui.panY = paneH / 2 - (keskus.y - ylaReuna) * skaala;
     }
+    /*
+     * FOKUSIKKUNA RAJAA MYÖS PELIN OMAN NÄKYMÄN (v1101). Zoomaus pitää
+     * keskipisteensä, ja ikkunan laidassa se veisi ruudun reunan kuvan
+     * ulkopuolelle vaikka mittakaava olisi rajoissa. Sama rajaus kuin
+     * käsieleellä (rajaaFokusPan) — aloituslento on ulkona rajauksesta
+     * (fokusRajaukset), joten se ajaa vapaasti kuten ennenkin.
+     */
+    const fokus = this.fokusRajaukset();
+    if (fokus) {
+      const rajattu = this.rajaaFokusPan(this.ui.panX, this.ui.panY, fokus.kuva);
+      this.ui.panX = rajattu.x;
+      this.ui.panY = rajattu.y;
+    }
     this.asetaPan(this.ui.panX, this.ui.panY);
+    /*
+     * Fokuskuvan verho tahdistetaan tästä: se on voimassa vain
+     * lähikuvassa (ui.paivitaFokusSumu), ja yleiskuvasta lähikuvaan
+     * siirrytään zoomipainikkeella tai nipistyksellä ilman että peli
+     * piirtyy uudelleen. Kutsu on halpa — verho rakennetaan vain kun
+     * sen tunniste oikeasti muuttui.
+     */
+    this.ui.paivitaFokusSumu?.(this.ui.fokusMaat?.());
     this.placeFactCard(paneW, paneH);
     if (this.ui.dieThrown && this.ui.boardDie) this.ui.boardDie.place(this.dieRestingSpot());
   }
@@ -1626,6 +1717,227 @@ export class Kartta {
     return this.panAlue;
   }
 
+  /*
+   * ============ FOKUSIKKUNA RAJAA KAMERAN (omistajan pelitesti
+   * 24.8.2026 illalla, v1101) =========================================
+   *
+   * *"Fokustilassa näkyy vanha pelilauta fokuskuvan ulkopuolella"* —
+   * Kreikka uloszoomattuna näytti fokuskuvan pienenä suorakaiteena
+   * keskellä vanhaa lautaa, reunat ja kaikki.
+   *
+   * JUURISYY OLI KAKSIOSAINEN. Loitonnusta ei rajannut MIKÄÄN: portaikon
+   * pohja on koko laudan leveys (zoomiTasot), ja maailmankartalla se on
+   * puoli maapalloa. Käsin panorointia rajasi vain valloitettu alue
+   * (rajaaKasinPan) ja sielläkin vain NÄKYMÄN KESKIPISTE — ruudun reunat
+   * saivat mennä minne tahansa, ja kehittäjätilassa rajausta ei ollut
+   * lainkaan.
+   *
+   * KOLME SÄÄNTÖÄ:
+   *
+   *   1. IKKUNA ON POHJA. Loitonnus pysähtyy siihen mittakaavaan, jolla
+   *      maan fokusikkuna (FOKUS_POHJAT[iso].rajaus) juuri mahtuu
+   *      ruudulle — täsmälleen se näkymä, johon saapumisajo vie
+   *      (js/fokuskartta.js). Kauemmas ei pääse painikkeella, rullalla,
+   *      nipistyksellä eikä pelin omalla kamera-ajolla.
+   *   2. REUNAT, EI KESKIPISTE. Käsiele rajataan niin, että ruudun
+   *      REUNAT pysyvät kuvan sisällä. Kun ruutu on kuvaa isompi
+   *      (pystyruudulla kuvat ovat vaakasuuntaisia), akseli lukitaan
+   *      kuvan keskelle — vuoto jakautuu silloin tasan molemmin puolin
+   *      eikä pelaaja voi vetää kuvaa laitaan.
+   *   3. MATKAVALINTA LAAJENTAA. Jos rajaus olisi ehdoton, naapurimaahan
+   *      osoittava matkakohde jäisi ruudun ulkopuolelle eikä matkaan
+   *      pääsisi. Valinnan ollessa auki alueeseen lisätään kohteiden
+   *      omat pisteet (ks. matkakohteidenAlue) — peli ei koskaan rajaa
+   *      itseään umpikujaan.
+   *
+   * MITTA ON KUVA, EI VALLOITETTU ALUE. Rajaus on voimassa täsmälleen
+   * silloin kun kartalla on fokuskuva (ui.fokusPohjaBbox) — myös
+   * kehittäjätilassa, koska juuri siinä tilassa omistaja pelitestaa.
+   * Ilman kuvaa mikään ei muutu: vanha valloitetun alueen rajaus jää
+   * voimaan sellaisenaan.
+   */
+
+  /**
+   * Fokusnäkymän rajaukset laudan yksiköissä tai null.
+   *
+   * `ikkuna` on se, mitä kameran pitää näyttää (uloszoomauksen pohja),
+   * `kuva` se, minkä ulkopuolelle ei saa panoroida. Ne eivät ole sama
+   * laatikko: kuvassa on ikkunan ympärillä vuotoa, joka sulattaa sauman
+   * lautaan (js/fokuskartta.js).
+   */
+  fokusRajaukset() {
+    if (!this.ui.fokusmoodi || this.ui.katselu) return null;
+    /*
+     * VAIN LÄHIKUVASSA. Yleiskuva (mannerZoom pois) on laudan oma
+     * näkymä, jossa fokuskuva on pieni upote maailmankartalla eikä
+     * pelaajan näkymä — sinne jäävät liikeherkkyyttä toivovat pelaajat,
+     * joille saapumiszoomia ei ajeta lainkaan (mannerZoomTarpeen). Kun
+     * kartta on siellä, kuvan säännöt eivät päde: lauta on lauta.
+     */
+    if (!this.ui.mannerZoom) return null;
+    /*
+     * ALOITUSLENTO OMISTAA KAMERAN (ks. ajaKamera): sen rajaus ulottuu
+     * Lontoosta kohdemaahan, eikä sitä saa kutistaa kohdemaan kuvaan
+     * kesken lennon.
+     */
+    if (this.ui.aloituslentoKesken) return null;
+    const kuva = this.ui.fokusPohjaBbox;
+    if (!(kuva?.w > 0) || !(kuva?.h > 0)) return null;
+    const ikkuna = this.ui.fokusPohjaRajaus ?? kuva;
+    const kohteet = this.matkakohteidenAlue();
+    if (!kohteet) return { ikkuna, kuva };
+    return { ikkuna: yhdistaAlue(ikkuna, kohteet), kuva: yhdistaAlue(kuva, kohteet) };
+  }
+
+  /**
+   * Auki olevan matkavalinnan kohteiden yhteinen laatikko tai null.
+   *
+   * Pisteet luetaan kohdekerroksen napautusalueista eikä pelin
+   * säännöistä: kohteiden kokoamissäännöt (kehittäjätila, lennot,
+   * nopanheitto) asuvat yhdessä paikassa (ui.drawTargets), eikä niitä
+   * kirjoiteta tänne toiseen kertaan.
+   *
+   * KIERTÄVÄN LAUDAN KOPIOT tuodaan takaisin laudan omalle välille
+   * (ui.kiertoKohdat piirtää napautettavat kohdat myös laudan leveyden
+   * päähän); muuten yksi kopio venyttäisi laatikon koko maailman yli.
+   *
+   * Tulos välimuistitetaan, koska tätä kysytään jokaisella
+   * pointermovella.
+   */
+  matkakohteidenAlue() {
+    if (!this.ui.fokusMatkavalintaAuki?.()) return null;
+    const osumat = this.ui.targetLayer?.querySelectorAll('.target-hit');
+    if (!osumat?.length) return null;
+    const avain = `${this.ui.game.phase}:${this.ui.game.turn}:${osumat.length}`;
+    if (this.kohdeAlueAvain === avain) return this.kohdeAlue;
+    this.kohdeAlueAvain = avain;
+    this.kohdeAlue = null;
+    const W = this.kiertava() ? (this.ui.game.pack.map?.width ?? 0) : 0;
+    let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
+    for (const osuma of osumat) {
+      let x = Number(osuma.getAttribute('cx'));
+      const y = Number(osuma.getAttribute('cy'));
+      if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
+      if (W && x >= W) x -= W;
+      if (x < x0) x0 = x;
+      if (x > x1) x1 = x;
+      if (y < y0) y0 = y;
+      if (y > y1) y1 = y;
+    }
+    if (!Number.isFinite(x0)) return null;
+    // Pieni marginaali, ettei kohde jää täsmälleen ruudun laitaan.
+    const vara = Math.max(20, 0.06 * Math.max(x1 - x0, y1 - y0));
+    this.kohdeAlue = {
+      x: x0 - vara, y: y0 - vara, w: (x1 - x0) + 2 * vara, h: (y1 - y0) + 2 * vara,
+    };
+    return this.kohdeAlue;
+  }
+
+  /**
+   * Pienin sallittu zoomikerroin fokusikkunan takia (0 = ei rajausta).
+   *
+   * Sama mittakaava kuin saapumisajossa: ikkuna juuri ja juuri ruudulle
+   * (ajaKamera { bbox: ikkuna, marginaali: 0 }). Yläraja on portaikon
+   * tihein porras — rajaus ei saa koskaan viedä lähemmäs kuin mihin
+   * pelaaja pääsee omin käsin.
+   */
+  fokusZoomMinimi() {
+    const rajat = this.fokusRajaukset();
+    if (!rajat) return 0;
+    const pane = this.ui.svg?.parentElement;
+    const paneW = pane?.clientWidth ?? 0;
+    const paneH = pane?.clientHeight ?? 0;
+    if (!paneW || !paneH) return 0;
+    const yleis = this.yleiskuvanSkaala(paneW, paneH);
+    if (!yleis) return 0;
+    const { ikkuna } = rajat;
+    const skaala = Math.min(paneW / ikkuna.w, paneH / ikkuna.h);
+    if (!(skaala > 0)) return 0;
+    const tasot = this.zoomiTasot();
+    return Math.min(tasot.at(-1) ?? MANNER_ZOOM, skaala / yleis);
+  }
+
+  /**
+   * Ollaanko jo fokusikkunan pohjalla?
+   *
+   * Loitonnusnapin himmennys lukee tämän: viimeinen askel on vapaa
+   * kerroin eikä porras (ks. zoomaaPainikkeella), joten pelkkä
+   * porrasindeksi ei kertoisi ollaanko pohjassa.
+   */
+  fokusPohjallaOllaan() {
+    const pohja = this.fokusZoomMinimi();
+    if (!(pohja > 0)) return false;
+    const nyt = this.ui.zoomiVapaa || (this.zoomiTasot()[this.zoomiIndeksi] ?? 0);
+    return nyt > 0 && nyt <= pohja * 1.001;
+  }
+
+  /** Sama pohja portaikon indeksinä: loitonnusnappi pysähtyy tähän. */
+  fokusPorrasMinimi() {
+    const pohja = this.fokusZoomMinimi();
+    if (!(pohja > 0)) return 0;
+    const tasot = this.zoomiTasot();
+    const i = tasot.findIndex((t) => t >= pohja * 0.999);
+    return i < 0 ? tasot.length - 1 : i;
+  }
+
+  /**
+   * Fokuskuva ilmestyi kartalle: jos näkymä on sen ikkunaa laajempi,
+   * kamera ajaa ikkunaan.
+   *
+   * Kutsutaan ui.paivitaFokusPohjasta. Kuva saapuu verkosta vasta
+   * piirron jälkeen, ja siihen asti pelaaja on voinut jäädä yleiskuvaan
+   * (uudelleenlataus kesken pelin, edellisen maan jälkeen loitonnettu
+   * näkymä) — silloin uusi pohja ei saa jäädä pelkäksi säännöksi, jonka
+   * kartta rikkoo jo valmiiksi.
+   */
+  tarkistaFokusZoom() {
+    const rajat = this.fokusRajaukset();
+    if (!rajat) return;
+    const pohja = this.fokusZoomMinimi();
+    const nyt = this.kameranTila();
+    const pane = this.ui.svg?.parentElement;
+    if (!pohja || !nyt || !pane) return;
+    const yleis = this.yleiskuvanSkaala(pane.clientWidth, pane.clientHeight);
+    if (!yleis || nyt.skaala >= yleis * pohja * 0.999) return;
+    this.ajaKamera({ bbox: rajat.ikkuna, marginaali: 0 });
+  }
+
+  /**
+   * Käsieleen pan-arvot rajattuna fokuskuvan sisään.
+   *
+   * REUNAT EIKÄ KESKIPISTE (ks. osion johdanto). Ruudun vasen reuna on
+   * laudan yksiköissä `origo - pan / skaala` — sama muunnos kuin
+   * asetaPanissa, vain toisin päin.
+   *
+   * KIERTÄVÄ LAUTA: asetaPan normalisoi panX yhden laudan leveyden
+   * jaksoon, joten tästä palautettu arvo tarkoittaa samaa kohtaa
+   * laudalla vaikka se olisi jakson ulkopuolella. Päivämäärärajan yli
+   * ulottuva fokuskuva rajautuisi väärin — tiedossa oleva
+   * yksinkertaistus, joka ei koske yhtäkään nykyistä pohjaa.
+   */
+  rajaaFokusPan(x, y, alue) {
+    const pane = this.ui.svg?.parentElement;
+    const skaala = this.ui.zoomSkaala;
+    if (!pane || !skaala || !Number.isFinite(skaala) || skaala <= 0) return { x, y };
+    const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+    const ylaReuna = this.ui.zoomYlaReuna ?? box.y;
+    /** Yksi akseli: pan sisään, rajattu pan ulos. */
+    const rajaa = (pan, mitta, origo, a0, pituus) => {
+      const nakyva = mitta / skaala;
+      const alku = origo - pan / skaala;
+      // Ruutua pienempi alue lukitaan keskelle: vuoto tasan molemmin
+      // puolin eikä pelaajan vedettävissä toiseen laitaan.
+      const kohde = nakyva >= pituus
+        ? a0 + pituus / 2 - nakyva / 2
+        : Math.min(a0 + pituus - nakyva, Math.max(a0, alku));
+      return Math.abs(kohde - alku) < 0.001 ? pan : -(kohde - origo) * skaala;
+    };
+    return {
+      x: rajaa(x, pane.clientWidth, box.x, alue.x, alue.w),
+      y: rajaa(y, pane.clientHeight, ylaReuna, alue.y, alue.h),
+    };
+  }
+
   /**
    * Käsieleen pan-arvot rajattuna valloitetulle alueelle.
    *
@@ -1641,6 +1953,13 @@ export class Kartta {
    * yksinkertaistus, joka ei koske yhtäkään nykyistä maata.
    */
   rajaaKasinPan(x, y) {
+    /*
+     * FOKUSKUVA VOITTAA VALLOITETUN ALUEEN. Kuva on tiukempi ja
+     * tuoreempi sääntö (v1101), ja se on voimassa myös kehittäjätilassa
+     * — juuri siinä tilassa vika pelitestattiin.
+     */
+    const fokus = this.fokusRajaukset();
+    if (fokus) return this.rajaaFokusPan(x, y, fokus.kuva);
     const alue = this.valloitettuAlue();
     const pane = this.ui.svg?.parentElement;
     const skaala = this.ui.zoomSkaala;
@@ -1979,9 +2298,14 @@ export class Kartta {
       // Napautus eleen jälkeen ei saa valita kaupunkia.
       this.ui.raahattiin = true;
       setTimeout(() => { this.ui.raahattiin = false; }, 0);
-      // Alarajalle nipistäminen palaa kokonäkymään: sama kuin
-      // loitonnusnapin viimeinen painallus.
-      if (kerroin <= pienin * 1.02) {
+      /*
+       * Alarajalle nipistäminen palaa kokonäkymään: sama kuin
+       * loitonnusnapin viimeinen painallus. Fokusnäkymässä alaraja EI
+       * ole kokonäkymä vaan fokusikkuna (zoomiRajat), joten paluu on
+       * silloin torjuttava — muuten nipistys karkaisi juuri sinne,
+       * mihin loitonnusnappi ei enää päästä.
+       */
+      if (this.yleiskuvaSallittu() && kerroin <= pienin * 1.02) {
         this.nollaaAloitusZoom();
         this.fitViewBox();
         this.paivitaZoomiNapit();
