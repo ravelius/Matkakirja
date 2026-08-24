@@ -616,9 +616,11 @@ button, .brand, .turn-pill, .fact-card h2 {
 .fokus-kytkimet[hidden] { display: none; }
 
 .fokus-kytkin {
-  font-size: 0.7rem;
-  letter-spacing: 0.03em;
-  padding: 0.2rem 0.55rem;
+  /* Omistaja 24.8.2026: "Tee näistä mahd pienet" — kehittäjän
+   * mittatikut kutistettiin minimiin, jotta ylärivi jää pelille. */
+  font-size: 0.55rem;
+  letter-spacing: 0.02em;
+  padding: 0.08rem 0.3rem;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: none;
