@@ -56,7 +56,7 @@ se ansaitsee oman sivunsa yksittäisen noston sijaan.
 
 ### Sivu A — id `kaupunki`, nimi "Asunción"
 
-**Johdanto (221 merkkiä):**
+**Johdanto (206 merkkiä):**
 
 > Kaupunkien äiti Paraguayjoen rannalla: linnake vuodelta 1537, josta
 > espanjalaiset lähtivät perustamaan kymmeniä muita siirtokuntia. Isoisän
@@ -72,7 +72,7 @@ sen jäljet näkyvät kahdessa kaupungin tärkeimmässä nykynähtävyydessä
 (Palacio de los López, Panteón de los Héroes) — juuri sitä, mitä
 kaupungissa on NYT.
 
-**Johdanto (226 merkkiä):**
+**Johdanto (189 merkkiä):**
 
 > Vuosien 1864–1870 sota jätti Paraguayn autioksi ja pääkaupungin
 > vieraiden joukkojen haltuun aina vuoteen 1876 asti. Isoisän matka
@@ -96,7 +96,7 @@ sen alle, lahti ja Costanera jäisivät kaupunki-sivulle) tai jättäköön
 `kulttuuri`-idin ilman `ikoni`-kenttää, jolloin se saa yleiskuvakkeen
 (kirjanmerkki, `AIHE_IKONIT.muu`).
 
-**Johdanto (207 merkkiä):**
+**Johdanto (193 merkkiä):**
 
 > Kylmä mate kädestä käteen, hämähäkinseitin nimeä kantava pitsi ja joki
 > joka syötti koko naapurimaita — Asunciónin arki kantaa guaraní-perintöä
@@ -108,7 +108,7 @@ sen alle, lahti ja Costanera jäisivät kaupunki-sivulle) tai jättäköön
 
 ### Sivu `kaupunki` — 4 nostoa
 
-**Nosto K1 — "Kaupunki joka synnytti kuusikymmentä muuta" (633 merkkiä)**
+**Nosto K1 — "Kaupunki joka synnytti seitsemänkymmentä muuta" (633 merkkiä)**
 
 > Espanjalainen Juan de Salazar de Espinosa perusti 15. elokuuta 1537
 > linnakkeen Paraguayjoen rannalle ja nimesi sen Nuestra Señora Santa
@@ -168,7 +168,7 @@ Faktat ja lähteet:
   ja savirantoja ja lopulta ruohikkoa. — en-Wikipedia "Asunción"
   (Biogeography-osio)
 
-**Nosto K3 — "Kieli joka ei koskaan väistynyt" (589 merkkiä)**
+**Nosto K3 — "Kieli joka ei koskaan väistynyt" (587 merkkiä)**
 
 > Kun Paraguay demokratisoitui, uusi perustuslaki nosti vuonna 1992
 > guaranin espanjan rinnalle tasavertaiseksi viralliseksi kieleksi –
@@ -177,7 +177,7 @@ Faktat ja lähteet:
 > guarania puhuu enemmistö paraguaylaisista, ja maaseudulla puolet
 > väestöstä puhuu vain guarania. Itse pääkaupungissa espanja on
 > yleisin ensikieli, mutta yli neljännes asunciónilaisista puhuu
-> jokaparáa, guaranin ja espanjan sekakieltä – todiste siitä, että
+> joparáa, guaranin ja espanjan sekakieltä – todiste siitä, että
 > guaraníkansan kieli elää yhä, ei vain maaseudulla vaan kaupungin
 > kaduillakin.
 
@@ -224,7 +224,10 @@ Faktat ja lähteet:
   Juan Caballeron johtama ryhmä miehiä käveli talon vierestä
   kuvernööri Bernardo de Velascon talolle ja pakotti hänet
   antautumaan. — en-Wikipedia "Casa de la Independencia Museum"
-  (johdanto, History-osio, Historical Alley -osio)
+  (johdanto, History-osio, Historical Alley -osio); "antautumaan"
+  tulee en-Wikipedian "Asunción"-artikkelista (Early history:
+  "forced governor Velasco to surrender") — museoartikkeli itse
+  puhuu vallanjakosopimukseen pakottamisesta
 - Museo avattiin 14.5.1965 ja esittelee Paraguayn itsenäisyyshistoriaa
   huoneittain (toimisto, ruokasali, olohuone, makuuhuone, oratorio,
   piha, Cabildon istuntosalin replika). — en-Wikipedia "Casa de la
@@ -302,7 +305,7 @@ Faktat ja lähteet:
   — en-Wikipedia "Sacking of Asunción" / "Asunción" (Post-independence
   period -osio)
 
-**Nosto H3 — "Presidentin palatsi jossa ei asunut presidenttiä" (659 merkkiä)**
+**Nosto H3 — "Presidentin palatsi jossa ei asunut presidenttiä" (657 merkkiä)**
 
 > Carlos Antonio López tilasi vuonna 1857 palatsin, jonka piti tulla
 > hänen poikansa ja seuraajansa Francisco Solano Lópezin kodiksi –
@@ -311,8 +314,8 @@ Faktat ja lähteet:
 > joukot ryöstivät koristeet ja huonekalut ja majoittuivat palatsiin
 > koko seitsenvuotisen miehityksensä ajaksi – vuoteen 1876 mennessä
 > rakennus oli täysin rappeutunut. Vasta presidentti Juan Bautista
-> Egusquiza sai palatsin valmiiksi 1894, kolmekymmentä vuotta
-> suunnitellun aikataulun jälkeen. Nykyään se on yhä hallituksen
+> Egusquiza sai palatsin valmiiksi 1894, lähes neljä vuosikymmentä
+> rakennustyön alkamisesta. Nykyään se on yhä hallituksen
 > istuin: presidentti Santiago Peña vannoi virkavalansa sen
 > edustalla elokuussa 2023.
 
@@ -402,12 +405,12 @@ Faktat ja lähteet:
   vietetään joka vuoden helmikuun viimeisenä lauantaina. — en-Wikipedia
   "Tereré" (johdanto)
 
-**Nosto L2 — "Pitsi joka kantaa hämähäkin nimeä" (481 merkkiä)**
+**Nosto L2 — "Pitsi joka kantaa hämähäkin nimeä" (486 merkkiä)**
 
 > Ñandutí tarkoittaa guaraniksi hämähäkinseittiä, ja pitsi tehdään
 > juuri sen näköiseksi: säteittäin kehykseen pingotetuista puuvilla-
 > tai silkkilangoista syntyy pyöreitä, seittimäisiä kuvioita, joihin
-> voi kertyä satakaksikymmentä sädettä yhtä kiekkoa kohti. Tekijä
+> voi kertyä jopa sataviisikymmentä sädettä yhtä kiekkoa kohti. Tekijä
 > käyttää työssään vain kolmea välinettä – lyijykynää kuvion
 > piirtämiseen, neulaa kudontaan ja saksia, joilla valmis kuvio
 > lopuksi irrotetaan alustakankaasta. Ñandutí on yhä yksi Paraguayn
@@ -424,14 +427,15 @@ Faktat ja lähteet:
   (kudonta ja motiivien tekeminen) ja saksivaihe (valmiin kuvion
   irrotus alustakankaasta). — en-Wikipedia "Ñandutí" (Technique-osio)
 
-**Nosto L3 — "Rantabulevardi joka syntyi juhlavuodesta" (463 merkkiä)**
+**Nosto L3 — "Rantabulevardi joka syntyi juhlavuodesta" (471 merkkiä)**
 
 > Kun Paraguay vietti itsenäisyytensä kaksisataavuotisjuhlaa
 > toukokuussa 2011, Asunción avasi samalla uuden rantapuiston, joka
 > yhdistää kaupungin vanhat rakennukset toisiinsa: Palacio de los
 > López, Cabildo ja katedraali ovat nyt kävelymatkan päässä joen
-> rannalta. Toinen rakennusvaihe, joka valmistui vuodesta 2019
-> alkaen, toi lisää pyöräkaistoja, siltoja ja liikuntapaikkoja.
+> rannalta. Vuonna 2019 valmistui ensimmäinen laajennusvaihe
+> pyöräkaistoineen; toinen vaihe lisää vielä siltoja ja
+> liikuntapaikkoja.
 > Osalle hankkeen tieltä siirtyneistä perheistä rakennettiin 144
 > uutta asuntoa lähistölle.
 
@@ -442,9 +446,12 @@ Faktat ja lähteet:
   toukokuussa 2011 osana Paraguayn itsenäisyyden kaksisataavuotis-
   juhlallisuuksia. — en-Wikipedia "Asunción" (Coastal Linear Park
   -osio)
-- Hankkeen toinen vaihe (rakennustyöt alkoivat 2019) lisäsi
-  pyöräkaistoja, pysäköintiä, siltoja, urheilukenttiä ja muita
-  virkistysalueita. — en-Wikipedia "Asunción" (Coastal Linear Park
+- Hankkeen ENSIMMÄINEN vaihe valmistui loppuvuodesta 2019
+  (pyöräkaistat, kulkureitit, kuntoiluvälineet, 350 auton
+  pysäköinti). TOINEN vaihe lisää siltoja (3 kpl), urheilukenttiä ja
+  leikkipaikkoja — lähde puhuu siitä futuurissa eikä anna
+  valmistumisvuotta; kirjoittajan on tarkistettava tilanne
+  kirjoitusvaiheessa. — en-Wikipedia "Asunción" (Coastal Linear Park
   -osio)
 - Hankkeen tieltä siirtyneille perheille rakennettiin 144 uutta
   asuntoa uuteen naapurustoon Avenida Costanera Norten ja Parque
@@ -893,3 +900,13 @@ uuden, eri kuvan samasta kategoriasta — kirjoittaja päättää. Palacio-
 kuva ("uusi"-kenttä) ja H3-nostoni käsittelevät samaa rakennusta eri
 näkökulmista (nykytila vs. 1873-historiaa) eivätkä siksi ole
 päällekkäisiä sisällöltään, vain kuvaltaan mahdollisesti.
+
+## Korjaushistoria 24.8.2026 (tarkistus-asuncion.md:n jälkeen, Fable)
+
+1. K1:n otsikko korjattu "kuusikymmentä" → "seitsemänkymmentä" (leipäteksti ja lähde: 5 nimettyä + 65 muuta = 70).
+2. K3:n kirjoitusvirhe "jokaparáa" → "joparáa".
+3. L3: rakennusvaiheet erotettu oikein — 2019 valmistunut vaihe on ENSIMMÄINEN (pyöräkaistat, pysäköinti); sillat ja liikuntapaikat kuuluvat vielä päivämäärättömälle TOISELLE vaiheelle (lähde futuurissa).
+4. H3: lähteetön "kolmekymmentä vuotta suunnitellun aikataulun jälkeen" → "lähes neljä vuosikymmentä rakennustyön alkamisesta" (1857→1894).
+5. K4:n lähdeviittaus täydennetty: "antautumaan" tulee "Asunción"-artikkelista, ei museoartikkelista.
+6. L2:n proosa käyttää nyt lähteen ylärajaa ("jopa sataviisikymmentä sädettä", lähde: 120–150).
+7. Kolmen sivujohdannon ja neljän muokatun noston ilmoitetut merkkimäärät laskettu uudelleen koneellisesti.

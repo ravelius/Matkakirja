@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1089 — HEROKUVAT 15 UUTEEN KAUPUNKIIN: kierrosten 22-25 katselmoidut 42 kuvaa avauskaruselleihin (Sao Paulo, Toronto, Lima, Quito, Los Angeles, Montevideo, Havanna, Mexico City, New Orleans, Bogota, Valparaiso, Adelaide, Hobart, Darwin, Port Moresby). Kolme hylattya jai pois, uusinta-ajot tauolla. Tarkista: parin kaupungin etusivukarusellit ja MANTEREET-taulun oranssit solut',
   'v1088 - NELJA UUTTA KAUPUNKILEHTEA: Caracas, Manaus, Salvador ja Christchurch. Avaa kukin ja tarkista kansi, nostot ja matkaopas. Lisaksi kehittajatilassa maailmankartan laatta on ORANSSI niissa kaupungeissa, joiden herokuvat on generoitu kohteen omista Commons-valokuvista viitteina: taysi oranssi = koko era ankkuroitu, haalea = vain osa. Avaa kehittajatila ja katso Australian lautaa (Melbourne, Brisbane, Perth) ja Eurooppaa (Tampere, Helsinki). Laatan AARIVIIVA kertoo yha lehden valmiusasteen, joten valmis ja ankkuroitu kaupunki on oranssi vihrein reunoin. Pelaajan lauta on tismalleen ennallaan',
 
   'v1087 — OPENAIN JA GOOGLEN KULUT KIINTIOT-nakymaan: kaksi uutta palkkia kuvageneroinnin kuukausikuluille. Molemmat vaativat workeriin oman tunnuksen (OPENAI_ADMIN_KEY seka Googlelle BigQuery-laskutustaulu) — ilman niita palkki nayttaa ei tietoa eika keksi lukua. Tarkista: KIINTIOT-nakyma kehittajakoodilla',
@@ -454,7 +455,7 @@ export const TESTATTAVAA = [
  * samasta listasta ilman nimivertailua.
  */
 export const TUOREET = {
-  paivitetty: '23.8.2026 ilta',
+  paivitetty: '24.8.2026',
   valmiit: [
     { id: 'valparaiso', nimi: 'Valparaíso', versio: 'v1086' },
     { id: 'adelaide', nimi: 'Adelaide', versio: 'v1085' },

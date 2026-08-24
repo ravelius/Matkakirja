@@ -61472,6 +61472,26 @@ export const KULTTUURI_KATEGORIAT = {
        * Yksikään ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 22 (24.8.2026,
+         * tools/hero-tyolista-22.mjs). Copan on ankkuroitu kohteen
+         * omaan Commons-kategoriaan, Beco do Batman on viitteetön
+         * yleisnäkymä. Kolmas kuva (MASP, aamu) jäi katselmoinnissa
+         * pois: lasilaatikko ei leijunut Vão Livren yllä, eli
+         * rakennuksen määrittelevä piirre puuttui. */
+        {
+          ampari: 'herokoe/hero-saopaulo-keskipaiva.png',
+          selite: 'Oscar Niemeyerin suunnittelema Edifício Copan on '
+            + 'keskustan asuintorni, jonka julkisivu kaartuu '
+            + 'yhtenäisenä S-mutkana ilman ainuttakaan suoraa seinää.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-saopaulo-ilta.png',
+          selite: 'Beco do Batman on Vila Madalenan kuja, jonka '
+            + 'talonseinät on maalattu reunasta reunaan päällekkäisillä '
+            + 'muraaleilla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Centro de SP.jpg',
           selite: 'Vanhan keskustan takana kaupunki jatkuu horisonttiin '
@@ -62070,6 +62090,27 @@ export const KULTTUURI_KATEGORIAT = {
        * Yksikään ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 22 (24.8.2026,
+         * tools/hero-tyolista-22.mjs). Molemmat ankkuroitu kohteen
+         * omaan Commons-kategoriaan. Kolmas kuva (High Park, ilta)
+         * hylättiin katselmoinnissa: viitteettömään yleisnäkymään oli
+         * keksitty kellotorni, jollaista puistossa ei ole. */
+        {
+          ampari: 'herokoe/hero-toronto-aamu.png',
+          selite: 'Royal Ontario Museumin vuoden 1914 kivisiiven '
+            + 'kylkeen avattiin 2007 Michael Lee-Chin Crystal, '
+            + 'kulmikkaista metalli- ja lasisärmistä koottu '
+            + 'lisärakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-toronto-keskipaiva.png',
+          selite: 'Suomalaisen Viljo Revellin suunnittelema Toronto '
+            + 'City Hall valmistui 1965: kaksi eri korkuista kaartuvaa '
+            + 'tornia jättää väliinsä lautasen muotoisen '
+            + 'valtuustosalin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'View of Toronto Downtown (54587811913).jpg',
           selite: 'Keskustan tornit nousevat suoraan sataman rannalta, ja '
@@ -62674,6 +62715,34 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 22 (24.8.2026,
+         * tools/hero-tyolista-22.mjs). Aamu ja keskipäivä on
+         * ankkuroitu kohteiden omiin Commons-kategorioihin; ilta on
+         * viitteetön yleisnäkymä, jonka selite puhuu tarkoituksella
+         * kaupunginosasta eikä nimeä yhtään rakennusta. */
+        {
+          ampari: 'herokoe/hero-lima-aamu.png',
+          selite: 'Basílica y Convento de San Francisco seisoo Liman '
+            + 'historiallisessa keskustassa noin kolmensadan metrin '
+            + 'päässä Plaza Mayorista, ja luostarin alla kulkevat sen '
+            + 'tunnetut katakombit.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-lima-keskipaiva.png',
+          selite: 'Huaca Huallamarca on San Isidron kaupunginosassa '
+            + 'kohoava savitiilirakennelma, eri kohde kuin '
+            + 'Mirafloresin Huaca Pucllana; sen tiilet on ladottu '
+            + 'pystyyn kirjahyllymäisiin kerroksiin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-lima-ilta.png',
+          selite: 'La Punta on satamakaupunki Callaon kapean niemen '
+            + 'kärjessä, ja Tyynimeri ulottuu kaupunginosan molemmin '
+            + 'puolin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Vista aérea del Centro de Lima en la cuarentena 2020.jpg',
           selite: 'Vanhankaupungin ruutukaava, hallituksen palatsi ja Plaza '
@@ -63252,6 +63321,26 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 22 (24.8.2026,
+         * tools/hero-tyolista-22.mjs). Molemmat ankkuroitu kohteen
+         * omaan Commons-kategoriaan. Kolmas kuva (Calle La Ronda,
+         * ilta) hylättiin katselmoinnissa: viitteettömän katunäkymän
+         * hallitsevaksi aiheeksi oli keksitty kirkko, jota kadun
+         * päässä ei ole. */
+        {
+          ampari: 'herokoe/hero-quito-aamu.png',
+          selite: 'Carondelet-palatsi Plaza Grandella on Ecuadorin '
+            + 'presidentin virka-asunto; sen matala julkisivu vie koko '
+            + 'aukion sivun, ja alakerrassa kulkee kaarikäytävä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-quito-keskipaiva.png',
+          selite: 'Iglesia de Guápulo on siirtomaa-ajan barokkikirkko, '
+            + 'joka on rakennettu terasseille Guápulon laakson jyrkkään '
+            + 'rinteeseen vanhankaupungin ulkopuolelle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Touring around Quito, Ecuador - Quito city from the historic center of Quito at the Virgin del Panecillo monument (16039061083).jpg',
           selite: 'El Panecillon laelta vanhakaupunki avautuu pohjoiseen aina '
@@ -63806,6 +63895,31 @@ export const KULTTUURI_KATEGORIAT = {
        * San Pedron lahdella. Yksikään ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 23 (24.8.2026,
+         * tools/hero-tyolista-23.mjs). Kaikki kolme ankkuroitu
+         * kohteen omaan Commons-kategoriaan. */
+        {
+          ampari: 'herokoe/hero-losangeles-aamu.png',
+          selite: 'Union Station avattiin 1939 ja yhdistää Mission '
+            + 'Revival- ja Streamline Moderne -tyylejä; se on yhä '
+            + 'Yhdysvaltain länsiosien suurin '
+            + 'matkustajarautatieterminaali.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-losangeles-keskipaiva.png',
+          selite: 'Italialaissyntyinen rakennustyöläinen Simon Rodia '
+            + 'rakensi Watts Towersin omin käsin vuosina 1921–1955 '
+            + 'talonsa takapihalle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-losangeles-ilta.png',
+          selite: 'Richard Meierin suunnittelema Getty Center avattiin '
+            + '1997 Brentwoodin kukkulalle, ja sen kokoelmat tavoittaa '
+            + 'vain raitiovaunulla mäen juurelta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Aerial view of Los Angeles, California LCCN2011634747.tif',
           selite: 'Los Angeles ulottuu 71 kilometriä pohjoisesta etelään ja 47 '
@@ -64371,6 +64485,30 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 23 (24.8.2026,
+         * tools/hero-tyolista-23.mjs). Kaikki kolme ankkuroitu
+         * kohteen omaan Commons-kategoriaan. */
+        {
+          ampari: 'herokoe/hero-montevideo-aamu.png',
+          selite: 'Palacio Salvo valmistui 1928 Plaza Independencian '
+            + 'kulmaan; 105-metrisenä se oli hetken maailman korkein '
+            + 'raudoitetusta betonista tehty rakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-montevideo-keskipaiva.png',
+          selite: 'Estadio Centenario nousi Parque Batlleen 1929–1930 '
+            + 'ensimmäisiä jalkapallon MM-kisoja varten, ja se oli '
+            + 'maailman ensimmäinen MM-kisastadion.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-montevideo-ilta.png',
+          selite: 'Teatro Solís valmistui 1856, viisitoista vuotta '
+            + 'rakennustöiden alkamisen jälkeen, ja on yksi '
+            + 'Etelä-Amerikan vanhimmista teattereista.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Mirador desde el Cerro.JPG',
           selite: 'Cerron näköalapaikalta katsottuna koko kaupunki levittäytyy '
@@ -64987,6 +65125,30 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 23 (24.8.2026,
+         * tools/hero-tyolista-23.mjs). Kaikki kolme ankkuroitu
+         * kohteen omaan Commons-kategoriaan. */
+        {
+          ampari: 'herokoe/hero-havanna-aamu.png',
+          selite: 'El Capitolio valmistui 1929 entiseksi '
+            + 'parlamenttitaloksi, ja sen kupoli merkitsee '
+            + 'työläiskaupunginosa Centro Habanan alkua.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-havanna-keskipaiva.png',
+          selite: 'Real Fuerza valmistui 1577 rantakalliosta louhituin '
+            + 'vinoin muurein; sen huipulla kääntyvä '
+            + 'Giraldilla-tuuliviiri on Havannan tunnus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-havanna-ilta.png',
+          selite: 'Yliopiston Escalinata-portaikon juurella seisova '
+            + 'Alma Mater -patsas on yksi Havannan tunnetuimmista '
+            + 'symboleista.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Skyline Havanna von Castillo del Morro Havanna.jpg',
           selite: 'Morron linnan valleilta lahden suun yli näkyy kaupungin '
@@ -65554,6 +65716,31 @@ export const KULTTUURI_KATEGORIAT = {
        * Torre Latinoamericanan huipulta. Yksikään ei ole noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 23 (24.8.2026,
+         * tools/hero-tyolista-23.mjs). Aamu ja keskipäivä on
+         * ankkuroitu kohteiden omiin Commons-kategorioihin;
+         * Xochimilco on viitteetön yleisnäkymä. */
+        {
+          ampari: 'herokoe/hero-mexico-aamu.png',
+          selite: 'Sähköyhtiön työntekijät löysivät Templo Mayorin '
+            + 'kaivauspaikan sattumalta 1978; se on esillä katutasoa '
+            + 'alempana aivan katedraalin vieressä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-mexico-keskipaiva.png',
+          selite: 'Arkkitehti Pedro Ramírez Vázquezin suunnittelema '
+            + 'uusi basilika valmistui 1976 ja mahtuu sisälle noin '
+            + '10 000 pyhiinvaeltajaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-mexico-ilta.png',
+          selite: 'Xochimilcon kanavat ja chinampa-viljelysaaret ovat '
+            + 'aztekien ajalta säilynyt viljelyjärjestelmä, jota '
+            + 'käytetään yhä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Ciudad de Mexico.jpg',
           selite: 'Keskustan yllä kohoaa 1950-luvun Torre Latinoamericana, ja '
@@ -66127,6 +66314,33 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 24 (24.8.2026,
+         * tools/hero-tyolista-24.mjs). Aamu ja keskipäivä on
+         * ankkuroitu kohteiden omiin Commons-kategorioihin;
+         * Frenchmen Street on viitteetön katunäkymä. */
+        {
+          ampari: 'herokoe/hero-neworleans-aamu.png',
+          selite: 'St. Louis Cemetery 1 perustettiin 1789, ja se on '
+            + 'New Orleansin vanhin säilynyt hautausmaa; korkea '
+            + 'pohjavesi pakotti hautaamaan maan päälle rakennettuihin '
+            + 'kammioihin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-neworleans-keskipaiva.png',
+          selite: 'Caesars Superdome avattiin 1975 Louisiana '
+            + 'Superdomena Central Business Districtin reunalle, ja '
+            + 'hurrikaani Katrinan aikana se toimi tuhansien '
+            + 'asukkaiden hätämajoituksena.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-neworleans-ilta.png',
+          selite: 'Frenchmen Street on muutaman korttelin mittainen '
+            + 'musiikkikatu Faubourg Marignyn kaupunginosassa Ranskan '
+            + 'Korttelin itäpuolella.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Aerial photograph of Jackson Square, New Orleans, Louisiana.jpg',
           selite: 'Jackson Square on Ranskan Korttelin ainoa avoin aukio, ja '
@@ -66735,6 +66949,31 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 24 (24.8.2026,
+         * tools/hero-tyolista-24.mjs). Kaikki kolme ankkuroitu
+         * kohteen omaan Commons-kategoriaan. */
+        {
+          ampari: 'herokoe/hero-bogota-aamu.png',
+          selite: 'Gonzalo Jiménez de Quesada leiriytyi elokuussa 1538 '
+            + 'paikkaan, joka tunnetaan nykyään Chorro de Quevedona, '
+            + 'ja pystytti sinne kaksitoista ruokomajaa apostolien '
+            + 'muistoksi.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-bogota-keskipaiva.png',
+          selite: 'Museo del Oron nykyinen rakennus valmistui 1968 '
+            + 'Parque Santanderin kulmaan ja laajennettiin 2004; '
+            + 'naapureistaan poiketen se on modernistinen eikä '
+            + 'siirtomaa-ajan talo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-bogota-ilta.png',
+          selite: 'Torre Colpatria valmistui 1979 ja on 196 metrillään '
+            + 'Bogotán toiseksi korkein rakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Bogotá, Monserrate, 2023-06 CN-02.jpg',
           selite: 'Sadekuuron jälkeisessä iltavalossa keskustan tornit '
@@ -67430,6 +67669,31 @@ export const KULTTUURI_KATEGORIAT = {
        * Adelaide Ovalin yli. Yksikään ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 24 (24.8.2026,
+         * tools/hero-tyolista-24.mjs). Kaikki kolme ankkuroitu
+         * kohteen omaan Commons-kategoriaan. */
+        {
+          ampari: 'herokoe/hero-adelaide-aamu.png',
+          selite: 'Adelaide Central Market toimii Gouger Streetillä '
+            + 'keskustan länsilaidalla, ja vanhan markkinahallin '
+            + 'edustalle valmistui 2019 uusi lasi- ja teräskatos.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-adelaide-keskipaiva.png',
+          selite: 'North Adelaiden anglikaaninen St Peter’s '
+            + 'Cathedral valmistui pääosin 1904, ja se on rakennettu '
+            + 'sinikivestä vaalein hiekkakivilistoin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-adelaide-ilta.png',
+          selite: 'Rundle Streetin ja King William Streetin kulmassa '
+            + 'syttyivät Adelaiden ensimmäiset sähkökatuvalot 1895, ja '
+            + 'paikka tunnetaan yhä kulmatalon mehiläispesäkoristeen '
+            + 'mukaan nimellä Beehive Corner.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Adelaide DougBarber.jpg',
           selite: 'Lightin ruutukaava erottuu ilmasta yhä: suorat kadut, '
@@ -68103,6 +68367,31 @@ export const KULTTUURI_KATEGORIAT = {
        * katutasolta. Yksikään ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 25 (24.8.2026,
+         * tools/hero-tyolista-25.mjs). Kaikki kolme ankkuroitu
+         * kohteen omaan Commons-kategoriaan. */
+        {
+          ampari: 'herokoe/hero-hobart-aamu.png',
+          selite: 'Theatre Royal avasi ovensa maaliskuussa 1837, ja se '
+            + 'on Australian vanhin yhtäjaksoisesti toiminut teatteri.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-hobart-keskipaiva.png',
+          selite: 'Hobart Rivuletin varrella Etelä-Hobartissa toimiva '
+            + 'Cascade Brewery on Australian vanhin yhtäjaksoisesti '
+            + 'toiminut panimo; sen perusti Hugh Macintosh '
+            + 'veljenpoikineen 1832.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-hobart-ilta.png',
+          selite: 'MONA avattiin Berriedalen niemellä tammikuussa 2011 '
+            + 'David Walshin kokoelman ympärille, ja se on '
+            + 'yksityisrahoitteisista taidemuseoista eteläisen '
+            + 'pallonpuoliskon suurin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Hobart seen from the east.jpg',
           selite: 'Hobartin vanhat esikaupungit ovat matalia ja peltikattoisia, '
@@ -68831,6 +69120,30 @@ export const KULTTUURI_KATEGORIAT = {
        * ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 25 (24.8.2026,
+         * tools/hero-tyolista-25.mjs). Kaikki kolme ankkuroitu
+         * kohteen omaan Commons-kategoriaan. */
+        {
+          ampari: 'herokoe/hero-darwin-aamu.png',
+          selite: 'Esplanadin Government House valmistui 1870–1871 ja '
+            + 'on Pohjoisterritorion vanhin eurooppalainen rakennus.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-darwin-keskipaiva.png',
+          selite: 'Fannie Bay Gaol toimi vankilana 20. syyskuuta 1883 '
+            + 'alkaen aina syyskuuhun 1979, ja rakennukset ovat '
+            + 'nykyään museona.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-darwin-ilta.png',
+          selite: 'Nykyinen Christ Church -katedraali valmistui 1977 '
+            + 'sen jälkeen kun hirmumyrsky Tracy tuhosi edellisen '
+            + 'rakennuksen 1974; ainoa säilynyt osa, vuonna 1944 '
+            + 'rakennettu kuisti, jätettiin näkyviin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Darwin\'s Changing Skyline January 2010.jpg',
           selite: 'Keskustan asuintornit ovat nousseet matalien peltikattojen '
@@ -69527,6 +69840,33 @@ export const KULTTUURI_KATEGORIAT = {
        * rannikkoa pitkin. Yksikään ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 25 (24.8.2026,
+         * tools/hero-tyolista-25.mjs). Aamu ja keskipäivä on
+         * ankkuroitu kohteiden omiin Commons-kategorioihin; Boroko on
+         * viitteetön katunäkymä. */
+        {
+          ampari: 'herokoe/hero-portmoresby-aamu.png',
+          selite: 'Papua-Uuden-Guinean kansallinen parlamenttitalo '
+            + 'avattiin Waiganin hallintoalueella 1984, ja sen jyrkkä '
+            + 'kattomuoto on lainattu ylämaiden haus tambaran '
+            + '-henkirakennuksista.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-portmoresby-keskipaiva.png',
+          selite: 'Jacksonin kansainvälinen lentoasema on maan suurin '
+            + 'lentokenttä ja puolustusvoimien ilmavoimien tukikohta; '
+            + 'Port Moresbyyn ei pääse muualta Papua-Uudesta-Guineasta '
+            + 'maanteitse.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-portmoresby-ilta.png',
+          selite: 'Boroko oli 1900-luvun jälkipuoliskolla Port '
+            + 'Moresbyn kaupallinen keskus vanhan satamakeskustan ja '
+            + 'Waiganin hallintoalueen välissä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Port Moresby at dusk.jpeg',
           selite: 'Keskustan tornit ja satamalaiturit reunustavat Fairfax '
@@ -70217,6 +70557,30 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 24 (24.8.2026,
+         * tools/hero-tyolista-24.mjs). Kaikki kolme ankkuroitu
+         * kohteen omaan Commons-kategoriaan. */
+        {
+          ampari: 'herokoe/hero-valparaiso-aamu.png',
+          selite: 'Ascensor Concepción avattiin 1. joulukuuta 1883 ja '
+            + 'on kaupungin vanhin yhä kulkeva vinohissi; Valparaísoa '
+            + 'on palvellut aikojen saatossa jopa 28 hissiä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-valparaiso-keskipaiva.png',
+          selite: 'Palacio Baburizza valmistui 1916 Cerro Alegrelle '
+            + 'kroatialaissyntyisen salpietarikauppiaan kodiksi, ja '
+            + 'siinä toimii nykyään kaupungin taidemuseo.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-valparaiso-ilta.png',
+          selite: 'La Sebastiana Cerro Bellavistan rinteellä on yksi '
+            + 'Pablo Nerudan kolmesta talosta, jotka kaikki toimivat '
+            + 'nykyään museoina.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Vista aerea Valparaíso, Chile.jpg',
           selite: 'Ilmasta katsottuna kaupunki täyttää koko lahden ympärille '

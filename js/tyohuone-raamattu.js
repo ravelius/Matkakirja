@@ -179,6 +179,91 @@ export const RAAMATTU = {
       ],
     },
     {
+      otsikko: 'Fokusmoodi',
+      tila: 'luonnos — rakennetaan, pilotti Kreikka',
+      kohdat: [
+        'FOKUSMOODI (omistaja 24.8.2026): pelin oletustila heti '
+          + 'alusta — tietoa, kysymyksiä ja valintoja niukasti '
+          + 'kerrallaan. Kaikki rakennettu säilyy; tämä on '
+          + 'esitystapa- ja annostelukerros sen päällä.',
+        'KARTTA: nykyinen maa tarkkana topografioineen; käymättömät '
+          + 'maat himmeinä ja epäterävinä ilman dataa (ei reittejä, '
+          + 'kaupunkeja, kohteita), blur kasvaa rajan takana; käydyt '
+          + 'maat jäävät tarkoiksi. Tarinaperustelu: isoisän '
+          + '1873-atlas — kartoittamaton päiväkirja tarkentuu vasta '
+          + 'kun jäljillä kuljetaan.',
+        'PIIRTO: maakohtainen esirenderöity topografia PD-datasta '
+          + '(Natural Earth, SRTM/ETOPO), 1873-atlaksen '
+          + 'akvarellityyliin — sama kieli kuin julisteissa. Laatan '
+          + 'lisäksi maan muita kaupunkeja (ei pelattavia), jokia, '
+          + 'järviä, vuoria.',
+        'ANNOSTELU (omistaja 24.8.2026, tarkennettu kulku): uuteen '
+          + 'kaupunkiin saavuttaessa esittely alkaa AUTOMAATTISESTI '
+          + '(fokusmoodin poikkeus "mikään ei ponnahda" -sääntöön). '
+          + 'Kulku: (1) matkakirja — VAIN MUUTAMA LAUSE suoraan '
+          + 'isoisän äänellä + VANHA kuva isoisän huomioon; '
+          + '(2) Pöllön nykypäivän huomio + UUSI kuva (ensiesittely '
+          + 'jo generoidusta herokuvasta); (3) Pöllö kysyy heti '
+          + '2–3 valintapainikkeella, mikä kiinnostaa; (4) valitusta '
+          + 'täkystä syvennysteksti + kuva → PIENI TIETOVISA → '
+          + 'palkkio: rahaa + generoitu juliste; (5) oppitunti eli '
+          + 'uusi nosto (kuva + teksti), joka pohjustaa varsinaista '
+          + 'kysymystä; (6) PAIKALLINEN HENKILÖ (kohtaamiset-palikka '
+          + 'säilyy) esittää vaikeamman aarrekysymyksen. Tekstit ja '
+          + 'kuvat tulevat karttapinnan päälle; kuvat klikattavissa '
+          + 'suuremmiksi. Pöllö saa siteerata matkakirjaa suoraan '
+          + '(on lukenut sen) ja viitata uuteen tai vanhaan asiaan; '
+          + 'syvennykset poimitaan kaupunki-/maalehdistä.',
+        'KOHDEKOROSTUS (omistaja 24.8.2026): kun jostakin kohteesta '
+          + '(esim. Tonava) halutaan lisätietoa, kartta piirtyy '
+          + 'muuten niukkana mutta näyttää juuri sen kohteen '
+          + 'selkeänä — niukkuus on keino nostaa yksi asia esiin, '
+          + 'koska täydellä kartalla esim. jokien havainnointi on '
+          + 'ollut vaikeaa.',
+        'ETENEMINEN (omistaja 24.8.2026): vähintään YKSI täky on '
+          + 'tehtävä ennen pääsyä varsinaisen aarrekysymyksen luo; '
+          + 'loput täkyt vapaaehtoisia, niistä lisää rahaa '
+          + 'minipalkintoina. Aarteen jälkeen vapaa tutkinta: '
+          + 'kaupunki- ja maalehdet aukeavat, ja kartan '
+          + 'erityiskohteista (vuoret, joet, muut kaupungit) aukeaa '
+          + 'pienet pop-up-tietoruudut — tai pelaaja jatkaa matkaa.',
+        'ALOITUSLENTO UUSIKSI (omistaja 24.8.2026): kun pelaaja '
+          + 'valitsee pelin alussa ensimmäisen kohteen, kartta '
+          + 'rajautuu automaattisesti niin, että lähtömaa (Lontoo/'
+          + 'Britannia) ja kohdemaa näkyvät molemmat sopivalla '
+          + 'marginaalilla, ja lentokone lentää punaista viivaa '
+          + 'pitkin Lontoosta kohteeseen. Kartta on tällöin jo '
+          + 'fokusmoodin tapaan niukka: maat, joissa ei ole käyty '
+          + 'tai joissa pelaaja ei ole, himmeinä/sumennettuina. '
+          + 'Koko näkymä uusitaan.',
+        'NOPPA JA REITIT (omistaja 24.8.2026): nykyinen noppa ja '
+          + 'reittien viivat/pisteet säilyvät ennallaan — pienellä '
+          + 'luvulla aika kuluu jo nyt hitaammin, kun heittoja '
+          + 'tarvitaan useampi. EHTO: reittipisteiden on istuttava '
+          + 'fokusnäkymän grafiikkaan; tarkistetaan Kreikka-pilotin '
+          + 'kuvasta. Erillinen väliheitto-idea jää harkintaan '
+          + 'siihen asti.',
+        'TÄKY: uusi sisältötyyppi — tarkistettu uteliaisuuskoukku '
+          + 'kaupungin yksityiskohdasta (tyyliä "lukonreiästä näkyy '
+          + 'täydellisesti rajautuva rakennus"). Pöllö tarjoaa '
+          + 'täkyjä, pelaaja tarttuu; käsittely 13+ -rajoissa.',
+        'PÖLLÖ-CHAT: ensisijaisesti kuratoitua sisältöä (lehdet, '
+          + 'tarkistetut faktat); mallin oma selittely selvästi '
+          + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
+        'UI: pöllö pysyvästi leijuvana sivuelementtinä kaikissa '
+          + 'tiloissa (pois alanapeista, kuten nyt lehtiä '
+          + 'luettaessa). Fokusmoodissa alhaalla vain Liiku- ja '
+          + 'Tutki-napit (Tutki-napin tarve fokusmoodissa vielä '
+          + 'auki). Fokusmoodin kytkin matkalaukun oikealla puolella '
+          + 'VAIN kehittäjätilassa; lisäksi kehittäjätilaan '
+          + 'sumennukset päälle/pois -nappi. Muille aina päällä.',
+        'PILOTTI: Kreikka/Ateena. Nykyinen aarrekysymys säilyy '
+          + 'pääkysymyksenä; lämmittelyt lehdistä, tarvittaessa '
+          + 'uusia. Ateenalle uusi matkakirjapätkä (Fable) '
+          + 'täkytutkimuksen jälkeen.',
+      ],
+    },
+    {
       otsikko: 'Aarteet ja eteneminen',
       tila: 'luonnos',
       kohdat: [
@@ -223,6 +308,13 @@ export const RAAMATTU = {
           + 'kerralla.',
         'Toteutus: käsin tarkistettu data, pelin oma animaatio. '
           + 'Etusivulla kevyt vihjeanimaatio.',
+        'KAMERA-AJOT (omistaja 24.8.2026): piirtomoottoriin '
+          + 'kehitetään sulavat zoomausanimaatiot sisään ja ulos — '
+          + 'zoomi kiihtyy ja hidastuu luontevasti alussa ja '
+          + 'lopussa (easing). Tarvitaan paljon jatkossa: linssien '
+          + 'animaatiot (esim. Silkkitien reitit, ihmispopulaation '
+          + 'leviäminen Afrikasta), joissa kartta liikkuu itsestään '
+          + 'ja zoomautuu tarvittaessa.',
         'AIKAJANA-AJO (omistaja 17.8.2026): animaatiolinsseillä '
           + 'yhteinen aikajanamoottori juoksevine vuosilukuineen — '
           + 'pelaajan käynnistämä, ele keskeyttää.',
@@ -246,7 +338,14 @@ export const RAAMATTU = {
           + 'valitsematta puolta. Sotaan ei syvennytä oma-'
           + 'aloitteisesti, mutta suoraa kysymystä ei väistetä. '
           + 'Toteutettu tools/pollo/worker.js-kehotteeseen.',
-        'PÖLLÖ ON AARRE (omistaja 18.8.2026): peli alkaa ilman '
+        'PÖLLÖ MUKANA ALUSTA (omistaja 24.8.2026, kumoaa alla '
+          + 'olevan toistaiseksi): kehitysvaiheessa pöllö on pelissä '
+          + 'heti alusta — fokusmoodin esittely tarvitsee sen. '
+          + '"Pöllö on aarre" -idea säästetään ja voidaan tuoda '
+          + 'takaisin myöhemmin (vaatii erikoisjärjestelyt '
+          + 'ensimmäisen maan/kaupungin kohdalla).',
+        'PÖLLÖ ON AARRE (omistaja 18.8.2026, TAUOLLA 24.8.2026 — '
+          + 'ks. yllä): peli alkaa ilman '
           + 'pöllöä — nappi piilossa, ei kuplia eikä vihjeitä, eikä '
           + 'ennen ensimmäistä laattaa anneta ohjeita tai korvaavaa '
           + 'opastetta. Pöllö löytyy omana aarteenaan ensimmäisen '
@@ -439,6 +538,13 @@ export const RAAMATTU = {
       otsikko: 'Kuvat ja lähteet',
       tila: 'luonnos',
       kohdat: [
+        'HEROGENEROINTI TAUOLLA (omistaja 24.8.2026): uusia '
+          + 'herokuvia ei generoida toistaiseksi — tekotavassa voi '
+          + 'olla vielä virheitä (kierrosten 22–25 katselmointi: '
+          + 'viitteettömät yleisnäkymät keksivät maamerkkejä). '
+          + 'Valmiit, katselmoidut kuvat kytketään loppuun; '
+          + 'hylättyjen uusinta-ajot ja uudet kierrokset vasta '
+          + 'omistajan luvalla. Työ keskittyy nyt fokusmoodiin.',
         'Kaikki kuvat PD/CC (Commons, Finna, LoC, Flickr — lisenssi '
           + 'aina rajapinnasta), silmin tarkistettuina; tekijä ja '
           + 'lisenssi näkyvissä.',

@@ -335,7 +335,7 @@ Faktat ja lähteet:
 **Nosto M2 — "Katu joka menetti ja voitti maailmanennätyksensä" (530 merkkiä)**
 
 > Baldwin Street tunnustettiin maailman jyrkimmäksi kaduksi jo 1987,
-> lähetystoimittaja Jim Moran kaksivuotisen kampanjan tuloksena. Heinäkuussa
+> lähetystoimittaja Jim Mora kaksivuotisen kampanjan tuloksena. Heinäkuussa
 > 2019 titteli siirtyi hetkeksi walesilaiselle Ffordd Pen Llechille – kunnes
 > Guinness huhtikuussa 2020 muutti mittaustapaa keskilinjan mukaiseksi ja
 > palautti tittelin Dunedinille. Kadun jyrkin kohta nousee suhteessa 1:2,86.
@@ -345,7 +345,8 @@ Faktat ja lähteet:
 
 Faktat ja lähteet:
 - Baldwin Street tunnustettiin maailman jyrkimmäksi kaduksi 1987 Guinness
-  Book of Recordsin toimesta, lähetystoimittaja Jim Moran kaksivuotisen
+  Book of Recordsin toimesta, lähetystoimittaja Jim Mora (en-Wikipedia
+  "Jim Mora (broadcaster)") kaksivuotisen
   kampanjan jälkeen; kadun jyrkin kohta on suhteessa 1:2,86 (35 %). —
   en-Wikipedia "Baldwin Street"
 - 16.7.2019 titteli siirtyi walesilaiselle Ffordd Pen Llechille; 8.4.2020
@@ -647,10 +648,11 @@ tarvitsi heittomerkin (Speight's).
 
 *Matkaoppaan jaksot:*
 - `Category:Dunedin Chinese Garden` (jakso 3)
+- `Category:Dunedin Volcano` (3 kuvaa, mm. "File:Organ pipes columnar
+  joints Dunedin.jpg" — tulivuoren basalttipatsaat, osuvin jakso 2:n
+  geologiatekstiin; tarkistettu categoryinfo + categorymembers 24.8.2026)
 - `Category:Dunedin Botanic Garden` (74 kuvaa) — täydentäväksi, jos jakso
-  2:n geologiateksti kaipaa kuvaa (Dunedin Volcanolle itselleen ei ole
-  omaa kuvakategoriaa, TARKISTETTU, geologiakävelyn kuvat ovat Botanic
-  Gardenin kategoriassa)
+  2 kaipaa toista kuvaa
 - `Category:St Clair, New Zealand` (28 kuvaa) — rantamaisema, jos jakso 5
   kaipaa kuvaa
 
@@ -836,3 +838,8 @@ sama maa:**
   (isoisän-vuosi -sattuma) mutta eri rakennus, eri kaupunki, eri
   yksityiskohdat; tämä ei ole päällekkäisyys vaan rinnakkainen, erikseen
   kummallekin kaupungille aito löytö.
+
+## Korjaushistoria 24.8.2026 (tarkistus-dunedin.md:n jälkeen, Fable)
+
+1. M2: "Jim Moran" → "Jim Mora" (proosa ja lähteet; en-Wikipedia "Jim Mora (broadcaster)").
+2. Osio 5: väärä "ei ole olemassa, TARKISTETTU" -väite poistettu — `Category:Dunedin Volcano` on olemassa (3 kuvaa) ja lisätty jakso 2:n ensisijaiseksi kuvalähteeksi (basalttipatsaskuva osuvin).

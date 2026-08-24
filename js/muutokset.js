@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1089, teksti: 'Herokuvat 15 uuteen kaupunkiin' },
   { v: 1088, teksti: 'Oranssi laatta kartalla viitekuvallisille heroille' },
   { v: 1087, teksti: 'OpenAIn ja Googlen kulut kiintiopalkkeihin' },
   { v: 1086, teksti: 'Herokierros 21 viitekuvilla ja Valparaiso' },
