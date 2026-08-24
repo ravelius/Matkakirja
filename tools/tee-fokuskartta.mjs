@@ -2,13 +2,15 @@
  * FOKUSKARTTA: yhden maan esirenderöity topografiapohja pelilaudalle.
  *
  *   node tools/tee-fokuskartta.mjs GRC /polku/kohdekansioon \
- *        [--data <raaka-aineiston kansio>] [--leveys 2400] [--laatu 0.9]
- *        [--png] [--marginaali <lautayksikköä>] [--tarkistus] [--esikatselu]
+ *        [--data <raaka-aineiston kansio>] [--leveys 6400] [--laatu 0.9]
+ *        [--png] [--vuoto <osuus>] [--tarkistus] [--esikatselu]
  *
  * Tuottaa kohdekansioon kaksi tiedostoa:
  *
- *   GRC.webp   läpinäkyvätaustainen maastokuva (akvarellihypsometria,
- *              rantavyöhykkeet, joet, järvet — ei tekstiä)
+ *   GRC.webp   kokonainen 1873-atlaksen lehti: opaakki paperi, meren
+ *              syvyysporrastus, akvarellihypsometria, naapurit haaleina
+ *              ääriviivoina, merten ja vuorten nimet, asteverkko,
+ *              kehys, kartuutsi ja mittajana
  *   GRC.json   kuvan paikka LAUDAN koordinaateissa
  *
  * Molemmat viedään ämpäriin kansioon `fokus/` (kuten julisteet), ja peli
@@ -35,15 +37,23 @@
  * kirjoittaa lisäksi kuvan, jossa on laudan oma maarengas punaisella ja
  * risti kaupungin laattakoordinaatissa — silmällä katsottava todiste.
  *
- * === MIKSI VAIN KOHDEMAA ===
+ * === LEHTI JA VUOTO: KAKSI LAATIKKOA ===
  *
- * Naapureita ei renderöidä: fokusmoodin harso (js/ui.js paivitaFokusSumu)
- * hoitaa ne pelissä, ja käydyt naapurit saavat jäädä laudan omaksi
- * taiteeksi. Tausta on läpinäkyvä eikä meri: lauta on kuvan alla, ja
- * peittävä meripohja jättäisi kuvan reunaan suoran sävyrajan keskelle
- * Egeanmerta.
+ * Rajaus EI enää ole maan oma laatikko pienellä marginaalilla, vaan
+ * tyylitiedoston (tools/fokuskartta/maat.mjs) antama LEHDEN IKKUNA:
+ * prototyypin sommittelu, jossa Kreikan ympärillä on merta, naapureita
+ * ja tilaa kartuutsille. Sen ympärille renderöidään VUOTOA — pelkkää
+ * lisää samaa paperia — koska ruudun kuvasuhde ei ole koskaan lehden
+ * kuvasuhde: kamera-ajo (js/kartta.js kameranKohde) sovittaa ikkunan
+ * ruutuun ja näyttää siitä yli menevässä suunnassa aina hitusen
+ * enemmän. Ilman vuotoa siihen jäisi sauma laudan omaan grafiikkaan.
+ *
+ * JSONiin (ja js/packs/fokus-grc.js FOKUS_POHJAT -tauluun) kirjataan
+ * molemmat: `bbox` on kuvan paikka, `rajaus` on se laatikko, johon peli
+ * ajaa kameran.
  *
  * Aineisto ja lähteet: tools/fokuskartta/aineisto.mjs.
+ * Lehden käsin aseteltavat asiat: tools/fokuskartta/maat.mjs.
  * Piirtomoottori (ajetaan selaimessa): tools/fokuskartta/piirto.js.
  */
 import { createServer } from 'node:http';
@@ -53,6 +63,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { keraaAineisto } from './fokuskartta/aineisto.mjs';
+import { FOKUSMAAT } from './fokuskartta/maat.mjs';
 // Sama projektio kuin piirtomoottorilla — yksi kaava, ei kahta kopiota.
 import { laudanProjektio } from './fokuskartta/piirto.js';
 
@@ -140,8 +151,8 @@ const lippu = (nimi) => argv.includes(`--${nimi}`);
 
 if (!/^[A-Z]{3}$/.test(iso) || !kohdekansio) {
   console.error('Käyttö: node tools/tee-fokuskartta.mjs GRC <kohdekansio> '
-    + '[--data <kansio>] [--leveys 2400] [--laatu 0.9] [--png] '
-    + '[--marginaali <lautayksikköä>] [--tarkistus] [--esikatselu]');
+    + '[--data <kansio>] [--leveys 6400] [--laatu 0.9] [--png] '
+    + '[--vuoto <osuus>] [--tarkistus] [--esikatselu]');
   process.exit(1);
 }
 
@@ -150,14 +161,16 @@ const dataKansio = resolve(valitsin('data',
 /*
  * Kuvan leveys pikseleinä.
  *
- * Mitta tulee pelin LÄHIMMÄSTÄ ZOOMIPORTAASTA: se näyttää 88 laudan
- * yksikköä noin 800 pikselin levyisenä eli yhdeksän pikseliä yksikköä
- * kohti (js/kartta.js ZOOMI_LAHIN). Kreikan rajaus on maailmankartalla
- * 242 yksikköä leveä, joten 2400 pikseliä antaa 9,9 pikseliä yksikköä
- * kohti — kuva pysyy tarkkana lähimpäänkin porrasta asti eikä sitä
- * suurenneta koskaan.
+ * Omistajan iPad-havainto v1095:stä: *"taustakartan resoluutio ylös —
+ * kuva pikselöityy fokuszoomilla"*, ja ohje oli vähintään kaksinkertainen
+ * entiseen 2400 pikseliin nähden. 6400 on 2,7-kertainen, ja koska lehti
+ * kattaa nyt myös 2,7-kertaisen alueen, PIKSELITIHEYS pysyy entisenä
+ * (noin 10 pikseliä lautayksikköä kohti) — mutta ratkaiseva ero on, että
+ * fokusrajauksessa lehti näkyy KOKONAAN eikä sitä enää suurenneta:
+ * iPadin verkkokalvonäytöllä kuvaa on tällöin noin kaksinkertaisesti
+ * yli tarpeen. Tätä leveämpi kaataisi WebPin nelimegatavun budjetin.
  */
-const kuvaLeveys = Number(valitsin('leveys', 2400));
+const kuvaLeveys = Number(valitsin('leveys', 6400));
 
 /*
  * TALLENNUSMUOTO: WebP, läpinäkyvyys mukana.
@@ -174,15 +187,10 @@ const kuvaLeveys = Number(valitsin('leveys', 2400));
 const MUOTO = lippu('png') ? 'png' : 'webp';
 const LAATU = Number(valitsin('laatu', 0.9));
 /*
- * Marginaali maan ympärille lautayksikköinä.
- *
- * Oletus lasketaan rajauksen koosta eikä anneta kiinteänä lukuna, koska
- * laudoilla on eri mittakaava (Eurooppa 19,2 yksikköä pituusasteelta,
- * maailmankartta 33,3). Rantavyöhyke on piirtomoottorissa noin 2,6 %
- * kuvan leveydestä, joten neljä prosenttia antaa sille tilan ja hitusen
- * ilmaa lisää.
+ * Vuoto osuutena lehden koosta (ks. tiedoston alku). Oletus tulee
+ * tyylitiedostosta; `--vuoto` on vain kokeilua varten.
  */
-const marginaaliValitsin = valitsin('marginaali', null);
+const vuotoValitsin = valitsin('vuoto', null);
 
 /* ------------------------------------------------------------ lauta ja bbox */
 
@@ -205,29 +213,46 @@ if (!lauta) {
 }
 
 const renkaat = muodot[iso].renkaat;
-const laudanBbox = (() => {
-  let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
-  for (const rengas of renkaat) {
-    for (const [x, y] of rengas) {
-      if (x < x0) x0 = x;
-      if (x > x1) x1 = x;
-      if (y < y0) y0 = y;
-      if (y > y1) y1 = y;
-    }
-  }
-  const marginaali = marginaaliValitsin != null
-    ? Number(marginaaliValitsin)
-    : Math.max(x1 - x0, y1 - y0) * 0.04;
-  return {
-    x: x0 - marginaali,
-    y: y0 - marginaali,
-    w: (x1 - x0) + 2 * marginaali,
-    h: (y1 - y0) + 2 * marginaali,
-  };
-})();
+
+const tyyli = FOKUSMAAT[iso];
+if (!tyyli) {
+  console.error(`Maalle ${iso} ei ole lehden tyyliä (tools/fokuskartta/maat.mjs).\n`
+    + 'Lehti on kokonainen atlaksen sivu — merten nimet, kartuutsi ja ikkuna\n'
+    + 'ovat karttatypografiaa, joita ei saa aineistosta. Lisää maalle oma\n'
+    + 'osio FOKUSMAAT-tauluun ja aja uudestaan.');
+  process.exit(1);
+}
 
 const { projektio } = lauta;
 const kaava = laudanProjektio(projektio);
+
+/*
+ * LEHTI (rajaus) ja KUVA (bbox).
+ *
+ * Ikkunan LEVEYSASTEET ovat sommittelun kiinnityspiste (maat.mjs), ja
+ * pituusasteiden väli lasketaan kuvasuhteesta laudan omalla kaavalla.
+ * Näin päin siksi, että lauta ratkaisee, montako yksikköä leveysaste on
+ * — sama lat-väli on Millerin lieriössä eri korkuinen kuin prototyypin
+ * Mercatorissa, ja jos lehti mitoitettaisiin pituusasteista, maa
+ * kutistuisi kehyksen sisään eri kokoisena joka laudalla.
+ */
+const vuoto = vuotoValitsin != null ? Number(vuotoValitsin) : (tyyli.vuoto ?? 0.15);
+const { laudanRajaus, laudanBbox } = (() => {
+  const { lonKeski, lat0, lat1, kuvasuhde } = tyyli.ikkuna;
+  const y0 = kaava.lautaY(lat1);
+  const h = kaava.lautaY(lat0) - y0;
+  const w = h * kuvasuhde;
+  const rajausLaatikko = { x: kaava.lautaX(lonKeski) - w / 2, y: y0, w, h };
+  return {
+    laudanRajaus: rajausLaatikko,
+    laudanBbox: {
+      x: rajausLaatikko.x - w * vuoto,
+      y: rajausLaatikko.y - h * vuoto,
+      w: w * (1 + 2 * vuoto),
+      h: h * (1 + 2 * vuoto),
+    },
+  };
+})();
 // Aineiston laatikko puoli astetta väljempi joka suuntaan: rannikko saa
 // jatkua kuvan reunan yli, jotta reunaan ei jää katkennutta viivaa.
 const laatikko = {
@@ -289,16 +314,39 @@ const tasaus = tarkistaProjektio();
 /* ------------------------------------------------------------ aineisto */
 
 console.log(`Fokuskartta ${iso} — lauta ${lauta.id}`);
-console.log(`  bbox laudalla   x ${laudanBbox.x.toFixed(1)} y ${laudanBbox.y.toFixed(1)} `
-  + `w ${laudanBbox.w.toFixed(1)} h ${laudanBbox.h.toFixed(1)}`);
+console.log(`  lehti laudalla  x ${laudanRajaus.x.toFixed(1)} y ${laudanRajaus.y.toFixed(1)} `
+  + `w ${laudanRajaus.w.toFixed(1)} h ${laudanRajaus.h.toFixed(1)}`);
+console.log(`  kuva laudalla   x ${laudanBbox.x.toFixed(1)} y ${laudanBbox.y.toFixed(1)} `
+  + `w ${laudanBbox.w.toFixed(1)} h ${laudanBbox.h.toFixed(1)}  (vuoto ${vuoto})`);
 console.log(`  asteina         lon ${laatikko.lon0.toFixed(2)}..${laatikko.lon1.toFixed(2)} `
   + `lat ${laatikko.lat0.toFixed(2)}..${laatikko.lat1.toFixed(2)}`);
 console.log(`  aineisto        ${dataKansio}`);
 
-const aineisto = keraaAineisto({ kansio: dataKansio, iso, laatikko });
+const aineisto = keraaAineisto({
+  kansio: dataKansio,
+  iso,
+  laatikko,
+  naapurit: (tyyli.naapurit ?? []).map((n) => n.iso),
+});
 console.log(`  renkaat ${aineisto.maa.renkaat.length} · joet ${aineisto.joet.length} `
-  + `· järvet ${aineisto.jarvet.length} · korkeusruudukko `
-  + `${aineisto.korkeus.w}x${aineisto.korkeus.h}`);
+  + `· järvet ${aineisto.jarvet.length} · naapurit `
+  + `${Object.keys(aineisto.naapurit).join(' ') || '–'} · korkeusruudukko `
+  + `${aineisto.korkeus.w}x${aineisto.korkeus.h} `
+  + `(lon ${aineisto.korkeus.lon0}..${aineisto.korkeus.lon1} `
+  + `lat ${aineisto.korkeus.lat0}..${aineisto.korkeus.lat1})`);
+/*
+ * Korkeusruudukon on katettava koko kuva, muuten meren syvyysporrastus
+ * vaihtuu tasaiseksi sävyksi ja kuvaan jää suora sauma (ks.
+ * aineisto.mjs). Varoitus eikä kaatuminen: rannikkomaalla ruudukon
+ * kulma voi olla mantereen sisällä, jolloin sillä ei ole väliä.
+ */
+if (aineisto.korkeus.lon0 > laatikko.lon0 + 0.5
+  || aineisto.korkeus.lon1 < laatikko.lon1 - 0.5
+  || aineisto.korkeus.lat0 > laatikko.lat0 + 0.5
+  || aineisto.korkeus.lat1 < laatikko.lat1 - 0.5) {
+  console.warn('  VAROITUS: korkeusruudukko ei kata koko kuvaa — meren sävyyn '
+    + 'voi jäädä sauma. Hae leveämmät etopo-kaistat.');
+}
 
 for (const r of tasaus) {
   console.log(`  tasaus ${r.nimi.padEnd(10)} lauta ${r.lauta.join(',')} `
@@ -381,7 +429,7 @@ mkdirSync(kohdekansio, { recursive: true });
 
 const alkoi = Date.now();
 const { puskuri, mitat } = await renderoi({
-  bbox: laudanBbox, projektio, leveys: kuvaLeveys,
+  bbox: laudanBbox, rajaus: laudanRajaus, projektio, leveys: kuvaLeveys, tyyli,
 });
 const kuvaPolku = join(kohdekansio, `${iso}.${MUOTO}`);
 writeFileSync(kuvaPolku, puskuri);
@@ -398,6 +446,14 @@ writeFileSync(jsonPolku, `${JSON.stringify({
     w: Math.round(laudanBbox.w * 100) / 100,
     h: Math.round(laudanBbox.h * 100) / 100,
   },
+  // Lehden ikkuna: tähän peli ajaa kameran (js/fokuskartta.js). Kuvan ja
+  // lehden väliin jäävä vuoto on paperia, jota ruudun kuvasuhde vaatii.
+  rajaus: {
+    x: Math.round(laudanRajaus.x * 100) / 100,
+    y: Math.round(laudanRajaus.y * 100) / 100,
+    w: Math.round(laudanRajaus.w * 100) / 100,
+    h: Math.round(laudanRajaus.h * 100) / 100,
+  },
   kuva: mitat,
   tiedosto: `${iso}.${MUOTO}`,
   tehty: new Date().toISOString().slice(0, 10),
@@ -412,7 +468,12 @@ if (lippu('esikatselu')) {
   // Sama kuva pergamentin päällä: läpinäkyvyys näyttää katselimessa
   // mustalta, eikä kuvaa voi sillä taustalla arvioida lainkaan.
   const { puskuri: e } = await renderoi({
-    bbox: laudanBbox, projektio, leveys: kuvaLeveys, esikatseluTausta: '#e9d8b0',
+    bbox: laudanBbox,
+    rajaus: laudanRajaus,
+    projektio,
+    leveys: kuvaLeveys,
+    tyyli,
+    esikatseluTausta: '#e9d8b0',
   });
   writeFileSync(join(kohdekansio, `${iso}-esikatselu.${MUOTO}`), e);
   console.log(`  esikatselu      ${join(kohdekansio, `${iso}-esikatselu.${MUOTO}`)}`);
@@ -421,8 +482,10 @@ if (lippu('esikatselu')) {
 if (lippu('tarkistus')) {
   const { puskuri: t } = await renderoi({
     bbox: laudanBbox,
+    rajaus: laudanRajaus,
     projektio,
     leveys: kuvaLeveys,
+    tyyli,
     tarkistus: {
       renkaat,
       ristit: pack.cities
