@@ -70,9 +70,9 @@ ratkaisuun käyttää kahta teemasivua kolmen sijaan.
 
 **Johdanto (196 merkkiä):**
 
-> Suva nousi rantaniemelle vasta parikymmentä vuotta isoisän matkan
-> jälkeen – 1873 se oli vielä nimetön maapala kariutuneen puuvilla-
-> hankkeen varjossa, ja Fidžin oikea pääkaupunki oli Levuka.
+> Suvan kaupunki nousi rantaniemelle vasta isoisän matkan jälkeen –
+> 1873 paikalla oli vain pieni kylä kariutuneen puuvillahankkeen
+> varjossa, ja Fidžin oikea pääkaupunki oli Levuka.
 
 ### Sivu B — teemasivu, ehdotettu id `historia`, nimi "Kuningaskunnasta pääkaupungiksi"
 
@@ -118,9 +118,9 @@ mitattavan vastaparin historiasivulle: sama niemi, kaksi eri tarinaa.
 > Yhdysvalloille velatuista korvauksista – yhtiö aikoi perustaa
 > puuvillaviljelmän, mutta maaperä ja ilmasto osoittautuivat
 > sopimattomiksi. Kun isoisä olisi kulkenut ohi 1873, seudulla ei
-> ollut vielä kaupunkia eikä edes kunnollista kylää: Fidžin
-> pääkaupunki oli Levuka, ja Suva oli yhä vain kariutuneen
-> liikeidean maa-ala. Kaupunki syntyi vasta, kun brittiläiset
+> ollut vielä kaupunkia — vain pieni Suvan kylä rantaniemellä
+> (Wikipedia: "in 1868, when Suva was still a small village"):
+> Fidžin pääkaupunki oli Levuka, ja puuvillahanke oli kariutunut. Kaupunki syntyi vasta, kun brittiläiset
 > siirtomaaviranomaiset siirsivät pääkaupungin tänne 1877 – Levukan
 > jyrkkien vuorten ja meren välinen ahdas sijainti esti laajenemisen.
 
@@ -269,7 +269,9 @@ Faktat ja lähteet:
 > kai colojen antautumiseen. Sota oli yksi viimeisistä merkeistä
 > siitä, ettei koko saari ollut vielä yhden hallinnon alla – vasta
 > luovutus Britannialle seuraavana vuonna toi koko Viti Levun
-> saman lain alle.
+> saman lain alle. Sisämaan heimojen jälkeläiset ovat tänäkin
+> päivänä elävä osa Fidžin itaukei-väestöä, ja ylänköjen kylissä
+> vaalitaan omia perinteitä.
 
 Faktat ja lähteet:
 - Maalis–lokakuussa 1873 Cakobaun hallituksen noin 200 hengen
@@ -706,10 +708,10 @@ kategoriassa; mittaa itse ennen valintaa):**
 
 *Kohdekartta (täydentäviksi, ei nostoa varten):*
 - `Category:Parliament of Fiji` (TARKISTA erikseen)
-- `Category:Government House, Suva` tai `Category:State House, Fiji`
+- ~~Category:Government House, Suva / State House, Fiji~~ — TARKISTETTU 24.8.2026: EI OLE OLEMASSA (myös ilmeiset vaihtoehtonimet puuttuvat) — kirjoittajan haettava oikea reitti Wikidatan kautta
   (TARKISTA erikseen, molemmat nimet mahdollisia)
 - `Category:Sacred Heart Cathedral, Suva` (TARKISTA erikseen)
-- `Category:HFC Bank Stadium` (TARKISTA erikseen)
+- ~~Category:HFC Bank Stadium~~ — TARKISTETTU 24.8.2026: EI OLE OLEMASSA
 
 **REHELLINEN RAPORTTI KATEGORIOIDEN NIUKKUUDESTA:** Kymmenen
 kategoriaa ehdittiin mitata tässä koosteessa 429-rajoitusten ja ajan
@@ -891,3 +893,9 @@ repliikki):**
   juuresta valmistettua juomaa tarkassa järjestyksessä...") —
   Jakso 1:ni käsittelee kavaa eri näkökulmasta (kasvin alkuperä,
   bilo-kuori, WHO-arvio) niin kuin yllä on selitetty kohdassa 4.
+
+## Korjaushistoria 24.8.2026 (tarkistus-suva.md:n jälkeen, Fable)
+
+1. 1873-kehyksen ylilyönti korjattu: Suvan PIENI KYLÄ oli olemassa jo 1868 (lähteen oma virke) — "nimetön maapala" ja "ei edes kunnollista kylää" poistettu; kaupunkia ei ollut, kylä oli.
+2. H2:n loppuun lisätty elävän nykypäivän virke (päätoimittajan Kai Colo -päätöksen 4. ehto).
+3. Kolme arvattua Commons-kategoriaa merkitty tarkistetusti puuttuviksi.
