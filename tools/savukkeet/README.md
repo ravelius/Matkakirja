@@ -39,6 +39,7 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
 | savuke-mediakanava | Pelin äänet mediakanavassa (hiljainen ankkuri + audioSession, sanelun tauko) ja pelin oma mykistys myös striimatulla lukijaäänellä |
+| savuke-fokuskartta | Fokusmoodin maakohtainen topografiapohja: puuttuva kuva ei riko mitään, olemassa oleva osuu JSONin rajaukseen, reitit sen päällä, kamera-ajo maan rajaukseen ja eleen keskeytys, väärän laudan rajaus hylätään |
 
 **Savukevartija** (`node tools/tarkista-savukkeet.mjs`, CI:ssä joka
 PR:lle): vertaa kaikkien savukkeiden `ui.X`-kutsut ja -luvut UI:n

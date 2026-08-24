@@ -12,9 +12,9 @@
  * === MIKÄ TÄSSÄ ON TOISIN KUIN PROTOTYYPISSÄ ===
  *
  * 1. PROJEKTIO ON LAUDAN, EI MERCATORIN. Kuva liimataan pelilaudalle,
- *    joten sen on käytettävä laudan omaa kaavaa (Eurooppa:
- *    x = (lon + 11) * 19.2, y = (72 - lat) * 26.3). Mercator siirtäisi
- *    Kreikan pohjoisosaa toistakymmentä lautayksikköä, ja kaupunkien
+ *    joten sen on käytettävä laudan omaa kaavaa — pelilaudalla Millerin
+ *    lieriötä, maanosalaudoilla tasaväliä (ks. laudanProjektio). Väärä
+ *    kaava siirtäisi maan pohjoisosaa kymmeniä yksikköjä, ja kaupunkien
  *    laatat jäisivät maaston viereen.
  *
  * 2. VAIN KOHDEMAA, LÄPINÄKYVÄ TAUSTA. Naapureita ei piirretä
@@ -104,6 +104,59 @@ function lerpVari(asteikko, m) {
   return asteikko[asteikko.length - 1].v;
 }
 
+/* -------------------------------------------------------- projektiot */
+
+const RAD = Math.PI / 180;
+
+/*
+ * LAUDAN PROJEKTIO MOLEMPIIN SUUNTIIN.
+ *
+ * Kuva liimataan pelilaudalle, joten sen on käytettävä laudan omaa
+ * kaavaa. Kaavoja on kaksi:
+ *
+ *   tasavali  Maanosalaudat, esim. Eurooppa:
+ *             x = (lon + 11) * 19.2, y = (72 - lat) * 26.3.
+ *
+ *   miller    Maailmankartta eli se lauta, jolla peliä pelataan
+ *             (js/packs/maailmankartta.js, tools/vanha-maailma.mjs
+ *             sovitaMaailma). Leveysaste EI ole lineaarinen: Miller
+ *             venyttää pohjoista, ja 12000 yksikön laudalla ero on
+ *             Kreikan kohdalla satoja yksiköitä. Lineaarinen kaava
+ *             siirtäisi maan pohjoisosaa kymmeniä kilometrejä.
+ *
+ * Käänteiskaavaa tarvitaan joka pikselille (korkeus ja varjostus
+ * haetaan asteista), joten se on osa samaa oliota eikä erillinen
+ * arvaus.
+ */
+export function laudanProjektio(p) {
+  if (p.tyyppi === 'miller') {
+    const { leveys, lon0, pohjoinen } = p;
+    const skaala = leveys / (2 * Math.PI);
+    const millerY = (lat) => -1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * lat * RAD));
+    const yPohjoinen = millerY(pohjoinen);
+    const kierros = 2 * Math.PI;
+    return {
+      lautaX: (lon) => {
+        const d = (lon - lon0) * RAD;
+        return (((d % kierros) + kierros) % kierros) * skaala;
+      },
+      lautaY: (lat) => (millerY(lat) - yPohjoinen) * skaala,
+      lautaLon: (x) => lon0 + (x / skaala) / RAD,
+      lautaLat: (y) => {
+        const my = y / skaala + yPohjoinen;
+        return (Math.atan(Math.exp(-my / 1.25)) - Math.PI / 4) / 0.4 / RAD;
+      },
+    };
+  }
+  // tasavali: x = lonA * lon + lonB, y = latA * lat + latB
+  return {
+    lautaX: (lon) => p.lonA * lon + p.lonB,
+    lautaY: (lat) => p.latA * lat + p.latB,
+    lautaLon: (x) => (x - p.lonB) / p.lonA,
+    lautaLat: (y) => (y - p.latB) / p.latA,
+  };
+}
+
 /* =========================================================== moottori */
 
 export function piirra(canvas, aineisto, asetukset) {
@@ -129,12 +182,11 @@ export function piirra(canvas, aineisto, asetukset) {
   const S = W / 1600;
 
   // --- projektio: asteet -> lauta -> kuvapikselit ja takaisin --------
-  const lautaX = (lon) => projektio.lonA * lon + projektio.lonB;
-  const lautaY = (lat) => projektio.latA * lat + projektio.latB;
+  const { lautaX, lautaY, lautaLon, lautaLat } = laudanProjektio(projektio);
   const kuvaX = (lon) => (lautaX(lon) - bbox.x) * px;
   const kuvaY = (lat) => (lautaY(lat) - bbox.y) * px;
-  const lonPikselista = (x) => ((bbox.x + x / px) - projektio.lonB) / projektio.lonA;
-  const latPikselista = (y) => ((bbox.y + y / px) - projektio.latB) / projektio.latA;
+  const lonPikselista = (x) => lautaLon(bbox.x + x / px);
+  const latPikselista = (y) => lautaLat(bbox.y + y / px);
 
   // --- korkeusruudukko -----------------------------------------------
   const K = aineisto.korkeus;

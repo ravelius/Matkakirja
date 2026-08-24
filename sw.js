@@ -9,6 +9,8 @@ const SHELL = [
   './js/main.js',
   './js/ui.js',
   './js/kartta.js',
+  './js/fokuskartta.js',
+  './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',
   './js/liput.js',

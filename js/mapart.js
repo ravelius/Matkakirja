@@ -1259,7 +1259,18 @@ export function drawMaastonimet(svg, map, { nimet, nakyva, avaa, joet = false } 
     varatut.push(laatikko);
     piirretty += 1;
 
-    const ryhma = el('g', { class: `maastonimi maastonimi-${e.laji}` }, svg);
+    /*
+     * Kohteen oma paikka jää määreiksi (ilman saumasiirtoa), jotta
+     * kutsuja voi päätellä MISSÄ MAASSA nimi on. Fokusmoodi tarvitsee
+     * sen: muiden alueiden maastonimet himmennetään harson mukana
+     * (js/ui.js himmennaMaastonimet), eikä nimestä muuten näkisi
+     * mihin se kartalla osuu.
+     */
+    const ryhma = el('g', {
+      class: `maastonimi maastonimi-${e.laji}`,
+      'data-x': (e.x - e.siirto).toFixed(1),
+      'data-y': e.y.toFixed(1),
+    }, svg);
     let ikoninPaikka = null;
 
     /*

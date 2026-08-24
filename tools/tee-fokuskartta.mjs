@@ -2,12 +2,12 @@
  * FOKUSKARTTA: yhden maan esirenderöity topografiapohja pelilaudalle.
  *
  *   node tools/tee-fokuskartta.mjs GRC /polku/kohdekansioon \
- *        [--data <raaka-aineiston kansio>] [--leveys 2048]
- *        [--marginaali 6] [--tarkistus]
+ *        [--data <raaka-aineiston kansio>] [--leveys 2400] [--laatu 0.9]
+ *        [--png] [--marginaali <lautayksikköä>] [--tarkistus] [--esikatselu]
  *
  * Tuottaa kohdekansioon kaksi tiedostoa:
  *
- *   GRC.png    läpinäkyvätaustainen maastokuva (akvarellihypsometria,
+ *   GRC.webp   läpinäkyvätaustainen maastokuva (akvarellihypsometria,
  *              rantavyöhykkeet, joet, järvet — ei tekstiä)
  *   GRC.json   kuvan paikka LAUDAN koordinaateissa
  *
@@ -17,15 +17,17 @@
  * === KRIITTINEN KOHTA: TASAUS ===
  *
  * Kuva ei ole kuvitusta vaan karttaa, ja sen on osuttava laudan
- * koordinaatistoon. Euroopan lauta on tasavälinen projektio
+ * koordinaatistoon. Pelilauta (maailmankartta) on Millerin lieriössä ja
+ * maanosalaudat tasavälisessä projektiossa; molemmat kaavat asuvat
+ * yhdessä paikassa (tools/fokuskartta/piirto.js laudanProjektio), jota
+ * sekä tämä työkalu että piirtomoottori käyttävät.
  *
- *     x = (lon + 11) * 19.2      y = (72 - lat) * 26.3
- *
- * ja kaupunkien laatat on aseteltu sillä kaavalla (Ateena 23,7275 E /
- * 37,9838 N -> 666,8 / 894,6, laudalla 667 / 895). Kuva renderöidään
- * TÄSMÄLLEEN samalla kaavalla tunnettuun laudan rajauslaatikkoon, ja
- * laatikko kirjoitetaan JSONiin: peli asettaa <image>-elementin siihen
- * eikä arvaa mitään.
+ * Kuva renderöidään laudan omalla kaavalla tunnettuun rajauslaatikkoon,
+ * ja laatikko kirjoitetaan JSONiin: peli asettaa <image>-elementin
+ * siihen eikä arvaa mitään. JSONissa on myös laudan tunnus, ja peli
+ * jättää kuvan käyttämättä väärällä laudalla — sama tiedostonimi eri
+ * projektiossa olisi pahin mahdollinen virhe, koska kuva näyttäisi
+ * oikealta mutta olisi väärässä paikassa.
  *
  * Tasaus todennetaan joka ajossa (`tarkistaProjektio`): laudan omien
  * kaupunkien koordinaatit lasketaan uudelleen tunnetuista asteista, ja
@@ -51,27 +53,43 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { keraaAineisto } from './fokuskartta/aineisto.mjs';
+// Sama projektio kuin piirtomoottorilla — yksi kaava, ei kahta kopiota.
+import { laudanProjektio } from './fokuskartta/piirto.js';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
 
 /*
- * LAUDAT JA NIIDEN PROJEKTIOT.
+ * LAUDAT JA NIIDEN PROJEKTIOT — PELILAUTA ENSIN.
  *
- * Vain ne laudat, joiden projektio on TASAVÄLINEN (lineaarinen sekä
- * pituus- että leveysasteessa). Maailmankartta on Millerin lieriössä,
- * jossa leveysaste ei ole lineaarinen — sille tarvitaan oma haara, kun
- * fokusmoodi joskus sinne tuodaan. Väärä projektio ei näy tarkistuksessa
- * yhdessä kaupungissa mutta siirtäisi maan pohjoisosaa kymmeniä
- * yksikköjä, joten mieluummin kaadutaan kuin arvataan.
+ * Peliä pelataan yhdellä laudalla (js/pack.js: maailmankartta);
+ * maanosalaudat ovat enää datan lähde ja katselutila (?lauta=europe).
+ * Siksi kuva tehdään maailmankartalle, ja Eurooppa on listassa vain
+ * katselutilaa varten — ensimmäinen lauta, jolta maa löytyy, voittaa.
+ *
+ * Maailmankartan luvut ovat tools/tee-maailmankartta.mjs:n vakioita
+ * (LEVEYS 12000, LON0 -175, POHJOINEN 76) ja kaava sen käyttämä Millerin
+ * lieriö (tools/vanha-maailma.mjs sovitaMaailma). Mitattu tässä
+ * työkalussa joka ajossa: yhdellätoista tunnetulla kaupungilla ero on
+ * alle yksikön (ks. tarkistaProjektio).
  */
 const LAUDAT = [
+  {
+    id: 'maailmankartta',
+    moduuli: './js/packs/maailmankartta.js',
+    vienti: 'MAAILMANKARTTA',
+    projektio: {
+      tyyppi: 'miller', leveys: 12000, lon0: -175, pohjoinen: 76,
+    },
+  },
   {
     id: 'europe',
     moduuli: './js/packs/europe.js',
     vienti: 'EUROPE',
     // x = (lon + 11) * 19.2, y = (72 - lat) * 26.3
-    projektio: { lonA: 19.2, lonB: 11 * 19.2, latA: -26.3, latB: 72 * 26.3 },
+    projektio: {
+      tyyppi: 'tasavali', lonA: 19.2, lonB: 11 * 19.2, latA: -26.3, latB: 72 * 26.3,
+    },
   },
 ];
 
@@ -88,6 +106,11 @@ const TARKISTUSPISTEET = {
   helsinki: { nimi: 'Helsinki', lon: 24.9384, lat: 60.1699 },
   lissabon: { nimi: 'Lissabon', lon: -9.1393, lat: 38.7223 },
   istanbul: { nimi: 'Istanbul', lon: 28.9784, lat: 41.0082 },
+  pariisi: { nimi: 'Pariisi', lon: 2.3522, lat: 48.8566 },
+  madrid: { nimi: 'Madrid', lon: -3.7038, lat: 40.4168 },
+  berliini: { nimi: 'Berliini', lon: 13.405, lat: 52.52 },
+  wien: { nimi: 'Wien', lon: 16.3738, lat: 48.2082 },
+  kairo: { nimi: 'Kairo', lon: 31.2357, lat: 30.0444 },
 };
 /*
  * Suurin sallittu ero lautayksikköinä. Laatat on aseteltu kokonaisiin
@@ -117,7 +140,8 @@ const lippu = (nimi) => argv.includes(`--${nimi}`);
 
 if (!/^[A-Z]{3}$/.test(iso) || !kohdekansio) {
   console.error('Käyttö: node tools/tee-fokuskartta.mjs GRC <kohdekansio> '
-    + '[--data <kansio>] [--leveys 2048] [--marginaali 6] [--tarkistus]');
+    + '[--data <kansio>] [--leveys 2400] [--laatu 0.9] [--png] '
+    + '[--marginaali <lautayksikköä>] [--tarkistus] [--esikatselu]');
   process.exit(1);
 }
 
@@ -126,21 +150,39 @@ const dataKansio = resolve(valitsin('data',
 /*
  * Kuvan leveys pikseleinä.
  *
- * 1600 riittää: Kreikan rajaus on 139 lautayksikköä leveä, joten
- * pikseleitä tulee 11,5 yhtä lautayksikköä kohti, kun laudan lähin
- * zoomiporras näyttää 88 yksikköä noin 800 pikselin levyisenä eli
- * yhdeksän pikseliä yksikköä kohti. Kuva on siis tarkempi kuin mihin
- * peliä voi zoomata.
- *
- * Ylärajan sanelee tiedostokoko: aineisto on rakeista akvarellia, joka
- * ei pakkaudu, ja 2048 leveänä Kreikan PNG on 4,1 Mt kun 1600 leveänä
- * se on 2,8 Mt. Ämpäristä ladataan yksi kuva maata kohti kesken pelin,
- * joten kolme megatavua on katto.
+ * Mitta tulee pelin LÄHIMMÄSTÄ ZOOMIPORTAASTA: se näyttää 88 laudan
+ * yksikköä noin 800 pikselin levyisenä eli yhdeksän pikseliä yksikköä
+ * kohti (js/kartta.js ZOOMI_LAHIN). Kreikan rajaus on maailmankartalla
+ * 242 yksikköä leveä, joten 2400 pikseliä antaa 9,9 pikseliä yksikköä
+ * kohti — kuva pysyy tarkkana lähimpäänkin porrasta asti eikä sitä
+ * suurenneta koskaan.
  */
-const kuvaLeveys = Number(valitsin('leveys', 1600));
-// Marginaali lautayksikköinä. Rantavyöhyke ulottuu noin neljä yksikköä
-// rannasta ulos, joten kuusi antaa sille tilan ja hitusen ilmaa lisää.
-const marginaali = Number(valitsin('marginaali', 6));
+const kuvaLeveys = Number(valitsin('leveys', 2400));
+
+/*
+ * TALLENNUSMUOTO: WebP, läpinäkyvyys mukana.
+ *
+ * Aineisto on rakeista akvarellia, joka ei pakkaudu häviöttömästi:
+ * Kreikka on PNG:nä 2400 pikselin levyisenä yli viisi megatavua mutta
+ * WebPinä laatuarvolla 0,9 vajaan megatavun. Ero on niin suuri, että se
+ * ratkaisee koko kuvakoon — WebPillä kuva voi olla pelin lähimmän
+ * zoomiportaan tarkkuinen, PNG:llä ei. Muoto on ollut pelissä käytössä
+ * jo linssikartoilla (assets/linssit/topografia.webp).
+ *
+ * --png pakottaa häviöttömään PNG:hen, jos jokin joskus vaatii sen.
+ */
+const MUOTO = lippu('png') ? 'png' : 'webp';
+const LAATU = Number(valitsin('laatu', 0.9));
+/*
+ * Marginaali maan ympärille lautayksikköinä.
+ *
+ * Oletus lasketaan rajauksen koosta eikä anneta kiinteänä lukuna, koska
+ * laudoilla on eri mittakaava (Eurooppa 19,2 yksikköä pituusasteelta,
+ * maailmankartta 33,3). Rantavyöhyke on piirtomoottorissa noin 2,6 %
+ * kuvan leveydestä, joten neljä prosenttia antaa sille tilan ja hitusen
+ * ilmaa lisää.
+ */
+const marginaaliValitsin = valitsin('marginaali', null);
 
 /* ------------------------------------------------------------ lauta ja bbox */
 
@@ -173,6 +215,9 @@ const laudanBbox = (() => {
       if (y > y1) y1 = y;
     }
   }
+  const marginaali = marginaaliValitsin != null
+    ? Number(marginaaliValitsin)
+    : Math.max(x1 - x0, y1 - y0) * 0.04;
   return {
     x: x0 - marginaali,
     y: y0 - marginaali,
@@ -182,15 +227,14 @@ const laudanBbox = (() => {
 })();
 
 const { projektio } = lauta;
-const lonPisteesta = (x) => (x - projektio.lonB) / projektio.lonA;
-const latPisteesta = (y) => (y - projektio.latB) / projektio.latA;
+const kaava = laudanProjektio(projektio);
 // Aineiston laatikko puoli astetta väljempi joka suuntaan: rannikko saa
 // jatkua kuvan reunan yli, jotta reunaan ei jää katkennutta viivaa.
 const laatikko = {
-  lon0: lonPisteesta(laudanBbox.x) - 0.5,
-  lon1: lonPisteesta(laudanBbox.x + laudanBbox.w) + 0.5,
-  lat0: latPisteesta(laudanBbox.y + laudanBbox.h) - 0.5,
-  lat1: latPisteesta(laudanBbox.y) + 0.5,
+  lon0: kaava.lautaLon(laudanBbox.x) - 0.5,
+  lon1: kaava.lautaLon(laudanBbox.x + laudanBbox.w) + 0.5,
+  lat0: kaava.lautaLat(laudanBbox.y + laudanBbox.h) - 0.5,
+  lat1: kaava.lautaLat(laudanBbox.y) + 0.5,
 };
 
 /* ------------------------------------------------------------ tasaus */
@@ -206,8 +250,8 @@ function tarkistaProjektio() {
   for (const kaupunki of pack.cities) {
     const piste = TARKISTUSPISTEET[kaupunki.id];
     if (!piste) continue;
-    const x = projektio.lonA * piste.lon + projektio.lonB;
-    const y = projektio.latA * piste.lat + projektio.latB;
+    const x = kaava.lautaX(piste.lon);
+    const y = kaava.lautaY(piste.lat);
     const ero = Math.hypot(x - kaupunki.x, y - kaupunki.y);
     rivit.push({
       id: kaupunki.id,
@@ -276,7 +320,6 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>fokuskartta</title>
   const asetukset = JSON.parse(document.currentScript?.dataset?.asetukset
     ?? new URLSearchParams(location.search).get('asetukset'));
   const mitat = piirra(document.getElementById('k'), aineisto, asetukset);
-  window.__kuva = document.getElementById('k').toDataURL('image/png');
   window.__mitat = mitat;
   document.body.dataset.valmis = '1';
 </script>`;
@@ -324,7 +367,10 @@ async function renderoi(asetukset) {
   await sivu.goto(osoite + kysely, { waitUntil: 'load' });
   await sivu.waitForSelector('body[data-valmis="1"]', { timeout: 600000 })
     .catch(() => { throw new Error(`Piirto ei valmistunut: ${virheet.join(' | ') || 'aikakatkaisu'}`); });
-  const data = await sivu.evaluate(() => window.__kuva);
+  const data = await sivu.evaluate(
+    ([tyyppi, laatu]) => document.getElementById('k').toDataURL(tyyppi, laatu),
+    [`image/${MUOTO}`, LAATU],
+  );
   const mitat = await sivu.evaluate(() => window.__mitat);
   await sivu.close();
   if (virheet.length) throw new Error(`Piirto virheili: ${virheet.join(' | ')}`);
@@ -337,8 +383,8 @@ const alkoi = Date.now();
 const { puskuri, mitat } = await renderoi({
   bbox: laudanBbox, projektio, leveys: kuvaLeveys,
 });
-const pngPolku = join(kohdekansio, `${iso}.png`);
-writeFileSync(pngPolku, puskuri);
+const kuvaPolku = join(kohdekansio, `${iso}.${MUOTO}`);
+writeFileSync(kuvaPolku, puskuri);
 
 const jsonPolku = join(kohdekansio, `${iso}.json`);
 writeFileSync(jsonPolku, `${JSON.stringify({
@@ -353,7 +399,7 @@ writeFileSync(jsonPolku, `${JSON.stringify({
     h: Math.round(laudanBbox.h * 100) / 100,
   },
   kuva: mitat,
-  tiedosto: `${iso}.png`,
+  tiedosto: `${iso}.${MUOTO}`,
   tehty: new Date().toISOString().slice(0, 10),
   tasaus,
   lahteet: [
@@ -368,8 +414,8 @@ if (lippu('esikatselu')) {
   const { puskuri: e } = await renderoi({
     bbox: laudanBbox, projektio, leveys: kuvaLeveys, esikatseluTausta: '#e9d8b0',
   });
-  writeFileSync(join(kohdekansio, `${iso}-esikatselu.png`), e);
-  console.log(`  esikatselu      ${join(kohdekansio, `${iso}-esikatselu.png`)}`);
+  writeFileSync(join(kohdekansio, `${iso}-esikatselu.${MUOTO}`), e);
+  console.log(`  esikatselu      ${join(kohdekansio, `${iso}-esikatselu.${MUOTO}`)}`);
 }
 
 if (lippu('tarkistus')) {
@@ -384,15 +430,15 @@ if (lippu('tarkistus')) {
         .map((c) => ({ x: c.x, y: c.y })),
     },
   });
-  writeFileSync(join(kohdekansio, `${iso}-tarkistus.png`), t);
-  console.log(`  tarkistuskuva   ${join(kohdekansio, `${iso}-tarkistus.png`)}`);
+  writeFileSync(join(kohdekansio, `${iso}-tarkistus.${MUOTO}`), t);
+  console.log(`  tarkistuskuva   ${join(kohdekansio, `${iso}-tarkistus.${MUOTO}`)}`);
 }
 
 await selain.close();
 palvelin.close();
 
 const mt = (p) => `${(statSync(p).size / 1e6).toFixed(2)} Mt`;
-console.log(`  kuva            ${pngPolku} — ${mitat.w}x${mitat.h}, ${mt(pngPolku)}`);
+console.log(`  kuva            ${kuvaPolku} — ${mitat.w}x${mitat.h}, ${mt(kuvaPolku)}`);
 console.log(`  paikka          ${jsonPolku}`);
 console.log(`  kesto           ${((Date.now() - alkoi) / 1000).toFixed(1)} s`);
-console.log(`\nVie ämpäriin kansioon fokus/ (fokus/${iso}.png ja fokus/${iso}.json).`);
+console.log(`\nVie ämpäriin kansioon fokus/ (fokus/${iso}.${MUOTO} ja fokus/${iso}.json).`);

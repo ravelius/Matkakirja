@@ -4217,6 +4217,21 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 }
 .maastonimi-i:hover .maastonimi-i-keha { fill: var(--accent); }
 
+/*
+ * FOKUSMOODI: muun maailman maastonimet harson taakse (js/ui.js
+ * himmennaMaastonimet).
+ *
+ * Nimikerros on juuriryhmän ulkopuolella eikä sumuverho yllä siihen,
+ * joten himmennys tehdään tässä. Nimi ei katoa kokonaan: kartta on
+ * isoisän atlas, ja Alppien nimi saa kummitella sumun takana kuten
+ * mantereiden ääriviivatkin. Nykyisen maan nimet jäävät ennalleen.
+ *
+ * i-nappi katoaa sen sijaan kokonaan: himmeän nimen vieressä se
+ * houkuttelisi napauttamaan aluetta, jonne peli ei vielä anna mennä.
+ */
+.maastonimi-harson-alla .maastonimi-teksti { fill: rgba(70, 51, 31, 0.2); }
+.maastonimi-harson-alla .maastonimi-i { display: none; }
+
 
 /*
  * LÄHIKUVAN VESI.
@@ -4411,6 +4426,91 @@ body.radio-tila .actions {
   fill: rgba(238, 225, 196, 0.62);
   stroke: none;
 }
+
+/* ---------------------------------------------------------------------------
+   FOKUSKARTTA: nykyisen maan esirenderöity topografia (js/fokuskartta.js,
+   kuvat tools/tee-fokuskartta.mjs).
+
+   Kuva on läpinäkyvätaustainen PNG, joka asetetaan laudan omiin
+   koordinaatteihin. Sävyt on maalattu valmiiksi, joten CSS:llä ei
+   säädetä mitään — ei suodatinta (iOS, ks. yllä), ei läpikuultavuutta,
+   ei sekoitustilaa. Ainoa sääntö on, ettei kerros syö napautuksia:
+   kaupungit ja kohderenkaat ovat sen päällä, mutta sormi osuu kuvan
+   reunoilla myös suoraan karttaan.
+
+   Ilmestyminen on lyhyt häivähdys eikä pomppu: kuva saapuu ämpäristä
+   kesken pelin, ja ilman häivytystä se välähtäisi kartalle kuin
+   virhe. Kesto on sama kuin muillakin kartan hiljaisilla vaihdoilla.
+   --------------------------------------------------------------------------- */
+
+.fokuskartta { pointer-events: none; }
+
+.fokuskartta-kuva {
+  animation: fokuskartta-esiin 420ms ease-out both;
+}
+
+@keyframes fokuskartta-esiin {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokuskartta-kuva { animation: none; }
+}
+
+/* ---------------------------------------------------------------------------
+   FOKUSNÄKYMÄN SUOMENKIELISET LISÄNIMET (js/packs/fokus-grc.js).
+
+   Kuvaan ei ole poltettu yhtään kirjainta, joten nämä ovat ainoat nimet
+   maan sisällä pelilaattojen lisäksi. Ne ovat tarkoituksella hillittyjä:
+   kartalla saa olla enemmän luettavaa kuin pelattavaa, mutta pelaajan
+   katse ei saa harhautua nimeen, jota ei voi napauttaa.
+   --------------------------------------------------------------------------- */
+
+.fokus-nimi {
+  font-family: var(--font-kauno);
+  fill: rgba(70, 51, 31, 0.85);
+  stroke: none;
+  paint-order: stroke;
+  /* Ohut pergamenttihalo: nimi luetaan myös vuoren ruskean päältä. */
+  stroke: rgba(239, 220, 180, 0.75);
+  stroke-width: 2.4px;
+  stroke-linejoin: round;
+}
+
+.fokus-kaupunki { font-weight: 600; }
+
+.fokus-meri {
+  font-style: italic;
+  fill: rgba(120, 108, 84, 0.7);
+  stroke: none;
+}
+
+.fokus-vuori {
+  font-style: italic;
+  fill: rgba(74, 52, 33, 0.9);
+}
+
+.fokus-korkeus { fill: rgba(110, 88, 62, 0.85); }
+
+.fokus-vuori-merkki {
+  fill: none;
+  stroke: rgba(58, 40, 25, 0.8);
+  stroke-width: 1;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.fokus-piste {
+  fill: #f5ebd4;
+  stroke: #4a3421;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Yleiskuvassa nimet olisivat pistekokoa: pois näkyvistä kunnes
+   kirjain on ruudulla luettava (js/fokuskartta.js paivitaFokusNimet). */
+.fokus-nimet-piilossa { display: none; }
 
 /*
  * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI: ääriviiva piirtyy parissa

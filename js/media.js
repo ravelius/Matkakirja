@@ -131,6 +131,24 @@ export function julisteUrl(tiedosto) {
   return `${PEILI_JUURI}${JULISTE_ALIPOLKU}${tiedosto}`;
 }
 
+/*
+ * FOKUSKARTAT (24.8.2026): maakohtaiset esirenderöidyt topografiapohjat
+ * (tools/tee-fokuskartta.mjs). Sama sääntö kuin julisteilla — kaikki
+ * ämpäriin eikä repoon — ja samasta syystä: yksi kuva on kolmisen
+ * megatavua, eikä pelin asennuspaketti saa kasvaa maa maalta.
+ *
+ * Pari tiedostoa maata kohti: GRC.png on kuva ja GRC.json sen paikka
+ * laudan koordinaateissa. Puuttuva tiedosto tarkoittaa yksinkertaisesti
+ * sitä, ettei maalle ole vielä tehty pohjaa, ja peli piirtää kartan
+ * silloin kuten ennenkin (js/fokuskartta.js).
+ */
+const FOKUS_ALIPOLKU = 'fokus/';
+
+/** Fokuskartan osoite ämpärissä (esim. 'GRC.png' tai 'GRC.json'). */
+export function fokuskarttaUrl(tiedosto) {
+  return `${PEILI_JUURI}${FOKUS_ALIPOLKU}${tiedosto}`;
+}
+
 /**
  * Turvallinen tiedostonimi mistä tahansa merkkijonosta.
  *
